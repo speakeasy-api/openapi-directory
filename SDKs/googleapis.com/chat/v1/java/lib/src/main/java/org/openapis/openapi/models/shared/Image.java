@@ -18,6 +18,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspectRatio")
     public Double aspectRatio;
+
     public Image withAspectRatio(Double aspectRatio) {
         this.aspectRatio = aspectRatio;
         return this;
@@ -29,6 +30,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public Image withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -40,9 +42,11 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onClick")
     public OnClick onClick;
+
     public Image withOnClick(OnClick onClick) {
         this.onClick = onClick;
         return this;
     }
     
+    public Image(){}
 }

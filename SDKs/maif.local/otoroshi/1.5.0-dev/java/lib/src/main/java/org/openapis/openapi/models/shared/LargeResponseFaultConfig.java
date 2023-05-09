@@ -18,6 +18,7 @@ public class LargeResponseFaultConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalRequestSize")
     public Integer additionalRequestSize;
+
     public LargeResponseFaultConfig withAdditionalRequestSize(Integer additionalRequestSize) {
         this.additionalRequestSize = additionalRequestSize;
         return this;
@@ -28,9 +29,13 @@ public class LargeResponseFaultConfig {
      */
     @JsonProperty("ratio")
     public Double ratio;
+
     public LargeResponseFaultConfig withRatio(Double ratio) {
         this.ratio = ratio;
         return this;
     }
     
+    public LargeResponseFaultConfig(@JsonProperty("ratio") Double ratio) {
+        this.ratio = ratio;
+  }
 }

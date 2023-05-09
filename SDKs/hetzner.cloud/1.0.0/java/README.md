@@ -16,11 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetActionsSortParameterSortEnum;
-import org.openapis.openapi.models.operations.GetActionsStatusParameterStatusEnum;
 import org.openapis.openapi.models.operations.GetActionsRequest;
 import org.openapis.openapi.models.operations.GetActionsResponse;
+import org.openapis.openapi.models.operations.GetActionsSortParameterSortEnum;
+import org.openapis.openapi.models.operations.GetActionsStatusParameterStatusEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,19 +28,21 @@ public class Application {
                 .build();
 
             GetActionsRequest req = new GetActionsRequest() {{
-                id = 548814;
-                sort = "progress:asc";
-                status = "error";
-            }}            
+                id = 548814L;
+                sort = GetActionsSortParameterSortEnum.PROGRESS_ASC;
+                status = GetActionsStatusParameterStatusEnum.ERROR;
+            }};            
 
             GetActionsResponse res = sdk.actions.getActions(req);
 
-            if (res.actionsResponse.isPresent()) {
+            if (res.actionsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -49,230 +50,230 @@ public class Application {
 ## Available Resources and Operations
 
 
-### actions
+### [actions](docs/actions/README.md)
 
-* `getActions` - Get all Actions
-* `getActionsId` - Get an Action
+* [getActions](docs/actions/README.md#getactions) - Get all Actions
+* [getActionsId](docs/actions/README.md#getactionsid) - Get an Action
 
-### certificateActions
+### [certificateActions](docs/certificateactions/README.md)
 
-* `getCertificatesIdActions` - Get all Actions for a Certificate
-* `getCertificatesIdActionsActionId` - Get an Action for a Certificate
-* `postCertificatesIdActionsRetry` - Retry Issuance or Renewal
+* [getCertificatesIdActions](docs/certificateactions/README.md#getcertificatesidactions) - Get all Actions for a Certificate
+* [getCertificatesIdActionsActionId](docs/certificateactions/README.md#getcertificatesidactionsactionid) - Get an Action for a Certificate
+* [postCertificatesIdActionsRetry](docs/certificateactions/README.md#postcertificatesidactionsretry) - Retry Issuance or Renewal
 
-### certificates
+### [certificates](docs/certificates/README.md)
 
-* `deleteCertificatesId` - Delete a Certificate
-* `getCertificates` - Get all Certificates
-* `getCertificatesId` - Get a Certificate
-* `postCertificates` - Create a Certificate
-* `putCertificatesId` - Update a Certificate
+* [deleteCertificatesId](docs/certificates/README.md#deletecertificatesid) - Delete a Certificate
+* [getCertificates](docs/certificates/README.md#getcertificates) - Get all Certificates
+* [getCertificatesId](docs/certificates/README.md#getcertificatesid) - Get a Certificate
+* [postCertificates](docs/certificates/README.md#postcertificates) - Create a Certificate
+* [putCertificatesId](docs/certificates/README.md#putcertificatesid) - Update a Certificate
 
-### datacenters
+### [datacenters](docs/datacenters/README.md)
 
-* `getDatacenters` - Get all Datacenters
-* `getDatacentersId` - Get a Datacenter
+* [getDatacenters](docs/datacenters/README.md#getdatacenters) - Get all Datacenters
+* [getDatacentersId](docs/datacenters/README.md#getdatacentersid) - Get a Datacenter
 
-### firewallActions
+### [firewallActions](docs/firewallactions/README.md)
 
-* `getFirewallsIdActions` - Get all Actions for a Firewall
-* `getFirewallsIdActionsActionId` - Get an Action for a Firewall
-* `postFirewallsIdActionsApplyToResources` - Apply to Resources
-* `postFirewallsIdActionsRemoveFromResources` - Remove from Resources
-* `postFirewallsIdActionsSetRules` - Set Rules
+* [getFirewallsIdActions](docs/firewallactions/README.md#getfirewallsidactions) - Get all Actions for a Firewall
+* [getFirewallsIdActionsActionId](docs/firewallactions/README.md#getfirewallsidactionsactionid) - Get an Action for a Firewall
+* [postFirewallsIdActionsApplyToResources](docs/firewallactions/README.md#postfirewallsidactionsapplytoresources) - Apply to Resources
+* [postFirewallsIdActionsRemoveFromResources](docs/firewallactions/README.md#postfirewallsidactionsremovefromresources) - Remove from Resources
+* [postFirewallsIdActionsSetRules](docs/firewallactions/README.md#postfirewallsidactionssetrules) - Set Rules
 
-### firewalls
+### [firewalls](docs/firewalls/README.md)
 
-* `deleteFirewallsId` - Delete a Firewall
-* `getFirewalls` - Get all Firewalls
-* `getFirewallsId` - Get a Firewall
-* `postFirewalls` - Create a Firewall
-* `putFirewallsId` - Update a Firewall
+* [deleteFirewallsId](docs/firewalls/README.md#deletefirewallsid) - Delete a Firewall
+* [getFirewalls](docs/firewalls/README.md#getfirewalls) - Get all Firewalls
+* [getFirewallsId](docs/firewalls/README.md#getfirewallsid) - Get a Firewall
+* [postFirewalls](docs/firewalls/README.md#postfirewalls) - Create a Firewall
+* [putFirewallsId](docs/firewalls/README.md#putfirewallsid) - Update a Firewall
 
-### floatingIPActions
+### [floatingIPActions](docs/floatingipactions/README.md)
 
-* `getFloatingIpsIdActions` - Get all Actions for a Floating IP
-* `getFloatingIpsIdActionsActionId` - Get an Action for a Floating IP
-* `postFloatingIpsIdActionsAssign` - Assign a Floating IP to a Server
-* `postFloatingIpsIdActionsChangeDnsPtr` - Change reverse DNS entry for a Floating IP
-* `postFloatingIpsIdActionsChangeProtection` - Change Floating IP Protection
-* `postFloatingIpsIdActionsUnassign` - Unassign a Floating IP
+* [getFloatingIpsIdActions](docs/floatingipactions/README.md#getfloatingipsidactions) - Get all Actions for a Floating IP
+* [getFloatingIpsIdActionsActionId](docs/floatingipactions/README.md#getfloatingipsidactionsactionid) - Get an Action for a Floating IP
+* [postFloatingIpsIdActionsAssign](docs/floatingipactions/README.md#postfloatingipsidactionsassign) - Assign a Floating IP to a Server
+* [postFloatingIpsIdActionsChangeDnsPtr](docs/floatingipactions/README.md#postfloatingipsidactionschangednsptr) - Change reverse DNS entry for a Floating IP
+* [postFloatingIpsIdActionsChangeProtection](docs/floatingipactions/README.md#postfloatingipsidactionschangeprotection) - Change Floating IP Protection
+* [postFloatingIpsIdActionsUnassign](docs/floatingipactions/README.md#postfloatingipsidactionsunassign) - Unassign a Floating IP
 
-### floatingIPs
+### [floatingIPs](docs/floatingips/README.md)
 
-* `deleteFloatingIpsId` - Delete a Floating IP
-* `getFloatingIps` - Get all Floating IPs
-* `getFloatingIpsId` - Get a Floating IP
-* `postFloatingIps` - Create a Floating IP
-* `putFloatingIpsId` - Update a Floating IP
+* [deleteFloatingIpsId](docs/floatingips/README.md#deletefloatingipsid) - Delete a Floating IP
+* [getFloatingIps](docs/floatingips/README.md#getfloatingips) - Get all Floating IPs
+* [getFloatingIpsId](docs/floatingips/README.md#getfloatingipsid) - Get a Floating IP
+* [postFloatingIps](docs/floatingips/README.md#postfloatingips) - Create a Floating IP
+* [putFloatingIpsId](docs/floatingips/README.md#putfloatingipsid) - Update a Floating IP
 
-### isOs
+### [isOs](docs/isos/README.md)
 
-* `getIsos` - Get all ISOs
-* `getIsosId` - Get an ISO
+* [getIsos](docs/isos/README.md#getisos) - Get all ISOs
+* [getIsosId](docs/isos/README.md#getisosid) - Get an ISO
 
-### imageActions
+### [imageActions](docs/imageactions/README.md)
 
-* `getImagesIdActions` - Get all Actions for an Image
-* `getImagesIdActionsActionId` - Get an Action for an Image
-* `postImagesIdActionsChangeProtection` - Change Image Protection
+* [getImagesIdActions](docs/imageactions/README.md#getimagesidactions) - Get all Actions for an Image
+* [getImagesIdActionsActionId](docs/imageactions/README.md#getimagesidactionsactionid) - Get an Action for an Image
+* [postImagesIdActionsChangeProtection](docs/imageactions/README.md#postimagesidactionschangeprotection) - Change Image Protection
 
-### images
+### [images](docs/images/README.md)
 
-* `deleteImagesId` - Delete an Image
-* `getImages` - Get all Images
-* `getImagesId` - Get an Image
-* `putImagesId` - Update an Image
+* [deleteImagesId](docs/images/README.md#deleteimagesid) - Delete an Image
+* [getImages](docs/images/README.md#getimages) - Get all Images
+* [getImagesId](docs/images/README.md#getimagesid) - Get an Image
+* [putImagesId](docs/images/README.md#putimagesid) - Update an Image
 
-### loadBalancerActions
+### [loadBalancerActions](docs/loadbalanceractions/README.md)
 
-* `getLoadBalancersIdActions` - Get all Actions for a Load Balancer
-* `getLoadBalancersIdActionsActionId` - Get an Action for a Load Balancer
-* `postLoadBalancersIdActionsAddService` - Add Service
-* `postLoadBalancersIdActionsAddTarget` - Add Target
-* `postLoadBalancersIdActionsAttachToNetwork` - Attach a Load Balancer to a Network
-* `postLoadBalancersIdActionsChangeAlgorithm` - Change Algorithm
-* `postLoadBalancersIdActionsChangeDnsPtr` - Change reverse DNS entry for this Load Balancer
-* `postLoadBalancersIdActionsChangeProtection` - Change Load Balancer Protection
-* `postLoadBalancersIdActionsChangeType` - Change the Type of a Load Balancer
-* `postLoadBalancersIdActionsDeleteService` - Delete Service
-* `postLoadBalancersIdActionsDetachFromNetwork` - Detach a Load Balancer from a Network
-* `postLoadBalancersIdActionsDisablePublicInterface` - Disable the public interface of a Load Balancer
-* `postLoadBalancersIdActionsEnablePublicInterface` - Enable the public interface of a Load Balancer
-* `postLoadBalancersIdActionsRemoveTarget` - Remove Target
-* `postLoadBalancersIdActionsUpdateService` - Update Service
+* [getLoadBalancersIdActions](docs/loadbalanceractions/README.md#getloadbalancersidactions) - Get all Actions for a Load Balancer
+* [getLoadBalancersIdActionsActionId](docs/loadbalanceractions/README.md#getloadbalancersidactionsactionid) - Get an Action for a Load Balancer
+* [postLoadBalancersIdActionsAddService](docs/loadbalanceractions/README.md#postloadbalancersidactionsaddservice) - Add Service
+* [postLoadBalancersIdActionsAddTarget](docs/loadbalanceractions/README.md#postloadbalancersidactionsaddtarget) - Add Target
+* [postLoadBalancersIdActionsAttachToNetwork](docs/loadbalanceractions/README.md#postloadbalancersidactionsattachtonetwork) - Attach a Load Balancer to a Network
+* [postLoadBalancersIdActionsChangeAlgorithm](docs/loadbalanceractions/README.md#postloadbalancersidactionschangealgorithm) - Change Algorithm
+* [postLoadBalancersIdActionsChangeDnsPtr](docs/loadbalanceractions/README.md#postloadbalancersidactionschangednsptr) - Change reverse DNS entry for this Load Balancer
+* [postLoadBalancersIdActionsChangeProtection](docs/loadbalanceractions/README.md#postloadbalancersidactionschangeprotection) - Change Load Balancer Protection
+* [postLoadBalancersIdActionsChangeType](docs/loadbalanceractions/README.md#postloadbalancersidactionschangetype) - Change the Type of a Load Balancer
+* [postLoadBalancersIdActionsDeleteService](docs/loadbalanceractions/README.md#postloadbalancersidactionsdeleteservice) - Delete Service
+* [postLoadBalancersIdActionsDetachFromNetwork](docs/loadbalanceractions/README.md#postloadbalancersidactionsdetachfromnetwork) - Detach a Load Balancer from a Network
+* [postLoadBalancersIdActionsDisablePublicInterface](docs/loadbalanceractions/README.md#postloadbalancersidactionsdisablepublicinterface) - Disable the public interface of a Load Balancer
+* [postLoadBalancersIdActionsEnablePublicInterface](docs/loadbalanceractions/README.md#postloadbalancersidactionsenablepublicinterface) - Enable the public interface of a Load Balancer
+* [postLoadBalancersIdActionsRemoveTarget](docs/loadbalanceractions/README.md#postloadbalancersidactionsremovetarget) - Remove Target
+* [postLoadBalancersIdActionsUpdateService](docs/loadbalanceractions/README.md#postloadbalancersidactionsupdateservice) - Update Service
 
-### loadBalancerTypes
+### [loadBalancerTypes](docs/loadbalancertypes/README.md)
 
-* `getLoadBalancerTypes` - Get all Load Balancer Types
-* `getLoadBalancerTypesId` - Get a Load Balancer Type
+* [getLoadBalancerTypes](docs/loadbalancertypes/README.md#getloadbalancertypes) - Get all Load Balancer Types
+* [getLoadBalancerTypesId](docs/loadbalancertypes/README.md#getloadbalancertypesid) - Get a Load Balancer Type
 
-### loadBalancers
+### [loadBalancers](docs/loadbalancers/README.md)
 
-* `deleteLoadBalancersId` - Delete a Load Balancer
-* `getLoadBalancers` - Get all Load Balancers
-* `getLoadBalancersId` - Get a Load Balancer
-* `getLoadBalancersIdMetrics` - Get Metrics for a LoadBalancer
-* `postLoadBalancers` - Create a Load Balancer
-* `putLoadBalancersId` - Update a Load Balancer
+* [deleteLoadBalancersId](docs/loadbalancers/README.md#deleteloadbalancersid) - Delete a Load Balancer
+* [getLoadBalancers](docs/loadbalancers/README.md#getloadbalancers) - Get all Load Balancers
+* [getLoadBalancersId](docs/loadbalancers/README.md#getloadbalancersid) - Get a Load Balancer
+* [getLoadBalancersIdMetrics](docs/loadbalancers/README.md#getloadbalancersidmetrics) - Get Metrics for a LoadBalancer
+* [postLoadBalancers](docs/loadbalancers/README.md#postloadbalancers) - Create a Load Balancer
+* [putLoadBalancersId](docs/loadbalancers/README.md#putloadbalancersid) - Update a Load Balancer
 
-### locations
+### [locations](docs/locations/README.md)
 
-* `getLocations` - Get all Locations
-* `getLocationsId` - Get a Location
+* [getLocations](docs/locations/README.md#getlocations) - Get all Locations
+* [getLocationsId](docs/locations/README.md#getlocationsid) - Get a Location
 
-### networkActions
+### [networkActions](docs/networkactions/README.md)
 
-* `getNetworksIdActions` - Get all Actions for a Network
-* `getNetworksIdActionsActionId` - Get an Action for a Network
-* `postNetworksIdActionsAddRoute` - Add a route to a Network
-* `postNetworksIdActionsAddSubnet` - Add a subnet to a Network
-* `postNetworksIdActionsChangeIpRange` - Change IP range of a Network
-* `postNetworksIdActionsChangeProtection` - Change Network Protection
-* `postNetworksIdActionsDeleteRoute` - Delete a route from a Network
-* `postNetworksIdActionsDeleteSubnet` - Delete a subnet from a Network
+* [getNetworksIdActions](docs/networkactions/README.md#getnetworksidactions) - Get all Actions for a Network
+* [getNetworksIdActionsActionId](docs/networkactions/README.md#getnetworksidactionsactionid) - Get an Action for a Network
+* [postNetworksIdActionsAddRoute](docs/networkactions/README.md#postnetworksidactionsaddroute) - Add a route to a Network
+* [postNetworksIdActionsAddSubnet](docs/networkactions/README.md#postnetworksidactionsaddsubnet) - Add a subnet to a Network
+* [postNetworksIdActionsChangeIpRange](docs/networkactions/README.md#postnetworksidactionschangeiprange) - Change IP range of a Network
+* [postNetworksIdActionsChangeProtection](docs/networkactions/README.md#postnetworksidactionschangeprotection) - Change Network Protection
+* [postNetworksIdActionsDeleteRoute](docs/networkactions/README.md#postnetworksidactionsdeleteroute) - Delete a route from a Network
+* [postNetworksIdActionsDeleteSubnet](docs/networkactions/README.md#postnetworksidactionsdeletesubnet) - Delete a subnet from a Network
 
-### networks
+### [networks](docs/networks/README.md)
 
-* `deleteNetworksId` - Delete a Network
-* `getNetworks` - Get all Networks
-* `getNetworksId` - Get a Network
-* `postNetworks` - Create a Network
-* `putNetworksId` - Update a Network
+* [deleteNetworksId](docs/networks/README.md#deletenetworksid) - Delete a Network
+* [getNetworks](docs/networks/README.md#getnetworks) - Get all Networks
+* [getNetworksId](docs/networks/README.md#getnetworksid) - Get a Network
+* [postNetworks](docs/networks/README.md#postnetworks) - Create a Network
+* [putNetworksId](docs/networks/README.md#putnetworksid) - Update a Network
 
-### placementGroups
+### [placementGroups](docs/placementgroups/README.md)
 
-* `deletePlacementGroupsId` - Delete a PlacementGroup
-* `getPlacementGroups` - Get all PlacementGroups
-* `getPlacementGroupsId` - Get a PlacementGroup
-* `postPlacementGroups` - Create a PlacementGroup
-* `putPlacementGroupsId` - Update a PlacementGroup
+* [deletePlacementGroupsId](docs/placementgroups/README.md#deleteplacementgroupsid) - Delete a PlacementGroup
+* [getPlacementGroups](docs/placementgroups/README.md#getplacementgroups) - Get all PlacementGroups
+* [getPlacementGroupsId](docs/placementgroups/README.md#getplacementgroupsid) - Get a PlacementGroup
+* [postPlacementGroups](docs/placementgroups/README.md#postplacementgroups) - Create a PlacementGroup
+* [putPlacementGroupsId](docs/placementgroups/README.md#putplacementgroupsid) - Update a PlacementGroup
 
-### pricing
+### [pricing](docs/pricing/README.md)
 
-* `getPricing` - Get all prices
+* [getPricing](docs/pricing/README.md#getpricing) - Get all prices
 
-### primaryIPActions
+### [primaryIPActions](docs/primaryipactions/README.md)
 
-* `postPrimaryIpsIdActionsAssign` - Assign a Primary IP to a resource
-* `postPrimaryIpsIdActionsChangeDnsPtr` - Change reverse DNS entry for a Primary IP
-* `postPrimaryIpsIdActionsChangeProtection` - Change Primary IP Protection
-* `postPrimaryIpsIdActionsUnassign` - Unassign a Primary IP from a resource
+* [postPrimaryIpsIdActionsAssign](docs/primaryipactions/README.md#postprimaryipsidactionsassign) - Assign a Primary IP to a resource
+* [postPrimaryIpsIdActionsChangeDnsPtr](docs/primaryipactions/README.md#postprimaryipsidactionschangednsptr) - Change reverse DNS entry for a Primary IP
+* [postPrimaryIpsIdActionsChangeProtection](docs/primaryipactions/README.md#postprimaryipsidactionschangeprotection) - Change Primary IP Protection
+* [postPrimaryIpsIdActionsUnassign](docs/primaryipactions/README.md#postprimaryipsidactionsunassign) - Unassign a Primary IP from a resource
 
-### primaryIPs
+### [primaryIPs](docs/primaryips/README.md)
 
-* `deletePrimaryIpsId` - Delete a Primary IP
-* `getPrimaryIps` - Get all Primary IPs
-* `getPrimaryIpsId` - Get a Primary IP
-* `postPrimaryIps` - Create a Primary IP
-* `putPrimaryIpsId` - Update a Primary IP
+* [deletePrimaryIpsId](docs/primaryips/README.md#deleteprimaryipsid) - Delete a Primary IP
+* [getPrimaryIps](docs/primaryips/README.md#getprimaryips) - Get all Primary IPs
+* [getPrimaryIpsId](docs/primaryips/README.md#getprimaryipsid) - Get a Primary IP
+* [postPrimaryIps](docs/primaryips/README.md#postprimaryips) - Create a Primary IP
+* [putPrimaryIpsId](docs/primaryips/README.md#putprimaryipsid) - Update a Primary IP
 
-### sshKeys
+### [sshKeys](docs/sshkeys/README.md)
 
-* `deleteSshKeysId` - Delete an SSH key
-* `getSshKeys` - Get all SSH keys
-* `getSshKeysId` - Get a SSH key
-* `postSshKeys` - Create an SSH key
-* `putSshKeysId` - Update an SSH key
+* [deleteSshKeysId](docs/sshkeys/README.md#deletesshkeysid) - Delete an SSH key
+* [getSshKeys](docs/sshkeys/README.md#getsshkeys) - Get all SSH keys
+* [getSshKeysId](docs/sshkeys/README.md#getsshkeysid) - Get a SSH key
+* [postSshKeys](docs/sshkeys/README.md#postsshkeys) - Create an SSH key
+* [putSshKeysId](docs/sshkeys/README.md#putsshkeysid) - Update an SSH key
 
-### serverActions
+### [serverActions](docs/serveractions/README.md)
 
-* `getServersIdActions` - Get all Actions for a Server
-* `getServersIdActionsActionId` - Get an Action for a Server
-* `postServersIdActionsAddToPlacementGroup` - Add a Server to a Placement Group
-* `postServersIdActionsAttachIso` - Attach an ISO to a Server
-* `postServersIdActionsAttachToNetwork` - Attach a Server to a Network
-* `postServersIdActionsChangeAliasIps` - Change alias IPs of a Network
-* `postServersIdActionsChangeDnsPtr` - Change reverse DNS entry for this Server
-* `postServersIdActionsChangeProtection` - Change Server Protection
-* `postServersIdActionsChangeType` - Change the Type of a Server
-* `postServersIdActionsCreateImage` - Create Image from a Server
-* `postServersIdActionsDetachFromNetwork` - Detach a Server from a Network
-* `postServersIdActionsDetachIso` - Detach an ISO from a Server
-* `postServersIdActionsDisableBackup` - Disable Backups for a Server
-* `postServersIdActionsDisableRescue` - Disable Rescue Mode for a Server
-* `postServersIdActionsEnableBackup` - Enable and Configure Backups for a Server
-* `postServersIdActionsEnableRescue` - Enable Rescue Mode for a Server
-* `postServersIdActionsPoweroff` - Power off a Server
-* `postServersIdActionsPoweron` - Power on a Server
-* `postServersIdActionsReboot` - Soft-reboot a Server
-* `postServersIdActionsRebuild` - Rebuild a Server from an Image
-* `postServersIdActionsRemoveFromPlacementGroup` - Remove from Placement Group
-* `postServersIdActionsRequestConsole` - Request Console for a Server
-* `postServersIdActionsReset` - Reset a Server
-* `postServersIdActionsResetPassword` - Reset root Password of a Server
-* `postServersIdActionsShutdown` - Shutdown a Server
+* [getServersIdActions](docs/serveractions/README.md#getserversidactions) - Get all Actions for a Server
+* [getServersIdActionsActionId](docs/serveractions/README.md#getserversidactionsactionid) - Get an Action for a Server
+* [postServersIdActionsAddToPlacementGroup](docs/serveractions/README.md#postserversidactionsaddtoplacementgroup) - Add a Server to a Placement Group
+* [postServersIdActionsAttachIso](docs/serveractions/README.md#postserversidactionsattachiso) - Attach an ISO to a Server
+* [postServersIdActionsAttachToNetwork](docs/serveractions/README.md#postserversidactionsattachtonetwork) - Attach a Server to a Network
+* [postServersIdActionsChangeAliasIps](docs/serveractions/README.md#postserversidactionschangealiasips) - Change alias IPs of a Network
+* [postServersIdActionsChangeDnsPtr](docs/serveractions/README.md#postserversidactionschangednsptr) - Change reverse DNS entry for this Server
+* [postServersIdActionsChangeProtection](docs/serveractions/README.md#postserversidactionschangeprotection) - Change Server Protection
+* [postServersIdActionsChangeType](docs/serveractions/README.md#postserversidactionschangetype) - Change the Type of a Server
+* [postServersIdActionsCreateImage](docs/serveractions/README.md#postserversidactionscreateimage) - Create Image from a Server
+* [postServersIdActionsDetachFromNetwork](docs/serveractions/README.md#postserversidactionsdetachfromnetwork) - Detach a Server from a Network
+* [postServersIdActionsDetachIso](docs/serveractions/README.md#postserversidactionsdetachiso) - Detach an ISO from a Server
+* [postServersIdActionsDisableBackup](docs/serveractions/README.md#postserversidactionsdisablebackup) - Disable Backups for a Server
+* [postServersIdActionsDisableRescue](docs/serveractions/README.md#postserversidactionsdisablerescue) - Disable Rescue Mode for a Server
+* [postServersIdActionsEnableBackup](docs/serveractions/README.md#postserversidactionsenablebackup) - Enable and Configure Backups for a Server
+* [postServersIdActionsEnableRescue](docs/serveractions/README.md#postserversidactionsenablerescue) - Enable Rescue Mode for a Server
+* [postServersIdActionsPoweroff](docs/serveractions/README.md#postserversidactionspoweroff) - Power off a Server
+* [postServersIdActionsPoweron](docs/serveractions/README.md#postserversidactionspoweron) - Power on a Server
+* [postServersIdActionsReboot](docs/serveractions/README.md#postserversidactionsreboot) - Soft-reboot a Server
+* [postServersIdActionsRebuild](docs/serveractions/README.md#postserversidactionsrebuild) - Rebuild a Server from an Image
+* [postServersIdActionsRemoveFromPlacementGroup](docs/serveractions/README.md#postserversidactionsremovefromplacementgroup) - Remove from Placement Group
+* [postServersIdActionsRequestConsole](docs/serveractions/README.md#postserversidactionsrequestconsole) - Request Console for a Server
+* [postServersIdActionsReset](docs/serveractions/README.md#postserversidactionsreset) - Reset a Server
+* [postServersIdActionsResetPassword](docs/serveractions/README.md#postserversidactionsresetpassword) - Reset root Password of a Server
+* [postServersIdActionsShutdown](docs/serveractions/README.md#postserversidactionsshutdown) - Shutdown a Server
 
-### serverTypes
+### [serverTypes](docs/servertypes/README.md)
 
-* `getServerTypes` - Get all Server Types
-* `getServerTypesId` - Get a Server Type
+* [getServerTypes](docs/servertypes/README.md#getservertypes) - Get all Server Types
+* [getServerTypesId](docs/servertypes/README.md#getservertypesid) - Get a Server Type
 
-### servers
+### [servers](docs/servers/README.md)
 
-* `deleteServersId` - Delete a Server
-* `getServers` - Get all Servers
-* `getServersId` - Get a Server
-* `getServersIdMetrics` - Get Metrics for a Server
-* `postServers` - Create a Server
-* `putServersId` - Update a Server
+* [deleteServersId](docs/servers/README.md#deleteserversid) - Delete a Server
+* [getServers](docs/servers/README.md#getservers) - Get all Servers
+* [getServersId](docs/servers/README.md#getserversid) - Get a Server
+* [getServersIdMetrics](docs/servers/README.md#getserversidmetrics) - Get Metrics for a Server
+* [postServers](docs/servers/README.md#postservers) - Create a Server
+* [putServersId](docs/servers/README.md#putserversid) - Update a Server
 
-### volumeActions
+### [volumeActions](docs/volumeactions/README.md)
 
-* `getVolumesIdActions` - Get all Actions for a Volume
-* `getVolumesIdActionsActionId` - Get an Action for a Volume
-* `postVolumesIdActionsAttach` - Attach Volume to a Server
-* `postVolumesIdActionsChangeProtection` - Change Volume Protection
-* `postVolumesIdActionsDetach` - Detach Volume
-* `postVolumesIdActionsResize` - Resize Volume
+* [getVolumesIdActions](docs/volumeactions/README.md#getvolumesidactions) - Get all Actions for a Volume
+* [getVolumesIdActionsActionId](docs/volumeactions/README.md#getvolumesidactionsactionid) - Get an Action for a Volume
+* [postVolumesIdActionsAttach](docs/volumeactions/README.md#postvolumesidactionsattach) - Attach Volume to a Server
+* [postVolumesIdActionsChangeProtection](docs/volumeactions/README.md#postvolumesidactionschangeprotection) - Change Volume Protection
+* [postVolumesIdActionsDetach](docs/volumeactions/README.md#postvolumesidactionsdetach) - Detach Volume
+* [postVolumesIdActionsResize](docs/volumeactions/README.md#postvolumesidactionsresize) - Resize Volume
 
-### volumes
+### [volumes](docs/volumes/README.md)
 
-* `deleteVolumesId` - Delete a Volume
-* `getVolumes` - Get all Volumes
-* `getVolumesId` - Get a Volume
-* `postVolumes` - Create a Volume
-* `putVolumesId` - Update a Volume
+* [deleteVolumesId](docs/volumes/README.md#deletevolumesid) - Delete a Volume
+* [getVolumes](docs/volumes/README.md#getvolumes) - Get all Volumes
+* [getVolumesId](docs/volumes/README.md#getvolumesid) - Get a Volume
+* [postVolumes](docs/volumes/README.md#postvolumes) - Create a Volume
+* [putVolumesId](docs/volumes/README.md#putvolumesid) - Update a Volume
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -12,9 +12,13 @@ public class AccountCreateVerificationRequestBody {
      */
     @JsonProperty("url")
     public String url;
+
     public AccountCreateVerificationRequestBody withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AccountCreateVerificationRequestBody(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

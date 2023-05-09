@@ -12,6 +12,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Policy withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portal_link")
     public String portalLink;
+
     public Policy withPortalLink(String portalLink) {
         this.portalLink = portalLink;
         return this;
@@ -28,6 +30,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_id")
     public String quoteId;
+
     public Policy withQuoteId(String quoteId) {
         this.quoteId = quoteId;
         return this;
@@ -36,9 +39,11 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PolicyStatusEnum status;
+
     public Policy withStatus(PolicyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Policy(){}
 }

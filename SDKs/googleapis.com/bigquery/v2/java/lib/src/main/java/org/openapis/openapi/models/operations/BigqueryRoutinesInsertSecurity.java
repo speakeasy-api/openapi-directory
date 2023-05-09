@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigqueryRoutinesInsertSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigqueryRoutinesInsertSecurityOption1 option1;
+
     public BigqueryRoutinesInsertSecurity withOption1(BigqueryRoutinesInsertSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class BigqueryRoutinesInsertSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigqueryRoutinesInsertSecurityOption2 option2;
+
     public BigqueryRoutinesInsertSecurity withOption2(BigqueryRoutinesInsertSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public BigqueryRoutinesInsertSecurity(){}
 }

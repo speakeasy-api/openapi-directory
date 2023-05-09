@@ -18,6 +18,7 @@ public class DatabaseEngineInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engine")
     public DatabaseEngineInfoEngineEnum engine;
+
     public DatabaseEngineInfo withEngine(DatabaseEngineInfoEngineEnum engine) {
         this.engine = engine;
         return this;
@@ -29,9 +30,11 @@ public class DatabaseEngineInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public DatabaseEngineInfo withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DatabaseEngineInfo(){}
 }

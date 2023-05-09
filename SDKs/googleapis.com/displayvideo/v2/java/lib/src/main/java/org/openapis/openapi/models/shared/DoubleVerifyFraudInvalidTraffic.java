@@ -18,6 +18,7 @@ public class DoubleVerifyFraudInvalidTraffic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avoidInsufficientOption")
     public Boolean avoidInsufficientOption;
+
     public DoubleVerifyFraudInvalidTraffic withAvoidInsufficientOption(Boolean avoidInsufficientOption) {
         this.avoidInsufficientOption = avoidInsufficientOption;
         return this;
@@ -29,9 +30,11 @@ public class DoubleVerifyFraudInvalidTraffic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avoidedFraudOption")
     public DoubleVerifyFraudInvalidTrafficAvoidedFraudOptionEnum avoidedFraudOption;
+
     public DoubleVerifyFraudInvalidTraffic withAvoidedFraudOption(DoubleVerifyFraudInvalidTrafficAvoidedFraudOptionEnum avoidedFraudOption) {
         this.avoidedFraudOption = avoidedFraudOption;
         return this;
     }
     
+    public DoubleVerifyFraudInvalidTraffic(){}
 }

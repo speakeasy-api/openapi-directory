@@ -17,6 +17,7 @@ public class EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndiv
      */
     @JsonProperty("investor_id")
     public String investorId;
+
     public EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequest withInvestorId(String investorId) {
         this.investorId = investorId;
         return this;
@@ -28,6 +29,7 @@ public class EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndiv
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolio_deviation")
     public String portfolioDeviation;
+
     public EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequest withPortfolioDeviation(String portfolioDeviation) {
         this.portfolioDeviation = portfolioDeviation;
         return this;
@@ -39,6 +41,7 @@ public class EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndiv
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolio_template_id")
     public String portfolioTemplateId;
+
     public EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequest withPortfolioTemplateId(String portfolioTemplateId) {
         this.portfolioTemplateId = portfolioTemplateId;
         return this;
@@ -49,6 +52,7 @@ public class EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndiv
      */
     @JsonProperty("pot_id")
     public String potId;
+
     public EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequest withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -59,9 +63,15 @@ public class EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndiv
      */
     @JsonProperty("rebalance_eligibility_status")
     public EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequestRebalanceEligibilityStatusEnum rebalanceEligibilityStatus;
+
     public EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequest withRebalanceEligibilityStatus(EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequestRebalanceEligibilityStatusEnum rebalanceEligibilityStatus) {
         this.rebalanceEligibilityStatus = rebalanceEligibilityStatus;
         return this;
     }
     
+    public EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequest(@JsonProperty("investor_id") String investorId, @JsonProperty("pot_id") String potId, @JsonProperty("rebalance_eligibility_status") EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequestRebalanceEligibilityStatusEnum rebalanceEligibilityStatus) {
+        this.investorId = investorId;
+        this.potId = potId;
+        this.rebalanceEligibilityStatus = rebalanceEligibilityStatus;
+  }
 }

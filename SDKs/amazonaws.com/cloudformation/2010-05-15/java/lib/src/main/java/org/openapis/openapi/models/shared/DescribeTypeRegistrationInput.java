@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeTypeRegistrationInput {
     
     public String registrationToken;
+
     public DescribeTypeRegistrationInput withRegistrationToken(String registrationToken) {
         this.registrationToken = registrationToken;
         return this;
     }
     
+    public DescribeTypeRegistrationInput(@JsonProperty("RegistrationToken") String registrationToken) {
+        this.registrationToken = registrationToken;
+  }
 }

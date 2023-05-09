@@ -22,6 +22,7 @@ public class DatasetGroupSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public DatasetGroupSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class DatasetGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public DatasetGroupSummary withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -38,6 +40,7 @@ public class DatasetGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public DomainEnum domain;
+
     public DatasetGroupSummary withDomain(DomainEnum domain) {
         this.domain = domain;
         return this;
@@ -46,6 +49,7 @@ public class DatasetGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public DatasetGroupSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -56,6 +60,7 @@ public class DatasetGroupSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public DatasetGroupSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -64,6 +69,7 @@ public class DatasetGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DatasetGroupSummary withName(String name) {
         this.name = name;
         return this;
@@ -72,9 +78,11 @@ public class DatasetGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public DatasetGroupSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DatasetGroupSummary(){}
 }

@@ -12,6 +12,7 @@ public class Author {
      */
     @JsonProperty("full_name")
     public String fullName;
+
     public Author withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class Author {
      */
     @JsonProperty("id")
     public Long id;
+
     public Author withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class Author {
      */
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public Author withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -42,6 +45,7 @@ public class Author {
      */
     @JsonProperty("orcid_id")
     public String orcidId;
+
     public Author withOrcidId(String orcidId) {
         this.orcidId = orcidId;
         return this;
@@ -52,9 +56,17 @@ public class Author {
      */
     @JsonProperty("url_name")
     public String urlName;
+
     public Author withUrlName(String urlName) {
         this.urlName = urlName;
         return this;
     }
     
+    public Author(@JsonProperty("full_name") String fullName, @JsonProperty("id") Long id, @JsonProperty("is_active") Boolean isActive, @JsonProperty("orcid_id") String orcidId, @JsonProperty("url_name") String urlName) {
+        this.fullName = fullName;
+        this.id = id;
+        this.isActive = isActive;
+        this.orcidId = orcidId;
+        this.urlName = urlName;
+  }
 }

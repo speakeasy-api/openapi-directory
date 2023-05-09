@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateScheduledAuditResponse {
     
     public String contentType;
+
     public UpdateScheduledAuditResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateScheduledAuditResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateScheduledAuditResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateScheduledAuditResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateScheduledAuditResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateScheduledAuditResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateScheduledAuditResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateScheduledAuditResponse {
     
     
     public Integer statusCode;
+
     public UpdateScheduledAuditResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateScheduledAuditResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateScheduledAuditResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateScheduledAuditResponse {
      */
     
     public Object throttlingException;
+
     public UpdateScheduledAuditResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateScheduledAuditResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateScheduledAuditResponse updateScheduledAuditResponse;
+
     public UpdateScheduledAuditResponse withUpdateScheduledAuditResponse(org.openapis.openapi.models.shared.UpdateScheduledAuditResponse updateScheduledAuditResponse) {
         this.updateScheduledAuditResponse = updateScheduledAuditResponse;
         return this;
     }
     
+    public UpdateScheduledAuditResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

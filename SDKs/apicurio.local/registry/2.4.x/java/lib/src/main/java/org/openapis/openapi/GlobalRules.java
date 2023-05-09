@@ -70,11 +70,9 @@ public class GlobalRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGlobalRuleResponse res = new org.openapis.openapi.models.operations.CreateGlobalRuleResponse() {{
+        org.openapis.openapi.models.operations.CreateGlobalRuleResponse res = new org.openapis.openapi.models.operations.CreateGlobalRuleResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -115,11 +113,9 @@ public class GlobalRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAllGlobalRulesResponse res = new org.openapis.openapi.models.operations.DeleteAllGlobalRulesResponse() {{
+        org.openapis.openapi.models.operations.DeleteAllGlobalRulesResponse res = new org.openapis.openapi.models.operations.DeleteAllGlobalRulesResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -165,11 +161,9 @@ public class GlobalRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGlobalRuleResponse res = new org.openapis.openapi.models.operations.DeleteGlobalRuleResponse() {{
+        org.openapis.openapi.models.operations.DeleteGlobalRuleResponse res = new org.openapis.openapi.models.operations.DeleteGlobalRuleResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -213,12 +207,10 @@ public class GlobalRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGlobalRuleConfigResponse res = new org.openapis.openapi.models.operations.GetGlobalRuleConfigResponse() {{
+        org.openapis.openapi.models.operations.GetGlobalRuleConfigResponse res = new org.openapis.openapi.models.operations.GetGlobalRuleConfigResponse(contentType, httpRes.statusCode()) {{
             rule = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -264,12 +256,10 @@ public class GlobalRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGlobalRulesResponse res = new org.openapis.openapi.models.operations.ListGlobalRulesResponse() {{
+        org.openapis.openapi.models.operations.ListGlobalRulesResponse res = new org.openapis.openapi.models.operations.ListGlobalRulesResponse(contentType, httpRes.statusCode()) {{
             ruleTypes = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -323,12 +313,10 @@ public class GlobalRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGlobalRuleConfigResponse res = new org.openapis.openapi.models.operations.UpdateGlobalRuleConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateGlobalRuleConfigResponse res = new org.openapis.openapi.models.operations.UpdateGlobalRuleConfigResponse(contentType, httpRes.statusCode()) {{
             rule = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

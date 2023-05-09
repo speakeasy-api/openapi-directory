@@ -15,9 +15,11 @@ public class AssociateGatewayToServerOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public AssociateGatewayToServerOutput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
     }
     
+    public AssociateGatewayToServerOutput(){}
 }

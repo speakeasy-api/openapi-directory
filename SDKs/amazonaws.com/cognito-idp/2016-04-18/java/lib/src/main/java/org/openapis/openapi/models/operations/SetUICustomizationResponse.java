@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetUICustomizationResponse {
     
     public String contentType;
+
     public SetUICustomizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SetUICustomizationResponse {
      */
     
     public Object internalErrorException;
+
     public SetUICustomizationResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class SetUICustomizationResponse {
      */
     
     public Object invalidParameterException;
+
     public SetUICustomizationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class SetUICustomizationResponse {
      */
     
     public Object notAuthorizedException;
+
     public SetUICustomizationResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -49,6 +54,7 @@ public class SetUICustomizationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SetUICustomizationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class SetUICustomizationResponse {
      */
     
     public org.openapis.openapi.models.shared.SetUICustomizationResponse setUICustomizationResponse;
+
     public SetUICustomizationResponse withSetUICustomizationResponse(org.openapis.openapi.models.shared.SetUICustomizationResponse setUICustomizationResponse) {
         this.setUICustomizationResponse = setUICustomizationResponse;
         return this;
@@ -66,6 +73,7 @@ public class SetUICustomizationResponse {
     
     
     public Integer statusCode;
+
     public SetUICustomizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class SetUICustomizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetUICustomizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class SetUICustomizationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public SetUICustomizationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public SetUICustomizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

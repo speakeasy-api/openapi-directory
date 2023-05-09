@@ -18,6 +18,7 @@ public class PromotionPromotionStatusPromotionIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public PromotionPromotionStatusPromotionIssue withCode(String code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class PromotionPromotionStatusPromotionIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public PromotionPromotionStatusPromotionIssue withDetail(String detail) {
         this.detail = detail;
         return this;
     }
     
+    public PromotionPromotionStatusPromotionIssue(){}
 }

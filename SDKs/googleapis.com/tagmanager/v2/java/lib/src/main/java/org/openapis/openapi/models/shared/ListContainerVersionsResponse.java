@@ -18,6 +18,7 @@ public class ListContainerVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerVersionHeader")
     public ContainerVersionHeader[] containerVersionHeader;
+
     public ListContainerVersionsResponse withContainerVersionHeader(ContainerVersionHeader[] containerVersionHeader) {
         this.containerVersionHeader = containerVersionHeader;
         return this;
@@ -29,9 +30,11 @@ public class ListContainerVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListContainerVersionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListContainerVersionsResponse(){}
 }

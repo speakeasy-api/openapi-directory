@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DistributionGroupsAddUserDefaultApplicationJSONError {
     @JsonProperty("code")
     public DistributionGroupsAddUserDefaultApplicationJSONErrorCodeEnum code;
+
     public DistributionGroupsAddUserDefaultApplicationJSONError withCode(DistributionGroupsAddUserDefaultApplicationJSONErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -16,9 +17,14 @@ public class DistributionGroupsAddUserDefaultApplicationJSONError {
     
     @JsonProperty("message")
     public String message;
+
     public DistributionGroupsAddUserDefaultApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DistributionGroupsAddUserDefaultApplicationJSONError(@JsonProperty("code") DistributionGroupsAddUserDefaultApplicationJSONErrorCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

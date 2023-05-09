@@ -18,6 +18,7 @@ public class QueryAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobReference")
     public String jobReference;
+
     public QueryAssetsRequest withJobReference(String jobReference) {
         this.jobReference = jobReference;
         return this;
@@ -29,6 +30,7 @@ public class QueryAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfig")
     public QueryAssetsOutputConfig outputConfig;
+
     public QueryAssetsRequest withOutputConfig(QueryAssetsOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -40,6 +42,7 @@ public class QueryAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public QueryAssetsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -51,6 +54,7 @@ public class QueryAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public QueryAssetsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -62,6 +66,7 @@ public class QueryAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public QueryAssetsRequest withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -73,6 +78,7 @@ public class QueryAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTimeWindow")
     public TimeWindow readTimeWindow;
+
     public QueryAssetsRequest withReadTimeWindow(TimeWindow readTimeWindow) {
         this.readTimeWindow = readTimeWindow;
         return this;
@@ -84,6 +90,7 @@ public class QueryAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statement")
     public String statement;
+
     public QueryAssetsRequest withStatement(String statement) {
         this.statement = statement;
         return this;
@@ -95,9 +102,11 @@ public class QueryAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public String timeout;
+
     public QueryAssetsRequest withTimeout(String timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public QueryAssetsRequest(){}
 }

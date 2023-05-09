@@ -12,9 +12,13 @@ public class ValidateSecurityProfileBehaviorsRequestBody {
      */
     @JsonProperty("behaviors")
     public org.openapis.openapi.models.shared.Behavior[] behaviors;
+
     public ValidateSecurityProfileBehaviorsRequestBody withBehaviors(org.openapis.openapi.models.shared.Behavior[] behaviors) {
         this.behaviors = behaviors;
         return this;
     }
     
+    public ValidateSecurityProfileBehaviorsRequestBody(@JsonProperty("behaviors") org.openapis.openapi.models.shared.Behavior[] behaviors) {
+        this.behaviors = behaviors;
+  }
 }

@@ -12,6 +12,7 @@ public class FlightOfferTravelerPricingFareDetailsBySegmentAllotmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tourName")
     public String tourName;
+
     public FlightOfferTravelerPricingFareDetailsBySegmentAllotmentDetails withTourName(String tourName) {
         this.tourName = tourName;
         return this;
@@ -20,9 +21,11 @@ public class FlightOfferTravelerPricingFareDetailsBySegmentAllotmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tourReference")
     public String tourReference;
+
     public FlightOfferTravelerPricingFareDetailsBySegmentAllotmentDetails withTourReference(String tourReference) {
         this.tourReference = tourReference;
         return this;
     }
     
+    public FlightOfferTravelerPricingFareDetailsBySegmentAllotmentDetails(){}
 }

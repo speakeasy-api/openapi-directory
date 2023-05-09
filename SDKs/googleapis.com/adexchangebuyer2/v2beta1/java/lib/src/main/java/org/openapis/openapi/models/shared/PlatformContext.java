@@ -18,9 +18,11 @@ public class PlatformContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platforms")
     public PlatformContextPlatformsEnum[] platforms;
+
     public PlatformContext withPlatforms(PlatformContextPlatformsEnum[] platforms) {
         this.platforms = platforms;
         return this;
     }
     
+    public PlatformContext(){}
 }

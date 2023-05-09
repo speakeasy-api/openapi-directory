@@ -15,6 +15,7 @@ public class BigtableOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnFamilies")
     public BigtableColumnFamily[] columnFamilies;
+
     public BigtableOptions withColumnFamilies(BigtableColumnFamily[] columnFamilies) {
         this.columnFamilies = columnFamilies;
         return this;
@@ -26,6 +27,7 @@ public class BigtableOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreUnspecifiedColumnFamilies")
     public Boolean ignoreUnspecifiedColumnFamilies;
+
     public BigtableOptions withIgnoreUnspecifiedColumnFamilies(Boolean ignoreUnspecifiedColumnFamilies) {
         this.ignoreUnspecifiedColumnFamilies = ignoreUnspecifiedColumnFamilies;
         return this;
@@ -37,9 +39,11 @@ public class BigtableOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readRowkeyAsString")
     public Boolean readRowkeyAsString;
+
     public BigtableOptions withReadRowkeyAsString(Boolean readRowkeyAsString) {
         this.readRowkeyAsString = readRowkeyAsString;
         return this;
     }
     
+    public BigtableOptions(){}
 }

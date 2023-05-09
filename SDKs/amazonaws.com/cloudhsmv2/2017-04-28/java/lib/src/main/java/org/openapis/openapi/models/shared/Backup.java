@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Backup {
     @JsonProperty("BackupId")
     public String backupId;
+
     public Backup withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
@@ -27,6 +28,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupState")
     public BackupStateEnum backupState;
+
     public Backup withBackupState(BackupStateEnum backupState) {
         this.backupState = backupState;
         return this;
@@ -35,6 +37,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public Backup withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -45,6 +48,7 @@ public class Backup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CopyTimestamp")
     public OffsetDateTime copyTimestamp;
+
     public Backup withCopyTimestamp(OffsetDateTime copyTimestamp) {
         this.copyTimestamp = copyTimestamp;
         return this;
@@ -55,6 +59,7 @@ public class Backup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTimestamp")
     public OffsetDateTime createTimestamp;
+
     public Backup withCreateTimestamp(OffsetDateTime createTimestamp) {
         this.createTimestamp = createTimestamp;
         return this;
@@ -65,6 +70,7 @@ public class Backup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeleteTimestamp")
     public OffsetDateTime deleteTimestamp;
+
     public Backup withDeleteTimestamp(OffsetDateTime deleteTimestamp) {
         this.deleteTimestamp = deleteTimestamp;
         return this;
@@ -73,6 +79,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NeverExpires")
     public Boolean neverExpires;
+
     public Backup withNeverExpires(Boolean neverExpires) {
         this.neverExpires = neverExpires;
         return this;
@@ -81,6 +88,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceBackup")
     public String sourceBackup;
+
     public Backup withSourceBackup(String sourceBackup) {
         this.sourceBackup = sourceBackup;
         return this;
@@ -89,6 +97,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceCluster")
     public String sourceCluster;
+
     public Backup withSourceCluster(String sourceCluster) {
         this.sourceCluster = sourceCluster;
         return this;
@@ -97,6 +106,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceRegion")
     public String sourceRegion;
+
     public Backup withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
@@ -105,9 +115,13 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagList")
     public Tag[] tagList;
+
     public Backup withTagList(Tag[] tagList) {
         this.tagList = tagList;
         return this;
     }
     
+    public Backup(@JsonProperty("BackupId") String backupId) {
+        this.backupId = backupId;
+  }
 }

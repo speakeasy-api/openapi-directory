@@ -18,9 +18,11 @@ public class VulnerableParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterNames")
     public String[] parameterNames;
+
     public VulnerableParameters withParameterNames(String[] parameterNames) {
         this.parameterNames = parameterNames;
         return this;
     }
     
+    public VulnerableParameters(){}
 }

@@ -25,6 +25,7 @@ public class DomainVerificationDetailCertificateAuthorityAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completedAt")
     public String completedAt;
+
     public DomainVerificationDetailCertificateAuthorityAuthorization withCompletedAt(String completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -36,6 +37,7 @@ public class DomainVerificationDetailCertificateAuthorityAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryPaths")
     public String[] queryPaths;
+
     public DomainVerificationDetailCertificateAuthorityAuthorization withQueryPaths(String[] queryPaths) {
         this.queryPaths = queryPaths;
         return this;
@@ -47,6 +49,7 @@ public class DomainVerificationDetailCertificateAuthorityAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendations")
     public DomainVerificationDetailCertificateAuthorityAuthorizationRecommendationsEnum[] recommendations;
+
     public DomainVerificationDetailCertificateAuthorityAuthorization withRecommendations(DomainVerificationDetailCertificateAuthorityAuthorizationRecommendationsEnum[] recommendations) {
         this.recommendations = recommendations;
         return this;
@@ -66,9 +69,11 @@ public class DomainVerificationDetailCertificateAuthorityAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DomainVerificationDetailCertificateAuthorityAuthorizationStatusEnum status;
+
     public DomainVerificationDetailCertificateAuthorityAuthorization withStatus(DomainVerificationDetailCertificateAuthorityAuthorizationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DomainVerificationDetailCertificateAuthorityAuthorization(){}
 }

@@ -12,6 +12,7 @@ public class UpdateDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public UpdateDatabaseRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateDatabaseRequest {
     
     @JsonProperty("DatabaseInput")
     public DatabaseInput databaseInput;
+
     public UpdateDatabaseRequest withDatabaseInput(DatabaseInput databaseInput) {
         this.databaseInput = databaseInput;
         return this;
@@ -26,9 +28,14 @@ public class UpdateDatabaseRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateDatabaseRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateDatabaseRequest(@JsonProperty("DatabaseInput") DatabaseInput databaseInput, @JsonProperty("Name") String name) {
+        this.databaseInput = databaseInput;
+        this.name = name;
+  }
 }

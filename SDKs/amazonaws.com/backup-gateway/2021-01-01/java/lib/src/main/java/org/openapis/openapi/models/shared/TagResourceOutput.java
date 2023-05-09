@@ -15,9 +15,11 @@ public class TagResourceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public TagResourceOutput withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
     }
     
+    public TagResourceOutput(){}
 }

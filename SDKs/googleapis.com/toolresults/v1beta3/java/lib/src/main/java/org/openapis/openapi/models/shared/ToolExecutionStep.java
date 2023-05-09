@@ -18,9 +18,11 @@ public class ToolExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toolExecution")
     public ToolExecution toolExecution;
+
     public ToolExecutionStep withToolExecution(ToolExecution toolExecution) {
         this.toolExecution = toolExecution;
         return this;
     }
     
+    public ToolExecutionStep(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GenerateOrganizationsAccessReportRequest {
     
     public String entityPath;
+
     public GenerateOrganizationsAccessReportRequest withEntityPath(String entityPath) {
         this.entityPath = entityPath;
         return this;
@@ -16,9 +17,13 @@ public class GenerateOrganizationsAccessReportRequest {
     
     
     public String organizationsPolicyId;
+
     public GenerateOrganizationsAccessReportRequest withOrganizationsPolicyId(String organizationsPolicyId) {
         this.organizationsPolicyId = organizationsPolicyId;
         return this;
     }
     
+    public GenerateOrganizationsAccessReportRequest(@JsonProperty("EntityPath") String entityPath) {
+        this.entityPath = entityPath;
+  }
 }

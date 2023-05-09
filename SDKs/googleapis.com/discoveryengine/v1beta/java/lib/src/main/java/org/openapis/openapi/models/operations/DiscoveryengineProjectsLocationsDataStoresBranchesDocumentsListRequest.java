@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest {
@@ -12,6 +13,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,36 +79,40 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
     }
     
     /**
-     * Maximum number of Documents to return. If unspecified, defaults to 100. The maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an INVALID_ARGUMENT error is returned.
+     * Maximum number of Documents to return. If unspecified, defaults to 100. The maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an `INVALID_ARGUMENT` error is returned.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
     /**
-     * A page token ListDocumentsResponse.next_page_token, received from a previous DocumentService.ListDocuments call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to DocumentService.ListDocuments must match the call that provided the page token. Otherwise, an INVALID_ARGUMENT error is returned.
+     * A page token ListDocumentsResponse.next_page_token, received from a previous DocumentService.ListDocuments call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to DocumentService.ListDocuments must match the call that provided the page token. Otherwise, an `INVALID_ARGUMENT` error is returned.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
     /**
-     * Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the branch ID, to list documents under the default branch. If the caller does not have permission to list Documentss under this branch, regardless of whether or not this branch exists, a PERMISSION_DENIED error is returned.
+     * Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the branch ID, to list documents under the default branch. If the caller does not have permission to list Documentss under this branch, regardless of whether or not this branch exists, a `PERMISSION_DENIED` error is returned.
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -112,6 +123,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,13 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

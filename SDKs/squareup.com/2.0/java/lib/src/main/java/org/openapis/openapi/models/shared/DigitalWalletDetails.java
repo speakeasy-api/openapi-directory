@@ -19,9 +19,11 @@ public class DigitalWalletDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public DigitalWalletDetails withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DigitalWalletDetails(){}
 }

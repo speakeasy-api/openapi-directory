@@ -4,18 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTDescribeTrafficSourcesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTDescribeTrafficSourcesActionEnum action;
+
     public POSTDescribeTrafficSourcesRequest withAction(POSTDescribeTrafficSourcesActionEnum action) {
         this.action = action;
         return this;
     }
     
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public String maxRecords;
+
+    public POSTDescribeTrafficSourcesRequest withMaxRecords(String maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+
+    public POSTDescribeTrafficSourcesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTDescribeTrafficSourcesRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +48,7 @@ public class POSTDescribeTrafficSourcesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTDescribeTrafficSourcesVersionEnum version;
+
     public POSTDescribeTrafficSourcesRequest withVersion(POSTDescribeTrafficSourcesVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +56,7 @@ public class POSTDescribeTrafficSourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTDescribeTrafficSourcesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +64,7 @@ public class POSTDescribeTrafficSourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTDescribeTrafficSourcesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +72,7 @@ public class POSTDescribeTrafficSourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTDescribeTrafficSourcesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +80,7 @@ public class POSTDescribeTrafficSourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTDescribeTrafficSourcesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +88,7 @@ public class POSTDescribeTrafficSourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTDescribeTrafficSourcesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +96,7 @@ public class POSTDescribeTrafficSourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTDescribeTrafficSourcesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +104,14 @@ public class POSTDescribeTrafficSourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTDescribeTrafficSourcesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTDescribeTrafficSourcesRequest(@JsonProperty("Action") POSTDescribeTrafficSourcesActionEnum action, @JsonProperty("Version") POSTDescribeTrafficSourcesVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

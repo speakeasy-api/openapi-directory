@@ -18,6 +18,7 @@ public class ColumnSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("column")
     public String column;
+
     public ColumnSettings withColumn(String column) {
         this.column = column;
         return this;
@@ -29,9 +30,11 @@ public class ColumnSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visible")
     public Boolean visible;
+
     public ColumnSettings withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public ColumnSettings(){}
 }

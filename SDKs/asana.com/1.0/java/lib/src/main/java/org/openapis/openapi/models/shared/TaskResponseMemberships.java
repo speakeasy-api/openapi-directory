@@ -12,6 +12,7 @@ public class TaskResponseMemberships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public ProjectCompact project;
+
     public TaskResponseMemberships withProject(ProjectCompact project) {
         this.project = project;
         return this;
@@ -20,9 +21,11 @@ public class TaskResponseMemberships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section")
     public SectionCompact section;
+
     public TaskResponseMemberships withSection(SectionCompact section) {
         this.section = section;
         return this;
     }
     
+    public TaskResponseMemberships(){}
 }

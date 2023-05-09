@@ -14,6 +14,7 @@ public class EnableOrganizationAdminAccountRequestBody {
      */
     @JsonProperty("adminAccountId")
     public String adminAccountId;
+
     public EnableOrganizationAdminAccountRequestBody withAdminAccountId(String adminAccountId) {
         this.adminAccountId = adminAccountId;
         return this;
@@ -25,9 +26,13 @@ public class EnableOrganizationAdminAccountRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public EnableOrganizationAdminAccountRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public EnableOrganizationAdminAccountRequestBody(@JsonProperty("adminAccountId") String adminAccountId) {
+        this.adminAccountId = adminAccountId;
+  }
 }

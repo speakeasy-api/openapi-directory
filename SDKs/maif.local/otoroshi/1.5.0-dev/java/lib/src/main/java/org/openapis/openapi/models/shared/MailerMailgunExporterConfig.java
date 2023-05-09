@@ -18,6 +18,7 @@ public class MailerMailgunExporterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKey")
     public String apiKey;
+
     public MailerMailgunExporterConfig withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -29,6 +30,7 @@ public class MailerMailgunExporterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public MailerMailgunExporterConfig withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -40,6 +42,7 @@ public class MailerMailgunExporterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eu")
     public Boolean eu;
+
     public MailerMailgunExporterConfig withEu(Boolean eu) {
         this.eu = eu;
         return this;
@@ -51,6 +54,7 @@ public class MailerMailgunExporterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public String[] to;
+
     public MailerMailgunExporterConfig withTo(String[] to) {
         this.to = to;
         return this;
@@ -61,9 +65,13 @@ public class MailerMailgunExporterConfig {
      */
     @JsonProperty("type")
     public MailerMailgunExporterConfigTypeEnum type;
+
     public MailerMailgunExporterConfig withType(MailerMailgunExporterConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public MailerMailgunExporterConfig(@JsonProperty("type") MailerMailgunExporterConfigTypeEnum type) {
+        this.type = type;
+  }
 }

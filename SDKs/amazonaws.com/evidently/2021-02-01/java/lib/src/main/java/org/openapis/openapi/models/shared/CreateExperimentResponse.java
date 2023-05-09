@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateExperimentResponse {
     @JsonProperty("experiment")
     public Experiment experiment;
+
     public CreateExperimentResponse withExperiment(Experiment experiment) {
         this.experiment = experiment;
         return this;
     }
     
+    public CreateExperimentResponse(@JsonProperty("experiment") Experiment experiment) {
+        this.experiment = experiment;
+  }
 }

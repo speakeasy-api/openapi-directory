@@ -18,6 +18,7 @@ public class CertificateCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callbackUrl")
     public String callbackUrl;
+
     public CertificateCreate withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -29,6 +30,7 @@ public class CertificateCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonName")
     public String commonName;
+
     public CertificateCreate withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -36,6 +38,7 @@ public class CertificateCreate {
     
     @JsonProperty("contact")
     public CertificateContact contact;
+
     public CertificateCreate withContact(CertificateContact contact) {
         this.contact = contact;
         return this;
@@ -46,6 +49,7 @@ public class CertificateCreate {
      */
     @JsonProperty("csr")
     public String csr;
+
     public CertificateCreate withCsr(String csr) {
         this.csr = csr;
         return this;
@@ -57,6 +61,7 @@ public class CertificateCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intelVPro")
     public Boolean intelVPro;
+
     public CertificateCreate withIntelVPro(Boolean intelVPro) {
         this.intelVPro = intelVPro;
         return this;
@@ -65,6 +70,7 @@ public class CertificateCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public CertificateOrganizationCreate organization;
+
     public CertificateCreate withOrganization(CertificateOrganizationCreate organization) {
         this.organization = organization;
         return this;
@@ -75,6 +81,7 @@ public class CertificateCreate {
      */
     @JsonProperty("period")
     public Long period;
+
     public CertificateCreate withPeriod(Long period) {
         this.period = period;
         return this;
@@ -85,6 +92,7 @@ public class CertificateCreate {
      */
     @JsonProperty("productType")
     public CertificateCreateProductTypeEnum productType;
+
     public CertificateCreate withProductType(CertificateCreateProductTypeEnum productType) {
         this.productType = productType;
         return this;
@@ -96,6 +104,7 @@ public class CertificateCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootType")
     public CertificateCreateRootTypeEnum rootType;
+
     public CertificateCreate withRootType(CertificateCreateRootTypeEnum rootType) {
         this.rootType = rootType;
         return this;
@@ -107,6 +116,7 @@ public class CertificateCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotSize")
     public CertificateCreateSlotSizeEnum slotSize;
+
     public CertificateCreate withSlotSize(CertificateCreateSlotSizeEnum slotSize) {
         this.slotSize = slotSize;
         return this;
@@ -118,9 +128,16 @@ public class CertificateCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAlternativeNames")
     public String[] subjectAlternativeNames;
+
     public CertificateCreate withSubjectAlternativeNames(String[] subjectAlternativeNames) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         return this;
     }
     
+    public CertificateCreate(@JsonProperty("contact") CertificateContact contact, @JsonProperty("csr") String csr, @JsonProperty("period") Long period, @JsonProperty("productType") CertificateCreateProductTypeEnum productType) {
+        this.contact = contact;
+        this.csr = csr;
+        this.period = period;
+        this.productType = productType;
+  }
 }

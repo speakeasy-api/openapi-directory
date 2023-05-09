@@ -15,6 +15,7 @@ public class PostTransactionsWrapper {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public SaveTransaction transaction;
+
     public PostTransactionsWrapper withTransaction(SaveTransaction transaction) {
         this.transaction = transaction;
         return this;
@@ -23,9 +24,11 @@ public class PostTransactionsWrapper {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactions")
     public SaveTransaction[] transactions;
+
     public PostTransactionsWrapper withTransactions(SaveTransaction[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public PostTransactionsWrapper(){}
 }

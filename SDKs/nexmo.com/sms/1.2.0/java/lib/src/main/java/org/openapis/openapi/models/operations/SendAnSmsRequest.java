@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendAnSmsRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.NewMessage newMessage;
+
     public SendAnSmsRequest withNewMessage(org.openapis.openapi.models.shared.NewMessage newMessage) {
         this.newMessage = newMessage;
         return this;
@@ -19,9 +21,14 @@ public class SendAnSmsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public SendAnSmsFormatEnum format;
+
     public SendAnSmsRequest withFormat(SendAnSmsFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public SendAnSmsRequest(@JsonProperty("NewMessage") org.openapis.openapi.models.shared.NewMessage newMessage, @JsonProperty("format") SendAnSmsFormatEnum format) {
+        this.newMessage = newMessage;
+        this.format = format;
+  }
 }

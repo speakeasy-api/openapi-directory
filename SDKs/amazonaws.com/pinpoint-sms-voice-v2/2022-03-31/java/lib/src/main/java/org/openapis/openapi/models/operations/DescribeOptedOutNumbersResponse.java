@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeOptedOutNumbersResponse {
@@ -12,6 +13,7 @@ public class DescribeOptedOutNumbersResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeOptedOutNumbersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeOptedOutNumbersResponse {
     
     
     public String contentType;
+
     public DescribeOptedOutNumbersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeOptedOutNumbersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeOptedOutNumbersResult describeOptedOutNumbersResult;
+
     public DescribeOptedOutNumbersResponse withDescribeOptedOutNumbersResult(org.openapis.openapi.models.shared.DescribeOptedOutNumbersResult describeOptedOutNumbersResult) {
         this.describeOptedOutNumbersResult = describeOptedOutNumbersResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeOptedOutNumbersResponse {
      */
     
     public Object internalServerException;
+
     public DescribeOptedOutNumbersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeOptedOutNumbersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeOptedOutNumbersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeOptedOutNumbersResponse {
     
     
     public Integer statusCode;
+
     public DescribeOptedOutNumbersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeOptedOutNumbersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeOptedOutNumbersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeOptedOutNumbersResponse {
      */
     
     public Object throttlingException;
+
     public DescribeOptedOutNumbersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeOptedOutNumbersResponse {
      */
     
     public Object validationException;
+
     public DescribeOptedOutNumbersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeOptedOutNumbersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

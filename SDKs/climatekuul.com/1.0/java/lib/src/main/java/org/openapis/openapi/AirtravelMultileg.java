@@ -102,10 +102,8 @@ public class AirtravelMultileg {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AirtravelMultilegResponse res = new org.openapis.openapi.models.operations.AirtravelMultilegResponse() {{
+        org.openapis.openapi.models.operations.AirtravelMultilegResponse res = new org.openapis.openapi.models.operations.AirtravelMultilegResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,10 +149,8 @@ public class AirtravelMultileg {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmCarbonOffset3Response res = new org.openapis.openapi.models.operations.ConfirmCarbonOffset3Response() {{
+        org.openapis.openapi.models.operations.ConfirmCarbonOffset3Response res = new org.openapis.openapi.models.operations.ConfirmCarbonOffset3Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,10 +196,8 @@ public class AirtravelMultileg {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmPayment3Response res = new org.openapis.openapi.models.operations.ConfirmPayment3Response() {{
+        org.openapis.openapi.models.operations.ConfirmPayment3Response res = new org.openapis.openapi.models.operations.ConfirmPayment3Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,10 +243,8 @@ public class AirtravelMultileg {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction3Response res = new org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction3Response() {{
+        org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction3Response res = new org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction3Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,10 +290,8 @@ public class AirtravelMultileg {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmsPlanting3Response res = new org.openapis.openapi.models.operations.ConfirmsPlanting3Response() {{
+        org.openapis.openapi.models.operations.ConfirmsPlanting3Response res = new org.openapis.openapi.models.operations.ConfirmsPlanting3Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

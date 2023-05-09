@@ -15,6 +15,7 @@ public class ListPrincipalsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListPrincipalsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,28 +27,31 @@ public class ListPrincipalsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListPrincipalsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
     /**
-     * &lt;p&gt;Specifies that you want to list information for only the listed principals.&lt;/p&gt; &lt;p&gt;You can include the following values:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;An Amazon Web Services account ID, for example: &lt;code&gt;123456789012&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resoure Name (ARN)&lt;/a&gt; of an organization in Organizations, for example: &lt;code&gt;organizations::123456789012:organization/o-exampleorgid&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An ARN of an organizational unit (OU) in Organizations, for example: &lt;code&gt;organizations::123456789012:ou/o-exampleorgid/ou-examplerootid-exampleouid123&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An ARN of an IAM role, for example: &lt;code&gt;iam::123456789012:role/rolename&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An ARN of an IAM user, for example: &lt;code&gt;iam::123456789012user/username&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;note&gt; &lt;p&gt;Not all resource types can be shared with IAM roles and users. For more information, see &lt;a href="https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types"&gt;Sharing with IAM roles and users&lt;/a&gt; in the &lt;i&gt;Resource Access Manager User Guide&lt;/i&gt;.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Specifies that you want to list information for only the listed principals.&lt;/p&gt; &lt;p&gt;You can include the following values:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;An Amazon Web Services account ID, for example: &lt;code&gt;123456789012&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Name (ARN)&lt;/a&gt; of an organization in Organizations, for example: &lt;code&gt;organizations::123456789012:organization/o-exampleorgid&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An ARN of an organizational unit (OU) in Organizations, for example: &lt;code&gt;organizations::123456789012:ou/o-exampleorgid/ou-examplerootid-exampleouid123&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An ARN of an IAM role, for example: &lt;code&gt;iam::123456789012:role/rolename&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An ARN of an IAM user, for example: &lt;code&gt;iam::123456789012user/username&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;note&gt; &lt;p&gt;Not all resource types can be shared with IAM roles and users. For more information, see &lt;a href="https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types"&gt;Sharing with IAM roles and users&lt;/a&gt; in the &lt;i&gt;Resource Access Manager User Guide&lt;/i&gt;.&lt;/p&gt; &lt;/note&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principals")
     public String[] principals;
+
     public ListPrincipalsRequestBody withPrincipals(String[] principals) {
         this.principals = principals;
         return this;
     }
     
     /**
-     * Specifies that you want to list principal information for the resource share with the specified &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resoure Name (ARN)&lt;/a&gt;.
+     * Specifies that you want to list principal information for the resource share with the specified &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Name (ARN)&lt;/a&gt;.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public ListPrincipalsRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -58,6 +62,7 @@ public class ListPrincipalsRequestBody {
      */
     @JsonProperty("resourceOwner")
     public ListPrincipalsRequestBodyResourceOwnerEnum resourceOwner;
+
     public ListPrincipalsRequestBody withResourceOwner(ListPrincipalsRequestBodyResourceOwnerEnum resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -69,6 +74,7 @@ public class ListPrincipalsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareArns")
     public String[] resourceShareArns;
+
     public ListPrincipalsRequestBody withResourceShareArns(String[] resourceShareArns) {
         this.resourceShareArns = resourceShareArns;
         return this;
@@ -80,9 +86,13 @@ public class ListPrincipalsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public ListPrincipalsRequestBody withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ListPrincipalsRequestBody(@JsonProperty("resourceOwner") ListPrincipalsRequestBodyResourceOwnerEnum resourceOwner) {
+        this.resourceOwner = resourceOwner;
+  }
 }

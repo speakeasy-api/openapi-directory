@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesRemoveLabelRequest {
@@ -12,6 +13,7 @@ public class IssuesRemoveLabelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
     public Long issueNumber;
+
     public IssuesRemoveLabelRequest withIssueNumber(Long issueNumber) {
         this.issueNumber = issueNumber;
         return this;
@@ -19,6 +21,7 @@ public class IssuesRemoveLabelRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public IssuesRemoveLabelRequest withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +29,7 @@ public class IssuesRemoveLabelRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public IssuesRemoveLabelRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -33,9 +37,16 @@ public class IssuesRemoveLabelRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public IssuesRemoveLabelRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public IssuesRemoveLabelRequest(@JsonProperty("issue_number") Long issueNumber, @JsonProperty("name") String name, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.issueNumber = issueNumber;
+        this.name = name;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

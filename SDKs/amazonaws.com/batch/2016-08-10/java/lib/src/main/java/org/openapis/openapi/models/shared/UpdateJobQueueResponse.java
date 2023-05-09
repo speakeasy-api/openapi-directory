@@ -15,6 +15,7 @@ public class UpdateJobQueueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobQueueArn")
     public String jobQueueArn;
+
     public UpdateJobQueueResponse withJobQueueArn(String jobQueueArn) {
         this.jobQueueArn = jobQueueArn;
         return this;
@@ -23,9 +24,11 @@ public class UpdateJobQueueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobQueueName")
     public String jobQueueName;
+
     public UpdateJobQueueResponse withJobQueueName(String jobQueueName) {
         this.jobQueueName = jobQueueName;
         return this;
     }
     
+    public UpdateJobQueueResponse(){}
 }

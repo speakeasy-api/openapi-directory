@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class GroupsV2GroupOptionalConversation {
     
     public Boolean chatEnabled;
+
     public GroupsV2GroupOptionalConversation withChatEnabled(Boolean chatEnabled) {
         this.chatEnabled = chatEnabled;
         return this;
@@ -16,6 +17,7 @@ public class GroupsV2GroupOptionalConversation {
     
     
     public String chatName;
+
     public GroupsV2GroupOptionalConversation withChatName(String chatName) {
         this.chatName = chatName;
         return this;
@@ -23,6 +25,7 @@ public class GroupsV2GroupOptionalConversation {
     
     
     public Integer chatSecurity;
+
     public GroupsV2GroupOptionalConversation withChatSecurity(Integer chatSecurity) {
         this.chatSecurity = chatSecurity;
         return this;
@@ -30,6 +33,7 @@ public class GroupsV2GroupOptionalConversation {
     
     
     public Long conversationId;
+
     public GroupsV2GroupOptionalConversation withConversationId(Long conversationId) {
         this.conversationId = conversationId;
         return this;
@@ -37,9 +41,11 @@ public class GroupsV2GroupOptionalConversation {
     
     
     public Long groupId;
+
     public GroupsV2GroupOptionalConversation withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public GroupsV2GroupOptionalConversation(){}
 }

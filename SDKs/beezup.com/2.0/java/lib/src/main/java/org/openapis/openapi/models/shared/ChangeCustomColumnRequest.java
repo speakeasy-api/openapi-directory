@@ -15,6 +15,7 @@ public class ChangeCustomColumnRequest {
      */
     @JsonProperty("encryptedBlocklyExpression")
     public String encryptedBlocklyExpression;
+
     public ChangeCustomColumnRequest withEncryptedBlocklyExpression(String encryptedBlocklyExpression) {
         this.encryptedBlocklyExpression = encryptedBlocklyExpression;
         return this;
@@ -25,6 +26,7 @@ public class ChangeCustomColumnRequest {
      */
     @JsonProperty("encryptedExpression")
     public String encryptedExpression;
+
     public ChangeCustomColumnRequest withEncryptedExpression(String encryptedExpression) {
         this.encryptedExpression = encryptedExpression;
         return this;
@@ -35,9 +37,15 @@ public class ChangeCustomColumnRequest {
      */
     @JsonProperty("userColumName")
     public String userColumName;
+
     public ChangeCustomColumnRequest withUserColumName(String userColumName) {
         this.userColumName = userColumName;
         return this;
     }
     
+    public ChangeCustomColumnRequest(@JsonProperty("encryptedBlocklyExpression") String encryptedBlocklyExpression, @JsonProperty("encryptedExpression") String encryptedExpression, @JsonProperty("userColumName") String userColumName) {
+        this.encryptedBlocklyExpression = encryptedBlocklyExpression;
+        this.encryptedExpression = encryptedExpression;
+        this.userColumName = userColumName;
+  }
 }

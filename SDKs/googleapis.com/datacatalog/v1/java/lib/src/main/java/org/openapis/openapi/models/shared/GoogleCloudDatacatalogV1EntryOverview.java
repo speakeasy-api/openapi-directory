@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1EntryOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overview")
     public String overview;
+
     public GoogleCloudDatacatalogV1EntryOverview withOverview(String overview) {
         this.overview = overview;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1EntryOverview(){}
 }

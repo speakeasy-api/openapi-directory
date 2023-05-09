@@ -18,6 +18,7 @@ public class GroupAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compareDuration")
     public String compareDuration;
+
     public GroupAssetsRequest withCompareDuration(String compareDuration) {
         this.compareDuration = compareDuration;
         return this;
@@ -29,6 +30,7 @@ public class GroupAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GroupAssetsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -40,6 +42,7 @@ public class GroupAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupBy")
     public String groupBy;
+
     public GroupAssetsRequest withGroupBy(String groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -51,6 +54,7 @@ public class GroupAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GroupAssetsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -62,6 +66,7 @@ public class GroupAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GroupAssetsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -73,9 +78,11 @@ public class GroupAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public GroupAssetsRequest withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
     }
     
+    public GroupAssetsRequest(){}
 }

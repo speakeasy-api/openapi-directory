@@ -12,9 +12,11 @@ public class GetResourcePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public GetResourcePolicyRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public GetResourcePolicyRequest(){}
 }

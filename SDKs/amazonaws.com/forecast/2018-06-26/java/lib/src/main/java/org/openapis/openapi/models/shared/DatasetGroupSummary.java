@@ -22,6 +22,7 @@ public class DatasetGroupSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DatasetGroupSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DatasetGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetGroupArn")
     public String datasetGroupArn;
+
     public DatasetGroupSummary withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -38,6 +40,7 @@ public class DatasetGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetGroupName")
     public String datasetGroupName;
+
     public DatasetGroupSummary withDatasetGroupName(String datasetGroupName) {
         this.datasetGroupName = datasetGroupName;
         return this;
@@ -48,9 +51,11 @@ public class DatasetGroupSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DatasetGroupSummary withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
     }
     
+    public DatasetGroupSummary(){}
 }

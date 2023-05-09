@@ -12,6 +12,7 @@ public class InstanceConsumptionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumptionInfo")
     public InstanceConsumptionInfo consumptionInfo;
+
     public InstanceConsumptionData withConsumptionInfo(InstanceConsumptionInfo consumptionInfo) {
         this.consumptionInfo = consumptionInfo;
         return this;
@@ -23,9 +24,11 @@ public class InstanceConsumptionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public InstanceConsumptionData withInstance(String instance) {
         this.instance = instance;
         return this;
     }
     
+    public InstanceConsumptionData(){}
 }

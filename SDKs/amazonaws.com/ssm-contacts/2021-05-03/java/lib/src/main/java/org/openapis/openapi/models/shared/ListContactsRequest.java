@@ -12,6 +12,7 @@ public class ListContactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AliasPrefix")
     public String aliasPrefix;
+
     public ListContactsRequest withAliasPrefix(String aliasPrefix) {
         this.aliasPrefix = aliasPrefix;
         return this;
@@ -20,6 +21,7 @@ public class ListContactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListContactsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListContactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListContactsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListContactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ContactTypeEnum type;
+
     public ListContactsRequest withType(ContactTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListContactsRequest(){}
 }

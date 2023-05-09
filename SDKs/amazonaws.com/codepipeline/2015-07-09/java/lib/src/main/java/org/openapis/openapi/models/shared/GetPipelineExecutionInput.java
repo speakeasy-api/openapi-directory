@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPipelineExecutionInput {
     @JsonProperty("pipelineExecutionId")
     public String pipelineExecutionId;
+
     public GetPipelineExecutionInput withPipelineExecutionId(String pipelineExecutionId) {
         this.pipelineExecutionId = pipelineExecutionId;
         return this;
@@ -19,9 +20,14 @@ public class GetPipelineExecutionInput {
     
     @JsonProperty("pipelineName")
     public String pipelineName;
+
     public GetPipelineExecutionInput withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
     }
     
+    public GetPipelineExecutionInput(@JsonProperty("pipelineExecutionId") String pipelineExecutionId, @JsonProperty("pipelineName") String pipelineName) {
+        this.pipelineExecutionId = pipelineExecutionId;
+        this.pipelineName = pipelineName;
+  }
 }

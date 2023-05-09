@@ -12,6 +12,7 @@ public class BusinessHourViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public Integer endTime;
+
     public BusinessHourViewModel withEndTime(Integer endTime) {
         this.endTime = endTime;
         return this;
@@ -20,6 +21,7 @@ public class BusinessHourViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is24Hours")
     public Boolean is24Hours;
+
     public BusinessHourViewModel withIs24Hours(Boolean is24Hours) {
         this.is24Hours = is24Hours;
         return this;
@@ -28,6 +30,7 @@ public class BusinessHourViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isOpen")
     public Boolean isOpen;
+
     public BusinessHourViewModel withIsOpen(Boolean isOpen) {
         this.isOpen = isOpen;
         return this;
@@ -36,9 +39,11 @@ public class BusinessHourViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public Integer startTime;
+
     public BusinessHourViewModel withStartTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public BusinessHourViewModel(){}
 }

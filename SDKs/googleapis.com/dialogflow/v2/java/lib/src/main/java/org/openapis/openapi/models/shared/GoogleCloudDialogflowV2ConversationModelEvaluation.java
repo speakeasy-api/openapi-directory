@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ConversationModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDialogflowV2ConversationModelEvaluation withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2ConversationModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowV2ConversationModelEvaluation withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2ConversationModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationConfig")
     public GoogleCloudDialogflowV2EvaluationConfig evaluationConfig;
+
     public GoogleCloudDialogflowV2ConversationModelEvaluation withEvaluationConfig(GoogleCloudDialogflowV2EvaluationConfig evaluationConfig) {
         this.evaluationConfig = evaluationConfig;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2ConversationModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2ConversationModelEvaluation withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2ConversationModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawHumanEvalTemplateCsv")
     public String rawHumanEvalTemplateCsv;
+
     public GoogleCloudDialogflowV2ConversationModelEvaluation withRawHumanEvalTemplateCsv(String rawHumanEvalTemplateCsv) {
         this.rawHumanEvalTemplateCsv = rawHumanEvalTemplateCsv;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowV2ConversationModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smartReplyMetrics")
     public GoogleCloudDialogflowV2SmartReplyMetrics smartReplyMetrics;
+
     public GoogleCloudDialogflowV2ConversationModelEvaluation withSmartReplyMetrics(GoogleCloudDialogflowV2SmartReplyMetrics smartReplyMetrics) {
         this.smartReplyMetrics = smartReplyMetrics;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ConversationModelEvaluation(){}
 }

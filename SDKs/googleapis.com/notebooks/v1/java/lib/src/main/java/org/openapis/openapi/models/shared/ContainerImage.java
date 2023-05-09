@@ -18,6 +18,7 @@ public class ContainerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public String repository;
+
     public ContainerImage withRepository(String repository) {
         this.repository = repository;
         return this;
@@ -29,9 +30,11 @@ public class ContainerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public ContainerImage withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public ContainerImage(){}
 }

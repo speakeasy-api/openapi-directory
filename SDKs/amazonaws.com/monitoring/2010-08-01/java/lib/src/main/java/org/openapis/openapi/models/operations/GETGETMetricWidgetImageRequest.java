@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETMetricWidgetImageRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETMetricWidgetImageActionEnum action;
+
     public GETGETMetricWidgetImageRequest withAction(GETGETMetricWidgetImageActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGETMetricWidgetImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MetricWidget")
     public String metricWidget;
+
     public GETGETMetricWidgetImageRequest withMetricWidget(String metricWidget) {
         this.metricWidget = metricWidget;
         return this;
@@ -29,6 +32,7 @@ public class GETGETMetricWidgetImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OutputFormat")
     public String outputFormat;
+
     public GETGETMetricWidgetImageRequest withOutputFormat(String outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -36,6 +40,7 @@ public class GETGETMetricWidgetImageRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETMetricWidgetImageVersionEnum version;
+
     public GETGETMetricWidgetImageRequest withVersion(GETGETMetricWidgetImageVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETGETMetricWidgetImageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETMetricWidgetImageRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETGETMetricWidgetImageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETMetricWidgetImageRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETGETMetricWidgetImageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETMetricWidgetImageRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETGETMetricWidgetImageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETMetricWidgetImageRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETGETMetricWidgetImageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETMetricWidgetImageRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETGETMetricWidgetImageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETMetricWidgetImageRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETGETMetricWidgetImageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETMetricWidgetImageRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETMetricWidgetImageRequest(@JsonProperty("Action") GETGETMetricWidgetImageActionEnum action, @JsonProperty("MetricWidget") String metricWidget, @JsonProperty("Version") GETGETMetricWidgetImageVersionEnum version) {
+        this.action = action;
+        this.metricWidget = metricWidget;
+        this.version = version;
+  }
 }

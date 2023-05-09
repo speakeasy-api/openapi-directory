@@ -15,6 +15,7 @@ public class MetricSetDimensionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterList")
     public Filter[] filterList;
+
     public MetricSetDimensionFilter withFilterList(Filter[] filterList) {
         this.filterList = filterList;
         return this;
@@ -23,9 +24,11 @@ public class MetricSetDimensionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public MetricSetDimensionFilter withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MetricSetDimensionFilter(){}
 }

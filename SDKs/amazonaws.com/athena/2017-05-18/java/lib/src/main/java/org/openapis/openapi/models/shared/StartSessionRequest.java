@@ -12,6 +12,7 @@ public class StartSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartSessionRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -20,6 +21,7 @@ public class StartSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public StartSessionRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class StartSessionRequest {
     
     @JsonProperty("EngineConfiguration")
     public EngineConfiguration engineConfiguration;
+
     public StartSessionRequest withEngineConfiguration(EngineConfiguration engineConfiguration) {
         this.engineConfiguration = engineConfiguration;
         return this;
@@ -35,6 +38,7 @@ public class StartSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookVersion")
     public String notebookVersion;
+
     public StartSessionRequest withNotebookVersion(String notebookVersion) {
         this.notebookVersion = notebookVersion;
         return this;
@@ -43,6 +47,7 @@ public class StartSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionIdleTimeoutInMinutes")
     public Long sessionIdleTimeoutInMinutes;
+
     public StartSessionRequest withSessionIdleTimeoutInMinutes(Long sessionIdleTimeoutInMinutes) {
         this.sessionIdleTimeoutInMinutes = sessionIdleTimeoutInMinutes;
         return this;
@@ -50,9 +55,14 @@ public class StartSessionRequest {
     
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public StartSessionRequest withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public StartSessionRequest(@JsonProperty("EngineConfiguration") EngineConfiguration engineConfiguration, @JsonProperty("WorkGroup") String workGroup) {
+        this.engineConfiguration = engineConfiguration;
+        this.workGroup = workGroup;
+  }
 }

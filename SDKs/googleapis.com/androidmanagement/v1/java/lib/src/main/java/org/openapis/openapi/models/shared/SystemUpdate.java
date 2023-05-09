@@ -18,6 +18,7 @@ public class SystemUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endMinutes")
     public Integer endMinutes;
+
     public SystemUpdate withEndMinutes(Integer endMinutes) {
         this.endMinutes = endMinutes;
         return this;
@@ -29,6 +30,7 @@ public class SystemUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freezePeriods")
     public FreezePeriod[] freezePeriods;
+
     public SystemUpdate withFreezePeriods(FreezePeriod[] freezePeriods) {
         this.freezePeriods = freezePeriods;
         return this;
@@ -40,6 +42,7 @@ public class SystemUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startMinutes")
     public Integer startMinutes;
+
     public SystemUpdate withStartMinutes(Integer startMinutes) {
         this.startMinutes = startMinutes;
         return this;
@@ -51,9 +54,11 @@ public class SystemUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SystemUpdateTypeEnum type;
+
     public SystemUpdate withType(SystemUpdateTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SystemUpdate(){}
 }

@@ -18,6 +18,7 @@ public class DirectoryChromeosdevicesCommandResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commandResultPayload")
     public String commandResultPayload;
+
     public DirectoryChromeosdevicesCommandResult withCommandResultPayload(String commandResultPayload) {
         this.commandResultPayload = commandResultPayload;
         return this;
@@ -29,6 +30,7 @@ public class DirectoryChromeosdevicesCommandResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public DirectoryChromeosdevicesCommandResult withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -40,6 +42,7 @@ public class DirectoryChromeosdevicesCommandResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executeTime")
     public String executeTime;
+
     public DirectoryChromeosdevicesCommandResult withExecuteTime(String executeTime) {
         this.executeTime = executeTime;
         return this;
@@ -51,9 +54,11 @@ public class DirectoryChromeosdevicesCommandResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public DirectoryChromeosdevicesCommandResultResultEnum result;
+
     public DirectoryChromeosdevicesCommandResult withResult(DirectoryChromeosdevicesCommandResultResultEnum result) {
         this.result = result;
         return this;
     }
     
+    public DirectoryChromeosdevicesCommandResult(){}
 }

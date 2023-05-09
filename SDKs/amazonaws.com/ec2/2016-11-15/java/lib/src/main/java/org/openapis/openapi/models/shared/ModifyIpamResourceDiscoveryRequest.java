@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyIpamResourceDiscoveryRequest {
     
     public AddIpamOperatingRegion[] addOperatingRegions;
+
     public ModifyIpamResourceDiscoveryRequest withAddOperatingRegions(AddIpamOperatingRegion[] addOperatingRegions) {
         this.addOperatingRegions = addOperatingRegions;
         return this;
@@ -16,6 +17,7 @@ public class ModifyIpamResourceDiscoveryRequest {
     
     
     public String description;
+
     public ModifyIpamResourceDiscoveryRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class ModifyIpamResourceDiscoveryRequest {
     
     
     public Boolean dryRun;
+
     public ModifyIpamResourceDiscoveryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class ModifyIpamResourceDiscoveryRequest {
     
     
     public String ipamResourceDiscoveryId;
+
     public ModifyIpamResourceDiscoveryRequest withIpamResourceDiscoveryId(String ipamResourceDiscoveryId) {
         this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
         return this;
@@ -37,9 +41,13 @@ public class ModifyIpamResourceDiscoveryRequest {
     
     
     public RemoveIpamOperatingRegion[] removeOperatingRegions;
+
     public ModifyIpamResourceDiscoveryRequest withRemoveOperatingRegions(RemoveIpamOperatingRegion[] removeOperatingRegions) {
         this.removeOperatingRegions = removeOperatingRegions;
         return this;
     }
     
+    public ModifyIpamResourceDiscoveryRequest(@JsonProperty("IpamResourceDiscoveryId") String ipamResourceDiscoveryId) {
+        this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrganisationsPartyIdAddressesAddressIdResponse {
     
     public String contentType;
+
     public GetOrganisationsPartyIdAddressesAddressIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetOrganisationsPartyIdAddressesAddressIdResponse {
     
     
     public Integer statusCode;
+
     public GetOrganisationsPartyIdAddressesAddressIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetOrganisationsPartyIdAddressesAddressIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrganisationsPartyIdAddressesAddressIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetOrganisationsPartyIdAddressesAddressIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Address address;
+
     public GetOrganisationsPartyIdAddressesAddressIdResponse withAddress(org.openapis.openapi.models.shared.Address address) {
         this.address = address;
         return this;
@@ -43,6 +48,7 @@ public class GetOrganisationsPartyIdAddressesAddressIdResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetOrganisationsPartyIdAddressesAddressIdResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -53,9 +59,14 @@ public class GetOrganisationsPartyIdAddressesAddressIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetOrganisationsPartyIdAddressesAddressIdResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetOrganisationsPartyIdAddressesAddressIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

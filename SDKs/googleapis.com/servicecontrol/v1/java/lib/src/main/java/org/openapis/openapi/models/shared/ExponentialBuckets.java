@@ -18,6 +18,7 @@ public class ExponentialBuckets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("growthFactor")
     public Double growthFactor;
+
     public ExponentialBuckets withGrowthFactor(Double growthFactor) {
         this.growthFactor = growthFactor;
         return this;
@@ -29,6 +30,7 @@ public class ExponentialBuckets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numFiniteBuckets")
     public Integer numFiniteBuckets;
+
     public ExponentialBuckets withNumFiniteBuckets(Integer numFiniteBuckets) {
         this.numFiniteBuckets = numFiniteBuckets;
         return this;
@@ -40,9 +42,11 @@ public class ExponentialBuckets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scale")
     public Double scale;
+
     public ExponentialBuckets withScale(Double scale) {
         this.scale = scale;
         return this;
     }
     
+    public ExponentialBuckets(){}
 }

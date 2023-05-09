@@ -18,6 +18,7 @@ public class GoogleAppsCardV1ActionParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleAppsCardV1ActionParameter withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsCardV1ActionParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleAppsCardV1ActionParameter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleAppsCardV1ActionParameter(){}
 }

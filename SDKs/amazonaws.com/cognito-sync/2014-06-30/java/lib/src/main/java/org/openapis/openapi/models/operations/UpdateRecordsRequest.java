@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRecordsRequest {
@@ -12,6 +13,7 @@ public class UpdateRecordsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DatasetName")
     public String datasetName;
+
     public UpdateRecordsRequest withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -22,6 +24,7 @@ public class UpdateRecordsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IdentityId")
     public String identityId;
+
     public UpdateRecordsRequest withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -32,6 +35,7 @@ public class UpdateRecordsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IdentityPoolId")
     public String identityPoolId;
+
     public UpdateRecordsRequest withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRecordsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateRecordsRequestBody requestBody;
+
     public UpdateRecordsRequest withRequestBody(UpdateRecordsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -46,6 +51,7 @@ public class UpdateRecordsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateRecordsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRecordsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateRecordsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -60,6 +67,7 @@ public class UpdateRecordsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateRecordsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -67,6 +75,7 @@ public class UpdateRecordsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateRecordsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -74,6 +83,7 @@ public class UpdateRecordsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateRecordsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -81,6 +91,7 @@ public class UpdateRecordsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateRecordsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -88,6 +99,7 @@ public class UpdateRecordsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateRecordsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -98,9 +110,16 @@ public class UpdateRecordsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-Client-Context")
     public String xAmzClientContext;
+
     public UpdateRecordsRequest withXAmzClientContext(String xAmzClientContext) {
         this.xAmzClientContext = xAmzClientContext;
         return this;
     }
     
+    public UpdateRecordsRequest(@JsonProperty("DatasetName") String datasetName, @JsonProperty("IdentityId") String identityId, @JsonProperty("IdentityPoolId") String identityPoolId, @JsonProperty("RequestBody") UpdateRecordsRequestBody requestBody) {
+        this.datasetName = datasetName;
+        this.identityId = identityId;
+        this.identityPoolId = identityPoolId;
+        this.requestBody = requestBody;
+  }
 }

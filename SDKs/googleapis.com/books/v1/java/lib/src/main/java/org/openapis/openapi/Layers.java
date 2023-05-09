@@ -58,11 +58,9 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksLayersAnnotationDataGetResponse res = new org.openapis.openapi.models.operations.BooksLayersAnnotationDataGetResponse() {{
+        org.openapis.openapi.models.operations.BooksLayersAnnotationDataGetResponse res = new org.openapis.openapi.models.operations.BooksLayersAnnotationDataGetResponse(contentType, httpRes.statusCode()) {{
             dictionaryAnnotationdata = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksLayersAnnotationDataListResponse res = new org.openapis.openapi.models.operations.BooksLayersAnnotationDataListResponse() {{
+        org.openapis.openapi.models.operations.BooksLayersAnnotationDataListResponse res = new org.openapis.openapi.models.operations.BooksLayersAnnotationDataListResponse(contentType, httpRes.statusCode()) {{
             annotationsdata = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksLayersGetResponse res = new org.openapis.openapi.models.operations.BooksLayersGetResponse() {{
+        org.openapis.openapi.models.operations.BooksLayersGetResponse res = new org.openapis.openapi.models.operations.BooksLayersGetResponse(contentType, httpRes.statusCode()) {{
             layersummary = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksLayersListResponse res = new org.openapis.openapi.models.operations.BooksLayersListResponse() {{
+        org.openapis.openapi.models.operations.BooksLayersListResponse res = new org.openapis.openapi.models.operations.BooksLayersListResponse(contentType, httpRes.statusCode()) {{
             layersummaries = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +234,9 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsGetResponse res = new org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsGetResponse() {{
+        org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsGetResponse res = new org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsGetResponse(contentType, httpRes.statusCode()) {{
             volumeannotation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,11 +278,9 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsListResponse res = new org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsListResponse() {{
+        org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsListResponse res = new org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsListResponse(contentType, httpRes.statusCode()) {{
             volumeannotations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

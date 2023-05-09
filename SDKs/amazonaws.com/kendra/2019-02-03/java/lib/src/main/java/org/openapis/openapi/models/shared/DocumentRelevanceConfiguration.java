@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DocumentRelevanceConfiguration {
     @JsonProperty("Name")
     public String name;
+
     public DocumentRelevanceConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class DocumentRelevanceConfiguration {
     
     @JsonProperty("Relevance")
     public Relevance relevance;
+
     public DocumentRelevanceConfiguration withRelevance(Relevance relevance) {
         this.relevance = relevance;
         return this;
     }
     
+    public DocumentRelevanceConfiguration(@JsonProperty("Name") String name, @JsonProperty("Relevance") Relevance relevance) {
+        this.name = name;
+        this.relevance = relevance;
+  }
 }

@@ -18,6 +18,7 @@ public class InboundNumbers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public InboundNumbers withCount(Long count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class InboundNumbers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numbers")
     public Ownednumber[] numbers;
+
     public InboundNumbers withNumbers(Ownednumber[] numbers) {
         this.numbers = numbers;
         return this;
     }
     
+    public InboundNumbers(){}
 }

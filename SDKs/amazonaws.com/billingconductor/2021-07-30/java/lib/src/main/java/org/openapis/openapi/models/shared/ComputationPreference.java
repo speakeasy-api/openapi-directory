@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ComputationPreference {
     @JsonProperty("PricingPlanArn")
     public String pricingPlanArn;
+
     public ComputationPreference withPricingPlanArn(String pricingPlanArn) {
         this.pricingPlanArn = pricingPlanArn;
         return this;
     }
     
+    public ComputationPreference(@JsonProperty("PricingPlanArn") String pricingPlanArn) {
+        this.pricingPlanArn = pricingPlanArn;
+  }
 }

@@ -21,6 +21,7 @@ public class DescribeHumanTaskUiResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeHumanTaskUiResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class DescribeHumanTaskUiResponse {
     
     @JsonProperty("HumanTaskUiArn")
     public String humanTaskUiArn;
+
     public DescribeHumanTaskUiResponse withHumanTaskUiArn(String humanTaskUiArn) {
         this.humanTaskUiArn = humanTaskUiArn;
         return this;
@@ -35,6 +37,7 @@ public class DescribeHumanTaskUiResponse {
     
     @JsonProperty("HumanTaskUiName")
     public String humanTaskUiName;
+
     public DescribeHumanTaskUiResponse withHumanTaskUiName(String humanTaskUiName) {
         this.humanTaskUiName = humanTaskUiName;
         return this;
@@ -43,6 +46,7 @@ public class DescribeHumanTaskUiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanTaskUiStatus")
     public HumanTaskUiStatusEnum humanTaskUiStatus;
+
     public DescribeHumanTaskUiResponse withHumanTaskUiStatus(HumanTaskUiStatusEnum humanTaskUiStatus) {
         this.humanTaskUiStatus = humanTaskUiStatus;
         return this;
@@ -53,9 +57,16 @@ public class DescribeHumanTaskUiResponse {
      */
     @JsonProperty("UiTemplate")
     public UiTemplateInfo uiTemplate;
+
     public DescribeHumanTaskUiResponse withUiTemplate(UiTemplateInfo uiTemplate) {
         this.uiTemplate = uiTemplate;
         return this;
     }
     
+    public DescribeHumanTaskUiResponse(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("HumanTaskUiArn") String humanTaskUiArn, @JsonProperty("HumanTaskUiName") String humanTaskUiName, @JsonProperty("UiTemplate") UiTemplateInfo uiTemplate) {
+        this.creationTime = creationTime;
+        this.humanTaskUiArn = humanTaskUiArn;
+        this.humanTaskUiName = humanTaskUiName;
+        this.uiTemplate = uiTemplate;
+  }
 }

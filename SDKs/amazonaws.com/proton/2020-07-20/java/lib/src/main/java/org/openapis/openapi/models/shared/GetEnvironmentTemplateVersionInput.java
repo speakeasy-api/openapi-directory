@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetEnvironmentTemplateVersionInput {
     @JsonProperty("majorVersion")
     public String majorVersion;
+
     public GetEnvironmentTemplateVersionInput withMajorVersion(String majorVersion) {
         this.majorVersion = majorVersion;
         return this;
@@ -16,6 +17,7 @@ public class GetEnvironmentTemplateVersionInput {
     
     @JsonProperty("minorVersion")
     public String minorVersion;
+
     public GetEnvironmentTemplateVersionInput withMinorVersion(String minorVersion) {
         this.minorVersion = minorVersion;
         return this;
@@ -23,9 +25,15 @@ public class GetEnvironmentTemplateVersionInput {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public GetEnvironmentTemplateVersionInput withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public GetEnvironmentTemplateVersionInput(@JsonProperty("majorVersion") String majorVersion, @JsonProperty("minorVersion") String minorVersion, @JsonProperty("templateName") String templateName) {
+        this.majorVersion = majorVersion;
+        this.minorVersion = minorVersion;
+        this.templateName = templateName;
+  }
 }

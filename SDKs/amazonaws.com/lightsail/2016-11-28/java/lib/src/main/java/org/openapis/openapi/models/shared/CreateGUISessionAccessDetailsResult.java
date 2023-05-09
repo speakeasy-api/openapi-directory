@@ -15,6 +15,7 @@ public class CreateGUISessionAccessDetailsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public CreateGUISessionAccessDetailsResult withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -23,6 +24,7 @@ public class CreateGUISessionAccessDetailsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentageComplete")
     public Long percentageComplete;
+
     public CreateGUISessionAccessDetailsResult withPercentageComplete(Long percentageComplete) {
         this.percentageComplete = percentageComplete;
         return this;
@@ -31,6 +33,7 @@ public class CreateGUISessionAccessDetailsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public CreateGUISessionAccessDetailsResult withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -39,6 +42,7 @@ public class CreateGUISessionAccessDetailsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessions")
     public Session[] sessions;
+
     public CreateGUISessionAccessDetailsResult withSessions(Session[] sessions) {
         this.sessions = sessions;
         return this;
@@ -47,9 +51,11 @@ public class CreateGUISessionAccessDetailsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StatusEnum status;
+
     public CreateGUISessionAccessDetailsResult withStatus(StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateGUISessionAccessDetailsResult(){}
 }

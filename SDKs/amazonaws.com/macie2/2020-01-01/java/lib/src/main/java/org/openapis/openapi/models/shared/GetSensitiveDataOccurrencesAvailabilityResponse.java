@@ -15,6 +15,7 @@ public class GetSensitiveDataOccurrencesAvailabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public AvailabilityCodeEnum code;
+
     public GetSensitiveDataOccurrencesAvailabilityResponse withCode(AvailabilityCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class GetSensitiveDataOccurrencesAvailabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasons")
     public UnavailabilityReasonCodeEnum[] reasons;
+
     public GetSensitiveDataOccurrencesAvailabilityResponse withReasons(UnavailabilityReasonCodeEnum[] reasons) {
         this.reasons = reasons;
         return this;
     }
     
+    public GetSensitiveDataOccurrencesAvailabilityResponse(){}
 }

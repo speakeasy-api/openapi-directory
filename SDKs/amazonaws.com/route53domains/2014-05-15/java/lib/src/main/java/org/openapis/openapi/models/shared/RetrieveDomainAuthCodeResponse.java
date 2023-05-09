@@ -15,9 +15,11 @@ public class RetrieveDomainAuthCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthCode")
     public String authCode;
+
     public RetrieveDomainAuthCodeResponse withAuthCode(String authCode) {
         this.authCode = authCode;
         return this;
     }
     
+    public RetrieveDomainAuthCodeResponse(){}
 }

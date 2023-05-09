@@ -12,6 +12,7 @@ public class BillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public BillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class BillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public BillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class BillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public BillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel withType(String type) {
         this.type = type;
         return this;
@@ -36,9 +39,11 @@ public class BillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsedAsPrinter")
     public Boolean usedAsPrinter;
+
     public BillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel withUsedAsPrinter(Boolean usedAsPrinter) {
         this.usedAsPrinter = usedAsPrinter;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel(){}
 }

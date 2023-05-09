@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPermissionsRequest {
@@ -12,9 +13,13 @@ public class GetPermissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
     public Long viewId;
+
     public GetPermissionsRequest withViewId(Long viewId) {
         this.viewId = viewId;
         return this;
     }
     
+    public GetPermissionsRequest(@JsonProperty("viewId") Long viewId) {
+        this.viewId = viewId;
+  }
 }

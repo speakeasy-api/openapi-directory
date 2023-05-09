@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaListConnectedSiteTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public String property;
+
     public GoogleAnalyticsAdminV1alphaListConnectedSiteTagsRequest withProperty(String property) {
         this.property = property;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaListConnectedSiteTagsRequest(){}
 }

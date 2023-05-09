@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TfrByPolyUsV1RestrictionsPolygonQueryPostResponse {
     
     public String contentType;
+
     public TfrByPolyUsV1RestrictionsPolygonQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TfrByPolyUsV1RestrictionsPolygonQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public TfrByPolyUsV1RestrictionsPolygonQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -29,6 +32,7 @@ public class TfrByPolyUsV1RestrictionsPolygonQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.NOTAMsPolyResponse notaMsPolyResponse;
+
     public TfrByPolyUsV1RestrictionsPolygonQueryPostResponse withNOTAMsPolyResponse(org.openapis.openapi.models.shared.NOTAMsPolyResponse notaMsPolyResponse) {
         this.notaMsPolyResponse = notaMsPolyResponse;
         return this;
@@ -36,6 +40,7 @@ public class TfrByPolyUsV1RestrictionsPolygonQueryPostResponse {
     
     
     public Integer statusCode;
+
     public TfrByPolyUsV1RestrictionsPolygonQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class TfrByPolyUsV1RestrictionsPolygonQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TfrByPolyUsV1RestrictionsPolygonQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TfrByPolyUsV1RestrictionsPolygonQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

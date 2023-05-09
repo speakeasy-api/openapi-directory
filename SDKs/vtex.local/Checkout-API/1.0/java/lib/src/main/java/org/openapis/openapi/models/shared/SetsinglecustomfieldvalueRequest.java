@@ -12,9 +12,13 @@ public class SetsinglecustomfieldvalueRequest {
      */
     @JsonProperty("value")
     public String value;
+
     public SetsinglecustomfieldvalueRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SetsinglecustomfieldvalueRequest(@JsonProperty("value") String value) {
+        this.value = value;
+  }
 }

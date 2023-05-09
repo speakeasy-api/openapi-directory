@@ -15,6 +15,7 @@ public class OrderIndex {
      */
     @JsonProperty("links")
     public OrderIndexLinks links;
+
     public OrderIndex withLinks(OrderIndexLinks links) {
         this.links = links;
         return this;
@@ -25,9 +26,14 @@ public class OrderIndex {
      */
     @JsonProperty("lovLinks")
     public OrderIndexLovLinks lovLinks;
+
     public OrderIndex withLovLinks(OrderIndexLovLinks lovLinks) {
         this.lovLinks = lovLinks;
         return this;
     }
     
+    public OrderIndex(@JsonProperty("links") OrderIndexLinks links, @JsonProperty("lovLinks") OrderIndexLovLinks lovLinks) {
+        this.links = links;
+        this.lovLinks = lovLinks;
+  }
 }

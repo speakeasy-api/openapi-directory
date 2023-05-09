@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppsCreateFromManifestResponse {
     
     public String contentType;
+
     public AppsCreateFromManifestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AppsCreateFromManifestResponse {
      */
     
     public java.util.Map<String, Object> gitHubApp;
+
     public AppsCreateFromManifestResponse withGitHubApp(java.util.Map<String, Object> gitHubApp) {
         this.gitHubApp = gitHubApp;
         return this;
@@ -26,6 +29,7 @@ public class AppsCreateFromManifestResponse {
     
     
     public Integer statusCode;
+
     public AppsCreateFromManifestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class AppsCreateFromManifestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppsCreateFromManifestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class AppsCreateFromManifestResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public AppsCreateFromManifestResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -53,9 +59,14 @@ public class AppsCreateFromManifestResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple;
+
     public AppsCreateFromManifestResponse withValidationErrorSimple(org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple) {
         this.validationErrorSimple = validationErrorSimple;
         return this;
     }
     
+    public AppsCreateFromManifestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

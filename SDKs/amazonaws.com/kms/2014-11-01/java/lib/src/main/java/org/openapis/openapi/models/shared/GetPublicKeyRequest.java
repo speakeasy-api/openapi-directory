@@ -12,6 +12,7 @@ public class GetPublicKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantTokens")
     public String[] grantTokens;
+
     public GetPublicKeyRequest withGrantTokens(String[] grantTokens) {
         this.grantTokens = grantTokens;
         return this;
@@ -19,9 +20,13 @@ public class GetPublicKeyRequest {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public GetPublicKeyRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public GetPublicKeyRequest(@JsonProperty("KeyId") String keyId) {
+        this.keyId = keyId;
+  }
 }

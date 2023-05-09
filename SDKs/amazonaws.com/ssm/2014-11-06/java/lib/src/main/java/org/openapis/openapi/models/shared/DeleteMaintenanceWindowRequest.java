@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteMaintenanceWindowRequest {
     @JsonProperty("WindowId")
     public String windowId;
+
     public DeleteMaintenanceWindowRequest withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
     }
     
+    public DeleteMaintenanceWindowRequest(@JsonProperty("WindowId") String windowId) {
+        this.windowId = windowId;
+  }
 }

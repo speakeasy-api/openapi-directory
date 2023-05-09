@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateThumbnailResponse {
     
     public byte[] body;
+
     public GenerateThumbnailResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GenerateThumbnailResponse {
     
     
     public String contentType;
+
     public GenerateThumbnailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GenerateThumbnailResponse {
      */
     
     public byte[] generateThumbnail200ApplicationOctetStreamBinaryString;
+
     public GenerateThumbnailResponse withGenerateThumbnail200ApplicationOctetStreamBinaryString(byte[] generateThumbnail200ApplicationOctetStreamBinaryString) {
         this.generateThumbnail200ApplicationOctetStreamBinaryString = generateThumbnail200ApplicationOctetStreamBinaryString;
         return this;
@@ -33,6 +37,7 @@ public class GenerateThumbnailResponse {
     
     
     public Integer statusCode;
+
     public GenerateThumbnailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GenerateThumbnailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateThumbnailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GenerateThumbnailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

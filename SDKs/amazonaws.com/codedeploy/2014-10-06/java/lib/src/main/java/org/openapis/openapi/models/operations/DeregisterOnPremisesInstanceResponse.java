@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterOnPremisesInstanceResponse {
     
     public String contentType;
+
     public DeregisterOnPremisesInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterOnPremisesInstanceResponse {
      */
     
     public Object instanceNameRequiredException;
+
     public DeregisterOnPremisesInstanceResponse withInstanceNameRequiredException(Object instanceNameRequiredException) {
         this.instanceNameRequiredException = instanceNameRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterOnPremisesInstanceResponse {
      */
     
     public Object invalidInstanceNameException;
+
     public DeregisterOnPremisesInstanceResponse withInvalidInstanceNameException(Object invalidInstanceNameException) {
         this.invalidInstanceNameException = invalidInstanceNameException;
         return this;
@@ -36,6 +40,7 @@ public class DeregisterOnPremisesInstanceResponse {
     
     
     public Integer statusCode;
+
     public DeregisterOnPremisesInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeregisterOnPremisesInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterOnPremisesInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeregisterOnPremisesInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

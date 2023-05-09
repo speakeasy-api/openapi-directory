@@ -15,9 +15,11 @@ public class BranchConfigurationsCreate200ApplicationJSONArtifactVersioning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildNumberFormat")
     public BranchConfigurationsCreate200ApplicationJSONArtifactVersioningBuildNumberFormatEnum buildNumberFormat;
+
     public BranchConfigurationsCreate200ApplicationJSONArtifactVersioning withBuildNumberFormat(BranchConfigurationsCreate200ApplicationJSONArtifactVersioningBuildNumberFormatEnum buildNumberFormat) {
         this.buildNumberFormat = buildNumberFormat;
         return this;
     }
     
+    public BranchConfigurationsCreate200ApplicationJSONArtifactVersioning(){}
 }

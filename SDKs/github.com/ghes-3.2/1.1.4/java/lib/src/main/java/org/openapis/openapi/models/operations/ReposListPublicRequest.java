@@ -12,6 +12,7 @@ public class ReposListPublicRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public Long since;
+
     public ReposListPublicRequest withSince(Long since) {
         this.since = since;
         return this;
@@ -22,9 +23,11 @@ public class ReposListPublicRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=visibility")
     public ReposListPublicVisibilityEnum visibility;
+
     public ReposListPublicRequest withVisibility(ReposListPublicVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public ReposListPublicRequest(){}
 }

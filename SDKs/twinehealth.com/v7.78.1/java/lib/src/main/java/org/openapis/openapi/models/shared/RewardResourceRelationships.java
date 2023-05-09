@@ -12,6 +12,7 @@ public class RewardResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient")
     public RewardResourceRelationshipsPatient patient;
+
     public RewardResourceRelationships withPatient(RewardResourceRelationshipsPatient patient) {
         this.patient = patient;
         return this;
@@ -19,9 +20,13 @@ public class RewardResourceRelationships {
     
     @JsonProperty("reward_program_activation")
     public RewardResourceRelationshipsRewardProgramActivation rewardProgramActivation;
+
     public RewardResourceRelationships withRewardProgramActivation(RewardResourceRelationshipsRewardProgramActivation rewardProgramActivation) {
         this.rewardProgramActivation = rewardProgramActivation;
         return this;
     }
     
+    public RewardResourceRelationships(@JsonProperty("reward_program_activation") RewardResourceRelationshipsRewardProgramActivation rewardProgramActivation) {
+        this.rewardProgramActivation = rewardProgramActivation;
+  }
 }

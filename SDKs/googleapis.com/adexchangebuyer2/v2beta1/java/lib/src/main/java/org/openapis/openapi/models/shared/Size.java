@@ -18,6 +18,7 @@ public class Size {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public Size withHeight(Integer height) {
         this.height = height;
         return this;
@@ -29,9 +30,11 @@ public class Size {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public Size withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public Size(){}
 }

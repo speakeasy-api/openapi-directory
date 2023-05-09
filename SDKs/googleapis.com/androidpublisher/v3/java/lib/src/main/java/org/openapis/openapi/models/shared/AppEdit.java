@@ -18,6 +18,7 @@ public class AppEdit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryTimeSeconds")
     public String expiryTimeSeconds;
+
     public AppEdit withExpiryTimeSeconds(String expiryTimeSeconds) {
         this.expiryTimeSeconds = expiryTimeSeconds;
         return this;
@@ -29,9 +30,11 @@ public class AppEdit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AppEdit withId(String id) {
         this.id = id;
         return this;
     }
     
+    public AppEdit(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OpsMetadataFilter {
     @JsonProperty("Key")
     public String key;
+
     public OpsMetadataFilter withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class OpsMetadataFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public OpsMetadataFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public OpsMetadataFilter(@JsonProperty("Key") String key, @JsonProperty("Values") String[] values) {
+        this.key = key;
+        this.values = values;
+  }
 }

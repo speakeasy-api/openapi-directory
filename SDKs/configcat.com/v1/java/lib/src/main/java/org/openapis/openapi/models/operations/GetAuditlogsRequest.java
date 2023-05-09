@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetAuditlogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auditLogType")
     public GetAuditlogsAuditLogTypeEnum auditLogType;
+
     public GetAuditlogsRequest withAuditLogType(GetAuditlogsAuditLogTypeEnum auditLogType) {
         this.auditLogType = auditLogType;
         return this;
@@ -23,6 +25,7 @@ public class GetAuditlogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=configId")
     public String configId;
+
     public GetAuditlogsRequest withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -33,6 +36,7 @@ public class GetAuditlogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environmentId")
     public String environmentId;
+
     public GetAuditlogsRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -43,6 +47,7 @@ public class GetAuditlogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromUtcDateTime")
     public OffsetDateTime fromUtcDateTime;
+
     public GetAuditlogsRequest withFromUtcDateTime(OffsetDateTime fromUtcDateTime) {
         this.fromUtcDateTime = fromUtcDateTime;
         return this;
@@ -53,6 +58,7 @@ public class GetAuditlogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public String productId;
+
     public GetAuditlogsRequest withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -63,9 +69,13 @@ public class GetAuditlogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toUtcDateTime")
     public OffsetDateTime toUtcDateTime;
+
     public GetAuditlogsRequest withToUtcDateTime(OffsetDateTime toUtcDateTime) {
         this.toUtcDateTime = toUtcDateTime;
         return this;
     }
     
+    public GetAuditlogsRequest(@JsonProperty("productId") String productId) {
+        this.productId = productId;
+  }
 }

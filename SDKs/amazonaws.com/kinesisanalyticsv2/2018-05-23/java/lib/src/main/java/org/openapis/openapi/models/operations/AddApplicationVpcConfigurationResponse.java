@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddApplicationVpcConfigurationResponse {
@@ -12,6 +13,7 @@ public class AddApplicationVpcConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.AddApplicationVpcConfigurationResponse addApplicationVpcConfigurationResponse;
+
     public AddApplicationVpcConfigurationResponse withAddApplicationVpcConfigurationResponse(org.openapis.openapi.models.shared.AddApplicationVpcConfigurationResponse addApplicationVpcConfigurationResponse) {
         this.addApplicationVpcConfigurationResponse = addApplicationVpcConfigurationResponse;
         return this;
@@ -22,6 +24,7 @@ public class AddApplicationVpcConfigurationResponse {
      */
     
     public Object concurrentModificationException;
+
     public AddApplicationVpcConfigurationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class AddApplicationVpcConfigurationResponse {
     
     
     public String contentType;
+
     public AddApplicationVpcConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AddApplicationVpcConfigurationResponse {
      */
     
     public Object invalidApplicationConfigurationException;
+
     public AddApplicationVpcConfigurationResponse withInvalidApplicationConfigurationException(Object invalidApplicationConfigurationException) {
         this.invalidApplicationConfigurationException = invalidApplicationConfigurationException;
         return this;
@@ -49,6 +54,7 @@ public class AddApplicationVpcConfigurationResponse {
      */
     
     public Object invalidArgumentException;
+
     public AddApplicationVpcConfigurationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class AddApplicationVpcConfigurationResponse {
      */
     
     public Object resourceInUseException;
+
     public AddApplicationVpcConfigurationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class AddApplicationVpcConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddApplicationVpcConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class AddApplicationVpcConfigurationResponse {
     
     
     public Integer statusCode;
+
     public AddApplicationVpcConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class AddApplicationVpcConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddApplicationVpcConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddApplicationVpcConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

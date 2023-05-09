@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaListGoogleAdsLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAdsLinks")
     public GoogleAnalyticsAdminV1alphaGoogleAdsLink[] googleAdsLinks;
+
     public GoogleAnalyticsAdminV1alphaListGoogleAdsLinksResponse withGoogleAdsLinks(GoogleAnalyticsAdminV1alphaGoogleAdsLink[] googleAdsLinks) {
         this.googleAdsLinks = googleAdsLinks;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaListGoogleAdsLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAnalyticsAdminV1alphaListGoogleAdsLinksResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaListGoogleAdsLinksResponse(){}
 }

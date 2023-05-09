@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateSpotDatafeedSubscriptionResult {
     
     public CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription spotDatafeedSubscription;
+
     public CreateSpotDatafeedSubscriptionResult withSpotDatafeedSubscription(CreateSpotDatafeedSubscriptionResultSpotDatafeedSubscription spotDatafeedSubscription) {
         this.spotDatafeedSubscription = spotDatafeedSubscription;
         return this;
     }
     
+    public CreateSpotDatafeedSubscriptionResult(){}
 }

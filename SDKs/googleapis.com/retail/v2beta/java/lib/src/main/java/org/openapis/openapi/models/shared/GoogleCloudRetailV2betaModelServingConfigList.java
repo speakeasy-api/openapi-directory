@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2betaModelServingConfigList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servingConfigIds")
     public String[] servingConfigIds;
+
     public GoogleCloudRetailV2betaModelServingConfigList withServingConfigIds(String[] servingConfigIds) {
         this.servingConfigIds = servingConfigIds;
         return this;
     }
     
+    public GoogleCloudRetailV2betaModelServingConfigList(){}
 }

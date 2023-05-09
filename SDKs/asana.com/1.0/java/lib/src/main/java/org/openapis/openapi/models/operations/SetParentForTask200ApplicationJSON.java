@@ -15,9 +15,11 @@ public class SetParentForTask200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TaskResponse data;
+
     public SetParentForTask200ApplicationJSON withData(org.openapis.openapi.models.shared.TaskResponse data) {
         this.data = data;
         return this;
     }
     
+    public SetParentForTask200ApplicationJSON(){}
 }

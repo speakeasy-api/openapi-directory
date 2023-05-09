@@ -15,6 +15,7 @@ public class ProjectsCreateForAuthenticatedUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public ProjectsCreateForAuthenticatedUserRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -25,9 +26,13 @@ public class ProjectsCreateForAuthenticatedUserRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public ProjectsCreateForAuthenticatedUserRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ProjectsCreateForAuthenticatedUserRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

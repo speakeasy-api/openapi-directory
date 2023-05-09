@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateHostResponse {
@@ -12,6 +13,7 @@ public class UpdateHostResponse {
      */
     
     public Object conflictException;
+
     public UpdateHostResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateHostResponse {
     
     
     public String contentType;
+
     public UpdateHostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateHostResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateHostResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateHostResponse {
      */
     
     public Object resourceUnavailableException;
+
     public UpdateHostResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateHostResponse {
     
     
     public Integer statusCode;
+
     public UpdateHostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateHostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateHostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateHostResponse {
      */
     
     public Object unsupportedOperationException;
+
     public UpdateHostResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateHostResponse {
      */
     
     public java.util.Map<String, Object> updateHostOutput;
+
     public UpdateHostResponse withUpdateHostOutput(java.util.Map<String, Object> updateHostOutput) {
         this.updateHostOutput = updateHostOutput;
         return this;
     }
     
+    public UpdateHostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

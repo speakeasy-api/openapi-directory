@@ -18,6 +18,7 @@ public class AnnotateTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public Document document;
+
     public AnnotateTextRequest withDocument(Document document) {
         this.document = document;
         return this;
@@ -29,20 +30,23 @@ public class AnnotateTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encodingType")
     public AnnotateTextRequestEncodingTypeEnum encodingType;
+
     public AnnotateTextRequest withEncodingType(AnnotateTextRequestEncodingTypeEnum encodingType) {
         this.encodingType = encodingType;
         return this;
     }
     
     /**
-     * All available features for sentiment, syntax, and semantic analysis. Setting each one to true will enable that specific analysis for the input. Next ID: 11
+     * All available features for sentiment, syntax, and semantic analysis. Setting each one to true will enable that specific analysis for the input. Next ID: 12
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public Features features;
+
     public AnnotateTextRequest withFeatures(Features features) {
         this.features = features;
         return this;
     }
     
+    public AnnotateTextRequest(){}
 }

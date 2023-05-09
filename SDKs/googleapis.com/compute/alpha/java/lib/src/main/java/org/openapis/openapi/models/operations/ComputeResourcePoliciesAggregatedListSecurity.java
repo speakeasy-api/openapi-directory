@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeResourcePoliciesAggregatedListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeResourcePoliciesAggregatedListSecurityOption1 option1;
+
     public ComputeResourcePoliciesAggregatedListSecurity withOption1(ComputeResourcePoliciesAggregatedListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeResourcePoliciesAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeResourcePoliciesAggregatedListSecurityOption2 option2;
+
     public ComputeResourcePoliciesAggregatedListSecurity withOption2(ComputeResourcePoliciesAggregatedListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeResourcePoliciesAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeResourcePoliciesAggregatedListSecurityOption3 option3;
+
     public ComputeResourcePoliciesAggregatedListSecurity withOption3(ComputeResourcePoliciesAggregatedListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeResourcePoliciesAggregatedListSecurity(){}
 }

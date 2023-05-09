@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyClusterDbRevisionMessage {
     
     public String clusterIdentifier;
+
     public ModifyClusterDbRevisionMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -16,9 +17,14 @@ public class ModifyClusterDbRevisionMessage {
     
     
     public String revisionTarget;
+
     public ModifyClusterDbRevisionMessage withRevisionTarget(String revisionTarget) {
         this.revisionTarget = revisionTarget;
         return this;
     }
     
+    public ModifyClusterDbRevisionMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("RevisionTarget") String revisionTarget) {
+        this.clusterIdentifier = clusterIdentifier;
+        this.revisionTarget = revisionTarget;
+  }
 }

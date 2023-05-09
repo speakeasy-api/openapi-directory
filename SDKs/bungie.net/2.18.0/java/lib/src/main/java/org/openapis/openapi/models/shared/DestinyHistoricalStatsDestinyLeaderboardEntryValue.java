@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryValue {
      */
     
     public Long activityId;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryValue withActivityId(Long activityId) {
         this.activityId = activityId;
         return this;
@@ -25,6 +26,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryValue {
      */
     
     public DestinyHistoricalStatsDestinyLeaderboardEntryValueBasic basic;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryValue withBasic(DestinyHistoricalStatsDestinyLeaderboardEntryValueBasic basic) {
         this.basic = basic;
         return this;
@@ -35,6 +37,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryValue {
      */
     
     public DestinyHistoricalStatsDestinyLeaderboardEntryValuePga pga;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryValue withPga(DestinyHistoricalStatsDestinyLeaderboardEntryValuePga pga) {
         this.pga = pga;
         return this;
@@ -45,6 +48,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryValue {
      */
     
     public String statId;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryValue withStatId(String statId) {
         this.statId = statId;
         return this;
@@ -55,9 +59,11 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryValue {
      */
     
     public DestinyHistoricalStatsDestinyLeaderboardEntryValueWeighted weighted;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryValue withWeighted(DestinyHistoricalStatsDestinyLeaderboardEntryValueWeighted weighted) {
         this.weighted = weighted;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyLeaderboardEntryValue(){}
 }

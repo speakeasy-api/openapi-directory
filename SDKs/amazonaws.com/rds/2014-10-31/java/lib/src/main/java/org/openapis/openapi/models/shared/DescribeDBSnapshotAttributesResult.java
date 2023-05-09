@@ -15,9 +15,11 @@ public class DescribeDBSnapshotAttributesResult {
      */
     
     public DBSnapshotAttributesResult dbSnapshotAttributesResult;
+
     public DescribeDBSnapshotAttributesResult withDBSnapshotAttributesResult(DBSnapshotAttributesResult dbSnapshotAttributesResult) {
         this.dbSnapshotAttributesResult = dbSnapshotAttributesResult;
         return this;
     }
     
+    public DescribeDBSnapshotAttributesResult(){}
 }

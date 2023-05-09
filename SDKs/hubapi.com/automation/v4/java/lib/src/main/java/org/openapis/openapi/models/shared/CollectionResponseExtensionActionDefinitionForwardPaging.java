@@ -15,6 +15,7 @@ public class CollectionResponseExtensionActionDefinitionForwardPaging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paging")
     public ForwardPaging paging;
+
     public CollectionResponseExtensionActionDefinitionForwardPaging withPaging(ForwardPaging paging) {
         this.paging = paging;
         return this;
@@ -22,9 +23,13 @@ public class CollectionResponseExtensionActionDefinitionForwardPaging {
     
     @JsonProperty("results")
     public ExtensionActionDefinition[] results;
+
     public CollectionResponseExtensionActionDefinitionForwardPaging withResults(ExtensionActionDefinition[] results) {
         this.results = results;
         return this;
     }
     
+    public CollectionResponseExtensionActionDefinitionForwardPaging(@JsonProperty("results") ExtensionActionDefinition[] results) {
+        this.results = results;
+  }
 }

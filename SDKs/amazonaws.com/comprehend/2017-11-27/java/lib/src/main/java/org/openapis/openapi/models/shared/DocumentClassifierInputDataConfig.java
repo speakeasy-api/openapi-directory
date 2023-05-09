@@ -15,6 +15,7 @@ public class DocumentClassifierInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AugmentedManifests")
     public AugmentedManifestsListItem[] augmentedManifests;
+
     public DocumentClassifierInputDataConfig withAugmentedManifests(AugmentedManifestsListItem[] augmentedManifests) {
         this.augmentedManifests = augmentedManifests;
         return this;
@@ -23,14 +24,46 @@ public class DocumentClassifierInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataFormat")
     public DocumentClassifierDataFormatEnum dataFormat;
+
     public DocumentClassifierInputDataConfig withDataFormat(DocumentClassifierDataFormatEnum dataFormat) {
         this.dataFormat = dataFormat;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Provides configuration parameters to override the default actions for extracting text from PDF documents and image files. &lt;/p&gt; &lt;p&gt; By default, Amazon Comprehend performs the following actions to extract text from files, based on the input file type: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Word files&lt;/b&gt; - Amazon Comprehend parser extracts the text. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Digital PDF files&lt;/b&gt; - Amazon Comprehend parser extracts the text. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Image files and scanned PDF files&lt;/b&gt; - Amazon Comprehend uses the Amazon Textract &lt;code&gt;DetectDocumentText&lt;/code&gt; API to extract the text. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;code&gt;DocumentReaderConfig&lt;/code&gt; does not apply to plain text files or Word files.&lt;/p&gt; &lt;p&gt; For image files and PDF documents, you can override these default actions using the fields listed below. For more information, see &lt;a href="https://docs.aws.amazon.com/comprehend/latest/dg/idp-set-textract-options.html"&gt; Setting text extraction options&lt;/a&gt; in the Comprehend Developer Guide. &lt;/p&gt;
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DocumentReaderConfig")
+    public DocumentReaderConfig documentReaderConfig;
+
+    public DocumentClassifierInputDataConfig withDocumentReaderConfig(DocumentReaderConfig documentReaderConfig) {
+        this.documentReaderConfig = documentReaderConfig;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DocumentType")
+    public DocumentClassifierDocumentTypeFormatEnum documentType;
+
+    public DocumentClassifierInputDataConfig withDocumentType(DocumentClassifierDocumentTypeFormatEnum documentType) {
+        this.documentType = documentType;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Documents")
+    public DocumentClassifierDocuments documents;
+
+    public DocumentClassifierInputDataConfig withDocuments(DocumentClassifierDocuments documents) {
+        this.documents = documents;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelDelimiter")
     public String labelDelimiter;
+
     public DocumentClassifierInputDataConfig withLabelDelimiter(String labelDelimiter) {
         this.labelDelimiter = labelDelimiter;
         return this;
@@ -39,6 +72,7 @@ public class DocumentClassifierInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public DocumentClassifierInputDataConfig withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
@@ -47,9 +81,11 @@ public class DocumentClassifierInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TestS3Uri")
     public String testS3Uri;
+
     public DocumentClassifierInputDataConfig withTestS3Uri(String testS3Uri) {
         this.testS3Uri = testS3Uri;
         return this;
     }
     
+    public DocumentClassifierInputDataConfig(){}
 }

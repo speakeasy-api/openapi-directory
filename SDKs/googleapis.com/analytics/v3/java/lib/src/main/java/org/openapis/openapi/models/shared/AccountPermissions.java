@@ -18,9 +18,11 @@ public class AccountPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effective")
     public String[] effective;
+
     public AccountPermissions withEffective(String[] effective) {
         this.effective = effective;
         return this;
     }
     
+    public AccountPermissions(){}
 }

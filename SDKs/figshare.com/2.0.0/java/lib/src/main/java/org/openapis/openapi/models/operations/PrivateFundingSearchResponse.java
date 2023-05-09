@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrivateFundingSearchResponse {
     
     public String contentType;
+
     public PrivateFundingSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PrivateFundingSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorMessage errorMessage;
+
     public PrivateFundingSearchResponse withErrorMessage(org.openapis.openapi.models.shared.ErrorMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -29,6 +32,7 @@ public class PrivateFundingSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.FundingInformation[] fundingInformations;
+
     public PrivateFundingSearchResponse withFundingInformations(org.openapis.openapi.models.shared.FundingInformation[] fundingInformations) {
         this.fundingInformations = fundingInformations;
         return this;
@@ -36,6 +40,7 @@ public class PrivateFundingSearchResponse {
     
     
     public Integer statusCode;
+
     public PrivateFundingSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PrivateFundingSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrivateFundingSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PrivateFundingSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

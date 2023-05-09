@@ -18,6 +18,7 @@ public class WaterfallChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorLineStyle")
     public LineStyle connectorLineStyle;
+
     public WaterfallChartSpec withConnectorLineStyle(LineStyle connectorLineStyle) {
         this.connectorLineStyle = connectorLineStyle;
         return this;
@@ -29,6 +30,7 @@ public class WaterfallChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public WaterfallChartDomain domain;
+
     public WaterfallChartSpec withDomain(WaterfallChartDomain domain) {
         this.domain = domain;
         return this;
@@ -40,6 +42,7 @@ public class WaterfallChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstValueIsTotal")
     public Boolean firstValueIsTotal;
+
     public WaterfallChartSpec withFirstValueIsTotal(Boolean firstValueIsTotal) {
         this.firstValueIsTotal = firstValueIsTotal;
         return this;
@@ -51,6 +54,7 @@ public class WaterfallChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideConnectorLines")
     public Boolean hideConnectorLines;
+
     public WaterfallChartSpec withHideConnectorLines(Boolean hideConnectorLines) {
         this.hideConnectorLines = hideConnectorLines;
         return this;
@@ -62,6 +66,7 @@ public class WaterfallChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("series")
     public WaterfallChartSeries[] series;
+
     public WaterfallChartSpec withSeries(WaterfallChartSeries[] series) {
         this.series = series;
         return this;
@@ -73,6 +78,7 @@ public class WaterfallChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackedType")
     public WaterfallChartSpecStackedTypeEnum stackedType;
+
     public WaterfallChartSpec withStackedType(WaterfallChartSpecStackedTypeEnum stackedType) {
         this.stackedType = stackedType;
         return this;
@@ -84,9 +90,11 @@ public class WaterfallChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalDataLabel")
     public DataLabel totalDataLabel;
+
     public WaterfallChartSpec withTotalDataLabel(DataLabel totalDataLabel) {
         this.totalDataLabel = totalDataLabel;
         return this;
     }
     
+    public WaterfallChartSpec(){}
 }

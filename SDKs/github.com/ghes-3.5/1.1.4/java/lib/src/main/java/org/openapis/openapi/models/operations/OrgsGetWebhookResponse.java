@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrgsGetWebhookResponse {
     
     public String contentType;
+
     public OrgsGetWebhookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OrgsGetWebhookResponse {
     
     
     public Integer statusCode;
+
     public OrgsGetWebhookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class OrgsGetWebhookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrgsGetWebhookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class OrgsGetWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public OrgsGetWebhookResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class OrgsGetWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.OrgHook orgHook;
+
     public OrgsGetWebhookResponse withOrgHook(org.openapis.openapi.models.shared.OrgHook orgHook) {
         this.orgHook = orgHook;
         return this;
     }
     
+    public OrgsGetWebhookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

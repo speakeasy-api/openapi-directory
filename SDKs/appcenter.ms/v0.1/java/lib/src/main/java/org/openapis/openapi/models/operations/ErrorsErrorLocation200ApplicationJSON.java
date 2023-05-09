@@ -15,9 +15,11 @@ public class ErrorsErrorLocation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public ErrorsErrorLocation200ApplicationJSON withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public ErrorsErrorLocation200ApplicationJSON(){}
 }

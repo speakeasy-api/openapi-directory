@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostApiV1AdminReportsIdAssignToSelfResponse {
@@ -12,6 +13,7 @@ public class PostApiV1AdminReportsIdAssignToSelfResponse {
      */
     
     public org.openapis.openapi.models.shared.AdminReport adminReport;
+
     public PostApiV1AdminReportsIdAssignToSelfResponse withAdminReport(org.openapis.openapi.models.shared.AdminReport adminReport) {
         this.adminReport = adminReport;
         return this;
@@ -19,6 +21,7 @@ public class PostApiV1AdminReportsIdAssignToSelfResponse {
     
     
     public String contentType;
+
     public PostApiV1AdminReportsIdAssignToSelfResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostApiV1AdminReportsIdAssignToSelfResponse {
     
     
     public Integer statusCode;
+
     public PostApiV1AdminReportsIdAssignToSelfResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostApiV1AdminReportsIdAssignToSelfResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostApiV1AdminReportsIdAssignToSelfResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostApiV1AdminReportsIdAssignToSelfResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

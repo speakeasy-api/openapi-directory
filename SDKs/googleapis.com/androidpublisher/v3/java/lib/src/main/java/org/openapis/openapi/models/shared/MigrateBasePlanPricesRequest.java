@@ -18,6 +18,7 @@ public class MigrateBasePlanPricesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionalPriceMigrations")
     public RegionalPriceMigrationConfig[] regionalPriceMigrations;
+
     public MigrateBasePlanPricesRequest withRegionalPriceMigrations(RegionalPriceMigrationConfig[] regionalPriceMigrations) {
         this.regionalPriceMigrations = regionalPriceMigrations;
         return this;
@@ -29,9 +30,11 @@ public class MigrateBasePlanPricesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionsVersion")
     public RegionsVersion regionsVersion;
+
     public MigrateBasePlanPricesRequest withRegionsVersion(RegionsVersion regionsVersion) {
         this.regionsVersion = regionsVersion;
         return this;
     }
     
+    public MigrateBasePlanPricesRequest(){}
 }

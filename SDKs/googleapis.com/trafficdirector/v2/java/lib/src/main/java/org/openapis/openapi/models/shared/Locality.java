@@ -18,6 +18,7 @@ public class Locality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Locality withRegion(String region) {
         this.region = region;
         return this;
@@ -29,6 +30,7 @@ public class Locality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subZone")
     public String subZone;
+
     public Locality withSubZone(String subZone) {
         this.subZone = subZone;
         return this;
@@ -40,9 +42,11 @@ public class Locality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public Locality withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public Locality(){}
 }

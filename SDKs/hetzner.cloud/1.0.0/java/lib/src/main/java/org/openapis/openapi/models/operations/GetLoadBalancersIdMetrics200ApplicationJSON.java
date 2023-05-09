@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetLoadBalancersIdMetrics200ApplicationJSON {
     @JsonProperty("metrics")
     public GetLoadBalancersIdMetrics200ApplicationJSONMetrics metrics;
+
     public GetLoadBalancersIdMetrics200ApplicationJSON withMetrics(GetLoadBalancersIdMetrics200ApplicationJSONMetrics metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public GetLoadBalancersIdMetrics200ApplicationJSON(@JsonProperty("metrics") GetLoadBalancersIdMetrics200ApplicationJSONMetrics metrics) {
+        this.metrics = metrics;
+  }
 }

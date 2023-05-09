@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateScriptTagRequest {
@@ -12,6 +13,7 @@ public class UpdateScriptTagRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateScriptTagRequestBody requestBody;
+
     public UpdateScriptTagRequest withRequestBody(UpdateScriptTagRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,13 @@ public class UpdateScriptTagRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scriptTagId")
     public Long scriptTagId;
+
     public UpdateScriptTagRequest withScriptTagId(Long scriptTagId) {
         this.scriptTagId = scriptTagId;
         return this;
     }
     
+    public UpdateScriptTagRequest(@JsonProperty("scriptTagId") Long scriptTagId) {
+        this.scriptTagId = scriptTagId;
+  }
 }

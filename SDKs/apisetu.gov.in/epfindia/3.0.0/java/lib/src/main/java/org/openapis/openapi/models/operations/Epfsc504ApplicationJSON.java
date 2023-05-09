@@ -15,6 +15,7 @@ public class Epfsc504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Epfsc504ApplicationJSONErrorEnum error;
+
     public Epfsc504ApplicationJSON withError(Epfsc504ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Epfsc504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Epfsc504ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Epfsc504ApplicationJSON withErrorDescription(Epfsc504ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Epfsc504ApplicationJSON(){}
 }

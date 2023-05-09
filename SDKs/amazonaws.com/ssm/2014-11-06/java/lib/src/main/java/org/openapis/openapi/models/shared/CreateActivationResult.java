@@ -15,6 +15,7 @@ public class CreateActivationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActivationCode")
     public String activationCode;
+
     public CreateActivationResult withActivationCode(String activationCode) {
         this.activationCode = activationCode;
         return this;
@@ -23,9 +24,11 @@ public class CreateActivationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActivationId")
     public String activationId;
+
     public CreateActivationResult withActivationId(String activationId) {
         this.activationId = activationId;
         return this;
     }
     
+    public CreateActivationResult(){}
 }

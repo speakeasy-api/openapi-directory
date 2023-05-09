@@ -18,6 +18,7 @@ public class Capabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meetings")
     public MeetingsCapability meetings;
+
     public Capabilities withMeetings(MeetingsCapability meetings) {
         this.meetings = meetings;
         return this;
@@ -29,6 +30,7 @@ public class Capabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public MessagesCapability messages;
+
     public Capabilities withMessages(MessagesCapability messages) {
         this.messages = messages;
         return this;
@@ -40,6 +42,7 @@ public class Capabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rtc")
     public RtcCapability rtc;
+
     public Capabilities withRtc(RtcCapability rtc) {
         this.rtc = rtc;
         return this;
@@ -51,6 +54,7 @@ public class Capabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vbc")
     public java.util.Map<String, Object> vbc;
+
     public Capabilities withVbc(java.util.Map<String, Object> vbc) {
         this.vbc = vbc;
         return this;
@@ -62,6 +66,7 @@ public class Capabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verify")
     public VerifyCapability verify;
+
     public Capabilities withVerify(VerifyCapability verify) {
         this.verify = verify;
         return this;
@@ -73,9 +78,11 @@ public class Capabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voice")
     public VoiceCapability voice;
+
     public Capabilities withVoice(VoiceCapability voice) {
         this.voice = voice;
         return this;
     }
     
+    public Capabilities(){}
 }

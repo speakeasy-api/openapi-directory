@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeNotificationsForBudgetRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public DescribeNotificationsForBudgetRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -21,6 +22,7 @@ public class DescribeNotificationsForBudgetRequest {
     
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public DescribeNotificationsForBudgetRequest withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
@@ -29,6 +31,7 @@ public class DescribeNotificationsForBudgetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeNotificationsForBudgetRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +40,14 @@ public class DescribeNotificationsForBudgetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeNotificationsForBudgetRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeNotificationsForBudgetRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("BudgetName") String budgetName) {
+        this.accountId = accountId;
+        this.budgetName = budgetName;
+  }
 }

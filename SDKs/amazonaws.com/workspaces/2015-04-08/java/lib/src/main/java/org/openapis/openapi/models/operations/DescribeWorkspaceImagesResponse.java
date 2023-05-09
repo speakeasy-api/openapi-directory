@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeWorkspaceImagesResponse {
@@ -12,6 +13,7 @@ public class DescribeWorkspaceImagesResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeWorkspaceImagesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeWorkspaceImagesResponse {
     
     
     public String contentType;
+
     public DescribeWorkspaceImagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeWorkspaceImagesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeWorkspaceImagesResult describeWorkspaceImagesResult;
+
     public DescribeWorkspaceImagesResponse withDescribeWorkspaceImagesResult(org.openapis.openapi.models.shared.DescribeWorkspaceImagesResult describeWorkspaceImagesResult) {
         this.describeWorkspaceImagesResult = describeWorkspaceImagesResult;
         return this;
@@ -36,6 +40,7 @@ public class DescribeWorkspaceImagesResponse {
     
     
     public Integer statusCode;
+
     public DescribeWorkspaceImagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeWorkspaceImagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeWorkspaceImagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeWorkspaceImagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class PutBackupPolicyRequestBodyBackupPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public org.openapis.openapi.models.shared.StatusEnum status;
+
     public PutBackupPolicyRequestBodyBackupPolicy withStatus(org.openapis.openapi.models.shared.StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PutBackupPolicyRequestBodyBackupPolicy(){}
 }

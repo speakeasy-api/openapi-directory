@@ -66,11 +66,9 @@ public class BranchRestrictions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -116,12 +114,10 @@ public class BranchRestrictions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse(contentType, httpRes.statusCode()) {{
             paginatedBranchrestrictions = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -165,12 +161,10 @@ public class BranchRestrictions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse(contentType, httpRes.statusCode()) {{
             branchrestriction = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -258,12 +252,10 @@ public class BranchRestrictions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse() {{
+        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse(contentType, httpRes.statusCode()) {{
             branchrestriction = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -316,12 +308,10 @@ public class BranchRestrictions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse() {{
+        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse(contentType, httpRes.statusCode()) {{
             branchrestriction = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

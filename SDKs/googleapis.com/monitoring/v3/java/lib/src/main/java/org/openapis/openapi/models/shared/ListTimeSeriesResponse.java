@@ -18,6 +18,7 @@ public class ListTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionErrors")
     public Status[] executionErrors;
+
     public ListTimeSeriesResponse withExecutionErrors(Status[] executionErrors) {
         this.executionErrors = executionErrors;
         return this;
@@ -29,6 +30,7 @@ public class ListTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTimeSeriesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,6 +42,7 @@ public class ListTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeries")
     public TimeSeries[] timeSeries;
+
     public ListTimeSeriesResponse withTimeSeries(TimeSeries[] timeSeries) {
         this.timeSeries = timeSeries;
         return this;
@@ -51,9 +54,11 @@ public class ListTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public ListTimeSeriesResponse withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public ListTimeSeriesResponse(){}
 }

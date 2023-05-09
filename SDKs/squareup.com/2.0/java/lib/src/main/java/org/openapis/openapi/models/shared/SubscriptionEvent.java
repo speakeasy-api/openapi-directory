@@ -18,6 +18,7 @@ public class SubscriptionEvent {
      */
     @JsonProperty("effective_date")
     public String effectiveDate;
+
     public SubscriptionEvent withEffectiveDate(String effectiveDate) {
         this.effectiveDate = effectiveDate;
         return this;
@@ -28,6 +29,7 @@ public class SubscriptionEvent {
      */
     @JsonProperty("id")
     public String id;
+
     public SubscriptionEvent withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +38,7 @@ public class SubscriptionEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public Object info;
+
     public SubscriptionEvent withInfo(Object info) {
         this.info = info;
         return this;
@@ -46,6 +49,7 @@ public class SubscriptionEvent {
      */
     @JsonProperty("plan_id")
     public String planId;
+
     public SubscriptionEvent withPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -56,9 +60,16 @@ public class SubscriptionEvent {
      */
     @JsonProperty("subscription_event_type")
     public String subscriptionEventType;
+
     public SubscriptionEvent withSubscriptionEventType(String subscriptionEventType) {
         this.subscriptionEventType = subscriptionEventType;
         return this;
     }
     
+    public SubscriptionEvent(@JsonProperty("effective_date") String effectiveDate, @JsonProperty("id") String id, @JsonProperty("plan_id") String planId, @JsonProperty("subscription_event_type") String subscriptionEventType) {
+        this.effectiveDate = effectiveDate;
+        this.id = id;
+        this.planId = planId;
+        this.subscriptionEventType = subscriptionEventType;
+  }
 }

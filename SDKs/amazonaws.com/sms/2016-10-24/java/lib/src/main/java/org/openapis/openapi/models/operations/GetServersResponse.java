@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetServersResponse {
     
     public String contentType;
+
     public GetServersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetServersResponse {
      */
     
     public org.openapis.openapi.models.shared.GetServersResponse getServersResponse;
+
     public GetServersResponse withGetServersResponse(org.openapis.openapi.models.shared.GetServersResponse getServersResponse) {
         this.getServersResponse = getServersResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetServersResponse {
      */
     
     public Object internalError;
+
     public GetServersResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -39,6 +43,7 @@ public class GetServersResponse {
      */
     
     public Object invalidParameterException;
+
     public GetServersResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetServersResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public GetServersResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -56,6 +62,7 @@ public class GetServersResponse {
     
     
     public Integer statusCode;
+
     public GetServersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetServersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetServersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetServersResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public GetServersResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public GetServersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

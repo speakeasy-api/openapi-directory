@@ -15,9 +15,11 @@ public class CreateLocationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public CreateLocationRequest withLocation(Location location) {
         this.location = location;
         return this;
     }
     
+    public CreateLocationRequest(){}
 }

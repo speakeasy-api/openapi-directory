@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contexts")
     public GoogleCloudDialogflowV2Context[] contexts;
+
     public GoogleCloudDialogflowV2QueryParameters withContexts(GoogleCloudDialogflowV2Context[] contexts) {
         this.contexts = contexts;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoLocation")
     public GoogleTypeLatLng geoLocation;
+
     public GoogleCloudDialogflowV2QueryParameters withGeoLocation(GoogleTypeLatLng geoLocation) {
         this.geoLocation = geoLocation;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public java.util.Map<String, Object> payload;
+
     public GoogleCloudDialogflowV2QueryParameters withPayload(java.util.Map<String, Object> payload) {
         this.payload = payload;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetContexts")
     public Boolean resetContexts;
+
     public GoogleCloudDialogflowV2QueryParameters withResetContexts(Boolean resetContexts) {
         this.resetContexts = resetContexts;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentimentAnalysisRequestConfig")
     public GoogleCloudDialogflowV2SentimentAnalysisRequestConfig sentimentAnalysisRequestConfig;
+
     public GoogleCloudDialogflowV2QueryParameters withSentimentAnalysisRequestConfig(GoogleCloudDialogflowV2SentimentAnalysisRequestConfig sentimentAnalysisRequestConfig) {
         this.sentimentAnalysisRequestConfig = sentimentAnalysisRequestConfig;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionEntityTypes")
     public GoogleCloudDialogflowV2SessionEntityType[] sessionEntityTypes;
+
     public GoogleCloudDialogflowV2QueryParameters withSessionEntityTypes(GoogleCloudDialogflowV2SessionEntityType[] sessionEntityTypes) {
         this.sessionEntityTypes = sessionEntityTypes;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowV2QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public GoogleCloudDialogflowV2QueryParameters withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -95,9 +102,11 @@ public class GoogleCloudDialogflowV2QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookHeaders")
     public java.util.Map<String, String> webhookHeaders;
+
     public GoogleCloudDialogflowV2QueryParameters withWebhookHeaders(java.util.Map<String, String> webhookHeaders) {
         this.webhookHeaders = webhookHeaders;
         return this;
     }
     
+    public GoogleCloudDialogflowV2QueryParameters(){}
 }

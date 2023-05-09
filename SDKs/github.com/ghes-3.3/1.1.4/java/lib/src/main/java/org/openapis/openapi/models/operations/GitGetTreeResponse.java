@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GitGetTreeResponse {
     
     public String contentType;
+
     public GitGetTreeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GitGetTreeResponse {
     
     
     public Integer statusCode;
+
     public GitGetTreeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GitGetTreeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GitGetTreeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GitGetTreeResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public GitGetTreeResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class GitGetTreeResponse {
      */
     
     public org.openapis.openapi.models.shared.GitTree gitTree;
+
     public GitGetTreeResponse withGitTree(org.openapis.openapi.models.shared.GitTree gitTree) {
         this.gitTree = gitTree;
         return this;
@@ -53,9 +59,14 @@ public class GitGetTreeResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public GitGetTreeResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public GitGetTreeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

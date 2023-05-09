@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class GetUserRequest {
     
     public String userName;
+
     public GetUserRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public GetUserRequest(){}
 }

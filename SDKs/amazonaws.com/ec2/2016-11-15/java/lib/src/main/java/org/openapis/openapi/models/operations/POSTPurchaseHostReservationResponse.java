@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTPurchaseHostReservationResponse {
     
     public byte[] body;
+
     public POSTPurchaseHostReservationResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTPurchaseHostReservationResponse {
     
     
     public String contentType;
+
     public POSTPurchaseHostReservationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTPurchaseHostReservationResponse {
     
     
     public Integer statusCode;
+
     public POSTPurchaseHostReservationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTPurchaseHostReservationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTPurchaseHostReservationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTPurchaseHostReservationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

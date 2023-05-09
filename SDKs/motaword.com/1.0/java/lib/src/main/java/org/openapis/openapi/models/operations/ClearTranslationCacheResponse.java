@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClearTranslationCacheResponse {
     
     public String contentType;
+
     public ClearTranslationCacheResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ClearTranslationCacheResponse {
      */
     
     public org.openapis.openapi.models.shared.OperationStatus operationStatus;
+
     public ClearTranslationCacheResponse withOperationStatus(org.openapis.openapi.models.shared.OperationStatus operationStatus) {
         this.operationStatus = operationStatus;
         return this;
@@ -26,6 +29,7 @@ public class ClearTranslationCacheResponse {
     
     
     public Integer statusCode;
+
     public ClearTranslationCacheResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ClearTranslationCacheResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClearTranslationCacheResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClearTranslationCacheResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

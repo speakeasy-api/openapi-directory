@@ -18,9 +18,11 @@ public class SystemEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SystemEventTypeEnum type;
+
     public SystemEvent withType(SystemEventTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SystemEvent(){}
 }

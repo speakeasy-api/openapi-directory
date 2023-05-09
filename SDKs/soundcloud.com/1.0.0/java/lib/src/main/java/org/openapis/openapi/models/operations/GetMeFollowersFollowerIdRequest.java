@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMeFollowersFollowerIdRequest {
@@ -12,9 +13,13 @@ public class GetMeFollowersFollowerIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=follower_id")
     public Long followerId;
+
     public GetMeFollowersFollowerIdRequest withFollowerId(Long followerId) {
         this.followerId = followerId;
         return this;
     }
     
+    public GetMeFollowersFollowerIdRequest(@JsonProperty("follower_id") Long followerId) {
+        this.followerId = followerId;
+  }
 }

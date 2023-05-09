@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetCallerIdentityResponse {
     
     public String account;
+
     public GetCallerIdentityResponse withAccount(String account) {
         this.account = account;
         return this;
@@ -19,6 +20,7 @@ public class GetCallerIdentityResponse {
     
     
     public String arn;
+
     public GetCallerIdentityResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,9 +28,11 @@ public class GetCallerIdentityResponse {
     
     
     public String userId;
+
     public GetCallerIdentityResponse withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetCallerIdentityResponse(){}
 }

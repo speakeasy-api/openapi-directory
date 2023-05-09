@@ -12,9 +12,11 @@ public class GetSearchV1FieldsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetSearchV1FieldsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
     }
     
+    public GetSearchV1FieldsRequest(){}
 }

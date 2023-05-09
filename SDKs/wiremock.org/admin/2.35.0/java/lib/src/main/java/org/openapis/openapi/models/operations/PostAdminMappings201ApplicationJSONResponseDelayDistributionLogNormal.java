@@ -15,6 +15,7 @@ public class PostAdminMappings201ApplicationJSONResponseDelayDistributionLogNorm
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("median")
     public Long median;
+
     public PostAdminMappings201ApplicationJSONResponseDelayDistributionLogNormal withMedian(Long median) {
         this.median = median;
         return this;
@@ -23,6 +24,7 @@ public class PostAdminMappings201ApplicationJSONResponseDelayDistributionLogNorm
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sigma")
     public Double sigma;
+
     public PostAdminMappings201ApplicationJSONResponseDelayDistributionLogNormal withSigma(Double sigma) {
         this.sigma = sigma;
         return this;
@@ -31,9 +33,11 @@ public class PostAdminMappings201ApplicationJSONResponseDelayDistributionLogNorm
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PostAdminMappings201ApplicationJSONResponseDelayDistributionLogNormalTypeEnum type;
+
     public PostAdminMappings201ApplicationJSONResponseDelayDistributionLogNormal withType(PostAdminMappings201ApplicationJSONResponseDelayDistributionLogNormalTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostAdminMappings201ApplicationJSONResponseDelayDistributionLogNormal(){}
 }

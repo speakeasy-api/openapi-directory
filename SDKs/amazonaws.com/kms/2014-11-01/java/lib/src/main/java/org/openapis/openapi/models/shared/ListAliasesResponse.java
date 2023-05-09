@@ -15,6 +15,7 @@ public class ListAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aliases")
     public AliasListEntry[] aliases;
+
     public ListAliasesResponse withAliases(AliasListEntry[] aliases) {
         this.aliases = aliases;
         return this;
@@ -23,6 +24,7 @@ public class ListAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListAliasesResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -31,9 +33,11 @@ public class ListAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Truncated")
     public Boolean truncated;
+
     public ListAliasesResponse withTruncated(Boolean truncated) {
         this.truncated = truncated;
         return this;
     }
     
+    public ListAliasesResponse(){}
 }

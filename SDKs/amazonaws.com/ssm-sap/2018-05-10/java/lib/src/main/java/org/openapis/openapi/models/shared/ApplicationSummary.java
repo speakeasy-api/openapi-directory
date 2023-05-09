@@ -15,6 +15,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ApplicationSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ApplicationSummary withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public ApplicationSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -39,9 +42,11 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ApplicationTypeEnum type;
+
     public ApplicationSummary withType(ApplicationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ApplicationSummary(){}
 }

@@ -18,9 +18,11 @@ public class CreateTransitVirtualInterfaceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterface")
     public VirtualInterface virtualInterface;
+
     public CreateTransitVirtualInterfaceResult withVirtualInterface(VirtualInterface virtualInterface) {
         this.virtualInterface = virtualInterface;
         return this;
     }
     
+    public CreateTransitVirtualInterfaceResult(){}
 }

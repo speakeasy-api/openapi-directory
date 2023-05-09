@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLifecyclePolicyResponse {
     
     public String contentType;
+
     public CreateLifecyclePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateLifecyclePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLifecyclePolicyResponse createLifecyclePolicyResponse;
+
     public CreateLifecyclePolicyResponse withCreateLifecyclePolicyResponse(org.openapis.openapi.models.shared.CreateLifecyclePolicyResponse createLifecyclePolicyResponse) {
         this.createLifecyclePolicyResponse = createLifecyclePolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateLifecyclePolicyResponse {
      */
     
     public Object internalServerException;
+
     public CreateLifecyclePolicyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateLifecyclePolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateLifecyclePolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateLifecyclePolicyResponse {
      */
     
     public Object limitExceededException;
+
     public CreateLifecyclePolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateLifecyclePolicyResponse {
     
     
     public Integer statusCode;
+
     public CreateLifecyclePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateLifecyclePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLifecyclePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateLifecyclePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

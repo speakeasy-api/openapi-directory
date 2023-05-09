@@ -15,9 +15,11 @@ public class PullRequestStatusChangedEventMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pullRequestStatus")
     public PullRequestStatusEnumEnum pullRequestStatus;
+
     public PullRequestStatusChangedEventMetadata withPullRequestStatus(PullRequestStatusEnumEnum pullRequestStatus) {
         this.pullRequestStatus = pullRequestStatus;
         return this;
     }
     
+    public PullRequestStatusChangedEventMetadata(){}
 }

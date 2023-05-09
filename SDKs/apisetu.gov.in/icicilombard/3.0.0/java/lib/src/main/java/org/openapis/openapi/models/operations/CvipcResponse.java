@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CvipcResponse {
     
     public String contentType;
+
     public CvipcResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CvipcResponse {
     
     
     public Integer statusCode;
+
     public CvipcResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CvipcResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CvipcResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CvipcResponse {
      */
     
     public Cvipc400ApplicationJSON cvipc400ApplicationJSONObject;
+
     public CvipcResponse withCvipc400ApplicationJSONObject(Cvipc400ApplicationJSON cvipc400ApplicationJSONObject) {
         this.cvipc400ApplicationJSONObject = cvipc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CvipcResponse {
      */
     
     public Cvipc401ApplicationJSON cvipc401ApplicationJSONObject;
+
     public CvipcResponse withCvipc401ApplicationJSONObject(Cvipc401ApplicationJSON cvipc401ApplicationJSONObject) {
         this.cvipc401ApplicationJSONObject = cvipc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CvipcResponse {
      */
     
     public Cvipc404ApplicationJSON cvipc404ApplicationJSONObject;
+
     public CvipcResponse withCvipc404ApplicationJSONObject(Cvipc404ApplicationJSON cvipc404ApplicationJSONObject) {
         this.cvipc404ApplicationJSONObject = cvipc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CvipcResponse {
      */
     
     public Cvipc500ApplicationJSON cvipc500ApplicationJSONObject;
+
     public CvipcResponse withCvipc500ApplicationJSONObject(Cvipc500ApplicationJSON cvipc500ApplicationJSONObject) {
         this.cvipc500ApplicationJSONObject = cvipc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CvipcResponse {
      */
     
     public Cvipc502ApplicationJSON cvipc502ApplicationJSONObject;
+
     public CvipcResponse withCvipc502ApplicationJSONObject(Cvipc502ApplicationJSON cvipc502ApplicationJSONObject) {
         this.cvipc502ApplicationJSONObject = cvipc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class CvipcResponse {
      */
     
     public Cvipc503ApplicationJSON cvipc503ApplicationJSONObject;
+
     public CvipcResponse withCvipc503ApplicationJSONObject(Cvipc503ApplicationJSON cvipc503ApplicationJSONObject) {
         this.cvipc503ApplicationJSONObject = cvipc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class CvipcResponse {
      */
     
     public Cvipc504ApplicationJSON cvipc504ApplicationJSONObject;
+
     public CvipcResponse withCvipc504ApplicationJSONObject(Cvipc504ApplicationJSON cvipc504ApplicationJSONObject) {
         this.cvipc504ApplicationJSONObject = cvipc504ApplicationJSONObject;
         return this;
     }
     
+    public CvipcResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

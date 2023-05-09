@@ -17,6 +17,7 @@ public class SourceDiscoverSchemaWriteRequestBody {
      */
     @JsonProperty("catalog")
     public AirbyteCatalog catalog;
+
     public SourceDiscoverSchemaWriteRequestBody withCatalog(AirbyteCatalog catalog) {
         this.catalog = catalog;
         return this;
@@ -25,6 +26,7 @@ public class SourceDiscoverSchemaWriteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationHash")
     public String configurationHash;
+
     public SourceDiscoverSchemaWriteRequestBody withConfigurationHash(String configurationHash) {
         this.configurationHash = configurationHash;
         return this;
@@ -33,6 +35,7 @@ public class SourceDiscoverSchemaWriteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorVersion")
     public String connectorVersion;
+
     public SourceDiscoverSchemaWriteRequestBody withConnectorVersion(String connectorVersion) {
         this.connectorVersion = connectorVersion;
         return this;
@@ -41,9 +44,13 @@ public class SourceDiscoverSchemaWriteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceId")
     public String sourceId;
+
     public SourceDiscoverSchemaWriteRequestBody withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
     }
     
+    public SourceDiscoverSchemaWriteRequestBody(@JsonProperty("catalog") AirbyteCatalog catalog) {
+        this.catalog = catalog;
+  }
 }

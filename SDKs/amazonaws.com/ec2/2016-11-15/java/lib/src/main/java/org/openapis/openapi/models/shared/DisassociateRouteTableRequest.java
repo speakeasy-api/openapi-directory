@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisassociateRouteTableRequest {
     
     public String associationId;
+
     public DisassociateRouteTableRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -16,9 +17,13 @@ public class DisassociateRouteTableRequest {
     
     
     public Boolean dryRun;
+
     public DisassociateRouteTableRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public DisassociateRouteTableRequest(@JsonProperty("AssociationId") String associationId) {
+        this.associationId = associationId;
+  }
 }

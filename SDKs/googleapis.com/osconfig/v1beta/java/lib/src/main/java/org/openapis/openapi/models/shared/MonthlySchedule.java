@@ -18,6 +18,7 @@ public class MonthlySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monthDay")
     public Integer monthDay;
+
     public MonthlySchedule withMonthDay(Integer monthDay) {
         this.monthDay = monthDay;
         return this;
@@ -29,9 +30,11 @@ public class MonthlySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weekDayOfMonth")
     public WeekDayOfMonth weekDayOfMonth;
+
     public MonthlySchedule withWeekDayOfMonth(WeekDayOfMonth weekDayOfMonth) {
         this.weekDayOfMonth = weekDayOfMonth;
         return this;
     }
     
+    public MonthlySchedule(){}
 }

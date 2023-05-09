@@ -15,6 +15,7 @@ public class EnvironmentPlatform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public EnvironmentLanguage[] languages;
+
     public EnvironmentPlatform withLanguages(EnvironmentLanguage[] languages) {
         this.languages = languages;
         return this;
@@ -23,9 +24,11 @@ public class EnvironmentPlatform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public PlatformTypeEnum platform;
+
     public EnvironmentPlatform withPlatform(PlatformTypeEnum platform) {
         this.platform = platform;
         return this;
     }
     
+    public EnvironmentPlatform(){}
 }

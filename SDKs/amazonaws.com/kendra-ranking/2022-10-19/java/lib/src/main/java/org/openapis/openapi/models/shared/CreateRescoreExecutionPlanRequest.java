@@ -12,6 +12,7 @@ public class CreateRescoreExecutionPlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityUnits")
     public CapacityUnitsConfiguration capacityUnits;
+
     public CreateRescoreExecutionPlanRequest withCapacityUnits(CapacityUnitsConfiguration capacityUnits) {
         this.capacityUnits = capacityUnits;
         return this;
@@ -20,6 +21,7 @@ public class CreateRescoreExecutionPlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateRescoreExecutionPlanRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -28,6 +30,7 @@ public class CreateRescoreExecutionPlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateRescoreExecutionPlanRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +38,7 @@ public class CreateRescoreExecutionPlanRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateRescoreExecutionPlanRequest withName(String name) {
         this.name = name;
         return this;
@@ -43,9 +47,13 @@ public class CreateRescoreExecutionPlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateRescoreExecutionPlanRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRescoreExecutionPlanRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

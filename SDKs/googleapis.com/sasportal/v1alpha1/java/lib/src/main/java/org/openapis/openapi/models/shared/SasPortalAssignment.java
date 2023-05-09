@@ -18,6 +18,7 @@ public class SasPortalAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public String[] members;
+
     public SasPortalAssignment withMembers(String[] members) {
         this.members = members;
         return this;
@@ -29,9 +30,11 @@ public class SasPortalAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public SasPortalAssignment withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public SasPortalAssignment(){}
 }

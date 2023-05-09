@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProfileKeyResponse {
@@ -12,6 +13,7 @@ public class DeleteProfileKeyResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteProfileKeyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteProfileKeyResponse {
      */
     
     public Object badRequestException;
+
     public DeleteProfileKeyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProfileKeyResponse {
     
     
     public String contentType;
+
     public DeleteProfileKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteProfileKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteProfileKeyResponse deleteProfileKeyResponse;
+
     public DeleteProfileKeyResponse withDeleteProfileKeyResponse(org.openapis.openapi.models.shared.DeleteProfileKeyResponse deleteProfileKeyResponse) {
         this.deleteProfileKeyResponse = deleteProfileKeyResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteProfileKeyResponse {
      */
     
     public Object internalServerException;
+
     public DeleteProfileKeyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteProfileKeyResponse {
     
     
     public Integer statusCode;
+
     public DeleteProfileKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteProfileKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProfileKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteProfileKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteProfileKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteProfileKeyResponse {
      */
     
     public Object throttlingException;
+
     public DeleteProfileKeyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteProfileKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

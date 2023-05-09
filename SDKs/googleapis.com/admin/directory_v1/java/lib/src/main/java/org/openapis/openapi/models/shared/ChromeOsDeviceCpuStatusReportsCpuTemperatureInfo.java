@@ -15,6 +15,7 @@ public class ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo withLabel(String label) {
         this.label = label;
         return this;
@@ -26,9 +27,11 @@ public class ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature")
     public Integer temperature;
+
     public ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo withTemperature(Integer temperature) {
         this.temperature = temperature;
         return this;
     }
     
+    public ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo(){}
 }

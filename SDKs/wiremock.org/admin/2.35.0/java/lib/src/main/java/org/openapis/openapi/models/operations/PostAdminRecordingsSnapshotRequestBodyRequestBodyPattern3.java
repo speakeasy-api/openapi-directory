@@ -18,6 +18,7 @@ public class PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreArrayOrder")
     public Boolean ignoreArrayOrder;
+
     public PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3 withIgnoreArrayOrder(Boolean ignoreArrayOrder) {
         this.ignoreArrayOrder = ignoreArrayOrder;
         return this;
@@ -29,6 +30,7 @@ public class PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreExtraElements")
     public Boolean ignoreExtraElements;
+
     public PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3 withIgnoreExtraElements(Boolean ignoreExtraElements) {
         this.ignoreExtraElements = ignoreExtraElements;
         return this;
@@ -37,9 +39,11 @@ public class PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matcher")
     public PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3MatcherEnum matcher;
+
     public PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3 withMatcher(PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3MatcherEnum matcher) {
         this.matcher = matcher;
         return this;
     }
     
+    public PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3(){}
 }

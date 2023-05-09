@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartDataQualityRulesetEvaluationRunResponse {
@@ -12,6 +13,7 @@ public class StartDataQualityRulesetEvaluationRunResponse {
      */
     
     public Object conflictException;
+
     public StartDataQualityRulesetEvaluationRunResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StartDataQualityRulesetEvaluationRunResponse {
     
     
     public String contentType;
+
     public StartDataQualityRulesetEvaluationRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartDataQualityRulesetEvaluationRunResponse {
      */
     
     public Object entityNotFoundException;
+
     public StartDataQualityRulesetEvaluationRunResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class StartDataQualityRulesetEvaluationRunResponse {
      */
     
     public Object internalServiceException;
+
     public StartDataQualityRulesetEvaluationRunResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class StartDataQualityRulesetEvaluationRunResponse {
      */
     
     public Object invalidInputException;
+
     public StartDataQualityRulesetEvaluationRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class StartDataQualityRulesetEvaluationRunResponse {
      */
     
     public Object operationTimeoutException;
+
     public StartDataQualityRulesetEvaluationRunResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class StartDataQualityRulesetEvaluationRunResponse {
      */
     
     public org.openapis.openapi.models.shared.StartDataQualityRulesetEvaluationRunResponse startDataQualityRulesetEvaluationRunResponse;
+
     public StartDataQualityRulesetEvaluationRunResponse withStartDataQualityRulesetEvaluationRunResponse(org.openapis.openapi.models.shared.StartDataQualityRulesetEvaluationRunResponse startDataQualityRulesetEvaluationRunResponse) {
         this.startDataQualityRulesetEvaluationRunResponse = startDataQualityRulesetEvaluationRunResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartDataQualityRulesetEvaluationRunResponse {
     
     
     public Integer statusCode;
+
     public StartDataQualityRulesetEvaluationRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class StartDataQualityRulesetEvaluationRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartDataQualityRulesetEvaluationRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartDataQualityRulesetEvaluationRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

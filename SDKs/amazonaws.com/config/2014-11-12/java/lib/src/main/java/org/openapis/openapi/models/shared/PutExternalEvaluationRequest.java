@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutExternalEvaluationRequest {
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public PutExternalEvaluationRequest withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
@@ -16,9 +17,14 @@ public class PutExternalEvaluationRequest {
     
     @JsonProperty("ExternalEvaluation")
     public ExternalEvaluation externalEvaluation;
+
     public PutExternalEvaluationRequest withExternalEvaluation(ExternalEvaluation externalEvaluation) {
         this.externalEvaluation = externalEvaluation;
         return this;
     }
     
+    public PutExternalEvaluationRequest(@JsonProperty("ConfigRuleName") String configRuleName, @JsonProperty("ExternalEvaluation") ExternalEvaluation externalEvaluation) {
+        this.configRuleName = configRuleName;
+        this.externalEvaluation = externalEvaluation;
+  }
 }

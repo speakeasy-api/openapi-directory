@@ -18,9 +18,11 @@ public class CustomerRemoveConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public DeviceReference device;
+
     public CustomerRemoveConfigurationRequest withDevice(DeviceReference device) {
         this.device = device;
         return this;
     }
     
+    public CustomerRemoveConfigurationRequest(){}
 }

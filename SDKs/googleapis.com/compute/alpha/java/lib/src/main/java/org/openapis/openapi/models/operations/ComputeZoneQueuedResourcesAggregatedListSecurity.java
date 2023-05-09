@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeZoneQueuedResourcesAggregatedListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeZoneQueuedResourcesAggregatedListSecurityOption1 option1;
+
     public ComputeZoneQueuedResourcesAggregatedListSecurity withOption1(ComputeZoneQueuedResourcesAggregatedListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeZoneQueuedResourcesAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeZoneQueuedResourcesAggregatedListSecurityOption2 option2;
+
     public ComputeZoneQueuedResourcesAggregatedListSecurity withOption2(ComputeZoneQueuedResourcesAggregatedListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeZoneQueuedResourcesAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeZoneQueuedResourcesAggregatedListSecurityOption3 option3;
+
     public ComputeZoneQueuedResourcesAggregatedListSecurity withOption3(ComputeZoneQueuedResourcesAggregatedListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeZoneQueuedResourcesAggregatedListSecurity(){}
 }

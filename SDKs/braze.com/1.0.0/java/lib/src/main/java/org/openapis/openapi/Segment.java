@@ -74,10 +74,8 @@ public class Segment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SegmentAnalyticsResponse res = new org.openapis.openapi.models.operations.SegmentAnalyticsResponse() {{
+        org.openapis.openapi.models.operations.SegmentAnalyticsResponse res = new org.openapis.openapi.models.operations.SegmentAnalyticsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,10 +130,8 @@ public class Segment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SegmentDetailsResponse res = new org.openapis.openapi.models.operations.SegmentDetailsResponse() {{
+        org.openapis.openapi.models.operations.SegmentDetailsResponse res = new org.openapis.openapi.models.operations.SegmentDetailsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,10 +190,8 @@ public class Segment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SegmentListResponse res = new org.openapis.openapi.models.operations.SegmentListResponse() {{
+        org.openapis.openapi.models.operations.SegmentListResponse res = new org.openapis.openapi.models.operations.SegmentListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

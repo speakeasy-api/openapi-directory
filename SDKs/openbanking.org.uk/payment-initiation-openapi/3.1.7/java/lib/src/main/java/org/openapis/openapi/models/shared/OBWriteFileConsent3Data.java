@@ -15,6 +15,7 @@ public class OBWriteFileConsent3Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Authorisation")
     public OBWriteFileConsent3DataAuthorisation authorisation;
+
     public OBWriteFileConsent3Data withAuthorisation(OBWriteFileConsent3DataAuthorisation authorisation) {
         this.authorisation = authorisation;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteFileConsent3Data {
      */
     @JsonProperty("Initiation")
     public OBWriteFileConsent3DataInitiation initiation;
+
     public OBWriteFileConsent3Data withInitiation(OBWriteFileConsent3DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -36,9 +38,13 @@ public class OBWriteFileConsent3Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SCASupportData")
     public OBSCASupportData1 scaSupportData;
+
     public OBWriteFileConsent3Data withSCASupportData(OBSCASupportData1 scaSupportData) {
         this.scaSupportData = scaSupportData;
         return this;
     }
     
+    public OBWriteFileConsent3Data(@JsonProperty("Initiation") OBWriteFileConsent3DataInitiation initiation) {
+        this.initiation = initiation;
+  }
 }

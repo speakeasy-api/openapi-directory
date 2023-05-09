@@ -15,6 +15,7 @@ public class VirtualGatewayClientPolicyTls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public VirtualGatewayClientTlsCertificate certificate;
+
     public VirtualGatewayClientPolicyTls withCertificate(VirtualGatewayClientTlsCertificate certificate) {
         this.certificate = certificate;
         return this;
@@ -23,6 +24,7 @@ public class VirtualGatewayClientPolicyTls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforce")
     public Boolean enforce;
+
     public VirtualGatewayClientPolicyTls withEnforce(Boolean enforce) {
         this.enforce = enforce;
         return this;
@@ -31,6 +33,7 @@ public class VirtualGatewayClientPolicyTls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ports")
     public Long[] ports;
+
     public VirtualGatewayClientPolicyTls withPorts(Long[] ports) {
         this.ports = ports;
         return this;
@@ -38,9 +41,13 @@ public class VirtualGatewayClientPolicyTls {
     
     @JsonProperty("validation")
     public VirtualGatewayTlsValidationContext validation;
+
     public VirtualGatewayClientPolicyTls withValidation(VirtualGatewayTlsValidationContext validation) {
         this.validation = validation;
         return this;
     }
     
+    public VirtualGatewayClientPolicyTls(@JsonProperty("validation") VirtualGatewayTlsValidationContext validation) {
+        this.validation = validation;
+  }
 }

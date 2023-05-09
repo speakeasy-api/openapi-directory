@@ -12,6 +12,7 @@ public class GetApiV2ListMarkets200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all")
     public String[] all;
+
     public GetApiV2ListMarkets200ApplicationJSONData withAll(String[] all) {
         this.all = all;
         return this;
@@ -20,9 +21,11 @@ public class GetApiV2ListMarkets200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_for_your_subscription")
     public String[] allowedForYourSubscription;
+
     public GetApiV2ListMarkets200ApplicationJSONData withAllowedForYourSubscription(String[] allowedForYourSubscription) {
         this.allowedForYourSubscription = allowedForYourSubscription;
         return this;
     }
     
+    public GetApiV2ListMarkets200ApplicationJSONData(){}
 }

@@ -15,6 +15,7 @@ public class RelativeTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndPercentage")
     public Long endPercentage;
+
     public RelativeTimeRange withEndPercentage(Long endPercentage) {
         this.endPercentage = endPercentage;
         return this;
@@ -23,6 +24,7 @@ public class RelativeTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("First")
     public Long first;
+
     public RelativeTimeRange withFirst(Long first) {
         this.first = first;
         return this;
@@ -31,6 +33,7 @@ public class RelativeTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Last")
     public Long last;
+
     public RelativeTimeRange withLast(Long last) {
         this.last = last;
         return this;
@@ -39,9 +42,11 @@ public class RelativeTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartPercentage")
     public Long startPercentage;
+
     public RelativeTimeRange withStartPercentage(Long startPercentage) {
         this.startPercentage = startPercentage;
         return this;
     }
     
+    public RelativeTimeRange(){}
 }

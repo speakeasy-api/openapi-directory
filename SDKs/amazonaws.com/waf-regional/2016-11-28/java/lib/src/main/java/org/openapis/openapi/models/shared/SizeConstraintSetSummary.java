@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SizeConstraintSetSummary {
     @JsonProperty("Name")
     public String name;
+
     public SizeConstraintSetSummary withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class SizeConstraintSetSummary {
     
     @JsonProperty("SizeConstraintSetId")
     public String sizeConstraintSetId;
+
     public SizeConstraintSetSummary withSizeConstraintSetId(String sizeConstraintSetId) {
         this.sizeConstraintSetId = sizeConstraintSetId;
         return this;
     }
     
+    public SizeConstraintSetSummary(@JsonProperty("Name") String name, @JsonProperty("SizeConstraintSetId") String sizeConstraintSetId) {
+        this.name = name;
+        this.sizeConstraintSetId = sizeConstraintSetId;
+  }
 }

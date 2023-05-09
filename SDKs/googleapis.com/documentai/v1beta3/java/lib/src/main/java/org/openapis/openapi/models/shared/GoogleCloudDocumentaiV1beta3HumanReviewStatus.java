@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudDocumentaiV1beta3HumanReviewStatus {
     /**
-     * The name of the operation triggered by the processed document. This field is populated only when the [state] is [HUMAN_REVIEW_IN_PROGRESS]. It has the same response type and metadata as the long running operation returned by [ReviewDocument] method.
+     * The name of the operation triggered by the processed document. This field is populated only when the state is `HUMAN_REVIEW_IN_PROGRESS`. It has the same response type and metadata as the long-running operation returned by ReviewDocument.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humanReviewOperation")
     public String humanReviewOperation;
+
     public GoogleCloudDocumentaiV1beta3HumanReviewStatus withHumanReviewOperation(String humanReviewOperation) {
         this.humanReviewOperation = humanReviewOperation;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3HumanReviewStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDocumentaiV1beta3HumanReviewStatusStateEnum state;
+
     public GoogleCloudDocumentaiV1beta3HumanReviewStatus withState(GoogleCloudDocumentaiV1beta3HumanReviewStatusStateEnum state) {
         this.state = state;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1beta3HumanReviewStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateMessage")
     public String stateMessage;
+
     public GoogleCloudDocumentaiV1beta3HumanReviewStatus withStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3HumanReviewStatus(){}
 }

@@ -24,6 +24,7 @@ public class AccountAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accounts")
     public AccountReference16CH[] accounts;
+
     public AccountAccess withAccounts(AccountReference16CH[] accounts) {
         this.accounts = accounts;
         return this;
@@ -43,6 +44,7 @@ public class AccountAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInformation")
     public AdditionalInformationAccess additionalInformation;
+
     public AccountAccess withAdditionalInformation(AdditionalInformationAccess additionalInformation) {
         this.additionalInformation = additionalInformation;
         return this;
@@ -58,6 +60,7 @@ public class AccountAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allPsd2")
     public AccountAccessAllPsd2Enum allPsd2;
+
     public AccountAccess withAllPsd2(AccountAccessAllPsd2Enum allPsd2) {
         this.allPsd2 = allPsd2;
         return this;
@@ -73,6 +76,7 @@ public class AccountAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAccounts")
     public AccountAccessAvailableAccountsEnum availableAccounts;
+
     public AccountAccess withAvailableAccounts(AccountAccessAvailableAccountsEnum availableAccounts) {
         this.availableAccounts = availableAccounts;
         return this;
@@ -88,6 +92,7 @@ public class AccountAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAccountsWithBalance")
     public AccountAccessAvailableAccountsWithBalanceEnum availableAccountsWithBalance;
+
     public AccountAccess withAvailableAccountsWithBalance(AccountAccessAvailableAccountsWithBalanceEnum availableAccountsWithBalance) {
         this.availableAccountsWithBalance = availableAccountsWithBalance;
         return this;
@@ -104,6 +109,7 @@ public class AccountAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balances")
     public AccountReference16CH[] balances;
+
     public AccountAccess withBalances(AccountReference16CH[] balances) {
         this.balances = balances;
         return this;
@@ -123,6 +129,7 @@ public class AccountAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictedTo")
     public String[] restrictedTo;
+
     public AccountAccess withRestrictedTo(String[] restrictedTo) {
         this.restrictedTo = restrictedTo;
         return this;
@@ -139,9 +146,11 @@ public class AccountAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactions")
     public AccountReference16CH[] transactions;
+
     public AccountAccess withTransactions(AccountReference16CH[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public AccountAccess(){}
 }

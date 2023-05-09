@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveAllBackendsResponse {
@@ -12,6 +13,7 @@ public class RemoveAllBackendsResponse {
      */
     
     public Object badRequestException;
+
     public RemoveAllBackendsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class RemoveAllBackendsResponse {
     
     
     public String contentType;
+
     public RemoveAllBackendsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RemoveAllBackendsResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public RemoveAllBackendsResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class RemoveAllBackendsResponse {
      */
     
     public Object notFoundException;
+
     public RemoveAllBackendsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveAllBackendsResponse {
      */
     
     public org.openapis.openapi.models.shared.RemoveAllBackendsResponse removeAllBackendsResponse;
+
     public RemoveAllBackendsResponse withRemoveAllBackendsResponse(org.openapis.openapi.models.shared.RemoveAllBackendsResponse removeAllBackendsResponse) {
         this.removeAllBackendsResponse = removeAllBackendsResponse;
         return this;
@@ -56,6 +62,7 @@ public class RemoveAllBackendsResponse {
     
     
     public Integer statusCode;
+
     public RemoveAllBackendsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RemoveAllBackendsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveAllBackendsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class RemoveAllBackendsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public RemoveAllBackendsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public RemoveAllBackendsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

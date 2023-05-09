@@ -14,6 +14,7 @@ public class InvitationsSent200ApplicationJSONApp {
      */
     @JsonProperty("app_secret")
     public String appSecret;
+
     public InvitationsSent200ApplicationJSONApp withAppSecret(String appSecret) {
         this.appSecret = appSecret;
         return this;
@@ -22,6 +23,7 @@ public class InvitationsSent200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azure_subscription")
     public InvitationsSent200ApplicationJSONAppAzureSubscription azureSubscription;
+
     public InvitationsSent200ApplicationJSONApp withAzureSubscription(InvitationsSent200ApplicationJSONAppAzureSubscription azureSubscription) {
         this.azureSubscription = azureSubscription;
         return this;
@@ -33,6 +35,7 @@ public class InvitationsSent200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public InvitationsSent200ApplicationJSONApp withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +47,7 @@ public class InvitationsSent200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InvitationsSent200ApplicationJSONApp withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class InvitationsSent200ApplicationJSONApp {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public InvitationsSent200ApplicationJSONApp withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -65,6 +70,7 @@ public class InvitationsSent200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_source")
     public String iconSource;
+
     public InvitationsSent200ApplicationJSONApp withIconSource(String iconSource) {
         this.iconSource = iconSource;
         return this;
@@ -76,6 +82,7 @@ public class InvitationsSent200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_url")
     public String iconUrl;
+
     public InvitationsSent200ApplicationJSONApp withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -86,6 +93,7 @@ public class InvitationsSent200ApplicationJSONApp {
      */
     @JsonProperty("id")
     public String id;
+
     public InvitationsSent200ApplicationJSONApp withId(String id) {
         this.id = id;
         return this;
@@ -97,6 +105,7 @@ public class InvitationsSent200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_permissions")
     public InvitationsSent200ApplicationJSONAppMemberPermissionsEnum[] memberPermissions;
+
     public InvitationsSent200ApplicationJSONApp withMemberPermissions(InvitationsSent200ApplicationJSONAppMemberPermissionsEnum[] memberPermissions) {
         this.memberPermissions = memberPermissions;
         return this;
@@ -107,6 +116,7 @@ public class InvitationsSent200ApplicationJSONApp {
      */
     @JsonProperty("name")
     public String name;
+
     public InvitationsSent200ApplicationJSONApp withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +127,7 @@ public class InvitationsSent200ApplicationJSONApp {
      */
     @JsonProperty("origin")
     public InvitationsSent200ApplicationJSONAppOriginEnum origin;
+
     public InvitationsSent200ApplicationJSONApp withOrigin(InvitationsSent200ApplicationJSONAppOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -127,6 +138,7 @@ public class InvitationsSent200ApplicationJSONApp {
      */
     @JsonProperty("os")
     public InvitationsSent200ApplicationJSONAppOsEnum os;
+
     public InvitationsSent200ApplicationJSONApp withOs(InvitationsSent200ApplicationJSONAppOsEnum os) {
         this.os = os;
         return this;
@@ -137,6 +149,7 @@ public class InvitationsSent200ApplicationJSONApp {
      */
     @JsonProperty("owner")
     public InvitationsSent200ApplicationJSONAppOwner owner;
+
     public InvitationsSent200ApplicationJSONApp withOwner(InvitationsSent200ApplicationJSONAppOwner owner) {
         this.owner = owner;
         return this;
@@ -147,6 +160,7 @@ public class InvitationsSent200ApplicationJSONApp {
      */
     @JsonProperty("platform")
     public InvitationsSent200ApplicationJSONAppPlatformEnum platform;
+
     public InvitationsSent200ApplicationJSONApp withPlatform(InvitationsSent200ApplicationJSONAppPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -158,6 +172,7 @@ public class InvitationsSent200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_type")
     public String releaseType;
+
     public InvitationsSent200ApplicationJSONApp withReleaseType(String releaseType) {
         this.releaseType = releaseType;
         return this;
@@ -169,9 +184,20 @@ public class InvitationsSent200ApplicationJSONApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public InvitationsSent200ApplicationJSONApp withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public InvitationsSent200ApplicationJSONApp(@JsonProperty("app_secret") String appSecret, @JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("origin") InvitationsSent200ApplicationJSONAppOriginEnum origin, @JsonProperty("os") InvitationsSent200ApplicationJSONAppOsEnum os, @JsonProperty("owner") InvitationsSent200ApplicationJSONAppOwner owner, @JsonProperty("platform") InvitationsSent200ApplicationJSONAppPlatformEnum platform) {
+        this.appSecret = appSecret;
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.origin = origin;
+        this.os = os;
+        this.owner = owner;
+        this.platform = platform;
+  }
 }

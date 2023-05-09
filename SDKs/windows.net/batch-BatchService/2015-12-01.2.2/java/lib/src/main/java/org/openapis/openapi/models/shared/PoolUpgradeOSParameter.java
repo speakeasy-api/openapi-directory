@@ -15,9 +15,13 @@ public class PoolUpgradeOSParameter {
      */
     @JsonProperty("targetOSVersion")
     public String targetOSVersion;
+
     public PoolUpgradeOSParameter withTargetOSVersion(String targetOSVersion) {
         this.targetOSVersion = targetOSVersion;
         return this;
     }
     
+    public PoolUpgradeOSParameter(@JsonProperty("targetOSVersion") String targetOSVersion) {
+        this.targetOSVersion = targetOSVersion;
+  }
 }

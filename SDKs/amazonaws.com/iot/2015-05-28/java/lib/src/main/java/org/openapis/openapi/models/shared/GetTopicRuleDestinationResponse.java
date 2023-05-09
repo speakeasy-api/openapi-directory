@@ -15,9 +15,11 @@ public class GetTopicRuleDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicRuleDestination")
     public TopicRuleDestination topicRuleDestination;
+
     public GetTopicRuleDestinationResponse withTopicRuleDestination(TopicRuleDestination topicRuleDestination) {
         this.topicRuleDestination = topicRuleDestination;
         return this;
     }
     
+    public GetTopicRuleDestinationResponse(){}
 }

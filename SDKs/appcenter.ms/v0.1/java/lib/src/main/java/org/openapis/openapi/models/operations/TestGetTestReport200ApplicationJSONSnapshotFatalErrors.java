@@ -12,6 +12,7 @@ public class TestGetTestReport200ApplicationJSONSnapshotFatalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_snapshot_id")
     public String deviceSnapshotId;
+
     public TestGetTestReport200ApplicationJSONSnapshotFatalErrors withDeviceSnapshotId(String deviceSnapshotId) {
         this.deviceSnapshotId = deviceSnapshotId;
         return this;
@@ -20,6 +21,7 @@ public class TestGetTestReport200ApplicationJSONSnapshotFatalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_message")
     public String errorMessage;
+
     public TestGetTestReport200ApplicationJSONSnapshotFatalErrors withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -28,9 +30,11 @@ public class TestGetTestReport200ApplicationJSONSnapshotFatalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_title")
     public String errorTitle;
+
     public TestGetTestReport200ApplicationJSONSnapshotFatalErrors withErrorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
         return this;
     }
     
+    public TestGetTestReport200ApplicationJSONSnapshotFatalErrors(){}
 }

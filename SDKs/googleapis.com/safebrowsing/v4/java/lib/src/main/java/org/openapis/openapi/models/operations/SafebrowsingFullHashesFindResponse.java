@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SafebrowsingFullHashesFindResponse {
     
     public String contentType;
+
     public SafebrowsingFullHashesFindResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SafebrowsingFullHashesFindResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleSecuritySafebrowsingV4FindFullHashesResponse googleSecuritySafebrowsingV4FindFullHashesResponse;
+
     public SafebrowsingFullHashesFindResponse withGoogleSecuritySafebrowsingV4FindFullHashesResponse(org.openapis.openapi.models.shared.GoogleSecuritySafebrowsingV4FindFullHashesResponse googleSecuritySafebrowsingV4FindFullHashesResponse) {
         this.googleSecuritySafebrowsingV4FindFullHashesResponse = googleSecuritySafebrowsingV4FindFullHashesResponse;
         return this;
@@ -26,6 +29,7 @@ public class SafebrowsingFullHashesFindResponse {
     
     
     public Integer statusCode;
+
     public SafebrowsingFullHashesFindResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SafebrowsingFullHashesFindResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SafebrowsingFullHashesFindResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SafebrowsingFullHashesFindResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

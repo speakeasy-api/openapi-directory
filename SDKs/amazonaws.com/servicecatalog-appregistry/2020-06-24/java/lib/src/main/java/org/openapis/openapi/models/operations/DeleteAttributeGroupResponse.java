@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAttributeGroupResponse {
     
     public String contentType;
+
     public DeleteAttributeGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAttributeGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteAttributeGroupResponse deleteAttributeGroupResponse;
+
     public DeleteAttributeGroupResponse withDeleteAttributeGroupResponse(org.openapis.openapi.models.shared.DeleteAttributeGroupResponse deleteAttributeGroupResponse) {
         this.deleteAttributeGroupResponse = deleteAttributeGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAttributeGroupResponse {
      */
     
     public Object internalServerException;
+
     public DeleteAttributeGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAttributeGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAttributeGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteAttributeGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteAttributeGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteAttributeGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAttributeGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteAttributeGroupResponse {
      */
     
     public Object validationException;
+
     public DeleteAttributeGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteAttributeGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CreatePortalRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalEncryptionContext")
     public java.util.Map<String, String> additionalEncryptionContext;
+
     public CreatePortalRequestBody withAdditionalEncryptionContext(java.util.Map<String, String> additionalEncryptionContext) {
         this.additionalEncryptionContext = additionalEncryptionContext;
         return this;
@@ -26,6 +27,7 @@ public class CreatePortalRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticationType")
     public CreatePortalRequestBodyAuthenticationTypeEnum authenticationType;
+
     public CreatePortalRequestBody withAuthenticationType(CreatePortalRequestBodyAuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -37,6 +39,7 @@ public class CreatePortalRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreatePortalRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -48,6 +51,7 @@ public class CreatePortalRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerManagedKey")
     public String customerManagedKey;
+
     public CreatePortalRequestBody withCustomerManagedKey(String customerManagedKey) {
         this.customerManagedKey = customerManagedKey;
         return this;
@@ -59,6 +63,7 @@ public class CreatePortalRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CreatePortalRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -70,9 +75,11 @@ public class CreatePortalRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreatePortalRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePortalRequestBody(){}
 }

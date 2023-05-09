@@ -15,9 +15,11 @@ public class PreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_img_url")
     public String previewImgUrl;
+
     public PreviewResponse withPreviewImgUrl(String previewImgUrl) {
         this.previewImgUrl = previewImgUrl;
         return this;
     }
     
+    public PreviewResponse(){}
 }

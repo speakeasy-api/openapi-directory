@@ -15,9 +15,11 @@ public class DescribeServiceActionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceActionDetail")
     public ServiceActionDetail serviceActionDetail;
+
     public DescribeServiceActionOutput withServiceActionDetail(ServiceActionDetail serviceActionDetail) {
         this.serviceActionDetail = serviceActionDetail;
         return this;
     }
     
+    public DescribeServiceActionOutput(){}
 }

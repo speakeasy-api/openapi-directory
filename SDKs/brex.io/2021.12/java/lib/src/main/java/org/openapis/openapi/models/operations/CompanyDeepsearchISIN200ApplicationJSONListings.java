@@ -12,6 +12,7 @@ public class CompanyDeepsearchISIN200ApplicationJSONListings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalSecurityType")
     public String additionalSecurityType;
+
     public CompanyDeepsearchISIN200ApplicationJSONListings withAdditionalSecurityType(String additionalSecurityType) {
         this.additionalSecurityType = additionalSecurityType;
         return this;
@@ -20,6 +21,7 @@ public class CompanyDeepsearchISIN200ApplicationJSONListings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchCode")
     public String exchCode;
+
     public CompanyDeepsearchISIN200ApplicationJSONListings withExchCode(String exchCode) {
         this.exchCode = exchCode;
         return this;
@@ -28,6 +30,7 @@ public class CompanyDeepsearchISIN200ApplicationJSONListings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public CompanyDeepsearchISIN200ApplicationJSONListings withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -36,6 +39,7 @@ public class CompanyDeepsearchISIN200ApplicationJSONListings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketSector")
     public String marketSector;
+
     public CompanyDeepsearchISIN200ApplicationJSONListings withMarketSector(String marketSector) {
         this.marketSector = marketSector;
         return this;
@@ -44,6 +48,7 @@ public class CompanyDeepsearchISIN200ApplicationJSONListings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CompanyDeepsearchISIN200ApplicationJSONListings withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class CompanyDeepsearchISIN200ApplicationJSONListings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityDescription")
     public String securityDescription;
+
     public CompanyDeepsearchISIN200ApplicationJSONListings withSecurityDescription(String securityDescription) {
         this.securityDescription = securityDescription;
         return this;
@@ -60,6 +66,7 @@ public class CompanyDeepsearchISIN200ApplicationJSONListings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityType")
     public String securityType;
+
     public CompanyDeepsearchISIN200ApplicationJSONListings withSecurityType(String securityType) {
         this.securityType = securityType;
         return this;
@@ -68,6 +75,7 @@ public class CompanyDeepsearchISIN200ApplicationJSONListings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareClassId")
     public String shareClassId;
+
     public CompanyDeepsearchISIN200ApplicationJSONListings withShareClassId(String shareClassId) {
         this.shareClassId = shareClassId;
         return this;
@@ -76,6 +84,7 @@ public class CompanyDeepsearchISIN200ApplicationJSONListings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stockId")
     public String stockId;
+
     public CompanyDeepsearchISIN200ApplicationJSONListings withStockId(String stockId) {
         this.stockId = stockId;
         return this;
@@ -84,9 +93,11 @@ public class CompanyDeepsearchISIN200ApplicationJSONListings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symbol")
     public String symbol;
+
     public CompanyDeepsearchISIN200ApplicationJSONListings withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
     }
     
+    public CompanyDeepsearchISIN200ApplicationJSONListings(){}
 }

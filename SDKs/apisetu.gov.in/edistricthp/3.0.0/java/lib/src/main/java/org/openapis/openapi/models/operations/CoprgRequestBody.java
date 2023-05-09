@@ -15,6 +15,7 @@ public class CoprgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public CoprgRequestBodyCertificateParameters certificateParameters;
+
     public CoprgRequestBody withCertificateParameters(CoprgRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class CoprgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public CoprgRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class CoprgRequestBody {
      */
     @JsonProperty("format")
     public CoprgRequestBodyFormatEnum format;
+
     public CoprgRequestBody withFormat(CoprgRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class CoprgRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public CoprgRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public CoprgRequestBody(@JsonProperty("format") CoprgRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

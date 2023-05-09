@@ -175,4 +175,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/TagCertificateAuthorityRequ
 lib/src/main/java/org/openapis/openapi/models/shared/UntagCertificateAuthorityRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateCertificateAuthorityRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

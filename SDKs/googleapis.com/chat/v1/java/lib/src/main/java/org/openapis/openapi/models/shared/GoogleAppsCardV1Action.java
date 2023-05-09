@@ -18,6 +18,7 @@ public class GoogleAppsCardV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("function")
     public String function;
+
     public GoogleAppsCardV1Action withFunction(String function) {
         this.function = function;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCardV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interaction")
     public GoogleAppsCardV1ActionInteractionEnum interaction;
+
     public GoogleAppsCardV1Action withInteraction(GoogleAppsCardV1ActionInteractionEnum interaction) {
         this.interaction = interaction;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCardV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadIndicator")
     public GoogleAppsCardV1ActionLoadIndicatorEnum loadIndicator;
+
     public GoogleAppsCardV1Action withLoadIndicator(GoogleAppsCardV1ActionLoadIndicatorEnum loadIndicator) {
         this.loadIndicator = loadIndicator;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsCardV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public GoogleAppsCardV1ActionParameter[] parameters;
+
     public GoogleAppsCardV1Action withParameters(GoogleAppsCardV1ActionParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAppsCardV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistValues")
     public Boolean persistValues;
+
     public GoogleAppsCardV1Action withPersistValues(Boolean persistValues) {
         this.persistValues = persistValues;
         return this;
     }
     
+    public GoogleAppsCardV1Action(){}
 }

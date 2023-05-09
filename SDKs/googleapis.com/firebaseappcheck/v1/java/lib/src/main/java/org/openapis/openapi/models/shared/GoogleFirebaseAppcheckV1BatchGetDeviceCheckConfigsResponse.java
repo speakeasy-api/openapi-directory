@@ -18,9 +18,11 @@ public class GoogleFirebaseAppcheckV1BatchGetDeviceCheckConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configs")
     public GoogleFirebaseAppcheckV1DeviceCheckConfig[] configs;
+
     public GoogleFirebaseAppcheckV1BatchGetDeviceCheckConfigsResponse withConfigs(GoogleFirebaseAppcheckV1DeviceCheckConfig[] configs) {
         this.configs = configs;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1BatchGetDeviceCheckConfigsResponse(){}
 }

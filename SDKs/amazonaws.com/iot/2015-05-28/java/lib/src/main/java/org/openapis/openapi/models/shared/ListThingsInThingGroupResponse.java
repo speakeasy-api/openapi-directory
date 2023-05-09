@@ -15,6 +15,7 @@ public class ListThingsInThingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListThingsInThingGroupResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListThingsInThingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("things")
     public String[] things;
+
     public ListThingsInThingGroupResponse withThings(String[] things) {
         this.things = things;
         return this;
     }
     
+    public ListThingsInThingGroupResponse(){}
 }

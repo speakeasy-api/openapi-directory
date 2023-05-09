@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeInstancesAttachDiskRequest {
@@ -12,6 +13,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeInstancesAttachDiskRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeInstancesAttachDiskRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AttachedDisk attachedDisk;
+
     public ComputeInstancesAttachDiskRequest withAttachedDisk(org.openapis.openapi.models.shared.AttachedDisk attachedDisk) {
         this.attachedDisk = attachedDisk;
         return this;
@@ -29,6 +32,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeInstancesAttachDiskRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeInstancesAttachDiskRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeInstancesAttachDiskRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeInstancesAttachDiskRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceAttach")
     public Boolean forceAttach;
+
     public ComputeInstancesAttachDiskRequest withForceAttach(Boolean forceAttach) {
         this.forceAttach = forceAttach;
         return this;
@@ -79,6 +87,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instance")
     public String instance;
+
     public ComputeInstancesAttachDiskRequest withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -89,6 +98,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeInstancesAttachDiskRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeInstancesAttachDiskRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeInstancesAttachDiskRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeInstancesAttachDiskRequest withProject(String project) {
         this.project = project;
         return this;
@@ -129,6 +142,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeInstancesAttachDiskRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeInstancesAttachDiskRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -149,6 +164,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeInstancesAttachDiskRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,6 +175,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeInstancesAttachDiskRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -169,6 +186,7 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeInstancesAttachDiskRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -179,9 +197,15 @@ public class ComputeInstancesAttachDiskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
     public String zone;
+
     public ComputeInstancesAttachDiskRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ComputeInstancesAttachDiskRequest(@JsonProperty("instance") String instance, @JsonProperty("project") String project, @JsonProperty("zone") String zone) {
+        this.instance = instance;
+        this.project = project;
+        this.zone = zone;
+  }
 }

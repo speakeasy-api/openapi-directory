@@ -12,9 +12,11 @@ public class JobDocumentsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchaseOrderStatus")
     public String purchaseOrderStatus;
+
     public JobDocumentsDto withPurchaseOrderStatus(String purchaseOrderStatus) {
         this.purchaseOrderStatus = purchaseOrderStatus;
         return this;
     }
     
+    public JobDocumentsDto(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudIntegrationsV1alphaExecution withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directSubExecutions")
     public GoogleCloudIntegrationsV1alphaExecution[] directSubExecutions;
+
     public GoogleCloudIntegrationsV1alphaExecution withDirectSubExecutions(GoogleCloudIntegrationsV1alphaExecution[] directSubExecutions) {
         this.directSubExecutions = directSubExecutions;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventExecutionDetails")
     public EnterpriseCrmEventbusProtoEventExecutionDetails eventExecutionDetails;
+
     public GoogleCloudIntegrationsV1alphaExecution withEventExecutionDetails(EnterpriseCrmEventbusProtoEventExecutionDetails eventExecutionDetails) {
         this.eventExecutionDetails = eventExecutionDetails;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionDetails")
     public GoogleCloudIntegrationsV1alphaExecutionDetails executionDetails;
+
     public GoogleCloudIntegrationsV1alphaExecution withExecutionDetails(GoogleCloudIntegrationsV1alphaExecutionDetails executionDetails) {
         this.executionDetails = executionDetails;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionMethod")
     public GoogleCloudIntegrationsV1alphaExecutionExecutionMethodEnum executionMethod;
+
     public GoogleCloudIntegrationsV1alphaExecution withExecutionMethod(GoogleCloudIntegrationsV1alphaExecutionExecutionMethodEnum executionMethod) {
         this.executionMethod = executionMethod;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudIntegrationsV1alphaExecution withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudIntegrationsV1alphaExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestParameters")
     public java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> requestParameters;
+
     public GoogleCloudIntegrationsV1alphaExecution withRequestParameters(java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> requestParameters) {
         this.requestParameters = requestParameters;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudIntegrationsV1alphaExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestParams")
     public EnterpriseCrmFrontendsEventbusProtoParameterEntry[] requestParams;
+
     public GoogleCloudIntegrationsV1alphaExecution withRequestParams(EnterpriseCrmFrontendsEventbusProtoParameterEntry[] requestParams) {
         this.requestParams = requestParams;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudIntegrationsV1alphaExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseParameters")
     public java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> responseParameters;
+
     public GoogleCloudIntegrationsV1alphaExecution withResponseParameters(java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> responseParameters) {
         this.responseParameters = responseParameters;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudIntegrationsV1alphaExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseParams")
     public EnterpriseCrmFrontendsEventbusProtoParameterEntry[] responseParams;
+
     public GoogleCloudIntegrationsV1alphaExecution withResponseParams(EnterpriseCrmFrontendsEventbusProtoParameterEntry[] responseParams) {
         this.responseParams = responseParams;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudIntegrationsV1alphaExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerId")
     public String triggerId;
+
     public GoogleCloudIntegrationsV1alphaExecution withTriggerId(String triggerId) {
         this.triggerId = triggerId;
         return this;
@@ -139,9 +150,11 @@ public class GoogleCloudIntegrationsV1alphaExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudIntegrationsV1alphaExecution withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaExecution(){}
 }

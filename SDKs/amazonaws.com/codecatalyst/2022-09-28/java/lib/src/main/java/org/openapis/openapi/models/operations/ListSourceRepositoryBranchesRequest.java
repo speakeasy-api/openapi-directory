@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSourceRepositoryBranchesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ListSourceRepositoryBranchesRequestBody requestBody;
+
     public ListSourceRepositoryBranchesRequest withRequestBody(ListSourceRepositoryBranchesRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ListSourceRepositoryBranchesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public String maxResults;
+
     public ListSourceRepositoryBranchesRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class ListSourceRepositoryBranchesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListSourceRepositoryBranchesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -39,6 +43,7 @@ public class ListSourceRepositoryBranchesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectName")
     public String projectName;
+
     public ListSourceRepositoryBranchesRequest withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -49,6 +54,7 @@ public class ListSourceRepositoryBranchesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceRepositoryName")
     public String sourceRepositoryName;
+
     public ListSourceRepositoryBranchesRequest withSourceRepositoryName(String sourceRepositoryName) {
         this.sourceRepositoryName = sourceRepositoryName;
         return this;
@@ -59,9 +65,16 @@ public class ListSourceRepositoryBranchesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
     public String spaceName;
+
     public ListSourceRepositoryBranchesRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public ListSourceRepositoryBranchesRequest(@JsonProperty("RequestBody") ListSourceRepositoryBranchesRequestBody requestBody, @JsonProperty("projectName") String projectName, @JsonProperty("sourceRepositoryName") String sourceRepositoryName, @JsonProperty("spaceName") String spaceName) {
+        this.requestBody = requestBody;
+        this.projectName = projectName;
+        this.sourceRepositoryName = sourceRepositoryName;
+        this.spaceName = spaceName;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnterpriseCommentOverview {
     @JsonProperty("total_commit_comments")
     public Long totalCommitComments;
+
     public EnterpriseCommentOverview withTotalCommitComments(Long totalCommitComments) {
         this.totalCommitComments = totalCommitComments;
         return this;
@@ -19,6 +20,7 @@ public class EnterpriseCommentOverview {
     
     @JsonProperty("total_gist_comments")
     public Long totalGistComments;
+
     public EnterpriseCommentOverview withTotalGistComments(Long totalGistComments) {
         this.totalGistComments = totalGistComments;
         return this;
@@ -26,6 +28,7 @@ public class EnterpriseCommentOverview {
     
     @JsonProperty("total_issue_comments")
     public Long totalIssueComments;
+
     public EnterpriseCommentOverview withTotalIssueComments(Long totalIssueComments) {
         this.totalIssueComments = totalIssueComments;
         return this;
@@ -33,9 +36,16 @@ public class EnterpriseCommentOverview {
     
     @JsonProperty("total_pull_request_comments")
     public Long totalPullRequestComments;
+
     public EnterpriseCommentOverview withTotalPullRequestComments(Long totalPullRequestComments) {
         this.totalPullRequestComments = totalPullRequestComments;
         return this;
     }
     
+    public EnterpriseCommentOverview(@JsonProperty("total_commit_comments") Long totalCommitComments, @JsonProperty("total_gist_comments") Long totalGistComments, @JsonProperty("total_issue_comments") Long totalIssueComments, @JsonProperty("total_pull_request_comments") Long totalPullRequestComments) {
+        this.totalCommitComments = totalCommitComments;
+        this.totalGistComments = totalGistComments;
+        this.totalIssueComments = totalIssueComments;
+        this.totalPullRequestComments = totalPullRequestComments;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class InstanceAttributeDisableApiTermination {
     
     public Boolean value;
+
     public InstanceAttributeDisableApiTermination withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public InstanceAttributeDisableApiTermination(){}
 }

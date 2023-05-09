@@ -15,9 +15,11 @@ public class DisassociateDelegationSignerFromDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public DisassociateDelegationSignerFromDomainResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public DisassociateDelegationSignerFromDomainResponse(){}
 }

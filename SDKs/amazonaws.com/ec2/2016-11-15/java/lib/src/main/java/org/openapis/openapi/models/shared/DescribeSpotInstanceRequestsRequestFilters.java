@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotInstanceRequestsRequestFilters {
     
     public String name;
+
     public DescribeSpotInstanceRequestsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSpotInstanceRequestsRequestFilters {
     
     
     public String[] values;
+
     public DescribeSpotInstanceRequestsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeSpotInstanceRequestsRequestFilters(){}
 }

@@ -12,6 +12,7 @@ public class OrdersCustomBatchRequestEntryRefundItemItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public MonetaryAmount amount;
+
     public OrdersCustomBatchRequestEntryRefundItemItem withAmount(MonetaryAmount amount) {
         this.amount = amount;
         return this;
@@ -23,6 +24,7 @@ public class OrdersCustomBatchRequestEntryRefundItemItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullRefund")
     public Boolean fullRefund;
+
     public OrdersCustomBatchRequestEntryRefundItemItem withFullRefund(Boolean fullRefund) {
         this.fullRefund = fullRefund;
         return this;
@@ -34,6 +36,7 @@ public class OrdersCustomBatchRequestEntryRefundItemItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemId")
     public String lineItemId;
+
     public OrdersCustomBatchRequestEntryRefundItemItem withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -45,6 +48,7 @@ public class OrdersCustomBatchRequestEntryRefundItemItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public OrdersCustomBatchRequestEntryRefundItemItem withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -56,9 +60,11 @@ public class OrdersCustomBatchRequestEntryRefundItemItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Integer quantity;
+
     public OrdersCustomBatchRequestEntryRefundItemItem withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public OrdersCustomBatchRequestEntryRefundItemItem(){}
 }

@@ -24,9 +24,11 @@ public class SearchTeamMembersQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public SearchTeamMembersFilter filter;
+
     public SearchTeamMembersQuery withFilter(SearchTeamMembersFilter filter) {
         this.filter = filter;
         return this;
     }
     
+    public SearchTeamMembersQuery(){}
 }

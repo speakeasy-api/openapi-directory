@@ -12,9 +12,13 @@ public class StopReplicationRequestBody {
      */
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public StopReplicationRequestBody withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
     }
     
+    public StopReplicationRequestBody(@JsonProperty("sourceServerID") String sourceServerID) {
+        this.sourceServerID = sourceServerID;
+  }
 }

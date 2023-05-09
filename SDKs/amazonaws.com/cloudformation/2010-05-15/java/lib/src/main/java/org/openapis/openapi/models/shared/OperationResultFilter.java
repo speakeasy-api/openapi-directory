@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class OperationResultFilter {
     
     public OperationResultFilterNameEnum name;
+
     public OperationResultFilter withName(OperationResultFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class OperationResultFilter {
     
     
     public String values;
+
     public OperationResultFilter withValues(String values) {
         this.values = values;
         return this;
     }
     
+    public OperationResultFilter(){}
 }

@@ -12,12 +12,27 @@ public class GooglePayInfo {
     /**
      * Google Pay [Merchant ID](https://support.google.com/paymentscenter/answer/7163092?hl=en). Character length and limitations: 16 alphanumeric characters or 20 numeric characters.
      */
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public String merchantId;
+
     public GooglePayInfo withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
     }
     
+    /**
+     * Indicates whether the Google Pay Merchant ID is used for several merchant accounts. Default value: **false**.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reuseMerchantId")
+    public Boolean reuseMerchantId;
+
+    public GooglePayInfo withReuseMerchantId(Boolean reuseMerchantId) {
+        this.reuseMerchantId = reuseMerchantId;
+        return this;
+    }
+    
+    public GooglePayInfo(@JsonProperty("merchantId") String merchantId) {
+        this.merchantId = merchantId;
+  }
 }

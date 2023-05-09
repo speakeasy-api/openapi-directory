@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDealItemsRequest {
@@ -12,6 +13,7 @@ public class GetDealItemsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetDealItemsRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -22,6 +24,7 @@ public class GetDealItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_ids")
     public String categoryIds;
+
     public GetDealItemsRequest withCategoryIds(String categoryIds) {
         this.categoryIds = categoryIds;
         return this;
@@ -32,6 +35,7 @@ public class GetDealItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=commissionable")
     public String commissionable;
+
     public GetDealItemsRequest withCommissionable(String commissionable) {
         this.commissionable = commissionable;
         return this;
@@ -42,6 +46,7 @@ public class GetDealItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=delivery_country")
     public String deliveryCountry;
+
     public GetDealItemsRequest withDeliveryCountry(String deliveryCountry) {
         this.deliveryCountry = deliveryCountry;
         return this;
@@ -52,6 +57,7 @@ public class GetDealItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetDealItemsRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -62,9 +68,13 @@ public class GetDealItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetDealItemsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetDealItemsRequest(@JsonProperty("X-EBAY-C-MARKETPLACE-ID") String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+  }
 }

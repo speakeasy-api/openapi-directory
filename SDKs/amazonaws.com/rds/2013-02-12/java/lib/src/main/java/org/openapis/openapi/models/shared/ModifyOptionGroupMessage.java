@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyOptionGroupMessage {
     
     public Boolean applyImmediately;
+
     public ModifyOptionGroupMessage withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -16,6 +17,7 @@ public class ModifyOptionGroupMessage {
     
     
     public String optionGroupName;
+
     public ModifyOptionGroupMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -23,6 +25,7 @@ public class ModifyOptionGroupMessage {
     
     
     public OptionConfigurationList[] optionsToInclude;
+
     public ModifyOptionGroupMessage withOptionsToInclude(OptionConfigurationList[] optionsToInclude) {
         this.optionsToInclude = optionsToInclude;
         return this;
@@ -30,9 +33,13 @@ public class ModifyOptionGroupMessage {
     
     
     public String[] optionsToRemove;
+
     public ModifyOptionGroupMessage withOptionsToRemove(String[] optionsToRemove) {
         this.optionsToRemove = optionsToRemove;
         return this;
     }
     
+    public ModifyOptionGroupMessage(@JsonProperty("OptionGroupName") String optionGroupName) {
+        this.optionGroupName = optionGroupName;
+  }
 }

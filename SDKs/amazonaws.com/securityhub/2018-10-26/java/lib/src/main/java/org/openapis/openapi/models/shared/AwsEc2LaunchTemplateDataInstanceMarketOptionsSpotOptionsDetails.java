@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataInstanceMarketOptionsSpotOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockDurationMinutes")
     public Long blockDurationMinutes;
+
     public AwsEc2LaunchTemplateDataInstanceMarketOptionsSpotOptionsDetails withBlockDurationMinutes(Long blockDurationMinutes) {
         this.blockDurationMinutes = blockDurationMinutes;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2LaunchTemplateDataInstanceMarketOptionsSpotOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceInterruptionBehavior")
     public String instanceInterruptionBehavior;
+
     public AwsEc2LaunchTemplateDataInstanceMarketOptionsSpotOptionsDetails withInstanceInterruptionBehavior(String instanceInterruptionBehavior) {
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2LaunchTemplateDataInstanceMarketOptionsSpotOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxPrice")
     public String maxPrice;
+
     public AwsEc2LaunchTemplateDataInstanceMarketOptionsSpotOptionsDetails withMaxPrice(String maxPrice) {
         this.maxPrice = maxPrice;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2LaunchTemplateDataInstanceMarketOptionsSpotOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpotInstanceType")
     public String spotInstanceType;
+
     public AwsEc2LaunchTemplateDataInstanceMarketOptionsSpotOptionsDetails withSpotInstanceType(String spotInstanceType) {
         this.spotInstanceType = spotInstanceType;
         return this;
@@ -47,9 +51,11 @@ public class AwsEc2LaunchTemplateDataInstanceMarketOptionsSpotOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidUntil")
     public String validUntil;
+
     public AwsEc2LaunchTemplateDataInstanceMarketOptionsSpotOptionsDetails withValidUntil(String validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataInstanceMarketOptionsSpotOptionsDetails(){}
 }

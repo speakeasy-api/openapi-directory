@@ -56,12 +56,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMeFollowingsUserIdResponse res = new org.openapis.openapi.models.operations.DeleteMeFollowingsUserIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteMeFollowingsUserIdResponse res = new org.openapis.openapi.models.operations.DeleteMeFollowingsUserIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -86,10 +84,11 @@ public class Me {
 
     /**
      * Returns the authenticated user\u2019s information.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeResponse getMe() throws Exception {
+    public org.openapis.openapi.models.operations.GetMeResponse getMe(org.openapis.openapi.models.operations.GetMeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me");
         
@@ -98,17 +97,16 @@ public class Me {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeResponse res = new org.openapis.openapi.models.operations.GetMeResponse() {{
+        org.openapis.openapi.models.operations.GetMeResponse res = new org.openapis.openapi.models.operations.GetMeResponse(contentType, httpRes.statusCode()) {{
             completeUser = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,12 +155,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeActivitiesResponse res = new org.openapis.openapi.models.operations.GetMeActivitiesResponse() {{
+        org.openapis.openapi.models.operations.GetMeActivitiesResponse res = new org.openapis.openapi.models.operations.GetMeActivitiesResponse(contentType, httpRes.statusCode()) {{
             activities = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -211,12 +207,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeActivitiesAllOwnResponse res = new org.openapis.openapi.models.operations.GetMeActivitiesAllOwnResponse() {{
+        org.openapis.openapi.models.operations.GetMeActivitiesAllOwnResponse res = new org.openapis.openapi.models.operations.GetMeActivitiesAllOwnResponse(contentType, httpRes.statusCode()) {{
             activities = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -265,12 +259,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeActivitiesTracksResponse res = new org.openapis.openapi.models.operations.GetMeActivitiesTracksResponse() {{
+        org.openapis.openapi.models.operations.GetMeActivitiesTracksResponse res = new org.openapis.openapi.models.operations.GetMeActivitiesTracksResponse(contentType, httpRes.statusCode()) {{
             activities = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -319,12 +311,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeConnectionsResponse res = new org.openapis.openapi.models.operations.GetMeConnectionsResponse() {{
+        org.openapis.openapi.models.operations.GetMeConnectionsResponse res = new org.openapis.openapi.models.operations.GetMeConnectionsResponse(contentType, httpRes.statusCode()) {{
             connections = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -367,13 +357,11 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeConnectionsConnectionIdResponse res = new org.openapis.openapi.models.operations.GetMeConnectionsConnectionIdResponse() {{
+        org.openapis.openapi.models.operations.GetMeConnectionsConnectionIdResponse res = new org.openapis.openapi.models.operations.GetMeConnectionsConnectionIdResponse(contentType, httpRes.statusCode()) {{
             connection = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -407,7 +395,9 @@ public class Me {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetMeFavoritesIdsResponse getMeFavoritesIds(org.openapis.openapi.models.operations.GetMeFavoritesIdsRequest request, org.openapis.openapi.models.operations.GetMeFavoritesIdsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/favorites/ids");
@@ -429,10 +419,8 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeFavoritesIdsResponse res = new org.openapis.openapi.models.operations.GetMeFavoritesIdsResponse() {{
+        org.openapis.openapi.models.operations.GetMeFavoritesIdsResponse res = new org.openapis.openapi.models.operations.GetMeFavoritesIdsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -469,12 +457,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeFollowersResponse res = new org.openapis.openapi.models.operations.GetMeFollowersResponse() {{
+        org.openapis.openapi.models.operations.GetMeFollowersResponse res = new org.openapis.openapi.models.operations.GetMeFollowersResponse(contentType, httpRes.statusCode()) {{
             getMeFollowers200ApplicationJSONOneOf = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -501,7 +487,9 @@ public class Me {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetMeFollowersFollowerIdResponse getMeFollowersFollowerId(org.openapis.openapi.models.operations.GetMeFollowersFollowerIdRequest request, org.openapis.openapi.models.operations.GetMeFollowersFollowerIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMeFollowersFollowerIdRequest.class, baseUrl, "/me/followers/{follower_id}", request, null);
@@ -517,12 +505,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeFollowersFollowerIdResponse res = new org.openapis.openapi.models.operations.GetMeFollowersFollowerIdResponse() {{
+        org.openapis.openapi.models.operations.GetMeFollowersFollowerIdResponse res = new org.openapis.openapi.models.operations.GetMeFollowersFollowerIdResponse(contentType, httpRes.statusCode()) {{
             user = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -571,12 +557,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeFollowingsResponse res = new org.openapis.openapi.models.operations.GetMeFollowingsResponse() {{
+        org.openapis.openapi.models.operations.GetMeFollowingsResponse res = new org.openapis.openapi.models.operations.GetMeFollowingsResponse(contentType, httpRes.statusCode()) {{
             getMeFollowings200ApplicationJSONOneOf = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -625,12 +609,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeFollowingsTracksResponse res = new org.openapis.openapi.models.operations.GetMeFollowingsTracksResponse() {{
+        org.openapis.openapi.models.operations.GetMeFollowingsTracksResponse res = new org.openapis.openapi.models.operations.GetMeFollowingsTracksResponse(contentType, httpRes.statusCode()) {{
             tracksList = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -657,7 +639,9 @@ public class Me {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetMeFollowingsUserIdResponse getMeFollowingsUserId(org.openapis.openapi.models.operations.GetMeFollowingsUserIdRequest request, org.openapis.openapi.models.operations.GetMeFollowingsUserIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMeFollowingsUserIdRequest.class, baseUrl, "/me/followings/{user_id}", request, null);
@@ -673,13 +657,11 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeFollowingsUserIdResponse res = new org.openapis.openapi.models.operations.GetMeFollowingsUserIdResponse() {{
+        org.openapis.openapi.models.operations.GetMeFollowingsUserIdResponse res = new org.openapis.openapi.models.operations.GetMeFollowingsUserIdResponse(contentType, httpRes.statusCode()) {{
             user = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -735,12 +717,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeLikesTracksResponse res = new org.openapis.openapi.models.operations.GetMeLikesTracksResponse() {{
+        org.openapis.openapi.models.operations.GetMeLikesTracksResponse res = new org.openapis.openapi.models.operations.GetMeLikesTracksResponse(contentType, httpRes.statusCode()) {{
             getMeLikesTracks200ApplicationJSONOneOf = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -790,13 +770,11 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMePlaylistsResponse res = new org.openapis.openapi.models.operations.GetMePlaylistsResponse() {{
+        org.openapis.openapi.models.operations.GetMePlaylistsResponse res = new org.openapis.openapi.models.operations.GetMePlaylistsResponse(contentType, httpRes.statusCode()) {{
             playlistsArray = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -830,7 +808,9 @@ public class Me {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetMePlaylistsPlaylistIdResponse getMePlaylistsPlaylistId(org.openapis.openapi.models.operations.GetMePlaylistsPlaylistIdRequest request, org.openapis.openapi.models.operations.GetMePlaylistsPlaylistIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMePlaylistsPlaylistIdRequest.class, baseUrl, "/me/playlists/{playlist_id}", request, null);
@@ -846,11 +826,9 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMePlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.GetMePlaylistsPlaylistIdResponse() {{
+        org.openapis.openapi.models.operations.GetMePlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.GetMePlaylistsPlaylistIdResponse(contentType, httpRes.statusCode()) {{
             playlist = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -892,12 +870,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeTracksResponse res = new org.openapis.openapi.models.operations.GetMeTracksResponse() {{
+        org.openapis.openapi.models.operations.GetMeTracksResponse res = new org.openapis.openapi.models.operations.GetMeTracksResponse(contentType, httpRes.statusCode()) {{
             getMeTracks200ApplicationJSONOneOf = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -924,7 +900,9 @@ public class Me {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetMeTracksTrackIdResponse getMeTracksTrackId(org.openapis.openapi.models.operations.GetMeTracksTrackIdRequest request, org.openapis.openapi.models.operations.GetMeTracksTrackIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMeTracksTrackIdRequest.class, baseUrl, "/me/tracks/{track_id}", request, null);
@@ -940,11 +918,9 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeTracksTrackIdResponse res = new org.openapis.openapi.models.operations.GetMeTracksTrackIdResponse() {{
+        org.openapis.openapi.models.operations.GetMeTracksTrackIdResponse res = new org.openapis.openapi.models.operations.GetMeTracksTrackIdResponse(contentType, httpRes.statusCode()) {{
             track = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -980,13 +956,11 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutMeFollowingsUserIdResponse res = new org.openapis.openapi.models.operations.PutMeFollowingsUserIdResponse() {{
+        org.openapis.openapi.models.operations.PutMeFollowingsUserIdResponse res = new org.openapis.openapi.models.operations.PutMeFollowingsUserIdResponse(contentType, httpRes.statusCode()) {{
             user = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

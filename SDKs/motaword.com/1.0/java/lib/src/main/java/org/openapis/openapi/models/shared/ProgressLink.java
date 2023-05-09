@@ -12,6 +12,7 @@ public class ProgressLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public Href project;
+
     public ProgressLink withProject(Href project) {
         this.project = project;
         return this;
@@ -20,9 +21,11 @@ public class ProgressLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Href self;
+
     public ProgressLink withSelf(Href self) {
         this.self = self;
         return this;
     }
     
+    public ProgressLink(){}
 }

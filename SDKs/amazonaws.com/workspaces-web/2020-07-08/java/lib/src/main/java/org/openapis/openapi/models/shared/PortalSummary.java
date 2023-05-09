@@ -20,6 +20,7 @@ public class PortalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticationType")
     public AuthenticationTypeEnum authenticationType;
+
     public PortalSummary withAuthenticationType(AuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -28,6 +29,7 @@ public class PortalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browserSettingsArn")
     public String browserSettingsArn;
+
     public PortalSummary withBrowserSettingsArn(String browserSettingsArn) {
         this.browserSettingsArn = browserSettingsArn;
         return this;
@@ -36,6 +38,7 @@ public class PortalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browserType")
     public BrowserTypeEnum browserType;
+
     public PortalSummary withBrowserType(BrowserTypeEnum browserType) {
         this.browserType = browserType;
         return this;
@@ -46,6 +49,7 @@ public class PortalSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public PortalSummary withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -54,6 +58,7 @@ public class PortalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PortalSummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +67,7 @@ public class PortalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkSettingsArn")
     public String networkSettingsArn;
+
     public PortalSummary withNetworkSettingsArn(String networkSettingsArn) {
         this.networkSettingsArn = networkSettingsArn;
         return this;
@@ -70,6 +76,7 @@ public class PortalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portalArn")
     public String portalArn;
+
     public PortalSummary withPortalArn(String portalArn) {
         this.portalArn = portalArn;
         return this;
@@ -78,6 +85,7 @@ public class PortalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portalEndpoint")
     public String portalEndpoint;
+
     public PortalSummary withPortalEndpoint(String portalEndpoint) {
         this.portalEndpoint = portalEndpoint;
         return this;
@@ -86,6 +94,7 @@ public class PortalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portalStatus")
     public PortalStatusEnum portalStatus;
+
     public PortalSummary withPortalStatus(PortalStatusEnum portalStatus) {
         this.portalStatus = portalStatus;
         return this;
@@ -94,6 +103,7 @@ public class PortalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rendererType")
     public RendererTypeEnum rendererType;
+
     public PortalSummary withRendererType(RendererTypeEnum rendererType) {
         this.rendererType = rendererType;
         return this;
@@ -102,6 +112,7 @@ public class PortalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustStoreArn")
     public String trustStoreArn;
+
     public PortalSummary withTrustStoreArn(String trustStoreArn) {
         this.trustStoreArn = trustStoreArn;
         return this;
@@ -110,6 +121,7 @@ public class PortalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAccessLoggingSettingsArn")
     public String userAccessLoggingSettingsArn;
+
     public PortalSummary withUserAccessLoggingSettingsArn(String userAccessLoggingSettingsArn) {
         this.userAccessLoggingSettingsArn = userAccessLoggingSettingsArn;
         return this;
@@ -118,9 +130,11 @@ public class PortalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userSettingsArn")
     public String userSettingsArn;
+
     public PortalSummary withUserSettingsArn(String userSettingsArn) {
         this.userSettingsArn = userSettingsArn;
         return this;
     }
     
+    public PortalSummary(){}
 }

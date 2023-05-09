@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FetchHealthProfileResponse {
     @JsonProperty("data")
     public HealthProfileResource data;
+
     public FetchHealthProfileResponse withData(HealthProfileResource data) {
         this.data = data;
         return this;
@@ -28,6 +29,7 @@ public class FetchHealthProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("included")
     public Resource[] included;
+
     public FetchHealthProfileResponse withIncluded(Resource[] included) {
         this.included = included;
         return this;
@@ -36,9 +38,13 @@ public class FetchHealthProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public FetchMetaResponse meta;
+
     public FetchHealthProfileResponse withMeta(FetchMetaResponse meta) {
         this.meta = meta;
         return this;
     }
     
+    public FetchHealthProfileResponse(@JsonProperty("data") HealthProfileResource data) {
+        this.data = data;
+  }
 }

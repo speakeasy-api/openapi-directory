@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryUpdateApiRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApiInput apiInput;
+
     public RegistryUpdateApiRequest withApiInput(org.openapis.openapi.models.shared.ApiInput apiInput) {
         this.apiInput = apiInput;
         return this;
@@ -19,6 +21,7 @@ public class RegistryUpdateApiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowMissing")
     public Boolean allowMissing;
+
     public RegistryUpdateApiRequest withAllowMissing(Boolean allowMissing) {
         this.allowMissing = allowMissing;
         return this;
@@ -29,6 +32,7 @@ public class RegistryUpdateApiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
     public String api;
+
     public RegistryUpdateApiRequest withApi(String api) {
         this.api = api;
         return this;
@@ -39,6 +43,7 @@ public class RegistryUpdateApiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryUpdateApiRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -49,6 +54,7 @@ public class RegistryUpdateApiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryUpdateApiRequest withProject(String project) {
         this.project = project;
         return this;
@@ -59,9 +65,16 @@ public class RegistryUpdateApiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public RegistryUpdateApiRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public RegistryUpdateApiRequest(@JsonProperty("ApiInput") org.openapis.openapi.models.shared.ApiInput apiInput, @JsonProperty("api") String api, @JsonProperty("location") String location, @JsonProperty("project") String project) {
+        this.apiInput = apiInput;
+        this.api = api;
+        this.location = location;
+        this.project = project;
+  }
 }

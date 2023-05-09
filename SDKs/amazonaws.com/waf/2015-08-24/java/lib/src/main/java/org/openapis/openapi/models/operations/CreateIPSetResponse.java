@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateIPSetResponse {
     
     public String contentType;
+
     public CreateIPSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateIPSetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateIPSetResponse createIPSetResponse;
+
     public CreateIPSetResponse withCreateIPSetResponse(org.openapis.openapi.models.shared.CreateIPSetResponse createIPSetResponse) {
         this.createIPSetResponse = createIPSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateIPSetResponse {
     
     
     public Integer statusCode;
+
     public CreateIPSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateIPSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateIPSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateIPSetResponse {
      */
     
     public Object wafDisallowedNameException;
+
     public CreateIPSetResponse withWAFDisallowedNameException(Object wafDisallowedNameException) {
         this.wafDisallowedNameException = wafDisallowedNameException;
         return this;
@@ -53,6 +59,7 @@ public class CreateIPSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public CreateIPSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -63,6 +70,7 @@ public class CreateIPSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public CreateIPSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -73,6 +81,7 @@ public class CreateIPSetResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public CreateIPSetResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,6 +92,7 @@ public class CreateIPSetResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public CreateIPSetResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -93,9 +103,14 @@ public class CreateIPSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public CreateIPSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public CreateIPSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

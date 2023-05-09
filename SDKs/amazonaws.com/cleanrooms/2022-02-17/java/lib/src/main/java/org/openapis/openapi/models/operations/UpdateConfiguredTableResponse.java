@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateConfiguredTableResponse {
@@ -12,6 +13,7 @@ public class UpdateConfiguredTableResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateConfiguredTableResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateConfiguredTableResponse {
      */
     
     public Object conflictException;
+
     public UpdateConfiguredTableResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateConfiguredTableResponse {
     
     
     public String contentType;
+
     public UpdateConfiguredTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateConfiguredTableResponse {
      */
     
     public Object internalServerException;
+
     public UpdateConfiguredTableResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateConfiguredTableResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateConfiguredTableResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateConfiguredTableResponse {
     
     
     public Integer statusCode;
+
     public UpdateConfiguredTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateConfiguredTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateConfiguredTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateConfiguredTableResponse {
      */
     
     public Object throttlingException;
+
     public UpdateConfiguredTableResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateConfiguredTableResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateConfiguredTableOutput updateConfiguredTableOutput;
+
     public UpdateConfiguredTableResponse withUpdateConfiguredTableOutput(org.openapis.openapi.models.shared.UpdateConfiguredTableOutput updateConfiguredTableOutput) {
         this.updateConfiguredTableOutput = updateConfiguredTableOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateConfiguredTableResponse {
      */
     
     public Object validationException;
+
     public UpdateConfiguredTableResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateConfiguredTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetChannelCatalogMarketplaceSettingsRequest {
     @JsonProperty("settings")
     public ChannelCatalogMarketplaceSetting[] settings;
+
     public SetChannelCatalogMarketplaceSettingsRequest withSettings(ChannelCatalogMarketplaceSetting[] settings) {
         this.settings = settings;
         return this;
     }
     
+    public SetChannelCatalogMarketplaceSettingsRequest(@JsonProperty("settings") ChannelCatalogMarketplaceSetting[] settings) {
+        this.settings = settings;
+  }
 }

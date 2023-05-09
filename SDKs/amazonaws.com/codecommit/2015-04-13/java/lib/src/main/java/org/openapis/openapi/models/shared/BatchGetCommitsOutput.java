@@ -15,6 +15,7 @@ public class BatchGetCommitsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commits")
     public Commit[] commits;
+
     public BatchGetCommitsOutput withCommits(Commit[] commits) {
         this.commits = commits;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetCommitsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public BatchGetCommitsError[] errors;
+
     public BatchGetCommitsOutput withErrors(BatchGetCommitsError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchGetCommitsOutput(){}
 }

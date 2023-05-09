@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutModelPackageGroupPolicyInput {
     @JsonProperty("ModelPackageGroupName")
     public String modelPackageGroupName;
+
     public PutModelPackageGroupPolicyInput withModelPackageGroupName(String modelPackageGroupName) {
         this.modelPackageGroupName = modelPackageGroupName;
         return this;
@@ -16,9 +17,14 @@ public class PutModelPackageGroupPolicyInput {
     
     @JsonProperty("ResourcePolicy")
     public String resourcePolicy;
+
     public PutModelPackageGroupPolicyInput withResourcePolicy(String resourcePolicy) {
         this.resourcePolicy = resourcePolicy;
         return this;
     }
     
+    public PutModelPackageGroupPolicyInput(@JsonProperty("ModelPackageGroupName") String modelPackageGroupName, @JsonProperty("ResourcePolicy") String resourcePolicy) {
+        this.modelPackageGroupName = modelPackageGroupName;
+        this.resourcePolicy = resourcePolicy;
+  }
 }

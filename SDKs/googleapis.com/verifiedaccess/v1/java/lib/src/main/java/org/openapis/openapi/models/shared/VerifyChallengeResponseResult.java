@@ -18,6 +18,7 @@ public class VerifyChallengeResponseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceEnrollmentId")
     public String deviceEnrollmentId;
+
     public VerifyChallengeResponseResult withDeviceEnrollmentId(String deviceEnrollmentId) {
         this.deviceEnrollmentId = deviceEnrollmentId;
         return this;
@@ -29,6 +30,7 @@ public class VerifyChallengeResponseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devicePermanentId")
     public String devicePermanentId;
+
     public VerifyChallengeResponseResult withDevicePermanentId(String devicePermanentId) {
         this.devicePermanentId = devicePermanentId;
         return this;
@@ -40,6 +42,7 @@ public class VerifyChallengeResponseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signedPublicKeyAndChallenge")
     public String signedPublicKeyAndChallenge;
+
     public VerifyChallengeResponseResult withSignedPublicKeyAndChallenge(String signedPublicKeyAndChallenge) {
         this.signedPublicKeyAndChallenge = signedPublicKeyAndChallenge;
         return this;
@@ -51,9 +54,11 @@ public class VerifyChallengeResponseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationOutput")
     public String verificationOutput;
+
     public VerifyChallengeResponseResult withVerificationOutput(String verificationOutput) {
         this.verificationOutput = verificationOutput;
         return this;
     }
     
+    public VerifyChallengeResponseResult(){}
 }

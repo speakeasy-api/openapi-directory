@@ -15,6 +15,7 @@ public class SendMessageRequestBody4ImageMessenger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public SendMessageRequestBody4ImageMessengerCategoryEnum category;
+
     public SendMessageRequestBody4ImageMessenger withCategory(SendMessageRequestBody4ImageMessengerCategoryEnum category) {
         this.category = category;
         return this;
@@ -26,9 +27,11 @@ public class SendMessageRequestBody4ImageMessenger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public SendMessageRequestBody4ImageMessenger withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public SendMessageRequestBody4ImageMessenger(){}
 }

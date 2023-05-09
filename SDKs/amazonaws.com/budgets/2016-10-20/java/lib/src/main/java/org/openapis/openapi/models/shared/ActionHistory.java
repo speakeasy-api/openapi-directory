@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ActionHistory {
     @JsonProperty("ActionHistoryDetails")
     public ActionHistoryDetails actionHistoryDetails;
+
     public ActionHistory withActionHistoryDetails(ActionHistoryDetails actionHistoryDetails) {
         this.actionHistoryDetails = actionHistoryDetails;
         return this;
@@ -24,6 +25,7 @@ public class ActionHistory {
     
     @JsonProperty("EventType")
     public EventTypeEnum eventType;
+
     public ActionHistory withEventType(EventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -31,6 +33,7 @@ public class ActionHistory {
     
     @JsonProperty("Status")
     public ActionStatusEnum status;
+
     public ActionHistory withStatus(ActionStatusEnum status) {
         this.status = status;
         return this;
@@ -43,9 +46,16 @@ public class ActionHistory {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public ActionHistory withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public ActionHistory(@JsonProperty("ActionHistoryDetails") ActionHistoryDetails actionHistoryDetails, @JsonProperty("EventType") EventTypeEnum eventType, @JsonProperty("Status") ActionStatusEnum status, @JsonProperty("Timestamp") OffsetDateTime timestamp) {
+        this.actionHistoryDetails = actionHistoryDetails;
+        this.eventType = eventType;
+        this.status = status;
+        this.timestamp = timestamp;
+  }
 }

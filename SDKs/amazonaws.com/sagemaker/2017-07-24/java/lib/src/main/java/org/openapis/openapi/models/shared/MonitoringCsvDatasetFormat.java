@@ -15,9 +15,11 @@ public class MonitoringCsvDatasetFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Header")
     public Boolean header;
+
     public MonitoringCsvDatasetFormat withHeader(Boolean header) {
         this.header = header;
         return this;
     }
     
+    public MonitoringCsvDatasetFormat(){}
 }

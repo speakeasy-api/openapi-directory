@@ -12,6 +12,7 @@ public class AddExampleRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=data")
     public String data;
+
     public AddExampleRequestBody withData(String data) {
         this.data = data;
         return this;
@@ -22,6 +23,7 @@ public class AddExampleRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=labelId")
     public Long labelId;
+
     public AddExampleRequestBody withLabelId(Long labelId) {
         this.labelId = labelId;
         return this;
@@ -32,9 +34,11 @@ public class AddExampleRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public AddExampleRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AddExampleRequestBody(){}
 }

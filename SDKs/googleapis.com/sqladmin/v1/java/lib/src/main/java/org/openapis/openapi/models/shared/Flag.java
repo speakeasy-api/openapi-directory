@@ -18,6 +18,7 @@ public class Flag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedIntValues")
     public String[] allowedIntValues;
+
     public Flag withAllowedIntValues(String[] allowedIntValues) {
         this.allowedIntValues = allowedIntValues;
         return this;
@@ -29,6 +30,7 @@ public class Flag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedStringValues")
     public String[] allowedStringValues;
+
     public Flag withAllowedStringValues(String[] allowedStringValues) {
         this.allowedStringValues = allowedStringValues;
         return this;
@@ -40,6 +42,7 @@ public class Flag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliesTo")
     public FlagAppliesToEnum[] appliesTo;
+
     public Flag withAppliesTo(FlagAppliesToEnum[] appliesTo) {
         this.appliesTo = appliesTo;
         return this;
@@ -51,6 +54,7 @@ public class Flag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inBeta")
     public Boolean inBeta;
+
     public Flag withInBeta(Boolean inBeta) {
         this.inBeta = inBeta;
         return this;
@@ -62,6 +66,7 @@ public class Flag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Flag withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class Flag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public String maxValue;
+
     public Flag withMaxValue(String maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -84,6 +90,7 @@ public class Flag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public String minValue;
+
     public Flag withMinValue(String minValue) {
         this.minValue = minValue;
         return this;
@@ -95,6 +102,7 @@ public class Flag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Flag withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class Flag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiresRestart")
     public Boolean requiresRestart;
+
     public Flag withRequiresRestart(Boolean requiresRestart) {
         this.requiresRestart = requiresRestart;
         return this;
@@ -117,9 +126,11 @@ public class Flag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public FlagTypeEnum type;
+
     public Flag withType(FlagTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Flag(){}
 }

@@ -15,9 +15,11 @@ public class ContainerServicesListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerServices")
     public ContainerService[] containerServices;
+
     public ContainerServicesListResult withContainerServices(ContainerService[] containerServices) {
         this.containerServices = containerServices;
         return this;
     }
     
+    public ContainerServicesListResult(){}
 }

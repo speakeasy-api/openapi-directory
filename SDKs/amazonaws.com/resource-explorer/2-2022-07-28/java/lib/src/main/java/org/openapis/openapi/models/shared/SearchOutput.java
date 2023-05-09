@@ -15,6 +15,7 @@ public class SearchOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public ResourceCount count;
+
     public SearchOutput withCount(ResourceCount count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class SearchOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public SearchOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,6 +33,7 @@ public class SearchOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public Resource[] resources;
+
     public SearchOutput withResources(Resource[] resources) {
         this.resources = resources;
         return this;
@@ -39,9 +42,11 @@ public class SearchOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewArn")
     public String viewArn;
+
     public SearchOutput withViewArn(String viewArn) {
         this.viewArn = viewArn;
         return this;
     }
     
+    public SearchOutput(){}
 }

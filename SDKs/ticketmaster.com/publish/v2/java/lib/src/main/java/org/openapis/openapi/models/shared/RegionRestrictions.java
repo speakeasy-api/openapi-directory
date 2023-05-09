@@ -18,9 +18,11 @@ public class RegionRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed")
     public String[] allowed;
+
     public RegionRestrictions withAllowed(String[] allowed) {
         this.allowed = allowed;
         return this;
     }
     
+    public RegionRestrictions(){}
 }

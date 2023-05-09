@@ -23,6 +23,7 @@ public class AppKeyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appKey")
     public String appKey;
+
     public AppKeyItems withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
@@ -34,6 +35,7 @@ public class AppKeyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appToken")
     public String appToken;
+
     public AppKeyItems withAppToken(String appToken) {
         this.appToken = appToken;
         return this;
@@ -47,6 +49,7 @@ public class AppKeyItems {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdIn")
     public OffsetDateTime createdIn;
+
     public AppKeyItems withCreatedIn(OffsetDateTime createdIn) {
         this.createdIn = createdIn;
         return this;
@@ -58,6 +61,7 @@ public class AppKeyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AppKeyItems withId(String id) {
         this.id = id;
         return this;
@@ -69,6 +73,7 @@ public class AppKeyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public AppKeyItems withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -80,6 +85,7 @@ public class AppKeyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isBlocked")
     public Boolean isBlocked;
+
     public AppKeyItems withIsBlocked(Boolean isBlocked) {
         this.isBlocked = isBlocked;
         return this;
@@ -91,9 +97,11 @@ public class AppKeyItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public AppKeyItems withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public AppKeyItems(){}
 }

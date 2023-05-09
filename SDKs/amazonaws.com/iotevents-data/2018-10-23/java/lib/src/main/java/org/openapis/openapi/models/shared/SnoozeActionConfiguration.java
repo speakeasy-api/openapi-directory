@@ -15,6 +15,7 @@ public class SnoozeActionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public SnoozeActionConfiguration withNote(String note) {
         this.note = note;
         return this;
@@ -23,9 +24,11 @@ public class SnoozeActionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snoozeDuration")
     public Long snoozeDuration;
+
     public SnoozeActionConfiguration withSnoozeDuration(Long snoozeDuration) {
         this.snoozeDuration = snoozeDuration;
         return this;
     }
     
+    public SnoozeActionConfiguration(){}
 }

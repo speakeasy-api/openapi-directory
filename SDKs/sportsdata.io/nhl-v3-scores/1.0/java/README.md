@@ -16,10 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AreGamesInProgressFormatEnum;
 import org.openapis.openapi.models.operations.AreGamesInProgressRequest;
 import org.openapis.openapi.models.operations.AreGamesInProgressResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,44 +30,47 @@ public class Application {
                 }})
                 .build();
 
-            AreGamesInProgressRequest req = new AreGamesInProgressRequest() {{
-                format = "JSON";
-            }}            
+            AreGamesInProgressRequest req = new AreGamesInProgressRequest(AreGamesInProgressFormatEnum.JSON);            
 
             AreGamesInProgressResponse res = sdk.areGamesInProgress(req);
 
-            if (res.areGamesInProgress200ApplicationJSONBoolean.isPresent()) {
+            if (res.areGamesInProgress200ApplicationJSONBoolean != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `areGamesInProgress` - Are Games In Progress
-* `currentSeason` - Current Season
-* `gamesByDate` - Games by Date
-* `news` - News
-* `newsByDate` - News by Date
-* `newsByPlayer` - News by Player
-* `playerDetailsByActive` - Player Details by Active
-* `playerDetailsByFreeAgent` - Player Details by Free Agent
-* `playerDetailsByPlayer` - Player Details by Player
-* `playersByTeam` - Players by Team
-* `schedules` - Schedules
-* `stadiums` - Stadiums
-* `standings` - Standings
-* `teamGameLogsBySeason` - Team Game Logs By Season
-* `teamGameStatsByDate` - Team Game Stats by Date
-* `teamSeasonStats` - Team Season Stats
-* `teamsActive` - Teams (Active)
-* `teamsAll` - Teams (All)
+* [areGamesInProgress](docs/sdk/README.md#aregamesinprogress) - Are Games In Progress
+* [currentSeason](docs/sdk/README.md#currentseason) - Current Season
+* [gamesByDate](docs/sdk/README.md#gamesbydate) - Games by Date
+* [gamesByDateBasic](docs/sdk/README.md#gamesbydatebasic) - Games by Date (Basic)
+* [news](docs/sdk/README.md#news) - News
+* [newsByDate](docs/sdk/README.md#newsbydate) - News by Date
+* [newsByPlayer](docs/sdk/README.md#newsbyplayer) - News by Player
+* [playerDetailsByActive](docs/sdk/README.md#playerdetailsbyactive) - Player Details by Active
+* [playerDetailsByFreeAgent](docs/sdk/README.md#playerdetailsbyfreeagent) - Player Details by Free Agent
+* [playerDetailsByPlayer](docs/sdk/README.md#playerdetailsbyplayer) - Player Details by Player
+* [playersByTeam](docs/sdk/README.md#playersbyteam) - Players by Team
+* [playersByTeamBasic](docs/sdk/README.md#playersbyteambasic) - Players by Team (Basic)
+* [schedules](docs/sdk/README.md#schedules) - Schedules
+* [schedulesBasic](docs/sdk/README.md#schedulesbasic) - Schedules (Basic)
+* [stadiums](docs/sdk/README.md#stadiums) - Stadiums
+* [standings](docs/sdk/README.md#standings) - Standings
+* [teamGameLogsBySeason](docs/sdk/README.md#teamgamelogsbyseason) - Team Game Logs By Season
+* [teamGameStatsByDate](docs/sdk/README.md#teamgamestatsbydate) - Team Game Stats by Date
+* [teamSeasonStats](docs/sdk/README.md#teamseasonstats) - Team Season Stats
+* [teamsActive](docs/sdk/README.md#teamsactive) - Teams (Active)
+* [teamsAll](docs/sdk/README.md#teamsall) - Teams (All)
 <!-- End SDK Available Operations -->
 
 ### Maturity

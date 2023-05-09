@@ -18,9 +18,11 @@ public class TextSentimentDatasetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentimentMax")
     public Integer sentimentMax;
+
     public TextSentimentDatasetMetadata withSentimentMax(Integer sentimentMax) {
         this.sentimentMax = sentimentMax;
         return this;
     }
     
+    public TextSentimentDatasetMetadata(){}
 }

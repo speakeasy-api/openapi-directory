@@ -14,6 +14,7 @@ public class PutDefaultEncryptionConfigurationRequestBody {
      */
     @JsonProperty("encryptionType")
     public PutDefaultEncryptionConfigurationRequestBodyEncryptionTypeEnum encryptionType;
+
     public PutDefaultEncryptionConfigurationRequestBody withEncryptionType(PutDefaultEncryptionConfigurationRequestBodyEncryptionTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -25,9 +26,13 @@ public class PutDefaultEncryptionConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public PutDefaultEncryptionConfigurationRequestBody withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public PutDefaultEncryptionConfigurationRequestBody(@JsonProperty("encryptionType") PutDefaultEncryptionConfigurationRequestBodyEncryptionTypeEnum encryptionType) {
+        this.encryptionType = encryptionType;
+  }
 }

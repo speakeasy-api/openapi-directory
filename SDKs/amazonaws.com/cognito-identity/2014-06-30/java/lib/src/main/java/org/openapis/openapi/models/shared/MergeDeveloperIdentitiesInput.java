@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MergeDeveloperIdentitiesInput {
     @JsonProperty("DestinationUserIdentifier")
     public String destinationUserIdentifier;
+
     public MergeDeveloperIdentitiesInput withDestinationUserIdentifier(String destinationUserIdentifier) {
         this.destinationUserIdentifier = destinationUserIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class MergeDeveloperIdentitiesInput {
     
     @JsonProperty("DeveloperProviderName")
     public String developerProviderName;
+
     public MergeDeveloperIdentitiesInput withDeveloperProviderName(String developerProviderName) {
         this.developerProviderName = developerProviderName;
         return this;
@@ -26,6 +28,7 @@ public class MergeDeveloperIdentitiesInput {
     
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public MergeDeveloperIdentitiesInput withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -33,9 +36,16 @@ public class MergeDeveloperIdentitiesInput {
     
     @JsonProperty("SourceUserIdentifier")
     public String sourceUserIdentifier;
+
     public MergeDeveloperIdentitiesInput withSourceUserIdentifier(String sourceUserIdentifier) {
         this.sourceUserIdentifier = sourceUserIdentifier;
         return this;
     }
     
+    public MergeDeveloperIdentitiesInput(@JsonProperty("DestinationUserIdentifier") String destinationUserIdentifier, @JsonProperty("DeveloperProviderName") String developerProviderName, @JsonProperty("IdentityPoolId") String identityPoolId, @JsonProperty("SourceUserIdentifier") String sourceUserIdentifier) {
+        this.destinationUserIdentifier = destinationUserIdentifier;
+        this.developerProviderName = developerProviderName;
+        this.identityPoolId = identityPoolId;
+        this.sourceUserIdentifier = sourceUserIdentifier;
+  }
 }

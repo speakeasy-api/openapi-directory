@@ -18,6 +18,7 @@ public class ListWorkerFleetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListWorkerFleetsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,9 +30,11 @@ public class ListWorkerFleetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerFleets")
     public WorkerFleet[] workerFleets;
+
     public ListWorkerFleetsResponse withWorkerFleets(WorkerFleet[] workerFleets) {
         this.workerFleets = workerFleets;
         return this;
     }
     
+    public ListWorkerFleetsResponse(){}
 }

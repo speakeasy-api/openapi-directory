@@ -12,6 +12,7 @@ public class BatchExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public BatchExecuteStatementInput withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class BatchExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterIdentifier")
     public String clusterIdentifier;
+
     public BatchExecuteStatementInput withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -27,6 +29,7 @@ public class BatchExecuteStatementInput {
     
     @JsonProperty("Database")
     public String database;
+
     public BatchExecuteStatementInput withDatabase(String database) {
         this.database = database;
         return this;
@@ -35,6 +38,7 @@ public class BatchExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbUser")
     public String dbUser;
+
     public BatchExecuteStatementInput withDbUser(String dbUser) {
         this.dbUser = dbUser;
         return this;
@@ -43,6 +47,7 @@ public class BatchExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public BatchExecuteStatementInput withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -50,6 +55,7 @@ public class BatchExecuteStatementInput {
     
     @JsonProperty("Sqls")
     public String[] sqls;
+
     public BatchExecuteStatementInput withSqls(String[] sqls) {
         this.sqls = sqls;
         return this;
@@ -58,6 +64,7 @@ public class BatchExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatementName")
     public String statementName;
+
     public BatchExecuteStatementInput withStatementName(String statementName) {
         this.statementName = statementName;
         return this;
@@ -66,6 +73,7 @@ public class BatchExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WithEvent")
     public Boolean withEvent;
+
     public BatchExecuteStatementInput withWithEvent(Boolean withEvent) {
         this.withEvent = withEvent;
         return this;
@@ -74,9 +82,14 @@ public class BatchExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkgroupName")
     public String workgroupName;
+
     public BatchExecuteStatementInput withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public BatchExecuteStatementInput(@JsonProperty("Database") String database, @JsonProperty("Sqls") String[] sqls) {
+        this.database = database;
+        this.sqls = sqls;
+  }
 }

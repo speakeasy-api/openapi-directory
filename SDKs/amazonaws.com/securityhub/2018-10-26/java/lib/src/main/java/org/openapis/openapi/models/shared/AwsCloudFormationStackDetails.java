@@ -15,6 +15,7 @@ public class AwsCloudFormationStackDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Capabilities")
     public String[] capabilities;
+
     public AwsCloudFormationStackDetails withCapabilities(String[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -23,6 +24,7 @@ public class AwsCloudFormationStackDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTime")
     public String creationTime;
+
     public AwsCloudFormationStackDetails withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -31,6 +33,7 @@ public class AwsCloudFormationStackDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public AwsCloudFormationStackDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class AwsCloudFormationStackDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableRollback")
     public Boolean disableRollback;
+
     public AwsCloudFormationStackDetails withDisableRollback(Boolean disableRollback) {
         this.disableRollback = disableRollback;
         return this;
@@ -47,6 +51,7 @@ public class AwsCloudFormationStackDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DriftInformation")
     public AwsCloudFormationStackDriftInformationDetails driftInformation;
+
     public AwsCloudFormationStackDetails withDriftInformation(AwsCloudFormationStackDriftInformationDetails driftInformation) {
         this.driftInformation = driftInformation;
         return this;
@@ -55,6 +60,7 @@ public class AwsCloudFormationStackDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableTerminationProtection")
     public Boolean enableTerminationProtection;
+
     public AwsCloudFormationStackDetails withEnableTerminationProtection(Boolean enableTerminationProtection) {
         this.enableTerminationProtection = enableTerminationProtection;
         return this;
@@ -63,6 +69,7 @@ public class AwsCloudFormationStackDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdatedTime")
     public String lastUpdatedTime;
+
     public AwsCloudFormationStackDetails withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -71,6 +78,7 @@ public class AwsCloudFormationStackDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationArns")
     public String[] notificationArns;
+
     public AwsCloudFormationStackDetails withNotificationArns(String[] notificationArns) {
         this.notificationArns = notificationArns;
         return this;
@@ -79,6 +87,7 @@ public class AwsCloudFormationStackDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Outputs")
     public AwsCloudFormationStackOutputsDetails[] outputs;
+
     public AwsCloudFormationStackDetails withOutputs(AwsCloudFormationStackOutputsDetails[] outputs) {
         this.outputs = outputs;
         return this;
@@ -87,6 +96,7 @@ public class AwsCloudFormationStackDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public AwsCloudFormationStackDetails withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -95,6 +105,7 @@ public class AwsCloudFormationStackDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public AwsCloudFormationStackDetails withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -103,6 +114,7 @@ public class AwsCloudFormationStackDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackName")
     public String stackName;
+
     public AwsCloudFormationStackDetails withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -111,6 +123,7 @@ public class AwsCloudFormationStackDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackStatus")
     public String stackStatus;
+
     public AwsCloudFormationStackDetails withStackStatus(String stackStatus) {
         this.stackStatus = stackStatus;
         return this;
@@ -119,6 +132,7 @@ public class AwsCloudFormationStackDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackStatusReason")
     public String stackStatusReason;
+
     public AwsCloudFormationStackDetails withStackStatusReason(String stackStatusReason) {
         this.stackStatusReason = stackStatusReason;
         return this;
@@ -127,9 +141,11 @@ public class AwsCloudFormationStackDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeoutInMinutes")
     public Long timeoutInMinutes;
+
     public AwsCloudFormationStackDetails withTimeoutInMinutes(Long timeoutInMinutes) {
         this.timeoutInMinutes = timeoutInMinutes;
         return this;
     }
     
+    public AwsCloudFormationStackDetails(){}
 }

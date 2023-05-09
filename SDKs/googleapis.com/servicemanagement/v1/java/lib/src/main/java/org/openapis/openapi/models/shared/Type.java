@@ -18,6 +18,7 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("edition")
     public String edition;
+
     public Type withEdition(String edition) {
         this.edition = edition;
         return this;
@@ -29,6 +30,7 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public Field[] fields;
+
     public Type withFields(Field[] fields) {
         this.fields = fields;
         return this;
@@ -40,6 +42,7 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Type withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneofs")
     public String[] oneofs;
+
     public Type withOneofs(String[] oneofs) {
         this.oneofs = oneofs;
         return this;
@@ -62,6 +66,7 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Option[] options;
+
     public Type withOptions(Option[] options) {
         this.options = options;
         return this;
@@ -73,6 +78,7 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceContext")
     public SourceContext sourceContext;
+
     public Type withSourceContext(SourceContext sourceContext) {
         this.sourceContext = sourceContext;
         return this;
@@ -84,9 +90,11 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syntax")
     public TypeSyntaxEnum syntax;
+
     public Type withSyntax(TypeSyntaxEnum syntax) {
         this.syntax = syntax;
         return this;
     }
     
+    public Type(){}
 }

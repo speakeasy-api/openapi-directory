@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFirewallConfigRequest {
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public GetFirewallConfigRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public GetFirewallConfigRequest(@JsonProperty("ResourceId") String resourceId) {
+        this.resourceId = resourceId;
+  }
 }

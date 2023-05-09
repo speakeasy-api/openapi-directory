@@ -15,6 +15,7 @@ public class Checksum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sum")
     public String sum;
+
     public Checksum withSum(String sum) {
         this.sum = sum;
         return this;
@@ -23,9 +24,11 @@ public class Checksum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ChecksumTypeEnum type;
+
     public Checksum withType(ChecksumTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Checksum(){}
 }

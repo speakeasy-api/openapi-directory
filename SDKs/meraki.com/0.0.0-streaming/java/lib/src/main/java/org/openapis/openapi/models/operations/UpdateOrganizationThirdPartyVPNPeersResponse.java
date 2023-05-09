@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateOrganizationThirdPartyVPNPeersResponse {
     
     public String contentType;
+
     public UpdateOrganizationThirdPartyVPNPeersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateOrganizationThirdPartyVPNPeersResponse {
     
     
     public Integer statusCode;
+
     public UpdateOrganizationThirdPartyVPNPeersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateOrganizationThirdPartyVPNPeersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateOrganizationThirdPartyVPNPeersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class UpdateOrganizationThirdPartyVPNPeersResponse {
      */
     
     public java.util.Map<String, Object>[] updateOrganizationThirdPartyVPNPeers200ApplicationJSONObjects;
+
     public UpdateOrganizationThirdPartyVPNPeersResponse withUpdateOrganizationThirdPartyVPNPeers200ApplicationJSONObjects(java.util.Map<String, Object>[] updateOrganizationThirdPartyVPNPeers200ApplicationJSONObjects) {
         this.updateOrganizationThirdPartyVPNPeers200ApplicationJSONObjects = updateOrganizationThirdPartyVPNPeers200ApplicationJSONObjects;
         return this;
     }
     
+    public UpdateOrganizationThirdPartyVPNPeersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

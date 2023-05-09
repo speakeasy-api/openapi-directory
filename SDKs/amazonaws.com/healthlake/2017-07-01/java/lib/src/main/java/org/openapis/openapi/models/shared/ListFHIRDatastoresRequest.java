@@ -12,6 +12,7 @@ public class ListFHIRDatastoresRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public DatastoreFilter filter;
+
     public ListFHIRDatastoresRequest withFilter(DatastoreFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListFHIRDatastoresRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListFHIRDatastoresRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListFHIRDatastoresRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFHIRDatastoresRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFHIRDatastoresRequest(){}
 }

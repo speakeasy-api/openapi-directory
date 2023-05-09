@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAttachmentForObjectRequest {
@@ -21,6 +22,7 @@ public class CreateAttachmentForObjectRequest {
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public org.openapis.openapi.models.shared.AttachmentRequest attachmentRequest;
+
     public CreateAttachmentForObjectRequest withAttachmentRequest(org.openapis.openapi.models.shared.AttachmentRequest attachmentRequest) {
         this.attachmentRequest = attachmentRequest;
         return this;
@@ -33,6 +35,7 @@ public class CreateAttachmentForObjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public CreateAttachmentForObjectRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -44,9 +47,13 @@ public class CreateAttachmentForObjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public CreateAttachmentForObjectRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public CreateAttachmentForObjectRequest(@JsonProperty("AttachmentRequest") org.openapis.openapi.models.shared.AttachmentRequest attachmentRequest) {
+        this.attachmentRequest = attachmentRequest;
+  }
 }

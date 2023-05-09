@@ -15,6 +15,7 @@ public class RemoveLFTagsFromResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public RemoveLFTagsFromResourceRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -25,6 +26,7 @@ public class RemoveLFTagsFromResourceRequestBody {
      */
     @JsonProperty("LFTags")
     public org.openapis.openapi.models.shared.LFTagPair[] lfTags;
+
     public RemoveLFTagsFromResourceRequestBody withLFTags(org.openapis.openapi.models.shared.LFTagPair[] lfTags) {
         this.lfTags = lfTags;
         return this;
@@ -35,9 +37,14 @@ public class RemoveLFTagsFromResourceRequestBody {
      */
     @JsonProperty("Resource")
     public RemoveLFTagsFromResourceRequestBodyResource resource;
+
     public RemoveLFTagsFromResourceRequestBody withResource(RemoveLFTagsFromResourceRequestBodyResource resource) {
         this.resource = resource;
         return this;
     }
     
+    public RemoveLFTagsFromResourceRequestBody(@JsonProperty("LFTags") org.openapis.openapi.models.shared.LFTagPair[] lfTags, @JsonProperty("Resource") RemoveLFTagsFromResourceRequestBodyResource resource) {
+        this.lfTags = lfTags;
+        this.resource = resource;
+  }
 }

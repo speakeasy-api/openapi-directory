@@ -15,9 +15,11 @@ public class IntentConfidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public IntentConfidence withScore(Double score) {
         this.score = score;
         return this;
     }
     
+    public IntentConfidence(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetResolverEndpointRequest {
     @JsonProperty("ResolverEndpointId")
     public String resolverEndpointId;
+
     public GetResolverEndpointRequest withResolverEndpointId(String resolverEndpointId) {
         this.resolverEndpointId = resolverEndpointId;
         return this;
     }
     
+    public GetResolverEndpointRequest(@JsonProperty("ResolverEndpointId") String resolverEndpointId) {
+        this.resolverEndpointId = resolverEndpointId;
+  }
 }

@@ -18,6 +18,7 @@ public class Offers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public OffersItems[] items;
+
     public Offers withItems(OffersItems[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class Offers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Offers withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Offers(){}
 }

@@ -58,12 +58,10 @@ public class OfferingLearners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersMarkerEmailMarksResponse res = new org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersMarkerEmailMarksResponse() {{
+        org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersMarkerEmailMarksResponse res = new org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersMarkerEmailMarksResponse(contentType, httpRes.statusCode()) {{
             offeringUsers = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class OfferingLearners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersUserEmailResponse res = new org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersUserEmailResponse() {{
+        org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersUserEmailResponse res = new org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersUserEmailResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -154,12 +150,10 @@ public class OfferingLearners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersResponse(contentType, httpRes.statusCode()) {{
             offeringUserResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,12 +196,10 @@ public class OfferingLearners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersMarkerEmailMarksResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersMarkerEmailMarksResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersMarkerEmailMarksResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersMarkerEmailMarksResponse(contentType, httpRes.statusCode()) {{
             offeringUsers = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -255,11 +247,9 @@ public class OfferingLearners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchUsersUserEmailTransferResponse res = new org.openapis.openapi.models.operations.PatchUsersUserEmailTransferResponse() {{
+        org.openapis.openapi.models.operations.PatchUsersUserEmailTransferResponse res = new org.openapis.openapi.models.operations.PatchUsersUserEmailTransferResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,13 +292,11 @@ public class OfferingLearners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersResponse res = new org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersResponse() {{
+        org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersResponse res = new org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersResponse(contentType, httpRes.statusCode()) {{
             offeringUserAddResponses = null;
             postOfferingsOfferingIdUsers207ApplicationJSONOneoves = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -363,12 +351,10 @@ public class OfferingLearners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersMarkerEmailMarksResponse res = new org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersMarkerEmailMarksResponse() {{
+        org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersMarkerEmailMarksResponse res = new org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersMarkerEmailMarksResponse(contentType, httpRes.statusCode()) {{
             offeringUsers = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

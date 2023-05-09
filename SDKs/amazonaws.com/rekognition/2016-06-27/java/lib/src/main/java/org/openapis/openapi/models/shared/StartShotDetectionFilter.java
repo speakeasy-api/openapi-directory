@@ -15,9 +15,11 @@ public class StartShotDetectionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinSegmentConfidence")
     public Float minSegmentConfidence;
+
     public StartShotDetectionFilter withMinSegmentConfidence(Float minSegmentConfidence) {
         this.minSegmentConfidence = minSegmentConfidence;
         return this;
     }
     
+    public StartShotDetectionFilter(){}
 }

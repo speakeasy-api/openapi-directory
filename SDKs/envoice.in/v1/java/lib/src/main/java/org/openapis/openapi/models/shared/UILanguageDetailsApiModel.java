@@ -15,6 +15,7 @@ public class UILanguageDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public UILanguageDetailsApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class UILanguageDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UILanguageDetailsApiModel withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class UILanguageDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UiCulture")
     public String uiCulture;
+
     public UILanguageDetailsApiModel withUiCulture(String uiCulture) {
         this.uiCulture = uiCulture;
         return this;
     }
     
+    public UILanguageDetailsApiModel(){}
 }

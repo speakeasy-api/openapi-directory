@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateSnapshotRequest {
     
     public String description;
+
     public CreateSnapshotRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class CreateSnapshotRequest {
     
     
     public Boolean dryRun;
+
     public CreateSnapshotRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class CreateSnapshotRequest {
     
     
     public String outpostArn;
+
     public CreateSnapshotRequest withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -30,6 +33,7 @@ public class CreateSnapshotRequest {
     
     
     public CreateSnapshotRequestTagSpecifications[] tagSpecifications;
+
     public CreateSnapshotRequest withTagSpecifications(CreateSnapshotRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -37,9 +41,13 @@ public class CreateSnapshotRequest {
     
     
     public String volumeId;
+
     public CreateSnapshotRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public CreateSnapshotRequest(@JsonProperty("VolumeId") String volumeId) {
+        this.volumeId = volumeId;
+  }
 }

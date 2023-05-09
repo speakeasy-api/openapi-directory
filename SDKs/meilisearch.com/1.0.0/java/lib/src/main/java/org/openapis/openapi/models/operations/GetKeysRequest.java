@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetKeysRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetKeysRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -16,9 +17,11 @@ public class GetKeysRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetKeysRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetKeysRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RefreshTokenRequest {
@@ -12,6 +13,7 @@ public class RefreshTokenRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TokenRefreshRequest tokenRefreshRequest;
+
     public RefreshTokenRequest withTokenRefreshRequest(org.openapis.openapi.models.shared.TokenRefreshRequest tokenRefreshRequest) {
         this.tokenRefreshRequest = tokenRefreshRequest;
         return this;
@@ -42,6 +44,7 @@ public class RefreshTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public RefreshTokenRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -62,9 +65,13 @@ public class RefreshTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public RefreshTokenRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public RefreshTokenRequest(@JsonProperty("TokenRefreshRequest") org.openapis.openapi.models.shared.TokenRefreshRequest tokenRefreshRequest) {
+        this.tokenRefreshRequest = tokenRefreshRequest;
+  }
 }

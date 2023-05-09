@@ -15,6 +15,7 @@ public class AwsEcrContainerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architectures")
     public StringFilter[] architectures;
+
     public AwsEcrContainerAggregation withArchitectures(StringFilter[] architectures) {
         this.architectures = architectures;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcrContainerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageShas")
     public StringFilter[] imageShas;
+
     public AwsEcrContainerAggregation withImageShas(StringFilter[] imageShas) {
         this.imageShas = imageShas;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcrContainerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTags")
     public StringFilter[] imageTags;
+
     public AwsEcrContainerAggregation withImageTags(StringFilter[] imageTags) {
         this.imageTags = imageTags;
         return this;
@@ -39,6 +42,7 @@ public class AwsEcrContainerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositories")
     public StringFilter[] repositories;
+
     public AwsEcrContainerAggregation withRepositories(StringFilter[] repositories) {
         this.repositories = repositories;
         return this;
@@ -47,6 +51,7 @@ public class AwsEcrContainerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceIds")
     public StringFilter[] resourceIds;
+
     public AwsEcrContainerAggregation withResourceIds(StringFilter[] resourceIds) {
         this.resourceIds = resourceIds;
         return this;
@@ -55,6 +60,7 @@ public class AwsEcrContainerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public AwsEcrContainerSortByEnum sortBy;
+
     public AwsEcrContainerAggregation withSortBy(AwsEcrContainerSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -63,9 +69,11 @@ public class AwsEcrContainerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderEnum sortOrder;
+
     public AwsEcrContainerAggregation withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public AwsEcrContainerAggregation(){}
 }

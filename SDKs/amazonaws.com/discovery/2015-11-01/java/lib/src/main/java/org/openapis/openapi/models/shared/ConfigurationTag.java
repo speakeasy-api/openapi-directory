@@ -20,6 +20,7 @@ public class ConfigurationTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationId")
     public String configurationId;
+
     public ConfigurationTag withConfigurationId(String configurationId) {
         this.configurationId = configurationId;
         return this;
@@ -28,6 +29,7 @@ public class ConfigurationTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationType")
     public ConfigurationItemTypeEnum configurationType;
+
     public ConfigurationTag withConfigurationType(ConfigurationItemTypeEnum configurationType) {
         this.configurationType = configurationType;
         return this;
@@ -36,6 +38,7 @@ public class ConfigurationTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public ConfigurationTag withKey(String key) {
         this.key = key;
         return this;
@@ -46,6 +49,7 @@ public class ConfigurationTag {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timeOfCreation")
     public OffsetDateTime timeOfCreation;
+
     public ConfigurationTag withTimeOfCreation(OffsetDateTime timeOfCreation) {
         this.timeOfCreation = timeOfCreation;
         return this;
@@ -54,9 +58,11 @@ public class ConfigurationTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ConfigurationTag withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ConfigurationTag(){}
 }

@@ -15,9 +15,11 @@ public class GetInsightResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Insight")
     public Insight insight;
+
     public GetInsightResult withInsight(Insight insight) {
         this.insight = insight;
         return this;
     }
     
+    public GetInsightResult(){}
 }

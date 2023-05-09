@@ -18,6 +18,7 @@ public class BalanceAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustmentAmount")
     public Amount adjustmentAmount;
+
     public BalanceAdjustment withAdjustmentAmount(Amount adjustmentAmount) {
         this.adjustmentAmount = adjustmentAmount;
         return this;
@@ -29,9 +30,11 @@ public class BalanceAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustmentType")
     public String adjustmentType;
+
     public BalanceAdjustment withAdjustmentType(String adjustmentType) {
         this.adjustmentType = adjustmentType;
         return this;
     }
     
+    public BalanceAdjustment(){}
 }

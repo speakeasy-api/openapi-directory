@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAlmawsV1TaskListsRsLendingRequestsResponse {
     
     public byte[] body;
+
     public PostAlmawsV1TaskListsRsLendingRequestsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostAlmawsV1TaskListsRsLendingRequestsResponse {
     
     
     public String contentType;
+
     public PostAlmawsV1TaskListsRsLendingRequestsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PostAlmawsV1TaskListsRsLendingRequestsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostAlmawsV1TaskListsRsLendingRequestsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -30,6 +34,7 @@ public class PostAlmawsV1TaskListsRsLendingRequestsResponse {
     
     
     public Integer statusCode;
+
     public PostAlmawsV1TaskListsRsLendingRequestsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,6 +42,7 @@ public class PostAlmawsV1TaskListsRsLendingRequestsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAlmawsV1TaskListsRsLendingRequestsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -47,9 +53,14 @@ public class PostAlmawsV1TaskListsRsLendingRequestsResponse {
      */
     
     public org.openapis.openapi.models.shared.Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItems onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItems;
+
     public PostAlmawsV1TaskListsRsLendingRequestsResponse withOnealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItems(org.openapis.openapi.models.shared.Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItems onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItems) {
         this.onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItems = onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItems;
         return this;
     }
     
+    public PostAlmawsV1TaskListsRsLendingRequestsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

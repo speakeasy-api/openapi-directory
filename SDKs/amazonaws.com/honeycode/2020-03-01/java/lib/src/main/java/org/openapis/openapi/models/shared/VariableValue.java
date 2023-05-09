@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VariableValue {
     @JsonProperty("rawValue")
     public String rawValue;
+
     public VariableValue withRawValue(String rawValue) {
         this.rawValue = rawValue;
         return this;
     }
     
+    public VariableValue(@JsonProperty("rawValue") String rawValue) {
+        this.rawValue = rawValue;
+  }
 }

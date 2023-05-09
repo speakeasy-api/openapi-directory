@@ -18,9 +18,11 @@ public class ListExternalTerminalActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ExternalTerminalAction[] data;
+
     public ListExternalTerminalActionsResponse withData(ExternalTerminalAction[] data) {
         this.data = data;
         return this;
     }
     
+    public ListExternalTerminalActionsResponse(){}
 }

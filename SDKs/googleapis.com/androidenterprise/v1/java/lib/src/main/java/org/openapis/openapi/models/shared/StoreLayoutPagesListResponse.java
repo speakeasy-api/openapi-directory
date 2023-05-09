@@ -18,9 +18,11 @@ public class StoreLayoutPagesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public StorePage[] page;
+
     public StoreLayoutPagesListResponse withPage(StorePage[] page) {
         this.page = page;
         return this;
     }
     
+    public StoreLayoutPagesListResponse(){}
 }

@@ -15,6 +15,7 @@ public class PerfEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuInfo")
     public CPUInfo cpuInfo;
+
     public PerfEnvironment withCpuInfo(CPUInfo cpuInfo) {
         this.cpuInfo = cpuInfo;
         return this;
@@ -23,9 +24,11 @@ public class PerfEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryInfo")
     public MemoryInfo memoryInfo;
+
     public PerfEnvironment withMemoryInfo(MemoryInfo memoryInfo) {
         this.memoryInfo = memoryInfo;
         return this;
     }
     
+    public PerfEnvironment(){}
 }

@@ -15,9 +15,13 @@ public class GetSmsTemplateResponse {
      */
     @JsonProperty("SMSTemplateResponse")
     public SMSTemplateResponse smsTemplateResponse;
+
     public GetSmsTemplateResponse withSMSTemplateResponse(SMSTemplateResponse smsTemplateResponse) {
         this.smsTemplateResponse = smsTemplateResponse;
         return this;
     }
     
+    public GetSmsTemplateResponse(@JsonProperty("SMSTemplateResponse") SMSTemplateResponse smsTemplateResponse) {
+        this.smsTemplateResponse = smsTemplateResponse;
+  }
 }

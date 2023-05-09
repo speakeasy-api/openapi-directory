@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteGlobalJwtVerifierRequest {
@@ -12,9 +13,13 @@ public class DeleteGlobalJwtVerifierRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=verifierId")
     public String verifierId;
+
     public DeleteGlobalJwtVerifierRequest withVerifierId(String verifierId) {
         this.verifierId = verifierId;
         return this;
     }
     
+    public DeleteGlobalJwtVerifierRequest(@JsonProperty("verifierId") String verifierId) {
+        this.verifierId = verifierId;
+  }
 }

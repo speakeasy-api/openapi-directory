@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateControlPanelResponse {
@@ -12,6 +13,7 @@ public class CreateControlPanelResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateControlPanelResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateControlPanelResponse {
      */
     
     public Object conflictException;
+
     public CreateControlPanelResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateControlPanelResponse {
     
     
     public String contentType;
+
     public CreateControlPanelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateControlPanelResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateControlPanelResponse createControlPanelResponse;
+
     public CreateControlPanelResponse withCreateControlPanelResponse(org.openapis.openapi.models.shared.CreateControlPanelResponse createControlPanelResponse) {
         this.createControlPanelResponse = createControlPanelResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateControlPanelResponse {
      */
     
     public Object internalServerException;
+
     public CreateControlPanelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateControlPanelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateControlPanelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateControlPanelResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateControlPanelResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateControlPanelResponse {
     
     
     public Integer statusCode;
+
     public CreateControlPanelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateControlPanelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateControlPanelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateControlPanelResponse {
      */
     
     public Object throttlingException;
+
     public CreateControlPanelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateControlPanelResponse {
      */
     
     public Object validationException;
+
     public CreateControlPanelResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateControlPanelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

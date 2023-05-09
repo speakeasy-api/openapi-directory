@@ -12,6 +12,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_type")
     public DomainDomainTypeEnum domainType;
+
     public Domain withDomainType(DomainDomainTypeEnum domainType) {
         this.domainType = domainType;
         return this;
@@ -23,9 +24,11 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Domain withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Domain(){}
 }

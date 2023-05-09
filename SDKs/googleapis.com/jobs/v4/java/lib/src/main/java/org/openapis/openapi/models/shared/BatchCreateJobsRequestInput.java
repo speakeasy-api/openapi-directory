@@ -18,9 +18,11 @@ public class BatchCreateJobsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobs")
     public JobInput[] jobs;
+
     public BatchCreateJobsRequestInput withJobs(JobInput[] jobs) {
         this.jobs = jobs;
         return this;
     }
     
+    public BatchCreateJobsRequestInput(){}
 }

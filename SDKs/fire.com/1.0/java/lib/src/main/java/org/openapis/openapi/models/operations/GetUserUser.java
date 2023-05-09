@@ -18,6 +18,7 @@ public class GetUserUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public GetUserUser withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -29,6 +30,7 @@ public class GetUserUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public GetUserUser withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -40,6 +42,7 @@ public class GetUserUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetUserUser withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class GetUserUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public GetUserUser withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -62,6 +66,7 @@ public class GetUserUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastlogin")
     public String lastlogin;
+
     public GetUserUser withLastlogin(String lastlogin) {
         this.lastlogin = lastlogin;
         return this;
@@ -70,6 +75,7 @@ public class GetUserUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileApplicationDetails")
     public GetUserUserMobileApplication mobileApplicationDetails;
+
     public GetUserUser withMobileApplicationDetails(GetUserUserMobileApplication mobileApplicationDetails) {
         this.mobileApplicationDetails = mobileApplicationDetails;
         return this;
@@ -81,6 +87,7 @@ public class GetUserUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileNumber")
     public String mobileNumber;
+
     public GetUserUser withMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
         return this;
@@ -92,6 +99,7 @@ public class GetUserUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public GetUserUserRoleEnum role;
+
     public GetUserUser withRole(GetUserUserRoleEnum role) {
         this.role = role;
         return this;
@@ -103,6 +111,7 @@ public class GetUserUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetUserUserStatusEnum status;
+
     public GetUserUser withStatus(GetUserUserStatusEnum status) {
         this.status = status;
         return this;
@@ -114,9 +123,11 @@ public class GetUserUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userCvl")
     public String userCvl;
+
     public GetUserUser withUserCvl(String userCvl) {
         this.userCvl = userCvl;
         return this;
     }
     
+    public GetUserUser(){}
 }

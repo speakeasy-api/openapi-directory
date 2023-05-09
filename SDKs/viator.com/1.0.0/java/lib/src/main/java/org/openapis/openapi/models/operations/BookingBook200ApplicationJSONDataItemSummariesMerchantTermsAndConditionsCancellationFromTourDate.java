@@ -15,6 +15,7 @@ public class BookingBook200ApplicationJSONDataItemSummariesMerchantTermsAndCondi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayRangeMax")
     public Long dayRangeMax;
+
     public BookingBook200ApplicationJSONDataItemSummariesMerchantTermsAndConditionsCancellationFromTourDate withDayRangeMax(Long dayRangeMax) {
         this.dayRangeMax = dayRangeMax;
         return this;
@@ -26,6 +27,7 @@ public class BookingBook200ApplicationJSONDataItemSummariesMerchantTermsAndCondi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayRangeMin")
     public Long dayRangeMin;
+
     public BookingBook200ApplicationJSONDataItemSummariesMerchantTermsAndConditionsCancellationFromTourDate withDayRangeMin(Long dayRangeMin) {
         this.dayRangeMin = dayRangeMin;
         return this;
@@ -37,6 +39,7 @@ public class BookingBook200ApplicationJSONDataItemSummariesMerchantTermsAndCondi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentageRefundable")
     public Long percentageRefundable;
+
     public BookingBook200ApplicationJSONDataItemSummariesMerchantTermsAndConditionsCancellationFromTourDate withPercentageRefundable(Long percentageRefundable) {
         this.percentageRefundable = percentageRefundable;
         return this;
@@ -48,6 +51,7 @@ public class BookingBook200ApplicationJSONDataItemSummariesMerchantTermsAndCondi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyEndTimestamp")
     public Long policyEndTimestamp;
+
     public BookingBook200ApplicationJSONDataItemSummariesMerchantTermsAndConditionsCancellationFromTourDate withPolicyEndTimestamp(Long policyEndTimestamp) {
         this.policyEndTimestamp = policyEndTimestamp;
         return this;
@@ -59,9 +63,11 @@ public class BookingBook200ApplicationJSONDataItemSummariesMerchantTermsAndCondi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyStartTimestamp")
     public Long policyStartTimestamp;
+
     public BookingBook200ApplicationJSONDataItemSummariesMerchantTermsAndConditionsCancellationFromTourDate withPolicyStartTimestamp(Long policyStartTimestamp) {
         this.policyStartTimestamp = policyStartTimestamp;
         return this;
     }
     
+    public BookingBook200ApplicationJSONDataItemSummariesMerchantTermsAndConditionsCancellationFromTourDate(){}
 }

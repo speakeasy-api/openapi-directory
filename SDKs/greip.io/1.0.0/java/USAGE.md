@@ -3,9 +3,8 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetBulkLookupRequest;
-import org.openapis.openapi.models.operations.GetBulkLookupResponse;
+import org.openapis.openapi.models.operations.GetASNLookupRequest;
+import org.openapis.openapi.models.operations.GetASNLookupResponse;
 
 public class Application {
     public static void main(String[] args) {
@@ -13,15 +12,12 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetBulkLookupRequest req = new GetBulkLookupRequest() {{
-                format = "XML";
-                ips = "1.1.1.1,2.2.2.2";
-                key = "2517bc4fc3f790e8f09bc808bb63b899";
-                lang = "AR";
-                params = "currency";
-            }}            
+            GetASNLookupRequest req = new GetASNLookupRequest("15169", "2517bc4fc3f790e8f09bc808bb63b899") {{
+                format = "JSON";
+                isList = "no";
+            }};            
 
-            GetBulkLookupResponse res = sdk.getBulkLookup(req);
+            GetASNLookupResponse res = sdk.getASNLookup(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -29,5 +25,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

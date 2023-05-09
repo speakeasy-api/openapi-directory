@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Output {
     
     public String description;
+
     public Output withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class Output {
     
     
     public String exportName;
+
     public Output withExportName(String exportName) {
         this.exportName = exportName;
         return this;
@@ -26,6 +28,7 @@ public class Output {
     
     
     public String outputKey;
+
     public Output withOutputKey(String outputKey) {
         this.outputKey = outputKey;
         return this;
@@ -33,9 +36,11 @@ public class Output {
     
     
     public String outputValue;
+
     public Output withOutputValue(String outputValue) {
         this.outputValue = outputValue;
         return this;
     }
     
+    public Output(){}
 }

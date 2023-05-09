@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CalculatedSpend {
     @JsonProperty("ActualSpend")
     public Spend actualSpend;
+
     public CalculatedSpend withActualSpend(Spend actualSpend) {
         this.actualSpend = actualSpend;
         return this;
@@ -22,9 +23,13 @@ public class CalculatedSpend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastedSpend")
     public Spend forecastedSpend;
+
     public CalculatedSpend withForecastedSpend(Spend forecastedSpend) {
         this.forecastedSpend = forecastedSpend;
         return this;
     }
     
+    public CalculatedSpend(@JsonProperty("ActualSpend") Spend actualSpend) {
+        this.actualSpend = actualSpend;
+  }
 }

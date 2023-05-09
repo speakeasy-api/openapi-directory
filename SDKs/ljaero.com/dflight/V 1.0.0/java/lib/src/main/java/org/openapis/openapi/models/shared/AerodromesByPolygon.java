@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AerodromesByPolygon {
     @JsonProperty("poly")
     public java.util.Map<String, Object> poly;
+
     public AerodromesByPolygon withPoly(java.util.Map<String, Object> poly) {
         this.poly = poly;
         return this;
     }
     
+    public AerodromesByPolygon(@JsonProperty("poly") java.util.Map<String, Object> poly) {
+        this.poly = poly;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WarehouseById200ApplicationJSONWarehouseDock1 {
     @JsonProperty("cost")
     public Double cost;
+
     public WarehouseById200ApplicationJSONWarehouseDock1 withCost(Double cost) {
         this.cost = cost;
         return this;
@@ -16,6 +17,7 @@ public class WarehouseById200ApplicationJSONWarehouseDock1 {
     
     @JsonProperty("dockId")
     public String dockId;
+
     public WarehouseById200ApplicationJSONWarehouseDock1 withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -23,9 +25,15 @@ public class WarehouseById200ApplicationJSONWarehouseDock1 {
     
     @JsonProperty("time")
     public String time;
+
     public WarehouseById200ApplicationJSONWarehouseDock1 withTime(String time) {
         this.time = time;
         return this;
     }
     
+    public WarehouseById200ApplicationJSONWarehouseDock1(@JsonProperty("cost") Double cost, @JsonProperty("dockId") String dockId, @JsonProperty("time") String time) {
+        this.cost = cost;
+        this.dockId = dockId;
+        this.time = time;
+  }
 }

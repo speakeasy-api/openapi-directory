@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2ThirdPartyLiveFeedItemsRequestBody {
@@ -15,6 +16,7 @@ public class PostV2ThirdPartyLiveFeedItemsRequestBody {
      */
     @SpeakeasyMetadata("form:name=event_occurred_at")
     public String eventOccurredAt;
+
     public PostV2ThirdPartyLiveFeedItemsRequestBody withEventOccurredAt(String eventOccurredAt) {
         this.eventOccurredAt = eventOccurredAt;
         return this;
@@ -25,6 +27,7 @@ public class PostV2ThirdPartyLiveFeedItemsRequestBody {
      */
     @SpeakeasyMetadata("form:name=idempotency_key")
     public String idempotencyKey;
+
     public PostV2ThirdPartyLiveFeedItemsRequestBody withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -35,6 +38,7 @@ public class PostV2ThirdPartyLiveFeedItemsRequestBody {
      */
     @SpeakeasyMetadata("form:name=message")
     public String message;
+
     public PostV2ThirdPartyLiveFeedItemsRequestBody withMessage(String message) {
         this.message = message;
         return this;
@@ -45,6 +49,7 @@ public class PostV2ThirdPartyLiveFeedItemsRequestBody {
      */
     @SpeakeasyMetadata("form:name=subject_id")
     public Long subjectId;
+
     public PostV2ThirdPartyLiveFeedItemsRequestBody withSubjectId(Long subjectId) {
         this.subjectId = subjectId;
         return this;
@@ -55,6 +60,7 @@ public class PostV2ThirdPartyLiveFeedItemsRequestBody {
      */
     @SpeakeasyMetadata("form:name=subject_type")
     public String subjectType;
+
     public PostV2ThirdPartyLiveFeedItemsRequestBody withSubjectType(String subjectType) {
         this.subjectType = subjectType;
         return this;
@@ -65,9 +71,18 @@ public class PostV2ThirdPartyLiveFeedItemsRequestBody {
      */
     @SpeakeasyMetadata("form:name=user_guid")
     public String userGuid;
+
     public PostV2ThirdPartyLiveFeedItemsRequestBody withUserGuid(String userGuid) {
         this.userGuid = userGuid;
         return this;
     }
     
+    public PostV2ThirdPartyLiveFeedItemsRequestBody(@JsonProperty("event_occurred_at") String eventOccurredAt, @JsonProperty("idempotency_key") String idempotencyKey, @JsonProperty("message") String message, @JsonProperty("subject_id") Long subjectId, @JsonProperty("subject_type") String subjectType, @JsonProperty("user_guid") String userGuid) {
+        this.eventOccurredAt = eventOccurredAt;
+        this.idempotencyKey = idempotencyKey;
+        this.message = message;
+        this.subjectId = subjectId;
+        this.subjectType = subjectType;
+        this.userGuid = userGuid;
+  }
 }

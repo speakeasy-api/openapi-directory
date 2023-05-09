@@ -12,6 +12,7 @@ public class PlayerGameTeamsSchool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
     public String conference;
+
     public PlayerGameTeamsSchool withConference(String conference) {
         this.conference = conference;
         return this;
@@ -20,9 +21,11 @@ public class PlayerGameTeamsSchool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlayerGameTeamsSchool withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PlayerGameTeamsSchool(){}
 }

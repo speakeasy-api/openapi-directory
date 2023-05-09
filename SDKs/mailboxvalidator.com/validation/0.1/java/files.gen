@@ -32,4 +32,5 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1ValidationSingleFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1ValidationSingleRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1ValidationSingleResponse.java
+docs/sdk/README.md
 USAGE.md

@@ -15,9 +15,11 @@ public class AccountstatusesCustomBatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public AccountstatusesCustomBatchRequestEntry[] entries;
+
     public AccountstatusesCustomBatchRequest withEntries(AccountstatusesCustomBatchRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public AccountstatusesCustomBatchRequest(){}
 }

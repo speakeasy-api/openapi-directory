@@ -12,6 +12,7 @@ public class PointPointGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public PointPointGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -31,6 +32,7 @@ public class PointPointGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public PointPointGetLanguageLanguageEnum language;
+
     public PointPointGetRequest withLanguage(PointPointGetLanguageLanguageEnum language) {
         this.language = language;
         return this;
@@ -41,6 +43,7 @@ public class PointPointGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
     public String lat;
+
     public PointPointGetRequest withLat(String lat) {
         this.lat = lat;
         return this;
@@ -51,6 +54,7 @@ public class PointPointGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
     public String lon;
+
     public PointPointGetRequest withLon(String lon) {
         this.lon = lon;
         return this;
@@ -61,6 +65,7 @@ public class PointPointGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=place_id")
     public String placeId;
+
     public PointPointGetRequest withPlaceId(String placeId) {
         this.placeId = placeId;
         return this;
@@ -82,6 +87,7 @@ public class PointPointGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sections")
     public String sections;
+
     public PointPointGetRequest withSections(String sections) {
         this.sections = sections;
         return this;
@@ -96,6 +102,7 @@ public class PointPointGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timezone")
     public String timezone;
+
     public PointPointGetRequest withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -113,9 +120,11 @@ public class PointPointGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=units")
     public PointPointGetUnitsUnitsEnum units;
+
     public PointPointGetRequest withUnits(PointPointGetUnitsUnitsEnum units) {
         this.units = units;
         return this;
     }
     
+    public PointPointGetRequest(){}
 }

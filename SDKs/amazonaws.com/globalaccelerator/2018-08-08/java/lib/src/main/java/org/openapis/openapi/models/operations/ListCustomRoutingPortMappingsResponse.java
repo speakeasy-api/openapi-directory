@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCustomRoutingPortMappingsResponse {
@@ -12,6 +13,7 @@ public class ListCustomRoutingPortMappingsResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public ListCustomRoutingPortMappingsResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class ListCustomRoutingPortMappingsResponse {
     
     
     public String contentType;
+
     public ListCustomRoutingPortMappingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCustomRoutingPortMappingsResponse {
      */
     
     public Object endpointGroupNotFoundException;
+
     public ListCustomRoutingPortMappingsResponse withEndpointGroupNotFoundException(Object endpointGroupNotFoundException) {
         this.endpointGroupNotFoundException = endpointGroupNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class ListCustomRoutingPortMappingsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListCustomRoutingPortMappingsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListCustomRoutingPortMappingsResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListCustomRoutingPortMappingsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class ListCustomRoutingPortMappingsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListCustomRoutingPortMappingsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -69,6 +76,7 @@ public class ListCustomRoutingPortMappingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCustomRoutingPortMappingsResponse listCustomRoutingPortMappingsResponse;
+
     public ListCustomRoutingPortMappingsResponse withListCustomRoutingPortMappingsResponse(org.openapis.openapi.models.shared.ListCustomRoutingPortMappingsResponse listCustomRoutingPortMappingsResponse) {
         this.listCustomRoutingPortMappingsResponse = listCustomRoutingPortMappingsResponse;
         return this;
@@ -76,6 +84,7 @@ public class ListCustomRoutingPortMappingsResponse {
     
     
     public Integer statusCode;
+
     public ListCustomRoutingPortMappingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListCustomRoutingPortMappingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCustomRoutingPortMappingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCustomRoutingPortMappingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

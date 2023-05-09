@@ -12,6 +12,7 @@ public class GetAllAccounts200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first")
     public GetAllAccounts200ApplicationJSONLinksFirst first;
+
     public GetAllAccounts200ApplicationJSONLinks withFirst(GetAllAccounts200ApplicationJSONLinksFirst first) {
         this.first = first;
         return this;
@@ -20,6 +21,7 @@ public class GetAllAccounts200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last")
     public GetAllAccounts200ApplicationJSONLinksLast last;
+
     public GetAllAccounts200ApplicationJSONLinks withLast(GetAllAccounts200ApplicationJSONLinksLast last) {
         this.last = last;
         return this;
@@ -28,6 +30,7 @@ public class GetAllAccounts200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public GetAllAccounts200ApplicationJSONLinksNext next;
+
     public GetAllAccounts200ApplicationJSONLinks withNext(GetAllAccounts200ApplicationJSONLinksNext next) {
         this.next = next;
         return this;
@@ -36,6 +39,7 @@ public class GetAllAccounts200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prev")
     public GetAllAccounts200ApplicationJSONLinksPrev prev;
+
     public GetAllAccounts200ApplicationJSONLinks withPrev(GetAllAccounts200ApplicationJSONLinksPrev prev) {
         this.prev = prev;
         return this;
@@ -44,9 +48,11 @@ public class GetAllAccounts200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public GetAllAccounts200ApplicationJSONLinksSelf self;
+
     public GetAllAccounts200ApplicationJSONLinks withSelf(GetAllAccounts200ApplicationJSONLinksSelf self) {
         this.self = self;
         return this;
     }
     
+    public GetAllAccounts200ApplicationJSONLinks(){}
 }

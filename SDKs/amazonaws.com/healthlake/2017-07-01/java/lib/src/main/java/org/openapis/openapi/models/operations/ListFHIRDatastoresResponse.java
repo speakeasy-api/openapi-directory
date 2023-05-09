@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFHIRDatastoresResponse {
     
     public String contentType;
+
     public ListFHIRDatastoresResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListFHIRDatastoresResponse {
      */
     
     public Object internalServerException;
+
     public ListFHIRDatastoresResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListFHIRDatastoresResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFHIRDatastoresResponse listFHIRDatastoresResponse;
+
     public ListFHIRDatastoresResponse withListFHIRDatastoresResponse(org.openapis.openapi.models.shared.ListFHIRDatastoresResponse listFHIRDatastoresResponse) {
         this.listFHIRDatastoresResponse = listFHIRDatastoresResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListFHIRDatastoresResponse {
     
     
     public Integer statusCode;
+
     public ListFHIRDatastoresResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListFHIRDatastoresResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFHIRDatastoresResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListFHIRDatastoresResponse {
      */
     
     public Object throttlingException;
+
     public ListFHIRDatastoresResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class ListFHIRDatastoresResponse {
      */
     
     public Object validationException;
+
     public ListFHIRDatastoresResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListFHIRDatastoresResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

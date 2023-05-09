@@ -12,6 +12,7 @@ public class GetClassificationInclusionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classification_id")
     public String classificationId;
+
     public GetClassificationInclusionsRequest withClassificationId(String classificationId) {
         this.classificationId = classificationId;
         return this;
@@ -24,6 +25,7 @@ public class GetClassificationInclusionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classification_type")
     public GetClassificationInclusionsClassificationTypeEnum classificationType;
+
     public GetClassificationInclusionsRequest withClassificationType(GetClassificationInclusionsClassificationTypeEnum classificationType) {
         this.classificationType = classificationType;
         return this;
@@ -36,6 +38,7 @@ public class GetClassificationInclusionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classified_id")
     public String classifiedId;
+
     public GetClassificationInclusionsRequest withClassifiedId(String classifiedId) {
         this.classifiedId = classifiedId;
         return this;
@@ -46,6 +49,7 @@ public class GetClassificationInclusionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classified_type")
     public GetClassificationInclusionsClassifiedTypeEnum classifiedType;
+
     public GetClassificationInclusionsRequest withClassifiedType(GetClassificationInclusionsClassifiedTypeEnum classifiedType) {
         this.classifiedType = classifiedType;
         return this;
@@ -59,6 +63,7 @@ public class GetClassificationInclusionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids[]")
     public String[] ids;
+
     public GetClassificationInclusionsRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -71,6 +76,7 @@ public class GetClassificationInclusionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
     public Long pageNumber;
+
     public GetClassificationInclusionsRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -83,6 +89,7 @@ public class GetClassificationInclusionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public GetClassificationInclusionsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -95,6 +102,7 @@ public class GetClassificationInclusionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetClassificationInclusionsRequest withQ(String q) {
         this.q = q;
         return this;
@@ -107,9 +115,11 @@ public class GetClassificationInclusionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
     public GetClassificationInclusionsSortEnum[] sort;
+
     public GetClassificationInclusionsRequest withSort(GetClassificationInclusionsSortEnum[] sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetClassificationInclusionsRequest(){}
 }

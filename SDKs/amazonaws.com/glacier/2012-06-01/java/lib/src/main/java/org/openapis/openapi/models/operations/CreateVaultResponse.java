@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVaultResponse {
     
     public String contentType;
+
     public CreateVaultResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateVaultResponse {
      */
     
     public java.util.Map<String, Object> createVaultOutput;
+
     public CreateVaultResponse withCreateVaultOutput(java.util.Map<String, Object> createVaultOutput) {
         this.createVaultOutput = createVaultOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateVaultResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CreateVaultResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class CreateVaultResponse {
      */
     
     public Object limitExceededException;
+
     public CreateVaultResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateVaultResponse {
      */
     
     public Object missingParameterValueException;
+
     public CreateVaultResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -56,6 +62,7 @@ public class CreateVaultResponse {
     
     
     public Integer statusCode;
+
     public CreateVaultResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateVaultResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVaultResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateVaultResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateVaultResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public CreateVaultResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

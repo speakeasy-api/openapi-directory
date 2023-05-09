@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetItvProfileResponse {
     
     public String contentType;
+
     public GetItvProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetItvProfileResponse {
     
     
     public Integer statusCode;
+
     public GetItvProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetItvProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetItvProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetItvProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetItvProfileResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -43,9 +48,14 @@ public class GetItvProfileResponse {
      */
     
     public java.util.Map<String, Object> getItvProfile200ApplicationJSONObject;
+
     public GetItvProfileResponse withGetItvProfile200ApplicationJSONObject(java.util.Map<String, Object> getItvProfile200ApplicationJSONObject) {
         this.getItvProfile200ApplicationJSONObject = getItvProfile200ApplicationJSONObject;
         return this;
     }
     
+    public GetItvProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

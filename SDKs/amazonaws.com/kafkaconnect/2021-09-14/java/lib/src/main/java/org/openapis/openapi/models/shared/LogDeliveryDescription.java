@@ -15,9 +15,11 @@ public class LogDeliveryDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerLogDelivery")
     public WorkerLogDeliveryDescription workerLogDelivery;
+
     public LogDeliveryDescription withWorkerLogDelivery(WorkerLogDeliveryDescription workerLogDelivery) {
         this.workerLogDelivery = workerLogDelivery;
         return this;
     }
     
+    public LogDeliveryDescription(){}
 }

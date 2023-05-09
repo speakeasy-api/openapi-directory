@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStudioSessionMappingResponse {
     
     public String contentType;
+
     public GetStudioSessionMappingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetStudioSessionMappingResponse {
      */
     
     public org.openapis.openapi.models.shared.GetStudioSessionMappingOutput getStudioSessionMappingOutput;
+
     public GetStudioSessionMappingResponse withGetStudioSessionMappingOutput(org.openapis.openapi.models.shared.GetStudioSessionMappingOutput getStudioSessionMappingOutput) {
         this.getStudioSessionMappingOutput = getStudioSessionMappingOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetStudioSessionMappingResponse {
      */
     
     public Object internalServerError;
+
     public GetStudioSessionMappingResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class GetStudioSessionMappingResponse {
      */
     
     public Object invalidRequestException;
+
     public GetStudioSessionMappingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetStudioSessionMappingResponse {
     
     
     public Integer statusCode;
+
     public GetStudioSessionMappingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetStudioSessionMappingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStudioSessionMappingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetStudioSessionMappingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

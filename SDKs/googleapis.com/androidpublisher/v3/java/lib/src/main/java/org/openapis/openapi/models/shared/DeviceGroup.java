@@ -18,6 +18,7 @@ public class DeviceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceSelectors")
     public DeviceSelector[] deviceSelectors;
+
     public DeviceGroup withDeviceSelectors(DeviceSelector[] deviceSelectors) {
         this.deviceSelectors = deviceSelectors;
         return this;
@@ -29,9 +30,11 @@ public class DeviceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DeviceGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeviceGroup(){}
 }

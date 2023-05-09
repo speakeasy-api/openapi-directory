@@ -18,6 +18,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Campaigns")
     public String[] campaigns;
+
     public GetPromotions withCampaigns(String[] campaigns) {
         this.campaigns = campaigns;
         return this;
@@ -29,6 +30,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activateGiftsMultiplier")
     public Boolean activateGiftsMultiplier;
+
     public GetPromotions withActivateGiftsMultiplier(Boolean activateGiftsMultiplier) {
         this.activateGiftsMultiplier = activateGiftsMultiplier;
         return this;
@@ -40,6 +42,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("areSalesChannelIdsExclusive")
     public Boolean areSalesChannelIdsExclusive;
+
     public GetPromotions withAreSalesChannelIdsExclusive(Boolean areSalesChannelIdsExclusive) {
         this.areSalesChannelIdsExclusive = areSalesChannelIdsExclusive;
         return this;
@@ -51,6 +54,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beginDate")
     public String beginDate;
+
     public GetPromotions withBeginDate(String beginDate) {
         this.beginDate = beginDate;
         return this;
@@ -62,6 +66,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetPromotions withDescription(String description) {
         this.description = description;
         return this;
@@ -73,6 +78,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public GetPromotions withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -84,6 +90,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMaxPricePerItem")
     public Boolean hasMaxPricePerItem;
+
     public GetPromotions withHasMaxPricePerItem(Boolean hasMaxPricePerItem) {
         this.hasMaxPricePerItem = hasMaxPricePerItem;
         return this;
@@ -95,6 +102,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idCalculatorConfiguration")
     public String idCalculatorConfiguration;
+
     public GetPromotions withIdCalculatorConfiguration(String idCalculatorConfiguration) {
         this.idCalculatorConfiguration = idCalculatorConfiguration;
         return this;
@@ -106,6 +114,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idsSalesChannel")
     public String[] idsSalesChannel;
+
     public GetPromotions withIdsSalesChannel(String[] idsSalesChannel) {
         this.idsSalesChannel = idsSalesChannel;
         return this;
@@ -117,6 +126,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public GetPromotions withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -128,6 +138,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isArchived")
     public Boolean isArchived;
+
     public GetPromotions withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -139,6 +150,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTax")
     public Boolean isTax;
+
     public GetPromotions withIsTax(Boolean isTax) {
         this.isTax = isTax;
         return this;
@@ -150,6 +162,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedUtc")
     public String lastModifiedUtc;
+
     public GetPromotions withLastModifiedUtc(String lastModifiedUtc) {
         this.lastModifiedUtc = lastModifiedUtc;
         return this;
@@ -161,6 +174,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUsage")
     public Double maxUsage;
+
     public GetPromotions withMaxUsage(Double maxUsage) {
         this.maxUsage = maxUsage;
         return this;
@@ -172,6 +186,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetPromotions withName(String name) {
         this.name = name;
         return this;
@@ -183,6 +198,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualTax")
     public Double percentualTax;
+
     public GetPromotions withPercentualTax(Double percentualTax) {
         this.percentualTax = percentualTax;
         return this;
@@ -194,6 +210,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public GetPromotionsScope scope;
+
     public GetPromotions withScope(GetPromotionsScope scope) {
         this.scope = scope;
         return this;
@@ -205,6 +222,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetPromotions withStatus(String status) {
         this.status = status;
         return this;
@@ -216,6 +234,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetPromotions withType(String type) {
         this.type = type;
         return this;
@@ -227,6 +246,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmCampain")
     public String utmCampain;
+
     public GetPromotions withUtmCampain(String utmCampain) {
         this.utmCampain = utmCampain;
         return this;
@@ -238,6 +258,7 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmSource")
     public String utmSource;
+
     public GetPromotions withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
@@ -249,9 +270,11 @@ public class GetPromotions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmiCampaign")
     public String utmiCampaign;
+
     public GetPromotions withUtmiCampaign(String utmiCampaign) {
         this.utmiCampaign = utmiCampaign;
         return this;
     }
     
+    public GetPromotions(){}
 }

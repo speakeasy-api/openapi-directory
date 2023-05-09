@@ -18,6 +18,7 @@ public class AddRolesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerNetwork")
     public String consumerNetwork;
+
     public AddRolesRequest withConsumerNetwork(String consumerNetwork) {
         this.consumerNetwork = consumerNetwork;
         return this;
@@ -29,9 +30,11 @@ public class AddRolesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyBinding")
     public PolicyBinding[] policyBinding;
+
     public AddRolesRequest withPolicyBinding(PolicyBinding[] policyBinding) {
         this.policyBinding = policyBinding;
         return this;
     }
     
+    public AddRolesRequest(){}
 }

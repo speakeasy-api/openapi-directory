@@ -18,6 +18,7 @@ public class ResourceAllocationUpdateModel {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public ResourceAllocationUpdateModel withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -26,6 +27,7 @@ public class ResourceAllocationUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public Integer endTime;
+
     public ResourceAllocationUpdateModel withEndTime(Integer endTime) {
         this.endTime = endTime;
         return this;
@@ -34,6 +36,7 @@ public class ResourceAllocationUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ResourceAllocationUpdateModel withReason(String reason) {
         this.reason = reason;
         return this;
@@ -42,6 +45,7 @@ public class ResourceAllocationUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeat")
     public RepeatInputModel repeat;
+
     public ResourceAllocationUpdateModel withRepeat(RepeatInputModel repeat) {
         this.repeat = repeat;
         return this;
@@ -50,6 +54,7 @@ public class ResourceAllocationUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeats")
     public Boolean repeats;
+
     public ResourceAllocationUpdateModel withRepeats(Boolean repeats) {
         this.repeats = repeats;
         return this;
@@ -59,6 +64,7 @@ public class ResourceAllocationUpdateModel {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public ResourceAllocationUpdateModel withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -67,9 +73,11 @@ public class ResourceAllocationUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public Integer startTime;
+
     public ResourceAllocationUpdateModel withStartTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ResourceAllocationUpdateModel(){}
 }

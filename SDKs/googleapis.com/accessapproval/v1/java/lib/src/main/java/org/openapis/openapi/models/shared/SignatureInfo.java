@@ -18,6 +18,7 @@ public class SignatureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerKmsKeyVersion")
     public String customerKmsKeyVersion;
+
     public SignatureInfo withCustomerKmsKeyVersion(String customerKmsKeyVersion) {
         this.customerKmsKeyVersion = customerKmsKeyVersion;
         return this;
@@ -29,6 +30,7 @@ public class SignatureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googlePublicKeyPem")
     public String googlePublicKeyPem;
+
     public SignatureInfo withGooglePublicKeyPem(String googlePublicKeyPem) {
         this.googlePublicKeyPem = googlePublicKeyPem;
         return this;
@@ -40,9 +42,11 @@ public class SignatureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signature")
     public String signature;
+
     public SignatureInfo withSignature(String signature) {
         this.signature = signature;
         return this;
     }
     
+    public SignatureInfo(){}
 }

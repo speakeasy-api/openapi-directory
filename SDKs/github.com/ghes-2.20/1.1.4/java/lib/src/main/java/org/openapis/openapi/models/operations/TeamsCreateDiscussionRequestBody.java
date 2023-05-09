@@ -14,6 +14,7 @@ public class TeamsCreateDiscussionRequestBody {
      */
     @JsonProperty("body")
     public String body;
+
     public TeamsCreateDiscussionRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -25,6 +26,7 @@ public class TeamsCreateDiscussionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private")
     public Boolean private_;
+
     public TeamsCreateDiscussionRequestBody withPrivate(Boolean private_) {
         this.private_ = private_;
         return this;
@@ -35,9 +37,14 @@ public class TeamsCreateDiscussionRequestBody {
      */
     @JsonProperty("title")
     public String title;
+
     public TeamsCreateDiscussionRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public TeamsCreateDiscussionRequestBody(@JsonProperty("body") String body, @JsonProperty("title") String title) {
+        this.body = body;
+        this.title = title;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDatasetImportJobRequest {
     @JsonProperty("dataSource")
     public DataSource dataSource;
+
     public CreateDatasetImportJobRequest withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -18,6 +19,7 @@ public class CreateDatasetImportJobRequest {
     
     @JsonProperty("datasetArn")
     public String datasetArn;
+
     public CreateDatasetImportJobRequest withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
@@ -26,6 +28,7 @@ public class CreateDatasetImportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importMode")
     public ImportModeEnum importMode;
+
     public CreateDatasetImportJobRequest withImportMode(ImportModeEnum importMode) {
         this.importMode = importMode;
         return this;
@@ -33,6 +36,7 @@ public class CreateDatasetImportJobRequest {
     
     @JsonProperty("jobName")
     public String jobName;
+
     public CreateDatasetImportJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -41,6 +45,7 @@ public class CreateDatasetImportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishAttributionMetricsToS3")
     public Boolean publishAttributionMetricsToS3;
+
     public CreateDatasetImportJobRequest withPublishAttributionMetricsToS3(Boolean publishAttributionMetricsToS3) {
         this.publishAttributionMetricsToS3 = publishAttributionMetricsToS3;
         return this;
@@ -48,6 +53,7 @@ public class CreateDatasetImportJobRequest {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateDatasetImportJobRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -56,9 +62,16 @@ public class CreateDatasetImportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateDatasetImportJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDatasetImportJobRequest(@JsonProperty("dataSource") DataSource dataSource, @JsonProperty("datasetArn") String datasetArn, @JsonProperty("jobName") String jobName, @JsonProperty("roleArn") String roleArn) {
+        this.dataSource = dataSource;
+        this.datasetArn = datasetArn;
+        this.jobName = jobName;
+        this.roleArn = roleArn;
+  }
 }

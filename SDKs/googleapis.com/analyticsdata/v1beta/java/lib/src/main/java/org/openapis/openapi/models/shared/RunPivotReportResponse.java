@@ -18,6 +18,7 @@ public class RunPivotReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregates")
     public Row[] aggregates;
+
     public RunPivotReportResponse withAggregates(Row[] aggregates) {
         this.aggregates = aggregates;
         return this;
@@ -29,6 +30,7 @@ public class RunPivotReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionHeaders")
     public DimensionHeader[] dimensionHeaders;
+
     public RunPivotReportResponse withDimensionHeaders(DimensionHeader[] dimensionHeaders) {
         this.dimensionHeaders = dimensionHeaders;
         return this;
@@ -40,6 +42,7 @@ public class RunPivotReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RunPivotReportResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class RunPivotReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ResponseMetaData metadata;
+
     public RunPivotReportResponse withMetadata(ResponseMetaData metadata) {
         this.metadata = metadata;
         return this;
@@ -62,6 +66,7 @@ public class RunPivotReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricHeaders")
     public MetricHeader[] metricHeaders;
+
     public RunPivotReportResponse withMetricHeaders(MetricHeader[] metricHeaders) {
         this.metricHeaders = metricHeaders;
         return this;
@@ -73,6 +78,7 @@ public class RunPivotReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pivotHeaders")
     public PivotHeader[] pivotHeaders;
+
     public RunPivotReportResponse withPivotHeaders(PivotHeader[] pivotHeaders) {
         this.pivotHeaders = pivotHeaders;
         return this;
@@ -84,6 +90,7 @@ public class RunPivotReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyQuota")
     public PropertyQuota propertyQuota;
+
     public RunPivotReportResponse withPropertyQuota(PropertyQuota propertyQuota) {
         this.propertyQuota = propertyQuota;
         return this;
@@ -95,9 +102,11 @@ public class RunPivotReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public Row[] rows;
+
     public RunPivotReportResponse withRows(Row[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public RunPivotReportResponse(){}
 }

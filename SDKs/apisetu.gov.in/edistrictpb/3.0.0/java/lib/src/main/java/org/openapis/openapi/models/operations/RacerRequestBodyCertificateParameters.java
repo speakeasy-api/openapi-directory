@@ -12,6 +12,7 @@ public class RacerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public RacerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,9 +23,14 @@ public class RacerRequestBodyCertificateParameters {
      */
     @JsonProperty("DSN")
     public String dsn;
+
     public RacerRequestBodyCertificateParameters withDsn(String dsn) {
         this.dsn = dsn;
         return this;
     }
     
+    public RacerRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("DSN") String dsn) {
+        this.dob = dob;
+        this.dsn = dsn;
+  }
 }

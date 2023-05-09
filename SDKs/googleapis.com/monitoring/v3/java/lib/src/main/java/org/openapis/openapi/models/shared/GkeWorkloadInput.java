@@ -18,6 +18,7 @@ public class GkeWorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterName")
     public String clusterName;
+
     public GkeWorkloadInput withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -29,6 +30,7 @@ public class GkeWorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GkeWorkloadInput withLocation(String location) {
         this.location = location;
         return this;
@@ -40,6 +42,7 @@ public class GkeWorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public GkeWorkloadInput withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -51,6 +54,7 @@ public class GkeWorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topLevelControllerName")
     public String topLevelControllerName;
+
     public GkeWorkloadInput withTopLevelControllerName(String topLevelControllerName) {
         this.topLevelControllerName = topLevelControllerName;
         return this;
@@ -62,9 +66,11 @@ public class GkeWorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topLevelControllerType")
     public String topLevelControllerType;
+
     public GkeWorkloadInput withTopLevelControllerType(String topLevelControllerType) {
         this.topLevelControllerType = topLevelControllerType;
         return this;
     }
     
+    public GkeWorkloadInput(){}
 }

@@ -18,6 +18,7 @@ public class PostLoadBalancersIdActionsUpdateServiceLoadBalancerServiceLoadBalan
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificates")
     public Long[] certificates;
+
     public PostLoadBalancersIdActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHTTP withCertificates(Long[] certificates) {
         this.certificates = certificates;
         return this;
@@ -29,6 +30,7 @@ public class PostLoadBalancersIdActionsUpdateServiceLoadBalancerServiceLoadBalan
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookie_lifetime")
     public Long cookieLifetime;
+
     public PostLoadBalancersIdActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHTTP withCookieLifetime(Long cookieLifetime) {
         this.cookieLifetime = cookieLifetime;
         return this;
@@ -40,6 +42,7 @@ public class PostLoadBalancersIdActionsUpdateServiceLoadBalancerServiceLoadBalan
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookie_name")
     public String cookieName;
+
     public PostLoadBalancersIdActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHTTP withCookieName(String cookieName) {
         this.cookieName = cookieName;
         return this;
@@ -51,6 +54,7 @@ public class PostLoadBalancersIdActionsUpdateServiceLoadBalancerServiceLoadBalan
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirect_http")
     public Boolean redirectHttp;
+
     public PostLoadBalancersIdActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHTTP withRedirectHttp(Boolean redirectHttp) {
         this.redirectHttp = redirectHttp;
         return this;
@@ -62,9 +66,11 @@ public class PostLoadBalancersIdActionsUpdateServiceLoadBalancerServiceLoadBalan
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sticky_sessions")
     public Boolean stickySessions;
+
     public PostLoadBalancersIdActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHTTP withStickySessions(Boolean stickySessions) {
         this.stickySessions = stickySessions;
         return this;
     }
     
+    public PostLoadBalancersIdActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHTTP(){}
 }

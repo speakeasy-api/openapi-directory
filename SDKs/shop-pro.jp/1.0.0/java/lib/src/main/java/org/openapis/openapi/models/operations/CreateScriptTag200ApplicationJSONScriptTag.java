@@ -21,6 +21,7 @@ public class CreateScriptTag200ApplicationJSONScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_scope")
     public CreateScriptTag200ApplicationJSONScriptTagDisplayScopeEnum displayScope;
+
     public CreateScriptTag200ApplicationJSONScriptTag withDisplayScope(CreateScriptTag200ApplicationJSONScriptTagDisplayScopeEnum displayScope) {
         this.displayScope = displayScope;
         return this;
@@ -32,6 +33,7 @@ public class CreateScriptTag200ApplicationJSONScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CreateScriptTag200ApplicationJSONScriptTag withId(Long id) {
         this.id = id;
         return this;
@@ -43,6 +45,7 @@ public class CreateScriptTag200ApplicationJSONScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("make_date")
     public Long makeDate;
+
     public CreateScriptTag200ApplicationJSONScriptTag withMakeDate(Long makeDate) {
         this.makeDate = makeDate;
         return this;
@@ -54,6 +57,7 @@ public class CreateScriptTag200ApplicationJSONScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("src")
     public String src;
+
     public CreateScriptTag200ApplicationJSONScriptTag withSrc(String src) {
         this.src = src;
         return this;
@@ -65,9 +69,11 @@ public class CreateScriptTag200ApplicationJSONScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update_date")
     public Long updateDate;
+
     public CreateScriptTag200ApplicationJSONScriptTag withUpdateDate(Long updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public CreateScriptTag200ApplicationJSONScriptTag(){}
 }

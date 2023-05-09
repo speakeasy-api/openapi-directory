@@ -12,6 +12,7 @@ public class ListActionExecutionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ActionExecutionFilter filter;
+
     public ListActionExecutionsInput withFilter(ActionExecutionFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListActionExecutionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListActionExecutionsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListActionExecutionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListActionExecutionsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class ListActionExecutionsInput {
     
     @JsonProperty("pipelineName")
     public String pipelineName;
+
     public ListActionExecutionsInput withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
     }
     
+    public ListActionExecutionsInput(@JsonProperty("pipelineName") String pipelineName) {
+        this.pipelineName = pipelineName;
+  }
 }

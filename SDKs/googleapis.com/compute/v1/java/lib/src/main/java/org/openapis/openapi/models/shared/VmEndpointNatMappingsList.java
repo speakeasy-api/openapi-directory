@@ -18,6 +18,7 @@ public class VmEndpointNatMappingsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public VmEndpointNatMappingsList withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class VmEndpointNatMappingsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public VmEndpointNatMappingsList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class VmEndpointNatMappingsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public VmEndpointNatMappingsList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -51,6 +54,7 @@ public class VmEndpointNatMappingsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public VmEndpointNatMappings[] result;
+
     public VmEndpointNatMappingsList withResult(VmEndpointNatMappings[] result) {
         this.result = result;
         return this;
@@ -62,6 +66,7 @@ public class VmEndpointNatMappingsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public VmEndpointNatMappingsList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -73,9 +78,11 @@ public class VmEndpointNatMappingsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public VmEndpointNatMappingsListWarning warning;
+
     public VmEndpointNatMappingsList withWarning(VmEndpointNatMappingsListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public VmEndpointNatMappingsList(){}
 }

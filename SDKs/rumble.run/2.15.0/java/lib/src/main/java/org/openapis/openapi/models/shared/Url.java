@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class Url {
     
     public String id;
+
     public Url withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Url(){}
 }

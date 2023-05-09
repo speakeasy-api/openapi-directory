@@ -18,6 +18,7 @@ public class VolumeSnapshotInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public VolumeSnapshotInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class VolumeSnapshotInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VolumeSnapshotInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public VolumeSnapshotInput(){}
 }

@@ -15,6 +15,7 @@ public class UpdateClusterConfigRequestBodyResourcesVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointPrivateAccess")
     public Boolean endpointPrivateAccess;
+
     public UpdateClusterConfigRequestBodyResourcesVpcConfig withEndpointPrivateAccess(Boolean endpointPrivateAccess) {
         this.endpointPrivateAccess = endpointPrivateAccess;
         return this;
@@ -23,6 +24,7 @@ public class UpdateClusterConfigRequestBodyResourcesVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointPublicAccess")
     public Boolean endpointPublicAccess;
+
     public UpdateClusterConfigRequestBodyResourcesVpcConfig withEndpointPublicAccess(Boolean endpointPublicAccess) {
         this.endpointPublicAccess = endpointPublicAccess;
         return this;
@@ -31,6 +33,7 @@ public class UpdateClusterConfigRequestBodyResourcesVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicAccessCidrs")
     public String[] publicAccessCidrs;
+
     public UpdateClusterConfigRequestBodyResourcesVpcConfig withPublicAccessCidrs(String[] publicAccessCidrs) {
         this.publicAccessCidrs = publicAccessCidrs;
         return this;
@@ -39,6 +42,7 @@ public class UpdateClusterConfigRequestBodyResourcesVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public UpdateClusterConfigRequestBodyResourcesVpcConfig withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -47,9 +51,11 @@ public class UpdateClusterConfigRequestBodyResourcesVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public UpdateClusterConfigRequestBodyResourcesVpcConfig withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public UpdateClusterConfigRequestBodyResourcesVpcConfig(){}
 }

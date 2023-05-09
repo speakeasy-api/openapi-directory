@@ -16,32 +16,31 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetYearMonthJsonRequest;
 import org.openapis.openapi.models.operations.GetYearMonthJsonResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apikey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetYearMonthJsonRequest req = new GetYearMonthJsonRequest() {{
-                month = 548814;
-                year = 592845;
-            }}            
+            GetYearMonthJsonRequest req = new GetYearMonthJsonRequest(592845, 715190);            
 
             GetYearMonthJsonResponse res = sdk.archive.getYearMonthJson(req);
 
-            if (res.getYearMonthJSON200ApplicationJSONObject.isPresent()) {
+            if (res.getYearMonthJSON200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -49,9 +48,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### archive
+### [archive](docs/archive/README.md)
 
-* `getYearMonthJson` - Archive API
+* [getYearMonthJson](docs/archive/README.md#getyearmonthjson) - Archive API
 <!-- End SDK Available Operations -->
 
 ### Maturity

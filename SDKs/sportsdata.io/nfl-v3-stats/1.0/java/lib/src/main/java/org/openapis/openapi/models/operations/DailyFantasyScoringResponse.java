@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DailyFantasyScoringResponse {
     
     public String contentType;
+
     public DailyFantasyScoringResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DailyFantasyScoringResponse {
     
     
     public org.openapis.openapi.models.shared.DailyFantasyScoring[] dailyFantasyScorings;
+
     public DailyFantasyScoringResponse withDailyFantasyScorings(org.openapis.openapi.models.shared.DailyFantasyScoring[] dailyFantasyScorings) {
         this.dailyFantasyScorings = dailyFantasyScorings;
         return this;
@@ -23,6 +26,7 @@ public class DailyFantasyScoringResponse {
     
     
     public Integer statusCode;
+
     public DailyFantasyScoringResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class DailyFantasyScoringResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DailyFantasyScoringResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DailyFantasyScoringResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

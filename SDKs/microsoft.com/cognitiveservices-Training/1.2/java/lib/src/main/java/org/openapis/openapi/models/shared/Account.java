@@ -18,6 +18,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public Account withEmail(String email) {
         this.email = email;
         return this;
@@ -26,6 +27,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keys")
     public ApiKeys keys;
+
     public Account withKeys(ApiKeys keys) {
         this.keys = keys;
         return this;
@@ -37,6 +39,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quotas")
     public AccountQuota quotas;
+
     public Account withQuotas(AccountQuota quotas) {
         this.quotas = quotas;
         return this;
@@ -48,9 +51,11 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public Account withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public Account(){}
 }

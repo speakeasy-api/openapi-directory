@@ -16,12 +16,11 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsCreateRequest;
 import org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsCreateResponse;
-import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.AccountTypeEnum;
 import org.openapis.openapi.models.shared.AccountInput;
+import org.openapis.openapi.models.shared.AccountTypeEnum;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.OrganizationInfoInput;
 import org.openapis.openapi.models.shared.PostalAddress;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -33,56 +32,60 @@ public class Application {
                 .build();
 
             MybusinessaccountmanagementAccountsCreateRequest req = new MybusinessaccountmanagementAccountsCreateRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accountInput = new AccountInput() {{
                     accountName = "provident";
-                    name = "distinctio";
+                    name = "Ellis Mitchell";
                     organizationInfo = new OrganizationInfoInput() {{
                         address = new PostalAddress() {{
                             addressLines = new String[]{{
-                                add("unde"),
-                                add("nulla"),
-                                add("corrupti"),
-                                add("illum"),
+                                add("vel"),
+                                add("error"),
+                                add("deserunt"),
+                                add("suscipit"),
                             }};
-                            administrativeArea = "vel";
-                            languageCode = "error";
-                            locality = "deserunt";
-                            organization = "suscipit";
-                            postalCode = "28092";
+                            administrativeArea = "iure";
+                            languageCode = "magnam";
+                            locality = "debitis";
+                            organization = "ipsa";
+                            postalCode = "23478-5453";
                             recipients = new String[]{{
-                                add("molestiae"),
-                                add("minus"),
+                                add("temporibus"),
+                                add("ab"),
+                                add("quis"),
+                                add("veritatis"),
                             }};
-                            regionCode = "placeat";
-                            revision = 528895;
-                            sortingCode = "iusto";
-                            sublocality = "excepturi";
-                        }};
-                    }};
-                    primaryOwner = "nisi";
-                    type = "ORGANIZATION";
-                }};
-                accessToken = "temporibus";
-                alt = "json";
-                callback = "quis";
-                fields = "veritatis";
-                key = "deserunt";
-                oauthToken = "perferendis";
+                            regionCode = "deserunt";
+                            revision = 20218;
+                            sortingCode = "ipsam";
+                            sublocality = "repellendus";
+                        }};;
+                    }};;
+                    primaryOwner = "sapiente";
+                    type = AccountTypeEnum.USER_GROUP;
+                }};;
+                accessToken = "odit";
+                alt = AltEnum.PROTO;
+                callback = "at";
+                fields = "maiores";
+                key = "molestiae";
+                oauthToken = "quod";
                 prettyPrint = false;
-                quotaUser = "ipsam";
-                uploadType = "repellendus";
-                uploadProtocol = "sapiente";
-            }}            
+                quotaUser = "quod";
+                uploadType = "esse";
+                uploadProtocol = "totam";
+            }};            
 
             MybusinessaccountmanagementAccountsCreateResponse res = sdk.accounts.mybusinessaccountmanagementAccountsCreate(req);
 
-            if (res.account.isPresent()) {
+            if (res.account != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -90,22 +93,22 @@ public class Application {
 ## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `mybusinessaccountmanagementAccountsCreate` - Creates an account with the specified name and type under the given parent. - Personal accounts and Organizations cannot be created. - User Groups cannot be created with a Personal account as primary owner. - Location Groups cannot be created with a primary owner of a Personal account if the Personal account is in an Organization. - Location Groups cannot own Location Groups.
-* `mybusinessaccountmanagementAccountsGet` - Gets the specified account. Returns `NOT_FOUND` if the account does not exist or if the caller does not have access rights to it.
-* `mybusinessaccountmanagementAccountsInvitationsAccept` - Accepts the specified invitation.
-* `mybusinessaccountmanagementAccountsInvitationsDecline` - Declines the specified invitation.
-* `mybusinessaccountmanagementAccountsInvitationsList` - Lists pending invitations for the specified account.
-* `mybusinessaccountmanagementAccountsList` - Lists all of the accounts for the authenticated user. This includes all accounts that the user owns, as well as any accounts for which the user has management rights.
+* [mybusinessaccountmanagementAccountsCreate](docs/accounts/README.md#mybusinessaccountmanagementaccountscreate) - Creates an account with the specified name and type under the given parent. - Personal accounts and Organizations cannot be created. - User Groups cannot be created with a Personal account as primary owner. - Location Groups cannot be created with a primary owner of a Personal account if the Personal account is in an Organization. - Location Groups cannot own Location Groups.
+* [mybusinessaccountmanagementAccountsGet](docs/accounts/README.md#mybusinessaccountmanagementaccountsget) - Gets the specified account. Returns `NOT_FOUND` if the account does not exist or if the caller does not have access rights to it.
+* [mybusinessaccountmanagementAccountsInvitationsAccept](docs/accounts/README.md#mybusinessaccountmanagementaccountsinvitationsaccept) - Accepts the specified invitation.
+* [mybusinessaccountmanagementAccountsInvitationsDecline](docs/accounts/README.md#mybusinessaccountmanagementaccountsinvitationsdecline) - Declines the specified invitation.
+* [mybusinessaccountmanagementAccountsInvitationsList](docs/accounts/README.md#mybusinessaccountmanagementaccountsinvitationslist) - Lists pending invitations for the specified account.
+* [mybusinessaccountmanagementAccountsList](docs/accounts/README.md#mybusinessaccountmanagementaccountslist) - Lists all of the accounts for the authenticated user. This includes all accounts that the user owns, as well as any accounts for which the user has management rights.
 
-### locations
+### [locations](docs/locations/README.md)
 
-* `mybusinessaccountmanagementLocationsAdminsCreate` - Invites the specified user to become an administrator for the specified location. The invitee must accept the invitation in order to be granted access to the location. See AcceptInvitation to programmatically accept an invitation.
-* `mybusinessaccountmanagementLocationsAdminsDelete` - Removes the specified admin as a manager of the specified location.
-* `mybusinessaccountmanagementLocationsAdminsList` - Lists all of the admins for the specified location.
-* `mybusinessaccountmanagementLocationsAdminsPatch` - Updates the Admin for the specified location. Only the AdminRole of the Admin can be updated.
-* `mybusinessaccountmanagementLocationsTransfer` - Moves a location from an account that the user owns to another account that the same user administers. The user must be an owner of the account the location is currently associated with and must also be at least a manager of the destination account.
+* [mybusinessaccountmanagementLocationsAdminsCreate](docs/locations/README.md#mybusinessaccountmanagementlocationsadminscreate) - Invites the specified user to become an administrator for the specified location. The invitee must accept the invitation in order to be granted access to the location. See AcceptInvitation to programmatically accept an invitation.
+* [mybusinessaccountmanagementLocationsAdminsDelete](docs/locations/README.md#mybusinessaccountmanagementlocationsadminsdelete) - Removes the specified admin as a manager of the specified location.
+* [mybusinessaccountmanagementLocationsAdminsList](docs/locations/README.md#mybusinessaccountmanagementlocationsadminslist) - Lists all of the admins for the specified location.
+* [mybusinessaccountmanagementLocationsAdminsPatch](docs/locations/README.md#mybusinessaccountmanagementlocationsadminspatch) - Updates the Admin for the specified location. Only the AdminRole of the Admin can be updated.
+* [mybusinessaccountmanagementLocationsTransfer](docs/locations/README.md#mybusinessaccountmanagementlocationstransfer) - Moves a location from an account that the user owns to another account that the same user administers. The user must be an owner of the account the location is currently associated with and must also be at least a manager of the destination account.
 <!-- End SDK Available Operations -->
 
 ### Maturity

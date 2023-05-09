@@ -16,6 +16,7 @@ public class PointPointDailyStatsTemperatureData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avg")
     public Double avg;
+
     public PointPointDailyStatsTemperatureData withAvg(Double avg) {
         this.avg = avg;
         return this;
@@ -28,6 +29,7 @@ public class PointPointDailyStatsTemperatureData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avg_max")
     public Double avgMax;
+
     public PointPointDailyStatsTemperatureData withAvgMax(Double avgMax) {
         this.avgMax = avgMax;
         return this;
@@ -40,6 +42,7 @@ public class PointPointDailyStatsTemperatureData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avg_min")
     public Double avgMin;
+
     public PointPointDailyStatsTemperatureData withAvgMin(Double avgMin) {
         this.avgMin = avgMin;
         return this;
@@ -52,6 +55,7 @@ public class PointPointDailyStatsTemperatureData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("record_max")
     public Double recordMax;
+
     public PointPointDailyStatsTemperatureData withRecordMax(Double recordMax) {
         this.recordMax = recordMax;
         return this;
@@ -64,9 +68,11 @@ public class PointPointDailyStatsTemperatureData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("record_min")
     public Double recordMin;
+
     public PointPointDailyStatsTemperatureData withRecordMin(Double recordMin) {
         this.recordMin = recordMin;
         return this;
     }
     
+    public PointPointDailyStatsTemperatureData(){}
 }

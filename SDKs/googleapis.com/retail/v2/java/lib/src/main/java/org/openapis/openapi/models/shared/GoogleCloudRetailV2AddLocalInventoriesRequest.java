@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2AddLocalInventoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addMask")
     public String addMask;
+
     public GoogleCloudRetailV2AddLocalInventoriesRequest withAddMask(String addMask) {
         this.addMask = addMask;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2AddLocalInventoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addTime")
     public String addTime;
+
     public GoogleCloudRetailV2AddLocalInventoriesRequest withAddTime(String addTime) {
         this.addTime = addTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2AddLocalInventoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowMissing")
     public Boolean allowMissing;
+
     public GoogleCloudRetailV2AddLocalInventoriesRequest withAllowMissing(Boolean allowMissing) {
         this.allowMissing = allowMissing;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudRetailV2AddLocalInventoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localInventories")
     public GoogleCloudRetailV2LocalInventory[] localInventories;
+
     public GoogleCloudRetailV2AddLocalInventoriesRequest withLocalInventories(GoogleCloudRetailV2LocalInventory[] localInventories) {
         this.localInventories = localInventories;
         return this;
     }
     
+    public GoogleCloudRetailV2AddLocalInventoriesRequest(){}
 }

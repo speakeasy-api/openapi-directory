@@ -18,9 +18,11 @@ public class DevicesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public Device[] device;
+
     public DevicesListResponse withDevice(Device[] device) {
         this.device = device;
         return this;
     }
     
+    public DevicesListResponse(){}
 }

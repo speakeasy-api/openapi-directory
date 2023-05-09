@@ -18,6 +18,7 @@ public class PostScrobbleShowsRequestBody {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("airdate")
     public LocalDate airdate;
+
     public PostScrobbleShowsRequestBody withAirdate(LocalDate airdate) {
         this.airdate = airdate;
         return this;
@@ -29,6 +30,7 @@ public class PostScrobbleShowsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("episode")
     public Long episode;
+
     public PostScrobbleShowsRequestBody withEpisode(Long episode) {
         this.episode = episode;
         return this;
@@ -40,6 +42,7 @@ public class PostScrobbleShowsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marked_at")
     public Long markedAt;
+
     public PostScrobbleShowsRequestBody withMarkedAt(Long markedAt) {
         this.markedAt = markedAt;
         return this;
@@ -51,6 +54,7 @@ public class PostScrobbleShowsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("season")
     public Long season;
+
     public PostScrobbleShowsRequestBody withSeason(Long season) {
         this.season = season;
         return this;
@@ -62,9 +66,11 @@ public class PostScrobbleShowsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Object type;
+
     public PostScrobbleShowsRequestBody withType(Object type) {
         this.type = type;
         return this;
     }
     
+    public PostScrobbleShowsRequestBody(){}
 }

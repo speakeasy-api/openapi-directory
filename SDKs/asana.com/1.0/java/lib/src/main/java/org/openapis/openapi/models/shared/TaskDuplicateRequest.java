@@ -15,6 +15,7 @@ public class TaskDuplicateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include")
     public TaskDuplicateRequestIncludeEnum include;
+
     public TaskDuplicateRequest withInclude(TaskDuplicateRequestIncludeEnum include) {
         this.include = include;
         return this;
@@ -26,9 +27,11 @@ public class TaskDuplicateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TaskDuplicateRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TaskDuplicateRequest(){}
 }

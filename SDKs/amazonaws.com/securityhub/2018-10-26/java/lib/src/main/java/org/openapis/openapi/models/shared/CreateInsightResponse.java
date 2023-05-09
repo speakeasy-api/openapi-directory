@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateInsightResponse {
     @JsonProperty("InsightArn")
     public String insightArn;
+
     public CreateInsightResponse withInsightArn(String insightArn) {
         this.insightArn = insightArn;
         return this;
     }
     
+    public CreateInsightResponse(@JsonProperty("InsightArn") String insightArn) {
+        this.insightArn = insightArn;
+  }
 }

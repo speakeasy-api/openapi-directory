@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeOrderV3Request {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, String> requestBody;
+
     public ChangeOrderV3Request withRequestBody(java.util.Map<String, String> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class ChangeOrderV3Request {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public Integer accountId;
+
     public ChangeOrderV3Request withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -26,6 +29,7 @@ public class ChangeOrderV3Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderId")
     public String beezUPOrderId;
+
     public ChangeOrderV3Request withBeezUPOrderId(String beezUPOrderId) {
         this.beezUPOrderId = beezUPOrderId;
         return this;
@@ -36,6 +40,7 @@ public class ChangeOrderV3Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=changeOrderType")
     public String changeOrderType;
+
     public ChangeOrderV3Request withChangeOrderType(String changeOrderType) {
         this.changeOrderType = changeOrderType;
         return this;
@@ -46,6 +51,7 @@ public class ChangeOrderV3Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public ChangeOrderV3Request withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
@@ -56,6 +62,7 @@ public class ChangeOrderV3Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=testMode")
     public Boolean testMode;
+
     public ChangeOrderV3Request withTestMode(Boolean testMode) {
         this.testMode = testMode;
         return this;
@@ -66,9 +73,17 @@ public class ChangeOrderV3Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
     public String userName;
+
     public ChangeOrderV3Request withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ChangeOrderV3Request(@JsonProperty("accountId") Integer accountId, @JsonProperty("beezUPOrderId") String beezUPOrderId, @JsonProperty("changeOrderType") String changeOrderType, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode, @JsonProperty("userName") String userName) {
+        this.accountId = accountId;
+        this.beezUPOrderId = beezUPOrderId;
+        this.changeOrderType = changeOrderType;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        this.userName = userName;
+  }
 }

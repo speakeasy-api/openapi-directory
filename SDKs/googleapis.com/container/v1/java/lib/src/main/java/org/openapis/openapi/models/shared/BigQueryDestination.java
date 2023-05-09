@@ -18,9 +18,11 @@ public class BigQueryDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetId")
     public String datasetId;
+
     public BigQueryDestination withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
     }
     
+    public BigQueryDestination(){}
 }

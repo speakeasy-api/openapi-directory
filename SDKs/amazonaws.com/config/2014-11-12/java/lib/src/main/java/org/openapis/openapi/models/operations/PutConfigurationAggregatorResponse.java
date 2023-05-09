@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutConfigurationAggregatorResponse {
     
     public String contentType;
+
     public PutConfigurationAggregatorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutConfigurationAggregatorResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutConfigurationAggregatorResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class PutConfigurationAggregatorResponse {
      */
     
     public Object invalidRoleException;
+
     public PutConfigurationAggregatorResponse withInvalidRoleException(Object invalidRoleException) {
         this.invalidRoleException = invalidRoleException;
         return this;
@@ -39,6 +43,7 @@ public class PutConfigurationAggregatorResponse {
      */
     
     public Object limitExceededException;
+
     public PutConfigurationAggregatorResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class PutConfigurationAggregatorResponse {
      */
     
     public Object noAvailableOrganizationException;
+
     public PutConfigurationAggregatorResponse withNoAvailableOrganizationException(Object noAvailableOrganizationException) {
         this.noAvailableOrganizationException = noAvailableOrganizationException;
         return this;
@@ -59,6 +65,7 @@ public class PutConfigurationAggregatorResponse {
      */
     
     public Object organizationAccessDeniedException;
+
     public PutConfigurationAggregatorResponse withOrganizationAccessDeniedException(Object organizationAccessDeniedException) {
         this.organizationAccessDeniedException = organizationAccessDeniedException;
         return this;
@@ -69,6 +76,7 @@ public class PutConfigurationAggregatorResponse {
      */
     
     public Object organizationAllFeaturesNotEnabledException;
+
     public PutConfigurationAggregatorResponse withOrganizationAllFeaturesNotEnabledException(Object organizationAllFeaturesNotEnabledException) {
         this.organizationAllFeaturesNotEnabledException = organizationAllFeaturesNotEnabledException;
         return this;
@@ -79,6 +87,7 @@ public class PutConfigurationAggregatorResponse {
      */
     
     public org.openapis.openapi.models.shared.PutConfigurationAggregatorResponse putConfigurationAggregatorResponse;
+
     public PutConfigurationAggregatorResponse withPutConfigurationAggregatorResponse(org.openapis.openapi.models.shared.PutConfigurationAggregatorResponse putConfigurationAggregatorResponse) {
         this.putConfigurationAggregatorResponse = putConfigurationAggregatorResponse;
         return this;
@@ -86,6 +95,7 @@ public class PutConfigurationAggregatorResponse {
     
     
     public Integer statusCode;
+
     public PutConfigurationAggregatorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class PutConfigurationAggregatorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutConfigurationAggregatorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutConfigurationAggregatorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class DeleteStreamingImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingImage")
     public StreamingImage streamingImage;
+
     public DeleteStreamingImageResponse withStreamingImage(StreamingImage streamingImage) {
         this.streamingImage = streamingImage;
         return this;
     }
     
+    public DeleteStreamingImageResponse(){}
 }

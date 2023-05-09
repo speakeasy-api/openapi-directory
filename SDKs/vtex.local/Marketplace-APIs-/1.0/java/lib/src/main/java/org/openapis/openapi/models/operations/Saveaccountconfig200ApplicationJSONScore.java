@@ -18,6 +18,7 @@ public class Saveaccountconfig200ApplicationJSONScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Approve")
     public Long approve;
+
     public Saveaccountconfig200ApplicationJSONScore withApprove(Long approve) {
         this.approve = approve;
         return this;
@@ -29,9 +30,11 @@ public class Saveaccountconfig200ApplicationJSONScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reject")
     public Long reject;
+
     public Saveaccountconfig200ApplicationJSONScore withReject(Long reject) {
         this.reject = reject;
         return this;
     }
     
+    public Saveaccountconfig200ApplicationJSONScore(){}
 }

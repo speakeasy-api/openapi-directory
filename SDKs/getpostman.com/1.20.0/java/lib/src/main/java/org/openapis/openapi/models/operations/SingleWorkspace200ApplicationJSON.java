@@ -15,9 +15,11 @@ public class SingleWorkspace200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace")
     public SingleWorkspace200ApplicationJSONWorkspace workspace;
+
     public SingleWorkspace200ApplicationJSON withWorkspace(SingleWorkspace200ApplicationJSONWorkspace workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public SingleWorkspace200ApplicationJSON(){}
 }

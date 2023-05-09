@@ -32,10 +32,11 @@ public class Apps {
 
     /**
      * Confirm that the app's OAuth2 credentials work.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1AppsVerifyCredentialsResponse getApiV1AppsVerifyCredentials() throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1AppsVerifyCredentialsResponse getApiV1AppsVerifyCredentials(org.openapis.openapi.models.operations.GetApiV1AppsVerifyCredentialsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/apps/verify_credentials");
         
@@ -44,17 +45,16 @@ public class Apps {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1AppsVerifyCredentialsResponse res = new org.openapis.openapi.models.operations.GetApiV1AppsVerifyCredentialsResponse() {{
+        org.openapis.openapi.models.operations.GetApiV1AppsVerifyCredentialsResponse res = new org.openapis.openapi.models.operations.GetApiV1AppsVerifyCredentialsResponse(contentType, httpRes.statusCode()) {{
             application = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,12 +97,10 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiV1AppsResponse res = new org.openapis.openapi.models.operations.PostApiV1AppsResponse() {{
+        org.openapis.openapi.models.operations.PostApiV1AppsResponse res = new org.openapis.openapi.models.operations.PostApiV1AppsResponse(contentType, httpRes.statusCode()) {{
             postApiV1Apps200ApplicationJSONObject = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

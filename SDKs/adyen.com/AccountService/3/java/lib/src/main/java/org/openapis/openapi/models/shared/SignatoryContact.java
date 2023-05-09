@@ -12,6 +12,7 @@ public class SignatoryContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public ViasAddress address;
+
     public SignatoryContact withAddress(ViasAddress address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class SignatoryContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public SignatoryContact withEmail(String email) {
         this.email = email;
         return this;
@@ -35,6 +37,7 @@ public class SignatoryContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullPhoneNumber")
     public String fullPhoneNumber;
+
     public SignatoryContact withFullPhoneNumber(String fullPhoneNumber) {
         this.fullPhoneNumber = fullPhoneNumber;
         return this;
@@ -48,6 +51,7 @@ public class SignatoryContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTitle")
     public String jobTitle;
+
     public SignatoryContact withJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
         return this;
@@ -56,6 +60,7 @@ public class SignatoryContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public ViasName name;
+
     public SignatoryContact withName(ViasName name) {
         this.name = name;
         return this;
@@ -64,6 +69,7 @@ public class SignatoryContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalData")
     public ViasPersonalData personalData;
+
     public SignatoryContact withPersonalData(ViasPersonalData personalData) {
         this.personalData = personalData;
         return this;
@@ -72,6 +78,7 @@ public class SignatoryContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public ViasPhoneNumber phoneNumber;
+
     public SignatoryContact withPhoneNumber(ViasPhoneNumber phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -91,6 +98,7 @@ public class SignatoryContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatoryCode")
     public String signatoryCode;
+
     public SignatoryContact withSignatoryCode(String signatoryCode) {
         this.signatoryCode = signatoryCode;
         return this;
@@ -102,6 +110,7 @@ public class SignatoryContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatoryReference")
     public String signatoryReference;
+
     public SignatoryContact withSignatoryReference(String signatoryReference) {
         this.signatoryReference = signatoryReference;
         return this;
@@ -113,9 +122,11 @@ public class SignatoryContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webAddress")
     public String webAddress;
+
     public SignatoryContact withWebAddress(String webAddress) {
         this.webAddress = webAddress;
         return this;
     }
     
+    public SignatoryContact(){}
 }

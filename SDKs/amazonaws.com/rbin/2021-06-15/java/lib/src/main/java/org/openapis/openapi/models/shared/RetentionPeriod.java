@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RetentionPeriod {
     @JsonProperty("RetentionPeriodUnit")
     public RetentionPeriodUnitEnum retentionPeriodUnit;
+
     public RetentionPeriod withRetentionPeriodUnit(RetentionPeriodUnitEnum retentionPeriodUnit) {
         this.retentionPeriodUnit = retentionPeriodUnit;
         return this;
@@ -19,9 +20,14 @@ public class RetentionPeriod {
     
     @JsonProperty("RetentionPeriodValue")
     public Long retentionPeriodValue;
+
     public RetentionPeriod withRetentionPeriodValue(Long retentionPeriodValue) {
         this.retentionPeriodValue = retentionPeriodValue;
         return this;
     }
     
+    public RetentionPeriod(@JsonProperty("RetentionPeriodUnit") RetentionPeriodUnitEnum retentionPeriodUnit, @JsonProperty("RetentionPeriodValue") Long retentionPeriodValue) {
+        this.retentionPeriodUnit = retentionPeriodUnit;
+        this.retentionPeriodValue = retentionPeriodValue;
+  }
 }

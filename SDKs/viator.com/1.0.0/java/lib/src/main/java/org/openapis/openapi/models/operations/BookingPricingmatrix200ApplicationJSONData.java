@@ -15,6 +15,7 @@ public class BookingPricingmatrix200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageBandPrices")
     public BookingPricingmatrix200ApplicationJSONDataAgeBandPrices[] ageBandPrices;
+
     public BookingPricingmatrix200ApplicationJSONData withAgeBandPrices(BookingPricingmatrix200ApplicationJSONDataAgeBandPrices[] ageBandPrices) {
         this.ageBandPrices = ageBandPrices;
         return this;
@@ -26,6 +27,7 @@ public class BookingPricingmatrix200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingDate")
     public String bookingDate;
+
     public BookingPricingmatrix200ApplicationJSONData withBookingDate(String bookingDate) {
         this.bookingDate = bookingDate;
         return this;
@@ -39,6 +41,7 @@ public class BookingPricingmatrix200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricingUnit")
     public String pricingUnit;
+
     public BookingPricingmatrix200ApplicationJSONData withPricingUnit(String pricingUnit) {
         this.pricingUnit = pricingUnit;
         return this;
@@ -50,9 +53,11 @@ public class BookingPricingmatrix200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public BookingPricingmatrix200ApplicationJSONData withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public BookingPricingmatrix200ApplicationJSONData(){}
 }

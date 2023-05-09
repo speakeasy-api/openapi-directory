@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCustomerManagedPolicyReferencesInPermissionSetResponse {
@@ -12,6 +13,7 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResponse {
      */
     
     public Object accessDeniedException;
+
     public ListCustomerManagedPolicyReferencesInPermissionSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResponse {
     
     
     public String contentType;
+
     public ListCustomerManagedPolicyReferencesInPermissionSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResponse {
      */
     
     public Object internalServerException;
+
     public ListCustomerManagedPolicyReferencesInPermissionSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCustomerManagedPolicyReferencesInPermissionSetResponse listCustomerManagedPolicyReferencesInPermissionSetResponse;
+
     public ListCustomerManagedPolicyReferencesInPermissionSetResponse withListCustomerManagedPolicyReferencesInPermissionSetResponse(org.openapis.openapi.models.shared.ListCustomerManagedPolicyReferencesInPermissionSetResponse listCustomerManagedPolicyReferencesInPermissionSetResponse) {
         this.listCustomerManagedPolicyReferencesInPermissionSetResponse = listCustomerManagedPolicyReferencesInPermissionSetResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListCustomerManagedPolicyReferencesInPermissionSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResponse {
     
     
     public Integer statusCode;
+
     public ListCustomerManagedPolicyReferencesInPermissionSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCustomerManagedPolicyReferencesInPermissionSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResponse {
      */
     
     public Object throttlingException;
+
     public ListCustomerManagedPolicyReferencesInPermissionSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListCustomerManagedPolicyReferencesInPermissionSetResponse {
      */
     
     public Object validationException;
+
     public ListCustomerManagedPolicyReferencesInPermissionSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListCustomerManagedPolicyReferencesInPermissionSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

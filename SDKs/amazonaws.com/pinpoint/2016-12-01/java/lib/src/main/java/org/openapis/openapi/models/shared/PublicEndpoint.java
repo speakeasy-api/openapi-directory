@@ -15,6 +15,7 @@ public class PublicEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public String address;
+
     public PublicEndpoint withAddress(String address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class PublicEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String[]> attributes;
+
     public PublicEndpoint withAttributes(java.util.Map<String, String[]> attributes) {
         this.attributes = attributes;
         return this;
@@ -31,6 +33,7 @@ public class PublicEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelType")
     public ChannelTypeEnum channelType;
+
     public PublicEndpoint withChannelType(ChannelTypeEnum channelType) {
         this.channelType = channelType;
         return this;
@@ -39,6 +42,7 @@ public class PublicEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Demographic")
     public EndpointDemographic demographic;
+
     public PublicEndpoint withDemographic(EndpointDemographic demographic) {
         this.demographic = demographic;
         return this;
@@ -47,6 +51,7 @@ public class PublicEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectiveDate")
     public String effectiveDate;
+
     public PublicEndpoint withEffectiveDate(String effectiveDate) {
         this.effectiveDate = effectiveDate;
         return this;
@@ -55,6 +60,7 @@ public class PublicEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointStatus")
     public String endpointStatus;
+
     public PublicEndpoint withEndpointStatus(String endpointStatus) {
         this.endpointStatus = endpointStatus;
         return this;
@@ -63,6 +69,7 @@ public class PublicEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public EndpointLocation location;
+
     public PublicEndpoint withLocation(EndpointLocation location) {
         this.location = location;
         return this;
@@ -71,6 +78,7 @@ public class PublicEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public java.util.Map<String, Double> metrics;
+
     public PublicEndpoint withMetrics(java.util.Map<String, Double> metrics) {
         this.metrics = metrics;
         return this;
@@ -79,6 +87,7 @@ public class PublicEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOut")
     public String optOut;
+
     public PublicEndpoint withOptOut(String optOut) {
         this.optOut = optOut;
         return this;
@@ -87,6 +96,7 @@ public class PublicEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestId")
     public String requestId;
+
     public PublicEndpoint withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -95,9 +105,11 @@ public class PublicEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("User")
     public EndpointUser user;
+
     public PublicEndpoint withUser(EndpointUser user) {
         this.user = user;
         return this;
     }
     
+    public PublicEndpoint(){}
 }

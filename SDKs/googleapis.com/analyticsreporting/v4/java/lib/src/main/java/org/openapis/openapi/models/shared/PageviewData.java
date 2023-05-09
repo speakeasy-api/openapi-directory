@@ -18,6 +18,7 @@ public class PageviewData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagePath")
     public String pagePath;
+
     public PageviewData withPagePath(String pagePath) {
         this.pagePath = pagePath;
         return this;
@@ -29,9 +30,11 @@ public class PageviewData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageTitle")
     public String pageTitle;
+
     public PageviewData withPageTitle(String pageTitle) {
         this.pageTitle = pageTitle;
         return this;
     }
     
+    public PageviewData(){}
 }

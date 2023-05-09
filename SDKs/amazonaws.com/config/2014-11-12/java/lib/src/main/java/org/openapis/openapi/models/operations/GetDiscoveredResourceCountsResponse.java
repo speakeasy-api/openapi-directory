@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDiscoveredResourceCountsResponse {
     
     public String contentType;
+
     public GetDiscoveredResourceCountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDiscoveredResourceCountsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDiscoveredResourceCountsResponse getDiscoveredResourceCountsResponse;
+
     public GetDiscoveredResourceCountsResponse withGetDiscoveredResourceCountsResponse(org.openapis.openapi.models.shared.GetDiscoveredResourceCountsResponse getDiscoveredResourceCountsResponse) {
         this.getDiscoveredResourceCountsResponse = getDiscoveredResourceCountsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetDiscoveredResourceCountsResponse {
      */
     
     public Object invalidLimitException;
+
     public GetDiscoveredResourceCountsResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -39,6 +43,7 @@ public class GetDiscoveredResourceCountsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetDiscoveredResourceCountsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -46,6 +51,7 @@ public class GetDiscoveredResourceCountsResponse {
     
     
     public Integer statusCode;
+
     public GetDiscoveredResourceCountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetDiscoveredResourceCountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDiscoveredResourceCountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetDiscoveredResourceCountsResponse {
      */
     
     public Object validationException;
+
     public GetDiscoveredResourceCountsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetDiscoveredResourceCountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

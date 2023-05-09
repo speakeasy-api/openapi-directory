@@ -15,6 +15,7 @@ public class VpnTunnelListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public VpnTunnelListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class VpnTunnelListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public VpnTunnelListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public VpnTunnelListWarningData(){}
 }

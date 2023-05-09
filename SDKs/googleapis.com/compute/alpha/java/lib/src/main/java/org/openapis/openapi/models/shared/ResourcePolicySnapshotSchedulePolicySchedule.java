@@ -18,6 +18,7 @@ public class ResourcePolicySnapshotSchedulePolicySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailySchedule")
     public ResourcePolicyDailyCycle dailySchedule;
+
     public ResourcePolicySnapshotSchedulePolicySchedule withDailySchedule(ResourcePolicyDailyCycle dailySchedule) {
         this.dailySchedule = dailySchedule;
         return this;
@@ -29,6 +30,7 @@ public class ResourcePolicySnapshotSchedulePolicySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hourlySchedule")
     public ResourcePolicyHourlyCycle hourlySchedule;
+
     public ResourcePolicySnapshotSchedulePolicySchedule withHourlySchedule(ResourcePolicyHourlyCycle hourlySchedule) {
         this.hourlySchedule = hourlySchedule;
         return this;
@@ -40,9 +42,11 @@ public class ResourcePolicySnapshotSchedulePolicySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weeklySchedule")
     public ResourcePolicyWeeklyCycle weeklySchedule;
+
     public ResourcePolicySnapshotSchedulePolicySchedule withWeeklySchedule(ResourcePolicyWeeklyCycle weeklySchedule) {
         this.weeklySchedule = weeklySchedule;
         return this;
     }
     
+    public ResourcePolicySnapshotSchedulePolicySchedule(){}
 }

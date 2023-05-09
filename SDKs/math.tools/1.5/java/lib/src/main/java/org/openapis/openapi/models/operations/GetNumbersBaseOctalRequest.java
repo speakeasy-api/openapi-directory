@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersBaseOctalRequest {
@@ -12,6 +13,7 @@ public class GetNumbersBaseOctalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public Long from;
+
     public GetNumbersBaseOctalRequest withFrom(Long from) {
         this.from = from;
         return this;
@@ -22,9 +24,13 @@ public class GetNumbersBaseOctalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public Long number;
+
     public GetNumbersBaseOctalRequest withNumber(Long number) {
         this.number = number;
         return this;
     }
     
+    public GetNumbersBaseOctalRequest(@JsonProperty("number") Long number) {
+        this.number = number;
+  }
 }

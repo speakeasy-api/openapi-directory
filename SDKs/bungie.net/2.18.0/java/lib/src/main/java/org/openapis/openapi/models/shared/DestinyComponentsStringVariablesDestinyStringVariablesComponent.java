@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DestinyComponentsStringVariablesDestinyStringVariablesComponent {
     
     public java.util.Map<String, Integer> integerValuesByHash;
+
     public DestinyComponentsStringVariablesDestinyStringVariablesComponent withIntegerValuesByHash(java.util.Map<String, Integer> integerValuesByHash) {
         this.integerValuesByHash = integerValuesByHash;
         return this;
     }
     
+    public DestinyComponentsStringVariablesDestinyStringVariablesComponent(){}
 }

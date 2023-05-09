@@ -18,6 +18,7 @@ public class DynamoDBv2Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public Payload payload;
+
     public DynamoDBv2Action withPayload(Payload payload) {
         this.payload = payload;
         return this;
@@ -25,9 +26,13 @@ public class DynamoDBv2Action {
     
     @JsonProperty("tableName")
     public String tableName;
+
     public DynamoDBv2Action withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DynamoDBv2Action(@JsonProperty("tableName") String tableName) {
+        this.tableName = tableName;
+  }
 }

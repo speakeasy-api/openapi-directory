@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * MessageAttributeValue - &lt;p&gt;The user-specified message attribute value. For string data types, the &lt;code&gt;Value&lt;/code&gt; attribute has the same restrictions on the content as the message body. For more information, see &lt;code&gt; &lt;a&gt;SendMessage&lt;/a&gt;.&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;Name&lt;/code&gt;, &lt;code&gt;type&lt;/code&gt;, &lt;code&gt;value&lt;/code&gt; and the message body must not be empty or null. All parts of the message attribute, including &lt;code&gt;Name&lt;/code&gt;, &lt;code&gt;Type&lt;/code&gt;, and &lt;code&gt;Value&lt;/code&gt;, are part of the message size restriction (256 KB or 262,144 bytes).&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MessageAttributeValue {
     
     public String[] binaryListValues;
+
     public MessageAttributeValue withBinaryListValues(String[] binaryListValues) {
         this.binaryListValues = binaryListValues;
         return this;
@@ -19,6 +20,7 @@ public class MessageAttributeValue {
     
     
     public String binaryValue;
+
     public MessageAttributeValue withBinaryValue(String binaryValue) {
         this.binaryValue = binaryValue;
         return this;
@@ -26,6 +28,7 @@ public class MessageAttributeValue {
     
     
     public String dataType;
+
     public MessageAttributeValue withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -33,6 +36,7 @@ public class MessageAttributeValue {
     
     
     public String[] stringListValues;
+
     public MessageAttributeValue withStringListValues(String[] stringListValues) {
         this.stringListValues = stringListValues;
         return this;
@@ -40,9 +44,13 @@ public class MessageAttributeValue {
     
     
     public String stringValue;
+
     public MessageAttributeValue withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public MessageAttributeValue(@JsonProperty("DataType") String dataType) {
+        this.dataType = dataType;
+  }
 }

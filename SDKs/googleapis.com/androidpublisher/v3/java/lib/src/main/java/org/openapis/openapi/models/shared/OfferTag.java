@@ -18,9 +18,11 @@ public class OfferTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public OfferTag withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public OfferTag(){}
 }

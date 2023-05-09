@@ -15,9 +15,11 @@ public class GetProducts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public org.openapis.openapi.models.shared.ProductV1[] products;
+
     public GetProducts200ApplicationJSON withProducts(org.openapis.openapi.models.shared.ProductV1[] products) {
         this.products = products;
         return this;
     }
     
+    public GetProducts200ApplicationJSON(){}
 }

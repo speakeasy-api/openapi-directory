@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteGitHubAccountTokenResponse {
     
     public String contentType;
+
     public DeleteGitHubAccountTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteGitHubAccountTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteGitHubAccountTokenOutput deleteGitHubAccountTokenOutput;
+
     public DeleteGitHubAccountTokenResponse withDeleteGitHubAccountTokenOutput(org.openapis.openapi.models.shared.DeleteGitHubAccountTokenOutput deleteGitHubAccountTokenOutput) {
         this.deleteGitHubAccountTokenOutput = deleteGitHubAccountTokenOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteGitHubAccountTokenResponse {
      */
     
     public Object gitHubAccountTokenDoesNotExistException;
+
     public DeleteGitHubAccountTokenResponse withGitHubAccountTokenDoesNotExistException(Object gitHubAccountTokenDoesNotExistException) {
         this.gitHubAccountTokenDoesNotExistException = gitHubAccountTokenDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteGitHubAccountTokenResponse {
      */
     
     public Object gitHubAccountTokenNameRequiredException;
+
     public DeleteGitHubAccountTokenResponse withGitHubAccountTokenNameRequiredException(Object gitHubAccountTokenNameRequiredException) {
         this.gitHubAccountTokenNameRequiredException = gitHubAccountTokenNameRequiredException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteGitHubAccountTokenResponse {
      */
     
     public Object invalidGitHubAccountTokenNameException;
+
     public DeleteGitHubAccountTokenResponse withInvalidGitHubAccountTokenNameException(Object invalidGitHubAccountTokenNameException) {
         this.invalidGitHubAccountTokenNameException = invalidGitHubAccountTokenNameException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteGitHubAccountTokenResponse {
      */
     
     public Object operationNotSupportedException;
+
     public DeleteGitHubAccountTokenResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteGitHubAccountTokenResponse {
      */
     
     public Object resourceValidationException;
+
     public DeleteGitHubAccountTokenResponse withResourceValidationException(Object resourceValidationException) {
         this.resourceValidationException = resourceValidationException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteGitHubAccountTokenResponse {
     
     
     public Integer statusCode;
+
     public DeleteGitHubAccountTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteGitHubAccountTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteGitHubAccountTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteGitHubAccountTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

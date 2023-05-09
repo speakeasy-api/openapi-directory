@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeReservationsUpdateRequest {
@@ -12,6 +13,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeReservationsUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeReservationsUpdateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Reservation reservation1;
+
     public ComputeReservationsUpdateRequest withReservation1(org.openapis.openapi.models.shared.Reservation reservation1) {
         this.reservation1 = reservation1;
         return this;
@@ -29,6 +32,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeReservationsUpdateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeReservationsUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeReservationsUpdateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeReservationsUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeReservationsUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeReservationsUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -86,6 +95,7 @@ public class ComputeReservationsUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paths")
     public String[] paths;
+
     public ComputeReservationsUpdateRequest withPaths(String[] paths) {
         this.paths = paths;
         return this;
@@ -96,6 +106,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeReservationsUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -106,6 +117,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeReservationsUpdateRequest withProject(String project) {
         this.project = project;
         return this;
@@ -116,6 +128,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeReservationsUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -126,6 +139,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeReservationsUpdateRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -136,6 +150,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reservation")
     public String reservationPathParameter;
+
     public ComputeReservationsUpdateRequest withReservationPathParameter(String reservationPathParameter) {
         this.reservationPathParameter = reservationPathParameter;
         return this;
@@ -146,6 +161,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public ComputeReservationsUpdateRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -156,6 +172,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeReservationsUpdateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -166,6 +183,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeReservationsUpdateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -176,6 +194,7 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeReservationsUpdateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -186,9 +205,15 @@ public class ComputeReservationsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
     public String zone;
+
     public ComputeReservationsUpdateRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ComputeReservationsUpdateRequest(@JsonProperty("project") String project, @JsonProperty("reservationPathParameter") String reservationPathParameter, @JsonProperty("zone") String zone) {
+        this.project = project;
+        this.reservationPathParameter = reservationPathParameter;
+        this.zone = zone;
+  }
 }

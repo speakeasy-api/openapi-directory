@@ -20,6 +20,7 @@ public class MigrationTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MigrationTaskName")
     public String migrationTaskName;
+
     public MigrationTaskSummary withMigrationTaskName(String migrationTaskName) {
         this.migrationTaskName = migrationTaskName;
         return this;
@@ -28,6 +29,7 @@ public class MigrationTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgressPercent")
     public Long progressPercent;
+
     public MigrationTaskSummary withProgressPercent(Long progressPercent) {
         this.progressPercent = progressPercent;
         return this;
@@ -36,6 +38,7 @@ public class MigrationTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgressUpdateStream")
     public String progressUpdateStream;
+
     public MigrationTaskSummary withProgressUpdateStream(String progressUpdateStream) {
         this.progressUpdateStream = progressUpdateStream;
         return this;
@@ -44,6 +47,7 @@ public class MigrationTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusEnum status;
+
     public MigrationTaskSummary withStatus(StatusEnum status) {
         this.status = status;
         return this;
@@ -52,6 +56,7 @@ public class MigrationTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetail")
     public String statusDetail;
+
     public MigrationTaskSummary withStatusDetail(String statusDetail) {
         this.statusDetail = statusDetail;
         return this;
@@ -62,9 +67,11 @@ public class MigrationTaskSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateDateTime")
     public OffsetDateTime updateDateTime;
+
     public MigrationTaskSummary withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
     }
     
+    public MigrationTaskSummary(){}
 }

@@ -18,9 +18,11 @@ public class DoubleOperatorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorName")
     public String operatorName;
+
     public DoubleOperatorOptions withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
     }
     
+    public DoubleOperatorOptions(){}
 }

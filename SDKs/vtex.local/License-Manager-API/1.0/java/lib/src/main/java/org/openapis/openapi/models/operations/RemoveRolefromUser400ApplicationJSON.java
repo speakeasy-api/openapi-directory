@@ -15,9 +15,11 @@ public class RemoveRolefromUser400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public RemoveRolefromUser400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public RemoveRolefromUser400ApplicationJSON(){}
 }

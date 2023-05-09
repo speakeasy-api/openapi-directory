@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccountState {
     @JsonProperty("accountId")
     public String accountId;
+
     public AccountState withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +20,7 @@ public class AccountState {
     
     @JsonProperty("resourceState")
     public ResourceState resourceState;
+
     public AccountState withResourceState(ResourceState resourceState) {
         this.resourceState = resourceState;
         return this;
@@ -26,9 +28,15 @@ public class AccountState {
     
     @JsonProperty("state")
     public State state;
+
     public AccountState withState(State state) {
         this.state = state;
         return this;
     }
     
+    public AccountState(@JsonProperty("accountId") String accountId, @JsonProperty("resourceState") ResourceState resourceState, @JsonProperty("state") State state) {
+        this.accountId = accountId;
+        this.resourceState = resourceState;
+        this.state = state;
+  }
 }

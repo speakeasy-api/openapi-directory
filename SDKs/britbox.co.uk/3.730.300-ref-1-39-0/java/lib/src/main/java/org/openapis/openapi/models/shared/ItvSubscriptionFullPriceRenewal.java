@@ -15,6 +15,7 @@ public class ItvSubscriptionFullPriceRenewal {
      */
     @JsonProperty("fullPriceRenewal")
     public Boolean fullPriceRenewal;
+
     public ItvSubscriptionFullPriceRenewal withFullPriceRenewal(Boolean fullPriceRenewal) {
         this.fullPriceRenewal = fullPriceRenewal;
         return this;
@@ -25,9 +26,14 @@ public class ItvSubscriptionFullPriceRenewal {
      */
     @JsonProperty("reason")
     public String reason;
+
     public ItvSubscriptionFullPriceRenewal withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public ItvSubscriptionFullPriceRenewal(@JsonProperty("fullPriceRenewal") Boolean fullPriceRenewal, @JsonProperty("reason") String reason) {
+        this.fullPriceRenewal = fullPriceRenewal;
+        this.reason = reason;
+  }
 }

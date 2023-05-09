@@ -18,6 +18,7 @@ public class JsonPathMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonMatcher")
     public JsonPathMatcherJsonMatcherEnum jsonMatcher;
+
     public JsonPathMatcher withJsonMatcher(JsonPathMatcherJsonMatcherEnum jsonMatcher) {
         this.jsonMatcher = jsonMatcher;
         return this;
@@ -29,9 +30,11 @@ public class JsonPathMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonPath")
     public String jsonPath;
+
     public JsonPathMatcher withJsonPath(String jsonPath) {
         this.jsonPath = jsonPath;
         return this;
     }
     
+    public JsonPathMatcher(){}
 }

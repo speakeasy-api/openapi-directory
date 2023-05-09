@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLoadBasedAutoScalingResponse {
     
     public String contentType;
+
     public DescribeLoadBasedAutoScalingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLoadBasedAutoScalingResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeLoadBasedAutoScalingResult describeLoadBasedAutoScalingResult;
+
     public DescribeLoadBasedAutoScalingResponse withDescribeLoadBasedAutoScalingResult(org.openapis.openapi.models.shared.DescribeLoadBasedAutoScalingResult describeLoadBasedAutoScalingResult) {
         this.describeLoadBasedAutoScalingResult = describeLoadBasedAutoScalingResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLoadBasedAutoScalingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeLoadBasedAutoScalingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeLoadBasedAutoScalingResponse {
     
     
     public Integer statusCode;
+
     public DescribeLoadBasedAutoScalingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeLoadBasedAutoScalingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLoadBasedAutoScalingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeLoadBasedAutoScalingResponse {
      */
     
     public Object validationException;
+
     public DescribeLoadBasedAutoScalingResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeLoadBasedAutoScalingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

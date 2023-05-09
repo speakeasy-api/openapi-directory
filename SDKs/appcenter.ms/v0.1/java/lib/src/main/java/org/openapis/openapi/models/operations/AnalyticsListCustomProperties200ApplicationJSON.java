@@ -15,9 +15,13 @@ public class AnalyticsListCustomProperties200ApplicationJSON {
      */
     @JsonProperty("values")
     public java.util.Map<String, AnalyticsListCustomProperties200ApplicationJSONValuesEnum> values;
+
     public AnalyticsListCustomProperties200ApplicationJSON withValues(java.util.Map<String, AnalyticsListCustomProperties200ApplicationJSONValuesEnum> values) {
         this.values = values;
         return this;
     }
     
+    public AnalyticsListCustomProperties200ApplicationJSON(@JsonProperty("values") java.util.Map<String, AnalyticsListCustomProperties200ApplicationJSONValuesEnum> values) {
+        this.values = values;
+  }
 }

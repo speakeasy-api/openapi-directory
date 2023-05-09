@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopHyperParameterTuningJobRequest {
     @JsonProperty("HyperParameterTuningJobName")
     public String hyperParameterTuningJobName;
+
     public StopHyperParameterTuningJobRequest withHyperParameterTuningJobName(String hyperParameterTuningJobName) {
         this.hyperParameterTuningJobName = hyperParameterTuningJobName;
         return this;
     }
     
+    public StopHyperParameterTuningJobRequest(@JsonProperty("HyperParameterTuningJobName") String hyperParameterTuningJobName) {
+        this.hyperParameterTuningJobName = hyperParameterTuningJobName;
+  }
 }

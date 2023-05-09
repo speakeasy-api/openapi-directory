@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Profile {
     @JsonProperty("admin")
     public Boolean admin;
+
     public Profile withAdmin(Boolean admin) {
         this.admin = admin;
         return this;
@@ -22,6 +23,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conf")
     public String conf;
+
     public Profile withConf(String conf) {
         this.conf = conf;
         return this;
@@ -29,6 +31,7 @@ public class Profile {
     
     @JsonProperty("email")
     public String email;
+
     public Profile withEmail(String email) {
         this.email = email;
         return this;
@@ -36,6 +39,7 @@ public class Profile {
     
     @JsonProperty("id")
     public Long id;
+
     public Profile withId(Long id) {
         this.id = id;
         return this;
@@ -43,6 +47,7 @@ public class Profile {
     
     @JsonProperty("id_user")
     public Long idUser;
+
     public Profile withIdUser(Long idUser) {
         this.idUser = idUser;
         return this;
@@ -51,6 +56,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lang")
     public String lang;
+
     public Profile withLang(String lang) {
         this.lang = lang;
         return this;
@@ -58,6 +64,7 @@ public class Profile {
     
     @JsonProperty("role")
     public ProfileRoleEnum role;
+
     public Profile withRole(ProfileRoleEnum role) {
         this.role = role;
         return this;
@@ -65,9 +72,18 @@ public class Profile {
     
     @JsonProperty("statut")
     public Long statut;
+
     public Profile withStatut(Long statut) {
         this.statut = statut;
         return this;
     }
     
+    public Profile(@JsonProperty("admin") Boolean admin, @JsonProperty("email") String email, @JsonProperty("id") Long id, @JsonProperty("id_user") Long idUser, @JsonProperty("role") ProfileRoleEnum role, @JsonProperty("statut") Long statut) {
+        this.admin = admin;
+        this.email = email;
+        this.id = id;
+        this.idUser = idUser;
+        this.role = role;
+        this.statut = statut;
+  }
 }

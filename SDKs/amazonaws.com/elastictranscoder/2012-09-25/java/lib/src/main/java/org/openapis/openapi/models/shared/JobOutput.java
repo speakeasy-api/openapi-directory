@@ -15,6 +15,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlbumArt")
     public JobAlbumArt albumArt;
+
     public JobOutput withAlbumArt(JobAlbumArt albumArt) {
         this.albumArt = albumArt;
         return this;
@@ -23,6 +24,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppliedColorSpaceConversion")
     public String appliedColorSpaceConversion;
+
     public JobOutput withAppliedColorSpaceConversion(String appliedColorSpaceConversion) {
         this.appliedColorSpaceConversion = appliedColorSpaceConversion;
         return this;
@@ -31,6 +33,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Captions")
     public Captions captions;
+
     public JobOutput withCaptions(Captions captions) {
         this.captions = captions;
         return this;
@@ -39,6 +42,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Composition")
     public Clip[] composition;
+
     public JobOutput withComposition(Clip[] composition) {
         this.composition = composition;
         return this;
@@ -47,6 +51,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public Long duration;
+
     public JobOutput withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -55,6 +60,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationMillis")
     public Long durationMillis;
+
     public JobOutput withDurationMillis(Long durationMillis) {
         this.durationMillis = durationMillis;
         return this;
@@ -63,6 +69,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encryption")
     public Encryption encryption;
+
     public JobOutput withEncryption(Encryption encryption) {
         this.encryption = encryption;
         return this;
@@ -71,6 +78,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSize")
     public Long fileSize;
+
     public JobOutput withFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
@@ -79,6 +87,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FrameRate")
     public String frameRate;
+
     public JobOutput withFrameRate(String frameRate) {
         this.frameRate = frameRate;
         return this;
@@ -87,6 +96,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Height")
     public Long height;
+
     public JobOutput withHeight(Long height) {
         this.height = height;
         return this;
@@ -95,6 +105,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public JobOutput withId(String id) {
         this.id = id;
         return this;
@@ -103,6 +114,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public JobOutput withKey(String key) {
         this.key = key;
         return this;
@@ -111,6 +123,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PresetId")
     public String presetId;
+
     public JobOutput withPresetId(String presetId) {
         this.presetId = presetId;
         return this;
@@ -119,6 +132,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rotate")
     public String rotate;
+
     public JobOutput withRotate(String rotate) {
         this.rotate = rotate;
         return this;
@@ -127,6 +141,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentDuration")
     public String segmentDuration;
+
     public JobOutput withSegmentDuration(String segmentDuration) {
         this.segmentDuration = segmentDuration;
         return this;
@@ -135,6 +150,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public JobOutput withStatus(String status) {
         this.status = status;
         return this;
@@ -143,6 +159,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetail")
     public String statusDetail;
+
     public JobOutput withStatusDetail(String statusDetail) {
         this.statusDetail = statusDetail;
         return this;
@@ -151,6 +168,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThumbnailEncryption")
     public Encryption thumbnailEncryption;
+
     public JobOutput withThumbnailEncryption(Encryption thumbnailEncryption) {
         this.thumbnailEncryption = thumbnailEncryption;
         return this;
@@ -159,6 +177,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThumbnailPattern")
     public String thumbnailPattern;
+
     public JobOutput withThumbnailPattern(String thumbnailPattern) {
         this.thumbnailPattern = thumbnailPattern;
         return this;
@@ -167,6 +186,7 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Watermarks")
     public JobWatermark[] watermarks;
+
     public JobOutput withWatermarks(JobWatermark[] watermarks) {
         this.watermarks = watermarks;
         return this;
@@ -175,9 +195,11 @@ public class JobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Width")
     public Long width;
+
     public JobOutput withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public JobOutput(){}
 }

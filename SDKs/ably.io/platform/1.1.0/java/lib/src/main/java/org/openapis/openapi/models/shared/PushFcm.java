@@ -15,9 +15,11 @@ public class PushFcm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notification")
     public Notification notification;
+
     public PushFcm withNotification(Notification notification) {
         this.notification = notification;
         return this;
     }
     
+    public PushFcm(){}
 }

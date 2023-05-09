@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetMetricDataResponse {
@@ -12,6 +13,7 @@ public class BatchGetMetricDataResponse {
      */
     
     public Object badRequestException;
+
     public BatchGetMetricDataResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetMetricDataResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetMetricDataResponse batchGetMetricDataResponse;
+
     public BatchGetMetricDataResponse withBatchGetMetricDataResponse(org.openapis.openapi.models.shared.BatchGetMetricDataResponse batchGetMetricDataResponse) {
         this.batchGetMetricDataResponse = batchGetMetricDataResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetMetricDataResponse {
     
     
     public String contentType;
+
     public BatchGetMetricDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetMetricDataResponse {
      */
     
     public Object internalServiceErrorException;
+
     public BatchGetMetricDataResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetMetricDataResponse {
      */
     
     public Object notFoundException;
+
     public BatchGetMetricDataResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class BatchGetMetricDataResponse {
     
     
     public Integer statusCode;
+
     public BatchGetMetricDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchGetMetricDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetMetricDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class BatchGetMetricDataResponse {
      */
     
     public Object tooManyRequestsException;
+
     public BatchGetMetricDataResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public BatchGetMetricDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

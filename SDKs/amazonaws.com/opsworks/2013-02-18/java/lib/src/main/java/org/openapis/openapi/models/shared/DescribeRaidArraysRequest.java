@@ -12,6 +12,7 @@ public class DescribeRaidArraysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public DescribeRaidArraysRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -20,6 +21,7 @@ public class DescribeRaidArraysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RaidArrayIds")
     public String[] raidArrayIds;
+
     public DescribeRaidArraysRequest withRaidArrayIds(String[] raidArrayIds) {
         this.raidArrayIds = raidArrayIds;
         return this;
@@ -28,9 +30,11 @@ public class DescribeRaidArraysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public DescribeRaidArraysRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public DescribeRaidArraysRequest(){}
 }

@@ -18,6 +18,7 @@ public class ListPrinterModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPrinterModelsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListPrinterModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printerModels")
     public PrinterModel[] printerModels;
+
     public ListPrinterModelsResponse withPrinterModels(PrinterModel[] printerModels) {
         this.printerModels = printerModels;
         return this;
     }
     
+    public ListPrinterModelsResponse(){}
 }

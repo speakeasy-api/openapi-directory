@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeServiceAccessPoliciesResponse - A response message that contains the access policies for a domain.
@@ -15,9 +15,13 @@ public class DescribeServiceAccessPoliciesResponse {
      */
     
     public AccessPoliciesStatus accessPolicies;
+
     public DescribeServiceAccessPoliciesResponse withAccessPolicies(AccessPoliciesStatus accessPolicies) {
         this.accessPolicies = accessPolicies;
         return this;
     }
     
+    public DescribeServiceAccessPoliciesResponse(@JsonProperty("AccessPolicies") AccessPoliciesStatus accessPolicies) {
+        this.accessPolicies = accessPolicies;
+  }
 }

@@ -19,6 +19,7 @@ public class ShiftQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ShiftFilter filter;
+
     public ShiftQuery withFilter(ShiftFilter filter) {
         this.filter = filter;
         return this;
@@ -30,9 +31,11 @@ public class ShiftQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public ShiftSort sort;
+
     public ShiftQuery withSort(ShiftSort sort) {
         this.sort = sort;
         return this;
     }
     
+    public ShiftQuery(){}
 }

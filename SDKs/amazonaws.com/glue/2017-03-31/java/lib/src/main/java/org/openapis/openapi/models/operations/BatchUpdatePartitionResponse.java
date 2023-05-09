@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchUpdatePartitionResponse {
@@ -12,6 +13,7 @@ public class BatchUpdatePartitionResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchUpdatePartitionResponse batchUpdatePartitionResponse;
+
     public BatchUpdatePartitionResponse withBatchUpdatePartitionResponse(org.openapis.openapi.models.shared.BatchUpdatePartitionResponse batchUpdatePartitionResponse) {
         this.batchUpdatePartitionResponse = batchUpdatePartitionResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchUpdatePartitionResponse {
     
     
     public String contentType;
+
     public BatchUpdatePartitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchUpdatePartitionResponse {
      */
     
     public Object entityNotFoundException;
+
     public BatchUpdatePartitionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class BatchUpdatePartitionResponse {
      */
     
     public Object glueEncryptionException;
+
     public BatchUpdatePartitionResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +54,7 @@ public class BatchUpdatePartitionResponse {
      */
     
     public Object internalServiceException;
+
     public BatchUpdatePartitionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class BatchUpdatePartitionResponse {
      */
     
     public Object invalidInputException;
+
     public BatchUpdatePartitionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class BatchUpdatePartitionResponse {
      */
     
     public Object operationTimeoutException;
+
     public BatchUpdatePartitionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class BatchUpdatePartitionResponse {
     
     
     public Integer statusCode;
+
     public BatchUpdatePartitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class BatchUpdatePartitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchUpdatePartitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchUpdatePartitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

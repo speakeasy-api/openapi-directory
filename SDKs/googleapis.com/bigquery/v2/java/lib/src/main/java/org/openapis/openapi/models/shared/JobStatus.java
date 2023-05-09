@@ -12,6 +12,7 @@ public class JobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorResult")
     public ErrorProto errorResult;
+
     public JobStatus withErrorResult(ErrorProto errorResult) {
         this.errorResult = errorResult;
         return this;
@@ -23,6 +24,7 @@ public class JobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ErrorProto[] errors;
+
     public JobStatus withErrors(ErrorProto[] errors) {
         this.errors = errors;
         return this;
@@ -34,9 +36,11 @@ public class JobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public JobStatus withState(String state) {
         this.state = state;
         return this;
     }
     
+    public JobStatus(){}
 }

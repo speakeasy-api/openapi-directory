@@ -15,9 +15,11 @@ public class HookEdit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hook")
     public HookEditFields hook;
+
     public HookEdit withHook(HookEditFields hook) {
         this.hook = hook;
         return this;
     }
     
+    public HookEdit(){}
 }

@@ -20,6 +20,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String[] action;
+
     public Finding withAction(String[] action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class Finding {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("analyzedAt")
     public OffsetDateTime analyzedAt;
+
     public Finding withAnalyzedAt(OffsetDateTime analyzedAt) {
         this.analyzedAt = analyzedAt;
         return this;
@@ -36,6 +38,7 @@ public class Finding {
     
     @JsonProperty("condition")
     public java.util.Map<String, String> condition;
+
     public Finding withCondition(java.util.Map<String, String> condition) {
         this.condition = condition;
         return this;
@@ -45,6 +48,7 @@ public class Finding {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Finding withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -53,6 +57,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public Finding withError(String error) {
         this.error = error;
         return this;
@@ -60,6 +65,7 @@ public class Finding {
     
     @JsonProperty("id")
     public String id;
+
     public Finding withId(String id) {
         this.id = id;
         return this;
@@ -68,6 +74,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPublic")
     public Boolean isPublic;
+
     public Finding withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -76,6 +83,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principal")
     public java.util.Map<String, String> principal;
+
     public Finding withPrincipal(java.util.Map<String, String> principal) {
         this.principal = principal;
         return this;
@@ -84,6 +92,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public Finding withResource(String resource) {
         this.resource = resource;
         return this;
@@ -91,6 +100,7 @@ public class Finding {
     
     @JsonProperty("resourceOwnerAccount")
     public String resourceOwnerAccount;
+
     public Finding withResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -98,6 +108,7 @@ public class Finding {
     
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public Finding withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -106,6 +117,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public FindingSource[] sources;
+
     public Finding withSources(FindingSource[] sources) {
         this.sources = sources;
         return this;
@@ -113,6 +125,7 @@ public class Finding {
     
     @JsonProperty("status")
     public FindingStatusEnum status;
+
     public Finding withStatus(FindingStatusEnum status) {
         this.status = status;
         return this;
@@ -122,9 +135,20 @@ public class Finding {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Finding withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Finding(@JsonProperty("analyzedAt") OffsetDateTime analyzedAt, @JsonProperty("condition") java.util.Map<String, String> condition, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("resourceOwnerAccount") String resourceOwnerAccount, @JsonProperty("resourceType") ResourceTypeEnum resourceType, @JsonProperty("status") FindingStatusEnum status, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.analyzedAt = analyzedAt;
+        this.condition = condition;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        this.resourceType = resourceType;
+        this.status = status;
+        this.updatedAt = updatedAt;
+  }
 }

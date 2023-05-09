@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DataflowProjectsDeleteSnapshotsResponse {
     
     public String contentType;
+
     public DataflowProjectsDeleteSnapshotsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DataflowProjectsDeleteSnapshotsResponse {
      */
     
     public java.util.Map<String, Object> deleteSnapshotResponse;
+
     public DataflowProjectsDeleteSnapshotsResponse withDeleteSnapshotResponse(java.util.Map<String, Object> deleteSnapshotResponse) {
         this.deleteSnapshotResponse = deleteSnapshotResponse;
         return this;
@@ -26,6 +29,7 @@ public class DataflowProjectsDeleteSnapshotsResponse {
     
     
     public Integer statusCode;
+
     public DataflowProjectsDeleteSnapshotsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DataflowProjectsDeleteSnapshotsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DataflowProjectsDeleteSnapshotsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DataflowProjectsDeleteSnapshotsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

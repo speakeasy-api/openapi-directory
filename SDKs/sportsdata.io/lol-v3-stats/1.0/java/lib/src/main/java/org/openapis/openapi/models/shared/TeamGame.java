@@ -12,6 +12,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Assists")
     public Double assists;
+
     public TeamGame withAssists(Double assists) {
         this.assists = assists;
         return this;
@@ -20,6 +21,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CombatPlayerScore")
     public Double combatPlayerScore;
+
     public TeamGame withCombatPlayerScore(Double combatPlayerScore) {
         this.combatPlayerScore = combatPlayerScore;
         return this;
@@ -28,6 +30,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateTime")
     public String dateTime;
+
     public TeamGame withDateTime(String dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -36,6 +39,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Day")
     public String day;
+
     public TeamGame withDay(String day) {
         this.day = day;
         return this;
@@ -44,6 +48,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Deaths")
     public Double deaths;
+
     public TeamGame withDeaths(Double deaths) {
         this.deaths = deaths;
         return this;
@@ -52,6 +57,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DoubleKills")
     public Double doubleKills;
+
     public TeamGame withDoubleKills(Double doubleKills) {
         this.doubleKills = doubleKills;
         return this;
@@ -60,6 +66,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public TeamGame withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -68,6 +75,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstBaron")
     public Double firstBaron;
+
     public TeamGame withFirstBaron(Double firstBaron) {
         this.firstBaron = firstBaron;
         return this;
@@ -76,6 +84,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstBlood")
     public Double firstBlood;
+
     public TeamGame withFirstBlood(Double firstBlood) {
         this.firstBlood = firstBlood;
         return this;
@@ -84,6 +93,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstDragon")
     public Double firstDragon;
+
     public TeamGame withFirstDragon(Double firstDragon) {
         this.firstDragon = firstDragon;
         return this;
@@ -92,6 +102,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstInhibitor")
     public Double firstInhibitor;
+
     public TeamGame withFirstInhibitor(Double firstInhibitor) {
         this.firstInhibitor = firstInhibitor;
         return this;
@@ -100,6 +111,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstRiftHerald")
     public Double firstRiftHerald;
+
     public TeamGame withFirstRiftHerald(Double firstRiftHerald) {
         this.firstRiftHerald = firstRiftHerald;
         return this;
@@ -108,6 +120,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstTower")
     public Double firstTower;
+
     public TeamGame withFirstTower(Double firstTower) {
         this.firstTower = firstTower;
         return this;
@@ -116,6 +129,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameId")
     public Long gameId;
+
     public TeamGame withGameId(Long gameId) {
         this.gameId = gameId;
         return this;
@@ -124,6 +138,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Games")
     public Long games;
+
     public TeamGame withGames(Long games) {
         this.games = games;
         return this;
@@ -132,6 +147,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoldEarned")
     public Double goldEarned;
+
     public TeamGame withGoldEarned(Double goldEarned) {
         this.goldEarned = goldEarned;
         return this;
@@ -140,6 +156,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoldSpent")
     public Double goldSpent;
+
     public TeamGame withGoldSpent(Double goldSpent) {
         this.goldSpent = goldSpent;
         return this;
@@ -148,6 +165,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InhibitorKills")
     public Double inhibitorKills;
+
     public TeamGame withInhibitorKills(Double inhibitorKills) {
         this.inhibitorKills = inhibitorKills;
         return this;
@@ -156,6 +174,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsClosed")
     public Boolean isClosed;
+
     public TeamGame withIsClosed(Boolean isClosed) {
         this.isClosed = isClosed;
         return this;
@@ -164,6 +183,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KillingSpree")
     public Double killingSpree;
+
     public TeamGame withKillingSpree(Double killingSpree) {
         this.killingSpree = killingSpree;
         return this;
@@ -172,6 +192,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Kills")
     public Double kills;
+
     public TeamGame withKills(Double kills) {
         this.kills = kills;
         return this;
@@ -180,6 +201,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LargestCriticalStrike")
     public Double largestCriticalStrike;
+
     public TeamGame withLargestCriticalStrike(Double largestCriticalStrike) {
         this.largestCriticalStrike = largestCriticalStrike;
         return this;
@@ -188,6 +210,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LargestKillingSpree")
     public Double largestKillingSpree;
+
     public TeamGame withLargestKillingSpree(Double largestKillingSpree) {
         this.largestKillingSpree = largestKillingSpree;
         return this;
@@ -196,6 +219,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LargestMultiKill")
     public Double largestMultiKill;
+
     public TeamGame withLargestMultiKill(Double largestMultiKill) {
         this.largestMultiKill = largestMultiKill;
         return this;
@@ -204,6 +228,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LongestTimeSpentLiving")
     public Double longestTimeSpentLiving;
+
     public TeamGame withLongestTimeSpentLiving(Double longestTimeSpentLiving) {
         this.longestTimeSpentLiving = longestTimeSpentLiving;
         return this;
@@ -212,6 +237,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MagicDamageDealt")
     public Double magicDamageDealt;
+
     public TeamGame withMagicDamageDealt(Double magicDamageDealt) {
         this.magicDamageDealt = magicDamageDealt;
         return this;
@@ -220,6 +246,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MagicDamageDealtToChampions")
     public Double magicDamageDealtToChampions;
+
     public TeamGame withMagicDamageDealtToChampions(Double magicDamageDealtToChampions) {
         this.magicDamageDealtToChampions = magicDamageDealtToChampions;
         return this;
@@ -228,6 +255,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MagicDamageTaken")
     public Double magicDamageTaken;
+
     public TeamGame withMagicDamageTaken(Double magicDamageTaken) {
         this.magicDamageTaken = magicDamageTaken;
         return this;
@@ -236,6 +264,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchName")
     public String matchName;
+
     public TeamGame withMatchName(String matchName) {
         this.matchName = matchName;
         return this;
@@ -244,6 +273,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Matches")
     public Long matches;
+
     public TeamGame withMatches(Long matches) {
         this.matches = matches;
         return this;
@@ -252,6 +282,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public TeamGame withName(String name) {
         this.name = name;
         return this;
@@ -260,6 +291,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NeutralMinionsKIlled")
     public Double neutralMinionsKIlled;
+
     public TeamGame withNeutralMinionsKIlled(Double neutralMinionsKIlled) {
         this.neutralMinionsKIlled = neutralMinionsKIlled;
         return this;
@@ -268,6 +300,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NeutralMinionsKIlledTeamJungle")
     public Double neutralMinionsKIlledTeamJungle;
+
     public TeamGame withNeutralMinionsKIlledTeamJungle(Double neutralMinionsKIlledTeamJungle) {
         this.neutralMinionsKIlledTeamJungle = neutralMinionsKIlledTeamJungle;
         return this;
@@ -276,6 +309,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NeutralMinionsKilledEnemyJungle")
     public Double neutralMinionsKilledEnemyJungle;
+
     public TeamGame withNeutralMinionsKilledEnemyJungle(Double neutralMinionsKilledEnemyJungle) {
         this.neutralMinionsKilledEnemyJungle = neutralMinionsKilledEnemyJungle;
         return this;
@@ -284,6 +318,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectivePlayerScore")
     public Double objectivePlayerScore;
+
     public TeamGame withObjectivePlayerScore(Double objectivePlayerScore) {
         this.objectivePlayerScore = objectivePlayerScore;
         return this;
@@ -292,6 +327,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Opponent")
     public String opponent;
+
     public TeamGame withOpponent(String opponent) {
         this.opponent = opponent;
         return this;
@@ -300,6 +336,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentId")
     public Long opponentId;
+
     public TeamGame withOpponentId(Long opponentId) {
         this.opponentId = opponentId;
         return this;
@@ -308,6 +345,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PentaKills")
     public Double pentaKills;
+
     public TeamGame withPentaKills(Double pentaKills) {
         this.pentaKills = pentaKills;
         return this;
@@ -316,6 +354,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhysicalDamageDealt")
     public Double physicalDamageDealt;
+
     public TeamGame withPhysicalDamageDealt(Double physicalDamageDealt) {
         this.physicalDamageDealt = physicalDamageDealt;
         return this;
@@ -324,6 +363,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhysicalDamageDealtToChampions")
     public Double physicalDamageDealtToChampions;
+
     public TeamGame withPhysicalDamageDealtToChampions(Double physicalDamageDealtToChampions) {
         this.physicalDamageDealtToChampions = physicalDamageDealtToChampions;
         return this;
@@ -332,6 +372,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhysicalDamageTaken")
     public Double physicalDamageTaken;
+
     public TeamGame withPhysicalDamageTaken(Double physicalDamageTaken) {
         this.physicalDamageTaken = physicalDamageTaken;
         return this;
@@ -340,6 +381,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerId")
     public Long playerId;
+
     public TeamGame withPlayerId(Long playerId) {
         this.playerId = playerId;
         return this;
@@ -348,6 +390,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public TeamGame withPosition(String position) {
         this.position = position;
         return this;
@@ -356,6 +399,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuadraKills")
     public Double quadraKills;
+
     public TeamGame withQuadraKills(Double quadraKills) {
         this.quadraKills = quadraKills;
         return this;
@@ -364,6 +408,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SightWardsBoughtInGame")
     public Double sightWardsBoughtInGame;
+
     public TeamGame withSightWardsBoughtInGame(Double sightWardsBoughtInGame) {
         this.sightWardsBoughtInGame = sightWardsBoughtInGame;
         return this;
@@ -372,6 +417,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public TeamGame withTeam(String team) {
         this.team = team;
         return this;
@@ -380,6 +426,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamId")
     public Long teamId;
+
     public TeamGame withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -388,6 +435,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TenKillsOrAssists")
     public Double tenKillsOrAssists;
+
     public TeamGame withTenKillsOrAssists(Double tenKillsOrAssists) {
         this.tenKillsOrAssists = tenKillsOrAssists;
         return this;
@@ -396,6 +444,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalDamageDealt")
     public Double totalDamageDealt;
+
     public TeamGame withTotalDamageDealt(Double totalDamageDealt) {
         this.totalDamageDealt = totalDamageDealt;
         return this;
@@ -404,6 +453,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalDamageDealtToChampions")
     public Double totalDamageDealtToChampions;
+
     public TeamGame withTotalDamageDealtToChampions(Double totalDamageDealtToChampions) {
         this.totalDamageDealtToChampions = totalDamageDealtToChampions;
         return this;
@@ -412,6 +462,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalDamageTaken")
     public Double totalDamageTaken;
+
     public TeamGame withTotalDamageTaken(Double totalDamageTaken) {
         this.totalDamageTaken = totalDamageTaken;
         return this;
@@ -420,6 +471,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalHeal")
     public Double totalHeal;
+
     public TeamGame withTotalHeal(Double totalHeal) {
         this.totalHeal = totalHeal;
         return this;
@@ -428,6 +480,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalMinionsKilled")
     public Double totalMinionsKilled;
+
     public TeamGame withTotalMinionsKilled(Double totalMinionsKilled) {
         this.totalMinionsKilled = totalMinionsKilled;
         return this;
@@ -436,6 +489,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalPlayerScore")
     public Double totalPlayerScore;
+
     public TeamGame withTotalPlayerScore(Double totalPlayerScore) {
         this.totalPlayerScore = totalPlayerScore;
         return this;
@@ -444,6 +498,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalTimeCrowdControlDealt")
     public Double totalTimeCrowdControlDealt;
+
     public TeamGame withTotalTimeCrowdControlDealt(Double totalTimeCrowdControlDealt) {
         this.totalTimeCrowdControlDealt = totalTimeCrowdControlDealt;
         return this;
@@ -452,6 +507,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalUnitsHealed")
     public Double totalUnitsHealed;
+
     public TeamGame withTotalUnitsHealed(Double totalUnitsHealed) {
         this.totalUnitsHealed = totalUnitsHealed;
         return this;
@@ -460,6 +516,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TripleKills")
     public Double tripleKills;
+
     public TeamGame withTripleKills(Double tripleKills) {
         this.tripleKills = tripleKills;
         return this;
@@ -468,6 +525,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrueDamageDealt")
     public Double trueDamageDealt;
+
     public TeamGame withTrueDamageDealt(Double trueDamageDealt) {
         this.trueDamageDealt = trueDamageDealt;
         return this;
@@ -476,6 +534,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrueDamageDealtToChampions")
     public Double trueDamageDealtToChampions;
+
     public TeamGame withTrueDamageDealtToChampions(Double trueDamageDealtToChampions) {
         this.trueDamageDealtToChampions = trueDamageDealtToChampions;
         return this;
@@ -484,6 +543,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrueDamageTaken")
     public Double trueDamageTaken;
+
     public TeamGame withTrueDamageTaken(Double trueDamageTaken) {
         this.trueDamageTaken = trueDamageTaken;
         return this;
@@ -492,6 +552,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TurretKills")
     public Double turretKills;
+
     public TeamGame withTurretKills(Double turretKills) {
         this.turretKills = turretKills;
         return this;
@@ -500,6 +561,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnrealKills")
     public Double unrealKills;
+
     public TeamGame withUnrealKills(Double unrealKills) {
         this.unrealKills = unrealKills;
         return this;
@@ -508,6 +570,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public TeamGame withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -516,6 +579,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VisionWardsBoughtInGame")
     public Double visionWardsBoughtInGame;
+
     public TeamGame withVisionWardsBoughtInGame(Double visionWardsBoughtInGame) {
         this.visionWardsBoughtInGame = visionWardsBoughtInGame;
         return this;
@@ -524,6 +588,7 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WardsKilled")
     public Double wardsKilled;
+
     public TeamGame withWardsKilled(Double wardsKilled) {
         this.wardsKilled = wardsKilled;
         return this;
@@ -532,9 +597,11 @@ public class TeamGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WardsPlaced")
     public Double wardsPlaced;
+
     public TeamGame withWardsPlaced(Double wardsPlaced) {
         this.wardsPlaced = wardsPlaced;
         return this;
     }
     
+    public TeamGame(){}
 }

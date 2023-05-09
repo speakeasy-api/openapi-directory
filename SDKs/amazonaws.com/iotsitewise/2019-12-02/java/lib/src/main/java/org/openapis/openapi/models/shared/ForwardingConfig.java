@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ForwardingConfig {
     @JsonProperty("state")
     public ForwardingConfigStateEnum state;
+
     public ForwardingConfig withState(ForwardingConfigStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ForwardingConfig(@JsonProperty("state") ForwardingConfigStateEnum state) {
+        this.state = state;
+  }
 }

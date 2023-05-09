@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateBatchOrderInvoiceRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GenerateBatchOrderInvoiceRequestItem[] requestBody;
+
     public GenerateBatchOrderInvoiceRequest withRequestBody(org.openapis.openapi.models.shared.GenerateBatchOrderInvoiceRequestItem[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class GenerateBatchOrderInvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
     public String userName;
+
     public GenerateBatchOrderInvoiceRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public GenerateBatchOrderInvoiceRequest(@JsonProperty("RequestBody") org.openapis.openapi.models.shared.GenerateBatchOrderInvoiceRequestItem[] requestBody, @JsonProperty("userName") String userName) {
+        this.requestBody = requestBody;
+        this.userName = userName;
+  }
 }

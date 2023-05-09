@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SignalWorkflowExecutionInput {
     @JsonProperty("domain")
     public String domain;
+
     public SignalWorkflowExecutionInput withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -19,6 +20,7 @@ public class SignalWorkflowExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public SignalWorkflowExecutionInput withInput(String input) {
         this.input = input;
         return this;
@@ -27,6 +29,7 @@ public class SignalWorkflowExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runId")
     public String runId;
+
     public SignalWorkflowExecutionInput withRunId(String runId) {
         this.runId = runId;
         return this;
@@ -34,6 +37,7 @@ public class SignalWorkflowExecutionInput {
     
     @JsonProperty("signalName")
     public String signalName;
+
     public SignalWorkflowExecutionInput withSignalName(String signalName) {
         this.signalName = signalName;
         return this;
@@ -41,9 +45,15 @@ public class SignalWorkflowExecutionInput {
     
     @JsonProperty("workflowId")
     public String workflowId;
+
     public SignalWorkflowExecutionInput withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public SignalWorkflowExecutionInput(@JsonProperty("domain") String domain, @JsonProperty("signalName") String signalName, @JsonProperty("workflowId") String workflowId) {
+        this.domain = domain;
+        this.signalName = signalName;
+        this.workflowId = workflowId;
+  }
 }

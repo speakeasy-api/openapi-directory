@@ -12,6 +12,7 @@ public class ActionMetricValidations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximum")
     public ActionMetricValidationsMaximum maximum;
+
     public ActionMetricValidations withMaximum(ActionMetricValidationsMaximum maximum) {
         this.maximum = maximum;
         return this;
@@ -20,9 +21,11 @@ public class ActionMetricValidations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum")
     public ActionMetricValidationsMinimum minimum;
+
     public ActionMetricValidations withMinimum(ActionMetricValidationsMinimum minimum) {
         this.minimum = minimum;
         return this;
     }
     
+    public ActionMetricValidations(){}
 }

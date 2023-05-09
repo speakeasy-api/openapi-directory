@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLabelResponse {
@@ -12,6 +13,7 @@ public class CreateLabelResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateLabelResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateLabelResponse {
      */
     
     public Object conflictException;
+
     public CreateLabelResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateLabelResponse {
     
     
     public String contentType;
+
     public CreateLabelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateLabelResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLabelResponse createLabelResponse;
+
     public CreateLabelResponse withCreateLabelResponse(org.openapis.openapi.models.shared.CreateLabelResponse createLabelResponse) {
         this.createLabelResponse = createLabelResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateLabelResponse {
      */
     
     public Object internalServerException;
+
     public CreateLabelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateLabelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateLabelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateLabelResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateLabelResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateLabelResponse {
     
     
     public Integer statusCode;
+
     public CreateLabelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateLabelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLabelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateLabelResponse {
      */
     
     public Object throttlingException;
+
     public CreateLabelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateLabelResponse {
      */
     
     public Object validationException;
+
     public CreateLabelResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateLabelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

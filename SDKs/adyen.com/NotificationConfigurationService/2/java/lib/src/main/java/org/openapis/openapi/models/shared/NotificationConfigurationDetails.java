@@ -15,6 +15,7 @@ public class NotificationConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public NotificationConfigurationDetails withActive(Boolean active) {
         this.active = active;
         return this;
@@ -26,6 +27,7 @@ public class NotificationConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public Integer apiVersion;
+
     public NotificationConfigurationDetails withApiVersion(Integer apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -37,6 +39,7 @@ public class NotificationConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NotificationConfigurationDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -47,8 +50,9 @@ public class NotificationConfigurationDetails {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventConfigs")
-    public NotificationEventConfiguration[] eventConfigs;
-    public NotificationConfigurationDetails withEventConfigs(NotificationEventConfiguration[] eventConfigs) {
+    public NotificationEventConfigurationWrapper[] eventConfigs;
+
+    public NotificationConfigurationDetails withEventConfigs(NotificationEventConfigurationWrapper[] eventConfigs) {
         this.eventConfigs = eventConfigs;
         return this;
     }
@@ -60,6 +64,7 @@ public class NotificationConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageFormat")
     public NotificationConfigurationDetailsMessageFormatEnum messageFormat;
+
     public NotificationConfigurationDetails withMessageFormat(NotificationConfigurationDetailsMessageFormatEnum messageFormat) {
         this.messageFormat = messageFormat;
         return this;
@@ -71,6 +76,7 @@ public class NotificationConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationId")
     public Long notificationId;
+
     public NotificationConfigurationDetails withNotificationId(Long notificationId) {
         this.notificationId = notificationId;
         return this;
@@ -82,6 +88,7 @@ public class NotificationConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifyPassword")
     public String notifyPassword;
+
     public NotificationConfigurationDetails withNotifyPassword(String notifyPassword) {
         this.notifyPassword = notifyPassword;
         return this;
@@ -93,6 +100,7 @@ public class NotificationConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifyURL")
     public String notifyURL;
+
     public NotificationConfigurationDetails withNotifyURL(String notifyURL) {
         this.notifyURL = notifyURL;
         return this;
@@ -104,6 +112,7 @@ public class NotificationConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifyUsername")
     public String notifyUsername;
+
     public NotificationConfigurationDetails withNotifyUsername(String notifyUsername) {
         this.notifyUsername = notifyUsername;
         return this;
@@ -116,6 +125,7 @@ public class NotificationConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sendActionHeader")
     public Boolean sendActionHeader;
+
     public NotificationConfigurationDetails withSendActionHeader(Boolean sendActionHeader) {
         this.sendActionHeader = sendActionHeader;
         return this;
@@ -128,9 +138,11 @@ public class NotificationConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslProtocol")
     public NotificationConfigurationDetailsSslProtocolEnum sslProtocol;
+
     public NotificationConfigurationDetails withSslProtocol(NotificationConfigurationDetailsSslProtocolEnum sslProtocol) {
         this.sslProtocol = sslProtocol;
         return this;
     }
     
+    public NotificationConfigurationDetails(){}
 }

@@ -64,14 +64,12 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidAllowanceGetResponse res = new org.openapis.openapi.models.operations.KkidAllowanceGetResponse() {{
+        org.openapis.openapi.models.operations.KkidAllowanceGetResponse res = new org.openapis.openapi.models.operations.KkidAllowanceGetResponse(contentType, httpRes.statusCode()) {{
             allowance = null;
             nodata = null;
             fourHundredAndFive = null;
             fourHundredAndTwelve = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,14 +136,12 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidAllowancePostResponse res = new org.openapis.openapi.models.operations.KkidAllowancePostResponse() {{
+        org.openapis.openapi.models.operations.KkidAllowancePostResponse res = new org.openapis.openapi.models.operations.KkidAllowancePostResponse(contentType, httpRes.statusCode()) {{
             success = null;
             nodata = null;
             fourHundredAndFive = null;
             fourHundredAndTwelve = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,14 +206,12 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidApnsPostResponse res = new org.openapis.openapi.models.operations.KkidApnsPostResponse() {{
+        org.openapis.openapi.models.operations.KkidApnsPostResponse res = new org.openapis.openapi.models.operations.KkidApnsPostResponse(contentType, httpRes.statusCode()) {{
             success = null;
             nodata = null;
             fourHundredAndFive = null;
             fourHundredAndTwelve = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -284,14 +278,12 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidChorelistDeleteResponse res = new org.openapis.openapi.models.operations.KkidChorelistDeleteResponse() {{
+        org.openapis.openapi.models.operations.KkidChorelistDeleteResponse res = new org.openapis.openapi.models.operations.KkidChorelistDeleteResponse(contentType, httpRes.statusCode()) {{
             success = null;
             nodata = null;
             fourHundredAndFive = null;
             fourHundredAndTwelve = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -359,14 +351,12 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidChorelistGetResponse res = new org.openapis.openapi.models.operations.KkidChorelistGetResponse() {{
+        org.openapis.openapi.models.operations.KkidChorelistGetResponse res = new org.openapis.openapi.models.operations.KkidChorelistGetResponse(contentType, httpRes.statusCode()) {{
             chorelist = null;
             nodata = null;
             fourHundredAndFive = null;
             fourHundredAndTwelve = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -433,14 +423,12 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidChorelistPostResponse res = new org.openapis.openapi.models.operations.KkidChorelistPostResponse() {{
+        org.openapis.openapi.models.operations.KkidChorelistPostResponse res = new org.openapis.openapi.models.operations.KkidChorelistPostResponse(contentType, httpRes.statusCode()) {{
             success = null;
             nodata = null;
             fourHundredAndFive = null;
             fourHundredAndTwelve = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -507,14 +495,12 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidChorelistPutResponse res = new org.openapis.openapi.models.operations.KkidChorelistPutResponse() {{
+        org.openapis.openapi.models.operations.KkidChorelistPutResponse res = new org.openapis.openapi.models.operations.KkidChorelistPutResponse(contentType, httpRes.statusCode()) {{
             success = null;
             nodata = null;
             fourHundredAndFive = null;
             fourHundredAndTwelve = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -581,12 +567,10 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidMasteruserPostResponse res = new org.openapis.openapi.models.operations.KkidMasteruserPostResponse() {{
+        org.openapis.openapi.models.operations.KkidMasteruserPostResponse res = new org.openapis.openapi.models.operations.KkidMasteruserPostResponse(contentType, httpRes.statusCode()) {{
             addUserResponse = null;
             fourHundredAndFive = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -638,11 +622,9 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidShareGetResponse res = new org.openapis.openapi.models.operations.KkidShareGetResponse() {{
+        org.openapis.openapi.models.operations.KkidShareGetResponse res = new org.openapis.openapi.models.operations.KkidShareGetResponse(contentType, httpRes.statusCode()) {{
             twoHundredAndOneShare = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -684,11 +666,9 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidUserGetResponse res = new org.openapis.openapi.models.operations.KkidUserGetResponse() {{
+        org.openapis.openapi.models.operations.KkidUserGetResponse res = new org.openapis.openapi.models.operations.KkidUserGetResponse(contentType, httpRes.statusCode()) {{
             userlist = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -732,12 +712,10 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidUserlistDeleteResponse res = new org.openapis.openapi.models.operations.KkidUserlistDeleteResponse() {{
+        org.openapis.openapi.models.operations.KkidUserlistDeleteResponse res = new org.openapis.openapi.models.operations.KkidUserlistDeleteResponse(contentType, httpRes.statusCode()) {{
             fourHundredAndFive = null;
             fourHundredAndTwelve = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 202 || httpRes.statusCode() == 409) {
@@ -790,14 +768,12 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidUserlistGetResponse res = new org.openapis.openapi.models.operations.KkidUserlistGetResponse() {{
+        org.openapis.openapi.models.operations.KkidUserlistGetResponse res = new org.openapis.openapi.models.operations.KkidUserlistGetResponse(contentType, httpRes.statusCode()) {{
             userlist = null;
             nodata = null;
             fourHundredAndFive = null;
             fourHundredAndTwelve = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -864,13 +840,11 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidUserlistPostResponse res = new org.openapis.openapi.models.operations.KkidUserlistPostResponse() {{
+        org.openapis.openapi.models.operations.KkidUserlistPostResponse res = new org.openapis.openapi.models.operations.KkidUserlistPostResponse(contentType, httpRes.statusCode()) {{
             addUserResponse = null;
             fourHundredAndFive = null;
             fourHundredAndTwelve = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -929,13 +903,11 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidUserlistPutResponse res = new org.openapis.openapi.models.operations.KkidUserlistPutResponse() {{
+        org.openapis.openapi.models.operations.KkidUserlistPutResponse res = new org.openapis.openapi.models.operations.KkidUserlistPutResponse(contentType, httpRes.statusCode()) {{
             addUserResponse = null;
             fourHundredAndFive = null;
             fourHundredAndTwelve = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -992,11 +964,9 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidWishlistDeleteResponse res = new org.openapis.openapi.models.operations.KkidWishlistDeleteResponse() {{
+        org.openapis.openapi.models.operations.KkidWishlistDeleteResponse res = new org.openapis.openapi.models.operations.KkidWishlistDeleteResponse(contentType, httpRes.statusCode()) {{
             success = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1037,11 +1007,9 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidWishlistGetResponse res = new org.openapis.openapi.models.operations.KkidWishlistGetResponse() {{
+        org.openapis.openapi.models.operations.KkidWishlistGetResponse res = new org.openapis.openapi.models.operations.KkidWishlistGetResponse(contentType, httpRes.statusCode()) {{
             wishlist = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1082,11 +1050,9 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidWishlistPostResponse res = new org.openapis.openapi.models.operations.KkidWishlistPostResponse() {{
+        org.openapis.openapi.models.operations.KkidWishlistPostResponse res = new org.openapis.openapi.models.operations.KkidWishlistPostResponse(contentType, httpRes.statusCode()) {{
             success = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1127,11 +1093,9 @@ public class KKid {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KkidWishlistPutResponse res = new org.openapis.openapi.models.operations.KkidWishlistPutResponse() {{
+        org.openapis.openapi.models.operations.KkidWishlistPutResponse res = new org.openapis.openapi.models.operations.KkidWishlistPutResponse(contentType, httpRes.statusCode()) {{
             success = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

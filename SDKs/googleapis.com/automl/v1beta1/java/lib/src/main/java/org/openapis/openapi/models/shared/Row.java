@@ -18,6 +18,7 @@ public class Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnSpecIds")
     public String[] columnSpecIds;
+
     public Row withColumnSpecIds(String[] columnSpecIds) {
         this.columnSpecIds = columnSpecIds;
         return this;
@@ -29,9 +30,11 @@ public class Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Object[] values;
+
     public Row withValues(Object[] values) {
         this.values = values;
         return this;
     }
     
+    public Row(){}
 }

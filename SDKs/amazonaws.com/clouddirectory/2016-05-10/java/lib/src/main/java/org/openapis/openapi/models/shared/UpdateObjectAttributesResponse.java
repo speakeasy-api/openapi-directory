@@ -15,9 +15,11 @@ public class UpdateObjectAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectIdentifier")
     public String objectIdentifier;
+
     public UpdateObjectAttributesResponse withObjectIdentifier(String objectIdentifier) {
         this.objectIdentifier = objectIdentifier;
         return this;
     }
     
+    public UpdateObjectAttributesResponse(){}
 }

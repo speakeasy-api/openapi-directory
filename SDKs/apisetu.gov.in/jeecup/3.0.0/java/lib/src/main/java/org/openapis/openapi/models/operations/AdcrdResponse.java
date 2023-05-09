@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdcrdResponse {
     
     public String contentType;
+
     public AdcrdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AdcrdResponse {
     
     
     public Integer statusCode;
+
     public AdcrdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AdcrdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdcrdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AdcrdResponse {
      */
     
     public Adcrd400ApplicationJSON adcrd400ApplicationJSONObject;
+
     public AdcrdResponse withAdcrd400ApplicationJSONObject(Adcrd400ApplicationJSON adcrd400ApplicationJSONObject) {
         this.adcrd400ApplicationJSONObject = adcrd400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AdcrdResponse {
      */
     
     public Adcrd401ApplicationJSON adcrd401ApplicationJSONObject;
+
     public AdcrdResponse withAdcrd401ApplicationJSONObject(Adcrd401ApplicationJSON adcrd401ApplicationJSONObject) {
         this.adcrd401ApplicationJSONObject = adcrd401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class AdcrdResponse {
      */
     
     public Adcrd404ApplicationJSON adcrd404ApplicationJSONObject;
+
     public AdcrdResponse withAdcrd404ApplicationJSONObject(Adcrd404ApplicationJSON adcrd404ApplicationJSONObject) {
         this.adcrd404ApplicationJSONObject = adcrd404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class AdcrdResponse {
      */
     
     public Adcrd500ApplicationJSON adcrd500ApplicationJSONObject;
+
     public AdcrdResponse withAdcrd500ApplicationJSONObject(Adcrd500ApplicationJSON adcrd500ApplicationJSONObject) {
         this.adcrd500ApplicationJSONObject = adcrd500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class AdcrdResponse {
      */
     
     public Adcrd502ApplicationJSON adcrd502ApplicationJSONObject;
+
     public AdcrdResponse withAdcrd502ApplicationJSONObject(Adcrd502ApplicationJSON adcrd502ApplicationJSONObject) {
         this.adcrd502ApplicationJSONObject = adcrd502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class AdcrdResponse {
      */
     
     public Adcrd503ApplicationJSON adcrd503ApplicationJSONObject;
+
     public AdcrdResponse withAdcrd503ApplicationJSONObject(Adcrd503ApplicationJSON adcrd503ApplicationJSONObject) {
         this.adcrd503ApplicationJSONObject = adcrd503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class AdcrdResponse {
      */
     
     public Adcrd504ApplicationJSON adcrd504ApplicationJSONObject;
+
     public AdcrdResponse withAdcrd504ApplicationJSONObject(Adcrd504ApplicationJSON adcrd504ApplicationJSONObject) {
         this.adcrd504ApplicationJSONObject = adcrd504ApplicationJSONObject;
         return this;
     }
     
+    public AdcrdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

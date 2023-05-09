@@ -23,6 +23,7 @@ public class AssignmentSubmissionComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public AssignmentSubmissionComment withComment(String comment) {
         this.comment = comment;
         return this;
@@ -36,6 +37,7 @@ public class AssignmentSubmissionComment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public AssignmentSubmissionComment withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -47,6 +49,7 @@ public class AssignmentSubmissionComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssignmentSubmissionComment withId(String id) {
         this.id = id;
         return this;
@@ -60,6 +63,7 @@ public class AssignmentSubmissionComment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modificationDate")
     public OffsetDateTime modificationDate;
+
     public AssignmentSubmissionComment withModificationDate(OffsetDateTime modificationDate) {
         this.modificationDate = modificationDate;
         return this;
@@ -71,6 +75,7 @@ public class AssignmentSubmissionComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submission")
     public String submission;
+
     public AssignmentSubmissionComment withSubmission(String submission) {
         this.submission = submission;
         return this;
@@ -82,6 +87,7 @@ public class AssignmentSubmissionComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unread")
     public Boolean unread;
+
     public AssignmentSubmissionComment withUnread(Boolean unread) {
         this.unread = unread;
         return this;
@@ -93,9 +99,11 @@ public class AssignmentSubmissionComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public AssignmentSubmissionComment withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public AssignmentSubmissionComment(){}
 }

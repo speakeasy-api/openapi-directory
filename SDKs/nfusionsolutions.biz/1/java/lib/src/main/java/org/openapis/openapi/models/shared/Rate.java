@@ -17,6 +17,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symbol")
     public String symbol;
+
     public Rate withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
@@ -27,6 +28,7 @@ public class Rate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public Rate withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -35,9 +37,11 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public Rate withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public Rate(){}
 }

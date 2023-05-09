@@ -15,6 +15,7 @@ public class LaunchedInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2InstanceID")
     public String ec2InstanceID;
+
     public LaunchedInstance withEc2InstanceID(String ec2InstanceID) {
         this.ec2InstanceID = ec2InstanceID;
         return this;
@@ -23,6 +24,7 @@ public class LaunchedInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstBoot")
     public FirstBootEnum firstBoot;
+
     public LaunchedInstance withFirstBoot(FirstBootEnum firstBoot) {
         this.firstBoot = firstBoot;
         return this;
@@ -31,9 +33,11 @@ public class LaunchedInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobID")
     public String jobID;
+
     public LaunchedInstance withJobID(String jobID) {
         this.jobID = jobID;
         return this;
     }
     
+    public LaunchedInstance(){}
 }

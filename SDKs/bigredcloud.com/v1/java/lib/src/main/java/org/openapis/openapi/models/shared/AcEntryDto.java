@@ -12,6 +12,7 @@ public class AcEntryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountCode")
     public String accountCode;
+
     public AcEntryDto withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -20,6 +21,7 @@ public class AcEntryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisCategoryId")
     public Long analysisCategoryId;
+
     public AcEntryDto withAnalysisCategoryId(Long analysisCategoryId) {
         this.analysisCategoryId = analysisCategoryId;
         return this;
@@ -28,6 +30,7 @@ public class AcEntryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AcEntryDto withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class AcEntryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public AcEntryDto withId(Long id) {
         this.id = id;
         return this;
@@ -44,9 +48,11 @@ public class AcEntryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public AcEntryDto withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public AcEntryDto(){}
 }

@@ -22,6 +22,7 @@ public class ExperimentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ExperimentSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class ExperimentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experimentTemplateId")
     public String experimentTemplateId;
+
     public ExperimentSummary withExperimentTemplateId(String experimentTemplateId) {
         this.experimentTemplateId = experimentTemplateId;
         return this;
@@ -38,6 +40,7 @@ public class ExperimentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ExperimentSummary withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class ExperimentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ExperimentState state;
+
     public ExperimentSummary withState(ExperimentState state) {
         this.state = state;
         return this;
@@ -54,9 +58,11 @@ public class ExperimentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ExperimentSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ExperimentSummary(){}
 }

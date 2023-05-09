@@ -445,6 +445,7 @@ public class SDK {
 	
 	
 	
+	
   		
 
 	private HTTPClient _defaultClient;
@@ -534,16 +535,22 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
     /**
      * Check
      * Test that the API and auth are working.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckResponse check() throws Exception {
+    public org.openapis.openapi.models.operations.CheckResponse check(org.openapis.openapi.models.operations.CheckSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/check/");
         
@@ -552,15 +559,14 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckResponse res = new org.openapis.openapi.models.operations.CheckResponse() {{
+        org.openapis.openapi.models.operations.CheckResponse res = new org.openapis.openapi.models.operations.CheckResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -571,9 +577,7 @@ public class SDK {
 
     /**
      * Execute App Action Endpoint
-     * Give us a plain english description of exact action you want to do.
-     * There should be dynamically generated documentation for this endpoint
-     * for each action that is exposed.
+     * Give us a plain english description of exact action you want to do. There should be dynamically generated documentation for this endpoint for each action that is exposed.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -599,12 +603,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExecuteAppActionEndpointResponse res = new org.openapis.openapi.models.operations.ExecuteAppActionEndpointResponse() {{
+        org.openapis.openapi.models.operations.ExecuteAppActionEndpointResponse res = new org.openapis.openapi.models.operations.ExecuteAppActionEndpointResponse(contentType, httpRes.statusCode()) {{
             executeResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -627,12 +629,12 @@ public class SDK {
 
     /**
      * Get Configuration Link
-     * If the user wants to execute actions that are not exposed, they can
-     * go here to configure and expose more.
+     * Provides a link to configure more actions. Alternatively, searching through apps and actions will provide more specific configuration links.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetConfigurationLinkResponse getConfigurationLink() throws Exception {
+    public org.openapis.openapi.models.operations.GetConfigurationLinkResponse getConfigurationLink(org.openapis.openapi.models.operations.GetConfigurationLinkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/configuration-link/");
         
@@ -641,15 +643,14 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConfigurationLinkResponse res = new org.openapis.openapi.models.operations.GetConfigurationLinkResponse() {{
+        org.openapis.openapi.models.operations.GetConfigurationLinkResponse res = new org.openapis.openapi.models.operations.GetConfigurationLinkResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -659,12 +660,60 @@ public class SDK {
     }
 
     /**
-     * List Exposed Actions
-     * List all the currently exposed actions for the given account.
+     * Get Execution Log Endpoint
+     * Get the execution log for a given execution log id.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListExposedActionsResponse listExposedActions() throws Exception {
+    public org.openapis.openapi.models.operations.GetExecutionLogEndpointResponse getExecutionLogEndpoint(org.openapis.openapi.models.operations.GetExecutionLogEndpointRequest request, org.openapis.openapi.models.operations.GetExecutionLogEndpointSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExecutionLogEndpointRequest.class, baseUrl, "/api/v1/execution-log/{execution_log_id}/", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetExecutionLogEndpointResponse res = new org.openapis.openapi.models.operations.GetExecutionLogEndpointResponse(contentType, httpRes.statusCode()) {{
+            executeResponse = null;
+            errorResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ExecuteResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ExecuteResponse.class);
+                res.executeResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 400) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ErrorResponse.class);
+                res.errorResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List Exposed Actions
+     * List all the currently exposed actions for the given account.
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListExposedActionsResponse listExposedActions(org.openapis.openapi.models.operations.ListExposedActionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/exposed/");
         
@@ -673,16 +722,15 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListExposedActionsResponse res = new org.openapis.openapi.models.operations.ListExposedActionsResponse() {{
+        org.openapis.openapi.models.operations.ListExposedActionsResponse res = new org.openapis.openapi.models.operations.ListExposedActionsResponse(contentType, httpRes.statusCode()) {{
             exposedActionResponseSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

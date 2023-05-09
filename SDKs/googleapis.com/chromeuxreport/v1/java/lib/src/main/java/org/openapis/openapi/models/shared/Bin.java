@@ -18,6 +18,7 @@ public class Bin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("density")
     public Double density;
+
     public Bin withDensity(Double density) {
         this.density = density;
         return this;
@@ -29,6 +30,7 @@ public class Bin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Object end;
+
     public Bin withEnd(Object end) {
         this.end = end;
         return this;
@@ -40,9 +42,11 @@ public class Bin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Object start;
+
     public Bin withStart(Object start) {
         this.start = start;
         return this;
     }
     
+    public Bin(){}
 }

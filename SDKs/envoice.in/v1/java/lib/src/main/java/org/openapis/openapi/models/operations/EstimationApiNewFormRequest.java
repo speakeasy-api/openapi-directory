@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EstimationApiNewFormRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.EstimationCreateApiModel estimationCreateApiModel;
+
     public EstimationApiNewFormRequest withEstimationCreateApiModel(org.openapis.openapi.models.shared.EstimationCreateApiModel estimationCreateApiModel) {
         this.estimationCreateApiModel = estimationCreateApiModel;
         return this;
@@ -16,6 +18,7 @@ public class EstimationApiNewFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public EstimationApiNewFormRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class EstimationApiNewFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public EstimationApiNewFormRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public EstimationApiNewFormRequest(@JsonProperty("EstimationCreateApiModel") org.openapis.openapi.models.shared.EstimationCreateApiModel estimationCreateApiModel, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.estimationCreateApiModel = estimationCreateApiModel;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

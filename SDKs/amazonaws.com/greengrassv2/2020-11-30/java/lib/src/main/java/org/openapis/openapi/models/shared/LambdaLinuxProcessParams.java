@@ -15,6 +15,7 @@ public class LambdaLinuxProcessParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerParams")
     public LambdaContainerParams containerParams;
+
     public LambdaLinuxProcessParams withContainerParams(LambdaContainerParams containerParams) {
         this.containerParams = containerParams;
         return this;
@@ -23,9 +24,11 @@ public class LambdaLinuxProcessParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isolationMode")
     public LambdaIsolationModeEnum isolationMode;
+
     public LambdaLinuxProcessParams withIsolationMode(LambdaIsolationModeEnum isolationMode) {
         this.isolationMode = isolationMode;
         return this;
     }
     
+    public LambdaLinuxProcessParams(){}
 }

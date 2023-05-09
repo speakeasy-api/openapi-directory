@@ -15,6 +15,7 @@ public class StartJobRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public StartJobRunResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class StartJobRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public StartJobRunResponse withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class StartJobRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StartJobRunResponse withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class StartJobRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualClusterId")
     public String virtualClusterId;
+
     public StartJobRunResponse withVirtualClusterId(String virtualClusterId) {
         this.virtualClusterId = virtualClusterId;
         return this;
     }
     
+    public StartJobRunResponse(){}
 }

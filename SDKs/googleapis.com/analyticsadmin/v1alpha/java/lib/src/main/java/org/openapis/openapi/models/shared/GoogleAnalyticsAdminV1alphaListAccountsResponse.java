@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaListAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accounts")
     public GoogleAnalyticsAdminV1alphaAccount[] accounts;
+
     public GoogleAnalyticsAdminV1alphaListAccountsResponse withAccounts(GoogleAnalyticsAdminV1alphaAccount[] accounts) {
         this.accounts = accounts;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaListAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAnalyticsAdminV1alphaListAccountsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaListAccountsResponse(){}
 }

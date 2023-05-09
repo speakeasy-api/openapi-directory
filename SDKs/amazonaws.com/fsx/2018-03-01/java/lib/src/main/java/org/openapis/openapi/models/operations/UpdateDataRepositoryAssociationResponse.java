@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDataRepositoryAssociationResponse {
@@ -12,6 +13,7 @@ public class UpdateDataRepositoryAssociationResponse {
      */
     
     public Object badRequest;
+
     public UpdateDataRepositoryAssociationResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDataRepositoryAssociationResponse {
     
     
     public String contentType;
+
     public UpdateDataRepositoryAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDataRepositoryAssociationResponse {
      */
     
     public Object dataRepositoryAssociationNotFound;
+
     public UpdateDataRepositoryAssociationResponse withDataRepositoryAssociationNotFound(Object dataRepositoryAssociationNotFound) {
         this.dataRepositoryAssociationNotFound = dataRepositoryAssociationNotFound;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDataRepositoryAssociationResponse {
      */
     
     public Object incompatibleParameterError;
+
     public UpdateDataRepositoryAssociationResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDataRepositoryAssociationResponse {
      */
     
     public Object internalServerError;
+
     public UpdateDataRepositoryAssociationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -56,6 +62,7 @@ public class UpdateDataRepositoryAssociationResponse {
     
     
     public Integer statusCode;
+
     public UpdateDataRepositoryAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDataRepositoryAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDataRepositoryAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDataRepositoryAssociationResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public UpdateDataRepositoryAssociationResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDataRepositoryAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDataRepositoryAssociationResponse updateDataRepositoryAssociationResponse;
+
     public UpdateDataRepositoryAssociationResponse withUpdateDataRepositoryAssociationResponse(org.openapis.openapi.models.shared.UpdateDataRepositoryAssociationResponse updateDataRepositoryAssociationResponse) {
         this.updateDataRepositoryAssociationResponse = updateDataRepositoryAssociationResponse;
         return this;
     }
     
+    public UpdateDataRepositoryAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

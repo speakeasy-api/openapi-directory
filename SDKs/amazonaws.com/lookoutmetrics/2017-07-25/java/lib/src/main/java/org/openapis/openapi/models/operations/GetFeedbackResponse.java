@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFeedbackResponse {
@@ -12,6 +13,7 @@ public class GetFeedbackResponse {
      */
     
     public Object accessDeniedException;
+
     public GetFeedbackResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetFeedbackResponse {
     
     
     public String contentType;
+
     public GetFeedbackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetFeedbackResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFeedbackResponse getFeedbackResponse;
+
     public GetFeedbackResponse withGetFeedbackResponse(org.openapis.openapi.models.shared.GetFeedbackResponse getFeedbackResponse) {
         this.getFeedbackResponse = getFeedbackResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetFeedbackResponse {
      */
     
     public Object internalServerException;
+
     public GetFeedbackResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetFeedbackResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFeedbackResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetFeedbackResponse {
     
     
     public Integer statusCode;
+
     public GetFeedbackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetFeedbackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFeedbackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetFeedbackResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetFeedbackResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class GetFeedbackResponse {
      */
     
     public Object validationException;
+
     public GetFeedbackResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetFeedbackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

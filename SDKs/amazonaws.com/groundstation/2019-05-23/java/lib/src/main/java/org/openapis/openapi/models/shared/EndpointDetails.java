@@ -15,6 +15,7 @@ public class EndpointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsGroundStationAgentEndpoint")
     public AwsGroundStationAgentEndpoint awsGroundStationAgentEndpoint;
+
     public EndpointDetails withAwsGroundStationAgentEndpoint(AwsGroundStationAgentEndpoint awsGroundStationAgentEndpoint) {
         this.awsGroundStationAgentEndpoint = awsGroundStationAgentEndpoint;
         return this;
@@ -23,17 +24,38 @@ public class EndpointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public DataflowEndpoint endpoint;
+
     public EndpointDetails withEndpoint(DataflowEndpoint endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("healthReasons")
+    public CapabilityHealthReasonEnum[] healthReasons;
+
+    public EndpointDetails withHealthReasons(CapabilityHealthReasonEnum[] healthReasons) {
+        this.healthReasons = healthReasons;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("healthStatus")
+    public CapabilityHealthEnum healthStatus;
+
+    public EndpointDetails withHealthStatus(CapabilityHealthEnum healthStatus) {
+        this.healthStatus = healthStatus;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityDetails")
     public SecurityDetails securityDetails;
+
     public EndpointDetails withSecurityDetails(SecurityDetails securityDetails) {
         this.securityDetails = securityDetails;
         return this;
     }
     
+    public EndpointDetails(){}
 }

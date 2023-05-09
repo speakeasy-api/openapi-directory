@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsGetAudienceRequest {
@@ -12,6 +13,7 @@ public class AnalyticsGetAudienceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public AnalyticsGetAudienceRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsGetAudienceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=audience_name")
     public String audienceName;
+
     public AnalyticsGetAudienceRequest withAudienceName(String audienceName) {
         this.audienceName = audienceName;
         return this;
@@ -32,9 +35,15 @@ public class AnalyticsGetAudienceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public AnalyticsGetAudienceRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public AnalyticsGetAudienceRequest(@JsonProperty("app_name") String appName, @JsonProperty("audience_name") String audienceName, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.audienceName = audienceName;
+        this.ownerName = ownerName;
+  }
 }

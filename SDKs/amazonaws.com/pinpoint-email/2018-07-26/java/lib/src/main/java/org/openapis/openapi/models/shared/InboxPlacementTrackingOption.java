@@ -15,6 +15,7 @@ public class InboxPlacementTrackingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Global")
     public Boolean global;
+
     public InboxPlacementTrackingOption withGlobal(Boolean global) {
         this.global = global;
         return this;
@@ -23,9 +24,11 @@ public class InboxPlacementTrackingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrackedIsps")
     public String[] trackedIsps;
+
     public InboxPlacementTrackingOption withTrackedIsps(String[] trackedIsps) {
         this.trackedIsps = trackedIsps;
         return this;
     }
     
+    public InboxPlacementTrackingOption(){}
 }

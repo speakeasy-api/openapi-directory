@@ -12,6 +12,7 @@ public class WebhookLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     public LinksElement company;
+
     public WebhookLinks withCompany(LinksElement company) {
         this.company = company;
         return this;
@@ -19,6 +20,7 @@ public class WebhookLinks {
     
     @JsonProperty("generateHmac")
     public LinksElement generateHmac;
+
     public WebhookLinks withGenerateHmac(LinksElement generateHmac) {
         this.generateHmac = generateHmac;
         return this;
@@ -27,6 +29,7 @@ public class WebhookLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant")
     public LinksElement merchant;
+
     public WebhookLinks withMerchant(LinksElement merchant) {
         this.merchant = merchant;
         return this;
@@ -34,6 +37,7 @@ public class WebhookLinks {
     
     @JsonProperty("self")
     public LinksElement self;
+
     public WebhookLinks withSelf(LinksElement self) {
         this.self = self;
         return this;
@@ -41,9 +45,15 @@ public class WebhookLinks {
     
     @JsonProperty("testWebhook")
     public LinksElement testWebhook;
+
     public WebhookLinks withTestWebhook(LinksElement testWebhook) {
         this.testWebhook = testWebhook;
         return this;
     }
     
+    public WebhookLinks(@JsonProperty("generateHmac") LinksElement generateHmac, @JsonProperty("self") LinksElement self, @JsonProperty("testWebhook") LinksElement testWebhook) {
+        this.generateHmac = generateHmac;
+        this.self = self;
+        this.testWebhook = testWebhook;
+  }
 }

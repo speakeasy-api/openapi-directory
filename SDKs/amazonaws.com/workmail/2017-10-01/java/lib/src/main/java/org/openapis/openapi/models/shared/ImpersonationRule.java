@@ -15,6 +15,7 @@ public class ImpersonationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ImpersonationRule withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class ImpersonationRule {
     
     @JsonProperty("Effect")
     public AccessEffectEnum effect;
+
     public ImpersonationRule withEffect(AccessEffectEnum effect) {
         this.effect = effect;
         return this;
@@ -29,6 +31,7 @@ public class ImpersonationRule {
     
     @JsonProperty("ImpersonationRuleId")
     public String impersonationRuleId;
+
     public ImpersonationRule withImpersonationRuleId(String impersonationRuleId) {
         this.impersonationRuleId = impersonationRuleId;
         return this;
@@ -37,6 +40,7 @@ public class ImpersonationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ImpersonationRule withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +49,7 @@ public class ImpersonationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotTargetUsers")
     public String[] notTargetUsers;
+
     public ImpersonationRule withNotTargetUsers(String[] notTargetUsers) {
         this.notTargetUsers = notTargetUsers;
         return this;
@@ -53,9 +58,14 @@ public class ImpersonationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetUsers")
     public String[] targetUsers;
+
     public ImpersonationRule withTargetUsers(String[] targetUsers) {
         this.targetUsers = targetUsers;
         return this;
     }
     
+    public ImpersonationRule(@JsonProperty("Effect") AccessEffectEnum effect, @JsonProperty("ImpersonationRuleId") String impersonationRuleId) {
+        this.effect = effect;
+        this.impersonationRuleId = impersonationRuleId;
+  }
 }

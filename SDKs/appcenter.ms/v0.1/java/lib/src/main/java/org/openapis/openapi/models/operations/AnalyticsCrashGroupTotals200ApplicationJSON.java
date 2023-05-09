@@ -15,6 +15,7 @@ public class AnalyticsCrashGroupTotals200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crash_count")
     public Long crashCount;
+
     public AnalyticsCrashGroupTotals200ApplicationJSON withCrashCount(Long crashCount) {
         this.crashCount = crashCount;
         return this;
@@ -23,9 +24,11 @@ public class AnalyticsCrashGroupTotals200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_count")
     public Long deviceCount;
+
     public AnalyticsCrashGroupTotals200ApplicationJSON withDeviceCount(Long deviceCount) {
         this.deviceCount = deviceCount;
         return this;
     }
     
+    public AnalyticsCrashGroupTotals200ApplicationJSON(){}
 }

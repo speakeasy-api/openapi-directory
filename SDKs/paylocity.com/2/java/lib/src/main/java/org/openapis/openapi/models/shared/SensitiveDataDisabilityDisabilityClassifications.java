@@ -18,9 +18,11 @@ public class SensitiveDataDisabilityDisabilityClassifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classification")
     public String classification;
+
     public SensitiveDataDisabilityDisabilityClassifications withClassification(String classification) {
         this.classification = classification;
         return this;
     }
     
+    public SensitiveDataDisabilityDisabilityClassifications(){}
 }

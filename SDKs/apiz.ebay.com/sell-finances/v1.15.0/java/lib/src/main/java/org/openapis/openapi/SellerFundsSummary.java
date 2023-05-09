@@ -59,11 +59,9 @@ public class SellerFundsSummary {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSellerFundsSummaryResponse res = new org.openapis.openapi.models.operations.GetSellerFundsSummaryResponse() {{
+        org.openapis.openapi.models.operations.GetSellerFundsSummaryResponse res = new org.openapis.openapi.models.operations.GetSellerFundsSummaryResponse(contentType, httpRes.statusCode()) {{
             sellerFundsSummaryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class ScheduleAByOccupationPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public ScheduleAByOccupationPage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class ScheduleAByOccupationPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ScheduleAByOccupation[] results;
+
     public ScheduleAByOccupationPage withResults(ScheduleAByOccupation[] results) {
         this.results = results;
         return this;
     }
     
+    public ScheduleAByOccupationPage(){}
 }

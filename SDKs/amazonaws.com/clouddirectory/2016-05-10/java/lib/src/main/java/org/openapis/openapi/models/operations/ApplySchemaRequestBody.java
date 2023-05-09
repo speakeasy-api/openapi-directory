@@ -12,9 +12,13 @@ public class ApplySchemaRequestBody {
      */
     @JsonProperty("PublishedSchemaArn")
     public String publishedSchemaArn;
+
     public ApplySchemaRequestBody withPublishedSchemaArn(String publishedSchemaArn) {
         this.publishedSchemaArn = publishedSchemaArn;
         return this;
     }
     
+    public ApplySchemaRequestBody(@JsonProperty("PublishedSchemaArn") String publishedSchemaArn) {
+        this.publishedSchemaArn = publishedSchemaArn;
+  }
 }

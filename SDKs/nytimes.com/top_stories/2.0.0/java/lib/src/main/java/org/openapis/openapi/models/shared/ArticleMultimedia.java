@@ -12,6 +12,7 @@ public class ArticleMultimedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caption")
     public String caption;
+
     public ArticleMultimedia withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -20,6 +21,7 @@ public class ArticleMultimedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public ArticleMultimedia withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -28,6 +30,7 @@ public class ArticleMultimedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
+
     public ArticleMultimedia withFormat(String format) {
         this.format = format;
         return this;
@@ -36,6 +39,7 @@ public class ArticleMultimedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Long height;
+
     public ArticleMultimedia withHeight(Long height) {
         this.height = height;
         return this;
@@ -44,6 +48,7 @@ public class ArticleMultimedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtype")
     public String subtype;
+
     public ArticleMultimedia withSubtype(String subtype) {
         this.subtype = subtype;
         return this;
@@ -52,6 +57,7 @@ public class ArticleMultimedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ArticleMultimedia withType(String type) {
         this.type = type;
         return this;
@@ -60,6 +66,7 @@ public class ArticleMultimedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ArticleMultimedia withUrl(String url) {
         this.url = url;
         return this;
@@ -68,9 +75,11 @@ public class ArticleMultimedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Long width;
+
     public ArticleMultimedia withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public ArticleMultimedia(){}
 }

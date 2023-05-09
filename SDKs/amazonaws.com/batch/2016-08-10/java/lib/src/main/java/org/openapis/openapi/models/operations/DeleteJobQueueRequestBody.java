@@ -12,9 +12,13 @@ public class DeleteJobQueueRequestBody {
      */
     @JsonProperty("jobQueue")
     public String jobQueue;
+
     public DeleteJobQueueRequestBody withJobQueue(String jobQueue) {
         this.jobQueue = jobQueue;
         return this;
     }
     
+    public DeleteJobQueueRequestBody(@JsonProperty("jobQueue") String jobQueue) {
+        this.jobQueue = jobQueue;
+  }
 }

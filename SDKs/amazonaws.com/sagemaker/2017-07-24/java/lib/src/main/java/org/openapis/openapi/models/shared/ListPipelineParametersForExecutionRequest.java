@@ -12,6 +12,7 @@ public class ListPipelineParametersForExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPipelineParametersForExecutionRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListPipelineParametersForExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPipelineParametersForExecutionRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListPipelineParametersForExecutionRequest {
     
     @JsonProperty("PipelineExecutionArn")
     public String pipelineExecutionArn;
+
     public ListPipelineParametersForExecutionRequest withPipelineExecutionArn(String pipelineExecutionArn) {
         this.pipelineExecutionArn = pipelineExecutionArn;
         return this;
     }
     
+    public ListPipelineParametersForExecutionRequest(@JsonProperty("PipelineExecutionArn") String pipelineExecutionArn) {
+        this.pipelineExecutionArn = pipelineExecutionArn;
+  }
 }

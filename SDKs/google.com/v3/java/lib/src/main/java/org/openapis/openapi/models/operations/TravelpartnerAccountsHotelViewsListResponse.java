@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TravelpartnerAccountsHotelViewsListResponse {
     
     public String contentType;
+
     public TravelpartnerAccountsHotelViewsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TravelpartnerAccountsHotelViewsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListHotelViewsResponse listHotelViewsResponse;
+
     public TravelpartnerAccountsHotelViewsListResponse withListHotelViewsResponse(org.openapis.openapi.models.shared.ListHotelViewsResponse listHotelViewsResponse) {
         this.listHotelViewsResponse = listHotelViewsResponse;
         return this;
@@ -26,6 +29,7 @@ public class TravelpartnerAccountsHotelViewsListResponse {
     
     
     public Integer statusCode;
+
     public TravelpartnerAccountsHotelViewsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TravelpartnerAccountsHotelViewsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TravelpartnerAccountsHotelViewsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TravelpartnerAccountsHotelViewsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

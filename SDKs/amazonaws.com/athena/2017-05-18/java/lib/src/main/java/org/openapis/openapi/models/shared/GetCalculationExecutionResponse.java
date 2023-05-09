@@ -15,6 +15,7 @@ public class GetCalculationExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CalculationExecutionId")
     public String calculationExecutionId;
+
     public GetCalculationExecutionResponse withCalculationExecutionId(String calculationExecutionId) {
         this.calculationExecutionId = calculationExecutionId;
         return this;
@@ -23,6 +24,7 @@ public class GetCalculationExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GetCalculationExecutionResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class GetCalculationExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Result")
     public CalculationResult result;
+
     public GetCalculationExecutionResponse withResult(CalculationResult result) {
         this.result = result;
         return this;
@@ -39,6 +42,7 @@ public class GetCalculationExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionId")
     public String sessionId;
+
     public GetCalculationExecutionResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -47,6 +51,7 @@ public class GetCalculationExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statistics")
     public CalculationStatistics statistics;
+
     public GetCalculationExecutionResponse withStatistics(CalculationStatistics statistics) {
         this.statistics = statistics;
         return this;
@@ -55,6 +60,7 @@ public class GetCalculationExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CalculationStatus status;
+
     public GetCalculationExecutionResponse withStatus(CalculationStatus status) {
         this.status = status;
         return this;
@@ -63,9 +69,11 @@ public class GetCalculationExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkingDirectory")
     public String workingDirectory;
+
     public GetCalculationExecutionResponse withWorkingDirectory(String workingDirectory) {
         this.workingDirectory = workingDirectory;
         return this;
     }
     
+    public GetCalculationExecutionResponse(){}
 }

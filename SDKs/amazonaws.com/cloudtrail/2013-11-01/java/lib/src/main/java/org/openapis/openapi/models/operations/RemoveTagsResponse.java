@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveTagsResponse {
@@ -12,6 +13,7 @@ public class RemoveTagsResponse {
      */
     
     public Object channelNotFoundException;
+
     public RemoveTagsResponse withChannelNotFoundException(Object channelNotFoundException) {
         this.channelNotFoundException = channelNotFoundException;
         return this;
@@ -22,6 +24,7 @@ public class RemoveTagsResponse {
      */
     
     public Object cloudTrailARNInvalidException;
+
     public RemoveTagsResponse withCloudTrailARNInvalidException(Object cloudTrailARNInvalidException) {
         this.cloudTrailARNInvalidException = cloudTrailARNInvalidException;
         return this;
@@ -29,6 +32,7 @@ public class RemoveTagsResponse {
     
     
     public String contentType;
+
     public RemoveTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RemoveTagsResponse {
      */
     
     public Object eventDataStoreNotFoundException;
+
     public RemoveTagsResponse withEventDataStoreNotFoundException(Object eventDataStoreNotFoundException) {
         this.eventDataStoreNotFoundException = eventDataStoreNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveTagsResponse {
      */
     
     public Object inactiveEventDataStoreException;
+
     public RemoveTagsResponse withInactiveEventDataStoreException(Object inactiveEventDataStoreException) {
         this.inactiveEventDataStoreException = inactiveEventDataStoreException;
         return this;
@@ -59,6 +65,7 @@ public class RemoveTagsResponse {
      */
     
     public Object invalidTagParameterException;
+
     public RemoveTagsResponse withInvalidTagParameterException(Object invalidTagParameterException) {
         this.invalidTagParameterException = invalidTagParameterException;
         return this;
@@ -69,6 +76,7 @@ public class RemoveTagsResponse {
      */
     
     public Object invalidTrailNameException;
+
     public RemoveTagsResponse withInvalidTrailNameException(Object invalidTrailNameException) {
         this.invalidTrailNameException = invalidTrailNameException;
         return this;
@@ -79,6 +87,7 @@ public class RemoveTagsResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public RemoveTagsResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -89,6 +98,7 @@ public class RemoveTagsResponse {
      */
     
     public Object notOrganizationMasterAccountException;
+
     public RemoveTagsResponse withNotOrganizationMasterAccountException(Object notOrganizationMasterAccountException) {
         this.notOrganizationMasterAccountException = notOrganizationMasterAccountException;
         return this;
@@ -99,6 +109,7 @@ public class RemoveTagsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public RemoveTagsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -109,6 +120,7 @@ public class RemoveTagsResponse {
      */
     
     public java.util.Map<String, Object> removeTagsResponse;
+
     public RemoveTagsResponse withRemoveTagsResponse(java.util.Map<String, Object> removeTagsResponse) {
         this.removeTagsResponse = removeTagsResponse;
         return this;
@@ -119,6 +131,7 @@ public class RemoveTagsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RemoveTagsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -126,6 +139,7 @@ public class RemoveTagsResponse {
     
     
     public Integer statusCode;
+
     public RemoveTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class RemoveTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,6 +158,7 @@ public class RemoveTagsResponse {
      */
     
     public Object resourceTypeNotSupportedException;
+
     public RemoveTagsResponse withResourceTypeNotSupportedException(Object resourceTypeNotSupportedException) {
         this.resourceTypeNotSupportedException = resourceTypeNotSupportedException;
         return this;
@@ -153,9 +169,14 @@ public class RemoveTagsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public RemoveTagsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public RemoveTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

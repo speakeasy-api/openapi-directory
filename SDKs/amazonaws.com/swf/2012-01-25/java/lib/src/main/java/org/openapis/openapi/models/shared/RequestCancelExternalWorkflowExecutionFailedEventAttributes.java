@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RequestCancelExternalWorkflowExecutionFailedEventAttributes {
     @JsonProperty("cause")
     public RequestCancelExternalWorkflowExecutionFailedCauseEnum cause;
+
     public RequestCancelExternalWorkflowExecutionFailedEventAttributes withCause(RequestCancelExternalWorkflowExecutionFailedCauseEnum cause) {
         this.cause = cause;
         return this;
@@ -22,6 +23,7 @@ public class RequestCancelExternalWorkflowExecutionFailedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public String control;
+
     public RequestCancelExternalWorkflowExecutionFailedEventAttributes withControl(String control) {
         this.control = control;
         return this;
@@ -29,6 +31,7 @@ public class RequestCancelExternalWorkflowExecutionFailedEventAttributes {
     
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public RequestCancelExternalWorkflowExecutionFailedEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
@@ -36,6 +39,7 @@ public class RequestCancelExternalWorkflowExecutionFailedEventAttributes {
     
     @JsonProperty("initiatedEventId")
     public Long initiatedEventId;
+
     public RequestCancelExternalWorkflowExecutionFailedEventAttributes withInitiatedEventId(Long initiatedEventId) {
         this.initiatedEventId = initiatedEventId;
         return this;
@@ -44,6 +48,7 @@ public class RequestCancelExternalWorkflowExecutionFailedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runId")
     public String runId;
+
     public RequestCancelExternalWorkflowExecutionFailedEventAttributes withRunId(String runId) {
         this.runId = runId;
         return this;
@@ -51,9 +56,16 @@ public class RequestCancelExternalWorkflowExecutionFailedEventAttributes {
     
     @JsonProperty("workflowId")
     public String workflowId;
+
     public RequestCancelExternalWorkflowExecutionFailedEventAttributes withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public RequestCancelExternalWorkflowExecutionFailedEventAttributes(@JsonProperty("cause") RequestCancelExternalWorkflowExecutionFailedCauseEnum cause, @JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId, @JsonProperty("initiatedEventId") Long initiatedEventId, @JsonProperty("workflowId") String workflowId) {
+        this.cause = cause;
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+        this.initiatedEventId = initiatedEventId;
+        this.workflowId = workflowId;
+  }
 }

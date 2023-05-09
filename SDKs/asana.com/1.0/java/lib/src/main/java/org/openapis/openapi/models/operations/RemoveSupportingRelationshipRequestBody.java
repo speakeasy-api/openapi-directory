@@ -15,9 +15,11 @@ public class RemoveSupportingRelationshipRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.GoalRemoveSupportingRelationshipRequest data;
+
     public RemoveSupportingRelationshipRequestBody withData(org.openapis.openapi.models.shared.GoalRemoveSupportingRelationshipRequest data) {
         this.data = data;
         return this;
     }
     
+    public RemoveSupportingRelationshipRequestBody(){}
 }

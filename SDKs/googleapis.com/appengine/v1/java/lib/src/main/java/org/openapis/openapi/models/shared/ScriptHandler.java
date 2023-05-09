@@ -18,9 +18,11 @@ public class ScriptHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptPath")
     public String scriptPath;
+
     public ScriptHandler withScriptPath(String scriptPath) {
         this.scriptPath = scriptPath;
         return this;
     }
     
+    public ScriptHandler(){}
 }

@@ -22,6 +22,7 @@ public class OpsItemSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ActualEndTime")
     public OffsetDateTime actualEndTime;
+
     public OpsItemSummary withActualEndTime(OffsetDateTime actualEndTime) {
         this.actualEndTime = actualEndTime;
         return this;
@@ -32,6 +33,7 @@ public class OpsItemSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ActualStartTime")
     public OffsetDateTime actualStartTime;
+
     public OpsItemSummary withActualStartTime(OffsetDateTime actualStartTime) {
         this.actualStartTime = actualStartTime;
         return this;
@@ -40,6 +42,7 @@ public class OpsItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Category")
     public String category;
+
     public OpsItemSummary withCategory(String category) {
         this.category = category;
         return this;
@@ -48,6 +51,7 @@ public class OpsItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public String createdBy;
+
     public OpsItemSummary withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -58,6 +62,7 @@ public class OpsItemSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public OpsItemSummary withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -66,6 +71,7 @@ public class OpsItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public String lastModifiedBy;
+
     public OpsItemSummary withLastModifiedBy(String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -76,6 +82,7 @@ public class OpsItemSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public OpsItemSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -84,6 +91,7 @@ public class OpsItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationalData")
     public java.util.Map<String, OpsItemDataValue> operationalData;
+
     public OpsItemSummary withOperationalData(java.util.Map<String, OpsItemDataValue> operationalData) {
         this.operationalData = operationalData;
         return this;
@@ -92,6 +100,7 @@ public class OpsItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemId")
     public String opsItemId;
+
     public OpsItemSummary withOpsItemId(String opsItemId) {
         this.opsItemId = opsItemId;
         return this;
@@ -100,6 +109,7 @@ public class OpsItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemType")
     public String opsItemType;
+
     public OpsItemSummary withOpsItemType(String opsItemType) {
         this.opsItemType = opsItemType;
         return this;
@@ -110,6 +120,7 @@ public class OpsItemSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("PlannedEndTime")
     public OffsetDateTime plannedEndTime;
+
     public OpsItemSummary withPlannedEndTime(OffsetDateTime plannedEndTime) {
         this.plannedEndTime = plannedEndTime;
         return this;
@@ -120,6 +131,7 @@ public class OpsItemSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("PlannedStartTime")
     public OffsetDateTime plannedStartTime;
+
     public OpsItemSummary withPlannedStartTime(OffsetDateTime plannedStartTime) {
         this.plannedStartTime = plannedStartTime;
         return this;
@@ -128,6 +140,7 @@ public class OpsItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public OpsItemSummary withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -136,6 +149,7 @@ public class OpsItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public String severity;
+
     public OpsItemSummary withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -144,6 +158,7 @@ public class OpsItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public OpsItemSummary withSource(String source) {
         this.source = source;
         return this;
@@ -152,6 +167,7 @@ public class OpsItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public OpsItemStatusEnum status;
+
     public OpsItemSummary withStatus(OpsItemStatusEnum status) {
         this.status = status;
         return this;
@@ -160,9 +176,11 @@ public class OpsItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public OpsItemSummary withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public OpsItemSummary(){}
 }

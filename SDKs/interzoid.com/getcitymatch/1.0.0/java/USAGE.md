@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetcitymatchRequest;
 import org.openapis.openapi.models.operations.GetcitymatchResponse;
 
@@ -13,18 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetcitymatchRequest req = new GetcitymatchRequest() {{
-                city = "Laruecester";
-                license = "quibusdam";
-            }}            
+            GetcitymatchRequest req = new GetcitymatchRequest("corrupti", "provident");            
 
             GetcitymatchResponse res = sdk.cityNameSimilarityKey.getcitymatch(req);
 
-            if (res.getcitymatch200ApplicationJSONObject.isPresent()) {
+            if (res.getcitymatch200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

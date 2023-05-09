@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointGetByTypeWithPaginationRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
     public Integer page;
+
     public StopPointGetByTypeWithPaginationRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -16,9 +18,14 @@ public class StopPointGetByTypeWithPaginationRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=types")
     public String[] types;
+
     public StopPointGetByTypeWithPaginationRequest withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public StopPointGetByTypeWithPaginationRequest(@JsonProperty("page") Integer page, @JsonProperty("types") String[] types) {
+        this.page = page;
+        this.types = types;
+  }
 }

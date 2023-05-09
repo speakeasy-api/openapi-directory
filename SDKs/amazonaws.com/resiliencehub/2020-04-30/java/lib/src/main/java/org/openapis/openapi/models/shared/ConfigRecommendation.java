@@ -15,6 +15,7 @@ public class ConfigRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appComponentName")
     public String appComponentName;
+
     public ConfigRecommendation withAppComponentName(String appComponentName) {
         this.appComponentName = appComponentName;
         return this;
@@ -23,6 +24,7 @@ public class ConfigRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compliance")
     public java.util.Map<String, DisruptionCompliance> compliance;
+
     public ConfigRecommendation withCompliance(java.util.Map<String, DisruptionCompliance> compliance) {
         this.compliance = compliance;
         return this;
@@ -31,6 +33,7 @@ public class ConfigRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost")
     public Cost cost;
+
     public ConfigRecommendation withCost(Cost cost) {
         this.cost = cost;
         return this;
@@ -39,6 +42,7 @@ public class ConfigRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ConfigRecommendation withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +51,7 @@ public class ConfigRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("haArchitecture")
     public HaArchitectureEnum haArchitecture;
+
     public ConfigRecommendation withHaArchitecture(HaArchitectureEnum haArchitecture) {
         this.haArchitecture = haArchitecture;
         return this;
@@ -54,6 +59,7 @@ public class ConfigRecommendation {
     
     @JsonProperty("name")
     public String name;
+
     public ConfigRecommendation withName(String name) {
         this.name = name;
         return this;
@@ -61,6 +67,7 @@ public class ConfigRecommendation {
     
     @JsonProperty("optimizationType")
     public ConfigRecommendationOptimizationTypeEnum optimizationType;
+
     public ConfigRecommendation withOptimizationType(ConfigRecommendationOptimizationTypeEnum optimizationType) {
         this.optimizationType = optimizationType;
         return this;
@@ -69,6 +76,7 @@ public class ConfigRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationCompliance")
     public java.util.Map<String, RecommendationDisruptionCompliance> recommendationCompliance;
+
     public ConfigRecommendation withRecommendationCompliance(java.util.Map<String, RecommendationDisruptionCompliance> recommendationCompliance) {
         this.recommendationCompliance = recommendationCompliance;
         return this;
@@ -76,6 +84,7 @@ public class ConfigRecommendation {
     
     @JsonProperty("referenceId")
     public String referenceId;
+
     public ConfigRecommendation withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -84,9 +93,15 @@ public class ConfigRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedChanges")
     public String[] suggestedChanges;
+
     public ConfigRecommendation withSuggestedChanges(String[] suggestedChanges) {
         this.suggestedChanges = suggestedChanges;
         return this;
     }
     
+    public ConfigRecommendation(@JsonProperty("name") String name, @JsonProperty("optimizationType") ConfigRecommendationOptimizationTypeEnum optimizationType, @JsonProperty("referenceId") String referenceId) {
+        this.name = name;
+        this.optimizationType = optimizationType;
+        this.referenceId = referenceId;
+  }
 }

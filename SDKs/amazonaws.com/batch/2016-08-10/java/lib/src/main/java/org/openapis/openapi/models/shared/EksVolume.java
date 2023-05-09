@@ -15,6 +15,7 @@ public class EksVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emptyDir")
     public EksEmptyDir emptyDir;
+
     public EksVolume withEmptyDir(EksEmptyDir emptyDir) {
         this.emptyDir = emptyDir;
         return this;
@@ -23,6 +24,7 @@ public class EksVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostPath")
     public EksHostPath hostPath;
+
     public EksVolume withHostPath(EksHostPath hostPath) {
         this.hostPath = hostPath;
         return this;
@@ -30,6 +32,7 @@ public class EksVolume {
     
     @JsonProperty("name")
     public String name;
+
     public EksVolume withName(String name) {
         this.name = name;
         return this;
@@ -38,9 +41,13 @@ public class EksVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public EksSecret secret;
+
     public EksVolume withSecret(EksSecret secret) {
         this.secret = secret;
         return this;
     }
     
+    public EksVolume(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateLocationNfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountOptions")
     public NfsMountOptions mountOptions;
+
     public CreateLocationNfsRequest withMountOptions(NfsMountOptions mountOptions) {
         this.mountOptions = mountOptions;
         return this;
@@ -22,6 +23,7 @@ public class CreateLocationNfsRequest {
     
     @JsonProperty("OnPremConfig")
     public OnPremConfig onPremConfig;
+
     public CreateLocationNfsRequest withOnPremConfig(OnPremConfig onPremConfig) {
         this.onPremConfig = onPremConfig;
         return this;
@@ -29,6 +31,7 @@ public class CreateLocationNfsRequest {
     
     @JsonProperty("ServerHostname")
     public String serverHostname;
+
     public CreateLocationNfsRequest withServerHostname(String serverHostname) {
         this.serverHostname = serverHostname;
         return this;
@@ -36,6 +39,7 @@ public class CreateLocationNfsRequest {
     
     @JsonProperty("Subdirectory")
     public String subdirectory;
+
     public CreateLocationNfsRequest withSubdirectory(String subdirectory) {
         this.subdirectory = subdirectory;
         return this;
@@ -44,9 +48,15 @@ public class CreateLocationNfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagListEntry[] tags;
+
     public CreateLocationNfsRequest withTags(TagListEntry[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLocationNfsRequest(@JsonProperty("OnPremConfig") OnPremConfig onPremConfig, @JsonProperty("ServerHostname") String serverHostname, @JsonProperty("Subdirectory") String subdirectory) {
+        this.onPremConfig = onPremConfig;
+        this.serverHostname = serverHostname;
+        this.subdirectory = subdirectory;
+  }
 }

@@ -59,11 +59,9 @@ public class Quota {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContainersQuotaResponse res = new org.openapis.openapi.models.operations.GetContainersQuotaResponse() {{
+        org.openapis.openapi.models.operations.GetContainersQuotaResponse res = new org.openapis.openapi.models.operations.GetContainersQuotaResponse(contentType, httpRes.statusCode()) {{
             containersQuotaInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -112,11 +110,9 @@ public class Quota {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContainersUsageResponse res = new org.openapis.openapi.models.operations.GetContainersUsageResponse() {{
+        org.openapis.openapi.models.operations.GetContainersUsageResponse res = new org.openapis.openapi.models.operations.GetContainersUsageResponse(contentType, httpRes.statusCode()) {{
             containersUsageInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -168,10 +164,8 @@ public class Quota {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutContainersQuotaResponse res = new org.openapis.openapi.models.operations.PutContainersQuotaResponse() {{
+        org.openapis.openapi.models.operations.PutContainersQuotaResponse res = new org.openapis.openapi.models.operations.PutContainersQuotaResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 500) {

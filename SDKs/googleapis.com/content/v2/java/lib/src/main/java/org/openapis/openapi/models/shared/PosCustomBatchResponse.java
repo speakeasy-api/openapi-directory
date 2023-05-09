@@ -18,6 +18,7 @@ public class PosCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public PosCustomBatchResponseEntry[] entries;
+
     public PosCustomBatchResponse withEntries(PosCustomBatchResponseEntry[] entries) {
         this.entries = entries;
         return this;
@@ -29,9 +30,11 @@ public class PosCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PosCustomBatchResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public PosCustomBatchResponse(){}
 }

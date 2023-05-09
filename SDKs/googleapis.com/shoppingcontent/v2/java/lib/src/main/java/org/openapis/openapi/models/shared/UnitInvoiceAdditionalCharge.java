@@ -12,6 +12,7 @@ public class UnitInvoiceAdditionalCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalChargeAmount")
     public Amount additionalChargeAmount;
+
     public UnitInvoiceAdditionalCharge withAdditionalChargeAmount(Amount additionalChargeAmount) {
         this.additionalChargeAmount = additionalChargeAmount;
         return this;
@@ -23,6 +24,7 @@ public class UnitInvoiceAdditionalCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalChargePromotions")
     public Promotion[] additionalChargePromotions;
+
     public UnitInvoiceAdditionalCharge withAdditionalChargePromotions(Promotion[] additionalChargePromotions) {
         this.additionalChargePromotions = additionalChargePromotions;
         return this;
@@ -34,9 +36,11 @@ public class UnitInvoiceAdditionalCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public UnitInvoiceAdditionalCharge withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UnitInvoiceAdditionalCharge(){}
 }

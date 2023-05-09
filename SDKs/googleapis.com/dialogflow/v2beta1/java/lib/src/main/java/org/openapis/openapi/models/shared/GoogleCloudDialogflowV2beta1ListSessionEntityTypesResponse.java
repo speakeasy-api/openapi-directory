@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1ListSessionEntityTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowV2beta1ListSessionEntityTypesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1ListSessionEntityTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionEntityTypes")
     public GoogleCloudDialogflowV2beta1SessionEntityType[] sessionEntityTypes;
+
     public GoogleCloudDialogflowV2beta1ListSessionEntityTypesResponse withSessionEntityTypes(GoogleCloudDialogflowV2beta1SessionEntityType[] sessionEntityTypes) {
         this.sessionEntityTypes = sessionEntityTypes;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1ListSessionEntityTypesResponse(){}
 }

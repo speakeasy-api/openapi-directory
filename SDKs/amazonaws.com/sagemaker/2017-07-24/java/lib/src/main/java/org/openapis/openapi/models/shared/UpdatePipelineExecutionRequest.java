@@ -12,6 +12,7 @@ public class UpdatePipelineExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelismConfiguration")
     public ParallelismConfiguration parallelismConfiguration;
+
     public UpdatePipelineExecutionRequest withParallelismConfiguration(ParallelismConfiguration parallelismConfiguration) {
         this.parallelismConfiguration = parallelismConfiguration;
         return this;
@@ -19,6 +20,7 @@ public class UpdatePipelineExecutionRequest {
     
     @JsonProperty("PipelineExecutionArn")
     public String pipelineExecutionArn;
+
     public UpdatePipelineExecutionRequest withPipelineExecutionArn(String pipelineExecutionArn) {
         this.pipelineExecutionArn = pipelineExecutionArn;
         return this;
@@ -27,6 +29,7 @@ public class UpdatePipelineExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionDescription")
     public String pipelineExecutionDescription;
+
     public UpdatePipelineExecutionRequest withPipelineExecutionDescription(String pipelineExecutionDescription) {
         this.pipelineExecutionDescription = pipelineExecutionDescription;
         return this;
@@ -35,9 +38,13 @@ public class UpdatePipelineExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionDisplayName")
     public String pipelineExecutionDisplayName;
+
     public UpdatePipelineExecutionRequest withPipelineExecutionDisplayName(String pipelineExecutionDisplayName) {
         this.pipelineExecutionDisplayName = pipelineExecutionDisplayName;
         return this;
     }
     
+    public UpdatePipelineExecutionRequest(@JsonProperty("PipelineExecutionArn") String pipelineExecutionArn) {
+        this.pipelineExecutionArn = pipelineExecutionArn;
+  }
 }

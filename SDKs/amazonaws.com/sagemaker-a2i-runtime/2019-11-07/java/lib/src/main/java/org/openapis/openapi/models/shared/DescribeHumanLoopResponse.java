@@ -21,6 +21,7 @@ public class DescribeHumanLoopResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeHumanLoopResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class DescribeHumanLoopResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureCode")
     public String failureCode;
+
     public DescribeHumanLoopResponse withFailureCode(String failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -37,6 +39,7 @@ public class DescribeHumanLoopResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeHumanLoopResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -44,6 +47,7 @@ public class DescribeHumanLoopResponse {
     
     @JsonProperty("FlowDefinitionArn")
     public String flowDefinitionArn;
+
     public DescribeHumanLoopResponse withFlowDefinitionArn(String flowDefinitionArn) {
         this.flowDefinitionArn = flowDefinitionArn;
         return this;
@@ -51,6 +55,7 @@ public class DescribeHumanLoopResponse {
     
     @JsonProperty("HumanLoopArn")
     public String humanLoopArn;
+
     public DescribeHumanLoopResponse withHumanLoopArn(String humanLoopArn) {
         this.humanLoopArn = humanLoopArn;
         return this;
@@ -58,6 +63,7 @@ public class DescribeHumanLoopResponse {
     
     @JsonProperty("HumanLoopName")
     public String humanLoopName;
+
     public DescribeHumanLoopResponse withHumanLoopName(String humanLoopName) {
         this.humanLoopName = humanLoopName;
         return this;
@@ -66,6 +72,7 @@ public class DescribeHumanLoopResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLoopOutput")
     public HumanLoopOutput humanLoopOutput;
+
     public DescribeHumanLoopResponse withHumanLoopOutput(HumanLoopOutput humanLoopOutput) {
         this.humanLoopOutput = humanLoopOutput;
         return this;
@@ -73,9 +80,17 @@ public class DescribeHumanLoopResponse {
     
     @JsonProperty("HumanLoopStatus")
     public HumanLoopStatusEnum humanLoopStatus;
+
     public DescribeHumanLoopResponse withHumanLoopStatus(HumanLoopStatusEnum humanLoopStatus) {
         this.humanLoopStatus = humanLoopStatus;
         return this;
     }
     
+    public DescribeHumanLoopResponse(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("FlowDefinitionArn") String flowDefinitionArn, @JsonProperty("HumanLoopArn") String humanLoopArn, @JsonProperty("HumanLoopName") String humanLoopName, @JsonProperty("HumanLoopStatus") HumanLoopStatusEnum humanLoopStatus) {
+        this.creationTime = creationTime;
+        this.flowDefinitionArn = flowDefinitionArn;
+        this.humanLoopArn = humanLoopArn;
+        this.humanLoopName = humanLoopName;
+        this.humanLoopStatus = humanLoopStatus;
+  }
 }

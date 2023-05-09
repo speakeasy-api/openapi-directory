@@ -15,6 +15,7 @@ public class DynamicPartitioningConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public DynamicPartitioningConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,9 +24,11 @@ public class DynamicPartitioningConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryOptions")
     public RetryOptions retryOptions;
+
     public DynamicPartitioningConfiguration withRetryOptions(RetryOptions retryOptions) {
         this.retryOptions = retryOptions;
         return this;
     }
     
+    public DynamicPartitioningConfiguration(){}
 }

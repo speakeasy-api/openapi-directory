@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSessionResponse {
@@ -12,6 +13,7 @@ public class GetSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetSessionResponse {
     
     
     public String contentType;
+
     public GetSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSessionResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetSessionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSessionResponse getSessionResponse;
+
     public GetSessionResponse withGetSessionResponse(org.openapis.openapi.models.shared.GetSessionResponse getSessionResponse) {
         this.getSessionResponse = getSessionResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetSessionResponse {
      */
     
     public Object internalServiceException;
+
     public GetSessionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetSessionResponse {
      */
     
     public Object invalidInputException;
+
     public GetSessionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class GetSessionResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetSessionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class GetSessionResponse {
     
     
     public Integer statusCode;
+
     public GetSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

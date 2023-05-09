@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PdfOcrPostRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PdfOcrPostRequestBody requestBody;
+
     public PdfOcrPostRequest withRequestBody(PdfOcrPostRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PdfOcrPostRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=language")
     public String language;
+
     public PdfOcrPostRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -29,6 +32,7 @@ public class PdfOcrPostRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=preprocessing")
     public String preprocessing;
+
     public PdfOcrPostRequest withPreprocessing(String preprocessing) {
         this.preprocessing = preprocessing;
         return this;
@@ -39,9 +43,13 @@ public class PdfOcrPostRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=recognitionMode")
     public String recognitionMode;
+
     public PdfOcrPostRequest withRecognitionMode(String recognitionMode) {
         this.recognitionMode = recognitionMode;
         return this;
     }
     
+    public PdfOcrPostRequest(@JsonProperty("RequestBody") PdfOcrPostRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

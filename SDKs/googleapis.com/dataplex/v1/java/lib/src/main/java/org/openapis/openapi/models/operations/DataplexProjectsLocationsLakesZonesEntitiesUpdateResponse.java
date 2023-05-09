@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse {
     
     public String contentType;
+
     public DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDataplexV1Entity googleCloudDataplexV1Entity;
+
     public DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse withGoogleCloudDataplexV1Entity(org.openapis.openapi.models.shared.GoogleCloudDataplexV1Entity googleCloudDataplexV1Entity) {
         this.googleCloudDataplexV1Entity = googleCloudDataplexV1Entity;
         return this;
@@ -26,6 +29,7 @@ public class DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse {
     
     
     public Integer statusCode;
+
     public DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

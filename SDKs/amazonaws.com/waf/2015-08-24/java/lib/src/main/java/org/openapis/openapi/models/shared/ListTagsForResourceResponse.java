@@ -15,6 +15,7 @@ public class ListTagsForResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListTagsForResourceResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -23,9 +24,11 @@ public class ListTagsForResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagInfoForResource")
     public TagInfoForResource tagInfoForResource;
+
     public ListTagsForResourceResponse withTagInfoForResource(TagInfoForResource tagInfoForResource) {
         this.tagInfoForResource = tagInfoForResource;
         return this;
     }
     
+    public ListTagsForResourceResponse(){}
 }

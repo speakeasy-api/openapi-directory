@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedNodeExchangeStatusInputMessage {
     
     public String marker;
+
     public DescribeReservedNodeExchangeStatusInputMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class DescribeReservedNodeExchangeStatusInputMessage {
     
     
     public Long maxRecords;
+
     public DescribeReservedNodeExchangeStatusInputMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -23,6 +25,7 @@ public class DescribeReservedNodeExchangeStatusInputMessage {
     
     
     public String reservedNodeExchangeRequestId;
+
     public DescribeReservedNodeExchangeStatusInputMessage withReservedNodeExchangeRequestId(String reservedNodeExchangeRequestId) {
         this.reservedNodeExchangeRequestId = reservedNodeExchangeRequestId;
         return this;
@@ -30,9 +33,11 @@ public class DescribeReservedNodeExchangeStatusInputMessage {
     
     
     public String reservedNodeId;
+
     public DescribeReservedNodeExchangeStatusInputMessage withReservedNodeId(String reservedNodeId) {
         this.reservedNodeId = reservedNodeId;
         return this;
     }
     
+    public DescribeReservedNodeExchangeStatusInputMessage(){}
 }

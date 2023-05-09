@@ -15,6 +15,7 @@ public class PlayerLatencyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumIndividualPlayerLatencyMilliseconds")
     public Long maximumIndividualPlayerLatencyMilliseconds;
+
     public PlayerLatencyPolicy withMaximumIndividualPlayerLatencyMilliseconds(Long maximumIndividualPlayerLatencyMilliseconds) {
         this.maximumIndividualPlayerLatencyMilliseconds = maximumIndividualPlayerLatencyMilliseconds;
         return this;
@@ -23,9 +24,11 @@ public class PlayerLatencyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyDurationSeconds")
     public Long policyDurationSeconds;
+
     public PlayerLatencyPolicy withPolicyDurationSeconds(Long policyDurationSeconds) {
         this.policyDurationSeconds = policyDurationSeconds;
         return this;
     }
     
+    public PlayerLatencyPolicy(){}
 }

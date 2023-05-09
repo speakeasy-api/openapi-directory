@@ -15,6 +15,7 @@ public class PortfolioAddItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_after")
     public String insertAfter;
+
     public PortfolioAddItemRequest withInsertAfter(String insertAfter) {
         this.insertAfter = insertAfter;
         return this;
@@ -26,6 +27,7 @@ public class PortfolioAddItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_before")
     public String insertBefore;
+
     public PortfolioAddItemRequest withInsertBefore(String insertBefore) {
         this.insertBefore = insertBefore;
         return this;
@@ -36,9 +38,13 @@ public class PortfolioAddItemRequest {
      */
     @JsonProperty("item")
     public String item;
+
     public PortfolioAddItemRequest withItem(String item) {
         this.item = item;
         return this;
     }
     
+    public PortfolioAddItemRequest(@JsonProperty("item") String item) {
+        this.item = item;
+  }
 }

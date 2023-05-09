@@ -15,6 +15,7 @@ public class StartJobRunRequestBodyConfigurationOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationConfiguration")
     public org.openapis.openapi.models.shared.Configuration[] applicationConfiguration;
+
     public StartJobRunRequestBodyConfigurationOverrides withApplicationConfiguration(org.openapis.openapi.models.shared.Configuration[] applicationConfiguration) {
         this.applicationConfiguration = applicationConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class StartJobRunRequestBodyConfigurationOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoringConfiguration")
     public org.openapis.openapi.models.shared.MonitoringConfiguration monitoringConfiguration;
+
     public StartJobRunRequestBodyConfigurationOverrides withMonitoringConfiguration(org.openapis.openapi.models.shared.MonitoringConfiguration monitoringConfiguration) {
         this.monitoringConfiguration = monitoringConfiguration;
         return this;
     }
     
+    public StartJobRunRequestBodyConfigurationOverrides(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RenameDeviceRequest {
@@ -32,6 +33,7 @@ public class RenameDeviceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public RenameDeviceRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -42,6 +44,7 @@ public class RenameDeviceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public RenameDeviceRequest withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +65,7 @@ public class RenameDeviceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public RenameDeviceRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -72,9 +76,14 @@ public class RenameDeviceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public RenameDeviceRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RenameDeviceRequest(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

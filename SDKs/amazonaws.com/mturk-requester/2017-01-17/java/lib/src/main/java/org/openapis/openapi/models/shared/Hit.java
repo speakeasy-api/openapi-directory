@@ -20,6 +20,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssignmentDurationInSeconds")
     public Long assignmentDurationInSeconds;
+
     public Hit withAssignmentDurationInSeconds(Long assignmentDurationInSeconds) {
         this.assignmentDurationInSeconds = assignmentDurationInSeconds;
         return this;
@@ -28,6 +29,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoApprovalDelayInSeconds")
     public Long autoApprovalDelayInSeconds;
+
     public Hit withAutoApprovalDelayInSeconds(Long autoApprovalDelayInSeconds) {
         this.autoApprovalDelayInSeconds = autoApprovalDelayInSeconds;
         return this;
@@ -38,6 +40,7 @@ public class Hit {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Hit withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -46,6 +49,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Hit withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +60,7 @@ public class Hit {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Expiration")
     public OffsetDateTime expiration;
+
     public Hit withExpiration(OffsetDateTime expiration) {
         this.expiration = expiration;
         return this;
@@ -64,6 +69,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITGroupId")
     public String hitGroupId;
+
     public Hit withHITGroupId(String hitGroupId) {
         this.hitGroupId = hitGroupId;
         return this;
@@ -72,6 +78,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITId")
     public String hitId;
+
     public Hit withHITId(String hitId) {
         this.hitId = hitId;
         return this;
@@ -80,6 +87,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITLayoutId")
     public String hitLayoutId;
+
     public Hit withHITLayoutId(String hitLayoutId) {
         this.hitLayoutId = hitLayoutId;
         return this;
@@ -88,6 +96,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITReviewStatus")
     public HITReviewStatusEnum hitReviewStatus;
+
     public Hit withHITReviewStatus(HITReviewStatusEnum hitReviewStatus) {
         this.hitReviewStatus = hitReviewStatus;
         return this;
@@ -96,6 +105,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITStatus")
     public HITStatusEnum hitStatus;
+
     public Hit withHITStatus(HITStatusEnum hitStatus) {
         this.hitStatus = hitStatus;
         return this;
@@ -104,6 +114,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITTypeId")
     public String hitTypeId;
+
     public Hit withHITTypeId(String hitTypeId) {
         this.hitTypeId = hitTypeId;
         return this;
@@ -112,6 +123,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keywords")
     public String keywords;
+
     public Hit withKeywords(String keywords) {
         this.keywords = keywords;
         return this;
@@ -120,6 +132,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxAssignments")
     public Long maxAssignments;
+
     public Hit withMaxAssignments(Long maxAssignments) {
         this.maxAssignments = maxAssignments;
         return this;
@@ -128,6 +141,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfAssignmentsAvailable")
     public Long numberOfAssignmentsAvailable;
+
     public Hit withNumberOfAssignmentsAvailable(Long numberOfAssignmentsAvailable) {
         this.numberOfAssignmentsAvailable = numberOfAssignmentsAvailable;
         return this;
@@ -136,6 +150,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfAssignmentsCompleted")
     public Long numberOfAssignmentsCompleted;
+
     public Hit withNumberOfAssignmentsCompleted(Long numberOfAssignmentsCompleted) {
         this.numberOfAssignmentsCompleted = numberOfAssignmentsCompleted;
         return this;
@@ -144,6 +159,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfAssignmentsPending")
     public Long numberOfAssignmentsPending;
+
     public Hit withNumberOfAssignmentsPending(Long numberOfAssignmentsPending) {
         this.numberOfAssignmentsPending = numberOfAssignmentsPending;
         return this;
@@ -152,6 +168,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QualificationRequirements")
     public QualificationRequirement[] qualificationRequirements;
+
     public Hit withQualificationRequirements(QualificationRequirement[] qualificationRequirements) {
         this.qualificationRequirements = qualificationRequirements;
         return this;
@@ -160,6 +177,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Question")
     public String question;
+
     public Hit withQuestion(String question) {
         this.question = question;
         return this;
@@ -168,6 +186,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequesterAnnotation")
     public String requesterAnnotation;
+
     public Hit withRequesterAnnotation(String requesterAnnotation) {
         this.requesterAnnotation = requesterAnnotation;
         return this;
@@ -179,6 +198,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reward")
     public String reward;
+
     public Hit withReward(String reward) {
         this.reward = reward;
         return this;
@@ -187,9 +207,11 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public Hit withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Hit(){}
 }

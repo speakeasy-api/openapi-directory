@@ -15,9 +15,11 @@ public class GetCustomRulePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyText")
     public String policyText;
+
     public GetCustomRulePolicyResponse withPolicyText(String policyText) {
         this.policyText = policyText;
         return this;
     }
     
+    public GetCustomRulePolicyResponse(){}
 }

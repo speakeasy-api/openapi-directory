@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpnConnectionsResult {
     
     public DescribeVpnConnectionsResultVpnConnections[] vpnConnections;
+
     public DescribeVpnConnectionsResult withVpnConnections(DescribeVpnConnectionsResultVpnConnections[] vpnConnections) {
         this.vpnConnections = vpnConnections;
         return this;
     }
     
+    public DescribeVpnConnectionsResult(){}
 }

@@ -15,6 +15,7 @@ public class UpdateOrganizationConfigurationRequestBodyAutoEnable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2")
     public Boolean ec2;
+
     public UpdateOrganizationConfigurationRequestBodyAutoEnable withEc2(Boolean ec2) {
         this.ec2 = ec2;
         return this;
@@ -23,6 +24,7 @@ public class UpdateOrganizationConfigurationRequestBodyAutoEnable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecr")
     public Boolean ecr;
+
     public UpdateOrganizationConfigurationRequestBodyAutoEnable withEcr(Boolean ecr) {
         this.ecr = ecr;
         return this;
@@ -31,9 +33,11 @@ public class UpdateOrganizationConfigurationRequestBodyAutoEnable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambda")
     public Boolean lambda;
+
     public UpdateOrganizationConfigurationRequestBodyAutoEnable withLambda(Boolean lambda) {
         this.lambda = lambda;
         return this;
     }
     
+    public UpdateOrganizationConfigurationRequestBodyAutoEnable(){}
 }

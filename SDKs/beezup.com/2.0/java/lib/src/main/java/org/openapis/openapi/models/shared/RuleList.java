@@ -15,6 +15,7 @@ public class RuleList {
      */
     @JsonProperty("links")
     public RuleListLinks links;
+
     public RuleList withLinks(RuleListLinks links) {
         this.links = links;
         return this;
@@ -25,9 +26,14 @@ public class RuleList {
      */
     @JsonProperty("rules")
     public Rule[] rules;
+
     public RuleList withRules(Rule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public RuleList(@JsonProperty("links") RuleListLinks links, @JsonProperty("rules") Rule[] rules) {
+        this.links = links;
+        this.rules = rules;
+  }
 }

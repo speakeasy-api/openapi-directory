@@ -15,6 +15,7 @@ public class Emotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public Emotion withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -23,9 +24,11 @@ public class Emotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public EmotionNameEnum type;
+
     public Emotion withType(EmotionNameEnum type) {
         this.type = type;
         return this;
     }
     
+    public Emotion(){}
 }

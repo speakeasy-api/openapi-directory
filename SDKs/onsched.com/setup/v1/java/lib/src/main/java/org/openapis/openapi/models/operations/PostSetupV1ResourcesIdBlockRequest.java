@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSetupV1ResourcesIdBlockRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ResourceBlockInputModel resourceBlockInputModel;
+
     public PostSetupV1ResourcesIdBlockRequest withResourceBlockInputModel(org.openapis.openapi.models.shared.ResourceBlockInputModel resourceBlockInputModel) {
         this.resourceBlockInputModel = resourceBlockInputModel;
         return this;
@@ -19,9 +21,13 @@ public class PostSetupV1ResourcesIdBlockRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PostSetupV1ResourcesIdBlockRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PostSetupV1ResourcesIdBlockRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

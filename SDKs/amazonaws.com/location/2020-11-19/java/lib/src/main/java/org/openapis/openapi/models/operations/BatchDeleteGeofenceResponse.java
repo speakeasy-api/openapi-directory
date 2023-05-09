@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDeleteGeofenceResponse {
@@ -12,6 +13,7 @@ public class BatchDeleteGeofenceResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchDeleteGeofenceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchDeleteGeofenceResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDeleteGeofenceResponse batchDeleteGeofenceResponse;
+
     public BatchDeleteGeofenceResponse withBatchDeleteGeofenceResponse(org.openapis.openapi.models.shared.BatchDeleteGeofenceResponse batchDeleteGeofenceResponse) {
         this.batchDeleteGeofenceResponse = batchDeleteGeofenceResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchDeleteGeofenceResponse {
     
     
     public String contentType;
+
     public BatchDeleteGeofenceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchDeleteGeofenceResponse {
      */
     
     public Object internalServerException;
+
     public BatchDeleteGeofenceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class BatchDeleteGeofenceResponse {
     
     
     public Integer statusCode;
+
     public BatchDeleteGeofenceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchDeleteGeofenceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDeleteGeofenceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchDeleteGeofenceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchDeleteGeofenceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class BatchDeleteGeofenceResponse {
      */
     
     public Object throttlingException;
+
     public BatchDeleteGeofenceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class BatchDeleteGeofenceResponse {
      */
     
     public Object validationException;
+
     public BatchDeleteGeofenceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchDeleteGeofenceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class AwsRdsPendingCloudWatchLogsExports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogTypesToDisable")
     public String[] logTypesToDisable;
+
     public AwsRdsPendingCloudWatchLogsExports withLogTypesToDisable(String[] logTypesToDisable) {
         this.logTypesToDisable = logTypesToDisable;
         return this;
@@ -23,9 +24,11 @@ public class AwsRdsPendingCloudWatchLogsExports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogTypesToEnable")
     public String[] logTypesToEnable;
+
     public AwsRdsPendingCloudWatchLogsExports withLogTypesToEnable(String[] logTypesToEnable) {
         this.logTypesToEnable = logTypesToEnable;
         return this;
     }
     
+    public AwsRdsPendingCloudWatchLogsExports(){}
 }

@@ -12,9 +12,11 @@ public class DestinyComponentsInventoryDestinyPlatformSilverComponent {
      */
     
     public java.util.Map<String, DestinyEntitiesItemsDestinyItemComponent> platformSilver;
+
     public DestinyComponentsInventoryDestinyPlatformSilverComponent withPlatformSilver(java.util.Map<String, DestinyEntitiesItemsDestinyItemComponent> platformSilver) {
         this.platformSilver = platformSilver;
         return this;
     }
     
+    public DestinyComponentsInventoryDestinyPlatformSilverComponent(){}
 }

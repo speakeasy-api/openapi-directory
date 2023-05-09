@@ -12,6 +12,7 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("INSCODE")
     public String inscode;
+
     public CripcRequestBodyCertificateParameters withInscode(String inscode) {
         this.inscode = inscode;
         return this;
@@ -22,6 +23,7 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("POLNO")
     public String polno;
+
     public CripcRequestBodyCertificateParameters withPolno(String polno) {
         this.polno = polno;
         return this;
@@ -32,9 +34,15 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("STARTDT")
     public String startdt;
+
     public CripcRequestBodyCertificateParameters withStartdt(String startdt) {
         this.startdt = startdt;
         return this;
     }
     
+    public CripcRequestBodyCertificateParameters(@JsonProperty("INSCODE") String inscode, @JsonProperty("POLNO") String polno, @JsonProperty("STARTDT") String startdt) {
+        this.inscode = inscode;
+        this.polno = polno;
+        this.startdt = startdt;
+  }
 }

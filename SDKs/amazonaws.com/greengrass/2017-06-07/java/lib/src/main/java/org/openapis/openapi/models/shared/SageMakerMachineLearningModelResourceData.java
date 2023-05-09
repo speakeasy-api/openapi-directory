@@ -15,6 +15,7 @@ public class SageMakerMachineLearningModelResourceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationPath")
     public String destinationPath;
+
     public SageMakerMachineLearningModelResourceData withDestinationPath(String destinationPath) {
         this.destinationPath = destinationPath;
         return this;
@@ -26,6 +27,7 @@ public class SageMakerMachineLearningModelResourceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerSetting")
     public ResourceDownloadOwnerSetting ownerSetting;
+
     public SageMakerMachineLearningModelResourceData withOwnerSetting(ResourceDownloadOwnerSetting ownerSetting) {
         this.ownerSetting = ownerSetting;
         return this;
@@ -34,9 +36,11 @@ public class SageMakerMachineLearningModelResourceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SageMakerJobArn")
     public String sageMakerJobArn;
+
     public SageMakerMachineLearningModelResourceData withSageMakerJobArn(String sageMakerJobArn) {
         this.sageMakerJobArn = sageMakerJobArn;
         return this;
     }
     
+    public SageMakerMachineLearningModelResourceData(){}
 }

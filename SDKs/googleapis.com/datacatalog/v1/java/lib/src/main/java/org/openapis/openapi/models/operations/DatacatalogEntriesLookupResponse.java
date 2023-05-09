@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatacatalogEntriesLookupResponse {
     
     public String contentType;
+
     public DatacatalogEntriesLookupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatacatalogEntriesLookupResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1Entry googleCloudDatacatalogV1Entry;
+
     public DatacatalogEntriesLookupResponse withGoogleCloudDatacatalogV1Entry(org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1Entry googleCloudDatacatalogV1Entry) {
         this.googleCloudDatacatalogV1Entry = googleCloudDatacatalogV1Entry;
         return this;
@@ -26,6 +29,7 @@ public class DatacatalogEntriesLookupResponse {
     
     
     public Integer statusCode;
+
     public DatacatalogEntriesLookupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatacatalogEntriesLookupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatacatalogEntriesLookupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatacatalogEntriesLookupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

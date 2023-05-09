@@ -65,12 +65,10 @@ public class TerminalActionsCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidAppsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidAppsResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidAppsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidAppsResponse(contentType, httpRes.statusCode()) {{
             androidAppsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -125,12 +123,10 @@ public class TerminalActionsCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidCertificatesResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidCertificatesResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidCertificatesResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidCertificatesResponse(contentType, httpRes.statusCode()) {{
             androidCertificatesResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,12 +179,10 @@ public class TerminalActionsCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsResponse(contentType, httpRes.statusCode()) {{
             listExternalTerminalActionsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -235,12 +229,10 @@ public class TerminalActionsCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsActionIdResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsActionIdResponse(contentType, httpRes.statusCode()) {{
             externalTerminalAction = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

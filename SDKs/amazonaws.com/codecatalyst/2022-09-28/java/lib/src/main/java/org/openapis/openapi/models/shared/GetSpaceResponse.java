@@ -15,6 +15,7 @@ public class GetSpaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetSpaceResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class GetSpaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GetSpaceResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -30,6 +32,7 @@ public class GetSpaceResponse {
     
     @JsonProperty("name")
     public String name;
+
     public GetSpaceResponse withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +40,14 @@ public class GetSpaceResponse {
     
     @JsonProperty("regionName")
     public String regionName;
+
     public GetSpaceResponse withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
     }
     
+    public GetSpaceResponse(@JsonProperty("name") String name, @JsonProperty("regionName") String regionName) {
+        this.name = name;
+        this.regionName = regionName;
+  }
 }

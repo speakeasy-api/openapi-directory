@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DeleteAddressRequest;
 import org.openapis.openapi.models.operations.DeleteAddressResponse;
 import org.openapis.openapi.models.shared.DeleteAddressRequest;
@@ -27,22 +26,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteAddressRequest req = new DeleteAddressRequest() {{
-                authorization = "q9PdaWuD4j6DK6vsUgehhL8pgarSrS9m";
-                deleteAddressRequest = new DeleteAddressRequest() {{
-                    ethereumaddress = "corrupti";
-                    password = "provident";
-                }};
-            }}            
+            DeleteAddressRequest req = new DeleteAddressRequest("q9PdaWuD4j6DK6vsUgehhL8pgarSrS9m",                 new DeleteAddressRequest("corrupti", "provident"););            
 
             DeleteAddressResponse res = sdk.addressRequests.deleteAddress(req);
 
-            if (res.deleteAddress.isPresent()) {
+            if (res.deleteAddress != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -50,38 +45,38 @@ public class Application {
 ## Available Resources and Operations
 
 
-### addressRequests
+### [addressRequests](docs/addressrequests/README.md)
 
-* `deleteAddress` - deleteAddress
-* `exportAddress` - exportAddress
-* `importAddress` - importAddress
-* `listAddresses` - listAddresses
-* `newAddress` - newAddress
+* [deleteAddress](docs/addressrequests/README.md#deleteaddress) - deleteAddress
+* [exportAddress](docs/addressrequests/README.md#exportaddress) - exportAddress
+* [importAddress](docs/addressrequests/README.md#importaddress) - importAddress
+* [listAddresses](docs/addressrequests/README.md#listaddresses) - listAddresses
+* [newAddress](docs/addressrequests/README.md#newaddress) - newAddress
 
-### infoRequests
+### [infoRequests](docs/inforequests/README.md)
 
-* `getBlock` - getBlock
-* `getEthereumBalance` - getEthereumBalance
-* `getExchangeRate` - getExchangeRate
-* `getGasPrice` - getGasPrice
-* `getLastBlockNumber` - getLastBlockNumber
-* `getToken` - getToken
-* `getTokenBalance` - getTokenBalance
-* `getTransactions` - getTransactions
+* [getBlock](docs/inforequests/README.md#getblock) - getBlock
+* [getEthereumBalance](docs/inforequests/README.md#getethereumbalance) - getEthereumBalance
+* [getExchangeRate](docs/inforequests/README.md#getexchangerate) - getExchangeRate
+* [getGasPrice](docs/inforequests/README.md#getgasprice) - getGasPrice
+* [getLastBlockNumber](docs/inforequests/README.md#getlastblocknumber) - getLastBlockNumber
+* [getToken](docs/inforequests/README.md#gettoken) - getToken
+* [getTokenBalance](docs/inforequests/README.md#gettokenbalance) - getTokenBalance
+* [getTransactions](docs/inforequests/README.md#gettransactions) - getTransactions
 
-### subscriptionIPNRequests
+### [subscriptionIPNRequests](docs/subscriptionipnrequests/README.md)
 
-* `listFailedIPNs` - listFailedIPNs
-* `listSubscribedAddresses` - listSubscribedAddresses
-* `resendFailedIPN` - resendFailedIPN
-* `subscribeAddress` - subscribeAddress
-* `unsubscribeAddress` - unsubscribeAddress
+* [listFailedIPNs](docs/subscriptionipnrequests/README.md#listfailedipns) - listFailedIPNs
+* [listSubscribedAddresses](docs/subscriptionipnrequests/README.md#listsubscribedaddresses) - listSubscribedAddresses
+* [resendFailedIPN](docs/subscriptionipnrequests/README.md#resendfailedipn) - resendFailedIPN
+* [subscribeAddress](docs/subscriptionipnrequests/README.md#subscribeaddress) - subscribeAddress
+* [unsubscribeAddress](docs/subscriptionipnrequests/README.md#unsubscribeaddress) - unsubscribeAddress
 
-### transactionRequests
+### [transactionRequests](docs/transactionrequests/README.md)
 
-* `clearAddress` - clearAddress
-* `sendEthereum` - sendEthereum
-* `sendToken` - sendToken
+* [clearAddress](docs/transactionrequests/README.md#clearaddress) - clearAddress
+* [sendEthereum](docs/transactionrequests/README.md#sendethereum) - sendEthereum
+* [sendToken](docs/transactionrequests/README.md#sendtoken) - sendToken
 <!-- End SDK Available Operations -->
 
 ### Maturity

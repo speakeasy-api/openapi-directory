@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1TotalMemoryEncryptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionAlgorithm")
     public GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionAlgorithmEnum encryptionAlgorithm;
+
     public GoogleChromeManagementV1TotalMemoryEncryptionInfo withEncryptionAlgorithm(GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionAlgorithmEnum encryptionAlgorithm) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1TotalMemoryEncryptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionState")
     public GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionStateEnum encryptionState;
+
     public GoogleChromeManagementV1TotalMemoryEncryptionInfo withEncryptionState(GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionStateEnum encryptionState) {
         this.encryptionState = encryptionState;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromeManagementV1TotalMemoryEncryptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyLength")
     public String keyLength;
+
     public GoogleChromeManagementV1TotalMemoryEncryptionInfo withKeyLength(String keyLength) {
         this.keyLength = keyLength;
         return this;
@@ -51,9 +54,11 @@ public class GoogleChromeManagementV1TotalMemoryEncryptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxKeys")
     public String maxKeys;
+
     public GoogleChromeManagementV1TotalMemoryEncryptionInfo withMaxKeys(String maxKeys) {
         this.maxKeys = maxKeys;
         return this;
     }
     
+    public GoogleChromeManagementV1TotalMemoryEncryptionInfo(){}
 }

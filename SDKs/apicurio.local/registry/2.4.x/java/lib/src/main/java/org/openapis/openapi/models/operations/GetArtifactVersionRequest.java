@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetArtifactVersionRequest {
@@ -12,6 +13,7 @@ public class GetArtifactVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
     public String artifactId;
+
     public GetArtifactVersionRequest withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -22,6 +24,7 @@ public class GetArtifactVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dereference")
     public Boolean dereference;
+
     public GetArtifactVersionRequest withDereference(Boolean dereference) {
         this.dereference = dereference;
         return this;
@@ -32,6 +35,7 @@ public class GetArtifactVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public GetArtifactVersionRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -42,9 +46,15 @@ public class GetArtifactVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public GetArtifactVersionRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GetArtifactVersionRequest(@JsonProperty("artifactId") String artifactId, @JsonProperty("groupId") String groupId, @JsonProperty("version") String version) {
+        this.artifactId = artifactId;
+        this.groupId = groupId;
+        this.version = version;
+  }
 }

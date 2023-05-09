@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeSolutionRequest {
     @JsonProperty("solutionArn")
     public String solutionArn;
+
     public DescribeSolutionRequest withSolutionArn(String solutionArn) {
         this.solutionArn = solutionArn;
         return this;
     }
     
+    public DescribeSolutionRequest(@JsonProperty("solutionArn") String solutionArn) {
+        this.solutionArn = solutionArn;
+  }
 }

@@ -15,6 +15,7 @@ public class MaintenanceWindowAutomationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public MaintenanceWindowAutomationParameters withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -23,9 +24,11 @@ public class MaintenanceWindowAutomationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String[]> parameters;
+
     public MaintenanceWindowAutomationParameters withParameters(java.util.Map<String, String[]> parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public MaintenanceWindowAutomationParameters(){}
 }

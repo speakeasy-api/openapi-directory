@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPathwaysWithDiagramsForCategoryUsingGETRequest {
@@ -12,9 +13,13 @@ public class GETPathwaysWithDiagramsForCategoryUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category")
     public String category;
+
     public GETPathwaysWithDiagramsForCategoryUsingGETRequest withCategory(String category) {
         this.category = category;
         return this;
     }
     
+    public GETPathwaysWithDiagramsForCategoryUsingGETRequest(@JsonProperty("category") String category) {
+        this.category = category;
+  }
 }

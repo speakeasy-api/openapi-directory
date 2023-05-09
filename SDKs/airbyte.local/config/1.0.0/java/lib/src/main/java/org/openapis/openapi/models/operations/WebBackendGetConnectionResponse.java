@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WebBackendGetConnectionResponse {
     
     public String contentType;
+
     public WebBackendGetConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class WebBackendGetConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public WebBackendGetConnectionResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -29,6 +32,7 @@ public class WebBackendGetConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public WebBackendGetConnectionResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -36,6 +40,7 @@ public class WebBackendGetConnectionResponse {
     
     
     public Integer statusCode;
+
     public WebBackendGetConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class WebBackendGetConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WebBackendGetConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class WebBackendGetConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.WebBackendConnectionRead webBackendConnectionRead;
+
     public WebBackendGetConnectionResponse withWebBackendConnectionRead(org.openapis.openapi.models.shared.WebBackendConnectionRead webBackendConnectionRead) {
         this.webBackendConnectionRead = webBackendConnectionRead;
         return this;
     }
     
+    public WebBackendGetConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

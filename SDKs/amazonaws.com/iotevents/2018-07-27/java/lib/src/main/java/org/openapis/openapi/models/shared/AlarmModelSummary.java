@@ -20,6 +20,7 @@ public class AlarmModelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelDescription")
     public String alarmModelDescription;
+
     public AlarmModelSummary withAlarmModelDescription(String alarmModelDescription) {
         this.alarmModelDescription = alarmModelDescription;
         return this;
@@ -28,6 +29,7 @@ public class AlarmModelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelName")
     public String alarmModelName;
+
     public AlarmModelSummary withAlarmModelName(String alarmModelName) {
         this.alarmModelName = alarmModelName;
         return this;
@@ -38,9 +40,11 @@ public class AlarmModelSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public AlarmModelSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
     }
     
+    public AlarmModelSummary(){}
 }

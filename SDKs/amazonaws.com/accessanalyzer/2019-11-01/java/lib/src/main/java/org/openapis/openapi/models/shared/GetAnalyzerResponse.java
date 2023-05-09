@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAnalyzerResponse {
     @JsonProperty("analyzer")
     public AnalyzerSummary analyzer;
+
     public GetAnalyzerResponse withAnalyzer(AnalyzerSummary analyzer) {
         this.analyzer = analyzer;
         return this;
     }
     
+    public GetAnalyzerResponse(@JsonProperty("analyzer") AnalyzerSummary analyzer) {
+        this.analyzer = analyzer;
+  }
 }

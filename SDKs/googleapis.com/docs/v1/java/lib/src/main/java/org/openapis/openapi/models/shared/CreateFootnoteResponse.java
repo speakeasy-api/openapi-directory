@@ -18,9 +18,11 @@ public class CreateFootnoteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footnoteId")
     public String footnoteId;
+
     public CreateFootnoteResponse withFootnoteId(String footnoteId) {
         this.footnoteId = footnoteId;
         return this;
     }
     
+    public CreateFootnoteResponse(){}
 }

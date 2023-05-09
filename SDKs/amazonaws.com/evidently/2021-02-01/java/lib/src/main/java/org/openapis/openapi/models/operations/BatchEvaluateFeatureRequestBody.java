@@ -12,9 +12,13 @@ public class BatchEvaluateFeatureRequestBody {
      */
     @JsonProperty("requests")
     public org.openapis.openapi.models.shared.EvaluationRequest[] requests;
+
     public BatchEvaluateFeatureRequestBody withRequests(org.openapis.openapi.models.shared.EvaluationRequest[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public BatchEvaluateFeatureRequestBody(@JsonProperty("requests") org.openapis.openapi.models.shared.EvaluationRequest[] requests) {
+        this.requests = requests;
+  }
 }

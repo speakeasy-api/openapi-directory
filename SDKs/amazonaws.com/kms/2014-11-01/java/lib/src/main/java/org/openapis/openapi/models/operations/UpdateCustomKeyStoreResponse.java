@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCustomKeyStoreResponse {
@@ -12,6 +13,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object cloudHsmClusterInvalidConfigurationException;
+
     public UpdateCustomKeyStoreResponse withCloudHsmClusterInvalidConfigurationException(Object cloudHsmClusterInvalidConfigurationException) {
         this.cloudHsmClusterInvalidConfigurationException = cloudHsmClusterInvalidConfigurationException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object cloudHsmClusterNotActiveException;
+
     public UpdateCustomKeyStoreResponse withCloudHsmClusterNotActiveException(Object cloudHsmClusterNotActiveException) {
         this.cloudHsmClusterNotActiveException = cloudHsmClusterNotActiveException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object cloudHsmClusterNotFoundException;
+
     public UpdateCustomKeyStoreResponse withCloudHsmClusterNotFoundException(Object cloudHsmClusterNotFoundException) {
         this.cloudHsmClusterNotFoundException = cloudHsmClusterNotFoundException;
         return this;
@@ -42,6 +46,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object cloudHsmClusterNotRelatedException;
+
     public UpdateCustomKeyStoreResponse withCloudHsmClusterNotRelatedException(Object cloudHsmClusterNotRelatedException) {
         this.cloudHsmClusterNotRelatedException = cloudHsmClusterNotRelatedException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateCustomKeyStoreResponse {
     
     
     public String contentType;
+
     public UpdateCustomKeyStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object customKeyStoreInvalidStateException;
+
     public UpdateCustomKeyStoreResponse withCustomKeyStoreInvalidStateException(Object customKeyStoreInvalidStateException) {
         this.customKeyStoreInvalidStateException = customKeyStoreInvalidStateException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object customKeyStoreNameInUseException;
+
     public UpdateCustomKeyStoreResponse withCustomKeyStoreNameInUseException(Object customKeyStoreNameInUseException) {
         this.customKeyStoreNameInUseException = customKeyStoreNameInUseException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object customKeyStoreNotFoundException;
+
     public UpdateCustomKeyStoreResponse withCustomKeyStoreNotFoundException(Object customKeyStoreNotFoundException) {
         this.customKeyStoreNotFoundException = customKeyStoreNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object kmsInternalException;
+
     public UpdateCustomKeyStoreResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -96,6 +106,7 @@ public class UpdateCustomKeyStoreResponse {
     
     
     public Integer statusCode;
+
     public UpdateCustomKeyStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class UpdateCustomKeyStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCustomKeyStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public java.util.Map<String, Object> updateCustomKeyStoreResponse;
+
     public UpdateCustomKeyStoreResponse withUpdateCustomKeyStoreResponse(java.util.Map<String, Object> updateCustomKeyStoreResponse) {
         this.updateCustomKeyStoreResponse = updateCustomKeyStoreResponse;
         return this;
@@ -123,6 +136,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object xksProxyIncorrectAuthenticationCredentialException;
+
     public UpdateCustomKeyStoreResponse withXksProxyIncorrectAuthenticationCredentialException(Object xksProxyIncorrectAuthenticationCredentialException) {
         this.xksProxyIncorrectAuthenticationCredentialException = xksProxyIncorrectAuthenticationCredentialException;
         return this;
@@ -133,6 +147,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object xksProxyInvalidConfigurationException;
+
     public UpdateCustomKeyStoreResponse withXksProxyInvalidConfigurationException(Object xksProxyInvalidConfigurationException) {
         this.xksProxyInvalidConfigurationException = xksProxyInvalidConfigurationException;
         return this;
@@ -143,6 +158,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object xksProxyInvalidResponseException;
+
     public UpdateCustomKeyStoreResponse withXksProxyInvalidResponseException(Object xksProxyInvalidResponseException) {
         this.xksProxyInvalidResponseException = xksProxyInvalidResponseException;
         return this;
@@ -153,6 +169,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object xksProxyUriEndpointInUseException;
+
     public UpdateCustomKeyStoreResponse withXksProxyUriEndpointInUseException(Object xksProxyUriEndpointInUseException) {
         this.xksProxyUriEndpointInUseException = xksProxyUriEndpointInUseException;
         return this;
@@ -163,6 +180,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object xksProxyUriInUseException;
+
     public UpdateCustomKeyStoreResponse withXksProxyUriInUseException(Object xksProxyUriInUseException) {
         this.xksProxyUriInUseException = xksProxyUriInUseException;
         return this;
@@ -173,6 +191,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object xksProxyUriUnreachableException;
+
     public UpdateCustomKeyStoreResponse withXksProxyUriUnreachableException(Object xksProxyUriUnreachableException) {
         this.xksProxyUriUnreachableException = xksProxyUriUnreachableException;
         return this;
@@ -183,6 +202,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object xksProxyVpcEndpointServiceInUseException;
+
     public UpdateCustomKeyStoreResponse withXksProxyVpcEndpointServiceInUseException(Object xksProxyVpcEndpointServiceInUseException) {
         this.xksProxyVpcEndpointServiceInUseException = xksProxyVpcEndpointServiceInUseException;
         return this;
@@ -193,6 +213,7 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object xksProxyVpcEndpointServiceInvalidConfigurationException;
+
     public UpdateCustomKeyStoreResponse withXksProxyVpcEndpointServiceInvalidConfigurationException(Object xksProxyVpcEndpointServiceInvalidConfigurationException) {
         this.xksProxyVpcEndpointServiceInvalidConfigurationException = xksProxyVpcEndpointServiceInvalidConfigurationException;
         return this;
@@ -203,9 +224,14 @@ public class UpdateCustomKeyStoreResponse {
      */
     
     public Object xksProxyVpcEndpointServiceNotFoundException;
+
     public UpdateCustomKeyStoreResponse withXksProxyVpcEndpointServiceNotFoundException(Object xksProxyVpcEndpointServiceNotFoundException) {
         this.xksProxyVpcEndpointServiceNotFoundException = xksProxyVpcEndpointServiceNotFoundException;
         return this;
     }
     
+    public UpdateCustomKeyStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

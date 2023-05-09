@@ -15,6 +15,7 @@ public class AdminListCorporaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public AdminListCorporaRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -26,6 +27,7 @@ public class AdminListCorporaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numResults")
     public Long numResults;
+
     public AdminListCorporaRequest withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -37,9 +39,11 @@ public class AdminListCorporaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageKey")
     public String pageKey;
+
     public AdminListCorporaRequest withPageKey(String pageKey) {
         this.pageKey = pageKey;
         return this;
     }
     
+    public AdminListCorporaRequest(){}
 }

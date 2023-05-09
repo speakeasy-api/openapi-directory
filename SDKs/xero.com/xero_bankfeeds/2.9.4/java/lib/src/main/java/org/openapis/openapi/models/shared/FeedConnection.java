@@ -19,6 +19,7 @@ public class FeedConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public FeedConnection withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -30,6 +31,7 @@ public class FeedConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountName")
     public String accountName;
+
     public FeedConnection withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -41,6 +43,7 @@ public class FeedConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public FeedConnection withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -52,6 +55,7 @@ public class FeedConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountToken")
     public String accountToken;
+
     public FeedConnection withAccountToken(String accountToken) {
         this.accountToken = accountToken;
         return this;
@@ -63,6 +67,7 @@ public class FeedConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountType")
     public FeedConnectionAccountTypeEnum accountType;
+
     public FeedConnection withAccountType(FeedConnectionAccountTypeEnum accountType) {
         this.accountType = accountType;
         return this;
@@ -74,6 +79,7 @@ public class FeedConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public CountryCodeEnum country;
+
     public FeedConnection withCountry(CountryCodeEnum country) {
         this.country = country;
         return this;
@@ -85,6 +91,7 @@ public class FeedConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public CurrencyCodeEnum currency;
+
     public FeedConnection withCurrency(CurrencyCodeEnum currency) {
         this.currency = currency;
         return this;
@@ -96,6 +103,7 @@ public class FeedConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public FeedConnection withError(Error error) {
         this.error = error;
         return this;
@@ -107,6 +115,7 @@ public class FeedConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FeedConnection withId(String id) {
         this.id = id;
         return this;
@@ -118,9 +127,11 @@ public class FeedConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public FeedConnectionStatusEnum status;
+
     public FeedConnection withStatus(FeedConnectionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public FeedConnection(){}
 }

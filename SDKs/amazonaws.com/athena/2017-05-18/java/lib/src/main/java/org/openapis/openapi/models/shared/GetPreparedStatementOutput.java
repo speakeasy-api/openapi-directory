@@ -15,9 +15,11 @@ public class GetPreparedStatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreparedStatement")
     public PreparedStatement preparedStatement;
+
     public GetPreparedStatementOutput withPreparedStatement(PreparedStatement preparedStatement) {
         this.preparedStatement = preparedStatement;
         return this;
     }
     
+    public GetPreparedStatementOutput(){}
 }

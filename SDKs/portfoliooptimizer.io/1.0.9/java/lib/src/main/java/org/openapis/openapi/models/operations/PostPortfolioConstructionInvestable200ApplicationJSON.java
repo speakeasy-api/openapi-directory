@@ -15,6 +15,7 @@ public class PostPortfolioConstructionInvestable200ApplicationJSON {
      */
     @JsonProperty("assetsPositions")
     public Double[] assetsPositions;
+
     public PostPortfolioConstructionInvestable200ApplicationJSON withAssetsPositions(Double[] assetsPositions) {
         this.assetsPositions = assetsPositions;
         return this;
@@ -25,9 +26,14 @@ public class PostPortfolioConstructionInvestable200ApplicationJSON {
      */
     @JsonProperty("assetsWeights")
     public Double[] assetsWeights;
+
     public PostPortfolioConstructionInvestable200ApplicationJSON withAssetsWeights(Double[] assetsWeights) {
         this.assetsWeights = assetsWeights;
         return this;
     }
     
+    public PostPortfolioConstructionInvestable200ApplicationJSON(@JsonProperty("assetsPositions") Double[] assetsPositions, @JsonProperty("assetsWeights") Double[] assetsWeights) {
+        this.assetsPositions = assetsPositions;
+        this.assetsWeights = assetsWeights;
+  }
 }

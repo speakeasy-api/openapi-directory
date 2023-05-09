@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EligibilityChecksListResponse {
     
     public String contentType;
+
     public EligibilityChecksListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EligibilityChecksListResponse {
     
     
     public Integer statusCode;
+
     public EligibilityChecksListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EligibilityChecksListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EligibilityChecksListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EligibilityChecksListResponse {
      */
     
     public EligibilityChecksList200ApplicationJSON eligibilityChecksList200ApplicationJSONObject;
+
     public EligibilityChecksListResponse withEligibilityChecksList200ApplicationJSONObject(EligibilityChecksList200ApplicationJSON eligibilityChecksList200ApplicationJSONObject) {
         this.eligibilityChecksList200ApplicationJSONObject = eligibilityChecksList200ApplicationJSONObject;
         return this;
     }
     
+    public EligibilityChecksListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

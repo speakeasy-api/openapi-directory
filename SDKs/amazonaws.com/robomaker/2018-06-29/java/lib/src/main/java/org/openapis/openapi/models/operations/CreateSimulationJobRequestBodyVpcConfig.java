@@ -15,6 +15,7 @@ public class CreateSimulationJobRequestBodyVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignPublicIp")
     public Boolean assignPublicIp;
+
     public CreateSimulationJobRequestBodyVpcConfig withAssignPublicIp(Boolean assignPublicIp) {
         this.assignPublicIp = assignPublicIp;
         return this;
@@ -23,6 +24,7 @@ public class CreateSimulationJobRequestBodyVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroups")
     public String[] securityGroups;
+
     public CreateSimulationJobRequestBodyVpcConfig withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -31,9 +33,11 @@ public class CreateSimulationJobRequestBodyVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnets")
     public String[] subnets;
+
     public CreateSimulationJobRequestBodyVpcConfig withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public CreateSimulationJobRequestBodyVpcConfig(){}
 }

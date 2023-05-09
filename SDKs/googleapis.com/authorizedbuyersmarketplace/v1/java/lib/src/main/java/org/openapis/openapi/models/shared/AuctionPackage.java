@@ -18,6 +18,7 @@ public class AuctionPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public AuctionPackage withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class AuctionPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator")
     public String creator;
+
     public AuctionPackage withCreator(String creator) {
         this.creator = creator;
         return this;
@@ -40,6 +42,7 @@ public class AuctionPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AuctionPackage withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class AuctionPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public AuctionPackage withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class AuctionPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AuctionPackage withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class AuctionPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscribedClients")
     public String[] subscribedClients;
+
     public AuctionPackage withSubscribedClients(String[] subscribedClients) {
         this.subscribedClients = subscribedClients;
         return this;
@@ -84,9 +90,11 @@ public class AuctionPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public AuctionPackage withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public AuctionPackage(){}
 }

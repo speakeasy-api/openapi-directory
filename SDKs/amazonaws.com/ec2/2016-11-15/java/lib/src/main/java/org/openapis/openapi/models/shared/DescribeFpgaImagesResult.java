@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFpgaImagesResult {
     
     public DescribeFpgaImagesResultFpgaImages[] fpgaImages;
+
     public DescribeFpgaImagesResult withFpgaImages(DescribeFpgaImagesResultFpgaImages[] fpgaImages) {
         this.fpgaImages = fpgaImages;
         return this;
@@ -19,9 +20,11 @@ public class DescribeFpgaImagesResult {
     
     
     public String nextToken;
+
     public DescribeFpgaImagesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFpgaImagesResult(){}
 }

@@ -18,6 +18,7 @@ public class TestGetSubscriptionsSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public TestGetSubscriptionsSubscription withActive(Boolean active) {
         this.active = active;
         return this;
@@ -29,6 +30,7 @@ public class TestGetSubscriptionsSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrentDevicesLimit")
     public Long concurrentDevicesLimit;
+
     public TestGetSubscriptionsSubscription withConcurrentDevicesLimit(Long concurrentDevicesLimit) {
         this.concurrentDevicesLimit = concurrentDevicesLimit;
         return this;
@@ -40,6 +42,7 @@ public class TestGetSubscriptionsSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daysLeft")
     public Double daysLeft;
+
     public TestGetSubscriptionsSubscription withDaysLeft(Double daysLeft) {
         this.daysLeft = daysLeft;
         return this;
@@ -51,6 +54,7 @@ public class TestGetSubscriptionsSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endsAt")
     public String endsAt;
+
     public TestGetSubscriptionsSubscription withEndsAt(String endsAt) {
         this.endsAt = endsAt;
         return this;
@@ -62,6 +66,7 @@ public class TestGetSubscriptionsSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TestGetSubscriptionsSubscription withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class TestGetSubscriptionsSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runningDevices")
     public Long runningDevices;
+
     public TestGetSubscriptionsSubscription withRunningDevices(Long runningDevices) {
         this.runningDevices = runningDevices;
         return this;
@@ -84,6 +90,7 @@ public class TestGetSubscriptionsSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startsAt")
     public String startsAt;
+
     public TestGetSubscriptionsSubscription withStartsAt(String startsAt) {
         this.startsAt = startsAt;
         return this;
@@ -92,9 +99,11 @@ public class TestGetSubscriptionsSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tier")
     public TestGetSubscriptionsSubscriptionSubscriptionTier tier;
+
     public TestGetSubscriptionsSubscription withTier(TestGetSubscriptionsSubscriptionSubscriptionTier tier) {
         this.tier = tier;
         return this;
     }
     
+    public TestGetSubscriptionsSubscription(){}
 }

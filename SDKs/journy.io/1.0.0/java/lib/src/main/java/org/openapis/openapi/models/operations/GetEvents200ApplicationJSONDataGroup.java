@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetEvents200ApplicationJSONDataGroup {
     @JsonProperty("id")
     public String id;
+
     public GetEvents200ApplicationJSONDataGroup withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class GetEvents200ApplicationJSONDataGroup {
     
     @JsonProperty("name")
     public String name;
+
     public GetEvents200ApplicationJSONDataGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetEvents200ApplicationJSONDataGroup(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

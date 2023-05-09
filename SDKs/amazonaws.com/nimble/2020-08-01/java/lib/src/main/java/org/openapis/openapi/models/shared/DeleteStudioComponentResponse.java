@@ -15,9 +15,11 @@ public class DeleteStudioComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studioComponent")
     public StudioComponent studioComponent;
+
     public DeleteStudioComponentResponse withStudioComponent(StudioComponent studioComponent) {
         this.studioComponent = studioComponent;
         return this;
     }
     
+    public DeleteStudioComponentResponse(){}
 }

@@ -15,6 +15,7 @@ public class AwsEcsClusterConfigurationExecuteCommandConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public AwsEcsClusterConfigurationExecuteCommandConfigurationDetails withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsClusterConfigurationExecuteCommandConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogConfiguration")
     public AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurationDetails logConfiguration;
+
     public AwsEcsClusterConfigurationExecuteCommandConfigurationDetails withLogConfiguration(AwsEcsClusterConfigurationExecuteCommandConfigurationLogConfigurationDetails logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -31,9 +33,11 @@ public class AwsEcsClusterConfigurationExecuteCommandConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Logging")
     public String logging;
+
     public AwsEcsClusterConfigurationExecuteCommandConfigurationDetails withLogging(String logging) {
         this.logging = logging;
         return this;
     }
     
+    public AwsEcsClusterConfigurationExecuteCommandConfigurationDetails(){}
 }

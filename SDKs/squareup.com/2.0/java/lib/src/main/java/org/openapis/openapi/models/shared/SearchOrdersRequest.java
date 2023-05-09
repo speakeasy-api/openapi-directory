@@ -23,6 +23,7 @@ public class SearchOrdersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchOrdersRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -37,6 +38,7 @@ public class SearchOrdersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public SearchOrdersRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -53,6 +55,7 @@ public class SearchOrdersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_ids")
     public String[] locationIds;
+
     public SearchOrdersRequest withLocationIds(String[] locationIds) {
         this.locationIds = locationIds;
         return this;
@@ -64,6 +67,7 @@ public class SearchOrdersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public SearchOrdersQuery query;
+
     public SearchOrdersRequest withQuery(SearchOrdersQuery query) {
         this.query = query;
         return this;
@@ -79,9 +83,11 @@ public class SearchOrdersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_entries")
     public Boolean returnEntries;
+
     public SearchOrdersRequest withReturnEntries(Boolean returnEntries) {
         this.returnEntries = returnEntries;
         return this;
     }
     
+    public SearchOrdersRequest(){}
 }

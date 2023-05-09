@@ -22,6 +22,7 @@ public class OBTransaction6 {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public OBTransaction6 withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class OBTransaction6 {
     
     @JsonProperty("Amount")
     public OBActiveOrHistoricCurrencyAndAmount amount;
+
     public OBTransaction6 withAmount(OBActiveOrHistoricCurrencyAndAmount amount) {
         this.amount = amount;
         return this;
@@ -40,6 +42,7 @@ public class OBTransaction6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Balance")
     public OBTransactionCashBalance balance;
+
     public OBTransaction6 withBalance(OBTransactionCashBalance balance) {
         this.balance = balance;
         return this;
@@ -55,6 +58,7 @@ public class OBTransaction6 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("BookingDateTime")
     public OffsetDateTime bookingDateTime;
+
     public OBTransaction6 withBookingDateTime(OffsetDateTime bookingDateTime) {
         this.bookingDateTime = bookingDateTime;
         return this;
@@ -62,6 +66,7 @@ public class OBTransaction6 {
     
     @JsonProperty("CreditDebitIndicator")
     public OBCreditDebitCodeEnum creditDebitIndicator;
+
     public OBTransaction6 withCreditDebitIndicator(OBCreditDebitCodeEnum creditDebitIndicator) {
         this.creditDebitIndicator = creditDebitIndicator;
         return this;
@@ -73,6 +78,7 @@ public class OBTransaction6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditorAccount")
     public OBCashAccount6 creditorAccount;
+
     public OBTransaction6 withCreditorAccount(OBCashAccount6 creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -84,6 +90,7 @@ public class OBTransaction6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebtorAccount")
     public OBCashAccount6 debtorAccount;
+
     public OBTransaction6 withDebtorAccount(OBCashAccount6 debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -95,6 +102,7 @@ public class OBTransaction6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProprietaryBankTransactionCode")
     public ProprietaryBankTransactionCodeStructure1 proprietaryBankTransactionCode;
+
     public OBTransaction6 withProprietaryBankTransactionCode(ProprietaryBankTransactionCodeStructure1 proprietaryBankTransactionCode) {
         this.proprietaryBankTransactionCode = proprietaryBankTransactionCode;
         return this;
@@ -102,6 +110,7 @@ public class OBTransaction6 {
     
     @JsonProperty("Status")
     public OBEntryStatus1CodeEnum status;
+
     public OBTransaction6 withStatus(OBEntryStatus1CodeEnum status) {
         this.status = status;
         return this;
@@ -114,6 +123,7 @@ public class OBTransaction6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionInformation")
     public String transactionInformation;
+
     public OBTransaction6 withTransactionInformation(String transactionInformation) {
         this.transactionInformation = transactionInformation;
         return this;
@@ -125,6 +135,7 @@ public class OBTransaction6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionReference")
     public String transactionReference;
+
     public OBTransaction6 withTransactionReference(String transactionReference) {
         this.transactionReference = transactionReference;
         return this;
@@ -142,9 +153,17 @@ public class OBTransaction6 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ValueDateTime")
     public OffsetDateTime valueDateTime;
+
     public OBTransaction6 withValueDateTime(OffsetDateTime valueDateTime) {
         this.valueDateTime = valueDateTime;
         return this;
     }
     
+    public OBTransaction6(@JsonProperty("AccountId") String accountId, @JsonProperty("Amount") OBActiveOrHistoricCurrencyAndAmount amount, @JsonProperty("BookingDateTime") OffsetDateTime bookingDateTime, @JsonProperty("CreditDebitIndicator") OBCreditDebitCodeEnum creditDebitIndicator, @JsonProperty("Status") OBEntryStatus1CodeEnum status) {
+        this.accountId = accountId;
+        this.amount = amount;
+        this.bookingDateTime = bookingDateTime;
+        this.creditDebitIndicator = creditDebitIndicator;
+        this.status = status;
+  }
 }

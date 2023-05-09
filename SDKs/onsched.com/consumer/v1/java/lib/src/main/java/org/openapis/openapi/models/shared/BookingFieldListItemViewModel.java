@@ -12,6 +12,7 @@ public class BookingFieldListItemViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BookingFieldListItemViewModel withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class BookingFieldListItemViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadAnswerScore")
     public Integer leadAnswerScore;
+
     public BookingFieldListItemViewModel withLeadAnswerScore(Integer leadAnswerScore) {
         this.leadAnswerScore = leadAnswerScore;
         return this;
@@ -28,6 +30,7 @@ public class BookingFieldListItemViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadRoutingEntityId")
     public Integer leadRoutingEntityId;
+
     public BookingFieldListItemViewModel withLeadRoutingEntityId(Integer leadRoutingEntityId) {
         this.leadRoutingEntityId = leadRoutingEntityId;
         return this;
@@ -36,6 +39,7 @@ public class BookingFieldListItemViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadRoutingEntityType")
     public String leadRoutingEntityType;
+
     public BookingFieldListItemViewModel withLeadRoutingEntityType(String leadRoutingEntityType) {
         this.leadRoutingEntityType = leadRoutingEntityType;
         return this;
@@ -44,6 +48,7 @@ public class BookingFieldListItemViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BookingFieldListItemViewModel withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class BookingFieldListItemViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public BookingFieldListItemViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -60,9 +66,11 @@ public class BookingFieldListItemViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public BookingFieldListItemViewModel withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public BookingFieldListItemViewModel(){}
 }

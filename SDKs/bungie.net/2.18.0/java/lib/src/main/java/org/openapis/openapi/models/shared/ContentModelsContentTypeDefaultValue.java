@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ContentModelsContentTypeDefaultValue {
     
     public String defaultValue;
+
     public ContentModelsContentTypeDefaultValue withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -16,6 +17,7 @@ public class ContentModelsContentTypeDefaultValue {
     
     
     public String whenClause;
+
     public ContentModelsContentTypeDefaultValue withWhenClause(String whenClause) {
         this.whenClause = whenClause;
         return this;
@@ -23,9 +25,11 @@ public class ContentModelsContentTypeDefaultValue {
     
     
     public String whenValue;
+
     public ContentModelsContentTypeDefaultValue withWhenValue(String whenValue) {
         this.whenValue = whenValue;
         return this;
     }
     
+    public ContentModelsContentTypeDefaultValue(){}
 }

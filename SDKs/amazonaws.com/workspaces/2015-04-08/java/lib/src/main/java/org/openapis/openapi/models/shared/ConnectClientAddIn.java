@@ -15,6 +15,7 @@ public class ConnectClientAddIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddInId")
     public String addInId;
+
     public ConnectClientAddIn withAddInId(String addInId) {
         this.addInId = addInId;
         return this;
@@ -23,6 +24,7 @@ public class ConnectClientAddIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ConnectClientAddIn withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class ConnectClientAddIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ConnectClientAddIn withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -39,9 +42,11 @@ public class ConnectClientAddIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("URL")
     public String url;
+
     public ConnectClientAddIn withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ConnectClientAddIn(){}
 }

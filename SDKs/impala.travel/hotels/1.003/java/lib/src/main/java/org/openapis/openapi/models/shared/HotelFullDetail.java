@@ -22,6 +22,7 @@ public class HotelFullDetail {
      */
     @JsonProperty("address")
     public Address address;
+
     public HotelFullDetail withAddress(Address address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class HotelFullDetail {
     
     @JsonProperty("amenities")
     public Amenity[] amenities;
+
     public HotelFullDetail withAmenities(Amenity[] amenities) {
         this.amenities = amenities;
         return this;
@@ -39,6 +41,7 @@ public class HotelFullDetail {
      */
     @JsonProperty("checkIn")
     public TimeRange checkIn;
+
     public HotelFullDetail withCheckIn(TimeRange checkIn) {
         this.checkIn = checkIn;
         return this;
@@ -49,6 +52,7 @@ public class HotelFullDetail {
      */
     @JsonProperty("checkOut")
     public TimeRange checkOut;
+
     public HotelFullDetail withCheckOut(TimeRange checkOut) {
         this.checkOut = checkOut;
         return this;
@@ -59,6 +63,7 @@ public class HotelFullDetail {
      */
     @JsonProperty("contractable")
     public Boolean contractable;
+
     public HotelFullDetail withContractable(Boolean contractable) {
         this.contractable = contractable;
         return this;
@@ -72,6 +77,7 @@ public class HotelFullDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public HotelFullDetail withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -82,6 +88,7 @@ public class HotelFullDetail {
      */
     @JsonProperty("currency")
     public String currency;
+
     public HotelFullDetail withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -90,6 +97,7 @@ public class HotelFullDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public HotelFullDetailDescription description;
+
     public HotelFullDetail withDescription(HotelFullDetailDescription description) {
         this.description = description;
         return this;
@@ -97,6 +105,7 @@ public class HotelFullDetail {
     
     @JsonProperty("emails")
     public String[] emails;
+
     public HotelFullDetail withEmails(String[] emails) {
         this.emails = emails;
         return this;
@@ -104,6 +113,7 @@ public class HotelFullDetail {
     
     @JsonProperty("externalUrls")
     public ExternalUrl[] externalUrls;
+
     public HotelFullDetail withExternalUrls(ExternalUrl[] externalUrls) {
         this.externalUrls = externalUrls;
         return this;
@@ -114,6 +124,7 @@ public class HotelFullDetail {
      */
     @JsonProperty("hotelId")
     public String hotelId;
+
     public HotelFullDetail withHotelId(String hotelId) {
         this.hotelId = hotelId;
         return this;
@@ -124,6 +135,7 @@ public class HotelFullDetail {
      */
     @JsonProperty("images")
     public Image[] images;
+
     public HotelFullDetail withImages(Image[] images) {
         this.images = images;
         return this;
@@ -134,6 +146,7 @@ public class HotelFullDetail {
      */
     @JsonProperty("location")
     public Location location;
+
     public HotelFullDetail withLocation(Location location) {
         this.location = location;
         return this;
@@ -144,6 +157,7 @@ public class HotelFullDetail {
      */
     @JsonProperty("name")
     public String name;
+
     public HotelFullDetail withName(String name) {
         this.name = name;
         return this;
@@ -154,6 +168,7 @@ public class HotelFullDetail {
      */
     @JsonProperty("phoneNumbers")
     public String[] phoneNumbers;
+
     public HotelFullDetail withPhoneNumbers(String[] phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
         return this;
@@ -164,6 +179,7 @@ public class HotelFullDetail {
      */
     @JsonProperty("roomCount")
     public Double roomCount;
+
     public HotelFullDetail withRoomCount(Double roomCount) {
         this.roomCount = roomCount;
         return this;
@@ -174,6 +190,7 @@ public class HotelFullDetail {
      */
     @JsonProperty("roomTypes")
     public RoomType[] roomTypes;
+
     public HotelFullDetail withRoomTypes(RoomType[] roomTypes) {
         this.roomTypes = roomTypes;
         return this;
@@ -184,6 +201,7 @@ public class HotelFullDetail {
      */
     @JsonProperty("starRating")
     public Double starRating;
+
     public HotelFullDetail withStarRating(Double starRating) {
         this.starRating = starRating;
         return this;
@@ -194,6 +212,7 @@ public class HotelFullDetail {
      */
     @JsonProperty("termsAndConditions")
     public String termsAndConditions;
+
     public HotelFullDetail withTermsAndConditions(String termsAndConditions) {
         this.termsAndConditions = termsAndConditions;
         return this;
@@ -205,6 +224,7 @@ public class HotelFullDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public HotelFullDetail withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -218,6 +238,7 @@ public class HotelFullDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public HotelFullDetail withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -228,9 +249,30 @@ public class HotelFullDetail {
      */
     @JsonProperty("websiteUrl")
     public String websiteUrl;
+
     public HotelFullDetail withWebsiteUrl(String websiteUrl) {
         this.websiteUrl = websiteUrl;
         return this;
     }
     
+    public HotelFullDetail(@JsonProperty("address") Address address, @JsonProperty("amenities") Amenity[] amenities, @JsonProperty("checkIn") TimeRange checkIn, @JsonProperty("checkOut") TimeRange checkOut, @JsonProperty("contractable") Boolean contractable, @JsonProperty("currency") String currency, @JsonProperty("emails") String[] emails, @JsonProperty("externalUrls") ExternalUrl[] externalUrls, @JsonProperty("hotelId") String hotelId, @JsonProperty("images") Image[] images, @JsonProperty("location") Location location, @JsonProperty("name") String name, @JsonProperty("phoneNumbers") String[] phoneNumbers, @JsonProperty("roomCount") Double roomCount, @JsonProperty("roomTypes") RoomType[] roomTypes, @JsonProperty("starRating") Double starRating, @JsonProperty("termsAndConditions") String termsAndConditions, @JsonProperty("websiteUrl") String websiteUrl) {
+        this.address = address;
+        this.amenities = amenities;
+        this.checkIn = checkIn;
+        this.checkOut = checkOut;
+        this.contractable = contractable;
+        this.currency = currency;
+        this.emails = emails;
+        this.externalUrls = externalUrls;
+        this.hotelId = hotelId;
+        this.images = images;
+        this.location = location;
+        this.name = name;
+        this.phoneNumbers = phoneNumbers;
+        this.roomCount = roomCount;
+        this.roomTypes = roomTypes;
+        this.starRating = starRating;
+        this.termsAndConditions = termsAndConditions;
+        this.websiteUrl = websiteUrl;
+  }
 }

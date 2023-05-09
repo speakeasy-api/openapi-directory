@@ -66,15 +66,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiAllResponse res = new org.openapis.openapi.models.operations.EstimationApiAllResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiAllResponse res = new org.openapis.openapi.models.operations.EstimationApiAllResponse(contentType, httpRes.statusCode()) {{
             listResultEstimationDetailsApiModel = null;
             listResultEstimationDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,15 +136,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiChangeStatusFormResponse res = new org.openapis.openapi.models.operations.EstimationApiChangeStatusFormResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiChangeStatusFormResponse res = new org.openapis.openapi.models.operations.EstimationApiChangeStatusFormResponse(contentType, httpRes.statusCode()) {{
             estimationApiChangeStatusForm200ApplicationJSONBoolean = null;
             body = null;
             body = null;
             body = null;
             estimationApiChangeStatusForm200TextJSONBoolean = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,15 +206,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiChangeStatusJsonResponse res = new org.openapis.openapi.models.operations.EstimationApiChangeStatusJsonResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiChangeStatusJsonResponse res = new org.openapis.openapi.models.operations.EstimationApiChangeStatusJsonResponse(contentType, httpRes.statusCode()) {{
             estimationApiChangeStatusJSON200ApplicationJSONBoolean = null;
             body = null;
             body = null;
             body = null;
             estimationApiChangeStatusJSON200TextJSONBoolean = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -282,15 +276,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiChangeStatusRawResponse res = new org.openapis.openapi.models.operations.EstimationApiChangeStatusRawResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiChangeStatusRawResponse res = new org.openapis.openapi.models.operations.EstimationApiChangeStatusRawResponse(contentType, httpRes.statusCode()) {{
             estimationApiChangeStatusRaw200ApplicationJSONBoolean = null;
             body = null;
             body = null;
             body = null;
             estimationApiChangeStatusRaw200TextJSONBoolean = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -354,15 +346,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiDeleteFormResponse res = new org.openapis.openapi.models.operations.EstimationApiDeleteFormResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiDeleteFormResponse res = new org.openapis.openapi.models.operations.EstimationApiDeleteFormResponse(contentType, httpRes.statusCode()) {{
             estimationApiDeleteForm200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             estimationApiDeleteForm200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -426,15 +416,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiDeleteJsonResponse res = new org.openapis.openapi.models.operations.EstimationApiDeleteJsonResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiDeleteJsonResponse res = new org.openapis.openapi.models.operations.EstimationApiDeleteJsonResponse(contentType, httpRes.statusCode()) {{
             estimationApiDeleteJSON200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             estimationApiDeleteJSON200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -498,15 +486,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiDeleteRawResponse res = new org.openapis.openapi.models.operations.EstimationApiDeleteRawResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiDeleteRawResponse res = new org.openapis.openapi.models.operations.EstimationApiDeleteRawResponse(contentType, httpRes.statusCode()) {{
             estimationApiDeleteRaw200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             estimationApiDeleteRaw200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -571,15 +557,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiDetailsResponse res = new org.openapis.openapi.models.operations.EstimationApiDetailsResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiDetailsResponse res = new org.openapis.openapi.models.operations.EstimationApiDetailsResponse(contentType, httpRes.statusCode()) {{
             estimationFullDetailsApiModel = null;
             estimationFullDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -643,15 +627,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiNewFormResponse res = new org.openapis.openapi.models.operations.EstimationApiNewFormResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiNewFormResponse res = new org.openapis.openapi.models.operations.EstimationApiNewFormResponse(contentType, httpRes.statusCode()) {{
             estimationFullDetailsApiModel = null;
             estimationFullDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -715,15 +697,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiNewJsonResponse res = new org.openapis.openapi.models.operations.EstimationApiNewJsonResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiNewJsonResponse res = new org.openapis.openapi.models.operations.EstimationApiNewJsonResponse(contentType, httpRes.statusCode()) {{
             estimationFullDetailsApiModel = null;
             estimationFullDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -787,15 +767,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiNewRawResponse res = new org.openapis.openapi.models.operations.EstimationApiNewRawResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiNewRawResponse res = new org.openapis.openapi.models.operations.EstimationApiNewRawResponse(contentType, httpRes.statusCode()) {{
             estimationFullDetailsApiModel = null;
             estimationFullDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -859,15 +837,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiSendToClientFormResponse res = new org.openapis.openapi.models.operations.EstimationApiSendToClientFormResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiSendToClientFormResponse res = new org.openapis.openapi.models.operations.EstimationApiSendToClientFormResponse(contentType, httpRes.statusCode()) {{
             estimationApiSendToClientForm200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             estimationApiSendToClientForm200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -931,15 +907,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiSendToClientJsonResponse res = new org.openapis.openapi.models.operations.EstimationApiSendToClientJsonResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiSendToClientJsonResponse res = new org.openapis.openapi.models.operations.EstimationApiSendToClientJsonResponse(contentType, httpRes.statusCode()) {{
             estimationApiSendToClientJSON200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             estimationApiSendToClientJSON200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1003,15 +977,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiSendToClientRawResponse res = new org.openapis.openapi.models.operations.EstimationApiSendToClientRawResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiSendToClientRawResponse res = new org.openapis.openapi.models.operations.EstimationApiSendToClientRawResponse(contentType, httpRes.statusCode()) {{
             estimationApiSendToClientRaw200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             estimationApiSendToClientRaw200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1076,15 +1048,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiStatusResponse res = new org.openapis.openapi.models.operations.EstimationApiStatusResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiStatusResponse res = new org.openapis.openapi.models.operations.EstimationApiStatusResponse(contentType, httpRes.statusCode()) {{
             estimationApiStatus200ApplicationJSONStringEnum = null;
             body = null;
             body = null;
             body = null;
             estimationApiStatus200TextJSONStringEnum = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1148,15 +1118,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiUpdateFormResponse res = new org.openapis.openapi.models.operations.EstimationApiUpdateFormResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiUpdateFormResponse res = new org.openapis.openapi.models.operations.EstimationApiUpdateFormResponse(contentType, httpRes.statusCode()) {{
             estimationFullDetailsApiModel = null;
             estimationFullDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1220,15 +1188,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiUpdateJsonResponse res = new org.openapis.openapi.models.operations.EstimationApiUpdateJsonResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiUpdateJsonResponse res = new org.openapis.openapi.models.operations.EstimationApiUpdateJsonResponse(contentType, httpRes.statusCode()) {{
             estimationFullDetailsApiModel = null;
             estimationFullDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1292,15 +1258,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiUpdateRawResponse res = new org.openapis.openapi.models.operations.EstimationApiUpdateRawResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiUpdateRawResponse res = new org.openapis.openapi.models.operations.EstimationApiUpdateRawResponse(contentType, httpRes.statusCode()) {{
             estimationFullDetailsApiModel = null;
             estimationFullDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1365,15 +1329,13 @@ public class Estimation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EstimationApiUriResponse res = new org.openapis.openapi.models.operations.EstimationApiUriResponse() {{
+        org.openapis.openapi.models.operations.EstimationApiUriResponse res = new org.openapis.openapi.models.operations.EstimationApiUriResponse(contentType, httpRes.statusCode()) {{
             estimationUriApiModel = null;
             estimationUriApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

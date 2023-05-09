@@ -12,6 +12,7 @@ public class MonetaryAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceAmount")
     public Price priceAmount;
+
     public MonetaryAmount withPriceAmount(Price priceAmount) {
         this.priceAmount = priceAmount;
         return this;
@@ -20,9 +21,11 @@ public class MonetaryAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxAmount")
     public Price taxAmount;
+
     public MonetaryAmount withTaxAmount(Price taxAmount) {
         this.taxAmount = taxAmount;
         return this;
     }
     
+    public MonetaryAmount(){}
 }

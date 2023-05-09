@@ -18,6 +18,7 @@ public class NullTransport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dummy")
     public String dummy;
+
     public NullTransport withDummy(String dummy) {
         this.dummy = dummy;
         return this;
@@ -28,9 +29,13 @@ public class NullTransport {
      */
     @JsonProperty("type")
     public String type;
+
     public NullTransport withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NullTransport(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

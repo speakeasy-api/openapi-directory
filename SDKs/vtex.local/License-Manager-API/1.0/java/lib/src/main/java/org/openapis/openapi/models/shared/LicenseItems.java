@@ -22,6 +22,7 @@ public class LicenseItems {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiration")
     public OffsetDateTime expiration;
+
     public LicenseItems withExpiration(OffsetDateTime expiration) {
         this.expiration = expiration;
         return this;
@@ -33,6 +34,7 @@ public class LicenseItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public LicenseItems withId(Double id) {
         this.id = id;
         return this;
@@ -44,6 +46,7 @@ public class LicenseItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPurchased")
     public Boolean isPurchased;
+
     public LicenseItems withIsPurchased(Boolean isPurchased) {
         this.isPurchased = isPurchased;
         return this;
@@ -55,6 +58,7 @@ public class LicenseItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LicenseItems withName(String name) {
         this.name = name;
         return this;
@@ -66,9 +70,11 @@ public class LicenseItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public LicenseItemsProducts[] products;
+
     public LicenseItems withProducts(LicenseItemsProducts[] products) {
         this.products = products;
         return this;
     }
     
+    public LicenseItems(){}
 }

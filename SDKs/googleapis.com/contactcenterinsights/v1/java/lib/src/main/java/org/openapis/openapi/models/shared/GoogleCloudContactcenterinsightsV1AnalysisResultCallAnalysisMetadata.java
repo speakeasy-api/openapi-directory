@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public GoogleCloudContactcenterinsightsV1CallAnnotation[] annotations;
+
     public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata withAnnotations(GoogleCloudContactcenterinsightsV1CallAnnotation[] annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public java.util.Map<String, GoogleCloudContactcenterinsightsV1Entity> entities;
+
     public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata withEntities(java.util.Map<String, GoogleCloudContactcenterinsightsV1Entity> entities) {
         this.entities = entities;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intents")
     public java.util.Map<String, GoogleCloudContactcenterinsightsV1Intent> intents;
+
     public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata withIntents(java.util.Map<String, GoogleCloudContactcenterinsightsV1Intent> intents) {
         this.intents = intents;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueModelResult")
     public GoogleCloudContactcenterinsightsV1IssueModelResult issueModelResult;
+
     public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata withIssueModelResult(GoogleCloudContactcenterinsightsV1IssueModelResult issueModelResult) {
         this.issueModelResult = issueModelResult;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phraseMatchers")
     public java.util.Map<String, GoogleCloudContactcenterinsightsV1PhraseMatchData> phraseMatchers;
+
     public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata withPhraseMatchers(java.util.Map<String, GoogleCloudContactcenterinsightsV1PhraseMatchData> phraseMatchers) {
         this.phraseMatchers = phraseMatchers;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentiments")
     public GoogleCloudContactcenterinsightsV1ConversationLevelSentiment[] sentiments;
+
     public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata withSentiments(GoogleCloudContactcenterinsightsV1ConversationLevelSentiment[] sentiments) {
         this.sentiments = sentiments;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata(){}
 }

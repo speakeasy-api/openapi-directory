@@ -15,6 +15,7 @@ public class TimeSeriesTransformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public Action action;
+
     public TimeSeriesTransformation withAction(Action action) {
         this.action = action;
         return this;
@@ -23,9 +24,11 @@ public class TimeSeriesTransformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSeriesConditions")
     public TimeSeriesCondition[] timeSeriesConditions;
+
     public TimeSeriesTransformation withTimeSeriesConditions(TimeSeriesCondition[] timeSeriesConditions) {
         this.timeSeriesConditions = timeSeriesConditions;
         return this;
     }
     
+    public TimeSeriesTransformation(){}
 }

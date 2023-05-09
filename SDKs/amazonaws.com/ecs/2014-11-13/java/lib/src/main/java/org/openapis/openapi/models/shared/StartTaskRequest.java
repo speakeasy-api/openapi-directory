@@ -12,6 +12,7 @@ public class StartTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public StartTaskRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -19,6 +20,7 @@ public class StartTaskRequest {
     
     @JsonProperty("containerInstances")
     public String[] containerInstances;
+
     public StartTaskRequest withContainerInstances(String[] containerInstances) {
         this.containerInstances = containerInstances;
         return this;
@@ -27,6 +29,7 @@ public class StartTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableECSManagedTags")
     public Boolean enableECSManagedTags;
+
     public StartTaskRequest withEnableECSManagedTags(Boolean enableECSManagedTags) {
         this.enableECSManagedTags = enableECSManagedTags;
         return this;
@@ -35,6 +38,7 @@ public class StartTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableExecuteCommand")
     public Boolean enableExecuteCommand;
+
     public StartTaskRequest withEnableExecuteCommand(Boolean enableExecuteCommand) {
         this.enableExecuteCommand = enableExecuteCommand;
         return this;
@@ -43,6 +47,7 @@ public class StartTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
+
     public StartTaskRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -51,6 +56,7 @@ public class StartTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
+
     public StartTaskRequest withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -59,6 +65,7 @@ public class StartTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrides")
     public TaskOverride overrides;
+
     public StartTaskRequest withOverrides(TaskOverride overrides) {
         this.overrides = overrides;
         return this;
@@ -67,6 +74,7 @@ public class StartTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propagateTags")
     public PropagateTagsEnum propagateTags;
+
     public StartTaskRequest withPropagateTags(PropagateTagsEnum propagateTags) {
         this.propagateTags = propagateTags;
         return this;
@@ -75,6 +83,7 @@ public class StartTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceId")
     public String referenceId;
+
     public StartTaskRequest withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -83,6 +92,7 @@ public class StartTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startedBy")
     public String startedBy;
+
     public StartTaskRequest withStartedBy(String startedBy) {
         this.startedBy = startedBy;
         return this;
@@ -91,6 +101,7 @@ public class StartTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public StartTaskRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -98,9 +109,14 @@ public class StartTaskRequest {
     
     @JsonProperty("taskDefinition")
     public String taskDefinition;
+
     public StartTaskRequest withTaskDefinition(String taskDefinition) {
         this.taskDefinition = taskDefinition;
         return this;
     }
     
+    public StartTaskRequest(@JsonProperty("containerInstances") String[] containerInstances, @JsonProperty("taskDefinition") String taskDefinition) {
+        this.containerInstances = containerInstances;
+        this.taskDefinition = taskDefinition;
+  }
 }

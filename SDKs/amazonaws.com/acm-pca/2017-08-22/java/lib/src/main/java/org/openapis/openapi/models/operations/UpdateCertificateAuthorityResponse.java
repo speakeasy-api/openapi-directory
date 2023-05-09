@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCertificateAuthorityResponse {
@@ -12,6 +13,7 @@ public class UpdateCertificateAuthorityResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateCertificateAuthorityResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCertificateAuthorityResponse {
     
     
     public String contentType;
+
     public UpdateCertificateAuthorityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCertificateAuthorityResponse {
      */
     
     public Object invalidArgsException;
+
     public UpdateCertificateAuthorityResponse withInvalidArgsException(Object invalidArgsException) {
         this.invalidArgsException = invalidArgsException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCertificateAuthorityResponse {
      */
     
     public Object invalidArnException;
+
     public UpdateCertificateAuthorityResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateCertificateAuthorityResponse {
      */
     
     public Object invalidPolicyException;
+
     public UpdateCertificateAuthorityResponse withInvalidPolicyException(Object invalidPolicyException) {
         this.invalidPolicyException = invalidPolicyException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateCertificateAuthorityResponse {
      */
     
     public Object invalidStateException;
+
     public UpdateCertificateAuthorityResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateCertificateAuthorityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateCertificateAuthorityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateCertificateAuthorityResponse {
     
     
     public Integer statusCode;
+
     public UpdateCertificateAuthorityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class UpdateCertificateAuthorityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCertificateAuthorityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateCertificateAuthorityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

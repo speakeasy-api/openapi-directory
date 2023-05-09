@@ -15,6 +15,7 @@ public class FileSystemEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Intercluster")
     public FileSystemEndpoint intercluster;
+
     public FileSystemEndpoints withIntercluster(FileSystemEndpoint intercluster) {
         this.intercluster = intercluster;
         return this;
@@ -23,9 +24,11 @@ public class FileSystemEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Management")
     public FileSystemEndpoint management;
+
     public FileSystemEndpoints withManagement(FileSystemEndpoint management) {
         this.management = management;
         return this;
     }
     
+    public FileSystemEndpoints(){}
 }

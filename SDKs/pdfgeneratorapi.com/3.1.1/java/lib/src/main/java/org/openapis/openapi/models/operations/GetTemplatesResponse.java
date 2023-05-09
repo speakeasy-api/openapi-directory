@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTemplatesResponse {
     
     public String contentType;
+
     public GetTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTemplatesResponse {
     
     
     public Integer statusCode;
+
     public GetTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetTemplatesResponse {
      */
     
     public GetTemplates200ApplicationJSON getTemplates200ApplicationJSONObject;
+
     public GetTemplatesResponse withGetTemplates200ApplicationJSONObject(GetTemplates200ApplicationJSON getTemplates200ApplicationJSONObject) {
         this.getTemplates200ApplicationJSONObject = getTemplates200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetTemplatesResponse {
      */
     
     public GetTemplates401ApplicationJSON getTemplates401ApplicationJSONObject;
+
     public GetTemplatesResponse withGetTemplates401ApplicationJSONObject(GetTemplates401ApplicationJSON getTemplates401ApplicationJSONObject) {
         this.getTemplates401ApplicationJSONObject = getTemplates401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetTemplatesResponse {
      */
     
     public GetTemplates403ApplicationJSON getTemplates403ApplicationJSONObject;
+
     public GetTemplatesResponse withGetTemplates403ApplicationJSONObject(GetTemplates403ApplicationJSON getTemplates403ApplicationJSONObject) {
         this.getTemplates403ApplicationJSONObject = getTemplates403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetTemplatesResponse {
      */
     
     public GetTemplates404ApplicationJSON getTemplates404ApplicationJSONObject;
+
     public GetTemplatesResponse withGetTemplates404ApplicationJSONObject(GetTemplates404ApplicationJSON getTemplates404ApplicationJSONObject) {
         this.getTemplates404ApplicationJSONObject = getTemplates404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetTemplatesResponse {
      */
     
     public GetTemplates422ApplicationJSON getTemplates422ApplicationJSONObject;
+
     public GetTemplatesResponse withGetTemplates422ApplicationJSONObject(GetTemplates422ApplicationJSON getTemplates422ApplicationJSONObject) {
         this.getTemplates422ApplicationJSONObject = getTemplates422ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class GetTemplatesResponse {
      */
     
     public GetTemplates500ApplicationJSON getTemplates500ApplicationJSONObject;
+
     public GetTemplatesResponse withGetTemplates500ApplicationJSONObject(GetTemplates500ApplicationJSON getTemplates500ApplicationJSONObject) {
         this.getTemplates500ApplicationJSONObject = getTemplates500ApplicationJSONObject;
         return this;
     }
     
+    public GetTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ProjectsMoveCard503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ProjectsMoveCard503ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class ProjectsMoveCard503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation_url")
     public String documentationUrl;
+
     public ProjectsMoveCard503ApplicationJSON withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -31,6 +33,7 @@ public class ProjectsMoveCard503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ProjectsMoveCard503ApplicationJSONErrors[] errors;
+
     public ProjectsMoveCard503ApplicationJSON withErrors(ProjectsMoveCard503ApplicationJSONErrors[] errors) {
         this.errors = errors;
         return this;
@@ -39,9 +42,11 @@ public class ProjectsMoveCard503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ProjectsMoveCard503ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ProjectsMoveCard503ApplicationJSON(){}
 }

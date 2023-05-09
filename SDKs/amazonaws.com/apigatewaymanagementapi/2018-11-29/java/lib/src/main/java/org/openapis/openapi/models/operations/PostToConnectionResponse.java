@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostToConnectionResponse {
     
     public String contentType;
+
     public PostToConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostToConnectionResponse {
      */
     
     public Object forbiddenException;
+
     public PostToConnectionResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -29,6 +32,7 @@ public class PostToConnectionResponse {
      */
     
     public Object goneException;
+
     public PostToConnectionResponse withGoneException(Object goneException) {
         this.goneException = goneException;
         return this;
@@ -39,6 +43,7 @@ public class PostToConnectionResponse {
      */
     
     public Object limitExceededException;
+
     public PostToConnectionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class PostToConnectionResponse {
      */
     
     public Object payloadTooLargeException;
+
     public PostToConnectionResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -56,6 +62,7 @@ public class PostToConnectionResponse {
     
     
     public Integer statusCode;
+
     public PostToConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class PostToConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostToConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostToConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

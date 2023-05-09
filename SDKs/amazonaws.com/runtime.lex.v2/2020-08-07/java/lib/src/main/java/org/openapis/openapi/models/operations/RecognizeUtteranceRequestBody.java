@@ -15,9 +15,11 @@ public class RecognizeUtteranceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputStream")
     public String inputStream;
+
     public RecognizeUtteranceRequestBody withInputStream(String inputStream) {
         this.inputStream = inputStream;
         return this;
     }
     
+    public RecognizeUtteranceRequestBody(){}
 }

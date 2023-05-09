@@ -15,9 +15,13 @@ public class BatchSegmentJobInput {
      */
     @JsonProperty("s3DataSource")
     public S3DataConfig s3DataSource;
+
     public BatchSegmentJobInput withS3DataSource(S3DataConfig s3DataSource) {
         this.s3DataSource = s3DataSource;
         return this;
     }
     
+    public BatchSegmentJobInput(@JsonProperty("s3DataSource") S3DataConfig s3DataSource) {
+        this.s3DataSource = s3DataSource;
+  }
 }

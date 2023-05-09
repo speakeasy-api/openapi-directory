@@ -15,9 +15,11 @@ public class ExportVectorEnrichmentJobRequestBodyOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Data")
     public org.openapis.openapi.models.shared.VectorEnrichmentJobS3Data s3Data;
+
     public ExportVectorEnrichmentJobRequestBodyOutputConfig withS3Data(org.openapis.openapi.models.shared.VectorEnrichmentJobS3Data s3Data) {
         this.s3Data = s3Data;
         return this;
     }
     
+    public ExportVectorEnrichmentJobRequestBodyOutputConfig(){}
 }

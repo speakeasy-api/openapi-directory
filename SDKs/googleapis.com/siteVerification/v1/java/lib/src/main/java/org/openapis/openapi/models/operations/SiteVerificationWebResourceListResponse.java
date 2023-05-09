@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SiteVerificationWebResourceListResponse {
     
     public String contentType;
+
     public SiteVerificationWebResourceListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SiteVerificationWebResourceListResponse {
      */
     
     public org.openapis.openapi.models.shared.SiteVerificationWebResourceListResponse siteVerificationWebResourceListResponse;
+
     public SiteVerificationWebResourceListResponse withSiteVerificationWebResourceListResponse(org.openapis.openapi.models.shared.SiteVerificationWebResourceListResponse siteVerificationWebResourceListResponse) {
         this.siteVerificationWebResourceListResponse = siteVerificationWebResourceListResponse;
         return this;
@@ -26,6 +29,7 @@ public class SiteVerificationWebResourceListResponse {
     
     
     public Integer statusCode;
+
     public SiteVerificationWebResourceListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SiteVerificationWebResourceListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SiteVerificationWebResourceListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SiteVerificationWebResourceListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

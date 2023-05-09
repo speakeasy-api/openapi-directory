@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateLocalGatewayRouteTableResult {
     
     public CreateLocalGatewayRouteTableResultLocalGatewayRouteTable localGatewayRouteTable;
+
     public CreateLocalGatewayRouteTableResult withLocalGatewayRouteTable(CreateLocalGatewayRouteTableResultLocalGatewayRouteTable localGatewayRouteTable) {
         this.localGatewayRouteTable = localGatewayRouteTable;
         return this;
     }
     
+    public CreateLocalGatewayRouteTableResult(){}
 }

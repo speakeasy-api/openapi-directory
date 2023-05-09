@@ -20,6 +20,7 @@ public class Credentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessKeyId")
     public String accessKeyId;
+
     public Credentials withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -30,6 +31,7 @@ public class Credentials {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Expiration")
     public OffsetDateTime expiration;
+
     public Credentials withExpiration(OffsetDateTime expiration) {
         this.expiration = expiration;
         return this;
@@ -38,6 +40,7 @@ public class Credentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretKey")
     public String secretKey;
+
     public Credentials withSecretKey(String secretKey) {
         this.secretKey = secretKey;
         return this;
@@ -46,9 +49,11 @@ public class Credentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionToken")
     public String sessionToken;
+
     public Credentials withSessionToken(String sessionToken) {
         this.sessionToken = sessionToken;
         return this;
     }
     
+    public Credentials(){}
 }

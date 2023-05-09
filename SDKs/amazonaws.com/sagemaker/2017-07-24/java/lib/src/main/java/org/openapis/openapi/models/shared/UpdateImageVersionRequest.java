@@ -12,6 +12,7 @@ public class UpdateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Alias")
     public String alias;
+
     public UpdateImageVersionRequest withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -20,6 +21,7 @@ public class UpdateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AliasesToAdd")
     public String[] aliasesToAdd;
+
     public UpdateImageVersionRequest withAliasesToAdd(String[] aliasesToAdd) {
         this.aliasesToAdd = aliasesToAdd;
         return this;
@@ -28,6 +30,7 @@ public class UpdateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AliasesToDelete")
     public String[] aliasesToDelete;
+
     public UpdateImageVersionRequest withAliasesToDelete(String[] aliasesToDelete) {
         this.aliasesToDelete = aliasesToDelete;
         return this;
@@ -36,6 +39,7 @@ public class UpdateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Horovod")
     public Boolean horovod;
+
     public UpdateImageVersionRequest withHorovod(Boolean horovod) {
         this.horovod = horovod;
         return this;
@@ -43,6 +47,7 @@ public class UpdateImageVersionRequest {
     
     @JsonProperty("ImageName")
     public String imageName;
+
     public UpdateImageVersionRequest withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -51,6 +56,7 @@ public class UpdateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobType")
     public JobTypeEnum jobType;
+
     public UpdateImageVersionRequest withJobType(JobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -59,6 +65,7 @@ public class UpdateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLFramework")
     public String mlFramework;
+
     public UpdateImageVersionRequest withMLFramework(String mlFramework) {
         this.mlFramework = mlFramework;
         return this;
@@ -67,6 +74,7 @@ public class UpdateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Processor")
     public ProcessorEnum processor;
+
     public UpdateImageVersionRequest withProcessor(ProcessorEnum processor) {
         this.processor = processor;
         return this;
@@ -75,6 +83,7 @@ public class UpdateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgrammingLang")
     public String programmingLang;
+
     public UpdateImageVersionRequest withProgrammingLang(String programmingLang) {
         this.programmingLang = programmingLang;
         return this;
@@ -83,6 +92,7 @@ public class UpdateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReleaseNotes")
     public String releaseNotes;
+
     public UpdateImageVersionRequest withReleaseNotes(String releaseNotes) {
         this.releaseNotes = releaseNotes;
         return this;
@@ -91,6 +101,7 @@ public class UpdateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VendorGuidance")
     public VendorGuidanceEnum vendorGuidance;
+
     public UpdateImageVersionRequest withVendorGuidance(VendorGuidanceEnum vendorGuidance) {
         this.vendorGuidance = vendorGuidance;
         return this;
@@ -99,9 +110,13 @@ public class UpdateImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public UpdateImageVersionRequest withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public UpdateImageVersionRequest(@JsonProperty("ImageName") String imageName) {
+        this.imageName = imageName;
+  }
 }

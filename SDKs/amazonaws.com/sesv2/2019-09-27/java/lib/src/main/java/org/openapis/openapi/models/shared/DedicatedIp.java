@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DedicatedIp {
     @JsonProperty("Ip")
     public String ip;
+
     public DedicatedIp withIp(String ip) {
         this.ip = ip;
         return this;
@@ -22,6 +23,7 @@ public class DedicatedIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoolName")
     public String poolName;
+
     public DedicatedIp withPoolName(String poolName) {
         this.poolName = poolName;
         return this;
@@ -29,6 +31,7 @@ public class DedicatedIp {
     
     @JsonProperty("WarmupPercentage")
     public Long warmupPercentage;
+
     public DedicatedIp withWarmupPercentage(Long warmupPercentage) {
         this.warmupPercentage = warmupPercentage;
         return this;
@@ -36,9 +39,15 @@ public class DedicatedIp {
     
     @JsonProperty("WarmupStatus")
     public WarmupStatusEnum warmupStatus;
+
     public DedicatedIp withWarmupStatus(WarmupStatusEnum warmupStatus) {
         this.warmupStatus = warmupStatus;
         return this;
     }
     
+    public DedicatedIp(@JsonProperty("Ip") String ip, @JsonProperty("WarmupPercentage") Long warmupPercentage, @JsonProperty("WarmupStatus") WarmupStatusEnum warmupStatus) {
+        this.ip = ip;
+        this.warmupPercentage = warmupPercentage;
+        this.warmupStatus = warmupStatus;
+  }
 }

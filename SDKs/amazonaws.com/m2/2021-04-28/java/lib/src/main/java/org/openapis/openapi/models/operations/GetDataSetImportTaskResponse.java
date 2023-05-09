@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDataSetImportTaskResponse {
@@ -12,6 +13,7 @@ public class GetDataSetImportTaskResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDataSetImportTaskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetDataSetImportTaskResponse {
     
     
     public String contentType;
+
     public GetDataSetImportTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDataSetImportTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDataSetImportTaskResponse getDataSetImportTaskResponse;
+
     public GetDataSetImportTaskResponse withGetDataSetImportTaskResponse(org.openapis.openapi.models.shared.GetDataSetImportTaskResponse getDataSetImportTaskResponse) {
         this.getDataSetImportTaskResponse = getDataSetImportTaskResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDataSetImportTaskResponse {
      */
     
     public Object internalServerException;
+
     public GetDataSetImportTaskResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetDataSetImportTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetDataSetImportTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetDataSetImportTaskResponse {
     
     
     public Integer statusCode;
+
     public GetDataSetImportTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetDataSetImportTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDataSetImportTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetDataSetImportTaskResponse {
      */
     
     public Object throttlingException;
+
     public GetDataSetImportTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetDataSetImportTaskResponse {
      */
     
     public Object validationException;
+
     public GetDataSetImportTaskResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetDataSetImportTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

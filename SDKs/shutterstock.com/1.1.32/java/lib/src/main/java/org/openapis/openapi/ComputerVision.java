@@ -60,11 +60,9 @@ public class ComputerVision {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetKeywordsResponse res = new org.openapis.openapi.models.operations.GetKeywordsResponse() {{
+        org.openapis.openapi.models.operations.GetKeywordsResponse res = new org.openapis.openapi.models.operations.GetKeywordsResponse(contentType, httpRes.statusCode()) {{
             keywordDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class ComputerVision {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSimilarImagesResponse res = new org.openapis.openapi.models.operations.GetSimilarImagesResponse() {{
+        org.openapis.openapi.models.operations.GetSimilarImagesResponse res = new org.openapis.openapi.models.operations.GetSimilarImagesResponse(contentType, httpRes.statusCode()) {{
             imageSearchResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class ComputerVision {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSimilarVideosResponse res = new org.openapis.openapi.models.operations.GetSimilarVideosResponse() {{
+        org.openapis.openapi.models.operations.GetSimilarVideosResponse res = new org.openapis.openapi.models.operations.GetSimilarVideosResponse(contentType, httpRes.statusCode()) {{
             videoSearchResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -185,7 +179,9 @@ public class ComputerVision {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UploadEphemeralImageResponse uploadEphemeralImage(org.openapis.openapi.models.shared.ImageCreateRequest request, org.openapis.openapi.models.operations.UploadEphemeralImageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/images");
@@ -206,11 +202,9 @@ public class ComputerVision {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UploadEphemeralImageResponse res = new org.openapis.openapi.models.operations.UploadEphemeralImageResponse() {{
+        org.openapis.openapi.models.operations.UploadEphemeralImageResponse res = new org.openapis.openapi.models.operations.UploadEphemeralImageResponse(contentType, httpRes.statusCode()) {{
             imageCreateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -254,11 +248,9 @@ public class ComputerVision {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UploadImageResponse res = new org.openapis.openapi.models.operations.UploadImageResponse() {{
+        org.openapis.openapi.models.operations.UploadImageResponse res = new org.openapis.openapi.models.operations.UploadImageResponse(contentType, httpRes.statusCode()) {{
             computerVisionImageCreateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

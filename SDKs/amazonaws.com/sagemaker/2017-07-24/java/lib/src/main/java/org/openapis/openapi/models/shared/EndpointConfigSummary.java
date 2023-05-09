@@ -19,6 +19,7 @@ public class EndpointConfigSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public EndpointConfigSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +27,7 @@ public class EndpointConfigSummary {
     
     @JsonProperty("EndpointConfigArn")
     public String endpointConfigArn;
+
     public EndpointConfigSummary withEndpointConfigArn(String endpointConfigArn) {
         this.endpointConfigArn = endpointConfigArn;
         return this;
@@ -33,9 +35,15 @@ public class EndpointConfigSummary {
     
     @JsonProperty("EndpointConfigName")
     public String endpointConfigName;
+
     public EndpointConfigSummary withEndpointConfigName(String endpointConfigName) {
         this.endpointConfigName = endpointConfigName;
         return this;
     }
     
+    public EndpointConfigSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("EndpointConfigArn") String endpointConfigArn, @JsonProperty("EndpointConfigName") String endpointConfigName) {
+        this.creationTime = creationTime;
+        this.endpointConfigArn = endpointConfigArn;
+        this.endpointConfigName = endpointConfigName;
+  }
 }

@@ -18,6 +18,7 @@ public class SeqMapTaskOutputInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sink")
     public Sink sink;
+
     public SeqMapTaskOutputInfo withSink(Sink sink) {
         this.sink = sink;
         return this;
@@ -29,9 +30,11 @@ public class SeqMapTaskOutputInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public SeqMapTaskOutputInfo withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public SeqMapTaskOutputInfo(){}
 }

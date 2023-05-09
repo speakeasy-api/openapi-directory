@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTagsRequest {
@@ -12,6 +13,7 @@ public class GetTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public GetTagsRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -22,9 +24,13 @@ public class GetTagsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public GetTagsRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GetTagsRequest(@JsonProperty("projectId") String projectId) {
+        this.projectId = projectId;
+  }
 }

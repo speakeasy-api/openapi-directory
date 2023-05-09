@@ -107,10 +107,8 @@ public class AirtravelCoordinates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AirtravelCoordinatesResponse res = new org.openapis.openapi.models.operations.AirtravelCoordinatesResponse() {{
+        org.openapis.openapi.models.operations.AirtravelCoordinatesResponse res = new org.openapis.openapi.models.operations.AirtravelCoordinatesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,10 +154,8 @@ public class AirtravelCoordinates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmCarbonOffset4Response res = new org.openapis.openapi.models.operations.ConfirmCarbonOffset4Response() {{
+        org.openapis.openapi.models.operations.ConfirmCarbonOffset4Response res = new org.openapis.openapi.models.operations.ConfirmCarbonOffset4Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,10 +201,8 @@ public class AirtravelCoordinates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmPayment4Response res = new org.openapis.openapi.models.operations.ConfirmPayment4Response() {{
+        org.openapis.openapi.models.operations.ConfirmPayment4Response res = new org.openapis.openapi.models.operations.ConfirmPayment4Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -254,10 +248,8 @@ public class AirtravelCoordinates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction4Response res = new org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction4Response() {{
+        org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction4Response res = new org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction4Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -303,10 +295,8 @@ public class AirtravelCoordinates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmsPlanting4Response res = new org.openapis.openapi.models.operations.ConfirmsPlanting4Response() {{
+        org.openapis.openapi.models.operations.ConfirmsPlanting4Response res = new org.openapis.openapi.models.operations.ConfirmsPlanting4Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

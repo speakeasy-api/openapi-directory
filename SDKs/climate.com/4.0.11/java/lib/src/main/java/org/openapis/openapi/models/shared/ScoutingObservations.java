@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScoutingObservations {
     @JsonProperty("results")
     public ScoutingObservationSummary[] results;
+
     public ScoutingObservations withResults(ScoutingObservationSummary[] results) {
         this.results = results;
         return this;
     }
     
+    public ScoutingObservations(@JsonProperty("results") ScoutingObservationSummary[] results) {
+        this.results = results;
+  }
 }

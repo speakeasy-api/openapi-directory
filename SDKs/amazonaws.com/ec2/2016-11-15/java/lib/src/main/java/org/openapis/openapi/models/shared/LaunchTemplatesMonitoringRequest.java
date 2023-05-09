@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class LaunchTemplatesMonitoringRequest {
     
     public Boolean enabled;
+
     public LaunchTemplatesMonitoringRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public LaunchTemplatesMonitoringRequest(){}
 }

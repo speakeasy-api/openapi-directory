@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSnippetsWorkspaceRequest {
@@ -12,6 +13,7 @@ public class PostSnippetsWorkspaceRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public PostSnippetsWorkspaceRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,9 +26,14 @@ public class PostSnippetsWorkspaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public PostSnippetsWorkspaceRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public PostSnippetsWorkspaceRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.workspace = workspace;
+  }
 }

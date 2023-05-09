@@ -15,6 +15,7 @@ public class IdentificationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardNumber")
     public String cardNumber;
+
     public IdentificationData withCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
         return this;
@@ -26,6 +27,7 @@ public class IdentificationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryDate")
     public String expiryDate;
+
     public IdentificationData withExpiryDate(String expiryDate) {
         this.expiryDate = expiryDate;
         return this;
@@ -37,6 +39,7 @@ public class IdentificationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerCountry")
     public String issuerCountry;
+
     public IdentificationData withIssuerCountry(String issuerCountry) {
         this.issuerCountry = issuerCountry;
         return this;
@@ -48,6 +51,7 @@ public class IdentificationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerState")
     public String issuerState;
+
     public IdentificationData withIssuerState(String issuerState) {
         this.issuerState = issuerState;
         return this;
@@ -59,6 +63,7 @@ public class IdentificationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nationalIdExempt")
     public Boolean nationalIdExempt;
+
     public IdentificationData withNationalIdExempt(Boolean nationalIdExempt) {
         this.nationalIdExempt = nationalIdExempt;
         return this;
@@ -70,6 +75,7 @@ public class IdentificationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public IdentificationData withNumber(String number) {
         this.number = number;
         return this;
@@ -95,9 +101,13 @@ public class IdentificationData {
      */
     @JsonProperty("type")
     public IdentificationDataTypeEnum type;
+
     public IdentificationData withType(IdentificationDataTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public IdentificationData(@JsonProperty("type") IdentificationDataTypeEnum type) {
+        this.type = type;
+  }
 }

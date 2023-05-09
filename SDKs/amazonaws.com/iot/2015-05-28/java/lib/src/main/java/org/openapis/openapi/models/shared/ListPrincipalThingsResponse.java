@@ -15,6 +15,7 @@ public class ListPrincipalThingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListPrincipalThingsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPrincipalThingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("things")
     public String[] things;
+
     public ListPrincipalThingsResponse withThings(String[] things) {
         this.things = things;
         return this;
     }
     
+    public ListPrincipalThingsResponse(){}
 }

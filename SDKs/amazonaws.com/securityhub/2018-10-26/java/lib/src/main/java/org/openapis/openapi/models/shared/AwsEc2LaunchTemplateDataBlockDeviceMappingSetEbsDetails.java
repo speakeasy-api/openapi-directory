@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteOnTermination")
     public Boolean deleteOnTermination;
+
     public AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encrypted")
     public Boolean encrypted;
+
     public AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Iops")
     public Long iops;
+
     public AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -55,6 +60,7 @@ public class AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Throughput")
     public Long throughput;
+
     public AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -63,6 +69,7 @@ public class AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeSize")
     public Long volumeSize;
+
     public AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
@@ -71,9 +78,11 @@ public class AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeType")
     public String volumeType;
+
     public AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails withVolumeType(String volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails(){}
 }

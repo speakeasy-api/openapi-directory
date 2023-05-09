@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadMultipartPartRequest {
@@ -12,6 +13,7 @@ public class UploadMultipartPartRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Range")
     public String contentRange;
+
     public UploadMultipartPartRequest withContentRange(String contentRange) {
         this.contentRange = contentRange;
         return this;
@@ -19,6 +21,7 @@ public class UploadMultipartPartRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UploadMultipartPartRequestBody requestBody;
+
     public UploadMultipartPartRequest withRequestBody(UploadMultipartPartRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class UploadMultipartPartRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UploadMultipartPartRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class UploadMultipartPartRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UploadMultipartPartRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class UploadMultipartPartRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UploadMultipartPartRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class UploadMultipartPartRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UploadMultipartPartRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class UploadMultipartPartRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UploadMultipartPartRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class UploadMultipartPartRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UploadMultipartPartRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,6 +77,7 @@ public class UploadMultipartPartRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UploadMultipartPartRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -78,6 +88,7 @@ public class UploadMultipartPartRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public UploadMultipartPartRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -88,6 +99,7 @@ public class UploadMultipartPartRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uploadId")
     public String uploadId;
+
     public UploadMultipartPartRequest withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
@@ -98,6 +110,7 @@ public class UploadMultipartPartRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultName")
     public String vaultName;
+
     public UploadMultipartPartRequest withVaultName(String vaultName) {
         this.vaultName = vaultName;
         return this;
@@ -108,9 +121,16 @@ public class UploadMultipartPartRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-sha256-tree-hash")
     public String xAmzSha256TreeHash;
+
     public UploadMultipartPartRequest withXAmzSha256TreeHash(String xAmzSha256TreeHash) {
         this.xAmzSha256TreeHash = xAmzSha256TreeHash;
         return this;
     }
     
+    public UploadMultipartPartRequest(@JsonProperty("RequestBody") UploadMultipartPartRequestBody requestBody, @JsonProperty("accountId") String accountId, @JsonProperty("uploadId") String uploadId, @JsonProperty("vaultName") String vaultName) {
+        this.requestBody = requestBody;
+        this.accountId = accountId;
+        this.uploadId = uploadId;
+        this.vaultName = vaultName;
+  }
 }

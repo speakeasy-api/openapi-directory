@@ -22,6 +22,7 @@ public class DescribeCustomPluginResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public DescribeCustomPluginResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeCustomPluginResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customPluginArn")
     public String customPluginArn;
+
     public DescribeCustomPluginResponse withCustomPluginArn(String customPluginArn) {
         this.customPluginArn = customPluginArn;
         return this;
@@ -38,6 +40,7 @@ public class DescribeCustomPluginResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customPluginState")
     public CustomPluginStateEnum customPluginState;
+
     public DescribeCustomPluginResponse withCustomPluginState(CustomPluginStateEnum customPluginState) {
         this.customPluginState = customPluginState;
         return this;
@@ -46,6 +49,7 @@ public class DescribeCustomPluginResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DescribeCustomPluginResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class DescribeCustomPluginResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestRevision")
     public CustomPluginRevisionSummary latestRevision;
+
     public DescribeCustomPluginResponse withLatestRevision(CustomPluginRevisionSummary latestRevision) {
         this.latestRevision = latestRevision;
         return this;
@@ -62,6 +67,7 @@ public class DescribeCustomPluginResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DescribeCustomPluginResponse withName(String name) {
         this.name = name;
         return this;
@@ -70,9 +76,11 @@ public class DescribeCustomPluginResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateDescription")
     public StateDescription stateDescription;
+
     public DescribeCustomPluginResponse withStateDescription(StateDescription stateDescription) {
         this.stateDescription = stateDescription;
         return this;
     }
     
+    public DescribeCustomPluginResponse(){}
 }

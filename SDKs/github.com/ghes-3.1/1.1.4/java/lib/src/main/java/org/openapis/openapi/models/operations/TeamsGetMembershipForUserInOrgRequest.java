@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsGetMembershipForUserInOrgRequest {
@@ -12,6 +13,7 @@ public class TeamsGetMembershipForUserInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public TeamsGetMembershipForUserInOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -22,6 +24,7 @@ public class TeamsGetMembershipForUserInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
     public String teamSlug;
+
     public TeamsGetMembershipForUserInOrgRequest withTeamSlug(String teamSlug) {
         this.teamSlug = teamSlug;
         return this;
@@ -32,9 +35,15 @@ public class TeamsGetMembershipForUserInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public TeamsGetMembershipForUserInOrgRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public TeamsGetMembershipForUserInOrgRequest(@JsonProperty("org") String org, @JsonProperty("team_slug") String teamSlug, @JsonProperty("username") String username) {
+        this.org = org;
+        this.teamSlug = teamSlug;
+        this.username = username;
+  }
 }

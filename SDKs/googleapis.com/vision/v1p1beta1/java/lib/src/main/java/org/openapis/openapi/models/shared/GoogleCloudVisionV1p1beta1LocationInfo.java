@@ -18,9 +18,11 @@ public class GoogleCloudVisionV1p1beta1LocationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latLng")
     public LatLng latLng;
+
     public GoogleCloudVisionV1p1beta1LocationInfo withLatLng(LatLng latLng) {
         this.latLng = latLng;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1LocationInfo(){}
 }

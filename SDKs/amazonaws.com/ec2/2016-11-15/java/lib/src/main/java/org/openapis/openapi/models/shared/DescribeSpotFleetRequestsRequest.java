@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetRequestsRequest {
     
     public Boolean dryRun;
+
     public DescribeSpotFleetRequestsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotFleetRequestsRequest {
     
     
     public Long maxResults;
+
     public DescribeSpotFleetRequestsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSpotFleetRequestsRequest {
     
     
     public String nextToken;
+
     public DescribeSpotFleetRequestsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -33,9 +36,11 @@ public class DescribeSpotFleetRequestsRequest {
     
     
     public String[] spotFleetRequestIds;
+
     public DescribeSpotFleetRequestsRequest withSpotFleetRequestIds(String[] spotFleetRequestIds) {
         this.spotFleetRequestIds = spotFleetRequestIds;
         return this;
     }
     
+    public DescribeSpotFleetRequestsRequest(){}
 }

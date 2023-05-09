@@ -18,9 +18,11 @@ public class DescribeSNOMEDCTInferenceJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComprehendMedicalAsyncJobProperties")
     public ComprehendMedicalAsyncJobProperties comprehendMedicalAsyncJobProperties;
+
     public DescribeSNOMEDCTInferenceJobResponse withComprehendMedicalAsyncJobProperties(ComprehendMedicalAsyncJobProperties comprehendMedicalAsyncJobProperties) {
         this.comprehendMedicalAsyncJobProperties = comprehendMedicalAsyncJobProperties;
         return this;
     }
     
+    public DescribeSNOMEDCTInferenceJobResponse(){}
 }

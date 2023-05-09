@@ -18,6 +18,7 @@ public class IosDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosModelId")
     public String iosModelId;
+
     public IosDevice withIosModelId(String iosModelId) {
         this.iosModelId = iosModelId;
         return this;
@@ -29,6 +30,7 @@ public class IosDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosVersionId")
     public String iosVersionId;
+
     public IosDevice withIosVersionId(String iosVersionId) {
         this.iosVersionId = iosVersionId;
         return this;
@@ -40,6 +42,7 @@ public class IosDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public IosDevice withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -51,9 +54,11 @@ public class IosDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientation")
     public String orientation;
+
     public IosDevice withOrientation(String orientation) {
         this.orientation = orientation;
         return this;
     }
     
+    public IosDevice(){}
 }

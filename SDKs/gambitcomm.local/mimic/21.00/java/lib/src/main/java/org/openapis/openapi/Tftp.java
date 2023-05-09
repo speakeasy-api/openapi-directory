@@ -52,11 +52,9 @@ public class Tftp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTftpGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolTftpGetArgsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTftpGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolTftpGetArgsResponse(contentType, httpRes.statusCode()) {{
             protocolTftpGetArgs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Tftp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTftpGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolTftpGetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTftpGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolTftpGetConfigResponse(contentType, httpRes.statusCode()) {{
             configTFTP = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class Tftp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTftpGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolTftpGetStatisticsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTftpGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolTftpGetStatisticsResponse(contentType, httpRes.statusCode()) {{
             protocolTftpGetStatistics200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +171,9 @@ public class Tftp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTftpGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolTftpGetStatsHdrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTftpGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolTftpGetStatsHdrResponse(contentType, httpRes.statusCode()) {{
             protocolTftpGetStatsHdr200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,11 +211,9 @@ public class Tftp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTftpGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolTftpGetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTftpGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolTftpGetTraceResponse(contentType, httpRes.statusCode()) {{
             configTFTP = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,11 +251,9 @@ public class Tftp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTftpSessionGetParameterResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSessionGetParameterResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTftpSessionGetParameterResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSessionGetParameterResponse(contentType, httpRes.statusCode()) {{
             protocolTftpSessionGetParameter200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +290,9 @@ public class Tftp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTftpSessionReadResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSessionReadResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTftpSessionReadResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSessionReadResponse(contentType, httpRes.statusCode()) {{
             protocolTftpSessionRead200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +330,9 @@ public class Tftp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTftpSessionSetParameterResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSessionSetParameterResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTftpSessionSetParameterResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSessionSetParameterResponse(contentType, httpRes.statusCode()) {{
             protocolTftpSessionSetParameter200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -385,11 +369,9 @@ public class Tftp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTftpSessionStartResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSessionStartResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTftpSessionStartResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSessionStartResponse(contentType, httpRes.statusCode()) {{
             protocolTftpSessionStart200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -426,11 +408,9 @@ public class Tftp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTftpSessionStatusResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSessionStatusResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTftpSessionStatusResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSessionStatusResponse(contentType, httpRes.statusCode()) {{
             protocolTftpSessionStatus200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -467,11 +447,9 @@ public class Tftp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTftpSessionStopResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSessionStopResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTftpSessionStopResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSessionStopResponse(contentType, httpRes.statusCode()) {{
             protocolTftpSessionStop200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -508,11 +486,9 @@ public class Tftp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTftpSessionWriteResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSessionWriteResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTftpSessionWriteResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSessionWriteResponse(contentType, httpRes.statusCode()) {{
             protocolTftpSessionWrite200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -550,11 +526,9 @@ public class Tftp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTftpSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTftpSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSetConfigResponse(contentType, httpRes.statusCode()) {{
             protocolTftpSetConfig200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -591,11 +565,9 @@ public class Tftp {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTftpSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTftpSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolTftpSetTraceResponse(contentType, httpRes.statusCode()) {{
             protocolTftpSetTrace200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

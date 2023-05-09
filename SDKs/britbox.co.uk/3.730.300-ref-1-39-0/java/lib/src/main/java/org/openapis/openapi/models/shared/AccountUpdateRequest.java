@@ -15,6 +15,7 @@ public class AccountUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public AccountUpdateRequest withAddress(Address address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class AccountUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultPaymentInstrumentId")
     public String defaultPaymentInstrumentId;
+
     public AccountUpdateRequest withDefaultPaymentInstrumentId(String defaultPaymentInstrumentId) {
         this.defaultPaymentInstrumentId = defaultPaymentInstrumentId;
         return this;
@@ -40,6 +42,7 @@ public class AccountUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultPaymentMethodId")
     public String defaultPaymentMethodId;
+
     public AccountUpdateRequest withDefaultPaymentMethodId(String defaultPaymentMethodId) {
         this.defaultPaymentMethodId = defaultPaymentMethodId;
         return this;
@@ -51,6 +54,7 @@ public class AccountUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public AccountUpdateRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -62,6 +66,7 @@ public class AccountUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public AccountUpdateRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -80,6 +85,7 @@ public class AccountUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minRatingPlaybackGuard")
     public String minRatingPlaybackGuard;
+
     public AccountUpdateRequest withMinRatingPlaybackGuard(String minRatingPlaybackGuard) {
         this.minRatingPlaybackGuard = minRatingPlaybackGuard;
         return this;
@@ -91,6 +97,7 @@ public class AccountUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segments")
     public String[] segments;
+
     public AccountUpdateRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -102,9 +109,11 @@ public class AccountUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingEnabled")
     public Boolean trackingEnabled;
+
     public AccountUpdateRequest withTrackingEnabled(Boolean trackingEnabled) {
         this.trackingEnabled = trackingEnabled;
         return this;
     }
     
+    public AccountUpdateRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEvaluationResponse {
     
     public String contentType;
+
     public UpdateEvaluationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateEvaluationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateEvaluationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEvaluationResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateEvaluationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateEvaluationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateEvaluationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateEvaluationResponse {
     
     
     public Integer statusCode;
+
     public UpdateEvaluationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateEvaluationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEvaluationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateEvaluationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateEvaluationOutput updateEvaluationOutput;
+
     public UpdateEvaluationResponse withUpdateEvaluationOutput(org.openapis.openapi.models.shared.UpdateEvaluationOutput updateEvaluationOutput) {
         this.updateEvaluationOutput = updateEvaluationOutput;
         return this;
     }
     
+    public UpdateEvaluationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

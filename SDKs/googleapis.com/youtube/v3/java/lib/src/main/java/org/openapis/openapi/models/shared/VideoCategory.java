@@ -18,6 +18,7 @@ public class VideoCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public VideoCategory withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class VideoCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public VideoCategory withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class VideoCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public VideoCategory withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class VideoCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public VideoCategorySnippet snippet;
+
     public VideoCategory withSnippet(VideoCategorySnippet snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public VideoCategory(){}
 }

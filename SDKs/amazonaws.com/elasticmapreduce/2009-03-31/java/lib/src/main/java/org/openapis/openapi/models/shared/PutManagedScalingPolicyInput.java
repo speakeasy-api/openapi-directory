@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutManagedScalingPolicyInput {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public PutManagedScalingPolicyInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -16,9 +17,14 @@ public class PutManagedScalingPolicyInput {
     
     @JsonProperty("ManagedScalingPolicy")
     public ManagedScalingPolicy managedScalingPolicy;
+
     public PutManagedScalingPolicyInput withManagedScalingPolicy(ManagedScalingPolicy managedScalingPolicy) {
         this.managedScalingPolicy = managedScalingPolicy;
         return this;
     }
     
+    public PutManagedScalingPolicyInput(@JsonProperty("ClusterId") String clusterId, @JsonProperty("ManagedScalingPolicy") ManagedScalingPolicy managedScalingPolicy) {
+        this.clusterId = clusterId;
+        this.managedScalingPolicy = managedScalingPolicy;
+  }
 }

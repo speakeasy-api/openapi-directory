@@ -57,11 +57,9 @@ public class Balance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BalanceLookupResponse res = new org.openapis.openapi.models.operations.BalanceLookupResponse() {{
+        org.openapis.openapi.models.operations.BalanceLookupResponse res = new org.openapis.openapi.models.operations.BalanceLookupResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

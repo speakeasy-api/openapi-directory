@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsGetAuditLogRequest {
@@ -12,6 +13,7 @@ public class OrgsGetAuditLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
     public String after;
+
     public OrgsGetAuditLogRequest withAfter(String after) {
         this.after = after;
         return this;
@@ -22,6 +24,7 @@ public class OrgsGetAuditLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
     public String before;
+
     public OrgsGetAuditLogRequest withBefore(String before) {
         this.before = before;
         return this;
@@ -38,6 +41,7 @@ public class OrgsGetAuditLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
     public org.openapis.openapi.models.shared.AuditLogIncludeEnum include;
+
     public OrgsGetAuditLogRequest withInclude(org.openapis.openapi.models.shared.AuditLogIncludeEnum include) {
         this.include = include;
         return this;
@@ -50,6 +54,7 @@ public class OrgsGetAuditLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.AuditLogOrderEnum order;
+
     public OrgsGetAuditLogRequest withOrder(org.openapis.openapi.models.shared.AuditLogOrderEnum order) {
         this.order = order;
         return this;
@@ -60,6 +65,7 @@ public class OrgsGetAuditLogRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public OrgsGetAuditLogRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -70,6 +76,7 @@ public class OrgsGetAuditLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public OrgsGetAuditLogRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -80,6 +87,7 @@ public class OrgsGetAuditLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public OrgsGetAuditLogRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -90,9 +98,13 @@ public class OrgsGetAuditLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phrase")
     public String phrase;
+
     public OrgsGetAuditLogRequest withPhrase(String phrase) {
         this.phrase = phrase;
         return this;
     }
     
+    public OrgsGetAuditLogRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

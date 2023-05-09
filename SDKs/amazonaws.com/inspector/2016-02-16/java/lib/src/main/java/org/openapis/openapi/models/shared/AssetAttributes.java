@@ -15,6 +15,7 @@ public class AssetAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentId")
     public String agentId;
+
     public AssetAttributes withAgentId(String agentId) {
         this.agentId = agentId;
         return this;
@@ -23,6 +24,7 @@ public class AssetAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amiId")
     public String amiId;
+
     public AssetAttributes withAmiId(String amiId) {
         this.amiId = amiId;
         return this;
@@ -31,6 +33,7 @@ public class AssetAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScalingGroup")
     public String autoScalingGroup;
+
     public AssetAttributes withAutoScalingGroup(String autoScalingGroup) {
         this.autoScalingGroup = autoScalingGroup;
         return this;
@@ -39,6 +42,7 @@ public class AssetAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public AssetAttributes withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -47,6 +51,7 @@ public class AssetAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv4Addresses")
     public String[] ipv4Addresses;
+
     public AssetAttributes withIpv4Addresses(String[] ipv4Addresses) {
         this.ipv4Addresses = ipv4Addresses;
         return this;
@@ -55,6 +60,7 @@ public class AssetAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInterfaces")
     public NetworkInterface[] networkInterfaces;
+
     public AssetAttributes withNetworkInterfaces(NetworkInterface[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -62,6 +68,7 @@ public class AssetAttributes {
     
     @JsonProperty("schemaVersion")
     public Long schemaVersion;
+
     public AssetAttributes withSchemaVersion(Long schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -70,9 +77,13 @@ public class AssetAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public AssetAttributes withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public AssetAttributes(@JsonProperty("schemaVersion") Long schemaVersion) {
+        this.schemaVersion = schemaVersion;
+  }
 }

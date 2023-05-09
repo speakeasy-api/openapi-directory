@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateKeyPairRequest {
     @JsonProperty("keyPairName")
     public String keyPairName;
+
     public CreateKeyPairRequest withKeyPairName(String keyPairName) {
         this.keyPairName = keyPairName;
         return this;
@@ -19,9 +20,13 @@ public class CreateKeyPairRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateKeyPairRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateKeyPairRequest(@JsonProperty("keyPairName") String keyPairName) {
+        this.keyPairName = keyPairName;
+  }
 }

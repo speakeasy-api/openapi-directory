@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListHITsForQualificationTypeResponse {
     
     public String contentType;
+
     public ListHITsForQualificationTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListHITsForQualificationTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.ListHITsForQualificationTypeResponse listHITsForQualificationTypeResponse;
+
     public ListHITsForQualificationTypeResponse withListHITsForQualificationTypeResponse(org.openapis.openapi.models.shared.ListHITsForQualificationTypeResponse listHITsForQualificationTypeResponse) {
         this.listHITsForQualificationTypeResponse = listHITsForQualificationTypeResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListHITsForQualificationTypeResponse {
      */
     
     public Object requestError;
+
     public ListHITsForQualificationTypeResponse withRequestError(Object requestError) {
         this.requestError = requestError;
         return this;
@@ -39,6 +43,7 @@ public class ListHITsForQualificationTypeResponse {
      */
     
     public Object serviceFault;
+
     public ListHITsForQualificationTypeResponse withServiceFault(Object serviceFault) {
         this.serviceFault = serviceFault;
         return this;
@@ -46,6 +51,7 @@ public class ListHITsForQualificationTypeResponse {
     
     
     public Integer statusCode;
+
     public ListHITsForQualificationTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListHITsForQualificationTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListHITsForQualificationTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListHITsForQualificationTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ListVpcEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListVpcEndpointsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListVpcEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcEndpointSummaries")
     public VpcEndpointSummary[] vpcEndpointSummaries;
+
     public ListVpcEndpointsResponse withVpcEndpointSummaries(VpcEndpointSummary[] vpcEndpointSummaries) {
         this.vpcEndpointSummaries = vpcEndpointSummaries;
         return this;
     }
     
+    public ListVpcEndpointsResponse(){}
 }

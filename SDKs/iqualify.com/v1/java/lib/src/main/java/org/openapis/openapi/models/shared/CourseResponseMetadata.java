@@ -12,9 +12,11 @@ public class CourseResponseMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learning_outcomes")
     public LearningOutcomes[] learningOutcomes;
+
     public CourseResponseMetadata withLearningOutcomes(LearningOutcomes[] learningOutcomes) {
         this.learningOutcomes = learningOutcomes;
         return this;
     }
     
+    public CourseResponseMetadata(){}
 }

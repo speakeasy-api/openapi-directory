@@ -18,6 +18,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalAttributes")
     public java.util.Map<String, Object> additionalAttributes;
+
     public ResourceSearchResult withAdditionalAttributes(java.util.Map<String, Object> additionalAttributes) {
         this.additionalAttributes = additionalAttributes;
         return this;
@@ -29,6 +30,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetType")
     public String assetType;
+
     public ResourceSearchResult withAssetType(String assetType) {
         this.assetType = assetType;
         return this;
@@ -40,6 +42,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachedResources")
     public AttachedResource[] attachedResources;
+
     public ResourceSearchResult withAttachedResources(AttachedResource[] attachedResources) {
         this.attachedResources = attachedResources;
         return this;
@@ -51,6 +54,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public ResourceSearchResult withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -62,6 +66,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ResourceSearchResult withDescription(String description) {
         this.description = description;
         return this;
@@ -73,6 +78,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ResourceSearchResult withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -84,6 +90,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folders")
     public String[] folders;
+
     public ResourceSearchResult withFolders(String[] folders) {
         this.folders = folders;
         return this;
@@ -95,6 +102,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKey")
     public String kmsKey;
+
     public ResourceSearchResult withKmsKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
@@ -106,6 +114,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeys")
     public String[] kmsKeys;
+
     public ResourceSearchResult withKmsKeys(String[] kmsKeys) {
         this.kmsKeys = kmsKeys;
         return this;
@@ -117,6 +126,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ResourceSearchResult withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -128,6 +138,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public ResourceSearchResult withLocation(String location) {
         this.location = location;
         return this;
@@ -139,6 +150,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ResourceSearchResult withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +162,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkTags")
     public String[] networkTags;
+
     public ResourceSearchResult withNetworkTags(String[] networkTags) {
         this.networkTags = networkTags;
         return this;
@@ -161,6 +174,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public ResourceSearchResult withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -172,6 +186,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentAssetType")
     public String parentAssetType;
+
     public ResourceSearchResult withParentAssetType(String parentAssetType) {
         this.parentAssetType = parentAssetType;
         return this;
@@ -183,6 +198,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentFullResourceName")
     public String parentFullResourceName;
+
     public ResourceSearchResult withParentFullResourceName(String parentFullResourceName) {
         this.parentFullResourceName = parentFullResourceName;
         return this;
@@ -194,6 +210,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public ResourceSearchResult withProject(String project) {
         this.project = project;
         return this;
@@ -205,6 +222,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public java.util.Map<String, RelatedResources> relationships;
+
     public ResourceSearchResult withRelationships(java.util.Map<String, RelatedResources> relationships) {
         this.relationships = relationships;
         return this;
@@ -216,6 +234,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ResourceSearchResult withState(String state) {
         this.state = state;
         return this;
@@ -227,6 +246,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagKeys")
     public String[] tagKeys;
+
     public ResourceSearchResult withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -238,6 +258,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagValueIds")
     public String[] tagValueIds;
+
     public ResourceSearchResult withTagValueIds(String[] tagValueIds) {
         this.tagValueIds = tagValueIds;
         return this;
@@ -249,6 +270,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagValues")
     public String[] tagValues;
+
     public ResourceSearchResult withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
@@ -260,6 +282,7 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public ResourceSearchResult withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -271,9 +294,11 @@ public class ResourceSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionedResources")
     public VersionedResource[] versionedResources;
+
     public ResourceSearchResult withVersionedResources(VersionedResource[] versionedResources) {
         this.versionedResources = versionedResources;
         return this;
     }
     
+    public ResourceSearchResult(){}
 }

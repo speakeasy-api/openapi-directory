@@ -18,6 +18,7 @@ public class BlockAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockAfterDays")
     public Integer blockAfterDays;
+
     public BlockAction withBlockAfterDays(Integer blockAfterDays) {
         this.blockAfterDays = blockAfterDays;
         return this;
@@ -29,9 +30,11 @@ public class BlockAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockScope")
     public BlockActionBlockScopeEnum blockScope;
+
     public BlockAction withBlockScope(BlockActionBlockScopeEnum blockScope) {
         this.blockScope = blockScope;
         return this;
     }
     
+    public BlockAction(){}
 }

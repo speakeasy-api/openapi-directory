@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Item1 {
     @JsonProperty("SubscriptionId")
     public String subscriptionId;
+
     public Item1 withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -16,6 +17,7 @@ public class Item1 {
     
     @JsonProperty("createdAt")
     public String createdAt;
+
     public Item1 withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,6 +25,7 @@ public class Item1 {
     
     @JsonProperty("cycleCount")
     public Integer cycleCount;
+
     public Item1 withCycleCount(Integer cycleCount) {
         this.cycleCount = cycleCount;
         return this;
@@ -30,6 +33,7 @@ public class Item1 {
     
     @JsonProperty("endpoint")
     public String endpoint;
+
     public Item1 withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -37,6 +41,7 @@ public class Item1 {
     
     @JsonProperty("isSkipped")
     public Boolean isSkipped;
+
     public Item1 withIsSkipped(Boolean isSkipped) {
         this.isSkipped = isSkipped;
         return this;
@@ -44,6 +49,7 @@ public class Item1 {
     
     @JsonProperty("lastUpdate")
     public String lastUpdate;
+
     public Item1 withLastUpdate(String lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -51,6 +57,7 @@ public class Item1 {
     
     @JsonProperty("metadata")
     public Metadatum[] metadata;
+
     public Item1 withMetadata(Metadatum[] metadata) {
         this.metadata = metadata;
         return this;
@@ -58,6 +65,7 @@ public class Item1 {
     
     @JsonProperty("originalItemIndex")
     public Integer originalItemIndex;
+
     public Item1 withOriginalItemIndex(Integer originalItemIndex) {
         this.originalItemIndex = originalItemIndex;
         return this;
@@ -65,6 +73,7 @@ public class Item1 {
     
     @JsonProperty("originalOrderId")
     public String originalOrderId;
+
     public Item1 withOriginalOrderId(String originalOrderId) {
         this.originalOrderId = originalOrderId;
         return this;
@@ -72,6 +81,7 @@ public class Item1 {
     
     @JsonProperty("priceAtSubscriptionDate")
     public Integer priceAtSubscriptionDate;
+
     public Item1 withPriceAtSubscriptionDate(Integer priceAtSubscriptionDate) {
         this.priceAtSubscriptionDate = priceAtSubscriptionDate;
         return this;
@@ -79,6 +89,7 @@ public class Item1 {
     
     @JsonProperty("quantity")
     public Integer quantity;
+
     public Item1 withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -86,6 +97,7 @@ public class Item1 {
     
     @JsonProperty("sellingPrice")
     public Integer sellingPrice;
+
     public Item1 withSellingPrice(Integer sellingPrice) {
         this.sellingPrice = sellingPrice;
         return this;
@@ -93,6 +105,7 @@ public class Item1 {
     
     @JsonProperty("sku")
     public Sku sku;
+
     public Item1 withSku(Sku sku) {
         this.sku = sku;
         return this;
@@ -100,9 +113,26 @@ public class Item1 {
     
     @JsonProperty("status")
     public String status;
+
     public Item1 withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Item1(@JsonProperty("SubscriptionId") String subscriptionId, @JsonProperty("createdAt") String createdAt, @JsonProperty("cycleCount") Integer cycleCount, @JsonProperty("endpoint") String endpoint, @JsonProperty("isSkipped") Boolean isSkipped, @JsonProperty("lastUpdate") String lastUpdate, @JsonProperty("metadata") Metadatum[] metadata, @JsonProperty("originalItemIndex") Integer originalItemIndex, @JsonProperty("originalOrderId") String originalOrderId, @JsonProperty("priceAtSubscriptionDate") Integer priceAtSubscriptionDate, @JsonProperty("quantity") Integer quantity, @JsonProperty("sellingPrice") Integer sellingPrice, @JsonProperty("sku") Sku sku, @JsonProperty("status") String status) {
+        this.subscriptionId = subscriptionId;
+        this.createdAt = createdAt;
+        this.cycleCount = cycleCount;
+        this.endpoint = endpoint;
+        this.isSkipped = isSkipped;
+        this.lastUpdate = lastUpdate;
+        this.metadata = metadata;
+        this.originalItemIndex = originalItemIndex;
+        this.originalOrderId = originalOrderId;
+        this.priceAtSubscriptionDate = priceAtSubscriptionDate;
+        this.quantity = quantity;
+        this.sellingPrice = sellingPrice;
+        this.sku = sku;
+        this.status = status;
+  }
 }

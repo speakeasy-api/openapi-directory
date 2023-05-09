@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBSnapshotsMessage {
     
     public String dbInstanceIdentifier;
+
     public DescribeDBSnapshotsMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class DescribeDBSnapshotsMessage {
     
     
     public String dbSnapshotIdentifier;
+
     public DescribeDBSnapshotsMessage withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
         return this;
@@ -23,6 +25,7 @@ public class DescribeDBSnapshotsMessage {
     
     
     public String marker;
+
     public DescribeDBSnapshotsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,6 +33,7 @@ public class DescribeDBSnapshotsMessage {
     
     
     public Long maxRecords;
+
     public DescribeDBSnapshotsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -37,9 +41,11 @@ public class DescribeDBSnapshotsMessage {
     
     
     public String snapshotType;
+
     public DescribeDBSnapshotsMessage withSnapshotType(String snapshotType) {
         this.snapshotType = snapshotType;
         return this;
     }
     
+    public DescribeDBSnapshotsMessage(){}
 }

@@ -12,6 +12,7 @@ public class GetPricing200ApplicationJSONPricingServerTypesPrices {
      */
     @JsonProperty("location")
     public String location;
+
     public GetPricing200ApplicationJSONPricingServerTypesPrices withLocation(String location) {
         this.location = location;
         return this;
@@ -22,6 +23,7 @@ public class GetPricing200ApplicationJSONPricingServerTypesPrices {
      */
     @JsonProperty("price_hourly")
     public GetPricing200ApplicationJSONPricingServerTypesPricesPriceHourly priceHourly;
+
     public GetPricing200ApplicationJSONPricingServerTypesPrices withPriceHourly(GetPricing200ApplicationJSONPricingServerTypesPricesPriceHourly priceHourly) {
         this.priceHourly = priceHourly;
         return this;
@@ -32,9 +34,15 @@ public class GetPricing200ApplicationJSONPricingServerTypesPrices {
      */
     @JsonProperty("price_monthly")
     public GetPricing200ApplicationJSONPricingServerTypesPricesPriceMonthly priceMonthly;
+
     public GetPricing200ApplicationJSONPricingServerTypesPrices withPriceMonthly(GetPricing200ApplicationJSONPricingServerTypesPricesPriceMonthly priceMonthly) {
         this.priceMonthly = priceMonthly;
         return this;
     }
     
+    public GetPricing200ApplicationJSONPricingServerTypesPrices(@JsonProperty("location") String location, @JsonProperty("price_hourly") GetPricing200ApplicationJSONPricingServerTypesPricesPriceHourly priceHourly, @JsonProperty("price_monthly") GetPricing200ApplicationJSONPricingServerTypesPricesPriceMonthly priceMonthly) {
+        this.location = location;
+        this.priceHourly = priceHourly;
+        this.priceMonthly = priceMonthly;
+  }
 }

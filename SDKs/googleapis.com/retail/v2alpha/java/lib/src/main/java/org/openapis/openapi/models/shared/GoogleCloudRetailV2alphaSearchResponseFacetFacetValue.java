@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaSearchResponseFacetFacetValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public GoogleCloudRetailV2alphaSearchResponseFacetFacetValue withCount(String count) {
         this.count = count;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaSearchResponseFacetFacetValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public GoogleCloudRetailV2alphaInterval interval;
+
     public GoogleCloudRetailV2alphaSearchResponseFacetFacetValue withInterval(GoogleCloudRetailV2alphaInterval interval) {
         this.interval = interval;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2alphaSearchResponseFacetFacetValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public Double maxValue;
+
     public GoogleCloudRetailV2alphaSearchResponseFacetFacetValue withMaxValue(Double maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2alphaSearchResponseFacetFacetValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public Double minValue;
+
     public GoogleCloudRetailV2alphaSearchResponseFacetFacetValue withMinValue(Double minValue) {
         this.minValue = minValue;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudRetailV2alphaSearchResponseFacetFacetValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleCloudRetailV2alphaSearchResponseFacetFacetValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaSearchResponseFacetFacetValue(){}
 }

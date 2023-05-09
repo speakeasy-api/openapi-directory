@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLicenseResponse {
@@ -12,6 +13,7 @@ public class GetLicenseResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLicenseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetLicenseResponse {
      */
     
     public Object authorizationException;
+
     public GetLicenseResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class GetLicenseResponse {
     
     
     public String contentType;
+
     public GetLicenseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetLicenseResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLicenseResponse getLicenseResponse;
+
     public GetLicenseResponse withGetLicenseResponse(org.openapis.openapi.models.shared.GetLicenseResponse getLicenseResponse) {
         this.getLicenseResponse = getLicenseResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetLicenseResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetLicenseResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class GetLicenseResponse {
      */
     
     public Object rateLimitExceededException;
+
     public GetLicenseResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class GetLicenseResponse {
     
     
     public Integer statusCode;
+
     public GetLicenseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetLicenseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLicenseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetLicenseResponse {
      */
     
     public Object serverInternalException;
+
     public GetLicenseResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -93,9 +103,14 @@ public class GetLicenseResponse {
      */
     
     public Object validationException;
+
     public GetLicenseResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetLicenseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

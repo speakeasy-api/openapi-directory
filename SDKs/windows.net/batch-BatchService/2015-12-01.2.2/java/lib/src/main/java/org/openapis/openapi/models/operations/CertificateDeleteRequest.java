@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateDeleteRequest {
@@ -12,6 +13,7 @@ public class CertificateDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public CertificateDeleteRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -22,6 +24,7 @@ public class CertificateDeleteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public CertificateDeleteRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -32,6 +35,7 @@ public class CertificateDeleteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public CertificateDeleteRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -42,6 +46,7 @@ public class CertificateDeleteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public CertificateDeleteRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -52,6 +57,7 @@ public class CertificateDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thumbprint")
     public String thumbprint;
+
     public CertificateDeleteRequest withThumbprint(String thumbprint) {
         this.thumbprint = thumbprint;
         return this;
@@ -62,6 +68,7 @@ public class CertificateDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thumbprintAlgorithm")
     public String thumbprintAlgorithm;
+
     public CertificateDeleteRequest withThumbprintAlgorithm(String thumbprintAlgorithm) {
         this.thumbprintAlgorithm = thumbprintAlgorithm;
         return this;
@@ -72,9 +79,15 @@ public class CertificateDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public CertificateDeleteRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public CertificateDeleteRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("thumbprint") String thumbprint, @JsonProperty("thumbprintAlgorithm") String thumbprintAlgorithm) {
+        this.apiVersion = apiVersion;
+        this.thumbprint = thumbprint;
+        this.thumbprintAlgorithm = thumbprintAlgorithm;
+  }
 }

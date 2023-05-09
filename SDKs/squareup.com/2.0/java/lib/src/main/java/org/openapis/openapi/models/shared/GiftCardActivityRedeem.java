@@ -22,6 +22,7 @@ public class GiftCardActivityRedeem {
      */
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public GiftCardActivityRedeem withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -35,6 +36,7 @@ public class GiftCardActivityRedeem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     public String paymentId;
+
     public GiftCardActivityRedeem withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -48,9 +50,13 @@ public class GiftCardActivityRedeem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public GiftCardActivityRedeem withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
     }
     
+    public GiftCardActivityRedeem(@JsonProperty("amount_money") Money amountMoney) {
+        this.amountMoney = amountMoney;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTrafficMirrorTargetsRequestFilters {
     
     public String name;
+
     public DescribeTrafficMirrorTargetsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeTrafficMirrorTargetsRequestFilters {
     
     
     public String[] values;
+
     public DescribeTrafficMirrorTargetsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeTrafficMirrorTargetsRequestFilters(){}
 }

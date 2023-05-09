@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostV2LocationsLocationIdTransactionsTransactionIdRefundResponse {
     
     public String contentType;
+
     public PostV2LocationsLocationIdTransactionsTransactionIdRefundResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostV2LocationsLocationIdTransactionsTransactionIdRefundResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRefundResponse createRefundResponse;
+
     public PostV2LocationsLocationIdTransactionsTransactionIdRefundResponse withCreateRefundResponse(org.openapis.openapi.models.shared.CreateRefundResponse createRefundResponse) {
         this.createRefundResponse = createRefundResponse;
         return this;
@@ -26,6 +29,7 @@ public class PostV2LocationsLocationIdTransactionsTransactionIdRefundResponse {
     
     
     public Integer statusCode;
+
     public PostV2LocationsLocationIdTransactionsTransactionIdRefundResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostV2LocationsLocationIdTransactionsTransactionIdRefundResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostV2LocationsLocationIdTransactionsTransactionIdRefundResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostV2LocationsLocationIdTransactionsTransactionIdRefundResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

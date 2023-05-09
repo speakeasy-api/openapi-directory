@@ -15,6 +15,7 @@ public class UpdateMerchantUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountGroups")
     public String[] accountGroups;
+
     public UpdateMerchantUserRequest withAccountGroups(String[] accountGroups) {
         this.accountGroups = accountGroups;
         return this;
@@ -26,6 +27,7 @@ public class UpdateMerchantUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public UpdateMerchantUserRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -37,6 +39,7 @@ public class UpdateMerchantUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authnAppsToAdd")
     public String[] authnAppsToAdd;
+
     public UpdateMerchantUserRequest withAuthnAppsToAdd(String[] authnAppsToAdd) {
         this.authnAppsToAdd = authnAppsToAdd;
         return this;
@@ -48,6 +51,7 @@ public class UpdateMerchantUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authnAppsToRemove")
     public String[] authnAppsToRemove;
+
     public UpdateMerchantUserRequest withAuthnAppsToRemove(String[] authnAppsToRemove) {
         this.authnAppsToRemove = authnAppsToRemove;
         return this;
@@ -59,6 +63,7 @@ public class UpdateMerchantUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UpdateMerchantUserRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -67,6 +72,7 @@ public class UpdateMerchantUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public Name2 name;
+
     public UpdateMerchantUserRequest withName(Name2 name) {
         this.name = name;
         return this;
@@ -78,6 +84,7 @@ public class UpdateMerchantUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public String[] roles;
+
     public UpdateMerchantUserRequest withRoles(String[] roles) {
         this.roles = roles;
         return this;
@@ -89,9 +96,11 @@ public class UpdateMerchantUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZoneCode")
     public String timeZoneCode;
+
     public UpdateMerchantUserRequest withTimeZoneCode(String timeZoneCode) {
         this.timeZoneCode = timeZoneCode;
         return this;
     }
     
+    public UpdateMerchantUserRequest(){}
 }

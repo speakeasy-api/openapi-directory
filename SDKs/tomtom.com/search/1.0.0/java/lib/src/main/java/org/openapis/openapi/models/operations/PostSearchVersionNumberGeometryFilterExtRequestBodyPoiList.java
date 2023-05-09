@@ -12,6 +12,7 @@ public class PostSearchVersionNumberGeometryFilterExtRequestBodyPoiList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PostSearchVersionNumberGeometryFilterExtRequestBodyPoiListAddress address;
+
     public PostSearchVersionNumberGeometryFilterExtRequestBodyPoiList withAddress(PostSearchVersionNumberGeometryFilterExtRequestBodyPoiListAddress address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class PostSearchVersionNumberGeometryFilterExtRequestBodyPoiList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poi")
     public PostSearchVersionNumberGeometryFilterExtRequestBodyPoiListPoi poi;
+
     public PostSearchVersionNumberGeometryFilterExtRequestBodyPoiList withPoi(PostSearchVersionNumberGeometryFilterExtRequestBodyPoiListPoi poi) {
         this.poi = poi;
         return this;
@@ -28,9 +30,11 @@ public class PostSearchVersionNumberGeometryFilterExtRequestBodyPoiList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public PostSearchVersionNumberGeometryFilterExtRequestBodyPoiListPosition position;
+
     public PostSearchVersionNumberGeometryFilterExtRequestBodyPoiList withPosition(PostSearchVersionNumberGeometryFilterExtRequestBodyPoiListPosition position) {
         this.position = position;
         return this;
     }
     
+    public PostSearchVersionNumberGeometryFilterExtRequestBodyPoiList(){}
 }

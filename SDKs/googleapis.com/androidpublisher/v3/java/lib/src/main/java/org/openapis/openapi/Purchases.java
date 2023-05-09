@@ -61,10 +61,8 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsAcknowledgeResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsAcknowledgeResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsAcknowledgeResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsAcknowledgeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,10 +99,8 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsConsumeResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsConsumeResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsConsumeResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsConsumeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,11 +137,9 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsGetResponse(contentType, httpRes.statusCode()) {{
             productPurchase = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -189,10 +183,8 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsAcknowledgeResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsAcknowledgeResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsAcknowledgeResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsAcknowledgeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -229,10 +221,8 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsCancelResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsCancelResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsCancelResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsCancelResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -271,11 +261,9 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsDeferResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsDeferResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsDeferResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsDeferResponse(contentType, httpRes.statusCode()) {{
             subscriptionPurchasesDeferResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -317,11 +305,9 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsGetResponse(contentType, httpRes.statusCode()) {{
             subscriptionPurchase = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -363,10 +349,8 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRefundResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRefundResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRefundResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRefundResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -403,10 +387,8 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRevokeResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRevokeResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRevokeResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRevokeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -443,11 +425,9 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsv2GetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsv2GetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsv2GetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsv2GetResponse(contentType, httpRes.statusCode()) {{
             subscriptionPurchaseV2 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -489,11 +469,9 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherPurchasesVoidedpurchasesListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesVoidedpurchasesListResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherPurchasesVoidedpurchasesListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherPurchasesVoidedpurchasesListResponse(contentType, httpRes.statusCode()) {{
             voidedPurchasesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

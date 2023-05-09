@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeAutoscalersUpdateResponse {
     
     public String contentType;
+
     public ComputeAutoscalersUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeAutoscalersUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public ComputeAutoscalersUpdateResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class ComputeAutoscalersUpdateResponse {
     
     
     public Integer statusCode;
+
     public ComputeAutoscalersUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeAutoscalersUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeAutoscalersUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeAutoscalersUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

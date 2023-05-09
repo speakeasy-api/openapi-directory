@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUpdateDockCreateUpdateDockRequest {
     @JsonProperty("address")
     public CreateUpdateDockCreateUpdateDockRequestAddress1 address;
+
     public CreateUpdateDockCreateUpdateDockRequest withAddress(CreateUpdateDockCreateUpdateDockRequestAddress1 address) {
         this.address = address;
         return this;
@@ -16,6 +17,7 @@ public class CreateUpdateDockCreateUpdateDockRequest {
     
     @JsonProperty("dockTimeFake")
     public String dockTimeFake;
+
     public CreateUpdateDockCreateUpdateDockRequest withDockTimeFake(String dockTimeFake) {
         this.dockTimeFake = dockTimeFake;
         return this;
@@ -23,6 +25,7 @@ public class CreateUpdateDockCreateUpdateDockRequest {
     
     @JsonProperty("freightTableIds")
     public String[] freightTableIds;
+
     public CreateUpdateDockCreateUpdateDockRequest withFreightTableIds(String[] freightTableIds) {
         this.freightTableIds = freightTableIds;
         return this;
@@ -30,6 +33,7 @@ public class CreateUpdateDockCreateUpdateDockRequest {
     
     @JsonProperty("id")
     public String id;
+
     public CreateUpdateDockCreateUpdateDockRequest withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +41,7 @@ public class CreateUpdateDockCreateUpdateDockRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateUpdateDockCreateUpdateDockRequest withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +49,7 @@ public class CreateUpdateDockCreateUpdateDockRequest {
     
     @JsonProperty("priority")
     public Integer priority;
+
     public CreateUpdateDockCreateUpdateDockRequest withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -51,6 +57,7 @@ public class CreateUpdateDockCreateUpdateDockRequest {
     
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public CreateUpdateDockCreateUpdateDockRequest withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -58,6 +65,7 @@ public class CreateUpdateDockCreateUpdateDockRequest {
     
     @JsonProperty("salesChannels")
     public String[] salesChannels;
+
     public CreateUpdateDockCreateUpdateDockRequest withSalesChannels(String[] salesChannels) {
         this.salesChannels = salesChannels;
         return this;
@@ -65,6 +73,7 @@ public class CreateUpdateDockCreateUpdateDockRequest {
     
     @JsonProperty("timeFakeOverhead")
     public String timeFakeOverhead;
+
     public CreateUpdateDockCreateUpdateDockRequest withTimeFakeOverhead(String timeFakeOverhead) {
         this.timeFakeOverhead = timeFakeOverhead;
         return this;
@@ -72,9 +81,22 @@ public class CreateUpdateDockCreateUpdateDockRequest {
     
     @JsonProperty("wmsEndPoint")
     public String wmsEndPoint;
+
     public CreateUpdateDockCreateUpdateDockRequest withWmsEndPoint(String wmsEndPoint) {
         this.wmsEndPoint = wmsEndPoint;
         return this;
     }
     
+    public CreateUpdateDockCreateUpdateDockRequest(@JsonProperty("address") CreateUpdateDockCreateUpdateDockRequestAddress1 address, @JsonProperty("dockTimeFake") String dockTimeFake, @JsonProperty("freightTableIds") String[] freightTableIds, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("priority") Integer priority, @JsonProperty("salesChannel") String salesChannel, @JsonProperty("salesChannels") String[] salesChannels, @JsonProperty("timeFakeOverhead") String timeFakeOverhead, @JsonProperty("wmsEndPoint") String wmsEndPoint) {
+        this.address = address;
+        this.dockTimeFake = dockTimeFake;
+        this.freightTableIds = freightTableIds;
+        this.id = id;
+        this.name = name;
+        this.priority = priority;
+        this.salesChannel = salesChannel;
+        this.salesChannels = salesChannels;
+        this.timeFakeOverhead = timeFakeOverhead;
+        this.wmsEndPoint = wmsEndPoint;
+  }
 }

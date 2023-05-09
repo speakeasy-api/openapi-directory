@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteQueuedReservedInstancesResultSuccessfulQueuedPurchaseDeletions {
     
     public String reservedInstancesId;
+
     public DeleteQueuedReservedInstancesResultSuccessfulQueuedPurchaseDeletions withReservedInstancesId(String reservedInstancesId) {
         this.reservedInstancesId = reservedInstancesId;
         return this;
     }
     
+    public DeleteQueuedReservedInstancesResultSuccessfulQueuedPurchaseDeletions(){}
 }

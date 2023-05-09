@@ -15,6 +15,7 @@ public class ListResourceDefinitionVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourceDefinitionVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListResourceDefinitionVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Versions")
     public VersionInformation[] versions;
+
     public ListResourceDefinitionVersionsResponse withVersions(VersionInformation[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public ListResourceDefinitionVersionsResponse(){}
 }

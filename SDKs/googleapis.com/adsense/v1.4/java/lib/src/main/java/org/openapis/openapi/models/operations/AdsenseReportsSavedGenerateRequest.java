@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsenseReportsSavedGenerateRequest {
@@ -12,6 +13,7 @@ public class AdsenseReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdsenseReportsSavedGenerateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class AdsenseReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdsenseReportsSavedGenerateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class AdsenseReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdsenseReportsSavedGenerateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class AdsenseReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public AdsenseReportsSavedGenerateRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -52,6 +57,7 @@ public class AdsenseReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public AdsenseReportsSavedGenerateRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -62,6 +68,7 @@ public class AdsenseReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdsenseReportsSavedGenerateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class AdsenseReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdsenseReportsSavedGenerateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class AdsenseReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdsenseReportsSavedGenerateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,6 +101,7 @@ public class AdsenseReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=savedReportId")
     public String savedReportId;
+
     public AdsenseReportsSavedGenerateRequest withSavedReportId(String savedReportId) {
         this.savedReportId = savedReportId;
         return this;
@@ -102,6 +112,7 @@ public class AdsenseReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Long startIndex;
+
     public AdsenseReportsSavedGenerateRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -112,9 +123,13 @@ public class AdsenseReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdsenseReportsSavedGenerateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdsenseReportsSavedGenerateRequest(@JsonProperty("savedReportId") String savedReportId) {
+        this.savedReportId = savedReportId;
+  }
 }

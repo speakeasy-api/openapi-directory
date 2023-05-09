@@ -17,6 +17,7 @@ public class SubscriptionRequest {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public SubscriptionRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -24,6 +25,7 @@ public class SubscriptionRequest {
     
     @JsonProperty("subscription")
     public SubscriptionRequestSubscription subscription;
+
     public SubscriptionRequest withSubscription(SubscriptionRequestSubscription subscription) {
         this.subscription = subscription;
         return this;
@@ -36,9 +38,15 @@ public class SubscriptionRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public SubscriptionRequest withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public SubscriptionRequest(@JsonProperty("requestId") String requestId, @JsonProperty("subscription") SubscriptionRequestSubscription subscription, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.requestId = requestId;
+        this.subscription = subscription;
+        this.timestamp = timestamp;
+  }
 }

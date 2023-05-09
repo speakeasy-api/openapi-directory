@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiV2CddriveFilesFileIdContentResponse {
     
     public String contentType;
+
     public GetApiV2CddriveFilesFileIdContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetApiV2CddriveFilesFileIdContentResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetApiV2CddriveFilesFileIdContentResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetApiV2CddriveFilesFileIdContentResponse {
     
     
     public Integer statusCode;
+
     public GetApiV2CddriveFilesFileIdContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetApiV2CddriveFilesFileIdContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiV2CddriveFilesFileIdContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetApiV2CddriveFilesFileIdContentResponse {
      */
     
     public byte[] getApiV2CddriveFilesFileIdContent200ApplicationOctetStreamBinaryString;
+
     public GetApiV2CddriveFilesFileIdContentResponse withGetApiV2CddriveFilesFileIdContent200ApplicationOctetStreamBinaryString(byte[] getApiV2CddriveFilesFileIdContent200ApplicationOctetStreamBinaryString) {
         this.getApiV2CddriveFilesFileIdContent200ApplicationOctetStreamBinaryString = getApiV2CddriveFilesFileIdContent200ApplicationOctetStreamBinaryString;
         return this;
     }
     
+    public GetApiV2CddriveFilesFileIdContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

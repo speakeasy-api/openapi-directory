@@ -15,6 +15,7 @@ public class Ec2ResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiskResourceUtilization")
     public DiskResourceUtilization diskResourceUtilization;
+
     public Ec2ResourceUtilization withDiskResourceUtilization(DiskResourceUtilization diskResourceUtilization) {
         this.diskResourceUtilization = diskResourceUtilization;
         return this;
@@ -23,6 +24,7 @@ public class Ec2ResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EBSResourceUtilization")
     public EBSResourceUtilization ebsResourceUtilization;
+
     public Ec2ResourceUtilization withEBSResourceUtilization(EBSResourceUtilization ebsResourceUtilization) {
         this.ebsResourceUtilization = ebsResourceUtilization;
         return this;
@@ -31,6 +33,7 @@ public class Ec2ResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCpuUtilizationPercentage")
     public String maxCpuUtilizationPercentage;
+
     public Ec2ResourceUtilization withMaxCpuUtilizationPercentage(String maxCpuUtilizationPercentage) {
         this.maxCpuUtilizationPercentage = maxCpuUtilizationPercentage;
         return this;
@@ -39,6 +42,7 @@ public class Ec2ResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxMemoryUtilizationPercentage")
     public String maxMemoryUtilizationPercentage;
+
     public Ec2ResourceUtilization withMaxMemoryUtilizationPercentage(String maxMemoryUtilizationPercentage) {
         this.maxMemoryUtilizationPercentage = maxMemoryUtilizationPercentage;
         return this;
@@ -47,6 +51,7 @@ public class Ec2ResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxStorageUtilizationPercentage")
     public String maxStorageUtilizationPercentage;
+
     public Ec2ResourceUtilization withMaxStorageUtilizationPercentage(String maxStorageUtilizationPercentage) {
         this.maxStorageUtilizationPercentage = maxStorageUtilizationPercentage;
         return this;
@@ -55,9 +60,11 @@ public class Ec2ResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkResourceUtilization")
     public NetworkResourceUtilization networkResourceUtilization;
+
     public Ec2ResourceUtilization withNetworkResourceUtilization(NetworkResourceUtilization networkResourceUtilization) {
         this.networkResourceUtilization = networkResourceUtilization;
         return this;
     }
     
+    public Ec2ResourceUtilization(){}
 }

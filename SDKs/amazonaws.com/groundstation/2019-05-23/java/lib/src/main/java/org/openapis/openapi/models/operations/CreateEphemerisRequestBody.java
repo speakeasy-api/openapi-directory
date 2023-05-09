@@ -20,6 +20,7 @@ public class CreateEphemerisRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CreateEphemerisRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -31,6 +32,7 @@ public class CreateEphemerisRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ephemeris")
     public CreateEphemerisRequestBodyEphemeris ephemeris;
+
     public CreateEphemerisRequestBody withEphemeris(CreateEphemerisRequestBodyEphemeris ephemeris) {
         this.ephemeris = ephemeris;
         return this;
@@ -44,6 +46,7 @@ public class CreateEphemerisRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationTime")
     public OffsetDateTime expirationTime;
+
     public CreateEphemerisRequestBody withExpirationTime(OffsetDateTime expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -55,6 +58,7 @@ public class CreateEphemerisRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public CreateEphemerisRequestBody withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -65,6 +69,7 @@ public class CreateEphemerisRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateEphemerisRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -76,6 +81,7 @@ public class CreateEphemerisRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public CreateEphemerisRequestBody withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -86,6 +92,7 @@ public class CreateEphemerisRequestBody {
      */
     @JsonProperty("satelliteId")
     public String satelliteId;
+
     public CreateEphemerisRequestBody withSatelliteId(String satelliteId) {
         this.satelliteId = satelliteId;
         return this;
@@ -97,9 +104,14 @@ public class CreateEphemerisRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateEphemerisRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEphemerisRequestBody(@JsonProperty("name") String name, @JsonProperty("satelliteId") String satelliteId) {
+        this.name = name;
+        this.satelliteId = satelliteId;
+  }
 }

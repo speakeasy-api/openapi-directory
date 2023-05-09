@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountGlossaryUploadRequestGlossary {
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public AccountGlossaryUploadRequestGlossary withContent(byte[] content) {
         this.content = content;
         return this;
@@ -16,9 +18,14 @@ public class AccountGlossaryUploadRequestGlossary {
     
     @SpeakeasyMetadata("multipartForm:name=glossary")
     public String glossary;
+
     public AccountGlossaryUploadRequestGlossary withGlossary(String glossary) {
         this.glossary = glossary;
         return this;
     }
     
+    public AccountGlossaryUploadRequestGlossary(@JsonProperty("content") byte[] content, @JsonProperty("glossary") String glossary) {
+        this.content = content;
+        this.glossary = glossary;
+  }
 }

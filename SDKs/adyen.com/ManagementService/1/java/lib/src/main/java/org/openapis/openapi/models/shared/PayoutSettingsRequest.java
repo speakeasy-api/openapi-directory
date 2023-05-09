@@ -17,6 +17,7 @@ public class PayoutSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public PayoutSettingsRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -37,6 +38,7 @@ public class PayoutSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledFromDate")
     public String enabledFromDate;
+
     public PayoutSettingsRequest withEnabledFromDate(String enabledFromDate) {
         this.enabledFromDate = enabledFromDate;
         return this;
@@ -47,9 +49,13 @@ public class PayoutSettingsRequest {
      */
     @JsonProperty("transferInstrumentId")
     public String transferInstrumentId;
+
     public PayoutSettingsRequest withTransferInstrumentId(String transferInstrumentId) {
         this.transferInstrumentId = transferInstrumentId;
         return this;
     }
     
+    public PayoutSettingsRequest(@JsonProperty("transferInstrumentId") String transferInstrumentId) {
+        this.transferInstrumentId = transferInstrumentId;
+  }
 }

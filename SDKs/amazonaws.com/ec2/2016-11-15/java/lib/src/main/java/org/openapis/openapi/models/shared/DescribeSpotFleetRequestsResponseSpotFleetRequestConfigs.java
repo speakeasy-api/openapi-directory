@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigs {
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsActivityStatusEnum activityStatus;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigs withActivityStatus(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsActivityStatusEnum activityStatus) {
         this.activityStatus = activityStatus;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigs {
     
     
     public OffsetDateTime createTime;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigs withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigs {
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig spotFleetRequestConfig;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigs withSpotFleetRequestConfig(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfig spotFleetRequestConfig) {
         this.spotFleetRequestConfig = spotFleetRequestConfig;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigs {
     
     
     public String spotFleetRequestId;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigs withSpotFleetRequestId(String spotFleetRequestId) {
         this.spotFleetRequestId = spotFleetRequestId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigs {
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestStateEnum spotFleetRequestState;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigs withSpotFleetRequestState(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestStateEnum spotFleetRequestState) {
         this.spotFleetRequestState = spotFleetRequestState;
         return this;
@@ -47,9 +52,11 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigs {
     
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsTags[] tags;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigs withTags(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigs(){}
 }

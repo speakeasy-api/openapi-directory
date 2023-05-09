@@ -61,11 +61,9 @@ public class Conversionsources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentConversionsourcesCreateResponse res = new org.openapis.openapi.models.operations.ContentConversionsourcesCreateResponse() {{
+        org.openapis.openapi.models.operations.ContentConversionsourcesCreateResponse res = new org.openapis.openapi.models.operations.ContentConversionsourcesCreateResponse(contentType, httpRes.statusCode()) {{
             conversionSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Conversionsources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentConversionsourcesDeleteResponse res = new org.openapis.openapi.models.operations.ContentConversionsourcesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ContentConversionsourcesDeleteResponse res = new org.openapis.openapi.models.operations.ContentConversionsourcesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Conversionsources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentConversionsourcesGetResponse res = new org.openapis.openapi.models.operations.ContentConversionsourcesGetResponse() {{
+        org.openapis.openapi.models.operations.ContentConversionsourcesGetResponse res = new org.openapis.openapi.models.operations.ContentConversionsourcesGetResponse(contentType, httpRes.statusCode()) {{
             conversionSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Conversionsources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentConversionsourcesListResponse res = new org.openapis.openapi.models.operations.ContentConversionsourcesListResponse() {{
+        org.openapis.openapi.models.operations.ContentConversionsourcesListResponse res = new org.openapis.openapi.models.operations.ContentConversionsourcesListResponse(contentType, httpRes.statusCode()) {{
             listConversionSourcesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Conversionsources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentConversionsourcesPatchResponse res = new org.openapis.openapi.models.operations.ContentConversionsourcesPatchResponse() {{
+        org.openapis.openapi.models.operations.ContentConversionsourcesPatchResponse res = new org.openapis.openapi.models.operations.ContentConversionsourcesPatchResponse(contentType, httpRes.statusCode()) {{
             conversionSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,10 +279,8 @@ public class Conversionsources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentConversionsourcesUndeleteResponse res = new org.openapis.openapi.models.operations.ContentConversionsourcesUndeleteResponse() {{
+        org.openapis.openapi.models.operations.ContentConversionsourcesUndeleteResponse res = new org.openapis.openapi.models.operations.ContentConversionsourcesUndeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

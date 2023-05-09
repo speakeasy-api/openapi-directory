@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssociateCreatedArtifactRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AssociateCreatedArtifactRequest associateCreatedArtifactRequest;
+
     public AssociateCreatedArtifactRequest withAssociateCreatedArtifactRequest(org.openapis.openapi.models.shared.AssociateCreatedArtifactRequest associateCreatedArtifactRequest) {
         this.associateCreatedArtifactRequest = associateCreatedArtifactRequest;
         return this;
@@ -16,6 +18,7 @@ public class AssociateCreatedArtifactRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public AssociateCreatedArtifactRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class AssociateCreatedArtifactRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public AssociateCreatedArtifactRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class AssociateCreatedArtifactRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public AssociateCreatedArtifactRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class AssociateCreatedArtifactRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public AssociateCreatedArtifactRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class AssociateCreatedArtifactRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public AssociateCreatedArtifactRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class AssociateCreatedArtifactRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public AssociateCreatedArtifactRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class AssociateCreatedArtifactRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public AssociateCreatedArtifactRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class AssociateCreatedArtifactRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public AssociateCreatedArtifactXAmzTargetEnum xAmzTarget;
+
     public AssociateCreatedArtifactRequest withXAmzTarget(AssociateCreatedArtifactXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public AssociateCreatedArtifactRequest(@JsonProperty("AssociateCreatedArtifactRequest") org.openapis.openapi.models.shared.AssociateCreatedArtifactRequest associateCreatedArtifactRequest, @JsonProperty("X-Amz-Target") AssociateCreatedArtifactXAmzTargetEnum xAmzTarget) {
+        this.associateCreatedArtifactRequest = associateCreatedArtifactRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

@@ -15,6 +15,7 @@ public class BookingPerson {
      */
     @JsonProperty("contactId")
     public String contactId;
+
     public BookingPerson withContactId(String contactId) {
         this.contactId = contactId;
         return this;
@@ -25,6 +26,7 @@ public class BookingPerson {
      */
     @JsonProperty("email")
     public String email;
+
     public BookingPerson withEmail(String email) {
         this.email = email;
         return this;
@@ -35,6 +37,7 @@ public class BookingPerson {
      */
     @JsonProperty("firstName")
     public String firstName;
+
     public BookingPerson withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -45,9 +48,16 @@ public class BookingPerson {
      */
     @JsonProperty("lastName")
     public String lastName;
+
     public BookingPerson withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public BookingPerson(@JsonProperty("contactId") String contactId, @JsonProperty("email") String email, @JsonProperty("firstName") String firstName, @JsonProperty("lastName") String lastName) {
+        this.contactId = contactId;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+  }
 }

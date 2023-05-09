@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSegmentsResponse {
@@ -12,6 +13,7 @@ public class GetSegmentsResponse {
      */
     
     public Object badRequestException;
+
     public GetSegmentsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetSegmentsResponse {
     
     
     public String contentType;
+
     public GetSegmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSegmentsResponse {
      */
     
     public Object forbiddenException;
+
     public GetSegmentsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetSegmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSegmentsResponse getSegmentsResponse;
+
     public GetSegmentsResponse withGetSegmentsResponse(org.openapis.openapi.models.shared.GetSegmentsResponse getSegmentsResponse) {
         this.getSegmentsResponse = getSegmentsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetSegmentsResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetSegmentsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetSegmentsResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetSegmentsResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetSegmentsResponse {
      */
     
     public Object notFoundException;
+
     public GetSegmentsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetSegmentsResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetSegmentsResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetSegmentsResponse {
     
     
     public Integer statusCode;
+
     public GetSegmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetSegmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSegmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetSegmentsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetSegmentsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetSegmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

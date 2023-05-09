@@ -15,9 +15,13 @@ public class GetTransactionDetails200ApplicationJSON {
      */
     @JsonProperty("transactionsDetails")
     public org.openapis.openapi.models.shared.TransactionDetailsBody transactionsDetails;
+
     public GetTransactionDetails200ApplicationJSON withTransactionsDetails(org.openapis.openapi.models.shared.TransactionDetailsBody transactionsDetails) {
         this.transactionsDetails = transactionsDetails;
         return this;
     }
     
+    public GetTransactionDetails200ApplicationJSON(@JsonProperty("transactionsDetails") org.openapis.openapi.models.shared.TransactionDetailsBody transactionsDetails) {
+        this.transactionsDetails = transactionsDetails;
+  }
 }

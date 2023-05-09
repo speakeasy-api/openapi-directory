@@ -15,6 +15,7 @@ public class GetServers200ApplicationJSONServersProtection {
      */
     @JsonProperty("delete")
     public Boolean delete;
+
     public GetServers200ApplicationJSONServersProtection withDelete(Boolean delete) {
         this.delete = delete;
         return this;
@@ -25,9 +26,14 @@ public class GetServers200ApplicationJSONServersProtection {
      */
     @JsonProperty("rebuild")
     public Boolean rebuild;
+
     public GetServers200ApplicationJSONServersProtection withRebuild(Boolean rebuild) {
         this.rebuild = rebuild;
         return this;
     }
     
+    public GetServers200ApplicationJSONServersProtection(@JsonProperty("delete") Boolean delete, @JsonProperty("rebuild") Boolean rebuild) {
+        this.delete = delete;
+        this.rebuild = rebuild;
+  }
 }

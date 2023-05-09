@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaExecutionSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkpointTaskNumber")
     public String checkpointTaskNumber;
+
     public GoogleCloudIntegrationsV1alphaExecutionSnapshot withCheckpointTaskNumber(String checkpointTaskNumber) {
         this.checkpointTaskNumber = checkpointTaskNumber;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaExecutionSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionSnapshotMetadata")
     public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata executionSnapshotMetadata;
+
     public GoogleCloudIntegrationsV1alphaExecutionSnapshot withExecutionSnapshotMetadata(GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata executionSnapshotMetadata) {
         this.executionSnapshotMetadata = executionSnapshotMetadata;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaExecutionSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> params;
+
     public GoogleCloudIntegrationsV1alphaExecutionSnapshot withParams(java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> params) {
         this.params = params;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudIntegrationsV1alphaExecutionSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskExecutionDetails")
     public GoogleCloudIntegrationsV1alphaTaskExecutionDetails[] taskExecutionDetails;
+
     public GoogleCloudIntegrationsV1alphaExecutionSnapshot withTaskExecutionDetails(GoogleCloudIntegrationsV1alphaTaskExecutionDetails[] taskExecutionDetails) {
         this.taskExecutionDetails = taskExecutionDetails;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaExecutionSnapshot(){}
 }

@@ -17,6 +17,7 @@ public class Sender {
      */
     @JsonProperty("description")
     public String description;
+
     public Sender withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +28,7 @@ public class Sender {
      */
     @JsonProperty("format")
     public SenderFormatEnum format;
+
     public Sender withFormat(SenderFormatEnum format) {
         this.format = format;
         return this;
@@ -38,6 +40,7 @@ public class Sender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public SettingMetadata meta;
+
     public Sender withMeta(SettingMetadata meta) {
         this.meta = meta;
         return this;
@@ -48,6 +51,7 @@ public class Sender {
      */
     @JsonProperty("name")
     public String name;
+
     public Sender withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class Sender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationName")
     public String organizationName;
+
     public Sender withOrganizationName(String organizationName) {
         this.organizationName = organizationName;
         return this;
@@ -69,6 +74,7 @@ public class Sender {
      */
     @JsonProperty("schema")
     public String schema;
+
     public Sender withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -79,9 +85,17 @@ public class Sender {
      */
     @JsonProperty("topic")
     public String topic;
+
     public Sender withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public Sender(@JsonProperty("description") String description, @JsonProperty("format") SenderFormatEnum format, @JsonProperty("name") String name, @JsonProperty("schema") String schema, @JsonProperty("topic") String topic) {
+        this.description = description;
+        this.format = format;
+        this.name = name;
+        this.schema = schema;
+        this.topic = topic;
+  }
 }

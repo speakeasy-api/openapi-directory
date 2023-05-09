@@ -15,6 +15,7 @@ public class UpdateNetworkSsidL3FirewallRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public UpdateNetworkSsidL3FirewallRulesRequestBodyRules withComment(String comment) {
         this.comment = comment;
         return this;
@@ -25,6 +26,7 @@ public class UpdateNetworkSsidL3FirewallRulesRequestBodyRules {
      */
     @JsonProperty("destCidr")
     public String destCidr;
+
     public UpdateNetworkSsidL3FirewallRulesRequestBodyRules withDestCidr(String destCidr) {
         this.destCidr = destCidr;
         return this;
@@ -36,6 +38,7 @@ public class UpdateNetworkSsidL3FirewallRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destPort")
     public String destPort;
+
     public UpdateNetworkSsidL3FirewallRulesRequestBodyRules withDestPort(String destPort) {
         this.destPort = destPort;
         return this;
@@ -46,6 +49,7 @@ public class UpdateNetworkSsidL3FirewallRulesRequestBodyRules {
      */
     @JsonProperty("policy")
     public UpdateNetworkSsidL3FirewallRulesRequestBodyRulesPolicyEnum policy;
+
     public UpdateNetworkSsidL3FirewallRulesRequestBodyRules withPolicy(UpdateNetworkSsidL3FirewallRulesRequestBodyRulesPolicyEnum policy) {
         this.policy = policy;
         return this;
@@ -56,9 +60,15 @@ public class UpdateNetworkSsidL3FirewallRulesRequestBodyRules {
      */
     @JsonProperty("protocol")
     public UpdateNetworkSsidL3FirewallRulesRequestBodyRulesProtocolEnum protocol;
+
     public UpdateNetworkSsidL3FirewallRulesRequestBodyRules withProtocol(UpdateNetworkSsidL3FirewallRulesRequestBodyRulesProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public UpdateNetworkSsidL3FirewallRulesRequestBodyRules(@JsonProperty("destCidr") String destCidr, @JsonProperty("policy") UpdateNetworkSsidL3FirewallRulesRequestBodyRulesPolicyEnum policy, @JsonProperty("protocol") UpdateNetworkSsidL3FirewallRulesRequestBodyRulesProtocolEnum protocol) {
+        this.destCidr = destCidr;
+        this.policy = policy;
+        this.protocol = protocol;
+  }
 }

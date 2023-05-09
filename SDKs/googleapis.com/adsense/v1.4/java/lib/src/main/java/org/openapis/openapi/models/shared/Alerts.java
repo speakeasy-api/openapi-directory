@@ -18,6 +18,7 @@ public class Alerts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Alert[] items;
+
     public Alerts withItems(Alert[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class Alerts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Alerts withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Alerts(){}
 }

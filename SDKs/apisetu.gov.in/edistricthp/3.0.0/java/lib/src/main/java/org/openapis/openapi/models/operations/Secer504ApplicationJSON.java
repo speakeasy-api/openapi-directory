@@ -15,6 +15,7 @@ public class Secer504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Secer504ApplicationJSONErrorEnum error;
+
     public Secer504ApplicationJSON withError(Secer504ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Secer504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Secer504ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Secer504ApplicationJSON withErrorDescription(Secer504ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Secer504ApplicationJSON(){}
 }

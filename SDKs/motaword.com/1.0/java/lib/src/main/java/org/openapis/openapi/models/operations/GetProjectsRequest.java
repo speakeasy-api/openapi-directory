@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetProjectsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public GetProjectsOrderByEnum orderBy;
+
     public GetProjectsRequest withOrderBy(GetProjectsOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -16,6 +17,7 @@ public class GetProjectsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_type")
     public org.openapis.openapi.models.shared.ListOrderTypeEnum orderType;
+
     public GetProjectsRequest withOrderType(org.openapis.openapi.models.shared.ListOrderTypeEnum orderType) {
         this.orderType = orderType;
         return this;
@@ -23,6 +25,7 @@ public class GetProjectsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetProjectsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -30,6 +33,7 @@ public class GetProjectsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetProjectsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -40,6 +44,7 @@ public class GetProjectsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status[]")
     public org.openapis.openapi.models.shared.ProjectStatusEnum[] status;
+
     public GetProjectsRequest withStatus(org.openapis.openapi.models.shared.ProjectStatusEnum[] status) {
         this.status = status;
         return this;
@@ -50,6 +55,7 @@ public class GetProjectsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with[]")
     public GetProjectsWithEnum[] with;
+
     public GetProjectsRequest withWith(GetProjectsWithEnum[] with) {
         this.with = with;
         return this;
@@ -57,9 +63,13 @@ public class GetProjectsRequest {
     
     /**
      * deprecated. use `status[]` param.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_completed")
+    @Deprecated
     public Boolean withCompleted;
+
+    @Deprecated
     public GetProjectsRequest withWithCompleted(Boolean withCompleted) {
         this.withCompleted = withCompleted;
         return this;
@@ -67,9 +77,13 @@ public class GetProjectsRequest {
     
     /**
      * deprecated. use `status[]` param.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_pending")
+    @Deprecated
     public Boolean withPending;
+
+    @Deprecated
     public GetProjectsRequest withWithPending(Boolean withPending) {
         this.withPending = withPending;
         return this;
@@ -77,12 +91,17 @@ public class GetProjectsRequest {
     
     /**
      * deprecated. use `status[]` param.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_started")
+    @Deprecated
     public Boolean withStarted;
+
+    @Deprecated
     public GetProjectsRequest withWithStarted(Boolean withStarted) {
         this.withStarted = withStarted;
         return this;
     }
     
+    public GetProjectsRequest(){}
 }

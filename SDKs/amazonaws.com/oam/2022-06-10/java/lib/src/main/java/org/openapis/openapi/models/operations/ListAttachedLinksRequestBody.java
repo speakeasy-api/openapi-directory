@@ -15,6 +15,7 @@ public class ListAttachedLinksRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAttachedLinksRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListAttachedLinksRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAttachedLinksRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +38,13 @@ public class ListAttachedLinksRequestBody {
      */
     @JsonProperty("SinkIdentifier")
     public String sinkIdentifier;
+
     public ListAttachedLinksRequestBody withSinkIdentifier(String sinkIdentifier) {
         this.sinkIdentifier = sinkIdentifier;
         return this;
     }
     
+    public ListAttachedLinksRequestBody(@JsonProperty("SinkIdentifier") String sinkIdentifier) {
+        this.sinkIdentifier = sinkIdentifier;
+  }
 }

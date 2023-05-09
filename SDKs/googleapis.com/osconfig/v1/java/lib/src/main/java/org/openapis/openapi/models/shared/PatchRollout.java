@@ -18,6 +18,7 @@ public class PatchRollout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disruptionBudget")
     public FixedOrPercent disruptionBudget;
+
     public PatchRollout withDisruptionBudget(FixedOrPercent disruptionBudget) {
         this.disruptionBudget = disruptionBudget;
         return this;
@@ -29,9 +30,11 @@ public class PatchRollout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public PatchRolloutModeEnum mode;
+
     public PatchRollout withMode(PatchRolloutModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public PatchRollout(){}
 }

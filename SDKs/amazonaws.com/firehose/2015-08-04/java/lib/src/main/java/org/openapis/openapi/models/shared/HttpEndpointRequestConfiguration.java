@@ -15,6 +15,7 @@ public class HttpEndpointRequestConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommonAttributes")
     public HttpEndpointCommonAttribute[] commonAttributes;
+
     public HttpEndpointRequestConfiguration withCommonAttributes(HttpEndpointCommonAttribute[] commonAttributes) {
         this.commonAttributes = commonAttributes;
         return this;
@@ -23,9 +24,11 @@ public class HttpEndpointRequestConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentEncoding")
     public ContentEncodingEnum contentEncoding;
+
     public HttpEndpointRequestConfiguration withContentEncoding(ContentEncodingEnum contentEncoding) {
         this.contentEncoding = contentEncoding;
         return this;
     }
     
+    public HttpEndpointRequestConfiguration(){}
 }

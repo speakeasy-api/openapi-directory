@@ -15,6 +15,7 @@ public class StopFlowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowArn")
     public String flowArn;
+
     public StopFlowResponse withFlowArn(String flowArn) {
         this.flowArn = flowArn;
         return this;
@@ -23,9 +24,11 @@ public class StopFlowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowStatus")
     public FlowStatusEnum flowStatus;
+
     public StopFlowResponse withFlowStatus(FlowStatusEnum flowStatus) {
         this.flowStatus = flowStatus;
         return this;
     }
     
+    public StopFlowResponse(){}
 }

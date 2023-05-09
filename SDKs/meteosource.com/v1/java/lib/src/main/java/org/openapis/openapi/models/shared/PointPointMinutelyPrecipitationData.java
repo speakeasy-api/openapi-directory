@@ -22,6 +22,7 @@ public class PointPointMinutelyPrecipitationData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public PointPointMinutelyPrecipitationData withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -36,9 +37,11 @@ public class PointPointMinutelyPrecipitationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precipitation")
     public Double precipitation;
+
     public PointPointMinutelyPrecipitationData withPrecipitation(Double precipitation) {
         this.precipitation = precipitation;
         return this;
     }
     
+    public PointPointMinutelyPrecipitationData(){}
 }

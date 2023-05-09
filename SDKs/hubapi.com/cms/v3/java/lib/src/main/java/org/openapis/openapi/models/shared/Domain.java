@@ -20,6 +20,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correctCname")
     public String correctCname;
+
     public Domain withCorrectCname(String correctCname) {
         this.correctCname = correctCname;
         return this;
@@ -30,6 +31,7 @@ public class Domain {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Domain withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -40,6 +42,7 @@ public class Domain {
      */
     @JsonProperty("domain")
     public String domain;
+
     public Domain withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -50,6 +53,7 @@ public class Domain {
      */
     @JsonProperty("id")
     public String id;
+
     public Domain withId(String id) {
         this.id = id;
         return this;
@@ -60,6 +64,7 @@ public class Domain {
      */
     @JsonProperty("isResolving")
     public Boolean isResolving;
+
     public Domain withIsResolving(Boolean isResolving) {
         this.isResolving = isResolving;
         return this;
@@ -68,6 +73,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSslEnabled")
     public Boolean isSslEnabled;
+
     public Domain withIsSslEnabled(Boolean isSslEnabled) {
         this.isSslEnabled = isSslEnabled;
         return this;
@@ -76,6 +82,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSslOnly")
     public Boolean isSslOnly;
+
     public Domain withIsSslOnly(Boolean isSslOnly) {
         this.isSslOnly = isSslOnly;
         return this;
@@ -86,6 +93,7 @@ public class Domain {
      */
     @JsonProperty("isUsedForBlogPost")
     public Boolean isUsedForBlogPost;
+
     public Domain withIsUsedForBlogPost(Boolean isUsedForBlogPost) {
         this.isUsedForBlogPost = isUsedForBlogPost;
         return this;
@@ -96,6 +104,7 @@ public class Domain {
      */
     @JsonProperty("isUsedForEmail")
     public Boolean isUsedForEmail;
+
     public Domain withIsUsedForEmail(Boolean isUsedForEmail) {
         this.isUsedForEmail = isUsedForEmail;
         return this;
@@ -106,6 +115,7 @@ public class Domain {
      */
     @JsonProperty("isUsedForKnowledge")
     public Boolean isUsedForKnowledge;
+
     public Domain withIsUsedForKnowledge(Boolean isUsedForKnowledge) {
         this.isUsedForKnowledge = isUsedForKnowledge;
         return this;
@@ -116,6 +126,7 @@ public class Domain {
      */
     @JsonProperty("isUsedForLandingPage")
     public Boolean isUsedForLandingPage;
+
     public Domain withIsUsedForLandingPage(Boolean isUsedForLandingPage) {
         this.isUsedForLandingPage = isUsedForLandingPage;
         return this;
@@ -126,6 +137,7 @@ public class Domain {
      */
     @JsonProperty("isUsedForSitePage")
     public Boolean isUsedForSitePage;
+
     public Domain withIsUsedForSitePage(Boolean isUsedForSitePage) {
         this.isUsedForSitePage = isUsedForSitePage;
         return this;
@@ -134,6 +146,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manuallyMarkedAsResolving")
     public Boolean manuallyMarkedAsResolving;
+
     public Domain withManuallyMarkedAsResolving(Boolean manuallyMarkedAsResolving) {
         this.manuallyMarkedAsResolving = manuallyMarkedAsResolving;
         return this;
@@ -142,6 +155,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryBlogPost")
     public Boolean primaryBlogPost;
+
     public Domain withPrimaryBlogPost(Boolean primaryBlogPost) {
         this.primaryBlogPost = primaryBlogPost;
         return this;
@@ -150,6 +164,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryEmail")
     public Boolean primaryEmail;
+
     public Domain withPrimaryEmail(Boolean primaryEmail) {
         this.primaryEmail = primaryEmail;
         return this;
@@ -158,6 +173,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryKnowledge")
     public Boolean primaryKnowledge;
+
     public Domain withPrimaryKnowledge(Boolean primaryKnowledge) {
         this.primaryKnowledge = primaryKnowledge;
         return this;
@@ -166,6 +182,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryLandingPage")
     public Boolean primaryLandingPage;
+
     public Domain withPrimaryLandingPage(Boolean primaryLandingPage) {
         this.primaryLandingPage = primaryLandingPage;
         return this;
@@ -174,6 +191,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primarySitePage")
     public Boolean primarySitePage;
+
     public Domain withPrimarySitePage(Boolean primarySitePage) {
         this.primarySitePage = primarySitePage;
         return this;
@@ -182,6 +200,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryToDomain")
     public String secondaryToDomain;
+
     public Domain withSecondaryToDomain(String secondaryToDomain) {
         this.secondaryToDomain = secondaryToDomain;
         return this;
@@ -192,9 +211,20 @@ public class Domain {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated")
     public OffsetDateTime updated;
+
     public Domain withUpdated(OffsetDateTime updated) {
         this.updated = updated;
         return this;
     }
     
+    public Domain(@JsonProperty("domain") String domain, @JsonProperty("id") String id, @JsonProperty("isResolving") Boolean isResolving, @JsonProperty("isUsedForBlogPost") Boolean isUsedForBlogPost, @JsonProperty("isUsedForEmail") Boolean isUsedForEmail, @JsonProperty("isUsedForKnowledge") Boolean isUsedForKnowledge, @JsonProperty("isUsedForLandingPage") Boolean isUsedForLandingPage, @JsonProperty("isUsedForSitePage") Boolean isUsedForSitePage) {
+        this.domain = domain;
+        this.id = id;
+        this.isResolving = isResolving;
+        this.isUsedForBlogPost = isUsedForBlogPost;
+        this.isUsedForEmail = isUsedForEmail;
+        this.isUsedForKnowledge = isUsedForKnowledge;
+        this.isUsedForLandingPage = isUsedForLandingPage;
+        this.isUsedForSitePage = isUsedForSitePage;
+  }
 }

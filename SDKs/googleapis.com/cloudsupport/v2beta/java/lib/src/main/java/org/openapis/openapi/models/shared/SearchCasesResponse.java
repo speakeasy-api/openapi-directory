@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class SearchCasesResponse {
     /**
-     * The list of Case associated with the cloud resource, after any filters have been applied.
+     * The list of cases associated with the Google Cloud Resource, after any filters have been applied.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cases")
     public Case[] cases;
+
     public SearchCasesResponse withCases(Case[] cases) {
         this.cases = cases;
         return this;
@@ -29,9 +30,11 @@ public class SearchCasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SearchCasesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public SearchCasesResponse(){}
 }

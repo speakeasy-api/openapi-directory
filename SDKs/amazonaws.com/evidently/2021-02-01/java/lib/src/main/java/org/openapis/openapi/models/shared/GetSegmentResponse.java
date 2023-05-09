@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSegmentResponse {
     @JsonProperty("segment")
     public Segment segment;
+
     public GetSegmentResponse withSegment(Segment segment) {
         this.segment = segment;
         return this;
     }
     
+    public GetSegmentResponse(@JsonProperty("segment") Segment segment) {
+        this.segment = segment;
+  }
 }

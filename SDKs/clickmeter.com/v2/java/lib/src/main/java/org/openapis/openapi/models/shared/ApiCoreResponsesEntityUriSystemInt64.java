@@ -12,6 +12,7 @@ public class ApiCoreResponsesEntityUriSystemInt64 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ApiCoreResponsesEntityUriSystemInt64 withId(Long id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class ApiCoreResponsesEntityUriSystemInt64 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public ApiCoreResponsesEntityUriSystemInt64 withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public ApiCoreResponsesEntityUriSystemInt64(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartDevEnvironmentSessionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public StartDevEnvironmentSessionRequestBody requestBody;
+
     public StartDevEnvironmentSessionRequest withRequestBody(StartDevEnvironmentSessionRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class StartDevEnvironmentSessionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public StartDevEnvironmentSessionRequest withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +32,7 @@ public class StartDevEnvironmentSessionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectName")
     public String projectName;
+
     public StartDevEnvironmentSessionRequest withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -39,9 +43,16 @@ public class StartDevEnvironmentSessionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
     public String spaceName;
+
     public StartDevEnvironmentSessionRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public StartDevEnvironmentSessionRequest(@JsonProperty("RequestBody") StartDevEnvironmentSessionRequestBody requestBody, @JsonProperty("id") String id, @JsonProperty("projectName") String projectName, @JsonProperty("spaceName") String spaceName) {
+        this.requestBody = requestBody;
+        this.id = id;
+        this.projectName = projectName;
+        this.spaceName = spaceName;
+  }
 }

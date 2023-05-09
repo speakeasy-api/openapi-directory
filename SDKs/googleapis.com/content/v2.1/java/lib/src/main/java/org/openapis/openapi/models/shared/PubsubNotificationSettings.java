@@ -18,6 +18,7 @@ public class PubsubNotificationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudTopicName")
     public String cloudTopicName;
+
     public PubsubNotificationSettings withCloudTopicName(String cloudTopicName) {
         this.cloudTopicName = cloudTopicName;
         return this;
@@ -29,6 +30,7 @@ public class PubsubNotificationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PubsubNotificationSettings withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class PubsubNotificationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registeredEvents")
     public String[] registeredEvents;
+
     public PubsubNotificationSettings withRegisteredEvents(String[] registeredEvents) {
         this.registeredEvents = registeredEvents;
         return this;
     }
     
+    public PubsubNotificationSettings(){}
 }

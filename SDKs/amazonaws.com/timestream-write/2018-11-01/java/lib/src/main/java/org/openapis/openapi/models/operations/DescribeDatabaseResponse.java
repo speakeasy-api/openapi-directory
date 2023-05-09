@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDatabaseResponse {
@@ -12,6 +13,7 @@ public class DescribeDatabaseResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeDatabaseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDatabaseResponse {
     
     
     public String contentType;
+
     public DescribeDatabaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDatabaseResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDatabaseResponse describeDatabaseResponse;
+
     public DescribeDatabaseResponse withDescribeDatabaseResponse(org.openapis.openapi.models.shared.DescribeDatabaseResponse describeDatabaseResponse) {
         this.describeDatabaseResponse = describeDatabaseResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDatabaseResponse {
      */
     
     public Object internalServerException;
+
     public DescribeDatabaseResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDatabaseResponse {
      */
     
     public Object invalidEndpointException;
+
     public DescribeDatabaseResponse withInvalidEndpointException(Object invalidEndpointException) {
         this.invalidEndpointException = invalidEndpointException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeDatabaseResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDatabaseResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeDatabaseResponse {
     
     
     public Integer statusCode;
+
     public DescribeDatabaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeDatabaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDatabaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeDatabaseResponse {
      */
     
     public Object throttlingException;
+
     public DescribeDatabaseResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeDatabaseResponse {
      */
     
     public Object validationException;
+
     public DescribeDatabaseResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeDatabaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

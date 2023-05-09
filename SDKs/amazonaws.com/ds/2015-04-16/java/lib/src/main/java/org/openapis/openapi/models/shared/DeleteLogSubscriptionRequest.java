@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteLogSubscriptionRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DeleteLogSubscriptionRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     
+    public DeleteLogSubscriptionRequest(@JsonProperty("DirectoryId") String directoryId) {
+        this.directoryId = directoryId;
+  }
 }

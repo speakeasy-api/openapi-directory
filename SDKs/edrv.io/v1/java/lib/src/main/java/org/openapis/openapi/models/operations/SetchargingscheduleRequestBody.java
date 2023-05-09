@@ -12,6 +12,7 @@ public class SetchargingscheduleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connector")
     public String connector;
+
     public SetchargingscheduleRequestBody withConnector(String connector) {
         this.connector = connector;
         return this;
@@ -20,9 +21,11 @@ public class SetchargingscheduleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public SetchargingscheduleRequestBodySchedule[] schedule;
+
     public SetchargingscheduleRequestBody withSchedule(SetchargingscheduleRequestBodySchedule[] schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public SetchargingscheduleRequestBody(){}
 }

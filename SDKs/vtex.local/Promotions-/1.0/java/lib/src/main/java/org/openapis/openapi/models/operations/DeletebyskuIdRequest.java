@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletebyskuIdRequest {
@@ -12,6 +13,7 @@ public class DeletebyskuIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public DeletebyskuIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class DeletebyskuIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public DeletebyskuIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeletebyskuIdRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=an")
     public String an;
+
     public DeletebyskuIdRequest withAn(String an) {
         this.an = an;
         return this;
@@ -36,9 +40,16 @@ public class DeletebyskuIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
     public String skuId;
+
     public DeletebyskuIdRequest withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
     }
     
+    public DeletebyskuIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("an") String an, @JsonProperty("skuId") String skuId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.an = an;
+        this.skuId = skuId;
+  }
 }

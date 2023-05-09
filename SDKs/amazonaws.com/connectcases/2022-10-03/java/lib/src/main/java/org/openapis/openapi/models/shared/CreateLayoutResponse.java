@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLayoutResponse {
     @JsonProperty("layoutArn")
     public String layoutArn;
+
     public CreateLayoutResponse withLayoutArn(String layoutArn) {
         this.layoutArn = layoutArn;
         return this;
@@ -19,9 +20,14 @@ public class CreateLayoutResponse {
     
     @JsonProperty("layoutId")
     public String layoutId;
+
     public CreateLayoutResponse withLayoutId(String layoutId) {
         this.layoutId = layoutId;
         return this;
     }
     
+    public CreateLayoutResponse(@JsonProperty("layoutArn") String layoutArn, @JsonProperty("layoutId") String layoutId) {
+        this.layoutArn = layoutArn;
+        this.layoutId = layoutId;
+  }
 }

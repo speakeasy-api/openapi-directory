@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
     public String namespace;
+
     public GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -19,6 +21,7 @@ public class GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -29,6 +32,7 @@ public class GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -36,9 +40,14 @@ public class GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository")
     public String repository;
+
     public GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest withRepository(String repository) {
         this.repository = repository;
         return this;
     }
     
+    public GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest(@JsonProperty("namespace") String namespace, @JsonProperty("repository") String repository) {
+        this.namespace = namespace;
+        this.repository = repository;
+  }
 }

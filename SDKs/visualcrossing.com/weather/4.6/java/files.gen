@@ -44,4 +44,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetVisualCrossingWebSer
 lib/src/main/java/org/openapis/openapi/models/operations/GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVisualCrossingWebServicesRestServicesWeatherdataForecastResponse.java
+docs/sdk/README.md
+docs/historicalweather/README.md
+docs/timelineweatherapi15dayforecastrequest/README.md
+docs/timelineweatherapidaterangerequest/README.md
+docs/timelineweatherapisingledaterequest/README.md
+docs/weatherforecast/README.md
 USAGE.md

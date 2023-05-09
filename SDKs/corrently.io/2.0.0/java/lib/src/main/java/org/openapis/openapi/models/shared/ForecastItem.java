@@ -15,6 +15,7 @@ public class ForecastItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("co2_g_oekostrom")
     public Long co2GOekostrom;
+
     public ForecastItem withCo2GOekostrom(Long co2GOekostrom) {
         this.co2GOekostrom = co2GOekostrom;
         return this;
@@ -26,6 +27,7 @@ public class ForecastItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("energyprice")
     public Double energyprice;
+
     public ForecastItem withEnergyprice(Double energyprice) {
         this.energyprice = energyprice;
         return this;
@@ -37,6 +39,7 @@ public class ForecastItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("epochtime")
     public Long epochtime;
+
     public ForecastItem withEpochtime(Long epochtime) {
         this.epochtime = epochtime;
         return this;
@@ -48,6 +51,7 @@ public class ForecastItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gsi")
     public Long gsi;
+
     public ForecastItem withGsi(Long gsi) {
         this.gsi = gsi;
         return this;
@@ -59,6 +63,7 @@ public class ForecastItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaled")
     public Boolean scaled;
+
     public ForecastItem withScaled(Boolean scaled) {
         this.scaled = scaled;
         return this;
@@ -70,6 +75,7 @@ public class ForecastItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sci")
     public Long sci;
+
     public ForecastItem withSci(Long sci) {
         this.sci = sci;
         return this;
@@ -81,9 +87,11 @@ public class ForecastItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeStamp")
     public Long timeStamp;
+
     public ForecastItem withTimeStamp(Long timeStamp) {
         this.timeStamp = timeStamp;
         return this;
     }
     
+    public ForecastItem(){}
 }

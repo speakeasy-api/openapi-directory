@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeGlobalForwardingRulesDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeGlobalForwardingRulesDeleteSecurityOption1 option1;
+
     public ComputeGlobalForwardingRulesDeleteSecurity withOption1(ComputeGlobalForwardingRulesDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeGlobalForwardingRulesDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeGlobalForwardingRulesDeleteSecurityOption2 option2;
+
     public ComputeGlobalForwardingRulesDeleteSecurity withOption2(ComputeGlobalForwardingRulesDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeGlobalForwardingRulesDeleteSecurity(){}
 }

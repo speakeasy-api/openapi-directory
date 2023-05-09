@@ -54,10 +54,8 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddExternalFileLinkResponse res = new org.openapis.openapi.models.operations.AddExternalFileLinkResponse() {{
+        org.openapis.openapi.models.operations.AddExternalFileLinkResponse res = new org.openapis.openapi.models.operations.AddExternalFileLinkResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -68,7 +66,7 @@ public class JobsSmartV2 {
 
     /**
      * Adds file link to the project as a link delivered in the job.
-     * Adds file link to the project as a link delivered in the job. The following properties can be specified for each file link:&lt;ul&gt;&lt;li&gt;url (required, 400 Bad Request is returned otherwise)&lt;/li&gt;&lt;li&gt;category (required, 400 Bad Request is returned otherwise)&lt;/li&gt;&lt;li&gt;languageIds \u2013 when the file category depends on a list of languages&lt;/li&gt;&lt;li&gt;languageCombinationIds \u2013 when the file category depends on a list of language combinations&lt;/li&gt;&lt;/ul&gt;
+     * Adds file link to the project as a link delivered in the job. The following properties can be specified for each file link:&lt;ul&gt;&lt;li&gt;url (required, 400 Bad Request is returned otherwise)&lt;/li&gt;&lt;li&gt;category (required, 400 Bad Request is returned otherwise)&lt;/li&gt;&lt;li&gt;languageIds – when the file category depends on a list of languages&lt;/li&gt;&lt;li&gt;languageCombinationIds – when the file category depends on a list of language combinations&lt;/li&gt;&lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -93,11 +91,9 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddFileLinksResponse res = new org.openapis.openapi.models.operations.AddFileLinksResponse() {{
+        org.openapis.openapi.models.operations.AddFileLinksResponse res = new org.openapis.openapi.models.operations.AddFileLinksResponse(contentType, httpRes.statusCode()) {{
             filesDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -113,7 +109,7 @@ public class JobsSmartV2 {
 
     /**
      * Adds files to the project as delivered in the job.
-     * Adds files to the project as delivered in the job. The files have to be uploaded beforehand (see "POST /jobs/{jobId}/files/upload" operation). The following properties can be specified for each file:&lt;ul&gt;&lt;li&gt;category (required, 400 Bad Request is returned otherwise)&lt;/li&gt;&lt;li&gt;languageIds \u2013 when the file category depends on a list of languages&lt;/li&gt;&lt;li&gt;languageCombinationIds \u2013 when the file category depends on a list of language combinations&lt;/li&gt;&lt;/ul&gt;
+     * Adds files to the project as delivered in the job. The files have to be uploaded beforehand (see "POST /jobs/{jobId}/files/upload" operation). The following properties can be specified for each file:&lt;ul&gt;&lt;li&gt;category (required, 400 Bad Request is returned otherwise)&lt;/li&gt;&lt;li&gt;languageIds – when the file category depends on a list of languages&lt;/li&gt;&lt;li&gt;languageCombinationIds – when the file category depends on a list of language combinations&lt;/li&gt;&lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -138,10 +134,8 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddFilesResponse res = new org.openapis.openapi.models.operations.AddFilesResponse() {{
+        org.openapis.openapi.models.operations.AddFilesResponse res = new org.openapis.openapi.models.operations.AddFilesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -177,10 +171,8 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssignVendor1Response res = new org.openapis.openapi.models.operations.AssignVendor1Response() {{
+        org.openapis.openapi.models.operations.AssignVendor1Response res = new org.openapis.openapi.models.operations.AssignVendor1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -216,10 +208,8 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeDatesResponse res = new org.openapis.openapi.models.operations.ChangeDatesResponse() {{
+        org.openapis.openapi.models.operations.ChangeDatesResponse res = new org.openapis.openapi.models.operations.ChangeDatesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -230,7 +220,7 @@ public class JobsSmartV2 {
 
     /**
      * Changes job status if possible (400 Bad Request is returned otherwise).
-     * Changes job status if possible (400 Bad Request is returned otherwise). The status has to be specified using one of the following keys:&lt;ul&gt;&lt;li&gt;OPEN \u2013 available when the job has one of the following statuses: ACCEPTED, CANCELED&lt;/li&gt;&lt;li&gt;ACCEPTED \u2013 available when the job has one of the following statuses: OPEN (Vendor and dates have to be set before calling the operation), STARTED&lt;/li&gt;&lt;li&gt;STARTED \u2013 available when the job has one of the following statuses: ACCEPTED, READY&lt;/li&gt;&lt;li&gt;READY \u2013 available when the job has one of the following statuses: STARTED&lt;/li&gt;&lt;li&gt;CANCELLED \u2013 available when the job has one of the following statuses: OPEN, ACCEPTED, STARTED, OFFERS_SENT&lt;/li&gt;&lt;li&gt;OFFERS_SENT \u2013 not available as a target status for this operation&lt;/li&gt;&lt;/ul&gt;
+     * Changes job status if possible (400 Bad Request is returned otherwise). The status has to be specified using one of the following keys:&lt;ul&gt;&lt;li&gt;OPEN – available when the job has one of the following statuses: ACCEPTED, CANCELED&lt;/li&gt;&lt;li&gt;ACCEPTED – available when the job has one of the following statuses: OPEN (Vendor and dates have to be set before calling the operation), STARTED&lt;/li&gt;&lt;li&gt;STARTED – available when the job has one of the following statuses: ACCEPTED, READY&lt;/li&gt;&lt;li&gt;READY – available when the job has one of the following statuses: STARTED&lt;/li&gt;&lt;li&gt;CANCELLED – available when the job has one of the following statuses: OPEN, ACCEPTED, STARTED, OFFERS_SENT&lt;/li&gt;&lt;li&gt;OFFERS_SENT – not available as a target status for this operation&lt;/li&gt;&lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -255,10 +245,8 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeStatus1Response res = new org.openapis.openapi.models.operations.ChangeStatus1Response() {{
+        org.openapis.openapi.models.operations.ChangeStatus1Response res = new org.openapis.openapi.models.operations.ChangeStatus1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -288,10 +276,8 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetByExternalIdResponse res = new org.openapis.openapi.models.operations.GetByExternalIdResponse() {{
+        org.openapis.openapi.models.operations.GetByExternalIdResponse res = new org.openapis.openapi.models.operations.GetByExternalIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -322,11 +308,9 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeliveredFilesResponse res = new org.openapis.openapi.models.operations.GetDeliveredFilesResponse() {{
+        org.openapis.openapi.models.operations.GetDeliveredFilesResponse res = new org.openapis.openapi.models.operations.GetDeliveredFilesResponse(contentType, httpRes.statusCode()) {{
             projectFileDtos = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -362,11 +346,9 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFileById1Response res = new org.openapis.openapi.models.operations.GetFileById1Response() {{
+        org.openapis.openapi.models.operations.GetFileById1Response res = new org.openapis.openapi.models.operations.GetFileById1Response(contentType, httpRes.statusCode()) {{
             projectFileDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -402,11 +384,9 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSharedReferenceFilesResponse res = new org.openapis.openapi.models.operations.GetSharedReferenceFilesResponse() {{
+        org.openapis.openapi.models.operations.GetSharedReferenceFilesResponse res = new org.openapis.openapi.models.operations.GetSharedReferenceFilesResponse(contentType, httpRes.statusCode()) {{
             projectFileDtos = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -442,11 +422,9 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSharedWorkFilesResponse res = new org.openapis.openapi.models.operations.GetSharedWorkFilesResponse() {{
+        org.openapis.openapi.models.operations.GetSharedWorkFilesResponse res = new org.openapis.openapi.models.operations.GetSharedWorkFilesResponse(contentType, httpRes.statusCode()) {{
             projectFileDtos = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -487,11 +465,9 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShareAsReferenceFilesResponse res = new org.openapis.openapi.models.operations.ShareAsReferenceFilesResponse() {{
+        org.openapis.openapi.models.operations.ShareAsReferenceFilesResponse res = new org.openapis.openapi.models.operations.ShareAsReferenceFilesResponse(contentType, httpRes.statusCode()) {{
             filesShareStatusDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -532,11 +508,9 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShareAsWorkFilesResponse res = new org.openapis.openapi.models.operations.ShareAsWorkFilesResponse() {{
+        org.openapis.openapi.models.operations.ShareAsWorkFilesResponse res = new org.openapis.openapi.models.operations.ShareAsWorkFilesResponse(contentType, httpRes.statusCode()) {{
             filesShareStatusDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -577,11 +551,9 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopSharingResponse res = new org.openapis.openapi.models.operations.StopSharingResponse() {{
+        org.openapis.openapi.models.operations.StopSharingResponse res = new org.openapis.openapi.models.operations.StopSharingResponse(contentType, httpRes.statusCode()) {{
             filesShareStatusDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -622,10 +594,8 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateInstructions4Response res = new org.openapis.openapi.models.operations.UpdateInstructions4Response() {{
+        org.openapis.openapi.models.operations.UpdateInstructions4Response res = new org.openapis.openapi.models.operations.UpdateInstructions4Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -661,11 +631,9 @@ public class JobsSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UploadFile1Response res = new org.openapis.openapi.models.operations.UploadFile1Response() {{
+        org.openapis.openapi.models.operations.UploadFile1Response res = new org.openapis.openapi.models.operations.UploadFile1Response(contentType, httpRes.statusCode()) {{
             fileDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

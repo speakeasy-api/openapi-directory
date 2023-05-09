@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostNodeRwRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=addMembers")
     public String addMembers;
+
     public PostNodeRwRequest withAddMembers(String addMembers) {
         this.addMembers = addMembers;
         return this;
@@ -16,6 +18,7 @@ public class PostNodeRwRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public PostNodeRwRequest withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +26,14 @@ public class PostNodeRwRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public PostNodeRwRequest withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public PostNodeRwRequest(@JsonProperty("name") String name, @JsonProperty("path") String path) {
+        this.name = name;
+        this.path = path;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class NotificationsSite {
     
     public Object[] aliases;
+
     public NotificationsSite withAliases(Object[] aliases) {
         this.aliases = aliases;
         return this;
@@ -16,6 +17,7 @@ public class NotificationsSite {
     
     
     public String apiSiteParameter;
+
     public NotificationsSite withApiSiteParameter(String apiSiteParameter) {
         this.apiSiteParameter = apiSiteParameter;
         return this;
@@ -23,6 +25,7 @@ public class NotificationsSite {
     
     
     public String audience;
+
     public NotificationsSite withAudience(String audience) {
         this.audience = audience;
         return this;
@@ -30,6 +33,7 @@ public class NotificationsSite {
     
     
     public Long closedBetaDate;
+
     public NotificationsSite withClosedBetaDate(Long closedBetaDate) {
         this.closedBetaDate = closedBetaDate;
         return this;
@@ -37,6 +41,7 @@ public class NotificationsSite {
     
     
     public String faviconUrl;
+
     public NotificationsSite withFaviconUrl(String faviconUrl) {
         this.faviconUrl = faviconUrl;
         return this;
@@ -44,6 +49,7 @@ public class NotificationsSite {
     
     
     public String highResolutionIconUrl;
+
     public NotificationsSite withHighResolutionIconUrl(String highResolutionIconUrl) {
         this.highResolutionIconUrl = highResolutionIconUrl;
         return this;
@@ -51,6 +57,7 @@ public class NotificationsSite {
     
     
     public String iconUrl;
+
     public NotificationsSite withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -58,6 +65,7 @@ public class NotificationsSite {
     
     
     public Long launchDate;
+
     public NotificationsSite withLaunchDate(Long launchDate) {
         this.launchDate = launchDate;
         return this;
@@ -65,6 +73,7 @@ public class NotificationsSite {
     
     
     public String logoUrl;
+
     public NotificationsSite withLogoUrl(String logoUrl) {
         this.logoUrl = logoUrl;
         return this;
@@ -72,6 +81,7 @@ public class NotificationsSite {
     
     
     public Object[] markdownExtensions;
+
     public NotificationsSite withMarkdownExtensions(Object[] markdownExtensions) {
         this.markdownExtensions = markdownExtensions;
         return this;
@@ -79,6 +89,7 @@ public class NotificationsSite {
     
     
     public String name;
+
     public NotificationsSite withName(String name) {
         this.name = name;
         return this;
@@ -86,6 +97,7 @@ public class NotificationsSite {
     
     
     public Long openBetaDate;
+
     public NotificationsSite withOpenBetaDate(Long openBetaDate) {
         this.openBetaDate = openBetaDate;
         return this;
@@ -93,6 +105,7 @@ public class NotificationsSite {
     
     
     public Object[] relatedSites;
+
     public NotificationsSite withRelatedSites(Object[] relatedSites) {
         this.relatedSites = relatedSites;
         return this;
@@ -100,6 +113,7 @@ public class NotificationsSite {
     
     
     public String siteState;
+
     public NotificationsSite withSiteState(String siteState) {
         this.siteState = siteState;
         return this;
@@ -107,6 +121,7 @@ public class NotificationsSite {
     
     
     public String siteType;
+
     public NotificationsSite withSiteType(String siteType) {
         this.siteType = siteType;
         return this;
@@ -114,6 +129,7 @@ public class NotificationsSite {
     
     
     public String siteUrl;
+
     public NotificationsSite withSiteUrl(String siteUrl) {
         this.siteUrl = siteUrl;
         return this;
@@ -121,6 +137,7 @@ public class NotificationsSite {
     
     
     public NotificationsSiteStyling styling;
+
     public NotificationsSite withStyling(NotificationsSiteStyling styling) {
         this.styling = styling;
         return this;
@@ -128,9 +145,11 @@ public class NotificationsSite {
     
     
     public String twitterAccount;
+
     public NotificationsSite withTwitterAccount(String twitterAccount) {
         this.twitterAccount = twitterAccount;
         return this;
     }
     
+    public NotificationsSite(){}
 }

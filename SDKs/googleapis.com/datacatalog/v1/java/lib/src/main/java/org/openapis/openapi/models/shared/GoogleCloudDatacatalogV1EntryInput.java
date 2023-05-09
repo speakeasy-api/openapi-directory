@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessContext")
     public GoogleCloudDatacatalogV1BusinessContext businessContext;
+
     public GoogleCloudDatacatalogV1EntryInput withBusinessContext(GoogleCloudDatacatalogV1BusinessContext businessContext) {
         this.businessContext = businessContext;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudBigtableSystemSpec")
     public GoogleCloudDatacatalogV1CloudBigtableSystemSpec cloudBigtableSystemSpec;
+
     public GoogleCloudDatacatalogV1EntryInput withCloudBigtableSystemSpec(GoogleCloudDatacatalogV1CloudBigtableSystemSpec cloudBigtableSystemSpec) {
         this.cloudBigtableSystemSpec = cloudBigtableSystemSpec;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSource")
     public GoogleCloudDatacatalogV1DataSourceInput dataSource;
+
     public GoogleCloudDatacatalogV1EntryInput withDataSource(GoogleCloudDatacatalogV1DataSourceInput dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceConnectionSpec")
     public GoogleCloudDatacatalogV1DataSourceConnectionSpec dataSourceConnectionSpec;
+
     public GoogleCloudDatacatalogV1EntryInput withDataSourceConnectionSpec(GoogleCloudDatacatalogV1DataSourceConnectionSpec dataSourceConnectionSpec) {
         this.dataSourceConnectionSpec = dataSourceConnectionSpec;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseTableSpec")
     public GoogleCloudDatacatalogV1DatabaseTableSpec databaseTableSpec;
+
     public GoogleCloudDatacatalogV1EntryInput withDatabaseTableSpec(GoogleCloudDatacatalogV1DatabaseTableSpec databaseTableSpec) {
         this.databaseTableSpec = databaseTableSpec;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDatacatalogV1EntryInput withDescription(String description) {
         this.description = description;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogV1EntryInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -95,17 +102,19 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filesetSpec")
     public GoogleCloudDatacatalogV1FilesetSpec filesetSpec;
+
     public GoogleCloudDatacatalogV1EntryInput withFilesetSpec(GoogleCloudDatacatalogV1FilesetSpec filesetSpec) {
         this.filesetSpec = filesetSpec;
         return this;
     }
     
     /**
-     * Fully qualified name (FQN) of the resource. Set automatically for entries representing resources from synced systems. Settable only during creation and read-only afterwards. Can be used for search and lookup of the entries. FQNs take two forms: * For non-regionalized resources: `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized resources: `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example for a DPMS table: `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
+     * [Fully Qualified Name (FQN)](https://cloud.google.com//data-catalog/docs/fully-qualified-names) of the resource. Set automatically for entries representing resources from synced systems. Settable only during creation, and read-only later. Can be used for search and lookup of the entries. 
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullyQualifiedName")
     public String fullyQualifiedName;
+
     public GoogleCloudDatacatalogV1EntryInput withFullyQualifiedName(String fullyQualifiedName) {
         this.fullyQualifiedName = fullyQualifiedName;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsFilesetSpec")
     public GoogleCloudDatacatalogV1GcsFilesetSpecInput gcsFilesetSpec;
+
     public GoogleCloudDatacatalogV1EntryInput withGcsFilesetSpec(GoogleCloudDatacatalogV1GcsFilesetSpecInput gcsFilesetSpec) {
         this.gcsFilesetSpec = gcsFilesetSpec;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDatacatalogV1EntryInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedResource")
     public String linkedResource;
+
     public GoogleCloudDatacatalogV1EntryInput withLinkedResource(String linkedResource) {
         this.linkedResource = linkedResource;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lookerSystemSpec")
     public GoogleCloudDatacatalogV1LookerSystemSpec lookerSystemSpec;
+
     public GoogleCloudDatacatalogV1EntryInput withLookerSystemSpec(GoogleCloudDatacatalogV1LookerSystemSpec lookerSystemSpec) {
         this.lookerSystemSpec = lookerSystemSpec;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalDetails")
     public GoogleCloudDatacatalogV1PersonalDetails personalDetails;
+
     public GoogleCloudDatacatalogV1EntryInput withPersonalDetails(GoogleCloudDatacatalogV1PersonalDetails personalDetails) {
         this.personalDetails = personalDetails;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routineSpec")
     public GoogleCloudDatacatalogV1RoutineSpec routineSpec;
+
     public GoogleCloudDatacatalogV1EntryInput withRoutineSpec(GoogleCloudDatacatalogV1RoutineSpec routineSpec) {
         this.routineSpec = routineSpec;
         return this;
@@ -183,6 +198,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public GoogleCloudDatacatalogV1Schema schema;
+
     public GoogleCloudDatacatalogV1EntryInput withSchema(GoogleCloudDatacatalogV1Schema schema) {
         this.schema = schema;
         return this;
@@ -194,6 +210,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceSpec")
     public GoogleCloudDatacatalogV1ServiceSpec serviceSpec;
+
     public GoogleCloudDatacatalogV1EntryInput withServiceSpec(GoogleCloudDatacatalogV1ServiceSpec serviceSpec) {
         this.serviceSpec = serviceSpec;
         return this;
@@ -205,6 +222,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSystemTimestamps")
     public GoogleCloudDatacatalogV1SystemTimestampsInput sourceSystemTimestamps;
+
     public GoogleCloudDatacatalogV1EntryInput withSourceSystemTimestamps(GoogleCloudDatacatalogV1SystemTimestampsInput sourceSystemTimestamps) {
         this.sourceSystemTimestamps = sourceSystemTimestamps;
         return this;
@@ -216,6 +234,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlDatabaseSystemSpec")
     public GoogleCloudDatacatalogV1SqlDatabaseSystemSpec sqlDatabaseSystemSpec;
+
     public GoogleCloudDatacatalogV1EntryInput withSqlDatabaseSystemSpec(GoogleCloudDatacatalogV1SqlDatabaseSystemSpec sqlDatabaseSystemSpec) {
         this.sqlDatabaseSystemSpec = sqlDatabaseSystemSpec;
         return this;
@@ -227,6 +246,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDatacatalogV1EntryTypeEnum type;
+
     public GoogleCloudDatacatalogV1EntryInput withType(GoogleCloudDatacatalogV1EntryTypeEnum type) {
         this.type = type;
         return this;
@@ -238,6 +258,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageSignal")
     public GoogleCloudDatacatalogV1UsageSignalInput usageSignal;
+
     public GoogleCloudDatacatalogV1EntryInput withUsageSignal(GoogleCloudDatacatalogV1UsageSignalInput usageSignal) {
         this.usageSignal = usageSignal;
         return this;
@@ -249,6 +270,7 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userSpecifiedSystem")
     public String userSpecifiedSystem;
+
     public GoogleCloudDatacatalogV1EntryInput withUserSpecifiedSystem(String userSpecifiedSystem) {
         this.userSpecifiedSystem = userSpecifiedSystem;
         return this;
@@ -260,9 +282,11 @@ public class GoogleCloudDatacatalogV1EntryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userSpecifiedType")
     public String userSpecifiedType;
+
     public GoogleCloudDatacatalogV1EntryInput withUserSpecifiedType(String userSpecifiedType) {
         this.userSpecifiedType = userSpecifiedType;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1EntryInput(){}
 }

@@ -66,13 +66,11 @@ public class MarketplacesOrdersV3Global {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMarketplaceAccountsSynchronizationV3Response res = new org.openapis.openapi.models.operations.GetMarketplaceAccountsSynchronizationV3Response() {{
+        org.openapis.openapi.models.operations.GetMarketplaceAccountsSynchronizationV3Response res = new org.openapis.openapi.models.operations.GetMarketplaceAccountsSynchronizationV3Response(contentType, httpRes.statusCode()) {{
             accountSynchronizationList = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,13 +136,11 @@ public class MarketplacesOrdersV3Global {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderManagementReadyMarketplaceBusinessCodeResponse res = new org.openapis.openapi.models.operations.GetOrderManagementReadyMarketplaceBusinessCodeResponse() {{
+        org.openapis.openapi.models.operations.GetOrderManagementReadyMarketplaceBusinessCodeResponse res = new org.openapis.openapi.models.operations.GetOrderManagementReadyMarketplaceBusinessCodeResponse(contentType, httpRes.statusCode()) {{
             oMReadyMarketplaceBusinessCodeResponse = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,13 +198,11 @@ public class MarketplacesOrdersV3Global {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HarvestAllV3Response res = new org.openapis.openapi.models.operations.HarvestAllV3Response() {{
+        org.openapis.openapi.models.operations.HarvestAllV3Response res = new org.openapis.openapi.models.operations.HarvestAllV3Response(contentType, httpRes.statusCode()) {{
             errorResponseMessage = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

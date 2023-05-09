@@ -15,6 +15,7 @@ public class FileAccessLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public LoggingFormat format;
+
     public FileAccessLog withFormat(LoggingFormat format) {
         this.format = format;
         return this;
@@ -22,9 +23,13 @@ public class FileAccessLog {
     
     @JsonProperty("path")
     public String path;
+
     public FileAccessLog withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public FileAccessLog(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

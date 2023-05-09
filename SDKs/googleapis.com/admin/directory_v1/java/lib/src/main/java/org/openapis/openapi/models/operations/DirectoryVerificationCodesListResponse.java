@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DirectoryVerificationCodesListResponse {
     
     public String contentType;
+
     public DirectoryVerificationCodesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DirectoryVerificationCodesListResponse {
     
     
     public Integer statusCode;
+
     public DirectoryVerificationCodesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DirectoryVerificationCodesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DirectoryVerificationCodesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DirectoryVerificationCodesListResponse {
      */
     
     public org.openapis.openapi.models.shared.VerificationCodes verificationCodes;
+
     public DirectoryVerificationCodesListResponse withVerificationCodes(org.openapis.openapi.models.shared.VerificationCodes verificationCodes) {
         this.verificationCodes = verificationCodes;
         return this;
     }
     
+    public DirectoryVerificationCodesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

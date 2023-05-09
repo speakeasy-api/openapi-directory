@@ -12,6 +12,7 @@ public class GetAccountingAccountingArrayV2AccountingV2Fees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("box")
     public Float box;
+
     public GetAccountingAccountingArrayV2AccountingV2Fees withBox(Float box) {
         this.box = box;
         return this;
@@ -20,6 +21,7 @@ public class GetAccountingAccountingArrayV2AccountingV2Fees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("envelope")
     public Float envelope;
+
     public GetAccountingAccountingArrayV2AccountingV2Fees withEnvelope(Float envelope) {
         this.envelope = envelope;
         return this;
@@ -28,6 +30,7 @@ public class GetAccountingAccountingArrayV2AccountingV2Fees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillment")
     public Float fulfillment;
+
     public GetAccountingAccountingArrayV2AccountingV2Fees withFulfillment(Float fulfillment) {
         this.fulfillment = fulfillment;
         return this;
@@ -36,6 +39,7 @@ public class GetAccountingAccountingArrayV2AccountingV2Fees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert")
     public Float insert;
+
     public GetAccountingAccountingArrayV2AccountingV2Fees withInsert(Float insert) {
         this.insert = insert;
         return this;
@@ -44,6 +48,7 @@ public class GetAccountingAccountingArrayV2AccountingV2Fees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kitting")
     public Float kitting;
+
     public GetAccountingAccountingArrayV2AccountingV2Fees withKitting(Float kitting) {
         this.kitting = kitting;
         return this;
@@ -52,6 +57,7 @@ public class GetAccountingAccountingArrayV2AccountingV2Fees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("picking")
     public Float picking;
+
     public GetAccountingAccountingArrayV2AccountingV2Fees withPicking(Float picking) {
         this.picking = picking;
         return this;
@@ -60,6 +66,7 @@ public class GetAccountingAccountingArrayV2AccountingV2Fees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postage")
     public Float postage;
+
     public GetAccountingAccountingArrayV2AccountingV2Fees withPostage(Float postage) {
         this.postage = postage;
         return this;
@@ -68,6 +75,7 @@ public class GetAccountingAccountingArrayV2AccountingV2Fees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("print")
     public Float print;
+
     public GetAccountingAccountingArrayV2AccountingV2Fees withPrint(Float print) {
         this.print = print;
         return this;
@@ -76,9 +84,11 @@ public class GetAccountingAccountingArrayV2AccountingV2Fees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Float total;
+
     public GetAccountingAccountingArrayV2AccountingV2Fees withTotal(Float total) {
         this.total = total;
         return this;
     }
     
+    public GetAccountingAccountingArrayV2AccountingV2Fees(){}
 }

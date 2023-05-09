@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RestoreRevisionUsingGETResponse {
     
     public String contentType;
+
     public RestoreRevisionUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RestoreRevisionUsingGETResponse {
     
     
     public Integer statusCode;
+
     public RestoreRevisionUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RestoreRevisionUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RestoreRevisionUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RestoreRevisionUsingGETResponse {
      */
     
     public RestoreRevisionUsingGET200ApplicationJSON restoreRevisionUsingGET200ApplicationJSONObject;
+
     public RestoreRevisionUsingGETResponse withRestoreRevisionUsingGET200ApplicationJSONObject(RestoreRevisionUsingGET200ApplicationJSON restoreRevisionUsingGET200ApplicationJSONObject) {
         this.restoreRevisionUsingGET200ApplicationJSONObject = restoreRevisionUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class RestoreRevisionUsingGETResponse {
      */
     
     public RestoreRevisionUsingGET400ApplicationJSON restoreRevisionUsingGET400ApplicationJSONObject;
+
     public RestoreRevisionUsingGETResponse withRestoreRevisionUsingGET400ApplicationJSONObject(RestoreRevisionUsingGET400ApplicationJSON restoreRevisionUsingGET400ApplicationJSONObject) {
         this.restoreRevisionUsingGET400ApplicationJSONObject = restoreRevisionUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RestoreRevisionUsingGETResponse {
      */
     
     public RestoreRevisionUsingGET401ApplicationJSON restoreRevisionUsingGET401ApplicationJSONObject;
+
     public RestoreRevisionUsingGETResponse withRestoreRevisionUsingGET401ApplicationJSONObject(RestoreRevisionUsingGET401ApplicationJSON restoreRevisionUsingGET401ApplicationJSONObject) {
         this.restoreRevisionUsingGET401ApplicationJSONObject = restoreRevisionUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class RestoreRevisionUsingGETResponse {
      */
     
     public RestoreRevisionUsingGET500ApplicationJSON restoreRevisionUsingGET500ApplicationJSONObject;
+
     public RestoreRevisionUsingGETResponse withRestoreRevisionUsingGET500ApplicationJSONObject(RestoreRevisionUsingGET500ApplicationJSON restoreRevisionUsingGET500ApplicationJSONObject) {
         this.restoreRevisionUsingGET500ApplicationJSONObject = restoreRevisionUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public RestoreRevisionUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDataSourcesRequest {
     @JsonProperty("IndexId")
     public String indexId;
+
     public ListDataSourcesRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -19,6 +20,7 @@ public class ListDataSourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDataSourcesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListDataSourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataSourcesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDataSourcesRequest(@JsonProperty("IndexId") String indexId) {
+        this.indexId = indexId;
+  }
 }

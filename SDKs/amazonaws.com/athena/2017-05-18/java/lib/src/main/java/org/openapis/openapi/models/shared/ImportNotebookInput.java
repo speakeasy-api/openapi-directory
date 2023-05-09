@@ -12,6 +12,7 @@ public class ImportNotebookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public ImportNotebookInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class ImportNotebookInput {
     
     @JsonProperty("Name")
     public String name;
+
     public ImportNotebookInput withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class ImportNotebookInput {
     
     @JsonProperty("Payload")
     public String payload;
+
     public ImportNotebookInput withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -33,6 +36,7 @@ public class ImportNotebookInput {
     
     @JsonProperty("Type")
     public NotebookTypeEnum type;
+
     public ImportNotebookInput withType(NotebookTypeEnum type) {
         this.type = type;
         return this;
@@ -40,9 +44,16 @@ public class ImportNotebookInput {
     
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public ImportNotebookInput withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public ImportNotebookInput(@JsonProperty("Name") String name, @JsonProperty("Payload") String payload, @JsonProperty("Type") NotebookTypeEnum type, @JsonProperty("WorkGroup") String workGroup) {
+        this.name = name;
+        this.payload = payload;
+        this.type = type;
+        this.workGroup = workGroup;
+  }
 }

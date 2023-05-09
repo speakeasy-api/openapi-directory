@@ -32,10 +32,11 @@ public class GetProfiles {
     /**
      * Fetch login profiles
      * Fetch login profiles
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProfilesResponse profiles() throws Exception {
+    public org.openapis.openapi.models.operations.ProfilesResponse profiles(org.openapis.openapi.models.operations.ProfilesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/profiles");
         
@@ -44,17 +45,16 @@ public class GetProfiles {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProfilesResponse res = new org.openapis.openapi.models.operations.ProfilesResponse() {{
+        org.openapis.openapi.models.operations.ProfilesResponse res = new org.openapis.openapi.models.operations.ProfilesResponse(contentType, httpRes.statusCode()) {{
             profiles = null;
             accessDenied = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

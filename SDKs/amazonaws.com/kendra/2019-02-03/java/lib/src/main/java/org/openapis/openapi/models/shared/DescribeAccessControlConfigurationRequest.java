@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAccessControlConfigurationRequest {
     @JsonProperty("Id")
     public String id;
+
     public DescribeAccessControlConfigurationRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class DescribeAccessControlConfigurationRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public DescribeAccessControlConfigurationRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
     }
     
+    public DescribeAccessControlConfigurationRequest(@JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId) {
+        this.id = id;
+        this.indexId = indexId;
+  }
 }

@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.UserCtrlGetUserByIDSecurity;
 import org.openapis.openapi.models.operations.UserCtrlGetUserByIDRequest;
 import org.openapis.openapi.models.operations.UserCtrlGetUserByIDResponse;
+import org.openapis.openapi.models.operations.UserCtrlGetUserByIDSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,31 +26,30 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            UserCtrlGetUserByIDRequest req = new UserCtrlGetUserByIDRequest() {{
-                accountId = "corrupti";
-                userId = 5928.45;
-            }}            
+            UserCtrlGetUserByIDRequest req = new UserCtrlGetUserByIDRequest("corrupti", 5928.45);            
 
-            UserCtrlGetUserByIDResponse res = sdk.userCtrlGetUserByID(req, new UserCtrlGetUserByIDSecurity() {{
+            UserCtrlGetUserByIDResponse res = sdk.userCtrlGetUserByID(req, new UserCtrlGetUserByIDSecurity("distinctio") {{
                 bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
             }});
 
-            if (res.userHalResponse.isPresent()) {
+            if (res.userHalResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `userCtrlGetUserByID` - Get user data by account ID and user ID
-* `userCtrlGetUsers` - Get account users data by account ID
+* [userCtrlGetUserByID](docs/sdk/README.md#userctrlgetuserbyid) - Get user data by account ID and user ID
+* [userCtrlGetUsers](docs/sdk/README.md#userctrlgetusers) - Get account users data by account ID
 <!-- End SDK Available Operations -->
 
 ### Maturity

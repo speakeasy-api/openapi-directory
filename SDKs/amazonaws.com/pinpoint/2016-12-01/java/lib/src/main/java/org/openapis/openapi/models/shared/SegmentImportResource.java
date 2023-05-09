@@ -15,6 +15,7 @@ public class SegmentImportResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelCounts")
     public java.util.Map<String, Long> channelCounts;
+
     public SegmentImportResource withChannelCounts(java.util.Map<String, Long> channelCounts) {
         this.channelCounts = channelCounts;
         return this;
@@ -22,6 +23,7 @@ public class SegmentImportResource {
     
     @JsonProperty("ExternalId")
     public String externalId;
+
     public SegmentImportResource withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -29,6 +31,7 @@ public class SegmentImportResource {
     
     @JsonProperty("Format")
     public FormatEnum format;
+
     public SegmentImportResource withFormat(FormatEnum format) {
         this.format = format;
         return this;
@@ -36,6 +39,7 @@ public class SegmentImportResource {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public SegmentImportResource withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -43,6 +47,7 @@ public class SegmentImportResource {
     
     @JsonProperty("S3Url")
     public String s3Url;
+
     public SegmentImportResource withS3Url(String s3Url) {
         this.s3Url = s3Url;
         return this;
@@ -50,9 +55,17 @@ public class SegmentImportResource {
     
     @JsonProperty("Size")
     public Long size;
+
     public SegmentImportResource withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public SegmentImportResource(@JsonProperty("ExternalId") String externalId, @JsonProperty("Format") FormatEnum format, @JsonProperty("RoleArn") String roleArn, @JsonProperty("S3Url") String s3Url, @JsonProperty("Size") Long size) {
+        this.externalId = externalId;
+        this.format = format;
+        this.roleArn = roleArn;
+        this.s3Url = s3Url;
+        this.size = size;
+  }
 }

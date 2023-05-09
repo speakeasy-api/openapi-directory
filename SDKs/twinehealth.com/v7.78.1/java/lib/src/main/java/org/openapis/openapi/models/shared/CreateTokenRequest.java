@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTokenRequest {
     @JsonProperty("data")
     public CreateTokenRequestData data;
+
     public CreateTokenRequest withData(CreateTokenRequestData data) {
         this.data = data;
         return this;
     }
     
+    public CreateTokenRequest(@JsonProperty("data") CreateTokenRequestData data) {
+        this.data = data;
+  }
 }

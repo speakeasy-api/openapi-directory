@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETAttributePoolUsingGETResponse {
     
     public String contentType;
+
     public GETAttributePoolUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GETAttributePoolUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETAttributePoolUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GETAttributePoolUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETAttributePoolUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GETAttributePoolUsingGETResponse {
      */
     
     public GETAttributePoolUsingGET200ApplicationJSON getAttributePoolUsingGET200ApplicationJSONObject;
+
     public GETAttributePoolUsingGETResponse withGETAttributePoolUsingGET200ApplicationJSONObject(GETAttributePoolUsingGET200ApplicationJSON getAttributePoolUsingGET200ApplicationJSONObject) {
         this.getAttributePoolUsingGET200ApplicationJSONObject = getAttributePoolUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GETAttributePoolUsingGETResponse {
      */
     
     public GETAttributePoolUsingGET400ApplicationJSON getAttributePoolUsingGET400ApplicationJSONObject;
+
     public GETAttributePoolUsingGETResponse withGETAttributePoolUsingGET400ApplicationJSONObject(GETAttributePoolUsingGET400ApplicationJSON getAttributePoolUsingGET400ApplicationJSONObject) {
         this.getAttributePoolUsingGET400ApplicationJSONObject = getAttributePoolUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GETAttributePoolUsingGETResponse {
      */
     
     public GETAttributePoolUsingGET401ApplicationJSON getAttributePoolUsingGET401ApplicationJSONObject;
+
     public GETAttributePoolUsingGETResponse withGETAttributePoolUsingGET401ApplicationJSONObject(GETAttributePoolUsingGET401ApplicationJSON getAttributePoolUsingGET401ApplicationJSONObject) {
         this.getAttributePoolUsingGET401ApplicationJSONObject = getAttributePoolUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GETAttributePoolUsingGETResponse {
      */
     
     public GETAttributePoolUsingGET500ApplicationJSON getAttributePoolUsingGET500ApplicationJSONObject;
+
     public GETAttributePoolUsingGETResponse withGETAttributePoolUsingGET500ApplicationJSONObject(GETAttributePoolUsingGET500ApplicationJSON getAttributePoolUsingGET500ApplicationJSONObject) {
         this.getAttributePoolUsingGET500ApplicationJSONObject = getAttributePoolUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public GETAttributePoolUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

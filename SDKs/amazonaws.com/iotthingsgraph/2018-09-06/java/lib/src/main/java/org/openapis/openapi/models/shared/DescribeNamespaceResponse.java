@@ -15,6 +15,7 @@ public class DescribeNamespaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceArn")
     public String namespaceArn;
+
     public DescribeNamespaceResponse withNamespaceArn(String namespaceArn) {
         this.namespaceArn = namespaceArn;
         return this;
@@ -23,6 +24,7 @@ public class DescribeNamespaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public DescribeNamespaceResponse withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -31,6 +33,7 @@ public class DescribeNamespaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceVersion")
     public Long namespaceVersion;
+
     public DescribeNamespaceResponse withNamespaceVersion(Long namespaceVersion) {
         this.namespaceVersion = namespaceVersion;
         return this;
@@ -39,6 +42,7 @@ public class DescribeNamespaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingNamespaceName")
     public String trackingNamespaceName;
+
     public DescribeNamespaceResponse withTrackingNamespaceName(String trackingNamespaceName) {
         this.trackingNamespaceName = trackingNamespaceName;
         return this;
@@ -47,9 +51,11 @@ public class DescribeNamespaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingNamespaceVersion")
     public Long trackingNamespaceVersion;
+
     public DescribeNamespaceResponse withTrackingNamespaceVersion(Long trackingNamespaceVersion) {
         this.trackingNamespaceVersion = trackingNamespaceVersion;
         return this;
     }
     
+    public DescribeNamespaceResponse(){}
 }

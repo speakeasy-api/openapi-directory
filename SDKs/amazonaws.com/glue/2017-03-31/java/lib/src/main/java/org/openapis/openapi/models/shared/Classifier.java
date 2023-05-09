@@ -15,6 +15,7 @@ public class Classifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CsvClassifier")
     public CsvClassifier csvClassifier;
+
     public Classifier withCsvClassifier(CsvClassifier csvClassifier) {
         this.csvClassifier = csvClassifier;
         return this;
@@ -23,6 +24,7 @@ public class Classifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrokClassifier")
     public GrokClassifier grokClassifier;
+
     public Classifier withGrokClassifier(GrokClassifier grokClassifier) {
         this.grokClassifier = grokClassifier;
         return this;
@@ -31,6 +33,7 @@ public class Classifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JsonClassifier")
     public JsonClassifier jsonClassifier;
+
     public Classifier withJsonClassifier(JsonClassifier jsonClassifier) {
         this.jsonClassifier = jsonClassifier;
         return this;
@@ -39,9 +42,11 @@ public class Classifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XMLClassifier")
     public XMLClassifier xmlClassifier;
+
     public Classifier withXMLClassifier(XMLClassifier xmlClassifier) {
         this.xmlClassifier = xmlClassifier;
         return this;
     }
     
+    public Classifier(){}
 }

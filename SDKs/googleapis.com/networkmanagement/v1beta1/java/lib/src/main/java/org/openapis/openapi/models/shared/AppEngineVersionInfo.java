@@ -18,6 +18,7 @@ public class AppEngineVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public AppEngineVersionInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class AppEngineVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public String environment;
+
     public AppEngineVersionInfo withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -40,6 +42,7 @@ public class AppEngineVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtime")
     public String runtime;
+
     public AppEngineVersionInfo withRuntime(String runtime) {
         this.runtime = runtime;
         return this;
@@ -51,9 +54,11 @@ public class AppEngineVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public AppEngineVersionInfo withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public AppEngineVersionInfo(){}
 }

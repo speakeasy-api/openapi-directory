@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2TextInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2TextInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2TextInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDialogflowV2TextInput withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowV2TextInput(){}
 }

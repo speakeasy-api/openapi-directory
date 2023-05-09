@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Branch {
     @JsonProperty("activeJobId")
     public String activeJobId;
+
     public Branch withActiveJobId(String activeJobId) {
         this.activeJobId = activeJobId;
         return this;
@@ -27,6 +28,7 @@ public class Branch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedResources")
     public String[] associatedResources;
+
     public Branch withAssociatedResources(String[] associatedResources) {
         this.associatedResources = associatedResources;
         return this;
@@ -35,6 +37,7 @@ public class Branch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backendEnvironmentArn")
     public String backendEnvironmentArn;
+
     public Branch withBackendEnvironmentArn(String backendEnvironmentArn) {
         this.backendEnvironmentArn = backendEnvironmentArn;
         return this;
@@ -43,6 +46,7 @@ public class Branch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicAuthCredentials")
     public String basicAuthCredentials;
+
     public Branch withBasicAuthCredentials(String basicAuthCredentials) {
         this.basicAuthCredentials = basicAuthCredentials;
         return this;
@@ -50,6 +54,7 @@ public class Branch {
     
     @JsonProperty("branchArn")
     public String branchArn;
+
     public Branch withBranchArn(String branchArn) {
         this.branchArn = branchArn;
         return this;
@@ -57,6 +62,7 @@ public class Branch {
     
     @JsonProperty("branchName")
     public String branchName;
+
     public Branch withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -65,6 +71,7 @@ public class Branch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildSpec")
     public String buildSpec;
+
     public Branch withBuildSpec(String buildSpec) {
         this.buildSpec = buildSpec;
         return this;
@@ -74,6 +81,7 @@ public class Branch {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public Branch withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -81,6 +89,7 @@ public class Branch {
     
     @JsonProperty("customDomains")
     public String[] customDomains;
+
     public Branch withCustomDomains(String[] customDomains) {
         this.customDomains = customDomains;
         return this;
@@ -88,6 +97,7 @@ public class Branch {
     
     @JsonProperty("description")
     public String description;
+
     public Branch withDescription(String description) {
         this.description = description;
         return this;
@@ -96,6 +106,7 @@ public class Branch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationBranch")
     public String destinationBranch;
+
     public Branch withDestinationBranch(String destinationBranch) {
         this.destinationBranch = destinationBranch;
         return this;
@@ -103,6 +114,7 @@ public class Branch {
     
     @JsonProperty("displayName")
     public String displayName;
+
     public Branch withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -110,6 +122,7 @@ public class Branch {
     
     @JsonProperty("enableAutoBuild")
     public Boolean enableAutoBuild;
+
     public Branch withEnableAutoBuild(Boolean enableAutoBuild) {
         this.enableAutoBuild = enableAutoBuild;
         return this;
@@ -117,6 +130,7 @@ public class Branch {
     
     @JsonProperty("enableBasicAuth")
     public Boolean enableBasicAuth;
+
     public Branch withEnableBasicAuth(Boolean enableBasicAuth) {
         this.enableBasicAuth = enableBasicAuth;
         return this;
@@ -124,6 +138,7 @@ public class Branch {
     
     @JsonProperty("enableNotification")
     public Boolean enableNotification;
+
     public Branch withEnableNotification(Boolean enableNotification) {
         this.enableNotification = enableNotification;
         return this;
@@ -132,6 +147,7 @@ public class Branch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablePerformanceMode")
     public Boolean enablePerformanceMode;
+
     public Branch withEnablePerformanceMode(Boolean enablePerformanceMode) {
         this.enablePerformanceMode = enablePerformanceMode;
         return this;
@@ -139,6 +155,7 @@ public class Branch {
     
     @JsonProperty("enablePullRequestPreview")
     public Boolean enablePullRequestPreview;
+
     public Branch withEnablePullRequestPreview(Boolean enablePullRequestPreview) {
         this.enablePullRequestPreview = enablePullRequestPreview;
         return this;
@@ -146,6 +163,7 @@ public class Branch {
     
     @JsonProperty("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
+
     public Branch withEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
         this.environmentVariables = environmentVariables;
         return this;
@@ -153,6 +171,7 @@ public class Branch {
     
     @JsonProperty("framework")
     public String framework;
+
     public Branch withFramework(String framework) {
         this.framework = framework;
         return this;
@@ -161,6 +180,7 @@ public class Branch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pullRequestEnvironmentName")
     public String pullRequestEnvironmentName;
+
     public Branch withPullRequestEnvironmentName(String pullRequestEnvironmentName) {
         this.pullRequestEnvironmentName = pullRequestEnvironmentName;
         return this;
@@ -169,6 +189,7 @@ public class Branch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceBranch")
     public String sourceBranch;
+
     public Branch withSourceBranch(String sourceBranch) {
         this.sourceBranch = sourceBranch;
         return this;
@@ -176,6 +197,7 @@ public class Branch {
     
     @JsonProperty("stage")
     public StageEnum stage;
+
     public Branch withStage(StageEnum stage) {
         this.stage = stage;
         return this;
@@ -184,6 +206,7 @@ public class Branch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Branch withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -192,6 +215,7 @@ public class Branch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailUrl")
     public String thumbnailUrl;
+
     public Branch withThumbnailUrl(String thumbnailUrl) {
         this.thumbnailUrl = thumbnailUrl;
         return this;
@@ -199,6 +223,7 @@ public class Branch {
     
     @JsonProperty("totalNumberOfJobs")
     public String totalNumberOfJobs;
+
     public Branch withTotalNumberOfJobs(String totalNumberOfJobs) {
         this.totalNumberOfJobs = totalNumberOfJobs;
         return this;
@@ -206,6 +231,7 @@ public class Branch {
     
     @JsonProperty("ttl")
     public String ttl;
+
     public Branch withTtl(String ttl) {
         this.ttl = ttl;
         return this;
@@ -215,9 +241,29 @@ public class Branch {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public Branch withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Branch(@JsonProperty("activeJobId") String activeJobId, @JsonProperty("branchArn") String branchArn, @JsonProperty("branchName") String branchName, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("customDomains") String[] customDomains, @JsonProperty("description") String description, @JsonProperty("displayName") String displayName, @JsonProperty("enableAutoBuild") Boolean enableAutoBuild, @JsonProperty("enableBasicAuth") Boolean enableBasicAuth, @JsonProperty("enableNotification") Boolean enableNotification, @JsonProperty("enablePullRequestPreview") Boolean enablePullRequestPreview, @JsonProperty("environmentVariables") java.util.Map<String, String> environmentVariables, @JsonProperty("framework") String framework, @JsonProperty("stage") StageEnum stage, @JsonProperty("totalNumberOfJobs") String totalNumberOfJobs, @JsonProperty("ttl") String ttl, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.activeJobId = activeJobId;
+        this.branchArn = branchArn;
+        this.branchName = branchName;
+        this.createTime = createTime;
+        this.customDomains = customDomains;
+        this.description = description;
+        this.displayName = displayName;
+        this.enableAutoBuild = enableAutoBuild;
+        this.enableBasicAuth = enableBasicAuth;
+        this.enableNotification = enableNotification;
+        this.enablePullRequestPreview = enablePullRequestPreview;
+        this.environmentVariables = environmentVariables;
+        this.framework = framework;
+        this.stage = stage;
+        this.totalNumberOfJobs = totalNumberOfJobs;
+        this.ttl = ttl;
+        this.updateTime = updateTime;
+  }
 }

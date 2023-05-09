@@ -15,9 +15,11 @@ public class GetApplicationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application")
     public ApplicationInfo application;
+
     public GetApplicationOutput withApplication(ApplicationInfo application) {
         this.application = application;
         return this;
     }
     
+    public GetApplicationOutput(){}
 }

@@ -15,6 +15,7 @@ public class TagValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public TagValues withKey(String key) {
         this.key = key;
         return this;
@@ -23,6 +24,7 @@ public class TagValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchOptions")
     public MatchOptionEnum[] matchOptions;
+
     public TagValues withMatchOptions(MatchOptionEnum[] matchOptions) {
         this.matchOptions = matchOptions;
         return this;
@@ -31,9 +33,11 @@ public class TagValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public TagValues withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public TagValues(){}
 }

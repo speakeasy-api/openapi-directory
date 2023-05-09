@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiscordPostDiscordPostResponse {
     
     public String contentType;
+
     public DiscordPostDiscordPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DiscordPostDiscordPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public DiscordPostDiscordPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class DiscordPostDiscordPostResponse {
     
     
     public Integer statusCode;
+
     public DiscordPostDiscordPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DiscordPostDiscordPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiscordPostDiscordPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DiscordPostDiscordPostResponse {
      */
     
     public Object discordPostDiscordPost200ApplicationJSONAny;
+
     public DiscordPostDiscordPostResponse withDiscordPostDiscordPost200ApplicationJSONAny(Object discordPostDiscordPost200ApplicationJSONAny) {
         this.discordPostDiscordPost200ApplicationJSONAny = discordPostDiscordPost200ApplicationJSONAny;
         return this;
     }
     
+    public DiscordPostDiscordPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

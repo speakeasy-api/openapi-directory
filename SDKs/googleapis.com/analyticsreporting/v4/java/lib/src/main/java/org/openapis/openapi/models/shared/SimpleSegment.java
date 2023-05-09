@@ -18,9 +18,11 @@ public class SimpleSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orFiltersForSegment")
     public OrFiltersForSegment[] orFiltersForSegment;
+
     public SimpleSegment withOrFiltersForSegment(OrFiltersForSegment[] orFiltersForSegment) {
         this.orFiltersForSegment = orFiltersForSegment;
         return this;
     }
     
+    public SimpleSegment(){}
 }

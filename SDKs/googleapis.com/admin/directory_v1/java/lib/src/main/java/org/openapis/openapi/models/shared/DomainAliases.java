@@ -18,6 +18,7 @@ public class DomainAliases {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainAliases")
     public DomainAlias[] domainAliases;
+
     public DomainAliases withDomainAliases(DomainAlias[] domainAliases) {
         this.domainAliases = domainAliases;
         return this;
@@ -29,6 +30,7 @@ public class DomainAliases {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public DomainAliases withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,9 +42,11 @@ public class DomainAliases {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DomainAliases withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public DomainAliases(){}
 }

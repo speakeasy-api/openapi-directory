@@ -18,9 +18,11 @@ public class AddFilterViewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public FilterView filter;
+
     public AddFilterViewResponse withFilter(FilterView filter) {
         this.filter = filter;
         return this;
     }
     
+    public AddFilterViewResponse(){}
 }

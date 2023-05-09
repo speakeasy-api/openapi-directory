@@ -12,6 +12,7 @@ public class RatePlanRate {
      */
     @JsonProperty("adults")
     public Double adults;
+
     public RatePlanRate withAdults(Double adults) {
         this.adults = adults;
         return this;
@@ -22,6 +23,7 @@ public class RatePlanRate {
      */
     @JsonProperty("retailRate")
     public Money retailRate;
+
     public RatePlanRate withRetailRate(Money retailRate) {
         this.retailRate = retailRate;
         return this;
@@ -32,9 +34,15 @@ public class RatePlanRate {
      */
     @JsonProperty("roomsSellable")
     public Double roomsSellable;
+
     public RatePlanRate withRoomsSellable(Double roomsSellable) {
         this.roomsSellable = roomsSellable;
         return this;
     }
     
+    public RatePlanRate(@JsonProperty("adults") Double adults, @JsonProperty("retailRate") Money retailRate, @JsonProperty("roomsSellable") Double roomsSellable) {
+        this.adults = adults;
+        this.retailRate = retailRate;
+        this.roomsSellable = roomsSellable;
+  }
 }

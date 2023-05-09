@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRecommendedLocationRequest {
@@ -14,6 +15,7 @@ public class GetRecommendedLocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cityCodes")
     public String cityCodes;
+
     public GetRecommendedLocationRequest withCityCodes(String cityCodes) {
         this.cityCodes = cityCodes;
         return this;
@@ -26,6 +28,7 @@ public class GetRecommendedLocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationCountryCodes")
     public String destinationCountryCodes;
+
     public GetRecommendedLocationRequest withDestinationCountryCodes(String destinationCountryCodes) {
         this.destinationCountryCodes = destinationCountryCodes;
         return this;
@@ -36,9 +39,13 @@ public class GetRecommendedLocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelerCountryCode")
     public String travelerCountryCode;
+
     public GetRecommendedLocationRequest withTravelerCountryCode(String travelerCountryCode) {
         this.travelerCountryCode = travelerCountryCode;
         return this;
     }
     
+    public GetRecommendedLocationRequest(@JsonProperty("cityCodes") String cityCodes) {
+        this.cityCodes = cityCodes;
+  }
 }

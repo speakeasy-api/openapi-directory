@@ -15,6 +15,7 @@ public class ReportContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activity_type")
     public String activityType;
+
     public ReportContent withActivityType(String activityType) {
         this.activityType = activityType;
         return this;
@@ -26,9 +27,11 @@ public class ReportContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ReportContent withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ReportContent(){}
 }

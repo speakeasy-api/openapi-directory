@@ -15,6 +15,7 @@ public class OwnerOpeningBalanceInPeriodsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentMonth")
     public Double currentMonth;
+
     public OwnerOpeningBalanceInPeriodsDto withCurrentMonth(Double currentMonth) {
         this.currentMonth = currentMonth;
         return this;
@@ -23,6 +24,7 @@ public class OwnerOpeningBalanceInPeriodsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneMonthOld")
     public Double oneMonthOld;
+
     public OwnerOpeningBalanceInPeriodsDto withOneMonthOld(Double oneMonthOld) {
         this.oneMonthOld = oneMonthOld;
         return this;
@@ -31,6 +33,7 @@ public class OwnerOpeningBalanceInPeriodsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threeMonthsOld")
     public Double threeMonthsOld;
+
     public OwnerOpeningBalanceInPeriodsDto withThreeMonthsOld(Double threeMonthsOld) {
         this.threeMonthsOld = threeMonthsOld;
         return this;
@@ -39,9 +42,11 @@ public class OwnerOpeningBalanceInPeriodsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twoMonthsOld")
     public Double twoMonthsOld;
+
     public OwnerOpeningBalanceInPeriodsDto withTwoMonthsOld(Double twoMonthsOld) {
         this.twoMonthsOld = twoMonthsOld;
         return this;
     }
     
+    public OwnerOpeningBalanceInPeriodsDto(){}
 }

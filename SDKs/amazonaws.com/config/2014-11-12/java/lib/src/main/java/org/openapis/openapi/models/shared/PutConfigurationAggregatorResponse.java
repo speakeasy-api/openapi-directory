@@ -15,9 +15,11 @@ public class PutConfigurationAggregatorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationAggregator")
     public ConfigurationAggregator configurationAggregator;
+
     public PutConfigurationAggregatorResponse withConfigurationAggregator(ConfigurationAggregator configurationAggregator) {
         this.configurationAggregator = configurationAggregator;
         return this;
     }
     
+    public PutConfigurationAggregatorResponse(){}
 }

@@ -230,4 +230,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateClusterVersionRespons
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateNodegroupConfigResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateNodegroupVersionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class AnalyzeIamPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullyExplored")
     public Boolean fullyExplored;
+
     public AnalyzeIamPolicyResponse withFullyExplored(Boolean fullyExplored) {
         this.fullyExplored = fullyExplored;
         return this;
@@ -29,6 +30,7 @@ public class AnalyzeIamPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mainAnalysis")
     public IamPolicyAnalysis mainAnalysis;
+
     public AnalyzeIamPolicyResponse withMainAnalysis(IamPolicyAnalysis mainAnalysis) {
         this.mainAnalysis = mainAnalysis;
         return this;
@@ -40,9 +42,11 @@ public class AnalyzeIamPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountImpersonationAnalysis")
     public IamPolicyAnalysis[] serviceAccountImpersonationAnalysis;
+
     public AnalyzeIamPolicyResponse withServiceAccountImpersonationAnalysis(IamPolicyAnalysis[] serviceAccountImpersonationAnalysis) {
         this.serviceAccountImpersonationAnalysis = serviceAccountImpersonationAnalysis;
         return this;
     }
     
+    public AnalyzeIamPolicyResponse(){}
 }

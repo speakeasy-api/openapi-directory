@@ -15,6 +15,7 @@ public class SSMValidationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public String command;
+
     public SSMValidationParameters withCommand(String command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class SSMValidationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionTimeoutSeconds")
     public Long executionTimeoutSeconds;
+
     public SSMValidationParameters withExecutionTimeoutSeconds(Long executionTimeoutSeconds) {
         this.executionTimeoutSeconds = executionTimeoutSeconds;
         return this;
@@ -31,6 +33,7 @@ public class SSMValidationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public SSMValidationParameters withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -39,6 +42,7 @@ public class SSMValidationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputS3BucketName")
     public String outputS3BucketName;
+
     public SSMValidationParameters withOutputS3BucketName(String outputS3BucketName) {
         this.outputS3BucketName = outputS3BucketName;
         return this;
@@ -47,6 +51,7 @@ public class SSMValidationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptType")
     public ScriptTypeEnum scriptType;
+
     public SSMValidationParameters withScriptType(ScriptTypeEnum scriptType) {
         this.scriptType = scriptType;
         return this;
@@ -55,9 +60,11 @@ public class SSMValidationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public SSMValidationParameters withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public SSMValidationParameters(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GeneratePdfDesignerTemplatesIdGeneratePostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GeneratePDFPayload generatePDFPayload;
+
     public GeneratePdfDesignerTemplatesIdGeneratePostRequest withGeneratePDFPayload(org.openapis.openapi.models.shared.GeneratePDFPayload generatePDFPayload) {
         this.generatePDFPayload = generatePDFPayload;
         return this;
@@ -16,9 +18,14 @@ public class GeneratePdfDesignerTemplatesIdGeneratePostRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GeneratePdfDesignerTemplatesIdGeneratePostRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GeneratePdfDesignerTemplatesIdGeneratePostRequest(@JsonProperty("GeneratePDFPayload") org.openapis.openapi.models.shared.GeneratePDFPayload generatePDFPayload, @JsonProperty("id") String id) {
+        this.generatePDFPayload = generatePDFPayload;
+        this.id = id;
+  }
 }

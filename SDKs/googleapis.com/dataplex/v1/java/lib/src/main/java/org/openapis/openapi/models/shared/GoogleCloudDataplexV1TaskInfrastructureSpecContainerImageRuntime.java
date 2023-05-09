@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime withImage(String image) {
         this.image = image;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("javaJars")
     public String[] javaJars;
+
     public GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime withJavaJars(String[] javaJars) {
         this.javaJars = javaJars;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pythonPackages")
     public String[] pythonPackages;
+
     public GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime withPythonPackages(String[] pythonPackages) {
         this.pythonPackages = pythonPackages;
         return this;
     }
     
+    public GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime(){}
 }

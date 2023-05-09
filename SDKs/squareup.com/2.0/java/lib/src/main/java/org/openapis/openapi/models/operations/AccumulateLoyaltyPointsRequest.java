@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccumulateLoyaltyPointsRequest {
@@ -14,6 +15,7 @@ public class AccumulateLoyaltyPointsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AccumulateLoyaltyPointsRequest accumulateLoyaltyPointsRequest;
+
     public AccumulateLoyaltyPointsRequest withAccumulateLoyaltyPointsRequest(org.openapis.openapi.models.shared.AccumulateLoyaltyPointsRequest accumulateLoyaltyPointsRequest) {
         this.accumulateLoyaltyPointsRequest = accumulateLoyaltyPointsRequest;
         return this;
@@ -24,9 +26,14 @@ public class AccumulateLoyaltyPointsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
     public String accountId;
+
     public AccumulateLoyaltyPointsRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public AccumulateLoyaltyPointsRequest(@JsonProperty("AccumulateLoyaltyPointsRequest") org.openapis.openapi.models.shared.AccumulateLoyaltyPointsRequest accumulateLoyaltyPointsRequest, @JsonProperty("account_id") String accountId) {
+        this.accumulateLoyaltyPointsRequest = accumulateLoyaltyPointsRequest;
+        this.accountId = accountId;
+  }
 }

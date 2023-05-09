@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListEntitiesForPolicyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETListEntitiesForPolicyActionEnum action;
+
     public GETListEntitiesForPolicyRequest withAction(GETListEntitiesForPolicyActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETListEntitiesForPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EntityFilter")
     public GETListEntitiesForPolicyEntityFilterEnum entityFilter;
+
     public GETListEntitiesForPolicyRequest withEntityFilter(GETListEntitiesForPolicyEntityFilterEnum entityFilter) {
         this.entityFilter = entityFilter;
         return this;
@@ -29,6 +32,7 @@ public class GETListEntitiesForPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETListEntitiesForPolicyRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -39,6 +43,7 @@ public class GETListEntitiesForPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
     public Long maxItems;
+
     public GETListEntitiesForPolicyRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -49,6 +54,7 @@ public class GETListEntitiesForPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PathPrefix")
     public String pathPrefix;
+
     public GETListEntitiesForPolicyRequest withPathPrefix(String pathPrefix) {
         this.pathPrefix = pathPrefix;
         return this;
@@ -59,6 +65,7 @@ public class GETListEntitiesForPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyArn")
     public String policyArn;
+
     public GETListEntitiesForPolicyRequest withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -69,6 +76,7 @@ public class GETListEntitiesForPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyUsageFilter")
     public GETListEntitiesForPolicyPolicyUsageFilterEnum policyUsageFilter;
+
     public GETListEntitiesForPolicyRequest withPolicyUsageFilter(GETListEntitiesForPolicyPolicyUsageFilterEnum policyUsageFilter) {
         this.policyUsageFilter = policyUsageFilter;
         return this;
@@ -76,6 +84,7 @@ public class GETListEntitiesForPolicyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETListEntitiesForPolicyVersionEnum version;
+
     public GETListEntitiesForPolicyRequest withVersion(GETListEntitiesForPolicyVersionEnum version) {
         this.version = version;
         return this;
@@ -83,6 +92,7 @@ public class GETListEntitiesForPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETListEntitiesForPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -90,6 +100,7 @@ public class GETListEntitiesForPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETListEntitiesForPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -97,6 +108,7 @@ public class GETListEntitiesForPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETListEntitiesForPolicyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -104,6 +116,7 @@ public class GETListEntitiesForPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETListEntitiesForPolicyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -111,6 +124,7 @@ public class GETListEntitiesForPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETListEntitiesForPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -118,6 +132,7 @@ public class GETListEntitiesForPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETListEntitiesForPolicyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -125,9 +140,15 @@ public class GETListEntitiesForPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETListEntitiesForPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETListEntitiesForPolicyRequest(@JsonProperty("Action") GETListEntitiesForPolicyActionEnum action, @JsonProperty("PolicyArn") String policyArn, @JsonProperty("Version") GETListEntitiesForPolicyVersionEnum version) {
+        this.action = action;
+        this.policyArn = policyArn;
+        this.version = version;
+  }
 }

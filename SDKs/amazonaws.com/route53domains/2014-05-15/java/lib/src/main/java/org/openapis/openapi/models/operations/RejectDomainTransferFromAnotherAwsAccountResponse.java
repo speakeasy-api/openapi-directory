@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RejectDomainTransferFromAnotherAwsAccountResponse {
     
     public String contentType;
+
     public RejectDomainTransferFromAnotherAwsAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RejectDomainTransferFromAnotherAwsAccountResponse {
      */
     
     public Object invalidInput;
+
     public RejectDomainTransferFromAnotherAwsAccountResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -29,6 +32,7 @@ public class RejectDomainTransferFromAnotherAwsAccountResponse {
      */
     
     public Object operationLimitExceeded;
+
     public RejectDomainTransferFromAnotherAwsAccountResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -39,6 +43,7 @@ public class RejectDomainTransferFromAnotherAwsAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.RejectDomainTransferFromAnotherAwsAccountResponse rejectDomainTransferFromAnotherAwsAccountResponse;
+
     public RejectDomainTransferFromAnotherAwsAccountResponse withRejectDomainTransferFromAnotherAwsAccountResponse(org.openapis.openapi.models.shared.RejectDomainTransferFromAnotherAwsAccountResponse rejectDomainTransferFromAnotherAwsAccountResponse) {
         this.rejectDomainTransferFromAnotherAwsAccountResponse = rejectDomainTransferFromAnotherAwsAccountResponse;
         return this;
@@ -46,6 +51,7 @@ public class RejectDomainTransferFromAnotherAwsAccountResponse {
     
     
     public Integer statusCode;
+
     public RejectDomainTransferFromAnotherAwsAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class RejectDomainTransferFromAnotherAwsAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RejectDomainTransferFromAnotherAwsAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class RejectDomainTransferFromAnotherAwsAccountResponse {
      */
     
     public Object unsupportedTLD;
+
     public RejectDomainTransferFromAnotherAwsAccountResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public RejectDomainTransferFromAnotherAwsAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

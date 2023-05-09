@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSegmentVersionsResponse {
@@ -12,6 +13,7 @@ public class GetSegmentVersionsResponse {
      */
     
     public Object badRequestException;
+
     public GetSegmentVersionsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetSegmentVersionsResponse {
     
     
     public String contentType;
+
     public GetSegmentVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSegmentVersionsResponse {
      */
     
     public Object forbiddenException;
+
     public GetSegmentVersionsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetSegmentVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSegmentVersionsResponse getSegmentVersionsResponse;
+
     public GetSegmentVersionsResponse withGetSegmentVersionsResponse(org.openapis.openapi.models.shared.GetSegmentVersionsResponse getSegmentVersionsResponse) {
         this.getSegmentVersionsResponse = getSegmentVersionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetSegmentVersionsResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetSegmentVersionsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetSegmentVersionsResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetSegmentVersionsResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetSegmentVersionsResponse {
      */
     
     public Object notFoundException;
+
     public GetSegmentVersionsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetSegmentVersionsResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetSegmentVersionsResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetSegmentVersionsResponse {
     
     
     public Integer statusCode;
+
     public GetSegmentVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetSegmentVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSegmentVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetSegmentVersionsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetSegmentVersionsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetSegmentVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

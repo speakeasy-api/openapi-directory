@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClearMerchantOrderInfoListV3Response {
@@ -12,6 +13,7 @@ public class ClearMerchantOrderInfoListV3Response {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public ClearMerchantOrderInfoListV3Response withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class ClearMerchantOrderInfoListV3Response {
     
     
     public String contentType;
+
     public ClearMerchantOrderInfoListV3Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ClearMerchantOrderInfoListV3Response {
     
     
     public Integer statusCode;
+
     public ClearMerchantOrderInfoListV3Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ClearMerchantOrderInfoListV3Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClearMerchantOrderInfoListV3Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ClearMerchantOrderInfoListV3Response {
      */
     
     public org.openapis.openapi.models.shared.BatchOrderOperationResponse batchOrderOperationResponse;
+
     public ClearMerchantOrderInfoListV3Response withBatchOrderOperationResponse(org.openapis.openapi.models.shared.BatchOrderOperationResponse batchOrderOperationResponse) {
         this.batchOrderOperationResponse = batchOrderOperationResponse;
         return this;
@@ -53,9 +59,14 @@ public class ClearMerchantOrderInfoListV3Response {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage;
+
     public ClearMerchantOrderInfoListV3Response withErrorResponseMessage(org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage) {
         this.errorResponseMessage = errorResponseMessage;
         return this;
     }
     
+    public ClearMerchantOrderInfoListV3Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

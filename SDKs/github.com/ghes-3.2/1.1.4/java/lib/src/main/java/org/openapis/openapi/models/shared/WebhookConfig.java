@@ -18,6 +18,7 @@ public class WebhookConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_type")
     public String contentType;
+
     public WebhookConfig withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +27,7 @@ public class WebhookConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insecure_ssl")
     public Object insecureSsl;
+
     public WebhookConfig withInsecureSsl(Object insecureSsl) {
         this.insecureSsl = insecureSsl;
         return this;
@@ -37,6 +39,7 @@ public class WebhookConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public WebhookConfig withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -48,9 +51,11 @@ public class WebhookConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public WebhookConfig withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public WebhookConfig(){}
 }

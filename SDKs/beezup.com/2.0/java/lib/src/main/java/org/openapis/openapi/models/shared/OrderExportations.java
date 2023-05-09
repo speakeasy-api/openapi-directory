@@ -16,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OrderExportations {
     @JsonProperty("exportations")
     public OrderExportationReporting[] exportations;
+
     public OrderExportations withExportations(OrderExportationReporting[] exportations) {
         this.exportations = exportations;
         return this;
@@ -23,6 +24,7 @@ public class OrderExportations {
     
     @JsonProperty("links")
     public OrderExportationsLinks links;
+
     public OrderExportations withLinks(OrderExportationsLinks links) {
         this.links = links;
         return this;
@@ -31,9 +33,14 @@ public class OrderExportations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paginationResult")
     public BeezUPCommonPaginationResult paginationResult;
+
     public OrderExportations withPaginationResult(BeezUPCommonPaginationResult paginationResult) {
         this.paginationResult = paginationResult;
         return this;
     }
     
+    public OrderExportations(@JsonProperty("exportations") OrderExportationReporting[] exportations, @JsonProperty("links") OrderExportationsLinks links) {
+        this.exportations = exportations;
+        this.links = links;
+  }
 }

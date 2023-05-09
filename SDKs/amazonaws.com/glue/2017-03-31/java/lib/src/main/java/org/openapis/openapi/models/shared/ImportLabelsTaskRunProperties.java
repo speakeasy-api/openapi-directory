@@ -15,6 +15,7 @@ public class ImportLabelsTaskRunProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputS3Path")
     public String inputS3Path;
+
     public ImportLabelsTaskRunProperties withInputS3Path(String inputS3Path) {
         this.inputS3Path = inputS3Path;
         return this;
@@ -23,9 +24,11 @@ public class ImportLabelsTaskRunProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Replace")
     public Boolean replace;
+
     public ImportLabelsTaskRunProperties withReplace(Boolean replace) {
         this.replace = replace;
         return this;
     }
     
+    public ImportLabelsTaskRunProperties(){}
 }

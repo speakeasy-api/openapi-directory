@@ -20,6 +20,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actual_duration")
     public Object actualDuration;
+
     public TaskDetailWorkgroupLevelVO withActualDuration(Object actualDuration) {
         this.actualDuration = actualDuration;
         return this;
@@ -29,6 +30,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("actual_end")
     public LocalDate actualEnd;
+
     public TaskDetailWorkgroupLevelVO withActualEnd(LocalDate actualEnd) {
         this.actualEnd = actualEnd;
         return this;
@@ -40,6 +42,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actual_hours")
     public Object actualHours;
+
     public TaskDetailWorkgroupLevelVO withActualHours(Object actualHours) {
         this.actualHours = actualHours;
         return this;
@@ -49,6 +52,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("actual_start")
     public LocalDate actualStart;
+
     public TaskDetailWorkgroupLevelVO withActualStart(LocalDate actualStart) {
         this.actualStart = actualStart;
         return this;
@@ -60,6 +64,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assign_to")
     public PersonVO assignTo;
+
     public TaskDetailWorkgroupLevelVO withAssignTo(PersonVO assignTo) {
         this.assignTo = assignTo;
         return this;
@@ -71,6 +76,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseline_duration")
     public Object baselineDuration;
+
     public TaskDetailWorkgroupLevelVO withBaselineDuration(Object baselineDuration) {
         this.baselineDuration = baselineDuration;
         return this;
@@ -80,6 +86,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("baseline_end_date")
     public LocalDate baselineEndDate;
+
     public TaskDetailWorkgroupLevelVO withBaselineEndDate(LocalDate baselineEndDate) {
         this.baselineEndDate = baselineEndDate;
         return this;
@@ -89,6 +96,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("baseline_start_date")
     public LocalDate baselineStartDate;
+
     public TaskDetailWorkgroupLevelVO withBaselineStartDate(LocalDate baselineStartDate) {
         this.baselineStartDate = baselineStartDate;
         return this;
@@ -97,6 +105,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public TaskDetailWorkgroupLevelVO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -106,6 +115,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("create_date")
     public LocalDate createDate;
+
     public TaskDetailWorkgroupLevelVO withCreateDate(LocalDate createDate) {
         this.createDate = createDate;
         return this;
@@ -114,6 +124,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator_workgroup_name")
     public String creatorWorkgroupName;
+
     public TaskDetailWorkgroupLevelVO withCreatorWorkgroupName(String creatorWorkgroupName) {
         this.creatorWorkgroupName = creatorWorkgroupName;
         return this;
@@ -125,6 +136,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_duration")
     public Object currentDuration;
+
     public TaskDetailWorkgroupLevelVO withCurrentDuration(Object currentDuration) {
         this.currentDuration = currentDuration;
         return this;
@@ -133,6 +145,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TaskDetailWorkgroupLevelVO withDescription(String description) {
         this.description = description;
         return this;
@@ -141,6 +154,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_milestone")
     public Boolean isMilestone;
+
     public TaskDetailWorkgroupLevelVO withIsMilestone(Boolean isMilestone) {
         this.isMilestone = isMilestone;
         return this;
@@ -152,6 +166,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_updated_by")
     public PersonVO lastUpdatedBy;
+
     public TaskDetailWorkgroupLevelVO withLastUpdatedBy(PersonVO lastUpdatedBy) {
         this.lastUpdatedBy = lastUpdatedBy;
         return this;
@@ -161,6 +176,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("mod_date")
     public LocalDate modDate;
+
     public TaskDetailWorkgroupLevelVO withModDate(LocalDate modDate) {
         this.modDate = modDate;
         return this;
@@ -169,6 +185,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percent_complete")
     public Integer percentComplete;
+
     public TaskDetailWorkgroupLevelVO withPercentComplete(Integer percentComplete) {
         this.percentComplete = percentComplete;
         return this;
@@ -180,6 +197,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan_duration")
     public Object planDuration;
+
     public TaskDetailWorkgroupLevelVO withPlanDuration(Object planDuration) {
         this.planDuration = planDuration;
         return this;
@@ -189,6 +207,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("plan_end")
     public LocalDate planEnd;
+
     public TaskDetailWorkgroupLevelVO withPlanEnd(LocalDate planEnd) {
         this.planEnd = planEnd;
         return this;
@@ -198,6 +217,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("plan_start")
     public LocalDate planStart;
+
     public TaskDetailWorkgroupLevelVO withPlanStart(LocalDate planStart) {
         this.planStart = planStart;
         return this;
@@ -206,6 +226,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public String priority;
+
     public TaskDetailWorkgroupLevelVO withPriority(String priority) {
         this.priority = priority;
         return this;
@@ -217,6 +238,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public ProjectBaseVO project;
+
     public TaskDetailWorkgroupLevelVO withProject(ProjectBaseVO project) {
         this.project = project;
         return this;
@@ -228,6 +250,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_by")
     public PersonVO requestedBy;
+
     public TaskDetailWorkgroupLevelVO withRequestedBy(PersonVO requestedBy) {
         this.requestedBy = requestedBy;
         return this;
@@ -236,6 +259,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule_code")
     public String scheduleCode;
+
     public TaskDetailWorkgroupLevelVO withScheduleCode(String scheduleCode) {
         this.scheduleCode = scheduleCode;
         return this;
@@ -244,6 +268,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TaskDetailWorkgroupLevelVO withStatus(String status) {
         this.status = status;
         return this;
@@ -252,6 +277,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_id")
     public Long taskId;
+
     public TaskDetailWorkgroupLevelVO withTaskId(Long taskId) {
         this.taskId = taskId;
         return this;
@@ -260,6 +286,7 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_name")
     public String taskName;
+
     public TaskDetailWorkgroupLevelVO withTaskName(String taskName) {
         this.taskName = taskName;
         return this;
@@ -268,9 +295,11 @@ public class TaskDetailWorkgroupLevelVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_type")
     public String taskType;
+
     public TaskDetailWorkgroupLevelVO withTaskType(String taskType) {
         this.taskType = taskType;
         return this;
     }
     
+    public TaskDetailWorkgroupLevelVO(){}
 }

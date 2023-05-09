@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostPortfolioAnalysisCorrelationSpectrumRequestBody2 {
     @JsonProperty("assets")
     public PostPortfolioAnalysisCorrelationSpectrumRequestBody2Assets[] assets;
+
     public PostPortfolioAnalysisCorrelationSpectrumRequestBody2 withAssets(PostPortfolioAnalysisCorrelationSpectrumRequestBody2Assets[] assets) {
         this.assets = assets;
         return this;
@@ -16,9 +17,14 @@ public class PostPortfolioAnalysisCorrelationSpectrumRequestBody2 {
     
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisCorrelationSpectrumRequestBody2Portfolios[] portfolios;
+
     public PostPortfolioAnalysisCorrelationSpectrumRequestBody2 withPortfolios(PostPortfolioAnalysisCorrelationSpectrumRequestBody2Portfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioAnalysisCorrelationSpectrumRequestBody2(@JsonProperty("assets") PostPortfolioAnalysisCorrelationSpectrumRequestBody2Assets[] assets, @JsonProperty("portfolios") PostPortfolioAnalysisCorrelationSpectrumRequestBody2Portfolios[] portfolios) {
+        this.assets = assets;
+        this.portfolios = portfolios;
+  }
 }

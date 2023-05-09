@@ -18,6 +18,7 @@ public class RoutesConfigDump {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicRouteConfigs")
     public DynamicRouteConfig[] dynamicRouteConfigs;
+
     public RoutesConfigDump withDynamicRouteConfigs(DynamicRouteConfig[] dynamicRouteConfigs) {
         this.dynamicRouteConfigs = dynamicRouteConfigs;
         return this;
@@ -29,9 +30,11 @@ public class RoutesConfigDump {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staticRouteConfigs")
     public StaticRouteConfig[] staticRouteConfigs;
+
     public RoutesConfigDump withStaticRouteConfigs(StaticRouteConfig[] staticRouteConfigs) {
         this.staticRouteConfigs = staticRouteConfigs;
         return this;
     }
     
+    public RoutesConfigDump(){}
 }

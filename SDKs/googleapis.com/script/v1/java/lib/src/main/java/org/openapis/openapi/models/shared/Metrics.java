@@ -18,6 +18,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeUsers")
     public MetricsValue[] activeUsers;
+
     public Metrics withActiveUsers(MetricsValue[] activeUsers) {
         this.activeUsers = activeUsers;
         return this;
@@ -29,6 +30,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedExecutions")
     public MetricsValue[] failedExecutions;
+
     public Metrics withFailedExecutions(MetricsValue[] failedExecutions) {
         this.failedExecutions = failedExecutions;
         return this;
@@ -40,9 +42,11 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalExecutions")
     public MetricsValue[] totalExecutions;
+
     public Metrics withTotalExecutions(MetricsValue[] totalExecutions) {
         this.totalExecutions = totalExecutions;
         return this;
     }
     
+    public Metrics(){}
 }

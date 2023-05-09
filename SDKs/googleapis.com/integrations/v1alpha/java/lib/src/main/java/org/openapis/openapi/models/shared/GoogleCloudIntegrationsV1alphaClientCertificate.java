@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaClientCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptedPrivateKey")
     public String encryptedPrivateKey;
+
     public GoogleCloudIntegrationsV1alphaClientCertificate withEncryptedPrivateKey(String encryptedPrivateKey) {
         this.encryptedPrivateKey = encryptedPrivateKey;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaClientCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passphrase")
     public String passphrase;
+
     public GoogleCloudIntegrationsV1alphaClientCertificate withPassphrase(String passphrase) {
         this.passphrase = passphrase;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIntegrationsV1alphaClientCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslCertificate")
     public String sslCertificate;
+
     public GoogleCloudIntegrationsV1alphaClientCertificate withSslCertificate(String sslCertificate) {
         this.sslCertificate = sslCertificate;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaClientCertificate(){}
 }

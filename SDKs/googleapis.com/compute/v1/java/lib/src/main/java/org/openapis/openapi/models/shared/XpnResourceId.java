@@ -18,6 +18,7 @@ public class XpnResourceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public XpnResourceId withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class XpnResourceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public XpnResourceIdTypeEnum type;
+
     public XpnResourceId withType(XpnResourceIdTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public XpnResourceId(){}
 }

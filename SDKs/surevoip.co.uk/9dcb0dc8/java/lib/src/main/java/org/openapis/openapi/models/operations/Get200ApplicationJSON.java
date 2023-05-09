@@ -15,9 +15,11 @@ public class Get200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Get200ApplicationJSONStatusEnum status;
+
     public Get200ApplicationJSON withStatus(Get200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Get200ApplicationJSON(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateConnectionRequest {
     @JsonProperty("AuthParameters")
     public CreateConnectionAuthRequestParameters authParameters;
+
     public CreateConnectionRequest withAuthParameters(CreateConnectionAuthRequestParameters authParameters) {
         this.authParameters = authParameters;
         return this;
@@ -18,6 +19,7 @@ public class CreateConnectionRequest {
     
     @JsonProperty("AuthorizationType")
     public ConnectionAuthorizationTypeEnum authorizationType;
+
     public CreateConnectionRequest withAuthorizationType(ConnectionAuthorizationTypeEnum authorizationType) {
         this.authorizationType = authorizationType;
         return this;
@@ -26,6 +28,7 @@ public class CreateConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateConnectionRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -33,9 +36,15 @@ public class CreateConnectionRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateConnectionRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateConnectionRequest(@JsonProperty("AuthParameters") CreateConnectionAuthRequestParameters authParameters, @JsonProperty("AuthorizationType") ConnectionAuthorizationTypeEnum authorizationType, @JsonProperty("Name") String name) {
+        this.authParameters = authParameters;
+        this.authorizationType = authorizationType;
+        this.name = name;
+  }
 }

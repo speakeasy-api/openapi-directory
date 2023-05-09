@@ -18,6 +18,7 @@ public class Flight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departureDate")
     public Date departureDate;
+
     public Flight withDepartureDate(Date departureDate) {
         this.departureDate = departureDate;
         return this;
@@ -29,6 +30,7 @@ public class Flight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public Flight withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -40,6 +42,7 @@ public class Flight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flightNumber")
     public Integer flightNumber;
+
     public Flight withFlightNumber(Integer flightNumber) {
         this.flightNumber = flightNumber;
         return this;
@@ -51,6 +54,7 @@ public class Flight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingCarrierCode")
     public String operatingCarrierCode;
+
     public Flight withOperatingCarrierCode(String operatingCarrierCode) {
         this.operatingCarrierCode = operatingCarrierCode;
         return this;
@@ -62,9 +66,11 @@ public class Flight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public Flight withOrigin(String origin) {
         this.origin = origin;
         return this;
     }
     
+    public Flight(){}
 }

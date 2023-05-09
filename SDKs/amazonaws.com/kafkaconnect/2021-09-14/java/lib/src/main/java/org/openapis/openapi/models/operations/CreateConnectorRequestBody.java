@@ -14,6 +14,7 @@ public class CreateConnectorRequestBody {
      */
     @JsonProperty("capacity")
     public CreateConnectorRequestBodyCapacity capacity;
+
     public CreateConnectorRequestBody withCapacity(CreateConnectorRequestBodyCapacity capacity) {
         this.capacity = capacity;
         return this;
@@ -24,6 +25,7 @@ public class CreateConnectorRequestBody {
      */
     @JsonProperty("connectorConfiguration")
     public java.util.Map<String, String> connectorConfiguration;
+
     public CreateConnectorRequestBody withConnectorConfiguration(java.util.Map<String, String> connectorConfiguration) {
         this.connectorConfiguration = connectorConfiguration;
         return this;
@@ -35,6 +37,7 @@ public class CreateConnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorDescription")
     public String connectorDescription;
+
     public CreateConnectorRequestBody withConnectorDescription(String connectorDescription) {
         this.connectorDescription = connectorDescription;
         return this;
@@ -45,6 +48,7 @@ public class CreateConnectorRequestBody {
      */
     @JsonProperty("connectorName")
     public String connectorName;
+
     public CreateConnectorRequestBody withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -55,6 +59,7 @@ public class CreateConnectorRequestBody {
      */
     @JsonProperty("kafkaCluster")
     public CreateConnectorRequestBodyKafkaCluster kafkaCluster;
+
     public CreateConnectorRequestBody withKafkaCluster(CreateConnectorRequestBodyKafkaCluster kafkaCluster) {
         this.kafkaCluster = kafkaCluster;
         return this;
@@ -65,6 +70,7 @@ public class CreateConnectorRequestBody {
      */
     @JsonProperty("kafkaClusterClientAuthentication")
     public CreateConnectorRequestBodyKafkaClusterClientAuthentication kafkaClusterClientAuthentication;
+
     public CreateConnectorRequestBody withKafkaClusterClientAuthentication(CreateConnectorRequestBodyKafkaClusterClientAuthentication kafkaClusterClientAuthentication) {
         this.kafkaClusterClientAuthentication = kafkaClusterClientAuthentication;
         return this;
@@ -75,6 +81,7 @@ public class CreateConnectorRequestBody {
      */
     @JsonProperty("kafkaClusterEncryptionInTransit")
     public CreateConnectorRequestBodyKafkaClusterEncryptionInTransit kafkaClusterEncryptionInTransit;
+
     public CreateConnectorRequestBody withKafkaClusterEncryptionInTransit(CreateConnectorRequestBodyKafkaClusterEncryptionInTransit kafkaClusterEncryptionInTransit) {
         this.kafkaClusterEncryptionInTransit = kafkaClusterEncryptionInTransit;
         return this;
@@ -85,6 +92,7 @@ public class CreateConnectorRequestBody {
      */
     @JsonProperty("kafkaConnectVersion")
     public String kafkaConnectVersion;
+
     public CreateConnectorRequestBody withKafkaConnectVersion(String kafkaConnectVersion) {
         this.kafkaConnectVersion = kafkaConnectVersion;
         return this;
@@ -96,6 +104,7 @@ public class CreateConnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logDelivery")
     public CreateConnectorRequestBodyLogDelivery logDelivery;
+
     public CreateConnectorRequestBody withLogDelivery(CreateConnectorRequestBodyLogDelivery logDelivery) {
         this.logDelivery = logDelivery;
         return this;
@@ -106,6 +115,7 @@ public class CreateConnectorRequestBody {
      */
     @JsonProperty("plugins")
     public org.openapis.openapi.models.shared.Plugin[] plugins;
+
     public CreateConnectorRequestBody withPlugins(org.openapis.openapi.models.shared.Plugin[] plugins) {
         this.plugins = plugins;
         return this;
@@ -116,6 +126,7 @@ public class CreateConnectorRequestBody {
      */
     @JsonProperty("serviceExecutionRoleArn")
     public String serviceExecutionRoleArn;
+
     public CreateConnectorRequestBody withServiceExecutionRoleArn(String serviceExecutionRoleArn) {
         this.serviceExecutionRoleArn = serviceExecutionRoleArn;
         return this;
@@ -127,9 +138,21 @@ public class CreateConnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerConfiguration")
     public CreateConnectorRequestBodyWorkerConfiguration workerConfiguration;
+
     public CreateConnectorRequestBody withWorkerConfiguration(CreateConnectorRequestBodyWorkerConfiguration workerConfiguration) {
         this.workerConfiguration = workerConfiguration;
         return this;
     }
     
+    public CreateConnectorRequestBody(@JsonProperty("capacity") CreateConnectorRequestBodyCapacity capacity, @JsonProperty("connectorConfiguration") java.util.Map<String, String> connectorConfiguration, @JsonProperty("connectorName") String connectorName, @JsonProperty("kafkaCluster") CreateConnectorRequestBodyKafkaCluster kafkaCluster, @JsonProperty("kafkaClusterClientAuthentication") CreateConnectorRequestBodyKafkaClusterClientAuthentication kafkaClusterClientAuthentication, @JsonProperty("kafkaClusterEncryptionInTransit") CreateConnectorRequestBodyKafkaClusterEncryptionInTransit kafkaClusterEncryptionInTransit, @JsonProperty("kafkaConnectVersion") String kafkaConnectVersion, @JsonProperty("plugins") org.openapis.openapi.models.shared.Plugin[] plugins, @JsonProperty("serviceExecutionRoleArn") String serviceExecutionRoleArn) {
+        this.capacity = capacity;
+        this.connectorConfiguration = connectorConfiguration;
+        this.connectorName = connectorName;
+        this.kafkaCluster = kafkaCluster;
+        this.kafkaClusterClientAuthentication = kafkaClusterClientAuthentication;
+        this.kafkaClusterEncryptionInTransit = kafkaClusterEncryptionInTransit;
+        this.kafkaConnectVersion = kafkaConnectVersion;
+        this.plugins = plugins;
+        this.serviceExecutionRoleArn = serviceExecutionRoleArn;
+  }
 }

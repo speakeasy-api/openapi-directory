@@ -14,6 +14,7 @@ public class NewsFeedCardAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=card_id")
     public String cardId;
+
     public NewsFeedCardAnalyticsRequest withCardId(String cardId) {
         this.cardId = cardId;
         return this;
@@ -26,6 +27,7 @@ public class NewsFeedCardAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
     public String endingAt;
+
     public NewsFeedCardAnalyticsRequest withEndingAt(String endingAt) {
         this.endingAt = endingAt;
         return this;
@@ -38,6 +40,7 @@ public class NewsFeedCardAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
     public String length;
+
     public NewsFeedCardAnalyticsRequest withLength(String length) {
         this.length = length;
         return this;
@@ -50,9 +53,11 @@ public class NewsFeedCardAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
     public String unit;
+
     public NewsFeedCardAnalyticsRequest withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public NewsFeedCardAnalyticsRequest(){}
 }

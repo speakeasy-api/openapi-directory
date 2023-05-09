@@ -15,6 +15,7 @@ public class ResolveComponentCandidatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentCandidates")
     public org.openapis.openapi.models.shared.ComponentCandidate[] componentCandidates;
+
     public ResolveComponentCandidatesRequestBody withComponentCandidates(org.openapis.openapi.models.shared.ComponentCandidate[] componentCandidates) {
         this.componentCandidates = componentCandidates;
         return this;
@@ -26,9 +27,11 @@ public class ResolveComponentCandidatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public ResolveComponentCandidatesRequestBodyPlatform platform;
+
     public ResolveComponentCandidatesRequestBody withPlatform(ResolveComponentCandidatesRequestBodyPlatform platform) {
         this.platform = platform;
         return this;
     }
     
+    public ResolveComponentCandidatesRequestBody(){}
 }

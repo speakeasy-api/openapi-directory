@@ -15,6 +15,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public OrderDetailsApiModel withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -26,6 +27,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AfterPaymentDescription")
     public String afterPaymentDescription;
+
     public OrderDetailsApiModel withAfterPaymentDescription(String afterPaymentDescription) {
         this.afterPaymentDescription = afterPaymentDescription;
         return this;
@@ -37,6 +39,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CouponCode")
     public String couponCode;
+
     public OrderDetailsApiModel withCouponCode(String couponCode) {
         this.couponCode = couponCode;
         return this;
@@ -45,6 +48,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Currency")
     public CurrencyDetailsApiModel currency;
+
     public OrderDetailsApiModel withCurrency(CurrencyDetailsApiModel currency) {
         this.currency = currency;
         return this;
@@ -56,6 +60,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrencyId")
     public Integer currencyId;
+
     public OrderDetailsApiModel withCurrencyId(Integer currencyId) {
         this.currencyId = currencyId;
         return this;
@@ -67,6 +72,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public OrderDetailsApiModel withDescription(String description) {
         this.description = description;
         return this;
@@ -78,6 +84,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscountAmount")
     public Double discountAmount;
+
     public OrderDetailsApiModel withDiscountAmount(Double discountAmount) {
         this.discountAmount = discountAmount;
         return this;
@@ -89,6 +96,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public OrderDetailsApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -100,6 +108,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OrderDetailsApiModel withName(String name) {
         this.name = name;
         return this;
@@ -111,6 +120,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Note")
     public String note;
+
     public OrderDetailsApiModel withNote(String note) {
         this.note = note;
         return this;
@@ -119,6 +129,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderBillingDetails")
     public OrderBillingDetailsApiModel orderBillingDetails;
+
     public OrderDetailsApiModel withOrderBillingDetails(OrderBillingDetailsApiModel orderBillingDetails) {
         this.orderBillingDetails = orderBillingDetails;
         return this;
@@ -127,6 +138,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderShippingDetails")
     public OrderShippingDetailsApiModel orderShippingDetails;
+
     public OrderDetailsApiModel withOrderShippingDetails(OrderShippingDetailsApiModel orderShippingDetails) {
         this.orderShippingDetails = orderShippingDetails;
         return this;
@@ -138,6 +150,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductId")
     public Integer productId;
+
     public OrderDetailsApiModel withProductId(Integer productId) {
         this.productId = productId;
         return this;
@@ -149,6 +162,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Referral")
     public String referral;
+
     public OrderDetailsApiModel withReferral(String referral) {
         this.referral = referral;
         return this;
@@ -160,6 +174,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingAmount")
     public Double shippingAmount;
+
     public OrderDetailsApiModel withShippingAmount(Double shippingAmount) {
         this.shippingAmount = shippingAmount;
         return this;
@@ -171,6 +186,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingDescription")
     public String shippingDescription;
+
     public OrderDetailsApiModel withShippingDescription(String shippingDescription) {
         this.shippingDescription = shippingDescription;
         return this;
@@ -182,6 +198,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public OrderDetailsApiModelStatusEnum status;
+
     public OrderDetailsApiModel withStatus(OrderDetailsApiModelStatusEnum status) {
         this.status = status;
         return this;
@@ -193,6 +210,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubTotalAmount")
     public Double subTotalAmount;
+
     public OrderDetailsApiModel withSubTotalAmount(Double subTotalAmount) {
         this.subTotalAmount = subTotalAmount;
         return this;
@@ -204,6 +222,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxAmount")
     public Double taxAmount;
+
     public OrderDetailsApiModel withTaxAmount(Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
@@ -215,6 +234,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalAmount")
     public Double totalAmount;
+
     public OrderDetailsApiModel withTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -226,6 +246,7 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalWithShipping")
     public Double totalWithShipping;
+
     public OrderDetailsApiModel withTotalWithShipping(Double totalWithShipping) {
         this.totalWithShipping = totalWithShipping;
         return this;
@@ -237,9 +258,11 @@ public class OrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatHappensNextDescription")
     public String whatHappensNextDescription;
+
     public OrderDetailsApiModel withWhatHappensNextDescription(String whatHappensNextDescription) {
         this.whatHappensNextDescription = whatHappensNextDescription;
         return this;
     }
     
+    public OrderDetailsApiModel(){}
 }

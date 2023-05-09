@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CalcSigmaUsdExchangeResponse {
     
     public byte[] body;
+
     public CalcSigmaUsdExchangeResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CalcSigmaUsdExchangeResponse {
     
     
     public String contentType;
+
     public CalcSigmaUsdExchangeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CalcSigmaUsdExchangeResponse {
     
     
     public Integer statusCode;
+
     public CalcSigmaUsdExchangeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class CalcSigmaUsdExchangeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CalcSigmaUsdExchangeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class CalcSigmaUsdExchangeResponse {
      */
     
     public String calcSigmaUsdExchange400WildcardString;
+
     public CalcSigmaUsdExchangeResponse withCalcSigmaUsdExchange400WildcardString(String calcSigmaUsdExchange400WildcardString) {
         this.calcSigmaUsdExchange400WildcardString = calcSigmaUsdExchange400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class CalcSigmaUsdExchangeResponse {
      */
     
     public String calcSigmaUsdExchange401WildcardString;
+
     public CalcSigmaUsdExchangeResponse withCalcSigmaUsdExchange401WildcardString(String calcSigmaUsdExchange401WildcardString) {
         this.calcSigmaUsdExchange401WildcardString = calcSigmaUsdExchange401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class CalcSigmaUsdExchangeResponse {
      */
     
     public String calcSigmaUsdExchange404WildcardString;
+
     public CalcSigmaUsdExchangeResponse withCalcSigmaUsdExchange404WildcardString(String calcSigmaUsdExchange404WildcardString) {
         this.calcSigmaUsdExchange404WildcardString = calcSigmaUsdExchange404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class CalcSigmaUsdExchangeResponse {
      */
     
     public String calcSigmaUsdExchange409WildcardString;
+
     public CalcSigmaUsdExchangeResponse withCalcSigmaUsdExchange409WildcardString(String calcSigmaUsdExchange409WildcardString) {
         this.calcSigmaUsdExchange409WildcardString = calcSigmaUsdExchange409WildcardString;
         return this;
     }
     
+    public CalcSigmaUsdExchangeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

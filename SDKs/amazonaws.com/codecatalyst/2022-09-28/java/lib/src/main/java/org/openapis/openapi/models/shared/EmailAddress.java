@@ -15,6 +15,7 @@ public class EmailAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public EmailAddress withEmail(String email) {
         this.email = email;
         return this;
@@ -23,9 +24,11 @@ public class EmailAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verified")
     public Boolean verified;
+
     public EmailAddress withVerified(Boolean verified) {
         this.verified = verified;
         return this;
     }
     
+    public EmailAddress(){}
 }

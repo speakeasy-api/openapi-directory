@@ -15,6 +15,7 @@ public class ResolvedTargets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterValues")
     public String[] parameterValues;
+
     public ResolvedTargets withParameterValues(String[] parameterValues) {
         this.parameterValues = parameterValues;
         return this;
@@ -23,9 +24,11 @@ public class ResolvedTargets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Truncated")
     public Boolean truncated;
+
     public ResolvedTargets withTruncated(Boolean truncated) {
         this.truncated = truncated;
         return this;
     }
     
+    public ResolvedTargets(){}
 }

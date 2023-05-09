@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetInvitedIndividualsRequest {
@@ -12,6 +13,7 @@ public class GroupV2GetInvitedIndividualsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentpage")
     public Integer currentpage;
+
     public GroupV2GetInvitedIndividualsRequest withCurrentpage(Integer currentpage) {
         this.currentpage = currentpage;
         return this;
@@ -22,9 +24,14 @@ public class GroupV2GetInvitedIndividualsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public Long groupId;
+
     public GroupV2GetInvitedIndividualsRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public GroupV2GetInvitedIndividualsRequest(@JsonProperty("currentpage") Integer currentpage, @JsonProperty("groupId") Long groupId) {
+        this.currentpage = currentpage;
+        this.groupId = groupId;
+  }
 }

@@ -20,6 +20,7 @@ public class ClusterListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public ClusterListEntry withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -28,6 +29,7 @@ public class ClusterListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterState")
     public ClusterStateEnum clusterState;
+
     public ClusterListEntry withClusterState(ClusterStateEnum clusterState) {
         this.clusterState = clusterState;
         return this;
@@ -38,6 +40,7 @@ public class ClusterListEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public ClusterListEntry withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -46,9 +49,11 @@ public class ClusterListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ClusterListEntry withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public ClusterListEntry(){}
 }

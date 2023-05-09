@@ -15,6 +15,7 @@ public class ServiceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyId")
     public String companyId;
+
     public ServiceGroupViewModel withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -23,6 +24,7 @@ public class ServiceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ServiceGroupViewModel withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class ServiceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ServiceGroupViewModel withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class ServiceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public ServiceGroupViewModel withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -47,6 +51,7 @@ public class ServiceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDeleted")
     public Boolean isDeleted;
+
     public ServiceGroupViewModel withIsDeleted(Boolean isDeleted) {
         this.isDeleted = isDeleted;
         return this;
@@ -55,6 +60,7 @@ public class ServiceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public ServiceGroupViewModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -63,6 +69,7 @@ public class ServiceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServiceGroupViewModel withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class ServiceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public ServiceGroupViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -79,9 +87,11 @@ public class ServiceGroupViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Integer type;
+
     public ServiceGroupViewModel withType(Integer type) {
         this.type = type;
         return this;
     }
     
+    public ServiceGroupViewModel(){}
 }

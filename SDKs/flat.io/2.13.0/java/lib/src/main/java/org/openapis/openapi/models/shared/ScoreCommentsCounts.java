@@ -20,6 +20,7 @@ public class ScoreCommentsCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monthly")
     public Double monthly;
+
     public ScoreCommentsCounts withMonthly(Double monthly) {
         this.monthly = monthly;
         return this;
@@ -31,6 +32,7 @@ public class ScoreCommentsCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public ScoreCommentsCounts withTotal(Double total) {
         this.total = total;
         return this;
@@ -42,6 +44,7 @@ public class ScoreCommentsCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unique")
     public Double unique;
+
     public ScoreCommentsCounts withUnique(Double unique) {
         this.unique = unique;
         return this;
@@ -53,9 +56,11 @@ public class ScoreCommentsCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weekly")
     public Double weekly;
+
     public ScoreCommentsCounts withWeekly(Double weekly) {
         this.weekly = weekly;
         return this;
     }
     
+    public ScoreCommentsCounts(){}
 }

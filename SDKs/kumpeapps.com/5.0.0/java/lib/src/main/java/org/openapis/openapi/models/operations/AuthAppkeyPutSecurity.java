@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthAppkeyPutSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Auth")
     public String appKey;
+
     public AuthAppkeyPutSecurity withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
     }
     
+    public AuthAppkeyPutSecurity(@JsonProperty("app_key") String appKey) {
+        this.appKey = appKey;
+  }
 }

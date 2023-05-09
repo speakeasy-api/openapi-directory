@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteScalingPolicyInput {
     @JsonProperty("FleetId")
     public String fleetId;
+
     public DeleteScalingPolicyInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -16,9 +17,14 @@ public class DeleteScalingPolicyInput {
     
     @JsonProperty("Name")
     public String name;
+
     public DeleteScalingPolicyInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteScalingPolicyInput(@JsonProperty("FleetId") String fleetId, @JsonProperty("Name") String name) {
+        this.fleetId = fleetId;
+        this.name = name;
+  }
 }

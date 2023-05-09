@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEventsOptionsResponse {
@@ -12,6 +13,7 @@ public class GetEventsOptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.AuditEventTypesResp auditEventTypesResp;
+
     public GetEventsOptionsResponse withAuditEventTypesResp(org.openapis.openapi.models.shared.AuditEventTypesResp auditEventTypesResp) {
         this.auditEventTypesResp = auditEventTypesResp;
         return this;
@@ -19,6 +21,7 @@ public class GetEventsOptionsResponse {
     
     
     public String contentType;
+
     public GetEventsOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEventsOptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorForbidden errorForbidden;
+
     public GetEventsOptionsResponse withErrorForbidden(org.openapis.openapi.models.shared.ErrorForbidden errorForbidden) {
         this.errorForbidden = errorForbidden;
         return this;
@@ -39,6 +43,7 @@ public class GetEventsOptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorUnauthorized errorUnauthorized;
+
     public GetEventsOptionsResponse withErrorUnauthorized(org.openapis.openapi.models.shared.ErrorUnauthorized errorUnauthorized) {
         this.errorUnauthorized = errorUnauthorized;
         return this;
@@ -49,6 +54,7 @@ public class GetEventsOptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.NoContent noContent;
+
     public GetEventsOptionsResponse withNoContent(org.openapis.openapi.models.shared.NoContent noContent) {
         this.noContent = noContent;
         return this;
@@ -56,6 +62,7 @@ public class GetEventsOptionsResponse {
     
     
     public Integer statusCode;
+
     public GetEventsOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetEventsOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEventsOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEventsOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

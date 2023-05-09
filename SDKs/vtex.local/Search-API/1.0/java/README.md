@@ -16,34 +16,32 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AutoCompleteRequest;
 import org.openapis.openapi.models.operations.AutoCompleteResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            AutoCompleteRequest req = new AutoCompleteRequest() {{
-                accept = "application/json";
-                contentType = "application/json";
-                productNameContains = "jeans";
-            }}            
+            AutoCompleteRequest req = new AutoCompleteRequest("application/json", "application/json", "jeans");            
 
             AutoCompleteResponse res = sdk.autocomplete.autoComplete(req);
 
-            if (res.theRootSchema.isPresent()) {
+            if (res.theRootSchema != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -51,35 +49,35 @@ public class Application {
 ## Available Resources and Operations
 
 
-### autocomplete
+### [autocomplete](docs/autocomplete/README.md)
 
-* `autoComplete` - Product Search Autocomplete
+* [autoComplete](docs/autocomplete/README.md#autocomplete) - Product Search Autocomplete
 
-### crossSelling
+### [crossSelling](docs/crossselling/README.md)
 
-* `productSearchAccessories` - Get Product Search of Accessories
-* `productSearchShowTogether` - Get Product Search of Show Together
-* `productSearchSimilars` - Get Product Search of Similars
-* `productSearchSuggestions` - Get Product Search of Suggestions
-* `productSearchWhoBoughtAlsoBought` - Get Product Search of Who Bought Also Bought
-* `productSearchWhoSawAlsoBought` - Get Product Search of Who Saw Also Bought
-* `productSearchWhoSawAlsoSaw` - Get Product Search of Who Saw Also Saw
+* [productSearchAccessories](docs/crossselling/README.md#productsearchaccessories) - Get Product Search of Accessories
+* [productSearchShowTogether](docs/crossselling/README.md#productsearchshowtogether) - Get Product Search of Show Together
+* [productSearchSimilars](docs/crossselling/README.md#productsearchsimilars) - Get Product Search of Similars
+* [productSearchSuggestions](docs/crossselling/README.md#productsearchsuggestions) - Get Product Search of Suggestions
+* [productSearchWhoBoughtAlsoBought](docs/crossselling/README.md#productsearchwhoboughtalsobought) - Get Product Search of Who Bought Also Bought
+* [productSearchWhoSawAlsoBought](docs/crossselling/README.md#productsearchwhosawalsobought) - Get Product Search of Who Saw Also Bought
+* [productSearchWhoSawAlsoSaw](docs/crossselling/README.md#productsearchwhosawalsosaw) - Get Product Search of Who Saw Also Saw
 
-### facets
+### [facets](docs/facets/README.md)
 
-* `facetscategory` - Search by Store Facets
-* `getApiCatalogSystemPubFacetsCategoryCategoryId` - Get Category Facets
+* [facetscategory](docs/facets/README.md#facetscategory) - Search by Store Facets
+* [getApiCatalogSystemPubFacetsCategoryCategoryId](docs/facets/README.md#getapicatalogsystempubfacetscategorycategoryid) - Get Category Facets
 
-### offers
+### [offers](docs/offers/README.md)
 
-* `getApiCatalogSystemPubProductsOffersProductId` - Search Product offers
-* `getApiCatalogSystemPubProductsOffersProductIdSkuSkuId` - Search SKU offers
+* [getApiCatalogSystemPubProductsOffersProductId](docs/offers/README.md#getapicatalogsystempubproductsoffersproductid) - Search Product offers
+* [getApiCatalogSystemPubProductsOffersProductIdSkuSkuId](docs/offers/README.md#getapicatalogsystempubproductsoffersproductidskuskuid) - Search SKU offers
 
-### search
+### [search](docs/search/README.md)
 
-* `productSearch` - Search for Products
-* `productSearchFilteredandOrdered` - Search for Products with Filter, Order and Pagination
-* `searchbyproducturl` - Search Product by Product URL
+* [productSearch](docs/search/README.md#productsearch) - Search for Products
+* [productSearchFilteredandOrdered](docs/search/README.md#productsearchfilteredandordered) - Search for Products with Filter, Order and Pagination
+* [searchbyproducturl](docs/search/README.md#searchbyproducturl) - Search Product by Product URL
 <!-- End SDK Available Operations -->
 
 ### Maturity

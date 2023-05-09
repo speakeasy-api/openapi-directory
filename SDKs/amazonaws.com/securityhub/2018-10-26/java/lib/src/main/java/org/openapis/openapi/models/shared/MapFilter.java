@@ -15,6 +15,7 @@ public class MapFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Comparison")
     public MapFilterComparisonEnum comparison;
+
     public MapFilter withComparison(MapFilterComparisonEnum comparison) {
         this.comparison = comparison;
         return this;
@@ -23,6 +24,7 @@ public class MapFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public MapFilter withKey(String key) {
         this.key = key;
         return this;
@@ -31,9 +33,11 @@ public class MapFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public MapFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public MapFilter(){}
 }

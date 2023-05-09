@@ -15,6 +15,7 @@ public class Sslcr404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Sslcr404ApplicationJSONErrorEnum error;
+
     public Sslcr404ApplicationJSON withError(Sslcr404ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Sslcr404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Sslcr404ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Sslcr404ApplicationJSON withErrorDescription(Sslcr404ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Sslcr404ApplicationJSON(){}
 }

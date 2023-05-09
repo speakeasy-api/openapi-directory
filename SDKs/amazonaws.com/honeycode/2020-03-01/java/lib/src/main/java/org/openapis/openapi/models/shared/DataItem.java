@@ -15,6 +15,7 @@ public class DataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedValue")
     public String formattedValue;
+
     public DataItem withFormattedValue(String formattedValue) {
         this.formattedValue = formattedValue;
         return this;
@@ -23,6 +24,7 @@ public class DataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideFormat")
     public FormatEnum overrideFormat;
+
     public DataItem withOverrideFormat(FormatEnum overrideFormat) {
         this.overrideFormat = overrideFormat;
         return this;
@@ -31,9 +33,11 @@ public class DataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawValue")
     public String rawValue;
+
     public DataItem withRawValue(String rawValue) {
         this.rawValue = rawValue;
         return this;
     }
     
+    public DataItem(){}
 }

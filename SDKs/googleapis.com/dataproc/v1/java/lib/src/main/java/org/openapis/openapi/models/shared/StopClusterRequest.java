@@ -18,6 +18,7 @@ public class StopClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterUuid")
     public String clusterUuid;
+
     public StopClusterRequest withClusterUuid(String clusterUuid) {
         this.clusterUuid = clusterUuid;
         return this;
@@ -29,9 +30,11 @@ public class StopClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public StopClusterRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public StopClusterRequest(){}
 }

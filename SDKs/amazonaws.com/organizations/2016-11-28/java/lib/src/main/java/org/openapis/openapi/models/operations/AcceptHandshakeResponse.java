@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcceptHandshakeResponse {
@@ -12,6 +13,7 @@ public class AcceptHandshakeResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public AcceptHandshakeResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class AcceptHandshakeResponse {
      */
     
     public org.openapis.openapi.models.shared.AcceptHandshakeResponse acceptHandshakeResponse;
+
     public AcceptHandshakeResponse withAcceptHandshakeResponse(org.openapis.openapi.models.shared.AcceptHandshakeResponse acceptHandshakeResponse) {
         this.acceptHandshakeResponse = acceptHandshakeResponse;
         return this;
@@ -32,6 +35,7 @@ public class AcceptHandshakeResponse {
      */
     
     public Object accessDeniedException;
+
     public AcceptHandshakeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -42,6 +46,7 @@ public class AcceptHandshakeResponse {
      */
     
     public Object accessDeniedForDependencyException;
+
     public AcceptHandshakeResponse withAccessDeniedForDependencyException(Object accessDeniedForDependencyException) {
         this.accessDeniedForDependencyException = accessDeniedForDependencyException;
         return this;
@@ -52,6 +57,7 @@ public class AcceptHandshakeResponse {
      */
     
     public Object concurrentModificationException;
+
     public AcceptHandshakeResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -59,6 +65,7 @@ public class AcceptHandshakeResponse {
     
     
     public String contentType;
+
     public AcceptHandshakeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class AcceptHandshakeResponse {
      */
     
     public Object handshakeAlreadyInStateException;
+
     public AcceptHandshakeResponse withHandshakeAlreadyInStateException(Object handshakeAlreadyInStateException) {
         this.handshakeAlreadyInStateException = handshakeAlreadyInStateException;
         return this;
@@ -79,6 +87,7 @@ public class AcceptHandshakeResponse {
      */
     
     public Object handshakeConstraintViolationException;
+
     public AcceptHandshakeResponse withHandshakeConstraintViolationException(Object handshakeConstraintViolationException) {
         this.handshakeConstraintViolationException = handshakeConstraintViolationException;
         return this;
@@ -89,6 +98,7 @@ public class AcceptHandshakeResponse {
      */
     
     public Object handshakeNotFoundException;
+
     public AcceptHandshakeResponse withHandshakeNotFoundException(Object handshakeNotFoundException) {
         this.handshakeNotFoundException = handshakeNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class AcceptHandshakeResponse {
      */
     
     public Object invalidHandshakeTransitionException;
+
     public AcceptHandshakeResponse withInvalidHandshakeTransitionException(Object invalidHandshakeTransitionException) {
         this.invalidHandshakeTransitionException = invalidHandshakeTransitionException;
         return this;
@@ -109,6 +120,7 @@ public class AcceptHandshakeResponse {
      */
     
     public Object invalidInputException;
+
     public AcceptHandshakeResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -116,6 +128,7 @@ public class AcceptHandshakeResponse {
     
     
     public Integer statusCode;
+
     public AcceptHandshakeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class AcceptHandshakeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcceptHandshakeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,6 +147,7 @@ public class AcceptHandshakeResponse {
      */
     
     public Object serviceException;
+
     public AcceptHandshakeResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -143,9 +158,14 @@ public class AcceptHandshakeResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AcceptHandshakeResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public AcceptHandshakeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

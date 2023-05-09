@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ClientProfile {
     @JsonProperty("birthDate")
     public String birthDate;
+
     public ClientProfile withBirthDate(String birthDate) {
         this.birthDate = birthDate;
         return this;
@@ -16,6 +17,7 @@ public class ClientProfile {
     
     @JsonProperty("document")
     public String document;
+
     public ClientProfile withDocument(String document) {
         this.document = document;
         return this;
@@ -23,6 +25,7 @@ public class ClientProfile {
     
     @JsonProperty("email")
     public String email;
+
     public ClientProfile withEmail(String email) {
         this.email = email;
         return this;
@@ -30,6 +33,7 @@ public class ClientProfile {
     
     @JsonProperty("firstName")
     public String firstName;
+
     public ClientProfile withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -37,6 +41,7 @@ public class ClientProfile {
     
     @JsonProperty("isCorporate")
     public Boolean isCorporate;
+
     public ClientProfile withIsCorporate(Boolean isCorporate) {
         this.isCorporate = isCorporate;
         return this;
@@ -44,6 +49,7 @@ public class ClientProfile {
     
     @JsonProperty("lastName")
     public String lastName;
+
     public ClientProfile withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -51,9 +57,19 @@ public class ClientProfile {
     
     @JsonProperty("phone")
     public String phone;
+
     public ClientProfile withPhone(String phone) {
         this.phone = phone;
         return this;
     }
     
+    public ClientProfile(@JsonProperty("birthDate") String birthDate, @JsonProperty("document") String document, @JsonProperty("email") String email, @JsonProperty("firstName") String firstName, @JsonProperty("isCorporate") Boolean isCorporate, @JsonProperty("lastName") String lastName, @JsonProperty("phone") String phone) {
+        this.birthDate = birthDate;
+        this.document = document;
+        this.email = email;
+        this.firstName = firstName;
+        this.isCorporate = isCorporate;
+        this.lastName = lastName;
+        this.phone = phone;
+  }
 }

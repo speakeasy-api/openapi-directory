@@ -15,6 +15,7 @@ public class CreateVirtualGatewayRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateVirtualGatewayRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateVirtualGatewayRequestBody {
      */
     @JsonProperty("spec")
     public CreateVirtualGatewayRequestBodySpec spec;
+
     public CreateVirtualGatewayRequestBody withSpec(CreateVirtualGatewayRequestBodySpec spec) {
         this.spec = spec;
         return this;
@@ -36,6 +38,7 @@ public class CreateVirtualGatewayRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.TagRef[] tags;
+
     public CreateVirtualGatewayRequestBody withTags(org.openapis.openapi.models.shared.TagRef[] tags) {
         this.tags = tags;
         return this;
@@ -46,9 +49,14 @@ public class CreateVirtualGatewayRequestBody {
      */
     @JsonProperty("virtualGatewayName")
     public String virtualGatewayName;
+
     public CreateVirtualGatewayRequestBody withVirtualGatewayName(String virtualGatewayName) {
         this.virtualGatewayName = virtualGatewayName;
         return this;
     }
     
+    public CreateVirtualGatewayRequestBody(@JsonProperty("spec") CreateVirtualGatewayRequestBodySpec spec, @JsonProperty("virtualGatewayName") String virtualGatewayName) {
+        this.spec = spec;
+        this.virtualGatewayName = virtualGatewayName;
+  }
 }

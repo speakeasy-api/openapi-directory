@@ -18,6 +18,7 @@ public class SparkSqlBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jarFileUris")
     public String[] jarFileUris;
+
     public SparkSqlBatch withJarFileUris(String[] jarFileUris) {
         this.jarFileUris = jarFileUris;
         return this;
@@ -29,6 +30,7 @@ public class SparkSqlBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryFileUri")
     public String queryFileUri;
+
     public SparkSqlBatch withQueryFileUri(String queryFileUri) {
         this.queryFileUri = queryFileUri;
         return this;
@@ -40,9 +42,11 @@ public class SparkSqlBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryVariables")
     public java.util.Map<String, String> queryVariables;
+
     public SparkSqlBatch withQueryVariables(java.util.Map<String, String> queryVariables) {
         this.queryVariables = queryVariables;
         return this;
     }
     
+    public SparkSqlBatch(){}
 }

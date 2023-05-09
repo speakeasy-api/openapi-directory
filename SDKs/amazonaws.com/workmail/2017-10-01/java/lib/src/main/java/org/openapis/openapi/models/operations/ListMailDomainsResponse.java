@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMailDomainsResponse {
     
     public String contentType;
+
     public ListMailDomainsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListMailDomainsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListMailDomainsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class ListMailDomainsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMailDomainsResponse listMailDomainsResponse;
+
     public ListMailDomainsResponse withListMailDomainsResponse(org.openapis.openapi.models.shared.ListMailDomainsResponse listMailDomainsResponse) {
         this.listMailDomainsResponse = listMailDomainsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListMailDomainsResponse {
      */
     
     public Object organizationNotFoundException;
+
     public ListMailDomainsResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ListMailDomainsResponse {
      */
     
     public Object organizationStateException;
+
     public ListMailDomainsResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -56,6 +62,7 @@ public class ListMailDomainsResponse {
     
     
     public Integer statusCode;
+
     public ListMailDomainsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListMailDomainsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMailDomainsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListMailDomainsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

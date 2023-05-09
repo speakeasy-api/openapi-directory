@@ -15,9 +15,11 @@ public class RevokeDBSecurityGroupIngressResult {
      */
     
     public DBSecurityGroup dbSecurityGroup;
+
     public RevokeDBSecurityGroupIngressResult withDBSecurityGroup(DBSecurityGroup dbSecurityGroup) {
         this.dbSecurityGroup = dbSecurityGroup;
         return this;
     }
     
+    public RevokeDBSecurityGroupIngressResult(){}
 }

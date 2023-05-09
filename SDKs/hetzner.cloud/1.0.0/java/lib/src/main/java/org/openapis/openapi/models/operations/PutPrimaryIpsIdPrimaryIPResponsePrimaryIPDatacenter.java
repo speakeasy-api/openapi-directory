@@ -15,6 +15,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter {
      */
     @JsonProperty("description")
     public String description;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter {
      */
     @JsonProperty("id")
     public Long id;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter {
     
     @JsonProperty("location")
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenterLocation location;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter withLocation(PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenterLocation location) {
         this.location = location;
         return this;
@@ -42,6 +45,7 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter {
      */
     @JsonProperty("name")
     public String name;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +56,17 @@ public class PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter {
      */
     @JsonProperty("server_types")
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenterServerTypes serverTypes;
+
     public PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter withServerTypes(PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenterServerTypes serverTypes) {
         this.serverTypes = serverTypes;
         return this;
     }
     
+    public PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenter(@JsonProperty("description") String description, @JsonProperty("id") Long id, @JsonProperty("location") PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenterLocation location, @JsonProperty("name") String name, @JsonProperty("server_types") PutPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenterServerTypes serverTypes) {
+        this.description = description;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.serverTypes = serverTypes;
+  }
 }

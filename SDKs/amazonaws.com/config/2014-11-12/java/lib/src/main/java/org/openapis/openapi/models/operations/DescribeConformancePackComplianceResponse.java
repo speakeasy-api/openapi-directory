@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeConformancePackComplianceResponse {
     
     public String contentType;
+
     public DescribeConformancePackComplianceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeConformancePackComplianceResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeConformancePackComplianceResponse describeConformancePackComplianceResponse;
+
     public DescribeConformancePackComplianceResponse withDescribeConformancePackComplianceResponse(org.openapis.openapi.models.shared.DescribeConformancePackComplianceResponse describeConformancePackComplianceResponse) {
         this.describeConformancePackComplianceResponse = describeConformancePackComplianceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeConformancePackComplianceResponse {
      */
     
     public Object invalidLimitException;
+
     public DescribeConformancePackComplianceResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeConformancePackComplianceResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeConformancePackComplianceResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeConformancePackComplianceResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeConformancePackComplianceResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeConformancePackComplianceResponse {
      */
     
     public Object noSuchConfigRuleInConformancePackException;
+
     public DescribeConformancePackComplianceResponse withNoSuchConfigRuleInConformancePackException(Object noSuchConfigRuleInConformancePackException) {
         this.noSuchConfigRuleInConformancePackException = noSuchConfigRuleInConformancePackException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeConformancePackComplianceResponse {
      */
     
     public Object noSuchConformancePackException;
+
     public DescribeConformancePackComplianceResponse withNoSuchConformancePackException(Object noSuchConformancePackException) {
         this.noSuchConformancePackException = noSuchConformancePackException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeConformancePackComplianceResponse {
     
     
     public Integer statusCode;
+
     public DescribeConformancePackComplianceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeConformancePackComplianceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeConformancePackComplianceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeConformancePackComplianceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

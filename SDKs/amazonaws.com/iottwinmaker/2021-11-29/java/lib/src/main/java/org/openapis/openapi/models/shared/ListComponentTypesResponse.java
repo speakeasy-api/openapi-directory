@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListComponentTypesResponse {
     @JsonProperty("componentTypeSummaries")
     public ComponentTypeSummary[] componentTypeSummaries;
+
     public ListComponentTypesResponse withComponentTypeSummaries(ComponentTypeSummary[] componentTypeSummaries) {
         this.componentTypeSummaries = componentTypeSummaries;
         return this;
@@ -22,6 +23,7 @@ public class ListComponentTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListComponentTypesResponse withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +32,7 @@ public class ListComponentTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListComponentTypesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +40,14 @@ public class ListComponentTypesResponse {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public ListComponentTypesResponse withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public ListComponentTypesResponse(@JsonProperty("componentTypeSummaries") ComponentTypeSummary[] componentTypeSummaries, @JsonProperty("workspaceId") String workspaceId) {
+        this.componentTypeSummaries = componentTypeSummaries;
+        this.workspaceId = workspaceId;
+  }
 }

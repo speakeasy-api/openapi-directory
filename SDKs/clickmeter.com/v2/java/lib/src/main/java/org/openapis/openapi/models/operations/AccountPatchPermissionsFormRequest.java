@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountPatchPermissionsFormRequest {
@@ -12,6 +13,7 @@ public class AccountPatchPermissionsFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.ApiCoreRequestsPermissionPatchRequest apiCoreRequestsPermissionPatchRequest;
+
     public AccountPatchPermissionsFormRequest withApiCoreRequestsPermissionPatchRequest(org.openapis.openapi.models.shared.ApiCoreRequestsPermissionPatchRequest apiCoreRequestsPermissionPatchRequest) {
         this.apiCoreRequestsPermissionPatchRequest = apiCoreRequestsPermissionPatchRequest;
         return this;
@@ -22,6 +24,7 @@ public class AccountPatchPermissionsFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
     public Long guestId;
+
     public AccountPatchPermissionsFormRequest withGuestId(Long guestId) {
         this.guestId = guestId;
         return this;
@@ -32,9 +35,15 @@ public class AccountPatchPermissionsFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public AccountPatchPermissionsFormTypeEnum type;
+
     public AccountPatchPermissionsFormRequest withType(AccountPatchPermissionsFormTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AccountPatchPermissionsFormRequest(@JsonProperty("Api.Core.Requests.PermissionPatchRequest") org.openapis.openapi.models.shared.ApiCoreRequestsPermissionPatchRequest apiCoreRequestsPermissionPatchRequest, @JsonProperty("guestId") Long guestId, @JsonProperty("type") AccountPatchPermissionsFormTypeEnum type) {
+        this.apiCoreRequestsPermissionPatchRequest = apiCoreRequestsPermissionPatchRequest;
+        this.guestId = guestId;
+        this.type = type;
+  }
 }

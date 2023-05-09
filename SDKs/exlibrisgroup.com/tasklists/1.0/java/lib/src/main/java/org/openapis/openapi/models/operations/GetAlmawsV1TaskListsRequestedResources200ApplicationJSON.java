@@ -18,6 +18,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_resource")
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResource[] requestedResource;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSON withRequestedResource(GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResource[] requestedResource) {
         this.requestedResource = requestedResource;
         return this;
@@ -29,9 +30,11 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_record_count")
     public Integer totalRecordCount;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSON withTotalRecordCount(Integer totalRecordCount) {
         this.totalRecordCount = totalRecordCount;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRequestedResources200ApplicationJSON(){}
 }

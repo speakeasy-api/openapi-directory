@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResourceGroupTag {
     @JsonProperty("key")
     public String key;
+
     public ResourceGroupTag withKey(String key) {
         this.key = key;
         return this;
@@ -22,9 +23,13 @@ public class ResourceGroupTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ResourceGroupTag withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ResourceGroupTag(@JsonProperty("key") String key) {
+        this.key = key;
+  }
 }

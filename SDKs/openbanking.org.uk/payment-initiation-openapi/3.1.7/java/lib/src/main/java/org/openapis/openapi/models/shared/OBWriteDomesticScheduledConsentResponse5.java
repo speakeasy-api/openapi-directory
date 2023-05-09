@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBWriteDomesticScheduledConsentResponse5 {
     @JsonProperty("Data")
     public OBWriteDomesticScheduledConsentResponse5Data data;
+
     public OBWriteDomesticScheduledConsentResponse5 withData(OBWriteDomesticScheduledConsentResponse5Data data) {
         this.data = data;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteDomesticScheduledConsentResponse5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Links")
     public Links links;
+
     public OBWriteDomesticScheduledConsentResponse5 withLinks(Links links) {
         this.links = links;
         return this;
@@ -36,6 +38,7 @@ public class OBWriteDomesticScheduledConsentResponse5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Meta")
     public Meta meta;
+
     public OBWriteDomesticScheduledConsentResponse5 withMeta(Meta meta) {
         this.meta = meta;
         return this;
@@ -46,9 +49,14 @@ public class OBWriteDomesticScheduledConsentResponse5 {
      */
     @JsonProperty("Risk")
     public OBRisk1 risk;
+
     public OBWriteDomesticScheduledConsentResponse5 withRisk(OBRisk1 risk) {
         this.risk = risk;
         return this;
     }
     
+    public OBWriteDomesticScheduledConsentResponse5(@JsonProperty("Data") OBWriteDomesticScheduledConsentResponse5Data data, @JsonProperty("Risk") OBRisk1 risk) {
+        this.data = data;
+        this.risk = risk;
+  }
 }

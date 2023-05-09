@@ -18,6 +18,7 @@ public class UpdateNetworkSwitchSettingsMulticastRequestBodyDefaultSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floodUnknownMulticastTrafficEnabled")
     public Boolean floodUnknownMulticastTrafficEnabled;
+
     public UpdateNetworkSwitchSettingsMulticastRequestBodyDefaultSettings withFloodUnknownMulticastTrafficEnabled(Boolean floodUnknownMulticastTrafficEnabled) {
         this.floodUnknownMulticastTrafficEnabled = floodUnknownMulticastTrafficEnabled;
         return this;
@@ -29,9 +30,11 @@ public class UpdateNetworkSwitchSettingsMulticastRequestBodyDefaultSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("igmpSnoopingEnabled")
     public Boolean igmpSnoopingEnabled;
+
     public UpdateNetworkSwitchSettingsMulticastRequestBodyDefaultSettings withIgmpSnoopingEnabled(Boolean igmpSnoopingEnabled) {
         this.igmpSnoopingEnabled = igmpSnoopingEnabled;
         return this;
     }
     
+    public UpdateNetworkSwitchSettingsMulticastRequestBodyDefaultSettings(){}
 }

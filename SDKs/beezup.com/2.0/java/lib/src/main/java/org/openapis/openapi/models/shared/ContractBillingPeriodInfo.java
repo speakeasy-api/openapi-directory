@@ -18,6 +18,7 @@ public class ContractBillingPeriodInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountBillingPeriodDiscount")
     public Double amountBillingPeriodDiscount;
+
     public ContractBillingPeriodInfo withAmountBillingPeriodDiscount(Double amountBillingPeriodDiscount) {
         this.amountBillingPeriodDiscount = amountBillingPeriodDiscount;
         return this;
@@ -29,6 +30,7 @@ public class ContractBillingPeriodInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingPeriodInMonth")
     public Integer billingPeriodInMonth;
+
     public ContractBillingPeriodInfo withBillingPeriodInMonth(Integer billingPeriodInMonth) {
         this.billingPeriodInMonth = billingPeriodInMonth;
         return this;
@@ -40,9 +42,11 @@ public class ContractBillingPeriodInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingPeriodPercentDiscount")
     public Double billingPeriodPercentDiscount;
+
     public ContractBillingPeriodInfo withBillingPeriodPercentDiscount(Double billingPeriodPercentDiscount) {
         this.billingPeriodPercentDiscount = billingPeriodPercentDiscount;
         return this;
     }
     
+    public ContractBillingPeriodInfo(){}
 }

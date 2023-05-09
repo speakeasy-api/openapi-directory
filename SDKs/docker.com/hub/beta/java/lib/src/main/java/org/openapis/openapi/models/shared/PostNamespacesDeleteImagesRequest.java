@@ -22,6 +22,7 @@ public class PostNamespacesDeleteImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active_from")
     public String activeFrom;
+
     public PostNamespacesDeleteImagesRequest withActiveFrom(String activeFrom) {
         this.activeFrom = activeFrom;
         return this;
@@ -33,6 +34,7 @@ public class PostNamespacesDeleteImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dry_run")
     public Boolean dryRun;
+
     public PostNamespacesDeleteImagesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -54,6 +56,7 @@ public class PostNamespacesDeleteImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignore_warnings")
     public PostNamespacesDeleteImagesRequestIgnoreWarnings[] ignoreWarnings;
+
     public PostNamespacesDeleteImagesRequest withIgnoreWarnings(PostNamespacesDeleteImagesRequestIgnoreWarnings[] ignoreWarnings) {
         this.ignoreWarnings = ignoreWarnings;
         return this;
@@ -65,9 +68,11 @@ public class PostNamespacesDeleteImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manifests")
     public PostNamespacesDeleteImagesRequestManifests[] manifests;
+
     public PostNamespacesDeleteImagesRequest withManifests(PostNamespacesDeleteImagesRequestManifests[] manifests) {
         this.manifests = manifests;
         return this;
     }
     
+    public PostNamespacesDeleteImagesRequest(){}
 }

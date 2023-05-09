@@ -18,6 +18,7 @@ public class GetAccountByIdAccountCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public GetAccountByIdAccountCurrencyCodeEnum code;
+
     public GetAccountByIdAccountCurrency withCode(GetAccountByIdAccountCurrencyCodeEnum code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class GetAccountByIdAccountCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetAccountByIdAccountCurrency withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public GetAccountByIdAccountCurrency(){}
 }

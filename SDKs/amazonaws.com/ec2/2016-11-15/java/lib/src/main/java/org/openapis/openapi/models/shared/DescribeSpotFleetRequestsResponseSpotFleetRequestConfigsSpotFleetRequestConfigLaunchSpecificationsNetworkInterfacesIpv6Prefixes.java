@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsNetworkInterfacesIpv6Prefixes {
     
     public String ipv6Prefix;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsNetworkInterfacesIpv6Prefixes withIpv6Prefix(String ipv6Prefix) {
         this.ipv6Prefix = ipv6Prefix;
         return this;
     }
     
+    public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigLaunchSpecificationsNetworkInterfacesIpv6Prefixes(){}
 }

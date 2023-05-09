@@ -15,9 +15,11 @@ public class OBReadDataStatement2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statement")
     public OBStatement2[] statement;
+
     public OBReadDataStatement2 withStatement(OBStatement2[] statement) {
         this.statement = statement;
         return this;
     }
     
+    public OBReadDataStatement2(){}
 }

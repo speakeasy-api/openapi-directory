@@ -16,6 +16,7 @@ public class TestCardRangeCreationResult {
      */
     @JsonProperty("cardNumberRangeEnd")
     public String cardNumberRangeEnd;
+
     public TestCardRangeCreationResult withCardNumberRangeEnd(String cardNumberRangeEnd) {
         this.cardNumberRangeEnd = cardNumberRangeEnd;
         return this;
@@ -28,6 +29,7 @@ public class TestCardRangeCreationResult {
      */
     @JsonProperty("cardNumberRangeStart")
     public String cardNumberRangeStart;
+
     public TestCardRangeCreationResult withCardNumberRangeStart(String cardNumberRangeStart) {
         this.cardNumberRangeStart = cardNumberRangeStart;
         return this;
@@ -41,6 +43,7 @@ public class TestCardRangeCreationResult {
      */
     @JsonProperty("creationResultCode")
     public TestCardRangeCreationResultCreationResultCodeEnum creationResultCode;
+
     public TestCardRangeCreationResult withCreationResultCode(TestCardRangeCreationResultCreationResultCodeEnum creationResultCode) {
         this.creationResultCode = creationResultCode;
         return this;
@@ -52,9 +55,15 @@ public class TestCardRangeCreationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TestCardRangeCreationResult withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public TestCardRangeCreationResult(@JsonProperty("cardNumberRangeEnd") String cardNumberRangeEnd, @JsonProperty("cardNumberRangeStart") String cardNumberRangeStart, @JsonProperty("creationResultCode") TestCardRangeCreationResultCreationResultCodeEnum creationResultCode) {
+        this.cardNumberRangeEnd = cardNumberRangeEnd;
+        this.cardNumberRangeStart = cardNumberRangeStart;
+        this.creationResultCode = creationResultCode;
+  }
 }

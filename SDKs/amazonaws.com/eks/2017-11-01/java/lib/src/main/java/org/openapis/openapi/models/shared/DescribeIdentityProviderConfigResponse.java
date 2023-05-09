@@ -15,9 +15,11 @@ public class DescribeIdentityProviderConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProviderConfig")
     public IdentityProviderConfigResponse identityProviderConfig;
+
     public DescribeIdentityProviderConfigResponse withIdentityProviderConfig(IdentityProviderConfigResponse identityProviderConfig) {
         this.identityProviderConfig = identityProviderConfig;
         return this;
     }
     
+    public DescribeIdentityProviderConfigResponse(){}
 }

@@ -18,6 +18,7 @@ public class RuntimeError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public RuntimeError withCode(String code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class RuntimeError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public RuntimeError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public RuntimeError(){}
 }

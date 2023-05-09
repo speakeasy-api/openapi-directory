@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesContributorsPartialUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public NodesContributorsPartialUpdateContributorInput requestBody;
+
     public NodesContributorsPartialUpdateRequest withRequestBody(NodesContributorsPartialUpdateContributorInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class NodesContributorsPartialUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
     public String nodeId;
+
     public NodesContributorsPartialUpdateRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -29,9 +32,15 @@ public class NodesContributorsPartialUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
     public String userId;
+
     public NodesContributorsPartialUpdateRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public NodesContributorsPartialUpdateRequest(@JsonProperty("RequestBody") NodesContributorsPartialUpdateContributorInput requestBody, @JsonProperty("node_id") String nodeId, @JsonProperty("user_id") String userId) {
+        this.requestBody = requestBody;
+        this.nodeId = nodeId;
+        this.userId = userId;
+  }
 }

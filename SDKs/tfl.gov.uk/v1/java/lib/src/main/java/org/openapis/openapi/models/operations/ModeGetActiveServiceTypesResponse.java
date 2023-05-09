@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModeGetActiveServiceTypesResponse {
     
     public byte[] body;
+
     public ModeGetActiveServiceTypesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ModeGetActiveServiceTypesResponse {
     
     
     public String contentType;
+
     public ModeGetActiveServiceTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ModeGetActiveServiceTypesResponse {
     
     
     public Integer statusCode;
+
     public ModeGetActiveServiceTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ModeGetActiveServiceTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModeGetActiveServiceTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ModeGetActiveServiceTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesActiveServiceType[] tflApiPresentationEntitiesActiveServiceTypes;
+
     public ModeGetActiveServiceTypesResponse withTflApiPresentationEntitiesActiveServiceTypes(org.openapis.openapi.models.shared.TflApiPresentationEntitiesActiveServiceType[] tflApiPresentationEntitiesActiveServiceTypes) {
         this.tflApiPresentationEntitiesActiveServiceTypes = tflApiPresentationEntitiesActiveServiceTypes;
         return this;
     }
     
+    public ModeGetActiveServiceTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

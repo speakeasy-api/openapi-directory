@@ -18,6 +18,7 @@ public class DatafeedsCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchId")
     public Long batchId;
+
     public DatafeedsCustomBatchResponseEntry withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -29,6 +30,7 @@ public class DatafeedsCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datafeed")
     public Datafeed datafeed;
+
     public DatafeedsCustomBatchResponseEntry withDatafeed(Datafeed datafeed) {
         this.datafeed = datafeed;
         return this;
@@ -40,9 +42,11 @@ public class DatafeedsCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Errors errors;
+
     public DatafeedsCustomBatchResponseEntry withErrors(Errors errors) {
         this.errors = errors;
         return this;
     }
     
+    public DatafeedsCustomBatchResponseEntry(){}
 }

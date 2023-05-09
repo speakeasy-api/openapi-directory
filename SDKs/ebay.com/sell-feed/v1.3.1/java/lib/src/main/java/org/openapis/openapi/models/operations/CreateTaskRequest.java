@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTaskRequest {
@@ -12,6 +13,7 @@ public class CreateTaskRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateTaskRequest createTaskRequest;
+
     public CreateTaskRequest withCreateTaskRequest(org.openapis.openapi.models.shared.CreateTaskRequest createTaskRequest) {
         this.createTaskRequest = createTaskRequest;
         return this;
@@ -22,9 +24,13 @@ public class CreateTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public CreateTaskRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
+    public CreateTaskRequest(@JsonProperty("CreateTaskRequest") org.openapis.openapi.models.shared.CreateTaskRequest createTaskRequest) {
+        this.createTaskRequest = createTaskRequest;
+  }
 }

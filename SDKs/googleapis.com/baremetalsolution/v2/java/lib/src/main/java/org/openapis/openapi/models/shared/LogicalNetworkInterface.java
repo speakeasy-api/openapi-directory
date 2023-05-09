@@ -18,6 +18,7 @@ public class LogicalNetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultGateway")
     public Boolean defaultGateway;
+
     public LogicalNetworkInterface withDefaultGateway(Boolean defaultGateway) {
         this.defaultGateway = defaultGateway;
         return this;
@@ -29,6 +30,7 @@ public class LogicalNetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LogicalNetworkInterface withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class LogicalNetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public LogicalNetworkInterface withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -51,6 +54,7 @@ public class LogicalNetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public LogicalNetworkInterface withNetwork(String network) {
         this.network = network;
         return this;
@@ -62,9 +66,11 @@ public class LogicalNetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkType")
     public LogicalNetworkInterfaceNetworkTypeEnum networkType;
+
     public LogicalNetworkInterface withNetworkType(LogicalNetworkInterfaceNetworkTypeEnum networkType) {
         this.networkType = networkType;
         return this;
     }
     
+    public LogicalNetworkInterface(){}
 }

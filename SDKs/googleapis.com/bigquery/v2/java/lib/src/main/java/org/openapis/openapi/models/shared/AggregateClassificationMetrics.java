@@ -18,6 +18,7 @@ public class AggregateClassificationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accuracy")
     public Double accuracy;
+
     public AggregateClassificationMetrics withAccuracy(Double accuracy) {
         this.accuracy = accuracy;
         return this;
@@ -29,6 +30,7 @@ public class AggregateClassificationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("f1Score")
     public Double f1Score;
+
     public AggregateClassificationMetrics withF1Score(Double f1Score) {
         this.f1Score = f1Score;
         return this;
@@ -40,6 +42,7 @@ public class AggregateClassificationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logLoss")
     public Double logLoss;
+
     public AggregateClassificationMetrics withLogLoss(Double logLoss) {
         this.logLoss = logLoss;
         return this;
@@ -51,6 +54,7 @@ public class AggregateClassificationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Double precision;
+
     public AggregateClassificationMetrics withPrecision(Double precision) {
         this.precision = precision;
         return this;
@@ -62,6 +66,7 @@ public class AggregateClassificationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recall")
     public Double recall;
+
     public AggregateClassificationMetrics withRecall(Double recall) {
         this.recall = recall;
         return this;
@@ -73,6 +78,7 @@ public class AggregateClassificationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rocAuc")
     public Double rocAuc;
+
     public AggregateClassificationMetrics withRocAuc(Double rocAuc) {
         this.rocAuc = rocAuc;
         return this;
@@ -84,9 +90,11 @@ public class AggregateClassificationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threshold")
     public Double threshold;
+
     public AggregateClassificationMetrics withThreshold(Double threshold) {
         this.threshold = threshold;
         return this;
     }
     
+    public AggregateClassificationMetrics(){}
 }

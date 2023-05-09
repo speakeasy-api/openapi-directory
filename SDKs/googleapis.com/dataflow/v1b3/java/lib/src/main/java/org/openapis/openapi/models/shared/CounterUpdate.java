@@ -18,6 +18,7 @@ public class CounterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boolean")
     public Boolean boolean_;
+
     public CounterUpdate withBoolean(Boolean boolean_) {
         this.boolean_ = boolean_;
         return this;
@@ -29,6 +30,7 @@ public class CounterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cumulative")
     public Boolean cumulative;
+
     public CounterUpdate withCumulative(Boolean cumulative) {
         this.cumulative = cumulative;
         return this;
@@ -40,6 +42,7 @@ public class CounterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution")
     public DistributionUpdate distribution;
+
     public CounterUpdate withDistribution(DistributionUpdate distribution) {
         this.distribution = distribution;
         return this;
@@ -51,6 +54,7 @@ public class CounterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floatingPoint")
     public Double floatingPoint;
+
     public CounterUpdate withFloatingPoint(Double floatingPoint) {
         this.floatingPoint = floatingPoint;
         return this;
@@ -62,6 +66,7 @@ public class CounterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floatingPointList")
     public FloatingPointList floatingPointList;
+
     public CounterUpdate withFloatingPointList(FloatingPointList floatingPointList) {
         this.floatingPointList = floatingPointList;
         return this;
@@ -73,6 +78,7 @@ public class CounterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floatingPointMean")
     public FloatingPointMean floatingPointMean;
+
     public CounterUpdate withFloatingPointMean(FloatingPointMean floatingPointMean) {
         this.floatingPointMean = floatingPointMean;
         return this;
@@ -84,6 +90,7 @@ public class CounterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integer")
     public SplitInt64 integer;
+
     public CounterUpdate withInteger(SplitInt64 integer) {
         this.integer = integer;
         return this;
@@ -95,6 +102,7 @@ public class CounterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerGauge")
     public IntegerGauge integerGauge;
+
     public CounterUpdate withIntegerGauge(IntegerGauge integerGauge) {
         this.integerGauge = integerGauge;
         return this;
@@ -106,6 +114,7 @@ public class CounterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerList")
     public IntegerList integerList;
+
     public CounterUpdate withIntegerList(IntegerList integerList) {
         this.integerList = integerList;
         return this;
@@ -117,6 +126,7 @@ public class CounterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerMean")
     public IntegerMean integerMean;
+
     public CounterUpdate withIntegerMean(IntegerMean integerMean) {
         this.integerMean = integerMean;
         return this;
@@ -128,6 +138,7 @@ public class CounterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internal")
     public Object internal;
+
     public CounterUpdate withInternal(Object internal) {
         this.internal = internal;
         return this;
@@ -139,6 +150,7 @@ public class CounterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameAndKind")
     public NameAndKind nameAndKind;
+
     public CounterUpdate withNameAndKind(NameAndKind nameAndKind) {
         this.nameAndKind = nameAndKind;
         return this;
@@ -150,6 +162,7 @@ public class CounterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortId")
     public String shortId;
+
     public CounterUpdate withShortId(String shortId) {
         this.shortId = shortId;
         return this;
@@ -161,6 +174,7 @@ public class CounterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringList")
     public StringList stringList;
+
     public CounterUpdate withStringList(StringList stringList) {
         this.stringList = stringList;
         return this;
@@ -172,9 +186,11 @@ public class CounterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structuredNameAndMetadata")
     public CounterStructuredNameAndMetadata structuredNameAndMetadata;
+
     public CounterUpdate withStructuredNameAndMetadata(CounterStructuredNameAndMetadata structuredNameAndMetadata) {
         this.structuredNameAndMetadata = structuredNameAndMetadata;
         return this;
     }
     
+    public CounterUpdate(){}
 }

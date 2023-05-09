@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductNotifierRequest {
@@ -12,9 +13,13 @@ public class ProductNotifierRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=notifierId")
     public String notifierId;
+
     public ProductNotifierRequest withNotifierId(String notifierId) {
         this.notifierId = notifierId;
         return this;
     }
     
+    public ProductNotifierRequest(@JsonProperty("notifierId") String notifierId) {
+        this.notifierId = notifierId;
+  }
 }

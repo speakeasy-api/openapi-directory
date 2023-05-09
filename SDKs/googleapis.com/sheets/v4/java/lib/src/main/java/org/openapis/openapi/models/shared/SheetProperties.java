@@ -18,6 +18,7 @@ public class SheetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceSheetProperties")
     public DataSourceSheetProperties dataSourceSheetProperties;
+
     public SheetProperties withDataSourceSheetProperties(DataSourceSheetProperties dataSourceSheetProperties) {
         this.dataSourceSheetProperties = dataSourceSheetProperties;
         return this;
@@ -29,6 +30,7 @@ public class SheetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gridProperties")
     public GridProperties gridProperties;
+
     public SheetProperties withGridProperties(GridProperties gridProperties) {
         this.gridProperties = gridProperties;
         return this;
@@ -40,6 +42,7 @@ public class SheetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public SheetProperties withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -51,6 +54,7 @@ public class SheetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public SheetProperties withIndex(Integer index) {
         this.index = index;
         return this;
@@ -62,6 +66,7 @@ public class SheetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rightToLeft")
     public Boolean rightToLeft;
+
     public SheetProperties withRightToLeft(Boolean rightToLeft) {
         this.rightToLeft = rightToLeft;
         return this;
@@ -73,6 +78,7 @@ public class SheetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetId")
     public Integer sheetId;
+
     public SheetProperties withSheetId(Integer sheetId) {
         this.sheetId = sheetId;
         return this;
@@ -84,6 +90,7 @@ public class SheetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetType")
     public SheetPropertiesSheetTypeEnum sheetType;
+
     public SheetProperties withSheetType(SheetPropertiesSheetTypeEnum sheetType) {
         this.sheetType = sheetType;
         return this;
@@ -95,6 +102,7 @@ public class SheetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tabColor")
     public Color tabColor;
+
     public SheetProperties withTabColor(Color tabColor) {
         this.tabColor = tabColor;
         return this;
@@ -106,6 +114,7 @@ public class SheetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tabColorStyle")
     public ColorStyle tabColorStyle;
+
     public SheetProperties withTabColorStyle(ColorStyle tabColorStyle) {
         this.tabColorStyle = tabColorStyle;
         return this;
@@ -117,9 +126,11 @@ public class SheetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public SheetProperties withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public SheetProperties(){}
 }

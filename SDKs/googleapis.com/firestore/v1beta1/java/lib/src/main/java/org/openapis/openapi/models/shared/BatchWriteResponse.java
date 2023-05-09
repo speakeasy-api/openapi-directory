@@ -18,6 +18,7 @@ public class BatchWriteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Status[] status;
+
     public BatchWriteResponse withStatus(Status[] status) {
         this.status = status;
         return this;
@@ -29,9 +30,11 @@ public class BatchWriteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeResults")
     public WriteResult[] writeResults;
+
     public BatchWriteResponse withWriteResults(WriteResult[] writeResults) {
         this.writeResults = writeResults;
         return this;
     }
     
+    public BatchWriteResponse(){}
 }

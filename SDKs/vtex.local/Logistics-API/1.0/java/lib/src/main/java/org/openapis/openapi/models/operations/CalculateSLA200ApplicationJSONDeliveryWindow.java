@@ -12,6 +12,7 @@ public class CalculateSLA200ApplicationJSONDeliveryWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDateUtc")
     public String endDateUtc;
+
     public CalculateSLA200ApplicationJSONDeliveryWindow withEndDateUtc(String endDateUtc) {
         this.endDateUtc = endDateUtc;
         return this;
@@ -20,6 +21,7 @@ public class CalculateSLA200ApplicationJSONDeliveryWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listPrice")
     public Double listPrice;
+
     public CalculateSLA200ApplicationJSONDeliveryWindow withListPrice(Double listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -28,9 +30,11 @@ public class CalculateSLA200ApplicationJSONDeliveryWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDateUtc")
     public String startDateUtc;
+
     public CalculateSLA200ApplicationJSONDeliveryWindow withStartDateUtc(String startDateUtc) {
         this.startDateUtc = startDateUtc;
         return this;
     }
     
+    public CalculateSLA200ApplicationJSONDeliveryWindow(){}
 }

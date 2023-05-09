@@ -19,6 +19,7 @@ public class EmployeeWage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_id")
     public String employeeId;
+
     public EmployeeWage withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -35,6 +36,7 @@ public class EmployeeWage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hourly_rate")
     public Money hourlyRate;
+
     public EmployeeWage withHourlyRate(Money hourlyRate) {
         this.hourlyRate = hourlyRate;
         return this;
@@ -46,6 +48,7 @@ public class EmployeeWage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public EmployeeWage withId(String id) {
         this.id = id;
         return this;
@@ -57,9 +60,11 @@ public class EmployeeWage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public EmployeeWage withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public EmployeeWage(){}
 }

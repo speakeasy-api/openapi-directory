@@ -18,9 +18,11 @@ public class NegativeKeywordListAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negativeKeywordListId")
     public String negativeKeywordListId;
+
     public NegativeKeywordListAssignedTargetingOptionDetails withNegativeKeywordListId(String negativeKeywordListId) {
         this.negativeKeywordListId = negativeKeywordListId;
         return this;
     }
     
+    public NegativeKeywordListAssignedTargetingOptionDetails(){}
 }

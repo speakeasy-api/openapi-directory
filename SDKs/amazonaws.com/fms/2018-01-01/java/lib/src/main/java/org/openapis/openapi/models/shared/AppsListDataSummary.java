@@ -15,6 +15,7 @@ public class AppsListDataSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppsList")
     public App[] appsList;
+
     public AppsListDataSummary withAppsList(App[] appsList) {
         this.appsList = appsList;
         return this;
@@ -23,6 +24,7 @@ public class AppsListDataSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListArn")
     public String listArn;
+
     public AppsListDataSummary withListArn(String listArn) {
         this.listArn = listArn;
         return this;
@@ -31,6 +33,7 @@ public class AppsListDataSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListId")
     public String listId;
+
     public AppsListDataSummary withListId(String listId) {
         this.listId = listId;
         return this;
@@ -39,9 +42,11 @@ public class AppsListDataSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListName")
     public String listName;
+
     public AppsListDataSummary withListName(String listName) {
         this.listName = listName;
         return this;
     }
     
+    public AppsListDataSummary(){}
 }

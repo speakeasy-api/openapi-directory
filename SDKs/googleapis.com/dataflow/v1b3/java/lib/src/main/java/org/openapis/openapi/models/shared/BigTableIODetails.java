@@ -18,6 +18,7 @@ public class BigTableIODetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public BigTableIODetails withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -29,6 +30,7 @@ public class BigTableIODetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public BigTableIODetails withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -40,9 +42,11 @@ public class BigTableIODetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableId")
     public String tableId;
+
     public BigTableIODetails withTableId(String tableId) {
         this.tableId = tableId;
         return this;
     }
     
+    public BigTableIODetails(){}
 }

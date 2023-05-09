@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class PagespeedApiImageV4PageRect {
     
     public Integer height;
+
     public PagespeedApiImageV4PageRect withHeight(Integer height) {
         this.height = height;
         return this;
@@ -16,6 +17,7 @@ public class PagespeedApiImageV4PageRect {
     
     
     public Integer left;
+
     public PagespeedApiImageV4PageRect withLeft(Integer left) {
         this.left = left;
         return this;
@@ -23,6 +25,7 @@ public class PagespeedApiImageV4PageRect {
     
     
     public Integer top;
+
     public PagespeedApiImageV4PageRect withTop(Integer top) {
         this.top = top;
         return this;
@@ -30,9 +33,11 @@ public class PagespeedApiImageV4PageRect {
     
     
     public Integer width;
+
     public PagespeedApiImageV4PageRect withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public PagespeedApiImageV4PageRect(){}
 }

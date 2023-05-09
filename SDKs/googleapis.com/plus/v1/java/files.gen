@@ -137,4 +137,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/PersonPlacesLived.java
 lib/src/main/java/org/openapis/openapi/models/shared/PersonUrls.java
 lib/src/main/java/org/openapis/openapi/models/shared/Person.java
 lib/src/main/java/org/openapis/openapi/models/shared/PeopleFeed.java
+docs/sdk/README.md
+docs/activities/README.md
+docs/comments/README.md
+docs/people/README.md
 USAGE.md

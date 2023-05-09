@@ -18,9 +18,11 @@ public class IdentityServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public IdentityServiceConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public IdentityServiceConfig(){}
 }

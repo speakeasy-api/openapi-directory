@@ -18,9 +18,11 @@ public class LanguagesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public LanguagesResource[] languages;
+
     public LanguagesListResponse withLanguages(LanguagesResource[] languages) {
         this.languages = languages;
         return this;
     }
     
+    public LanguagesListResponse(){}
 }

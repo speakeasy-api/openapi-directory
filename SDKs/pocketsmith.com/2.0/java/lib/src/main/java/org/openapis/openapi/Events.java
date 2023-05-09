@@ -59,11 +59,9 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteEventsIdResponse res = new org.openapis.openapi.models.operations.DeleteEventsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteEventsIdResponse res = new org.openapis.openapi.models.operations.DeleteEventsIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -101,12 +99,10 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventsIdResponse res = new org.openapis.openapi.models.operations.GetEventsIdResponse() {{
+        org.openapis.openapi.models.operations.GetEventsIdResponse res = new org.openapis.openapi.models.operations.GetEventsIdResponse(contentType, httpRes.statusCode()) {{
             event = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,12 +151,10 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScenariosIdEventsResponse res = new org.openapis.openapi.models.operations.GetScenariosIdEventsResponse() {{
+        org.openapis.openapi.models.operations.GetScenariosIdEventsResponse res = new org.openapis.openapi.models.operations.GetScenariosIdEventsResponse(contentType, httpRes.statusCode()) {{
             events = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -209,12 +203,10 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdEventsResponse res = new org.openapis.openapi.models.operations.GetUsersIdEventsResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdEventsResponse res = new org.openapis.openapi.models.operations.GetUsersIdEventsResponse(contentType, httpRes.statusCode()) {{
             events = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -259,12 +251,10 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostScenariosIdEventsResponse res = new org.openapis.openapi.models.operations.PostScenariosIdEventsResponse() {{
+        org.openapis.openapi.models.operations.PostScenariosIdEventsResponse res = new org.openapis.openapi.models.operations.PostScenariosIdEventsResponse(contentType, httpRes.statusCode()) {{
             event = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -309,12 +299,10 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutEventsIdResponse res = new org.openapis.openapi.models.operations.PutEventsIdResponse() {{
+        org.openapis.openapi.models.operations.PutEventsIdResponse res = new org.openapis.openapi.models.operations.PutEventsIdResponse(contentType, httpRes.statusCode()) {{
             event = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

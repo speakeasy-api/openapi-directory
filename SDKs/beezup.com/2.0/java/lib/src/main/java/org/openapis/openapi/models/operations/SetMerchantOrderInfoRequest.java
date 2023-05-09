@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetMerchantOrderInfoRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public Integer accountId;
+
     public SetMerchantOrderInfoRequest withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +21,7 @@ public class SetMerchantOrderInfoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderId")
     public String beezUPOrderId;
+
     public SetMerchantOrderInfoRequest withBeezUPOrderId(String beezUPOrderId) {
         this.beezUPOrderId = beezUPOrderId;
         return this;
@@ -29,6 +32,7 @@ public class SetMerchantOrderInfoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public SetMerchantOrderInfoRequest withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
@@ -36,9 +40,16 @@ public class SetMerchantOrderInfoRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SetMerchantOrderInfoRequest setMerchantOrderInfoRequest;
+
     public SetMerchantOrderInfoRequest withSetMerchantOrderInfoRequest(org.openapis.openapi.models.shared.SetMerchantOrderInfoRequest setMerchantOrderInfoRequest) {
         this.setMerchantOrderInfoRequest = setMerchantOrderInfoRequest;
         return this;
     }
     
+    public SetMerchantOrderInfoRequest(@JsonProperty("accountId") Integer accountId, @JsonProperty("beezUPOrderId") String beezUPOrderId, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode, @JsonProperty("setMerchantOrderInfoRequest") org.openapis.openapi.models.shared.SetMerchantOrderInfoRequest setMerchantOrderInfoRequest) {
+        this.accountId = accountId;
+        this.beezUPOrderId = beezUPOrderId;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        this.setMerchantOrderInfoRequest = setMerchantOrderInfoRequest;
+  }
 }

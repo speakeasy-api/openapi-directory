@@ -12,6 +12,7 @@ public class PlayerOwnership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeltaOwnershipPercentage")
     public Double deltaOwnershipPercentage;
+
     public PlayerOwnership withDeltaOwnershipPercentage(Double deltaOwnershipPercentage) {
         this.deltaOwnershipPercentage = deltaOwnershipPercentage;
         return this;
@@ -20,6 +21,7 @@ public class PlayerOwnership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeltaStartPercentage")
     public Double deltaStartPercentage;
+
     public PlayerOwnership withDeltaStartPercentage(Double deltaStartPercentage) {
         this.deltaStartPercentage = deltaStartPercentage;
         return this;
@@ -28,6 +30,7 @@ public class PlayerOwnership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerOwnership withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class PlayerOwnership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnershipPercentage")
     public Double ownershipPercentage;
+
     public PlayerOwnership withOwnershipPercentage(Double ownershipPercentage) {
         this.ownershipPercentage = ownershipPercentage;
         return this;
@@ -44,6 +48,7 @@ public class PlayerOwnership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerOwnership withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -52,6 +57,7 @@ public class PlayerOwnership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public PlayerOwnership withPosition(String position) {
         this.position = position;
         return this;
@@ -60,6 +66,7 @@ public class PlayerOwnership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public PlayerOwnership withSeason(Long season) {
         this.season = season;
         return this;
@@ -68,6 +75,7 @@ public class PlayerOwnership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public PlayerOwnership withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -76,6 +84,7 @@ public class PlayerOwnership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartPercentage")
     public Double startPercentage;
+
     public PlayerOwnership withStartPercentage(Double startPercentage) {
         this.startPercentage = startPercentage;
         return this;
@@ -84,6 +93,7 @@ public class PlayerOwnership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public PlayerOwnership withTeam(String team) {
         this.team = team;
         return this;
@@ -92,6 +102,7 @@ public class PlayerOwnership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public PlayerOwnership withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
@@ -100,9 +111,11 @@ public class PlayerOwnership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Week")
     public Long week;
+
     public PlayerOwnership withWeek(Long week) {
         this.week = week;
         return this;
     }
     
+    public PlayerOwnership(){}
 }

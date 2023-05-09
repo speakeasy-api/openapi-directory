@@ -18,6 +18,7 @@ public class MaintenanceSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public MaintenanceSchedule withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class MaintenanceSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleDeadlineTime")
     public String scheduleDeadlineTime;
+
     public MaintenanceSchedule withScheduleDeadlineTime(String scheduleDeadlineTime) {
         this.scheduleDeadlineTime = scheduleDeadlineTime;
         return this;
@@ -40,9 +42,11 @@ public class MaintenanceSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public MaintenanceSchedule withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public MaintenanceSchedule(){}
 }

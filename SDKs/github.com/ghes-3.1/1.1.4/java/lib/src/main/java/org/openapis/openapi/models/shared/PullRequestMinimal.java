@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PullRequestMinimal {
     @JsonProperty("base")
     public PullRequestMinimalBase base;
+
     public PullRequestMinimal withBase(PullRequestMinimalBase base) {
         this.base = base;
         return this;
@@ -16,6 +17,7 @@ public class PullRequestMinimal {
     
     @JsonProperty("head")
     public PullRequestMinimalHead head;
+
     public PullRequestMinimal withHead(PullRequestMinimalHead head) {
         this.head = head;
         return this;
@@ -23,6 +25,7 @@ public class PullRequestMinimal {
     
     @JsonProperty("id")
     public Long id;
+
     public PullRequestMinimal withId(Long id) {
         this.id = id;
         return this;
@@ -30,6 +33,7 @@ public class PullRequestMinimal {
     
     @JsonProperty("number")
     public Long number;
+
     public PullRequestMinimal withNumber(Long number) {
         this.number = number;
         return this;
@@ -37,9 +41,17 @@ public class PullRequestMinimal {
     
     @JsonProperty("url")
     public String url;
+
     public PullRequestMinimal withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PullRequestMinimal(@JsonProperty("base") PullRequestMinimalBase base, @JsonProperty("head") PullRequestMinimalHead head, @JsonProperty("id") Long id, @JsonProperty("number") Long number, @JsonProperty("url") String url) {
+        this.base = base;
+        this.head = head;
+        this.id = id;
+        this.number = number;
+        this.url = url;
+  }
 }

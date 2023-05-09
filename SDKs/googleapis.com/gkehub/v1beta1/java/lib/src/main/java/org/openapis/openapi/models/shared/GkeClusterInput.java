@@ -18,9 +18,11 @@ public class GkeClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLink")
     public String resourceLink;
+
     public GkeClusterInput withResourceLink(String resourceLink) {
         this.resourceLink = resourceLink;
         return this;
     }
     
+    public GkeClusterInput(){}
 }

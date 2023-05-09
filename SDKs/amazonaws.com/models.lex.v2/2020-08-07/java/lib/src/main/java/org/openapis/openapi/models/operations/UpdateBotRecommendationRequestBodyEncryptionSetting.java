@@ -15,6 +15,7 @@ public class UpdateBotRecommendationRequestBodyEncryptionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedTranscriptsPassword")
     public String associatedTranscriptsPassword;
+
     public UpdateBotRecommendationRequestBodyEncryptionSetting withAssociatedTranscriptsPassword(String associatedTranscriptsPassword) {
         this.associatedTranscriptsPassword = associatedTranscriptsPassword;
         return this;
@@ -23,6 +24,7 @@ public class UpdateBotRecommendationRequestBodyEncryptionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botLocaleExportPassword")
     public String botLocaleExportPassword;
+
     public UpdateBotRecommendationRequestBodyEncryptionSetting withBotLocaleExportPassword(String botLocaleExportPassword) {
         this.botLocaleExportPassword = botLocaleExportPassword;
         return this;
@@ -31,9 +33,11 @@ public class UpdateBotRecommendationRequestBodyEncryptionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public UpdateBotRecommendationRequestBodyEncryptionSetting withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
     }
     
+    public UpdateBotRecommendationRequestBodyEncryptionSetting(){}
 }

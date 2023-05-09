@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSlackWorkspaceConfigurationsResponse {
@@ -12,6 +13,7 @@ public class ListSlackWorkspaceConfigurationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSlackWorkspaceConfigurationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListSlackWorkspaceConfigurationsResponse {
     
     
     public String contentType;
+
     public ListSlackWorkspaceConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSlackWorkspaceConfigurationsResponse {
      */
     
     public Object internalServerException;
+
     public ListSlackWorkspaceConfigurationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListSlackWorkspaceConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSlackWorkspaceConfigurationsResult listSlackWorkspaceConfigurationsResult;
+
     public ListSlackWorkspaceConfigurationsResponse withListSlackWorkspaceConfigurationsResult(org.openapis.openapi.models.shared.ListSlackWorkspaceConfigurationsResult listSlackWorkspaceConfigurationsResult) {
         this.listSlackWorkspaceConfigurationsResult = listSlackWorkspaceConfigurationsResult;
         return this;
@@ -46,6 +51,7 @@ public class ListSlackWorkspaceConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public ListSlackWorkspaceConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListSlackWorkspaceConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSlackWorkspaceConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListSlackWorkspaceConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

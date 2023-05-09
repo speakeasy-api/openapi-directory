@@ -18,9 +18,11 @@ public class OrganizationOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directoryCustomerId")
     public String directoryCustomerId;
+
     public OrganizationOwner withDirectoryCustomerId(String directoryCustomerId) {
         this.directoryCustomerId = directoryCustomerId;
         return this;
     }
     
+    public OrganizationOwner(){}
 }

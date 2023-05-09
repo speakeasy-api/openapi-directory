@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListFHIRDatastoresResponse {
     @JsonProperty("DatastorePropertiesList")
     public DatastoreProperties[] datastorePropertiesList;
+
     public ListFHIRDatastoresResponse withDatastorePropertiesList(DatastoreProperties[] datastorePropertiesList) {
         this.datastorePropertiesList = datastorePropertiesList;
         return this;
@@ -22,9 +23,13 @@ public class ListFHIRDatastoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFHIRDatastoresResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFHIRDatastoresResponse(@JsonProperty("DatastorePropertiesList") DatastoreProperties[] datastorePropertiesList) {
+        this.datastorePropertiesList = datastorePropertiesList;
+  }
 }

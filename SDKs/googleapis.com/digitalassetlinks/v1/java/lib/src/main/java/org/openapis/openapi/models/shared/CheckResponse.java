@@ -18,6 +18,7 @@ public class CheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugString")
     public String debugString;
+
     public CheckResponse withDebugString(String debugString) {
         this.debugString = debugString;
         return this;
@@ -29,6 +30,7 @@ public class CheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public CheckResponseErrorCodeEnum[] errorCode;
+
     public CheckResponse withErrorCode(CheckResponseErrorCodeEnum[] errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -40,6 +42,7 @@ public class CheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linked")
     public Boolean linked;
+
     public CheckResponse withLinked(Boolean linked) {
         this.linked = linked;
         return this;
@@ -51,9 +54,11 @@ public class CheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAge")
     public String maxAge;
+
     public CheckResponse withMaxAge(String maxAge) {
         this.maxAge = maxAge;
         return this;
     }
     
+    public CheckResponse(){}
 }

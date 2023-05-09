@@ -15,6 +15,7 @@ public class ProductTypeVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ProductTypeVO withLabel(String label) {
         this.label = label;
         return this;
@@ -23,9 +24,11 @@ public class ProductTypeVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_type_id")
     public Long productTypeId;
+
     public ProductTypeVO withProductTypeId(Long productTypeId) {
         this.productTypeId = productTypeId;
         return this;
     }
     
+    public ProductTypeVO(){}
 }

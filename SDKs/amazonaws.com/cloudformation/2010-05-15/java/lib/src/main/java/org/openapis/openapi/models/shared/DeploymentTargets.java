@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeploymentTargets {
     
     public AccountFilterTypeEnum accountFilterType;
+
     public DeploymentTargets withAccountFilterType(AccountFilterTypeEnum accountFilterType) {
         this.accountFilterType = accountFilterType;
         return this;
@@ -19,6 +20,7 @@ public class DeploymentTargets {
     
     
     public String[] accounts;
+
     public DeploymentTargets withAccounts(String[] accounts) {
         this.accounts = accounts;
         return this;
@@ -26,6 +28,7 @@ public class DeploymentTargets {
     
     
     public String accountsUrl;
+
     public DeploymentTargets withAccountsUrl(String accountsUrl) {
         this.accountsUrl = accountsUrl;
         return this;
@@ -33,9 +36,11 @@ public class DeploymentTargets {
     
     
     public String[] organizationalUnitIds;
+
     public DeploymentTargets withOrganizationalUnitIds(String[] organizationalUnitIds) {
         this.organizationalUnitIds = organizationalUnitIds;
         return this;
     }
     
+    public DeploymentTargets(){}
 }

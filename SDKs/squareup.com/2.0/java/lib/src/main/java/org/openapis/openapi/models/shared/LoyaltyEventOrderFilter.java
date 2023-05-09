@@ -15,9 +15,13 @@ public class LoyaltyEventOrderFilter {
      */
     @JsonProperty("order_id")
     public String orderId;
+
     public LoyaltyEventOrderFilter withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     
+    public LoyaltyEventOrderFilter(@JsonProperty("order_id") String orderId) {
+        this.orderId = orderId;
+  }
 }

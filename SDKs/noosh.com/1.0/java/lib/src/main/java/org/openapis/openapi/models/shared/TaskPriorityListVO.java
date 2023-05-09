@@ -15,6 +15,7 @@ public class TaskPriorityListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public TaskPriorityVO[] results;
+
     public TaskPriorityListVO withResults(TaskPriorityVO[] results) {
         this.results = results;
         return this;
@@ -23,6 +24,7 @@ public class TaskPriorityListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public TaskPriorityListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class TaskPriorityListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public TaskPriorityListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public TaskPriorityListVO(){}
 }

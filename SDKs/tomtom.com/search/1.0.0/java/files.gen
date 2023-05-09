@@ -94,4 +94,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/VersionNumberEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExtEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ViewEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/additionaldata/README.md
+docs/filters/README.md
+docs/geocoding/README.md
+docs/reversegeocoding/README.md
+docs/search/README.md
 USAGE.md

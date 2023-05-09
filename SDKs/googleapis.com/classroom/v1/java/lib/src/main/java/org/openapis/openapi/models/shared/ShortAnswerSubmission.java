@@ -18,9 +18,11 @@ public class ShortAnswerSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answer")
     public String answer;
+
     public ShortAnswerSubmission withAnswer(String answer) {
         this.answer = answer;
         return this;
     }
     
+    public ShortAnswerSubmission(){}
 }

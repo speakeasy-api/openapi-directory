@@ -20,6 +20,7 @@ public class NotebookExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public NotebookExecution withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class NotebookExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EditorId")
     public String editorId;
+
     public NotebookExecution withEditorId(String editorId) {
         this.editorId = editorId;
         return this;
@@ -38,6 +40,7 @@ public class NotebookExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public NotebookExecution withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -46,6 +49,7 @@ public class NotebookExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionEngine")
     public ExecutionEngineConfig executionEngine;
+
     public NotebookExecution withExecutionEngine(ExecutionEngineConfig executionEngine) {
         this.executionEngine = executionEngine;
         return this;
@@ -54,6 +58,7 @@ public class NotebookExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastStateChangeReason")
     public String lastStateChangeReason;
+
     public NotebookExecution withLastStateChangeReason(String lastStateChangeReason) {
         this.lastStateChangeReason = lastStateChangeReason;
         return this;
@@ -62,6 +67,7 @@ public class NotebookExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookExecutionId")
     public String notebookExecutionId;
+
     public NotebookExecution withNotebookExecutionId(String notebookExecutionId) {
         this.notebookExecutionId = notebookExecutionId;
         return this;
@@ -70,6 +76,7 @@ public class NotebookExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookExecutionName")
     public String notebookExecutionName;
+
     public NotebookExecution withNotebookExecutionName(String notebookExecutionName) {
         this.notebookExecutionName = notebookExecutionName;
         return this;
@@ -78,6 +85,7 @@ public class NotebookExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceSecurityGroupId")
     public String notebookInstanceSecurityGroupId;
+
     public NotebookExecution withNotebookInstanceSecurityGroupId(String notebookInstanceSecurityGroupId) {
         this.notebookInstanceSecurityGroupId = notebookInstanceSecurityGroupId;
         return this;
@@ -86,6 +94,7 @@ public class NotebookExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookParams")
     public String notebookParams;
+
     public NotebookExecution withNotebookParams(String notebookParams) {
         this.notebookParams = notebookParams;
         return this;
@@ -94,6 +103,7 @@ public class NotebookExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputNotebookURI")
     public String outputNotebookURI;
+
     public NotebookExecution withOutputNotebookURI(String outputNotebookURI) {
         this.outputNotebookURI = outputNotebookURI;
         return this;
@@ -104,6 +114,7 @@ public class NotebookExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public NotebookExecution withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -112,6 +123,7 @@ public class NotebookExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public NotebookExecutionStatusEnum status;
+
     public NotebookExecution withStatus(NotebookExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -120,9 +132,11 @@ public class NotebookExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public NotebookExecution withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public NotebookExecution(){}
 }

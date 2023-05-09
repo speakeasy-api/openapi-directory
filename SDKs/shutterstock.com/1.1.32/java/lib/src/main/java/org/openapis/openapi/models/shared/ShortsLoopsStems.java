@@ -15,6 +15,7 @@ public class ShortsLoopsStems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loops")
     public java.util.Map<String, ShortsLoopsStemsLoops> loops;
+
     public ShortsLoopsStems withLoops(java.util.Map<String, ShortsLoopsStemsLoops> loops) {
         this.loops = loops;
         return this;
@@ -23,6 +24,7 @@ public class ShortsLoopsStems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shorts")
     public java.util.Map<String, ShortsLoopsStemsShorts> shorts;
+
     public ShortsLoopsStems withShorts(java.util.Map<String, ShortsLoopsStemsShorts> shorts) {
         this.shorts = shorts;
         return this;
@@ -31,9 +33,11 @@ public class ShortsLoopsStems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stems")
     public java.util.Map<String, ShortsLoopsStemsStems> stems;
+
     public ShortsLoopsStems withStems(java.util.Map<String, ShortsLoopsStemsStems> stems) {
         this.stems = stems;
         return this;
     }
     
+    public ShortsLoopsStems(){}
 }

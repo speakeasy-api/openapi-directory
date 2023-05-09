@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateJobResponse {
@@ -12,6 +13,7 @@ public class UpdateJobResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateJobResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateJobResponse {
     
     
     public String contentType;
+
     public UpdateJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateJobResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateJobResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateJobResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateJobResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateJobResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateJobResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateJobResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateJobResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateJobResponse {
     
     
     public Integer statusCode;
+
     public UpdateJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateJobResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateJobResponse updateJobResponse;
+
     public UpdateJobResponse withUpdateJobResponse(org.openapis.openapi.models.shared.UpdateJobResponse updateJobResponse) {
         this.updateJobResponse = updateJobResponse;
         return this;
     }
     
+    public UpdateJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

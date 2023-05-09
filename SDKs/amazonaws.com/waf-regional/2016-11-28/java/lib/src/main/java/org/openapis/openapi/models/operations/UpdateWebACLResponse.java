@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWebACLResponse {
     
     public String contentType;
+
     public UpdateWebACLResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateWebACLResponse {
     
     
     public Integer statusCode;
+
     public UpdateWebACLResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateWebACLResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWebACLResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateWebACLResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateWebACLResponse updateWebACLResponse;
+
     public UpdateWebACLResponse withUpdateWebACLResponse(org.openapis.openapi.models.shared.UpdateWebACLResponse updateWebACLResponse) {
         this.updateWebACLResponse = updateWebACLResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateWebACLResponse {
      */
     
     public Object wafInternalErrorException;
+
     public UpdateWebACLResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateWebACLResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public UpdateWebACLResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateWebACLResponse {
      */
     
     public Object wafInvalidOperationException;
+
     public UpdateWebACLResponse withWAFInvalidOperationException(Object wafInvalidOperationException) {
         this.wafInvalidOperationException = wafInvalidOperationException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateWebACLResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public UpdateWebACLResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateWebACLResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public UpdateWebACLResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateWebACLResponse {
      */
     
     public Object wafNonexistentContainerException;
+
     public UpdateWebACLResponse withWAFNonexistentContainerException(Object wafNonexistentContainerException) {
         this.wafNonexistentContainerException = wafNonexistentContainerException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateWebACLResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public UpdateWebACLResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -113,6 +125,7 @@ public class UpdateWebACLResponse {
      */
     
     public Object wafReferencedItemException;
+
     public UpdateWebACLResponse withWAFReferencedItemException(Object wafReferencedItemException) {
         this.wafReferencedItemException = wafReferencedItemException;
         return this;
@@ -123,6 +136,7 @@ public class UpdateWebACLResponse {
      */
     
     public Object wafStaleDataException;
+
     public UpdateWebACLResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
@@ -133,9 +147,14 @@ public class UpdateWebACLResponse {
      */
     
     public Object wafSubscriptionNotFoundException;
+
     public UpdateWebACLResponse withWAFSubscriptionNotFoundException(Object wafSubscriptionNotFoundException) {
         this.wafSubscriptionNotFoundException = wafSubscriptionNotFoundException;
         return this;
     }
     
+    public UpdateWebACLResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

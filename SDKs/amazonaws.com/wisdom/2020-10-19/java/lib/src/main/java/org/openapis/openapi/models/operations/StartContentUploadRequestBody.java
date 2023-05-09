@@ -12,9 +12,13 @@ public class StartContentUploadRequestBody {
      */
     @JsonProperty("contentType")
     public String contentType;
+
     public StartContentUploadRequestBody withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    public StartContentUploadRequestBody(@JsonProperty("contentType") String contentType) {
+        this.contentType = contentType;
+  }
 }

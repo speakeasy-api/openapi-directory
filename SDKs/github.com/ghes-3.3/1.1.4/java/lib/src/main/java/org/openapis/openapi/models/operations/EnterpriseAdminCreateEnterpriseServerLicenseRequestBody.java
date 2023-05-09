@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminCreateEnterpriseServerLicenseRequestBody {
@@ -12,6 +13,7 @@ public class EnterpriseAdminCreateEnterpriseServerLicenseRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=license")
     public String license;
+
     public EnterpriseAdminCreateEnterpriseServerLicenseRequestBody withLicense(String license) {
         this.license = license;
         return this;
@@ -22,6 +24,7 @@ public class EnterpriseAdminCreateEnterpriseServerLicenseRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=password")
     public String password;
+
     public EnterpriseAdminCreateEnterpriseServerLicenseRequestBody withPassword(String password) {
         this.password = password;
         return this;
@@ -32,9 +35,13 @@ public class EnterpriseAdminCreateEnterpriseServerLicenseRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=settings")
     public String settings;
+
     public EnterpriseAdminCreateEnterpriseServerLicenseRequestBody withSettings(String settings) {
         this.settings = settings;
         return this;
     }
     
+    public EnterpriseAdminCreateEnterpriseServerLicenseRequestBody(@JsonProperty("license") String license) {
+        this.license = license;
+  }
 }

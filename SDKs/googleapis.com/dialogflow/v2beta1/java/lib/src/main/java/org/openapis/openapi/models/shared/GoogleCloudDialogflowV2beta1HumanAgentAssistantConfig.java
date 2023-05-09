@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endUserSuggestionConfig")
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfig endUserSuggestionConfig;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfig withEndUserSuggestionConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfig endUserSuggestionConfig) {
         this.endUserSuggestionConfig = endUserSuggestionConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humanAgentSuggestionConfig")
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfig humanAgentSuggestionConfig;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfig withHumanAgentSuggestionConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfig humanAgentSuggestionConfig) {
         this.humanAgentSuggestionConfig = humanAgentSuggestionConfig;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageAnalysisConfig")
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfig messageAnalysisConfig;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfig withMessageAnalysisConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfig messageAnalysisConfig) {
         this.messageAnalysisConfig = messageAnalysisConfig;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationConfig")
     public GoogleCloudDialogflowV2beta1NotificationConfig notificationConfig;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfig withNotificationConfig(GoogleCloudDialogflowV2beta1NotificationConfig notificationConfig) {
         this.notificationConfig = notificationConfig;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfig(){}
 }

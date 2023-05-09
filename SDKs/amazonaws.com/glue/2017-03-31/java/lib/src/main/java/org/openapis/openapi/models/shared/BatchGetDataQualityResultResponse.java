@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetDataQualityResultResponse {
     @JsonProperty("Results")
     public DataQualityResult[] results;
+
     public BatchGetDataQualityResultResponse withResults(DataQualityResult[] results) {
         this.results = results;
         return this;
@@ -22,9 +23,13 @@ public class BatchGetDataQualityResultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultsNotFound")
     public String[] resultsNotFound;
+
     public BatchGetDataQualityResultResponse withResultsNotFound(String[] resultsNotFound) {
         this.resultsNotFound = resultsNotFound;
         return this;
     }
     
+    public BatchGetDataQualityResultResponse(@JsonProperty("Results") DataQualityResult[] results) {
+        this.results = results;
+  }
 }

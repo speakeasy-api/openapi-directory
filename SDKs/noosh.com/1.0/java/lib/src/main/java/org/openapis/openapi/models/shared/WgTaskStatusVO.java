@@ -15,6 +15,7 @@ public class WgTaskStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public WgTaskStatusVO withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class WgTaskStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public WgTaskStatusVO withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -31,6 +33,7 @@ public class WgTaskStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_default")
     public Boolean isDefault;
+
     public WgTaskStatusVO withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -39,6 +42,7 @@ public class WgTaskStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_status_name")
     public String taskStatusName;
+
     public WgTaskStatusVO withTaskStatusName(String taskStatusName) {
         this.taskStatusName = taskStatusName;
         return this;
@@ -47,9 +51,11 @@ public class WgTaskStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasks_status_id")
     public Long tasksStatusId;
+
     public WgTaskStatusVO withTasksStatusId(Long tasksStatusId) {
         this.tasksStatusId = tasksStatusId;
         return this;
     }
     
+    public WgTaskStatusVO(){}
 }

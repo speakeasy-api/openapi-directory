@@ -12,9 +12,13 @@ public class PutLexiconRequestBody {
      */
     @JsonProperty("Content")
     public String content;
+
     public PutLexiconRequestBody withContent(String content) {
         this.content = content;
         return this;
     }
     
+    public PutLexiconRequestBody(@JsonProperty("Content") String content) {
+        this.content = content;
+  }
 }

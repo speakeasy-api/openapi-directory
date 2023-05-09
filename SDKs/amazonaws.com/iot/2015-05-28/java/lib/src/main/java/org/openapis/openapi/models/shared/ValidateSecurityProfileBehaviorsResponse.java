@@ -15,6 +15,7 @@ public class ValidateSecurityProfileBehaviorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid")
     public Boolean valid;
+
     public ValidateSecurityProfileBehaviorsResponse withValid(Boolean valid) {
         this.valid = valid;
         return this;
@@ -23,9 +24,11 @@ public class ValidateSecurityProfileBehaviorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationErrors")
     public ValidationError[] validationErrors;
+
     public ValidateSecurityProfileBehaviorsResponse withValidationErrors(ValidationError[] validationErrors) {
         this.validationErrors = validationErrors;
         return this;
     }
     
+    public ValidateSecurityProfileBehaviorsResponse(){}
 }

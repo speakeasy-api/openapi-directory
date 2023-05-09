@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetElectioneeringResponse {
     
     public String contentType;
+
     public GetElectioneeringResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetElectioneeringResponse {
     
     
     public org.openapis.openapi.models.shared.ElectioneeringPage electioneeringPage;
+
     public GetElectioneeringResponse withElectioneeringPage(org.openapis.openapi.models.shared.ElectioneeringPage electioneeringPage) {
         this.electioneeringPage = electioneeringPage;
         return this;
@@ -23,6 +26,7 @@ public class GetElectioneeringResponse {
     
     
     public Integer statusCode;
+
     public GetElectioneeringResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetElectioneeringResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetElectioneeringResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetElectioneeringResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

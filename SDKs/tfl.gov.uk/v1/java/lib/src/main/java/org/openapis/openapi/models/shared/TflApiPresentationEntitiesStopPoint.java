@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessibilitySummary")
     public String accessibilitySummary;
+
     public TflApiPresentationEntitiesStopPoint withAccessibilitySummary(String accessibilitySummary) {
         this.accessibilitySummary = accessibilitySummary;
         return this;
@@ -23,6 +24,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalProperties")
     public TflApiPresentationEntitiesAdditionalProperties[] additionalProperties;
+
     public TflApiPresentationEntitiesStopPoint withAdditionalProperties(TflApiPresentationEntitiesAdditionalProperties[] additionalProperties) {
         this.additionalProperties = additionalProperties;
         return this;
@@ -31,6 +33,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("children")
     public TflApiPresentationEntitiesPlace[] children;
+
     public TflApiPresentationEntitiesStopPoint withChildren(TflApiPresentationEntitiesPlace[] children) {
         this.children = children;
         return this;
@@ -39,6 +42,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childrenUrls")
     public String[] childrenUrls;
+
     public TflApiPresentationEntitiesStopPoint withChildrenUrls(String[] childrenUrls) {
         this.childrenUrls = childrenUrls;
         return this;
@@ -50,6 +54,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonName")
     public String commonName;
+
     public TflApiPresentationEntitiesStopPoint withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -62,6 +67,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public Double distance;
+
     public TflApiPresentationEntitiesStopPoint withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -70,6 +76,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullName")
     public String fullName;
+
     public TflApiPresentationEntitiesStopPoint withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -78,6 +85,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hubNaptanCode")
     public String hubNaptanCode;
+
     public TflApiPresentationEntitiesStopPoint withHubNaptanCode(String hubNaptanCode) {
         this.hubNaptanCode = hubNaptanCode;
         return this;
@@ -86,6 +94,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icsCode")
     public String icsCode;
+
     public TflApiPresentationEntitiesStopPoint withIcsCode(String icsCode) {
         this.icsCode = icsCode;
         return this;
@@ -97,6 +106,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesStopPoint withId(String id) {
         this.id = id;
         return this;
@@ -108,6 +118,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indicator")
     public String indicator;
+
     public TflApiPresentationEntitiesStopPoint withIndicator(String indicator) {
         this.indicator = indicator;
         return this;
@@ -116,6 +127,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("individualStopId")
     public String individualStopId;
+
     public TflApiPresentationEntitiesStopPoint withIndividualStopId(String individualStopId) {
         this.individualStopId = individualStopId;
         return this;
@@ -127,6 +139,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Double lat;
+
     public TflApiPresentationEntitiesStopPoint withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -135,6 +148,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineGroup")
     public TflApiPresentationEntitiesLineGroup[] lineGroup;
+
     public TflApiPresentationEntitiesStopPoint withLineGroup(TflApiPresentationEntitiesLineGroup[] lineGroup) {
         this.lineGroup = lineGroup;
         return this;
@@ -143,6 +157,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineModeGroups")
     public TflApiPresentationEntitiesLineModeGroup[] lineModeGroups;
+
     public TflApiPresentationEntitiesStopPoint withLineModeGroups(TflApiPresentationEntitiesLineModeGroup[] lineModeGroups) {
         this.lineModeGroups = lineModeGroups;
         return this;
@@ -151,6 +166,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lines")
     public TflApiPresentationEntitiesIdentifier[] lines;
+
     public TflApiPresentationEntitiesStopPoint withLines(TflApiPresentationEntitiesIdentifier[] lines) {
         this.lines = lines;
         return this;
@@ -162,6 +178,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lon")
     public Double lon;
+
     public TflApiPresentationEntitiesStopPoint withLon(Double lon) {
         this.lon = lon;
         return this;
@@ -170,6 +187,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modes")
     public String[] modes;
+
     public TflApiPresentationEntitiesStopPoint withModes(String[] modes) {
         this.modes = modes;
         return this;
@@ -178,6 +196,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naptanId")
     public String naptanId;
+
     public TflApiPresentationEntitiesStopPoint withNaptanId(String naptanId) {
         this.naptanId = naptanId;
         return this;
@@ -186,6 +205,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naptanMode")
     public String naptanMode;
+
     public TflApiPresentationEntitiesStopPoint withNaptanMode(String naptanMode) {
         this.naptanMode = naptanMode;
         return this;
@@ -197,6 +217,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeType")
     public String placeType;
+
     public TflApiPresentationEntitiesStopPoint withPlaceType(String placeType) {
         this.placeType = placeType;
         return this;
@@ -205,6 +226,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformName")
     public String platformName;
+
     public TflApiPresentationEntitiesStopPoint withPlatformName(String platformName) {
         this.platformName = platformName;
         return this;
@@ -213,6 +235,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smsCode")
     public String smsCode;
+
     public TflApiPresentationEntitiesStopPoint withSmsCode(String smsCode) {
         this.smsCode = smsCode;
         return this;
@@ -221,6 +244,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stationNaptan")
     public String stationNaptan;
+
     public TflApiPresentationEntitiesStopPoint withStationNaptan(String stationNaptan) {
         this.stationNaptan = stationNaptan;
         return this;
@@ -229,6 +253,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Boolean status;
+
     public TflApiPresentationEntitiesStopPoint withStatus(Boolean status) {
         this.status = status;
         return this;
@@ -240,6 +265,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopLetter")
     public String stopLetter;
+
     public TflApiPresentationEntitiesStopPoint withStopLetter(String stopLetter) {
         this.stopLetter = stopLetter;
         return this;
@@ -248,6 +274,7 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopType")
     public String stopType;
+
     public TflApiPresentationEntitiesStopPoint withStopType(String stopType) {
         this.stopType = stopType;
         return this;
@@ -259,9 +286,11 @@ public class TflApiPresentationEntitiesStopPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public TflApiPresentationEntitiesStopPoint withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TflApiPresentationEntitiesStopPoint(){}
 }

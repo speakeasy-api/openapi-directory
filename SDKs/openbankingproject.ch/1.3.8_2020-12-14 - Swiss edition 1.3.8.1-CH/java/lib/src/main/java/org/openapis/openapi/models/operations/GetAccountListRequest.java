@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountListRequest {
@@ -13,6 +14,7 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Consent-ID")
     public String consentID;
+
     public GetAccountListRequest withConsentID(String consentID) {
         this.consentID = consentID;
         return this;
@@ -23,6 +25,7 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
     public String digest;
+
     public GetAccountListRequest withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -34,6 +37,7 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
     public String psuAccept;
+
     public GetAccountListRequest withPSUAccept(String psuAccept) {
         this.psuAccept = psuAccept;
         return this;
@@ -45,6 +49,7 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
     public String psuAcceptCharset;
+
     public GetAccountListRequest withPSUAcceptCharset(String psuAcceptCharset) {
         this.psuAcceptCharset = psuAcceptCharset;
         return this;
@@ -56,6 +61,7 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
     public String psuAcceptEncoding;
+
     public GetAccountListRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
         this.psuAcceptEncoding = psuAcceptEncoding;
         return this;
@@ -67,6 +73,7 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
     public String psuAcceptLanguage;
+
     public GetAccountListRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
         this.psuAcceptLanguage = psuAcceptLanguage;
         return this;
@@ -80,6 +87,7 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
     public String psuDeviceID;
+
     public GetAccountListRequest withPSUDeviceID(String psuDeviceID) {
         this.psuDeviceID = psuDeviceID;
         return this;
@@ -91,6 +99,7 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
     public String psuGeoLocation;
+
     public GetAccountListRequest withPSUGeoLocation(String psuGeoLocation) {
         this.psuGeoLocation = psuGeoLocation;
         return this;
@@ -108,6 +117,7 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
     public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+
     public GetAccountListRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
         this.psuHttpMethod = psuHttpMethod;
         return this;
@@ -121,6 +131,7 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
     public String psuIPAddress;
+
     public GetAccountListRequest withPSUIPAddress(String psuIPAddress) {
         this.psuIPAddress = psuIPAddress;
         return this;
@@ -132,6 +143,7 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
     public String psuIPPort;
+
     public GetAccountListRequest withPSUIPPort(String psuIPPort) {
         this.psuIPPort = psuIPPort;
         return this;
@@ -143,6 +155,7 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
     public String psuUserAgent;
+
     public GetAccountListRequest withPSUUserAgent(String psuUserAgent) {
         this.psuUserAgent = psuUserAgent;
         return this;
@@ -154,6 +167,7 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
     public String signature;
+
     public GetAccountListRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -166,6 +180,7 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
     public String tppSignatureCertificate;
+
     public GetAccountListRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
         this.tppSignatureCertificate = tppSignatureCertificate;
         return this;
@@ -176,6 +191,7 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
     public String xRequestID;
+
     public GetAccountListRequest withXRequestID(String xRequestID) {
         this.xRequestID = xRequestID;
         return this;
@@ -189,9 +205,14 @@ public class GetAccountListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=withBalance")
     public Boolean withBalance;
+
     public GetAccountListRequest withWithBalance(Boolean withBalance) {
         this.withBalance = withBalance;
         return this;
     }
     
+    public GetAccountListRequest(@JsonProperty("Consent-ID") String consentID, @JsonProperty("X-Request-ID") String xRequestID) {
+        this.consentID = consentID;
+        this.xRequestID = xRequestID;
+  }
 }

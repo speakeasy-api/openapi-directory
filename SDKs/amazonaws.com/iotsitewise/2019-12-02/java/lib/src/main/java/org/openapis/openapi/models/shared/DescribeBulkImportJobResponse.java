@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeBulkImportJobResponse {
     @JsonProperty("errorReportLocation")
     public ErrorReportLocation errorReportLocation;
+
     public DescribeBulkImportJobResponse withErrorReportLocation(ErrorReportLocation errorReportLocation) {
         this.errorReportLocation = errorReportLocation;
         return this;
@@ -24,6 +25,7 @@ public class DescribeBulkImportJobResponse {
     
     @JsonProperty("files")
     public File[] files;
+
     public DescribeBulkImportJobResponse withFiles(File[] files) {
         this.files = files;
         return this;
@@ -31,6 +33,7 @@ public class DescribeBulkImportJobResponse {
     
     @JsonProperty("jobConfiguration")
     public JobConfiguration jobConfiguration;
+
     public DescribeBulkImportJobResponse withJobConfiguration(JobConfiguration jobConfiguration) {
         this.jobConfiguration = jobConfiguration;
         return this;
@@ -40,6 +43,7 @@ public class DescribeBulkImportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("jobCreationDate")
     public OffsetDateTime jobCreationDate;
+
     public DescribeBulkImportJobResponse withJobCreationDate(OffsetDateTime jobCreationDate) {
         this.jobCreationDate = jobCreationDate;
         return this;
@@ -47,6 +51,7 @@ public class DescribeBulkImportJobResponse {
     
     @JsonProperty("jobId")
     public String jobId;
+
     public DescribeBulkImportJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -56,6 +61,7 @@ public class DescribeBulkImportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("jobLastUpdateDate")
     public OffsetDateTime jobLastUpdateDate;
+
     public DescribeBulkImportJobResponse withJobLastUpdateDate(OffsetDateTime jobLastUpdateDate) {
         this.jobLastUpdateDate = jobLastUpdateDate;
         return this;
@@ -63,6 +69,7 @@ public class DescribeBulkImportJobResponse {
     
     @JsonProperty("jobName")
     public String jobName;
+
     public DescribeBulkImportJobResponse withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -70,6 +77,7 @@ public class DescribeBulkImportJobResponse {
     
     @JsonProperty("jobRoleArn")
     public String jobRoleArn;
+
     public DescribeBulkImportJobResponse withJobRoleArn(String jobRoleArn) {
         this.jobRoleArn = jobRoleArn;
         return this;
@@ -77,9 +85,21 @@ public class DescribeBulkImportJobResponse {
     
     @JsonProperty("jobStatus")
     public JobStatusEnum jobStatus;
+
     public DescribeBulkImportJobResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
     }
     
+    public DescribeBulkImportJobResponse(@JsonProperty("errorReportLocation") ErrorReportLocation errorReportLocation, @JsonProperty("files") File[] files, @JsonProperty("jobConfiguration") JobConfiguration jobConfiguration, @JsonProperty("jobCreationDate") OffsetDateTime jobCreationDate, @JsonProperty("jobId") String jobId, @JsonProperty("jobLastUpdateDate") OffsetDateTime jobLastUpdateDate, @JsonProperty("jobName") String jobName, @JsonProperty("jobRoleArn") String jobRoleArn, @JsonProperty("jobStatus") JobStatusEnum jobStatus) {
+        this.errorReportLocation = errorReportLocation;
+        this.files = files;
+        this.jobConfiguration = jobConfiguration;
+        this.jobCreationDate = jobCreationDate;
+        this.jobId = jobId;
+        this.jobLastUpdateDate = jobLastUpdateDate;
+        this.jobName = jobName;
+        this.jobRoleArn = jobRoleArn;
+        this.jobStatus = jobStatus;
+  }
 }

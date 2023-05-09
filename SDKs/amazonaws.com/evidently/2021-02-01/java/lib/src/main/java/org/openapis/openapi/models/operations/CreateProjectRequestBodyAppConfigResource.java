@@ -15,6 +15,7 @@ public class CreateProjectRequestBodyAppConfigResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationId")
     public String applicationId;
+
     public CreateProjectRequestBodyAppConfigResource withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -23,9 +24,11 @@ public class CreateProjectRequestBodyAppConfigResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentId")
     public String environmentId;
+
     public CreateProjectRequestBodyAppConfigResource withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
     }
     
+    public CreateProjectRequestBodyAppConfigResource(){}
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ApplicationDateRangeKpiResponse {
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public ApplicationDateRangeKpiResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -28,6 +29,7 @@ public class ApplicationDateRangeKpiResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public ApplicationDateRangeKpiResponse withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -35,6 +37,7 @@ public class ApplicationDateRangeKpiResponse {
     
     @JsonProperty("KpiName")
     public String kpiName;
+
     public ApplicationDateRangeKpiResponse withKpiName(String kpiName) {
         this.kpiName = kpiName;
         return this;
@@ -42,6 +45,7 @@ public class ApplicationDateRangeKpiResponse {
     
     @JsonProperty("KpiResult")
     public BaseKpiResult kpiResult;
+
     public ApplicationDateRangeKpiResponse withKpiResult(BaseKpiResult kpiResult) {
         this.kpiResult = kpiResult;
         return this;
@@ -50,6 +54,7 @@ public class ApplicationDateRangeKpiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ApplicationDateRangeKpiResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -59,9 +64,17 @@ public class ApplicationDateRangeKpiResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public ApplicationDateRangeKpiResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ApplicationDateRangeKpiResponse(@JsonProperty("ApplicationId") String applicationId, @JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("KpiName") String kpiName, @JsonProperty("KpiResult") BaseKpiResult kpiResult, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.applicationId = applicationId;
+        this.endTime = endTime;
+        this.kpiName = kpiName;
+        this.kpiResult = kpiResult;
+        this.startTime = startTime;
+  }
 }

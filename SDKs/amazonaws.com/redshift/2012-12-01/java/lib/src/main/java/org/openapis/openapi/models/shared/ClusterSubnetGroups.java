@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClusterSubnetGroups {
     
     public String clusterSubnetGroupName;
+
     public ClusterSubnetGroups withClusterSubnetGroupName(String clusterSubnetGroupName) {
         this.clusterSubnetGroupName = clusterSubnetGroupName;
         return this;
@@ -19,6 +20,7 @@ public class ClusterSubnetGroups {
     
     
     public String description;
+
     public ClusterSubnetGroups withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class ClusterSubnetGroups {
     
     
     public String subnetGroupStatus;
+
     public ClusterSubnetGroups withSubnetGroupStatus(String subnetGroupStatus) {
         this.subnetGroupStatus = subnetGroupStatus;
         return this;
@@ -33,6 +36,7 @@ public class ClusterSubnetGroups {
     
     
     public SubnetList[] subnets;
+
     public ClusterSubnetGroups withSubnets(SubnetList[] subnets) {
         this.subnets = subnets;
         return this;
@@ -40,6 +44,7 @@ public class ClusterSubnetGroups {
     
     
     public TagList[] tags;
+
     public ClusterSubnetGroups withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -47,9 +52,11 @@ public class ClusterSubnetGroups {
     
     
     public String vpcId;
+
     public ClusterSubnetGroups withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public ClusterSubnetGroups(){}
 }

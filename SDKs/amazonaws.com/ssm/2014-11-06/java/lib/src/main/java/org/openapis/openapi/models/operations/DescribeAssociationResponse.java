@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAssociationResponse {
@@ -12,6 +13,7 @@ public class DescribeAssociationResponse {
      */
     
     public Object associationDoesNotExist;
+
     public DescribeAssociationResponse withAssociationDoesNotExist(Object associationDoesNotExist) {
         this.associationDoesNotExist = associationDoesNotExist;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAssociationResponse {
     
     
     public String contentType;
+
     public DescribeAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAssociationResult describeAssociationResult;
+
     public DescribeAssociationResponse withDescribeAssociationResult(org.openapis.openapi.models.shared.DescribeAssociationResult describeAssociationResult) {
         this.describeAssociationResult = describeAssociationResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAssociationResponse {
      */
     
     public Object internalServerError;
+
     public DescribeAssociationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAssociationResponse {
      */
     
     public Object invalidAssociationVersion;
+
     public DescribeAssociationResponse withInvalidAssociationVersion(Object invalidAssociationVersion) {
         this.invalidAssociationVersion = invalidAssociationVersion;
         return this;
@@ -59,6 +65,7 @@ public class DescribeAssociationResponse {
      */
     
     public Object invalidDocument;
+
     public DescribeAssociationResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -69,6 +76,7 @@ public class DescribeAssociationResponse {
      */
     
     public Object invalidInstanceId;
+
     public DescribeAssociationResponse withInvalidInstanceId(Object invalidInstanceId) {
         this.invalidInstanceId = invalidInstanceId;
         return this;
@@ -76,6 +84,7 @@ public class DescribeAssociationResponse {
     
     
     public Integer statusCode;
+
     public DescribeAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

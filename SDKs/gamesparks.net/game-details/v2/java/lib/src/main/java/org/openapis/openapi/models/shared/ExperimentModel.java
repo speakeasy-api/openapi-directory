@@ -20,6 +20,7 @@ public class ExperimentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public ExperimentModel withActive(Boolean active) {
         this.active = active;
         return this;
@@ -28,6 +29,7 @@ public class ExperimentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changedFieldsAndInitialValues")
     public java.util.Map<String, Object> changedFieldsAndInitialValues;
+
     public ExperimentModel withChangedFieldsAndInitialValues(java.util.Map<String, Object> changedFieldsAndInitialValues) {
         this.changedFieldsAndInitialValues = changedFieldsAndInitialValues;
         return this;
@@ -36,6 +38,7 @@ public class ExperimentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complete")
     public Boolean complete;
+
     public ExperimentModel withComplete(Boolean complete) {
         this.complete = complete;
         return this;
@@ -44,6 +47,7 @@ public class ExperimentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public ExperimentConfigModel config;
+
     public ExperimentModel withConfig(ExperimentConfigModel config) {
         this.config = config;
         return this;
@@ -54,6 +58,7 @@ public class ExperimentModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDate")
     public OffsetDateTime endDate;
+
     public ExperimentModel withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -62,6 +67,7 @@ public class ExperimentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ExperimentModel withId(Long id) {
         this.id = id;
         return this;
@@ -70,6 +76,7 @@ public class ExperimentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurements")
     public String measurements;
+
     public ExperimentModel withMeasurements(String measurements) {
         this.measurements = measurements;
         return this;
@@ -78,6 +85,7 @@ public class ExperimentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurementsEsQuery")
     public String measurementsEsQuery;
+
     public ExperimentModel withMeasurementsEsQuery(String measurementsEsQuery) {
         this.measurementsEsQuery = measurementsEsQuery;
         return this;
@@ -86,6 +94,7 @@ public class ExperimentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ExperimentModel withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +103,7 @@ public class ExperimentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentHash")
     public String percentHash;
+
     public ExperimentModel withPercentHash(String percentHash) {
         this.percentHash = percentHash;
         return this;
@@ -102,6 +112,7 @@ public class ExperimentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishedStages")
     public String[] publishedStages;
+
     public ExperimentModel withPublishedStages(String[] publishedStages) {
         this.publishedStages = publishedStages;
         return this;
@@ -112,9 +123,11 @@ public class ExperimentModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDate")
     public OffsetDateTime startDate;
+
     public ExperimentModel withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public ExperimentModel(){}
 }

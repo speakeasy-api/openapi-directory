@@ -15,9 +15,11 @@ public class DescribeOrganizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Organization")
     public Organization organization;
+
     public DescribeOrganizationResponse withOrganization(Organization organization) {
         this.organization = organization;
         return this;
     }
     
+    public DescribeOrganizationResponse(){}
 }

@@ -22,6 +22,7 @@ public class UserPoolDescriptionType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public UserPoolDescriptionType withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +31,7 @@ public class UserPoolDescriptionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public UserPoolDescriptionType withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class UserPoolDescriptionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaConfig")
     public LambdaConfigType lambdaConfig;
+
     public UserPoolDescriptionType withLambdaConfig(LambdaConfigType lambdaConfig) {
         this.lambdaConfig = lambdaConfig;
         return this;
@@ -48,6 +51,7 @@ public class UserPoolDescriptionType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public UserPoolDescriptionType withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -56,6 +60,7 @@ public class UserPoolDescriptionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UserPoolDescriptionType withName(String name) {
         this.name = name;
         return this;
@@ -64,9 +69,11 @@ public class UserPoolDescriptionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusTypeEnum status;
+
     public UserPoolDescriptionType withStatus(StatusTypeEnum status) {
         this.status = status;
         return this;
     }
     
+    public UserPoolDescriptionType(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SqlSslCertsCreateEphemeralSecurity {
     @SpeakeasyMetadata("security:option=true")
     public SqlSslCertsCreateEphemeralSecurityOption1 option1;
+
     public SqlSslCertsCreateEphemeralSecurity withOption1(SqlSslCertsCreateEphemeralSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class SqlSslCertsCreateEphemeralSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SqlSslCertsCreateEphemeralSecurityOption2 option2;
+
     public SqlSslCertsCreateEphemeralSecurity withOption2(SqlSslCertsCreateEphemeralSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public SqlSslCertsCreateEphemeralSecurity(){}
 }

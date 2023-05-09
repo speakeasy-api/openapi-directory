@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClustersMessage {
     
     public ClusterList[] clusters;
+
     public ClustersMessage withClusters(ClusterList[] clusters) {
         this.clusters = clusters;
         return this;
@@ -19,9 +20,11 @@ public class ClustersMessage {
     
     
     public String marker;
+
     public ClustersMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ClustersMessage(){}
 }

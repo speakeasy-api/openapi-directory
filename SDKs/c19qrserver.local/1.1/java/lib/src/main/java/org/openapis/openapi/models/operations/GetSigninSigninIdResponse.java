@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSigninSigninIdResponse {
     
     public String contentType;
+
     public GetSigninSigninIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSigninSigninIdResponse {
     
     
     public Integer statusCode;
+
     public GetSigninSigninIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetSigninSigninIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSigninSigninIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetSigninSigninIdResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidToken invalidToken;
+
     public GetSigninSigninIdResponse withInvalidToken(org.openapis.openapi.models.shared.InvalidToken invalidToken) {
         this.invalidToken = invalidToken;
         return this;
@@ -43,9 +48,14 @@ public class GetSigninSigninIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Signin signin;
+
     public GetSigninSigninIdResponse withSignin(org.openapis.openapi.models.shared.Signin signin) {
         this.signin = signin;
         return this;
     }
     
+    public GetSigninSigninIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

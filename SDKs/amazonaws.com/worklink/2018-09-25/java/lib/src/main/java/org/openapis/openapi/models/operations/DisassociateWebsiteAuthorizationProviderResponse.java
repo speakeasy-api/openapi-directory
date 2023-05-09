@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateWebsiteAuthorizationProviderResponse {
     
     public String contentType;
+
     public DisassociateWebsiteAuthorizationProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateWebsiteAuthorizationProviderResponse {
      */
     
     public java.util.Map<String, Object> disassociateWebsiteAuthorizationProviderResponse;
+
     public DisassociateWebsiteAuthorizationProviderResponse withDisassociateWebsiteAuthorizationProviderResponse(java.util.Map<String, Object> disassociateWebsiteAuthorizationProviderResponse) {
         this.disassociateWebsiteAuthorizationProviderResponse = disassociateWebsiteAuthorizationProviderResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateWebsiteAuthorizationProviderResponse {
      */
     
     public Object internalServerErrorException;
+
     public DisassociateWebsiteAuthorizationProviderResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateWebsiteAuthorizationProviderResponse {
      */
     
     public Object invalidRequestException;
+
     public DisassociateWebsiteAuthorizationProviderResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateWebsiteAuthorizationProviderResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public DisassociateWebsiteAuthorizationProviderResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateWebsiteAuthorizationProviderResponse {
     
     
     public Integer statusCode;
+
     public DisassociateWebsiteAuthorizationProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateWebsiteAuthorizationProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateWebsiteAuthorizationProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateWebsiteAuthorizationProviderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateWebsiteAuthorizationProviderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateWebsiteAuthorizationProviderResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DisassociateWebsiteAuthorizationProviderResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class DisassociateWebsiteAuthorizationProviderResponse {
      */
     
     public Object unauthorizedException;
+
     public DisassociateWebsiteAuthorizationProviderResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DisassociateWebsiteAuthorizationProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ExecuteStatementResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnMetadata")
     public ColumnMetadata[] columnMetadata;
+
     public ExecuteStatementResponse withColumnMetadata(ColumnMetadata[] columnMetadata) {
         this.columnMetadata = columnMetadata;
         return this;
@@ -23,6 +24,7 @@ public class ExecuteStatementResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedRecords")
     public String formattedRecords;
+
     public ExecuteStatementResponse withFormattedRecords(String formattedRecords) {
         this.formattedRecords = formattedRecords;
         return this;
@@ -31,6 +33,7 @@ public class ExecuteStatementResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generatedFields")
     public Field[] generatedFields;
+
     public ExecuteStatementResponse withGeneratedFields(Field[] generatedFields) {
         this.generatedFields = generatedFields;
         return this;
@@ -39,6 +42,7 @@ public class ExecuteStatementResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfRecordsUpdated")
     public Long numberOfRecordsUpdated;
+
     public ExecuteStatementResponse withNumberOfRecordsUpdated(Long numberOfRecordsUpdated) {
         this.numberOfRecordsUpdated = numberOfRecordsUpdated;
         return this;
@@ -47,9 +51,11 @@ public class ExecuteStatementResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("records")
     public Field[][] records;
+
     public ExecuteStatementResponse withRecords(Field[][] records) {
         this.records = records;
         return this;
     }
     
+    public ExecuteStatementResponse(){}
 }

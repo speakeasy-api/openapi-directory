@@ -18,9 +18,11 @@ public class FileLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePath")
     public String filePath;
+
     public FileLocation withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
     }
     
+    public FileLocation(){}
 }

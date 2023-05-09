@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RedshiftConnectorProfileProperties {
     @JsonProperty("bucketName")
     public String bucketName;
+
     public RedshiftConnectorProfileProperties withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -22,6 +23,7 @@ public class RedshiftConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketPrefix")
     public String bucketPrefix;
+
     public RedshiftConnectorProfileProperties withBucketPrefix(String bucketPrefix) {
         this.bucketPrefix = bucketPrefix;
         return this;
@@ -30,6 +32,7 @@ public class RedshiftConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterIdentifier")
     public String clusterIdentifier;
+
     public RedshiftConnectorProfileProperties withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -38,6 +41,7 @@ public class RedshiftConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataApiRoleArn")
     public String dataApiRoleArn;
+
     public RedshiftConnectorProfileProperties withDataApiRoleArn(String dataApiRoleArn) {
         this.dataApiRoleArn = dataApiRoleArn;
         return this;
@@ -46,6 +50,7 @@ public class RedshiftConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseName")
     public String databaseName;
+
     public RedshiftConnectorProfileProperties withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -54,6 +59,7 @@ public class RedshiftConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseUrl")
     public String databaseUrl;
+
     public RedshiftConnectorProfileProperties withDatabaseUrl(String databaseUrl) {
         this.databaseUrl = databaseUrl;
         return this;
@@ -62,6 +68,7 @@ public class RedshiftConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRedshiftServerless")
     public Boolean isRedshiftServerless;
+
     public RedshiftConnectorProfileProperties withIsRedshiftServerless(Boolean isRedshiftServerless) {
         this.isRedshiftServerless = isRedshiftServerless;
         return this;
@@ -69,6 +76,7 @@ public class RedshiftConnectorProfileProperties {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public RedshiftConnectorProfileProperties withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -77,9 +85,14 @@ public class RedshiftConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public RedshiftConnectorProfileProperties withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public RedshiftConnectorProfileProperties(@JsonProperty("bucketName") String bucketName, @JsonProperty("roleArn") String roleArn) {
+        this.bucketName = bucketName;
+        this.roleArn = roleArn;
+  }
 }

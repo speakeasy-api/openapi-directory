@@ -15,6 +15,7 @@ public class VoiceCapabilityPaymentsGateways {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credential")
     public String credential;
+
     public VoiceCapabilityPaymentsGateways withCredential(String credential) {
         this.credential = credential;
         return this;
@@ -26,6 +27,7 @@ public class VoiceCapabilityPaymentsGateways {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public VoiceCapabilityPaymentsGatewaysModeEnum mode;
+
     public VoiceCapabilityPaymentsGateways withMode(VoiceCapabilityPaymentsGatewaysModeEnum mode) {
         this.mode = mode;
         return this;
@@ -37,9 +39,11 @@ public class VoiceCapabilityPaymentsGateways {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public VoiceCapabilityPaymentsGateways withType(String type) {
         this.type = type;
         return this;
     }
     
+    public VoiceCapabilityPaymentsGateways(){}
 }

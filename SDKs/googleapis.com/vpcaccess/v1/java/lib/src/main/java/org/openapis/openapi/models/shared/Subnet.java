@@ -18,6 +18,7 @@ public class Subnet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Subnet withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class Subnet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public Subnet withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public Subnet(){}
 }

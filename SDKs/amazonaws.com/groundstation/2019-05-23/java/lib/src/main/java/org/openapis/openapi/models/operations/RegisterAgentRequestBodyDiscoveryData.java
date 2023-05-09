@@ -15,6 +15,7 @@ public class RegisterAgentRequestBodyDiscoveryData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilityArns")
     public String[] capabilityArns;
+
     public RegisterAgentRequestBodyDiscoveryData withCapabilityArns(String[] capabilityArns) {
         this.capabilityArns = capabilityArns;
         return this;
@@ -23,6 +24,7 @@ public class RegisterAgentRequestBodyDiscoveryData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateIpAddresses")
     public String[] privateIpAddresses;
+
     public RegisterAgentRequestBodyDiscoveryData withPrivateIpAddresses(String[] privateIpAddresses) {
         this.privateIpAddresses = privateIpAddresses;
         return this;
@@ -31,9 +33,11 @@ public class RegisterAgentRequestBodyDiscoveryData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicIpAddresses")
     public String[] publicIpAddresses;
+
     public RegisterAgentRequestBodyDiscoveryData withPublicIpAddresses(String[] publicIpAddresses) {
         this.publicIpAddresses = publicIpAddresses;
         return this;
     }
     
+    public RegisterAgentRequestBodyDiscoveryData(){}
 }

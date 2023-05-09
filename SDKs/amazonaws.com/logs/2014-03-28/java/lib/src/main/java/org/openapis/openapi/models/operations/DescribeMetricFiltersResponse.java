@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMetricFiltersResponse {
     
     public String contentType;
+
     public DescribeMetricFiltersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMetricFiltersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMetricFiltersResponse describeMetricFiltersResponse;
+
     public DescribeMetricFiltersResponse withDescribeMetricFiltersResponse(org.openapis.openapi.models.shared.DescribeMetricFiltersResponse describeMetricFiltersResponse) {
         this.describeMetricFiltersResponse = describeMetricFiltersResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMetricFiltersResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeMetricFiltersResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMetricFiltersResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeMetricFiltersResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeMetricFiltersResponse {
     
     
     public Integer statusCode;
+
     public DescribeMetricFiltersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeMetricFiltersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMetricFiltersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeMetricFiltersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeMetricFiltersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeMetricFiltersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

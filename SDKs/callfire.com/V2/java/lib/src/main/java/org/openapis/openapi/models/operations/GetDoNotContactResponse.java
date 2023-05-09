@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDoNotContactResponse {
     
     public String contentType;
+
     public GetDoNotContactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDoNotContactResponse {
      */
     
     public org.openapis.openapi.models.shared.DoNotContact doNotContact;
+
     public GetDoNotContactResponse withDoNotContact(org.openapis.openapi.models.shared.DoNotContact doNotContact) {
         this.doNotContact = doNotContact;
         return this;
@@ -29,6 +32,7 @@ public class GetDoNotContactResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetDoNotContactResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetDoNotContactResponse {
     
     
     public Integer statusCode;
+
     public GetDoNotContactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetDoNotContactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDoNotContactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDoNotContactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

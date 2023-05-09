@@ -15,6 +15,7 @@ public class StartTargetedSentimentDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobArn")
     public String jobArn;
+
     public StartTargetedSentimentDetectionJobResponse withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -23,6 +24,7 @@ public class StartTargetedSentimentDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StartTargetedSentimentDetectionJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -31,9 +33,11 @@ public class StartTargetedSentimentDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public StartTargetedSentimentDetectionJobResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
     }
     
+    public StartTargetedSentimentDetectionJobResponse(){}
 }

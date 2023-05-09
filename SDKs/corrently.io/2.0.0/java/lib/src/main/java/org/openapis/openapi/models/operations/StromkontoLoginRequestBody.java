@@ -12,9 +12,11 @@ public class StromkontoLoginRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public StromkontoLoginRequestBody withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public StromkontoLoginRequestBody(){}
 }

@@ -18,6 +18,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public NodeGroup withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -29,6 +30,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NodeGroup withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeGroupConfig")
     public InstanceGroupConfig nodeGroupConfig;
+
     public NodeGroup withNodeGroupConfig(InstanceGroupConfig nodeGroupConfig) {
         this.nodeGroupConfig = nodeGroupConfig;
         return this;
@@ -51,9 +54,11 @@ public class NodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public NodeGroupRolesEnum[] roles;
+
     public NodeGroup withRoles(NodeGroupRolesEnum[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public NodeGroup(){}
 }

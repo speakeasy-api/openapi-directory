@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateProjectOutput {
     @JsonProperty("ProjectArn")
     public String projectArn;
+
     public UpdateProjectOutput withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
     }
     
+    public UpdateProjectOutput(@JsonProperty("ProjectArn") String projectArn) {
+        this.projectArn = projectArn;
+  }
 }

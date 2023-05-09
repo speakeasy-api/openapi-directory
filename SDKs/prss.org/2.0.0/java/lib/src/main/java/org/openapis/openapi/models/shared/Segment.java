@@ -23,6 +23,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channels")
     public Integer channels;
+
     public Segment withChannels(Integer channels) {
         this.channels = channels;
         return this;
@@ -36,6 +37,7 @@ public class Segment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public Segment withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -46,6 +48,7 @@ public class Segment {
      */
     @JsonProperty("episodeId")
     public Long episodeId;
+
     public Segment withEpisodeId(Long episodeId) {
         this.episodeId = episodeId;
         return this;
@@ -57,6 +60,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public Segment withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -68,6 +72,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileSize")
     public Long fileSize;
+
     public Segment withFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
@@ -79,6 +84,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Segment withId(Long id) {
         this.id = id;
         return this;
@@ -90,6 +96,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inCue")
     public String inCue;
+
     public Segment withInCue(String inCue) {
         this.inCue = inCue;
         return this;
@@ -103,6 +110,7 @@ public class Segment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public Segment withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -114,6 +122,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public Integer length;
+
     public Segment withLength(Integer length) {
         this.length = length;
         return this;
@@ -125,6 +134,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalFileName")
     public String originalFileName;
+
     public Segment withOriginalFileName(String originalFileName) {
         this.originalFileName = originalFileName;
         return this;
@@ -136,6 +146,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outCue")
     public String outCue;
+
     public Segment withOutCue(String outCue) {
         this.outCue = outCue;
         return this;
@@ -146,9 +157,14 @@ public class Segment {
      */
     @JsonProperty("segmentNumber")
     public Integer segmentNumber;
+
     public Segment withSegmentNumber(Integer segmentNumber) {
         this.segmentNumber = segmentNumber;
         return this;
     }
     
+    public Segment(@JsonProperty("episodeId") Long episodeId, @JsonProperty("segmentNumber") Integer segmentNumber) {
+        this.episodeId = episodeId;
+        this.segmentNumber = segmentNumber;
+  }
 }

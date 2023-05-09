@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProvisioningArtifactResponse {
     
     public String contentType;
+
     public DescribeProvisioningArtifactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProvisioningArtifactResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProvisioningArtifactOutput describeProvisioningArtifactOutput;
+
     public DescribeProvisioningArtifactResponse withDescribeProvisioningArtifactOutput(org.openapis.openapi.models.shared.DescribeProvisioningArtifactOutput describeProvisioningArtifactOutput) {
         this.describeProvisioningArtifactOutput = describeProvisioningArtifactOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProvisioningArtifactResponse {
      */
     
     public Object invalidParametersException;
+
     public DescribeProvisioningArtifactResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeProvisioningArtifactResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeProvisioningArtifactResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeProvisioningArtifactResponse {
     
     
     public Integer statusCode;
+
     public DescribeProvisioningArtifactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeProvisioningArtifactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProvisioningArtifactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeProvisioningArtifactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

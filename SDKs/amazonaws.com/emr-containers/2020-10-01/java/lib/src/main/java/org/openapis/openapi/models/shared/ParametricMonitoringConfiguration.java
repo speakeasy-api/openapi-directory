@@ -15,6 +15,7 @@ public class ParametricMonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchMonitoringConfiguration")
     public ParametricCloudWatchMonitoringConfiguration cloudWatchMonitoringConfiguration;
+
     public ParametricMonitoringConfiguration withCloudWatchMonitoringConfiguration(ParametricCloudWatchMonitoringConfiguration cloudWatchMonitoringConfiguration) {
         this.cloudWatchMonitoringConfiguration = cloudWatchMonitoringConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class ParametricMonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistentAppUI")
     public String persistentAppUI;
+
     public ParametricMonitoringConfiguration withPersistentAppUI(String persistentAppUI) {
         this.persistentAppUI = persistentAppUI;
         return this;
@@ -31,9 +33,11 @@ public class ParametricMonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3MonitoringConfiguration")
     public ParametricS3MonitoringConfiguration s3MonitoringConfiguration;
+
     public ParametricMonitoringConfiguration withS3MonitoringConfiguration(ParametricS3MonitoringConfiguration s3MonitoringConfiguration) {
         this.s3MonitoringConfiguration = s3MonitoringConfiguration;
         return this;
     }
     
+    public ParametricMonitoringConfiguration(){}
 }

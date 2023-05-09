@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResumeCampaignResponse {
@@ -12,6 +13,7 @@ public class ResumeCampaignResponse {
      */
     
     public Object accessDeniedException;
+
     public ResumeCampaignResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ResumeCampaignResponse {
      */
     
     public Object conflictException;
+
     public ResumeCampaignResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ResumeCampaignResponse {
     
     
     public String contentType;
+
     public ResumeCampaignResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ResumeCampaignResponse {
      */
     
     public Object internalServerException;
+
     public ResumeCampaignResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ResumeCampaignResponse {
      */
     
     public Object invalidCampaignStateException;
+
     public ResumeCampaignResponse withInvalidCampaignStateException(Object invalidCampaignStateException) {
         this.invalidCampaignStateException = invalidCampaignStateException;
         return this;
@@ -59,6 +65,7 @@ public class ResumeCampaignResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ResumeCampaignResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ResumeCampaignResponse {
     
     
     public Integer statusCode;
+
     public ResumeCampaignResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ResumeCampaignResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResumeCampaignResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ResumeCampaignResponse {
      */
     
     public Object throttlingException;
+
     public ResumeCampaignResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ResumeCampaignResponse {
      */
     
     public Object validationException;
+
     public ResumeCampaignResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ResumeCampaignResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

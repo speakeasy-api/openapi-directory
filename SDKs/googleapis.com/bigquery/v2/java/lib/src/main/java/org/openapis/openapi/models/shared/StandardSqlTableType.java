@@ -18,9 +18,11 @@ public class StandardSqlTableType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public StandardSqlField[] columns;
+
     public StandardSqlTableType withColumns(StandardSqlField[] columns) {
         this.columns = columns;
         return this;
     }
     
+    public StandardSqlTableType(){}
 }

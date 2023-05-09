@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class StorageNotificationsDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public StorageNotificationsDeleteSecurityOption1 option1;
+
     public StorageNotificationsDeleteSecurity withOption1(StorageNotificationsDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class StorageNotificationsDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public StorageNotificationsDeleteSecurityOption2 option2;
+
     public StorageNotificationsDeleteSecurity withOption2(StorageNotificationsDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class StorageNotificationsDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public StorageNotificationsDeleteSecurityOption3 option3;
+
     public StorageNotificationsDeleteSecurity withOption3(StorageNotificationsDeleteSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public StorageNotificationsDeleteSecurity(){}
 }

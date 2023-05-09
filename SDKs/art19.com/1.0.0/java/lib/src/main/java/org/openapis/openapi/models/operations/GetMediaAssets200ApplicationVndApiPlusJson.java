@@ -15,6 +15,7 @@ public class GetMediaAssets200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.MediaAsset[] data;
+
     public GetMediaAssets200ApplicationVndApiPlusJson withData(org.openapis.openapi.models.shared.MediaAsset[] data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class GetMediaAssets200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public org.openapis.openapi.models.shared.Links links;
+
     public GetMediaAssets200ApplicationVndApiPlusJson withLinks(org.openapis.openapi.models.shared.Links links) {
         this.links = links;
         return this;
     }
     
+    public GetMediaAssets200ApplicationVndApiPlusJson(){}
 }

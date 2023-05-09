@@ -18,9 +18,11 @@ public class Saveautoapproveforaccount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public Saveautoapproveforaccount200ApplicationJSON withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public Saveautoapproveforaccount200ApplicationJSON(){}
 }

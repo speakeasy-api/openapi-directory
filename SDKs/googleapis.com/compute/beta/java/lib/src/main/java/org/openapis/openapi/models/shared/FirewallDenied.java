@@ -15,6 +15,7 @@ public class FirewallDenied {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPProtocol")
     public String ipProtocol;
+
     public FirewallDenied withIPProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -26,9 +27,11 @@ public class FirewallDenied {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ports")
     public String[] ports;
+
     public FirewallDenied withPorts(String[] ports) {
         this.ports = ports;
         return this;
     }
     
+    public FirewallDenied(){}
 }

@@ -59,11 +59,9 @@ public class UrlMaps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeUrlMapsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeUrlMapsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsAggregatedListResponse(contentType, httpRes.statusCode()) {{
             urlMapsAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class UrlMaps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeUrlMapsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeUrlMapsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class UrlMaps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeUrlMapsGetResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeUrlMapsGetResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsGetResponse(contentType, httpRes.statusCode()) {{
             urlMap = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class UrlMaps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeUrlMapsInsertResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeUrlMapsInsertResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class UrlMaps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeUrlMapsInvalidateCacheResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsInvalidateCacheResponse() {{
+        org.openapis.openapi.models.operations.ComputeUrlMapsInvalidateCacheResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsInvalidateCacheResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class UrlMaps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeUrlMapsListResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeUrlMapsListResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsListResponse(contentType, httpRes.statusCode()) {{
             urlMapList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class UrlMaps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeUrlMapsPatchResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeUrlMapsPatchResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class UrlMaps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeUrlMapsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeUrlMapsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -437,11 +421,9 @@ public class UrlMaps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeUrlMapsUpdateResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsUpdateResponse() {{
+        org.openapis.openapi.models.operations.ComputeUrlMapsUpdateResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,11 +467,9 @@ public class UrlMaps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeUrlMapsValidateResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsValidateResponse() {{
+        org.openapis.openapi.models.operations.ComputeUrlMapsValidateResponse res = new org.openapis.openapi.models.operations.ComputeUrlMapsValidateResponse(contentType, httpRes.statusCode()) {{
             urlMapsValidateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

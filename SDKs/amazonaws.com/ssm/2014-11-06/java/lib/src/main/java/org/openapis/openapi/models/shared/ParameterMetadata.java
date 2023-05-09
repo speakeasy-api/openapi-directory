@@ -20,6 +20,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedPattern")
     public String allowedPattern;
+
     public ParameterMetadata withAllowedPattern(String allowedPattern) {
         this.allowedPattern = allowedPattern;
         return this;
@@ -28,6 +29,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataType")
     public String dataType;
+
     public ParameterMetadata withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -36,6 +38,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ParameterMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public ParameterMetadata withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -54,6 +58,7 @@ public class ParameterMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public ParameterMetadata withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -62,6 +67,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedUser")
     public String lastModifiedUser;
+
     public ParameterMetadata withLastModifiedUser(String lastModifiedUser) {
         this.lastModifiedUser = lastModifiedUser;
         return this;
@@ -70,6 +76,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ParameterMetadata withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +85,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policies")
     public ParameterInlinePolicy[] policies;
+
     public ParameterMetadata withPolicies(ParameterInlinePolicy[] policies) {
         this.policies = policies;
         return this;
@@ -86,6 +94,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tier")
     public ParameterTierEnum tier;
+
     public ParameterMetadata withTier(ParameterTierEnum tier) {
         this.tier = tier;
         return this;
@@ -94,6 +103,7 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ParameterTypeEnum type;
+
     public ParameterMetadata withType(ParameterTypeEnum type) {
         this.type = type;
         return this;
@@ -102,9 +112,11 @@ public class ParameterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public ParameterMetadata withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public ParameterMetadata(){}
 }

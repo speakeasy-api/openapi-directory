@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetAccountStatusResponse {
     @JsonProperty("accounts")
     public AccountState[] accounts;
+
     public BatchGetAccountStatusResponse withAccounts(AccountState[] accounts) {
         this.accounts = accounts;
         return this;
@@ -22,9 +23,13 @@ public class BatchGetAccountStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedAccounts")
     public FailedAccount[] failedAccounts;
+
     public BatchGetAccountStatusResponse withFailedAccounts(FailedAccount[] failedAccounts) {
         this.failedAccounts = failedAccounts;
         return this;
     }
     
+    public BatchGetAccountStatusResponse(@JsonProperty("accounts") AccountState[] accounts) {
+        this.accounts = accounts;
+  }
 }

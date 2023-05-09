@@ -15,6 +15,7 @@ public class ProjectArticle {
      */
     @JsonProperty("categories")
     public Category[] categories;
+
     public ProjectArticle withCategories(Category[] categories) {
         this.categories = categories;
         return this;
@@ -25,6 +26,7 @@ public class ProjectArticle {
      */
     @JsonProperty("citation")
     public String citation;
+
     public ProjectArticle withCitation(String citation) {
         this.citation = citation;
         return this;
@@ -35,6 +37,7 @@ public class ProjectArticle {
      */
     @JsonProperty("confidential_reason")
     public String confidentialReason;
+
     public ProjectArticle withConfidentialReason(String confidentialReason) {
         this.confidentialReason = confidentialReason;
         return this;
@@ -45,6 +48,7 @@ public class ProjectArticle {
      */
     @JsonProperty("created_date")
     public String createdDate;
+
     public ProjectArticle withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -55,6 +59,7 @@ public class ProjectArticle {
      */
     @JsonProperty("defined_type")
     public Long definedType;
+
     public ProjectArticle withDefinedType(Long definedType) {
         this.definedType = definedType;
         return this;
@@ -65,6 +70,7 @@ public class ProjectArticle {
      */
     @JsonProperty("defined_type_name")
     public String definedTypeName;
+
     public ProjectArticle withDefinedTypeName(String definedTypeName) {
         this.definedTypeName = definedTypeName;
         return this;
@@ -75,6 +81,7 @@ public class ProjectArticle {
      */
     @JsonProperty("description")
     public String description;
+
     public ProjectArticle withDescription(String description) {
         this.description = description;
         return this;
@@ -85,6 +92,7 @@ public class ProjectArticle {
      */
     @JsonProperty("doi")
     public String doi;
+
     public ProjectArticle withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -95,6 +103,7 @@ public class ProjectArticle {
      */
     @JsonProperty("embargo_date")
     public String embargoDate;
+
     public ProjectArticle withEmbargoDate(String embargoDate) {
         this.embargoDate = embargoDate;
         return this;
@@ -105,6 +114,7 @@ public class ProjectArticle {
      */
     @JsonProperty("embargo_reason")
     public String embargoReason;
+
     public ProjectArticle withEmbargoReason(String embargoReason) {
         this.embargoReason = embargoReason;
         return this;
@@ -115,6 +125,7 @@ public class ProjectArticle {
      */
     @JsonProperty("embargo_title")
     public String embargoTitle;
+
     public ProjectArticle withEmbargoTitle(String embargoTitle) {
         this.embargoTitle = embargoTitle;
         return this;
@@ -125,6 +136,7 @@ public class ProjectArticle {
      */
     @JsonProperty("embargo_type")
     public String embargoType;
+
     public ProjectArticle withEmbargoType(String embargoType) {
         this.embargoType = embargoType;
         return this;
@@ -135,6 +147,7 @@ public class ProjectArticle {
      */
     @JsonProperty("funding")
     public String funding;
+
     public ProjectArticle withFunding(String funding) {
         this.funding = funding;
         return this;
@@ -142,6 +155,7 @@ public class ProjectArticle {
     
     @JsonProperty("funding_list")
     public Long[] fundingList;
+
     public ProjectArticle withFundingList(Long[] fundingList) {
         this.fundingList = fundingList;
         return this;
@@ -152,6 +166,7 @@ public class ProjectArticle {
      */
     @JsonProperty("group_id")
     public Double groupId;
+
     public ProjectArticle withGroupId(Double groupId) {
         this.groupId = groupId;
         return this;
@@ -162,6 +177,7 @@ public class ProjectArticle {
      */
     @JsonProperty("handle")
     public String handle;
+
     public ProjectArticle withHandle(String handle) {
         this.handle = handle;
         return this;
@@ -172,6 +188,7 @@ public class ProjectArticle {
      */
     @JsonProperty("has_linked_file")
     public Boolean hasLinkedFile;
+
     public ProjectArticle withHasLinkedFile(Boolean hasLinkedFile) {
         this.hasLinkedFile = hasLinkedFile;
         return this;
@@ -182,6 +199,7 @@ public class ProjectArticle {
      */
     @JsonProperty("id")
     public Long id;
+
     public ProjectArticle withId(Long id) {
         this.id = id;
         return this;
@@ -192,6 +210,7 @@ public class ProjectArticle {
      */
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public ProjectArticle withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -202,6 +221,7 @@ public class ProjectArticle {
      */
     @JsonProperty("is_confidential")
     public Boolean isConfidential;
+
     public ProjectArticle withIsConfidential(Boolean isConfidential) {
         this.isConfidential = isConfidential;
         return this;
@@ -212,6 +232,7 @@ public class ProjectArticle {
      */
     @JsonProperty("is_embargoed")
     public Boolean isEmbargoed;
+
     public ProjectArticle withIsEmbargoed(Boolean isEmbargoed) {
         this.isEmbargoed = isEmbargoed;
         return this;
@@ -222,6 +243,7 @@ public class ProjectArticle {
      */
     @JsonProperty("is_metadata_record")
     public Boolean isMetadataRecord;
+
     public ProjectArticle withIsMetadataRecord(Boolean isMetadataRecord) {
         this.isMetadataRecord = isMetadataRecord;
         return this;
@@ -232,6 +254,7 @@ public class ProjectArticle {
      */
     @JsonProperty("is_public")
     public Boolean isPublic;
+
     public ProjectArticle withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -239,6 +262,7 @@ public class ProjectArticle {
     
     @JsonProperty("license")
     public License license;
+
     public ProjectArticle withLicense(License license) {
         this.license = license;
         return this;
@@ -249,6 +273,7 @@ public class ProjectArticle {
      */
     @JsonProperty("metadata_reason")
     public String metadataReason;
+
     public ProjectArticle withMetadataReason(String metadataReason) {
         this.metadataReason = metadataReason;
         return this;
@@ -259,6 +284,7 @@ public class ProjectArticle {
      */
     @JsonProperty("modified_date")
     public String modifiedDate;
+
     public ProjectArticle withModifiedDate(String modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -269,6 +295,7 @@ public class ProjectArticle {
      */
     @JsonProperty("published_date")
     public String publishedDate;
+
     public ProjectArticle withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
@@ -279,6 +306,7 @@ public class ProjectArticle {
      */
     @JsonProperty("references")
     public String[] references;
+
     public ProjectArticle withReferences(String[] references) {
         this.references = references;
         return this;
@@ -289,6 +317,7 @@ public class ProjectArticle {
      */
     @JsonProperty("size")
     public Long size;
+
     public ProjectArticle withSize(Long size) {
         this.size = size;
         return this;
@@ -299,6 +328,7 @@ public class ProjectArticle {
      */
     @JsonProperty("status")
     public String status;
+
     public ProjectArticle withStatus(String status) {
         this.status = status;
         return this;
@@ -309,6 +339,7 @@ public class ProjectArticle {
      */
     @JsonProperty("tags")
     public String[] tags;
+
     public ProjectArticle withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -319,6 +350,7 @@ public class ProjectArticle {
      */
     @JsonProperty("thumb")
     public String thumb;
+
     public ProjectArticle withThumb(String thumb) {
         this.thumb = thumb;
         return this;
@@ -326,6 +358,7 @@ public class ProjectArticle {
     
     @JsonProperty("timeline")
     public Timeline timeline;
+
     public ProjectArticle withTimeline(Timeline timeline) {
         this.timeline = timeline;
         return this;
@@ -336,6 +369,7 @@ public class ProjectArticle {
      */
     @JsonProperty("title")
     public String title;
+
     public ProjectArticle withTitle(String title) {
         this.title = title;
         return this;
@@ -346,6 +380,7 @@ public class ProjectArticle {
      */
     @JsonProperty("url")
     public String url;
+
     public ProjectArticle withUrl(String url) {
         this.url = url;
         return this;
@@ -356,6 +391,7 @@ public class ProjectArticle {
      */
     @JsonProperty("url_private_api")
     public String urlPrivateApi;
+
     public ProjectArticle withUrlPrivateApi(String urlPrivateApi) {
         this.urlPrivateApi = urlPrivateApi;
         return this;
@@ -366,6 +402,7 @@ public class ProjectArticle {
      */
     @JsonProperty("url_private_html")
     public String urlPrivateHtml;
+
     public ProjectArticle withUrlPrivateHtml(String urlPrivateHtml) {
         this.urlPrivateHtml = urlPrivateHtml;
         return this;
@@ -376,6 +413,7 @@ public class ProjectArticle {
      */
     @JsonProperty("url_public_api")
     public String urlPublicApi;
+
     public ProjectArticle withUrlPublicApi(String urlPublicApi) {
         this.urlPublicApi = urlPublicApi;
         return this;
@@ -386,6 +424,7 @@ public class ProjectArticle {
      */
     @JsonProperty("url_public_html")
     public String urlPublicHtml;
+
     public ProjectArticle withUrlPublicHtml(String urlPublicHtml) {
         this.urlPublicHtml = urlPublicHtml;
         return this;
@@ -396,9 +435,52 @@ public class ProjectArticle {
      */
     @JsonProperty("version")
     public Long version;
+
     public ProjectArticle withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public ProjectArticle(@JsonProperty("categories") Category[] categories, @JsonProperty("citation") String citation, @JsonProperty("confidential_reason") String confidentialReason, @JsonProperty("created_date") String createdDate, @JsonProperty("defined_type") Long definedType, @JsonProperty("defined_type_name") String definedTypeName, @JsonProperty("description") String description, @JsonProperty("doi") String doi, @JsonProperty("embargo_date") String embargoDate, @JsonProperty("embargo_reason") String embargoReason, @JsonProperty("embargo_title") String embargoTitle, @JsonProperty("embargo_type") String embargoType, @JsonProperty("funding") String funding, @JsonProperty("funding_list") Long[] fundingList, @JsonProperty("group_id") Double groupId, @JsonProperty("handle") String handle, @JsonProperty("has_linked_file") Boolean hasLinkedFile, @JsonProperty("id") Long id, @JsonProperty("is_active") Boolean isActive, @JsonProperty("is_confidential") Boolean isConfidential, @JsonProperty("is_embargoed") Boolean isEmbargoed, @JsonProperty("is_metadata_record") Boolean isMetadataRecord, @JsonProperty("is_public") Boolean isPublic, @JsonProperty("license") License license, @JsonProperty("metadata_reason") String metadataReason, @JsonProperty("modified_date") String modifiedDate, @JsonProperty("published_date") String publishedDate, @JsonProperty("references") String[] references, @JsonProperty("size") Long size, @JsonProperty("status") String status, @JsonProperty("tags") String[] tags, @JsonProperty("thumb") String thumb, @JsonProperty("timeline") Timeline timeline, @JsonProperty("title") String title, @JsonProperty("url") String url, @JsonProperty("url_private_api") String urlPrivateApi, @JsonProperty("url_private_html") String urlPrivateHtml, @JsonProperty("url_public_api") String urlPublicApi, @JsonProperty("url_public_html") String urlPublicHtml, @JsonProperty("version") Long version) {
+        this.categories = categories;
+        this.citation = citation;
+        this.confidentialReason = confidentialReason;
+        this.createdDate = createdDate;
+        this.definedType = definedType;
+        this.definedTypeName = definedTypeName;
+        this.description = description;
+        this.doi = doi;
+        this.embargoDate = embargoDate;
+        this.embargoReason = embargoReason;
+        this.embargoTitle = embargoTitle;
+        this.embargoType = embargoType;
+        this.funding = funding;
+        this.fundingList = fundingList;
+        this.groupId = groupId;
+        this.handle = handle;
+        this.hasLinkedFile = hasLinkedFile;
+        this.id = id;
+        this.isActive = isActive;
+        this.isConfidential = isConfidential;
+        this.isEmbargoed = isEmbargoed;
+        this.isMetadataRecord = isMetadataRecord;
+        this.isPublic = isPublic;
+        this.license = license;
+        this.metadataReason = metadataReason;
+        this.modifiedDate = modifiedDate;
+        this.publishedDate = publishedDate;
+        this.references = references;
+        this.size = size;
+        this.status = status;
+        this.tags = tags;
+        this.thumb = thumb;
+        this.timeline = timeline;
+        this.title = title;
+        this.url = url;
+        this.urlPrivateApi = urlPrivateApi;
+        this.urlPrivateHtml = urlPrivateHtml;
+        this.urlPublicApi = urlPublicApi;
+        this.urlPublicHtml = urlPublicHtml;
+        this.version = version;
+  }
 }

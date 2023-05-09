@@ -15,6 +15,7 @@ public class GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchReque
      */
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -25,6 +26,7 @@ public class GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchReque
      */
     @JsonProperty("mode")
     public GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequestModeEnum mode;
+
     public GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest withMode(GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequestModeEnum mode) {
         this.mode = mode;
         return this;
@@ -35,9 +37,15 @@ public class GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchReque
      */
     @JsonProperty("value")
     public String value;
+
     public GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest(@JsonProperty("investment_product_id") String investmentProductId, @JsonProperty("mode") GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequestModeEnum mode, @JsonProperty("value") String value) {
+        this.investmentProductId = investmentProductId;
+        this.mode = mode;
+        this.value = value;
+  }
 }

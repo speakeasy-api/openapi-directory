@@ -18,6 +18,7 @@ public class List {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listId")
     public String listId;
+
     public List withListId(String listId) {
         this.listId = listId;
         return this;
@@ -29,9 +30,11 @@ public class List {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nestingLevel")
     public java.util.Map<String, NestingLevel> nestingLevel;
+
     public List withNestingLevel(java.util.Map<String, NestingLevel> nestingLevel) {
         this.nestingLevel = nestingLevel;
         return this;
     }
     
+    public List(){}
 }

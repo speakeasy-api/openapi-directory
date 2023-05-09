@@ -18,6 +18,7 @@ public class SoftwareRecipeStepExtractArchive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactId")
     public String artifactId;
+
     public SoftwareRecipeStepExtractArchive withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -29,6 +30,7 @@ public class SoftwareRecipeStepExtractArchive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public SoftwareRecipeStepExtractArchive withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -40,9 +42,11 @@ public class SoftwareRecipeStepExtractArchive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SoftwareRecipeStepExtractArchiveTypeEnum type;
+
     public SoftwareRecipeStepExtractArchive withType(SoftwareRecipeStepExtractArchiveTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SoftwareRecipeStepExtractArchive(){}
 }

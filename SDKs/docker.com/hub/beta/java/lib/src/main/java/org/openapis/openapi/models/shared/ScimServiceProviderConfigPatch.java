@@ -12,9 +12,11 @@ public class ScimServiceProviderConfigPatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supported")
     public Boolean supported;
+
     public ScimServiceProviderConfigPatch withSupported(Boolean supported) {
         this.supported = supported;
         return this;
     }
     
+    public ScimServiceProviderConfigPatch(){}
 }

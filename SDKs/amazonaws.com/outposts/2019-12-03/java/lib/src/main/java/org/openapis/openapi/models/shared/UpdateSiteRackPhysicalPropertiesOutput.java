@@ -18,9 +18,11 @@ public class UpdateSiteRackPhysicalPropertiesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Site")
     public Site site;
+
     public UpdateSiteRackPhysicalPropertiesOutput withSite(Site site) {
         this.site = site;
         return this;
     }
     
+    public UpdateSiteRackPhysicalPropertiesOutput(){}
 }

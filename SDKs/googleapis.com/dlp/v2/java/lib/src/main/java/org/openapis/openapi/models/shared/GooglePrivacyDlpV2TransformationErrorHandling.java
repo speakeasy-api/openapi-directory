@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2TransformationErrorHandling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leaveUntransformed")
     public java.util.Map<String, Object> leaveUntransformed;
+
     public GooglePrivacyDlpV2TransformationErrorHandling withLeaveUntransformed(java.util.Map<String, Object> leaveUntransformed) {
         this.leaveUntransformed = leaveUntransformed;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2TransformationErrorHandling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("throwError")
     public java.util.Map<String, Object> throwError;
+
     public GooglePrivacyDlpV2TransformationErrorHandling withThrowError(java.util.Map<String, Object> throwError) {
         this.throwError = throwError;
         return this;
     }
     
+    public GooglePrivacyDlpV2TransformationErrorHandling(){}
 }

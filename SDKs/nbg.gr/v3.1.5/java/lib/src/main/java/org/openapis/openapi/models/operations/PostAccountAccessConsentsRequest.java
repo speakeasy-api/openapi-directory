@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAccountAccessConsentsRequest {
@@ -12,6 +13,7 @@ public class PostAccountAccessConsentsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OBReadConsent1 obReadConsent1;
+
     public PostAccountAccessConsentsRequest withOBReadConsent1(org.openapis.openapi.models.shared.OBReadConsent1 obReadConsent1) {
         this.obReadConsent1 = obReadConsent1;
         return this;
@@ -22,6 +24,7 @@ public class PostAccountAccessConsentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=sandbox-id")
     public String sandboxId;
+
     public PostAccountAccessConsentsRequest withSandboxId(String sandboxId) {
         this.sandboxId = sandboxId;
         return this;
@@ -32,6 +35,7 @@ public class PostAccountAccessConsentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public PostAccountAccessConsentsRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -44,6 +48,7 @@ public class PostAccountAccessConsentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public PostAccountAccessConsentsRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -54,6 +59,7 @@ public class PostAccountAccessConsentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public PostAccountAccessConsentsRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -64,9 +70,13 @@ public class PostAccountAccessConsentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public PostAccountAccessConsentsRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     
+    public PostAccountAccessConsentsRequest(@JsonProperty("sandbox-id") String sandboxId) {
+        this.sandboxId = sandboxId;
+  }
 }

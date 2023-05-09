@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VerifiedaccessChallengeGenerateResponse {
@@ -12,6 +13,7 @@ public class VerifiedaccessChallengeGenerateResponse {
      */
     
     public org.openapis.openapi.models.shared.Challenge challenge;
+
     public VerifiedaccessChallengeGenerateResponse withChallenge(org.openapis.openapi.models.shared.Challenge challenge) {
         this.challenge = challenge;
         return this;
@@ -19,6 +21,7 @@ public class VerifiedaccessChallengeGenerateResponse {
     
     
     public String contentType;
+
     public VerifiedaccessChallengeGenerateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class VerifiedaccessChallengeGenerateResponse {
     
     
     public Integer statusCode;
+
     public VerifiedaccessChallengeGenerateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class VerifiedaccessChallengeGenerateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VerifiedaccessChallengeGenerateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VerifiedaccessChallengeGenerateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

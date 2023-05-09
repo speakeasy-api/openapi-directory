@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DimensionFilter - Represents filters for a dimension.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DimensionFilter {
     
     public String name;
+
     public DimensionFilter withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,13 @@ public class DimensionFilter {
     
     
     public String value;
+
     public DimensionFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DimensionFilter(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

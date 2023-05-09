@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotLaunchSpecification {
     
     public String addressingType;
+
     public RequestSpotLaunchSpecification withAddressingType(String addressingType) {
         this.addressingType = addressingType;
         return this;
@@ -19,6 +20,7 @@ public class RequestSpotLaunchSpecification {
     
     
     public RequestSpotLaunchSpecificationBlockDeviceMappings[] blockDeviceMappings;
+
     public RequestSpotLaunchSpecification withBlockDeviceMappings(RequestSpotLaunchSpecificationBlockDeviceMappings[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -26,6 +28,7 @@ public class RequestSpotLaunchSpecification {
     
     
     public Boolean ebsOptimized;
+
     public RequestSpotLaunchSpecification withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -33,6 +36,7 @@ public class RequestSpotLaunchSpecification {
     
     
     public RequestSpotLaunchSpecificationIamInstanceProfile iamInstanceProfile;
+
     public RequestSpotLaunchSpecification withIamInstanceProfile(RequestSpotLaunchSpecificationIamInstanceProfile iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -40,6 +44,7 @@ public class RequestSpotLaunchSpecification {
     
     
     public String imageId;
+
     public RequestSpotLaunchSpecification withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -47,6 +52,7 @@ public class RequestSpotLaunchSpecification {
     
     
     public RequestSpotLaunchSpecificationInstanceTypeEnum instanceType;
+
     public RequestSpotLaunchSpecification withInstanceType(RequestSpotLaunchSpecificationInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -54,6 +60,7 @@ public class RequestSpotLaunchSpecification {
     
     
     public String kernelId;
+
     public RequestSpotLaunchSpecification withKernelId(String kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -61,6 +68,7 @@ public class RequestSpotLaunchSpecification {
     
     
     public String keyName;
+
     public RequestSpotLaunchSpecification withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -68,6 +76,7 @@ public class RequestSpotLaunchSpecification {
     
     
     public RequestSpotLaunchSpecificationMonitoring monitoring;
+
     public RequestSpotLaunchSpecification withMonitoring(RequestSpotLaunchSpecificationMonitoring monitoring) {
         this.monitoring = monitoring;
         return this;
@@ -75,6 +84,7 @@ public class RequestSpotLaunchSpecification {
     
     
     public RequestSpotLaunchSpecificationNetworkInterfaces[] networkInterfaces;
+
     public RequestSpotLaunchSpecification withNetworkInterfaces(RequestSpotLaunchSpecificationNetworkInterfaces[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -82,6 +92,7 @@ public class RequestSpotLaunchSpecification {
     
     
     public RequestSpotLaunchSpecificationPlacement placement;
+
     public RequestSpotLaunchSpecification withPlacement(RequestSpotLaunchSpecificationPlacement placement) {
         this.placement = placement;
         return this;
@@ -89,6 +100,7 @@ public class RequestSpotLaunchSpecification {
     
     
     public String ramdiskId;
+
     public RequestSpotLaunchSpecification withRamdiskId(String ramdiskId) {
         this.ramdiskId = ramdiskId;
         return this;
@@ -96,6 +108,7 @@ public class RequestSpotLaunchSpecification {
     
     
     public String[] securityGroupIds;
+
     public RequestSpotLaunchSpecification withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -103,6 +116,7 @@ public class RequestSpotLaunchSpecification {
     
     
     public String[] securityGroups;
+
     public RequestSpotLaunchSpecification withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -110,6 +124,7 @@ public class RequestSpotLaunchSpecification {
     
     
     public String subnetId;
+
     public RequestSpotLaunchSpecification withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -117,9 +132,11 @@ public class RequestSpotLaunchSpecification {
     
     
     public String userData;
+
     public RequestSpotLaunchSpecification withUserData(String userData) {
         this.userData = userData;
         return this;
     }
     
+    public RequestSpotLaunchSpecification(){}
 }

@@ -72,10 +72,8 @@ public class Images {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteImagesIdResponse res = new org.openapis.openapi.models.operations.DeleteImagesIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteImagesIdResponse res = new org.openapis.openapi.models.operations.DeleteImagesIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -111,11 +109,9 @@ public class Images {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetImagesResponse res = new org.openapis.openapi.models.operations.GetImagesResponse() {{
+        org.openapis.openapi.models.operations.GetImagesResponse res = new org.openapis.openapi.models.operations.GetImagesResponse(contentType, httpRes.statusCode()) {{
             getImages200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Images {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetImagesIdResponse res = new org.openapis.openapi.models.operations.GetImagesIdResponse() {{
+        org.openapis.openapi.models.operations.GetImagesIdResponse res = new org.openapis.openapi.models.operations.GetImagesIdResponse(contentType, httpRes.statusCode()) {{
             getImagesId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +188,9 @@ public class Images {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutImagesIdResponse res = new org.openapis.openapi.models.operations.PutImagesIdResponse() {{
+        org.openapis.openapi.models.operations.PutImagesIdResponse res = new org.openapis.openapi.models.operations.PutImagesIdResponse(contentType, httpRes.statusCode()) {{
             putImagesId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

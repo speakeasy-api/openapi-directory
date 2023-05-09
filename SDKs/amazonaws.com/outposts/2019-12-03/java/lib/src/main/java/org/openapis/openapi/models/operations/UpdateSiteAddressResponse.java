@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSiteAddressResponse {
@@ -12,6 +13,7 @@ public class UpdateSiteAddressResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateSiteAddressResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateSiteAddressResponse {
      */
     
     public Object conflictException;
+
     public UpdateSiteAddressResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSiteAddressResponse {
     
     
     public String contentType;
+
     public UpdateSiteAddressResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSiteAddressResponse {
      */
     
     public Object internalServerException;
+
     public UpdateSiteAddressResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSiteAddressResponse {
      */
     
     public Object notFoundException;
+
     public UpdateSiteAddressResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateSiteAddressResponse {
     
     
     public Integer statusCode;
+
     public UpdateSiteAddressResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSiteAddressResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSiteAddressResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSiteAddressResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSiteAddressOutput updateSiteAddressOutput;
+
     public UpdateSiteAddressResponse withUpdateSiteAddressOutput(org.openapis.openapi.models.shared.UpdateSiteAddressOutput updateSiteAddressOutput) {
         this.updateSiteAddressOutput = updateSiteAddressOutput;
         return this;
@@ -83,9 +92,14 @@ public class UpdateSiteAddressResponse {
      */
     
     public Object validationException;
+
     public UpdateSiteAddressResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateSiteAddressResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

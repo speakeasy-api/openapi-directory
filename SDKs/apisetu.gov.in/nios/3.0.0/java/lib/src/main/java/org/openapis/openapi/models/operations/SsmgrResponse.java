@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SsmgrResponse {
     
     public String contentType;
+
     public SsmgrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SsmgrResponse {
     
     
     public Integer statusCode;
+
     public SsmgrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SsmgrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SsmgrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SsmgrResponse {
      */
     
     public Ssmgr400ApplicationJSON ssmgr400ApplicationJSONObject;
+
     public SsmgrResponse withSsmgr400ApplicationJSONObject(Ssmgr400ApplicationJSON ssmgr400ApplicationJSONObject) {
         this.ssmgr400ApplicationJSONObject = ssmgr400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SsmgrResponse {
      */
     
     public Ssmgr401ApplicationJSON ssmgr401ApplicationJSONObject;
+
     public SsmgrResponse withSsmgr401ApplicationJSONObject(Ssmgr401ApplicationJSON ssmgr401ApplicationJSONObject) {
         this.ssmgr401ApplicationJSONObject = ssmgr401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SsmgrResponse {
      */
     
     public Ssmgr404ApplicationJSON ssmgr404ApplicationJSONObject;
+
     public SsmgrResponse withSsmgr404ApplicationJSONObject(Ssmgr404ApplicationJSON ssmgr404ApplicationJSONObject) {
         this.ssmgr404ApplicationJSONObject = ssmgr404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class SsmgrResponse {
      */
     
     public Ssmgr500ApplicationJSON ssmgr500ApplicationJSONObject;
+
     public SsmgrResponse withSsmgr500ApplicationJSONObject(Ssmgr500ApplicationJSON ssmgr500ApplicationJSONObject) {
         this.ssmgr500ApplicationJSONObject = ssmgr500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class SsmgrResponse {
      */
     
     public Ssmgr502ApplicationJSON ssmgr502ApplicationJSONObject;
+
     public SsmgrResponse withSsmgr502ApplicationJSONObject(Ssmgr502ApplicationJSON ssmgr502ApplicationJSONObject) {
         this.ssmgr502ApplicationJSONObject = ssmgr502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class SsmgrResponse {
      */
     
     public Ssmgr503ApplicationJSON ssmgr503ApplicationJSONObject;
+
     public SsmgrResponse withSsmgr503ApplicationJSONObject(Ssmgr503ApplicationJSON ssmgr503ApplicationJSONObject) {
         this.ssmgr503ApplicationJSONObject = ssmgr503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class SsmgrResponse {
      */
     
     public Ssmgr504ApplicationJSON ssmgr504ApplicationJSONObject;
+
     public SsmgrResponse withSsmgr504ApplicationJSONObject(Ssmgr504ApplicationJSON ssmgr504ApplicationJSONObject) {
         this.ssmgr504ApplicationJSONObject = ssmgr504ApplicationJSONObject;
         return this;
     }
     
+    public SsmgrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

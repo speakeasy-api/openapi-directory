@@ -15,6 +15,7 @@ public class GetCalculationExecutionStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statistics")
     public CalculationStatistics statistics;
+
     public GetCalculationExecutionStatusResponse withStatistics(CalculationStatistics statistics) {
         this.statistics = statistics;
         return this;
@@ -23,9 +24,11 @@ public class GetCalculationExecutionStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CalculationStatus status;
+
     public GetCalculationExecutionStatusResponse withStatus(CalculationStatus status) {
         this.status = status;
         return this;
     }
     
+    public GetCalculationExecutionStatusResponse(){}
 }

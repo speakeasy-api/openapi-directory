@@ -12,9 +12,11 @@ public class GetVaultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetVaultsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public GetVaultsRequest(){}
 }

@@ -15,9 +15,11 @@ public class GetInstanceAccessOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceAccess")
     public InstanceAccess instanceAccess;
+
     public GetInstanceAccessOutput withInstanceAccess(InstanceAccess instanceAccess) {
         this.instanceAccess = instanceAccess;
         return this;
     }
     
+    public GetInstanceAccessOutput(){}
 }

@@ -15,6 +15,7 @@ public class UpdateRepositoryDescriptionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryDescription")
     public String repositoryDescription;
+
     public UpdateRepositoryDescriptionInput withRepositoryDescription(String repositoryDescription) {
         this.repositoryDescription = repositoryDescription;
         return this;
@@ -22,9 +23,13 @@ public class UpdateRepositoryDescriptionInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public UpdateRepositoryDescriptionInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public UpdateRepositoryDescriptionInput(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcsResult {
     
     public String nextToken;
+
     public DescribeVpcsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVpcsResult {
     
     
     public DescribeVpcsResultVpcs[] vpcs;
+
     public DescribeVpcsResult withVpcs(DescribeVpcsResultVpcs[] vpcs) {
         this.vpcs = vpcs;
         return this;
     }
     
+    public DescribeVpcsResult(){}
 }

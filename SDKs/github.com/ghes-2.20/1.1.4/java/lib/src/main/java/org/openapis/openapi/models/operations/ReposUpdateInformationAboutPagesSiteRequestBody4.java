@@ -14,6 +14,7 @@ public class ReposUpdateInformationAboutPagesSiteRequestBody4 {
      */
     @JsonProperty("https_enforced")
     public Boolean httpsEnforced;
+
     public ReposUpdateInformationAboutPagesSiteRequestBody4 withHttpsEnforced(Boolean httpsEnforced) {
         this.httpsEnforced = httpsEnforced;
         return this;
@@ -25,6 +26,7 @@ public class ReposUpdateInformationAboutPagesSiteRequestBody4 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public")
     public Boolean public_;
+
     public ReposUpdateInformationAboutPagesSiteRequestBody4 withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -36,9 +38,13 @@ public class ReposUpdateInformationAboutPagesSiteRequestBody4 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Object source;
+
     public ReposUpdateInformationAboutPagesSiteRequestBody4 withSource(Object source) {
         this.source = source;
         return this;
     }
     
+    public ReposUpdateInformationAboutPagesSiteRequestBody4(@JsonProperty("https_enforced") Boolean httpsEnforced) {
+        this.httpsEnforced = httpsEnforced;
+  }
 }

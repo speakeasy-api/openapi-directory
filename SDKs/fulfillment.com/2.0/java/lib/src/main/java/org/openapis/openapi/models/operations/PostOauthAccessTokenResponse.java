@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostOauthAccessTokenResponse {
@@ -12,6 +13,7 @@ public class PostOauthAccessTokenResponse {
      */
     
     public PostOauthAccessTokenAccessTokenResponseV2 accessTokenResponseV2;
+
     public PostOauthAccessTokenResponse withAccessTokenResponseV2(PostOauthAccessTokenAccessTokenResponseV2 accessTokenResponseV2) {
         this.accessTokenResponseV2 = accessTokenResponseV2;
         return this;
@@ -19,6 +21,7 @@ public class PostOauthAccessTokenResponse {
     
     
     public String contentType;
+
     public PostOauthAccessTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostOauthAccessTokenResponse {
     
     
     public Integer statusCode;
+
     public PostOauthAccessTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PostOauthAccessTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostOauthAccessTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class PostOauthAccessTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.OneordersGetResponses404ContentApplication1jsonSchema oneordersGetResponses404ContentApplication1jsonSchema;
+
     public PostOauthAccessTokenResponse withOneordersGetResponses404ContentApplication1jsonSchema(org.openapis.openapi.models.shared.OneordersGetResponses404ContentApplication1jsonSchema oneordersGetResponses404ContentApplication1jsonSchema) {
         this.oneordersGetResponses404ContentApplication1jsonSchema = oneordersGetResponses404ContentApplication1jsonSchema;
         return this;
     }
     
+    public PostOauthAccessTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFoodBrandedNamePhpResponse {
@@ -13,6 +14,7 @@ public class GetFoodBrandedNamePhpResponse {
      */
     
     public org.openapis.openapi.models.shared.BrandedFoodObject brandedFoodObject;
+
     public GetFoodBrandedNamePhpResponse withBrandedFoodObject(org.openapis.openapi.models.shared.BrandedFoodObject brandedFoodObject) {
         this.brandedFoodObject = brandedFoodObject;
         return this;
@@ -20,6 +22,7 @@ public class GetFoodBrandedNamePhpResponse {
     
     
     public String contentType;
+
     public GetFoodBrandedNamePhpResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -27,6 +30,7 @@ public class GetFoodBrandedNamePhpResponse {
     
     
     public Integer statusCode;
+
     public GetFoodBrandedNamePhpResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,9 +38,14 @@ public class GetFoodBrandedNamePhpResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFoodBrandedNamePhpResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFoodBrandedNamePhpResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class GoogleChromePolicyVersionsV1UploadPolicyFileRequest {
      */
     
     public String policyField;
+
     public GoogleChromePolicyVersionsV1UploadPolicyFileRequest withPolicyField(String policyField) {
         this.policyField = policyField;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1UploadPolicyFileRequest(){}
 }

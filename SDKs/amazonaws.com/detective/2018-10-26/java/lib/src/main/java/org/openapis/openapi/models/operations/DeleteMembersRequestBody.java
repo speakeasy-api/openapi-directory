@@ -12,6 +12,7 @@ public class DeleteMembersRequestBody {
      */
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public DeleteMembersRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -22,9 +23,14 @@ public class DeleteMembersRequestBody {
      */
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public DeleteMembersRequestBody withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
     }
     
+    public DeleteMembersRequestBody(@JsonProperty("AccountIds") String[] accountIds, @JsonProperty("GraphArn") String graphArn) {
+        this.accountIds = accountIds;
+        this.graphArn = graphArn;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubscribeToEventRequest {
     @JsonProperty("event")
     public InspectorEventEnum event;
+
     public SubscribeToEventRequest withEvent(InspectorEventEnum event) {
         this.event = event;
         return this;
@@ -16,6 +17,7 @@ public class SubscribeToEventRequest {
     
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public SubscribeToEventRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -23,9 +25,15 @@ public class SubscribeToEventRequest {
     
     @JsonProperty("topicArn")
     public String topicArn;
+
     public SubscribeToEventRequest withTopicArn(String topicArn) {
         this.topicArn = topicArn;
         return this;
     }
     
+    public SubscribeToEventRequest(@JsonProperty("event") InspectorEventEnum event, @JsonProperty("resourceArn") String resourceArn, @JsonProperty("topicArn") String topicArn) {
+        this.event = event;
+        this.resourceArn = resourceArn;
+        this.topicArn = topicArn;
+  }
 }

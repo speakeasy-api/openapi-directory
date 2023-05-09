@@ -18,9 +18,11 @@ public class AccountActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityLevel")
     public AccountActivityActivityLevelEnum activityLevel;
+
     public AccountActivity withActivityLevel(AccountActivityActivityLevelEnum activityLevel) {
         this.activityLevel = activityLevel;
         return this;
     }
     
+    public AccountActivity(){}
 }

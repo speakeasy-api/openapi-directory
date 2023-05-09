@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GoogleCloudDocumentaiV1beta2Document withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta2Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public GoogleCloudDocumentaiV1beta2DocumentEntity[] entities;
+
     public GoogleCloudDocumentaiV1beta2Document withEntities(GoogleCloudDocumentaiV1beta2DocumentEntity[] entities) {
         this.entities = entities;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta2Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityRelations")
     public GoogleCloudDocumentaiV1beta2DocumentEntityRelation[] entityRelations;
+
     public GoogleCloudDocumentaiV1beta2Document withEntityRelations(GoogleCloudDocumentaiV1beta2DocumentEntityRelation[] entityRelations) {
         this.entityRelations = entityRelations;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1beta2Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public GoogleRpcStatus error;
+
     public GoogleCloudDocumentaiV1beta2Document withError(GoogleRpcStatus error) {
         this.error = error;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1beta2Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public GoogleCloudDocumentaiV1beta2DocumentLabel[] labels;
+
     public GoogleCloudDocumentaiV1beta2Document withLabels(GoogleCloudDocumentaiV1beta2DocumentLabel[] labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDocumentaiV1beta2Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public GoogleCloudDocumentaiV1beta2Document withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDocumentaiV1beta2Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pages")
     public GoogleCloudDocumentaiV1beta2DocumentPage[] pages;
+
     public GoogleCloudDocumentaiV1beta2Document withPages(GoogleCloudDocumentaiV1beta2DocumentPage[] pages) {
         this.pages = pages;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDocumentaiV1beta2Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisions")
     public GoogleCloudDocumentaiV1beta2DocumentRevision[] revisions;
+
     public GoogleCloudDocumentaiV1beta2Document withRevisions(GoogleCloudDocumentaiV1beta2DocumentRevision[] revisions) {
         this.revisions = revisions;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDocumentaiV1beta2Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shardInfo")
     public GoogleCloudDocumentaiV1beta2DocumentShardInfo shardInfo;
+
     public GoogleCloudDocumentaiV1beta2Document withShardInfo(GoogleCloudDocumentaiV1beta2DocumentShardInfo shardInfo) {
         this.shardInfo = shardInfo;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDocumentaiV1beta2Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDocumentaiV1beta2Document withText(String text) {
         this.text = text;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDocumentaiV1beta2Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textChanges")
     public GoogleCloudDocumentaiV1beta2DocumentTextChange[] textChanges;
+
     public GoogleCloudDocumentaiV1beta2Document withTextChanges(GoogleCloudDocumentaiV1beta2DocumentTextChange[] textChanges) {
         this.textChanges = textChanges;
         return this;
@@ -139,20 +150,23 @@ public class GoogleCloudDocumentaiV1beta2Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyles")
     public GoogleCloudDocumentaiV1beta2DocumentStyle[] textStyles;
+
     public GoogleCloudDocumentaiV1beta2Document withTextStyles(GoogleCloudDocumentaiV1beta2DocumentStyle[] textStyles) {
         this.textStyles = textStyles;
         return this;
     }
     
     /**
-     * Optional. Currently supports Google Cloud Storage URI of the form `gs://bucket_name/object_name`. Object versioning is not supported. See [Google Cloud Storage Request URIs](https://cloud.google.com/storage/docs/reference-uris) for more info.
+     * Optional. Currently supports Google Cloud Storage URI of the form `gs://bucket_name/object_name`. Object versioning is not supported. For more information, refer to [Google Cloud Storage Request URIs](https://cloud.google.com/storage/docs/reference-uris).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudDocumentaiV1beta2Document withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2Document(){}
 }

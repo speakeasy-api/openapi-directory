@@ -18,6 +18,7 @@ public class ImageToLinesWithLocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lines")
     public OcrLineElement[] lines;
+
     public ImageToLinesWithLocationResult withLines(OcrLineElement[] lines) {
         this.lines = lines;
         return this;
@@ -29,9 +30,11 @@ public class ImageToLinesWithLocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Successful")
     public Boolean successful;
+
     public ImageToLinesWithLocationResult withSuccessful(Boolean successful) {
         this.successful = successful;
         return this;
     }
     
+    public ImageToLinesWithLocationResult(){}
 }

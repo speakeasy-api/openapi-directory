@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesGpuInfoGpus {
     
     public Long count;
+
     public DescribeInstanceTypesResultInstanceTypesGpuInfoGpus withCount(Long count) {
         this.count = count;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceTypesResultInstanceTypesGpuInfoGpus {
     
     
     public String manufacturer;
+
     public DescribeInstanceTypesResultInstanceTypesGpuInfoGpus withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstanceTypesResultInstanceTypesGpuInfoGpus {
     
     
     public DescribeInstanceTypesResultInstanceTypesGpuInfoGpusMemoryInfo memoryInfo;
+
     public DescribeInstanceTypesResultInstanceTypesGpuInfoGpus withMemoryInfo(DescribeInstanceTypesResultInstanceTypesGpuInfoGpusMemoryInfo memoryInfo) {
         this.memoryInfo = memoryInfo;
         return this;
@@ -33,9 +36,11 @@ public class DescribeInstanceTypesResultInstanceTypesGpuInfoGpus {
     
     
     public String name;
+
     public DescribeInstanceTypesResultInstanceTypesGpuInfoGpus withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesGpuInfoGpus(){}
 }

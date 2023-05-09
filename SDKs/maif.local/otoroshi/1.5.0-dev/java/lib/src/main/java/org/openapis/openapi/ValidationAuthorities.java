@@ -58,11 +58,9 @@ public class ValidationAuthorities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateClientValidatorResponse res = new org.openapis.openapi.models.operations.CreateClientValidatorResponse() {{
+        org.openapis.openapi.models.operations.CreateClientValidatorResponse res = new org.openapis.openapi.models.operations.CreateClientValidatorResponse(contentType, httpRes.statusCode()) {{
             validationAuthority = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class ValidationAuthorities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteClientValidatorResponse res = new org.openapis.openapi.models.operations.DeleteClientValidatorResponse() {{
+        org.openapis.openapi.models.operations.DeleteClientValidatorResponse res = new org.openapis.openapi.models.operations.DeleteClientValidatorResponse(contentType, httpRes.statusCode()) {{
             deleted = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,10 +120,11 @@ public class ValidationAuthorities {
     /**
      * Get all validation authoritiess
      * Get all validation authoritiess
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindAllClientValidatorsResponse findAllClientValidators() throws Exception {
+    public org.openapis.openapi.models.operations.FindAllClientValidatorsResponse findAllClientValidators(org.openapis.openapi.models.operations.FindAllClientValidatorsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/client-validators");
         
@@ -136,16 +133,15 @@ public class ValidationAuthorities {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindAllClientValidatorsResponse res = new org.openapis.openapi.models.operations.FindAllClientValidatorsResponse() {{
+        org.openapis.openapi.models.operations.FindAllClientValidatorsResponse res = new org.openapis.openapi.models.operations.FindAllClientValidatorsResponse(contentType, httpRes.statusCode()) {{
             validationAuthorities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -184,11 +180,9 @@ public class ValidationAuthorities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindClientValidatorByIdResponse res = new org.openapis.openapi.models.operations.FindClientValidatorByIdResponse() {{
+        org.openapis.openapi.models.operations.FindClientValidatorByIdResponse res = new org.openapis.openapi.models.operations.FindClientValidatorByIdResponse(contentType, httpRes.statusCode()) {{
             validationAuthority = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -229,11 +223,9 @@ public class ValidationAuthorities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchClientValidatorResponse res = new org.openapis.openapi.models.operations.PatchClientValidatorResponse() {{
+        org.openapis.openapi.models.operations.PatchClientValidatorResponse res = new org.openapis.openapi.models.operations.PatchClientValidatorResponse(contentType, httpRes.statusCode()) {{
             validationAuthority = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -274,11 +266,9 @@ public class ValidationAuthorities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateClientValidatorResponse res = new org.openapis.openapi.models.operations.UpdateClientValidatorResponse() {{
+        org.openapis.openapi.models.operations.UpdateClientValidatorResponse res = new org.openapis.openapi.models.operations.UpdateClientValidatorResponse(contentType, httpRes.statusCode()) {{
             validationAuthority = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

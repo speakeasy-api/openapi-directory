@@ -15,6 +15,7 @@ public class PutImagePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageArn")
     public String imageArn;
+
     public PutImagePolicyResponse withImageArn(String imageArn) {
         this.imageArn = imageArn;
         return this;
@@ -23,9 +24,11 @@ public class PutImagePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public PutImagePolicyResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public PutImagePolicyResponse(){}
 }

@@ -15,9 +15,11 @@ public class GetPortfolioMembership200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.PortfolioMembershipResponse data;
+
     public GetPortfolioMembership200ApplicationJSON withData(org.openapis.openapi.models.shared.PortfolioMembershipResponse data) {
         this.data = data;
         return this;
     }
     
+    public GetPortfolioMembership200ApplicationJSON(){}
 }

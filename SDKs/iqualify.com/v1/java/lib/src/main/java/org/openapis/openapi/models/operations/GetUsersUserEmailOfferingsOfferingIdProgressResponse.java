@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersUserEmailOfferingsOfferingIdProgressResponse {
     
     public String contentType;
+
     public GetUsersUserEmailOfferingsOfferingIdProgressResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUsersUserEmailOfferingsOfferingIdProgressResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetUsersUserEmailOfferingsOfferingIdProgressResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetUsersUserEmailOfferingsOfferingIdProgressResponse {
     
     
     public Integer statusCode;
+
     public GetUsersUserEmailOfferingsOfferingIdProgressResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetUsersUserEmailOfferingsOfferingIdProgressResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersUserEmailOfferingsOfferingIdProgressResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetUsersUserEmailOfferingsOfferingIdProgressResponse {
      */
     
     public GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSON getUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSONObject;
+
     public GetUsersUserEmailOfferingsOfferingIdProgressResponse withGetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSONObject(GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSON getUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSONObject) {
         this.getUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSONObject = getUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSONObject;
         return this;
     }
     
+    public GetUsersUserEmailOfferingsOfferingIdProgressResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

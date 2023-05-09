@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IlpmtResponse {
     
     public String contentType;
+
     public IlpmtResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IlpmtResponse {
     
     
     public Integer statusCode;
+
     public IlpmtResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class IlpmtResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IlpmtResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class IlpmtResponse {
      */
     
     public Ilpmt400ApplicationJSON ilpmt400ApplicationJSONObject;
+
     public IlpmtResponse withIlpmt400ApplicationJSONObject(Ilpmt400ApplicationJSON ilpmt400ApplicationJSONObject) {
         this.ilpmt400ApplicationJSONObject = ilpmt400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class IlpmtResponse {
      */
     
     public Ilpmt401ApplicationJSON ilpmt401ApplicationJSONObject;
+
     public IlpmtResponse withIlpmt401ApplicationJSONObject(Ilpmt401ApplicationJSON ilpmt401ApplicationJSONObject) {
         this.ilpmt401ApplicationJSONObject = ilpmt401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class IlpmtResponse {
      */
     
     public Ilpmt404ApplicationJSON ilpmt404ApplicationJSONObject;
+
     public IlpmtResponse withIlpmt404ApplicationJSONObject(Ilpmt404ApplicationJSON ilpmt404ApplicationJSONObject) {
         this.ilpmt404ApplicationJSONObject = ilpmt404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class IlpmtResponse {
      */
     
     public Ilpmt500ApplicationJSON ilpmt500ApplicationJSONObject;
+
     public IlpmtResponse withIlpmt500ApplicationJSONObject(Ilpmt500ApplicationJSON ilpmt500ApplicationJSONObject) {
         this.ilpmt500ApplicationJSONObject = ilpmt500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class IlpmtResponse {
      */
     
     public Ilpmt502ApplicationJSON ilpmt502ApplicationJSONObject;
+
     public IlpmtResponse withIlpmt502ApplicationJSONObject(Ilpmt502ApplicationJSON ilpmt502ApplicationJSONObject) {
         this.ilpmt502ApplicationJSONObject = ilpmt502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class IlpmtResponse {
      */
     
     public Ilpmt503ApplicationJSON ilpmt503ApplicationJSONObject;
+
     public IlpmtResponse withIlpmt503ApplicationJSONObject(Ilpmt503ApplicationJSON ilpmt503ApplicationJSONObject) {
         this.ilpmt503ApplicationJSONObject = ilpmt503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class IlpmtResponse {
      */
     
     public Ilpmt504ApplicationJSON ilpmt504ApplicationJSONObject;
+
     public IlpmtResponse withIlpmt504ApplicationJSONObject(Ilpmt504ApplicationJSON ilpmt504ApplicationJSONObject) {
         this.ilpmt504ApplicationJSONObject = ilpmt504ApplicationJSONObject;
         return this;
     }
     
+    public IlpmtResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

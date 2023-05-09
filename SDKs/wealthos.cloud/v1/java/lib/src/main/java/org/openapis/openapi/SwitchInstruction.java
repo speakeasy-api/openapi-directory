@@ -69,7 +69,7 @@ public class SwitchInstruction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExecuteSwitchTrasactionResponse res = new org.openapis.openapi.models.operations.ExecuteSwitchTrasactionResponse() {{
+        org.openapis.openapi.models.operations.ExecuteSwitchTrasactionResponse res = new org.openapis.openapi.models.operations.ExecuteSwitchTrasactionResponse(contentType, httpRes.statusCode()) {{
             executeSwitchTrasaction200ApplicationJSONObject = null;
             executeSwitchTrasaction400ApplicationJSONObject = null;
             executeSwitchTrasaction401ApplicationJSONObject = null;
@@ -79,8 +79,6 @@ public class SwitchInstruction {
             executeSwitchTrasaction429ApplicationJSONObject = null;
             executeSwitchTrasaction500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -180,7 +178,7 @@ public class SwitchInstruction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSwitchResponse res = new org.openapis.openapi.models.operations.GetSwitchResponse() {{
+        org.openapis.openapi.models.operations.GetSwitchResponse res = new org.openapis.openapi.models.operations.GetSwitchResponse(contentType, httpRes.statusCode()) {{
             getSwitch200ApplicationJSONObject = null;
             getSwitch400ApplicationJSONObject = null;
             getSwitch401ApplicationJSONObject = null;
@@ -190,8 +188,6 @@ public class SwitchInstruction {
             getSwitch429ApplicationJSONObject = null;
             getSwitch500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

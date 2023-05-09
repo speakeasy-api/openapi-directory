@@ -18,9 +18,11 @@ public class ServiceExternalIPsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ServiceExternalIPsConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ServiceExternalIPsConfig(){}
 }

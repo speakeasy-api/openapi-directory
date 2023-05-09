@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugRefsTagsResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugRefsTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugRefsTagsResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugRefsTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugRefsTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugRefsTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -35,6 +39,7 @@ public class GetRepositoriesWorkspaceRepoSlugRefsTagsResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugRefsTagsResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -45,9 +50,14 @@ public class GetRepositoriesWorkspaceRepoSlugRefsTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedTags paginatedTags;
+
     public GetRepositoriesWorkspaceRepoSlugRefsTagsResponse withPaginatedTags(org.openapis.openapi.models.shared.PaginatedTags paginatedTags) {
         this.paginatedTags = paginatedTags;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugRefsTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

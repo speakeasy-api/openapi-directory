@@ -15,17 +15,29 @@ public class AsyncInferenceNotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorTopic")
     public String errorTopic;
+
     public AsyncInferenceNotificationConfig withErrorTopic(String errorTopic) {
         this.errorTopic = errorTopic;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("IncludeInferenceResponseIn")
+    public AsyncNotificationTopicTypesEnum[] includeInferenceResponseIn;
+
+    public AsyncInferenceNotificationConfig withIncludeInferenceResponseIn(AsyncNotificationTopicTypesEnum[] includeInferenceResponseIn) {
+        this.includeInferenceResponseIn = includeInferenceResponseIn;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuccessTopic")
     public String successTopic;
+
     public AsyncInferenceNotificationConfig withSuccessTopic(String successTopic) {
         this.successTopic = successTopic;
         return this;
     }
     
+    public AsyncInferenceNotificationConfig(){}
 }

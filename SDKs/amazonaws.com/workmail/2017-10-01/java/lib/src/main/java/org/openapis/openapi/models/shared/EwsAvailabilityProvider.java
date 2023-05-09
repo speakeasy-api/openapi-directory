@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EwsAvailabilityProvider {
     @JsonProperty("EwsEndpoint")
     public String ewsEndpoint;
+
     public EwsAvailabilityProvider withEwsEndpoint(String ewsEndpoint) {
         this.ewsEndpoint = ewsEndpoint;
         return this;
@@ -19,6 +20,7 @@ public class EwsAvailabilityProvider {
     
     @JsonProperty("EwsPassword")
     public String ewsPassword;
+
     public EwsAvailabilityProvider withEwsPassword(String ewsPassword) {
         this.ewsPassword = ewsPassword;
         return this;
@@ -26,9 +28,15 @@ public class EwsAvailabilityProvider {
     
     @JsonProperty("EwsUsername")
     public String ewsUsername;
+
     public EwsAvailabilityProvider withEwsUsername(String ewsUsername) {
         this.ewsUsername = ewsUsername;
         return this;
     }
     
+    public EwsAvailabilityProvider(@JsonProperty("EwsUsername") String ewsUsername, @JsonProperty("EwsPassword") String ewsPassword, @JsonProperty("EwsEndpoint") String ewsEndpoint) {
+        this.ewsUsername = ewsUsername;
+        this.ewsPassword = ewsPassword;
+        this.ewsEndpoint = ewsEndpoint;
+  }
 }

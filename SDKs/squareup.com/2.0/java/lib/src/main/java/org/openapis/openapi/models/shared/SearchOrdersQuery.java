@@ -19,6 +19,7 @@ public class SearchOrdersQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public SearchOrdersFilter filter;
+
     public SearchOrdersQuery withFilter(SearchOrdersFilter filter) {
         this.filter = filter;
         return this;
@@ -31,9 +32,11 @@ public class SearchOrdersQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public SearchOrdersSort sort;
+
     public SearchOrdersQuery withSort(SearchOrdersSort sort) {
         this.sort = sort;
         return this;
     }
     
+    public SearchOrdersQuery(){}
 }

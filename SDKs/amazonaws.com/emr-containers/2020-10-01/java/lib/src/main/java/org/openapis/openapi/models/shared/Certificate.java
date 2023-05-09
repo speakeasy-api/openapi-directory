@@ -15,6 +15,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateArn")
     public String certificateArn;
+
     public Certificate withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -23,9 +24,11 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateData")
     public String certificateData;
+
     public Certificate withCertificateData(String certificateData) {
         this.certificateData = certificateData;
         return this;
     }
     
+    public Certificate(){}
 }

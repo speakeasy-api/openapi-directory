@@ -20,6 +20,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppliedDdls")
     public Long appliedDdls;
+
     public TableStatistics withAppliedDdls(Long appliedDdls) {
         this.appliedDdls = appliedDdls;
         return this;
@@ -28,6 +29,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppliedDeletes")
     public Long appliedDeletes;
+
     public TableStatistics withAppliedDeletes(Long appliedDeletes) {
         this.appliedDeletes = appliedDeletes;
         return this;
@@ -36,6 +38,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppliedInserts")
     public Long appliedInserts;
+
     public TableStatistics withAppliedInserts(Long appliedInserts) {
         this.appliedInserts = appliedInserts;
         return this;
@@ -44,6 +47,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppliedUpdates")
     public Long appliedUpdates;
+
     public TableStatistics withAppliedUpdates(Long appliedUpdates) {
         this.appliedUpdates = appliedUpdates;
         return this;
@@ -52,6 +56,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ddls")
     public Long ddls;
+
     public TableStatistics withDdls(Long ddls) {
         this.ddls = ddls;
         return this;
@@ -60,6 +65,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Deletes")
     public Long deletes;
+
     public TableStatistics withDeletes(Long deletes) {
         this.deletes = deletes;
         return this;
@@ -68,6 +74,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FullLoadCondtnlChkFailedRows")
     public Long fullLoadCondtnlChkFailedRows;
+
     public TableStatistics withFullLoadCondtnlChkFailedRows(Long fullLoadCondtnlChkFailedRows) {
         this.fullLoadCondtnlChkFailedRows = fullLoadCondtnlChkFailedRows;
         return this;
@@ -78,6 +85,7 @@ public class TableStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FullLoadEndTime")
     public OffsetDateTime fullLoadEndTime;
+
     public TableStatistics withFullLoadEndTime(OffsetDateTime fullLoadEndTime) {
         this.fullLoadEndTime = fullLoadEndTime;
         return this;
@@ -86,6 +94,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FullLoadErrorRows")
     public Long fullLoadErrorRows;
+
     public TableStatistics withFullLoadErrorRows(Long fullLoadErrorRows) {
         this.fullLoadErrorRows = fullLoadErrorRows;
         return this;
@@ -94,6 +103,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FullLoadReloaded")
     public Boolean fullLoadReloaded;
+
     public TableStatistics withFullLoadReloaded(Boolean fullLoadReloaded) {
         this.fullLoadReloaded = fullLoadReloaded;
         return this;
@@ -102,6 +112,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FullLoadRows")
     public Long fullLoadRows;
+
     public TableStatistics withFullLoadRows(Long fullLoadRows) {
         this.fullLoadRows = fullLoadRows;
         return this;
@@ -112,6 +123,7 @@ public class TableStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FullLoadStartTime")
     public OffsetDateTime fullLoadStartTime;
+
     public TableStatistics withFullLoadStartTime(OffsetDateTime fullLoadStartTime) {
         this.fullLoadStartTime = fullLoadStartTime;
         return this;
@@ -120,6 +132,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Inserts")
     public Long inserts;
+
     public TableStatistics withInserts(Long inserts) {
         this.inserts = inserts;
         return this;
@@ -130,6 +143,7 @@ public class TableStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public TableStatistics withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -138,6 +152,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaName")
     public String schemaName;
+
     public TableStatistics withSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
@@ -146,6 +161,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public TableStatistics withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -154,6 +170,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableState")
     public String tableState;
+
     public TableStatistics withTableState(String tableState) {
         this.tableState = tableState;
         return this;
@@ -162,6 +179,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updates")
     public Long updates;
+
     public TableStatistics withUpdates(Long updates) {
         this.updates = updates;
         return this;
@@ -170,6 +188,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationFailedRecords")
     public Long validationFailedRecords;
+
     public TableStatistics withValidationFailedRecords(Long validationFailedRecords) {
         this.validationFailedRecords = validationFailedRecords;
         return this;
@@ -178,6 +197,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationPendingRecords")
     public Long validationPendingRecords;
+
     public TableStatistics withValidationPendingRecords(Long validationPendingRecords) {
         this.validationPendingRecords = validationPendingRecords;
         return this;
@@ -186,6 +206,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationState")
     public String validationState;
+
     public TableStatistics withValidationState(String validationState) {
         this.validationState = validationState;
         return this;
@@ -194,6 +215,7 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationStateDetails")
     public String validationStateDetails;
+
     public TableStatistics withValidationStateDetails(String validationStateDetails) {
         this.validationStateDetails = validationStateDetails;
         return this;
@@ -202,9 +224,11 @@ public class TableStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationSuspendedRecords")
     public Long validationSuspendedRecords;
+
     public TableStatistics withValidationSuspendedRecords(Long validationSuspendedRecords) {
         this.validationSuspendedRecords = validationSuspendedRecords;
         return this;
     }
     
+    public TableStatistics(){}
 }

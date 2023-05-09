@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSegmentImportJobsResponse {
@@ -12,6 +13,7 @@ public class GetSegmentImportJobsResponse {
      */
     
     public Object badRequestException;
+
     public GetSegmentImportJobsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetSegmentImportJobsResponse {
     
     
     public String contentType;
+
     public GetSegmentImportJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSegmentImportJobsResponse {
      */
     
     public Object forbiddenException;
+
     public GetSegmentImportJobsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetSegmentImportJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSegmentImportJobsResponse getSegmentImportJobsResponse;
+
     public GetSegmentImportJobsResponse withGetSegmentImportJobsResponse(org.openapis.openapi.models.shared.GetSegmentImportJobsResponse getSegmentImportJobsResponse) {
         this.getSegmentImportJobsResponse = getSegmentImportJobsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetSegmentImportJobsResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetSegmentImportJobsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetSegmentImportJobsResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetSegmentImportJobsResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetSegmentImportJobsResponse {
      */
     
     public Object notFoundException;
+
     public GetSegmentImportJobsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetSegmentImportJobsResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetSegmentImportJobsResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetSegmentImportJobsResponse {
     
     
     public Integer statusCode;
+
     public GetSegmentImportJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetSegmentImportJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSegmentImportJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetSegmentImportJobsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetSegmentImportJobsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetSegmentImportJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchCommitsResponse {
     
     public String contentType;
+
     public SearchCommitsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SearchCommitsResponse {
     
     
     public Integer statusCode;
+
     public SearchCommitsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SearchCommitsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchCommitsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SearchCommitsResponse {
      */
     
     public SearchCommits200ApplicationJSON searchCommits200ApplicationJSONObject;
+
     public SearchCommitsResponse withSearchCommits200ApplicationJSONObject(SearchCommits200ApplicationJSON searchCommits200ApplicationJSONObject) {
         this.searchCommits200ApplicationJSONObject = searchCommits200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class SearchCommitsResponse {
      */
     
     public SearchCommits415ApplicationJSON searchCommits415ApplicationJSONObject;
+
     public SearchCommitsResponse withSearchCommits415ApplicationJSONObject(SearchCommits415ApplicationJSON searchCommits415ApplicationJSONObject) {
         this.searchCommits415ApplicationJSONObject = searchCommits415ApplicationJSONObject;
         return this;
     }
     
+    public SearchCommitsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

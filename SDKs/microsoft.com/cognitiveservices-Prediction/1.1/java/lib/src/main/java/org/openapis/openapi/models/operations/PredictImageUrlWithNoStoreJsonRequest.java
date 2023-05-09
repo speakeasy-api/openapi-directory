@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictImageUrlWithNoStoreJsonRequest {
@@ -12,6 +13,7 @@ public class PredictImageUrlWithNoStoreJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+
     public PredictImageUrlWithNoStoreJsonRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -19,6 +21,7 @@ public class PredictImageUrlWithNoStoreJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Prediction-Key")
     public String predictionKey;
+
     public PredictImageUrlWithNoStoreJsonRequest withPredictionKey(String predictionKey) {
         this.predictionKey = predictionKey;
         return this;
@@ -29,6 +32,7 @@ public class PredictImageUrlWithNoStoreJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
     public String application;
+
     public PredictImageUrlWithNoStoreJsonRequest withApplication(String application) {
         this.application = application;
         return this;
@@ -40,6 +44,7 @@ public class PredictImageUrlWithNoStoreJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public PredictImageUrlWithNoStoreJsonRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -50,9 +55,15 @@ public class PredictImageUrlWithNoStoreJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public PredictImageUrlWithNoStoreJsonRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public PredictImageUrlWithNoStoreJsonRequest(@JsonProperty("ImageUrl") org.openapis.openapi.models.shared.ImageUrl imageUrl, @JsonProperty("Prediction-Key") String predictionKey, @JsonProperty("projectId") String projectId) {
+        this.imageUrl = imageUrl;
+        this.predictionKey = predictionKey;
+        this.projectId = projectId;
+  }
 }

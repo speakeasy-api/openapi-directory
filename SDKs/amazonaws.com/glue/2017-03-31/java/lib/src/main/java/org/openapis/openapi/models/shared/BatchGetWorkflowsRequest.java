@@ -12,6 +12,7 @@ public class BatchGetWorkflowsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeGraph")
     public Boolean includeGraph;
+
     public BatchGetWorkflowsRequest withIncludeGraph(Boolean includeGraph) {
         this.includeGraph = includeGraph;
         return this;
@@ -19,9 +20,13 @@ public class BatchGetWorkflowsRequest {
     
     @JsonProperty("Names")
     public String[] names;
+
     public BatchGetWorkflowsRequest withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public BatchGetWorkflowsRequest(@JsonProperty("Names") String[] names) {
+        this.names = names;
+  }
 }

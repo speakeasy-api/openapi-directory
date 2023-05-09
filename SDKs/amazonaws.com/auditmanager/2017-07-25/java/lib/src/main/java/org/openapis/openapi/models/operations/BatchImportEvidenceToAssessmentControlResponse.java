@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchImportEvidenceToAssessmentControlResponse {
@@ -12,6 +13,7 @@ public class BatchImportEvidenceToAssessmentControlResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchImportEvidenceToAssessmentControlResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchImportEvidenceToAssessmentControlResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchImportEvidenceToAssessmentControlResponse batchImportEvidenceToAssessmentControlResponse;
+
     public BatchImportEvidenceToAssessmentControlResponse withBatchImportEvidenceToAssessmentControlResponse(org.openapis.openapi.models.shared.BatchImportEvidenceToAssessmentControlResponse batchImportEvidenceToAssessmentControlResponse) {
         this.batchImportEvidenceToAssessmentControlResponse = batchImportEvidenceToAssessmentControlResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchImportEvidenceToAssessmentControlResponse {
     
     
     public String contentType;
+
     public BatchImportEvidenceToAssessmentControlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchImportEvidenceToAssessmentControlResponse {
      */
     
     public Object internalServerException;
+
     public BatchImportEvidenceToAssessmentControlResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BatchImportEvidenceToAssessmentControlResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchImportEvidenceToAssessmentControlResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class BatchImportEvidenceToAssessmentControlResponse {
     
     
     public Integer statusCode;
+
     public BatchImportEvidenceToAssessmentControlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchImportEvidenceToAssessmentControlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchImportEvidenceToAssessmentControlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class BatchImportEvidenceToAssessmentControlResponse {
      */
     
     public Object validationException;
+
     public BatchImportEvidenceToAssessmentControlResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchImportEvidenceToAssessmentControlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ScanConfigError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ScanConfigErrorCodeEnum code;
+
     public ScanConfigError withCode(ScanConfigErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class ScanConfigError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public ScanConfigError withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
     
+    public ScanConfigError(){}
 }

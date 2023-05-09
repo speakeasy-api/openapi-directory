@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateApplicationFleetResponse {
@@ -12,6 +13,7 @@ public class DisassociateApplicationFleetResponse {
      */
     
     public Object concurrentModificationException;
+
     public DisassociateApplicationFleetResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateApplicationFleetResponse {
     
     
     public String contentType;
+
     public DisassociateApplicationFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateApplicationFleetResponse {
      */
     
     public java.util.Map<String, Object> disassociateApplicationFleetResult;
+
     public DisassociateApplicationFleetResponse withDisassociateApplicationFleetResult(java.util.Map<String, Object> disassociateApplicationFleetResult) {
         this.disassociateApplicationFleetResult = disassociateApplicationFleetResult;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateApplicationFleetResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public DisassociateApplicationFleetResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateApplicationFleetResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DisassociateApplicationFleetResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateApplicationFleetResponse {
     
     
     public Integer statusCode;
+
     public DisassociateApplicationFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DisassociateApplicationFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateApplicationFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateApplicationFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

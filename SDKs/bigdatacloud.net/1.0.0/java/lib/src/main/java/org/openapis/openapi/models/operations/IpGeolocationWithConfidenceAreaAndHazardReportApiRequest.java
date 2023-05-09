@@ -13,6 +13,7 @@ public class IpGeolocationWithConfidenceAreaAndHazardReportApiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
     public String ip;
+
     public IpGeolocationWithConfidenceAreaAndHazardReportApiRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -24,6 +25,7 @@ public class IpGeolocationWithConfidenceAreaAndHazardReportApiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public IpGeolocationWithConfidenceAreaAndHazardReportApiRequest withKey(String key) {
         this.key = key;
         return this;
@@ -35,9 +37,11 @@ public class IpGeolocationWithConfidenceAreaAndHazardReportApiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=localityLanguage")
     public String localityLanguage;
+
     public IpGeolocationWithConfidenceAreaAndHazardReportApiRequest withLocalityLanguage(String localityLanguage) {
         this.localityLanguage = localityLanguage;
         return this;
     }
     
+    public IpGeolocationWithConfidenceAreaAndHazardReportApiRequest(){}
 }

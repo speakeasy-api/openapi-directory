@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentOrdersListRequest {
@@ -12,6 +13,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ContentOrdersListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ContentOrdersListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=acknowledged")
     public Boolean acknowledged;
+
     public ContentOrdersListRequest withAcknowledged(Boolean acknowledged) {
         this.acknowledged = acknowledged;
         return this;
@@ -42,6 +46,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ContentOrdersListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ContentOrdersListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ContentOrdersListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ContentOrdersListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ContentOrdersListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -92,6 +101,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public ContentOrdersListRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -102,6 +112,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ContentOrdersListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public ContentOrdersListRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -122,6 +134,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public ContentOrdersListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -132,6 +145,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placedDateEnd")
     public String placedDateEnd;
+
     public ContentOrdersListRequest withPlacedDateEnd(String placedDateEnd) {
         this.placedDateEnd = placedDateEnd;
         return this;
@@ -142,6 +156,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placedDateStart")
     public String placedDateStart;
+
     public ContentOrdersListRequest withPlacedDateStart(String placedDateStart) {
         this.placedDateStart = placedDateStart;
         return this;
@@ -152,6 +167,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ContentOrdersListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -162,6 +178,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ContentOrdersListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -172,6 +189,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=statuses")
     public ContentOrdersListStatusesEnum[] statuses;
+
     public ContentOrdersListRequest withStatuses(ContentOrdersListStatusesEnum[] statuses) {
         this.statuses = statuses;
         return this;
@@ -182,6 +200,7 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ContentOrdersListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -192,9 +211,13 @@ public class ContentOrdersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ContentOrdersListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ContentOrdersListRequest(@JsonProperty("merchantId") String merchantId) {
+        this.merchantId = merchantId;
+  }
 }

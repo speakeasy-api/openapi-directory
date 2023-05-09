@@ -15,6 +15,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactConfig")
     public ArtifactConfigOutput artifactConfig;
+
     public Canary withArtifactConfig(ArtifactConfigOutput artifactConfig) {
         this.artifactConfig = artifactConfig;
         return this;
@@ -23,6 +24,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactS3Location")
     public String artifactS3Location;
+
     public Canary withArtifactS3Location(String artifactS3Location) {
         this.artifactS3Location = artifactS3Location;
         return this;
@@ -34,6 +36,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public CanaryCodeOutput code;
+
     public Canary withCode(CanaryCodeOutput code) {
         this.code = code;
         return this;
@@ -42,6 +45,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineArn")
     public String engineArn;
+
     public Canary withEngineArn(String engineArn) {
         this.engineArn = engineArn;
         return this;
@@ -50,6 +54,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public Canary withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -58,6 +63,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureRetentionPeriodInDays")
     public Long failureRetentionPeriodInDays;
+
     public Canary withFailureRetentionPeriodInDays(Long failureRetentionPeriodInDays) {
         this.failureRetentionPeriodInDays = failureRetentionPeriodInDays;
         return this;
@@ -66,6 +72,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Canary withId(String id) {
         this.id = id;
         return this;
@@ -74,6 +81,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Canary withName(String name) {
         this.name = name;
         return this;
@@ -85,6 +93,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunConfig")
     public CanaryRunConfigOutput runConfig;
+
     public Canary withRunConfig(CanaryRunConfigOutput runConfig) {
         this.runConfig = runConfig;
         return this;
@@ -93,6 +102,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuntimeVersion")
     public String runtimeVersion;
+
     public Canary withRuntimeVersion(String runtimeVersion) {
         this.runtimeVersion = runtimeVersion;
         return this;
@@ -101,6 +111,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public CanaryScheduleOutput schedule;
+
     public Canary withSchedule(CanaryScheduleOutput schedule) {
         this.schedule = schedule;
         return this;
@@ -109,6 +120,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CanaryStatus status;
+
     public Canary withStatus(CanaryStatus status) {
         this.status = status;
         return this;
@@ -117,6 +129,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuccessRetentionPeriodInDays")
     public Long successRetentionPeriodInDays;
+
     public Canary withSuccessRetentionPeriodInDays(Long successRetentionPeriodInDays) {
         this.successRetentionPeriodInDays = successRetentionPeriodInDays;
         return this;
@@ -125,6 +138,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public Canary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -133,6 +147,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeline")
     public CanaryTimeline timeline;
+
     public Canary withTimeline(CanaryTimeline timeline) {
         this.timeline = timeline;
         return this;
@@ -141,6 +156,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VisualReference")
     public VisualReferenceOutput visualReference;
+
     public Canary withVisualReference(VisualReferenceOutput visualReference) {
         this.visualReference = visualReference;
         return this;
@@ -152,9 +168,11 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfigOutput vpcConfig;
+
     public Canary withVpcConfig(VpcConfigOutput vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public Canary(){}
 }

@@ -15,6 +15,7 @@ public class DataSplitResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationTable")
     public TableReference evaluationTable;
+
     public DataSplitResult withEvaluationTable(TableReference evaluationTable) {
         this.evaluationTable = evaluationTable;
         return this;
@@ -23,6 +24,7 @@ public class DataSplitResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testTable")
     public TableReference testTable;
+
     public DataSplitResult withTestTable(TableReference testTable) {
         this.testTable = testTable;
         return this;
@@ -31,9 +33,11 @@ public class DataSplitResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingTable")
     public TableReference trainingTable;
+
     public DataSplitResult withTrainingTable(TableReference trainingTable) {
         this.trainingTable = trainingTable;
         return this;
     }
     
+    public DataSplitResult(){}
 }

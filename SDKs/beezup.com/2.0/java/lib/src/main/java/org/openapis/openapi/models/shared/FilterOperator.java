@@ -18,6 +18,7 @@ public class FilterOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedChannelColumnDataType")
     public FilterOperatorDataTypeEnum expectedChannelColumnDataType;
+
     public FilterOperator withExpectedChannelColumnDataType(FilterOperatorDataTypeEnum expectedChannelColumnDataType) {
         this.expectedChannelColumnDataType = expectedChannelColumnDataType;
         return this;
@@ -29,6 +30,7 @@ public class FilterOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedValueDataType")
     public FilterOperatorDataTypeEnum expectedValueDataType;
+
     public FilterOperator withExpectedValueDataType(FilterOperatorDataTypeEnum expectedValueDataType) {
         this.expectedValueDataType = expectedValueDataType;
         return this;
@@ -40,6 +42,7 @@ public class FilterOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FilterOperator withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class FilterOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueRequired")
     public Boolean valueRequired;
+
     public FilterOperator withValueRequired(Boolean valueRequired) {
         this.valueRequired = valueRequired;
         return this;
     }
     
+    public FilterOperator(){}
 }

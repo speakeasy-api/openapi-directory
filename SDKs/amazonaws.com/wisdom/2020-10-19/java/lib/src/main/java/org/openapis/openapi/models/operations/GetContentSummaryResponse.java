@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContentSummaryResponse {
@@ -12,6 +13,7 @@ public class GetContentSummaryResponse {
      */
     
     public Object accessDeniedException;
+
     public GetContentSummaryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetContentSummaryResponse {
     
     
     public String contentType;
+
     public GetContentSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetContentSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetContentSummaryResponse getContentSummaryResponse;
+
     public GetContentSummaryResponse withGetContentSummaryResponse(org.openapis.openapi.models.shared.GetContentSummaryResponse getContentSummaryResponse) {
         this.getContentSummaryResponse = getContentSummaryResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetContentSummaryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetContentSummaryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetContentSummaryResponse {
     
     
     public Integer statusCode;
+
     public GetContentSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetContentSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContentSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetContentSummaryResponse {
      */
     
     public Object validationException;
+
     public GetContentSummaryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetContentSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

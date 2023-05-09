@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTrunkInterfaceAssociationsResult {
     
     public DescribeTrunkInterfaceAssociationsResultInterfaceAssociations[] interfaceAssociations;
+
     public DescribeTrunkInterfaceAssociationsResult withInterfaceAssociations(DescribeTrunkInterfaceAssociationsResultInterfaceAssociations[] interfaceAssociations) {
         this.interfaceAssociations = interfaceAssociations;
         return this;
@@ -19,9 +20,11 @@ public class DescribeTrunkInterfaceAssociationsResult {
     
     
     public String nextToken;
+
     public DescribeTrunkInterfaceAssociationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeTrunkInterfaceAssociationsResult(){}
 }

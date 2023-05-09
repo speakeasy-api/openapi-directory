@@ -16,9 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PostCloseAccountHolderSecurity;
 import org.openapis.openapi.models.operations.PostCloseAccountHolderResponse;
+import org.openapis.openapi.models.operations.PostCloseAccountHolderSecurity;
 import org.openapis.openapi.models.shared.CloseAccountHolderRequest;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
@@ -28,20 +27,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.CloseAccountHolderRequest req = new CloseAccountHolderRequest() {{
-                accountHolderCode = "corrupti";
-            }}            
+            org.openapis.openapi.models.shared.CloseAccountHolderRequest req = new CloseAccountHolderRequest("corrupti");            
 
             PostCloseAccountHolderResponse res = sdk.accountHolders.postCloseAccountHolder(req, new PostCloseAccountHolderSecurity() {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.closeAccountHolderResponse.isPresent()) {
+            if (res.closeAccountHolderResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -49,34 +48,34 @@ public class Application {
 ## Available Resources and Operations
 
 
-### accountHolders
+### [accountHolders](docs/accountholders/README.md)
 
-* `postCloseAccountHolder` - Close an account holder
-* `postCloseStores` - Close stores
-* `postCreateAccountHolder` - Create an account holder
-* `postGetAccountHolder` - Get an account holder
-* `postGetTaxForm` - Get a tax form
-* `postSuspendAccountHolder` - Suspend an account holder
-* `postUnSuspendAccountHolder` - Unsuspend an account holder
-* `postUpdateAccountHolder` - Update an account holder
-* `postUpdateAccountHolderState` - Update payout or processing state
+* [postCloseAccountHolder](docs/accountholders/README.md#postcloseaccountholder) - Close an account holder
+* [postCloseStores](docs/accountholders/README.md#postclosestores) - Close stores
+* [postCreateAccountHolder](docs/accountholders/README.md#postcreateaccountholder) - Create an account holder
+* [postGetAccountHolder](docs/accountholders/README.md#postgetaccountholder) - Get an account holder
+* [postGetTaxForm](docs/accountholders/README.md#postgettaxform) - Get a tax form
+* [postSuspendAccountHolder](docs/accountholders/README.md#postsuspendaccountholder) - Suspend an account holder
+* [postUnSuspendAccountHolder](docs/accountholders/README.md#postunsuspendaccountholder) - Unsuspend an account holder
+* [postUpdateAccountHolder](docs/accountholders/README.md#postupdateaccountholder) - Update an account holder
+* [postUpdateAccountHolderState](docs/accountholders/README.md#postupdateaccountholderstate) - Update payout or processing state
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `postCloseAccount` - Close an account
-* `postCreateAccount` - Create an account
-* `postUpdateAccount` - Update an account
+* [postCloseAccount](docs/accounts/README.md#postcloseaccount) - Close an account
+* [postCreateAccount](docs/accounts/README.md#postcreateaccount) - Create an account
+* [postUpdateAccount](docs/accounts/README.md#postupdateaccount) - Update an account
 
-### verification
+### [verification](docs/verification/README.md)
 
-* `postCheckAccountHolder` - Trigger verification
-* `postDeleteBankAccounts` - Delete bank accounts
-* `postDeleteLegalArrangements` - Delete legal arrangements
-* `postDeletePayoutMethods` - Delete payout methods
-* `postDeleteShareholders` - Delete shareholders
-* `postDeleteSignatories` - Delete signatories
-* `postGetUploadedDocuments` - Get documents
-* `postUploadDocument` - Upload a document
+* [postCheckAccountHolder](docs/verification/README.md#postcheckaccountholder) - Trigger verification
+* [postDeleteBankAccounts](docs/verification/README.md#postdeletebankaccounts) - Delete bank accounts
+* [postDeleteLegalArrangements](docs/verification/README.md#postdeletelegalarrangements) - Delete legal arrangements
+* [postDeletePayoutMethods](docs/verification/README.md#postdeletepayoutmethods) - Delete payout methods
+* [postDeleteShareholders](docs/verification/README.md#postdeleteshareholders) - Delete shareholders
+* [postDeleteSignatories](docs/verification/README.md#postdeletesignatories) - Delete signatories
+* [postGetUploadedDocuments](docs/verification/README.md#postgetuploadeddocuments) - Get documents
+* [postUploadDocument](docs/verification/README.md#postuploaddocument) - Upload a document
 <!-- End SDK Available Operations -->
 
 ### Maturity

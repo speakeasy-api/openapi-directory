@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class TypeVersionSummary {
     
     public String arn;
+
     public TypeVersionSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class TypeVersionSummary {
     
     
     public String description;
+
     public TypeVersionSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class TypeVersionSummary {
     
     
     public Boolean isDefaultVersion;
+
     public TypeVersionSummary withIsDefaultVersion(Boolean isDefaultVersion) {
         this.isDefaultVersion = isDefaultVersion;
         return this;
@@ -33,6 +36,7 @@ public class TypeVersionSummary {
     
     
     public String publicVersionNumber;
+
     public TypeVersionSummary withPublicVersionNumber(String publicVersionNumber) {
         this.publicVersionNumber = publicVersionNumber;
         return this;
@@ -40,6 +44,7 @@ public class TypeVersionSummary {
     
     
     public OffsetDateTime timeCreated;
+
     public TypeVersionSummary withTimeCreated(OffsetDateTime timeCreated) {
         this.timeCreated = timeCreated;
         return this;
@@ -47,6 +52,7 @@ public class TypeVersionSummary {
     
     
     public RegistryTypeEnum type;
+
     public TypeVersionSummary withType(RegistryTypeEnum type) {
         this.type = type;
         return this;
@@ -54,6 +60,7 @@ public class TypeVersionSummary {
     
     
     public String typeName;
+
     public TypeVersionSummary withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -61,9 +68,11 @@ public class TypeVersionSummary {
     
     
     public String versionId;
+
     public TypeVersionSummary withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public TypeVersionSummary(){}
 }

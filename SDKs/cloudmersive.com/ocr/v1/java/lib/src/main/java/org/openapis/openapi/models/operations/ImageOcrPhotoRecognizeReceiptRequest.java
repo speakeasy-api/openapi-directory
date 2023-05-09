@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImageOcrPhotoRecognizeReceiptRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public ImageOcrPhotoRecognizeReceiptRequestBody requestBody;
+
     public ImageOcrPhotoRecognizeReceiptRequest withRequestBody(ImageOcrPhotoRecognizeReceiptRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ImageOcrPhotoRecognizeReceiptRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=language")
     public String language;
+
     public ImageOcrPhotoRecognizeReceiptRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -29,6 +32,7 @@ public class ImageOcrPhotoRecognizeReceiptRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=preprocessing")
     public String preprocessing;
+
     public ImageOcrPhotoRecognizeReceiptRequest withPreprocessing(String preprocessing) {
         this.preprocessing = preprocessing;
         return this;
@@ -39,9 +43,13 @@ public class ImageOcrPhotoRecognizeReceiptRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=recognitionMode")
     public String recognitionMode;
+
     public ImageOcrPhotoRecognizeReceiptRequest withRecognitionMode(String recognitionMode) {
         this.recognitionMode = recognitionMode;
         return this;
     }
     
+    public ImageOcrPhotoRecognizeReceiptRequest(@JsonProperty("RequestBody") ImageOcrPhotoRecognizeReceiptRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

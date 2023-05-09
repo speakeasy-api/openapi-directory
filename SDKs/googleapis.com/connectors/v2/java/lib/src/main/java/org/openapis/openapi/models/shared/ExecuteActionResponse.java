@@ -18,9 +18,11 @@ public class ExecuteActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public java.util.Map<String, Object>[] results;
+
     public ExecuteActionResponse withResults(java.util.Map<String, Object>[] results) {
         this.results = results;
         return this;
     }
     
+    public ExecuteActionResponse(){}
 }

@@ -20,6 +20,7 @@ public class SimulationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public SimulationJobSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class SimulationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeType")
     public ComputeTypeEnum computeType;
+
     public SimulationJobSummary withComputeType(ComputeTypeEnum computeType) {
         this.computeType = computeType;
         return this;
@@ -36,6 +38,7 @@ public class SimulationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceNames")
     public String[] dataSourceNames;
+
     public SimulationJobSummary withDataSourceNames(String[] dataSourceNames) {
         this.dataSourceNames = dataSourceNames;
         return this;
@@ -46,6 +49,7 @@ public class SimulationJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public SimulationJobSummary withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -54,6 +58,7 @@ public class SimulationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SimulationJobSummary withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class SimulationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robotApplicationNames")
     public String[] robotApplicationNames;
+
     public SimulationJobSummary withRobotApplicationNames(String[] robotApplicationNames) {
         this.robotApplicationNames = robotApplicationNames;
         return this;
@@ -70,6 +76,7 @@ public class SimulationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simulationApplicationNames")
     public String[] simulationApplicationNames;
+
     public SimulationJobSummary withSimulationApplicationNames(String[] simulationApplicationNames) {
         this.simulationApplicationNames = simulationApplicationNames;
         return this;
@@ -78,9 +85,11 @@ public class SimulationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SimulationJobStatusEnum status;
+
     public SimulationJobSummary withStatus(SimulationJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public SimulationJobSummary(){}
 }

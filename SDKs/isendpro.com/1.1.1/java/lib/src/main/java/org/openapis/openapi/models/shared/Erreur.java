@@ -15,9 +15,11 @@ public class Erreur {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etat")
     public ErreurEtat etat;
+
     public Erreur withEtat(ErreurEtat etat) {
         this.etat = etat;
         return this;
     }
     
+    public Erreur(){}
 }

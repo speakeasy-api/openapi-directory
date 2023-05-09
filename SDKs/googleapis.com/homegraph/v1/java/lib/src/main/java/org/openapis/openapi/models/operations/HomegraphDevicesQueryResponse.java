@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class HomegraphDevicesQueryResponse {
     
     public String contentType;
+
     public HomegraphDevicesQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class HomegraphDevicesQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.QueryResponse queryResponse;
+
     public HomegraphDevicesQueryResponse withQueryResponse(org.openapis.openapi.models.shared.QueryResponse queryResponse) {
         this.queryResponse = queryResponse;
         return this;
@@ -26,6 +29,7 @@ public class HomegraphDevicesQueryResponse {
     
     
     public Integer statusCode;
+
     public HomegraphDevicesQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class HomegraphDevicesQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public HomegraphDevicesQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public HomegraphDevicesQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

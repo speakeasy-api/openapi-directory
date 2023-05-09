@@ -15,6 +15,7 @@ public class LookupEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Events")
     public Event[] events;
+
     public LookupEventsResponse withEvents(Event[] events) {
         this.events = events;
         return this;
@@ -23,9 +24,11 @@ public class LookupEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public LookupEventsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public LookupEventsResponse(){}
 }

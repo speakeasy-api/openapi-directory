@@ -18,6 +18,7 @@ public class ListQuestionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListQuestionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListQuestionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("questions")
     public Question[] questions;
+
     public ListQuestionsResponse withQuestions(Question[] questions) {
         this.questions = questions;
         return this;
@@ -40,9 +42,11 @@ public class ListQuestionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public ListQuestionsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public ListQuestionsResponse(){}
 }

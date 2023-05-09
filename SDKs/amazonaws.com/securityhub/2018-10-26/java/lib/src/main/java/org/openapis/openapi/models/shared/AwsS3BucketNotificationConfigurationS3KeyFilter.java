@@ -15,9 +15,11 @@ public class AwsS3BucketNotificationConfigurationS3KeyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterRules")
     public AwsS3BucketNotificationConfigurationS3KeyFilterRule[] filterRules;
+
     public AwsS3BucketNotificationConfigurationS3KeyFilter withFilterRules(AwsS3BucketNotificationConfigurationS3KeyFilterRule[] filterRules) {
         this.filterRules = filterRules;
         return this;
     }
     
+    public AwsS3BucketNotificationConfigurationS3KeyFilter(){}
 }

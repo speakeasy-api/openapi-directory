@@ -16,6 +16,7 @@ public class CreateMeshRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateMeshRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,9 +27,13 @@ public class CreateMeshRequestBody {
      */
     @JsonProperty("meshName")
     public String meshName;
+
     public CreateMeshRequestBody withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
     }
     
+    public CreateMeshRequestBody(@JsonProperty("meshName") String meshName) {
+        this.meshName = meshName;
+  }
 }

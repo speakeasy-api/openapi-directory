@@ -57,10 +57,8 @@ public class TypeBoulderCrimes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchBoulderCrimesResponse res = new org.openapis.openapi.models.operations.SearchBoulderCrimesResponse() {{
+        org.openapis.openapi.models.operations.SearchBoulderCrimesResponse res = new org.openapis.openapi.models.operations.SearchBoulderCrimesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

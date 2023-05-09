@@ -12,6 +12,7 @@ public class BatchDescribeMergeConflictsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictDetailLevel")
     public ConflictDetailLevelTypeEnumEnum conflictDetailLevel;
+
     public BatchDescribeMergeConflictsInput withConflictDetailLevel(ConflictDetailLevelTypeEnumEnum conflictDetailLevel) {
         this.conflictDetailLevel = conflictDetailLevel;
         return this;
@@ -20,6 +21,7 @@ public class BatchDescribeMergeConflictsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictResolutionStrategy")
     public ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy;
+
     public BatchDescribeMergeConflictsInput withConflictResolutionStrategy(ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy) {
         this.conflictResolutionStrategy = conflictResolutionStrategy;
         return this;
@@ -27,6 +29,7 @@ public class BatchDescribeMergeConflictsInput {
     
     @JsonProperty("destinationCommitSpecifier")
     public String destinationCommitSpecifier;
+
     public BatchDescribeMergeConflictsInput withDestinationCommitSpecifier(String destinationCommitSpecifier) {
         this.destinationCommitSpecifier = destinationCommitSpecifier;
         return this;
@@ -35,6 +38,7 @@ public class BatchDescribeMergeConflictsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePaths")
     public String[] filePaths;
+
     public BatchDescribeMergeConflictsInput withFilePaths(String[] filePaths) {
         this.filePaths = filePaths;
         return this;
@@ -43,6 +47,7 @@ public class BatchDescribeMergeConflictsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxConflictFiles")
     public Long maxConflictFiles;
+
     public BatchDescribeMergeConflictsInput withMaxConflictFiles(Long maxConflictFiles) {
         this.maxConflictFiles = maxConflictFiles;
         return this;
@@ -51,6 +56,7 @@ public class BatchDescribeMergeConflictsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxMergeHunks")
     public Long maxMergeHunks;
+
     public BatchDescribeMergeConflictsInput withMaxMergeHunks(Long maxMergeHunks) {
         this.maxMergeHunks = maxMergeHunks;
         return this;
@@ -58,6 +64,7 @@ public class BatchDescribeMergeConflictsInput {
     
     @JsonProperty("mergeOption")
     public MergeOptionTypeEnumEnum mergeOption;
+
     public BatchDescribeMergeConflictsInput withMergeOption(MergeOptionTypeEnumEnum mergeOption) {
         this.mergeOption = mergeOption;
         return this;
@@ -66,6 +73,7 @@ public class BatchDescribeMergeConflictsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public BatchDescribeMergeConflictsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -73,6 +81,7 @@ public class BatchDescribeMergeConflictsInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public BatchDescribeMergeConflictsInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -80,9 +89,16 @@ public class BatchDescribeMergeConflictsInput {
     
     @JsonProperty("sourceCommitSpecifier")
     public String sourceCommitSpecifier;
+
     public BatchDescribeMergeConflictsInput withSourceCommitSpecifier(String sourceCommitSpecifier) {
         this.sourceCommitSpecifier = sourceCommitSpecifier;
         return this;
     }
     
+    public BatchDescribeMergeConflictsInput(@JsonProperty("destinationCommitSpecifier") String destinationCommitSpecifier, @JsonProperty("mergeOption") MergeOptionTypeEnumEnum mergeOption, @JsonProperty("repositoryName") String repositoryName, @JsonProperty("sourceCommitSpecifier") String sourceCommitSpecifier) {
+        this.destinationCommitSpecifier = destinationCommitSpecifier;
+        this.mergeOption = mergeOption;
+        this.repositoryName = repositoryName;
+        this.sourceCommitSpecifier = sourceCommitSpecifier;
+  }
 }

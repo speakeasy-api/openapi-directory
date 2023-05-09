@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doNotPropagateError")
     public Boolean doNotPropagateError;
+
     public GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest withDoNotPropagateError(Boolean doNotPropagateError) {
         this.doNotPropagateError = doNotPropagateError;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionId")
     public String executionId;
+
     public GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputParameters")
     public java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> inputParameters;
+
     public GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest withInputParameters(java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> inputParameters) {
         this.inputParameters = inputParameters;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterEntries")
     public EnterpriseCrmFrontendsEventbusProtoParameterEntry[] parameterEntries;
+
     public GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest withParameterEntries(EnterpriseCrmFrontendsEventbusProtoParameterEntry[] parameterEntries) {
         this.parameterEntries = parameterEntries;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public EnterpriseCrmFrontendsEventbusProtoEventParameters parameters;
+
     public GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest withParameters(EnterpriseCrmFrontendsEventbusProtoEventParameters parameters) {
         this.parameters = parameters;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerId")
     public String triggerId;
+
     public GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest withTriggerId(String triggerId) {
         this.triggerId = triggerId;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest(){}
 }

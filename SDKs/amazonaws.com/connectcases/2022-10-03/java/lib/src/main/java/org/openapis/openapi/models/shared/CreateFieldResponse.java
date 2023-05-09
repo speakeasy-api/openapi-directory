@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateFieldResponse {
     @JsonProperty("fieldArn")
     public String fieldArn;
+
     public CreateFieldResponse withFieldArn(String fieldArn) {
         this.fieldArn = fieldArn;
         return this;
@@ -19,9 +20,14 @@ public class CreateFieldResponse {
     
     @JsonProperty("fieldId")
     public String fieldId;
+
     public CreateFieldResponse withFieldId(String fieldId) {
         this.fieldId = fieldId;
         return this;
     }
     
+    public CreateFieldResponse(@JsonProperty("fieldArn") String fieldArn, @JsonProperty("fieldId") String fieldId) {
+        this.fieldArn = fieldArn;
+        this.fieldId = fieldId;
+  }
 }

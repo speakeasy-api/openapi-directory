@@ -20,6 +20,7 @@ public class GetShiftResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public GetShiftResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -33,9 +34,11 @@ public class GetShiftResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shift")
     public Shift shift;
+
     public GetShiftResponse withShift(Shift shift) {
         this.shift = shift;
         return this;
     }
     
+    public GetShiftResponse(){}
 }

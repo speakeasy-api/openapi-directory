@@ -18,6 +18,7 @@ public class EePlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Float amount;
+
     public EePlanListItem withAmount(Float amount) {
         this.amount = amount;
         return this;
@@ -28,6 +29,7 @@ public class EePlanListItem {
      */
     @JsonProperty("ctaText")
     public String ctaText;
+
     public EePlanListItem withCtaText(String ctaText) {
         this.ctaText = ctaText;
         return this;
@@ -38,6 +40,7 @@ public class EePlanListItem {
      */
     @JsonProperty("currency")
     public String currency;
+
     public EePlanListItem withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -48,6 +51,7 @@ public class EePlanListItem {
      */
     @JsonProperty("description")
     public String description;
+
     public EePlanListItem withDescription(String description) {
         this.description = description;
         return this;
@@ -58,6 +62,7 @@ public class EePlanListItem {
      */
     @JsonProperty("headerText")
     public String headerText;
+
     public EePlanListItem withHeaderText(String headerText) {
         this.headerText = headerText;
         return this;
@@ -68,6 +73,7 @@ public class EePlanListItem {
      */
     @JsonProperty("heroText")
     public String heroText;
+
     public EePlanListItem withHeroText(String heroText) {
         this.heroText = heroText;
         return this;
@@ -78,6 +84,7 @@ public class EePlanListItem {
      */
     @JsonProperty("id")
     public String id;
+
     public EePlanListItem withId(String id) {
         this.id = id;
         return this;
@@ -89,6 +96,7 @@ public class EePlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public EePlanListItemIntervalEnum interval;
+
     public EePlanListItem withInterval(EePlanListItemIntervalEnum interval) {
         this.interval = interval;
         return this;
@@ -100,6 +108,7 @@ public class EePlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervalCount")
     public Integer intervalCount;
+
     public EePlanListItem withIntervalCount(Integer intervalCount) {
         this.intervalCount = intervalCount;
         return this;
@@ -110,6 +119,7 @@ public class EePlanListItem {
      */
     @JsonProperty("longText")
     public String longText;
+
     public EePlanListItem withLongText(String longText) {
         this.longText = longText;
         return this;
@@ -120,6 +130,7 @@ public class EePlanListItem {
      */
     @JsonProperty("nickname")
     public String nickname;
+
     public EePlanListItem withNickname(String nickname) {
         this.nickname = nickname;
         return this;
@@ -130,6 +141,7 @@ public class EePlanListItem {
      */
     @JsonProperty("product")
     public String product;
+
     public EePlanListItem withProduct(String product) {
         this.product = product;
         return this;
@@ -140,9 +152,22 @@ public class EePlanListItem {
      */
     @JsonProperty("trialPeriodDays")
     public Integer trialPeriodDays;
+
     public EePlanListItem withTrialPeriodDays(Integer trialPeriodDays) {
         this.trialPeriodDays = trialPeriodDays;
         return this;
     }
     
+    public EePlanListItem(@JsonProperty("ctaText") String ctaText, @JsonProperty("currency") String currency, @JsonProperty("description") String description, @JsonProperty("headerText") String headerText, @JsonProperty("heroText") String heroText, @JsonProperty("id") String id, @JsonProperty("longText") String longText, @JsonProperty("nickname") String nickname, @JsonProperty("product") String product, @JsonProperty("trialPeriodDays") Integer trialPeriodDays) {
+        this.ctaText = ctaText;
+        this.currency = currency;
+        this.description = description;
+        this.headerText = headerText;
+        this.heroText = heroText;
+        this.id = id;
+        this.longText = longText;
+        this.nickname = nickname;
+        this.product = product;
+        this.trialPeriodDays = trialPeriodDays;
+  }
 }

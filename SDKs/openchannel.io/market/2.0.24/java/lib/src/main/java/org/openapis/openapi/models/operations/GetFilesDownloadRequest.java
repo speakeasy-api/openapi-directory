@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFilesDownloadRequest {
@@ -12,6 +13,7 @@ public class GetFilesDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fileId")
     public String fileId;
+
     public GetFilesDownloadRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -22,9 +24,13 @@ public class GetFilesDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validSeconds")
     public Long validSeconds;
+
     public GetFilesDownloadRequest withValidSeconds(Long validSeconds) {
         this.validSeconds = validSeconds;
         return this;
     }
     
+    public GetFilesDownloadRequest(@JsonProperty("fileId") String fileId) {
+        this.fileId = fileId;
+  }
 }

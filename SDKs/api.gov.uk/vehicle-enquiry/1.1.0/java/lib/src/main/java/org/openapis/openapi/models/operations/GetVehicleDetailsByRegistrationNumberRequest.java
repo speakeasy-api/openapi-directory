@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVehicleDetailsByRegistrationNumberRequest {
@@ -12,6 +13,7 @@ public class GetVehicleDetailsByRegistrationNumberRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.VehicleRequest vehicleRequest;
+
     public GetVehicleDetailsByRegistrationNumberRequest withVehicleRequest(org.openapis.openapi.models.shared.VehicleRequest vehicleRequest) {
         this.vehicleRequest = vehicleRequest;
         return this;
@@ -22,6 +24,7 @@ public class GetVehicleDetailsByRegistrationNumberRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Correlation-Id")
     public String xCorrelationId;
+
     public GetVehicleDetailsByRegistrationNumberRequest withXCorrelationId(String xCorrelationId) {
         this.xCorrelationId = xCorrelationId;
         return this;
@@ -32,9 +35,14 @@ public class GetVehicleDetailsByRegistrationNumberRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetVehicleDetailsByRegistrationNumberRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetVehicleDetailsByRegistrationNumberRequest(@JsonProperty("VehicleRequest") org.openapis.openapi.models.shared.VehicleRequest vehicleRequest, @JsonProperty("x-api-key") String xApiKey) {
+        this.vehicleRequest = vehicleRequest;
+        this.xApiKey = xApiKey;
+  }
 }

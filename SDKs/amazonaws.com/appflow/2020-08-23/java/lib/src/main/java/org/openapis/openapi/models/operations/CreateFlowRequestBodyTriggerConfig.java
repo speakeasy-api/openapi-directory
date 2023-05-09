@@ -15,6 +15,7 @@ public class CreateFlowRequestBodyTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerProperties")
     public org.openapis.openapi.models.shared.TriggerProperties triggerProperties;
+
     public CreateFlowRequestBodyTriggerConfig withTriggerProperties(org.openapis.openapi.models.shared.TriggerProperties triggerProperties) {
         this.triggerProperties = triggerProperties;
         return this;
@@ -23,9 +24,11 @@ public class CreateFlowRequestBodyTriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerType")
     public org.openapis.openapi.models.shared.TriggerTypeEnum triggerType;
+
     public CreateFlowRequestBodyTriggerConfig withTriggerType(org.openapis.openapi.models.shared.TriggerTypeEnum triggerType) {
         this.triggerType = triggerType;
         return this;
     }
     
+    public CreateFlowRequestBodyTriggerConfig(){}
 }

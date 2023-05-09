@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCompilationJobResponse {
     @JsonProperty("CompilationJobArn")
     public String compilationJobArn;
+
     public CreateCompilationJobResponse withCompilationJobArn(String compilationJobArn) {
         this.compilationJobArn = compilationJobArn;
         return this;
     }
     
+    public CreateCompilationJobResponse(@JsonProperty("CompilationJobArn") String compilationJobArn) {
+        this.compilationJobArn = compilationJobArn;
+  }
 }

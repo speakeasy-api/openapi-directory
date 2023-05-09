@@ -16,52 +16,53 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DeleteReportDefinitionRequest;
 import org.openapis.openapi.models.operations.DeleteReportDefinitionResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            DeleteReportDefinitionRequest req = new DeleteReportDefinitionRequest() {{
-                xAmzAlgorithm = "corrupti";
-                xAmzContentSha256 = "provident";
-                xAmzCredential = "distinctio";
-                xAmzDate = "quibusdam";
-                xAmzSecurityToken = "unde";
-                xAmzSignature = "nulla";
-                xAmzSignedHeaders = "corrupti";
-                reportId = "illum";
-            }}            
+            DeleteReportDefinitionRequest req = new DeleteReportDefinitionRequest("provident") {{
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+            }};            
 
             DeleteReportDefinitionResponse res = sdk.deleteReportDefinition(req);
 
-            if (res.deleteReportDefinitionResult.isPresent()) {
+            if (res.deleteReportDefinitionResult != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `deleteReportDefinition` - Deletes the specified report definition in AWS Application Cost Profiler. This stops the report from being generated.
-* `getReportDefinition` - Retrieves the definition of a report already configured in AWS Application Cost Profiler.
-* `importApplicationUsage` - <p>Ingests application usage data from Amazon Simple Storage Service (Amazon S3).</p> <p>The data must already exist in the S3 location. As part of the action, AWS Application Cost Profiler copies the object from your S3 bucket to an S3 bucket owned by Amazon for processing asynchronously.</p>
-* `listReportDefinitions` - <p>Retrieves a list of all reports and their configurations for your AWS account.</p> <p>The maximum number of reports is one.</p>
-* `putReportDefinition` - Creates the report definition for a report in Application Cost Profiler.
-* `updateReportDefinition` - Updates existing report in AWS Application Cost Profiler.
+* [deleteReportDefinition](docs/sdk/README.md#deletereportdefinition) - Deletes the specified report definition in AWS Application Cost Profiler. This stops the report from being generated.
+* [getReportDefinition](docs/sdk/README.md#getreportdefinition) - Retrieves the definition of a report already configured in AWS Application Cost Profiler.
+* [importApplicationUsage](docs/sdk/README.md#importapplicationusage) - <p>Ingests application usage data from Amazon Simple Storage Service (Amazon S3).</p> <p>The data must already exist in the S3 location. As part of the action, AWS Application Cost Profiler copies the object from your S3 bucket to an S3 bucket owned by Amazon for processing asynchronously.</p>
+* [listReportDefinitions](docs/sdk/README.md#listreportdefinitions) - <p>Retrieves a list of all reports and their configurations for your AWS account.</p> <p>The maximum number of reports is one.</p>
+* [putReportDefinition](docs/sdk/README.md#putreportdefinition) - Creates the report definition for a report in Application Cost Profiler.
+* [updateReportDefinition](docs/sdk/README.md#updatereportdefinition) - Updates existing report in AWS Application Cost Profiler.
 <!-- End SDK Available Operations -->
 
 ### Maturity

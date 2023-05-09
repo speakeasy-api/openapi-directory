@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOfferingsInfoTextPatternRequest {
@@ -12,9 +13,13 @@ public class GetOfferingsInfoTextPatternRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=textPattern")
     public String textPattern;
+
     public GetOfferingsInfoTextPatternRequest withTextPattern(String textPattern) {
         this.textPattern = textPattern;
         return this;
     }
     
+    public GetOfferingsInfoTextPatternRequest(@JsonProperty("textPattern") String textPattern) {
+        this.textPattern = textPattern;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTrustAnchorResponse {
@@ -12,6 +13,7 @@ public class GetTrustAnchorResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTrustAnchorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetTrustAnchorResponse {
     
     
     public String contentType;
+
     public GetTrustAnchorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetTrustAnchorResponse {
     
     
     public Integer statusCode;
+
     public GetTrustAnchorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetTrustAnchorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTrustAnchorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetTrustAnchorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetTrustAnchorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class GetTrustAnchorResponse {
      */
     
     public org.openapis.openapi.models.shared.TrustAnchorDetailResponse trustAnchorDetailResponse;
+
     public GetTrustAnchorResponse withTrustAnchorDetailResponse(org.openapis.openapi.models.shared.TrustAnchorDetailResponse trustAnchorDetailResponse) {
         this.trustAnchorDetailResponse = trustAnchorDetailResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetTrustAnchorResponse {
      */
     
     public Object validationException;
+
     public GetTrustAnchorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetTrustAnchorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

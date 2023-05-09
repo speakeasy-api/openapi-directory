@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatchV2AccessTokensUuidResponse {
     
     public String contentType;
+
     public PatchV2AccessTokensUuidResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PatchV2AccessTokensUuidResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PatchV2AccessTokensUuidResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class PatchV2AccessTokensUuidResponse {
     
     
     public Integer statusCode;
+
     public PatchV2AccessTokensUuidResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PatchV2AccessTokensUuidResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatchV2AccessTokensUuidResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class PatchV2AccessTokensUuidResponse {
      */
     
     public org.openapis.openapi.models.shared.ValueError valueError;
+
     public PatchV2AccessTokensUuidResponse withValueError(org.openapis.openapi.models.shared.ValueError valueError) {
         this.valueError = valueError;
         return this;
@@ -53,9 +59,14 @@ public class PatchV2AccessTokensUuidResponse {
      */
     
     public org.openapis.openapi.models.shared.PatchAccessTokenResponse patchAccessTokenResponse;
+
     public PatchV2AccessTokensUuidResponse withPatchAccessTokenResponse(org.openapis.openapi.models.shared.PatchAccessTokenResponse patchAccessTokenResponse) {
         this.patchAccessTokenResponse = patchAccessTokenResponse;
         return this;
     }
     
+    public PatchV2AccessTokensUuidResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

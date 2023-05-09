@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScoreRevisionRequest {
@@ -13,6 +14,7 @@ public class GetScoreRevisionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=revision")
     public String revision;
+
     public GetScoreRevisionRequest withRevision(String revision) {
         this.revision = revision;
         return this;
@@ -24,6 +26,7 @@ public class GetScoreRevisionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
     public String score;
+
     public GetScoreRevisionRequest withScore(String score) {
         this.score = score;
         return this;
@@ -35,9 +38,14 @@ public class GetScoreRevisionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
     public String sharingKey;
+
     public GetScoreRevisionRequest withSharingKey(String sharingKey) {
         this.sharingKey = sharingKey;
         return this;
     }
     
+    public GetScoreRevisionRequest(@JsonProperty("revision") String revision, @JsonProperty("score") String score) {
+        this.revision = revision;
+        this.score = score;
+  }
 }

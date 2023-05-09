@@ -15,9 +15,11 @@ public class UpdateRouteRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpRoute")
     public org.openapis.openapi.models.shared.HttpRoute httpRoute;
+
     public UpdateRouteRequestBodySpec withHttpRoute(org.openapis.openapi.models.shared.HttpRoute httpRoute) {
         this.httpRoute = httpRoute;
         return this;
     }
     
+    public UpdateRouteRequestBodySpec(){}
 }

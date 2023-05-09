@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTaskOfProjectResponse {
     
     public byte[] body;
+
     public GetTaskOfProjectResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetTaskOfProjectResponse {
     
     
     public String contentType;
+
     public GetTaskOfProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetTaskOfProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetTaskOfProjectResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class GetTaskOfProjectResponse {
     
     
     public Integer statusCode;
+
     public GetTaskOfProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetTaskOfProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTaskOfProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetTaskOfProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.TaskExpandVO taskExpandVO;
+
     public GetTaskOfProjectResponse withTaskExpandVO(org.openapis.openapi.models.shared.TaskExpandVO taskExpandVO) {
         this.taskExpandVO = taskExpandVO;
         return this;
     }
     
+    public GetTaskOfProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

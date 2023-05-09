@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestreportbyorderdateRequest {
@@ -12,6 +13,7 @@ public class RequestreportbyorderdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public RequestreportbyorderdateRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class RequestreportbyorderdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public RequestreportbyorderdateRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class RequestreportbyorderdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beginDate")
     public Integer beginDate;
+
     public RequestreportbyorderdateRequest withBeginDate(Integer beginDate) {
         this.beginDate = beginDate;
         return this;
@@ -42,6 +46,7 @@ public class RequestreportbyorderdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public Integer endDate;
+
     public RequestreportbyorderdateRequest withEndDate(Integer endDate) {
         this.endDate = endDate;
         return this;
@@ -52,9 +57,17 @@ public class RequestreportbyorderdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requesterEmail")
     public String requesterEmail;
+
     public RequestreportbyorderdateRequest withRequesterEmail(String requesterEmail) {
         this.requesterEmail = requesterEmail;
         return this;
     }
     
+    public RequestreportbyorderdateRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("beginDate") Integer beginDate, @JsonProperty("endDate") Integer endDate, @JsonProperty("requesterEmail") String requesterEmail) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.beginDate = beginDate;
+        this.endDate = endDate;
+        this.requesterEmail = requesterEmail;
+  }
 }

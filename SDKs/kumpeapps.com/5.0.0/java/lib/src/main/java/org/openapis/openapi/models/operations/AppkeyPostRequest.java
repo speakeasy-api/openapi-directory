@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppkeyPostRequest {
@@ -12,6 +13,7 @@ public class AppkeyPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
     public String password;
+
     public AppkeyPostRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -22,6 +24,7 @@ public class AppkeyPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsYubikey")
     public Boolean supportsYubikey;
+
     public AppkeyPostRequest withSupportsYubikey(Boolean supportsYubikey) {
         this.supportsYubikey = supportsYubikey;
         return this;
@@ -32,9 +35,15 @@ public class AppkeyPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public AppkeyPostRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AppkeyPostRequest(@JsonProperty("username") String username, @JsonProperty("password") String password, @JsonProperty("supportsYubikey") Boolean supportsYubikey) {
+        this.username = username;
+        this.password = password;
+        this.supportsYubikey = supportsYubikey;
+  }
 }

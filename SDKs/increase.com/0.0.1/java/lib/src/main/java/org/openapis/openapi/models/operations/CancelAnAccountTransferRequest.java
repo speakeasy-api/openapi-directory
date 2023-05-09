@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelAnAccountTransferRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_transfer_id")
     public String accountTransferId;
+
     public CancelAnAccountTransferRequest withAccountTransferId(String accountTransferId) {
         this.accountTransferId = accountTransferId;
         return this;
     }
     
+    public CancelAnAccountTransferRequest(@JsonProperty("account_transfer_id") String accountTransferId) {
+        this.accountTransferId = accountTransferId;
+  }
 }

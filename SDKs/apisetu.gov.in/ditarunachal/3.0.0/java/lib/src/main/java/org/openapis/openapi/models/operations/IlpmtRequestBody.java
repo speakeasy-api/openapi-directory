@@ -15,6 +15,7 @@ public class IlpmtRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public IlpmtRequestBodyCertificateParameters certificateParameters;
+
     public IlpmtRequestBody withCertificateParameters(IlpmtRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class IlpmtRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public IlpmtRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class IlpmtRequestBody {
      */
     @JsonProperty("format")
     public IlpmtRequestBodyFormatEnum format;
+
     public IlpmtRequestBody withFormat(IlpmtRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class IlpmtRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public IlpmtRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public IlpmtRequestBody(@JsonProperty("format") IlpmtRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

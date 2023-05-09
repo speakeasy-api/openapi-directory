@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ByteMatchTuple {
     @JsonProperty("FieldToMatch")
     public FieldToMatch fieldToMatch;
+
     public ByteMatchTuple withFieldToMatch(FieldToMatch fieldToMatch) {
         this.fieldToMatch = fieldToMatch;
         return this;
@@ -19,6 +20,7 @@ public class ByteMatchTuple {
     
     @JsonProperty("PositionalConstraint")
     public PositionalConstraintEnum positionalConstraint;
+
     public ByteMatchTuple withPositionalConstraint(PositionalConstraintEnum positionalConstraint) {
         this.positionalConstraint = positionalConstraint;
         return this;
@@ -26,6 +28,7 @@ public class ByteMatchTuple {
     
     @JsonProperty("TargetString")
     public String targetString;
+
     public ByteMatchTuple withTargetString(String targetString) {
         this.targetString = targetString;
         return this;
@@ -33,9 +36,16 @@ public class ByteMatchTuple {
     
     @JsonProperty("TextTransformation")
     public TextTransformationEnum textTransformation;
+
     public ByteMatchTuple withTextTransformation(TextTransformationEnum textTransformation) {
         this.textTransformation = textTransformation;
         return this;
     }
     
+    public ByteMatchTuple(@JsonProperty("FieldToMatch") FieldToMatch fieldToMatch, @JsonProperty("PositionalConstraint") PositionalConstraintEnum positionalConstraint, @JsonProperty("TargetString") String targetString, @JsonProperty("TextTransformation") TextTransformationEnum textTransformation) {
+        this.fieldToMatch = fieldToMatch;
+        this.positionalConstraint = positionalConstraint;
+        this.targetString = targetString;
+        this.textTransformation = textTransformation;
+  }
 }

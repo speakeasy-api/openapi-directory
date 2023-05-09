@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAccessPreviewFindingsResponse {
@@ -12,6 +13,7 @@ public class ListAccessPreviewFindingsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAccessPreviewFindingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListAccessPreviewFindingsResponse {
      */
     
     public Object conflictException;
+
     public ListAccessPreviewFindingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListAccessPreviewFindingsResponse {
     
     
     public String contentType;
+
     public ListAccessPreviewFindingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListAccessPreviewFindingsResponse {
      */
     
     public Object internalServerException;
+
     public ListAccessPreviewFindingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListAccessPreviewFindingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAccessPreviewFindingsResponse listAccessPreviewFindingsResponse;
+
     public ListAccessPreviewFindingsResponse withListAccessPreviewFindingsResponse(org.openapis.openapi.models.shared.ListAccessPreviewFindingsResponse listAccessPreviewFindingsResponse) {
         this.listAccessPreviewFindingsResponse = listAccessPreviewFindingsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListAccessPreviewFindingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAccessPreviewFindingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListAccessPreviewFindingsResponse {
     
     
     public Integer statusCode;
+
     public ListAccessPreviewFindingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListAccessPreviewFindingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAccessPreviewFindingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListAccessPreviewFindingsResponse {
      */
     
     public Object throttlingException;
+
     public ListAccessPreviewFindingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListAccessPreviewFindingsResponse {
      */
     
     public Object validationException;
+
     public ListAccessPreviewFindingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAccessPreviewFindingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

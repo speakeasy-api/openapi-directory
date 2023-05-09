@@ -15,6 +15,7 @@ public class MemoryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryCapInKibibyte")
     public String memoryCapInKibibyte;
+
     public MemoryInfo withMemoryCapInKibibyte(String memoryCapInKibibyte) {
         this.memoryCapInKibibyte = memoryCapInKibibyte;
         return this;
@@ -26,9 +27,11 @@ public class MemoryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryTotalInKibibyte")
     public String memoryTotalInKibibyte;
+
     public MemoryInfo withMemoryTotalInKibibyte(String memoryTotalInKibibyte) {
         this.memoryTotalInKibibyte = memoryTotalInKibibyte;
         return this;
     }
     
+    public MemoryInfo(){}
 }

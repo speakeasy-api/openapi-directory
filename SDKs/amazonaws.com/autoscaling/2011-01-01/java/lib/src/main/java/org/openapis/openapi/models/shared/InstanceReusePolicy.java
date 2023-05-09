@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class InstanceReusePolicy {
     
     public Boolean reuseOnScaleIn;
+
     public InstanceReusePolicy withReuseOnScaleIn(Boolean reuseOnScaleIn) {
         this.reuseOnScaleIn = reuseOnScaleIn;
         return this;
     }
     
+    public InstanceReusePolicy(){}
 }

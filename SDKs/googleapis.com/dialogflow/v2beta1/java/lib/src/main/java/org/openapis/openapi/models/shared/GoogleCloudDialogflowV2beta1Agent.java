@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public GoogleCloudDialogflowV2beta1AgentApiVersionEnum apiVersion;
+
     public GoogleCloudDialogflowV2beta1Agent withApiVersion(GoogleCloudDialogflowV2beta1AgentApiVersionEnum apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatarUri")
     public String avatarUri;
+
     public GoogleCloudDialogflowV2beta1Agent withAvatarUri(String avatarUri) {
         this.avatarUri = avatarUri;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classificationThreshold")
     public Float classificationThreshold;
+
     public GoogleCloudDialogflowV2beta1Agent withClassificationThreshold(Float classificationThreshold) {
         this.classificationThreshold = classificationThreshold;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLanguageCode")
     public String defaultLanguageCode;
+
     public GoogleCloudDialogflowV2beta1Agent withDefaultLanguageCode(String defaultLanguageCode) {
         this.defaultLanguageCode = defaultLanguageCode;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowV2beta1Agent withDescription(String description) {
         this.description = description;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowV2beta1Agent withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowV2beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableLogging")
     public Boolean enableLogging;
+
     public GoogleCloudDialogflowV2beta1Agent withEnableLogging(Boolean enableLogging) {
         this.enableLogging = enableLogging;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowV2beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchMode")
     public GoogleCloudDialogflowV2beta1AgentMatchModeEnum matchMode;
+
     public GoogleCloudDialogflowV2beta1Agent withMatchMode(GoogleCloudDialogflowV2beta1AgentMatchModeEnum matchMode) {
         this.matchMode = matchMode;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowV2beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleCloudDialogflowV2beta1Agent withParent(String parent) {
         this.parent = parent;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDialogflowV2beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedLanguageCodes")
     public String[] supportedLanguageCodes;
+
     public GoogleCloudDialogflowV2beta1Agent withSupportedLanguageCodes(String[] supportedLanguageCodes) {
         this.supportedLanguageCodes = supportedLanguageCodes;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDialogflowV2beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tier")
     public GoogleCloudDialogflowV2beta1AgentTierEnum tier;
+
     public GoogleCloudDialogflowV2beta1Agent withTier(GoogleCloudDialogflowV2beta1AgentTierEnum tier) {
         this.tier = tier;
         return this;
@@ -139,9 +150,11 @@ public class GoogleCloudDialogflowV2beta1Agent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public GoogleCloudDialogflowV2beta1Agent withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1Agent(){}
 }

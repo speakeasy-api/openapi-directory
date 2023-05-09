@@ -18,6 +18,7 @@ public class OutputInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionType")
     public OutputInformationActionTypeEnum actionType;
+
     public OutputInformation withActionType(OutputInformationActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -29,6 +30,7 @@ public class OutputInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OutputInformation withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class OutputInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Integer number;
+
     public OutputInformation withNumber(Integer number) {
         this.number = number;
         return this;
@@ -51,9 +54,11 @@ public class OutputInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObisCode")
     public String obisCode;
+
     public OutputInformation withObisCode(String obisCode) {
         this.obisCode = obisCode;
         return this;
     }
     
+    public OutputInformation(){}
 }

@@ -15,9 +15,11 @@ public class LifecyclePolicyPreviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiringImageTotalCount")
     public Long expiringImageTotalCount;
+
     public LifecyclePolicyPreviewSummary withExpiringImageTotalCount(Long expiringImageTotalCount) {
         this.expiringImageTotalCount = expiringImageTotalCount;
         return this;
     }
     
+    public LifecyclePolicyPreviewSummary(){}
 }

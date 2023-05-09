@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListKeysResponse {
@@ -12,6 +13,7 @@ public class ListKeysResponse {
      */
     
     public Object accessDeniedException;
+
     public ListKeysResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListKeysResponse {
     
     
     public String contentType;
+
     public ListKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListKeysResponse {
      */
     
     public Object internalServerException;
+
     public ListKeysResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.ListKeysResponse listKeysResponse;
+
     public ListKeysResponse withListKeysResponse(org.openapis.openapi.models.shared.ListKeysResponse listKeysResponse) {
         this.listKeysResponse = listKeysResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListKeysResponse {
     
     
     public Integer statusCode;
+
     public ListKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListKeysResponse {
      */
     
     public Object throttlingException;
+
     public ListKeysResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListKeysResponse {
      */
     
     public Object validationException;
+
     public ListKeysResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

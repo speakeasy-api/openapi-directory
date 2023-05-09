@@ -15,6 +15,7 @@ public class AwsWafv2WebAclActionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Allow")
     public AwsWafv2ActionAllowDetails allow;
+
     public AwsWafv2WebAclActionDetails withAllow(AwsWafv2ActionAllowDetails allow) {
         this.allow = allow;
         return this;
@@ -23,9 +24,11 @@ public class AwsWafv2WebAclActionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Block")
     public AwsWafv2ActionBlockDetails block;
+
     public AwsWafv2WebAclActionDetails withBlock(AwsWafv2ActionBlockDetails block) {
         this.block = block;
         return this;
     }
     
+    public AwsWafv2WebAclActionDetails(){}
 }

@@ -18,6 +18,7 @@ public class VectaraDeleteDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corpusId")
     public String corpusId;
+
     public VectaraDeleteDocumentRequest withCorpusId(String corpusId) {
         this.corpusId = corpusId;
         return this;
@@ -29,6 +30,7 @@ public class VectaraDeleteDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public VectaraDeleteDocumentRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -40,9 +42,11 @@ public class VectaraDeleteDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentId")
     public String documentId;
+
     public VectaraDeleteDocumentRequest withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
     }
     
+    public VectaraDeleteDocumentRequest(){}
 }

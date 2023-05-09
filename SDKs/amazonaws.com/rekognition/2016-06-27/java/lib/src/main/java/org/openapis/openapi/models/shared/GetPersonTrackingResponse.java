@@ -15,6 +15,7 @@ public class GetPersonTrackingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public VideoJobStatusEnum jobStatus;
+
     public GetPersonTrackingResponse withJobStatus(VideoJobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -23,6 +24,7 @@ public class GetPersonTrackingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetPersonTrackingResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,6 +33,7 @@ public class GetPersonTrackingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Persons")
     public PersonDetection[] persons;
+
     public GetPersonTrackingResponse withPersons(PersonDetection[] persons) {
         this.persons = persons;
         return this;
@@ -39,6 +42,7 @@ public class GetPersonTrackingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public GetPersonTrackingResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -47,9 +51,11 @@ public class GetPersonTrackingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VideoMetadata")
     public VideoMetadata videoMetadata;
+
     public GetPersonTrackingResponse withVideoMetadata(VideoMetadata videoMetadata) {
         this.videoMetadata = videoMetadata;
         return this;
     }
     
+    public GetPersonTrackingResponse(){}
 }

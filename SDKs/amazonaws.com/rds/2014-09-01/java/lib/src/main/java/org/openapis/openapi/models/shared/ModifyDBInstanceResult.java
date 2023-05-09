@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyDBInstanceResult {
     
     public DBInstance dbInstance;
+
     public ModifyDBInstanceResult withDBInstance(DBInstance dbInstance) {
         this.dbInstance = dbInstance;
         return this;
     }
     
+    public ModifyDBInstanceResult(){}
 }

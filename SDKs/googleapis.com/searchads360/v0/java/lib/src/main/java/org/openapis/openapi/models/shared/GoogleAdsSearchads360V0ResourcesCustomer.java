@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountStatus")
     public GoogleAdsSearchads360V0ResourcesCustomerAccountStatusEnum accountStatus;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withAccountStatus(GoogleAdsSearchads360V0ResourcesCustomerAccountStatusEnum accountStatus) {
         this.accountStatus = accountStatus;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountType")
     public GoogleAdsSearchads360V0ResourcesCustomerAccountTypeEnum accountType;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withAccountType(GoogleAdsSearchads360V0ResourcesCustomerAccountTypeEnum accountType) {
         this.accountType = accountType;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoTaggingEnabled")
     public Boolean autoTaggingEnabled;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withAutoTaggingEnabled(Boolean autoTaggingEnabled) {
         this.autoTaggingEnabled = autoTaggingEnabled;
         return this;
@@ -51,8 +54,21 @@ public class GoogleAdsSearchads360V0ResourcesCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionTrackingSetting")
     public GoogleAdsSearchads360V0ResourcesConversionTrackingSetting conversionTrackingSetting;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withConversionTrackingSetting(GoogleAdsSearchads360V0ResourcesConversionTrackingSetting conversionTrackingSetting) {
         this.conversionTrackingSetting = conversionTrackingSetting;
+        return this;
+    }
+    
+    /**
+     * Output only. The timestamp when this customer was created. The timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("creationTime")
+    public String creationTime;
+
+    public GoogleAdsSearchads360V0ResourcesCustomer withCreationTime(String creationTime) {
+        this.creationTime = creationTime;
         return this;
     }
     
@@ -62,6 +78,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -73,6 +90,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptiveName")
     public String descriptiveName;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withDescriptiveName(String descriptiveName) {
         this.descriptiveName = descriptiveName;
         return this;
@@ -84,6 +102,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleClickCampaignManagerSetting")
     public GoogleAdsSearchads360V0ResourcesDoubleClickCampaignManagerSetting doubleClickCampaignManagerSetting;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withDoubleClickCampaignManagerSetting(GoogleAdsSearchads360V0ResourcesDoubleClickCampaignManagerSetting doubleClickCampaignManagerSetting) {
         this.doubleClickCampaignManagerSetting = doubleClickCampaignManagerSetting;
         return this;
@@ -95,17 +114,19 @@ public class GoogleAdsSearchads360V0ResourcesCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engineId")
     public String engineId;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withEngineId(String engineId) {
         this.engineId = engineId;
         return this;
     }
     
     /**
-     * The URL template for appending params to the final URL
+     * The URL template for appending params to the final URL.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalUrlSuffix")
     public String finalUrlSuffix;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withFinalUrlSuffix(String finalUrlSuffix) {
         this.finalUrlSuffix = finalUrlSuffix;
         return this;
@@ -117,6 +138,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withId(String id) {
         this.id = id;
         return this;
@@ -128,6 +150,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedTime")
     public String lastModifiedTime;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withLastModifiedTime(String lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -139,6 +162,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manager")
     public Boolean manager;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withManager(Boolean manager) {
         this.manager = manager;
         return this;
@@ -150,6 +174,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -161,6 +186,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleAdsSearchads360V0ResourcesCustomerStatusEnum status;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withStatus(GoogleAdsSearchads360V0ResourcesCustomerStatusEnum status) {
         this.status = status;
         return this;
@@ -172,6 +198,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -183,9 +210,11 @@ public class GoogleAdsSearchads360V0ResourcesCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingUrlTemplate")
     public String trackingUrlTemplate;
+
     public GoogleAdsSearchads360V0ResourcesCustomer withTrackingUrlTemplate(String trackingUrlTemplate) {
         this.trackingUrlTemplate = trackingUrlTemplate;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesCustomer(){}
 }

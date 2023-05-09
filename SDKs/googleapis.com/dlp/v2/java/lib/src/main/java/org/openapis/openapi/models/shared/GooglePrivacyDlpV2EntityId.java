@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2EntityId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public GooglePrivacyDlpV2FieldId field;
+
     public GooglePrivacyDlpV2EntityId withField(GooglePrivacyDlpV2FieldId field) {
         this.field = field;
         return this;
     }
     
+    public GooglePrivacyDlpV2EntityId(){}
 }

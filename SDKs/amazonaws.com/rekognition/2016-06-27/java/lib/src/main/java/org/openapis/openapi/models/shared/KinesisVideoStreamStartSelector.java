@@ -15,6 +15,7 @@ public class KinesisVideoStreamStartSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FragmentNumber")
     public String fragmentNumber;
+
     public KinesisVideoStreamStartSelector withFragmentNumber(String fragmentNumber) {
         this.fragmentNumber = fragmentNumber;
         return this;
@@ -23,9 +24,11 @@ public class KinesisVideoStreamStartSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProducerTimestamp")
     public Long producerTimestamp;
+
     public KinesisVideoStreamStartSelector withProducerTimestamp(Long producerTimestamp) {
         this.producerTimestamp = producerTimestamp;
         return this;
     }
     
+    public KinesisVideoStreamStartSelector(){}
 }

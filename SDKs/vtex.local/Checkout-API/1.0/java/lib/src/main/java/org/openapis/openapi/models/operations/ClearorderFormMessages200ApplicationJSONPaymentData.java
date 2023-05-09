@@ -18,6 +18,7 @@ public class ClearorderFormMessages200ApplicationJSONPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftCards")
     public ClearorderFormMessages200ApplicationJSONPaymentDataGiftCards[] giftCards;
+
     public ClearorderFormMessages200ApplicationJSONPaymentData withGiftCards(ClearorderFormMessages200ApplicationJSONPaymentDataGiftCards[] giftCards) {
         this.giftCards = giftCards;
         return this;
@@ -29,9 +30,11 @@ public class ClearorderFormMessages200ApplicationJSONPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactions")
     public ClearorderFormMessages200ApplicationJSONPaymentDataTransactions[] transactions;
+
     public ClearorderFormMessages200ApplicationJSONPaymentData withTransactions(ClearorderFormMessages200ApplicationJSONPaymentDataTransactions[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSONPaymentData(){}
 }

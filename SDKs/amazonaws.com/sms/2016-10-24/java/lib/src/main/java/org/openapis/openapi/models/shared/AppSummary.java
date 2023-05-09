@@ -20,6 +20,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public AppSummary withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -30,6 +31,7 @@ public class AppSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public AppSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AppSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importedAppId")
     public String importedAppId;
+
     public AppSummary withImportedAppId(String importedAppId) {
         this.importedAppId = importedAppId;
         return this;
@@ -56,6 +60,7 @@ public class AppSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModified")
     public OffsetDateTime lastModified;
+
     public AppSummary withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -66,6 +71,7 @@ public class AppSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("latestReplicationTime")
     public OffsetDateTime latestReplicationTime;
+
     public AppSummary withLatestReplicationTime(OffsetDateTime latestReplicationTime) {
         this.latestReplicationTime = latestReplicationTime;
         return this;
@@ -74,6 +80,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchConfigurationStatus")
     public AppLaunchConfigurationStatusEnum launchConfigurationStatus;
+
     public AppSummary withLaunchConfigurationStatus(AppLaunchConfigurationStatusEnum launchConfigurationStatus) {
         this.launchConfigurationStatus = launchConfigurationStatus;
         return this;
@@ -82,6 +89,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchDetails")
     public LaunchDetails launchDetails;
+
     public AppSummary withLaunchDetails(LaunchDetails launchDetails) {
         this.launchDetails = launchDetails;
         return this;
@@ -90,6 +98,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchStatus")
     public AppLaunchStatusEnum launchStatus;
+
     public AppSummary withLaunchStatus(AppLaunchStatusEnum launchStatus) {
         this.launchStatus = launchStatus;
         return this;
@@ -98,6 +107,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchStatusMessage")
     public String launchStatusMessage;
+
     public AppSummary withLaunchStatusMessage(String launchStatusMessage) {
         this.launchStatusMessage = launchStatusMessage;
         return this;
@@ -106,6 +116,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AppSummary withName(String name) {
         this.name = name;
         return this;
@@ -114,6 +125,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationConfigurationStatus")
     public AppReplicationConfigurationStatusEnum replicationConfigurationStatus;
+
     public AppSummary withReplicationConfigurationStatus(AppReplicationConfigurationStatusEnum replicationConfigurationStatus) {
         this.replicationConfigurationStatus = replicationConfigurationStatus;
         return this;
@@ -122,6 +134,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationStatus")
     public AppReplicationStatusEnum replicationStatus;
+
     public AppSummary withReplicationStatus(AppReplicationStatusEnum replicationStatus) {
         this.replicationStatus = replicationStatus;
         return this;
@@ -130,6 +143,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationStatusMessage")
     public String replicationStatusMessage;
+
     public AppSummary withReplicationStatusMessage(String replicationStatusMessage) {
         this.replicationStatusMessage = replicationStatusMessage;
         return this;
@@ -138,6 +152,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleName")
     public String roleName;
+
     public AppSummary withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -146,6 +161,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AppStatusEnum status;
+
     public AppSummary withStatus(AppStatusEnum status) {
         this.status = status;
         return this;
@@ -154,6 +170,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public AppSummary withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -162,6 +179,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalServerGroups")
     public Long totalServerGroups;
+
     public AppSummary withTotalServerGroups(Long totalServerGroups) {
         this.totalServerGroups = totalServerGroups;
         return this;
@@ -170,9 +188,11 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalServers")
     public Long totalServers;
+
     public AppSummary withTotalServers(Long totalServers) {
         this.totalServers = totalServers;
         return this;
     }
     
+    public AppSummary(){}
 }

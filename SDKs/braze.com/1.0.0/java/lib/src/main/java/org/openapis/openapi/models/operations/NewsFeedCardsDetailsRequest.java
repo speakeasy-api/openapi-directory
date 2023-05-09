@@ -14,9 +14,11 @@ public class NewsFeedCardsDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=card_id")
     public String cardId;
+
     public NewsFeedCardsDetailsRequest withCardId(String cardId) {
         this.cardId = cardId;
         return this;
     }
     
+    public NewsFeedCardsDetailsRequest(){}
 }

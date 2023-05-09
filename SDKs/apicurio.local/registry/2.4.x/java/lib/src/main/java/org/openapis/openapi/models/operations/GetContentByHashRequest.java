@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContentByHashRequest {
@@ -12,9 +13,13 @@ public class GetContentByHashRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contentHash")
     public String contentHash;
+
     public GetContentByHashRequest withContentHash(String contentHash) {
         this.contentHash = contentHash;
         return this;
     }
     
+    public GetContentByHashRequest(@JsonProperty("contentHash") String contentHash) {
+        this.contentHash = contentHash;
+  }
 }

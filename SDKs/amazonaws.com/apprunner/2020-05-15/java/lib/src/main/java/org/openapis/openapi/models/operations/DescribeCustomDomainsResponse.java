@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCustomDomainsResponse {
     
     public String contentType;
+
     public DescribeCustomDomainsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCustomDomainsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCustomDomainsResponse describeCustomDomainsResponse;
+
     public DescribeCustomDomainsResponse withDescribeCustomDomainsResponse(org.openapis.openapi.models.shared.DescribeCustomDomainsResponse describeCustomDomainsResponse) {
         this.describeCustomDomainsResponse = describeCustomDomainsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCustomDomainsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DescribeCustomDomainsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCustomDomainsResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeCustomDomainsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeCustomDomainsResponse {
     
     
     public Integer statusCode;
+
     public DescribeCustomDomainsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeCustomDomainsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCustomDomainsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeCustomDomainsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeCustomDomainsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeCustomDomainsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

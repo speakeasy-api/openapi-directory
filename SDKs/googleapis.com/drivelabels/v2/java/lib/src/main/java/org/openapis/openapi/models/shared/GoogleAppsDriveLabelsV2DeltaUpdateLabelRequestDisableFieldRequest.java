@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabledPolicy")
     public GoogleAppsDriveLabelsV2LifecycleDisabledPolicy disabledPolicy;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest withDisabledPolicy(GoogleAppsDriveLabelsV2LifecycleDisabledPolicy disabledPolicy) {
         this.disabledPolicy = disabledPolicy;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest(){}
 }

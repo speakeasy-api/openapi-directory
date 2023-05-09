@@ -15,9 +15,11 @@ public class GetLifecyclePoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policies")
     public LifecyclePolicySummary[] policies;
+
     public GetLifecyclePoliciesResponse withPolicies(LifecyclePolicySummary[] policies) {
         this.policies = policies;
         return this;
     }
     
+    public GetLifecyclePoliciesResponse(){}
 }

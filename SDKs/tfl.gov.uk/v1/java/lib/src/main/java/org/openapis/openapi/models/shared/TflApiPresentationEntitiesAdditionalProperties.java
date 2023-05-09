@@ -17,6 +17,7 @@ public class TflApiPresentationEntitiesAdditionalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public TflApiPresentationEntitiesAdditionalProperties withCategory(String category) {
         this.category = category;
         return this;
@@ -25,6 +26,7 @@ public class TflApiPresentationEntitiesAdditionalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public TflApiPresentationEntitiesAdditionalProperties withKey(String key) {
         this.key = key;
         return this;
@@ -35,6 +37,7 @@ public class TflApiPresentationEntitiesAdditionalProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modified")
     public OffsetDateTime modified;
+
     public TflApiPresentationEntitiesAdditionalProperties withModified(OffsetDateTime modified) {
         this.modified = modified;
         return this;
@@ -43,6 +46,7 @@ public class TflApiPresentationEntitiesAdditionalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSystemKey")
     public String sourceSystemKey;
+
     public TflApiPresentationEntitiesAdditionalProperties withSourceSystemKey(String sourceSystemKey) {
         this.sourceSystemKey = sourceSystemKey;
         return this;
@@ -51,9 +55,11 @@ public class TflApiPresentationEntitiesAdditionalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public TflApiPresentationEntitiesAdditionalProperties withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public TflApiPresentationEntitiesAdditionalProperties(){}
 }

@@ -15,6 +15,7 @@ public class RunnerNoLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("busy")
     public Boolean busy;
+
     public RunnerNoLabels withBusy(Boolean busy) {
         this.busy = busy;
         return this;
@@ -23,6 +24,7 @@ public class RunnerNoLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public RunnerNoLabels withId(Double id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class RunnerNoLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RunnerNoLabels withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class RunnerNoLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     public String os;
+
     public RunnerNoLabels withOs(String os) {
         this.os = os;
         return this;
@@ -47,9 +51,11 @@ public class RunnerNoLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public RunnerNoLabels withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public RunnerNoLabels(){}
 }

@@ -12,9 +12,13 @@ public class CecerRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF1")
     public String udf1;
+
     public CecerRequestBodyCertificateParameters withUdf1(String udf1) {
         this.udf1 = udf1;
         return this;
     }
     
+    public CecerRequestBodyCertificateParameters(@JsonProperty("UDF1") String udf1) {
+        this.udf1 = udf1;
+  }
 }

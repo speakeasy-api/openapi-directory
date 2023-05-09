@@ -15,6 +15,7 @@ public class Availablenumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost")
     public String cost;
+
     public Availablenumber withCost(String cost) {
         this.cost = cost;
         return this;
@@ -26,6 +27,7 @@ public class Availablenumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public Availablenumber withCountry(String country) {
         this.country = country;
         return this;
@@ -37,6 +39,7 @@ public class Availablenumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public String[] features;
+
     public Availablenumber withFeatures(String[] features) {
         this.features = features;
         return this;
@@ -48,6 +51,7 @@ public class Availablenumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msisdn")
     public String msisdn;
+
     public Availablenumber withMsisdn(String msisdn) {
         this.msisdn = msisdn;
         return this;
@@ -59,9 +63,11 @@ public class Availablenumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Availablenumber withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Availablenumber(){}
 }

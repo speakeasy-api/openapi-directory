@@ -10,24 +10,21 @@ package org.openapis.openapi.models.shared;
  * DesiredConfiguration - &lt;p&gt;Describes the desired configuration for an instance refresh. &lt;/p&gt; &lt;p&gt;If you specify a desired configuration, you must specify either a &lt;code&gt;LaunchTemplate&lt;/code&gt; or a &lt;code&gt;MixedInstancesPolicy&lt;/code&gt;. &lt;/p&gt;
  */
 public class DesiredConfiguration {
-    /**
-     * Describes the launch template and the version of the launch template that Amazon EC2 Auto Scaling uses to launch Amazon EC2 instances. For more information about launch templates, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchTemplates.html"&gt;Launch templates&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;.
-     */
     
     public LaunchTemplateSpecification launchTemplate;
+
     public DesiredConfiguration withLaunchTemplate(LaunchTemplateSpecification launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
     }
     
-    /**
-     * &lt;p&gt;Use this structure to launch multiple instance types and On-Demand Instances and Spot Instances within a single Auto Scaling group.&lt;/p&gt; &lt;p&gt;A mixed instances policy contains information that Amazon EC2 Auto Scaling can use to launch instances and help optimize your costs. For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html"&gt;Auto Scaling groups with multiple instance types and purchase options&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;.&lt;/p&gt;
-     */
     
     public MixedInstancesPolicy mixedInstancesPolicy;
+
     public DesiredConfiguration withMixedInstancesPolicy(MixedInstancesPolicy mixedInstancesPolicy) {
         this.mixedInstancesPolicy = mixedInstancesPolicy;
         return this;
     }
     
+    public DesiredConfiguration(){}
 }

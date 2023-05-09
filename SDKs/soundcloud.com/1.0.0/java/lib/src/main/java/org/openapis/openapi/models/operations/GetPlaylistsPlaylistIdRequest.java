@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlaylistsPlaylistIdRequest {
@@ -13,6 +14,7 @@ public class GetPlaylistsPlaylistIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=access")
     public org.openapis.openapi.models.shared.AccessEnum[] access;
+
     public GetPlaylistsPlaylistIdRequest withAccess(org.openapis.openapi.models.shared.AccessEnum[] access) {
         this.access = access;
         return this;
@@ -23,6 +25,7 @@ public class GetPlaylistsPlaylistIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playlist_id")
     public Long playlistId;
+
     public GetPlaylistsPlaylistIdRequest withPlaylistId(Long playlistId) {
         this.playlistId = playlistId;
         return this;
@@ -33,9 +36,13 @@ public class GetPlaylistsPlaylistIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secret_token")
     public String secretToken;
+
     public GetPlaylistsPlaylistIdRequest withSecretToken(String secretToken) {
         this.secretToken = secretToken;
         return this;
     }
     
+    public GetPlaylistsPlaylistIdRequest(@JsonProperty("playlist_id") Long playlistId) {
+        this.playlistId = playlistId;
+  }
 }

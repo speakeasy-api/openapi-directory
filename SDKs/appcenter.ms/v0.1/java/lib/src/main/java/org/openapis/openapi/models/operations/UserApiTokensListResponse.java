@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UserApiTokensListResponse {
     
     public String contentType;
+
     public UserApiTokensListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UserApiTokensListResponse {
     
     
     public Integer statusCode;
+
     public UserApiTokensListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UserApiTokensListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UserApiTokensListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UserApiTokensListResponse {
      */
     
     public UserApiTokensList200ApplicationJSON[] userApiTokensList200ApplicationJSONObjects;
+
     public UserApiTokensListResponse withUserApiTokensList200ApplicationJSONObjects(UserApiTokensList200ApplicationJSON[] userApiTokensList200ApplicationJSONObjects) {
         this.userApiTokensList200ApplicationJSONObjects = userApiTokensList200ApplicationJSONObjects;
         return this;
@@ -43,6 +48,7 @@ public class UserApiTokensListResponse {
      */
     
     public UserApiTokensList400ApplicationJSON userApiTokensList400ApplicationJSONObject;
+
     public UserApiTokensListResponse withUserApiTokensList400ApplicationJSONObject(UserApiTokensList400ApplicationJSON userApiTokensList400ApplicationJSONObject) {
         this.userApiTokensList400ApplicationJSONObject = userApiTokensList400ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class UserApiTokensListResponse {
      */
     
     public UserApiTokensList401ApplicationJSON userApiTokensList401ApplicationJSONObject;
+
     public UserApiTokensListResponse withUserApiTokensList401ApplicationJSONObject(UserApiTokensList401ApplicationJSON userApiTokensList401ApplicationJSONObject) {
         this.userApiTokensList401ApplicationJSONObject = userApiTokensList401ApplicationJSONObject;
         return this;
     }
     
+    public UserApiTokensListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

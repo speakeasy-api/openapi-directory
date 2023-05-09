@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Transaction {
     @JsonProperty("amount")
     public String amount;
+
     public Transaction withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -16,6 +17,7 @@ public class Transaction {
     
     @JsonProperty("block_number")
     public String blockNumber;
+
     public Transaction withBlockNumber(String blockNumber) {
         this.blockNumber = blockNumber;
         return this;
@@ -23,6 +25,7 @@ public class Transaction {
     
     @JsonProperty("contract_address")
     public String contractAddress;
+
     public Transaction withContractAddress(String contractAddress) {
         this.contractAddress = contractAddress;
         return this;
@@ -30,6 +33,7 @@ public class Transaction {
     
     @JsonProperty("from")
     public String from;
+
     public Transaction withFrom(String from) {
         this.from = from;
         return this;
@@ -37,6 +41,7 @@ public class Transaction {
     
     @JsonProperty("gas")
     public String gas;
+
     public Transaction withGas(String gas) {
         this.gas = gas;
         return this;
@@ -44,6 +49,7 @@ public class Transaction {
     
     @JsonProperty("gas_price")
     public String gasPrice;
+
     public Transaction withGasPrice(String gasPrice) {
         this.gasPrice = gasPrice;
         return this;
@@ -51,6 +57,7 @@ public class Transaction {
     
     @JsonProperty("to")
     public String to;
+
     public Transaction withTo(String to) {
         this.to = to;
         return this;
@@ -58,6 +65,7 @@ public class Transaction {
     
     @JsonProperty("token_decimals")
     public String tokenDecimals;
+
     public Transaction withTokenDecimals(String tokenDecimals) {
         this.tokenDecimals = tokenDecimals;
         return this;
@@ -65,6 +73,7 @@ public class Transaction {
     
     @JsonProperty("token_name")
     public String tokenName;
+
     public Transaction withTokenName(String tokenName) {
         this.tokenName = tokenName;
         return this;
@@ -72,6 +81,7 @@ public class Transaction {
     
     @JsonProperty("token_supply")
     public String tokenSupply;
+
     public Transaction withTokenSupply(String tokenSupply) {
         this.tokenSupply = tokenSupply;
         return this;
@@ -79,6 +89,7 @@ public class Transaction {
     
     @JsonProperty("token_symbol")
     public String tokenSymbol;
+
     public Transaction withTokenSymbol(String tokenSymbol) {
         this.tokenSymbol = tokenSymbol;
         return this;
@@ -86,6 +97,7 @@ public class Transaction {
     
     @JsonProperty("txid")
     public String txid;
+
     public Transaction withTxid(String txid) {
         this.txid = txid;
         return this;
@@ -93,9 +105,25 @@ public class Transaction {
     
     @JsonProperty("type")
     public String type;
+
     public Transaction withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Transaction(@JsonProperty("amount") String amount, @JsonProperty("block_number") String blockNumber, @JsonProperty("contract_address") String contractAddress, @JsonProperty("from") String from, @JsonProperty("gas") String gas, @JsonProperty("gas_price") String gasPrice, @JsonProperty("to") String to, @JsonProperty("token_decimals") String tokenDecimals, @JsonProperty("token_name") String tokenName, @JsonProperty("token_supply") String tokenSupply, @JsonProperty("token_symbol") String tokenSymbol, @JsonProperty("txid") String txid, @JsonProperty("type") String type) {
+        this.amount = amount;
+        this.blockNumber = blockNumber;
+        this.contractAddress = contractAddress;
+        this.from = from;
+        this.gas = gas;
+        this.gasPrice = gasPrice;
+        this.to = to;
+        this.tokenDecimals = tokenDecimals;
+        this.tokenName = tokenName;
+        this.tokenSupply = tokenSupply;
+        this.tokenSymbol = tokenSymbol;
+        this.txid = txid;
+        this.type = type;
+  }
 }

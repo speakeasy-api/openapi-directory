@@ -18,6 +18,7 @@ public class InstanceIosDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleIdentifier")
     public String bundleIdentifier;
+
     public InstanceIosDetails withBundleIdentifier(String bundleIdentifier) {
         this.bundleIdentifier = bundleIdentifier;
         return this;
@@ -29,6 +30,7 @@ public class InstanceIosDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itunesAppId")
     public String itunesAppId;
+
     public InstanceIosDetails withItunesAppId(String itunesAppId) {
         this.itunesAppId = itunesAppId;
         return this;
@@ -40,6 +42,7 @@ public class InstanceIosDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public InstanceIosDetails withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class InstanceIosDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredForIpad")
     public Boolean preferredForIpad;
+
     public InstanceIosDetails withPreferredForIpad(Boolean preferredForIpad) {
         this.preferredForIpad = preferredForIpad;
         return this;
@@ -62,6 +66,7 @@ public class InstanceIosDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredForIphone")
     public Boolean preferredForIphone;
+
     public InstanceIosDetails withPreferredForIphone(Boolean preferredForIphone) {
         this.preferredForIphone = preferredForIphone;
         return this;
@@ -73,6 +78,7 @@ public class InstanceIosDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportIpad")
     public Boolean supportIpad;
+
     public InstanceIosDetails withSupportIpad(Boolean supportIpad) {
         this.supportIpad = supportIpad;
         return this;
@@ -84,9 +90,11 @@ public class InstanceIosDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportIphone")
     public Boolean supportIphone;
+
     public InstanceIosDetails withSupportIphone(Boolean supportIphone) {
         this.supportIphone = supportIphone;
         return this;
     }
     
+    public InstanceIosDetails(){}
 }

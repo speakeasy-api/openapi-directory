@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMonatsbelegeResponse {
     
     public String contentType;
+
     public GetMonatsbelegeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMonatsbelegeResponse {
      */
     
     public org.openapis.openapi.models.shared.Monatsbeleg[] monatsbelegs;
+
     public GetMonatsbelegeResponse withMonatsbelegs(org.openapis.openapi.models.shared.Monatsbeleg[] monatsbelegs) {
         this.monatsbelegs = monatsbelegs;
         return this;
@@ -26,6 +29,7 @@ public class GetMonatsbelegeResponse {
     
     
     public Integer statusCode;
+
     public GetMonatsbelegeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetMonatsbelegeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMonatsbelegeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMonatsbelegeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

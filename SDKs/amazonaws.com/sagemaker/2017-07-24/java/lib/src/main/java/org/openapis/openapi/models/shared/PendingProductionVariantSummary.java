@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * PendingProductionVariantSummary - The production variant summary for a deployment when an endpoint is creating or updating with the &lt;code&gt; &lt;a&gt;CreateEndpoint&lt;/a&gt; &lt;/code&gt; or &lt;code&gt; &lt;a&gt;UpdateEndpoint&lt;/a&gt; &lt;/code&gt; operations. Describes the &lt;code&gt;VariantStatus &lt;/code&gt;, weight and capacity for a production variant associated with an endpoint. 
+ * PendingProductionVariantSummary - The production variant summary for a deployment when an endpoint is creating or updating with the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html"&gt;CreateEndpoint&lt;/a&gt; or &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateEndpoint.html"&gt;UpdateEndpoint&lt;/a&gt; operations. Describes the &lt;code&gt;VariantStatus &lt;/code&gt;, weight and capacity for a production variant associated with an endpoint. 
  */
 public class PendingProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorType")
     public ProductionVariantAcceleratorTypeEnum acceleratorType;
+
     public PendingProductionVariantSummary withAcceleratorType(ProductionVariantAcceleratorTypeEnum acceleratorType) {
         this.acceleratorType = acceleratorType;
         return this;
@@ -23,6 +24,7 @@ public class PendingProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentInstanceCount")
     public Long currentInstanceCount;
+
     public PendingProductionVariantSummary withCurrentInstanceCount(Long currentInstanceCount) {
         this.currentInstanceCount = currentInstanceCount;
         return this;
@@ -31,6 +33,7 @@ public class PendingProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentServerlessConfig")
     public ProductionVariantServerlessConfig currentServerlessConfig;
+
     public PendingProductionVariantSummary withCurrentServerlessConfig(ProductionVariantServerlessConfig currentServerlessConfig) {
         this.currentServerlessConfig = currentServerlessConfig;
         return this;
@@ -39,6 +42,7 @@ public class PendingProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentWeight")
     public Float currentWeight;
+
     public PendingProductionVariantSummary withCurrentWeight(Float currentWeight) {
         this.currentWeight = currentWeight;
         return this;
@@ -47,6 +51,7 @@ public class PendingProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeployedImages")
     public DeployedImage[] deployedImages;
+
     public PendingProductionVariantSummary withDeployedImages(DeployedImage[] deployedImages) {
         this.deployedImages = deployedImages;
         return this;
@@ -55,6 +60,7 @@ public class PendingProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredInstanceCount")
     public Long desiredInstanceCount;
+
     public PendingProductionVariantSummary withDesiredInstanceCount(Long desiredInstanceCount) {
         this.desiredInstanceCount = desiredInstanceCount;
         return this;
@@ -63,6 +69,7 @@ public class PendingProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredServerlessConfig")
     public ProductionVariantServerlessConfig desiredServerlessConfig;
+
     public PendingProductionVariantSummary withDesiredServerlessConfig(ProductionVariantServerlessConfig desiredServerlessConfig) {
         this.desiredServerlessConfig = desiredServerlessConfig;
         return this;
@@ -71,6 +78,7 @@ public class PendingProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredWeight")
     public Float desiredWeight;
+
     public PendingProductionVariantSummary withDesiredWeight(Float desiredWeight) {
         this.desiredWeight = desiredWeight;
         return this;
@@ -79,6 +87,7 @@ public class PendingProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public ProductionVariantInstanceTypeEnum instanceType;
+
     public PendingProductionVariantSummary withInstanceType(ProductionVariantInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -86,6 +95,7 @@ public class PendingProductionVariantSummary {
     
     @JsonProperty("VariantName")
     public String variantName;
+
     public PendingProductionVariantSummary withVariantName(String variantName) {
         this.variantName = variantName;
         return this;
@@ -94,9 +104,13 @@ public class PendingProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VariantStatus")
     public ProductionVariantStatus[] variantStatus;
+
     public PendingProductionVariantSummary withVariantStatus(ProductionVariantStatus[] variantStatus) {
         this.variantStatus = variantStatus;
         return this;
     }
     
+    public PendingProductionVariantSummary(@JsonProperty("VariantName") String variantName) {
+        this.variantName = variantName;
+  }
 }

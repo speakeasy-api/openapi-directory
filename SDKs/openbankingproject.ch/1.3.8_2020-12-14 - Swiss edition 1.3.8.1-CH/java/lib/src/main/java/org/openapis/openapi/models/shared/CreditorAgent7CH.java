@@ -27,6 +27,7 @@ public class CreditorAgent7CH {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PostalAddress6CH address;
+
     public CreditorAgent7CH withAddress(PostalAddress6CH address) {
         this.address = address;
         return this;
@@ -39,6 +40,7 @@ public class CreditorAgent7CH {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bic")
     public String bic;
+
     public CreditorAgent7CH withBic(String bic) {
         this.bic = bic;
         return this;
@@ -52,6 +54,7 @@ public class CreditorAgent7CH {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iid")
     public InstitutionalIdentification2 iid;
+
     public CreditorAgent7CH withIid(InstitutionalIdentification2 iid) {
         this.iid = iid;
         return this;
@@ -60,9 +63,11 @@ public class CreditorAgent7CH {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreditorAgent7CH withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreditorAgent7CH(){}
 }

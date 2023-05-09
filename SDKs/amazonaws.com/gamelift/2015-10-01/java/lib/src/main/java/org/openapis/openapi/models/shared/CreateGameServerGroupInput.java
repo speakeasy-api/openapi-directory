@@ -12,6 +12,7 @@ public class CreateGameServerGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingPolicy")
     public GameServerGroupAutoScalingPolicy autoScalingPolicy;
+
     public CreateGameServerGroupInput withAutoScalingPolicy(GameServerGroupAutoScalingPolicy autoScalingPolicy) {
         this.autoScalingPolicy = autoScalingPolicy;
         return this;
@@ -20,6 +21,7 @@ public class CreateGameServerGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BalancingStrategy")
     public BalancingStrategyEnum balancingStrategy;
+
     public CreateGameServerGroupInput withBalancingStrategy(BalancingStrategyEnum balancingStrategy) {
         this.balancingStrategy = balancingStrategy;
         return this;
@@ -27,6 +29,7 @@ public class CreateGameServerGroupInput {
     
     @JsonProperty("GameServerGroupName")
     public String gameServerGroupName;
+
     public CreateGameServerGroupInput withGameServerGroupName(String gameServerGroupName) {
         this.gameServerGroupName = gameServerGroupName;
         return this;
@@ -35,6 +38,7 @@ public class CreateGameServerGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerProtectionPolicy")
     public GameServerProtectionPolicyEnum gameServerProtectionPolicy;
+
     public CreateGameServerGroupInput withGameServerProtectionPolicy(GameServerProtectionPolicyEnum gameServerProtectionPolicy) {
         this.gameServerProtectionPolicy = gameServerProtectionPolicy;
         return this;
@@ -42,6 +46,7 @@ public class CreateGameServerGroupInput {
     
     @JsonProperty("InstanceDefinitions")
     public InstanceDefinition[] instanceDefinitions;
+
     public CreateGameServerGroupInput withInstanceDefinitions(InstanceDefinition[] instanceDefinitions) {
         this.instanceDefinitions = instanceDefinitions;
         return this;
@@ -49,6 +54,7 @@ public class CreateGameServerGroupInput {
     
     @JsonProperty("LaunchTemplate")
     public LaunchTemplateSpecification launchTemplate;
+
     public CreateGameServerGroupInput withLaunchTemplate(LaunchTemplateSpecification launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -56,6 +62,7 @@ public class CreateGameServerGroupInput {
     
     @JsonProperty("MaxSize")
     public Long maxSize;
+
     public CreateGameServerGroupInput withMaxSize(Long maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -63,6 +70,7 @@ public class CreateGameServerGroupInput {
     
     @JsonProperty("MinSize")
     public Long minSize;
+
     public CreateGameServerGroupInput withMinSize(Long minSize) {
         this.minSize = minSize;
         return this;
@@ -70,6 +78,7 @@ public class CreateGameServerGroupInput {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateGameServerGroupInput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -78,6 +87,7 @@ public class CreateGameServerGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateGameServerGroupInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -86,9 +96,18 @@ public class CreateGameServerGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcSubnets")
     public String[] vpcSubnets;
+
     public CreateGameServerGroupInput withVpcSubnets(String[] vpcSubnets) {
         this.vpcSubnets = vpcSubnets;
         return this;
     }
     
+    public CreateGameServerGroupInput(@JsonProperty("GameServerGroupName") String gameServerGroupName, @JsonProperty("InstanceDefinitions") InstanceDefinition[] instanceDefinitions, @JsonProperty("LaunchTemplate") LaunchTemplateSpecification launchTemplate, @JsonProperty("MaxSize") Long maxSize, @JsonProperty("MinSize") Long minSize, @JsonProperty("RoleArn") String roleArn) {
+        this.gameServerGroupName = gameServerGroupName;
+        this.instanceDefinitions = instanceDefinitions;
+        this.launchTemplate = launchTemplate;
+        this.maxSize = maxSize;
+        this.minSize = minSize;
+        this.roleArn = roleArn;
+  }
 }

@@ -18,6 +18,7 @@ public class AutoResizeDimensionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceSheetDimensions")
     public DataSourceSheetDimensionRange dataSourceSheetDimensions;
+
     public AutoResizeDimensionsRequest withDataSourceSheetDimensions(DataSourceSheetDimensionRange dataSourceSheetDimensions) {
         this.dataSourceSheetDimensions = dataSourceSheetDimensions;
         return this;
@@ -29,9 +30,11 @@ public class AutoResizeDimensionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public DimensionRange dimensions;
+
     public AutoResizeDimensionsRequest withDimensions(DimensionRange dimensions) {
         this.dimensions = dimensions;
         return this;
     }
     
+    public AutoResizeDimensionsRequest(){}
 }

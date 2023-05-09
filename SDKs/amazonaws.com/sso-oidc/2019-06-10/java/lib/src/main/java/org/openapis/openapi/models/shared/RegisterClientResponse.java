@@ -15,6 +15,7 @@ public class RegisterClientResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationEndpoint")
     public String authorizationEndpoint;
+
     public RegisterClientResponse withAuthorizationEndpoint(String authorizationEndpoint) {
         this.authorizationEndpoint = authorizationEndpoint;
         return this;
@@ -23,6 +24,7 @@ public class RegisterClientResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public RegisterClientResponse withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -31,6 +33,7 @@ public class RegisterClientResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientIdIssuedAt")
     public Long clientIdIssuedAt;
+
     public RegisterClientResponse withClientIdIssuedAt(Long clientIdIssuedAt) {
         this.clientIdIssuedAt = clientIdIssuedAt;
         return this;
@@ -39,6 +42,7 @@ public class RegisterClientResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public RegisterClientResponse withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -47,6 +51,7 @@ public class RegisterClientResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSecretExpiresAt")
     public Long clientSecretExpiresAt;
+
     public RegisterClientResponse withClientSecretExpiresAt(Long clientSecretExpiresAt) {
         this.clientSecretExpiresAt = clientSecretExpiresAt;
         return this;
@@ -55,9 +60,11 @@ public class RegisterClientResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenEndpoint")
     public String tokenEndpoint;
+
     public RegisterClientResponse withTokenEndpoint(String tokenEndpoint) {
         this.tokenEndpoint = tokenEndpoint;
         return this;
     }
     
+    public RegisterClientResponse(){}
 }

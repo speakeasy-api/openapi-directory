@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteCustomLogSourceResponse {
     @JsonProperty("customDataLocation")
     public String customDataLocation;
+
     public DeleteCustomLogSourceResponse withCustomDataLocation(String customDataLocation) {
         this.customDataLocation = customDataLocation;
         return this;
     }
     
+    public DeleteCustomLogSourceResponse(@JsonProperty("customDataLocation") String customDataLocation) {
+        this.customDataLocation = customDataLocation;
+  }
 }

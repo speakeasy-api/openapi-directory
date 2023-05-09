@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StandardError {
     @JsonProperty("category")
     public ErrorCategory category;
+
     public StandardError withCategory(ErrorCategory category) {
         this.category = category;
         return this;
@@ -18,6 +19,7 @@ public class StandardError {
     
     @JsonProperty("context")
     public java.util.Map<String, String[]> context;
+
     public StandardError withContext(java.util.Map<String, String[]> context) {
         this.context = context;
         return this;
@@ -25,6 +27,7 @@ public class StandardError {
     
     @JsonProperty("errors")
     public ErrorDetail[] errors;
+
     public StandardError withErrors(ErrorDetail[] errors) {
         this.errors = errors;
         return this;
@@ -33,6 +36,7 @@ public class StandardError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public StandardError withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +44,7 @@ public class StandardError {
     
     @JsonProperty("links")
     public java.util.Map<String, String> links;
+
     public StandardError withLinks(java.util.Map<String, String> links) {
         this.links = links;
         return this;
@@ -47,6 +52,7 @@ public class StandardError {
     
     @JsonProperty("message")
     public String message;
+
     public StandardError withMessage(String message) {
         this.message = message;
         return this;
@@ -54,6 +60,7 @@ public class StandardError {
     
     @JsonProperty("status")
     public String status;
+
     public StandardError withStatus(String status) {
         this.status = status;
         return this;
@@ -62,9 +69,18 @@ public class StandardError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subCategory")
     public java.util.Map<String, Object> subCategory;
+
     public StandardError withSubCategory(java.util.Map<String, Object> subCategory) {
         this.subCategory = subCategory;
         return this;
     }
     
+    public StandardError(@JsonProperty("category") ErrorCategory category, @JsonProperty("context") java.util.Map<String, String[]> context, @JsonProperty("errors") ErrorDetail[] errors, @JsonProperty("links") java.util.Map<String, String> links, @JsonProperty("message") String message, @JsonProperty("status") String status) {
+        this.category = category;
+        this.context = context;
+        this.errors = errors;
+        this.links = links;
+        this.message = message;
+        this.status = status;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetInterpolatedAssetPropertyValuesResponse {
     @JsonProperty("interpolatedAssetPropertyValues")
     public InterpolatedAssetPropertyValue[] interpolatedAssetPropertyValues;
+
     public GetInterpolatedAssetPropertyValuesResponse withInterpolatedAssetPropertyValues(InterpolatedAssetPropertyValue[] interpolatedAssetPropertyValues) {
         this.interpolatedAssetPropertyValues = interpolatedAssetPropertyValues;
         return this;
@@ -22,9 +23,13 @@ public class GetInterpolatedAssetPropertyValuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetInterpolatedAssetPropertyValuesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetInterpolatedAssetPropertyValuesResponse(@JsonProperty("interpolatedAssetPropertyValues") InterpolatedAssetPropertyValue[] interpolatedAssetPropertyValues) {
+        this.interpolatedAssetPropertyValues = interpolatedAssetPropertyValues;
+  }
 }

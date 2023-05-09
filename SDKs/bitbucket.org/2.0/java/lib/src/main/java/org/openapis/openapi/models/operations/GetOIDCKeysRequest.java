@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOIDCKeysRequest {
@@ -12,9 +13,13 @@ public class GetOIDCKeysRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetOIDCKeysRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetOIDCKeysRequest(@JsonProperty("workspace") String workspace) {
+        this.workspace = workspace;
+  }
 }

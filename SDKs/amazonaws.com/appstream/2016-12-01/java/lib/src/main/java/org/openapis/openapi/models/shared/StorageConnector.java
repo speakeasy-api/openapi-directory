@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StorageConnector {
     @JsonProperty("ConnectorType")
     public StorageConnectorTypeEnum connectorType;
+
     public StorageConnector withConnectorType(StorageConnectorTypeEnum connectorType) {
         this.connectorType = connectorType;
         return this;
@@ -22,6 +23,7 @@ public class StorageConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domains")
     public String[] domains;
+
     public StorageConnector withDomains(String[] domains) {
         this.domains = domains;
         return this;
@@ -30,9 +32,13 @@ public class StorageConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceIdentifier")
     public String resourceIdentifier;
+
     public StorageConnector withResourceIdentifier(String resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
     }
     
+    public StorageConnector(@JsonProperty("ConnectorType") StorageConnectorTypeEnum connectorType) {
+        this.connectorType = connectorType;
+  }
 }

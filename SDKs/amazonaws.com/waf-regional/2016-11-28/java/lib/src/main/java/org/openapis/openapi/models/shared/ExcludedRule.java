@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExcludedRule {
     @JsonProperty("RuleId")
     public String ruleId;
+
     public ExcludedRule withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
     }
     
+    public ExcludedRule(@JsonProperty("RuleId") String ruleId) {
+        this.ruleId = ruleId;
+  }
 }

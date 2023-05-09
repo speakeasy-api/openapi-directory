@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse {
     
     public String contentType;
+
     public ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse {
     
     
     public java.util.Map<String, Object> referencesAirportsNearestByLatitudeAndLongitudeGet200ApplicationJSONObject;
+
     public ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse withReferencesAirportsNearestByLatitudeAndLongitudeGet200ApplicationJSONObject(java.util.Map<String, Object> referencesAirportsNearestByLatitudeAndLongitudeGet200ApplicationJSONObject) {
         this.referencesAirportsNearestByLatitudeAndLongitudeGet200ApplicationJSONObject = referencesAirportsNearestByLatitudeAndLongitudeGet200ApplicationJSONObject;
         return this;
@@ -23,6 +26,7 @@ public class ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse {
     
     
     public Integer statusCode;
+
     public ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ApacheKafkaClusterDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootstrapServers")
     public String bootstrapServers;
+
     public ApacheKafkaClusterDescription withBootstrapServers(String bootstrapServers) {
         this.bootstrapServers = bootstrapServers;
         return this;
@@ -23,9 +24,11 @@ public class ApacheKafkaClusterDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpc")
     public VpcDescription vpc;
+
     public ApacheKafkaClusterDescription withVpc(VpcDescription vpc) {
         this.vpc = vpc;
         return this;
     }
     
+    public ApacheKafkaClusterDescription(){}
 }

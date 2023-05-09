@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeprovisionByoipCidrResponse {
@@ -12,6 +13,7 @@ public class DeprovisionByoipCidrResponse {
      */
     
     public Object accessDeniedException;
+
     public DeprovisionByoipCidrResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeprovisionByoipCidrResponse {
      */
     
     public Object byoipCidrNotFoundException;
+
     public DeprovisionByoipCidrResponse withByoipCidrNotFoundException(Object byoipCidrNotFoundException) {
         this.byoipCidrNotFoundException = byoipCidrNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DeprovisionByoipCidrResponse {
     
     
     public String contentType;
+
     public DeprovisionByoipCidrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeprovisionByoipCidrResponse {
      */
     
     public org.openapis.openapi.models.shared.DeprovisionByoipCidrResponse deprovisionByoipCidrResponse;
+
     public DeprovisionByoipCidrResponse withDeprovisionByoipCidrResponse(org.openapis.openapi.models.shared.DeprovisionByoipCidrResponse deprovisionByoipCidrResponse) {
         this.deprovisionByoipCidrResponse = deprovisionByoipCidrResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeprovisionByoipCidrResponse {
      */
     
     public Object incorrectCidrStateException;
+
     public DeprovisionByoipCidrResponse withIncorrectCidrStateException(Object incorrectCidrStateException) {
         this.incorrectCidrStateException = incorrectCidrStateException;
         return this;
@@ -59,6 +65,7 @@ public class DeprovisionByoipCidrResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeprovisionByoipCidrResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -69,6 +76,7 @@ public class DeprovisionByoipCidrResponse {
      */
     
     public Object invalidArgumentException;
+
     public DeprovisionByoipCidrResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -76,6 +84,7 @@ public class DeprovisionByoipCidrResponse {
     
     
     public Integer statusCode;
+
     public DeprovisionByoipCidrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeprovisionByoipCidrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeprovisionByoipCidrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeprovisionByoipCidrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

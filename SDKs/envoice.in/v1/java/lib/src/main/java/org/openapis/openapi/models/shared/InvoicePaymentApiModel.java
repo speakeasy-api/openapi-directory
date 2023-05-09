@@ -20,6 +20,7 @@ public class InvoicePaymentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Amount")
     public Double amount;
+
     public InvoicePaymentApiModel withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -31,6 +32,7 @@ public class InvoicePaymentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public InvoicePaymentApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -42,6 +44,7 @@ public class InvoicePaymentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsAutomatic")
     public Boolean isAutomatic;
+
     public InvoicePaymentApiModel withIsAutomatic(Boolean isAutomatic) {
         this.isAutomatic = isAutomatic;
         return this;
@@ -53,6 +56,7 @@ public class InvoicePaymentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Note")
     public String note;
+
     public InvoicePaymentApiModel withNote(String note) {
         this.note = note;
         return this;
@@ -66,6 +70,7 @@ public class InvoicePaymentApiModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("PaidOn")
     public OffsetDateTime paidOn;
+
     public InvoicePaymentApiModel withPaidOn(OffsetDateTime paidOn) {
         this.paidOn = paidOn;
         return this;
@@ -77,6 +82,7 @@ public class InvoicePaymentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceId")
     public String referenceId;
+
     public InvoicePaymentApiModel withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -88,9 +94,11 @@ public class InvoicePaymentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public InvoicePaymentApiModelTypeEnum type;
+
     public InvoicePaymentApiModel withType(InvoicePaymentApiModelTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InvoicePaymentApiModel(){}
 }

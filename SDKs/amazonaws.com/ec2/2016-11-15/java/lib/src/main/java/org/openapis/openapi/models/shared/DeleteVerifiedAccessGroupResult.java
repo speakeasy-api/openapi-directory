@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteVerifiedAccessGroupResult {
     
     public DeleteVerifiedAccessGroupResultVerifiedAccessGroup verifiedAccessGroup;
+
     public DeleteVerifiedAccessGroupResult withVerifiedAccessGroup(DeleteVerifiedAccessGroupResultVerifiedAccessGroup verifiedAccessGroup) {
         this.verifiedAccessGroup = verifiedAccessGroup;
         return this;
     }
     
+    public DeleteVerifiedAccessGroupResult(){}
 }

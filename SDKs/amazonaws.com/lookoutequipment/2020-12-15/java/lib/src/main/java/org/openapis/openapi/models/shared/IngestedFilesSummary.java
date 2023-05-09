@@ -15,6 +15,7 @@ public class IngestedFilesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscardedFiles")
     public S3Object[] discardedFiles;
+
     public IngestedFilesSummary withDiscardedFiles(S3Object[] discardedFiles) {
         this.discardedFiles = discardedFiles;
         return this;
@@ -22,6 +23,7 @@ public class IngestedFilesSummary {
     
     @JsonProperty("IngestedNumberOfFiles")
     public Long ingestedNumberOfFiles;
+
     public IngestedFilesSummary withIngestedNumberOfFiles(Long ingestedNumberOfFiles) {
         this.ingestedNumberOfFiles = ingestedNumberOfFiles;
         return this;
@@ -29,9 +31,14 @@ public class IngestedFilesSummary {
     
     @JsonProperty("TotalNumberOfFiles")
     public Long totalNumberOfFiles;
+
     public IngestedFilesSummary withTotalNumberOfFiles(Long totalNumberOfFiles) {
         this.totalNumberOfFiles = totalNumberOfFiles;
         return this;
     }
     
+    public IngestedFilesSummary(@JsonProperty("IngestedNumberOfFiles") Long ingestedNumberOfFiles, @JsonProperty("TotalNumberOfFiles") Long totalNumberOfFiles) {
+        this.ingestedNumberOfFiles = ingestedNumberOfFiles;
+        this.totalNumberOfFiles = totalNumberOfFiles;
+  }
 }

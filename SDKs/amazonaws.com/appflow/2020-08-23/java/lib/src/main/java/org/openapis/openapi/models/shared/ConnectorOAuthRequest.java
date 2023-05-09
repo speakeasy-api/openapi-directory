@@ -15,6 +15,7 @@ public class ConnectorOAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authCode")
     public String authCode;
+
     public ConnectorOAuthRequest withAuthCode(String authCode) {
         this.authCode = authCode;
         return this;
@@ -23,9 +24,11 @@ public class ConnectorOAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectUri")
     public String redirectUri;
+
     public ConnectorOAuthRequest withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
     }
     
+    public ConnectorOAuthRequest(){}
 }

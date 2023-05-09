@@ -15,6 +15,7 @@ public class DeleteVpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeleteVpcEndpointDetail withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class DeleteVpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DeleteVpcEndpointDetail withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class DeleteVpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public VpcEndpointStatusEnum status;
+
     public DeleteVpcEndpointDetail withStatus(VpcEndpointStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DeleteVpcEndpointDetail(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAutomationV4ActionsAppIdCreateRequest {
@@ -12,6 +13,7 @@ public class PostAutomationV4ActionsAppIdCreateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ExtensionActionDefinitionInput extensionActionDefinitionInput;
+
     public PostAutomationV4ActionsAppIdCreateRequest withExtensionActionDefinitionInput(org.openapis.openapi.models.shared.ExtensionActionDefinitionInput extensionActionDefinitionInput) {
         this.extensionActionDefinitionInput = extensionActionDefinitionInput;
         return this;
@@ -19,9 +21,14 @@ public class PostAutomationV4ActionsAppIdCreateRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public PostAutomationV4ActionsAppIdCreateRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
     }
     
+    public PostAutomationV4ActionsAppIdCreateRequest(@JsonProperty("ExtensionActionDefinitionInput") org.openapis.openapi.models.shared.ExtensionActionDefinitionInput extensionActionDefinitionInput, @JsonProperty("appId") Integer appId) {
+        this.extensionActionDefinitionInput = extensionActionDefinitionInput;
+        this.appId = appId;
+  }
 }

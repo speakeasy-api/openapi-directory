@@ -15,6 +15,7 @@ public class BlobStoreTransport {
      */
     @JsonProperty("containerName")
     public String containerName;
+
     public BlobStoreTransport withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -25,6 +26,7 @@ public class BlobStoreTransport {
      */
     @JsonProperty("storageName")
     public String storageName;
+
     public BlobStoreTransport withStorageName(String storageName) {
         this.storageName = storageName;
         return this;
@@ -35,9 +37,15 @@ public class BlobStoreTransport {
      */
     @JsonProperty("type")
     public String type;
+
     public BlobStoreTransport withType(String type) {
         this.type = type;
         return this;
     }
     
+    public BlobStoreTransport(@JsonProperty("containerName") String containerName, @JsonProperty("storageName") String storageName, @JsonProperty("type") String type) {
+        this.containerName = containerName;
+        this.storageName = storageName;
+        this.type = type;
+  }
 }

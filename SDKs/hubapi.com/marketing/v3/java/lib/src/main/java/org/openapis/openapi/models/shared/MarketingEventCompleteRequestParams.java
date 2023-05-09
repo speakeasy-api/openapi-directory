@@ -16,6 +16,7 @@ public class MarketingEventCompleteRequestParams {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDateTime")
     public OffsetDateTime endDateTime;
+
     public MarketingEventCompleteRequestParams withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -25,9 +26,14 @@ public class MarketingEventCompleteRequestParams {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public MarketingEventCompleteRequestParams withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
     }
     
+    public MarketingEventCompleteRequestParams(@JsonProperty("endDateTime") OffsetDateTime endDateTime, @JsonProperty("startDateTime") OffsetDateTime startDateTime) {
+        this.endDateTime = endDateTime;
+        this.startDateTime = startDateTime;
+  }
 }

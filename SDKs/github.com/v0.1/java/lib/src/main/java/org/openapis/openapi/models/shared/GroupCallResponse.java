@@ -15,6 +15,7 @@ public class GroupCallResponse {
      */
     @JsonProperty("Message")
     public GroupCallResponseMessageEnum message;
+
     public GroupCallResponse withMessage(GroupCallResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,6 +26,7 @@ public class GroupCallResponse {
      */
     @JsonProperty("RequestUUID")
     public String requestUUID;
+
     public GroupCallResponse withRequestUUID(String requestUUID) {
         this.requestUUID = requestUUID;
         return this;
@@ -35,6 +37,7 @@ public class GroupCallResponse {
      */
     @JsonProperty("RestApiServer")
     public String restApiServer;
+
     public GroupCallResponse withRestApiServer(String restApiServer) {
         this.restApiServer = restApiServer;
         return this;
@@ -45,9 +48,16 @@ public class GroupCallResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public GroupCallResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public GroupCallResponse(@JsonProperty("Message") GroupCallResponseMessageEnum message, @JsonProperty("RequestUUID") String requestUUID, @JsonProperty("RestApiServer") String restApiServer, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.requestUUID = requestUUID;
+        this.restApiServer = restApiServer;
+        this.success = success;
+  }
 }

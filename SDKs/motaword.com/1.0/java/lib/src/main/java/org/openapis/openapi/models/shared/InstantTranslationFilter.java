@@ -12,6 +12,7 @@ public class InstantTranslationFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipMt")
     public String[] skipMt;
+
     public InstantTranslationFilter withSkipMt(String[] skipMt) {
         this.skipMt = skipMt;
         return this;
@@ -20,9 +21,11 @@ public class InstantTranslationFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipPostEdit")
     public String[] skipPostEdit;
+
     public InstantTranslationFilter withSkipPostEdit(String[] skipPostEdit) {
         this.skipPostEdit = skipPostEdit;
         return this;
     }
     
+    public InstantTranslationFilter(){}
 }

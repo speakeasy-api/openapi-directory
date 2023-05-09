@@ -15,6 +15,7 @@ public class CreateDataIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateDataIntegrationRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateDataIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateDataIntegrationRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class CreateDataIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileConfiguration")
     public CreateDataIntegrationRequestBodyFileConfiguration fileConfiguration;
+
     public CreateDataIntegrationRequestBody withFileConfiguration(CreateDataIntegrationRequestBodyFileConfiguration fileConfiguration) {
         this.fileConfiguration = fileConfiguration;
         return this;
@@ -47,6 +50,7 @@ public class CreateDataIntegrationRequestBody {
      */
     @JsonProperty("KmsKey")
     public String kmsKey;
+
     public CreateDataIntegrationRequestBody withKmsKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
@@ -57,6 +61,7 @@ public class CreateDataIntegrationRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateDataIntegrationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +73,7 @@ public class CreateDataIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectConfiguration")
     public java.util.Map<String, java.util.Map<String, String[]>> objectConfiguration;
+
     public CreateDataIntegrationRequestBody withObjectConfiguration(java.util.Map<String, java.util.Map<String, String[]>> objectConfiguration) {
         this.objectConfiguration = objectConfiguration;
         return this;
@@ -78,6 +84,7 @@ public class CreateDataIntegrationRequestBody {
      */
     @JsonProperty("ScheduleConfig")
     public CreateDataIntegrationRequestBodyScheduleConfig scheduleConfig;
+
     public CreateDataIntegrationRequestBody withScheduleConfig(CreateDataIntegrationRequestBodyScheduleConfig scheduleConfig) {
         this.scheduleConfig = scheduleConfig;
         return this;
@@ -88,6 +95,7 @@ public class CreateDataIntegrationRequestBody {
      */
     @JsonProperty("SourceURI")
     public String sourceURI;
+
     public CreateDataIntegrationRequestBody withSourceURI(String sourceURI) {
         this.sourceURI = sourceURI;
         return this;
@@ -99,9 +107,16 @@ public class CreateDataIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateDataIntegrationRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDataIntegrationRequestBody(@JsonProperty("KmsKey") String kmsKey, @JsonProperty("Name") String name, @JsonProperty("ScheduleConfig") CreateDataIntegrationRequestBodyScheduleConfig scheduleConfig, @JsonProperty("SourceURI") String sourceURI) {
+        this.kmsKey = kmsKey;
+        this.name = name;
+        this.scheduleConfig = scheduleConfig;
+        this.sourceURI = sourceURI;
+  }
 }

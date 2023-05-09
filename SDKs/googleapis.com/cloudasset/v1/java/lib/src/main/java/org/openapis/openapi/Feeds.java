@@ -61,11 +61,9 @@ public class Feeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetFeedsCreateResponse res = new org.openapis.openapi.models.operations.CloudassetFeedsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudassetFeedsCreateResponse res = new org.openapis.openapi.models.operations.CloudassetFeedsCreateResponse(contentType, httpRes.statusCode()) {{
             feed = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Feeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetFeedsListResponse res = new org.openapis.openapi.models.operations.CloudassetFeedsListResponse() {{
+        org.openapis.openapi.models.operations.CloudassetFeedsListResponse res = new org.openapis.openapi.models.operations.CloudassetFeedsListResponse(contentType, httpRes.statusCode()) {{
             listFeedsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

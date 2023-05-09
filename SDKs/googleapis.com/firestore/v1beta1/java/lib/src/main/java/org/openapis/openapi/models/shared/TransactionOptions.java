@@ -18,6 +18,7 @@ public class TransactionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOnly")
     public ReadOnly readOnly;
+
     public TransactionOptions withReadOnly(ReadOnly readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -29,9 +30,11 @@ public class TransactionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readWrite")
     public ReadWrite readWrite;
+
     public TransactionOptions withReadWrite(ReadWrite readWrite) {
         this.readWrite = readWrite;
         return this;
     }
     
+    public TransactionOptions(){}
 }

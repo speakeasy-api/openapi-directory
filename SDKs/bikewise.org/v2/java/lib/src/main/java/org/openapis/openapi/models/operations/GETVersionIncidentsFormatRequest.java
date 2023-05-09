@@ -13,6 +13,7 @@ public class GETVersionIncidentsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=incident_type")
     public GETVersionIncidentsFormatIncidentTypeEnum incidentType;
+
     public GETVersionIncidentsFormatRequest withIncidentType(GETVersionIncidentsFormatIncidentTypeEnum incidentType) {
         this.incidentType = incidentType;
         return this;
@@ -24,6 +25,7 @@ public class GETVersionIncidentsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurred_after")
     public Integer occurredAfter;
+
     public GETVersionIncidentsFormatRequest withOccurredAfter(Integer occurredAfter) {
         this.occurredAfter = occurredAfter;
         return this;
@@ -35,6 +37,7 @@ public class GETVersionIncidentsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurred_before")
     public Integer occurredBefore;
+
     public GETVersionIncidentsFormatRequest withOccurredBefore(Integer occurredBefore) {
         this.occurredBefore = occurredBefore;
         return this;
@@ -46,6 +49,7 @@ public class GETVersionIncidentsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GETVersionIncidentsFormatRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -57,6 +61,7 @@ public class GETVersionIncidentsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GETVersionIncidentsFormatRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -68,6 +73,7 @@ public class GETVersionIncidentsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proximity")
     public String proximity;
+
     public GETVersionIncidentsFormatRequest withProximity(String proximity) {
         this.proximity = proximity;
         return this;
@@ -79,6 +85,7 @@ public class GETVersionIncidentsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proximity_square")
     public Integer proximitySquare;
+
     public GETVersionIncidentsFormatRequest withProximitySquare(Integer proximitySquare) {
         this.proximitySquare = proximitySquare;
         return this;
@@ -90,9 +97,11 @@ public class GETVersionIncidentsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GETVersionIncidentsFormatRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GETVersionIncidentsFormatRequest(){}
 }

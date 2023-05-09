@@ -15,6 +15,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public AddressViewModel address;
+
     public LocationViewModel withAddress(AddressViewModel address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminEmail")
     public String adminEmail;
+
     public LocationViewModel withAdminEmail(String adminEmail) {
         this.adminEmail = adminEmail;
         return this;
@@ -31,6 +33,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminName")
     public String adminName;
+
     public LocationViewModel withAdminName(String adminName) {
         this.adminName = adminName;
         return this;
@@ -39,6 +42,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appointmentReminders")
     public AppointmentReminderViewModel appointmentReminders;
+
     public LocationViewModel withAppointmentReminders(AppointmentReminderViewModel appointmentReminders) {
         this.appointmentReminders = appointmentReminders;
         return this;
@@ -47,6 +51,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessHolidays")
     public BusinessHolidayViewModel[] businessHolidays;
+
     public LocationViewModel withBusinessHolidays(BusinessHolidayViewModel[] businessHolidays) {
         this.businessHolidays = businessHolidays;
         return this;
@@ -55,6 +60,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessHours")
     public BusinessHoursViewModel businessHours;
+
     public LocationViewModel withBusinessHours(BusinessHoursViewModel businessHours) {
         this.businessHours = businessHours;
         return this;
@@ -63,6 +69,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyId")
     public String companyId;
+
     public LocationViewModel withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -71,6 +78,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyName")
     public String companyName;
+
     public LocationViewModel withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -79,6 +87,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaults")
     public BusinessDefaultsViewModel defaults;
+
     public LocationViewModel withDefaults(BusinessDefaultsViewModel defaults) {
         this.defaults = defaults;
         return this;
@@ -87,6 +96,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public LocationViewModel withEmail(String email) {
         this.email = email;
         return this;
@@ -95,6 +105,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fax")
     public String fax;
+
     public LocationViewModel withFax(String fax) {
         this.fax = fax;
         return this;
@@ -103,6 +114,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyId")
     public String friendlyId;
+
     public LocationViewModel withFriendlyId(String friendlyId) {
         this.friendlyId = friendlyId;
         return this;
@@ -111,6 +123,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LocationViewModel withId(String id) {
         this.id = id;
         return this;
@@ -119,6 +132,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public LocationViewModel withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -127,6 +141,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public LocationViewModel withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -135,6 +150,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public LocationViewModel withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -143,6 +159,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public LocationViewModel withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -151,6 +168,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LocationViewModel withName(String name) {
         this.name = name;
         return this;
@@ -159,6 +177,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public LocationViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -167,6 +186,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public LocationViewModel withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -175,6 +195,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryBusiness")
     public Boolean primaryBusiness;
+
     public LocationViewModel withPrimaryBusiness(Boolean primaryBusiness) {
         this.primaryBusiness = primaryBusiness;
         return this;
@@ -183,6 +204,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryCalendarId")
     public String primaryCalendarId;
+
     public LocationViewModel withPrimaryCalendarId(String primaryCalendarId) {
         this.primaryCalendarId = primaryCalendarId;
         return this;
@@ -191,6 +213,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionId")
     public String regionId;
+
     public LocationViewModel withRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -199,6 +222,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public BusinessServiceViewModel[] services;
+
     public LocationViewModel withServices(BusinessServiceViewModel[] services) {
         this.services = services;
         return this;
@@ -207,6 +231,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public OnlineSettingsViewModel settings;
+
     public LocationViewModel withSettings(OnlineSettingsViewModel settings) {
         this.settings = settings;
         return this;
@@ -215,6 +240,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezoneIana")
     public String timezoneIana;
+
     public LocationViewModel withTimezoneIana(String timezoneIana) {
         this.timezoneIana = timezoneIana;
         return this;
@@ -223,6 +249,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezoneId")
     public String timezoneId;
+
     public LocationViewModel withTimezoneId(String timezoneId) {
         this.timezoneId = timezoneId;
         return this;
@@ -231,6 +258,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezoneOffset")
     public Integer timezoneOffset;
+
     public LocationViewModel withTimezoneOffset(Integer timezoneOffset) {
         this.timezoneOffset = timezoneOffset;
         return this;
@@ -239,6 +267,7 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("travel")
     public TravelViewModel travel;
+
     public LocationViewModel withTravel(TravelViewModel travel) {
         this.travel = travel;
         return this;
@@ -247,9 +276,11 @@ public class LocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public LocationViewModel withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public LocationViewModel(){}
 }

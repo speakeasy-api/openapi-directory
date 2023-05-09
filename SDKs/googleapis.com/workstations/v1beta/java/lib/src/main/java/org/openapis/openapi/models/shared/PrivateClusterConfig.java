@@ -18,6 +18,7 @@ public class PrivateClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedProjects")
     public String[] allowedProjects;
+
     public PrivateClusterConfig withAllowedProjects(String[] allowedProjects) {
         this.allowedProjects = allowedProjects;
         return this;
@@ -29,6 +30,7 @@ public class PrivateClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterHostname")
     public String clusterHostname;
+
     public PrivateClusterConfig withClusterHostname(String clusterHostname) {
         this.clusterHostname = clusterHostname;
         return this;
@@ -40,6 +42,7 @@ public class PrivateClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablePrivateEndpoint")
     public Boolean enablePrivateEndpoint;
+
     public PrivateClusterConfig withEnablePrivateEndpoint(Boolean enablePrivateEndpoint) {
         this.enablePrivateEndpoint = enablePrivateEndpoint;
         return this;
@@ -51,9 +54,11 @@ public class PrivateClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAttachmentUri")
     public String serviceAttachmentUri;
+
     public PrivateClusterConfig withServiceAttachmentUri(String serviceAttachmentUri) {
         this.serviceAttachmentUri = serviceAttachmentUri;
         return this;
     }
     
+    public PrivateClusterConfig(){}
 }

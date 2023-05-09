@@ -18,6 +18,7 @@ public class FieldMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public Boolean primary;
+
     public FieldMetadata withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -29,6 +30,7 @@ public class FieldMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public FieldMetadata withSource(Source source) {
         this.source = source;
         return this;
@@ -40,6 +42,7 @@ public class FieldMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourcePrimary")
     public Boolean sourcePrimary;
+
     public FieldMetadata withSourcePrimary(Boolean sourcePrimary) {
         this.sourcePrimary = sourcePrimary;
         return this;
@@ -51,9 +54,11 @@ public class FieldMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verified")
     public Boolean verified;
+
     public FieldMetadata withVerified(Boolean verified) {
         this.verified = verified;
         return this;
     }
     
+    public FieldMetadata(){}
 }

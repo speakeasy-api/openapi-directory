@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NearestPlaceNearestPlaceGetRequest {
@@ -12,6 +13,7 @@ public class NearestPlaceNearestPlaceGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public NearestPlaceNearestPlaceGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -31,6 +33,7 @@ public class NearestPlaceNearestPlaceGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public NearestPlaceNearestPlaceGetLanguageLanguageEnum language;
+
     public NearestPlaceNearestPlaceGetRequest withLanguage(NearestPlaceNearestPlaceGetLanguageLanguageEnum language) {
         this.language = language;
         return this;
@@ -41,6 +44,7 @@ public class NearestPlaceNearestPlaceGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
     public String lat;
+
     public NearestPlaceNearestPlaceGetRequest withLat(String lat) {
         this.lat = lat;
         return this;
@@ -51,9 +55,14 @@ public class NearestPlaceNearestPlaceGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
     public String lon;
+
     public NearestPlaceNearestPlaceGetRequest withLon(String lon) {
         this.lon = lon;
         return this;
     }
     
+    public NearestPlaceNearestPlaceGetRequest(@JsonProperty("lat") String lat, @JsonProperty("lon") String lon) {
+        this.lat = lat;
+        this.lon = lon;
+  }
 }

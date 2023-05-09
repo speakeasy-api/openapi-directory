@@ -18,9 +18,11 @@ public class TableStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableColumnProperties")
     public TableColumnProperties[] tableColumnProperties;
+
     public TableStyle withTableColumnProperties(TableColumnProperties[] tableColumnProperties) {
         this.tableColumnProperties = tableColumnProperties;
         return this;
     }
     
+    public TableStyle(){}
 }

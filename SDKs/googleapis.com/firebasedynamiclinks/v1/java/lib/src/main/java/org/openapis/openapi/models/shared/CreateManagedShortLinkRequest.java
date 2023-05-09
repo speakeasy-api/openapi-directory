@@ -18,6 +18,7 @@ public class CreateManagedShortLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicLinkInfo")
     public DynamicLinkInfo dynamicLinkInfo;
+
     public CreateManagedShortLinkRequest withDynamicLinkInfo(DynamicLinkInfo dynamicLinkInfo) {
         this.dynamicLinkInfo = dynamicLinkInfo;
         return this;
@@ -29,6 +30,7 @@ public class CreateManagedShortLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longDynamicLink")
     public String longDynamicLink;
+
     public CreateManagedShortLinkRequest withLongDynamicLink(String longDynamicLink) {
         this.longDynamicLink = longDynamicLink;
         return this;
@@ -40,6 +42,7 @@ public class CreateManagedShortLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateManagedShortLinkRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class CreateManagedShortLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkVersion")
     public String sdkVersion;
+
     public CreateManagedShortLinkRequest withSDKVersion(String sdkVersion) {
         this.sdkVersion = sdkVersion;
         return this;
@@ -62,9 +66,11 @@ public class CreateManagedShortLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suffix")
     public Suffix suffix;
+
     public CreateManagedShortLinkRequest withSuffix(Suffix suffix) {
         this.suffix = suffix;
         return this;
     }
     
+    public CreateManagedShortLinkRequest(){}
 }

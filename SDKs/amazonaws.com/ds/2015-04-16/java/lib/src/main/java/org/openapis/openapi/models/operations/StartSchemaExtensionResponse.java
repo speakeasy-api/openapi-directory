@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartSchemaExtensionResponse {
@@ -12,6 +13,7 @@ public class StartSchemaExtensionResponse {
      */
     
     public Object clientException;
+
     public StartSchemaExtensionResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class StartSchemaExtensionResponse {
     
     
     public String contentType;
+
     public StartSchemaExtensionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartSchemaExtensionResponse {
      */
     
     public Object directoryUnavailableException;
+
     public StartSchemaExtensionResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -39,6 +43,7 @@ public class StartSchemaExtensionResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public StartSchemaExtensionResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class StartSchemaExtensionResponse {
      */
     
     public Object invalidParameterException;
+
     public StartSchemaExtensionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class StartSchemaExtensionResponse {
      */
     
     public Object serviceException;
+
     public StartSchemaExtensionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -69,6 +76,7 @@ public class StartSchemaExtensionResponse {
      */
     
     public Object snapshotLimitExceededException;
+
     public StartSchemaExtensionResponse withSnapshotLimitExceededException(Object snapshotLimitExceededException) {
         this.snapshotLimitExceededException = snapshotLimitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class StartSchemaExtensionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartSchemaExtensionResult startSchemaExtensionResult;
+
     public StartSchemaExtensionResponse withStartSchemaExtensionResult(org.openapis.openapi.models.shared.StartSchemaExtensionResult startSchemaExtensionResult) {
         this.startSchemaExtensionResult = startSchemaExtensionResult;
         return this;
@@ -86,6 +95,7 @@ public class StartSchemaExtensionResponse {
     
     
     public Integer statusCode;
+
     public StartSchemaExtensionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class StartSchemaExtensionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartSchemaExtensionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartSchemaExtensionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

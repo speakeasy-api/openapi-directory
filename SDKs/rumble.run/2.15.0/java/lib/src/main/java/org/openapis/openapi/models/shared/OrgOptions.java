@@ -15,6 +15,7 @@ public class OrgOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OrgOptions withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class OrgOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiration_assets_offline")
     public String expirationAssetsOffline;
+
     public OrgOptions withExpirationAssetsOffline(String expirationAssetsOffline) {
         this.expirationAssetsOffline = expirationAssetsOffline;
         return this;
@@ -31,6 +33,7 @@ public class OrgOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiration_assets_stale")
     public String expirationAssetsStale;
+
     public OrgOptions withExpirationAssetsStale(String expirationAssetsStale) {
         this.expirationAssetsStale = expirationAssetsStale;
         return this;
@@ -39,6 +42,7 @@ public class OrgOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiration_scans")
     public String expirationScans;
+
     public OrgOptions withExpirationScans(String expirationScans) {
         this.expirationScans = expirationScans;
         return this;
@@ -47,6 +51,7 @@ public class OrgOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_token")
     public String exportToken;
+
     public OrgOptions withExportToken(String exportToken) {
         this.exportToken = exportToken;
         return this;
@@ -55,6 +60,7 @@ public class OrgOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrgOptions withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class OrgOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     public String parentId;
+
     public OrgOptions withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -71,9 +78,11 @@ public class OrgOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public OrgOptions withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public OrgOptions(){}
 }

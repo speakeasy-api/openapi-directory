@@ -15,6 +15,7 @@ public class DescribeReservedNodesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeReservedNodesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeReservedNodesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservedNodes")
     public ReservedNode[] reservedNodes;
+
     public DescribeReservedNodesResponse withReservedNodes(ReservedNode[] reservedNodes) {
         this.reservedNodes = reservedNodes;
         return this;
     }
     
+    public DescribeReservedNodesResponse(){}
 }

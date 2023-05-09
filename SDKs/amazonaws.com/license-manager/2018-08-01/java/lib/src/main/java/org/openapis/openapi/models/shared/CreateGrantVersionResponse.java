@@ -15,6 +15,7 @@ public class CreateGrantVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantArn")
     public String grantArn;
+
     public CreateGrantVersionResponse withGrantArn(String grantArn) {
         this.grantArn = grantArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateGrantVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public GrantStatusEnum status;
+
     public CreateGrantVersionResponse withStatus(GrantStatusEnum status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class CreateGrantVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public CreateGrantVersionResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public CreateGrantVersionResponse(){}
 }

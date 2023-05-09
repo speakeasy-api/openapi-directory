@@ -15,6 +15,7 @@ public class CollaboratorBulkUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public CollaboratorBulkUpdateRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class CollaboratorBulkUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lead_id")
     public Integer leadId;
+
     public CollaboratorBulkUpdateRequest withLeadId(Integer leadId) {
         this.leadId = leadId;
         return this;
@@ -31,9 +33,11 @@ public class CollaboratorBulkUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public String userId;
+
     public CollaboratorBulkUpdateRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public CollaboratorBulkUpdateRequest(){}
 }

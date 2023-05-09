@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HierarchicalPrincipal {
     @JsonProperty("PrincipalList")
     public Principal[] principalList;
+
     public HierarchicalPrincipal withPrincipalList(Principal[] principalList) {
         this.principalList = principalList;
         return this;
     }
     
+    public HierarchicalPrincipal(@JsonProperty("PrincipalList") Principal[] principalList) {
+        this.principalList = principalList;
+  }
 }

@@ -15,6 +15,7 @@ public class BlogArticleList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("articles")
     public BlogArticle[] articles;
+
     public BlogArticleList withArticles(BlogArticle[] articles) {
         this.articles = articles;
         return this;
@@ -23,9 +24,11 @@ public class BlogArticleList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public BlogArticleList withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public BlogArticleList(){}
 }

@@ -18,6 +18,7 @@ public class ContainersGroupsNameOrIdPatchUpdatedInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Autorecovery")
     public String autorecovery;
+
     public ContainersGroupsNameOrIdPatchUpdatedInfo withAutorecovery(String autorecovery) {
         this.autorecovery = autorecovery;
         return this;
@@ -29,6 +30,7 @@ public class ContainersGroupsNameOrIdPatchUpdatedInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public String[] environment;
+
     public ContainersGroupsNameOrIdPatchUpdatedInfo withEnvironment(String[] environment) {
         this.environment = environment;
         return this;
@@ -37,9 +39,11 @@ public class ContainersGroupsNameOrIdPatchUpdatedInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberInstances")
     public ContainersGroupsNameOrIdPatchUpdatedInfoNumberInstances numberInstances;
+
     public ContainersGroupsNameOrIdPatchUpdatedInfo withNumberInstances(ContainersGroupsNameOrIdPatchUpdatedInfoNumberInstances numberInstances) {
         this.numberInstances = numberInstances;
         return this;
     }
     
+    public ContainersGroupsNameOrIdPatchUpdatedInfo(){}
 }

@@ -58,10 +58,8 @@ public class Spell {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersCardinalResponse res = new org.openapis.openapi.models.operations.GetNumbersCardinalResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersCardinalResponse res = new org.openapis.openapi.models.operations.GetNumbersCardinalResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -98,10 +96,8 @@ public class Spell {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersCurrencyResponse res = new org.openapis.openapi.models.operations.GetNumbersCurrencyResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersCurrencyResponse res = new org.openapis.openapi.models.operations.GetNumbersCurrencyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -138,10 +134,8 @@ public class Spell {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersOrdinalResponse res = new org.openapis.openapi.models.operations.GetNumbersOrdinalResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersOrdinalResponse res = new org.openapis.openapi.models.operations.GetNumbersOrdinalResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {

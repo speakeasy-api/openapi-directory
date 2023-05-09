@@ -18,6 +18,7 @@ public class GoogleAppsCloudidentityDevicesV1CustomAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boolValue")
     public Boolean boolValue;
+
     public GoogleAppsCloudidentityDevicesV1CustomAttributeValue withBoolValue(Boolean boolValue) {
         this.boolValue = boolValue;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCloudidentityDevicesV1CustomAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberValue")
     public Double numberValue;
+
     public GoogleAppsCloudidentityDevicesV1CustomAttributeValue withNumberValue(Double numberValue) {
         this.numberValue = numberValue;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAppsCloudidentityDevicesV1CustomAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public GoogleAppsCloudidentityDevicesV1CustomAttributeValue withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public GoogleAppsCloudidentityDevicesV1CustomAttributeValue(){}
 }

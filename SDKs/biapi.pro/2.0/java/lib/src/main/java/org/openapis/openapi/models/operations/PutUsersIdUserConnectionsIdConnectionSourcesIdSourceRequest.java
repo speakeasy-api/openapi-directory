@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequestBody requestBody;
+
     public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withRequestBody(PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=background")
     public Boolean background;
+
     public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withBackground(Boolean background) {
         this.background = background;
         return this;
@@ -26,6 +29,7 @@ public class PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -33,6 +37,7 @@ public class PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
     public Long idConnection;
+
     public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -40,6 +45,7 @@ public class PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_source")
     public Long idSource;
+
     public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withIdSource(Long idSource) {
         this.idSource = idSource;
         return this;
@@ -50,9 +56,15 @@ public class PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
     }
     
+    public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest(@JsonProperty("id_connection") Long idConnection, @JsonProperty("id_source") Long idSource, @JsonProperty("id_user") String idUser) {
+        this.idConnection = idConnection;
+        this.idSource = idSource;
+        this.idUser = idUser;
+  }
 }

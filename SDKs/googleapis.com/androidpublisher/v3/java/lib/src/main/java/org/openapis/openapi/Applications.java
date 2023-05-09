@@ -61,11 +61,9 @@ public class Applications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             deviceTierConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Applications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsGetResponse(contentType, httpRes.statusCode()) {{
             deviceTierConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Applications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsListResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsListResponse(contentType, httpRes.statusCode()) {{
             listDeviceTierConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class ScheduleBByRecipientIDPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public ScheduleBByRecipientIDPage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class ScheduleBByRecipientIDPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ScheduleBByRecipientID[] results;
+
     public ScheduleBByRecipientIDPage withResults(ScheduleBByRecipientID[] results) {
         this.results = results;
         return this;
     }
     
+    public ScheduleBByRecipientIDPage(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogLineageV1ProcessLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public GoogleCloudDatacatalogLineageV1ProcessLinkInfo[] links;
+
     public GoogleCloudDatacatalogLineageV1ProcessLinks withLinks(GoogleCloudDatacatalogLineageV1ProcessLinkInfo[] links) {
         this.links = links;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogLineageV1ProcessLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("process")
     public String process;
+
     public GoogleCloudDatacatalogLineageV1ProcessLinks withProcess(String process) {
         this.process = process;
         return this;
     }
     
+    public GoogleCloudDatacatalogLineageV1ProcessLinks(){}
 }

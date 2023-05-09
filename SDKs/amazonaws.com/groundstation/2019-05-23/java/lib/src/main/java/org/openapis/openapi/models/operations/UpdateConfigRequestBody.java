@@ -12,6 +12,7 @@ public class UpdateConfigRequestBody {
      */
     @JsonProperty("configData")
     public UpdateConfigRequestBodyConfigData configData;
+
     public UpdateConfigRequestBody withConfigData(UpdateConfigRequestBodyConfigData configData) {
         this.configData = configData;
         return this;
@@ -22,9 +23,14 @@ public class UpdateConfigRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public UpdateConfigRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateConfigRequestBody(@JsonProperty("configData") UpdateConfigRequestBodyConfigData configData, @JsonProperty("name") String name) {
+        this.configData = configData;
+        this.name = name;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectedBranchBlockCreations {
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ProtectedBranchBlockCreations withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ProtectedBranchBlockCreations(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

@@ -12,6 +12,7 @@ public class UpdateDirectorySetupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateSnapshotBeforeUpdate")
     public Boolean createSnapshotBeforeUpdate;
+
     public UpdateDirectorySetupRequest withCreateSnapshotBeforeUpdate(Boolean createSnapshotBeforeUpdate) {
         this.createSnapshotBeforeUpdate = createSnapshotBeforeUpdate;
         return this;
@@ -19,6 +20,7 @@ public class UpdateDirectorySetupRequest {
     
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public UpdateDirectorySetupRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -27,6 +29,7 @@ public class UpdateDirectorySetupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OSUpdateSettings")
     public OSUpdateSettings osUpdateSettings;
+
     public UpdateDirectorySetupRequest withOSUpdateSettings(OSUpdateSettings osUpdateSettings) {
         this.osUpdateSettings = osUpdateSettings;
         return this;
@@ -34,9 +37,14 @@ public class UpdateDirectorySetupRequest {
     
     @JsonProperty("UpdateType")
     public UpdateTypeEnum updateType;
+
     public UpdateDirectorySetupRequest withUpdateType(UpdateTypeEnum updateType) {
         this.updateType = updateType;
         return this;
     }
     
+    public UpdateDirectorySetupRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("UpdateType") UpdateTypeEnum updateType) {
+        this.directoryId = directoryId;
+        this.updateType = updateType;
+  }
 }

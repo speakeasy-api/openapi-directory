@@ -15,6 +15,7 @@ public class VpcDestinationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public VpcDestinationSummary withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -23,6 +24,7 @@ public class VpcDestinationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroups")
     public String[] securityGroups;
+
     public VpcDestinationSummary withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -31,6 +33,7 @@ public class VpcDestinationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public VpcDestinationSummary withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -39,9 +42,11 @@ public class VpcDestinationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcId")
     public String vpcId;
+
     public VpcDestinationSummary withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public VpcDestinationSummary(){}
 }

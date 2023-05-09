@@ -12,6 +12,7 @@ public class GetBucketsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketName")
     public String bucketName;
+
     public GetBucketsRequest withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -20,6 +21,7 @@ public class GetBucketsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeConnectedResources")
     public Boolean includeConnectedResources;
+
     public GetBucketsRequest withIncludeConnectedResources(Boolean includeConnectedResources) {
         this.includeConnectedResources = includeConnectedResources;
         return this;
@@ -28,9 +30,11 @@ public class GetBucketsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetBucketsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public GetBucketsRequest(){}
 }

@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsInstancesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NotebooksProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.NotebooksProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.NotebooksProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

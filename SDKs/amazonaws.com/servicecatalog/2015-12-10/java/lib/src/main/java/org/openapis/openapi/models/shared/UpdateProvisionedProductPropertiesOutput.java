@@ -15,6 +15,7 @@ public class UpdateProvisionedProductPropertiesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductId")
     public String provisionedProductId;
+
     public UpdateProvisionedProductPropertiesOutput withProvisionedProductId(String provisionedProductId) {
         this.provisionedProductId = provisionedProductId;
         return this;
@@ -23,6 +24,7 @@ public class UpdateProvisionedProductPropertiesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductProperties")
     public java.util.Map<String, String> provisionedProductProperties;
+
     public UpdateProvisionedProductPropertiesOutput withProvisionedProductProperties(java.util.Map<String, String> provisionedProductProperties) {
         this.provisionedProductProperties = provisionedProductProperties;
         return this;
@@ -31,6 +33,7 @@ public class UpdateProvisionedProductPropertiesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordId")
     public String recordId;
+
     public UpdateProvisionedProductPropertiesOutput withRecordId(String recordId) {
         this.recordId = recordId;
         return this;
@@ -39,9 +42,11 @@ public class UpdateProvisionedProductPropertiesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public RecordStatusEnum status;
+
     public UpdateProvisionedProductPropertiesOutput withStatus(RecordStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateProvisionedProductPropertiesOutput(){}
 }

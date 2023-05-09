@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class StopsStopsForRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public StopsStopsForRouteRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -23,6 +25,7 @@ public class StopsStopsForRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction_id")
     public Integer directionId;
+
     public StopsStopsForRouteRequest withDirectionId(Integer directionId) {
         this.directionId = directionId;
         return this;
@@ -33,6 +36,7 @@ public class StopsStopsForRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geopath_utc")
     public OffsetDateTime geopathUtc;
+
     public StopsStopsForRouteRequest withGeopathUtc(OffsetDateTime geopathUtc) {
         this.geopathUtc = geopathUtc;
         return this;
@@ -43,6 +47,7 @@ public class StopsStopsForRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_geopath")
     public Boolean includeGeopath;
+
     public StopsStopsForRouteRequest withIncludeGeopath(Boolean includeGeopath) {
         this.includeGeopath = includeGeopath;
         return this;
@@ -53,6 +58,7 @@ public class StopsStopsForRouteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_id")
     public Integer routeId;
+
     public StopsStopsForRouteRequest withRouteId(Integer routeId) {
         this.routeId = routeId;
         return this;
@@ -63,6 +69,7 @@ public class StopsStopsForRouteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_type")
     public StopsStopsForRouteRouteTypeEnum routeType;
+
     public StopsStopsForRouteRequest withRouteType(StopsStopsForRouteRouteTypeEnum routeType) {
         this.routeType = routeType;
         return this;
@@ -73,6 +80,7 @@ public class StopsStopsForRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public StopsStopsForRouteRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -83,6 +91,7 @@ public class StopsStopsForRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_disruptions")
     public Boolean stopDisruptions;
+
     public StopsStopsForRouteRequest withStopDisruptions(Boolean stopDisruptions) {
         this.stopDisruptions = stopDisruptions;
         return this;
@@ -93,9 +102,14 @@ public class StopsStopsForRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public StopsStopsForRouteRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public StopsStopsForRouteRequest(@JsonProperty("route_id") Integer routeId, @JsonProperty("route_type") StopsStopsForRouteRouteTypeEnum routeType) {
+        this.routeId = routeId;
+        this.routeType = routeType;
+  }
 }

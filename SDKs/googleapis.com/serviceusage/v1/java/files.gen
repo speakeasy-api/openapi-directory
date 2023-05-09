@@ -117,4 +117,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/Method.java
 lib/src/main/java/org/openapis/openapi/models/shared/DisableServiceRequestCheckIfServiceHasUsageEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DisableServiceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListServicesResponse.java
+docs/sdk/README.md
+docs/operations/README.md
+docs/services/README.md
 USAGE.md

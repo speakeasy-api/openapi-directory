@@ -13,6 +13,7 @@ public class PostUsersUserIdApiKeysRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=description")
     public String description;
+
     public PostUsersUserIdApiKeysRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class PostUsersUserIdApiKeysRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=expires_at")
     public OffsetDateTime expiresAt;
+
     public PostUsersUserIdApiKeysRequestBody withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -33,6 +35,7 @@ public class PostUsersUserIdApiKeysRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PostUsersUserIdApiKeysRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +46,7 @@ public class PostUsersUserIdApiKeysRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=path")
     public String path;
+
     public PostUsersUserIdApiKeysRequestBody withPath(String path) {
         this.path = path;
         return this;
@@ -53,9 +57,11 @@ public class PostUsersUserIdApiKeysRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=permission_set")
     public PostUsersUserIdApiKeysRequestBodyPermissionSetEnum permissionSet;
+
     public PostUsersUserIdApiKeysRequestBody withPermissionSet(PostUsersUserIdApiKeysRequestBodyPermissionSetEnum permissionSet) {
         this.permissionSet = permissionSet;
         return this;
     }
     
+    public PostUsersUserIdApiKeysRequestBody(){}
 }

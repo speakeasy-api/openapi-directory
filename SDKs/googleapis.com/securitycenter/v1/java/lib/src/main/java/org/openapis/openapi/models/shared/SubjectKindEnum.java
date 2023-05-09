@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * SubjectKindEnum - Authentication type for subject.
+ * SubjectKindEnum - Authentication type for the subject.
  */
 public enum SubjectKindEnum {
     AUTH_TYPE_UNSPECIFIED("AUTH_TYPE_UNSPECIFIED"),

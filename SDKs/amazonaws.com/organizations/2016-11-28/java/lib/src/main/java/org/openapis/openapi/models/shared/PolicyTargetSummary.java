@@ -15,6 +15,7 @@ public class PolicyTargetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public PolicyTargetSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class PolicyTargetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PolicyTargetSummary withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class PolicyTargetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetId")
     public String targetId;
+
     public PolicyTargetSummary withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
@@ -39,9 +42,11 @@ public class PolicyTargetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public TargetTypeEnum type;
+
     public PolicyTargetSummary withType(TargetTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PolicyTargetSummary(){}
 }

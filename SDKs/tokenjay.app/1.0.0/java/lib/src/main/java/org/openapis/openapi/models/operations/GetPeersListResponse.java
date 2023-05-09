@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPeersListResponse {
     
     public byte[] body;
+
     public GetPeersListResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetPeersListResponse {
     
     
     public String contentType;
+
     public GetPeersListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetPeersListResponse {
     
     
     public Integer statusCode;
+
     public GetPeersListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetPeersListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPeersListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetPeersListResponse {
      */
     
     public String getPeersList400WildcardString;
+
     public GetPeersListResponse withGetPeersList400WildcardString(String getPeersList400WildcardString) {
         this.getPeersList400WildcardString = getPeersList400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class GetPeersListResponse {
      */
     
     public String getPeersList401WildcardString;
+
     public GetPeersListResponse withGetPeersList401WildcardString(String getPeersList401WildcardString) {
         this.getPeersList401WildcardString = getPeersList401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class GetPeersListResponse {
      */
     
     public String getPeersList404WildcardString;
+
     public GetPeersListResponse withGetPeersList404WildcardString(String getPeersList404WildcardString) {
         this.getPeersList404WildcardString = getPeersList404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class GetPeersListResponse {
      */
     
     public String getPeersList409WildcardString;
+
     public GetPeersListResponse withGetPeersList409WildcardString(String getPeersList409WildcardString) {
         this.getPeersList409WildcardString = getPeersList409WildcardString;
         return this;
     }
     
+    public GetPeersListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

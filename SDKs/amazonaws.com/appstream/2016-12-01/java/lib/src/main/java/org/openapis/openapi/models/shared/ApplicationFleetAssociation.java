@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApplicationFleetAssociation {
     @JsonProperty("ApplicationArn")
     public String applicationArn;
+
     public ApplicationFleetAssociation withApplicationArn(String applicationArn) {
         this.applicationArn = applicationArn;
         return this;
@@ -19,9 +20,14 @@ public class ApplicationFleetAssociation {
     
     @JsonProperty("FleetName")
     public String fleetName;
+
     public ApplicationFleetAssociation withFleetName(String fleetName) {
         this.fleetName = fleetName;
         return this;
     }
     
+    public ApplicationFleetAssociation(@JsonProperty("ApplicationArn") String applicationArn, @JsonProperty("FleetName") String fleetName) {
+        this.applicationArn = applicationArn;
+        this.fleetName = fleetName;
+  }
 }

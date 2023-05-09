@@ -15,6 +15,7 @@ public class ImcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public ImcerRequestBodyCertificateParameters certificateParameters;
+
     public ImcerRequestBody withCertificateParameters(ImcerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class ImcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public ImcerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class ImcerRequestBody {
      */
     @JsonProperty("format")
     public ImcerRequestBodyFormatEnum format;
+
     public ImcerRequestBody withFormat(ImcerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class ImcerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public ImcerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public ImcerRequestBody(@JsonProperty("format") ImcerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

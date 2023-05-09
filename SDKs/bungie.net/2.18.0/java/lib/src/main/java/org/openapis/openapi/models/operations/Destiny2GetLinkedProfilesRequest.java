@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetLinkedProfilesRequest {
@@ -12,6 +13,7 @@ public class Destiny2GetLinkedProfilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=getAllMemberships")
     public Boolean getAllMemberships;
+
     public Destiny2GetLinkedProfilesRequest withGetAllMemberships(Boolean getAllMemberships) {
         this.getAllMemberships = getAllMemberships;
         return this;
@@ -22,6 +24,7 @@ public class Destiny2GetLinkedProfilesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
     public Long membershipId;
+
     public Destiny2GetLinkedProfilesRequest withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -32,9 +35,14 @@ public class Destiny2GetLinkedProfilesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public Destiny2GetLinkedProfilesRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
     }
     
+    public Destiny2GetLinkedProfilesRequest(@JsonProperty("membershipId") Long membershipId, @JsonProperty("membershipType") Integer membershipType) {
+        this.membershipId = membershipId;
+        this.membershipType = membershipType;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePotRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreatePotRequestBodyInput requestBody;
+
     public CreatePotRequest withRequestBody(CreatePotRequestBodyInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class CreatePotRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public CreatePotRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public CreatePotRequest(@JsonProperty("x-api-key") String xApiKey) {
+        this.xApiKey = xApiKey;
+  }
 }

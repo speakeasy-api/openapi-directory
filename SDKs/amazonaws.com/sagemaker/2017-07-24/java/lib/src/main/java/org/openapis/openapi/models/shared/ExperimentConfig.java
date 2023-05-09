@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ExperimentConfig - &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+ * ExperimentConfig - &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateProcessingJob.html"&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html"&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTransformJob.html"&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
  */
 public class ExperimentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentName")
     public String experimentName;
+
     public ExperimentConfig withExperimentName(String experimentName) {
         this.experimentName = experimentName;
         return this;
@@ -23,6 +24,7 @@ public class ExperimentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunName")
     public String runName;
+
     public ExperimentConfig withRunName(String runName) {
         this.runName = runName;
         return this;
@@ -31,6 +33,7 @@ public class ExperimentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentDisplayName")
     public String trialComponentDisplayName;
+
     public ExperimentConfig withTrialComponentDisplayName(String trialComponentDisplayName) {
         this.trialComponentDisplayName = trialComponentDisplayName;
         return this;
@@ -39,9 +42,11 @@ public class ExperimentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialName")
     public String trialName;
+
     public ExperimentConfig withTrialName(String trialName) {
         this.trialName = trialName;
         return this;
     }
     
+    public ExperimentConfig(){}
 }

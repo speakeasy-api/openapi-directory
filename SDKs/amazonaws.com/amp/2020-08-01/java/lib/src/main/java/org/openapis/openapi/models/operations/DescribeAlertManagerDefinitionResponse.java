@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAlertManagerDefinitionResponse {
@@ -12,6 +13,7 @@ public class DescribeAlertManagerDefinitionResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeAlertManagerDefinitionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAlertManagerDefinitionResponse {
     
     
     public String contentType;
+
     public DescribeAlertManagerDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAlertManagerDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAlertManagerDefinitionResponse describeAlertManagerDefinitionResponse;
+
     public DescribeAlertManagerDefinitionResponse withDescribeAlertManagerDefinitionResponse(org.openapis.openapi.models.shared.DescribeAlertManagerDefinitionResponse describeAlertManagerDefinitionResponse) {
         this.describeAlertManagerDefinitionResponse = describeAlertManagerDefinitionResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAlertManagerDefinitionResponse {
      */
     
     public Object internalServerException;
+
     public DescribeAlertManagerDefinitionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeAlertManagerDefinitionResponse {
     
     
     public Integer statusCode;
+
     public DescribeAlertManagerDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeAlertManagerDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAlertManagerDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAlertManagerDefinitionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAlertManagerDefinitionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeAlertManagerDefinitionResponse {
      */
     
     public Object throttlingException;
+
     public DescribeAlertManagerDefinitionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeAlertManagerDefinitionResponse {
      */
     
     public Object validationException;
+
     public DescribeAlertManagerDefinitionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeAlertManagerDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

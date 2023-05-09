@@ -15,6 +15,7 @@ public class GetQuery200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explanation")
     public GetQuery200ApplicationJSONExplanation[] explanation;
+
     public GetQuery200ApplicationJSON withExplanation(GetQuery200ApplicationJSONExplanation[] explanation) {
         this.explanation = explanation;
         return this;
@@ -23,6 +24,7 @@ public class GetQuery200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public GetQuery200ApplicationJSONMetrics metrics;
+
     public GetQuery200ApplicationJSON withMetrics(GetQuery200ApplicationJSONMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -31,9 +33,11 @@ public class GetQuery200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public GetQuery200ApplicationJSONResult[] result;
+
     public GetQuery200ApplicationJSON withResult(GetQuery200ApplicationJSONResult[] result) {
         this.result = result;
         return this;
     }
     
+    public GetQuery200ApplicationJSON(){}
 }

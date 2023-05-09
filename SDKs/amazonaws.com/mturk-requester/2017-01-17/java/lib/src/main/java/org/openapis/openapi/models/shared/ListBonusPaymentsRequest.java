@@ -12,6 +12,7 @@ public class ListBonusPaymentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssignmentId")
     public String assignmentId;
+
     public ListBonusPaymentsRequest withAssignmentId(String assignmentId) {
         this.assignmentId = assignmentId;
         return this;
@@ -20,6 +21,7 @@ public class ListBonusPaymentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITId")
     public String hitId;
+
     public ListBonusPaymentsRequest withHITId(String hitId) {
         this.hitId = hitId;
         return this;
@@ -28,6 +30,7 @@ public class ListBonusPaymentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListBonusPaymentsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class ListBonusPaymentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListBonusPaymentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBonusPaymentsRequest(){}
 }

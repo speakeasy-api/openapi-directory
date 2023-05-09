@@ -15,6 +15,7 @@ public class RepositoryConfigurationsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_user_id")
     public String externalUserId;
+
     public RepositoryConfigurationsList200ApplicationJSON withExternalUserId(String externalUserId) {
         this.externalUserId = externalUserId;
         return this;
@@ -25,6 +26,7 @@ public class RepositoryConfigurationsList200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public RepositoryConfigurationsList200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +38,7 @@ public class RepositoryConfigurationsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installation_id")
     public String installationId;
+
     public RepositoryConfigurationsList200ApplicationJSON withInstallationId(String installationId) {
         this.installationId = installationId;
         return this;
@@ -47,6 +50,7 @@ public class RepositoryConfigurationsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repo_id")
     public String repoId;
+
     public RepositoryConfigurationsList200ApplicationJSON withRepoId(String repoId) {
         this.repoId = repoId;
         return this;
@@ -57,6 +61,7 @@ public class RepositoryConfigurationsList200ApplicationJSON {
      */
     @JsonProperty("repo_url")
     public String repoUrl;
+
     public RepositoryConfigurationsList200ApplicationJSON withRepoUrl(String repoUrl) {
         this.repoUrl = repoUrl;
         return this;
@@ -68,6 +73,7 @@ public class RepositoryConfigurationsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_connection_id")
     public String serviceConnectionId;
+
     public RepositoryConfigurationsList200ApplicationJSON withServiceConnectionId(String serviceConnectionId) {
         this.serviceConnectionId = serviceConnectionId;
         return this;
@@ -78,6 +84,7 @@ public class RepositoryConfigurationsList200ApplicationJSON {
      */
     @JsonProperty("state")
     public RepositoryConfigurationsList200ApplicationJSONStateEnum state;
+
     public RepositoryConfigurationsList200ApplicationJSON withState(RepositoryConfigurationsList200ApplicationJSONStateEnum state) {
         this.state = state;
         return this;
@@ -88,6 +95,7 @@ public class RepositoryConfigurationsList200ApplicationJSON {
      */
     @JsonProperty("type")
     public String type;
+
     public RepositoryConfigurationsList200ApplicationJSON withType(String type) {
         this.type = type;
         return this;
@@ -99,9 +107,16 @@ public class RepositoryConfigurationsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_email")
     public String userEmail;
+
     public RepositoryConfigurationsList200ApplicationJSON withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public RepositoryConfigurationsList200ApplicationJSON(@JsonProperty("id") String id, @JsonProperty("repo_url") String repoUrl, @JsonProperty("state") RepositoryConfigurationsList200ApplicationJSONStateEnum state, @JsonProperty("type") String type) {
+        this.id = id;
+        this.repoUrl = repoUrl;
+        this.state = state;
+        this.type = type;
+  }
 }

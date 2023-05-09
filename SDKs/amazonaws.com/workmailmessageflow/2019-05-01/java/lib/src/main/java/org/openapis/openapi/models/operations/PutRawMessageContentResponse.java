@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRawMessageContentResponse {
     
     public String contentType;
+
     public PutRawMessageContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutRawMessageContentResponse {
      */
     
     public Object invalidContentLocation;
+
     public PutRawMessageContentResponse withInvalidContentLocation(Object invalidContentLocation) {
         this.invalidContentLocation = invalidContentLocation;
         return this;
@@ -29,6 +32,7 @@ public class PutRawMessageContentResponse {
      */
     
     public Object messageFrozen;
+
     public PutRawMessageContentResponse withMessageFrozen(Object messageFrozen) {
         this.messageFrozen = messageFrozen;
         return this;
@@ -39,6 +43,7 @@ public class PutRawMessageContentResponse {
      */
     
     public Object messageRejected;
+
     public PutRawMessageContentResponse withMessageRejected(Object messageRejected) {
         this.messageRejected = messageRejected;
         return this;
@@ -49,6 +54,7 @@ public class PutRawMessageContentResponse {
      */
     
     public java.util.Map<String, Object> putRawMessageContentResponse;
+
     public PutRawMessageContentResponse withPutRawMessageContentResponse(java.util.Map<String, Object> putRawMessageContentResponse) {
         this.putRawMessageContentResponse = putRawMessageContentResponse;
         return this;
@@ -59,6 +65,7 @@ public class PutRawMessageContentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutRawMessageContentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class PutRawMessageContentResponse {
     
     
     public Integer statusCode;
+
     public PutRawMessageContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class PutRawMessageContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRawMessageContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutRawMessageContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

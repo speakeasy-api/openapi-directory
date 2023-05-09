@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Operations {
     @JsonProperty("results")
     public Operation[] results;
+
     public Operations withResults(Operation[] results) {
         this.results = results;
         return this;
     }
     
+    public Operations(@JsonProperty("results") Operation[] results) {
+        this.results = results;
+  }
 }

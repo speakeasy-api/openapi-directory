@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PriceWithCurrency {
     @JsonProperty("Currency")
     public String currency;
+
     public PriceWithCurrency withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -19,9 +20,14 @@ public class PriceWithCurrency {
     
     @JsonProperty("Price")
     public Double price;
+
     public PriceWithCurrency withPrice(Double price) {
         this.price = price;
         return this;
     }
     
+    public PriceWithCurrency(@JsonProperty("Currency") String currency, @JsonProperty("Price") Double price) {
+        this.currency = currency;
+        this.price = price;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateStackSetOutput {
     
     public String stackSetId;
+
     public CreateStackSetOutput withStackSetId(String stackSetId) {
         this.stackSetId = stackSetId;
         return this;
     }
     
+    public CreateStackSetOutput(){}
 }

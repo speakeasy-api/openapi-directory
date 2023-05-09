@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProvisionPermissionSetRequest {
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public ProvisionPermissionSetRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -18,6 +19,7 @@ public class ProvisionPermissionSetRequest {
     
     @JsonProperty("PermissionSetArn")
     public String permissionSetArn;
+
     public ProvisionPermissionSetRequest withPermissionSetArn(String permissionSetArn) {
         this.permissionSetArn = permissionSetArn;
         return this;
@@ -26,6 +28,7 @@ public class ProvisionPermissionSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetId")
     public String targetId;
+
     public ProvisionPermissionSetRequest withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
@@ -33,9 +36,15 @@ public class ProvisionPermissionSetRequest {
     
     @JsonProperty("TargetType")
     public ProvisionTargetTypeEnum targetType;
+
     public ProvisionPermissionSetRequest withTargetType(ProvisionTargetTypeEnum targetType) {
         this.targetType = targetType;
         return this;
     }
     
+    public ProvisionPermissionSetRequest(@JsonProperty("InstanceArn") String instanceArn, @JsonProperty("PermissionSetArn") String permissionSetArn, @JsonProperty("TargetType") ProvisionTargetTypeEnum targetType) {
+        this.instanceArn = instanceArn;
+        this.permissionSetArn = permissionSetArn;
+        this.targetType = targetType;
+  }
 }

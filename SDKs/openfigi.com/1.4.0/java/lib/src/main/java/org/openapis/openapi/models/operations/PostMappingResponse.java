@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostMappingResponse {
@@ -12,6 +13,7 @@ public class PostMappingResponse {
      */
     
     public Object[] bulkMappingJobResult;
+
     public PostMappingResponse withBulkMappingJobResult(Object[] bulkMappingJobResult) {
         this.bulkMappingJobResult = bulkMappingJobResult;
         return this;
@@ -19,6 +21,7 @@ public class PostMappingResponse {
     
     
     public String contentType;
+
     public PostMappingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostMappingResponse {
     
     
     public Integer statusCode;
+
     public PostMappingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PostMappingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostMappingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class PostMappingResponse {
      */
     
     public String postMapping400WildcardString;
+
     public PostMappingResponse withPostMapping400WildcardString(String postMapping400WildcardString) {
         this.postMapping400WildcardString = postMapping400WildcardString;
         return this;
@@ -53,6 +59,7 @@ public class PostMappingResponse {
      */
     
     public String postMapping401WildcardString;
+
     public PostMappingResponse withPostMapping401WildcardString(String postMapping401WildcardString) {
         this.postMapping401WildcardString = postMapping401WildcardString;
         return this;
@@ -63,6 +70,7 @@ public class PostMappingResponse {
      */
     
     public String postMapping406WildcardString;
+
     public PostMappingResponse withPostMapping406WildcardString(String postMapping406WildcardString) {
         this.postMapping406WildcardString = postMapping406WildcardString;
         return this;
@@ -73,6 +81,7 @@ public class PostMappingResponse {
      */
     
     public String postMapping413WildcardString;
+
     public PostMappingResponse withPostMapping413WildcardString(String postMapping413WildcardString) {
         this.postMapping413WildcardString = postMapping413WildcardString;
         return this;
@@ -83,9 +92,14 @@ public class PostMappingResponse {
      */
     
     public String postMapping500WildcardString;
+
     public PostMappingResponse withPostMapping500WildcardString(String postMapping500WildcardString) {
         this.postMapping500WildcardString = postMapping500WildcardString;
         return this;
     }
     
+    public PostMappingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

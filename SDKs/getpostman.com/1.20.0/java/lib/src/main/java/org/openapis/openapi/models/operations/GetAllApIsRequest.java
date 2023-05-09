@@ -12,6 +12,7 @@ public class GetAllApIsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBy")
     public String createdBy;
+
     public GetAllApIsRequest withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -22,6 +23,7 @@ public class GetAllApIsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public GetAllApIsRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +34,7 @@ public class GetAllApIsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public String direction;
+
     public GetAllApIsRequest withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -42,6 +45,7 @@ public class GetAllApIsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isPublic")
     public String isPublic;
+
     public GetAllApIsRequest withIsPublic(String isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -52,6 +56,7 @@ public class GetAllApIsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetAllApIsRequest withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class GetAllApIsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public GetAllApIsRequest withSince(String since) {
         this.since = since;
         return this;
@@ -72,6 +78,7 @@ public class GetAllApIsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetAllApIsRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -82,6 +89,7 @@ public class GetAllApIsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=summary")
     public String summary;
+
     public GetAllApIsRequest withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -92,6 +100,7 @@ public class GetAllApIsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=until")
     public String until;
+
     public GetAllApIsRequest withUntil(String until) {
         this.until = until;
         return this;
@@ -102,6 +111,7 @@ public class GetAllApIsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedBy")
     public String updatedBy;
+
     public GetAllApIsRequest withUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
         return this;
@@ -112,9 +122,11 @@ public class GetAllApIsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
     public String workspace;
+
     public GetAllApIsRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetAllApIsRequest(){}
 }

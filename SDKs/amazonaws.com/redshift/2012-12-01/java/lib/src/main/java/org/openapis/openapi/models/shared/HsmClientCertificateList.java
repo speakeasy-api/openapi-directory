@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class HsmClientCertificateList {
     
     public String hsmClientCertificateIdentifier;
+
     public HsmClientCertificateList withHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
         this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class HsmClientCertificateList {
     
     
     public String hsmClientCertificatePublicKey;
+
     public HsmClientCertificateList withHsmClientCertificatePublicKey(String hsmClientCertificatePublicKey) {
         this.hsmClientCertificatePublicKey = hsmClientCertificatePublicKey;
         return this;
@@ -26,9 +28,11 @@ public class HsmClientCertificateList {
     
     
     public TagList[] tags;
+
     public HsmClientCertificateList withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public HsmClientCertificateList(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminUpdateGlobalWebhookRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public EnterpriseAdminUpdateGlobalWebhookRequestBody requestBody;
+
     public EnterpriseAdminUpdateGlobalWebhookRequest withRequestBody(EnterpriseAdminUpdateGlobalWebhookRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class EnterpriseAdminUpdateGlobalWebhookRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
     public String accept;
+
     public EnterpriseAdminUpdateGlobalWebhookRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -29,9 +32,14 @@ public class EnterpriseAdminUpdateGlobalWebhookRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
     public Long hookId;
+
     public EnterpriseAdminUpdateGlobalWebhookRequest withHookId(Long hookId) {
         this.hookId = hookId;
         return this;
     }
     
+    public EnterpriseAdminUpdateGlobalWebhookRequest(@JsonProperty("accept") String accept, @JsonProperty("hook_id") Long hookId) {
+        this.accept = accept;
+        this.hookId = hookId;
+  }
 }

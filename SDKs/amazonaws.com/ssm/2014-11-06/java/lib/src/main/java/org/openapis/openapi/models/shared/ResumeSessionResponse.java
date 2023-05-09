@@ -15,6 +15,7 @@ public class ResumeSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionId")
     public String sessionId;
+
     public ResumeSessionResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -23,6 +24,7 @@ public class ResumeSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamUrl")
     public String streamUrl;
+
     public ResumeSessionResponse withStreamUrl(String streamUrl) {
         this.streamUrl = streamUrl;
         return this;
@@ -31,9 +33,11 @@ public class ResumeSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenValue")
     public String tokenValue;
+
     public ResumeSessionResponse withTokenValue(String tokenValue) {
         this.tokenValue = tokenValue;
         return this;
     }
     
+    public ResumeSessionResponse(){}
 }

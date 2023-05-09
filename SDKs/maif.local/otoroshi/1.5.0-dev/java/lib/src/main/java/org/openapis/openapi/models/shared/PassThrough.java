@@ -15,6 +15,7 @@ public class PassThrough {
      */
     @JsonProperty("type")
     public String type;
+
     public PassThrough withType(String type) {
         this.type = type;
         return this;
@@ -25,9 +26,14 @@ public class PassThrough {
      */
     @JsonProperty("verificationSettings")
     public VerificationSettings verificationSettings;
+
     public PassThrough withVerificationSettings(VerificationSettings verificationSettings) {
         this.verificationSettings = verificationSettings;
         return this;
     }
     
+    public PassThrough(@JsonProperty("type") String type, @JsonProperty("verificationSettings") VerificationSettings verificationSettings) {
+        this.type = type;
+        this.verificationSettings = verificationSettings;
+  }
 }

@@ -18,9 +18,11 @@ public class DomainJoinMachineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainJoinBlob")
     public String domainJoinBlob;
+
     public DomainJoinMachineResponse withDomainJoinBlob(String domainJoinBlob) {
         this.domainJoinBlob = domainJoinBlob;
         return this;
     }
     
+    public DomainJoinMachineResponse(){}
 }

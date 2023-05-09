@@ -12,6 +12,7 @@ public class ExternalGroupsGroups {
      */
     @JsonProperty("group_id")
     public Long groupId;
+
     public ExternalGroupsGroups withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -22,6 +23,7 @@ public class ExternalGroupsGroups {
      */
     @JsonProperty("group_name")
     public String groupName;
+
     public ExternalGroupsGroups withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -32,9 +34,15 @@ public class ExternalGroupsGroups {
      */
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public ExternalGroupsGroups withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ExternalGroupsGroups(@JsonProperty("group_id") Long groupId, @JsonProperty("group_name") String groupName, @JsonProperty("updated_at") String updatedAt) {
+        this.groupId = groupId;
+        this.groupName = groupName;
+        this.updatedAt = updatedAt;
+  }
 }

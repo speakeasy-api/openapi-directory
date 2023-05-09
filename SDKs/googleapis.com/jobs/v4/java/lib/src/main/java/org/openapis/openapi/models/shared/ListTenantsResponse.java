@@ -18,6 +18,7 @@ public class ListTenantsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ResponseMetadata metadata;
+
     public ListTenantsResponse withMetadata(ResponseMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,6 +30,7 @@ public class ListTenantsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTenantsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListTenantsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenants")
     public Tenant[] tenants;
+
     public ListTenantsResponse withTenants(Tenant[] tenants) {
         this.tenants = tenants;
         return this;
     }
     
+    public ListTenantsResponse(){}
 }

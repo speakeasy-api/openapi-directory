@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateWithdrawalRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateWithdrawalRootTypeForWithdrawal requestBody;
+
     public CreateWithdrawalRequest withRequestBody(CreateWithdrawalRootTypeForWithdrawal requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class CreateWithdrawalRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public CreateWithdrawalRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public CreateWithdrawalRequest(@JsonProperty("RequestBody") CreateWithdrawalRootTypeForWithdrawal requestBody, @JsonProperty("x-api-key") String xApiKey) {
+        this.requestBody = requestBody;
+        this.xApiKey = xApiKey;
+  }
 }

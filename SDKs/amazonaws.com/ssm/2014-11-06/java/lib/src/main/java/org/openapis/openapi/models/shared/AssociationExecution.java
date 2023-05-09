@@ -23,6 +23,7 @@ public class AssociationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmConfiguration")
     public AlarmConfiguration alarmConfiguration;
+
     public AssociationExecution withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
         this.alarmConfiguration = alarmConfiguration;
         return this;
@@ -31,6 +32,7 @@ public class AssociationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public AssociationExecution withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -39,6 +41,7 @@ public class AssociationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationVersion")
     public String associationVersion;
+
     public AssociationExecution withAssociationVersion(String associationVersion) {
         this.associationVersion = associationVersion;
         return this;
@@ -49,6 +52,7 @@ public class AssociationExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public AssociationExecution withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -57,6 +61,7 @@ public class AssociationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailedStatus")
     public String detailedStatus;
+
     public AssociationExecution withDetailedStatus(String detailedStatus) {
         this.detailedStatus = detailedStatus;
         return this;
@@ -65,6 +70,7 @@ public class AssociationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionId")
     public String executionId;
+
     public AssociationExecution withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -75,6 +81,7 @@ public class AssociationExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastExecutionDate")
     public OffsetDateTime lastExecutionDate;
+
     public AssociationExecution withLastExecutionDate(OffsetDateTime lastExecutionDate) {
         this.lastExecutionDate = lastExecutionDate;
         return this;
@@ -83,6 +90,7 @@ public class AssociationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceCountByStatus")
     public String resourceCountByStatus;
+
     public AssociationExecution withResourceCountByStatus(String resourceCountByStatus) {
         this.resourceCountByStatus = resourceCountByStatus;
         return this;
@@ -91,6 +99,7 @@ public class AssociationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AssociationExecution withStatus(String status) {
         this.status = status;
         return this;
@@ -99,9 +108,11 @@ public class AssociationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TriggeredAlarms")
     public AlarmStateInformation[] triggeredAlarms;
+
     public AssociationExecution withTriggeredAlarms(AlarmStateInformation[] triggeredAlarms) {
         this.triggeredAlarms = triggeredAlarms;
         return this;
     }
     
+    public AssociationExecution(){}
 }

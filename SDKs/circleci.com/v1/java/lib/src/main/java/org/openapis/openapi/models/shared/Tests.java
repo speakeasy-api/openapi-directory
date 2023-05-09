@@ -16,9 +16,11 @@ public class Tests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tests")
     public TestsTests[] tests;
+
     public Tests withTests(TestsTests[] tests) {
         this.tests = tests;
         return this;
     }
     
+    public Tests(){}
 }

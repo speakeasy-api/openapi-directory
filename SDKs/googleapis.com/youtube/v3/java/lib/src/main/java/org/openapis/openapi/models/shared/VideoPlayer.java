@@ -15,6 +15,7 @@ public class VideoPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embedHeight")
     public String embedHeight;
+
     public VideoPlayer withEmbedHeight(String embedHeight) {
         this.embedHeight = embedHeight;
         return this;
@@ -26,6 +27,7 @@ public class VideoPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embedHtml")
     public String embedHtml;
+
     public VideoPlayer withEmbedHtml(String embedHtml) {
         this.embedHtml = embedHtml;
         return this;
@@ -37,9 +39,11 @@ public class VideoPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embedWidth")
     public String embedWidth;
+
     public VideoPlayer withEmbedWidth(String embedWidth) {
         this.embedWidth = embedWidth;
         return this;
     }
     
+    public VideoPlayer(){}
 }

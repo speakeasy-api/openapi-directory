@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResetActiveWidgetTokenResponse {
@@ -12,6 +13,7 @@ public class ResetActiveWidgetTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.ActiveWidget activeWidget;
+
     public ResetActiveWidgetTokenResponse withActiveWidget(org.openapis.openapi.models.shared.ActiveWidget activeWidget) {
         this.activeWidget = activeWidget;
         return this;
@@ -19,6 +21,7 @@ public class ResetActiveWidgetTokenResponse {
     
     
     public String contentType;
+
     public ResetActiveWidgetTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ResetActiveWidgetTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public ResetActiveWidgetTokenResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class ResetActiveWidgetTokenResponse {
     
     
     public Integer statusCode;
+
     public ResetActiveWidgetTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ResetActiveWidgetTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResetActiveWidgetTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ResetActiveWidgetTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

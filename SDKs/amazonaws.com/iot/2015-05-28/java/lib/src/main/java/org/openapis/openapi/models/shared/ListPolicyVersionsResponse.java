@@ -15,9 +15,11 @@ public class ListPolicyVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyVersions")
     public PolicyVersion[] policyVersions;
+
     public ListPolicyVersionsResponse withPolicyVersions(PolicyVersion[] policyVersions) {
         this.policyVersions = policyVersions;
         return this;
     }
     
+    public ListPolicyVersionsResponse(){}
 }

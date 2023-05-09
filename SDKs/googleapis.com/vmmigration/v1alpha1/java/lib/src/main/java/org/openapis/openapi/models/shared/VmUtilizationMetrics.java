@@ -18,6 +18,7 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuAverage")
     public Integer cpuAverage;
+
     public VmUtilizationMetrics withCpuAverage(Integer cpuAverage) {
         this.cpuAverage = cpuAverage;
         return this;
@@ -29,6 +30,7 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuAveragePercent")
     public Integer cpuAveragePercent;
+
     public VmUtilizationMetrics withCpuAveragePercent(Integer cpuAveragePercent) {
         this.cpuAveragePercent = cpuAveragePercent;
         return this;
@@ -40,6 +42,7 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuMax")
     public Integer cpuMax;
+
     public VmUtilizationMetrics withCpuMax(Integer cpuMax) {
         this.cpuMax = cpuMax;
         return this;
@@ -51,6 +54,7 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuMaxPercent")
     public Integer cpuMaxPercent;
+
     public VmUtilizationMetrics withCpuMaxPercent(Integer cpuMaxPercent) {
         this.cpuMaxPercent = cpuMaxPercent;
         return this;
@@ -62,6 +66,7 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskIoRateAverage")
     public String diskIoRateAverage;
+
     public VmUtilizationMetrics withDiskIoRateAverage(String diskIoRateAverage) {
         this.diskIoRateAverage = diskIoRateAverage;
         return this;
@@ -73,6 +78,7 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskIoRateAverageKbps")
     public String diskIoRateAverageKbps;
+
     public VmUtilizationMetrics withDiskIoRateAverageKbps(String diskIoRateAverageKbps) {
         this.diskIoRateAverageKbps = diskIoRateAverageKbps;
         return this;
@@ -84,6 +90,7 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskIoRateMax")
     public String diskIoRateMax;
+
     public VmUtilizationMetrics withDiskIoRateMax(String diskIoRateMax) {
         this.diskIoRateMax = diskIoRateMax;
         return this;
@@ -95,6 +102,7 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskIoRateMaxKbps")
     public String diskIoRateMaxKbps;
+
     public VmUtilizationMetrics withDiskIoRateMaxKbps(String diskIoRateMaxKbps) {
         this.diskIoRateMaxKbps = diskIoRateMaxKbps;
         return this;
@@ -106,6 +114,7 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryAverage")
     public Integer memoryAverage;
+
     public VmUtilizationMetrics withMemoryAverage(Integer memoryAverage) {
         this.memoryAverage = memoryAverage;
         return this;
@@ -117,6 +126,7 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryAveragePercent")
     public Integer memoryAveragePercent;
+
     public VmUtilizationMetrics withMemoryAveragePercent(Integer memoryAveragePercent) {
         this.memoryAveragePercent = memoryAveragePercent;
         return this;
@@ -128,6 +138,7 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryMax")
     public Integer memoryMax;
+
     public VmUtilizationMetrics withMemoryMax(Integer memoryMax) {
         this.memoryMax = memoryMax;
         return this;
@@ -139,6 +150,7 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryMaxPercent")
     public Integer memoryMaxPercent;
+
     public VmUtilizationMetrics withMemoryMaxPercent(Integer memoryMaxPercent) {
         this.memoryMaxPercent = memoryMaxPercent;
         return this;
@@ -150,6 +162,7 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkThroughputAverage")
     public String networkThroughputAverage;
+
     public VmUtilizationMetrics withNetworkThroughputAverage(String networkThroughputAverage) {
         this.networkThroughputAverage = networkThroughputAverage;
         return this;
@@ -161,6 +174,7 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkThroughputAverageKbps")
     public String networkThroughputAverageKbps;
+
     public VmUtilizationMetrics withNetworkThroughputAverageKbps(String networkThroughputAverageKbps) {
         this.networkThroughputAverageKbps = networkThroughputAverageKbps;
         return this;
@@ -172,6 +186,7 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkThroughputMax")
     public String networkThroughputMax;
+
     public VmUtilizationMetrics withNetworkThroughputMax(String networkThroughputMax) {
         this.networkThroughputMax = networkThroughputMax;
         return this;
@@ -183,9 +198,11 @@ public class VmUtilizationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkThroughputMaxKbps")
     public String networkThroughputMaxKbps;
+
     public VmUtilizationMetrics withNetworkThroughputMaxKbps(String networkThroughputMaxKbps) {
         this.networkThroughputMaxKbps = networkThroughputMaxKbps;
         return this;
     }
     
+    public VmUtilizationMetrics(){}
 }

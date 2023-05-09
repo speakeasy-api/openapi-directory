@@ -12,6 +12,7 @@ public class CreateOrUpdateMetaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignored")
     public String[] ignored;
+
     public CreateOrUpdateMetaResponse withIgnored(String[] ignored) {
         this.ignored = ignored;
         return this;
@@ -20,9 +21,11 @@ public class CreateOrUpdateMetaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("req_id")
     public String reqId;
+
     public CreateOrUpdateMetaResponse withReqId(String reqId) {
         this.reqId = reqId;
         return this;
     }
     
+    public CreateOrUpdateMetaResponse(){}
 }

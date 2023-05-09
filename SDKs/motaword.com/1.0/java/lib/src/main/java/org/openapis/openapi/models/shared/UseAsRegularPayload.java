@@ -12,6 +12,7 @@ public class UseAsRegularPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowOriginalFilePreview")
     public Boolean allowOriginalFilePreview;
+
     public UseAsRegularPayload withAllowOriginalFilePreview(Boolean allowOriginalFilePreview) {
         this.allowOriginalFilePreview = allowOriginalFilePreview;
         return this;
@@ -20,6 +21,7 @@ public class UseAsRegularPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowReviewInManualEditor")
     public Boolean allowReviewInManualEditor;
+
     public UseAsRegularPayload withAllowReviewInManualEditor(Boolean allowReviewInManualEditor) {
         this.allowReviewInManualEditor = allowReviewInManualEditor;
         return this;
@@ -28,6 +30,7 @@ public class UseAsRegularPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableInvitations")
     public Boolean disableInvitations;
+
     public UseAsRegularPayload withDisableInvitations(Boolean disableInvitations) {
         this.disableInvitations = disableInvitations;
         return this;
@@ -36,6 +39,7 @@ public class UseAsRegularPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromManualTranslationFileId")
     public Double fromManualTranslationFileId;
+
     public UseAsRegularPayload withFromManualTranslationFileId(Double fromManualTranslationFileId) {
         this.fromManualTranslationFileId = fromManualTranslationFileId;
         return this;
@@ -44,6 +48,7 @@ public class UseAsRegularPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideNumbers")
     public Boolean hideNumbers;
+
     public UseAsRegularPayload withHideNumbers(Boolean hideNumbers) {
         this.hideNumbers = hideNumbers;
         return this;
@@ -52,9 +57,11 @@ public class UseAsRegularPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recreate")
     public Boolean recreate;
+
     public UseAsRegularPayload withRecreate(Boolean recreate) {
         this.recreate = recreate;
         return this;
     }
     
+    public UseAsRegularPayload(){}
 }

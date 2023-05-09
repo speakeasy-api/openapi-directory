@@ -15,6 +15,7 @@ public class ScheduledAuditMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfMonth")
     public String dayOfMonth;
+
     public ScheduledAuditMetadata withDayOfMonth(String dayOfMonth) {
         this.dayOfMonth = dayOfMonth;
         return this;
@@ -23,6 +24,7 @@ public class ScheduledAuditMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfWeek")
     public DayOfWeekEnum dayOfWeek;
+
     public ScheduledAuditMetadata withDayOfWeek(DayOfWeekEnum dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -31,6 +33,7 @@ public class ScheduledAuditMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public AuditFrequencyEnum frequency;
+
     public ScheduledAuditMetadata withFrequency(AuditFrequencyEnum frequency) {
         this.frequency = frequency;
         return this;
@@ -39,6 +42,7 @@ public class ScheduledAuditMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledAuditArn")
     public String scheduledAuditArn;
+
     public ScheduledAuditMetadata withScheduledAuditArn(String scheduledAuditArn) {
         this.scheduledAuditArn = scheduledAuditArn;
         return this;
@@ -47,9 +51,11 @@ public class ScheduledAuditMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledAuditName")
     public String scheduledAuditName;
+
     public ScheduledAuditMetadata withScheduledAuditName(String scheduledAuditName) {
         this.scheduledAuditName = scheduledAuditName;
         return this;
     }
     
+    public ScheduledAuditMetadata(){}
 }

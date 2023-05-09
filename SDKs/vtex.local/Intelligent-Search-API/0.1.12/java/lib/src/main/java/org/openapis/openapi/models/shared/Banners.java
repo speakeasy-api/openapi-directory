@@ -15,9 +15,11 @@ public class Banners {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("banners")
     public BannersBanners[] banners;
+
     public Banners withBanners(BannersBanners[] banners) {
         this.banners = banners;
         return this;
     }
     
+    public Banners(){}
 }

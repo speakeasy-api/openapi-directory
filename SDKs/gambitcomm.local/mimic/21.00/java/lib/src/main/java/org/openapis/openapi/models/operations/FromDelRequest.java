@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FromDelRequest {
@@ -12,6 +13,7 @@ public class FromDelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IP")
     public String ip;
+
     public FromDelRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -22,6 +24,7 @@ public class FromDelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public FromDelRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -32,9 +35,15 @@ public class FromDelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
     public Integer port;
+
     public FromDelRequest withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public FromDelRequest(@JsonProperty("IP") String ip, @JsonProperty("agentNum") Integer agentNum, @JsonProperty("port") Integer port) {
+        this.ip = ip;
+        this.agentNum = agentNum;
+        this.port = port;
+  }
 }

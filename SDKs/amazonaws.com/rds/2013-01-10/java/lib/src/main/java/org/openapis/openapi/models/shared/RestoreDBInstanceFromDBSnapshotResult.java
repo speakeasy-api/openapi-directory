@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RestoreDBInstanceFromDBSnapshotResult {
     
     public DBInstance dbInstance;
+
     public RestoreDBInstanceFromDBSnapshotResult withDBInstance(DBInstance dbInstance) {
         this.dbInstance = dbInstance;
         return this;
     }
     
+    public RestoreDBInstanceFromDBSnapshotResult(){}
 }

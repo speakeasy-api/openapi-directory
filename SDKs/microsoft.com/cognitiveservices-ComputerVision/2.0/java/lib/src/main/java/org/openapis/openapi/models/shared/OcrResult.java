@@ -18,6 +18,7 @@ public class OcrResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public OcrResult withLanguage(String language) {
         this.language = language;
         return this;
@@ -29,6 +30,7 @@ public class OcrResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientation")
     public String orientation;
+
     public OcrResult withOrientation(String orientation) {
         this.orientation = orientation;
         return this;
@@ -40,6 +42,7 @@ public class OcrResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public OcrRegion[] regions;
+
     public OcrResult withRegions(OcrRegion[] regions) {
         this.regions = regions;
         return this;
@@ -51,9 +54,11 @@ public class OcrResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textAngle")
     public Double textAngle;
+
     public OcrResult withTextAngle(Double textAngle) {
         this.textAngle = textAngle;
         return this;
     }
     
+    public OcrResult(){}
 }

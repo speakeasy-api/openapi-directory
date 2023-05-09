@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAppsListsResponse {
     
     public String contentType;
+
     public ListAppsListsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAppsListsResponse {
      */
     
     public Object internalErrorException;
+
     public ListAppsListsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListAppsListsResponse {
      */
     
     public Object invalidOperationException;
+
     public ListAppsListsResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -39,6 +43,7 @@ public class ListAppsListsResponse {
      */
     
     public Object limitExceededException;
+
     public ListAppsListsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ListAppsListsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAppsListsResponse listAppsListsResponse;
+
     public ListAppsListsResponse withListAppsListsResponse(org.openapis.openapi.models.shared.ListAppsListsResponse listAppsListsResponse) {
         this.listAppsListsResponse = listAppsListsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListAppsListsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAppsListsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListAppsListsResponse {
     
     
     public Integer statusCode;
+
     public ListAppsListsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListAppsListsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAppsListsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAppsListsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

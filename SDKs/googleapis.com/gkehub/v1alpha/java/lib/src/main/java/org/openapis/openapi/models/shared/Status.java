@@ -18,6 +18,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public StatusCodeEnum code;
+
     public Status withCode(StatusCodeEnum code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Status withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public Status(){}
 }

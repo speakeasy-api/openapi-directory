@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GeneratePrinterFriendlyRequest {
@@ -12,9 +13,13 @@ public class GeneratePrinterFriendlyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
     public Long reportId;
+
     public GeneratePrinterFriendlyRequest withReportId(Long reportId) {
         this.reportId = reportId;
         return this;
     }
     
+    public GeneratePrinterFriendlyRequest(@JsonProperty("reportId") Long reportId) {
+        this.reportId = reportId;
+  }
 }

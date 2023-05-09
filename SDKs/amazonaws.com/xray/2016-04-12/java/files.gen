@@ -209,4 +209,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UnprocessedTraceSegment.jav
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateGroupResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSamplingRuleResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

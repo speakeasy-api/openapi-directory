@@ -15,6 +15,7 @@ public class Netlicensing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infos")
     public Object infos;
+
     public Netlicensing withInfos(Object infos) {
         this.infos = infos;
         return this;
@@ -23,9 +24,11 @@ public class Netlicensing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Object items;
+
     public Netlicensing withItems(Object items) {
         this.items = items;
         return this;
     }
     
+    public Netlicensing(){}
 }

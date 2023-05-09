@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ServiceSummary {
     @JsonProperty("arn")
     public String arn;
+
     public ServiceSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ServiceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ServiceSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -36,6 +38,7 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ServiceSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class ServiceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public ServiceSummary withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -52,6 +56,7 @@ public class ServiceSummary {
     
     @JsonProperty("name")
     public String name;
+
     public ServiceSummary withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +64,7 @@ public class ServiceSummary {
     
     @JsonProperty("status")
     public ServiceStatusEnum status;
+
     public ServiceSummary withStatus(ServiceStatusEnum status) {
         this.status = status;
         return this;
@@ -67,6 +73,7 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public ServiceSummary withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -74,9 +81,18 @@ public class ServiceSummary {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public ServiceSummary withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public ServiceSummary(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("lastModifiedAt") OffsetDateTime lastModifiedAt, @JsonProperty("name") String name, @JsonProperty("status") ServiceStatusEnum status, @JsonProperty("templateName") String templateName) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.lastModifiedAt = lastModifiedAt;
+        this.name = name;
+        this.status = status;
+        this.templateName = templateName;
+  }
 }

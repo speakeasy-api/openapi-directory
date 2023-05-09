@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AirspacePolyResponse {
     @JsonProperty("found")
     public java.util.Map<String, Object>[] found;
+
     public AirspacePolyResponse withFound(java.util.Map<String, Object>[] found) {
         this.found = found;
         return this;
     }
     
+    public AirspacePolyResponse(@JsonProperty("found") java.util.Map<String, Object>[] found) {
+        this.found = found;
+  }
 }

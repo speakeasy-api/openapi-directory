@@ -12,6 +12,7 @@ public class UpdateObjectAttributesRequestBody {
      */
     @JsonProperty("AttributeUpdates")
     public org.openapis.openapi.models.shared.ObjectAttributeUpdate[] attributeUpdates;
+
     public UpdateObjectAttributesRequestBody withAttributeUpdates(org.openapis.openapi.models.shared.ObjectAttributeUpdate[] attributeUpdates) {
         this.attributeUpdates = attributeUpdates;
         return this;
@@ -22,9 +23,14 @@ public class UpdateObjectAttributesRequestBody {
      */
     @JsonProperty("ObjectReference")
     public UpdateObjectAttributesRequestBodyObjectReference objectReference;
+
     public UpdateObjectAttributesRequestBody withObjectReference(UpdateObjectAttributesRequestBodyObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
     }
     
+    public UpdateObjectAttributesRequestBody(@JsonProperty("AttributeUpdates") org.openapis.openapi.models.shared.ObjectAttributeUpdate[] attributeUpdates, @JsonProperty("ObjectReference") UpdateObjectAttributesRequestBodyObjectReference objectReference) {
+        this.attributeUpdates = attributeUpdates;
+        this.objectReference = objectReference;
+  }
 }

@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AnimateImageRequest;
 import org.openapis.openapi.models.operations.AnimateImageResponse;
 
@@ -13,10 +12,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AnimateImageRequest req = new AnimateImageRequest() {{
-                type = "corrupti";
-                url = "provident";
-            }}            
+            AnimateImageRequest req = new AnimateImageRequest("corrupti", "provident");            
 
             AnimateImageResponse res = sdk.animateImage(req);
 
@@ -26,5 +22,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

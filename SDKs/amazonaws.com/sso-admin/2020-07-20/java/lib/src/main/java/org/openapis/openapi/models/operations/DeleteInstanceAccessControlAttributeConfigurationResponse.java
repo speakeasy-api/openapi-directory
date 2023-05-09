@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteInstanceAccessControlAttributeConfigurationResponse {
@@ -12,6 +13,7 @@ public class DeleteInstanceAccessControlAttributeConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteInstanceAccessControlAttributeConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteInstanceAccessControlAttributeConfigurationResponse {
      */
     
     public Object conflictException;
+
     public DeleteInstanceAccessControlAttributeConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteInstanceAccessControlAttributeConfigurationResponse {
     
     
     public String contentType;
+
     public DeleteInstanceAccessControlAttributeConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteInstanceAccessControlAttributeConfigurationResponse {
      */
     
     public java.util.Map<String, Object> deleteInstanceAccessControlAttributeConfigurationResponse;
+
     public DeleteInstanceAccessControlAttributeConfigurationResponse withDeleteInstanceAccessControlAttributeConfigurationResponse(java.util.Map<String, Object> deleteInstanceAccessControlAttributeConfigurationResponse) {
         this.deleteInstanceAccessControlAttributeConfigurationResponse = deleteInstanceAccessControlAttributeConfigurationResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteInstanceAccessControlAttributeConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public DeleteInstanceAccessControlAttributeConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteInstanceAccessControlAttributeConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteInstanceAccessControlAttributeConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteInstanceAccessControlAttributeConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteInstanceAccessControlAttributeConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteInstanceAccessControlAttributeConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteInstanceAccessControlAttributeConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteInstanceAccessControlAttributeConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public DeleteInstanceAccessControlAttributeConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteInstanceAccessControlAttributeConfigurationResponse {
      */
     
     public Object validationException;
+
     public DeleteInstanceAccessControlAttributeConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteInstanceAccessControlAttributeConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

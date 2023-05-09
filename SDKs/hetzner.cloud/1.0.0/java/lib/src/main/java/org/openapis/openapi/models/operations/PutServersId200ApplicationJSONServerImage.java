@@ -14,6 +14,7 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("bound_to")
     public Long boundTo;
+
     public PutServersId200ApplicationJSONServerImage withBoundTo(Long boundTo) {
         this.boundTo = boundTo;
         return this;
@@ -24,6 +25,7 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("created")
     public String created;
+
     public PutServersId200ApplicationJSONServerImage withCreated(String created) {
         this.created = created;
         return this;
@@ -34,6 +36,7 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("created_from")
     public PutServersId200ApplicationJSONServerImageCreatedFrom createdFrom;
+
     public PutServersId200ApplicationJSONServerImage withCreatedFrom(PutServersId200ApplicationJSONServerImageCreatedFrom createdFrom) {
         this.createdFrom = createdFrom;
         return this;
@@ -44,6 +47,7 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("deleted")
     public String deleted;
+
     public PutServersId200ApplicationJSONServerImage withDeleted(String deleted) {
         this.deleted = deleted;
         return this;
@@ -54,6 +58,7 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("deprecated")
     public String deprecated;
+
     public PutServersId200ApplicationJSONServerImage withDeprecated(String deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -64,6 +69,7 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("description")
     public String description;
+
     public PutServersId200ApplicationJSONServerImage withDescription(String description) {
         this.description = description;
         return this;
@@ -74,6 +80,7 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("disk_size")
     public Double diskSize;
+
     public PutServersId200ApplicationJSONServerImage withDiskSize(Double diskSize) {
         this.diskSize = diskSize;
         return this;
@@ -84,6 +91,7 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("id")
     public Long id;
+
     public PutServersId200ApplicationJSONServerImage withId(Long id) {
         this.id = id;
         return this;
@@ -94,6 +102,7 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("image_size")
     public Double imageSize;
+
     public PutServersId200ApplicationJSONServerImage withImageSize(Double imageSize) {
         this.imageSize = imageSize;
         return this;
@@ -104,6 +113,7 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PutServersId200ApplicationJSONServerImage withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -114,6 +124,7 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("name")
     public String name;
+
     public PutServersId200ApplicationJSONServerImage withName(String name) {
         this.name = name;
         return this;
@@ -124,6 +135,7 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("os_flavor")
     public PutServersId200ApplicationJSONServerImageOsFlavorEnum osFlavor;
+
     public PutServersId200ApplicationJSONServerImage withOsFlavor(PutServersId200ApplicationJSONServerImageOsFlavorEnum osFlavor) {
         this.osFlavor = osFlavor;
         return this;
@@ -134,6 +146,7 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("os_version")
     public String osVersion;
+
     public PutServersId200ApplicationJSONServerImage withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -144,6 +157,7 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("protection")
     public PutServersId200ApplicationJSONServerImageProtection protection;
+
     public PutServersId200ApplicationJSONServerImage withProtection(PutServersId200ApplicationJSONServerImageProtection protection) {
         this.protection = protection;
         return this;
@@ -155,6 +169,7 @@ public class PutServersId200ApplicationJSONServerImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rapid_deploy")
     public Boolean rapidDeploy;
+
     public PutServersId200ApplicationJSONServerImage withRapidDeploy(Boolean rapidDeploy) {
         this.rapidDeploy = rapidDeploy;
         return this;
@@ -165,6 +180,7 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("status")
     public PutServersId200ApplicationJSONServerImageStatusEnum status;
+
     public PutServersId200ApplicationJSONServerImage withStatus(PutServersId200ApplicationJSONServerImageStatusEnum status) {
         this.status = status;
         return this;
@@ -175,9 +191,28 @@ public class PutServersId200ApplicationJSONServerImage {
      */
     @JsonProperty("type")
     public PutServersId200ApplicationJSONServerImageTypeEnum type;
+
     public PutServersId200ApplicationJSONServerImage withType(PutServersId200ApplicationJSONServerImageTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PutServersId200ApplicationJSONServerImage(@JsonProperty("bound_to") Long boundTo, @JsonProperty("created") String created, @JsonProperty("created_from") PutServersId200ApplicationJSONServerImageCreatedFrom createdFrom, @JsonProperty("deleted") String deleted, @JsonProperty("deprecated") String deprecated, @JsonProperty("description") String description, @JsonProperty("disk_size") Double diskSize, @JsonProperty("id") Long id, @JsonProperty("image_size") Double imageSize, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("name") String name, @JsonProperty("os_flavor") PutServersId200ApplicationJSONServerImageOsFlavorEnum osFlavor, @JsonProperty("os_version") String osVersion, @JsonProperty("protection") PutServersId200ApplicationJSONServerImageProtection protection, @JsonProperty("status") PutServersId200ApplicationJSONServerImageStatusEnum status, @JsonProperty("type") PutServersId200ApplicationJSONServerImageTypeEnum type) {
+        this.boundTo = boundTo;
+        this.created = created;
+        this.createdFrom = createdFrom;
+        this.deleted = deleted;
+        this.deprecated = deprecated;
+        this.description = description;
+        this.diskSize = diskSize;
+        this.id = id;
+        this.imageSize = imageSize;
+        this.labels = labels;
+        this.name = name;
+        this.osFlavor = osFlavor;
+        this.osVersion = osVersion;
+        this.protection = protection;
+        this.status = status;
+        this.type = type;
+  }
 }

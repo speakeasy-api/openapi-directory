@@ -15,6 +15,7 @@ public class OBWriteInternationalStandingOrderConsent6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Authorisation")
     public OBWriteInternationalStandingOrderConsent6DataAuthorisation authorisation;
+
     public OBWriteInternationalStandingOrderConsent6Data withAuthorisation(OBWriteInternationalStandingOrderConsent6DataAuthorisation authorisation) {
         this.authorisation = authorisation;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteInternationalStandingOrderConsent6Data {
      */
     @JsonProperty("Initiation")
     public OBWriteInternationalStandingOrderConsent6DataInitiation initiation;
+
     public OBWriteInternationalStandingOrderConsent6Data withInitiation(OBWriteInternationalStandingOrderConsent6DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -35,6 +37,7 @@ public class OBWriteInternationalStandingOrderConsent6Data {
      */
     @JsonProperty("Permission")
     public OBWriteInternationalStandingOrderConsent6DataPermissionEnum permission;
+
     public OBWriteInternationalStandingOrderConsent6Data withPermission(OBWriteInternationalStandingOrderConsent6DataPermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -46,6 +49,7 @@ public class OBWriteInternationalStandingOrderConsent6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadRefundAccount")
     public OBWriteInternationalStandingOrderConsent6DataReadRefundAccountEnum readRefundAccount;
+
     public OBWriteInternationalStandingOrderConsent6Data withReadRefundAccount(OBWriteInternationalStandingOrderConsent6DataReadRefundAccountEnum readRefundAccount) {
         this.readRefundAccount = readRefundAccount;
         return this;
@@ -57,9 +61,14 @@ public class OBWriteInternationalStandingOrderConsent6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SCASupportData")
     public OBSCASupportData1 scaSupportData;
+
     public OBWriteInternationalStandingOrderConsent6Data withSCASupportData(OBSCASupportData1 scaSupportData) {
         this.scaSupportData = scaSupportData;
         return this;
     }
     
+    public OBWriteInternationalStandingOrderConsent6Data(@JsonProperty("Initiation") OBWriteInternationalStandingOrderConsent6DataInitiation initiation, @JsonProperty("Permission") OBWriteInternationalStandingOrderConsent6DataPermissionEnum permission) {
+        this.initiation = initiation;
+        this.permission = permission;
+  }
 }

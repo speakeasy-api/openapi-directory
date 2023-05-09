@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PlatformBranchSummary {
     
     public String branchName;
+
     public PlatformBranchSummary withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -19,6 +20,7 @@ public class PlatformBranchSummary {
     
     
     public Long branchOrder;
+
     public PlatformBranchSummary withBranchOrder(Long branchOrder) {
         this.branchOrder = branchOrder;
         return this;
@@ -26,6 +28,7 @@ public class PlatformBranchSummary {
     
     
     public String lifecycleState;
+
     public PlatformBranchSummary withLifecycleState(String lifecycleState) {
         this.lifecycleState = lifecycleState;
         return this;
@@ -33,6 +36,7 @@ public class PlatformBranchSummary {
     
     
     public String platformName;
+
     public PlatformBranchSummary withPlatformName(String platformName) {
         this.platformName = platformName;
         return this;
@@ -40,9 +44,11 @@ public class PlatformBranchSummary {
     
     
     public String[] supportedTierList;
+
     public PlatformBranchSummary withSupportedTierList(String[] supportedTierList) {
         this.supportedTierList = supportedTierList;
         return this;
     }
     
+    public PlatformBranchSummary(){}
 }

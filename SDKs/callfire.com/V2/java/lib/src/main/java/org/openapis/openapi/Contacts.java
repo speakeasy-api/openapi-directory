@@ -56,11 +56,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddContactListItemsResponse res = new org.openapis.openapi.models.operations.AddContactListItemsResponse() {{
+        org.openapis.openapi.models.operations.AddContactListItemsResponse res = new org.openapis.openapi.models.operations.AddContactListItemsResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -99,11 +97,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddDoNotContactsResponse res = new org.openapis.openapi.models.operations.AddDoNotContactsResponse() {{
+        org.openapis.openapi.models.operations.AddDoNotContactsResponse res = new org.openapis.openapi.models.operations.AddDoNotContactsResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -148,12 +144,10 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateContactListResponse res = new org.openapis.openapi.models.operations.CreateContactListResponse() {{
+        org.openapis.openapi.models.operations.CreateContactListResponse res = new org.openapis.openapi.models.operations.CreateContactListResponse(contentType, httpRes.statusCode()) {{
             contactList = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,12 +196,10 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateContactListFromFileResponse res = new org.openapis.openapi.models.operations.CreateContactListFromFileResponse() {{
+        org.openapis.openapi.models.operations.CreateContactListFromFileResponse res = new org.openapis.openapi.models.operations.CreateContactListFromFileResponse(contentType, httpRes.statusCode()) {{
             resourceId = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,12 +245,10 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateContactsResponse res = new org.openapis.openapi.models.operations.CreateContactsResponse() {{
+        org.openapis.openapi.models.operations.CreateContactsResponse res = new org.openapis.openapi.models.operations.CreateContactsResponse(contentType, httpRes.statusCode()) {{
             resourceIdList = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +292,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteContactResponse res = new org.openapis.openapi.models.operations.DeleteContactResponse() {{
+        org.openapis.openapi.models.operations.DeleteContactResponse res = new org.openapis.openapi.models.operations.DeleteContactResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -343,11 +331,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteContactListResponse res = new org.openapis.openapi.models.operations.DeleteContactListResponse() {{
+        org.openapis.openapi.models.operations.DeleteContactListResponse res = new org.openapis.openapi.models.operations.DeleteContactListResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -384,11 +370,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDoNotContactResponse res = new org.openapis.openapi.models.operations.DeleteDoNotContactResponse() {{
+        org.openapis.openapi.models.operations.DeleteDoNotContactResponse res = new org.openapis.openapi.models.operations.DeleteDoNotContactResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -425,11 +409,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDoNotContactsBySourceResponse res = new org.openapis.openapi.models.operations.DeleteDoNotContactsBySourceResponse() {{
+        org.openapis.openapi.models.operations.DeleteDoNotContactsBySourceResponse res = new org.openapis.openapi.models.operations.DeleteDoNotContactsBySourceResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -472,12 +454,10 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindContactListsResponse res = new org.openapis.openapi.models.operations.FindContactListsResponse() {{
+        org.openapis.openapi.models.operations.FindContactListsResponse res = new org.openapis.openapi.models.operations.FindContactListsResponse(contentType, httpRes.statusCode()) {{
             contactListPage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -527,12 +507,10 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindContactsResponse res = new org.openapis.openapi.models.operations.FindContactsResponse() {{
+        org.openapis.openapi.models.operations.FindContactsResponse res = new org.openapis.openapi.models.operations.FindContactsResponse(contentType, httpRes.statusCode()) {{
             contactPage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -582,12 +560,10 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindDoNotContactsResponse res = new org.openapis.openapi.models.operations.FindDoNotContactsResponse() {{
+        org.openapis.openapi.models.operations.FindDoNotContactsResponse res = new org.openapis.openapi.models.operations.FindDoNotContactsResponse(contentType, httpRes.statusCode()) {{
             doNotContactPage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -637,12 +613,10 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContactResponse res = new org.openapis.openapi.models.operations.GetContactResponse() {{
+        org.openapis.openapi.models.operations.GetContactResponse res = new org.openapis.openapi.models.operations.GetContactResponse(contentType, httpRes.statusCode()) {{
             contact = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -692,12 +666,10 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContactHistoryResponse res = new org.openapis.openapi.models.operations.GetContactHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetContactHistoryResponse res = new org.openapis.openapi.models.operations.GetContactHistoryResponse(contentType, httpRes.statusCode()) {{
             contactHistory = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -747,12 +719,10 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContactListResponse res = new org.openapis.openapi.models.operations.GetContactListResponse() {{
+        org.openapis.openapi.models.operations.GetContactListResponse res = new org.openapis.openapi.models.operations.GetContactListResponse(contentType, httpRes.statusCode()) {{
             contactList = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -802,12 +772,10 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContactListItemsResponse res = new org.openapis.openapi.models.operations.GetContactListItemsResponse() {{
+        org.openapis.openapi.models.operations.GetContactListItemsResponse res = new org.openapis.openapi.models.operations.GetContactListItemsResponse(contentType, httpRes.statusCode()) {{
             contactPage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -851,12 +819,10 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDoNotContactResponse res = new org.openapis.openapi.models.operations.GetDoNotContactResponse() {{
+        org.openapis.openapi.models.operations.GetDoNotContactResponse res = new org.openapis.openapi.models.operations.GetDoNotContactResponse(contentType, httpRes.statusCode()) {{
             doNotContact = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -906,12 +872,10 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUniversalDoNotContactsResponse res = new org.openapis.openapi.models.operations.GetUniversalDoNotContactsResponse() {{
+        org.openapis.openapi.models.operations.GetUniversalDoNotContactsResponse res = new org.openapis.openapi.models.operations.GetUniversalDoNotContactsResponse(contentType, httpRes.statusCode()) {{
             itemListUniversalDoNotContact = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -955,11 +919,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveContactListItemResponse res = new org.openapis.openapi.models.operations.RemoveContactListItemResponse() {{
+        org.openapis.openapi.models.operations.RemoveContactListItemResponse res = new org.openapis.openapi.models.operations.RemoveContactListItemResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1002,11 +964,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveContactListItemsResponse res = new org.openapis.openapi.models.operations.RemoveContactListItemsResponse() {{
+        org.openapis.openapi.models.operations.RemoveContactListItemsResponse res = new org.openapis.openapi.models.operations.RemoveContactListItemsResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1045,11 +1005,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateContactResponse res = new org.openapis.openapi.models.operations.UpdateContactResponse() {{
+        org.openapis.openapi.models.operations.UpdateContactResponse res = new org.openapis.openapi.models.operations.UpdateContactResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1088,11 +1046,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateContactListResponse res = new org.openapis.openapi.models.operations.UpdateContactListResponse() {{
+        org.openapis.openapi.models.operations.UpdateContactListResponse res = new org.openapis.openapi.models.operations.UpdateContactListResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1131,11 +1087,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDoNotContactResponse res = new org.openapis.openapi.models.operations.UpdateDoNotContactResponse() {{
+        org.openapis.openapi.models.operations.UpdateDoNotContactResponse res = new org.openapis.openapi.models.operations.UpdateDoNotContactResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {

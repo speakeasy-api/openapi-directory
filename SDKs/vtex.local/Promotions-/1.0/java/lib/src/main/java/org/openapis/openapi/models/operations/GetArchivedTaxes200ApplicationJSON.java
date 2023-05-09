@@ -18,9 +18,11 @@ public class GetArchivedTaxes200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public org.openapis.openapi.models.shared.GetTaxes[] items;
+
     public GetArchivedTaxes200ApplicationJSON withItems(org.openapis.openapi.models.shared.GetTaxes[] items) {
         this.items = items;
         return this;
     }
     
+    public GetArchivedTaxes200ApplicationJSON(){}
 }

@@ -15,6 +15,7 @@ public class CustomizedLoadMetricSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public MetricDimension[] dimensions;
+
     public CustomizedLoadMetricSpecification withDimensions(MetricDimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -22,6 +23,7 @@ public class CustomizedLoadMetricSpecification {
     
     @JsonProperty("MetricName")
     public String metricName;
+
     public CustomizedLoadMetricSpecification withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -29,6 +31,7 @@ public class CustomizedLoadMetricSpecification {
     
     @JsonProperty("Namespace")
     public String namespace;
+
     public CustomizedLoadMetricSpecification withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -36,6 +39,7 @@ public class CustomizedLoadMetricSpecification {
     
     @JsonProperty("Statistic")
     public MetricStatisticEnum statistic;
+
     public CustomizedLoadMetricSpecification withStatistic(MetricStatisticEnum statistic) {
         this.statistic = statistic;
         return this;
@@ -44,9 +48,15 @@ public class CustomizedLoadMetricSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public String unit;
+
     public CustomizedLoadMetricSpecification withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public CustomizedLoadMetricSpecification(@JsonProperty("MetricName") String metricName, @JsonProperty("Namespace") String namespace, @JsonProperty("Statistic") MetricStatisticEnum statistic) {
+        this.metricName = metricName;
+        this.namespace = namespace;
+        this.statistic = statistic;
+  }
 }

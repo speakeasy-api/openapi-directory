@@ -14,6 +14,7 @@ public class CertificateSummaryV2 {
      */
     @JsonProperty("certificateId")
     public String certificateId;
+
     public CertificateSummaryV2 withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -24,6 +25,7 @@ public class CertificateSummaryV2 {
      */
     @JsonProperty("commonName")
     public String commonName;
+
     public CertificateSummaryV2 withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -35,6 +37,7 @@ public class CertificateSummaryV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completedAt")
     public String completedAt;
+
     public CertificateSummaryV2 withCompletedAt(String completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -45,6 +48,7 @@ public class CertificateSummaryV2 {
      */
     @JsonProperty("createdAt")
     public String createdAt;
+
     public CertificateSummaryV2 withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -55,6 +59,7 @@ public class CertificateSummaryV2 {
      */
     @JsonProperty("period")
     public Long period;
+
     public CertificateSummaryV2 withPeriod(Long period) {
         this.period = period;
         return this;
@@ -66,6 +71,7 @@ public class CertificateSummaryV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewalAvailable")
     public Boolean renewalAvailable;
+
     public CertificateSummaryV2 withRenewalAvailable(Boolean renewalAvailable) {
         this.renewalAvailable = renewalAvailable;
         return this;
@@ -77,6 +83,7 @@ public class CertificateSummaryV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revokedAt")
     public String revokedAt;
+
     public CertificateSummaryV2 withRevokedAt(String revokedAt) {
         this.revokedAt = revokedAt;
         return this;
@@ -88,6 +95,7 @@ public class CertificateSummaryV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public CertificateSummaryV2 withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -108,6 +116,7 @@ public class CertificateSummaryV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotSize")
     public CertificateSummaryV2SlotSizeEnum slotSize;
+
     public CertificateSummaryV2 withSlotSize(CertificateSummaryV2SlotSizeEnum slotSize) {
         this.slotSize = slotSize;
         return this;
@@ -128,6 +137,7 @@ public class CertificateSummaryV2 {
      */
     @JsonProperty("status")
     public CertificateSummaryV2StatusEnum status;
+
     public CertificateSummaryV2 withStatus(CertificateSummaryV2StatusEnum status) {
         this.status = status;
         return this;
@@ -139,6 +149,7 @@ public class CertificateSummaryV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAlternativeNames")
     public String[] subjectAlternativeNames;
+
     public CertificateSummaryV2 withSubjectAlternativeNames(String[] subjectAlternativeNames) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         return this;
@@ -160,6 +171,7 @@ public class CertificateSummaryV2 {
      */
     @JsonProperty("type")
     public CertificateSummaryV2TypeEnum type;
+
     public CertificateSummaryV2 withType(CertificateSummaryV2TypeEnum type) {
         this.type = type;
         return this;
@@ -171,6 +183,7 @@ public class CertificateSummaryV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validEndAt")
     public String validEndAt;
+
     public CertificateSummaryV2 withValidEndAt(String validEndAt) {
         this.validEndAt = validEndAt;
         return this;
@@ -182,9 +195,18 @@ public class CertificateSummaryV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validStartAt")
     public String validStartAt;
+
     public CertificateSummaryV2 withValidStartAt(String validStartAt) {
         this.validStartAt = validStartAt;
         return this;
     }
     
+    public CertificateSummaryV2(@JsonProperty("certificateId") String certificateId, @JsonProperty("commonName") String commonName, @JsonProperty("createdAt") String createdAt, @JsonProperty("period") Long period, @JsonProperty("status") CertificateSummaryV2StatusEnum status, @JsonProperty("type") CertificateSummaryV2TypeEnum type) {
+        this.certificateId = certificateId;
+        this.commonName = commonName;
+        this.createdAt = createdAt;
+        this.period = period;
+        this.status = status;
+        this.type = type;
+  }
 }

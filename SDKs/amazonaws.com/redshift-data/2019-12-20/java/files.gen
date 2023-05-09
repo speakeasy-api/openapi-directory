@@ -88,4 +88,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListTablesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TableMember.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTablesRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

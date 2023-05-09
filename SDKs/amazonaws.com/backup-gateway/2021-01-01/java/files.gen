@@ -168,4 +168,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateGatewaySoftwareNowInp
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateHypervisorOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateHypervisorInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

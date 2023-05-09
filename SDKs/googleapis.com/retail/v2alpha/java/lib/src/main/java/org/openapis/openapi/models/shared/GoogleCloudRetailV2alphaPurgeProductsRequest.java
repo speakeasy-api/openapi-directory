@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaPurgeProductsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudRetailV2alphaPurgeProductsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2alphaPurgeProductsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public GoogleCloudRetailV2alphaPurgeProductsRequest withForce(Boolean force) {
         this.force = force;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaPurgeProductsRequest(){}
 }

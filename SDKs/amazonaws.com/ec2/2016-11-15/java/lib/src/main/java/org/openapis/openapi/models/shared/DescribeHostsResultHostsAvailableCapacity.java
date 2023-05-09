@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeHostsResultHostsAvailableCapacity {
     
     public DescribeHostsResultHostsAvailableCapacityAvailableInstanceCapacity[] availableInstanceCapacity;
+
     public DescribeHostsResultHostsAvailableCapacity withAvailableInstanceCapacity(DescribeHostsResultHostsAvailableCapacityAvailableInstanceCapacity[] availableInstanceCapacity) {
         this.availableInstanceCapacity = availableInstanceCapacity;
         return this;
@@ -19,9 +20,11 @@ public class DescribeHostsResultHostsAvailableCapacity {
     
     
     public Long availableVCpus;
+
     public DescribeHostsResultHostsAvailableCapacity withAvailableVCpus(Long availableVCpus) {
         this.availableVCpus = availableVCpus;
         return this;
     }
     
+    public DescribeHostsResultHostsAvailableCapacity(){}
 }

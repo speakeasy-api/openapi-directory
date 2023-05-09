@@ -67,7 +67,7 @@ public class DomesticScheduledPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsJsonResponse res = new org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsJsonResponse res = new org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticScheduledConsentResponse5 = null;
             obWriteDomesticScheduledConsentResponse5 = null;
@@ -75,8 +75,6 @@ public class DomesticScheduledPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -156,7 +154,7 @@ public class DomesticScheduledPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsRawResponse res = new org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsRawResponse() {{
+        org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsRawResponse res = new org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticScheduledConsentResponse5 = null;
             obWriteDomesticScheduledConsentResponse5 = null;
@@ -164,8 +162,6 @@ public class DomesticScheduledPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -245,7 +241,7 @@ public class DomesticScheduledPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsJsonResponse res = new org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsJsonResponse res = new org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticScheduledResponse5 = null;
             obWriteDomesticScheduledResponse5 = null;
@@ -253,8 +249,6 @@ public class DomesticScheduledPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -334,7 +328,7 @@ public class DomesticScheduledPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsRawResponse res = new org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsRawResponse() {{
+        org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsRawResponse res = new org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticScheduledResponse5 = null;
             obWriteDomesticScheduledResponse5 = null;
@@ -342,8 +336,6 @@ public class DomesticScheduledPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -418,7 +410,7 @@ public class DomesticScheduledPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomesticScheduledPaymentConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetDomesticScheduledPaymentConsentsConsentIdResponse() {{
+        org.openapis.openapi.models.operations.GetDomesticScheduledPaymentConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetDomesticScheduledPaymentConsentsConsentIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticScheduledConsentResponse5 = null;
             obWriteDomesticScheduledConsentResponse5 = null;
@@ -426,8 +418,6 @@ public class DomesticScheduledPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -502,7 +492,7 @@ public class DomesticScheduledPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdResponse res = new org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdResponse() {{
+        org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdResponse res = new org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticScheduledResponse5 = null;
             obWriteDomesticScheduledResponse5 = null;
@@ -510,8 +500,6 @@ public class DomesticScheduledPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

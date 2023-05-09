@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCertificateAuthorityResponse {
     
     public String contentType;
+
     public DescribeCertificateAuthorityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCertificateAuthorityResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCertificateAuthorityResponse describeCertificateAuthorityResponse;
+
     public DescribeCertificateAuthorityResponse withDescribeCertificateAuthorityResponse(org.openapis.openapi.models.shared.DescribeCertificateAuthorityResponse describeCertificateAuthorityResponse) {
         this.describeCertificateAuthorityResponse = describeCertificateAuthorityResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCertificateAuthorityResponse {
      */
     
     public Object invalidArnException;
+
     public DescribeCertificateAuthorityResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCertificateAuthorityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeCertificateAuthorityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeCertificateAuthorityResponse {
     
     
     public Integer statusCode;
+
     public DescribeCertificateAuthorityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeCertificateAuthorityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCertificateAuthorityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeCertificateAuthorityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

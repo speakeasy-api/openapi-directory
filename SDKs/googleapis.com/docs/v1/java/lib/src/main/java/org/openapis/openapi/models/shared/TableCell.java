@@ -18,6 +18,7 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public StructuralElement[] content;
+
     public TableCell withContent(StructuralElement[] content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endIndex")
     public Integer endIndex;
+
     public TableCell withEndIndex(Integer endIndex) {
         this.endIndex = endIndex;
         return this;
@@ -40,6 +42,7 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startIndex")
     public Integer startIndex;
+
     public TableCell withStartIndex(Integer startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -51,6 +54,7 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedDeletionIds")
     public String[] suggestedDeletionIds;
+
     public TableCell withSuggestedDeletionIds(String[] suggestedDeletionIds) {
         this.suggestedDeletionIds = suggestedDeletionIds;
         return this;
@@ -62,6 +66,7 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedInsertionIds")
     public String[] suggestedInsertionIds;
+
     public TableCell withSuggestedInsertionIds(String[] suggestedInsertionIds) {
         this.suggestedInsertionIds = suggestedInsertionIds;
         return this;
@@ -73,6 +78,7 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedTableCellStyleChanges")
     public java.util.Map<String, SuggestedTableCellStyle> suggestedTableCellStyleChanges;
+
     public TableCell withSuggestedTableCellStyleChanges(java.util.Map<String, SuggestedTableCellStyle> suggestedTableCellStyleChanges) {
         this.suggestedTableCellStyleChanges = suggestedTableCellStyleChanges;
         return this;
@@ -84,9 +90,11 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableCellStyle")
     public TableCellStyle tableCellStyle;
+
     public TableCell withTableCellStyle(TableCellStyle tableCellStyle) {
         this.tableCellStyle = tableCellStyle;
         return this;
     }
     
+    public TableCell(){}
 }

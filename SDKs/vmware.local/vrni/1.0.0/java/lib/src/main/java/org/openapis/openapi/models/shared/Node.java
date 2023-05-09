@@ -15,6 +15,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public NodeTypeEnum entityType;
+
     public Node withEntityType(NodeTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -23,6 +24,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Node withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_address")
     public String ipAddress;
+
     public Node withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -39,6 +42,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Node withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public Node withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -55,9 +60,11 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_type")
     public NodeNodeTypeEnum nodeType;
+
     public Node withNodeType(NodeNodeTypeEnum nodeType) {
         this.nodeType = nodeType;
         return this;
     }
     
+    public Node(){}
 }

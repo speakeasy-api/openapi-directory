@@ -22,6 +22,7 @@ public class GameSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public GameSession withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatorId")
     public String creatorId;
+
     public GameSession withCreatorId(String creatorId) {
         this.creatorId = creatorId;
         return this;
@@ -38,6 +40,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentPlayerSessionCount")
     public Long currentPlayerSessionCount;
+
     public GameSession withCurrentPlayerSessionCount(Long currentPlayerSessionCount) {
         this.currentPlayerSessionCount = currentPlayerSessionCount;
         return this;
@@ -46,6 +49,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsName")
     public String dnsName;
+
     public GameSession withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -54,6 +58,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public GameSession withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -62,6 +67,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public GameSession withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -70,6 +76,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameProperties")
     public GameProperty[] gameProperties;
+
     public GameSession withGameProperties(GameProperty[] gameProperties) {
         this.gameProperties = gameProperties;
         return this;
@@ -78,6 +85,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionData")
     public String gameSessionData;
+
     public GameSession withGameSessionData(String gameSessionData) {
         this.gameSessionData = gameSessionData;
         return this;
@@ -86,6 +94,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionId")
     public String gameSessionId;
+
     public GameSession withGameSessionId(String gameSessionId) {
         this.gameSessionId = gameSessionId;
         return this;
@@ -94,6 +103,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public GameSession withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -102,6 +112,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public GameSession withLocation(String location) {
         this.location = location;
         return this;
@@ -110,6 +121,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchmakerData")
     public String matchmakerData;
+
     public GameSession withMatchmakerData(String matchmakerData) {
         this.matchmakerData = matchmakerData;
         return this;
@@ -118,6 +130,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumPlayerSessionCount")
     public Long maximumPlayerSessionCount;
+
     public GameSession withMaximumPlayerSessionCount(Long maximumPlayerSessionCount) {
         this.maximumPlayerSessionCount = maximumPlayerSessionCount;
         return this;
@@ -126,6 +139,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GameSession withName(String name) {
         this.name = name;
         return this;
@@ -134,6 +148,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerSessionCreationPolicy")
     public PlayerSessionCreationPolicyEnum playerSessionCreationPolicy;
+
     public GameSession withPlayerSessionCreationPolicy(PlayerSessionCreationPolicyEnum playerSessionCreationPolicy) {
         this.playerSessionCreationPolicy = playerSessionCreationPolicy;
         return this;
@@ -142,6 +157,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public GameSession withPort(Long port) {
         this.port = port;
         return this;
@@ -150,6 +166,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public GameSessionStatusEnum status;
+
     public GameSession withStatus(GameSessionStatusEnum status) {
         this.status = status;
         return this;
@@ -158,6 +175,7 @@ public class GameSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusReason")
     public GameSessionStatusReasonEnum statusReason;
+
     public GameSession withStatusReason(GameSessionStatusReasonEnum statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -168,9 +186,11 @@ public class GameSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TerminationTime")
     public OffsetDateTime terminationTime;
+
     public GameSession withTerminationTime(OffsetDateTime terminationTime) {
         this.terminationTime = terminationTime;
         return this;
     }
     
+    public GameSession(){}
 }

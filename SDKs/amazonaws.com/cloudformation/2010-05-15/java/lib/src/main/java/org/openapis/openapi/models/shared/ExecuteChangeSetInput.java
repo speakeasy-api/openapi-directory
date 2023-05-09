@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ExecuteChangeSetInput - The input for the &lt;a&gt;ExecuteChangeSet&lt;/a&gt; action.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ExecuteChangeSetInput {
     
     public String changeSetName;
+
     public ExecuteChangeSetInput withChangeSetName(String changeSetName) {
         this.changeSetName = changeSetName;
         return this;
@@ -19,6 +20,7 @@ public class ExecuteChangeSetInput {
     
     
     public String clientRequestToken;
+
     public ExecuteChangeSetInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -26,6 +28,7 @@ public class ExecuteChangeSetInput {
     
     
     public Boolean disableRollback;
+
     public ExecuteChangeSetInput withDisableRollback(Boolean disableRollback) {
         this.disableRollback = disableRollback;
         return this;
@@ -33,9 +36,13 @@ public class ExecuteChangeSetInput {
     
     
     public String stackName;
+
     public ExecuteChangeSetInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public ExecuteChangeSetInput(@JsonProperty("ChangeSetName") String changeSetName) {
+        this.changeSetName = changeSetName;
+  }
 }

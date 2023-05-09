@@ -18,9 +18,11 @@ public class RerouteLineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public RerouteLineRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public RerouteLineRequest(){}
 }

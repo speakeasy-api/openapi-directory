@@ -109,4 +109,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/EndDates.java
 lib/src/main/java/org/openapis/openapi/models/shared/AccessDates.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExtensionDataRelatedEntityTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExtensionData.java
+docs/sdk/README.md
 USAGE.md

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposMergeResponse {
     
     public String contentType;
+
     public ReposMergeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposMergeResponse {
     
     
     public Integer statusCode;
+
     public ReposMergeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposMergeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposMergeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposMergeResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposMergeResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ReposMergeResponse {
      */
     
     public org.openapis.openapi.models.shared.Commit commit;
+
     public ReposMergeResponse withCommit(org.openapis.openapi.models.shared.Commit commit) {
         this.commit = commit;
         return this;
@@ -53,9 +59,14 @@ public class ReposMergeResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposMergeResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposMergeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

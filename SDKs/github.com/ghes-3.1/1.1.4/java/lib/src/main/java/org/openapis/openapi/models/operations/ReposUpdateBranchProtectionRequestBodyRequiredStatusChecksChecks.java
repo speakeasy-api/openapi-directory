@@ -15,6 +15,7 @@ public class ReposUpdateBranchProtectionRequestBodyRequiredStatusChecksChecks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_id")
     public Long appId;
+
     public ReposUpdateBranchProtectionRequestBodyRequiredStatusChecksChecks withAppId(Long appId) {
         this.appId = appId;
         return this;
@@ -25,9 +26,13 @@ public class ReposUpdateBranchProtectionRequestBodyRequiredStatusChecksChecks {
      */
     @JsonProperty("context")
     public String context;
+
     public ReposUpdateBranchProtectionRequestBodyRequiredStatusChecksChecks withContext(String context) {
         this.context = context;
         return this;
     }
     
+    public ReposUpdateBranchProtectionRequestBodyRequiredStatusChecksChecks(@JsonProperty("context") String context) {
+        this.context = context;
+  }
 }

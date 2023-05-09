@@ -78,4 +78,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/LoginResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/LogoutResponseResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/LogoutResponseStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/LogoutResponse.java
+docs/sdk/README.md
+docs/osdb/README.md
 USAGE.md

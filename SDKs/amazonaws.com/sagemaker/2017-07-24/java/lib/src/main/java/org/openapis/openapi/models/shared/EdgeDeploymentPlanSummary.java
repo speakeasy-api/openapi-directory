@@ -22,6 +22,7 @@ public class EdgeDeploymentPlanSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public EdgeDeploymentPlanSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class EdgeDeploymentPlanSummary {
     
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public EdgeDeploymentPlanSummary withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -36,6 +38,7 @@ public class EdgeDeploymentPlanSummary {
     
     @JsonProperty("EdgeDeploymentFailed")
     public Long edgeDeploymentFailed;
+
     public EdgeDeploymentPlanSummary withEdgeDeploymentFailed(Long edgeDeploymentFailed) {
         this.edgeDeploymentFailed = edgeDeploymentFailed;
         return this;
@@ -43,6 +46,7 @@ public class EdgeDeploymentPlanSummary {
     
     @JsonProperty("EdgeDeploymentPending")
     public Long edgeDeploymentPending;
+
     public EdgeDeploymentPlanSummary withEdgeDeploymentPending(Long edgeDeploymentPending) {
         this.edgeDeploymentPending = edgeDeploymentPending;
         return this;
@@ -50,6 +54,7 @@ public class EdgeDeploymentPlanSummary {
     
     @JsonProperty("EdgeDeploymentPlanArn")
     public String edgeDeploymentPlanArn;
+
     public EdgeDeploymentPlanSummary withEdgeDeploymentPlanArn(String edgeDeploymentPlanArn) {
         this.edgeDeploymentPlanArn = edgeDeploymentPlanArn;
         return this;
@@ -57,6 +62,7 @@ public class EdgeDeploymentPlanSummary {
     
     @JsonProperty("EdgeDeploymentPlanName")
     public String edgeDeploymentPlanName;
+
     public EdgeDeploymentPlanSummary withEdgeDeploymentPlanName(String edgeDeploymentPlanName) {
         this.edgeDeploymentPlanName = edgeDeploymentPlanName;
         return this;
@@ -64,6 +70,7 @@ public class EdgeDeploymentPlanSummary {
     
     @JsonProperty("EdgeDeploymentSuccess")
     public Long edgeDeploymentSuccess;
+
     public EdgeDeploymentPlanSummary withEdgeDeploymentSuccess(Long edgeDeploymentSuccess) {
         this.edgeDeploymentSuccess = edgeDeploymentSuccess;
         return this;
@@ -74,9 +81,18 @@ public class EdgeDeploymentPlanSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public EdgeDeploymentPlanSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public EdgeDeploymentPlanSummary(@JsonProperty("DeviceFleetName") String deviceFleetName, @JsonProperty("EdgeDeploymentFailed") Long edgeDeploymentFailed, @JsonProperty("EdgeDeploymentPending") Long edgeDeploymentPending, @JsonProperty("EdgeDeploymentPlanArn") String edgeDeploymentPlanArn, @JsonProperty("EdgeDeploymentPlanName") String edgeDeploymentPlanName, @JsonProperty("EdgeDeploymentSuccess") Long edgeDeploymentSuccess) {
+        this.deviceFleetName = deviceFleetName;
+        this.edgeDeploymentFailed = edgeDeploymentFailed;
+        this.edgeDeploymentPending = edgeDeploymentPending;
+        this.edgeDeploymentPlanArn = edgeDeploymentPlanArn;
+        this.edgeDeploymentPlanName = edgeDeploymentPlanName;
+        this.edgeDeploymentSuccess = edgeDeploymentSuccess;
+  }
 }

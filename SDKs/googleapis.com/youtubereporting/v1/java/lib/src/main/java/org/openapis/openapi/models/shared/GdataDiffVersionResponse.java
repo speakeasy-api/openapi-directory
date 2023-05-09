@@ -18,6 +18,7 @@ public class GdataDiffVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectSizeBytes")
     public String objectSizeBytes;
+
     public GdataDiffVersionResponse withObjectSizeBytes(String objectSizeBytes) {
         this.objectSizeBytes = objectSizeBytes;
         return this;
@@ -29,9 +30,11 @@ public class GdataDiffVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectVersion")
     public String objectVersion;
+
     public GdataDiffVersionResponse withObjectVersion(String objectVersion) {
         this.objectVersion = objectVersion;
         return this;
     }
     
+    public GdataDiffVersionResponse(){}
 }

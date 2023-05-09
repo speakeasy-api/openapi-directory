@@ -15,9 +15,11 @@ public class PutBandwidthRateLimitScheduleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public PutBandwidthRateLimitScheduleOutput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
     }
     
+    public PutBandwidthRateLimitScheduleOutput(){}
 }

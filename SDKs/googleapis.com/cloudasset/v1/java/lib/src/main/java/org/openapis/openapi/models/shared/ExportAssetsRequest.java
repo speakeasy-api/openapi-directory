@@ -18,6 +18,7 @@ public class ExportAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetTypes")
     public String[] assetTypes;
+
     public ExportAssetsRequest withAssetTypes(String[] assetTypes) {
         this.assetTypes = assetTypes;
         return this;
@@ -29,6 +30,7 @@ public class ExportAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public ExportAssetsRequestContentTypeEnum contentType;
+
     public ExportAssetsRequest withContentType(ExportAssetsRequestContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -40,6 +42,7 @@ public class ExportAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfig")
     public OutputConfig outputConfig;
+
     public ExportAssetsRequest withOutputConfig(OutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -51,6 +54,7 @@ public class ExportAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public ExportAssetsRequest withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -62,9 +66,11 @@ public class ExportAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationshipTypes")
     public String[] relationshipTypes;
+
     public ExportAssetsRequest withRelationshipTypes(String[] relationshipTypes) {
         this.relationshipTypes = relationshipTypes;
         return this;
     }
     
+    public ExportAssetsRequest(){}
 }

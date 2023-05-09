@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadRequest;
 import org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadResponse;
 
@@ -13,11 +12,10 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetDomainsTldZoneIdDownloadRequest req = new GetDomainsTldZoneIdDownloadRequest() {{
-                apiKey = "corrupti";
-                date = "provident";
-                zoneId = "distinctio";
-            }}            
+            GetDomainsTldZoneIdDownloadRequest req = new GetDomainsTldZoneIdDownloadRequest("corrupti") {{
+                apiKey = "provident";
+                date = "distinctio";
+            }};            
 
             GetDomainsTldZoneIdDownloadResponse res = sdk.domains.getDomainsTldZoneIdDownload(req);
 
@@ -27,5 +25,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

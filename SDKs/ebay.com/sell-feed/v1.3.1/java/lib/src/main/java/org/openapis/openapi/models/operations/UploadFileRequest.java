@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadFileRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public org.openapis.openapi.models.shared.FormDataContentDisposition formDataContentDisposition;
+
     public UploadFileRequest withFormDataContentDisposition(org.openapis.openapi.models.shared.FormDataContentDisposition formDataContentDisposition) {
         this.formDataContentDisposition = formDataContentDisposition;
         return this;
@@ -19,9 +21,13 @@ public class UploadFileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
     public String taskId;
+
     public UploadFileRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public UploadFileRequest(@JsonProperty("task_id") String taskId) {
+        this.taskId = taskId;
+  }
 }

@@ -182,6 +182,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDataplexV1Scanne
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDataplexV1ScannedDataIncrementalField.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDataplexV1DataQualityRuleResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDataplexV1DataQualityDimensionResult.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDataplexV1DataProfileSpec.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDataplexV1DataProfileResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDataplexV1DataProfileResultProfile.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDataplexV1DataProfileResultProfileField.java
@@ -322,4 +323,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDataplexV1ListZo
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudLocationListLocationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudLocationLocation.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleLongrunningListOperationsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

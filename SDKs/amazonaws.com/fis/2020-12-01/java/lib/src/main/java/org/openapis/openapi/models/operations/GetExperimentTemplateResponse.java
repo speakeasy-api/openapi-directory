@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetExperimentTemplateResponse {
     
     public String contentType;
+
     public GetExperimentTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetExperimentTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetExperimentTemplateResponse getExperimentTemplateResponse;
+
     public GetExperimentTemplateResponse withGetExperimentTemplateResponse(org.openapis.openapi.models.shared.GetExperimentTemplateResponse getExperimentTemplateResponse) {
         this.getExperimentTemplateResponse = getExperimentTemplateResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetExperimentTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetExperimentTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class GetExperimentTemplateResponse {
     
     
     public Integer statusCode;
+
     public GetExperimentTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetExperimentTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetExperimentTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetExperimentTemplateResponse {
      */
     
     public Object validationException;
+
     public GetExperimentTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetExperimentTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

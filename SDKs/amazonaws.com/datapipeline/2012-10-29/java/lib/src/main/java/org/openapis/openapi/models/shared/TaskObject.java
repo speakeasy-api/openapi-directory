@@ -15,6 +15,7 @@ public class TaskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attemptId")
     public String attemptId;
+
     public TaskObject withAttemptId(String attemptId) {
         this.attemptId = attemptId;
         return this;
@@ -23,6 +24,7 @@ public class TaskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objects")
     public java.util.Map<String, PipelineObject> objects;
+
     public TaskObject withObjects(java.util.Map<String, PipelineObject> objects) {
         this.objects = objects;
         return this;
@@ -31,6 +33,7 @@ public class TaskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineId")
     public String pipelineId;
+
     public TaskObject withPipelineId(String pipelineId) {
         this.pipelineId = pipelineId;
         return this;
@@ -39,9 +42,11 @@ public class TaskObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public TaskObject withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public TaskObject(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrderApiTriggerEventJsonResponse {
     
     public String contentType;
+
     public OrderApiTriggerEventJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OrderApiTriggerEventJsonResponse {
      */
     
     public java.util.Map<String, Object> orderApiTriggerEventJSON200ApplicationJSONObject;
+
     public OrderApiTriggerEventJsonResponse withOrderApiTriggerEventJSON200ApplicationJSONObject(java.util.Map<String, Object> orderApiTriggerEventJSON200ApplicationJSONObject) {
         this.orderApiTriggerEventJSON200ApplicationJSONObject = orderApiTriggerEventJSON200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class OrderApiTriggerEventJsonResponse {
      */
     
     public java.util.Map<String, Object> orderApiTriggerEventJSON200TextJSONObject;
+
     public OrderApiTriggerEventJsonResponse withOrderApiTriggerEventJSON200TextJSONObject(java.util.Map<String, Object> orderApiTriggerEventJSON200TextJSONObject) {
         this.orderApiTriggerEventJSON200TextJSONObject = orderApiTriggerEventJSON200TextJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class OrderApiTriggerEventJsonResponse {
     
     
     public Integer statusCode;
+
     public OrderApiTriggerEventJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class OrderApiTriggerEventJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrderApiTriggerEventJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OrderApiTriggerEventJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

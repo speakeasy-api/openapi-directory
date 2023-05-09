@@ -15,6 +15,7 @@ public class ListLicenseManagerReportGeneratorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLicenseManagerReportGeneratorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListLicenseManagerReportGeneratorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportGenerators")
     public ReportGenerator[] reportGenerators;
+
     public ListLicenseManagerReportGeneratorsResponse withReportGenerators(ReportGenerator[] reportGenerators) {
         this.reportGenerators = reportGenerators;
         return this;
     }
     
+    public ListLicenseManagerReportGeneratorsResponse(){}
 }

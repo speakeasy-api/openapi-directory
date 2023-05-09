@@ -15,6 +15,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public Integer bindStatus;
+
     public DestinyEntitiesItemsDestinyItemComponent withBindStatus(Integer bindStatus) {
         this.bindStatus = bindStatus;
         return this;
@@ -25,6 +26,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public Long bucketHash;
+
     public DestinyEntitiesItemsDestinyItemComponent withBucketHash(Long bucketHash) {
         this.bucketHash = bucketHash;
         return this;
@@ -35,6 +37,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public OffsetDateTime expirationDate;
+
     public DestinyEntitiesItemsDestinyItemComponent withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -46,6 +49,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public Boolean isWrapper;
+
     public DestinyEntitiesItemsDestinyItemComponent withIsWrapper(Boolean isWrapper) {
         this.isWrapper = isWrapper;
         return this;
@@ -56,6 +60,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public Long itemHash;
+
     public DestinyEntitiesItemsDestinyItemComponent withItemHash(Long itemHash) {
         this.itemHash = itemHash;
         return this;
@@ -66,6 +71,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public Long itemInstanceId;
+
     public DestinyEntitiesItemsDestinyItemComponent withItemInstanceId(Long itemInstanceId) {
         this.itemInstanceId = itemInstanceId;
         return this;
@@ -76,6 +82,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public Boolean[] itemValueVisibility;
+
     public DestinyEntitiesItemsDestinyItemComponent withItemValueVisibility(Boolean[] itemValueVisibility) {
         this.itemValueVisibility = itemValueVisibility;
         return this;
@@ -86,6 +93,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public Integer location;
+
     public DestinyEntitiesItemsDestinyItemComponent withLocation(Integer location) {
         this.location = location;
         return this;
@@ -96,6 +104,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public Boolean lockable;
+
     public DestinyEntitiesItemsDestinyItemComponent withLockable(Boolean lockable) {
         this.lockable = lockable;
         return this;
@@ -106,6 +115,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public Long metricHash;
+
     public DestinyEntitiesItemsDestinyItemComponent withMetricHash(Long metricHash) {
         this.metricHash = metricHash;
         return this;
@@ -116,6 +126,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public DestinyEntitiesItemsDestinyItemComponentMetricObjective metricObjective;
+
     public DestinyEntitiesItemsDestinyItemComponent withMetricObjective(DestinyEntitiesItemsDestinyItemComponentMetricObjective metricObjective) {
         this.metricObjective = metricObjective;
         return this;
@@ -127,6 +138,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public Long overrideStyleItemHash;
+
     public DestinyEntitiesItemsDestinyItemComponent withOverrideStyleItemHash(Long overrideStyleItemHash) {
         this.overrideStyleItemHash = overrideStyleItemHash;
         return this;
@@ -137,6 +149,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public Integer quantity;
+
     public DestinyEntitiesItemsDestinyItemComponent withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -147,6 +160,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public Integer state;
+
     public DestinyEntitiesItemsDestinyItemComponent withState(Integer state) {
         this.state = state;
         return this;
@@ -157,6 +171,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public Integer[] tooltipNotificationIndexes;
+
     public DestinyEntitiesItemsDestinyItemComponent withTooltipNotificationIndexes(Integer[] tooltipNotificationIndexes) {
         this.tooltipNotificationIndexes = tooltipNotificationIndexes;
         return this;
@@ -167,6 +182,7 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public Integer transferStatus;
+
     public DestinyEntitiesItemsDestinyItemComponent withTransferStatus(Integer transferStatus) {
         this.transferStatus = transferStatus;
         return this;
@@ -177,9 +193,11 @@ public class DestinyEntitiesItemsDestinyItemComponent {
      */
     
     public Integer versionNumber;
+
     public DestinyEntitiesItemsDestinyItemComponent withVersionNumber(Integer versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public DestinyEntitiesItemsDestinyItemComponent(){}
 }

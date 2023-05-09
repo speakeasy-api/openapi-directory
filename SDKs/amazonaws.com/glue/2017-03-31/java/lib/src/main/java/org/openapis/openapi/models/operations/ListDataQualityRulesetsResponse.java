@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDataQualityRulesetsResponse {
     
     public String contentType;
+
     public ListDataQualityRulesetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDataQualityRulesetsResponse {
      */
     
     public Object entityNotFoundException;
+
     public ListDataQualityRulesetsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class ListDataQualityRulesetsResponse {
      */
     
     public Object internalServiceException;
+
     public ListDataQualityRulesetsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListDataQualityRulesetsResponse {
      */
     
     public Object invalidInputException;
+
     public ListDataQualityRulesetsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListDataQualityRulesetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDataQualityRulesetsResponse listDataQualityRulesetsResponse;
+
     public ListDataQualityRulesetsResponse withListDataQualityRulesetsResponse(org.openapis.openapi.models.shared.ListDataQualityRulesetsResponse listDataQualityRulesetsResponse) {
         this.listDataQualityRulesetsResponse = listDataQualityRulesetsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListDataQualityRulesetsResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListDataQualityRulesetsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class ListDataQualityRulesetsResponse {
     
     
     public Integer statusCode;
+
     public ListDataQualityRulesetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListDataQualityRulesetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDataQualityRulesetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDataQualityRulesetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

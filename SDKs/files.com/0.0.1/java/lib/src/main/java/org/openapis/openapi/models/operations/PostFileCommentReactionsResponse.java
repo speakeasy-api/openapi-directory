@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostFileCommentReactionsResponse {
     
     public String contentType;
+
     public PostFileCommentReactionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostFileCommentReactionsResponse {
      */
     
     public org.openapis.openapi.models.shared.FileCommentReactionEntity fileCommentReactionEntity;
+
     public PostFileCommentReactionsResponse withFileCommentReactionEntity(org.openapis.openapi.models.shared.FileCommentReactionEntity fileCommentReactionEntity) {
         this.fileCommentReactionEntity = fileCommentReactionEntity;
         return this;
@@ -26,6 +29,7 @@ public class PostFileCommentReactionsResponse {
     
     
     public Integer statusCode;
+
     public PostFileCommentReactionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostFileCommentReactionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostFileCommentReactionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostFileCommentReactionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

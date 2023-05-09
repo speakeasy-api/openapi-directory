@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateSchedulingPolicyResponse {
     @JsonProperty("arn")
     public String arn;
+
     public CreateSchedulingPolicyResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,14 @@ public class CreateSchedulingPolicyResponse {
     
     @JsonProperty("name")
     public String name;
+
     public CreateSchedulingPolicyResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateSchedulingPolicyResponse(@JsonProperty("arn") String arn, @JsonProperty("name") String name) {
+        this.arn = arn;
+        this.name = name;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeComputeResponse {
     
     public String contentType;
+
     public DescribeComputeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeComputeResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeComputeOutput describeComputeOutput;
+
     public DescribeComputeResponse withDescribeComputeOutput(org.openapis.openapi.models.shared.DescribeComputeOutput describeComputeOutput) {
         this.describeComputeOutput = describeComputeOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeComputeResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeComputeResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeComputeResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeComputeResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeComputeResponse {
      */
     
     public Object notFoundException;
+
     public DescribeComputeResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeComputeResponse {
     
     
     public Integer statusCode;
+
     public DescribeComputeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeComputeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeComputeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeComputeResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeComputeResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeComputeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

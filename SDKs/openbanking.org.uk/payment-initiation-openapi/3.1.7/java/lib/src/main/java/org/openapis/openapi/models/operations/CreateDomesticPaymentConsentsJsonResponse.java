@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDomesticPaymentConsentsJsonResponse {
     
     public byte[] body;
+
     public CreateDomesticPaymentConsentsJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CreateDomesticPaymentConsentsJsonResponse {
     
     
     public String contentType;
+
     public CreateDomesticPaymentConsentsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CreateDomesticPaymentConsentsJsonResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreateDomesticPaymentConsentsJsonResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class CreateDomesticPaymentConsentsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public CreateDomesticPaymentConsentsJsonResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -43,6 +48,7 @@ public class CreateDomesticPaymentConsentsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBWriteDomesticConsentResponse5 obWriteDomesticConsentResponse5;
+
     public CreateDomesticPaymentConsentsJsonResponse withOBWriteDomesticConsentResponse5(org.openapis.openapi.models.shared.OBWriteDomesticConsentResponse5 obWriteDomesticConsentResponse5) {
         this.obWriteDomesticConsentResponse5 = obWriteDomesticConsentResponse5;
         return this;
@@ -50,6 +56,7 @@ public class CreateDomesticPaymentConsentsJsonResponse {
     
     
     public Integer statusCode;
+
     public CreateDomesticPaymentConsentsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class CreateDomesticPaymentConsentsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDomesticPaymentConsentsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDomesticPaymentConsentsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

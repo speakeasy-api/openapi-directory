@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CostAllocationTag {
     @JsonProperty("Status")
     public CostAllocationTagStatusEnum status;
+
     public CostAllocationTag withStatus(CostAllocationTagStatusEnum status) {
         this.status = status;
         return this;
@@ -19,6 +20,7 @@ public class CostAllocationTag {
     
     @JsonProperty("TagKey")
     public String tagKey;
+
     public CostAllocationTag withTagKey(String tagKey) {
         this.tagKey = tagKey;
         return this;
@@ -26,9 +28,15 @@ public class CostAllocationTag {
     
     @JsonProperty("Type")
     public CostAllocationTagTypeEnum type;
+
     public CostAllocationTag withType(CostAllocationTagTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CostAllocationTag(@JsonProperty("Status") CostAllocationTagStatusEnum status, @JsonProperty("TagKey") String tagKey, @JsonProperty("Type") CostAllocationTagTypeEnum type) {
+        this.status = status;
+        this.tagKey = tagKey;
+        this.type = type;
+  }
 }

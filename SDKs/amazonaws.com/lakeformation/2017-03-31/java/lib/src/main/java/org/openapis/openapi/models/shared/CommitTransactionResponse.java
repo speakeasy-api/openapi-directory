@@ -15,9 +15,11 @@ public class CommitTransactionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionStatus")
     public TransactionStatusEnum transactionStatus;
+
     public CommitTransactionResponse withTransactionStatus(TransactionStatusEnum transactionStatus) {
         this.transactionStatus = transactionStatus;
         return this;
     }
     
+    public CommitTransactionResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectDominantLanguageResponse {
     
     public String contentType;
+
     public DetectDominantLanguageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DetectDominantLanguageResponse {
      */
     
     public org.openapis.openapi.models.shared.DetectDominantLanguageResponse detectDominantLanguageResponse;
+
     public DetectDominantLanguageResponse withDetectDominantLanguageResponse(org.openapis.openapi.models.shared.DetectDominantLanguageResponse detectDominantLanguageResponse) {
         this.detectDominantLanguageResponse = detectDominantLanguageResponse;
         return this;
@@ -29,6 +32,7 @@ public class DetectDominantLanguageResponse {
      */
     
     public Object internalServerException;
+
     public DetectDominantLanguageResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DetectDominantLanguageResponse {
      */
     
     public Object invalidRequestException;
+
     public DetectDominantLanguageResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DetectDominantLanguageResponse {
     
     
     public Integer statusCode;
+
     public DetectDominantLanguageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DetectDominantLanguageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectDominantLanguageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DetectDominantLanguageResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public DetectDominantLanguageResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
     }
     
+    public DetectDominantLanguageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

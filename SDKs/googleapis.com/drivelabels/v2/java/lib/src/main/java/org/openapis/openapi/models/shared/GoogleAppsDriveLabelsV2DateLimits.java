@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2DateLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public GoogleTypeDate maxValue;
+
     public GoogleAppsDriveLabelsV2DateLimits withMaxValue(GoogleTypeDate maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2DateLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public GoogleTypeDate minValue;
+
     public GoogleAppsDriveLabelsV2DateLimits withMinValue(GoogleTypeDate minValue) {
         this.minValue = minValue;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2DateLimits(){}
 }

@@ -61,11 +61,9 @@ public class Scripts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ScriptScriptsRunResponse res = new org.openapis.openapi.models.operations.ScriptScriptsRunResponse() {{
+        org.openapis.openapi.models.operations.ScriptScriptsRunResponse res = new org.openapis.openapi.models.operations.ScriptScriptsRunResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

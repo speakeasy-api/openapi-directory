@@ -15,6 +15,7 @@ public class ListFirewallPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallPolicies")
     public FirewallPolicyMetadata[] firewallPolicies;
+
     public ListFirewallPoliciesResponse withFirewallPolicies(FirewallPolicyMetadata[] firewallPolicies) {
         this.firewallPolicies = firewallPolicies;
         return this;
@@ -23,9 +24,11 @@ public class ListFirewallPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFirewallPoliciesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFirewallPoliciesResponse(){}
 }

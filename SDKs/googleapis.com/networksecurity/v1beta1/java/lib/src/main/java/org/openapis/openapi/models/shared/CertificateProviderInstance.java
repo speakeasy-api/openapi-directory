@@ -18,9 +18,11 @@ public class CertificateProviderInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pluginInstance")
     public String pluginInstance;
+
     public CertificateProviderInstance withPluginInstance(String pluginInstance) {
         this.pluginInstance = pluginInstance;
         return this;
     }
     
+    public CertificateProviderInstance(){}
 }

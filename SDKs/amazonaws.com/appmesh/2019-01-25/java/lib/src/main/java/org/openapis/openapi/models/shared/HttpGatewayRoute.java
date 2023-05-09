@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HttpGatewayRoute {
     @JsonProperty("action")
     public HttpGatewayRouteAction action;
+
     public HttpGatewayRoute withAction(HttpGatewayRouteAction action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class HttpGatewayRoute {
     
     @JsonProperty("match")
     public HttpGatewayRouteMatch match;
+
     public HttpGatewayRoute withMatch(HttpGatewayRouteMatch match) {
         this.match = match;
         return this;
     }
     
+    public HttpGatewayRoute(@JsonProperty("action") HttpGatewayRouteAction action, @JsonProperty("match") HttpGatewayRouteMatch match) {
+        this.action = action;
+        this.match = match;
+  }
 }

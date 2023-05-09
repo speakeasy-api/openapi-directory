@@ -49,14 +49,12 @@ public class PicoSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PicoSettingsGetResponse res = new org.openapis.openapi.models.operations.PicoSettingsGetResponse() {{
+        org.openapis.openapi.models.operations.PicoSettingsGetResponse res = new org.openapis.openapi.models.operations.PicoSettingsGetResponse(contentType, httpRes.statusCode()) {{
             picoSettingsDto = null;
             picoSettingsDto = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

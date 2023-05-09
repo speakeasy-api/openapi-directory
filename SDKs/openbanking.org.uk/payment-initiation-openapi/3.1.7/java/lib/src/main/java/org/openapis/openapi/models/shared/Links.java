@@ -15,6 +15,7 @@ public class Links {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("First")
     public String first;
+
     public Links withFirst(String first) {
         this.first = first;
         return this;
@@ -23,6 +24,7 @@ public class Links {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Last")
     public String last;
+
     public Links withLast(String last) {
         this.last = last;
         return this;
@@ -31,6 +33,7 @@ public class Links {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Next")
     public String next;
+
     public Links withNext(String next) {
         this.next = next;
         return this;
@@ -39,6 +42,7 @@ public class Links {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prev")
     public String prev;
+
     public Links withPrev(String prev) {
         this.prev = prev;
         return this;
@@ -46,9 +50,13 @@ public class Links {
     
     @JsonProperty("Self")
     public String self;
+
     public Links withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public Links(@JsonProperty("Self") String self) {
+        this.self = self;
+  }
 }

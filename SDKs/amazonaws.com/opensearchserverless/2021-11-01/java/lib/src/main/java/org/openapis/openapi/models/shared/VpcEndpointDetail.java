@@ -15,6 +15,7 @@ public class VpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdDate")
     public Long createdDate;
+
     public VpcEndpointDetail withCreatedDate(Long createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -23,6 +24,7 @@ public class VpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public VpcEndpointDetail withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class VpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VpcEndpointDetail withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class VpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public VpcEndpointDetail withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -47,6 +51,7 @@ public class VpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public VpcEndpointStatusEnum status;
+
     public VpcEndpointDetail withStatus(VpcEndpointStatusEnum status) {
         this.status = status;
         return this;
@@ -55,6 +60,7 @@ public class VpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public VpcEndpointDetail withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -63,9 +69,11 @@ public class VpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcId")
     public String vpcId;
+
     public VpcEndpointDetail withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public VpcEndpointDetail(){}
 }

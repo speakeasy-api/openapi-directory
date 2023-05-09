@@ -18,6 +18,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("column")
     public String column;
+
     public Position withColumn(String column) {
         this.column = column;
         return this;
@@ -29,6 +30,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public String length;
+
     public Position withLength(String length) {
         this.length = length;
         return this;
@@ -40,9 +42,11 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line")
     public String line;
+
     public Position withLine(String line) {
         this.line = line;
         return this;
     }
     
+    public Position(){}
 }

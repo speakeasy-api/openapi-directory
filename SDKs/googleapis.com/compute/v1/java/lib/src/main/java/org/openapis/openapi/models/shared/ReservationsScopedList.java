@@ -15,6 +15,7 @@ public class ReservationsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservations")
     public Reservation[] reservations;
+
     public ReservationsScopedList withReservations(Reservation[] reservations) {
         this.reservations = reservations;
         return this;
@@ -26,9 +27,11 @@ public class ReservationsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public ReservationsScopedListWarning warning;
+
     public ReservationsScopedList withWarning(ReservationsScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public ReservationsScopedList(){}
 }

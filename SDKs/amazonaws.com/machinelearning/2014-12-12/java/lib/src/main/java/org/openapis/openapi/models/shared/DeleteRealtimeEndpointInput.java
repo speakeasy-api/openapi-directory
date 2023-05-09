@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRealtimeEndpointInput {
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public DeleteRealtimeEndpointInput withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
     }
     
+    public DeleteRealtimeEndpointInput(@JsonProperty("MLModelId") String mlModelId) {
+        this.mlModelId = mlModelId;
+  }
 }

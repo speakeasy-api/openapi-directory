@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ExportTransitGatewayRoutesRequestFilters {
     
     public String name;
+
     public ExportTransitGatewayRoutesRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class ExportTransitGatewayRoutesRequestFilters {
     
     
     public String[] values;
+
     public ExportTransitGatewayRoutesRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ExportTransitGatewayRoutesRequestFilters(){}
 }

@@ -12,6 +12,7 @@ public class UpdateUserProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public UpdateUserProfileRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -20,6 +21,7 @@ public class UpdateUserProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public UpdateUserProfileRequest withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -28,6 +30,7 @@ public class UpdateUserProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshPublicKey")
     public String sshPublicKey;
+
     public UpdateUserProfileRequest withSshPublicKey(String sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
@@ -35,9 +38,13 @@ public class UpdateUserProfileRequest {
     
     @JsonProperty("userArn")
     public String userArn;
+
     public UpdateUserProfileRequest withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public UpdateUserProfileRequest(@JsonProperty("userArn") String userArn) {
+        this.userArn = userArn;
+  }
 }

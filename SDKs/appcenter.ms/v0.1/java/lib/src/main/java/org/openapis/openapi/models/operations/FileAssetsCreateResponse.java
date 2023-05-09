@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FileAssetsCreateResponse {
     
     public String contentType;
+
     public FileAssetsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class FileAssetsCreateResponse {
     
     
     public Integer statusCode;
+
     public FileAssetsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class FileAssetsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FileAssetsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class FileAssetsCreateResponse {
      */
     
     public FileAssetsCreate200ApplicationJSON fileAssetsCreate200ApplicationJSONObject;
+
     public FileAssetsCreateResponse withFileAssetsCreate200ApplicationJSONObject(FileAssetsCreate200ApplicationJSON fileAssetsCreate200ApplicationJSONObject) {
         this.fileAssetsCreate200ApplicationJSONObject = fileAssetsCreate200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class FileAssetsCreateResponse {
      */
     
     public FileAssetsCreateDefaultApplicationJSON fileAssetsCreateDefaultApplicationJSONObject;
+
     public FileAssetsCreateResponse withFileAssetsCreateDefaultApplicationJSONObject(FileAssetsCreateDefaultApplicationJSON fileAssetsCreateDefaultApplicationJSONObject) {
         this.fileAssetsCreateDefaultApplicationJSONObject = fileAssetsCreateDefaultApplicationJSONObject;
         return this;
     }
     
+    public FileAssetsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

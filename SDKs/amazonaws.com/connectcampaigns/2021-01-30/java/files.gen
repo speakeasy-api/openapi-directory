@@ -122,4 +122,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/FailureCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DialRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartInstanceOnboardingJobResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

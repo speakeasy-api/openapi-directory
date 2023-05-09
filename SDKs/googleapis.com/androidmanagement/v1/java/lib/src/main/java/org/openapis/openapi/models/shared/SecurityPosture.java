@@ -18,6 +18,7 @@ public class SecurityPosture {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devicePosture")
     public SecurityPostureDevicePostureEnum devicePosture;
+
     public SecurityPosture withDevicePosture(SecurityPostureDevicePostureEnum devicePosture) {
         this.devicePosture = devicePosture;
         return this;
@@ -29,9 +30,11 @@ public class SecurityPosture {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postureDetails")
     public PostureDetail[] postureDetails;
+
     public SecurityPosture withPostureDetails(PostureDetail[] postureDetails) {
         this.postureDetails = postureDetails;
         return this;
     }
     
+    public SecurityPosture(){}
 }

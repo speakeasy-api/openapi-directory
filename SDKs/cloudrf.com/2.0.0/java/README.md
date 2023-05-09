@@ -16,10 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.InterferenceSecurity;
 import org.openapis.openapi.models.operations.InterferenceRequest;
 import org.openapis.openapi.models.operations.InterferenceResponse;
+import org.openapis.openapi.models.operations.InterferenceSecurity;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,12 +27,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            InterferenceRequest req = new InterferenceRequest() {{
-                name = "corrupti";
-                network = "provident";
-            }}            
+            InterferenceRequest req = new InterferenceRequest("corrupti", "provident");            
 
-            InterferenceResponse res = sdk.analyse.interference(req, new InterferenceSecurity() {{
+            InterferenceResponse res = sdk.analyse.interference(req, new InterferenceSecurity("distinctio") {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
@@ -42,6 +39,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -49,25 +48,25 @@ public class Application {
 ## Available Resources and Operations
 
 
-### analyse
+### [analyse](docs/analyse/README.md)
 
-* `interference` - Find the best server for overlapping coverage
-* `mesh` - Merge sites into a super layer.
-* `network` - Find the best server for somewhere
+* [interference](docs/analyse/README.md#interference) - Find the best server for overlapping coverage
+* [mesh](docs/analyse/README.md#mesh) - Merge sites into a super layer.
+* [network](docs/analyse/README.md#network) - Find the best server for somewhere
 
-### create
+### [create](docs/create/README.md)
 
-* `area` - Create a point-to-multipoint heatmap
-* `path` - Point-to-point path profile analysis (Tx to Rx)
-* `points` - Point-to-multipoint path profile analysis (Many Tx, one Rx)
+* [area](docs/create/README.md#area) - Create a point-to-multipoint heatmap
+* [path](docs/create/README.md#path) - Point-to-point path profile analysis (Tx to Rx)
+* [points](docs/create/README.md#points) - Point-to-multipoint path profile analysis (Many Tx, one Rx)
 
-### manage
+### [manage](docs/manage/README.md)
 
-* `addClutter` - Upload clutter data as GeoJSON
-* `delete` - Delete a calculation from the database.
-* `deleteNetwork` - Delete an entire network
-* `export` - Export a calculation in a GIS file format
-* `list` - List calculations from your archive
+* [addClutter](docs/manage/README.md#addclutter) - Upload clutter data as GeoJSON
+* [delete](docs/manage/README.md#delete) - Delete a calculation from the database.
+* [deleteNetwork](docs/manage/README.md#deletenetwork) - Delete an entire network
+* [export](docs/manage/README.md#export) - Export a calculation in a GIS file format
+* [list](docs/manage/README.md#list) - List calculations from your archive
 <!-- End SDK Available Operations -->
 
 ### Maturity

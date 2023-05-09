@@ -15,9 +15,11 @@ public class ListVariantStoresRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public org.openapis.openapi.models.shared.StoreStatusEnum status;
+
     public ListVariantStoresRequestBodyFilter withStatus(org.openapis.openapi.models.shared.StoreStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListVariantStoresRequestBodyFilter(){}
 }

@@ -18,6 +18,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Attribute[] attributes;
+
     public Attributes withAttributes(Attribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -29,9 +30,11 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Attributes withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Attributes(){}
 }

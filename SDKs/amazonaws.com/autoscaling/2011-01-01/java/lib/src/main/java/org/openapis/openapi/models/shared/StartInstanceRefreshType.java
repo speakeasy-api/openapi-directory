@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StartInstanceRefreshType {
     
     public String autoScalingGroupName;
+
     public StartInstanceRefreshType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class StartInstanceRefreshType {
     
     
     public DesiredConfiguration desiredConfiguration;
+
     public StartInstanceRefreshType withDesiredConfiguration(DesiredConfiguration desiredConfiguration) {
         this.desiredConfiguration = desiredConfiguration;
         return this;
@@ -23,6 +25,7 @@ public class StartInstanceRefreshType {
     
     
     public RefreshPreferences preferences;
+
     public StartInstanceRefreshType withPreferences(RefreshPreferences preferences) {
         this.preferences = preferences;
         return this;
@@ -30,9 +33,13 @@ public class StartInstanceRefreshType {
     
     
     public RefreshStrategyEnum strategy;
+
     public StartInstanceRefreshType withStrategy(RefreshStrategyEnum strategy) {
         this.strategy = strategy;
         return this;
     }
     
+    public StartInstanceRefreshType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+  }
 }

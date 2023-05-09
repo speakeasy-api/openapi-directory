@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2AccessTokensUuidRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
     public String uuid;
+
     public GetV2AccessTokensUuidRequest withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public GetV2AccessTokensUuidRequest(@JsonProperty("uuid") String uuid) {
+        this.uuid = uuid;
+  }
 }

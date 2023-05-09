@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveCustomFieldSettingForProjectRequest {
@@ -12,6 +13,7 @@ public class RemoveCustomFieldSettingForProjectRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public RemoveCustomFieldSettingForProjectRequestBody requestBody;
+
     public RemoveCustomFieldSettingForProjectRequest withRequestBody(RemoveCustomFieldSettingForProjectRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +25,7 @@ public class RemoveCustomFieldSettingForProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public RemoveCustomFieldSettingForProjectRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -33,9 +36,14 @@ public class RemoveCustomFieldSettingForProjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_gid")
     public String projectGid;
+
     public RemoveCustomFieldSettingForProjectRequest withProjectGid(String projectGid) {
         this.projectGid = projectGid;
         return this;
     }
     
+    public RemoveCustomFieldSettingForProjectRequest(@JsonProperty("RequestBody") RemoveCustomFieldSettingForProjectRequestBody requestBody, @JsonProperty("project_gid") String projectGid) {
+        this.requestBody = requestBody;
+        this.projectGid = projectGid;
+  }
 }

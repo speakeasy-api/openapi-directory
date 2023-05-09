@@ -18,6 +18,7 @@ public class PartitionId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceId")
     public String namespaceId;
+
     public PartitionId withNamespaceId(String namespaceId) {
         this.namespaceId = namespaceId;
         return this;
@@ -29,9 +30,11 @@ public class PartitionId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public PartitionId withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public PartitionId(){}
 }

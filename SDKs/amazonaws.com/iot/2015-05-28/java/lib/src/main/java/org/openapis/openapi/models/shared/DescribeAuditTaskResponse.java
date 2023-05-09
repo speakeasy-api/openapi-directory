@@ -20,6 +20,7 @@ public class DescribeAuditTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditDetails")
     public java.util.Map<String, AuditCheckDetails> auditDetails;
+
     public DescribeAuditTaskResponse withAuditDetails(java.util.Map<String, AuditCheckDetails> auditDetails) {
         this.auditDetails = auditDetails;
         return this;
@@ -28,6 +29,7 @@ public class DescribeAuditTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledAuditName")
     public String scheduledAuditName;
+
     public DescribeAuditTaskResponse withScheduledAuditName(String scheduledAuditName) {
         this.scheduledAuditName = scheduledAuditName;
         return this;
@@ -38,6 +40,7 @@ public class DescribeAuditTaskResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("taskStartTime")
     public OffsetDateTime taskStartTime;
+
     public DescribeAuditTaskResponse withTaskStartTime(OffsetDateTime taskStartTime) {
         this.taskStartTime = taskStartTime;
         return this;
@@ -46,6 +49,7 @@ public class DescribeAuditTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskStatistics")
     public TaskStatistics taskStatistics;
+
     public DescribeAuditTaskResponse withTaskStatistics(TaskStatistics taskStatistics) {
         this.taskStatistics = taskStatistics;
         return this;
@@ -54,6 +58,7 @@ public class DescribeAuditTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskStatus")
     public AuditTaskStatusEnum taskStatus;
+
     public DescribeAuditTaskResponse withTaskStatus(AuditTaskStatusEnum taskStatus) {
         this.taskStatus = taskStatus;
         return this;
@@ -62,9 +67,11 @@ public class DescribeAuditTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskType")
     public AuditTaskTypeEnum taskType;
+
     public DescribeAuditTaskResponse withTaskType(AuditTaskTypeEnum taskType) {
         this.taskType = taskType;
         return this;
     }
     
+    public DescribeAuditTaskResponse(){}
 }

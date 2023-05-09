@@ -57,11 +57,9 @@ public class CityDataStandardization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetcitystandardResponse res = new org.openapis.openapi.models.operations.GetcitystandardResponse() {{
+        org.openapis.openapi.models.operations.GetcitystandardResponse res = new org.openapis.openapi.models.operations.GetcitystandardResponse(contentType, httpRes.statusCode()) {{
             getcitystandard200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

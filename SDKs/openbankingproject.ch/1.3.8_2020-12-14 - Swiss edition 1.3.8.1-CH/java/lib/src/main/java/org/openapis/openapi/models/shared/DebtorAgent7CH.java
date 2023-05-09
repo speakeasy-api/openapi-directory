@@ -23,6 +23,7 @@ public class DebtorAgent7CH {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bic")
     public String bic;
+
     public DebtorAgent7CH withBic(String bic) {
         this.bic = bic;
         return this;
@@ -36,9 +37,11 @@ public class DebtorAgent7CH {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iid")
     public InstitutionalIdentification2 iid;
+
     public DebtorAgent7CH withIid(InstitutionalIdentification2 iid) {
         this.iid = iid;
         return this;
     }
     
+    public DebtorAgent7CH(){}
 }

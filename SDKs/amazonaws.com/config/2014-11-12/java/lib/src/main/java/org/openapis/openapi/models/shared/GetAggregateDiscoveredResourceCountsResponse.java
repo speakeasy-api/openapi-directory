@@ -15,6 +15,7 @@ public class GetAggregateDiscoveredResourceCountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupByKey")
     public String groupByKey;
+
     public GetAggregateDiscoveredResourceCountsResponse withGroupByKey(String groupByKey) {
         this.groupByKey = groupByKey;
         return this;
@@ -23,6 +24,7 @@ public class GetAggregateDiscoveredResourceCountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupedResourceCounts")
     public GroupedResourceCount[] groupedResourceCounts;
+
     public GetAggregateDiscoveredResourceCountsResponse withGroupedResourceCounts(GroupedResourceCount[] groupedResourceCounts) {
         this.groupedResourceCounts = groupedResourceCounts;
         return this;
@@ -31,6 +33,7 @@ public class GetAggregateDiscoveredResourceCountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetAggregateDiscoveredResourceCountsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -38,9 +41,13 @@ public class GetAggregateDiscoveredResourceCountsResponse {
     
     @JsonProperty("TotalDiscoveredResources")
     public Long totalDiscoveredResources;
+
     public GetAggregateDiscoveredResourceCountsResponse withTotalDiscoveredResources(Long totalDiscoveredResources) {
         this.totalDiscoveredResources = totalDiscoveredResources;
         return this;
     }
     
+    public GetAggregateDiscoveredResourceCountsResponse(@JsonProperty("TotalDiscoveredResources") Long totalDiscoveredResources) {
+        this.totalDiscoveredResources = totalDiscoveredResources;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ImportVolumeRequestImage - The disk image.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportVolumeRequestImage {
     
     public Long bytes;
+
     public ImportVolumeRequestImage withBytes(Long bytes) {
         this.bytes = bytes;
         return this;
@@ -19,6 +20,7 @@ public class ImportVolumeRequestImage {
     
     
     public ImportVolumeRequestImageFormatEnum format;
+
     public ImportVolumeRequestImage withFormat(ImportVolumeRequestImageFormatEnum format) {
         this.format = format;
         return this;
@@ -26,9 +28,15 @@ public class ImportVolumeRequestImage {
     
     
     public String importManifestUrl;
+
     public ImportVolumeRequestImage withImportManifestUrl(String importManifestUrl) {
         this.importManifestUrl = importManifestUrl;
         return this;
     }
     
+    public ImportVolumeRequestImage(@JsonProperty("Bytes") Long bytes, @JsonProperty("Format") ImportVolumeRequestImageFormatEnum format, @JsonProperty("ImportManifestUrl") String importManifestUrl) {
+        this.bytes = bytes;
+        this.format = format;
+        this.importManifestUrl = importManifestUrl;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateIntentRequestBodyIntentClosingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public CreateIntentRequestBodyIntentClosingSetting withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class CreateIntentRequestBodyIntentClosingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closingResponse")
     public org.openapis.openapi.models.shared.ResponseSpecification closingResponse;
+
     public CreateIntentRequestBodyIntentClosingSetting withClosingResponse(org.openapis.openapi.models.shared.ResponseSpecification closingResponse) {
         this.closingResponse = closingResponse;
         return this;
@@ -31,6 +33,7 @@ public class CreateIntentRequestBodyIntentClosingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditional")
     public org.openapis.openapi.models.shared.ConditionalSpecification conditional;
+
     public CreateIntentRequestBodyIntentClosingSetting withConditional(org.openapis.openapi.models.shared.ConditionalSpecification conditional) {
         this.conditional = conditional;
         return this;
@@ -39,9 +42,11 @@ public class CreateIntentRequestBodyIntentClosingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextStep")
     public org.openapis.openapi.models.shared.DialogState nextStep;
+
     public CreateIntentRequestBodyIntentClosingSetting withNextStep(org.openapis.openapi.models.shared.DialogState nextStep) {
         this.nextStep = nextStep;
         return this;
     }
     
+    public CreateIntentRequestBodyIntentClosingSetting(){}
 }

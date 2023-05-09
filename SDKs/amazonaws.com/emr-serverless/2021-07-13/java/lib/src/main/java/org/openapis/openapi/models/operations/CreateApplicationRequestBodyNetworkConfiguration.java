@@ -15,6 +15,7 @@ public class CreateApplicationRequestBodyNetworkConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public CreateApplicationRequestBodyNetworkConfiguration withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -23,9 +24,11 @@ public class CreateApplicationRequestBodyNetworkConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public CreateApplicationRequestBodyNetworkConfiguration withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public CreateApplicationRequestBodyNetworkConfiguration(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebBackendConnectionListItem {
     @JsonProperty("connectionId")
     public String connectionId;
+
     public WebBackendConnectionListItem withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -21,6 +22,7 @@ public class WebBackendConnectionListItem {
     
     @JsonProperty("destination")
     public DestinationSnippetRead destination;
+
     public WebBackendConnectionListItem withDestination(DestinationSnippetRead destination) {
         this.destination = destination;
         return this;
@@ -28,6 +30,7 @@ public class WebBackendConnectionListItem {
     
     @JsonProperty("isSyncing")
     public Boolean isSyncing;
+
     public WebBackendConnectionListItem withIsSyncing(Boolean isSyncing) {
         this.isSyncing = isSyncing;
         return this;
@@ -39,6 +42,7 @@ public class WebBackendConnectionListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestSyncJobCreatedAt")
     public Long latestSyncJobCreatedAt;
+
     public WebBackendConnectionListItem withLatestSyncJobCreatedAt(Long latestSyncJobCreatedAt) {
         this.latestSyncJobCreatedAt = latestSyncJobCreatedAt;
         return this;
@@ -47,6 +51,7 @@ public class WebBackendConnectionListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestSyncJobStatus")
     public JobStatusEnum latestSyncJobStatus;
+
     public WebBackendConnectionListItem withLatestSyncJobStatus(JobStatusEnum latestSyncJobStatus) {
         this.latestSyncJobStatus = latestSyncJobStatus;
         return this;
@@ -54,6 +59,7 @@ public class WebBackendConnectionListItem {
     
     @JsonProperty("name")
     public String name;
+
     public WebBackendConnectionListItem withName(String name) {
         this.name = name;
         return this;
@@ -65,6 +71,7 @@ public class WebBackendConnectionListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleData")
     public ConnectionScheduleData scheduleData;
+
     public WebBackendConnectionListItem withScheduleData(ConnectionScheduleData scheduleData) {
         this.scheduleData = scheduleData;
         return this;
@@ -76,6 +83,7 @@ public class WebBackendConnectionListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleType")
     public ConnectionScheduleTypeEnum scheduleType;
+
     public WebBackendConnectionListItem withScheduleType(ConnectionScheduleTypeEnum scheduleType) {
         this.scheduleType = scheduleType;
         return this;
@@ -83,6 +91,7 @@ public class WebBackendConnectionListItem {
     
     @JsonProperty("schemaChange")
     public SchemaChangeEnum schemaChange;
+
     public WebBackendConnectionListItem withSchemaChange(SchemaChangeEnum schemaChange) {
         this.schemaChange = schemaChange;
         return this;
@@ -90,6 +99,7 @@ public class WebBackendConnectionListItem {
     
     @JsonProperty("source")
     public SourceSnippetRead source;
+
     public WebBackendConnectionListItem withSource(SourceSnippetRead source) {
         this.source = source;
         return this;
@@ -100,9 +110,19 @@ public class WebBackendConnectionListItem {
      */
     @JsonProperty("status")
     public ConnectionStatusEnum status;
+
     public WebBackendConnectionListItem withStatus(ConnectionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public WebBackendConnectionListItem(@JsonProperty("connectionId") String connectionId, @JsonProperty("destination") DestinationSnippetRead destination, @JsonProperty("isSyncing") Boolean isSyncing, @JsonProperty("name") String name, @JsonProperty("schemaChange") SchemaChangeEnum schemaChange, @JsonProperty("source") SourceSnippetRead source, @JsonProperty("status") ConnectionStatusEnum status) {
+        this.connectionId = connectionId;
+        this.destination = destination;
+        this.isSyncing = isSyncing;
+        this.name = name;
+        this.schemaChange = schemaChange;
+        this.source = source;
+        this.status = status;
+  }
 }

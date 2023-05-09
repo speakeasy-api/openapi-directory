@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SetInstanceHealthQuery {
     
     public String healthStatus;
+
     public SetInstanceHealthQuery withHealthStatus(String healthStatus) {
         this.healthStatus = healthStatus;
         return this;
@@ -16,6 +17,7 @@ public class SetInstanceHealthQuery {
     
     
     public String instanceId;
+
     public SetInstanceHealthQuery withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -23,9 +25,14 @@ public class SetInstanceHealthQuery {
     
     
     public Boolean shouldRespectGracePeriod;
+
     public SetInstanceHealthQuery withShouldRespectGracePeriod(Boolean shouldRespectGracePeriod) {
         this.shouldRespectGracePeriod = shouldRespectGracePeriod;
         return this;
     }
     
+    public SetInstanceHealthQuery(@JsonProperty("HealthStatus") String healthStatus, @JsonProperty("InstanceId") String instanceId) {
+        this.healthStatus = healthStatus;
+        this.instanceId = instanceId;
+  }
 }

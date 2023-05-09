@@ -15,6 +15,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiseMode")
     public RouterBgpPeerAdvertiseModeEnum advertiseMode;
+
     public RouterBgpPeer withAdvertiseMode(RouterBgpPeerAdvertiseModeEnum advertiseMode) {
         this.advertiseMode = advertiseMode;
         return this;
@@ -26,6 +27,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisedGroups")
     public RouterBgpPeerAdvertisedGroupsEnum[] advertisedGroups;
+
     public RouterBgpPeer withAdvertisedGroups(RouterBgpPeerAdvertisedGroupsEnum[] advertisedGroups) {
         this.advertisedGroups = advertisedGroups;
         return this;
@@ -37,6 +39,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisedIpRanges")
     public RouterAdvertisedIpRange[] advertisedIpRanges;
+
     public RouterBgpPeer withAdvertisedIpRanges(RouterAdvertisedIpRange[] advertisedIpRanges) {
         this.advertisedIpRanges = advertisedIpRanges;
         return this;
@@ -48,6 +51,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisedRoutePriority")
     public Long advertisedRoutePriority;
+
     public RouterBgpPeer withAdvertisedRoutePriority(Long advertisedRoutePriority) {
         this.advertisedRoutePriority = advertisedRoutePriority;
         return this;
@@ -56,28 +60,31 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bfd")
     public RouterBgpPeerBfd bfd;
+
     public RouterBgpPeer withBfd(RouterBgpPeerBfd bfd) {
         this.bfd = bfd;
         return this;
     }
     
     /**
-     * User-defined Custom Learned Route IP range list for a BGP session.
+     * A list of user-defined custom learned route IP address ranges for a BGP session.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLearnedIpRanges")
     public RouterBgpPeerCustomLearnedIpRange[] customLearnedIpRanges;
+
     public RouterBgpPeer withCustomLearnedIpRanges(RouterBgpPeerCustomLearnedIpRange[] customLearnedIpRanges) {
         this.customLearnedIpRanges = customLearnedIpRanges;
         return this;
     }
     
     /**
-     * User-defined Custom Learned Route Priority for a BGP session. This will be applied to all Custom Learned Route ranges of the BGP session, if not given, google-managed priority of 100 is used.
+     * The user-defined custom learned route priority for a BGP session. This value is applied to all custom learned route ranges for the session. You can choose a value from `0` to `65335`. If you don't provide a value, Google Cloud assigns a priority of `100` to the ranges.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLearnedRoutePriority")
     public Integer customLearnedRoutePriority;
+
     public RouterBgpPeer withCustomLearnedRoutePriority(Integer customLearnedRoutePriority) {
         this.customLearnedRoutePriority = customLearnedRoutePriority;
         return this;
@@ -89,6 +96,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable")
     public RouterBgpPeerEnableEnum enable;
+
     public RouterBgpPeer withEnable(RouterBgpPeerEnableEnum enable) {
         this.enable = enable;
         return this;
@@ -100,6 +108,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableIpv6")
     public Boolean enableIpv6;
+
     public RouterBgpPeer withEnableIpv6(Boolean enableIpv6) {
         this.enableIpv6 = enableIpv6;
         return this;
@@ -111,6 +120,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interfaceName")
     public String interfaceName;
+
     public RouterBgpPeer withInterfaceName(String interfaceName) {
         this.interfaceName = interfaceName;
         return this;
@@ -122,6 +132,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public RouterBgpPeer withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -133,6 +144,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6NexthopAddress")
     public String ipv6NexthopAddress;
+
     public RouterBgpPeer withIpv6NexthopAddress(String ipv6NexthopAddress) {
         this.ipv6NexthopAddress = ipv6NexthopAddress;
         return this;
@@ -144,6 +156,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managementType")
     public RouterBgpPeerManagementTypeEnum managementType;
+
     public RouterBgpPeer withManagementType(RouterBgpPeerManagementTypeEnum managementType) {
         this.managementType = managementType;
         return this;
@@ -155,6 +168,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("md5AuthenticationKeyName")
     public String md5AuthenticationKeyName;
+
     public RouterBgpPeer withMd5AuthenticationKeyName(String md5AuthenticationKeyName) {
         this.md5AuthenticationKeyName = md5AuthenticationKeyName;
         return this;
@@ -166,6 +180,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RouterBgpPeer withName(String name) {
         this.name = name;
         return this;
@@ -177,6 +192,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerAsn")
     public Long peerAsn;
+
     public RouterBgpPeer withPeerAsn(Long peerAsn) {
         this.peerAsn = peerAsn;
         return this;
@@ -188,6 +204,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerIpAddress")
     public String peerIpAddress;
+
     public RouterBgpPeer withPeerIpAddress(String peerIpAddress) {
         this.peerIpAddress = peerIpAddress;
         return this;
@@ -199,6 +216,7 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerIpv6NexthopAddress")
     public String peerIpv6NexthopAddress;
+
     public RouterBgpPeer withPeerIpv6NexthopAddress(String peerIpv6NexthopAddress) {
         this.peerIpv6NexthopAddress = peerIpv6NexthopAddress;
         return this;
@@ -210,9 +228,11 @@ public class RouterBgpPeer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routerApplianceInstance")
     public String routerApplianceInstance;
+
     public RouterBgpPeer withRouterApplianceInstance(String routerApplianceInstance) {
         this.routerApplianceInstance = routerApplianceInstance;
         return this;
     }
     
+    public RouterBgpPeer(){}
 }

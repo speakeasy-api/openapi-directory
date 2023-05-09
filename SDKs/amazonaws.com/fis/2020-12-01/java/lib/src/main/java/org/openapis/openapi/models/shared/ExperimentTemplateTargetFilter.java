@@ -15,6 +15,7 @@ public class ExperimentTemplateTargetFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public ExperimentTemplateTargetFilter withPath(String path) {
         this.path = path;
         return this;
@@ -23,9 +24,11 @@ public class ExperimentTemplateTargetFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public ExperimentTemplateTargetFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ExperimentTemplateTargetFilter(){}
 }

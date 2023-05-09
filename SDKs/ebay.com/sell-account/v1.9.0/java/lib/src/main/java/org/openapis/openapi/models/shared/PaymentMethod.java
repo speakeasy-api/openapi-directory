@@ -18,6 +18,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brands")
     public String[] brands;
+
     public PaymentMethod withBrands(String[] brands) {
         this.brands = brands;
         return this;
@@ -29,6 +30,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethodType")
     public String paymentMethodType;
+
     public PaymentMethod withPaymentMethodType(String paymentMethodType) {
         this.paymentMethodType = paymentMethodType;
         return this;
@@ -40,9 +42,11 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipientAccountReference")
     public RecipientAccountReference recipientAccountReference;
+
     public PaymentMethod withRecipientAccountReference(RecipientAccountReference recipientAccountReference) {
         this.recipientAccountReference = recipientAccountReference;
         return this;
     }
     
+    public PaymentMethod(){}
 }

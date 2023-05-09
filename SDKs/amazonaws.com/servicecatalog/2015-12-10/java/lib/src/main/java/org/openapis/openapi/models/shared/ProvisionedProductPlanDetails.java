@@ -22,6 +22,7 @@ public class ProvisionedProductPlanDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public ProvisionedProductPlanDetails withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -30,6 +31,7 @@ public class ProvisionedProductPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationArns")
     public String[] notificationArns;
+
     public ProvisionedProductPlanDetails withNotificationArns(String[] notificationArns) {
         this.notificationArns = notificationArns;
         return this;
@@ -38,6 +40,7 @@ public class ProvisionedProductPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PathId")
     public String pathId;
+
     public ProvisionedProductPlanDetails withPathId(String pathId) {
         this.pathId = pathId;
         return this;
@@ -46,6 +49,7 @@ public class ProvisionedProductPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlanId")
     public String planId;
+
     public ProvisionedProductPlanDetails withPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -54,6 +58,7 @@ public class ProvisionedProductPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlanName")
     public String planName;
+
     public ProvisionedProductPlanDetails withPlanName(String planName) {
         this.planName = planName;
         return this;
@@ -62,6 +67,7 @@ public class ProvisionedProductPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlanType")
     public ProvisionedProductPlanTypeEnum planType;
+
     public ProvisionedProductPlanDetails withPlanType(ProvisionedProductPlanTypeEnum planType) {
         this.planType = planType;
         return this;
@@ -70,6 +76,7 @@ public class ProvisionedProductPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductId")
     public String productId;
+
     public ProvisionedProductPlanDetails withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -78,6 +85,7 @@ public class ProvisionedProductPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionProductId")
     public String provisionProductId;
+
     public ProvisionedProductPlanDetails withProvisionProductId(String provisionProductId) {
         this.provisionProductId = provisionProductId;
         return this;
@@ -86,6 +94,7 @@ public class ProvisionedProductPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionProductName")
     public String provisionProductName;
+
     public ProvisionedProductPlanDetails withProvisionProductName(String provisionProductName) {
         this.provisionProductName = provisionProductName;
         return this;
@@ -94,6 +103,7 @@ public class ProvisionedProductPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public ProvisionedProductPlanDetails withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
@@ -102,6 +112,7 @@ public class ProvisionedProductPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningParameters")
     public UpdateProvisioningParameter[] provisioningParameters;
+
     public ProvisionedProductPlanDetails withProvisioningParameters(UpdateProvisioningParameter[] provisioningParameters) {
         this.provisioningParameters = provisioningParameters;
         return this;
@@ -110,6 +121,7 @@ public class ProvisionedProductPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ProvisionedProductPlanStatusEnum status;
+
     public ProvisionedProductPlanDetails withStatus(ProvisionedProductPlanStatusEnum status) {
         this.status = status;
         return this;
@@ -118,6 +130,7 @@ public class ProvisionedProductPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public ProvisionedProductPlanDetails withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -126,6 +139,7 @@ public class ProvisionedProductPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ProvisionedProductPlanDetails withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -136,9 +150,11 @@ public class ProvisionedProductPlanDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedTime")
     public OffsetDateTime updatedTime;
+
     public ProvisionedProductPlanDetails withUpdatedTime(OffsetDateTime updatedTime) {
         this.updatedTime = updatedTime;
         return this;
     }
     
+    public ProvisionedProductPlanDetails(){}
 }

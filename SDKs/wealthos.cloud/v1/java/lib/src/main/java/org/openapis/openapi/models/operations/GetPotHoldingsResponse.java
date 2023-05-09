@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPotHoldingsResponse {
     
     public String contentType;
+
     public GetPotHoldingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPotHoldingsResponse {
     
     
     public Integer statusCode;
+
     public GetPotHoldingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetPotHoldingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPotHoldingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetPotHoldingsResponse {
      */
     
     public GetPotHoldings200ApplicationJSON getPotHoldings200ApplicationJSONObject;
+
     public GetPotHoldingsResponse withGetPotHoldings200ApplicationJSONObject(GetPotHoldings200ApplicationJSON getPotHoldings200ApplicationJSONObject) {
         this.getPotHoldings200ApplicationJSONObject = getPotHoldings200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetPotHoldingsResponse {
      */
     
     public GetPotHoldings400ApplicationJSON getPotHoldings400ApplicationJSONObject;
+
     public GetPotHoldingsResponse withGetPotHoldings400ApplicationJSONObject(GetPotHoldings400ApplicationJSON getPotHoldings400ApplicationJSONObject) {
         this.getPotHoldings400ApplicationJSONObject = getPotHoldings400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetPotHoldingsResponse {
      */
     
     public GetPotHoldings401ApplicationJSON getPotHoldings401ApplicationJSONObject;
+
     public GetPotHoldingsResponse withGetPotHoldings401ApplicationJSONObject(GetPotHoldings401ApplicationJSON getPotHoldings401ApplicationJSONObject) {
         this.getPotHoldings401ApplicationJSONObject = getPotHoldings401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetPotHoldingsResponse {
      */
     
     public GetPotHoldings403ApplicationJSON getPotHoldings403ApplicationJSONObject;
+
     public GetPotHoldingsResponse withGetPotHoldings403ApplicationJSONObject(GetPotHoldings403ApplicationJSON getPotHoldings403ApplicationJSONObject) {
         this.getPotHoldings403ApplicationJSONObject = getPotHoldings403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetPotHoldingsResponse {
      */
     
     public GetPotHoldings404ApplicationJSON getPotHoldings404ApplicationJSONObject;
+
     public GetPotHoldingsResponse withGetPotHoldings404ApplicationJSONObject(GetPotHoldings404ApplicationJSON getPotHoldings404ApplicationJSONObject) {
         this.getPotHoldings404ApplicationJSONObject = getPotHoldings404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class GetPotHoldingsResponse {
      */
     
     public GetPotHoldings429ApplicationJSON getPotHoldings429ApplicationJSONObject;
+
     public GetPotHoldingsResponse withGetPotHoldings429ApplicationJSONObject(GetPotHoldings429ApplicationJSON getPotHoldings429ApplicationJSONObject) {
         this.getPotHoldings429ApplicationJSONObject = getPotHoldings429ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class GetPotHoldingsResponse {
      */
     
     public GetPotHoldings500ApplicationJSON getPotHoldings500ApplicationJSONObject;
+
     public GetPotHoldingsResponse withGetPotHoldings500ApplicationJSONObject(GetPotHoldings500ApplicationJSON getPotHoldings500ApplicationJSONObject) {
         this.getPotHoldings500ApplicationJSONObject = getPotHoldings500ApplicationJSONObject;
         return this;
     }
     
+    public GetPotHoldingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutFirewallRuleGroupPolicyResponse {
@@ -12,6 +13,7 @@ public class PutFirewallRuleGroupPolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public PutFirewallRuleGroupPolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class PutFirewallRuleGroupPolicyResponse {
     
     
     public String contentType;
+
     public PutFirewallRuleGroupPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutFirewallRuleGroupPolicyResponse {
      */
     
     public Object internalServiceErrorException;
+
     public PutFirewallRuleGroupPolicyResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class PutFirewallRuleGroupPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutFirewallRuleGroupPolicyResponse putFirewallRuleGroupPolicyResponse;
+
     public PutFirewallRuleGroupPolicyResponse withPutFirewallRuleGroupPolicyResponse(org.openapis.openapi.models.shared.PutFirewallRuleGroupPolicyResponse putFirewallRuleGroupPolicyResponse) {
         this.putFirewallRuleGroupPolicyResponse = putFirewallRuleGroupPolicyResponse;
         return this;
@@ -49,6 +54,7 @@ public class PutFirewallRuleGroupPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutFirewallRuleGroupPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class PutFirewallRuleGroupPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutFirewallRuleGroupPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutFirewallRuleGroupPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutFirewallRuleGroupPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class PutFirewallRuleGroupPolicyResponse {
      */
     
     public Object throttlingException;
+
     public PutFirewallRuleGroupPolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class PutFirewallRuleGroupPolicyResponse {
      */
     
     public Object validationException;
+
     public PutFirewallRuleGroupPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutFirewallRuleGroupPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

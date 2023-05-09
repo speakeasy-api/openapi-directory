@@ -15,9 +15,11 @@ public class PipeTargetSageMakerPipelineParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineParameterList")
     public SageMakerPipelineParameter[] pipelineParameterList;
+
     public PipeTargetSageMakerPipelineParameters withPipelineParameterList(SageMakerPipelineParameter[] pipelineParameterList) {
         this.pipelineParameterList = pipelineParameterList;
         return this;
     }
     
+    public PipeTargetSageMakerPipelineParameters(){}
 }

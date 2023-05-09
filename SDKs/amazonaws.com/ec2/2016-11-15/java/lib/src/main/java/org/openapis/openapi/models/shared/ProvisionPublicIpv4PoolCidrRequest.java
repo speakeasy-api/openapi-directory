@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ProvisionPublicIpv4PoolCidrRequest {
     
     public Boolean dryRun;
+
     public ProvisionPublicIpv4PoolCidrRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class ProvisionPublicIpv4PoolCidrRequest {
     
     
     public String ipamPoolId;
+
     public ProvisionPublicIpv4PoolCidrRequest withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
@@ -23,6 +25,7 @@ public class ProvisionPublicIpv4PoolCidrRequest {
     
     
     public Long netmaskLength;
+
     public ProvisionPublicIpv4PoolCidrRequest withNetmaskLength(Long netmaskLength) {
         this.netmaskLength = netmaskLength;
         return this;
@@ -30,9 +33,15 @@ public class ProvisionPublicIpv4PoolCidrRequest {
     
     
     public String poolId;
+
     public ProvisionPublicIpv4PoolCidrRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
     }
     
+    public ProvisionPublicIpv4PoolCidrRequest(@JsonProperty("IpamPoolId") String ipamPoolId, @JsonProperty("NetmaskLength") Long netmaskLength, @JsonProperty("PoolId") String poolId) {
+        this.ipamPoolId = ipamPoolId;
+        this.netmaskLength = netmaskLength;
+        this.poolId = poolId;
+  }
 }

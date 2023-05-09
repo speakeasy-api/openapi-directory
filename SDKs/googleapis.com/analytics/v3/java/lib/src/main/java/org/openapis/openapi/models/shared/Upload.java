@@ -23,6 +23,7 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Upload withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -34,6 +35,7 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDataSourceId")
     public String customDataSourceId;
+
     public Upload withCustomDataSourceId(String customDataSourceId) {
         this.customDataSourceId = customDataSourceId;
         return this;
@@ -45,6 +47,7 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public String[] errors;
+
     public Upload withErrors(String[] errors) {
         this.errors = errors;
         return this;
@@ -56,6 +59,7 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Upload withId(String id) {
         this.id = id;
         return this;
@@ -67,6 +71,7 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Upload withKind(String kind) {
         this.kind = kind;
         return this;
@@ -78,6 +83,7 @@ public class Upload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Upload withStatus(String status) {
         this.status = status;
         return this;
@@ -91,9 +97,11 @@ public class Upload {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("uploadTime")
     public OffsetDateTime uploadTime;
+
     public Upload withUploadTime(OffsetDateTime uploadTime) {
         this.uploadTime = uploadTime;
         return this;
     }
     
+    public Upload(){}
 }

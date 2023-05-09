@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListTagsForResourceRequest {
     @JsonProperty("Arn")
     public String arn;
+
     public ListTagsForResourceRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class ListTagsForResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTagsForResourceRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListTagsForResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTagsForResourceRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTagsForResourceRequest(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

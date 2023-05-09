@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartDevEnvironmentSessionResponse {
@@ -12,6 +13,7 @@ public class StartDevEnvironmentSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public StartDevEnvironmentSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartDevEnvironmentSessionResponse {
      */
     
     public Object conflictException;
+
     public StartDevEnvironmentSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartDevEnvironmentSessionResponse {
     
     
     public String contentType;
+
     public StartDevEnvironmentSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartDevEnvironmentSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartDevEnvironmentSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartDevEnvironmentSessionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartDevEnvironmentSessionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -59,6 +65,7 @@ public class StartDevEnvironmentSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartDevEnvironmentSessionResponse startDevEnvironmentSessionResponse;
+
     public StartDevEnvironmentSessionResponse withStartDevEnvironmentSessionResponse(org.openapis.openapi.models.shared.StartDevEnvironmentSessionResponse startDevEnvironmentSessionResponse) {
         this.startDevEnvironmentSessionResponse = startDevEnvironmentSessionResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartDevEnvironmentSessionResponse {
     
     
     public Integer statusCode;
+
     public StartDevEnvironmentSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartDevEnvironmentSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartDevEnvironmentSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class StartDevEnvironmentSessionResponse {
      */
     
     public Object throttlingException;
+
     public StartDevEnvironmentSessionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StartDevEnvironmentSessionResponse {
      */
     
     public Object validationException;
+
     public StartDevEnvironmentSessionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartDevEnvironmentSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

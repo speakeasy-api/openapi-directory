@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentSearchContentWithTextRequest {
@@ -12,6 +13,7 @@ public class ContentSearchContentWithTextRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ctype")
     public String ctype;
+
     public ContentSearchContentWithTextRequest withCtype(String ctype) {
         this.ctype = ctype;
         return this;
@@ -22,6 +24,7 @@ public class ContentSearchContentWithTextRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentpage")
     public Integer currentpage;
+
     public ContentSearchContentWithTextRequest withCurrentpage(Integer currentpage) {
         this.currentpage = currentpage;
         return this;
@@ -32,6 +35,7 @@ public class ContentSearchContentWithTextRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=head")
     public Boolean head;
+
     public ContentSearchContentWithTextRequest withHead(Boolean head) {
         this.head = head;
         return this;
@@ -39,6 +43,7 @@ public class ContentSearchContentWithTextRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locale")
     public String locale;
+
     public ContentSearchContentWithTextRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -49,6 +54,7 @@ public class ContentSearchContentWithTextRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchtext")
     public String searchtext;
+
     public ContentSearchContentWithTextRequest withSearchtext(String searchtext) {
         this.searchtext = searchtext;
         return this;
@@ -59,6 +65,7 @@ public class ContentSearchContentWithTextRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public ContentSearchContentWithTextRequest withSource(String source) {
         this.source = source;
         return this;
@@ -69,9 +76,13 @@ public class ContentSearchContentWithTextRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
     public String tag;
+
     public ContentSearchContentWithTextRequest withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public ContentSearchContentWithTextRequest(@JsonProperty("locale") String locale) {
+        this.locale = locale;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateRotationOverrideResult {
     @JsonProperty("RotationOverrideId")
     public String rotationOverrideId;
+
     public CreateRotationOverrideResult withRotationOverrideId(String rotationOverrideId) {
         this.rotationOverrideId = rotationOverrideId;
         return this;
     }
     
+    public CreateRotationOverrideResult(@JsonProperty("RotationOverrideId") String rotationOverrideId) {
+        this.rotationOverrideId = rotationOverrideId;
+  }
 }

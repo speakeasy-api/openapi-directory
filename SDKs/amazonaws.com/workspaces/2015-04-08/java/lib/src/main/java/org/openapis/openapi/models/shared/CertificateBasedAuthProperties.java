@@ -15,6 +15,7 @@ public class CertificateBasedAuthProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateAuthorityArn")
     public String certificateAuthorityArn;
+
     public CertificateBasedAuthProperties withCertificateAuthorityArn(String certificateAuthorityArn) {
         this.certificateAuthorityArn = certificateAuthorityArn;
         return this;
@@ -23,9 +24,11 @@ public class CertificateBasedAuthProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CertificateBasedAuthStatusEnumEnum status;
+
     public CertificateBasedAuthProperties withStatus(CertificateBasedAuthStatusEnumEnum status) {
         this.status = status;
         return this;
     }
     
+    public CertificateBasedAuthProperties(){}
 }

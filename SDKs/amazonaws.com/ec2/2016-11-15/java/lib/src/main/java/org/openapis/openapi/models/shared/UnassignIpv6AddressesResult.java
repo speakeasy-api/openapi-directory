@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UnassignIpv6AddressesResult {
     
     public String networkInterfaceId;
+
     public UnassignIpv6AddressesResult withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -19,6 +20,7 @@ public class UnassignIpv6AddressesResult {
     
     
     public String[] unassignedIpv6Addresses;
+
     public UnassignIpv6AddressesResult withUnassignedIpv6Addresses(String[] unassignedIpv6Addresses) {
         this.unassignedIpv6Addresses = unassignedIpv6Addresses;
         return this;
@@ -26,9 +28,11 @@ public class UnassignIpv6AddressesResult {
     
     
     public String[] unassignedIpv6Prefixes;
+
     public UnassignIpv6AddressesResult withUnassignedIpv6Prefixes(String[] unassignedIpv6Prefixes) {
         this.unassignedIpv6Prefixes = unassignedIpv6Prefixes;
         return this;
     }
     
+    public UnassignIpv6AddressesResult(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateCustomDBEngineVersionMessage {
     
     public String databaseInstallationFilesS3BucketName;
+
     public CreateCustomDBEngineVersionMessage withDatabaseInstallationFilesS3BucketName(String databaseInstallationFilesS3BucketName) {
         this.databaseInstallationFilesS3BucketName = databaseInstallationFilesS3BucketName;
         return this;
@@ -16,6 +17,7 @@ public class CreateCustomDBEngineVersionMessage {
     
     
     public String databaseInstallationFilesS3Prefix;
+
     public CreateCustomDBEngineVersionMessage withDatabaseInstallationFilesS3Prefix(String databaseInstallationFilesS3Prefix) {
         this.databaseInstallationFilesS3Prefix = databaseInstallationFilesS3Prefix;
         return this;
@@ -23,6 +25,7 @@ public class CreateCustomDBEngineVersionMessage {
     
     
     public String description;
+
     public CreateCustomDBEngineVersionMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +33,7 @@ public class CreateCustomDBEngineVersionMessage {
     
     
     public String engine;
+
     public CreateCustomDBEngineVersionMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -37,6 +41,7 @@ public class CreateCustomDBEngineVersionMessage {
     
     
     public String engineVersion;
+
     public CreateCustomDBEngineVersionMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -44,6 +49,7 @@ public class CreateCustomDBEngineVersionMessage {
     
     
     public String imageId;
+
     public CreateCustomDBEngineVersionMessage withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -51,6 +57,7 @@ public class CreateCustomDBEngineVersionMessage {
     
     
     public String kmsKeyId;
+
     public CreateCustomDBEngineVersionMessage withKMSKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -58,6 +65,7 @@ public class CreateCustomDBEngineVersionMessage {
     
     
     public String manifest;
+
     public CreateCustomDBEngineVersionMessage withManifest(String manifest) {
         this.manifest = manifest;
         return this;
@@ -68,9 +76,14 @@ public class CreateCustomDBEngineVersionMessage {
      */
     
     public TagList[] tags;
+
     public CreateCustomDBEngineVersionMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCustomDBEngineVersionMessage(@JsonProperty("Engine") String engine, @JsonProperty("EngineVersion") String engineVersion) {
+        this.engine = engine;
+        this.engineVersion = engineVersion;
+  }
 }

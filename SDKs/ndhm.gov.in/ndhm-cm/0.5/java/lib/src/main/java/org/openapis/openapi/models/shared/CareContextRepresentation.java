@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CareContextRepresentation {
     @JsonProperty("display")
     public String display;
+
     public CareContextRepresentation withDisplay(String display) {
         this.display = display;
         return this;
@@ -16,9 +17,14 @@ public class CareContextRepresentation {
     
     @JsonProperty("referenceNumber")
     public String referenceNumber;
+
     public CareContextRepresentation withReferenceNumber(String referenceNumber) {
         this.referenceNumber = referenceNumber;
         return this;
     }
     
+    public CareContextRepresentation(@JsonProperty("display") String display, @JsonProperty("referenceNumber") String referenceNumber) {
+        this.display = display;
+        this.referenceNumber = referenceNumber;
+  }
 }

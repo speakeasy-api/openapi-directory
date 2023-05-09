@@ -57,10 +57,8 @@ public class TypeCataloglink {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchCataloglinkResponse res = new org.openapis.openapi.models.operations.SearchCataloglinkResponse() {{
+        org.openapis.openapi.models.operations.SearchCataloglinkResponse res = new org.openapis.openapi.models.operations.SearchCataloglinkResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

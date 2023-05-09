@@ -12,6 +12,7 @@ public class DriveAppsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveAppsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +23,7 @@ public class DriveAppsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appFilterExtensions")
     public String appFilterExtensions;
+
     public DriveAppsListRequest withAppFilterExtensions(String appFilterExtensions) {
         this.appFilterExtensions = appFilterExtensions;
         return this;
@@ -32,6 +34,7 @@ public class DriveAppsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appFilterMimeTypes")
     public String appFilterMimeTypes;
+
     public DriveAppsListRequest withAppFilterMimeTypes(String appFilterMimeTypes) {
         this.appFilterMimeTypes = appFilterMimeTypes;
         return this;
@@ -42,6 +45,7 @@ public class DriveAppsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveAppsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +56,7 @@ public class DriveAppsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveAppsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +67,7 @@ public class DriveAppsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=languageCode")
     public String languageCode;
+
     public DriveAppsListRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -72,6 +78,7 @@ public class DriveAppsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveAppsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +89,7 @@ public class DriveAppsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveAppsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +100,7 @@ public class DriveAppsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveAppsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -102,9 +111,11 @@ public class DriveAppsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveAppsListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveAppsListRequest(){}
 }

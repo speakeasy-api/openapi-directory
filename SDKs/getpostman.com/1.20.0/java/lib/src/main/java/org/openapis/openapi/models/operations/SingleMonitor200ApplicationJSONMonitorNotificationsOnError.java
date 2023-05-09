@@ -12,9 +12,11 @@ public class SingleMonitor200ApplicationJSONMonitorNotificationsOnError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public SingleMonitor200ApplicationJSONMonitorNotificationsOnError withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public SingleMonitor200ApplicationJSONMonitorNotificationsOnError(){}
 }

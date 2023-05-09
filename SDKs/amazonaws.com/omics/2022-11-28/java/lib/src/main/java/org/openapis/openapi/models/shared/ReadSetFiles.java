@@ -15,6 +15,7 @@ public class ReadSetFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public FileInformation index;
+
     public ReadSetFiles withIndex(FileInformation index) {
         this.index = index;
         return this;
@@ -23,6 +24,7 @@ public class ReadSetFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source1")
     public FileInformation source1;
+
     public ReadSetFiles withSource1(FileInformation source1) {
         this.source1 = source1;
         return this;
@@ -31,9 +33,11 @@ public class ReadSetFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source2")
     public FileInformation source2;
+
     public ReadSetFiles withSource2(FileInformation source2) {
         this.source2 = source2;
         return this;
     }
     
+    public ReadSetFiles(){}
 }

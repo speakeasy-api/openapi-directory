@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RepositoryConfigurationsDelete200ApplicationJSON {
     @JsonProperty("message")
     public String message;
+
     public RepositoryConfigurationsDelete200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public RepositoryConfigurationsDelete200ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

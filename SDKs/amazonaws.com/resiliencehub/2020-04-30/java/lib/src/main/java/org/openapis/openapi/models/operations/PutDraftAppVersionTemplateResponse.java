@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutDraftAppVersionTemplateResponse {
@@ -12,6 +13,7 @@ public class PutDraftAppVersionTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public PutDraftAppVersionTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutDraftAppVersionTemplateResponse {
      */
     
     public Object conflictException;
+
     public PutDraftAppVersionTemplateResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PutDraftAppVersionTemplateResponse {
     
     
     public String contentType;
+
     public PutDraftAppVersionTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutDraftAppVersionTemplateResponse {
      */
     
     public Object internalServerException;
+
     public PutDraftAppVersionTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutDraftAppVersionTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.PutDraftAppVersionTemplateResponse putDraftAppVersionTemplateResponse;
+
     public PutDraftAppVersionTemplateResponse withPutDraftAppVersionTemplateResponse(org.openapis.openapi.models.shared.PutDraftAppVersionTemplateResponse putDraftAppVersionTemplateResponse) {
         this.putDraftAppVersionTemplateResponse = putDraftAppVersionTemplateResponse;
         return this;
@@ -56,6 +62,7 @@ public class PutDraftAppVersionTemplateResponse {
     
     
     public Integer statusCode;
+
     public PutDraftAppVersionTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutDraftAppVersionTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutDraftAppVersionTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class PutDraftAppVersionTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutDraftAppVersionTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class PutDraftAppVersionTemplateResponse {
      */
     
     public Object throttlingException;
+
     public PutDraftAppVersionTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class PutDraftAppVersionTemplateResponse {
      */
     
     public Object validationException;
+
     public PutDraftAppVersionTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutDraftAppVersionTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Dimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("histogramBuckets")
     public String[] histogramBuckets;
+
     public Dimension withHistogramBuckets(String[] histogramBuckets) {
         this.histogramBuckets = histogramBuckets;
         return this;
@@ -29,9 +30,11 @@ public class Dimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Dimension withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Dimension(){}
 }

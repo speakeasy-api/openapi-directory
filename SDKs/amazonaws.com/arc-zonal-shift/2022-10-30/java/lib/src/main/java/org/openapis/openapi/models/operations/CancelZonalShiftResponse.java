@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelZonalShiftResponse {
@@ -12,6 +13,7 @@ public class CancelZonalShiftResponse {
      */
     
     public Object accessDeniedException;
+
     public CancelZonalShiftResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CancelZonalShiftResponse {
      */
     
     public Object conflictException;
+
     public CancelZonalShiftResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CancelZonalShiftResponse {
     
     
     public String contentType;
+
     public CancelZonalShiftResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CancelZonalShiftResponse {
      */
     
     public Object internalServerException;
+
     public CancelZonalShiftResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CancelZonalShiftResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelZonalShiftResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CancelZonalShiftResponse {
     
     
     public Integer statusCode;
+
     public CancelZonalShiftResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CancelZonalShiftResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelZonalShiftResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CancelZonalShiftResponse {
      */
     
     public Object throttlingException;
+
     public CancelZonalShiftResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class CancelZonalShiftResponse {
      */
     
     public Object validationException;
+
     public CancelZonalShiftResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
@@ -93,9 +103,14 @@ public class CancelZonalShiftResponse {
      */
     
     public org.openapis.openapi.models.shared.ZonalShift zonalShift;
+
     public CancelZonalShiftResponse withZonalShift(org.openapis.openapi.models.shared.ZonalShift zonalShift) {
         this.zonalShift = zonalShift;
         return this;
     }
     
+    public CancelZonalShiftResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

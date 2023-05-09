@@ -13,22 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudRetailV2betaSearchRequest {
     /**
-     * Represents the banner in request, for projects that combine banners. For example: a retailer can sell products under different banners like retailer-main, retailer-baby, retailer-meds, etc. under one project.
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("banner")
-    public String banner;
-    public GoogleCloudRetailV2betaSearchRequest withBanner(String banner) {
-        this.banner = banner;
-        return this;
-    }
-    
-    /**
      * Boost specification to boost certain items.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boostSpec")
     public GoogleCloudRetailV2betaSearchRequestBoostSpec boostSpec;
+
     public GoogleCloudRetailV2betaSearchRequest withBoostSpec(GoogleCloudRetailV2betaSearchRequestBoostSpec boostSpec) {
         this.boostSpec = boostSpec;
         return this;
@@ -40,17 +30,19 @@ public class GoogleCloudRetailV2betaSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch")
     public String branch;
+
     public GoogleCloudRetailV2betaSearchRequest withBranch(String branch) {
         this.branch = branch;
         return this;
     }
     
     /**
-     * The default filter that is applied when a user performs a search without checking any filters on the search page. The filter applied to every search request when quality improvement such as query expansion is needed. For example, if a query does not have enough results, an expanded query with SearchRequest.canonical_filter will be returned as a supplement of the original query. This field is strongly recommended to achieve high search quality. See SearchRequest.filter for more details about filter syntax.
+     * The default filter that is applied when a user performs a search without checking any filters on the search page. The filter applied to every search request when quality improvement such as query expansion is needed. For example, if a query does not have enough results, an expanded query with SearchRequest.canonical_filter is returned as a supplement of the original query. This field is strongly recommended to achieve high search quality. For more information about filter syntax, see SearchRequest.filter.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canonicalFilter")
     public String canonicalFilter;
+
     public GoogleCloudRetailV2betaSearchRequest withCanonicalFilter(String canonicalFilter) {
         this.canonicalFilter = canonicalFilter;
         return this;
@@ -62,39 +54,55 @@ public class GoogleCloudRetailV2betaSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicFacetSpec")
     public GoogleCloudRetailV2betaSearchRequestDynamicFacetSpec dynamicFacetSpec;
+
     public GoogleCloudRetailV2betaSearchRequest withDynamicFacetSpec(GoogleCloudRetailV2betaSearchRequestDynamicFacetSpec dynamicFacetSpec) {
         this.dynamicFacetSpec = dynamicFacetSpec;
         return this;
     }
     
     /**
-     * Facet specifications for faceted search. If empty, no facets are returned. A maximum of 100 values are allowed. Otherwise, an INVALID_ARGUMENT error is returned.
+     * The entity for customers that may run multiple different entities, domains, sites or regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this is set, it should be exactly matched with UserEvent.entity to get search results boosted by entity.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("entity")
+    public String entity;
+
+    public GoogleCloudRetailV2betaSearchRequest withEntity(String entity) {
+        this.entity = entity;
+        return this;
+    }
+    
+    /**
+     * Facet specifications for faceted search. If empty, no facets are returned. A maximum of 200 values are allowed. Otherwise, an INVALID_ARGUMENT error is returned.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facetSpecs")
     public GoogleCloudRetailV2betaSearchRequestFacetSpec[] facetSpecs;
+
     public GoogleCloudRetailV2betaSearchRequest withFacetSpecs(GoogleCloudRetailV2betaSearchRequestFacetSpec[] facetSpecs) {
         this.facetSpecs = facetSpecs;
         return this;
     }
     
     /**
-     * The filter syntax consists of an expression language for constructing a predicate from one or more fields of the products being filtered. Filter expression is case-sensitive. See more details at this [user guide](https://cloud.google.com/retail/docs/filter-and-order#filter). If this field is unrecognizable, an INVALID_ARGUMENT is returned.
+     * The filter syntax consists of an expression language for constructing a predicate from one or more fields of the products being filtered. Filter expression is case-sensitive. For more information, see [Filter](https://cloud.google.com/retail/docs/filter-and-order#filter). If this field is unrecognizable, an INVALID_ARGUMENT is returned.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudRetailV2betaSearchRequest withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
     /**
-     * The labels applied to a resource must meet the following requirements: * Each resource can have multiple labels, up to a maximum of 64. * Each label must be a key-value pair. * Keys have a minimum length of 1 character and a maximum length of 63 characters and cannot be empty. Values can be empty and have a maximum length of 63 characters. * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. All characters must use UTF-8 encoding, and international characters are allowed. * The key portion of a label must be unique. However, you can use the same key with multiple resources. * Keys must start with a lowercase letter or international character. See [Google Cloud Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements) for more details.
+     * The labels applied to a resource must meet the following requirements: * Each resource can have multiple labels, up to a maximum of 64. * Each label must be a key-value pair. * Keys have a minimum length of 1 character and a maximum length of 63 characters and cannot be empty. Values can be empty and have a maximum length of 63 characters. * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. All characters must use UTF-8 encoding, and international characters are allowed. * The key portion of a label must be unique. However, you can use the same key with multiple resources. * Keys must start with a lowercase letter or international character. For more information, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements) in the Resource Manager documentation.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudRetailV2betaSearchRequest withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -106,28 +114,31 @@ public class GoogleCloudRetailV2betaSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public GoogleCloudRetailV2betaSearchRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
     /**
-     * The order in which products are returned. Products can be ordered by a field in an Product object. Leave it unset if ordered by relevance. OrderBy expression is case-sensitive. See more details at this [user guide](https://cloud.google.com/retail/docs/filter-and-order#order). If this field is unrecognizable, an INVALID_ARGUMENT is returned.
+     * The order in which products are returned. Products can be ordered by a field in an Product object. Leave it unset if ordered by relevance. OrderBy expression is case-sensitive. For more information, see [Order](https://cloud.google.com/retail/docs/filter-and-order#order). If this field is unrecognizable, an INVALID_ARGUMENT is returned.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public String orderBy;
+
     public GoogleCloudRetailV2betaSearchRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
     }
     
     /**
-     * The categories associated with a category page. Required for category navigation queries to achieve good search quality. The format should be the same as UserEvent.page_categories; To represent full path of category, use '&gt;' sign to separate different hierarchies. If '&gt;' is part of the category name, replace it with other character(s). Category pages include special pages such as sales or promotions. For instance, a special sale page may have the category hierarchy: "pageCategories" : ["Sales &gt; 2017 Black Friday Deals"].
+     * The categories associated with a category page. Must be set for category navigation queries to achieve good search quality. The format should be the same as UserEvent.page_categories; To represent full path of category, use '&gt;' sign to separate different hierarchies. If '&gt;' is part of the category name, replace it with other character(s). Category pages include special pages such as sales or promotions. For instance, a special sale page may have the category hierarchy: "pageCategories" : ["Sales &gt; 2017 Black Friday Deals"].
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageCategories")
     public String[] pageCategories;
+
     public GoogleCloudRetailV2betaSearchRequest withPageCategories(String[] pageCategories) {
         this.pageCategories = pageCategories;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudRetailV2betaSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GoogleCloudRetailV2betaSearchRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudRetailV2betaSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GoogleCloudRetailV2betaSearchRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudRetailV2betaSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalizationSpec")
     public GoogleCloudRetailV2betaSearchRequestPersonalizationSpec personalizationSpec;
+
     public GoogleCloudRetailV2betaSearchRequest withPersonalizationSpec(GoogleCloudRetailV2betaSearchRequestPersonalizationSpec personalizationSpec) {
         this.personalizationSpec = personalizationSpec;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudRetailV2betaSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public GoogleCloudRetailV2betaSearchRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -183,6 +198,7 @@ public class GoogleCloudRetailV2betaSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryExpansionSpec")
     public GoogleCloudRetailV2betaSearchRequestQueryExpansionSpec queryExpansionSpec;
+
     public GoogleCloudRetailV2betaSearchRequest withQueryExpansionSpec(GoogleCloudRetailV2betaSearchRequestQueryExpansionSpec queryExpansionSpec) {
         this.queryExpansionSpec = queryExpansionSpec;
         return this;
@@ -194,6 +210,7 @@ public class GoogleCloudRetailV2betaSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchMode")
     public GoogleCloudRetailV2betaSearchRequestSearchModeEnum searchMode;
+
     public GoogleCloudRetailV2betaSearchRequest withSearchMode(GoogleCloudRetailV2betaSearchRequestSearchModeEnum searchMode) {
         this.searchMode = searchMode;
         return this;
@@ -205,6 +222,7 @@ public class GoogleCloudRetailV2betaSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spellCorrectionSpec")
     public GoogleCloudRetailV2betaSearchRequestSpellCorrectionSpec spellCorrectionSpec;
+
     public GoogleCloudRetailV2betaSearchRequest withSpellCorrectionSpec(GoogleCloudRetailV2betaSearchRequestSpellCorrectionSpec spellCorrectionSpec) {
         this.spellCorrectionSpec = spellCorrectionSpec;
         return this;
@@ -216,6 +234,7 @@ public class GoogleCloudRetailV2betaSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userInfo")
     public GoogleCloudRetailV2betaUserInfo userInfo;
+
     public GoogleCloudRetailV2betaSearchRequest withUserInfo(GoogleCloudRetailV2betaUserInfo userInfo) {
         this.userInfo = userInfo;
         return this;
@@ -227,6 +246,7 @@ public class GoogleCloudRetailV2betaSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variantRollupKeys")
     public String[] variantRollupKeys;
+
     public GoogleCloudRetailV2betaSearchRequest withVariantRollupKeys(String[] variantRollupKeys) {
         this.variantRollupKeys = variantRollupKeys;
         return this;
@@ -238,9 +258,11 @@ public class GoogleCloudRetailV2betaSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visitorId")
     public String visitorId;
+
     public GoogleCloudRetailV2betaSearchRequest withVisitorId(String visitorId) {
         this.visitorId = visitorId;
         return this;
     }
     
+    public GoogleCloudRetailV2betaSearchRequest(){}
 }

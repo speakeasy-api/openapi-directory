@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class TokensRewardAvailabilityModel {
     
     public TokensCollectibleDefinitions[] collectibleDefinitions;
+
     public TokensRewardAvailabilityModel withCollectibleDefinitions(TokensCollectibleDefinitions[] collectibleDefinitions) {
         this.collectibleDefinitions = collectibleDefinitions;
         return this;
@@ -16,6 +17,7 @@ public class TokensRewardAvailabilityModel {
     
     
     public String decryptedToken;
+
     public TokensRewardAvailabilityModel withDecryptedToken(String decryptedToken) {
         this.decryptedToken = decryptedToken;
         return this;
@@ -23,6 +25,7 @@ public class TokensRewardAvailabilityModel {
     
     
     public OffsetDateTime gameEarnByDate;
+
     public TokensRewardAvailabilityModel withGameEarnByDate(OffsetDateTime gameEarnByDate) {
         this.gameEarnByDate = gameEarnByDate;
         return this;
@@ -30,6 +33,7 @@ public class TokensRewardAvailabilityModel {
     
     
     public Boolean hasExistingCode;
+
     public TokensRewardAvailabilityModel withHasExistingCode(Boolean hasExistingCode) {
         this.hasExistingCode = hasExistingCode;
         return this;
@@ -37,6 +41,7 @@ public class TokensRewardAvailabilityModel {
     
     
     public Boolean hasOffer;
+
     public TokensRewardAvailabilityModel withHasOffer(Boolean hasOffer) {
         this.hasOffer = hasOffer;
         return this;
@@ -44,6 +49,7 @@ public class TokensRewardAvailabilityModel {
     
     
     public Boolean isLoyaltyReward;
+
     public TokensRewardAvailabilityModel withIsLoyaltyReward(Boolean isLoyaltyReward) {
         this.isLoyaltyReward = isLoyaltyReward;
         return this;
@@ -51,6 +57,7 @@ public class TokensRewardAvailabilityModel {
     
     
     public Boolean isOffer;
+
     public TokensRewardAvailabilityModel withIsOffer(Boolean isOffer) {
         this.isOffer = isOffer;
         return this;
@@ -58,6 +65,7 @@ public class TokensRewardAvailabilityModel {
     
     
     public Boolean offerApplied;
+
     public TokensRewardAvailabilityModel withOfferApplied(Boolean offerApplied) {
         this.offerApplied = offerApplied;
         return this;
@@ -65,6 +73,7 @@ public class TokensRewardAvailabilityModel {
     
     
     public DestinyDefinitionsRecordsDestinyRecordDefinition[] recordDefinitions;
+
     public TokensRewardAvailabilityModel withRecordDefinitions(DestinyDefinitionsRecordsDestinyRecordDefinition[] recordDefinitions) {
         this.recordDefinitions = recordDefinitions;
         return this;
@@ -72,6 +81,7 @@ public class TokensRewardAvailabilityModel {
     
     
     public OffsetDateTime redemptionEndDate;
+
     public TokensRewardAvailabilityModel withRedemptionEndDate(OffsetDateTime redemptionEndDate) {
         this.redemptionEndDate = redemptionEndDate;
         return this;
@@ -79,9 +89,11 @@ public class TokensRewardAvailabilityModel {
     
     
     public OffsetDateTime shopifyEndDate;
+
     public TokensRewardAvailabilityModel withShopifyEndDate(OffsetDateTime shopifyEndDate) {
         this.shopifyEndDate = shopifyEndDate;
         return this;
     }
     
+    public TokensRewardAvailabilityModel(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCrawlersResponse {
     
     public String contentType;
+
     public ListCrawlersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCrawlersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCrawlersResponse listCrawlersResponse;
+
     public ListCrawlersResponse withListCrawlersResponse(org.openapis.openapi.models.shared.ListCrawlersResponse listCrawlersResponse) {
         this.listCrawlersResponse = listCrawlersResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListCrawlersResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListCrawlersResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -36,6 +40,7 @@ public class ListCrawlersResponse {
     
     
     public Integer statusCode;
+
     public ListCrawlersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListCrawlersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCrawlersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCrawlersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class AdminInitiateAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyticsMetadata")
     public AnalyticsMetadataType analyticsMetadata;
+
     public AdminInitiateAuthRequest withAnalyticsMetadata(AnalyticsMetadataType analyticsMetadata) {
         this.analyticsMetadata = analyticsMetadata;
         return this;
@@ -22,6 +23,7 @@ public class AdminInitiateAuthRequest {
     
     @JsonProperty("AuthFlow")
     public AuthFlowTypeEnum authFlow;
+
     public AdminInitiateAuthRequest withAuthFlow(AuthFlowTypeEnum authFlow) {
         this.authFlow = authFlow;
         return this;
@@ -30,6 +32,7 @@ public class AdminInitiateAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthParameters")
     public java.util.Map<String, String> authParameters;
+
     public AdminInitiateAuthRequest withAuthParameters(java.util.Map<String, String> authParameters) {
         this.authParameters = authParameters;
         return this;
@@ -37,6 +40,7 @@ public class AdminInitiateAuthRequest {
     
     @JsonProperty("ClientId")
     public String clientId;
+
     public AdminInitiateAuthRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -45,6 +49,7 @@ public class AdminInitiateAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientMetadata")
     public java.util.Map<String, String> clientMetadata;
+
     public AdminInitiateAuthRequest withClientMetadata(java.util.Map<String, String> clientMetadata) {
         this.clientMetadata = clientMetadata;
         return this;
@@ -53,6 +58,7 @@ public class AdminInitiateAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContextData")
     public ContextDataType contextData;
+
     public AdminInitiateAuthRequest withContextData(ContextDataType contextData) {
         this.contextData = contextData;
         return this;
@@ -60,9 +66,15 @@ public class AdminInitiateAuthRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminInitiateAuthRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public AdminInitiateAuthRequest(@JsonProperty("AuthFlow") AuthFlowTypeEnum authFlow, @JsonProperty("ClientId") String clientId, @JsonProperty("UserPoolId") String userPoolId) {
+        this.authFlow = authFlow;
+        this.clientId = clientId;
+        this.userPoolId = userPoolId;
+  }
 }

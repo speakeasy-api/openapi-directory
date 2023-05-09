@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDataRepositoryAssociationResponse {
@@ -12,6 +13,7 @@ public class CreateDataRepositoryAssociationResponse {
      */
     
     public Object badRequest;
+
     public CreateDataRepositoryAssociationResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class CreateDataRepositoryAssociationResponse {
     
     
     public String contentType;
+
     public CreateDataRepositoryAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateDataRepositoryAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDataRepositoryAssociationResponse createDataRepositoryAssociationResponse;
+
     public CreateDataRepositoryAssociationResponse withCreateDataRepositoryAssociationResponse(org.openapis.openapi.models.shared.CreateDataRepositoryAssociationResponse createDataRepositoryAssociationResponse) {
         this.createDataRepositoryAssociationResponse = createDataRepositoryAssociationResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateDataRepositoryAssociationResponse {
      */
     
     public Object fileSystemNotFound;
+
     public CreateDataRepositoryAssociationResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -49,6 +54,7 @@ public class CreateDataRepositoryAssociationResponse {
      */
     
     public Object incompatibleParameterError;
+
     public CreateDataRepositoryAssociationResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -59,6 +65,7 @@ public class CreateDataRepositoryAssociationResponse {
      */
     
     public Object internalServerError;
+
     public CreateDataRepositoryAssociationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -66,6 +73,7 @@ public class CreateDataRepositoryAssociationResponse {
     
     
     public Integer statusCode;
+
     public CreateDataRepositoryAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateDataRepositoryAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDataRepositoryAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateDataRepositoryAssociationResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public CreateDataRepositoryAssociationResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
@@ -93,9 +103,14 @@ public class CreateDataRepositoryAssociationResponse {
      */
     
     public Object unsupportedOperation;
+
     public CreateDataRepositoryAssociationResponse withUnsupportedOperation(Object unsupportedOperation) {
         this.unsupportedOperation = unsupportedOperation;
         return this;
     }
     
+    public CreateDataRepositoryAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

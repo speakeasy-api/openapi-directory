@@ -15,6 +15,7 @@ public class PercentPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percent")
     public Double percent;
+
     public PercentPair withPercent(Double percent) {
         this.percent = percent;
         return this;
@@ -23,9 +24,11 @@ public class PercentPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public PercentPair withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public PercentPair(){}
 }

@@ -18,6 +18,7 @@ public class HouseholdIncomeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("householdIncome")
     public HouseholdIncomeAssignedTargetingOptionDetailsHouseholdIncomeEnum householdIncome;
+
     public HouseholdIncomeAssignedTargetingOptionDetails withHouseholdIncome(HouseholdIncomeAssignedTargetingOptionDetailsHouseholdIncomeEnum householdIncome) {
         this.householdIncome = householdIncome;
         return this;
@@ -29,9 +30,11 @@ public class HouseholdIncomeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public HouseholdIncomeAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public HouseholdIncomeAssignedTargetingOptionDetails(){}
 }

@@ -18,6 +18,7 @@ public class Phase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childRolloutJobs")
     public ChildRolloutJobs childRolloutJobs;
+
     public Phase withChildRolloutJobs(ChildRolloutJobs childRolloutJobs) {
         this.childRolloutJobs = childRolloutJobs;
         return this;
@@ -29,6 +30,7 @@ public class Phase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentJobs")
     public DeploymentJobs deploymentJobs;
+
     public Phase withDeploymentJobs(DeploymentJobs deploymentJobs) {
         this.deploymentJobs = deploymentJobs;
         return this;
@@ -40,6 +42,7 @@ public class Phase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Phase withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Phase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipMessage")
     public String skipMessage;
+
     public Phase withSkipMessage(String skipMessage) {
         this.skipMessage = skipMessage;
         return this;
@@ -62,9 +66,11 @@ public class Phase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public PhaseStateEnum state;
+
     public Phase withState(PhaseStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Phase(){}
 }

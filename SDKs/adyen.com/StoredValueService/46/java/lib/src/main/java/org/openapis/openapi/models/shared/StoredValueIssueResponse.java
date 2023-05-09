@@ -20,6 +20,7 @@ public class StoredValueIssueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authCode")
     public String authCode;
+
     public StoredValueIssueResponse withAuthCode(String authCode) {
         this.authCode = authCode;
         return this;
@@ -28,6 +29,7 @@ public class StoredValueIssueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentBalance")
     public Amount currentBalance;
+
     public StoredValueIssueResponse withCurrentBalance(Amount currentBalance) {
         this.currentBalance = currentBalance;
         return this;
@@ -39,6 +41,7 @@ public class StoredValueIssueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethod")
     public java.util.Map<String, String> paymentMethod;
+
     public StoredValueIssueResponse withPaymentMethod(java.util.Map<String, String> paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -50,6 +53,7 @@ public class StoredValueIssueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public StoredValueIssueResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -63,6 +67,7 @@ public class StoredValueIssueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refusalReason")
     public String refusalReason;
+
     public StoredValueIssueResponse withRefusalReason(String refusalReason) {
         this.refusalReason = refusalReason;
         return this;
@@ -80,6 +85,7 @@ public class StoredValueIssueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public StoredValueIssueResponseResultCodeEnum resultCode;
+
     public StoredValueIssueResponse withResultCode(StoredValueIssueResponseResultCodeEnum resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -91,9 +97,11 @@ public class StoredValueIssueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thirdPartyRefusalReason")
     public String thirdPartyRefusalReason;
+
     public StoredValueIssueResponse withThirdPartyRefusalReason(String thirdPartyRefusalReason) {
         this.thirdPartyRefusalReason = thirdPartyRefusalReason;
         return this;
     }
     
+    public StoredValueIssueResponse(){}
 }

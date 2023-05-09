@@ -18,6 +18,7 @@ public class InstanceGroupManagerResizeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public InstanceGroupManagerResizeRequest withCount(Integer count) {
         this.count = count;
         return this;
@@ -29,6 +30,7 @@ public class InstanceGroupManagerResizeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public InstanceGroupManagerResizeRequest withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class InstanceGroupManagerResizeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InstanceGroupManagerResizeRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class InstanceGroupManagerResizeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public InstanceGroupManagerResizeRequest withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class InstanceGroupManagerResizeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public InstanceGroupManagerResizeRequest withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class InstanceGroupManagerResizeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstanceGroupManagerResizeRequest withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class InstanceGroupManagerResizeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queuingPolicy")
     public QueuingPolicy queuingPolicy;
+
     public InstanceGroupManagerResizeRequest withQueuingPolicy(QueuingPolicy queuingPolicy) {
         this.queuingPolicy = queuingPolicy;
         return this;
@@ -95,6 +102,7 @@ public class InstanceGroupManagerResizeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public InstanceGroupManagerResizeRequest withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -106,6 +114,7 @@ public class InstanceGroupManagerResizeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public InstanceGroupManagerResizeRequest withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -117,6 +126,7 @@ public class InstanceGroupManagerResizeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public InstanceGroupManagerResizeRequestStateEnum state;
+
     public InstanceGroupManagerResizeRequest withState(InstanceGroupManagerResizeRequestStateEnum state) {
         this.state = state;
         return this;
@@ -125,6 +135,7 @@ public class InstanceGroupManagerResizeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public InstanceGroupManagerResizeRequestStatus status;
+
     public InstanceGroupManagerResizeRequest withStatus(InstanceGroupManagerResizeRequestStatus status) {
         this.status = status;
         return this;
@@ -136,9 +147,11 @@ public class InstanceGroupManagerResizeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public InstanceGroupManagerResizeRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public InstanceGroupManagerResizeRequest(){}
 }

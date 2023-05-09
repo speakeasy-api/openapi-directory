@@ -15,9 +15,11 @@ public class PutFirewallRuleGroupPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnValue")
     public Boolean returnValue;
+
     public PutFirewallRuleGroupPolicyResponse withReturnValue(Boolean returnValue) {
         this.returnValue = returnValue;
         return this;
     }
     
+    public PutFirewallRuleGroupPolicyResponse(){}
 }

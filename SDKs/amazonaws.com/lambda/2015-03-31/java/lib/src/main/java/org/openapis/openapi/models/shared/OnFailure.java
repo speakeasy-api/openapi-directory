@@ -15,9 +15,11 @@ public class OnFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public String destination;
+
     public OnFailure withDestination(String destination) {
         this.destination = destination;
         return this;
     }
     
+    public OnFailure(){}
 }

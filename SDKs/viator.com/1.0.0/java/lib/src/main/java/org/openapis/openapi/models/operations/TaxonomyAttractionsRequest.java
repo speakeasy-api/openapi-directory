@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaxonomyAttractionsRequest {
@@ -13,6 +14,7 @@ public class TaxonomyAttractionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public TaxonomyAttractionsRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,9 +22,13 @@ public class TaxonomyAttractionsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public TaxonomyAttractionsRequestBody requestBody;
+
     public TaxonomyAttractionsRequest withRequestBody(TaxonomyAttractionsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public TaxonomyAttractionsRequest(@JsonProperty("Accept-Language") String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+  }
 }

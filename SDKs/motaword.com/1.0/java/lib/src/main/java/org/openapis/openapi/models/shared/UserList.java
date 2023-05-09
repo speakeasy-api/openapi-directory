@@ -15,6 +15,7 @@ public class UserList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public UserList withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
@@ -23,9 +24,11 @@ public class UserList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public User[] users;
+
     public UserList withUsers(User[] users) {
         this.users = users;
         return this;
     }
     
+    public UserList(){}
 }

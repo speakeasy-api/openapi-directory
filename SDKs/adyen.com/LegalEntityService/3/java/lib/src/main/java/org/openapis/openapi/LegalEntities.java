@@ -53,12 +53,10 @@ public class LegalEntities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLegalEntitiesIdResponse res = new org.openapis.openapi.models.operations.GetLegalEntitiesIdResponse() {{
+        org.openapis.openapi.models.operations.GetLegalEntitiesIdResponse res = new org.openapis.openapi.models.operations.GetLegalEntitiesIdResponse(contentType, httpRes.statusCode()) {{
             legalEntity = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,12 +100,10 @@ public class LegalEntities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLegalEntitiesIdBusinessLinesResponse res = new org.openapis.openapi.models.operations.GetLegalEntitiesIdBusinessLinesResponse() {{
+        org.openapis.openapi.models.operations.GetLegalEntitiesIdBusinessLinesResponse res = new org.openapis.openapi.models.operations.GetLegalEntitiesIdBusinessLinesResponse(contentType, httpRes.statusCode()) {{
             businessLines = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,12 +151,10 @@ public class LegalEntities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchLegalEntitiesIdResponse res = new org.openapis.openapi.models.operations.PatchLegalEntitiesIdResponse() {{
+        org.openapis.openapi.models.operations.PatchLegalEntitiesIdResponse res = new org.openapis.openapi.models.operations.PatchLegalEntitiesIdResponse(contentType, httpRes.statusCode()) {{
             legalEntity = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -187,6 +181,8 @@ public class LegalEntities {
      * 
      * This resource contains information about the user that will be onboarded in your platform. Adyen uses this information to perform verification checks as required by payment industry regulations. Adyen informs you of the verification results through webhooks or API responses. 
      * 
+     * &gt;If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
+     * 
      * 
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
@@ -210,12 +206,10 @@ public class LegalEntities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLegalEntitiesResponse res = new org.openapis.openapi.models.operations.PostLegalEntitiesResponse() {{
+        org.openapis.openapi.models.operations.PostLegalEntitiesResponse res = new org.openapis.openapi.models.operations.PostLegalEntitiesResponse(contentType, httpRes.statusCode()) {{
             legalEntity = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -259,12 +253,10 @@ public class LegalEntities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLegalEntitiesIdCheckVerificationErrorsResponse res = new org.openapis.openapi.models.operations.PostLegalEntitiesIdCheckVerificationErrorsResponse() {{
+        org.openapis.openapi.models.operations.PostLegalEntitiesIdCheckVerificationErrorsResponse res = new org.openapis.openapi.models.operations.PostLegalEntitiesIdCheckVerificationErrorsResponse(contentType, httpRes.statusCode()) {{
             verificationErrors = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

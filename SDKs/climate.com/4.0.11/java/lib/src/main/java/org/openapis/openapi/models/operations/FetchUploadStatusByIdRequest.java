@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchUploadStatusByIdRequest {
@@ -12,9 +13,13 @@ public class FetchUploadStatusByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uploadId")
     public String uploadId;
+
     public FetchUploadStatusByIdRequest withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
     
+    public FetchUploadStatusByIdRequest(@JsonProperty("uploadId") String uploadId) {
+        this.uploadId = uploadId;
+  }
 }

@@ -15,9 +15,11 @@ public class AppConfigSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plans")
     public Plan[] plans;
+
     public AppConfigSubscription withPlans(Plan[] plans) {
         this.plans = plans;
         return this;
     }
     
+    public AppConfigSubscription(){}
 }

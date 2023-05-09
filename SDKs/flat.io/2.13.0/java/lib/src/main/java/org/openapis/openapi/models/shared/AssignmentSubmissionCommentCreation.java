@@ -15,9 +15,13 @@ public class AssignmentSubmissionCommentCreation {
      */
     @JsonProperty("comment")
     public String comment;
+
     public AssignmentSubmissionCommentCreation withComment(String comment) {
         this.comment = comment;
         return this;
     }
     
+    public AssignmentSubmissionCommentCreation(@JsonProperty("comment") String comment) {
+        this.comment = comment;
+  }
 }

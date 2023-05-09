@@ -15,6 +15,7 @@ public class CopyCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyOptions")
     public String copyOptions;
+
     public CopyCommand withCopyOptions(String copyOptions) {
         this.copyOptions = copyOptions;
         return this;
@@ -23,6 +24,7 @@ public class CopyCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataTableColumns")
     public String dataTableColumns;
+
     public CopyCommand withDataTableColumns(String dataTableColumns) {
         this.dataTableColumns = dataTableColumns;
         return this;
@@ -30,9 +32,13 @@ public class CopyCommand {
     
     @JsonProperty("DataTableName")
     public String dataTableName;
+
     public CopyCommand withDataTableName(String dataTableName) {
         this.dataTableName = dataTableName;
         return this;
     }
     
+    public CopyCommand(@JsonProperty("DataTableName") String dataTableName) {
+        this.dataTableName = dataTableName;
+  }
 }

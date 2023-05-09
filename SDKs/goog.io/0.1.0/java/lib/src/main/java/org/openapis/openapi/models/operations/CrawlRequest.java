@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrawlRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
     public String query;
+
     public CrawlRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public CrawlRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

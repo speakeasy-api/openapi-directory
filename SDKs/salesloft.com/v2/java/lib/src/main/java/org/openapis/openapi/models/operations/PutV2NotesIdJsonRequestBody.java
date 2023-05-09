@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV2NotesIdJsonRequestBody {
@@ -12,6 +13,7 @@ public class PutV2NotesIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=call_id")
     public Long callId;
+
     public PutV2NotesIdJsonRequestBody withCallId(Long callId) {
         this.callId = callId;
         return this;
@@ -22,9 +24,13 @@ public class PutV2NotesIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=content")
     public String content;
+
     public PutV2NotesIdJsonRequestBody withContent(String content) {
         this.content = content;
         return this;
     }
     
+    public PutV2NotesIdJsonRequestBody(@JsonProperty("content") String content) {
+        this.content = content;
+  }
 }

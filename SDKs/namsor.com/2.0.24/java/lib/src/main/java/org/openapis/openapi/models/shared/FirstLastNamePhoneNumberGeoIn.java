@@ -12,6 +12,7 @@ public class FirstLastNamePhoneNumberGeoIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryIso2")
     public String countryIso2;
+
     public FirstLastNamePhoneNumberGeoIn withCountryIso2(String countryIso2) {
         this.countryIso2 = countryIso2;
         return this;
@@ -20,6 +21,7 @@ public class FirstLastNamePhoneNumberGeoIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryIso2Alt")
     public String countryIso2Alt;
+
     public FirstLastNamePhoneNumberGeoIn withCountryIso2Alt(String countryIso2Alt) {
         this.countryIso2Alt = countryIso2Alt;
         return this;
@@ -28,6 +30,7 @@ public class FirstLastNamePhoneNumberGeoIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public FirstLastNamePhoneNumberGeoIn withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -36,6 +39,7 @@ public class FirstLastNamePhoneNumberGeoIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FirstLastNamePhoneNumberGeoIn withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class FirstLastNamePhoneNumberGeoIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public FirstLastNamePhoneNumberGeoIn withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -52,9 +57,11 @@ public class FirstLastNamePhoneNumberGeoIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public FirstLastNamePhoneNumberGeoIn withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public FirstLastNamePhoneNumberGeoIn(){}
 }

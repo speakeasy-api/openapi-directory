@@ -15,9 +15,11 @@ public class GetEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptions")
     public EntityDescription[] descriptions;
+
     public GetEntitiesResponse withDescriptions(EntityDescription[] descriptions) {
         this.descriptions = descriptions;
         return this;
     }
     
+    public GetEntitiesResponse(){}
 }

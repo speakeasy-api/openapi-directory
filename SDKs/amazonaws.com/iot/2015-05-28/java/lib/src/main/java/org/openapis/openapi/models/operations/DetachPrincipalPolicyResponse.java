@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetachPrincipalPolicyResponse {
     
     public String contentType;
+
     public DetachPrincipalPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DetachPrincipalPolicyResponse {
      */
     
     public Object internalFailureException;
+
     public DetachPrincipalPolicyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class DetachPrincipalPolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public DetachPrincipalPolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class DetachPrincipalPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DetachPrincipalPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DetachPrincipalPolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DetachPrincipalPolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class DetachPrincipalPolicyResponse {
     
     
     public Integer statusCode;
+
     public DetachPrincipalPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DetachPrincipalPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetachPrincipalPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DetachPrincipalPolicyResponse {
      */
     
     public Object throttlingException;
+
     public DetachPrincipalPolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DetachPrincipalPolicyResponse {
      */
     
     public Object unauthorizedException;
+
     public DetachPrincipalPolicyResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DetachPrincipalPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

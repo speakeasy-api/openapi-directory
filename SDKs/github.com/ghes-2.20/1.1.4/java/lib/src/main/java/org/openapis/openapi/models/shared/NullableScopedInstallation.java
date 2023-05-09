@@ -14,6 +14,7 @@ public class NullableScopedInstallation {
      */
     @JsonProperty("account")
     public SimpleUser account;
+
     public NullableScopedInstallation withAccount(SimpleUser account) {
         this.account = account;
         return this;
@@ -22,6 +23,7 @@ public class NullableScopedInstallation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_multiple_single_files")
     public Boolean hasMultipleSingleFiles;
+
     public NullableScopedInstallation withHasMultipleSingleFiles(Boolean hasMultipleSingleFiles) {
         this.hasMultipleSingleFiles = hasMultipleSingleFiles;
         return this;
@@ -32,6 +34,7 @@ public class NullableScopedInstallation {
      */
     @JsonProperty("permissions")
     public AppPermissions permissions;
+
     public NullableScopedInstallation withPermissions(AppPermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -39,6 +42,7 @@ public class NullableScopedInstallation {
     
     @JsonProperty("repositories_url")
     public String repositoriesUrl;
+
     public NullableScopedInstallation withRepositoriesUrl(String repositoriesUrl) {
         this.repositoriesUrl = repositoriesUrl;
         return this;
@@ -49,6 +53,7 @@ public class NullableScopedInstallation {
      */
     @JsonProperty("repository_selection")
     public NullableScopedInstallationRepositorySelectionEnum repositorySelection;
+
     public NullableScopedInstallation withRepositorySelection(NullableScopedInstallationRepositorySelectionEnum repositorySelection) {
         this.repositorySelection = repositorySelection;
         return this;
@@ -56,6 +61,7 @@ public class NullableScopedInstallation {
     
     @JsonProperty("single_file_name")
     public String singleFileName;
+
     public NullableScopedInstallation withSingleFileName(String singleFileName) {
         this.singleFileName = singleFileName;
         return this;
@@ -64,9 +70,17 @@ public class NullableScopedInstallation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("single_file_paths")
     public String[] singleFilePaths;
+
     public NullableScopedInstallation withSingleFilePaths(String[] singleFilePaths) {
         this.singleFilePaths = singleFilePaths;
         return this;
     }
     
+    public NullableScopedInstallation(@JsonProperty("account") SimpleUser account, @JsonProperty("permissions") AppPermissions permissions, @JsonProperty("repositories_url") String repositoriesUrl, @JsonProperty("repository_selection") NullableScopedInstallationRepositorySelectionEnum repositorySelection, @JsonProperty("single_file_name") String singleFileName) {
+        this.account = account;
+        this.permissions = permissions;
+        this.repositoriesUrl = repositoriesUrl;
+        this.repositorySelection = repositorySelection;
+        this.singleFileName = singleFileName;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateStoreImageTaskRequestS3ObjectTags {
     
     public String key;
+
     public CreateStoreImageTaskRequestS3ObjectTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateStoreImageTaskRequestS3ObjectTags {
     
     
     public String value;
+
     public CreateStoreImageTaskRequestS3ObjectTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateStoreImageTaskRequestS3ObjectTags(){}
 }

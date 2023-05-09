@@ -20,6 +20,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowListIds")
     public String[] allowListIds;
+
     public DescribeClassificationJobResponse withAllowListIds(String[] allowListIds) {
         this.allowListIds = allowListIds;
         return this;
@@ -28,6 +29,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DescribeClassificationJobResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -38,6 +40,7 @@ public class DescribeClassificationJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public DescribeClassificationJobResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDataIdentifierIds")
     public String[] customDataIdentifierIds;
+
     public DescribeClassificationJobResponse withCustomDataIdentifierIds(String[] customDataIdentifierIds) {
         this.customDataIdentifierIds = customDataIdentifierIds;
         return this;
@@ -54,6 +58,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DescribeClassificationJobResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialRun")
     public Boolean initialRun;
+
     public DescribeClassificationJobResponse withInitialRun(Boolean initialRun) {
         this.initialRun = initialRun;
         return this;
@@ -70,6 +76,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobArn")
     public String jobArn;
+
     public DescribeClassificationJobResponse withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -78,6 +85,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public DescribeClassificationJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -86,6 +94,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobStatus")
     public JobStatusEnum jobStatus;
+
     public DescribeClassificationJobResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -94,6 +103,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobType")
     public JobTypeEnum jobType;
+
     public DescribeClassificationJobResponse withJobType(JobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -102,6 +112,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastRunErrorStatus")
     public LastRunErrorStatus lastRunErrorStatus;
+
     public DescribeClassificationJobResponse withLastRunErrorStatus(LastRunErrorStatus lastRunErrorStatus) {
         this.lastRunErrorStatus = lastRunErrorStatus;
         return this;
@@ -112,6 +123,7 @@ public class DescribeClassificationJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastRunTime")
     public OffsetDateTime lastRunTime;
+
     public DescribeClassificationJobResponse withLastRunTime(OffsetDateTime lastRunTime) {
         this.lastRunTime = lastRunTime;
         return this;
@@ -120,6 +132,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedDataIdentifierIds")
     public String[] managedDataIdentifierIds;
+
     public DescribeClassificationJobResponse withManagedDataIdentifierIds(String[] managedDataIdentifierIds) {
         this.managedDataIdentifierIds = managedDataIdentifierIds;
         return this;
@@ -128,6 +141,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedDataIdentifierSelector")
     public ManagedDataIdentifierSelectorEnum managedDataIdentifierSelector;
+
     public DescribeClassificationJobResponse withManagedDataIdentifierSelector(ManagedDataIdentifierSelectorEnum managedDataIdentifierSelector) {
         this.managedDataIdentifierSelector = managedDataIdentifierSelector;
         return this;
@@ -136,6 +150,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DescribeClassificationJobResponse withName(String name) {
         this.name = name;
         return this;
@@ -144,6 +159,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3JobDefinition")
     public S3JobDefinition s3JobDefinition;
+
     public DescribeClassificationJobResponse withS3JobDefinition(S3JobDefinition s3JobDefinition) {
         this.s3JobDefinition = s3JobDefinition;
         return this;
@@ -152,6 +168,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samplingPercentage")
     public Long samplingPercentage;
+
     public DescribeClassificationJobResponse withSamplingPercentage(Long samplingPercentage) {
         this.samplingPercentage = samplingPercentage;
         return this;
@@ -160,6 +177,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleFrequency")
     public JobScheduleFrequency scheduleFrequency;
+
     public DescribeClassificationJobResponse withScheduleFrequency(JobScheduleFrequency scheduleFrequency) {
         this.scheduleFrequency = scheduleFrequency;
         return this;
@@ -168,6 +186,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistics")
     public Statistics statistics;
+
     public DescribeClassificationJobResponse withStatistics(Statistics statistics) {
         this.statistics = statistics;
         return this;
@@ -176,6 +195,7 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public DescribeClassificationJobResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -184,9 +204,11 @@ public class DescribeClassificationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userPausedDetails")
     public UserPausedDetails userPausedDetails;
+
     public DescribeClassificationJobResponse withUserPausedDetails(UserPausedDetails userPausedDetails) {
         this.userPausedDetails = userPausedDetails;
         return this;
     }
     
+    public DescribeClassificationJobResponse(){}
 }

@@ -15,6 +15,7 @@ public class BatchJobDependency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public BatchJobDependency withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -23,9 +24,11 @@ public class BatchJobDependency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public BatchJobDependencyTypeEnum type;
+
     public BatchJobDependency withType(BatchJobDependencyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public BatchJobDependency(){}
 }

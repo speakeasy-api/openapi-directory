@@ -12,6 +12,7 @@ public class UpdatePhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionProtectionEnabled")
     public Boolean deletionProtectionEnabled;
+
     public UpdatePhoneNumberRequest withDeletionProtectionEnabled(Boolean deletionProtectionEnabled) {
         this.deletionProtectionEnabled = deletionProtectionEnabled;
         return this;
@@ -20,6 +21,7 @@ public class UpdatePhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOutListName")
     public String optOutListName;
+
     public UpdatePhoneNumberRequest withOptOutListName(String optOutListName) {
         this.optOutListName = optOutListName;
         return this;
@@ -27,6 +29,7 @@ public class UpdatePhoneNumberRequest {
     
     @JsonProperty("PhoneNumberId")
     public String phoneNumberId;
+
     public UpdatePhoneNumberRequest withPhoneNumberId(String phoneNumberId) {
         this.phoneNumberId = phoneNumberId;
         return this;
@@ -35,6 +38,7 @@ public class UpdatePhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelfManagedOptOutsEnabled")
     public Boolean selfManagedOptOutsEnabled;
+
     public UpdatePhoneNumberRequest withSelfManagedOptOutsEnabled(Boolean selfManagedOptOutsEnabled) {
         this.selfManagedOptOutsEnabled = selfManagedOptOutsEnabled;
         return this;
@@ -43,6 +47,7 @@ public class UpdatePhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoWayChannelArn")
     public String twoWayChannelArn;
+
     public UpdatePhoneNumberRequest withTwoWayChannelArn(String twoWayChannelArn) {
         this.twoWayChannelArn = twoWayChannelArn;
         return this;
@@ -51,9 +56,13 @@ public class UpdatePhoneNumberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoWayEnabled")
     public Boolean twoWayEnabled;
+
     public UpdatePhoneNumberRequest withTwoWayEnabled(Boolean twoWayEnabled) {
         this.twoWayEnabled = twoWayEnabled;
         return this;
     }
     
+    public UpdatePhoneNumberRequest(@JsonProperty("PhoneNumberId") String phoneNumberId) {
+        this.phoneNumberId = phoneNumberId;
+  }
 }

@@ -45,6 +45,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/FileProjectsLocationsIn
 lib/src/main/java/org/openapis/openapi/models/operations/FileProjectsLocationsInstancesRestoreSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/FileProjectsLocationsInstancesRestoreRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FileProjectsLocationsInstancesRestoreResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/FileProjectsLocationsInstancesRevertSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/FileProjectsLocationsInstancesRevertRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/FileProjectsLocationsInstancesRevertResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/FileProjectsLocationsInstancesSnapshotsCreateSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/FileProjectsLocationsInstancesSnapshotsCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FileProjectsLocationsInstancesSnapshotsCreateResponse.java
@@ -93,6 +96,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/NfsExportOptionsSquashModeE
 lib/src/main/java/org/openapis/openapi/models/shared/NfsExportOptions.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListInstancesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RestoreInstanceRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/RevertInstanceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/SnapshotInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/SnapshotStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Snapshot.java
@@ -100,4 +104,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListSnapshotsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListLocationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Location.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOperationsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

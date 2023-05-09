@@ -15,6 +15,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthDate")
     public String birthDate;
+
     public Profile withBirthDate(String birthDate) {
         this.birthDate = birthDate;
         return this;
@@ -25,6 +26,7 @@ public class Profile {
      */
     @JsonProperty("document")
     public String document;
+
     public Profile withDocument(String document) {
         this.document = document;
         return this;
@@ -35,6 +37,7 @@ public class Profile {
      */
     @JsonProperty("documentType")
     public String documentType;
+
     public Profile withDocumentType(String documentType) {
         this.documentType = documentType;
         return this;
@@ -45,6 +48,7 @@ public class Profile {
      */
     @JsonProperty("email")
     public String email;
+
     public Profile withEmail(String email) {
         this.email = email;
         return this;
@@ -55,6 +59,7 @@ public class Profile {
      */
     @JsonProperty("firstName")
     public String firstName;
+
     public Profile withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -65,9 +70,17 @@ public class Profile {
      */
     @JsonProperty("lastName")
     public String lastName;
+
     public Profile withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public Profile(@JsonProperty("document") String document, @JsonProperty("documentType") String documentType, @JsonProperty("email") String email, @JsonProperty("firstName") String firstName, @JsonProperty("lastName") String lastName) {
+        this.document = document;
+        this.documentType = documentType;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+  }
 }

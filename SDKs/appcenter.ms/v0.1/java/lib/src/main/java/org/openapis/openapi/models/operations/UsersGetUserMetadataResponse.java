@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsersGetUserMetadataResponse {
     
     public String contentType;
+
     public UsersGetUserMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UsersGetUserMetadataResponse {
     
     
     public Integer statusCode;
+
     public UsersGetUserMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UsersGetUserMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsersGetUserMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UsersGetUserMetadataResponse {
      */
     
     public UsersGetUserMetadata200ApplicationJSON usersGetUserMetadata200ApplicationJSONObject;
+
     public UsersGetUserMetadataResponse withUsersGetUserMetadata200ApplicationJSONObject(UsersGetUserMetadata200ApplicationJSON usersGetUserMetadata200ApplicationJSONObject) {
         this.usersGetUserMetadata200ApplicationJSONObject = usersGetUserMetadata200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class UsersGetUserMetadataResponse {
      */
     
     public UsersGetUserMetadataDefaultApplicationJSON usersGetUserMetadataDefaultApplicationJSONObject;
+
     public UsersGetUserMetadataResponse withUsersGetUserMetadataDefaultApplicationJSONObject(UsersGetUserMetadataDefaultApplicationJSON usersGetUserMetadataDefaultApplicationJSONObject) {
         this.usersGetUserMetadataDefaultApplicationJSONObject = usersGetUserMetadataDefaultApplicationJSONObject;
         return this;
     }
     
+    public UsersGetUserMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

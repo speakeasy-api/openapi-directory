@@ -23,6 +23,7 @@ public class BucketIamConfigurationUniformBucketLevelAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public BucketIamConfigurationUniformBucketLevelAccess withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -36,9 +37,11 @@ public class BucketIamConfigurationUniformBucketLevelAccess {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lockedTime")
     public OffsetDateTime lockedTime;
+
     public BucketIamConfigurationUniformBucketLevelAccess withLockedTime(OffsetDateTime lockedTime) {
         this.lockedTime = lockedTime;
         return this;
     }
     
+    public BucketIamConfigurationUniformBucketLevelAccess(){}
 }

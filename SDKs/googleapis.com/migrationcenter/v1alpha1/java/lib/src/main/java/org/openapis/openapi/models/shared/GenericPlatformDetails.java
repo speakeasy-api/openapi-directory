@@ -18,9 +18,11 @@ public class GenericPlatformDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GenericPlatformDetails withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public GenericPlatformDetails(){}
 }

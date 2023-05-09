@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetTransitGatewayMulticastDomainAssociationsRequest {
     
     public Boolean dryRun;
+
     public GetTransitGatewayMulticastDomainAssociationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetTransitGatewayMulticastDomainAssociationsRequest {
     
     
     public GetTransitGatewayMulticastDomainAssociationsRequestFilters[] filters;
+
     public GetTransitGatewayMulticastDomainAssociationsRequest withFilters(GetTransitGatewayMulticastDomainAssociationsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class GetTransitGatewayMulticastDomainAssociationsRequest {
     
     
     public Long maxResults;
+
     public GetTransitGatewayMulticastDomainAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class GetTransitGatewayMulticastDomainAssociationsRequest {
     
     
     public String nextToken;
+
     public GetTransitGatewayMulticastDomainAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,13 @@ public class GetTransitGatewayMulticastDomainAssociationsRequest {
     
     
     public String transitGatewayMulticastDomainId;
+
     public GetTransitGatewayMulticastDomainAssociationsRequest withTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
         this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
         return this;
     }
     
+    public GetTransitGatewayMulticastDomainAssociationsRequest(@JsonProperty("TransitGatewayMulticastDomainId") String transitGatewayMulticastDomainId) {
+        this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
+  }
 }

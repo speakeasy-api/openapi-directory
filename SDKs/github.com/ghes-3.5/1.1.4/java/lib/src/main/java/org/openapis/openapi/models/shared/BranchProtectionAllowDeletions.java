@@ -12,9 +12,11 @@ public class BranchProtectionAllowDeletions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public BranchProtectionAllowDeletions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public BranchProtectionAllowDeletions(){}
 }

@@ -20,9 +20,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Error400 {
     @JsonProperty("errors")
     public Issue[] errors;
+
     public Error400 withErrors(Issue[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public Error400(@JsonProperty("errors") Issue[] errors) {
+        this.errors = errors;
+  }
 }

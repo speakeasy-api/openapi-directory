@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnvironmentProperties {
     @JsonProperty("PropertyGroups")
     public PropertyGroup[] propertyGroups;
+
     public EnvironmentProperties withPropertyGroups(PropertyGroup[] propertyGroups) {
         this.propertyGroups = propertyGroups;
         return this;
     }
     
+    public EnvironmentProperties(@JsonProperty("PropertyGroups") PropertyGroup[] propertyGroups) {
+        this.propertyGroups = propertyGroups;
+  }
 }

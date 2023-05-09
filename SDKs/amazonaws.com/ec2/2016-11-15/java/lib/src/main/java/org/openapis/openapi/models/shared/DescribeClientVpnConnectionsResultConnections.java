@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnConnectionsResultConnections {
     
     public String clientIp;
+
     public DescribeClientVpnConnectionsResultConnections withClientIp(String clientIp) {
         this.clientIp = clientIp;
         return this;
@@ -19,6 +20,7 @@ public class DescribeClientVpnConnectionsResultConnections {
     
     
     public String clientVpnEndpointId;
+
     public DescribeClientVpnConnectionsResultConnections withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeClientVpnConnectionsResultConnections {
     
     
     public String commonName;
+
     public DescribeClientVpnConnectionsResultConnections withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -33,6 +36,7 @@ public class DescribeClientVpnConnectionsResultConnections {
     
     
     public String connectionEndTime;
+
     public DescribeClientVpnConnectionsResultConnections withConnectionEndTime(String connectionEndTime) {
         this.connectionEndTime = connectionEndTime;
         return this;
@@ -40,6 +44,7 @@ public class DescribeClientVpnConnectionsResultConnections {
     
     
     public String connectionEstablishedTime;
+
     public DescribeClientVpnConnectionsResultConnections withConnectionEstablishedTime(String connectionEstablishedTime) {
         this.connectionEstablishedTime = connectionEstablishedTime;
         return this;
@@ -47,6 +52,7 @@ public class DescribeClientVpnConnectionsResultConnections {
     
     
     public String connectionId;
+
     public DescribeClientVpnConnectionsResultConnections withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeClientVpnConnectionsResultConnections {
     
     
     public String egressBytes;
+
     public DescribeClientVpnConnectionsResultConnections withEgressBytes(String egressBytes) {
         this.egressBytes = egressBytes;
         return this;
@@ -61,6 +68,7 @@ public class DescribeClientVpnConnectionsResultConnections {
     
     
     public String egressPackets;
+
     public DescribeClientVpnConnectionsResultConnections withEgressPackets(String egressPackets) {
         this.egressPackets = egressPackets;
         return this;
@@ -68,6 +76,7 @@ public class DescribeClientVpnConnectionsResultConnections {
     
     
     public String ingressBytes;
+
     public DescribeClientVpnConnectionsResultConnections withIngressBytes(String ingressBytes) {
         this.ingressBytes = ingressBytes;
         return this;
@@ -75,6 +84,7 @@ public class DescribeClientVpnConnectionsResultConnections {
     
     
     public String ingressPackets;
+
     public DescribeClientVpnConnectionsResultConnections withIngressPackets(String ingressPackets) {
         this.ingressPackets = ingressPackets;
         return this;
@@ -82,6 +92,7 @@ public class DescribeClientVpnConnectionsResultConnections {
     
     
     public String[] postureComplianceStatuses;
+
     public DescribeClientVpnConnectionsResultConnections withPostureComplianceStatuses(String[] postureComplianceStatuses) {
         this.postureComplianceStatuses = postureComplianceStatuses;
         return this;
@@ -89,6 +100,7 @@ public class DescribeClientVpnConnectionsResultConnections {
     
     
     public DescribeClientVpnConnectionsResultConnectionsStatus status;
+
     public DescribeClientVpnConnectionsResultConnections withStatus(DescribeClientVpnConnectionsResultConnectionsStatus status) {
         this.status = status;
         return this;
@@ -96,6 +108,7 @@ public class DescribeClientVpnConnectionsResultConnections {
     
     
     public String timestamp;
+
     public DescribeClientVpnConnectionsResultConnections withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -103,9 +116,11 @@ public class DescribeClientVpnConnectionsResultConnections {
     
     
     public String username;
+
     public DescribeClientVpnConnectionsResultConnections withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public DescribeClientVpnConnectionsResultConnections(){}
 }

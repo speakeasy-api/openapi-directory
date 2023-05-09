@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociatePricingRulesResponse {
@@ -12,6 +13,7 @@ public class DisassociatePricingRulesResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociatePricingRulesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisassociatePricingRulesResponse {
      */
     
     public Object conflictException;
+
     public DisassociatePricingRulesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociatePricingRulesResponse {
     
     
     public String contentType;
+
     public DisassociatePricingRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisassociatePricingRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociatePricingRulesOutput disassociatePricingRulesOutput;
+
     public DisassociatePricingRulesResponse withDisassociatePricingRulesOutput(org.openapis.openapi.models.shared.DisassociatePricingRulesOutput disassociatePricingRulesOutput) {
         this.disassociatePricingRulesOutput = disassociatePricingRulesOutput;
         return this;
@@ -49,6 +54,7 @@ public class DisassociatePricingRulesResponse {
      */
     
     public Object internalServerException;
+
     public DisassociatePricingRulesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociatePricingRulesResponse {
     
     
     public Integer statusCode;
+
     public DisassociatePricingRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisassociatePricingRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociatePricingRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DisassociatePricingRulesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociatePricingRulesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DisassociatePricingRulesResponse {
      */
     
     public Object throttlingException;
+
     public DisassociatePricingRulesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DisassociatePricingRulesResponse {
      */
     
     public Object validationException;
+
     public DisassociatePricingRulesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociatePricingRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

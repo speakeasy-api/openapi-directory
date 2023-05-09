@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class ModifyCapacityReservationRequest {
     
     public Boolean accept;
+
     public ModifyCapacityReservationRequest withAccept(Boolean accept) {
         this.accept = accept;
         return this;
@@ -16,6 +18,7 @@ public class ModifyCapacityReservationRequest {
     
     
     public String additionalInfo;
+
     public ModifyCapacityReservationRequest withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -23,6 +26,7 @@ public class ModifyCapacityReservationRequest {
     
     
     public String capacityReservationId;
+
     public ModifyCapacityReservationRequest withCapacityReservationId(String capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
         return this;
@@ -30,6 +34,7 @@ public class ModifyCapacityReservationRequest {
     
     
     public Boolean dryRun;
+
     public ModifyCapacityReservationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -37,6 +42,7 @@ public class ModifyCapacityReservationRequest {
     
     
     public OffsetDateTime endDate;
+
     public ModifyCapacityReservationRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -44,6 +50,7 @@ public class ModifyCapacityReservationRequest {
     
     
     public EndDateTypeEnum endDateType;
+
     public ModifyCapacityReservationRequest withEndDateType(EndDateTypeEnum endDateType) {
         this.endDateType = endDateType;
         return this;
@@ -51,9 +58,13 @@ public class ModifyCapacityReservationRequest {
     
     
     public Long instanceCount;
+
     public ModifyCapacityReservationRequest withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
     }
     
+    public ModifyCapacityReservationRequest(@JsonProperty("CapacityReservationId") String capacityReservationId) {
+        this.capacityReservationId = capacityReservationId;
+  }
 }

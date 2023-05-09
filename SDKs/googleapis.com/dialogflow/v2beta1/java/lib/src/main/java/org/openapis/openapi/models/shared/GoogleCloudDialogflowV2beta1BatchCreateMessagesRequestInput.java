@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1BatchCreateMessagesRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public GoogleCloudDialogflowV2beta1CreateMessageRequestInput[] requests;
+
     public GoogleCloudDialogflowV2beta1BatchCreateMessagesRequestInput withRequests(GoogleCloudDialogflowV2beta1CreateMessageRequestInput[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1BatchCreateMessagesRequestInput(){}
 }

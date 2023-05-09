@@ -15,6 +15,7 @@ public class ResultSetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnCount")
     public Long columnCount;
+
     public ResultSetMetadata withColumnCount(Long columnCount) {
         this.columnCount = columnCount;
         return this;
@@ -23,9 +24,11 @@ public class ResultSetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnMetadata")
     public ColumnMetadata[] columnMetadata;
+
     public ResultSetMetadata withColumnMetadata(ColumnMetadata[] columnMetadata) {
         this.columnMetadata = columnMetadata;
         return this;
     }
     
+    public ResultSetMetadata(){}
 }

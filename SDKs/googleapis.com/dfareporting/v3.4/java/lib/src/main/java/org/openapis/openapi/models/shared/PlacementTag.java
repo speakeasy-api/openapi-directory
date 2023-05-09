@@ -18,6 +18,7 @@ public class PlacementTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementId")
     public String placementId;
+
     public PlacementTag withPlacementId(String placementId) {
         this.placementId = placementId;
         return this;
@@ -29,9 +30,11 @@ public class PlacementTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagDatas")
     public TagData[] tagDatas;
+
     public PlacementTag withTagDatas(TagData[] tagDatas) {
         this.tagDatas = tagDatas;
         return this;
     }
     
+    public PlacementTag(){}
 }

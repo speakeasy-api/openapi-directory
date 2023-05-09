@@ -45,6 +45,7 @@ public class OrderFulfillmentRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public OrderFulfillmentRecipient withAddress(Address address) {
         this.address = address;
         return this;
@@ -63,6 +64,7 @@ public class OrderFulfillmentRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
+
     public OrderFulfillmentRecipient withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -76,6 +78,7 @@ public class OrderFulfillmentRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public OrderFulfillmentRecipient withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -89,6 +92,7 @@ public class OrderFulfillmentRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public String emailAddress;
+
     public OrderFulfillmentRecipient withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -102,9 +106,11 @@ public class OrderFulfillmentRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public OrderFulfillmentRecipient withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public OrderFulfillmentRecipient(){}
 }

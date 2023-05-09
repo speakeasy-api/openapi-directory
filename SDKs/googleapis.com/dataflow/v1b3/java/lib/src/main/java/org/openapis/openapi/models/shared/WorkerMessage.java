@@ -18,6 +18,7 @@ public class WorkerMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public WorkerMessage withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -29,6 +30,7 @@ public class WorkerMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public WorkerMessage withTime(String time) {
         this.time = time;
         return this;
@@ -40,6 +42,7 @@ public class WorkerMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerHealthReport")
     public WorkerHealthReport workerHealthReport;
+
     public WorkerMessage withWorkerHealthReport(WorkerHealthReport workerHealthReport) {
         this.workerHealthReport = workerHealthReport;
         return this;
@@ -51,6 +54,7 @@ public class WorkerMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerLifecycleEvent")
     public WorkerLifecycleEvent workerLifecycleEvent;
+
     public WorkerMessage withWorkerLifecycleEvent(WorkerLifecycleEvent workerLifecycleEvent) {
         this.workerLifecycleEvent = workerLifecycleEvent;
         return this;
@@ -62,6 +66,7 @@ public class WorkerMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerMessageCode")
     public WorkerMessageCode workerMessageCode;
+
     public WorkerMessage withWorkerMessageCode(WorkerMessageCode workerMessageCode) {
         this.workerMessageCode = workerMessageCode;
         return this;
@@ -73,6 +78,7 @@ public class WorkerMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerMetrics")
     public ResourceUtilizationReport workerMetrics;
+
     public WorkerMessage withWorkerMetrics(ResourceUtilizationReport workerMetrics) {
         this.workerMetrics = workerMetrics;
         return this;
@@ -84,6 +90,7 @@ public class WorkerMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerShutdownNotice")
     public WorkerShutdownNotice workerShutdownNotice;
+
     public WorkerMessage withWorkerShutdownNotice(WorkerShutdownNotice workerShutdownNotice) {
         this.workerShutdownNotice = workerShutdownNotice;
         return this;
@@ -95,9 +102,11 @@ public class WorkerMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerThreadScalingReport")
     public WorkerThreadScalingReport workerThreadScalingReport;
+
     public WorkerMessage withWorkerThreadScalingReport(WorkerThreadScalingReport workerThreadScalingReport) {
         this.workerThreadScalingReport = workerThreadScalingReport;
         return this;
     }
     
+    public WorkerMessage(){}
 }

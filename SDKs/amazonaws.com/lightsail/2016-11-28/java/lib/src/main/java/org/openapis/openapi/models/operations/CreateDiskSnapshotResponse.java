@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDiskSnapshotResponse {
@@ -12,6 +13,7 @@ public class CreateDiskSnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDiskSnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDiskSnapshotResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public CreateDiskSnapshotResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class CreateDiskSnapshotResponse {
     
     
     public String contentType;
+
     public CreateDiskSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateDiskSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDiskSnapshotResult createDiskSnapshotResult;
+
     public CreateDiskSnapshotResponse withCreateDiskSnapshotResult(org.openapis.openapi.models.shared.CreateDiskSnapshotResult createDiskSnapshotResult) {
         this.createDiskSnapshotResult = createDiskSnapshotResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateDiskSnapshotResponse {
      */
     
     public Object invalidInputException;
+
     public CreateDiskSnapshotResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDiskSnapshotResponse {
      */
     
     public Object notFoundException;
+
     public CreateDiskSnapshotResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDiskSnapshotResponse {
      */
     
     public Object operationFailureException;
+
     public CreateDiskSnapshotResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class CreateDiskSnapshotResponse {
      */
     
     public Object serviceException;
+
     public CreateDiskSnapshotResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class CreateDiskSnapshotResponse {
     
     
     public Integer statusCode;
+
     public CreateDiskSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateDiskSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDiskSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateDiskSnapshotResponse {
      */
     
     public Object unauthenticatedException;
+
     public CreateDiskSnapshotResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public CreateDiskSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

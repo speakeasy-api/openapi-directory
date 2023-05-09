@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateResiliencyPolicyResponse {
     @JsonProperty("policy")
     public ResiliencyPolicy policy;
+
     public UpdateResiliencyPolicyResponse withPolicy(ResiliencyPolicy policy) {
         this.policy = policy;
         return this;
     }
     
+    public UpdateResiliencyPolicyResponse(@JsonProperty("policy") ResiliencyPolicy policy) {
+        this.policy = policy;
+  }
 }

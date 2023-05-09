@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReligionResponse {
     
     public String contentType;
+
     public ReligionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ReligionResponse {
      */
     
     public org.openapis.openapi.models.shared.PersonalNameReligionedOut personalNameReligionedOut;
+
     public ReligionResponse withPersonalNameReligionedOut(org.openapis.openapi.models.shared.PersonalNameReligionedOut personalNameReligionedOut) {
         this.personalNameReligionedOut = personalNameReligionedOut;
         return this;
@@ -26,6 +29,7 @@ public class ReligionResponse {
     
     
     public Integer statusCode;
+
     public ReligionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ReligionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReligionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ReligionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

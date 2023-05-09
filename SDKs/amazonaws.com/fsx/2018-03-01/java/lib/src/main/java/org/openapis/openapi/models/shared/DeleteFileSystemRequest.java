@@ -15,6 +15,7 @@ public class DeleteFileSystemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public DeleteFileSystemRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -22,6 +23,7 @@ public class DeleteFileSystemRequest {
     
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public DeleteFileSystemRequest withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -33,6 +35,7 @@ public class DeleteFileSystemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LustreConfiguration")
     public DeleteFileSystemLustreConfiguration lustreConfiguration;
+
     public DeleteFileSystemRequest withLustreConfiguration(DeleteFileSystemLustreConfiguration lustreConfiguration) {
         this.lustreConfiguration = lustreConfiguration;
         return this;
@@ -41,6 +44,7 @@ public class DeleteFileSystemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenZFSConfiguration")
     public DeleteFileSystemOpenZFSConfiguration openZFSConfiguration;
+
     public DeleteFileSystemRequest withOpenZFSConfiguration(DeleteFileSystemOpenZFSConfiguration openZFSConfiguration) {
         this.openZFSConfiguration = openZFSConfiguration;
         return this;
@@ -52,9 +56,13 @@ public class DeleteFileSystemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowsConfiguration")
     public DeleteFileSystemWindowsConfiguration windowsConfiguration;
+
     public DeleteFileSystemRequest withWindowsConfiguration(DeleteFileSystemWindowsConfiguration windowsConfiguration) {
         this.windowsConfiguration = windowsConfiguration;
         return this;
     }
     
+    public DeleteFileSystemRequest(@JsonProperty("FileSystemId") String fileSystemId) {
+        this.fileSystemId = fileSystemId;
+  }
 }

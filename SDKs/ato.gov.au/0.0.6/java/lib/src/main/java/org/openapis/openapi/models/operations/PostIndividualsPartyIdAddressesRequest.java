@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostIndividualsPartyIdAddressesRequest {
@@ -12,6 +13,7 @@ public class PostIndividualsPartyIdAddressesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AddressInput addressInput;
+
     public PostIndividualsPartyIdAddressesRequest withAddressInput(org.openapis.openapi.models.shared.AddressInput addressInput) {
         this.addressInput = addressInput;
         return this;
@@ -22,6 +24,7 @@ public class PostIndividualsPartyIdAddressesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public PostIndividualsPartyIdAddressesRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -32,9 +35,15 @@ public class PostIndividualsPartyIdAddressesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
     public String partyId;
+
     public PostIndividualsPartyIdAddressesRequest withPartyId(String partyId) {
         this.partyId = partyId;
         return this;
     }
     
+    public PostIndividualsPartyIdAddressesRequest(@JsonProperty("addressInput") org.openapis.openapi.models.shared.AddressInput addressInput, @JsonProperty("apiKey") String apiKey, @JsonProperty("partyId") String partyId) {
+        this.addressInput = addressInput;
+        this.apiKey = apiKey;
+        this.partyId = partyId;
+  }
 }

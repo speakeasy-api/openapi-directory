@@ -12,6 +12,7 @@ public class ListRuleGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManagedType")
     public ResourceManagedTypeEnum managedType;
+
     public ListRuleGroupsRequest withManagedType(ResourceManagedTypeEnum managedType) {
         this.managedType = managedType;
         return this;
@@ -20,6 +21,7 @@ public class ListRuleGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListRuleGroupsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListRuleGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRuleGroupsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListRuleGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Scope")
     public ResourceManagedStatusEnum scope;
+
     public ListRuleGroupsRequest withScope(ResourceManagedStatusEnum scope) {
         this.scope = scope;
         return this;
@@ -44,9 +48,11 @@ public class ListRuleGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public RuleGroupTypeEnum type;
+
     public ListRuleGroupsRequest withType(RuleGroupTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListRuleGroupsRequest(){}
 }

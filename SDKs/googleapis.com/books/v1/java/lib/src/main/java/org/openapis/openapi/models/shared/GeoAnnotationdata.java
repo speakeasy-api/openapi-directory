@@ -15,6 +15,7 @@ public class GeoAnnotationdata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationType")
     public String annotationType;
+
     public GeoAnnotationdata withAnnotationType(String annotationType) {
         this.annotationType = annotationType;
         return this;
@@ -23,6 +24,7 @@ public class GeoAnnotationdata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Geolayerdata data;
+
     public GeoAnnotationdata withData(Geolayerdata data) {
         this.data = data;
         return this;
@@ -34,6 +36,7 @@ public class GeoAnnotationdata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encodedData")
     public String encodedData;
+
     public GeoAnnotationdata withEncodedData(String encodedData) {
         this.encodedData = encodedData;
         return this;
@@ -45,6 +48,7 @@ public class GeoAnnotationdata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GeoAnnotationdata withId(String id) {
         this.id = id;
         return this;
@@ -56,6 +60,7 @@ public class GeoAnnotationdata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public GeoAnnotationdata withKind(String kind) {
         this.kind = kind;
         return this;
@@ -67,6 +72,7 @@ public class GeoAnnotationdata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layerId")
     public String layerId;
+
     public GeoAnnotationdata withLayerId(String layerId) {
         this.layerId = layerId;
         return this;
@@ -78,6 +84,7 @@ public class GeoAnnotationdata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public GeoAnnotationdata withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -89,6 +96,7 @@ public class GeoAnnotationdata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated")
     public String updated;
+
     public GeoAnnotationdata withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -100,9 +108,11 @@ public class GeoAnnotationdata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeId")
     public String volumeId;
+
     public GeoAnnotationdata withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public GeoAnnotationdata(){}
 }

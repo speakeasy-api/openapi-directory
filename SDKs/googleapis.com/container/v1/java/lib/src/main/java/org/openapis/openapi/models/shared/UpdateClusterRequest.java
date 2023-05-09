@@ -18,6 +18,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public UpdateClusterRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -29,6 +30,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateClusterRequest withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public UpdateClusterRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -51,6 +54,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public ClusterUpdate update;
+
     public UpdateClusterRequest withUpdate(ClusterUpdate update) {
         this.update = update;
         return this;
@@ -62,9 +66,11 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public UpdateClusterRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public UpdateClusterRequest(){}
 }

@@ -14,6 +14,7 @@ public class CreatePipelineRequestBody {
      */
     @JsonProperty("pipelineActivities")
     public org.openapis.openapi.models.shared.PipelineActivity[] pipelineActivities;
+
     public CreatePipelineRequestBody withPipelineActivities(org.openapis.openapi.models.shared.PipelineActivity[] pipelineActivities) {
         this.pipelineActivities = pipelineActivities;
         return this;
@@ -24,6 +25,7 @@ public class CreatePipelineRequestBody {
      */
     @JsonProperty("pipelineName")
     public String pipelineName;
+
     public CreatePipelineRequestBody withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -35,9 +37,14 @@ public class CreatePipelineRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreatePipelineRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePipelineRequestBody(@JsonProperty("pipelineActivities") org.openapis.openapi.models.shared.PipelineActivity[] pipelineActivities, @JsonProperty("pipelineName") String pipelineName) {
+        this.pipelineActivities = pipelineActivities;
+        this.pipelineName = pipelineName;
+  }
 }

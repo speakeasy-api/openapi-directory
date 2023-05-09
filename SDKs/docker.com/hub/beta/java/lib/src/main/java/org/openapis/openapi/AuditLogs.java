@@ -58,14 +58,12 @@ public class AuditLogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuditLogsGetAuditActionsResponse res = new org.openapis.openapi.models.operations.AuditLogsGetAuditActionsResponse() {{
+        org.openapis.openapi.models.operations.AuditLogsGetAuditActionsResponse res = new org.openapis.openapi.models.operations.AuditLogsGetAuditActionsResponse(contentType, httpRes.statusCode()) {{
             getAuditActionsResponse = null;
             auditLogsGetAuditActions429ApplicationJSONAny = null;
             auditLogsGetAuditActions500ApplicationJSONAny = null;
             rpcStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -127,14 +125,12 @@ public class AuditLogs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuditLogsGetAuditLogsResponse res = new org.openapis.openapi.models.operations.AuditLogsGetAuditLogsResponse() {{
+        org.openapis.openapi.models.operations.AuditLogsGetAuditLogsResponse res = new org.openapis.openapi.models.operations.AuditLogsGetAuditLogsResponse(contentType, httpRes.statusCode()) {{
             getAuditLogsResponse = null;
             auditLogsGetAuditLogs429ApplicationJSONAny = null;
             auditLogsGetAuditLogs500ApplicationJSONAny = null;
             rpcStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

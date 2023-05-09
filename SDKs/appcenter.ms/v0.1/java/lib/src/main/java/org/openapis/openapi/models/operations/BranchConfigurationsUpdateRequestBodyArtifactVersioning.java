@@ -15,9 +15,11 @@ public class BranchConfigurationsUpdateRequestBodyArtifactVersioning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildNumberFormat")
     public BranchConfigurationsUpdateRequestBodyArtifactVersioningBuildNumberFormatEnum buildNumberFormat;
+
     public BranchConfigurationsUpdateRequestBodyArtifactVersioning withBuildNumberFormat(BranchConfigurationsUpdateRequestBodyArtifactVersioningBuildNumberFormatEnum buildNumberFormat) {
         this.buildNumberFormat = buildNumberFormat;
         return this;
     }
     
+    public BranchConfigurationsUpdateRequestBodyArtifactVersioning(){}
 }

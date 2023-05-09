@@ -22,6 +22,7 @@ public class DescribeLocationFsxOpenZfsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeLocationFsxOpenZfsResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeLocationFsxOpenZfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public DescribeLocationFsxOpenZfsResponse withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
@@ -38,6 +40,7 @@ public class DescribeLocationFsxOpenZfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationUri")
     public String locationUri;
+
     public DescribeLocationFsxOpenZfsResponse withLocationUri(String locationUri) {
         this.locationUri = locationUri;
         return this;
@@ -46,6 +49,7 @@ public class DescribeLocationFsxOpenZfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public FsxProtocol protocol;
+
     public DescribeLocationFsxOpenZfsResponse withProtocol(FsxProtocol protocol) {
         this.protocol = protocol;
         return this;
@@ -54,9 +58,11 @@ public class DescribeLocationFsxOpenZfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupArns")
     public String[] securityGroupArns;
+
     public DescribeLocationFsxOpenZfsResponse withSecurityGroupArns(String[] securityGroupArns) {
         this.securityGroupArns = securityGroupArns;
         return this;
     }
     
+    public DescribeLocationFsxOpenZfsResponse(){}
 }

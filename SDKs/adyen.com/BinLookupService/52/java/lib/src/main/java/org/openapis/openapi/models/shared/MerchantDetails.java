@@ -16,6 +16,7 @@ public class MerchantDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public MerchantDetails withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -27,6 +28,7 @@ public class MerchantDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enrolledIn3DSecure")
     public Boolean enrolledIn3DSecure;
+
     public MerchantDetails withEnrolledIn3DSecure(Boolean enrolledIn3DSecure) {
         this.enrolledIn3DSecure = enrolledIn3DSecure;
         return this;
@@ -40,9 +42,11 @@ public class MerchantDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mcc")
     public String mcc;
+
     public MerchantDetails withMcc(String mcc) {
         this.mcc = mcc;
         return this;
     }
     
+    public MerchantDetails(){}
 }

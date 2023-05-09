@@ -15,9 +15,11 @@ public class GetDefaultViewOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewArn")
     public String viewArn;
+
     public GetDefaultViewOutput withViewArn(String viewArn) {
         this.viewArn = viewArn;
         return this;
     }
     
+    public GetDefaultViewOutput(){}
 }

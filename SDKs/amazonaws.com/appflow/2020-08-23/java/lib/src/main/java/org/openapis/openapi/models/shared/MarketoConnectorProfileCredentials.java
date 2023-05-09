@@ -15,6 +15,7 @@ public class MarketoConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public MarketoConnectorProfileCredentials withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -22,6 +23,7 @@ public class MarketoConnectorProfileCredentials {
     
     @JsonProperty("clientId")
     public String clientId;
+
     public MarketoConnectorProfileCredentials withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,6 +31,7 @@ public class MarketoConnectorProfileCredentials {
     
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public MarketoConnectorProfileCredentials withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -37,9 +40,14 @@ public class MarketoConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthRequest")
     public ConnectorOAuthRequest oAuthRequest;
+
     public MarketoConnectorProfileCredentials withOAuthRequest(ConnectorOAuthRequest oAuthRequest) {
         this.oAuthRequest = oAuthRequest;
         return this;
     }
     
+    public MarketoConnectorProfileCredentials(@JsonProperty("clientId") String clientId, @JsonProperty("clientSecret") String clientSecret) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+  }
 }

@@ -18,6 +18,7 @@ public class GooglePlayDeveloperReportingV1alpha1DecimalConfidenceInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowerBound")
     public GoogleTypeDecimal lowerBound;
+
     public GooglePlayDeveloperReportingV1alpha1DecimalConfidenceInterval withLowerBound(GoogleTypeDecimal lowerBound) {
         this.lowerBound = lowerBound;
         return this;
@@ -29,9 +30,11 @@ public class GooglePlayDeveloperReportingV1alpha1DecimalConfidenceInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upperBound")
     public GoogleTypeDecimal upperBound;
+
     public GooglePlayDeveloperReportingV1alpha1DecimalConfidenceInterval withUpperBound(GoogleTypeDecimal upperBound) {
         this.upperBound = upperBound;
         return this;
     }
     
+    public GooglePlayDeveloperReportingV1alpha1DecimalConfidenceInterval(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCorporaResponse {
     
     public String contentType;
+
     public ListCorporaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ListCorporaResponse {
     
     
     public Integer statusCode;
+
     public ListCorporaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ListCorporaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCorporaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ListCorporaResponse {
      */
     
     public org.openapis.openapi.models.shared.AdminListCorporaResponse adminListCorporaResponse;
+
     public ListCorporaResponse withAdminListCorporaResponse(org.openapis.openapi.models.shared.AdminListCorporaResponse adminListCorporaResponse) {
         this.adminListCorporaResponse = adminListCorporaResponse;
         return this;
@@ -43,9 +48,14 @@ public class ListCorporaResponse {
      */
     
     public org.openapis.openapi.models.shared.GooglerpcStatus googlerpcStatus;
+
     public ListCorporaResponse withGooglerpcStatus(org.openapis.openapi.models.shared.GooglerpcStatus googlerpcStatus) {
         this.googlerpcStatus = googlerpcStatus;
         return this;
     }
     
+    public ListCorporaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

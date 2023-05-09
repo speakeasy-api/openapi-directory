@@ -35,6 +35,7 @@ public class SearchOrdersDateTimeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
     public TimeRange closedAt;
+
     public SearchOrdersDateTimeFilter withClosedAt(TimeRange closedAt) {
         this.closedAt = closedAt;
         return this;
@@ -50,6 +51,7 @@ public class SearchOrdersDateTimeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public TimeRange createdAt;
+
     public SearchOrdersDateTimeFilter withCreatedAt(TimeRange createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -65,9 +67,11 @@ public class SearchOrdersDateTimeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public TimeRange updatedAt;
+
     public SearchOrdersDateTimeFilter withUpdatedAt(TimeRange updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public SearchOrdersDateTimeFilter(){}
 }

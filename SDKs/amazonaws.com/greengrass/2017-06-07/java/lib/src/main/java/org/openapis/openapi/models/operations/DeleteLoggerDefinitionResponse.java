@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLoggerDefinitionResponse {
@@ -12,6 +13,7 @@ public class DeleteLoggerDefinitionResponse {
      */
     
     public Object badRequestException;
+
     public DeleteLoggerDefinitionResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteLoggerDefinitionResponse {
     
     
     public String contentType;
+
     public DeleteLoggerDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLoggerDefinitionResponse {
      */
     
     public java.util.Map<String, Object> deleteLoggerDefinitionResponse;
+
     public DeleteLoggerDefinitionResponse withDeleteLoggerDefinitionResponse(java.util.Map<String, Object> deleteLoggerDefinitionResponse) {
         this.deleteLoggerDefinitionResponse = deleteLoggerDefinitionResponse;
         return this;
@@ -36,6 +40,7 @@ public class DeleteLoggerDefinitionResponse {
     
     
     public Integer statusCode;
+
     public DeleteLoggerDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteLoggerDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLoggerDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteLoggerDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

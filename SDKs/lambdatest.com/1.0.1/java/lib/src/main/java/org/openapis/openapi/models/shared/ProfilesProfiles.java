@@ -12,6 +12,7 @@ public class ProfilesProfiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProfilesProfiles withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class ProfilesProfiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_config")
     public ProfilesProfilesProfileConfig profileConfig;
+
     public ProfilesProfiles withProfileConfig(ProfilesProfilesProfileConfig profileConfig) {
         this.profileConfig = profileConfig;
         return this;
     }
     
+    public ProfilesProfiles(){}
 }

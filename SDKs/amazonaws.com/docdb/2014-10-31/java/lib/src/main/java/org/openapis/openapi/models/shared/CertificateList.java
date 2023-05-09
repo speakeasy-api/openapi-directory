@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CertificateList {
     
     public String certificateArn;
+
     public CertificateList withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -19,6 +20,7 @@ public class CertificateList {
     
     
     public String certificateIdentifier;
+
     public CertificateList withCertificateIdentifier(String certificateIdentifier) {
         this.certificateIdentifier = certificateIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class CertificateList {
     
     
     public String certificateType;
+
     public CertificateList withCertificateType(String certificateType) {
         this.certificateType = certificateType;
         return this;
@@ -33,6 +36,7 @@ public class CertificateList {
     
     
     public String thumbprint;
+
     public CertificateList withThumbprint(String thumbprint) {
         this.thumbprint = thumbprint;
         return this;
@@ -40,6 +44,7 @@ public class CertificateList {
     
     
     public OffsetDateTime validFrom;
+
     public CertificateList withValidFrom(OffsetDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
@@ -47,9 +52,11 @@ public class CertificateList {
     
     
     public OffsetDateTime validTill;
+
     public CertificateList withValidTill(OffsetDateTime validTill) {
         this.validTill = validTill;
         return this;
     }
     
+    public CertificateList(){}
 }

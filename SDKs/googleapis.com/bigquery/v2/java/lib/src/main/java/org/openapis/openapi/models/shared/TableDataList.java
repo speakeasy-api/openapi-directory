@@ -18,6 +18,7 @@ public class TableDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public TableDataList withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class TableDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TableDataList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class TableDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public TableDataList withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -51,6 +54,7 @@ public class TableDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public TableRow[] rows;
+
     public TableDataList withRows(TableRow[] rows) {
         this.rows = rows;
         return this;
@@ -62,9 +66,11 @@ public class TableDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalRows")
     public String totalRows;
+
     public TableDataList withTotalRows(String totalRows) {
         this.totalRows = totalRows;
         return this;
     }
     
+    public TableDataList(){}
 }

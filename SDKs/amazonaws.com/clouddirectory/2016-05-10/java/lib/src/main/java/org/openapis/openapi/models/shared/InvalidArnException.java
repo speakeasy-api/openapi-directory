@@ -15,9 +15,11 @@ public class InvalidArnException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public InvalidArnException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InvalidArnException(){}
 }

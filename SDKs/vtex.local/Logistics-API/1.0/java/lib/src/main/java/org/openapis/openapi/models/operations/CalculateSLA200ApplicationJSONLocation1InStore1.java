@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CalculateSLA200ApplicationJSONLocation1InStore1 {
     @JsonProperty("IsCheckedIn")
     public Boolean isCheckedIn;
+
     public CalculateSLA200ApplicationJSONLocation1InStore1 withIsCheckedIn(Boolean isCheckedIn) {
         this.isCheckedIn = isCheckedIn;
         return this;
@@ -16,9 +17,14 @@ public class CalculateSLA200ApplicationJSONLocation1InStore1 {
     
     @JsonProperty("StoreId")
     public String storeId;
+
     public CalculateSLA200ApplicationJSONLocation1InStore1 withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public CalculateSLA200ApplicationJSONLocation1InStore1(@JsonProperty("IsCheckedIn") Boolean isCheckedIn, @JsonProperty("StoreId") String storeId) {
+        this.isCheckedIn = isCheckedIn;
+        this.storeId = storeId;
+  }
 }

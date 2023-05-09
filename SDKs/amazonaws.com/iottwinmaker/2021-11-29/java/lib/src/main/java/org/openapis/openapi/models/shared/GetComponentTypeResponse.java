@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetComponentTypeResponse {
     @JsonProperty("arn")
     public String arn;
+
     public GetComponentTypeResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class GetComponentTypeResponse {
     
     @JsonProperty("componentTypeId")
     public String componentTypeId;
+
     public GetComponentTypeResponse withComponentTypeId(String componentTypeId) {
         this.componentTypeId = componentTypeId;
         return this;
@@ -34,6 +36,7 @@ public class GetComponentTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentTypeName")
     public String componentTypeName;
+
     public GetComponentTypeResponse withComponentTypeName(String componentTypeName) {
         this.componentTypeName = componentTypeName;
         return this;
@@ -43,6 +46,7 @@ public class GetComponentTypeResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public GetComponentTypeResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -51,6 +55,7 @@ public class GetComponentTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetComponentTypeResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +64,7 @@ public class GetComponentTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extendsFrom")
     public String[] extendsFrom;
+
     public GetComponentTypeResponse withExtendsFrom(String[] extendsFrom) {
         this.extendsFrom = extendsFrom;
         return this;
@@ -67,6 +73,7 @@ public class GetComponentTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functions")
     public java.util.Map<String, FunctionResponse> functions;
+
     public GetComponentTypeResponse withFunctions(java.util.Map<String, FunctionResponse> functions) {
         this.functions = functions;
         return this;
@@ -75,6 +82,7 @@ public class GetComponentTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAbstract")
     public Boolean isAbstract;
+
     public GetComponentTypeResponse withIsAbstract(Boolean isAbstract) {
         this.isAbstract = isAbstract;
         return this;
@@ -83,6 +91,7 @@ public class GetComponentTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSchemaInitialized")
     public Boolean isSchemaInitialized;
+
     public GetComponentTypeResponse withIsSchemaInitialized(Boolean isSchemaInitialized) {
         this.isSchemaInitialized = isSchemaInitialized;
         return this;
@@ -91,6 +100,7 @@ public class GetComponentTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSingleton")
     public Boolean isSingleton;
+
     public GetComponentTypeResponse withIsSingleton(Boolean isSingleton) {
         this.isSingleton = isSingleton;
         return this;
@@ -99,6 +109,7 @@ public class GetComponentTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyDefinitions")
     public java.util.Map<String, PropertyDefinitionResponse> propertyDefinitions;
+
     public GetComponentTypeResponse withPropertyDefinitions(java.util.Map<String, PropertyDefinitionResponse> propertyDefinitions) {
         this.propertyDefinitions = propertyDefinitions;
         return this;
@@ -107,6 +118,7 @@ public class GetComponentTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyGroups")
     public java.util.Map<String, PropertyGroupResponse> propertyGroups;
+
     public GetComponentTypeResponse withPropertyGroups(java.util.Map<String, PropertyGroupResponse> propertyGroups) {
         this.propertyGroups = propertyGroups;
         return this;
@@ -115,6 +127,7 @@ public class GetComponentTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Status status;
+
     public GetComponentTypeResponse withStatus(Status status) {
         this.status = status;
         return this;
@@ -123,6 +136,7 @@ public class GetComponentTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncSource")
     public String syncSource;
+
     public GetComponentTypeResponse withSyncSource(String syncSource) {
         this.syncSource = syncSource;
         return this;
@@ -132,6 +146,7 @@ public class GetComponentTypeResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateDateTime")
     public OffsetDateTime updateDateTime;
+
     public GetComponentTypeResponse withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
@@ -139,9 +154,17 @@ public class GetComponentTypeResponse {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public GetComponentTypeResponse withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public GetComponentTypeResponse(@JsonProperty("arn") String arn, @JsonProperty("componentTypeId") String componentTypeId, @JsonProperty("creationDateTime") OffsetDateTime creationDateTime, @JsonProperty("updateDateTime") OffsetDateTime updateDateTime, @JsonProperty("workspaceId") String workspaceId) {
+        this.arn = arn;
+        this.componentTypeId = componentTypeId;
+        this.creationDateTime = creationDateTime;
+        this.updateDateTime = updateDateTime;
+        this.workspaceId = workspaceId;
+  }
 }

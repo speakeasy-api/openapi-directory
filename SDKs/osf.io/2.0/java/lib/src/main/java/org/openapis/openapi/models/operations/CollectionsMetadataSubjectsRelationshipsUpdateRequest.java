@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionsMetadataSubjectsRelationshipsUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public CollectionsMetadataSubjectsRelationshipsUpdateRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class CollectionsMetadataSubjectsRelationshipsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cgm_id")
     public String cgmId;
+
     public CollectionsMetadataSubjectsRelationshipsUpdateRequest withCgmId(String cgmId) {
         this.cgmId = cgmId;
         return this;
@@ -29,9 +32,15 @@ public class CollectionsMetadataSubjectsRelationshipsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
     public String collectionId;
+
     public CollectionsMetadataSubjectsRelationshipsUpdateRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
     }
     
+    public CollectionsMetadataSubjectsRelationshipsUpdateRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("cgm_id") String cgmId, @JsonProperty("collection_id") String collectionId) {
+        this.requestBody = requestBody;
+        this.cgmId = cgmId;
+        this.collectionId = collectionId;
+  }
 }

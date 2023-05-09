@@ -15,6 +15,7 @@ public class AcceptTermsOfServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptedBy")
     public String acceptedBy;
+
     public AcceptTermsOfServiceRequest withAcceptedBy(String acceptedBy) {
         this.acceptedBy = acceptedBy;
         return this;
@@ -26,9 +27,11 @@ public class AcceptTermsOfServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public AcceptTermsOfServiceRequest withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
     }
     
+    public AcceptTermsOfServiceRequest(){}
 }

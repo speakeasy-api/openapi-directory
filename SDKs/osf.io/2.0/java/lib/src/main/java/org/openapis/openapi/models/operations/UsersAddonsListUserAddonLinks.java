@@ -15,6 +15,7 @@ public class UsersAddonsListUserAddonLinks {
      */
     
     public java.util.Map<String, Object> accounts;
+
     public UsersAddonsListUserAddonLinks withAccounts(java.util.Map<String, Object> accounts) {
         this.accounts = accounts;
         return this;
@@ -25,9 +26,11 @@ public class UsersAddonsListUserAddonLinks {
      */
     
     public String self;
+
     public UsersAddonsListUserAddonLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public UsersAddonsListUserAddonLinks(){}
 }

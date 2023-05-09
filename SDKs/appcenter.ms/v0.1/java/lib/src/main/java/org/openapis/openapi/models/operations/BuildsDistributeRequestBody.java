@@ -18,6 +18,7 @@ public class BuildsDistributeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public BuildsDistributeRequestBodyDestinations[] destinations;
+
     public BuildsDistributeRequestBody withDestinations(BuildsDistributeRequestBodyDestinations[] destinations) {
         this.destinations = destinations;
         return this;
@@ -26,6 +27,7 @@ public class BuildsDistributeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandatoryUpdate")
     public Boolean mandatoryUpdate;
+
     public BuildsDistributeRequestBody withMandatoryUpdate(Boolean mandatoryUpdate) {
         this.mandatoryUpdate = mandatoryUpdate;
         return this;
@@ -34,6 +36,7 @@ public class BuildsDistributeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifyTesters")
     public Boolean notifyTesters;
+
     public BuildsDistributeRequestBody withNotifyTesters(Boolean notifyTesters) {
         this.notifyTesters = notifyTesters;
         return this;
@@ -45,9 +48,11 @@ public class BuildsDistributeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseNotes")
     public String releaseNotes;
+
     public BuildsDistributeRequestBody withReleaseNotes(String releaseNotes) {
         this.releaseNotes = releaseNotes;
         return this;
     }
     
+    public BuildsDistributeRequestBody(){}
 }

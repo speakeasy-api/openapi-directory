@@ -15,9 +15,11 @@ public class CloudFormationCollectionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackNames")
     public String[] stackNames;
+
     public CloudFormationCollectionFilter withStackNames(String[] stackNames) {
         this.stackNames = stackNames;
         return this;
     }
     
+    public CloudFormationCollectionFilter(){}
 }

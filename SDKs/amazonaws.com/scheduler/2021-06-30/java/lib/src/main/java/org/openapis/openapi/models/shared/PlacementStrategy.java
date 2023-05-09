@@ -15,6 +15,7 @@ public class PlacementStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public PlacementStrategy withField(String field) {
         this.field = field;
         return this;
@@ -23,9 +24,11 @@ public class PlacementStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PlacementStrategyTypeEnum type;
+
     public PlacementStrategy withType(PlacementStrategyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PlacementStrategy(){}
 }

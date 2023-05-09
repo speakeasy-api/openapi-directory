@@ -134,15 +134,13 @@ public class CodeScanning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodeScanningDeleteAnalysisResponse res = new org.openapis.openapi.models.operations.CodeScanningDeleteAnalysisResponse() {{
+        org.openapis.openapi.models.operations.CodeScanningDeleteAnalysisResponse res = new org.openapis.openapi.models.operations.CodeScanningDeleteAnalysisResponse(contentType, httpRes.statusCode()) {{
             codeScanningAnalysisDeletion = null;
             basicError = null;
             scimError = null;
             basicError = null;
             codeScanningDeleteAnalysis503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -207,13 +205,11 @@ public class CodeScanning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodeScanningGetAlertResponse res = new org.openapis.openapi.models.operations.CodeScanningGetAlertResponse() {{
+        org.openapis.openapi.models.operations.CodeScanningGetAlertResponse res = new org.openapis.openapi.models.operations.CodeScanningGetAlertResponse(contentType, httpRes.statusCode()) {{
             codeScanningAlert = null;
             basicError = null;
             codeScanningGetAlert503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -283,14 +279,12 @@ public class CodeScanning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodeScanningGetAnalysisResponse res = new org.openapis.openapi.models.operations.CodeScanningGetAnalysisResponse() {{
+        org.openapis.openapi.models.operations.CodeScanningGetAnalysisResponse res = new org.openapis.openapi.models.operations.CodeScanningGetAnalysisResponse(contentType, httpRes.statusCode()) {{
             codeScanningAnalysis = null;
             codeScanningGetAnalysis200ApplicationJsonPlusSarifObject = null;
             basicError = null;
             codeScanningGetAnalysis503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,13 +339,11 @@ public class CodeScanning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodeScanningGetSarifResponse res = new org.openapis.openapi.models.operations.CodeScanningGetSarifResponse() {{
+        org.openapis.openapi.models.operations.CodeScanningGetSarifResponse res = new org.openapis.openapi.models.operations.CodeScanningGetSarifResponse(contentType, httpRes.statusCode()) {{
             codeScanningSarifsStatus = null;
             basicError = null;
             codeScanningGetSarif503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -409,13 +401,11 @@ public class CodeScanning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodeScanningListAlertInstancesResponse res = new org.openapis.openapi.models.operations.CodeScanningListAlertInstancesResponse() {{
+        org.openapis.openapi.models.operations.CodeScanningListAlertInstancesResponse res = new org.openapis.openapi.models.operations.CodeScanningListAlertInstancesResponse(contentType, httpRes.statusCode()) {{
             codeScanningAlertInstances = null;
             basicError = null;
             codeScanningListAlertInstances503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -479,13 +469,11 @@ public class CodeScanning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodeScanningListAlertsForRepoResponse res = new org.openapis.openapi.models.operations.CodeScanningListAlertsForRepoResponse() {{
+        org.openapis.openapi.models.operations.CodeScanningListAlertsForRepoResponse res = new org.openapis.openapi.models.operations.CodeScanningListAlertsForRepoResponse(contentType, httpRes.statusCode()) {{
             codeScanningAlertItems = null;
             basicError = null;
             codeScanningListAlertsForRepo503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -556,13 +544,11 @@ public class CodeScanning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodeScanningListRecentAnalysesResponse res = new org.openapis.openapi.models.operations.CodeScanningListRecentAnalysesResponse() {{
+        org.openapis.openapi.models.operations.CodeScanningListRecentAnalysesResponse res = new org.openapis.openapi.models.operations.CodeScanningListRecentAnalysesResponse(contentType, httpRes.statusCode()) {{
             codeScanningAnalyses = null;
             basicError = null;
             codeScanningListRecentAnalyses503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -617,13 +603,11 @@ public class CodeScanning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodeScanningUpdateAlertResponse res = new org.openapis.openapi.models.operations.CodeScanningUpdateAlertResponse() {{
+        org.openapis.openapi.models.operations.CodeScanningUpdateAlertResponse res = new org.openapis.openapi.models.operations.CodeScanningUpdateAlertResponse(contentType, httpRes.statusCode()) {{
             codeScanningAlert = null;
             basicError = null;
             codeScanningUpdateAlert503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -694,13 +678,11 @@ public class CodeScanning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodeScanningUploadSarifResponse res = new org.openapis.openapi.models.operations.CodeScanningUploadSarifResponse() {{
+        org.openapis.openapi.models.operations.CodeScanningUploadSarifResponse res = new org.openapis.openapi.models.operations.CodeScanningUploadSarifResponse(contentType, httpRes.statusCode()) {{
             codeScanningSarifsReceipt = null;
             basicError = null;
             codeScanningUploadSarif503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

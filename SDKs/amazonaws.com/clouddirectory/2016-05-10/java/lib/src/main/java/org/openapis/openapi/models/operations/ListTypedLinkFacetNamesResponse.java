@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTypedLinkFacetNamesResponse {
@@ -12,6 +13,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public ListTypedLinkFacetNamesResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListTypedLinkFacetNamesResponse {
     
     
     public String contentType;
+
     public ListTypedLinkFacetNamesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public ListTypedLinkFacetNamesResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public ListTypedLinkFacetNamesResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidNextTokenException invalidNextTokenException;
+
     public ListTypedLinkFacetNamesResponse withInvalidNextTokenException(org.openapis.openapi.models.shared.InvalidNextTokenException invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public ListTypedLinkFacetNamesResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTypedLinkFacetNamesResponse listTypedLinkFacetNamesResponse;
+
     public ListTypedLinkFacetNamesResponse withListTypedLinkFacetNamesResponse(org.openapis.openapi.models.shared.ListTypedLinkFacetNamesResponse listTypedLinkFacetNamesResponse) {
         this.listTypedLinkFacetNamesResponse = listTypedLinkFacetNamesResponse;
         return this;
@@ -76,6 +84,7 @@ public class ListTypedLinkFacetNamesResponse {
     
     
     public Integer statusCode;
+
     public ListTypedLinkFacetNamesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListTypedLinkFacetNamesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTypedLinkFacetNamesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public ListTypedLinkFacetNamesResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public ListTypedLinkFacetNamesResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public ListTypedLinkFacetNamesResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTypedLinkFacetNamesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

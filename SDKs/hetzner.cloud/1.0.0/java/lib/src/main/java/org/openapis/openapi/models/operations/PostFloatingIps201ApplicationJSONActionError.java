@@ -15,6 +15,7 @@ public class PostFloatingIps201ApplicationJSONActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostFloatingIps201ApplicationJSONActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostFloatingIps201ApplicationJSONActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostFloatingIps201ApplicationJSONActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostFloatingIps201ApplicationJSONActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutInventoryRequest {
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public PutInventoryRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -16,9 +17,14 @@ public class PutInventoryRequest {
     
     @JsonProperty("Items")
     public InventoryItem[] items;
+
     public PutInventoryRequest withItems(InventoryItem[] items) {
         this.items = items;
         return this;
     }
     
+    public PutInventoryRequest(@JsonProperty("InstanceId") String instanceId, @JsonProperty("Items") InventoryItem[] items) {
+        this.instanceId = instanceId;
+        this.items = items;
+  }
 }

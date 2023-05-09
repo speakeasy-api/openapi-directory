@@ -15,6 +15,7 @@ public class SupplierWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_workgroups_contain_same_supplier")
     public SupplierWorkgroupBasicVO[] additionalWorkgroupsContainSameSupplier;
+
     public SupplierWorkgroupDetailVO withAdditionalWorkgroupsContainSameSupplier(SupplierWorkgroupBasicVO[] additionalWorkgroupsContainSameSupplier) {
         this.additionalWorkgroupsContainSameSupplier = additionalWorkgroupsContainSameSupplier;
         return this;
@@ -23,6 +24,7 @@ public class SupplierWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bu_supplier_workgroup_id")
     public Long buSupplierWorkgroupId;
+
     public SupplierWorkgroupDetailVO withBuSupplierWorkgroupId(Long buSupplierWorkgroupId) {
         this.buSupplierWorkgroupId = buSupplierWorkgroupId;
         return this;
@@ -31,6 +33,7 @@ public class SupplierWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bu_supplier_workgroup_name")
     public String buSupplierWorkgroupName;
+
     public SupplierWorkgroupDetailVO withBuSupplierWorkgroupName(String buSupplierWorkgroupName) {
         this.buSupplierWorkgroupName = buSupplierWorkgroupName;
         return this;
@@ -39,6 +42,7 @@ public class SupplierWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_workgroup_id")
     public Long clientWorkgroupId;
+
     public SupplierWorkgroupDetailVO withClientWorkgroupId(Long clientWorkgroupId) {
         this.clientWorkgroupId = clientWorkgroupId;
         return this;
@@ -47,6 +51,7 @@ public class SupplierWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_workgroup_name")
     public String clientWorkgroupName;
+
     public SupplierWorkgroupDetailVO withClientWorkgroupName(String clientWorkgroupName) {
         this.clientWorkgroupName = clientWorkgroupName;
         return this;
@@ -55,6 +60,7 @@ public class SupplierWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_approved")
     public Boolean isApproved;
+
     public SupplierWorkgroupDetailVO withIsApproved(Boolean isApproved) {
         this.isApproved = isApproved;
         return this;
@@ -63,6 +69,7 @@ public class SupplierWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_code")
     public String supplierCode;
+
     public SupplierWorkgroupDetailVO withSupplierCode(String supplierCode) {
         this.supplierCode = supplierCode;
         return this;
@@ -71,6 +78,7 @@ public class SupplierWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_workgroup_id")
     public Long supplierWorkgroupId;
+
     public SupplierWorkgroupDetailVO withSupplierWorkgroupId(Long supplierWorkgroupId) {
         this.supplierWorkgroupId = supplierWorkgroupId;
         return this;
@@ -79,9 +87,11 @@ public class SupplierWorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_workgroup_name")
     public String supplierWorkgroupName;
+
     public SupplierWorkgroupDetailVO withSupplierWorkgroupName(String supplierWorkgroupName) {
         this.supplierWorkgroupName = supplierWorkgroupName;
         return this;
     }
     
+    public SupplierWorkgroupDetailVO(){}
 }

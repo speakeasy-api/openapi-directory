@@ -14,6 +14,7 @@ public class SendMessageRequestBody5Video {
      */
     @JsonProperty("channel")
     public SendMessageRequestBody5VideoChannelEnum channel;
+
     public SendMessageRequestBody5Video withChannel(SendMessageRequestBody5VideoChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -25,6 +26,7 @@ public class SendMessageRequestBody5Video {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public SendMessageRequestBody5Video withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -36,6 +38,7 @@ public class SendMessageRequestBody5Video {
      */
     @JsonProperty("from")
     public String from;
+
     public SendMessageRequestBody5Video withFrom(String from) {
         this.from = from;
         return this;
@@ -46,6 +49,7 @@ public class SendMessageRequestBody5Video {
      */
     @JsonProperty("message_type")
     public SendMessageRequestBody5VideoMessageTypeEnum messageType;
+
     public SendMessageRequestBody5Video withMessageType(SendMessageRequestBody5VideoMessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -57,6 +61,7 @@ public class SendMessageRequestBody5Video {
      */
     @JsonProperty("to")
     public String to;
+
     public SendMessageRequestBody5Video withTo(String to) {
         this.to = to;
         return this;
@@ -65,6 +70,7 @@ public class SendMessageRequestBody5Video {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viber_service")
     public SendMessageRequestBody5VideoViberService viberService;
+
     public SendMessageRequestBody5Video withViberService(SendMessageRequestBody5VideoViberService viberService) {
         this.viberService = viberService;
         return this;
@@ -72,9 +78,17 @@ public class SendMessageRequestBody5Video {
     
     @JsonProperty("video")
     public SendMessageRequestBody5VideoVideo video;
+
     public SendMessageRequestBody5Video withVideo(SendMessageRequestBody5VideoVideo video) {
         this.video = video;
         return this;
     }
     
+    public SendMessageRequestBody5Video(@JsonProperty("channel") SendMessageRequestBody5VideoChannelEnum channel, @JsonProperty("from") String from, @JsonProperty("message_type") SendMessageRequestBody5VideoMessageTypeEnum messageType, @JsonProperty("to") String to, @JsonProperty("video") SendMessageRequestBody5VideoVideo video) {
+        this.channel = channel;
+        this.from = from;
+        this.messageType = messageType;
+        this.to = to;
+        this.video = video;
+  }
 }

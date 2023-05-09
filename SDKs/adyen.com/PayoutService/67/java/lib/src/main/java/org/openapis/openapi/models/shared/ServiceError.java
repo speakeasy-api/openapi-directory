@@ -18,6 +18,7 @@ public class ServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalData")
     public java.util.Map<String, String> additionalData;
+
     public ServiceError withAdditionalData(java.util.Map<String, String> additionalData) {
         this.additionalData = additionalData;
         return this;
@@ -29,6 +30,7 @@ public class ServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public ServiceError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -40,6 +42,7 @@ public class ServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorType")
     public String errorType;
+
     public ServiceError withErrorType(String errorType) {
         this.errorType = errorType;
         return this;
@@ -51,6 +54,7 @@ public class ServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ServiceError withMessage(String message) {
         this.message = message;
         return this;
@@ -62,6 +66,7 @@ public class ServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public ServiceError withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -73,9 +78,11 @@ public class ServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Integer status;
+
     public ServiceError withStatus(Integer status) {
         this.status = status;
         return this;
     }
     
+    public ServiceError(){}
 }

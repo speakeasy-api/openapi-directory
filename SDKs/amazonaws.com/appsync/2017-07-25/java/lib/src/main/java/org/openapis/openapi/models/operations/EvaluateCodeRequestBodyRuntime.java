@@ -15,6 +15,7 @@ public class EvaluateCodeRequestBodyRuntime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public org.openapis.openapi.models.shared.RuntimeNameEnum name;
+
     public EvaluateCodeRequestBodyRuntime withName(org.openapis.openapi.models.shared.RuntimeNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class EvaluateCodeRequestBodyRuntime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeVersion")
     public String runtimeVersion;
+
     public EvaluateCodeRequestBodyRuntime withRuntimeVersion(String runtimeVersion) {
         this.runtimeVersion = runtimeVersion;
         return this;
     }
     
+    public EvaluateCodeRequestBodyRuntime(){}
 }

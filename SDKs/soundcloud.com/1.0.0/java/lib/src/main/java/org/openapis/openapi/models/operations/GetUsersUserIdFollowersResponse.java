@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersUserIdFollowersResponse {
     
     public String contentType;
+
     public GetUsersUserIdFollowersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUsersUserIdFollowersResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetUsersUserIdFollowersResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetUsersUserIdFollowersResponse {
     
     
     public Integer statusCode;
+
     public GetUsersUserIdFollowersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetUsersUserIdFollowersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersUserIdFollowersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetUsersUserIdFollowersResponse {
      */
     
     public Object getUsersUserIdFollowers200ApplicationJSONOneOf;
+
     public GetUsersUserIdFollowersResponse withGetUsersUserIdFollowers200ApplicationJSONOneOf(Object getUsersUserIdFollowers200ApplicationJSONOneOf) {
         this.getUsersUserIdFollowers200ApplicationJSONOneOf = getUsersUserIdFollowers200ApplicationJSONOneOf;
         return this;
     }
     
+    public GetUsersUserIdFollowersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPushTemplateResponse {
@@ -12,6 +13,7 @@ public class GetPushTemplateResponse {
      */
     
     public Object badRequestException;
+
     public GetPushTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetPushTemplateResponse {
     
     
     public String contentType;
+
     public GetPushTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPushTemplateResponse {
      */
     
     public Object forbiddenException;
+
     public GetPushTemplateResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetPushTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPushTemplateResponse getPushTemplateResponse;
+
     public GetPushTemplateResponse withGetPushTemplateResponse(org.openapis.openapi.models.shared.GetPushTemplateResponse getPushTemplateResponse) {
         this.getPushTemplateResponse = getPushTemplateResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetPushTemplateResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetPushTemplateResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetPushTemplateResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetPushTemplateResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetPushTemplateResponse {
      */
     
     public Object notFoundException;
+
     public GetPushTemplateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetPushTemplateResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetPushTemplateResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetPushTemplateResponse {
     
     
     public Integer statusCode;
+
     public GetPushTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetPushTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPushTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetPushTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetPushTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetPushTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

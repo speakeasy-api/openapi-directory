@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PendingMaintenanceActionsMessage {
     
     public String marker;
+
     public PendingMaintenanceActionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class PendingMaintenanceActionsMessage {
     
     
     public PendingMaintenanceActions[] pendingMaintenanceActions;
+
     public PendingMaintenanceActionsMessage withPendingMaintenanceActions(PendingMaintenanceActions[] pendingMaintenanceActions) {
         this.pendingMaintenanceActions = pendingMaintenanceActions;
         return this;
     }
     
+    public PendingMaintenanceActionsMessage(){}
 }

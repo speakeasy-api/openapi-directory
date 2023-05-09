@@ -18,6 +18,7 @@ public class LinuxHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actual_size")
     public Integer actualSize;
+
     public LinuxHostingDetail withActualSize(Integer actualSize) {
         this.actualSize = actualSize;
         return this;
@@ -29,6 +30,7 @@ public class LinuxHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_name")
     public String domainName;
+
     public LinuxHostingDetail withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -40,6 +42,7 @@ public class LinuxHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ftp_enabled")
     public Boolean ftpEnabled;
+
     public LinuxHostingDetail withFtpEnabled(Boolean ftpEnabled) {
         this.ftpEnabled = ftpEnabled;
         return this;
@@ -51,6 +54,7 @@ public class LinuxHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ftp_username")
     public String ftpUsername;
+
     public LinuxHostingDetail withFtpUsername(String ftpUsername) {
         this.ftpUsername = ftpUsername;
         return this;
@@ -62,6 +66,7 @@ public class LinuxHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public LinuxHostingDetail withIp(String ip) {
         this.ip = ip;
         return this;
@@ -73,6 +78,7 @@ public class LinuxHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_type")
     public LinuxIpTypeEnum ipType;
+
     public LinuxHostingDetail withIpType(LinuxIpTypeEnum ipType) {
         this.ipType = ipType;
         return this;
@@ -84,6 +90,7 @@ public class LinuxHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_size")
     public Integer maxSize;
+
     public LinuxHostingDetail withMaxSize(Integer maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -96,6 +103,7 @@ public class LinuxHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_webspace_size")
     public Integer maxWebspaceSize;
+
     public LinuxHostingDetail withMaxWebspaceSize(Integer maxWebspaceSize) {
         this.maxWebspaceSize = maxWebspaceSize;
         return this;
@@ -108,6 +116,7 @@ public class LinuxHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mysql_database_names")
     public String[] mysqlDatabaseNames;
+
     public LinuxHostingDetail withMysqlDatabaseNames(String[] mysqlDatabaseNames) {
         this.mysqlDatabaseNames = mysqlDatabaseNames;
         return this;
@@ -119,6 +128,7 @@ public class LinuxHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("php_version")
     public String phpVersion;
+
     public LinuxHostingDetail withPhpVersion(String phpVersion) {
         this.phpVersion = phpVersion;
         return this;
@@ -130,6 +140,7 @@ public class LinuxHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicepack_id")
     public Integer servicepackId;
+
     public LinuxHostingDetail withServicepackId(Integer servicepackId) {
         this.servicepackId = servicepackId;
         return this;
@@ -141,6 +152,7 @@ public class LinuxHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sites")
     public LinuxSite[] sites;
+
     public LinuxHostingDetail withSites(LinuxSite[] sites) {
         this.sites = sites;
         return this;
@@ -152,6 +164,7 @@ public class LinuxHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssh_host")
     public String sshHost;
+
     public LinuxHostingDetail withSshHost(String sshHost) {
         this.sshHost = sshHost;
         return this;
@@ -163,6 +176,7 @@ public class LinuxHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssh_username")
     public String sshUsername;
+
     public LinuxHostingDetail withSshUsername(String sshUsername) {
         this.sshUsername = sshUsername;
         return this;
@@ -175,9 +189,11 @@ public class LinuxHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webspace_usage")
     public Integer webspaceUsage;
+
     public LinuxHostingDetail withWebspaceUsage(Integer webspaceUsage) {
         this.webspaceUsage = webspaceUsage;
         return this;
     }
     
+    public LinuxHostingDetail(){}
 }

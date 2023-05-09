@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteDBSnapshotMessage - &lt;p/&gt;
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteDBSnapshotMessage {
     
     public String dbSnapshotIdentifier;
+
     public DeleteDBSnapshotMessage withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
         return this;
     }
     
+    public DeleteDBSnapshotMessage(@JsonProperty("DBSnapshotIdentifier") String dbSnapshotIdentifier) {
+        this.dbSnapshotIdentifier = dbSnapshotIdentifier;
+  }
 }

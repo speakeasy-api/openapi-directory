@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateNatGatewayRequest {
     
     public String allocationId;
+
     public CreateNatGatewayRequest withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -16,6 +17,7 @@ public class CreateNatGatewayRequest {
     
     
     public String clientToken;
+
     public CreateNatGatewayRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +25,7 @@ public class CreateNatGatewayRequest {
     
     
     public ConnectivityTypeEnum connectivityType;
+
     public CreateNatGatewayRequest withConnectivityType(ConnectivityTypeEnum connectivityType) {
         this.connectivityType = connectivityType;
         return this;
@@ -30,6 +33,7 @@ public class CreateNatGatewayRequest {
     
     
     public Boolean dryRun;
+
     public CreateNatGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -37,6 +41,7 @@ public class CreateNatGatewayRequest {
     
     
     public String privateIpAddress;
+
     public CreateNatGatewayRequest withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -44,6 +49,7 @@ public class CreateNatGatewayRequest {
     
     
     public String[] secondaryAllocationIds;
+
     public CreateNatGatewayRequest withSecondaryAllocationIds(String[] secondaryAllocationIds) {
         this.secondaryAllocationIds = secondaryAllocationIds;
         return this;
@@ -51,6 +57,7 @@ public class CreateNatGatewayRequest {
     
     
     public Long secondaryPrivateIpAddressCount;
+
     public CreateNatGatewayRequest withSecondaryPrivateIpAddressCount(Long secondaryPrivateIpAddressCount) {
         this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
         return this;
@@ -58,6 +65,7 @@ public class CreateNatGatewayRequest {
     
     
     public String[] secondaryPrivateIpAddresses;
+
     public CreateNatGatewayRequest withSecondaryPrivateIpAddresses(String[] secondaryPrivateIpAddresses) {
         this.secondaryPrivateIpAddresses = secondaryPrivateIpAddresses;
         return this;
@@ -65,6 +73,7 @@ public class CreateNatGatewayRequest {
     
     
     public String subnetId;
+
     public CreateNatGatewayRequest withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -72,9 +81,13 @@ public class CreateNatGatewayRequest {
     
     
     public CreateNatGatewayRequestTagSpecifications[] tagSpecifications;
+
     public CreateNatGatewayRequest withTagSpecifications(CreateNatGatewayRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateNatGatewayRequest(@JsonProperty("SubnetId") String subnetId) {
+        this.subnetId = subnetId;
+  }
 }

@@ -15,6 +15,7 @@ public class SavingsPlansSavings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetSavings")
     public String netSavings;
+
     public SavingsPlansSavings withNetSavings(String netSavings) {
         this.netSavings = netSavings;
         return this;
@@ -23,9 +24,11 @@ public class SavingsPlansSavings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDemandCostEquivalent")
     public String onDemandCostEquivalent;
+
     public SavingsPlansSavings withOnDemandCostEquivalent(String onDemandCostEquivalent) {
         this.onDemandCostEquivalent = onDemandCostEquivalent;
         return this;
     }
     
+    public SavingsPlansSavings(){}
 }

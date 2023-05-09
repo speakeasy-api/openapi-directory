@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContactsCreateJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ContactRequest contactRequest;
+
     public ContactsCreateJsonRequest withContactRequest(org.openapis.openapi.models.shared.ContactRequest contactRequest) {
         this.contactRequest = contactRequest;
         return this;
@@ -19,6 +21,7 @@ public class ContactsCreateJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public ContactsCreateJsonRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,9 +32,13 @@ public class ContactsCreateJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mergeStrategy")
     public ContactsCreateJsonMergeStrategyEnum mergeStrategy;
+
     public ContactsCreateJsonRequest withMergeStrategy(ContactsCreateJsonMergeStrategyEnum mergeStrategy) {
         this.mergeStrategy = mergeStrategy;
         return this;
     }
     
+    public ContactsCreateJsonRequest(@JsonProperty("accountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

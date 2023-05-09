@@ -15,6 +15,7 @@ public class UpdateNetworkSiteToSiteVpnRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hubs")
     public UpdateNetworkSiteToSiteVpnRequestBodyHubs[] hubs;
+
     public UpdateNetworkSiteToSiteVpnRequestBody withHubs(UpdateNetworkSiteToSiteVpnRequestBodyHubs[] hubs) {
         this.hubs = hubs;
         return this;
@@ -25,6 +26,7 @@ public class UpdateNetworkSiteToSiteVpnRequestBody {
      */
     @JsonProperty("mode")
     public UpdateNetworkSiteToSiteVpnRequestBodyModeEnum mode;
+
     public UpdateNetworkSiteToSiteVpnRequestBody withMode(UpdateNetworkSiteToSiteVpnRequestBodyModeEnum mode) {
         this.mode = mode;
         return this;
@@ -36,9 +38,13 @@ public class UpdateNetworkSiteToSiteVpnRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnets")
     public UpdateNetworkSiteToSiteVpnRequestBodySubnets[] subnets;
+
     public UpdateNetworkSiteToSiteVpnRequestBody withSubnets(UpdateNetworkSiteToSiteVpnRequestBodySubnets[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public UpdateNetworkSiteToSiteVpnRequestBody(@JsonProperty("mode") UpdateNetworkSiteToSiteVpnRequestBodyModeEnum mode) {
+        this.mode = mode;
+  }
 }

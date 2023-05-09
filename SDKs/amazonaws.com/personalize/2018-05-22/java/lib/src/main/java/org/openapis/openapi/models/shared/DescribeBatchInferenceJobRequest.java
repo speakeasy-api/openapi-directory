@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeBatchInferenceJobRequest {
     @JsonProperty("batchInferenceJobArn")
     public String batchInferenceJobArn;
+
     public DescribeBatchInferenceJobRequest withBatchInferenceJobArn(String batchInferenceJobArn) {
         this.batchInferenceJobArn = batchInferenceJobArn;
         return this;
     }
     
+    public DescribeBatchInferenceJobRequest(@JsonProperty("batchInferenceJobArn") String batchInferenceJobArn) {
+        this.batchInferenceJobArn = batchInferenceJobArn;
+  }
 }

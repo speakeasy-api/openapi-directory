@@ -18,9 +18,11 @@ public class GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget")
     public GoogleCloudBillingBudgetsV1beta1BudgetInput budget;
+
     public GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput withBudget(GoogleCloudBillingBudgetsV1beta1BudgetInput budget) {
         this.budget = budget;
         return this;
     }
     
+    public GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput(){}
 }

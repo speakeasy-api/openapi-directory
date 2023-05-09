@@ -25,6 +25,7 @@ public class DeviceToPost {
     @JsonProperty("ActivePower")
     @SpeakeasyMetadata("form:name=ActivePower")
     public Double activePower;
+
     public DeviceToPost withActivePower(Double activePower) {
         this.activePower = activePower;
         return this;
@@ -37,6 +38,7 @@ public class DeviceToPost {
     @JsonProperty("CounterReading")
     @SpeakeasyMetadata("form:name=CounterReading")
     public Double counterReading;
+
     public DeviceToPost withCounterReading(Double counterReading) {
         this.counterReading = counterReading;
         return this;
@@ -49,6 +51,7 @@ public class DeviceToPost {
     @JsonProperty("CounterReadingExport")
     @SpeakeasyMetadata("form:name=CounterReadingExport")
     public Double counterReadingExport;
+
     public DeviceToPost withCounterReadingExport(Double counterReadingExport) {
         this.counterReadingExport = counterReadingExport;
         return this;
@@ -61,6 +64,7 @@ public class DeviceToPost {
     @JsonProperty("CounterReadingExportT1")
     @SpeakeasyMetadata("form:name=CounterReadingExportT1")
     public Double counterReadingExportT1;
+
     public DeviceToPost withCounterReadingExportT1(Double counterReadingExportT1) {
         this.counterReadingExportT1 = counterReadingExportT1;
         return this;
@@ -73,6 +77,7 @@ public class DeviceToPost {
     @JsonProperty("CounterReadingExportT2")
     @SpeakeasyMetadata("form:name=CounterReadingExportT2")
     public Double counterReadingExportT2;
+
     public DeviceToPost withCounterReadingExportT2(Double counterReadingExportT2) {
         this.counterReadingExportT2 = counterReadingExportT2;
         return this;
@@ -85,6 +90,7 @@ public class DeviceToPost {
     @JsonProperty("CounterReadingT1")
     @SpeakeasyMetadata("form:name=CounterReadingT1")
     public Double counterReadingT1;
+
     public DeviceToPost withCounterReadingT1(Double counterReadingT1) {
         this.counterReadingT1 = counterReadingT1;
         return this;
@@ -97,6 +103,7 @@ public class DeviceToPost {
     @JsonProperty("CounterReadingT2")
     @SpeakeasyMetadata("form:name=CounterReadingT2")
     public Double counterReadingT2;
+
     public DeviceToPost withCounterReadingT2(Double counterReadingT2) {
         this.counterReadingT2 = counterReadingT2;
         return this;
@@ -109,6 +116,7 @@ public class DeviceToPost {
     @JsonProperty("Current")
     @SpeakeasyMetadata("form:name=Current")
     public Double current;
+
     public DeviceToPost withCurrent(Double current) {
         this.current = current;
         return this;
@@ -121,6 +129,7 @@ public class DeviceToPost {
     @JsonProperty("CurrentL1")
     @SpeakeasyMetadata("form:name=CurrentL1")
     public Double currentL1;
+
     public DeviceToPost withCurrentL1(Double currentL1) {
         this.currentL1 = currentL1;
         return this;
@@ -133,6 +142,7 @@ public class DeviceToPost {
     @JsonProperty("CurrentL2")
     @SpeakeasyMetadata("form:name=CurrentL2")
     public Double currentL2;
+
     public DeviceToPost withCurrentL2(Double currentL2) {
         this.currentL2 = currentL2;
         return this;
@@ -145,6 +155,7 @@ public class DeviceToPost {
     @JsonProperty("CurrentL3")
     @SpeakeasyMetadata("form:name=CurrentL3")
     public Double currentL3;
+
     public DeviceToPost withCurrentL3(Double currentL3) {
         this.currentL3 = currentL3;
         return this;
@@ -157,6 +168,7 @@ public class DeviceToPost {
     @JsonProperty("DeviceEnergyType")
     @SpeakeasyMetadata("form:name=DeviceEnergyType")
     public DeviceToPostDeviceEnergyTypeEnum deviceEnergyType;
+
     public DeviceToPost withDeviceEnergyType(DeviceToPostDeviceEnergyTypeEnum deviceEnergyType) {
         this.deviceEnergyType = deviceEnergyType;
         return this;
@@ -169,6 +181,7 @@ public class DeviceToPost {
     @JsonProperty("DigitalInput1")
     @SpeakeasyMetadata("form:name=DigitalInput1")
     public Boolean digitalInput1;
+
     public DeviceToPost withDigitalInput1(Boolean digitalInput1) {
         this.digitalInput1 = digitalInput1;
         return this;
@@ -181,6 +194,7 @@ public class DeviceToPost {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public String id;
+
     public DeviceToPost withId(String id) {
         this.id = id;
         return this;
@@ -193,6 +207,7 @@ public class DeviceToPost {
     @JsonProperty("MeterSubType")
     @SpeakeasyMetadata("form:name=MeterSubType")
     public DeviceToPostMeterSubTypeEnum meterSubType;
+
     public DeviceToPost withMeterSubType(DeviceToPostMeterSubTypeEnum meterSubType) {
         this.meterSubType = meterSubType;
         return this;
@@ -205,6 +220,7 @@ public class DeviceToPost {
     @JsonProperty("Name")
     @SpeakeasyMetadata("form:name=Name")
     public String name;
+
     public DeviceToPost withName(String name) {
         this.name = name;
         return this;
@@ -217,6 +233,7 @@ public class DeviceToPost {
     @JsonProperty("PowerFactor")
     @SpeakeasyMetadata("form:name=PowerFactor")
     public Double powerFactor;
+
     public DeviceToPost withPowerFactor(Double powerFactor) {
         this.powerFactor = powerFactor;
         return this;
@@ -229,6 +246,7 @@ public class DeviceToPost {
     @JsonProperty("PowerFactorL1")
     @SpeakeasyMetadata("form:name=PowerFactorL1")
     public Double powerFactorL1;
+
     public DeviceToPost withPowerFactorL1(Double powerFactorL1) {
         this.powerFactorL1 = powerFactorL1;
         return this;
@@ -241,6 +259,7 @@ public class DeviceToPost {
     @JsonProperty("PowerFactorL2")
     @SpeakeasyMetadata("form:name=PowerFactorL2")
     public Double powerFactorL2;
+
     public DeviceToPost withPowerFactorL2(Double powerFactorL2) {
         this.powerFactorL2 = powerFactorL2;
         return this;
@@ -253,6 +272,7 @@ public class DeviceToPost {
     @JsonProperty("PowerFactorL3")
     @SpeakeasyMetadata("form:name=PowerFactorL3")
     public Double powerFactorL3;
+
     public DeviceToPost withPowerFactorL3(Double powerFactorL3) {
         this.powerFactorL3 = powerFactorL3;
         return this;
@@ -265,6 +285,7 @@ public class DeviceToPost {
     @JsonProperty("Serial")
     @SpeakeasyMetadata("form:name=Serial")
     public Long serial;
+
     public DeviceToPost withSerial(Long serial) {
         this.serial = serial;
         return this;
@@ -277,6 +298,7 @@ public class DeviceToPost {
     @JsonProperty("Temperature")
     @SpeakeasyMetadata("form:name=Temperature")
     public Double temperature;
+
     public DeviceToPost withTemperature(Double temperature) {
         this.temperature = temperature;
         return this;
@@ -291,6 +313,7 @@ public class DeviceToPost {
     @JsonProperty("ValueDate")
     @SpeakeasyMetadata("form:name=ValueDate")
     public OffsetDateTime valueDate;
+
     public DeviceToPost withValueDate(OffsetDateTime valueDate) {
         this.valueDate = valueDate;
         return this;
@@ -303,6 +326,7 @@ public class DeviceToPost {
     @JsonProperty("Voltage")
     @SpeakeasyMetadata("form:name=Voltage")
     public Double voltage;
+
     public DeviceToPost withVoltage(Double voltage) {
         this.voltage = voltage;
         return this;
@@ -315,6 +339,7 @@ public class DeviceToPost {
     @JsonProperty("VoltageL1")
     @SpeakeasyMetadata("form:name=VoltageL1")
     public Double voltageL1;
+
     public DeviceToPost withVoltageL1(Double voltageL1) {
         this.voltageL1 = voltageL1;
         return this;
@@ -327,6 +352,7 @@ public class DeviceToPost {
     @JsonProperty("VoltageL2")
     @SpeakeasyMetadata("form:name=VoltageL2")
     public Double voltageL2;
+
     public DeviceToPost withVoltageL2(Double voltageL2) {
         this.voltageL2 = voltageL2;
         return this;
@@ -339,9 +365,11 @@ public class DeviceToPost {
     @JsonProperty("VoltageL3")
     @SpeakeasyMetadata("form:name=VoltageL3")
     public Double voltageL3;
+
     public DeviceToPost withVoltageL3(Double voltageL3) {
         this.voltageL3 = voltageL3;
         return this;
     }
     
+    public DeviceToPost(){}
 }

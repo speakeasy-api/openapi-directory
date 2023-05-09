@@ -18,6 +18,7 @@ public class TablesModelColumnInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnDisplayName")
     public String columnDisplayName;
+
     public TablesModelColumnInfo withColumnDisplayName(String columnDisplayName) {
         this.columnDisplayName = columnDisplayName;
         return this;
@@ -29,6 +30,7 @@ public class TablesModelColumnInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnSpecName")
     public String columnSpecName;
+
     public TablesModelColumnInfo withColumnSpecName(String columnSpecName) {
         this.columnSpecName = columnSpecName;
         return this;
@@ -40,9 +42,11 @@ public class TablesModelColumnInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureImportance")
     public Float featureImportance;
+
     public TablesModelColumnInfo withFeatureImportance(Float featureImportance) {
         this.featureImportance = featureImportance;
         return this;
     }
     
+    public TablesModelColumnInfo(){}
 }

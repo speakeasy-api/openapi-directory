@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ReservationInstancesNetworkInterfacesAttachment {
     
     public OffsetDateTime attachTime;
+
     public ReservationInstancesNetworkInterfacesAttachment withAttachTime(OffsetDateTime attachTime) {
         this.attachTime = attachTime;
         return this;
@@ -19,6 +20,7 @@ public class ReservationInstancesNetworkInterfacesAttachment {
     
     
     public String attachmentId;
+
     public ReservationInstancesNetworkInterfacesAttachment withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -26,6 +28,7 @@ public class ReservationInstancesNetworkInterfacesAttachment {
     
     
     public Boolean deleteOnTermination;
+
     public ReservationInstancesNetworkInterfacesAttachment withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -33,6 +36,7 @@ public class ReservationInstancesNetworkInterfacesAttachment {
     
     
     public Long deviceIndex;
+
     public ReservationInstancesNetworkInterfacesAttachment withDeviceIndex(Long deviceIndex) {
         this.deviceIndex = deviceIndex;
         return this;
@@ -40,6 +44,7 @@ public class ReservationInstancesNetworkInterfacesAttachment {
     
     
     public Long networkCardIndex;
+
     public ReservationInstancesNetworkInterfacesAttachment withNetworkCardIndex(Long networkCardIndex) {
         this.networkCardIndex = networkCardIndex;
         return this;
@@ -47,9 +52,11 @@ public class ReservationInstancesNetworkInterfacesAttachment {
     
     
     public ReservationInstancesNetworkInterfacesAttachmentStatusEnum status;
+
     public ReservationInstancesNetworkInterfacesAttachment withStatus(ReservationInstancesNetworkInterfacesAttachmentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ReservationInstancesNetworkInterfacesAttachment(){}
 }

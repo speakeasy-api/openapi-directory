@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
 
@@ -13,19 +12,19 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetRequest req = new GetRequest() {{
-                domain = "corrupti";
-                format = "provident";
-                key = "distinctio";
-            }}            
+            GetRequest req = new GetRequest("corrupti", "provident") {{
+                format = "distinctio";
+            }};            
 
             GetResponse res = sdk.get(req);
 
-            if (res.get200TextHTMLString.isPresent()) {
+            if (res.get200TextHTMLString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

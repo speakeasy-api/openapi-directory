@@ -18,6 +18,7 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_cryptogram")
     public String applicationCryptogram;
+
     public CardPaymentDetails withApplicationCryptogram(String applicationCryptogram) {
         this.applicationCryptogram = applicationCryptogram;
         return this;
@@ -29,6 +30,7 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_identifier")
     public String applicationIdentifier;
+
     public CardPaymentDetails withApplicationIdentifier(String applicationIdentifier) {
         this.applicationIdentifier = applicationIdentifier;
         return this;
@@ -40,6 +42,7 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_name")
     public String applicationName;
+
     public CardPaymentDetails withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -52,6 +55,7 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth_result_code")
     public String authResultCode;
+
     public CardPaymentDetails withAuthResultCode(String authResultCode) {
         this.authResultCode = authResultCode;
         return this;
@@ -64,6 +68,7 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avs_status")
     public String avsStatus;
+
     public CardPaymentDetails withAvsStatus(String avsStatus) {
         this.avsStatus = avsStatus;
         return this;
@@ -76,6 +81,7 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public Card card;
+
     public CardPaymentDetails withCard(Card card) {
         this.card = card;
         return this;
@@ -87,6 +93,7 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_payment_timeline")
     public CardPaymentTimeline cardPaymentTimeline;
+
     public CardPaymentDetails withCardPaymentTimeline(CardPaymentTimeline cardPaymentTimeline) {
         this.cardPaymentTimeline = cardPaymentTimeline;
         return this;
@@ -99,6 +106,7 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cvv_status")
     public String cvvStatus;
+
     public CardPaymentDetails withCvvStatus(String cvvStatus) {
         this.cvvStatus = cvvStatus;
         return this;
@@ -110,6 +118,7 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_details")
     public DeviceDetails deviceDetails;
+
     public CardPaymentDetails withDeviceDetails(DeviceDetails deviceDetails) {
         this.deviceDetails = deviceDetails;
         return this;
@@ -122,6 +131,7 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entry_method")
     public String entryMethod;
+
     public CardPaymentDetails withEntryMethod(String entryMethod) {
         this.entryMethod = entryMethod;
         return this;
@@ -133,6 +143,7 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CardPaymentDetails withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -145,6 +156,7 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_requires_card_presence")
     public Boolean refundRequiresCardPresence;
+
     public CardPaymentDetails withRefundRequiresCardPresence(Boolean refundRequiresCardPresence) {
         this.refundRequiresCardPresence = refundRequiresCardPresence;
         return this;
@@ -159,6 +171,7 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statement_description")
     public String statementDescription;
+
     public CardPaymentDetails withStatementDescription(String statementDescription) {
         this.statementDescription = statementDescription;
         return this;
@@ -171,6 +184,7 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CardPaymentDetails withStatus(String status) {
         this.status = status;
         return this;
@@ -183,6 +197,7 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification_method")
     public String verificationMethod;
+
     public CardPaymentDetails withVerificationMethod(String verificationMethod) {
         this.verificationMethod = verificationMethod;
         return this;
@@ -195,9 +210,11 @@ public class CardPaymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification_results")
     public String verificationResults;
+
     public CardPaymentDetails withVerificationResults(String verificationResults) {
         this.verificationResults = verificationResults;
         return this;
     }
     
+    public CardPaymentDetails(){}
 }

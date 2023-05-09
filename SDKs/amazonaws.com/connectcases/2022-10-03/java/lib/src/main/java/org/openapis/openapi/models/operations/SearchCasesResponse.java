@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchCasesResponse {
@@ -12,6 +13,7 @@ public class SearchCasesResponse {
      */
     
     public Object accessDeniedException;
+
     public SearchCasesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SearchCasesResponse {
     
     
     public String contentType;
+
     public SearchCasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SearchCasesResponse {
      */
     
     public Object internalServerException;
+
     public SearchCasesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class SearchCasesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SearchCasesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class SearchCasesResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchCasesResponse searchCasesResponse;
+
     public SearchCasesResponse withSearchCasesResponse(org.openapis.openapi.models.shared.SearchCasesResponse searchCasesResponse) {
         this.searchCasesResponse = searchCasesResponse;
         return this;
@@ -56,6 +62,7 @@ public class SearchCasesResponse {
     
     
     public Integer statusCode;
+
     public SearchCasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class SearchCasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchCasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class SearchCasesResponse {
      */
     
     public Object throttlingException;
+
     public SearchCasesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class SearchCasesResponse {
      */
     
     public Object validationException;
+
     public SearchCasesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SearchCasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioEncoding")
     public GoogleCloudDialogflowV2InputAudioConfigAudioEncodingEnum audioEncoding;
+
     public GoogleCloudDialogflowV2InputAudioConfig withAudioEncoding(GoogleCloudDialogflowV2InputAudioConfigAudioEncodingEnum audioEncoding) {
         this.audioEncoding = audioEncoding;
         return this;
@@ -29,8 +30,21 @@ public class GoogleCloudDialogflowV2InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableNoSpeechRecognizedEvent")
     public Boolean disableNoSpeechRecognizedEvent;
+
     public GoogleCloudDialogflowV2InputAudioConfig withDisableNoSpeechRecognizedEvent(Boolean disableNoSpeechRecognizedEvent) {
         this.disableNoSpeechRecognizedEvent = disableNoSpeechRecognizedEvent;
+        return this;
+    }
+    
+    /**
+     * Enable automatic punctuation option at the speech backend.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("enableAutomaticPunctuation")
+    public Boolean enableAutomaticPunctuation;
+
+    public GoogleCloudDialogflowV2InputAudioConfig withEnableAutomaticPunctuation(Boolean enableAutomaticPunctuation) {
+        this.enableAutomaticPunctuation = enableAutomaticPunctuation;
         return this;
     }
     
@@ -40,6 +54,7 @@ public class GoogleCloudDialogflowV2InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableWordInfo")
     public Boolean enableWordInfo;
+
     public GoogleCloudDialogflowV2InputAudioConfig withEnableWordInfo(Boolean enableWordInfo) {
         this.enableWordInfo = enableWordInfo;
         return this;
@@ -51,6 +66,7 @@ public class GoogleCloudDialogflowV2InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2InputAudioConfig withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -62,6 +78,7 @@ public class GoogleCloudDialogflowV2InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GoogleCloudDialogflowV2InputAudioConfig withModel(String model) {
         this.model = model;
         return this;
@@ -73,6 +90,7 @@ public class GoogleCloudDialogflowV2InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelVariant")
     public GoogleCloudDialogflowV2InputAudioConfigModelVariantEnum modelVariant;
+
     public GoogleCloudDialogflowV2InputAudioConfig withModelVariant(GoogleCloudDialogflowV2InputAudioConfigModelVariantEnum modelVariant) {
         this.modelVariant = modelVariant;
         return this;
@@ -84,6 +102,7 @@ public class GoogleCloudDialogflowV2InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phraseHints")
     public String[] phraseHints;
+
     public GoogleCloudDialogflowV2InputAudioConfig withPhraseHints(String[] phraseHints) {
         this.phraseHints = phraseHints;
         return this;
@@ -95,6 +114,7 @@ public class GoogleCloudDialogflowV2InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleRateHertz")
     public Integer sampleRateHertz;
+
     public GoogleCloudDialogflowV2InputAudioConfig withSampleRateHertz(Integer sampleRateHertz) {
         this.sampleRateHertz = sampleRateHertz;
         return this;
@@ -106,6 +126,7 @@ public class GoogleCloudDialogflowV2InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("singleUtterance")
     public Boolean singleUtterance;
+
     public GoogleCloudDialogflowV2InputAudioConfig withSingleUtterance(Boolean singleUtterance) {
         this.singleUtterance = singleUtterance;
         return this;
@@ -117,9 +138,11 @@ public class GoogleCloudDialogflowV2InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speechContexts")
     public GoogleCloudDialogflowV2SpeechContext[] speechContexts;
+
     public GoogleCloudDialogflowV2InputAudioConfig withSpeechContexts(GoogleCloudDialogflowV2SpeechContext[] speechContexts) {
         this.speechContexts = speechContexts;
         return this;
     }
     
+    public GoogleCloudDialogflowV2InputAudioConfig(){}
 }

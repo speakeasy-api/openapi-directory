@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse {
@@ -12,6 +13,7 @@ public class ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiDeployment apiDeployment;
+
     public ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse withApiDeployment(org.openapis.openapi.models.shared.ApiDeployment apiDeployment) {
         this.apiDeployment = apiDeployment;
         return this;
@@ -19,6 +21,7 @@ public class ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse {
     
     
     public String contentType;
+
     public ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse {
     
     
     public Integer statusCode;
+
     public ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

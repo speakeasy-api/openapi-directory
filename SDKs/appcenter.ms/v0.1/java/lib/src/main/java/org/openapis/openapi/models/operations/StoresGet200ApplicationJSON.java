@@ -18,6 +18,7 @@ public class StoresGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public String createdBy;
+
     public StoresGet200ApplicationJSON withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -29,6 +30,7 @@ public class StoresGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by_principal_type")
     public String createdByPrincipalType;
+
     public StoresGet200ApplicationJSON withCreatedByPrincipalType(String createdByPrincipalType) {
         this.createdByPrincipalType = createdByPrincipalType;
         return this;
@@ -40,6 +42,7 @@ public class StoresGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public StoresGet200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class StoresGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intune_details")
     public StoresGet200ApplicationJSONIntuneDetails intuneDetails;
+
     public StoresGet200ApplicationJSON withIntuneDetails(StoresGet200ApplicationJSONIntuneDetails intuneDetails) {
         this.intuneDetails = intuneDetails;
         return this;
@@ -62,6 +66,7 @@ public class StoresGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StoresGet200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class StoresGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_connection_id")
     public String serviceConnectionId;
+
     public StoresGet200ApplicationJSON withServiceConnectionId(String serviceConnectionId) {
         this.serviceConnectionId = serviceConnectionId;
         return this;
@@ -84,6 +90,7 @@ public class StoresGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("track")
     public StoresGet200ApplicationJSONTrackEnum track;
+
     public StoresGet200ApplicationJSON withTrack(StoresGet200ApplicationJSONTrackEnum track) {
         this.track = track;
         return this;
@@ -95,9 +102,11 @@ public class StoresGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public StoresGet200ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public StoresGet200ApplicationJSON(){}
 }

@@ -15,6 +15,7 @@ public class PostCertificatesCreateCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public PostCertificatesCreateCertificateResponseNullableAction action;
+
     public PostCertificatesCreateCertificateResponse withAction(PostCertificatesCreateCertificateResponseNullableAction action) {
         this.action = action;
         return this;
@@ -22,9 +23,13 @@ public class PostCertificatesCreateCertificateResponse {
     
     @JsonProperty("certificate")
     public PostCertificatesCreateCertificateResponseCertificate certificate;
+
     public PostCertificatesCreateCertificateResponse withCertificate(PostCertificatesCreateCertificateResponseCertificate certificate) {
         this.certificate = certificate;
         return this;
     }
     
+    public PostCertificatesCreateCertificateResponse(@JsonProperty("certificate") PostCertificatesCreateCertificateResponseCertificate certificate) {
+        this.certificate = certificate;
+  }
 }

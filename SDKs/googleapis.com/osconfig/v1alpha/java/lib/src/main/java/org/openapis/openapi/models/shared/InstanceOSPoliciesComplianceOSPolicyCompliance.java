@@ -18,6 +18,7 @@ public class InstanceOSPoliciesComplianceOSPolicyCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osPolicyAssignment")
     public String osPolicyAssignment;
+
     public InstanceOSPoliciesComplianceOSPolicyCompliance withOsPolicyAssignment(String osPolicyAssignment) {
         this.osPolicyAssignment = osPolicyAssignment;
         return this;
@@ -29,6 +30,7 @@ public class InstanceOSPoliciesComplianceOSPolicyCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osPolicyId")
     public String osPolicyId;
+
     public InstanceOSPoliciesComplianceOSPolicyCompliance withOsPolicyId(String osPolicyId) {
         this.osPolicyId = osPolicyId;
         return this;
@@ -40,6 +42,7 @@ public class InstanceOSPoliciesComplianceOSPolicyCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osPolicyResourceCompliances")
     public OSPolicyResourceCompliance[] osPolicyResourceCompliances;
+
     public InstanceOSPoliciesComplianceOSPolicyCompliance withOsPolicyResourceCompliances(OSPolicyResourceCompliance[] osPolicyResourceCompliances) {
         this.osPolicyResourceCompliances = osPolicyResourceCompliances;
         return this;
@@ -51,9 +54,11 @@ public class InstanceOSPoliciesComplianceOSPolicyCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public InstanceOSPoliciesComplianceOSPolicyComplianceStateEnum state;
+
     public InstanceOSPoliciesComplianceOSPolicyCompliance withState(InstanceOSPoliciesComplianceOSPolicyComplianceStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public InstanceOSPoliciesComplianceOSPolicyCompliance(){}
 }

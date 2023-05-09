@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FetchRewardEarningsResponse {
     @JsonProperty("data")
     public RewardEarningResource[] data;
+
     public FetchRewardEarningsResponse withData(RewardEarningResource[] data) {
         this.data = data;
         return this;
@@ -22,9 +23,13 @@ public class FetchRewardEarningsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public FetchMetaResponse meta;
+
     public FetchRewardEarningsResponse withMeta(FetchMetaResponse meta) {
         this.meta = meta;
         return this;
     }
     
+    public FetchRewardEarningsResponse(@JsonProperty("data") RewardEarningResource[] data) {
+        this.data = data;
+  }
 }

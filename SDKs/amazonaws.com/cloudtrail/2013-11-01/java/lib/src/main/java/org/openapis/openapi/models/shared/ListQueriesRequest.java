@@ -19,6 +19,7 @@ public class ListQueriesRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public ListQueriesRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -26,6 +27,7 @@ public class ListQueriesRequest {
     
     @JsonProperty("EventDataStore")
     public String eventDataStore;
+
     public ListQueriesRequest withEventDataStore(String eventDataStore) {
         this.eventDataStore = eventDataStore;
         return this;
@@ -34,6 +36,7 @@ public class ListQueriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListQueriesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -42,6 +45,7 @@ public class ListQueriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListQueriesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -50,6 +54,7 @@ public class ListQueriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryStatus")
     public QueryStatusEnum queryStatus;
+
     public ListQueriesRequest withQueryStatus(QueryStatusEnum queryStatus) {
         this.queryStatus = queryStatus;
         return this;
@@ -60,9 +65,13 @@ public class ListQueriesRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public ListQueriesRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ListQueriesRequest(@JsonProperty("EventDataStore") String eventDataStore) {
+        this.eventDataStore = eventDataStore;
+  }
 }

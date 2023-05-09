@@ -18,6 +18,7 @@ public class WebSecurityScannerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modules")
     public java.util.Map<String, Config> modules;
+
     public WebSecurityScannerSettings withModules(java.util.Map<String, Config> modules) {
         this.modules = modules;
         return this;
@@ -29,6 +30,7 @@ public class WebSecurityScannerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WebSecurityScannerSettings withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class WebSecurityScannerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceEnablementState")
     public WebSecurityScannerSettingsServiceEnablementStateEnum serviceEnablementState;
+
     public WebSecurityScannerSettings withServiceEnablementState(WebSecurityScannerSettingsServiceEnablementStateEnum serviceEnablementState) {
         this.serviceEnablementState = serviceEnablementState;
         return this;
@@ -51,9 +54,11 @@ public class WebSecurityScannerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public WebSecurityScannerSettings withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public WebSecurityScannerSettings(){}
 }

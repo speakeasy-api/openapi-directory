@@ -15,6 +15,7 @@ public class UpdateStageRequestBodyDefaultRouteSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataTraceEnabled")
     public Boolean dataTraceEnabled;
+
     public UpdateStageRequestBodyDefaultRouteSettings withDataTraceEnabled(Boolean dataTraceEnabled) {
         this.dataTraceEnabled = dataTraceEnabled;
         return this;
@@ -23,6 +24,7 @@ public class UpdateStageRequestBodyDefaultRouteSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailedMetricsEnabled")
     public Boolean detailedMetricsEnabled;
+
     public UpdateStageRequestBodyDefaultRouteSettings withDetailedMetricsEnabled(Boolean detailedMetricsEnabled) {
         this.detailedMetricsEnabled = detailedMetricsEnabled;
         return this;
@@ -31,6 +33,7 @@ public class UpdateStageRequestBodyDefaultRouteSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggingLevel")
     public UpdateStageRequestBodyDefaultRouteSettingsLoggingLevelEnum loggingLevel;
+
     public UpdateStageRequestBodyDefaultRouteSettings withLoggingLevel(UpdateStageRequestBodyDefaultRouteSettingsLoggingLevelEnum loggingLevel) {
         this.loggingLevel = loggingLevel;
         return this;
@@ -39,6 +42,7 @@ public class UpdateStageRequestBodyDefaultRouteSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThrottlingBurstLimit")
     public Long throttlingBurstLimit;
+
     public UpdateStageRequestBodyDefaultRouteSettings withThrottlingBurstLimit(Long throttlingBurstLimit) {
         this.throttlingBurstLimit = throttlingBurstLimit;
         return this;
@@ -47,9 +51,11 @@ public class UpdateStageRequestBodyDefaultRouteSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThrottlingRateLimit")
     public Double throttlingRateLimit;
+
     public UpdateStageRequestBodyDefaultRouteSettings withThrottlingRateLimit(Double throttlingRateLimit) {
         this.throttlingRateLimit = throttlingRateLimit;
         return this;
     }
     
+    public UpdateStageRequestBodyDefaultRouteSettings(){}
 }

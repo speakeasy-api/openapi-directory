@@ -12,6 +12,7 @@ public class GetApiV2PerformanceStats200ApplicationJSONDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_14_days")
     public GetApiV2PerformanceStats200ApplicationJSONDataDetailsLast14Days last14Days;
+
     public GetApiV2PerformanceStats200ApplicationJSONDataDetails withLast14Days(GetApiV2PerformanceStats200ApplicationJSONDataDetailsLast14Days last14Days) {
         this.last14Days = last14Days;
         return this;
@@ -20,6 +21,7 @@ public class GetApiV2PerformanceStats200ApplicationJSONDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_30_days")
     public GetApiV2PerformanceStats200ApplicationJSONDataDetailsLast30Days last30Days;
+
     public GetApiV2PerformanceStats200ApplicationJSONDataDetails withLast30Days(GetApiV2PerformanceStats200ApplicationJSONDataDetailsLast30Days last30Days) {
         this.last30Days = last30Days;
         return this;
@@ -28,6 +30,7 @@ public class GetApiV2PerformanceStats200ApplicationJSONDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_7_days")
     public GetApiV2PerformanceStats200ApplicationJSONDataDetailsLast7Days last7Days;
+
     public GetApiV2PerformanceStats200ApplicationJSONDataDetails withLast7Days(GetApiV2PerformanceStats200ApplicationJSONDataDetailsLast7Days last7Days) {
         this.last7Days = last7Days;
         return this;
@@ -36,9 +39,11 @@ public class GetApiV2PerformanceStats200ApplicationJSONDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yesterday")
     public GetApiV2PerformanceStats200ApplicationJSONDataDetailsYesterday yesterday;
+
     public GetApiV2PerformanceStats200ApplicationJSONDataDetails withYesterday(GetApiV2PerformanceStats200ApplicationJSONDataDetailsYesterday yesterday) {
         this.yesterday = yesterday;
         return this;
     }
     
+    public GetApiV2PerformanceStats200ApplicationJSONDataDetails(){}
 }

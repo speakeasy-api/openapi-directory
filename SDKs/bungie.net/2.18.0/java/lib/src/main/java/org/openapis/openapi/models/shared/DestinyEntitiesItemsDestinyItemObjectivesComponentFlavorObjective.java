@@ -15,6 +15,7 @@ public class DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective {
      */
     
     public Long activityHash;
+
     public DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective withActivityHash(Long activityHash) {
         this.activityHash = activityHash;
         return this;
@@ -25,6 +26,7 @@ public class DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective {
      */
     
     public Boolean complete;
+
     public DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective withComplete(Boolean complete) {
         this.complete = complete;
         return this;
@@ -37,6 +39,7 @@ public class DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective {
      */
     
     public Integer completionValue;
+
     public DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective withCompletionValue(Integer completionValue) {
         this.completionValue = completionValue;
         return this;
@@ -47,6 +50,7 @@ public class DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective {
      */
     
     public Long destinationHash;
+
     public DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective withDestinationHash(Long destinationHash) {
         this.destinationHash = destinationHash;
         return this;
@@ -57,6 +61,7 @@ public class DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective {
      */
     
     public Long objectiveHash;
+
     public DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective withObjectiveHash(Long objectiveHash) {
         this.objectiveHash = objectiveHash;
         return this;
@@ -67,6 +72,7 @@ public class DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective {
      */
     
     public Integer progress;
+
     public DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective withProgress(Integer progress) {
         this.progress = progress;
         return this;
@@ -77,9 +83,11 @@ public class DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective {
      */
     
     public Boolean visible;
+
     public DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective(){}
 }

@@ -12,6 +12,7 @@ public class SingleCollection200ApplicationJSONCollectionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_postman_id")
     public String postmanId;
+
     public SingleCollection200ApplicationJSONCollectionInfo withPostmanId(String postmanId) {
         this.postmanId = postmanId;
         return this;
@@ -20,6 +21,7 @@ public class SingleCollection200ApplicationJSONCollectionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SingleCollection200ApplicationJSONCollectionInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class SingleCollection200ApplicationJSONCollectionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SingleCollection200ApplicationJSONCollectionInfo withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class SingleCollection200ApplicationJSONCollectionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public SingleCollection200ApplicationJSONCollectionInfo withSchema(String schema) {
         this.schema = schema;
         return this;
     }
     
+    public SingleCollection200ApplicationJSONCollectionInfo(){}
 }

@@ -18,6 +18,7 @@ public class ShopperId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public ShopperId withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -25,9 +26,13 @@ public class ShopperId {
     
     @JsonProperty("shopperId")
     public String shopperId;
+
     public ShopperId withShopperId(String shopperId) {
         this.shopperId = shopperId;
         return this;
     }
     
+    public ShopperId(@JsonProperty("shopperId") String shopperId) {
+        this.shopperId = shopperId;
+  }
 }

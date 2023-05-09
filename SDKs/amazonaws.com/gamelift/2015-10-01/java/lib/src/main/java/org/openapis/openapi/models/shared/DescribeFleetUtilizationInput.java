@@ -12,6 +12,7 @@ public class DescribeFleetUtilizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetIds")
     public String[] fleetIds;
+
     public DescribeFleetUtilizationInput withFleetIds(String[] fleetIds) {
         this.fleetIds = fleetIds;
         return this;
@@ -20,6 +21,7 @@ public class DescribeFleetUtilizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeFleetUtilizationInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,9 +30,11 @@ public class DescribeFleetUtilizationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFleetUtilizationInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFleetUtilizationInput(){}
 }

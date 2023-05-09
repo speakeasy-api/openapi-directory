@@ -54,11 +54,9 @@ public class Submissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubmissionsSubmissionIdResponse res = new org.openapis.openapi.models.operations.GetSubmissionsSubmissionIdResponse() {{
+        org.openapis.openapi.models.operations.GetSubmissionsSubmissionIdResponse res = new org.openapis.openapi.models.operations.GetSubmissionsSubmissionIdResponse(contentType, httpRes.statusCode()) {{
             getSubmissionsSubmissionId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,12 +98,10 @@ public class Submissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSubmissionsResponse res = new org.openapis.openapi.models.operations.PostSubmissionsResponse() {{
+        org.openapis.openapi.models.operations.PostSubmissionsResponse res = new org.openapis.openapi.models.operations.PostSubmissionsResponse(contentType, httpRes.statusCode()) {{
             postSubmissions200ApplicationJSONObject = null;
             postSubmissions400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

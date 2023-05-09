@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class PurchaseReservedInstancesOfferingResult {
     
     public String reservedInstancesId;
+
     public PurchaseReservedInstancesOfferingResult withReservedInstancesId(String reservedInstancesId) {
         this.reservedInstancesId = reservedInstancesId;
         return this;
     }
     
+    public PurchaseReservedInstancesOfferingResult(){}
 }

@@ -15,9 +15,13 @@ public class CatalogObjectBatch {
      */
     @JsonProperty("objects")
     public CatalogObject[] objects;
+
     public CatalogObjectBatch withObjects(CatalogObject[] objects) {
         this.objects = objects;
         return this;
     }
     
+    public CatalogObjectBatch(@JsonProperty("objects") CatalogObject[] objects) {
+        this.objects = objects;
+  }
 }

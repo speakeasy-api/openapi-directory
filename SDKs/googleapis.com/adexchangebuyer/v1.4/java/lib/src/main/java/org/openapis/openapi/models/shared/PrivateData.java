@@ -12,6 +12,7 @@ public class PrivateData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceId")
     public String referenceId;
+
     public PrivateData withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -20,9 +21,11 @@ public class PrivateData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referencePayload")
     public String referencePayload;
+
     public PrivateData withReferencePayload(String referencePayload) {
         this.referencePayload = referencePayload;
         return this;
     }
     
+    public PrivateData(){}
 }

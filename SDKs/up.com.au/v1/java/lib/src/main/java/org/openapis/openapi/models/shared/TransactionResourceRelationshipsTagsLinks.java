@@ -14,9 +14,13 @@ public class TransactionResourceRelationshipsTagsLinks {
      */
     @JsonProperty("self")
     public String self;
+
     public TransactionResourceRelationshipsTagsLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public TransactionResourceRelationshipsTagsLinks(@JsonProperty("self") String self) {
+        this.self = self;
+  }
 }

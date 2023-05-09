@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Service {
     @JsonProperty("arn")
     public String arn;
+
     public Service withArn(String arn) {
         this.arn = arn;
         return this;
@@ -27,6 +28,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchName")
     public String branchName;
+
     public Service withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -36,6 +38,7 @@ public class Service {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Service withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +47,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Service withDescription(String description) {
         this.description = description;
         return this;
@@ -53,6 +57,7 @@ public class Service {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public Service withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -60,6 +65,7 @@ public class Service {
     
     @JsonProperty("name")
     public String name;
+
     public Service withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +74,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipeline")
     public ServicePipeline pipeline;
+
     public Service withPipeline(ServicePipeline pipeline) {
         this.pipeline = pipeline;
         return this;
@@ -76,6 +83,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryConnectionArn")
     public String repositoryConnectionArn;
+
     public Service withRepositoryConnectionArn(String repositoryConnectionArn) {
         this.repositoryConnectionArn = repositoryConnectionArn;
         return this;
@@ -84,6 +92,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryId")
     public String repositoryId;
+
     public Service withRepositoryId(String repositoryId) {
         this.repositoryId = repositoryId;
         return this;
@@ -91,6 +100,7 @@ public class Service {
     
     @JsonProperty("spec")
     public String spec;
+
     public Service withSpec(String spec) {
         this.spec = spec;
         return this;
@@ -98,6 +108,7 @@ public class Service {
     
     @JsonProperty("status")
     public ServiceStatusEnum status;
+
     public Service withStatus(ServiceStatusEnum status) {
         this.status = status;
         return this;
@@ -106,6 +117,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public Service withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -113,9 +125,19 @@ public class Service {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public Service withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public Service(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("lastModifiedAt") OffsetDateTime lastModifiedAt, @JsonProperty("name") String name, @JsonProperty("spec") String spec, @JsonProperty("status") ServiceStatusEnum status, @JsonProperty("templateName") String templateName) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.lastModifiedAt = lastModifiedAt;
+        this.name = name;
+        this.spec = spec;
+        this.status = status;
+        this.templateName = templateName;
+  }
 }

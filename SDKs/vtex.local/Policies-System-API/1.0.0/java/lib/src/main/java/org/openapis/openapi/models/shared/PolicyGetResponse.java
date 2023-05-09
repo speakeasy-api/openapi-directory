@@ -15,6 +15,7 @@ public class PolicyGetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PolicyGetResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class PolicyGetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PolicyGetResponse withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class PolicyGetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PolicyGetResponse withName(String name) {
         this.name = name;
         return this;
@@ -48,9 +51,11 @@ public class PolicyGetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statements")
     public StatementGetResponse[] statements;
+
     public PolicyGetResponse withStatements(StatementGetResponse[] statements) {
         this.statements = statements;
         return this;
     }
     
+    public PolicyGetResponse(){}
 }

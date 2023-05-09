@@ -12,9 +12,13 @@ public class GetQueryStatisticsRequestBody {
      */
     @JsonProperty("QueryId")
     public String queryId;
+
     public GetQueryStatisticsRequestBody withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
     }
     
+    public GetQueryStatisticsRequestBody(@JsonProperty("QueryId") String queryId) {
+        this.queryId = queryId;
+  }
 }

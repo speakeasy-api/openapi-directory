@@ -18,9 +18,11 @@ public class BatchCreatePerfSamplesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perfSamples")
     public PerfSample[] perfSamples;
+
     public BatchCreatePerfSamplesRequest withPerfSamples(PerfSample[] perfSamples) {
         this.perfSamples = perfSamples;
         return this;
     }
     
+    public BatchCreatePerfSamplesRequest(){}
 }

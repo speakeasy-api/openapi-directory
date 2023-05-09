@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeVirtualNodeResponse {
@@ -12,6 +13,7 @@ public class DescribeVirtualNodeResponse {
      */
     
     public Object badRequestException;
+
     public DescribeVirtualNodeResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeVirtualNodeResponse {
     
     
     public String contentType;
+
     public DescribeVirtualNodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeVirtualNodeResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeVirtualNodeOutput describeVirtualNodeOutput;
+
     public DescribeVirtualNodeResponse withDescribeVirtualNodeOutput(org.openapis.openapi.models.shared.DescribeVirtualNodeOutput describeVirtualNodeOutput) {
         this.describeVirtualNodeOutput = describeVirtualNodeOutput;
         return this;
@@ -39,6 +43,7 @@ public class DescribeVirtualNodeResponse {
      */
     
     public Object forbiddenException;
+
     public DescribeVirtualNodeResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeVirtualNodeResponse {
      */
     
     public Object internalServerErrorException;
+
     public DescribeVirtualNodeResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeVirtualNodeResponse {
      */
     
     public Object notFoundException;
+
     public DescribeVirtualNodeResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeVirtualNodeResponse {
     
     
     public Integer statusCode;
+
     public DescribeVirtualNodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeVirtualNodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeVirtualNodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeVirtualNodeResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeVirtualNodeResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeVirtualNodeResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeVirtualNodeResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeVirtualNodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

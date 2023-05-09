@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateWebhookRequest {
@@ -12,6 +13,7 @@ public class CreateWebhookRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateWebhookRequestBody requestBody;
+
     public CreateWebhookRequest withRequestBody(CreateWebhookRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class CreateWebhookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public CreateWebhookRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,9 +38,13 @@ public class CreateWebhookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public CreateWebhookRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public CreateWebhookRequest(@JsonProperty("RequestBody") CreateWebhookRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

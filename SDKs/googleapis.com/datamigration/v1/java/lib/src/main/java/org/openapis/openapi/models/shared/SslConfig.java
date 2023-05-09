@@ -18,6 +18,7 @@ public class SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caCertificate")
     public String caCertificate;
+
     public SslConfig withCaCertificate(String caCertificate) {
         this.caCertificate = caCertificate;
         return this;
@@ -29,6 +30,7 @@ public class SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientCertificate")
     public String clientCertificate;
+
     public SslConfig withClientCertificate(String clientCertificate) {
         this.clientCertificate = clientCertificate;
         return this;
@@ -40,6 +42,7 @@ public class SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientKey")
     public String clientKey;
+
     public SslConfig withClientKey(String clientKey) {
         this.clientKey = clientKey;
         return this;
@@ -51,9 +54,11 @@ public class SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SslConfigTypeEnum type;
+
     public SslConfig withType(SslConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SslConfig(){}
 }

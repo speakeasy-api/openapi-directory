@@ -18,6 +18,7 @@ public class TraceSinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TraceSinkInput withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class TraceSinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfig")
     public OutputConfig outputConfig;
+
     public TraceSinkInput withOutputConfig(OutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
     
+    public TraceSinkInput(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MetaTagModel {
     @JsonProperty("content")
     public String content;
+
     public MetaTagModel withContent(String content) {
         this.content = content;
         return this;
@@ -16,9 +17,14 @@ public class MetaTagModel {
     
     @JsonProperty("name")
     public String name;
+
     public MetaTagModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MetaTagModel(@JsonProperty("content") String content, @JsonProperty("name") String name) {
+        this.content = content;
+        this.name = name;
+  }
 }

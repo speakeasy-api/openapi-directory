@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RecencyDimension {
     @JsonProperty("Duration")
     public DurationEnum duration;
+
     public RecencyDimension withDuration(DurationEnum duration) {
         this.duration = duration;
         return this;
@@ -19,9 +20,14 @@ public class RecencyDimension {
     
     @JsonProperty("RecencyType")
     public RecencyTypeEnum recencyType;
+
     public RecencyDimension withRecencyType(RecencyTypeEnum recencyType) {
         this.recencyType = recencyType;
         return this;
     }
     
+    public RecencyDimension(@JsonProperty("Duration") DurationEnum duration, @JsonProperty("RecencyType") RecencyTypeEnum recencyType) {
+        this.duration = duration;
+        this.recencyType = recencyType;
+  }
 }

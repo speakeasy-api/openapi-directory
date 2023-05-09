@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterJobDefinitionResponse {
@@ -12,6 +13,7 @@ public class RegisterJobDefinitionResponse {
      */
     
     public Object clientException;
+
     public RegisterJobDefinitionResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class RegisterJobDefinitionResponse {
     
     
     public String contentType;
+
     public RegisterJobDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegisterJobDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterJobDefinitionResponse registerJobDefinitionResponse;
+
     public RegisterJobDefinitionResponse withRegisterJobDefinitionResponse(org.openapis.openapi.models.shared.RegisterJobDefinitionResponse registerJobDefinitionResponse) {
         this.registerJobDefinitionResponse = registerJobDefinitionResponse;
         return this;
@@ -36,6 +40,7 @@ public class RegisterJobDefinitionResponse {
     
     
     public Integer statusCode;
+
     public RegisterJobDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class RegisterJobDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterJobDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class RegisterJobDefinitionResponse {
      */
     
     public Object serverException;
+
     public RegisterJobDefinitionResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public RegisterJobDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

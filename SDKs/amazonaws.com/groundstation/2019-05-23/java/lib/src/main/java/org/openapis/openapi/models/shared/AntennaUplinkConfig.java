@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AntennaUplinkConfig {
     @JsonProperty("spectrumConfig")
     public UplinkSpectrumConfig spectrumConfig;
+
     public AntennaUplinkConfig withSpectrumConfig(UplinkSpectrumConfig spectrumConfig) {
         this.spectrumConfig = spectrumConfig;
         return this;
@@ -21,6 +22,7 @@ public class AntennaUplinkConfig {
     
     @JsonProperty("targetEirp")
     public Eirp targetEirp;
+
     public AntennaUplinkConfig withTargetEirp(Eirp targetEirp) {
         this.targetEirp = targetEirp;
         return this;
@@ -29,9 +31,14 @@ public class AntennaUplinkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transmitDisabled")
     public Boolean transmitDisabled;
+
     public AntennaUplinkConfig withTransmitDisabled(Boolean transmitDisabled) {
         this.transmitDisabled = transmitDisabled;
         return this;
     }
     
+    public AntennaUplinkConfig(@JsonProperty("spectrumConfig") UplinkSpectrumConfig spectrumConfig, @JsonProperty("targetEirp") Eirp targetEirp) {
+        this.spectrumConfig = spectrumConfig;
+        this.targetEirp = targetEirp;
+  }
 }

@@ -15,6 +15,7 @@ public class LoadBalancerTlsCertificateRenewalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainValidationOptions")
     public LoadBalancerTlsCertificateDomainValidationOption[] domainValidationOptions;
+
     public LoadBalancerTlsCertificateRenewalSummary withDomainValidationOptions(LoadBalancerTlsCertificateDomainValidationOption[] domainValidationOptions) {
         this.domainValidationOptions = domainValidationOptions;
         return this;
@@ -23,9 +24,11 @@ public class LoadBalancerTlsCertificateRenewalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewalStatus")
     public LoadBalancerTlsCertificateRenewalStatusEnum renewalStatus;
+
     public LoadBalancerTlsCertificateRenewalSummary withRenewalStatus(LoadBalancerTlsCertificateRenewalStatusEnum renewalStatus) {
         this.renewalStatus = renewalStatus;
         return this;
     }
     
+    public LoadBalancerTlsCertificateRenewalSummary(){}
 }

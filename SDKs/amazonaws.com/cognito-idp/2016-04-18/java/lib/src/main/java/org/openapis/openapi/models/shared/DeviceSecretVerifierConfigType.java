@@ -15,6 +15,7 @@ public class DeviceSecretVerifierConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PasswordVerifier")
     public String passwordVerifier;
+
     public DeviceSecretVerifierConfigType withPasswordVerifier(String passwordVerifier) {
         this.passwordVerifier = passwordVerifier;
         return this;
@@ -23,9 +24,11 @@ public class DeviceSecretVerifierConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Salt")
     public String salt;
+
     public DeviceSecretVerifierConfigType withSalt(String salt) {
         this.salt = salt;
         return this;
     }
     
+    public DeviceSecretVerifierConfigType(){}
 }

@@ -15,6 +15,7 @@ public class GetItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributesToGet")
     public String[] attributesToGet;
+
     public GetItemInput withAttributesToGet(String[] attributesToGet) {
         this.attributesToGet = attributesToGet;
         return this;
@@ -26,6 +27,7 @@ public class GetItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsistentRead")
     public Boolean consistentRead;
+
     public GetItemInput withConsistentRead(Boolean consistentRead) {
         this.consistentRead = consistentRead;
         return this;
@@ -36,6 +38,7 @@ public class GetItemInput {
      */
     @JsonProperty("Key")
     public Key key;
+
     public GetItemInput withKey(Key key) {
         this.key = key;
         return this;
@@ -43,9 +46,14 @@ public class GetItemInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public GetItemInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public GetItemInput(@JsonProperty("Key") Key key, @JsonProperty("TableName") String tableName) {
+        this.key = key;
+        this.tableName = tableName;
+  }
 }

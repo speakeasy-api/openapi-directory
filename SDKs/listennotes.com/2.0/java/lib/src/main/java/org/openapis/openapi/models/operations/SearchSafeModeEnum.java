@@ -11,13 +11,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * 
  */
 public enum SearchSafeModeEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0L),
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private SearchSafeModeEnum(String value) {
+    private SearchSafeModeEnum(Long value) {
         this.value = value;
     }
 }

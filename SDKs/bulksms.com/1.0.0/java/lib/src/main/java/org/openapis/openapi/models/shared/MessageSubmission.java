@@ -23,6 +23,7 @@ public class MessageSubmission {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public MessageSubmission withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -33,9 +34,14 @@ public class MessageSubmission {
      */
     @JsonProperty("id")
     public String id;
+
     public MessageSubmission withId(String id) {
         this.id = id;
         return this;
     }
     
+    public MessageSubmission(@JsonProperty("date") OffsetDateTime date, @JsonProperty("id") String id) {
+        this.date = date;
+        this.id = id;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDeploymentInstanceResponse {
     
     public String contentType;
+
     public GetDeploymentInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDeploymentInstanceResponse {
      */
     
     public Object deploymentDoesNotExistException;
+
     public GetDeploymentInstanceResponse withDeploymentDoesNotExistException(Object deploymentDoesNotExistException) {
         this.deploymentDoesNotExistException = deploymentDoesNotExistException;
         return this;
@@ -29,6 +32,7 @@ public class GetDeploymentInstanceResponse {
      */
     
     public Object deploymentIdRequiredException;
+
     public GetDeploymentInstanceResponse withDeploymentIdRequiredException(Object deploymentIdRequiredException) {
         this.deploymentIdRequiredException = deploymentIdRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class GetDeploymentInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDeploymentInstanceOutput getDeploymentInstanceOutput;
+
     public GetDeploymentInstanceResponse withGetDeploymentInstanceOutput(org.openapis.openapi.models.shared.GetDeploymentInstanceOutput getDeploymentInstanceOutput) {
         this.getDeploymentInstanceOutput = getDeploymentInstanceOutput;
         return this;
@@ -49,6 +54,7 @@ public class GetDeploymentInstanceResponse {
      */
     
     public Object instanceDoesNotExistException;
+
     public GetDeploymentInstanceResponse withInstanceDoesNotExistException(Object instanceDoesNotExistException) {
         this.instanceDoesNotExistException = instanceDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class GetDeploymentInstanceResponse {
      */
     
     public Object instanceIdRequiredException;
+
     public GetDeploymentInstanceResponse withInstanceIdRequiredException(Object instanceIdRequiredException) {
         this.instanceIdRequiredException = instanceIdRequiredException;
         return this;
@@ -69,6 +76,7 @@ public class GetDeploymentInstanceResponse {
      */
     
     public Object invalidComputePlatformException;
+
     public GetDeploymentInstanceResponse withInvalidComputePlatformException(Object invalidComputePlatformException) {
         this.invalidComputePlatformException = invalidComputePlatformException;
         return this;
@@ -79,6 +87,7 @@ public class GetDeploymentInstanceResponse {
      */
     
     public Object invalidDeploymentIdException;
+
     public GetDeploymentInstanceResponse withInvalidDeploymentIdException(Object invalidDeploymentIdException) {
         this.invalidDeploymentIdException = invalidDeploymentIdException;
         return this;
@@ -89,6 +98,7 @@ public class GetDeploymentInstanceResponse {
      */
     
     public Object invalidInstanceNameException;
+
     public GetDeploymentInstanceResponse withInvalidInstanceNameException(Object invalidInstanceNameException) {
         this.invalidInstanceNameException = invalidInstanceNameException;
         return this;
@@ -96,6 +106,7 @@ public class GetDeploymentInstanceResponse {
     
     
     public Integer statusCode;
+
     public GetDeploymentInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class GetDeploymentInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDeploymentInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDeploymentInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

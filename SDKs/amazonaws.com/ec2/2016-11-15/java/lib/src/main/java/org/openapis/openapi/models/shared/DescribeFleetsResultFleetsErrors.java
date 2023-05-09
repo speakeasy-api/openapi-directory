@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetsResultFleetsErrors {
     
     public String errorCode;
+
     public DescribeFleetsResultFleetsErrors withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFleetsResultFleetsErrors {
     
     
     public String errorMessage;
+
     public DescribeFleetsResultFleetsErrors withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -26,6 +28,7 @@ public class DescribeFleetsResultFleetsErrors {
     
     
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverrides launchTemplateAndOverrides;
+
     public DescribeFleetsResultFleetsErrors withLaunchTemplateAndOverrides(DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverrides launchTemplateAndOverrides) {
         this.launchTemplateAndOverrides = launchTemplateAndOverrides;
         return this;
@@ -33,9 +36,11 @@ public class DescribeFleetsResultFleetsErrors {
     
     
     public DescribeFleetsResultFleetsErrorsLifecycleEnum lifecycle;
+
     public DescribeFleetsResultFleetsErrors withLifecycle(DescribeFleetsResultFleetsErrorsLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
     }
     
+    public DescribeFleetsResultFleetsErrors(){}
 }

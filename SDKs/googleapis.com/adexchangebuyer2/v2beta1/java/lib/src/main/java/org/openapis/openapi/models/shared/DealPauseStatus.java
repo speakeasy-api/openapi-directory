@@ -18,6 +18,7 @@ public class DealPauseStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyerPauseReason")
     public String buyerPauseReason;
+
     public DealPauseStatus withBuyerPauseReason(String buyerPauseReason) {
         this.buyerPauseReason = buyerPauseReason;
         return this;
@@ -29,6 +30,7 @@ public class DealPauseStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstPausedBy")
     public DealPauseStatusFirstPausedByEnum firstPausedBy;
+
     public DealPauseStatus withFirstPausedBy(DealPauseStatusFirstPausedByEnum firstPausedBy) {
         this.firstPausedBy = firstPausedBy;
         return this;
@@ -40,6 +42,7 @@ public class DealPauseStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasBuyerPaused")
     public Boolean hasBuyerPaused;
+
     public DealPauseStatus withHasBuyerPaused(Boolean hasBuyerPaused) {
         this.hasBuyerPaused = hasBuyerPaused;
         return this;
@@ -51,6 +54,7 @@ public class DealPauseStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasSellerPaused")
     public Boolean hasSellerPaused;
+
     public DealPauseStatus withHasSellerPaused(Boolean hasSellerPaused) {
         this.hasSellerPaused = hasSellerPaused;
         return this;
@@ -62,9 +66,11 @@ public class DealPauseStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerPauseReason")
     public String sellerPauseReason;
+
     public DealPauseStatus withSellerPauseReason(String sellerPauseReason) {
         this.sellerPauseReason = sellerPauseReason;
         return this;
     }
     
+    public DealPauseStatus(){}
 }

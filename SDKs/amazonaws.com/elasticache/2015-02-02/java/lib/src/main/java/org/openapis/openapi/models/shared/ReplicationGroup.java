@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ReplicationGroup {
     
     public String arn;
+
     public ReplicationGroup withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class ReplicationGroup {
     
     
     public Boolean atRestEncryptionEnabled;
+
     public ReplicationGroup withAtRestEncryptionEnabled(Boolean atRestEncryptionEnabled) {
         this.atRestEncryptionEnabled = atRestEncryptionEnabled;
         return this;
@@ -26,6 +28,7 @@ public class ReplicationGroup {
     
     
     public Boolean authTokenEnabled;
+
     public ReplicationGroup withAuthTokenEnabled(Boolean authTokenEnabled) {
         this.authTokenEnabled = authTokenEnabled;
         return this;
@@ -33,6 +36,7 @@ public class ReplicationGroup {
     
     
     public OffsetDateTime authTokenLastModifiedDate;
+
     public ReplicationGroup withAuthTokenLastModifiedDate(OffsetDateTime authTokenLastModifiedDate) {
         this.authTokenLastModifiedDate = authTokenLastModifiedDate;
         return this;
@@ -40,6 +44,7 @@ public class ReplicationGroup {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public ReplicationGroup withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -47,6 +52,7 @@ public class ReplicationGroup {
     
     
     public AutomaticFailoverStatusEnum automaticFailover;
+
     public ReplicationGroup withAutomaticFailover(AutomaticFailoverStatusEnum automaticFailover) {
         this.automaticFailover = automaticFailover;
         return this;
@@ -54,6 +60,7 @@ public class ReplicationGroup {
     
     
     public String cacheNodeType;
+
     public ReplicationGroup withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -61,6 +68,7 @@ public class ReplicationGroup {
     
     
     public Boolean clusterEnabled;
+
     public ReplicationGroup withClusterEnabled(Boolean clusterEnabled) {
         this.clusterEnabled = clusterEnabled;
         return this;
@@ -68,6 +76,7 @@ public class ReplicationGroup {
     
     
     public Endpoint configurationEndpoint;
+
     public ReplicationGroup withConfigurationEndpoint(Endpoint configurationEndpoint) {
         this.configurationEndpoint = configurationEndpoint;
         return this;
@@ -75,6 +84,7 @@ public class ReplicationGroup {
     
     
     public DataTieringStatusEnum dataTiering;
+
     public ReplicationGroup withDataTiering(DataTieringStatusEnum dataTiering) {
         this.dataTiering = dataTiering;
         return this;
@@ -82,6 +92,7 @@ public class ReplicationGroup {
     
     
     public String description;
+
     public ReplicationGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -89,6 +100,7 @@ public class ReplicationGroup {
     
     
     public GlobalReplicationGroupInfo globalReplicationGroupInfo;
+
     public ReplicationGroup withGlobalReplicationGroupInfo(GlobalReplicationGroupInfo globalReplicationGroupInfo) {
         this.globalReplicationGroupInfo = globalReplicationGroupInfo;
         return this;
@@ -96,6 +108,7 @@ public class ReplicationGroup {
     
     
     public IpDiscoveryEnum ipDiscovery;
+
     public ReplicationGroup withIpDiscovery(IpDiscoveryEnum ipDiscovery) {
         this.ipDiscovery = ipDiscovery;
         return this;
@@ -103,6 +116,7 @@ public class ReplicationGroup {
     
     
     public String kmsKeyId;
+
     public ReplicationGroup withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -110,6 +124,7 @@ public class ReplicationGroup {
     
     
     public LogDeliveryConfigurationList[] logDeliveryConfigurations;
+
     public ReplicationGroup withLogDeliveryConfigurations(LogDeliveryConfigurationList[] logDeliveryConfigurations) {
         this.logDeliveryConfigurations = logDeliveryConfigurations;
         return this;
@@ -117,6 +132,7 @@ public class ReplicationGroup {
     
     
     public String[] memberClusters;
+
     public ReplicationGroup withMemberClusters(String[] memberClusters) {
         this.memberClusters = memberClusters;
         return this;
@@ -124,6 +140,7 @@ public class ReplicationGroup {
     
     
     public String[] memberClustersOutpostArns;
+
     public ReplicationGroup withMemberClustersOutpostArns(String[] memberClustersOutpostArns) {
         this.memberClustersOutpostArns = memberClustersOutpostArns;
         return this;
@@ -131,6 +148,7 @@ public class ReplicationGroup {
     
     
     public MultiAZStatusEnum multiAZ;
+
     public ReplicationGroup withMultiAZ(MultiAZStatusEnum multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -138,6 +156,7 @@ public class ReplicationGroup {
     
     
     public NetworkTypeEnum networkType;
+
     public ReplicationGroup withNetworkType(NetworkTypeEnum networkType) {
         this.networkType = networkType;
         return this;
@@ -145,6 +164,7 @@ public class ReplicationGroup {
     
     
     public NodeGroupList[] nodeGroups;
+
     public ReplicationGroup withNodeGroups(NodeGroupList[] nodeGroups) {
         this.nodeGroups = nodeGroups;
         return this;
@@ -152,6 +172,7 @@ public class ReplicationGroup {
     
     
     public ReplicationGroupPendingModifiedValues pendingModifiedValues;
+
     public ReplicationGroup withPendingModifiedValues(ReplicationGroupPendingModifiedValues pendingModifiedValues) {
         this.pendingModifiedValues = pendingModifiedValues;
         return this;
@@ -159,6 +180,7 @@ public class ReplicationGroup {
     
     
     public OffsetDateTime replicationGroupCreateTime;
+
     public ReplicationGroup withReplicationGroupCreateTime(OffsetDateTime replicationGroupCreateTime) {
         this.replicationGroupCreateTime = replicationGroupCreateTime;
         return this;
@@ -166,6 +188,7 @@ public class ReplicationGroup {
     
     
     public String replicationGroupId;
+
     public ReplicationGroup withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -173,6 +196,7 @@ public class ReplicationGroup {
     
     
     public Long snapshotRetentionLimit;
+
     public ReplicationGroup withSnapshotRetentionLimit(Long snapshotRetentionLimit) {
         this.snapshotRetentionLimit = snapshotRetentionLimit;
         return this;
@@ -180,6 +204,7 @@ public class ReplicationGroup {
     
     
     public String snapshotWindow;
+
     public ReplicationGroup withSnapshotWindow(String snapshotWindow) {
         this.snapshotWindow = snapshotWindow;
         return this;
@@ -187,6 +212,7 @@ public class ReplicationGroup {
     
     
     public String snapshottingClusterId;
+
     public ReplicationGroup withSnapshottingClusterId(String snapshottingClusterId) {
         this.snapshottingClusterId = snapshottingClusterId;
         return this;
@@ -194,6 +220,7 @@ public class ReplicationGroup {
     
     
     public String status;
+
     public ReplicationGroup withStatus(String status) {
         this.status = status;
         return this;
@@ -201,6 +228,7 @@ public class ReplicationGroup {
     
     
     public Boolean transitEncryptionEnabled;
+
     public ReplicationGroup withTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
         this.transitEncryptionEnabled = transitEncryptionEnabled;
         return this;
@@ -208,6 +236,7 @@ public class ReplicationGroup {
     
     
     public TransitEncryptionModeEnum transitEncryptionMode;
+
     public ReplicationGroup withTransitEncryptionMode(TransitEncryptionModeEnum transitEncryptionMode) {
         this.transitEncryptionMode = transitEncryptionMode;
         return this;
@@ -215,9 +244,11 @@ public class ReplicationGroup {
     
     
     public String[] userGroupIds;
+
     public ReplicationGroup withUserGroupIds(String[] userGroupIds) {
         this.userGroupIds = userGroupIds;
         return this;
     }
     
+    public ReplicationGroup(){}
 }

@@ -15,9 +15,11 @@ public class PaginationLinksSelf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public PaginationLinksSelf withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public PaginationLinksSelf(){}
 }

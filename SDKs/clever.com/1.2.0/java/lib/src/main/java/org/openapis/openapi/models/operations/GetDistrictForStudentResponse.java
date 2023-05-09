@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDistrictForStudentResponse {
     
     public String contentType;
+
     public GetDistrictForStudentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDistrictForStudentResponse {
      */
     
     public org.openapis.openapi.models.shared.DistrictResponse districtResponse;
+
     public GetDistrictForStudentResponse withDistrictResponse(org.openapis.openapi.models.shared.DistrictResponse districtResponse) {
         this.districtResponse = districtResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetDistrictForStudentResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetDistrictForStudentResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -36,6 +40,7 @@ public class GetDistrictForStudentResponse {
     
     
     public Integer statusCode;
+
     public GetDistrictForStudentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetDistrictForStudentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDistrictForStudentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDistrictForStudentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

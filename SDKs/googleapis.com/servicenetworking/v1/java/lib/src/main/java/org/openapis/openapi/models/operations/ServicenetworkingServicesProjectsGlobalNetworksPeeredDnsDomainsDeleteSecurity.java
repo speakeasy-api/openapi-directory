@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteSecurityOption1 option1;
+
     public ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteSecurity withOption1(ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDele
     
     @SpeakeasyMetadata("security:option=true")
     public ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteSecurityOption2 option2;
+
     public ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteSecurity withOption2(ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteSecurity(){}
 }

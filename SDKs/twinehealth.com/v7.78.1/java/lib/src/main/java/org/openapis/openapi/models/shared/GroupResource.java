@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GroupResource {
     @JsonProperty("attributes")
     public GroupResourceAttributes attributes;
+
     public GroupResource withAttributes(GroupResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -18,6 +19,7 @@ public class GroupResource {
     
     @JsonProperty("id")
     public String id;
+
     public GroupResource withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class GroupResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public GroupResourceLinks links;
+
     public GroupResource withLinks(GroupResourceLinks links) {
         this.links = links;
         return this;
@@ -33,9 +36,15 @@ public class GroupResource {
     
     @JsonProperty("type")
     public GroupResourceTypeEnum type;
+
     public GroupResource withType(GroupResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GroupResource(@JsonProperty("attributes") GroupResourceAttributes attributes, @JsonProperty("id") String id, @JsonProperty("type") GroupResourceTypeEnum type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.type = type;
+  }
 }

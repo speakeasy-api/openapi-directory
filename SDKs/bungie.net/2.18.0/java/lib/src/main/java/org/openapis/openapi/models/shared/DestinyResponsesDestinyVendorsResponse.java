@@ -16,6 +16,7 @@ public class DestinyResponsesDestinyVendorsResponse {
      */
     
     public DestinyResponsesDestinyVendorsResponseCategories categories;
+
     public DestinyResponsesDestinyVendorsResponse withCategories(DestinyResponsesDestinyVendorsResponseCategories categories) {
         this.categories = categories;
         return this;
@@ -27,6 +28,7 @@ public class DestinyResponsesDestinyVendorsResponse {
      */
     
     public DestinyResponsesDestinyVendorsResponseCurrencyLookups currencyLookups;
+
     public DestinyResponsesDestinyVendorsResponse withCurrencyLookups(DestinyResponsesDestinyVendorsResponseCurrencyLookups currencyLookups) {
         this.currencyLookups = currencyLookups;
         return this;
@@ -38,6 +40,7 @@ public class DestinyResponsesDestinyVendorsResponse {
      */
     
     public java.util.Map<String, DestinyItemComponentSetOfint32> itemComponents;
+
     public DestinyResponsesDestinyVendorsResponse withItemComponents(java.util.Map<String, DestinyItemComponentSetOfint32> itemComponents) {
         this.itemComponents = itemComponents;
         return this;
@@ -50,6 +53,7 @@ public class DestinyResponsesDestinyVendorsResponse {
      */
     
     public DestinyResponsesDestinyVendorsResponseSales sales;
+
     public DestinyResponsesDestinyVendorsResponse withSales(DestinyResponsesDestinyVendorsResponseSales sales) {
         this.sales = sales;
         return this;
@@ -61,6 +65,7 @@ public class DestinyResponsesDestinyVendorsResponse {
      */
     
     public DestinyResponsesDestinyVendorsResponseStringVariables stringVariables;
+
     public DestinyResponsesDestinyVendorsResponse withStringVariables(DestinyResponsesDestinyVendorsResponseStringVariables stringVariables) {
         this.stringVariables = stringVariables;
         return this;
@@ -72,6 +77,7 @@ public class DestinyResponsesDestinyVendorsResponse {
      */
     
     public DestinyResponsesDestinyVendorsResponseVendorGroups vendorGroups;
+
     public DestinyResponsesDestinyVendorsResponse withVendorGroups(DestinyResponsesDestinyVendorsResponseVendorGroups vendorGroups) {
         this.vendorGroups = vendorGroups;
         return this;
@@ -83,9 +89,11 @@ public class DestinyResponsesDestinyVendorsResponse {
      */
     
     public DestinyResponsesDestinyVendorsResponseVendors vendors;
+
     public DestinyResponsesDestinyVendorsResponse withVendors(DestinyResponsesDestinyVendorsResponseVendors vendors) {
         this.vendors = vendors;
         return this;
     }
     
+    public DestinyResponsesDestinyVendorsResponse(){}
 }

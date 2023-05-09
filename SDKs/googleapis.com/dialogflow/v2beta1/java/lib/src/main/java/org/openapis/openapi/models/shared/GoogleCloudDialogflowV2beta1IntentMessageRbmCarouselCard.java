@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardContents")
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent[] cardContents;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard withCardContents(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent[] cardContents) {
         this.cardContents = cardContents;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardWidth")
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidthEnum cardWidth;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard withCardWidth(GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidthEnum cardWidth) {
         this.cardWidth = cardWidth;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard(){}
 }

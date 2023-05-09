@@ -18,9 +18,11 @@ public class NodeRebootParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeRebootOption")
     public NodeRebootParameterNodeRebootOptionEnum nodeRebootOption;
+
     public NodeRebootParameter withNodeRebootOption(NodeRebootParameterNodeRebootOptionEnum nodeRebootOption) {
         this.nodeRebootOption = nodeRebootOption;
         return this;
     }
     
+    public NodeRebootParameter(){}
 }

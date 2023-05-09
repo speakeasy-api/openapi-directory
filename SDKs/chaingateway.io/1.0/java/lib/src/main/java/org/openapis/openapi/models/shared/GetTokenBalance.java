@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetTokenBalance {
     @JsonProperty("balance")
     public Integer balance;
+
     public GetTokenBalance withBalance(Integer balance) {
         this.balance = balance;
         return this;
@@ -16,6 +17,7 @@ public class GetTokenBalance {
     
     @JsonProperty("contractaddress")
     public String contractaddress;
+
     public GetTokenBalance withContractaddress(String contractaddress) {
         this.contractaddress = contractaddress;
         return this;
@@ -23,6 +25,7 @@ public class GetTokenBalance {
     
     @JsonProperty("ethereumaddress")
     public String ethereumaddress;
+
     public GetTokenBalance withEthereumaddress(String ethereumaddress) {
         this.ethereumaddress = ethereumaddress;
         return this;
@@ -30,9 +33,16 @@ public class GetTokenBalance {
     
     @JsonProperty("ok")
     public Boolean ok;
+
     public GetTokenBalance withOk(Boolean ok) {
         this.ok = ok;
         return this;
     }
     
+    public GetTokenBalance(@JsonProperty("balance") Integer balance, @JsonProperty("contractaddress") String contractaddress, @JsonProperty("ethereumaddress") String ethereumaddress, @JsonProperty("ok") Boolean ok) {
+        this.balance = balance;
+        this.contractaddress = contractaddress;
+        this.ethereumaddress = ethereumaddress;
+        this.ok = ok;
+  }
 }

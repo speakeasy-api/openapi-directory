@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PasswordCredentials {
     @JsonProperty("password")
     public String password;
+
     public PasswordCredentials withPassword(String password) {
         this.password = password;
         return this;
@@ -16,9 +17,14 @@ public class PasswordCredentials {
     
     @JsonProperty("username")
     public String username;
+
     public PasswordCredentials withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public PasswordCredentials(@JsonProperty("username") String username, @JsonProperty("password") String password) {
+        this.username = username;
+        this.password = password;
+  }
 }

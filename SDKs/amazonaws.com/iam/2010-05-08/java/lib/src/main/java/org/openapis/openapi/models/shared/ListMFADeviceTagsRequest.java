@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListMFADeviceTagsRequest {
     
     public String marker;
+
     public ListMFADeviceTagsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class ListMFADeviceTagsRequest {
     
     
     public Long maxItems;
+
     public ListMFADeviceTagsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -23,9 +25,13 @@ public class ListMFADeviceTagsRequest {
     
     
     public String serialNumber;
+
     public ListMFADeviceTagsRequest withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
     }
     
+    public ListMFADeviceTagsRequest(@JsonProperty("SerialNumber") String serialNumber) {
+        this.serialNumber = serialNumber;
+  }
 }

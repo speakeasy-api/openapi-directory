@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstancesResult {
     
     public String nextToken;
+
     public DescribeInstancesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstancesResult {
     
     
     public DescribeInstancesResultReservations[] reservations;
+
     public DescribeInstancesResult withReservations(DescribeInstancesResultReservations[] reservations) {
         this.reservations = reservations;
         return this;
     }
     
+    public DescribeInstancesResult(){}
 }

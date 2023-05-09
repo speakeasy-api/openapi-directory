@@ -15,9 +15,11 @@ public class GetPoliciesPolicyId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public org.openapis.openapi.models.shared.Policy policy;
+
     public GetPoliciesPolicyId200ApplicationJSON withPolicy(org.openapis.openapi.models.shared.Policy policy) {
         this.policy = policy;
         return this;
     }
     
+    public GetPoliciesPolicyId200ApplicationJSON(){}
 }

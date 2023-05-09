@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AvailabilityOptionsStatus - The status and configuration of the domain's availability options.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AvailabilityOptionsStatus {
     
     public Boolean options;
+
     public AvailabilityOptionsStatus withOptions(Boolean options) {
         this.options = options;
         return this;
@@ -22,9 +23,14 @@ public class AvailabilityOptionsStatus {
      */
     
     public OptionStatus status;
+
     public AvailabilityOptionsStatus withStatus(OptionStatus status) {
         this.status = status;
         return this;
     }
     
+    public AvailabilityOptionsStatus(@JsonProperty("Options") Boolean options, @JsonProperty("Status") OptionStatus status) {
+        this.options = options;
+        this.status = status;
+  }
 }

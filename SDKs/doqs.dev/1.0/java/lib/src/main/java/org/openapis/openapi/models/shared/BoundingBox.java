@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BoundingBox {
     @JsonProperty("height")
     public Double height;
+
     public BoundingBox withHeight(Double height) {
         this.height = height;
         return this;
@@ -16,6 +17,7 @@ public class BoundingBox {
     
     @JsonProperty("width")
     public Double width;
+
     public BoundingBox withWidth(Double width) {
         this.width = width;
         return this;
@@ -23,6 +25,7 @@ public class BoundingBox {
     
     @JsonProperty("x")
     public Double x;
+
     public BoundingBox withX(Double x) {
         this.x = x;
         return this;
@@ -30,9 +33,16 @@ public class BoundingBox {
     
     @JsonProperty("y")
     public Double y;
+
     public BoundingBox withY(Double y) {
         this.y = y;
         return this;
     }
     
+    public BoundingBox(@JsonProperty("height") Double height, @JsonProperty("width") Double width, @JsonProperty("x") Double x, @JsonProperty("y") Double y) {
+        this.height = height;
+        this.width = width;
+        this.x = x;
+        this.y = y;
+  }
 }

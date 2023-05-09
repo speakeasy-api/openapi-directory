@@ -59,11 +59,9 @@ public class V1beta {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StsTokenResponse res = new org.openapis.openapi.models.operations.StsTokenResponse() {{
+        org.openapis.openapi.models.operations.StsTokenResponse res = new org.openapis.openapi.models.operations.StsTokenResponse(contentType, httpRes.statusCode()) {{
             googleIdentityStsV1betaExchangeTokenResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

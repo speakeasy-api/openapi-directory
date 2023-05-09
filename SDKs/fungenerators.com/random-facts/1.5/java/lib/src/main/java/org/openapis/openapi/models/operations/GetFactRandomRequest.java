@@ -12,6 +12,7 @@ public class GetFactRandomRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public String category;
+
     public GetFactRandomRequest withCategory(String category) {
         this.category = category;
         return this;
@@ -22,9 +23,11 @@ public class GetFactRandomRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subcategory")
     public String subcategory;
+
     public GetFactRandomRequest withSubcategory(String subcategory) {
         this.subcategory = subcategory;
         return this;
     }
     
+    public GetFactRandomRequest(){}
 }

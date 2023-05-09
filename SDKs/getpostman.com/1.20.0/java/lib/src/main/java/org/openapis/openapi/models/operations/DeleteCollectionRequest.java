@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCollectionRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_uid")
     public String collectionUid;
+
     public DeleteCollectionRequest withCollectionUid(String collectionUid) {
         this.collectionUid = collectionUid;
         return this;
     }
     
+    public DeleteCollectionRequest(@JsonProperty("collection_uid") String collectionUid) {
+        this.collectionUid = collectionUid;
+  }
 }

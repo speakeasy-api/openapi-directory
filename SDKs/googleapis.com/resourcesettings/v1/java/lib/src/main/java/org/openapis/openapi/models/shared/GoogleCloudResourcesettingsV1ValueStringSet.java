@@ -18,9 +18,11 @@ public class GoogleCloudResourcesettingsV1ValueStringSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public GoogleCloudResourcesettingsV1ValueStringSet withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public GoogleCloudResourcesettingsV1ValueStringSet(){}
 }

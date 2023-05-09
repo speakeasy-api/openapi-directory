@@ -15,6 +15,7 @@ public class AwsEfsAccessPointRootDirectoryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationInfo")
     public AwsEfsAccessPointRootDirectoryCreationInfoDetails creationInfo;
+
     public AwsEfsAccessPointRootDirectoryDetails withCreationInfo(AwsEfsAccessPointRootDirectoryCreationInfoDetails creationInfo) {
         this.creationInfo = creationInfo;
         return this;
@@ -23,9 +24,11 @@ public class AwsEfsAccessPointRootDirectoryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public AwsEfsAccessPointRootDirectoryDetails withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public AwsEfsAccessPointRootDirectoryDetails(){}
 }

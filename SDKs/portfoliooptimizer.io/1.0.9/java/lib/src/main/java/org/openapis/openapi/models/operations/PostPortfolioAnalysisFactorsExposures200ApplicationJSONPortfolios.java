@@ -12,6 +12,7 @@ public class PostPortfolioAnalysisFactorsExposures200ApplicationJSONPortfolios {
      */
     @JsonProperty("portfolioAlpha")
     public Double portfolioAlpha;
+
     public PostPortfolioAnalysisFactorsExposures200ApplicationJSONPortfolios withPortfolioAlpha(Double portfolioAlpha) {
         this.portfolioAlpha = portfolioAlpha;
         return this;
@@ -22,6 +23,7 @@ public class PostPortfolioAnalysisFactorsExposures200ApplicationJSONPortfolios {
      */
     @JsonProperty("portfolioBetas")
     public Double[] portfolioBetas;
+
     public PostPortfolioAnalysisFactorsExposures200ApplicationJSONPortfolios withPortfolioBetas(Double[] portfolioBetas) {
         this.portfolioBetas = portfolioBetas;
         return this;
@@ -32,9 +34,15 @@ public class PostPortfolioAnalysisFactorsExposures200ApplicationJSONPortfolios {
      */
     @JsonProperty("portfolioRSquared")
     public Double portfolioRSquared;
+
     public PostPortfolioAnalysisFactorsExposures200ApplicationJSONPortfolios withPortfolioRSquared(Double portfolioRSquared) {
         this.portfolioRSquared = portfolioRSquared;
         return this;
     }
     
+    public PostPortfolioAnalysisFactorsExposures200ApplicationJSONPortfolios(@JsonProperty("portfolioAlpha") Double portfolioAlpha, @JsonProperty("portfolioBetas") Double[] portfolioBetas, @JsonProperty("portfolioRSquared") Double portfolioRSquared) {
+        this.portfolioAlpha = portfolioAlpha;
+        this.portfolioBetas = portfolioBetas;
+        this.portfolioRSquared = portfolioRSquared;
+  }
 }

@@ -15,6 +15,7 @@ public class UpdateServiceSettingsRequestBodyLinuxSubscriptionsDiscoverySettings
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationIntegration")
     public org.openapis.openapi.models.shared.OrganizationIntegrationEnum organizationIntegration;
+
     public UpdateServiceSettingsRequestBodyLinuxSubscriptionsDiscoverySettings withOrganizationIntegration(org.openapis.openapi.models.shared.OrganizationIntegrationEnum organizationIntegration) {
         this.organizationIntegration = organizationIntegration;
         return this;
@@ -23,9 +24,11 @@ public class UpdateServiceSettingsRequestBodyLinuxSubscriptionsDiscoverySettings
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceRegions")
     public String[] sourceRegions;
+
     public UpdateServiceSettingsRequestBodyLinuxSubscriptionsDiscoverySettings withSourceRegions(String[] sourceRegions) {
         this.sourceRegions = sourceRegions;
         return this;
     }
     
+    public UpdateServiceSettingsRequestBodyLinuxSubscriptionsDiscoverySettings(){}
 }

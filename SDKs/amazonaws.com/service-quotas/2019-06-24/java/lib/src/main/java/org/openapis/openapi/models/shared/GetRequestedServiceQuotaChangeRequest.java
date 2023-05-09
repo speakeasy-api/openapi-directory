@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetRequestedServiceQuotaChangeRequest {
     @JsonProperty("RequestId")
     public String requestId;
+
     public GetRequestedServiceQuotaChangeRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GetRequestedServiceQuotaChangeRequest(@JsonProperty("RequestId") String requestId) {
+        this.requestId = requestId;
+  }
 }

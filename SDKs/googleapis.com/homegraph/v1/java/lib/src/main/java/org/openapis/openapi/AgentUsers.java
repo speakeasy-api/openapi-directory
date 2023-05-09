@@ -59,11 +59,9 @@ public class AgentUsers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HomegraphAgentUsersDeleteResponse res = new org.openapis.openapi.models.operations.HomegraphAgentUsersDeleteResponse() {{
+        org.openapis.openapi.models.operations.HomegraphAgentUsersDeleteResponse res = new org.openapis.openapi.models.operations.HomegraphAgentUsersDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

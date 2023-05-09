@@ -12,6 +12,7 @@ public class BatchItemBankAccountDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public BankAccountDto item;
+
     public BatchItemBankAccountDto withItem(BankAccountDto item) {
         this.item = item;
         return this;
@@ -25,9 +26,11 @@ public class BatchItemBankAccountDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opCode")
     public BatchItemBankAccountDtoOpCodeEnum opCode;
+
     public BatchItemBankAccountDto withOpCode(BatchItemBankAccountDtoOpCodeEnum opCode) {
         this.opCode = opCode;
         return this;
     }
     
+    public BatchItemBankAccountDto(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETGETServiceLinkedRoleDeletionStatusResponse {
     
     public byte[] body;
+
     public GETGETServiceLinkedRoleDeletionStatusResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETGETServiceLinkedRoleDeletionStatusResponse {
     
     
     public String contentType;
+
     public GETGETServiceLinkedRoleDeletionStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETGETServiceLinkedRoleDeletionStatusResponse {
     
     
     public Integer statusCode;
+
     public GETGETServiceLinkedRoleDeletionStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETGETServiceLinkedRoleDeletionStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETGETServiceLinkedRoleDeletionStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETGETServiceLinkedRoleDeletionStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

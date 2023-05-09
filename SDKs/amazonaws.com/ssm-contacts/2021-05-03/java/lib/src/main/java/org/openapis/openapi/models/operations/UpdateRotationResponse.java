@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRotationResponse {
@@ -12,6 +13,7 @@ public class UpdateRotationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateRotationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateRotationResponse {
      */
     
     public Object conflictException;
+
     public UpdateRotationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRotationResponse {
     
     
     public String contentType;
+
     public UpdateRotationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRotationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateRotationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateRotationResponse {
     
     
     public Integer statusCode;
+
     public UpdateRotationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRotationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRotationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateRotationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateRotationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateRotationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateRotationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateRotationResponse {
      */
     
     public java.util.Map<String, Object> updateRotationResult;
+
     public UpdateRotationResponse withUpdateRotationResult(java.util.Map<String, Object> updateRotationResult) {
         this.updateRotationResult = updateRotationResult;
         return this;
@@ -93,9 +103,14 @@ public class UpdateRotationResponse {
      */
     
     public Object validationException;
+
     public UpdateRotationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateRotationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

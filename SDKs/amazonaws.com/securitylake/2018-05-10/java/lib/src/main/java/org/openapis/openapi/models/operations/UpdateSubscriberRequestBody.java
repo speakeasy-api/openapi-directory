@@ -15,6 +15,7 @@ public class UpdateSubscriberRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public UpdateSubscriberRequestBody withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -25,6 +26,7 @@ public class UpdateSubscriberRequestBody {
      */
     @JsonProperty("sourceTypes")
     public org.openapis.openapi.models.shared.SourceType[] sourceTypes;
+
     public UpdateSubscriberRequestBody withSourceTypes(org.openapis.openapi.models.shared.SourceType[] sourceTypes) {
         this.sourceTypes = sourceTypes;
         return this;
@@ -36,6 +38,7 @@ public class UpdateSubscriberRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriberDescription")
     public String subscriberDescription;
+
     public UpdateSubscriberRequestBody withSubscriberDescription(String subscriberDescription) {
         this.subscriberDescription = subscriberDescription;
         return this;
@@ -47,9 +50,13 @@ public class UpdateSubscriberRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriberName")
     public String subscriberName;
+
     public UpdateSubscriberRequestBody withSubscriberName(String subscriberName) {
         this.subscriberName = subscriberName;
         return this;
     }
     
+    public UpdateSubscriberRequestBody(@JsonProperty("sourceTypes") org.openapis.openapi.models.shared.SourceType[] sourceTypes) {
+        this.sourceTypes = sourceTypes;
+  }
 }

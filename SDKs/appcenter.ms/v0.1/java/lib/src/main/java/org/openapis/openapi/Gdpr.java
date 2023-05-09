@@ -51,13 +51,11 @@ public class Gdpr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataSubjectRightCancelDeleteRequestResponse res = new org.openapis.openapi.models.operations.DataSubjectRightCancelDeleteRequestResponse() {{
+        org.openapis.openapi.models.operations.DataSubjectRightCancelDeleteRequestResponse res = new org.openapis.openapi.models.operations.DataSubjectRightCancelDeleteRequestResponse(contentType, httpRes.statusCode()) {{
             dataSubjectRightCancelDeleteRequest202ApplicationJSONObject = null;
             dataSubjectRightCancelDeleteRequest503ApplicationJSONObject = null;
             dataSubjectRightCancelDeleteRequestDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -102,13 +100,11 @@ public class Gdpr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataSubjectRightCancelExportRequestResponse res = new org.openapis.openapi.models.operations.DataSubjectRightCancelExportRequestResponse() {{
+        org.openapis.openapi.models.operations.DataSubjectRightCancelExportRequestResponse res = new org.openapis.openapi.models.operations.DataSubjectRightCancelExportRequestResponse(contentType, httpRes.statusCode()) {{
             dataSubjectRightCancelExportRequest202ApplicationJSONObject = null;
             dataSubjectRightCancelExportRequest503ApplicationJSONObject = null;
             dataSubjectRightCancelExportRequestDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -138,7 +134,7 @@ public class Gdpr {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DataSubjectRightDeleteRequestResponse dataSubjectRightDeleteRequest() throws Exception {
+    public org.openapis.openapi.models.operations.DataSubjectRightDeleteRequestResponse dataSubjectRightDeleteRequest(org.openapis.openapi.models.operations.DataSubjectRightDeleteRequestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/user/dsr/delete");
         
@@ -147,17 +143,16 @@ public class Gdpr {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataSubjectRightDeleteRequestResponse res = new org.openapis.openapi.models.operations.DataSubjectRightDeleteRequestResponse() {{
+        org.openapis.openapi.models.operations.DataSubjectRightDeleteRequestResponse res = new org.openapis.openapi.models.operations.DataSubjectRightDeleteRequestResponse(contentType, httpRes.statusCode()) {{
             dataSubjectRightDeleteRequest202ApplicationJSONObject = null;
             dataSubjectRightDeleteRequestDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -201,12 +196,10 @@ public class Gdpr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataSubjectRightDeleteStatusRequestResponse res = new org.openapis.openapi.models.operations.DataSubjectRightDeleteStatusRequestResponse() {{
+        org.openapis.openapi.models.operations.DataSubjectRightDeleteStatusRequestResponse res = new org.openapis.openapi.models.operations.DataSubjectRightDeleteStatusRequestResponse(contentType, httpRes.statusCode()) {{
             dataSubjectRightDeleteStatusRequest200ApplicationJSONObject = null;
             dataSubjectRightDeleteStatusRequestDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -227,7 +220,7 @@ public class Gdpr {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DataSubjectRightExportRequestResponse dataSubjectRightExportRequest() throws Exception {
+    public org.openapis.openapi.models.operations.DataSubjectRightExportRequestResponse dataSubjectRightExportRequest(org.openapis.openapi.models.operations.DataSubjectRightExportRequestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/user/dsr/export");
         
@@ -236,17 +229,16 @@ public class Gdpr {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataSubjectRightExportRequestResponse res = new org.openapis.openapi.models.operations.DataSubjectRightExportRequestResponse() {{
+        org.openapis.openapi.models.operations.DataSubjectRightExportRequestResponse res = new org.openapis.openapi.models.operations.DataSubjectRightExportRequestResponse(contentType, httpRes.statusCode()) {{
             dataSubjectRightExportRequest202ApplicationJSONObject = null;
             dataSubjectRightExportRequestDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -284,12 +276,10 @@ public class Gdpr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataSubjectRightExportStatusRequestResponse res = new org.openapis.openapi.models.operations.DataSubjectRightExportStatusRequestResponse() {{
+        org.openapis.openapi.models.operations.DataSubjectRightExportStatusRequestResponse res = new org.openapis.openapi.models.operations.DataSubjectRightExportStatusRequestResponse(contentType, httpRes.statusCode()) {{
             dataSubjectRightExportStatusRequest200ApplicationJSONObject = null;
             dataSubjectRightExportStatusRequestDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,9 +12,13 @@ public class BuildsListToolsetProjects200ApplicationJSONXcode {
      */
     @JsonProperty("xcodeSchemeContainers")
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainers[] xcodeSchemeContainers;
+
     public BuildsListToolsetProjects200ApplicationJSONXcode withXcodeSchemeContainers(BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainers[] xcodeSchemeContainers) {
         this.xcodeSchemeContainers = xcodeSchemeContainers;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONXcode(@JsonProperty("xcodeSchemeContainers") BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainers[] xcodeSchemeContainers) {
+        this.xcodeSchemeContainers = xcodeSchemeContainers;
+  }
 }

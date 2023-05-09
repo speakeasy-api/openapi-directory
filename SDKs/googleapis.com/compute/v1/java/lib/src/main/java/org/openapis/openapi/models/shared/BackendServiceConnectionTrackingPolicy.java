@@ -18,6 +18,7 @@ public class BackendServiceConnectionTrackingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionPersistenceOnUnhealthyBackends")
     public BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackendsEnum connectionPersistenceOnUnhealthyBackends;
+
     public BackendServiceConnectionTrackingPolicy withConnectionPersistenceOnUnhealthyBackends(BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackendsEnum connectionPersistenceOnUnhealthyBackends) {
         this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
         return this;
@@ -29,6 +30,7 @@ public class BackendServiceConnectionTrackingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableStrongAffinity")
     public Boolean enableStrongAffinity;
+
     public BackendServiceConnectionTrackingPolicy withEnableStrongAffinity(Boolean enableStrongAffinity) {
         this.enableStrongAffinity = enableStrongAffinity;
         return this;
@@ -40,6 +42,7 @@ public class BackendServiceConnectionTrackingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleTimeoutSec")
     public Integer idleTimeoutSec;
+
     public BackendServiceConnectionTrackingPolicy withIdleTimeoutSec(Integer idleTimeoutSec) {
         this.idleTimeoutSec = idleTimeoutSec;
         return this;
@@ -51,9 +54,11 @@ public class BackendServiceConnectionTrackingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingMode")
     public BackendServiceConnectionTrackingPolicyTrackingModeEnum trackingMode;
+
     public BackendServiceConnectionTrackingPolicy withTrackingMode(BackendServiceConnectionTrackingPolicyTrackingModeEnum trackingMode) {
         this.trackingMode = trackingMode;
         return this;
     }
     
+    public BackendServiceConnectionTrackingPolicy(){}
 }

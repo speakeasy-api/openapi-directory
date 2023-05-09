@@ -15,6 +15,7 @@ public class KYCCheckSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kycCheckCode")
     public Integer kycCheckCode;
+
     public KYCCheckSummary withKycCheckCode(Integer kycCheckCode) {
         this.kycCheckCode = kycCheckCode;
         return this;
@@ -26,9 +27,11 @@ public class KYCCheckSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kycCheckDescription")
     public String kycCheckDescription;
+
     public KYCCheckSummary withKycCheckDescription(String kycCheckDescription) {
         this.kycCheckDescription = kycCheckDescription;
         return this;
     }
     
+    public KYCCheckSummary(){}
 }

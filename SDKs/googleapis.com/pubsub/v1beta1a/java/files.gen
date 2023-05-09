@@ -126,4 +126,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListTopicsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PublishRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/PublishBatchResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PublishBatchRequest.java
+docs/sdk/README.md
+docs/subscriptions/README.md
+docs/topics/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class GeolayerdataCommon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lang")
     public String lang;
+
     public GeolayerdataCommon withLang(String lang) {
         this.lang = lang;
         return this;
@@ -26,6 +27,7 @@ public class GeolayerdataCommon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previewImageUrl")
     public String previewImageUrl;
+
     public GeolayerdataCommon withPreviewImageUrl(String previewImageUrl) {
         this.previewImageUrl = previewImageUrl;
         return this;
@@ -37,6 +39,7 @@ public class GeolayerdataCommon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public String snippet;
+
     public GeolayerdataCommon withSnippet(String snippet) {
         this.snippet = snippet;
         return this;
@@ -48,6 +51,7 @@ public class GeolayerdataCommon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippetUrl")
     public String snippetUrl;
+
     public GeolayerdataCommon withSnippetUrl(String snippetUrl) {
         this.snippetUrl = snippetUrl;
         return this;
@@ -59,9 +63,11 @@ public class GeolayerdataCommon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GeolayerdataCommon withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GeolayerdataCommon(){}
 }

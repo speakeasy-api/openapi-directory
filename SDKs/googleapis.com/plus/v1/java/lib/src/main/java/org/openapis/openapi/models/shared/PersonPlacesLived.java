@@ -15,6 +15,7 @@ public class PersonPlacesLived {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public Boolean primary;
+
     public PersonPlacesLived withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -26,9 +27,11 @@ public class PersonPlacesLived {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PersonPlacesLived withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PersonPlacesLived(){}
 }

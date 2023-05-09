@@ -15,6 +15,7 @@ public class GetComplianceDetailsByConfigRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceTypes")
     public ComplianceTypeEnum[] complianceTypes;
+
     public GetComplianceDetailsByConfigRuleRequest withComplianceTypes(ComplianceTypeEnum[] complianceTypes) {
         this.complianceTypes = complianceTypes;
         return this;
@@ -22,6 +23,7 @@ public class GetComplianceDetailsByConfigRuleRequest {
     
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public GetComplianceDetailsByConfigRuleRequest withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
@@ -30,6 +32,7 @@ public class GetComplianceDetailsByConfigRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public GetComplianceDetailsByConfigRuleRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -38,9 +41,13 @@ public class GetComplianceDetailsByConfigRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetComplianceDetailsByConfigRuleRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetComplianceDetailsByConfigRuleRequest(@JsonProperty("ConfigRuleName") String configRuleName) {
+        this.configRuleName = configRuleName;
+  }
 }

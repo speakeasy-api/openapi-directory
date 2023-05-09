@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ListVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowCxV3ListVersionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3ListVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public GoogleCloudDialogflowCxV3Version[] versions;
+
     public GoogleCloudDialogflowCxV3ListVersionsResponse withVersions(GoogleCloudDialogflowCxV3Version[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ListVersionsResponse(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RevokeClientVpnIngressRequest {
     
     public String accessGroupId;
+
     public RevokeClientVpnIngressRequest withAccessGroupId(String accessGroupId) {
         this.accessGroupId = accessGroupId;
         return this;
@@ -16,6 +17,7 @@ public class RevokeClientVpnIngressRequest {
     
     
     public String clientVpnEndpointId;
+
     public RevokeClientVpnIngressRequest withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -23,6 +25,7 @@ public class RevokeClientVpnIngressRequest {
     
     
     public Boolean dryRun;
+
     public RevokeClientVpnIngressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class RevokeClientVpnIngressRequest {
     
     
     public Boolean revokeAllGroups;
+
     public RevokeClientVpnIngressRequest withRevokeAllGroups(Boolean revokeAllGroups) {
         this.revokeAllGroups = revokeAllGroups;
         return this;
@@ -37,9 +41,14 @@ public class RevokeClientVpnIngressRequest {
     
     
     public String targetNetworkCidr;
+
     public RevokeClientVpnIngressRequest withTargetNetworkCidr(String targetNetworkCidr) {
         this.targetNetworkCidr = targetNetworkCidr;
         return this;
     }
     
+    public RevokeClientVpnIngressRequest(@JsonProperty("ClientVpnEndpointId") String clientVpnEndpointId, @JsonProperty("TargetNetworkCidr") String targetNetworkCidr) {
+        this.clientVpnEndpointId = clientVpnEndpointId;
+        this.targetNetworkCidr = targetNetworkCidr;
+  }
 }

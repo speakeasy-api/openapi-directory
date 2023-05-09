@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUpdateHolidayCreateUpdateHolidayRequest {
     @JsonProperty("name")
     public String name;
+
     public CreateUpdateHolidayCreateUpdateHolidayRequest withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class CreateUpdateHolidayCreateUpdateHolidayRequest {
     
     @JsonProperty("startDate")
     public String startDate;
+
     public CreateUpdateHolidayCreateUpdateHolidayRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public CreateUpdateHolidayCreateUpdateHolidayRequest(@JsonProperty("name") String name, @JsonProperty("startDate") String startDate) {
+        this.name = name;
+        this.startDate = startDate;
+  }
 }

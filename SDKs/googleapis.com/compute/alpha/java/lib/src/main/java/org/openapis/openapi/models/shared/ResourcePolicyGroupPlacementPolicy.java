@@ -18,6 +18,7 @@ public class ResourcePolicyGroupPlacementPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityDomainCount")
     public Integer availabilityDomainCount;
+
     public ResourcePolicyGroupPlacementPolicy withAvailabilityDomainCount(Integer availabilityDomainCount) {
         this.availabilityDomainCount = availabilityDomainCount;
         return this;
@@ -29,6 +30,7 @@ public class ResourcePolicyGroupPlacementPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collocation")
     public ResourcePolicyGroupPlacementPolicyCollocationEnum collocation;
+
     public ResourcePolicyGroupPlacementPolicy withCollocation(ResourcePolicyGroupPlacementPolicyCollocationEnum collocation) {
         this.collocation = collocation;
         return this;
@@ -40,6 +42,7 @@ public class ResourcePolicyGroupPlacementPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locality")
     public ResourcePolicyGroupPlacementPolicyLocalityEnum locality;
+
     public ResourcePolicyGroupPlacementPolicy withLocality(ResourcePolicyGroupPlacementPolicyLocalityEnum locality) {
         this.locality = locality;
         return this;
@@ -51,6 +54,7 @@ public class ResourcePolicyGroupPlacementPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDistance")
     public Integer maxDistance;
+
     public ResourcePolicyGroupPlacementPolicy withMaxDistance(Integer maxDistance) {
         this.maxDistance = maxDistance;
         return this;
@@ -62,6 +66,7 @@ public class ResourcePolicyGroupPlacementPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public ResourcePolicyGroupPlacementPolicyScopeEnum scope;
+
     public ResourcePolicyGroupPlacementPolicy withScope(ResourcePolicyGroupPlacementPolicyScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -73,6 +78,7 @@ public class ResourcePolicyGroupPlacementPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("style")
     public ResourcePolicyGroupPlacementPolicyStyleEnum style;
+
     public ResourcePolicyGroupPlacementPolicy withStyle(ResourcePolicyGroupPlacementPolicyStyleEnum style) {
         this.style = style;
         return this;
@@ -84,6 +90,7 @@ public class ResourcePolicyGroupPlacementPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tpuTopology")
     public String tpuTopology;
+
     public ResourcePolicyGroupPlacementPolicy withTpuTopology(String tpuTopology) {
         this.tpuTopology = tpuTopology;
         return this;
@@ -95,9 +102,11 @@ public class ResourcePolicyGroupPlacementPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmCount")
     public Integer vmCount;
+
     public ResourcePolicyGroupPlacementPolicy withVmCount(Integer vmCount) {
         this.vmCount = vmCount;
         return this;
     }
     
+    public ResourcePolicyGroupPlacementPolicy(){}
 }

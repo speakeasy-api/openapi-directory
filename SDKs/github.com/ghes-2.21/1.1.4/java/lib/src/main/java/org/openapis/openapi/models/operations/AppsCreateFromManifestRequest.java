@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsCreateFromManifestRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public AppsCreateFromManifestRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class AppsCreateFromManifestRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=code")
     public String code;
+
     public AppsCreateFromManifestRequest withCode(String code) {
         this.code = code;
         return this;
     }
     
+    public AppsCreateFromManifestRequest(@JsonProperty("code") String code) {
+        this.code = code;
+  }
 }

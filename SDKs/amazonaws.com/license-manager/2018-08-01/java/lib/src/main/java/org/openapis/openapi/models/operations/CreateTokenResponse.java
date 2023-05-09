@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTokenResponse {
@@ -12,6 +13,7 @@ public class CreateTokenResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateTokenResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateTokenResponse {
      */
     
     public Object authorizationException;
+
     public CreateTokenResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class CreateTokenResponse {
     
     
     public String contentType;
+
     public CreateTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTokenResponse createTokenResponse;
+
     public CreateTokenResponse withCreateTokenResponse(org.openapis.openapi.models.shared.CreateTokenResponse createTokenResponse) {
         this.createTokenResponse = createTokenResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateTokenResponse {
      */
     
     public Object rateLimitExceededException;
+
     public CreateTokenResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateTokenResponse {
      */
     
     public Object redirectException;
+
     public CreateTokenResponse withRedirectException(Object redirectException) {
         this.redirectException = redirectException;
         return this;
@@ -69,6 +76,7 @@ public class CreateTokenResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateTokenResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateTokenResponse {
     
     
     public Integer statusCode;
+
     public CreateTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateTokenResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateTokenResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -103,6 +114,7 @@ public class CreateTokenResponse {
      */
     
     public Object serverInternalException;
+
     public CreateTokenResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -113,9 +125,14 @@ public class CreateTokenResponse {
      */
     
     public Object validationException;
+
     public CreateTokenResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

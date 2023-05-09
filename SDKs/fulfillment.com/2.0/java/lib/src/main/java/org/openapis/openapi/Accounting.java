@@ -59,11 +59,9 @@ public class Accounting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountingResponse res = new org.openapis.openapi.models.operations.GetAccountingResponse() {{
+        org.openapis.openapi.models.operations.GetAccountingResponse res = new org.openapis.openapi.models.operations.GetAccountingResponse(contentType, httpRes.statusCode()) {{
             accountingArrayV2 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

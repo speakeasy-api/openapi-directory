@@ -21,6 +21,7 @@ public class CalculateLoyaltyPointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public String orderId;
+
     public CalculateLoyaltyPointsRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -37,9 +38,11 @@ public class CalculateLoyaltyPointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_amount_money")
     public Money transactionAmountMoney;
+
     public CalculateLoyaltyPointsRequest withTransactionAmountMoney(Money transactionAmountMoney) {
         this.transactionAmountMoney = transactionAmountMoney;
         return this;
     }
     
+    public CalculateLoyaltyPointsRequest(){}
 }

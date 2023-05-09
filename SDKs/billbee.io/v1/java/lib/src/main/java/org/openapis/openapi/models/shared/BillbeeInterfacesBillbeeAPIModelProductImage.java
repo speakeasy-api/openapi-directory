@@ -15,6 +15,7 @@ public class BillbeeInterfacesBillbeeAPIModelProductImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalId")
     public String externalId;
+
     public BillbeeInterfacesBillbeeAPIModelProductImage withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -26,6 +27,7 @@ public class BillbeeInterfacesBillbeeAPIModelProductImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsDefaultImage")
     public Boolean isDefaultImage;
+
     public BillbeeInterfacesBillbeeAPIModelProductImage withIsDefaultImage(Boolean isDefaultImage) {
         this.isDefaultImage = isDefaultImage;
         return this;
@@ -37,6 +39,7 @@ public class BillbeeInterfacesBillbeeAPIModelProductImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public Integer position;
+
     public BillbeeInterfacesBillbeeAPIModelProductImage withPosition(Integer position) {
         this.position = position;
         return this;
@@ -48,9 +51,11 @@ public class BillbeeInterfacesBillbeeAPIModelProductImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public BillbeeInterfacesBillbeeAPIModelProductImage withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelProductImage(){}
 }

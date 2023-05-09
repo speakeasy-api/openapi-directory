@@ -17,6 +17,7 @@ public class OrganisationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
     public OrganisationAddressInput[] addresses;
+
     public OrganisationInput withAddresses(OrganisationAddressInput[] addresses) {
         this.addresses = addresses;
         return this;
@@ -25,6 +26,7 @@ public class OrganisationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electronicAddresses")
     public ElectronicAddressInput[] electronicAddresses;
+
     public OrganisationInput withElectronicAddresses(ElectronicAddressInput[] electronicAddresses) {
         this.electronicAddresses = electronicAddresses;
         return this;
@@ -36,6 +38,7 @@ public class OrganisationInput {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("establishmentDate")
     public LocalDate establishmentDate;
+
     public OrganisationInput withEstablishmentDate(LocalDate establishmentDate) {
         this.establishmentDate = establishmentDate;
         return this;
@@ -46,6 +49,7 @@ public class OrganisationInput {
      */
     @JsonProperty("legalEntityType")
     public OrganisationLegalEntityTypeEnum legalEntityType;
+
     public OrganisationInput withLegalEntityType(OrganisationLegalEntityTypeEnum legalEntityType) {
         this.legalEntityType = legalEntityType;
         return this;
@@ -54,6 +58,7 @@ public class OrganisationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public OrganisationNameInput[] names;
+
     public OrganisationInput withNames(OrganisationNameInput[] names) {
         this.names = names;
         return this;
@@ -62,9 +67,14 @@ public class OrganisationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registeredIdentifiers")
     public RegisteredIdentifierInput[] registeredIdentifiers;
+
     public OrganisationInput withRegisteredIdentifiers(RegisteredIdentifierInput[] registeredIdentifiers) {
         this.registeredIdentifiers = registeredIdentifiers;
         return this;
     }
     
+    public OrganisationInput(@JsonProperty("establishmentDate") LocalDate establishmentDate, @JsonProperty("legalEntityType") OrganisationLegalEntityTypeEnum legalEntityType) {
+        this.establishmentDate = establishmentDate;
+        this.legalEntityType = legalEntityType;
+  }
 }

@@ -18,6 +18,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBodyPaymentsMethods {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateOrUpdateCalculatorConfigurationRequestBodyPaymentsMethods withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class CreateOrUpdateCalculatorConfigurationRequestBodyPaymentsMethods {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateOrUpdateCalculatorConfigurationRequestBodyPaymentsMethods withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateOrUpdateCalculatorConfigurationRequestBodyPaymentsMethods(){}
 }

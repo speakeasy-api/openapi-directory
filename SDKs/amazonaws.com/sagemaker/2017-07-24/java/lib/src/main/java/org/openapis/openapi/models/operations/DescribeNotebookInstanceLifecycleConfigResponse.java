@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeNotebookInstanceLifecycleConfigResponse {
     
     public String contentType;
+
     public DescribeNotebookInstanceLifecycleConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeNotebookInstanceLifecycleConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeNotebookInstanceLifecycleConfigOutput describeNotebookInstanceLifecycleConfigOutput;
+
     public DescribeNotebookInstanceLifecycleConfigResponse withDescribeNotebookInstanceLifecycleConfigOutput(org.openapis.openapi.models.shared.DescribeNotebookInstanceLifecycleConfigOutput describeNotebookInstanceLifecycleConfigOutput) {
         this.describeNotebookInstanceLifecycleConfigOutput = describeNotebookInstanceLifecycleConfigOutput;
         return this;
@@ -26,6 +29,7 @@ public class DescribeNotebookInstanceLifecycleConfigResponse {
     
     
     public Integer statusCode;
+
     public DescribeNotebookInstanceLifecycleConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DescribeNotebookInstanceLifecycleConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeNotebookInstanceLifecycleConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeNotebookInstanceLifecycleConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

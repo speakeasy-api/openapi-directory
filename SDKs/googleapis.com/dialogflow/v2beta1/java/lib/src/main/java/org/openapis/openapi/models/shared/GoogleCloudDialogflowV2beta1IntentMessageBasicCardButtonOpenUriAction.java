@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriAction withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriAction(){}
 }

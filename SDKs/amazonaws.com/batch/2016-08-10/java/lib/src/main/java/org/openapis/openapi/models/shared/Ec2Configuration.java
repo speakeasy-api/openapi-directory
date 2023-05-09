@@ -15,6 +15,7 @@ public class Ec2Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageIdOverride")
     public String imageIdOverride;
+
     public Ec2Configuration withImageIdOverride(String imageIdOverride) {
         this.imageIdOverride = imageIdOverride;
         return this;
@@ -23,6 +24,7 @@ public class Ec2Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageKubernetesVersion")
     public String imageKubernetesVersion;
+
     public Ec2Configuration withImageKubernetesVersion(String imageKubernetesVersion) {
         this.imageKubernetesVersion = imageKubernetesVersion;
         return this;
@@ -30,9 +32,13 @@ public class Ec2Configuration {
     
     @JsonProperty("imageType")
     public String imageType;
+
     public Ec2Configuration withImageType(String imageType) {
         this.imageType = imageType;
         return this;
     }
     
+    public Ec2Configuration(@JsonProperty("imageType") String imageType) {
+        this.imageType = imageType;
+  }
 }

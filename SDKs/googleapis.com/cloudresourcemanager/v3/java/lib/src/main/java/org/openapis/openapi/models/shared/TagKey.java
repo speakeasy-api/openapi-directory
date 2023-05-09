@@ -18,6 +18,7 @@ public class TagKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public TagKey withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class TagKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TagKey withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class TagKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public TagKey withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class TagKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TagKey withName(String name) {
         this.name = name;
         return this;
@@ -62,17 +66,19 @@ public class TagKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespacedName")
     public String namespacedName;
+
     public TagKey withNamespacedName(String namespacedName) {
         this.namespacedName = namespacedName;
         return this;
     }
     
     /**
-     * Immutable. The resource name of the new TagKey's parent. Must be of the form `organizations/{org_id}`.
+     * Immutable. The resource name of the TagKey's parent. A TagKey can be parented by an Organization or a Project. For a TagKey parented by an Organization, its parent must be in the form `organizations/{org_id}`. For a TagKey parented by a Project, its parent can be in the form `projects/{project_id}` or `projects/{project_number}`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public TagKey withParent(String parent) {
         this.parent = parent;
         return this;
@@ -84,6 +90,7 @@ public class TagKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purpose")
     public TagKeyPurposeEnum purpose;
+
     public TagKey withPurpose(TagKeyPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
@@ -95,6 +102,7 @@ public class TagKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purposeData")
     public java.util.Map<String, String> purposeData;
+
     public TagKey withPurposeData(java.util.Map<String, String> purposeData) {
         this.purposeData = purposeData;
         return this;
@@ -106,6 +114,7 @@ public class TagKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortName")
     public String shortName;
+
     public TagKey withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -117,9 +126,11 @@ public class TagKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public TagKey withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public TagKey(){}
 }

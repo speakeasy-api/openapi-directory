@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaSearchRequestBoostSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditionBoostSpecs")
     public GoogleCloudRetailV2alphaSearchRequestBoostSpecConditionBoostSpec[] conditionBoostSpecs;
+
     public GoogleCloudRetailV2alphaSearchRequestBoostSpec withConditionBoostSpecs(GoogleCloudRetailV2alphaSearchRequestBoostSpecConditionBoostSpec[] conditionBoostSpecs) {
         this.conditionBoostSpecs = conditionBoostSpecs;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2alphaSearchRequestBoostSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipBoostSpecValidation")
     public Boolean skipBoostSpecValidation;
+
     public GoogleCloudRetailV2alphaSearchRequestBoostSpec withSkipBoostSpecValidation(Boolean skipBoostSpecValidation) {
         this.skipBoostSpecValidation = skipBoostSpecValidation;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaSearchRequestBoostSpec(){}
 }

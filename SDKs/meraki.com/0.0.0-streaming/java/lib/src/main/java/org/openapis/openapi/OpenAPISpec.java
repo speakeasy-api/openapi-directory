@@ -52,11 +52,9 @@ public class OpenAPISpec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationOpenapiSpecResponse res = new org.openapis.openapi.models.operations.GetOrganizationOpenapiSpecResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationOpenapiSpecResponse res = new org.openapis.openapi.models.operations.GetOrganizationOpenapiSpecResponse(contentType, httpRes.statusCode()) {{
             getOrganizationOpenapiSpec200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

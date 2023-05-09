@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIsochroneRequest {
@@ -12,6 +13,7 @@ public class GetIsochroneRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=buckets")
     public Integer buckets;
+
     public GetIsochroneRequest withBuckets(Integer buckets) {
         this.buckets = buckets;
         return this;
@@ -22,6 +24,7 @@ public class GetIsochroneRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distance_limit")
     public Integer distanceLimit;
+
     public GetIsochroneRequest withDistanceLimit(Integer distanceLimit) {
         this.distanceLimit = distanceLimit;
         return this;
@@ -32,6 +35,7 @@ public class GetIsochroneRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=point")
     public String point;
+
     public GetIsochroneRequest withPoint(String point) {
         this.point = point;
         return this;
@@ -44,6 +48,7 @@ public class GetIsochroneRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reverse_flow")
     public Boolean reverseFlow;
+
     public GetIsochroneRequest withReverseFlow(Boolean reverseFlow) {
         this.reverseFlow = reverseFlow;
         return this;
@@ -54,6 +59,7 @@ public class GetIsochroneRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time_limit")
     public Integer timeLimit;
+
     public GetIsochroneRequest withTimeLimit(Integer timeLimit) {
         this.timeLimit = timeLimit;
         return this;
@@ -65,6 +71,7 @@ public class GetIsochroneRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicle")
     public org.openapis.openapi.models.shared.VehicleProfileIdEnum vehicle;
+
     public GetIsochroneRequest withVehicle(org.openapis.openapi.models.shared.VehicleProfileIdEnum vehicle) {
         this.vehicle = vehicle;
         return this;
@@ -75,9 +82,13 @@ public class GetIsochroneRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=weighting")
     public GetIsochroneWeightingEnum weighting;
+
     public GetIsochroneRequest withWeighting(GetIsochroneWeightingEnum weighting) {
         this.weighting = weighting;
         return this;
     }
     
+    public GetIsochroneRequest(@JsonProperty("point") String point) {
+        this.point = point;
+  }
 }

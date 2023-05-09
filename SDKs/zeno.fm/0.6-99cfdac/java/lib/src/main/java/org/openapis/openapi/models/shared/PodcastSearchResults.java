@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PodcastSearchResults {
     
     public Podcast[] hits;
+
     public PodcastSearchResults withHits(Podcast[] hits) {
         this.hits = hits;
         return this;
@@ -19,9 +20,11 @@ public class PodcastSearchResults {
     
     
     public Long total;
+
     public PodcastSearchResults withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public PodcastSearchResults(){}
 }

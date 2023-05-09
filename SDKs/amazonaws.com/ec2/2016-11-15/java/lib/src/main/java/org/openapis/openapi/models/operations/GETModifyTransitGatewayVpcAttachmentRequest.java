@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyTransitGatewayVpcAttachmentRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyTransitGatewayVpcAttachmentActionEnum action;
+
     public GETModifyTransitGatewayVpcAttachmentRequest withAction(GETModifyTransitGatewayVpcAttachmentActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyTransitGatewayVpcAttachmentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddSubnetIds")
     public String[] addSubnetIds;
+
     public GETModifyTransitGatewayVpcAttachmentRequest withAddSubnetIds(String[] addSubnetIds) {
         this.addSubnetIds = addSubnetIds;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyTransitGatewayVpcAttachmentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyTransitGatewayVpcAttachmentRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyTransitGatewayVpcAttachmentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Options")
     public GETModifyTransitGatewayVpcAttachmentOptions options;
+
     public GETModifyTransitGatewayVpcAttachmentRequest withOptions(GETModifyTransitGatewayVpcAttachmentOptions options) {
         this.options = options;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyTransitGatewayVpcAttachmentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveSubnetIds")
     public String[] removeSubnetIds;
+
     public GETModifyTransitGatewayVpcAttachmentRequest withRemoveSubnetIds(String[] removeSubnetIds) {
         this.removeSubnetIds = removeSubnetIds;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyTransitGatewayVpcAttachmentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayAttachmentId")
     public String transitGatewayAttachmentId;
+
     public GETModifyTransitGatewayVpcAttachmentRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -66,6 +73,7 @@ public class GETModifyTransitGatewayVpcAttachmentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyTransitGatewayVpcAttachmentVersionEnum version;
+
     public GETModifyTransitGatewayVpcAttachmentRequest withVersion(GETModifyTransitGatewayVpcAttachmentVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETModifyTransitGatewayVpcAttachmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyTransitGatewayVpcAttachmentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETModifyTransitGatewayVpcAttachmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyTransitGatewayVpcAttachmentRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETModifyTransitGatewayVpcAttachmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyTransitGatewayVpcAttachmentRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETModifyTransitGatewayVpcAttachmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyTransitGatewayVpcAttachmentRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETModifyTransitGatewayVpcAttachmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyTransitGatewayVpcAttachmentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETModifyTransitGatewayVpcAttachmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyTransitGatewayVpcAttachmentRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,15 @@ public class GETModifyTransitGatewayVpcAttachmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyTransitGatewayVpcAttachmentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyTransitGatewayVpcAttachmentRequest(@JsonProperty("Action") GETModifyTransitGatewayVpcAttachmentActionEnum action, @JsonProperty("TransitGatewayAttachmentId") String transitGatewayAttachmentId, @JsonProperty("Version") GETModifyTransitGatewayVpcAttachmentVersionEnum version) {
+        this.action = action;
+        this.transitGatewayAttachmentId = transitGatewayAttachmentId;
+        this.version = version;
+  }
 }

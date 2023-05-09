@@ -12,6 +12,7 @@ public class AvailabilityViewModel2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fri")
     public WeekDayViewModel2 fri;
+
     public AvailabilityViewModel2 withFri(WeekDayViewModel2 fri) {
         this.fri = fri;
         return this;
@@ -20,6 +21,7 @@ public class AvailabilityViewModel2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mon")
     public WeekDayViewModel2 mon;
+
     public AvailabilityViewModel2 withMon(WeekDayViewModel2 mon) {
         this.mon = mon;
         return this;
@@ -28,6 +30,7 @@ public class AvailabilityViewModel2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sat")
     public WeekDayViewModel2 sat;
+
     public AvailabilityViewModel2 withSat(WeekDayViewModel2 sat) {
         this.sat = sat;
         return this;
@@ -36,6 +39,7 @@ public class AvailabilityViewModel2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sun")
     public WeekDayViewModel2 sun;
+
     public AvailabilityViewModel2 withSun(WeekDayViewModel2 sun) {
         this.sun = sun;
         return this;
@@ -44,6 +48,7 @@ public class AvailabilityViewModel2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thu")
     public WeekDayViewModel2 thu;
+
     public AvailabilityViewModel2 withThu(WeekDayViewModel2 thu) {
         this.thu = thu;
         return this;
@@ -52,6 +57,7 @@ public class AvailabilityViewModel2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tue")
     public WeekDayViewModel2 tue;
+
     public AvailabilityViewModel2 withTue(WeekDayViewModel2 tue) {
         this.tue = tue;
         return this;
@@ -60,9 +66,11 @@ public class AvailabilityViewModel2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wed")
     public WeekDayViewModel2 wed;
+
     public AvailabilityViewModel2 withWed(WeekDayViewModel2 wed) {
         this.wed = wed;
         return this;
     }
     
+    public AvailabilityViewModel2(){}
 }

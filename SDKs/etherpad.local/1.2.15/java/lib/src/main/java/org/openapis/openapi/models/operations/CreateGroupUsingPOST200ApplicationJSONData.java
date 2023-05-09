@@ -12,9 +12,11 @@ public class CreateGroupUsingPOST200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupID")
     public String groupID;
+
     public CreateGroupUsingPOST200ApplicationJSONData withGroupID(String groupID) {
         this.groupID = groupID;
         return this;
     }
     
+    public CreateGroupUsingPOST200ApplicationJSONData(){}
 }

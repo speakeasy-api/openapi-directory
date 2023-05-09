@@ -65,15 +65,13 @@ public class FraudManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NetworkUnblockResponse res = new org.openapis.openapi.models.operations.NetworkUnblockResponse() {{
+        org.openapis.openapi.models.operations.NetworkUnblockResponse res = new org.openapis.openapi.models.operations.NetworkUnblockResponse(contentType, httpRes.statusCode()) {{
             networkUnblockResponseOk = null;
             networkUnblockResponseForbidden = null;
             networkUnblockResponseNotFound = null;
             networkUnblock422ApplicationJSONOneOf = null;
             errorThrottled = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

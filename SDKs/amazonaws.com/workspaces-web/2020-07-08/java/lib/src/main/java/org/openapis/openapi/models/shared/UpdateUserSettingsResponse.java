@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateUserSettingsResponse {
     @JsonProperty("userSettings")
     public UserSettings userSettings;
+
     public UpdateUserSettingsResponse withUserSettings(UserSettings userSettings) {
         this.userSettings = userSettings;
         return this;
     }
     
+    public UpdateUserSettingsResponse(@JsonProperty("userSettings") UserSettings userSettings) {
+        this.userSettings = userSettings;
+  }
 }

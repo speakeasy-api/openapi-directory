@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribePrefixListsResultPrefixLists {
     
     public String[] cidrs;
+
     public DescribePrefixListsResultPrefixLists withCidrs(String[] cidrs) {
         this.cidrs = cidrs;
         return this;
@@ -19,6 +20,7 @@ public class DescribePrefixListsResultPrefixLists {
     
     
     public String prefixListId;
+
     public DescribePrefixListsResultPrefixLists withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -26,9 +28,11 @@ public class DescribePrefixListsResultPrefixLists {
     
     
     public String prefixListName;
+
     public DescribePrefixListsResultPrefixLists withPrefixListName(String prefixListName) {
         this.prefixListName = prefixListName;
         return this;
     }
     
+    public DescribePrefixListsResultPrefixLists(){}
 }

@@ -20,6 +20,7 @@ public class CustomKeyStoresListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudHsmClusterId")
     public String cloudHsmClusterId;
+
     public CustomKeyStoresListEntry withCloudHsmClusterId(String cloudHsmClusterId) {
         this.cloudHsmClusterId = cloudHsmClusterId;
         return this;
@@ -28,6 +29,7 @@ public class CustomKeyStoresListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionErrorCode")
     public ConnectionErrorCodeTypeEnum connectionErrorCode;
+
     public CustomKeyStoresListEntry withConnectionErrorCode(ConnectionErrorCodeTypeEnum connectionErrorCode) {
         this.connectionErrorCode = connectionErrorCode;
         return this;
@@ -36,6 +38,7 @@ public class CustomKeyStoresListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionState")
     public ConnectionStateTypeEnum connectionState;
+
     public CustomKeyStoresListEntry withConnectionState(ConnectionStateTypeEnum connectionState) {
         this.connectionState = connectionState;
         return this;
@@ -46,6 +49,7 @@ public class CustomKeyStoresListEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public CustomKeyStoresListEntry withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -54,6 +58,7 @@ public class CustomKeyStoresListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomKeyStoreId")
     public String customKeyStoreId;
+
     public CustomKeyStoresListEntry withCustomKeyStoreId(String customKeyStoreId) {
         this.customKeyStoreId = customKeyStoreId;
         return this;
@@ -62,6 +67,7 @@ public class CustomKeyStoresListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomKeyStoreName")
     public String customKeyStoreName;
+
     public CustomKeyStoresListEntry withCustomKeyStoreName(String customKeyStoreName) {
         this.customKeyStoreName = customKeyStoreName;
         return this;
@@ -70,6 +76,7 @@ public class CustomKeyStoresListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomKeyStoreType")
     public CustomKeyStoreTypeEnum customKeyStoreType;
+
     public CustomKeyStoresListEntry withCustomKeyStoreType(CustomKeyStoreTypeEnum customKeyStoreType) {
         this.customKeyStoreType = customKeyStoreType;
         return this;
@@ -78,6 +85,7 @@ public class CustomKeyStoresListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrustAnchorCertificate")
     public String trustAnchorCertificate;
+
     public CustomKeyStoresListEntry withTrustAnchorCertificate(String trustAnchorCertificate) {
         this.trustAnchorCertificate = trustAnchorCertificate;
         return this;
@@ -86,9 +94,11 @@ public class CustomKeyStoresListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XksProxyConfiguration")
     public XksProxyConfigurationType xksProxyConfiguration;
+
     public CustomKeyStoresListEntry withXksProxyConfiguration(XksProxyConfigurationType xksProxyConfiguration) {
         this.xksProxyConfiguration = xksProxyConfiguration;
         return this;
     }
     
+    public CustomKeyStoresListEntry(){}
 }

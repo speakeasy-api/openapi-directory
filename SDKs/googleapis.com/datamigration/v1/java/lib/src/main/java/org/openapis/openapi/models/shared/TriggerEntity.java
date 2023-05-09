@@ -18,6 +18,7 @@ public class TriggerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFeatures")
     public java.util.Map<String, Object> customFeatures;
+
     public TriggerEntity withCustomFeatures(java.util.Map<String, Object> customFeatures) {
         this.customFeatures = customFeatures;
         return this;
@@ -29,6 +30,7 @@ public class TriggerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TriggerEntity withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class TriggerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlCode")
     public String sqlCode;
+
     public TriggerEntity withSqlCode(String sqlCode) {
         this.sqlCode = sqlCode;
         return this;
@@ -51,6 +54,7 @@ public class TriggerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerType")
     public String triggerType;
+
     public TriggerEntity withTriggerType(String triggerType) {
         this.triggerType = triggerType;
         return this;
@@ -62,9 +66,11 @@ public class TriggerEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggeringEvents")
     public String[] triggeringEvents;
+
     public TriggerEntity withTriggeringEvents(String[] triggeringEvents) {
         this.triggeringEvents = triggeringEvents;
         return this;
     }
     
+    public TriggerEntity(){}
 }

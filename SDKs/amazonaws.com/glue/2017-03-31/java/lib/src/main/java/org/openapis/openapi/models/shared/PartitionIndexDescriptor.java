@@ -15,6 +15,7 @@ public class PartitionIndexDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackfillErrors")
     public BackfillError[] backfillErrors;
+
     public PartitionIndexDescriptor withBackfillErrors(BackfillError[] backfillErrors) {
         this.backfillErrors = backfillErrors;
         return this;
@@ -22,6 +23,7 @@ public class PartitionIndexDescriptor {
     
     @JsonProperty("IndexName")
     public String indexName;
+
     public PartitionIndexDescriptor withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -29,6 +31,7 @@ public class PartitionIndexDescriptor {
     
     @JsonProperty("IndexStatus")
     public PartitionIndexStatusEnum indexStatus;
+
     public PartitionIndexDescriptor withIndexStatus(PartitionIndexStatusEnum indexStatus) {
         this.indexStatus = indexStatus;
         return this;
@@ -36,9 +39,15 @@ public class PartitionIndexDescriptor {
     
     @JsonProperty("Keys")
     public KeySchemaElement[] keys;
+
     public PartitionIndexDescriptor withKeys(KeySchemaElement[] keys) {
         this.keys = keys;
         return this;
     }
     
+    public PartitionIndexDescriptor(@JsonProperty("IndexName") String indexName, @JsonProperty("IndexStatus") PartitionIndexStatusEnum indexStatus, @JsonProperty("Keys") KeySchemaElement[] keys) {
+        this.indexName = indexName;
+        this.indexStatus = indexStatus;
+        this.keys = keys;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2Catalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudRetailV2Catalog withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2Catalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRetailV2Catalog withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2Catalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productLevelConfig")
     public GoogleCloudRetailV2ProductLevelConfig productLevelConfig;
+
     public GoogleCloudRetailV2Catalog withProductLevelConfig(GoogleCloudRetailV2ProductLevelConfig productLevelConfig) {
         this.productLevelConfig = productLevelConfig;
         return this;
     }
     
+    public GoogleCloudRetailV2Catalog(){}
 }

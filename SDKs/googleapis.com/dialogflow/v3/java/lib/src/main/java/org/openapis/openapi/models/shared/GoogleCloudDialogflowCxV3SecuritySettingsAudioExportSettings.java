@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioExportPattern")
     public String audioExportPattern;
+
     public GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings withAudioExportPattern(String audioExportPattern) {
         this.audioExportPattern = audioExportPattern;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioFormat")
     public GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettingsAudioFormatEnum audioFormat;
+
     public GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings withAudioFormat(GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettingsAudioFormatEnum audioFormat) {
         this.audioFormat = audioFormat;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAudioRedaction")
     public Boolean enableAudioRedaction;
+
     public GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings withEnableAudioRedaction(Boolean enableAudioRedaction) {
         this.enableAudioRedaction = enableAudioRedaction;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsBucket")
     public String gcsBucket;
+
     public GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings withGcsBucket(String gcsBucket) {
         this.gcsBucket = gcsBucket;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFlowTemplateResponse {
     
     public String contentType;
+
     public CreateFlowTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateFlowTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFlowTemplateResponse createFlowTemplateResponse;
+
     public CreateFlowTemplateResponse withCreateFlowTemplateResponse(org.openapis.openapi.models.shared.CreateFlowTemplateResponse createFlowTemplateResponse) {
         this.createFlowTemplateResponse = createFlowTemplateResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateFlowTemplateResponse {
      */
     
     public Object internalFailureException;
+
     public CreateFlowTemplateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateFlowTemplateResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateFlowTemplateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateFlowTemplateResponse {
      */
     
     public Object limitExceededException;
+
     public CreateFlowTemplateResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateFlowTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateFlowTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateFlowTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFlowTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateFlowTemplateResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateFlowTemplateResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,9 +92,14 @@ public class CreateFlowTemplateResponse {
      */
     
     public Object throttlingException;
+
     public CreateFlowTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateFlowTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

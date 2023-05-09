@@ -15,6 +15,7 @@ public class DescribeLoggingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallArn")
     public String firewallArn;
+
     public DescribeLoggingConfigurationResponse withFirewallArn(String firewallArn) {
         this.firewallArn = firewallArn;
         return this;
@@ -26,9 +27,11 @@ public class DescribeLoggingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggingConfiguration")
     public LoggingConfiguration loggingConfiguration;
+
     public DescribeLoggingConfigurationResponse withLoggingConfiguration(LoggingConfiguration loggingConfiguration) {
         this.loggingConfiguration = loggingConfiguration;
         return this;
     }
     
+    public DescribeLoggingConfigurationResponse(){}
 }

@@ -15,9 +15,11 @@ public class AadharNumberRequestPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aadhaar")
     public String aadhaar;
+
     public AadharNumberRequestPayload withAadhaar(String aadhaar) {
         this.aadhaar = aadhaar;
         return this;
     }
     
+    public AadharNumberRequestPayload(){}
 }

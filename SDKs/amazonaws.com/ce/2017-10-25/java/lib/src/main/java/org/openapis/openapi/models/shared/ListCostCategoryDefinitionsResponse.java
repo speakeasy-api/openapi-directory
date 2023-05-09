@@ -15,6 +15,7 @@ public class ListCostCategoryDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CostCategoryReferences")
     public CostCategoryReference[] costCategoryReferences;
+
     public ListCostCategoryDefinitionsResponse withCostCategoryReferences(CostCategoryReference[] costCategoryReferences) {
         this.costCategoryReferences = costCategoryReferences;
         return this;
@@ -23,9 +24,11 @@ public class ListCostCategoryDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCostCategoryDefinitionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCostCategoryDefinitionsResponse(){}
 }

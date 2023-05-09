@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveFilesPatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FileInput fileInput;
+
     public DriveFilesPatchRequest withFileInput(org.openapis.openapi.models.shared.FileInput fileInput) {
         this.fileInput = fileInput;
         return this;
@@ -19,6 +21,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=addParents")
     public String addParents;
+
     public DriveFilesPatchRequest withAddParents(String addParents) {
         this.addParents = addParents;
         return this;
@@ -29,6 +32,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveFilesPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -39,6 +43,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=convert")
     public Boolean convert;
+
     public DriveFilesPatchRequest withConvert(Boolean convert) {
         this.convert = convert;
         return this;
@@ -49,6 +54,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enforceSingleParent")
     public Boolean enforceSingleParent;
+
     public DriveFilesPatchRequest withEnforceSingleParent(Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
         return this;
@@ -59,6 +65,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveFilesPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public DriveFilesPatchRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -79,6 +87,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLabels")
     public String includeLabels;
+
     public DriveFilesPatchRequest withIncludeLabels(String includeLabels) {
         this.includeLabels = includeLabels;
         return this;
@@ -89,6 +98,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePermissionsForView")
     public String includePermissionsForView;
+
     public DriveFilesPatchRequest withIncludePermissionsForView(String includePermissionsForView) {
         this.includePermissionsForView = includePermissionsForView;
         return this;
@@ -99,6 +109,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveFilesPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -109,6 +120,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modifiedDateBehavior")
     public DriveFilesPatchModifiedDateBehaviorEnum modifiedDateBehavior;
+
     public DriveFilesPatchRequest withModifiedDateBehavior(DriveFilesPatchModifiedDateBehaviorEnum modifiedDateBehavior) {
         this.modifiedDateBehavior = modifiedDateBehavior;
         return this;
@@ -119,6 +131,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=newRevision")
     public Boolean newRevision;
+
     public DriveFilesPatchRequest withNewRevision(Boolean newRevision) {
         this.newRevision = newRevision;
         return this;
@@ -129,6 +142,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveFilesPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -139,6 +153,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ocr")
     public Boolean ocr;
+
     public DriveFilesPatchRequest withOcr(Boolean ocr) {
         this.ocr = ocr;
         return this;
@@ -149,6 +164,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ocrLanguage")
     public String ocrLanguage;
+
     public DriveFilesPatchRequest withOcrLanguage(String ocrLanguage) {
         this.ocrLanguage = ocrLanguage;
         return this;
@@ -159,6 +175,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pinned")
     public Boolean pinned;
+
     public DriveFilesPatchRequest withPinned(Boolean pinned) {
         this.pinned = pinned;
         return this;
@@ -169,6 +186,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveFilesPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -179,6 +197,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveFilesPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -189,6 +208,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=removeParents")
     public String removeParents;
+
     public DriveFilesPatchRequest withRemoveParents(String removeParents) {
         this.removeParents = removeParents;
         return this;
@@ -199,6 +219,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setModifiedDate")
     public Boolean setModifiedDate;
+
     public DriveFilesPatchRequest withSetModifiedDate(Boolean setModifiedDate) {
         this.setModifiedDate = setModifiedDate;
         return this;
@@ -209,6 +230,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
     public Boolean supportsAllDrives;
+
     public DriveFilesPatchRequest withSupportsAllDrives(Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -219,6 +241,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
     public Boolean supportsTeamDrives;
+
     public DriveFilesPatchRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -229,6 +252,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timedTextLanguage")
     public String timedTextLanguage;
+
     public DriveFilesPatchRequest withTimedTextLanguage(String timedTextLanguage) {
         this.timedTextLanguage = timedTextLanguage;
         return this;
@@ -239,6 +263,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timedTextTrackName")
     public String timedTextTrackName;
+
     public DriveFilesPatchRequest withTimedTextTrackName(String timedTextTrackName) {
         this.timedTextTrackName = timedTextTrackName;
         return this;
@@ -249,6 +274,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateViewedDate")
     public Boolean updateViewedDate;
+
     public DriveFilesPatchRequest withUpdateViewedDate(Boolean updateViewedDate) {
         this.updateViewedDate = updateViewedDate;
         return this;
@@ -259,6 +285,7 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useContentAsIndexableText")
     public Boolean useContentAsIndexableText;
+
     public DriveFilesPatchRequest withUseContentAsIndexableText(Boolean useContentAsIndexableText) {
         this.useContentAsIndexableText = useContentAsIndexableText;
         return this;
@@ -269,9 +296,13 @@ public class DriveFilesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveFilesPatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveFilesPatchRequest(@JsonProperty("fileId") String fileId) {
+        this.fileId = fileId;
+  }
 }

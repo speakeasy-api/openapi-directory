@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateIdentityPoolResponse {
@@ -12,6 +13,7 @@ public class UpdateIdentityPoolResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateIdentityPoolResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateIdentityPoolResponse {
     
     
     public String contentType;
+
     public UpdateIdentityPoolResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateIdentityPoolResponse {
      */
     
     public org.openapis.openapi.models.shared.IdentityPool identityPool;
+
     public UpdateIdentityPoolResponse withIdentityPool(org.openapis.openapi.models.shared.IdentityPool identityPool) {
         this.identityPool = identityPool;
         return this;
@@ -39,6 +43,7 @@ public class UpdateIdentityPoolResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateIdentityPoolResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateIdentityPoolResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateIdentityPoolResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateIdentityPoolResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateIdentityPoolResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateIdentityPoolResponse {
      */
     
     public Object notAuthorizedException;
+
     public UpdateIdentityPoolResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateIdentityPoolResponse {
     
     
     public Integer statusCode;
+
     public UpdateIdentityPoolResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateIdentityPoolResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateIdentityPoolResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateIdentityPoolResponse {
      */
     
     public Object resourceConflictException;
+
     public UpdateIdentityPoolResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateIdentityPoolResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateIdentityPoolResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateIdentityPoolResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateIdentityPoolResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public UpdateIdentityPoolResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

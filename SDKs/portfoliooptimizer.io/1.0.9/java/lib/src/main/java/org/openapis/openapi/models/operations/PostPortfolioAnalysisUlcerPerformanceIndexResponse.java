@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioAnalysisUlcerPerformanceIndexResponse {
     
     public String contentType;
+
     public PostPortfolioAnalysisUlcerPerformanceIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioAnalysisUlcerPerformanceIndexResponse {
     
     
     public Integer statusCode;
+
     public PostPortfolioAnalysisUlcerPerformanceIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioAnalysisUlcerPerformanceIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioAnalysisUlcerPerformanceIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioAnalysisUlcerPerformanceIndexResponse {
      */
     
     public PostPortfolioAnalysisUlcerPerformanceIndex200ApplicationJSON postPortfolioAnalysisUlcerPerformanceIndex200ApplicationJSONObject;
+
     public PostPortfolioAnalysisUlcerPerformanceIndexResponse withPostPortfolioAnalysisUlcerPerformanceIndex200ApplicationJSONObject(PostPortfolioAnalysisUlcerPerformanceIndex200ApplicationJSON postPortfolioAnalysisUlcerPerformanceIndex200ApplicationJSONObject) {
         this.postPortfolioAnalysisUlcerPerformanceIndex200ApplicationJSONObject = postPortfolioAnalysisUlcerPerformanceIndex200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioAnalysisUlcerPerformanceIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

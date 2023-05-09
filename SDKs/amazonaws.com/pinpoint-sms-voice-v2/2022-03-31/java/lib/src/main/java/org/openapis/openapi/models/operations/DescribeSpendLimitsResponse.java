@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSpendLimitsResponse {
@@ -12,6 +13,7 @@ public class DescribeSpendLimitsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeSpendLimitsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSpendLimitsResponse {
     
     
     public String contentType;
+
     public DescribeSpendLimitsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSpendLimitsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSpendLimitsResult describeSpendLimitsResult;
+
     public DescribeSpendLimitsResponse withDescribeSpendLimitsResult(org.openapis.openapi.models.shared.DescribeSpendLimitsResult describeSpendLimitsResult) {
         this.describeSpendLimitsResult = describeSpendLimitsResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeSpendLimitsResponse {
      */
     
     public Object internalServerException;
+
     public DescribeSpendLimitsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeSpendLimitsResponse {
     
     
     public Integer statusCode;
+
     public DescribeSpendLimitsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeSpendLimitsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSpendLimitsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeSpendLimitsResponse {
      */
     
     public Object throttlingException;
+
     public DescribeSpendLimitsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeSpendLimitsResponse {
      */
     
     public Object validationException;
+
     public DescribeSpendLimitsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeSpendLimitsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

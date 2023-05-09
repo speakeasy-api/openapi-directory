@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetJobDebugInfoResponse {
     
     public String contentType;
+
     public GetJobDebugInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetJobDebugInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public GetJobDebugInfoResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -29,6 +32,7 @@ public class GetJobDebugInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.JobDebugInfoRead jobDebugInfoRead;
+
     public GetJobDebugInfoResponse withJobDebugInfoRead(org.openapis.openapi.models.shared.JobDebugInfoRead jobDebugInfoRead) {
         this.jobDebugInfoRead = jobDebugInfoRead;
         return this;
@@ -39,6 +43,7 @@ public class GetJobDebugInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public GetJobDebugInfoResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -46,6 +51,7 @@ public class GetJobDebugInfoResponse {
     
     
     public Integer statusCode;
+
     public GetJobDebugInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetJobDebugInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetJobDebugInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetJobDebugInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

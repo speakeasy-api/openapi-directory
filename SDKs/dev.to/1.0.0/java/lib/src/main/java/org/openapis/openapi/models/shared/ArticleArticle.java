@@ -12,6 +12,7 @@ public class ArticleArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_markdown")
     public String bodyMarkdown;
+
     public ArticleArticle withBodyMarkdown(String bodyMarkdown) {
         this.bodyMarkdown = bodyMarkdown;
         return this;
@@ -20,6 +21,7 @@ public class ArticleArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canonical_url")
     public String canonicalUrl;
+
     public ArticleArticle withCanonicalUrl(String canonicalUrl) {
         this.canonicalUrl = canonicalUrl;
         return this;
@@ -28,6 +30,7 @@ public class ArticleArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ArticleArticle withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class ArticleArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("main_image")
     public String mainImage;
+
     public ArticleArticle withMainImage(String mainImage) {
         this.mainImage = mainImage;
         return this;
@@ -44,6 +48,7 @@ public class ArticleArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     public Long organizationId;
+
     public ArticleArticle withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -52,6 +57,7 @@ public class ArticleArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published")
     public Boolean published;
+
     public ArticleArticle withPublished(Boolean published) {
         this.published = published;
         return this;
@@ -60,6 +66,7 @@ public class ArticleArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("series")
     public String series;
+
     public ArticleArticle withSeries(String series) {
         this.series = series;
         return this;
@@ -68,6 +75,7 @@ public class ArticleArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String tags;
+
     public ArticleArticle withTags(String tags) {
         this.tags = tags;
         return this;
@@ -76,9 +84,11 @@ public class ArticleArticle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ArticleArticle withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ArticleArticle(){}
 }

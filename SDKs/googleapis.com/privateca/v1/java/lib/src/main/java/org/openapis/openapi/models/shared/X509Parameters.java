@@ -18,6 +18,7 @@ public class X509Parameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalExtensions")
     public X509Extension[] additionalExtensions;
+
     public X509Parameters withAdditionalExtensions(X509Extension[] additionalExtensions) {
         this.additionalExtensions = additionalExtensions;
         return this;
@@ -29,6 +30,7 @@ public class X509Parameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aiaOcspServers")
     public String[] aiaOcspServers;
+
     public X509Parameters withAiaOcspServers(String[] aiaOcspServers) {
         this.aiaOcspServers = aiaOcspServers;
         return this;
@@ -40,6 +42,7 @@ public class X509Parameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caOptions")
     public CaOptions caOptions;
+
     public X509Parameters withCaOptions(CaOptions caOptions) {
         this.caOptions = caOptions;
         return this;
@@ -51,6 +54,7 @@ public class X509Parameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyUsage")
     public KeyUsage keyUsage;
+
     public X509Parameters withKeyUsage(KeyUsage keyUsage) {
         this.keyUsage = keyUsage;
         return this;
@@ -62,6 +66,7 @@ public class X509Parameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameConstraints")
     public NameConstraints nameConstraints;
+
     public X509Parameters withNameConstraints(NameConstraints nameConstraints) {
         this.nameConstraints = nameConstraints;
         return this;
@@ -73,9 +78,11 @@ public class X509Parameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyIds")
     public ObjectId[] policyIds;
+
     public X509Parameters withPolicyIds(ObjectId[] policyIds) {
         this.policyIds = policyIds;
         return this;
     }
     
+    public X509Parameters(){}
 }

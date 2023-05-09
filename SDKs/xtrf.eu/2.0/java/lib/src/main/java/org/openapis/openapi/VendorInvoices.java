@@ -61,10 +61,8 @@ public class VendorInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePayment1Response res = new org.openapis.openapi.models.operations.CreatePayment1Response() {{
+        org.openapis.openapi.models.operations.CreatePayment1Response res = new org.openapis.openapi.models.operations.CreatePayment1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -100,11 +98,9 @@ public class VendorInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Create4Response res = new org.openapis.openapi.models.operations.Create4Response() {{
+        org.openapis.openapi.models.operations.Create4Response res = new org.openapis.openapi.models.operations.Create4Response(contentType, httpRes.statusCode()) {{
             providerInvoiceCreateResultDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -140,10 +136,8 @@ public class VendorInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Delete6Response res = new org.openapis.openapi.models.operations.Delete6Response() {{
+        org.openapis.openapi.models.operations.Delete6Response res = new org.openapis.openapi.models.operations.Delete6Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -174,10 +168,8 @@ public class VendorInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Delete7Response res = new org.openapis.openapi.models.operations.Delete7Response() {{
+        org.openapis.openapi.models.operations.Delete7Response res = new org.openapis.openapi.models.operations.Delete7Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -214,11 +206,9 @@ public class VendorInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllIds3Response res = new org.openapis.openapi.models.operations.GetAllIds3Response() {{
+        org.openapis.openapi.models.operations.GetAllIds3Response res = new org.openapis.openapi.models.operations.GetAllIds3Response(contentType, httpRes.statusCode()) {{
             getAllIds3DefaultApplicationVndXtrfV1PlusJsonInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -260,11 +250,9 @@ public class VendorInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAll2Response res = new org.openapis.openapi.models.operations.GetAll2Response() {{
+        org.openapis.openapi.models.operations.GetAll2Response res = new org.openapis.openapi.models.operations.GetAll2Response(contentType, httpRes.statusCode()) {{
             providerInvoiceDTOS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -300,11 +288,9 @@ public class VendorInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetById3Response res = new org.openapis.openapi.models.operations.GetById3Response() {{
+        org.openapis.openapi.models.operations.GetById3Response res = new org.openapis.openapi.models.operations.GetById3Response(contentType, httpRes.statusCode()) {{
             providerInvoiceDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -340,11 +326,9 @@ public class VendorInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocument1Response res = new org.openapis.openapi.models.operations.GetDocument1Response() {{
+        org.openapis.openapi.models.operations.GetDocument1Response res = new org.openapis.openapi.models.operations.GetDocument1Response(contentType, httpRes.statusCode()) {{
             urlResultDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -380,11 +364,9 @@ public class VendorInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPayments1Response res = new org.openapis.openapi.models.operations.GetPayments1Response() {{
+        org.openapis.openapi.models.operations.GetPayments1Response res = new org.openapis.openapi.models.operations.GetPayments1Response(contentType, httpRes.statusCode()) {{
             paymentDTOS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -420,10 +402,8 @@ public class VendorInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendResponse res = new org.openapis.openapi.models.operations.SendResponse() {{
+        org.openapis.openapi.models.operations.SendResponse res = new org.openapis.openapi.models.operations.SendResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -459,10 +439,8 @@ public class VendorInvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetStatusResponse res = new org.openapis.openapi.models.operations.SetStatusResponse() {{
+        org.openapis.openapi.models.operations.SetStatusResponse res = new org.openapis.openapi.models.operations.SetStatusResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

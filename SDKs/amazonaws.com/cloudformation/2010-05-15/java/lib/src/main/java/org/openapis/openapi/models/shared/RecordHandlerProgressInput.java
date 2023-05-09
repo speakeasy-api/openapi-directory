@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RecordHandlerProgressInput {
     
     public String bearerToken;
+
     public RecordHandlerProgressInput withBearerToken(String bearerToken) {
         this.bearerToken = bearerToken;
         return this;
@@ -16,6 +17,7 @@ public class RecordHandlerProgressInput {
     
     
     public String clientRequestToken;
+
     public RecordHandlerProgressInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -23,6 +25,7 @@ public class RecordHandlerProgressInput {
     
     
     public OperationStatusEnum currentOperationStatus;
+
     public RecordHandlerProgressInput withCurrentOperationStatus(OperationStatusEnum currentOperationStatus) {
         this.currentOperationStatus = currentOperationStatus;
         return this;
@@ -30,6 +33,7 @@ public class RecordHandlerProgressInput {
     
     
     public HandlerErrorCodeEnum errorCode;
+
     public RecordHandlerProgressInput withErrorCode(HandlerErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -37,6 +41,7 @@ public class RecordHandlerProgressInput {
     
     
     public OperationStatusEnum operationStatus;
+
     public RecordHandlerProgressInput withOperationStatus(OperationStatusEnum operationStatus) {
         this.operationStatus = operationStatus;
         return this;
@@ -44,6 +49,7 @@ public class RecordHandlerProgressInput {
     
     
     public String resourceModel;
+
     public RecordHandlerProgressInput withResourceModel(String resourceModel) {
         this.resourceModel = resourceModel;
         return this;
@@ -51,9 +57,14 @@ public class RecordHandlerProgressInput {
     
     
     public String statusMessage;
+
     public RecordHandlerProgressInput withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public RecordHandlerProgressInput(@JsonProperty("BearerToken") String bearerToken, @JsonProperty("OperationStatus") OperationStatusEnum operationStatus) {
+        this.bearerToken = bearerToken;
+        this.operationStatus = operationStatus;
+  }
 }

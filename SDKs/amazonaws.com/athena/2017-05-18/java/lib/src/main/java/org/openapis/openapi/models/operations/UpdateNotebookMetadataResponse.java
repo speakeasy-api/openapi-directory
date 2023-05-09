@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNotebookMetadataResponse {
     
     public String contentType;
+
     public UpdateNotebookMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateNotebookMetadataResponse {
      */
     
     public Object internalServerException;
+
     public UpdateNotebookMetadataResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateNotebookMetadataResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateNotebookMetadataResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateNotebookMetadataResponse {
     
     
     public Integer statusCode;
+
     public UpdateNotebookMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateNotebookMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNotebookMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateNotebookMetadataResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateNotebookMetadataResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateNotebookMetadataResponse {
      */
     
     public java.util.Map<String, Object> updateNotebookMetadataOutput;
+
     public UpdateNotebookMetadataResponse withUpdateNotebookMetadataOutput(java.util.Map<String, Object> updateNotebookMetadataOutput) {
         this.updateNotebookMetadataOutput = updateNotebookMetadataOutput;
         return this;
     }
     
+    public UpdateNotebookMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class SearchThingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchThingsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class SearchThingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("things")
     public Thing[] things;
+
     public SearchThingsResponse withThings(Thing[] things) {
         this.things = things;
         return this;
     }
     
+    public SearchThingsResponse(){}
 }

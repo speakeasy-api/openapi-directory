@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetImages200ApplicationJSON {
     @JsonProperty("images")
     public GetImages200ApplicationJSONImages[] images;
+
     public GetImages200ApplicationJSON withImages(GetImages200ApplicationJSONImages[] images) {
         this.images = images;
         return this;
@@ -22,9 +23,13 @@ public class GetImages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetImages200ApplicationJSONMeta meta;
+
     public GetImages200ApplicationJSON withMeta(GetImages200ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetImages200ApplicationJSON(@JsonProperty("images") GetImages200ApplicationJSONImages[] images) {
+        this.images = images;
+  }
 }

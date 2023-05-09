@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllCustomFieldsByCategoryRequest {
@@ -12,6 +13,7 @@ public class GetAllCustomFieldsByCategoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category")
     public String category;
+
     public GetAllCustomFieldsByCategoryRequest withCategory(String category) {
         this.category = category;
         return this;
@@ -22,9 +24,14 @@ public class GetAllCustomFieldsByCategoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public GetAllCustomFieldsByCategoryRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
     }
     
+    public GetAllCustomFieldsByCategoryRequest(@JsonProperty("category") String category, @JsonProperty("companyId") String companyId) {
+        this.category = category;
+        this.companyId = companyId;
+  }
 }

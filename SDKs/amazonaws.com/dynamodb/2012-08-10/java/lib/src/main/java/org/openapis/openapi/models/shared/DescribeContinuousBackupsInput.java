@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeContinuousBackupsInput {
     @JsonProperty("TableName")
     public String tableName;
+
     public DescribeContinuousBackupsInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DescribeContinuousBackupsInput(@JsonProperty("TableName") String tableName) {
+        this.tableName = tableName;
+  }
 }

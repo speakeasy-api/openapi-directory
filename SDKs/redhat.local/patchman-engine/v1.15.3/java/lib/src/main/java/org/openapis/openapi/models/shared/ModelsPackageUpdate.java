@@ -12,6 +12,7 @@ public class ModelsPackageUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advisory")
     public String advisory;
+
     public ModelsPackageUpdate withAdvisory(String advisory) {
         this.advisory = advisory;
         return this;
@@ -20,9 +21,11 @@ public class ModelsPackageUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evra")
     public String evra;
+
     public ModelsPackageUpdate withEvra(String evra) {
         this.evra = evra;
         return this;
     }
     
+    public ModelsPackageUpdate(){}
 }

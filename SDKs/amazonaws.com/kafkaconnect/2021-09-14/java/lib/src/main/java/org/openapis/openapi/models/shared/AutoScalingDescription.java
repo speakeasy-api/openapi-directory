@@ -15,6 +15,7 @@ public class AutoScalingDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxWorkerCount")
     public Long maxWorkerCount;
+
     public AutoScalingDescription withMaxWorkerCount(Long maxWorkerCount) {
         this.maxWorkerCount = maxWorkerCount;
         return this;
@@ -23,6 +24,7 @@ public class AutoScalingDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mcuCount")
     public Long mcuCount;
+
     public AutoScalingDescription withMcuCount(Long mcuCount) {
         this.mcuCount = mcuCount;
         return this;
@@ -31,6 +33,7 @@ public class AutoScalingDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minWorkerCount")
     public Long minWorkerCount;
+
     public AutoScalingDescription withMinWorkerCount(Long minWorkerCount) {
         this.minWorkerCount = minWorkerCount;
         return this;
@@ -39,6 +42,7 @@ public class AutoScalingDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaleInPolicy")
     public ScaleInPolicyDescription scaleInPolicy;
+
     public AutoScalingDescription withScaleInPolicy(ScaleInPolicyDescription scaleInPolicy) {
         this.scaleInPolicy = scaleInPolicy;
         return this;
@@ -47,9 +51,11 @@ public class AutoScalingDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaleOutPolicy")
     public ScaleOutPolicyDescription scaleOutPolicy;
+
     public AutoScalingDescription withScaleOutPolicy(ScaleOutPolicyDescription scaleOutPolicy) {
         this.scaleOutPolicy = scaleOutPolicy;
         return this;
     }
     
+    public AutoScalingDescription(){}
 }

@@ -18,6 +18,7 @@ public class SourceProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolvedRepoSource")
     public RepoSource resolvedRepoSource;
+
     public SourceProvenance withResolvedRepoSource(RepoSource resolvedRepoSource) {
         this.resolvedRepoSource = resolvedRepoSource;
         return this;
@@ -29,9 +30,11 @@ public class SourceProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolvedStorageSource")
     public StorageSource resolvedStorageSource;
+
     public SourceProvenance withResolvedStorageSource(StorageSource resolvedStorageSource) {
         this.resolvedStorageSource = resolvedStorageSource;
         return this;
     }
     
+    public SourceProvenance(){}
 }

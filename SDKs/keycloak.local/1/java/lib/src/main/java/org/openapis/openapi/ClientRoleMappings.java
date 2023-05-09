@@ -56,10 +56,8 @@ public class ClientRoleMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRealmGroupsIdRoleMappingsClientsClientResponse res = new org.openapis.openapi.models.operations.DeleteRealmGroupsIdRoleMappingsClientsClientResponse() {{
+        org.openapis.openapi.models.operations.DeleteRealmGroupsIdRoleMappingsClientsClientResponse res = new org.openapis.openapi.models.operations.DeleteRealmGroupsIdRoleMappingsClientsClientResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -94,10 +92,8 @@ public class ClientRoleMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRealmUsersIdRoleMappingsClientsClientResponse res = new org.openapis.openapi.models.operations.DeleteRealmUsersIdRoleMappingsClientsClientResponse() {{
+        org.openapis.openapi.models.operations.DeleteRealmUsersIdRoleMappingsClientsClientResponse res = new org.openapis.openapi.models.operations.DeleteRealmUsersIdRoleMappingsClientsClientResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -127,11 +123,9 @@ public class ClientRoleMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmGroupsIdRoleMappingsClientsClientResponse res = new org.openapis.openapi.models.operations.GetRealmGroupsIdRoleMappingsClientsClientResponse() {{
+        org.openapis.openapi.models.operations.GetRealmGroupsIdRoleMappingsClientsClientResponse res = new org.openapis.openapi.models.operations.GetRealmGroupsIdRoleMappingsClientsClientResponse(contentType, httpRes.statusCode()) {{
             roleRepresentations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -166,11 +160,9 @@ public class ClientRoleMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmGroupsIdRoleMappingsClientsClientAvailableResponse res = new org.openapis.openapi.models.operations.GetRealmGroupsIdRoleMappingsClientsClientAvailableResponse() {{
+        org.openapis.openapi.models.operations.GetRealmGroupsIdRoleMappingsClientsClientAvailableResponse res = new org.openapis.openapi.models.operations.GetRealmGroupsIdRoleMappingsClientsClientAvailableResponse(contentType, httpRes.statusCode()) {{
             roleRepresentations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -205,11 +197,9 @@ public class ClientRoleMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmGroupsIdRoleMappingsClientsClientCompositeResponse res = new org.openapis.openapi.models.operations.GetRealmGroupsIdRoleMappingsClientsClientCompositeResponse() {{
+        org.openapis.openapi.models.operations.GetRealmGroupsIdRoleMappingsClientsClientCompositeResponse res = new org.openapis.openapi.models.operations.GetRealmGroupsIdRoleMappingsClientsClientCompositeResponse(contentType, httpRes.statusCode()) {{
             roleRepresentations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -244,11 +234,9 @@ public class ClientRoleMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmUsersIdRoleMappingsClientsClientResponse res = new org.openapis.openapi.models.operations.GetRealmUsersIdRoleMappingsClientsClientResponse() {{
+        org.openapis.openapi.models.operations.GetRealmUsersIdRoleMappingsClientsClientResponse res = new org.openapis.openapi.models.operations.GetRealmUsersIdRoleMappingsClientsClientResponse(contentType, httpRes.statusCode()) {{
             roleRepresentations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -283,11 +271,9 @@ public class ClientRoleMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmUsersIdRoleMappingsClientsClientAvailableResponse res = new org.openapis.openapi.models.operations.GetRealmUsersIdRoleMappingsClientsClientAvailableResponse() {{
+        org.openapis.openapi.models.operations.GetRealmUsersIdRoleMappingsClientsClientAvailableResponse res = new org.openapis.openapi.models.operations.GetRealmUsersIdRoleMappingsClientsClientAvailableResponse(contentType, httpRes.statusCode()) {{
             roleRepresentations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -322,11 +308,9 @@ public class ClientRoleMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmUsersIdRoleMappingsClientsClientCompositeResponse res = new org.openapis.openapi.models.operations.GetRealmUsersIdRoleMappingsClientsClientCompositeResponse() {{
+        org.openapis.openapi.models.operations.GetRealmUsersIdRoleMappingsClientsClientCompositeResponse res = new org.openapis.openapi.models.operations.GetRealmUsersIdRoleMappingsClientsClientCompositeResponse(contentType, httpRes.statusCode()) {{
             roleRepresentations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -366,10 +350,8 @@ public class ClientRoleMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmGroupsIdRoleMappingsClientsClientResponse res = new org.openapis.openapi.models.operations.PostRealmGroupsIdRoleMappingsClientsClientResponse() {{
+        org.openapis.openapi.models.operations.PostRealmGroupsIdRoleMappingsClientsClientResponse res = new org.openapis.openapi.models.operations.PostRealmGroupsIdRoleMappingsClientsClientResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -404,10 +386,8 @@ public class ClientRoleMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmUsersIdRoleMappingsClientsClientResponse res = new org.openapis.openapi.models.operations.PostRealmUsersIdRoleMappingsClientsClientResponse() {{
+        org.openapis.openapi.models.operations.PostRealmUsersIdRoleMappingsClientsClientResponse res = new org.openapis.openapi.models.operations.PostRealmUsersIdRoleMappingsClientsClientResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {

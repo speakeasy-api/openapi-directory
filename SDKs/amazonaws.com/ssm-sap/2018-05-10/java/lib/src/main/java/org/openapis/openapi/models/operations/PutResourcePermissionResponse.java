@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutResourcePermissionResponse {
     
     public String contentType;
+
     public PutResourcePermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutResourcePermissionResponse {
      */
     
     public Object internalServerException;
+
     public PutResourcePermissionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class PutResourcePermissionResponse {
      */
     
     public org.openapis.openapi.models.shared.PutResourcePermissionOutput putResourcePermissionOutput;
+
     public PutResourcePermissionResponse withPutResourcePermissionOutput(org.openapis.openapi.models.shared.PutResourcePermissionOutput putResourcePermissionOutput) {
         this.putResourcePermissionOutput = putResourcePermissionOutput;
         return this;
@@ -39,6 +43,7 @@ public class PutResourcePermissionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutResourcePermissionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class PutResourcePermissionResponse {
     
     
     public Integer statusCode;
+
     public PutResourcePermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutResourcePermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutResourcePermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutResourcePermissionResponse {
      */
     
     public Object validationException;
+
     public PutResourcePermissionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutResourcePermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

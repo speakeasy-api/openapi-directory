@@ -113,6 +113,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -142,11 +147,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransportationIncentivesLawsAllResponse res = new org.openapis.openapi.models.operations.TransportationIncentivesLawsAllResponse() {{
+        org.openapis.openapi.models.operations.TransportationIncentivesLawsAllResponse res = new org.openapis.openapi.models.operations.TransportationIncentivesLawsAllResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -185,11 +188,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransportationIncentivesLawsCategoriesResponse res = new org.openapis.openapi.models.operations.TransportationIncentivesLawsCategoriesResponse() {{
+        org.openapis.openapi.models.operations.TransportationIncentivesLawsCategoriesResponse res = new org.openapis.openapi.models.operations.TransportationIncentivesLawsCategoriesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -228,11 +229,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransportationIncentivesLawsIdResponse res = new org.openapis.openapi.models.operations.TransportationIncentivesLawsIdResponse() {{
+        org.openapis.openapi.models.operations.TransportationIncentivesLawsIdResponse res = new org.openapis.openapi.models.operations.TransportationIncentivesLawsIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -271,11 +270,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransportationIncentivesLawsPocsResponse res = new org.openapis.openapi.models.operations.TransportationIncentivesLawsPocsResponse() {{
+        org.openapis.openapi.models.operations.TransportationIncentivesLawsPocsResponse res = new org.openapis.openapi.models.operations.TransportationIncentivesLawsPocsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

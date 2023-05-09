@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyLaunchTemplateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyLaunchTemplateActionEnum action;
+
     public GETModifyLaunchTemplateRequest withAction(GETModifyLaunchTemplateActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyLaunchTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientToken")
     public String clientToken;
+
     public GETModifyLaunchTemplateRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyLaunchTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyLaunchTemplateRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyLaunchTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LaunchTemplateId")
     public String launchTemplateId;
+
     public GETModifyLaunchTemplateRequest withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyLaunchTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LaunchTemplateName")
     public String launchTemplateName;
+
     public GETModifyLaunchTemplateRequest withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyLaunchTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SetDefaultVersion")
     public String setDefaultVersion;
+
     public GETModifyLaunchTemplateRequest withSetDefaultVersion(String setDefaultVersion) {
         this.setDefaultVersion = setDefaultVersion;
         return this;
@@ -66,6 +73,7 @@ public class GETModifyLaunchTemplateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyLaunchTemplateVersionEnum version;
+
     public GETModifyLaunchTemplateRequest withVersion(GETModifyLaunchTemplateVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETModifyLaunchTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyLaunchTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETModifyLaunchTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyLaunchTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETModifyLaunchTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyLaunchTemplateRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETModifyLaunchTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyLaunchTemplateRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETModifyLaunchTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyLaunchTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETModifyLaunchTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyLaunchTemplateRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,14 @@ public class GETModifyLaunchTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyLaunchTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyLaunchTemplateRequest(@JsonProperty("Action") GETModifyLaunchTemplateActionEnum action, @JsonProperty("Version") GETModifyLaunchTemplateVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

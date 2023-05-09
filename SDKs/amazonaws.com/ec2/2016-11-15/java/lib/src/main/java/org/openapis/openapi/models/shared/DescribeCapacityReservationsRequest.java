@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCapacityReservationsRequest {
     
     public String[] capacityReservationIds;
+
     public DescribeCapacityReservationsRequest withCapacityReservationIds(String[] capacityReservationIds) {
         this.capacityReservationIds = capacityReservationIds;
         return this;
@@ -16,6 +17,7 @@ public class DescribeCapacityReservationsRequest {
     
     
     public Boolean dryRun;
+
     public DescribeCapacityReservationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class DescribeCapacityReservationsRequest {
     
     
     public DescribeCapacityReservationsRequestFilters[] filters;
+
     public DescribeCapacityReservationsRequest withFilters(DescribeCapacityReservationsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeCapacityReservationsRequest {
     
     
     public Long maxResults;
+
     public DescribeCapacityReservationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeCapacityReservationsRequest {
     
     
     public String nextToken;
+
     public DescribeCapacityReservationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeCapacityReservationsRequest(){}
 }

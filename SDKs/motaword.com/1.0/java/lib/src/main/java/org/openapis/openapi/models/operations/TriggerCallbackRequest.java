@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TriggerCallbackRequest {
@@ -12,6 +13,7 @@ public class TriggerCallbackRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=actionType")
     public TriggerCallbackActionTypeEnum actionType;
+
     public TriggerCallbackRequest withActionType(TriggerCallbackActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -22,9 +24,14 @@ public class TriggerCallbackRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public TriggerCallbackRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public TriggerCallbackRequest(@JsonProperty("actionType") TriggerCallbackActionTypeEnum actionType, @JsonProperty("id") Long id) {
+        this.actionType = actionType;
+        this.id = id;
+  }
 }

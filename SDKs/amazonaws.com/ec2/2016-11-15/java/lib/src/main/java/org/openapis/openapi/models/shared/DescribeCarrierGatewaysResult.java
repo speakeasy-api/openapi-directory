@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCarrierGatewaysResult {
     
     public DescribeCarrierGatewaysResultCarrierGateways[] carrierGateways;
+
     public DescribeCarrierGatewaysResult withCarrierGateways(DescribeCarrierGatewaysResultCarrierGateways[] carrierGateways) {
         this.carrierGateways = carrierGateways;
         return this;
@@ -19,9 +20,11 @@ public class DescribeCarrierGatewaysResult {
     
     
     public String nextToken;
+
     public DescribeCarrierGatewaysResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeCarrierGatewaysResult(){}
 }

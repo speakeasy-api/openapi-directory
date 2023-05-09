@@ -15,9 +15,11 @@ public class SubscriptionPurchasesDeferRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deferralInfo")
     public SubscriptionDeferralInfo deferralInfo;
+
     public SubscriptionPurchasesDeferRequest withDeferralInfo(SubscriptionDeferralInfo deferralInfo) {
         this.deferralInfo = deferralInfo;
         return this;
     }
     
+    public SubscriptionPurchasesDeferRequest(){}
 }

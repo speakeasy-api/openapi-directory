@@ -96,4 +96,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateParametersRequestInpu
 lib/src/main/java/org/openapis/openapi/models/shared/ListLocationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Location.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOperationsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

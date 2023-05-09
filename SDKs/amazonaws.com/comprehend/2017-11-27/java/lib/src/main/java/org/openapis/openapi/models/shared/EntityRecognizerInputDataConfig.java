@@ -15,6 +15,7 @@ public class EntityRecognizerInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Annotations")
     public EntityRecognizerAnnotations annotations;
+
     public EntityRecognizerInputDataConfig withAnnotations(EntityRecognizerAnnotations annotations) {
         this.annotations = annotations;
         return this;
@@ -23,6 +24,7 @@ public class EntityRecognizerInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AugmentedManifests")
     public AugmentedManifestsListItem[] augmentedManifests;
+
     public EntityRecognizerInputDataConfig withAugmentedManifests(AugmentedManifestsListItem[] augmentedManifests) {
         this.augmentedManifests = augmentedManifests;
         return this;
@@ -31,6 +33,7 @@ public class EntityRecognizerInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataFormat")
     public EntityRecognizerDataFormatEnum dataFormat;
+
     public EntityRecognizerInputDataConfig withDataFormat(EntityRecognizerDataFormatEnum dataFormat) {
         this.dataFormat = dataFormat;
         return this;
@@ -39,6 +42,7 @@ public class EntityRecognizerInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Documents")
     public EntityRecognizerDocuments documents;
+
     public EntityRecognizerInputDataConfig withDocuments(EntityRecognizerDocuments documents) {
         this.documents = documents;
         return this;
@@ -47,6 +51,7 @@ public class EntityRecognizerInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityList")
     public EntityRecognizerEntityList entityList;
+
     public EntityRecognizerInputDataConfig withEntityList(EntityRecognizerEntityList entityList) {
         this.entityList = entityList;
         return this;
@@ -54,9 +59,13 @@ public class EntityRecognizerInputDataConfig {
     
     @JsonProperty("EntityTypes")
     public EntityTypesListItem[] entityTypes;
+
     public EntityRecognizerInputDataConfig withEntityTypes(EntityTypesListItem[] entityTypes) {
         this.entityTypes = entityTypes;
         return this;
     }
     
+    public EntityRecognizerInputDataConfig(@JsonProperty("EntityTypes") EntityTypesListItem[] entityTypes) {
+        this.entityTypes = entityTypes;
+  }
 }

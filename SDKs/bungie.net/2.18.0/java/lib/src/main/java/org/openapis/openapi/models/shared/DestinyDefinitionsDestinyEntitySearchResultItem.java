@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyEntitySearchResultItem {
      */
     
     public DestinyDefinitionsDestinyEntitySearchResultItemDisplayProperties displayProperties;
+
     public DestinyDefinitionsDestinyEntitySearchResultItem withDisplayProperties(DestinyDefinitionsDestinyEntitySearchResultItemDisplayProperties displayProperties) {
         this.displayProperties = displayProperties;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsDestinyEntitySearchResultItem {
      */
     
     public String entityType;
+
     public DestinyDefinitionsDestinyEntitySearchResultItem withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
@@ -35,6 +37,7 @@ public class DestinyDefinitionsDestinyEntitySearchResultItem {
      */
     
     public Long hash;
+
     public DestinyDefinitionsDestinyEntitySearchResultItem withHash(Long hash) {
         this.hash = hash;
         return this;
@@ -45,9 +48,11 @@ public class DestinyDefinitionsDestinyEntitySearchResultItem {
      */
     
     public Double weight;
+
     public DestinyDefinitionsDestinyEntitySearchResultItem withWeight(Double weight) {
         this.weight = weight;
         return this;
     }
     
+    public DestinyDefinitionsDestinyEntitySearchResultItem(){}
 }

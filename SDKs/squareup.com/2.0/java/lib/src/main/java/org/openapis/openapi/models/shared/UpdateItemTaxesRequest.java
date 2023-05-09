@@ -19,6 +19,7 @@ public class UpdateItemTaxesRequest {
      */
     @JsonProperty("item_ids")
     public String[] itemIds;
+
     public UpdateItemTaxesRequest withItemIds(String[] itemIds) {
         this.itemIds = itemIds;
         return this;
@@ -30,6 +31,7 @@ public class UpdateItemTaxesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxes_to_disable")
     public String[] taxesToDisable;
+
     public UpdateItemTaxesRequest withTaxesToDisable(String[] taxesToDisable) {
         this.taxesToDisable = taxesToDisable;
         return this;
@@ -41,9 +43,13 @@ public class UpdateItemTaxesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxes_to_enable")
     public String[] taxesToEnable;
+
     public UpdateItemTaxesRequest withTaxesToEnable(String[] taxesToEnable) {
         this.taxesToEnable = taxesToEnable;
         return this;
     }
     
+    public UpdateItemTaxesRequest(@JsonProperty("item_ids") String[] itemIds) {
+        this.itemIds = itemIds;
+  }
 }

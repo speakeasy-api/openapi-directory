@@ -15,6 +15,7 @@ public class ServiceNowServiceCatalogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlAttachments")
     public Boolean crawlAttachments;
+
     public ServiceNowServiceCatalogConfiguration withCrawlAttachments(Boolean crawlAttachments) {
         this.crawlAttachments = crawlAttachments;
         return this;
@@ -22,6 +23,7 @@ public class ServiceNowServiceCatalogConfiguration {
     
     @JsonProperty("DocumentDataFieldName")
     public String documentDataFieldName;
+
     public ServiceNowServiceCatalogConfiguration withDocumentDataFieldName(String documentDataFieldName) {
         this.documentDataFieldName = documentDataFieldName;
         return this;
@@ -30,6 +32,7 @@ public class ServiceNowServiceCatalogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentTitleFieldName")
     public String documentTitleFieldName;
+
     public ServiceNowServiceCatalogConfiguration withDocumentTitleFieldName(String documentTitleFieldName) {
         this.documentTitleFieldName = documentTitleFieldName;
         return this;
@@ -38,6 +41,7 @@ public class ServiceNowServiceCatalogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludeAttachmentFilePatterns")
     public String[] excludeAttachmentFilePatterns;
+
     public ServiceNowServiceCatalogConfiguration withExcludeAttachmentFilePatterns(String[] excludeAttachmentFilePatterns) {
         this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
         return this;
@@ -46,6 +50,7 @@ public class ServiceNowServiceCatalogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldMappings")
     public DataSourceToIndexFieldMapping[] fieldMappings;
+
     public ServiceNowServiceCatalogConfiguration withFieldMappings(DataSourceToIndexFieldMapping[] fieldMappings) {
         this.fieldMappings = fieldMappings;
         return this;
@@ -54,9 +59,13 @@ public class ServiceNowServiceCatalogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeAttachmentFilePatterns")
     public String[] includeAttachmentFilePatterns;
+
     public ServiceNowServiceCatalogConfiguration withIncludeAttachmentFilePatterns(String[] includeAttachmentFilePatterns) {
         this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
         return this;
     }
     
+    public ServiceNowServiceCatalogConfiguration(@JsonProperty("DocumentDataFieldName") String documentDataFieldName) {
+        this.documentDataFieldName = documentDataFieldName;
+  }
 }

@@ -18,6 +18,7 @@ public class ControlErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_text")
     public String errorText;
+
     public ControlErrorResponse withErrorText(String errorText) {
         this.errorText = errorText;
         return this;
@@ -41,9 +42,11 @@ public class ControlErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ControlErrorResponseStatusEnum status;
+
     public ControlErrorResponse withStatus(ControlErrorResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ControlErrorResponse(){}
 }

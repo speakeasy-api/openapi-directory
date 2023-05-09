@@ -18,6 +18,7 @@ public class ProfileUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heroAutoplay")
     public Boolean heroAutoplay;
+
     public ProfileUpdateRequest withHeroAutoplay(Boolean heroAutoplay) {
         this.heroAutoplay = heroAutoplay;
         return this;
@@ -29,6 +30,7 @@ public class ProfileUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heroWithAudio")
     public Boolean heroWithAudio;
+
     public ProfileUpdateRequest withHeroWithAudio(Boolean heroWithAudio) {
         this.heroWithAudio = heroWithAudio;
         return this;
@@ -44,6 +46,7 @@ public class ProfileUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public ProfileUpdateRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -55,6 +58,7 @@ public class ProfileUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProfileUpdateRequest withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +73,7 @@ public class ProfileUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pinEnabled")
     public Boolean pinEnabled;
+
     public ProfileUpdateRequest withPinEnabled(Boolean pinEnabled) {
         this.pinEnabled = pinEnabled;
         return this;
@@ -80,6 +85,7 @@ public class ProfileUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchaseEnabled")
     public Boolean purchaseEnabled;
+
     public ProfileUpdateRequest withPurchaseEnabled(Boolean purchaseEnabled) {
         this.purchaseEnabled = purchaseEnabled;
         return this;
@@ -91,9 +97,11 @@ public class ProfileUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segments")
     public String[] segments;
+
     public ProfileUpdateRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
     }
     
+    public ProfileUpdateRequest(){}
 }

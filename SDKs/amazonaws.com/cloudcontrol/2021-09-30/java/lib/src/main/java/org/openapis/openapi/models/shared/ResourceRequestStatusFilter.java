@@ -15,6 +15,7 @@ public class ResourceRequestStatusFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationStatuses")
     public OperationStatusEnum[] operationStatuses;
+
     public ResourceRequestStatusFilter withOperationStatuses(OperationStatusEnum[] operationStatuses) {
         this.operationStatuses = operationStatuses;
         return this;
@@ -23,9 +24,11 @@ public class ResourceRequestStatusFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operations")
     public OperationEnum[] operations;
+
     public ResourceRequestStatusFilter withOperations(OperationEnum[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public ResourceRequestStatusFilter(){}
 }

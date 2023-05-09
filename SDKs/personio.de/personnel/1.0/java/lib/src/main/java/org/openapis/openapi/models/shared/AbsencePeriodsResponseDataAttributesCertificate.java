@@ -12,9 +12,11 @@ public class AbsencePeriodsResponseDataAttributesCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public AbsencePeriodsResponseDataAttributesCertificate withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AbsencePeriodsResponseDataAttributesCertificate(){}
 }

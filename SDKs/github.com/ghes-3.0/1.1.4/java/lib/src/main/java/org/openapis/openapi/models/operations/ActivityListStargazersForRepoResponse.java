@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActivityListStargazersForRepoResponse {
     
     public String contentType;
+
     public ActivityListStargazersForRepoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActivityListStargazersForRepoResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ActivityListStargazersForRepoResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ActivityListStargazersForRepoResponse {
     
     
     public Integer statusCode;
+
     public ActivityListStargazersForRepoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ActivityListStargazersForRepoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActivityListStargazersForRepoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ActivityListStargazersForRepoResponse {
      */
     
     public Object activityListStargazersForRepo200ApplicationJSONAnyOf;
+
     public ActivityListStargazersForRepoResponse withActivityListStargazersForRepo200ApplicationJSONAnyOf(Object activityListStargazersForRepo200ApplicationJSONAnyOf) {
         this.activityListStargazersForRepo200ApplicationJSONAnyOf = activityListStargazersForRepo200ApplicationJSONAnyOf;
         return this;
@@ -50,9 +56,14 @@ public class ActivityListStargazersForRepoResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ActivityListStargazersForRepoResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ActivityListStargazersForRepoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

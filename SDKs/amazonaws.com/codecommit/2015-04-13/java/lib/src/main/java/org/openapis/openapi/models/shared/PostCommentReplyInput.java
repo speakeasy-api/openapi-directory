@@ -12,6 +12,7 @@ public class PostCommentReplyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public PostCommentReplyInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class PostCommentReplyInput {
     
     @JsonProperty("content")
     public String content;
+
     public PostCommentReplyInput withContent(String content) {
         this.content = content;
         return this;
@@ -26,9 +28,14 @@ public class PostCommentReplyInput {
     
     @JsonProperty("inReplyTo")
     public String inReplyTo;
+
     public PostCommentReplyInput withInReplyTo(String inReplyTo) {
         this.inReplyTo = inReplyTo;
         return this;
     }
     
+    public PostCommentReplyInput(@JsonProperty("content") String content, @JsonProperty("inReplyTo") String inReplyTo) {
+        this.content = content;
+        this.inReplyTo = inReplyTo;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RecognizeUtteranceResponse {
@@ -12,6 +13,7 @@ public class RecognizeUtteranceResponse {
      */
     
     public Object accessDeniedException;
+
     public RecognizeUtteranceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RecognizeUtteranceResponse {
      */
     
     public Object badGatewayException;
+
     public RecognizeUtteranceResponse withBadGatewayException(Object badGatewayException) {
         this.badGatewayException = badGatewayException;
         return this;
@@ -32,6 +35,7 @@ public class RecognizeUtteranceResponse {
      */
     
     public Object conflictException;
+
     public RecognizeUtteranceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class RecognizeUtteranceResponse {
     
     
     public String contentType;
+
     public RecognizeUtteranceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class RecognizeUtteranceResponse {
      */
     
     public Object dependencyFailedException;
+
     public RecognizeUtteranceResponse withDependencyFailedException(Object dependencyFailedException) {
         this.dependencyFailedException = dependencyFailedException;
         return this;
@@ -59,6 +65,7 @@ public class RecognizeUtteranceResponse {
      */
     
     public Object internalServerException;
+
     public RecognizeUtteranceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -69,6 +76,7 @@ public class RecognizeUtteranceResponse {
      */
     
     public org.openapis.openapi.models.shared.RecognizeUtteranceResponse recognizeUtteranceResponse;
+
     public RecognizeUtteranceResponse withRecognizeUtteranceResponse(org.openapis.openapi.models.shared.RecognizeUtteranceResponse recognizeUtteranceResponse) {
         this.recognizeUtteranceResponse = recognizeUtteranceResponse;
         return this;
@@ -76,6 +84,7 @@ public class RecognizeUtteranceResponse {
     
     
     public Integer statusCode;
+
     public RecognizeUtteranceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class RecognizeUtteranceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RecognizeUtteranceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class RecognizeUtteranceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RecognizeUtteranceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class RecognizeUtteranceResponse {
      */
     
     public Object throttlingException;
+
     public RecognizeUtteranceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class RecognizeUtteranceResponse {
      */
     
     public Object validationException;
+
     public RecognizeUtteranceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RecognizeUtteranceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

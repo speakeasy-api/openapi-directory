@@ -18,9 +18,11 @@ public class PreferredDealTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedPrice")
     public Price fixedPrice;
+
     public PreferredDealTerms withFixedPrice(Price fixedPrice) {
         this.fixedPrice = fixedPrice;
         return this;
     }
     
+    public PreferredDealTerms(){}
 }

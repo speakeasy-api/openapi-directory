@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VirtualBillingMeterDeactivatePostFormResponse {
     
     public byte[] body;
+
     public VirtualBillingMeterDeactivatePostFormResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class VirtualBillingMeterDeactivatePostFormResponse {
     
     
     public String contentType;
+
     public VirtualBillingMeterDeactivatePostFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class VirtualBillingMeterDeactivatePostFormResponse {
      */
     
     public java.util.Map<String, Object> object;
+
     public VirtualBillingMeterDeactivatePostFormResponse withObject(java.util.Map<String, Object> object) {
         this.object = object;
         return this;
@@ -33,6 +37,7 @@ public class VirtualBillingMeterDeactivatePostFormResponse {
     
     
     public Integer statusCode;
+
     public VirtualBillingMeterDeactivatePostFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class VirtualBillingMeterDeactivatePostFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VirtualBillingMeterDeactivatePostFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VirtualBillingMeterDeactivatePostFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

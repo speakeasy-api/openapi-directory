@@ -15,6 +15,7 @@ public class FlowTemplateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public DefinitionDocument definition;
+
     public FlowTemplateDescription withDefinition(DefinitionDocument definition) {
         this.definition = definition;
         return this;
@@ -23,6 +24,7 @@ public class FlowTemplateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public FlowTemplateSummary summary;
+
     public FlowTemplateDescription withSummary(FlowTemplateSummary summary) {
         this.summary = summary;
         return this;
@@ -31,9 +33,11 @@ public class FlowTemplateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validatedNamespaceVersion")
     public Long validatedNamespaceVersion;
+
     public FlowTemplateDescription withValidatedNamespaceVersion(Long validatedNamespaceVersion) {
         this.validatedNamespaceVersion = validatedNamespaceVersion;
         return this;
     }
     
+    public FlowTemplateDescription(){}
 }

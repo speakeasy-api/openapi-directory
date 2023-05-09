@@ -34,4 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetSearchSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearch200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchResponse.java
+docs/sdk/README.md
+docs/rating/README.md
 USAGE.md

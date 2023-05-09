@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteInstanceOnboardingJobResponse {
@@ -12,6 +13,7 @@ public class DeleteInstanceOnboardingJobResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteInstanceOnboardingJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteInstanceOnboardingJobResponse {
     
     
     public String contentType;
+
     public DeleteInstanceOnboardingJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteInstanceOnboardingJobResponse {
      */
     
     public Object internalServerException;
+
     public DeleteInstanceOnboardingJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteInstanceOnboardingJobResponse {
      */
     
     public Object invalidStateException;
+
     public DeleteInstanceOnboardingJobResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteInstanceOnboardingJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteInstanceOnboardingJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteInstanceOnboardingJobResponse {
     
     
     public Integer statusCode;
+
     public DeleteInstanceOnboardingJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteInstanceOnboardingJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteInstanceOnboardingJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteInstanceOnboardingJobResponse {
      */
     
     public Object validationException;
+
     public DeleteInstanceOnboardingJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteInstanceOnboardingJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

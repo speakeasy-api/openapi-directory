@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRepositoriesWorkspaceRepoSlugSrcRequest {
@@ -18,6 +19,7 @@ public class PostRepositoriesWorkspaceRepoSlugSrcRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=author")
     public String author;
+
     public PostRepositoriesWorkspaceRepoSlugSrcRequest withAuthor(String author) {
         this.author = author;
         return this;
@@ -73,6 +75,7 @@ public class PostRepositoriesWorkspaceRepoSlugSrcRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=branch")
     public String branch;
+
     public PostRepositoriesWorkspaceRepoSlugSrcRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -101,6 +104,7 @@ public class PostRepositoriesWorkspaceRepoSlugSrcRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=files")
     public String files;
+
     public PostRepositoriesWorkspaceRepoSlugSrcRequest withFiles(String files) {
         this.files = files;
         return this;
@@ -111,6 +115,7 @@ public class PostRepositoriesWorkspaceRepoSlugSrcRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message")
     public String message;
+
     public PostRepositoriesWorkspaceRepoSlugSrcRequest withMessage(String message) {
         this.message = message;
         return this;
@@ -129,6 +134,7 @@ public class PostRepositoriesWorkspaceRepoSlugSrcRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parents")
     public String parents;
+
     public PostRepositoriesWorkspaceRepoSlugSrcRequest withParents(String parents) {
         this.parents = parents;
         return this;
@@ -141,6 +147,7 @@ public class PostRepositoriesWorkspaceRepoSlugSrcRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public PostRepositoriesWorkspaceRepoSlugSrcRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -153,9 +160,14 @@ public class PostRepositoriesWorkspaceRepoSlugSrcRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public PostRepositoriesWorkspaceRepoSlugSrcRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public PostRepositoriesWorkspaceRepoSlugSrcRequest(@JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

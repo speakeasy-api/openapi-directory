@@ -20,6 +20,7 @@ public class BatchPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchPredictionDataSourceId")
     public String batchPredictionDataSourceId;
+
     public BatchPrediction withBatchPredictionDataSourceId(String batchPredictionDataSourceId) {
         this.batchPredictionDataSourceId = batchPredictionDataSourceId;
         return this;
@@ -28,6 +29,7 @@ public class BatchPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchPredictionId")
     public String batchPredictionId;
+
     public BatchPrediction withBatchPredictionId(String batchPredictionId) {
         this.batchPredictionId = batchPredictionId;
         return this;
@@ -39,6 +41,7 @@ public class BatchPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeTime")
     public Long computeTime;
+
     public BatchPrediction withComputeTime(Long computeTime) {
         this.computeTime = computeTime;
         return this;
@@ -49,6 +52,7 @@ public class BatchPrediction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public BatchPrediction withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -57,6 +61,7 @@ public class BatchPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedByIamUser")
     public String createdByIamUser;
+
     public BatchPrediction withCreatedByIamUser(String createdByIamUser) {
         this.createdByIamUser = createdByIamUser;
         return this;
@@ -70,6 +75,7 @@ public class BatchPrediction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FinishedAt")
     public OffsetDateTime finishedAt;
+
     public BatchPrediction withFinishedAt(OffsetDateTime finishedAt) {
         this.finishedAt = finishedAt;
         return this;
@@ -78,6 +84,7 @@ public class BatchPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataLocationS3")
     public String inputDataLocationS3;
+
     public BatchPrediction withInputDataLocationS3(String inputDataLocationS3) {
         this.inputDataLocationS3 = inputDataLocationS3;
         return this;
@@ -89,6 +96,7 @@ public class BatchPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvalidRecordCount")
     public Long invalidRecordCount;
+
     public BatchPrediction withInvalidRecordCount(Long invalidRecordCount) {
         this.invalidRecordCount = invalidRecordCount;
         return this;
@@ -99,6 +107,7 @@ public class BatchPrediction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public BatchPrediction withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -107,6 +116,7 @@ public class BatchPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public BatchPrediction withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
@@ -115,6 +125,7 @@ public class BatchPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public BatchPrediction withMessage(String message) {
         this.message = message;
         return this;
@@ -123,6 +134,7 @@ public class BatchPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public BatchPrediction withName(String name) {
         this.name = name;
         return this;
@@ -131,6 +143,7 @@ public class BatchPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputUri")
     public String outputUri;
+
     public BatchPrediction withOutputUri(String outputUri) {
         this.outputUri = outputUri;
         return this;
@@ -144,6 +157,7 @@ public class BatchPrediction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedAt")
     public OffsetDateTime startedAt;
+
     public BatchPrediction withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -152,6 +166,7 @@ public class BatchPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EntityStatusEnum status;
+
     public BatchPrediction withStatus(EntityStatusEnum status) {
         this.status = status;
         return this;
@@ -163,9 +178,11 @@ public class BatchPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalRecordCount")
     public Long totalRecordCount;
+
     public BatchPrediction withTotalRecordCount(Long totalRecordCount) {
         this.totalRecordCount = totalRecordCount;
         return this;
     }
     
+    public BatchPrediction(){}
 }

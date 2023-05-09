@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetfullnameparsedmatchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getfullnameparsedmatch200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetfullnameparsedmatchResponse.java
+docs/sdk/README.md
+docs/fullnameparsedsimilaritykey/README.md
 USAGE.md

@@ -16,32 +16,31 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.PostUsers2FALoginResponse;
+import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.shared.Users2FALoginRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hubAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
-            org.openapis.openapi.models.shared.Users2FALoginRequest req = new Users2FALoginRequest() {{
-                code = "123456";
-                login2faToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
-            }}            
+            org.openapis.openapi.models.shared.Users2FALoginRequest req = new Users2FALoginRequest("123456", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c");            
 
             PostUsers2FALoginResponse res = sdk.authentication.postUsers2FALogin(req);
 
-            if (res.postUsersLoginSuccessResponse.isPresent()) {
+            if (res.postUsersLoginSuccessResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -49,22 +48,22 @@ public class Application {
 ## Available Resources and Operations
 
 
-### authentication
+### [authentication](docs/authentication/README.md)
 
-* `postUsers2FALogin` - Second factor authentication.
-* `postUsersLogin` - Create an authentication token
+* [postUsers2FALogin](docs/authentication/README.md#postusers2falogin) - Second factor authentication.
+* [postUsersLogin](docs/authentication/README.md#postuserslogin) - Create an authentication token
 
-### discovery
+### [discovery](docs/discovery/README.md)
 
-* `getNamespace` - Get namespace
-* `getNamespaces` - Get namespaces and repos
+* [getNamespace](docs/discovery/README.md#getnamespace) - Get namespace
+* [getNamespaces](docs/discovery/README.md#getnamespaces) - Get namespaces and repos
 
-### namespaces
+### [namespaces](docs/namespaces/README.md)
 
-* `getNamespaceDataByTimespan` - Get namespace data for timespan
-* `getNamespaceTimespanMetadata` - Get namespace metadata for timespan
-* `getNamespaceTimespans` - Get timespans with data
-* `getNamespaceYears` - Get years with data
+* [getNamespaceDataByTimespan](docs/namespaces/README.md#getnamespacedatabytimespan) - Get namespace data for timespan
+* [getNamespaceTimespanMetadata](docs/namespaces/README.md#getnamespacetimespanmetadata) - Get namespace metadata for timespan
+* [getNamespaceTimespans](docs/namespaces/README.md#getnamespacetimespans) - Get timespans with data
+* [getNamespaceYears](docs/namespaces/README.md#getnamespaceyears) - Get years with data
 <!-- End SDK Available Operations -->
 
 ### Maturity

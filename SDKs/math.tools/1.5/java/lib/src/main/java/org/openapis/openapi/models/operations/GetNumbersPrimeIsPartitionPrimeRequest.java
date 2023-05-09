@@ -12,9 +12,11 @@ public class GetNumbersPrimeIsPartitionPrimeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public Long number;
+
     public GetNumbersPrimeIsPartitionPrimeRequest withNumber(Long number) {
         this.number = number;
         return this;
     }
     
+    public GetNumbersPrimeIsPartitionPrimeRequest(){}
 }

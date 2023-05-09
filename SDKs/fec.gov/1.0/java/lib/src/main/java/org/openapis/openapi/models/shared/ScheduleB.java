@@ -19,6 +19,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amendment_indicator")
     public String amendmentIndicator;
+
     public ScheduleB withAmendmentIndicator(String amendmentIndicator) {
         this.amendmentIndicator = amendmentIndicator;
         return this;
@@ -27,6 +28,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amendment_indicator_desc")
     public String amendmentIndicatorDesc;
+
     public ScheduleB withAmendmentIndicatorDesc(String amendmentIndicatorDesc) {
         this.amendmentIndicatorDesc = amendmentIndicatorDesc;
         return this;
@@ -35,6 +37,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("back_reference_schedule_id")
     public String backReferenceScheduleId;
+
     public ScheduleB withBackReferenceScheduleId(String backReferenceScheduleId) {
         this.backReferenceScheduleId = backReferenceScheduleId;
         return this;
@@ -43,6 +46,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("back_reference_transaction_id")
     public String backReferenceTransactionId;
+
     public ScheduleB withBackReferenceTransactionId(String backReferenceTransactionId) {
         this.backReferenceTransactionId = backReferenceTransactionId;
         return this;
@@ -51,6 +55,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beneficiary_committee_name")
     public String beneficiaryCommitteeName;
+
     public ScheduleB withBeneficiaryCommitteeName(String beneficiaryCommitteeName) {
         this.beneficiaryCommitteeName = beneficiaryCommitteeName;
         return this;
@@ -59,6 +64,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_first_name")
     public String candidateFirstName;
+
     public ScheduleB withCandidateFirstName(String candidateFirstName) {
         this.candidateFirstName = candidateFirstName;
         return this;
@@ -67,11 +73,18 @@ public class ScheduleB {
     /**
      * A unique identifier assigned to each candidate registered with the FEC.
      * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * First character indicates office - [P]residential, [H]ouse, [S]enate].
+     * Second character is the last digit of the two-year period the ID was created.
+     * Third and fourth is the candidate state. Presidential IDs don't have state.
+     * Fifth and sixth is the district when the candidate first ran. This does not change if the
+     * candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+     * The rest is sequence.
      * 
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     public String candidateId;
+
     public ScheduleB withCandidateId(String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -80,6 +93,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_last_name")
     public String candidateLastName;
+
     public ScheduleB withCandidateLastName(String candidateLastName) {
         this.candidateLastName = candidateLastName;
         return this;
@@ -88,6 +102,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_middle_name")
     public String candidateMiddleName;
+
     public ScheduleB withCandidateMiddleName(String candidateMiddleName) {
         this.candidateMiddleName = candidateMiddleName;
         return this;
@@ -99,6 +114,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_name")
     public String candidateName;
+
     public ScheduleB withCandidateName(String candidateName) {
         this.candidateName = candidateName;
         return this;
@@ -107,6 +123,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office")
     public String candidateOffice;
+
     public ScheduleB withCandidateOffice(String candidateOffice) {
         this.candidateOffice = candidateOffice;
         return this;
@@ -115,6 +132,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office_description")
     public String candidateOfficeDescription;
+
     public ScheduleB withCandidateOfficeDescription(String candidateOfficeDescription) {
         this.candidateOfficeDescription = candidateOfficeDescription;
         return this;
@@ -123,6 +141,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office_district")
     public String candidateOfficeDistrict;
+
     public ScheduleB withCandidateOfficeDistrict(String candidateOfficeDistrict) {
         this.candidateOfficeDistrict = candidateOfficeDistrict;
         return this;
@@ -131,6 +150,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office_state")
     public String candidateOfficeState;
+
     public ScheduleB withCandidateOfficeState(String candidateOfficeState) {
         this.candidateOfficeState = candidateOfficeState;
         return this;
@@ -139,6 +159,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_office_state_full")
     public String candidateOfficeStateFull;
+
     public ScheduleB withCandidateOfficeStateFull(String candidateOfficeStateFull) {
         this.candidateOfficeStateFull = candidateOfficeStateFull;
         return this;
@@ -147,6 +168,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_prefix")
     public String candidatePrefix;
+
     public ScheduleB withCandidatePrefix(String candidatePrefix) {
         this.candidatePrefix = candidatePrefix;
         return this;
@@ -155,6 +177,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_suffix")
     public String candidateSuffix;
+
     public ScheduleB withCandidateSuffix(String candidateSuffix) {
         this.candidateSuffix = candidateSuffix;
         return this;
@@ -163,6 +186,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_code")
     public String categoryCode;
+
     public ScheduleB withCategoryCode(String categoryCode) {
         this.categoryCode = categoryCode;
         return this;
@@ -171,6 +195,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_code_full")
     public String categoryCodeFull;
+
     public ScheduleB withCategoryCodeFull(String categoryCodeFull) {
         this.categoryCodeFull = categoryCodeFull;
         return this;
@@ -180,6 +205,7 @@ public class ScheduleB {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("comm_dt")
     public LocalDate commDt;
+
     public ScheduleB withCommDt(LocalDate commDt) {
         this.commDt = commDt;
         return this;
@@ -188,6 +214,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee")
     public CommitteeHistory committee;
+
     public ScheduleB withCommittee(CommitteeHistory committee) {
         this.committee = committee;
         return this;
@@ -200,6 +227,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_id")
     public String committeeId;
+
     public ScheduleB withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -208,6 +236,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conduit_committee_city")
     public String conduitCommitteeCity;
+
     public ScheduleB withConduitCommitteeCity(String conduitCommitteeCity) {
         this.conduitCommitteeCity = conduitCommitteeCity;
         return this;
@@ -216,6 +245,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conduit_committee_name")
     public String conduitCommitteeName;
+
     public ScheduleB withConduitCommitteeName(String conduitCommitteeName) {
         this.conduitCommitteeName = conduitCommitteeName;
         return this;
@@ -224,6 +254,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conduit_committee_state")
     public String conduitCommitteeState;
+
     public ScheduleB withConduitCommitteeState(String conduitCommitteeState) {
         this.conduitCommitteeState = conduitCommitteeState;
         return this;
@@ -232,6 +263,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conduit_committee_street1")
     public String conduitCommitteeStreet1;
+
     public ScheduleB withConduitCommitteeStreet1(String conduitCommitteeStreet1) {
         this.conduitCommitteeStreet1 = conduitCommitteeStreet1;
         return this;
@@ -240,6 +272,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conduit_committee_street2")
     public String conduitCommitteeStreet2;
+
     public ScheduleB withConduitCommitteeStreet2(String conduitCommitteeStreet2) {
         this.conduitCommitteeStreet2 = conduitCommitteeStreet2;
         return this;
@@ -248,6 +281,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conduit_committee_zip")
     public Integer conduitCommitteeZip;
+
     public ScheduleB withConduitCommitteeZip(Integer conduitCommitteeZip) {
         this.conduitCommitteeZip = conduitCommitteeZip;
         return this;
@@ -256,6 +290,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disbursement_amount")
     public Double disbursementAmount;
+
     public ScheduleB withDisbursementAmount(Double disbursementAmount) {
         this.disbursementAmount = disbursementAmount;
         return this;
@@ -265,6 +300,7 @@ public class ScheduleB {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("disbursement_date")
     public LocalDate disbursementDate;
+
     public ScheduleB withDisbursementDate(LocalDate disbursementDate) {
         this.disbursementDate = disbursementDate;
         return this;
@@ -273,6 +309,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disbursement_description")
     public String disbursementDescription;
+
     public ScheduleB withDisbursementDescription(String disbursementDescription) {
         this.disbursementDescription = disbursementDescription;
         return this;
@@ -281,6 +318,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disbursement_purpose_category")
     public String disbursementPurposeCategory;
+
     public ScheduleB withDisbursementPurposeCategory(String disbursementPurposeCategory) {
         this.disbursementPurposeCategory = disbursementPurposeCategory;
         return this;
@@ -289,6 +327,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disbursement_type")
     public String disbursementType;
+
     public ScheduleB withDisbursementType(String disbursementType) {
         this.disbursementType = disbursementType;
         return this;
@@ -297,6 +336,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disbursement_type_description")
     public String disbursementTypeDescription;
+
     public ScheduleB withDisbursementTypeDescription(String disbursementTypeDescription) {
         this.disbursementTypeDescription = disbursementTypeDescription;
         return this;
@@ -305,6 +345,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("election_type")
     public String electionType;
+
     public ScheduleB withElectionType(String electionType) {
         this.electionType = electionType;
         return this;
@@ -313,6 +354,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("election_type_full")
     public String electionTypeFull;
+
     public ScheduleB withElectionTypeFull(String electionTypeFull) {
         this.electionTypeFull = electionTypeFull;
         return this;
@@ -321,6 +363,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public String entityType;
+
     public ScheduleB withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
@@ -329,6 +372,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type_desc")
     public String entityTypeDesc;
+
     public ScheduleB withEntityTypeDesc(String entityTypeDesc) {
         this.entityTypeDesc = entityTypeDesc;
         return this;
@@ -337,6 +381,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fec_election_type_desc")
     public String fecElectionTypeDesc;
+
     public ScheduleB withFecElectionTypeDesc(String fecElectionTypeDesc) {
         this.fecElectionTypeDesc = fecElectionTypeDesc;
         return this;
@@ -345,6 +390,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fec_election_year")
     public String fecElectionYear;
+
     public ScheduleB withFecElectionYear(String fecElectionYear) {
         this.fecElectionYear = fecElectionYear;
         return this;
@@ -353,6 +399,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_number")
     public Integer fileNumber;
+
     public ScheduleB withFileNumber(Integer fileNumber) {
         this.fileNumber = fileNumber;
         return this;
@@ -361,6 +408,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filing_form")
     public String filingForm;
+
     public ScheduleB withFilingForm(String filingForm) {
         this.filingForm = filingForm;
         return this;
@@ -369,6 +417,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_number")
     public String imageNumber;
+
     public ScheduleB withImageNumber(String imageNumber) {
         this.imageNumber = imageNumber;
         return this;
@@ -377,6 +426,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line_number")
     public String lineNumber;
+
     public ScheduleB withLineNumber(String lineNumber) {
         this.lineNumber = lineNumber;
         return this;
@@ -385,6 +435,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line_number_label")
     public String lineNumberLabel;
+
     public ScheduleB withLineNumberLabel(String lineNumberLabel) {
         this.lineNumberLabel = lineNumberLabel;
         return this;
@@ -393,6 +444,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link_id")
     public Integer linkId;
+
     public ScheduleB withLinkId(Integer linkId) {
         this.linkId = linkId;
         return this;
@@ -403,6 +455,7 @@ public class ScheduleB {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("load_date")
     public OffsetDateTime loadDate;
+
     public ScheduleB withLoadDate(OffsetDateTime loadDate) {
         this.loadDate = loadDate;
         return this;
@@ -411,6 +464,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo_code")
     public String memoCode;
+
     public ScheduleB withMemoCode(String memoCode) {
         this.memoCode = memoCode;
         return this;
@@ -419,6 +473,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo_code_full")
     public String memoCodeFull;
+
     public ScheduleB withMemoCodeFull(String memoCodeFull) {
         this.memoCodeFull = memoCodeFull;
         return this;
@@ -427,6 +482,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo_text")
     public String memoText;
+
     public ScheduleB withMemoText(String memoText) {
         this.memoText = memoText;
         return this;
@@ -435,6 +491,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoed_subtotal")
     public Boolean memoedSubtotal;
+
     public ScheduleB withMemoedSubtotal(Boolean memoedSubtotal) {
         this.memoedSubtotal = memoedSubtotal;
         return this;
@@ -443,6 +500,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("national_committee_nonfederal_account")
     public String nationalCommitteeNonfederalAccount;
+
     public ScheduleB withNationalCommitteeNonfederalAccount(String nationalCommitteeNonfederalAccount) {
         this.nationalCommitteeNonfederalAccount = nationalCommitteeNonfederalAccount;
         return this;
@@ -451,6 +509,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_sub_id")
     public String originalSubId;
+
     public ScheduleB withOriginalSubId(String originalSubId) {
         this.originalSubId = originalSubId;
         return this;
@@ -459,6 +518,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_employer")
     public String payeeEmployer;
+
     public ScheduleB withPayeeEmployer(String payeeEmployer) {
         this.payeeEmployer = payeeEmployer;
         return this;
@@ -467,6 +527,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_first_name")
     public String payeeFirstName;
+
     public ScheduleB withPayeeFirstName(String payeeFirstName) {
         this.payeeFirstName = payeeFirstName;
         return this;
@@ -475,6 +536,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_last_name")
     public String payeeLastName;
+
     public ScheduleB withPayeeLastName(String payeeLastName) {
         this.payeeLastName = payeeLastName;
         return this;
@@ -483,6 +545,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_middle_name")
     public String payeeMiddleName;
+
     public ScheduleB withPayeeMiddleName(String payeeMiddleName) {
         this.payeeMiddleName = payeeMiddleName;
         return this;
@@ -491,6 +554,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_occupation")
     public String payeeOccupation;
+
     public ScheduleB withPayeeOccupation(String payeeOccupation) {
         this.payeeOccupation = payeeOccupation;
         return this;
@@ -499,6 +563,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_prefix")
     public String payeePrefix;
+
     public ScheduleB withPayeePrefix(String payeePrefix) {
         this.payeePrefix = payeePrefix;
         return this;
@@ -507,6 +572,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_suffix")
     public String payeeSuffix;
+
     public ScheduleB withPayeeSuffix(String payeeSuffix) {
         this.payeeSuffix = payeeSuffix;
         return this;
@@ -515,6 +581,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pdf_url")
     public String pdfUrl;
+
     public ScheduleB withPdfUrl(String pdfUrl) {
         this.pdfUrl = pdfUrl;
         return this;
@@ -523,6 +590,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient_city")
     public String recipientCity;
+
     public ScheduleB withRecipientCity(String recipientCity) {
         this.recipientCity = recipientCity;
         return this;
@@ -531,6 +599,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient_committee")
     public CommitteeHistory recipientCommittee;
+
     public ScheduleB withRecipientCommittee(CommitteeHistory recipientCommittee) {
         this.recipientCommittee = recipientCommittee;
         return this;
@@ -539,6 +608,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient_committee_id")
     public String recipientCommitteeId;
+
     public ScheduleB withRecipientCommitteeId(String recipientCommitteeId) {
         this.recipientCommitteeId = recipientCommitteeId;
         return this;
@@ -547,6 +617,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient_name")
     public String recipientName;
+
     public ScheduleB withRecipientName(String recipientName) {
         this.recipientName = recipientName;
         return this;
@@ -555,6 +626,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient_state")
     public String recipientState;
+
     public ScheduleB withRecipientState(String recipientState) {
         this.recipientState = recipientState;
         return this;
@@ -563,6 +635,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient_zip")
     public String recipientZip;
+
     public ScheduleB withRecipientZip(String recipientZip) {
         this.recipientZip = recipientZip;
         return this;
@@ -571,6 +644,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ref_disp_excess_flg")
     public String refDispExcessFlg;
+
     public ScheduleB withRefDispExcessFlg(String refDispExcessFlg) {
         this.refDispExcessFlg = refDispExcessFlg;
         return this;
@@ -632,6 +706,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_type")
     public String reportType;
+
     public ScheduleB withReportType(String reportType) {
         this.reportType = reportType;
         return this;
@@ -647,6 +722,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_year")
     public Integer reportYear;
+
     public ScheduleB withReportYear(Integer reportYear) {
         this.reportYear = reportYear;
         return this;
@@ -655,6 +731,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule_type")
     public String scheduleType;
+
     public ScheduleB withScheduleType(String scheduleType) {
         this.scheduleType = scheduleType;
         return this;
@@ -663,6 +740,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule_type_full")
     public String scheduleTypeFull;
+
     public ScheduleB withScheduleTypeFull(String scheduleTypeFull) {
         this.scheduleTypeFull = scheduleTypeFull;
         return this;
@@ -671,6 +749,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("semi_annual_bundled_refund")
     public Double semiAnnualBundledRefund;
+
     public ScheduleB withSemiAnnualBundledRefund(Double semiAnnualBundledRefund) {
         this.semiAnnualBundledRefund = semiAnnualBundledRefund;
         return this;
@@ -679,6 +758,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spender_committee_designation")
     public String spenderCommitteeDesignation;
+
     public ScheduleB withSpenderCommitteeDesignation(String spenderCommitteeDesignation) {
         this.spenderCommitteeDesignation = spenderCommitteeDesignation;
         return this;
@@ -687,6 +767,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spender_committee_org_type")
     public String spenderCommitteeOrgType;
+
     public ScheduleB withSpenderCommitteeOrgType(String spenderCommitteeOrgType) {
         this.spenderCommitteeOrgType = spenderCommitteeOrgType;
         return this;
@@ -695,6 +776,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spender_committee_type")
     public String spenderCommitteeType;
+
     public ScheduleB withSpenderCommitteeType(String spenderCommitteeType) {
         this.spenderCommitteeType = spenderCommitteeType;
         return this;
@@ -703,6 +785,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_id")
     public String subId;
+
     public ScheduleB withSubId(String subId) {
         this.subId = subId;
         return this;
@@ -711,6 +794,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_id")
     public String transactionId;
+
     public ScheduleB withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -729,6 +813,7 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("two_year_transaction_period")
     public Integer twoYearTransactionPeriod;
+
     public ScheduleB withTwoYearTransactionPeriod(Integer twoYearTransactionPeriod) {
         this.twoYearTransactionPeriod = twoYearTransactionPeriod;
         return this;
@@ -737,9 +822,11 @@ public class ScheduleB {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unused_recipient_committee_id")
     public String unusedRecipientCommitteeId;
+
     public ScheduleB withUnusedRecipientCommitteeId(String unusedRecipientCommitteeId) {
         this.unusedRecipientCommitteeId = unusedRecipientCommitteeId;
         return this;
     }
     
+    public ScheduleB(){}
 }

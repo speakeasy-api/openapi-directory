@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InputDataConfig {
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public InputDataConfig withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -21,6 +22,7 @@ public class InputDataConfig {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public InputDataConfig withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
@@ -29,9 +31,14 @@ public class InputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TuningDataS3Uri")
     public String tuningDataS3Uri;
+
     public InputDataConfig withTuningDataS3Uri(String tuningDataS3Uri) {
         this.tuningDataS3Uri = tuningDataS3Uri;
         return this;
     }
     
+    public InputDataConfig(@JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("S3Uri") String s3Uri) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.s3Uri = s3Uri;
+  }
 }

@@ -15,6 +15,7 @@ public class ListProductSubscriptionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public org.openapis.openapi.models.shared.Filter[] filters;
+
     public ListProductSubscriptionsRequestBody withFilters(org.openapis.openapi.models.shared.Filter[] filters) {
         this.filters = filters;
         return this;
@@ -25,6 +26,7 @@ public class ListProductSubscriptionsRequestBody {
      */
     @JsonProperty("IdentityProvider")
     public ListProductSubscriptionsRequestBodyIdentityProvider identityProvider;
+
     public ListProductSubscriptionsRequestBody withIdentityProvider(ListProductSubscriptionsRequestBodyIdentityProvider identityProvider) {
         this.identityProvider = identityProvider;
         return this;
@@ -36,6 +38,7 @@ public class ListProductSubscriptionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListProductSubscriptionsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -47,6 +50,7 @@ public class ListProductSubscriptionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListProductSubscriptionsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -57,9 +61,14 @@ public class ListProductSubscriptionsRequestBody {
      */
     @JsonProperty("Product")
     public String product;
+
     public ListProductSubscriptionsRequestBody withProduct(String product) {
         this.product = product;
         return this;
     }
     
+    public ListProductSubscriptionsRequestBody(@JsonProperty("IdentityProvider") ListProductSubscriptionsRequestBodyIdentityProvider identityProvider, @JsonProperty("Product") String product) {
+        this.identityProvider = identityProvider;
+        this.product = product;
+  }
 }

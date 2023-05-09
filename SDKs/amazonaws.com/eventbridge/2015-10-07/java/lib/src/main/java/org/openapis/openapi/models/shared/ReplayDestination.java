@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReplayDestination {
     @JsonProperty("Arn")
     public String arn;
+
     public ReplayDestination withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,9 +23,13 @@ public class ReplayDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterArns")
     public String[] filterArns;
+
     public ReplayDestination withFilterArns(String[] filterArns) {
         this.filterArns = filterArns;
         return this;
     }
     
+    public ReplayDestination(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesSearchAds360Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeResources")
     public String[] attributeResources;
+
     public GoogleAdsSearchads360V0ResourcesSearchAds360Field withAttributeResources(String[] attributeResources) {
         this.attributeResources = attributeResources;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesSearchAds360Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public GoogleAdsSearchads360V0ResourcesSearchAds360FieldCategoryEnum category;
+
     public GoogleAdsSearchads360V0ResourcesSearchAds360Field withCategory(GoogleAdsSearchads360V0ResourcesSearchAds360FieldCategoryEnum category) {
         this.category = category;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0ResourcesSearchAds360Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public GoogleAdsSearchads360V0ResourcesSearchAds360FieldDataTypeEnum dataType;
+
     public GoogleAdsSearchads360V0ResourcesSearchAds360Field withDataType(GoogleAdsSearchads360V0ResourcesSearchAds360FieldDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAdsSearchads360V0ResourcesSearchAds360Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enumValues")
     public String[] enumValues;
+
     public GoogleAdsSearchads360V0ResourcesSearchAds360Field withEnumValues(String[] enumValues) {
         this.enumValues = enumValues;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAdsSearchads360V0ResourcesSearchAds360Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterable")
     public Boolean filterable;
+
     public GoogleAdsSearchads360V0ResourcesSearchAds360Field withFilterable(Boolean filterable) {
         this.filterable = filterable;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAdsSearchads360V0ResourcesSearchAds360Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRepeated")
     public Boolean isRepeated;
+
     public GoogleAdsSearchads360V0ResourcesSearchAds360Field withIsRepeated(Boolean isRepeated) {
         this.isRepeated = isRepeated;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAdsSearchads360V0ResourcesSearchAds360Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public String[] metrics;
+
     public GoogleAdsSearchads360V0ResourcesSearchAds360Field withMetrics(String[] metrics) {
         this.metrics = metrics;
         return this;
@@ -95,6 +102,7 @@ public class GoogleAdsSearchads360V0ResourcesSearchAds360Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAdsSearchads360V0ResourcesSearchAds360Field withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class GoogleAdsSearchads360V0ResourcesSearchAds360Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GoogleAdsSearchads360V0ResourcesSearchAds360Field withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -117,6 +126,7 @@ public class GoogleAdsSearchads360V0ResourcesSearchAds360Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segments")
     public String[] segments;
+
     public GoogleAdsSearchads360V0ResourcesSearchAds360Field withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -128,6 +138,7 @@ public class GoogleAdsSearchads360V0ResourcesSearchAds360Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectable")
     public Boolean selectable;
+
     public GoogleAdsSearchads360V0ResourcesSearchAds360Field withSelectable(Boolean selectable) {
         this.selectable = selectable;
         return this;
@@ -139,6 +150,7 @@ public class GoogleAdsSearchads360V0ResourcesSearchAds360Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectableWith")
     public String[] selectableWith;
+
     public GoogleAdsSearchads360V0ResourcesSearchAds360Field withSelectableWith(String[] selectableWith) {
         this.selectableWith = selectableWith;
         return this;
@@ -150,6 +162,7 @@ public class GoogleAdsSearchads360V0ResourcesSearchAds360Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortable")
     public Boolean sortable;
+
     public GoogleAdsSearchads360V0ResourcesSearchAds360Field withSortable(Boolean sortable) {
         this.sortable = sortable;
         return this;
@@ -161,9 +174,11 @@ public class GoogleAdsSearchads360V0ResourcesSearchAds360Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeUrl")
     public String typeUrl;
+
     public GoogleAdsSearchads360V0ResourcesSearchAds360Field withTypeUrl(String typeUrl) {
         this.typeUrl = typeUrl;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesSearchAds360Field(){}
 }

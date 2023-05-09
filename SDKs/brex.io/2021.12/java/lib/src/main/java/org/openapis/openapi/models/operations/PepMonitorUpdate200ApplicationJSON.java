@@ -17,6 +17,7 @@ public class PepMonitorUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public PepMonitorUpdate200ApplicationJSON withActive(Boolean active) {
         this.active = active;
         return this;
@@ -25,6 +26,7 @@ public class PepMonitorUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseId")
     public String caseId;
+
     public PepMonitorUpdate200ApplicationJSON withCaseId(String caseId) {
         this.caseId = caseId;
         return this;
@@ -34,6 +36,7 @@ public class PepMonitorUpdate200ApplicationJSON {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("created")
     public LocalDate created;
+
     public PepMonitorUpdate200ApplicationJSON withCreated(LocalDate created) {
         this.created = created;
         return this;
@@ -42,6 +45,7 @@ public class PepMonitorUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public PepMonitorUpdate200ApplicationJSON withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -50,6 +54,7 @@ public class PepMonitorUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structured")
     public String structured;
+
     public PepMonitorUpdate200ApplicationJSON withStructured(String structured) {
         this.structured = structured;
         return this;
@@ -58,6 +63,7 @@ public class PepMonitorUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated")
     public String updated;
+
     public PepMonitorUpdate200ApplicationJSON withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -66,9 +72,11 @@ public class PepMonitorUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook")
     public String webhook;
+
     public PepMonitorUpdate200ApplicationJSON withWebhook(String webhook) {
         this.webhook = webhook;
         return this;
     }
     
+    public PepMonitorUpdate200ApplicationJSON(){}
 }

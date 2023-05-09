@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PointPointDailyAfternoonData {
     @JsonProperty("cloud_cover")
     public PointPointDailyAfternoonCloudCoverData cloudCover;
+
     public PointPointDailyAfternoonData withCloudCover(PointPointDailyAfternoonCloudCoverData cloudCover) {
         this.cloudCover = cloudCover;
         return this;
@@ -22,6 +23,7 @@ public class PointPointDailyAfternoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dew_point")
     public Double dewPoint;
+
     public PointPointDailyAfternoonData withDewPoint(Double dewPoint) {
         this.dewPoint = dewPoint;
         return this;
@@ -33,6 +35,7 @@ public class PointPointDailyAfternoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feels_like")
     public Double feelsLike;
+
     public PointPointDailyAfternoonData withFeelsLike(Double feelsLike) {
         this.feelsLike = feelsLike;
         return this;
@@ -45,6 +48,7 @@ public class PointPointDailyAfternoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humidity")
     public Long humidity;
+
     public PointPointDailyAfternoonData withHumidity(Long humidity) {
         this.humidity = humidity;
         return this;
@@ -95,6 +99,7 @@ public class PointPointDailyAfternoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public Long icon;
+
     public PointPointDailyAfternoonData withIcon(Long icon) {
         this.icon = icon;
         return this;
@@ -107,6 +112,7 @@ public class PointPointDailyAfternoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ozone")
     public Double ozone;
+
     public PointPointDailyAfternoonData withOzone(Double ozone) {
         this.ozone = ozone;
         return this;
@@ -114,6 +120,7 @@ public class PointPointDailyAfternoonData {
     
     @JsonProperty("precipitation")
     public PointPointDailyAfternoonPrecipitationData precipitation;
+
     public PointPointDailyAfternoonData withPrecipitation(PointPointDailyAfternoonPrecipitationData precipitation) {
         this.precipitation = precipitation;
         return this;
@@ -126,6 +133,7 @@ public class PointPointDailyAfternoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pressure")
     public Double pressure;
+
     public PointPointDailyAfternoonData withPressure(Double pressure) {
         this.pressure = pressure;
         return this;
@@ -133,6 +141,7 @@ public class PointPointDailyAfternoonData {
     
     @JsonProperty("probability")
     public PointPointDailyAfternoonProbData probability;
+
     public PointPointDailyAfternoonData withProbability(PointPointDailyAfternoonProbData probability) {
         this.probability = probability;
         return this;
@@ -145,6 +154,7 @@ public class PointPointDailyAfternoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snow_depth")
     public Double snowDepth;
+
     public PointPointDailyAfternoonData withSnowDepth(Double snowDepth) {
         this.snowDepth = snowDepth;
         return this;
@@ -156,6 +166,7 @@ public class PointPointDailyAfternoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("soil_temperature")
     public Double soilTemperature;
+
     public PointPointDailyAfternoonData withSoilTemperature(Double soilTemperature) {
         this.soilTemperature = soilTemperature;
         return this;
@@ -167,6 +178,7 @@ public class PointPointDailyAfternoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surface_temperature")
     public Double surfaceTemperature;
+
     public PointPointDailyAfternoonData withSurfaceTemperature(Double surfaceTemperature) {
         this.surfaceTemperature = surfaceTemperature;
         return this;
@@ -179,6 +191,7 @@ public class PointPointDailyAfternoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature")
     public Double temperature;
+
     public PointPointDailyAfternoonData withTemperature(Double temperature) {
         this.temperature = temperature;
         return this;
@@ -191,6 +204,7 @@ public class PointPointDailyAfternoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public Double visibility;
+
     public PointPointDailyAfternoonData withVisibility(Double visibility) {
         this.visibility = visibility;
         return this;
@@ -202,6 +216,7 @@ public class PointPointDailyAfternoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weather")
     public String weather;
+
     public PointPointDailyAfternoonData withWeather(String weather) {
         this.weather = weather;
         return this;
@@ -209,6 +224,7 @@ public class PointPointDailyAfternoonData {
     
     @JsonProperty("wind")
     public PointPointDailyAfternoonWindData wind;
+
     public PointPointDailyAfternoonData withWind(PointPointDailyAfternoonWindData wind) {
         this.wind = wind;
         return this;
@@ -221,9 +237,16 @@ public class PointPointDailyAfternoonData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wind_chill")
     public Double windChill;
+
     public PointPointDailyAfternoonData withWindChill(Double windChill) {
         this.windChill = windChill;
         return this;
     }
     
+    public PointPointDailyAfternoonData(@JsonProperty("cloud_cover") PointPointDailyAfternoonCloudCoverData cloudCover, @JsonProperty("precipitation") PointPointDailyAfternoonPrecipitationData precipitation, @JsonProperty("probability") PointPointDailyAfternoonProbData probability, @JsonProperty("wind") PointPointDailyAfternoonWindData wind) {
+        this.cloudCover = cloudCover;
+        this.precipitation = precipitation;
+        this.probability = probability;
+        this.wind = wind;
+  }
 }

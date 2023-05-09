@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ErrorsGroupErrorStackTraceDefaultApplicationJSON {
     @JsonProperty("error")
     public ErrorsGroupErrorStackTraceDefaultApplicationJSONError error;
+
     public ErrorsGroupErrorStackTraceDefaultApplicationJSON withError(ErrorsGroupErrorStackTraceDefaultApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public ErrorsGroupErrorStackTraceDefaultApplicationJSON(@JsonProperty("error") ErrorsGroupErrorStackTraceDefaultApplicationJSONError error) {
+        this.error = error;
+  }
 }

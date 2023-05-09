@@ -12,6 +12,7 @@ public class AnalyticsCrashGroupsTotalsRequestBodyCrashGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_version")
     public String appVersion;
+
     public AnalyticsCrashGroupsTotalsRequestBodyCrashGroups withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -20,9 +21,11 @@ public class AnalyticsCrashGroupsTotalsRequestBodyCrashGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crash_group_id")
     public String crashGroupId;
+
     public AnalyticsCrashGroupsTotalsRequestBodyCrashGroups withCrashGroupId(String crashGroupId) {
         this.crashGroupId = crashGroupId;
         return this;
     }
     
+    public AnalyticsCrashGroupsTotalsRequestBodyCrashGroups(){}
 }

@@ -15,6 +15,7 @@ public class AddTagsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public AddTagsOutput withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -23,9 +24,11 @@ public class AddTagsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public TaggableResourceTypeEnum resourceType;
+
     public AddTagsOutput withResourceType(TaggableResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public AddTagsOutput(){}
 }

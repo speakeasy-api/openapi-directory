@@ -12,6 +12,7 @@ public class CreateFlywheelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveModelArn")
     public String activeModelArn;
+
     public CreateFlywheelRequest withActiveModelArn(String activeModelArn) {
         this.activeModelArn = activeModelArn;
         return this;
@@ -20,6 +21,7 @@ public class CreateFlywheelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateFlywheelRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -27,6 +29,7 @@ public class CreateFlywheelRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public CreateFlywheelRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -34,6 +37,7 @@ public class CreateFlywheelRequest {
     
     @JsonProperty("DataLakeS3Uri")
     public String dataLakeS3Uri;
+
     public CreateFlywheelRequest withDataLakeS3Uri(String dataLakeS3Uri) {
         this.dataLakeS3Uri = dataLakeS3Uri;
         return this;
@@ -42,6 +46,7 @@ public class CreateFlywheelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSecurityConfig")
     public DataSecurityConfig dataSecurityConfig;
+
     public CreateFlywheelRequest withDataSecurityConfig(DataSecurityConfig dataSecurityConfig) {
         this.dataSecurityConfig = dataSecurityConfig;
         return this;
@@ -49,6 +54,7 @@ public class CreateFlywheelRequest {
     
     @JsonProperty("FlywheelName")
     public String flywheelName;
+
     public CreateFlywheelRequest withFlywheelName(String flywheelName) {
         this.flywheelName = flywheelName;
         return this;
@@ -57,6 +63,7 @@ public class CreateFlywheelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelType")
     public ModelTypeEnum modelType;
+
     public CreateFlywheelRequest withModelType(ModelTypeEnum modelType) {
         this.modelType = modelType;
         return this;
@@ -65,6 +72,7 @@ public class CreateFlywheelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateFlywheelRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -73,9 +81,15 @@ public class CreateFlywheelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskConfig")
     public TaskConfig taskConfig;
+
     public CreateFlywheelRequest withTaskConfig(TaskConfig taskConfig) {
         this.taskConfig = taskConfig;
         return this;
     }
     
+    public CreateFlywheelRequest(@JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("DataLakeS3Uri") String dataLakeS3Uri, @JsonProperty("FlywheelName") String flywheelName) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.dataLakeS3Uri = dataLakeS3Uri;
+        this.flywheelName = flywheelName;
+  }
 }

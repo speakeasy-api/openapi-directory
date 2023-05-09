@@ -15,9 +15,11 @@ public class DescribeCampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaign")
     public Campaign campaign;
+
     public DescribeCampaignResponse withCampaign(Campaign campaign) {
         this.campaign = campaign;
         return this;
     }
     
+    public DescribeCampaignResponse(){}
 }

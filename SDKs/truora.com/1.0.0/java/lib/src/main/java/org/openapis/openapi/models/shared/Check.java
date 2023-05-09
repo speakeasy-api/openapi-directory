@@ -23,6 +23,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birth_certificate")
     public String birthCertificate;
+
     public Check withBirthCertificate(String birthCertificate) {
         this.birthCertificate = birthCertificate;
         return this;
@@ -33,6 +34,7 @@ public class Check {
      */
     @JsonProperty("check_id")
     public String checkId;
+
     public Check withCheckId(String checkId) {
         this.checkId = checkId;
         return this;
@@ -44,6 +46,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_summary")
     public CompanySummary companySummary;
+
     public Check withCompanySummary(CompanySummary companySummary) {
         this.companySummary = companySummary;
         return this;
@@ -54,6 +57,7 @@ public class Check {
      */
     @JsonProperty("country")
     public CheckCountryEnum country;
+
     public Check withCountry(CheckCountryEnum country) {
         this.country = country;
         return this;
@@ -66,6 +70,7 @@ public class Check {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creation_date")
     public OffsetDateTime creationDate;
+
     public Check withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -79,6 +84,7 @@ public class Check {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_of_birth")
     public OffsetDateTime dateOfBirth;
+
     public Check withDateOfBirth(OffsetDateTime dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -90,6 +96,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diplomatic_id")
     public String diplomaticId;
+
     public Check withDiplomaticId(String diplomaticId) {
         this.diplomaticId = diplomaticId;
         return this;
@@ -101,6 +108,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driver_license")
     public String driverLicense;
+
     public Check withDriverLicense(String driverLicense) {
         this.driverLicense = driverLicense;
         return this;
@@ -112,6 +120,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public Check withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -123,6 +132,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("foreign_id")
     public String foreignId;
+
     public Check withForeignId(String foreignId) {
         this.foreignId = foreignId;
         return this;
@@ -134,6 +144,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homonym_probability")
     public Float homonymProbability;
+
     public Check withHomonymProbability(Float homonymProbability) {
         this.homonymProbability = homonymProbability;
         return this;
@@ -145,6 +156,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homonym_score")
     public Float homonymScore;
+
     public Check withHomonymScore(Float homonymScore) {
         this.homonymScore = homonymScore;
         return this;
@@ -156,6 +168,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homonym_scores")
     public Score[] homonymScores;
+
     public Check withHomonymScores(Score[] homonymScores) {
         this.homonymScores = homonymScores;
         return this;
@@ -166,6 +179,7 @@ public class Check {
      */
     @JsonProperty("id_score")
     public Float idScore;
+
     public Check withIdScore(Float idScore) {
         this.idScore = idScore;
         return this;
@@ -179,6 +193,7 @@ public class Check {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("issue_date")
     public OffsetDateTime issueDate;
+
     public Check withIssueDate(OffsetDateTime issueDate) {
         this.issueDate = issueDate;
         return this;
@@ -190,6 +205,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public Check withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -201,6 +217,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license_plate")
     public String licensePlate;
+
     public Check withLicensePlate(String licensePlate) {
         this.licensePlate = licensePlate;
         return this;
@@ -212,6 +229,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("national_id")
     public String nationalId;
+
     public Check withNationalId(String nationalId) {
         this.nationalId = nationalId;
         return this;
@@ -223,6 +241,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_country")
     public CheckNativeCountryEnum nativeCountry;
+
     public Check withNativeCountry(CheckNativeCountryEnum nativeCountry) {
         this.nativeCountry = nativeCountry;
         return this;
@@ -234,6 +253,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner_document_id")
     public String ownerDocumentId;
+
     public Check withOwnerDocumentId(String ownerDocumentId) {
         this.ownerDocumentId = ownerDocumentId;
         return this;
@@ -245,6 +265,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner_document_type")
     public String ownerDocumentType;
+
     public Check withOwnerDocumentType(String ownerDocumentType) {
         this.ownerDocumentType = ownerDocumentType;
         return this;
@@ -256,6 +277,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passport")
     public String passport;
+
     public Check withPassport(String passport) {
         this.passport = passport;
         return this;
@@ -267,6 +289,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_date")
     public String paymentDate;
+
     public Check withPaymentDate(String paymentDate) {
         this.paymentDate = paymentDate;
         return this;
@@ -278,6 +301,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pep")
     public String pep;
+
     public Check withPep(String pep) {
         this.pep = pep;
         return this;
@@ -289,6 +313,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public Check withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -300,6 +325,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("professional_card")
     public String professionalCard;
+
     public Check withProfessionalCard(String professionalCard) {
         this.professionalCard = professionalCard;
         return this;
@@ -311,6 +337,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ptp")
     public String ptp;
+
     public Check withPtp(String ptp) {
         this.ptp = ptp;
         return this;
@@ -323,6 +350,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public CheckRegionEnum region;
+
     public Check withRegion(CheckRegionEnum region) {
         this.region = region;
         return this;
@@ -334,6 +362,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_id")
     public String reportId;
+
     public Check withReportId(String reportId) {
         this.reportId = reportId;
         return this;
@@ -344,6 +373,7 @@ public class Check {
      */
     @JsonProperty("score")
     public Float score;
+
     public Check withScore(Float score) {
         this.score = score;
         return this;
@@ -355,6 +385,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scores")
     public Score[] scores;
+
     public Check withScores(Score[] scores) {
         this.scores = scores;
         return this;
@@ -365,6 +396,7 @@ public class Check {
      */
     @JsonProperty("status")
     public CheckStatusEnum status;
+
     public Check withStatus(CheckStatusEnum status) {
         this.status = status;
         return this;
@@ -375,6 +407,7 @@ public class Check {
      */
     @JsonProperty("statuses")
     public Status[] statuses;
+
     public Check withStatuses(Status[] statuses) {
         this.statuses = statuses;
         return this;
@@ -385,6 +418,7 @@ public class Check {
      */
     @JsonProperty("summary")
     public Summary summary;
+
     public Check withSummary(Summary summary) {
         this.summary = summary;
         return this;
@@ -396,6 +430,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_id")
     public String taxId;
+
     public Check withTaxId(String taxId) {
         this.taxId = taxId;
         return this;
@@ -406,6 +441,7 @@ public class Check {
      */
     @JsonProperty("type")
     public CheckTypeEnum type;
+
     public Check withType(CheckTypeEnum type) {
         this.type = type;
         return this;
@@ -419,6 +455,7 @@ public class Check {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("update_date")
     public OffsetDateTime updateDate;
+
     public Check withUpdateDate(OffsetDateTime updateDate) {
         this.updateDate = updateDate;
         return this;
@@ -430,6 +467,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vehicle_id")
     public String vehicleId;
+
     public Check withVehicleId(String vehicleId) {
         this.vehicleId = vehicleId;
         return this;
@@ -441,6 +479,7 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vehicle_summary")
     public VehicleSummary vehicleSummary;
+
     public Check withVehicleSummary(VehicleSummary vehicleSummary) {
         this.vehicleSummary = vehicleSummary;
         return this;
@@ -452,9 +491,21 @@ public class Check {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wrong_inputs")
     public WrongInput[] wrongInputs;
+
     public Check withWrongInputs(WrongInput[] wrongInputs) {
         this.wrongInputs = wrongInputs;
         return this;
     }
     
+    public Check(@JsonProperty("check_id") String checkId, @JsonProperty("country") CheckCountryEnum country, @JsonProperty("creation_date") OffsetDateTime creationDate, @JsonProperty("id_score") Float idScore, @JsonProperty("score") Float score, @JsonProperty("status") CheckStatusEnum status, @JsonProperty("statuses") Status[] statuses, @JsonProperty("summary") Summary summary, @JsonProperty("type") CheckTypeEnum type) {
+        this.checkId = checkId;
+        this.country = country;
+        this.creationDate = creationDate;
+        this.idScore = idScore;
+        this.score = score;
+        this.status = status;
+        this.statuses = statuses;
+        this.summary = summary;
+        this.type = type;
+  }
 }

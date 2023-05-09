@@ -15,9 +15,13 @@ public class PatientHealthResultResourceRelationshipsPatientDataMeta {
      */
     @JsonProperty("query")
     public PatientHealthResultResourceRelationshipsPatientDataMetaQuery query;
+
     public PatientHealthResultResourceRelationshipsPatientDataMeta withQuery(PatientHealthResultResourceRelationshipsPatientDataMetaQuery query) {
         this.query = query;
         return this;
     }
     
+    public PatientHealthResultResourceRelationshipsPatientDataMeta(@JsonProperty("query") PatientHealthResultResourceRelationshipsPatientDataMetaQuery query) {
+        this.query = query;
+  }
 }

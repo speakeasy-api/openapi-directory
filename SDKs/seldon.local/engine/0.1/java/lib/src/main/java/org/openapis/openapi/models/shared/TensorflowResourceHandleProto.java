@@ -18,6 +18,7 @@ public class TensorflowResourceHandleProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("container")
     public String container;
+
     public TensorflowResourceHandleProto withContainer(String container) {
         this.container = container;
         return this;
@@ -29,6 +30,7 @@ public class TensorflowResourceHandleProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public String device;
+
     public TensorflowResourceHandleProto withDevice(String device) {
         this.device = device;
         return this;
@@ -40,6 +42,7 @@ public class TensorflowResourceHandleProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash_code")
     public String hashCode;
+
     public TensorflowResourceHandleProto withHashCode(String hashCode) {
         this.hashCode = hashCode;
         return this;
@@ -51,6 +54,7 @@ public class TensorflowResourceHandleProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maybe_type_name")
     public String maybeTypeName;
+
     public TensorflowResourceHandleProto withMaybeTypeName(String maybeTypeName) {
         this.maybeTypeName = maybeTypeName;
         return this;
@@ -62,9 +66,11 @@ public class TensorflowResourceHandleProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TensorflowResourceHandleProto withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TensorflowResourceHandleProto(){}
 }

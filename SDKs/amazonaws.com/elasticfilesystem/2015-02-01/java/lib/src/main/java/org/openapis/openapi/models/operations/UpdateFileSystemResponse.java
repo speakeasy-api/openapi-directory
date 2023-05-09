@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFileSystemResponse {
@@ -12,6 +13,7 @@ public class UpdateFileSystemResponse {
      */
     
     public Object badRequest;
+
     public UpdateFileSystemResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFileSystemResponse {
     
     
     public String contentType;
+
     public UpdateFileSystemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFileSystemResponse {
      */
     
     public org.openapis.openapi.models.shared.FileSystemDescription fileSystemDescription;
+
     public UpdateFileSystemResponse withFileSystemDescription(org.openapis.openapi.models.shared.FileSystemDescription fileSystemDescription) {
         this.fileSystemDescription = fileSystemDescription;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFileSystemResponse {
      */
     
     public Object fileSystemNotFound;
+
     public UpdateFileSystemResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFileSystemResponse {
      */
     
     public Object incorrectFileSystemLifeCycleState;
+
     public UpdateFileSystemResponse withIncorrectFileSystemLifeCycleState(Object incorrectFileSystemLifeCycleState) {
         this.incorrectFileSystemLifeCycleState = incorrectFileSystemLifeCycleState;
         return this;
@@ -59,6 +65,7 @@ public class UpdateFileSystemResponse {
      */
     
     public Object insufficientThroughputCapacity;
+
     public UpdateFileSystemResponse withInsufficientThroughputCapacity(Object insufficientThroughputCapacity) {
         this.insufficientThroughputCapacity = insufficientThroughputCapacity;
         return this;
@@ -69,6 +76,7 @@ public class UpdateFileSystemResponse {
      */
     
     public Object internalServerError;
+
     public UpdateFileSystemResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -76,6 +84,7 @@ public class UpdateFileSystemResponse {
     
     
     public Integer statusCode;
+
     public UpdateFileSystemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateFileSystemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFileSystemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateFileSystemResponse {
      */
     
     public Object throughputLimitExceeded;
+
     public UpdateFileSystemResponse withThroughputLimitExceeded(Object throughputLimitExceeded) {
         this.throughputLimitExceeded = throughputLimitExceeded;
         return this;
@@ -103,9 +114,14 @@ public class UpdateFileSystemResponse {
      */
     
     public Object tooManyRequests;
+
     public UpdateFileSystemResponse withTooManyRequests(Object tooManyRequests) {
         this.tooManyRequests = tooManyRequests;
         return this;
     }
     
+    public UpdateFileSystemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

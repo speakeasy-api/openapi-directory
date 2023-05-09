@@ -18,9 +18,11 @@ public class OtherRegionsSubscriptionOfferConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otherRegionsNewSubscriberAvailability")
     public Boolean otherRegionsNewSubscriberAvailability;
+
     public OtherRegionsSubscriptionOfferConfig withOtherRegionsNewSubscriberAvailability(Boolean otherRegionsNewSubscriberAvailability) {
         this.otherRegionsNewSubscriberAvailability = otherRegionsNewSubscriberAvailability;
         return this;
     }
     
+    public OtherRegionsSubscriptionOfferConfig(){}
 }

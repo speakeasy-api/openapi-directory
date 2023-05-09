@@ -62,11 +62,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateResponse res = new org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateResponse() {{
+        org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateResponse res = new org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateResponse(contentType, httpRes.statusCode()) {{
             authorizedCertificate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesDeleteResponse res = new org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesDeleteResponse() {{
+        org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesDeleteResponse res = new org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesGetResponse res = new org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesGetResponse() {{
+        org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesGetResponse res = new org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesGetResponse(contentType, httpRes.statusCode()) {{
             authorizedCertificate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesListResponse res = new org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesListResponse() {{
+        org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesListResponse res = new org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesListResponse(contentType, httpRes.statusCode()) {{
             listAuthorizedCertificatesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesPatchResponse res = new org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesPatchResponse() {{
+        org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesPatchResponse res = new org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesPatchResponse(contentType, httpRes.statusCode()) {{
             authorizedCertificate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppengineAppsAuthorizedDomainsListResponse res = new org.openapis.openapi.models.operations.AppengineAppsAuthorizedDomainsListResponse() {{
+        org.openapis.openapi.models.operations.AppengineAppsAuthorizedDomainsListResponse res = new org.openapis.openapi.models.operations.AppengineAppsAuthorizedDomainsListResponse(contentType, httpRes.statusCode()) {{
             listAuthorizedDomainsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppengineAppsDomainMappingsCreateResponse res = new org.openapis.openapi.models.operations.AppengineAppsDomainMappingsCreateResponse() {{
+        org.openapis.openapi.models.operations.AppengineAppsDomainMappingsCreateResponse res = new org.openapis.openapi.models.operations.AppengineAppsDomainMappingsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppengineAppsDomainMappingsDeleteResponse res = new org.openapis.openapi.models.operations.AppengineAppsDomainMappingsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AppengineAppsDomainMappingsDeleteResponse res = new org.openapis.openapi.models.operations.AppengineAppsDomainMappingsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -434,11 +418,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppengineAppsDomainMappingsGetResponse res = new org.openapis.openapi.models.operations.AppengineAppsDomainMappingsGetResponse() {{
+        org.openapis.openapi.models.operations.AppengineAppsDomainMappingsGetResponse res = new org.openapis.openapi.models.operations.AppengineAppsDomainMappingsGetResponse(contentType, httpRes.statusCode()) {{
             domainMapping = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -480,11 +462,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppengineAppsDomainMappingsListResponse res = new org.openapis.openapi.models.operations.AppengineAppsDomainMappingsListResponse() {{
+        org.openapis.openapi.models.operations.AppengineAppsDomainMappingsListResponse res = new org.openapis.openapi.models.operations.AppengineAppsDomainMappingsListResponse(contentType, httpRes.statusCode()) {{
             listDomainMappingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -528,11 +508,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppengineAppsDomainMappingsPatchResponse res = new org.openapis.openapi.models.operations.AppengineAppsDomainMappingsPatchResponse() {{
+        org.openapis.openapi.models.operations.AppengineAppsDomainMappingsPatchResponse res = new org.openapis.openapi.models.operations.AppengineAppsDomainMappingsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -574,11 +552,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppengineAppsLocationsGetResponse res = new org.openapis.openapi.models.operations.AppengineAppsLocationsGetResponse() {{
+        org.openapis.openapi.models.operations.AppengineAppsLocationsGetResponse res = new org.openapis.openapi.models.operations.AppengineAppsLocationsGetResponse(contentType, httpRes.statusCode()) {{
             location = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -620,11 +596,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppengineAppsLocationsListResponse res = new org.openapis.openapi.models.operations.AppengineAppsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.AppengineAppsLocationsListResponse res = new org.openapis.openapi.models.operations.AppengineAppsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -666,11 +640,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppengineAppsOperationsGetResponse res = new org.openapis.openapi.models.operations.AppengineAppsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.AppengineAppsOperationsGetResponse res = new org.openapis.openapi.models.operations.AppengineAppsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -712,11 +684,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppengineAppsOperationsListResponse res = new org.openapis.openapi.models.operations.AppengineAppsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.AppengineAppsOperationsListResponse res = new org.openapis.openapi.models.operations.AppengineAppsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class SendMessageRequestBody4FileMessenger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public SendMessageRequestBody4FileMessengerCategoryEnum category;
+
     public SendMessageRequestBody4FileMessenger withCategory(SendMessageRequestBody4FileMessengerCategoryEnum category) {
         this.category = category;
         return this;
@@ -26,9 +27,11 @@ public class SendMessageRequestBody4FileMessenger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public SendMessageRequestBody4FileMessenger withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public SendMessageRequestBody4FileMessenger(){}
 }

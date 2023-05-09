@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1EntityCompatibilityStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigquery")
     public GoogleCloudDataplexV1EntityCompatibilityStatusCompatibility bigquery;
+
     public GoogleCloudDataplexV1EntityCompatibilityStatus withBigquery(GoogleCloudDataplexV1EntityCompatibilityStatusCompatibility bigquery) {
         this.bigquery = bigquery;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1EntityCompatibilityStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiveMetastore")
     public GoogleCloudDataplexV1EntityCompatibilityStatusCompatibility hiveMetastore;
+
     public GoogleCloudDataplexV1EntityCompatibilityStatus withHiveMetastore(GoogleCloudDataplexV1EntityCompatibilityStatusCompatibility hiveMetastore) {
         this.hiveMetastore = hiveMetastore;
         return this;
     }
     
+    public GoogleCloudDataplexV1EntityCompatibilityStatus(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDisableEbsEncryptionByDefaultResponse {
     
     public byte[] body;
+
     public GETDisableEbsEncryptionByDefaultResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDisableEbsEncryptionByDefaultResponse {
     
     
     public String contentType;
+
     public GETDisableEbsEncryptionByDefaultResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDisableEbsEncryptionByDefaultResponse {
     
     
     public Integer statusCode;
+
     public GETDisableEbsEncryptionByDefaultResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDisableEbsEncryptionByDefaultResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDisableEbsEncryptionByDefaultResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDisableEbsEncryptionByDefaultResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

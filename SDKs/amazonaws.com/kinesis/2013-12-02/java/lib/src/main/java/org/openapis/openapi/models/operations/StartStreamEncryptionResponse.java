@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartStreamEncryptionResponse {
@@ -12,6 +13,7 @@ public class StartStreamEncryptionResponse {
      */
     
     public Object accessDeniedException;
+
     public StartStreamEncryptionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartStreamEncryptionResponse {
     
     
     public String contentType;
+
     public StartStreamEncryptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartStreamEncryptionResponse {
      */
     
     public Object invalidArgumentException;
+
     public StartStreamEncryptionResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class StartStreamEncryptionResponse {
      */
     
     public Object kmsAccessDeniedException;
+
     public StartStreamEncryptionResponse withKMSAccessDeniedException(Object kmsAccessDeniedException) {
         this.kmsAccessDeniedException = kmsAccessDeniedException;
         return this;
@@ -49,6 +54,7 @@ public class StartStreamEncryptionResponse {
      */
     
     public Object kmsDisabledException;
+
     public StartStreamEncryptionResponse withKMSDisabledException(Object kmsDisabledException) {
         this.kmsDisabledException = kmsDisabledException;
         return this;
@@ -59,6 +65,7 @@ public class StartStreamEncryptionResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public StartStreamEncryptionResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -69,6 +76,7 @@ public class StartStreamEncryptionResponse {
      */
     
     public Object kmsNotFoundException;
+
     public StartStreamEncryptionResponse withKMSNotFoundException(Object kmsNotFoundException) {
         this.kmsNotFoundException = kmsNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class StartStreamEncryptionResponse {
      */
     
     public Object kmsOptInRequired;
+
     public StartStreamEncryptionResponse withKMSOptInRequired(Object kmsOptInRequired) {
         this.kmsOptInRequired = kmsOptInRequired;
         return this;
@@ -89,6 +98,7 @@ public class StartStreamEncryptionResponse {
      */
     
     public Object kmsThrottlingException;
+
     public StartStreamEncryptionResponse withKMSThrottlingException(Object kmsThrottlingException) {
         this.kmsThrottlingException = kmsThrottlingException;
         return this;
@@ -99,6 +109,7 @@ public class StartStreamEncryptionResponse {
      */
     
     public Object limitExceededException;
+
     public StartStreamEncryptionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -109,6 +120,7 @@ public class StartStreamEncryptionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartStreamEncryptionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -116,6 +128,7 @@ public class StartStreamEncryptionResponse {
     
     
     public Integer statusCode;
+
     public StartStreamEncryptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class StartStreamEncryptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartStreamEncryptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,9 +147,14 @@ public class StartStreamEncryptionResponse {
      */
     
     public Object resourceInUseException;
+
     public StartStreamEncryptionResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
     }
     
+    public StartStreamEncryptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddInstanceFleetInput {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public AddInstanceFleetInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -16,9 +17,14 @@ public class AddInstanceFleetInput {
     
     @JsonProperty("InstanceFleet")
     public InstanceFleetConfig instanceFleet;
+
     public AddInstanceFleetInput withInstanceFleet(InstanceFleetConfig instanceFleet) {
         this.instanceFleet = instanceFleet;
         return this;
     }
     
+    public AddInstanceFleetInput(@JsonProperty("ClusterId") String clusterId, @JsonProperty("InstanceFleet") InstanceFleetConfig instanceFleet) {
+        this.clusterId = clusterId;
+        this.instanceFleet = instanceFleet;
+  }
 }

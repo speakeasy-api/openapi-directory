@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProductSearchWhoBoughtAlsoBoughtResponse {
     
     public String contentType;
+
     public ProductSearchWhoBoughtAlsoBoughtResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ProductSearchWhoBoughtAlsoBoughtResponse {
      */
     
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSON[] productSearchWhoBoughtAlsoBought200ApplicationJSONObjects;
+
     public ProductSearchWhoBoughtAlsoBoughtResponse withProductSearchWhoBoughtAlsoBought200ApplicationJSONObjects(ProductSearchWhoBoughtAlsoBought200ApplicationJSON[] productSearchWhoBoughtAlsoBought200ApplicationJSONObjects) {
         this.productSearchWhoBoughtAlsoBought200ApplicationJSONObjects = productSearchWhoBoughtAlsoBought200ApplicationJSONObjects;
         return this;
@@ -26,6 +29,7 @@ public class ProductSearchWhoBoughtAlsoBoughtResponse {
     
     
     public Integer statusCode;
+
     public ProductSearchWhoBoughtAlsoBoughtResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ProductSearchWhoBoughtAlsoBoughtResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProductSearchWhoBoughtAlsoBoughtResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProductSearchWhoBoughtAlsoBoughtResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

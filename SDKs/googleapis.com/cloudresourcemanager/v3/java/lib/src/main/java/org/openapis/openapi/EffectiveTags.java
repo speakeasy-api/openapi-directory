@@ -58,11 +58,9 @@ public class EffectiveTags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerEffectiveTagsListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerEffectiveTagsListResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerEffectiveTagsListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerEffectiveTagsListResponse(contentType, httpRes.statusCode()) {{
             listEffectiveTagsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

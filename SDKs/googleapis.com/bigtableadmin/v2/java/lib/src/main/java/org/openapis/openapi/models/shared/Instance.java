@@ -18,6 +18,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Instance withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Instance withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Instance withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Instance withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public Instance withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -73,6 +78,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public InstanceStateEnum state;
+
     public Instance withState(InstanceStateEnum state) {
         this.state = state;
         return this;
@@ -84,9 +90,11 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public InstanceTypeEnum type;
+
     public Instance withType(InstanceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Instance(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateSpaceRequest {
     @JsonProperty("DomainId")
     public String domainId;
+
     public CreateSpaceRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -18,6 +19,7 @@ public class CreateSpaceRequest {
     
     @JsonProperty("SpaceName")
     public String spaceName;
+
     public CreateSpaceRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
@@ -26,6 +28,7 @@ public class CreateSpaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceSettings")
     public SpaceSettings spaceSettings;
+
     public CreateSpaceRequest withSpaceSettings(SpaceSettings spaceSettings) {
         this.spaceSettings = spaceSettings;
         return this;
@@ -34,9 +37,14 @@ public class CreateSpaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateSpaceRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSpaceRequest(@JsonProperty("DomainId") String domainId, @JsonProperty("SpaceName") String spaceName) {
+        this.domainId = domainId;
+        this.spaceName = spaceName;
+  }
 }

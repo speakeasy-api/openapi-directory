@@ -14,6 +14,7 @@ public class SourceCoreConfig {
      */
     @JsonProperty("connectionConfiguration")
     public Object connectionConfiguration;
+
     public SourceCoreConfig withConnectionConfiguration(Object connectionConfiguration) {
         this.connectionConfiguration = connectionConfiguration;
         return this;
@@ -21,6 +22,7 @@ public class SourceCoreConfig {
     
     @JsonProperty("sourceDefinitionId")
     public String sourceDefinitionId;
+
     public SourceCoreConfig withSourceDefinitionId(String sourceDefinitionId) {
         this.sourceDefinitionId = sourceDefinitionId;
         return this;
@@ -29,6 +31,7 @@ public class SourceCoreConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceId")
     public String sourceId;
+
     public SourceCoreConfig withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -36,9 +39,15 @@ public class SourceCoreConfig {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public SourceCoreConfig withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public SourceCoreConfig(@JsonProperty("connectionConfiguration") Object connectionConfiguration, @JsonProperty("sourceDefinitionId") String sourceDefinitionId, @JsonProperty("workspaceId") String workspaceId) {
+        this.connectionConfiguration = connectionConfiguration;
+        this.sourceDefinitionId = sourceDefinitionId;
+        this.workspaceId = workspaceId;
+  }
 }

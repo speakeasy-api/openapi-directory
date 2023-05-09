@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingCreativeFieldsUpdateResponse {
     
     public String contentType;
+
     public DfareportingCreativeFieldsUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DfareportingCreativeFieldsUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreativeField creativeField;
+
     public DfareportingCreativeFieldsUpdateResponse withCreativeField(org.openapis.openapi.models.shared.CreativeField creativeField) {
         this.creativeField = creativeField;
         return this;
@@ -26,6 +29,7 @@ public class DfareportingCreativeFieldsUpdateResponse {
     
     
     public Integer statusCode;
+
     public DfareportingCreativeFieldsUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingCreativeFieldsUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingCreativeFieldsUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DfareportingCreativeFieldsUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

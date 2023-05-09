@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWhatIfAnalysisResponse {
     
     public String contentType;
+
     public CreateWhatIfAnalysisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateWhatIfAnalysisResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWhatIfAnalysisResponse createWhatIfAnalysisResponse;
+
     public CreateWhatIfAnalysisResponse withCreateWhatIfAnalysisResponse(org.openapis.openapi.models.shared.CreateWhatIfAnalysisResponse createWhatIfAnalysisResponse) {
         this.createWhatIfAnalysisResponse = createWhatIfAnalysisResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateWhatIfAnalysisResponse {
      */
     
     public Object invalidInputException;
+
     public CreateWhatIfAnalysisResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateWhatIfAnalysisResponse {
      */
     
     public Object limitExceededException;
+
     public CreateWhatIfAnalysisResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateWhatIfAnalysisResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateWhatIfAnalysisResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class CreateWhatIfAnalysisResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateWhatIfAnalysisResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateWhatIfAnalysisResponse {
     
     
     public Integer statusCode;
+
     public CreateWhatIfAnalysisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateWhatIfAnalysisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWhatIfAnalysisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateWhatIfAnalysisResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateWhatIfAnalysisResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
     }
     
+    public CreateWhatIfAnalysisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

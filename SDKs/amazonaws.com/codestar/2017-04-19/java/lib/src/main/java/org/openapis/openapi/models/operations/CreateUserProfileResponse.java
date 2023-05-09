@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUserProfileResponse {
     
     public String contentType;
+
     public CreateUserProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateUserProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUserProfileResult createUserProfileResult;
+
     public CreateUserProfileResponse withCreateUserProfileResult(org.openapis.openapi.models.shared.CreateUserProfileResult createUserProfileResult) {
         this.createUserProfileResult = createUserProfileResult;
         return this;
@@ -26,6 +29,7 @@ public class CreateUserProfileResponse {
     
     
     public Integer statusCode;
+
     public CreateUserProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateUserProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUserProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateUserProfileResponse {
      */
     
     public Object userProfileAlreadyExistsException;
+
     public CreateUserProfileResponse withUserProfileAlreadyExistsException(Object userProfileAlreadyExistsException) {
         this.userProfileAlreadyExistsException = userProfileAlreadyExistsException;
         return this;
@@ -53,9 +59,14 @@ public class CreateUserProfileResponse {
      */
     
     public Object validationException;
+
     public CreateUserProfileResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateUserProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

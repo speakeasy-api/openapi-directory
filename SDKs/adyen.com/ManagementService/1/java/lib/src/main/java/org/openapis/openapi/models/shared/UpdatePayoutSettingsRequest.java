@@ -17,9 +17,11 @@ public class UpdatePayoutSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public UpdatePayoutSettingsRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public UpdatePayoutSettingsRequest(){}
 }

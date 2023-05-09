@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetweatherResponse {
     
     public String contentType;
+
     public GetweatherResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetweatherResponse {
     
     
     public Integer statusCode;
+
     public GetweatherResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetweatherResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetweatherResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetweatherResponse {
      */
     
     public Getweather200ApplicationJSON getweather200ApplicationJSONObject;
+
     public GetweatherResponse withGetweather200ApplicationJSONObject(Getweather200ApplicationJSON getweather200ApplicationJSONObject) {
         this.getweather200ApplicationJSONObject = getweather200ApplicationJSONObject;
         return this;
     }
     
+    public GetweatherResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

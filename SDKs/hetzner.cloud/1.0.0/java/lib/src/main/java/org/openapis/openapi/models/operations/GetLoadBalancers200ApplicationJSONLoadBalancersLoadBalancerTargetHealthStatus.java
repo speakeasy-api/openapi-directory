@@ -12,6 +12,7 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetHe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listen_port")
     public Long listenPort;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetHealthStatus withListenPort(Long listenPort) {
         this.listenPort = listenPort;
         return this;
@@ -20,9 +21,11 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetHe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetHealthStatusStatusEnum status;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetHealthStatus withStatus(GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetHealthStatusStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetHealthStatus(){}
 }

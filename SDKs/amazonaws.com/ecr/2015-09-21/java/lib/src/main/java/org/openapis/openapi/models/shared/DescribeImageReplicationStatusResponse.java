@@ -18,6 +18,7 @@ public class DescribeImageReplicationStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageId")
     public ImageIdentifier imageId;
+
     public DescribeImageReplicationStatusResponse withImageId(ImageIdentifier imageId) {
         this.imageId = imageId;
         return this;
@@ -26,6 +27,7 @@ public class DescribeImageReplicationStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationStatuses")
     public ImageReplicationStatus[] replicationStatuses;
+
     public DescribeImageReplicationStatusResponse withReplicationStatuses(ImageReplicationStatus[] replicationStatuses) {
         this.replicationStatuses = replicationStatuses;
         return this;
@@ -34,9 +36,11 @@ public class DescribeImageReplicationStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public DescribeImageReplicationStatusResponse withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public DescribeImageReplicationStatusResponse(){}
 }

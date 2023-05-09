@@ -15,6 +15,7 @@ public class ScalingAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Market")
     public MarketTypeEnum market;
+
     public ScalingAction withMarket(MarketTypeEnum market) {
         this.market = market;
         return this;
@@ -22,9 +23,13 @@ public class ScalingAction {
     
     @JsonProperty("SimpleScalingPolicyConfiguration")
     public SimpleScalingPolicyConfiguration simpleScalingPolicyConfiguration;
+
     public ScalingAction withSimpleScalingPolicyConfiguration(SimpleScalingPolicyConfiguration simpleScalingPolicyConfiguration) {
         this.simpleScalingPolicyConfiguration = simpleScalingPolicyConfiguration;
         return this;
     }
     
+    public ScalingAction(@JsonProperty("SimpleScalingPolicyConfiguration") SimpleScalingPolicyConfiguration simpleScalingPolicyConfiguration) {
+        this.simpleScalingPolicyConfiguration = simpleScalingPolicyConfiguration;
+  }
 }

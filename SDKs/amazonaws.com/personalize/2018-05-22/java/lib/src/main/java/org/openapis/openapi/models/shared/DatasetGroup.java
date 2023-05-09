@@ -22,6 +22,7 @@ public class DatasetGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public DatasetGroup withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class DatasetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public DatasetGroup withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -38,6 +40,7 @@ public class DatasetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public DomainEnum domain;
+
     public DatasetGroup withDomain(DomainEnum domain) {
         this.domain = domain;
         return this;
@@ -46,6 +49,7 @@ public class DatasetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public DatasetGroup withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -54,6 +58,7 @@ public class DatasetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public DatasetGroup withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -64,6 +69,7 @@ public class DatasetGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public DatasetGroup withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -72,6 +78,7 @@ public class DatasetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DatasetGroup withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +87,7 @@ public class DatasetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DatasetGroup withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -88,9 +96,11 @@ public class DatasetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public DatasetGroup withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DatasetGroup(){}
 }

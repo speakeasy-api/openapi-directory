@@ -15,9 +15,11 @@ public class DeleteFleetAdvisorDatabasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseIds")
     public String[] databaseIds;
+
     public DeleteFleetAdvisorDatabasesResponse withDatabaseIds(String[] databaseIds) {
         this.databaseIds = databaseIds;
         return this;
     }
     
+    public DeleteFleetAdvisorDatabasesResponse(){}
 }

@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ListInferenceEventsRequest {
     @JsonProperty("InferenceSchedulerName")
     public String inferenceSchedulerName;
+
     public ListInferenceEventsRequest withInferenceSchedulerName(String inferenceSchedulerName) {
         this.inferenceSchedulerName = inferenceSchedulerName;
         return this;
@@ -25,6 +26,7 @@ public class ListInferenceEventsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("IntervalEndTime")
     public OffsetDateTime intervalEndTime;
+
     public ListInferenceEventsRequest withIntervalEndTime(OffsetDateTime intervalEndTime) {
         this.intervalEndTime = intervalEndTime;
         return this;
@@ -34,6 +36,7 @@ public class ListInferenceEventsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("IntervalStartTime")
     public OffsetDateTime intervalStartTime;
+
     public ListInferenceEventsRequest withIntervalStartTime(OffsetDateTime intervalStartTime) {
         this.intervalStartTime = intervalStartTime;
         return this;
@@ -42,6 +45,7 @@ public class ListInferenceEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListInferenceEventsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -50,9 +54,15 @@ public class ListInferenceEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListInferenceEventsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListInferenceEventsRequest(@JsonProperty("InferenceSchedulerName") String inferenceSchedulerName, @JsonProperty("IntervalEndTime") OffsetDateTime intervalEndTime, @JsonProperty("IntervalStartTime") OffsetDateTime intervalStartTime) {
+        this.inferenceSchedulerName = inferenceSchedulerName;
+        this.intervalEndTime = intervalEndTime;
+        this.intervalStartTime = intervalStartTime;
+  }
 }

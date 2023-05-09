@@ -15,6 +15,7 @@ public class NetworkConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downRule")
     public TrafficRule downRule;
+
     public NetworkConfiguration withDownRule(TrafficRule downRule) {
         this.downRule = downRule;
         return this;
@@ -26,6 +27,7 @@ public class NetworkConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NetworkConfiguration withId(String id) {
         this.id = id;
         return this;
@@ -37,9 +39,11 @@ public class NetworkConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upRule")
     public TrafficRule upRule;
+
     public NetworkConfiguration withUpRule(TrafficRule upRule) {
         this.upRule = upRule;
         return this;
     }
     
+    public NetworkConfiguration(){}
 }

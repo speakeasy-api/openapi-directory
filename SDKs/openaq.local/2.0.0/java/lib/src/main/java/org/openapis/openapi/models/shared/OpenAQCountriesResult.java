@@ -15,6 +15,7 @@ public class OpenAQCountriesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public OpenAQCountriesResultMeta meta;
+
     public OpenAQCountriesResult withMeta(OpenAQCountriesResultMeta meta) {
         this.meta = meta;
         return this;
@@ -22,9 +23,13 @@ public class OpenAQCountriesResult {
     
     @JsonProperty("results")
     public CountriesRow[] results;
+
     public OpenAQCountriesResult withResults(CountriesRow[] results) {
         this.results = results;
         return this;
     }
     
+    public OpenAQCountriesResult(@JsonProperty("results") CountriesRow[] results) {
+        this.results = results;
+  }
 }

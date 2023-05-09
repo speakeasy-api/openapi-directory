@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisSharpeRatioRequestBody2Portfolios {
      */
     @JsonProperty("portfolioValues")
     public Double[] portfolioValues;
+
     public PostPortfolioAnalysisSharpeRatioRequestBody2Portfolios withPortfolioValues(Double[] portfolioValues) {
         this.portfolioValues = portfolioValues;
         return this;
     }
     
+    public PostPortfolioAnalysisSharpeRatioRequestBody2Portfolios(@JsonProperty("portfolioValues") Double[] portfolioValues) {
+        this.portfolioValues = portfolioValues;
+  }
 }

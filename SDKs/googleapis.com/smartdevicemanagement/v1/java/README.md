@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity;
 import org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest;
 import org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse;
+import org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -30,40 +29,42 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest req = new SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest() {{
-                dollarXgafv = "2";
+            SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest req = new SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 googleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest = new GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest() {{
-                    command = "provident";
+                    command = "distinctio";
                     params = new java.util.HashMap<String, Object>() {{
-                        put("quibusdam", "unde");
-                        put("nulla", "corrupti");
-                        put("illum", "vel");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
+                        put("vel", "error");
+                        put("deserunt", "suscipit");
                     }};
-                }};
-                accessToken = "error";
-                alt = "media";
-                callback = "suscipit";
-                fields = "iure";
-                key = "magnam";
-                name = "debitis";
-                oauthToken = "ipsa";
+                }};;
+                accessToken = "iure";
+                alt = AltEnum.JSON;
+                callback = "debitis";
+                fields = "ipsa";
+                key = "delectus";
+                oauthToken = "tempora";
                 prettyPrint = false;
-                quotaUser = "delectus";
-                uploadType = "tempora";
-                uploadProtocol = "suscipit";
-            }}            
+                quotaUser = "suscipit";
+                uploadType = "molestiae";
+                uploadProtocol = "minus";
+            }};            
 
-            SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse res = sdk.enterprises.smartdevicemanagementEnterprisesDevicesExecuteCommand(req, new SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity() {{
+            SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse res = sdk.enterprises.smartdevicemanagementEnterprisesDevicesExecuteCommand(req, new SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity("placeat", "voluptatum") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleHomeEnterpriseSdmV1ExecuteDeviceCommandResponse.isPresent()) {
+            if (res.googleHomeEnterpriseSdmV1ExecuteDeviceCommandResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -71,13 +72,13 @@ public class Application {
 ## Available Resources and Operations
 
 
-### enterprises
+### [enterprises](docs/enterprises/README.md)
 
-* `smartdevicemanagementEnterprisesDevicesExecuteCommand` - Executes a command to device managed by the enterprise.
-* `smartdevicemanagementEnterprisesDevicesList` - Lists devices managed by the enterprise.
-* `smartdevicemanagementEnterprisesStructuresList` - Lists structures managed by the enterprise.
-* `smartdevicemanagementEnterprisesStructuresRoomsGet` - Gets a room managed by the enterprise.
-* `smartdevicemanagementEnterprisesStructuresRoomsList` - Lists rooms managed by the enterprise.
+* [smartdevicemanagementEnterprisesDevicesExecuteCommand](docs/enterprises/README.md#smartdevicemanagemententerprisesdevicesexecutecommand) - Executes a command to device managed by the enterprise.
+* [smartdevicemanagementEnterprisesDevicesList](docs/enterprises/README.md#smartdevicemanagemententerprisesdeviceslist) - Lists devices managed by the enterprise.
+* [smartdevicemanagementEnterprisesStructuresList](docs/enterprises/README.md#smartdevicemanagemententerprisesstructureslist) - Lists structures managed by the enterprise.
+* [smartdevicemanagementEnterprisesStructuresRoomsGet](docs/enterprises/README.md#smartdevicemanagemententerprisesstructuresroomsget) - Gets a room managed by the enterprise.
+* [smartdevicemanagementEnterprisesStructuresRoomsList](docs/enterprises/README.md#smartdevicemanagemententerprisesstructuresroomslist) - Lists rooms managed by the enterprise.
 <!-- End SDK Available Operations -->
 
 ### Maturity

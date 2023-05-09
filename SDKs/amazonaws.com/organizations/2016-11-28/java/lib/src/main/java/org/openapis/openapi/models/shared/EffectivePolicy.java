@@ -22,6 +22,7 @@ public class EffectivePolicy {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTimestamp")
     public OffsetDateTime lastUpdatedTimestamp;
+
     public EffectivePolicy withLastUpdatedTimestamp(OffsetDateTime lastUpdatedTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class EffectivePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyContent")
     public String policyContent;
+
     public EffectivePolicy withPolicyContent(String policyContent) {
         this.policyContent = policyContent;
         return this;
@@ -38,6 +40,7 @@ public class EffectivePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyType")
     public EffectivePolicyTypeEnum policyType;
+
     public EffectivePolicy withPolicyType(EffectivePolicyTypeEnum policyType) {
         this.policyType = policyType;
         return this;
@@ -46,9 +49,11 @@ public class EffectivePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetId")
     public String targetId;
+
     public EffectivePolicy withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
     }
     
+    public EffectivePolicy(){}
 }

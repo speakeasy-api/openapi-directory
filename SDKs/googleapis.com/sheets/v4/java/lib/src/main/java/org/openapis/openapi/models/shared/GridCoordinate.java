@@ -18,6 +18,7 @@ public class GridCoordinate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnIndex")
     public Integer columnIndex;
+
     public GridCoordinate withColumnIndex(Integer columnIndex) {
         this.columnIndex = columnIndex;
         return this;
@@ -29,6 +30,7 @@ public class GridCoordinate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowIndex")
     public Integer rowIndex;
+
     public GridCoordinate withRowIndex(Integer rowIndex) {
         this.rowIndex = rowIndex;
         return this;
@@ -40,9 +42,11 @@ public class GridCoordinate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetId")
     public Integer sheetId;
+
     public GridCoordinate withSheetId(Integer sheetId) {
         this.sheetId = sheetId;
         return this;
     }
     
+    public GridCoordinate(){}
 }

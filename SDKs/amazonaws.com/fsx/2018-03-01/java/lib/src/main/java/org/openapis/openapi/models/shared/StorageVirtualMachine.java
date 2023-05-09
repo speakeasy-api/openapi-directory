@@ -20,6 +20,7 @@ public class StorageVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveDirectoryConfiguration")
     public SvmActiveDirectoryConfiguration activeDirectoryConfiguration;
+
     public StorageVirtualMachine withActiveDirectoryConfiguration(SvmActiveDirectoryConfiguration activeDirectoryConfiguration) {
         this.activeDirectoryConfiguration = activeDirectoryConfiguration;
         return this;
@@ -33,6 +34,7 @@ public class StorageVirtualMachine {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public StorageVirtualMachine withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -41,6 +43,7 @@ public class StorageVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoints")
     public SvmEndpoints endpoints;
+
     public StorageVirtualMachine withEndpoints(SvmEndpoints endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -52,6 +55,7 @@ public class StorageVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public StorageVirtualMachine withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -60,6 +64,7 @@ public class StorageVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public StorageVirtualMachineLifecycleEnum lifecycle;
+
     public StorageVirtualMachine withLifecycle(StorageVirtualMachineLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -68,6 +73,7 @@ public class StorageVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifecycleTransitionReason")
     public LifecycleTransitionReason lifecycleTransitionReason;
+
     public StorageVirtualMachine withLifecycleTransitionReason(LifecycleTransitionReason lifecycleTransitionReason) {
         this.lifecycleTransitionReason = lifecycleTransitionReason;
         return this;
@@ -76,6 +82,7 @@ public class StorageVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public StorageVirtualMachine withName(String name) {
         this.name = name;
         return this;
@@ -87,6 +94,7 @@ public class StorageVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public StorageVirtualMachine withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -95,6 +103,7 @@ public class StorageVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootVolumeSecurityStyle")
     public StorageVirtualMachineRootVolumeSecurityStyleEnum rootVolumeSecurityStyle;
+
     public StorageVirtualMachine withRootVolumeSecurityStyle(StorageVirtualMachineRootVolumeSecurityStyleEnum rootVolumeSecurityStyle) {
         this.rootVolumeSecurityStyle = rootVolumeSecurityStyle;
         return this;
@@ -103,6 +112,7 @@ public class StorageVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageVirtualMachineId")
     public String storageVirtualMachineId;
+
     public StorageVirtualMachine withStorageVirtualMachineId(String storageVirtualMachineId) {
         this.storageVirtualMachineId = storageVirtualMachineId;
         return this;
@@ -111,6 +121,7 @@ public class StorageVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subtype")
     public StorageVirtualMachineSubtypeEnum subtype;
+
     public StorageVirtualMachine withSubtype(StorageVirtualMachineSubtypeEnum subtype) {
         this.subtype = subtype;
         return this;
@@ -122,6 +133,7 @@ public class StorageVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public StorageVirtualMachine withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -130,9 +142,11 @@ public class StorageVirtualMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UUID")
     public String uuid;
+
     public StorageVirtualMachine withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public StorageVirtualMachine(){}
 }

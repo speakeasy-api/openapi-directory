@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetJobUnlockCodeResponse {
     
     public String contentType;
+
     public GetJobUnlockCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetJobUnlockCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.GetJobUnlockCodeResult getJobUnlockCodeResult;
+
     public GetJobUnlockCodeResponse withGetJobUnlockCodeResult(org.openapis.openapi.models.shared.GetJobUnlockCodeResult getJobUnlockCodeResult) {
         this.getJobUnlockCodeResult = getJobUnlockCodeResult;
         return this;
@@ -29,6 +32,7 @@ public class GetJobUnlockCodeResponse {
      */
     
     public Object invalidJobStateException;
+
     public GetJobUnlockCodeResponse withInvalidJobStateException(Object invalidJobStateException) {
         this.invalidJobStateException = invalidJobStateException;
         return this;
@@ -39,6 +43,7 @@ public class GetJobUnlockCodeResponse {
      */
     
     public Object invalidResourceException;
+
     public GetJobUnlockCodeResponse withInvalidResourceException(Object invalidResourceException) {
         this.invalidResourceException = invalidResourceException;
         return this;
@@ -46,6 +51,7 @@ public class GetJobUnlockCodeResponse {
     
     
     public Integer statusCode;
+
     public GetJobUnlockCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetJobUnlockCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetJobUnlockCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetJobUnlockCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

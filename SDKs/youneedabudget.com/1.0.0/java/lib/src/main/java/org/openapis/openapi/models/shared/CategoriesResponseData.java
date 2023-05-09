@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CategoriesResponseData {
     @JsonProperty("category_groups")
     public CategoryGroupWithCategories[] categoryGroups;
+
     public CategoriesResponseData withCategoryGroups(CategoryGroupWithCategories[] categoryGroups) {
         this.categoryGroups = categoryGroups;
         return this;
@@ -19,9 +20,14 @@ public class CategoriesResponseData {
      */
     @JsonProperty("server_knowledge")
     public Long serverKnowledge;
+
     public CategoriesResponseData withServerKnowledge(Long serverKnowledge) {
         this.serverKnowledge = serverKnowledge;
         return this;
     }
     
+    public CategoriesResponseData(@JsonProperty("category_groups") CategoryGroupWithCategories[] categoryGroups, @JsonProperty("server_knowledge") Long serverKnowledge) {
+        this.categoryGroups = categoryGroups;
+        this.serverKnowledge = serverKnowledge;
+  }
 }

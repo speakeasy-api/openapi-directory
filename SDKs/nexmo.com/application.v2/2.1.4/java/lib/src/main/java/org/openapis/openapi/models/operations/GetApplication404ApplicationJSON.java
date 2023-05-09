@@ -15,6 +15,7 @@ public class GetApplication404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public GetApplication404ApplicationJSON withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -26,6 +27,7 @@ public class GetApplication404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public GetApplication404ApplicationJSON withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -34,6 +36,7 @@ public class GetApplication404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GetApplication404ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
@@ -42,9 +45,11 @@ public class GetApplication404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetApplication404ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetApplication404ApplicationJSON(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SelectFields {
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public SelectFields withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -19,6 +20,7 @@ public class SelectFields {
     
     @JsonProperty("Name")
     public String name;
+
     public SelectFields withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class SelectFields {
     
     @JsonProperty("Paths")
     public String[][] paths;
+
     public SelectFields withPaths(String[][] paths) {
         this.paths = paths;
         return this;
     }
     
+    public SelectFields(@JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("Paths") String[][] paths) {
+        this.inputs = inputs;
+        this.name = name;
+        this.paths = paths;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEmailIdentityResponse {
@@ -12,6 +13,7 @@ public class GetEmailIdentityResponse {
      */
     
     public Object badRequestException;
+
     public GetEmailIdentityResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetEmailIdentityResponse {
     
     
     public String contentType;
+
     public GetEmailIdentityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEmailIdentityResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEmailIdentityResponse getEmailIdentityResponse;
+
     public GetEmailIdentityResponse withGetEmailIdentityResponse(org.openapis.openapi.models.shared.GetEmailIdentityResponse getEmailIdentityResponse) {
         this.getEmailIdentityResponse = getEmailIdentityResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetEmailIdentityResponse {
      */
     
     public Object notFoundException;
+
     public GetEmailIdentityResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetEmailIdentityResponse {
     
     
     public Integer statusCode;
+
     public GetEmailIdentityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetEmailIdentityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEmailIdentityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetEmailIdentityResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetEmailIdentityResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetEmailIdentityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

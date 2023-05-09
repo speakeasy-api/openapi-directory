@@ -15,6 +15,7 @@ public class InclusionProtectionGroupFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aggregations")
     public ProtectionGroupAggregationEnum[] aggregations;
+
     public InclusionProtectionGroupFilters withAggregations(ProtectionGroupAggregationEnum[] aggregations) {
         this.aggregations = aggregations;
         return this;
@@ -23,6 +24,7 @@ public class InclusionProtectionGroupFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Patterns")
     public ProtectionGroupPatternEnum[] patterns;
+
     public InclusionProtectionGroupFilters withPatterns(ProtectionGroupPatternEnum[] patterns) {
         this.patterns = patterns;
         return this;
@@ -31,6 +33,7 @@ public class InclusionProtectionGroupFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProtectionGroupIds")
     public String[] protectionGroupIds;
+
     public InclusionProtectionGroupFilters withProtectionGroupIds(String[] protectionGroupIds) {
         this.protectionGroupIds = protectionGroupIds;
         return this;
@@ -39,9 +42,11 @@ public class InclusionProtectionGroupFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypes")
     public ProtectedResourceTypeEnum[] resourceTypes;
+
     public InclusionProtectionGroupFilters withResourceTypes(ProtectedResourceTypeEnum[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
     }
     
+    public InclusionProtectionGroupFilters(){}
 }

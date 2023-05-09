@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateServerResponse {
@@ -12,6 +13,7 @@ public class CreateServerResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateServerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateServerResponse {
     
     
     public String contentType;
+
     public CreateServerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateServerResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateServerResponse createServerResponse;
+
     public CreateServerResponse withCreateServerResponse(org.openapis.openapi.models.shared.CreateServerResponse createServerResponse) {
         this.createServerResponse = createServerResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateServerResponse {
      */
     
     public Object internalServiceError;
+
     public CreateServerResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -49,6 +54,7 @@ public class CreateServerResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateServerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class CreateServerResponse {
     
     
     public Integer statusCode;
+
     public CreateServerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateServerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateServerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateServerResponse {
      */
     
     public Object resourceExistsException;
+
     public CreateServerResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -83,6 +92,7 @@ public class CreateServerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateServerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class CreateServerResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateServerResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,9 +114,14 @@ public class CreateServerResponse {
      */
     
     public Object throttlingException;
+
     public CreateServerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateServerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

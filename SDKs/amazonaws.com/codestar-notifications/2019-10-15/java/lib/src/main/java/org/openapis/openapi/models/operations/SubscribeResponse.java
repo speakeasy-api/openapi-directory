@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SubscribeResponse {
@@ -12,6 +13,7 @@ public class SubscribeResponse {
      */
     
     public Object configurationException;
+
     public SubscribeResponse withConfigurationException(Object configurationException) {
         this.configurationException = configurationException;
         return this;
@@ -19,6 +21,7 @@ public class SubscribeResponse {
     
     
     public String contentType;
+
     public SubscribeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SubscribeResponse {
     
     
     public Integer statusCode;
+
     public SubscribeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class SubscribeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SubscribeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class SubscribeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SubscribeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class SubscribeResponse {
      */
     
     public org.openapis.openapi.models.shared.SubscribeResult subscribeResult;
+
     public SubscribeResponse withSubscribeResult(org.openapis.openapi.models.shared.SubscribeResult subscribeResult) {
         this.subscribeResult = subscribeResult;
         return this;
@@ -63,9 +70,14 @@ public class SubscribeResponse {
      */
     
     public Object validationException;
+
     public SubscribeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SubscribeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

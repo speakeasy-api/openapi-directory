@@ -15,6 +15,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("curbside")
     public AddressCurbsideEnum curbside;
+
     public Address withCurbside(AddressCurbsideEnum curbside) {
         this.curbside = curbside;
         return this;
@@ -25,6 +26,7 @@ public class Address {
      */
     @JsonProperty("lat")
     public Double lat;
+
     public Address withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -35,6 +37,7 @@ public class Address {
      */
     @JsonProperty("location_id")
     public String locationId;
+
     public Address withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -45,6 +48,7 @@ public class Address {
      */
     @JsonProperty("lon")
     public Double lon;
+
     public Address withLon(Double lon) {
         this.lon = lon;
         return this;
@@ -56,6 +60,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Address withName(String name) {
         this.name = name;
         return this;
@@ -67,9 +72,15 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street_hint")
     public String streetHint;
+
     public Address withStreetHint(String streetHint) {
         this.streetHint = streetHint;
         return this;
     }
     
+    public Address(@JsonProperty("lat") Double lat, @JsonProperty("location_id") String locationId, @JsonProperty("lon") Double lon) {
+        this.lat = lat;
+        this.locationId = locationId;
+        this.lon = lon;
+  }
 }

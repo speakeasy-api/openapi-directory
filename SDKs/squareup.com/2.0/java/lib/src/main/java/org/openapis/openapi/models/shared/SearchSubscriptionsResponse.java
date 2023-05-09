@@ -23,6 +23,7 @@ public class SearchSubscriptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchSubscriptionsResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -34,6 +35,7 @@ public class SearchSubscriptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public SearchSubscriptionsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -45,9 +47,11 @@ public class SearchSubscriptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptions")
     public Subscription[] subscriptions;
+
     public SearchSubscriptionsResponse withSubscriptions(Subscription[] subscriptions) {
         this.subscriptions = subscriptions;
         return this;
     }
     
+    public SearchSubscriptionsResponse(){}
 }

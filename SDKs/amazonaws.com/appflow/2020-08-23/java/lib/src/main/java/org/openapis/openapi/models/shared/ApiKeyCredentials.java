@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApiKeyCredentials {
     @JsonProperty("apiKey")
     public String apiKey;
+
     public ApiKeyCredentials withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,9 +23,13 @@ public class ApiKeyCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiSecretKey")
     public String apiSecretKey;
+
     public ApiKeyCredentials withApiSecretKey(String apiSecretKey) {
         this.apiSecretKey = apiSecretKey;
         return this;
     }
     
+    public ApiKeyCredentials(@JsonProperty("apiKey") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

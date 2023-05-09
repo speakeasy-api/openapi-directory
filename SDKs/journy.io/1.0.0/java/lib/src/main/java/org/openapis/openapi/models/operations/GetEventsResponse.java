@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEventsResponse {
     
     public String contentType;
+
     public GetEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetEventsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetEventsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetEventsResponse {
     
     
     public Integer statusCode;
+
     public GetEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetEventsResponse {
      */
     
     public GetEvents200ApplicationJSON getEvents200ApplicationJSONObject;
+
     public GetEventsResponse withGetEvents200ApplicationJSONObject(GetEvents200ApplicationJSON getEvents200ApplicationJSONObject) {
         this.getEvents200ApplicationJSONObject = getEvents200ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class GetEventsResponse {
      */
     
     public GetEvents400ApplicationJSON getEvents400ApplicationJSONObject;
+
     public GetEventsResponse withGetEvents400ApplicationJSONObject(GetEvents400ApplicationJSON getEvents400ApplicationJSONObject) {
         this.getEvents400ApplicationJSONObject = getEvents400ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class GetEventsResponse {
      */
     
     public GetEvents401ApplicationJSON getEvents401ApplicationJSONObject;
+
     public GetEventsResponse withGetEvents401ApplicationJSONObject(GetEvents401ApplicationJSON getEvents401ApplicationJSONObject) {
         this.getEvents401ApplicationJSONObject = getEvents401ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class GetEventsResponse {
      */
     
     public GetEvents403ApplicationJSON getEvents403ApplicationJSONObject;
+
     public GetEventsResponse withGetEvents403ApplicationJSONObject(GetEvents403ApplicationJSON getEvents403ApplicationJSONObject) {
         this.getEvents403ApplicationJSONObject = getEvents403ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class GetEventsResponse {
      */
     
     public GetEvents429ApplicationJSON getEvents429ApplicationJSONObject;
+
     public GetEventsResponse withGetEvents429ApplicationJSONObject(GetEvents429ApplicationJSON getEvents429ApplicationJSONObject) {
         this.getEvents429ApplicationJSONObject = getEvents429ApplicationJSONObject;
         return this;
@@ -90,9 +100,14 @@ public class GetEventsResponse {
      */
     
     public GetEvents500ApplicationJSON getEvents500ApplicationJSONObject;
+
     public GetEventsResponse withGetEvents500ApplicationJSONObject(GetEvents500ApplicationJSON getEvents500ApplicationJSONObject) {
         this.getEvents500ApplicationJSONObject = getEvents500ApplicationJSONObject;
         return this;
     }
     
+    public GetEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

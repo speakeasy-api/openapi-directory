@@ -149,6 +149,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -186,7 +191,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRoutingControlStateResponse res = new org.openapis.openapi.models.operations.GetRoutingControlStateResponse() {{
+        org.openapis.openapi.models.operations.GetRoutingControlStateResponse res = new org.openapis.openapi.models.operations.GetRoutingControlStateResponse(contentType, httpRes.statusCode()) {{
             getRoutingControlStateResponse = null;
             accessDeniedException = null;
             internalServerException = null;
@@ -195,8 +200,6 @@ public class SDK {
             throttlingException = null;
             endpointTemporarilyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,7 +295,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRoutingControlsResponse res = new org.openapis.openapi.models.operations.ListRoutingControlsResponse() {{
+        org.openapis.openapi.models.operations.ListRoutingControlsResponse res = new org.openapis.openapi.models.operations.ListRoutingControlsResponse(contentType, httpRes.statusCode()) {{
             listRoutingControlsResponse = null;
             accessDeniedException = null;
             internalServerException = null;
@@ -301,8 +304,6 @@ public class SDK {
             throttlingException = null;
             endpointTemporarilyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,7 +393,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRoutingControlStateResponse res = new org.openapis.openapi.models.operations.UpdateRoutingControlStateResponse() {{
+        org.openapis.openapi.models.operations.UpdateRoutingControlStateResponse res = new org.openapis.openapi.models.operations.UpdateRoutingControlStateResponse(contentType, httpRes.statusCode()) {{
             updateRoutingControlStateResponse = null;
             accessDeniedException = null;
             internalServerException = null;
@@ -402,8 +403,6 @@ public class SDK {
             endpointTemporarilyUnavailableException = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -500,7 +499,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRoutingControlStatesResponse res = new org.openapis.openapi.models.operations.UpdateRoutingControlStatesResponse() {{
+        org.openapis.openapi.models.operations.UpdateRoutingControlStatesResponse res = new org.openapis.openapi.models.operations.UpdateRoutingControlStatesResponse(contentType, httpRes.statusCode()) {{
             updateRoutingControlStatesResponse = null;
             accessDeniedException = null;
             internalServerException = null;
@@ -511,8 +510,6 @@ public class SDK {
             conflictException = null;
             serviceLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

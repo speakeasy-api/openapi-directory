@@ -61,12 +61,10 @@ public class Spin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSpinsResponse res = new org.openapis.openapi.models.operations.GetSpinsResponse() {{
+        org.openapis.openapi.models.operations.GetSpinsResponse res = new org.openapis.openapi.models.operations.GetSpinsResponse(contentType, httpRes.statusCode()) {{
             getSpins200ApplicationJSONObject = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,14 +109,12 @@ public class Spin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSpinsIdResponse res = new org.openapis.openapi.models.operations.GetSpinsIdResponse() {{
+        org.openapis.openapi.models.operations.GetSpinsIdResponse res = new org.openapis.openapi.models.operations.GetSpinsIdResponse(contentType, httpRes.statusCode()) {{
             spin = null;
             body = null;
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,7 +167,7 @@ public class Spin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSpinsResponse res = new org.openapis.openapi.models.operations.PostSpinsResponse() {{
+        org.openapis.openapi.models.operations.PostSpinsResponse res = new org.openapis.openapi.models.operations.PostSpinsResponse(contentType, httpRes.statusCode()) {{
             spin = null;
             body = null;
             body = null;
@@ -179,8 +175,6 @@ public class Spin {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

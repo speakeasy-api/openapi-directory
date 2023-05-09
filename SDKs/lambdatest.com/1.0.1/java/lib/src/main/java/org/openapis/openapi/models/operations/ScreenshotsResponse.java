@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ScreenshotsResponse {
@@ -12,6 +13,7 @@ public class ScreenshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDenied accessDenied;
+
     public ScreenshotsResponse withAccessDenied(org.openapis.openapi.models.shared.AccessDenied accessDenied) {
         this.accessDenied = accessDenied;
         return this;
@@ -19,6 +21,7 @@ public class ScreenshotsResponse {
     
     
     public String contentType;
+
     public ScreenshotsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ScreenshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.Forbidden forbidden;
+
     public ScreenshotsResponse withForbidden(org.openapis.openapi.models.shared.Forbidden forbidden) {
         this.forbidden = forbidden;
         return this;
@@ -36,6 +40,7 @@ public class ScreenshotsResponse {
     
     
     public Integer statusCode;
+
     public ScreenshotsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ScreenshotsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ScreenshotsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ScreenshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.ScreenshotDetails screenshotDetails;
+
     public ScreenshotsResponse withScreenshotDetails(org.openapis.openapi.models.shared.ScreenshotDetails screenshotDetails) {
         this.screenshotDetails = screenshotDetails;
         return this;
@@ -63,9 +70,14 @@ public class ScreenshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.ScreenshotNotFound screenshotNotFound;
+
     public ScreenshotsResponse withScreenshotNotFound(org.openapis.openapi.models.shared.ScreenshotNotFound screenshotNotFound) {
         this.screenshotNotFound = screenshotNotFound;
         return this;
     }
     
+    public ScreenshotsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

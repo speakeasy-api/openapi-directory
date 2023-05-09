@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetSubnetCidrReservationsRequestFilters {
     
     public String name;
+
     public GetSubnetCidrReservationsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class GetSubnetCidrReservationsRequestFilters {
     
     
     public String[] values;
+
     public GetSubnetCidrReservationsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public GetSubnetCidrReservationsRequestFilters(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DirectoryRoleAssignmentsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DirectoryRoleAssignmentsListSecurityOption1 option1;
+
     public DirectoryRoleAssignmentsListSecurity withOption1(DirectoryRoleAssignmentsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DirectoryRoleAssignmentsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DirectoryRoleAssignmentsListSecurityOption2 option2;
+
     public DirectoryRoleAssignmentsListSecurity withOption2(DirectoryRoleAssignmentsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DirectoryRoleAssignmentsListSecurity(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetExecutionHistoryResponse {
     
     public String contentType;
+
     public GetExecutionHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetExecutionHistoryResponse {
      */
     
     public Object executionDoesNotExist;
+
     public GetExecutionHistoryResponse withExecutionDoesNotExist(Object executionDoesNotExist) {
         this.executionDoesNotExist = executionDoesNotExist;
         return this;
@@ -29,6 +32,7 @@ public class GetExecutionHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetExecutionHistoryOutput getExecutionHistoryOutput;
+
     public GetExecutionHistoryResponse withGetExecutionHistoryOutput(org.openapis.openapi.models.shared.GetExecutionHistoryOutput getExecutionHistoryOutput) {
         this.getExecutionHistoryOutput = getExecutionHistoryOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetExecutionHistoryResponse {
      */
     
     public Object invalidArn;
+
     public GetExecutionHistoryResponse withInvalidArn(Object invalidArn) {
         this.invalidArn = invalidArn;
         return this;
@@ -49,6 +54,7 @@ public class GetExecutionHistoryResponse {
      */
     
     public Object invalidToken;
+
     public GetExecutionHistoryResponse withInvalidToken(Object invalidToken) {
         this.invalidToken = invalidToken;
         return this;
@@ -56,6 +62,7 @@ public class GetExecutionHistoryResponse {
     
     
     public Integer statusCode;
+
     public GetExecutionHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetExecutionHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetExecutionHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetExecutionHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

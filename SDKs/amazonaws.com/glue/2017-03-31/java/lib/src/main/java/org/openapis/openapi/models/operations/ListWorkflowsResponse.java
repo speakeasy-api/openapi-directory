@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWorkflowsResponse {
     
     public String contentType;
+
     public ListWorkflowsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListWorkflowsResponse {
      */
     
     public Object internalServiceException;
+
     public ListWorkflowsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListWorkflowsResponse {
      */
     
     public Object invalidInputException;
+
     public ListWorkflowsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class ListWorkflowsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWorkflowsResponse listWorkflowsResponse;
+
     public ListWorkflowsResponse withListWorkflowsResponse(org.openapis.openapi.models.shared.ListWorkflowsResponse listWorkflowsResponse) {
         this.listWorkflowsResponse = listWorkflowsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListWorkflowsResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListWorkflowsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class ListWorkflowsResponse {
     
     
     public Integer statusCode;
+
     public ListWorkflowsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListWorkflowsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWorkflowsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListWorkflowsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

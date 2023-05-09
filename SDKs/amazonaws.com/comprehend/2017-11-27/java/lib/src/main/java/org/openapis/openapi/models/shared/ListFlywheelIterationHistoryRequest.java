@@ -12,6 +12,7 @@ public class ListFlywheelIterationHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public FlywheelIterationFilter filter;
+
     public ListFlywheelIterationHistoryRequest withFilter(FlywheelIterationFilter filter) {
         this.filter = filter;
         return this;
@@ -19,6 +20,7 @@ public class ListFlywheelIterationHistoryRequest {
     
     @JsonProperty("FlywheelArn")
     public String flywheelArn;
+
     public ListFlywheelIterationHistoryRequest withFlywheelArn(String flywheelArn) {
         this.flywheelArn = flywheelArn;
         return this;
@@ -27,6 +29,7 @@ public class ListFlywheelIterationHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListFlywheelIterationHistoryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,9 +38,13 @@ public class ListFlywheelIterationHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFlywheelIterationHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFlywheelIterationHistoryRequest(@JsonProperty("FlywheelArn") String flywheelArn) {
+        this.flywheelArn = flywheelArn;
+  }
 }

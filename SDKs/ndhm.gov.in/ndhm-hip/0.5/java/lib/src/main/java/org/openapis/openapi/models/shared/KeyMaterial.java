@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class KeyMaterial {
     @JsonProperty("cryptoAlg")
     public String cryptoAlg;
+
     public KeyMaterial withCryptoAlg(String cryptoAlg) {
         this.cryptoAlg = cryptoAlg;
         return this;
@@ -16,6 +17,7 @@ public class KeyMaterial {
     
     @JsonProperty("curve")
     public String curve;
+
     public KeyMaterial withCurve(String curve) {
         this.curve = curve;
         return this;
@@ -23,6 +25,7 @@ public class KeyMaterial {
     
     @JsonProperty("dhPublicKey")
     public KeyObject dhPublicKey;
+
     public KeyMaterial withDhPublicKey(KeyObject dhPublicKey) {
         this.dhPublicKey = dhPublicKey;
         return this;
@@ -30,9 +33,16 @@ public class KeyMaterial {
     
     @JsonProperty("nonce")
     public String nonce;
+
     public KeyMaterial withNonce(String nonce) {
         this.nonce = nonce;
         return this;
     }
     
+    public KeyMaterial(@JsonProperty("cryptoAlg") String cryptoAlg, @JsonProperty("curve") String curve, @JsonProperty("dhPublicKey") KeyObject dhPublicKey, @JsonProperty("nonce") String nonce) {
+        this.cryptoAlg = cryptoAlg;
+        this.curve = curve;
+        this.dhPublicKey = dhPublicKey;
+        this.nonce = nonce;
+  }
 }

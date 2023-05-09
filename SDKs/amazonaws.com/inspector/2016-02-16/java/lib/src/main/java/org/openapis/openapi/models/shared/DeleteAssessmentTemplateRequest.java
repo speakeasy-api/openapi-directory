@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAssessmentTemplateRequest {
     @JsonProperty("assessmentTemplateArn")
     public String assessmentTemplateArn;
+
     public DeleteAssessmentTemplateRequest withAssessmentTemplateArn(String assessmentTemplateArn) {
         this.assessmentTemplateArn = assessmentTemplateArn;
         return this;
     }
     
+    public DeleteAssessmentTemplateRequest(@JsonProperty("assessmentTemplateArn") String assessmentTemplateArn) {
+        this.assessmentTemplateArn = assessmentTemplateArn;
+  }
 }

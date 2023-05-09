@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotInstancesResultSpotInstanceRequestsTags {
     
     public String key;
+
     public RequestSpotInstancesResultSpotInstanceRequestsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class RequestSpotInstancesResultSpotInstanceRequestsTags {
     
     
     public String value;
+
     public RequestSpotInstancesResultSpotInstanceRequestsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public RequestSpotInstancesResultSpotInstanceRequestsTags(){}
 }

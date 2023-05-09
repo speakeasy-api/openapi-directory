@@ -15,6 +15,7 @@ public class DescribeWorkspaceBundlesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bundles")
     public WorkspaceBundle[] bundles;
+
     public DescribeWorkspaceBundlesResult withBundles(WorkspaceBundle[] bundles) {
         this.bundles = bundles;
         return this;
@@ -23,9 +24,11 @@ public class DescribeWorkspaceBundlesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeWorkspaceBundlesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeWorkspaceBundlesResult(){}
 }

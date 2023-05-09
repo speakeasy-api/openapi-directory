@@ -18,6 +18,7 @@ public class CompensationEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Money amount;
+
     public CompensationEntry withAmount(Money amount) {
         this.amount = amount;
         return this;
@@ -29,6 +30,7 @@ public class CompensationEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CompensationEntry withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class CompensationEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedUnitsPerYear")
     public Double expectedUnitsPerYear;
+
     public CompensationEntry withExpectedUnitsPerYear(Double expectedUnitsPerYear) {
         this.expectedUnitsPerYear = expectedUnitsPerYear;
         return this;
@@ -51,6 +54,7 @@ public class CompensationEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public CompensationRange range;
+
     public CompensationEntry withRange(CompensationRange range) {
         this.range = range;
         return this;
@@ -62,6 +66,7 @@ public class CompensationEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CompensationEntryTypeEnum type;
+
     public CompensationEntry withType(CompensationEntryTypeEnum type) {
         this.type = type;
         return this;
@@ -73,9 +78,11 @@ public class CompensationEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public CompensationEntryUnitEnum unit;
+
     public CompensationEntry withUnit(CompensationEntryUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public CompensationEntry(){}
 }

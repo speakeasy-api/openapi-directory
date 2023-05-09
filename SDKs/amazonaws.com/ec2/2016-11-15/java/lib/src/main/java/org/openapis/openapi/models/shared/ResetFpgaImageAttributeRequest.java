@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ResetFpgaImageAttributeRequest {
     
     public ResetFpgaImageAttributeNameEnum attribute;
+
     public ResetFpgaImageAttributeRequest withAttribute(ResetFpgaImageAttributeNameEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -16,6 +17,7 @@ public class ResetFpgaImageAttributeRequest {
     
     
     public Boolean dryRun;
+
     public ResetFpgaImageAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,13 @@ public class ResetFpgaImageAttributeRequest {
     
     
     public String fpgaImageId;
+
     public ResetFpgaImageAttributeRequest withFpgaImageId(String fpgaImageId) {
         this.fpgaImageId = fpgaImageId;
         return this;
     }
     
+    public ResetFpgaImageAttributeRequest(@JsonProperty("FpgaImageId") String fpgaImageId) {
+        this.fpgaImageId = fpgaImageId;
+  }
 }

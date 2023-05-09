@@ -18,6 +18,7 @@ public class Monitoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerDestinations")
     public MonitoringDestination[] consumerDestinations;
+
     public Monitoring withConsumerDestinations(MonitoringDestination[] consumerDestinations) {
         this.consumerDestinations = consumerDestinations;
         return this;
@@ -29,9 +30,11 @@ public class Monitoring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerDestinations")
     public MonitoringDestination[] producerDestinations;
+
     public Monitoring withProducerDestinations(MonitoringDestination[] producerDestinations) {
         this.producerDestinations = producerDestinations;
         return this;
     }
     
+    public Monitoring(){}
 }

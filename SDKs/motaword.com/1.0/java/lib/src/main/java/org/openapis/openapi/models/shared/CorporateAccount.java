@@ -15,6 +15,7 @@ public class CorporateAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing")
     public BillingAddress billing;
+
     public CorporateAccount withBilling(BillingAddress billing) {
         this.billing = billing;
         return this;
@@ -23,6 +24,7 @@ public class CorporateAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public CorporateAccount withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -31,6 +33,7 @@ public class CorporateAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public CorporateAccount withEmail(String email) {
         this.email = email;
         return this;
@@ -39,6 +42,7 @@ public class CorporateAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CorporateAccount withId(Long id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class CorporateAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public CorporateAccount withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -55,6 +60,7 @@ public class CorporateAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CorporateAccount withName(String name) {
         this.name = name;
         return this;
@@ -66,9 +72,11 @@ public class CorporateAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_site")
     public String webSite;
+
     public CorporateAccount withWebSite(String webSite) {
         this.webSite = webSite;
         return this;
     }
     
+    public CorporateAccount(){}
 }

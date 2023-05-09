@@ -13,6 +13,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyResponsesDestinyPublicVendorsResponseStringVariables {
     
     public DestinyComponentsStringVariablesDestinyStringVariablesComponent data;
+
     public DestinyResponsesDestinyPublicVendorsResponseStringVariables withData(DestinyComponentsStringVariablesDestinyStringVariablesComponent data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class DestinyResponsesDestinyPublicVendorsResponseStringVariables {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyPublicVendorsResponseStringVariables withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -30,9 +32,11 @@ public class DestinyResponsesDestinyPublicVendorsResponseStringVariables {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyPublicVendorsResponseStringVariables withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyPublicVendorsResponseStringVariables(){}
 }

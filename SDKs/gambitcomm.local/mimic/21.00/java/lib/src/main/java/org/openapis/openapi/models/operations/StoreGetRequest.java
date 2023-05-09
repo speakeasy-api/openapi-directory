@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoreGetRequest {
@@ -12,9 +13,13 @@ public class StoreGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=var")
     public String var;
+
     public StoreGetRequest withVar(String var) {
         this.var = var;
         return this;
     }
     
+    public StoreGetRequest(@JsonProperty("var") String var) {
+        this.var = var;
+  }
 }

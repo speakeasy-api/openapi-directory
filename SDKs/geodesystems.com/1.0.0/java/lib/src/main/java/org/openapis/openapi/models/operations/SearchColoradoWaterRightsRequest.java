@@ -13,6 +13,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchColoradoWaterRightsRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchColoradoWaterRightsRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchColoradoWaterRightsRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchColoradoWaterRightsRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchColoradoWaterRightsRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchColoradoWaterRightsRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchColoradoWaterRightsRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchColoradoWaterRightsRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchColoradoWaterRightsRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchColoradoWaterRightsRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchColoradoWaterRightsRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchColoradoWaterRightsRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchColoradoWaterRightsRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchColoradoWaterRightsRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.adjudication_date")
     public String searchDbColoradoWaterRightsAdjudicationDate;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsAdjudicationDate(String searchDbColoradoWaterRightsAdjudicationDate) {
         this.searchDbColoradoWaterRightsAdjudicationDate = searchDbColoradoWaterRightsAdjudicationDate;
         return this;
@@ -163,6 +178,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.appropriation_date")
     public String searchDbColoradoWaterRightsAppropriationDate;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsAppropriationDate(String searchDbColoradoWaterRightsAppropriationDate) {
         this.searchDbColoradoWaterRightsAppropriationDate = searchDbColoradoWaterRightsAppropriationDate;
         return this;
@@ -173,6 +189,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.comments")
     public String searchDbColoradoWaterRightsComments;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsComments(String searchDbColoradoWaterRightsComments) {
         this.searchDbColoradoWaterRightsComments = searchDbColoradoWaterRightsComments;
         return this;
@@ -183,6 +200,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.county")
     public String searchDbColoradoWaterRightsCounty;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsCounty(String searchDbColoradoWaterRightsCounty) {
         this.searchDbColoradoWaterRightsCounty = searchDbColoradoWaterRightsCounty;
         return this;
@@ -193,6 +211,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.decreed_units")
     public String searchDbColoradoWaterRightsDecreedUnits;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsDecreedUnits(String searchDbColoradoWaterRightsDecreedUnits) {
         this.searchDbColoradoWaterRightsDecreedUnits = searchDbColoradoWaterRightsDecreedUnits;
         return this;
@@ -203,6 +222,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.decreed_uses")
     public String searchDbColoradoWaterRightsDecreedUses;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsDecreedUses(String searchDbColoradoWaterRightsDecreedUses) {
         this.searchDbColoradoWaterRightsDecreedUses = searchDbColoradoWaterRightsDecreedUses;
         return this;
@@ -213,6 +233,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.location")
     public String searchDbColoradoWaterRightsLocation;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsLocation(String searchDbColoradoWaterRightsLocation) {
         this.searchDbColoradoWaterRightsLocation = searchDbColoradoWaterRightsLocation;
         return this;
@@ -223,6 +244,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.more_information")
     public String searchDbColoradoWaterRightsMoreInformation;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsMoreInformation(String searchDbColoradoWaterRightsMoreInformation) {
         this.searchDbColoradoWaterRightsMoreInformation = searchDbColoradoWaterRightsMoreInformation;
         return this;
@@ -233,6 +255,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.net_absolute")
     public Double searchDbColoradoWaterRightsNetAbsolute;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsNetAbsolute(Double searchDbColoradoWaterRightsNetAbsolute) {
         this.searchDbColoradoWaterRightsNetAbsolute = searchDbColoradoWaterRightsNetAbsolute;
         return this;
@@ -243,6 +266,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.net_apex_absolute")
     public Double searchDbColoradoWaterRightsNetApexAbsolute;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsNetApexAbsolute(Double searchDbColoradoWaterRightsNetApexAbsolute) {
         this.searchDbColoradoWaterRightsNetApexAbsolute = searchDbColoradoWaterRightsNetApexAbsolute;
         return this;
@@ -253,6 +277,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.net_apex_conditional")
     public Double searchDbColoradoWaterRightsNetApexConditional;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsNetApexConditional(Double searchDbColoradoWaterRightsNetApexConditional) {
         this.searchDbColoradoWaterRightsNetApexConditional = searchDbColoradoWaterRightsNetApexConditional;
         return this;
@@ -263,6 +288,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.net_conditional")
     public Double searchDbColoradoWaterRightsNetConditional;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsNetConditional(Double searchDbColoradoWaterRightsNetConditional) {
         this.searchDbColoradoWaterRightsNetConditional = searchDbColoradoWaterRightsNetConditional;
         return this;
@@ -273,6 +299,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.priority_no")
     public String searchDbColoradoWaterRightsPriorityNo;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsPriorityNo(String searchDbColoradoWaterRightsPriorityNo) {
         this.searchDbColoradoWaterRightsPriorityNo = searchDbColoradoWaterRightsPriorityNo;
         return this;
@@ -283,6 +310,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.seasonal_limits")
     public String searchDbColoradoWaterRightsSeasonalLimits;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsSeasonalLimits(String searchDbColoradoWaterRightsSeasonalLimits) {
         this.searchDbColoradoWaterRightsSeasonalLimits = searchDbColoradoWaterRightsSeasonalLimits;
         return this;
@@ -293,6 +321,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.structure_name")
     public String searchDbColoradoWaterRightsStructureName;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsStructureName(String searchDbColoradoWaterRightsStructureName) {
         this.searchDbColoradoWaterRightsStructureName = searchDbColoradoWaterRightsStructureName;
         return this;
@@ -303,6 +332,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.structure_type")
     public String searchDbColoradoWaterRightsStructureType;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsStructureType(String searchDbColoradoWaterRightsStructureType) {
         this.searchDbColoradoWaterRightsStructureType = searchDbColoradoWaterRightsStructureType;
         return this;
@@ -313,6 +343,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_colorado_water_rights.water_source")
     public String searchDbColoradoWaterRightsWaterSource;
+
     public SearchColoradoWaterRightsRequest withSearchDbColoradoWaterRightsWaterSource(String searchDbColoradoWaterRightsWaterSource) {
         this.searchDbColoradoWaterRightsWaterSource = searchDbColoradoWaterRightsWaterSource;
         return this;
@@ -323,6 +354,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchColoradoWaterRightsRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -333,6 +365,7 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchColoradoWaterRightsRequest withText(String text) {
         this.text = text;
         return this;
@@ -343,9 +376,11 @@ public class SearchColoradoWaterRightsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchColoradoWaterRightsRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchColoradoWaterRightsRequest(){}
 }

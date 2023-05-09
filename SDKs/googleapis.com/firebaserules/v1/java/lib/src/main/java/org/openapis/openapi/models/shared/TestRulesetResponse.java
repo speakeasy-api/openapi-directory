@@ -18,6 +18,7 @@ public class TestRulesetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public Issue[] issues;
+
     public TestRulesetResponse withIssues(Issue[] issues) {
         this.issues = issues;
         return this;
@@ -29,9 +30,11 @@ public class TestRulesetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testResults")
     public TestResult[] testResults;
+
     public TestRulesetResponse withTestResults(TestResult[] testResults) {
         this.testResults = testResults;
         return this;
     }
     
+    public TestRulesetResponse(){}
 }

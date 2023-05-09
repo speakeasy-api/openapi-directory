@@ -17,6 +17,7 @@ public class CreateActivationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultInstanceName")
     public String defaultInstanceName;
+
     public CreateActivationRequest withDefaultInstanceName(String defaultInstanceName) {
         this.defaultInstanceName = defaultInstanceName;
         return this;
@@ -25,6 +26,7 @@ public class CreateActivationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateActivationRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class CreateActivationRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDate")
     public OffsetDateTime expirationDate;
+
     public CreateActivationRequest withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -42,6 +45,7 @@ public class CreateActivationRequest {
     
     @JsonProperty("IamRole")
     public String iamRole;
+
     public CreateActivationRequest withIamRole(String iamRole) {
         this.iamRole = iamRole;
         return this;
@@ -50,6 +54,7 @@ public class CreateActivationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistrationLimit")
     public Long registrationLimit;
+
     public CreateActivationRequest withRegistrationLimit(Long registrationLimit) {
         this.registrationLimit = registrationLimit;
         return this;
@@ -58,6 +63,7 @@ public class CreateActivationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistrationMetadata")
     public RegistrationMetadataItem[] registrationMetadata;
+
     public CreateActivationRequest withRegistrationMetadata(RegistrationMetadataItem[] registrationMetadata) {
         this.registrationMetadata = registrationMetadata;
         return this;
@@ -66,9 +72,13 @@ public class CreateActivationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateActivationRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateActivationRequest(@JsonProperty("IamRole") String iamRole) {
+        this.iamRole = iamRole;
+  }
 }

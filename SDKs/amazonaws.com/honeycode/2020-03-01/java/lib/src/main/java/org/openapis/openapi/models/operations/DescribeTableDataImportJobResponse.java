@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTableDataImportJobResponse {
@@ -12,6 +13,7 @@ public class DescribeTableDataImportJobResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeTableDataImportJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTableDataImportJobResponse {
     
     
     public String contentType;
+
     public DescribeTableDataImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTableDataImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTableDataImportJobResult describeTableDataImportJobResult;
+
     public DescribeTableDataImportJobResponse withDescribeTableDataImportJobResult(org.openapis.openapi.models.shared.DescribeTableDataImportJobResult describeTableDataImportJobResult) {
         this.describeTableDataImportJobResult = describeTableDataImportJobResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTableDataImportJobResponse {
      */
     
     public Object internalServerException;
+
     public DescribeTableDataImportJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeTableDataImportJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeTableDataImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeTableDataImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTableDataImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeTableDataImportJobResponse {
      */
     
     public Object requestTimeoutException;
+
     public DescribeTableDataImportJobResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeTableDataImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeTableDataImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DescribeTableDataImportJobResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeTableDataImportJobResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,6 +103,7 @@ public class DescribeTableDataImportJobResponse {
      */
     
     public Object throttlingException;
+
     public DescribeTableDataImportJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DescribeTableDataImportJobResponse {
      */
     
     public Object validationException;
+
     public DescribeTableDataImportJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeTableDataImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

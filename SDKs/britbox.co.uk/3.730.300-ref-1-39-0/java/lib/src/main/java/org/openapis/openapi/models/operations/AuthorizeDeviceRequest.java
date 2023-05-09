@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthorizeDeviceRequest {
@@ -12,6 +13,7 @@ public class AuthorizeDeviceRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DeviceAuthorizationCode deviceAuthorizationCode;
+
     public AuthorizeDeviceRequest withDeviceAuthorizationCode(org.openapis.openapi.models.shared.DeviceAuthorizationCode deviceAuthorizationCode) {
         this.deviceAuthorizationCode = deviceAuthorizationCode;
         return this;
@@ -42,6 +44,7 @@ public class AuthorizeDeviceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public AuthorizeDeviceRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -62,9 +65,13 @@ public class AuthorizeDeviceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public AuthorizeDeviceRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public AuthorizeDeviceRequest(@JsonProperty("DeviceAuthorizationCode") org.openapis.openapi.models.shared.DeviceAuthorizationCode deviceAuthorizationCode) {
+        this.deviceAuthorizationCode = deviceAuthorizationCode;
+  }
 }

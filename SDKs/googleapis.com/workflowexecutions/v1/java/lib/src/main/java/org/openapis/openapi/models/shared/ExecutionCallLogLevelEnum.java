@@ -12,7 +12,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum ExecutionCallLogLevelEnum {
     CALL_LOG_LEVEL_UNSPECIFIED("CALL_LOG_LEVEL_UNSPECIFIED"),
     LOG_ALL_CALLS("LOG_ALL_CALLS"),
-    LOG_ERRORS_ONLY("LOG_ERRORS_ONLY");
+    LOG_ERRORS_ONLY("LOG_ERRORS_ONLY"),
+    LOG_NONE("LOG_NONE");
 
     @JsonValue
     public final String value;

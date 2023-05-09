@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPipelineTestReportTestCasesRequest {
@@ -12,6 +13,7 @@ public class GetPipelineTestReportTestCasesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pipeline_uuid")
     public String pipelineUuid;
+
     public GetPipelineTestReportTestCasesRequest withPipelineUuid(String pipelineUuid) {
         this.pipelineUuid = pipelineUuid;
         return this;
@@ -22,6 +24,7 @@ public class GetPipelineTestReportTestCasesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetPipelineTestReportTestCasesRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -32,6 +35,7 @@ public class GetPipelineTestReportTestCasesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=step_uuid")
     public String stepUuid;
+
     public GetPipelineTestReportTestCasesRequest withStepUuid(String stepUuid) {
         this.stepUuid = stepUuid;
         return this;
@@ -42,9 +46,16 @@ public class GetPipelineTestReportTestCasesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetPipelineTestReportTestCasesRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetPipelineTestReportTestCasesRequest(@JsonProperty("pipeline_uuid") String pipelineUuid, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("step_uuid") String stepUuid, @JsonProperty("workspace") String workspace) {
+        this.pipelineUuid = pipelineUuid;
+        this.repoSlug = repoSlug;
+        this.stepUuid = stepUuid;
+        this.workspace = workspace;
+  }
 }

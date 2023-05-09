@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScoreSubmissionsRequest {
@@ -13,9 +14,13 @@ public class GetScoreSubmissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
     public String score;
+
     public GetScoreSubmissionsRequest withScore(String score) {
         this.score = score;
         return this;
     }
     
+    public GetScoreSubmissionsRequest(@JsonProperty("score") String score) {
+        this.score = score;
+  }
 }

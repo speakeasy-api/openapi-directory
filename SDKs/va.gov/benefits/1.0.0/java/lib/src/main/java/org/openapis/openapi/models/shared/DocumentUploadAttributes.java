@@ -32,6 +32,7 @@ public class DocumentUploadAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public DocumentUploadAttributes withCode(String code) {
         this.code = code;
         return this;
@@ -43,6 +44,7 @@ public class DocumentUploadAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public DocumentUploadAttributes withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -53,6 +55,7 @@ public class DocumentUploadAttributes {
      */
     @JsonProperty("guid")
     public String guid;
+
     public DocumentUploadAttributes withGuid(String guid) {
         this.guid = guid;
         return this;
@@ -64,6 +67,7 @@ public class DocumentUploadAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public DocumentUploadAttributes withLocation(String location) {
         this.location = location;
         return this;
@@ -75,6 +79,7 @@ public class DocumentUploadAttributes {
      */
     @JsonProperty("status")
     public DocumentUploadAttributesStatusEnum status;
+
     public DocumentUploadAttributes withStatus(DocumentUploadAttributesStatusEnum status) {
         this.status = status;
         return this;
@@ -88,6 +93,7 @@ public class DocumentUploadAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public DocumentUploadAttributes withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -99,9 +105,14 @@ public class DocumentUploadAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploaded_pdf")
     public Object uploadedPdf;
+
     public DocumentUploadAttributes withUploadedPdf(Object uploadedPdf) {
         this.uploadedPdf = uploadedPdf;
         return this;
     }
     
+    public DocumentUploadAttributes(@JsonProperty("guid") String guid, @JsonProperty("status") DocumentUploadAttributesStatusEnum status) {
+        this.guid = guid;
+        this.status = status;
+  }
 }

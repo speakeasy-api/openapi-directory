@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleasesGetLatestByPublicDistributionGroupResponse {
     
     public String contentType;
+
     public ReleasesGetLatestByPublicDistributionGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReleasesGetLatestByPublicDistributionGroupResponse {
     
     
     public Integer statusCode;
+
     public ReleasesGetLatestByPublicDistributionGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReleasesGetLatestByPublicDistributionGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleasesGetLatestByPublicDistributionGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReleasesGetLatestByPublicDistributionGroupResponse {
      */
     
     public ReleasesGetLatestByPublicDistributionGroup200ApplicationJSON releasesGetLatestByPublicDistributionGroup200ApplicationJSONObject;
+
     public ReleasesGetLatestByPublicDistributionGroupResponse withReleasesGetLatestByPublicDistributionGroup200ApplicationJSONObject(ReleasesGetLatestByPublicDistributionGroup200ApplicationJSON releasesGetLatestByPublicDistributionGroup200ApplicationJSONObject) {
         this.releasesGetLatestByPublicDistributionGroup200ApplicationJSONObject = releasesGetLatestByPublicDistributionGroup200ApplicationJSONObject;
         return this;
@@ -45,6 +50,7 @@ public class ReleasesGetLatestByPublicDistributionGroupResponse {
      */
     
     public ReleasesGetLatestByPublicDistributionGroup403ApplicationJSON releasesGetLatestByPublicDistributionGroup403ApplicationJSONObject;
+
     public ReleasesGetLatestByPublicDistributionGroupResponse withReleasesGetLatestByPublicDistributionGroup403ApplicationJSONObject(ReleasesGetLatestByPublicDistributionGroup403ApplicationJSON releasesGetLatestByPublicDistributionGroup403ApplicationJSONObject) {
         this.releasesGetLatestByPublicDistributionGroup403ApplicationJSONObject = releasesGetLatestByPublicDistributionGroup403ApplicationJSONObject;
         return this;
@@ -58,9 +64,14 @@ public class ReleasesGetLatestByPublicDistributionGroupResponse {
      */
     
     public ReleasesGetLatestByPublicDistributionGroup404ApplicationJSON releasesGetLatestByPublicDistributionGroup404ApplicationJSONObject;
+
     public ReleasesGetLatestByPublicDistributionGroupResponse withReleasesGetLatestByPublicDistributionGroup404ApplicationJSONObject(ReleasesGetLatestByPublicDistributionGroup404ApplicationJSON releasesGetLatestByPublicDistributionGroup404ApplicationJSONObject) {
         this.releasesGetLatestByPublicDistributionGroup404ApplicationJSONObject = releasesGetLatestByPublicDistributionGroup404ApplicationJSONObject;
         return this;
     }
     
+    public ReleasesGetLatestByPublicDistributionGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

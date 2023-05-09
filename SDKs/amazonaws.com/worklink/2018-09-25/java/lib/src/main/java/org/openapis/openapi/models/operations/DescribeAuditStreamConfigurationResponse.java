@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAuditStreamConfigurationResponse {
     
     public String contentType;
+
     public DescribeAuditStreamConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAuditStreamConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAuditStreamConfigurationResponse describeAuditStreamConfigurationResponse;
+
     public DescribeAuditStreamConfigurationResponse withDescribeAuditStreamConfigurationResponse(org.openapis.openapi.models.shared.DescribeAuditStreamConfigurationResponse describeAuditStreamConfigurationResponse) {
         this.describeAuditStreamConfigurationResponse = describeAuditStreamConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAuditStreamConfigurationResponse {
      */
     
     public Object internalServerErrorException;
+
     public DescribeAuditStreamConfigurationResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAuditStreamConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeAuditStreamConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeAuditStreamConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeAuditStreamConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeAuditStreamConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAuditStreamConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAuditStreamConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAuditStreamConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeAuditStreamConfigurationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeAuditStreamConfigurationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeAuditStreamConfigurationResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeAuditStreamConfigurationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeAuditStreamConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

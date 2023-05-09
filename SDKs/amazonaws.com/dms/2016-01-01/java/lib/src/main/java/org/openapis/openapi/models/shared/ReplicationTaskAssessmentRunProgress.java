@@ -15,6 +15,7 @@ public class ReplicationTaskAssessmentRunProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndividualAssessmentCompletedCount")
     public Long individualAssessmentCompletedCount;
+
     public ReplicationTaskAssessmentRunProgress withIndividualAssessmentCompletedCount(Long individualAssessmentCompletedCount) {
         this.individualAssessmentCompletedCount = individualAssessmentCompletedCount;
         return this;
@@ -23,9 +24,11 @@ public class ReplicationTaskAssessmentRunProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndividualAssessmentCount")
     public Long individualAssessmentCount;
+
     public ReplicationTaskAssessmentRunProgress withIndividualAssessmentCount(Long individualAssessmentCount) {
         this.individualAssessmentCount = individualAssessmentCount;
         return this;
     }
     
+    public ReplicationTaskAssessmentRunProgress(){}
 }

@@ -15,6 +15,7 @@ public class ListAggregateDiscoveredResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAggregateDiscoveredResourcesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListAggregateDiscoveredResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceIdentifiers")
     public AggregateResourceIdentifier[] resourceIdentifiers;
+
     public ListAggregateDiscoveredResourcesResponse withResourceIdentifiers(AggregateResourceIdentifier[] resourceIdentifiers) {
         this.resourceIdentifiers = resourceIdentifiers;
         return this;
     }
     
+    public ListAggregateDiscoveredResourcesResponse(){}
 }

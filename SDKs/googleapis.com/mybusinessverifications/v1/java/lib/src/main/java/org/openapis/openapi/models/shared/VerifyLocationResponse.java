@@ -18,9 +18,11 @@ public class VerifyLocationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification")
     public Verification verification;
+
     public VerifyLocationResponse withVerification(Verification verification) {
         this.verification = verification;
         return this;
     }
     
+    public VerifyLocationResponse(){}
 }

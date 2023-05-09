@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryListApiDeploymentsRequest {
@@ -12,6 +13,7 @@ public class RegistryListApiDeploymentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
     public String api;
+
     public RegistryListApiDeploymentsRequest withApi(String api) {
         this.api = api;
         return this;
@@ -22,6 +24,7 @@ public class RegistryListApiDeploymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public RegistryListApiDeploymentsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -32,6 +35,7 @@ public class RegistryListApiDeploymentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryListApiDeploymentsRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -42,6 +46,7 @@ public class RegistryListApiDeploymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public RegistryListApiDeploymentsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -52,6 +57,7 @@ public class RegistryListApiDeploymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public RegistryListApiDeploymentsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -62,9 +68,15 @@ public class RegistryListApiDeploymentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryListApiDeploymentsRequest withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public RegistryListApiDeploymentsRequest(@JsonProperty("api") String api, @JsonProperty("location") String location, @JsonProperty("project") String project) {
+        this.api = api;
+        this.location = location;
+        this.project = project;
+  }
 }

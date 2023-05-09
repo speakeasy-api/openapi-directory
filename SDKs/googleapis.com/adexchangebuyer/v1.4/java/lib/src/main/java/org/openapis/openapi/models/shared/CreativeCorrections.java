@@ -15,6 +15,7 @@ public class CreativeCorrections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contexts")
     public CreativeCorrectionsContexts[] contexts;
+
     public CreativeCorrections withContexts(CreativeCorrectionsContexts[] contexts) {
         this.contexts = contexts;
         return this;
@@ -26,6 +27,7 @@ public class CreativeCorrections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String[] details;
+
     public CreativeCorrections withDetails(String[] details) {
         this.details = details;
         return this;
@@ -37,9 +39,11 @@ public class CreativeCorrections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public CreativeCorrections withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public CreativeCorrections(){}
 }

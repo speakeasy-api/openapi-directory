@@ -18,6 +18,7 @@ public class FirewallLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable")
     public Boolean enable;
+
     public FirewallLogConfig withEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -29,9 +30,11 @@ public class FirewallLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FirewallLogConfigMetadataEnum metadata;
+
     public FirewallLogConfig withMetadata(FirewallLogConfigMetadataEnum metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public FirewallLogConfig(){}
 }

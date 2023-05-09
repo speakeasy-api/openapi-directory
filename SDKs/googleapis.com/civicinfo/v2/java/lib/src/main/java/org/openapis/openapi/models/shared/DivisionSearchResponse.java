@@ -18,6 +18,7 @@ public class DivisionSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DivisionSearchResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -26,9 +27,11 @@ public class DivisionSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public DivisionSearchResult[] results;
+
     public DivisionSearchResponse withResults(DivisionSearchResult[] results) {
         this.results = results;
         return this;
     }
     
+    public DivisionSearchResponse(){}
 }

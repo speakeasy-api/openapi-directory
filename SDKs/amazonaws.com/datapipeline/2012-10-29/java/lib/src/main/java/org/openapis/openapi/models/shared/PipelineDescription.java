@@ -15,6 +15,7 @@ public class PipelineDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PipelineDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class PipelineDescription {
     
     @JsonProperty("fields")
     public Field[] fields;
+
     public PipelineDescription withFields(Field[] fields) {
         this.fields = fields;
         return this;
@@ -29,6 +31,7 @@ public class PipelineDescription {
     
     @JsonProperty("name")
     public String name;
+
     public PipelineDescription withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class PipelineDescription {
     
     @JsonProperty("pipelineId")
     public String pipelineId;
+
     public PipelineDescription withPipelineId(String pipelineId) {
         this.pipelineId = pipelineId;
         return this;
@@ -44,9 +48,15 @@ public class PipelineDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public PipelineDescription withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public PipelineDescription(@JsonProperty("fields") Field[] fields, @JsonProperty("name") String name, @JsonProperty("pipelineId") String pipelineId) {
+        this.fields = fields;
+        this.name = name;
+        this.pipelineId = pipelineId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGasPriceRequest {
@@ -12,6 +13,7 @@ public class GetGasPriceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public GetGasPriceRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class GetGasPriceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetGasPriceRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    public GetGasPriceRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("Content-Type") String contentType) {
+        this.authorization = authorization;
+        this.contentType = contentType;
+  }
 }

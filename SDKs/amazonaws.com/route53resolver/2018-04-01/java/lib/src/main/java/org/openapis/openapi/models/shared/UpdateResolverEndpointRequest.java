@@ -12,6 +12,7 @@ public class UpdateResolverEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateResolverEndpointRequest withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class UpdateResolverEndpointRequest {
     
     @JsonProperty("ResolverEndpointId")
     public String resolverEndpointId;
+
     public UpdateResolverEndpointRequest withResolverEndpointId(String resolverEndpointId) {
         this.resolverEndpointId = resolverEndpointId;
         return this;
@@ -27,6 +29,7 @@ public class UpdateResolverEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverEndpointType")
     public ResolverEndpointTypeEnum resolverEndpointType;
+
     public UpdateResolverEndpointRequest withResolverEndpointType(ResolverEndpointTypeEnum resolverEndpointType) {
         this.resolverEndpointType = resolverEndpointType;
         return this;
@@ -35,9 +38,13 @@ public class UpdateResolverEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateIpAddresses")
     public UpdateIpAddress[] updateIpAddresses;
+
     public UpdateResolverEndpointRequest withUpdateIpAddresses(UpdateIpAddress[] updateIpAddresses) {
         this.updateIpAddresses = updateIpAddresses;
         return this;
     }
     
+    public UpdateResolverEndpointRequest(@JsonProperty("ResolverEndpointId") String resolverEndpointId) {
+        this.resolverEndpointId = resolverEndpointId;
+  }
 }

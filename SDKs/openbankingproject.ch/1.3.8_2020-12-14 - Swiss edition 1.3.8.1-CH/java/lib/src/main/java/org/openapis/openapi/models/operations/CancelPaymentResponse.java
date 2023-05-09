@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelPaymentResponse {
     
     public String contentType;
+
     public CancelPaymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CancelPaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400NGPIS error400NGPIS;
+
     public CancelPaymentResponse withError400NGPIS(org.openapis.openapi.models.shared.Error400NGPIS error400NGPIS) {
         this.error400NGPIS = error400NGPIS;
         return this;
@@ -29,6 +32,7 @@ public class CancelPaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400PIS error400PIS;
+
     public CancelPaymentResponse withError400PIS(org.openapis.openapi.models.shared.Error400PIS error400PIS) {
         this.error400PIS = error400PIS;
         return this;
@@ -39,6 +43,7 @@ public class CancelPaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401NGPIS error401NGPIS;
+
     public CancelPaymentResponse withError401NGPIS(org.openapis.openapi.models.shared.Error401NGPIS error401NGPIS) {
         this.error401NGPIS = error401NGPIS;
         return this;
@@ -49,6 +54,7 @@ public class CancelPaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401PIS error401PIS;
+
     public CancelPaymentResponse withError401PIS(org.openapis.openapi.models.shared.Error401PIS error401PIS) {
         this.error401PIS = error401PIS;
         return this;
@@ -59,6 +65,7 @@ public class CancelPaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403NGPIS error403NGPIS;
+
     public CancelPaymentResponse withError403NGPIS(org.openapis.openapi.models.shared.Error403NGPIS error403NGPIS) {
         this.error403NGPIS = error403NGPIS;
         return this;
@@ -69,6 +76,7 @@ public class CancelPaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403PIS error403PIS;
+
     public CancelPaymentResponse withError403PIS(org.openapis.openapi.models.shared.Error403PIS error403PIS) {
         this.error403PIS = error403PIS;
         return this;
@@ -79,6 +87,7 @@ public class CancelPaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404NGPIS error404NGPIS;
+
     public CancelPaymentResponse withError404NGPIS(org.openapis.openapi.models.shared.Error404NGPIS error404NGPIS) {
         this.error404NGPIS = error404NGPIS;
         return this;
@@ -89,6 +98,7 @@ public class CancelPaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404PIS error404PIS;
+
     public CancelPaymentResponse withError404PIS(org.openapis.openapi.models.shared.Error404PIS error404PIS) {
         this.error404PIS = error404PIS;
         return this;
@@ -99,6 +109,7 @@ public class CancelPaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405NGPISCANC error405NGPISCANC;
+
     public CancelPaymentResponse withError405NGPISCANC(org.openapis.openapi.models.shared.Error405NGPISCANC error405NGPISCANC) {
         this.error405NGPISCANC = error405NGPISCANC;
         return this;
@@ -109,6 +120,7 @@ public class CancelPaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405PISCANC error405PISCANC;
+
     public CancelPaymentResponse withError405PISCANC(org.openapis.openapi.models.shared.Error405PISCANC error405PISCANC) {
         this.error405PISCANC = error405PISCANC;
         return this;
@@ -119,6 +131,7 @@ public class CancelPaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409NGPIS error409NGPIS;
+
     public CancelPaymentResponse withError409NGPIS(org.openapis.openapi.models.shared.Error409NGPIS error409NGPIS) {
         this.error409NGPIS = error409NGPIS;
         return this;
@@ -129,6 +142,7 @@ public class CancelPaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409PIS error409PIS;
+
     public CancelPaymentResponse withError409PIS(org.openapis.openapi.models.shared.Error409PIS error409PIS) {
         this.error409PIS = error409PIS;
         return this;
@@ -136,6 +150,7 @@ public class CancelPaymentResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CancelPaymentResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -143,6 +158,7 @@ public class CancelPaymentResponse {
     
     
     public Integer statusCode;
+
     public CancelPaymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -150,6 +166,7 @@ public class CancelPaymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelPaymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -160,9 +177,14 @@ public class CancelPaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.PaymentInitiationCancelResponse202 paymentInitiationCancelResponse202;
+
     public CancelPaymentResponse withPaymentInitiationCancelResponse202(org.openapis.openapi.models.shared.PaymentInitiationCancelResponse202 paymentInitiationCancelResponse202) {
         this.paymentInitiationCancelResponse202 = paymentInitiationCancelResponse202;
         return this;
     }
     
+    public CancelPaymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

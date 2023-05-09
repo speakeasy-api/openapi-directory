@@ -18,9 +18,11 @@ public class RemoveUserForWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.WorkspaceRemoveUserRequest data;
+
     public RemoveUserForWorkspaceRequestBody withData(org.openapis.openapi.models.shared.WorkspaceRemoveUserRequest data) {
         this.data = data;
         return this;
     }
     
+    public RemoveUserForWorkspaceRequestBody(){}
 }

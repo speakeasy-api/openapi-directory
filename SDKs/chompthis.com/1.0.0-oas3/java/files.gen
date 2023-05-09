@@ -66,4 +66,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/IngredientObjectItemsNutrie
 lib/src/main/java/org/openapis/openapi/models/shared/IngredientObjectItemsPortions.java
 lib/src/main/java/org/openapis/openapi/models/shared/IngredientObjectItems.java
 lib/src/main/java/org/openapis/openapi/models/shared/IngredientObject.java
+docs/sdk/README.md
 USAGE.md

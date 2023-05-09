@@ -15,6 +15,7 @@ public class ListWebsiteAuthorizationProvidersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListWebsiteAuthorizationProvidersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListWebsiteAuthorizationProvidersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebsiteAuthorizationProviders")
     public WebsiteAuthorizationProviderSummary[] websiteAuthorizationProviders;
+
     public ListWebsiteAuthorizationProvidersResponse withWebsiteAuthorizationProviders(WebsiteAuthorizationProviderSummary[] websiteAuthorizationProviders) {
         this.websiteAuthorizationProviders = websiteAuthorizationProviders;
         return this;
     }
     
+    public ListWebsiteAuthorizationProvidersResponse(){}
 }

@@ -18,6 +18,7 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("anonymous")
     public Boolean anonymous;
+
     public Token withAnonymous(Boolean anonymous) {
         this.anonymous = anonymous;
         return this;
@@ -29,6 +30,7 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public Token withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -40,6 +42,7 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayText")
     public String displayText;
+
     public Token withDisplayText(String displayText) {
         this.displayText = displayText;
         return this;
@@ -51,6 +54,7 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Token withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -62,6 +66,7 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Token withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nativeApp")
     public Boolean nativeApp;
+
     public Token withNativeApp(Boolean nativeApp) {
         this.nativeApp = nativeApp;
         return this;
@@ -84,6 +90,7 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public String[] scopes;
+
     public Token withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
@@ -95,9 +102,11 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userKey")
     public String userKey;
+
     public Token withUserKey(String userKey) {
         this.userKey = userKey;
         return this;
     }
     
+    public Token(){}
 }

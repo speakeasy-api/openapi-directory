@@ -15,6 +15,7 @@ public class Tool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Tool withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class Tool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Tool withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Tool(){}
 }

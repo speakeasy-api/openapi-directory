@@ -62,11 +62,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveCommentsCreateResponse res = new org.openapis.openapi.models.operations.DriveCommentsCreateResponse() {{
+        org.openapis.openapi.models.operations.DriveCommentsCreateResponse res = new org.openapis.openapi.models.operations.DriveCommentsCreateResponse(contentType, httpRes.statusCode()) {{
             comment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,10 +106,8 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveCommentsDeleteResponse res = new org.openapis.openapi.models.operations.DriveCommentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DriveCommentsDeleteResponse res = new org.openapis.openapi.models.operations.DriveCommentsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveCommentsGetResponse res = new org.openapis.openapi.models.operations.DriveCommentsGetResponse() {{
+        org.openapis.openapi.models.operations.DriveCommentsGetResponse res = new org.openapis.openapi.models.operations.DriveCommentsGetResponse(contentType, httpRes.statusCode()) {{
             comment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +188,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveCommentsListResponse res = new org.openapis.openapi.models.operations.DriveCommentsListResponse() {{
+        org.openapis.openapi.models.operations.DriveCommentsListResponse res = new org.openapis.openapi.models.operations.DriveCommentsListResponse(contentType, httpRes.statusCode()) {{
             commentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +234,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveCommentsUpdateResponse res = new org.openapis.openapi.models.operations.DriveCommentsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DriveCommentsUpdateResponse res = new org.openapis.openapi.models.operations.DriveCommentsUpdateResponse(contentType, httpRes.statusCode()) {{
             comment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

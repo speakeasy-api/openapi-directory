@@ -18,6 +18,7 @@ public class ItemDraftResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemDraftId")
     public String itemDraftId;
+
     public ItemDraftResponse withItemDraftId(String itemDraftId) {
         this.itemDraftId = itemDraftId;
         return this;
@@ -29,6 +30,7 @@ public class ItemDraftResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellFlowNativeUri")
     public String sellFlowNativeUri;
+
     public ItemDraftResponse withSellFlowNativeUri(String sellFlowNativeUri) {
         this.sellFlowNativeUri = sellFlowNativeUri;
         return this;
@@ -40,9 +42,11 @@ public class ItemDraftResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellFlowUrl")
     public String sellFlowUrl;
+
     public ItemDraftResponse withSellFlowUrl(String sellFlowUrl) {
         this.sellFlowUrl = sellFlowUrl;
         return this;
     }
     
+    public ItemDraftResponse(){}
 }

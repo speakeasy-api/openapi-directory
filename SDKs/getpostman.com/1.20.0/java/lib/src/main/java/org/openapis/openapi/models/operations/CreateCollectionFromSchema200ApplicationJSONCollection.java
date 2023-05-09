@@ -12,6 +12,7 @@ public class CreateCollectionFromSchema200ApplicationJSONCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateCollectionFromSchema200ApplicationJSONCollection withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class CreateCollectionFromSchema200ApplicationJSONCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public CreateCollectionFromSchema200ApplicationJSONCollection withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public CreateCollectionFromSchema200ApplicationJSONCollection(){}
 }

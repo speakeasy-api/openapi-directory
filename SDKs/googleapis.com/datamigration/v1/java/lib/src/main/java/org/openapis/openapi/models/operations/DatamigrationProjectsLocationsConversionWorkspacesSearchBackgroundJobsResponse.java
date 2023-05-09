@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsResponse {
     
     public String contentType;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     
     public org.openapis.openapi.models.shared.SearchBackgroundJobsResponse searchBackgroundJobsResponse;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsResponse withSearchBackgroundJobsResponse(org.openapis.openapi.models.shared.SearchBackgroundJobsResponse searchBackgroundJobsResponse) {
         this.searchBackgroundJobsResponse = searchBackgroundJobsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
     
     
     public Integer statusCode;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

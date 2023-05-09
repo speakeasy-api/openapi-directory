@@ -15,9 +15,11 @@ public class DescribeProtectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protection")
     public Protection protection;
+
     public DescribeProtectionResponse withProtection(Protection protection) {
         this.protection = protection;
         return this;
     }
     
+    public DescribeProtectionResponse(){}
 }

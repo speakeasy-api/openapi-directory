@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeRegionsResultRegions {
     
     public String endpoint;
+
     public DescribeRegionsResultRegions withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -19,6 +20,7 @@ public class DescribeRegionsResultRegions {
     
     
     public String optInStatus;
+
     public DescribeRegionsResultRegions withOptInStatus(String optInStatus) {
         this.optInStatus = optInStatus;
         return this;
@@ -26,9 +28,11 @@ public class DescribeRegionsResultRegions {
     
     
     public String regionName;
+
     public DescribeRegionsResultRegions withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
     }
     
+    public DescribeRegionsResultRegions(){}
 }

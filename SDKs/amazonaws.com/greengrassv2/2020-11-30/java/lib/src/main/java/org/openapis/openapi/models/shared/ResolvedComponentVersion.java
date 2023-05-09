@@ -15,6 +15,7 @@ public class ResolvedComponentVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ResolvedComponentVersion withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ResolvedComponentVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentName")
     public String componentName;
+
     public ResolvedComponentVersion withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -31,6 +33,7 @@ public class ResolvedComponentVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentVersion")
     public String componentVersion;
+
     public ResolvedComponentVersion withComponentVersion(String componentVersion) {
         this.componentVersion = componentVersion;
         return this;
@@ -39,6 +42,7 @@ public class ResolvedComponentVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ResolvedComponentVersion withMessage(String message) {
         this.message = message;
         return this;
@@ -47,6 +51,7 @@ public class ResolvedComponentVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipe")
     public String recipe;
+
     public ResolvedComponentVersion withRecipe(String recipe) {
         this.recipe = recipe;
         return this;
@@ -55,9 +60,11 @@ public class ResolvedComponentVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorGuidance")
     public VendorGuidanceEnum vendorGuidance;
+
     public ResolvedComponentVersion withVendorGuidance(VendorGuidanceEnum vendorGuidance) {
         this.vendorGuidance = vendorGuidance;
         return this;
     }
     
+    public ResolvedComponentVersion(){}
 }

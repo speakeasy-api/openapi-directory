@@ -12,9 +12,11 @@ public class EnterpriseAdminUpgradeLicenseRequestBody {
      */
     @SpeakeasyMetadata("form:name=license")
     public String license;
+
     public EnterpriseAdminUpgradeLicenseRequestBody withLicense(String license) {
         this.license = license;
         return this;
     }
     
+    public EnterpriseAdminUpgradeLicenseRequestBody(){}
 }

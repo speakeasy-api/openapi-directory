@@ -12,9 +12,11 @@ public class PostApiV1AccountsIdNoteRequestBody {
      */
     
     public String comment;
+
     public PostApiV1AccountsIdNoteRequestBody withComment(String comment) {
         this.comment = comment;
         return this;
     }
     
+    public PostApiV1AccountsIdNoteRequestBody(){}
 }

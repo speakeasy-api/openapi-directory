@@ -13,8 +13,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ClusterStatus {
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ErrorDetails")
+    public ErrorDetail[] errorDetails;
+
+    public ClusterStatus withErrorDetails(ErrorDetail[] errorDetails) {
+        this.errorDetails = errorDetails;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ClusterStateEnum state;
+
     public ClusterStatus withState(ClusterStateEnum state) {
         this.state = state;
         return this;
@@ -23,6 +33,7 @@ public class ClusterStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateChangeReason")
     public ClusterStateChangeReason stateChangeReason;
+
     public ClusterStatus withStateChangeReason(ClusterStateChangeReason stateChangeReason) {
         this.stateChangeReason = stateChangeReason;
         return this;
@@ -31,9 +42,11 @@ public class ClusterStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeline")
     public ClusterTimeline timeline;
+
     public ClusterStatus withTimeline(ClusterTimeline timeline) {
         this.timeline = timeline;
         return this;
     }
     
+    public ClusterStatus(){}
 }

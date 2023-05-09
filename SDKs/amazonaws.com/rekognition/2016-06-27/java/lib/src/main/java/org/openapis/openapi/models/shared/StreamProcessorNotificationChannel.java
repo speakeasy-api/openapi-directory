@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StreamProcessorNotificationChannel {
     @JsonProperty("SNSTopicArn")
     public String snsTopicArn;
+
     public StreamProcessorNotificationChannel withSNSTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
     }
     
+    public StreamProcessorNotificationChannel(@JsonProperty("SNSTopicArn") String snsTopicArn) {
+        this.snsTopicArn = snsTopicArn;
+  }
 }

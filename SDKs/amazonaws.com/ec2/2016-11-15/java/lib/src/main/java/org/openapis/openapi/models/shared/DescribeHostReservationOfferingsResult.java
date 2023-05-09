@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeHostReservationOfferingsResult {
     
     public String nextToken;
+
     public DescribeHostReservationOfferingsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeHostReservationOfferingsResult {
     
     
     public DescribeHostReservationOfferingsResultOfferingSet[] offeringSet;
+
     public DescribeHostReservationOfferingsResult withOfferingSet(DescribeHostReservationOfferingsResultOfferingSet[] offeringSet) {
         this.offeringSet = offeringSet;
         return this;
     }
     
+    public DescribeHostReservationOfferingsResult(){}
 }

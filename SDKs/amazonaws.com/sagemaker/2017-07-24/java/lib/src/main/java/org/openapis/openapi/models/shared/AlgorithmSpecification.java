@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AlgorithmSpecification - &lt;p&gt;Specifies the training algorithm to use in a &lt;a&gt;CreateTrainingJob&lt;/a&gt; request.&lt;/p&gt; &lt;p&gt;For more information about algorithms provided by SageMaker, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html"&gt;Algorithms&lt;/a&gt;. For information about using your own algorithms, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html"&gt;Using Your Own Algorithms with Amazon SageMaker&lt;/a&gt;. &lt;/p&gt;
+ * AlgorithmSpecification - &lt;p&gt;Specifies the training algorithm to use in a &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html"&gt;CreateTrainingJob&lt;/a&gt; request.&lt;/p&gt; &lt;p&gt;For more information about algorithms provided by SageMaker, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html"&gt;Algorithms&lt;/a&gt;. For information about using your own algorithms, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html"&gt;Using Your Own Algorithms with Amazon SageMaker&lt;/a&gt;. &lt;/p&gt;
  */
 public class AlgorithmSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlgorithmName")
     public String algorithmName;
+
     public AlgorithmSpecification withAlgorithmName(String algorithmName) {
         this.algorithmName = algorithmName;
         return this;
@@ -23,6 +24,7 @@ public class AlgorithmSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerArguments")
     public String[] containerArguments;
+
     public AlgorithmSpecification withContainerArguments(String[] containerArguments) {
         this.containerArguments = containerArguments;
         return this;
@@ -31,6 +33,7 @@ public class AlgorithmSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerEntrypoint")
     public String[] containerEntrypoint;
+
     public AlgorithmSpecification withContainerEntrypoint(String[] containerEntrypoint) {
         this.containerEntrypoint = containerEntrypoint;
         return this;
@@ -39,6 +42,7 @@ public class AlgorithmSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableSageMakerMetricsTimeSeries")
     public Boolean enableSageMakerMetricsTimeSeries;
+
     public AlgorithmSpecification withEnableSageMakerMetricsTimeSeries(Boolean enableSageMakerMetricsTimeSeries) {
         this.enableSageMakerMetricsTimeSeries = enableSageMakerMetricsTimeSeries;
         return this;
@@ -47,6 +51,7 @@ public class AlgorithmSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricDefinitions")
     public MetricDefinition[] metricDefinitions;
+
     public AlgorithmSpecification withMetricDefinitions(MetricDefinition[] metricDefinitions) {
         this.metricDefinitions = metricDefinitions;
         return this;
@@ -55,6 +60,7 @@ public class AlgorithmSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingImage")
     public String trainingImage;
+
     public AlgorithmSpecification withTrainingImage(String trainingImage) {
         this.trainingImage = trainingImage;
         return this;
@@ -63,6 +69,7 @@ public class AlgorithmSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingImageConfig")
     public TrainingImageConfig trainingImageConfig;
+
     public AlgorithmSpecification withTrainingImageConfig(TrainingImageConfig trainingImageConfig) {
         this.trainingImageConfig = trainingImageConfig;
         return this;
@@ -73,9 +80,13 @@ public class AlgorithmSpecification {
      */
     @JsonProperty("TrainingInputMode")
     public TrainingInputModeEnum trainingInputMode;
+
     public AlgorithmSpecification withTrainingInputMode(TrainingInputModeEnum trainingInputMode) {
         this.trainingInputMode = trainingInputMode;
         return this;
     }
     
+    public AlgorithmSpecification(@JsonProperty("TrainingInputMode") TrainingInputModeEnum trainingInputMode) {
+        this.trainingInputMode = trainingInputMode;
+  }
 }

@@ -15,9 +15,11 @@ public class ErrorsErrorAttachmentText200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public ErrorsErrorAttachmentText200ApplicationJSON withContent(String content) {
         this.content = content;
         return this;
     }
     
+    public ErrorsErrorAttachmentText200ApplicationJSON(){}
 }

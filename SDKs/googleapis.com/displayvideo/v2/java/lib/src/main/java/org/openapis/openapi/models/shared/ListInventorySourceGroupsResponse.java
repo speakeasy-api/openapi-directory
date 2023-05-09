@@ -18,6 +18,7 @@ public class ListInventorySourceGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventorySourceGroups")
     public InventorySourceGroup[] inventorySourceGroups;
+
     public ListInventorySourceGroupsResponse withInventorySourceGroups(InventorySourceGroup[] inventorySourceGroups) {
         this.inventorySourceGroups = inventorySourceGroups;
         return this;
@@ -29,9 +30,11 @@ public class ListInventorySourceGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListInventorySourceGroupsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListInventorySourceGroupsResponse(){}
 }

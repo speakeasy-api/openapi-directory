@@ -15,6 +15,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Payment withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Payment withKind(String kind) {
         this.kind = kind;
         return this;
@@ -37,6 +39,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentAmount")
     public String paymentAmount;
+
     public Payment withPaymentAmount(String paymentAmount) {
         this.paymentAmount = paymentAmount;
         return this;
@@ -48,6 +51,7 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentAmountCurrencyCode")
     public String paymentAmountCurrencyCode;
+
     public Payment withPaymentAmountCurrencyCode(String paymentAmountCurrencyCode) {
         this.paymentAmountCurrencyCode = paymentAmountCurrencyCode;
         return this;
@@ -59,9 +63,11 @@ public class Payment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentDate")
     public String paymentDate;
+
     public Payment withPaymentDate(String paymentDate) {
         this.paymentDate = paymentDate;
         return this;
     }
     
+    public Payment(){}
 }

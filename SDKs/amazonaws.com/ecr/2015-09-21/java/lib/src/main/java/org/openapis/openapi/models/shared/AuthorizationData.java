@@ -20,6 +20,7 @@ public class AuthorizationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationToken")
     public String authorizationToken;
+
     public AuthorizationData withAuthorizationToken(String authorizationToken) {
         this.authorizationToken = authorizationToken;
         return this;
@@ -30,6 +31,7 @@ public class AuthorizationData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiresAt")
     public OffsetDateTime expiresAt;
+
     public AuthorizationData withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -38,9 +40,11 @@ public class AuthorizationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyEndpoint")
     public String proxyEndpoint;
+
     public AuthorizationData withProxyEndpoint(String proxyEndpoint) {
         this.proxyEndpoint = proxyEndpoint;
         return this;
     }
     
+    public AuthorizationData(){}
 }

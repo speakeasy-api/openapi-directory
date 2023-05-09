@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEpisodeRecommendationsResponse {
     
     public String contentType;
+
     public GetEpisodeRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEpisodeRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEpisodeRecommendationsResponse getEpisodeRecommendationsResponse;
+
     public GetEpisodeRecommendationsResponse withGetEpisodeRecommendationsResponse(org.openapis.openapi.models.shared.GetEpisodeRecommendationsResponse getEpisodeRecommendationsResponse) {
         this.getEpisodeRecommendationsResponse = getEpisodeRecommendationsResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetEpisodeRecommendationsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetEpisodeRecommendationsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetEpisodeRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public GetEpisodeRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetEpisodeRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEpisodeRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEpisodeRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

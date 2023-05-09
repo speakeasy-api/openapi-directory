@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCheckoutCustomFieldsJsonRequest {
@@ -12,6 +13,7 @@ public class PostCheckoutCustomFieldsJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CheckoutCustomFieldEdit checkoutCustomFieldEdit;
+
     public PostCheckoutCustomFieldsJsonRequest withCheckoutCustomFieldEdit(org.openapis.openapi.models.shared.CheckoutCustomFieldEdit checkoutCustomFieldEdit) {
         this.checkoutCustomFieldEdit = checkoutCustomFieldEdit;
         return this;
@@ -22,6 +24,7 @@ public class PostCheckoutCustomFieldsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostCheckoutCustomFieldsJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,9 +35,15 @@ public class PostCheckoutCustomFieldsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostCheckoutCustomFieldsJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostCheckoutCustomFieldsJsonRequest(@JsonProperty("CheckoutCustomFieldEdit") org.openapis.openapi.models.shared.CheckoutCustomFieldEdit checkoutCustomFieldEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login) {
+        this.checkoutCustomFieldEdit = checkoutCustomFieldEdit;
+        this.authtoken = authtoken;
+        this.login = login;
+  }
 }

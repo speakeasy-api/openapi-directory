@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteRolePermissionsBoundaryRequest {
     
     public String roleName;
+
     public DeleteRolePermissionsBoundaryRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
     }
     
+    public DeleteRolePermissionsBoundaryRequest(@JsonProperty("RoleName") String roleName) {
+        this.roleName = roleName;
+  }
 }

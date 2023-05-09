@@ -12,6 +12,7 @@ public class RewardEarningFulfillmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public RewardEarningFulfillmentResourceAttributes attributes;
+
     public RewardEarningFulfillmentResource withAttributes(RewardEarningFulfillmentResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -20,6 +21,7 @@ public class RewardEarningFulfillmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RewardEarningFulfillmentResource withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class RewardEarningFulfillmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public RewardEarningFulfillmentResourceRelationships relationships;
+
     public RewardEarningFulfillmentResource withRelationships(RewardEarningFulfillmentResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -35,9 +38,13 @@ public class RewardEarningFulfillmentResource {
     
     @JsonProperty("type")
     public String type;
+
     public RewardEarningFulfillmentResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RewardEarningFulfillmentResource(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

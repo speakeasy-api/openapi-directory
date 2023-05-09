@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DlpProjectsStoredInfoTypesDeleteResponse {
     
     public String contentType;
+
     public DlpProjectsStoredInfoTypesDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DlpProjectsStoredInfoTypesDeleteResponse {
      */
     
     public java.util.Map<String, Object> googleProtobufEmpty;
+
     public DlpProjectsStoredInfoTypesDeleteResponse withGoogleProtobufEmpty(java.util.Map<String, Object> googleProtobufEmpty) {
         this.googleProtobufEmpty = googleProtobufEmpty;
         return this;
@@ -26,6 +29,7 @@ public class DlpProjectsStoredInfoTypesDeleteResponse {
     
     
     public Integer statusCode;
+
     public DlpProjectsStoredInfoTypesDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DlpProjectsStoredInfoTypesDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DlpProjectsStoredInfoTypesDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DlpProjectsStoredInfoTypesDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

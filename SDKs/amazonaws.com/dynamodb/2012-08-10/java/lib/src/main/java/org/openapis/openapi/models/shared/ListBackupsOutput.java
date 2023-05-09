@@ -15,6 +15,7 @@ public class ListBackupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupSummaries")
     public BackupSummary[] backupSummaries;
+
     public ListBackupsOutput withBackupSummaries(BackupSummary[] backupSummaries) {
         this.backupSummaries = backupSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListBackupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastEvaluatedBackupArn")
     public String lastEvaluatedBackupArn;
+
     public ListBackupsOutput withLastEvaluatedBackupArn(String lastEvaluatedBackupArn) {
         this.lastEvaluatedBackupArn = lastEvaluatedBackupArn;
         return this;
     }
     
+    public ListBackupsOutput(){}
 }

@@ -12,9 +12,13 @@ public class PutEventsRequestBody {
      */
     @JsonProperty("events")
     public org.openapis.openapi.models.shared.Event[] events;
+
     public PutEventsRequestBody withEvents(org.openapis.openapi.models.shared.Event[] events) {
         this.events = events;
         return this;
     }
     
+    public PutEventsRequestBody(@JsonProperty("events") org.openapis.openapi.models.shared.Event[] events) {
+        this.events = events;
+  }
 }

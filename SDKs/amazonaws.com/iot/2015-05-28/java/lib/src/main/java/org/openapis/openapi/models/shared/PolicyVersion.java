@@ -22,6 +22,7 @@ public class PolicyVersion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createDate")
     public OffsetDateTime createDate;
+
     public PolicyVersion withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -30,6 +31,7 @@ public class PolicyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefaultVersion")
     public Boolean isDefaultVersion;
+
     public PolicyVersion withIsDefaultVersion(Boolean isDefaultVersion) {
         this.isDefaultVersion = isDefaultVersion;
         return this;
@@ -38,9 +40,11 @@ public class PolicyVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionId")
     public String versionId;
+
     public PolicyVersion withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public PolicyVersion(){}
 }

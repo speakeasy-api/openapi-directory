@@ -15,6 +15,7 @@ public class LoadBasedAutoScalingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DownScaling")
     public AutoScalingThresholds downScaling;
+
     public LoadBasedAutoScalingConfiguration withDownScaling(AutoScalingThresholds downScaling) {
         this.downScaling = downScaling;
         return this;
@@ -23,6 +24,7 @@ public class LoadBasedAutoScalingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enable")
     public Boolean enable;
+
     public LoadBasedAutoScalingConfiguration withEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -31,6 +33,7 @@ public class LoadBasedAutoScalingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerId")
     public String layerId;
+
     public LoadBasedAutoScalingConfiguration withLayerId(String layerId) {
         this.layerId = layerId;
         return this;
@@ -39,9 +42,11 @@ public class LoadBasedAutoScalingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpScaling")
     public AutoScalingThresholds upScaling;
+
     public LoadBasedAutoScalingConfiguration withUpScaling(AutoScalingThresholds upScaling) {
         this.upScaling = upScaling;
         return this;
     }
     
+    public LoadBasedAutoScalingConfiguration(){}
 }

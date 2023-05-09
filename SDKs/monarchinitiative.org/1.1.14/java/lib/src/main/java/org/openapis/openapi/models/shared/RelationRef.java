@@ -12,6 +12,7 @@ public class RelationRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String[] category;
+
     public RelationRef withCategory(String[] category) {
         this.category = category;
         return this;
@@ -22,6 +23,7 @@ public class RelationRef {
      */
     @JsonProperty("id")
     public String id;
+
     public RelationRef withId(String id) {
         this.id = id;
         return this;
@@ -33,6 +35,7 @@ public class RelationRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inverse")
     public Boolean inverse;
+
     public RelationRef withInverse(Boolean inverse) {
         this.inverse = inverse;
         return this;
@@ -44,6 +47,7 @@ public class RelationRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iri")
     public String iri;
+
     public RelationRef withIri(String iri) {
         this.iri = iri;
         return this;
@@ -55,9 +59,13 @@ public class RelationRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public RelationRef withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public RelationRef(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

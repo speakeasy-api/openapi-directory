@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListArtifactsResult {
     @JsonProperty("artifacts")
     public Artifact[] artifacts;
+
     public ListArtifactsResult withArtifacts(Artifact[] artifacts) {
         this.artifacts = artifacts;
         return this;
@@ -22,9 +23,13 @@ public class ListArtifactsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListArtifactsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListArtifactsResult(@JsonProperty("artifacts") Artifact[] artifacts) {
+        this.artifacts = artifacts;
+  }
 }

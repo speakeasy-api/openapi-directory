@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImageCreateResponse {
     @JsonProperty("id")
     public String id;
+
     public ImageCreateResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ImageCreateResponse(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

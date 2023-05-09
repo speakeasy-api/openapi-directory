@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateExclusionsPreviewRequest {
     @JsonProperty("assessmentTemplateArn")
     public String assessmentTemplateArn;
+
     public CreateExclusionsPreviewRequest withAssessmentTemplateArn(String assessmentTemplateArn) {
         this.assessmentTemplateArn = assessmentTemplateArn;
         return this;
     }
     
+    public CreateExclusionsPreviewRequest(@JsonProperty("assessmentTemplateArn") String assessmentTemplateArn) {
+        this.assessmentTemplateArn = assessmentTemplateArn;
+  }
 }

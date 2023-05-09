@@ -12,6 +12,7 @@ public class GetV2CallSentimentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2CallSentimentsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -22,6 +23,7 @@ public class GetV2CallSentimentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2CallSentimentsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -32,6 +34,7 @@ public class GetV2CallSentimentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetV2CallSentimentsJsonRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +45,7 @@ public class GetV2CallSentimentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2CallSentimentsJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -52,6 +56,7 @@ public class GetV2CallSentimentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2CallSentimentsJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -62,6 +67,7 @@ public class GetV2CallSentimentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2CallSentimentsJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -72,9 +78,11 @@ public class GetV2CallSentimentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2CallSentimentsJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
     }
     
+    public GetV2CallSentimentsJsonRequest(){}
 }

@@ -15,6 +15,7 @@ public class ExecutionStartedEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public ExecutionStartedEventDetails withInput(String input) {
         this.input = input;
         return this;
@@ -23,6 +24,7 @@ public class ExecutionStartedEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDetails")
     public HistoryEventExecutionDataDetails inputDetails;
+
     public ExecutionStartedEventDetails withInputDetails(HistoryEventExecutionDataDetails inputDetails) {
         this.inputDetails = inputDetails;
         return this;
@@ -31,9 +33,11 @@ public class ExecutionStartedEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public ExecutionStartedEventDetails withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public ExecutionStartedEventDetails(){}
 }

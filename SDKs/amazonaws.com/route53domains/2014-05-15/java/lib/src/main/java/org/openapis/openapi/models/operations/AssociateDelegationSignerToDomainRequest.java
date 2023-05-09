@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssociateDelegationSignerToDomainRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AssociateDelegationSignerToDomainRequest associateDelegationSignerToDomainRequest;
+
     public AssociateDelegationSignerToDomainRequest withAssociateDelegationSignerToDomainRequest(org.openapis.openapi.models.shared.AssociateDelegationSignerToDomainRequest associateDelegationSignerToDomainRequest) {
         this.associateDelegationSignerToDomainRequest = associateDelegationSignerToDomainRequest;
         return this;
@@ -16,6 +18,7 @@ public class AssociateDelegationSignerToDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public AssociateDelegationSignerToDomainRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class AssociateDelegationSignerToDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public AssociateDelegationSignerToDomainRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class AssociateDelegationSignerToDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public AssociateDelegationSignerToDomainRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class AssociateDelegationSignerToDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public AssociateDelegationSignerToDomainRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class AssociateDelegationSignerToDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public AssociateDelegationSignerToDomainRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class AssociateDelegationSignerToDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public AssociateDelegationSignerToDomainRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class AssociateDelegationSignerToDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public AssociateDelegationSignerToDomainRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class AssociateDelegationSignerToDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public AssociateDelegationSignerToDomainXAmzTargetEnum xAmzTarget;
+
     public AssociateDelegationSignerToDomainRequest withXAmzTarget(AssociateDelegationSignerToDomainXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public AssociateDelegationSignerToDomainRequest(@JsonProperty("AssociateDelegationSignerToDomainRequest") org.openapis.openapi.models.shared.AssociateDelegationSignerToDomainRequest associateDelegationSignerToDomainRequest, @JsonProperty("X-Amz-Target") AssociateDelegationSignerToDomainXAmzTargetEnum xAmzTarget) {
+        this.associateDelegationSignerToDomainRequest = associateDelegationSignerToDomainRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

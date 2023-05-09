@@ -15,6 +15,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public Object[] errors;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSON withErrors(Object[] errors) {
         this.errors = errors;
         return this;
@@ -23,6 +24,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Result")
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult[] result;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSON withResult(UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult[] result) {
         this.result = result;
         return this;
@@ -31,6 +33,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public Double status;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSON withStatus(Double status) {
         this.status = status;
         return this;
@@ -39,9 +42,11 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSON(){}
 }

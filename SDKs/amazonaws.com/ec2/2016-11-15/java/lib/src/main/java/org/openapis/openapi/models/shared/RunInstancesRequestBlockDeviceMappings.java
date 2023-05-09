@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RunInstancesRequestBlockDeviceMappings {
     
     public String deviceName;
+
     public RunInstancesRequestBlockDeviceMappings withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -19,6 +20,7 @@ public class RunInstancesRequestBlockDeviceMappings {
     
     
     public RunInstancesRequestBlockDeviceMappingsEbs ebs;
+
     public RunInstancesRequestBlockDeviceMappings withEbs(RunInstancesRequestBlockDeviceMappingsEbs ebs) {
         this.ebs = ebs;
         return this;
@@ -26,6 +28,7 @@ public class RunInstancesRequestBlockDeviceMappings {
     
     
     public String noDevice;
+
     public RunInstancesRequestBlockDeviceMappings withNoDevice(String noDevice) {
         this.noDevice = noDevice;
         return this;
@@ -33,9 +36,11 @@ public class RunInstancesRequestBlockDeviceMappings {
     
     
     public String virtualName;
+
     public RunInstancesRequestBlockDeviceMappings withVirtualName(String virtualName) {
         this.virtualName = virtualName;
         return this;
     }
     
+    public RunInstancesRequestBlockDeviceMappings(){}
 }

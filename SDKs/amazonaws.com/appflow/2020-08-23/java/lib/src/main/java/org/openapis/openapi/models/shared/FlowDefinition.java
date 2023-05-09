@@ -22,6 +22,7 @@ public class FlowDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public FlowDefinition withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class FlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public FlowDefinition withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -38,6 +40,7 @@ public class FlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FlowDefinition withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class FlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationConnectorLabel")
     public String destinationConnectorLabel;
+
     public FlowDefinition withDestinationConnectorLabel(String destinationConnectorLabel) {
         this.destinationConnectorLabel = destinationConnectorLabel;
         return this;
@@ -54,6 +58,7 @@ public class FlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationConnectorType")
     public ConnectorTypeEnum destinationConnectorType;
+
     public FlowDefinition withDestinationConnectorType(ConnectorTypeEnum destinationConnectorType) {
         this.destinationConnectorType = destinationConnectorType;
         return this;
@@ -62,6 +67,7 @@ public class FlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowArn")
     public String flowArn;
+
     public FlowDefinition withFlowArn(String flowArn) {
         this.flowArn = flowArn;
         return this;
@@ -70,6 +76,7 @@ public class FlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowName")
     public String flowName;
+
     public FlowDefinition withFlowName(String flowName) {
         this.flowName = flowName;
         return this;
@@ -78,6 +85,7 @@ public class FlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowStatus")
     public FlowStatusEnum flowStatus;
+
     public FlowDefinition withFlowStatus(FlowStatusEnum flowStatus) {
         this.flowStatus = flowStatus;
         return this;
@@ -86,6 +94,7 @@ public class FlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastRunExecutionDetails")
     public ExecutionDetails lastRunExecutionDetails;
+
     public FlowDefinition withLastRunExecutionDetails(ExecutionDetails lastRunExecutionDetails) {
         this.lastRunExecutionDetails = lastRunExecutionDetails;
         return this;
@@ -96,6 +105,7 @@ public class FlowDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public FlowDefinition withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -104,6 +114,7 @@ public class FlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdatedBy")
     public String lastUpdatedBy;
+
     public FlowDefinition withLastUpdatedBy(String lastUpdatedBy) {
         this.lastUpdatedBy = lastUpdatedBy;
         return this;
@@ -112,6 +123,7 @@ public class FlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceConnectorLabel")
     public String sourceConnectorLabel;
+
     public FlowDefinition withSourceConnectorLabel(String sourceConnectorLabel) {
         this.sourceConnectorLabel = sourceConnectorLabel;
         return this;
@@ -120,6 +132,7 @@ public class FlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceConnectorType")
     public ConnectorTypeEnum sourceConnectorType;
+
     public FlowDefinition withSourceConnectorType(ConnectorTypeEnum sourceConnectorType) {
         this.sourceConnectorType = sourceConnectorType;
         return this;
@@ -128,6 +141,7 @@ public class FlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public FlowDefinition withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -136,9 +150,11 @@ public class FlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerType")
     public TriggerTypeEnum triggerType;
+
     public FlowDefinition withTriggerType(TriggerTypeEnum triggerType) {
         this.triggerType = triggerType;
         return this;
     }
     
+    public FlowDefinition(){}
 }

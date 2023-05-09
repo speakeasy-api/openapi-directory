@@ -12,6 +12,7 @@ public class ListDataQualityRuleRecommendationRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public DataQualityRuleRecommendationRunFilter filter;
+
     public ListDataQualityRuleRecommendationRunsRequest withFilter(DataQualityRuleRecommendationRunFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListDataQualityRuleRecommendationRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDataQualityRuleRecommendationRunsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListDataQualityRuleRecommendationRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataQualityRuleRecommendationRunsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDataQualityRuleRecommendationRunsRequest(){}
 }

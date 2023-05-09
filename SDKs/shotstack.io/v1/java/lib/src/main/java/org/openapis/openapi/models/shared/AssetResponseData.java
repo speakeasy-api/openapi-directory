@@ -18,6 +18,7 @@ public class AssetResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public AssetResponseAttributes attributes;
+
     public AssetResponseData withAttributes(AssetResponseAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -29,9 +30,11 @@ public class AssetResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AssetResponseData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AssetResponseData(){}
 }

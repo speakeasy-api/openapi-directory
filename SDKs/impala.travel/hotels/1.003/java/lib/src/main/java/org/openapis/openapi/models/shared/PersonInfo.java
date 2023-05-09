@@ -15,6 +15,7 @@ public class PersonInfo {
      */
     @JsonProperty("email")
     public String email;
+
     public PersonInfo withEmail(String email) {
         this.email = email;
         return this;
@@ -25,6 +26,7 @@ public class PersonInfo {
      */
     @JsonProperty("firstName")
     public String firstName;
+
     public PersonInfo withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -35,9 +37,15 @@ public class PersonInfo {
      */
     @JsonProperty("lastName")
     public String lastName;
+
     public PersonInfo withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public PersonInfo(@JsonProperty("email") String email, @JsonProperty("firstName") String firstName, @JsonProperty("lastName") String lastName) {
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+  }
 }

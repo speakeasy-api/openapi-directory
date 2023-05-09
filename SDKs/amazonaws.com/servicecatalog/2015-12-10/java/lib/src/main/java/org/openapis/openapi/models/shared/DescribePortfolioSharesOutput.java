@@ -15,6 +15,7 @@ public class DescribePortfolioSharesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public DescribePortfolioSharesOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribePortfolioSharesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortfolioShareDetails")
     public PortfolioShareDetail[] portfolioShareDetails;
+
     public DescribePortfolioSharesOutput withPortfolioShareDetails(PortfolioShareDetail[] portfolioShareDetails) {
         this.portfolioShareDetails = portfolioShareDetails;
         return this;
     }
     
+    public DescribePortfolioSharesOutput(){}
 }

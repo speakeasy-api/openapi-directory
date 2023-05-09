@@ -18,6 +18,7 @@ public class SchedulerResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public SchedulerResource withCount(Integer count) {
         this.count = count;
         return this;
@@ -29,6 +30,7 @@ public class SchedulerResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public Float cpu;
+
     public SchedulerResource withCpu(Float cpu) {
         this.cpu = cpu;
         return this;
@@ -40,6 +42,7 @@ public class SchedulerResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryGb")
     public Float memoryGb;
+
     public SchedulerResource withMemoryGb(Float memoryGb) {
         this.memoryGb = memoryGb;
         return this;
@@ -51,9 +54,11 @@ public class SchedulerResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageGb")
     public Float storageGb;
+
     public SchedulerResource withStorageGb(Float storageGb) {
         this.storageGb = storageGb;
         return this;
     }
     
+    public SchedulerResource(){}
 }

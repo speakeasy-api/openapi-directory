@@ -12,9 +12,13 @@ public class DeleteObjectRequestBody {
      */
     @JsonProperty("ObjectReference")
     public DeleteObjectRequestBodyObjectReference objectReference;
+
     public DeleteObjectRequestBody withObjectReference(DeleteObjectRequestBodyObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
     }
     
+    public DeleteObjectRequestBody(@JsonProperty("ObjectReference") DeleteObjectRequestBodyObjectReference objectReference) {
+        this.objectReference = objectReference;
+  }
 }

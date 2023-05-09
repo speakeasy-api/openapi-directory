@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartOnDemandReplicationRunResponse {
     
     public String contentType;
+
     public StartOnDemandReplicationRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartOnDemandReplicationRunResponse {
      */
     
     public Object dryRunOperationException;
+
     public StartOnDemandReplicationRunResponse withDryRunOperationException(Object dryRunOperationException) {
         this.dryRunOperationException = dryRunOperationException;
         return this;
@@ -29,6 +32,7 @@ public class StartOnDemandReplicationRunResponse {
      */
     
     public Object invalidParameterException;
+
     public StartOnDemandReplicationRunResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class StartOnDemandReplicationRunResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public StartOnDemandReplicationRunResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -49,6 +54,7 @@ public class StartOnDemandReplicationRunResponse {
      */
     
     public Object operationNotPermittedException;
+
     public StartOnDemandReplicationRunResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -59,6 +65,7 @@ public class StartOnDemandReplicationRunResponse {
      */
     
     public Object replicationRunLimitExceededException;
+
     public StartOnDemandReplicationRunResponse withReplicationRunLimitExceededException(Object replicationRunLimitExceededException) {
         this.replicationRunLimitExceededException = replicationRunLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class StartOnDemandReplicationRunResponse {
      */
     
     public org.openapis.openapi.models.shared.StartOnDemandReplicationRunResponse startOnDemandReplicationRunResponse;
+
     public StartOnDemandReplicationRunResponse withStartOnDemandReplicationRunResponse(org.openapis.openapi.models.shared.StartOnDemandReplicationRunResponse startOnDemandReplicationRunResponse) {
         this.startOnDemandReplicationRunResponse = startOnDemandReplicationRunResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartOnDemandReplicationRunResponse {
     
     
     public Integer statusCode;
+
     public StartOnDemandReplicationRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartOnDemandReplicationRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartOnDemandReplicationRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class StartOnDemandReplicationRunResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public StartOnDemandReplicationRunResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public StartOnDemandReplicationRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

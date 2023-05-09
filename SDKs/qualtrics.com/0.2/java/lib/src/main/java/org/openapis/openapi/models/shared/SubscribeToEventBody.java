@@ -15,6 +15,7 @@ public class SubscribeToEventBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encrypt")
     public Boolean encrypt;
+
     public SubscribeToEventBody withEncrypt(Boolean encrypt) {
         this.encrypt = encrypt;
         return this;
@@ -25,6 +26,7 @@ public class SubscribeToEventBody {
      */
     @JsonProperty("publicationUrl")
     public String publicationUrl;
+
     public SubscribeToEventBody withPublicationUrl(String publicationUrl) {
         this.publicationUrl = publicationUrl;
         return this;
@@ -35,9 +37,14 @@ public class SubscribeToEventBody {
      */
     @JsonProperty("topics")
     public String topics;
+
     public SubscribeToEventBody withTopics(String topics) {
         this.topics = topics;
         return this;
     }
     
+    public SubscribeToEventBody(@JsonProperty("publicationUrl") String publicationUrl, @JsonProperty("topics") String topics) {
+        this.publicationUrl = publicationUrl;
+        this.topics = topics;
+  }
 }

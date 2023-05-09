@@ -57,11 +57,9 @@ public class WebhooksCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCompaniesCompanyIdWebhooksWebhookIdResponse res = new org.openapis.openapi.models.operations.DeleteCompaniesCompanyIdWebhooksWebhookIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteCompaniesCompanyIdWebhooksWebhookIdResponse res = new org.openapis.openapi.models.operations.DeleteCompaniesCompanyIdWebhooksWebhookIdResponse(contentType, httpRes.statusCode()) {{
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -110,12 +108,10 @@ public class WebhooksCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksResponse(contentType, httpRes.statusCode()) {{
             listWebhooksResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -163,12 +159,10 @@ public class WebhooksCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksWebhookIdResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksWebhookIdResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksWebhookIdResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksWebhookIdResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -217,12 +211,10 @@ public class WebhooksCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchCompaniesCompanyIdWebhooksWebhookIdResponse res = new org.openapis.openapi.models.operations.PatchCompaniesCompanyIdWebhooksWebhookIdResponse() {{
+        org.openapis.openapi.models.operations.PatchCompaniesCompanyIdWebhooksWebhookIdResponse res = new org.openapis.openapi.models.operations.PatchCompaniesCompanyIdWebhooksWebhookIdResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -271,12 +263,10 @@ public class WebhooksCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksResponse() {{
+        org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -323,12 +313,10 @@ public class WebhooksCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse() {{
+        org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse(contentType, httpRes.statusCode()) {{
             generateHmacKeyResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -383,12 +371,10 @@ public class WebhooksCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdTestResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdTestResponse() {{
+        org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdTestResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdTestResponse(contentType, httpRes.statusCode()) {{
             testWebhookResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2betaLifecycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabledPolicy")
     public GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy disabledPolicy;
+
     public GoogleAppsDriveLabelsV2betaLifecycle withDisabledPolicy(GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy disabledPolicy) {
         this.disabledPolicy = disabledPolicy;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2betaLifecycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasUnpublishedChanges")
     public Boolean hasUnpublishedChanges;
+
     public GoogleAppsDriveLabelsV2betaLifecycle withHasUnpublishedChanges(Boolean hasUnpublishedChanges) {
         this.hasUnpublishedChanges = hasUnpublishedChanges;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAppsDriveLabelsV2betaLifecycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleAppsDriveLabelsV2betaLifecycleStateEnum state;
+
     public GoogleAppsDriveLabelsV2betaLifecycle withState(GoogleAppsDriveLabelsV2betaLifecycleStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaLifecycle(){}
 }

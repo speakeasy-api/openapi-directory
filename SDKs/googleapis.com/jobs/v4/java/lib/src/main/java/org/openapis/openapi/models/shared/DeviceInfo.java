@@ -18,6 +18,7 @@ public class DeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceType")
     public DeviceInfoDeviceTypeEnum deviceType;
+
     public DeviceInfo withDeviceType(DeviceInfoDeviceTypeEnum deviceType) {
         this.deviceType = deviceType;
         return this;
@@ -29,9 +30,11 @@ public class DeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeviceInfo withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeviceInfo(){}
 }

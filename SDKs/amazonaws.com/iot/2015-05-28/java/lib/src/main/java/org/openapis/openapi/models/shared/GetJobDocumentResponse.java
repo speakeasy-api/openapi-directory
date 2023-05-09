@@ -15,9 +15,11 @@ public class GetJobDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public String document;
+
     public GetJobDocumentResponse withDocument(String document) {
         this.document = document;
         return this;
     }
     
+    public GetJobDocumentResponse(){}
 }

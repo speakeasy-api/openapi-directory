@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InforNexusConnectorProfileCredentials {
     @JsonProperty("accessKeyId")
     public String accessKeyId;
+
     public InforNexusConnectorProfileCredentials withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -19,6 +20,7 @@ public class InforNexusConnectorProfileCredentials {
     
     @JsonProperty("datakey")
     public String datakey;
+
     public InforNexusConnectorProfileCredentials withDatakey(String datakey) {
         this.datakey = datakey;
         return this;
@@ -26,6 +28,7 @@ public class InforNexusConnectorProfileCredentials {
     
     @JsonProperty("secretAccessKey")
     public String secretAccessKey;
+
     public InforNexusConnectorProfileCredentials withSecretAccessKey(String secretAccessKey) {
         this.secretAccessKey = secretAccessKey;
         return this;
@@ -33,9 +36,16 @@ public class InforNexusConnectorProfileCredentials {
     
     @JsonProperty("userId")
     public String userId;
+
     public InforNexusConnectorProfileCredentials withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public InforNexusConnectorProfileCredentials(@JsonProperty("accessKeyId") String accessKeyId, @JsonProperty("datakey") String datakey, @JsonProperty("secretAccessKey") String secretAccessKey, @JsonProperty("userId") String userId) {
+        this.accessKeyId = accessKeyId;
+        this.datakey = datakey;
+        this.secretAccessKey = secretAccessKey;
+        this.userId = userId;
+  }
 }

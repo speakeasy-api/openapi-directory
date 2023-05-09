@@ -15,9 +15,11 @@ public class StartStreamingSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupId")
     public String backupId;
+
     public StartStreamingSessionRequestBody withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
     }
     
+    public StartStreamingSessionRequestBody(){}
 }

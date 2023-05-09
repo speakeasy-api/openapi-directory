@@ -21,6 +21,7 @@ public class DescribeUserProfileResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public DescribeUserProfileResult withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class DescribeUserProfileResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public DescribeUserProfileResult withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -37,6 +39,7 @@ public class DescribeUserProfileResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public DescribeUserProfileResult withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -46,6 +49,7 @@ public class DescribeUserProfileResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedTimestamp")
     public OffsetDateTime lastModifiedTimestamp;
+
     public DescribeUserProfileResult withLastModifiedTimestamp(OffsetDateTime lastModifiedTimestamp) {
         this.lastModifiedTimestamp = lastModifiedTimestamp;
         return this;
@@ -54,6 +58,7 @@ public class DescribeUserProfileResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshPublicKey")
     public String sshPublicKey;
+
     public DescribeUserProfileResult withSshPublicKey(String sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
@@ -61,9 +66,15 @@ public class DescribeUserProfileResult {
     
     @JsonProperty("userArn")
     public String userArn;
+
     public DescribeUserProfileResult withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public DescribeUserProfileResult(@JsonProperty("createdTimestamp") OffsetDateTime createdTimestamp, @JsonProperty("lastModifiedTimestamp") OffsetDateTime lastModifiedTimestamp, @JsonProperty("userArn") String userArn) {
+        this.createdTimestamp = createdTimestamp;
+        this.lastModifiedTimestamp = lastModifiedTimestamp;
+        this.userArn = userArn;
+  }
 }

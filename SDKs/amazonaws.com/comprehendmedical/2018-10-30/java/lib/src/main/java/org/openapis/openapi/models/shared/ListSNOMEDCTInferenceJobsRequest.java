@@ -15,6 +15,7 @@ public class ListSNOMEDCTInferenceJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public ComprehendMedicalAsyncJobFilter filter;
+
     public ListSNOMEDCTInferenceJobsRequest withFilter(ComprehendMedicalAsyncJobFilter filter) {
         this.filter = filter;
         return this;
@@ -23,6 +24,7 @@ public class ListSNOMEDCTInferenceJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListSNOMEDCTInferenceJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -31,9 +33,11 @@ public class ListSNOMEDCTInferenceJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSNOMEDCTInferenceJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListSNOMEDCTInferenceJobsRequest(){}
 }

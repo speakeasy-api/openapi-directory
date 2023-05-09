@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAppsListResponse {
     
     public String contentType;
+
     public GetAppsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAppsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAppsListResponse getAppsListResponse;
+
     public GetAppsListResponse withGetAppsListResponse(org.openapis.openapi.models.shared.GetAppsListResponse getAppsListResponse) {
         this.getAppsListResponse = getAppsListResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAppsListResponse {
      */
     
     public Object internalErrorException;
+
     public GetAppsListResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetAppsListResponse {
      */
     
     public Object invalidOperationException;
+
     public GetAppsListResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class GetAppsListResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAppsListResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetAppsListResponse {
     
     
     public Integer statusCode;
+
     public GetAppsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetAppsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAppsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAppsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

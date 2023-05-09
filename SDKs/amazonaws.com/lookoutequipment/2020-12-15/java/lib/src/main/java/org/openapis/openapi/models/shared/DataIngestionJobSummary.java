@@ -15,6 +15,7 @@ public class DataIngestionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetArn")
     public String datasetArn;
+
     public DataIngestionJobSummary withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
@@ -23,6 +24,7 @@ public class DataIngestionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetName")
     public String datasetName;
+
     public DataIngestionJobSummary withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -31,6 +33,7 @@ public class DataIngestionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IngestionInputConfiguration")
     public IngestionInputConfiguration ingestionInputConfiguration;
+
     public DataIngestionJobSummary withIngestionInputConfiguration(IngestionInputConfiguration ingestionInputConfiguration) {
         this.ingestionInputConfiguration = ingestionInputConfiguration;
         return this;
@@ -39,6 +42,7 @@ public class DataIngestionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public DataIngestionJobSummary withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -47,9 +51,11 @@ public class DataIngestionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public IngestionJobStatusEnum status;
+
     public DataIngestionJobSummary withStatus(IngestionJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DataIngestionJobSummary(){}
 }

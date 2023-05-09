@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateDRTLogBucketResponse {
@@ -12,6 +13,7 @@ public class AssociateDRTLogBucketResponse {
      */
     
     public Object accessDeniedForDependencyException;
+
     public AssociateDRTLogBucketResponse withAccessDeniedForDependencyException(Object accessDeniedForDependencyException) {
         this.accessDeniedForDependencyException = accessDeniedForDependencyException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateDRTLogBucketResponse {
      */
     
     public java.util.Map<String, Object> associateDRTLogBucketResponse;
+
     public AssociateDRTLogBucketResponse withAssociateDRTLogBucketResponse(java.util.Map<String, Object> associateDRTLogBucketResponse) {
         this.associateDRTLogBucketResponse = associateDRTLogBucketResponse;
         return this;
@@ -29,6 +32,7 @@ public class AssociateDRTLogBucketResponse {
     
     
     public String contentType;
+
     public AssociateDRTLogBucketResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateDRTLogBucketResponse {
      */
     
     public Object internalErrorException;
+
     public AssociateDRTLogBucketResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateDRTLogBucketResponse {
      */
     
     public Object invalidOperationException;
+
     public AssociateDRTLogBucketResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateDRTLogBucketResponse {
      */
     
     public Object invalidParameterException;
+
     public AssociateDRTLogBucketResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateDRTLogBucketResponse {
      */
     
     public Object limitsExceededException;
+
     public AssociateDRTLogBucketResponse withLimitsExceededException(Object limitsExceededException) {
         this.limitsExceededException = limitsExceededException;
         return this;
@@ -79,6 +87,7 @@ public class AssociateDRTLogBucketResponse {
      */
     
     public Object noAssociatedRoleException;
+
     public AssociateDRTLogBucketResponse withNoAssociatedRoleException(Object noAssociatedRoleException) {
         this.noAssociatedRoleException = noAssociatedRoleException;
         return this;
@@ -89,6 +98,7 @@ public class AssociateDRTLogBucketResponse {
      */
     
     public Object optimisticLockException;
+
     public AssociateDRTLogBucketResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -96,6 +106,7 @@ public class AssociateDRTLogBucketResponse {
     
     
     public Integer statusCode;
+
     public AssociateDRTLogBucketResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class AssociateDRTLogBucketResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateDRTLogBucketResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class AssociateDRTLogBucketResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateDRTLogBucketResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public AssociateDRTLogBucketResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

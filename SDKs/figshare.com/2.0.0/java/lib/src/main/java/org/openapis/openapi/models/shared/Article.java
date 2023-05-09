@@ -12,6 +12,7 @@ public class Article {
      */
     @JsonProperty("defined_type")
     public Long definedType;
+
     public Article withDefinedType(Long definedType) {
         this.definedType = definedType;
         return this;
@@ -22,6 +23,7 @@ public class Article {
      */
     @JsonProperty("defined_type_name")
     public String definedTypeName;
+
     public Article withDefinedTypeName(String definedTypeName) {
         this.definedTypeName = definedTypeName;
         return this;
@@ -32,6 +34,7 @@ public class Article {
      */
     @JsonProperty("doi")
     public String doi;
+
     public Article withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -42,6 +45,7 @@ public class Article {
      */
     @JsonProperty("group_id")
     public Double groupId;
+
     public Article withGroupId(Double groupId) {
         this.groupId = groupId;
         return this;
@@ -52,6 +56,7 @@ public class Article {
      */
     @JsonProperty("handle")
     public String handle;
+
     public Article withHandle(String handle) {
         this.handle = handle;
         return this;
@@ -62,6 +67,7 @@ public class Article {
      */
     @JsonProperty("id")
     public Long id;
+
     public Article withId(Long id) {
         this.id = id;
         return this;
@@ -72,6 +78,7 @@ public class Article {
      */
     @JsonProperty("published_date")
     public String publishedDate;
+
     public Article withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
@@ -82,6 +89,7 @@ public class Article {
      */
     @JsonProperty("thumb")
     public String thumb;
+
     public Article withThumb(String thumb) {
         this.thumb = thumb;
         return this;
@@ -89,6 +97,7 @@ public class Article {
     
     @JsonProperty("timeline")
     public Timeline timeline;
+
     public Article withTimeline(Timeline timeline) {
         this.timeline = timeline;
         return this;
@@ -99,6 +108,7 @@ public class Article {
      */
     @JsonProperty("title")
     public String title;
+
     public Article withTitle(String title) {
         this.title = title;
         return this;
@@ -109,6 +119,7 @@ public class Article {
      */
     @JsonProperty("url")
     public String url;
+
     public Article withUrl(String url) {
         this.url = url;
         return this;
@@ -119,6 +130,7 @@ public class Article {
      */
     @JsonProperty("url_private_api")
     public String urlPrivateApi;
+
     public Article withUrlPrivateApi(String urlPrivateApi) {
         this.urlPrivateApi = urlPrivateApi;
         return this;
@@ -129,6 +141,7 @@ public class Article {
      */
     @JsonProperty("url_private_html")
     public String urlPrivateHtml;
+
     public Article withUrlPrivateHtml(String urlPrivateHtml) {
         this.urlPrivateHtml = urlPrivateHtml;
         return this;
@@ -139,6 +152,7 @@ public class Article {
      */
     @JsonProperty("url_public_api")
     public String urlPublicApi;
+
     public Article withUrlPublicApi(String urlPublicApi) {
         this.urlPublicApi = urlPublicApi;
         return this;
@@ -149,9 +163,27 @@ public class Article {
      */
     @JsonProperty("url_public_html")
     public String urlPublicHtml;
+
     public Article withUrlPublicHtml(String urlPublicHtml) {
         this.urlPublicHtml = urlPublicHtml;
         return this;
     }
     
+    public Article(@JsonProperty("defined_type") Long definedType, @JsonProperty("defined_type_name") String definedTypeName, @JsonProperty("doi") String doi, @JsonProperty("group_id") Double groupId, @JsonProperty("handle") String handle, @JsonProperty("id") Long id, @JsonProperty("published_date") String publishedDate, @JsonProperty("thumb") String thumb, @JsonProperty("timeline") Timeline timeline, @JsonProperty("title") String title, @JsonProperty("url") String url, @JsonProperty("url_private_api") String urlPrivateApi, @JsonProperty("url_private_html") String urlPrivateHtml, @JsonProperty("url_public_api") String urlPublicApi, @JsonProperty("url_public_html") String urlPublicHtml) {
+        this.definedType = definedType;
+        this.definedTypeName = definedTypeName;
+        this.doi = doi;
+        this.groupId = groupId;
+        this.handle = handle;
+        this.id = id;
+        this.publishedDate = publishedDate;
+        this.thumb = thumb;
+        this.timeline = timeline;
+        this.title = title;
+        this.url = url;
+        this.urlPrivateApi = urlPrivateApi;
+        this.urlPrivateHtml = urlPrivateHtml;
+        this.urlPublicApi = urlPublicApi;
+        this.urlPublicHtml = urlPublicHtml;
+  }
 }

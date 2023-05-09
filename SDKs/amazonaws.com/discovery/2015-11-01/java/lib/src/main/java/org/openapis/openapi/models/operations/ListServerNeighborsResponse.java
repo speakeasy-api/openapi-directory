@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListServerNeighborsResponse {
@@ -12,6 +13,7 @@ public class ListServerNeighborsResponse {
      */
     
     public Object authorizationErrorException;
+
     public ListServerNeighborsResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class ListServerNeighborsResponse {
     
     
     public String contentType;
+
     public ListServerNeighborsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListServerNeighborsResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public ListServerNeighborsResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -39,6 +43,7 @@ public class ListServerNeighborsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListServerNeighborsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ListServerNeighborsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListServerNeighborsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class ListServerNeighborsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListServerNeighborsResponse listServerNeighborsResponse;
+
     public ListServerNeighborsResponse withListServerNeighborsResponse(org.openapis.openapi.models.shared.ListServerNeighborsResponse listServerNeighborsResponse) {
         this.listServerNeighborsResponse = listServerNeighborsResponse;
         return this;
@@ -69,6 +76,7 @@ public class ListServerNeighborsResponse {
      */
     
     public Object serverInternalErrorException;
+
     public ListServerNeighborsResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -76,6 +84,7 @@ public class ListServerNeighborsResponse {
     
     
     public Integer statusCode;
+
     public ListServerNeighborsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListServerNeighborsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListServerNeighborsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListServerNeighborsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

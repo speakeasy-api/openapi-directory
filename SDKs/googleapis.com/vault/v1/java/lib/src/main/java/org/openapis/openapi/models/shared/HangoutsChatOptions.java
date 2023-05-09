@@ -18,9 +18,11 @@ public class HangoutsChatOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeRooms")
     public Boolean includeRooms;
+
     public HangoutsChatOptions withIncludeRooms(Boolean includeRooms) {
         this.includeRooms = includeRooms;
         return this;
     }
     
+    public HangoutsChatOptions(){}
 }

@@ -7,14 +7,18 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * EphemeralStorage - &lt;p&gt;The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on Fargate. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/using_data_volumes.html"&gt;Fargate task storage&lt;/a&gt; in the &lt;i&gt;Amazon ECS User Guide for Fargate&lt;/i&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;This parameter is only supported for tasks hosted on Fargate using Linux platform version &lt;code&gt;1.4.0&lt;/code&gt; or later. This parameter is not supported for Windows containers on Fargate.&lt;/p&gt; &lt;/note&gt;
+ * EphemeralStorage - &lt;p&gt;The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on Fargate. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/using_data_volumes.html"&gt;Fargate task storage&lt;/a&gt; in the &lt;i&gt;Amazon ECS User Guide for Fargate&lt;/i&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;For tasks using the Fargate launch type, the task requires the following platforms:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Linux platform version &lt;code&gt;1.4.0&lt;/code&gt; or later.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Windows platform version &lt;code&gt;1.0.0&lt;/code&gt; or later.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/note&gt;
  */
 public class EphemeralStorage {
     @JsonProperty("sizeInGiB")
     public Long sizeInGiB;
+
     public EphemeralStorage withSizeInGiB(Long sizeInGiB) {
         this.sizeInGiB = sizeInGiB;
         return this;
     }
     
+    public EphemeralStorage(@JsonProperty("sizeInGiB") Long sizeInGiB) {
+        this.sizeInGiB = sizeInGiB;
+  }
 }

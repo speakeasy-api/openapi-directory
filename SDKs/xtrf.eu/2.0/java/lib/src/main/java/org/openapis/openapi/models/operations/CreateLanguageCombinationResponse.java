@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLanguageCombinationResponse {
@@ -12,6 +13,7 @@ public class CreateLanguageCombinationResponse {
      */
     
     public org.openapis.openapi.models.shared.CommonLanguageCombinationDTO commonLanguageCombinationDTO;
+
     public CreateLanguageCombinationResponse withCommonLanguageCombinationDTO(org.openapis.openapi.models.shared.CommonLanguageCombinationDTO commonLanguageCombinationDTO) {
         this.commonLanguageCombinationDTO = commonLanguageCombinationDTO;
         return this;
@@ -19,6 +21,7 @@ public class CreateLanguageCombinationResponse {
     
     
     public String contentType;
+
     public CreateLanguageCombinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CreateLanguageCombinationResponse {
     
     
     public Integer statusCode;
+
     public CreateLanguageCombinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CreateLanguageCombinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLanguageCombinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateLanguageCombinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

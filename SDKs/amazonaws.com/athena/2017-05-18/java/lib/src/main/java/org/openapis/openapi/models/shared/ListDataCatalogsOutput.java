@@ -15,6 +15,7 @@ public class ListDataCatalogsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCatalogsSummary")
     public DataCatalogSummary[] dataCatalogsSummary;
+
     public ListDataCatalogsOutput withDataCatalogsSummary(DataCatalogSummary[] dataCatalogsSummary) {
         this.dataCatalogsSummary = dataCatalogsSummary;
         return this;
@@ -23,9 +24,11 @@ public class ListDataCatalogsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataCatalogsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDataCatalogsOutput(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudOrgpolicyV2ListPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudOrgpolicyV2ListPoliciesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudOrgpolicyV2ListPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policies")
     public GoogleCloudOrgpolicyV2Policy[] policies;
+
     public GoogleCloudOrgpolicyV2ListPoliciesResponse withPolicies(GoogleCloudOrgpolicyV2Policy[] policies) {
         this.policies = policies;
         return this;
     }
     
+    public GoogleCloudOrgpolicyV2ListPoliciesResponse(){}
 }

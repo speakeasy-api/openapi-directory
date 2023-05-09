@@ -12,6 +12,7 @@ public class UpdateNotebookMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public UpdateNotebookMetadataInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class UpdateNotebookMetadataInput {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateNotebookMetadataInput withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,14 @@ public class UpdateNotebookMetadataInput {
     
     @JsonProperty("NotebookId")
     public String notebookId;
+
     public UpdateNotebookMetadataInput withNotebookId(String notebookId) {
         this.notebookId = notebookId;
         return this;
     }
     
+    public UpdateNotebookMetadataInput(@JsonProperty("Name") String name, @JsonProperty("NotebookId") String notebookId) {
+        this.name = name;
+        this.notebookId = notebookId;
+  }
 }

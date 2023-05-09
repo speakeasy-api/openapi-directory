@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse {
     
     public String contentType;
+
     public EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.ScimEnterpriseGroupResponse scimEnterpriseGroupResponse;
+
     public EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse withScimEnterpriseGroupResponse(org.openapis.openapi.models.shared.ScimEnterpriseGroupResponse scimEnterpriseGroupResponse) {
         this.scimEnterpriseGroupResponse = scimEnterpriseGroupResponse;
         return this;
@@ -53,9 +59,14 @@ public class EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.ScimError scimError;
+
     public EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse withScimError(org.openapis.openapi.models.shared.ScimError scimError) {
         this.scimError = scimError;
         return this;
     }
     
+    public EnterpriseAdminUpdateAttributeForEnterpriseGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

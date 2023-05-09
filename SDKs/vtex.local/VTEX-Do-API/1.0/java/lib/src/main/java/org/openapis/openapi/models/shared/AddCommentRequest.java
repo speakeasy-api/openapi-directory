@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddCommentRequest {
     @JsonProperty("text")
     public String text;
+
     public AddCommentRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public AddCommentRequest(@JsonProperty("text") String text) {
+        this.text = text;
+  }
 }

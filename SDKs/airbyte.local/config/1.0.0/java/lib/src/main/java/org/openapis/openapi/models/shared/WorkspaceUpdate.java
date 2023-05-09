@@ -15,6 +15,7 @@ public class WorkspaceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("anonymousDataCollection")
     public Boolean anonymousDataCollection;
+
     public WorkspaceUpdate withAnonymousDataCollection(Boolean anonymousDataCollection) {
         this.anonymousDataCollection = anonymousDataCollection;
         return this;
@@ -23,6 +24,7 @@ public class WorkspaceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultGeography")
     public GeographyEnum defaultGeography;
+
     public WorkspaceUpdate withDefaultGeography(GeographyEnum defaultGeography) {
         this.defaultGeography = defaultGeography;
         return this;
@@ -31,6 +33,7 @@ public class WorkspaceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displaySetupWizard")
     public Boolean displaySetupWizard;
+
     public WorkspaceUpdate withDisplaySetupWizard(Boolean displaySetupWizard) {
         this.displaySetupWizard = displaySetupWizard;
         return this;
@@ -39,6 +42,7 @@ public class WorkspaceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public WorkspaceUpdate withEmail(String email) {
         this.email = email;
         return this;
@@ -47,6 +51,7 @@ public class WorkspaceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialSetupComplete")
     public Boolean initialSetupComplete;
+
     public WorkspaceUpdate withInitialSetupComplete(Boolean initialSetupComplete) {
         this.initialSetupComplete = initialSetupComplete;
         return this;
@@ -55,6 +60,7 @@ public class WorkspaceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("news")
     public Boolean news;
+
     public WorkspaceUpdate withNews(Boolean news) {
         this.news = news;
         return this;
@@ -63,6 +69,7 @@ public class WorkspaceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifications")
     public Notification[] notifications;
+
     public WorkspaceUpdate withNotifications(Notification[] notifications) {
         this.notifications = notifications;
         return this;
@@ -71,6 +78,7 @@ public class WorkspaceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityUpdates")
     public Boolean securityUpdates;
+
     public WorkspaceUpdate withSecurityUpdates(Boolean securityUpdates) {
         this.securityUpdates = securityUpdates;
         return this;
@@ -79,6 +87,7 @@ public class WorkspaceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookConfigs")
     public WebhookConfigWrite[] webhookConfigs;
+
     public WorkspaceUpdate withWebhookConfigs(WebhookConfigWrite[] webhookConfigs) {
         this.webhookConfigs = webhookConfigs;
         return this;
@@ -86,9 +95,13 @@ public class WorkspaceUpdate {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public WorkspaceUpdate withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public WorkspaceUpdate(@JsonProperty("workspaceId") String workspaceId) {
+        this.workspaceId = workspaceId;
+  }
 }

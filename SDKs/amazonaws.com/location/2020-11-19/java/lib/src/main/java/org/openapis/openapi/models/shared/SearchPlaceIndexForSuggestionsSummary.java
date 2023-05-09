@@ -15,6 +15,7 @@ public class SearchPlaceIndexForSuggestionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BiasPosition")
     public Double[] biasPosition;
+
     public SearchPlaceIndexForSuggestionsSummary withBiasPosition(Double[] biasPosition) {
         this.biasPosition = biasPosition;
         return this;
@@ -22,6 +23,7 @@ public class SearchPlaceIndexForSuggestionsSummary {
     
     @JsonProperty("DataSource")
     public String dataSource;
+
     public SearchPlaceIndexForSuggestionsSummary withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -30,6 +32,7 @@ public class SearchPlaceIndexForSuggestionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterBBox")
     public Double[] filterBBox;
+
     public SearchPlaceIndexForSuggestionsSummary withFilterBBox(Double[] filterBBox) {
         this.filterBBox = filterBBox;
         return this;
@@ -38,6 +41,7 @@ public class SearchPlaceIndexForSuggestionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterCountries")
     public String[] filterCountries;
+
     public SearchPlaceIndexForSuggestionsSummary withFilterCountries(String[] filterCountries) {
         this.filterCountries = filterCountries;
         return this;
@@ -46,6 +50,7 @@ public class SearchPlaceIndexForSuggestionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Language")
     public String language;
+
     public SearchPlaceIndexForSuggestionsSummary withLanguage(String language) {
         this.language = language;
         return this;
@@ -54,6 +59,7 @@ public class SearchPlaceIndexForSuggestionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public SearchPlaceIndexForSuggestionsSummary withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -61,9 +67,14 @@ public class SearchPlaceIndexForSuggestionsSummary {
     
     @JsonProperty("Text")
     public String text;
+
     public SearchPlaceIndexForSuggestionsSummary withText(String text) {
         this.text = text;
         return this;
     }
     
+    public SearchPlaceIndexForSuggestionsSummary(@JsonProperty("DataSource") String dataSource, @JsonProperty("Text") String text) {
+        this.dataSource = dataSource;
+        this.text = text;
+  }
 }

@@ -15,9 +15,11 @@ public class DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBl
      */
     
     public String entitlementUnavailableMessage;
+
     public DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock withEntitlementUnavailableMessage(String entitlementUnavailableMessage) {
         this.entitlementUnavailableMessage = entitlementUnavailableMessage;
         return this;
     }
     
+    public DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock(){}
 }

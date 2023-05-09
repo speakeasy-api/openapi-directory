@@ -18,6 +18,7 @@ public class V1Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorized_location_ids")
     public String[] authorizedLocationIds;
+
     public V1Employee withAuthorizedLocationIds(String[] authorizedLocationIds) {
         this.authorizedLocationIds = authorizedLocationIds;
         return this;
@@ -29,6 +30,7 @@ public class V1Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public V1Employee withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -40,6 +42,7 @@ public class V1Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public V1Employee withEmail(String email) {
         this.email = email;
         return this;
@@ -51,6 +54,7 @@ public class V1Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_id")
     public String externalId;
+
     public V1Employee withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -61,6 +65,7 @@ public class V1Employee {
      */
     @JsonProperty("first_name")
     public String firstName;
+
     public V1Employee withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -72,6 +77,7 @@ public class V1Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public V1Employee withId(String id) {
         this.id = id;
         return this;
@@ -82,6 +88,7 @@ public class V1Employee {
      */
     @JsonProperty("last_name")
     public String lastName;
+
     public V1Employee withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -93,6 +100,7 @@ public class V1Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role_ids")
     public String[] roleIds;
+
     public V1Employee withRoleIds(String[] roleIds) {
         this.roleIds = roleIds;
         return this;
@@ -104,6 +112,7 @@ public class V1Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public V1Employee withStatus(String status) {
         this.status = status;
         return this;
@@ -115,9 +124,14 @@ public class V1Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public V1Employee withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public V1Employee(@JsonProperty("first_name") String firstName, @JsonProperty("last_name") String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+  }
 }

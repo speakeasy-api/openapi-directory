@@ -20,6 +20,7 @@ public class GetUsersMeUserContactV2UserContactV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKey")
     public String apiKey;
+
     public GetUsersMeUserContactV2UserContactV2 withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -28,6 +29,7 @@ public class GetUsersMeUserContactV2UserContactV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactInfo")
     public org.openapis.openapi.models.shared.OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee contactInfo;
+
     public GetUsersMeUserContactV2UserContactV2 withContactInfo(org.openapis.openapi.models.shared.OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee contactInfo) {
         this.contactInfo = contactInfo;
         return this;
@@ -38,6 +40,7 @@ public class GetUsersMeUserContactV2UserContactV2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createDate")
     public OffsetDateTime createDate;
+
     public GetUsersMeUserContactV2UserContactV2 withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -46,6 +49,7 @@ public class GetUsersMeUserContactV2UserContactV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deptLeader")
     public Boolean deptLeader;
+
     public GetUsersMeUserContactV2UserContactV2 withDeptLeader(Boolean deptLeader) {
         this.deptLeader = deptLeader;
         return this;
@@ -53,6 +57,7 @@ public class GetUsersMeUserContactV2UserContactV2 {
     
     @JsonProperty("id")
     public Long id;
+
     public GetUsersMeUserContactV2UserContactV2 withId(Long id) {
         this.id = id;
         return this;
@@ -61,6 +66,7 @@ public class GetUsersMeUserContactV2UserContactV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant")
     public GetUsersMeUserContactV2UserContactV2Merchant merchant;
+
     public GetUsersMeUserContactV2UserContactV2 withMerchant(GetUsersMeUserContactV2UserContactV2Merchant merchant) {
         this.merchant = merchant;
         return this;
@@ -69,6 +75,7 @@ public class GetUsersMeUserContactV2UserContactV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetUsersMeUserContactV2UserContactV2 withName(String name) {
         this.name = name;
         return this;
@@ -77,6 +84,7 @@ public class GetUsersMeUserContactV2UserContactV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Boolean status;
+
     public GetUsersMeUserContactV2UserContactV2 withStatus(Boolean status) {
         this.status = status;
         return this;
@@ -87,6 +95,7 @@ public class GetUsersMeUserContactV2UserContactV2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public GetUsersMeUserContactV2UserContactV2 withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -97,6 +106,7 @@ public class GetUsersMeUserContactV2UserContactV2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedBy")
     public OffsetDateTime updatedBy;
+
     public GetUsersMeUserContactV2UserContactV2 withUpdatedBy(OffsetDateTime updatedBy) {
         this.updatedBy = updatedBy;
         return this;
@@ -105,9 +115,13 @@ public class GetUsersMeUserContactV2UserContactV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public GetUsersMeUserContactV2UserContactV2 withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetUsersMeUserContactV2UserContactV2(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

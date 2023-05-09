@@ -22,6 +22,7 @@ public class WhatIfForecastExportSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public WhatIfForecastExportSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class WhatIfForecastExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public DataDestination destination;
+
     public WhatIfForecastExportSummary withDestination(DataDestination destination) {
         this.destination = destination;
         return this;
@@ -40,6 +42,7 @@ public class WhatIfForecastExportSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public WhatIfForecastExportSummary withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -48,6 +51,7 @@ public class WhatIfForecastExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public WhatIfForecastExportSummary withMessage(String message) {
         this.message = message;
         return this;
@@ -56,6 +60,7 @@ public class WhatIfForecastExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public WhatIfForecastExportSummary withStatus(String status) {
         this.status = status;
         return this;
@@ -64,6 +69,7 @@ public class WhatIfForecastExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfForecastArns")
     public String[] whatIfForecastArns;
+
     public WhatIfForecastExportSummary withWhatIfForecastArns(String[] whatIfForecastArns) {
         this.whatIfForecastArns = whatIfForecastArns;
         return this;
@@ -72,6 +78,7 @@ public class WhatIfForecastExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfForecastExportArn")
     public String whatIfForecastExportArn;
+
     public WhatIfForecastExportSummary withWhatIfForecastExportArn(String whatIfForecastExportArn) {
         this.whatIfForecastExportArn = whatIfForecastExportArn;
         return this;
@@ -80,9 +87,11 @@ public class WhatIfForecastExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfForecastExportName")
     public String whatIfForecastExportName;
+
     public WhatIfForecastExportSummary withWhatIfForecastExportName(String whatIfForecastExportName) {
         this.whatIfForecastExportName = whatIfForecastExportName;
         return this;
     }
     
+    public WhatIfForecastExportSummary(){}
 }

@@ -18,6 +18,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authentication")
     public String authentication;
+
     public TargetHttpsProxy withAuthentication(String authentication) {
         this.authentication = authentication;
         return this;
@@ -29,6 +30,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorization")
     public String authorization;
+
     public TargetHttpsProxy withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -40,17 +42,19 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationPolicy")
     public String authorizationPolicy;
+
     public TargetHttpsProxy withAuthorizationPolicy(String authorizationPolicy) {
         this.authorizationPolicy = authorizationPolicy;
         return this;
     }
     
     /**
-     * URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored.
+     * URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored. Accepted format is //certificatemanager.googleapis.com/projects/{project }/locations/{location}/certificateMaps/{resourceName}.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateMap")
     public String certificateMap;
+
     public TargetHttpsProxy withCertificateMap(String certificateMap) {
         this.certificateMap = certificateMap;
         return this;
@@ -62,6 +66,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public TargetHttpsProxy withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -73,6 +78,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TargetHttpsProxy withDescription(String description) {
         this.description = description;
         return this;
@@ -84,6 +90,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public TargetHttpsProxy withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -95,8 +102,21 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpFilters")
     public String[] httpFilters;
+
     public TargetHttpsProxy withHttpFilters(String[] httpFilters) {
         this.httpFilters = httpFilters;
+        return this;
+    }
+    
+    /**
+     * Specifies how long to keep a connection open, after completing a response, while there is no matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610 seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load balancer (classic), this option is not available publicly.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("httpKeepAliveTimeoutSec")
+    public Integer httpKeepAliveTimeoutSec;
+
+    public TargetHttpsProxy withHttpKeepAliveTimeoutSec(Integer httpKeepAliveTimeoutSec) {
+        this.httpKeepAliveTimeoutSec = httpKeepAliveTimeoutSec;
         return this;
     }
     
@@ -106,6 +126,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TargetHttpsProxy withId(String id) {
         this.id = id;
         return this;
@@ -117,6 +138,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TargetHttpsProxy withKind(String kind) {
         this.kind = kind;
         return this;
@@ -128,6 +150,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TargetHttpsProxy withName(String name) {
         this.name = name;
         return this;
@@ -139,6 +162,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyBind")
     public Boolean proxyBind;
+
     public TargetHttpsProxy withProxyBind(Boolean proxyBind) {
         this.proxyBind = proxyBind;
         return this;
@@ -150,6 +174,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quicOverride")
     public TargetHttpsProxyQuicOverrideEnum quicOverride;
+
     public TargetHttpsProxy withQuicOverride(TargetHttpsProxyQuicOverrideEnum quicOverride) {
         this.quicOverride = quicOverride;
         return this;
@@ -161,6 +186,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public TargetHttpsProxy withRegion(String region) {
         this.region = region;
         return this;
@@ -172,6 +198,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public TargetHttpsProxy withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -183,17 +210,19 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public TargetHttpsProxy withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
     }
     
     /**
-     * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field currently has no impact.
+     * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED. For details which ServerTlsPolicy resources are accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED loadBalancingScheme consult ServerTlsPolicy documentation. If left blank, communications are not encrypted.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverTlsPolicy")
     public String serverTlsPolicy;
+
     public TargetHttpsProxy withServerTlsPolicy(String serverTlsPolicy) {
         this.serverTlsPolicy = serverTlsPolicy;
         return this;
@@ -205,6 +234,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslCertificates")
     public String[] sslCertificates;
+
     public TargetHttpsProxy withSslCertificates(String[] sslCertificates) {
         this.sslCertificates = sslCertificates;
         return this;
@@ -216,6 +246,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslPolicy")
     public String sslPolicy;
+
     public TargetHttpsProxy withSslPolicy(String sslPolicy) {
         this.sslPolicy = sslPolicy;
         return this;
@@ -227,9 +258,11 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlMap")
     public String urlMap;
+
     public TargetHttpsProxy withUrlMap(String urlMap) {
         this.urlMap = urlMap;
         return this;
     }
     
+    public TargetHttpsProxy(){}
 }

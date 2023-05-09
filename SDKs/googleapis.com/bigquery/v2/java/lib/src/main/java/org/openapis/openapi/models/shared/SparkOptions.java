@@ -18,6 +18,7 @@ public class SparkOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archiveUris")
     public String[] archiveUris;
+
     public SparkOptions withArchiveUris(String[] archiveUris) {
         this.archiveUris = archiveUris;
         return this;
@@ -29,6 +30,7 @@ public class SparkOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connection")
     public String connection;
+
     public SparkOptions withConnection(String connection) {
         this.connection = connection;
         return this;
@@ -40,6 +42,7 @@ public class SparkOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerImage")
     public String containerImage;
+
     public SparkOptions withContainerImage(String containerImage) {
         this.containerImage = containerImage;
         return this;
@@ -51,6 +54,7 @@ public class SparkOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileUris")
     public String[] fileUris;
+
     public SparkOptions withFileUris(String[] fileUris) {
         this.fileUris = fileUris;
         return this;
@@ -62,6 +66,7 @@ public class SparkOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jarUris")
     public String[] jarUris;
+
     public SparkOptions withJarUris(String[] jarUris) {
         this.jarUris = jarUris;
         return this;
@@ -73,17 +78,19 @@ public class SparkOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mainClass")
     public String mainClass;
+
     public SparkOptions withMainClass(String mainClass) {
         this.mainClass = mainClass;
         return this;
     }
     
     /**
-     * The main file/jar URI of the Spark application. Exactly one of the definition_body field and the main_file_uri field must be set for Python.
+     * The main file/jar URI of the Spark application. Exactly one of the definition_body field and the main_file_uri field must be set for Python. Exactly one of main_class and main_file_uri field should be set for Java/Scala language type.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mainFileUri")
     public String mainFileUri;
+
     public SparkOptions withMainFileUri(String mainFileUri) {
         this.mainFileUri = mainFileUri;
         return this;
@@ -95,6 +102,7 @@ public class SparkOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public SparkOptions withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -106,6 +114,7 @@ public class SparkOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pyFileUris")
     public String[] pyFileUris;
+
     public SparkOptions withPyFileUris(String[] pyFileUris) {
         this.pyFileUris = pyFileUris;
         return this;
@@ -117,9 +126,11 @@ public class SparkOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeVersion")
     public String runtimeVersion;
+
     public SparkOptions withRuntimeVersion(String runtimeVersion) {
         this.runtimeVersion = runtimeVersion;
         return this;
     }
     
+    public SparkOptions(){}
 }

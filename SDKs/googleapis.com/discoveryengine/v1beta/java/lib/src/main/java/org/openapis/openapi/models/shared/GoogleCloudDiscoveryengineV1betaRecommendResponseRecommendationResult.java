@@ -18,6 +18,7 @@ public class GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public GoogleCloudDiscoveryengineV1betaDocument document;
+
     public GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResult withDocument(GoogleCloudDiscoveryengineV1betaDocument document) {
         this.document = document;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResult withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResult withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResult(){}
 }

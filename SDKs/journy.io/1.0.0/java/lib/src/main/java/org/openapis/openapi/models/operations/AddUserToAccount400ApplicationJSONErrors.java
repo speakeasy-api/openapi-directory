@@ -18,6 +18,7 @@ public class AddUserToAccount400ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, String> fields;
+
     public AddUserToAccount400ApplicationJSONErrors withFields(java.util.Map<String, String> fields) {
         this.fields = fields;
         return this;
@@ -29,9 +30,11 @@ public class AddUserToAccount400ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public AddUserToAccount400ApplicationJSONErrorsParameters parameters;
+
     public AddUserToAccount400ApplicationJSONErrors withParameters(AddUserToAccount400ApplicationJSONErrorsParameters parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public AddUserToAccount400ApplicationJSONErrors(){}
 }

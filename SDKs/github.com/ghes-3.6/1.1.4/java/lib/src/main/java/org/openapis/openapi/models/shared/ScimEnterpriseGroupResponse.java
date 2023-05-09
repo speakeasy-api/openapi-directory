@@ -18,6 +18,7 @@ public class ScimEnterpriseGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ScimEnterpriseGroupResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class ScimEnterpriseGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public ScimEnterpriseGroupResponse withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -40,6 +42,7 @@ public class ScimEnterpriseGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ScimEnterpriseGroupResponse withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class ScimEnterpriseGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public ScimEnterpriseGroupResponseMembers[] members;
+
     public ScimEnterpriseGroupResponse withMembers(ScimEnterpriseGroupResponseMembers[] members) {
         this.members = members;
         return this;
@@ -62,6 +66,7 @@ public class ScimEnterpriseGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public Meta meta;
+
     public ScimEnterpriseGroupResponse withMeta(Meta meta) {
         this.meta = meta;
         return this;
@@ -72,9 +77,13 @@ public class ScimEnterpriseGroupResponse {
      */
     @JsonProperty("schemas")
     public ScimEnterpriseGroupResponseSchemasEnum[] schemas;
+
     public ScimEnterpriseGroupResponse withSchemas(ScimEnterpriseGroupResponseSchemasEnum[] schemas) {
         this.schemas = schemas;
         return this;
     }
     
+    public ScimEnterpriseGroupResponse(@JsonProperty("schemas") ScimEnterpriseGroupResponseSchemasEnum[] schemas) {
+        this.schemas = schemas;
+  }
 }

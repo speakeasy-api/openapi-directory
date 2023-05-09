@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WeeklySetting {
     @JsonProperty("DayOfWeek")
     public DayOfWeekEnum dayOfWeek;
+
     public WeeklySetting withDayOfWeek(DayOfWeekEnum dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -19,9 +20,14 @@ public class WeeklySetting {
     
     @JsonProperty("HandOffTime")
     public HandOffTime handOffTime;
+
     public WeeklySetting withHandOffTime(HandOffTime handOffTime) {
         this.handOffTime = handOffTime;
         return this;
     }
     
+    public WeeklySetting(@JsonProperty("DayOfWeek") DayOfWeekEnum dayOfWeek, @JsonProperty("HandOffTime") HandOffTime handOffTime) {
+        this.dayOfWeek = dayOfWeek;
+        this.handOffTime = handOffTime;
+  }
 }

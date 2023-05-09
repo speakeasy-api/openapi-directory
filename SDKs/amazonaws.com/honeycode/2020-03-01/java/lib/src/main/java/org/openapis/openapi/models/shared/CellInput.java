@@ -15,6 +15,7 @@ public class CellInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fact")
     public String fact;
+
     public CellInput withFact(String fact) {
         this.fact = fact;
         return this;
@@ -23,9 +24,11 @@ public class CellInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facts")
     public String[] facts;
+
     public CellInput withFacts(String[] facts) {
         this.facts = facts;
         return this;
     }
     
+    public CellInput(){}
 }

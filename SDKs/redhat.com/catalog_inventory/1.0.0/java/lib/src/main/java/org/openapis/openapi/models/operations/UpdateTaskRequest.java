@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTaskRequest {
@@ -12,6 +13,7 @@ public class UpdateTaskRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TaskInput taskInput;
+
     public UpdateTaskRequest withTaskInput(org.openapis.openapi.models.shared.TaskInput taskInput) {
         this.taskInput = taskInput;
         return this;
@@ -22,9 +24,14 @@ public class UpdateTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateTaskRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateTaskRequest(@JsonProperty("TaskInput") org.openapis.openapi.models.shared.TaskInput taskInput, @JsonProperty("id") String id) {
+        this.taskInput = taskInput;
+        this.id = id;
+  }
 }

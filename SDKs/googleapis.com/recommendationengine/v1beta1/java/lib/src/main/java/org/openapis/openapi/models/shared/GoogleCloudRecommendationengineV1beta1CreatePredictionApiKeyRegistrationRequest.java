@@ -18,9 +18,11 @@ public class GoogleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictionApiKeyRegistration")
     public GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration predictionApiKeyRegistration;
+
     public GoogleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistrationRequest withPredictionApiKeyRegistration(GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration predictionApiKeyRegistration) {
         this.predictionApiKeyRegistration = predictionApiKeyRegistration;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistrationRequest(){}
 }

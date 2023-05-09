@@ -15,6 +15,7 @@ public class TrialComponentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public TrialComponentStatus withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class TrialComponentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryStatus")
     public TrialComponentPrimaryStatusEnum primaryStatus;
+
     public TrialComponentStatus withPrimaryStatus(TrialComponentPrimaryStatusEnum primaryStatus) {
         this.primaryStatus = primaryStatus;
         return this;
     }
     
+    public TrialComponentStatus(){}
 }

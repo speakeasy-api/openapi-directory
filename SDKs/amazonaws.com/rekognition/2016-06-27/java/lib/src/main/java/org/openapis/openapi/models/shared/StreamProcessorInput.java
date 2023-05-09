@@ -15,9 +15,11 @@ public class StreamProcessorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisVideoStream")
     public KinesisVideoStream kinesisVideoStream;
+
     public StreamProcessorInput withKinesisVideoStream(KinesisVideoStream kinesisVideoStream) {
         this.kinesisVideoStream = kinesisVideoStream;
         return this;
     }
     
+    public StreamProcessorInput(){}
 }

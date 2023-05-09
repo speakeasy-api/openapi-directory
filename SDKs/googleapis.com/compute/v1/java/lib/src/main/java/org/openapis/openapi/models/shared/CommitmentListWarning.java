@@ -18,6 +18,7 @@ public class CommitmentListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public CommitmentListWarningCodeEnum code;
+
     public CommitmentListWarning withCode(CommitmentListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class CommitmentListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CommitmentListWarningData[] data;
+
     public CommitmentListWarning withData(CommitmentListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class CommitmentListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CommitmentListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CommitmentListWarning(){}
 }

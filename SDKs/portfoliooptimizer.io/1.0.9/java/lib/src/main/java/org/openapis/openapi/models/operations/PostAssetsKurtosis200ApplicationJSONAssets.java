@@ -12,9 +12,13 @@ public class PostAssetsKurtosis200ApplicationJSONAssets {
      */
     @JsonProperty("assetKurtosis")
     public Double assetKurtosis;
+
     public PostAssetsKurtosis200ApplicationJSONAssets withAssetKurtosis(Double assetKurtosis) {
         this.assetKurtosis = assetKurtosis;
         return this;
     }
     
+    public PostAssetsKurtosis200ApplicationJSONAssets(@JsonProperty("assetKurtosis") Double assetKurtosis) {
+        this.assetKurtosis = assetKurtosis;
+  }
 }

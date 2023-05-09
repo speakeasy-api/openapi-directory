@@ -61,10 +61,8 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddVideoCollectionItemsResponse res = new org.openapis.openapi.models.operations.AddVideoCollectionItemsResponse() {{
+        org.openapis.openapi.models.operations.AddVideoCollectionItemsResponse res = new org.openapis.openapi.models.operations.AddVideoCollectionItemsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -101,11 +99,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateVideoCollectionResponse res = new org.openapis.openapi.models.operations.CreateVideoCollectionResponse() {{
+        org.openapis.openapi.models.operations.CreateVideoCollectionResponse res = new org.openapis.openapi.models.operations.CreateVideoCollectionResponse(contentType, httpRes.statusCode()) {{
             collectionCreateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -144,10 +140,8 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVideoCollectionResponse res = new org.openapis.openapi.models.operations.DeleteVideoCollectionResponse() {{
+        org.openapis.openapi.models.operations.DeleteVideoCollectionResponse res = new org.openapis.openapi.models.operations.DeleteVideoCollectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -185,10 +179,8 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVideoCollectionItemsResponse res = new org.openapis.openapi.models.operations.DeleteVideoCollectionItemsResponse() {{
+        org.openapis.openapi.models.operations.DeleteVideoCollectionItemsResponse res = new org.openapis.openapi.models.operations.DeleteVideoCollectionItemsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -225,11 +217,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DownloadVideosResponse res = new org.openapis.openapi.models.operations.DownloadVideosResponse() {{
+        org.openapis.openapi.models.operations.DownloadVideosResponse res = new org.openapis.openapi.models.operations.DownloadVideosResponse(contentType, httpRes.statusCode()) {{
             url = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -274,11 +264,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindSimilarVideosResponse res = new org.openapis.openapi.models.operations.FindSimilarVideosResponse() {{
+        org.openapis.openapi.models.operations.FindSimilarVideosResponse res = new org.openapis.openapi.models.operations.FindSimilarVideosResponse(contentType, httpRes.statusCode()) {{
             videoSearchResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -323,11 +311,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFeaturedVideoCollectionResponse res = new org.openapis.openapi.models.operations.GetFeaturedVideoCollectionResponse() {{
+        org.openapis.openapi.models.operations.GetFeaturedVideoCollectionResponse res = new org.openapis.openapi.models.operations.GetFeaturedVideoCollectionResponse(contentType, httpRes.statusCode()) {{
             featuredCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -372,11 +358,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFeaturedVideoCollectionItemsResponse res = new org.openapis.openapi.models.operations.GetFeaturedVideoCollectionItemsResponse() {{
+        org.openapis.openapi.models.operations.GetFeaturedVideoCollectionItemsResponse res = new org.openapis.openapi.models.operations.GetFeaturedVideoCollectionItemsResponse(contentType, httpRes.statusCode()) {{
             videoCollectionItemDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -421,11 +405,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFeaturedVideoCollectionListResponse res = new org.openapis.openapi.models.operations.GetFeaturedVideoCollectionListResponse() {{
+        org.openapis.openapi.models.operations.GetFeaturedVideoCollectionListResponse res = new org.openapis.openapi.models.operations.GetFeaturedVideoCollectionListResponse(contentType, httpRes.statusCode()) {{
             featuredCollectionDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -470,11 +452,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUpdatedVideosResponse res = new org.openapis.openapi.models.operations.GetUpdatedVideosResponse() {{
+        org.openapis.openapi.models.operations.GetUpdatedVideosResponse res = new org.openapis.openapi.models.operations.GetUpdatedVideosResponse(contentType, httpRes.statusCode()) {{
             updatedMediaDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -517,11 +497,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVideoResponse res = new org.openapis.openapi.models.operations.GetVideoResponse() {{
+        org.openapis.openapi.models.operations.GetVideoResponse res = new org.openapis.openapi.models.operations.GetVideoResponse(contentType, httpRes.statusCode()) {{
             video = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -566,11 +544,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVideoCollectionResponse res = new org.openapis.openapi.models.operations.GetVideoCollectionResponse() {{
+        org.openapis.openapi.models.operations.GetVideoCollectionResponse res = new org.openapis.openapi.models.operations.GetVideoCollectionResponse(contentType, httpRes.statusCode()) {{
             collection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -615,11 +591,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVideoCollectionItemsResponse res = new org.openapis.openapi.models.operations.GetVideoCollectionItemsResponse() {{
+        org.openapis.openapi.models.operations.GetVideoCollectionItemsResponse res = new org.openapis.openapi.models.operations.GetVideoCollectionItemsResponse(contentType, httpRes.statusCode()) {{
             collectionItemDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -664,11 +638,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVideoCollectionListResponse res = new org.openapis.openapi.models.operations.GetVideoCollectionListResponse() {{
+        org.openapis.openapi.models.operations.GetVideoCollectionListResponse res = new org.openapis.openapi.models.operations.GetVideoCollectionListResponse(contentType, httpRes.statusCode()) {{
             collectionDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -713,11 +685,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVideoLicenseListResponse res = new org.openapis.openapi.models.operations.GetVideoLicenseListResponse() {{
+        org.openapis.openapi.models.operations.GetVideoLicenseListResponse res = new org.openapis.openapi.models.operations.GetVideoLicenseListResponse(contentType, httpRes.statusCode()) {{
             downloadHistoryDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -762,11 +732,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVideoListResponse res = new org.openapis.openapi.models.operations.GetVideoListResponse() {{
+        org.openapis.openapi.models.operations.GetVideoListResponse res = new org.openapis.openapi.models.operations.GetVideoListResponse(contentType, httpRes.statusCode()) {{
             videoDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -811,11 +779,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVideoSuggestionsResponse res = new org.openapis.openapi.models.operations.GetVideoSuggestionsResponse() {{
+        org.openapis.openapi.models.operations.GetVideoSuggestionsResponse res = new org.openapis.openapi.models.operations.GetVideoSuggestionsResponse(contentType, httpRes.statusCode()) {{
             suggestions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -865,11 +831,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicenseVideosResponse res = new org.openapis.openapi.models.operations.LicenseVideosResponse() {{
+        org.openapis.openapi.models.operations.LicenseVideosResponse res = new org.openapis.openapi.models.operations.LicenseVideosResponse(contentType, httpRes.statusCode()) {{
             licenseVideoResultDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -914,11 +878,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListVideoCategoriesResponse res = new org.openapis.openapi.models.operations.ListVideoCategoriesResponse() {{
+        org.openapis.openapi.models.operations.ListVideoCategoriesResponse res = new org.openapis.openapi.models.operations.ListVideoCategoriesResponse(contentType, httpRes.statusCode()) {{
             categoryDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -962,10 +924,8 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RenameVideoCollectionResponse res = new org.openapis.openapi.models.operations.RenameVideoCollectionResponse() {{
+        org.openapis.openapi.models.operations.RenameVideoCollectionResponse res = new org.openapis.openapi.models.operations.RenameVideoCollectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -1003,11 +963,9 @@ public class Videos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchVideosResponse res = new org.openapis.openapi.models.operations.SearchVideosResponse() {{
+        org.openapis.openapi.models.operations.SearchVideosResponse res = new org.openapis.openapi.models.operations.SearchVideosResponse(contentType, httpRes.statusCode()) {{
             videoSearchResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

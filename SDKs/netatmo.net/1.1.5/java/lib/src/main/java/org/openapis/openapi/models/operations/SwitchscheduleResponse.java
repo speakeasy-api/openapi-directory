@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SwitchscheduleResponse {
     
     public String contentType;
+
     public SwitchscheduleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SwitchscheduleResponse {
      */
     
     public org.openapis.openapi.models.shared.NAOkResponse naOkResponse;
+
     public SwitchscheduleResponse withNAOkResponse(org.openapis.openapi.models.shared.NAOkResponse naOkResponse) {
         this.naOkResponse = naOkResponse;
         return this;
@@ -26,6 +29,7 @@ public class SwitchscheduleResponse {
     
     
     public Integer statusCode;
+
     public SwitchscheduleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SwitchscheduleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SwitchscheduleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SwitchscheduleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

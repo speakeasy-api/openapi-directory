@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostUnSuspendAccountHolderResponse {
     
     public String contentType;
+
     public PostUnSuspendAccountHolderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostUnSuspendAccountHolderResponse {
     
     
     public Integer statusCode;
+
     public PostUnSuspendAccountHolderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostUnSuspendAccountHolderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostUnSuspendAccountHolderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostUnSuspendAccountHolderResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostUnSuspendAccountHolderResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -43,9 +48,14 @@ public class PostUnSuspendAccountHolderResponse {
      */
     
     public org.openapis.openapi.models.shared.UnSuspendAccountHolderResponse unSuspendAccountHolderResponse;
+
     public PostUnSuspendAccountHolderResponse withUnSuspendAccountHolderResponse(org.openapis.openapi.models.shared.UnSuspendAccountHolderResponse unSuspendAccountHolderResponse) {
         this.unSuspendAccountHolderResponse = unSuspendAccountHolderResponse;
         return this;
     }
     
+    public PostUnSuspendAccountHolderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

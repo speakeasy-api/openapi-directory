@@ -15,6 +15,7 @@ public class RegistrationsWikisListWikiLinks {
      */
     
     public String download;
+
     public RegistrationsWikisListWikiLinks withDownload(String download) {
         this.download = download;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsWikisListWikiLinks {
      */
     
     public String info;
+
     public RegistrationsWikisListWikiLinks withInfo(String info) {
         this.info = info;
         return this;
@@ -35,9 +37,11 @@ public class RegistrationsWikisListWikiLinks {
      */
     
     public String self;
+
     public RegistrationsWikisListWikiLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public RegistrationsWikisListWikiLinks(){}
 }

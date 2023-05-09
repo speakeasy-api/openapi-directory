@@ -15,6 +15,7 @@ public class PostContentproSimilarText200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calls_per_month")
     public String callsPerMonth;
+
     public PostContentproSimilarText200ApplicationJSON withCallsPerMonth(String callsPerMonth) {
         this.callsPerMonth = callsPerMonth;
         return this;
@@ -23,6 +24,7 @@ public class PostContentproSimilarText200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count_remaining")
     public String countRemaining;
+
     public PostContentproSimilarText200ApplicationJSON withCountRemaining(String countRemaining) {
         this.countRemaining = countRemaining;
         return this;
@@ -31,6 +33,7 @@ public class PostContentproSimilarText200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public PostContentproSimilarText200ApplicationJSONData[] data;
+
     public PostContentproSimilarText200ApplicationJSON withData(PostContentproSimilarText200ApplicationJSONData[] data) {
         this.data = data;
         return this;
@@ -39,9 +42,11 @@ public class PostContentproSimilarText200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewal_date")
     public String renewalDate;
+
     public PostContentproSimilarText200ApplicationJSON withRenewalDate(String renewalDate) {
         this.renewalDate = renewalDate;
         return this;
     }
     
+    public PostContentproSimilarText200ApplicationJSON(){}
 }

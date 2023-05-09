@@ -18,6 +18,7 @@ public class HiddenPlayerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public HiddenPlayer[] items;
+
     public HiddenPlayerList withItems(HiddenPlayer[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class HiddenPlayerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public HiddenPlayerList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class HiddenPlayerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public HiddenPlayerList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public HiddenPlayerList(){}
 }

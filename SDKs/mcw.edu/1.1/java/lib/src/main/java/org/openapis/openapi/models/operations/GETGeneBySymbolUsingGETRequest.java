@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGeneBySymbolUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETGeneBySymbolUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
     public Integer speciesTypeKey;
+
     public GETGeneBySymbolUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
         this.speciesTypeKey = speciesTypeKey;
         return this;
@@ -22,9 +24,14 @@ public class GETGeneBySymbolUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=symbol")
     public String symbol;
+
     public GETGeneBySymbolUsingGETRequest withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
     }
     
+    public GETGeneBySymbolUsingGETRequest(@JsonProperty("speciesTypeKey") Integer speciesTypeKey, @JsonProperty("symbol") String symbol) {
+        this.speciesTypeKey = speciesTypeKey;
+        this.symbol = symbol;
+  }
 }

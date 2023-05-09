@@ -15,6 +15,7 @@ public class ListSchedulesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSchedulesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListSchedulesOutput {
     
     @JsonProperty("Schedules")
     public ScheduleSummary[] schedules;
+
     public ListSchedulesOutput withSchedules(ScheduleSummary[] schedules) {
         this.schedules = schedules;
         return this;
     }
     
+    public ListSchedulesOutput(@JsonProperty("Schedules") ScheduleSummary[] schedules) {
+        this.schedules = schedules;
+  }
 }

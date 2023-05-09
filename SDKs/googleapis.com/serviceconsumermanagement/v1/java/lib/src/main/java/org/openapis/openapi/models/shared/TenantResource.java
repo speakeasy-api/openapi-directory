@@ -18,6 +18,7 @@ public class TenantResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public TenantResource withResource(String resource) {
         this.resource = resource;
         return this;
@@ -29,6 +30,7 @@ public class TenantResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TenantResourceStatusEnum status;
+
     public TenantResource withStatus(TenantResourceStatusEnum status) {
         this.status = status;
         return this;
@@ -40,9 +42,11 @@ public class TenantResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public TenantResource withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public TenantResource(){}
 }

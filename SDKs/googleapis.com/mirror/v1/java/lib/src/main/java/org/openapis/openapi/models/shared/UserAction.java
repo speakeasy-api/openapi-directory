@@ -20,6 +20,7 @@ public class UserAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public UserAction withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -39,9 +40,11 @@ public class UserAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public UserAction withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UserAction(){}
 }

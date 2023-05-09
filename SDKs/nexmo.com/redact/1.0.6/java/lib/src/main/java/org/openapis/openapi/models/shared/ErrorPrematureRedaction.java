@@ -15,6 +15,7 @@ public class ErrorPrematureRedaction {
      */
     @JsonProperty("detail")
     public String detail;
+
     public ErrorPrematureRedaction withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -25,6 +26,7 @@ public class ErrorPrematureRedaction {
      */
     @JsonProperty("instance")
     public String instance;
+
     public ErrorPrematureRedaction withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -35,6 +37,7 @@ public class ErrorPrematureRedaction {
      */
     @JsonProperty("title")
     public String title;
+
     public ErrorPrematureRedaction withTitle(String title) {
         this.title = title;
         return this;
@@ -45,9 +48,16 @@ public class ErrorPrematureRedaction {
      */
     @JsonProperty("type")
     public String type;
+
     public ErrorPrematureRedaction withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ErrorPrematureRedaction(@JsonProperty("detail") String detail, @JsonProperty("instance") String instance, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.detail = detail;
+        this.instance = instance;
+        this.title = title;
+        this.type = type;
+  }
 }

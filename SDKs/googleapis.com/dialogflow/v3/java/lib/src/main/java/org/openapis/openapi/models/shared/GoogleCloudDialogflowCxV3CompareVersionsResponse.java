@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3CompareVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseVersionContentJson")
     public String baseVersionContentJson;
+
     public GoogleCloudDialogflowCxV3CompareVersionsResponse withBaseVersionContentJson(String baseVersionContentJson) {
         this.baseVersionContentJson = baseVersionContentJson;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3CompareVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compareTime")
     public String compareTime;
+
     public GoogleCloudDialogflowCxV3CompareVersionsResponse withCompareTime(String compareTime) {
         this.compareTime = compareTime;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3CompareVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetVersionContentJson")
     public String targetVersionContentJson;
+
     public GoogleCloudDialogflowCxV3CompareVersionsResponse withTargetVersionContentJson(String targetVersionContentJson) {
         this.targetVersionContentJson = targetVersionContentJson;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3CompareVersionsResponse(){}
 }

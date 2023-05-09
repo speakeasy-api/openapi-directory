@@ -12,6 +12,7 @@ public class GetNetworksIdActionsActionsResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public GetNetworksIdActionsActionsResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class GetNetworksIdActionsActionsResponseAction {
      */
     @JsonProperty("error")
     public GetNetworksIdActionsActionsResponseActionError error;
+
     public GetNetworksIdActionsActionsResponseAction withError(GetNetworksIdActionsActionsResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class GetNetworksIdActionsActionsResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public GetNetworksIdActionsActionsResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class GetNetworksIdActionsActionsResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetNetworksIdActionsActionsResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class GetNetworksIdActionsActionsResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public GetNetworksIdActionsActionsResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class GetNetworksIdActionsActionsResponseAction {
      */
     @JsonProperty("resources")
     public GetNetworksIdActionsActionsResponseActionResources[] resources;
+
     public GetNetworksIdActionsActionsResponseAction withResources(GetNetworksIdActionsActionsResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class GetNetworksIdActionsActionsResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public GetNetworksIdActionsActionsResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class GetNetworksIdActionsActionsResponseAction {
      */
     @JsonProperty("status")
     public GetNetworksIdActionsActionsResponseActionStatusEnum status;
+
     public GetNetworksIdActionsActionsResponseAction withStatus(GetNetworksIdActionsActionsResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetNetworksIdActionsActionsResponseAction(@JsonProperty("command") String command, @JsonProperty("error") GetNetworksIdActionsActionsResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") GetNetworksIdActionsActionsResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") GetNetworksIdActionsActionsResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

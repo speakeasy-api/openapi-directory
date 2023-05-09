@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePlaceIndexResponse {
@@ -12,6 +13,7 @@ public class DescribePlaceIndexResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribePlaceIndexResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribePlaceIndexResponse {
     
     
     public String contentType;
+
     public DescribePlaceIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribePlaceIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePlaceIndexResponse describePlaceIndexResponse;
+
     public DescribePlaceIndexResponse withDescribePlaceIndexResponse(org.openapis.openapi.models.shared.DescribePlaceIndexResponse describePlaceIndexResponse) {
         this.describePlaceIndexResponse = describePlaceIndexResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribePlaceIndexResponse {
      */
     
     public Object internalServerException;
+
     public DescribePlaceIndexResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribePlaceIndexResponse {
     
     
     public Integer statusCode;
+
     public DescribePlaceIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribePlaceIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePlaceIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribePlaceIndexResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribePlaceIndexResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribePlaceIndexResponse {
      */
     
     public Object throttlingException;
+
     public DescribePlaceIndexResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribePlaceIndexResponse {
      */
     
     public Object validationException;
+
     public DescribePlaceIndexResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribePlaceIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

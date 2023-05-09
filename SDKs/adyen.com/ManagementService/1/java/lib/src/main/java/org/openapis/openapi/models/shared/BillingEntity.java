@@ -12,6 +12,7 @@ public class BillingEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public BillingEntity withAddress(Address address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class BillingEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public BillingEntity withEmail(String email) {
         this.email = email;
         return this;
@@ -34,6 +36,7 @@ public class BillingEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BillingEntity withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class BillingEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BillingEntity withName(String name) {
         this.name = name;
         return this;
@@ -56,9 +60,11 @@ public class BillingEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxId")
     public String taxId;
+
     public BillingEntity withTaxId(String taxId) {
         this.taxId = taxId;
         return this;
     }
     
+    public BillingEntity(){}
 }

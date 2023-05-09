@@ -12,6 +12,7 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public UserProfile withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -20,9 +21,11 @@ public class UserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile")
     public String mobile;
+
     public UserProfile withMobile(String mobile) {
         this.mobile = mobile;
         return this;
     }
     
+    public UserProfile(){}
 }

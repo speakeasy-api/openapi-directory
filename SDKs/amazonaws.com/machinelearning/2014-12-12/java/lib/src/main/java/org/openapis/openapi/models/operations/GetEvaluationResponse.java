@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEvaluationResponse {
     
     public String contentType;
+
     public GetEvaluationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEvaluationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEvaluationOutput getEvaluationOutput;
+
     public GetEvaluationResponse withGetEvaluationOutput(org.openapis.openapi.models.shared.GetEvaluationOutput getEvaluationOutput) {
         this.getEvaluationOutput = getEvaluationOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetEvaluationResponse {
      */
     
     public Object internalServerException;
+
     public GetEvaluationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetEvaluationResponse {
      */
     
     public Object invalidInputException;
+
     public GetEvaluationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -46,6 +51,7 @@ public class GetEvaluationResponse {
     
     
     public Integer statusCode;
+
     public GetEvaluationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetEvaluationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEvaluationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetEvaluationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEvaluationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetEvaluationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

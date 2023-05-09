@@ -18,6 +18,7 @@ public class BillingPlanUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervalEnd")
     public Long intervalEnd;
+
     public BillingPlanUsage withIntervalEnd(Long intervalEnd) {
         this.intervalEnd = intervalEnd;
         return this;
@@ -29,6 +30,7 @@ public class BillingPlanUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervalStart")
     public Long intervalStart;
+
     public BillingPlanUsage withIntervalStart(Long intervalStart) {
         this.intervalStart = intervalStart;
         return this;
@@ -40,6 +42,7 @@ public class BillingPlanUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remainingPayAsYouGoCredits")
     public Double remainingPayAsYouGoCredits;
+
     public BillingPlanUsage withRemainingPayAsYouGoCredits(Double remainingPayAsYouGoCredits) {
         this.remainingPayAsYouGoCredits = remainingPayAsYouGoCredits;
         return this;
@@ -51,6 +54,7 @@ public class BillingPlanUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remainingPlanCredits")
     public Double remainingPlanCredits;
+
     public BillingPlanUsage withRemainingPlanCredits(Double remainingPlanCredits) {
         this.remainingPlanCredits = remainingPlanCredits;
         return this;
@@ -62,9 +66,11 @@ public class BillingPlanUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalRemainingCredits")
     public Double totalRemainingCredits;
+
     public BillingPlanUsage withTotalRemainingCredits(Double totalRemainingCredits) {
         this.totalRemainingCredits = totalRemainingCredits;
         return this;
     }
     
+    public BillingPlanUsage(){}
 }

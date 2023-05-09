@@ -15,6 +15,7 @@ public class RecordOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public RecordOutput withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class RecordOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputKey")
     public String outputKey;
+
     public RecordOutput withOutputKey(String outputKey) {
         this.outputKey = outputKey;
         return this;
@@ -31,9 +33,11 @@ public class RecordOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputValue")
     public String outputValue;
+
     public RecordOutput withOutputValue(String outputValue) {
         this.outputValue = outputValue;
         return this;
     }
     
+    public RecordOutput(){}
 }

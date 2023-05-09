@@ -20,6 +20,7 @@ public class StartReplayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplayArn")
     public String replayArn;
+
     public StartReplayResponse withReplayArn(String replayArn) {
         this.replayArn = replayArn;
         return this;
@@ -30,6 +31,7 @@ public class StartReplayResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReplayStartTime")
     public OffsetDateTime replayStartTime;
+
     public StartReplayResponse withReplayStartTime(OffsetDateTime replayStartTime) {
         this.replayStartTime = replayStartTime;
         return this;
@@ -38,6 +40,7 @@ public class StartReplayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ReplayStateEnum state;
+
     public StartReplayResponse withState(ReplayStateEnum state) {
         this.state = state;
         return this;
@@ -46,9 +49,11 @@ public class StartReplayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReason")
     public String stateReason;
+
     public StartReplayResponse withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
     }
     
+    public StartReplayResponse(){}
 }

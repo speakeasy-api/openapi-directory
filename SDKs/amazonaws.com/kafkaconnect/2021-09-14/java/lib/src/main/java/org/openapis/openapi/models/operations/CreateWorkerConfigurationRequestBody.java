@@ -15,6 +15,7 @@ public class CreateWorkerConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateWorkerConfigurationRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreateWorkerConfigurationRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateWorkerConfigurationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,14 @@ public class CreateWorkerConfigurationRequestBody {
      */
     @JsonProperty("propertiesFileContent")
     public String propertiesFileContent;
+
     public CreateWorkerConfigurationRequestBody withPropertiesFileContent(String propertiesFileContent) {
         this.propertiesFileContent = propertiesFileContent;
         return this;
     }
     
+    public CreateWorkerConfigurationRequestBody(@JsonProperty("name") String name, @JsonProperty("propertiesFileContent") String propertiesFileContent) {
+        this.name = name;
+        this.propertiesFileContent = propertiesFileContent;
+  }
 }

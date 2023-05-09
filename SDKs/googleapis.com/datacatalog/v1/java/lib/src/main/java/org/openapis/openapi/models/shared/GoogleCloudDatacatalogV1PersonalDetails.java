@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1PersonalDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starTime")
     public String starTime;
+
     public GoogleCloudDatacatalogV1PersonalDetails withStarTime(String starTime) {
         this.starTime = starTime;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogV1PersonalDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starred")
     public Boolean starred;
+
     public GoogleCloudDatacatalogV1PersonalDetails withStarred(Boolean starred) {
         this.starred = starred;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1PersonalDetails(){}
 }

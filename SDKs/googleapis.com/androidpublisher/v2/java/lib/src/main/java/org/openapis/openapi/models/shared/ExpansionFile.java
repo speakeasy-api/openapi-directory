@@ -18,6 +18,7 @@ public class ExpansionFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileSize")
     public String fileSize;
+
     public ExpansionFile withFileSize(String fileSize) {
         this.fileSize = fileSize;
         return this;
@@ -29,9 +30,11 @@ public class ExpansionFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referencesVersion")
     public Integer referencesVersion;
+
     public ExpansionFile withReferencesVersion(Integer referencesVersion) {
         this.referencesVersion = referencesVersion;
         return this;
     }
     
+    public ExpansionFile(){}
 }

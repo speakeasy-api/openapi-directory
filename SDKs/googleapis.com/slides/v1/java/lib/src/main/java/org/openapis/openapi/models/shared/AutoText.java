@@ -18,6 +18,7 @@ public class AutoText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public AutoText withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class AutoText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("style")
     public TextStyle style;
+
     public AutoText withStyle(TextStyle style) {
         this.style = style;
         return this;
@@ -40,9 +42,11 @@ public class AutoText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AutoTextTypeEnum type;
+
     public AutoText withType(AutoTextTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AutoText(){}
 }

@@ -15,9 +15,11 @@ public class OBReadDataTransaction6 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Transaction")
     public OBTransaction6[] transaction;
+
     public OBReadDataTransaction6 withTransaction(OBTransaction6[] transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public OBReadDataTransaction6(){}
 }

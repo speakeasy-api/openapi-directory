@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeregisterEventTopicRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DeregisterEventTopicRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -19,9 +20,14 @@ public class DeregisterEventTopicRequest {
     
     @JsonProperty("TopicName")
     public String topicName;
+
     public DeregisterEventTopicRequest withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public DeregisterEventTopicRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("TopicName") String topicName) {
+        this.directoryId = directoryId;
+        this.topicName = topicName;
+  }
 }

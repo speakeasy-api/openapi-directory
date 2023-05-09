@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDeleteGlobalWebhookRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminDeleteGlobalWebhookRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
     public String accept;
+
     public EnterpriseAdminDeleteGlobalWebhookRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,9 +21,14 @@ public class EnterpriseAdminDeleteGlobalWebhookRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
     public Long hookId;
+
     public EnterpriseAdminDeleteGlobalWebhookRequest withHookId(Long hookId) {
         this.hookId = hookId;
         return this;
     }
     
+    public EnterpriseAdminDeleteGlobalWebhookRequest(@JsonProperty("accept") String accept, @JsonProperty("hook_id") Long hookId) {
+        this.accept = accept;
+        this.hookId = hookId;
+  }
 }

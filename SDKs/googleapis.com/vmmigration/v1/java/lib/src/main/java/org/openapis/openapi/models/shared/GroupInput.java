@@ -18,6 +18,7 @@ public class GroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GroupInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class GroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GroupInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public GroupInput(){}
 }

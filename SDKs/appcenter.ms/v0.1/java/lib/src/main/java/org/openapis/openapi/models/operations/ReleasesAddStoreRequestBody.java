@@ -15,9 +15,13 @@ public class ReleasesAddStoreRequestBody {
      */
     @JsonProperty("id")
     public String id;
+
     public ReleasesAddStoreRequestBody withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ReleasesAddStoreRequestBody(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

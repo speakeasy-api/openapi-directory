@@ -15,6 +15,7 @@ public class UpdateEmailTemplateRequestBodyEmailTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSubstitutions")
     public String defaultSubstitutions;
+
     public UpdateEmailTemplateRequestBodyEmailTemplateRequest withDefaultSubstitutions(String defaultSubstitutions) {
         this.defaultSubstitutions = defaultSubstitutions;
         return this;
@@ -23,6 +24,7 @@ public class UpdateEmailTemplateRequestBodyEmailTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HtmlPart")
     public String htmlPart;
+
     public UpdateEmailTemplateRequestBodyEmailTemplateRequest withHtmlPart(String htmlPart) {
         this.htmlPart = htmlPart;
         return this;
@@ -31,6 +33,7 @@ public class UpdateEmailTemplateRequestBodyEmailTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommenderId")
     public String recommenderId;
+
     public UpdateEmailTemplateRequestBodyEmailTemplateRequest withRecommenderId(String recommenderId) {
         this.recommenderId = recommenderId;
         return this;
@@ -39,6 +42,7 @@ public class UpdateEmailTemplateRequestBodyEmailTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subject")
     public String subject;
+
     public UpdateEmailTemplateRequestBodyEmailTemplateRequest withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -47,6 +51,7 @@ public class UpdateEmailTemplateRequestBodyEmailTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateDescription")
     public String templateDescription;
+
     public UpdateEmailTemplateRequestBodyEmailTemplateRequest withTemplateDescription(String templateDescription) {
         this.templateDescription = templateDescription;
         return this;
@@ -55,6 +60,7 @@ public class UpdateEmailTemplateRequestBodyEmailTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextPart")
     public String textPart;
+
     public UpdateEmailTemplateRequestBodyEmailTemplateRequest withTextPart(String textPart) {
         this.textPart = textPart;
         return this;
@@ -63,9 +69,11 @@ public class UpdateEmailTemplateRequestBodyEmailTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public UpdateEmailTemplateRequestBodyEmailTemplateRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public UpdateEmailTemplateRequestBodyEmailTemplateRequest(){}
 }

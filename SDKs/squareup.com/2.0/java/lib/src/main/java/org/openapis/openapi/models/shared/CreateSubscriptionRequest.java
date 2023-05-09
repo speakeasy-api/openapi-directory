@@ -21,6 +21,7 @@ public class CreateSubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canceled_date")
     public String canceledDate;
+
     public CreateSubscriptionRequest withCanceledDate(String canceledDate) {
         this.canceledDate = canceledDate;
         return this;
@@ -34,6 +35,7 @@ public class CreateSubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_id")
     public String cardId;
+
     public CreateSubscriptionRequest withCardId(String cardId) {
         this.cardId = cardId;
         return this;
@@ -44,6 +46,7 @@ public class CreateSubscriptionRequest {
      */
     @JsonProperty("customer_id")
     public String customerId;
+
     public CreateSubscriptionRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -59,6 +62,7 @@ public class CreateSubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateSubscriptionRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -69,6 +73,7 @@ public class CreateSubscriptionRequest {
      */
     @JsonProperty("location_id")
     public String locationId;
+
     public CreateSubscriptionRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -82,6 +87,7 @@ public class CreateSubscriptionRequest {
      */
     @JsonProperty("plan_id")
     public String planId;
+
     public CreateSubscriptionRequest withPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -98,6 +104,7 @@ public class CreateSubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_override_money")
     public Money priceOverrideMoney;
+
     public CreateSubscriptionRequest withPriceOverrideMoney(Money priceOverrideMoney) {
         this.priceOverrideMoney = priceOverrideMoney;
         return this;
@@ -111,6 +118,7 @@ public class CreateSubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_date")
     public String startDate;
+
     public CreateSubscriptionRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -125,6 +133,7 @@ public class CreateSubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_percentage")
     public String taxPercentage;
+
     public CreateSubscriptionRequest withTaxPercentage(String taxPercentage) {
         this.taxPercentage = taxPercentage;
         return this;
@@ -139,9 +148,15 @@ public class CreateSubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public CreateSubscriptionRequest withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public CreateSubscriptionRequest(@JsonProperty("customer_id") String customerId, @JsonProperty("location_id") String locationId, @JsonProperty("plan_id") String planId) {
+        this.customerId = customerId;
+        this.locationId = locationId;
+        this.planId = planId;
+  }
 }

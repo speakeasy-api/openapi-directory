@@ -15,9 +15,11 @@ public class ContinuousProjectInvoices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoices")
     public Invoice[] invoices;
+
     public ContinuousProjectInvoices withInvoices(Invoice[] invoices) {
         this.invoices = invoices;
         return this;
     }
     
+    public ContinuousProjectInvoices(){}
 }

@@ -15,9 +15,11 @@ public class CreateAliasOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Alias")
     public Alias alias;
+
     public CreateAliasOutput withAlias(Alias alias) {
         this.alias = alias;
         return this;
     }
     
+    public CreateAliasOutput(){}
 }

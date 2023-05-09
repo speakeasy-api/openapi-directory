@@ -15,6 +15,7 @@ public class RateIncreaseCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfNotifiedThings")
     public Long numberOfNotifiedThings;
+
     public RateIncreaseCriteria withNumberOfNotifiedThings(Long numberOfNotifiedThings) {
         this.numberOfNotifiedThings = numberOfNotifiedThings;
         return this;
@@ -23,9 +24,11 @@ public class RateIncreaseCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfSucceededThings")
     public Long numberOfSucceededThings;
+
     public RateIncreaseCriteria withNumberOfSucceededThings(Long numberOfSucceededThings) {
         this.numberOfSucceededThings = numberOfSucceededThings;
         return this;
     }
     
+    public RateIncreaseCriteria(){}
 }

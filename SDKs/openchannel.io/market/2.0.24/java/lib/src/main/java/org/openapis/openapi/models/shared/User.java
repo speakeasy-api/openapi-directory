@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * User - A User
@@ -15,6 +15,7 @@ public class User {
      */
     
     public Long created;
+
     public User withCreated(Long created) {
         this.created = created;
         return this;
@@ -25,6 +26,7 @@ public class User {
      */
     
     public java.util.Map<String, Object> customData;
+
     public User withCustomData(java.util.Map<String, Object> customData) {
         this.customData = customData;
         return this;
@@ -35,6 +37,7 @@ public class User {
      */
     
     public String email;
+
     public User withEmail(String email) {
         this.email = email;
         return this;
@@ -45,6 +48,7 @@ public class User {
      */
     
     public String name;
+
     public User withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +59,7 @@ public class User {
      */
     
     public String type;
+
     public User withType(String type) {
         this.type = type;
         return this;
@@ -65,9 +70,15 @@ public class User {
      */
     
     public String userId;
+
     public User withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public User(@JsonProperty("created") Long created, @JsonProperty("customData") java.util.Map<String, Object> customData, @JsonProperty("userId") String userId) {
+        this.created = created;
+        this.customData = customData;
+        this.userId = userId;
+  }
 }

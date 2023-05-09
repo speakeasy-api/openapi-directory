@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletescorebyfieldRequest {
@@ -12,6 +13,7 @@ public class DeletescorebyfieldRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public DeletescorebyfieldRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,6 +21,7 @@ public class DeletescorebyfieldRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DeletescorebyfieldRequest deletescorebyfieldRequest;
+
     public DeletescorebyfieldRequest withDeletescorebyfieldRequest(org.openapis.openapi.models.shared.DeletescorebyfieldRequest deletescorebyfieldRequest) {
         this.deletescorebyfieldRequest = deletescorebyfieldRequest;
         return this;
@@ -29,6 +32,7 @@ public class DeletescorebyfieldRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
     public String acronym;
+
     public DeletescorebyfieldRequest withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -39,6 +43,7 @@ public class DeletescorebyfieldRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field-name")
     public String fieldName;
+
     public DeletescorebyfieldRequest withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -49,9 +54,17 @@ public class DeletescorebyfieldRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DeletescorebyfieldRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeletescorebyfieldRequest(@JsonProperty("Accept") String accept, @JsonProperty("DeletescorebyfieldRequest") org.openapis.openapi.models.shared.DeletescorebyfieldRequest deletescorebyfieldRequest, @JsonProperty("acronym") String acronym, @JsonProperty("field-name") String fieldName, @JsonProperty("id") String id) {
+        this.accept = accept;
+        this.deletescorebyfieldRequest = deletescorebyfieldRequest;
+        this.acronym = acronym;
+        this.fieldName = fieldName;
+        this.id = id;
+  }
 }

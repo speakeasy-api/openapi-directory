@@ -15,6 +15,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layerAvailability")
     public LayerAvailabilityEnum layerAvailability;
+
     public Layer withLayerAvailability(LayerAvailabilityEnum layerAvailability) {
         this.layerAvailability = layerAvailability;
         return this;
@@ -23,6 +24,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layerDigest")
     public String layerDigest;
+
     public Layer withLayerDigest(String layerDigest) {
         this.layerDigest = layerDigest;
         return this;
@@ -31,6 +33,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layerSize")
     public Long layerSize;
+
     public Layer withLayerSize(Long layerSize) {
         this.layerSize = layerSize;
         return this;
@@ -39,9 +42,11 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaType")
     public String mediaType;
+
     public Layer withMediaType(String mediaType) {
         this.mediaType = mediaType;
         return this;
     }
     
+    public Layer(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudRetailV2Model withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataState")
     public GoogleCloudRetailV2ModelDataStateEnum dataState;
+
     public GoogleCloudRetailV2Model withDataState(GoogleCloudRetailV2ModelDataStateEnum dataState) {
         this.dataState = dataState;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudRetailV2Model withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filteringOption")
     public GoogleCloudRetailV2ModelFilteringOptionEnum filteringOption;
+
     public GoogleCloudRetailV2Model withFilteringOption(GoogleCloudRetailV2ModelFilteringOptionEnum filteringOption) {
         this.filteringOption = filteringOption;
         return this;
@@ -62,8 +66,21 @@ public class GoogleCloudRetailV2Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastTuneTime")
     public String lastTuneTime;
+
     public GoogleCloudRetailV2Model withLastTuneTime(String lastTuneTime) {
         this.lastTuneTime = lastTuneTime;
+        return this;
+    }
+    
+    /**
+     * Additional model features config.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("modelFeaturesConfig")
+    public GoogleCloudRetailV2ModelModelFeaturesConfig modelFeaturesConfig;
+
+    public GoogleCloudRetailV2Model withModelFeaturesConfig(GoogleCloudRetailV2ModelModelFeaturesConfig modelFeaturesConfig) {
+        this.modelFeaturesConfig = modelFeaturesConfig;
         return this;
     }
     
@@ -73,6 +90,7 @@ public class GoogleCloudRetailV2Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRetailV2Model withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +102,7 @@ public class GoogleCloudRetailV2Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimizationObjective")
     public String optimizationObjective;
+
     public GoogleCloudRetailV2Model withOptimizationObjective(String optimizationObjective) {
         this.optimizationObjective = optimizationObjective;
         return this;
@@ -95,6 +114,7 @@ public class GoogleCloudRetailV2Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodicTuningState")
     public GoogleCloudRetailV2ModelPeriodicTuningStateEnum periodicTuningState;
+
     public GoogleCloudRetailV2Model withPeriodicTuningState(GoogleCloudRetailV2ModelPeriodicTuningStateEnum periodicTuningState) {
         this.periodicTuningState = periodicTuningState;
         return this;
@@ -106,6 +126,7 @@ public class GoogleCloudRetailV2Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servingConfigLists")
     public GoogleCloudRetailV2ModelServingConfigList[] servingConfigLists;
+
     public GoogleCloudRetailV2Model withServingConfigLists(GoogleCloudRetailV2ModelServingConfigList[] servingConfigLists) {
         this.servingConfigLists = servingConfigLists;
         return this;
@@ -117,6 +138,7 @@ public class GoogleCloudRetailV2Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servingState")
     public GoogleCloudRetailV2ModelServingStateEnum servingState;
+
     public GoogleCloudRetailV2Model withServingState(GoogleCloudRetailV2ModelServingStateEnum servingState) {
         this.servingState = servingState;
         return this;
@@ -128,6 +150,7 @@ public class GoogleCloudRetailV2Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingState")
     public GoogleCloudRetailV2ModelTrainingStateEnum trainingState;
+
     public GoogleCloudRetailV2Model withTrainingState(GoogleCloudRetailV2ModelTrainingStateEnum trainingState) {
         this.trainingState = trainingState;
         return this;
@@ -139,6 +162,7 @@ public class GoogleCloudRetailV2Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tuningOperation")
     public String tuningOperation;
+
     public GoogleCloudRetailV2Model withTuningOperation(String tuningOperation) {
         this.tuningOperation = tuningOperation;
         return this;
@@ -150,6 +174,7 @@ public class GoogleCloudRetailV2Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudRetailV2Model withType(String type) {
         this.type = type;
         return this;
@@ -161,9 +186,11 @@ public class GoogleCloudRetailV2Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudRetailV2Model withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudRetailV2Model(){}
 }

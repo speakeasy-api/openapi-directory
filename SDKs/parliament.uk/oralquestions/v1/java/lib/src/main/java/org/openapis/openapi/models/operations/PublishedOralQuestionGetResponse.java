@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PublishedOralQuestionGetResponse {
@@ -12,6 +13,7 @@ public class PublishedOralQuestionGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiResponseListPublishedWrittenQuestion apiResponseListPublishedWrittenQuestion;
+
     public PublishedOralQuestionGetResponse withApiResponseListPublishedWrittenQuestion(org.openapis.openapi.models.shared.ApiResponseListPublishedWrittenQuestion apiResponseListPublishedWrittenQuestion) {
         this.apiResponseListPublishedWrittenQuestion = apiResponseListPublishedWrittenQuestion;
         return this;
@@ -22,6 +24,7 @@ public class PublishedOralQuestionGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiResponseObject apiResponseObject;
+
     public PublishedOralQuestionGetResponse withApiResponseObject(org.openapis.openapi.models.shared.ApiResponseObject apiResponseObject) {
         this.apiResponseObject = apiResponseObject;
         return this;
@@ -29,6 +32,7 @@ public class PublishedOralQuestionGetResponse {
     
     
     public byte[] body;
+
     public PublishedOralQuestionGetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -36,6 +40,7 @@ public class PublishedOralQuestionGetResponse {
     
     
     public String contentType;
+
     public PublishedOralQuestionGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -43,6 +48,7 @@ public class PublishedOralQuestionGetResponse {
     
     
     public Integer statusCode;
+
     public PublishedOralQuestionGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class PublishedOralQuestionGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PublishedOralQuestionGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PublishedOralQuestionGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

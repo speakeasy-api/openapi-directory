@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutDeliveryChannelRequest {
     @JsonProperty("DeliveryChannel")
     public DeliveryChannel deliveryChannel;
+
     public PutDeliveryChannelRequest withDeliveryChannel(DeliveryChannel deliveryChannel) {
         this.deliveryChannel = deliveryChannel;
         return this;
     }
     
+    public PutDeliveryChannelRequest(@JsonProperty("DeliveryChannel") DeliveryChannel deliveryChannel) {
+        this.deliveryChannel = deliveryChannel;
+  }
 }

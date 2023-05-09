@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VirtualTariffGetResponse {
     
     public byte[] body;
+
     public VirtualTariffGetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class VirtualTariffGetResponse {
     
     
     public String contentType;
+
     public VirtualTariffGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class VirtualTariffGetResponse {
     
     
     public Integer statusCode;
+
     public VirtualTariffGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class VirtualTariffGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VirtualTariffGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class VirtualTariffGetResponse {
      */
     
     public org.openapis.openapi.models.shared.VirtualTariffsOfFolder[] virtualTariffsOfFolders;
+
     public VirtualTariffGetResponse withVirtualTariffsOfFolders(org.openapis.openapi.models.shared.VirtualTariffsOfFolder[] virtualTariffsOfFolders) {
         this.virtualTariffsOfFolders = virtualTariffsOfFolders;
         return this;
     }
     
+    public VirtualTariffGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

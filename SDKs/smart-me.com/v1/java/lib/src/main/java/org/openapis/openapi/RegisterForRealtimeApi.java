@@ -51,10 +51,8 @@ public class RegisterForRealtimeApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterForRealtimeApiDeleteResponse res = new org.openapis.openapi.models.operations.RegisterForRealtimeApiDeleteResponse() {{
+        org.openapis.openapi.models.operations.RegisterForRealtimeApiDeleteResponse res = new org.openapis.openapi.models.operations.RegisterForRealtimeApiDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -83,14 +81,12 @@ public class RegisterForRealtimeApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterForRealtimeApiGetResponse res = new org.openapis.openapi.models.operations.RegisterForRealtimeApiGetResponse() {{
+        org.openapis.openapi.models.operations.RegisterForRealtimeApiGetResponse res = new org.openapis.openapi.models.operations.RegisterForRealtimeApiGetResponse(contentType, httpRes.statusCode()) {{
             registerRealtimeApiData = null;
             registerRealtimeApiData = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -143,10 +139,8 @@ public class RegisterForRealtimeApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterForRealtimeApiPostFormResponse res = new org.openapis.openapi.models.operations.RegisterForRealtimeApiPostFormResponse() {{
+        org.openapis.openapi.models.operations.RegisterForRealtimeApiPostFormResponse res = new org.openapis.openapi.models.operations.RegisterForRealtimeApiPostFormResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -181,10 +175,8 @@ public class RegisterForRealtimeApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterForRealtimeApiPostJsonResponse res = new org.openapis.openapi.models.operations.RegisterForRealtimeApiPostJsonResponse() {{
+        org.openapis.openapi.models.operations.RegisterForRealtimeApiPostJsonResponse res = new org.openapis.openapi.models.operations.RegisterForRealtimeApiPostJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -219,10 +211,8 @@ public class RegisterForRealtimeApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterForRealtimeApiPostRawResponse res = new org.openapis.openapi.models.operations.RegisterForRealtimeApiPostRawResponse() {{
+        org.openapis.openapi.models.operations.RegisterForRealtimeApiPostRawResponse res = new org.openapis.openapi.models.operations.RegisterForRealtimeApiPostRawResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

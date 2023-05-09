@@ -15,9 +15,11 @@ public class BatchUpdateStandardsControlAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedAssociationUpdates")
     public UnprocessedStandardsControlAssociationUpdate[] unprocessedAssociationUpdates;
+
     public BatchUpdateStandardsControlAssociationsResponse withUnprocessedAssociationUpdates(UnprocessedStandardsControlAssociationUpdate[] unprocessedAssociationUpdates) {
         this.unprocessedAssociationUpdates = unprocessedAssociationUpdates;
         return this;
     }
     
+    public BatchUpdateStandardsControlAssociationsResponse(){}
 }

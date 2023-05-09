@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDeploymentConfigInput {
     @JsonProperty("deploymentConfigName")
     public String deploymentConfigName;
+
     public DeleteDeploymentConfigInput withDeploymentConfigName(String deploymentConfigName) {
         this.deploymentConfigName = deploymentConfigName;
         return this;
     }
     
+    public DeleteDeploymentConfigInput(@JsonProperty("deploymentConfigName") String deploymentConfigName) {
+        this.deploymentConfigName = deploymentConfigName;
+  }
 }

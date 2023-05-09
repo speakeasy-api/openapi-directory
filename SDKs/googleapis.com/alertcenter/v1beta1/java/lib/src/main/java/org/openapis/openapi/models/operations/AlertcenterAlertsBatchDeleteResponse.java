@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AlertcenterAlertsBatchDeleteResponse {
@@ -12,6 +13,7 @@ public class AlertcenterAlertsBatchDeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDeleteAlertsResponse batchDeleteAlertsResponse;
+
     public AlertcenterAlertsBatchDeleteResponse withBatchDeleteAlertsResponse(org.openapis.openapi.models.shared.BatchDeleteAlertsResponse batchDeleteAlertsResponse) {
         this.batchDeleteAlertsResponse = batchDeleteAlertsResponse;
         return this;
@@ -19,6 +21,7 @@ public class AlertcenterAlertsBatchDeleteResponse {
     
     
     public String contentType;
+
     public AlertcenterAlertsBatchDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AlertcenterAlertsBatchDeleteResponse {
     
     
     public Integer statusCode;
+
     public AlertcenterAlertsBatchDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AlertcenterAlertsBatchDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AlertcenterAlertsBatchDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AlertcenterAlertsBatchDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

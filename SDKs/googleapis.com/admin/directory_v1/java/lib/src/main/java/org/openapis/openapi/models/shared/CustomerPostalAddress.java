@@ -15,6 +15,7 @@ public class CustomerPostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressLine1")
     public String addressLine1;
+
     public CustomerPostalAddress withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -26,6 +27,7 @@ public class CustomerPostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressLine2")
     public String addressLine2;
+
     public CustomerPostalAddress withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
@@ -37,6 +39,7 @@ public class CustomerPostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressLine3")
     public String addressLine3;
+
     public CustomerPostalAddress withAddressLine3(String addressLine3) {
         this.addressLine3 = addressLine3;
         return this;
@@ -48,6 +51,7 @@ public class CustomerPostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactName")
     public String contactName;
+
     public CustomerPostalAddress withContactName(String contactName) {
         this.contactName = contactName;
         return this;
@@ -59,6 +63,7 @@ public class CustomerPostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public CustomerPostalAddress withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -70,6 +75,7 @@ public class CustomerPostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locality")
     public String locality;
+
     public CustomerPostalAddress withLocality(String locality) {
         this.locality = locality;
         return this;
@@ -81,6 +87,7 @@ public class CustomerPostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationName")
     public String organizationName;
+
     public CustomerPostalAddress withOrganizationName(String organizationName) {
         this.organizationName = organizationName;
         return this;
@@ -92,6 +99,7 @@ public class CustomerPostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public CustomerPostalAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -103,9 +111,11 @@ public class CustomerPostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public CustomerPostalAddress withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public CustomerPostalAddress(){}
 }

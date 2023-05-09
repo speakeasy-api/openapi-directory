@@ -12,6 +12,7 @@ public class CreateResourceDataSyncRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Destination")
     public ResourceDataSyncS3Destination s3Destination;
+
     public CreateResourceDataSyncRequest withS3Destination(ResourceDataSyncS3Destination s3Destination) {
         this.s3Destination = s3Destination;
         return this;
@@ -19,6 +20,7 @@ public class CreateResourceDataSyncRequest {
     
     @JsonProperty("SyncName")
     public String syncName;
+
     public CreateResourceDataSyncRequest withSyncName(String syncName) {
         this.syncName = syncName;
         return this;
@@ -27,6 +29,7 @@ public class CreateResourceDataSyncRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncSource")
     public ResourceDataSyncSource syncSource;
+
     public CreateResourceDataSyncRequest withSyncSource(ResourceDataSyncSource syncSource) {
         this.syncSource = syncSource;
         return this;
@@ -35,9 +38,13 @@ public class CreateResourceDataSyncRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncType")
     public String syncType;
+
     public CreateResourceDataSyncRequest withSyncType(String syncType) {
         this.syncType = syncType;
         return this;
     }
     
+    public CreateResourceDataSyncRequest(@JsonProperty("SyncName") String syncName) {
+        this.syncName = syncName;
+  }
 }

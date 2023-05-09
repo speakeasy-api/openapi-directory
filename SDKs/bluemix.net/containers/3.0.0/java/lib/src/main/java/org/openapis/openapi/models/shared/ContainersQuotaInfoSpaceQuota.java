@@ -15,6 +15,7 @@ public class ContainersQuotaInfoSpaceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floating_ips_max")
     public String floatingIpsMax;
+
     public ContainersQuotaInfoSpaceQuota withFloatingIpsMax(String floatingIpsMax) {
         this.floatingIpsMax = floatingIpsMax;
         return this;
@@ -26,6 +27,7 @@ public class ContainersQuotaInfoSpaceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ram_max")
     public Integer ramMax;
+
     public ContainersQuotaInfoSpaceQuota withRamMax(Integer ramMax) {
         this.ramMax = ramMax;
         return this;
@@ -37,9 +39,11 @@ public class ContainersQuotaInfoSpaceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnets_max")
     public Integer subnetsMax;
+
     public ContainersQuotaInfoSpaceQuota withSubnetsMax(Integer subnetsMax) {
         this.subnetsMax = subnetsMax;
         return this;
     }
     
+    public ContainersQuotaInfoSpaceQuota(){}
 }

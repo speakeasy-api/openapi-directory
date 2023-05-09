@@ -18,6 +18,7 @@ public class ListSecretsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSecretsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListSecretsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secrets")
     public Secret[] secrets;
+
     public ListSecretsResponse withSecrets(Secret[] secrets) {
         this.secrets = secrets;
         return this;
@@ -40,9 +42,11 @@ public class ListSecretsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public ListSecretsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public ListSecretsResponse(){}
 }

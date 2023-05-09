@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1FeatureMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoricalFeatures")
     public java.util.Map<String, GoogleCloudRecommendationengineV1beta1FeatureMapStringList> categoricalFeatures;
+
     public GoogleCloudRecommendationengineV1beta1FeatureMap withCategoricalFeatures(java.util.Map<String, GoogleCloudRecommendationengineV1beta1FeatureMapStringList> categoricalFeatures) {
         this.categoricalFeatures = categoricalFeatures;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecommendationengineV1beta1FeatureMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numericalFeatures")
     public java.util.Map<String, GoogleCloudRecommendationengineV1beta1FeatureMapFloatList> numericalFeatures;
+
     public GoogleCloudRecommendationengineV1beta1FeatureMap withNumericalFeatures(java.util.Map<String, GoogleCloudRecommendationengineV1beta1FeatureMapFloatList> numericalFeatures) {
         this.numericalFeatures = numericalFeatures;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1FeatureMap(){}
 }

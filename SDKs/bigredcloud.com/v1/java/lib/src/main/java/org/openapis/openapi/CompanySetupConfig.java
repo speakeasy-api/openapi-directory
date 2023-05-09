@@ -48,11 +48,9 @@ public class CompanySetupConfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanySetupConfigGetResponse res = new org.openapis.openapi.models.operations.CompanySetupConfigGetResponse() {{
+        org.openapis.openapi.models.operations.CompanySetupConfigGetResponse res = new org.openapis.openapi.models.operations.CompanySetupConfigGetResponse(contentType, httpRes.statusCode()) {{
             companySetupConfigViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -85,11 +83,9 @@ public class CompanySetupConfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanySetupConfigGetCompanyOptionsResponse res = new org.openapis.openapi.models.operations.CompanySetupConfigGetCompanyOptionsResponse() {{
+        org.openapis.openapi.models.operations.CompanySetupConfigGetCompanyOptionsResponse res = new org.openapis.openapi.models.operations.CompanySetupConfigGetCompanyOptionsResponse(contentType, httpRes.statusCode()) {{
             companyOptionDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -122,11 +118,9 @@ public class CompanySetupConfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanySetupConfigGetFinancialYearResponse res = new org.openapis.openapi.models.operations.CompanySetupConfigGetFinancialYearResponse() {{
+        org.openapis.openapi.models.operations.CompanySetupConfigGetFinancialYearResponse res = new org.openapis.openapi.models.operations.CompanySetupConfigGetFinancialYearResponse(contentType, httpRes.statusCode()) {{
             financialYearDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

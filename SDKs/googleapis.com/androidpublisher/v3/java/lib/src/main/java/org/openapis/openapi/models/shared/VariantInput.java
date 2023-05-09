@@ -18,9 +18,11 @@ public class VariantInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceSpec")
     public DeviceSpec deviceSpec;
+
     public VariantInput withDeviceSpec(DeviceSpec deviceSpec) {
         this.deviceSpec = deviceSpec;
         return this;
     }
     
+    public VariantInput(){}
 }

@@ -18,6 +18,7 @@ public class ExportOrderListRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public ExportOrderListFormatEnum format;
+
     public ExportOrderListRequest withFormat(ExportOrderListFormatEnum format) {
         this.format = format;
         return this;
@@ -25,6 +26,7 @@ public class ExportOrderListRequest {
     
     @JsonProperty("orderListRequestWithoutPagination")
     public OrderListRequestWithoutPagination orderListRequestWithoutPagination;
+
     public ExportOrderListRequest withOrderListRequestWithoutPagination(OrderListRequestWithoutPagination orderListRequestWithoutPagination) {
         this.orderListRequestWithoutPagination = orderListRequestWithoutPagination;
         return this;
@@ -35,9 +37,14 @@ public class ExportOrderListRequest {
      */
     @JsonProperty("storeId")
     public String storeId;
+
     public ExportOrderListRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public ExportOrderListRequest(@JsonProperty("orderListRequestWithoutPagination") OrderListRequestWithoutPagination orderListRequestWithoutPagination, @JsonProperty("storeId") String storeId) {
+        this.orderListRequestWithoutPagination = orderListRequestWithoutPagination;
+        this.storeId = storeId;
+  }
 }

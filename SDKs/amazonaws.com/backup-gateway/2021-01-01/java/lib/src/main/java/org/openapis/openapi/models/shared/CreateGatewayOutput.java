@@ -15,9 +15,11 @@ public class CreateGatewayOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public CreateGatewayOutput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
     }
     
+    public CreateGatewayOutput(){}
 }

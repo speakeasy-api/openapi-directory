@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDyeReference {
     
     public Long channelHash;
+
     public DestinyDyeReference withChannelHash(Long channelHash) {
         this.channelHash = channelHash;
         return this;
@@ -16,9 +17,11 @@ public class DestinyDyeReference {
     
     
     public Long dyeHash;
+
     public DestinyDyeReference withDyeHash(Long dyeHash) {
         this.dyeHash = dyeHash;
         return this;
     }
     
+    public DestinyDyeReference(){}
 }

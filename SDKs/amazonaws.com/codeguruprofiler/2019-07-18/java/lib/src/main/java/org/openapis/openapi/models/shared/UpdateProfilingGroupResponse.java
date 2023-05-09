@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateProfilingGroupResponse {
     @JsonProperty("profilingGroup")
     public ProfilingGroupDescription profilingGroup;
+
     public UpdateProfilingGroupResponse withProfilingGroup(ProfilingGroupDescription profilingGroup) {
         this.profilingGroup = profilingGroup;
         return this;
     }
     
+    public UpdateProfilingGroupResponse(@JsonProperty("profilingGroup") ProfilingGroupDescription profilingGroup) {
+        this.profilingGroup = profilingGroup;
+  }
 }

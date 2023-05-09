@@ -15,9 +15,11 @@ public class BatchGetDeploymentsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentsInfo")
     public DeploymentInfo[] deploymentsInfo;
+
     public BatchGetDeploymentsOutput withDeploymentsInfo(DeploymentInfo[] deploymentsInfo) {
         this.deploymentsInfo = deploymentsInfo;
         return this;
     }
     
+    public BatchGetDeploymentsOutput(){}
 }

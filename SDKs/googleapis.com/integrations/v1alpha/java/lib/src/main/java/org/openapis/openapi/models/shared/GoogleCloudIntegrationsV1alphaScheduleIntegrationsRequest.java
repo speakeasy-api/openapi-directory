@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputParameters")
     public java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> inputParameters;
+
     public GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest withInputParameters(java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> inputParameters) {
         this.inputParameters = inputParameters;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterEntries")
     public EnterpriseCrmFrontendsEventbusProtoParameterEntry[] parameterEntries;
+
     public GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest withParameterEntries(EnterpriseCrmFrontendsEventbusProtoParameterEntry[] parameterEntries) {
         this.parameterEntries = parameterEntries;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public EnterpriseCrmEventbusProtoEventParameters parameters;
+
     public GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest withParameters(EnterpriseCrmEventbusProtoEventParameters parameters) {
         this.parameters = parameters;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleTime")
     public String scheduleTime;
+
     public GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest withScheduleTime(String scheduleTime) {
         this.scheduleTime = scheduleTime;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerId")
     public String triggerId;
+
     public GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest withTriggerId(String triggerId) {
         this.triggerId = triggerId;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest(){}
 }

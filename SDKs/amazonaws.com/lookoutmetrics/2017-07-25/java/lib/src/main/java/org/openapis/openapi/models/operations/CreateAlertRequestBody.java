@@ -14,6 +14,7 @@ public class CreateAlertRequestBody {
      */
     @JsonProperty("Action")
     public CreateAlertRequestBodyAction action;
+
     public CreateAlertRequestBody withAction(CreateAlertRequestBodyAction action) {
         this.action = action;
         return this;
@@ -25,6 +26,7 @@ public class CreateAlertRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertDescription")
     public String alertDescription;
+
     public CreateAlertRequestBody withAlertDescription(String alertDescription) {
         this.alertDescription = alertDescription;
         return this;
@@ -36,6 +38,7 @@ public class CreateAlertRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertFilters")
     public CreateAlertRequestBodyAlertFilters alertFilters;
+
     public CreateAlertRequestBody withAlertFilters(CreateAlertRequestBodyAlertFilters alertFilters) {
         this.alertFilters = alertFilters;
         return this;
@@ -46,6 +49,7 @@ public class CreateAlertRequestBody {
      */
     @JsonProperty("AlertName")
     public String alertName;
+
     public CreateAlertRequestBody withAlertName(String alertName) {
         this.alertName = alertName;
         return this;
@@ -57,6 +61,7 @@ public class CreateAlertRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertSensitivityThreshold")
     public Long alertSensitivityThreshold;
+
     public CreateAlertRequestBody withAlertSensitivityThreshold(Long alertSensitivityThreshold) {
         this.alertSensitivityThreshold = alertSensitivityThreshold;
         return this;
@@ -67,6 +72,7 @@ public class CreateAlertRequestBody {
      */
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public CreateAlertRequestBody withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -78,9 +84,15 @@ public class CreateAlertRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateAlertRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAlertRequestBody(@JsonProperty("Action") CreateAlertRequestBodyAction action, @JsonProperty("AlertName") String alertName, @JsonProperty("AnomalyDetectorArn") String anomalyDetectorArn) {
+        this.action = action;
+        this.alertName = alertName;
+        this.anomalyDetectorArn = anomalyDetectorArn;
+  }
 }

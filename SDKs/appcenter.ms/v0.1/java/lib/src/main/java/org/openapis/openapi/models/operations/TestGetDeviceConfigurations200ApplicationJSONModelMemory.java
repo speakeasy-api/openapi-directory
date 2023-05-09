@@ -15,9 +15,11 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelMemory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedSize")
     public String formattedSize;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelMemory withFormattedSize(String formattedSize) {
         this.formattedSize = formattedSize;
         return this;
     }
     
+    public TestGetDeviceConfigurations200ApplicationJSONModelMemory(){}
 }

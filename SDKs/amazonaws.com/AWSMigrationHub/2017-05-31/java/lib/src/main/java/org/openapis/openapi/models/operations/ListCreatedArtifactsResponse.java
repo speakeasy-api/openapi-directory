@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCreatedArtifactsResponse {
@@ -12,6 +13,7 @@ public class ListCreatedArtifactsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListCreatedArtifactsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListCreatedArtifactsResponse {
     
     
     public String contentType;
+
     public ListCreatedArtifactsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCreatedArtifactsResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public ListCreatedArtifactsResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -39,6 +43,7 @@ public class ListCreatedArtifactsResponse {
      */
     
     public Object internalServerError;
+
     public ListCreatedArtifactsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class ListCreatedArtifactsResponse {
      */
     
     public Object invalidInputException;
+
     public ListCreatedArtifactsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class ListCreatedArtifactsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCreatedArtifactsResult listCreatedArtifactsResult;
+
     public ListCreatedArtifactsResponse withListCreatedArtifactsResult(org.openapis.openapi.models.shared.ListCreatedArtifactsResult listCreatedArtifactsResult) {
         this.listCreatedArtifactsResult = listCreatedArtifactsResult;
         return this;
@@ -66,6 +73,7 @@ public class ListCreatedArtifactsResponse {
     
     
     public Integer statusCode;
+
     public ListCreatedArtifactsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListCreatedArtifactsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCreatedArtifactsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListCreatedArtifactsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListCreatedArtifactsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class ListCreatedArtifactsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListCreatedArtifactsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,9 +114,14 @@ public class ListCreatedArtifactsResponse {
      */
     
     public Object throttlingException;
+
     public ListCreatedArtifactsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListCreatedArtifactsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

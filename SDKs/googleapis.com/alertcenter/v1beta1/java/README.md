@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteSecurity;
 import org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteRequest;
 import org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteResponse;
+import org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.BatchDeleteAlertsRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -31,7 +30,7 @@ public class Application {
                 .build();
 
             AlertcenterAlertsBatchDeleteRequest req = new AlertcenterAlertsBatchDeleteRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 batchDeleteAlertsRequest = new BatchDeleteAlertsRequest() {{
                     alertId = new String[]{{
                         add("distinctio"),
@@ -39,9 +38,9 @@ public class Application {
                         add("unde"),
                     }};
                     customerId = "nulla";
-                }};
+                }};;
                 accessToken = "corrupti";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "vel";
                 fields = "error";
                 key = "deserunt";
@@ -50,19 +49,21 @@ public class Application {
                 quotaUser = "iure";
                 uploadType = "magnam";
                 uploadProtocol = "debitis";
-            }}            
+            }};            
 
-            AlertcenterAlertsBatchDeleteResponse res = sdk.alerts.alertcenterAlertsBatchDelete(req, new AlertcenterAlertsBatchDeleteSecurity() {{
+            AlertcenterAlertsBatchDeleteResponse res = sdk.alerts.alertcenterAlertsBatchDelete(req, new AlertcenterAlertsBatchDeleteSecurity("ipsa", "delectus") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.batchDeleteAlertsResponse.isPresent()) {
+            if (res.batchDeleteAlertsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -70,22 +71,22 @@ public class Application {
 ## Available Resources and Operations
 
 
-### alerts
+### [alerts](docs/alerts/README.md)
 
-* `alertcenterAlertsBatchDelete` - Performs batch delete operation on alerts.
-* `alertcenterAlertsBatchUndelete` - Performs batch undelete operation on alerts.
-* `alertcenterAlertsDelete` - Marks the specified alert for deletion. An alert that has been marked for deletion is removed from Alert Center after 30 days. Marking an alert for deletion has no effect on an alert which has already been marked for deletion. Attempting to mark a nonexistent alert for deletion results in a `NOT_FOUND` error.
-* `alertcenterAlertsFeedbackCreate` - Creates new feedback for an alert. Attempting to create a feedback for a non-existent alert returns `NOT_FOUND` error. Attempting to create a feedback for an alert that is marked for deletion returns `FAILED_PRECONDITION' error.
-* `alertcenterAlertsFeedbackList` - Lists all the feedback for an alert. Attempting to list feedbacks for a non-existent alert returns `NOT_FOUND` error.
-* `alertcenterAlertsGet` - Gets the specified alert. Attempting to get a nonexistent alert returns `NOT_FOUND` error.
-* `alertcenterAlertsGetMetadata` - Returns the metadata of an alert. Attempting to get metadata for a non-existent alert returns `NOT_FOUND` error.
-* `alertcenterAlertsList` - Lists the alerts.
-* `alertcenterAlertsUndelete` - Restores, or "undeletes", an alert that was marked for deletion within the past 30 days. Attempting to undelete an alert which was marked for deletion over 30 days ago (which has been removed from the Alert Center database) or a nonexistent alert returns a `NOT_FOUND` error. Attempting to undelete an alert which has not been marked for deletion has no effect.
+* [alertcenterAlertsBatchDelete](docs/alerts/README.md#alertcenteralertsbatchdelete) - Performs batch delete operation on alerts.
+* [alertcenterAlertsBatchUndelete](docs/alerts/README.md#alertcenteralertsbatchundelete) - Performs batch undelete operation on alerts.
+* [alertcenterAlertsDelete](docs/alerts/README.md#alertcenteralertsdelete) - Marks the specified alert for deletion. An alert that has been marked for deletion is removed from Alert Center after 30 days. Marking an alert for deletion has no effect on an alert which has already been marked for deletion. Attempting to mark a nonexistent alert for deletion results in a `NOT_FOUND` error.
+* [alertcenterAlertsFeedbackCreate](docs/alerts/README.md#alertcenteralertsfeedbackcreate) - Creates new feedback for an alert. Attempting to create a feedback for a non-existent alert returns `NOT_FOUND` error. Attempting to create a feedback for an alert that is marked for deletion returns `FAILED_PRECONDITION' error.
+* [alertcenterAlertsFeedbackList](docs/alerts/README.md#alertcenteralertsfeedbacklist) - Lists all the feedback for an alert. Attempting to list feedbacks for a non-existent alert returns `NOT_FOUND` error.
+* [alertcenterAlertsGet](docs/alerts/README.md#alertcenteralertsget) - Gets the specified alert. Attempting to get a nonexistent alert returns `NOT_FOUND` error.
+* [alertcenterAlertsGetMetadata](docs/alerts/README.md#alertcenteralertsgetmetadata) - Returns the metadata of an alert. Attempting to get metadata for a non-existent alert returns `NOT_FOUND` error.
+* [alertcenterAlertsList](docs/alerts/README.md#alertcenteralertslist) - Lists the alerts.
+* [alertcenterAlertsUndelete](docs/alerts/README.md#alertcenteralertsundelete) - Restores, or "undeletes", an alert that was marked for deletion within the past 30 days. Attempting to undelete an alert which was marked for deletion over 30 days ago (which has been removed from the Alert Center database) or a nonexistent alert returns a `NOT_FOUND` error. Attempting to undelete an alert which has not been marked for deletion has no effect.
 
-### v1beta1
+### [v1beta1](docs/v1beta1/README.md)
 
-* `alertcenterGetSettings` - Returns customer-level settings.
-* `alertcenterUpdateSettings` - Updates the customer-level settings.
+* [alertcenterGetSettings](docs/v1beta1/README.md#alertcentergetsettings) - Returns customer-level settings.
+* [alertcenterUpdateSettings](docs/v1beta1/README.md#alertcenterupdatesettings) - Updates the customer-level settings.
 <!-- End SDK Available Operations -->
 
 ### Maturity

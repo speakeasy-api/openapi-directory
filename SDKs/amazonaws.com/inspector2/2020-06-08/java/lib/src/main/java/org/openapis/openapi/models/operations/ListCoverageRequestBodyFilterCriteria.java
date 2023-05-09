@@ -15,6 +15,7 @@ public class ListCoverageRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public org.openapis.openapi.models.shared.CoverageStringFilter[] accountId;
+
     public ListCoverageRequestBodyFilterCriteria withAccountId(org.openapis.openapi.models.shared.CoverageStringFilter[] accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class ListCoverageRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2InstanceTags")
     public org.openapis.openapi.models.shared.CoverageMapFilter[] ec2InstanceTags;
+
     public ListCoverageRequestBodyFilterCriteria withEc2InstanceTags(org.openapis.openapi.models.shared.CoverageMapFilter[] ec2InstanceTags) {
         this.ec2InstanceTags = ec2InstanceTags;
         return this;
@@ -31,6 +33,7 @@ public class ListCoverageRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecrImageTags")
     public org.openapis.openapi.models.shared.CoverageStringFilter[] ecrImageTags;
+
     public ListCoverageRequestBodyFilterCriteria withEcrImageTags(org.openapis.openapi.models.shared.CoverageStringFilter[] ecrImageTags) {
         this.ecrImageTags = ecrImageTags;
         return this;
@@ -39,6 +42,7 @@ public class ListCoverageRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecrRepositoryName")
     public org.openapis.openapi.models.shared.CoverageStringFilter[] ecrRepositoryName;
+
     public ListCoverageRequestBodyFilterCriteria withEcrRepositoryName(org.openapis.openapi.models.shared.CoverageStringFilter[] ecrRepositoryName) {
         this.ecrRepositoryName = ecrRepositoryName;
         return this;
@@ -47,6 +51,7 @@ public class ListCoverageRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionName")
     public org.openapis.openapi.models.shared.CoverageStringFilter[] lambdaFunctionName;
+
     public ListCoverageRequestBodyFilterCriteria withLambdaFunctionName(org.openapis.openapi.models.shared.CoverageStringFilter[] lambdaFunctionName) {
         this.lambdaFunctionName = lambdaFunctionName;
         return this;
@@ -55,6 +60,7 @@ public class ListCoverageRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionRuntime")
     public org.openapis.openapi.models.shared.CoverageStringFilter[] lambdaFunctionRuntime;
+
     public ListCoverageRequestBodyFilterCriteria withLambdaFunctionRuntime(org.openapis.openapi.models.shared.CoverageStringFilter[] lambdaFunctionRuntime) {
         this.lambdaFunctionRuntime = lambdaFunctionRuntime;
         return this;
@@ -63,6 +69,7 @@ public class ListCoverageRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionTags")
     public org.openapis.openapi.models.shared.CoverageMapFilter[] lambdaFunctionTags;
+
     public ListCoverageRequestBodyFilterCriteria withLambdaFunctionTags(org.openapis.openapi.models.shared.CoverageMapFilter[] lambdaFunctionTags) {
         this.lambdaFunctionTags = lambdaFunctionTags;
         return this;
@@ -71,6 +78,7 @@ public class ListCoverageRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public org.openapis.openapi.models.shared.CoverageStringFilter[] resourceId;
+
     public ListCoverageRequestBodyFilterCriteria withResourceId(org.openapis.openapi.models.shared.CoverageStringFilter[] resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -79,6 +87,7 @@ public class ListCoverageRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public org.openapis.openapi.models.shared.CoverageStringFilter[] resourceType;
+
     public ListCoverageRequestBodyFilterCriteria withResourceType(org.openapis.openapi.models.shared.CoverageStringFilter[] resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -87,6 +96,7 @@ public class ListCoverageRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanStatusCode")
     public org.openapis.openapi.models.shared.CoverageStringFilter[] scanStatusCode;
+
     public ListCoverageRequestBodyFilterCriteria withScanStatusCode(org.openapis.openapi.models.shared.CoverageStringFilter[] scanStatusCode) {
         this.scanStatusCode = scanStatusCode;
         return this;
@@ -95,6 +105,7 @@ public class ListCoverageRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanStatusReason")
     public org.openapis.openapi.models.shared.CoverageStringFilter[] scanStatusReason;
+
     public ListCoverageRequestBodyFilterCriteria withScanStatusReason(org.openapis.openapi.models.shared.CoverageStringFilter[] scanStatusReason) {
         this.scanStatusReason = scanStatusReason;
         return this;
@@ -103,9 +114,11 @@ public class ListCoverageRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanType")
     public org.openapis.openapi.models.shared.CoverageStringFilter[] scanType;
+
     public ListCoverageRequestBodyFilterCriteria withScanType(org.openapis.openapi.models.shared.CoverageStringFilter[] scanType) {
         this.scanType = scanType;
         return this;
     }
     
+    public ListCoverageRequestBodyFilterCriteria(){}
 }

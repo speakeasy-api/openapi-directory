@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MetastoreProjectsLocationsServicesMetadataImportsGetResponse {
     
     public String contentType;
+
     public MetastoreProjectsLocationsServicesMetadataImportsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MetastoreProjectsLocationsServicesMetadataImportsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.MetadataImport metadataImport;
+
     public MetastoreProjectsLocationsServicesMetadataImportsGetResponse withMetadataImport(org.openapis.openapi.models.shared.MetadataImport metadataImport) {
         this.metadataImport = metadataImport;
         return this;
@@ -26,6 +29,7 @@ public class MetastoreProjectsLocationsServicesMetadataImportsGetResponse {
     
     
     public Integer statusCode;
+
     public MetastoreProjectsLocationsServicesMetadataImportsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MetastoreProjectsLocationsServicesMetadataImportsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MetastoreProjectsLocationsServicesMetadataImportsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MetastoreProjectsLocationsServicesMetadataImportsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

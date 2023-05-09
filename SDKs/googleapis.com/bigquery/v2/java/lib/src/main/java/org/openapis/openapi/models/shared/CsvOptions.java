@@ -15,6 +15,7 @@ public class CsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowJaggedRows")
     public Boolean allowJaggedRows;
+
     public CsvOptions withAllowJaggedRows(Boolean allowJaggedRows) {
         this.allowJaggedRows = allowJaggedRows;
         return this;
@@ -26,6 +27,7 @@ public class CsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowQuotedNewlines")
     public Boolean allowQuotedNewlines;
+
     public CsvOptions withAllowQuotedNewlines(Boolean allowQuotedNewlines) {
         this.allowQuotedNewlines = allowQuotedNewlines;
         return this;
@@ -37,6 +39,7 @@ public class CsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding")
     public String encoding;
+
     public CsvOptions withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
@@ -48,6 +51,7 @@ public class CsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldDelimiter")
     public String fieldDelimiter;
+
     public CsvOptions withFieldDelimiter(String fieldDelimiter) {
         this.fieldDelimiter = fieldDelimiter;
         return this;
@@ -59,6 +63,7 @@ public class CsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("null_marker")
     public String nullMarker;
+
     public CsvOptions withNullMarker(String nullMarker) {
         this.nullMarker = nullMarker;
         return this;
@@ -70,6 +75,7 @@ public class CsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preserveAsciiControlCharacters")
     public Boolean preserveAsciiControlCharacters;
+
     public CsvOptions withPreserveAsciiControlCharacters(Boolean preserveAsciiControlCharacters) {
         this.preserveAsciiControlCharacters = preserveAsciiControlCharacters;
         return this;
@@ -81,6 +87,7 @@ public class CsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote")
     public String quote;
+
     public CsvOptions withQuote(String quote) {
         this.quote = quote;
         return this;
@@ -92,9 +99,11 @@ public class CsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipLeadingRows")
     public String skipLeadingRows;
+
     public CsvOptions withSkipLeadingRows(String skipLeadingRows) {
         this.skipLeadingRows = skipLeadingRows;
         return this;
     }
     
+    public CsvOptions(){}
 }

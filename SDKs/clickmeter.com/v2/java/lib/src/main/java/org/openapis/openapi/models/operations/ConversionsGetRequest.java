@@ -12,6 +12,7 @@ public class ConversionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public String createdAfter;
+
     public ConversionsGetRequest withCreatedAfter(String createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -22,6 +23,7 @@ public class ConversionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public String createdBefore;
+
     public ConversionsGetRequest withCreatedBefore(String createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -32,6 +34,7 @@ public class ConversionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public ConversionsGetRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +45,7 @@ public class ConversionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public ConversionsGetRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -52,6 +56,7 @@ public class ConversionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public ConversionsGetStatusEnum status;
+
     public ConversionsGetRequest withStatus(ConversionsGetStatusEnum status) {
         this.status = status;
         return this;
@@ -62,9 +67,11 @@ public class ConversionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public ConversionsGetRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
     }
     
+    public ConversionsGetRequest(){}
 }

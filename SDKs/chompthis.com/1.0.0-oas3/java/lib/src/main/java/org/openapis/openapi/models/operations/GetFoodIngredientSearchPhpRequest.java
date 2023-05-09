@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFoodIngredientSearchPhpRequest {
@@ -22,6 +23,7 @@ public class GetFoodIngredientSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=find")
     public String find;
+
     public GetFoodIngredientSearchPhpRequest withFind(String find) {
         this.find = find;
         return this;
@@ -36,9 +38,13 @@ public class GetFoodIngredientSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public GetFoodIngredientSearchPhpLimitEnum limit;
+
     public GetFoodIngredientSearchPhpRequest withLimit(GetFoodIngredientSearchPhpLimitEnum limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetFoodIngredientSearchPhpRequest(@JsonProperty("find") String find) {
+        this.find = find;
+  }
 }

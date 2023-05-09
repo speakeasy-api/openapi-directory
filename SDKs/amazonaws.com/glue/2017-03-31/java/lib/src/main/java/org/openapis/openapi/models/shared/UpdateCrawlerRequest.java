@@ -12,6 +12,7 @@ public class UpdateCrawlerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Classifiers")
     public String[] classifiers;
+
     public UpdateCrawlerRequest withClassifiers(String[] classifiers) {
         this.classifiers = classifiers;
         return this;
@@ -20,6 +21,7 @@ public class UpdateCrawlerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public String configuration;
+
     public UpdateCrawlerRequest withConfiguration(String configuration) {
         this.configuration = configuration;
         return this;
@@ -28,6 +30,7 @@ public class UpdateCrawlerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlerSecurityConfiguration")
     public String crawlerSecurityConfiguration;
+
     public UpdateCrawlerRequest withCrawlerSecurityConfiguration(String crawlerSecurityConfiguration) {
         this.crawlerSecurityConfiguration = crawlerSecurityConfiguration;
         return this;
@@ -36,6 +39,7 @@ public class UpdateCrawlerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public UpdateCrawlerRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -44,6 +48,7 @@ public class UpdateCrawlerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateCrawlerRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -52,6 +57,7 @@ public class UpdateCrawlerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LakeFormationConfiguration")
     public LakeFormationConfiguration lakeFormationConfiguration;
+
     public UpdateCrawlerRequest withLakeFormationConfiguration(LakeFormationConfiguration lakeFormationConfiguration) {
         this.lakeFormationConfiguration = lakeFormationConfiguration;
         return this;
@@ -60,6 +66,7 @@ public class UpdateCrawlerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineageConfiguration")
     public LineageConfiguration lineageConfiguration;
+
     public UpdateCrawlerRequest withLineageConfiguration(LineageConfiguration lineageConfiguration) {
         this.lineageConfiguration = lineageConfiguration;
         return this;
@@ -67,6 +74,7 @@ public class UpdateCrawlerRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateCrawlerRequest withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +83,7 @@ public class UpdateCrawlerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecrawlPolicy")
     public RecrawlPolicy recrawlPolicy;
+
     public UpdateCrawlerRequest withRecrawlPolicy(RecrawlPolicy recrawlPolicy) {
         this.recrawlPolicy = recrawlPolicy;
         return this;
@@ -83,6 +92,7 @@ public class UpdateCrawlerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Role")
     public String role;
+
     public UpdateCrawlerRequest withRole(String role) {
         this.role = role;
         return this;
@@ -91,6 +101,7 @@ public class UpdateCrawlerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public String schedule;
+
     public UpdateCrawlerRequest withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -99,6 +110,7 @@ public class UpdateCrawlerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaChangePolicy")
     public SchemaChangePolicy schemaChangePolicy;
+
     public UpdateCrawlerRequest withSchemaChangePolicy(SchemaChangePolicy schemaChangePolicy) {
         this.schemaChangePolicy = schemaChangePolicy;
         return this;
@@ -107,6 +119,7 @@ public class UpdateCrawlerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TablePrefix")
     public String tablePrefix;
+
     public UpdateCrawlerRequest withTablePrefix(String tablePrefix) {
         this.tablePrefix = tablePrefix;
         return this;
@@ -115,9 +128,13 @@ public class UpdateCrawlerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public CrawlerTargets targets;
+
     public UpdateCrawlerRequest withTargets(CrawlerTargets targets) {
         this.targets = targets;
         return this;
     }
     
+    public UpdateCrawlerRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleHomeEnterpriseSdmV1ListRoomsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleHomeEnterpriseSdmV1ListRoomsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleHomeEnterpriseSdmV1ListRoomsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rooms")
     public GoogleHomeEnterpriseSdmV1Room[] rooms;
+
     public GoogleHomeEnterpriseSdmV1ListRoomsResponse withRooms(GoogleHomeEnterpriseSdmV1Room[] rooms) {
         this.rooms = rooms;
         return this;
     }
     
+    public GoogleHomeEnterpriseSdmV1ListRoomsResponse(){}
 }

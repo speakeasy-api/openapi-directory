@@ -15,9 +15,11 @@ public class UpdateHypervisorOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HypervisorArn")
     public String hypervisorArn;
+
     public UpdateHypervisorOutput withHypervisorArn(String hypervisorArn) {
         this.hypervisorArn = hypervisorArn;
         return this;
     }
     
+    public UpdateHypervisorOutput(){}
 }

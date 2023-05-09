@@ -140,4 +140,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/BlockedResource.java
 lib/src/main/java/org/openapis/openapi/models/shared/MobileFriendlyIssueRuleEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/MobileFriendlyIssue.java
 lib/src/main/java/org/openapis/openapi/models/shared/RunMobileFriendlyTestRequest.java
+docs/sdk/README.md
+docs/searchanalytics/README.md
+docs/sitemaps/README.md
+docs/sites/README.md
+docs/urlinspection/README.md
+docs/urltestingtools/README.md
 USAGE.md

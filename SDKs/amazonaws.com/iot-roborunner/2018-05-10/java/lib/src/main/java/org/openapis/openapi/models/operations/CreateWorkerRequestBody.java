@@ -15,6 +15,7 @@ public class CreateWorkerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalFixedProperties")
     public String additionalFixedProperties;
+
     public CreateWorkerRequestBody withAdditionalFixedProperties(String additionalFixedProperties) {
         this.additionalFixedProperties = additionalFixedProperties;
         return this;
@@ -26,6 +27,7 @@ public class CreateWorkerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalTransientProperties")
     public String additionalTransientProperties;
+
     public CreateWorkerRequestBody withAdditionalTransientProperties(String additionalTransientProperties) {
         this.additionalTransientProperties = additionalTransientProperties;
         return this;
@@ -37,6 +39,7 @@ public class CreateWorkerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateWorkerRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -47,6 +50,7 @@ public class CreateWorkerRequestBody {
      */
     @JsonProperty("fleet")
     public String fleet;
+
     public CreateWorkerRequestBody withFleet(String fleet) {
         this.fleet = fleet;
         return this;
@@ -57,6 +61,7 @@ public class CreateWorkerRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateWorkerRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +73,7 @@ public class CreateWorkerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientation")
     public CreateWorkerRequestBodyOrientation orientation;
+
     public CreateWorkerRequestBody withOrientation(CreateWorkerRequestBodyOrientation orientation) {
         this.orientation = orientation;
         return this;
@@ -79,6 +85,7 @@ public class CreateWorkerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public CreateWorkerRequestBodyPosition position;
+
     public CreateWorkerRequestBody withPosition(CreateWorkerRequestBodyPosition position) {
         this.position = position;
         return this;
@@ -90,9 +97,14 @@ public class CreateWorkerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorProperties")
     public CreateWorkerRequestBodyVendorProperties vendorProperties;
+
     public CreateWorkerRequestBody withVendorProperties(CreateWorkerRequestBodyVendorProperties vendorProperties) {
         this.vendorProperties = vendorProperties;
         return this;
     }
     
+    public CreateWorkerRequestBody(@JsonProperty("fleet") String fleet, @JsonProperty("name") String name) {
+        this.fleet = fleet;
+        this.name = name;
+  }
 }

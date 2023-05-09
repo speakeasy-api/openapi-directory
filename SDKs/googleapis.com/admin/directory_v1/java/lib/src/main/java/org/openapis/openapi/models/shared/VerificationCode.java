@@ -18,6 +18,7 @@ public class VerificationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public VerificationCode withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class VerificationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public VerificationCode withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class VerificationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public VerificationCode withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -51,9 +54,11 @@ public class VerificationCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationCode")
     public String verificationCode;
+
     public VerificationCode withVerificationCode(String verificationCode) {
         this.verificationCode = verificationCode;
         return this;
     }
     
+    public VerificationCode(){}
 }

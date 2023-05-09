@@ -57,12 +57,10 @@ public class Autocomplete {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAutocompleteSuggestionsResponse res = new org.openapis.openapi.models.operations.GetAutocompleteSuggestionsResponse() {{
+        org.openapis.openapi.models.operations.GetAutocompleteSuggestionsResponse res = new org.openapis.openapi.models.operations.GetAutocompleteSuggestionsResponse(contentType, httpRes.statusCode()) {{
             autocompleteSearchSuggestions = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,12 +108,10 @@ public class Autocomplete {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTopSearchesResponse res = new org.openapis.openapi.models.operations.GetTopSearchesResponse() {{
+        org.openapis.openapi.models.operations.GetTopSearchesResponse res = new org.openapis.openapi.models.operations.GetTopSearchesResponse(contentType, httpRes.statusCode()) {{
             topSearches = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

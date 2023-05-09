@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCommentsForComparedCommitInput {
     @JsonProperty("afterCommitId")
     public String afterCommitId;
+
     public GetCommentsForComparedCommitInput withAfterCommitId(String afterCommitId) {
         this.afterCommitId = afterCommitId;
         return this;
@@ -19,6 +20,7 @@ public class GetCommentsForComparedCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beforeCommitId")
     public String beforeCommitId;
+
     public GetCommentsForComparedCommitInput withBeforeCommitId(String beforeCommitId) {
         this.beforeCommitId = beforeCommitId;
         return this;
@@ -27,6 +29,7 @@ public class GetCommentsForComparedCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetCommentsForComparedCommitInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +38,7 @@ public class GetCommentsForComparedCommitInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetCommentsForComparedCommitInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -42,9 +46,14 @@ public class GetCommentsForComparedCommitInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetCommentsForComparedCommitInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public GetCommentsForComparedCommitInput(@JsonProperty("afterCommitId") String afterCommitId, @JsonProperty("repositoryName") String repositoryName) {
+        this.afterCommitId = afterCommitId;
+        this.repositoryName = repositoryName;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListTagsForStreamOutput {
     @JsonProperty("HasMoreTags")
     public Boolean hasMoreTags;
+
     public ListTagsForStreamOutput withHasMoreTags(Boolean hasMoreTags) {
         this.hasMoreTags = hasMoreTags;
         return this;
@@ -19,9 +20,14 @@ public class ListTagsForStreamOutput {
     
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ListTagsForStreamOutput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListTagsForStreamOutput(@JsonProperty("HasMoreTags") Boolean hasMoreTags, @JsonProperty("Tags") Tag[] tags) {
+        this.hasMoreTags = hasMoreTags;
+        this.tags = tags;
+  }
 }

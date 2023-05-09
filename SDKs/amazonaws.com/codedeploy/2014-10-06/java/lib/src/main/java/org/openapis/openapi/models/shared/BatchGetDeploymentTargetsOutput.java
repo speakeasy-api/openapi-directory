@@ -15,9 +15,11 @@ public class BatchGetDeploymentTargetsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentTargets")
     public DeploymentTarget[] deploymentTargets;
+
     public BatchGetDeploymentTargetsOutput withDeploymentTargets(DeploymentTarget[] deploymentTargets) {
         this.deploymentTargets = deploymentTargets;
         return this;
     }
     
+    public BatchGetDeploymentTargetsOutput(){}
 }

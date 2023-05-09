@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAssociationVersionsResponse {
@@ -12,6 +13,7 @@ public class ListAssociationVersionsResponse {
      */
     
     public Object associationDoesNotExist;
+
     public ListAssociationVersionsResponse withAssociationDoesNotExist(Object associationDoesNotExist) {
         this.associationDoesNotExist = associationDoesNotExist;
         return this;
@@ -19,6 +21,7 @@ public class ListAssociationVersionsResponse {
     
     
     public String contentType;
+
     public ListAssociationVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAssociationVersionsResponse {
      */
     
     public Object internalServerError;
+
     public ListAssociationVersionsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class ListAssociationVersionsResponse {
      */
     
     public Object invalidNextToken;
+
     public ListAssociationVersionsResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -49,6 +54,7 @@ public class ListAssociationVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAssociationVersionsResult listAssociationVersionsResult;
+
     public ListAssociationVersionsResponse withListAssociationVersionsResult(org.openapis.openapi.models.shared.ListAssociationVersionsResult listAssociationVersionsResult) {
         this.listAssociationVersionsResult = listAssociationVersionsResult;
         return this;
@@ -56,6 +62,7 @@ public class ListAssociationVersionsResponse {
     
     
     public Integer statusCode;
+
     public ListAssociationVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListAssociationVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAssociationVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAssociationVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

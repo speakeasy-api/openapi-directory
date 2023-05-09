@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1CreateEntitlementRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entitlement")
     public GoogleCloudChannelV1EntitlementInput entitlement;
+
     public GoogleCloudChannelV1CreateEntitlementRequestInput withEntitlement(GoogleCloudChannelV1EntitlementInput entitlement) {
         this.entitlement = entitlement;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudChannelV1CreateEntitlementRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleCloudChannelV1CreateEntitlementRequestInput withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GoogleCloudChannelV1CreateEntitlementRequestInput(){}
 }

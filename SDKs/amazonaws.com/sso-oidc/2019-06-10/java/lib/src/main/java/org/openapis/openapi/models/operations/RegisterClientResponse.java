@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterClientResponse {
     
     public String contentType;
+
     public RegisterClientResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterClientResponse {
      */
     
     public Object internalServerException;
+
     public RegisterClientResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterClientResponse {
      */
     
     public Object invalidClientMetadataException;
+
     public RegisterClientResponse withInvalidClientMetadataException(Object invalidClientMetadataException) {
         this.invalidClientMetadataException = invalidClientMetadataException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterClientResponse {
      */
     
     public Object invalidRequestException;
+
     public RegisterClientResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterClientResponse {
      */
     
     public Object invalidScopeException;
+
     public RegisterClientResponse withInvalidScopeException(Object invalidScopeException) {
         this.invalidScopeException = invalidScopeException;
         return this;
@@ -59,6 +65,7 @@ public class RegisterClientResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterClientResponse registerClientResponse;
+
     public RegisterClientResponse withRegisterClientResponse(org.openapis.openapi.models.shared.RegisterClientResponse registerClientResponse) {
         this.registerClientResponse = registerClientResponse;
         return this;
@@ -66,6 +73,7 @@ public class RegisterClientResponse {
     
     
     public Integer statusCode;
+
     public RegisterClientResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class RegisterClientResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterClientResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegisterClientResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

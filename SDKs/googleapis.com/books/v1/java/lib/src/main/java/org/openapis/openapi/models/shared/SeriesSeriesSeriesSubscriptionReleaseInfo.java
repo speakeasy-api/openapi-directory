@@ -12,6 +12,7 @@ public class SeriesSeriesSeriesSubscriptionReleaseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelTime")
     public String cancelTime;
+
     public SeriesSeriesSeriesSubscriptionReleaseInfo withCancelTime(String cancelTime) {
         this.cancelTime = cancelTime;
         return this;
@@ -20,6 +21,7 @@ public class SeriesSeriesSeriesSubscriptionReleaseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentReleaseInfo")
     public SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo currentReleaseInfo;
+
     public SeriesSeriesSeriesSubscriptionReleaseInfo withCurrentReleaseInfo(SeriesSeriesSeriesSubscriptionReleaseInfoCurrentReleaseInfo currentReleaseInfo) {
         this.currentReleaseInfo = currentReleaseInfo;
         return this;
@@ -28,6 +30,7 @@ public class SeriesSeriesSeriesSubscriptionReleaseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextReleaseInfo")
     public SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo nextReleaseInfo;
+
     public SeriesSeriesSeriesSubscriptionReleaseInfo withNextReleaseInfo(SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo nextReleaseInfo) {
         this.nextReleaseInfo = nextReleaseInfo;
         return this;
@@ -36,9 +39,11 @@ public class SeriesSeriesSeriesSubscriptionReleaseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seriesSubscriptionType")
     public String seriesSubscriptionType;
+
     public SeriesSeriesSeriesSubscriptionReleaseInfo withSeriesSubscriptionType(String seriesSubscriptionType) {
         this.seriesSubscriptionType = seriesSubscriptionType;
         return this;
     }
     
+    public SeriesSeriesSeriesSubscriptionReleaseInfo(){}
 }

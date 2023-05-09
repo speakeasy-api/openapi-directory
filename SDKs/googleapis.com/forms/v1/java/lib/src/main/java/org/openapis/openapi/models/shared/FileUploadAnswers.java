@@ -18,9 +18,11 @@ public class FileUploadAnswers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answers")
     public FileUploadAnswer[] answers;
+
     public FileUploadAnswers withAnswers(FileUploadAnswer[] answers) {
         this.answers = answers;
         return this;
     }
     
+    public FileUploadAnswers(){}
 }

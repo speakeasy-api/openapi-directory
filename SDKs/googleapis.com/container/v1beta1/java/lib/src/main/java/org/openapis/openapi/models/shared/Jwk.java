@@ -18,6 +18,7 @@ public class Jwk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alg")
     public String alg;
+
     public Jwk withAlg(String alg) {
         this.alg = alg;
         return this;
@@ -29,6 +30,7 @@ public class Jwk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crv")
     public String crv;
+
     public Jwk withCrv(String crv) {
         this.crv = crv;
         return this;
@@ -40,6 +42,7 @@ public class Jwk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("e")
     public String e;
+
     public Jwk withE(String e) {
         this.e = e;
         return this;
@@ -51,6 +54,7 @@ public class Jwk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kid")
     public String kid;
+
     public Jwk withKid(String kid) {
         this.kid = kid;
         return this;
@@ -62,6 +66,7 @@ public class Jwk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kty")
     public String kty;
+
     public Jwk withKty(String kty) {
         this.kty = kty;
         return this;
@@ -73,6 +78,7 @@ public class Jwk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("n")
     public String n;
+
     public Jwk withN(String n) {
         this.n = n;
         return this;
@@ -84,6 +90,7 @@ public class Jwk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("use")
     public String use;
+
     public Jwk withUse(String use) {
         this.use = use;
         return this;
@@ -95,6 +102,7 @@ public class Jwk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public String x;
+
     public Jwk withX(String x) {
         this.x = x;
         return this;
@@ -106,9 +114,11 @@ public class Jwk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public String y;
+
     public Jwk withY(String y) {
         this.y = y;
         return this;
     }
     
+    public Jwk(){}
 }

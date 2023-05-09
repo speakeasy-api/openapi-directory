@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWebACLResponse {
     
     public String contentType;
+
     public CreateWebACLResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateWebACLResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWebACLResponse createWebACLResponse;
+
     public CreateWebACLResponse withCreateWebACLResponse(org.openapis.openapi.models.shared.CreateWebACLResponse createWebACLResponse) {
         this.createWebACLResponse = createWebACLResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateWebACLResponse {
     
     
     public Integer statusCode;
+
     public CreateWebACLResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateWebACLResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWebACLResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateWebACLResponse {
      */
     
     public Object wafBadRequestException;
+
     public CreateWebACLResponse withWAFBadRequestException(Object wafBadRequestException) {
         this.wafBadRequestException = wafBadRequestException;
         return this;
@@ -53,6 +59,7 @@ public class CreateWebACLResponse {
      */
     
     public Object wafDisallowedNameException;
+
     public CreateWebACLResponse withWAFDisallowedNameException(Object wafDisallowedNameException) {
         this.wafDisallowedNameException = wafDisallowedNameException;
         return this;
@@ -63,6 +70,7 @@ public class CreateWebACLResponse {
      */
     
     public Object wafInternalErrorException;
+
     public CreateWebACLResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -73,6 +81,7 @@ public class CreateWebACLResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public CreateWebACLResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -83,6 +92,7 @@ public class CreateWebACLResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public CreateWebACLResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -93,6 +103,7 @@ public class CreateWebACLResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public CreateWebACLResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -103,6 +114,7 @@ public class CreateWebACLResponse {
      */
     
     public Object wafStaleDataException;
+
     public CreateWebACLResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
@@ -113,6 +125,7 @@ public class CreateWebACLResponse {
      */
     
     public Object wafTagOperationException;
+
     public CreateWebACLResponse withWAFTagOperationException(Object wafTagOperationException) {
         this.wafTagOperationException = wafTagOperationException;
         return this;
@@ -123,9 +136,14 @@ public class CreateWebACLResponse {
      */
     
     public Object wafTagOperationInternalErrorException;
+
     public CreateWebACLResponse withWAFTagOperationInternalErrorException(Object wafTagOperationInternalErrorException) {
         this.wafTagOperationInternalErrorException = wafTagOperationInternalErrorException;
         return this;
     }
     
+    public CreateWebACLResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Domains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public Domains withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class Domains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainAliases")
     public DomainAlias[] domainAliases;
+
     public Domains withDomainAliases(DomainAlias[] domainAliases) {
         this.domainAliases = domainAliases;
         return this;
@@ -40,6 +42,7 @@ public class Domains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public Domains withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -51,6 +54,7 @@ public class Domains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Domains withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -62,6 +66,7 @@ public class Domains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPrimary")
     public Boolean isPrimary;
+
     public Domains withIsPrimary(Boolean isPrimary) {
         this.isPrimary = isPrimary;
         return this;
@@ -73,6 +78,7 @@ public class Domains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Domains withKind(String kind) {
         this.kind = kind;
         return this;
@@ -84,9 +90,11 @@ public class Domains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verified")
     public Boolean verified;
+
     public Domains withVerified(Boolean verified) {
         this.verified = verified;
         return this;
     }
     
+    public Domains(){}
 }

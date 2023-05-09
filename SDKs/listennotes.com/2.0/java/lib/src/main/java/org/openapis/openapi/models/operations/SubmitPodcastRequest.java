@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubmitPodcastRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.SubmitPodcastForm submitPodcastForm;
+
     public SubmitPodcastRequest withSubmitPodcastForm(org.openapis.openapi.models.shared.SubmitPodcastForm submitPodcastForm) {
         this.submitPodcastForm = submitPodcastForm;
         return this;
@@ -19,9 +21,14 @@ public class SubmitPodcastRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
     public String xListenAPIKey;
+
     public SubmitPodcastRequest withXListenAPIKey(String xListenAPIKey) {
         this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
+    public SubmitPodcastRequest(@JsonProperty("SubmitPodcastForm") org.openapis.openapi.models.shared.SubmitPodcastForm submitPodcastForm, @JsonProperty("X-ListenAPI-Key") String xListenAPIKey) {
+        this.submitPodcastForm = submitPodcastForm;
+        this.xListenAPIKey = xListenAPIKey;
+  }
 }

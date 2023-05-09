@@ -12,6 +12,7 @@ public class UpdateVocabularyFilterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public UpdateVocabularyFilterRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -20,6 +21,7 @@ public class UpdateVocabularyFilterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyFilterFileUri")
     public String vocabularyFilterFileUri;
+
     public UpdateVocabularyFilterRequest withVocabularyFilterFileUri(String vocabularyFilterFileUri) {
         this.vocabularyFilterFileUri = vocabularyFilterFileUri;
         return this;
@@ -27,6 +29,7 @@ public class UpdateVocabularyFilterRequest {
     
     @JsonProperty("VocabularyFilterName")
     public String vocabularyFilterName;
+
     public UpdateVocabularyFilterRequest withVocabularyFilterName(String vocabularyFilterName) {
         this.vocabularyFilterName = vocabularyFilterName;
         return this;
@@ -35,9 +38,13 @@ public class UpdateVocabularyFilterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Words")
     public String[] words;
+
     public UpdateVocabularyFilterRequest withWords(String[] words) {
         this.words = words;
         return this;
     }
     
+    public UpdateVocabularyFilterRequest(@JsonProperty("VocabularyFilterName") String vocabularyFilterName) {
+        this.vocabularyFilterName = vocabularyFilterName;
+  }
 }

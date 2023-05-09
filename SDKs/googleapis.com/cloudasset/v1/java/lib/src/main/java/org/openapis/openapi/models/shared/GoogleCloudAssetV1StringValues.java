@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1StringValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedValues")
     public String[] allowedValues;
+
     public GoogleCloudAssetV1StringValues withAllowedValues(String[] allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAssetV1StringValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deniedValues")
     public String[] deniedValues;
+
     public GoogleCloudAssetV1StringValues withDeniedValues(String[] deniedValues) {
         this.deniedValues = deniedValues;
         return this;
     }
     
+    public GoogleCloudAssetV1StringValues(){}
 }

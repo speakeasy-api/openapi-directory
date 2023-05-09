@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * CreateVerifiedAccessTrustProviderOidcOptions - Options for an OIDC-based, user-identity type trust provider.
+ * CreateVerifiedAccessTrustProviderOidcOptions - Describes the options when creating an Amazon Web Services Verified Access trust provider using the &lt;code&gt;user&lt;/code&gt; type.
  */
 public class CreateVerifiedAccessTrustProviderOidcOptions {
     
     public String authorizationEndpoint;
+
     public CreateVerifiedAccessTrustProviderOidcOptions withAuthorizationEndpoint(String authorizationEndpoint) {
         this.authorizationEndpoint = authorizationEndpoint;
         return this;
@@ -19,6 +20,7 @@ public class CreateVerifiedAccessTrustProviderOidcOptions {
     
     
     public String clientId;
+
     public CreateVerifiedAccessTrustProviderOidcOptions withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -26,6 +28,7 @@ public class CreateVerifiedAccessTrustProviderOidcOptions {
     
     
     public String clientSecret;
+
     public CreateVerifiedAccessTrustProviderOidcOptions withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -33,6 +36,7 @@ public class CreateVerifiedAccessTrustProviderOidcOptions {
     
     
     public String issuer;
+
     public CreateVerifiedAccessTrustProviderOidcOptions withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -40,6 +44,7 @@ public class CreateVerifiedAccessTrustProviderOidcOptions {
     
     
     public String scope;
+
     public CreateVerifiedAccessTrustProviderOidcOptions withScope(String scope) {
         this.scope = scope;
         return this;
@@ -47,6 +52,7 @@ public class CreateVerifiedAccessTrustProviderOidcOptions {
     
     
     public String tokenEndpoint;
+
     public CreateVerifiedAccessTrustProviderOidcOptions withTokenEndpoint(String tokenEndpoint) {
         this.tokenEndpoint = tokenEndpoint;
         return this;
@@ -54,9 +60,11 @@ public class CreateVerifiedAccessTrustProviderOidcOptions {
     
     
     public String userInfoEndpoint;
+
     public CreateVerifiedAccessTrustProviderOidcOptions withUserInfoEndpoint(String userInfoEndpoint) {
         this.userInfoEndpoint = userInfoEndpoint;
         return this;
     }
     
+    public CreateVerifiedAccessTrustProviderOidcOptions(){}
 }

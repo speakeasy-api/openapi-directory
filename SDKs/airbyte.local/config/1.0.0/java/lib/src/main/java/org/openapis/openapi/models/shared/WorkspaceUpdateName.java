@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkspaceUpdateName {
     @JsonProperty("name")
     public String name;
+
     public WorkspaceUpdateName withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class WorkspaceUpdateName {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public WorkspaceUpdateName withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public WorkspaceUpdateName(@JsonProperty("name") String name, @JsonProperty("workspaceId") String workspaceId) {
+        this.name = name;
+        this.workspaceId = workspaceId;
+  }
 }

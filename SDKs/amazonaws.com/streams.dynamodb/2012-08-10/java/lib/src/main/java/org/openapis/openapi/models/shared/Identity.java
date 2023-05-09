@@ -15,6 +15,7 @@ public class Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalId")
     public String principalId;
+
     public Identity withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -23,9 +24,11 @@ public class Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Identity withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Identity(){}
 }

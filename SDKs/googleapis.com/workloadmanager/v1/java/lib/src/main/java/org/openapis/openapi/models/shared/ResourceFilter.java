@@ -18,6 +18,7 @@ public class ResourceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gceInstanceFilter")
     public GceInstanceFilter gceInstanceFilter;
+
     public ResourceFilter withGceInstanceFilter(GceInstanceFilter gceInstanceFilter) {
         this.gceInstanceFilter = gceInstanceFilter;
         return this;
@@ -29,6 +30,7 @@ public class ResourceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inclusionLabels")
     public java.util.Map<String, String> inclusionLabels;
+
     public ResourceFilter withInclusionLabels(java.util.Map<String, String> inclusionLabels) {
         this.inclusionLabels = inclusionLabels;
         return this;
@@ -40,6 +42,7 @@ public class ResourceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceIdPatterns")
     public String[] resourceIdPatterns;
+
     public ResourceFilter withResourceIdPatterns(String[] resourceIdPatterns) {
         this.resourceIdPatterns = resourceIdPatterns;
         return this;
@@ -51,9 +54,11 @@ public class ResourceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public String[] scopes;
+
     public ResourceFilter withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
     }
     
+    public ResourceFilter(){}
 }

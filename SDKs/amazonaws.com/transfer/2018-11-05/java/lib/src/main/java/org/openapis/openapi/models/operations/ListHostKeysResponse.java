@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListHostKeysResponse {
     
     public String contentType;
+
     public ListHostKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListHostKeysResponse {
      */
     
     public Object internalServiceError;
+
     public ListHostKeysResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ListHostKeysResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListHostKeysResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListHostKeysResponse {
      */
     
     public Object invalidRequestException;
+
     public ListHostKeysResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListHostKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.ListHostKeysResponse listHostKeysResponse;
+
     public ListHostKeysResponse withListHostKeysResponse(org.openapis.openapi.models.shared.ListHostKeysResponse listHostKeysResponse) {
         this.listHostKeysResponse = listHostKeysResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListHostKeysResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListHostKeysResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListHostKeysResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListHostKeysResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ListHostKeysResponse {
     
     
     public Integer statusCode;
+
     public ListHostKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListHostKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListHostKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListHostKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

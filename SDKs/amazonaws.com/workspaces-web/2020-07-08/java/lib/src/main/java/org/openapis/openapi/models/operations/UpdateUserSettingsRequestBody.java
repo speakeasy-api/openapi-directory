@@ -15,6 +15,7 @@ public class UpdateUserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateUserSettingsRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class UpdateUserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyAllowed")
     public UpdateUserSettingsRequestBodyCopyAllowedEnum copyAllowed;
+
     public UpdateUserSettingsRequestBody withCopyAllowed(UpdateUserSettingsRequestBodyCopyAllowedEnum copyAllowed) {
         this.copyAllowed = copyAllowed;
         return this;
@@ -37,6 +39,7 @@ public class UpdateUserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disconnectTimeoutInMinutes")
     public Long disconnectTimeoutInMinutes;
+
     public UpdateUserSettingsRequestBody withDisconnectTimeoutInMinutes(Long disconnectTimeoutInMinutes) {
         this.disconnectTimeoutInMinutes = disconnectTimeoutInMinutes;
         return this;
@@ -48,6 +51,7 @@ public class UpdateUserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadAllowed")
     public UpdateUserSettingsRequestBodyDownloadAllowedEnum downloadAllowed;
+
     public UpdateUserSettingsRequestBody withDownloadAllowed(UpdateUserSettingsRequestBodyDownloadAllowedEnum downloadAllowed) {
         this.downloadAllowed = downloadAllowed;
         return this;
@@ -59,6 +63,7 @@ public class UpdateUserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleDisconnectTimeoutInMinutes")
     public Long idleDisconnectTimeoutInMinutes;
+
     public UpdateUserSettingsRequestBody withIdleDisconnectTimeoutInMinutes(Long idleDisconnectTimeoutInMinutes) {
         this.idleDisconnectTimeoutInMinutes = idleDisconnectTimeoutInMinutes;
         return this;
@@ -70,6 +75,7 @@ public class UpdateUserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pasteAllowed")
     public UpdateUserSettingsRequestBodyPasteAllowedEnum pasteAllowed;
+
     public UpdateUserSettingsRequestBody withPasteAllowed(UpdateUserSettingsRequestBodyPasteAllowedEnum pasteAllowed) {
         this.pasteAllowed = pasteAllowed;
         return this;
@@ -81,6 +87,7 @@ public class UpdateUserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printAllowed")
     public UpdateUserSettingsRequestBodyPrintAllowedEnum printAllowed;
+
     public UpdateUserSettingsRequestBody withPrintAllowed(UpdateUserSettingsRequestBodyPrintAllowedEnum printAllowed) {
         this.printAllowed = printAllowed;
         return this;
@@ -92,9 +99,11 @@ public class UpdateUserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadAllowed")
     public UpdateUserSettingsRequestBodyUploadAllowedEnum uploadAllowed;
+
     public UpdateUserSettingsRequestBody withUploadAllowed(UpdateUserSettingsRequestBodyUploadAllowedEnum uploadAllowed) {
         this.uploadAllowed = uploadAllowed;
         return this;
     }
     
+    public UpdateUserSettingsRequestBody(){}
 }

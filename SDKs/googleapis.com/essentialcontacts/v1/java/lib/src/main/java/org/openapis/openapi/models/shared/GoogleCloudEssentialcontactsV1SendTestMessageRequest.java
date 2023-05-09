@@ -18,6 +18,7 @@ public class GoogleCloudEssentialcontactsV1SendTestMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     public String[] contacts;
+
     public GoogleCloudEssentialcontactsV1SendTestMessageRequest withContacts(String[] contacts) {
         this.contacts = contacts;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudEssentialcontactsV1SendTestMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationCategory")
     public GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum notificationCategory;
+
     public GoogleCloudEssentialcontactsV1SendTestMessageRequest withNotificationCategory(GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum notificationCategory) {
         this.notificationCategory = notificationCategory;
         return this;
     }
     
+    public GoogleCloudEssentialcontactsV1SendTestMessageRequest(){}
 }

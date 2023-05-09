@@ -15,6 +15,7 @@ public class TetmsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public TetmsRequestBodyCertificateParameters certificateParameters;
+
     public TetmsRequestBody withCertificateParameters(TetmsRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class TetmsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public TetmsRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class TetmsRequestBody {
      */
     @JsonProperty("format")
     public TetmsRequestBodyFormatEnum format;
+
     public TetmsRequestBody withFormat(TetmsRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class TetmsRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public TetmsRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public TetmsRequestBody(@JsonProperty("format") TetmsRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyClientVpnEndpointRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyClientVpnEndpointActionEnum action;
+
     public GETModifyClientVpnEndpointRequest withAction(GETModifyClientVpnEndpointActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyClientVpnEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientConnectOptions")
     public GETModifyClientVpnEndpointClientConnectOptions clientConnectOptions;
+
     public GETModifyClientVpnEndpointRequest withClientConnectOptions(GETModifyClientVpnEndpointClientConnectOptions clientConnectOptions) {
         this.clientConnectOptions = clientConnectOptions;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyClientVpnEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientLoginBannerOptions")
     public GETModifyClientVpnEndpointClientLoginBannerOptions clientLoginBannerOptions;
+
     public GETModifyClientVpnEndpointRequest withClientLoginBannerOptions(GETModifyClientVpnEndpointClientLoginBannerOptions clientLoginBannerOptions) {
         this.clientLoginBannerOptions = clientLoginBannerOptions;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyClientVpnEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientVpnEndpointId")
     public String clientVpnEndpointId;
+
     public GETModifyClientVpnEndpointRequest withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyClientVpnEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConnectionLogOptions")
     public GETModifyClientVpnEndpointConnectionLogOptions connectionLogOptions;
+
     public GETModifyClientVpnEndpointRequest withConnectionLogOptions(GETModifyClientVpnEndpointConnectionLogOptions connectionLogOptions) {
         this.connectionLogOptions = connectionLogOptions;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyClientVpnEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Description")
     public String description;
+
     public GETModifyClientVpnEndpointRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -69,6 +76,7 @@ public class GETModifyClientVpnEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DnsServers")
     public GETModifyClientVpnEndpointDNSServers dnsServers;
+
     public GETModifyClientVpnEndpointRequest withDnsServers(GETModifyClientVpnEndpointDNSServers dnsServers) {
         this.dnsServers = dnsServers;
         return this;
@@ -79,6 +87,7 @@ public class GETModifyClientVpnEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyClientVpnEndpointRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -89,6 +98,7 @@ public class GETModifyClientVpnEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SecurityGroupId")
     public String[] securityGroupId;
+
     public GETModifyClientVpnEndpointRequest withSecurityGroupId(String[] securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
@@ -99,6 +109,7 @@ public class GETModifyClientVpnEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SelfServicePortal")
     public GETModifyClientVpnEndpointSelfServicePortalEnum selfServicePortal;
+
     public GETModifyClientVpnEndpointRequest withSelfServicePortal(GETModifyClientVpnEndpointSelfServicePortalEnum selfServicePortal) {
         this.selfServicePortal = selfServicePortal;
         return this;
@@ -109,6 +120,7 @@ public class GETModifyClientVpnEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServerCertificateArn")
     public String serverCertificateArn;
+
     public GETModifyClientVpnEndpointRequest withServerCertificateArn(String serverCertificateArn) {
         this.serverCertificateArn = serverCertificateArn;
         return this;
@@ -119,6 +131,7 @@ public class GETModifyClientVpnEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SessionTimeoutHours")
     public Long sessionTimeoutHours;
+
     public GETModifyClientVpnEndpointRequest withSessionTimeoutHours(Long sessionTimeoutHours) {
         this.sessionTimeoutHours = sessionTimeoutHours;
         return this;
@@ -129,6 +142,7 @@ public class GETModifyClientVpnEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SplitTunnel")
     public Boolean splitTunnel;
+
     public GETModifyClientVpnEndpointRequest withSplitTunnel(Boolean splitTunnel) {
         this.splitTunnel = splitTunnel;
         return this;
@@ -136,6 +150,7 @@ public class GETModifyClientVpnEndpointRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyClientVpnEndpointVersionEnum version;
+
     public GETModifyClientVpnEndpointRequest withVersion(GETModifyClientVpnEndpointVersionEnum version) {
         this.version = version;
         return this;
@@ -146,6 +161,7 @@ public class GETModifyClientVpnEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
     public String vpcId;
+
     public GETModifyClientVpnEndpointRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -156,6 +172,7 @@ public class GETModifyClientVpnEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpnPort")
     public Long vpnPort;
+
     public GETModifyClientVpnEndpointRequest withVpnPort(Long vpnPort) {
         this.vpnPort = vpnPort;
         return this;
@@ -163,6 +180,7 @@ public class GETModifyClientVpnEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyClientVpnEndpointRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -170,6 +188,7 @@ public class GETModifyClientVpnEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyClientVpnEndpointRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -177,6 +196,7 @@ public class GETModifyClientVpnEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyClientVpnEndpointRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -184,6 +204,7 @@ public class GETModifyClientVpnEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyClientVpnEndpointRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -191,6 +212,7 @@ public class GETModifyClientVpnEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyClientVpnEndpointRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -198,6 +220,7 @@ public class GETModifyClientVpnEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyClientVpnEndpointRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -205,9 +228,15 @@ public class GETModifyClientVpnEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyClientVpnEndpointRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyClientVpnEndpointRequest(@JsonProperty("Action") GETModifyClientVpnEndpointActionEnum action, @JsonProperty("ClientVpnEndpointId") String clientVpnEndpointId, @JsonProperty("Version") GETModifyClientVpnEndpointVersionEnum version) {
+        this.action = action;
+        this.clientVpnEndpointId = clientVpnEndpointId;
+        this.version = version;
+  }
 }

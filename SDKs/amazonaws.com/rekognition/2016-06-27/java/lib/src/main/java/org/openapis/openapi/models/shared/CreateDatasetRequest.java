@@ -12,6 +12,7 @@ public class CreateDatasetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetSource")
     public DatasetSource datasetSource;
+
     public CreateDatasetRequest withDatasetSource(DatasetSource datasetSource) {
         this.datasetSource = datasetSource;
         return this;
@@ -19,6 +20,7 @@ public class CreateDatasetRequest {
     
     @JsonProperty("DatasetType")
     public DatasetTypeEnum datasetType;
+
     public CreateDatasetRequest withDatasetType(DatasetTypeEnum datasetType) {
         this.datasetType = datasetType;
         return this;
@@ -26,9 +28,14 @@ public class CreateDatasetRequest {
     
     @JsonProperty("ProjectArn")
     public String projectArn;
+
     public CreateDatasetRequest withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
     }
     
+    public CreateDatasetRequest(@JsonProperty("DatasetType") DatasetTypeEnum datasetType, @JsonProperty("ProjectArn") String projectArn) {
+        this.datasetType = datasetType;
+        this.projectArn = projectArn;
+  }
 }

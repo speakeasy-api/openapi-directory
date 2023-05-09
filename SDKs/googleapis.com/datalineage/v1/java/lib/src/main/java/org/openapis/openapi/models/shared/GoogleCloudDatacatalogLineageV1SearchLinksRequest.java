@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogLineageV1SearchLinksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GoogleCloudDatacatalogLineageV1SearchLinksRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogLineageV1SearchLinksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GoogleCloudDatacatalogLineageV1SearchLinksRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogLineageV1SearchLinksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public GoogleCloudDatacatalogLineageV1EntityReference source;
+
     public GoogleCloudDatacatalogLineageV1SearchLinksRequest withSource(GoogleCloudDatacatalogLineageV1EntityReference source) {
         this.source = source;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDatacatalogLineageV1SearchLinksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public GoogleCloudDatacatalogLineageV1EntityReference target;
+
     public GoogleCloudDatacatalogLineageV1SearchLinksRequest withTarget(GoogleCloudDatacatalogLineageV1EntityReference target) {
         this.target = target;
         return this;
     }
     
+    public GoogleCloudDatacatalogLineageV1SearchLinksRequest(){}
 }

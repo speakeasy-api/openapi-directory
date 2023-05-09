@@ -16,99 +16,88 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateCampaignRequest;
+import org.openapis.openapi.models.operations.CreateCampaignRequestBody;
 import org.openapis.openapi.models.operations.CreateCampaignRequestBodyDialerConfig;
 import org.openapis.openapi.models.operations.CreateCampaignRequestBodyOutboundCallConfig;
-import org.openapis.openapi.models.operations.CreateCampaignRequestBody;
-import org.openapis.openapi.models.operations.CreateCampaignRequest;
 import org.openapis.openapi.models.operations.CreateCampaignResponse;
 import org.openapis.openapi.models.shared.AnswerMachineDetectionConfig;
-import org.openapis.openapi.models.shared.ProgressiveDialerConfig;
 import org.openapis.openapi.models.shared.PredictiveDialerConfig;
+import org.openapis.openapi.models.shared.ProgressiveDialerConfig;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateCampaignRequest req = new CreateCampaignRequest() {{
-                requestBody = new CreateCampaignRequestBody() {{
-                    connectInstanceId = "corrupti";
-                    dialerConfig = new CreateCampaignRequestBodyDialerConfig() {{
-                        predictiveDialerConfig = new PredictiveDialerConfig() {{
-                            bandwidthAllocation = 5928.45;
-                        }};
-                        progressiveDialerConfig = new ProgressiveDialerConfig() {{
-                            bandwidthAllocation = 7151.9;
-                        }};
-                    }};
-                    name = "quibusdam";
-                    outboundCallConfig = new CreateCampaignRequestBodyOutboundCallConfig() {{
-                        answerMachineDetectionConfig = new AnswerMachineDetectionConfig() {{
-                            enableAnswerMachineDetection = false;
-                        }};
-                        connectContactFlowId = "unde";
-                        connectQueueId = "nulla";
-                        connectSourcePhoneNumber = "corrupti";
-                    }};
-                    tags = new java.util.HashMap<String, String>() {{
-                        put("vel", "error");
-                        put("deserunt", "suscipit");
-                        put("iure", "magnam");
-                        put("debitis", "ipsa");
-                    }};
-                }};
-                xAmzAlgorithm = "delectus";
-                xAmzContentSha256 = "tempora";
-                xAmzCredential = "suscipit";
-                xAmzDate = "molestiae";
-                xAmzSecurityToken = "minus";
-                xAmzSignature = "placeat";
-                xAmzSignedHeaders = "voluptatum";
-            }}            
+            CreateCampaignRequest req = new CreateCampaignRequest(                new CreateCampaignRequestBody("provident",                 new CreateCampaignRequestBodyDialerConfig() {{
+                                                predictiveDialerConfig = new PredictiveDialerConfig(7151.9);;
+                                                progressiveDialerConfig = new ProgressiveDialerConfig(8442.66);;
+                                            }};, "unde",                 new CreateCampaignRequestBodyOutboundCallConfig() {{
+                                                answerMachineDetectionConfig = new AnswerMachineDetectionConfig(false);;
+                                                connectContactFlowId = "nulla";
+                                                connectQueueId = "corrupti";
+                                                connectSourcePhoneNumber = "illum";
+                                            }};) {{
+                                tags = new java.util.HashMap<String, String>() {{
+                                    put("error", "deserunt");
+                                    put("suscipit", "iure");
+                                }};
+                            }};) {{
+                xAmzAlgorithm = "magnam";
+                xAmzContentSha256 = "debitis";
+                xAmzCredential = "ipsa";
+                xAmzDate = "delectus";
+                xAmzSecurityToken = "tempora";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "molestiae";
+            }};            
 
             CreateCampaignResponse res = sdk.createCampaign(req);
 
-            if (res.createCampaignResponse.isPresent()) {
+            if (res.createCampaignResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createCampaign` - Creates a campaign for the specified Amazon Connect account. This API is idempotent.
-* `deleteCampaign` - Deletes a campaign from the specified Amazon Connect account.
-* `deleteConnectInstanceConfig` - Deletes a connect instance config from the specified AWS account.
-* `deleteInstanceOnboardingJob` - Delete the Connect Campaigns onboarding job for the specified Amazon Connect instance.
-* `describeCampaign` - Describes the specific campaign.
-* `getCampaignState` - Get state of a campaign for the specified Amazon Connect account.
-* `getCampaignStateBatch` - Get state of campaigns for the specified Amazon Connect account.
-* `getConnectInstanceConfig` - Get the specific Connect instance config.
-* `getInstanceOnboardingJobStatus` - Get the specific instance onboarding job status.
-* `listCampaigns` - Provides summary information about the campaigns under the specified Amazon Connect account.
-* `listTagsForResource` - List tags for a resource.
-* `pauseCampaign` - Pauses a campaign for the specified Amazon Connect account.
-* `putDialRequestBatch` - Creates dials requests for the specified campaign Amazon Connect account. This API is idempotent.
-* `resumeCampaign` - Stops a campaign for the specified Amazon Connect account.
-* `startCampaign` - Starts a campaign for the specified Amazon Connect account.
-* `startInstanceOnboardingJob` - Onboard the specific Amazon Connect instance to Connect Campaigns.
-* `stopCampaign` - Stops a campaign for the specified Amazon Connect account.
-* `tagResource` - Tag a resource.
-* `untagResource` - Untag a resource.
-* `updateCampaignDialerConfig` - Updates the dialer config of a campaign. This API is idempotent.
-* `updateCampaignName` - Updates the name of a campaign. This API is idempotent.
-* `updateCampaignOutboundCallConfig` - Updates the outbound call config of a campaign. This API is idempotent.
+* [createCampaign](docs/sdk/README.md#createcampaign) - Creates a campaign for the specified Amazon Connect account. This API is idempotent.
+* [deleteCampaign](docs/sdk/README.md#deletecampaign) - Deletes a campaign from the specified Amazon Connect account.
+* [deleteConnectInstanceConfig](docs/sdk/README.md#deleteconnectinstanceconfig) - Deletes a connect instance config from the specified AWS account.
+* [deleteInstanceOnboardingJob](docs/sdk/README.md#deleteinstanceonboardingjob) - Delete the Connect Campaigns onboarding job for the specified Amazon Connect instance.
+* [describeCampaign](docs/sdk/README.md#describecampaign) - Describes the specific campaign.
+* [getCampaignState](docs/sdk/README.md#getcampaignstate) - Get state of a campaign for the specified Amazon Connect account.
+* [getCampaignStateBatch](docs/sdk/README.md#getcampaignstatebatch) - Get state of campaigns for the specified Amazon Connect account.
+* [getConnectInstanceConfig](docs/sdk/README.md#getconnectinstanceconfig) - Get the specific Connect instance config.
+* [getInstanceOnboardingJobStatus](docs/sdk/README.md#getinstanceonboardingjobstatus) - Get the specific instance onboarding job status.
+* [listCampaigns](docs/sdk/README.md#listcampaigns) - Provides summary information about the campaigns under the specified Amazon Connect account.
+* [listTagsForResource](docs/sdk/README.md#listtagsforresource) - List tags for a resource.
+* [pauseCampaign](docs/sdk/README.md#pausecampaign) - Pauses a campaign for the specified Amazon Connect account.
+* [putDialRequestBatch](docs/sdk/README.md#putdialrequestbatch) - Creates dials requests for the specified campaign Amazon Connect account. This API is idempotent.
+* [resumeCampaign](docs/sdk/README.md#resumecampaign) - Stops a campaign for the specified Amazon Connect account.
+* [startCampaign](docs/sdk/README.md#startcampaign) - Starts a campaign for the specified Amazon Connect account.
+* [startInstanceOnboardingJob](docs/sdk/README.md#startinstanceonboardingjob) - Onboard the specific Amazon Connect instance to Connect Campaigns.
+* [stopCampaign](docs/sdk/README.md#stopcampaign) - Stops a campaign for the specified Amazon Connect account.
+* [tagResource](docs/sdk/README.md#tagresource) - Tag a resource.
+* [untagResource](docs/sdk/README.md#untagresource) - Untag a resource.
+* [updateCampaignDialerConfig](docs/sdk/README.md#updatecampaigndialerconfig) - Updates the dialer config of a campaign. This API is idempotent.
+* [updateCampaignName](docs/sdk/README.md#updatecampaignname) - Updates the name of a campaign. This API is idempotent.
+* [updateCampaignOutboundCallConfig](docs/sdk/README.md#updatecampaignoutboundcallconfig) - Updates the outbound call config of a campaign. This API is idempotent.
 <!-- End SDK Available Operations -->
 
 ### Maturity

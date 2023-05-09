@@ -12,6 +12,7 @@ public class GetLegalSearchDefaultApplicationJSONStatutes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chapter")
     public String chapter;
+
     public GetLegalSearchDefaultApplicationJSONStatutes withChapter(String chapter) {
         this.chapter = chapter;
         return this;
@@ -20,6 +21,7 @@ public class GetLegalSearchDefaultApplicationJSONStatutes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doc_id")
     public String docId;
+
     public GetLegalSearchDefaultApplicationJSONStatutes withDocId(String docId) {
         this.docId = docId;
         return this;
@@ -28,6 +30,7 @@ public class GetLegalSearchDefaultApplicationJSONStatutes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_highlights")
     public java.util.Map<String, Object> documentHighlights;
+
     public GetLegalSearchDefaultApplicationJSONStatutes withDocumentHighlights(java.util.Map<String, Object> documentHighlights) {
         this.documentHighlights = documentHighlights;
         return this;
@@ -36,6 +39,7 @@ public class GetLegalSearchDefaultApplicationJSONStatutes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highlights")
     public String[] highlights;
+
     public GetLegalSearchDefaultApplicationJSONStatutes withHighlights(String[] highlights) {
         this.highlights = highlights;
         return this;
@@ -44,6 +48,7 @@ public class GetLegalSearchDefaultApplicationJSONStatutes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetLegalSearchDefaultApplicationJSONStatutes withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class GetLegalSearchDefaultApplicationJSONStatutes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("no")
     public String no;
+
     public GetLegalSearchDefaultApplicationJSONStatutes withNo(String no) {
         this.no = no;
         return this;
@@ -60,6 +66,7 @@ public class GetLegalSearchDefaultApplicationJSONStatutes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GetLegalSearchDefaultApplicationJSONStatutes withTitle(String title) {
         this.title = title;
         return this;
@@ -68,9 +75,11 @@ public class GetLegalSearchDefaultApplicationJSONStatutes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GetLegalSearchDefaultApplicationJSONStatutes withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSONStatutes(){}
 }

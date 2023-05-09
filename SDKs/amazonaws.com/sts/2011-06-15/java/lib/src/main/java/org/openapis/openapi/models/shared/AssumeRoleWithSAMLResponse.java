@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssumeRoleWithSAMLResponse {
     
     public AssumedRoleUser assumedRoleUser;
+
     public AssumeRoleWithSAMLResponse withAssumedRoleUser(AssumedRoleUser assumedRoleUser) {
         this.assumedRoleUser = assumedRoleUser;
         return this;
@@ -19,6 +20,7 @@ public class AssumeRoleWithSAMLResponse {
     
     
     public String audience;
+
     public AssumeRoleWithSAMLResponse withAudience(String audience) {
         this.audience = audience;
         return this;
@@ -26,6 +28,7 @@ public class AssumeRoleWithSAMLResponse {
     
     
     public Credentials credentials;
+
     public AssumeRoleWithSAMLResponse withCredentials(Credentials credentials) {
         this.credentials = credentials;
         return this;
@@ -33,6 +36,7 @@ public class AssumeRoleWithSAMLResponse {
     
     
     public String issuer;
+
     public AssumeRoleWithSAMLResponse withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -40,6 +44,7 @@ public class AssumeRoleWithSAMLResponse {
     
     
     public String nameQualifier;
+
     public AssumeRoleWithSAMLResponse withNameQualifier(String nameQualifier) {
         this.nameQualifier = nameQualifier;
         return this;
@@ -47,6 +52,7 @@ public class AssumeRoleWithSAMLResponse {
     
     
     public Long packedPolicySize;
+
     public AssumeRoleWithSAMLResponse withPackedPolicySize(Long packedPolicySize) {
         this.packedPolicySize = packedPolicySize;
         return this;
@@ -54,6 +60,7 @@ public class AssumeRoleWithSAMLResponse {
     
     
     public String sourceIdentity;
+
     public AssumeRoleWithSAMLResponse withSourceIdentity(String sourceIdentity) {
         this.sourceIdentity = sourceIdentity;
         return this;
@@ -61,6 +68,7 @@ public class AssumeRoleWithSAMLResponse {
     
     
     public String subject;
+
     public AssumeRoleWithSAMLResponse withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -68,9 +76,11 @@ public class AssumeRoleWithSAMLResponse {
     
     
     public String subjectType;
+
     public AssumeRoleWithSAMLResponse withSubjectType(String subjectType) {
         this.subjectType = subjectType;
         return this;
     }
     
+    public AssumeRoleWithSAMLResponse(){}
 }

@@ -15,6 +15,7 @@ public class EventRiskType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompromisedCredentialsDetected")
     public Boolean compromisedCredentialsDetected;
+
     public EventRiskType withCompromisedCredentialsDetected(Boolean compromisedCredentialsDetected) {
         this.compromisedCredentialsDetected = compromisedCredentialsDetected;
         return this;
@@ -23,6 +24,7 @@ public class EventRiskType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RiskDecision")
     public RiskDecisionTypeEnum riskDecision;
+
     public EventRiskType withRiskDecision(RiskDecisionTypeEnum riskDecision) {
         this.riskDecision = riskDecision;
         return this;
@@ -31,9 +33,11 @@ public class EventRiskType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RiskLevel")
     public RiskLevelTypeEnum riskLevel;
+
     public EventRiskType withRiskLevel(RiskLevelTypeEnum riskLevel) {
         this.riskLevel = riskLevel;
         return this;
     }
     
+    public EventRiskType(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePortfolioShareResponse {
     
     public String contentType;
+
     public UpdatePortfolioShareResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePortfolioShareResponse {
      */
     
     public Object invalidParametersException;
+
     public UpdatePortfolioShareResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePortfolioShareResponse {
      */
     
     public Object invalidStateException;
+
     public UpdatePortfolioShareResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -39,6 +43,7 @@ public class UpdatePortfolioShareResponse {
      */
     
     public Object operationNotSupportedException;
+
     public UpdatePortfolioShareResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -46,6 +51,7 @@ public class UpdatePortfolioShareResponse {
     
     
     public Integer statusCode;
+
     public UpdatePortfolioShareResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdatePortfolioShareResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePortfolioShareResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdatePortfolioShareResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdatePortfolioShareResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class UpdatePortfolioShareResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatePortfolioShareOutput updatePortfolioShareOutput;
+
     public UpdatePortfolioShareResponse withUpdatePortfolioShareOutput(org.openapis.openapi.models.shared.UpdatePortfolioShareOutput updatePortfolioShareOutput) {
         this.updatePortfolioShareOutput = updatePortfolioShareOutput;
         return this;
     }
     
+    public UpdatePortfolioShareResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

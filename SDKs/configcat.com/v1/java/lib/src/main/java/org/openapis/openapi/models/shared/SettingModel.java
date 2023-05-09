@@ -15,6 +15,7 @@ public class SettingModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configId")
     public String configId;
+
     public SettingModel withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -23,6 +24,7 @@ public class SettingModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configName")
     public String configName;
+
     public SettingModel withConfigName(String configName) {
         this.configName = configName;
         return this;
@@ -31,6 +33,7 @@ public class SettingModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hint")
     public String hint;
+
     public SettingModel withHint(String hint) {
         this.hint = hint;
         return this;
@@ -39,6 +42,7 @@ public class SettingModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public SettingModel withKey(String key) {
         this.key = key;
         return this;
@@ -47,6 +51,7 @@ public class SettingModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SettingModel withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class SettingModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public SettingModel withOrder(Integer order) {
         this.order = order;
         return this;
@@ -63,6 +69,7 @@ public class SettingModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settingId")
     public Integer settingId;
+
     public SettingModel withSettingId(Integer settingId) {
         this.settingId = settingId;
         return this;
@@ -71,6 +78,7 @@ public class SettingModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settingType")
     public SettingTypeEnum settingType;
+
     public SettingModel withSettingType(SettingTypeEnum settingType) {
         this.settingType = settingType;
         return this;
@@ -79,9 +87,11 @@ public class SettingModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public TagModel[] tags;
+
     public SettingModel withTags(TagModel[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public SettingModel(){}
 }

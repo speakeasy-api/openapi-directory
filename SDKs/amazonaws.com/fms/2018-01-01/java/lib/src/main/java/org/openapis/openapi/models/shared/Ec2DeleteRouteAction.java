@@ -15,6 +15,7 @@ public class Ec2DeleteRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Ec2DeleteRouteAction withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class Ec2DeleteRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationCidrBlock")
     public String destinationCidrBlock;
+
     public Ec2DeleteRouteAction withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -31,6 +33,7 @@ public class Ec2DeleteRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationIpv6CidrBlock")
     public String destinationIpv6CidrBlock;
+
     public Ec2DeleteRouteAction withDestinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
         this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
         return this;
@@ -39,6 +42,7 @@ public class Ec2DeleteRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationPrefixListId")
     public String destinationPrefixListId;
+
     public Ec2DeleteRouteAction withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -46,9 +50,13 @@ public class Ec2DeleteRouteAction {
     
     @JsonProperty("RouteTableId")
     public ActionTarget routeTableId;
+
     public Ec2DeleteRouteAction withRouteTableId(ActionTarget routeTableId) {
         this.routeTableId = routeTableId;
         return this;
     }
     
+    public Ec2DeleteRouteAction(@JsonProperty("RouteTableId") ActionTarget routeTableId) {
+        this.routeTableId = routeTableId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSupportedResourceTypesResponse {
@@ -12,6 +13,7 @@ public class ListSupportedResourceTypesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSupportedResourceTypesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListSupportedResourceTypesResponse {
     
     
     public String contentType;
+
     public ListSupportedResourceTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSupportedResourceTypesResponse {
      */
     
     public Object internalServerException;
+
     public ListSupportedResourceTypesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListSupportedResourceTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSupportedResourceTypesOutput listSupportedResourceTypesOutput;
+
     public ListSupportedResourceTypesResponse withListSupportedResourceTypesOutput(org.openapis.openapi.models.shared.ListSupportedResourceTypesOutput listSupportedResourceTypesOutput) {
         this.listSupportedResourceTypesOutput = listSupportedResourceTypesOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListSupportedResourceTypesResponse {
     
     
     public Integer statusCode;
+
     public ListSupportedResourceTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListSupportedResourceTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSupportedResourceTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListSupportedResourceTypesResponse {
      */
     
     public Object throttlingException;
+
     public ListSupportedResourceTypesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListSupportedResourceTypesResponse {
      */
     
     public Object validationException;
+
     public ListSupportedResourceTypesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSupportedResourceTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

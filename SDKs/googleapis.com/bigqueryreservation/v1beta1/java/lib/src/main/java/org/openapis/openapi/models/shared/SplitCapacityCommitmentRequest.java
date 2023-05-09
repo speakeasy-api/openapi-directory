@@ -18,9 +18,11 @@ public class SplitCapacityCommitmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotCount")
     public String slotCount;
+
     public SplitCapacityCommitmentRequest withSlotCount(String slotCount) {
         this.slotCount = slotCount;
         return this;
     }
     
+    public SplitCapacityCommitmentRequest(){}
 }

@@ -18,6 +18,7 @@ public class EffectiveIamPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullResourceName")
     public String fullResourceName;
+
     public EffectiveIamPolicy withFullResourceName(String fullResourceName) {
         this.fullResourceName = fullResourceName;
         return this;
@@ -29,9 +30,11 @@ public class EffectiveIamPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policies")
     public PolicyInfo[] policies;
+
     public EffectiveIamPolicy withPolicies(PolicyInfo[] policies) {
         this.policies = policies;
         return this;
     }
     
+    public EffectiveIamPolicy(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse {
     
     public String contentType;
+
     public DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomBiddingScriptRef customBiddingScriptRef;
+
     public DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse withCustomBiddingScriptRef(org.openapis.openapi.models.shared.CustomBiddingScriptRef customBiddingScriptRef) {
         this.customBiddingScriptRef = customBiddingScriptRef;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse {
     
     
     public Integer statusCode;
+
     public DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

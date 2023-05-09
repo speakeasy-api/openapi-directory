@@ -20,6 +20,7 @@ public class PatchComplianceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CVEIds")
     public String cveIds;
+
     public PatchComplianceData withCVEIds(String cveIds) {
         this.cveIds = cveIds;
         return this;
@@ -27,6 +28,7 @@ public class PatchComplianceData {
     
     @JsonProperty("Classification")
     public String classification;
+
     public PatchComplianceData withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -36,6 +38,7 @@ public class PatchComplianceData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("InstalledTime")
     public OffsetDateTime installedTime;
+
     public PatchComplianceData withInstalledTime(OffsetDateTime installedTime) {
         this.installedTime = installedTime;
         return this;
@@ -43,6 +46,7 @@ public class PatchComplianceData {
     
     @JsonProperty("KBId")
     public String kbId;
+
     public PatchComplianceData withKBId(String kbId) {
         this.kbId = kbId;
         return this;
@@ -50,6 +54,7 @@ public class PatchComplianceData {
     
     @JsonProperty("Severity")
     public String severity;
+
     public PatchComplianceData withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -57,6 +62,7 @@ public class PatchComplianceData {
     
     @JsonProperty("State")
     public PatchComplianceDataStateEnum state;
+
     public PatchComplianceData withState(PatchComplianceDataStateEnum state) {
         this.state = state;
         return this;
@@ -64,9 +70,18 @@ public class PatchComplianceData {
     
     @JsonProperty("Title")
     public String title;
+
     public PatchComplianceData withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PatchComplianceData(@JsonProperty("Classification") String classification, @JsonProperty("InstalledTime") OffsetDateTime installedTime, @JsonProperty("KBId") String kbId, @JsonProperty("Severity") String severity, @JsonProperty("State") PatchComplianceDataStateEnum state, @JsonProperty("Title") String title) {
+        this.classification = classification;
+        this.installedTime = installedTime;
+        this.kbId = kbId;
+        this.severity = severity;
+        this.state = state;
+        this.title = title;
+  }
 }

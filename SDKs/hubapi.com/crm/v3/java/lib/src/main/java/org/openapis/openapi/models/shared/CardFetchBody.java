@@ -15,6 +15,7 @@ public class CardFetchBody {
      */
     @JsonProperty("objectTypes")
     public CardObjectTypeBody[] objectTypes;
+
     public CardFetchBody withObjectTypes(CardObjectTypeBody[] objectTypes) {
         this.objectTypes = objectTypes;
         return this;
@@ -25,9 +26,14 @@ public class CardFetchBody {
      */
     @JsonProperty("targetUrl")
     public String targetUrl;
+
     public CardFetchBody withTargetUrl(String targetUrl) {
         this.targetUrl = targetUrl;
         return this;
     }
     
+    public CardFetchBody(@JsonProperty("objectTypes") CardObjectTypeBody[] objectTypes, @JsonProperty("targetUrl") String targetUrl) {
+        this.objectTypes = objectTypes;
+        this.targetUrl = targetUrl;
+  }
 }

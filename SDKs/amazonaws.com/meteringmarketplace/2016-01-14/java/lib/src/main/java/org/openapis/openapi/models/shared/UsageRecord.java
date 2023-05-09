@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class UsageRecord {
     @JsonProperty("CustomerIdentifier")
     public String customerIdentifier;
+
     public UsageRecord withCustomerIdentifier(String customerIdentifier) {
         this.customerIdentifier = customerIdentifier;
         return this;
@@ -26,6 +27,7 @@ public class UsageRecord {
     
     @JsonProperty("Dimension")
     public String dimension;
+
     public UsageRecord withDimension(String dimension) {
         this.dimension = dimension;
         return this;
@@ -34,6 +36,7 @@ public class UsageRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quantity")
     public Long quantity;
+
     public UsageRecord withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -43,6 +46,7 @@ public class UsageRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public UsageRecord withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -51,9 +55,15 @@ public class UsageRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageAllocations")
     public UsageAllocation[] usageAllocations;
+
     public UsageRecord withUsageAllocations(UsageAllocation[] usageAllocations) {
         this.usageAllocations = usageAllocations;
         return this;
     }
     
+    public UsageRecord(@JsonProperty("CustomerIdentifier") String customerIdentifier, @JsonProperty("Dimension") String dimension, @JsonProperty("Timestamp") OffsetDateTime timestamp) {
+        this.customerIdentifier = customerIdentifier;
+        this.dimension = dimension;
+        this.timestamp = timestamp;
+  }
 }

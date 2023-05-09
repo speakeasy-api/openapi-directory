@@ -18,6 +18,7 @@ public class ScopedPlayerIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerPlayerKey")
     public String developerPlayerKey;
+
     public ScopedPlayerIds withDeveloperPlayerKey(String developerPlayerKey) {
         this.developerPlayerKey = developerPlayerKey;
         return this;
@@ -29,9 +30,11 @@ public class ScopedPlayerIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gamePlayerId")
     public String gamePlayerId;
+
     public ScopedPlayerIds withGamePlayerId(String gamePlayerId) {
         this.gamePlayerId = gamePlayerId;
         return this;
     }
     
+    public ScopedPlayerIds(){}
 }

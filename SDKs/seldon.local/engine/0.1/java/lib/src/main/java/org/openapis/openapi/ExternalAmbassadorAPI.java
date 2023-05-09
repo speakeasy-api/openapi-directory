@@ -50,11 +50,9 @@ public class ExternalAmbassadorAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PredictJsonResponse res = new org.openapis.openapi.models.operations.PredictJsonResponse() {{
+        org.openapis.openapi.models.operations.PredictJsonResponse res = new org.openapis.openapi.models.operations.PredictJsonResponse(contentType, httpRes.statusCode()) {{
             seldonMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -88,11 +86,9 @@ public class ExternalAmbassadorAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PredictRawResponse res = new org.openapis.openapi.models.operations.PredictRawResponse() {{
+        org.openapis.openapi.models.operations.PredictRawResponse res = new org.openapis.openapi.models.operations.PredictRawResponse(contentType, httpRes.statusCode()) {{
             seldonMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -126,11 +122,9 @@ public class ExternalAmbassadorAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PredictStringResponse res = new org.openapis.openapi.models.operations.PredictStringResponse() {{
+        org.openapis.openapi.models.operations.PredictStringResponse res = new org.openapis.openapi.models.operations.PredictStringResponse(contentType, httpRes.statusCode()) {{
             seldonMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -164,11 +158,9 @@ public class ExternalAmbassadorAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendFeedbackResponse res = new org.openapis.openapi.models.operations.SendFeedbackResponse() {{
+        org.openapis.openapi.models.operations.SendFeedbackResponse res = new org.openapis.openapi.models.operations.SendFeedbackResponse(contentType, httpRes.statusCode()) {{
             seldonMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

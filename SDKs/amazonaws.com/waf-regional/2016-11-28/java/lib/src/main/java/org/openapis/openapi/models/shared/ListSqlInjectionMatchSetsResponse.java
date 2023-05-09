@@ -15,6 +15,7 @@ public class ListSqlInjectionMatchSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListSqlInjectionMatchSetsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -23,9 +24,11 @@ public class ListSqlInjectionMatchSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqlInjectionMatchSets")
     public SqlInjectionMatchSetSummary[] sqlInjectionMatchSets;
+
     public ListSqlInjectionMatchSetsResponse withSqlInjectionMatchSets(SqlInjectionMatchSetSummary[] sqlInjectionMatchSets) {
         this.sqlInjectionMatchSets = sqlInjectionMatchSets;
         return this;
     }
     
+    public ListSqlInjectionMatchSetsResponse(){}
 }

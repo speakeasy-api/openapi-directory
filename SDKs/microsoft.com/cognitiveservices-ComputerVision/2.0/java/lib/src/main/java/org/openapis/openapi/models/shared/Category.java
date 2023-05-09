@@ -18,6 +18,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public CategoryDetail detail;
+
     public Category withDetail(CategoryDetail detail) {
         this.detail = detail;
         return this;
@@ -29,6 +30,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Category withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public Category withScore(Double score) {
         this.score = score;
         return this;
     }
     
+    public Category(){}
 }

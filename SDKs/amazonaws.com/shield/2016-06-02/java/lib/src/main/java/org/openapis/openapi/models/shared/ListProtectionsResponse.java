@@ -15,6 +15,7 @@ public class ListProtectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListProtectionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListProtectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protections")
     public Protection[] protections;
+
     public ListProtectionsResponse withProtections(Protection[] protections) {
         this.protections = protections;
         return this;
     }
     
+    public ListProtectionsResponse(){}
 }

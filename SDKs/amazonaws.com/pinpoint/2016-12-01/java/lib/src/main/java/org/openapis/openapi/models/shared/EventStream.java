@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EventStream {
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public EventStream withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -21,6 +22,7 @@ public class EventStream {
     
     @JsonProperty("DestinationStreamArn")
     public String destinationStreamArn;
+
     public EventStream withDestinationStreamArn(String destinationStreamArn) {
         this.destinationStreamArn = destinationStreamArn;
         return this;
@@ -29,6 +31,7 @@ public class EventStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalId")
     public String externalId;
+
     public EventStream withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -37,6 +40,7 @@ public class EventStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public EventStream withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -45,6 +49,7 @@ public class EventStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdatedBy")
     public String lastUpdatedBy;
+
     public EventStream withLastUpdatedBy(String lastUpdatedBy) {
         this.lastUpdatedBy = lastUpdatedBy;
         return this;
@@ -52,9 +57,15 @@ public class EventStream {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public EventStream withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public EventStream(@JsonProperty("ApplicationId") String applicationId, @JsonProperty("DestinationStreamArn") String destinationStreamArn, @JsonProperty("RoleArn") String roleArn) {
+        this.applicationId = applicationId;
+        this.destinationStreamArn = destinationStreamArn;
+        this.roleArn = roleArn;
+  }
 }

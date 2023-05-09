@@ -15,6 +15,7 @@ public class ErrorStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OtherCount")
     public Long otherCount;
+
     public ErrorStatistics withOtherCount(Long otherCount) {
         this.otherCount = otherCount;
         return this;
@@ -23,6 +24,7 @@ public class ErrorStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThrottleCount")
     public Long throttleCount;
+
     public ErrorStatistics withThrottleCount(Long throttleCount) {
         this.throttleCount = throttleCount;
         return this;
@@ -31,9 +33,11 @@ public class ErrorStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCount")
     public Long totalCount;
+
     public ErrorStatistics withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public ErrorStatistics(){}
 }

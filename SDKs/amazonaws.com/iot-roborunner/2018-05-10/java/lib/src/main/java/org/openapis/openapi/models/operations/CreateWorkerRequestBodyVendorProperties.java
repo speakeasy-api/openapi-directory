@@ -18,6 +18,7 @@ public class CreateWorkerRequestBodyVendorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorAdditionalFixedProperties")
     public String vendorAdditionalFixedProperties;
+
     public CreateWorkerRequestBodyVendorProperties withVendorAdditionalFixedProperties(String vendorAdditionalFixedProperties) {
         this.vendorAdditionalFixedProperties = vendorAdditionalFixedProperties;
         return this;
@@ -29,6 +30,7 @@ public class CreateWorkerRequestBodyVendorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorAdditionalTransientProperties")
     public String vendorAdditionalTransientProperties;
+
     public CreateWorkerRequestBodyVendorProperties withVendorAdditionalTransientProperties(String vendorAdditionalTransientProperties) {
         this.vendorAdditionalTransientProperties = vendorAdditionalTransientProperties;
         return this;
@@ -40,6 +42,7 @@ public class CreateWorkerRequestBodyVendorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorWorkerId")
     public String vendorWorkerId;
+
     public CreateWorkerRequestBodyVendorProperties withVendorWorkerId(String vendorWorkerId) {
         this.vendorWorkerId = vendorWorkerId;
         return this;
@@ -51,9 +54,11 @@ public class CreateWorkerRequestBodyVendorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorWorkerIpAddress")
     public String vendorWorkerIpAddress;
+
     public CreateWorkerRequestBodyVendorProperties withVendorWorkerIpAddress(String vendorWorkerIpAddress) {
         this.vendorWorkerIpAddress = vendorWorkerIpAddress;
         return this;
     }
     
+    public CreateWorkerRequestBodyVendorProperties(){}
 }

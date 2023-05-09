@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1EnvironmentEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notebooks")
     public String notebooks;
+
     public GoogleCloudDataplexV1EnvironmentEndpoints withNotebooks(String notebooks) {
         this.notebooks = notebooks;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1EnvironmentEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sql")
     public String sql;
+
     public GoogleCloudDataplexV1EnvironmentEndpoints withSql(String sql) {
         this.sql = sql;
         return this;
     }
     
+    public GoogleCloudDataplexV1EnvironmentEndpoints(){}
 }

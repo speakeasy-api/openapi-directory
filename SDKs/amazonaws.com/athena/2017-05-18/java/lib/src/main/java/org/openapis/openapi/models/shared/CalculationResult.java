@@ -15,6 +15,7 @@ public class CalculationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultS3Uri")
     public String resultS3Uri;
+
     public CalculationResult withResultS3Uri(String resultS3Uri) {
         this.resultS3Uri = resultS3Uri;
         return this;
@@ -23,6 +24,7 @@ public class CalculationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultType")
     public String resultType;
+
     public CalculationResult withResultType(String resultType) {
         this.resultType = resultType;
         return this;
@@ -31,6 +33,7 @@ public class CalculationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StdErrorS3Uri")
     public String stdErrorS3Uri;
+
     public CalculationResult withStdErrorS3Uri(String stdErrorS3Uri) {
         this.stdErrorS3Uri = stdErrorS3Uri;
         return this;
@@ -39,9 +42,11 @@ public class CalculationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StdOutS3Uri")
     public String stdOutS3Uri;
+
     public CalculationResult withStdOutS3Uri(String stdOutS3Uri) {
         this.stdOutS3Uri = stdOutS3Uri;
         return this;
     }
     
+    public CalculationResult(){}
 }

@@ -15,9 +15,11 @@ public class MultipleValuesSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowMultipleValues")
     public Boolean allowMultipleValues;
+
     public MultipleValuesSetting withAllowMultipleValues(Boolean allowMultipleValues) {
         this.allowMultipleValues = allowMultipleValues;
         return this;
     }
     
+    public MultipleValuesSetting(){}
 }

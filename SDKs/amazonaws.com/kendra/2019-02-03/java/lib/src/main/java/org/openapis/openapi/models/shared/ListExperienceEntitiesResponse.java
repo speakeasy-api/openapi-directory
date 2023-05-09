@@ -15,6 +15,7 @@ public class ListExperienceEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListExperienceEntitiesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListExperienceEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SummaryItems")
     public ExperienceEntitiesSummary[] summaryItems;
+
     public ListExperienceEntitiesResponse withSummaryItems(ExperienceEntitiesSummary[] summaryItems) {
         this.summaryItems = summaryItems;
         return this;
     }
     
+    public ListExperienceEntitiesResponse(){}
 }

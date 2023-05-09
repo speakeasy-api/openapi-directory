@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEcRequest {
@@ -17,6 +18,7 @@ public class GetEcRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
     public String outputFormat;
+
     public GetEcRequest withOutputFormat(String outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -34,6 +36,7 @@ public class GetEcRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
     public String password;
+
     public GetEcRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -51,6 +54,7 @@ public class GetEcRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=penalty")
     public Double penalty;
+
     public GetEcRequest withPenalty(Double penalty) {
         this.penalty = penalty;
         return this;
@@ -68,9 +72,13 @@ public class GetEcRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reqId")
     public String reqId;
+
     public GetEcRequest withReqId(String reqId) {
         this.reqId = reqId;
         return this;
     }
     
+    public GetEcRequest(@JsonProperty("password") String password) {
+        this.password = password;
+  }
 }

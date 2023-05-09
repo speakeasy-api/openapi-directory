@@ -16,6 +16,7 @@ public class KeyObject {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiry")
     public OffsetDateTime expiry;
+
     public KeyObject withExpiry(OffsetDateTime expiry) {
         this.expiry = expiry;
         return this;
@@ -23,6 +24,7 @@ public class KeyObject {
     
     @JsonProperty("keyValue")
     public String keyValue;
+
     public KeyObject withKeyValue(String keyValue) {
         this.keyValue = keyValue;
         return this;
@@ -30,9 +32,15 @@ public class KeyObject {
     
     @JsonProperty("parameters")
     public String parameters;
+
     public KeyObject withParameters(String parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public KeyObject(@JsonProperty("expiry") OffsetDateTime expiry, @JsonProperty("keyValue") String keyValue, @JsonProperty("parameters") String parameters) {
+        this.expiry = expiry;
+        this.keyValue = keyValue;
+        this.parameters = parameters;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createField")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateFieldResponse createField;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse withCreateField(GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateFieldResponse createField) {
         this.createField = createField;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createSelectionChoice")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateSelectionChoiceResponse createSelectionChoice;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse withCreateSelectionChoice(GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateSelectionChoiceResponse createSelectionChoice) {
         this.createSelectionChoice = createSelectionChoice;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteField")
     public java.util.Map<String, Object> deleteField;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse withDeleteField(java.util.Map<String, Object> deleteField) {
         this.deleteField = deleteField;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteSelectionChoice")
     public java.util.Map<String, Object> deleteSelectionChoice;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse withDeleteSelectionChoice(java.util.Map<String, Object> deleteSelectionChoice) {
         this.deleteSelectionChoice = deleteSelectionChoice;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableField")
     public java.util.Map<String, Object> disableField;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse withDisableField(java.util.Map<String, Object> disableField) {
         this.disableField = disableField;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableSelectionChoice")
     public java.util.Map<String, Object> disableSelectionChoice;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse withDisableSelectionChoice(java.util.Map<String, Object> disableSelectionChoice) {
         this.disableSelectionChoice = disableSelectionChoice;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableField")
     public java.util.Map<String, Object> enableField;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse withEnableField(java.util.Map<String, Object> enableField) {
         this.enableField = enableField;
         return this;
@@ -95,6 +102,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSelectionChoice")
     public java.util.Map<String, Object> enableSelectionChoice;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse withEnableSelectionChoice(java.util.Map<String, Object> enableSelectionChoice) {
         this.enableSelectionChoice = enableSelectionChoice;
         return this;
@@ -106,6 +114,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateField")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateFieldPropertiesResponse updateField;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse withUpdateField(GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateFieldPropertiesResponse updateField) {
         this.updateField = updateField;
         return this;
@@ -117,6 +126,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateFieldType")
     public java.util.Map<String, Object> updateFieldType;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse withUpdateFieldType(java.util.Map<String, Object> updateFieldType) {
         this.updateFieldType = updateFieldType;
         return this;
@@ -128,6 +138,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateLabel")
     public java.util.Map<String, Object> updateLabel;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse withUpdateLabel(java.util.Map<String, Object> updateLabel) {
         this.updateLabel = updateLabel;
         return this;
@@ -139,9 +150,11 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateSelectionChoiceProperties")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateSelectionChoicePropertiesResponse updateSelectionChoiceProperties;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse withUpdateSelectionChoiceProperties(GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateSelectionChoicePropertiesResponse updateSelectionChoiceProperties) {
         this.updateSelectionChoiceProperties = updateSelectionChoiceProperties;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse(){}
 }

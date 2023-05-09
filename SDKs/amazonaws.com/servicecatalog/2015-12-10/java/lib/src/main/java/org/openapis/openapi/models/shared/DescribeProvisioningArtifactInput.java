@@ -12,6 +12,7 @@ public class DescribeProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DescribeProvisioningArtifactInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class DescribeProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductId")
     public String productId;
+
     public DescribeProvisioningArtifactInput withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -28,6 +30,7 @@ public class DescribeProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductName")
     public String productName;
+
     public DescribeProvisioningArtifactInput withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -36,6 +39,7 @@ public class DescribeProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public DescribeProvisioningArtifactInput withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
@@ -44,6 +48,7 @@ public class DescribeProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactName")
     public String provisioningArtifactName;
+
     public DescribeProvisioningArtifactInput withProvisioningArtifactName(String provisioningArtifactName) {
         this.provisioningArtifactName = provisioningArtifactName;
         return this;
@@ -52,9 +57,11 @@ public class DescribeProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Verbose")
     public Boolean verbose;
+
     public DescribeProvisioningArtifactInput withVerbose(Boolean verbose) {
         this.verbose = verbose;
         return this;
     }
     
+    public DescribeProvisioningArtifactInput(){}
 }

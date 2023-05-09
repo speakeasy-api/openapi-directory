@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetComputeAccessResponse {
     
     public String contentType;
+
     public GetComputeAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetComputeAccessResponse {
      */
     
     public org.openapis.openapi.models.shared.GetComputeAccessOutput getComputeAccessOutput;
+
     public GetComputeAccessResponse withGetComputeAccessOutput(org.openapis.openapi.models.shared.GetComputeAccessOutput getComputeAccessOutput) {
         this.getComputeAccessOutput = getComputeAccessOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetComputeAccessResponse {
      */
     
     public Object internalServiceException;
+
     public GetComputeAccessResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class GetComputeAccessResponse {
      */
     
     public Object invalidRequestException;
+
     public GetComputeAccessResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetComputeAccessResponse {
      */
     
     public Object notFoundException;
+
     public GetComputeAccessResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetComputeAccessResponse {
     
     
     public Integer statusCode;
+
     public GetComputeAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetComputeAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetComputeAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetComputeAccessResponse {
      */
     
     public Object unauthorizedException;
+
     public GetComputeAccessResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetComputeAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

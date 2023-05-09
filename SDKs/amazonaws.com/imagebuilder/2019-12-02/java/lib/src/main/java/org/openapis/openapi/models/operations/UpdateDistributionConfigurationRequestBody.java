@@ -14,6 +14,7 @@ public class UpdateDistributionConfigurationRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateDistributionConfigurationRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class UpdateDistributionConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateDistributionConfigurationRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class UpdateDistributionConfigurationRequestBody {
      */
     @JsonProperty("distributionConfigurationArn")
     public String distributionConfigurationArn;
+
     public UpdateDistributionConfigurationRequestBody withDistributionConfigurationArn(String distributionConfigurationArn) {
         this.distributionConfigurationArn = distributionConfigurationArn;
         return this;
@@ -45,9 +48,15 @@ public class UpdateDistributionConfigurationRequestBody {
      */
     @JsonProperty("distributions")
     public org.openapis.openapi.models.shared.Distribution[] distributions;
+
     public UpdateDistributionConfigurationRequestBody withDistributions(org.openapis.openapi.models.shared.Distribution[] distributions) {
         this.distributions = distributions;
         return this;
     }
     
+    public UpdateDistributionConfigurationRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("distributionConfigurationArn") String distributionConfigurationArn, @JsonProperty("distributions") org.openapis.openapi.models.shared.Distribution[] distributions) {
+        this.clientToken = clientToken;
+        this.distributionConfigurationArn = distributionConfigurationArn;
+        this.distributions = distributions;
+  }
 }

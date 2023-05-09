@@ -18,6 +18,7 @@ public class FieldMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public SourceInput source;
+
     public FieldMetadataInput withSource(SourceInput source) {
         this.source = source;
         return this;
@@ -29,9 +30,11 @@ public class FieldMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourcePrimary")
     public Boolean sourcePrimary;
+
     public FieldMetadataInput withSourcePrimary(Boolean sourcePrimary) {
         this.sourcePrimary = sourcePrimary;
         return this;
     }
     
+    public FieldMetadataInput(){}
 }

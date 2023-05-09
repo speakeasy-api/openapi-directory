@@ -20,6 +20,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlgorithmSpecification")
     public AlgorithmSpecification algorithmSpecification;
+
     public TrainingJob withAlgorithmSpecification(AlgorithmSpecification algorithmSpecification) {
         this.algorithmSpecification = algorithmSpecification;
         return this;
@@ -28,6 +29,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLJobArn")
     public String autoMLJobArn;
+
     public TrainingJob withAutoMLJobArn(String autoMLJobArn) {
         this.autoMLJobArn = autoMLJobArn;
         return this;
@@ -36,6 +38,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillableTimeInSeconds")
     public Long billableTimeInSeconds;
+
     public TrainingJob withBillableTimeInSeconds(Long billableTimeInSeconds) {
         this.billableTimeInSeconds = billableTimeInSeconds;
         return this;
@@ -47,6 +50,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CheckpointConfig")
     public CheckpointConfig checkpointConfig;
+
     public TrainingJob withCheckpointConfig(CheckpointConfig checkpointConfig) {
         this.checkpointConfig = checkpointConfig;
         return this;
@@ -57,6 +61,7 @@ public class TrainingJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public TrainingJob withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -68,6 +73,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebugHookConfig")
     public DebugHookConfig debugHookConfig;
+
     public TrainingJob withDebugHookConfig(DebugHookConfig debugHookConfig) {
         this.debugHookConfig = debugHookConfig;
         return this;
@@ -76,6 +82,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebugRuleConfigurations")
     public DebugRuleConfiguration[] debugRuleConfigurations;
+
     public TrainingJob withDebugRuleConfigurations(DebugRuleConfiguration[] debugRuleConfigurations) {
         this.debugRuleConfigurations = debugRuleConfigurations;
         return this;
@@ -84,6 +91,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebugRuleEvaluationStatuses")
     public DebugRuleEvaluationStatus[] debugRuleEvaluationStatuses;
+
     public TrainingJob withDebugRuleEvaluationStatuses(DebugRuleEvaluationStatus[] debugRuleEvaluationStatuses) {
         this.debugRuleEvaluationStatuses = debugRuleEvaluationStatuses;
         return this;
@@ -92,6 +100,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableInterContainerTrafficEncryption")
     public Boolean enableInterContainerTrafficEncryption;
+
     public TrainingJob withEnableInterContainerTrafficEncryption(Boolean enableInterContainerTrafficEncryption) {
         this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
         return this;
@@ -100,6 +109,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableManagedSpotTraining")
     public Boolean enableManagedSpotTraining;
+
     public TrainingJob withEnableManagedSpotTraining(Boolean enableManagedSpotTraining) {
         this.enableManagedSpotTraining = enableManagedSpotTraining;
         return this;
@@ -108,6 +118,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableNetworkIsolation")
     public Boolean enableNetworkIsolation;
+
     public TrainingJob withEnableNetworkIsolation(Boolean enableNetworkIsolation) {
         this.enableNetworkIsolation = enableNetworkIsolation;
         return this;
@@ -116,17 +127,19 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public TrainingJob withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
     }
     
     /**
-     * &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     * &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateProcessingJob.html"&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html"&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTransformJob.html"&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentConfig")
     public ExperimentConfig experimentConfig;
+
     public TrainingJob withExperimentConfig(ExperimentConfig experimentConfig) {
         this.experimentConfig = experimentConfig;
         return this;
@@ -135,6 +148,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public TrainingJob withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -143,6 +157,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalMetricDataList")
     public MetricData[] finalMetricDataList;
+
     public TrainingJob withFinalMetricDataList(MetricData[] finalMetricDataList) {
         this.finalMetricDataList = finalMetricDataList;
         return this;
@@ -151,6 +166,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HyperParameters")
     public java.util.Map<String, String> hyperParameters;
+
     public TrainingJob withHyperParameters(java.util.Map<String, String> hyperParameters) {
         this.hyperParameters = hyperParameters;
         return this;
@@ -159,6 +175,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataConfig")
     public Channel[] inputDataConfig;
+
     public TrainingJob withInputDataConfig(Channel[] inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -167,6 +184,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelingJobArn")
     public String labelingJobArn;
+
     public TrainingJob withLabelingJobArn(String labelingJobArn) {
         this.labelingJobArn = labelingJobArn;
         return this;
@@ -177,6 +195,7 @@ public class TrainingJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public TrainingJob withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -185,6 +204,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelArtifacts")
     public ModelArtifacts modelArtifacts;
+
     public TrainingJob withModelArtifacts(ModelArtifacts modelArtifacts) {
         this.modelArtifacts = modelArtifacts;
         return this;
@@ -193,6 +213,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public TrainingJob withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -201,6 +222,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceConfig")
     public ResourceConfig resourceConfig;
+
     public TrainingJob withResourceConfig(ResourceConfig resourceConfig) {
         this.resourceConfig = resourceConfig;
         return this;
@@ -209,6 +231,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryStrategy")
     public RetryStrategy retryStrategy;
+
     public TrainingJob withRetryStrategy(RetryStrategy retryStrategy) {
         this.retryStrategy = retryStrategy;
         return this;
@@ -217,6 +240,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public TrainingJob withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -225,6 +249,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryStatus")
     public SecondaryStatusEnum secondaryStatus;
+
     public TrainingJob withSecondaryStatus(SecondaryStatusEnum secondaryStatus) {
         this.secondaryStatus = secondaryStatus;
         return this;
@@ -233,6 +258,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryStatusTransitions")
     public SecondaryStatusTransition[] secondaryStatusTransitions;
+
     public TrainingJob withSecondaryStatusTransitions(SecondaryStatusTransition[] secondaryStatusTransitions) {
         this.secondaryStatusTransitions = secondaryStatusTransitions;
         return this;
@@ -241,6 +267,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppingCondition")
     public StoppingCondition stoppingCondition;
+
     public TrainingJob withStoppingCondition(StoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
@@ -249,6 +276,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public TrainingJob withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -260,6 +288,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TensorBoardOutputConfig")
     public TensorBoardOutputConfig tensorBoardOutputConfig;
+
     public TrainingJob withTensorBoardOutputConfig(TensorBoardOutputConfig tensorBoardOutputConfig) {
         this.tensorBoardOutputConfig = tensorBoardOutputConfig;
         return this;
@@ -270,6 +299,7 @@ public class TrainingJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TrainingEndTime")
     public OffsetDateTime trainingEndTime;
+
     public TrainingJob withTrainingEndTime(OffsetDateTime trainingEndTime) {
         this.trainingEndTime = trainingEndTime;
         return this;
@@ -278,6 +308,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJobArn")
     public String trainingJobArn;
+
     public TrainingJob withTrainingJobArn(String trainingJobArn) {
         this.trainingJobArn = trainingJobArn;
         return this;
@@ -286,6 +317,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJobName")
     public String trainingJobName;
+
     public TrainingJob withTrainingJobName(String trainingJobName) {
         this.trainingJobName = trainingJobName;
         return this;
@@ -294,6 +326,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJobStatus")
     public TrainingJobStatusEnum trainingJobStatus;
+
     public TrainingJob withTrainingJobStatus(TrainingJobStatusEnum trainingJobStatus) {
         this.trainingJobStatus = trainingJobStatus;
         return this;
@@ -304,6 +337,7 @@ public class TrainingJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TrainingStartTime")
     public OffsetDateTime trainingStartTime;
+
     public TrainingJob withTrainingStartTime(OffsetDateTime trainingStartTime) {
         this.trainingStartTime = trainingStartTime;
         return this;
@@ -312,6 +346,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingTimeInSeconds")
     public Long trainingTimeInSeconds;
+
     public TrainingJob withTrainingTimeInSeconds(Long trainingTimeInSeconds) {
         this.trainingTimeInSeconds = trainingTimeInSeconds;
         return this;
@@ -320,6 +355,7 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TuningJobArn")
     public String tuningJobArn;
+
     public TrainingJob withTuningJobArn(String tuningJobArn) {
         this.tuningJobArn = tuningJobArn;
         return this;
@@ -328,9 +364,11 @@ public class TrainingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public TrainingJob withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public TrainingJob(){}
 }

@@ -15,6 +15,7 @@ public class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffective
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -26,6 +27,7 @@ public class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffective
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffective
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public FirewallPolicyRule[] rules;
+
     public RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy withRules(FirewallPolicyRule[] rules) {
         this.rules = rules;
         return this;
@@ -48,9 +51,11 @@ public class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffective
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicyTypeEnum type;
+
     public RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy withType(RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy(){}
 }

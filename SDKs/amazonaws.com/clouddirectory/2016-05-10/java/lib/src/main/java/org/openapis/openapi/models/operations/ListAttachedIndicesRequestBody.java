@@ -15,6 +15,7 @@ public class ListAttachedIndicesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAttachedIndicesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListAttachedIndicesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAttachedIndicesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +38,13 @@ public class ListAttachedIndicesRequestBody {
      */
     @JsonProperty("TargetReference")
     public ListAttachedIndicesRequestBodyTargetReference targetReference;
+
     public ListAttachedIndicesRequestBody withTargetReference(ListAttachedIndicesRequestBodyTargetReference targetReference) {
         this.targetReference = targetReference;
         return this;
     }
     
+    public ListAttachedIndicesRequestBody(@JsonProperty("TargetReference") ListAttachedIndicesRequestBodyTargetReference targetReference) {
+        this.targetReference = targetReference;
+  }
 }

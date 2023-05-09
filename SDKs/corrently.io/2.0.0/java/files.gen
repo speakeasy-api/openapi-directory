@@ -113,4 +113,17 @@ lib/src/main/java/org/openapis/openapi/models/shared/Balance.java
 lib/src/main/java/org/openapis/openapi/models/shared/Transactions.java
 lib/src/main/java/org/openapis/openapi/models/shared/Tariffh0.java
 lib/src/main/java/org/openapis/openapi/models/shared/Componentsh0.java
+docs/sdk/README.md
+docs/dispatchgreenenergydistributionapi/README.md
+docs/greenpowerindexgrunstromindex/README.md
+docs/meteringdecorator/README.md
+docs/ocpp/README.md
+docs/openmeter/README.md
+docs/smarthome/README.md
+docs/stromquittung/README.md
+docs/stromkontoledger/README.md
+docs/tse/README.md
+docs/tariffpriceapi/README.md
+docs/wimwechselprozesseimmesswesenstromstatusapi/README.md
+docs/easee/README.md
 USAGE.md

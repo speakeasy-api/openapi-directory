@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UnprocessedSecurityControl {
     @JsonProperty("ErrorCode")
     public UnprocessedErrorCodeEnum errorCode;
+
     public UnprocessedSecurityControl withErrorCode(UnprocessedErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -22,6 +23,7 @@ public class UnprocessedSecurityControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorReason")
     public String errorReason;
+
     public UnprocessedSecurityControl withErrorReason(String errorReason) {
         this.errorReason = errorReason;
         return this;
@@ -29,9 +31,14 @@ public class UnprocessedSecurityControl {
     
     @JsonProperty("SecurityControlId")
     public String securityControlId;
+
     public UnprocessedSecurityControl withSecurityControlId(String securityControlId) {
         this.securityControlId = securityControlId;
         return this;
     }
     
+    public UnprocessedSecurityControl(@JsonProperty("ErrorCode") UnprocessedErrorCodeEnum errorCode, @JsonProperty("SecurityControlId") String securityControlId) {
+        this.errorCode = errorCode;
+        this.securityControlId = securityControlId;
+  }
 }

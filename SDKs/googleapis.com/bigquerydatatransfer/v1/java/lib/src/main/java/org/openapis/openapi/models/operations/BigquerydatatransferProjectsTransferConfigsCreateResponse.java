@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BigquerydatatransferProjectsTransferConfigsCreateResponse {
     
     public String contentType;
+
     public BigquerydatatransferProjectsTransferConfigsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateResponse {
     
     
     public Integer statusCode;
+
     public BigquerydatatransferProjectsTransferConfigsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BigquerydatatransferProjectsTransferConfigsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BigquerydatatransferProjectsTransferConfigsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class BigquerydatatransferProjectsTransferConfigsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.TransferConfig transferConfig;
+
     public BigquerydatatransferProjectsTransferConfigsCreateResponse withTransferConfig(org.openapis.openapi.models.shared.TransferConfig transferConfig) {
         this.transferConfig = transferConfig;
         return this;
     }
     
+    public BigquerydatatransferProjectsTransferConfigsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

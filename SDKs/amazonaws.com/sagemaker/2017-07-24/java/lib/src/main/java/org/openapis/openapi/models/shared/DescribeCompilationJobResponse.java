@@ -22,6 +22,7 @@ public class DescribeCompilationJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompilationEndTime")
     public OffsetDateTime compilationEndTime;
+
     public DescribeCompilationJobResponse withCompilationEndTime(OffsetDateTime compilationEndTime) {
         this.compilationEndTime = compilationEndTime;
         return this;
@@ -29,6 +30,7 @@ public class DescribeCompilationJobResponse {
     
     @JsonProperty("CompilationJobArn")
     public String compilationJobArn;
+
     public DescribeCompilationJobResponse withCompilationJobArn(String compilationJobArn) {
         this.compilationJobArn = compilationJobArn;
         return this;
@@ -36,6 +38,7 @@ public class DescribeCompilationJobResponse {
     
     @JsonProperty("CompilationJobName")
     public String compilationJobName;
+
     public DescribeCompilationJobResponse withCompilationJobName(String compilationJobName) {
         this.compilationJobName = compilationJobName;
         return this;
@@ -43,6 +46,7 @@ public class DescribeCompilationJobResponse {
     
     @JsonProperty("CompilationJobStatus")
     public CompilationJobStatusEnum compilationJobStatus;
+
     public DescribeCompilationJobResponse withCompilationJobStatus(CompilationJobStatusEnum compilationJobStatus) {
         this.compilationJobStatus = compilationJobStatus;
         return this;
@@ -53,6 +57,7 @@ public class DescribeCompilationJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompilationStartTime")
     public OffsetDateTime compilationStartTime;
+
     public DescribeCompilationJobResponse withCompilationStartTime(OffsetDateTime compilationStartTime) {
         this.compilationStartTime = compilationStartTime;
         return this;
@@ -62,6 +67,7 @@ public class DescribeCompilationJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeCompilationJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -69,6 +75,7 @@ public class DescribeCompilationJobResponse {
     
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeCompilationJobResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -77,6 +84,7 @@ public class DescribeCompilationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceImage")
     public String inferenceImage;
+
     public DescribeCompilationJobResponse withInferenceImage(String inferenceImage) {
         this.inferenceImage = inferenceImage;
         return this;
@@ -84,6 +92,7 @@ public class DescribeCompilationJobResponse {
     
     @JsonProperty("InputConfig")
     public InputConfig inputConfig;
+
     public DescribeCompilationJobResponse withInputConfig(InputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -93,6 +102,7 @@ public class DescribeCompilationJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeCompilationJobResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -100,6 +110,7 @@ public class DescribeCompilationJobResponse {
     
     @JsonProperty("ModelArtifacts")
     public ModelArtifacts modelArtifacts;
+
     public DescribeCompilationJobResponse withModelArtifacts(ModelArtifacts modelArtifacts) {
         this.modelArtifacts = modelArtifacts;
         return this;
@@ -108,6 +119,7 @@ public class DescribeCompilationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelDigests")
     public ModelDigests modelDigests;
+
     public DescribeCompilationJobResponse withModelDigests(ModelDigests modelDigests) {
         this.modelDigests = modelDigests;
         return this;
@@ -116,6 +128,7 @@ public class DescribeCompilationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageVersionArn")
     public String modelPackageVersionArn;
+
     public DescribeCompilationJobResponse withModelPackageVersionArn(String modelPackageVersionArn) {
         this.modelPackageVersionArn = modelPackageVersionArn;
         return this;
@@ -123,6 +136,7 @@ public class DescribeCompilationJobResponse {
     
     @JsonProperty("OutputConfig")
     public OutputConfig outputConfig;
+
     public DescribeCompilationJobResponse withOutputConfig(OutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -130,6 +144,7 @@ public class DescribeCompilationJobResponse {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeCompilationJobResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -137,6 +152,7 @@ public class DescribeCompilationJobResponse {
     
     @JsonProperty("StoppingCondition")
     public StoppingCondition stoppingCondition;
+
     public DescribeCompilationJobResponse withStoppingCondition(StoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
@@ -145,9 +161,23 @@ public class DescribeCompilationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public NeoVpcConfig vpcConfig;
+
     public DescribeCompilationJobResponse withVpcConfig(NeoVpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public DescribeCompilationJobResponse(@JsonProperty("CompilationJobArn") String compilationJobArn, @JsonProperty("CompilationJobName") String compilationJobName, @JsonProperty("CompilationJobStatus") CompilationJobStatusEnum compilationJobStatus, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("FailureReason") String failureReason, @JsonProperty("InputConfig") InputConfig inputConfig, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("ModelArtifacts") ModelArtifacts modelArtifacts, @JsonProperty("OutputConfig") OutputConfig outputConfig, @JsonProperty("RoleArn") String roleArn, @JsonProperty("StoppingCondition") StoppingCondition stoppingCondition) {
+        this.compilationJobArn = compilationJobArn;
+        this.compilationJobName = compilationJobName;
+        this.compilationJobStatus = compilationJobStatus;
+        this.creationTime = creationTime;
+        this.failureReason = failureReason;
+        this.inputConfig = inputConfig;
+        this.lastModifiedTime = lastModifiedTime;
+        this.modelArtifacts = modelArtifacts;
+        this.outputConfig = outputConfig;
+        this.roleArn = roleArn;
+        this.stoppingCondition = stoppingCondition;
+  }
 }

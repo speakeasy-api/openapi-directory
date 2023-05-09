@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsCreateResponse res = new org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsCreateResponse res = new org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsDeleteResponse res = new org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsDeleteResponse() {{
+        org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsDeleteResponse res = new org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsGetResponse res = new org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsGetResponse() {{
+        org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsGetResponse res = new org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsGetResponse(contentType, httpRes.statusCode()) {{
             workerPool = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsListResponse res = new org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsListResponse() {{
+        org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsListResponse res = new org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsListResponse(contentType, httpRes.statusCode()) {{
             listWorkerPoolsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsPatchResponse res = new org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsPatchResponse() {{
+        org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsPatchResponse res = new org.openapis.openapi.models.operations.CloudbuildProjectsLocationsWorkerPoolsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

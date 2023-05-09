@@ -18,6 +18,7 @@ public class UpdateCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateCellsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class UpdateCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GridRange range;
+
     public UpdateCellsRequest withRange(GridRange range) {
         this.range = range;
         return this;
@@ -40,6 +42,7 @@ public class UpdateCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public RowData[] rows;
+
     public UpdateCellsRequest withRows(RowData[] rows) {
         this.rows = rows;
         return this;
@@ -51,9 +54,11 @@ public class UpdateCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public GridCoordinate start;
+
     public UpdateCellsRequest withStart(GridCoordinate start) {
         this.start = start;
         return this;
     }
     
+    public UpdateCellsRequest(){}
 }

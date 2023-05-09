@@ -12,6 +12,7 @@ public class TaskAssociatedTaskItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task")
     public Long task;
+
     public TaskAssociatedTaskItem withTask(Long task) {
         this.task = task;
         return this;
@@ -23,6 +24,7 @@ public class TaskAssociatedTaskItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TaskAssociatedTaskItemTypeEnum type;
+
     public TaskAssociatedTaskItem withType(TaskAssociatedTaskItemTypeEnum type) {
         this.type = type;
         return this;
@@ -34,9 +36,11 @@ public class TaskAssociatedTaskItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public TaskAssociatedTaskItem withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public TaskAssociatedTaskItem(){}
 }

@@ -18,9 +18,11 @@ public class ListAnomaliesForInsightRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCollection")
     public org.openapis.openapi.models.shared.ServiceCollection serviceCollection;
+
     public ListAnomaliesForInsightRequestBodyFilters withServiceCollection(org.openapis.openapi.models.shared.ServiceCollection serviceCollection) {
         this.serviceCollection = serviceCollection;
         return this;
     }
     
+    public ListAnomaliesForInsightRequestBodyFilters(){}
 }

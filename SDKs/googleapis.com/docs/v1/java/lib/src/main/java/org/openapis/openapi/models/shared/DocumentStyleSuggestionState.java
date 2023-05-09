@@ -18,6 +18,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundSuggestionState")
     public BackgroundSuggestionState backgroundSuggestionState;
+
     public DocumentStyleSuggestionState withBackgroundSuggestionState(BackgroundSuggestionState backgroundSuggestionState) {
         this.backgroundSuggestionState = backgroundSuggestionState;
         return this;
@@ -29,6 +30,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultFooterIdSuggested")
     public Boolean defaultFooterIdSuggested;
+
     public DocumentStyleSuggestionState withDefaultFooterIdSuggested(Boolean defaultFooterIdSuggested) {
         this.defaultFooterIdSuggested = defaultFooterIdSuggested;
         return this;
@@ -40,6 +42,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultHeaderIdSuggested")
     public Boolean defaultHeaderIdSuggested;
+
     public DocumentStyleSuggestionState withDefaultHeaderIdSuggested(Boolean defaultHeaderIdSuggested) {
         this.defaultHeaderIdSuggested = defaultHeaderIdSuggested;
         return this;
@@ -51,6 +54,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evenPageFooterIdSuggested")
     public Boolean evenPageFooterIdSuggested;
+
     public DocumentStyleSuggestionState withEvenPageFooterIdSuggested(Boolean evenPageFooterIdSuggested) {
         this.evenPageFooterIdSuggested = evenPageFooterIdSuggested;
         return this;
@@ -62,6 +66,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evenPageHeaderIdSuggested")
     public Boolean evenPageHeaderIdSuggested;
+
     public DocumentStyleSuggestionState withEvenPageHeaderIdSuggested(Boolean evenPageHeaderIdSuggested) {
         this.evenPageHeaderIdSuggested = evenPageHeaderIdSuggested;
         return this;
@@ -73,6 +78,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstPageFooterIdSuggested")
     public Boolean firstPageFooterIdSuggested;
+
     public DocumentStyleSuggestionState withFirstPageFooterIdSuggested(Boolean firstPageFooterIdSuggested) {
         this.firstPageFooterIdSuggested = firstPageFooterIdSuggested;
         return this;
@@ -84,6 +90,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstPageHeaderIdSuggested")
     public Boolean firstPageHeaderIdSuggested;
+
     public DocumentStyleSuggestionState withFirstPageHeaderIdSuggested(Boolean firstPageHeaderIdSuggested) {
         this.firstPageHeaderIdSuggested = firstPageHeaderIdSuggested;
         return this;
@@ -95,6 +102,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginBottomSuggested")
     public Boolean marginBottomSuggested;
+
     public DocumentStyleSuggestionState withMarginBottomSuggested(Boolean marginBottomSuggested) {
         this.marginBottomSuggested = marginBottomSuggested;
         return this;
@@ -106,6 +114,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginFooterSuggested")
     public Boolean marginFooterSuggested;
+
     public DocumentStyleSuggestionState withMarginFooterSuggested(Boolean marginFooterSuggested) {
         this.marginFooterSuggested = marginFooterSuggested;
         return this;
@@ -117,6 +126,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginHeaderSuggested")
     public Boolean marginHeaderSuggested;
+
     public DocumentStyleSuggestionState withMarginHeaderSuggested(Boolean marginHeaderSuggested) {
         this.marginHeaderSuggested = marginHeaderSuggested;
         return this;
@@ -128,6 +138,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginLeftSuggested")
     public Boolean marginLeftSuggested;
+
     public DocumentStyleSuggestionState withMarginLeftSuggested(Boolean marginLeftSuggested) {
         this.marginLeftSuggested = marginLeftSuggested;
         return this;
@@ -139,6 +150,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginRightSuggested")
     public Boolean marginRightSuggested;
+
     public DocumentStyleSuggestionState withMarginRightSuggested(Boolean marginRightSuggested) {
         this.marginRightSuggested = marginRightSuggested;
         return this;
@@ -150,6 +162,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginTopSuggested")
     public Boolean marginTopSuggested;
+
     public DocumentStyleSuggestionState withMarginTopSuggested(Boolean marginTopSuggested) {
         this.marginTopSuggested = marginTopSuggested;
         return this;
@@ -161,6 +174,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageNumberStartSuggested")
     public Boolean pageNumberStartSuggested;
+
     public DocumentStyleSuggestionState withPageNumberStartSuggested(Boolean pageNumberStartSuggested) {
         this.pageNumberStartSuggested = pageNumberStartSuggested;
         return this;
@@ -172,6 +186,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSizeSuggestionState")
     public SizeSuggestionState pageSizeSuggestionState;
+
     public DocumentStyleSuggestionState withPageSizeSuggestionState(SizeSuggestionState pageSizeSuggestionState) {
         this.pageSizeSuggestionState = pageSizeSuggestionState;
         return this;
@@ -183,6 +198,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useCustomHeaderFooterMarginsSuggested")
     public Boolean useCustomHeaderFooterMarginsSuggested;
+
     public DocumentStyleSuggestionState withUseCustomHeaderFooterMarginsSuggested(Boolean useCustomHeaderFooterMarginsSuggested) {
         this.useCustomHeaderFooterMarginsSuggested = useCustomHeaderFooterMarginsSuggested;
         return this;
@@ -194,6 +210,7 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useEvenPageHeaderFooterSuggested")
     public Boolean useEvenPageHeaderFooterSuggested;
+
     public DocumentStyleSuggestionState withUseEvenPageHeaderFooterSuggested(Boolean useEvenPageHeaderFooterSuggested) {
         this.useEvenPageHeaderFooterSuggested = useEvenPageHeaderFooterSuggested;
         return this;
@@ -205,9 +222,11 @@ public class DocumentStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useFirstPageHeaderFooterSuggested")
     public Boolean useFirstPageHeaderFooterSuggested;
+
     public DocumentStyleSuggestionState withUseFirstPageHeaderFooterSuggested(Boolean useFirstPageHeaderFooterSuggested) {
         this.useFirstPageHeaderFooterSuggested = useFirstPageHeaderFooterSuggested;
         return this;
     }
     
+    public DocumentStyleSuggestionState(){}
 }

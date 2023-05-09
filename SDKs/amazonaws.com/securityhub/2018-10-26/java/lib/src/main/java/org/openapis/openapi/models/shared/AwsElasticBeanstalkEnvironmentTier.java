@@ -15,6 +15,7 @@ public class AwsElasticBeanstalkEnvironmentTier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsElasticBeanstalkEnvironmentTier withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class AwsElasticBeanstalkEnvironmentTier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsElasticBeanstalkEnvironmentTier withType(String type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class AwsElasticBeanstalkEnvironmentTier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public AwsElasticBeanstalkEnvironmentTier withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AwsElasticBeanstalkEnvironmentTier(){}
 }

@@ -18,6 +18,7 @@ public class CreditUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callsDurationMinutes")
     public Integer callsDurationMinutes;
+
     public CreditUsage withCallsDurationMinutes(Integer callsDurationMinutes) {
         this.callsDurationMinutes = callsDurationMinutes;
         return this;
@@ -29,6 +30,7 @@ public class CreditUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditsUsed")
     public Double creditsUsed;
+
     public CreditUsage withCreditsUsed(Double creditsUsed) {
         this.creditsUsed = creditsUsed;
         return this;
@@ -40,6 +42,7 @@ public class CreditUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervalBegin")
     public Long intervalBegin;
+
     public CreditUsage withIntervalBegin(Long intervalBegin) {
         this.intervalBegin = intervalBegin;
         return this;
@@ -51,6 +54,7 @@ public class CreditUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervalEnd")
     public Long intervalEnd;
+
     public CreditUsage withIntervalEnd(Long intervalEnd) {
         this.intervalEnd = intervalEnd;
         return this;
@@ -62,9 +66,11 @@ public class CreditUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textsSent")
     public Integer textsSent;
+
     public CreditUsage withTextsSent(Integer textsSent) {
         this.textsSent = textsSent;
         return this;
     }
     
+    public CreditUsage(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFunctionConcurrencyResponse {
     
     public String contentType;
+
     public GetFunctionConcurrencyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFunctionConcurrencyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFunctionConcurrencyResponse getFunctionConcurrencyResponse;
+
     public GetFunctionConcurrencyResponse withGetFunctionConcurrencyResponse(org.openapis.openapi.models.shared.GetFunctionConcurrencyResponse getFunctionConcurrencyResponse) {
         this.getFunctionConcurrencyResponse = getFunctionConcurrencyResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetFunctionConcurrencyResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetFunctionConcurrencyResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class GetFunctionConcurrencyResponse {
      */
     
     public Object serviceException;
+
     public GetFunctionConcurrencyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -46,6 +51,7 @@ public class GetFunctionConcurrencyResponse {
     
     
     public Integer statusCode;
+
     public GetFunctionConcurrencyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetFunctionConcurrencyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFunctionConcurrencyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetFunctionConcurrencyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFunctionConcurrencyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetFunctionConcurrencyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetFunctionConcurrencyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetFunctionConcurrencyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

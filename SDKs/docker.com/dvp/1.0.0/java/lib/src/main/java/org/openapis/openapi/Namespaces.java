@@ -51,11 +51,9 @@ public class Namespaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamespaceDataByTimespanResponse res = new org.openapis.openapi.models.operations.GetNamespaceDataByTimespanResponse() {{
+        org.openapis.openapi.models.operations.GetNamespaceDataByTimespanResponse res = new org.openapis.openapi.models.operations.GetNamespaceDataByTimespanResponse(contentType, httpRes.statusCode()) {{
             responseData = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -91,11 +89,9 @@ public class Namespaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamespaceTimespanMetadataResponse res = new org.openapis.openapi.models.operations.GetNamespaceTimespanMetadataResponse() {{
+        org.openapis.openapi.models.operations.GetNamespaceTimespanMetadataResponse res = new org.openapis.openapi.models.operations.GetNamespaceTimespanMetadataResponse(contentType, httpRes.statusCode()) {{
             timespanModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -133,11 +129,9 @@ public class Namespaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamespaceTimespansResponse res = new org.openapis.openapi.models.operations.GetNamespaceTimespansResponse() {{
+        org.openapis.openapi.models.operations.GetNamespaceTimespansResponse res = new org.openapis.openapi.models.operations.GetNamespaceTimespansResponse(contentType, httpRes.statusCode()) {{
             timespanData = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -173,11 +167,9 @@ public class Namespaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamespaceYearsResponse res = new org.openapis.openapi.models.operations.GetNamespaceYearsResponse() {{
+        org.openapis.openapi.models.operations.GetNamespaceYearsResponse res = new org.openapis.openapi.models.operations.GetNamespaceYearsResponse(contentType, httpRes.statusCode()) {{
             yearData = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

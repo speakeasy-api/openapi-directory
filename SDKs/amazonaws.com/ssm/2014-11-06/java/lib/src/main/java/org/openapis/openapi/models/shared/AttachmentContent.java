@@ -15,6 +15,7 @@ public class AttachmentContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hash")
     public String hash;
+
     public AttachmentContent withHash(String hash) {
         this.hash = hash;
         return this;
@@ -23,6 +24,7 @@ public class AttachmentContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HashType")
     public AttachmentHashTypeEnum hashType;
+
     public AttachmentContent withHashType(AttachmentHashTypeEnum hashType) {
         this.hashType = hashType;
         return this;
@@ -31,6 +33,7 @@ public class AttachmentContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AttachmentContent withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class AttachmentContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Long size;
+
     public AttachmentContent withSize(Long size) {
         this.size = size;
         return this;
@@ -47,9 +51,11 @@ public class AttachmentContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public AttachmentContent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AttachmentContent(){}
 }

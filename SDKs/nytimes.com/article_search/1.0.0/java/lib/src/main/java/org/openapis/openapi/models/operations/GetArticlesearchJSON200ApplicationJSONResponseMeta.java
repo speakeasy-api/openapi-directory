@@ -12,6 +12,7 @@ public class GetArticlesearchJSON200ApplicationJSONResponseMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hits")
     public Long hits;
+
     public GetArticlesearchJSON200ApplicationJSONResponseMeta withHits(Long hits) {
         this.hits = hits;
         return this;
@@ -20,6 +21,7 @@ public class GetArticlesearchJSON200ApplicationJSONResponseMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Long offset;
+
     public GetArticlesearchJSON200ApplicationJSONResponseMeta withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -28,9 +30,11 @@ public class GetArticlesearchJSON200ApplicationJSONResponseMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public Long time;
+
     public GetArticlesearchJSON200ApplicationJSONResponseMeta withTime(Long time) {
         this.time = time;
         return this;
     }
     
+    public GetArticlesearchJSON200ApplicationJSONResponseMeta(){}
 }

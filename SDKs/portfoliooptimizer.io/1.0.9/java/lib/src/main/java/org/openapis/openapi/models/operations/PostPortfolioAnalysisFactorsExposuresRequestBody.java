@@ -12,6 +12,7 @@ public class PostPortfolioAnalysisFactorsExposuresRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("factors")
     public PostPortfolioAnalysisFactorsExposuresRequestBodyFactors[] factors;
+
     public PostPortfolioAnalysisFactorsExposuresRequestBody withFactors(PostPortfolioAnalysisFactorsExposuresRequestBodyFactors[] factors) {
         this.factors = factors;
         return this;
@@ -19,9 +20,13 @@ public class PostPortfolioAnalysisFactorsExposuresRequestBody {
     
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisFactorsExposuresRequestBodyPortfolios[] portfolios;
+
     public PostPortfolioAnalysisFactorsExposuresRequestBody withPortfolios(PostPortfolioAnalysisFactorsExposuresRequestBodyPortfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioAnalysisFactorsExposuresRequestBody(@JsonProperty("portfolios") PostPortfolioAnalysisFactorsExposuresRequestBodyPortfolios[] portfolios) {
+        this.portfolios = portfolios;
+  }
 }

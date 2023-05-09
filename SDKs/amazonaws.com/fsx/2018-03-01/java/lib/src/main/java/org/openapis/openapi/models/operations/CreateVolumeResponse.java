@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVolumeResponse {
@@ -12,6 +13,7 @@ public class CreateVolumeResponse {
      */
     
     public Object badRequest;
+
     public CreateVolumeResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class CreateVolumeResponse {
     
     
     public String contentType;
+
     public CreateVolumeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateVolumeResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateVolumeResponse createVolumeResponse;
+
     public CreateVolumeResponse withCreateVolumeResponse(org.openapis.openapi.models.shared.CreateVolumeResponse createVolumeResponse) {
         this.createVolumeResponse = createVolumeResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateVolumeResponse {
      */
     
     public Object fileSystemNotFound;
+
     public CreateVolumeResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -49,6 +54,7 @@ public class CreateVolumeResponse {
      */
     
     public Object incompatibleParameterError;
+
     public CreateVolumeResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -59,6 +65,7 @@ public class CreateVolumeResponse {
      */
     
     public Object internalServerError;
+
     public CreateVolumeResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class CreateVolumeResponse {
      */
     
     public Object missingVolumeConfiguration;
+
     public CreateVolumeResponse withMissingVolumeConfiguration(Object missingVolumeConfiguration) {
         this.missingVolumeConfiguration = missingVolumeConfiguration;
         return this;
@@ -79,6 +87,7 @@ public class CreateVolumeResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public CreateVolumeResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
@@ -86,6 +95,7 @@ public class CreateVolumeResponse {
     
     
     public Integer statusCode;
+
     public CreateVolumeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateVolumeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVolumeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class CreateVolumeResponse {
      */
     
     public Object storageVirtualMachineNotFound;
+
     public CreateVolumeResponse withStorageVirtualMachineNotFound(Object storageVirtualMachineNotFound) {
         this.storageVirtualMachineNotFound = storageVirtualMachineNotFound;
         return this;
@@ -113,9 +125,14 @@ public class CreateVolumeResponse {
      */
     
     public Object unsupportedOperation;
+
     public CreateVolumeResponse withUnsupportedOperation(Object unsupportedOperation) {
         this.unsupportedOperation = unsupportedOperation;
         return this;
     }
     
+    public CreateVolumeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

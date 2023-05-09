@@ -15,6 +15,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keys")
     public String[] keys;
+
     public Group withKeys(String[] keys) {
         this.keys = keys;
         return this;
@@ -23,9 +24,11 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public java.util.Map<String, MetricValue> metrics;
+
     public Group withMetrics(java.util.Map<String, MetricValue> metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public Group(){}
 }

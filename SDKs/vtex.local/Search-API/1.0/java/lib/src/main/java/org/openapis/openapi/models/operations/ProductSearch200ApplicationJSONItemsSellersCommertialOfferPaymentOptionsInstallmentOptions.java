@@ -12,6 +12,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("bin")
     public String bin;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions withBin(String bin) {
         this.bin = bin;
         return this;
@@ -22,6 +23,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("installments")
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallments[] installments;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions withInstallments(ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallments[] installments) {
         this.installments = installments;
         return this;
@@ -32,6 +34,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("paymentGroupName")
     public String paymentGroupName;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions withPaymentGroupName(String paymentGroupName) {
         this.paymentGroupName = paymentGroupName;
         return this;
@@ -42,6 +45,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("paymentName")
     public String paymentName;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions withPaymentName(String paymentName) {
         this.paymentName = paymentName;
         return this;
@@ -52,6 +56,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("paymentSystem")
     public String paymentSystem;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions withPaymentSystem(String paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
@@ -62,9 +67,18 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("value")
     public Long value;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions(@JsonProperty("bin") String bin, @JsonProperty("installments") ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallments[] installments, @JsonProperty("paymentGroupName") String paymentGroupName, @JsonProperty("paymentName") String paymentName, @JsonProperty("paymentSystem") String paymentSystem, @JsonProperty("value") Long value) {
+        this.bin = bin;
+        this.installments = installments;
+        this.paymentGroupName = paymentGroupName;
+        this.paymentName = paymentName;
+        this.paymentSystem = paymentSystem;
+        this.value = value;
+  }
 }

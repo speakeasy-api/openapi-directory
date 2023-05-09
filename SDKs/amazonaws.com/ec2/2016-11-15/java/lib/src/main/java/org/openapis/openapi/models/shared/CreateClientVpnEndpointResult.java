@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateClientVpnEndpointResult {
     
     public String clientVpnEndpointId;
+
     public CreateClientVpnEndpointResult withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -19,6 +20,7 @@ public class CreateClientVpnEndpointResult {
     
     
     public String dnsName;
+
     public CreateClientVpnEndpointResult withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -26,9 +28,11 @@ public class CreateClientVpnEndpointResult {
     
     
     public CreateClientVpnEndpointResultStatus status;
+
     public CreateClientVpnEndpointResult withStatus(CreateClientVpnEndpointResultStatus status) {
         this.status = status;
         return this;
     }
     
+    public CreateClientVpnEndpointResult(){}
 }

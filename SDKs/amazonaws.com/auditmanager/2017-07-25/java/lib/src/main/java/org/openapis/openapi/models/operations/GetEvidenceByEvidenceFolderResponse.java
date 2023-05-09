@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEvidenceByEvidenceFolderResponse {
@@ -12,6 +13,7 @@ public class GetEvidenceByEvidenceFolderResponse {
      */
     
     public Object accessDeniedException;
+
     public GetEvidenceByEvidenceFolderResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetEvidenceByEvidenceFolderResponse {
     
     
     public String contentType;
+
     public GetEvidenceByEvidenceFolderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEvidenceByEvidenceFolderResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEvidenceByEvidenceFolderResponse getEvidenceByEvidenceFolderResponse;
+
     public GetEvidenceByEvidenceFolderResponse withGetEvidenceByEvidenceFolderResponse(org.openapis.openapi.models.shared.GetEvidenceByEvidenceFolderResponse getEvidenceByEvidenceFolderResponse) {
         this.getEvidenceByEvidenceFolderResponse = getEvidenceByEvidenceFolderResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetEvidenceByEvidenceFolderResponse {
      */
     
     public Object internalServerException;
+
     public GetEvidenceByEvidenceFolderResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetEvidenceByEvidenceFolderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEvidenceByEvidenceFolderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetEvidenceByEvidenceFolderResponse {
     
     
     public Integer statusCode;
+
     public GetEvidenceByEvidenceFolderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetEvidenceByEvidenceFolderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEvidenceByEvidenceFolderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetEvidenceByEvidenceFolderResponse {
      */
     
     public Object validationException;
+
     public GetEvidenceByEvidenceFolderResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetEvidenceByEvidenceFolderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

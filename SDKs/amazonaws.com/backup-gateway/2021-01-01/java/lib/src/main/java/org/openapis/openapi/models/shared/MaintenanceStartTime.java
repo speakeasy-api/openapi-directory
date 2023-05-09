@@ -15,6 +15,7 @@ public class MaintenanceStartTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DayOfMonth")
     public Long dayOfMonth;
+
     public MaintenanceStartTime withDayOfMonth(Long dayOfMonth) {
         this.dayOfMonth = dayOfMonth;
         return this;
@@ -23,6 +24,7 @@ public class MaintenanceStartTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DayOfWeek")
     public Long dayOfWeek;
+
     public MaintenanceStartTime withDayOfWeek(Long dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -30,6 +32,7 @@ public class MaintenanceStartTime {
     
     @JsonProperty("HourOfDay")
     public Long hourOfDay;
+
     public MaintenanceStartTime withHourOfDay(Long hourOfDay) {
         this.hourOfDay = hourOfDay;
         return this;
@@ -37,9 +40,14 @@ public class MaintenanceStartTime {
     
     @JsonProperty("MinuteOfHour")
     public Long minuteOfHour;
+
     public MaintenanceStartTime withMinuteOfHour(Long minuteOfHour) {
         this.minuteOfHour = minuteOfHour;
         return this;
     }
     
+    public MaintenanceStartTime(@JsonProperty("HourOfDay") Long hourOfDay, @JsonProperty("MinuteOfHour") Long minuteOfHour) {
+        this.hourOfDay = hourOfDay;
+        this.minuteOfHour = minuteOfHour;
+  }
 }

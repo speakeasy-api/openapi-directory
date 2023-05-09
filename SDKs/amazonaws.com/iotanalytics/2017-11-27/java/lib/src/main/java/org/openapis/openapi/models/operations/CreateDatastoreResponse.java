@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDatastoreResponse {
     
     public String contentType;
+
     public CreateDatastoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDatastoreResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDatastoreResponse createDatastoreResponse;
+
     public CreateDatastoreResponse withCreateDatastoreResponse(org.openapis.openapi.models.shared.CreateDatastoreResponse createDatastoreResponse) {
         this.createDatastoreResponse = createDatastoreResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateDatastoreResponse {
      */
     
     public Object internalFailureException;
+
     public CreateDatastoreResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDatastoreResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateDatastoreResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDatastoreResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDatastoreResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateDatastoreResponse {
     
     
     public Integer statusCode;
+
     public CreateDatastoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateDatastoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDatastoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateDatastoreResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateDatastoreResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,6 +92,7 @@ public class CreateDatastoreResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateDatastoreResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class CreateDatastoreResponse {
      */
     
     public Object throttlingException;
+
     public CreateDatastoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateDatastoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

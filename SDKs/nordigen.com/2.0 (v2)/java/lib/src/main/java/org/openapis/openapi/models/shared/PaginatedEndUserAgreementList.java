@@ -15,6 +15,7 @@ public class PaginatedEndUserAgreementList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public PaginatedEndUserAgreementList withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class PaginatedEndUserAgreementList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public PaginatedEndUserAgreementList withNext(String next) {
         this.next = next;
         return this;
@@ -31,6 +33,7 @@ public class PaginatedEndUserAgreementList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public PaginatedEndUserAgreementList withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -39,9 +42,11 @@ public class PaginatedEndUserAgreementList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public EndUserAgreement[] results;
+
     public PaginatedEndUserAgreementList withResults(EndUserAgreement[] results) {
         this.results = results;
         return this;
     }
     
+    public PaginatedEndUserAgreementList(){}
 }

@@ -18,6 +18,7 @@ public class DriveRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminManagedRestrictions")
     public Boolean adminManagedRestrictions;
+
     public DriveRestrictions withAdminManagedRestrictions(Boolean adminManagedRestrictions) {
         this.adminManagedRestrictions = adminManagedRestrictions;
         return this;
@@ -29,6 +30,7 @@ public class DriveRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyRequiresWriterPermission")
     public Boolean copyRequiresWriterPermission;
+
     public DriveRestrictions withCopyRequiresWriterPermission(Boolean copyRequiresWriterPermission) {
         this.copyRequiresWriterPermission = copyRequiresWriterPermission;
         return this;
@@ -40,6 +42,7 @@ public class DriveRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainUsersOnly")
     public Boolean domainUsersOnly;
+
     public DriveRestrictions withDomainUsersOnly(Boolean domainUsersOnly) {
         this.domainUsersOnly = domainUsersOnly;
         return this;
@@ -51,6 +54,7 @@ public class DriveRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driveMembersOnly")
     public Boolean driveMembersOnly;
+
     public DriveRestrictions withDriveMembersOnly(Boolean driveMembersOnly) {
         this.driveMembersOnly = driveMembersOnly;
         return this;
@@ -62,9 +66,11 @@ public class DriveRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharingFoldersRequiresOrganizerPermission")
     public Boolean sharingFoldersRequiresOrganizerPermission;
+
     public DriveRestrictions withSharingFoldersRequiresOrganizerPermission(Boolean sharingFoldersRequiresOrganizerPermission) {
         this.sharingFoldersRequiresOrganizerPermission = sharingFoldersRequiresOrganizerPermission;
         return this;
     }
     
+    public DriveRestrictions(){}
 }

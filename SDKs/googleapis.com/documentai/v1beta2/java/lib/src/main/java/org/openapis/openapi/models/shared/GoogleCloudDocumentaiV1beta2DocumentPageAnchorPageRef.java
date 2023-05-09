@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingPoly")
     public GoogleCloudDocumentaiV1beta2BoundingPoly boundingPoly;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRef withBoundingPoly(GoogleCloudDocumentaiV1beta2BoundingPoly boundingPoly) {
         this.boundingPoly = boundingPoly;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRef withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layoutId")
     public String layoutId;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRef withLayoutId(String layoutId) {
         this.layoutId = layoutId;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layoutType")
     public GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRefLayoutTypeEnum layoutType;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRef withLayoutType(GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRefLayoutTypeEnum layoutType) {
         this.layoutType = layoutType;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public String page;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRef withPage(String page) {
         this.page = page;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRef(){}
 }

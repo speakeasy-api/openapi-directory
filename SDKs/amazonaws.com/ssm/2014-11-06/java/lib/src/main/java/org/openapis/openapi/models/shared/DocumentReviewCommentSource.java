@@ -15,6 +15,7 @@ public class DocumentReviewCommentSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public String content;
+
     public DocumentReviewCommentSource withContent(String content) {
         this.content = content;
         return this;
@@ -23,9 +24,11 @@ public class DocumentReviewCommentSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public DocumentReviewCommentTypeEnum type;
+
     public DocumentReviewCommentSource withType(DocumentReviewCommentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DocumentReviewCommentSource(){}
 }

@@ -15,9 +15,11 @@ public class GetProjectsForTask200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ProjectCompact[] data;
+
     public GetProjectsForTask200ApplicationJSON withData(org.openapis.openapi.models.shared.ProjectCompact[] data) {
         this.data = data;
         return this;
     }
     
+    public GetProjectsForTask200ApplicationJSON(){}
 }

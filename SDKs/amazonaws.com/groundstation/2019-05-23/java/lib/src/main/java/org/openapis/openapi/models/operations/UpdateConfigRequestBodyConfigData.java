@@ -15,6 +15,7 @@ public class UpdateConfigRequestBodyConfigData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antennaDownlinkConfig")
     public org.openapis.openapi.models.shared.AntennaDownlinkConfig antennaDownlinkConfig;
+
     public UpdateConfigRequestBodyConfigData withAntennaDownlinkConfig(org.openapis.openapi.models.shared.AntennaDownlinkConfig antennaDownlinkConfig) {
         this.antennaDownlinkConfig = antennaDownlinkConfig;
         return this;
@@ -23,6 +24,7 @@ public class UpdateConfigRequestBodyConfigData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antennaDownlinkDemodDecodeConfig")
     public org.openapis.openapi.models.shared.AntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig;
+
     public UpdateConfigRequestBodyConfigData withAntennaDownlinkDemodDecodeConfig(org.openapis.openapi.models.shared.AntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig) {
         this.antennaDownlinkDemodDecodeConfig = antennaDownlinkDemodDecodeConfig;
         return this;
@@ -31,6 +33,7 @@ public class UpdateConfigRequestBodyConfigData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antennaUplinkConfig")
     public org.openapis.openapi.models.shared.AntennaUplinkConfig antennaUplinkConfig;
+
     public UpdateConfigRequestBodyConfigData withAntennaUplinkConfig(org.openapis.openapi.models.shared.AntennaUplinkConfig antennaUplinkConfig) {
         this.antennaUplinkConfig = antennaUplinkConfig;
         return this;
@@ -39,6 +42,7 @@ public class UpdateConfigRequestBodyConfigData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataflowEndpointConfig")
     public org.openapis.openapi.models.shared.DataflowEndpointConfig dataflowEndpointConfig;
+
     public UpdateConfigRequestBodyConfigData withDataflowEndpointConfig(org.openapis.openapi.models.shared.DataflowEndpointConfig dataflowEndpointConfig) {
         this.dataflowEndpointConfig = dataflowEndpointConfig;
         return this;
@@ -47,6 +51,7 @@ public class UpdateConfigRequestBodyConfigData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3RecordingConfig")
     public org.openapis.openapi.models.shared.S3RecordingConfig s3RecordingConfig;
+
     public UpdateConfigRequestBodyConfigData withS3RecordingConfig(org.openapis.openapi.models.shared.S3RecordingConfig s3RecordingConfig) {
         this.s3RecordingConfig = s3RecordingConfig;
         return this;
@@ -55,6 +60,7 @@ public class UpdateConfigRequestBodyConfigData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingConfig")
     public org.openapis.openapi.models.shared.TrackingConfig trackingConfig;
+
     public UpdateConfigRequestBodyConfigData withTrackingConfig(org.openapis.openapi.models.shared.TrackingConfig trackingConfig) {
         this.trackingConfig = trackingConfig;
         return this;
@@ -63,9 +69,11 @@ public class UpdateConfigRequestBodyConfigData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uplinkEchoConfig")
     public org.openapis.openapi.models.shared.UplinkEchoConfig uplinkEchoConfig;
+
     public UpdateConfigRequestBodyConfigData withUplinkEchoConfig(org.openapis.openapi.models.shared.UplinkEchoConfig uplinkEchoConfig) {
         this.uplinkEchoConfig = uplinkEchoConfig;
         return this;
     }
     
+    public UpdateConfigRequestBodyConfigData(){}
 }

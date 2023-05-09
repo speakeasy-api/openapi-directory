@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRule {
     
     public String destinationCidrBlock;
+
     public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRule withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -19,6 +20,7 @@ public class GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableE
     
     
     public String destinationPortRange;
+
     public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRule withDestinationPortRange(String destinationPortRange) {
         this.destinationPortRange = destinationPortRange;
         return this;
@@ -26,6 +28,7 @@ public class GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableE
     
     
     public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRuleMetaData metaData;
+
     public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRule withMetaData(GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRuleMetaData metaData) {
         this.metaData = metaData;
         return this;
@@ -33,6 +36,7 @@ public class GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableE
     
     
     public String protocol;
+
     public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRule withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -40,6 +44,7 @@ public class GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableE
     
     
     public String sourceCidrBlock;
+
     public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRule withSourceCidrBlock(String sourceCidrBlock) {
         this.sourceCidrBlock = sourceCidrBlock;
         return this;
@@ -47,9 +52,11 @@ public class GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableE
     
     
     public String sourcePortRange;
+
     public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRule withSourcePortRange(String sourcePortRange) {
         this.sourcePortRange = sourcePortRange;
         return this;
     }
     
+    public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRule(){}
 }

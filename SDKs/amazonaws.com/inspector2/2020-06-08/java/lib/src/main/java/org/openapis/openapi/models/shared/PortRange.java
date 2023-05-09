@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PortRange {
     @JsonProperty("begin")
     public Long begin;
+
     public PortRange withBegin(Long begin) {
         this.begin = begin;
         return this;
@@ -19,9 +20,14 @@ public class PortRange {
     
     @JsonProperty("end")
     public Long end;
+
     public PortRange withEnd(Long end) {
         this.end = end;
         return this;
     }
     
+    public PortRange(@JsonProperty("begin") Long begin, @JsonProperty("end") Long end) {
+        this.begin = begin;
+        this.end = end;
+  }
 }

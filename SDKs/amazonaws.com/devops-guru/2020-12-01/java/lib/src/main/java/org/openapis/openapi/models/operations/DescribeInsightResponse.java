@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeInsightResponse {
@@ -12,6 +13,7 @@ public class DescribeInsightResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeInsightResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeInsightResponse {
     
     
     public String contentType;
+
     public DescribeInsightResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeInsightResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeInsightResponse describeInsightResponse;
+
     public DescribeInsightResponse withDescribeInsightResponse(org.openapis.openapi.models.shared.DescribeInsightResponse describeInsightResponse) {
         this.describeInsightResponse = describeInsightResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeInsightResponse {
      */
     
     public Object internalServerException;
+
     public DescribeInsightResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeInsightResponse {
     
     
     public Integer statusCode;
+
     public DescribeInsightResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeInsightResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeInsightResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeInsightResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeInsightResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeInsightResponse {
      */
     
     public Object throttlingException;
+
     public DescribeInsightResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeInsightResponse {
      */
     
     public Object validationException;
+
     public DescribeInsightResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeInsightResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

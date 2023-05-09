@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0CommonTargetSpend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpcBidCeilingMicros")
     public String cpcBidCeilingMicros;
+
     public GoogleAdsSearchads360V0CommonTargetSpend withCpcBidCeilingMicros(String cpcBidCeilingMicros) {
         this.cpcBidCeilingMicros = cpcBidCeilingMicros;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAdsSearchads360V0CommonTargetSpend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSpendMicros")
     public String targetSpendMicros;
+
     public GoogleAdsSearchads360V0CommonTargetSpend withTargetSpendMicros(String targetSpendMicros) {
         this.targetSpendMicros = targetSpendMicros;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonTargetSpend(){}
 }

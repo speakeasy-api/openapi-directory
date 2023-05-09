@@ -15,6 +15,7 @@ public class UpdateWaveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateWaveRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateWaveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateWaveRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +38,13 @@ public class UpdateWaveRequestBody {
      */
     @JsonProperty("waveID")
     public String waveID;
+
     public UpdateWaveRequestBody withWaveID(String waveID) {
         this.waveID = waveID;
         return this;
     }
     
+    public UpdateWaveRequestBody(@JsonProperty("waveID") String waveID) {
+        this.waveID = waveID;
+  }
 }

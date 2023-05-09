@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisassociateTrunkInterfaceResult {
     
     public String clientToken;
+
     public DisassociateTrunkInterfaceResult withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,9 +20,11 @@ public class DisassociateTrunkInterfaceResult {
     
     
     public Boolean return_;
+
     public DisassociateTrunkInterfaceResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
     }
     
+    public DisassociateTrunkInterfaceResult(){}
 }

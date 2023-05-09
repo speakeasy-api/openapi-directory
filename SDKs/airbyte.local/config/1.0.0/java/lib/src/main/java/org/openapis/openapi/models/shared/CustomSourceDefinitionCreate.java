@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomSourceDefinitionCreate {
     @JsonProperty("sourceDefinition")
     public SourceDefinitionCreate sourceDefinition;
+
     public CustomSourceDefinitionCreate withSourceDefinition(SourceDefinitionCreate sourceDefinition) {
         this.sourceDefinition = sourceDefinition;
         return this;
@@ -16,9 +17,14 @@ public class CustomSourceDefinitionCreate {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public CustomSourceDefinitionCreate withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public CustomSourceDefinitionCreate(@JsonProperty("sourceDefinition") SourceDefinitionCreate sourceDefinition, @JsonProperty("workspaceId") String workspaceId) {
+        this.sourceDefinition = sourceDefinition;
+        this.workspaceId = workspaceId;
+  }
 }

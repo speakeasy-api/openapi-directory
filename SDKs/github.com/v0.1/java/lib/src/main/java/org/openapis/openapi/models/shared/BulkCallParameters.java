@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=AnswerUrl")
     public String answerUrl;
+
     public BulkCallParameters withAnswerUrl(String answerUrl) {
         this.answerUrl = answerUrl;
         return this;
@@ -25,6 +27,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=CallerName")
     public String callerName;
+
     public BulkCallParameters withCallerName(String callerName) {
         this.callerName = callerName;
         return this;
@@ -35,6 +38,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=ConfirmKey")
     public String confirmKey;
+
     public BulkCallParameters withConfirmKey(String confirmKey) {
         this.confirmKey = confirmKey;
         return this;
@@ -45,6 +49,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=ConfirmSound")
     public String confirmSound;
+
     public BulkCallParameters withConfirmSound(String confirmSound) {
         this.confirmSound = confirmSound;
         return this;
@@ -55,6 +60,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=CoreUUID")
     public String coreUUID;
+
     public BulkCallParameters withCoreUUID(String coreUUID) {
         this.coreUUID = coreUUID;
         return this;
@@ -65,6 +71,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=Delimiter")
     public String delimiter;
+
     public BulkCallParameters withDelimiter(String delimiter) {
         this.delimiter = delimiter;
         return this;
@@ -75,6 +82,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=ExtraDialString")
     public String extraDialString;
+
     public BulkCallParameters withExtraDialString(String extraDialString) {
         this.extraDialString = extraDialString;
         return this;
@@ -85,6 +93,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=From")
     public String from;
+
     public BulkCallParameters withFrom(String from) {
         this.from = from;
         return this;
@@ -95,6 +104,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=GatewayCodecs")
     public String gatewayCodecs;
+
     public BulkCallParameters withGatewayCodecs(String gatewayCodecs) {
         this.gatewayCodecs = gatewayCodecs;
         return this;
@@ -105,6 +115,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=GatewayRetries")
     public String gatewayRetries;
+
     public BulkCallParameters withGatewayRetries(String gatewayRetries) {
         this.gatewayRetries = gatewayRetries;
         return this;
@@ -115,6 +126,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=GatewayTimeouts")
     public String gatewayTimeouts;
+
     public BulkCallParameters withGatewayTimeouts(String gatewayTimeouts) {
         this.gatewayTimeouts = gatewayTimeouts;
         return this;
@@ -125,6 +137,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=Gateways")
     public String gateways;
+
     public BulkCallParameters withGateways(String gateways) {
         this.gateways = gateways;
         return this;
@@ -135,6 +148,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=HangupOnRing")
     public Long hangupOnRing;
+
     public BulkCallParameters withHangupOnRing(Long hangupOnRing) {
         this.hangupOnRing = hangupOnRing;
         return this;
@@ -145,6 +159,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=HangupUrl")
     public String hangupUrl;
+
     public BulkCallParameters withHangupUrl(String hangupUrl) {
         this.hangupUrl = hangupUrl;
         return this;
@@ -155,6 +170,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=RejectCauses")
     public String rejectCauses;
+
     public BulkCallParameters withRejectCauses(String rejectCauses) {
         this.rejectCauses = rejectCauses;
         return this;
@@ -165,6 +181,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=RingUrl")
     public String ringUrl;
+
     public BulkCallParameters withRingUrl(String ringUrl) {
         this.ringUrl = ringUrl;
         return this;
@@ -175,6 +192,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=SendDigits")
     public String sendDigits;
+
     public BulkCallParameters withSendDigits(String sendDigits) {
         this.sendDigits = sendDigits;
         return this;
@@ -185,6 +203,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=SendOnPreanswer")
     public Boolean sendOnPreanswer;
+
     public BulkCallParameters withSendOnPreanswer(Boolean sendOnPreanswer) {
         this.sendOnPreanswer = sendOnPreanswer;
         return this;
@@ -195,6 +214,7 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=TimeLimit")
     public Long timeLimit;
+
     public BulkCallParameters withTimeLimit(Long timeLimit) {
         this.timeLimit = timeLimit;
         return this;
@@ -205,9 +225,17 @@ public class BulkCallParameters {
      */
     @SpeakeasyMetadata("form:name=To")
     public String to;
+
     public BulkCallParameters withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public BulkCallParameters(@JsonProperty("AnswerUrl") String answerUrl, @JsonProperty("Delimiter") String delimiter, @JsonProperty("From") String from, @JsonProperty("Gateways") String gateways, @JsonProperty("To") String to) {
+        this.answerUrl = answerUrl;
+        this.delimiter = delimiter;
+        this.from = from;
+        this.gateways = gateways;
+        this.to = to;
+  }
 }

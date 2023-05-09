@@ -15,9 +15,11 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ErrorError error;
+
     public Error withError(ErrorError error) {
         this.error = error;
         return this;
     }
     
+    public Error(){}
 }

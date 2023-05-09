@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1CustomerConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedCustomerTypes")
     public GoogleCloudChannelV1CustomerConstraintsAllowedCustomerTypesEnum[] allowedCustomerTypes;
+
     public GoogleCloudChannelV1CustomerConstraints withAllowedCustomerTypes(GoogleCloudChannelV1CustomerConstraintsAllowedCustomerTypesEnum[] allowedCustomerTypes) {
         this.allowedCustomerTypes = allowedCustomerTypes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1CustomerConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedRegions")
     public String[] allowedRegions;
+
     public GoogleCloudChannelV1CustomerConstraints withAllowedRegions(String[] allowedRegions) {
         this.allowedRegions = allowedRegions;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudChannelV1CustomerConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionalOrderTypes")
     public GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnum[] promotionalOrderTypes;
+
     public GoogleCloudChannelV1CustomerConstraints withPromotionalOrderTypes(GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnum[] promotionalOrderTypes) {
         this.promotionalOrderTypes = promotionalOrderTypes;
         return this;
     }
     
+    public GoogleCloudChannelV1CustomerConstraints(){}
 }

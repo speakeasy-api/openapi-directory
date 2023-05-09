@@ -22,6 +22,7 @@ public class MarketingEventPublicReadResponse {
      */
     @JsonProperty("attendees")
     public Integer attendees;
+
     public MarketingEventPublicReadResponse withAttendees(Integer attendees) {
         this.attendees = attendees;
         return this;
@@ -32,6 +33,7 @@ public class MarketingEventPublicReadResponse {
      */
     @JsonProperty("cancellations")
     public Integer cancellations;
+
     public MarketingEventPublicReadResponse withCancellations(Integer cancellations) {
         this.cancellations = cancellations;
         return this;
@@ -41,6 +43,7 @@ public class MarketingEventPublicReadResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public MarketingEventPublicReadResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -54,6 +57,7 @@ public class MarketingEventPublicReadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customProperties")
     public PropertyValue[] customProperties;
+
     public MarketingEventPublicReadResponse withCustomProperties(PropertyValue[] customProperties) {
         this.customProperties = customProperties;
         return this;
@@ -67,6 +71,7 @@ public class MarketingEventPublicReadResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDateTime")
     public OffsetDateTime endDateTime;
+
     public MarketingEventPublicReadResponse withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -78,6 +83,7 @@ public class MarketingEventPublicReadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventCancelled")
     public Boolean eventCancelled;
+
     public MarketingEventPublicReadResponse withEventCancelled(Boolean eventCancelled) {
         this.eventCancelled = eventCancelled;
         return this;
@@ -89,6 +95,7 @@ public class MarketingEventPublicReadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventDescription")
     public String eventDescription;
+
     public MarketingEventPublicReadResponse withEventDescription(String eventDescription) {
         this.eventDescription = eventDescription;
         return this;
@@ -99,6 +106,7 @@ public class MarketingEventPublicReadResponse {
      */
     @JsonProperty("eventName")
     public String eventName;
+
     public MarketingEventPublicReadResponse withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -109,6 +117,7 @@ public class MarketingEventPublicReadResponse {
      */
     @JsonProperty("eventOrganizer")
     public String eventOrganizer;
+
     public MarketingEventPublicReadResponse withEventOrganizer(String eventOrganizer) {
         this.eventOrganizer = eventOrganizer;
         return this;
@@ -120,6 +129,7 @@ public class MarketingEventPublicReadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public String eventType;
+
     public MarketingEventPublicReadResponse withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -131,6 +141,7 @@ public class MarketingEventPublicReadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventUrl")
     public String eventUrl;
+
     public MarketingEventPublicReadResponse withEventUrl(String eventUrl) {
         this.eventUrl = eventUrl;
         return this;
@@ -141,6 +152,7 @@ public class MarketingEventPublicReadResponse {
      */
     @JsonProperty("externalEventId")
     public String externalEventId;
+
     public MarketingEventPublicReadResponse withExternalEventId(String externalEventId) {
         this.externalEventId = externalEventId;
         return this;
@@ -148,6 +160,7 @@ public class MarketingEventPublicReadResponse {
     
     @JsonProperty("id")
     public String id;
+
     public MarketingEventPublicReadResponse withId(String id) {
         this.id = id;
         return this;
@@ -158,6 +171,7 @@ public class MarketingEventPublicReadResponse {
      */
     @JsonProperty("noShows")
     public Integer noShows;
+
     public MarketingEventPublicReadResponse withNoShows(Integer noShows) {
         this.noShows = noShows;
         return this;
@@ -168,6 +182,7 @@ public class MarketingEventPublicReadResponse {
      */
     @JsonProperty("registrants")
     public Integer registrants;
+
     public MarketingEventPublicReadResponse withRegistrants(Integer registrants) {
         this.registrants = registrants;
         return this;
@@ -181,6 +196,7 @@ public class MarketingEventPublicReadResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public MarketingEventPublicReadResponse withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -190,9 +206,22 @@ public class MarketingEventPublicReadResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public MarketingEventPublicReadResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public MarketingEventPublicReadResponse(@JsonProperty("attendees") Integer attendees, @JsonProperty("cancellations") Integer cancellations, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("eventName") String eventName, @JsonProperty("eventOrganizer") String eventOrganizer, @JsonProperty("externalEventId") String externalEventId, @JsonProperty("id") String id, @JsonProperty("noShows") Integer noShows, @JsonProperty("registrants") Integer registrants, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.attendees = attendees;
+        this.cancellations = cancellations;
+        this.createdAt = createdAt;
+        this.eventName = eventName;
+        this.eventOrganizer = eventOrganizer;
+        this.externalEventId = externalEventId;
+        this.id = id;
+        this.noShows = noShows;
+        this.registrants = registrants;
+        this.updatedAt = updatedAt;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthNotifyJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05UsersAuthNotifyJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05UsersAuthNotifyJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05UsersAuthNotifyJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatientAuthNotification patientAuthNotification;
+
     public PostV05UsersAuthNotifyJsonRequest withPatientAuthNotification(org.openapis.openapi.models.shared.PatientAuthNotification patientAuthNotification) {
         this.patientAuthNotification = patientAuthNotification;
         return this;
@@ -29,6 +32,7 @@ public class PostV05UsersAuthNotifyJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
     public String xHipId;
+
     public PostV05UsersAuthNotifyJsonRequest withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
@@ -39,9 +43,16 @@ public class PostV05UsersAuthNotifyJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
     public String xHiuId;
+
     public PostV05UsersAuthNotifyJsonRequest withXHiuId(String xHiuId) {
         this.xHiuId = xHiuId;
         return this;
     }
     
+    public PostV05UsersAuthNotifyJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("PatientAuthNotification") org.openapis.openapi.models.shared.PatientAuthNotification patientAuthNotification, @JsonProperty("X-HIP-ID") String xHipId, @JsonProperty("X-HIU-ID") String xHiuId) {
+        this.authorization = authorization;
+        this.patientAuthNotification = patientAuthNotification;
+        this.xHipId = xHipId;
+        this.xHiuId = xHiuId;
+  }
 }

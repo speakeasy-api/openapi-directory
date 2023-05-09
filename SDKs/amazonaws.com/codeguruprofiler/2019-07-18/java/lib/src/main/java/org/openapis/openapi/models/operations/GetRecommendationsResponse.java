@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRecommendationsResponse {
     
     public String contentType;
+
     public GetRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRecommendationsResponse getRecommendationsResponse;
+
     public GetRecommendationsResponse withGetRecommendationsResponse(org.openapis.openapi.models.shared.GetRecommendationsResponse getRecommendationsResponse) {
         this.getRecommendationsResponse = getRecommendationsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetRecommendationsResponse {
      */
     
     public Object internalServerException;
+
     public GetRecommendationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetRecommendationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetRecommendationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public GetRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetRecommendationsResponse {
      */
     
     public Object throttlingException;
+
     public GetRecommendationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetRecommendationsResponse {
      */
     
     public Object validationException;
+
     public GetRecommendationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

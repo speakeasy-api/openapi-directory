@@ -18,9 +18,11 @@ public class DataprocMetricConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public Metric[] metrics;
+
     public DataprocMetricConfig withMetrics(Metric[] metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public DataprocMetricConfig(){}
 }

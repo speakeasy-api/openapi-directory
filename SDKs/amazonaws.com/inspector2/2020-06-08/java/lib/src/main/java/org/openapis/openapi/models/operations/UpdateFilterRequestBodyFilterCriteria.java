@@ -15,6 +15,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsAccountId")
     public org.openapis.openapi.models.shared.StringFilter[] awsAccountId;
+
     public UpdateFilterRequestBodyFilterCriteria withAwsAccountId(org.openapis.openapi.models.shared.StringFilter[] awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -23,6 +24,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentId")
     public org.openapis.openapi.models.shared.StringFilter[] componentId;
+
     public UpdateFilterRequestBodyFilterCriteria withComponentId(org.openapis.openapi.models.shared.StringFilter[] componentId) {
         this.componentId = componentId;
         return this;
@@ -31,6 +33,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentType")
     public org.openapis.openapi.models.shared.StringFilter[] componentType;
+
     public UpdateFilterRequestBodyFilterCriteria withComponentType(org.openapis.openapi.models.shared.StringFilter[] componentType) {
         this.componentType = componentType;
         return this;
@@ -39,6 +42,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2InstanceImageId")
     public org.openapis.openapi.models.shared.StringFilter[] ec2InstanceImageId;
+
     public UpdateFilterRequestBodyFilterCriteria withEc2InstanceImageId(org.openapis.openapi.models.shared.StringFilter[] ec2InstanceImageId) {
         this.ec2InstanceImageId = ec2InstanceImageId;
         return this;
@@ -47,6 +51,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2InstanceSubnetId")
     public org.openapis.openapi.models.shared.StringFilter[] ec2InstanceSubnetId;
+
     public UpdateFilterRequestBodyFilterCriteria withEc2InstanceSubnetId(org.openapis.openapi.models.shared.StringFilter[] ec2InstanceSubnetId) {
         this.ec2InstanceSubnetId = ec2InstanceSubnetId;
         return this;
@@ -55,6 +60,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2InstanceVpcId")
     public org.openapis.openapi.models.shared.StringFilter[] ec2InstanceVpcId;
+
     public UpdateFilterRequestBodyFilterCriteria withEc2InstanceVpcId(org.openapis.openapi.models.shared.StringFilter[] ec2InstanceVpcId) {
         this.ec2InstanceVpcId = ec2InstanceVpcId;
         return this;
@@ -63,6 +69,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecrImageArchitecture")
     public org.openapis.openapi.models.shared.StringFilter[] ecrImageArchitecture;
+
     public UpdateFilterRequestBodyFilterCriteria withEcrImageArchitecture(org.openapis.openapi.models.shared.StringFilter[] ecrImageArchitecture) {
         this.ecrImageArchitecture = ecrImageArchitecture;
         return this;
@@ -71,6 +78,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecrImageHash")
     public org.openapis.openapi.models.shared.StringFilter[] ecrImageHash;
+
     public UpdateFilterRequestBodyFilterCriteria withEcrImageHash(org.openapis.openapi.models.shared.StringFilter[] ecrImageHash) {
         this.ecrImageHash = ecrImageHash;
         return this;
@@ -79,6 +87,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecrImagePushedAt")
     public org.openapis.openapi.models.shared.DateFilter[] ecrImagePushedAt;
+
     public UpdateFilterRequestBodyFilterCriteria withEcrImagePushedAt(org.openapis.openapi.models.shared.DateFilter[] ecrImagePushedAt) {
         this.ecrImagePushedAt = ecrImagePushedAt;
         return this;
@@ -87,6 +96,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecrImageRegistry")
     public org.openapis.openapi.models.shared.StringFilter[] ecrImageRegistry;
+
     public UpdateFilterRequestBodyFilterCriteria withEcrImageRegistry(org.openapis.openapi.models.shared.StringFilter[] ecrImageRegistry) {
         this.ecrImageRegistry = ecrImageRegistry;
         return this;
@@ -95,6 +105,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecrImageRepositoryName")
     public org.openapis.openapi.models.shared.StringFilter[] ecrImageRepositoryName;
+
     public UpdateFilterRequestBodyFilterCriteria withEcrImageRepositoryName(org.openapis.openapi.models.shared.StringFilter[] ecrImageRepositoryName) {
         this.ecrImageRepositoryName = ecrImageRepositoryName;
         return this;
@@ -103,6 +114,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecrImageTags")
     public org.openapis.openapi.models.shared.StringFilter[] ecrImageTags;
+
     public UpdateFilterRequestBodyFilterCriteria withEcrImageTags(org.openapis.openapi.models.shared.StringFilter[] ecrImageTags) {
         this.ecrImageTags = ecrImageTags;
         return this;
@@ -111,6 +123,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exploitAvailable")
     public org.openapis.openapi.models.shared.StringFilter[] exploitAvailable;
+
     public UpdateFilterRequestBodyFilterCriteria withExploitAvailable(org.openapis.openapi.models.shared.StringFilter[] exploitAvailable) {
         this.exploitAvailable = exploitAvailable;
         return this;
@@ -119,6 +132,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingArn")
     public org.openapis.openapi.models.shared.StringFilter[] findingArn;
+
     public UpdateFilterRequestBodyFilterCriteria withFindingArn(org.openapis.openapi.models.shared.StringFilter[] findingArn) {
         this.findingArn = findingArn;
         return this;
@@ -127,6 +141,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingStatus")
     public org.openapis.openapi.models.shared.StringFilter[] findingStatus;
+
     public UpdateFilterRequestBodyFilterCriteria withFindingStatus(org.openapis.openapi.models.shared.StringFilter[] findingStatus) {
         this.findingStatus = findingStatus;
         return this;
@@ -135,6 +150,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingType")
     public org.openapis.openapi.models.shared.StringFilter[] findingType;
+
     public UpdateFilterRequestBodyFilterCriteria withFindingType(org.openapis.openapi.models.shared.StringFilter[] findingType) {
         this.findingType = findingType;
         return this;
@@ -143,6 +159,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstObservedAt")
     public org.openapis.openapi.models.shared.DateFilter[] firstObservedAt;
+
     public UpdateFilterRequestBodyFilterCriteria withFirstObservedAt(org.openapis.openapi.models.shared.DateFilter[] firstObservedAt) {
         this.firstObservedAt = firstObservedAt;
         return this;
@@ -151,6 +168,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixAvailable")
     public org.openapis.openapi.models.shared.StringFilter[] fixAvailable;
+
     public UpdateFilterRequestBodyFilterCriteria withFixAvailable(org.openapis.openapi.models.shared.StringFilter[] fixAvailable) {
         this.fixAvailable = fixAvailable;
         return this;
@@ -159,6 +177,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inspectorScore")
     public org.openapis.openapi.models.shared.NumberFilter[] inspectorScore;
+
     public UpdateFilterRequestBodyFilterCriteria withInspectorScore(org.openapis.openapi.models.shared.NumberFilter[] inspectorScore) {
         this.inspectorScore = inspectorScore;
         return this;
@@ -167,6 +186,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionExecutionRoleArn")
     public org.openapis.openapi.models.shared.StringFilter[] lambdaFunctionExecutionRoleArn;
+
     public UpdateFilterRequestBodyFilterCriteria withLambdaFunctionExecutionRoleArn(org.openapis.openapi.models.shared.StringFilter[] lambdaFunctionExecutionRoleArn) {
         this.lambdaFunctionExecutionRoleArn = lambdaFunctionExecutionRoleArn;
         return this;
@@ -175,6 +195,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionLastModifiedAt")
     public org.openapis.openapi.models.shared.DateFilter[] lambdaFunctionLastModifiedAt;
+
     public UpdateFilterRequestBodyFilterCriteria withLambdaFunctionLastModifiedAt(org.openapis.openapi.models.shared.DateFilter[] lambdaFunctionLastModifiedAt) {
         this.lambdaFunctionLastModifiedAt = lambdaFunctionLastModifiedAt;
         return this;
@@ -183,6 +204,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionLayers")
     public org.openapis.openapi.models.shared.StringFilter[] lambdaFunctionLayers;
+
     public UpdateFilterRequestBodyFilterCriteria withLambdaFunctionLayers(org.openapis.openapi.models.shared.StringFilter[] lambdaFunctionLayers) {
         this.lambdaFunctionLayers = lambdaFunctionLayers;
         return this;
@@ -191,6 +213,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionName")
     public org.openapis.openapi.models.shared.StringFilter[] lambdaFunctionName;
+
     public UpdateFilterRequestBodyFilterCriteria withLambdaFunctionName(org.openapis.openapi.models.shared.StringFilter[] lambdaFunctionName) {
         this.lambdaFunctionName = lambdaFunctionName;
         return this;
@@ -199,6 +222,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionRuntime")
     public org.openapis.openapi.models.shared.StringFilter[] lambdaFunctionRuntime;
+
     public UpdateFilterRequestBodyFilterCriteria withLambdaFunctionRuntime(org.openapis.openapi.models.shared.StringFilter[] lambdaFunctionRuntime) {
         this.lambdaFunctionRuntime = lambdaFunctionRuntime;
         return this;
@@ -207,6 +231,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastObservedAt")
     public org.openapis.openapi.models.shared.DateFilter[] lastObservedAt;
+
     public UpdateFilterRequestBodyFilterCriteria withLastObservedAt(org.openapis.openapi.models.shared.DateFilter[] lastObservedAt) {
         this.lastObservedAt = lastObservedAt;
         return this;
@@ -215,6 +240,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkProtocol")
     public org.openapis.openapi.models.shared.StringFilter[] networkProtocol;
+
     public UpdateFilterRequestBodyFilterCriteria withNetworkProtocol(org.openapis.openapi.models.shared.StringFilter[] networkProtocol) {
         this.networkProtocol = networkProtocol;
         return this;
@@ -223,6 +249,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portRange")
     public org.openapis.openapi.models.shared.PortRangeFilter[] portRange;
+
     public UpdateFilterRequestBodyFilterCriteria withPortRange(org.openapis.openapi.models.shared.PortRangeFilter[] portRange) {
         this.portRange = portRange;
         return this;
@@ -231,6 +258,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedVulnerabilities")
     public org.openapis.openapi.models.shared.StringFilter[] relatedVulnerabilities;
+
     public UpdateFilterRequestBodyFilterCriteria withRelatedVulnerabilities(org.openapis.openapi.models.shared.StringFilter[] relatedVulnerabilities) {
         this.relatedVulnerabilities = relatedVulnerabilities;
         return this;
@@ -239,6 +267,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public org.openapis.openapi.models.shared.StringFilter[] resourceId;
+
     public UpdateFilterRequestBodyFilterCriteria withResourceId(org.openapis.openapi.models.shared.StringFilter[] resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -247,6 +276,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceTags")
     public org.openapis.openapi.models.shared.MapFilter[] resourceTags;
+
     public UpdateFilterRequestBodyFilterCriteria withResourceTags(org.openapis.openapi.models.shared.MapFilter[] resourceTags) {
         this.resourceTags = resourceTags;
         return this;
@@ -255,6 +285,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public org.openapis.openapi.models.shared.StringFilter[] resourceType;
+
     public UpdateFilterRequestBodyFilterCriteria withResourceType(org.openapis.openapi.models.shared.StringFilter[] resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -263,6 +294,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public org.openapis.openapi.models.shared.StringFilter[] severity;
+
     public UpdateFilterRequestBodyFilterCriteria withSeverity(org.openapis.openapi.models.shared.StringFilter[] severity) {
         this.severity = severity;
         return this;
@@ -271,6 +303,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public org.openapis.openapi.models.shared.StringFilter[] title;
+
     public UpdateFilterRequestBodyFilterCriteria withTitle(org.openapis.openapi.models.shared.StringFilter[] title) {
         this.title = title;
         return this;
@@ -279,6 +312,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedAt")
     public org.openapis.openapi.models.shared.DateFilter[] updatedAt;
+
     public UpdateFilterRequestBodyFilterCriteria withUpdatedAt(org.openapis.openapi.models.shared.DateFilter[] updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -287,6 +321,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorSeverity")
     public org.openapis.openapi.models.shared.StringFilter[] vendorSeverity;
+
     public UpdateFilterRequestBodyFilterCriteria withVendorSeverity(org.openapis.openapi.models.shared.StringFilter[] vendorSeverity) {
         this.vendorSeverity = vendorSeverity;
         return this;
@@ -295,6 +330,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vulnerabilityId")
     public org.openapis.openapi.models.shared.StringFilter[] vulnerabilityId;
+
     public UpdateFilterRequestBodyFilterCriteria withVulnerabilityId(org.openapis.openapi.models.shared.StringFilter[] vulnerabilityId) {
         this.vulnerabilityId = vulnerabilityId;
         return this;
@@ -303,6 +339,7 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vulnerabilitySource")
     public org.openapis.openapi.models.shared.StringFilter[] vulnerabilitySource;
+
     public UpdateFilterRequestBodyFilterCriteria withVulnerabilitySource(org.openapis.openapi.models.shared.StringFilter[] vulnerabilitySource) {
         this.vulnerabilitySource = vulnerabilitySource;
         return this;
@@ -311,9 +348,11 @@ public class UpdateFilterRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vulnerablePackages")
     public org.openapis.openapi.models.shared.PackageFilter[] vulnerablePackages;
+
     public UpdateFilterRequestBodyFilterCriteria withVulnerablePackages(org.openapis.openapi.models.shared.PackageFilter[] vulnerablePackages) {
         this.vulnerablePackages = vulnerablePackages;
         return this;
     }
     
+    public UpdateFilterRequestBodyFilterCriteria(){}
 }

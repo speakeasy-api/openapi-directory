@@ -15,6 +15,7 @@ public class StepConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionOnFailure")
     public ActionOnFailureEnum actionOnFailure;
+
     public StepConfig withActionOnFailure(ActionOnFailureEnum actionOnFailure) {
         this.actionOnFailure = actionOnFailure;
         return this;
@@ -22,6 +23,7 @@ public class StepConfig {
     
     @JsonProperty("HadoopJarStep")
     public HadoopJarStepConfig hadoopJarStep;
+
     public StepConfig withHadoopJarStep(HadoopJarStepConfig hadoopJarStep) {
         this.hadoopJarStep = hadoopJarStep;
         return this;
@@ -29,9 +31,14 @@ public class StepConfig {
     
     @JsonProperty("Name")
     public String name;
+
     public StepConfig withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StepConfig(@JsonProperty("HadoopJarStep") HadoopJarStepConfig hadoopJarStep, @JsonProperty("Name") String name) {
+        this.hadoopJarStep = hadoopJarStep;
+        this.name = name;
+  }
 }

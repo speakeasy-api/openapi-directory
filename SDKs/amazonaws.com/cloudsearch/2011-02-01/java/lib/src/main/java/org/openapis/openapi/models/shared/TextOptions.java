@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TextOptions {
     
     public String defaultValue;
+
     public TextOptions withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -19,6 +20,7 @@ public class TextOptions {
     
     
     public Boolean facetEnabled;
+
     public TextOptions withFacetEnabled(Boolean facetEnabled) {
         this.facetEnabled = facetEnabled;
         return this;
@@ -26,6 +28,7 @@ public class TextOptions {
     
     
     public Boolean resultEnabled;
+
     public TextOptions withResultEnabled(Boolean resultEnabled) {
         this.resultEnabled = resultEnabled;
         return this;
@@ -33,9 +36,11 @@ public class TextOptions {
     
     
     public String textProcessor;
+
     public TextOptions withTextProcessor(String textProcessor) {
         this.textProcessor = textProcessor;
         return this;
     }
     
+    public TextOptions(){}
 }

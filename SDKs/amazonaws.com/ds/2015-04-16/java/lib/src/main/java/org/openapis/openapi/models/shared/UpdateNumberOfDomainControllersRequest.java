@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateNumberOfDomainControllersRequest {
     @JsonProperty("DesiredNumber")
     public Long desiredNumber;
+
     public UpdateNumberOfDomainControllersRequest withDesiredNumber(Long desiredNumber) {
         this.desiredNumber = desiredNumber;
         return this;
@@ -16,9 +17,14 @@ public class UpdateNumberOfDomainControllersRequest {
     
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public UpdateNumberOfDomainControllersRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     
+    public UpdateNumberOfDomainControllersRequest(@JsonProperty("DesiredNumber") Long desiredNumber, @JsonProperty("DirectoryId") String directoryId) {
+        this.desiredNumber = desiredNumber;
+        this.directoryId = directoryId;
+  }
 }

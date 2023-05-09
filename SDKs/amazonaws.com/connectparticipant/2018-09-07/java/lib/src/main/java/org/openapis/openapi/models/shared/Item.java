@@ -15,6 +15,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AbsoluteTime")
     public String absoluteTime;
+
     public Item withAbsoluteTime(String absoluteTime) {
         this.absoluteTime = absoluteTime;
         return this;
@@ -23,6 +24,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attachments")
     public AttachmentItem[] attachments;
+
     public Item withAttachments(AttachmentItem[] attachments) {
         this.attachments = attachments;
         return this;
@@ -31,6 +33,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactId")
     public String contactId;
+
     public Item withContactId(String contactId) {
         this.contactId = contactId;
         return this;
@@ -39,6 +42,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public String content;
+
     public Item withContent(String content) {
         this.content = content;
         return this;
@@ -47,6 +51,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentType")
     public String contentType;
+
     public Item withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -55,6 +60,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public Item withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -63,6 +69,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Item withId(String id) {
         this.id = id;
         return this;
@@ -71,6 +78,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageMetadata")
     public MessageMetadata messageMetadata;
+
     public Item withMessageMetadata(MessageMetadata messageMetadata) {
         this.messageMetadata = messageMetadata;
         return this;
@@ -79,6 +87,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParticipantId")
     public String participantId;
+
     public Item withParticipantId(String participantId) {
         this.participantId = participantId;
         return this;
@@ -87,6 +96,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParticipantRole")
     public ParticipantRoleEnum participantRole;
+
     public Item withParticipantRole(ParticipantRoleEnum participantRole) {
         this.participantRole = participantRole;
         return this;
@@ -95,6 +105,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelatedContactId")
     public String relatedContactId;
+
     public Item withRelatedContactId(String relatedContactId) {
         this.relatedContactId = relatedContactId;
         return this;
@@ -103,9 +114,11 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ChatItemTypeEnum type;
+
     public Item withType(ChatItemTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Item(){}
 }

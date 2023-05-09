@@ -12,9 +12,13 @@ public class AssociateRoleToGroupRequestBody {
      */
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public AssociateRoleToGroupRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public AssociateRoleToGroupRequestBody(@JsonProperty("RoleArn") String roleArn) {
+        this.roleArn = roleArn;
+  }
 }

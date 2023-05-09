@@ -15,9 +15,11 @@ public class PostCompile200ApplicationJSONResultAstPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public PostCompile200ApplicationJSONResultAstPackagePath[] path;
+
     public PostCompile200ApplicationJSONResultAstPackage withPath(PostCompile200ApplicationJSONResultAstPackagePath[] path) {
         this.path = path;
         return this;
     }
     
+    public PostCompile200ApplicationJSONResultAstPackage(){}
 }

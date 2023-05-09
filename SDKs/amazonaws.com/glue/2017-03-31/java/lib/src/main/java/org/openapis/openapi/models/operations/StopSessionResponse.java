@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopSessionResponse {
@@ -12,6 +13,7 @@ public class StopSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public StopSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StopSessionResponse {
      */
     
     public Object concurrentModificationException;
+
     public StopSessionResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class StopSessionResponse {
     
     
     public String contentType;
+
     public StopSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StopSessionResponse {
      */
     
     public Object illegalSessionStateException;
+
     public StopSessionResponse withIllegalSessionStateException(Object illegalSessionStateException) {
         this.illegalSessionStateException = illegalSessionStateException;
         return this;
@@ -49,6 +54,7 @@ public class StopSessionResponse {
      */
     
     public Object internalServiceException;
+
     public StopSessionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class StopSessionResponse {
      */
     
     public Object invalidInputException;
+
     public StopSessionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class StopSessionResponse {
      */
     
     public Object operationTimeoutException;
+
     public StopSessionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class StopSessionResponse {
     
     
     public Integer statusCode;
+
     public StopSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StopSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class StopSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.StopSessionResponse stopSessionResponse;
+
     public StopSessionResponse withStopSessionResponse(org.openapis.openapi.models.shared.StopSessionResponse stopSessionResponse) {
         this.stopSessionResponse = stopSessionResponse;
         return this;
     }
     
+    public StopSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

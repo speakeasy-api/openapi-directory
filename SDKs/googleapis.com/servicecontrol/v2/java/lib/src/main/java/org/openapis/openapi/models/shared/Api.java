@@ -18,6 +18,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public String operation;
+
     public Api withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -29,6 +30,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public String protocol;
+
     public Api withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -40,6 +42,7 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public Api withService(String service) {
         this.service = service;
         return this;
@@ -51,9 +54,11 @@ public class Api {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Api withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Api(){}
 }

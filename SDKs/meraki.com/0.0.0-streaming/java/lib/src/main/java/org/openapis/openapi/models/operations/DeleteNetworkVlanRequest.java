@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkVlanRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public DeleteNetworkVlanRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -16,9 +18,14 @@ public class DeleteNetworkVlanRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vlanId")
     public String vlanId;
+
     public DeleteNetworkVlanRequest withVlanId(String vlanId) {
         this.vlanId = vlanId;
         return this;
     }
     
+    public DeleteNetworkVlanRequest(@JsonProperty("networkId") String networkId, @JsonProperty("vlanId") String vlanId) {
+        this.networkId = networkId;
+        this.vlanId = vlanId;
+  }
 }

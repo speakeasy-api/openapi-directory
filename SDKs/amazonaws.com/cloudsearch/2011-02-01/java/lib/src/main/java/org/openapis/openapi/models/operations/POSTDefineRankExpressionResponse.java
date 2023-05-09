@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTDefineRankExpressionResponse {
     
     public byte[] body;
+
     public POSTDefineRankExpressionResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTDefineRankExpressionResponse {
     
     
     public String contentType;
+
     public POSTDefineRankExpressionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTDefineRankExpressionResponse {
     
     
     public Integer statusCode;
+
     public POSTDefineRankExpressionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTDefineRankExpressionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTDefineRankExpressionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTDefineRankExpressionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

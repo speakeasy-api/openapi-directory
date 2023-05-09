@@ -15,6 +15,7 @@ public class ListEventTypesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public org.openapis.openapi.models.shared.ListEventTypesFilter[] filters;
+
     public ListEventTypesRequestBody withFilters(org.openapis.openapi.models.shared.ListEventTypesFilter[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class ListEventTypesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListEventTypesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListEventTypesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEventTypesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEventTypesRequestBody(){}
 }

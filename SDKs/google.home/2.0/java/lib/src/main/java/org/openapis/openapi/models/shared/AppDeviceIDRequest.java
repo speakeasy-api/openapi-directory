@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppDeviceIDRequest {
     @JsonProperty("app_id")
     public String appId;
+
     public AppDeviceIDRequest withAppId(String appId) {
         this.appId = appId;
         return this;
     }
     
+    public AppDeviceIDRequest(@JsonProperty("app_id") String appId) {
+        this.appId = appId;
+  }
 }

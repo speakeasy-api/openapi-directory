@@ -15,6 +15,7 @@ public class CreateCostCategoryDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultValue")
     public String defaultValue;
+
     public CreateCostCategoryDefinitionRequest withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -23,6 +24,7 @@ public class CreateCostCategoryDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectiveStart")
     public String effectiveStart;
+
     public CreateCostCategoryDefinitionRequest withEffectiveStart(String effectiveStart) {
         this.effectiveStart = effectiveStart;
         return this;
@@ -33,6 +35,7 @@ public class CreateCostCategoryDefinitionRequest {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateCostCategoryDefinitionRequest withName(String name) {
         this.name = name;
         return this;
@@ -41,6 +44,7 @@ public class CreateCostCategoryDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTags")
     public ResourceTag[] resourceTags;
+
     public CreateCostCategoryDefinitionRequest withResourceTags(ResourceTag[] resourceTags) {
         this.resourceTags = resourceTags;
         return this;
@@ -51,6 +55,7 @@ public class CreateCostCategoryDefinitionRequest {
      */
     @JsonProperty("RuleVersion")
     public CostCategoryRuleVersionEnum ruleVersion;
+
     public CreateCostCategoryDefinitionRequest withRuleVersion(CostCategoryRuleVersionEnum ruleVersion) {
         this.ruleVersion = ruleVersion;
         return this;
@@ -58,6 +63,7 @@ public class CreateCostCategoryDefinitionRequest {
     
     @JsonProperty("Rules")
     public CostCategoryRule[] rules;
+
     public CreateCostCategoryDefinitionRequest withRules(CostCategoryRule[] rules) {
         this.rules = rules;
         return this;
@@ -66,9 +72,15 @@ public class CreateCostCategoryDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SplitChargeRules")
     public CostCategorySplitChargeRule[] splitChargeRules;
+
     public CreateCostCategoryDefinitionRequest withSplitChargeRules(CostCategorySplitChargeRule[] splitChargeRules) {
         this.splitChargeRules = splitChargeRules;
         return this;
     }
     
+    public CreateCostCategoryDefinitionRequest(@JsonProperty("Name") String name, @JsonProperty("RuleVersion") CostCategoryRuleVersionEnum ruleVersion, @JsonProperty("Rules") CostCategoryRule[] rules) {
+        this.name = name;
+        this.ruleVersion = ruleVersion;
+        this.rules = rules;
+  }
 }

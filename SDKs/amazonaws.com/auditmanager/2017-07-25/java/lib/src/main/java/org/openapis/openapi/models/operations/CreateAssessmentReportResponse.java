@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAssessmentReportResponse {
@@ -12,6 +13,7 @@ public class CreateAssessmentReportResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAssessmentReportResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateAssessmentReportResponse {
     
     
     public String contentType;
+
     public CreateAssessmentReportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateAssessmentReportResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAssessmentReportResponse createAssessmentReportResponse;
+
     public CreateAssessmentReportResponse withCreateAssessmentReportResponse(org.openapis.openapi.models.shared.CreateAssessmentReportResponse createAssessmentReportResponse) {
         this.createAssessmentReportResponse = createAssessmentReportResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateAssessmentReportResponse {
      */
     
     public Object internalServerException;
+
     public CreateAssessmentReportResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class CreateAssessmentReportResponse {
     
     
     public Integer statusCode;
+
     public CreateAssessmentReportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateAssessmentReportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAssessmentReportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateAssessmentReportResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAssessmentReportResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class CreateAssessmentReportResponse {
      */
     
     public Object validationException;
+
     public CreateAssessmentReportResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAssessmentReportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

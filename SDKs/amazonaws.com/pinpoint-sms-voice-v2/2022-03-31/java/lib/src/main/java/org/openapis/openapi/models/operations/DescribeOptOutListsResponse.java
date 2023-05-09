@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeOptOutListsResponse {
@@ -12,6 +13,7 @@ public class DescribeOptOutListsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeOptOutListsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeOptOutListsResponse {
     
     
     public String contentType;
+
     public DescribeOptOutListsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeOptOutListsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeOptOutListsResult describeOptOutListsResult;
+
     public DescribeOptOutListsResponse withDescribeOptOutListsResult(org.openapis.openapi.models.shared.DescribeOptOutListsResult describeOptOutListsResult) {
         this.describeOptOutListsResult = describeOptOutListsResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeOptOutListsResponse {
      */
     
     public Object internalServerException;
+
     public DescribeOptOutListsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeOptOutListsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeOptOutListsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeOptOutListsResponse {
     
     
     public Integer statusCode;
+
     public DescribeOptOutListsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeOptOutListsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeOptOutListsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeOptOutListsResponse {
      */
     
     public Object throttlingException;
+
     public DescribeOptOutListsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeOptOutListsResponse {
      */
     
     public Object validationException;
+
     public DescribeOptOutListsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeOptOutListsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

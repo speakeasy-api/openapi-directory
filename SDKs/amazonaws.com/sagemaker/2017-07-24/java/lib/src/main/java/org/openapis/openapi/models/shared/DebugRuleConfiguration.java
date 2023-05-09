@@ -15,6 +15,7 @@ public class DebugRuleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public ProcessingInstanceTypeEnum instanceType;
+
     public DebugRuleConfiguration withInstanceType(ProcessingInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -23,6 +24,7 @@ public class DebugRuleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalPath")
     public String localPath;
+
     public DebugRuleConfiguration withLocalPath(String localPath) {
         this.localPath = localPath;
         return this;
@@ -30,6 +32,7 @@ public class DebugRuleConfiguration {
     
     @JsonProperty("RuleConfigurationName")
     public String ruleConfigurationName;
+
     public DebugRuleConfiguration withRuleConfigurationName(String ruleConfigurationName) {
         this.ruleConfigurationName = ruleConfigurationName;
         return this;
@@ -37,6 +40,7 @@ public class DebugRuleConfiguration {
     
     @JsonProperty("RuleEvaluatorImage")
     public String ruleEvaluatorImage;
+
     public DebugRuleConfiguration withRuleEvaluatorImage(String ruleEvaluatorImage) {
         this.ruleEvaluatorImage = ruleEvaluatorImage;
         return this;
@@ -45,6 +49,7 @@ public class DebugRuleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleParameters")
     public java.util.Map<String, String> ruleParameters;
+
     public DebugRuleConfiguration withRuleParameters(java.util.Map<String, String> ruleParameters) {
         this.ruleParameters = ruleParameters;
         return this;
@@ -53,6 +58,7 @@ public class DebugRuleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3OutputPath")
     public String s3OutputPath;
+
     public DebugRuleConfiguration withS3OutputPath(String s3OutputPath) {
         this.s3OutputPath = s3OutputPath;
         return this;
@@ -61,9 +67,14 @@ public class DebugRuleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeSizeInGB")
     public Long volumeSizeInGB;
+
     public DebugRuleConfiguration withVolumeSizeInGB(Long volumeSizeInGB) {
         this.volumeSizeInGB = volumeSizeInGB;
         return this;
     }
     
+    public DebugRuleConfiguration(@JsonProperty("RuleConfigurationName") String ruleConfigurationName, @JsonProperty("RuleEvaluatorImage") String ruleEvaluatorImage) {
+        this.ruleConfigurationName = ruleConfigurationName;
+        this.ruleEvaluatorImage = ruleEvaluatorImage;
+  }
 }

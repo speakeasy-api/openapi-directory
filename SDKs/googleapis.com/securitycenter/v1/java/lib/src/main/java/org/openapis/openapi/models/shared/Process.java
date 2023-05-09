@@ -18,6 +18,7 @@ public class Process {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public String[] args;
+
     public Process withArgs(String[] args) {
         this.args = args;
         return this;
@@ -29,6 +30,7 @@ public class Process {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("argumentsTruncated")
     public Boolean argumentsTruncated;
+
     public Process withArgumentsTruncated(Boolean argumentsTruncated) {
         this.argumentsTruncated = argumentsTruncated;
         return this;
@@ -40,6 +42,7 @@ public class Process {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binary")
     public File binary;
+
     public Process withBinary(File binary) {
         this.binary = binary;
         return this;
@@ -51,6 +54,7 @@ public class Process {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("envVariables")
     public EnvironmentVariable[] envVariables;
+
     public Process withEnvVariables(EnvironmentVariable[] envVariables) {
         this.envVariables = envVariables;
         return this;
@@ -62,6 +66,7 @@ public class Process {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("envVariablesTruncated")
     public Boolean envVariablesTruncated;
+
     public Process withEnvVariablesTruncated(Boolean envVariablesTruncated) {
         this.envVariablesTruncated = envVariablesTruncated;
         return this;
@@ -73,39 +78,43 @@ public class Process {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("libraries")
     public File[] libraries;
+
     public Process withLibraries(File[] libraries) {
         this.libraries = libraries;
         return this;
     }
     
     /**
-     * The process name visible in utilities like `top` and `ps`; it can be accessed via `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
+     * The process name, as displayed in utilities like `top` and `ps`. This name can be accessed through `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Process withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     * The parent process id.
+     * The parent process ID.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentPid")
     public String parentPid;
+
     public Process withParentPid(String parentPid) {
         this.parentPid = parentPid;
         return this;
     }
     
     /**
-     * The process id.
+     * The process ID.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pid")
     public String pid;
+
     public Process withPid(String pid) {
         this.pid = pid;
         return this;
@@ -117,9 +126,11 @@ public class Process {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public File script;
+
     public Process withScript(File script) {
         this.script = script;
         return this;
     }
     
+    public Process(){}
 }

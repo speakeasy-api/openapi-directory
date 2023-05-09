@@ -15,6 +15,7 @@ public class ListShardsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListShardsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListShardsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Shards")
     public Shard[] shards;
+
     public ListShardsOutput withShards(Shard[] shards) {
         this.shards = shards;
         return this;
     }
     
+    public ListShardsOutput(){}
 }

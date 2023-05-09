@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResponse {
     
     public byte[] body;
+
     public GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResp
     
     
     public String contentType;
+
     public GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResp
     
     
     public Integer statusCode;
+
     public GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

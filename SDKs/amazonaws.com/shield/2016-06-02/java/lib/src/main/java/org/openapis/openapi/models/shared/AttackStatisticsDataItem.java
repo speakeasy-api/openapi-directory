@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttackStatisticsDataItem {
     @JsonProperty("AttackCount")
     public Long attackCount;
+
     public AttackStatisticsDataItem withAttackCount(Long attackCount) {
         this.attackCount = attackCount;
         return this;
@@ -22,9 +23,13 @@ public class AttackStatisticsDataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttackVolume")
     public AttackVolume attackVolume;
+
     public AttackStatisticsDataItem withAttackVolume(AttackVolume attackVolume) {
         this.attackVolume = attackVolume;
         return this;
     }
     
+    public AttackStatisticsDataItem(@JsonProperty("AttackCount") Long attackCount) {
+        this.attackCount = attackCount;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAssessmentTargetResponse {
@@ -12,6 +13,7 @@ public class UpdateAssessmentTargetResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAssessmentTargetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAssessmentTargetResponse {
     
     
     public String contentType;
+
     public UpdateAssessmentTargetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAssessmentTargetResponse {
      */
     
     public Object internalException;
+
     public UpdateAssessmentTargetResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAssessmentTargetResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateAssessmentTargetResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAssessmentTargetResponse {
      */
     
     public Object noSuchEntityException;
+
     public UpdateAssessmentTargetResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateAssessmentTargetResponse {
      */
     
     public Object serviceTemporarilyUnavailableException;
+
     public UpdateAssessmentTargetResponse withServiceTemporarilyUnavailableException(Object serviceTemporarilyUnavailableException) {
         this.serviceTemporarilyUnavailableException = serviceTemporarilyUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateAssessmentTargetResponse {
     
     
     public Integer statusCode;
+
     public UpdateAssessmentTargetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class UpdateAssessmentTargetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAssessmentTargetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateAssessmentTargetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

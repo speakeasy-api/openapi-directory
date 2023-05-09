@@ -53,10 +53,8 @@ public class Registrierkasse {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDEPResponse res = new org.openapis.openapi.models.operations.GetDEPResponse() {{
+        org.openapis.openapi.models.operations.GetDEPResponse res = new org.openapis.openapi.models.operations.GetDEPResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -86,11 +84,9 @@ public class Registrierkasse {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRegistrierkasseResponse res = new org.openapis.openapi.models.operations.GetRegistrierkasseResponse() {{
+        org.openapis.openapi.models.operations.GetRegistrierkasseResponse res = new org.openapis.openapi.models.operations.GetRegistrierkasseResponse(contentType, httpRes.statusCode()) {{
             registrierkasse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

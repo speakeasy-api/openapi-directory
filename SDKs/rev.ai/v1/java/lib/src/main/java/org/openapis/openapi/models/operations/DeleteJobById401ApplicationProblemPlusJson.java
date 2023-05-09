@@ -21,6 +21,7 @@ public class DeleteJobById401ApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public DeleteJobById401ApplicationProblemPlusJson withStatus(Long status) {
         this.status = status;
         return this;
@@ -32,9 +33,11 @@ public class DeleteJobById401ApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public DeleteJobById401ApplicationProblemPlusJson withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public DeleteJobById401ApplicationProblemPlusJson(){}
 }

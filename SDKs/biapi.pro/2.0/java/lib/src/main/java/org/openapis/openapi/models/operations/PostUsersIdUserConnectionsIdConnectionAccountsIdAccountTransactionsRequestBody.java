@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
@@ -14,6 +15,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
      */
     @SpeakeasyMetadata("multipartForm:name=active")
     public Boolean active;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -24,6 +26,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
      */
     @SpeakeasyMetadata("multipartForm:name=coming")
     public Boolean coming;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody withComing(Boolean coming) {
         this.coming = coming;
         return this;
@@ -34,6 +37,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
      */
     @SpeakeasyMetadata("multipartForm:name=date")
     public LocalDate date;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -44,6 +48,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
      */
     @SpeakeasyMetadata("multipartForm:name=date_scraped")
     public OffsetDateTime dateScraped;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody withDateScraped(OffsetDateTime dateScraped) {
         this.dateScraped = dateScraped;
         return this;
@@ -54,6 +59,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
      */
     @SpeakeasyMetadata("multipartForm:name=id_account")
     public Long idAccount;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody withIdAccount(Long idAccount) {
         this.idAccount = idAccount;
         return this;
@@ -64,6 +70,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
      */
     @SpeakeasyMetadata("multipartForm:name=original_wording")
     public String originalWording;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody withOriginalWording(String originalWording) {
         this.originalWording = originalWording;
         return this;
@@ -74,6 +81,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
      */
     @SpeakeasyMetadata("multipartForm:name=rdate")
     public LocalDate rdate;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody withRdate(LocalDate rdate) {
         this.rdate = rdate;
         return this;
@@ -84,6 +92,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
      */
     @SpeakeasyMetadata("multipartForm:name=state")
     public String state;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody withState(String state) {
         this.state = state;
         return this;
@@ -94,6 +103,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
      */
     @SpeakeasyMetadata("multipartForm:name=type")
     public String type;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody withType(String type) {
         this.type = type;
         return this;
@@ -104,9 +114,15 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactions
      */
     @SpeakeasyMetadata("multipartForm:name=value")
     public Long value;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody(@JsonProperty("date") LocalDate date, @JsonProperty("original_wording") String originalWording, @JsonProperty("value") Long value) {
+        this.date = date;
+        this.originalWording = originalWording;
+        this.value = value;
+  }
 }

@@ -16,6 +16,7 @@ public class TimeMachineTimeMachineCloudCoverData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("high")
     public Long high;
+
     public TimeMachineTimeMachineCloudCoverData withHigh(Long high) {
         this.high = high;
         return this;
@@ -28,6 +29,7 @@ public class TimeMachineTimeMachineCloudCoverData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("low")
     public Long low;
+
     public TimeMachineTimeMachineCloudCoverData withLow(Long low) {
         this.low = low;
         return this;
@@ -40,6 +42,7 @@ public class TimeMachineTimeMachineCloudCoverData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middle")
     public Long middle;
+
     public TimeMachineTimeMachineCloudCoverData withMiddle(Long middle) {
         this.middle = middle;
         return this;
@@ -52,9 +55,11 @@ public class TimeMachineTimeMachineCloudCoverData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public TimeMachineTimeMachineCloudCoverData withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public TimeMachineTimeMachineCloudCoverData(){}
 }

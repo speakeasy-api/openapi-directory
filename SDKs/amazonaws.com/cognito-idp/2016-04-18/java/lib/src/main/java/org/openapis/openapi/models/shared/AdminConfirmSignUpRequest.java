@@ -15,6 +15,7 @@ public class AdminConfirmSignUpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientMetadata")
     public java.util.Map<String, String> clientMetadata;
+
     public AdminConfirmSignUpRequest withClientMetadata(java.util.Map<String, String> clientMetadata) {
         this.clientMetadata = clientMetadata;
         return this;
@@ -22,6 +23,7 @@ public class AdminConfirmSignUpRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminConfirmSignUpRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -29,9 +31,14 @@ public class AdminConfirmSignUpRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public AdminConfirmSignUpRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AdminConfirmSignUpRequest(@JsonProperty("UserPoolId") String userPoolId, @JsonProperty("Username") String username) {
+        this.userPoolId = userPoolId;
+        this.username = username;
+  }
 }

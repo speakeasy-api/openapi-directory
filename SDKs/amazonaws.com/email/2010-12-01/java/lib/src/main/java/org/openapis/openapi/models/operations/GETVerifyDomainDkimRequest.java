@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETVerifyDomainDkimRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETVerifyDomainDkimActionEnum action;
+
     public GETVerifyDomainDkimRequest withAction(GETVerifyDomainDkimActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETVerifyDomainDkimRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Domain")
     public String domain;
+
     public GETVerifyDomainDkimRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -26,6 +29,7 @@ public class GETVerifyDomainDkimRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETVerifyDomainDkimVersionEnum version;
+
     public GETVerifyDomainDkimRequest withVersion(GETVerifyDomainDkimVersionEnum version) {
         this.version = version;
         return this;
@@ -33,6 +37,7 @@ public class GETVerifyDomainDkimRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETVerifyDomainDkimRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -40,6 +45,7 @@ public class GETVerifyDomainDkimRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETVerifyDomainDkimRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -47,6 +53,7 @@ public class GETVerifyDomainDkimRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETVerifyDomainDkimRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -54,6 +61,7 @@ public class GETVerifyDomainDkimRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETVerifyDomainDkimRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -61,6 +69,7 @@ public class GETVerifyDomainDkimRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETVerifyDomainDkimRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -68,6 +77,7 @@ public class GETVerifyDomainDkimRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETVerifyDomainDkimRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -75,9 +85,15 @@ public class GETVerifyDomainDkimRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETVerifyDomainDkimRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETVerifyDomainDkimRequest(@JsonProperty("Action") GETVerifyDomainDkimActionEnum action, @JsonProperty("Domain") String domain, @JsonProperty("Version") GETVerifyDomainDkimVersionEnum version) {
+        this.action = action;
+        this.domain = domain;
+        this.version = version;
+  }
 }

@@ -15,6 +15,7 @@ public class ListVirtualServicesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListVirtualServicesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListVirtualServicesOutput {
     
     @JsonProperty("virtualServices")
     public VirtualServiceRef[] virtualServices;
+
     public ListVirtualServicesOutput withVirtualServices(VirtualServiceRef[] virtualServices) {
         this.virtualServices = virtualServices;
         return this;
     }
     
+    public ListVirtualServicesOutput(@JsonProperty("virtualServices") VirtualServiceRef[] virtualServices) {
+        this.virtualServices = virtualServices;
+  }
 }

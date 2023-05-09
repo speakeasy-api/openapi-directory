@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateStoreImageTaskResult {
     
     public String objectKey;
+
     public CreateStoreImageTaskResult withObjectKey(String objectKey) {
         this.objectKey = objectKey;
         return this;
     }
     
+    public CreateStoreImageTaskResult(){}
 }

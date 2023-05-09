@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedInstancesOfferingsRequest {
     
     public String availabilityZone;
+
     public DescribeReservedInstancesOfferingsRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class DescribeReservedInstancesOfferingsRequest {
     
     
     public Boolean dryRun;
+
     public DescribeReservedInstancesOfferingsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,6 +28,7 @@ public class DescribeReservedInstancesOfferingsRequest {
     
     
     public DescribeReservedInstancesOfferingsRequestFilters[] filters;
+
     public DescribeReservedInstancesOfferingsRequest withFilters(DescribeReservedInstancesOfferingsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -33,6 +36,7 @@ public class DescribeReservedInstancesOfferingsRequest {
     
     
     public Boolean includeMarketplace;
+
     public DescribeReservedInstancesOfferingsRequest withIncludeMarketplace(Boolean includeMarketplace) {
         this.includeMarketplace = includeMarketplace;
         return this;
@@ -40,6 +44,7 @@ public class DescribeReservedInstancesOfferingsRequest {
     
     
     public DescribeReservedInstancesOfferingsRequestInstanceTenancyEnum instanceTenancy;
+
     public DescribeReservedInstancesOfferingsRequest withInstanceTenancy(DescribeReservedInstancesOfferingsRequestInstanceTenancyEnum instanceTenancy) {
         this.instanceTenancy = instanceTenancy;
         return this;
@@ -47,6 +52,7 @@ public class DescribeReservedInstancesOfferingsRequest {
     
     
     public InstanceTypeEnum instanceType;
+
     public DescribeReservedInstancesOfferingsRequest withInstanceType(InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -54,6 +60,7 @@ public class DescribeReservedInstancesOfferingsRequest {
     
     
     public Long maxDuration;
+
     public DescribeReservedInstancesOfferingsRequest withMaxDuration(Long maxDuration) {
         this.maxDuration = maxDuration;
         return this;
@@ -61,6 +68,7 @@ public class DescribeReservedInstancesOfferingsRequest {
     
     
     public Long maxInstanceCount;
+
     public DescribeReservedInstancesOfferingsRequest withMaxInstanceCount(Long maxInstanceCount) {
         this.maxInstanceCount = maxInstanceCount;
         return this;
@@ -68,6 +76,7 @@ public class DescribeReservedInstancesOfferingsRequest {
     
     
     public Long maxResults;
+
     public DescribeReservedInstancesOfferingsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -75,6 +84,7 @@ public class DescribeReservedInstancesOfferingsRequest {
     
     
     public Long minDuration;
+
     public DescribeReservedInstancesOfferingsRequest withMinDuration(Long minDuration) {
         this.minDuration = minDuration;
         return this;
@@ -82,6 +92,7 @@ public class DescribeReservedInstancesOfferingsRequest {
     
     
     public String nextToken;
+
     public DescribeReservedInstancesOfferingsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -89,6 +100,7 @@ public class DescribeReservedInstancesOfferingsRequest {
     
     
     public OfferingClassTypeEnum offeringClass;
+
     public DescribeReservedInstancesOfferingsRequest withOfferingClass(OfferingClassTypeEnum offeringClass) {
         this.offeringClass = offeringClass;
         return this;
@@ -96,6 +108,7 @@ public class DescribeReservedInstancesOfferingsRequest {
     
     
     public DescribeReservedInstancesOfferingsRequestOfferingTypeEnum offeringType;
+
     public DescribeReservedInstancesOfferingsRequest withOfferingType(DescribeReservedInstancesOfferingsRequestOfferingTypeEnum offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -103,6 +116,7 @@ public class DescribeReservedInstancesOfferingsRequest {
     
     
     public RIProductDescriptionEnum productDescription;
+
     public DescribeReservedInstancesOfferingsRequest withProductDescription(RIProductDescriptionEnum productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -110,9 +124,11 @@ public class DescribeReservedInstancesOfferingsRequest {
     
     
     public String[] reservedInstancesOfferingIds;
+
     public DescribeReservedInstancesOfferingsRequest withReservedInstancesOfferingIds(String[] reservedInstancesOfferingIds) {
         this.reservedInstancesOfferingIds = reservedInstancesOfferingIds;
         return this;
     }
     
+    public DescribeReservedInstancesOfferingsRequest(){}
 }

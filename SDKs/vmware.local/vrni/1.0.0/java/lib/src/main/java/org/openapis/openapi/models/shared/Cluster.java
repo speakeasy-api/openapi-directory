@@ -15,6 +15,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public Cluster withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -23,6 +24,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public Cluster withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -31,6 +33,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Cluster withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nsx_manager")
     public Reference nsxManager;
+
     public Cluster withNsxManager(Reference nsxManager) {
         this.nsxManager = nsxManager;
         return this;
@@ -47,6 +51,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_cpu_cores")
     public Integer numCpuCores;
+
     public Cluster withNumCpuCores(Integer numCpuCores) {
         this.numCpuCores = numCpuCores;
         return this;
@@ -55,6 +60,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_datastores")
     public Integer numDatastores;
+
     public Cluster withNumDatastores(Integer numDatastores) {
         this.numDatastores = numDatastores;
         return this;
@@ -63,6 +69,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_hosts")
     public Integer numHosts;
+
     public Cluster withNumHosts(Integer numHosts) {
         this.numHosts = numHosts;
         return this;
@@ -71,6 +78,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_cpus")
     public Integer totalCpus;
+
     public Cluster withTotalCpus(Integer totalCpus) {
         this.totalCpus = totalCpus;
         return this;
@@ -79,6 +87,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_memory")
     public Long totalMemory;
+
     public Cluster withTotalMemory(Long totalMemory) {
         this.totalMemory = totalMemory;
         return this;
@@ -87,6 +96,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcenter_manager")
     public Reference vcenterManager;
+
     public Cluster withVcenterManager(Reference vcenterManager) {
         this.vcenterManager = vcenterManager;
         return this;
@@ -95,9 +105,11 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_id")
     public String vendorId;
+
     public Cluster withVendorId(String vendorId) {
         this.vendorId = vendorId;
         return this;
     }
     
+    public Cluster(){}
 }

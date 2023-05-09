@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResponseOkHttpUrl {
     @JsonProperty("results")
     public String results;
+
     public ResponseOkHttpUrl withResults(String results) {
         this.results = results;
         return this;
     }
     
+    public ResponseOkHttpUrl(@JsonProperty("results") String results) {
+        this.results = results;
+  }
 }

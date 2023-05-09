@@ -12,9 +12,13 @@ public class UpdateDatalakeExceptionsExpiryRequestBody {
      */
     @JsonProperty("exceptionMessageExpiry")
     public Long exceptionMessageExpiry;
+
     public UpdateDatalakeExceptionsExpiryRequestBody withExceptionMessageExpiry(Long exceptionMessageExpiry) {
         this.exceptionMessageExpiry = exceptionMessageExpiry;
         return this;
     }
     
+    public UpdateDatalakeExceptionsExpiryRequestBody(@JsonProperty("exceptionMessageExpiry") Long exceptionMessageExpiry) {
+        this.exceptionMessageExpiry = exceptionMessageExpiry;
+  }
 }

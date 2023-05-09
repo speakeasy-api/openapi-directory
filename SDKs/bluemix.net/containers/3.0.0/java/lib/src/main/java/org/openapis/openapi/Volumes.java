@@ -60,10 +60,8 @@ public class Volumes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVolumesNameResponse res = new org.openapis.openapi.models.operations.DeleteVolumesNameResponse() {{
+        org.openapis.openapi.models.operations.DeleteVolumesNameResponse res = new org.openapis.openapi.models.operations.DeleteVolumesNameResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -101,11 +99,9 @@ public class Volumes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVolumesJsonResponse res = new org.openapis.openapi.models.operations.GetVolumesJsonResponse() {{
+        org.openapis.openapi.models.operations.GetVolumesJsonResponse res = new org.openapis.openapi.models.operations.GetVolumesJsonResponse(contentType, httpRes.statusCode()) {{
             volumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Volumes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVolumesNameJsonResponse res = new org.openapis.openapi.models.operations.GetVolumesNameJsonResponse() {{
+        org.openapis.openapi.models.operations.GetVolumesNameJsonResponse res = new org.openapis.openapi.models.operations.GetVolumesNameJsonResponse(contentType, httpRes.statusCode()) {{
             volume = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -209,11 +203,9 @@ public class Volumes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostVolumesCreateResponse res = new org.openapis.openapi.models.operations.PostVolumesCreateResponse() {{
+        org.openapis.openapi.models.operations.PostVolumesCreateResponse res = new org.openapis.openapi.models.operations.PostVolumesCreateResponse(contentType, httpRes.statusCode()) {{
             volume = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -263,11 +255,9 @@ public class Volumes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostVolumesNameResponse res = new org.openapis.openapi.models.operations.PostVolumesNameResponse() {{
+        org.openapis.openapi.models.operations.PostVolumesNameResponse res = new org.openapis.openapi.models.operations.PostVolumesNameResponse(contentType, httpRes.statusCode()) {{
             volume = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

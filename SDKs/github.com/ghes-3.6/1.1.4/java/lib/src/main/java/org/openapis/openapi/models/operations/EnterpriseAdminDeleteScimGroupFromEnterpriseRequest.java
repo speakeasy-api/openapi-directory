@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDeleteScimGroupFromEnterpriseRequest {
@@ -12,9 +13,13 @@ public class EnterpriseAdminDeleteScimGroupFromEnterpriseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scim_group_id")
     public String scimGroupId;
+
     public EnterpriseAdminDeleteScimGroupFromEnterpriseRequest withScimGroupId(String scimGroupId) {
         this.scimGroupId = scimGroupId;
         return this;
     }
     
+    public EnterpriseAdminDeleteScimGroupFromEnterpriseRequest(@JsonProperty("scim_group_id") String scimGroupId) {
+        this.scimGroupId = scimGroupId;
+  }
 }

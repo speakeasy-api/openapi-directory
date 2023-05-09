@@ -15,9 +15,11 @@ public class AwsElbLoadBalancerCrossZoneLoadBalancing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public AwsElbLoadBalancerCrossZoneLoadBalancing withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public AwsElbLoadBalancerCrossZoneLoadBalancing(){}
 }

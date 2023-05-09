@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopConfigurationRecorderResponse {
     
     public String contentType;
+
     public StopConfigurationRecorderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopConfigurationRecorderResponse {
      */
     
     public Object noSuchConfigurationRecorderException;
+
     public StopConfigurationRecorderResponse withNoSuchConfigurationRecorderException(Object noSuchConfigurationRecorderException) {
         this.noSuchConfigurationRecorderException = noSuchConfigurationRecorderException;
         return this;
@@ -26,6 +29,7 @@ public class StopConfigurationRecorderResponse {
     
     
     public Integer statusCode;
+
     public StopConfigurationRecorderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class StopConfigurationRecorderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopConfigurationRecorderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StopConfigurationRecorderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

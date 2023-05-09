@@ -15,6 +15,7 @@ public class GetContactReachabilityStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public GetContactReachabilityStatusResponse withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -23,9 +24,11 @@ public class GetContactReachabilityStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ReachabilityStatusEnum status;
+
     public GetContactReachabilityStatusResponse withStatus(ReachabilityStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetContactReachabilityStatusResponse(){}
 }

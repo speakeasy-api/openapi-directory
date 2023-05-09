@@ -12,6 +12,7 @@ public class VMwareCredentialFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insecure")
     public String insecure;
+
     public VMwareCredentialFields withInsecure(String insecure) {
         this.insecure = insecure;
         return this;
@@ -19,6 +20,7 @@ public class VMwareCredentialFields {
     
     @JsonProperty("password")
     public String password;
+
     public VMwareCredentialFields withPassword(String password) {
         this.password = password;
         return this;
@@ -27,6 +29,7 @@ public class VMwareCredentialFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbprints")
     public String thumbprints;
+
     public VMwareCredentialFields withThumbprints(String thumbprints) {
         this.thumbprints = thumbprints;
         return this;
@@ -34,9 +37,14 @@ public class VMwareCredentialFields {
     
     @JsonProperty("username")
     public String username;
+
     public VMwareCredentialFields withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public VMwareCredentialFields(@JsonProperty("username") String username, @JsonProperty("password") String password) {
+        this.username = username;
+        this.password = password;
+  }
 }

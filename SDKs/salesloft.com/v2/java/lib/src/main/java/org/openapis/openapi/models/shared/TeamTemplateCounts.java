@@ -12,6 +12,7 @@ public class TeamTemplateCounts {
      */
     
     public Long bounces;
+
     public TeamTemplateCounts withBounces(Long bounces) {
         this.bounces = bounces;
         return this;
@@ -22,6 +23,7 @@ public class TeamTemplateCounts {
      */
     
     public Long clicks;
+
     public TeamTemplateCounts withClicks(Long clicks) {
         this.clicks = clicks;
         return this;
@@ -32,6 +34,7 @@ public class TeamTemplateCounts {
      */
     
     public Long replies;
+
     public TeamTemplateCounts withReplies(Long replies) {
         this.replies = replies;
         return this;
@@ -42,6 +45,7 @@ public class TeamTemplateCounts {
      */
     
     public Long sentEmails;
+
     public TeamTemplateCounts withSentEmails(Long sentEmails) {
         this.sentEmails = sentEmails;
         return this;
@@ -52,9 +56,11 @@ public class TeamTemplateCounts {
      */
     
     public Long views;
+
     public TeamTemplateCounts withViews(Long views) {
         this.views = views;
         return this;
     }
     
+    public TeamTemplateCounts(){}
 }

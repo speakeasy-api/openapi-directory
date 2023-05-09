@@ -15,6 +15,7 @@ public class RecommenderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemExplorationConfig")
     public java.util.Map<String, String> itemExplorationConfig;
+
     public RecommenderConfig withItemExplorationConfig(java.util.Map<String, String> itemExplorationConfig) {
         this.itemExplorationConfig = itemExplorationConfig;
         return this;
@@ -23,9 +24,11 @@ public class RecommenderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minRecommendationRequestsPerSecond")
     public Long minRecommendationRequestsPerSecond;
+
     public RecommenderConfig withMinRecommendationRequestsPerSecond(Long minRecommendationRequestsPerSecond) {
         this.minRecommendationRequestsPerSecond = minRecommendationRequestsPerSecond;
         return this;
     }
     
+    public RecommenderConfig(){}
 }

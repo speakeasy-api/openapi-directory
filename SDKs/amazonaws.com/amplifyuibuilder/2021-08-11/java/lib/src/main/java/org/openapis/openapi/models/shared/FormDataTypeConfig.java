@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FormDataTypeConfig {
     @JsonProperty("dataSourceType")
     public FormDataSourceTypeEnum dataSourceType;
+
     public FormDataTypeConfig withDataSourceType(FormDataSourceTypeEnum dataSourceType) {
         this.dataSourceType = dataSourceType;
         return this;
@@ -19,9 +20,14 @@ public class FormDataTypeConfig {
     
     @JsonProperty("dataTypeName")
     public String dataTypeName;
+
     public FormDataTypeConfig withDataTypeName(String dataTypeName) {
         this.dataTypeName = dataTypeName;
         return this;
     }
     
+    public FormDataTypeConfig(@JsonProperty("dataSourceType") FormDataSourceTypeEnum dataSourceType, @JsonProperty("dataTypeName") String dataTypeName) {
+        this.dataSourceType = dataSourceType;
+        this.dataTypeName = dataTypeName;
+  }
 }

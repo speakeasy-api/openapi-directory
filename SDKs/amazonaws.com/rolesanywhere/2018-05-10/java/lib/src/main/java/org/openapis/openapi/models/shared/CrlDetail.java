@@ -22,6 +22,7 @@ public class CrlDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CrlDetail withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class CrlDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crlArn")
     public String crlArn;
+
     public CrlDetail withCrlArn(String crlArn) {
         this.crlArn = crlArn;
         return this;
@@ -38,6 +40,7 @@ public class CrlDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crlData")
     public String crlData;
+
     public CrlDetail withCrlData(String crlData) {
         this.crlData = crlData;
         return this;
@@ -46,6 +49,7 @@ public class CrlDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crlId")
     public String crlId;
+
     public CrlDetail withCrlId(String crlId) {
         this.crlId = crlId;
         return this;
@@ -54,6 +58,7 @@ public class CrlDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CrlDetail withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -62,6 +67,7 @@ public class CrlDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CrlDetail withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +76,7 @@ public class CrlDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustAnchorArn")
     public String trustAnchorArn;
+
     public CrlDetail withTrustAnchorArn(String trustAnchorArn) {
         this.trustAnchorArn = trustAnchorArn;
         return this;
@@ -80,9 +87,11 @@ public class CrlDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public CrlDetail withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CrlDetail(){}
 }

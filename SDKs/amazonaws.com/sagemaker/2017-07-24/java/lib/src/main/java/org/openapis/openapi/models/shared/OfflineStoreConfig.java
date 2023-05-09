@@ -15,6 +15,7 @@ public class OfflineStoreConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCatalogConfig")
     public DataCatalogConfig dataCatalogConfig;
+
     public OfflineStoreConfig withDataCatalogConfig(DataCatalogConfig dataCatalogConfig) {
         this.dataCatalogConfig = dataCatalogConfig;
         return this;
@@ -23,6 +24,7 @@ public class OfflineStoreConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableGlueTableCreation")
     public Boolean disableGlueTableCreation;
+
     public OfflineStoreConfig withDisableGlueTableCreation(Boolean disableGlueTableCreation) {
         this.disableGlueTableCreation = disableGlueTableCreation;
         return this;
@@ -30,6 +32,7 @@ public class OfflineStoreConfig {
     
     @JsonProperty("S3StorageConfig")
     public S3StorageConfig s3StorageConfig;
+
     public OfflineStoreConfig withS3StorageConfig(S3StorageConfig s3StorageConfig) {
         this.s3StorageConfig = s3StorageConfig;
         return this;
@@ -38,9 +41,13 @@ public class OfflineStoreConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableFormat")
     public TableFormatEnum tableFormat;
+
     public OfflineStoreConfig withTableFormat(TableFormatEnum tableFormat) {
         this.tableFormat = tableFormat;
         return this;
     }
     
+    public OfflineStoreConfig(@JsonProperty("S3StorageConfig") S3StorageConfig s3StorageConfig) {
+        this.s3StorageConfig = s3StorageConfig;
+  }
 }

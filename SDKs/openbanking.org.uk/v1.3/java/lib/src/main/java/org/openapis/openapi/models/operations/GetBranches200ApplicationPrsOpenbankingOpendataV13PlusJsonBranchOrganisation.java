@@ -15,6 +15,7 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrg
      */
     @JsonProperty("Brand")
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationBrand brand;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisation withBrand(GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationBrand brand) {
         this.brand = brand;
         return this;
@@ -25,9 +26,14 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrg
      */
     @JsonProperty("ParentOrganisation")
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationParentOrganisation parentOrganisation;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisation withParentOrganisation(GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationParentOrganisation parentOrganisation) {
         this.parentOrganisation = parentOrganisation;
         return this;
     }
     
+    public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisation(@JsonProperty("Brand") GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationBrand brand, @JsonProperty("ParentOrganisation") GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationParentOrganisation parentOrganisation) {
+        this.brand = brand;
+        this.parentOrganisation = parentOrganisation;
+  }
 }

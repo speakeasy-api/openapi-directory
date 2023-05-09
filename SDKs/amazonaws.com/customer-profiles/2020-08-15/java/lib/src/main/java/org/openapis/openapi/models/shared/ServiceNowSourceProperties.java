@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ServiceNowSourceProperties {
     @JsonProperty("Object")
     public String object;
+
     public ServiceNowSourceProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public ServiceNowSourceProperties(@JsonProperty("Object") String object) {
+        this.object = object;
+  }
 }

@@ -12,6 +12,7 @@ public class OrganizationFullPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filled_seats")
     public Long filledSeats;
+
     public OrganizationFullPlan withFilledSeats(Long filledSeats) {
         this.filledSeats = filledSeats;
         return this;
@@ -19,6 +20,7 @@ public class OrganizationFullPlan {
     
     @JsonProperty("name")
     public String name;
+
     public OrganizationFullPlan withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class OrganizationFullPlan {
     
     @JsonProperty("private_repos")
     public Long privateRepos;
+
     public OrganizationFullPlan withPrivateRepos(Long privateRepos) {
         this.privateRepos = privateRepos;
         return this;
@@ -34,6 +37,7 @@ public class OrganizationFullPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seats")
     public Long seats;
+
     public OrganizationFullPlan withSeats(Long seats) {
         this.seats = seats;
         return this;
@@ -41,9 +45,15 @@ public class OrganizationFullPlan {
     
     @JsonProperty("space")
     public Long space;
+
     public OrganizationFullPlan withSpace(Long space) {
         this.space = space;
         return this;
     }
     
+    public OrganizationFullPlan(@JsonProperty("name") String name, @JsonProperty("private_repos") Long privateRepos, @JsonProperty("space") Long space) {
+        this.name = name;
+        this.privateRepos = privateRepos;
+        this.space = space;
+  }
 }

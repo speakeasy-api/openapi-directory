@@ -15,6 +15,7 @@ public class DescribeCasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cases")
     public CaseDetails[] cases;
+
     public DescribeCasesResponse withCases(CaseDetails[] cases) {
         this.cases = cases;
         return this;
@@ -23,9 +24,11 @@ public class DescribeCasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeCasesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeCasesResponse(){}
 }

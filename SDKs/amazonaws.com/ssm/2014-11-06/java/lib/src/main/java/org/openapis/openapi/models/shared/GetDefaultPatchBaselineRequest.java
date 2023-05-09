@@ -12,9 +12,11 @@ public class GetDefaultPatchBaselineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystem")
     public OperatingSystemEnum operatingSystem;
+
     public GetDefaultPatchBaselineRequest withOperatingSystem(OperatingSystemEnum operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
     }
     
+    public GetDefaultPatchBaselineRequest(){}
 }

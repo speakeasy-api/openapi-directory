@@ -18,6 +18,7 @@ public class Rollout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Rollout withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Rollout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public Rollout withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -40,6 +42,7 @@ public class Rollout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteServiceStrategy")
     public java.util.Map<String, Object> deleteServiceStrategy;
+
     public Rollout withDeleteServiceStrategy(java.util.Map<String, Object> deleteServiceStrategy) {
         this.deleteServiceStrategy = deleteServiceStrategy;
         return this;
@@ -51,6 +54,7 @@ public class Rollout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutId")
     public String rolloutId;
+
     public Rollout withRolloutId(String rolloutId) {
         this.rolloutId = rolloutId;
         return this;
@@ -62,6 +66,7 @@ public class Rollout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public Rollout withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -73,6 +78,7 @@ public class Rollout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RolloutStatusEnum status;
+
     public Rollout withStatus(RolloutStatusEnum status) {
         this.status = status;
         return this;
@@ -84,9 +90,11 @@ public class Rollout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trafficPercentStrategy")
     public TrafficPercentStrategy trafficPercentStrategy;
+
     public Rollout withTrafficPercentStrategy(TrafficPercentStrategy trafficPercentStrategy) {
         this.trafficPercentStrategy = trafficPercentStrategy;
         return this;
     }
     
+    public Rollout(){}
 }

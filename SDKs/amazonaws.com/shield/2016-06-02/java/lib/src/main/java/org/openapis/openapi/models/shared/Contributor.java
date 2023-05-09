@@ -15,6 +15,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Contributor withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Long value;
+
     public Contributor withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public Contributor(){}
 }

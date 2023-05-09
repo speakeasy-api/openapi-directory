@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureHttp2Request {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Http2Configuration http2Configuration;
+
     public ConfigureHttp2Request withHttp2Configuration(org.openapis.openapi.models.shared.Http2Configuration http2Configuration) {
         this.http2Configuration = http2Configuration;
         return this;
@@ -19,6 +21,7 @@ public class ConfigureHttp2Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public ConfigureHttp2Request withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -29,6 +32,7 @@ public class ConfigureHttp2Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public ConfigureHttp2Request withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
@@ -39,6 +43,7 @@ public class ConfigureHttp2Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteName")
     public String siteNamePathParameter;
+
     public ConfigureHttp2Request withSiteNamePathParameter(String siteNamePathParameter) {
         this.siteNamePathParameter = siteNamePathParameter;
         return this;
@@ -50,9 +55,16 @@ public class ConfigureHttp2Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site_name")
     public String siteNameQueryParameter;
+
     public ConfigureHttp2Request withSiteNameQueryParameter(String siteNameQueryParameter) {
         this.siteNameQueryParameter = siteNameQueryParameter;
         return this;
     }
     
+    public ConfigureHttp2Request(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter, @JsonProperty("siteNamePathParameter") String siteNamePathParameter, @JsonProperty("site_nameQueryParameter") String siteNameQueryParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        this.siteNamePathParameter = siteNamePathParameter;
+        this.siteNameQueryParameter = siteNameQueryParameter;
+  }
 }

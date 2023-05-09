@@ -15,9 +15,11 @@ public class RegisterTaskWithMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowTaskId")
     public String windowTaskId;
+
     public RegisterTaskWithMaintenanceWindowResult withWindowTaskId(String windowTaskId) {
         this.windowTaskId = windowTaskId;
         return this;
     }
     
+    public RegisterTaskWithMaintenanceWindowResult(){}
 }

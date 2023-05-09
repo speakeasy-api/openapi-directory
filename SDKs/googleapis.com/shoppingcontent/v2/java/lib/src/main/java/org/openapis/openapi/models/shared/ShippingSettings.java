@@ -18,6 +18,7 @@ public class ShippingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public ShippingSettings withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class ShippingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCodeGroups")
     public PostalCodeGroup[] postalCodeGroups;
+
     public ShippingSettings withPostalCodeGroups(PostalCodeGroup[] postalCodeGroups) {
         this.postalCodeGroups = postalCodeGroups;
         return this;
@@ -40,6 +42,7 @@ public class ShippingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public Service[] services;
+
     public ShippingSettings withServices(Service[] services) {
         this.services = services;
         return this;
@@ -51,9 +54,11 @@ public class ShippingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouses")
     public Warehouse[] warehouses;
+
     public ShippingSettings withWarehouses(Warehouse[] warehouses) {
         this.warehouses = warehouses;
         return this;
     }
     
+    public ShippingSettings(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSourceTasksResponse {
     
     public String contentType;
+
     public ListSourceTasksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSourceTasksResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorNotFound errorNotFound;
+
     public ListSourceTasksResponse withErrorNotFound(org.openapis.openapi.models.shared.ErrorNotFound errorNotFound) {
         this.errorNotFound = errorNotFound;
         return this;
@@ -26,6 +29,7 @@ public class ListSourceTasksResponse {
     
     
     public Integer statusCode;
+
     public ListSourceTasksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListSourceTasksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSourceTasksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class ListSourceTasksResponse {
      */
     
     public org.openapis.openapi.models.shared.TasksCollection tasksCollection;
+
     public ListSourceTasksResponse withTasksCollection(org.openapis.openapi.models.shared.TasksCollection tasksCollection) {
         this.tasksCollection = tasksCollection;
         return this;
     }
     
+    public ListSourceTasksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class ResourceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public FleetErrorCodeEnum errorCode;
+
     public ResourceError withErrorCode(FleetErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,6 +29,7 @@ public class ResourceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public ResourceError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -38,9 +40,11 @@ public class ResourceError {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ErrorTimestamp")
     public OffsetDateTime errorTimestamp;
+
     public ResourceError withErrorTimestamp(OffsetDateTime errorTimestamp) {
         this.errorTimestamp = errorTimestamp;
         return this;
     }
     
+    public ResourceError(){}
 }

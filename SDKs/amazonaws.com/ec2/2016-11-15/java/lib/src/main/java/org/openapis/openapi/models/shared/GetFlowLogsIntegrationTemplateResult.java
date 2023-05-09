@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetFlowLogsIntegrationTemplateResult {
     
     public String result;
+
     public GetFlowLogsIntegrationTemplateResult withResult(String result) {
         this.result = result;
         return this;
     }
     
+    public GetFlowLogsIntegrationTemplateResult(){}
 }

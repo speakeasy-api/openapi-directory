@@ -15,9 +15,11 @@ public class PutClusterCapacityProvidersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public Cluster cluster;
+
     public PutClusterCapacityProvidersResponse withCluster(Cluster cluster) {
         this.cluster = cluster;
         return this;
     }
     
+    public PutClusterCapacityProvidersResponse(){}
 }

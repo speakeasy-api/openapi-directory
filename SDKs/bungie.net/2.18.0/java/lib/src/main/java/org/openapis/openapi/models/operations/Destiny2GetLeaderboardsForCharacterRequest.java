@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetLeaderboardsForCharacterRequest {
@@ -12,6 +13,7 @@ public class Destiny2GetLeaderboardsForCharacterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
     public Long characterId;
+
     public Destiny2GetLeaderboardsForCharacterRequest withCharacterId(Long characterId) {
         this.characterId = characterId;
         return this;
@@ -22,6 +24,7 @@ public class Destiny2GetLeaderboardsForCharacterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
     public Long destinyMembershipId;
+
     public Destiny2GetLeaderboardsForCharacterRequest withDestinyMembershipId(Long destinyMembershipId) {
         this.destinyMembershipId = destinyMembershipId;
         return this;
@@ -32,6 +35,7 @@ public class Destiny2GetLeaderboardsForCharacterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxtop")
     public Integer maxtop;
+
     public Destiny2GetLeaderboardsForCharacterRequest withMaxtop(Integer maxtop) {
         this.maxtop = maxtop;
         return this;
@@ -42,6 +46,7 @@ public class Destiny2GetLeaderboardsForCharacterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public Destiny2GetLeaderboardsForCharacterRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -52,6 +57,7 @@ public class Destiny2GetLeaderboardsForCharacterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modes")
     public String modes;
+
     public Destiny2GetLeaderboardsForCharacterRequest withModes(String modes) {
         this.modes = modes;
         return this;
@@ -62,9 +68,15 @@ public class Destiny2GetLeaderboardsForCharacterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=statid")
     public String statid;
+
     public Destiny2GetLeaderboardsForCharacterRequest withStatid(String statid) {
         this.statid = statid;
         return this;
     }
     
+    public Destiny2GetLeaderboardsForCharacterRequest(@JsonProperty("characterId") Long characterId, @JsonProperty("destinyMembershipId") Long destinyMembershipId, @JsonProperty("membershipType") Integer membershipType) {
+        this.characterId = characterId;
+        this.destinyMembershipId = destinyMembershipId;
+        this.membershipType = membershipType;
+  }
 }

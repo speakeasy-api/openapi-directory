@@ -18,6 +18,7 @@ public class PlatformType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PlatformType withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class PlatformType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PlatformType withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class PlatformType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlatformType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PlatformType(){}
 }

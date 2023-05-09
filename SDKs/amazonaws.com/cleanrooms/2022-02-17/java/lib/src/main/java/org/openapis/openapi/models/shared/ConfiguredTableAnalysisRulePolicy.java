@@ -15,9 +15,11 @@ public class ConfiguredTableAnalysisRulePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("v1")
     public ConfiguredTableAnalysisRulePolicyV1 v1;
+
     public ConfiguredTableAnalysisRulePolicy withV1(ConfiguredTableAnalysisRulePolicyV1 v1) {
         this.v1 = v1;
         return this;
     }
     
+    public ConfiguredTableAnalysisRulePolicy(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DrivePropertiesGetRequest {
@@ -12,6 +13,7 @@ public class DrivePropertiesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DrivePropertiesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class DrivePropertiesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DrivePropertiesGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class DrivePropertiesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public DrivePropertiesGetRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -42,6 +46,7 @@ public class DrivePropertiesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DrivePropertiesGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class DrivePropertiesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DrivePropertiesGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +68,7 @@ public class DrivePropertiesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DrivePropertiesGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -72,6 +79,7 @@ public class DrivePropertiesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=propertyKey")
     public String propertyKey;
+
     public DrivePropertiesGetRequest withPropertyKey(String propertyKey) {
         this.propertyKey = propertyKey;
         return this;
@@ -82,6 +90,7 @@ public class DrivePropertiesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DrivePropertiesGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,6 +101,7 @@ public class DrivePropertiesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DrivePropertiesGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -102,9 +112,14 @@ public class DrivePropertiesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=visibility")
     public String visibility;
+
     public DrivePropertiesGetRequest withVisibility(String visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public DrivePropertiesGetRequest(@JsonProperty("fileId") String fileId, @JsonProperty("propertyKey") String propertyKey) {
+        this.fileId = fileId;
+        this.propertyKey = propertyKey;
+  }
 }

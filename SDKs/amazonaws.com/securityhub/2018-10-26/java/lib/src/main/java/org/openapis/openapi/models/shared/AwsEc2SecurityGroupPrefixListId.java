@@ -15,9 +15,11 @@ public class AwsEc2SecurityGroupPrefixListId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrefixListId")
     public String prefixListId;
+
     public AwsEc2SecurityGroupPrefixListId withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
     }
     
+    public AwsEc2SecurityGroupPrefixListId(){}
 }

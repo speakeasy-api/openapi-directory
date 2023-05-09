@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAutomationStepExecutionsRequest {
     @JsonProperty("AutomationExecutionId")
     public String automationExecutionId;
+
     public DescribeAutomationStepExecutionsRequest withAutomationExecutionId(String automationExecutionId) {
         this.automationExecutionId = automationExecutionId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeAutomationStepExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public StepExecutionFilter[] filters;
+
     public DescribeAutomationStepExecutionsRequest withFilters(StepExecutionFilter[] filters) {
         this.filters = filters;
         return this;
@@ -27,6 +29,7 @@ public class DescribeAutomationStepExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeAutomationStepExecutionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +38,7 @@ public class DescribeAutomationStepExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAutomationStepExecutionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -43,9 +47,13 @@ public class DescribeAutomationStepExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReverseOrder")
     public Boolean reverseOrder;
+
     public DescribeAutomationStepExecutionsRequest withReverseOrder(Boolean reverseOrder) {
         this.reverseOrder = reverseOrder;
         return this;
     }
     
+    public DescribeAutomationStepExecutionsRequest(@JsonProperty("AutomationExecutionId") String automationExecutionId) {
+        this.automationExecutionId = automationExecutionId;
+  }
 }

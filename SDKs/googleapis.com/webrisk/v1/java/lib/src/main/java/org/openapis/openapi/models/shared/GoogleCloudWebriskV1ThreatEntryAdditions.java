@@ -18,6 +18,7 @@ public class GoogleCloudWebriskV1ThreatEntryAdditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawHashes")
     public GoogleCloudWebriskV1RawHashes[] rawHashes;
+
     public GoogleCloudWebriskV1ThreatEntryAdditions withRawHashes(GoogleCloudWebriskV1RawHashes[] rawHashes) {
         this.rawHashes = rawHashes;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudWebriskV1ThreatEntryAdditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("riceHashes")
     public GoogleCloudWebriskV1RiceDeltaEncoding riceHashes;
+
     public GoogleCloudWebriskV1ThreatEntryAdditions withRiceHashes(GoogleCloudWebriskV1RiceDeltaEncoding riceHashes) {
         this.riceHashes = riceHashes;
         return this;
     }
     
+    public GoogleCloudWebriskV1ThreatEntryAdditions(){}
 }

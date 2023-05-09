@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.PostMakePdfRequestBody;
 import org.openapis.openapi.models.operations.PostMakePdfResponse;
 
@@ -26,29 +25,30 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PostMakePdfRequestBody req = new PostMakePdfRequestBody() {{
-                html = "corrupti";
-                key = "provident";
+            PostMakePdfRequestBody req = new PostMakePdfRequestBody("corrupti") {{
+                html = "provident";
                 url = "distinctio";
-            }}            
+            }};            
 
             PostMakePdfResponse res = sdk.postMakePdf(req);
 
-            if (res.postMakePdf200ApplicationPdfBinaryString.isPresent()) {
+            if (res.postMakePdf200ApplicationPdfBinaryString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `postMakePdf` - Generate a PDF from HTML or URL.
+* [postMakePdf](docs/sdk/README.md#postmakepdf) - Generate a PDF from HTML or URL.
 <!-- End SDK Available Operations -->
 
 ### Maturity

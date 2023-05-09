@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostStripeGatewayUserUserIdCardsCardIdRequest {
@@ -12,6 +13,7 @@ public class PostStripeGatewayUserUserIdCardsCardIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address_city")
     public String addressCity;
+
     public PostStripeGatewayUserUserIdCardsCardIdRequest withAddressCity(String addressCity) {
         this.addressCity = addressCity;
         return this;
@@ -22,6 +24,7 @@ public class PostStripeGatewayUserUserIdCardsCardIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address_country")
     public String addressCountry;
+
     public PostStripeGatewayUserUserIdCardsCardIdRequest withAddressCountry(String addressCountry) {
         this.addressCountry = addressCountry;
         return this;
@@ -32,6 +35,7 @@ public class PostStripeGatewayUserUserIdCardsCardIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address_line1")
     public String addressLine1;
+
     public PostStripeGatewayUserUserIdCardsCardIdRequest withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -42,6 +46,7 @@ public class PostStripeGatewayUserUserIdCardsCardIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address_line2")
     public String addressLine2;
+
     public PostStripeGatewayUserUserIdCardsCardIdRequest withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
@@ -52,6 +57,7 @@ public class PostStripeGatewayUserUserIdCardsCardIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address_state")
     public String addressState;
+
     public PostStripeGatewayUserUserIdCardsCardIdRequest withAddressState(String addressState) {
         this.addressState = addressState;
         return this;
@@ -62,6 +68,7 @@ public class PostStripeGatewayUserUserIdCardsCardIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address_zip")
     public String addressZip;
+
     public PostStripeGatewayUserUserIdCardsCardIdRequest withAddressZip(String addressZip) {
         this.addressZip = addressZip;
         return this;
@@ -72,6 +79,7 @@ public class PostStripeGatewayUserUserIdCardsCardIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cardId")
     public String cardId;
+
     public PostStripeGatewayUserUserIdCardsCardIdRequest withCardId(String cardId) {
         this.cardId = cardId;
         return this;
@@ -82,6 +90,7 @@ public class PostStripeGatewayUserUserIdCardsCardIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isDefault")
     public Boolean isDefault;
+
     public PostStripeGatewayUserUserIdCardsCardIdRequest withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -92,9 +101,14 @@ public class PostStripeGatewayUserUserIdCardsCardIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public PostStripeGatewayUserUserIdCardsCardIdRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public PostStripeGatewayUserUserIdCardsCardIdRequest(@JsonProperty("cardId") String cardId, @JsonProperty("userId") String userId) {
+        this.cardId = cardId;
+        this.userId = userId;
+  }
 }

@@ -22,6 +22,7 @@ public class TimelineCommittedEventCommitter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public TimelineCommittedEventCommitter withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -32,6 +33,7 @@ public class TimelineCommittedEventCommitter {
      */
     @JsonProperty("email")
     public String email;
+
     public TimelineCommittedEventCommitter withEmail(String email) {
         this.email = email;
         return this;
@@ -42,9 +44,15 @@ public class TimelineCommittedEventCommitter {
      */
     @JsonProperty("name")
     public String name;
+
     public TimelineCommittedEventCommitter withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TimelineCommittedEventCommitter(@JsonProperty("date") OffsetDateTime date, @JsonProperty("email") String email, @JsonProperty("name") String name) {
+        this.date = date;
+        this.email = email;
+        this.name = name;
+  }
 }

@@ -15,6 +15,7 @@ public class BucketStatisticsBySensitivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classificationError")
     public SensitivityAggregations classificationError;
+
     public BucketStatisticsBySensitivity withClassificationError(SensitivityAggregations classificationError) {
         this.classificationError = classificationError;
         return this;
@@ -23,6 +24,7 @@ public class BucketStatisticsBySensitivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notClassified")
     public SensitivityAggregations notClassified;
+
     public BucketStatisticsBySensitivity withNotClassified(SensitivityAggregations notClassified) {
         this.notClassified = notClassified;
         return this;
@@ -31,6 +33,7 @@ public class BucketStatisticsBySensitivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notSensitive")
     public SensitivityAggregations notSensitive;
+
     public BucketStatisticsBySensitivity withNotSensitive(SensitivityAggregations notSensitive) {
         this.notSensitive = notSensitive;
         return this;
@@ -39,9 +42,11 @@ public class BucketStatisticsBySensitivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitive")
     public SensitivityAggregations sensitive;
+
     public BucketStatisticsBySensitivity withSensitive(SensitivityAggregations sensitive) {
         this.sensitive = sensitive;
         return this;
     }
     
+    public BucketStatisticsBySensitivity(){}
 }

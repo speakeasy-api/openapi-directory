@@ -13,6 +13,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchTypePointNoaaFlaskMonthRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchTypePointNoaaFlaskMonthRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchTypePointNoaaFlaskMonthRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchTypePointNoaaFlaskMonthRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchTypePointNoaaFlaskMonthRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchTypePointNoaaFlaskMonthRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchTypePointNoaaFlaskMonthRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchTypePointNoaaFlaskMonthRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchTypePointNoaaFlaskMonthRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchTypePointNoaaFlaskMonthRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchTypePointNoaaFlaskMonthRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchTypePointNoaaFlaskMonthRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchTypePointNoaaFlaskMonthRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchTypePointNoaaFlaskMonthRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_noaa_flask_month.lab_id_number")
     public String searchTypePointNoaaFlaskMonthLabIdNumber;
+
     public SearchTypePointNoaaFlaskMonthRequest withSearchTypePointNoaaFlaskMonthLabIdNumber(String searchTypePointNoaaFlaskMonthLabIdNumber) {
         this.searchTypePointNoaaFlaskMonthLabIdNumber = searchTypePointNoaaFlaskMonthLabIdNumber;
         return this;
@@ -163,6 +178,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_noaa_flask_month.measurement_group")
     public String searchTypePointNoaaFlaskMonthMeasurementGroup;
+
     public SearchTypePointNoaaFlaskMonthRequest withSearchTypePointNoaaFlaskMonthMeasurementGroup(String searchTypePointNoaaFlaskMonthMeasurementGroup) {
         this.searchTypePointNoaaFlaskMonthMeasurementGroup = searchTypePointNoaaFlaskMonthMeasurementGroup;
         return this;
@@ -173,6 +189,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_noaa_flask_month.parameter")
     public String searchTypePointNoaaFlaskMonthParameter;
+
     public SearchTypePointNoaaFlaskMonthRequest withSearchTypePointNoaaFlaskMonthParameter(String searchTypePointNoaaFlaskMonthParameter) {
         this.searchTypePointNoaaFlaskMonthParameter = searchTypePointNoaaFlaskMonthParameter;
         return this;
@@ -183,6 +200,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_noaa_flask_month.project")
     public String searchTypePointNoaaFlaskMonthProject;
+
     public SearchTypePointNoaaFlaskMonthRequest withSearchTypePointNoaaFlaskMonthProject(String searchTypePointNoaaFlaskMonthProject) {
         this.searchTypePointNoaaFlaskMonthProject = searchTypePointNoaaFlaskMonthProject;
         return this;
@@ -193,6 +211,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_noaa_flask_month.site_id")
     public String searchTypePointNoaaFlaskMonthSiteId;
+
     public SearchTypePointNoaaFlaskMonthRequest withSearchTypePointNoaaFlaskMonthSiteId(String searchTypePointNoaaFlaskMonthSiteId) {
         this.searchTypePointNoaaFlaskMonthSiteId = searchTypePointNoaaFlaskMonthSiteId;
         return this;
@@ -203,6 +222,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchTypePointNoaaFlaskMonthRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -213,6 +233,7 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchTypePointNoaaFlaskMonthRequest withText(String text) {
         this.text = text;
         return this;
@@ -223,9 +244,11 @@ public class SearchTypePointNoaaFlaskMonthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchTypePointNoaaFlaskMonthRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchTypePointNoaaFlaskMonthRequest(){}
 }

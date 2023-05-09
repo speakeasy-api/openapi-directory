@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PolicyGrantingServiceAccess - &lt;p&gt;Contains details about the permissions policies that are attached to the specified identity (user, group, or role).&lt;/p&gt; &lt;p&gt;This data type is an element of the &lt;a&gt;ListPoliciesGrantingServiceAccessEntry&lt;/a&gt; object.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PolicyGrantingServiceAccess {
     
     public String entityName;
+
     public PolicyGrantingServiceAccess withEntityName(String entityName) {
         this.entityName = entityName;
         return this;
@@ -19,6 +20,7 @@ public class PolicyGrantingServiceAccess {
     
     
     public PolicyOwnerEntityTypeEnum entityType;
+
     public PolicyGrantingServiceAccess withEntityType(PolicyOwnerEntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -29,6 +31,7 @@ public class PolicyGrantingServiceAccess {
      */
     
     public String policyArn;
+
     public PolicyGrantingServiceAccess withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -36,6 +39,7 @@ public class PolicyGrantingServiceAccess {
     
     
     public String policyName;
+
     public PolicyGrantingServiceAccess withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -43,9 +47,14 @@ public class PolicyGrantingServiceAccess {
     
     
     public PolicyTypeEnum policyType;
+
     public PolicyGrantingServiceAccess withPolicyType(PolicyTypeEnum policyType) {
         this.policyType = policyType;
         return this;
     }
     
+    public PolicyGrantingServiceAccess(@JsonProperty("PolicyName") String policyName, @JsonProperty("PolicyType") PolicyTypeEnum policyType) {
+        this.policyName = policyName;
+        this.policyType = policyType;
+  }
 }

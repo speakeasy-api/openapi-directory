@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Component {
     @JsonProperty("arn")
     public String arn;
+
     public Component withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class Component {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Component withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class Component {
     
     @JsonProperty("deploymentStatus")
     public DeploymentStatusEnum deploymentStatus;
+
     public Component withDeploymentStatus(DeploymentStatusEnum deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -43,6 +46,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentStatusMessage")
     public String deploymentStatusMessage;
+
     public Component withDeploymentStatusMessage(String deploymentStatusMessage) {
         this.deploymentStatusMessage = deploymentStatusMessage;
         return this;
@@ -51,6 +55,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Component withDescription(String description) {
         this.description = description;
         return this;
@@ -58,8 +63,18 @@ public class Component {
     
     @JsonProperty("environmentName")
     public String environmentName;
+
     public Component withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lastClientRequestToken")
+    public String lastClientRequestToken;
+
+    public Component withLastClientRequestToken(String lastClientRequestToken) {
+        this.lastClientRequestToken = lastClientRequestToken;
         return this;
     }
     
@@ -68,6 +83,7 @@ public class Component {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentAttemptedAt")
     public OffsetDateTime lastDeploymentAttemptedAt;
+
     public Component withLastDeploymentAttemptedAt(OffsetDateTime lastDeploymentAttemptedAt) {
         this.lastDeploymentAttemptedAt = lastDeploymentAttemptedAt;
         return this;
@@ -78,6 +94,7 @@ public class Component {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentSucceededAt")
     public OffsetDateTime lastDeploymentSucceededAt;
+
     public Component withLastDeploymentSucceededAt(OffsetDateTime lastDeploymentSucceededAt) {
         this.lastDeploymentSucceededAt = lastDeploymentSucceededAt;
         return this;
@@ -87,6 +104,7 @@ public class Component {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public Component withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -94,6 +112,7 @@ public class Component {
     
     @JsonProperty("name")
     public String name;
+
     public Component withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +121,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceInstanceName")
     public String serviceInstanceName;
+
     public Component withServiceInstanceName(String serviceInstanceName) {
         this.serviceInstanceName = serviceInstanceName;
         return this;
@@ -110,6 +130,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public Component withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -118,9 +139,18 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceSpec")
     public String serviceSpec;
+
     public Component withServiceSpec(String serviceSpec) {
         this.serviceSpec = serviceSpec;
         return this;
     }
     
+    public Component(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("deploymentStatus") DeploymentStatusEnum deploymentStatus, @JsonProperty("environmentName") String environmentName, @JsonProperty("lastModifiedAt") OffsetDateTime lastModifiedAt, @JsonProperty("name") String name) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.deploymentStatus = deploymentStatus;
+        this.environmentName = environmentName;
+        this.lastModifiedAt = lastModifiedAt;
+        this.name = name;
+  }
 }

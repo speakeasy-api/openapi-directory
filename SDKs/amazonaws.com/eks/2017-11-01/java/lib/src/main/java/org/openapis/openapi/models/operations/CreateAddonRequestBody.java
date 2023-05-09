@@ -14,6 +14,7 @@ public class CreateAddonRequestBody {
      */
     @JsonProperty("addonName")
     public String addonName;
+
     public CreateAddonRequestBody withAddonName(String addonName) {
         this.addonName = addonName;
         return this;
@@ -25,6 +26,7 @@ public class CreateAddonRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addonVersion")
     public String addonVersion;
+
     public CreateAddonRequestBody withAddonVersion(String addonVersion) {
         this.addonVersion = addonVersion;
         return this;
@@ -36,6 +38,7 @@ public class CreateAddonRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateAddonRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -47,6 +50,7 @@ public class CreateAddonRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationValues")
     public String configurationValues;
+
     public CreateAddonRequestBody withConfigurationValues(String configurationValues) {
         this.configurationValues = configurationValues;
         return this;
@@ -58,6 +62,7 @@ public class CreateAddonRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolveConflicts")
     public CreateAddonRequestBodyResolveConflictsEnum resolveConflicts;
+
     public CreateAddonRequestBody withResolveConflicts(CreateAddonRequestBodyResolveConflictsEnum resolveConflicts) {
         this.resolveConflicts = resolveConflicts;
         return this;
@@ -69,6 +74,7 @@ public class CreateAddonRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountRoleArn")
     public String serviceAccountRoleArn;
+
     public CreateAddonRequestBody withServiceAccountRoleArn(String serviceAccountRoleArn) {
         this.serviceAccountRoleArn = serviceAccountRoleArn;
         return this;
@@ -80,9 +86,13 @@ public class CreateAddonRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateAddonRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAddonRequestBody(@JsonProperty("addonName") String addonName) {
+        this.addonName = addonName;
+  }
 }

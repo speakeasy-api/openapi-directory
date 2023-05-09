@@ -15,6 +15,7 @@ public class TruckWeight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Total")
     public Double total;
+
     public TruckWeight withTotal(Double total) {
         this.total = total;
         return this;
@@ -23,9 +24,11 @@ public class TruckWeight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public VehicleWeightUnitEnum unit;
+
     public TruckWeight withUnit(VehicleWeightUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public TruckWeight(){}
 }

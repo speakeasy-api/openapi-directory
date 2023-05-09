@@ -12,6 +12,7 @@ public class PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction {
      */
     @JsonProperty("error")
     public PostFirewallsIdActionsRemoveFromResourcesActionsResponseActionError error;
+
     public PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction withError(PostFirewallsIdActionsRemoveFromResourcesActionsResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction {
      */
     @JsonProperty("resources")
     public PostFirewallsIdActionsRemoveFromResourcesActionsResponseActionResources[] resources;
+
     public PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction withResources(PostFirewallsIdActionsRemoveFromResourcesActionsResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction {
      */
     @JsonProperty("status")
     public PostFirewallsIdActionsRemoveFromResourcesActionsResponseActionStatusEnum status;
+
     public PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction withStatus(PostFirewallsIdActionsRemoveFromResourcesActionsResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostFirewallsIdActionsRemoveFromResourcesActionsResponseAction(@JsonProperty("command") String command, @JsonProperty("error") PostFirewallsIdActionsRemoveFromResourcesActionsResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostFirewallsIdActionsRemoveFromResourcesActionsResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostFirewallsIdActionsRemoveFromResourcesActionsResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

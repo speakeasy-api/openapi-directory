@@ -12,6 +12,7 @@ public class ListServiceInstanceProvisionedResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListServiceInstanceProvisionedResourcesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,6 +20,7 @@ public class ListServiceInstanceProvisionedResourcesInput {
     
     @JsonProperty("serviceInstanceName")
     public String serviceInstanceName;
+
     public ListServiceInstanceProvisionedResourcesInput withServiceInstanceName(String serviceInstanceName) {
         this.serviceInstanceName = serviceInstanceName;
         return this;
@@ -26,9 +28,14 @@ public class ListServiceInstanceProvisionedResourcesInput {
     
     @JsonProperty("serviceName")
     public String serviceName;
+
     public ListServiceInstanceProvisionedResourcesInput withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public ListServiceInstanceProvisionedResourcesInput(@JsonProperty("serviceInstanceName") String serviceInstanceName, @JsonProperty("serviceName") String serviceName) {
+        this.serviceInstanceName = serviceInstanceName;
+        this.serviceName = serviceName;
+  }
 }

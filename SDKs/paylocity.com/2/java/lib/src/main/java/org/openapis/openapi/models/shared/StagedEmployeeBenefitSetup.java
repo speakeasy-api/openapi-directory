@@ -18,6 +18,7 @@ public class StagedEmployeeBenefitSetup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("benefitClass")
     public String benefitClass;
+
     public StagedEmployeeBenefitSetup withBenefitClass(String benefitClass) {
         this.benefitClass = benefitClass;
         return this;
@@ -29,6 +30,7 @@ public class StagedEmployeeBenefitSetup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("benefitClassEffectiveDate")
     public String benefitClassEffectiveDate;
+
     public StagedEmployeeBenefitSetup withBenefitClassEffectiveDate(String benefitClassEffectiveDate) {
         this.benefitClassEffectiveDate = benefitClassEffectiveDate;
         return this;
@@ -40,6 +42,7 @@ public class StagedEmployeeBenefitSetup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("benefitSalary")
     public Double benefitSalary;
+
     public StagedEmployeeBenefitSetup withBenefitSalary(Double benefitSalary) {
         this.benefitSalary = benefitSalary;
         return this;
@@ -51,6 +54,7 @@ public class StagedEmployeeBenefitSetup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("benefitSalaryEffectiveDate")
     public String benefitSalaryEffectiveDate;
+
     public StagedEmployeeBenefitSetup withBenefitSalaryEffectiveDate(String benefitSalaryEffectiveDate) {
         this.benefitSalaryEffectiveDate = benefitSalaryEffectiveDate;
         return this;
@@ -62,6 +66,7 @@ public class StagedEmployeeBenefitSetup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doNotApplyAdministrativePeriod")
     public Boolean doNotApplyAdministrativePeriod;
+
     public StagedEmployeeBenefitSetup withDoNotApplyAdministrativePeriod(Boolean doNotApplyAdministrativePeriod) {
         this.doNotApplyAdministrativePeriod = doNotApplyAdministrativePeriod;
         return this;
@@ -73,9 +78,11 @@ public class StagedEmployeeBenefitSetup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMeasureAcaEligibility")
     public Boolean isMeasureAcaEligibility;
+
     public StagedEmployeeBenefitSetup withIsMeasureAcaEligibility(Boolean isMeasureAcaEligibility) {
         this.isMeasureAcaEligibility = isMeasureAcaEligibility;
         return this;
     }
     
+    public StagedEmployeeBenefitSetup(){}
 }

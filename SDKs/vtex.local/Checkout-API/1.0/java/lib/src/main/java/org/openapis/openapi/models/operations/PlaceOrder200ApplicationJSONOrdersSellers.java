@@ -15,6 +15,7 @@ public class PlaceOrder200ApplicationJSONOrdersSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PlaceOrder200ApplicationJSONOrdersSellers withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrder200ApplicationJSONOrdersSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public PlaceOrder200ApplicationJSONOrdersSellers withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -37,9 +39,11 @@ public class PlaceOrder200ApplicationJSONOrdersSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlaceOrder200ApplicationJSONOrdersSellers withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersSellers(){}
 }

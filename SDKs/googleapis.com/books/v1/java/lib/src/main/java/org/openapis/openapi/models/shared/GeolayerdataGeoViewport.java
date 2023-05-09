@@ -15,6 +15,7 @@ public class GeolayerdataGeoViewport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hi")
     public GeolayerdataGeoViewportHi hi;
+
     public GeolayerdataGeoViewport withHi(GeolayerdataGeoViewportHi hi) {
         this.hi = hi;
         return this;
@@ -23,9 +24,11 @@ public class GeolayerdataGeoViewport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lo")
     public GeolayerdataGeoViewportLo lo;
+
     public GeolayerdataGeoViewport withLo(GeolayerdataGeoViewportLo lo) {
         this.lo = lo;
         return this;
     }
     
+    public GeolayerdataGeoViewport(){}
 }

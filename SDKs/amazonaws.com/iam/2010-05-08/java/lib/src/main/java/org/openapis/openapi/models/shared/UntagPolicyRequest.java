@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UntagPolicyRequest {
     
     public String policyArn;
+
     public UntagPolicyRequest withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -16,9 +17,14 @@ public class UntagPolicyRequest {
     
     
     public String[] tagKeys;
+
     public UntagPolicyRequest withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     
+    public UntagPolicyRequest(@JsonProperty("PolicyArn") String policyArn, @JsonProperty("TagKeys") String[] tagKeys) {
+        this.policyArn = policyArn;
+        this.tagKeys = tagKeys;
+  }
 }

@@ -15,9 +15,11 @@ public class GetConversations200ApplicationJSONEmbeddedData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversations")
     public org.openapis.openapi.models.shared.ConversationList[] conversations;
+
     public GetConversations200ApplicationJSONEmbeddedData withConversations(org.openapis.openapi.models.shared.ConversationList[] conversations) {
         this.conversations = conversations;
         return this;
     }
     
+    public GetConversations200ApplicationJSONEmbeddedData(){}
 }

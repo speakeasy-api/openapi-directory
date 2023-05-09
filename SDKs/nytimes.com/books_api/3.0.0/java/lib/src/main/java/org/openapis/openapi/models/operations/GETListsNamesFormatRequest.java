@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListsNamesFormatRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-key")
     public String apiKey;
+
     public GETListsNamesFormatRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -16,9 +18,13 @@ public class GETListsNamesFormatRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public GETListsNamesFormatFormatEnum format;
+
     public GETListsNamesFormatRequest withFormat(GETListsNamesFormatFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public GETListsNamesFormatRequest(@JsonProperty("format") GETListsNamesFormatFormatEnum format) {
+        this.format = format;
+  }
 }

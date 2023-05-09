@@ -15,6 +15,7 @@ public class CompleteSourceOauthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthInputConfiguration")
     public Object oAuthInputConfiguration;
+
     public CompleteSourceOauthRequest withOAuthInputConfiguration(Object oAuthInputConfiguration) {
         this.oAuthInputConfiguration = oAuthInputConfiguration;
         return this;
@@ -26,6 +27,7 @@ public class CompleteSourceOauthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParams")
     public java.util.Map<String, Object> queryParams;
+
     public CompleteSourceOauthRequest withQueryParams(java.util.Map<String, Object> queryParams) {
         this.queryParams = queryParams;
         return this;
@@ -37,6 +39,7 @@ public class CompleteSourceOauthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectUrl")
     public String redirectUrl;
+
     public CompleteSourceOauthRequest withRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
         return this;
@@ -44,6 +47,7 @@ public class CompleteSourceOauthRequest {
     
     @JsonProperty("sourceDefinitionId")
     public String sourceDefinitionId;
+
     public CompleteSourceOauthRequest withSourceDefinitionId(String sourceDefinitionId) {
         this.sourceDefinitionId = sourceDefinitionId;
         return this;
@@ -52,6 +56,7 @@ public class CompleteSourceOauthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceId")
     public String sourceId;
+
     public CompleteSourceOauthRequest withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -59,9 +64,14 @@ public class CompleteSourceOauthRequest {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public CompleteSourceOauthRequest withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public CompleteSourceOauthRequest(@JsonProperty("sourceDefinitionId") String sourceDefinitionId, @JsonProperty("workspaceId") String workspaceId) {
+        this.sourceDefinitionId = sourceDefinitionId;
+        this.workspaceId = workspaceId;
+  }
 }

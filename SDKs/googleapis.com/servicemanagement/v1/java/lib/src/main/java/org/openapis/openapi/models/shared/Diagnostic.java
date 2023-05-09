@@ -18,6 +18,7 @@ public class Diagnostic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public DiagnosticKindEnum kind;
+
     public Diagnostic withKind(DiagnosticKindEnum kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class Diagnostic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Diagnostic withLocation(String location) {
         this.location = location;
         return this;
@@ -40,9 +42,11 @@ public class Diagnostic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Diagnostic withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public Diagnostic(){}
 }

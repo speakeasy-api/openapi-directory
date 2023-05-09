@@ -15,9 +15,11 @@ public class AttachStaticIpResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public AttachStaticIpResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public AttachStaticIpResult(){}
 }

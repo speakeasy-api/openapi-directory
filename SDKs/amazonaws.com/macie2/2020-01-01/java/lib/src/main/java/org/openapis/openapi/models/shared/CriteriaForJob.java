@@ -15,6 +15,7 @@ public class CriteriaForJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simpleCriterion")
     public SimpleCriterionForJob simpleCriterion;
+
     public CriteriaForJob withSimpleCriterion(SimpleCriterionForJob simpleCriterion) {
         this.simpleCriterion = simpleCriterion;
         return this;
@@ -23,9 +24,11 @@ public class CriteriaForJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagCriterion")
     public TagCriterionForJob tagCriterion;
+
     public CriteriaForJob withTagCriterion(TagCriterionForJob tagCriterion) {
         this.tagCriterion = tagCriterion;
         return this;
     }
     
+    public CriteriaForJob(){}
 }

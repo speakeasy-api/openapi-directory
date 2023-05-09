@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeDBParametersRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeDBParametersActionEnum action;
+
     public GETDescribeDBParametersRequest withAction(GETDescribeDBParametersActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETDescribeDBParametersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBParameterGroupName")
     public String dbParameterGroupName;
+
     public GETDescribeDBParametersRequest withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
@@ -23,6 +26,7 @@ public class GETDescribeDBParametersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeDBParametersRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,6 +34,7 @@ public class GETDescribeDBParametersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeDBParametersRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -37,6 +42,7 @@ public class GETDescribeDBParametersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Source")
     public String source;
+
     public GETDescribeDBParametersRequest withSource(String source) {
         this.source = source;
         return this;
@@ -44,6 +50,7 @@ public class GETDescribeDBParametersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeDBParametersVersionEnum version;
+
     public GETDescribeDBParametersRequest withVersion(GETDescribeDBParametersVersionEnum version) {
         this.version = version;
         return this;
@@ -51,6 +58,7 @@ public class GETDescribeDBParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeDBParametersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -58,6 +66,7 @@ public class GETDescribeDBParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeDBParametersRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -65,6 +74,7 @@ public class GETDescribeDBParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeDBParametersRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -72,6 +82,7 @@ public class GETDescribeDBParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeDBParametersRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -79,6 +90,7 @@ public class GETDescribeDBParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeDBParametersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -86,6 +98,7 @@ public class GETDescribeDBParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeDBParametersRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -93,9 +106,15 @@ public class GETDescribeDBParametersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeDBParametersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeDBParametersRequest(@JsonProperty("Action") GETDescribeDBParametersActionEnum action, @JsonProperty("DBParameterGroupName") String dbParameterGroupName, @JsonProperty("Version") GETDescribeDBParametersVersionEnum version) {
+        this.action = action;
+        this.dbParameterGroupName = dbParameterGroupName;
+        this.version = version;
+  }
 }

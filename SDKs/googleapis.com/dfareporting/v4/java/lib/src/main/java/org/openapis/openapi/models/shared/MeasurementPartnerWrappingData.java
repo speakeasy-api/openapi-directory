@@ -18,6 +18,7 @@ public class MeasurementPartnerWrappingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkStatus")
     public MeasurementPartnerWrappingDataLinkStatusEnum linkStatus;
+
     public MeasurementPartnerWrappingData withLinkStatus(MeasurementPartnerWrappingDataLinkStatusEnum linkStatus) {
         this.linkStatus = linkStatus;
         return this;
@@ -29,6 +30,7 @@ public class MeasurementPartnerWrappingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurementPartner")
     public MeasurementPartnerWrappingDataMeasurementPartnerEnum measurementPartner;
+
     public MeasurementPartnerWrappingData withMeasurementPartner(MeasurementPartnerWrappingDataMeasurementPartnerEnum measurementPartner) {
         this.measurementPartner = measurementPartner;
         return this;
@@ -40,6 +42,7 @@ public class MeasurementPartnerWrappingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagWrappingMode")
     public MeasurementPartnerWrappingDataTagWrappingModeEnum tagWrappingMode;
+
     public MeasurementPartnerWrappingData withTagWrappingMode(MeasurementPartnerWrappingDataTagWrappingModeEnum tagWrappingMode) {
         this.tagWrappingMode = tagWrappingMode;
         return this;
@@ -51,9 +54,11 @@ public class MeasurementPartnerWrappingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wrappedTag")
     public String wrappedTag;
+
     public MeasurementPartnerWrappingData withWrappedTag(String wrappedTag) {
         this.wrappedTag = wrappedTag;
         return this;
     }
     
+    public MeasurementPartnerWrappingData(){}
 }

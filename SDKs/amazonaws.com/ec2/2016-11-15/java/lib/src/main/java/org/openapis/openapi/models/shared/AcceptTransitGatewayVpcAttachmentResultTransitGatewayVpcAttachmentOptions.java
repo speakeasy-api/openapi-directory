@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AcceptTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions {
     
     public AcceptTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptionsApplianceModeSupportEnum applianceModeSupport;
+
     public AcceptTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions withApplianceModeSupport(AcceptTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptionsApplianceModeSupportEnum applianceModeSupport) {
         this.applianceModeSupport = applianceModeSupport;
         return this;
@@ -19,6 +20,7 @@ public class AcceptTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentO
     
     
     public AcceptTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptionsDnsSupportEnum dnsSupport;
+
     public AcceptTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions withDnsSupport(AcceptTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptionsDnsSupportEnum dnsSupport) {
         this.dnsSupport = dnsSupport;
         return this;
@@ -26,9 +28,11 @@ public class AcceptTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentO
     
     
     public AcceptTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptionsIpv6SupportEnum ipv6Support;
+
     public AcceptTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions withIpv6Support(AcceptTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptionsIpv6SupportEnum ipv6Support) {
         this.ipv6Support = ipv6Support;
         return this;
     }
     
+    public AcceptTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions(){}
 }

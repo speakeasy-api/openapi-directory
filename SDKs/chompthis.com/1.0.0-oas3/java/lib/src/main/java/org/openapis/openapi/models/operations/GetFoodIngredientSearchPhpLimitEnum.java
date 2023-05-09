@@ -14,14 +14,14 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * 
  */
 public enum GetFoodIngredientSearchPhpLimitEnum {
-    ONE("1"),
-    TWO("2"),
-    THREE("3");
+    ONE(1L),
+    TWO(2L),
+    THREE(3L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private GetFoodIngredientSearchPhpLimitEnum(String value) {
+    private GetFoodIngredientSearchPhpLimitEnum(Long value) {
         this.value = value;
     }
 }

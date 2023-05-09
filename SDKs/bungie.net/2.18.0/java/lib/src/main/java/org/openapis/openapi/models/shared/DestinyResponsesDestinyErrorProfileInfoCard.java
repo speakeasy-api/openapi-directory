@@ -16,6 +16,7 @@ public class DestinyResponsesDestinyErrorProfileInfoCard {
      */
     
     public Integer[] applicableMembershipTypes;
+
     public DestinyResponsesDestinyErrorProfileInfoCard withApplicableMembershipTypes(Integer[] applicableMembershipTypes) {
         this.applicableMembershipTypes = applicableMembershipTypes;
         return this;
@@ -26,6 +27,7 @@ public class DestinyResponsesDestinyErrorProfileInfoCard {
      */
     
     public String bungieGlobalDisplayName;
+
     public DestinyResponsesDestinyErrorProfileInfoCard withBungieGlobalDisplayName(String bungieGlobalDisplayName) {
         this.bungieGlobalDisplayName = bungieGlobalDisplayName;
         return this;
@@ -36,6 +38,7 @@ public class DestinyResponsesDestinyErrorProfileInfoCard {
      */
     
     public Long bungieGlobalDisplayNameCode;
+
     public DestinyResponsesDestinyErrorProfileInfoCard withBungieGlobalDisplayNameCode(Long bungieGlobalDisplayNameCode) {
         this.bungieGlobalDisplayNameCode = bungieGlobalDisplayNameCode;
         return this;
@@ -46,6 +49,7 @@ public class DestinyResponsesDestinyErrorProfileInfoCard {
      */
     
     public Integer crossSaveOverride;
+
     public DestinyResponsesDestinyErrorProfileInfoCard withCrossSaveOverride(Integer crossSaveOverride) {
         this.crossSaveOverride = crossSaveOverride;
         return this;
@@ -56,6 +60,7 @@ public class DestinyResponsesDestinyErrorProfileInfoCard {
      */
     
     public String displayName;
+
     public DestinyResponsesDestinyErrorProfileInfoCard withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -66,6 +71,7 @@ public class DestinyResponsesDestinyErrorProfileInfoCard {
      */
     
     public String iconPath;
+
     public DestinyResponsesDestinyErrorProfileInfoCard withIconPath(String iconPath) {
         this.iconPath = iconPath;
         return this;
@@ -76,6 +82,7 @@ public class DestinyResponsesDestinyErrorProfileInfoCard {
      */
     
     public Boolean isPublic;
+
     public DestinyResponsesDestinyErrorProfileInfoCard withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -86,6 +93,7 @@ public class DestinyResponsesDestinyErrorProfileInfoCard {
      */
     
     public Long membershipId;
+
     public DestinyResponsesDestinyErrorProfileInfoCard withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -96,6 +104,7 @@ public class DestinyResponsesDestinyErrorProfileInfoCard {
      */
     
     public Integer membershipType;
+
     public DestinyResponsesDestinyErrorProfileInfoCard withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -106,9 +115,11 @@ public class DestinyResponsesDestinyErrorProfileInfoCard {
      */
     
     public String supplementalDisplayName;
+
     public DestinyResponsesDestinyErrorProfileInfoCard withSupplementalDisplayName(String supplementalDisplayName) {
         this.supplementalDisplayName = supplementalDisplayName;
         return this;
     }
     
+    public DestinyResponsesDestinyErrorProfileInfoCard(){}
 }

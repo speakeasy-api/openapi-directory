@@ -15,6 +15,7 @@ public class DgmstRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public DgmstRequestBodyCertificateParameters certificateParameters;
+
     public DgmstRequestBody withCertificateParameters(DgmstRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class DgmstRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public DgmstRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class DgmstRequestBody {
      */
     @JsonProperty("format")
     public DgmstRequestBodyFormatEnum format;
+
     public DgmstRequestBody withFormat(DgmstRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class DgmstRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public DgmstRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public DgmstRequestBody(@JsonProperty("format") DgmstRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

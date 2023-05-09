@@ -15,6 +15,7 @@ public class AccountsLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public AccountsLinkRequest withAction(String action) {
         this.action = action;
         return this;
@@ -26,6 +27,7 @@ public class AccountsLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eCommercePlatformLinkInfo")
     public ECommercePlatformLinkInfo eCommercePlatformLinkInfo;
+
     public AccountsLinkRequest withECommercePlatformLinkInfo(ECommercePlatformLinkInfo eCommercePlatformLinkInfo) {
         this.eCommercePlatformLinkInfo = eCommercePlatformLinkInfo;
         return this;
@@ -37,6 +39,7 @@ public class AccountsLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkType")
     public String linkType;
+
     public AccountsLinkRequest withLinkType(String linkType) {
         this.linkType = linkType;
         return this;
@@ -48,6 +51,7 @@ public class AccountsLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedAccountId")
     public String linkedAccountId;
+
     public AccountsLinkRequest withLinkedAccountId(String linkedAccountId) {
         this.linkedAccountId = linkedAccountId;
         return this;
@@ -59,6 +63,7 @@ public class AccountsLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentServiceProviderLinkInfo")
     public PaymentServiceProviderLinkInfo paymentServiceProviderLinkInfo;
+
     public AccountsLinkRequest withPaymentServiceProviderLinkInfo(PaymentServiceProviderLinkInfo paymentServiceProviderLinkInfo) {
         this.paymentServiceProviderLinkInfo = paymentServiceProviderLinkInfo;
         return this;
@@ -70,9 +75,11 @@ public class AccountsLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public String[] services;
+
     public AccountsLinkRequest withServices(String[] services) {
         this.services = services;
         return this;
     }
     
+    public AccountsLinkRequest(){}
 }

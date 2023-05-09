@@ -18,6 +18,7 @@ public class IosModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceCapabilities")
     public String[] deviceCapabilities;
+
     public IosModel withDeviceCapabilities(String[] deviceCapabilities) {
         this.deviceCapabilities = deviceCapabilities;
         return this;
@@ -29,6 +30,7 @@ public class IosModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formFactor")
     public IosModelFormFactorEnum formFactor;
+
     public IosModel withFormFactor(IosModelFormFactorEnum formFactor) {
         this.formFactor = formFactor;
         return this;
@@ -40,6 +42,7 @@ public class IosModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public IosModel withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class IosModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IosModel withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class IosModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perVersionInfo")
     public PerIosVersionInfo[] perVersionInfo;
+
     public IosModel withPerVersionInfo(PerIosVersionInfo[] perVersionInfo) {
         this.perVersionInfo = perVersionInfo;
         return this;
@@ -73,6 +78,7 @@ public class IosModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenDensity")
     public Integer screenDensity;
+
     public IosModel withScreenDensity(Integer screenDensity) {
         this.screenDensity = screenDensity;
         return this;
@@ -84,6 +90,7 @@ public class IosModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenX")
     public Integer screenX;
+
     public IosModel withScreenX(Integer screenX) {
         this.screenX = screenX;
         return this;
@@ -95,6 +102,7 @@ public class IosModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenY")
     public Integer screenY;
+
     public IosModel withScreenY(Integer screenY) {
         this.screenY = screenY;
         return this;
@@ -106,6 +114,7 @@ public class IosModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedVersionIds")
     public String[] supportedVersionIds;
+
     public IosModel withSupportedVersionIds(String[] supportedVersionIds) {
         this.supportedVersionIds = supportedVersionIds;
         return this;
@@ -117,9 +126,11 @@ public class IosModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public IosModel withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public IosModel(){}
 }

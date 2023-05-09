@@ -14,6 +14,7 @@ public class SendBulkEmailRequestBody {
      */
     @JsonProperty("BulkEmailEntries")
     public org.openapis.openapi.models.shared.BulkEmailEntry[] bulkEmailEntries;
+
     public SendBulkEmailRequestBody withBulkEmailEntries(org.openapis.openapi.models.shared.BulkEmailEntry[] bulkEmailEntries) {
         this.bulkEmailEntries = bulkEmailEntries;
         return this;
@@ -25,6 +26,7 @@ public class SendBulkEmailRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public SendBulkEmailRequestBody withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -35,6 +37,7 @@ public class SendBulkEmailRequestBody {
      */
     @JsonProperty("DefaultContent")
     public SendBulkEmailRequestBodyDefaultContent defaultContent;
+
     public SendBulkEmailRequestBody withDefaultContent(SendBulkEmailRequestBodyDefaultContent defaultContent) {
         this.defaultContent = defaultContent;
         return this;
@@ -46,6 +49,7 @@ public class SendBulkEmailRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultEmailTags")
     public org.openapis.openapi.models.shared.MessageTag[] defaultEmailTags;
+
     public SendBulkEmailRequestBody withDefaultEmailTags(org.openapis.openapi.models.shared.MessageTag[] defaultEmailTags) {
         this.defaultEmailTags = defaultEmailTags;
         return this;
@@ -57,6 +61,7 @@ public class SendBulkEmailRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeedbackForwardingEmailAddress")
     public String feedbackForwardingEmailAddress;
+
     public SendBulkEmailRequestBody withFeedbackForwardingEmailAddress(String feedbackForwardingEmailAddress) {
         this.feedbackForwardingEmailAddress = feedbackForwardingEmailAddress;
         return this;
@@ -68,6 +73,7 @@ public class SendBulkEmailRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeedbackForwardingEmailAddressIdentityArn")
     public String feedbackForwardingEmailAddressIdentityArn;
+
     public SendBulkEmailRequestBody withFeedbackForwardingEmailAddressIdentityArn(String feedbackForwardingEmailAddressIdentityArn) {
         this.feedbackForwardingEmailAddressIdentityArn = feedbackForwardingEmailAddressIdentityArn;
         return this;
@@ -79,6 +85,7 @@ public class SendBulkEmailRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromEmailAddress")
     public String fromEmailAddress;
+
     public SendBulkEmailRequestBody withFromEmailAddress(String fromEmailAddress) {
         this.fromEmailAddress = fromEmailAddress;
         return this;
@@ -90,6 +97,7 @@ public class SendBulkEmailRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromEmailAddressIdentityArn")
     public String fromEmailAddressIdentityArn;
+
     public SendBulkEmailRequestBody withFromEmailAddressIdentityArn(String fromEmailAddressIdentityArn) {
         this.fromEmailAddressIdentityArn = fromEmailAddressIdentityArn;
         return this;
@@ -101,9 +109,14 @@ public class SendBulkEmailRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplyToAddresses")
     public String[] replyToAddresses;
+
     public SendBulkEmailRequestBody withReplyToAddresses(String[] replyToAddresses) {
         this.replyToAddresses = replyToAddresses;
         return this;
     }
     
+    public SendBulkEmailRequestBody(@JsonProperty("BulkEmailEntries") org.openapis.openapi.models.shared.BulkEmailEntry[] bulkEmailEntries, @JsonProperty("DefaultContent") SendBulkEmailRequestBodyDefaultContent defaultContent) {
+        this.bulkEmailEntries = bulkEmailEntries;
+        this.defaultContent = defaultContent;
+  }
 }

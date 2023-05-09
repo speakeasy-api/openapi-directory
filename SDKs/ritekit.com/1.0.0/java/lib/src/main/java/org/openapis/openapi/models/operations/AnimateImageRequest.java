@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnimateImageRequest {
@@ -12,6 +13,7 @@ public class AnimateImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public AnimateImageRequest withType(String type) {
         this.type = type;
         return this;
@@ -22,9 +24,14 @@ public class AnimateImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public AnimateImageRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AnimateImageRequest(@JsonProperty("type") String type, @JsonProperty("url") String url) {
+        this.type = type;
+        this.url = url;
+  }
 }

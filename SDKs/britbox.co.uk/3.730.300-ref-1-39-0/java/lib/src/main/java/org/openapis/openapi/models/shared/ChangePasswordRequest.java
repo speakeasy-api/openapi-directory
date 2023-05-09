@@ -15,6 +15,7 @@ public class ChangePasswordRequest {
      */
     @JsonProperty("password")
     public String password;
+
     public ChangePasswordRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -25,9 +26,14 @@ public class ChangePasswordRequest {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ChangePasswordRequest withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
     }
     
+    public ChangePasswordRequest(@JsonProperty("password") String password, @JsonProperty("profileToken") String profileToken) {
+        this.password = password;
+        this.profileToken = profileToken;
+  }
 }

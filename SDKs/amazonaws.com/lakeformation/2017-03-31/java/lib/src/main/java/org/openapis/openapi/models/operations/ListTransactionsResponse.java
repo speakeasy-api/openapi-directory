@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTransactionsResponse {
     
     public String contentType;
+
     public ListTransactionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTransactionsResponse {
      */
     
     public Object internalServiceException;
+
     public ListTransactionsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListTransactionsResponse {
      */
     
     public Object invalidInputException;
+
     public ListTransactionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class ListTransactionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTransactionsResponse listTransactionsResponse;
+
     public ListTransactionsResponse withListTransactionsResponse(org.openapis.openapi.models.shared.ListTransactionsResponse listTransactionsResponse) {
         this.listTransactionsResponse = listTransactionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListTransactionsResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListTransactionsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class ListTransactionsResponse {
     
     
     public Integer statusCode;
+
     public ListTransactionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListTransactionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTransactionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTransactionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMailboxDetailsResponse {
     
     public String contentType;
+
     public GetMailboxDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMailboxDetailsResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetMailboxDetailsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetMailboxDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMailboxDetailsResponse getMailboxDetailsResponse;
+
     public GetMailboxDetailsResponse withGetMailboxDetailsResponse(org.openapis.openapi.models.shared.GetMailboxDetailsResponse getMailboxDetailsResponse) {
         this.getMailboxDetailsResponse = getMailboxDetailsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetMailboxDetailsResponse {
      */
     
     public Object organizationNotFoundException;
+
     public GetMailboxDetailsResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class GetMailboxDetailsResponse {
      */
     
     public Object organizationStateException;
+
     public GetMailboxDetailsResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -56,6 +62,7 @@ public class GetMailboxDetailsResponse {
     
     
     public Integer statusCode;
+
     public GetMailboxDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetMailboxDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMailboxDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMailboxDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

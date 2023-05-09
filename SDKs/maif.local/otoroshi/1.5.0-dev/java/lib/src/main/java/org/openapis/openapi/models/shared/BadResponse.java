@@ -15,6 +15,7 @@ public class BadResponse {
      */
     @JsonProperty("body")
     public String body;
+
     public BadResponse withBody(String body) {
         this.body = body;
         return this;
@@ -25,6 +26,7 @@ public class BadResponse {
      */
     @JsonProperty("headers")
     public java.util.Map<String, String> headers;
+
     public BadResponse withHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
@@ -35,9 +37,15 @@ public class BadResponse {
      */
     @JsonProperty("status")
     public Integer status;
+
     public BadResponse withStatus(Integer status) {
         this.status = status;
         return this;
     }
     
+    public BadResponse(@JsonProperty("body") String body, @JsonProperty("headers") java.util.Map<String, String> headers, @JsonProperty("status") Integer status) {
+        this.body = body;
+        this.headers = headers;
+        this.status = status;
+  }
 }

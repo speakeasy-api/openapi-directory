@@ -12,6 +12,7 @@ public class UpdateFleetCapacityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredInstances")
     public Long desiredInstances;
+
     public UpdateFleetCapacityInput withDesiredInstances(Long desiredInstances) {
         this.desiredInstances = desiredInstances;
         return this;
@@ -19,6 +20,7 @@ public class UpdateFleetCapacityInput {
     
     @JsonProperty("FleetId")
     public String fleetId;
+
     public UpdateFleetCapacityInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -27,6 +29,7 @@ public class UpdateFleetCapacityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public UpdateFleetCapacityInput withLocation(String location) {
         this.location = location;
         return this;
@@ -35,6 +38,7 @@ public class UpdateFleetCapacityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxSize")
     public Long maxSize;
+
     public UpdateFleetCapacityInput withMaxSize(Long maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -43,9 +47,13 @@ public class UpdateFleetCapacityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinSize")
     public Long minSize;
+
     public UpdateFleetCapacityInput withMinSize(Long minSize) {
         this.minSize = minSize;
         return this;
     }
     
+    public UpdateFleetCapacityInput(@JsonProperty("FleetId") String fleetId) {
+        this.fleetId = fleetId;
+  }
 }

@@ -18,6 +18,7 @@ public class ListServiceRolloutsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListServiceRolloutsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListServiceRolloutsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollouts")
     public Rollout[] rollouts;
+
     public ListServiceRolloutsResponse withRollouts(Rollout[] rollouts) {
         this.rollouts = rollouts;
         return this;
     }
     
+    public ListServiceRolloutsResponse(){}
 }

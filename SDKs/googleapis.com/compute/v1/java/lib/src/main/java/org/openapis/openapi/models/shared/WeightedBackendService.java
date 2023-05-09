@@ -18,6 +18,7 @@ public class WeightedBackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backendService")
     public String backendService;
+
     public WeightedBackendService withBackendService(String backendService) {
         this.backendService = backendService;
         return this;
@@ -29,6 +30,7 @@ public class WeightedBackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerAction")
     public HttpHeaderAction headerAction;
+
     public WeightedBackendService withHeaderAction(HttpHeaderAction headerAction) {
         this.headerAction = headerAction;
         return this;
@@ -40,9 +42,11 @@ public class WeightedBackendService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Long weight;
+
     public WeightedBackendService withWeight(Long weight) {
         this.weight = weight;
         return this;
     }
     
+    public WeightedBackendService(){}
 }

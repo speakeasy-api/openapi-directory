@@ -18,6 +18,7 @@ public class ListEnvironmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public Environment[] environment;
+
     public ListEnvironmentsResponse withEnvironment(Environment[] environment) {
         this.environment = environment;
         return this;
@@ -29,9 +30,11 @@ public class ListEnvironmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListEnvironmentsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListEnvironmentsResponse(){}
 }

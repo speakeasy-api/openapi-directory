@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelAuditMitigationActionsTaskResponse {
@@ -12,6 +13,7 @@ public class CancelAuditMitigationActionsTaskResponse {
      */
     
     public java.util.Map<String, Object> cancelAuditMitigationActionsTaskResponse;
+
     public CancelAuditMitigationActionsTaskResponse withCancelAuditMitigationActionsTaskResponse(java.util.Map<String, Object> cancelAuditMitigationActionsTaskResponse) {
         this.cancelAuditMitigationActionsTaskResponse = cancelAuditMitigationActionsTaskResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelAuditMitigationActionsTaskResponse {
     
     
     public String contentType;
+
     public CancelAuditMitigationActionsTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelAuditMitigationActionsTaskResponse {
      */
     
     public Object internalFailureException;
+
     public CancelAuditMitigationActionsTaskResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CancelAuditMitigationActionsTaskResponse {
      */
     
     public Object invalidRequestException;
+
     public CancelAuditMitigationActionsTaskResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CancelAuditMitigationActionsTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelAuditMitigationActionsTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CancelAuditMitigationActionsTaskResponse {
     
     
     public Integer statusCode;
+
     public CancelAuditMitigationActionsTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CancelAuditMitigationActionsTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelAuditMitigationActionsTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CancelAuditMitigationActionsTaskResponse {
      */
     
     public Object throttlingException;
+
     public CancelAuditMitigationActionsTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CancelAuditMitigationActionsTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

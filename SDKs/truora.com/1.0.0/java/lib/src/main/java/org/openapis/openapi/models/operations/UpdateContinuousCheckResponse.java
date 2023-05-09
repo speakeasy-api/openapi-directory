@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateContinuousCheckResponse {
     
     public String contentType;
+
     public UpdateContinuousCheckResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateContinuousCheckResponse {
      */
     
     public org.openapis.openapi.models.shared.ContinuousCheck continuousCheck;
+
     public UpdateContinuousCheckResponse withContinuousCheck(org.openapis.openapi.models.shared.ContinuousCheck continuousCheck) {
         this.continuousCheck = continuousCheck;
         return this;
@@ -26,6 +29,7 @@ public class UpdateContinuousCheckResponse {
     
     
     public Integer statusCode;
+
     public UpdateContinuousCheckResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class UpdateContinuousCheckResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateContinuousCheckResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateContinuousCheckResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class DisassociateAccountsRequestBody {
      */
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public DisassociateAccountsRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -22,9 +23,14 @@ public class DisassociateAccountsRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public DisassociateAccountsRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DisassociateAccountsRequestBody(@JsonProperty("AccountIds") String[] accountIds, @JsonProperty("Arn") String arn) {
+        this.accountIds = accountIds;
+        this.arn = arn;
+  }
 }

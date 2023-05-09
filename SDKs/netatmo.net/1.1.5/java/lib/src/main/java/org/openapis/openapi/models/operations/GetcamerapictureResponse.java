@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetcamerapictureResponse {
     
     public String contentType;
+
     public GetcamerapictureResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetcamerapictureResponse {
     
     
     public Integer statusCode;
+
     public GetcamerapictureResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetcamerapictureResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetcamerapictureResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetcamerapictureResponse {
      */
     
     public String getcamerapicture200ApplicationJSONByteString;
+
     public GetcamerapictureResponse withGetcamerapicture200ApplicationJSONByteString(String getcamerapicture200ApplicationJSONByteString) {
         this.getcamerapicture200ApplicationJSONByteString = getcamerapicture200ApplicationJSONByteString;
         return this;
     }
     
+    public GetcamerapictureResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

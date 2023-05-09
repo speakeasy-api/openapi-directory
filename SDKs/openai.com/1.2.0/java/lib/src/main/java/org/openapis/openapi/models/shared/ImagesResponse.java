@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImagesResponse {
     @JsonProperty("created")
     public Long created;
+
     public ImagesResponse withCreated(Long created) {
         this.created = created;
         return this;
@@ -19,9 +20,14 @@ public class ImagesResponse {
     
     @JsonProperty("data")
     public ImagesResponseData[] data;
+
     public ImagesResponse withData(ImagesResponseData[] data) {
         this.data = data;
         return this;
     }
     
+    public ImagesResponse(@JsonProperty("created") Long created, @JsonProperty("data") ImagesResponseData[] data) {
+        this.created = created;
+        this.data = data;
+  }
 }

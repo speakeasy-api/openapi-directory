@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSuggestedResiliencyPoliciesResponse {
@@ -12,6 +13,7 @@ public class ListSuggestedResiliencyPoliciesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSuggestedResiliencyPoliciesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListSuggestedResiliencyPoliciesResponse {
     
     
     public String contentType;
+
     public ListSuggestedResiliencyPoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSuggestedResiliencyPoliciesResponse {
      */
     
     public Object internalServerException;
+
     public ListSuggestedResiliencyPoliciesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListSuggestedResiliencyPoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSuggestedResiliencyPoliciesResponse listSuggestedResiliencyPoliciesResponse;
+
     public ListSuggestedResiliencyPoliciesResponse withListSuggestedResiliencyPoliciesResponse(org.openapis.openapi.models.shared.ListSuggestedResiliencyPoliciesResponse listSuggestedResiliencyPoliciesResponse) {
         this.listSuggestedResiliencyPoliciesResponse = listSuggestedResiliencyPoliciesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListSuggestedResiliencyPoliciesResponse {
     
     
     public Integer statusCode;
+
     public ListSuggestedResiliencyPoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListSuggestedResiliencyPoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSuggestedResiliencyPoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListSuggestedResiliencyPoliciesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSuggestedResiliencyPoliciesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListSuggestedResiliencyPoliciesResponse {
      */
     
     public Object throttlingException;
+
     public ListSuggestedResiliencyPoliciesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListSuggestedResiliencyPoliciesResponse {
      */
     
     public Object validationException;
+
     public ListSuggestedResiliencyPoliciesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSuggestedResiliencyPoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

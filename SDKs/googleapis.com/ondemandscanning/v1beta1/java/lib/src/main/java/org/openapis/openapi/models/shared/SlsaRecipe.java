@@ -18,6 +18,7 @@ public class SlsaRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arguments")
     public java.util.Map<String, Object> arguments;
+
     public SlsaRecipe withArguments(java.util.Map<String, Object> arguments) {
         this.arguments = arguments;
         return this;
@@ -29,6 +30,7 @@ public class SlsaRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definedInMaterial")
     public String definedInMaterial;
+
     public SlsaRecipe withDefinedInMaterial(String definedInMaterial) {
         this.definedInMaterial = definedInMaterial;
         return this;
@@ -40,6 +42,7 @@ public class SlsaRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryPoint")
     public String entryPoint;
+
     public SlsaRecipe withEntryPoint(String entryPoint) {
         this.entryPoint = entryPoint;
         return this;
@@ -51,6 +54,7 @@ public class SlsaRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public java.util.Map<String, Object> environment;
+
     public SlsaRecipe withEnvironment(java.util.Map<String, Object> environment) {
         this.environment = environment;
         return this;
@@ -62,9 +66,11 @@ public class SlsaRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SlsaRecipe withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SlsaRecipe(){}
 }

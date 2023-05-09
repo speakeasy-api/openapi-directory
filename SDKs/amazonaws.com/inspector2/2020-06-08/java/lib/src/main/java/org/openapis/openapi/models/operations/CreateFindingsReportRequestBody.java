@@ -15,6 +15,7 @@ public class CreateFindingsReportRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterCriteria")
     public CreateFindingsReportRequestBodyFilterCriteria filterCriteria;
+
     public CreateFindingsReportRequestBody withFilterCriteria(CreateFindingsReportRequestBodyFilterCriteria filterCriteria) {
         this.filterCriteria = filterCriteria;
         return this;
@@ -25,6 +26,7 @@ public class CreateFindingsReportRequestBody {
      */
     @JsonProperty("reportFormat")
     public CreateFindingsReportRequestBodyReportFormatEnum reportFormat;
+
     public CreateFindingsReportRequestBody withReportFormat(CreateFindingsReportRequestBodyReportFormatEnum reportFormat) {
         this.reportFormat = reportFormat;
         return this;
@@ -35,9 +37,14 @@ public class CreateFindingsReportRequestBody {
      */
     @JsonProperty("s3Destination")
     public CreateFindingsReportRequestBodyS3Destination s3Destination;
+
     public CreateFindingsReportRequestBody withS3Destination(CreateFindingsReportRequestBodyS3Destination s3Destination) {
         this.s3Destination = s3Destination;
         return this;
     }
     
+    public CreateFindingsReportRequestBody(@JsonProperty("reportFormat") CreateFindingsReportRequestBodyReportFormatEnum reportFormat, @JsonProperty("s3Destination") CreateFindingsReportRequestBodyS3Destination s3Destination) {
+        this.reportFormat = reportFormat;
+        this.s3Destination = s3Destination;
+  }
 }

@@ -59,11 +59,9 @@ public class Familysharing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksFamilysharingGetFamilyInfoResponse res = new org.openapis.openapi.models.operations.BooksFamilysharingGetFamilyInfoResponse() {{
+        org.openapis.openapi.models.operations.BooksFamilysharingGetFamilyInfoResponse res = new org.openapis.openapi.models.operations.BooksFamilysharingGetFamilyInfoResponse(contentType, httpRes.statusCode()) {{
             familyInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Familysharing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksFamilysharingShareResponse res = new org.openapis.openapi.models.operations.BooksFamilysharingShareResponse() {{
+        org.openapis.openapi.models.operations.BooksFamilysharingShareResponse res = new org.openapis.openapi.models.operations.BooksFamilysharingShareResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Familysharing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksFamilysharingUnshareResponse res = new org.openapis.openapi.models.operations.BooksFamilysharingUnshareResponse() {{
+        org.openapis.openapi.models.operations.BooksFamilysharingUnshareResponse res = new org.openapis.openapi.models.operations.BooksFamilysharingUnshareResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class LayoutPlaceholderIdMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layoutPlaceholder")
     public Placeholder layoutPlaceholder;
+
     public LayoutPlaceholderIdMapping withLayoutPlaceholder(Placeholder layoutPlaceholder) {
         this.layoutPlaceholder = layoutPlaceholder;
         return this;
@@ -29,6 +30,7 @@ public class LayoutPlaceholderIdMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layoutPlaceholderObjectId")
     public String layoutPlaceholderObjectId;
+
     public LayoutPlaceholderIdMapping withLayoutPlaceholderObjectId(String layoutPlaceholderObjectId) {
         this.layoutPlaceholderObjectId = layoutPlaceholderObjectId;
         return this;
@@ -40,9 +42,11 @@ public class LayoutPlaceholderIdMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public LayoutPlaceholderIdMapping withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public LayoutPlaceholderIdMapping(){}
 }

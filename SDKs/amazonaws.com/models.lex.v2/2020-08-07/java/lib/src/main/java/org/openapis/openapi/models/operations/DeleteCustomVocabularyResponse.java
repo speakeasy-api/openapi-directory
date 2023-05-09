@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomVocabularyResponse {
@@ -12,6 +13,7 @@ public class DeleteCustomVocabularyResponse {
      */
     
     public Object conflictException;
+
     public DeleteCustomVocabularyResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCustomVocabularyResponse {
     
     
     public String contentType;
+
     public DeleteCustomVocabularyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCustomVocabularyResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteCustomVocabularyResponse deleteCustomVocabularyResponse;
+
     public DeleteCustomVocabularyResponse withDeleteCustomVocabularyResponse(org.openapis.openapi.models.shared.DeleteCustomVocabularyResponse deleteCustomVocabularyResponse) {
         this.deleteCustomVocabularyResponse = deleteCustomVocabularyResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCustomVocabularyResponse {
      */
     
     public Object internalServerException;
+
     public DeleteCustomVocabularyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCustomVocabularyResponse {
      */
     
     public Object preconditionFailedException;
+
     public DeleteCustomVocabularyResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCustomVocabularyResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteCustomVocabularyResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteCustomVocabularyResponse {
     
     
     public Integer statusCode;
+
     public DeleteCustomVocabularyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteCustomVocabularyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomVocabularyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteCustomVocabularyResponse {
      */
     
     public Object throttlingException;
+
     public DeleteCustomVocabularyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteCustomVocabularyResponse {
      */
     
     public Object validationException;
+
     public DeleteCustomVocabularyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteCustomVocabularyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

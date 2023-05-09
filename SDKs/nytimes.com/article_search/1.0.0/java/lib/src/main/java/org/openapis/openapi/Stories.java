@@ -59,11 +59,9 @@ public class Stories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetArticlesearchJsonResponse res = new org.openapis.openapi.models.operations.GetArticlesearchJsonResponse() {{
+        org.openapis.openapi.models.operations.GetArticlesearchJsonResponse res = new org.openapis.openapi.models.operations.GetArticlesearchJsonResponse(contentType, httpRes.statusCode()) {{
             getArticlesearchJSON200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

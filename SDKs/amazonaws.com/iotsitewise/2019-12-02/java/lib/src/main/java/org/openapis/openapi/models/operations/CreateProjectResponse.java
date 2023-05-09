@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateProjectResponse {
     
     public String contentType;
+
     public CreateProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateProjectResponse createProjectResponse;
+
     public CreateProjectResponse withCreateProjectResponse(org.openapis.openapi.models.shared.CreateProjectResponse createProjectResponse) {
         this.createProjectResponse = createProjectResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateProjectResponse {
      */
     
     public Object internalFailureException;
+
     public CreateProjectResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateProjectResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateProjectResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateProjectResponse {
      */
     
     public Object limitExceededException;
+
     public CreateProjectResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateProjectResponse {
     
     
     public Integer statusCode;
+
     public CreateProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateProjectResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateProjectResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class CreateProjectResponse {
      */
     
     public Object throttlingException;
+
     public CreateProjectResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateUserRequest {
     
     public String path;
+
     public CreateUserRequest withPath(String path) {
         this.path = path;
         return this;
@@ -16,6 +17,7 @@ public class CreateUserRequest {
     
     
     public String permissionsBoundary;
+
     public CreateUserRequest withPermissionsBoundary(String permissionsBoundary) {
         this.permissionsBoundary = permissionsBoundary;
         return this;
@@ -23,6 +25,7 @@ public class CreateUserRequest {
     
     
     public Tag[] tags;
+
     public CreateUserRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -30,9 +33,13 @@ public class CreateUserRequest {
     
     
     public String userName;
+
     public CreateUserRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public CreateUserRequest(@JsonProperty("UserName") String userName) {
+        this.userName = userName;
+  }
 }

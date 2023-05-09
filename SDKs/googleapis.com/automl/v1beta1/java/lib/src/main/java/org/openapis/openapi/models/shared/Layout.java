@@ -18,6 +18,7 @@ public class Layout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingPoly")
     public BoundingPoly boundingPoly;
+
     public Layout withBoundingPoly(BoundingPoly boundingPoly) {
         this.boundingPoly = boundingPoly;
         return this;
@@ -29,6 +30,7 @@ public class Layout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageNumber")
     public Integer pageNumber;
+
     public Layout withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -40,6 +42,7 @@ public class Layout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textSegment")
     public TextSegment textSegment;
+
     public Layout withTextSegment(TextSegment textSegment) {
         this.textSegment = textSegment;
         return this;
@@ -51,9 +54,11 @@ public class Layout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textSegmentType")
     public LayoutTextSegmentTypeEnum textSegmentType;
+
     public Layout withTextSegmentType(LayoutTextSegmentTypeEnum textSegmentType) {
         this.textSegmentType = textSegmentType;
         return this;
     }
     
+    public Layout(){}
 }

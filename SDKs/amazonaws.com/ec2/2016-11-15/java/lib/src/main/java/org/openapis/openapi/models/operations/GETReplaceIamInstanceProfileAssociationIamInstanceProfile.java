@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETReplaceIamInstanceProfileAssociationIamInstanceProfile {
     @SpeakeasyMetadata("queryParam:name=Arn")
     public String arn;
+
     public GETReplaceIamInstanceProfileAssociationIamInstanceProfile withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,11 @@ public class GETReplaceIamInstanceProfileAssociationIamInstanceProfile {
     
     @SpeakeasyMetadata("queryParam:name=Name")
     public String name;
+
     public GETReplaceIamInstanceProfileAssociationIamInstanceProfile withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GETReplaceIamInstanceProfileAssociationIamInstanceProfile(){}
 }

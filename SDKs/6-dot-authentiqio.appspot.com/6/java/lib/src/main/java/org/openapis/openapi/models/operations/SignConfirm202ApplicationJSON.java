@@ -18,9 +18,11 @@ public class SignConfirm202ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public SignConfirm202ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public SignConfirm202ApplicationJSON(){}
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ListedHostKey {
     @JsonProperty("Arn")
     public String arn;
+
     public ListedHostKey withArn(String arn) {
         this.arn = arn;
         return this;
@@ -29,6 +30,7 @@ public class ListedHostKey {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateImported")
     public OffsetDateTime dateImported;
+
     public ListedHostKey withDateImported(OffsetDateTime dateImported) {
         this.dateImported = dateImported;
         return this;
@@ -37,6 +39,7 @@ public class ListedHostKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ListedHostKey withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class ListedHostKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fingerprint")
     public String fingerprint;
+
     public ListedHostKey withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -53,6 +57,7 @@ public class ListedHostKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostKeyId")
     public String hostKeyId;
+
     public ListedHostKey withHostKeyId(String hostKeyId) {
         this.hostKeyId = hostKeyId;
         return this;
@@ -61,9 +66,13 @@ public class ListedHostKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public ListedHostKey withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ListedHostKey(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

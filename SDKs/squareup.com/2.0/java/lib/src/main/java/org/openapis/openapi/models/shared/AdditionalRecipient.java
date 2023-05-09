@@ -22,6 +22,7 @@ public class AdditionalRecipient {
      */
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public AdditionalRecipient withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -33,6 +34,7 @@ public class AdditionalRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AdditionalRecipient withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +45,7 @@ public class AdditionalRecipient {
      */
     @JsonProperty("location_id")
     public String locationId;
+
     public AdditionalRecipient withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -54,9 +57,14 @@ public class AdditionalRecipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receivable_id")
     public String receivableId;
+
     public AdditionalRecipient withReceivableId(String receivableId) {
         this.receivableId = receivableId;
         return this;
     }
     
+    public AdditionalRecipient(@JsonProperty("amount_money") Money amountMoney, @JsonProperty("location_id") String locationId) {
+        this.amountMoney = amountMoney;
+        this.locationId = locationId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddImageWatermarkV1Response {
     
     public String contentType;
+
     public AddImageWatermarkV1Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AddImageWatermarkV1Response {
     
     
     public Integer statusCode;
+
     public AddImageWatermarkV1Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AddImageWatermarkV1Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddImageWatermarkV1Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AddImageWatermarkV1Response {
      */
     
     public byte[] addImageWatermarkV1200ApplicationPdfBinaryString;
+
     public AddImageWatermarkV1Response withAddImageWatermarkV1200ApplicationPdfBinaryString(byte[] addImageWatermarkV1200ApplicationPdfBinaryString) {
         this.addImageWatermarkV1200ApplicationPdfBinaryString = addImageWatermarkV1200ApplicationPdfBinaryString;
         return this;
@@ -43,9 +48,14 @@ public class AddImageWatermarkV1Response {
      */
     
     public AddImageWatermarkV14XXApplicationProblemPlusJson addImageWatermarkV14XXApplicationProblemPlusJsonObject;
+
     public AddImageWatermarkV1Response withAddImageWatermarkV14XXApplicationProblemPlusJsonObject(AddImageWatermarkV14XXApplicationProblemPlusJson addImageWatermarkV14XXApplicationProblemPlusJsonObject) {
         this.addImageWatermarkV14XXApplicationProblemPlusJsonObject = addImageWatermarkV14XXApplicationProblemPlusJsonObject;
         return this;
     }
     
+    public AddImageWatermarkV1Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

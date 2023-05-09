@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesLineModeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineIdentifier")
     public String[] lineIdentifier;
+
     public TflApiPresentationEntitiesLineModeGroup withLineIdentifier(String[] lineIdentifier) {
         this.lineIdentifier = lineIdentifier;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesLineModeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modeName")
     public String modeName;
+
     public TflApiPresentationEntitiesLineModeGroup withModeName(String modeName) {
         this.modeName = modeName;
         return this;
     }
     
+    public TflApiPresentationEntitiesLineModeGroup(){}
 }

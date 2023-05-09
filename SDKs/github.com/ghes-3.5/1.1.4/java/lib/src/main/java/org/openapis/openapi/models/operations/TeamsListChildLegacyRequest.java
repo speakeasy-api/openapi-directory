@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsListChildLegacyRequest {
@@ -12,6 +13,7 @@ public class TeamsListChildLegacyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public TeamsListChildLegacyRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,6 +24,7 @@ public class TeamsListChildLegacyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public TeamsListChildLegacyRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -32,9 +35,13 @@ public class TeamsListChildLegacyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public TeamsListChildLegacyRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public TeamsListChildLegacyRequest(@JsonProperty("team_id") Long teamId) {
+        this.teamId = teamId;
+  }
 }

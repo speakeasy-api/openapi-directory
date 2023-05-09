@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdjustmentConditions {
     @JsonProperty("rules")
     public AdjustmentConditionsRules rules;
+
     public AdjustmentConditions withRules(AdjustmentConditionsRules rules) {
         this.rules = rules;
         return this;
@@ -19,9 +20,14 @@ public class AdjustmentConditions {
      */
     @JsonProperty("type")
     public AdjustmentConditionsTypeEnum type;
+
     public AdjustmentConditions withType(AdjustmentConditionsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AdjustmentConditions(@JsonProperty("rules") AdjustmentConditionsRules rules, @JsonProperty("type") AdjustmentConditionsTypeEnum type) {
+        this.rules = rules;
+        this.type = type;
+  }
 }

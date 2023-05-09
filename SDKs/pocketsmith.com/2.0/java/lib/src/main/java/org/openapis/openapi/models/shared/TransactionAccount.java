@@ -15,6 +15,7 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public TransactionAccount withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -26,6 +27,7 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_code")
     public String currencyCode;
+
     public TransactionAccount withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -34,6 +36,7 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_balance")
     public Double currentBalance;
+
     public TransactionAccount withCurrentBalance(Double currentBalance) {
         this.currentBalance = currentBalance;
         return this;
@@ -42,6 +45,7 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_balance_date")
     public String currentBalanceDate;
+
     public TransactionAccount withCurrentBalanceDate(String currentBalanceDate) {
         this.currentBalanceDate = currentBalanceDate;
         return this;
@@ -53,6 +57,7 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_balance_exchange_rate")
     public Double currentBalanceExchangeRate;
+
     public TransactionAccount withCurrentBalanceExchangeRate(Double currentBalanceExchangeRate) {
         this.currentBalanceExchangeRate = currentBalanceExchangeRate;
         return this;
@@ -64,6 +69,7 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_balance_in_base_currency")
     public Double currentBalanceInBaseCurrency;
+
     public TransactionAccount withCurrentBalanceInBaseCurrency(Double currentBalanceInBaseCurrency) {
         this.currentBalanceInBaseCurrency = currentBalanceInBaseCurrency;
         return this;
@@ -72,6 +78,7 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TransactionAccount withId(Long id) {
         this.id = id;
         return this;
@@ -80,6 +87,7 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("institution")
     public Institution institution;
+
     public TransactionAccount withInstitution(Institution institution) {
         this.institution = institution;
         return this;
@@ -88,6 +96,7 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TransactionAccount withName(String name) {
         this.name = name;
         return this;
@@ -96,6 +105,7 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public TransactionAccount withNumber(String number) {
         this.number = number;
         return this;
@@ -107,6 +117,7 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("safe_balance")
     public Double safeBalance;
+
     public TransactionAccount withSafeBalance(Double safeBalance) {
         this.safeBalance = safeBalance;
         return this;
@@ -118,6 +129,7 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("safe_balance_in_base_currency")
     public Double safeBalanceInBaseCurrency;
+
     public TransactionAccount withSafeBalanceInBaseCurrency(Double safeBalanceInBaseCurrency) {
         this.safeBalanceInBaseCurrency = safeBalanceInBaseCurrency;
         return this;
@@ -126,6 +138,7 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starting_balance")
     public Double startingBalance;
+
     public TransactionAccount withStartingBalance(Double startingBalance) {
         this.startingBalance = startingBalance;
         return this;
@@ -134,6 +147,7 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starting_balance_date")
     public String startingBalanceDate;
+
     public TransactionAccount withStartingBalanceDate(String startingBalanceDate) {
         this.startingBalanceDate = startingBalanceDate;
         return this;
@@ -145,6 +159,7 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TransactionAccountTypeEnum type;
+
     public TransactionAccount withType(TransactionAccountTypeEnum type) {
         this.type = type;
         return this;
@@ -153,9 +168,11 @@ public class TransactionAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public TransactionAccount withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public TransactionAccount(){}
 }

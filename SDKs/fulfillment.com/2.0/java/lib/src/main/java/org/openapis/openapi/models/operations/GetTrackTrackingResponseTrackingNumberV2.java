@@ -15,6 +15,7 @@ public class GetTrackTrackingResponseTrackingNumberV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("barcodeScanValue")
     public String barcodeScanValue;
+
     public GetTrackTrackingResponseTrackingNumberV2 withBarcodeScanValue(String barcodeScanValue) {
         this.barcodeScanValue = barcodeScanValue;
         return this;
@@ -23,6 +24,7 @@ public class GetTrackTrackingResponseTrackingNumberV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier")
     public GetTrackTrackingResponseTrackingNumberV2CarrierSimpleV2 carrier;
+
     public GetTrackTrackingResponseTrackingNumberV2 withCarrier(GetTrackTrackingResponseTrackingNumberV2CarrierSimpleV2 carrier) {
         this.carrier = carrier;
         return this;
@@ -34,9 +36,11 @@ public class GetTrackTrackingResponseTrackingNumberV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GetTrackTrackingResponseTrackingNumberV2 withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetTrackTrackingResponseTrackingNumberV2(){}
 }

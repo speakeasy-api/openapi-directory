@@ -15,6 +15,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public Attribute withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -23,6 +24,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Category")
     public EntityTypeEnum category;
+
     public Attribute withCategory(EntityTypeEnum category) {
         this.category = category;
         return this;
@@ -31,6 +33,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public Attribute withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -39,6 +42,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public Attribute withId(Long id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelationshipScore")
     public Float relationshipScore;
+
     public Attribute withRelationshipScore(Float relationshipScore) {
         this.relationshipScore = relationshipScore;
         return this;
@@ -55,6 +60,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelationshipType")
     public RelationshipTypeEnum relationshipType;
+
     public Attribute withRelationshipType(RelationshipTypeEnum relationshipType) {
         this.relationshipType = relationshipType;
         return this;
@@ -63,6 +69,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public Attribute withScore(Float score) {
         this.score = score;
         return this;
@@ -71,6 +78,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public Attribute withText(String text) {
         this.text = text;
         return this;
@@ -79,6 +87,7 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Traits")
     public Trait[] traits;
+
     public Attribute withTraits(Trait[] traits) {
         this.traits = traits;
         return this;
@@ -87,9 +96,11 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public EntitySubTypeEnum type;
+
     public Attribute withType(EntitySubTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Attribute(){}
 }

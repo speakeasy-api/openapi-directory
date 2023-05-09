@@ -12,6 +12,7 @@ public class TotalByOfficeByParty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("election_year")
     public Integer electionYear;
+
     public TotalByOfficeByParty withElectionYear(Integer electionYear) {
         this.electionYear = electionYear;
         return this;
@@ -20,6 +21,7 @@ public class TotalByOfficeByParty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("office")
     public String office;
+
     public TotalByOfficeByParty withOffice(String office) {
         this.office = office;
         return this;
@@ -28,6 +30,7 @@ public class TotalByOfficeByParty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("party")
     public String party;
+
     public TotalByOfficeByParty withParty(String party) {
         this.party = party;
         return this;
@@ -36,6 +39,7 @@ public class TotalByOfficeByParty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_disbursements")
     public Double totalDisbursements;
+
     public TotalByOfficeByParty withTotalDisbursements(Double totalDisbursements) {
         this.totalDisbursements = totalDisbursements;
         return this;
@@ -44,9 +48,11 @@ public class TotalByOfficeByParty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_receipts")
     public Double totalReceipts;
+
     public TotalByOfficeByParty withTotalReceipts(Double totalReceipts) {
         this.totalReceipts = totalReceipts;
         return this;
     }
     
+    public TotalByOfficeByParty(){}
 }

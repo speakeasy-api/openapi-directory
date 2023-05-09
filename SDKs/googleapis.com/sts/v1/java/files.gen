@@ -44,4 +44,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleIdentityStsV1Exchange
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIdentityStsV1ExchangeOauthTokenRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIdentityStsV1ExchangeTokenResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIdentityStsV1ExchangeTokenRequest.java
+docs/sdk/README.md
+docs/v1/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public GoogleCloudIntegrationsV1alphaAccessToken accessToken;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials withAccessToken(GoogleCloudIntegrationsV1alphaAccessToken accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials withPassword(String password) {
         this.password = password;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestType")
     public GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentialsRequestTypeEnum requestType;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials withRequestType(GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentialsRequestTypeEnum requestType) {
         this.requestType = requestType;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials withScope(String scope) {
         this.scope = scope;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenEndpoint")
     public String tokenEndpoint;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials withTokenEndpoint(String tokenEndpoint) {
         this.tokenEndpoint = tokenEndpoint;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenParams")
     public GoogleCloudIntegrationsV1alphaParameterMap tokenParams;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials withTokenParams(GoogleCloudIntegrationsV1alphaParameterMap tokenParams) {
         this.tokenParams = tokenParams;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials(){}
 }

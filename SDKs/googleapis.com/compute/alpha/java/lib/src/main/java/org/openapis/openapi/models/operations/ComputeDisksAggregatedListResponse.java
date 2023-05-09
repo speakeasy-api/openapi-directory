@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeDisksAggregatedListResponse {
     
     public String contentType;
+
     public ComputeDisksAggregatedListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeDisksAggregatedListResponse {
      */
     
     public org.openapis.openapi.models.shared.DiskAggregatedList diskAggregatedList;
+
     public ComputeDisksAggregatedListResponse withDiskAggregatedList(org.openapis.openapi.models.shared.DiskAggregatedList diskAggregatedList) {
         this.diskAggregatedList = diskAggregatedList;
         return this;
@@ -26,6 +29,7 @@ public class ComputeDisksAggregatedListResponse {
     
     
     public Integer statusCode;
+
     public ComputeDisksAggregatedListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeDisksAggregatedListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeDisksAggregatedListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeDisksAggregatedListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class CreateConfigurationSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateConfigurationSetRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateConfigurationSetRequest {
     
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public CreateConfigurationSetRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -27,9 +29,13 @@ public class CreateConfigurationSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateConfigurationSetRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateConfigurationSetRequest(@JsonProperty("ConfigurationSetName") String configurationSetName) {
+        this.configurationSetName = configurationSetName;
+  }
 }

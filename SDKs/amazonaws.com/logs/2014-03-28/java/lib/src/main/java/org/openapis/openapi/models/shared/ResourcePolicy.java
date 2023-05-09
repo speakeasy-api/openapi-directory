@@ -15,6 +15,7 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdatedTime")
     public Long lastUpdatedTime;
+
     public ResourcePolicy withLastUpdatedTime(Long lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -23,6 +24,7 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyDocument")
     public String policyDocument;
+
     public ResourcePolicy withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -31,9 +33,11 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyName")
     public String policyName;
+
     public ResourcePolicy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public ResourcePolicy(){}
 }

@@ -15,6 +15,7 @@ public class UpdateIntentRequestBodyFulfillmentCodeHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public UpdateIntentRequestBodyFulfillmentCodeHook withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class UpdateIntentRequestBodyFulfillmentCodeHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public UpdateIntentRequestBodyFulfillmentCodeHook withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -31,6 +33,7 @@ public class UpdateIntentRequestBodyFulfillmentCodeHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillmentUpdatesSpecification")
     public org.openapis.openapi.models.shared.FulfillmentUpdatesSpecification fulfillmentUpdatesSpecification;
+
     public UpdateIntentRequestBodyFulfillmentCodeHook withFulfillmentUpdatesSpecification(org.openapis.openapi.models.shared.FulfillmentUpdatesSpecification fulfillmentUpdatesSpecification) {
         this.fulfillmentUpdatesSpecification = fulfillmentUpdatesSpecification;
         return this;
@@ -39,9 +42,11 @@ public class UpdateIntentRequestBodyFulfillmentCodeHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postFulfillmentStatusSpecification")
     public org.openapis.openapi.models.shared.PostFulfillmentStatusSpecification postFulfillmentStatusSpecification;
+
     public UpdateIntentRequestBodyFulfillmentCodeHook withPostFulfillmentStatusSpecification(org.openapis.openapi.models.shared.PostFulfillmentStatusSpecification postFulfillmentStatusSpecification) {
         this.postFulfillmentStatusSpecification = postFulfillmentStatusSpecification;
         return this;
     }
     
+    public UpdateIntentRequestBodyFulfillmentCodeHook(){}
 }

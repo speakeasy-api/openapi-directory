@@ -18,6 +18,7 @@ public class StatusUpdateRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_text")
     public String htmlText;
+
     public StatusUpdateRequestInput withHtmlText(String htmlText) {
         this.htmlText = htmlText;
         return this;
@@ -25,6 +26,7 @@ public class StatusUpdateRequestInput {
     
     @JsonProperty("parent")
     public String parent;
+
     public StatusUpdateRequestInput withParent(String parent) {
         this.parent = parent;
         return this;
@@ -35,6 +37,7 @@ public class StatusUpdateRequestInput {
      */
     @JsonProperty("status_type")
     public StatusUpdateRequestStatusTypeEnum statusType;
+
     public StatusUpdateRequestInput withStatusType(StatusUpdateRequestStatusTypeEnum statusType) {
         this.statusType = statusType;
         return this;
@@ -45,6 +48,7 @@ public class StatusUpdateRequestInput {
      */
     @JsonProperty("text")
     public String text;
+
     public StatusUpdateRequestInput withText(String text) {
         this.text = text;
         return this;
@@ -56,9 +60,15 @@ public class StatusUpdateRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public StatusUpdateRequestInput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public StatusUpdateRequestInput(@JsonProperty("parent") String parent, @JsonProperty("status_type") StatusUpdateRequestStatusTypeEnum statusType, @JsonProperty("text") String text) {
+        this.parent = parent;
+        this.statusType = statusType;
+        this.text = text;
+  }
 }

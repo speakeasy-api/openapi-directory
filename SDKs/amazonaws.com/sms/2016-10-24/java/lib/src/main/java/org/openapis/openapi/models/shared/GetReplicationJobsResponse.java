@@ -15,6 +15,7 @@ public class GetReplicationJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetReplicationJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetReplicationJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationJobList")
     public ReplicationJob[] replicationJobList;
+
     public GetReplicationJobsResponse withReplicationJobList(ReplicationJob[] replicationJobList) {
         this.replicationJobList = replicationJobList;
         return this;
     }
     
+    public GetReplicationJobsResponse(){}
 }

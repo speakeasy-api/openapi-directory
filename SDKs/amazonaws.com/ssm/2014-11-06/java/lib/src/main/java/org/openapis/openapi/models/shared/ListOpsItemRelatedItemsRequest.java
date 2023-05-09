@@ -12,6 +12,7 @@ public class ListOpsItemRelatedItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public OpsItemRelatedItemsFilter[] filters;
+
     public ListOpsItemRelatedItemsRequest withFilters(OpsItemRelatedItemsFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListOpsItemRelatedItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListOpsItemRelatedItemsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListOpsItemRelatedItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListOpsItemRelatedItemsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListOpsItemRelatedItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemId")
     public String opsItemId;
+
     public ListOpsItemRelatedItemsRequest withOpsItemId(String opsItemId) {
         this.opsItemId = opsItemId;
         return this;
     }
     
+    public ListOpsItemRelatedItemsRequest(){}
 }

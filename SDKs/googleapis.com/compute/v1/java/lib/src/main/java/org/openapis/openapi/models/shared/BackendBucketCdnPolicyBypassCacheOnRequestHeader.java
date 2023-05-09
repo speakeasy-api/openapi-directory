@@ -18,9 +18,11 @@ public class BackendBucketCdnPolicyBypassCacheOnRequestHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerName")
     public String headerName;
+
     public BackendBucketCdnPolicyBypassCacheOnRequestHeader withHeaderName(String headerName) {
         this.headerName = headerName;
         return this;
     }
     
+    public BackendBucketCdnPolicyBypassCacheOnRequestHeader(){}
 }

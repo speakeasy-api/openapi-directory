@@ -18,6 +18,7 @@ public class ClustersConfigDump {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicActiveClusters")
     public DynamicCluster[] dynamicActiveClusters;
+
     public ClustersConfigDump withDynamicActiveClusters(DynamicCluster[] dynamicActiveClusters) {
         this.dynamicActiveClusters = dynamicActiveClusters;
         return this;
@@ -29,6 +30,7 @@ public class ClustersConfigDump {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicWarmingClusters")
     public DynamicCluster[] dynamicWarmingClusters;
+
     public ClustersConfigDump withDynamicWarmingClusters(DynamicCluster[] dynamicWarmingClusters) {
         this.dynamicWarmingClusters = dynamicWarmingClusters;
         return this;
@@ -40,6 +42,7 @@ public class ClustersConfigDump {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staticClusters")
     public StaticCluster[] staticClusters;
+
     public ClustersConfigDump withStaticClusters(StaticCluster[] staticClusters) {
         this.staticClusters = staticClusters;
         return this;
@@ -51,9 +54,11 @@ public class ClustersConfigDump {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionInfo")
     public String versionInfo;
+
     public ClustersConfigDump withVersionInfo(String versionInfo) {
         this.versionInfo = versionInfo;
         return this;
     }
     
+    public ClustersConfigDump(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetRemoteAccessSessionRequest {
     @JsonProperty("arn")
     public String arn;
+
     public GetRemoteAccessSessionRequest withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public GetRemoteAccessSessionRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

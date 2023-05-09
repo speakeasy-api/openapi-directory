@@ -10,11 +10,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class EnterpriseCrmEventbusProtoCustomSuspensionRequest {
     /**
-     * Use this request to post all workflows associated with a given trigger id. Next available id: 10
+     * Use this request to post all workflows associated with a given trigger id. Next available id: 11
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postToQueueWithTriggerIdRequest")
     public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest postToQueueWithTriggerIdRequest;
+
     public EnterpriseCrmEventbusProtoCustomSuspensionRequest withPostToQueueWithTriggerIdRequest(GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest postToQueueWithTriggerIdRequest) {
         this.postToQueueWithTriggerIdRequest = postToQueueWithTriggerIdRequest;
         return this;
@@ -26,9 +27,11 @@ public class EnterpriseCrmEventbusProtoCustomSuspensionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspensionInfoEventParameterKey")
     public String suspensionInfoEventParameterKey;
+
     public EnterpriseCrmEventbusProtoCustomSuspensionRequest withSuspensionInfoEventParameterKey(String suspensionInfoEventParameterKey) {
         this.suspensionInfoEventParameterKey = suspensionInfoEventParameterKey;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoCustomSuspensionRequest(){}
 }

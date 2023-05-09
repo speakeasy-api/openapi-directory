@@ -17,9 +17,13 @@ public class GetAccountResponse {
      */
     @JsonProperty("data")
     public AccountResource data;
+
     public GetAccountResponse withData(AccountResource data) {
         this.data = data;
         return this;
     }
     
+    public GetAccountResponse(@JsonProperty("data") AccountResource data) {
+        this.data = data;
+  }
 }

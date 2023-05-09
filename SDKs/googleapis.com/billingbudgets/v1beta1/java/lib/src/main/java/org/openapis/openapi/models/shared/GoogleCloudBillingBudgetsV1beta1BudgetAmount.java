@@ -18,6 +18,7 @@ public class GoogleCloudBillingBudgetsV1beta1BudgetAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastPeriodAmount")
     public java.util.Map<String, Object> lastPeriodAmount;
+
     public GoogleCloudBillingBudgetsV1beta1BudgetAmount withLastPeriodAmount(java.util.Map<String, Object> lastPeriodAmount) {
         this.lastPeriodAmount = lastPeriodAmount;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudBillingBudgetsV1beta1BudgetAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specifiedAmount")
     public GoogleTypeMoney specifiedAmount;
+
     public GoogleCloudBillingBudgetsV1beta1BudgetAmount withSpecifiedAmount(GoogleTypeMoney specifiedAmount) {
         this.specifiedAmount = specifiedAmount;
         return this;
     }
     
+    public GoogleCloudBillingBudgetsV1beta1BudgetAmount(){}
 }

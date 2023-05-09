@@ -60,11 +60,9 @@ public class Database {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatabaseCreateDocumentResponse res = new org.openapis.openapi.models.operations.DatabaseCreateDocumentResponse() {{
+        org.openapis.openapi.models.operations.DatabaseCreateDocumentResponse res = new org.openapis.openapi.models.operations.DatabaseCreateDocumentResponse(contentType, httpRes.statusCode()) {{
             document = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -101,10 +99,8 @@ public class Database {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatabaseDeleteDocumentResponse res = new org.openapis.openapi.models.operations.DatabaseDeleteDocumentResponse() {{
+        org.openapis.openapi.models.operations.DatabaseDeleteDocumentResponse res = new org.openapis.openapi.models.operations.DatabaseDeleteDocumentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -136,11 +132,9 @@ public class Database {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatabaseGetDocumentResponse res = new org.openapis.openapi.models.operations.DatabaseGetDocumentResponse() {{
+        org.openapis.openapi.models.operations.DatabaseGetDocumentResponse res = new org.openapis.openapi.models.operations.DatabaseGetDocumentResponse(contentType, httpRes.statusCode()) {{
             document = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,11 +177,9 @@ public class Database {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatabaseListDocumentsResponse res = new org.openapis.openapi.models.operations.DatabaseListDocumentsResponse() {{
+        org.openapis.openapi.models.operations.DatabaseListDocumentsResponse res = new org.openapis.openapi.models.operations.DatabaseListDocumentsResponse(contentType, httpRes.statusCode()) {{
             documentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -226,11 +218,9 @@ public class Database {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatabaseUpdateDocumentResponse res = new org.openapis.openapi.models.operations.DatabaseUpdateDocumentResponse() {{
+        org.openapis.openapi.models.operations.DatabaseUpdateDocumentResponse res = new org.openapis.openapi.models.operations.DatabaseUpdateDocumentResponse(contentType, httpRes.statusCode()) {{
             document = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

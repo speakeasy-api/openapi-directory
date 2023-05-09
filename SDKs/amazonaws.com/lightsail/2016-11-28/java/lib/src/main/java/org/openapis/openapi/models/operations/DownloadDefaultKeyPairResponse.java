@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DownloadDefaultKeyPairResponse {
@@ -12,6 +13,7 @@ public class DownloadDefaultKeyPairResponse {
      */
     
     public Object accessDeniedException;
+
     public DownloadDefaultKeyPairResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DownloadDefaultKeyPairResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public DownloadDefaultKeyPairResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class DownloadDefaultKeyPairResponse {
     
     
     public String contentType;
+
     public DownloadDefaultKeyPairResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DownloadDefaultKeyPairResponse {
      */
     
     public org.openapis.openapi.models.shared.DownloadDefaultKeyPairResult downloadDefaultKeyPairResult;
+
     public DownloadDefaultKeyPairResponse withDownloadDefaultKeyPairResult(org.openapis.openapi.models.shared.DownloadDefaultKeyPairResult downloadDefaultKeyPairResult) {
         this.downloadDefaultKeyPairResult = downloadDefaultKeyPairResult;
         return this;
@@ -49,6 +54,7 @@ public class DownloadDefaultKeyPairResponse {
      */
     
     public Object invalidInputException;
+
     public DownloadDefaultKeyPairResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DownloadDefaultKeyPairResponse {
      */
     
     public Object notFoundException;
+
     public DownloadDefaultKeyPairResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DownloadDefaultKeyPairResponse {
      */
     
     public Object operationFailureException;
+
     public DownloadDefaultKeyPairResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class DownloadDefaultKeyPairResponse {
      */
     
     public Object serviceException;
+
     public DownloadDefaultKeyPairResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class DownloadDefaultKeyPairResponse {
     
     
     public Integer statusCode;
+
     public DownloadDefaultKeyPairResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DownloadDefaultKeyPairResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DownloadDefaultKeyPairResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DownloadDefaultKeyPairResponse {
      */
     
     public Object unauthenticatedException;
+
     public DownloadDefaultKeyPairResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public DownloadDefaultKeyPairResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

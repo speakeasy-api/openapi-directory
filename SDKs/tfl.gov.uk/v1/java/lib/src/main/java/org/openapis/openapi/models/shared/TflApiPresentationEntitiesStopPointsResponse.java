@@ -18,6 +18,7 @@ public class TflApiPresentationEntitiesStopPointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("centrePoint")
     public Double[] centrePoint;
+
     public TflApiPresentationEntitiesStopPointsResponse withCentrePoint(Double[] centrePoint) {
         this.centrePoint = centrePoint;
         return this;
@@ -29,6 +30,7 @@ public class TflApiPresentationEntitiesStopPointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Integer page;
+
     public TflApiPresentationEntitiesStopPointsResponse withPage(Integer page) {
         this.page = page;
         return this;
@@ -40,6 +42,7 @@ public class TflApiPresentationEntitiesStopPointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public TflApiPresentationEntitiesStopPointsResponse withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -51,6 +54,7 @@ public class TflApiPresentationEntitiesStopPointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopPoints")
     public TflApiPresentationEntitiesStopPoint[] stopPoints;
+
     public TflApiPresentationEntitiesStopPointsResponse withStopPoints(TflApiPresentationEntitiesStopPoint[] stopPoints) {
         this.stopPoints = stopPoints;
         return this;
@@ -62,9 +66,11 @@ public class TflApiPresentationEntitiesStopPointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Integer total;
+
     public TflApiPresentationEntitiesStopPointsResponse withTotal(Integer total) {
         this.total = total;
         return this;
     }
     
+    public TflApiPresentationEntitiesStopPointsResponse(){}
 }

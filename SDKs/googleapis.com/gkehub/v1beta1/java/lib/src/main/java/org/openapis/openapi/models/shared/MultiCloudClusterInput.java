@@ -18,9 +18,11 @@ public class MultiCloudClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLink")
     public String resourceLink;
+
     public MultiCloudClusterInput withResourceLink(String resourceLink) {
         this.resourceLink = resourceLink;
         return this;
     }
     
+    public MultiCloudClusterInput(){}
 }

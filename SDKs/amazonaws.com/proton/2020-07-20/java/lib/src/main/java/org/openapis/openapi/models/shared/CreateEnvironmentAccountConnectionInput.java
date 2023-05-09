@@ -12,6 +12,7 @@ public class CreateEnvironmentAccountConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateEnvironmentAccountConnectionInput withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateEnvironmentAccountConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codebuildRoleArn")
     public String codebuildRoleArn;
+
     public CreateEnvironmentAccountConnectionInput withCodebuildRoleArn(String codebuildRoleArn) {
         this.codebuildRoleArn = codebuildRoleArn;
         return this;
@@ -28,6 +30,7 @@ public class CreateEnvironmentAccountConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentRoleArn")
     public String componentRoleArn;
+
     public CreateEnvironmentAccountConnectionInput withComponentRoleArn(String componentRoleArn) {
         this.componentRoleArn = componentRoleArn;
         return this;
@@ -35,6 +38,7 @@ public class CreateEnvironmentAccountConnectionInput {
     
     @JsonProperty("environmentName")
     public String environmentName;
+
     public CreateEnvironmentAccountConnectionInput withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -42,6 +46,7 @@ public class CreateEnvironmentAccountConnectionInput {
     
     @JsonProperty("managementAccountId")
     public String managementAccountId;
+
     public CreateEnvironmentAccountConnectionInput withManagementAccountId(String managementAccountId) {
         this.managementAccountId = managementAccountId;
         return this;
@@ -50,6 +55,7 @@ public class CreateEnvironmentAccountConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateEnvironmentAccountConnectionInput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -58,9 +64,14 @@ public class CreateEnvironmentAccountConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateEnvironmentAccountConnectionInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEnvironmentAccountConnectionInput(@JsonProperty("environmentName") String environmentName, @JsonProperty("managementAccountId") String managementAccountId) {
+        this.environmentName = environmentName;
+        this.managementAccountId = managementAccountId;
+  }
 }

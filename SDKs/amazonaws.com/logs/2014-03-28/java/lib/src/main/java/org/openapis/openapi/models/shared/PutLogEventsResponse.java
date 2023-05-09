@@ -15,6 +15,7 @@ public class PutLogEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextSequenceToken")
     public String nextSequenceToken;
+
     public PutLogEventsResponse withNextSequenceToken(String nextSequenceToken) {
         this.nextSequenceToken = nextSequenceToken;
         return this;
@@ -23,9 +24,11 @@ public class PutLogEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejectedLogEventsInfo")
     public RejectedLogEventsInfo rejectedLogEventsInfo;
+
     public PutLogEventsResponse withRejectedLogEventsInfo(RejectedLogEventsInfo rejectedLogEventsInfo) {
         this.rejectedLogEventsInfo = rejectedLogEventsInfo;
         return this;
     }
     
+    public PutLogEventsResponse(){}
 }

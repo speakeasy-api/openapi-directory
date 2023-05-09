@@ -15,6 +15,7 @@ public class CoverageTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("End")
     public HandOffTime end;
+
     public CoverageTime withEnd(HandOffTime end) {
         this.end = end;
         return this;
@@ -23,9 +24,11 @@ public class CoverageTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Start")
     public HandOffTime start;
+
     public CoverageTime withStart(HandOffTime start) {
         this.start = start;
         return this;
     }
     
+    public CoverageTime(){}
 }

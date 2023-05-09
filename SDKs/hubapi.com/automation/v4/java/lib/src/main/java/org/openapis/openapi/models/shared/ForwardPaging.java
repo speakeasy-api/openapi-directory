@@ -12,9 +12,11 @@ public class ForwardPaging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public NextPage next;
+
     public ForwardPaging withNext(NextPage next) {
         this.next = next;
         return this;
     }
     
+    public ForwardPaging(){}
 }

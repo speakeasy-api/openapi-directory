@@ -15,6 +15,7 @@ public class ListXssMatchSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListXssMatchSetsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -23,9 +24,11 @@ public class ListXssMatchSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XssMatchSets")
     public XssMatchSetSummary[] xssMatchSets;
+
     public ListXssMatchSetsResponse withXssMatchSets(XssMatchSetSummary[] xssMatchSets) {
         this.xssMatchSets = xssMatchSets;
         return this;
     }
     
+    public ListXssMatchSetsResponse(){}
 }

@@ -15,6 +15,7 @@ public class BatchDisassociateResourcesFromCustomLineItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedDisassociatedResources")
     public DisassociateResourceResponseElement[] failedDisassociatedResources;
+
     public BatchDisassociateResourcesFromCustomLineItemOutput withFailedDisassociatedResources(DisassociateResourceResponseElement[] failedDisassociatedResources) {
         this.failedDisassociatedResources = failedDisassociatedResources;
         return this;
@@ -23,9 +24,11 @@ public class BatchDisassociateResourcesFromCustomLineItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuccessfullyDisassociatedResources")
     public DisassociateResourceResponseElement[] successfullyDisassociatedResources;
+
     public BatchDisassociateResourcesFromCustomLineItemOutput withSuccessfullyDisassociatedResources(DisassociateResourceResponseElement[] successfullyDisassociatedResources) {
         this.successfullyDisassociatedResources = successfullyDisassociatedResources;
         return this;
     }
     
+    public BatchDisassociateResourcesFromCustomLineItemOutput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateProvisioningTemplateVersionResponse {
@@ -12,6 +13,7 @@ public class CreateProvisioningTemplateVersionResponse {
      */
     
     public Object conflictingResourceUpdateException;
+
     public CreateProvisioningTemplateVersionResponse withConflictingResourceUpdateException(Object conflictingResourceUpdateException) {
         this.conflictingResourceUpdateException = conflictingResourceUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class CreateProvisioningTemplateVersionResponse {
     
     
     public String contentType;
+
     public CreateProvisioningTemplateVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateProvisioningTemplateVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateProvisioningTemplateVersionResponse createProvisioningTemplateVersionResponse;
+
     public CreateProvisioningTemplateVersionResponse withCreateProvisioningTemplateVersionResponse(org.openapis.openapi.models.shared.CreateProvisioningTemplateVersionResponse createProvisioningTemplateVersionResponse) {
         this.createProvisioningTemplateVersionResponse = createProvisioningTemplateVersionResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateProvisioningTemplateVersionResponse {
      */
     
     public Object internalFailureException;
+
     public CreateProvisioningTemplateVersionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class CreateProvisioningTemplateVersionResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateProvisioningTemplateVersionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class CreateProvisioningTemplateVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateProvisioningTemplateVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateProvisioningTemplateVersionResponse {
     
     
     public Integer statusCode;
+
     public CreateProvisioningTemplateVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateProvisioningTemplateVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateProvisioningTemplateVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateProvisioningTemplateVersionResponse {
      */
     
     public Object throttlingException;
+
     public CreateProvisioningTemplateVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class CreateProvisioningTemplateVersionResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateProvisioningTemplateVersionResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -103,9 +114,14 @@ public class CreateProvisioningTemplateVersionResponse {
      */
     
     public Object versionsLimitExceededException;
+
     public CreateProvisioningTemplateVersionResponse withVersionsLimitExceededException(Object versionsLimitExceededException) {
         this.versionsLimitExceededException = versionsLimitExceededException;
         return this;
     }
     
+    public CreateProvisioningTemplateVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

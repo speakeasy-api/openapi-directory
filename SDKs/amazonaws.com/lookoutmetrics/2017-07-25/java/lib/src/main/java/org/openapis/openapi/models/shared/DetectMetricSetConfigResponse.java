@@ -15,9 +15,11 @@ public class DetectMetricSetConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetectedMetricSetConfig")
     public DetectedMetricSetConfig detectedMetricSetConfig;
+
     public DetectMetricSetConfigResponse withDetectedMetricSetConfig(DetectedMetricSetConfig detectedMetricSetConfig) {
         this.detectedMetricSetConfig = detectedMetricSetConfig;
         return this;
     }
     
+    public DetectMetricSetConfigResponse(){}
 }

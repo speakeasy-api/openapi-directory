@@ -15,6 +15,7 @@ public class AppointmentClinicalNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked")
     public Boolean locked;
+
     public AppointmentClinicalNote withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -23,6 +24,7 @@ public class AppointmentClinicalNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pdf")
     public String pdf;
+
     public AppointmentClinicalNote withPdf(String pdf) {
         this.pdf = pdf;
         return this;
@@ -31,9 +33,11 @@ public class AppointmentClinicalNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public AppointmentClinicalNote withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public AppointmentClinicalNote(){}
 }

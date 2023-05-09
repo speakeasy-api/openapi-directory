@@ -15,6 +15,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressId")
     public String addressId;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryChannels")
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoDeliveryChannels[] deliveryChannels;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo withDeliveryChannels(PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoDeliveryChannels[] deliveryChannels) {
         this.deliveryChannels = deliveryChannels;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -48,6 +51,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemIndex")
     public Long itemIndex;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo withItemIndex(Long itemIndex) {
         this.itemIndex = itemIndex;
         return this;
@@ -59,6 +63,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedDeliveryChannel")
     public String selectedDeliveryChannel;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo withSelectedDeliveryChannel(String selectedDeliveryChannel) {
         this.selectedDeliveryChannel = selectedDeliveryChannel;
         return this;
@@ -70,6 +75,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedSla")
     public String selectedSla;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo withSelectedSla(String selectedSla) {
         this.selectedSla = selectedSla;
         return this;
@@ -81,6 +87,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipsTo")
     public String[] shipsTo;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo withShipsTo(String[] shipsTo) {
         this.shipsTo = shipsTo;
         return this;
@@ -92,9 +99,11 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slas")
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas[] slas;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo withSlas(PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfoSlas[] slas) {
         this.slas = slas;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo(){}
 }

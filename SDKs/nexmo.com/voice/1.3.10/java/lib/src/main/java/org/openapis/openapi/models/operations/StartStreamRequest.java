@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartStreamRequest {
@@ -12,6 +13,7 @@ public class StartStreamRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.StartStreamRequest startStreamRequest;
+
     public StartStreamRequest withStartStreamRequest(org.openapis.openapi.models.shared.StartStreamRequest startStreamRequest) {
         this.startStreamRequest = startStreamRequest;
         return this;
@@ -22,9 +24,14 @@ public class StartStreamRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
     public String uuid;
+
     public StartStreamRequest withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public StartStreamRequest(@JsonProperty("StartStreamRequest") org.openapis.openapi.models.shared.StartStreamRequest startStreamRequest, @JsonProperty("uuid") String uuid) {
+        this.startStreamRequest = startStreamRequest;
+        this.uuid = uuid;
+  }
 }

@@ -15,6 +15,7 @@ public class AboutAdditionalRoleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleSets")
     public AboutAdditionalRoleInfoRoleSets[] roleSets;
+
     public AboutAdditionalRoleInfo withRoleSets(AboutAdditionalRoleInfoRoleSets[] roleSets) {
         this.roleSets = roleSets;
         return this;
@@ -26,9 +27,11 @@ public class AboutAdditionalRoleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AboutAdditionalRoleInfo withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AboutAdditionalRoleInfo(){}
 }

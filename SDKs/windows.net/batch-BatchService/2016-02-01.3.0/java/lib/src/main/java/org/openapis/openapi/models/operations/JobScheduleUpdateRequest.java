@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobScheduleUpdateRequest {
@@ -12,6 +13,7 @@ public class JobScheduleUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public JobScheduleUpdateRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -22,6 +24,7 @@ public class JobScheduleUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
     public String ifModifiedSince;
+
     public JobScheduleUpdateRequest withIfModifiedSince(String ifModifiedSince) {
         this.ifModifiedSince = ifModifiedSince;
         return this;
@@ -32,6 +35,7 @@ public class JobScheduleUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public JobScheduleUpdateRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -42,6 +46,7 @@ public class JobScheduleUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
     public String ifUnmodifiedSince;
+
     public JobScheduleUpdateRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
         this.ifUnmodifiedSince = ifUnmodifiedSince;
         return this;
@@ -52,6 +57,7 @@ public class JobScheduleUpdateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.JobScheduleUpdateParameter jobScheduleUpdateParameter;
+
     public JobScheduleUpdateRequest withJobScheduleUpdateParameter(org.openapis.openapi.models.shared.JobScheduleUpdateParameter jobScheduleUpdateParameter) {
         this.jobScheduleUpdateParameter = jobScheduleUpdateParameter;
         return this;
@@ -62,6 +68,7 @@ public class JobScheduleUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public JobScheduleUpdateRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -72,6 +79,7 @@ public class JobScheduleUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public JobScheduleUpdateRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -82,6 +90,7 @@ public class JobScheduleUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobScheduleId")
     public String jobScheduleId;
+
     public JobScheduleUpdateRequest withJobScheduleId(String jobScheduleId) {
         this.jobScheduleId = jobScheduleId;
         return this;
@@ -92,6 +101,7 @@ public class JobScheduleUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public JobScheduleUpdateRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -102,6 +112,7 @@ public class JobScheduleUpdateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public JobScheduleUpdateRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -112,9 +123,15 @@ public class JobScheduleUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public JobScheduleUpdateRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public JobScheduleUpdateRequest(@JsonProperty("JobScheduleUpdateParameter") org.openapis.openapi.models.shared.JobScheduleUpdateParameter jobScheduleUpdateParameter, @JsonProperty("api-version") String apiVersion, @JsonProperty("jobScheduleId") String jobScheduleId) {
+        this.jobScheduleUpdateParameter = jobScheduleUpdateParameter;
+        this.apiVersion = apiVersion;
+        this.jobScheduleId = jobScheduleId;
+  }
 }

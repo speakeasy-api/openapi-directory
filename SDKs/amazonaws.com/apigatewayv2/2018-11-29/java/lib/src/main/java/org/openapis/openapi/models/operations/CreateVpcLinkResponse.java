@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVpcLinkResponse {
@@ -12,6 +13,7 @@ public class CreateVpcLinkResponse {
      */
     
     public Object badRequestException;
+
     public CreateVpcLinkResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateVpcLinkResponse {
     
     
     public String contentType;
+
     public CreateVpcLinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateVpcLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateVpcLinkResponse createVpcLinkResponse;
+
     public CreateVpcLinkResponse withCreateVpcLinkResponse(org.openapis.openapi.models.shared.CreateVpcLinkResponse createVpcLinkResponse) {
         this.createVpcLinkResponse = createVpcLinkResponse;
         return this;
@@ -36,6 +40,7 @@ public class CreateVpcLinkResponse {
     
     
     public Integer statusCode;
+
     public CreateVpcLinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateVpcLinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVpcLinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CreateVpcLinkResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateVpcLinkResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateVpcLinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

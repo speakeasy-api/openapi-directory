@@ -113,4 +113,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1SetIamPolicyRequ
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1TestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1TestIamPermissionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleLongrunningListOperationsResponse.java
+docs/sdk/README.md
+docs/catalogs/README.md
+docs/operations/README.md
 USAGE.md

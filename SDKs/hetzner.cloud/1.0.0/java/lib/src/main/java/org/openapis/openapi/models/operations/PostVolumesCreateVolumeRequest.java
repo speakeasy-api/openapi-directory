@@ -15,6 +15,7 @@ public class PostVolumesCreateVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automount")
     public Boolean automount;
+
     public PostVolumesCreateVolumeRequest withAutomount(Boolean automount) {
         this.automount = automount;
         return this;
@@ -26,6 +27,7 @@ public class PostVolumesCreateVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
+
     public PostVolumesCreateVolumeRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -37,6 +39,7 @@ public class PostVolumesCreateVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, Object> labels;
+
     public PostVolumesCreateVolumeRequest withLabels(java.util.Map<String, Object> labels) {
         this.labels = labels;
         return this;
@@ -48,6 +51,7 @@ public class PostVolumesCreateVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public PostVolumesCreateVolumeRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -58,6 +62,7 @@ public class PostVolumesCreateVolumeRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public PostVolumesCreateVolumeRequest withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +74,7 @@ public class PostVolumesCreateVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public Long server;
+
     public PostVolumesCreateVolumeRequest withServer(Long server) {
         this.server = server;
         return this;
@@ -79,9 +85,14 @@ public class PostVolumesCreateVolumeRequest {
      */
     @JsonProperty("size")
     public Long size;
+
     public PostVolumesCreateVolumeRequest withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public PostVolumesCreateVolumeRequest(@JsonProperty("name") String name, @JsonProperty("size") Long size) {
+        this.name = name;
+        this.size = size;
+  }
 }

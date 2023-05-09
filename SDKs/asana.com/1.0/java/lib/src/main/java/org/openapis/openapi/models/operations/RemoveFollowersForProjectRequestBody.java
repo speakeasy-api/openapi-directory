@@ -15,9 +15,11 @@ public class RemoveFollowersForProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.RemoveFollowersRequest data;
+
     public RemoveFollowersForProjectRequestBody withData(org.openapis.openapi.models.shared.RemoveFollowersRequest data) {
         this.data = data;
         return this;
     }
     
+    public RemoveFollowersForProjectRequestBody(){}
 }

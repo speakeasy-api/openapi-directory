@@ -15,9 +15,11 @@ public class UpdatePipelineOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipeline")
     public PipelineDeclaration pipeline;
+
     public UpdatePipelineOutput withPipeline(PipelineDeclaration pipeline) {
         this.pipeline = pipeline;
         return this;
     }
     
+    public UpdatePipelineOutput(){}
 }

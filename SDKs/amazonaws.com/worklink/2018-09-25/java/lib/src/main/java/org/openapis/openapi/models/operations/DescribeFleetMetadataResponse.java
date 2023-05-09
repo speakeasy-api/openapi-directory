@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFleetMetadataResponse {
     
     public String contentType;
+
     public DescribeFleetMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFleetMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFleetMetadataResponse describeFleetMetadataResponse;
+
     public DescribeFleetMetadataResponse withDescribeFleetMetadataResponse(org.openapis.openapi.models.shared.DescribeFleetMetadataResponse describeFleetMetadataResponse) {
         this.describeFleetMetadataResponse = describeFleetMetadataResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFleetMetadataResponse {
      */
     
     public Object internalServerErrorException;
+
     public DescribeFleetMetadataResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFleetMetadataResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeFleetMetadataResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeFleetMetadataResponse {
     
     
     public Integer statusCode;
+
     public DescribeFleetMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeFleetMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFleetMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeFleetMetadataResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeFleetMetadataResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeFleetMetadataResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeFleetMetadataResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeFleetMetadataResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeFleetMetadataResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeFleetMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

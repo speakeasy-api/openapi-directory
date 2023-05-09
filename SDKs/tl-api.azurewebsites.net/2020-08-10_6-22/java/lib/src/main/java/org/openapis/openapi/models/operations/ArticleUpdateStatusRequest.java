@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ArticleUpdateStatusRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ArticleId")
     public Integer articleId;
+
     public ArticleUpdateStatusRequest withArticleId(Integer articleId) {
         this.articleId = articleId;
         return this;
@@ -19,6 +20,7 @@ public class ArticleUpdateStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public Integer status;
+
     public ArticleUpdateStatusRequest withStatus(Integer status) {
         this.status = status;
         return this;
@@ -29,9 +31,11 @@ public class ArticleUpdateStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
     public String userName;
+
     public ArticleUpdateStatusRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ArticleUpdateStatusRequest(){}
 }

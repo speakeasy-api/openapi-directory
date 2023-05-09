@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDeploymentsResponse {
@@ -12,6 +13,7 @@ public class ListDeploymentsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDeploymentsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListDeploymentsResponse {
     
     
     public String contentType;
+
     public ListDeploymentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDeploymentsResponse {
      */
     
     public Object internalServerException;
+
     public ListDeploymentsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListDeploymentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDeploymentsResponse listDeploymentsResponse;
+
     public ListDeploymentsResponse withListDeploymentsResponse(org.openapis.openapi.models.shared.ListDeploymentsResponse listDeploymentsResponse) {
         this.listDeploymentsResponse = listDeploymentsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListDeploymentsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListDeploymentsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListDeploymentsResponse {
     
     
     public Integer statusCode;
+
     public ListDeploymentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListDeploymentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDeploymentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListDeploymentsResponse {
      */
     
     public Object throttlingException;
+
     public ListDeploymentsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListDeploymentsResponse {
      */
     
     public Object validationException;
+
     public ListDeploymentsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListDeploymentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

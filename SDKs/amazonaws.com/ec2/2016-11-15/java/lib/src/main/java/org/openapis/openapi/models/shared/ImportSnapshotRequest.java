@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ImportSnapshotRequest {
     
     public ClientData clientData;
+
     public ImportSnapshotRequest withClientData(ClientData clientData) {
         this.clientData = clientData;
         return this;
@@ -16,6 +17,7 @@ public class ImportSnapshotRequest {
     
     
     public String clientToken;
+
     public ImportSnapshotRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +25,7 @@ public class ImportSnapshotRequest {
     
     
     public String description;
+
     public ImportSnapshotRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +33,7 @@ public class ImportSnapshotRequest {
     
     
     public SnapshotDiskContainer diskContainer;
+
     public ImportSnapshotRequest withDiskContainer(SnapshotDiskContainer diskContainer) {
         this.diskContainer = diskContainer;
         return this;
@@ -37,6 +41,7 @@ public class ImportSnapshotRequest {
     
     
     public Boolean dryRun;
+
     public ImportSnapshotRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -44,6 +49,7 @@ public class ImportSnapshotRequest {
     
     
     public Boolean encrypted;
+
     public ImportSnapshotRequest withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -51,6 +57,7 @@ public class ImportSnapshotRequest {
     
     
     public String kmsKeyId;
+
     public ImportSnapshotRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -58,6 +65,7 @@ public class ImportSnapshotRequest {
     
     
     public String roleName;
+
     public ImportSnapshotRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -65,9 +73,11 @@ public class ImportSnapshotRequest {
     
     
     public ImportSnapshotRequestTagSpecifications[] tagSpecifications;
+
     public ImportSnapshotRequest withTagSpecifications(ImportSnapshotRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public ImportSnapshotRequest(){}
 }

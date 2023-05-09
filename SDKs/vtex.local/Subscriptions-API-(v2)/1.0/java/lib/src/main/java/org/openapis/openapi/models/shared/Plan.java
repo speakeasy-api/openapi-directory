@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Plan {
     @JsonProperty("frequency")
     public Frequency frequency;
+
     public Plan withFrequency(Frequency frequency) {
         this.frequency = frequency;
         return this;
@@ -16,6 +17,7 @@ public class Plan {
     
     @JsonProperty("type")
     public String type;
+
     public Plan withType(String type) {
         this.type = type;
         return this;
@@ -23,9 +25,15 @@ public class Plan {
     
     @JsonProperty("validity")
     public Validity validity;
+
     public Plan withValidity(Validity validity) {
         this.validity = validity;
         return this;
     }
     
+    public Plan(@JsonProperty("frequency") Frequency frequency, @JsonProperty("type") String type, @JsonProperty("validity") Validity validity) {
+        this.frequency = frequency;
+        this.type = type;
+        this.validity = validity;
+  }
 }

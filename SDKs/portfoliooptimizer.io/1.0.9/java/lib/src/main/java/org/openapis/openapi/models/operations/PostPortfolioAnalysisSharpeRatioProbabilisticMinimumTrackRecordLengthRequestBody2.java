@@ -15,6 +15,7 @@ public class PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLeng
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("benchmarkValues")
     public Double[] benchmarkValues;
+
     public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody2 withBenchmarkValues(Double[] benchmarkValues) {
         this.benchmarkValues = benchmarkValues;
         return this;
@@ -26,6 +27,7 @@ public class PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLeng
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceLevel")
     public Double confidenceLevel;
+
     public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody2 withConfidenceLevel(Double confidenceLevel) {
         this.confidenceLevel = confidenceLevel;
         return this;
@@ -33,6 +35,7 @@ public class PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLeng
     
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody2Portfolios[] portfolios;
+
     public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody2 withPortfolios(PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody2Portfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
@@ -43,9 +46,14 @@ public class PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLeng
      */
     @JsonProperty("riskFreeRate")
     public Double riskFreeRate;
+
     public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody2 withRiskFreeRate(Double riskFreeRate) {
         this.riskFreeRate = riskFreeRate;
         return this;
     }
     
+    public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody2(@JsonProperty("portfolios") PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody2Portfolios[] portfolios, @JsonProperty("riskFreeRate") Double riskFreeRate) {
+        this.portfolios = portfolios;
+        this.riskFreeRate = riskFreeRate;
+  }
 }

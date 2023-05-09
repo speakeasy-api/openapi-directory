@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteTaskSetRequest {
     @JsonProperty("cluster")
     public String cluster;
+
     public DeleteTaskSetRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -19,6 +20,7 @@ public class DeleteTaskSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public DeleteTaskSetRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -26,6 +28,7 @@ public class DeleteTaskSetRequest {
     
     @JsonProperty("service")
     public String service;
+
     public DeleteTaskSetRequest withService(String service) {
         this.service = service;
         return this;
@@ -33,9 +36,15 @@ public class DeleteTaskSetRequest {
     
     @JsonProperty("taskSet")
     public String taskSet;
+
     public DeleteTaskSetRequest withTaskSet(String taskSet) {
         this.taskSet = taskSet;
         return this;
     }
     
+    public DeleteTaskSetRequest(@JsonProperty("cluster") String cluster, @JsonProperty("service") String service, @JsonProperty("taskSet") String taskSet) {
+        this.cluster = cluster;
+        this.service = service;
+        this.taskSet = taskSet;
+  }
 }

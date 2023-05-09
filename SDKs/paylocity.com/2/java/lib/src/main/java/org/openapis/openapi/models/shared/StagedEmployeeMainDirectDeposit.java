@@ -18,6 +18,7 @@ public class StagedEmployeeMainDirectDeposit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public StagedEmployeeMainDirectDeposit withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -29,6 +30,7 @@ public class StagedEmployeeMainDirectDeposit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountType")
     public String accountType;
+
     public StagedEmployeeMainDirectDeposit withAccountType(String accountType) {
         this.accountType = accountType;
         return this;
@@ -40,6 +42,7 @@ public class StagedEmployeeMainDirectDeposit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSkipPreNote")
     public Boolean isSkipPreNote;
+
     public StagedEmployeeMainDirectDeposit withIsSkipPreNote(Boolean isSkipPreNote) {
         this.isSkipPreNote = isSkipPreNote;
         return this;
@@ -51,6 +54,7 @@ public class StagedEmployeeMainDirectDeposit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preNoteDate")
     public String preNoteDate;
+
     public StagedEmployeeMainDirectDeposit withPreNoteDate(String preNoteDate) {
         this.preNoteDate = preNoteDate;
         return this;
@@ -62,9 +66,11 @@ public class StagedEmployeeMainDirectDeposit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routingNumber")
     public String routingNumber;
+
     public StagedEmployeeMainDirectDeposit withRoutingNumber(String routingNumber) {
         this.routingNumber = routingNumber;
         return this;
     }
     
+    public StagedEmployeeMainDirectDeposit(){}
 }

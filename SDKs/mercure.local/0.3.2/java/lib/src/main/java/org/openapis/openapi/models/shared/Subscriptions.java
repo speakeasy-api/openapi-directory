@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Subscriptions {
     @JsonProperty("@context")
     public String atContext;
+
     public Subscriptions withAtContext(String atContext) {
         this.atContext = atContext;
         return this;
@@ -19,6 +20,7 @@ public class Subscriptions {
     
     @JsonProperty("id")
     public String id;
+
     public Subscriptions withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class Subscriptions {
     
     @JsonProperty("lastEventID")
     public String lastEventID;
+
     public Subscriptions withLastEventID(String lastEventID) {
         this.lastEventID = lastEventID;
         return this;
@@ -33,6 +36,7 @@ public class Subscriptions {
     
     @JsonProperty("subscriptions")
     public Subscription[] subscriptions;
+
     public Subscriptions withSubscriptions(Subscription[] subscriptions) {
         this.subscriptions = subscriptions;
         return this;
@@ -40,9 +44,17 @@ public class Subscriptions {
     
     @JsonProperty("type")
     public String type;
+
     public Subscriptions withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Subscriptions(@JsonProperty("@context") String atContext, @JsonProperty("id") String id, @JsonProperty("lastEventID") String lastEventID, @JsonProperty("subscriptions") Subscription[] subscriptions, @JsonProperty("type") String type) {
+        this.atContext = atContext;
+        this.id = id;
+        this.lastEventID = lastEventID;
+        this.subscriptions = subscriptions;
+        this.type = type;
+  }
 }

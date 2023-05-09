@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisableAddressTransferRequest {
     
     public String allocationId;
+
     public DisableAddressTransferRequest withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -16,9 +17,13 @@ public class DisableAddressTransferRequest {
     
     
     public Boolean dryRun;
+
     public DisableAddressTransferRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public DisableAddressTransferRequest(@JsonProperty("AllocationId") String allocationId) {
+        this.allocationId = allocationId;
+  }
 }

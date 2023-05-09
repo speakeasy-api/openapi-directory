@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AndroidpublisherPurchasesCancelSecurity;
 import org.openapis.openapi.models.operations.AndroidpublisherPurchasesCancelRequest;
 import org.openapis.openapi.models.operations.AndroidpublisherPurchasesCancelResponse;
+import org.openapis.openapi.models.operations.AndroidpublisherPurchasesCancelSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
@@ -28,20 +27,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AndroidpublisherPurchasesCancelRequest req = new AndroidpublisherPurchasesCancelRequest() {{
-                alt = "json";
-                fields = "corrupti";
-                key = "provident";
-                oauthToken = "distinctio";
-                packageName = "quibusdam";
+            AndroidpublisherPurchasesCancelRequest req = new AndroidpublisherPurchasesCancelRequest("corrupti", "provident", "distinctio") {{
+                alt = AltEnum.JSON;
+                fields = "quibusdam";
+                key = "unde";
+                oauthToken = "nulla";
                 prettyPrint = false;
-                quotaUser = "unde";
-                subscriptionId = "nulla";
-                token = "corrupti";
+                quotaUser = "corrupti";
                 userIp = "illum";
-            }}            
+            }};            
 
-            AndroidpublisherPurchasesCancelResponse res = sdk.purchases.androidpublisherPurchasesCancel(req, new AndroidpublisherPurchasesCancelSecurity() {{
+            AndroidpublisherPurchasesCancelResponse res = sdk.purchases.androidpublisherPurchasesCancel(req, new AndroidpublisherPurchasesCancelSecurity("vel", "error") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
@@ -52,6 +48,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -59,10 +57,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### purchases
+### [purchases](docs/purchases/README.md)
 
-* `androidpublisherPurchasesCancel` - Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
-* `androidpublisherPurchasesGet` - Checks whether a user's subscription purchase is valid and returns its expiry time.
+* [androidpublisherPurchasesCancel](docs/purchases/README.md#androidpublisherpurchasescancel) - Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
+* [androidpublisherPurchasesGet](docs/purchases/README.md#androidpublisherpurchasesget) - Checks whether a user's subscription purchase is valid and returns its expiry time.
 <!-- End SDK Available Operations -->
 
 ### Maturity

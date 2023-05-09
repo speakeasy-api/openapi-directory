@@ -12,6 +12,7 @@ public class CreateBatchLoadTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateBatchLoadTaskRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +24,7 @@ public class CreateBatchLoadTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataModelConfiguration")
     public DataModelConfiguration dataModelConfiguration;
+
     public CreateBatchLoadTaskRequest withDataModelConfiguration(DataModelConfiguration dataModelConfiguration) {
         this.dataModelConfiguration = dataModelConfiguration;
         return this;
@@ -30,6 +32,7 @@ public class CreateBatchLoadTaskRequest {
     
     @JsonProperty("DataSourceConfiguration")
     public DataSourceConfiguration dataSourceConfiguration;
+
     public CreateBatchLoadTaskRequest withDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
         this.dataSourceConfiguration = dataSourceConfiguration;
         return this;
@@ -38,6 +41,7 @@ public class CreateBatchLoadTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordVersion")
     public Long recordVersion;
+
     public CreateBatchLoadTaskRequest withRecordVersion(Long recordVersion) {
         this.recordVersion = recordVersion;
         return this;
@@ -48,6 +52,7 @@ public class CreateBatchLoadTaskRequest {
      */
     @JsonProperty("ReportConfiguration")
     public ReportConfiguration reportConfiguration;
+
     public CreateBatchLoadTaskRequest withReportConfiguration(ReportConfiguration reportConfiguration) {
         this.reportConfiguration = reportConfiguration;
         return this;
@@ -55,6 +60,7 @@ public class CreateBatchLoadTaskRequest {
     
     @JsonProperty("TargetDatabaseName")
     public String targetDatabaseName;
+
     public CreateBatchLoadTaskRequest withTargetDatabaseName(String targetDatabaseName) {
         this.targetDatabaseName = targetDatabaseName;
         return this;
@@ -62,9 +68,16 @@ public class CreateBatchLoadTaskRequest {
     
     @JsonProperty("TargetTableName")
     public String targetTableName;
+
     public CreateBatchLoadTaskRequest withTargetTableName(String targetTableName) {
         this.targetTableName = targetTableName;
         return this;
     }
     
+    public CreateBatchLoadTaskRequest(@JsonProperty("DataSourceConfiguration") DataSourceConfiguration dataSourceConfiguration, @JsonProperty("ReportConfiguration") ReportConfiguration reportConfiguration, @JsonProperty("TargetDatabaseName") String targetDatabaseName, @JsonProperty("TargetTableName") String targetTableName) {
+        this.dataSourceConfiguration = dataSourceConfiguration;
+        this.reportConfiguration = reportConfiguration;
+        this.targetDatabaseName = targetDatabaseName;
+        this.targetTableName = targetTableName;
+  }
 }

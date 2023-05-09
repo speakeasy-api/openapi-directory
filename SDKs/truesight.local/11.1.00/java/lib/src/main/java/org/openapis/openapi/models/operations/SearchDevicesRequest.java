@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchDevicesRequest {
@@ -12,6 +13,7 @@ public class SearchDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=applicationId")
     public String applicationId;
+
     public SearchDevicesRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -22,6 +24,7 @@ public class SearchDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
     public String groupId;
+
     public SearchDevicesRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -32,6 +35,7 @@ public class SearchDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public SearchDevicesRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +46,7 @@ public class SearchDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public SearchDevicesRequest withPage(String page) {
         this.page = page;
         return this;
@@ -52,6 +57,7 @@ public class SearchDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchTerms")
     public String searchTerms;
+
     public SearchDevicesRequest withSearchTerms(String searchTerms) {
         this.searchTerms = searchTerms;
         return this;
@@ -62,9 +68,13 @@ public class SearchDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
     public String serviceId;
+
     public SearchDevicesRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public SearchDevicesRequest(@JsonProperty("searchTerms") String searchTerms) {
+        this.searchTerms = searchTerms;
+  }
 }

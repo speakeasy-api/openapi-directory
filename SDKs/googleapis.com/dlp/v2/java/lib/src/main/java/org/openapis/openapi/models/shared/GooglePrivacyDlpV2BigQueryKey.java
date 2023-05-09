@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2BigQueryKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowNumber")
     public String rowNumber;
+
     public GooglePrivacyDlpV2BigQueryKey withRowNumber(String rowNumber) {
         this.rowNumber = rowNumber;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2BigQueryKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableReference")
     public GooglePrivacyDlpV2BigQueryTable tableReference;
+
     public GooglePrivacyDlpV2BigQueryKey withTableReference(GooglePrivacyDlpV2BigQueryTable tableReference) {
         this.tableReference = tableReference;
         return this;
     }
     
+    public GooglePrivacyDlpV2BigQueryKey(){}
 }

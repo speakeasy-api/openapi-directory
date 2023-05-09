@@ -9,6 +9,7 @@ package org.openapis.openapi.models.operations;
 public class UpdatePrice200ApplicationXMLErrorsCauses {
     
     public String code;
+
     public UpdatePrice200ApplicationXMLErrorsCauses withCode(String code) {
         this.code = code;
         return this;
@@ -16,6 +17,7 @@ public class UpdatePrice200ApplicationXMLErrorsCauses {
     
     
     public String description;
+
     public UpdatePrice200ApplicationXMLErrorsCauses withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class UpdatePrice200ApplicationXMLErrorsCauses {
     
     
     public String field;
+
     public UpdatePrice200ApplicationXMLErrorsCauses withField(String field) {
         this.field = field;
         return this;
@@ -30,9 +33,11 @@ public class UpdatePrice200ApplicationXMLErrorsCauses {
     
     
     public String type;
+
     public UpdatePrice200ApplicationXMLErrorsCauses withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UpdatePrice200ApplicationXMLErrorsCauses(){}
 }

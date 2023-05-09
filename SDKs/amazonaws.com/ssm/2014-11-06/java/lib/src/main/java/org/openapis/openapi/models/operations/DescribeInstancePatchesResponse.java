@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeInstancePatchesResponse {
     
     public String contentType;
+
     public DescribeInstancePatchesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeInstancePatchesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeInstancePatchesResult describeInstancePatchesResult;
+
     public DescribeInstancePatchesResponse withDescribeInstancePatchesResult(org.openapis.openapi.models.shared.DescribeInstancePatchesResult describeInstancePatchesResult) {
         this.describeInstancePatchesResult = describeInstancePatchesResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeInstancePatchesResponse {
      */
     
     public Object internalServerError;
+
     public DescribeInstancePatchesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeInstancePatchesResponse {
      */
     
     public Object invalidFilter;
+
     public DescribeInstancePatchesResponse withInvalidFilter(Object invalidFilter) {
         this.invalidFilter = invalidFilter;
         return this;
@@ -49,6 +54,7 @@ public class DescribeInstancePatchesResponse {
      */
     
     public Object invalidInstanceId;
+
     public DescribeInstancePatchesResponse withInvalidInstanceId(Object invalidInstanceId) {
         this.invalidInstanceId = invalidInstanceId;
         return this;
@@ -59,6 +65,7 @@ public class DescribeInstancePatchesResponse {
      */
     
     public Object invalidNextToken;
+
     public DescribeInstancePatchesResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -66,6 +73,7 @@ public class DescribeInstancePatchesResponse {
     
     
     public Integer statusCode;
+
     public DescribeInstancePatchesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeInstancePatchesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeInstancePatchesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeInstancePatchesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

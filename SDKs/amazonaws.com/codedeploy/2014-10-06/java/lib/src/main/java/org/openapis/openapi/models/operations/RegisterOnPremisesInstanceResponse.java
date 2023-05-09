@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterOnPremisesInstanceResponse {
     
     public String contentType;
+
     public RegisterOnPremisesInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterOnPremisesInstanceResponse {
      */
     
     public Object iamArnRequiredException;
+
     public RegisterOnPremisesInstanceResponse withIamArnRequiredException(Object iamArnRequiredException) {
         this.iamArnRequiredException = iamArnRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterOnPremisesInstanceResponse {
      */
     
     public Object iamSessionArnAlreadyRegisteredException;
+
     public RegisterOnPremisesInstanceResponse withIamSessionArnAlreadyRegisteredException(Object iamSessionArnAlreadyRegisteredException) {
         this.iamSessionArnAlreadyRegisteredException = iamSessionArnAlreadyRegisteredException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterOnPremisesInstanceResponse {
      */
     
     public Object iamUserArnAlreadyRegisteredException;
+
     public RegisterOnPremisesInstanceResponse withIamUserArnAlreadyRegisteredException(Object iamUserArnAlreadyRegisteredException) {
         this.iamUserArnAlreadyRegisteredException = iamUserArnAlreadyRegisteredException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterOnPremisesInstanceResponse {
      */
     
     public Object iamUserArnRequiredException;
+
     public RegisterOnPremisesInstanceResponse withIamUserArnRequiredException(Object iamUserArnRequiredException) {
         this.iamUserArnRequiredException = iamUserArnRequiredException;
         return this;
@@ -59,6 +65,7 @@ public class RegisterOnPremisesInstanceResponse {
      */
     
     public Object instanceNameAlreadyRegisteredException;
+
     public RegisterOnPremisesInstanceResponse withInstanceNameAlreadyRegisteredException(Object instanceNameAlreadyRegisteredException) {
         this.instanceNameAlreadyRegisteredException = instanceNameAlreadyRegisteredException;
         return this;
@@ -69,6 +76,7 @@ public class RegisterOnPremisesInstanceResponse {
      */
     
     public Object instanceNameRequiredException;
+
     public RegisterOnPremisesInstanceResponse withInstanceNameRequiredException(Object instanceNameRequiredException) {
         this.instanceNameRequiredException = instanceNameRequiredException;
         return this;
@@ -79,6 +87,7 @@ public class RegisterOnPremisesInstanceResponse {
      */
     
     public Object invalidIamSessionArnException;
+
     public RegisterOnPremisesInstanceResponse withInvalidIamSessionArnException(Object invalidIamSessionArnException) {
         this.invalidIamSessionArnException = invalidIamSessionArnException;
         return this;
@@ -89,6 +98,7 @@ public class RegisterOnPremisesInstanceResponse {
      */
     
     public Object invalidIamUserArnException;
+
     public RegisterOnPremisesInstanceResponse withInvalidIamUserArnException(Object invalidIamUserArnException) {
         this.invalidIamUserArnException = invalidIamUserArnException;
         return this;
@@ -99,6 +109,7 @@ public class RegisterOnPremisesInstanceResponse {
      */
     
     public Object invalidInstanceNameException;
+
     public RegisterOnPremisesInstanceResponse withInvalidInstanceNameException(Object invalidInstanceNameException) {
         this.invalidInstanceNameException = invalidInstanceNameException;
         return this;
@@ -109,6 +120,7 @@ public class RegisterOnPremisesInstanceResponse {
      */
     
     public Object multipleIamArnsProvidedException;
+
     public RegisterOnPremisesInstanceResponse withMultipleIamArnsProvidedException(Object multipleIamArnsProvidedException) {
         this.multipleIamArnsProvidedException = multipleIamArnsProvidedException;
         return this;
@@ -116,6 +128,7 @@ public class RegisterOnPremisesInstanceResponse {
     
     
     public Integer statusCode;
+
     public RegisterOnPremisesInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,9 +136,14 @@ public class RegisterOnPremisesInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterOnPremisesInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegisterOnPremisesInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

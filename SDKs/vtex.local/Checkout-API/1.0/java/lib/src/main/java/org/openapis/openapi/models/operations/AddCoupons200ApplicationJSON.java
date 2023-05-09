@@ -18,6 +18,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowManualPrice")
     public Boolean allowManualPrice;
+
     public AddCoupons200ApplicationJSON withAllowManualPrice(Boolean allowManualPrice) {
         this.allowManualPrice = allowManualPrice;
         return this;
@@ -29,6 +30,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAccounts")
     public String[] availableAccounts;
+
     public AddCoupons200ApplicationJSON withAvailableAccounts(String[] availableAccounts) {
         this.availableAccounts = availableAccounts;
         return this;
@@ -40,6 +42,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAddresses")
     public AddCoupons200ApplicationJSONAvailableAddresses[] availableAddresses;
+
     public AddCoupons200ApplicationJSON withAvailableAddresses(AddCoupons200ApplicationJSONAvailableAddresses[] availableAddresses) {
         this.availableAddresses = availableAddresses;
         return this;
@@ -51,6 +54,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canEditData")
     public Boolean canEditData;
+
     public AddCoupons200ApplicationJSON withCanEditData(Boolean canEditData) {
         this.canEditData = canEditData;
         return this;
@@ -62,6 +66,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientPreferencesData")
     public AddCoupons200ApplicationJSONClientPreferencesData clientPreferencesData;
+
     public AddCoupons200ApplicationJSON withClientPreferencesData(AddCoupons200ApplicationJSONClientPreferencesData clientPreferencesData) {
         this.clientPreferencesData = clientPreferencesData;
         return this;
@@ -73,6 +78,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientProfileData")
     public AddCoupons200ApplicationJSONClientProfileData clientProfileData;
+
     public AddCoupons200ApplicationJSON withClientProfileData(AddCoupons200ApplicationJSONClientProfileData clientProfileData) {
         this.clientProfileData = clientProfileData;
         return this;
@@ -84,6 +90,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commercialConditionData")
     public java.util.Map<String, Object> commercialConditionData;
+
     public AddCoupons200ApplicationJSON withCommercialConditionData(java.util.Map<String, Object> commercialConditionData) {
         this.commercialConditionData = commercialConditionData;
         return this;
@@ -95,6 +102,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customData")
     public java.util.Map<String, Object> customData;
+
     public AddCoupons200ApplicationJSON withCustomData(java.util.Map<String, Object> customData) {
         this.customData = customData;
         return this;
@@ -106,6 +114,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftRegistryData")
     public java.util.Map<String, Object> giftRegistryData;
+
     public AddCoupons200ApplicationJSON withGiftRegistryData(java.util.Map<String, Object> giftRegistryData) {
         this.giftRegistryData = giftRegistryData;
         return this;
@@ -117,6 +126,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hooksData")
     public java.util.Map<String, Object> hooksData;
+
     public AddCoupons200ApplicationJSON withHooksData(java.util.Map<String, Object> hooksData) {
         this.hooksData = hooksData;
         return this;
@@ -128,6 +138,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreProfileData")
     public Boolean ignoreProfileData;
+
     public AddCoupons200ApplicationJSON withIgnoreProfileData(Boolean ignoreProfileData) {
         this.ignoreProfileData = ignoreProfileData;
         return this;
@@ -139,6 +150,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceData")
     public java.util.Map<String, Object> invoiceData;
+
     public AddCoupons200ApplicationJSON withInvoiceData(java.util.Map<String, Object> invoiceData) {
         this.invoiceData = invoiceData;
         return this;
@@ -150,6 +162,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCheckedIn")
     public Boolean isCheckedIn;
+
     public AddCoupons200ApplicationJSON withIsCheckedIn(Boolean isCheckedIn) {
         this.isCheckedIn = isCheckedIn;
         return this;
@@ -161,6 +174,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemMetadata")
     public AddCoupons200ApplicationJSONItemMetadata itemMetadata;
+
     public AddCoupons200ApplicationJSON withItemMetadata(AddCoupons200ApplicationJSONItemMetadata itemMetadata) {
         this.itemMetadata = itemMetadata;
         return this;
@@ -172,6 +186,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public AddCoupons200ApplicationJSONItems[] items;
+
     public AddCoupons200ApplicationJSON withItems(AddCoupons200ApplicationJSONItems[] items) {
         this.items = items;
         return this;
@@ -183,6 +198,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemsOrdination")
     public AddCoupons200ApplicationJSONItemsOrdination itemsOrdination;
+
     public AddCoupons200ApplicationJSON withItemsOrdination(AddCoupons200ApplicationJSONItemsOrdination itemsOrdination) {
         this.itemsOrdination = itemsOrdination;
         return this;
@@ -194,6 +210,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggedIn")
     public Boolean loggedIn;
+
     public AddCoupons200ApplicationJSON withLoggedIn(Boolean loggedIn) {
         this.loggedIn = loggedIn;
         return this;
@@ -205,6 +222,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingData")
     public AddCoupons200ApplicationJSONMarketingData marketingData;
+
     public AddCoupons200ApplicationJSON withMarketingData(AddCoupons200ApplicationJSONMarketingData marketingData) {
         this.marketingData = marketingData;
         return this;
@@ -216,6 +234,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public Object[] messages;
+
     public AddCoupons200ApplicationJSON withMessages(Object[] messages) {
         this.messages = messages;
         return this;
@@ -227,6 +246,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openTextField")
     public String openTextField;
+
     public AddCoupons200ApplicationJSON withOpenTextField(String openTextField) {
         this.openTextField = openTextField;
         return this;
@@ -238,6 +258,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderFormId")
     public String orderFormId;
+
     public AddCoupons200ApplicationJSON withOrderFormId(String orderFormId) {
         this.orderFormId = orderFormId;
         return this;
@@ -249,6 +270,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentData")
     public AddCoupons200ApplicationJSONPaymentData paymentData;
+
     public AddCoupons200ApplicationJSON withPaymentData(AddCoupons200ApplicationJSONPaymentData paymentData) {
         this.paymentData = paymentData;
         return this;
@@ -260,6 +282,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileProvider")
     public String profileProvider;
+
     public AddCoupons200ApplicationJSON withProfileProvider(String profileProvider) {
         this.profileProvider = profileProvider;
         return this;
@@ -271,6 +294,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratesAndBenefitsData")
     public AddCoupons200ApplicationJSONRatesAndBenefitsData ratesAndBenefitsData;
+
     public AddCoupons200ApplicationJSON withRatesAndBenefitsData(AddCoupons200ApplicationJSONRatesAndBenefitsData ratesAndBenefitsData) {
         this.ratesAndBenefitsData = ratesAndBenefitsData;
         return this;
@@ -282,6 +306,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public AddCoupons200ApplicationJSON withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -293,6 +318,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectableGifts")
     public Object[] selectableGifts;
+
     public AddCoupons200ApplicationJSON withSelectableGifts(Object[] selectableGifts) {
         this.selectableGifts = selectableGifts;
         return this;
@@ -304,6 +330,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellers")
     public AddCoupons200ApplicationJSONSellers[] sellers;
+
     public AddCoupons200ApplicationJSON withSellers(AddCoupons200ApplicationJSONSellers[] sellers) {
         this.sellers = sellers;
         return this;
@@ -315,6 +342,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingData")
     public AddCoupons200ApplicationJSONShippingData shippingData;
+
     public AddCoupons200ApplicationJSON withShippingData(AddCoupons200ApplicationJSONShippingData shippingData) {
         this.shippingData = shippingData;
         return this;
@@ -326,6 +354,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeId")
     public String storeId;
+
     public AddCoupons200ApplicationJSON withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
@@ -337,6 +366,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storePreferencesData")
     public java.util.Map<String, Object> storePreferencesData;
+
     public AddCoupons200ApplicationJSON withStorePreferencesData(java.util.Map<String, Object> storePreferencesData) {
         this.storePreferencesData = storePreferencesData;
         return this;
@@ -348,6 +378,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionData")
     public java.util.Map<String, Object> subscriptionData;
+
     public AddCoupons200ApplicationJSON withSubscriptionData(java.util.Map<String, Object> subscriptionData) {
         this.subscriptionData = subscriptionData;
         return this;
@@ -359,6 +390,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalizers")
     public Object[] totalizers;
+
     public AddCoupons200ApplicationJSON withTotalizers(Object[] totalizers) {
         this.totalizers = totalizers;
         return this;
@@ -370,6 +402,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userProfileId")
     public String userProfileId;
+
     public AddCoupons200ApplicationJSON withUserProfileId(String userProfileId) {
         this.userProfileId = userProfileId;
         return this;
@@ -381,6 +414,7 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userType")
     public String userType;
+
     public AddCoupons200ApplicationJSON withUserType(String userType) {
         this.userType = userType;
         return this;
@@ -392,9 +426,11 @@ public class AddCoupons200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public AddCoupons200ApplicationJSON withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public AddCoupons200ApplicationJSON(){}
 }

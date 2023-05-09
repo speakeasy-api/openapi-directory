@@ -20,6 +20,7 @@ public class DescribeContributorInsightsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContributorInsightsRuleList")
     public String[] contributorInsightsRuleList;
+
     public DescribeContributorInsightsOutput withContributorInsightsRuleList(String[] contributorInsightsRuleList) {
         this.contributorInsightsRuleList = contributorInsightsRuleList;
         return this;
@@ -28,6 +29,7 @@ public class DescribeContributorInsightsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContributorInsightsStatus")
     public ContributorInsightsStatusEnum contributorInsightsStatus;
+
     public DescribeContributorInsightsOutput withContributorInsightsStatus(ContributorInsightsStatusEnum contributorInsightsStatus) {
         this.contributorInsightsStatus = contributorInsightsStatus;
         return this;
@@ -36,6 +38,7 @@ public class DescribeContributorInsightsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureException")
     public FailureException failureException;
+
     public DescribeContributorInsightsOutput withFailureException(FailureException failureException) {
         this.failureException = failureException;
         return this;
@@ -44,6 +47,7 @@ public class DescribeContributorInsightsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public DescribeContributorInsightsOutput withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -54,6 +58,7 @@ public class DescribeContributorInsightsOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateDateTime")
     public OffsetDateTime lastUpdateDateTime;
+
     public DescribeContributorInsightsOutput withLastUpdateDateTime(OffsetDateTime lastUpdateDateTime) {
         this.lastUpdateDateTime = lastUpdateDateTime;
         return this;
@@ -62,9 +67,11 @@ public class DescribeContributorInsightsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public DescribeContributorInsightsOutput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DescribeContributorInsightsOutput(){}
 }

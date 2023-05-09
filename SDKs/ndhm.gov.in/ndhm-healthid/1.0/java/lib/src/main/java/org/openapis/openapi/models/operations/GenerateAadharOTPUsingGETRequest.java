@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateAadharOTPUsingGETRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public GenerateAadharOTPUsingGETRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class GenerateAadharOTPUsingGETRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
     public String xToken;
+
     public GenerateAadharOTPUsingGETRequest withXToken(String xToken) {
         this.xToken = xToken;
         return this;
     }
     
+    public GenerateAadharOTPUsingGETRequest(@JsonProperty("X-Token") String xToken) {
+        this.xToken = xToken;
+  }
 }

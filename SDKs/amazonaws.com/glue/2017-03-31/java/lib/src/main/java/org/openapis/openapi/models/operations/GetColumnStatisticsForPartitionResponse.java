@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetColumnStatisticsForPartitionResponse {
     
     public String contentType;
+
     public GetColumnStatisticsForPartitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetColumnStatisticsForPartitionResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetColumnStatisticsForPartitionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetColumnStatisticsForPartitionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetColumnStatisticsForPartitionResponse getColumnStatisticsForPartitionResponse;
+
     public GetColumnStatisticsForPartitionResponse withGetColumnStatisticsForPartitionResponse(org.openapis.openapi.models.shared.GetColumnStatisticsForPartitionResponse getColumnStatisticsForPartitionResponse) {
         this.getColumnStatisticsForPartitionResponse = getColumnStatisticsForPartitionResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetColumnStatisticsForPartitionResponse {
      */
     
     public Object glueEncryptionException;
+
     public GetColumnStatisticsForPartitionResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +54,7 @@ public class GetColumnStatisticsForPartitionResponse {
      */
     
     public Object internalServiceException;
+
     public GetColumnStatisticsForPartitionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetColumnStatisticsForPartitionResponse {
      */
     
     public Object invalidInputException;
+
     public GetColumnStatisticsForPartitionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class GetColumnStatisticsForPartitionResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetColumnStatisticsForPartitionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class GetColumnStatisticsForPartitionResponse {
     
     
     public Integer statusCode;
+
     public GetColumnStatisticsForPartitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetColumnStatisticsForPartitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetColumnStatisticsForPartitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetColumnStatisticsForPartitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class UpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applyDuringMaintenanceWindow")
     public Boolean applyDuringMaintenanceWindow;
+
     public UpdateEnvironmentRequestBody withApplyDuringMaintenanceWindow(Boolean applyDuringMaintenanceWindow) {
         this.applyDuringMaintenanceWindow = applyDuringMaintenanceWindow;
         return this;
@@ -26,6 +27,7 @@ public class UpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredCapacity")
     public Long desiredCapacity;
+
     public UpdateEnvironmentRequestBody withDesiredCapacity(Long desiredCapacity) {
         this.desiredCapacity = desiredCapacity;
         return this;
@@ -37,6 +39,7 @@ public class UpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engineVersion")
     public String engineVersion;
+
     public UpdateEnvironmentRequestBody withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -48,6 +51,7 @@ public class UpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceType")
     public String instanceType;
+
     public UpdateEnvironmentRequestBody withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -59,9 +63,11 @@ public class UpdateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public UpdateEnvironmentRequestBody withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
     }
     
+    public UpdateEnvironmentRequestBody(){}
 }

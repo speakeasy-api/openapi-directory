@@ -12,6 +12,7 @@ public class Maintainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Maintainer withKind(String kind) {
         this.kind = kind;
         return this;
@@ -20,9 +21,11 @@ public class Maintainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Maintainer withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Maintainer(){}
 }

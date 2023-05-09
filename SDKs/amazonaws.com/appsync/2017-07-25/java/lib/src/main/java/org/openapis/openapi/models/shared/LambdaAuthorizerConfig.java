@@ -15,6 +15,7 @@ public class LambdaAuthorizerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizerResultTtlInSeconds")
     public Long authorizerResultTtlInSeconds;
+
     public LambdaAuthorizerConfig withAuthorizerResultTtlInSeconds(Long authorizerResultTtlInSeconds) {
         this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
         return this;
@@ -22,6 +23,7 @@ public class LambdaAuthorizerConfig {
     
     @JsonProperty("authorizerUri")
     public String authorizerUri;
+
     public LambdaAuthorizerConfig withAuthorizerUri(String authorizerUri) {
         this.authorizerUri = authorizerUri;
         return this;
@@ -30,9 +32,13 @@ public class LambdaAuthorizerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityValidationExpression")
     public String identityValidationExpression;
+
     public LambdaAuthorizerConfig withIdentityValidationExpression(String identityValidationExpression) {
         this.identityValidationExpression = identityValidationExpression;
         return this;
     }
     
+    public LambdaAuthorizerConfig(@JsonProperty("authorizerUri") String authorizerUri) {
+        this.authorizerUri = authorizerUri;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataNetworkInterfacesIpv6Addresses {
     
     public String ipv6Address;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataNetworkInterfacesIpv6Addresses withIpv6Address(String ipv6Address) {
         this.ipv6Address = ipv6Address;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataNetworkInterfacesIpv6Addresses(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1Lake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetStatus")
     public GoogleCloudDataplexV1AssetStatus assetStatus;
+
     public GoogleCloudDataplexV1Lake withAssetStatus(GoogleCloudDataplexV1AssetStatus assetStatus) {
         this.assetStatus = assetStatus;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1Lake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDataplexV1Lake withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1Lake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1Lake withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1Lake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1Lake withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1Lake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1Lake withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1Lake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metastore")
     public GoogleCloudDataplexV1LakeMetastore metastore;
+
     public GoogleCloudDataplexV1Lake withMetastore(GoogleCloudDataplexV1LakeMetastore metastore) {
         this.metastore = metastore;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDataplexV1Lake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metastoreStatus")
     public GoogleCloudDataplexV1LakeMetastoreStatus metastoreStatus;
+
     public GoogleCloudDataplexV1Lake withMetastoreStatus(GoogleCloudDataplexV1LakeMetastoreStatus metastoreStatus) {
         this.metastoreStatus = metastoreStatus;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDataplexV1Lake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1Lake withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDataplexV1Lake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public GoogleCloudDataplexV1Lake withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDataplexV1Lake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDataplexV1LakeStateEnum state;
+
     public GoogleCloudDataplexV1Lake withState(GoogleCloudDataplexV1LakeStateEnum state) {
         this.state = state;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDataplexV1Lake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GoogleCloudDataplexV1Lake withUid(String uid) {
         this.uid = uid;
         return this;
@@ -139,9 +150,11 @@ public class GoogleCloudDataplexV1Lake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDataplexV1Lake withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDataplexV1Lake(){}
 }

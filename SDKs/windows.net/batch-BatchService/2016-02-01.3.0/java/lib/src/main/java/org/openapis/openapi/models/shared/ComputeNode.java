@@ -23,6 +23,7 @@ public class ComputeNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affinityId")
     public String affinityId;
+
     public ComputeNode withAffinityId(String affinityId) {
         this.affinityId = affinityId;
         return this;
@@ -36,6 +37,7 @@ public class ComputeNode {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("allocationTime")
     public OffsetDateTime allocationTime;
+
     public ComputeNode withAllocationTime(OffsetDateTime allocationTime) {
         this.allocationTime = allocationTime;
         return this;
@@ -47,6 +49,7 @@ public class ComputeNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateReferences")
     public CertificateReference[] certificateReferences;
+
     public ComputeNode withCertificateReferences(CertificateReference[] certificateReferences) {
         this.certificateReferences = certificateReferences;
         return this;
@@ -58,6 +61,7 @@ public class ComputeNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ComputeNodeError[] errors;
+
     public ComputeNode withErrors(ComputeNodeError[] errors) {
         this.errors = errors;
         return this;
@@ -69,6 +73,7 @@ public class ComputeNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ComputeNode withId(String id) {
         this.id = id;
         return this;
@@ -80,6 +85,7 @@ public class ComputeNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public ComputeNode withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -93,6 +99,7 @@ public class ComputeNode {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastBootTime")
     public OffsetDateTime lastBootTime;
+
     public ComputeNode withLastBootTime(OffsetDateTime lastBootTime) {
         this.lastBootTime = lastBootTime;
         return this;
@@ -104,6 +111,7 @@ public class ComputeNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentTasks")
     public TaskInformation[] recentTasks;
+
     public ComputeNode withRecentTasks(TaskInformation[] recentTasks) {
         this.recentTasks = recentTasks;
         return this;
@@ -115,6 +123,7 @@ public class ComputeNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runningTasksCount")
     public Integer runningTasksCount;
+
     public ComputeNode withRunningTasksCount(Integer runningTasksCount) {
         this.runningTasksCount = runningTasksCount;
         return this;
@@ -126,6 +135,7 @@ public class ComputeNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingState")
     public ComputeNodeSchedulingStateEnum schedulingState;
+
     public ComputeNode withSchedulingState(ComputeNodeSchedulingStateEnum schedulingState) {
         this.schedulingState = schedulingState;
         return this;
@@ -137,6 +147,7 @@ public class ComputeNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTask")
     public StartTask startTask;
+
     public ComputeNode withStartTask(StartTask startTask) {
         this.startTask = startTask;
         return this;
@@ -148,6 +159,7 @@ public class ComputeNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTaskInfo")
     public StartTaskInformation startTaskInfo;
+
     public ComputeNode withStartTaskInfo(StartTaskInformation startTaskInfo) {
         this.startTaskInfo = startTaskInfo;
         return this;
@@ -159,6 +171,7 @@ public class ComputeNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ComputeNodeStateEnum state;
+
     public ComputeNode withState(ComputeNodeStateEnum state) {
         this.state = state;
         return this;
@@ -172,6 +185,7 @@ public class ComputeNode {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stateTransitionTime")
     public OffsetDateTime stateTransitionTime;
+
     public ComputeNode withStateTransitionTime(OffsetDateTime stateTransitionTime) {
         this.stateTransitionTime = stateTransitionTime;
         return this;
@@ -183,6 +197,7 @@ public class ComputeNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalTasksRun")
     public Integer totalTasksRun;
+
     public ComputeNode withTotalTasksRun(Integer totalTasksRun) {
         this.totalTasksRun = totalTasksRun;
         return this;
@@ -194,6 +209,7 @@ public class ComputeNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalTasksSucceeded")
     public Integer totalTasksSucceeded;
+
     public ComputeNode withTotalTasksSucceeded(Integer totalTasksSucceeded) {
         this.totalTasksSucceeded = totalTasksSucceeded;
         return this;
@@ -205,6 +221,7 @@ public class ComputeNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ComputeNode withUrl(String url) {
         this.url = url;
         return this;
@@ -216,9 +233,11 @@ public class ComputeNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmSize")
     public String vmSize;
+
     public ComputeNode withVmSize(String vmSize) {
         this.vmSize = vmSize;
         return this;
     }
     
+    public ComputeNode(){}
 }

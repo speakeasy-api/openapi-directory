@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePermissionResponse {
     
     public String contentType;
+
     public CreatePermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePermissionResponse {
      */
     
     public Object invalidArnException;
+
     public CreatePermissionResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -29,6 +32,7 @@ public class CreatePermissionResponse {
      */
     
     public Object invalidStateException;
+
     public CreatePermissionResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -39,6 +43,7 @@ public class CreatePermissionResponse {
      */
     
     public Object limitExceededException;
+
     public CreatePermissionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreatePermissionResponse {
      */
     
     public Object permissionAlreadyExistsException;
+
     public CreatePermissionResponse withPermissionAlreadyExistsException(Object permissionAlreadyExistsException) {
         this.permissionAlreadyExistsException = permissionAlreadyExistsException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePermissionResponse {
      */
     
     public Object requestFailedException;
+
     public CreatePermissionResponse withRequestFailedException(Object requestFailedException) {
         this.requestFailedException = requestFailedException;
         return this;
@@ -69,6 +76,7 @@ public class CreatePermissionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreatePermissionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreatePermissionResponse {
     
     
     public Integer statusCode;
+
     public CreatePermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreatePermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreatePermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

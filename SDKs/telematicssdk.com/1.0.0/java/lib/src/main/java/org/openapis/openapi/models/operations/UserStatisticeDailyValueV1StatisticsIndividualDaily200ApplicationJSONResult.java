@@ -12,6 +12,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccelerationCount")
     public Double accelerationCount;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withAccelerationCount(Double accelerationCount) {
         this.accelerationCount = accelerationCount;
         return this;
@@ -20,6 +21,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppId")
     public String appId;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -28,6 +30,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageSpeedKmh")
     public Double averageSpeedKmh;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withAverageSpeedKmh(Double averageSpeedKmh) {
         this.averageSpeedKmh = averageSpeedKmh;
         return this;
@@ -36,6 +39,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageSpeedMileh")
     public Double averageSpeedMileh;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withAverageSpeedMileh(Double averageSpeedMileh) {
         this.averageSpeedMileh = averageSpeedMileh;
         return this;
@@ -44,6 +48,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BreakingCount")
     public Double breakingCount;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withBreakingCount(Double breakingCount) {
         this.breakingCount = breakingCount;
         return this;
@@ -52,6 +57,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompanyId")
     public String companyId;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -60,6 +66,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CorneringCount")
     public Double corneringCount;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withCorneringCount(Double corneringCount) {
         this.corneringCount = corneringCount;
         return this;
@@ -68,6 +75,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DayDrivingTime")
     public Double dayDrivingTime;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withDayDrivingTime(Double dayDrivingTime) {
         this.dayDrivingTime = dayDrivingTime;
         return this;
@@ -76,6 +84,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceToken")
     public String deviceToken;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withDeviceToken(String deviceToken) {
         this.deviceToken = deviceToken;
         return this;
@@ -84,6 +93,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DriverTripsCount")
     public Double driverTripsCount;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withDriverTripsCount(Double driverTripsCount) {
         this.driverTripsCount = driverTripsCount;
         return this;
@@ -92,6 +102,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DrivingTime")
     public Double drivingTime;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withDrivingTime(Double drivingTime) {
         this.drivingTime = drivingTime;
         return this;
@@ -100,6 +111,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -108,6 +120,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxSpeedKmh")
     public Double maxSpeedKmh;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withMaxSpeedKmh(Double maxSpeedKmh) {
         this.maxSpeedKmh = maxSpeedKmh;
         return this;
@@ -116,6 +129,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxSpeedMileh")
     public Double maxSpeedMileh;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withMaxSpeedMileh(Double maxSpeedMileh) {
         this.maxSpeedMileh = maxSpeedMileh;
         return this;
@@ -124,6 +138,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MileageKm")
     public Double mileageKm;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withMileageKm(Double mileageKm) {
         this.mileageKm = mileageKm;
         return this;
@@ -132,6 +147,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MileageMile")
     public Double mileageMile;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withMileageMile(Double mileageMile) {
         this.mileageMile = mileageMile;
         return this;
@@ -140,6 +156,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NightDrivingTime")
     public Double nightDrivingTime;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withNightDrivingTime(Double nightDrivingTime) {
         this.nightDrivingTime = nightDrivingTime;
         return this;
@@ -148,6 +165,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OtherTripsCount")
     public Double otherTripsCount;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withOtherTripsCount(Double otherTripsCount) {
         this.otherTripsCount = otherTripsCount;
         return this;
@@ -156,6 +174,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneUsageDistanceKm")
     public Double phoneUsageDistanceKm;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withPhoneUsageDistanceKm(Double phoneUsageDistanceKm) {
         this.phoneUsageDistanceKm = phoneUsageDistanceKm;
         return this;
@@ -164,6 +183,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneUsageDistanceMile")
     public Double phoneUsageDistanceMile;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withPhoneUsageDistanceMile(Double phoneUsageDistanceMile) {
         this.phoneUsageDistanceMile = phoneUsageDistanceMile;
         return this;
@@ -172,6 +192,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneUsageDurationMin")
     public Double phoneUsageDurationMin;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withPhoneUsageDurationMin(Double phoneUsageDurationMin) {
         this.phoneUsageDurationMin = phoneUsageDurationMin;
         return this;
@@ -180,6 +201,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneUsageOverSpeedDistanceKm")
     public Double phoneUsageOverSpeedDistanceKm;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withPhoneUsageOverSpeedDistanceKm(Double phoneUsageOverSpeedDistanceKm) {
         this.phoneUsageOverSpeedDistanceKm = phoneUsageOverSpeedDistanceKm;
         return this;
@@ -188,6 +210,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneUsageOverSpeedDistanceMile")
     public Double phoneUsageOverSpeedDistanceMile;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withPhoneUsageOverSpeedDistanceMile(Double phoneUsageOverSpeedDistanceMile) {
         this.phoneUsageOverSpeedDistanceMile = phoneUsageOverSpeedDistanceMile;
         return this;
@@ -196,6 +219,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneUsageOverSpeedDurationMin")
     public Double phoneUsageOverSpeedDurationMin;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withPhoneUsageOverSpeedDurationMin(Double phoneUsageOverSpeedDurationMin) {
         this.phoneUsageOverSpeedDurationMin = phoneUsageOverSpeedDurationMin;
         return this;
@@ -204,6 +228,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportDate")
     public String reportDate;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withReportDate(String reportDate) {
         this.reportDate = reportDate;
         return this;
@@ -212,6 +237,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushHoursDrivingTime")
     public Double rushHoursDrivingTime;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withRushHoursDrivingTime(Double rushHoursDrivingTime) {
         this.rushHoursDrivingTime = rushHoursDrivingTime;
         return this;
@@ -220,6 +246,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalSpeedingKm")
     public Double totalSpeedingKm;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withTotalSpeedingKm(Double totalSpeedingKm) {
         this.totalSpeedingKm = totalSpeedingKm;
         return this;
@@ -228,6 +255,7 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalSpeedingMile")
     public Double totalSpeedingMile;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withTotalSpeedingMile(Double totalSpeedingMile) {
         this.totalSpeedingMile = totalSpeedingMile;
         return this;
@@ -236,9 +264,11 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TripsCount")
     public Double tripsCount;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult withTripsCount(Double tripsCount) {
         this.tripsCount = tripsCount;
         return this;
     }
     
+    public UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONResult(){}
 }

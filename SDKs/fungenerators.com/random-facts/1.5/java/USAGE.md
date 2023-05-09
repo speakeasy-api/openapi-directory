@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetFactFodSecurity;
 import org.openapis.openapi.models.operations.GetFactFodRequest;
 import org.openapis.openapi.models.operations.GetFactFodResponse;
+import org.openapis.openapi.models.operations.GetFactFodSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -16,9 +15,9 @@ public class Application {
 
             GetFactFodRequest req = new GetFactFodRequest() {{
                 category = "corrupti";
-            }}            
+            }};            
 
-            GetFactFodResponse res = sdk.factOfTheDay.getFactFod(req, new GetFactFodSecurity() {{
+            GetFactFodResponse res = sdk.factOfTheDay.getFactFod(req, new GetFactFodSecurity("provident") {{
                 xFungeneratorsApiSecret = "YOUR_API_KEY_HERE";
             }});
 
@@ -28,5 +27,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

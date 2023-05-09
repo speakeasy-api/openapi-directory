@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFleetPortSettingsResponse {
     
     public String contentType;
+
     public DescribeFleetPortSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFleetPortSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFleetPortSettingsOutput describeFleetPortSettingsOutput;
+
     public DescribeFleetPortSettingsResponse withDescribeFleetPortSettingsOutput(org.openapis.openapi.models.shared.DescribeFleetPortSettingsOutput describeFleetPortSettingsOutput) {
         this.describeFleetPortSettingsOutput = describeFleetPortSettingsOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFleetPortSettingsResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeFleetPortSettingsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFleetPortSettingsResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeFleetPortSettingsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeFleetPortSettingsResponse {
      */
     
     public Object notFoundException;
+
     public DescribeFleetPortSettingsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeFleetPortSettingsResponse {
     
     
     public Integer statusCode;
+
     public DescribeFleetPortSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeFleetPortSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFleetPortSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeFleetPortSettingsResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeFleetPortSettingsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeFleetPortSettingsResponse {
      */
     
     public Object unsupportedRegionException;
+
     public DescribeFleetPortSettingsResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public DescribeFleetPortSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllPaymentsRequest {
@@ -12,6 +13,7 @@ public class GetAllPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
     public String pageNumber;
+
     public GetAllPaymentsRequest withPageNumber(String pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -22,6 +24,7 @@ public class GetAllPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public String pageSize;
+
     public GetAllPaymentsRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -32,6 +35,7 @@ public class GetAllPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payment_type")
     public String paymentType;
+
     public GetAllPaymentsRequest withPaymentType(String paymentType) {
         this.paymentType = paymentType;
         return this;
@@ -42,6 +46,7 @@ public class GetAllPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=purpose")
     public String purpose;
+
     public GetAllPaymentsRequest withPurpose(String purpose) {
         this.purpose = purpose;
         return this;
@@ -52,6 +57,7 @@ public class GetAllPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service_provider")
     public String serviceProvider;
+
     public GetAllPaymentsRequest withServiceProvider(String serviceProvider) {
         this.serviceProvider = serviceProvider;
         return this;
@@ -62,6 +68,7 @@ public class GetAllPaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetAllPaymentsSortEnum sort;
+
     public GetAllPaymentsRequest withSort(GetAllPaymentsSortEnum sort) {
         this.sort = sort;
         return this;
@@ -72,9 +79,13 @@ public class GetAllPaymentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetAllPaymentsRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetAllPaymentsRequest(@JsonProperty("x-api-key") String xApiKey) {
+        this.xApiKey = xApiKey;
+  }
 }

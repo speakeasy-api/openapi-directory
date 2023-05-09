@@ -15,6 +15,7 @@ public class ListDatabasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Databases")
     public Database[] databases;
+
     public ListDatabasesResponse withDatabases(Database[] databases) {
         this.databases = databases;
         return this;
@@ -23,9 +24,11 @@ public class ListDatabasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDatabasesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDatabasesResponse(){}
 }

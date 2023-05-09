@@ -15,6 +15,7 @@ public class GetGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupARN")
     public String groupARN;
+
     public GetGroupRequestBody withGroupARN(String groupARN) {
         this.groupARN = groupARN;
         return this;
@@ -26,9 +27,11 @@ public class GetGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public GetGroupRequestBody withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public GetGroupRequestBody(){}
 }

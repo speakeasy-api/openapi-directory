@@ -15,9 +15,11 @@ public class CreateDatasetContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionId")
     public String versionId;
+
     public CreateDatasetContentResponse withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public CreateDatasetContentResponse(){}
 }

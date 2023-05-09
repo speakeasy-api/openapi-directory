@@ -15,6 +15,7 @@ public class GetpagedbySellerId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FreightCommissionPercentage")
     public Double freightCommissionPercentage;
+
     public GetpagedbySellerId200ApplicationJSON withFreightCommissionPercentage(Double freightCommissionPercentage) {
         this.freightCommissionPercentage = freightCommissionPercentage;
         return this;
@@ -26,6 +27,7 @@ public class GetpagedbySellerId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsActive")
     public Boolean isActive;
+
     public GetpagedbySellerId200ApplicationJSON withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -37,6 +39,7 @@ public class GetpagedbySellerId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductCommissionPercentage")
     public Double productCommissionPercentage;
+
     public GetpagedbySellerId200ApplicationJSON withProductCommissionPercentage(Double productCommissionPercentage) {
         this.productCommissionPercentage = productCommissionPercentage;
         return this;
@@ -48,6 +51,7 @@ public class GetpagedbySellerId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SellerId")
     public String sellerId;
+
     public GetpagedbySellerId200ApplicationJSON withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -59,6 +63,7 @@ public class GetpagedbySellerId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SellerStockKeepingUnitId")
     public String sellerStockKeepingUnitId;
+
     public GetpagedbySellerId200ApplicationJSON withSellerStockKeepingUnitId(String sellerStockKeepingUnitId) {
         this.sellerStockKeepingUnitId = sellerStockKeepingUnitId;
         return this;
@@ -70,9 +75,11 @@ public class GetpagedbySellerId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockKeepingUnitId")
     public Integer stockKeepingUnitId;
+
     public GetpagedbySellerId200ApplicationJSON withStockKeepingUnitId(Integer stockKeepingUnitId) {
         this.stockKeepingUnitId = stockKeepingUnitId;
         return this;
     }
     
+    public GetpagedbySellerId200ApplicationJSON(){}
 }

@@ -15,9 +15,11 @@ public class RebootNodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cluster")
     public Cluster cluster;
+
     public RebootNodeResponse withCluster(Cluster cluster) {
         this.cluster = cluster;
         return this;
     }
     
+    public RebootNodeResponse(){}
 }

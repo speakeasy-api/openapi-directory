@@ -15,6 +15,7 @@ public class ResourceUpdateErrorErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ResourceUpdateErrorErrors withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class ResourceUpdateErrorErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public ResourceUpdateErrorErrors withLocation(String location) {
         this.location = location;
         return this;
@@ -37,9 +39,11 @@ public class ResourceUpdateErrorErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ResourceUpdateErrorErrors withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ResourceUpdateErrorErrors(){}
 }

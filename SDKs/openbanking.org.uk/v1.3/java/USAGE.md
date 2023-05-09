@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetAtmsRequest;
 import org.openapis.openapi.models.operations.GetAtmsResponse;
 
@@ -16,15 +15,17 @@ public class Application {
             GetAtmsRequest req = new GetAtmsRequest() {{
                 ifModifiedSince = "corrupti";
                 ifNoneMatch = "provident";
-            }}            
+            }};            
 
             GetAtmsResponse res = sdk.atm.getAtms(req);
 
-            if (res.getAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonObject.isPresent()) {
+            if (res.getAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

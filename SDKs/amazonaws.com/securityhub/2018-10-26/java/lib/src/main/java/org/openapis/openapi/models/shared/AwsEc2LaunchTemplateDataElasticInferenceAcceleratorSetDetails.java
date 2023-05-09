@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataElasticInferenceAcceleratorSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public AwsEc2LaunchTemplateDataElasticInferenceAcceleratorSetDetails withCount(Long count) {
         this.count = count;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2LaunchTemplateDataElasticInferenceAcceleratorSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsEc2LaunchTemplateDataElasticInferenceAcceleratorSetDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataElasticInferenceAcceleratorSetDetails(){}
 }

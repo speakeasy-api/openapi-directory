@@ -18,6 +18,7 @@ public class ErrorsCountsPerDay200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public ErrorsCountsPerDay200ApplicationJSON withCount(Long count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class ErrorsCountsPerDay200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ErrorsCountsPerDay200ApplicationJSONErrors[] errors;
+
     public ErrorsCountsPerDay200ApplicationJSON withErrors(ErrorsCountsPerDay200ApplicationJSONErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public ErrorsCountsPerDay200ApplicationJSON(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProjectsResponse {
@@ -12,6 +13,7 @@ public class ListProjectsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListProjectsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListProjectsResponse {
      */
     
     public Object conflictException;
+
     public ListProjectsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListProjectsResponse {
     
     
     public String contentType;
+
     public ListProjectsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListProjectsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProjectsResponse listProjectsResponse;
+
     public ListProjectsResponse withListProjectsResponse(org.openapis.openapi.models.shared.ListProjectsResponse listProjectsResponse) {
         this.listProjectsResponse = listProjectsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListProjectsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListProjectsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListProjectsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListProjectsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class ListProjectsResponse {
     
     
     public Integer statusCode;
+
     public ListProjectsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListProjectsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProjectsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListProjectsResponse {
      */
     
     public Object throttlingException;
+
     public ListProjectsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListProjectsResponse {
      */
     
     public Object validationException;
+
     public ListProjectsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListProjectsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

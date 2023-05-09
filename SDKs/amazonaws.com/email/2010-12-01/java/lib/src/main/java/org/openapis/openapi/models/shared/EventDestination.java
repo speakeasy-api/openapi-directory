@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * EventDestination - &lt;p&gt;Contains information about the event destination that the specified email sending events will be published to.&lt;/p&gt; &lt;note&gt; &lt;p&gt;When you create or update an event destination, you must provide one, and only one, destination. The destination can be Amazon CloudWatch, Amazon Kinesis Firehose or Amazon Simple Notification Service (Amazon SNS).&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Event destinations are associated with configuration sets, which enable you to publish email sending events to Amazon CloudWatch, Amazon Kinesis Firehose, or Amazon Simple Notification Service (Amazon SNS). For information about using configuration sets, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class EventDestination {
     
     public CloudWatchDestination cloudWatchDestination;
+
     public EventDestination withCloudWatchDestination(CloudWatchDestination cloudWatchDestination) {
         this.cloudWatchDestination = cloudWatchDestination;
         return this;
@@ -19,6 +20,7 @@ public class EventDestination {
     
     
     public Boolean enabled;
+
     public EventDestination withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -26,6 +28,7 @@ public class EventDestination {
     
     
     public KinesisFirehoseDestination kinesisFirehoseDestination;
+
     public EventDestination withKinesisFirehoseDestination(KinesisFirehoseDestination kinesisFirehoseDestination) {
         this.kinesisFirehoseDestination = kinesisFirehoseDestination;
         return this;
@@ -33,6 +36,7 @@ public class EventDestination {
     
     
     public EventTypeEnum[] matchingEventTypes;
+
     public EventDestination withMatchingEventTypes(EventTypeEnum[] matchingEventTypes) {
         this.matchingEventTypes = matchingEventTypes;
         return this;
@@ -40,6 +44,7 @@ public class EventDestination {
     
     
     public String name;
+
     public EventDestination withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +52,14 @@ public class EventDestination {
     
     
     public SNSDestination snsDestination;
+
     public EventDestination withSNSDestination(SNSDestination snsDestination) {
         this.snsDestination = snsDestination;
         return this;
     }
     
+    public EventDestination(@JsonProperty("MatchingEventTypes") EventTypeEnum[] matchingEventTypes, @JsonProperty("Name") String name) {
+        this.matchingEventTypes = matchingEventTypes;
+        this.name = name;
+  }
 }

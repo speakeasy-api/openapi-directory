@@ -15,6 +15,7 @@ public class TdcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public TdcerRequestBodyCertificateParameters certificateParameters;
+
     public TdcerRequestBody withCertificateParameters(TdcerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class TdcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public TdcerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class TdcerRequestBody {
      */
     @JsonProperty("format")
     public TdcerRequestBodyFormatEnum format;
+
     public TdcerRequestBody withFormat(TdcerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class TdcerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public TdcerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public TdcerRequestBody(@JsonProperty("format") TdcerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

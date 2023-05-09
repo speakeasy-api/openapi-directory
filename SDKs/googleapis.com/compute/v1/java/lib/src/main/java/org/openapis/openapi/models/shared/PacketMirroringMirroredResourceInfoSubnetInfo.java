@@ -15,6 +15,7 @@ public class PacketMirroringMirroredResourceInfoSubnetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canonicalUrl")
     public String canonicalUrl;
+
     public PacketMirroringMirroredResourceInfoSubnetInfo withCanonicalUrl(String canonicalUrl) {
         this.canonicalUrl = canonicalUrl;
         return this;
@@ -26,9 +27,11 @@ public class PacketMirroringMirroredResourceInfoSubnetInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PacketMirroringMirroredResourceInfoSubnetInfo withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PacketMirroringMirroredResourceInfoSubnetInfo(){}
 }

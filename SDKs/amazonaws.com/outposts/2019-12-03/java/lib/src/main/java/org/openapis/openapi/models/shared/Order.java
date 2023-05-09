@@ -20,6 +20,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineItems")
     public LineItem[] lineItems;
+
     public Order withLineItems(LineItem[] lineItems) {
         this.lineItems = lineItems;
         return this;
@@ -30,6 +31,7 @@ public class Order {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("OrderFulfilledDate")
     public OffsetDateTime orderFulfilledDate;
+
     public Order withOrderFulfilledDate(OffsetDateTime orderFulfilledDate) {
         this.orderFulfilledDate = orderFulfilledDate;
         return this;
@@ -38,6 +40,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderId")
     public String orderId;
+
     public Order withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -48,6 +51,7 @@ public class Order {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("OrderSubmissionDate")
     public OffsetDateTime orderSubmissionDate;
+
     public Order withOrderSubmissionDate(OffsetDateTime orderSubmissionDate) {
         this.orderSubmissionDate = orderSubmissionDate;
         return this;
@@ -56,6 +60,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderType")
     public OrderTypeEnum orderType;
+
     public Order withOrderType(OrderTypeEnum orderType) {
         this.orderType = orderType;
         return this;
@@ -64,6 +69,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutpostId")
     public String outpostId;
+
     public Order withOutpostId(String outpostId) {
         this.outpostId = outpostId;
         return this;
@@ -72,6 +78,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentOption")
     public PaymentOptionEnum paymentOption;
+
     public Order withPaymentOption(PaymentOptionEnum paymentOption) {
         this.paymentOption = paymentOption;
         return this;
@@ -80,6 +87,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentTerm")
     public PaymentTermEnum paymentTerm;
+
     public Order withPaymentTerm(PaymentTermEnum paymentTerm) {
         this.paymentTerm = paymentTerm;
         return this;
@@ -88,9 +96,11 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public OrderStatusEnum status;
+
     public Order withStatus(OrderStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Order(){}
 }

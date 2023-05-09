@@ -15,9 +15,11 @@ public class ExudeResponseBean {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public ExudeResponseBean withData(String data) {
         this.data = data;
         return this;
     }
     
+    public ExudeResponseBean(){}
 }

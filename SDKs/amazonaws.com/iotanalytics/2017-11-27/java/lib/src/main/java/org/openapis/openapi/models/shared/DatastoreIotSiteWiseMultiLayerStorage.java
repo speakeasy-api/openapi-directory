@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DatastoreIotSiteWiseMultiLayerStorage {
     @JsonProperty("customerManagedS3Storage")
     public IotSiteWiseCustomerManagedDatastoreS3Storage customerManagedS3Storage;
+
     public DatastoreIotSiteWiseMultiLayerStorage withCustomerManagedS3Storage(IotSiteWiseCustomerManagedDatastoreS3Storage customerManagedS3Storage) {
         this.customerManagedS3Storage = customerManagedS3Storage;
         return this;
     }
     
+    public DatastoreIotSiteWiseMultiLayerStorage(@JsonProperty("customerManagedS3Storage") IotSiteWiseCustomerManagedDatastoreS3Storage customerManagedS3Storage) {
+        this.customerManagedS3Storage = customerManagedS3Storage;
+  }
 }

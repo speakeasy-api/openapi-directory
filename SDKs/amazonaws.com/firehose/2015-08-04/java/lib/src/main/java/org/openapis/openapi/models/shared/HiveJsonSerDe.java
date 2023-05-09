@@ -15,9 +15,11 @@ public class HiveJsonSerDe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimestampFormats")
     public String[] timestampFormats;
+
     public HiveJsonSerDe withTimestampFormats(String[] timestampFormats) {
         this.timestampFormats = timestampFormats;
         return this;
     }
     
+    public HiveJsonSerDe(){}
 }

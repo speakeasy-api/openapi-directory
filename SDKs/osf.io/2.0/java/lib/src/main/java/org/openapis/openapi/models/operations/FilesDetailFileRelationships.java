@@ -15,6 +15,7 @@ public class FilesDetailFileRelationships {
      */
     
     public String checkout;
+
     public FilesDetailFileRelationships withCheckout(String checkout) {
         this.checkout = checkout;
         return this;
@@ -25,6 +26,7 @@ public class FilesDetailFileRelationships {
      */
     
     public String comments;
+
     public FilesDetailFileRelationships withComments(String comments) {
         this.comments = comments;
         return this;
@@ -35,6 +37,7 @@ public class FilesDetailFileRelationships {
      */
     
     public String node;
+
     public FilesDetailFileRelationships withNode(String node) {
         this.node = node;
         return this;
@@ -45,9 +48,11 @@ public class FilesDetailFileRelationships {
      */
     
     public String versions;
+
     public FilesDetailFileRelationships withVersions(String versions) {
         this.versions = versions;
         return this;
     }
     
+    public FilesDetailFileRelationships(){}
 }

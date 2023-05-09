@@ -18,6 +18,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canAddChildren")
     public Boolean canAddChildren;
+
     public DriveCapabilities withCanAddChildren(Boolean canAddChildren) {
         this.canAddChildren = canAddChildren;
         return this;
@@ -29,6 +30,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canChangeCopyRequiresWriterPermissionRestriction")
     public Boolean canChangeCopyRequiresWriterPermissionRestriction;
+
     public DriveCapabilities withCanChangeCopyRequiresWriterPermissionRestriction(Boolean canChangeCopyRequiresWriterPermissionRestriction) {
         this.canChangeCopyRequiresWriterPermissionRestriction = canChangeCopyRequiresWriterPermissionRestriction;
         return this;
@@ -40,6 +42,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canChangeDomainUsersOnlyRestriction")
     public Boolean canChangeDomainUsersOnlyRestriction;
+
     public DriveCapabilities withCanChangeDomainUsersOnlyRestriction(Boolean canChangeDomainUsersOnlyRestriction) {
         this.canChangeDomainUsersOnlyRestriction = canChangeDomainUsersOnlyRestriction;
         return this;
@@ -51,6 +54,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canChangeDriveBackground")
     public Boolean canChangeDriveBackground;
+
     public DriveCapabilities withCanChangeDriveBackground(Boolean canChangeDriveBackground) {
         this.canChangeDriveBackground = canChangeDriveBackground;
         return this;
@@ -62,6 +66,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canChangeDriveMembersOnlyRestriction")
     public Boolean canChangeDriveMembersOnlyRestriction;
+
     public DriveCapabilities withCanChangeDriveMembersOnlyRestriction(Boolean canChangeDriveMembersOnlyRestriction) {
         this.canChangeDriveMembersOnlyRestriction = canChangeDriveMembersOnlyRestriction;
         return this;
@@ -73,6 +78,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canChangeSharingFoldersRequiresOrganizerPermissionRestriction")
     public Boolean canChangeSharingFoldersRequiresOrganizerPermissionRestriction;
+
     public DriveCapabilities withCanChangeSharingFoldersRequiresOrganizerPermissionRestriction(Boolean canChangeSharingFoldersRequiresOrganizerPermissionRestriction) {
         this.canChangeSharingFoldersRequiresOrganizerPermissionRestriction = canChangeSharingFoldersRequiresOrganizerPermissionRestriction;
         return this;
@@ -84,6 +90,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canComment")
     public Boolean canComment;
+
     public DriveCapabilities withCanComment(Boolean canComment) {
         this.canComment = canComment;
         return this;
@@ -95,6 +102,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canCopy")
     public Boolean canCopy;
+
     public DriveCapabilities withCanCopy(Boolean canCopy) {
         this.canCopy = canCopy;
         return this;
@@ -106,6 +114,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDeleteChildren")
     public Boolean canDeleteChildren;
+
     public DriveCapabilities withCanDeleteChildren(Boolean canDeleteChildren) {
         this.canDeleteChildren = canDeleteChildren;
         return this;
@@ -117,6 +126,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDeleteDrive")
     public Boolean canDeleteDrive;
+
     public DriveCapabilities withCanDeleteDrive(Boolean canDeleteDrive) {
         this.canDeleteDrive = canDeleteDrive;
         return this;
@@ -128,6 +138,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDownload")
     public Boolean canDownload;
+
     public DriveCapabilities withCanDownload(Boolean canDownload) {
         this.canDownload = canDownload;
         return this;
@@ -139,6 +150,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canEdit")
     public Boolean canEdit;
+
     public DriveCapabilities withCanEdit(Boolean canEdit) {
         this.canEdit = canEdit;
         return this;
@@ -150,6 +162,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canListChildren")
     public Boolean canListChildren;
+
     public DriveCapabilities withCanListChildren(Boolean canListChildren) {
         this.canListChildren = canListChildren;
         return this;
@@ -161,6 +174,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canManageMembers")
     public Boolean canManageMembers;
+
     public DriveCapabilities withCanManageMembers(Boolean canManageMembers) {
         this.canManageMembers = canManageMembers;
         return this;
@@ -172,6 +186,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canReadRevisions")
     public Boolean canReadRevisions;
+
     public DriveCapabilities withCanReadRevisions(Boolean canReadRevisions) {
         this.canReadRevisions = canReadRevisions;
         return this;
@@ -183,6 +198,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canRename")
     public Boolean canRename;
+
     public DriveCapabilities withCanRename(Boolean canRename) {
         this.canRename = canRename;
         return this;
@@ -194,6 +210,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canRenameDrive")
     public Boolean canRenameDrive;
+
     public DriveCapabilities withCanRenameDrive(Boolean canRenameDrive) {
         this.canRenameDrive = canRenameDrive;
         return this;
@@ -205,6 +222,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canResetDriveRestrictions")
     public Boolean canResetDriveRestrictions;
+
     public DriveCapabilities withCanResetDriveRestrictions(Boolean canResetDriveRestrictions) {
         this.canResetDriveRestrictions = canResetDriveRestrictions;
         return this;
@@ -216,6 +234,7 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canShare")
     public Boolean canShare;
+
     public DriveCapabilities withCanShare(Boolean canShare) {
         this.canShare = canShare;
         return this;
@@ -227,9 +246,11 @@ public class DriveCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canTrashChildren")
     public Boolean canTrashChildren;
+
     public DriveCapabilities withCanTrashChildren(Boolean canTrashChildren) {
         this.canTrashChildren = canTrashChildren;
         return this;
     }
     
+    public DriveCapabilities(){}
 }

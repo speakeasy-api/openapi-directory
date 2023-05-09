@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeTableReplicaAutoScalingRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeTableReplicaAutoScalingInput describeTableReplicaAutoScalingInput;
+
     public DescribeTableReplicaAutoScalingRequest withDescribeTableReplicaAutoScalingInput(org.openapis.openapi.models.shared.DescribeTableReplicaAutoScalingInput describeTableReplicaAutoScalingInput) {
         this.describeTableReplicaAutoScalingInput = describeTableReplicaAutoScalingInput;
         return this;
@@ -16,6 +18,7 @@ public class DescribeTableReplicaAutoScalingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeTableReplicaAutoScalingRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DescribeTableReplicaAutoScalingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeTableReplicaAutoScalingRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DescribeTableReplicaAutoScalingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeTableReplicaAutoScalingRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DescribeTableReplicaAutoScalingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeTableReplicaAutoScalingRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DescribeTableReplicaAutoScalingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeTableReplicaAutoScalingRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DescribeTableReplicaAutoScalingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeTableReplicaAutoScalingRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DescribeTableReplicaAutoScalingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeTableReplicaAutoScalingRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DescribeTableReplicaAutoScalingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeTableReplicaAutoScalingXAmzTargetEnum xAmzTarget;
+
     public DescribeTableReplicaAutoScalingRequest withXAmzTarget(DescribeTableReplicaAutoScalingXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeTableReplicaAutoScalingRequest(@JsonProperty("DescribeTableReplicaAutoScalingInput") org.openapis.openapi.models.shared.DescribeTableReplicaAutoScalingInput describeTableReplicaAutoScalingInput, @JsonProperty("X-Amz-Target") DescribeTableReplicaAutoScalingXAmzTargetEnum xAmzTarget) {
+        this.describeTableReplicaAutoScalingInput = describeTableReplicaAutoScalingInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

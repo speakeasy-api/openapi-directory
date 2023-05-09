@@ -61,12 +61,10 @@ public class V1NifVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NifBasicResponse res = new org.openapis.openapi.models.operations.NifBasicResponse() {{
+        org.openapis.openapi.models.operations.NifBasicResponse res = new org.openapis.openapi.models.operations.NifBasicResponse(contentType, httpRes.statusCode()) {{
             nifBasic200ApplicationJSONObject = null;
             nifBasicDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,12 +113,10 @@ public class V1NifVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NifComprehensiveResponse res = new org.openapis.openapi.models.operations.NifComprehensiveResponse() {{
+        org.openapis.openapi.models.operations.NifComprehensiveResponse res = new org.openapis.openapi.models.operations.NifComprehensiveResponse(contentType, httpRes.statusCode()) {{
             nifComprehensive200ApplicationJSONObject = null;
             nifComprehensiveDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CollaborationSummary {
     @JsonProperty("arn")
     public String arn;
+
     public CollaborationSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class CollaborationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public CollaborationSummary withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -35,6 +37,7 @@ public class CollaborationSummary {
     
     @JsonProperty("creatorAccountId")
     public String creatorAccountId;
+
     public CollaborationSummary withCreatorAccountId(String creatorAccountId) {
         this.creatorAccountId = creatorAccountId;
         return this;
@@ -42,6 +45,7 @@ public class CollaborationSummary {
     
     @JsonProperty("creatorDisplayName")
     public String creatorDisplayName;
+
     public CollaborationSummary withCreatorDisplayName(String creatorDisplayName) {
         this.creatorDisplayName = creatorDisplayName;
         return this;
@@ -49,6 +53,7 @@ public class CollaborationSummary {
     
     @JsonProperty("id")
     public String id;
+
     public CollaborationSummary withId(String id) {
         this.id = id;
         return this;
@@ -56,6 +61,7 @@ public class CollaborationSummary {
     
     @JsonProperty("memberStatus")
     public MemberStatusEnum memberStatus;
+
     public CollaborationSummary withMemberStatus(MemberStatusEnum memberStatus) {
         this.memberStatus = memberStatus;
         return this;
@@ -64,6 +70,7 @@ public class CollaborationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipArn")
     public String membershipArn;
+
     public CollaborationSummary withMembershipArn(String membershipArn) {
         this.membershipArn = membershipArn;
         return this;
@@ -72,6 +79,7 @@ public class CollaborationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipId")
     public String membershipId;
+
     public CollaborationSummary withMembershipId(String membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -79,6 +87,7 @@ public class CollaborationSummary {
     
     @JsonProperty("name")
     public String name;
+
     public CollaborationSummary withName(String name) {
         this.name = name;
         return this;
@@ -88,9 +97,20 @@ public class CollaborationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public CollaborationSummary withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public CollaborationSummary(@JsonProperty("arn") String arn, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("creatorAccountId") String creatorAccountId, @JsonProperty("creatorDisplayName") String creatorDisplayName, @JsonProperty("id") String id, @JsonProperty("memberStatus") MemberStatusEnum memberStatus, @JsonProperty("name") String name, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.arn = arn;
+        this.createTime = createTime;
+        this.creatorAccountId = creatorAccountId;
+        this.creatorDisplayName = creatorDisplayName;
+        this.id = id;
+        this.memberStatus = memberStatus;
+        this.name = name;
+        this.updateTime = updateTime;
+  }
 }

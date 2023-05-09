@@ -61,12 +61,10 @@ public class WorkspaceMemberships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspaceMembershipResponse res = new org.openapis.openapi.models.operations.GetWorkspaceMembershipResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspaceMembershipResponse res = new org.openapis.openapi.models.operations.GetWorkspaceMembershipResponse(contentType, httpRes.statusCode()) {{
             getWorkspaceMembership200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,12 +113,10 @@ public class WorkspaceMemberships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspaceMembershipsForUserResponse res = new org.openapis.openapi.models.operations.GetWorkspaceMembershipsForUserResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspaceMembershipsForUserResponse res = new org.openapis.openapi.models.operations.GetWorkspaceMembershipsForUserResponse(contentType, httpRes.statusCode()) {{
             getWorkspaceMembershipsForUser200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,11 +165,9 @@ public class WorkspaceMemberships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspaceMembershipsForWorkspaceResponse res = new org.openapis.openapi.models.operations.GetWorkspaceMembershipsForWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspaceMembershipsForWorkspaceResponse res = new org.openapis.openapi.models.operations.GetWorkspaceMembershipsForWorkspaceResponse(contentType, httpRes.statusCode()) {{
             getWorkspaceMembershipsForWorkspace200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

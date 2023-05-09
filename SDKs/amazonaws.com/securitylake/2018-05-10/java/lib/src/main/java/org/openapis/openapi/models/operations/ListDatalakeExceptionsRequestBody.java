@@ -15,6 +15,7 @@ public class ListDatalakeExceptionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxFailures")
     public Long maxFailures;
+
     public ListDatalakeExceptionsRequestBody withMaxFailures(Long maxFailures) {
         this.maxFailures = maxFailures;
         return this;
@@ -26,6 +27,7 @@ public class ListDatalakeExceptionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDatalakeExceptionsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +39,11 @@ public class ListDatalakeExceptionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionSet")
     public org.openapis.openapi.models.shared.RegionEnum[] regionSet;
+
     public ListDatalakeExceptionsRequestBody withRegionSet(org.openapis.openapi.models.shared.RegionEnum[] regionSet) {
         this.regionSet = regionSet;
         return this;
     }
     
+    public ListDatalakeExceptionsRequestBody(){}
 }

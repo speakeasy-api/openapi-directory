@@ -18,9 +18,11 @@ public class RunningProcessList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processes")
     public RunningProcess[] processes;
+
     public RunningProcessList withProcesses(RunningProcess[] processes) {
         this.processes = processes;
         return this;
     }
     
+    public RunningProcessList(){}
 }

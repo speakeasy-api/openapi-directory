@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetVpnConnectionDeviceSampleConfigurationResult {
     
     public String vpnConnectionDeviceSampleConfiguration;
+
     public GetVpnConnectionDeviceSampleConfigurationResult withVpnConnectionDeviceSampleConfiguration(String vpnConnectionDeviceSampleConfiguration) {
         this.vpnConnectionDeviceSampleConfiguration = vpnConnectionDeviceSampleConfiguration;
         return this;
     }
     
+    public GetVpnConnectionDeviceSampleConfigurationResult(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtensionCtrlGetAccountExtensionByIDRequest {
@@ -12,6 +13,7 @@ public class ExtensionCtrlGetAccountExtensionByIDRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
     public String accountId;
+
     public ExtensionCtrlGetAccountExtensionByIDRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,9 +24,14 @@ public class ExtensionCtrlGetAccountExtensionByIDRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=extension_number")
     public Double extensionNumber;
+
     public ExtensionCtrlGetAccountExtensionByIDRequest withExtensionNumber(Double extensionNumber) {
         this.extensionNumber = extensionNumber;
         return this;
     }
     
+    public ExtensionCtrlGetAccountExtensionByIDRequest(@JsonProperty("account_id") String accountId, @JsonProperty("extension_number") Double extensionNumber) {
+        this.accountId = accountId;
+        this.extensionNumber = extensionNumber;
+  }
 }

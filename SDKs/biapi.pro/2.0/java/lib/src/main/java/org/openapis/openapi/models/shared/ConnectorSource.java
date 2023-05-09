@@ -23,6 +23,7 @@ public class ConnectorSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth_mechanism")
     public String authMechanism;
+
     public ConnectorSource withAuthMechanism(String authMechanism) {
         this.authMechanism = authMechanism;
         return this;
@@ -36,6 +37,7 @@ public class ConnectorSource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("disabled")
     public OffsetDateTime disabled;
+
     public ConnectorSource withDisabled(OffsetDateTime disabled) {
         this.disabled = disabled;
         return this;
@@ -47,6 +49,7 @@ public class ConnectorSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled_capabilities")
     public String disabledCapabilities;
+
     public ConnectorSource withDisabledCapabilities(String disabledCapabilities) {
         this.disabledCapabilities = disabledCapabilities;
         return this;
@@ -58,6 +61,7 @@ public class ConnectorSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fallback")
     public String fallback;
+
     public ConnectorSource withFallback(String fallback) {
         this.fallback = fallback;
         return this;
@@ -68,6 +72,7 @@ public class ConnectorSource {
      */
     @JsonProperty("id")
     public Long id;
+
     public ConnectorSource withId(Long id) {
         this.id = id;
         return this;
@@ -78,6 +83,7 @@ public class ConnectorSource {
      */
     @JsonProperty("id_connector")
     public Long idConnector;
+
     public ConnectorSource withIdConnector(Long idConnector) {
         this.idConnector = idConnector;
         return this;
@@ -85,6 +91,7 @@ public class ConnectorSource {
     
     @JsonProperty("id_weboob")
     public String idWeboob;
+
     public ConnectorSource withIdWeboob(String idWeboob) {
         this.idWeboob = idWeboob;
         return this;
@@ -95,6 +102,7 @@ public class ConnectorSource {
      */
     @JsonProperty("name")
     public String name;
+
     public ConnectorSource withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class ConnectorSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public ConnectorSource withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -117,9 +126,16 @@ public class ConnectorSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stability")
     public String stability;
+
     public ConnectorSource withStability(String stability) {
         this.stability = stability;
         return this;
     }
     
+    public ConnectorSource(@JsonProperty("id") Long id, @JsonProperty("id_connector") Long idConnector, @JsonProperty("id_weboob") String idWeboob, @JsonProperty("name") String name) {
+        this.id = id;
+        this.idConnector = idConnector;
+        this.idWeboob = idWeboob;
+        this.name = name;
+  }
 }

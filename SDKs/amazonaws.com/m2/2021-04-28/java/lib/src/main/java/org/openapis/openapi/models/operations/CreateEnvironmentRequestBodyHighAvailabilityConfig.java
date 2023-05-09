@@ -15,9 +15,11 @@ public class CreateEnvironmentRequestBodyHighAvailabilityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredCapacity")
     public Long desiredCapacity;
+
     public CreateEnvironmentRequestBodyHighAvailabilityConfig withDesiredCapacity(Long desiredCapacity) {
         this.desiredCapacity = desiredCapacity;
         return this;
     }
     
+    public CreateEnvironmentRequestBodyHighAvailabilityConfig(){}
 }

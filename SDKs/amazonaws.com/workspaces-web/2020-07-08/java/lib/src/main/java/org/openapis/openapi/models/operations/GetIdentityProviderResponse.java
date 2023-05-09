@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIdentityProviderResponse {
@@ -12,6 +13,7 @@ public class GetIdentityProviderResponse {
      */
     
     public Object accessDeniedException;
+
     public GetIdentityProviderResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetIdentityProviderResponse {
     
     
     public String contentType;
+
     public GetIdentityProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetIdentityProviderResponse {
      */
     
     public org.openapis.openapi.models.shared.GetIdentityProviderResponse getIdentityProviderResponse;
+
     public GetIdentityProviderResponse withGetIdentityProviderResponse(org.openapis.openapi.models.shared.GetIdentityProviderResponse getIdentityProviderResponse) {
         this.getIdentityProviderResponse = getIdentityProviderResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetIdentityProviderResponse {
      */
     
     public Object internalServerException;
+
     public GetIdentityProviderResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetIdentityProviderResponse {
     
     
     public Integer statusCode;
+
     public GetIdentityProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetIdentityProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIdentityProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetIdentityProviderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetIdentityProviderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetIdentityProviderResponse {
      */
     
     public Object throttlingException;
+
     public GetIdentityProviderResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetIdentityProviderResponse {
      */
     
     public Object validationException;
+
     public GetIdentityProviderResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetIdentityProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

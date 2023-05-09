@@ -15,6 +15,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPrimary")
     public Boolean isPrimary;
+
     public Session withIsPrimary(Boolean isPrimary) {
         this.isPrimary = isPrimary;
         return this;
@@ -23,6 +24,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Session withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Session withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Session(){}
 }

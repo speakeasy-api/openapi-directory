@@ -20,6 +20,7 @@ public class DescribeBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public DescribeBotRecommendationResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -28,6 +29,7 @@ public class DescribeBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botRecommendationId")
     public String botRecommendationId;
+
     public DescribeBotRecommendationResponse withBotRecommendationId(String botRecommendationId) {
         this.botRecommendationId = botRecommendationId;
         return this;
@@ -36,6 +38,7 @@ public class DescribeBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botRecommendationResults")
     public BotRecommendationResults botRecommendationResults;
+
     public DescribeBotRecommendationResponse withBotRecommendationResults(BotRecommendationResults botRecommendationResults) {
         this.botRecommendationResults = botRecommendationResults;
         return this;
@@ -44,6 +47,7 @@ public class DescribeBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botRecommendationStatus")
     public BotRecommendationStatusEnum botRecommendationStatus;
+
     public DescribeBotRecommendationResponse withBotRecommendationStatus(BotRecommendationStatusEnum botRecommendationStatus) {
         this.botRecommendationStatus = botRecommendationStatus;
         return this;
@@ -52,6 +56,7 @@ public class DescribeBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public DescribeBotRecommendationResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -62,6 +67,7 @@ public class DescribeBotRecommendationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public DescribeBotRecommendationResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -70,6 +76,7 @@ public class DescribeBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionSetting")
     public EncryptionSetting encryptionSetting;
+
     public DescribeBotRecommendationResponse withEncryptionSetting(EncryptionSetting encryptionSetting) {
         this.encryptionSetting = encryptionSetting;
         return this;
@@ -78,6 +85,7 @@ public class DescribeBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReasons")
     public String[] failureReasons;
+
     public DescribeBotRecommendationResponse withFailureReasons(String[] failureReasons) {
         this.failureReasons = failureReasons;
         return this;
@@ -88,6 +96,7 @@ public class DescribeBotRecommendationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public DescribeBotRecommendationResponse withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -96,6 +105,7 @@ public class DescribeBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public DescribeBotRecommendationResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -104,9 +114,11 @@ public class DescribeBotRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcriptSourceSetting")
     public TranscriptSourceSetting transcriptSourceSetting;
+
     public DescribeBotRecommendationResponse withTranscriptSourceSetting(TranscriptSourceSetting transcriptSourceSetting) {
         this.transcriptSourceSetting = transcriptSourceSetting;
         return this;
     }
     
+    public DescribeBotRecommendationResponse(){}
 }

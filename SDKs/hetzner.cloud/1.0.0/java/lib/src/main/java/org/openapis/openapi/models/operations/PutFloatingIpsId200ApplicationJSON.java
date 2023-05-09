@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutFloatingIpsId200ApplicationJSON {
     @JsonProperty("floating_ip")
     public PutFloatingIpsId200ApplicationJSONFloatingIp floatingIp;
+
     public PutFloatingIpsId200ApplicationJSON withFloatingIp(PutFloatingIpsId200ApplicationJSONFloatingIp floatingIp) {
         this.floatingIp = floatingIp;
         return this;
     }
     
+    public PutFloatingIpsId200ApplicationJSON(@JsonProperty("floating_ip") PutFloatingIpsId200ApplicationJSONFloatingIp floatingIp) {
+        this.floatingIp = floatingIp;
+  }
 }

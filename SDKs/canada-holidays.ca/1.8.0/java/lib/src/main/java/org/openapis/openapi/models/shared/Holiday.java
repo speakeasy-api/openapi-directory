@@ -20,6 +20,7 @@ public class Holiday {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date")
     public LocalDate date;
+
     public Holiday withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -30,6 +31,7 @@ public class Holiday {
      */
     @JsonProperty("federal")
     public HolidayFederalEnum federal;
+
     public Holiday withFederal(HolidayFederalEnum federal) {
         this.federal = federal;
         return this;
@@ -40,6 +42,7 @@ public class Holiday {
      */
     @JsonProperty("id")
     public Long id;
+
     public Holiday withId(Long id) {
         this.id = id;
         return this;
@@ -50,6 +53,7 @@ public class Holiday {
      */
     @JsonProperty("nameEn")
     public String nameEn;
+
     public Holiday withNameEn(String nameEn) {
         this.nameEn = nameEn;
         return this;
@@ -60,6 +64,7 @@ public class Holiday {
      */
     @JsonProperty("nameFr")
     public String nameFr;
+
     public Holiday withNameFr(String nameFr) {
         this.nameFr = nameFr;
         return this;
@@ -71,6 +76,7 @@ public class Holiday {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("observedDate")
     public LocalDate observedDate;
+
     public Holiday withObservedDate(LocalDate observedDate) {
         this.observedDate = observedDate;
         return this;
@@ -82,6 +88,7 @@ public class Holiday {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optional")
     public HolidayOptionalEnum optional;
+
     public Holiday withOptional(HolidayOptionalEnum optional) {
         this.optional = optional;
         return this;
@@ -90,9 +97,18 @@ public class Holiday {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provinces")
     public Province[] provinces;
+
     public Holiday withProvinces(Province[] provinces) {
         this.provinces = provinces;
         return this;
     }
     
+    public Holiday(@JsonProperty("date") LocalDate date, @JsonProperty("federal") HolidayFederalEnum federal, @JsonProperty("id") Long id, @JsonProperty("nameEn") String nameEn, @JsonProperty("nameFr") String nameFr, @JsonProperty("observedDate") LocalDate observedDate) {
+        this.date = date;
+        this.federal = federal;
+        this.id = id;
+        this.nameEn = nameEn;
+        this.nameFr = nameFr;
+        this.observedDate = observedDate;
+  }
 }

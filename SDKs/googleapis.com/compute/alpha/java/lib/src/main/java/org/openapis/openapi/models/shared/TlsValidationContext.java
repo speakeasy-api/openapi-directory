@@ -18,6 +18,7 @@ public class TlsValidationContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificatePath")
     public String certificatePath;
+
     public TlsValidationContext withCertificatePath(String certificatePath) {
         this.certificatePath = certificatePath;
         return this;
@@ -29,6 +30,7 @@ public class TlsValidationContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdsConfig")
     public SdsConfig sdsConfig;
+
     public TlsValidationContext withSdsConfig(SdsConfig sdsConfig) {
         this.sdsConfig = sdsConfig;
         return this;
@@ -40,9 +42,11 @@ public class TlsValidationContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationSource")
     public TlsValidationContextValidationSourceEnum validationSource;
+
     public TlsValidationContext withValidationSource(TlsValidationContextValidationSourceEnum validationSource) {
         this.validationSource = validationSource;
         return this;
     }
     
+    public TlsValidationContext(){}
 }

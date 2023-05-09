@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ScalingPlan {
     @JsonProperty("ApplicationSource")
     public ApplicationSource applicationSource;
+
     public ScalingPlan withApplicationSource(ApplicationSource applicationSource) {
         this.applicationSource = applicationSource;
         return this;
@@ -29,6 +30,7 @@ public class ScalingPlan {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ScalingPlan withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -36,6 +38,7 @@ public class ScalingPlan {
     
     @JsonProperty("ScalingInstructions")
     public ScalingInstruction[] scalingInstructions;
+
     public ScalingPlan withScalingInstructions(ScalingInstruction[] scalingInstructions) {
         this.scalingInstructions = scalingInstructions;
         return this;
@@ -43,6 +46,7 @@ public class ScalingPlan {
     
     @JsonProperty("ScalingPlanName")
     public String scalingPlanName;
+
     public ScalingPlan withScalingPlanName(String scalingPlanName) {
         this.scalingPlanName = scalingPlanName;
         return this;
@@ -50,6 +54,7 @@ public class ScalingPlan {
     
     @JsonProperty("ScalingPlanVersion")
     public Long scalingPlanVersion;
+
     public ScalingPlan withScalingPlanVersion(Long scalingPlanVersion) {
         this.scalingPlanVersion = scalingPlanVersion;
         return this;
@@ -57,6 +62,7 @@ public class ScalingPlan {
     
     @JsonProperty("StatusCode")
     public ScalingPlanStatusCodeEnum statusCode;
+
     public ScalingPlan withStatusCode(ScalingPlanStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -65,6 +71,7 @@ public class ScalingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public ScalingPlan withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -75,9 +82,17 @@ public class ScalingPlan {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StatusStartTime")
     public OffsetDateTime statusStartTime;
+
     public ScalingPlan withStatusStartTime(OffsetDateTime statusStartTime) {
         this.statusStartTime = statusStartTime;
         return this;
     }
     
+    public ScalingPlan(@JsonProperty("ApplicationSource") ApplicationSource applicationSource, @JsonProperty("ScalingInstructions") ScalingInstruction[] scalingInstructions, @JsonProperty("ScalingPlanName") String scalingPlanName, @JsonProperty("ScalingPlanVersion") Long scalingPlanVersion, @JsonProperty("StatusCode") ScalingPlanStatusCodeEnum statusCode) {
+        this.applicationSource = applicationSource;
+        this.scalingInstructions = scalingInstructions;
+        this.scalingPlanName = scalingPlanName;
+        this.scalingPlanVersion = scalingPlanVersion;
+        this.statusCode = statusCode;
+  }
 }

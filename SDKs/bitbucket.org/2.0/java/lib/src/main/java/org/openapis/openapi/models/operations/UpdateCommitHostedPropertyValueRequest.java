@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCommitHostedPropertyValueRequest {
@@ -12,6 +13,7 @@ public class UpdateCommitHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public UpdateCommitHostedPropertyValueRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class UpdateCommitHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_key")
     public String appKey;
+
     public UpdateCommitHostedPropertyValueRequest withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
@@ -32,6 +35,7 @@ public class UpdateCommitHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
     public String commit;
+
     public UpdateCommitHostedPropertyValueRequest withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -42,6 +46,7 @@ public class UpdateCommitHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property_name")
     public String propertyName;
+
     public UpdateCommitHostedPropertyValueRequest withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
@@ -52,6 +57,7 @@ public class UpdateCommitHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public UpdateCommitHostedPropertyValueRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -62,9 +68,18 @@ public class UpdateCommitHostedPropertyValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public UpdateCommitHostedPropertyValueRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public UpdateCommitHostedPropertyValueRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("app_key") String appKey, @JsonProperty("commit") String commit, @JsonProperty("property_name") String propertyName, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.appKey = appKey;
+        this.commit = commit;
+        this.propertyName = propertyName;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

@@ -15,6 +15,7 @@ public class NAWelcomeModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("battery_percent")
     public Integer batteryPercent;
+
     public NAWelcomeModule withBatteryPercent(Integer batteryPercent) {
         this.batteryPercent = batteryPercent;
         return this;
@@ -26,6 +27,7 @@ public class NAWelcomeModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NAWelcomeModule withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class NAWelcomeModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_activity")
     public Integer lastActivity;
+
     public NAWelcomeModule withLastActivity(Integer lastActivity) {
         this.lastActivity = lastActivity;
         return this;
@@ -48,6 +51,7 @@ public class NAWelcomeModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NAWelcomeModule withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class NAWelcomeModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rf")
     public String rf;
+
     public NAWelcomeModule withRf(String rf) {
         this.rf = rf;
         return this;
@@ -70,6 +75,7 @@ public class NAWelcomeModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public NAWelcomeModule withStatus(String status) {
         this.status = status;
         return this;
@@ -81,9 +87,11 @@ public class NAWelcomeModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public NAWelcomeModule withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NAWelcomeModule(){}
 }

@@ -18,6 +18,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableEndTime")
     public String availableEndTime;
+
     public DealInput withAvailableEndTime(String availableEndTime) {
         this.availableEndTime = availableEndTime;
         return this;
@@ -29,6 +30,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableStartTime")
     public String availableStartTime;
+
     public DealInput withAvailableStartTime(String availableStartTime) {
         this.availableStartTime = availableStartTime;
         return this;
@@ -40,6 +42,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyerPrivateData")
     public PrivateData buyerPrivateData;
+
     public DealInput withBuyerPrivateData(PrivateData buyerPrivateData) {
         this.buyerPrivateData = buyerPrivateData;
         return this;
@@ -51,6 +54,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createProductId")
     public String createProductId;
+
     public DealInput withCreateProductId(String createProductId) {
         this.createProductId = createProductId;
         return this;
@@ -62,6 +66,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createProductRevision")
     public String createProductRevision;
+
     public DealInput withCreateProductRevision(String createProductRevision) {
         this.createProductRevision = createProductRevision;
         return this;
@@ -73,6 +78,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeRestrictions")
     public CreativeRestrictions creativeRestrictions;
+
     public DealInput withCreativeRestrictions(CreativeRestrictions creativeRestrictions) {
         this.creativeRestrictions = creativeRestrictions;
         return this;
@@ -84,6 +90,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealServingMetadata")
     public DealServingMetadata dealServingMetadata;
+
     public DealInput withDealServingMetadata(DealServingMetadata dealServingMetadata) {
         this.dealServingMetadata = dealServingMetadata;
         return this;
@@ -95,6 +102,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealTerms")
     public DealTerms dealTerms;
+
     public DealInput withDealTerms(DealTerms dealTerms) {
         this.dealTerms = dealTerms;
         return this;
@@ -106,6 +114,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DealInput withDescription(String description) {
         this.description = description;
         return this;
@@ -117,6 +126,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public DealInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -128,6 +138,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syndicationProduct")
     public DealSyndicationProductEnum syndicationProduct;
+
     public DealInput withSyndicationProduct(DealSyndicationProductEnum syndicationProduct) {
         this.syndicationProduct = syndicationProduct;
         return this;
@@ -139,6 +150,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targeting")
     public MarketplaceTargeting targeting;
+
     public DealInput withTargeting(MarketplaceTargeting targeting) {
         this.targeting = targeting;
         return this;
@@ -150,6 +162,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingCriterion")
     public TargetingCriteria[] targetingCriterion;
+
     public DealInput withTargetingCriterion(TargetingCriteria[] targetingCriterion) {
         this.targetingCriterion = targetingCriterion;
         return this;
@@ -161,9 +174,11 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webPropertyCode")
     public String webPropertyCode;
+
     public DealInput withWebPropertyCode(String webPropertyCode) {
         this.webPropertyCode = webPropertyCode;
         return this;
     }
     
+    public DealInput(){}
 }

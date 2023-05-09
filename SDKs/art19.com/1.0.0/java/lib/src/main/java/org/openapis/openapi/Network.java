@@ -65,12 +65,10 @@ public class Network {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworksResponse res = new org.openapis.openapi.models.operations.GetNetworksResponse() {{
+        org.openapis.openapi.models.operations.GetNetworksResponse res = new org.openapis.openapi.models.operations.GetNetworksResponse(contentType, httpRes.statusCode()) {{
             getNetworks200ApplicationVndApiPlusJsonObject = null;
             getNetworks400ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,11 +122,9 @@ public class Network {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworksIdResponse res = new org.openapis.openapi.models.operations.GetNetworksIdResponse() {{
+        org.openapis.openapi.models.operations.GetNetworksIdResponse res = new org.openapis.openapi.models.operations.GetNetworksIdResponse(contentType, httpRes.statusCode()) {{
             getNetworksId200ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

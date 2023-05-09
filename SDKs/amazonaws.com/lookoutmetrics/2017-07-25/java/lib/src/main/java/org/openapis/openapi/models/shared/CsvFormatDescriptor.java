@@ -15,6 +15,7 @@ public class CsvFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Charset")
     public String charset;
+
     public CsvFormatDescriptor withCharset(String charset) {
         this.charset = charset;
         return this;
@@ -23,6 +24,7 @@ public class CsvFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainsHeader")
     public Boolean containsHeader;
+
     public CsvFormatDescriptor withContainsHeader(Boolean containsHeader) {
         this.containsHeader = containsHeader;
         return this;
@@ -31,6 +33,7 @@ public class CsvFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Delimiter")
     public String delimiter;
+
     public CsvFormatDescriptor withDelimiter(String delimiter) {
         this.delimiter = delimiter;
         return this;
@@ -39,6 +42,7 @@ public class CsvFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileCompression")
     public CSVFileCompressionEnum fileCompression;
+
     public CsvFormatDescriptor withFileCompression(CSVFileCompressionEnum fileCompression) {
         this.fileCompression = fileCompression;
         return this;
@@ -47,6 +51,7 @@ public class CsvFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeaderList")
     public String[] headerList;
+
     public CsvFormatDescriptor withHeaderList(String[] headerList) {
         this.headerList = headerList;
         return this;
@@ -55,9 +60,11 @@ public class CsvFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuoteSymbol")
     public String quoteSymbol;
+
     public CsvFormatDescriptor withQuoteSymbol(String quoteSymbol) {
         this.quoteSymbol = quoteSymbol;
         return this;
     }
     
+    public CsvFormatDescriptor(){}
 }

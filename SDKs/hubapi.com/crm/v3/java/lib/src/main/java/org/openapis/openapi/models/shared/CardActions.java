@@ -15,9 +15,13 @@ public class CardActions {
      */
     @JsonProperty("baseUrls")
     public String[] baseUrls;
+
     public CardActions withBaseUrls(String[] baseUrls) {
         this.baseUrls = baseUrls;
         return this;
     }
     
+    public CardActions(@JsonProperty("baseUrls") String[] baseUrls) {
+        this.baseUrls = baseUrls;
+  }
 }

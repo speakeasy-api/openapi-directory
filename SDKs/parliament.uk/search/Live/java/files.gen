@@ -37,4 +37,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetQueryResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetQueryExtensionExtensionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetQueryExtensionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetQueryExtensionResponse.java
+docs/sdk/README.md
+docs/description/README.md
+docs/query/README.md
 USAGE.md

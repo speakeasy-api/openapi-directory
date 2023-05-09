@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LogsStatus {
     @JsonProperty("healthStatus")
     public SourceStatusEnum healthStatus;
+
     public LogsStatus withHealthStatus(SourceStatusEnum healthStatus) {
         this.healthStatus = healthStatus;
         return this;
@@ -19,9 +20,14 @@ public class LogsStatus {
     
     @JsonProperty("pathToLogs")
     public String pathToLogs;
+
     public LogsStatus withPathToLogs(String pathToLogs) {
         this.pathToLogs = pathToLogs;
         return this;
     }
     
+    public LogsStatus(@JsonProperty("healthStatus") SourceStatusEnum healthStatus, @JsonProperty("pathToLogs") String pathToLogs) {
+        this.healthStatus = healthStatus;
+        this.pathToLogs = pathToLogs;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEndpointAccessResponse {
@@ -12,6 +13,7 @@ public class UpdateEndpointAccessResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateEndpointAccessResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateEndpointAccessResponse {
      */
     
     public Object conflictException;
+
     public UpdateEndpointAccessResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEndpointAccessResponse {
     
     
     public String contentType;
+
     public UpdateEndpointAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateEndpointAccessResponse {
      */
     
     public Object internalServerException;
+
     public UpdateEndpointAccessResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateEndpointAccessResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateEndpointAccessResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateEndpointAccessResponse {
     
     
     public Integer statusCode;
+
     public UpdateEndpointAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateEndpointAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEndpointAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateEndpointAccessResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateEndpointAccessResponse updateEndpointAccessResponse;
+
     public UpdateEndpointAccessResponse withUpdateEndpointAccessResponse(org.openapis.openapi.models.shared.UpdateEndpointAccessResponse updateEndpointAccessResponse) {
         this.updateEndpointAccessResponse = updateEndpointAccessResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateEndpointAccessResponse {
      */
     
     public Object validationException;
+
     public UpdateEndpointAccessResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateEndpointAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

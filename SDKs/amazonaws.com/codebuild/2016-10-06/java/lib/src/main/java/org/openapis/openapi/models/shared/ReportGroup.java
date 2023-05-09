@@ -20,6 +20,7 @@ public class ReportGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ReportGroup withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class ReportGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public ReportGroup withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -38,6 +40,7 @@ public class ReportGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportConfig")
     public ReportExportConfig exportConfig;
+
     public ReportGroup withExportConfig(ReportExportConfig exportConfig) {
         this.exportConfig = exportConfig;
         return this;
@@ -48,6 +51,7 @@ public class ReportGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModified")
     public OffsetDateTime lastModified;
+
     public ReportGroup withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -56,6 +60,7 @@ public class ReportGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReportGroup withName(String name) {
         this.name = name;
         return this;
@@ -64,6 +69,7 @@ public class ReportGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ReportGroupStatusTypeEnum status;
+
     public ReportGroup withStatus(ReportGroupStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -72,6 +78,7 @@ public class ReportGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public ReportGroup withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -80,9 +87,11 @@ public class ReportGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ReportTypeEnum type;
+
     public ReportGroup withType(ReportTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ReportGroup(){}
 }

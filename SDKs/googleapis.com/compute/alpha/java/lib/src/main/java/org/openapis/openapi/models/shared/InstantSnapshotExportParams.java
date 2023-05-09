@@ -15,6 +15,7 @@ public class InstantSnapshotExportParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseInstantSnapshot")
     public String baseInstantSnapshot;
+
     public InstantSnapshotExportParams withBaseInstantSnapshot(String baseInstantSnapshot) {
         this.baseInstantSnapshot = baseInstantSnapshot;
         return this;
@@ -26,6 +27,7 @@ public class InstantSnapshotExportParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketName")
     public String bucketName;
+
     public InstantSnapshotExportParams withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -34,6 +36,7 @@ public class InstantSnapshotExportParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public CustomerEncryptionKey encryptionKey;
+
     public InstantSnapshotExportParams withEncryptionKey(CustomerEncryptionKey encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -45,6 +48,7 @@ public class InstantSnapshotExportParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectName")
     public String objectName;
+
     public InstantSnapshotExportParams withObjectName(String objectName) {
         this.objectName = objectName;
         return this;
@@ -56,9 +60,11 @@ public class InstantSnapshotExportParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputType")
     public InstantSnapshotExportParamsOutputTypeEnum outputType;
+
     public InstantSnapshotExportParams withOutputType(InstantSnapshotExportParamsOutputTypeEnum outputType) {
         this.outputType = outputType;
         return this;
     }
     
+    public InstantSnapshotExportParams(){}
 }

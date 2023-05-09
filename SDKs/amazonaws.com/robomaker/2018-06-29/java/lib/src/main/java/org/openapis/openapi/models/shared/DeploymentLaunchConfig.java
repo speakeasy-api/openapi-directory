@@ -15,6 +15,7 @@ public class DeploymentLaunchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
+
     public DeploymentLaunchConfig withEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
         this.environmentVariables = environmentVariables;
         return this;
@@ -22,6 +23,7 @@ public class DeploymentLaunchConfig {
     
     @JsonProperty("launchFile")
     public String launchFile;
+
     public DeploymentLaunchConfig withLaunchFile(String launchFile) {
         this.launchFile = launchFile;
         return this;
@@ -29,6 +31,7 @@ public class DeploymentLaunchConfig {
     
     @JsonProperty("packageName")
     public String packageName;
+
     public DeploymentLaunchConfig withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -37,6 +40,7 @@ public class DeploymentLaunchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postLaunchFile")
     public String postLaunchFile;
+
     public DeploymentLaunchConfig withPostLaunchFile(String postLaunchFile) {
         this.postLaunchFile = postLaunchFile;
         return this;
@@ -45,9 +49,14 @@ public class DeploymentLaunchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preLaunchFile")
     public String preLaunchFile;
+
     public DeploymentLaunchConfig withPreLaunchFile(String preLaunchFile) {
         this.preLaunchFile = preLaunchFile;
         return this;
     }
     
+    public DeploymentLaunchConfig(@JsonProperty("launchFile") String launchFile, @JsonProperty("packageName") String packageName) {
+        this.launchFile = launchFile;
+        this.packageName = packageName;
+  }
 }

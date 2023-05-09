@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetArtifactUrlResponse {
@@ -12,6 +13,7 @@ public class GetArtifactUrlResponse {
      */
     
     public Object badRequestException;
+
     public GetArtifactUrlResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetArtifactUrlResponse {
     
     
     public String contentType;
+
     public GetArtifactUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetArtifactUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.GetArtifactUrlResult getArtifactUrlResult;
+
     public GetArtifactUrlResponse withGetArtifactUrlResult(org.openapis.openapi.models.shared.GetArtifactUrlResult getArtifactUrlResult) {
         this.getArtifactUrlResult = getArtifactUrlResult;
         return this;
@@ -39,6 +43,7 @@ public class GetArtifactUrlResponse {
      */
     
     public Object internalFailureException;
+
     public GetArtifactUrlResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetArtifactUrlResponse {
      */
     
     public Object limitExceededException;
+
     public GetArtifactUrlResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class GetArtifactUrlResponse {
      */
     
     public Object notFoundException;
+
     public GetArtifactUrlResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetArtifactUrlResponse {
     
     
     public Integer statusCode;
+
     public GetArtifactUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetArtifactUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetArtifactUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetArtifactUrlResponse {
      */
     
     public Object unauthorizedException;
+
     public GetArtifactUrlResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetArtifactUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

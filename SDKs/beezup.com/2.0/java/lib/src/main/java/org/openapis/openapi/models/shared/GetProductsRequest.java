@@ -18,6 +18,7 @@ public class GetProductsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryPath")
     public String[] categoryPath;
+
     public GetProductsRequest withCategoryPath(String[] categoryPath) {
         this.categoryPath = categoryPath;
         return this;
@@ -26,6 +27,7 @@ public class GetProductsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnIdList")
     public String[] columnIdList;
+
     public GetProductsRequest withColumnIdList(String[] columnIdList) {
         this.columnIdList = columnIdList;
         return this;
@@ -37,6 +39,7 @@ public class GetProductsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ean")
     public String ean;
+
     public GetProductsRequest withEan(String ean) {
         this.ean = ean;
         return this;
@@ -48,6 +51,7 @@ public class GetProductsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exists")
     public Boolean exists;
+
     public GetProductsRequest withExists(Boolean exists) {
         this.exists = exists;
         return this;
@@ -59,6 +63,7 @@ public class GetProductsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mpn")
     public String mpn;
+
     public GetProductsRequest withMpn(String mpn) {
         this.mpn = mpn;
         return this;
@@ -70,6 +75,7 @@ public class GetProductsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderByCatalogColumnId")
     public String orderByCatalogColumnId;
+
     public GetProductsRequest withOrderByCatalogColumnId(String orderByCatalogColumnId) {
         this.orderByCatalogColumnId = orderByCatalogColumnId;
         return this;
@@ -80,6 +86,7 @@ public class GetProductsRequest {
      */
     @JsonProperty("pageNumber")
     public Integer pageNumber;
+
     public GetProductsRequest withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -90,6 +97,7 @@ public class GetProductsRequest {
      */
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GetProductsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -101,6 +109,7 @@ public class GetProductsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productIdList")
     public String[] productIdList;
+
     public GetProductsRequest withProductIdList(String[] productIdList) {
         this.productIdList = productIdList;
         return this;
@@ -112,6 +121,7 @@ public class GetProductsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public GetProductsRequest withSku(String sku) {
         this.sku = sku;
         return this;
@@ -123,6 +133,7 @@ public class GetProductsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GetProductsRequest withTitle(String title) {
         this.title = title;
         return this;
@@ -134,9 +145,14 @@ public class GetProductsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("withoutSubCategories")
     public Boolean withoutSubCategories;
+
     public GetProductsRequest withWithoutSubCategories(Boolean withoutSubCategories) {
         this.withoutSubCategories = withoutSubCategories;
         return this;
     }
     
+    public GetProductsRequest(@JsonProperty("pageNumber") Integer pageNumber, @JsonProperty("pageSize") Integer pageSize) {
+        this.pageNumber = pageNumber;
+        this.pageSize = pageSize;
+  }
 }

@@ -15,6 +15,7 @@ public class ProductUserSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public ProductUserSummary withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -22,6 +23,7 @@ public class ProductUserSummary {
     
     @JsonProperty("IdentityProvider")
     public IdentityProvider identityProvider;
+
     public ProductUserSummary withIdentityProvider(IdentityProvider identityProvider) {
         this.identityProvider = identityProvider;
         return this;
@@ -29,6 +31,7 @@ public class ProductUserSummary {
     
     @JsonProperty("Product")
     public String product;
+
     public ProductUserSummary withProduct(String product) {
         this.product = product;
         return this;
@@ -36,6 +39,7 @@ public class ProductUserSummary {
     
     @JsonProperty("Status")
     public String status;
+
     public ProductUserSummary withStatus(String status) {
         this.status = status;
         return this;
@@ -44,6 +48,7 @@ public class ProductUserSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public ProductUserSummary withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -52,6 +57,7 @@ public class ProductUserSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubscriptionEndDate")
     public String subscriptionEndDate;
+
     public ProductUserSummary withSubscriptionEndDate(String subscriptionEndDate) {
         this.subscriptionEndDate = subscriptionEndDate;
         return this;
@@ -60,6 +66,7 @@ public class ProductUserSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubscriptionStartDate")
     public String subscriptionStartDate;
+
     public ProductUserSummary withSubscriptionStartDate(String subscriptionStartDate) {
         this.subscriptionStartDate = subscriptionStartDate;
         return this;
@@ -67,9 +74,16 @@ public class ProductUserSummary {
     
     @JsonProperty("Username")
     public String username;
+
     public ProductUserSummary withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ProductUserSummary(@JsonProperty("IdentityProvider") IdentityProvider identityProvider, @JsonProperty("Product") String product, @JsonProperty("Status") String status, @JsonProperty("Username") String username) {
+        this.identityProvider = identityProvider;
+        this.product = product;
+        this.status = status;
+        this.username = username;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HttpRoute {
     @JsonProperty("action")
     public HttpRouteAction action;
+
     public HttpRoute withAction(HttpRouteAction action) {
         this.action = action;
         return this;
@@ -21,6 +22,7 @@ public class HttpRoute {
     
     @JsonProperty("match")
     public HttpRouteMatch match;
+
     public HttpRoute withMatch(HttpRouteMatch match) {
         this.match = match;
         return this;
@@ -29,6 +31,7 @@ public class HttpRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryPolicy")
     public HttpRetryPolicy retryPolicy;
+
     public HttpRoute withRetryPolicy(HttpRetryPolicy retryPolicy) {
         this.retryPolicy = retryPolicy;
         return this;
@@ -37,9 +40,14 @@ public class HttpRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public HttpTimeout timeout;
+
     public HttpRoute withTimeout(HttpTimeout timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public HttpRoute(@JsonProperty("action") HttpRouteAction action, @JsonProperty("match") HttpRouteMatch match) {
+        this.action = action;
+        this.match = match;
+  }
 }

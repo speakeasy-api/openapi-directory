@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendClientsMessageUsingGETResponse {
     
     public String contentType;
+
     public SendClientsMessageUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SendClientsMessageUsingGETResponse {
     
     
     public Integer statusCode;
+
     public SendClientsMessageUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SendClientsMessageUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendClientsMessageUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SendClientsMessageUsingGETResponse {
      */
     
     public SendClientsMessageUsingGET200ApplicationJSON sendClientsMessageUsingGET200ApplicationJSONObject;
+
     public SendClientsMessageUsingGETResponse withSendClientsMessageUsingGET200ApplicationJSONObject(SendClientsMessageUsingGET200ApplicationJSON sendClientsMessageUsingGET200ApplicationJSONObject) {
         this.sendClientsMessageUsingGET200ApplicationJSONObject = sendClientsMessageUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SendClientsMessageUsingGETResponse {
      */
     
     public SendClientsMessageUsingGET400ApplicationJSON sendClientsMessageUsingGET400ApplicationJSONObject;
+
     public SendClientsMessageUsingGETResponse withSendClientsMessageUsingGET400ApplicationJSONObject(SendClientsMessageUsingGET400ApplicationJSON sendClientsMessageUsingGET400ApplicationJSONObject) {
         this.sendClientsMessageUsingGET400ApplicationJSONObject = sendClientsMessageUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SendClientsMessageUsingGETResponse {
      */
     
     public SendClientsMessageUsingGET401ApplicationJSON sendClientsMessageUsingGET401ApplicationJSONObject;
+
     public SendClientsMessageUsingGETResponse withSendClientsMessageUsingGET401ApplicationJSONObject(SendClientsMessageUsingGET401ApplicationJSON sendClientsMessageUsingGET401ApplicationJSONObject) {
         this.sendClientsMessageUsingGET401ApplicationJSONObject = sendClientsMessageUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SendClientsMessageUsingGETResponse {
      */
     
     public SendClientsMessageUsingGET500ApplicationJSON sendClientsMessageUsingGET500ApplicationJSONObject;
+
     public SendClientsMessageUsingGETResponse withSendClientsMessageUsingGET500ApplicationJSONObject(SendClientsMessageUsingGET500ApplicationJSON sendClientsMessageUsingGET500ApplicationJSONObject) {
         this.sendClientsMessageUsingGET500ApplicationJSONObject = sendClientsMessageUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public SendClientsMessageUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

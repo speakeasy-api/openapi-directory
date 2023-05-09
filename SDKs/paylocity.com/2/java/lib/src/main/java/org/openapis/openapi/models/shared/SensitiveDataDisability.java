@@ -18,6 +18,7 @@ public class SensitiveDataDisability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disability")
     public String disability;
+
     public SensitiveDataDisability withDisability(String disability) {
         this.disability = disability;
         return this;
@@ -29,6 +30,7 @@ public class SensitiveDataDisability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabilityClassifications")
     public SensitiveDataDisabilityDisabilityClassifications[] disabilityClassifications;
+
     public SensitiveDataDisability withDisabilityClassifications(SensitiveDataDisabilityDisabilityClassifications[] disabilityClassifications) {
         this.disabilityClassifications = disabilityClassifications;
         return this;
@@ -40,9 +42,11 @@ public class SensitiveDataDisability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasDisability")
     public String hasDisability;
+
     public SensitiveDataDisability withHasDisability(String hasDisability) {
         this.hasDisability = hasDisability;
         return this;
     }
     
+    public SensitiveDataDisability(){}
 }

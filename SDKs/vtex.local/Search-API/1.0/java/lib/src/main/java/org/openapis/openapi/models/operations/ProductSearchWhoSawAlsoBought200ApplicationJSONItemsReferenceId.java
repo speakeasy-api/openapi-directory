@@ -12,6 +12,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsReferenceId {
      */
     @JsonProperty("Key")
     public String key;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsReferenceId withKey(String key) {
         this.key = key;
         return this;
@@ -22,9 +23,14 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsReferenceId {
      */
     @JsonProperty("Value")
     public String value;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsReferenceId withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsReferenceId(@JsonProperty("Key") String key, @JsonProperty("Value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

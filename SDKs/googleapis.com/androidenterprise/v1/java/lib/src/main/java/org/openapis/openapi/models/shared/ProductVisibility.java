@@ -18,6 +18,7 @@ public class ProductVisibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public ProductVisibility withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -29,6 +30,7 @@ public class ProductVisibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackIds")
     public String[] trackIds;
+
     public ProductVisibility withTrackIds(String[] trackIds) {
         this.trackIds = trackIds;
         return this;
@@ -40,9 +42,11 @@ public class ProductVisibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracks")
     public ProductVisibilityTracksEnum[] tracks;
+
     public ProductVisibility withTracks(ProductVisibilityTracksEnum[] tracks) {
         this.tracks = tracks;
         return this;
     }
     
+    public ProductVisibility(){}
 }

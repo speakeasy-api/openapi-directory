@@ -18,9 +18,11 @@ public class TransferLocationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toAccount")
     public String toAccount;
+
     public TransferLocationRequest withToAccount(String toAccount) {
         this.toAccount = toAccount;
         return this;
     }
     
+    public TransferLocationRequest(){}
 }

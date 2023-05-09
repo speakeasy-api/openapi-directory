@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPolicyGenerationsResponse {
@@ -12,6 +13,7 @@ public class ListPolicyGenerationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPolicyGenerationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPolicyGenerationsResponse {
     
     
     public String contentType;
+
     public ListPolicyGenerationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPolicyGenerationsResponse {
      */
     
     public Object internalServerException;
+
     public ListPolicyGenerationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListPolicyGenerationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPolicyGenerationsResponse listPolicyGenerationsResponse;
+
     public ListPolicyGenerationsResponse withListPolicyGenerationsResponse(org.openapis.openapi.models.shared.ListPolicyGenerationsResponse listPolicyGenerationsResponse) {
         this.listPolicyGenerationsResponse = listPolicyGenerationsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListPolicyGenerationsResponse {
     
     
     public Integer statusCode;
+
     public ListPolicyGenerationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListPolicyGenerationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPolicyGenerationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListPolicyGenerationsResponse {
      */
     
     public Object throttlingException;
+
     public ListPolicyGenerationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListPolicyGenerationsResponse {
      */
     
     public Object validationException;
+
     public ListPolicyGenerationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPolicyGenerationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

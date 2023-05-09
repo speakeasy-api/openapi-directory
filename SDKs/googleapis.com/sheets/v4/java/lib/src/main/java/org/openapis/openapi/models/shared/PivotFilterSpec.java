@@ -18,6 +18,7 @@ public class PivotFilterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnOffsetIndex")
     public Integer columnOffsetIndex;
+
     public PivotFilterSpec withColumnOffsetIndex(Integer columnOffsetIndex) {
         this.columnOffsetIndex = columnOffsetIndex;
         return this;
@@ -29,6 +30,7 @@ public class PivotFilterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceColumnReference")
     public DataSourceColumnReference dataSourceColumnReference;
+
     public PivotFilterSpec withDataSourceColumnReference(DataSourceColumnReference dataSourceColumnReference) {
         this.dataSourceColumnReference = dataSourceColumnReference;
         return this;
@@ -40,9 +42,11 @@ public class PivotFilterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterCriteria")
     public PivotFilterCriteria filterCriteria;
+
     public PivotFilterSpec withFilterCriteria(PivotFilterCriteria filterCriteria) {
         this.filterCriteria = filterCriteria;
         return this;
     }
     
+    public PivotFilterSpec(){}
 }

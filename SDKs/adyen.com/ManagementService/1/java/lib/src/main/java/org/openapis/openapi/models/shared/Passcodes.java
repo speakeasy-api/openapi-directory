@@ -15,6 +15,7 @@ public class Passcodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminMenuPin")
     public String adminMenuPin;
+
     public Passcodes withAdminMenuPin(String adminMenuPin) {
         this.adminMenuPin = adminMenuPin;
         return this;
@@ -26,6 +27,7 @@ public class Passcodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refundPin")
     public String refundPin;
+
     public Passcodes withRefundPin(String refundPin) {
         this.refundPin = refundPin;
         return this;
@@ -37,6 +39,7 @@ public class Passcodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenLockPin")
     public String screenLockPin;
+
     public Passcodes withScreenLockPin(String screenLockPin) {
         this.screenLockPin = screenLockPin;
         return this;
@@ -48,9 +51,11 @@ public class Passcodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txMenuPin")
     public String txMenuPin;
+
     public Passcodes withTxMenuPin(String txMenuPin) {
         this.txMenuPin = txMenuPin;
         return this;
     }
     
+    public Passcodes(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2SearchDestinyEntitiesRequest {
@@ -12,6 +13,7 @@ public class Destiny2SearchDestinyEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public Destiny2SearchDestinyEntitiesRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -22,6 +24,7 @@ public class Destiny2SearchDestinyEntitiesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=searchTerm")
     public String searchTerm;
+
     public Destiny2SearchDestinyEntitiesRequest withSearchTerm(String searchTerm) {
         this.searchTerm = searchTerm;
         return this;
@@ -32,9 +35,14 @@ public class Destiny2SearchDestinyEntitiesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String type;
+
     public Destiny2SearchDestinyEntitiesRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Destiny2SearchDestinyEntitiesRequest(@JsonProperty("searchTerm") String searchTerm, @JsonProperty("type") String type) {
+        this.searchTerm = searchTerm;
+        this.type = type;
+  }
 }

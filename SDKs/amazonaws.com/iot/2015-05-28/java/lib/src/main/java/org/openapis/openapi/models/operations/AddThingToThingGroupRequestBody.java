@@ -15,6 +15,7 @@ public class AddThingToThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideDynamicGroups")
     public Boolean overrideDynamicGroups;
+
     public AddThingToThingGroupRequestBody withOverrideDynamicGroups(Boolean overrideDynamicGroups) {
         this.overrideDynamicGroups = overrideDynamicGroups;
         return this;
@@ -26,6 +27,7 @@ public class AddThingToThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingArn")
     public String thingArn;
+
     public AddThingToThingGroupRequestBody withThingArn(String thingArn) {
         this.thingArn = thingArn;
         return this;
@@ -37,6 +39,7 @@ public class AddThingToThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingGroupArn")
     public String thingGroupArn;
+
     public AddThingToThingGroupRequestBody withThingGroupArn(String thingGroupArn) {
         this.thingGroupArn = thingGroupArn;
         return this;
@@ -48,6 +51,7 @@ public class AddThingToThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingGroupName")
     public String thingGroupName;
+
     public AddThingToThingGroupRequestBody withThingGroupName(String thingGroupName) {
         this.thingGroupName = thingGroupName;
         return this;
@@ -59,9 +63,11 @@ public class AddThingToThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingName")
     public String thingName;
+
     public AddThingToThingGroupRequestBody withThingName(String thingName) {
         this.thingName = thingName;
         return this;
     }
     
+    public AddThingToThingGroupRequestBody(){}
 }

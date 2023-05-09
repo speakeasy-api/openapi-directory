@@ -15,6 +15,7 @@ public class Authority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client")
     public Client client;
+
     public Authority withClient(Client client) {
         this.client = client;
         return this;
@@ -23,6 +24,7 @@ public class Authority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Authority withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class Authority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public User user;
+
     public Authority withUser(User user) {
         this.user = user;
         return this;
     }
     
+    public Authority(){}
 }

@@ -15,6 +15,7 @@ public class FlightOfferTravelerPricingFareDetailsBySegmentAdditionalServicesReq
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeableCheckedBags")
     public BaggageAllowance chargeableCheckedBags;
+
     public FlightOfferTravelerPricingFareDetailsBySegmentAdditionalServicesRequest withChargeableCheckedBags(BaggageAllowance chargeableCheckedBags) {
         this.chargeableCheckedBags = chargeableCheckedBags;
         return this;
@@ -26,6 +27,7 @@ public class FlightOfferTravelerPricingFareDetailsBySegmentAdditionalServicesReq
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeableSeatNumber")
     public String chargeableSeatNumber;
+
     public FlightOfferTravelerPricingFareDetailsBySegmentAdditionalServicesRequest withChargeableSeatNumber(String chargeableSeatNumber) {
         this.chargeableSeatNumber = chargeableSeatNumber;
         return this;
@@ -37,9 +39,11 @@ public class FlightOfferTravelerPricingFareDetailsBySegmentAdditionalServicesReq
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otherServices")
     public ServiceNameEnum[] otherServices;
+
     public FlightOfferTravelerPricingFareDetailsBySegmentAdditionalServicesRequest withOtherServices(ServiceNameEnum[] otherServices) {
         this.otherServices = otherServices;
         return this;
     }
     
+    public FlightOfferTravelerPricingFareDetailsBySegmentAdditionalServicesRequest(){}
 }

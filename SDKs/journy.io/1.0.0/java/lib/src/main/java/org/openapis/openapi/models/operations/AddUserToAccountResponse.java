@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddUserToAccountResponse {
     
     public String contentType;
+
     public AddUserToAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AddUserToAccountResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public AddUserToAccountResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class AddUserToAccountResponse {
     
     
     public Integer statusCode;
+
     public AddUserToAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class AddUserToAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddUserToAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class AddUserToAccountResponse {
      */
     
     public AddUserToAccount201ApplicationJSON addUserToAccount201ApplicationJSONObject;
+
     public AddUserToAccountResponse withAddUserToAccount201ApplicationJSONObject(AddUserToAccount201ApplicationJSON addUserToAccount201ApplicationJSONObject) {
         this.addUserToAccount201ApplicationJSONObject = addUserToAccount201ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class AddUserToAccountResponse {
      */
     
     public AddUserToAccount400ApplicationJSON addUserToAccount400ApplicationJSONObject;
+
     public AddUserToAccountResponse withAddUserToAccount400ApplicationJSONObject(AddUserToAccount400ApplicationJSON addUserToAccount400ApplicationJSONObject) {
         this.addUserToAccount400ApplicationJSONObject = addUserToAccount400ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class AddUserToAccountResponse {
      */
     
     public AddUserToAccount401ApplicationJSON addUserToAccount401ApplicationJSONObject;
+
     public AddUserToAccountResponse withAddUserToAccount401ApplicationJSONObject(AddUserToAccount401ApplicationJSON addUserToAccount401ApplicationJSONObject) {
         this.addUserToAccount401ApplicationJSONObject = addUserToAccount401ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class AddUserToAccountResponse {
      */
     
     public AddUserToAccount429ApplicationJSON addUserToAccount429ApplicationJSONObject;
+
     public AddUserToAccountResponse withAddUserToAccount429ApplicationJSONObject(AddUserToAccount429ApplicationJSON addUserToAccount429ApplicationJSONObject) {
         this.addUserToAccount429ApplicationJSONObject = addUserToAccount429ApplicationJSONObject;
         return this;
@@ -80,9 +89,14 @@ public class AddUserToAccountResponse {
      */
     
     public AddUserToAccount500ApplicationJSON addUserToAccount500ApplicationJSONObject;
+
     public AddUserToAccountResponse withAddUserToAccount500ApplicationJSONObject(AddUserToAccount500ApplicationJSON addUserToAccount500ApplicationJSONObject) {
         this.addUserToAccount500ApplicationJSONObject = addUserToAccount500ApplicationJSONObject;
         return this;
     }
     
+    public AddUserToAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

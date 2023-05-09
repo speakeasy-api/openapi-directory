@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostV05ConsentsHiuNotifyResponse {
     
     public byte[] body;
+
     public PostV05ConsentsHiuNotifyResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostV05ConsentsHiuNotifyResponse {
     
     
     public String contentType;
+
     public PostV05ConsentsHiuNotifyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -28,6 +31,7 @@ public class PostV05ConsentsHiuNotifyResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public PostV05ConsentsHiuNotifyResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -35,6 +39,7 @@ public class PostV05ConsentsHiuNotifyResponse {
     
     
     public Integer statusCode;
+
     public PostV05ConsentsHiuNotifyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -42,9 +47,14 @@ public class PostV05ConsentsHiuNotifyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostV05ConsentsHiuNotifyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostV05ConsentsHiuNotifyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

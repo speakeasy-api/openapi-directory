@@ -18,6 +18,7 @@ public class GoogleDatastoreAdminV1ListIndexesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexes")
     public GoogleDatastoreAdminV1Index[] indexes;
+
     public GoogleDatastoreAdminV1ListIndexesResponse withIndexes(GoogleDatastoreAdminV1Index[] indexes) {
         this.indexes = indexes;
         return this;
@@ -29,9 +30,11 @@ public class GoogleDatastoreAdminV1ListIndexesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleDatastoreAdminV1ListIndexesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleDatastoreAdminV1ListIndexesResponse(){}
 }

@@ -18,6 +18,7 @@ public class PointStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shape")
     public PointStyleShapeEnum shape;
+
     public PointStyle withShape(PointStyleShapeEnum shape) {
         this.shape = shape;
         return this;
@@ -29,9 +30,11 @@ public class PointStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Double size;
+
     public PointStyle withSize(Double size) {
         this.size = size;
         return this;
     }
     
+    public PointStyle(){}
 }

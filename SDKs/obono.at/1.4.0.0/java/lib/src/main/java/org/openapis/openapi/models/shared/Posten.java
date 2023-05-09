@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Posten {
     @JsonProperty("Bezeichnung")
     public String bezeichnung;
+
     public Posten withBezeichnung(String bezeichnung) {
         this.bezeichnung = bezeichnung;
         return this;
@@ -21,6 +22,7 @@ public class Posten {
      */
     @JsonProperty("BruttoBetrag")
     public Long bruttoBetrag;
+
     public Posten withBruttoBetrag(Long bruttoBetrag) {
         this.bruttoBetrag = bruttoBetrag;
         return this;
@@ -29,6 +31,7 @@ public class Posten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Externer-Beleg-Belegkreis")
     public String externerBelegBelegkreis;
+
     public Posten withExternerBelegBelegkreis(String externerBelegBelegkreis) {
         this.externerBelegBelegkreis = externerBelegBelegkreis;
         return this;
@@ -37,6 +40,7 @@ public class Posten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Externer-Beleg-Bezeichnung")
     public String externerBelegBezeichnung;
+
     public Posten withExternerBelegBezeichnung(String externerBelegBezeichnung) {
         this.externerBelegBezeichnung = externerBelegBezeichnung;
         return this;
@@ -45,6 +49,7 @@ public class Posten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Externer-Beleg-Referenz")
     public String externerBelegReferenz;
+
     public Posten withExternerBelegReferenz(String externerBelegReferenz) {
         this.externerBelegReferenz = externerBelegReferenz;
         return this;
@@ -52,6 +57,7 @@ public class Posten {
     
     @JsonProperty("Menge")
     public Long menge;
+
     public Posten withMenge(Long menge) {
         this.menge = menge;
         return this;
@@ -62,6 +68,7 @@ public class Posten {
      */
     @JsonProperty("NettoBetrag")
     public Long nettoBetrag;
+
     public Posten withNettoBetrag(Long nettoBetrag) {
         this.nettoBetrag = nettoBetrag;
         return this;
@@ -69,9 +76,17 @@ public class Posten {
     
     @JsonProperty("Satz")
     public PostenSatzEnum satz;
+
     public Posten withSatz(PostenSatzEnum satz) {
         this.satz = satz;
         return this;
     }
     
+    public Posten(@JsonProperty("Bezeichnung") String bezeichnung, @JsonProperty("BruttoBetrag") Long bruttoBetrag, @JsonProperty("Menge") Long menge, @JsonProperty("NettoBetrag") Long nettoBetrag, @JsonProperty("Satz") PostenSatzEnum satz) {
+        this.bezeichnung = bezeichnung;
+        this.bruttoBetrag = bruttoBetrag;
+        this.menge = menge;
+        this.nettoBetrag = nettoBetrag;
+        this.satz = satz;
+  }
 }

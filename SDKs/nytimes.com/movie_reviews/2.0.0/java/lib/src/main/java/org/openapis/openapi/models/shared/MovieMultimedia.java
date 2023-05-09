@@ -12,9 +12,11 @@ public class MovieMultimedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public MovieMultimediaResource resource;
+
     public MovieMultimedia withResource(MovieMultimediaResource resource) {
         this.resource = resource;
         return this;
     }
     
+    public MovieMultimedia(){}
 }

@@ -15,6 +15,7 @@ public class UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInbound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedIps")
     public String[] allowedIps;
+
     public UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInbound withAllowedIps(String[] allowedIps) {
         this.allowedIps = allowedIps;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInbound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationPorts")
     public String[] destinationPorts;
+
     public UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInbound withDestinationPorts(String[] destinationPorts) {
         this.destinationPorts = destinationPorts;
         return this;
@@ -37,9 +39,11 @@ public class UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInbound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInboundProtocolEnum protocol;
+
     public UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInbound withProtocol(UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInboundProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInbound(){}
 }

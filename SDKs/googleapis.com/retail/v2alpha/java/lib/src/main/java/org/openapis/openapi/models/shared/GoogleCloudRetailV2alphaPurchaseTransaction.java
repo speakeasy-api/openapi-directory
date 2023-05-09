@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaPurchaseTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost")
     public Float cost;
+
     public GoogleCloudRetailV2alphaPurchaseTransaction withCost(Float cost) {
         this.cost = cost;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaPurchaseTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public GoogleCloudRetailV2alphaPurchaseTransaction withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2alphaPurchaseTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudRetailV2alphaPurchaseTransaction withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2alphaPurchaseTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revenue")
     public Float revenue;
+
     public GoogleCloudRetailV2alphaPurchaseTransaction withRevenue(Float revenue) {
         this.revenue = revenue;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudRetailV2alphaPurchaseTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Float tax;
+
     public GoogleCloudRetailV2alphaPurchaseTransaction withTax(Float tax) {
         this.tax = tax;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaPurchaseTransaction(){}
 }

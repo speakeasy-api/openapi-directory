@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSchemaRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateSchemaRequestBody requestBody;
+
     public CreateSchemaRequest withRequestBody(CreateSchemaRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class CreateSchemaRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
     public String apiId;
+
     public CreateSchemaRequest withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -23,9 +26,14 @@ public class CreateSchemaRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiVersionId")
     public String apiVersionId;
+
     public CreateSchemaRequest withApiVersionId(String apiVersionId) {
         this.apiVersionId = apiVersionId;
         return this;
     }
     
+    public CreateSchemaRequest(@JsonProperty("apiId") String apiId, @JsonProperty("apiVersionId") String apiVersionId) {
+        this.apiId = apiId;
+        this.apiVersionId = apiVersionId;
+  }
 }

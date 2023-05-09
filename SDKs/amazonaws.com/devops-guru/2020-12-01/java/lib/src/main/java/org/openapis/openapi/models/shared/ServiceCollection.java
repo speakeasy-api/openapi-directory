@@ -15,9 +15,11 @@ public class ServiceCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceNames")
     public ServiceNameEnum[] serviceNames;
+
     public ServiceCollection withServiceNames(ServiceNameEnum[] serviceNames) {
         this.serviceNames = serviceNames;
         return this;
     }
     
+    public ServiceCollection(){}
 }

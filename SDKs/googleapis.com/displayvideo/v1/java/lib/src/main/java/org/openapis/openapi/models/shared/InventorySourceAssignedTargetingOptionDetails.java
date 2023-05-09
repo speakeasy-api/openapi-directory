@@ -18,9 +18,11 @@ public class InventorySourceAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventorySourceId")
     public String inventorySourceId;
+
     public InventorySourceAssignedTargetingOptionDetails withInventorySourceId(String inventorySourceId) {
         this.inventorySourceId = inventorySourceId;
         return this;
     }
     
+    public InventorySourceAssignedTargetingOptionDetails(){}
 }

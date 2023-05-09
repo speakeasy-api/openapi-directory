@@ -18,6 +18,7 @@ public class ListStudentSubmissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListStudentSubmissionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListStudentSubmissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studentSubmissions")
     public StudentSubmission[] studentSubmissions;
+
     public ListStudentSubmissionsResponse withStudentSubmissions(StudentSubmission[] studentSubmissions) {
         this.studentSubmissions = studentSubmissions;
         return this;
     }
     
+    public ListStudentSubmissionsResponse(){}
 }

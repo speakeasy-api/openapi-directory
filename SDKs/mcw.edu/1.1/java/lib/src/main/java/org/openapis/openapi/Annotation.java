@@ -47,11 +47,9 @@ public class Annotation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndObjectTypeUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndObjectTypeUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndObjectTypeUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndObjectTypeUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -86,11 +84,9 @@ public class Annotation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndSpeciesUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndSpeciesUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndSpeciesUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndSpeciesUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -125,11 +121,9 @@ public class Annotation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAnnotationCountByAccIdUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotationCountByAccIdUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETAnnotationCountByAccIdUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotationCountByAccIdUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -164,11 +158,9 @@ public class Annotation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAnnotationsByAccIdAndRgdIdUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotationsByAccIdAndRgdIdUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETAnnotationsByAccIdAndRgdIdUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotationsByAccIdAndRgdIdUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +195,9 @@ public class Annotation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAnnotationsByRgdIdAndOntologyUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotationsByRgdIdAndOntologyUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETAnnotationsByRgdIdAndOntologyUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotationsByRgdIdAndOntologyUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +232,9 @@ public class Annotation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAnnotationsByRgdIdUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotationsByRgdIdUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETAnnotationsByRgdIdUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotationsByRgdIdUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,11 +269,9 @@ public class Annotation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAnnotationsUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotationsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETAnnotationsUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotationsUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -322,11 +308,9 @@ public class Annotation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAnnotationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetAnnotationsUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetAnnotationsUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetAnnotationsUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -361,11 +345,9 @@ public class Annotation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAnnotsByRefrerenceUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotsByRefrerenceUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETAnnotsByRefrerenceUsingGETResponse res = new org.openapis.openapi.models.operations.GETAnnotsByRefrerenceUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -400,11 +382,9 @@ public class Annotation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETTermAccIdsUsingGETResponse res = new org.openapis.openapi.models.operations.GETTermAccIdsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETTermAccIdsUsingGETResponse res = new org.openapis.openapi.models.operations.GETTermAccIdsUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

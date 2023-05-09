@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTypeInput {
     
     public String arn;
+
     public DescribeTypeInput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -16,6 +17,7 @@ public class DescribeTypeInput {
     
     
     public String publicVersionNumber;
+
     public DescribeTypeInput withPublicVersionNumber(String publicVersionNumber) {
         this.publicVersionNumber = publicVersionNumber;
         return this;
@@ -23,6 +25,7 @@ public class DescribeTypeInput {
     
     
     public String publisherId;
+
     public DescribeTypeInput withPublisherId(String publisherId) {
         this.publisherId = publisherId;
         return this;
@@ -30,6 +33,7 @@ public class DescribeTypeInput {
     
     
     public RegistryTypeEnum type;
+
     public DescribeTypeInput withType(RegistryTypeEnum type) {
         this.type = type;
         return this;
@@ -37,6 +41,7 @@ public class DescribeTypeInput {
     
     
     public String typeName;
+
     public DescribeTypeInput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -44,9 +49,11 @@ public class DescribeTypeInput {
     
     
     public String versionId;
+
     public DescribeTypeInput withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public DescribeTypeInput(){}
 }

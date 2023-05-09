@@ -18,6 +18,7 @@ public class ReportLocationInsightsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicRequest")
     public BasicMetricsRequest basicRequest;
+
     public ReportLocationInsightsRequest withBasicRequest(BasicMetricsRequest basicRequest) {
         this.basicRequest = basicRequest;
         return this;
@@ -29,6 +30,7 @@ public class ReportLocationInsightsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drivingDirectionsRequest")
     public DrivingDirectionMetricsRequest drivingDirectionsRequest;
+
     public ReportLocationInsightsRequest withDrivingDirectionsRequest(DrivingDirectionMetricsRequest drivingDirectionsRequest) {
         this.drivingDirectionsRequest = drivingDirectionsRequest;
         return this;
@@ -40,9 +42,11 @@ public class ReportLocationInsightsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationNames")
     public String[] locationNames;
+
     public ReportLocationInsightsRequest withLocationNames(String[] locationNames) {
         this.locationNames = locationNames;
         return this;
     }
     
+    public ReportLocationInsightsRequest(){}
 }

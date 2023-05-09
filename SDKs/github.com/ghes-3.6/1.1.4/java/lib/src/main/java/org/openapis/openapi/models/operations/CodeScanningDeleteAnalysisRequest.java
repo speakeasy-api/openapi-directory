@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodeScanningDeleteAnalysisRequest {
@@ -12,6 +13,7 @@ public class CodeScanningDeleteAnalysisRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_id")
     public Long analysisId;
+
     public CodeScanningDeleteAnalysisRequest withAnalysisId(Long analysisId) {
         this.analysisId = analysisId;
         return this;
@@ -22,6 +24,7 @@ public class CodeScanningDeleteAnalysisRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=confirm_delete")
     public String confirmDelete;
+
     public CodeScanningDeleteAnalysisRequest withConfirmDelete(String confirmDelete) {
         this.confirmDelete = confirmDelete;
         return this;
@@ -32,6 +35,7 @@ public class CodeScanningDeleteAnalysisRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public CodeScanningDeleteAnalysisRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -42,9 +46,15 @@ public class CodeScanningDeleteAnalysisRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public CodeScanningDeleteAnalysisRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public CodeScanningDeleteAnalysisRequest(@JsonProperty("analysis_id") Long analysisId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.analysisId = analysisId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

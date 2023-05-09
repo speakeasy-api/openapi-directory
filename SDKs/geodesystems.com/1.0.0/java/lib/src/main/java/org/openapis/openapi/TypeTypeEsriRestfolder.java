@@ -57,10 +57,8 @@ public class TypeTypeEsriRestfolder {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypeEsriRestfolderResponse res = new org.openapis.openapi.models.operations.SearchTypeEsriRestfolderResponse() {{
+        org.openapis.openapi.models.operations.SearchTypeEsriRestfolderResponse res = new org.openapis.openapi.models.operations.SearchTypeEsriRestfolderResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

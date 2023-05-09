@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceTags {
     
     public String key;
+
     public DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceTags {
     
     
     public String value;
+
     public DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceTags(){}
 }

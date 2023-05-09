@@ -14,6 +14,7 @@ public class PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedReques
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -24,6 +25,7 @@ public class PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedReques
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -35,6 +37,7 @@ public class PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedReques
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsReturns")
     public Double[] assetsReturns;
+
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBody withAssetsReturns(Double[] assetsReturns) {
         this.assetsReturns = assetsReturns;
         return this;
@@ -43,6 +46,7 @@ public class PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedReques
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBodyConstraints constraints;
+
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBody withConstraints(PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -54,6 +58,7 @@ public class PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedReques
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetPortfolios")
     public Long subsetPortfolios;
+
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBody withSubsetPortfolios(Long subsetPortfolios) {
         this.subsetPortfolios = subsetPortfolios;
         return this;
@@ -65,6 +70,7 @@ public class PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedReques
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetPortfoliosAggregationMethod")
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum subsetPortfoliosAggregationMethod;
+
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBody withSubsetPortfoliosAggregationMethod(PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum subsetPortfoliosAggregationMethod) {
         this.subsetPortfoliosAggregationMethod = subsetPortfoliosAggregationMethod;
         return this;
@@ -76,6 +82,7 @@ public class PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedReques
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetPortfoliosEnumerationMethod")
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum subsetPortfoliosEnumerationMethod;
+
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBody withSubsetPortfoliosEnumerationMethod(PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum subsetPortfoliosEnumerationMethod) {
         this.subsetPortfoliosEnumerationMethod = subsetPortfoliosEnumerationMethod;
         return this;
@@ -87,9 +94,14 @@ public class PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedReques
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetSize")
     public Long subsetSize;
+
     public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBody withSubsetSize(Long subsetSize) {
         this.subsetSize = subsetSize;
         return this;
     }
     
+    public PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+  }
 }

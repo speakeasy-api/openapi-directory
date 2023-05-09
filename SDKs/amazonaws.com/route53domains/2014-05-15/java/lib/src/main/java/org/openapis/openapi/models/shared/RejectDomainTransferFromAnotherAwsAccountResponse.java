@@ -15,9 +15,11 @@ public class RejectDomainTransferFromAnotherAwsAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public RejectDomainTransferFromAnotherAwsAccountResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public RejectDomainTransferFromAnotherAwsAccountResponse(){}
 }

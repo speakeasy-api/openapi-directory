@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateOTAUpdateResponse {
     
     public String contentType;
+
     public CreateOTAUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateOTAUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateOTAUpdateResponse createOTAUpdateResponse;
+
     public CreateOTAUpdateResponse withCreateOTAUpdateResponse(org.openapis.openapi.models.shared.CreateOTAUpdateResponse createOTAUpdateResponse) {
         this.createOTAUpdateResponse = createOTAUpdateResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateOTAUpdateResponse {
      */
     
     public Object internalFailureException;
+
     public CreateOTAUpdateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateOTAUpdateResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateOTAUpdateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateOTAUpdateResponse {
      */
     
     public Object limitExceededException;
+
     public CreateOTAUpdateResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateOTAUpdateResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateOTAUpdateResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class CreateOTAUpdateResponse {
     
     
     public Integer statusCode;
+
     public CreateOTAUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateOTAUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateOTAUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateOTAUpdateResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateOTAUpdateResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -93,6 +103,7 @@ public class CreateOTAUpdateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateOTAUpdateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class CreateOTAUpdateResponse {
      */
     
     public Object throttlingException;
+
     public CreateOTAUpdateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class CreateOTAUpdateResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateOTAUpdateResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateOTAUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

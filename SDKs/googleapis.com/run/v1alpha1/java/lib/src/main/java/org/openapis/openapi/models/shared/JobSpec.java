@@ -18,6 +18,7 @@ public class JobSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeDeadlineSeconds")
     public String activeDeadlineSeconds;
+
     public JobSpec withActiveDeadlineSeconds(String activeDeadlineSeconds) {
         this.activeDeadlineSeconds = activeDeadlineSeconds;
         return this;
@@ -29,6 +30,7 @@ public class JobSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backoffLimit")
     public Integer backoffLimit;
+
     public JobSpec withBackoffLimit(Integer backoffLimit) {
         this.backoffLimit = backoffLimit;
         return this;
@@ -40,6 +42,7 @@ public class JobSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completions")
     public Integer completions;
+
     public JobSpec withCompletions(Integer completions) {
         this.completions = completions;
         return this;
@@ -51,6 +54,7 @@ public class JobSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parallelism")
     public Integer parallelism;
+
     public JobSpec withParallelism(Integer parallelism) {
         this.parallelism = parallelism;
         return this;
@@ -62,6 +66,7 @@ public class JobSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public InstanceTemplateSpec template;
+
     public JobSpec withTemplate(InstanceTemplateSpec template) {
         this.template = template;
         return this;
@@ -73,9 +78,11 @@ public class JobSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttlSecondsAfterFinished")
     public Integer ttlSecondsAfterFinished;
+
     public JobSpec withTtlSecondsAfterFinished(Integer ttlSecondsAfterFinished) {
         this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
         return this;
     }
     
+    public JobSpec(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportAlreadyInProgressResponseLinks {
     @JsonProperty("cancelCurrentImportation")
     public LinksImportationCancelLink cancelCurrentImportation;
+
     public ImportAlreadyInProgressResponseLinks withCancelCurrentImportation(LinksImportationCancelLink cancelCurrentImportation) {
         this.cancelCurrentImportation = cancelCurrentImportation;
         return this;
@@ -19,9 +20,14 @@ public class ImportAlreadyInProgressResponseLinks {
     
     @JsonProperty("currentImportation")
     public LinksImportationGetImportationMonitoringLink currentImportation;
+
     public ImportAlreadyInProgressResponseLinks withCurrentImportation(LinksImportationGetImportationMonitoringLink currentImportation) {
         this.currentImportation = currentImportation;
         return this;
     }
     
+    public ImportAlreadyInProgressResponseLinks(@JsonProperty("cancelCurrentImportation") LinksImportationCancelLink cancelCurrentImportation, @JsonProperty("currentImportation") LinksImportationGetImportationMonitoringLink currentImportation) {
+        this.cancelCurrentImportation = cancelCurrentImportation;
+        this.currentImportation = currentImportation;
+  }
 }

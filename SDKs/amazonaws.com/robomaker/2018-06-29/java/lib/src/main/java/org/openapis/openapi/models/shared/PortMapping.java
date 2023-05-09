@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PortMapping {
     @JsonProperty("applicationPort")
     public Long applicationPort;
+
     public PortMapping withApplicationPort(Long applicationPort) {
         this.applicationPort = applicationPort;
         return this;
@@ -22,6 +23,7 @@ public class PortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableOnPublicIp")
     public Boolean enableOnPublicIp;
+
     public PortMapping withEnableOnPublicIp(Boolean enableOnPublicIp) {
         this.enableOnPublicIp = enableOnPublicIp;
         return this;
@@ -29,9 +31,14 @@ public class PortMapping {
     
     @JsonProperty("jobPort")
     public Long jobPort;
+
     public PortMapping withJobPort(Long jobPort) {
         this.jobPort = jobPort;
         return this;
     }
     
+    public PortMapping(@JsonProperty("applicationPort") Long applicationPort, @JsonProperty("jobPort") Long jobPort) {
+        this.applicationPort = applicationPort;
+        this.jobPort = jobPort;
+  }
 }

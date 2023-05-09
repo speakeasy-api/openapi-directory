@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteEventSubscriptionMessage {
     
     public String subscriptionName;
+
     public DeleteEventSubscriptionMessage withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
     }
     
+    public DeleteEventSubscriptionMessage(@JsonProperty("SubscriptionName") String subscriptionName) {
+        this.subscriptionName = subscriptionName;
+  }
 }

@@ -15,9 +15,11 @@ public class MultiModelConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelCacheSetting")
     public ModelCacheSettingEnum modelCacheSetting;
+
     public MultiModelConfig withModelCacheSetting(ModelCacheSettingEnum modelCacheSetting) {
         this.modelCacheSetting = modelCacheSetting;
         return this;
     }
     
+    public MultiModelConfig(){}
 }

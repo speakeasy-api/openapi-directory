@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SetRulePrioritiesInput {
     
     public RulePriorityPair[] rulePriorities;
+
     public SetRulePrioritiesInput withRulePriorities(RulePriorityPair[] rulePriorities) {
         this.rulePriorities = rulePriorities;
         return this;
     }
     
+    public SetRulePrioritiesInput(@JsonProperty("RulePriorities") RulePriorityPair[] rulePriorities) {
+        this.rulePriorities = rulePriorities;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterArn")
     public String filterArn;
+
     public CreateFilterResponse withFilterArn(String filterArn) {
         this.filterArn = filterArn;
         return this;
     }
     
+    public CreateFilterResponse(){}
 }

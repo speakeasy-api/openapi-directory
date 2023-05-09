@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2KAnonymityHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketSize")
     public String bucketSize;
+
     public GooglePrivacyDlpV2KAnonymityHistogramBucket withBucketSize(String bucketSize) {
         this.bucketSize = bucketSize;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2KAnonymityHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketValueCount")
     public String bucketValueCount;
+
     public GooglePrivacyDlpV2KAnonymityHistogramBucket withBucketValueCount(String bucketValueCount) {
         this.bucketValueCount = bucketValueCount;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2KAnonymityHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketValues")
     public GooglePrivacyDlpV2KAnonymityEquivalenceClass[] bucketValues;
+
     public GooglePrivacyDlpV2KAnonymityHistogramBucket withBucketValues(GooglePrivacyDlpV2KAnonymityEquivalenceClass[] bucketValues) {
         this.bucketValues = bucketValues;
         return this;
@@ -51,6 +54,7 @@ public class GooglePrivacyDlpV2KAnonymityHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("equivalenceClassSizeLowerBound")
     public String equivalenceClassSizeLowerBound;
+
     public GooglePrivacyDlpV2KAnonymityHistogramBucket withEquivalenceClassSizeLowerBound(String equivalenceClassSizeLowerBound) {
         this.equivalenceClassSizeLowerBound = equivalenceClassSizeLowerBound;
         return this;
@@ -62,9 +66,11 @@ public class GooglePrivacyDlpV2KAnonymityHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("equivalenceClassSizeUpperBound")
     public String equivalenceClassSizeUpperBound;
+
     public GooglePrivacyDlpV2KAnonymityHistogramBucket withEquivalenceClassSizeUpperBound(String equivalenceClassSizeUpperBound) {
         this.equivalenceClassSizeUpperBound = equivalenceClassSizeUpperBound;
         return this;
     }
     
+    public GooglePrivacyDlpV2KAnonymityHistogramBucket(){}
 }

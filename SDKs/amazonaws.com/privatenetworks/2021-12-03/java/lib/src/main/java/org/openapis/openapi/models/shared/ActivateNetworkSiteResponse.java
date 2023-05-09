@@ -15,9 +15,11 @@ public class ActivateNetworkSiteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkSite")
     public NetworkSite networkSite;
+
     public ActivateNetworkSiteResponse withNetworkSite(NetworkSite networkSite) {
         this.networkSite = networkSite;
         return this;
     }
     
+    public ActivateNetworkSiteResponse(){}
 }

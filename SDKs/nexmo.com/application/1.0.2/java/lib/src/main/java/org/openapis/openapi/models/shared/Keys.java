@@ -18,9 +18,11 @@ public class Keys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_key")
     public String publicKey;
+
     public Keys withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public Keys(){}
 }

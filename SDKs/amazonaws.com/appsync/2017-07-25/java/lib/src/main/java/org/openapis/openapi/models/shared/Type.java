@@ -15,6 +15,7 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Type withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public String definition;
+
     public Type withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -31,6 +33,7 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Type withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public TypeDefinitionFormatEnum format;
+
     public Type withFormat(TypeDefinitionFormatEnum format) {
         this.format = format;
         return this;
@@ -47,9 +51,11 @@ public class Type {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Type withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Type(){}
 }

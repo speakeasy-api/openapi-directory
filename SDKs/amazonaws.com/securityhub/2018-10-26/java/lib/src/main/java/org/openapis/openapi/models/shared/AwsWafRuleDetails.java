@@ -15,6 +15,7 @@ public class AwsWafRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public AwsWafRuleDetails withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -23,6 +24,7 @@ public class AwsWafRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsWafRuleDetails withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class AwsWafRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredicateList")
     public AwsWafRulePredicateListDetails[] predicateList;
+
     public AwsWafRuleDetails withPredicateList(AwsWafRulePredicateListDetails[] predicateList) {
         this.predicateList = predicateList;
         return this;
@@ -39,9 +42,11 @@ public class AwsWafRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleId")
     public String ruleId;
+
     public AwsWafRuleDetails withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
     }
     
+    public AwsWafRuleDetails(){}
 }

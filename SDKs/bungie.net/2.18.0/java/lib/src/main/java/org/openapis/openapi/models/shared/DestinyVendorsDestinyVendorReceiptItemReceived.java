@@ -15,6 +15,7 @@ public class DestinyVendorsDestinyVendorReceiptItemReceived {
      */
     
     public Boolean hasConditionalVisibility;
+
     public DestinyVendorsDestinyVendorReceiptItemReceived withHasConditionalVisibility(Boolean hasConditionalVisibility) {
         this.hasConditionalVisibility = hasConditionalVisibility;
         return this;
@@ -25,6 +26,7 @@ public class DestinyVendorsDestinyVendorReceiptItemReceived {
      */
     
     public Long itemHash;
+
     public DestinyVendorsDestinyVendorReceiptItemReceived withItemHash(Long itemHash) {
         this.itemHash = itemHash;
         return this;
@@ -35,6 +37,7 @@ public class DestinyVendorsDestinyVendorReceiptItemReceived {
      */
     
     public Long itemInstanceId;
+
     public DestinyVendorsDestinyVendorReceiptItemReceived withItemInstanceId(Long itemInstanceId) {
         this.itemInstanceId = itemInstanceId;
         return this;
@@ -45,9 +48,11 @@ public class DestinyVendorsDestinyVendorReceiptItemReceived {
      */
     
     public Integer quantity;
+
     public DestinyVendorsDestinyVendorReceiptItemReceived withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public DestinyVendorsDestinyVendorReceiptItemReceived(){}
 }

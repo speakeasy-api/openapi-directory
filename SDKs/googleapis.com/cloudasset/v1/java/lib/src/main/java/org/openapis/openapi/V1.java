@@ -59,11 +59,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyResponse(contentType, httpRes.statusCode()) {{
             analyzeIamPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyLongrunningResponse res = new org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyLongrunningResponse() {{
+        org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyLongrunningResponse res = new org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyLongrunningResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetAnalyzeMoveResponse res = new org.openapis.openapi.models.operations.CloudassetAnalyzeMoveResponse() {{
+        org.openapis.openapi.models.operations.CloudassetAnalyzeMoveResponse res = new org.openapis.openapi.models.operations.CloudassetAnalyzeMoveResponse(contentType, httpRes.statusCode()) {{
             analyzeMoveResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPoliciesResponse res = new org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPoliciesResponse() {{
+        org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPoliciesResponse res = new org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPoliciesResponse(contentType, httpRes.statusCode()) {{
             analyzeOrgPoliciesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedAssetsResponse res = new org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedAssetsResponse() {{
+        org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedAssetsResponse res = new org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedAssetsResponse(contentType, httpRes.statusCode()) {{
             analyzeOrgPolicyGovernedAssetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedContainersResponse res = new org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedContainersResponse() {{
+        org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedContainersResponse res = new org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedContainersResponse(contentType, httpRes.statusCode()) {{
             analyzeOrgPolicyGovernedContainersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,11 +325,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetBatchGetAssetsHistoryResponse res = new org.openapis.openapi.models.operations.CloudassetBatchGetAssetsHistoryResponse() {{
+        org.openapis.openapi.models.operations.CloudassetBatchGetAssetsHistoryResponse res = new org.openapis.openapi.models.operations.CloudassetBatchGetAssetsHistoryResponse(contentType, httpRes.statusCode()) {{
             batchGetAssetsHistoryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -385,11 +371,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetExportAssetsResponse res = new org.openapis.openapi.models.operations.CloudassetExportAssetsResponse() {{
+        org.openapis.openapi.models.operations.CloudassetExportAssetsResponse res = new org.openapis.openapi.models.operations.CloudassetExportAssetsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -433,11 +417,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetQueryAssetsResponse res = new org.openapis.openapi.models.operations.CloudassetQueryAssetsResponse() {{
+        org.openapis.openapi.models.operations.CloudassetQueryAssetsResponse res = new org.openapis.openapi.models.operations.CloudassetQueryAssetsResponse(contentType, httpRes.statusCode()) {{
             queryAssetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -479,11 +461,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetSearchAllIamPoliciesResponse res = new org.openapis.openapi.models.operations.CloudassetSearchAllIamPoliciesResponse() {{
+        org.openapis.openapi.models.operations.CloudassetSearchAllIamPoliciesResponse res = new org.openapis.openapi.models.operations.CloudassetSearchAllIamPoliciesResponse(contentType, httpRes.statusCode()) {{
             searchAllIamPoliciesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -525,11 +505,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetSearchAllResourcesResponse res = new org.openapis.openapi.models.operations.CloudassetSearchAllResourcesResponse() {{
+        org.openapis.openapi.models.operations.CloudassetSearchAllResourcesResponse res = new org.openapis.openapi.models.operations.CloudassetSearchAllResourcesResponse(contentType, httpRes.statusCode()) {{
             searchAllResourcesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

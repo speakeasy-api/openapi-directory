@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class IdentitytoolkitRelyingpartySendVerificationCodeRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.IdentitytoolkitRelyingpartySendVerificationCodeRequest identitytoolkitRelyingpartySendVerificationCodeRequest;
+
     public IdentitytoolkitRelyingpartySendVerificationCodeRequest withIdentitytoolkitRelyingpartySendVerificationCodeRequest(org.openapis.openapi.models.shared.IdentitytoolkitRelyingpartySendVerificationCodeRequest identitytoolkitRelyingpartySendVerificationCodeRequest) {
         this.identitytoolkitRelyingpartySendVerificationCodeRequest = identitytoolkitRelyingpartySendVerificationCodeRequest;
         return this;
@@ -19,6 +20,7 @@ public class IdentitytoolkitRelyingpartySendVerificationCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public IdentitytoolkitRelyingpartySendVerificationCodeRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +31,7 @@ public class IdentitytoolkitRelyingpartySendVerificationCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public IdentitytoolkitRelyingpartySendVerificationCodeRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -39,6 +42,7 @@ public class IdentitytoolkitRelyingpartySendVerificationCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public IdentitytoolkitRelyingpartySendVerificationCodeRequest withKey(String key) {
         this.key = key;
         return this;
@@ -49,6 +53,7 @@ public class IdentitytoolkitRelyingpartySendVerificationCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public IdentitytoolkitRelyingpartySendVerificationCodeRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -59,6 +64,7 @@ public class IdentitytoolkitRelyingpartySendVerificationCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public IdentitytoolkitRelyingpartySendVerificationCodeRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -69,6 +75,7 @@ public class IdentitytoolkitRelyingpartySendVerificationCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public IdentitytoolkitRelyingpartySendVerificationCodeRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -79,9 +86,11 @@ public class IdentitytoolkitRelyingpartySendVerificationCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public IdentitytoolkitRelyingpartySendVerificationCodeRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartySendVerificationCodeRequest(){}
 }

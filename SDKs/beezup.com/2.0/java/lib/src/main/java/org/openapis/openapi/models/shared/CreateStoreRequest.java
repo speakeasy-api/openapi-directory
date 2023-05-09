@@ -17,6 +17,7 @@ public class CreateStoreRequest {
      */
     @JsonProperty("countryIsoCodeAlpha3")
     public String countryIsoCodeAlpha3;
+
     public CreateStoreRequest withCountryIsoCodeAlpha3(String countryIsoCodeAlpha3) {
         this.countryIsoCodeAlpha3 = countryIsoCodeAlpha3;
         return this;
@@ -28,6 +29,7 @@ public class CreateStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateStoreRequest withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class CreateStoreRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateStoreRequest withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class CreateStoreRequest {
      */
     @JsonProperty("sectors")
     public String[] sectors;
+
     public CreateStoreRequest withSectors(String[] sectors) {
         this.sectors = sectors;
         return this;
@@ -58,9 +62,16 @@ public class CreateStoreRequest {
      */
     @JsonProperty("url")
     public String url;
+
     public CreateStoreRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CreateStoreRequest(@JsonProperty("countryIsoCodeAlpha3") String countryIsoCodeAlpha3, @JsonProperty("name") String name, @JsonProperty("sectors") String[] sectors, @JsonProperty("url") String url) {
+        this.countryIsoCodeAlpha3 = countryIsoCodeAlpha3;
+        this.name = name;
+        this.sectors = sectors;
+        this.url = url;
+  }
 }

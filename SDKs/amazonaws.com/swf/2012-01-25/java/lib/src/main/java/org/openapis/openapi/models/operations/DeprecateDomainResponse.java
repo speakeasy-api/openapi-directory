@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeprecateDomainResponse {
     
     public String contentType;
+
     public DeprecateDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeprecateDomainResponse {
      */
     
     public Object domainDeprecatedFault;
+
     public DeprecateDomainResponse withDomainDeprecatedFault(Object domainDeprecatedFault) {
         this.domainDeprecatedFault = domainDeprecatedFault;
         return this;
@@ -29,6 +32,7 @@ public class DeprecateDomainResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public DeprecateDomainResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -36,6 +40,7 @@ public class DeprecateDomainResponse {
     
     
     public Integer statusCode;
+
     public DeprecateDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeprecateDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeprecateDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeprecateDomainResponse {
      */
     
     public Object unknownResourceFault;
+
     public DeprecateDomainResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
     }
     
+    public DeprecateDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

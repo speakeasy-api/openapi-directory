@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchInferenceJobOutput {
     @JsonProperty("s3DataDestination")
     public S3DataConfig s3DataDestination;
+
     public BatchInferenceJobOutput withS3DataDestination(S3DataConfig s3DataDestination) {
         this.s3DataDestination = s3DataDestination;
         return this;
     }
     
+    public BatchInferenceJobOutput(@JsonProperty("s3DataDestination") S3DataConfig s3DataDestination) {
+        this.s3DataDestination = s3DataDestination;
+  }
 }

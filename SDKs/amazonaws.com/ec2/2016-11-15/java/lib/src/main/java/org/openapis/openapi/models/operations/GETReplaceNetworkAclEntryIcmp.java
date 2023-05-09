@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETReplaceNetworkAclEntryIcmp {
     @SpeakeasyMetadata("queryParam:name=Code")
     public Long code;
+
     public GETReplaceNetworkAclEntryIcmp withCode(Long code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class GETReplaceNetworkAclEntryIcmp {
     
     @SpeakeasyMetadata("queryParam:name=Type")
     public Long type;
+
     public GETReplaceNetworkAclEntryIcmp withType(Long type) {
         this.type = type;
         return this;
     }
     
+    public GETReplaceNetworkAclEntryIcmp(){}
 }

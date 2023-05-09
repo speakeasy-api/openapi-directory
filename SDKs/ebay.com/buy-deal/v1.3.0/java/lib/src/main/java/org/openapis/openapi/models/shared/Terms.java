@@ -18,6 +18,7 @@ public class Terms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullText")
     public String fullText;
+
     public Terms withFullText(String fullText) {
         this.fullText = fullText;
         return this;
@@ -29,9 +30,11 @@ public class Terms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public Terms withSummary(String summary) {
         this.summary = summary;
         return this;
     }
     
+    public Terms(){}
 }

@@ -212,4 +212,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Image.java
 lib/src/main/java/org/openapis/openapi/models/shared/Thumbnail.java
 lib/src/main/java/org/openapis/openapi/models/shared/Status.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListHistoriesResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

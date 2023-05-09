@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class Adexchangebuyer2AccountsClientsInvitationsListResponse {
     
     public String contentType;
+
     public Adexchangebuyer2AccountsClientsInvitationsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class Adexchangebuyer2AccountsClientsInvitationsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListClientUserInvitationsResponse listClientUserInvitationsResponse;
+
     public Adexchangebuyer2AccountsClientsInvitationsListResponse withListClientUserInvitationsResponse(org.openapis.openapi.models.shared.ListClientUserInvitationsResponse listClientUserInvitationsResponse) {
         this.listClientUserInvitationsResponse = listClientUserInvitationsResponse;
         return this;
@@ -26,6 +29,7 @@ public class Adexchangebuyer2AccountsClientsInvitationsListResponse {
     
     
     public Integer statusCode;
+
     public Adexchangebuyer2AccountsClientsInvitationsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class Adexchangebuyer2AccountsClientsInvitationsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public Adexchangebuyer2AccountsClientsInvitationsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public Adexchangebuyer2AccountsClientsInvitationsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

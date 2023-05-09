@@ -13,6 +13,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchProjectLearningResourceRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchProjectLearningResourceRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchProjectLearningResourceRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchProjectLearningResourceRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchProjectLearningResourceRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchProjectLearningResourceRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchProjectLearningResourceRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchProjectLearningResourceRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchProjectLearningResourceRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchProjectLearningResourceRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchProjectLearningResourceRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchProjectLearningResourceRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchProjectLearningResourceRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchProjectLearningResourceRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.project_learning_resource.grade_level")
     public String searchProjectLearningResourceGradeLevel;
+
     public SearchProjectLearningResourceRequest withSearchProjectLearningResourceGradeLevel(String searchProjectLearningResourceGradeLevel) {
         this.searchProjectLearningResourceGradeLevel = searchProjectLearningResourceGradeLevel;
         return this;
@@ -163,6 +178,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.project_learning_resource.topic")
     public String searchProjectLearningResourceTopic;
+
     public SearchProjectLearningResourceRequest withSearchProjectLearningResourceTopic(String searchProjectLearningResourceTopic) {
         this.searchProjectLearningResourceTopic = searchProjectLearningResourceTopic;
         return this;
@@ -173,6 +189,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchProjectLearningResourceRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -183,6 +200,7 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchProjectLearningResourceRequest withText(String text) {
         this.text = text;
         return this;
@@ -193,9 +211,11 @@ public class SearchProjectLearningResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchProjectLearningResourceRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchProjectLearningResourceRequest(){}
 }

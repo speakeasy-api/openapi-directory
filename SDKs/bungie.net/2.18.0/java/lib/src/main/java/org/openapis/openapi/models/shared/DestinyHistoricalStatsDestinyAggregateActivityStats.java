@@ -12,6 +12,7 @@ public class DestinyHistoricalStatsDestinyAggregateActivityStats {
      */
     
     public Long activityHash;
+
     public DestinyHistoricalStatsDestinyAggregateActivityStats withActivityHash(Long activityHash) {
         this.activityHash = activityHash;
         return this;
@@ -22,9 +23,11 @@ public class DestinyHistoricalStatsDestinyAggregateActivityStats {
      */
     
     public java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> values;
+
     public DestinyHistoricalStatsDestinyAggregateActivityStats withValues(java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> values) {
         this.values = values;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyAggregateActivityStats(){}
 }

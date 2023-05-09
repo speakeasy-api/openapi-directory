@@ -12,6 +12,7 @@ public class CreateFileCacheRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateFileCacheRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateFileCacheRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTagsToDataRepositoryAssociations")
     public Boolean copyTagsToDataRepositoryAssociations;
+
     public CreateFileCacheRequest withCopyTagsToDataRepositoryAssociations(Boolean copyTagsToDataRepositoryAssociations) {
         this.copyTagsToDataRepositoryAssociations = copyTagsToDataRepositoryAssociations;
         return this;
@@ -28,6 +30,7 @@ public class CreateFileCacheRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataRepositoryAssociations")
     public FileCacheDataRepositoryAssociation[] dataRepositoryAssociations;
+
     public CreateFileCacheRequest withDataRepositoryAssociations(FileCacheDataRepositoryAssociation[] dataRepositoryAssociations) {
         this.dataRepositoryAssociations = dataRepositoryAssociations;
         return this;
@@ -35,6 +38,7 @@ public class CreateFileCacheRequest {
     
     @JsonProperty("FileCacheType")
     public FileCacheTypeEnum fileCacheType;
+
     public CreateFileCacheRequest withFileCacheType(FileCacheTypeEnum fileCacheType) {
         this.fileCacheType = fileCacheType;
         return this;
@@ -42,6 +46,7 @@ public class CreateFileCacheRequest {
     
     @JsonProperty("FileCacheTypeVersion")
     public String fileCacheTypeVersion;
+
     public CreateFileCacheRequest withFileCacheTypeVersion(String fileCacheTypeVersion) {
         this.fileCacheTypeVersion = fileCacheTypeVersion;
         return this;
@@ -50,6 +55,7 @@ public class CreateFileCacheRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CreateFileCacheRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -58,6 +64,7 @@ public class CreateFileCacheRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LustreConfiguration")
     public CreateFileCacheLustreConfiguration lustreConfiguration;
+
     public CreateFileCacheRequest withLustreConfiguration(CreateFileCacheLustreConfiguration lustreConfiguration) {
         this.lustreConfiguration = lustreConfiguration;
         return this;
@@ -66,6 +73,7 @@ public class CreateFileCacheRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public CreateFileCacheRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -73,6 +81,7 @@ public class CreateFileCacheRequest {
     
     @JsonProperty("StorageCapacity")
     public Long storageCapacity;
+
     public CreateFileCacheRequest withStorageCapacity(Long storageCapacity) {
         this.storageCapacity = storageCapacity;
         return this;
@@ -83,6 +92,7 @@ public class CreateFileCacheRequest {
      */
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public CreateFileCacheRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -94,9 +104,16 @@ public class CreateFileCacheRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateFileCacheRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFileCacheRequest(@JsonProperty("FileCacheType") FileCacheTypeEnum fileCacheType, @JsonProperty("FileCacheTypeVersion") String fileCacheTypeVersion, @JsonProperty("StorageCapacity") Long storageCapacity, @JsonProperty("SubnetIds") String[] subnetIds) {
+        this.fileCacheType = fileCacheType;
+        this.fileCacheTypeVersion = fileCacheTypeVersion;
+        this.storageCapacity = storageCapacity;
+        this.subnetIds = subnetIds;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableCrlResponse {
@@ -12,6 +13,7 @@ public class EnableCrlResponse {
      */
     
     public Object accessDeniedException;
+
     public EnableCrlResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class EnableCrlResponse {
     
     
     public String contentType;
+
     public EnableCrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class EnableCrlResponse {
      */
     
     public org.openapis.openapi.models.shared.CrlDetailResponse crlDetailResponse;
+
     public EnableCrlResponse withCrlDetailResponse(org.openapis.openapi.models.shared.CrlDetailResponse crlDetailResponse) {
         this.crlDetailResponse = crlDetailResponse;
         return this;
@@ -39,6 +43,7 @@ public class EnableCrlResponse {
      */
     
     public Object resourceNotFoundException;
+
     public EnableCrlResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class EnableCrlResponse {
     
     
     public Integer statusCode;
+
     public EnableCrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class EnableCrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableCrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EnableCrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

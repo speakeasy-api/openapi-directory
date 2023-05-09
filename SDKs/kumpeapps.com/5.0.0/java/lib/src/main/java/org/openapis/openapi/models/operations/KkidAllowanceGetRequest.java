@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidAllowanceGetRequest {
@@ -12,6 +13,7 @@ public class KkidAllowanceGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kidUserId")
     public Long kidUserId;
+
     public KkidAllowanceGetRequest withKidUserId(Long kidUserId) {
         this.kidUserId = kidUserId;
         return this;
@@ -22,9 +24,13 @@ public class KkidAllowanceGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transactionDays")
     public Long transactionDays;
+
     public KkidAllowanceGetRequest withTransactionDays(Long transactionDays) {
         this.transactionDays = transactionDays;
         return this;
     }
     
+    public KkidAllowanceGetRequest(@JsonProperty("kidUserId") Long kidUserId) {
+        this.kidUserId = kidUserId;
+  }
 }

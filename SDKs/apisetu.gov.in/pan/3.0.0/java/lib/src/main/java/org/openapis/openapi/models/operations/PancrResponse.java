@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PancrResponse {
     
     public byte[] body;
+
     public PancrResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PancrResponse {
     
     
     public String contentType;
+
     public PancrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PancrResponse {
     
     
     public Integer statusCode;
+
     public PancrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PancrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PancrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PancrResponse {
      */
     
     public Pancr400ApplicationJSON pancr400ApplicationJSONObject;
+
     public PancrResponse withPancr400ApplicationJSONObject(Pancr400ApplicationJSON pancr400ApplicationJSONObject) {
         this.pancr400ApplicationJSONObject = pancr400ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class PancrResponse {
      */
     
     public Pancr401ApplicationJSON pancr401ApplicationJSONObject;
+
     public PancrResponse withPancr401ApplicationJSONObject(Pancr401ApplicationJSON pancr401ApplicationJSONObject) {
         this.pancr401ApplicationJSONObject = pancr401ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class PancrResponse {
      */
     
     public Pancr404ApplicationJSON pancr404ApplicationJSONObject;
+
     public PancrResponse withPancr404ApplicationJSONObject(Pancr404ApplicationJSON pancr404ApplicationJSONObject) {
         this.pancr404ApplicationJSONObject = pancr404ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class PancrResponse {
      */
     
     public Pancr500ApplicationJSON pancr500ApplicationJSONObject;
+
     public PancrResponse withPancr500ApplicationJSONObject(Pancr500ApplicationJSON pancr500ApplicationJSONObject) {
         this.pancr500ApplicationJSONObject = pancr500ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class PancrResponse {
      */
     
     public Pancr502ApplicationJSON pancr502ApplicationJSONObject;
+
     public PancrResponse withPancr502ApplicationJSONObject(Pancr502ApplicationJSON pancr502ApplicationJSONObject) {
         this.pancr502ApplicationJSONObject = pancr502ApplicationJSONObject;
         return this;
@@ -90,6 +100,7 @@ public class PancrResponse {
      */
     
     public Pancr503ApplicationJSON pancr503ApplicationJSONObject;
+
     public PancrResponse withPancr503ApplicationJSONObject(Pancr503ApplicationJSON pancr503ApplicationJSONObject) {
         this.pancr503ApplicationJSONObject = pancr503ApplicationJSONObject;
         return this;
@@ -100,9 +111,14 @@ public class PancrResponse {
      */
     
     public Pancr504ApplicationJSON pancr504ApplicationJSONObject;
+
     public PancrResponse withPancr504ApplicationJSONObject(Pancr504ApplicationJSON pancr504ApplicationJSONObject) {
         this.pancr504ApplicationJSONObject = pancr504ApplicationJSONObject;
         return this;
     }
     
+    public PancrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

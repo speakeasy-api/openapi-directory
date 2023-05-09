@@ -18,6 +18,7 @@ public class ListBackupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backups")
     public Backup[] backups;
+
     public ListBackupsResponse withBackups(Backup[] backups) {
         this.backups = backups;
         return this;
@@ -29,9 +30,11 @@ public class ListBackupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListBackupsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListBackupsResponse(){}
 }

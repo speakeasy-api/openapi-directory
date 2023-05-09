@@ -42,4 +42,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/QueryForecastRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryWhatIfForecastResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryWhatIfForecastRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

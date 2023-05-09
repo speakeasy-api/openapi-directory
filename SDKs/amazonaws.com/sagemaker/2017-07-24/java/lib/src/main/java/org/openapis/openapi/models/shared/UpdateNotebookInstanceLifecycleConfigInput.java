@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateNotebookInstanceLifecycleConfigInput {
     @JsonProperty("NotebookInstanceLifecycleConfigName")
     public String notebookInstanceLifecycleConfigName;
+
     public UpdateNotebookInstanceLifecycleConfigInput withNotebookInstanceLifecycleConfigName(String notebookInstanceLifecycleConfigName) {
         this.notebookInstanceLifecycleConfigName = notebookInstanceLifecycleConfigName;
         return this;
@@ -19,6 +20,7 @@ public class UpdateNotebookInstanceLifecycleConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnCreate")
     public NotebookInstanceLifecycleHook[] onCreate;
+
     public UpdateNotebookInstanceLifecycleConfigInput withOnCreate(NotebookInstanceLifecycleHook[] onCreate) {
         this.onCreate = onCreate;
         return this;
@@ -27,9 +29,13 @@ public class UpdateNotebookInstanceLifecycleConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnStart")
     public NotebookInstanceLifecycleHook[] onStart;
+
     public UpdateNotebookInstanceLifecycleConfigInput withOnStart(NotebookInstanceLifecycleHook[] onStart) {
         this.onStart = onStart;
         return this;
     }
     
+    public UpdateNotebookInstanceLifecycleConfigInput(@JsonProperty("NotebookInstanceLifecycleConfigName") String notebookInstanceLifecycleConfigName) {
+        this.notebookInstanceLifecycleConfigName = notebookInstanceLifecycleConfigName;
+  }
 }

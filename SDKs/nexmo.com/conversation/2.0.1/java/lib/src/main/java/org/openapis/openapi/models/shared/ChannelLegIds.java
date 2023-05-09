@@ -15,9 +15,11 @@ public class ChannelLegIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leg_id")
     public String legId;
+
     public ChannelLegIds withLegId(String legId) {
         this.legId = legId;
         return this;
     }
     
+    public ChannelLegIds(){}
 }

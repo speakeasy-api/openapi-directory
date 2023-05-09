@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSetOnDisconnectRequest {
@@ -12,6 +13,7 @@ public class ProtocolMqttClientSetOnDisconnectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=action")
     public String action;
+
     public ProtocolMqttClientSetOnDisconnectRequest withAction(String action) {
         this.action = action;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolMqttClientSetOnDisconnectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolMqttClientSetOnDisconnectRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
     }
     
+    public ProtocolMqttClientSetOnDisconnectRequest(@JsonProperty("action") String action, @JsonProperty("agentNum") Integer agentNum) {
+        this.action = action;
+        this.agentNum = agentNum;
+  }
 }

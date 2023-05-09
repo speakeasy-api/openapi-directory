@@ -18,6 +18,7 @@ public class DayPartTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daysOfWeek")
     public DayPartTargetingDaysOfWeekEnum[] daysOfWeek;
+
     public DayPartTargeting withDaysOfWeek(DayPartTargetingDaysOfWeekEnum[] daysOfWeek) {
         this.daysOfWeek = daysOfWeek;
         return this;
@@ -29,6 +30,7 @@ public class DayPartTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hoursOfDay")
     public Integer[] hoursOfDay;
+
     public DayPartTargeting withHoursOfDay(Integer[] hoursOfDay) {
         this.hoursOfDay = hoursOfDay;
         return this;
@@ -40,9 +42,11 @@ public class DayPartTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userLocalTime")
     public Boolean userLocalTime;
+
     public DayPartTargeting withUserLocalTime(Boolean userLocalTime) {
         this.userLocalTime = userLocalTime;
         return this;
     }
     
+    public DayPartTargeting(){}
 }

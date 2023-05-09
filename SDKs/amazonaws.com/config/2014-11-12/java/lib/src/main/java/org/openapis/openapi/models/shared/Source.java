@@ -15,6 +15,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomPolicyDetails")
     public CustomPolicyDetails customPolicyDetails;
+
     public Source withCustomPolicyDetails(CustomPolicyDetails customPolicyDetails) {
         this.customPolicyDetails = customPolicyDetails;
         return this;
@@ -22,6 +23,7 @@ public class Source {
     
     @JsonProperty("Owner")
     public OwnerEnum owner;
+
     public Source withOwner(OwnerEnum owner) {
         this.owner = owner;
         return this;
@@ -30,6 +32,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceDetails")
     public SourceDetail[] sourceDetails;
+
     public Source withSourceDetails(SourceDetail[] sourceDetails) {
         this.sourceDetails = sourceDetails;
         return this;
@@ -38,9 +41,13 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceIdentifier")
     public String sourceIdentifier;
+
     public Source withSourceIdentifier(String sourceIdentifier) {
         this.sourceIdentifier = sourceIdentifier;
         return this;
     }
     
+    public Source(@JsonProperty("Owner") OwnerEnum owner) {
+        this.owner = owner;
+  }
 }

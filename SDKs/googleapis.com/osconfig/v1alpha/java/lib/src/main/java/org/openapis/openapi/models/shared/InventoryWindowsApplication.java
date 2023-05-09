@@ -18,6 +18,7 @@ public class InventoryWindowsApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public InventoryWindowsApplication withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class InventoryWindowsApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayVersion")
     public String displayVersion;
+
     public InventoryWindowsApplication withDisplayVersion(String displayVersion) {
         this.displayVersion = displayVersion;
         return this;
@@ -40,6 +42,7 @@ public class InventoryWindowsApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("helpLink")
     public String helpLink;
+
     public InventoryWindowsApplication withHelpLink(String helpLink) {
         this.helpLink = helpLink;
         return this;
@@ -51,6 +54,7 @@ public class InventoryWindowsApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installDate")
     public Date installDate;
+
     public InventoryWindowsApplication withInstallDate(Date installDate) {
         this.installDate = installDate;
         return this;
@@ -62,9 +66,11 @@ public class InventoryWindowsApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher")
     public String publisher;
+
     public InventoryWindowsApplication withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
     }
     
+    public InventoryWindowsApplication(){}
 }

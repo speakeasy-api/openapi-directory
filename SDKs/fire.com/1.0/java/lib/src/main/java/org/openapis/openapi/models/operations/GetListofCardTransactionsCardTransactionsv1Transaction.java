@@ -20,6 +20,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountAfterCharges")
     public Long amountAfterCharges;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withAmountAfterCharges(Long amountAfterCharges) {
         this.amountAfterCharges = amountAfterCharges;
         return this;
@@ -31,6 +32,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountBeforeCharges")
     public Long amountBeforeCharges;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withAmountBeforeCharges(Long amountBeforeCharges) {
         this.amountBeforeCharges = amountBeforeCharges;
         return this;
@@ -42,6 +44,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Long balance;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withBalance(Long balance) {
         this.balance = balance;
         return this;
@@ -53,6 +56,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchItemDetails")
     public GetListofCardTransactionsCardTransactionsv1TransactionBatchItemDetails batchItemDetails;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withBatchItemDetails(GetListofCardTransactionsCardTransactionsv1TransactionBatchItemDetails batchItemDetails) {
         this.batchItemDetails = batchItemDetails;
         return this;
@@ -64,6 +68,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard card;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withCard(GetListofCardTransactionsCardTransactionsv1TransactionRelatedCard card) {
         this.card = card;
         return this;
@@ -75,6 +80,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public GetListofCardTransactionsCardTransactionsv1TransactionCurrency currency;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withCurrency(GetListofCardTransactionsCardTransactionsv1TransactionCurrency currency) {
         this.currency = currency;
         return this;
@@ -88,6 +94,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -98,6 +105,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateAcknowledged")
     public OffsetDateTime dateAcknowledged;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withDateAcknowledged(OffsetDateTime dateAcknowledged) {
         this.dateAcknowledged = dateAcknowledged;
         return this;
@@ -109,6 +117,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directDebitDetails")
     public GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDetails directDebitDetails;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withDirectDebitDetails(GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDetails directDebitDetails) {
         this.directDebitDetails = directDebitDetails;
         return this;
@@ -120,6 +129,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventUuid")
     public String eventUuid;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withEventUuid(String eventUuid) {
         this.eventUuid = eventUuid;
         return this;
@@ -131,6 +141,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feeAmount")
     public Long feeAmount;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withFeeAmount(Long feeAmount) {
         this.feeAmount = feeAmount;
         return this;
@@ -142,6 +153,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fxTradeDetails")
     public GetListofCardTransactionsCardTransactionsv1TransactionFxTrade fxTradeDetails;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withFxTradeDetails(GetListofCardTransactionsCardTransactionsv1TransactionFxTrade fxTradeDetails) {
         this.fxTradeDetails = fxTradeDetails;
         return this;
@@ -153,6 +165,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ican")
     public Long ican;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withIcan(Long ican) {
         this.ican = ican;
         return this;
@@ -164,6 +177,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("myRef")
     public String myRef;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withMyRef(String myRef) {
         this.myRef = myRef;
         return this;
@@ -175,6 +189,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentRequestPublicCode")
     public String paymentRequestPublicCode;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withPaymentRequestPublicCode(String paymentRequestPublicCode) {
         this.paymentRequestPublicCode = paymentRequestPublicCode;
         return this;
@@ -186,6 +201,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proprietarySchemeDetails")
     public GetListofCardTransactionsCardTransactionsv1TransactionProprietarySchemeDetails[] proprietarySchemeDetails;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withProprietarySchemeDetails(GetListofCardTransactionsCardTransactionsv1TransactionProprietarySchemeDetails[] proprietarySchemeDetails) {
         this.proprietarySchemeDetails = proprietarySchemeDetails;
         return this;
@@ -197,6 +213,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refId")
     public Long refId;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withRefId(Long refId) {
         this.refId = refId;
         return this;
@@ -208,6 +225,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedParty")
     public Object relatedParty;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withRelatedParty(Object relatedParty) {
         this.relatedParty = relatedParty;
         return this;
@@ -219,6 +237,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxAmount")
     public Long taxAmount;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withTaxAmount(Long taxAmount) {
         this.taxAmount = taxAmount;
         return this;
@@ -230,6 +249,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txnId")
     public Long txnId;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withTxnId(Long txnId) {
         this.txnId = txnId;
         return this;
@@ -291,6 +311,7 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withType(String type) {
         this.type = type;
         return this;
@@ -302,9 +323,11 @@ public class GetListofCardTransactionsCardTransactionsv1Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yourRef")
     public String yourRef;
+
     public GetListofCardTransactionsCardTransactionsv1Transaction withYourRef(String yourRef) {
         this.yourRef = yourRef;
         return this;
     }
     
+    public GetListofCardTransactionsCardTransactionsv1Transaction(){}
 }

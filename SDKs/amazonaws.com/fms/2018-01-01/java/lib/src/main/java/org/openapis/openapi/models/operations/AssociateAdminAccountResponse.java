@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateAdminAccountResponse {
     
     public String contentType;
+
     public AssociateAdminAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AssociateAdminAccountResponse {
      */
     
     public Object internalErrorException;
+
     public AssociateAdminAccountResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateAdminAccountResponse {
      */
     
     public Object invalidInputException;
+
     public AssociateAdminAccountResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateAdminAccountResponse {
      */
     
     public Object invalidOperationException;
+
     public AssociateAdminAccountResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateAdminAccountResponse {
      */
     
     public Object limitExceededException;
+
     public AssociateAdminAccountResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateAdminAccountResponse {
     
     
     public Integer statusCode;
+
     public AssociateAdminAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateAdminAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateAdminAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class AssociateAdminAccountResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateAdminAccountResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public AssociateAdminAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

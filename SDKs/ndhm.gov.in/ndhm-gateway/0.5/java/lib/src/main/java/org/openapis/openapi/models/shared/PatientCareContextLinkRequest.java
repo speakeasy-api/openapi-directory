@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class PatientCareContextLinkRequest {
     @JsonProperty("link")
     public PatientCareContextLink link;
+
     public PatientCareContextLinkRequest withLink(PatientCareContextLink link) {
         this.link = link;
         return this;
@@ -24,6 +25,7 @@ public class PatientCareContextLinkRequest {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public PatientCareContextLinkRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -36,9 +38,15 @@ public class PatientCareContextLinkRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public PatientCareContextLinkRequest withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public PatientCareContextLinkRequest(@JsonProperty("link") PatientCareContextLink link, @JsonProperty("requestId") String requestId, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.link = link;
+        this.requestId = requestId;
+        this.timestamp = timestamp;
+  }
 }

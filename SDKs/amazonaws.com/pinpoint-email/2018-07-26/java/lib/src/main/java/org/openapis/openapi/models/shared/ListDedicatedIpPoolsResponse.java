@@ -15,6 +15,7 @@ public class ListDedicatedIpPoolsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DedicatedIpPools")
     public String[] dedicatedIpPools;
+
     public ListDedicatedIpPoolsResponse withDedicatedIpPools(String[] dedicatedIpPools) {
         this.dedicatedIpPools = dedicatedIpPools;
         return this;
@@ -23,9 +24,11 @@ public class ListDedicatedIpPoolsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDedicatedIpPoolsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDedicatedIpPoolsResponse(){}
 }

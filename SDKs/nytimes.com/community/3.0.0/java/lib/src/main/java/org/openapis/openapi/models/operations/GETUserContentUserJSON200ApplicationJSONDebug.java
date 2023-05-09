@@ -12,9 +12,11 @@ public class GETUserContentUserJSON200ApplicationJSONDebug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Double version;
+
     public GETUserContentUserJSON200ApplicationJSONDebug withVersion(Double version) {
         this.version = version;
         return this;
     }
     
+    public GETUserContentUserJSON200ApplicationJSONDebug(){}
 }

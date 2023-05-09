@@ -15,9 +15,11 @@ public class Jwt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compactJwt")
     public String compactJwt;
+
     public Jwt withCompactJwt(String compactJwt) {
         this.compactJwt = compactJwt;
         return this;
     }
     
+    public Jwt(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse {
     
     public String contentType;
+
     public PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse {
     
     
     public Integer statusCode;
+
     public PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse {
      */
     
     public java.util.Map<String, Object> branchrestriction;
+
     public PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse withBranchrestriction(java.util.Map<String, Object> branchrestriction) {
         this.branchrestriction = branchrestriction;
         return this;
@@ -43,9 +48,14 @@ public class PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
     }
     
+    public PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListComplianceItemsResponse {
     
     public String contentType;
+
     public ListComplianceItemsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListComplianceItemsResponse {
      */
     
     public Object internalServerError;
+
     public ListComplianceItemsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ListComplianceItemsResponse {
      */
     
     public Object invalidFilter;
+
     public ListComplianceItemsResponse withInvalidFilter(Object invalidFilter) {
         this.invalidFilter = invalidFilter;
         return this;
@@ -39,6 +43,7 @@ public class ListComplianceItemsResponse {
      */
     
     public Object invalidNextToken;
+
     public ListComplianceItemsResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -49,6 +54,7 @@ public class ListComplianceItemsResponse {
      */
     
     public Object invalidResourceId;
+
     public ListComplianceItemsResponse withInvalidResourceId(Object invalidResourceId) {
         this.invalidResourceId = invalidResourceId;
         return this;
@@ -59,6 +65,7 @@ public class ListComplianceItemsResponse {
      */
     
     public Object invalidResourceType;
+
     public ListComplianceItemsResponse withInvalidResourceType(Object invalidResourceType) {
         this.invalidResourceType = invalidResourceType;
         return this;
@@ -69,6 +76,7 @@ public class ListComplianceItemsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListComplianceItemsResult listComplianceItemsResult;
+
     public ListComplianceItemsResponse withListComplianceItemsResult(org.openapis.openapi.models.shared.ListComplianceItemsResult listComplianceItemsResult) {
         this.listComplianceItemsResult = listComplianceItemsResult;
         return this;
@@ -76,6 +84,7 @@ public class ListComplianceItemsResponse {
     
     
     public Integer statusCode;
+
     public ListComplianceItemsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListComplianceItemsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListComplianceItemsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListComplianceItemsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

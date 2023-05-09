@@ -15,6 +15,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actual_amount")
     public Double actualAmount;
+
     public Period withActualAmount(Double actualAmount) {
         this.actualAmount = actualAmount;
         return this;
@@ -26,6 +27,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_code")
     public String currencyCode;
+
     public Period withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -37,6 +39,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current")
     public Boolean current;
+
     public Period withCurrent(Boolean current) {
         this.current = current;
         return this;
@@ -48,6 +51,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_date")
     public String endDate;
+
     public Period withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -59,6 +63,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forecast_amount")
     public Double forecastAmount;
+
     public Period withForecastAmount(Double forecastAmount) {
         this.forecastAmount = forecastAmount;
         return this;
@@ -70,6 +75,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("over_budget")
     public Boolean overBudget;
+
     public Period withOverBudget(Boolean overBudget) {
         this.overBudget = overBudget;
         return this;
@@ -81,6 +87,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("over_by")
     public Double overBy;
+
     public Period withOverBy(Double overBy) {
         this.overBy = overBy;
         return this;
@@ -92,6 +99,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage_used")
     public Double percentageUsed;
+
     public Period withPercentageUsed(Double percentageUsed) {
         this.percentageUsed = percentageUsed;
         return this;
@@ -103,6 +111,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_amount")
     public Double refundAmount;
+
     public Period withRefundAmount(Double refundAmount) {
         this.refundAmount = refundAmount;
         return this;
@@ -114,6 +123,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_date")
     public String startDate;
+
     public Period withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -125,6 +135,7 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("under_budget")
     public Boolean underBudget;
+
     public Period withUnderBudget(Boolean underBudget) {
         this.underBudget = underBudget;
         return this;
@@ -136,9 +147,11 @@ public class Period {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("under_by")
     public Double underBy;
+
     public Period withUnderBy(Double underBy) {
         this.underBy = underBy;
         return this;
     }
     
+    public Period(){}
 }

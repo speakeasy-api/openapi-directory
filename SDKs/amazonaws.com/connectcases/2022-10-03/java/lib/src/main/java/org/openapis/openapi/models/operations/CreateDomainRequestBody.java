@@ -12,9 +12,13 @@ public class CreateDomainRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateDomainRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateDomainRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

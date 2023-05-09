@@ -12,6 +12,7 @@ public class UpsertSellerCommissionsRequest {
      */
     @JsonProperty("categoryFullPath")
     public String categoryFullPath;
+
     public UpsertSellerCommissionsRequest withCategoryFullPath(String categoryFullPath) {
         this.categoryFullPath = categoryFullPath;
         return this;
@@ -22,6 +23,7 @@ public class UpsertSellerCommissionsRequest {
      */
     @JsonProperty("categoryId")
     public String categoryId;
+
     public UpsertSellerCommissionsRequest withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -32,6 +34,7 @@ public class UpsertSellerCommissionsRequest {
      */
     @JsonProperty("freightCommissionPercentage")
     public Double freightCommissionPercentage;
+
     public UpsertSellerCommissionsRequest withFreightCommissionPercentage(Double freightCommissionPercentage) {
         this.freightCommissionPercentage = freightCommissionPercentage;
         return this;
@@ -42,9 +45,16 @@ public class UpsertSellerCommissionsRequest {
      */
     @JsonProperty("productCommissionPercentage")
     public Double productCommissionPercentage;
+
     public UpsertSellerCommissionsRequest withProductCommissionPercentage(Double productCommissionPercentage) {
         this.productCommissionPercentage = productCommissionPercentage;
         return this;
     }
     
+    public UpsertSellerCommissionsRequest(@JsonProperty("categoryFullPath") String categoryFullPath, @JsonProperty("categoryId") String categoryId, @JsonProperty("freightCommissionPercentage") Double freightCommissionPercentage, @JsonProperty("productCommissionPercentage") Double productCommissionPercentage) {
+        this.categoryFullPath = categoryFullPath;
+        this.categoryId = categoryId;
+        this.freightCommissionPercentage = freightCommissionPercentage;
+        this.productCommissionPercentage = productCommissionPercentage;
+  }
 }

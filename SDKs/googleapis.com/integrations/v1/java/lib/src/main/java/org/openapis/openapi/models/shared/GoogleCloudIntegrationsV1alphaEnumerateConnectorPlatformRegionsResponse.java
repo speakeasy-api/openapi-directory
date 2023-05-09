@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaEnumerateConnectorPlatformRegionsResp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public String[] regions;
+
     public GoogleCloudIntegrationsV1alphaEnumerateConnectorPlatformRegionsResponse withRegions(String[] regions) {
         this.regions = regions;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaEnumerateConnectorPlatformRegionsResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEnvironmentResponse {
     
     public String contentType;
+
     public CreateEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public CreateEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateEnvironmentResponse {
      */
     
     public CreateEnvironment200ApplicationJSON createEnvironment200ApplicationJSONObject;
+
     public CreateEnvironmentResponse withCreateEnvironment200ApplicationJSONObject(CreateEnvironment200ApplicationJSON createEnvironment200ApplicationJSONObject) {
         this.createEnvironment200ApplicationJSONObject = createEnvironment200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class CreateEnvironmentResponse {
      */
     
     public CreateEnvironment400ApplicationJSON createEnvironment400ApplicationJSONObject;
+
     public CreateEnvironmentResponse withCreateEnvironment400ApplicationJSONObject(CreateEnvironment400ApplicationJSON createEnvironment400ApplicationJSONObject) {
         this.createEnvironment400ApplicationJSONObject = createEnvironment400ApplicationJSONObject;
         return this;
     }
     
+    public CreateEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

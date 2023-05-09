@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * StemmingOptionsStatus - The stemming options configured for this search domain and the current status of those options.
@@ -15,6 +15,7 @@ public class StemmingOptionsStatus {
      */
     
     public String options;
+
     public StemmingOptionsStatus withOptions(String options) {
         this.options = options;
         return this;
@@ -25,9 +26,14 @@ public class StemmingOptionsStatus {
      */
     
     public OptionStatus status;
+
     public StemmingOptionsStatus withStatus(OptionStatus status) {
         this.status = status;
         return this;
     }
     
+    public StemmingOptionsStatus(@JsonProperty("Options") String options, @JsonProperty("Status") OptionStatus status) {
+        this.options = options;
+        this.status = status;
+  }
 }

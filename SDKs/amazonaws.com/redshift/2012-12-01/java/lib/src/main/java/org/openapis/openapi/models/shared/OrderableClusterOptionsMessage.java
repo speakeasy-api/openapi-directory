@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class OrderableClusterOptionsMessage {
     
     public String marker;
+
     public OrderableClusterOptionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class OrderableClusterOptionsMessage {
     
     
     public OrderableClusterOptionsList[] orderableClusterOptions;
+
     public OrderableClusterOptionsMessage withOrderableClusterOptions(OrderableClusterOptionsList[] orderableClusterOptions) {
         this.orderableClusterOptions = orderableClusterOptions;
         return this;
     }
     
+    public OrderableClusterOptionsMessage(){}
 }

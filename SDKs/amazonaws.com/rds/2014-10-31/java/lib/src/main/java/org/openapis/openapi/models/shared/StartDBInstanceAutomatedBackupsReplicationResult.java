@@ -15,9 +15,11 @@ public class StartDBInstanceAutomatedBackupsReplicationResult {
      */
     
     public DBInstanceAutomatedBackup dbInstanceAutomatedBackup;
+
     public StartDBInstanceAutomatedBackupsReplicationResult withDBInstanceAutomatedBackup(DBInstanceAutomatedBackup dbInstanceAutomatedBackup) {
         this.dbInstanceAutomatedBackup = dbInstanceAutomatedBackup;
         return this;
     }
     
+    public StartDBInstanceAutomatedBackupsReplicationResult(){}
 }

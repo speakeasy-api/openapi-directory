@@ -15,6 +15,7 @@ public class RegionSetPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindings")
     public Binding[] bindings;
+
     public RegionSetPolicyRequest withBindings(Binding[] bindings) {
         this.bindings = bindings;
         return this;
@@ -26,6 +27,7 @@ public class RegionSetPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public RegionSetPolicyRequest withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -37,9 +39,11 @@ public class RegionSetPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public Policy policy;
+
     public RegionSetPolicyRequest withPolicy(Policy policy) {
         this.policy = policy;
         return this;
     }
     
+    public RegionSetPolicyRequest(){}
 }

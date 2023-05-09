@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisableFastSnapshotRestoresRequest {
     
     public String[] availabilityZones;
+
     public DisableFastSnapshotRestoresRequest withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -16,6 +17,7 @@ public class DisableFastSnapshotRestoresRequest {
     
     
     public Boolean dryRun;
+
     public DisableFastSnapshotRestoresRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,14 @@ public class DisableFastSnapshotRestoresRequest {
     
     
     public String[] sourceSnapshotIds;
+
     public DisableFastSnapshotRestoresRequest withSourceSnapshotIds(String[] sourceSnapshotIds) {
         this.sourceSnapshotIds = sourceSnapshotIds;
         return this;
     }
     
+    public DisableFastSnapshotRestoresRequest(@JsonProperty("AvailabilityZones") String[] availabilityZones, @JsonProperty("SourceSnapshotIds") String[] sourceSnapshotIds) {
+        this.availabilityZones = availabilityZones;
+        this.sourceSnapshotIds = sourceSnapshotIds;
+  }
 }

@@ -18,6 +18,7 @@ public class SetLiveOnGoogleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedHotelIds")
     public String[] failedHotelIds;
+
     public SetLiveOnGoogleResponse withFailedHotelIds(String[] failedHotelIds) {
         this.failedHotelIds = failedHotelIds;
         return this;
@@ -29,9 +30,11 @@ public class SetLiveOnGoogleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedHotelIds")
     public String[] updatedHotelIds;
+
     public SetLiveOnGoogleResponse withUpdatedHotelIds(String[] updatedHotelIds) {
         this.updatedHotelIds = updatedHotelIds;
         return this;
     }
     
+    public SetLiveOnGoogleResponse(){}
 }

@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateOrUpdateTagsType {
     
     public Tag[] tags;
+
     public CreateOrUpdateTagsType withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateOrUpdateTagsType(@JsonProperty("Tags") Tag[] tags) {
+        this.tags = tags;
+  }
 }

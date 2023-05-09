@@ -18,6 +18,7 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http")
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckHttp http;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheck withHttp(GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckHttp http) {
         this.http = http;
         return this;
@@ -28,6 +29,7 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
      */
     @JsonProperty("interval")
     public Long interval;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheck withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -38,6 +40,7 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
      */
     @JsonProperty("port")
     public Long port;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheck withPort(Long port) {
         this.port = port;
         return this;
@@ -48,6 +51,7 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
      */
     @JsonProperty("protocol")
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum protocol;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheck withProtocol(GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -58,6 +62,7 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
      */
     @JsonProperty("retries")
     public Long retries;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheck withRetries(Long retries) {
         this.retries = retries;
         return this;
@@ -68,9 +73,17 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
      */
     @JsonProperty("timeout")
     public Long timeout;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheck withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheck(@JsonProperty("interval") Long interval, @JsonProperty("port") Long port, @JsonProperty("protocol") GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum protocol, @JsonProperty("retries") Long retries, @JsonProperty("timeout") Long timeout) {
+        this.interval = interval;
+        this.port = port;
+        this.protocol = protocol;
+        this.retries = retries;
+        this.timeout = timeout;
+  }
 }

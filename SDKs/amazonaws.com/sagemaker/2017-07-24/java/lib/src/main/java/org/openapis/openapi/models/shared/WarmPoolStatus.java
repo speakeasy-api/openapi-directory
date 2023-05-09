@@ -15,6 +15,7 @@ public class WarmPoolStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceRetainedBillableTimeInSeconds")
     public Long resourceRetainedBillableTimeInSeconds;
+
     public WarmPoolStatus withResourceRetainedBillableTimeInSeconds(Long resourceRetainedBillableTimeInSeconds) {
         this.resourceRetainedBillableTimeInSeconds = resourceRetainedBillableTimeInSeconds;
         return this;
@@ -23,6 +24,7 @@ public class WarmPoolStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReusedByJob")
     public String reusedByJob;
+
     public WarmPoolStatus withReusedByJob(String reusedByJob) {
         this.reusedByJob = reusedByJob;
         return this;
@@ -30,9 +32,13 @@ public class WarmPoolStatus {
     
     @JsonProperty("Status")
     public WarmPoolResourceStatusEnum status;
+
     public WarmPoolStatus withStatus(WarmPoolResourceStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public WarmPoolStatus(@JsonProperty("Status") WarmPoolResourceStatusEnum status) {
+        this.status = status;
+  }
 }

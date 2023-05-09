@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Status - The current status of this review
@@ -15,6 +15,7 @@ public class Status {
      */
     
     public Profanity[] profanity;
+
     public Status withProfanity(Profanity[] profanity) {
         this.profanity = profanity;
         return this;
@@ -25,6 +26,7 @@ public class Status {
      */
     
     public StatusReasonEnum reason;
+
     public Status withReason(StatusReasonEnum reason) {
         this.reason = reason;
         return this;
@@ -35,9 +37,15 @@ public class Status {
      */
     
     public StatusValueEnum value;
+
     public Status withValue(StatusValueEnum value) {
         this.value = value;
         return this;
     }
     
+    public Status(@JsonProperty("profanity") Profanity[] profanity, @JsonProperty("reason") StatusReasonEnum reason, @JsonProperty("value") StatusValueEnum value) {
+        this.profanity = profanity;
+        this.reason = reason;
+        this.value = value;
+  }
 }

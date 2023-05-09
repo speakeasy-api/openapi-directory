@@ -66,12 +66,10 @@ public class Bets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CashinResponse res = new org.openapis.openapi.models.operations.CashinResponse() {{
+        org.openapis.openapi.models.operations.CashinResponse res = new org.openapis.openapi.models.operations.CashinResponse(contentType, httpRes.statusCode()) {{
             cashInResponse = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,8 +91,8 @@ public class Bets {
     }
 
     /**
-     * Retrieves the customer\u2019s bet history.
-     * Retrieves the customer\u2019s bet history. Options are available to organise the history in terms of date, bet type and settled and unsettled bets. The maximum number of bets and bet history pages retrieved can also be set.
+     * Retrieves the customer’s bet history.
+     * Retrieves the customer’s bet history. Options are available to organise the history in terms of date, bet type and settled and unsettled bets. The maximum number of bets and bet history pages retrieved can also be set.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -127,12 +125,10 @@ public class Bets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBetHistoryResponse res = new org.openapis.openapi.models.operations.GetBetHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetBetHistoryResponse res = new org.openapis.openapi.models.operations.GetBetHistoryResponse(contentType, httpRes.statusCode()) {{
             betHistoryResponse = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,11 +184,9 @@ public class Bets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFreeBetsResponse res = new org.openapis.openapi.models.operations.GetFreeBetsResponse() {{
+        org.openapis.openapi.models.operations.GetFreeBetsResponse res = new org.openapis.openapi.models.operations.GetFreeBetsResponse(contentType, httpRes.statusCode()) {{
             freeBet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,13 +242,11 @@ public class Bets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaceComplexBetResponse res = new org.openapis.openapi.models.operations.PlaceComplexBetResponse() {{
+        org.openapis.openapi.models.operations.PlaceComplexBetResponse res = new org.openapis.openapi.models.operations.PlaceComplexBetResponse(contentType, httpRes.statusCode()) {{
             betPlacedResponse = null;
             betDelayedResponse = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -322,13 +314,11 @@ public class Bets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaceSingleBetResponse res = new org.openapis.openapi.models.operations.PlaceSingleBetResponse() {{
+        org.openapis.openapi.models.operations.PlaceSingleBetResponse res = new org.openapis.openapi.models.operations.PlaceSingleBetResponse(contentType, httpRes.statusCode()) {{
             betPlacedResponse = null;
             betDelayedResponse = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -395,11 +385,9 @@ public class Bets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ValidateBetslipResponse res = new org.openapis.openapi.models.operations.ValidateBetslipResponse() {{
+        org.openapis.openapi.models.operations.ValidateBetslipResponse res = new org.openapis.openapi.models.operations.ValidateBetslipResponse(contentType, httpRes.statusCode()) {{
             betSlipResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class SNOMEDCTEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public SNOMEDCTAttribute[] attributes;
+
     public SNOMEDCTEntity withAttributes(SNOMEDCTAttribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class SNOMEDCTEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public SNOMEDCTEntity withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -31,6 +33,7 @@ public class SNOMEDCTEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Category")
     public SNOMEDCTEntityCategoryEnum category;
+
     public SNOMEDCTEntity withCategory(SNOMEDCTEntityCategoryEnum category) {
         this.category = category;
         return this;
@@ -39,6 +42,7 @@ public class SNOMEDCTEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public SNOMEDCTEntity withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -47,6 +51,7 @@ public class SNOMEDCTEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public SNOMEDCTEntity withId(Long id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class SNOMEDCTEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SNOMEDCTConcepts")
     public SNOMEDCTConcept[] snomedctConcepts;
+
     public SNOMEDCTEntity withSNOMEDCTConcepts(SNOMEDCTConcept[] snomedctConcepts) {
         this.snomedctConcepts = snomedctConcepts;
         return this;
@@ -63,6 +69,7 @@ public class SNOMEDCTEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public SNOMEDCTEntity withScore(Float score) {
         this.score = score;
         return this;
@@ -71,6 +78,7 @@ public class SNOMEDCTEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public SNOMEDCTEntity withText(String text) {
         this.text = text;
         return this;
@@ -79,6 +87,7 @@ public class SNOMEDCTEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Traits")
     public SNOMEDCTTrait[] traits;
+
     public SNOMEDCTEntity withTraits(SNOMEDCTTrait[] traits) {
         this.traits = traits;
         return this;
@@ -87,9 +96,11 @@ public class SNOMEDCTEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public SNOMEDCTEntityTypeEnum type;
+
     public SNOMEDCTEntity withType(SNOMEDCTEntityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SNOMEDCTEntity(){}
 }

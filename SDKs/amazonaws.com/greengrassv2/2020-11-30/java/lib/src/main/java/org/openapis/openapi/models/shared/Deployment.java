@@ -22,6 +22,7 @@ public class Deployment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTimestamp")
     public OffsetDateTime creationTimestamp;
+
     public Deployment withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public Deployment withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -38,6 +40,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentName")
     public String deploymentName;
+
     public Deployment withDeploymentName(String deploymentName) {
         this.deploymentName = deploymentName;
         return this;
@@ -46,6 +49,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentStatus")
     public DeploymentStatusEnum deploymentStatus;
+
     public Deployment withDeploymentStatus(DeploymentStatusEnum deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -54,6 +58,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isLatestForTarget")
     public Boolean isLatestForTarget;
+
     public Deployment withIsLatestForTarget(Boolean isLatestForTarget) {
         this.isLatestForTarget = isLatestForTarget;
         return this;
@@ -62,6 +67,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentTargetArn")
     public String parentTargetArn;
+
     public Deployment withParentTargetArn(String parentTargetArn) {
         this.parentTargetArn = parentTargetArn;
         return this;
@@ -70,6 +76,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public Deployment withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -78,9 +85,11 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetArn")
     public String targetArn;
+
     public Deployment withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
     }
     
+    public Deployment(){}
 }

@@ -12,6 +12,7 @@ public class TagSingle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TagSingle withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class TagSingle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("games_count")
     public Long gamesCount;
+
     public TagSingle withGamesCount(Long gamesCount) {
         this.gamesCount = gamesCount;
         return this;
@@ -28,6 +30,7 @@ public class TagSingle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TagSingle withId(Long id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class TagSingle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_background")
     public String imageBackground;
+
     public TagSingle withImageBackground(String imageBackground) {
         this.imageBackground = imageBackground;
         return this;
@@ -43,6 +47,7 @@ public class TagSingle {
     
     @JsonProperty("name")
     public String name;
+
     public TagSingle withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +56,13 @@ public class TagSingle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public TagSingle withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public TagSingle(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FinalAutoMLJobObjectiveMetric {
     @JsonProperty("MetricName")
     public AutoMLMetricEnumEnum metricName;
+
     public FinalAutoMLJobObjectiveMetric withMetricName(AutoMLMetricEnumEnum metricName) {
         this.metricName = metricName;
         return this;
@@ -22,6 +23,7 @@ public class FinalAutoMLJobObjectiveMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardMetricName")
     public AutoMLMetricEnumEnum standardMetricName;
+
     public FinalAutoMLJobObjectiveMetric withStandardMetricName(AutoMLMetricEnumEnum standardMetricName) {
         this.standardMetricName = standardMetricName;
         return this;
@@ -30,6 +32,7 @@ public class FinalAutoMLJobObjectiveMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public AutoMLJobObjectiveTypeEnum type;
+
     public FinalAutoMLJobObjectiveMetric withType(AutoMLJobObjectiveTypeEnum type) {
         this.type = type;
         return this;
@@ -37,9 +40,14 @@ public class FinalAutoMLJobObjectiveMetric {
     
     @JsonProperty("Value")
     public Float value;
+
     public FinalAutoMLJobObjectiveMetric withValue(Float value) {
         this.value = value;
         return this;
     }
     
+    public FinalAutoMLJobObjectiveMetric(@JsonProperty("MetricName") AutoMLMetricEnumEnum metricName, @JsonProperty("Value") Float value) {
+        this.metricName = metricName;
+        this.value = value;
+  }
 }

@@ -147,6 +147,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -184,7 +189,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateHomeRegionControlResponse res = new org.openapis.openapi.models.operations.CreateHomeRegionControlResponse() {{
+        org.openapis.openapi.models.operations.CreateHomeRegionControlResponse res = new org.openapis.openapi.models.operations.CreateHomeRegionControlResponse(contentType, httpRes.statusCode()) {{
             createHomeRegionControlResult = null;
             internalServerError = null;
             serviceUnavailableException = null;
@@ -193,8 +198,6 @@ public class SDK {
             dryRunOperation = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,7 +293,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeHomeRegionControlsResponse res = new org.openapis.openapi.models.operations.DescribeHomeRegionControlsResponse() {{
+        org.openapis.openapi.models.operations.DescribeHomeRegionControlsResponse res = new org.openapis.openapi.models.operations.DescribeHomeRegionControlsResponse(contentType, httpRes.statusCode()) {{
             describeHomeRegionControlsResult = null;
             internalServerError = null;
             serviceUnavailableException = null;
@@ -298,8 +301,6 @@ public class SDK {
             throttlingException = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -382,7 +383,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHomeRegionResponse res = new org.openapis.openapi.models.operations.GetHomeRegionResponse() {{
+        org.openapis.openapi.models.operations.GetHomeRegionResponse res = new org.openapis.openapi.models.operations.GetHomeRegionResponse(contentType, httpRes.statusCode()) {{
             getHomeRegionResult = null;
             internalServerError = null;
             serviceUnavailableException = null;
@@ -390,8 +391,6 @@ public class SDK {
             throttlingException = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

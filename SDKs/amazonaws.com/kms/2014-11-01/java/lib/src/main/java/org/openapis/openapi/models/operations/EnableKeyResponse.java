@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableKeyResponse {
     
     public String contentType;
+
     public EnableKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EnableKeyResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public EnableKeyResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class EnableKeyResponse {
      */
     
     public Object invalidArnException;
+
     public EnableKeyResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class EnableKeyResponse {
      */
     
     public Object kmsInternalException;
+
     public EnableKeyResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -49,6 +54,7 @@ public class EnableKeyResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public EnableKeyResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -59,6 +65,7 @@ public class EnableKeyResponse {
      */
     
     public Object limitExceededException;
+
     public EnableKeyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class EnableKeyResponse {
      */
     
     public Object notFoundException;
+
     public EnableKeyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class EnableKeyResponse {
     
     
     public Integer statusCode;
+
     public EnableKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class EnableKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EnableKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

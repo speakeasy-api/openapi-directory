@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class FailoverDBClusterMessage {
     
     public String dbClusterIdentifier;
+
     public FailoverDBClusterMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -16,9 +17,11 @@ public class FailoverDBClusterMessage {
     
     
     public String targetDBInstanceIdentifier;
+
     public FailoverDBClusterMessage withTargetDBInstanceIdentifier(String targetDBInstanceIdentifier) {
         this.targetDBInstanceIdentifier = targetDBInstanceIdentifier;
         return this;
     }
     
+    public FailoverDBClusterMessage(){}
 }

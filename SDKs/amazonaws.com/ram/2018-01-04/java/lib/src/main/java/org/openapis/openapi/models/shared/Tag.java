@@ -15,6 +15,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Tag withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Tag withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Tag(){}
 }

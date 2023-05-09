@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateResourceShareResponse {
@@ -12,6 +13,7 @@ public class AssociateResourceShareResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateResourceShareResponse associateResourceShareResponse;
+
     public AssociateResourceShareResponse withAssociateResourceShareResponse(org.openapis.openapi.models.shared.AssociateResourceShareResponse associateResourceShareResponse) {
         this.associateResourceShareResponse = associateResourceShareResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateResourceShareResponse {
     
     
     public String contentType;
+
     public AssociateResourceShareResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateResourceShareResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public AssociateResourceShareResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateResourceShareResponse {
      */
     
     public Object invalidClientTokenException;
+
     public AssociateResourceShareResponse withInvalidClientTokenException(Object invalidClientTokenException) {
         this.invalidClientTokenException = invalidClientTokenException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateResourceShareResponse {
      */
     
     public Object invalidParameterException;
+
     public AssociateResourceShareResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateResourceShareResponse {
      */
     
     public Object invalidStateTransitionException;
+
     public AssociateResourceShareResponse withInvalidStateTransitionException(Object invalidStateTransitionException) {
         this.invalidStateTransitionException = invalidStateTransitionException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateResourceShareResponse {
      */
     
     public Object malformedArnException;
+
     public AssociateResourceShareResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -79,6 +87,7 @@ public class AssociateResourceShareResponse {
      */
     
     public Object operationNotPermittedException;
+
     public AssociateResourceShareResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -86,6 +95,7 @@ public class AssociateResourceShareResponse {
     
     
     public Integer statusCode;
+
     public AssociateResourceShareResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class AssociateResourceShareResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateResourceShareResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class AssociateResourceShareResponse {
      */
     
     public Object resourceShareLimitExceededException;
+
     public AssociateResourceShareResponse withResourceShareLimitExceededException(Object resourceShareLimitExceededException) {
         this.resourceShareLimitExceededException = resourceShareLimitExceededException;
         return this;
@@ -113,6 +125,7 @@ public class AssociateResourceShareResponse {
      */
     
     public Object serverInternalException;
+
     public AssociateResourceShareResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -123,6 +136,7 @@ public class AssociateResourceShareResponse {
      */
     
     public Object serviceUnavailableException;
+
     public AssociateResourceShareResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -133,6 +147,7 @@ public class AssociateResourceShareResponse {
      */
     
     public Object throttlingException;
+
     public AssociateResourceShareResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -143,9 +158,14 @@ public class AssociateResourceShareResponse {
      */
     
     public Object unknownResourceException;
+
     public AssociateResourceShareResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public AssociateResourceShareResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

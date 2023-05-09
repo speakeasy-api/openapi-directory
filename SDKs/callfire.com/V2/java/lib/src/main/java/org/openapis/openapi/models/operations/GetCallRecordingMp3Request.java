@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCallRecordingMp3Request {
@@ -12,9 +13,13 @@ public class GetCallRecordingMp3Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetCallRecordingMp3Request withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetCallRecordingMp3Request(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

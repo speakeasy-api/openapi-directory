@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RollbackTrigger - A rollback trigger CloudFormation monitors during creation and updating of stacks. If any of the alarms you specify goes to ALARM state during the stack operation or within the specified monitoring period afterwards, CloudFormation rolls back the entire stack operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RollbackTrigger {
     
     public String arn;
+
     public RollbackTrigger withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,14 @@ public class RollbackTrigger {
     
     
     public String type;
+
     public RollbackTrigger withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RollbackTrigger(@JsonProperty("Arn") String arn, @JsonProperty("Type") String type) {
+        this.arn = arn;
+        this.type = type;
+  }
 }

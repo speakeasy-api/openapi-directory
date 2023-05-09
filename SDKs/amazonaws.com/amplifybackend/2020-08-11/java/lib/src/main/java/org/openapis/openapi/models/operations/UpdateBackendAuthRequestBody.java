@@ -12,6 +12,7 @@ public class UpdateBackendAuthRequestBody {
      */
     @JsonProperty("resourceConfig")
     public UpdateBackendAuthRequestBodyResourceConfig resourceConfig;
+
     public UpdateBackendAuthRequestBody withResourceConfig(UpdateBackendAuthRequestBodyResourceConfig resourceConfig) {
         this.resourceConfig = resourceConfig;
         return this;
@@ -22,9 +23,14 @@ public class UpdateBackendAuthRequestBody {
      */
     @JsonProperty("resourceName")
     public String resourceName;
+
     public UpdateBackendAuthRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public UpdateBackendAuthRequestBody(@JsonProperty("resourceConfig") UpdateBackendAuthRequestBodyResourceConfig resourceConfig, @JsonProperty("resourceName") String resourceName) {
+        this.resourceConfig = resourceConfig;
+        this.resourceName = resourceName;
+  }
 }

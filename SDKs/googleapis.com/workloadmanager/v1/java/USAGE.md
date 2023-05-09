@@ -3,16 +3,15 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity;
 import org.openapis.openapi.models.operations.WorkloadmanagerProjectsLocationsEvaluationsCreateRequest;
 import org.openapis.openapi.models.operations.WorkloadmanagerProjectsLocationsEvaluationsCreateResponse;
+import org.openapis.openapi.models.operations.WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.EvaluationInput;
-import org.openapis.openapi.models.shared.ResourceStatusStateEnum;
-import org.openapis.openapi.models.shared.ResourceStatus;
-import org.openapis.openapi.models.shared.ResourceFilter;
 import org.openapis.openapi.models.shared.GceInstanceFilter;
+import org.openapis.openapi.models.shared.ResourceFilter;
+import org.openapis.openapi.models.shared.ResourceStatus;
+import org.openapis.openapi.models.shared.ResourceStatusStateEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -21,81 +20,80 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            WorkloadmanagerProjectsLocationsEvaluationsCreateRequest req = new WorkloadmanagerProjectsLocationsEvaluationsCreateRequest() {{
-                dollarXgafv = "2";
+            WorkloadmanagerProjectsLocationsEvaluationsCreateRequest req = new WorkloadmanagerProjectsLocationsEvaluationsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 evaluationInput = new EvaluationInput() {{
-                    description = "provident";
+                    description = "distinctio";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("quibusdam", "unde");
-                        put("nulla", "corrupti");
-                        put("illum", "vel");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
+                        put("vel", "error");
+                        put("deserunt", "suscipit");
                     }};
-                    name = "error";
+                    name = "Dr. Valerie Toy";
                     resourceFilter = new ResourceFilter() {{
                         gceInstanceFilter = new GceInstanceFilter() {{
                             serviceAccounts = new String[]{{
-                                add("suscipit"),
-                                add("iure"),
-                                add("magnam"),
+                                add("molestiae"),
+                                add("minus"),
                             }};
-                        }};
+                        }};;
                         inclusionLabels = new java.util.HashMap<String, String>() {{
-                            put("ipsa", "delectus");
-                            put("tempora", "suscipit");
-                            put("molestiae", "minus");
-                            put("placeat", "voluptatum");
+                            put("voluptatum", "iusto");
+                            put("excepturi", "nisi");
+                            put("recusandae", "temporibus");
+                            put("ab", "quis");
                         }};
                         resourceIdPatterns = new String[]{{
-                            add("excepturi"),
-                            add("nisi"),
+                            add("deserunt"),
                         }};
                         scopes = new String[]{{
-                            add("temporibus"),
-                            add("ab"),
-                            add("quis"),
-                            add("veritatis"),
+                            add("ipsam"),
                         }};
-                    }};
+                    }};;
                     resourceStatus = new ResourceStatus() {{
                         rulesNewerVersions = new String[]{{
-                            add("perferendis"),
-                            add("ipsam"),
-                            add("repellendus"),
+                            add("sapiente"),
+                            add("quo"),
+                            add("odit"),
+                            add("at"),
                         }};
-                        state = "DELETING";
-                    }};
+                        state = ResourceStatusStateEnum.DELETING;
+                    }};;
                     ruleNames = new String[]{{
-                        add("odit"),
-                        add("at"),
-                        add("at"),
-                        add("maiores"),
+                        add("molestiae"),
+                        add("quod"),
+                        add("quod"),
+                        add("esse"),
                     }};
-                }};
-                accessToken = "molestiae";
-                alt = "proto";
-                callback = "quod";
-                evaluationId = "esse";
-                fields = "totam";
-                key = "porro";
-                oauthToken = "dolorum";
-                parent = "dicta";
+                    schedule = "totam";
+                }};;
+                accessToken = "porro";
+                alt = AltEnum.PROTO;
+                callback = "dicta";
+                evaluationId = "nam";
+                fields = "officia";
+                key = "occaecati";
+                oauthToken = "fugit";
                 prettyPrint = false;
-                quotaUser = "nam";
-                requestId = "officia";
-                uploadType = "occaecati";
-                uploadProtocol = "fugit";
-            }}            
+                quotaUser = "deleniti";
+                requestId = "hic";
+                uploadType = "optio";
+                uploadProtocol = "totam";
+            }};            
 
-            WorkloadmanagerProjectsLocationsEvaluationsCreateResponse res = sdk.projects.workloadmanagerProjectsLocationsEvaluationsCreate(req, new WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity() {{
+            WorkloadmanagerProjectsLocationsEvaluationsCreateResponse res = sdk.projects.workloadmanagerProjectsLocationsEvaluationsCreate(req, new WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity("beatae", "commodi") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListServerNeighborsRequest {
     @JsonProperty("configurationId")
     public String configurationId;
+
     public ListServerNeighborsRequest withConfigurationId(String configurationId) {
         this.configurationId = configurationId;
         return this;
@@ -19,6 +20,7 @@ public class ListServerNeighborsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListServerNeighborsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class ListServerNeighborsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("neighborConfigurationIds")
     public String[] neighborConfigurationIds;
+
     public ListServerNeighborsRequest withNeighborConfigurationIds(String[] neighborConfigurationIds) {
         this.neighborConfigurationIds = neighborConfigurationIds;
         return this;
@@ -35,6 +38,7 @@ public class ListServerNeighborsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListServerNeighborsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -43,9 +47,13 @@ public class ListServerNeighborsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portInformationNeeded")
     public Boolean portInformationNeeded;
+
     public ListServerNeighborsRequest withPortInformationNeeded(Boolean portInformationNeeded) {
         this.portInformationNeeded = portInformationNeeded;
         return this;
     }
     
+    public ListServerNeighborsRequest(@JsonProperty("configurationId") String configurationId) {
+        this.configurationId = configurationId;
+  }
 }

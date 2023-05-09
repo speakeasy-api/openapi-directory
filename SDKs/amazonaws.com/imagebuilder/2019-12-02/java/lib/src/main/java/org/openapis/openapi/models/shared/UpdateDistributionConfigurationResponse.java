@@ -15,6 +15,7 @@ public class UpdateDistributionConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateDistributionConfigurationResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +24,7 @@ public class UpdateDistributionConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionConfigurationArn")
     public String distributionConfigurationArn;
+
     public UpdateDistributionConfigurationResponse withDistributionConfigurationArn(String distributionConfigurationArn) {
         this.distributionConfigurationArn = distributionConfigurationArn;
         return this;
@@ -31,9 +33,11 @@ public class UpdateDistributionConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public UpdateDistributionConfigurationResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public UpdateDistributionConfigurationResponse(){}
 }

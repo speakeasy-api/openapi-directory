@@ -15,6 +15,7 @@ public class ListComponentTypesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.ListComponentTypesFilter[] filters;
+
     public ListComponentTypesRequestBody withFilters(org.openapis.openapi.models.shared.ListComponentTypesFilter[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class ListComponentTypesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListComponentTypesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListComponentTypesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListComponentTypesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListComponentTypesRequestBody(){}
 }

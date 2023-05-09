@@ -15,6 +15,7 @@ public class GetThirdPartyFirewallAssociationStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MarketplaceOnboardingStatus")
     public MarketplaceSubscriptionOnboardingStatusEnum marketplaceOnboardingStatus;
+
     public GetThirdPartyFirewallAssociationStatusResponse withMarketplaceOnboardingStatus(MarketplaceSubscriptionOnboardingStatusEnum marketplaceOnboardingStatus) {
         this.marketplaceOnboardingStatus = marketplaceOnboardingStatus;
         return this;
@@ -23,9 +24,11 @@ public class GetThirdPartyFirewallAssociationStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThirdPartyFirewallStatus")
     public ThirdPartyFirewallAssociationStatusEnum thirdPartyFirewallStatus;
+
     public GetThirdPartyFirewallAssociationStatusResponse withThirdPartyFirewallStatus(ThirdPartyFirewallAssociationStatusEnum thirdPartyFirewallStatus) {
         this.thirdPartyFirewallStatus = thirdPartyFirewallStatus;
         return this;
     }
     
+    public GetThirdPartyFirewallAssociationStatusResponse(){}
 }

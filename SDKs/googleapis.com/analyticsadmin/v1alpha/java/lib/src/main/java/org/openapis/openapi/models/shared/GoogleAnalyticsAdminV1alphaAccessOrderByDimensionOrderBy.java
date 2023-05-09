@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAccessOrderByDimensionOrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionName")
     public String dimensionName;
+
     public GoogleAnalyticsAdminV1alphaAccessOrderByDimensionOrderBy withDimensionName(String dimensionName) {
         this.dimensionName = dimensionName;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaAccessOrderByDimensionOrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderType")
     public GoogleAnalyticsAdminV1alphaAccessOrderByDimensionOrderByOrderTypeEnum orderType;
+
     public GoogleAnalyticsAdminV1alphaAccessOrderByDimensionOrderBy withOrderType(GoogleAnalyticsAdminV1alphaAccessOrderByDimensionOrderByOrderTypeEnum orderType) {
         this.orderType = orderType;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAccessOrderByDimensionOrderBy(){}
 }

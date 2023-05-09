@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineSearchRequest {
@@ -12,6 +13,7 @@ public class LineSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modes")
     public String[] modes;
+
     public LineSearchRequest withModes(String[] modes) {
         this.modes = modes;
         return this;
@@ -22,6 +24,7 @@ public class LineSearchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
     public String query;
+
     public LineSearchRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -32,9 +35,13 @@ public class LineSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceTypes")
     public LineSearchServiceTypesEnum[] serviceTypes;
+
     public LineSearchRequest withServiceTypes(LineSearchServiceTypesEnum[] serviceTypes) {
         this.serviceTypes = serviceTypes;
         return this;
     }
     
+    public LineSearchRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

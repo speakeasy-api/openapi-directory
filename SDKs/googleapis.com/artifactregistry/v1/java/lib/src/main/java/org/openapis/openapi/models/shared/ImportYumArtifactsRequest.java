@@ -18,9 +18,11 @@ public class ImportYumArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public ImportYumArtifactsGcsSource gcsSource;
+
     public ImportYumArtifactsRequest withGcsSource(ImportYumArtifactsGcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
     }
     
+    public ImportYumArtifactsRequest(){}
 }

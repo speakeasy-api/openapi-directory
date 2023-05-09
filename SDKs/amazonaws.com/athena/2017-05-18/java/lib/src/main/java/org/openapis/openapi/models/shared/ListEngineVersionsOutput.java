@@ -15,6 +15,7 @@ public class ListEngineVersionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersions")
     public EngineVersion[] engineVersions;
+
     public ListEngineVersionsOutput withEngineVersions(EngineVersion[] engineVersions) {
         this.engineVersions = engineVersions;
         return this;
@@ -23,9 +24,11 @@ public class ListEngineVersionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEngineVersionsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEngineVersionsOutput(){}
 }

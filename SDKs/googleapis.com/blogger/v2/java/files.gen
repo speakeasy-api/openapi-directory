@@ -99,4 +99,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/PostList.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserBlogs.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserLocale.java
 lib/src/main/java/org/openapis/openapi/models/shared/User.java
+docs/sdk/README.md
+docs/blogs/README.md
+docs/comments/README.md
+docs/pages/README.md
+docs/posts/README.md
+docs/users/README.md
 USAGE.md

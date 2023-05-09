@@ -56,11 +56,9 @@ public class Infrastructure {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNodeResponse res = new org.openapis.openapi.models.operations.GetNodeResponse() {{
+        org.openapis.openapi.models.operations.GetNodeResponse res = new org.openapis.openapi.models.operations.GetNodeResponse(contentType, httpRes.statusCode()) {{
             node = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -79,10 +77,11 @@ public class Infrastructure {
     /**
      * List nodes
      * Get list of infrastructure nodes. Only admin users can retrieve this information.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListNodesResponse listNodes() throws Exception {
+    public org.openapis.openapi.models.operations.ListNodesResponse listNodes(org.openapis.openapi.models.operations.ListNodesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/infra/nodes");
         
@@ -91,16 +90,15 @@ public class Infrastructure {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListNodesResponse res = new org.openapis.openapi.models.operations.ListNodesResponse() {{
+        org.openapis.openapi.models.operations.ListNodesResponse res = new org.openapis.openapi.models.operations.ListNodesResponse(contentType, httpRes.statusCode()) {{
             nodeListResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

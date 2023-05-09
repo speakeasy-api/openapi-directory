@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFirewallResponse {
     
     public String contentType;
+
     public DeleteFirewallResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFirewallResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteFirewallResponse deleteFirewallResponse;
+
     public DeleteFirewallResponse withDeleteFirewallResponse(org.openapis.openapi.models.shared.DeleteFirewallResponse deleteFirewallResponse) {
         this.deleteFirewallResponse = deleteFirewallResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFirewallResponse {
      */
     
     public Object internalServerError;
+
     public DeleteFirewallResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFirewallResponse {
      */
     
     public Object invalidOperationException;
+
     public DeleteFirewallResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFirewallResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteFirewallResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteFirewallResponse {
     
     
     public Integer statusCode;
+
     public DeleteFirewallResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteFirewallResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFirewallResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteFirewallResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteFirewallResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteFirewallResponse {
      */
     
     public Object throttlingException;
+
     public DeleteFirewallResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteFirewallResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DeleteFirewallResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DeleteFirewallResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

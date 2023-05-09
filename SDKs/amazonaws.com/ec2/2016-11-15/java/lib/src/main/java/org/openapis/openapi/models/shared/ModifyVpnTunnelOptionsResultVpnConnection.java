@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVpnTunnelOptionsResultVpnConnection {
     
     public String category;
+
     public ModifyVpnTunnelOptionsResultVpnConnection withCategory(String category) {
         this.category = category;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnection {
     
     
     public String coreNetworkArn;
+
     public ModifyVpnTunnelOptionsResultVpnConnection withCoreNetworkArn(String coreNetworkArn) {
         this.coreNetworkArn = coreNetworkArn;
         return this;
@@ -26,6 +28,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnection {
     
     
     public String coreNetworkAttachmentArn;
+
     public ModifyVpnTunnelOptionsResultVpnConnection withCoreNetworkAttachmentArn(String coreNetworkAttachmentArn) {
         this.coreNetworkAttachmentArn = coreNetworkAttachmentArn;
         return this;
@@ -33,6 +36,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnection {
     
     
     public String customerGatewayConfiguration;
+
     public ModifyVpnTunnelOptionsResultVpnConnection withCustomerGatewayConfiguration(String customerGatewayConfiguration) {
         this.customerGatewayConfiguration = customerGatewayConfiguration;
         return this;
@@ -40,6 +44,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnection {
     
     
     public String customerGatewayId;
+
     public ModifyVpnTunnelOptionsResultVpnConnection withCustomerGatewayId(String customerGatewayId) {
         this.customerGatewayId = customerGatewayId;
         return this;
@@ -47,6 +52,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnection {
     
     
     public ModifyVpnTunnelOptionsResultVpnConnectionGatewayAssociationStateEnum gatewayAssociationState;
+
     public ModifyVpnTunnelOptionsResultVpnConnection withGatewayAssociationState(ModifyVpnTunnelOptionsResultVpnConnectionGatewayAssociationStateEnum gatewayAssociationState) {
         this.gatewayAssociationState = gatewayAssociationState;
         return this;
@@ -54,6 +60,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnection {
     
     
     public ModifyVpnTunnelOptionsResultVpnConnectionOptions options;
+
     public ModifyVpnTunnelOptionsResultVpnConnection withOptions(ModifyVpnTunnelOptionsResultVpnConnectionOptions options) {
         this.options = options;
         return this;
@@ -61,6 +68,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnection {
     
     
     public ModifyVpnTunnelOptionsResultVpnConnectionRoutes[] routes;
+
     public ModifyVpnTunnelOptionsResultVpnConnection withRoutes(ModifyVpnTunnelOptionsResultVpnConnectionRoutes[] routes) {
         this.routes = routes;
         return this;
@@ -68,6 +76,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnection {
     
     
     public ModifyVpnTunnelOptionsResultVpnConnectionStateEnum state;
+
     public ModifyVpnTunnelOptionsResultVpnConnection withState(ModifyVpnTunnelOptionsResultVpnConnectionStateEnum state) {
         this.state = state;
         return this;
@@ -75,6 +84,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnection {
     
     
     public ModifyVpnTunnelOptionsResultVpnConnectionTags[] tags;
+
     public ModifyVpnTunnelOptionsResultVpnConnection withTags(ModifyVpnTunnelOptionsResultVpnConnectionTags[] tags) {
         this.tags = tags;
         return this;
@@ -82,6 +92,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnection {
     
     
     public String transitGatewayId;
+
     public ModifyVpnTunnelOptionsResultVpnConnection withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -89,6 +100,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnection {
     
     
     public ModifyVpnTunnelOptionsResultVpnConnectionTypeEnum type;
+
     public ModifyVpnTunnelOptionsResultVpnConnection withType(ModifyVpnTunnelOptionsResultVpnConnectionTypeEnum type) {
         this.type = type;
         return this;
@@ -96,6 +108,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnection {
     
     
     public ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetry[] vgwTelemetry;
+
     public ModifyVpnTunnelOptionsResultVpnConnection withVgwTelemetry(ModifyVpnTunnelOptionsResultVpnConnectionVgwTelemetry[] vgwTelemetry) {
         this.vgwTelemetry = vgwTelemetry;
         return this;
@@ -103,6 +116,7 @@ public class ModifyVpnTunnelOptionsResultVpnConnection {
     
     
     public String vpnConnectionId;
+
     public ModifyVpnTunnelOptionsResultVpnConnection withVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
@@ -110,9 +124,11 @@ public class ModifyVpnTunnelOptionsResultVpnConnection {
     
     
     public String vpnGatewayId;
+
     public ModifyVpnTunnelOptionsResultVpnConnection withVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
     
+    public ModifyVpnTunnelOptionsResultVpnConnection(){}
 }

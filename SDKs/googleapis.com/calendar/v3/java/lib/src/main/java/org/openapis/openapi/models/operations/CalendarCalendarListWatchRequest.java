@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CalendarCalendarListWatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Channel channel;
+
     public CalendarCalendarListWatchRequest withChannel(org.openapis.openapi.models.shared.Channel channel) {
         this.channel = channel;
         return this;
@@ -19,6 +20,7 @@ public class CalendarCalendarListWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CalendarCalendarListWatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +31,7 @@ public class CalendarCalendarListWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CalendarCalendarListWatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -39,6 +42,7 @@ public class CalendarCalendarListWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CalendarCalendarListWatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -49,6 +53,7 @@ public class CalendarCalendarListWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public CalendarCalendarListWatchRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -59,6 +64,7 @@ public class CalendarCalendarListWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minAccessRole")
     public CalendarCalendarListWatchMinAccessRoleEnum minAccessRole;
+
     public CalendarCalendarListWatchRequest withMinAccessRole(CalendarCalendarListWatchMinAccessRoleEnum minAccessRole) {
         this.minAccessRole = minAccessRole;
         return this;
@@ -69,6 +75,7 @@ public class CalendarCalendarListWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CalendarCalendarListWatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -79,6 +86,7 @@ public class CalendarCalendarListWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public CalendarCalendarListWatchRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -89,6 +97,7 @@ public class CalendarCalendarListWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CalendarCalendarListWatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +108,7 @@ public class CalendarCalendarListWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CalendarCalendarListWatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -109,6 +119,7 @@ public class CalendarCalendarListWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showDeleted")
     public Boolean showDeleted;
+
     public CalendarCalendarListWatchRequest withShowDeleted(Boolean showDeleted) {
         this.showDeleted = showDeleted;
         return this;
@@ -119,6 +130,7 @@ public class CalendarCalendarListWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showHidden")
     public Boolean showHidden;
+
     public CalendarCalendarListWatchRequest withShowHidden(Boolean showHidden) {
         this.showHidden = showHidden;
         return this;
@@ -133,6 +145,7 @@ public class CalendarCalendarListWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=syncToken")
     public String syncToken;
+
     public CalendarCalendarListWatchRequest withSyncToken(String syncToken) {
         this.syncToken = syncToken;
         return this;
@@ -143,9 +156,11 @@ public class CalendarCalendarListWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public CalendarCalendarListWatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public CalendarCalendarListWatchRequest(){}
 }

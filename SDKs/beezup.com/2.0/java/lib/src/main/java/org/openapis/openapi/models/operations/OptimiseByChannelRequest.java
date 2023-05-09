@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptimiseByChannelRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=actionName")
     public org.openapis.openapi.models.shared.OptimisationActionNameGeneralParametersEnum actionName;
+
     public OptimiseByChannelRequest withActionName(org.openapis.openapi.models.shared.OptimisationActionNameGeneralParametersEnum actionName) {
         this.actionName = actionName;
         return this;
@@ -19,6 +21,7 @@ public class OptimiseByChannelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
     public String channelId;
+
     public OptimiseByChannelRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -29,9 +32,15 @@ public class OptimiseByChannelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public OptimiseByChannelRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public OptimiseByChannelRequest(@JsonProperty("actionName") org.openapis.openapi.models.shared.OptimisationActionNameGeneralParametersEnum actionName, @JsonProperty("channelId") String channelId, @JsonProperty("storeId") String storeId) {
+        this.actionName = actionName;
+        this.channelId = channelId;
+        this.storeId = storeId;
+  }
 }

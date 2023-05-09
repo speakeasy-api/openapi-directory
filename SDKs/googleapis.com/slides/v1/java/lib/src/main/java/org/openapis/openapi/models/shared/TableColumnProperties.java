@@ -18,9 +18,11 @@ public class TableColumnProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnWidth")
     public Dimension columnWidth;
+
     public TableColumnProperties withColumnWidth(Dimension columnWidth) {
         this.columnWidth = columnWidth;
         return this;
     }
     
+    public TableColumnProperties(){}
 }

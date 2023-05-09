@@ -15,6 +15,7 @@ public class ConfluenceSpaceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlArchivedSpaces")
     public Boolean crawlArchivedSpaces;
+
     public ConfluenceSpaceConfiguration withCrawlArchivedSpaces(Boolean crawlArchivedSpaces) {
         this.crawlArchivedSpaces = crawlArchivedSpaces;
         return this;
@@ -23,6 +24,7 @@ public class ConfluenceSpaceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlPersonalSpaces")
     public Boolean crawlPersonalSpaces;
+
     public ConfluenceSpaceConfiguration withCrawlPersonalSpaces(Boolean crawlPersonalSpaces) {
         this.crawlPersonalSpaces = crawlPersonalSpaces;
         return this;
@@ -31,6 +33,7 @@ public class ConfluenceSpaceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludeSpaces")
     public String[] excludeSpaces;
+
     public ConfluenceSpaceConfiguration withExcludeSpaces(String[] excludeSpaces) {
         this.excludeSpaces = excludeSpaces;
         return this;
@@ -39,6 +42,7 @@ public class ConfluenceSpaceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeSpaces")
     public String[] includeSpaces;
+
     public ConfluenceSpaceConfiguration withIncludeSpaces(String[] includeSpaces) {
         this.includeSpaces = includeSpaces;
         return this;
@@ -47,9 +51,11 @@ public class ConfluenceSpaceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceFieldMappings")
     public ConfluenceSpaceToIndexFieldMapping[] spaceFieldMappings;
+
     public ConfluenceSpaceConfiguration withSpaceFieldMappings(ConfluenceSpaceToIndexFieldMapping[] spaceFieldMappings) {
         this.spaceFieldMappings = spaceFieldMappings;
         return this;
     }
     
+    public ConfluenceSpaceConfiguration(){}
 }

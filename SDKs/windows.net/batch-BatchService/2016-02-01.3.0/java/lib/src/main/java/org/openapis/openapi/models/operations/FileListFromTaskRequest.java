@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileListFromTaskRequest {
@@ -12,6 +13,7 @@ public class FileListFromTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$filter")
     public String dollarFilter;
+
     public FileListFromTaskRequest withDollarFilter(String dollarFilter) {
         this.dollarFilter = dollarFilter;
         return this;
@@ -22,6 +24,7 @@ public class FileListFromTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public FileListFromTaskRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -32,6 +35,7 @@ public class FileListFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public FileListFromTaskRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -42,6 +46,7 @@ public class FileListFromTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public FileListFromTaskRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -52,6 +57,7 @@ public class FileListFromTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxresults")
     public Integer maxresults;
+
     public FileListFromTaskRequest withMaxresults(Integer maxresults) {
         this.maxresults = maxresults;
         return this;
@@ -62,6 +68,7 @@ public class FileListFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public FileListFromTaskRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -72,6 +79,7 @@ public class FileListFromTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
     public Boolean recursive;
+
     public FileListFromTaskRequest withRecursive(Boolean recursive) {
         this.recursive = recursive;
         return this;
@@ -82,6 +90,7 @@ public class FileListFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public FileListFromTaskRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -92,6 +101,7 @@ public class FileListFromTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
     public String taskId;
+
     public FileListFromTaskRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -102,9 +112,15 @@ public class FileListFromTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public FileListFromTaskRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public FileListFromTaskRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("jobId") String jobId, @JsonProperty("taskId") String taskId) {
+        this.apiVersion = apiVersion;
+        this.jobId = jobId;
+        this.taskId = taskId;
+  }
 }

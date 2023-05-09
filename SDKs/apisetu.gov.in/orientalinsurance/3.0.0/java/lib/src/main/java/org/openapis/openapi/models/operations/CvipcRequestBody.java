@@ -15,6 +15,7 @@ public class CvipcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public CvipcRequestBodyCertificateParameters certificateParameters;
+
     public CvipcRequestBody withCertificateParameters(CvipcRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class CvipcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public CvipcRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class CvipcRequestBody {
      */
     @JsonProperty("format")
     public CvipcRequestBodyFormatEnum format;
+
     public CvipcRequestBody withFormat(CvipcRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class CvipcRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public CvipcRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public CvipcRequestBody(@JsonProperty("format") CvipcRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

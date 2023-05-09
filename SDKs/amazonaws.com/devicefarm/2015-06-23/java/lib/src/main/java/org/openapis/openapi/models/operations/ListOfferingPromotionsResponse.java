@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOfferingPromotionsResponse {
@@ -12,6 +13,7 @@ public class ListOfferingPromotionsResponse {
      */
     
     public Object argumentException;
+
     public ListOfferingPromotionsResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class ListOfferingPromotionsResponse {
     
     
     public String contentType;
+
     public ListOfferingPromotionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListOfferingPromotionsResponse {
      */
     
     public Object limitExceededException;
+
     public ListOfferingPromotionsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class ListOfferingPromotionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListOfferingPromotionsResult listOfferingPromotionsResult;
+
     public ListOfferingPromotionsResponse withListOfferingPromotionsResult(org.openapis.openapi.models.shared.ListOfferingPromotionsResult listOfferingPromotionsResult) {
         this.listOfferingPromotionsResult = listOfferingPromotionsResult;
         return this;
@@ -49,6 +54,7 @@ public class ListOfferingPromotionsResponse {
      */
     
     public Object notEligibleException;
+
     public ListOfferingPromotionsResponse withNotEligibleException(Object notEligibleException) {
         this.notEligibleException = notEligibleException;
         return this;
@@ -59,6 +65,7 @@ public class ListOfferingPromotionsResponse {
      */
     
     public Object notFoundException;
+
     public ListOfferingPromotionsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListOfferingPromotionsResponse {
      */
     
     public Object serviceAccountException;
+
     public ListOfferingPromotionsResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -76,6 +84,7 @@ public class ListOfferingPromotionsResponse {
     
     
     public Integer statusCode;
+
     public ListOfferingPromotionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListOfferingPromotionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOfferingPromotionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListOfferingPromotionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

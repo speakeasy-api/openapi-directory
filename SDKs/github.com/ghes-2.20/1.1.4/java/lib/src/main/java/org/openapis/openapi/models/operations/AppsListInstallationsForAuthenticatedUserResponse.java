@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppsListInstallationsForAuthenticatedUserResponse {
     
     public String contentType;
+
     public AppsListInstallationsForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppsListInstallationsForAuthenticatedUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public AppsListInstallationsForAuthenticatedUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class AppsListInstallationsForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public AppsListInstallationsForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class AppsListInstallationsForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppsListInstallationsForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class AppsListInstallationsForAuthenticatedUserResponse {
      */
     
     public AppsListInstallationsForAuthenticatedUser200ApplicationJSON appsListInstallationsForAuthenticatedUser200ApplicationJSONObject;
+
     public AppsListInstallationsForAuthenticatedUserResponse withAppsListInstallationsForAuthenticatedUser200ApplicationJSONObject(AppsListInstallationsForAuthenticatedUser200ApplicationJSON appsListInstallationsForAuthenticatedUser200ApplicationJSONObject) {
         this.appsListInstallationsForAuthenticatedUser200ApplicationJSONObject = appsListInstallationsForAuthenticatedUser200ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class AppsListInstallationsForAuthenticatedUserResponse {
      */
     
     public AppsListInstallationsForAuthenticatedUser415ApplicationJSON appsListInstallationsForAuthenticatedUser415ApplicationJSONObject;
+
     public AppsListInstallationsForAuthenticatedUserResponse withAppsListInstallationsForAuthenticatedUser415ApplicationJSONObject(AppsListInstallationsForAuthenticatedUser415ApplicationJSON appsListInstallationsForAuthenticatedUser415ApplicationJSONObject) {
         this.appsListInstallationsForAuthenticatedUser415ApplicationJSONObject = appsListInstallationsForAuthenticatedUser415ApplicationJSONObject;
         return this;
@@ -60,9 +67,14 @@ public class AppsListInstallationsForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public AppsListInstallationsForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
     }
     
+    public AppsListInstallationsForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

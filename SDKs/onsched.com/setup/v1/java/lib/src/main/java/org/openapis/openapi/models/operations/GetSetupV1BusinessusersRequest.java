@@ -12,6 +12,7 @@ public class GetSetupV1BusinessusersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public GetSetupV1BusinessusersRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -22,6 +23,7 @@ public class GetSetupV1BusinessusersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetSetupV1BusinessusersRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,6 +34,7 @@ public class GetSetupV1BusinessusersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
     public String locationId;
+
     public GetSetupV1BusinessusersRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -42,6 +45,7 @@ public class GetSetupV1BusinessusersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetSetupV1BusinessusersRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -52,9 +56,11 @@ public class GetSetupV1BusinessusersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
     public String role;
+
     public GetSetupV1BusinessusersRequest withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public GetSetupV1BusinessusersRequest(){}
 }

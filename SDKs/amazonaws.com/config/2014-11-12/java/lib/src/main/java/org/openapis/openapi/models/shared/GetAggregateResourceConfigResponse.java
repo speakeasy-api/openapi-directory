@@ -15,9 +15,11 @@ public class GetAggregateResourceConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationItem")
     public ConfigurationItem configurationItem;
+
     public GetAggregateResourceConfigResponse withConfigurationItem(ConfigurationItem configurationItem) {
         this.configurationItem = configurationItem;
         return this;
     }
     
+    public GetAggregateResourceConfigResponse(){}
 }

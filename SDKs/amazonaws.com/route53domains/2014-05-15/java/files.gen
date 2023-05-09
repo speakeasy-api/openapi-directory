@@ -223,4 +223,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ViewBillingResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/BillingRecord.java
 lib/src/main/java/org/openapis/openapi/models/shared/ViewBillingRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

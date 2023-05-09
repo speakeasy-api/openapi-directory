@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBlueprintRunRequest {
     @JsonProperty("BlueprintName")
     public String blueprintName;
+
     public GetBlueprintRunRequest withBlueprintName(String blueprintName) {
         this.blueprintName = blueprintName;
         return this;
@@ -16,9 +17,14 @@ public class GetBlueprintRunRequest {
     
     @JsonProperty("RunId")
     public String runId;
+
     public GetBlueprintRunRequest withRunId(String runId) {
         this.runId = runId;
         return this;
     }
     
+    public GetBlueprintRunRequest(@JsonProperty("BlueprintName") String blueprintName, @JsonProperty("RunId") String runId) {
+        this.blueprintName = blueprintName;
+        this.runId = runId;
+  }
 }

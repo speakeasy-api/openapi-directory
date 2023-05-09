@@ -15,9 +15,11 @@ public class OutputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Configuration")
     public S3Configuration s3Configuration;
+
     public OutputDataConfig withS3Configuration(S3Configuration s3Configuration) {
         this.s3Configuration = s3Configuration;
         return this;
     }
     
+    public OutputDataConfig(){}
 }

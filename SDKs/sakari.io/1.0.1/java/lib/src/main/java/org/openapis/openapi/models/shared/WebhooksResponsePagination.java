@@ -12,6 +12,7 @@ public class WebhooksResponsePagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public WebhooksResponsePagination withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,6 +21,7 @@ public class WebhooksResponsePagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Long offset;
+
     public WebhooksResponsePagination withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -28,9 +30,11 @@ public class WebhooksResponsePagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Long totalCount;
+
     public WebhooksResponsePagination withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public WebhooksResponsePagination(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePageResponse {
@@ -12,6 +13,7 @@ public class DescribePageResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribePageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribePageResponse {
     
     
     public String contentType;
+
     public DescribePageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribePageResponse {
      */
     
     public Object dataEncryptionException;
+
     public DescribePageResponse withDataEncryptionException(Object dataEncryptionException) {
         this.dataEncryptionException = dataEncryptionException;
         return this;
@@ -39,6 +43,7 @@ public class DescribePageResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePageResult describePageResult;
+
     public DescribePageResponse withDescribePageResult(org.openapis.openapi.models.shared.DescribePageResult describePageResult) {
         this.describePageResult = describePageResult;
         return this;
@@ -49,6 +54,7 @@ public class DescribePageResponse {
      */
     
     public Object internalServerException;
+
     public DescribePageResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DescribePageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribePageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribePageResponse {
     
     
     public Integer statusCode;
+
     public DescribePageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribePageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribePageResponse {
      */
     
     public Object throttlingException;
+
     public DescribePageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DescribePageResponse {
      */
     
     public Object validationException;
+
     public DescribePageResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribePageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

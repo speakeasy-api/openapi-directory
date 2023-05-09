@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RequestCancelWorkflowExecutionResponse {
     
     public String contentType;
+
     public RequestCancelWorkflowExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RequestCancelWorkflowExecutionResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public RequestCancelWorkflowExecutionResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -26,6 +29,7 @@ public class RequestCancelWorkflowExecutionResponse {
     
     
     public Integer statusCode;
+
     public RequestCancelWorkflowExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RequestCancelWorkflowExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RequestCancelWorkflowExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class RequestCancelWorkflowExecutionResponse {
      */
     
     public Object unknownResourceFault;
+
     public RequestCancelWorkflowExecutionResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
     }
     
+    public RequestCancelWorkflowExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

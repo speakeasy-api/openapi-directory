@@ -15,6 +15,7 @@ public class DoubleColumnStatisticsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumValue")
     public Double maximumValue;
+
     public DoubleColumnStatisticsData withMaximumValue(Double maximumValue) {
         this.maximumValue = maximumValue;
         return this;
@@ -23,6 +24,7 @@ public class DoubleColumnStatisticsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumValue")
     public Double minimumValue;
+
     public DoubleColumnStatisticsData withMinimumValue(Double minimumValue) {
         this.minimumValue = minimumValue;
         return this;
@@ -30,6 +32,7 @@ public class DoubleColumnStatisticsData {
     
     @JsonProperty("NumberOfDistinctValues")
     public Long numberOfDistinctValues;
+
     public DoubleColumnStatisticsData withNumberOfDistinctValues(Long numberOfDistinctValues) {
         this.numberOfDistinctValues = numberOfDistinctValues;
         return this;
@@ -37,9 +40,14 @@ public class DoubleColumnStatisticsData {
     
     @JsonProperty("NumberOfNulls")
     public Long numberOfNulls;
+
     public DoubleColumnStatisticsData withNumberOfNulls(Long numberOfNulls) {
         this.numberOfNulls = numberOfNulls;
         return this;
     }
     
+    public DoubleColumnStatisticsData(@JsonProperty("NumberOfDistinctValues") Long numberOfDistinctValues, @JsonProperty("NumberOfNulls") Long numberOfNulls) {
+        this.numberOfDistinctValues = numberOfDistinctValues;
+        this.numberOfNulls = numberOfNulls;
+  }
 }

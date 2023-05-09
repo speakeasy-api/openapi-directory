@@ -15,6 +15,7 @@ public class AuthenticationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customAuthConfigs")
     public CustomAuthConfig[] customAuthConfigs;
+
     public AuthenticationConfig withCustomAuthConfigs(CustomAuthConfig[] customAuthConfigs) {
         this.customAuthConfigs = customAuthConfigs;
         return this;
@@ -23,6 +24,7 @@ public class AuthenticationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isApiKeyAuthSupported")
     public Boolean isApiKeyAuthSupported;
+
     public AuthenticationConfig withIsApiKeyAuthSupported(Boolean isApiKeyAuthSupported) {
         this.isApiKeyAuthSupported = isApiKeyAuthSupported;
         return this;
@@ -31,6 +33,7 @@ public class AuthenticationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isBasicAuthSupported")
     public Boolean isBasicAuthSupported;
+
     public AuthenticationConfig withIsBasicAuthSupported(Boolean isBasicAuthSupported) {
         this.isBasicAuthSupported = isBasicAuthSupported;
         return this;
@@ -39,6 +42,7 @@ public class AuthenticationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCustomAuthSupported")
     public Boolean isCustomAuthSupported;
+
     public AuthenticationConfig withIsCustomAuthSupported(Boolean isCustomAuthSupported) {
         this.isCustomAuthSupported = isCustomAuthSupported;
         return this;
@@ -47,6 +51,7 @@ public class AuthenticationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isOAuth2Supported")
     public Boolean isOAuth2Supported;
+
     public AuthenticationConfig withIsOAuth2Supported(Boolean isOAuth2Supported) {
         this.isOAuth2Supported = isOAuth2Supported;
         return this;
@@ -55,9 +60,11 @@ public class AuthenticationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuth2Defaults")
     public OAuth2Defaults oAuth2Defaults;
+
     public AuthenticationConfig withOAuth2Defaults(OAuth2Defaults oAuth2Defaults) {
         this.oAuth2Defaults = oAuth2Defaults;
         return this;
     }
     
+    public AuthenticationConfig(){}
 }

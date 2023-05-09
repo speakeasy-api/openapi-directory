@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InvokeResponse {
     
     public String contentType;
+
     public InvokeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InvokeResponse {
      */
     
     public Object ec2AccessDeniedException;
+
     public InvokeResponse withEc2AccessDeniedException(Object ec2AccessDeniedException) {
         this.ec2AccessDeniedException = ec2AccessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class InvokeResponse {
      */
     
     public Object ec2ThrottledException;
+
     public InvokeResponse withEc2ThrottledException(Object ec2ThrottledException) {
         this.ec2ThrottledException = ec2ThrottledException;
         return this;
@@ -39,6 +43,7 @@ public class InvokeResponse {
      */
     
     public Object ec2UnexpectedException;
+
     public InvokeResponse withEc2UnexpectedException(Object ec2UnexpectedException) {
         this.ec2UnexpectedException = ec2UnexpectedException;
         return this;
@@ -49,6 +54,7 @@ public class InvokeResponse {
      */
     
     public Object efsioException;
+
     public InvokeResponse withEFSIOException(Object efsioException) {
         this.efsioException = efsioException;
         return this;
@@ -59,6 +65,7 @@ public class InvokeResponse {
      */
     
     public Object efsMountConnectivityException;
+
     public InvokeResponse withEFSMountConnectivityException(Object efsMountConnectivityException) {
         this.efsMountConnectivityException = efsMountConnectivityException;
         return this;
@@ -69,6 +76,7 @@ public class InvokeResponse {
      */
     
     public Object efsMountFailureException;
+
     public InvokeResponse withEFSMountFailureException(Object efsMountFailureException) {
         this.efsMountFailureException = efsMountFailureException;
         return this;
@@ -79,6 +87,7 @@ public class InvokeResponse {
      */
     
     public Object efsMountTimeoutException;
+
     public InvokeResponse withEFSMountTimeoutException(Object efsMountTimeoutException) {
         this.efsMountTimeoutException = efsMountTimeoutException;
         return this;
@@ -89,6 +98,7 @@ public class InvokeResponse {
      */
     
     public Object eniLimitReachedException;
+
     public InvokeResponse withENILimitReachedException(Object eniLimitReachedException) {
         this.eniLimitReachedException = eniLimitReachedException;
         return this;
@@ -99,6 +109,7 @@ public class InvokeResponse {
      */
     
     public Object invalidParameterValueException;
+
     public InvokeResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -109,6 +120,7 @@ public class InvokeResponse {
      */
     
     public Object invalidRequestContentException;
+
     public InvokeResponse withInvalidRequestContentException(Object invalidRequestContentException) {
         this.invalidRequestContentException = invalidRequestContentException;
         return this;
@@ -119,6 +131,7 @@ public class InvokeResponse {
      */
     
     public Object invalidRuntimeException;
+
     public InvokeResponse withInvalidRuntimeException(Object invalidRuntimeException) {
         this.invalidRuntimeException = invalidRuntimeException;
         return this;
@@ -129,6 +142,7 @@ public class InvokeResponse {
      */
     
     public Object invalidSecurityGroupIDException;
+
     public InvokeResponse withInvalidSecurityGroupIDException(Object invalidSecurityGroupIDException) {
         this.invalidSecurityGroupIDException = invalidSecurityGroupIDException;
         return this;
@@ -139,6 +153,7 @@ public class InvokeResponse {
      */
     
     public Object invalidSubnetIDException;
+
     public InvokeResponse withInvalidSubnetIDException(Object invalidSubnetIDException) {
         this.invalidSubnetIDException = invalidSubnetIDException;
         return this;
@@ -149,6 +164,7 @@ public class InvokeResponse {
      */
     
     public Object invalidZipFileException;
+
     public InvokeResponse withInvalidZipFileException(Object invalidZipFileException) {
         this.invalidZipFileException = invalidZipFileException;
         return this;
@@ -159,6 +175,7 @@ public class InvokeResponse {
      */
     
     public org.openapis.openapi.models.shared.InvocationResponse invocationResponse;
+
     public InvokeResponse withInvocationResponse(org.openapis.openapi.models.shared.InvocationResponse invocationResponse) {
         this.invocationResponse = invocationResponse;
         return this;
@@ -169,6 +186,7 @@ public class InvokeResponse {
      */
     
     public Object kmsAccessDeniedException;
+
     public InvokeResponse withKMSAccessDeniedException(Object kmsAccessDeniedException) {
         this.kmsAccessDeniedException = kmsAccessDeniedException;
         return this;
@@ -179,6 +197,7 @@ public class InvokeResponse {
      */
     
     public Object kmsDisabledException;
+
     public InvokeResponse withKMSDisabledException(Object kmsDisabledException) {
         this.kmsDisabledException = kmsDisabledException;
         return this;
@@ -189,6 +208,7 @@ public class InvokeResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public InvokeResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -199,6 +219,7 @@ public class InvokeResponse {
      */
     
     public Object kmsNotFoundException;
+
     public InvokeResponse withKMSNotFoundException(Object kmsNotFoundException) {
         this.kmsNotFoundException = kmsNotFoundException;
         return this;
@@ -209,6 +230,7 @@ public class InvokeResponse {
      */
     
     public Object requestTooLargeException;
+
     public InvokeResponse withRequestTooLargeException(Object requestTooLargeException) {
         this.requestTooLargeException = requestTooLargeException;
         return this;
@@ -219,6 +241,7 @@ public class InvokeResponse {
      */
     
     public Object resourceConflictException;
+
     public InvokeResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -229,6 +252,7 @@ public class InvokeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public InvokeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -239,6 +263,7 @@ public class InvokeResponse {
      */
     
     public Object resourceNotReadyException;
+
     public InvokeResponse withResourceNotReadyException(Object resourceNotReadyException) {
         this.resourceNotReadyException = resourceNotReadyException;
         return this;
@@ -249,6 +274,7 @@ public class InvokeResponse {
      */
     
     public Object serviceException;
+
     public InvokeResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -256,6 +282,7 @@ public class InvokeResponse {
     
     
     public Integer statusCode;
+
     public InvokeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -263,6 +290,7 @@ public class InvokeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InvokeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -273,6 +301,7 @@ public class InvokeResponse {
      */
     
     public Object snapStartException;
+
     public InvokeResponse withSnapStartException(Object snapStartException) {
         this.snapStartException = snapStartException;
         return this;
@@ -283,6 +312,7 @@ public class InvokeResponse {
      */
     
     public Object snapStartNotReadyException;
+
     public InvokeResponse withSnapStartNotReadyException(Object snapStartNotReadyException) {
         this.snapStartNotReadyException = snapStartNotReadyException;
         return this;
@@ -293,6 +323,7 @@ public class InvokeResponse {
      */
     
     public Object snapStartTimeoutException;
+
     public InvokeResponse withSnapStartTimeoutException(Object snapStartTimeoutException) {
         this.snapStartTimeoutException = snapStartTimeoutException;
         return this;
@@ -303,6 +334,7 @@ public class InvokeResponse {
      */
     
     public Object subnetIPAddressLimitReachedException;
+
     public InvokeResponse withSubnetIPAddressLimitReachedException(Object subnetIPAddressLimitReachedException) {
         this.subnetIPAddressLimitReachedException = subnetIPAddressLimitReachedException;
         return this;
@@ -313,6 +345,7 @@ public class InvokeResponse {
      */
     
     public Object tooManyRequestsException;
+
     public InvokeResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -323,9 +356,14 @@ public class InvokeResponse {
      */
     
     public Object unsupportedMediaTypeException;
+
     public InvokeResponse withUnsupportedMediaTypeException(Object unsupportedMediaTypeException) {
         this.unsupportedMediaTypeException = unsupportedMediaTypeException;
         return this;
     }
     
+    public InvokeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

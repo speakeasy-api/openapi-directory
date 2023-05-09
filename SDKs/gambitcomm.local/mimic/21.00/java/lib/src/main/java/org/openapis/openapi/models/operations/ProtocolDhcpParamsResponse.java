@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProtocolDhcpParamsResponse {
     
     public String contentType;
+
     public ProtocolDhcpParamsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProtocolDhcpParamsResponse {
     
     
     public Integer statusCode;
+
     public ProtocolDhcpParamsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProtocolDhcpParamsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProtocolDhcpParamsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ProtocolDhcpParamsResponse {
      */
     
     public java.util.Map<String, Object>[] protocolDhcpParams200ApplicationJSONObjects;
+
     public ProtocolDhcpParamsResponse withProtocolDhcpParams200ApplicationJSONObjects(java.util.Map<String, Object>[] protocolDhcpParams200ApplicationJSONObjects) {
         this.protocolDhcpParams200ApplicationJSONObjects = protocolDhcpParams200ApplicationJSONObjects;
         return this;
     }
     
+    public ProtocolDhcpParamsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

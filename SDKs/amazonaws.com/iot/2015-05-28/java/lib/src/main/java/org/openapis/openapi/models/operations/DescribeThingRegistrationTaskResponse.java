@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeThingRegistrationTaskResponse {
     
     public String contentType;
+
     public DescribeThingRegistrationTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeThingRegistrationTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeThingRegistrationTaskResponse describeThingRegistrationTaskResponse;
+
     public DescribeThingRegistrationTaskResponse withDescribeThingRegistrationTaskResponse(org.openapis.openapi.models.shared.DescribeThingRegistrationTaskResponse describeThingRegistrationTaskResponse) {
         this.describeThingRegistrationTaskResponse = describeThingRegistrationTaskResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeThingRegistrationTaskResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeThingRegistrationTaskResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeThingRegistrationTaskResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeThingRegistrationTaskResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeThingRegistrationTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeThingRegistrationTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeThingRegistrationTaskResponse {
     
     
     public Integer statusCode;
+
     public DescribeThingRegistrationTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeThingRegistrationTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeThingRegistrationTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeThingRegistrationTaskResponse {
      */
     
     public Object throttlingException;
+
     public DescribeThingRegistrationTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeThingRegistrationTaskResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeThingRegistrationTaskResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeThingRegistrationTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

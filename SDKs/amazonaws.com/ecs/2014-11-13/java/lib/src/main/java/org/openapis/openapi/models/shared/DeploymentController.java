@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeploymentController {
     @JsonProperty("type")
     public DeploymentControllerTypeEnum type;
+
     public DeploymentController withType(DeploymentControllerTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DeploymentController(@JsonProperty("type") DeploymentControllerTypeEnum type) {
+        this.type = type;
+  }
 }

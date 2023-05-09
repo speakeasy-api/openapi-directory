@@ -20,6 +20,7 @@ public class AppDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppName")
     public String appName;
+
     public AppDetails withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -28,6 +29,7 @@ public class AppDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppType")
     public AppTypeEnum appType;
+
     public AppDetails withAppType(AppTypeEnum appType) {
         this.appType = appType;
         return this;
@@ -38,6 +40,7 @@ public class AppDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public AppDetails withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -46,6 +49,7 @@ public class AppDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public AppDetails withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -54,6 +58,7 @@ public class AppDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceName")
     public String spaceName;
+
     public AppDetails withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
@@ -62,6 +67,7 @@ public class AppDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AppStatusEnum status;
+
     public AppDetails withStatus(AppStatusEnum status) {
         this.status = status;
         return this;
@@ -70,9 +76,11 @@ public class AppDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserProfileName")
     public String userProfileName;
+
     public AppDetails withUserProfileName(String userProfileName) {
         this.userProfileName = userProfileName;
         return this;
     }
     
+    public AppDetails(){}
 }

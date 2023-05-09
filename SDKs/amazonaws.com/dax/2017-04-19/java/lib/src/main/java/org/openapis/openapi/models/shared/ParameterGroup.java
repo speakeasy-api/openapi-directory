@@ -15,6 +15,7 @@ public class ParameterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ParameterGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class ParameterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterGroupName")
     public String parameterGroupName;
+
     public ParameterGroup withParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
         return this;
     }
     
+    public ParameterGroup(){}
 }

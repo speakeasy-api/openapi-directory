@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeDatasetImportJobRequest {
     @JsonProperty("datasetImportJobArn")
     public String datasetImportJobArn;
+
     public DescribeDatasetImportJobRequest withDatasetImportJobArn(String datasetImportJobArn) {
         this.datasetImportJobArn = datasetImportJobArn;
         return this;
     }
     
+    public DescribeDatasetImportJobRequest(@JsonProperty("datasetImportJobArn") String datasetImportJobArn) {
+        this.datasetImportJobArn = datasetImportJobArn;
+  }
 }

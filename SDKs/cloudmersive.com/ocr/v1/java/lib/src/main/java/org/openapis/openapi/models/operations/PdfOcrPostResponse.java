@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PdfOcrPostResponse {
     
     public byte[] body;
+
     public PdfOcrPostResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PdfOcrPostResponse {
     
     
     public String contentType;
+
     public PdfOcrPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PdfOcrPostResponse {
      */
     
     public org.openapis.openapi.models.shared.PdfToTextResponse pdfToTextResponse;
+
     public PdfOcrPostResponse withPdfToTextResponse(org.openapis.openapi.models.shared.PdfToTextResponse pdfToTextResponse) {
         this.pdfToTextResponse = pdfToTextResponse;
         return this;
@@ -33,6 +37,7 @@ public class PdfOcrPostResponse {
     
     
     public Integer statusCode;
+
     public PdfOcrPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PdfOcrPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PdfOcrPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PdfOcrPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

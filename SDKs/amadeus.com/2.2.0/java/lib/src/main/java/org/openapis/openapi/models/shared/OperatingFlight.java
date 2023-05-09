@@ -18,9 +18,11 @@ public class OperatingFlight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierCode")
     public String carrierCode;
+
     public OperatingFlight withCarrierCode(String carrierCode) {
         this.carrierCode = carrierCode;
         return this;
     }
     
+    public OperatingFlight(){}
 }

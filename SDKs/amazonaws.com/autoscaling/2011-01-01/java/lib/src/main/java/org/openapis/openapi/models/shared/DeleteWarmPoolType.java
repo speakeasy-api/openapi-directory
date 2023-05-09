@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteWarmPoolType {
     
     public String autoScalingGroupName;
+
     public DeleteWarmPoolType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,9 +17,13 @@ public class DeleteWarmPoolType {
     
     
     public Boolean forceDelete;
+
     public DeleteWarmPoolType withForceDelete(Boolean forceDelete) {
         this.forceDelete = forceDelete;
         return this;
     }
     
+    public DeleteWarmPoolType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+  }
 }

@@ -22,6 +22,7 @@ public class DeleteOptOutListResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public DeleteOptOutListResult withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class DeleteOptOutListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOutListArn")
     public String optOutListArn;
+
     public DeleteOptOutListResult withOptOutListArn(String optOutListArn) {
         this.optOutListArn = optOutListArn;
         return this;
@@ -38,9 +40,11 @@ public class DeleteOptOutListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOutListName")
     public String optOutListName;
+
     public DeleteOptOutListResult withOptOutListName(String optOutListName) {
         this.optOutListName = optOutListName;
         return this;
     }
     
+    public DeleteOptOutListResult(){}
 }

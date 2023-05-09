@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdatePullRequestStatusInput {
     @JsonProperty("pullRequestId")
     public String pullRequestId;
+
     public UpdatePullRequestStatusInput withPullRequestId(String pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
@@ -16,9 +17,14 @@ public class UpdatePullRequestStatusInput {
     
     @JsonProperty("pullRequestStatus")
     public PullRequestStatusEnumEnum pullRequestStatus;
+
     public UpdatePullRequestStatusInput withPullRequestStatus(PullRequestStatusEnumEnum pullRequestStatus) {
         this.pullRequestStatus = pullRequestStatus;
         return this;
     }
     
+    public UpdatePullRequestStatusInput(@JsonProperty("pullRequestId") String pullRequestId, @JsonProperty("pullRequestStatus") PullRequestStatusEnumEnum pullRequestStatus) {
+        this.pullRequestId = pullRequestId;
+        this.pullRequestStatus = pullRequestStatus;
+  }
 }

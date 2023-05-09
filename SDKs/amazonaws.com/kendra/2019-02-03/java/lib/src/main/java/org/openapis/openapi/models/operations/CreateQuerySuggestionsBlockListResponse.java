@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateQuerySuggestionsBlockListResponse {
@@ -12,6 +13,7 @@ public class CreateQuerySuggestionsBlockListResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateQuerySuggestionsBlockListResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateQuerySuggestionsBlockListResponse {
      */
     
     public Object conflictException;
+
     public CreateQuerySuggestionsBlockListResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateQuerySuggestionsBlockListResponse {
     
     
     public String contentType;
+
     public CreateQuerySuggestionsBlockListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateQuerySuggestionsBlockListResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateQuerySuggestionsBlockListResponse createQuerySuggestionsBlockListResponse;
+
     public CreateQuerySuggestionsBlockListResponse withCreateQuerySuggestionsBlockListResponse(org.openapis.openapi.models.shared.CreateQuerySuggestionsBlockListResponse createQuerySuggestionsBlockListResponse) {
         this.createQuerySuggestionsBlockListResponse = createQuerySuggestionsBlockListResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateQuerySuggestionsBlockListResponse {
      */
     
     public Object internalServerException;
+
     public CreateQuerySuggestionsBlockListResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateQuerySuggestionsBlockListResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateQuerySuggestionsBlockListResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateQuerySuggestionsBlockListResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateQuerySuggestionsBlockListResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateQuerySuggestionsBlockListResponse {
     
     
     public Integer statusCode;
+
     public CreateQuerySuggestionsBlockListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateQuerySuggestionsBlockListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateQuerySuggestionsBlockListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateQuerySuggestionsBlockListResponse {
      */
     
     public Object throttlingException;
+
     public CreateQuerySuggestionsBlockListResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateQuerySuggestionsBlockListResponse {
      */
     
     public Object validationException;
+
     public CreateQuerySuggestionsBlockListResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateQuerySuggestionsBlockListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aggregateHours")
     public String aggregateHours;
+
     public GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest withAggregateHours(String aggregateHours) {
         this.aggregateHours = aggregateHours;
         return this;
@@ -16,6 +17,7 @@ public class GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest 
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowAsynch")
     public Boolean allowAsynch;
+
     public GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest withAllowAsynch(Boolean allowAsynch) {
         this.allowAsynch = allowAsynch;
         return this;
@@ -23,6 +25,7 @@ public class GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest 
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentType")
     public String contentType;
+
     public GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,6 +33,7 @@ public class GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest 
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest withKey(String key) {
         this.key = key;
         return this;
@@ -37,6 +41,7 @@ public class GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest 
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locations")
     public String locations;
+
     public GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest withLocations(String locations) {
         this.locations = locations;
         return this;
@@ -44,6 +49,7 @@ public class GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest 
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendAsDatasource")
     public Boolean sendAsDatasource;
+
     public GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest withSendAsDatasource(Boolean sendAsDatasource) {
         this.sendAsDatasource = sendAsDatasource;
         return this;
@@ -51,6 +57,7 @@ public class GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest 
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shortColumnNames")
     public Boolean shortColumnNames;
+
     public GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest withShortColumnNames(Boolean shortColumnNames) {
         this.shortColumnNames = shortColumnNames;
         return this;
@@ -58,9 +65,11 @@ public class GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest 
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitGroup")
     public String unitGroup;
+
     public GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest withUnitGroup(String unitGroup) {
         this.unitGroup = unitGroup;
         return this;
     }
     
+    public GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest(){}
 }

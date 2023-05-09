@@ -22,6 +22,7 @@ public class LastUpdate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public LastUpdate withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class LastUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public UpdateError error;
+
     public LastUpdate withError(UpdateError error) {
         this.error = error;
         return this;
@@ -38,6 +40,7 @@ public class LastUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public LastUpdate withSource(String source) {
         this.source = source;
         return this;
@@ -46,9 +49,11 @@ public class LastUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public UpdateStatusEnum status;
+
     public LastUpdate withStatus(UpdateStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public LastUpdate(){}
 }

@@ -12,9 +12,13 @@ public class UpdateSuiteDefinitionRequestBody {
      */
     @JsonProperty("suiteDefinitionConfiguration")
     public UpdateSuiteDefinitionRequestBodySuiteDefinitionConfiguration suiteDefinitionConfiguration;
+
     public UpdateSuiteDefinitionRequestBody withSuiteDefinitionConfiguration(UpdateSuiteDefinitionRequestBodySuiteDefinitionConfiguration suiteDefinitionConfiguration) {
         this.suiteDefinitionConfiguration = suiteDefinitionConfiguration;
         return this;
     }
     
+    public UpdateSuiteDefinitionRequestBody(@JsonProperty("suiteDefinitionConfiguration") UpdateSuiteDefinitionRequestBodySuiteDefinitionConfiguration suiteDefinitionConfiguration) {
+        this.suiteDefinitionConfiguration = suiteDefinitionConfiguration;
+  }
 }

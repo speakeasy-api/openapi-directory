@@ -18,6 +18,7 @@ public class ListOutpostsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListOutpostsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,9 +30,11 @@ public class ListOutpostsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Outposts")
     public Outpost[] outposts;
+
     public ListOutpostsOutput withOutposts(Outpost[] outposts) {
         this.outposts = outposts;
         return this;
     }
     
+    public ListOutpostsOutput(){}
 }

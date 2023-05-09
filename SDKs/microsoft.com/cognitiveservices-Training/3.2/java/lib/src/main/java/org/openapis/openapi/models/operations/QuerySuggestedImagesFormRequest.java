@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuerySuggestedImagesFormRequest {
@@ -12,6 +13,7 @@ public class QuerySuggestedImagesFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.SuggestedTagAndRegionQueryToken suggestedTagAndRegionQueryToken;
+
     public QuerySuggestedImagesFormRequest withSuggestedTagAndRegionQueryToken(org.openapis.openapi.models.shared.SuggestedTagAndRegionQueryToken suggestedTagAndRegionQueryToken) {
         this.suggestedTagAndRegionQueryToken = suggestedTagAndRegionQueryToken;
         return this;
@@ -22,6 +24,7 @@ public class QuerySuggestedImagesFormRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public QuerySuggestedImagesFormRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -32,9 +35,15 @@ public class QuerySuggestedImagesFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public QuerySuggestedImagesFormRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public QuerySuggestedImagesFormRequest(@JsonProperty("SuggestedTagAndRegionQueryToken") org.openapis.openapi.models.shared.SuggestedTagAndRegionQueryToken suggestedTagAndRegionQueryToken, @JsonProperty("iterationId") String iterationId, @JsonProperty("projectId") String projectId) {
+        this.suggestedTagAndRegionQueryToken = suggestedTagAndRegionQueryToken;
+        this.iterationId = iterationId;
+        this.projectId = projectId;
+  }
 }

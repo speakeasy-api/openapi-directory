@@ -15,6 +15,7 @@ public class ViewDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public ColumnDTO[] columns;
+
     public ViewDTO withColumns(ColumnDTO[] columns) {
         this.columns = columns;
         return this;
@@ -23,6 +24,7 @@ public class ViewDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public OrderDTO order;
+
     public ViewDTO withOrder(OrderDTO order) {
         this.order = order;
         return this;
@@ -31,6 +33,7 @@ public class ViewDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public PermissionsDTO permissions;
+
     public ViewDTO withPermissions(PermissionsDTO permissions) {
         this.permissions = permissions;
         return this;
@@ -39,9 +42,11 @@ public class ViewDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public SettingsDTO settings;
+
     public ViewDTO withSettings(SettingsDTO settings) {
         this.settings = settings;
         return this;
     }
     
+    public ViewDTO(){}
 }

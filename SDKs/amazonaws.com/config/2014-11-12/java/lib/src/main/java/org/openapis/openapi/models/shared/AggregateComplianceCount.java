@@ -15,6 +15,7 @@ public class AggregateComplianceCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceSummary")
     public ComplianceSummary complianceSummary;
+
     public AggregateComplianceCount withComplianceSummary(ComplianceSummary complianceSummary) {
         this.complianceSummary = complianceSummary;
         return this;
@@ -23,9 +24,11 @@ public class AggregateComplianceCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public AggregateComplianceCount withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public AggregateComplianceCount(){}
 }

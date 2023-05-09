@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetRepositoryInput {
     @JsonProperty("name")
     public String name;
+
     public GetRepositoryInput withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class GetRepositoryInput {
     
     @JsonProperty("provider")
     public RepositoryProviderEnum provider;
+
     public GetRepositoryInput withProvider(RepositoryProviderEnum provider) {
         this.provider = provider;
         return this;
     }
     
+    public GetRepositoryInput(@JsonProperty("name") String name, @JsonProperty("provider") RepositoryProviderEnum provider) {
+        this.name = name;
+        this.provider = provider;
+  }
 }

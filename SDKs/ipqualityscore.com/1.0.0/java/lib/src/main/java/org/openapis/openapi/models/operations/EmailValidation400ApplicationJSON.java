@@ -15,6 +15,7 @@ public class EmailValidation400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public EmailValidation400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -23,6 +24,7 @@ public class EmailValidation400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_id")
     public String requestId;
+
     public EmailValidation400ApplicationJSON withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -31,9 +33,11 @@ public class EmailValidation400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public EmailValidation400ApplicationJSON withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public EmailValidation400ApplicationJSON(){}
 }

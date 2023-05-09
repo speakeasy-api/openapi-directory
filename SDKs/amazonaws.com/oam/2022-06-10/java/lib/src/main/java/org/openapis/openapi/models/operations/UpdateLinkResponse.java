@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLinkResponse {
     
     public String contentType;
+
     public UpdateLinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateLinkResponse {
      */
     
     public Object internalServiceFault;
+
     public UpdateLinkResponse withInternalServiceFault(Object internalServiceFault) {
         this.internalServiceFault = internalServiceFault;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLinkResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateLinkResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateLinkResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public UpdateLinkResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateLinkResponse {
     
     
     public Integer statusCode;
+
     public UpdateLinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateLinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateLinkResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateLinkResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateLinkOutput updateLinkOutput;
+
     public UpdateLinkResponse withUpdateLinkOutput(org.openapis.openapi.models.shared.UpdateLinkOutput updateLinkOutput) {
         this.updateLinkOutput = updateLinkOutput;
         return this;
     }
     
+    public UpdateLinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class DocHeadline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kicker")
     public String kicker;
+
     public DocHeadline withKicker(String kicker) {
         this.kicker = kicker;
         return this;
@@ -20,9 +21,11 @@ public class DocHeadline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("main")
     public String main;
+
     public DocHeadline withMain(String main) {
         this.main = main;
         return this;
     }
     
+    public DocHeadline(){}
 }

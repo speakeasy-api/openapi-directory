@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOpsMetadataResponse {
     
     public String contentType;
+
     public GetOpsMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetOpsMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOpsMetadataResult getOpsMetadataResult;
+
     public GetOpsMetadataResponse withGetOpsMetadataResult(org.openapis.openapi.models.shared.GetOpsMetadataResult getOpsMetadataResult) {
         this.getOpsMetadataResult = getOpsMetadataResult;
         return this;
@@ -29,6 +32,7 @@ public class GetOpsMetadataResponse {
      */
     
     public Object internalServerError;
+
     public GetOpsMetadataResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class GetOpsMetadataResponse {
      */
     
     public Object opsMetadataInvalidArgumentException;
+
     public GetOpsMetadataResponse withOpsMetadataInvalidArgumentException(Object opsMetadataInvalidArgumentException) {
         this.opsMetadataInvalidArgumentException = opsMetadataInvalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class GetOpsMetadataResponse {
      */
     
     public Object opsMetadataNotFoundException;
+
     public GetOpsMetadataResponse withOpsMetadataNotFoundException(Object opsMetadataNotFoundException) {
         this.opsMetadataNotFoundException = opsMetadataNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetOpsMetadataResponse {
     
     
     public Integer statusCode;
+
     public GetOpsMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetOpsMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOpsMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOpsMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

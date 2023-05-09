@@ -15,6 +15,7 @@ public class DescribeResourceCollectionHealthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudFormation")
     public CloudFormationHealth[] cloudFormation;
+
     public DescribeResourceCollectionHealthResponse withCloudFormation(CloudFormationHealth[] cloudFormation) {
         this.cloudFormation = cloudFormation;
         return this;
@@ -23,6 +24,7 @@ public class DescribeResourceCollectionHealthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeResourceCollectionHealthResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,6 +33,7 @@ public class DescribeResourceCollectionHealthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Service")
     public ServiceHealth[] service;
+
     public DescribeResourceCollectionHealthResponse withService(ServiceHealth[] service) {
         this.service = service;
         return this;
@@ -39,9 +42,11 @@ public class DescribeResourceCollectionHealthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagHealth[] tags;
+
     public DescribeResourceCollectionHealthResponse withTags(TagHealth[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeResourceCollectionHealthResponse(){}
 }

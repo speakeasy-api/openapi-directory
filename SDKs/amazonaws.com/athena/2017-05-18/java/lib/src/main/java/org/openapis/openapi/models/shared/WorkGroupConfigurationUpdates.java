@@ -15,6 +15,7 @@ public class WorkGroupConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalConfiguration")
     public String additionalConfiguration;
+
     public WorkGroupConfigurationUpdates withAdditionalConfiguration(String additionalConfiguration) {
         this.additionalConfiguration = additionalConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class WorkGroupConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BytesScannedCutoffPerQuery")
     public Long bytesScannedCutoffPerQuery;
+
     public WorkGroupConfigurationUpdates withBytesScannedCutoffPerQuery(Long bytesScannedCutoffPerQuery) {
         this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
         return this;
@@ -34,6 +36,7 @@ public class WorkGroupConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerContentEncryptionConfiguration")
     public CustomerContentEncryptionConfiguration customerContentEncryptionConfiguration;
+
     public WorkGroupConfigurationUpdates withCustomerContentEncryptionConfiguration(CustomerContentEncryptionConfiguration customerContentEncryptionConfiguration) {
         this.customerContentEncryptionConfiguration = customerContentEncryptionConfiguration;
         return this;
@@ -42,6 +45,7 @@ public class WorkGroupConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableMinimumEncryptionConfiguration")
     public Boolean enableMinimumEncryptionConfiguration;
+
     public WorkGroupConfigurationUpdates withEnableMinimumEncryptionConfiguration(Boolean enableMinimumEncryptionConfiguration) {
         this.enableMinimumEncryptionConfiguration = enableMinimumEncryptionConfiguration;
         return this;
@@ -50,6 +54,7 @@ public class WorkGroupConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnforceWorkGroupConfiguration")
     public Boolean enforceWorkGroupConfiguration;
+
     public WorkGroupConfigurationUpdates withEnforceWorkGroupConfiguration(Boolean enforceWorkGroupConfiguration) {
         this.enforceWorkGroupConfiguration = enforceWorkGroupConfiguration;
         return this;
@@ -58,6 +63,7 @@ public class WorkGroupConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public EngineVersion engineVersion;
+
     public WorkGroupConfigurationUpdates withEngineVersion(EngineVersion engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -66,6 +72,7 @@ public class WorkGroupConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRole")
     public String executionRole;
+
     public WorkGroupConfigurationUpdates withExecutionRole(String executionRole) {
         this.executionRole = executionRole;
         return this;
@@ -74,6 +81,7 @@ public class WorkGroupConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublishCloudWatchMetricsEnabled")
     public Boolean publishCloudWatchMetricsEnabled;
+
     public WorkGroupConfigurationUpdates withPublishCloudWatchMetricsEnabled(Boolean publishCloudWatchMetricsEnabled) {
         this.publishCloudWatchMetricsEnabled = publishCloudWatchMetricsEnabled;
         return this;
@@ -82,6 +90,7 @@ public class WorkGroupConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoveBytesScannedCutoffPerQuery")
     public Boolean removeBytesScannedCutoffPerQuery;
+
     public WorkGroupConfigurationUpdates withRemoveBytesScannedCutoffPerQuery(Boolean removeBytesScannedCutoffPerQuery) {
         this.removeBytesScannedCutoffPerQuery = removeBytesScannedCutoffPerQuery;
         return this;
@@ -90,6 +99,7 @@ public class WorkGroupConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoveCustomerContentEncryptionConfiguration")
     public Boolean removeCustomerContentEncryptionConfiguration;
+
     public WorkGroupConfigurationUpdates withRemoveCustomerContentEncryptionConfiguration(Boolean removeCustomerContentEncryptionConfiguration) {
         this.removeCustomerContentEncryptionConfiguration = removeCustomerContentEncryptionConfiguration;
         return this;
@@ -98,6 +108,7 @@ public class WorkGroupConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequesterPaysEnabled")
     public Boolean requesterPaysEnabled;
+
     public WorkGroupConfigurationUpdates withRequesterPaysEnabled(Boolean requesterPaysEnabled) {
         this.requesterPaysEnabled = requesterPaysEnabled;
         return this;
@@ -106,9 +117,11 @@ public class WorkGroupConfigurationUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultConfigurationUpdates")
     public ResultConfigurationUpdates resultConfigurationUpdates;
+
     public WorkGroupConfigurationUpdates withResultConfigurationUpdates(ResultConfigurationUpdates resultConfigurationUpdates) {
         this.resultConfigurationUpdates = resultConfigurationUpdates;
         return this;
     }
     
+    public WorkGroupConfigurationUpdates(){}
 }

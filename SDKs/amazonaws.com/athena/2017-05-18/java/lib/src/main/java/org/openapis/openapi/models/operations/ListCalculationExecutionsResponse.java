@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCalculationExecutionsResponse {
     
     public String contentType;
+
     public ListCalculationExecutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCalculationExecutionsResponse {
      */
     
     public Object internalServerException;
+
     public ListCalculationExecutionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListCalculationExecutionsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListCalculationExecutionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListCalculationExecutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCalculationExecutionsResponse listCalculationExecutionsResponse;
+
     public ListCalculationExecutionsResponse withListCalculationExecutionsResponse(org.openapis.openapi.models.shared.ListCalculationExecutionsResponse listCalculationExecutionsResponse) {
         this.listCalculationExecutionsResponse = listCalculationExecutionsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListCalculationExecutionsResponse {
     
     
     public Integer statusCode;
+
     public ListCalculationExecutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListCalculationExecutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCalculationExecutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListCalculationExecutionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListCalculationExecutionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListCalculationExecutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

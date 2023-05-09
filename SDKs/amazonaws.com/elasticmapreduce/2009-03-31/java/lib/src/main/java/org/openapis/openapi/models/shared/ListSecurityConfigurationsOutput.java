@@ -15,6 +15,7 @@ public class ListSecurityConfigurationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListSecurityConfigurationsOutput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +24,11 @@ public class ListSecurityConfigurationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfigurations")
     public SecurityConfigurationSummary[] securityConfigurations;
+
     public ListSecurityConfigurationsOutput withSecurityConfigurations(SecurityConfigurationSummary[] securityConfigurations) {
         this.securityConfigurations = securityConfigurations;
         return this;
     }
     
+    public ListSecurityConfigurationsOutput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUnreferencedMergeCommitResponse {
@@ -12,6 +13,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object commitDoesNotExistException;
+
     public CreateUnreferencedMergeCommitResponse withCommitDoesNotExistException(Object commitDoesNotExistException) {
         this.commitDoesNotExistException = commitDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object commitMessageLengthExceededException;
+
     public CreateUnreferencedMergeCommitResponse withCommitMessageLengthExceededException(Object commitMessageLengthExceededException) {
         this.commitMessageLengthExceededException = commitMessageLengthExceededException;
         return this;
@@ -32,6 +35,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object commitRequiredException;
+
     public CreateUnreferencedMergeCommitResponse withCommitRequiredException(Object commitRequiredException) {
         this.commitRequiredException = commitRequiredException;
         return this;
@@ -42,6 +46,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object concurrentReferenceUpdateException;
+
     public CreateUnreferencedMergeCommitResponse withConcurrentReferenceUpdateException(Object concurrentReferenceUpdateException) {
         this.concurrentReferenceUpdateException = concurrentReferenceUpdateException;
         return this;
@@ -49,6 +54,7 @@ public class CreateUnreferencedMergeCommitResponse {
     
     
     public String contentType;
+
     public CreateUnreferencedMergeCommitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUnreferencedMergeCommitOutput createUnreferencedMergeCommitOutput;
+
     public CreateUnreferencedMergeCommitResponse withCreateUnreferencedMergeCommitOutput(org.openapis.openapi.models.shared.CreateUnreferencedMergeCommitOutput createUnreferencedMergeCommitOutput) {
         this.createUnreferencedMergeCommitOutput = createUnreferencedMergeCommitOutput;
         return this;
@@ -69,6 +76,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public CreateUnreferencedMergeCommitResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -79,6 +87,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public CreateUnreferencedMergeCommitResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -89,6 +98,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public CreateUnreferencedMergeCommitResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -99,6 +109,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public CreateUnreferencedMergeCommitResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -109,6 +120,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public CreateUnreferencedMergeCommitResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -119,6 +131,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object fileContentSizeLimitExceededException;
+
     public CreateUnreferencedMergeCommitResponse withFileContentSizeLimitExceededException(Object fileContentSizeLimitExceededException) {
         this.fileContentSizeLimitExceededException = fileContentSizeLimitExceededException;
         return this;
@@ -129,6 +142,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object fileModeRequiredException;
+
     public CreateUnreferencedMergeCommitResponse withFileModeRequiredException(Object fileModeRequiredException) {
         this.fileModeRequiredException = fileModeRequiredException;
         return this;
@@ -139,6 +153,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object folderContentSizeLimitExceededException;
+
     public CreateUnreferencedMergeCommitResponse withFolderContentSizeLimitExceededException(Object folderContentSizeLimitExceededException) {
         this.folderContentSizeLimitExceededException = folderContentSizeLimitExceededException;
         return this;
@@ -149,6 +164,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object invalidCommitException;
+
     public CreateUnreferencedMergeCommitResponse withInvalidCommitException(Object invalidCommitException) {
         this.invalidCommitException = invalidCommitException;
         return this;
@@ -159,6 +175,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object invalidConflictDetailLevelException;
+
     public CreateUnreferencedMergeCommitResponse withInvalidConflictDetailLevelException(Object invalidConflictDetailLevelException) {
         this.invalidConflictDetailLevelException = invalidConflictDetailLevelException;
         return this;
@@ -169,6 +186,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object invalidConflictResolutionException;
+
     public CreateUnreferencedMergeCommitResponse withInvalidConflictResolutionException(Object invalidConflictResolutionException) {
         this.invalidConflictResolutionException = invalidConflictResolutionException;
         return this;
@@ -179,6 +197,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object invalidConflictResolutionStrategyException;
+
     public CreateUnreferencedMergeCommitResponse withInvalidConflictResolutionStrategyException(Object invalidConflictResolutionStrategyException) {
         this.invalidConflictResolutionStrategyException = invalidConflictResolutionStrategyException;
         return this;
@@ -189,6 +208,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object invalidEmailException;
+
     public CreateUnreferencedMergeCommitResponse withInvalidEmailException(Object invalidEmailException) {
         this.invalidEmailException = invalidEmailException;
         return this;
@@ -199,6 +219,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object invalidFileModeException;
+
     public CreateUnreferencedMergeCommitResponse withInvalidFileModeException(Object invalidFileModeException) {
         this.invalidFileModeException = invalidFileModeException;
         return this;
@@ -209,6 +230,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object invalidMergeOptionException;
+
     public CreateUnreferencedMergeCommitResponse withInvalidMergeOptionException(Object invalidMergeOptionException) {
         this.invalidMergeOptionException = invalidMergeOptionException;
         return this;
@@ -219,6 +241,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object invalidPathException;
+
     public CreateUnreferencedMergeCommitResponse withInvalidPathException(Object invalidPathException) {
         this.invalidPathException = invalidPathException;
         return this;
@@ -229,6 +252,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object invalidReplacementContentException;
+
     public CreateUnreferencedMergeCommitResponse withInvalidReplacementContentException(Object invalidReplacementContentException) {
         this.invalidReplacementContentException = invalidReplacementContentException;
         return this;
@@ -239,6 +263,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object invalidReplacementTypeException;
+
     public CreateUnreferencedMergeCommitResponse withInvalidReplacementTypeException(Object invalidReplacementTypeException) {
         this.invalidReplacementTypeException = invalidReplacementTypeException;
         return this;
@@ -249,6 +274,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public CreateUnreferencedMergeCommitResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -259,6 +285,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object manualMergeRequiredException;
+
     public CreateUnreferencedMergeCommitResponse withManualMergeRequiredException(Object manualMergeRequiredException) {
         this.manualMergeRequiredException = manualMergeRequiredException;
         return this;
@@ -269,6 +296,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object maximumConflictResolutionEntriesExceededException;
+
     public CreateUnreferencedMergeCommitResponse withMaximumConflictResolutionEntriesExceededException(Object maximumConflictResolutionEntriesExceededException) {
         this.maximumConflictResolutionEntriesExceededException = maximumConflictResolutionEntriesExceededException;
         return this;
@@ -279,6 +307,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object maximumFileContentToLoadExceededException;
+
     public CreateUnreferencedMergeCommitResponse withMaximumFileContentToLoadExceededException(Object maximumFileContentToLoadExceededException) {
         this.maximumFileContentToLoadExceededException = maximumFileContentToLoadExceededException;
         return this;
@@ -289,6 +318,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object maximumItemsToCompareExceededException;
+
     public CreateUnreferencedMergeCommitResponse withMaximumItemsToCompareExceededException(Object maximumItemsToCompareExceededException) {
         this.maximumItemsToCompareExceededException = maximumItemsToCompareExceededException;
         return this;
@@ -299,6 +329,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object mergeOptionRequiredException;
+
     public CreateUnreferencedMergeCommitResponse withMergeOptionRequiredException(Object mergeOptionRequiredException) {
         this.mergeOptionRequiredException = mergeOptionRequiredException;
         return this;
@@ -309,6 +340,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object multipleConflictResolutionEntriesException;
+
     public CreateUnreferencedMergeCommitResponse withMultipleConflictResolutionEntriesException(Object multipleConflictResolutionEntriesException) {
         this.multipleConflictResolutionEntriesException = multipleConflictResolutionEntriesException;
         return this;
@@ -319,6 +351,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object nameLengthExceededException;
+
     public CreateUnreferencedMergeCommitResponse withNameLengthExceededException(Object nameLengthExceededException) {
         this.nameLengthExceededException = nameLengthExceededException;
         return this;
@@ -329,6 +362,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object pathRequiredException;
+
     public CreateUnreferencedMergeCommitResponse withPathRequiredException(Object pathRequiredException) {
         this.pathRequiredException = pathRequiredException;
         return this;
@@ -339,6 +373,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object replacementContentRequiredException;
+
     public CreateUnreferencedMergeCommitResponse withReplacementContentRequiredException(Object replacementContentRequiredException) {
         this.replacementContentRequiredException = replacementContentRequiredException;
         return this;
@@ -349,6 +384,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object replacementTypeRequiredException;
+
     public CreateUnreferencedMergeCommitResponse withReplacementTypeRequiredException(Object replacementTypeRequiredException) {
         this.replacementTypeRequiredException = replacementTypeRequiredException;
         return this;
@@ -359,6 +395,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public CreateUnreferencedMergeCommitResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -369,6 +406,7 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public CreateUnreferencedMergeCommitResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -376,6 +414,7 @@ public class CreateUnreferencedMergeCommitResponse {
     
     
     public Integer statusCode;
+
     public CreateUnreferencedMergeCommitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -383,6 +422,7 @@ public class CreateUnreferencedMergeCommitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUnreferencedMergeCommitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -393,9 +433,14 @@ public class CreateUnreferencedMergeCommitResponse {
      */
     
     public Object tipsDivergenceExceededException;
+
     public CreateUnreferencedMergeCommitResponse withTipsDivergenceExceededException(Object tipsDivergenceExceededException) {
         this.tipsDivergenceExceededException = tipsDivergenceExceededException;
         return this;
     }
     
+    public CreateUnreferencedMergeCommitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

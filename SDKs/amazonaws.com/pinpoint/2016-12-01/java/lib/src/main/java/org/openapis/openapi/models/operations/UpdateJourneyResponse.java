@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateJourneyResponse {
@@ -12,6 +13,7 @@ public class UpdateJourneyResponse {
      */
     
     public Object badRequestException;
+
     public UpdateJourneyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateJourneyResponse {
      */
     
     public Object conflictException;
+
     public UpdateJourneyResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateJourneyResponse {
     
     
     public String contentType;
+
     public UpdateJourneyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateJourneyResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateJourneyResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateJourneyResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateJourneyResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateJourneyResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateJourneyResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateJourneyResponse {
      */
     
     public Object notFoundException;
+
     public UpdateJourneyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateJourneyResponse {
      */
     
     public Object payloadTooLargeException;
+
     public UpdateJourneyResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class UpdateJourneyResponse {
     
     
     public Integer statusCode;
+
     public UpdateJourneyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class UpdateJourneyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateJourneyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class UpdateJourneyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateJourneyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateJourneyResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateJourneyResponse updateJourneyResponse;
+
     public UpdateJourneyResponse withUpdateJourneyResponse(org.openapis.openapi.models.shared.UpdateJourneyResponse updateJourneyResponse) {
         this.updateJourneyResponse = updateJourneyResponse;
         return this;
     }
     
+    public UpdateJourneyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

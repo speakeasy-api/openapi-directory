@@ -18,9 +18,11 @@ public class TrafficPortSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ports")
     public String[] ports;
+
     public TrafficPortSelector withPorts(String[] ports) {
         this.ports = ports;
         return this;
     }
     
+    public TrafficPortSelector(){}
 }

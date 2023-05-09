@@ -15,6 +15,7 @@ public class UpdateShardCountOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentShardCount")
     public Long currentShardCount;
+
     public UpdateShardCountOutput withCurrentShardCount(Long currentShardCount) {
         this.currentShardCount = currentShardCount;
         return this;
@@ -23,6 +24,7 @@ public class UpdateShardCountOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public UpdateShardCountOutput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -31,6 +33,7 @@ public class UpdateShardCountOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public UpdateShardCountOutput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -39,9 +42,11 @@ public class UpdateShardCountOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetShardCount")
     public Long targetShardCount;
+
     public UpdateShardCountOutput withTargetShardCount(Long targetShardCount) {
         this.targetShardCount = targetShardCount;
         return this;
     }
     
+    public UpdateShardCountOutput(){}
 }

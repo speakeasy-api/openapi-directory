@@ -18,9 +18,11 @@ public class DuplicateFilterViewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterId")
     public Integer filterId;
+
     public DuplicateFilterViewRequest withFilterId(Integer filterId) {
         this.filterId = filterId;
         return this;
     }
     
+    public DuplicateFilterViewRequest(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesAssociation association;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withAssociation(DescribeInstancesResultReservationsInstancesNetworkInterfacesAssociation association) {
         this.association = association;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachment attachment;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withAttachment(DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachment attachment) {
         this.attachment = attachment;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public String description;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesGroups[] groups;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withGroups(DescribeInstancesResultReservationsInstancesNetworkInterfacesGroups[] groups) {
         this.groups = groups;
         return this;
@@ -40,6 +44,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public String interfaceType;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withInterfaceType(String interfaceType) {
         this.interfaceType = interfaceType;
         return this;
@@ -47,6 +52,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesIpv4Prefixes[] ipv4Prefixes;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withIpv4Prefixes(DescribeInstancesResultReservationsInstancesNetworkInterfacesIpv4Prefixes[] ipv4Prefixes) {
         this.ipv4Prefixes = ipv4Prefixes;
         return this;
@@ -54,6 +60,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesIpv6Addresses[] ipv6Addresses;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withIpv6Addresses(DescribeInstancesResultReservationsInstancesNetworkInterfacesIpv6Addresses[] ipv6Addresses) {
         this.ipv6Addresses = ipv6Addresses;
         return this;
@@ -61,6 +68,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesIpv6Prefixes[] ipv6Prefixes;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withIpv6Prefixes(DescribeInstancesResultReservationsInstancesNetworkInterfacesIpv6Prefixes[] ipv6Prefixes) {
         this.ipv6Prefixes = ipv6Prefixes;
         return this;
@@ -68,6 +76,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public String macAddress;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
@@ -75,6 +84,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public String networkInterfaceId;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -82,6 +92,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public String ownerId;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -89,6 +100,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public String privateDnsName;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
@@ -96,6 +108,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public String privateIpAddress;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -103,6 +116,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesPrivateIpAddresses[] privateIpAddresses;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withPrivateIpAddresses(DescribeInstancesResultReservationsInstancesNetworkInterfacesPrivateIpAddresses[] privateIpAddresses) {
         this.privateIpAddresses = privateIpAddresses;
         return this;
@@ -110,6 +124,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public Boolean sourceDestCheck;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withSourceDestCheck(Boolean sourceDestCheck) {
         this.sourceDestCheck = sourceDestCheck;
         return this;
@@ -117,6 +132,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesStatusEnum status;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withStatus(DescribeInstancesResultReservationsInstancesNetworkInterfacesStatusEnum status) {
         this.status = status;
         return this;
@@ -124,6 +140,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public String subnetId;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -131,9 +148,11 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfaces {
     
     
     public String vpcId;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfaces withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeInstancesResultReservationsInstancesNetworkInterfaces(){}
 }

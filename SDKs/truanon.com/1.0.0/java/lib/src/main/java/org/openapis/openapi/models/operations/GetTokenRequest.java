@@ -12,6 +12,7 @@ public class GetTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetTokenRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +23,11 @@ public class GetTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
     public String service;
+
     public GetTokenRequest withService(String service) {
         this.service = service;
         return this;
     }
     
+    public GetTokenRequest(){}
 }

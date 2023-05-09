@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposCreateOrUpdateEnvironmentResponse {
     
     public String contentType;
+
     public ReposCreateOrUpdateEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposCreateOrUpdateEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public ReposCreateOrUpdateEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposCreateOrUpdateEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposCreateOrUpdateEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposCreateOrUpdateEnvironmentResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposCreateOrUpdateEnvironmentResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ReposCreateOrUpdateEnvironmentResponse {
      */
     
     public org.openapis.openapi.models.shared.Environment environment;
+
     public ReposCreateOrUpdateEnvironmentResponse withEnvironment(org.openapis.openapi.models.shared.Environment environment) {
         this.environment = environment;
         return this;
     }
     
+    public ReposCreateOrUpdateEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

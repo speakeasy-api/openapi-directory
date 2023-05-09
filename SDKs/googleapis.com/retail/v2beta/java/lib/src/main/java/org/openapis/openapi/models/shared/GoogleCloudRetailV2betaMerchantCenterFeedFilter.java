@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaMerchantCenterFeedFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryFeedId")
     public String primaryFeedId;
+
     public GoogleCloudRetailV2betaMerchantCenterFeedFilter withPrimaryFeedId(String primaryFeedId) {
         this.primaryFeedId = primaryFeedId;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2betaMerchantCenterFeedFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryFeedName")
     public String primaryFeedName;
+
     public GoogleCloudRetailV2betaMerchantCenterFeedFilter withPrimaryFeedName(String primaryFeedName) {
         this.primaryFeedName = primaryFeedName;
         return this;
     }
     
+    public GoogleCloudRetailV2betaMerchantCenterFeedFilter(){}
 }

@@ -12,6 +12,7 @@ public class DeprecatedStringTranslationContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String[] contents;
+
     public DeprecatedStringTranslationContent withContents(String[] contents) {
         this.contents = contents;
         return this;
@@ -20,6 +21,7 @@ public class DeprecatedStringTranslationContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_language")
     public String sourceLanguage;
+
     public DeprecatedStringTranslationContent withSourceLanguage(String sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
         return this;
@@ -28,9 +30,11 @@ public class DeprecatedStringTranslationContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_languages")
     public String[] targetLanguages;
+
     public DeprecatedStringTranslationContent withTargetLanguages(String[] targetLanguages) {
         this.targetLanguages = targetLanguages;
         return this;
     }
     
+    public DeprecatedStringTranslationContent(){}
 }

@@ -12,6 +12,7 @@ public class PostContactEnrichRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressLine1")
     public String addressLine1;
+
     public PostContactEnrichRequestBodyAddress withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -20,9 +21,11 @@ public class PostContactEnrichRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressLine2")
     public String addressLine2;
+
     public PostContactEnrichRequestBodyAddress withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
     }
     
+    public PostContactEnrichRequestBodyAddress(){}
 }

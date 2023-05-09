@@ -60,11 +60,9 @@ public class Neo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BrowseNearEarthObjectsResponse res = new org.openapis.openapi.models.operations.BrowseNearEarthObjectsResponse() {{
+        org.openapis.openapi.models.operations.BrowseNearEarthObjectsResponse res = new org.openapis.openapi.models.operations.BrowseNearEarthObjectsResponse(contentType, httpRes.statusCode()) {{
             nearEarthObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Neo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveNearEarthObjectByIdResponse res = new org.openapis.openapi.models.operations.RetrieveNearEarthObjectByIdResponse() {{
+        org.openapis.openapi.models.operations.RetrieveNearEarthObjectByIdResponse res = new org.openapis.openapi.models.operations.RetrieveNearEarthObjectByIdResponse(contentType, httpRes.statusCode()) {{
             nearEarthObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccessControlAttribute {
     @JsonProperty("Key")
     public String key;
+
     public AccessControlAttribute withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class AccessControlAttribute {
     
     @JsonProperty("Value")
     public AccessControlAttributeValue value;
+
     public AccessControlAttribute withValue(AccessControlAttributeValue value) {
         this.value = value;
         return this;
     }
     
+    public AccessControlAttribute(@JsonProperty("Key") String key, @JsonProperty("Value") AccessControlAttributeValue value) {
+        this.key = key;
+        this.value = value;
+  }
 }

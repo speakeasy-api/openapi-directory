@@ -12,9 +12,11 @@ public class OBReadDataParty3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Party")
     public OBParty2[] party;
+
     public OBReadDataParty3 withParty(OBParty2[] party) {
         this.party = party;
         return this;
     }
     
+    public OBReadDataParty3(){}
 }

@@ -15,6 +15,7 @@ public class SuggestStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rid")
     public String rid;
+
     public SuggestStatus withRid(String rid) {
         this.rid = rid;
         return this;
@@ -23,9 +24,11 @@ public class SuggestStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timems")
     public Long timems;
+
     public SuggestStatus withTimems(Long timems) {
         this.timems = timems;
         return this;
     }
     
+    public SuggestStatus(){}
 }

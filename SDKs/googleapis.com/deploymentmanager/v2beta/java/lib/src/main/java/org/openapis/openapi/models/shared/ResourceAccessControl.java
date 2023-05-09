@@ -18,9 +18,11 @@ public class ResourceAccessControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcpIamPolicy")
     public String gcpIamPolicy;
+
     public ResourceAccessControl withGcpIamPolicy(String gcpIamPolicy) {
         this.gcpIamPolicy = gcpIamPolicy;
         return this;
     }
     
+    public ResourceAccessControl(){}
 }

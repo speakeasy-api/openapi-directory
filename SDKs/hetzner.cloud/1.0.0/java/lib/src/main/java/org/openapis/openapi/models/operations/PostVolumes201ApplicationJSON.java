@@ -15,6 +15,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostVolumes201ApplicationJSON {
     @JsonProperty("action")
     public PostVolumes201ApplicationJSONAction action;
+
     public PostVolumes201ApplicationJSON withAction(PostVolumes201ApplicationJSONAction action) {
         this.action = action;
         return this;
@@ -22,6 +23,7 @@ public class PostVolumes201ApplicationJSON {
     
     @JsonProperty("next_actions")
     public PostVolumes201ApplicationJSONAction[] nextActions;
+
     public PostVolumes201ApplicationJSON withNextActions(PostVolumes201ApplicationJSONAction[] nextActions) {
         this.nextActions = nextActions;
         return this;
@@ -29,9 +31,15 @@ public class PostVolumes201ApplicationJSON {
     
     @JsonProperty("volume")
     public PostVolumes201ApplicationJSONVolume volume;
+
     public PostVolumes201ApplicationJSON withVolume(PostVolumes201ApplicationJSONVolume volume) {
         this.volume = volume;
         return this;
     }
     
+    public PostVolumes201ApplicationJSON(@JsonProperty("action") PostVolumes201ApplicationJSONAction action, @JsonProperty("next_actions") PostVolumes201ApplicationJSONAction[] nextActions, @JsonProperty("volume") PostVolumes201ApplicationJSONVolume volume) {
+        this.action = action;
+        this.nextActions = nextActions;
+        this.volume = volume;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RestoreAddressToClassicResult {
     
     public String publicIp;
+
     public RestoreAddressToClassicResult withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -19,9 +20,11 @@ public class RestoreAddressToClassicResult {
     
     
     public RestoreAddressToClassicResultStatusEnum status;
+
     public RestoreAddressToClassicResult withStatus(RestoreAddressToClassicResultStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public RestoreAddressToClassicResult(){}
 }

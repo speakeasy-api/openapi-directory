@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateReplicationTaskResponse {
@@ -12,6 +13,7 @@ public class CreateReplicationTaskResponse {
      */
     
     public Object accessDeniedFault;
+
     public CreateReplicationTaskResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class CreateReplicationTaskResponse {
     
     
     public String contentType;
+
     public CreateReplicationTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateReplicationTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateReplicationTaskResponse createReplicationTaskResponse;
+
     public CreateReplicationTaskResponse withCreateReplicationTaskResponse(org.openapis.openapi.models.shared.CreateReplicationTaskResponse createReplicationTaskResponse) {
         this.createReplicationTaskResponse = createReplicationTaskResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateReplicationTaskResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public CreateReplicationTaskResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -49,6 +54,7 @@ public class CreateReplicationTaskResponse {
      */
     
     public Object kmsKeyNotAccessibleFault;
+
     public CreateReplicationTaskResponse withKMSKeyNotAccessibleFault(Object kmsKeyNotAccessibleFault) {
         this.kmsKeyNotAccessibleFault = kmsKeyNotAccessibleFault;
         return this;
@@ -56,6 +62,7 @@ public class CreateReplicationTaskResponse {
     
     
     public Integer statusCode;
+
     public CreateReplicationTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateReplicationTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateReplicationTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateReplicationTaskResponse {
      */
     
     public Object resourceAlreadyExistsFault;
+
     public CreateReplicationTaskResponse withResourceAlreadyExistsFault(Object resourceAlreadyExistsFault) {
         this.resourceAlreadyExistsFault = resourceAlreadyExistsFault;
         return this;
@@ -83,6 +92,7 @@ public class CreateReplicationTaskResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public CreateReplicationTaskResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -93,9 +103,14 @@ public class CreateReplicationTaskResponse {
      */
     
     public Object resourceQuotaExceededFault;
+
     public CreateReplicationTaskResponse withResourceQuotaExceededFault(Object resourceQuotaExceededFault) {
         this.resourceQuotaExceededFault = resourceQuotaExceededFault;
         return this;
     }
     
+    public CreateReplicationTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class TimezoneViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public TimezoneViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -23,6 +24,7 @@ public class TimezoneViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public String[] regions;
+
     public TimezoneViewModel withRegions(String[] regions) {
         this.regions = regions;
         return this;
@@ -31,9 +33,11 @@ public class TimezoneViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezones")
     public TimezonesViewModel[] timezones;
+
     public TimezoneViewModel withTimezones(TimezonesViewModel[] timezones) {
         this.timezones = timezones;
         return this;
     }
     
+    public TimezoneViewModel(){}
 }

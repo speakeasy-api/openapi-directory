@@ -12,9 +12,13 @@ public class UpdateComponentRequestBody {
      */
     @JsonProperty("updatedComponent")
     public UpdateComponentRequestBodyUpdatedComponent updatedComponent;
+
     public UpdateComponentRequestBody withUpdatedComponent(UpdateComponentRequestBodyUpdatedComponent updatedComponent) {
         this.updatedComponent = updatedComponent;
         return this;
     }
     
+    public UpdateComponentRequestBody(@JsonProperty("updatedComponent") UpdateComponentRequestBodyUpdatedComponent updatedComponent) {
+        this.updatedComponent = updatedComponent;
+  }
 }

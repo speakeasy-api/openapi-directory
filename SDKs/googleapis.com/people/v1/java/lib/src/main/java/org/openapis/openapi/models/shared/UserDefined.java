@@ -18,6 +18,7 @@ public class UserDefined {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public UserDefined withKey(String key) {
         this.key = key;
         return this;
@@ -29,6 +30,7 @@ public class UserDefined {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadata metadata;
+
     public UserDefined withMetadata(FieldMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -40,9 +42,11 @@ public class UserDefined {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public UserDefined withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UserDefined(){}
 }

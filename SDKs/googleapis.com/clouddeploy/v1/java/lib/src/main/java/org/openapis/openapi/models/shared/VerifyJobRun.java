@@ -18,6 +18,7 @@ public class VerifyJobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactUri")
     public String artifactUri;
+
     public VerifyJobRun withArtifactUri(String artifactUri) {
         this.artifactUri = artifactUri;
         return this;
@@ -29,6 +30,7 @@ public class VerifyJobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build")
     public String build;
+
     public VerifyJobRun withBuild(String build) {
         this.build = build;
         return this;
@@ -40,6 +42,7 @@ public class VerifyJobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventLogPath")
     public String eventLogPath;
+
     public VerifyJobRun withEventLogPath(String eventLogPath) {
         this.eventLogPath = eventLogPath;
         return this;
@@ -51,6 +54,7 @@ public class VerifyJobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCause")
     public VerifyJobRunFailureCauseEnum failureCause;
+
     public VerifyJobRun withFailureCause(VerifyJobRunFailureCauseEnum failureCause) {
         this.failureCause = failureCause;
         return this;
@@ -62,9 +66,11 @@ public class VerifyJobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureMessage")
     public String failureMessage;
+
     public VerifyJobRun withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
     }
     
+    public VerifyJobRun(){}
 }

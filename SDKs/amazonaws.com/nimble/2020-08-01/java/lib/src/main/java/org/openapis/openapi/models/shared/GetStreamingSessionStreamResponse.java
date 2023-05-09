@@ -15,9 +15,11 @@ public class GetStreamingSessionStreamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stream")
     public StreamingSessionStream stream;
+
     public GetStreamingSessionStreamResponse withStream(StreamingSessionStream stream) {
         this.stream = stream;
         return this;
     }
     
+    public GetStreamingSessionStreamResponse(){}
 }

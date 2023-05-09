@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterElasticIpResponse {
     
     public String contentType;
+
     public DeregisterElasticIpResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeregisterElasticIpResponse {
     
     
     public Integer statusCode;
+
     public DeregisterElasticIpResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeregisterElasticIpResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterElasticIpResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeregisterElasticIpResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeregisterElasticIpResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -43,9 +48,14 @@ public class DeregisterElasticIpResponse {
      */
     
     public Object validationException;
+
     public DeregisterElasticIpResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeregisterElasticIpResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

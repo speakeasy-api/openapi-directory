@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDataSourceFromS3Response {
     
     public String contentType;
+
     public CreateDataSourceFromS3Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDataSourceFromS3Response {
      */
     
     public org.openapis.openapi.models.shared.CreateDataSourceFromS3Output createDataSourceFromS3Output;
+
     public CreateDataSourceFromS3Response withCreateDataSourceFromS3Output(org.openapis.openapi.models.shared.CreateDataSourceFromS3Output createDataSourceFromS3Output) {
         this.createDataSourceFromS3Output = createDataSourceFromS3Output;
         return this;
@@ -29,6 +32,7 @@ public class CreateDataSourceFromS3Response {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateDataSourceFromS3Response withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDataSourceFromS3Response {
      */
     
     public Object internalServerException;
+
     public CreateDataSourceFromS3Response withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDataSourceFromS3Response {
      */
     
     public Object invalidInputException;
+
     public CreateDataSourceFromS3Response withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -56,6 +62,7 @@ public class CreateDataSourceFromS3Response {
     
     
     public Integer statusCode;
+
     public CreateDataSourceFromS3Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateDataSourceFromS3Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDataSourceFromS3Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDataSourceFromS3Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

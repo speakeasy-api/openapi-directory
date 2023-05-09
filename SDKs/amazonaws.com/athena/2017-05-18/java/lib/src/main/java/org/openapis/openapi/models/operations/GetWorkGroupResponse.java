@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkGroupResponse {
     
     public String contentType;
+
     public GetWorkGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.GetWorkGroupOutput getWorkGroupOutput;
+
     public GetWorkGroupResponse withGetWorkGroupOutput(org.openapis.openapi.models.shared.GetWorkGroupOutput getWorkGroupOutput) {
         this.getWorkGroupOutput = getWorkGroupOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetWorkGroupResponse {
      */
     
     public Object internalServerException;
+
     public GetWorkGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetWorkGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public GetWorkGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetWorkGroupResponse {
     
     
     public Integer statusCode;
+
     public GetWorkGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetWorkGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetWorkGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

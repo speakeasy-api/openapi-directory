@@ -18,6 +18,7 @@ public class LocalTimeRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beginHour")
     public Integer beginHour;
+
     public LocalTimeRestriction withBeginHour(Integer beginHour) {
         this.beginHour = beginHour;
         return this;
@@ -29,6 +30,7 @@ public class LocalTimeRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beginMinute")
     public Integer beginMinute;
+
     public LocalTimeRestriction withBeginMinute(Integer beginMinute) {
         this.beginMinute = beginMinute;
         return this;
@@ -40,6 +42,7 @@ public class LocalTimeRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public LocalTimeRestriction withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -51,6 +54,7 @@ public class LocalTimeRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endHour")
     public Integer endHour;
+
     public LocalTimeRestriction withEndHour(Integer endHour) {
         this.endHour = endHour;
         return this;
@@ -62,9 +66,11 @@ public class LocalTimeRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endMinute")
     public Integer endMinute;
+
     public LocalTimeRestriction withEndMinute(Integer endMinute) {
         this.endMinute = endMinute;
         return this;
     }
     
+    public LocalTimeRestriction(){}
 }

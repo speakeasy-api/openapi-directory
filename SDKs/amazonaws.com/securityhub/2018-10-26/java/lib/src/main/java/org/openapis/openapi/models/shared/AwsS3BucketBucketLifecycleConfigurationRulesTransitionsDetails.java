@@ -15,6 +15,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Date")
     public String date;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails withDate(String date) {
         this.date = date;
         return this;
@@ -23,6 +24,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Days")
     public Long days;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails withDays(Long days) {
         this.days = days;
         return this;
@@ -31,9 +33,11 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageClass")
     public String storageClass;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails withStorageClass(String storageClass) {
         this.storageClass = storageClass;
         return this;
     }
     
+    public AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails(){}
 }

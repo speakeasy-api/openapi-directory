@@ -15,6 +15,7 @@ public class CallResponse {
      */
     @JsonProperty("Message")
     public CallResponseMessageEnum message;
+
     public CallResponse withMessage(CallResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,6 +26,7 @@ public class CallResponse {
      */
     @JsonProperty("RequestUUID")
     public String requestUUID;
+
     public CallResponse withRequestUUID(String requestUUID) {
         this.requestUUID = requestUUID;
         return this;
@@ -35,6 +37,7 @@ public class CallResponse {
      */
     @JsonProperty("RestApiServer")
     public String restApiServer;
+
     public CallResponse withRestApiServer(String restApiServer) {
         this.restApiServer = restApiServer;
         return this;
@@ -45,9 +48,16 @@ public class CallResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public CallResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public CallResponse(@JsonProperty("Message") CallResponseMessageEnum message, @JsonProperty("RequestUUID") String requestUUID, @JsonProperty("RestApiServer") String restApiServer, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.requestUUID = requestUUID;
+        this.restApiServer = restApiServer;
+        this.success = success;
+  }
 }

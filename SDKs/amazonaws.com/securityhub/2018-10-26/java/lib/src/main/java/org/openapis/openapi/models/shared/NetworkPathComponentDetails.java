@@ -15,6 +15,7 @@ public class NetworkPathComponentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public String[] address;
+
     public NetworkPathComponentDetails withAddress(String[] address) {
         this.address = address;
         return this;
@@ -23,9 +24,11 @@ public class NetworkPathComponentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortRanges")
     public PortRange[] portRanges;
+
     public NetworkPathComponentDetails withPortRanges(PortRange[] portRanges) {
         this.portRanges = portRanges;
         return this;
     }
     
+    public NetworkPathComponentDetails(){}
 }

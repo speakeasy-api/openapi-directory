@@ -18,6 +18,7 @@ public class UvarFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complement")
     public Boolean complement;
+
     public UvarFilter withComplement(Boolean complement) {
         this.complement = complement;
         return this;
@@ -29,6 +30,7 @@ public class UvarFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public String index;
+
     public UvarFilter withIndex(String index) {
         this.index = index;
         return this;
@@ -40,6 +42,7 @@ public class UvarFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public UvarFilter withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class UvarFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match")
     public UvarFilterMatchEnum match;
+
     public UvarFilter withMatch(UvarFilterMatchEnum match) {
         this.match = match;
         return this;
@@ -62,9 +66,11 @@ public class UvarFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public UvarFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public UvarFilter(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindNumbersTollfreeResponse {
     
     public String contentType;
+
     public FindNumbersTollfreeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FindNumbersTollfreeResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public FindNumbersTollfreeResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class FindNumbersTollfreeResponse {
      */
     
     public org.openapis.openapi.models.shared.NumberList numberList;
+
     public FindNumbersTollfreeResponse withNumberList(org.openapis.openapi.models.shared.NumberList numberList) {
         this.numberList = numberList;
         return this;
@@ -36,6 +40,7 @@ public class FindNumbersTollfreeResponse {
     
     
     public Integer statusCode;
+
     public FindNumbersTollfreeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class FindNumbersTollfreeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindNumbersTollfreeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FindNumbersTollfreeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

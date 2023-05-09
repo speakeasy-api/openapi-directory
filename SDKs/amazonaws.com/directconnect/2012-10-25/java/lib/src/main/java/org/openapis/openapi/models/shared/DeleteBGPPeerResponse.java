@@ -15,9 +15,11 @@ public class DeleteBGPPeerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterface")
     public VirtualInterface virtualInterface;
+
     public DeleteBGPPeerResponse withVirtualInterface(VirtualInterface virtualInterface) {
         this.virtualInterface = virtualInterface;
         return this;
     }
     
+    public DeleteBGPPeerResponse(){}
 }

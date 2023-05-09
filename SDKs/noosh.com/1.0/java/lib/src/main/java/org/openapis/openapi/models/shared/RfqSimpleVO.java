@@ -17,6 +17,7 @@ public class RfqSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotes")
     public QuoteBaseVO[] quotes;
+
     public RfqSimpleVO withQuotes(QuoteBaseVO[] quotes) {
         this.quotes = quotes;
         return this;
@@ -26,6 +27,7 @@ public class RfqSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("received_date")
     public LocalDate receivedDate;
+
     public RfqSimpleVO withReceivedDate(LocalDate receivedDate) {
         this.receivedDate = receivedDate;
         return this;
@@ -34,6 +36,7 @@ public class RfqSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfq_id")
     public Long rfqId;
+
     public RfqSimpleVO withRfqId(Long rfqId) {
         this.rfqId = rfqId;
         return this;
@@ -42,6 +45,7 @@ public class RfqSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfq_title")
     public String rfqTitle;
+
     public RfqSimpleVO withRfqTitle(String rfqTitle) {
         this.rfqTitle = rfqTitle;
         return this;
@@ -50,9 +54,11 @@ public class RfqSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public RfqSimpleVO withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public RfqSimpleVO(){}
 }

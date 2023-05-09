@@ -18,6 +18,7 @@ public class EvaluateRebalance500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public EvaluateRebalance500ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class EvaluateRebalance500ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public EvaluateRebalance500ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public EvaluateRebalance500ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

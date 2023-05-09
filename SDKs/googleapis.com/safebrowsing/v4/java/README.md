@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetRequest;
 import org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -28,14 +27,13 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            SafebrowsingEncodedFullHashesGetRequest req = new SafebrowsingEncodedFullHashesGetRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                clientId = "unde";
-                clientVersion = "nulla";
-                encodedRequest = "corrupti";
+            SafebrowsingEncodedFullHashesGetRequest req = new SafebrowsingEncodedFullHashesGetRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                clientId = "nulla";
+                clientVersion = "corrupti";
                 fields = "illum";
                 key = "vel";
                 oauthToken = "error";
@@ -43,16 +41,18 @@ public class Application {
                 quotaUser = "deserunt";
                 uploadType = "suscipit";
                 uploadProtocol = "iure";
-            }}            
+            }};            
 
             SafebrowsingEncodedFullHashesGetResponse res = sdk.encodedFullHashes.safebrowsingEncodedFullHashesGet(req);
 
-            if (res.googleSecuritySafebrowsingV4FindFullHashesResponse.isPresent()) {
+            if (res.googleSecuritySafebrowsingV4FindFullHashesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -60,33 +60,33 @@ public class Application {
 ## Available Resources and Operations
 
 
-### encodedFullHashes
+### [encodedFullHashes](docs/encodedfullhashes/README.md)
 
-* `safebrowsingEncodedFullHashesGet`
+* [safebrowsingEncodedFullHashesGet](docs/encodedfullhashes/README.md#safebrowsingencodedfullhashesget)
 
-### encodedUpdates
+### [encodedUpdates](docs/encodedupdates/README.md)
 
-* `safebrowsingEncodedUpdatesGet`
+* [safebrowsingEncodedUpdatesGet](docs/encodedupdates/README.md#safebrowsingencodedupdatesget)
 
-### fullHashes
+### [fullHashes](docs/fullhashes/README.md)
 
-* `safebrowsingFullHashesFind` - Finds the full hashes that match the requested hash prefixes.
+* [safebrowsingFullHashesFind](docs/fullhashes/README.md#safebrowsingfullhashesfind) - Finds the full hashes that match the requested hash prefixes.
 
-### threatHits
+### [threatHits](docs/threathits/README.md)
 
-* `safebrowsingThreatHitsCreate` - Reports a Safe Browsing threat list hit to Google. Only projects with TRUSTED_REPORTER visibility can use this method.
+* [safebrowsingThreatHitsCreate](docs/threathits/README.md#safebrowsingthreathitscreate) - Reports a Safe Browsing threat list hit to Google. Only projects with TRUSTED_REPORTER visibility can use this method.
 
-### threatListUpdates
+### [threatListUpdates](docs/threatlistupdates/README.md)
 
-* `safebrowsingThreatListUpdatesFetch` - Fetches the most recent threat list updates. A client can request updates for multiple lists at once.
+* [safebrowsingThreatListUpdatesFetch](docs/threatlistupdates/README.md#safebrowsingthreatlistupdatesfetch) - Fetches the most recent threat list updates. A client can request updates for multiple lists at once.
 
-### threatLists
+### [threatLists](docs/threatlists/README.md)
 
-* `safebrowsingThreatListsList` - Lists the Safe Browsing threat lists available for download.
+* [safebrowsingThreatListsList](docs/threatlists/README.md#safebrowsingthreatlistslist) - Lists the Safe Browsing threat lists available for download.
 
-### threatMatches
+### [threatMatches](docs/threatmatches/README.md)
 
-* `safebrowsingThreatMatchesFind` - Finds the threat entries that match the Safe Browsing lists.
+* [safebrowsingThreatMatchesFind](docs/threatmatches/README.md#safebrowsingthreatmatchesfind) - Finds the threat entries that match the Safe Browsing lists.
 <!-- End SDK Available Operations -->
 
 ### Maturity

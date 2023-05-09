@@ -12,9 +12,11 @@ public class GetAllAccounts200ApplicationJSONLinksSelf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public GetAllAccounts200ApplicationJSONLinksSelf withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public GetAllAccounts200ApplicationJSONLinksSelf(){}
 }

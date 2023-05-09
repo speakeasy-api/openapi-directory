@@ -15,6 +15,7 @@ public class BackupDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupDetails")
     public BackupDetails backupDetails;
+
     public BackupDescription withBackupDetails(BackupDetails backupDetails) {
         this.backupDetails = backupDetails;
         return this;
@@ -23,6 +24,7 @@ public class BackupDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceTableDetails")
     public SourceTableDetails sourceTableDetails;
+
     public BackupDescription withSourceTableDetails(SourceTableDetails sourceTableDetails) {
         this.sourceTableDetails = sourceTableDetails;
         return this;
@@ -31,9 +33,11 @@ public class BackupDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceTableFeatureDetails")
     public SourceTableFeatureDetails sourceTableFeatureDetails;
+
     public BackupDescription withSourceTableFeatureDetails(SourceTableFeatureDetails sourceTableFeatureDetails) {
         this.sourceTableFeatureDetails = sourceTableFeatureDetails;
         return this;
     }
     
+    public BackupDescription(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ImportStacksToStackSetOutput {
     
     public String operationId;
+
     public ImportStacksToStackSetOutput withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public ImportStacksToStackSetOutput(){}
 }

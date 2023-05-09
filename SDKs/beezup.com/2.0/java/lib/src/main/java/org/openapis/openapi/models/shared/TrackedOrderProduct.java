@@ -15,6 +15,7 @@ public class TrackedOrderProduct {
      */
     @JsonProperty("margin")
     public Double margin;
+
     public TrackedOrderProduct withMargin(Double margin) {
         this.margin = margin;
         return this;
@@ -25,6 +26,7 @@ public class TrackedOrderProduct {
      */
     @JsonProperty("productExists")
     public Boolean productExists;
+
     public TrackedOrderProduct withProductExists(Boolean productExists) {
         this.productExists = productExists;
         return this;
@@ -35,6 +37,7 @@ public class TrackedOrderProduct {
      */
     @JsonProperty("productId")
     public String productId;
+
     public TrackedOrderProduct withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -45,6 +48,7 @@ public class TrackedOrderProduct {
      */
     @JsonProperty("productImageUrl")
     public String productImageUrl;
+
     public TrackedOrderProduct withProductImageUrl(String productImageUrl) {
         this.productImageUrl = productImageUrl;
         return this;
@@ -55,6 +59,7 @@ public class TrackedOrderProduct {
      */
     @JsonProperty("productSku")
     public String productSku;
+
     public TrackedOrderProduct withProductSku(String productSku) {
         this.productSku = productSku;
         return this;
@@ -65,6 +70,7 @@ public class TrackedOrderProduct {
      */
     @JsonProperty("productTitle")
     public String productTitle;
+
     public TrackedOrderProduct withProductTitle(String productTitle) {
         this.productTitle = productTitle;
         return this;
@@ -75,6 +81,7 @@ public class TrackedOrderProduct {
      */
     @JsonProperty("quantity")
     public Double quantity;
+
     public TrackedOrderProduct withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
@@ -85,9 +92,20 @@ public class TrackedOrderProduct {
      */
     @JsonProperty("unitPrice")
     public Double unitPrice;
+
     public TrackedOrderProduct withUnitPrice(Double unitPrice) {
         this.unitPrice = unitPrice;
         return this;
     }
     
+    public TrackedOrderProduct(@JsonProperty("margin") Double margin, @JsonProperty("productExists") Boolean productExists, @JsonProperty("productId") String productId, @JsonProperty("productImageUrl") String productImageUrl, @JsonProperty("productSku") String productSku, @JsonProperty("productTitle") String productTitle, @JsonProperty("quantity") Double quantity, @JsonProperty("unitPrice") Double unitPrice) {
+        this.margin = margin;
+        this.productExists = productExists;
+        this.productId = productId;
+        this.productImageUrl = productImageUrl;
+        this.productSku = productSku;
+        this.productTitle = productTitle;
+        this.quantity = quantity;
+        this.unitPrice = unitPrice;
+  }
 }

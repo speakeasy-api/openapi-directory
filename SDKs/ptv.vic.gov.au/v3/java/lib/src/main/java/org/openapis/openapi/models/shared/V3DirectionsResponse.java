@@ -18,6 +18,7 @@ public class V3DirectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directions")
     public V3DirectionWithDescription[] directions;
+
     public V3DirectionsResponse withDirections(V3DirectionWithDescription[] directions) {
         this.directions = directions;
         return this;
@@ -26,9 +27,11 @@ public class V3DirectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public V3Status status;
+
     public V3DirectionsResponse withStatus(V3Status status) {
         this.status = status;
         return this;
     }
     
+    public V3DirectionsResponse(){}
 }

@@ -59,10 +59,8 @@ public class WebResource {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteResponse res = new org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteResponse() {{
+        org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteResponse res = new org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class WebResource {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SiteVerificationWebResourceGetResponse res = new org.openapis.openapi.models.operations.SiteVerificationWebResourceGetResponse() {{
+        org.openapis.openapi.models.operations.SiteVerificationWebResourceGetResponse res = new org.openapis.openapi.models.operations.SiteVerificationWebResourceGetResponse(contentType, httpRes.statusCode()) {{
             siteVerificationWebResourceResource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class WebResource {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SiteVerificationWebResourceGetTokenResponse res = new org.openapis.openapi.models.operations.SiteVerificationWebResourceGetTokenResponse() {{
+        org.openapis.openapi.models.operations.SiteVerificationWebResourceGetTokenResponse res = new org.openapis.openapi.models.operations.SiteVerificationWebResourceGetTokenResponse(contentType, httpRes.statusCode()) {{
             siteVerificationWebResourceGettokenResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,11 +189,9 @@ public class WebResource {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SiteVerificationWebResourceInsertResponse res = new org.openapis.openapi.models.operations.SiteVerificationWebResourceInsertResponse() {{
+        org.openapis.openapi.models.operations.SiteVerificationWebResourceInsertResponse res = new org.openapis.openapi.models.operations.SiteVerificationWebResourceInsertResponse(contentType, httpRes.statusCode()) {{
             siteVerificationWebResourceResource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class WebResource {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SiteVerificationWebResourceListResponse res = new org.openapis.openapi.models.operations.SiteVerificationWebResourceListResponse() {{
+        org.openapis.openapi.models.operations.SiteVerificationWebResourceListResponse res = new org.openapis.openapi.models.operations.SiteVerificationWebResourceListResponse(contentType, httpRes.statusCode()) {{
             siteVerificationWebResourceListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class WebResource {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SiteVerificationWebResourcePatchResponse res = new org.openapis.openapi.models.operations.SiteVerificationWebResourcePatchResponse() {{
+        org.openapis.openapi.models.operations.SiteVerificationWebResourcePatchResponse res = new org.openapis.openapi.models.operations.SiteVerificationWebResourcePatchResponse(contentType, httpRes.statusCode()) {{
             siteVerificationWebResourceResource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,11 +325,9 @@ public class WebResource {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SiteVerificationWebResourceUpdateResponse res = new org.openapis.openapi.models.operations.SiteVerificationWebResourceUpdateResponse() {{
+        org.openapis.openapi.models.operations.SiteVerificationWebResourceUpdateResponse res = new org.openapis.openapi.models.operations.SiteVerificationWebResourceUpdateResponse(contentType, httpRes.statusCode()) {{
             siteVerificationWebResourceResource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

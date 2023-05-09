@@ -16,14 +16,14 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * 
  */
 public enum TranslationLevelEnum {
-    ZERO("0"),
-    EIGHTY("80"),
-    ONE_HUNDRED("100");
+    ZERO(0L),
+    EIGHTY(80L),
+    ONE_HUNDRED(100L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private TranslationLevelEnum(String value) {
+    private TranslationLevelEnum(Long value) {
         this.value = value;
     }
 }

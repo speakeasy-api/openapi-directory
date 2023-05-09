@@ -15,6 +15,7 @@ public class CvssScoreDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustments")
     public CvssScoreAdjustment[] adjustments;
+
     public CvssScoreDetails withAdjustments(CvssScoreAdjustment[] adjustments) {
         this.adjustments = adjustments;
         return this;
@@ -23,6 +24,7 @@ public class CvssScoreDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cvssSource")
     public String cvssSource;
+
     public CvssScoreDetails withCvssSource(String cvssSource) {
         this.cvssSource = cvssSource;
         return this;
@@ -30,6 +32,7 @@ public class CvssScoreDetails {
     
     @JsonProperty("score")
     public Double score;
+
     public CvssScoreDetails withScore(Double score) {
         this.score = score;
         return this;
@@ -37,6 +40,7 @@ public class CvssScoreDetails {
     
     @JsonProperty("scoreSource")
     public String scoreSource;
+
     public CvssScoreDetails withScoreSource(String scoreSource) {
         this.scoreSource = scoreSource;
         return this;
@@ -44,6 +48,7 @@ public class CvssScoreDetails {
     
     @JsonProperty("scoringVector")
     public String scoringVector;
+
     public CvssScoreDetails withScoringVector(String scoringVector) {
         this.scoringVector = scoringVector;
         return this;
@@ -51,9 +56,16 @@ public class CvssScoreDetails {
     
     @JsonProperty("version")
     public String version;
+
     public CvssScoreDetails withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public CvssScoreDetails(@JsonProperty("score") Double score, @JsonProperty("scoreSource") String scoreSource, @JsonProperty("scoringVector") String scoringVector, @JsonProperty("version") String version) {
+        this.score = score;
+        this.scoreSource = scoreSource;
+        this.scoringVector = scoringVector;
+        this.version = version;
+  }
 }

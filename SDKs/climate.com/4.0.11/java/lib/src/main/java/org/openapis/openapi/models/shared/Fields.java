@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Fields {
     @JsonProperty("results")
     public Field[] results;
+
     public Fields withResults(Field[] results) {
         this.results = results;
         return this;
     }
     
+    public Fields(@JsonProperty("results") Field[] results) {
+        this.results = results;
+  }
 }

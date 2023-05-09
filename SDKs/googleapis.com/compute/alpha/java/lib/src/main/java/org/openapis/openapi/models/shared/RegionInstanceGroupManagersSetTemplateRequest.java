@@ -15,9 +15,11 @@ public class RegionInstanceGroupManagersSetTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTemplate")
     public String instanceTemplate;
+
     public RegionInstanceGroupManagersSetTemplateRequest withInstanceTemplate(String instanceTemplate) {
         this.instanceTemplate = instanceTemplate;
         return this;
     }
     
+    public RegionInstanceGroupManagersSetTemplateRequest(){}
 }

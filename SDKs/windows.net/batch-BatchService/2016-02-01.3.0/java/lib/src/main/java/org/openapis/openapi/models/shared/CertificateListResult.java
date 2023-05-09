@@ -18,6 +18,7 @@ public class CertificateListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("odata.nextLink")
     public String odataNextLink;
+
     public CertificateListResult withOdataNextLink(String odataNextLink) {
         this.odataNextLink = odataNextLink;
         return this;
@@ -29,9 +30,11 @@ public class CertificateListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Certificate[] value;
+
     public CertificateListResult withValue(Certificate[] value) {
         this.value = value;
         return this;
     }
     
+    public CertificateListResult(){}
 }

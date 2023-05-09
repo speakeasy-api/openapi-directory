@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeNodeGroupsAddNodesRequest {
@@ -12,6 +13,7 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeNodeGroupsAddNodesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeNodeGroupsAddNodesRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NodeGroupsAddNodesRequest nodeGroupsAddNodesRequest;
+
     public ComputeNodeGroupsAddNodesRequest withNodeGroupsAddNodesRequest(org.openapis.openapi.models.shared.NodeGroupsAddNodesRequest nodeGroupsAddNodesRequest) {
         this.nodeGroupsAddNodesRequest = nodeGroupsAddNodesRequest;
         return this;
@@ -29,6 +32,7 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeNodeGroupsAddNodesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeNodeGroupsAddNodesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeNodeGroupsAddNodesRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeNodeGroupsAddNodesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeNodeGroupsAddNodesRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nodeGroup")
     public String nodeGroup;
+
     public ComputeNodeGroupsAddNodesRequest withNodeGroup(String nodeGroup) {
         this.nodeGroup = nodeGroup;
         return this;
@@ -89,6 +98,7 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeNodeGroupsAddNodesRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeNodeGroupsAddNodesRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeNodeGroupsAddNodesRequest withProject(String project) {
         this.project = project;
         return this;
@@ -119,6 +131,7 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeNodeGroupsAddNodesRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeNodeGroupsAddNodesRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -139,6 +153,7 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeNodeGroupsAddNodesRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,6 +164,7 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeNodeGroupsAddNodesRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -159,6 +175,7 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeNodeGroupsAddNodesRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -169,9 +186,15 @@ public class ComputeNodeGroupsAddNodesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
     public String zone;
+
     public ComputeNodeGroupsAddNodesRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ComputeNodeGroupsAddNodesRequest(@JsonProperty("nodeGroup") String nodeGroup, @JsonProperty("project") String project, @JsonProperty("zone") String zone) {
+        this.nodeGroup = nodeGroup;
+        this.project = project;
+        this.zone = zone;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeRegionDiskTypesGetResponse {
     
     public String contentType;
+
     public ComputeRegionDiskTypesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionDiskTypesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.DiskType diskType;
+
     public ComputeRegionDiskTypesGetResponse withDiskType(org.openapis.openapi.models.shared.DiskType diskType) {
         this.diskType = diskType;
         return this;
@@ -26,6 +29,7 @@ public class ComputeRegionDiskTypesGetResponse {
     
     
     public Integer statusCode;
+
     public ComputeRegionDiskTypesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeRegionDiskTypesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeRegionDiskTypesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeRegionDiskTypesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

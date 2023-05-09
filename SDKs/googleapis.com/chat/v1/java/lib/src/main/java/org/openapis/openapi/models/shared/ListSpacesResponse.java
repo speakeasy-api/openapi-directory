@@ -18,6 +18,7 @@ public class ListSpacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSpacesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListSpacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spaces")
     public Space[] spaces;
+
     public ListSpacesResponse withSpaces(Space[] spaces) {
         this.spaces = spaces;
         return this;
     }
     
+    public ListSpacesResponse(){}
 }

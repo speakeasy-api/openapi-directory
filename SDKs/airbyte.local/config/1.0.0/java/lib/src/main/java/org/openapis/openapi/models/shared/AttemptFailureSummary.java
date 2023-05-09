@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttemptFailureSummary {
     @JsonProperty("failures")
     public AttemptFailureReason[] failures;
+
     public AttemptFailureSummary withFailures(AttemptFailureReason[] failures) {
         this.failures = failures;
         return this;
@@ -22,9 +23,13 @@ public class AttemptFailureSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partialSuccess")
     public Boolean partialSuccess;
+
     public AttemptFailureSummary withPartialSuccess(Boolean partialSuccess) {
         this.partialSuccess = partialSuccess;
         return this;
     }
     
+    public AttemptFailureSummary(@JsonProperty("failures") AttemptFailureReason[] failures) {
+        this.failures = failures;
+  }
 }

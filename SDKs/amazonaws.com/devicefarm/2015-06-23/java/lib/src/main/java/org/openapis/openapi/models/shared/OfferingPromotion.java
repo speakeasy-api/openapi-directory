@@ -15,6 +15,7 @@ public class OfferingPromotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OfferingPromotion withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class OfferingPromotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OfferingPromotion withId(String id) {
         this.id = id;
         return this;
     }
     
+    public OfferingPromotion(){}
 }

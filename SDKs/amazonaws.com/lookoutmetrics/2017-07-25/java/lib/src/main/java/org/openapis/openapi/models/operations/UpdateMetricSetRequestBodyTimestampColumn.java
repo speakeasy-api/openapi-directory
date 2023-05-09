@@ -15,6 +15,7 @@ public class UpdateMetricSetRequestBodyTimestampColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnFormat")
     public String columnFormat;
+
     public UpdateMetricSetRequestBodyTimestampColumn withColumnFormat(String columnFormat) {
         this.columnFormat = columnFormat;
         return this;
@@ -23,9 +24,11 @@ public class UpdateMetricSetRequestBodyTimestampColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnName")
     public String columnName;
+
     public UpdateMetricSetRequestBodyTimestampColumn withColumnName(String columnName) {
         this.columnName = columnName;
         return this;
     }
     
+    public UpdateMetricSetRequestBodyTimestampColumn(){}
 }

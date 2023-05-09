@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class PermissionsBoundaryDecisionDetail {
     
     public Boolean allowedByPermissionsBoundary;
+
     public PermissionsBoundaryDecisionDetail withAllowedByPermissionsBoundary(Boolean allowedByPermissionsBoundary) {
         this.allowedByPermissionsBoundary = allowedByPermissionsBoundary;
         return this;
     }
     
+    public PermissionsBoundaryDecisionDetail(){}
 }

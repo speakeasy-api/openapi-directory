@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResultReuseInformation {
     @JsonProperty("ReusedPreviousResult")
     public Boolean reusedPreviousResult;
+
     public ResultReuseInformation withReusedPreviousResult(Boolean reusedPreviousResult) {
         this.reusedPreviousResult = reusedPreviousResult;
         return this;
     }
     
+    public ResultReuseInformation(@JsonProperty("ReusedPreviousResult") Boolean reusedPreviousResult) {
+        this.reusedPreviousResult = reusedPreviousResult;
+  }
 }

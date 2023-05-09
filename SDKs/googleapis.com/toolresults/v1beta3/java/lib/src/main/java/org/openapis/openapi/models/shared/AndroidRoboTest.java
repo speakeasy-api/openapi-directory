@@ -18,6 +18,7 @@ public class AndroidRoboTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appInitialActivity")
     public String appInitialActivity;
+
     public AndroidRoboTest withAppInitialActivity(String appInitialActivity) {
         this.appInitialActivity = appInitialActivity;
         return this;
@@ -29,6 +30,7 @@ public class AndroidRoboTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootstrapPackageId")
     public String bootstrapPackageId;
+
     public AndroidRoboTest withBootstrapPackageId(String bootstrapPackageId) {
         this.bootstrapPackageId = bootstrapPackageId;
         return this;
@@ -40,6 +42,7 @@ public class AndroidRoboTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootstrapRunnerClass")
     public String bootstrapRunnerClass;
+
     public AndroidRoboTest withBootstrapRunnerClass(String bootstrapRunnerClass) {
         this.bootstrapRunnerClass = bootstrapRunnerClass;
         return this;
@@ -51,6 +54,7 @@ public class AndroidRoboTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDepth")
     public Integer maxDepth;
+
     public AndroidRoboTest withMaxDepth(Integer maxDepth) {
         this.maxDepth = maxDepth;
         return this;
@@ -62,9 +66,11 @@ public class AndroidRoboTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSteps")
     public Integer maxSteps;
+
     public AndroidRoboTest withMaxSteps(Integer maxSteps) {
         this.maxSteps = maxSteps;
         return this;
     }
     
+    public AndroidRoboTest(){}
 }

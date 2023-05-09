@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateIpamRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateIpamRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateIpamRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateIpamRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateIpamRequestTagSpecificationsTags(){}
 }

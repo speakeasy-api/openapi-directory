@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourceOwnerRequest {
@@ -12,9 +13,13 @@ public class GetResourceOwnerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resourceOwnerId")
     public String resourceOwnerId;
+
     public GetResourceOwnerRequest withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     
+    public GetResourceOwnerRequest(@JsonProperty("resourceOwnerId") String resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+  }
 }

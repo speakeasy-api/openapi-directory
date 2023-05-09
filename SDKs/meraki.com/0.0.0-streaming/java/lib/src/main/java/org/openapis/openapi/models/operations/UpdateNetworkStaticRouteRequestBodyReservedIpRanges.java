@@ -12,6 +12,7 @@ public class UpdateNetworkStaticRouteRequestBodyReservedIpRanges {
      */
     @JsonProperty("comment")
     public String comment;
+
     public UpdateNetworkStaticRouteRequestBodyReservedIpRanges withComment(String comment) {
         this.comment = comment;
         return this;
@@ -22,6 +23,7 @@ public class UpdateNetworkStaticRouteRequestBodyReservedIpRanges {
      */
     @JsonProperty("end")
     public String end;
+
     public UpdateNetworkStaticRouteRequestBodyReservedIpRanges withEnd(String end) {
         this.end = end;
         return this;
@@ -32,9 +34,15 @@ public class UpdateNetworkStaticRouteRequestBodyReservedIpRanges {
      */
     @JsonProperty("start")
     public String start;
+
     public UpdateNetworkStaticRouteRequestBodyReservedIpRanges withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public UpdateNetworkStaticRouteRequestBodyReservedIpRanges(@JsonProperty("comment") String comment, @JsonProperty("end") String end, @JsonProperty("start") String start) {
+        this.comment = comment;
+        this.end = end;
+        this.start = start;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdatePricingPlanResponse {
     @JsonProperty("currentPricingPlan")
     public PricingPlan currentPricingPlan;
+
     public UpdatePricingPlanResponse withCurrentPricingPlan(PricingPlan currentPricingPlan) {
         this.currentPricingPlan = currentPricingPlan;
         return this;
@@ -22,9 +23,13 @@ public class UpdatePricingPlanResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingPricingPlan")
     public PricingPlan pendingPricingPlan;
+
     public UpdatePricingPlanResponse withPendingPricingPlan(PricingPlan pendingPricingPlan) {
         this.pendingPricingPlan = pendingPricingPlan;
         return this;
     }
     
+    public UpdatePricingPlanResponse(@JsonProperty("currentPricingPlan") PricingPlan currentPricingPlan) {
+        this.currentPricingPlan = currentPricingPlan;
+  }
 }

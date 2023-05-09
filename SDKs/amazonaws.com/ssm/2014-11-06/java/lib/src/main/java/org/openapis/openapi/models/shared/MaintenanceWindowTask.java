@@ -15,6 +15,7 @@ public class MaintenanceWindowTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmConfiguration")
     public AlarmConfiguration alarmConfiguration;
+
     public MaintenanceWindowTask withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
         this.alarmConfiguration = alarmConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class MaintenanceWindowTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CutoffBehavior")
     public MaintenanceWindowTaskCutoffBehaviorEnum cutoffBehavior;
+
     public MaintenanceWindowTask withCutoffBehavior(MaintenanceWindowTaskCutoffBehaviorEnum cutoffBehavior) {
         this.cutoffBehavior = cutoffBehavior;
         return this;
@@ -31,6 +33,7 @@ public class MaintenanceWindowTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public MaintenanceWindowTask withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class MaintenanceWindowTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggingInfo")
     public LoggingInfo loggingInfo;
+
     public MaintenanceWindowTask withLoggingInfo(LoggingInfo loggingInfo) {
         this.loggingInfo = loggingInfo;
         return this;
@@ -47,6 +51,7 @@ public class MaintenanceWindowTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrency")
     public String maxConcurrency;
+
     public MaintenanceWindowTask withMaxConcurrency(String maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -55,6 +60,7 @@ public class MaintenanceWindowTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxErrors")
     public String maxErrors;
+
     public MaintenanceWindowTask withMaxErrors(String maxErrors) {
         this.maxErrors = maxErrors;
         return this;
@@ -63,6 +69,7 @@ public class MaintenanceWindowTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public MaintenanceWindowTask withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class MaintenanceWindowTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public MaintenanceWindowTask withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -79,6 +87,7 @@ public class MaintenanceWindowTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRoleArn")
     public String serviceRoleArn;
+
     public MaintenanceWindowTask withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -87,6 +96,7 @@ public class MaintenanceWindowTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public MaintenanceWindowTask withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -95,6 +105,7 @@ public class MaintenanceWindowTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskArn")
     public String taskArn;
+
     public MaintenanceWindowTask withTaskArn(String taskArn) {
         this.taskArn = taskArn;
         return this;
@@ -103,6 +114,7 @@ public class MaintenanceWindowTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskParameters")
     public java.util.Map<String, MaintenanceWindowTaskParameterValueExpression> taskParameters;
+
     public MaintenanceWindowTask withTaskParameters(java.util.Map<String, MaintenanceWindowTaskParameterValueExpression> taskParameters) {
         this.taskParameters = taskParameters;
         return this;
@@ -111,6 +123,7 @@ public class MaintenanceWindowTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public MaintenanceWindowTaskTypeEnum type;
+
     public MaintenanceWindowTask withType(MaintenanceWindowTaskTypeEnum type) {
         this.type = type;
         return this;
@@ -119,6 +132,7 @@ public class MaintenanceWindowTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowId")
     public String windowId;
+
     public MaintenanceWindowTask withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
@@ -127,9 +141,11 @@ public class MaintenanceWindowTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowTaskId")
     public String windowTaskId;
+
     public MaintenanceWindowTask withWindowTaskId(String windowTaskId) {
         this.windowTaskId = windowTaskId;
         return this;
     }
     
+    public MaintenanceWindowTask(){}
 }

@@ -18,9 +18,11 @@ public class TenantProjectPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyBindings")
     public PolicyBinding[] policyBindings;
+
     public TenantProjectPolicy withPolicyBindings(PolicyBinding[] policyBindings) {
         this.policyBindings = policyBindings;
         return this;
     }
     
+    public TenantProjectPolicy(){}
 }

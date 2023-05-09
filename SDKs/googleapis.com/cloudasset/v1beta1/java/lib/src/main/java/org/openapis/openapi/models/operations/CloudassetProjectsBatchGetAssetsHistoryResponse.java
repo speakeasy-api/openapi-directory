@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudassetProjectsBatchGetAssetsHistoryResponse {
@@ -12,6 +13,7 @@ public class CloudassetProjectsBatchGetAssetsHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetAssetsHistoryResponse batchGetAssetsHistoryResponse;
+
     public CloudassetProjectsBatchGetAssetsHistoryResponse withBatchGetAssetsHistoryResponse(org.openapis.openapi.models.shared.BatchGetAssetsHistoryResponse batchGetAssetsHistoryResponse) {
         this.batchGetAssetsHistoryResponse = batchGetAssetsHistoryResponse;
         return this;
@@ -19,6 +21,7 @@ public class CloudassetProjectsBatchGetAssetsHistoryResponse {
     
     
     public String contentType;
+
     public CloudassetProjectsBatchGetAssetsHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CloudassetProjectsBatchGetAssetsHistoryResponse {
     
     
     public Integer statusCode;
+
     public CloudassetProjectsBatchGetAssetsHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudassetProjectsBatchGetAssetsHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudassetProjectsBatchGetAssetsHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudassetProjectsBatchGetAssetsHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

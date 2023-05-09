@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * GuestOsFeatureTypeEnum - The ID of a supported feature. To add multiple values, use commas to separate values. Set to one or more of the following values: - VIRTIO_SCSI_MULTIQUEUE - WINDOWS - MULTI_IP_SUBNET - UEFI_COMPATIBLE - GVNIC - SEV_CAPABLE - SUSPEND_RESUME_COMPATIBLE - SEV_SNP_CAPABLE - TDX_CAPABLE For more information, see Enabling guest operating system features.
+ * GuestOsFeatureTypeEnum - The ID of a supported feature. To add multiple values, use commas to separate values. Set to one or more of the following values: - VIRTIO_SCSI_MULTIQUEUE - WINDOWS - MULTI_IP_SUBNET - UEFI_COMPATIBLE - GVNIC - SEV_CAPABLE - SUSPEND_RESUME_COMPATIBLE - SEV_LIVE_MIGRATABLE - SEV_SNP_CAPABLE - TDX_CAPABLE For more information, see Enabling guest operating system features.
  */
 public enum GuestOsFeatureTypeEnum {
     BARE_METAL_LINUX_COMPATIBLE("BARE_METAL_LINUX_COMPATIBLE"),
@@ -18,6 +18,7 @@ public enum GuestOsFeatureTypeEnum {
     SEV_CAPABLE("SEV_CAPABLE"),
     SEV_LIVE_MIGRATABLE("SEV_LIVE_MIGRATABLE"),
     SEV_SNP_CAPABLE("SEV_SNP_CAPABLE"),
+    TDX_CAPABLE("TDX_CAPABLE"),
     UEFI_COMPATIBLE("UEFI_COMPATIBLE"),
     VIRTIO_SCSI_MULTIQUEUE("VIRTIO_SCSI_MULTIQUEUE"),
     WINDOWS("WINDOWS");

@@ -12,9 +12,11 @@ public class GETLastEditedUsingGET200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastEdited")
     public Long lastEdited;
+
     public GETLastEditedUsingGET200ApplicationJSONData withLastEdited(Long lastEdited) {
         this.lastEdited = lastEdited;
         return this;
     }
     
+    public GETLastEditedUsingGET200ApplicationJSONData(){}
 }

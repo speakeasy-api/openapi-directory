@@ -15,6 +15,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientCreateResourceRelationshipsGroupsDataMetaQuery {
     @JsonProperty("name")
     public String name;
+
     public PatientCreateResourceRelationshipsGroupsDataMetaQuery withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,14 @@ public class PatientCreateResourceRelationshipsGroupsDataMetaQuery {
     
     @JsonProperty("organization")
     public String organization;
+
     public PatientCreateResourceRelationshipsGroupsDataMetaQuery withOrganization(String organization) {
         this.organization = organization;
         return this;
     }
     
+    public PatientCreateResourceRelationshipsGroupsDataMetaQuery(@JsonProperty("name") String name, @JsonProperty("organization") String organization) {
+        this.name = name;
+        this.organization = organization;
+  }
 }

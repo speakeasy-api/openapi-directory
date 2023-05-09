@@ -14,6 +14,7 @@ public class CreateDatasetRequestBody {
      */
     @JsonProperty("actions")
     public org.openapis.openapi.models.shared.DatasetAction[] actions;
+
     public CreateDatasetRequestBody withActions(org.openapis.openapi.models.shared.DatasetAction[] actions) {
         this.actions = actions;
         return this;
@@ -25,6 +26,7 @@ public class CreateDatasetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentDeliveryRules")
     public org.openapis.openapi.models.shared.DatasetContentDeliveryRule[] contentDeliveryRules;
+
     public CreateDatasetRequestBody withContentDeliveryRules(org.openapis.openapi.models.shared.DatasetContentDeliveryRule[] contentDeliveryRules) {
         this.contentDeliveryRules = contentDeliveryRules;
         return this;
@@ -35,6 +37,7 @@ public class CreateDatasetRequestBody {
      */
     @JsonProperty("datasetName")
     public String datasetName;
+
     public CreateDatasetRequestBody withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -46,6 +49,7 @@ public class CreateDatasetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lateDataRules")
     public org.openapis.openapi.models.shared.LateDataRule[] lateDataRules;
+
     public CreateDatasetRequestBody withLateDataRules(org.openapis.openapi.models.shared.LateDataRule[] lateDataRules) {
         this.lateDataRules = lateDataRules;
         return this;
@@ -57,6 +61,7 @@ public class CreateDatasetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionPeriod")
     public CreateDatasetRequestBodyRetentionPeriod retentionPeriod;
+
     public CreateDatasetRequestBody withRetentionPeriod(CreateDatasetRequestBodyRetentionPeriod retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -68,6 +73,7 @@ public class CreateDatasetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateDatasetRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -79,6 +85,7 @@ public class CreateDatasetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggers")
     public org.openapis.openapi.models.shared.DatasetTrigger[] triggers;
+
     public CreateDatasetRequestBody withTriggers(org.openapis.openapi.models.shared.DatasetTrigger[] triggers) {
         this.triggers = triggers;
         return this;
@@ -90,9 +97,14 @@ public class CreateDatasetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versioningConfiguration")
     public CreateDatasetRequestBodyVersioningConfiguration versioningConfiguration;
+
     public CreateDatasetRequestBody withVersioningConfiguration(CreateDatasetRequestBodyVersioningConfiguration versioningConfiguration) {
         this.versioningConfiguration = versioningConfiguration;
         return this;
     }
     
+    public CreateDatasetRequestBody(@JsonProperty("actions") org.openapis.openapi.models.shared.DatasetAction[] actions, @JsonProperty("datasetName") String datasetName) {
+        this.actions = actions;
+        this.datasetName = datasetName;
+  }
 }

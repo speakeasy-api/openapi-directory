@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Resource {
     @JsonProperty("Id")
     public String id;
+
     public Resource withId(String id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class Resource {
     
     @JsonProperty("Name")
     public String name;
+
     public Resource withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class Resource {
     
     @JsonProperty("ResourceDataContainer")
     public ResourceDataContainer resourceDataContainer;
+
     public Resource withResourceDataContainer(ResourceDataContainer resourceDataContainer) {
         this.resourceDataContainer = resourceDataContainer;
         return this;
     }
     
+    public Resource(@JsonProperty("Id") String id, @JsonProperty("Name") String name, @JsonProperty("ResourceDataContainer") ResourceDataContainer resourceDataContainer) {
+        this.id = id;
+        this.name = name;
+        this.resourceDataContainer = resourceDataContainer;
+  }
 }

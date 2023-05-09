@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaPriceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost")
     public Float cost;
+
     public GoogleCloudRetailV2alphaPriceInfo withCost(Float cost) {
         this.cost = cost;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaPriceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public GoogleCloudRetailV2alphaPriceInfo withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2alphaPriceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalPrice")
     public Float originalPrice;
+
     public GoogleCloudRetailV2alphaPriceInfo withOriginalPrice(Float originalPrice) {
         this.originalPrice = originalPrice;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2alphaPriceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Float price;
+
     public GoogleCloudRetailV2alphaPriceInfo withPrice(Float price) {
         this.price = price;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRetailV2alphaPriceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceEffectiveTime")
     public String priceEffectiveTime;
+
     public GoogleCloudRetailV2alphaPriceInfo withPriceEffectiveTime(String priceEffectiveTime) {
         this.priceEffectiveTime = priceEffectiveTime;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRetailV2alphaPriceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceExpireTime")
     public String priceExpireTime;
+
     public GoogleCloudRetailV2alphaPriceInfo withPriceExpireTime(String priceExpireTime) {
         this.priceExpireTime = priceExpireTime;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudRetailV2alphaPriceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceRange")
     public GoogleCloudRetailV2alphaPriceInfoPriceRange priceRange;
+
     public GoogleCloudRetailV2alphaPriceInfo withPriceRange(GoogleCloudRetailV2alphaPriceInfoPriceRange priceRange) {
         this.priceRange = priceRange;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaPriceInfo(){}
 }

@@ -15,6 +15,7 @@ public class ProvisioningArtifactParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultValue")
     public String defaultValue;
+
     public ProvisioningArtifactParameter withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -23,6 +24,7 @@ public class ProvisioningArtifactParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ProvisioningArtifactParameter withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class ProvisioningArtifactParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsNoEcho")
     public Boolean isNoEcho;
+
     public ProvisioningArtifactParameter withIsNoEcho(Boolean isNoEcho) {
         this.isNoEcho = isNoEcho;
         return this;
@@ -39,6 +42,7 @@ public class ProvisioningArtifactParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterConstraints")
     public ParameterConstraints parameterConstraints;
+
     public ProvisioningArtifactParameter withParameterConstraints(ParameterConstraints parameterConstraints) {
         this.parameterConstraints = parameterConstraints;
         return this;
@@ -47,6 +51,7 @@ public class ProvisioningArtifactParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterKey")
     public String parameterKey;
+
     public ProvisioningArtifactParameter withParameterKey(String parameterKey) {
         this.parameterKey = parameterKey;
         return this;
@@ -55,9 +60,11 @@ public class ProvisioningArtifactParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterType")
     public String parameterType;
+
     public ProvisioningArtifactParameter withParameterType(String parameterType) {
         this.parameterType = parameterType;
         return this;
     }
     
+    public ProvisioningArtifactParameter(){}
 }

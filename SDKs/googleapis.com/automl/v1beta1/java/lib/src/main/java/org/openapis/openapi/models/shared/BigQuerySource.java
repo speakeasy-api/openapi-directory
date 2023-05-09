@@ -18,9 +18,11 @@ public class BigQuerySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputUri")
     public String inputUri;
+
     public BigQuerySource withInputUri(String inputUri) {
         this.inputUri = inputUri;
         return this;
     }
     
+    public BigQuerySource(){}
 }

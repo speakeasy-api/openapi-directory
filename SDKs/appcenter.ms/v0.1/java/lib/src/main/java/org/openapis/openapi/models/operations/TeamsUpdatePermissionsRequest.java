@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsUpdatePermissionsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public TeamsUpdatePermissionsRequestBody requestBody;
+
     public TeamsUpdatePermissionsRequest withRequestBody(TeamsUpdatePermissionsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class TeamsUpdatePermissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public TeamsUpdatePermissionsRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -29,6 +32,7 @@ public class TeamsUpdatePermissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
     public String orgName;
+
     public TeamsUpdatePermissionsRequest withOrgName(String orgName) {
         this.orgName = orgName;
         return this;
@@ -39,9 +43,16 @@ public class TeamsUpdatePermissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_name")
     public String teamName;
+
     public TeamsUpdatePermissionsRequest withTeamName(String teamName) {
         this.teamName = teamName;
         return this;
     }
     
+    public TeamsUpdatePermissionsRequest(@JsonProperty("RequestBody") TeamsUpdatePermissionsRequestBody requestBody, @JsonProperty("app_name") String appName, @JsonProperty("org_name") String orgName, @JsonProperty("team_name") String teamName) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.orgName = orgName;
+        this.teamName = teamName;
+  }
 }

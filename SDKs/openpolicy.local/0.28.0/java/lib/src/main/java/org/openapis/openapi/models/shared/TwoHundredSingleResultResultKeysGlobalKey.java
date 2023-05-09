@@ -18,9 +18,11 @@ public class TwoHundredSingleResultResultKeysGlobalKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public TwoHundredSingleResultResultKeysGlobalKey withScope(String scope) {
         this.scope = scope;
         return this;
     }
     
+    public TwoHundredSingleResultResultKeysGlobalKey(){}
 }

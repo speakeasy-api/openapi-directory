@@ -18,6 +18,7 @@ public class GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchRespo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("claims")
     public GoogleFactcheckingFactchecktoolsV1alpha1Claim[] claims;
+
     public GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse withClaims(GoogleFactcheckingFactchecktoolsV1alpha1Claim[] claims) {
         this.claims = claims;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchRespo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse(){}
 }

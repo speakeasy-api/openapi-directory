@@ -15,9 +15,11 @@ public class Clip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSpan")
     public TimeSpan timeSpan;
+
     public Clip withTimeSpan(TimeSpan timeSpan) {
         this.timeSpan = timeSpan;
         return this;
     }
     
+    public Clip(){}
 }

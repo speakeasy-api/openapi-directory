@@ -15,9 +15,11 @@ public class ApplyPendingMaintenanceActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourcePendingMaintenanceActions")
     public ResourcePendingMaintenanceActions resourcePendingMaintenanceActions;
+
     public ApplyPendingMaintenanceActionResponse withResourcePendingMaintenanceActions(ResourcePendingMaintenanceActions resourcePendingMaintenanceActions) {
         this.resourcePendingMaintenanceActions = resourcePendingMaintenanceActions;
         return this;
     }
     
+    public ApplyPendingMaintenanceActionResponse(){}
 }

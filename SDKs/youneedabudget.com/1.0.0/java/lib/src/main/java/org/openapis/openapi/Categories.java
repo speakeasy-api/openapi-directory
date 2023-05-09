@@ -62,12 +62,10 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCategoriesResponse res = new org.openapis.openapi.models.operations.GetCategoriesResponse() {{
+        org.openapis.openapi.models.operations.GetCategoriesResponse res = new org.openapis.openapi.models.operations.GetCategoriesResponse(contentType, httpRes.statusCode()) {{
             categoriesResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,12 +108,10 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCategoryByIdResponse res = new org.openapis.openapi.models.operations.GetCategoryByIdResponse() {{
+        org.openapis.openapi.models.operations.GetCategoryByIdResponse res = new org.openapis.openapi.models.operations.GetCategoryByIdResponse(contentType, httpRes.statusCode()) {{
             categoryResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,12 +154,10 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMonthCategoryByIdResponse res = new org.openapis.openapi.models.operations.GetMonthCategoryByIdResponse() {{
+        org.openapis.openapi.models.operations.GetMonthCategoryByIdResponse res = new org.openapis.openapi.models.operations.GetMonthCategoryByIdResponse(contentType, httpRes.statusCode()) {{
             categoryResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -211,12 +205,10 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateMonthCategoryResponse res = new org.openapis.openapi.models.operations.UpdateMonthCategoryResponse() {{
+        org.openapis.openapi.models.operations.UpdateMonthCategoryResponse res = new org.openapis.openapi.models.operations.UpdateMonthCategoryResponse(contentType, httpRes.statusCode()) {{
             saveCategoryResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

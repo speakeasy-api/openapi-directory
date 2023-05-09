@@ -18,6 +18,7 @@ public class ServiceMeshAnalysisMessageBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentationUrl")
     public String documentationUrl;
+
     public ServiceMeshAnalysisMessageBase withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -29,6 +30,7 @@ public class ServiceMeshAnalysisMessageBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public ServiceMeshAnalysisMessageBaseLevelEnum level;
+
     public ServiceMeshAnalysisMessageBase withLevel(ServiceMeshAnalysisMessageBaseLevelEnum level) {
         this.level = level;
         return this;
@@ -40,9 +42,11 @@ public class ServiceMeshAnalysisMessageBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ServiceMeshType type;
+
     public ServiceMeshAnalysisMessageBase withType(ServiceMeshType type) {
         this.type = type;
         return this;
     }
     
+    public ServiceMeshAnalysisMessageBase(){}
 }

@@ -12,6 +12,7 @@ public class UpdateTestGridProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateTestGridProjectRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class UpdateTestGridProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateTestGridProjectRequest withName(String name) {
         this.name = name;
         return this;
@@ -27,6 +29,7 @@ public class UpdateTestGridProjectRequest {
     
     @JsonProperty("projectArn")
     public String projectArn;
+
     public UpdateTestGridProjectRequest withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -35,9 +38,13 @@ public class UpdateTestGridProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfig")
     public TestGridVpcConfig vpcConfig;
+
     public UpdateTestGridProjectRequest withVpcConfig(TestGridVpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public UpdateTestGridProjectRequest(@JsonProperty("projectArn") String projectArn) {
+        this.projectArn = projectArn;
+  }
 }

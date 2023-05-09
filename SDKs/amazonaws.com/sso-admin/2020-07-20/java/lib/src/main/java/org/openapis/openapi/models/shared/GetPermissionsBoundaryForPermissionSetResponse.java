@@ -15,9 +15,11 @@ public class GetPermissionsBoundaryForPermissionSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionsBoundary")
     public PermissionsBoundary permissionsBoundary;
+
     public GetPermissionsBoundaryForPermissionSetResponse withPermissionsBoundary(PermissionsBoundary permissionsBoundary) {
         this.permissionsBoundary = permissionsBoundary;
         return this;
     }
     
+    public GetPermissionsBoundaryForPermissionSetResponse(){}
 }

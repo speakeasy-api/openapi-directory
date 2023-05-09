@@ -15,6 +15,7 @@ public class AddCoupons200ApplicationJSONPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public AddCoupons200ApplicationJSONPaymentDataTransactionsPayments withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -26,6 +27,7 @@ public class AddCoupons200ApplicationJSONPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bin")
     public String bin;
+
     public AddCoupons200ApplicationJSONPaymentDataTransactionsPayments withBin(String bin) {
         this.bin = bin;
         return this;
@@ -37,6 +39,7 @@ public class AddCoupons200ApplicationJSONPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installments")
     public Long installments;
+
     public AddCoupons200ApplicationJSONPaymentDataTransactionsPayments withInstallments(Long installments) {
         this.installments = installments;
         return this;
@@ -48,6 +51,7 @@ public class AddCoupons200ApplicationJSONPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentSystem")
     public String paymentSystem;
+
     public AddCoupons200ApplicationJSONPaymentDataTransactionsPayments withPaymentSystem(String paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
@@ -59,6 +63,7 @@ public class AddCoupons200ApplicationJSONPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceValue")
     public Long referenceValue;
+
     public AddCoupons200ApplicationJSONPaymentDataTransactionsPayments withReferenceValue(Long referenceValue) {
         this.referenceValue = referenceValue;
         return this;
@@ -70,9 +75,11 @@ public class AddCoupons200ApplicationJSONPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public AddCoupons200ApplicationJSONPaymentDataTransactionsPayments withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONPaymentDataTransactionsPayments(){}
 }

@@ -18,6 +18,7 @@ public class LinksGetChannelCatalogLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allOptionalParamsProvided")
     public Boolean allOptionalParamsProvided;
+
     public LinksGetChannelCatalogLink withAllOptionalParamsProvided(Boolean allOptionalParamsProvided) {
         this.allOptionalParamsProvided = allOptionalParamsProvided;
         return this;
@@ -29,6 +30,7 @@ public class LinksGetChannelCatalogLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allRequiredParamsProvided")
     public Boolean allRequiredParamsProvided;
+
     public LinksGetChannelCatalogLink withAllRequiredParamsProvided(Boolean allRequiredParamsProvided) {
         this.allRequiredParamsProvided = allRequiredParamsProvided;
         return this;
@@ -40,6 +42,7 @@ public class LinksGetChannelCatalogLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LinksGetChannelCatalogLink withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class LinksGetChannelCatalogLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("docUrl")
     public String docUrl;
+
     public LinksGetChannelCatalogLink withDocUrl(String docUrl) {
         this.docUrl = docUrl;
         return this;
@@ -61,6 +65,7 @@ public class LinksGetChannelCatalogLink {
      */
     @JsonProperty("href")
     public String href;
+
     public LinksGetChannelCatalogLink withHref(String href) {
         this.href = href;
         return this;
@@ -69,6 +74,7 @@ public class LinksGetChannelCatalogLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public BeezUPCommonInfoSummaries info;
+
     public LinksGetChannelCatalogLink withInfo(BeezUPCommonInfoSummaries info) {
         this.info = info;
         return this;
@@ -80,6 +86,7 @@ public class LinksGetChannelCatalogLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public LinksGetChannelCatalogLink withLabel(String label) {
         this.label = label;
         return this;
@@ -91,6 +98,7 @@ public class LinksGetChannelCatalogLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public BeezUPCommonHttpMethodEnum method;
+
     public LinksGetChannelCatalogLink withMethod(BeezUPCommonHttpMethodEnum method) {
         this.method = method;
         return this;
@@ -102,6 +110,7 @@ public class LinksGetChannelCatalogLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public LinksGetChannelCatalogLink withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -110,6 +119,7 @@ public class LinksGetChannelCatalogLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, BeezUPCommonLinkParameter3> parameters;
+
     public LinksGetChannelCatalogLink withParameters(java.util.Map<String, BeezUPCommonLinkParameter3> parameters) {
         this.parameters = parameters;
         return this;
@@ -121,9 +131,13 @@ public class LinksGetChannelCatalogLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlTemplated")
     public Boolean urlTemplated;
+
     public LinksGetChannelCatalogLink withUrlTemplated(Boolean urlTemplated) {
         this.urlTemplated = urlTemplated;
         return this;
     }
     
+    public LinksGetChannelCatalogLink(@JsonProperty("href") String href) {
+        this.href = href;
+  }
 }

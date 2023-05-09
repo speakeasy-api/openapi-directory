@@ -15,6 +15,7 @@ public class TlsValidationContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAlternativeNames")
     public SubjectAlternativeNames subjectAlternativeNames;
+
     public TlsValidationContext withSubjectAlternativeNames(SubjectAlternativeNames subjectAlternativeNames) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         return this;
@@ -22,9 +23,13 @@ public class TlsValidationContext {
     
     @JsonProperty("trust")
     public TlsValidationContextTrust trust;
+
     public TlsValidationContext withTrust(TlsValidationContextTrust trust) {
         this.trust = trust;
         return this;
     }
     
+    public TlsValidationContext(@JsonProperty("trust") TlsValidationContextTrust trust) {
+        this.trust = trust;
+  }
 }

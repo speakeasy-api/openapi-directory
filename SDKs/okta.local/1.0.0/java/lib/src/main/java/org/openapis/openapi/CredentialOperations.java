@@ -51,10 +51,8 @@ public class CredentialOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangePasswordResponse res = new org.openapis.openapi.models.operations.ChangePasswordResponse() {{
+        org.openapis.openapi.models.operations.ChangePasswordResponse res = new org.openapis.openapi.models.operations.ChangePasswordResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -86,10 +84,8 @@ public class CredentialOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeRecoveryQuestionResponse res = new org.openapis.openapi.models.operations.ChangeRecoveryQuestionResponse() {{
+        org.openapis.openapi.models.operations.ChangeRecoveryQuestionResponse res = new org.openapis.openapi.models.operations.ChangeRecoveryQuestionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -127,10 +123,8 @@ public class CredentialOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ForgotPasswordOneTimeCodeResponse res = new org.openapis.openapi.models.operations.ForgotPasswordOneTimeCodeResponse() {{
+        org.openapis.openapi.models.operations.ForgotPasswordOneTimeCodeResponse res = new org.openapis.openapi.models.operations.ForgotPasswordOneTimeCodeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,10 +156,8 @@ public class CredentialOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetRecoveryCredentialResponse res = new org.openapis.openapi.models.operations.SetRecoveryCredentialResponse() {{
+        org.openapis.openapi.models.operations.SetRecoveryCredentialResponse res = new org.openapis.openapi.models.operations.SetRecoveryCredentialResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -22,6 +22,7 @@ public class CreateTeamMemberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateTeamMemberRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -33,9 +34,11 @@ public class CreateTeamMemberRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_member")
     public TeamMember teamMember;
+
     public CreateTeamMemberRequest withTeamMember(TeamMember teamMember) {
         this.teamMember = teamMember;
         return this;
     }
     
+    public CreateTeamMemberRequest(){}
 }

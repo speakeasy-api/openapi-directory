@@ -18,6 +18,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public ServingConfig config;
+
     public Version withConfig(ServingConfig config) {
         this.config = config;
         return this;
@@ -29,6 +30,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Version withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createUser")
     public ActingUser createUser;
+
     public Version withCreateUser(ActingUser createUser) {
         this.createUser = createUser;
         return this;
@@ -51,6 +54,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTime")
     public String deleteTime;
+
     public Version withDeleteTime(String deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -62,6 +66,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteUser")
     public ActingUser deleteUser;
+
     public Version withDeleteUser(ActingUser deleteUser) {
         this.deleteUser = deleteUser;
         return this;
@@ -73,6 +78,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileCount")
     public String fileCount;
+
     public Version withFileCount(String fileCount) {
         this.fileCount = fileCount;
         return this;
@@ -84,6 +90,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalizeTime")
     public String finalizeTime;
+
     public Version withFinalizeTime(String finalizeTime) {
         this.finalizeTime = finalizeTime;
         return this;
@@ -95,6 +102,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalizeUser")
     public ActingUser finalizeUser;
+
     public Version withFinalizeUser(ActingUser finalizeUser) {
         this.finalizeUser = finalizeUser;
         return this;
@@ -106,6 +114,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Version withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -117,6 +126,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Version withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +138,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public VersionStatusEnum status;
+
     public Version withStatus(VersionStatusEnum status) {
         this.status = status;
         return this;
@@ -139,9 +150,11 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionBytes")
     public String versionBytes;
+
     public Version withVersionBytes(String versionBytes) {
         this.versionBytes = versionBytes;
         return this;
     }
     
+    public Version(){}
 }

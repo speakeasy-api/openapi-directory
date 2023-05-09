@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePullRequestApprovalRuleInput {
     @JsonProperty("approvalRuleContent")
     public String approvalRuleContent;
+
     public CreatePullRequestApprovalRuleInput withApprovalRuleContent(String approvalRuleContent) {
         this.approvalRuleContent = approvalRuleContent;
         return this;
@@ -16,6 +17,7 @@ public class CreatePullRequestApprovalRuleInput {
     
     @JsonProperty("approvalRuleName")
     public String approvalRuleName;
+
     public CreatePullRequestApprovalRuleInput withApprovalRuleName(String approvalRuleName) {
         this.approvalRuleName = approvalRuleName;
         return this;
@@ -23,9 +25,15 @@ public class CreatePullRequestApprovalRuleInput {
     
     @JsonProperty("pullRequestId")
     public String pullRequestId;
+
     public CreatePullRequestApprovalRuleInput withPullRequestId(String pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
     }
     
+    public CreatePullRequestApprovalRuleInput(@JsonProperty("approvalRuleContent") String approvalRuleContent, @JsonProperty("approvalRuleName") String approvalRuleName, @JsonProperty("pullRequestId") String pullRequestId) {
+        this.approvalRuleContent = approvalRuleContent;
+        this.approvalRuleName = approvalRuleName;
+        this.pullRequestId = pullRequestId;
+  }
 }

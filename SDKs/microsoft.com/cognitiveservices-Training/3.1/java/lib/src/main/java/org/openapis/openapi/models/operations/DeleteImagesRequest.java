@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteImagesRequest {
@@ -12,6 +13,7 @@ public class DeleteImagesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public DeleteImagesRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -22,6 +24,7 @@ public class DeleteImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allImages")
     public Boolean allImages;
+
     public DeleteImagesRequest withAllImages(Boolean allImages) {
         this.allImages = allImages;
         return this;
@@ -32,6 +35,7 @@ public class DeleteImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allIterations")
     public Boolean allIterations;
+
     public DeleteImagesRequest withAllIterations(Boolean allIterations) {
         this.allIterations = allIterations;
         return this;
@@ -42,6 +46,7 @@ public class DeleteImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=imageIds")
     public String[] imageIds;
+
     public DeleteImagesRequest withImageIds(String[] imageIds) {
         this.imageIds = imageIds;
         return this;
@@ -52,9 +57,14 @@ public class DeleteImagesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public DeleteImagesRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public DeleteImagesRequest(@JsonProperty("Training-Key") String trainingKey, @JsonProperty("projectId") String projectId) {
+        this.trainingKey = trainingKey;
+        this.projectId = projectId;
+  }
 }

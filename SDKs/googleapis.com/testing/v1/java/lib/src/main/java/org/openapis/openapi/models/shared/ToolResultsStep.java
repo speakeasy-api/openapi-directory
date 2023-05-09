@@ -18,6 +18,7 @@ public class ToolResultsStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionId")
     public String executionId;
+
     public ToolResultsStep withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -29,6 +30,7 @@ public class ToolResultsStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("historyId")
     public String historyId;
+
     public ToolResultsStep withHistoryId(String historyId) {
         this.historyId = historyId;
         return this;
@@ -40,6 +42,7 @@ public class ToolResultsStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public ToolResultsStep withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -51,9 +54,11 @@ public class ToolResultsStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepId")
     public String stepId;
+
     public ToolResultsStep withStepId(String stepId) {
         this.stepId = stepId;
         return this;
     }
     
+    public ToolResultsStep(){}
 }

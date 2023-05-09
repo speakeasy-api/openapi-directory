@@ -18,9 +18,11 @@ public class ConvertJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public ConvertJobDetails withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public ConvertJobDetails(){}
 }

@@ -15,9 +15,11 @@ public class DeleteEnvironment404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public DeleteEnvironment404ApplicationJSONError error;
+
     public DeleteEnvironment404ApplicationJSON withError(DeleteEnvironment404ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public DeleteEnvironment404ApplicationJSON(){}
 }

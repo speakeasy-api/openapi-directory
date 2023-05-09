@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiaryControllerPostAppointmentRawResponse {
     
     public String contentType;
+
     public DiaryControllerPostAppointmentRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DiaryControllerPostAppointmentRawResponse {
      */
     
     public String diaryControllerPostAppointmentRaw200ApplicationJSONString;
+
     public DiaryControllerPostAppointmentRawResponse withDiaryControllerPostAppointmentRaw200ApplicationJSONString(String diaryControllerPostAppointmentRaw200ApplicationJSONString) {
         this.diaryControllerPostAppointmentRaw200ApplicationJSONString = diaryControllerPostAppointmentRaw200ApplicationJSONString;
         return this;
@@ -29,6 +32,7 @@ public class DiaryControllerPostAppointmentRawResponse {
      */
     
     public String diaryControllerPostAppointmentRaw200ApplicationXMLString;
+
     public DiaryControllerPostAppointmentRawResponse withDiaryControllerPostAppointmentRaw200ApplicationXMLString(String diaryControllerPostAppointmentRaw200ApplicationXMLString) {
         this.diaryControllerPostAppointmentRaw200ApplicationXMLString = diaryControllerPostAppointmentRaw200ApplicationXMLString;
         return this;
@@ -39,6 +43,7 @@ public class DiaryControllerPostAppointmentRawResponse {
      */
     
     public String diaryControllerPostAppointmentRaw200TextJSONString;
+
     public DiaryControllerPostAppointmentRawResponse withDiaryControllerPostAppointmentRaw200TextJSONString(String diaryControllerPostAppointmentRaw200TextJSONString) {
         this.diaryControllerPostAppointmentRaw200TextJSONString = diaryControllerPostAppointmentRaw200TextJSONString;
         return this;
@@ -49,6 +54,7 @@ public class DiaryControllerPostAppointmentRawResponse {
      */
     
     public String diaryControllerPostAppointmentRaw200TextXMLString;
+
     public DiaryControllerPostAppointmentRawResponse withDiaryControllerPostAppointmentRaw200TextXMLString(String diaryControllerPostAppointmentRaw200TextXMLString) {
         this.diaryControllerPostAppointmentRaw200TextXMLString = diaryControllerPostAppointmentRaw200TextXMLString;
         return this;
@@ -56,6 +62,7 @@ public class DiaryControllerPostAppointmentRawResponse {
     
     
     public Integer statusCode;
+
     public DiaryControllerPostAppointmentRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DiaryControllerPostAppointmentRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiaryControllerPostAppointmentRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DiaryControllerPostAppointmentRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

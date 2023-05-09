@@ -15,6 +15,7 @@ public class AwsEc2NetworkInterfaceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachTime")
     public String attachTime;
+
     public AwsEc2NetworkInterfaceAttachment withAttachTime(String attachTime) {
         this.attachTime = attachTime;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2NetworkInterfaceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachmentId")
     public String attachmentId;
+
     public AwsEc2NetworkInterfaceAttachment withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2NetworkInterfaceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteOnTermination")
     public Boolean deleteOnTermination;
+
     public AwsEc2NetworkInterfaceAttachment withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2NetworkInterfaceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceIndex")
     public Long deviceIndex;
+
     public AwsEc2NetworkInterfaceAttachment withDeviceIndex(Long deviceIndex) {
         this.deviceIndex = deviceIndex;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2NetworkInterfaceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public AwsEc2NetworkInterfaceAttachment withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -55,6 +60,7 @@ public class AwsEc2NetworkInterfaceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceOwnerId")
     public String instanceOwnerId;
+
     public AwsEc2NetworkInterfaceAttachment withInstanceOwnerId(String instanceOwnerId) {
         this.instanceOwnerId = instanceOwnerId;
         return this;
@@ -63,9 +69,11 @@ public class AwsEc2NetworkInterfaceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsEc2NetworkInterfaceAttachment withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsEc2NetworkInterfaceAttachment(){}
 }

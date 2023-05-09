@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ShareAsWorkFilesRequest {
@@ -12,6 +13,7 @@ public class ShareAsWorkFilesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FilesDto filesDto;
+
     public ShareAsWorkFilesRequest withFilesDto(org.openapis.openapi.models.shared.FilesDto filesDto) {
         this.filesDto = filesDto;
         return this;
@@ -22,9 +24,14 @@ public class ShareAsWorkFilesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public ShareAsWorkFilesRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public ShareAsWorkFilesRequest(@JsonProperty("FilesDto") org.openapis.openapi.models.shared.FilesDto filesDto, @JsonProperty("jobId") String jobId) {
+        this.filesDto = filesDto;
+        this.jobId = jobId;
+  }
 }

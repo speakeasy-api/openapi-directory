@@ -15,9 +15,11 @@ public class TargetHttpsProxiesSetQuicOverrideRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quicOverride")
     public TargetHttpsProxiesSetQuicOverrideRequestQuicOverrideEnum quicOverride;
+
     public TargetHttpsProxiesSetQuicOverrideRequest withQuicOverride(TargetHttpsProxiesSetQuicOverrideRequestQuicOverrideEnum quicOverride) {
         this.quicOverride = quicOverride;
         return this;
     }
     
+    public TargetHttpsProxiesSetQuicOverrideRequest(){}
 }

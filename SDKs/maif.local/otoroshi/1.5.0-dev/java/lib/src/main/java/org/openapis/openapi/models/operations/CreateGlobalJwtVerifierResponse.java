@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGlobalJwtVerifierResponse {
     
     public String contentType;
+
     public CreateGlobalJwtVerifierResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateGlobalJwtVerifierResponse {
      */
     
     public org.openapis.openapi.models.shared.GlobalJwtVerifier globalJwtVerifier;
+
     public CreateGlobalJwtVerifierResponse withGlobalJwtVerifier(org.openapis.openapi.models.shared.GlobalJwtVerifier globalJwtVerifier) {
         this.globalJwtVerifier = globalJwtVerifier;
         return this;
@@ -26,6 +29,7 @@ public class CreateGlobalJwtVerifierResponse {
     
     
     public Integer statusCode;
+
     public CreateGlobalJwtVerifierResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CreateGlobalJwtVerifierResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGlobalJwtVerifierResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateGlobalJwtVerifierResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

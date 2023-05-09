@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HistoricalOptions {
     @JsonProperty("BudgetAdjustmentPeriod")
     public Long budgetAdjustmentPeriod;
+
     public HistoricalOptions withBudgetAdjustmentPeriod(Long budgetAdjustmentPeriod) {
         this.budgetAdjustmentPeriod = budgetAdjustmentPeriod;
         return this;
@@ -22,9 +23,13 @@ public class HistoricalOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LookBackAvailablePeriods")
     public Long lookBackAvailablePeriods;
+
     public HistoricalOptions withLookBackAvailablePeriods(Long lookBackAvailablePeriods) {
         this.lookBackAvailablePeriods = lookBackAvailablePeriods;
         return this;
     }
     
+    public HistoricalOptions(@JsonProperty("BudgetAdjustmentPeriod") Long budgetAdjustmentPeriod) {
+        this.budgetAdjustmentPeriod = budgetAdjustmentPeriod;
+  }
 }

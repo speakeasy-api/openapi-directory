@@ -15,9 +15,11 @@ public class DeleteResourcePermissionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public DeleteResourcePermissionOutput withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public DeleteResourcePermissionOutput(){}
 }

@@ -15,6 +15,7 @@ public class ConnectedHomeSettingsForUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Labels")
     public String[] labels;
+
     public ConnectedHomeSettingsForUpdate withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -23,9 +24,11 @@ public class ConnectedHomeSettingsForUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinConfidence")
     public Float minConfidence;
+
     public ConnectedHomeSettingsForUpdate withMinConfidence(Float minConfidence) {
         this.minConfidence = minConfidence;
         return this;
     }
     
+    public ConnectedHomeSettingsForUpdate(){}
 }

@@ -18,6 +18,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, java.util.Map<String, Object>> attributes;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withAttributes(java.util.Map<String, java.util.Map<String, Object>> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limits")
     public java.util.Map<String, Double> limits;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withLimits(java.util.Map<String, Double> limits) {
         this.limits = limits;
         return this;
@@ -48,6 +51,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentId")
     public String parentId;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -59,6 +63,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentSource")
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum paymentSource;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withPaymentSource(BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum paymentSource) {
         this.paymentSource = paymentSource;
         return this;
@@ -70,6 +75,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Double price;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withPrice(Double price) {
         this.price = price;
         return this;
@@ -81,6 +87,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanServiceEnum service;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withService(BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanServiceEnum service) {
         this.service = service;
         return this;
@@ -92,9 +99,11 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlansBuildServiceCurrentBillingPeriodByAccountPlan(){}
 }

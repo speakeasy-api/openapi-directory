@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EventApiGetListResponse {
     
     public String contentType;
+
     public EventApiGetListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EventApiGetListResponse {
      */
     
     public java.util.Map<String, Object> eventApiGetList200ApplicationJSONObject;
+
     public EventApiGetListResponse withEventApiGetList200ApplicationJSONObject(java.util.Map<String, Object> eventApiGetList200ApplicationJSONObject) {
         this.eventApiGetList200ApplicationJSONObject = eventApiGetList200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class EventApiGetListResponse {
      */
     
     public java.util.Map<String, Object> eventApiGetList200TextJSONObject;
+
     public EventApiGetListResponse withEventApiGetList200TextJSONObject(java.util.Map<String, Object> eventApiGetList200TextJSONObject) {
         this.eventApiGetList200TextJSONObject = eventApiGetList200TextJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class EventApiGetListResponse {
     
     
     public Integer statusCode;
+
     public EventApiGetListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class EventApiGetListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EventApiGetListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EventApiGetListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

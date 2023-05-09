@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCustomRoutingAcceleratorResponse {
@@ -12,6 +13,7 @@ public class DescribeCustomRoutingAcceleratorResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public DescribeCustomRoutingAcceleratorResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCustomRoutingAcceleratorResponse {
     
     
     public String contentType;
+
     public DescribeCustomRoutingAcceleratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCustomRoutingAcceleratorResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCustomRoutingAcceleratorResponse describeCustomRoutingAcceleratorResponse;
+
     public DescribeCustomRoutingAcceleratorResponse withDescribeCustomRoutingAcceleratorResponse(org.openapis.openapi.models.shared.DescribeCustomRoutingAcceleratorResponse describeCustomRoutingAcceleratorResponse) {
         this.describeCustomRoutingAcceleratorResponse = describeCustomRoutingAcceleratorResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCustomRoutingAcceleratorResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DescribeCustomRoutingAcceleratorResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeCustomRoutingAcceleratorResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeCustomRoutingAcceleratorResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeCustomRoutingAcceleratorResponse {
     
     
     public Integer statusCode;
+
     public DescribeCustomRoutingAcceleratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeCustomRoutingAcceleratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCustomRoutingAcceleratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeCustomRoutingAcceleratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

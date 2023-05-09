@@ -16,38 +16,39 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.ChromeFromHtmlPostResponse;
-import org.openapis.openapi.models.shared.ChromeHtmlToPdfRequest;
 import org.openapis.openapi.models.shared.ChromeAdvancedOptions;
+import org.openapis.openapi.models.shared.ChromeHtmlToPdfRequest;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     headerApiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            org.openapis.openapi.models.shared.ChromeHtmlToPdfRequest req = new ChromeHtmlToPdfRequest() {{
+            org.openapis.openapi.models.shared.ChromeHtmlToPdfRequest req = new ChromeHtmlToPdfRequest("<p>Hello World</p>") {{
                 fileName = "test.pdf";
-                html = "<p>Hello World</p>";
                 inlinePdf = true;
                 options = new ChromeAdvancedOptions() {{
                     landscape = "true";
                     printBackground = false;
-                }};
-            }}            
+                }};;
+            }};            
 
             ChromeFromHtmlPostResponse res = sdk.headlessChrome.chromeFromHtmlPost(req);
 
-            if (res.apiResponseSuccess.isPresent()) {
+            if (res.apiResponseSuccess != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -55,29 +56,29 @@ public class Application {
 ## Available Resources and Operations
 
 
-### headlessChrome
+### [headlessChrome](docs/headlesschrome/README.md)
 
-* `chromeFromHtmlPost` - Convert raw HTML to PDF
-* `chromeFromUrlGET` - Convert URL to PDF
-* `chromeFromUrlPost` - Convert URL to PDF
+* [chromeFromHtmlPost](docs/headlesschrome/README.md#chromefromhtmlpost) - Convert raw HTML to PDF
+* [chromeFromUrlGET](docs/headlesschrome/README.md#chromefromurlget) - Convert URL to PDF
+* [chromeFromUrlPost](docs/headlesschrome/README.md#chromefromurlpost) - Convert URL to PDF
 
-### libreOffice
+### [libreOffice](docs/libreoffice/README.md)
 
-* `libreConvertPost` - Convert office document or image to PDF
+* [libreConvertPost](docs/libreoffice/README.md#libreconvertpost) - Convert office document or image to PDF
 
-### mergeCombinePdfs
+### [mergeCombinePdfs](docs/mergecombinepdfs/README.md)
 
-* `mergePost` - Merge multiple PDFs together
+* [mergePost](docs/mergecombinepdfs/README.md#mergepost) - Merge multiple PDFs together
 
-### zxingZebraCrossingBarCodes
+### [zxingZebraCrossingBarCodes](docs/zxingzebracrossingbarcodes/README.md)
 
-* `zebraGET` - Generate bar codes and QR codes with ZXING.
+* [zebraGET](docs/zxingzebracrossingbarcodes/README.md#zebraget) - Generate bar codes and QR codes with ZXING.
 
-### wkhtmltopdf
+### [wkhtmltopdf](docs/wkhtmltopdf/README.md)
 
-* `wkhtmltopdfFromHtmlPost` - Convert raw HTML to PDF
-* `wkhtmltopdfFromUrlGET` - Convert URL to PDF
-* `wkhtmltopdfFromUrlPost` - Convert URL to PDF
+* [wkhtmltopdfFromHtmlPost](docs/wkhtmltopdf/README.md#wkhtmltopdffromhtmlpost) - Convert raw HTML to PDF
+* [wkhtmltopdfFromUrlGET](docs/wkhtmltopdf/README.md#wkhtmltopdffromurlget) - Convert URL to PDF
+* [wkhtmltopdfFromUrlPost](docs/wkhtmltopdf/README.md#wkhtmltopdffromurlpost) - Convert URL to PDF
 <!-- End SDK Available Operations -->
 
 ### Maturity

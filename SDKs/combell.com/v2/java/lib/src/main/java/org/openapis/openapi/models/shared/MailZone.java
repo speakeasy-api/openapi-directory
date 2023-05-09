@@ -19,6 +19,7 @@ public class MailZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliases")
     public Alias[] aliases;
+
     public MailZone withAliases(Alias[] aliases) {
         this.aliases = aliases;
         return this;
@@ -27,6 +28,7 @@ public class MailZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("anti_spam")
     public AntiSpam antiSpam;
+
     public MailZone withAntiSpam(AntiSpam antiSpam) {
         this.antiSpam = antiSpam;
         return this;
@@ -38,6 +40,7 @@ public class MailZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available_accounts")
     public MailZoneAccount[] availableAccounts;
+
     public MailZone withAvailableAccounts(MailZoneAccount[] availableAccounts) {
         this.availableAccounts = availableAccounts;
         return this;
@@ -46,6 +49,7 @@ public class MailZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catch_all")
     public CatchAll catchAll;
+
     public MailZone withCatchAll(CatchAll catchAll) {
         this.catchAll = catchAll;
         return this;
@@ -57,6 +61,7 @@ public class MailZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public MailZone withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -65,6 +70,7 @@ public class MailZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MailZone withName(String name) {
         this.name = name;
         return this;
@@ -78,9 +84,11 @@ public class MailZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smtp_domains")
     public SmtpDomain[] smtpDomains;
+
     public MailZone withSmtpDomains(SmtpDomain[] smtpDomains) {
         this.smtpDomains = smtpDomains;
         return this;
     }
     
+    public MailZone(){}
 }

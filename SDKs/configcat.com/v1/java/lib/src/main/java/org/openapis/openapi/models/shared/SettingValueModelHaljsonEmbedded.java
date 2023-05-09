@@ -12,6 +12,7 @@ public class SettingValueModelHaljsonEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public SettingValueModelHaljsonEmbeddedConfig config;
+
     public SettingValueModelHaljsonEmbedded withConfig(SettingValueModelHaljsonEmbeddedConfig config) {
         this.config = config;
         return this;
@@ -20,6 +21,7 @@ public class SettingValueModelHaljsonEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public SettingValueModelHaljsonEmbeddedEnvironment environment;
+
     public SettingValueModelHaljsonEmbedded withEnvironment(SettingValueModelHaljsonEmbeddedEnvironment environment) {
         this.environment = environment;
         return this;
@@ -28,6 +30,7 @@ public class SettingValueModelHaljsonEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationLinks")
     public SettingValueModelHaljsonEmbeddedIntegrationLinks[] integrationLinks;
+
     public SettingValueModelHaljsonEmbedded withIntegrationLinks(SettingValueModelHaljsonEmbeddedIntegrationLinks[] integrationLinks) {
         this.integrationLinks = integrationLinks;
         return this;
@@ -36,6 +39,7 @@ public class SettingValueModelHaljsonEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting")
     public SettingValueModelHaljsonEmbeddedSetting setting;
+
     public SettingValueModelHaljsonEmbedded withSetting(SettingValueModelHaljsonEmbeddedSetting setting) {
         this.setting = setting;
         return this;
@@ -44,9 +48,11 @@ public class SettingValueModelHaljsonEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settingTags")
     public SettingValueModelHaljsonEmbeddedSettingTags[] settingTags;
+
     public SettingValueModelHaljsonEmbedded withSettingTags(SettingValueModelHaljsonEmbeddedSettingTags[] settingTags) {
         this.settingTags = settingTags;
         return this;
     }
     
+    public SettingValueModelHaljsonEmbedded(){}
 }

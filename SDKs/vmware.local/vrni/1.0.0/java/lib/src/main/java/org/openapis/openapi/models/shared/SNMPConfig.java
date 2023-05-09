@@ -15,6 +15,7 @@ public class SNMPConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config_snmp_2c")
     public Snmp2cConfig configSnmp2c;
+
     public SNMPConfig withConfigSnmp2c(Snmp2cConfig configSnmp2c) {
         this.configSnmp2c = configSnmp2c;
         return this;
@@ -23,6 +24,7 @@ public class SNMPConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config_snmp_3")
     public Snmp3Config configSnmp3;
+
     public SNMPConfig withConfigSnmp3(Snmp3Config configSnmp3) {
         this.configSnmp3 = configSnmp3;
         return this;
@@ -31,6 +33,7 @@ public class SNMPConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snmp_enabled")
     public Boolean snmpEnabled;
+
     public SNMPConfig withSnmpEnabled(Boolean snmpEnabled) {
         this.snmpEnabled = snmpEnabled;
         return this;
@@ -39,9 +42,11 @@ public class SNMPConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snmp_version")
     public SNMPConfigSNMPVersionEnum snmpVersion;
+
     public SNMPConfig withSnmpVersion(SNMPConfigSNMPVersionEnum snmpVersion) {
         this.snmpVersion = snmpVersion;
         return this;
     }
     
+    public SNMPConfig(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDiscoverySummaryResponse {
@@ -12,6 +13,7 @@ public class GetDiscoverySummaryResponse {
      */
     
     public Object authorizationErrorException;
+
     public GetDiscoverySummaryResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class GetDiscoverySummaryResponse {
     
     
     public String contentType;
+
     public GetDiscoverySummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDiscoverySummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDiscoverySummaryResponse getDiscoverySummaryResponse;
+
     public GetDiscoverySummaryResponse withGetDiscoverySummaryResponse(org.openapis.openapi.models.shared.GetDiscoverySummaryResponse getDiscoverySummaryResponse) {
         this.getDiscoverySummaryResponse = getDiscoverySummaryResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDiscoverySummaryResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public GetDiscoverySummaryResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class GetDiscoverySummaryResponse {
      */
     
     public Object invalidParameterException;
+
     public GetDiscoverySummaryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetDiscoverySummaryResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetDiscoverySummaryResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class GetDiscoverySummaryResponse {
      */
     
     public Object serverInternalErrorException;
+
     public GetDiscoverySummaryResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -76,6 +84,7 @@ public class GetDiscoverySummaryResponse {
     
     
     public Integer statusCode;
+
     public GetDiscoverySummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetDiscoverySummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDiscoverySummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDiscoverySummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

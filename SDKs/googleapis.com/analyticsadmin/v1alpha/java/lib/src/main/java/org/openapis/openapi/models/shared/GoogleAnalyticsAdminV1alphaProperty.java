@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public String account;
+
     public GoogleAnalyticsAdminV1alphaProperty withAccount(String account) {
         this.account = account;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleAnalyticsAdminV1alphaProperty withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public GoogleAnalyticsAdminV1alphaProperty withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTime")
     public String deleteTime;
+
     public GoogleAnalyticsAdminV1alphaProperty withDeleteTime(String deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1alphaProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1alphaProperty withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAnalyticsAdminV1alphaProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public GoogleAnalyticsAdminV1alphaProperty withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAnalyticsAdminV1alphaProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("industryCategory")
     public GoogleAnalyticsAdminV1alphaPropertyIndustryCategoryEnum industryCategory;
+
     public GoogleAnalyticsAdminV1alphaProperty withIndustryCategory(GoogleAnalyticsAdminV1alphaPropertyIndustryCategoryEnum industryCategory) {
         this.industryCategory = industryCategory;
         return this;
@@ -95,6 +102,7 @@ public class GoogleAnalyticsAdminV1alphaProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaProperty withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class GoogleAnalyticsAdminV1alphaProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleAnalyticsAdminV1alphaProperty withParent(String parent) {
         this.parent = parent;
         return this;
@@ -117,6 +126,7 @@ public class GoogleAnalyticsAdminV1alphaProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyType")
     public GoogleAnalyticsAdminV1alphaPropertyPropertyTypeEnum propertyType;
+
     public GoogleAnalyticsAdminV1alphaProperty withPropertyType(GoogleAnalyticsAdminV1alphaPropertyPropertyTypeEnum propertyType) {
         this.propertyType = propertyType;
         return this;
@@ -128,6 +138,7 @@ public class GoogleAnalyticsAdminV1alphaProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceLevel")
     public GoogleAnalyticsAdminV1alphaPropertyServiceLevelEnum serviceLevel;
+
     public GoogleAnalyticsAdminV1alphaProperty withServiceLevel(GoogleAnalyticsAdminV1alphaPropertyServiceLevelEnum serviceLevel) {
         this.serviceLevel = serviceLevel;
         return this;
@@ -139,6 +150,7 @@ public class GoogleAnalyticsAdminV1alphaProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public GoogleAnalyticsAdminV1alphaProperty withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -150,9 +162,11 @@ public class GoogleAnalyticsAdminV1alphaProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleAnalyticsAdminV1alphaProperty withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaProperty(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ListVerifiedEmailAddressesResponse {
     
     public String[] verifiedEmailAddresses;
+
     public ListVerifiedEmailAddressesResponse withVerifiedEmailAddresses(String[] verifiedEmailAddresses) {
         this.verifiedEmailAddresses = verifiedEmailAddresses;
         return this;
     }
     
+    public ListVerifiedEmailAddressesResponse(){}
 }

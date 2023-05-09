@@ -18,9 +18,11 @@ public class RollbackApiSpecRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public RollbackApiSpecRequest withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public RollbackApiSpecRequest(){}
 }

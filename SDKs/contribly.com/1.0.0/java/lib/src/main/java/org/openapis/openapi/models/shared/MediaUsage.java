@@ -12,6 +12,7 @@ public class MediaUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifacts")
     public Artifact[] artifacts;
+
     public MediaUsage withArtifacts(Artifact[] artifacts) {
         this.artifacts = artifacts;
         return this;
@@ -20,6 +21,7 @@ public class MediaUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public MediaUsage withId(String id) {
         this.id = id;
         return this;
@@ -28,9 +30,11 @@ public class MediaUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     public Media media;
+
     public MediaUsage withMedia(Media media) {
         this.media = media;
         return this;
     }
     
+    public MediaUsage(){}
 }

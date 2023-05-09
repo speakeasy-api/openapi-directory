@@ -15,9 +15,11 @@ public class DescribeTransactionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionDescription")
     public TransactionDescription transactionDescription;
+
     public DescribeTransactionResponse withTransactionDescription(TransactionDescription transactionDescription) {
         this.transactionDescription = transactionDescription;
         return this;
     }
     
+    public DescribeTransactionResponse(){}
 }

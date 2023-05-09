@@ -12,6 +12,7 @@ public class DescribeDeviceRequestBody {
      */
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public DescribeDeviceRequestBody withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -22,9 +23,14 @@ public class DescribeDeviceRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public DescribeDeviceRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public DescribeDeviceRequestBody(@JsonProperty("DeviceId") String deviceId, @JsonProperty("FleetArn") String fleetArn) {
+        this.deviceId = deviceId;
+        this.fleetArn = fleetArn;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIdentityProviderByIdentifierResponse {
     
     public String contentType;
+
     public GetIdentityProviderByIdentifierResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetIdentityProviderByIdentifierResponse {
      */
     
     public org.openapis.openapi.models.shared.GetIdentityProviderByIdentifierResponse getIdentityProviderByIdentifierResponse;
+
     public GetIdentityProviderByIdentifierResponse withGetIdentityProviderByIdentifierResponse(org.openapis.openapi.models.shared.GetIdentityProviderByIdentifierResponse getIdentityProviderByIdentifierResponse) {
         this.getIdentityProviderByIdentifierResponse = getIdentityProviderByIdentifierResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetIdentityProviderByIdentifierResponse {
      */
     
     public Object internalErrorException;
+
     public GetIdentityProviderByIdentifierResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetIdentityProviderByIdentifierResponse {
      */
     
     public Object invalidParameterException;
+
     public GetIdentityProviderByIdentifierResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetIdentityProviderByIdentifierResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetIdentityProviderByIdentifierResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class GetIdentityProviderByIdentifierResponse {
     
     
     public Integer statusCode;
+
     public GetIdentityProviderByIdentifierResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetIdentityProviderByIdentifierResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIdentityProviderByIdentifierResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetIdentityProviderByIdentifierResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetIdentityProviderByIdentifierResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class GetIdentityProviderByIdentifierResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetIdentityProviderByIdentifierResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetIdentityProviderByIdentifierResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

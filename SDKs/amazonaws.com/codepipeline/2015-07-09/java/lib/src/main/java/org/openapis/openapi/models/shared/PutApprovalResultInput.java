@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutApprovalResultInput {
     @JsonProperty("actionName")
     public String actionName;
+
     public PutApprovalResultInput withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -19,6 +20,7 @@ public class PutApprovalResultInput {
     
     @JsonProperty("pipelineName")
     public String pipelineName;
+
     public PutApprovalResultInput withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -26,6 +28,7 @@ public class PutApprovalResultInput {
     
     @JsonProperty("result")
     public ApprovalResult result;
+
     public PutApprovalResultInput withResult(ApprovalResult result) {
         this.result = result;
         return this;
@@ -33,6 +36,7 @@ public class PutApprovalResultInput {
     
     @JsonProperty("stageName")
     public String stageName;
+
     public PutApprovalResultInput withStageName(String stageName) {
         this.stageName = stageName;
         return this;
@@ -40,9 +44,17 @@ public class PutApprovalResultInput {
     
     @JsonProperty("token")
     public String token;
+
     public PutApprovalResultInput withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public PutApprovalResultInput(@JsonProperty("actionName") String actionName, @JsonProperty("pipelineName") String pipelineName, @JsonProperty("result") ApprovalResult result, @JsonProperty("stageName") String stageName, @JsonProperty("token") String token) {
+        this.actionName = actionName;
+        this.pipelineName = pipelineName;
+        this.result = result;
+        this.stageName = stageName;
+        this.token = token;
+  }
 }

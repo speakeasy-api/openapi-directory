@@ -17,6 +17,7 @@ public class AudioRenderTimelineSpanInstrumentGroup {
      */
     @JsonProperty("instrument_group")
     public String instrumentGroup;
+
     public AudioRenderTimelineSpanInstrumentGroup withInstrumentGroup(String instrumentGroup) {
         this.instrumentGroup = instrumentGroup;
         return this;
@@ -28,9 +29,13 @@ public class AudioRenderTimelineSpanInstrumentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statuses")
     public AudioRenderTimelineSpanInstrumentGroupStatus[] statuses;
+
     public AudioRenderTimelineSpanInstrumentGroup withStatuses(AudioRenderTimelineSpanInstrumentGroupStatus[] statuses) {
         this.statuses = statuses;
         return this;
     }
     
+    public AudioRenderTimelineSpanInstrumentGroup(@JsonProperty("instrument_group") String instrumentGroup) {
+        this.instrumentGroup = instrumentGroup;
+  }
 }

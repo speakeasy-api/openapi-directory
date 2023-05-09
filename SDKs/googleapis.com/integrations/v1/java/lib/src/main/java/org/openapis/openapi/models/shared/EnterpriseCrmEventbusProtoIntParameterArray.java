@@ -12,9 +12,11 @@ public class EnterpriseCrmEventbusProtoIntParameterArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intValues")
     public String[] intValues;
+
     public EnterpriseCrmEventbusProtoIntParameterArray withIntValues(String[] intValues) {
         this.intValues = intValues;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoIntParameterArray(){}
 }

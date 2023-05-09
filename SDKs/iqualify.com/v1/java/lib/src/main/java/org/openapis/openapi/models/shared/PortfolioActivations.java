@@ -17,6 +17,7 @@ public class PortfolioActivations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentId")
     public String contentId;
+
     public PortfolioActivations withContentId(String contentId) {
         this.contentId = contentId;
         return this;
@@ -27,6 +28,7 @@ public class PortfolioActivations {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("end")
     public OffsetDateTime end;
+
     public PortfolioActivations withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -35,6 +37,7 @@ public class PortfolioActivations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PortfolioActivations withId(String id) {
         this.id = id;
         return this;
@@ -43,6 +46,7 @@ public class PortfolioActivations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public String info;
+
     public PortfolioActivations withInfo(String info) {
         this.info = info;
         return this;
@@ -54,6 +58,7 @@ public class PortfolioActivations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnersCount")
     public Double learnersCount;
+
     public PortfolioActivations withLearnersCount(Double learnersCount) {
         this.learnersCount = learnersCount;
         return this;
@@ -62,6 +67,7 @@ public class PortfolioActivations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public PortfolioActivationsMetadata metadata;
+
     public PortfolioActivations withMetadata(PortfolioActivationsMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -70,6 +76,7 @@ public class PortfolioActivations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PortfolioActivations withName(String name) {
         this.name = name;
         return this;
@@ -80,9 +87,11 @@ public class PortfolioActivations {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("start")
     public OffsetDateTime start;
+
     public PortfolioActivations withStart(OffsetDateTime start) {
         this.start = start;
         return this;
     }
     
+    public PortfolioActivations(){}
 }

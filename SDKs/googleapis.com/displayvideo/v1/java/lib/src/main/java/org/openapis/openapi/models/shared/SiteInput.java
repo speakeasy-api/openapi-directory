@@ -18,9 +18,11 @@ public class SiteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlOrAppId")
     public String urlOrAppId;
+
     public SiteInput withUrlOrAppId(String urlOrAppId) {
         this.urlOrAppId = urlOrAppId;
         return this;
     }
     
+    public SiteInput(){}
 }

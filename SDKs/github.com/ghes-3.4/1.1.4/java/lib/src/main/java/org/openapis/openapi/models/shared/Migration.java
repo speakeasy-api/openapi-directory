@@ -20,6 +20,7 @@ public class Migration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archive_url")
     public String archiveUrl;
+
     public Migration withArchiveUrl(String archiveUrl) {
         this.archiveUrl = archiveUrl;
         return this;
@@ -29,6 +30,7 @@ public class Migration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Migration withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -37,6 +39,7 @@ public class Migration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclude")
     public Object[] exclude;
+
     public Migration withExclude(Object[] exclude) {
         this.exclude = exclude;
         return this;
@@ -44,6 +47,7 @@ public class Migration {
     
     @JsonProperty("exclude_attachments")
     public Boolean excludeAttachments;
+
     public Migration withExcludeAttachments(Boolean excludeAttachments) {
         this.excludeAttachments = excludeAttachments;
         return this;
@@ -51,6 +55,7 @@ public class Migration {
     
     @JsonProperty("exclude_git_data")
     public Boolean excludeGitData;
+
     public Migration withExcludeGitData(Boolean excludeGitData) {
         this.excludeGitData = excludeGitData;
         return this;
@@ -58,6 +63,7 @@ public class Migration {
     
     @JsonProperty("exclude_metadata")
     public Boolean excludeMetadata;
+
     public Migration withExcludeMetadata(Boolean excludeMetadata) {
         this.excludeMetadata = excludeMetadata;
         return this;
@@ -65,6 +71,7 @@ public class Migration {
     
     @JsonProperty("exclude_owner_projects")
     public Boolean excludeOwnerProjects;
+
     public Migration withExcludeOwnerProjects(Boolean excludeOwnerProjects) {
         this.excludeOwnerProjects = excludeOwnerProjects;
         return this;
@@ -72,6 +79,7 @@ public class Migration {
     
     @JsonProperty("exclude_releases")
     public Boolean excludeReleases;
+
     public Migration withExcludeReleases(Boolean excludeReleases) {
         this.excludeReleases = excludeReleases;
         return this;
@@ -79,6 +87,7 @@ public class Migration {
     
     @JsonProperty("guid")
     public String guid;
+
     public Migration withGuid(String guid) {
         this.guid = guid;
         return this;
@@ -86,6 +95,7 @@ public class Migration {
     
     @JsonProperty("id")
     public Long id;
+
     public Migration withId(Long id) {
         this.id = id;
         return this;
@@ -93,6 +103,7 @@ public class Migration {
     
     @JsonProperty("lock_repositories")
     public Boolean lockRepositories;
+
     public Migration withLockRepositories(Boolean lockRepositories) {
         this.lockRepositories = lockRepositories;
         return this;
@@ -100,6 +111,7 @@ public class Migration {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Migration withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -107,6 +119,7 @@ public class Migration {
     
     @JsonProperty("org_metadata_only")
     public Boolean orgMetadataOnly;
+
     public Migration withOrgMetadataOnly(Boolean orgMetadataOnly) {
         this.orgMetadataOnly = orgMetadataOnly;
         return this;
@@ -117,6 +130,7 @@ public class Migration {
      */
     @JsonProperty("owner")
     public NullableSimpleUser owner;
+
     public Migration withOwner(NullableSimpleUser owner) {
         this.owner = owner;
         return this;
@@ -127,6 +141,7 @@ public class Migration {
      */
     @JsonProperty("repositories")
     public Repository[] repositories;
+
     public Migration withRepositories(Repository[] repositories) {
         this.repositories = repositories;
         return this;
@@ -134,6 +149,7 @@ public class Migration {
     
     @JsonProperty("state")
     public String state;
+
     public Migration withState(String state) {
         this.state = state;
         return this;
@@ -143,6 +159,7 @@ public class Migration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Migration withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -150,9 +167,28 @@ public class Migration {
     
     @JsonProperty("url")
     public String url;
+
     public Migration withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Migration(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("exclude_attachments") Boolean excludeAttachments, @JsonProperty("exclude_git_data") Boolean excludeGitData, @JsonProperty("exclude_metadata") Boolean excludeMetadata, @JsonProperty("exclude_owner_projects") Boolean excludeOwnerProjects, @JsonProperty("exclude_releases") Boolean excludeReleases, @JsonProperty("guid") String guid, @JsonProperty("id") Long id, @JsonProperty("lock_repositories") Boolean lockRepositories, @JsonProperty("node_id") String nodeId, @JsonProperty("org_metadata_only") Boolean orgMetadataOnly, @JsonProperty("owner") NullableSimpleUser owner, @JsonProperty("repositories") Repository[] repositories, @JsonProperty("state") String state, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.createdAt = createdAt;
+        this.excludeAttachments = excludeAttachments;
+        this.excludeGitData = excludeGitData;
+        this.excludeMetadata = excludeMetadata;
+        this.excludeOwnerProjects = excludeOwnerProjects;
+        this.excludeReleases = excludeReleases;
+        this.guid = guid;
+        this.id = id;
+        this.lockRepositories = lockRepositories;
+        this.nodeId = nodeId;
+        this.orgMetadataOnly = orgMetadataOnly;
+        this.owner = owner;
+        this.repositories = repositories;
+        this.state = state;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

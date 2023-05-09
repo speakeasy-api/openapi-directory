@@ -18,6 +18,7 @@ public class KnownUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCurrentUser")
     public Boolean isCurrentUser;
+
     public KnownUser withIsCurrentUser(Boolean isCurrentUser) {
         this.isCurrentUser = isCurrentUser;
         return this;
@@ -29,9 +30,11 @@ public class KnownUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personName")
     public String personName;
+
     public KnownUser withPersonName(String personName) {
         this.personName = personName;
         return this;
     }
     
+    public KnownUser(){}
 }

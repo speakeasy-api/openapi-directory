@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody requestBody;
+
     public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest withRequestBody(EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -26,9 +29,14 @@ public class EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pre_receive_hook_id")
     public Long preReceiveHookId;
+
     public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest withPreReceiveHookId(Long preReceiveHookId) {
         this.preReceiveHookId = preReceiveHookId;
         return this;
     }
     
+    public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest(@JsonProperty("org") String org, @JsonProperty("pre_receive_hook_id") Long preReceiveHookId) {
+        this.org = org;
+        this.preReceiveHookId = preReceiveHookId;
+  }
 }

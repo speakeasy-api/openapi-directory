@@ -15,6 +15,7 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answer_method")
     public String answerMethod;
+
     public UpdateApplicationRequestBody withAnswerMethod(String answerMethod) {
         this.answerMethod = answerMethod;
         return this;
@@ -26,6 +27,7 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answer_url")
     public String answerUrl;
+
     public UpdateApplicationRequestBody withAnswerUrl(String answerUrl) {
         this.answerUrl = answerUrl;
         return this;
@@ -36,6 +38,7 @@ public class UpdateApplicationRequestBody {
      */
     @JsonProperty("api_key")
     public String apiKey;
+
     public UpdateApplicationRequestBody withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -46,6 +49,7 @@ public class UpdateApplicationRequestBody {
      */
     @JsonProperty("api_secret")
     public String apiSecret;
+
     public UpdateApplicationRequestBody withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -57,6 +61,7 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_method")
     public String eventMethod;
+
     public UpdateApplicationRequestBody withEventMethod(String eventMethod) {
         this.eventMethod = eventMethod;
         return this;
@@ -68,6 +73,7 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_url")
     public String eventUrl;
+
     public UpdateApplicationRequestBody withEventUrl(String eventUrl) {
         this.eventUrl = eventUrl;
         return this;
@@ -78,6 +84,7 @@ public class UpdateApplicationRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public UpdateApplicationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -88,9 +95,16 @@ public class UpdateApplicationRequestBody {
      */
     @JsonProperty("type")
     public UpdateApplicationRequestBodyTypeEnum type;
+
     public UpdateApplicationRequestBody withType(UpdateApplicationRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UpdateApplicationRequestBody(@JsonProperty("api_key") String apiKey, @JsonProperty("api_secret") String apiSecret, @JsonProperty("name") String name, @JsonProperty("type") UpdateApplicationRequestBodyTypeEnum type) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.name = name;
+        this.type = type;
+  }
 }

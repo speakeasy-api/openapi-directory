@@ -15,6 +15,7 @@ public class ResourceTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public ResourceTag withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -23,9 +24,11 @@ public class ResourceTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public ResourceTag withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ResourceTag(){}
 }

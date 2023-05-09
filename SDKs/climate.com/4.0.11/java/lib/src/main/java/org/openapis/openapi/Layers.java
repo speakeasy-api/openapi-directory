@@ -74,13 +74,11 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV4LayersAsAppliedResponse res = new org.openapis.openapi.models.operations.GetV4LayersAsAppliedResponse() {{
+        org.openapis.openapi.models.operations.GetV4LayersAsAppliedResponse res = new org.openapis.openapi.models.operations.GetV4LayersAsAppliedResponse(contentType, httpRes.statusCode()) {{
             applicationActivities = null;
             empty = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 206) {
@@ -145,13 +143,11 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV4LayersAsAppliedActivityIdContentsResponse res = new org.openapis.openapi.models.operations.GetV4LayersAsAppliedActivityIdContentsResponse() {{
+        org.openapis.openapi.models.operations.GetV4LayersAsAppliedActivityIdContentsResponse res = new org.openapis.openapi.models.operations.GetV4LayersAsAppliedActivityIdContentsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             empty = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 206) {
@@ -221,13 +217,11 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV4LayersAsHarvestedResponse res = new org.openapis.openapi.models.operations.GetV4LayersAsHarvestedResponse() {{
+        org.openapis.openapi.models.operations.GetV4LayersAsHarvestedResponse res = new org.openapis.openapi.models.operations.GetV4LayersAsHarvestedResponse(contentType, httpRes.statusCode()) {{
             harvestActivities = null;
             empty = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 206) {
@@ -292,13 +286,11 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV4LayersAsHarvestedActivityIdContentsResponse res = new org.openapis.openapi.models.operations.GetV4LayersAsHarvestedActivityIdContentsResponse() {{
+        org.openapis.openapi.models.operations.GetV4LayersAsHarvestedActivityIdContentsResponse res = new org.openapis.openapi.models.operations.GetV4LayersAsHarvestedActivityIdContentsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             empty = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 206) {
@@ -368,13 +360,11 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV4LayersAsPlantedResponse res = new org.openapis.openapi.models.operations.GetV4LayersAsPlantedResponse() {{
+        org.openapis.openapi.models.operations.GetV4LayersAsPlantedResponse res = new org.openapis.openapi.models.operations.GetV4LayersAsPlantedResponse(contentType, httpRes.statusCode()) {{
             plantingActivities = null;
             empty = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 206) {
@@ -439,13 +429,11 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV4LayersAsPlantedActivityIdContentsResponse res = new org.openapis.openapi.models.operations.GetV4LayersAsPlantedActivityIdContentsResponse() {{
+        org.openapis.openapi.models.operations.GetV4LayersAsPlantedActivityIdContentsResponse res = new org.openapis.openapi.models.operations.GetV4LayersAsPlantedActivityIdContentsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             empty = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 206) {
@@ -515,13 +503,11 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsResponse res = new org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsResponse() {{
+        org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsResponse res = new org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsResponse(contentType, httpRes.statusCode()) {{
             scoutingObservations = null;
             empty = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 206) {
@@ -578,12 +564,10 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdResponse res = new org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdResponse() {{
+        org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdResponse res = new org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdResponse(contentType, httpRes.statusCode()) {{
             scoutingObservation = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -639,14 +623,12 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResponse res = new org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResponse() {{
+        org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResponse res = new org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResponse(contentType, httpRes.statusCode()) {{
             scoutingObservationAttachments = null;
             scoutingObservationAttachments = null;
             empty = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -718,14 +700,12 @@ public class Layers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsResponse res = new org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsResponse() {{
+        org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsResponse res = new org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

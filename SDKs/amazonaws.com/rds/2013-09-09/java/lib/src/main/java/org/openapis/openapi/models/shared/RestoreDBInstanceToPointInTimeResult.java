@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RestoreDBInstanceToPointInTimeResult {
     
     public DBInstance dbInstance;
+
     public RestoreDBInstanceToPointInTimeResult withDBInstance(DBInstance dbInstance) {
         this.dbInstance = dbInstance;
         return this;
     }
     
+    public RestoreDBInstanceToPointInTimeResult(){}
 }

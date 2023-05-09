@@ -12,9 +12,11 @@ public class GetNumbersIsCubeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public Long number;
+
     public GetNumbersIsCubeRequest withNumber(Long number) {
         this.number = number;
         return this;
     }
     
+    public GetNumbersIsCubeRequest(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListQueuesResult {
     
     public String nextToken;
+
     public ListQueuesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class ListQueuesResult {
     
     
     public String[] queueUrls;
+
     public ListQueuesResult withQueueUrls(String[] queueUrls) {
         this.queueUrls = queueUrls;
         return this;
     }
     
+    public ListQueuesResult(){}
 }

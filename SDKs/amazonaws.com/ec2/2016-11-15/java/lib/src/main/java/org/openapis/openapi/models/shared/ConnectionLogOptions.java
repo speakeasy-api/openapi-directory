@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ConnectionLogOptions {
     
     public String cloudwatchLogGroup;
+
     public ConnectionLogOptions withCloudwatchLogGroup(String cloudwatchLogGroup) {
         this.cloudwatchLogGroup = cloudwatchLogGroup;
         return this;
@@ -19,6 +20,7 @@ public class ConnectionLogOptions {
     
     
     public String cloudwatchLogStream;
+
     public ConnectionLogOptions withCloudwatchLogStream(String cloudwatchLogStream) {
         this.cloudwatchLogStream = cloudwatchLogStream;
         return this;
@@ -26,9 +28,11 @@ public class ConnectionLogOptions {
     
     
     public Boolean enabled;
+
     public ConnectionLogOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ConnectionLogOptions(){}
 }

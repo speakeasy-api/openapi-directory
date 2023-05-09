@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConfigureAccessPointResponse {
@@ -12,6 +13,7 @@ public class ConfigureAccessPointResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfigureAccessPointResponse configureAccessPointResponse;
+
     public ConfigureAccessPointResponse withConfigureAccessPointResponse(org.openapis.openapi.models.shared.ConfigureAccessPointResponse configureAccessPointResponse) {
         this.configureAccessPointResponse = configureAccessPointResponse;
         return this;
@@ -19,6 +21,7 @@ public class ConfigureAccessPointResponse {
     
     
     public String contentType;
+
     public ConfigureAccessPointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ConfigureAccessPointResponse {
      */
     
     public Object internalServerException;
+
     public ConfigureAccessPointResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ConfigureAccessPointResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ConfigureAccessPointResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ConfigureAccessPointResponse {
     
     
     public Integer statusCode;
+
     public ConfigureAccessPointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ConfigureAccessPointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConfigureAccessPointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ConfigureAccessPointResponse {
      */
     
     public Object validationException;
+
     public ConfigureAccessPointResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ConfigureAccessPointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

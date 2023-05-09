@@ -18,6 +18,7 @@ public class TimeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotation")
     public Annotation annotation;
+
     public TimeEvent withAnnotation(Annotation annotation) {
         this.annotation = annotation;
         return this;
@@ -29,6 +30,7 @@ public class TimeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageEvent")
     public MessageEvent messageEvent;
+
     public TimeEvent withMessageEvent(MessageEvent messageEvent) {
         this.messageEvent = messageEvent;
         return this;
@@ -40,9 +42,11 @@ public class TimeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public TimeEvent withTime(String time) {
         this.time = time;
         return this;
     }
     
+    public TimeEvent(){}
 }

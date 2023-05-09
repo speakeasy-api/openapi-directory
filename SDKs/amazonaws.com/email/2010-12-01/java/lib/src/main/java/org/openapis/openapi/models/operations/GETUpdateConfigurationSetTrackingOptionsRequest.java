@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateConfigurationSetTrackingOptionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUpdateConfigurationSetTrackingOptionsActionEnum action;
+
     public GETUpdateConfigurationSetTrackingOptionsRequest withAction(GETUpdateConfigurationSetTrackingOptionsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUpdateConfigurationSetTrackingOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConfigurationSetName")
     public String configurationSetName;
+
     public GETUpdateConfigurationSetTrackingOptionsRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -29,6 +32,7 @@ public class GETUpdateConfigurationSetTrackingOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TrackingOptions")
     public GETUpdateConfigurationSetTrackingOptionsTrackingOptions trackingOptions;
+
     public GETUpdateConfigurationSetTrackingOptionsRequest withTrackingOptions(GETUpdateConfigurationSetTrackingOptionsTrackingOptions trackingOptions) {
         this.trackingOptions = trackingOptions;
         return this;
@@ -36,6 +40,7 @@ public class GETUpdateConfigurationSetTrackingOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUpdateConfigurationSetTrackingOptionsVersionEnum version;
+
     public GETUpdateConfigurationSetTrackingOptionsRequest withVersion(GETUpdateConfigurationSetTrackingOptionsVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETUpdateConfigurationSetTrackingOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUpdateConfigurationSetTrackingOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETUpdateConfigurationSetTrackingOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUpdateConfigurationSetTrackingOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETUpdateConfigurationSetTrackingOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUpdateConfigurationSetTrackingOptionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETUpdateConfigurationSetTrackingOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUpdateConfigurationSetTrackingOptionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETUpdateConfigurationSetTrackingOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUpdateConfigurationSetTrackingOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETUpdateConfigurationSetTrackingOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUpdateConfigurationSetTrackingOptionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETUpdateConfigurationSetTrackingOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUpdateConfigurationSetTrackingOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUpdateConfigurationSetTrackingOptionsRequest(@JsonProperty("Action") GETUpdateConfigurationSetTrackingOptionsActionEnum action, @JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("TrackingOptions") GETUpdateConfigurationSetTrackingOptionsTrackingOptions trackingOptions, @JsonProperty("Version") GETUpdateConfigurationSetTrackingOptionsVersionEnum version) {
+        this.action = action;
+        this.configurationSetName = configurationSetName;
+        this.trackingOptions = trackingOptions;
+        this.version = version;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReportRequest {
@@ -12,6 +13,7 @@ public class GetReportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
     public String commit;
+
     public GetReportRequest withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -22,6 +24,7 @@ public class GetReportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetReportRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -32,6 +35,7 @@ public class GetReportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
     public String reportId;
+
     public GetReportRequest withReportId(String reportId) {
         this.reportId = reportId;
         return this;
@@ -42,9 +46,16 @@ public class GetReportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetReportRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetReportRequest(@JsonProperty("commit") String commit, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("reportId") String reportId, @JsonProperty("workspace") String workspace) {
+        this.commit = commit;
+        this.repoSlug = repoSlug;
+        this.reportId = reportId;
+        this.workspace = workspace;
+  }
 }

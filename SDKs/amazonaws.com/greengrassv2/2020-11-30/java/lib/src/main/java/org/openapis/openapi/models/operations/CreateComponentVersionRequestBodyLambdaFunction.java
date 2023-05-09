@@ -15,6 +15,7 @@ public class CreateComponentVersionRequestBodyLambdaFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentDependencies")
     public java.util.Map<String, org.openapis.openapi.models.shared.ComponentDependencyRequirement> componentDependencies;
+
     public CreateComponentVersionRequestBodyLambdaFunction withComponentDependencies(java.util.Map<String, org.openapis.openapi.models.shared.ComponentDependencyRequirement> componentDependencies) {
         this.componentDependencies = componentDependencies;
         return this;
@@ -23,6 +24,7 @@ public class CreateComponentVersionRequestBodyLambdaFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentLambdaParameters")
     public org.openapis.openapi.models.shared.LambdaExecutionParameters componentLambdaParameters;
+
     public CreateComponentVersionRequestBodyLambdaFunction withComponentLambdaParameters(org.openapis.openapi.models.shared.LambdaExecutionParameters componentLambdaParameters) {
         this.componentLambdaParameters = componentLambdaParameters;
         return this;
@@ -31,6 +33,7 @@ public class CreateComponentVersionRequestBodyLambdaFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentName")
     public String componentName;
+
     public CreateComponentVersionRequestBodyLambdaFunction withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -39,6 +42,7 @@ public class CreateComponentVersionRequestBodyLambdaFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentPlatforms")
     public org.openapis.openapi.models.shared.ComponentPlatform[] componentPlatforms;
+
     public CreateComponentVersionRequestBodyLambdaFunction withComponentPlatforms(org.openapis.openapi.models.shared.ComponentPlatform[] componentPlatforms) {
         this.componentPlatforms = componentPlatforms;
         return this;
@@ -47,6 +51,7 @@ public class CreateComponentVersionRequestBodyLambdaFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentVersion")
     public String componentVersion;
+
     public CreateComponentVersionRequestBodyLambdaFunction withComponentVersion(String componentVersion) {
         this.componentVersion = componentVersion;
         return this;
@@ -55,9 +60,11 @@ public class CreateComponentVersionRequestBodyLambdaFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaArn")
     public String lambdaArn;
+
     public CreateComponentVersionRequestBodyLambdaFunction withLambdaArn(String lambdaArn) {
         this.lambdaArn = lambdaArn;
         return this;
     }
     
+    public CreateComponentVersionRequestBodyLambdaFunction(){}
 }

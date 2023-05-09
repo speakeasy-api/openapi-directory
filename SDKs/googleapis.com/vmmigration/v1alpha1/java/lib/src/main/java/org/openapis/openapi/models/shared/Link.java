@@ -18,6 +18,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Link withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Link withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Link(){}
 }

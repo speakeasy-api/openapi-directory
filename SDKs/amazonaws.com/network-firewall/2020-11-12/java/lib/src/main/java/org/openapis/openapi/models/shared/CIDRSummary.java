@@ -15,6 +15,7 @@ public class CIDRSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailableCIDRCount")
     public Long availableCIDRCount;
+
     public CIDRSummary withAvailableCIDRCount(Long availableCIDRCount) {
         this.availableCIDRCount = availableCIDRCount;
         return this;
@@ -23,6 +24,7 @@ public class CIDRSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPSetReferences")
     public java.util.Map<String, IPSetMetadata> ipSetReferences;
+
     public CIDRSummary withIPSetReferences(java.util.Map<String, IPSetMetadata> ipSetReferences) {
         this.ipSetReferences = ipSetReferences;
         return this;
@@ -31,9 +33,11 @@ public class CIDRSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UtilizedCIDRCount")
     public Long utilizedCIDRCount;
+
     public CIDRSummary withUtilizedCIDRCount(Long utilizedCIDRCount) {
         this.utilizedCIDRCount = utilizedCIDRCount;
         return this;
     }
     
+    public CIDRSummary(){}
 }

@@ -18,9 +18,11 @@ public class UsersUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public UsersUpdateRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public UsersUpdateRequestBody(){}
 }

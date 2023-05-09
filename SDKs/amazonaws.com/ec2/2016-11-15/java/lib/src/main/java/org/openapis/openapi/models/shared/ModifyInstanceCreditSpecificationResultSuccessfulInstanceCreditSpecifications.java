@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceCreditSpecificationResultSuccessfulInstanceCreditSpecifications {
     
     public String instanceId;
+
     public ModifyInstanceCreditSpecificationResultSuccessfulInstanceCreditSpecifications withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public ModifyInstanceCreditSpecificationResultSuccessfulInstanceCreditSpecifications(){}
 }

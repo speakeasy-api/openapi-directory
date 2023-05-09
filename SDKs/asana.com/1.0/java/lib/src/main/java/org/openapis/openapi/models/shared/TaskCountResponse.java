@@ -18,6 +18,7 @@ public class TaskCountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_completed_milestones")
     public Long numCompletedMilestones;
+
     public TaskCountResponse withNumCompletedMilestones(Long numCompletedMilestones) {
         this.numCompletedMilestones = numCompletedMilestones;
         return this;
@@ -29,6 +30,7 @@ public class TaskCountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_completed_tasks")
     public Long numCompletedTasks;
+
     public TaskCountResponse withNumCompletedTasks(Long numCompletedTasks) {
         this.numCompletedTasks = numCompletedTasks;
         return this;
@@ -40,6 +42,7 @@ public class TaskCountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_incomplete_milestones")
     public Long numIncompleteMilestones;
+
     public TaskCountResponse withNumIncompleteMilestones(Long numIncompleteMilestones) {
         this.numIncompleteMilestones = numIncompleteMilestones;
         return this;
@@ -51,6 +54,7 @@ public class TaskCountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_incomplete_tasks")
     public Long numIncompleteTasks;
+
     public TaskCountResponse withNumIncompleteTasks(Long numIncompleteTasks) {
         this.numIncompleteTasks = numIncompleteTasks;
         return this;
@@ -62,6 +66,7 @@ public class TaskCountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_milestones")
     public Long numMilestones;
+
     public TaskCountResponse withNumMilestones(Long numMilestones) {
         this.numMilestones = numMilestones;
         return this;
@@ -73,9 +78,11 @@ public class TaskCountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_tasks")
     public Long numTasks;
+
     public TaskCountResponse withNumTasks(Long numTasks) {
         this.numTasks = numTasks;
         return this;
     }
     
+    public TaskCountResponse(){}
 }

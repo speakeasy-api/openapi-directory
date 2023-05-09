@@ -15,6 +15,7 @@ public class GetSinkOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public GetSinkOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class GetSinkOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public GetSinkOutput withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class GetSinkOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetSinkOutput withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class GetSinkOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GetSinkOutput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetSinkOutput(){}
 }

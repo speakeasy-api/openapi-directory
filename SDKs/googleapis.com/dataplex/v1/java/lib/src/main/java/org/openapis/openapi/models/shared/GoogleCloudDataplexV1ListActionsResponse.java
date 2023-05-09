@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ListActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public GoogleCloudDataplexV1Action[] actions;
+
     public GoogleCloudDataplexV1ListActionsResponse withActions(GoogleCloudDataplexV1Action[] actions) {
         this.actions = actions;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1ListActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDataplexV1ListActionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDataplexV1ListActionsResponse(){}
 }

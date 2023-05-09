@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImageEditRequestImage {
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public CreateImageEditRequestImage withContent(byte[] content) {
         this.content = content;
         return this;
@@ -16,9 +18,14 @@ public class CreateImageEditRequestImage {
     
     @SpeakeasyMetadata("multipartForm:name=image")
     public String image;
+
     public CreateImageEditRequestImage withImage(String image) {
         this.image = image;
         return this;
     }
     
+    public CreateImageEditRequestImage(@JsonProperty("content") byte[] content, @JsonProperty("image") String image) {
+        this.content = content;
+        this.image = image;
+  }
 }

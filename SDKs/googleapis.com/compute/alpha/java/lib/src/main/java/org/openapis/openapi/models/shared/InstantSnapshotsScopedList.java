@@ -15,6 +15,7 @@ public class InstantSnapshotsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instantSnapshots")
     public InstantSnapshot[] instantSnapshots;
+
     public InstantSnapshotsScopedList withInstantSnapshots(InstantSnapshot[] instantSnapshots) {
         this.instantSnapshots = instantSnapshots;
         return this;
@@ -26,9 +27,11 @@ public class InstantSnapshotsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public InstantSnapshotsScopedListWarning warning;
+
     public InstantSnapshotsScopedList withWarning(InstantSnapshotsScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public InstantSnapshotsScopedList(){}
 }

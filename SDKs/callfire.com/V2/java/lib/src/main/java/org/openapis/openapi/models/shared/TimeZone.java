@@ -18,6 +18,7 @@ public class TimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public TimeZone withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class TimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dstsavings")
     public Integer dstsavings;
+
     public TimeZone withDstsavings(Integer dstsavings) {
         this.dstsavings = dstsavings;
         return this;
@@ -40,6 +42,7 @@ public class TimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TimeZone withId(String id) {
         this.id = id;
         return this;
@@ -51,9 +54,11 @@ public class TimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawOffset")
     public Integer rawOffset;
+
     public TimeZone withRawOffset(Integer rawOffset) {
         this.rawOffset = rawOffset;
         return this;
     }
     
+    public TimeZone(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTopicRulesResponse {
     
     public String contentType;
+
     public ListTopicRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTopicRulesResponse {
      */
     
     public Object internalException;
+
     public ListTopicRulesResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class ListTopicRulesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListTopicRulesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListTopicRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTopicRulesResponse listTopicRulesResponse;
+
     public ListTopicRulesResponse withListTopicRulesResponse(org.openapis.openapi.models.shared.ListTopicRulesResponse listTopicRulesResponse) {
         this.listTopicRulesResponse = listTopicRulesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListTopicRulesResponse {
     
     
     public Integer statusCode;
+
     public ListTopicRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListTopicRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTopicRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListTopicRulesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListTopicRulesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ListTopicRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

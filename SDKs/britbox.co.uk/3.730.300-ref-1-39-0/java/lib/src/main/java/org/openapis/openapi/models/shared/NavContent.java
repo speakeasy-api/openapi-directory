@@ -18,6 +18,7 @@ public class NavContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageType")
     public String imageType;
+
     public NavContent withImageType(String imageType) {
         this.imageType = imageType;
         return this;
@@ -29,6 +30,7 @@ public class NavContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list")
     public ItemList list;
+
     public NavContent withList(ItemList list) {
         this.list = list;
         return this;
@@ -40,9 +42,11 @@ public class NavContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public NavContent withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public NavContent(){}
 }

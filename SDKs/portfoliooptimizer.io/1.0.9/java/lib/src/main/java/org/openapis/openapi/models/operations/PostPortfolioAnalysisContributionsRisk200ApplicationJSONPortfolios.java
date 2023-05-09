@@ -15,6 +15,7 @@ public class PostPortfolioAnalysisContributionsRisk200ApplicationJSONPortfolios 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsGroupsRiskContributions")
     public Double[] assetsGroupsRiskContributions;
+
     public PostPortfolioAnalysisContributionsRisk200ApplicationJSONPortfolios withAssetsGroupsRiskContributions(Double[] assetsGroupsRiskContributions) {
         this.assetsGroupsRiskContributions = assetsGroupsRiskContributions;
         return this;
@@ -25,9 +26,13 @@ public class PostPortfolioAnalysisContributionsRisk200ApplicationJSONPortfolios 
      */
     @JsonProperty("assetsRiskContributions")
     public Double[] assetsRiskContributions;
+
     public PostPortfolioAnalysisContributionsRisk200ApplicationJSONPortfolios withAssetsRiskContributions(Double[] assetsRiskContributions) {
         this.assetsRiskContributions = assetsRiskContributions;
         return this;
     }
     
+    public PostPortfolioAnalysisContributionsRisk200ApplicationJSONPortfolios(@JsonProperty("assetsRiskContributions") Double[] assetsRiskContributions) {
+        this.assetsRiskContributions = assetsRiskContributions;
+  }
 }

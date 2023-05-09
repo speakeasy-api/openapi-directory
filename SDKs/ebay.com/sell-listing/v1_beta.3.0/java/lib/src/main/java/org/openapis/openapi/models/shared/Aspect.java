@@ -18,6 +18,7 @@ public class Aspect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Aspect withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class Aspect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public Aspect withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public Aspect(){}
 }

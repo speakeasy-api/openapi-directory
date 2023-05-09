@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeStackEventsOutput {
     
     public String nextToken;
+
     public DescribeStackEventsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeStackEventsOutput {
     
     
     public StackEvent[] stackEvents;
+
     public DescribeStackEventsOutput withStackEvents(StackEvent[] stackEvents) {
         this.stackEvents = stackEvents;
         return this;
     }
     
+    public DescribeStackEventsOutput(){}
 }

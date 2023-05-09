@@ -17,6 +17,7 @@ public class ApiCoreDtoAccountingDomainWhitelistEntry {
     @JsonProperty("id")
     @SpeakeasyMetadata("form:name=id")
     public String id;
+
     public ApiCoreDtoAccountingDomainWhitelistEntry withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class ApiCoreDtoAccountingDomainWhitelistEntry {
     @JsonProperty("name")
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public ApiCoreDtoAccountingDomainWhitelistEntry withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ApiCoreDtoAccountingDomainWhitelistEntry(){}
 }

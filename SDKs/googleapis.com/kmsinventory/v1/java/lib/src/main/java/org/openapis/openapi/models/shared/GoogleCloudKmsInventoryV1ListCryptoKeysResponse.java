@@ -18,6 +18,7 @@ public class GoogleCloudKmsInventoryV1ListCryptoKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cryptoKeys")
     public GoogleCloudKmsV1CryptoKey[] cryptoKeys;
+
     public GoogleCloudKmsInventoryV1ListCryptoKeysResponse withCryptoKeys(GoogleCloudKmsV1CryptoKey[] cryptoKeys) {
         this.cryptoKeys = cryptoKeys;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudKmsInventoryV1ListCryptoKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudKmsInventoryV1ListCryptoKeysResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudKmsInventoryV1ListCryptoKeysResponse(){}
 }

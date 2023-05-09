@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AuthenticateCognitoActionConfig - Request parameters to use when integrating with Amazon Cognito to authenticate users.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AuthenticateCognitoActionConfig {
     
     public java.util.Map<String, String> authenticationRequestExtraParams;
+
     public AuthenticateCognitoActionConfig withAuthenticationRequestExtraParams(java.util.Map<String, String> authenticationRequestExtraParams) {
         this.authenticationRequestExtraParams = authenticationRequestExtraParams;
         return this;
@@ -19,6 +20,7 @@ public class AuthenticateCognitoActionConfig {
     
     
     public AuthenticateCognitoActionConditionalBehaviorEnumEnum onUnauthenticatedRequest;
+
     public AuthenticateCognitoActionConfig withOnUnauthenticatedRequest(AuthenticateCognitoActionConditionalBehaviorEnumEnum onUnauthenticatedRequest) {
         this.onUnauthenticatedRequest = onUnauthenticatedRequest;
         return this;
@@ -26,6 +28,7 @@ public class AuthenticateCognitoActionConfig {
     
     
     public String scope;
+
     public AuthenticateCognitoActionConfig withScope(String scope) {
         this.scope = scope;
         return this;
@@ -33,6 +36,7 @@ public class AuthenticateCognitoActionConfig {
     
     
     public String sessionCookieName;
+
     public AuthenticateCognitoActionConfig withSessionCookieName(String sessionCookieName) {
         this.sessionCookieName = sessionCookieName;
         return this;
@@ -40,6 +44,7 @@ public class AuthenticateCognitoActionConfig {
     
     
     public Long sessionTimeout;
+
     public AuthenticateCognitoActionConfig withSessionTimeout(Long sessionTimeout) {
         this.sessionTimeout = sessionTimeout;
         return this;
@@ -47,6 +52,7 @@ public class AuthenticateCognitoActionConfig {
     
     
     public String userPoolArn;
+
     public AuthenticateCognitoActionConfig withUserPoolArn(String userPoolArn) {
         this.userPoolArn = userPoolArn;
         return this;
@@ -54,6 +60,7 @@ public class AuthenticateCognitoActionConfig {
     
     
     public String userPoolClientId;
+
     public AuthenticateCognitoActionConfig withUserPoolClientId(String userPoolClientId) {
         this.userPoolClientId = userPoolClientId;
         return this;
@@ -61,9 +68,15 @@ public class AuthenticateCognitoActionConfig {
     
     
     public String userPoolDomain;
+
     public AuthenticateCognitoActionConfig withUserPoolDomain(String userPoolDomain) {
         this.userPoolDomain = userPoolDomain;
         return this;
     }
     
+    public AuthenticateCognitoActionConfig(@JsonProperty("UserPoolArn") String userPoolArn, @JsonProperty("UserPoolClientId") String userPoolClientId, @JsonProperty("UserPoolDomain") String userPoolDomain) {
+        this.userPoolArn = userPoolArn;
+        this.userPoolClientId = userPoolClientId;
+        this.userPoolDomain = userPoolDomain;
+  }
 }

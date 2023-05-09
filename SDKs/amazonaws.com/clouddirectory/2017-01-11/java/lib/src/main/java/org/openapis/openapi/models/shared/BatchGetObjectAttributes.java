@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetObjectAttributes {
     @JsonProperty("AttributeNames")
     public String[] attributeNames;
+
     public BatchGetObjectAttributes withAttributeNames(String[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -19,6 +20,7 @@ public class BatchGetObjectAttributes {
     
     @JsonProperty("ObjectReference")
     public ObjectReference objectReference;
+
     public BatchGetObjectAttributes withObjectReference(ObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
@@ -26,9 +28,15 @@ public class BatchGetObjectAttributes {
     
     @JsonProperty("SchemaFacet")
     public SchemaFacet schemaFacet;
+
     public BatchGetObjectAttributes withSchemaFacet(SchemaFacet schemaFacet) {
         this.schemaFacet = schemaFacet;
         return this;
     }
     
+    public BatchGetObjectAttributes(@JsonProperty("AttributeNames") String[] attributeNames, @JsonProperty("ObjectReference") ObjectReference objectReference, @JsonProperty("SchemaFacet") SchemaFacet schemaFacet) {
+        this.attributeNames = attributeNames;
+        this.objectReference = objectReference;
+        this.schemaFacet = schemaFacet;
+  }
 }

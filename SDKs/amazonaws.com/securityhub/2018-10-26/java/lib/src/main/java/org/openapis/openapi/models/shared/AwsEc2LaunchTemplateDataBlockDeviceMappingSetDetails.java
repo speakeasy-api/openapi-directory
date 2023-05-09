@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataBlockDeviceMappingSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public AwsEc2LaunchTemplateDataBlockDeviceMappingSetDetails withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2LaunchTemplateDataBlockDeviceMappingSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ebs")
     public AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails ebs;
+
     public AwsEc2LaunchTemplateDataBlockDeviceMappingSetDetails withEbs(AwsEc2LaunchTemplateDataBlockDeviceMappingSetEbsDetails ebs) {
         this.ebs = ebs;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2LaunchTemplateDataBlockDeviceMappingSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoDevice")
     public String noDevice;
+
     public AwsEc2LaunchTemplateDataBlockDeviceMappingSetDetails withNoDevice(String noDevice) {
         this.noDevice = noDevice;
         return this;
@@ -39,9 +42,11 @@ public class AwsEc2LaunchTemplateDataBlockDeviceMappingSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VirtualName")
     public String virtualName;
+
     public AwsEc2LaunchTemplateDataBlockDeviceMappingSetDetails withVirtualName(String virtualName) {
         this.virtualName = virtualName;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataBlockDeviceMappingSetDetails(){}
 }

@@ -15,6 +15,7 @@ public class TreatmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomDeliveryConfiguration")
     public CustomDeliveryConfiguration customDeliveryConfiguration;
+
     public TreatmentResource withCustomDeliveryConfiguration(CustomDeliveryConfiguration customDeliveryConfiguration) {
         this.customDeliveryConfiguration = customDeliveryConfiguration;
         return this;
@@ -22,6 +23,7 @@ public class TreatmentResource {
     
     @JsonProperty("Id")
     public String id;
+
     public TreatmentResource withId(String id) {
         this.id = id;
         return this;
@@ -30,6 +32,7 @@ public class TreatmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageConfiguration")
     public MessageConfiguration messageConfiguration;
+
     public TreatmentResource withMessageConfiguration(MessageConfiguration messageConfiguration) {
         this.messageConfiguration = messageConfiguration;
         return this;
@@ -38,6 +41,7 @@ public class TreatmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public Schedule schedule;
+
     public TreatmentResource withSchedule(Schedule schedule) {
         this.schedule = schedule;
         return this;
@@ -45,6 +49,7 @@ public class TreatmentResource {
     
     @JsonProperty("SizePercent")
     public Long sizePercent;
+
     public TreatmentResource withSizePercent(Long sizePercent) {
         this.sizePercent = sizePercent;
         return this;
@@ -53,6 +58,7 @@ public class TreatmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public CampaignState state;
+
     public TreatmentResource withState(CampaignState state) {
         this.state = state;
         return this;
@@ -61,6 +67,7 @@ public class TreatmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateConfiguration")
     public TemplateConfiguration templateConfiguration;
+
     public TreatmentResource withTemplateConfiguration(TemplateConfiguration templateConfiguration) {
         this.templateConfiguration = templateConfiguration;
         return this;
@@ -69,6 +76,7 @@ public class TreatmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TreatmentDescription")
     public String treatmentDescription;
+
     public TreatmentResource withTreatmentDescription(String treatmentDescription) {
         this.treatmentDescription = treatmentDescription;
         return this;
@@ -77,9 +85,14 @@ public class TreatmentResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TreatmentName")
     public String treatmentName;
+
     public TreatmentResource withTreatmentName(String treatmentName) {
         this.treatmentName = treatmentName;
         return this;
     }
     
+    public TreatmentResource(@JsonProperty("Id") String id, @JsonProperty("SizePercent") Long sizePercent) {
+        this.id = id;
+        this.sizePercent = sizePercent;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetGroupIdRequest {
     @JsonProperty("AlternateIdentifier")
     public AlternateIdentifier alternateIdentifier;
+
     public GetGroupIdRequest withAlternateIdentifier(AlternateIdentifier alternateIdentifier) {
         this.alternateIdentifier = alternateIdentifier;
         return this;
@@ -16,9 +17,14 @@ public class GetGroupIdRequest {
     
     @JsonProperty("IdentityStoreId")
     public String identityStoreId;
+
     public GetGroupIdRequest withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
     }
     
+    public GetGroupIdRequest(@JsonProperty("AlternateIdentifier") AlternateIdentifier alternateIdentifier, @JsonProperty("IdentityStoreId") String identityStoreId) {
+        this.alternateIdentifier = alternateIdentifier;
+        this.identityStoreId = identityStoreId;
+  }
 }

@@ -18,6 +18,7 @@ public class JobManagerTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commandLine")
     public String commandLine;
+
     public JobManagerTask withCommandLine(String commandLine) {
         this.commandLine = commandLine;
         return this;
@@ -29,6 +30,7 @@ public class JobManagerTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public TaskConstraints constraints;
+
     public JobManagerTask withConstraints(TaskConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -40,6 +42,7 @@ public class JobManagerTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public JobManagerTask withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class JobManagerTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentSettings")
     public EnvironmentSetting[] environmentSettings;
+
     public JobManagerTask withEnvironmentSettings(EnvironmentSetting[] environmentSettings) {
         this.environmentSettings = environmentSettings;
         return this;
@@ -62,6 +66,7 @@ public class JobManagerTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public JobManagerTask withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class JobManagerTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("killJobOnCompletion")
     public Boolean killJobOnCompletion;
+
     public JobManagerTask withKillJobOnCompletion(Boolean killJobOnCompletion) {
         this.killJobOnCompletion = killJobOnCompletion;
         return this;
@@ -84,6 +90,7 @@ public class JobManagerTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceFiles")
     public ResourceFile[] resourceFiles;
+
     public JobManagerTask withResourceFiles(ResourceFile[] resourceFiles) {
         this.resourceFiles = resourceFiles;
         return this;
@@ -95,6 +102,7 @@ public class JobManagerTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runElevated")
     public Boolean runElevated;
+
     public JobManagerTask withRunElevated(Boolean runElevated) {
         this.runElevated = runElevated;
         return this;
@@ -106,9 +114,11 @@ public class JobManagerTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runExclusive")
     public Boolean runExclusive;
+
     public JobManagerTask withRunExclusive(Boolean runExclusive) {
         this.runExclusive = runExclusive;
         return this;
     }
     
+    public JobManagerTask(){}
 }

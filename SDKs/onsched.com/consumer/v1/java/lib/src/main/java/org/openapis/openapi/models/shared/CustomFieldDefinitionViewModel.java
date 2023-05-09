@@ -12,6 +12,7 @@ public class CustomFieldDefinitionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldKey")
     public String fieldKey;
+
     public CustomFieldDefinitionViewModel withFieldKey(String fieldKey) {
         this.fieldKey = fieldKey;
         return this;
@@ -20,6 +21,7 @@ public class CustomFieldDefinitionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldLabel")
     public String fieldLabel;
+
     public CustomFieldDefinitionViewModel withFieldLabel(String fieldLabel) {
         this.fieldLabel = fieldLabel;
         return this;
@@ -28,6 +30,7 @@ public class CustomFieldDefinitionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldLength")
     public Integer fieldLength;
+
     public CustomFieldDefinitionViewModel withFieldLength(Integer fieldLength) {
         this.fieldLength = fieldLength;
         return this;
@@ -36,6 +39,7 @@ public class CustomFieldDefinitionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldListItems")
     public CustomFieldListDefinitionViewModel[] fieldListItems;
+
     public CustomFieldDefinitionViewModel withFieldListItems(CustomFieldListDefinitionViewModel[] fieldListItems) {
         this.fieldListItems = fieldListItems;
         return this;
@@ -44,6 +48,7 @@ public class CustomFieldDefinitionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public CustomFieldDefinitionViewModel withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -52,6 +57,7 @@ public class CustomFieldDefinitionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldPublic")
     public Boolean fieldPublic;
+
     public CustomFieldDefinitionViewModel withFieldPublic(Boolean fieldPublic) {
         this.fieldPublic = fieldPublic;
         return this;
@@ -60,6 +66,7 @@ public class CustomFieldDefinitionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldRequired")
     public Boolean fieldRequired;
+
     public CustomFieldDefinitionViewModel withFieldRequired(Boolean fieldRequired) {
         this.fieldRequired = fieldRequired;
         return this;
@@ -68,6 +75,7 @@ public class CustomFieldDefinitionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldType")
     public String fieldType;
+
     public CustomFieldDefinitionViewModel withFieldType(String fieldType) {
         this.fieldType = fieldType;
         return this;
@@ -76,6 +84,7 @@ public class CustomFieldDefinitionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CustomFieldDefinitionViewModel withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +93,7 @@ public class CustomFieldDefinitionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadQuestion")
     public Boolean leadQuestion;
+
     public CustomFieldDefinitionViewModel withLeadQuestion(Boolean leadQuestion) {
         this.leadQuestion = leadQuestion;
         return this;
@@ -92,6 +102,7 @@ public class CustomFieldDefinitionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadQuestionWeight")
     public Double leadQuestionWeight;
+
     public CustomFieldDefinitionViewModel withLeadQuestionWeight(Double leadQuestionWeight) {
         this.leadQuestionWeight = leadQuestionWeight;
         return this;
@@ -100,6 +111,7 @@ public class CustomFieldDefinitionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public CustomFieldDefinitionViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -108,9 +120,11 @@ public class CustomFieldDefinitionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortKey")
     public Integer sortKey;
+
     public CustomFieldDefinitionViewModel withSortKey(Integer sortKey) {
         this.sortKey = sortKey;
         return this;
     }
     
+    public CustomFieldDefinitionViewModel(){}
 }

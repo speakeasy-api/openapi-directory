@@ -18,6 +18,7 @@ public class StateFamilyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRead")
     public Boolean isRead;
+
     public StateFamilyConfig withIsRead(Boolean isRead) {
         this.isRead = isRead;
         return this;
@@ -29,9 +30,11 @@ public class StateFamilyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateFamily")
     public String stateFamily;
+
     public StateFamilyConfig withStateFamily(String stateFamily) {
         this.stateFamily = stateFamily;
         return this;
     }
     
+    public StateFamilyConfig(){}
 }

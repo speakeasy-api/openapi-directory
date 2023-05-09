@@ -61,11 +61,9 @@ public class Returnpolicyonline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentReturnpolicyonlineCreateResponse res = new org.openapis.openapi.models.operations.ContentReturnpolicyonlineCreateResponse() {{
+        org.openapis.openapi.models.operations.ContentReturnpolicyonlineCreateResponse res = new org.openapis.openapi.models.operations.ContentReturnpolicyonlineCreateResponse(contentType, httpRes.statusCode()) {{
             returnPolicyOnline = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Returnpolicyonline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentReturnpolicyonlineDeleteResponse res = new org.openapis.openapi.models.operations.ContentReturnpolicyonlineDeleteResponse() {{
+        org.openapis.openapi.models.operations.ContentReturnpolicyonlineDeleteResponse res = new org.openapis.openapi.models.operations.ContentReturnpolicyonlineDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Returnpolicyonline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentReturnpolicyonlineGetResponse res = new org.openapis.openapi.models.operations.ContentReturnpolicyonlineGetResponse() {{
+        org.openapis.openapi.models.operations.ContentReturnpolicyonlineGetResponse res = new org.openapis.openapi.models.operations.ContentReturnpolicyonlineGetResponse(contentType, httpRes.statusCode()) {{
             returnPolicyOnline = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Returnpolicyonline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentReturnpolicyonlineListResponse res = new org.openapis.openapi.models.operations.ContentReturnpolicyonlineListResponse() {{
+        org.openapis.openapi.models.operations.ContentReturnpolicyonlineListResponse res = new org.openapis.openapi.models.operations.ContentReturnpolicyonlineListResponse(contentType, httpRes.statusCode()) {{
             listReturnPolicyOnlineResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Returnpolicyonline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentReturnpolicyonlinePatchResponse res = new org.openapis.openapi.models.operations.ContentReturnpolicyonlinePatchResponse() {{
+        org.openapis.openapi.models.operations.ContentReturnpolicyonlinePatchResponse res = new org.openapis.openapi.models.operations.ContentReturnpolicyonlinePatchResponse(contentType, httpRes.statusCode()) {{
             returnPolicyOnline = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

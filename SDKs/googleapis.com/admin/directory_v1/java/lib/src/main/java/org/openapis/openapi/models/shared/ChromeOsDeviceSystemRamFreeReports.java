@@ -22,6 +22,7 @@ public class ChromeOsDeviceSystemRamFreeReports {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("reportTime")
     public OffsetDateTime reportTime;
+
     public ChromeOsDeviceSystemRamFreeReports withReportTime(OffsetDateTime reportTime) {
         this.reportTime = reportTime;
         return this;
@@ -30,9 +31,11 @@ public class ChromeOsDeviceSystemRamFreeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemRamFreeInfo")
     public String[] systemRamFreeInfo;
+
     public ChromeOsDeviceSystemRamFreeReports withSystemRamFreeInfo(String[] systemRamFreeInfo) {
         this.systemRamFreeInfo = systemRamFreeInfo;
         return this;
     }
     
+    public ChromeOsDeviceSystemRamFreeReports(){}
 }

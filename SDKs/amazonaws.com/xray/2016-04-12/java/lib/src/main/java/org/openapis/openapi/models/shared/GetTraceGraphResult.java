@@ -15,6 +15,7 @@ public class GetTraceGraphResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetTraceGraphResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetTraceGraphResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Services")
     public Service[] services;
+
     public GetTraceGraphResult withServices(Service[] services) {
         this.services = services;
         return this;
     }
     
+    public GetTraceGraphResult(){}
 }

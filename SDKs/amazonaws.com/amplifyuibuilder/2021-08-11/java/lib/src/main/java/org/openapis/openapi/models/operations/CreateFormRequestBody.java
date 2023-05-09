@@ -12,9 +12,13 @@ public class CreateFormRequestBody {
      */
     @JsonProperty("formToCreate")
     public CreateFormRequestBodyFormToCreate formToCreate;
+
     public CreateFormRequestBody withFormToCreate(CreateFormRequestBodyFormToCreate formToCreate) {
         this.formToCreate = formToCreate;
         return this;
     }
     
+    public CreateFormRequestBody(@JsonProperty("formToCreate") CreateFormRequestBodyFormToCreate formToCreate) {
+        this.formToCreate = formToCreate;
+  }
 }

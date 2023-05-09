@@ -15,9 +15,11 @@ public class MaintenanceWindowTaskParameterValueExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public MaintenanceWindowTaskParameterValueExpression withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public MaintenanceWindowTaskParameterValueExpression(){}
 }

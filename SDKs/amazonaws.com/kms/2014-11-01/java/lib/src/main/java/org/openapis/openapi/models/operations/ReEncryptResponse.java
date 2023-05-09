@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReEncryptResponse {
     
     public String contentType;
+
     public ReEncryptResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ReEncryptResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public ReEncryptResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class ReEncryptResponse {
      */
     
     public Object disabledException;
+
     public ReEncryptResponse withDisabledException(Object disabledException) {
         this.disabledException = disabledException;
         return this;
@@ -39,6 +43,7 @@ public class ReEncryptResponse {
      */
     
     public Object incorrectKeyException;
+
     public ReEncryptResponse withIncorrectKeyException(Object incorrectKeyException) {
         this.incorrectKeyException = incorrectKeyException;
         return this;
@@ -49,6 +54,7 @@ public class ReEncryptResponse {
      */
     
     public Object invalidCiphertextException;
+
     public ReEncryptResponse withInvalidCiphertextException(Object invalidCiphertextException) {
         this.invalidCiphertextException = invalidCiphertextException;
         return this;
@@ -59,6 +65,7 @@ public class ReEncryptResponse {
      */
     
     public Object invalidGrantTokenException;
+
     public ReEncryptResponse withInvalidGrantTokenException(Object invalidGrantTokenException) {
         this.invalidGrantTokenException = invalidGrantTokenException;
         return this;
@@ -69,6 +76,7 @@ public class ReEncryptResponse {
      */
     
     public Object invalidKeyUsageException;
+
     public ReEncryptResponse withInvalidKeyUsageException(Object invalidKeyUsageException) {
         this.invalidKeyUsageException = invalidKeyUsageException;
         return this;
@@ -79,6 +87,7 @@ public class ReEncryptResponse {
      */
     
     public Object kmsInternalException;
+
     public ReEncryptResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -89,6 +98,7 @@ public class ReEncryptResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public ReEncryptResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -99,6 +109,7 @@ public class ReEncryptResponse {
      */
     
     public Object keyUnavailableException;
+
     public ReEncryptResponse withKeyUnavailableException(Object keyUnavailableException) {
         this.keyUnavailableException = keyUnavailableException;
         return this;
@@ -109,6 +120,7 @@ public class ReEncryptResponse {
      */
     
     public Object notFoundException;
+
     public ReEncryptResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -119,6 +131,7 @@ public class ReEncryptResponse {
      */
     
     public org.openapis.openapi.models.shared.ReEncryptResponse reEncryptResponse;
+
     public ReEncryptResponse withReEncryptResponse(org.openapis.openapi.models.shared.ReEncryptResponse reEncryptResponse) {
         this.reEncryptResponse = reEncryptResponse;
         return this;
@@ -126,6 +139,7 @@ public class ReEncryptResponse {
     
     
     public Integer statusCode;
+
     public ReEncryptResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,9 +147,14 @@ public class ReEncryptResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReEncryptResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ReEncryptResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

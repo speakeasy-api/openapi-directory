@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3GroupDelRequest {
@@ -12,6 +13,7 @@ public class ProtocolSnmpv3GroupDelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolSnmpv3GroupDelRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolSnmpv3GroupDelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupName")
     public String groupName;
+
     public ProtocolSnmpv3GroupDelRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public ProtocolSnmpv3GroupDelRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("groupName") String groupName) {
+        this.agentNum = agentNum;
+        this.groupName = groupName;
+  }
 }

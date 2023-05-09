@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeEnvironmentsMessage {
     
     public String applicationName;
+
     public DescribeEnvironmentsMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeEnvironmentsMessage {
     
     
     public String[] environmentIds;
+
     public DescribeEnvironmentsMessage withEnvironmentIds(String[] environmentIds) {
         this.environmentIds = environmentIds;
         return this;
@@ -26,6 +28,7 @@ public class DescribeEnvironmentsMessage {
     
     
     public String[] environmentNames;
+
     public DescribeEnvironmentsMessage withEnvironmentNames(String[] environmentNames) {
         this.environmentNames = environmentNames;
         return this;
@@ -33,6 +36,7 @@ public class DescribeEnvironmentsMessage {
     
     
     public Boolean includeDeleted;
+
     public DescribeEnvironmentsMessage withIncludeDeleted(Boolean includeDeleted) {
         this.includeDeleted = includeDeleted;
         return this;
@@ -40,6 +44,7 @@ public class DescribeEnvironmentsMessage {
     
     
     public OffsetDateTime includedDeletedBackTo;
+
     public DescribeEnvironmentsMessage withIncludedDeletedBackTo(OffsetDateTime includedDeletedBackTo) {
         this.includedDeletedBackTo = includedDeletedBackTo;
         return this;
@@ -47,6 +52,7 @@ public class DescribeEnvironmentsMessage {
     
     
     public Long maxRecords;
+
     public DescribeEnvironmentsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -54,6 +60,7 @@ public class DescribeEnvironmentsMessage {
     
     
     public String nextToken;
+
     public DescribeEnvironmentsMessage withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -61,9 +68,11 @@ public class DescribeEnvironmentsMessage {
     
     
     public String versionLabel;
+
     public DescribeEnvironmentsMessage withVersionLabel(String versionLabel) {
         this.versionLabel = versionLabel;
         return this;
     }
     
+    public DescribeEnvironmentsMessage(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResolutionsResponse {
@@ -12,6 +13,7 @@ public class ResolutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDenied accessDenied;
+
     public ResolutionsResponse withAccessDenied(org.openapis.openapi.models.shared.AccessDenied accessDenied) {
         this.accessDenied = accessDenied;
         return this;
@@ -19,6 +21,7 @@ public class ResolutionsResponse {
     
     
     public String contentType;
+
     public ResolutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ResolutionsResponse {
     
     
     public Integer statusCode;
+
     public ResolutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ResolutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResolutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class ResolutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.Resolutions resolutions;
+
     public ResolutionsResponse withResolutions(org.openapis.openapi.models.shared.Resolutions resolutions) {
         this.resolutions = resolutions;
         return this;
     }
     
+    public ResolutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

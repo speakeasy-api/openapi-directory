@@ -12,6 +12,7 @@ public class PripcRequestBodyCertificateParameters {
      */
     @JsonProperty("INSCODE")
     public String inscode;
+
     public PripcRequestBodyCertificateParameters withInscode(String inscode) {
         this.inscode = inscode;
         return this;
@@ -22,6 +23,7 @@ public class PripcRequestBodyCertificateParameters {
      */
     @JsonProperty("POLNO")
     public String polno;
+
     public PripcRequestBodyCertificateParameters withPolno(String polno) {
         this.polno = polno;
         return this;
@@ -32,9 +34,15 @@ public class PripcRequestBodyCertificateParameters {
      */
     @JsonProperty("STARTDT")
     public String startdt;
+
     public PripcRequestBodyCertificateParameters withStartdt(String startdt) {
         this.startdt = startdt;
         return this;
     }
     
+    public PripcRequestBodyCertificateParameters(@JsonProperty("INSCODE") String inscode, @JsonProperty("POLNO") String polno, @JsonProperty("STARTDT") String startdt) {
+        this.inscode = inscode;
+        this.polno = polno;
+        this.startdt = startdt;
+  }
 }

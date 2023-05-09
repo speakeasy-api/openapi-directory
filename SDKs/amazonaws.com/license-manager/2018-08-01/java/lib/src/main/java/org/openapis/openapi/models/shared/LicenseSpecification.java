@@ -15,6 +15,7 @@ public class LicenseSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmiAssociationScope")
     public String amiAssociationScope;
+
     public LicenseSpecification withAmiAssociationScope(String amiAssociationScope) {
         this.amiAssociationScope = amiAssociationScope;
         return this;
@@ -22,9 +23,13 @@ public class LicenseSpecification {
     
     @JsonProperty("LicenseConfigurationArn")
     public String licenseConfigurationArn;
+
     public LicenseSpecification withLicenseConfigurationArn(String licenseConfigurationArn) {
         this.licenseConfigurationArn = licenseConfigurationArn;
         return this;
     }
     
+    public LicenseSpecification(@JsonProperty("LicenseConfigurationArn") String licenseConfigurationArn) {
+        this.licenseConfigurationArn = licenseConfigurationArn;
+  }
 }

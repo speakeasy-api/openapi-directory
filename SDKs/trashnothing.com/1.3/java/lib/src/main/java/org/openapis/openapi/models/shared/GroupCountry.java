@@ -19,6 +19,7 @@ public class GroupCountry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abbreviation")
     public String abbreviation;
+
     public GroupCountry withAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
         return this;
@@ -30,9 +31,11 @@ public class GroupCountry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GroupCountry withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GroupCountry(){}
 }

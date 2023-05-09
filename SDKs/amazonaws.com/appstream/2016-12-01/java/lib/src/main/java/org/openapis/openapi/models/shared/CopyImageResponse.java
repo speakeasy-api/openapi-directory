@@ -15,9 +15,11 @@ public class CopyImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationImageName")
     public String destinationImageName;
+
     public CopyImageResponse withDestinationImageName(String destinationImageName) {
         this.destinationImageName = destinationImageName;
         return this;
     }
     
+    public CopyImageResponse(){}
 }

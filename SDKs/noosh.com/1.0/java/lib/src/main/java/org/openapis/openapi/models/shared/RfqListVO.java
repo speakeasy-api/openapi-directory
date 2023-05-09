@@ -15,6 +15,7 @@ public class RfqListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public RfqSimpleVO[] result;
+
     public RfqListVO withResult(RfqSimpleVO[] result) {
         this.result = result;
         return this;
@@ -23,6 +24,7 @@ public class RfqListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public RfqListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class RfqListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public RfqListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public RfqListVO(){}
 }

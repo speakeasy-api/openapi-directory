@@ -12,6 +12,7 @@ public class CalculateRoutePostDataParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowVignette")
     public String[] allowVignette;
+
     public CalculateRoutePostDataParameters withAllowVignette(String[] allowVignette) {
         this.allowVignette = allowVignette;
         return this;
@@ -20,6 +21,7 @@ public class CalculateRoutePostDataParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avoidAreas")
     public CalculateRoutePostDataParametersAvoidAreas avoidAreas;
+
     public CalculateRoutePostDataParameters withAvoidAreas(CalculateRoutePostDataParametersAvoidAreas avoidAreas) {
         this.avoidAreas = avoidAreas;
         return this;
@@ -28,6 +30,7 @@ public class CalculateRoutePostDataParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avoidVignette")
     public String[] avoidVignette;
+
     public CalculateRoutePostDataParameters withAvoidVignette(String[] avoidVignette) {
         this.avoidVignette = avoidVignette;
         return this;
@@ -36,9 +39,11 @@ public class CalculateRoutePostDataParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportingPoints")
     public CalculateRoutePostDataParametersSupportingPoints[] supportingPoints;
+
     public CalculateRoutePostDataParameters withSupportingPoints(CalculateRoutePostDataParametersSupportingPoints[] supportingPoints) {
         this.supportingPoints = supportingPoints;
         return this;
     }
     
+    public CalculateRoutePostDataParameters(){}
 }

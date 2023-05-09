@@ -18,6 +18,7 @@ public class ShippingsettingsGetSupportedPickupServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ShippingsettingsGetSupportedPickupServicesResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class ShippingsettingsGetSupportedPickupServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupServices")
     public PickupServicesPickupService[] pickupServices;
+
     public ShippingsettingsGetSupportedPickupServicesResponse withPickupServices(PickupServicesPickupService[] pickupServices) {
         this.pickupServices = pickupServices;
         return this;
     }
     
+    public ShippingsettingsGetSupportedPickupServicesResponse(){}
 }

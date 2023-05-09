@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateFirewallDomainListRequest {
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public CreateFirewallDomainListRequest withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -18,6 +19,7 @@ public class CreateFirewallDomainListRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateFirewallDomainListRequest withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,14 @@ public class CreateFirewallDomainListRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateFirewallDomainListRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFirewallDomainListRequest(@JsonProperty("CreatorRequestId") String creatorRequestId, @JsonProperty("Name") String name) {
+        this.creatorRequestId = creatorRequestId;
+        this.name = name;
+  }
 }

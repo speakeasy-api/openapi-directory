@@ -18,6 +18,7 @@ public class TeardownTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopTeardownOnFailure")
     public Boolean stopTeardownOnFailure;
+
     public TeardownTag withStopTeardownOnFailure(Boolean stopTeardownOnFailure) {
         this.stopTeardownOnFailure = stopTeardownOnFailure;
         return this;
@@ -29,9 +30,11 @@ public class TeardownTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagName")
     public String tagName;
+
     public TeardownTag withTagName(String tagName) {
         this.tagName = tagName;
         return this;
     }
     
+    public TeardownTag(){}
 }

@@ -18,6 +18,7 @@ public class TimeSeriesDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelDescriptors")
     public LabelDescriptor[] labelDescriptors;
+
     public TimeSeriesDescriptor withLabelDescriptors(LabelDescriptor[] labelDescriptors) {
         this.labelDescriptors = labelDescriptors;
         return this;
@@ -29,9 +30,11 @@ public class TimeSeriesDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointDescriptors")
     public ValueDescriptor[] pointDescriptors;
+
     public TimeSeriesDescriptor withPointDescriptors(ValueDescriptor[] pointDescriptors) {
         this.pointDescriptors = pointDescriptors;
         return this;
     }
     
+    public TimeSeriesDescriptor(){}
 }

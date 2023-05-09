@@ -15,6 +15,7 @@ public class AppConfigLinear {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleCacheMaxAgeMinutes")
     public Integer scheduleCacheMaxAgeMinutes;
+
     public AppConfigLinear withScheduleCacheMaxAgeMinutes(Integer scheduleCacheMaxAgeMinutes) {
         this.scheduleCacheMaxAgeMinutes = scheduleCacheMaxAgeMinutes;
         return this;
@@ -26,6 +27,7 @@ public class AppConfigLinear {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewingWindowDaysAfter")
     public Integer viewingWindowDaysAfter;
+
     public AppConfigLinear withViewingWindowDaysAfter(Integer viewingWindowDaysAfter) {
         this.viewingWindowDaysAfter = viewingWindowDaysAfter;
         return this;
@@ -37,9 +39,11 @@ public class AppConfigLinear {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewingWindowDaysBefore")
     public Integer viewingWindowDaysBefore;
+
     public AppConfigLinear withViewingWindowDaysBefore(Integer viewingWindowDaysBefore) {
         this.viewingWindowDaysBefore = viewingWindowDaysBefore;
         return this;
     }
     
+    public AppConfigLinear(){}
 }

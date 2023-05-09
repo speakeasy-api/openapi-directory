@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteConfiguredTableAssociationResponse {
@@ -12,6 +13,7 @@ public class DeleteConfiguredTableAssociationResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteConfiguredTableAssociationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteConfiguredTableAssociationResponse {
      */
     
     public Object conflictException;
+
     public DeleteConfiguredTableAssociationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteConfiguredTableAssociationResponse {
     
     
     public String contentType;
+
     public DeleteConfiguredTableAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteConfiguredTableAssociationResponse {
      */
     
     public java.util.Map<String, Object> deleteConfiguredTableAssociationOutput;
+
     public DeleteConfiguredTableAssociationResponse withDeleteConfiguredTableAssociationOutput(java.util.Map<String, Object> deleteConfiguredTableAssociationOutput) {
         this.deleteConfiguredTableAssociationOutput = deleteConfiguredTableAssociationOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteConfiguredTableAssociationResponse {
      */
     
     public Object internalServerException;
+
     public DeleteConfiguredTableAssociationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteConfiguredTableAssociationResponse {
     
     
     public Integer statusCode;
+
     public DeleteConfiguredTableAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteConfiguredTableAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteConfiguredTableAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteConfiguredTableAssociationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteConfiguredTableAssociationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteConfiguredTableAssociationResponse {
      */
     
     public Object throttlingException;
+
     public DeleteConfiguredTableAssociationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteConfiguredTableAssociationResponse {
      */
     
     public Object validationException;
+
     public DeleteConfiguredTableAssociationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteConfiguredTableAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

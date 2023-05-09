@@ -15,6 +15,7 @@ public class DescribeFleetUtilizationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetUtilization")
     public FleetUtilization[] fleetUtilization;
+
     public DescribeFleetUtilizationOutput withFleetUtilization(FleetUtilization[] fleetUtilization) {
         this.fleetUtilization = fleetUtilization;
         return this;
@@ -23,9 +24,11 @@ public class DescribeFleetUtilizationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFleetUtilizationOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFleetUtilizationOutput(){}
 }

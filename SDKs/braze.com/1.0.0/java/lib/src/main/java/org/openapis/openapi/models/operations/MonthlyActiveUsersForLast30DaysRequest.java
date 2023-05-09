@@ -14,6 +14,7 @@ public class MonthlyActiveUsersForLast30DaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_id")
     public String appId;
+
     public MonthlyActiveUsersForLast30DaysRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -26,6 +27,7 @@ public class MonthlyActiveUsersForLast30DaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
     public String endingAt;
+
     public MonthlyActiveUsersForLast30DaysRequest withEndingAt(String endingAt) {
         this.endingAt = endingAt;
         return this;
@@ -38,9 +40,11 @@ public class MonthlyActiveUsersForLast30DaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
     public String length;
+
     public MonthlyActiveUsersForLast30DaysRequest withLength(String length) {
         this.length = length;
         return this;
     }
     
+    public MonthlyActiveUsersForLast30DaysRequest(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataSourceGroup {
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public DataSourceGroup withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -19,9 +20,14 @@ public class DataSourceGroup {
     
     @JsonProperty("GroupId")
     public String groupId;
+
     public DataSourceGroup withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public DataSourceGroup(@JsonProperty("DataSourceId") String dataSourceId, @JsonProperty("GroupId") String groupId) {
+        this.dataSourceId = dataSourceId;
+        this.groupId = groupId;
+  }
 }

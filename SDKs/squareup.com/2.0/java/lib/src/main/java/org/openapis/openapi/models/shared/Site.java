@@ -18,6 +18,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Site withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public Site withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -40,6 +42,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Site withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_published")
     public Boolean isPublished;
+
     public Site withIsPublished(Boolean isPublished) {
         this.isPublished = isPublished;
         return this;
@@ -62,6 +66,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("site_title")
     public String siteTitle;
+
     public Site withSiteTitle(String siteTitle) {
         this.siteTitle = siteTitle;
         return this;
@@ -73,9 +78,11 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Site withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Site(){}
 }

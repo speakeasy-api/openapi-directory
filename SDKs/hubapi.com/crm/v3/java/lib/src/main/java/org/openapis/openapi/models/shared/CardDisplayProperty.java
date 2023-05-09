@@ -15,6 +15,7 @@ public class CardDisplayProperty {
      */
     @JsonProperty("dataType")
     public CardDisplayPropertyDataTypeEnum dataType;
+
     public CardDisplayProperty withDataType(CardDisplayPropertyDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -25,6 +26,7 @@ public class CardDisplayProperty {
      */
     @JsonProperty("label")
     public String label;
+
     public CardDisplayProperty withLabel(String label) {
         this.label = label;
         return this;
@@ -35,6 +37,7 @@ public class CardDisplayProperty {
      */
     @JsonProperty("name")
     public String name;
+
     public CardDisplayProperty withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +48,16 @@ public class CardDisplayProperty {
      */
     @JsonProperty("options")
     public DisplayOption[] options;
+
     public CardDisplayProperty withOptions(DisplayOption[] options) {
         this.options = options;
         return this;
     }
     
+    public CardDisplayProperty(@JsonProperty("dataType") CardDisplayPropertyDataTypeEnum dataType, @JsonProperty("label") String label, @JsonProperty("name") String name, @JsonProperty("options") DisplayOption[] options) {
+        this.dataType = dataType;
+        this.label = label;
+        this.name = name;
+        this.options = options;
+  }
 }

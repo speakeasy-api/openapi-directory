@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisruptionsGetDisruptionModesResponse {
     
     public byte[] body;
+
     public DisruptionsGetDisruptionModesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DisruptionsGetDisruptionModesResponse {
     
     
     public String contentType;
+
     public DisruptionsGetDisruptionModesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class DisruptionsGetDisruptionModesResponse {
     
     
     public Integer statusCode;
+
     public DisruptionsGetDisruptionModesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class DisruptionsGetDisruptionModesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisruptionsGetDisruptionModesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class DisruptionsGetDisruptionModesResponse {
      */
     
     public org.openapis.openapi.models.shared.V3DisruptionModesResponse v3DisruptionModesResponse;
+
     public DisruptionsGetDisruptionModesResponse withV3DisruptionModesResponse(org.openapis.openapi.models.shared.V3DisruptionModesResponse v3DisruptionModesResponse) {
         this.v3DisruptionModesResponse = v3DisruptionModesResponse;
         return this;
@@ -50,9 +56,14 @@ public class DisruptionsGetDisruptionModesResponse {
      */
     
     public org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse;
+
     public DisruptionsGetDisruptionModesResponse withV3ErrorResponse(org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse) {
         this.v3ErrorResponse = v3ErrorResponse;
         return this;
     }
     
+    public DisruptionsGetDisruptionModesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

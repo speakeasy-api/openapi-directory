@@ -15,6 +15,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionProprietarySc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionProprietarySchemeDetails withData(String data) {
         this.data = data;
         return this;
@@ -26,9 +27,11 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionProprietarySc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionProprietarySchemeDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetListofCardTransactionsCardTransactionsv1TransactionProprietarySchemeDetails(){}
 }

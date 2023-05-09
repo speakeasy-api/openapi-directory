@@ -59,11 +59,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryJobsCancelResponse res = new org.openapis.openapi.models.operations.BigqueryJobsCancelResponse() {{
+        org.openapis.openapi.models.operations.BigqueryJobsCancelResponse res = new org.openapis.openapi.models.operations.BigqueryJobsCancelResponse(contentType, httpRes.statusCode()) {{
             jobCancelResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,10 +103,8 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryJobsDeleteResponse res = new org.openapis.openapi.models.operations.BigqueryJobsDeleteResponse() {{
+        org.openapis.openapi.models.operations.BigqueryJobsDeleteResponse res = new org.openapis.openapi.models.operations.BigqueryJobsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,11 +141,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryJobsGetResponse res = new org.openapis.openapi.models.operations.BigqueryJobsGetResponse() {{
+        org.openapis.openapi.models.operations.BigqueryJobsGetResponse res = new org.openapis.openapi.models.operations.BigqueryJobsGetResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,11 +185,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryJobsGetQueryResultsResponse res = new org.openapis.openapi.models.operations.BigqueryJobsGetQueryResultsResponse() {{
+        org.openapis.openapi.models.operations.BigqueryJobsGetQueryResultsResponse res = new org.openapis.openapi.models.operations.BigqueryJobsGetQueryResultsResponse(contentType, httpRes.statusCode()) {{
             getQueryResultsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,11 +231,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryJobsInsertResponse res = new org.openapis.openapi.models.operations.BigqueryJobsInsertResponse() {{
+        org.openapis.openapi.models.operations.BigqueryJobsInsertResponse res = new org.openapis.openapi.models.operations.BigqueryJobsInsertResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,11 +275,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryJobsListResponse res = new org.openapis.openapi.models.operations.BigqueryJobsListResponse() {{
+        org.openapis.openapi.models.operations.BigqueryJobsListResponse res = new org.openapis.openapi.models.operations.BigqueryJobsListResponse(contentType, httpRes.statusCode()) {{
             jobList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -333,11 +321,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryJobsQueryResponse res = new org.openapis.openapi.models.operations.BigqueryJobsQueryResponse() {{
+        org.openapis.openapi.models.operations.BigqueryJobsQueryResponse res = new org.openapis.openapi.models.operations.BigqueryJobsQueryResponse(contentType, httpRes.statusCode()) {{
             queryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

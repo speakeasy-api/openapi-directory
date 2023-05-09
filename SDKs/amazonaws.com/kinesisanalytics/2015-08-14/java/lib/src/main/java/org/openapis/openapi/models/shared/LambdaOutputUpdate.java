@@ -15,6 +15,7 @@ public class LambdaOutputUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARNUpdate")
     public String resourceARNUpdate;
+
     public LambdaOutputUpdate withResourceARNUpdate(String resourceARNUpdate) {
         this.resourceARNUpdate = resourceARNUpdate;
         return this;
@@ -23,9 +24,11 @@ public class LambdaOutputUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARNUpdate")
     public String roleARNUpdate;
+
     public LambdaOutputUpdate withRoleARNUpdate(String roleARNUpdate) {
         this.roleARNUpdate = roleARNUpdate;
         return this;
     }
     
+    public LambdaOutputUpdate(){}
 }

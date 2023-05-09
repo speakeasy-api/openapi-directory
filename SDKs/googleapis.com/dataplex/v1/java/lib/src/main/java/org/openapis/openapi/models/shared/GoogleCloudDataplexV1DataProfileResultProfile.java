@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1DataProfileResultProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public GoogleCloudDataplexV1DataProfileResultProfileField[] fields;
+
     public GoogleCloudDataplexV1DataProfileResultProfile withFields(GoogleCloudDataplexV1DataProfileResultProfileField[] fields) {
         this.fields = fields;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataProfileResultProfile(){}
 }

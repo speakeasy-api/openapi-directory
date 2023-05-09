@@ -12,6 +12,7 @@ public class OBWriteFile2Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBWriteFile2Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -22,9 +23,14 @@ public class OBWriteFile2Data {
      */
     @JsonProperty("Initiation")
     public OBWriteFile2DataInitiation initiation;
+
     public OBWriteFile2Data withInitiation(OBWriteFile2DataInitiation initiation) {
         this.initiation = initiation;
         return this;
     }
     
+    public OBWriteFile2Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("Initiation") OBWriteFile2DataInitiation initiation) {
+        this.consentId = consentId;
+        this.initiation = initiation;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationVpnFirewallRulesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateOrganizationVpnFirewallRulesRequestBody requestBody;
+
     public UpdateOrganizationVpnFirewallRulesRequest withRequestBody(UpdateOrganizationVpnFirewallRulesRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class UpdateOrganizationVpnFirewallRulesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public String organizationId;
+
     public UpdateOrganizationVpnFirewallRulesRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public UpdateOrganizationVpnFirewallRulesRequest(@JsonProperty("organizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

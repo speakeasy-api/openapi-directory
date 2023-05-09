@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1EnvironmentInfrastructureSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compute")
     public GoogleCloudDataplexV1EnvironmentInfrastructureSpecComputeResources compute;
+
     public GoogleCloudDataplexV1EnvironmentInfrastructureSpec withCompute(GoogleCloudDataplexV1EnvironmentInfrastructureSpecComputeResources compute) {
         this.compute = compute;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1EnvironmentInfrastructureSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osImage")
     public GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime osImage;
+
     public GoogleCloudDataplexV1EnvironmentInfrastructureSpec withOsImage(GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime osImage) {
         this.osImage = osImage;
         return this;
     }
     
+    public GoogleCloudDataplexV1EnvironmentInfrastructureSpec(){}
 }

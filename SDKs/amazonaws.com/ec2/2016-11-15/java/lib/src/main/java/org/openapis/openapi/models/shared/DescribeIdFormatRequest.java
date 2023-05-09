@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeIdFormatRequest {
     
     public String resource;
+
     public DescribeIdFormatRequest withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
+    public DescribeIdFormatRequest(){}
 }

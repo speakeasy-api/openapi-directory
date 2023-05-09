@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstancesResultReservationsInstancesNetworkInterfacesAssociation {
     
     public String carrierIp;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesAssociation withCarrierIp(String carrierIp) {
         this.carrierIp = carrierIp;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfacesAssoci
     
     
     public String customerOwnedIp;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesAssociation withCustomerOwnedIp(String customerOwnedIp) {
         this.customerOwnedIp = customerOwnedIp;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfacesAssoci
     
     
     public String ipOwnerId;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesAssociation withIpOwnerId(String ipOwnerId) {
         this.ipOwnerId = ipOwnerId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfacesAssoci
     
     
     public String publicDnsName;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesAssociation withPublicDnsName(String publicDnsName) {
         this.publicDnsName = publicDnsName;
         return this;
@@ -40,9 +44,11 @@ public class DescribeInstancesResultReservationsInstancesNetworkInterfacesAssoci
     
     
     public String publicIp;
+
     public DescribeInstancesResultReservationsInstancesNetworkInterfacesAssociation withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
     }
     
+    public DescribeInstancesResultReservationsInstancesNetworkInterfacesAssociation(){}
 }

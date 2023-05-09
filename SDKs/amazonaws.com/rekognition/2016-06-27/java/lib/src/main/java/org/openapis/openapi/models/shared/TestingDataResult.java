@@ -15,6 +15,7 @@ public class TestingDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Input")
     public TestingData input;
+
     public TestingDataResult withInput(TestingData input) {
         this.input = input;
         return this;
@@ -23,6 +24,7 @@ public class TestingDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Output")
     public TestingData output;
+
     public TestingDataResult withOutput(TestingData output) {
         this.output = output;
         return this;
@@ -31,9 +33,11 @@ public class TestingDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Validation")
     public ValidationData validation;
+
     public TestingDataResult withValidation(ValidationData validation) {
         this.validation = validation;
         return this;
     }
     
+    public TestingDataResult(){}
 }

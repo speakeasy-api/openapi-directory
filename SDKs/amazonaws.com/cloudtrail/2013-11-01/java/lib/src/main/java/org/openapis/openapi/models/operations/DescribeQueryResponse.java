@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeQueryResponse {
     
     public String contentType;
+
     public DescribeQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeQueryResponse describeQueryResponse;
+
     public DescribeQueryResponse withDescribeQueryResponse(org.openapis.openapi.models.shared.DescribeQueryResponse describeQueryResponse) {
         this.describeQueryResponse = describeQueryResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeQueryResponse {
      */
     
     public Object eventDataStoreARNInvalidException;
+
     public DescribeQueryResponse withEventDataStoreARNInvalidException(Object eventDataStoreARNInvalidException) {
         this.eventDataStoreARNInvalidException = eventDataStoreARNInvalidException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeQueryResponse {
      */
     
     public Object eventDataStoreNotFoundException;
+
     public DescribeQueryResponse withEventDataStoreNotFoundException(Object eventDataStoreNotFoundException) {
         this.eventDataStoreNotFoundException = eventDataStoreNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeQueryResponse {
      */
     
     public Object inactiveEventDataStoreException;
+
     public DescribeQueryResponse withInactiveEventDataStoreException(Object inactiveEventDataStoreException) {
         this.inactiveEventDataStoreException = inactiveEventDataStoreException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeQueryResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeQueryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeQueryResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public DescribeQueryResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -79,6 +87,7 @@ public class DescribeQueryResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DescribeQueryResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -89,6 +98,7 @@ public class DescribeQueryResponse {
      */
     
     public Object queryIdNotFoundException;
+
     public DescribeQueryResponse withQueryIdNotFoundException(Object queryIdNotFoundException) {
         this.queryIdNotFoundException = queryIdNotFoundException;
         return this;
@@ -96,6 +106,7 @@ public class DescribeQueryResponse {
     
     
     public Integer statusCode;
+
     public DescribeQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class DescribeQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class DescribeQueryResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DescribeQueryResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DescribeQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

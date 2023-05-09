@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCompleteLifecycleActionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCompleteLifecycleActionActionEnum action;
+
     public GETCompleteLifecycleActionRequest withAction(GETCompleteLifecycleActionActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETCompleteLifecycleActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
     public String autoScalingGroupName;
+
     public GETCompleteLifecycleActionRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -29,6 +32,7 @@ public class GETCompleteLifecycleActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
     public String instanceId;
+
     public GETCompleteLifecycleActionRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -39,6 +43,7 @@ public class GETCompleteLifecycleActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifecycleActionResult")
     public String lifecycleActionResult;
+
     public GETCompleteLifecycleActionRequest withLifecycleActionResult(String lifecycleActionResult) {
         this.lifecycleActionResult = lifecycleActionResult;
         return this;
@@ -49,6 +54,7 @@ public class GETCompleteLifecycleActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifecycleActionToken")
     public String lifecycleActionToken;
+
     public GETCompleteLifecycleActionRequest withLifecycleActionToken(String lifecycleActionToken) {
         this.lifecycleActionToken = lifecycleActionToken;
         return this;
@@ -59,6 +65,7 @@ public class GETCompleteLifecycleActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifecycleHookName")
     public String lifecycleHookName;
+
     public GETCompleteLifecycleActionRequest withLifecycleHookName(String lifecycleHookName) {
         this.lifecycleHookName = lifecycleHookName;
         return this;
@@ -66,6 +73,7 @@ public class GETCompleteLifecycleActionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCompleteLifecycleActionVersionEnum version;
+
     public GETCompleteLifecycleActionRequest withVersion(GETCompleteLifecycleActionVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETCompleteLifecycleActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCompleteLifecycleActionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETCompleteLifecycleActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCompleteLifecycleActionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETCompleteLifecycleActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCompleteLifecycleActionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETCompleteLifecycleActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCompleteLifecycleActionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETCompleteLifecycleActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCompleteLifecycleActionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETCompleteLifecycleActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCompleteLifecycleActionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,17 @@ public class GETCompleteLifecycleActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCompleteLifecycleActionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCompleteLifecycleActionRequest(@JsonProperty("Action") GETCompleteLifecycleActionActionEnum action, @JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("LifecycleActionResult") String lifecycleActionResult, @JsonProperty("LifecycleHookName") String lifecycleHookName, @JsonProperty("Version") GETCompleteLifecycleActionVersionEnum version) {
+        this.action = action;
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.lifecycleActionResult = lifecycleActionResult;
+        this.lifecycleHookName = lifecycleHookName;
+        this.version = version;
+  }
 }

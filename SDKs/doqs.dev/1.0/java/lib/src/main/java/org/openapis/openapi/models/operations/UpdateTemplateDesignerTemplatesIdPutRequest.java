@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTemplateDesignerTemplatesIdPutRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateOrUpdateTemplateRequest createOrUpdateTemplateRequest;
+
     public UpdateTemplateDesignerTemplatesIdPutRequest withCreateOrUpdateTemplateRequest(org.openapis.openapi.models.shared.CreateOrUpdateTemplateRequest createOrUpdateTemplateRequest) {
         this.createOrUpdateTemplateRequest = createOrUpdateTemplateRequest;
         return this;
@@ -16,9 +18,14 @@ public class UpdateTemplateDesignerTemplatesIdPutRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateTemplateDesignerTemplatesIdPutRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateTemplateDesignerTemplatesIdPutRequest(@JsonProperty("CreateOrUpdateTemplateRequest") org.openapis.openapi.models.shared.CreateOrUpdateTemplateRequest createOrUpdateTemplateRequest, @JsonProperty("id") String id) {
+        this.createOrUpdateTemplateRequest = createOrUpdateTemplateRequest;
+        this.id = id;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProjectRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateProjectRequestBody requestBody;
+
     public CreateProjectRequest withRequestBody(CreateProjectRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class CreateProjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
     public String spaceName;
+
     public CreateProjectRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public CreateProjectRequest(@JsonProperty("RequestBody") CreateProjectRequestBody requestBody, @JsonProperty("spaceName") String spaceName) {
+        this.requestBody = requestBody;
+        this.spaceName = spaceName;
+  }
 }

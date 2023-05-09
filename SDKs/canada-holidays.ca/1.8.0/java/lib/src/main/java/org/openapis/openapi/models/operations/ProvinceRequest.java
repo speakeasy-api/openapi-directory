@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProvinceRequest {
@@ -12,6 +13,7 @@ public class ProvinceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=optional")
     public ProvinceOptionalEnum optional;
+
     public ProvinceRequest withOptional(ProvinceOptionalEnum optional) {
         this.optional = optional;
         return this;
@@ -22,6 +24,7 @@ public class ProvinceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provinceId")
     public ProvinceProvinceIDEnum provinceId;
+
     public ProvinceRequest withProvinceId(ProvinceProvinceIDEnum provinceId) {
         this.provinceId = provinceId;
         return this;
@@ -32,9 +35,13 @@ public class ProvinceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public ProvinceRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public ProvinceRequest(@JsonProperty("provinceId") ProvinceProvinceIDEnum provinceId) {
+        this.provinceId = provinceId;
+  }
 }

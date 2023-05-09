@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateVariantStoreResponse {
@@ -12,6 +13,7 @@ public class UpdateVariantStoreResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateVariantStoreResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateVariantStoreResponse {
     
     
     public String contentType;
+
     public UpdateVariantStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateVariantStoreResponse {
      */
     
     public Object internalServerException;
+
     public UpdateVariantStoreResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateVariantStoreResponse {
     
     
     public Integer statusCode;
+
     public UpdateVariantStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateVariantStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateVariantStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateVariantStoreResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateVariantStoreResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateVariantStoreResponse {
      */
     
     public Object throttlingException;
+
     public UpdateVariantStoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateVariantStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateVariantStoreResponse updateVariantStoreResponse;
+
     public UpdateVariantStoreResponse withUpdateVariantStoreResponse(org.openapis.openapi.models.shared.UpdateVariantStoreResponse updateVariantStoreResponse) {
         this.updateVariantStoreResponse = updateVariantStoreResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateVariantStoreResponse {
      */
     
     public Object validationException;
+
     public UpdateVariantStoreResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateVariantStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class PathQueryOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelGrouping")
     public ChannelGrouping channelGrouping;
+
     public PathQueryOptions withChannelGrouping(ChannelGrouping channelGrouping) {
         this.channelGrouping = channelGrouping;
         return this;
@@ -29,9 +30,11 @@ public class PathQueryOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathFilters")
     public PathFilter[] pathFilters;
+
     public PathQueryOptions withPathFilters(PathFilter[] pathFilters) {
         this.pathFilters = pathFilters;
         return this;
     }
     
+    public PathQueryOptions(){}
 }

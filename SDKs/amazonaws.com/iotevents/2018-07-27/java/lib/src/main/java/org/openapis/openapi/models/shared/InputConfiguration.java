@@ -21,6 +21,7 @@ public class InputConfiguration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public InputConfiguration withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class InputConfiguration {
     
     @JsonProperty("inputArn")
     public String inputArn;
+
     public InputConfiguration withInputArn(String inputArn) {
         this.inputArn = inputArn;
         return this;
@@ -36,6 +38,7 @@ public class InputConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDescription")
     public String inputDescription;
+
     public InputConfiguration withInputDescription(String inputDescription) {
         this.inputDescription = inputDescription;
         return this;
@@ -43,6 +46,7 @@ public class InputConfiguration {
     
     @JsonProperty("inputName")
     public String inputName;
+
     public InputConfiguration withInputName(String inputName) {
         this.inputName = inputName;
         return this;
@@ -52,6 +56,7 @@ public class InputConfiguration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public InputConfiguration withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -59,9 +64,17 @@ public class InputConfiguration {
     
     @JsonProperty("status")
     public InputStatusEnum status;
+
     public InputConfiguration withStatus(InputStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public InputConfiguration(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("inputArn") String inputArn, @JsonProperty("inputName") String inputName, @JsonProperty("lastUpdateTime") OffsetDateTime lastUpdateTime, @JsonProperty("status") InputStatusEnum status) {
+        this.creationTime = creationTime;
+        this.inputArn = inputArn;
+        this.inputName = inputName;
+        this.lastUpdateTime = lastUpdateTime;
+        this.status = status;
+  }
 }

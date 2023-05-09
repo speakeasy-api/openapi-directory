@@ -15,6 +15,7 @@ public class KMSEnvMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cipherText")
     public String cipherText;
+
     public KMSEnvMap withCipherText(String cipherText) {
         this.cipherText = cipherText;
         return this;
@@ -26,9 +27,11 @@ public class KMSEnvMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyName")
     public String keyName;
+
     public KMSEnvMap withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
     }
     
+    public KMSEnvMap(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateWorkflowResponse {
     @JsonProperty("WorkflowId")
     public String workflowId;
+
     public CreateWorkflowResponse withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public CreateWorkflowResponse(@JsonProperty("WorkflowId") String workflowId) {
+        this.workflowId = workflowId;
+  }
 }

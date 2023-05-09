@@ -22,6 +22,7 @@ public class AuditSuppression {
      */
     @JsonProperty("checkName")
     public String checkName;
+
     public AuditSuppression withCheckName(String checkName) {
         this.checkName = checkName;
         return this;
@@ -30,6 +31,7 @@ public class AuditSuppression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AuditSuppression withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class AuditSuppression {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationDate")
     public OffsetDateTime expirationDate;
+
     public AuditSuppression withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -50,6 +53,7 @@ public class AuditSuppression {
      */
     @JsonProperty("resourceIdentifier")
     public ResourceIdentifier resourceIdentifier;
+
     public AuditSuppression withResourceIdentifier(ResourceIdentifier resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
@@ -58,9 +62,14 @@ public class AuditSuppression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suppressIndefinitely")
     public Boolean suppressIndefinitely;
+
     public AuditSuppression withSuppressIndefinitely(Boolean suppressIndefinitely) {
         this.suppressIndefinitely = suppressIndefinitely;
         return this;
     }
     
+    public AuditSuppression(@JsonProperty("checkName") String checkName, @JsonProperty("resourceIdentifier") ResourceIdentifier resourceIdentifier) {
+        this.checkName = checkName;
+        this.resourceIdentifier = resourceIdentifier;
+  }
 }

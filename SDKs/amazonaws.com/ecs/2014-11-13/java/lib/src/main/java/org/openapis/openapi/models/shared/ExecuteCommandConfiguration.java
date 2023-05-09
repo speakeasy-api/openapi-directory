@@ -15,6 +15,7 @@ public class ExecuteCommandConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public ExecuteCommandConfiguration withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -23,6 +24,7 @@ public class ExecuteCommandConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfiguration")
     public ExecuteCommandLogConfiguration logConfiguration;
+
     public ExecuteCommandConfiguration withLogConfiguration(ExecuteCommandLogConfiguration logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -31,9 +33,11 @@ public class ExecuteCommandConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logging")
     public ExecuteCommandLoggingEnum logging;
+
     public ExecuteCommandConfiguration withLogging(ExecuteCommandLoggingEnum logging) {
         this.logging = logging;
         return this;
     }
     
+    public ExecuteCommandConfiguration(){}
 }

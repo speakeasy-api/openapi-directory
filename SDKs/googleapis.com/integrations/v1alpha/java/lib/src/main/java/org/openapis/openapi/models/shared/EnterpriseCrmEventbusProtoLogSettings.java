@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoLogSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logFieldName")
     public String logFieldName;
+
     public EnterpriseCrmEventbusProtoLogSettings withLogFieldName(String logFieldName) {
         this.logFieldName = logFieldName;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmEventbusProtoLogSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sanitizeOptions")
     public EnterpriseCrmLoggingGwsSanitizeOptions sanitizeOptions;
+
     public EnterpriseCrmEventbusProtoLogSettings withSanitizeOptions(EnterpriseCrmLoggingGwsSanitizeOptions sanitizeOptions) {
         this.sanitizeOptions = sanitizeOptions;
         return this;
@@ -37,6 +39,7 @@ public class EnterpriseCrmEventbusProtoLogSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seedPeriod")
     public EnterpriseCrmEventbusProtoLogSettingsSeedPeriodEnum seedPeriod;
+
     public EnterpriseCrmEventbusProtoLogSettings withSeedPeriod(EnterpriseCrmEventbusProtoLogSettingsSeedPeriodEnum seedPeriod) {
         this.seedPeriod = seedPeriod;
         return this;
@@ -45,6 +48,7 @@ public class EnterpriseCrmEventbusProtoLogSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seedScope")
     public EnterpriseCrmEventbusProtoLogSettingsSeedScopeEnum seedScope;
+
     public EnterpriseCrmEventbusProtoLogSettings withSeedScope(EnterpriseCrmEventbusProtoLogSettingsSeedScopeEnum seedScope) {
         this.seedScope = seedScope;
         return this;
@@ -56,9 +60,11 @@ public class EnterpriseCrmEventbusProtoLogSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shorteningLimits")
     public EnterpriseCrmLoggingGwsFieldLimits shorteningLimits;
+
     public EnterpriseCrmEventbusProtoLogSettings withShorteningLimits(EnterpriseCrmLoggingGwsFieldLimits shorteningLimits) {
         this.shorteningLimits = shorteningLimits;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoLogSettings(){}
 }

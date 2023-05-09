@@ -22,6 +22,7 @@ public class InsightTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public InsightTimeRange withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -31,9 +32,13 @@ public class InsightTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public InsightTimeRange withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public InsightTimeRange(@JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.startTime = startTime;
+  }
 }

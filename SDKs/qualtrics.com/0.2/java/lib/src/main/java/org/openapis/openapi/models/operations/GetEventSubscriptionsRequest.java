@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventSubscriptionsRequest {
@@ -12,9 +13,13 @@ public class GetEventSubscriptionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SubscriptionId")
     public String subscriptionId;
+
     public GetEventSubscriptionsRequest withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public GetEventSubscriptionsRequest(@JsonProperty("SubscriptionId") String subscriptionId) {
+        this.subscriptionId = subscriptionId;
+  }
 }

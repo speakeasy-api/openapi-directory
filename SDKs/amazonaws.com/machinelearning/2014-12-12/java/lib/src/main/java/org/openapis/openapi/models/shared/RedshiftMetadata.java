@@ -18,6 +18,7 @@ public class RedshiftMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseUserName")
     public String databaseUserName;
+
     public RedshiftMetadata withDatabaseUserName(String databaseUserName) {
         this.databaseUserName = databaseUserName;
         return this;
@@ -29,6 +30,7 @@ public class RedshiftMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftDatabase")
     public RedshiftDatabase redshiftDatabase;
+
     public RedshiftMetadata withRedshiftDatabase(RedshiftDatabase redshiftDatabase) {
         this.redshiftDatabase = redshiftDatabase;
         return this;
@@ -37,9 +39,11 @@ public class RedshiftMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelectSqlQuery")
     public String selectSqlQuery;
+
     public RedshiftMetadata withSelectSqlQuery(String selectSqlQuery) {
         this.selectSqlQuery = selectSqlQuery;
         return this;
     }
     
+    public RedshiftMetadata(){}
 }

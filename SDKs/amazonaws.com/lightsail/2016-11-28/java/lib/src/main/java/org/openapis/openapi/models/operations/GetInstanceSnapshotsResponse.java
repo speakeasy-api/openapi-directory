@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInstanceSnapshotsResponse {
@@ -12,6 +13,7 @@ public class GetInstanceSnapshotsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetInstanceSnapshotsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetInstanceSnapshotsResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetInstanceSnapshotsResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetInstanceSnapshotsResponse {
     
     
     public String contentType;
+
     public GetInstanceSnapshotsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetInstanceSnapshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInstanceSnapshotsResult getInstanceSnapshotsResult;
+
     public GetInstanceSnapshotsResponse withGetInstanceSnapshotsResult(org.openapis.openapi.models.shared.GetInstanceSnapshotsResult getInstanceSnapshotsResult) {
         this.getInstanceSnapshotsResult = getInstanceSnapshotsResult;
         return this;
@@ -49,6 +54,7 @@ public class GetInstanceSnapshotsResponse {
      */
     
     public Object invalidInputException;
+
     public GetInstanceSnapshotsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetInstanceSnapshotsResponse {
      */
     
     public Object notFoundException;
+
     public GetInstanceSnapshotsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetInstanceSnapshotsResponse {
      */
     
     public Object operationFailureException;
+
     public GetInstanceSnapshotsResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetInstanceSnapshotsResponse {
      */
     
     public Object serviceException;
+
     public GetInstanceSnapshotsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetInstanceSnapshotsResponse {
     
     
     public Integer statusCode;
+
     public GetInstanceSnapshotsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetInstanceSnapshotsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInstanceSnapshotsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetInstanceSnapshotsResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetInstanceSnapshotsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetInstanceSnapshotsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

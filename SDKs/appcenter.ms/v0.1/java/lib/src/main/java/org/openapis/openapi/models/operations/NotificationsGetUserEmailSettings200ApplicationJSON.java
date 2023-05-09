@@ -18,6 +18,7 @@ public class NotificationsGetUserEmailSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eTag")
     public String eTag;
+
     public NotificationsGetUserEmailSettings200ApplicationJSON withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -28,6 +29,7 @@ public class NotificationsGetUserEmailSettings200ApplicationJSON {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public NotificationsGetUserEmailSettings200ApplicationJSON withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -38,6 +40,7 @@ public class NotificationsGetUserEmailSettings200ApplicationJSON {
      */
     @JsonProperty("request_id")
     public String requestId;
+
     public NotificationsGetUserEmailSettings200ApplicationJSON withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -48,6 +51,7 @@ public class NotificationsGetUserEmailSettings200ApplicationJSON {
      */
     @JsonProperty("settings")
     public NotificationsGetUserEmailSettings200ApplicationJSONSettings[] settings;
+
     public NotificationsGetUserEmailSettings200ApplicationJSON withSettings(NotificationsGetUserEmailSettings200ApplicationJSONSettings[] settings) {
         this.settings = settings;
         return this;
@@ -59,9 +63,15 @@ public class NotificationsGetUserEmailSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public NotificationsGetUserEmailSettings200ApplicationJSON withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public NotificationsGetUserEmailSettings200ApplicationJSON(@JsonProperty("enabled") Boolean enabled, @JsonProperty("request_id") String requestId, @JsonProperty("settings") NotificationsGetUserEmailSettings200ApplicationJSONSettings[] settings) {
+        this.enabled = enabled;
+        this.requestId = requestId;
+        this.settings = settings;
+  }
 }

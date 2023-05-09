@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClassificationInclusionsIdResponse {
     
     public String contentType;
+
     public GetClassificationInclusionsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetClassificationInclusionsIdResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetClassificationInclusionsIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetClassificationInclusionsIdResponse {
     
     
     public Integer statusCode;
+
     public GetClassificationInclusionsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetClassificationInclusionsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClassificationInclusionsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetClassificationInclusionsIdResponse {
      */
     
     public GetClassificationInclusionsId200ApplicationVndApiPlusJson getClassificationInclusionsId200ApplicationVndApiPlusJsonObject;
+
     public GetClassificationInclusionsIdResponse withGetClassificationInclusionsId200ApplicationVndApiPlusJsonObject(GetClassificationInclusionsId200ApplicationVndApiPlusJson getClassificationInclusionsId200ApplicationVndApiPlusJsonObject) {
         this.getClassificationInclusionsId200ApplicationVndApiPlusJsonObject = getClassificationInclusionsId200ApplicationVndApiPlusJsonObject;
         return this;
     }
     
+    public GetClassificationInclusionsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

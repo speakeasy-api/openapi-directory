@@ -14,6 +14,7 @@ public class CreateTokenRequestDataAttributes {
      */
     @JsonProperty("client_id")
     public String clientId;
+
     public CreateTokenRequestDataAttributes withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -25,6 +26,7 @@ public class CreateTokenRequestDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_secret")
     public String clientSecret;
+
     public CreateTokenRequestDataAttributes withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -32,6 +34,7 @@ public class CreateTokenRequestDataAttributes {
     
     @JsonProperty("grant_type")
     public CreateTokenRequestDataAttributesGrantTypeEnum grantType;
+
     public CreateTokenRequestDataAttributes withGrantType(CreateTokenRequestDataAttributesGrantTypeEnum grantType) {
         this.grantType = grantType;
         return this;
@@ -43,9 +46,14 @@ public class CreateTokenRequestDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_token")
     public String refreshToken;
+
     public CreateTokenRequestDataAttributes withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
     
+    public CreateTokenRequestDataAttributes(@JsonProperty("client_id") String clientId, @JsonProperty("grant_type") CreateTokenRequestDataAttributesGrantTypeEnum grantType) {
+        this.clientId = clientId;
+        this.grantType = grantType;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReinitializeRequest {
@@ -12,6 +13,7 @@ public class ReinitializeRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ReinitializeActionConfiguration reinitializeActionConfiguration;
+
     public ReinitializeRequest withReinitializeActionConfiguration(org.openapis.openapi.models.shared.ReinitializeActionConfiguration reinitializeActionConfiguration) {
         this.reinitializeActionConfiguration = reinitializeActionConfiguration;
         return this;
@@ -22,9 +24,14 @@ public class ReinitializeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
     public Integer deviceId;
+
     public ReinitializeRequest withDeviceId(Integer deviceId) {
         this.deviceId = deviceId;
         return this;
     }
     
+    public ReinitializeRequest(@JsonProperty("ReinitializeActionConfiguration") org.openapis.openapi.models.shared.ReinitializeActionConfiguration reinitializeActionConfiguration, @JsonProperty("deviceId") Integer deviceId) {
+        this.reinitializeActionConfiguration = reinitializeActionConfiguration;
+        this.deviceId = deviceId;
+  }
 }

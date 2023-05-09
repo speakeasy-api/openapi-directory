@@ -15,9 +15,11 @@ public class UpdateAnnotationStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateAnnotationStoreRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public UpdateAnnotationStoreRequestBody(){}
 }

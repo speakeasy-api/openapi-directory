@@ -15,6 +15,7 @@ public class StoreList {
      */
     @JsonProperty("links")
     public StoreListLinks links;
+
     public StoreList withLinks(StoreListLinks links) {
         this.links = links;
         return this;
@@ -22,9 +23,14 @@ public class StoreList {
     
     @JsonProperty("stores")
     public Store[] stores;
+
     public StoreList withStores(Store[] stores) {
         this.stores = stores;
         return this;
     }
     
+    public StoreList(@JsonProperty("links") StoreListLinks links, @JsonProperty("stores") Store[] stores) {
+        this.links = links;
+        this.stores = stores;
+  }
 }

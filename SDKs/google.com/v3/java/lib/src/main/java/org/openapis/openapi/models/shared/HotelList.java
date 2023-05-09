@@ -18,9 +18,11 @@ public class HotelList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerHotelIds")
     public String[] partnerHotelIds;
+
     public HotelList withPartnerHotelIds(String[] partnerHotelIds) {
         this.partnerHotelIds = partnerHotelIds;
         return this;
     }
     
+    public HotelList(){}
 }

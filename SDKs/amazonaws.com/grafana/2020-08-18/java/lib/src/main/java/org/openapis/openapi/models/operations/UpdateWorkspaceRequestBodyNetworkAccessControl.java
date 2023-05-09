@@ -15,6 +15,7 @@ public class UpdateWorkspaceRequestBodyNetworkAccessControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefixListIds")
     public String[] prefixListIds;
+
     public UpdateWorkspaceRequestBodyNetworkAccessControl withPrefixListIds(String[] prefixListIds) {
         this.prefixListIds = prefixListIds;
         return this;
@@ -23,9 +24,11 @@ public class UpdateWorkspaceRequestBodyNetworkAccessControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpceIds")
     public String[] vpceIds;
+
     public UpdateWorkspaceRequestBodyNetworkAccessControl withVpceIds(String[] vpceIds) {
         this.vpceIds = vpceIds;
         return this;
     }
     
+    public UpdateWorkspaceRequestBodyNetworkAccessControl(){}
 }

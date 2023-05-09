@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGenBankNucleotideMappingUsingPOSTResponse {
     
     public byte[] body;
+
     public GetGenBankNucleotideMappingUsingPOSTResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetGenBankNucleotideMappingUsingPOSTResponse {
     
     
     public String contentType;
+
     public GetGenBankNucleotideMappingUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetGenBankNucleotideMappingUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public GetGenBankNucleotideMappingUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetGenBankNucleotideMappingUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGenBankNucleotideMappingUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetGenBankNucleotideMappingUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

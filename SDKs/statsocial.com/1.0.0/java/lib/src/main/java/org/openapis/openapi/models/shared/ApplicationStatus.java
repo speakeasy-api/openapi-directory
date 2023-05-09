@@ -15,6 +15,7 @@ public class ApplicationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ApplicationResponse data;
+
     public ApplicationStatus withData(ApplicationResponse data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class ApplicationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msg")
     public String msg;
+
     public ApplicationStatus withMsg(String msg) {
         this.msg = msg;
         return this;
@@ -31,9 +33,11 @@ public class ApplicationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public String success;
+
     public ApplicationStatus withSuccess(String success) {
         this.success = success;
         return this;
     }
     
+    public ApplicationStatus(){}
 }

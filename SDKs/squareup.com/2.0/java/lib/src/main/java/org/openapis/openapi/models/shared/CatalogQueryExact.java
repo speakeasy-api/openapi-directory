@@ -15,6 +15,7 @@ public class CatalogQueryExact {
      */
     @JsonProperty("attribute_name")
     public String attributeName;
+
     public CatalogQueryExact withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -26,9 +27,14 @@ public class CatalogQueryExact {
      */
     @JsonProperty("attribute_value")
     public String attributeValue;
+
     public CatalogQueryExact withAttributeValue(String attributeValue) {
         this.attributeValue = attributeValue;
         return this;
     }
     
+    public CatalogQueryExact(@JsonProperty("attribute_name") String attributeName, @JsonProperty("attribute_value") String attributeValue) {
+        this.attributeName = attributeName;
+        this.attributeValue = attributeValue;
+  }
 }

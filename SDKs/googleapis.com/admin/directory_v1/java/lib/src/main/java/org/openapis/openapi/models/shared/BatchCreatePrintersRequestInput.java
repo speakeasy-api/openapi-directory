@@ -18,9 +18,11 @@ public class BatchCreatePrintersRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public CreatePrinterRequestInput[] requests;
+
     public BatchCreatePrintersRequestInput withRequests(CreatePrinterRequestInput[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public BatchCreatePrintersRequestInput(){}
 }

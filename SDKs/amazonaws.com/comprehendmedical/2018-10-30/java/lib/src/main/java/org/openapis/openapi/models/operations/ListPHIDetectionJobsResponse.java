@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPHIDetectionJobsResponse {
     
     public String contentType;
+
     public ListPHIDetectionJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPHIDetectionJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListPHIDetectionJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListPHIDetectionJobsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListPHIDetectionJobsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListPHIDetectionJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPHIDetectionJobsResponse listPHIDetectionJobsResponse;
+
     public ListPHIDetectionJobsResponse withListPHIDetectionJobsResponse(org.openapis.openapi.models.shared.ListPHIDetectionJobsResponse listPHIDetectionJobsResponse) {
         this.listPHIDetectionJobsResponse = listPHIDetectionJobsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListPHIDetectionJobsResponse {
     
     
     public Integer statusCode;
+
     public ListPHIDetectionJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListPHIDetectionJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPHIDetectionJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListPHIDetectionJobsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListPHIDetectionJobsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class ListPHIDetectionJobsResponse {
      */
     
     public Object validationException;
+
     public ListPHIDetectionJobsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPHIDetectionJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

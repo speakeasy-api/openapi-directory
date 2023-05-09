@@ -18,9 +18,11 @@ public class AddFirebaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public AddFirebaseRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public AddFirebaseRequest(){}
 }

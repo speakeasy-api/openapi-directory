@@ -53,13 +53,11 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteJobByIdResponse res = new org.openapis.openapi.models.operations.DeleteJobByIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteJobByIdResponse res = new org.openapis.openapi.models.operations.DeleteJobByIdResponse(contentType, httpRes.statusCode()) {{
             deleteJobById401ApplicationProblemPlusJsonObject = null;
             deleteJobById404ApplicationProblemPlusJsonObject = null;
             deleteJobById409ApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -111,13 +109,11 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetJobByIdResponse res = new org.openapis.openapi.models.operations.GetJobByIdResponse() {{
+        org.openapis.openapi.models.operations.GetJobByIdResponse res = new org.openapis.openapi.models.operations.GetJobByIdResponse(contentType, httpRes.statusCode()) {{
             job = null;
             getJobById401ApplicationProblemPlusJsonObject = null;
             getJobById404ApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -173,13 +169,11 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetListOfJobsResponse res = new org.openapis.openapi.models.operations.GetListOfJobsResponse() {{
+        org.openapis.openapi.models.operations.GetListOfJobsResponse res = new org.openapis.openapi.models.operations.GetListOfJobsResponse(contentType, httpRes.statusCode()) {{
             jobs = null;
             getListOfJobs400ApplicationProblemPlusJsonObject = null;
             getListOfJobs401ApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,14 +228,12 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubmitTranscriptionJobJsonResponse res = new org.openapis.openapi.models.operations.SubmitTranscriptionJobJsonResponse() {{
+        org.openapis.openapi.models.operations.SubmitTranscriptionJobJsonResponse res = new org.openapis.openapi.models.operations.SubmitTranscriptionJobJsonResponse(contentType, httpRes.statusCode()) {{
             job = null;
             submitTranscriptionJobJson400ApplicationProblemPlusJsonObject = null;
             submitTranscriptionJobJson401ApplicationProblemPlusJsonObject = null;
             submitTranscriptionJobJson413ApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -303,14 +295,12 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubmitTranscriptionJobMultipartResponse res = new org.openapis.openapi.models.operations.SubmitTranscriptionJobMultipartResponse() {{
+        org.openapis.openapi.models.operations.SubmitTranscriptionJobMultipartResponse res = new org.openapis.openapi.models.operations.SubmitTranscriptionJobMultipartResponse(contentType, httpRes.statusCode()) {{
             job = null;
             submitTranscriptionJobMultipart400ApplicationProblemPlusJsonObject = null;
             submitTranscriptionJobMultipart401ApplicationProblemPlusJsonObject = null;
             submitTranscriptionJobMultipart413ApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

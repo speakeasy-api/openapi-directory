@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetOrdersOrderStatusEnum;
 import org.openapis.openapi.models.operations.GetOrdersRequest;
 import org.openapis.openapi.models.operations.GetOrdersResponse;
@@ -17,16 +16,18 @@ public class Application {
             GetOrdersRequest req = new GetOrdersRequest() {{
                 limit = "corrupti";
                 offset = "provident";
-                orderStatus = "Completed";
-            }}            
+                orderStatus = GetOrdersOrderStatusEnum.COMPLETED;
+            }};            
 
             GetOrdersResponse res = sdk.getOrders(req);
 
-            if (res.listOfOrders.isPresent()) {
+            if (res.listOfOrders != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

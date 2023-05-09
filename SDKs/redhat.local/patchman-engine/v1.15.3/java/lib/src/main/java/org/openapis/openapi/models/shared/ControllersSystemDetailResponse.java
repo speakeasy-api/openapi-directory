@@ -15,9 +15,11 @@ public class ControllersSystemDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ControllersSystemItem data;
+
     public ControllersSystemDetailResponse withData(ControllersSystemItem data) {
         this.data = data;
         return this;
     }
     
+    public ControllersSystemDetailResponse(){}
 }

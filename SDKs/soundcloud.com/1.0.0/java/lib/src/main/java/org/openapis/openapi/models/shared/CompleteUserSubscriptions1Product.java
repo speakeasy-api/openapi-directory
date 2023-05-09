@@ -18,6 +18,7 @@ public class CompleteUserSubscriptions1Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CompleteUserSubscriptions1Product withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class CompleteUserSubscriptions1Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CompleteUserSubscriptions1Product withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CompleteUserSubscriptions1Product(){}
 }

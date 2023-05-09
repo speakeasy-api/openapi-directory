@@ -18,6 +18,7 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSONUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildService")
     public BillingAggregatedInformationGetForOrg200ApplicationJSONUsageBuildService buildService;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSONUsage withBuildService(BillingAggregatedInformationGetForOrg200ApplicationJSONUsageBuildService buildService) {
         this.buildService = buildService;
         return this;
@@ -29,9 +30,11 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSONUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testService")
     public BillingAggregatedInformationGetForOrg200ApplicationJSONUsageTestService testService;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSONUsage withTestService(BillingAggregatedInformationGetForOrg200ApplicationJSONUsageTestService testService) {
         this.testService = testService;
         return this;
     }
     
+    public BillingAggregatedInformationGetForOrg200ApplicationJSONUsage(){}
 }

@@ -15,9 +15,11 @@ public class CreateEventIntegrationRequestBodyEventFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public CreateEventIntegrationRequestBodyEventFilter withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public CreateEventIntegrationRequestBodyEventFilter(){}
 }

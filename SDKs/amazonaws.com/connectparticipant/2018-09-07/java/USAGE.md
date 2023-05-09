@@ -3,46 +3,43 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CompleteAttachmentUploadRequestBody;
 import org.openapis.openapi.models.operations.CompleteAttachmentUploadRequest;
+import org.openapis.openapi.models.operations.CompleteAttachmentUploadRequestBody;
 import org.openapis.openapi.models.operations.CompleteAttachmentUploadResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CompleteAttachmentUploadRequest req = new CompleteAttachmentUploadRequest() {{
-                requestBody = new CompleteAttachmentUploadRequestBody() {{
-                    attachmentIds = new String[]{{
-                        add("provident"),
-                        add("distinctio"),
-                        add("quibusdam"),
-                    }};
-                    clientToken = "unde";
-                }};
-                xAmzAlgorithm = "nulla";
-                xAmzBearer = "corrupti";
-                xAmzContentSha256 = "illum";
-                xAmzCredential = "vel";
-                xAmzDate = "error";
-                xAmzSecurityToken = "deserunt";
-                xAmzSignature = "suscipit";
-                xAmzSignedHeaders = "iure";
-            }}            
+            CompleteAttachmentUploadRequest req = new CompleteAttachmentUploadRequest(                new CompleteAttachmentUploadRequestBody(                new String[]{{
+                                                add("distinctio"),
+                                                add("quibusdam"),
+                                                add("unde"),
+                                            }}, "nulla");, "corrupti") {{
+                xAmzAlgorithm = "illum";
+                xAmzContentSha256 = "vel";
+                xAmzCredential = "error";
+                xAmzDate = "deserunt";
+                xAmzSecurityToken = "suscipit";
+                xAmzSignature = "iure";
+                xAmzSignedHeaders = "magnam";
+            }};            
 
             CompleteAttachmentUploadResponse res = sdk.completeAttachmentUpload(req);
 
-            if (res.completeAttachmentUploadResponse.isPresent()) {
+            if (res.completeAttachmentUploadResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

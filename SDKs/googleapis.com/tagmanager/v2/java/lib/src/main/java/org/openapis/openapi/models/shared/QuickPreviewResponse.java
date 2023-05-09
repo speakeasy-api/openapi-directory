@@ -18,6 +18,7 @@ public class QuickPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compilerError")
     public Boolean compilerError;
+
     public QuickPreviewResponse withCompilerError(Boolean compilerError) {
         this.compilerError = compilerError;
         return this;
@@ -29,6 +30,7 @@ public class QuickPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerVersion")
     public ContainerVersion containerVersion;
+
     public QuickPreviewResponse withContainerVersion(ContainerVersion containerVersion) {
         this.containerVersion = containerVersion;
         return this;
@@ -40,9 +42,11 @@ public class QuickPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncStatus")
     public SyncStatus syncStatus;
+
     public QuickPreviewResponse withSyncStatus(SyncStatus syncStatus) {
         this.syncStatus = syncStatus;
         return this;
     }
     
+    public QuickPreviewResponse(){}
 }

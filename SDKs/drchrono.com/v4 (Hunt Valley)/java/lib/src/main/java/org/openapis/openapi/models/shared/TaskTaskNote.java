@@ -15,6 +15,7 @@ public class TaskTaskNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public TaskTaskNote withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -23,6 +24,7 @@ public class TaskTaskNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public TaskTaskNote withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +33,7 @@ public class TaskTaskNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public String createdBy;
+
     public TaskTaskNote withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -39,6 +42,7 @@ public class TaskTaskNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TaskTaskNote withId(Long id) {
         this.id = id;
         return this;
@@ -50,6 +54,7 @@ public class TaskTaskNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task")
     public Long task;
+
     public TaskTaskNote withTask(Long task) {
         this.task = task;
         return this;
@@ -58,6 +63,7 @@ public class TaskTaskNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public TaskTaskNote withText(String text) {
         this.text = text;
         return this;
@@ -66,9 +72,11 @@ public class TaskTaskNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public TaskTaskNote withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public TaskTaskNote(){}
 }

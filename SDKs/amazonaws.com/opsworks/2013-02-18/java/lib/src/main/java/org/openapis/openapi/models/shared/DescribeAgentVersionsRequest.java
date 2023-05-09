@@ -12,6 +12,7 @@ public class DescribeAgentVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationManager")
     public StackConfigurationManager configurationManager;
+
     public DescribeAgentVersionsRequest withConfigurationManager(StackConfigurationManager configurationManager) {
         this.configurationManager = configurationManager;
         return this;
@@ -20,9 +21,11 @@ public class DescribeAgentVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public DescribeAgentVersionsRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public DescribeAgentVersionsRequest(){}
 }

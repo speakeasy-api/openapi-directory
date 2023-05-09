@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AgentSiteID {
     @JsonProperty("site_id")
     public String siteId;
+
     public AgentSiteID withSiteId(String siteId) {
         this.siteId = siteId;
         return this;
     }
     
+    public AgentSiteID(@JsonProperty("site_id") String siteId) {
+        this.siteId = siteId;
+  }
 }

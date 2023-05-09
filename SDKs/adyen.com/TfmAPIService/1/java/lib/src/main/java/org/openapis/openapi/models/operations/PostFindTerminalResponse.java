@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostFindTerminalResponse {
     
     public String contentType;
+
     public PostFindTerminalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostFindTerminalResponse {
      */
     
     public org.openapis.openapi.models.shared.FindTerminalResponse findTerminalResponse;
+
     public PostFindTerminalResponse withFindTerminalResponse(org.openapis.openapi.models.shared.FindTerminalResponse findTerminalResponse) {
         this.findTerminalResponse = findTerminalResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostFindTerminalResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostFindTerminalResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostFindTerminalResponse {
     
     
     public Integer statusCode;
+
     public PostFindTerminalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostFindTerminalResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostFindTerminalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostFindTerminalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

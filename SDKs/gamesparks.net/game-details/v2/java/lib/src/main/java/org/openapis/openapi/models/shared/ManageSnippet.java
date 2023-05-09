@@ -15,6 +15,7 @@ public class ManageSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public String[] groups;
+
     public ManageSnippet withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -23,6 +24,7 @@ public class ManageSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ManageSnippet withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class ManageSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public ManageSnippet withScript(String script) {
         this.script = script;
         return this;
@@ -39,6 +42,7 @@ public class ManageSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptData")
     public String scriptData;
+
     public ManageSnippet withScriptData(String scriptData) {
         this.scriptData = scriptData;
         return this;
@@ -47,6 +51,7 @@ public class ManageSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortCode")
     public String shortCode;
+
     public ManageSnippet withShortCode(String shortCode) {
         this.shortCode = shortCode;
         return this;
@@ -55,9 +60,11 @@ public class ManageSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public ManageSnippet withTemplate(String template) {
         this.template = template;
         return this;
     }
     
+    public ManageSnippet(){}
 }

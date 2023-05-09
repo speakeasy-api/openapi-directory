@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPlaceResponse {
@@ -12,6 +13,7 @@ public class GetPlaceResponse {
      */
     
     public Object accessDeniedException;
+
     public GetPlaceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetPlaceResponse {
     
     
     public String contentType;
+
     public GetPlaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPlaceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPlaceResponse getPlaceResponse;
+
     public GetPlaceResponse withGetPlaceResponse(org.openapis.openapi.models.shared.GetPlaceResponse getPlaceResponse) {
         this.getPlaceResponse = getPlaceResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetPlaceResponse {
      */
     
     public Object internalServerException;
+
     public GetPlaceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetPlaceResponse {
     
     
     public Integer statusCode;
+
     public GetPlaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetPlaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPlaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetPlaceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetPlaceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetPlaceResponse {
      */
     
     public Object throttlingException;
+
     public GetPlaceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetPlaceResponse {
      */
     
     public Object validationException;
+
     public GetPlaceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetPlaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

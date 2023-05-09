@@ -18,6 +18,7 @@ public class SourceObjectIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mysqlIdentifier")
     public MysqlObjectIdentifier mysqlIdentifier;
+
     public SourceObjectIdentifier withMysqlIdentifier(MysqlObjectIdentifier mysqlIdentifier) {
         this.mysqlIdentifier = mysqlIdentifier;
         return this;
@@ -29,9 +30,11 @@ public class SourceObjectIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oracleIdentifier")
     public OracleObjectIdentifier oracleIdentifier;
+
     public SourceObjectIdentifier withOracleIdentifier(OracleObjectIdentifier oracleIdentifier) {
         this.oracleIdentifier = oracleIdentifier;
         return this;
     }
     
+    public SourceObjectIdentifier(){}
 }

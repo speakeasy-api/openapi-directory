@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DomainEndpointOptionsStatus - The configuration and status of the domain's endpoint options.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DomainEndpointOptionsStatus {
     
     public DomainEndpointOptions options;
+
     public DomainEndpointOptionsStatus withOptions(DomainEndpointOptions options) {
         this.options = options;
         return this;
@@ -19,9 +20,14 @@ public class DomainEndpointOptionsStatus {
     
     
     public OptionStatus status;
+
     public DomainEndpointOptionsStatus withStatus(OptionStatus status) {
         this.status = status;
         return this;
     }
     
+    public DomainEndpointOptionsStatus(@JsonProperty("Options") DomainEndpointOptions options, @JsonProperty("Status") OptionStatus status) {
+        this.options = options;
+        this.status = status;
+  }
 }

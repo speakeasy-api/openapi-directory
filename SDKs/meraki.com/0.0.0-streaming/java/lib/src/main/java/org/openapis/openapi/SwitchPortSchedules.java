@@ -58,11 +58,9 @@ public class SwitchPortSchedules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateNetworkSwitchPortScheduleResponse res = new org.openapis.openapi.models.operations.CreateNetworkSwitchPortScheduleResponse() {{
+        org.openapis.openapi.models.operations.CreateNetworkSwitchPortScheduleResponse res = new org.openapis.openapi.models.operations.CreateNetworkSwitchPortScheduleResponse(contentType, httpRes.statusCode()) {{
             createNetworkSwitchPortSchedule201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -98,10 +96,8 @@ public class SwitchPortSchedules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNetworkSwitchPortScheduleResponse res = new org.openapis.openapi.models.operations.DeleteNetworkSwitchPortScheduleResponse() {{
+        org.openapis.openapi.models.operations.DeleteNetworkSwitchPortScheduleResponse res = new org.openapis.openapi.models.operations.DeleteNetworkSwitchPortScheduleResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -132,11 +128,9 @@ public class SwitchPortSchedules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSwitchPortSchedulesResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchPortSchedulesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSwitchPortSchedulesResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchPortSchedulesResponse(contentType, httpRes.statusCode()) {{
             getNetworkSwitchPortSchedules200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,11 +168,9 @@ public class SwitchPortSchedules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkSwitchPortScheduleResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSwitchPortScheduleResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkSwitchPortScheduleResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSwitchPortScheduleResponse(contentType, httpRes.statusCode()) {{
             updateNetworkSwitchPortSchedule200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

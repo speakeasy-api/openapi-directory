@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFleetAdvisorDatabasesResponse {
     
     public String contentType;
+
     public DeleteFleetAdvisorDatabasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFleetAdvisorDatabasesResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteFleetAdvisorDatabasesResponse deleteFleetAdvisorDatabasesResponse;
+
     public DeleteFleetAdvisorDatabasesResponse withDeleteFleetAdvisorDatabasesResponse(org.openapis.openapi.models.shared.DeleteFleetAdvisorDatabasesResponse deleteFleetAdvisorDatabasesResponse) {
         this.deleteFleetAdvisorDatabasesResponse = deleteFleetAdvisorDatabasesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFleetAdvisorDatabasesResponse {
      */
     
     public Object invalidOperationFault;
+
     public DeleteFleetAdvisorDatabasesResponse withInvalidOperationFault(Object invalidOperationFault) {
         this.invalidOperationFault = invalidOperationFault;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFleetAdvisorDatabasesResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public DeleteFleetAdvisorDatabasesResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -46,6 +51,7 @@ public class DeleteFleetAdvisorDatabasesResponse {
     
     
     public Integer statusCode;
+
     public DeleteFleetAdvisorDatabasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteFleetAdvisorDatabasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFleetAdvisorDatabasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteFleetAdvisorDatabasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

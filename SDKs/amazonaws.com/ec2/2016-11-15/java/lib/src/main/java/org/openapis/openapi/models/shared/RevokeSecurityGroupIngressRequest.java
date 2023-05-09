@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class RevokeSecurityGroupIngressRequest {
     
     public String cidrIp;
+
     public RevokeSecurityGroupIngressRequest withCidrIp(String cidrIp) {
         this.cidrIp = cidrIp;
         return this;
@@ -16,6 +17,7 @@ public class RevokeSecurityGroupIngressRequest {
     
     
     public Boolean dryRun;
+
     public RevokeSecurityGroupIngressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class RevokeSecurityGroupIngressRequest {
     
     
     public Long fromPort;
+
     public RevokeSecurityGroupIngressRequest withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -30,6 +33,7 @@ public class RevokeSecurityGroupIngressRequest {
     
     
     public String groupId;
+
     public RevokeSecurityGroupIngressRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -37,6 +41,7 @@ public class RevokeSecurityGroupIngressRequest {
     
     
     public String groupName;
+
     public RevokeSecurityGroupIngressRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -44,6 +49,7 @@ public class RevokeSecurityGroupIngressRequest {
     
     
     public IpPermissionList[] ipPermissions;
+
     public RevokeSecurityGroupIngressRequest withIpPermissions(IpPermissionList[] ipPermissions) {
         this.ipPermissions = ipPermissions;
         return this;
@@ -51,6 +57,7 @@ public class RevokeSecurityGroupIngressRequest {
     
     
     public String ipProtocol;
+
     public RevokeSecurityGroupIngressRequest withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -58,6 +65,7 @@ public class RevokeSecurityGroupIngressRequest {
     
     
     public String[] securityGroupRuleIds;
+
     public RevokeSecurityGroupIngressRequest withSecurityGroupRuleIds(String[] securityGroupRuleIds) {
         this.securityGroupRuleIds = securityGroupRuleIds;
         return this;
@@ -65,6 +73,7 @@ public class RevokeSecurityGroupIngressRequest {
     
     
     public String sourceSecurityGroupName;
+
     public RevokeSecurityGroupIngressRequest withSourceSecurityGroupName(String sourceSecurityGroupName) {
         this.sourceSecurityGroupName = sourceSecurityGroupName;
         return this;
@@ -72,6 +81,7 @@ public class RevokeSecurityGroupIngressRequest {
     
     
     public String sourceSecurityGroupOwnerId;
+
     public RevokeSecurityGroupIngressRequest withSourceSecurityGroupOwnerId(String sourceSecurityGroupOwnerId) {
         this.sourceSecurityGroupOwnerId = sourceSecurityGroupOwnerId;
         return this;
@@ -79,9 +89,11 @@ public class RevokeSecurityGroupIngressRequest {
     
     
     public Long toPort;
+
     public RevokeSecurityGroupIngressRequest withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public RevokeSecurityGroupIngressRequest(){}
 }

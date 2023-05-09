@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeEndpointAccessMessage {
     
     public String clusterIdentifier;
+
     public DescribeEndpointAccessMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class DescribeEndpointAccessMessage {
     
     
     public String endpointName;
+
     public DescribeEndpointAccessMessage withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -23,6 +25,7 @@ public class DescribeEndpointAccessMessage {
     
     
     public String marker;
+
     public DescribeEndpointAccessMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,6 +33,7 @@ public class DescribeEndpointAccessMessage {
     
     
     public Long maxRecords;
+
     public DescribeEndpointAccessMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -37,6 +41,7 @@ public class DescribeEndpointAccessMessage {
     
     
     public String resourceOwner;
+
     public DescribeEndpointAccessMessage withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -44,9 +49,11 @@ public class DescribeEndpointAccessMessage {
     
     
     public String vpcId;
+
     public DescribeEndpointAccessMessage withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeEndpointAccessMessage(){}
 }

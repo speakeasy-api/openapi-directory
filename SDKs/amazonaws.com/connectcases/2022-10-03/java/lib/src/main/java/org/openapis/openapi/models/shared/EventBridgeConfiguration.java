@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EventBridgeConfiguration {
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public EventBridgeConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -22,9 +23,13 @@ public class EventBridgeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedData")
     public EventIncludedData includedData;
+
     public EventBridgeConfiguration withIncludedData(EventIncludedData includedData) {
         this.includedData = includedData;
         return this;
     }
     
+    public EventBridgeConfiguration(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

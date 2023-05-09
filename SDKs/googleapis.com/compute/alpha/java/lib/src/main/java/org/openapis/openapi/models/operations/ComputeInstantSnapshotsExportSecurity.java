@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeInstantSnapshotsExportSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstantSnapshotsExportSecurityOption1 option1;
+
     public ComputeInstantSnapshotsExportSecurity withOption1(ComputeInstantSnapshotsExportSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeInstantSnapshotsExportSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstantSnapshotsExportSecurityOption2 option2;
+
     public ComputeInstantSnapshotsExportSecurity withOption2(ComputeInstantSnapshotsExportSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeInstantSnapshotsExportSecurity(){}
 }

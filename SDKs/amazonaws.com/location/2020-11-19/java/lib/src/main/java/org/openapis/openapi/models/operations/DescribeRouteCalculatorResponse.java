@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRouteCalculatorResponse {
@@ -12,6 +13,7 @@ public class DescribeRouteCalculatorResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeRouteCalculatorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRouteCalculatorResponse {
     
     
     public String contentType;
+
     public DescribeRouteCalculatorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRouteCalculatorResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRouteCalculatorResponse describeRouteCalculatorResponse;
+
     public DescribeRouteCalculatorResponse withDescribeRouteCalculatorResponse(org.openapis.openapi.models.shared.DescribeRouteCalculatorResponse describeRouteCalculatorResponse) {
         this.describeRouteCalculatorResponse = describeRouteCalculatorResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRouteCalculatorResponse {
      */
     
     public Object internalServerException;
+
     public DescribeRouteCalculatorResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeRouteCalculatorResponse {
     
     
     public Integer statusCode;
+
     public DescribeRouteCalculatorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeRouteCalculatorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRouteCalculatorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeRouteCalculatorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeRouteCalculatorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeRouteCalculatorResponse {
      */
     
     public Object throttlingException;
+
     public DescribeRouteCalculatorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeRouteCalculatorResponse {
      */
     
     public Object validationException;
+
     public DescribeRouteCalculatorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeRouteCalculatorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

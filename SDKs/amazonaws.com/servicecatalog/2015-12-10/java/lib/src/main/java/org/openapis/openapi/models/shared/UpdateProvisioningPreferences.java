@@ -15,6 +15,7 @@ public class UpdateProvisioningPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSetAccounts")
     public String[] stackSetAccounts;
+
     public UpdateProvisioningPreferences withStackSetAccounts(String[] stackSetAccounts) {
         this.stackSetAccounts = stackSetAccounts;
         return this;
@@ -23,6 +24,7 @@ public class UpdateProvisioningPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSetFailureToleranceCount")
     public Long stackSetFailureToleranceCount;
+
     public UpdateProvisioningPreferences withStackSetFailureToleranceCount(Long stackSetFailureToleranceCount) {
         this.stackSetFailureToleranceCount = stackSetFailureToleranceCount;
         return this;
@@ -31,6 +33,7 @@ public class UpdateProvisioningPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSetFailureTolerancePercentage")
     public Long stackSetFailureTolerancePercentage;
+
     public UpdateProvisioningPreferences withStackSetFailureTolerancePercentage(Long stackSetFailureTolerancePercentage) {
         this.stackSetFailureTolerancePercentage = stackSetFailureTolerancePercentage;
         return this;
@@ -39,6 +42,7 @@ public class UpdateProvisioningPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSetMaxConcurrencyCount")
     public Long stackSetMaxConcurrencyCount;
+
     public UpdateProvisioningPreferences withStackSetMaxConcurrencyCount(Long stackSetMaxConcurrencyCount) {
         this.stackSetMaxConcurrencyCount = stackSetMaxConcurrencyCount;
         return this;
@@ -47,6 +51,7 @@ public class UpdateProvisioningPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSetMaxConcurrencyPercentage")
     public Long stackSetMaxConcurrencyPercentage;
+
     public UpdateProvisioningPreferences withStackSetMaxConcurrencyPercentage(Long stackSetMaxConcurrencyPercentage) {
         this.stackSetMaxConcurrencyPercentage = stackSetMaxConcurrencyPercentage;
         return this;
@@ -55,6 +60,7 @@ public class UpdateProvisioningPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSetOperationType")
     public StackSetOperationTypeEnum stackSetOperationType;
+
     public UpdateProvisioningPreferences withStackSetOperationType(StackSetOperationTypeEnum stackSetOperationType) {
         this.stackSetOperationType = stackSetOperationType;
         return this;
@@ -63,9 +69,11 @@ public class UpdateProvisioningPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSetRegions")
     public String[] stackSetRegions;
+
     public UpdateProvisioningPreferences withStackSetRegions(String[] stackSetRegions) {
         this.stackSetRegions = stackSetRegions;
         return this;
     }
     
+    public UpdateProvisioningPreferences(){}
 }

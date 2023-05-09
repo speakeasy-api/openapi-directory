@@ -14,6 +14,7 @@ public class BetDelayed {
      */
     @JsonProperty("delayPeriodSeconds")
     public Long delayPeriodSeconds;
+
     public BetDelayed withDelayPeriodSeconds(Long delayPeriodSeconds) {
         this.delayPeriodSeconds = delayPeriodSeconds;
         return this;
@@ -24,6 +25,7 @@ public class BetDelayed {
      */
     @JsonProperty("delayedBetId")
     public String delayedBetId;
+
     public BetDelayed withDelayedBetId(String delayedBetId) {
         this.delayedBetId = delayedBetId;
         return this;
@@ -34,6 +36,7 @@ public class BetDelayed {
      */
     @JsonProperty("id")
     public String id;
+
     public BetDelayed withId(String id) {
         this.id = id;
         return this;
@@ -45,9 +48,15 @@ public class BetDelayed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Double number;
+
     public BetDelayed withNumber(Double number) {
         this.number = number;
         return this;
     }
     
+    public BetDelayed(@JsonProperty("delayPeriodSeconds") Long delayPeriodSeconds, @JsonProperty("delayedBetId") String delayedBetId, @JsonProperty("id") String id) {
+        this.delayPeriodSeconds = delayPeriodSeconds;
+        this.delayedBetId = delayedBetId;
+        this.id = id;
+  }
 }

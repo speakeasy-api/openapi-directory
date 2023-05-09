@@ -18,6 +18,7 @@ public class CardAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionLabel")
     public String actionLabel;
+
     public CardAction withActionLabel(String actionLabel) {
         this.actionLabel = actionLabel;
         return this;
@@ -29,9 +30,11 @@ public class CardAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onClick")
     public OnClick onClick;
+
     public CardAction withOnClick(OnClick onClick) {
         this.onClick = onClick;
         return this;
     }
     
+    public CardAction(){}
 }

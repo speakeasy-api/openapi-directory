@@ -12,6 +12,7 @@ public class NAHeatingSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heating_energy")
     public String heatingEnergy;
+
     public NAHeatingSystem withHeatingEnergy(String heatingEnergy) {
         this.heatingEnergy = heatingEnergy;
         return this;
@@ -20,9 +21,11 @@ public class NAHeatingSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heating_system_window_seen")
     public Boolean heatingSystemWindowSeen;
+
     public NAHeatingSystem withHeatingSystemWindowSeen(Boolean heatingSystemWindowSeen) {
         this.heatingSystemWindowSeen = heatingSystemWindowSeen;
         return this;
     }
     
+    public NAHeatingSystem(){}
 }

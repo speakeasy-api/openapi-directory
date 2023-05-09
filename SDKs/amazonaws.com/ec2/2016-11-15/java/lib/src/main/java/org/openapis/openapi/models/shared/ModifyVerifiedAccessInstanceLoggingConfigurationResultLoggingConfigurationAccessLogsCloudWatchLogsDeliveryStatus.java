@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogsDeliveryStatus {
     
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogsDeliveryStatusCodeEnum code;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogsDeliveryStatus withCode(ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogsDeliveryStatusCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfig
     
     
     public String message;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogsDeliveryStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogsDeliveryStatus(){}
 }

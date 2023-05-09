@@ -18,6 +18,7 @@ public class KeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseKeyUsage")
     public KeyUsageOptions baseKeyUsage;
+
     public KeyUsage withBaseKeyUsage(KeyUsageOptions baseKeyUsage) {
         this.baseKeyUsage = baseKeyUsage;
         return this;
@@ -29,6 +30,7 @@ public class KeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extendedKeyUsage")
     public ExtendedKeyUsageOptions extendedKeyUsage;
+
     public KeyUsage withExtendedKeyUsage(ExtendedKeyUsageOptions extendedKeyUsage) {
         this.extendedKeyUsage = extendedKeyUsage;
         return this;
@@ -40,9 +42,11 @@ public class KeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unknownExtendedKeyUsages")
     public ObjectId[] unknownExtendedKeyUsages;
+
     public KeyUsage withUnknownExtendedKeyUsages(ObjectId[] unknownExtendedKeyUsages) {
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
         return this;
     }
     
+    public KeyUsage(){}
 }

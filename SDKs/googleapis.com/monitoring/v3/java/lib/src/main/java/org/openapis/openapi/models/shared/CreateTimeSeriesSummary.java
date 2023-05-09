@@ -18,6 +18,7 @@ public class CreateTimeSeriesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CreateTimeSeriesSummary withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -29,6 +30,7 @@ public class CreateTimeSeriesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successPointCount")
     public Integer successPointCount;
+
     public CreateTimeSeriesSummary withSuccessPointCount(Integer successPointCount) {
         this.successPointCount = successPointCount;
         return this;
@@ -40,9 +42,11 @@ public class CreateTimeSeriesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalPointCount")
     public Integer totalPointCount;
+
     public CreateTimeSeriesSummary withTotalPointCount(Integer totalPointCount) {
         this.totalPointCount = totalPointCount;
         return this;
     }
     
+    public CreateTimeSeriesSummary(){}
 }

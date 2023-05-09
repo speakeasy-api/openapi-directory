@@ -18,9 +18,11 @@ public class RateLimitsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateLimits")
     public RateLimit[] rateLimits;
+
     public RateLimitsResponse withRateLimits(RateLimit[] rateLimits) {
         this.rateLimits = rateLimits;
         return this;
     }
     
+    public RateLimitsResponse(){}
 }

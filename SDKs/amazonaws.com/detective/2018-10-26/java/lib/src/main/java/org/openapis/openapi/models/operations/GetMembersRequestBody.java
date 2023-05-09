@@ -12,6 +12,7 @@ public class GetMembersRequestBody {
      */
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public GetMembersRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -22,9 +23,14 @@ public class GetMembersRequestBody {
      */
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public GetMembersRequestBody withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
     }
     
+    public GetMembersRequestBody(@JsonProperty("AccountIds") String[] accountIds, @JsonProperty("GraphArn") String graphArn) {
+        this.accountIds = accountIds;
+        this.graphArn = graphArn;
+  }
 }

@@ -18,6 +18,7 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doi")
     public String doi;
+
     public ArticleSearch withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -29,6 +30,7 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public Integer group;
+
     public ArticleSearch withGroup(Integer group) {
         this.group = group;
         return this;
@@ -40,6 +42,7 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("handle")
     public String handle;
+
     public ArticleSearch withHandle(String handle) {
         this.handle = handle;
         return this;
@@ -51,6 +54,7 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("institution")
     public Integer institution;
+
     public ArticleSearch withInstitution(Integer institution) {
         this.institution = institution;
         return this;
@@ -62,6 +66,7 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_type")
     public Long itemType;
+
     public ArticleSearch withItemType(Long itemType) {
         this.itemType = itemType;
         return this;
@@ -73,6 +78,7 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public ArticleSearch withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -84,6 +90,7 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modified_since")
     public String modifiedSince;
+
     public ArticleSearch withModifiedSince(String modifiedSince) {
         this.modifiedSince = modifiedSince;
         return this;
@@ -95,6 +102,7 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Long offset;
+
     public ArticleSearch withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -106,6 +114,7 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public ArticleSearchOrderEnum order;
+
     public ArticleSearch withOrder(ArticleSearchOrderEnum order) {
         this.order = order;
         return this;
@@ -117,6 +126,7 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_direction")
     public ArticleSearchOrderDirectionEnum orderDirection;
+
     public ArticleSearch withOrderDirection(ArticleSearchOrderDirectionEnum orderDirection) {
         this.orderDirection = orderDirection;
         return this;
@@ -128,6 +138,7 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public ArticleSearch withPage(Long page) {
         this.page = page;
         return this;
@@ -139,6 +150,7 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_size")
     public Long pageSize;
+
     public ArticleSearch withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -150,6 +162,7 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     public Long projectId;
+
     public ArticleSearch withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -161,6 +174,7 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published_since")
     public String publishedSince;
+
     public ArticleSearch withPublishedSince(String publishedSince) {
         this.publishedSince = publishedSince;
         return this;
@@ -172,6 +186,7 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_doi")
     public String resourceDoi;
+
     public ArticleSearch withResourceDoi(String resourceDoi) {
         this.resourceDoi = resourceDoi;
         return this;
@@ -183,9 +198,11 @@ public class ArticleSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_for")
     public String searchFor;
+
     public ArticleSearch withSearchFor(String searchFor) {
         this.searchFor = searchFor;
         return this;
     }
     
+    public ArticleSearch(){}
 }

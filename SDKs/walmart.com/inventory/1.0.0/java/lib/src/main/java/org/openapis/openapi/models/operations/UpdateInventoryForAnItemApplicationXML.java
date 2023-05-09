@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateInventoryForAnItemApplicationXML {
     /**
@@ -12,6 +12,7 @@ public class UpdateInventoryForAnItemApplicationXML {
      */
     
     public UpdateInventoryForAnItemApplicationXMLQuantity quantity;
+
     public UpdateInventoryForAnItemApplicationXML withQuantity(UpdateInventoryForAnItemApplicationXMLQuantity quantity) {
         this.quantity = quantity;
         return this;
@@ -22,9 +23,14 @@ public class UpdateInventoryForAnItemApplicationXML {
      */
     
     public String sku;
+
     public UpdateInventoryForAnItemApplicationXML withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public UpdateInventoryForAnItemApplicationXML(@JsonProperty("quantity") UpdateInventoryForAnItemApplicationXMLQuantity quantity, @JsonProperty("sku") String sku) {
+        this.quantity = quantity;
+        this.sku = sku;
+  }
 }

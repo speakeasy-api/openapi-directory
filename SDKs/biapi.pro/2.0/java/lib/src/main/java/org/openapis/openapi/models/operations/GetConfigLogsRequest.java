@@ -10,6 +10,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetConfigLogsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public GetConfigLogsRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -20,6 +21,7 @@ public class GetConfigLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
     public LocalDate maxDate;
+
     public GetConfigLogsRequest withMaxDate(LocalDate maxDate) {
         this.maxDate = maxDate;
         return this;
@@ -30,6 +32,7 @@ public class GetConfigLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
     public LocalDate minDate;
+
     public GetConfigLogsRequest withMinDate(LocalDate minDate) {
         this.minDate = minDate;
         return this;
@@ -40,6 +43,7 @@ public class GetConfigLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public GetConfigLogsRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -50,9 +54,11 @@ public class GetConfigLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public GetConfigLogsRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetConfigLogsRequest(){}
 }

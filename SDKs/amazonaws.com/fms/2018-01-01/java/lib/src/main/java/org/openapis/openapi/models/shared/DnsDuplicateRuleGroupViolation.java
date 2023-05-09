@@ -15,6 +15,7 @@ public class DnsDuplicateRuleGroupViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationTarget")
     public String violationTarget;
+
     public DnsDuplicateRuleGroupViolation withViolationTarget(String violationTarget) {
         this.violationTarget = violationTarget;
         return this;
@@ -23,9 +24,11 @@ public class DnsDuplicateRuleGroupViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationTargetDescription")
     public String violationTargetDescription;
+
     public DnsDuplicateRuleGroupViolation withViolationTargetDescription(String violationTargetDescription) {
         this.violationTargetDescription = violationTargetDescription;
         return this;
     }
     
+    public DnsDuplicateRuleGroupViolation(){}
 }

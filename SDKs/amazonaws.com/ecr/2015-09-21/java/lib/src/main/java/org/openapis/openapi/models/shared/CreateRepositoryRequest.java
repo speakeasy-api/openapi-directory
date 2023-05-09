@@ -12,6 +12,7 @@ public class CreateRepositoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public CreateRepositoryRequest withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -20,6 +21,7 @@ public class CreateRepositoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageScanningConfiguration")
     public ImageScanningConfiguration imageScanningConfiguration;
+
     public CreateRepositoryRequest withImageScanningConfiguration(ImageScanningConfiguration imageScanningConfiguration) {
         this.imageScanningConfiguration = imageScanningConfiguration;
         return this;
@@ -28,6 +30,7 @@ public class CreateRepositoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTagMutability")
     public ImageTagMutabilityEnum imageTagMutability;
+
     public CreateRepositoryRequest withImageTagMutability(ImageTagMutabilityEnum imageTagMutability) {
         this.imageTagMutability = imageTagMutability;
         return this;
@@ -36,6 +39,7 @@ public class CreateRepositoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public CreateRepositoryRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -43,6 +47,7 @@ public class CreateRepositoryRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public CreateRepositoryRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -51,9 +56,13 @@ public class CreateRepositoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateRepositoryRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRepositoryRequest(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

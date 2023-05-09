@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AreaOfInterestGeometry - &lt;p/&gt;
+ * AreaOfInterestGeometry - A GeoJSON object representing the geographic extent in the coordinate space.
  */
 public class AreaOfInterestGeometry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiPolygonGeometry")
     public MultiPolygonGeometryInput multiPolygonGeometry;
+
     public AreaOfInterestGeometry withMultiPolygonGeometry(MultiPolygonGeometryInput multiPolygonGeometry) {
         this.multiPolygonGeometry = multiPolygonGeometry;
         return this;
@@ -23,9 +24,11 @@ public class AreaOfInterestGeometry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolygonGeometry")
     public PolygonGeometryInput polygonGeometry;
+
     public AreaOfInterestGeometry withPolygonGeometry(PolygonGeometryInput polygonGeometry) {
         this.polygonGeometry = polygonGeometry;
         return this;
     }
     
+    public AreaOfInterestGeometry(){}
 }

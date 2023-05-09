@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SuppliersGetOpeningBalanceResponse {
     
     public String contentType;
+
     public SuppliersGetOpeningBalanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SuppliersGetOpeningBalanceResponse {
      */
     
     public org.openapis.openapi.models.shared.OwnerOpeningBalanceInPeriodsDto ownerOpeningBalanceInPeriodsDto;
+
     public SuppliersGetOpeningBalanceResponse withOwnerOpeningBalanceInPeriodsDto(org.openapis.openapi.models.shared.OwnerOpeningBalanceInPeriodsDto ownerOpeningBalanceInPeriodsDto) {
         this.ownerOpeningBalanceInPeriodsDto = ownerOpeningBalanceInPeriodsDto;
         return this;
@@ -26,6 +29,7 @@ public class SuppliersGetOpeningBalanceResponse {
     
     
     public Integer statusCode;
+
     public SuppliersGetOpeningBalanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SuppliersGetOpeningBalanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SuppliersGetOpeningBalanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SuppliersGetOpeningBalanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

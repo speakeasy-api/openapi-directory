@@ -15,6 +15,7 @@ public class PayPalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directCapture")
     public Boolean directCapture;
+
     public PayPalInfo withDirectCapture(Boolean directCapture) {
         this.directCapture = directCapture;
         return this;
@@ -25,6 +26,7 @@ public class PayPalInfo {
      */
     @JsonProperty("payerId")
     public String payerId;
+
     public PayPalInfo withPayerId(String payerId) {
         this.payerId = payerId;
         return this;
@@ -35,9 +37,14 @@ public class PayPalInfo {
      */
     @JsonProperty("subject")
     public String subject;
+
     public PayPalInfo withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public PayPalInfo(@JsonProperty("payerId") String payerId, @JsonProperty("subject") String subject) {
+        this.payerId = payerId;
+        this.subject = subject;
+  }
 }

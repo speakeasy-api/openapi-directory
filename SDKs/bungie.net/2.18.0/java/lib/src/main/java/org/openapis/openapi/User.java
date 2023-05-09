@@ -48,11 +48,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserGetAvailableThemesResponse res = new org.openapis.openapi.models.operations.UserGetAvailableThemesResponse() {{
+        org.openapis.openapi.models.operations.UserGetAvailableThemesResponse res = new org.openapis.openapi.models.operations.UserGetAvailableThemesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -85,11 +83,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserGetBungieNetUserByIdResponse res = new org.openapis.openapi.models.operations.UserGetBungieNetUserByIdResponse() {{
+        org.openapis.openapi.models.operations.UserGetBungieNetUserByIdResponse res = new org.openapis.openapi.models.operations.UserGetBungieNetUserByIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -122,11 +118,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserGetCredentialTypesForTargetAccountResponse res = new org.openapis.openapi.models.operations.UserGetCredentialTypesForTargetAccountResponse() {{
+        org.openapis.openapi.models.operations.UserGetCredentialTypesForTargetAccountResponse res = new org.openapis.openapi.models.operations.UserGetCredentialTypesForTargetAccountResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,11 +153,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserGetMembershipDataByIdResponse res = new org.openapis.openapi.models.operations.UserGetMembershipDataByIdResponse() {{
+        org.openapis.openapi.models.operations.UserGetMembershipDataByIdResponse res = new org.openapis.openapi.models.operations.UserGetMembershipDataByIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,10 +170,11 @@ public class User {
 
     /**
      * Returns a list of accounts associated with signed in user. This is useful for OAuth implementations that do not give you access to the token response.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UserGetMembershipDataForCurrentUserResponse userGetMembershipDataForCurrentUser() throws Exception {
+    public org.openapis.openapi.models.operations.UserGetMembershipDataForCurrentUserResponse userGetMembershipDataForCurrentUser(org.openapis.openapi.models.operations.UserGetMembershipDataForCurrentUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/User/GetMembershipsForCurrentUser/");
         
@@ -190,16 +183,15 @@ public class User {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserGetMembershipDataForCurrentUserResponse res = new org.openapis.openapi.models.operations.UserGetMembershipDataForCurrentUserResponse() {{
+        org.openapis.openapi.models.operations.UserGetMembershipDataForCurrentUserResponse res = new org.openapis.openapi.models.operations.UserGetMembershipDataForCurrentUserResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -232,11 +224,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserGetMembershipFromHardLinkedCredentialResponse res = new org.openapis.openapi.models.operations.UserGetMembershipFromHardLinkedCredentialResponse() {{
+        org.openapis.openapi.models.operations.UserGetMembershipFromHardLinkedCredentialResponse res = new org.openapis.openapi.models.operations.UserGetMembershipFromHardLinkedCredentialResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -269,11 +259,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserGetSanitizedPlatformDisplayNamesResponse res = new org.openapis.openapi.models.operations.UserGetSanitizedPlatformDisplayNamesResponse() {{
+        org.openapis.openapi.models.operations.UserGetSanitizedPlatformDisplayNamesResponse res = new org.openapis.openapi.models.operations.UserGetSanitizedPlatformDisplayNamesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -306,11 +294,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserSearchByGlobalNamePostResponse res = new org.openapis.openapi.models.operations.UserSearchByGlobalNamePostResponse() {{
+        org.openapis.openapi.models.operations.UserSearchByGlobalNamePostResponse res = new org.openapis.openapi.models.operations.UserSearchByGlobalNamePostResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +329,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserSearchByGlobalNamePrefixResponse res = new org.openapis.openapi.models.operations.UserSearchByGlobalNamePrefixResponse() {{
+        org.openapis.openapi.models.operations.UserSearchByGlobalNamePrefixResponse res = new org.openapis.openapi.models.operations.UserSearchByGlobalNamePrefixResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

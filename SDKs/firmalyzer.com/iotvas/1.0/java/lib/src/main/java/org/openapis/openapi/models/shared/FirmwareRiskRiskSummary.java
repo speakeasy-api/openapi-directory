@@ -12,6 +12,7 @@ public class FirmwareRiskRiskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_tools_risk")
     public String clientToolsRisk;
+
     public FirmwareRiskRiskSummary withClientToolsRisk(String clientToolsRisk) {
         this.clientToolsRisk = clientToolsRisk;
         return this;
@@ -20,6 +21,7 @@ public class FirmwareRiskRiskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crypto_risk")
     public String cryptoRisk;
+
     public FirmwareRiskRiskSummary withCryptoRisk(String cryptoRisk) {
         this.cryptoRisk = cryptoRisk;
         return this;
@@ -28,6 +30,7 @@ public class FirmwareRiskRiskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kernel_risk")
     public String kernelRisk;
+
     public FirmwareRiskRiskSummary withKernelRisk(String kernelRisk) {
         this.kernelRisk = kernelRisk;
         return this;
@@ -36,9 +39,11 @@ public class FirmwareRiskRiskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_services_risk")
     public String netServicesRisk;
+
     public FirmwareRiskRiskSummary withNetServicesRisk(String netServicesRisk) {
         this.netServicesRisk = netServicesRisk;
         return this;
     }
     
+    public FirmwareRiskRiskSummary(){}
 }

@@ -12,9 +12,11 @@ public class PostApplicationChargeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_charge")
     public PostApplicationChargeRequestBodyApplicationCharge applicationCharge;
+
     public PostApplicationChargeRequestBody withApplicationCharge(PostApplicationChargeRequestBodyApplicationCharge applicationCharge) {
         this.applicationCharge = applicationCharge;
         return this;
     }
     
+    public PostApplicationChargeRequestBody(){}
 }

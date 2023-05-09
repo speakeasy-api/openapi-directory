@@ -20,6 +20,7 @@ public class CustomerQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public CustomerFilter filter;
+
     public CustomerQuery withFilter(CustomerFilter filter) {
         this.filter = filter;
         return this;
@@ -31,9 +32,11 @@ public class CustomerQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public CustomerSort sort;
+
     public CustomerQuery withSort(CustomerSort sort) {
         this.sort = sort;
         return this;
     }
     
+    public CustomerQuery(){}
 }

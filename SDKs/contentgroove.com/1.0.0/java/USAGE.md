@@ -3,10 +3,11 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DeleteApiV1ClipsIdSecurity;
-import org.openapis.openapi.models.operations.DeleteApiV1ClipsIdRequest;
-import org.openapis.openapi.models.operations.DeleteApiV1ClipsIdResponse;
+import org.openapis.openapi.models.operations.CreateClipRequestBody;
+import org.openapis.openapi.models.operations.CreateClipRequestBodyData;
+import org.openapis.openapi.models.operations.CreateClipRequestBodyDataAttributes;
+import org.openapis.openapi.models.operations.CreateClipResponse;
+import org.openapis.openapi.models.operations.CreateClipSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,19 +15,19 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteApiV1ClipsIdRequest req = new DeleteApiV1ClipsIdRequest() {{
-                id = "corrupti";
-            }}            
+            CreateClipRequestBody req = new CreateClipRequestBody(                new CreateClipRequestBodyData(                new CreateClipRequestBodyDataAttributes(12.3, "9b9a2e82-5b47-4f59-831d-4c239824b983", "Example New Clip", 10.1);););            
 
-            DeleteApiV1ClipsIdResponse res = sdk.deleteApiV1ClipsId(req, new DeleteApiV1ClipsIdSecurity() {{
+            CreateClipResponse res = sdk.createClip(req, new CreateClipSecurity("corrupti") {{
                 bearerHeader = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.statusCode == 200) {
+            if (res.clipResponseObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

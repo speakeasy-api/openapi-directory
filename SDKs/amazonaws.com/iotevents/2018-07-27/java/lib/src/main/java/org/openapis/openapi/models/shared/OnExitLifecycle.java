@@ -15,9 +15,11 @@ public class OnExitLifecycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public Event[] events;
+
     public OnExitLifecycle withEvents(Event[] events) {
         this.events = events;
         return this;
     }
     
+    public OnExitLifecycle(){}
 }

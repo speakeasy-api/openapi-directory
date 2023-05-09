@@ -18,6 +18,7 @@ public class GoogleCloudOrgpolicyV2ListCustomConstraintsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customConstraints")
     public GoogleCloudOrgpolicyV2CustomConstraint[] customConstraints;
+
     public GoogleCloudOrgpolicyV2ListCustomConstraintsResponse withCustomConstraints(GoogleCloudOrgpolicyV2CustomConstraint[] customConstraints) {
         this.customConstraints = customConstraints;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudOrgpolicyV2ListCustomConstraintsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudOrgpolicyV2ListCustomConstraintsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudOrgpolicyV2ListCustomConstraintsResponse(){}
 }

@@ -15,9 +15,11 @@ public class DeleteRateBasedRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public DeleteRateBasedRuleResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
     }
     
+    public DeleteRateBasedRuleResponse(){}
 }

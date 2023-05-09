@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetzipcodeinfoRequest;
 import org.openapis.openapi.models.operations.GetzipcodeinfoResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetzipcodeinfoRequest req = new GetzipcodeinfoRequest() {{
-                license = "corrupti";
-                zip = "provident";
-            }}            
+            GetzipcodeinfoRequest req = new GetzipcodeinfoRequest("corrupti", "provident");            
 
             GetzipcodeinfoResponse res = sdk.detailedZipCodeInformation.getzipcodeinfo(req);
 
-            if (res.getzipcodeinfo200ApplicationJSONObject.isPresent()) {
+            if (res.getzipcodeinfo200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,9 +44,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### detailedZipCodeInformation
+### [detailedZipCodeInformation](docs/detailedzipcodeinformation/README.md)
 
-* `getzipcodeinfo` - Gets detailed zip code information
+* [getzipcodeinfo](docs/detailedzipcodeinformation/README.md#getzipcodeinfo) - Gets detailed zip code information
 <!-- End SDK Available Operations -->
 
 ### Maturity

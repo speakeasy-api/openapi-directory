@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCacheParameterGroupsMessage {
     
     public String cacheParameterGroupName;
+
     public DescribeCacheParameterGroupsMessage withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeCacheParameterGroupsMessage {
     
     
     public String marker;
+
     public DescribeCacheParameterGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,9 +28,11 @@ public class DescribeCacheParameterGroupsMessage {
     
     
     public Long maxRecords;
+
     public DescribeCacheParameterGroupsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeCacheParameterGroupsMessage(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBackendAuthResponse {
@@ -12,6 +13,7 @@ public class GetBackendAuthResponse {
      */
     
     public Object badRequestException;
+
     public GetBackendAuthResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetBackendAuthResponse {
     
     
     public String contentType;
+
     public GetBackendAuthResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetBackendAuthResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public GetBackendAuthResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class GetBackendAuthResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBackendAuthResponse getBackendAuthResponse;
+
     public GetBackendAuthResponse withGetBackendAuthResponse(org.openapis.openapi.models.shared.GetBackendAuthResponse getBackendAuthResponse) {
         this.getBackendAuthResponse = getBackendAuthResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetBackendAuthResponse {
      */
     
     public Object notFoundException;
+
     public GetBackendAuthResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetBackendAuthResponse {
     
     
     public Integer statusCode;
+
     public GetBackendAuthResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetBackendAuthResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBackendAuthResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetBackendAuthResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetBackendAuthResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetBackendAuthResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

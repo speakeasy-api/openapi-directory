@@ -18,9 +18,11 @@ public class ChannelConversionPings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pings")
     public ChannelConversionPing[] pings;
+
     public ChannelConversionPings withPings(ChannelConversionPing[] pings) {
         this.pings = pings;
         return this;
     }
     
+    public ChannelConversionPings(){}
 }

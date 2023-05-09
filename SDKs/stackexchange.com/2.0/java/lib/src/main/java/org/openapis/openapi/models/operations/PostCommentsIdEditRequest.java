@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCommentsIdEditRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=body")
     public String body;
+
     public PostCommentsIdEditRequest withBody(String body) {
         this.body = body;
         return this;
@@ -20,6 +22,7 @@ public class PostCommentsIdEditRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public PostCommentsIdEditRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -60,6 +63,7 @@ public class PostCommentsIdEditRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public PostCommentsIdEditRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -67,6 +71,7 @@ public class PostCommentsIdEditRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PostCommentsIdEditRequest withId(Long id) {
         this.id = id;
         return this;
@@ -74,6 +79,7 @@ public class PostCommentsIdEditRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preview")
     public Boolean preview;
+
     public PostCommentsIdEditRequest withPreview(Boolean preview) {
         this.preview = preview;
         return this;
@@ -85,9 +91,14 @@ public class PostCommentsIdEditRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public PostCommentsIdEditRequest withSite(String site) {
         this.site = site;
         return this;
     }
     
+    public PostCommentsIdEditRequest(@JsonProperty("id") Long id, @JsonProperty("site") String site) {
+        this.id = id;
+        this.site = site;
+  }
 }

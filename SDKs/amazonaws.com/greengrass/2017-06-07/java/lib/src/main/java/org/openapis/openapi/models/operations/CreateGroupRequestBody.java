@@ -15,6 +15,7 @@ public class CreateGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InitialVersion")
     public CreateGroupRequestBodyInitialVersion initialVersion;
+
     public CreateGroupRequestBody withInitialVersion(CreateGroupRequestBodyInitialVersion initialVersion) {
         this.initialVersion = initialVersion;
         return this;
@@ -25,6 +26,7 @@ public class CreateGroupRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateGroupRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +38,13 @@ public class CreateGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateGroupRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateGroupRequestBody(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

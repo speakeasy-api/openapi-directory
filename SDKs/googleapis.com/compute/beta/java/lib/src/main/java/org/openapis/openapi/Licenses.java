@@ -59,11 +59,9 @@ public class Licenses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeLicensesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeLicensesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeLicensesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeLicensesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Licenses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeLicensesGetResponse res = new org.openapis.openapi.models.operations.ComputeLicensesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeLicensesGetResponse res = new org.openapis.openapi.models.operations.ComputeLicensesGetResponse(contentType, httpRes.statusCode()) {{
             license = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Licenses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeLicensesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeLicensesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeLicensesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeLicensesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Licenses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeLicensesInsertResponse res = new org.openapis.openapi.models.operations.ComputeLicensesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeLicensesInsertResponse res = new org.openapis.openapi.models.operations.ComputeLicensesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class Licenses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeLicensesListResponse res = new org.openapis.openapi.models.operations.ComputeLicensesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeLicensesListResponse res = new org.openapis.openapi.models.operations.ComputeLicensesListResponse(contentType, httpRes.statusCode()) {{
             licensesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class Licenses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeLicensesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeLicensesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeLicensesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeLicensesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class Licenses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeLicensesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeLicensesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeLicensesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeLicensesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

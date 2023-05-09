@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddUserToGroupRequest {
     @JsonProperty("permissionGroupIds")
     public Long[] permissionGroupIds;
+
     public AddUserToGroupRequest withPermissionGroupIds(Long[] permissionGroupIds) {
         this.permissionGroupIds = permissionGroupIds;
         return this;
     }
     
+    public AddUserToGroupRequest(@JsonProperty("permissionGroupIds") Long[] permissionGroupIds) {
+        this.permissionGroupIds = permissionGroupIds;
+  }
 }

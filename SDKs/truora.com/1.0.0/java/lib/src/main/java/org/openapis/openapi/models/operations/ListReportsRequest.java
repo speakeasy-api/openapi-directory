@@ -12,6 +12,7 @@ public class ListReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_key")
     public String startKey;
+
     public ListReportsRequest withStartKey(String startKey) {
         this.startKey = startKey;
         return this;
@@ -22,9 +23,11 @@ public class ListReportsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public ListReportsRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ListReportsRequest(){}
 }

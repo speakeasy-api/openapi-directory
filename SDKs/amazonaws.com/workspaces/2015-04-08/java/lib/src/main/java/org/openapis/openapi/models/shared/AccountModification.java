@@ -20,6 +20,7 @@ public class AccountModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DedicatedTenancyManagementCidrRange")
     public String dedicatedTenancyManagementCidrRange;
+
     public AccountModification withDedicatedTenancyManagementCidrRange(String dedicatedTenancyManagementCidrRange) {
         this.dedicatedTenancyManagementCidrRange = dedicatedTenancyManagementCidrRange;
         return this;
@@ -28,6 +29,7 @@ public class AccountModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DedicatedTenancySupport")
     public DedicatedTenancySupportResultEnumEnum dedicatedTenancySupport;
+
     public AccountModification withDedicatedTenancySupport(DedicatedTenancySupportResultEnumEnum dedicatedTenancySupport) {
         this.dedicatedTenancySupport = dedicatedTenancySupport;
         return this;
@@ -36,6 +38,7 @@ public class AccountModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public AccountModification withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -44,6 +47,7 @@ public class AccountModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public AccountModification withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -52,6 +56,7 @@ public class AccountModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModificationState")
     public DedicatedTenancyModificationStateEnumEnum modificationState;
+
     public AccountModification withModificationState(DedicatedTenancyModificationStateEnumEnum modificationState) {
         this.modificationState = modificationState;
         return this;
@@ -62,9 +67,11 @@ public class AccountModification {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public AccountModification withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public AccountModification(){}
 }

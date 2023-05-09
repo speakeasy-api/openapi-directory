@@ -20,6 +20,7 @@ public class ResourceDataSyncItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastStatus")
     public LastResourceDataSyncStatusEnum lastStatus;
+
     public ResourceDataSyncItem withLastStatus(LastResourceDataSyncStatusEnum lastStatus) {
         this.lastStatus = lastStatus;
         return this;
@@ -30,6 +31,7 @@ public class ResourceDataSyncItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastSuccessfulSyncTime")
     public OffsetDateTime lastSuccessfulSyncTime;
+
     public ResourceDataSyncItem withLastSuccessfulSyncTime(OffsetDateTime lastSuccessfulSyncTime) {
         this.lastSuccessfulSyncTime = lastSuccessfulSyncTime;
         return this;
@@ -38,6 +40,7 @@ public class ResourceDataSyncItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastSyncStatusMessage")
     public String lastSyncStatusMessage;
+
     public ResourceDataSyncItem withLastSyncStatusMessage(String lastSyncStatusMessage) {
         this.lastSyncStatusMessage = lastSyncStatusMessage;
         return this;
@@ -48,6 +51,7 @@ public class ResourceDataSyncItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastSyncTime")
     public OffsetDateTime lastSyncTime;
+
     public ResourceDataSyncItem withLastSyncTime(OffsetDateTime lastSyncTime) {
         this.lastSyncTime = lastSyncTime;
         return this;
@@ -56,6 +60,7 @@ public class ResourceDataSyncItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Destination")
     public ResourceDataSyncS3Destination s3Destination;
+
     public ResourceDataSyncItem withS3Destination(ResourceDataSyncS3Destination s3Destination) {
         this.s3Destination = s3Destination;
         return this;
@@ -66,6 +71,7 @@ public class ResourceDataSyncItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SyncCreatedTime")
     public OffsetDateTime syncCreatedTime;
+
     public ResourceDataSyncItem withSyncCreatedTime(OffsetDateTime syncCreatedTime) {
         this.syncCreatedTime = syncCreatedTime;
         return this;
@@ -76,6 +82,7 @@ public class ResourceDataSyncItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SyncLastModifiedTime")
     public OffsetDateTime syncLastModifiedTime;
+
     public ResourceDataSyncItem withSyncLastModifiedTime(OffsetDateTime syncLastModifiedTime) {
         this.syncLastModifiedTime = syncLastModifiedTime;
         return this;
@@ -84,6 +91,7 @@ public class ResourceDataSyncItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncName")
     public String syncName;
+
     public ResourceDataSyncItem withSyncName(String syncName) {
         this.syncName = syncName;
         return this;
@@ -92,6 +100,7 @@ public class ResourceDataSyncItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncSource")
     public ResourceDataSyncSourceWithState syncSource;
+
     public ResourceDataSyncItem withSyncSource(ResourceDataSyncSourceWithState syncSource) {
         this.syncSource = syncSource;
         return this;
@@ -100,9 +109,11 @@ public class ResourceDataSyncItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncType")
     public String syncType;
+
     public ResourceDataSyncItem withSyncType(String syncType) {
         this.syncType = syncType;
         return this;
     }
     
+    public ResourceDataSyncItem(){}
 }

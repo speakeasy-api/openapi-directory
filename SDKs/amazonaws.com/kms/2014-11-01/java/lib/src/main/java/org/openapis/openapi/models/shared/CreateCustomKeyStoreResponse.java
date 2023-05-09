@@ -15,9 +15,11 @@ public class CreateCustomKeyStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomKeyStoreId")
     public String customKeyStoreId;
+
     public CreateCustomKeyStoreResponse withCustomKeyStoreId(String customKeyStoreId) {
         this.customKeyStoreId = customKeyStoreId;
         return this;
     }
     
+    public CreateCustomKeyStoreResponse(){}
 }

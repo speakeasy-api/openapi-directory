@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisDiversificationRatioRequestBody1Portfolios {
      */
     @JsonProperty("assetsWeights")
     public Double[] assetsWeights;
+
     public PostPortfolioAnalysisDiversificationRatioRequestBody1Portfolios withAssetsWeights(Double[] assetsWeights) {
         this.assetsWeights = assetsWeights;
         return this;
     }
     
+    public PostPortfolioAnalysisDiversificationRatioRequestBody1Portfolios(@JsonProperty("assetsWeights") Double[] assetsWeights) {
+        this.assetsWeights = assetsWeights;
+  }
 }

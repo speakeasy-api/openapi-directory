@@ -15,6 +15,7 @@ public class WindowsAuditLogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuditLogDestination")
     public String auditLogDestination;
+
     public WindowsAuditLogConfiguration withAuditLogDestination(String auditLogDestination) {
         this.auditLogDestination = auditLogDestination;
         return this;
@@ -22,6 +23,7 @@ public class WindowsAuditLogConfiguration {
     
     @JsonProperty("FileAccessAuditLogLevel")
     public WindowsAccessAuditLogLevelEnum fileAccessAuditLogLevel;
+
     public WindowsAuditLogConfiguration withFileAccessAuditLogLevel(WindowsAccessAuditLogLevelEnum fileAccessAuditLogLevel) {
         this.fileAccessAuditLogLevel = fileAccessAuditLogLevel;
         return this;
@@ -29,9 +31,14 @@ public class WindowsAuditLogConfiguration {
     
     @JsonProperty("FileShareAccessAuditLogLevel")
     public WindowsAccessAuditLogLevelEnum fileShareAccessAuditLogLevel;
+
     public WindowsAuditLogConfiguration withFileShareAccessAuditLogLevel(WindowsAccessAuditLogLevelEnum fileShareAccessAuditLogLevel) {
         this.fileShareAccessAuditLogLevel = fileShareAccessAuditLogLevel;
         return this;
     }
     
+    public WindowsAuditLogConfiguration(@JsonProperty("FileAccessAuditLogLevel") WindowsAccessAuditLogLevelEnum fileAccessAuditLogLevel, @JsonProperty("FileShareAccessAuditLogLevel") WindowsAccessAuditLogLevelEnum fileShareAccessAuditLogLevel) {
+        this.fileAccessAuditLogLevel = fileAccessAuditLogLevel;
+        this.fileShareAccessAuditLogLevel = fileShareAccessAuditLogLevel;
+  }
 }

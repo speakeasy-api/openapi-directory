@@ -25,6 +25,7 @@ public class BusinessName {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fromDate")
     public OffsetDateTime fromDate;
+
     public BusinessName withFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -36,6 +37,7 @@ public class BusinessName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BusinessName withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +49,7 @@ public class BusinessName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleState")
     public BusinessNameLifecycleStateEnum lifecycleState;
+
     public BusinessName withLifecycleState(BusinessNameLifecycleStateEnum lifecycleState) {
         this.lifecycleState = lifecycleState;
         return this;
@@ -58,6 +61,7 @@ public class BusinessName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BusinessName withName(String name) {
         this.name = name;
         return this;
@@ -71,9 +75,11 @@ public class BusinessName {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("toDate")
     public OffsetDateTime toDate;
+
     public BusinessName withToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public BusinessName(){}
 }

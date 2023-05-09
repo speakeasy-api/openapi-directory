@@ -7,14 +7,16 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * CreateVerifiedAccessTrustProviderDeviceOptions - Options for a device-identity type trust provider.
+ * CreateVerifiedAccessTrustProviderDeviceOptions - Describes the options when creating an Amazon Web Services Verified Access trust provider using the &lt;code&gt;device&lt;/code&gt; type.
  */
 public class CreateVerifiedAccessTrustProviderDeviceOptions {
     
     public String tenantId;
+
     public CreateVerifiedAccessTrustProviderDeviceOptions withTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
     }
     
+    public CreateVerifiedAccessTrustProviderDeviceOptions(){}
 }

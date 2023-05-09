@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetConformancePackComplianceDetailsResponse {
     @JsonProperty("ConformancePackName")
     public String conformancePackName;
+
     public GetConformancePackComplianceDetailsResponse withConformancePackName(String conformancePackName) {
         this.conformancePackName = conformancePackName;
         return this;
@@ -22,6 +23,7 @@ public class GetConformancePackComplianceDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConformancePackRuleEvaluationResults")
     public ConformancePackEvaluationResult[] conformancePackRuleEvaluationResults;
+
     public GetConformancePackComplianceDetailsResponse withConformancePackRuleEvaluationResults(ConformancePackEvaluationResult[] conformancePackRuleEvaluationResults) {
         this.conformancePackRuleEvaluationResults = conformancePackRuleEvaluationResults;
         return this;
@@ -30,9 +32,13 @@ public class GetConformancePackComplianceDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetConformancePackComplianceDetailsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetConformancePackComplianceDetailsResponse(@JsonProperty("ConformancePackName") String conformancePackName) {
+        this.conformancePackName = conformancePackName;
+  }
 }

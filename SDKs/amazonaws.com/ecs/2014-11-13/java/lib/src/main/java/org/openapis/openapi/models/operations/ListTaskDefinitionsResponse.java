@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTaskDefinitionsResponse {
@@ -12,6 +13,7 @@ public class ListTaskDefinitionsResponse {
      */
     
     public Object clientException;
+
     public ListTaskDefinitionsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class ListTaskDefinitionsResponse {
     
     
     public String contentType;
+
     public ListTaskDefinitionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTaskDefinitionsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListTaskDefinitionsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListTaskDefinitionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTaskDefinitionsResponse listTaskDefinitionsResponse;
+
     public ListTaskDefinitionsResponse withListTaskDefinitionsResponse(org.openapis.openapi.models.shared.ListTaskDefinitionsResponse listTaskDefinitionsResponse) {
         this.listTaskDefinitionsResponse = listTaskDefinitionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListTaskDefinitionsResponse {
      */
     
     public Object serverException;
+
     public ListTaskDefinitionsResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class ListTaskDefinitionsResponse {
     
     
     public Integer statusCode;
+
     public ListTaskDefinitionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListTaskDefinitionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTaskDefinitionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTaskDefinitionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

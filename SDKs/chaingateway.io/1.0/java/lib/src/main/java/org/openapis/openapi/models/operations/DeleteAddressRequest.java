@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAddressRequest {
@@ -12,6 +13,7 @@ public class DeleteAddressRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public DeleteAddressRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class DeleteAddressRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DeleteAddressRequest deleteAddressRequest;
+
     public DeleteAddressRequest withDeleteAddressRequest(org.openapis.openapi.models.shared.DeleteAddressRequest deleteAddressRequest) {
         this.deleteAddressRequest = deleteAddressRequest;
         return this;
     }
     
+    public DeleteAddressRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("deleteAddressRequest") org.openapis.openapi.models.shared.DeleteAddressRequest deleteAddressRequest) {
+        this.authorization = authorization;
+        this.deleteAddressRequest = deleteAddressRequest;
+  }
 }

@@ -20,6 +20,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public PostSearchResult withContent(String content) {
         this.content = content;
         return this;
@@ -33,6 +34,7 @@ public class PostSearchResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public PostSearchResult withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -47,6 +49,7 @@ public class PostSearchResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiration")
     public OffsetDateTime expiration;
+
     public PostSearchResult withExpiration(OffsetDateTime expiration) {
         this.expiration = expiration;
         return this;
@@ -58,6 +61,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footer")
     public String footer;
+
     public PostSearchResult withFooter(String footer) {
         this.footer = footer;
         return this;
@@ -70,6 +74,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     public String groupId;
+
     public PostSearchResult withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -81,6 +86,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public PostSearchResult withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -92,6 +98,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public PostSearchResult withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -104,6 +111,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outcome")
     public String outcome;
+
     public PostSearchResult withOutcome(String outcome) {
         this.outcome = outcome;
         return this;
@@ -115,6 +123,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photos")
     public Photo[] photos;
+
     public PostSearchResult withPhotos(Photo[] photos) {
         this.photos = photos;
         return this;
@@ -123,6 +132,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("post_id")
     public String postId;
+
     public PostSearchResult withPostId(String postId) {
         this.postId = postId;
         return this;
@@ -135,6 +145,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repost_count")
     public Long repostCount;
+
     public PostSearchResult withRepostCount(Long repostCount) {
         this.repostCount = repostCount;
         return this;
@@ -147,6 +158,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reselling")
     public Boolean reselling;
+
     public PostSearchResult withReselling(Boolean reselling) {
         this.reselling = reselling;
         return this;
@@ -159,6 +171,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_content")
     public String searchContent;
+
     public PostSearchResult withSearchContent(String searchContent) {
         this.searchContent = searchContent;
         return this;
@@ -171,6 +184,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_title")
     public String searchTitle;
+
     public PostSearchResult withSearchTitle(String searchTitle) {
         this.searchTitle = searchTitle;
         return this;
@@ -183,6 +197,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public PostSearchResult withSource(String source) {
         this.source = source;
         return this;
@@ -191,6 +206,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PostSearchResult withTitle(String title) {
         this.title = title;
         return this;
@@ -203,6 +219,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PostSearchResult withType(String type) {
         this.type = type;
         return this;
@@ -214,6 +231,7 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PostSearchResult withUrl(String url) {
         this.url = url;
         return this;
@@ -222,9 +240,11 @@ public class PostSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public String userId;
+
     public PostSearchResult withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public PostSearchResult(){}
 }

@@ -18,6 +18,7 @@ public class TaxOrFee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public TaxOrFeeCategoryEnum category;
+
     public TaxOrFee withCategory(TaxOrFeeCategoryEnum category) {
         this.category = category;
         return this;
@@ -29,6 +30,7 @@ public class TaxOrFee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("charges")
     public Money charges;
+
     public TaxOrFee withCharges(Money charges) {
         this.charges = charges;
         return this;
@@ -40,9 +42,11 @@ public class TaxOrFee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatted")
     public String formatted;
+
     public TaxOrFee withFormatted(String formatted) {
         this.formatted = formatted;
         return this;
     }
     
+    public TaxOrFee(){}
 }

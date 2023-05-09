@@ -18,6 +18,7 @@ public class InstanceGroupsListInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public InstanceGroupsListInstances withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class InstanceGroupsListInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public InstanceWithNamedPorts[] items;
+
     public InstanceGroupsListInstances withItems(InstanceWithNamedPorts[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class InstanceGroupsListInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public InstanceGroupsListInstances withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class InstanceGroupsListInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public InstanceGroupsListInstances withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -62,6 +66,7 @@ public class InstanceGroupsListInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public InstanceGroupsListInstances withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -73,9 +78,11 @@ public class InstanceGroupsListInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public InstanceGroupsListInstancesWarning warning;
+
     public InstanceGroupsListInstances withWarning(InstanceGroupsListInstancesWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public InstanceGroupsListInstances(){}
 }

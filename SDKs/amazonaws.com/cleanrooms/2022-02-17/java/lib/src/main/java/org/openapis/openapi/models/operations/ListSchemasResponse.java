@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSchemasResponse {
@@ -12,6 +13,7 @@ public class ListSchemasResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSchemasResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListSchemasResponse {
     
     
     public String contentType;
+
     public ListSchemasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSchemasResponse {
      */
     
     public Object internalServerException;
+
     public ListSchemasResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListSchemasResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSchemasOutput listSchemasOutput;
+
     public ListSchemasResponse withListSchemasOutput(org.openapis.openapi.models.shared.ListSchemasOutput listSchemasOutput) {
         this.listSchemasOutput = listSchemasOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListSchemasResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSchemasResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListSchemasResponse {
     
     
     public Integer statusCode;
+
     public ListSchemasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListSchemasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSchemasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListSchemasResponse {
      */
     
     public Object throttlingException;
+
     public ListSchemasResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListSchemasResponse {
      */
     
     public Object validationException;
+
     public ListSchemasResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSchemasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

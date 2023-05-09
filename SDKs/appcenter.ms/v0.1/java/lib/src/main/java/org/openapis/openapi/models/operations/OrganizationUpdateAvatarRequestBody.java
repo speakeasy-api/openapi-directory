@@ -12,9 +12,11 @@ public class OrganizationUpdateAvatarRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public OrganizationUpdateAvatarRequestBodyAvatar avatar;
+
     public OrganizationUpdateAvatarRequestBody withAvatar(OrganizationUpdateAvatarRequestBodyAvatar avatar) {
         this.avatar = avatar;
         return this;
     }
     
+    public OrganizationUpdateAvatarRequestBody(){}
 }

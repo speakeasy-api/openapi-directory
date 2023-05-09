@@ -59,11 +59,9 @@ public class TargetInstances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             targetInstanceAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class TargetInstances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class TargetInstances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetInstancesGetResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetInstancesGetResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesGetResponse(contentType, httpRes.statusCode()) {{
             targetInstance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class TargetInstances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetInstancesInsertResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetInstancesInsertResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class TargetInstances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetInstancesListResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetInstancesListResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesListResponse(contentType, httpRes.statusCode()) {{
             targetInstanceList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

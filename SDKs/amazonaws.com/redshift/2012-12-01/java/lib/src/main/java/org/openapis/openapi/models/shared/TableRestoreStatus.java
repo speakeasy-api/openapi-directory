@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class TableRestoreStatus {
     
     public String clusterIdentifier;
+
     public TableRestoreStatus withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class TableRestoreStatus {
     
     
     public String message;
+
     public TableRestoreStatus withMessage(String message) {
         this.message = message;
         return this;
@@ -26,6 +28,7 @@ public class TableRestoreStatus {
     
     
     public String newTableName;
+
     public TableRestoreStatus withNewTableName(String newTableName) {
         this.newTableName = newTableName;
         return this;
@@ -33,6 +36,7 @@ public class TableRestoreStatus {
     
     
     public Long progressInMegaBytes;
+
     public TableRestoreStatus withProgressInMegaBytes(Long progressInMegaBytes) {
         this.progressInMegaBytes = progressInMegaBytes;
         return this;
@@ -40,6 +44,7 @@ public class TableRestoreStatus {
     
     
     public OffsetDateTime requestTime;
+
     public TableRestoreStatus withRequestTime(OffsetDateTime requestTime) {
         this.requestTime = requestTime;
         return this;
@@ -47,6 +52,7 @@ public class TableRestoreStatus {
     
     
     public String snapshotIdentifier;
+
     public TableRestoreStatus withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
@@ -54,6 +60,7 @@ public class TableRestoreStatus {
     
     
     public String sourceDatabaseName;
+
     public TableRestoreStatus withSourceDatabaseName(String sourceDatabaseName) {
         this.sourceDatabaseName = sourceDatabaseName;
         return this;
@@ -61,6 +68,7 @@ public class TableRestoreStatus {
     
     
     public String sourceSchemaName;
+
     public TableRestoreStatus withSourceSchemaName(String sourceSchemaName) {
         this.sourceSchemaName = sourceSchemaName;
         return this;
@@ -68,6 +76,7 @@ public class TableRestoreStatus {
     
     
     public String sourceTableName;
+
     public TableRestoreStatus withSourceTableName(String sourceTableName) {
         this.sourceTableName = sourceTableName;
         return this;
@@ -75,6 +84,7 @@ public class TableRestoreStatus {
     
     
     public TableRestoreStatusTypeEnum status;
+
     public TableRestoreStatus withStatus(TableRestoreStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -82,6 +92,7 @@ public class TableRestoreStatus {
     
     
     public String tableRestoreRequestId;
+
     public TableRestoreStatus withTableRestoreRequestId(String tableRestoreRequestId) {
         this.tableRestoreRequestId = tableRestoreRequestId;
         return this;
@@ -89,6 +100,7 @@ public class TableRestoreStatus {
     
     
     public String targetDatabaseName;
+
     public TableRestoreStatus withTargetDatabaseName(String targetDatabaseName) {
         this.targetDatabaseName = targetDatabaseName;
         return this;
@@ -96,6 +108,7 @@ public class TableRestoreStatus {
     
     
     public String targetSchemaName;
+
     public TableRestoreStatus withTargetSchemaName(String targetSchemaName) {
         this.targetSchemaName = targetSchemaName;
         return this;
@@ -103,9 +116,11 @@ public class TableRestoreStatus {
     
     
     public Long totalDataInMegaBytes;
+
     public TableRestoreStatus withTotalDataInMegaBytes(Long totalDataInMegaBytes) {
         this.totalDataInMegaBytes = totalDataInMegaBytes;
         return this;
     }
     
+    public TableRestoreStatus(){}
 }

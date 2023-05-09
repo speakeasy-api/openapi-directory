@@ -12,9 +12,13 @@ public class ProjectsMoveColumnRequestBody {
      */
     @JsonProperty("position")
     public String position;
+
     public ProjectsMoveColumnRequestBody withPosition(String position) {
         this.position = position;
         return this;
     }
     
+    public ProjectsMoveColumnRequestBody(@JsonProperty("position") String position) {
+        this.position = position;
+  }
 }

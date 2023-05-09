@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecretScanningListAlertsForOrgRequest {
@@ -12,6 +13,7 @@ public class SecretScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public SecretScanningListAlertsForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -22,6 +24,7 @@ public class SecretScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SecretScanningListAlertsForOrgRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class SecretScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SecretScanningListAlertsForOrgRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,6 +46,7 @@ public class SecretScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
     public String resolution;
+
     public SecretScanningListAlertsForOrgRequest withResolution(String resolution) {
         this.resolution = resolution;
         return this;
@@ -54,6 +59,7 @@ public class SecretScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secret_type")
     public String secretType;
+
     public SecretScanningListAlertsForOrgRequest withSecretType(String secretType) {
         this.secretType = secretType;
         return this;
@@ -64,9 +70,13 @@ public class SecretScanningListAlertsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public org.openapis.openapi.models.shared.SecretScanningAlertStateEnum state;
+
     public SecretScanningListAlertsForOrgRequest withState(org.openapis.openapi.models.shared.SecretScanningAlertStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public SecretScanningListAlertsForOrgRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

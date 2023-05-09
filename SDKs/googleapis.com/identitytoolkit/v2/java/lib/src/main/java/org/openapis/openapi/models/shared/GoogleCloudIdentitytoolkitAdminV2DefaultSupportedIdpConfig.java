@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appleSignInConfig")
     public GoogleCloudIdentitytoolkitAdminV2AppleSignInConfig appleSignInConfig;
+
     public GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig withAppleSignInConfig(GoogleCloudIdentitytoolkitAdminV2AppleSignInConfig appleSignInConfig) {
         this.appleSignInConfig = appleSignInConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig(){}
 }

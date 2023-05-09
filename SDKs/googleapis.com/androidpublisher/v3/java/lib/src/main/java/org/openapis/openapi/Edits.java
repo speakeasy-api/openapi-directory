@@ -61,11 +61,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsApksAddexternallyhostedResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsApksAddexternallyhostedResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsApksAddexternallyhostedResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsApksAddexternallyhostedResponse(contentType, httpRes.statusCode()) {{
             apksAddExternallyHostedResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsApksListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsApksListResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsApksListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsApksListResponse(contentType, httpRes.statusCode()) {{
             apksListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsApksUploadResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsApksUploadResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsApksUploadResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsApksUploadResponse(contentType, httpRes.statusCode()) {{
             apk = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesListResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesListResponse(contentType, httpRes.statusCode()) {{
             bundlesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesUploadResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesUploadResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesUploadResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesUploadResponse(contentType, httpRes.statusCode()) {{
             bundle = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsCommitResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsCommitResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsCommitResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsCommitResponse(contentType, httpRes.statusCode()) {{
             appEdit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,11 +325,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsCountryavailabilityGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsCountryavailabilityGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsCountryavailabilityGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsCountryavailabilityGetResponse(contentType, httpRes.statusCode()) {{
             trackCountryAvailability = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -383,10 +369,8 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -423,11 +407,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsDeobfuscationfilesUploadResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsDeobfuscationfilesUploadResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsDeobfuscationfilesUploadResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsDeobfuscationfilesUploadResponse(contentType, httpRes.statusCode()) {{
             deobfuscationFilesUploadResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -469,11 +451,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsGetResponse(contentType, httpRes.statusCode()) {{
             appDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -517,11 +497,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsPatchResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsPatchResponse(contentType, httpRes.statusCode()) {{
             appDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -565,11 +543,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsUpdateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsUpdateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsUpdateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsUpdateResponse(contentType, httpRes.statusCode()) {{
             appDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -611,11 +587,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesGetResponse(contentType, httpRes.statusCode()) {{
             expansionFile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -659,11 +633,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesPatchResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesPatchResponse(contentType, httpRes.statusCode()) {{
             expansionFile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -707,11 +679,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUpdateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUpdateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUpdateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUpdateResponse(contentType, httpRes.statusCode()) {{
             expansionFile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -753,11 +723,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUploadResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUploadResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUploadResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUploadResponse(contentType, httpRes.statusCode()) {{
             expansionFilesUploadResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -799,11 +767,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsGetResponse(contentType, httpRes.statusCode()) {{
             appEdit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -845,10 +811,8 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -885,11 +849,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteallResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteallResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteallResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteallResponse(contentType, httpRes.statusCode()) {{
             imagesDeleteAllResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -931,11 +893,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsImagesListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsImagesListResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsImagesListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsImagesListResponse(contentType, httpRes.statusCode()) {{
             imagesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -977,11 +937,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsImagesUploadResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsImagesUploadResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsImagesUploadResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsImagesUploadResponse(contentType, httpRes.statusCode()) {{
             imagesUploadResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1023,11 +981,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsInsertResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsInsertResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsInsertResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsInsertResponse(contentType, httpRes.statusCode()) {{
             appEdit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1069,10 +1025,8 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1109,10 +1063,8 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteallResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteallResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteallResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteallResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1149,11 +1101,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsListingsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsListingsGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsListingsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsListingsGetResponse(contentType, httpRes.statusCode()) {{
             listing = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1195,11 +1145,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsListingsListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsListingsListResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsListingsListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsListingsListResponse(contentType, httpRes.statusCode()) {{
             listingsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1243,11 +1191,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsListingsPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsListingsPatchResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsListingsPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsListingsPatchResponse(contentType, httpRes.statusCode()) {{
             listing = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1291,11 +1237,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsListingsUpdateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsListingsUpdateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsListingsUpdateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsListingsUpdateResponse(contentType, httpRes.statusCode()) {{
             listing = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1337,11 +1281,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsTestersGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsTestersGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsTestersGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsTestersGetResponse(contentType, httpRes.statusCode()) {{
             testers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1385,11 +1327,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsTestersPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsTestersPatchResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsTestersPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsTestersPatchResponse(contentType, httpRes.statusCode()) {{
             testers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1433,11 +1373,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsTestersUpdateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsTestersUpdateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsTestersUpdateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsTestersUpdateResponse(contentType, httpRes.statusCode()) {{
             testers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1479,11 +1417,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsTracksGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsTracksGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsTracksGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsTracksGetResponse(contentType, httpRes.statusCode()) {{
             track = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1525,11 +1461,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsTracksListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsTracksListResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsTracksListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsTracksListResponse(contentType, httpRes.statusCode()) {{
             tracksListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1573,11 +1507,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsTracksPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsTracksPatchResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsTracksPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsTracksPatchResponse(contentType, httpRes.statusCode()) {{
             track = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1621,11 +1553,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsTracksUpdateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsTracksUpdateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsTracksUpdateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsTracksUpdateResponse(contentType, httpRes.statusCode()) {{
             track = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1667,11 +1597,9 @@ public class Edits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherEditsValidateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsValidateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherEditsValidateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherEditsValidateResponse(contentType, httpRes.statusCode()) {{
             appEdit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

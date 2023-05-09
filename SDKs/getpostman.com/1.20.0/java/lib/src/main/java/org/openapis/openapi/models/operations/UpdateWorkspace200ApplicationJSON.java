@@ -15,9 +15,11 @@ public class UpdateWorkspace200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace")
     public UpdateWorkspace200ApplicationJSONWorkspace workspace;
+
     public UpdateWorkspace200ApplicationJSON withWorkspace(UpdateWorkspace200ApplicationJSONWorkspace workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public UpdateWorkspace200ApplicationJSON(){}
 }

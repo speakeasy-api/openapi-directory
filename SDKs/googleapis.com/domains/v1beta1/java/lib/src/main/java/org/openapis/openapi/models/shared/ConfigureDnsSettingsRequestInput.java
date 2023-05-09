@@ -18,6 +18,7 @@ public class ConfigureDnsSettingsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsSettings")
     public DnsSettingsInput dnsSettings;
+
     public ConfigureDnsSettingsRequestInput withDnsSettings(DnsSettingsInput dnsSettings) {
         this.dnsSettings = dnsSettings;
         return this;
@@ -29,6 +30,7 @@ public class ConfigureDnsSettingsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public ConfigureDnsSettingsRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -40,9 +42,11 @@ public class ConfigureDnsSettingsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public ConfigureDnsSettingsRequestInput withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public ConfigureDnsSettingsRequestInput(){}
 }

@@ -15,9 +15,11 @@ public class GetWebACLResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebACL")
     public WebACL webACL;
+
     public GetWebACLResponse withWebACL(WebACL webACL) {
         this.webACL = webACL;
         return this;
     }
     
+    public GetWebACLResponse(){}
 }

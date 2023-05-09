@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListTimeSeriesResponse {
     @JsonProperty("TimeSeriesSummaries")
     public TimeSeriesSummary[] timeSeriesSummaries;
+
     public ListTimeSeriesResponse withTimeSeriesSummaries(TimeSeriesSummary[] timeSeriesSummaries) {
         this.timeSeriesSummaries = timeSeriesSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTimeSeriesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTimeSeriesResponse(@JsonProperty("TimeSeriesSummaries") TimeSeriesSummary[] timeSeriesSummaries) {
+        this.timeSeriesSummaries = timeSeriesSummaries;
+  }
 }

@@ -18,6 +18,7 @@ public class AndroidDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidModelId")
     public String androidModelId;
+
     public AndroidDevice withAndroidModelId(String androidModelId) {
         this.androidModelId = androidModelId;
         return this;
@@ -29,6 +30,7 @@ public class AndroidDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidVersionId")
     public String androidVersionId;
+
     public AndroidDevice withAndroidVersionId(String androidVersionId) {
         this.androidVersionId = androidVersionId;
         return this;
@@ -40,6 +42,7 @@ public class AndroidDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public AndroidDevice withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -51,9 +54,11 @@ public class AndroidDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientation")
     public String orientation;
+
     public AndroidDevice withOrientation(String orientation) {
         this.orientation = orientation;
         return this;
     }
     
+    public AndroidDevice(){}
 }

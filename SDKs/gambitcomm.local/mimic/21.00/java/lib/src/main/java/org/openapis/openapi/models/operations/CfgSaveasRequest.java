@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CfgSaveasRequest {
@@ -12,6 +13,7 @@ public class CfgSaveasRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cfgFile")
     public String cfgFile;
+
     public CfgSaveasRequest withCfgFile(String cfgFile) {
         this.cfgFile = cfgFile;
         return this;
@@ -22,6 +24,7 @@ public class CfgSaveasRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstAgentNum")
     public Integer firstAgentNum;
+
     public CfgSaveasRequest withFirstAgentNum(Integer firstAgentNum) {
         this.firstAgentNum = firstAgentNum;
         return this;
@@ -32,9 +35,15 @@ public class CfgSaveasRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastAgentNum")
     public Integer lastAgentNum;
+
     public CfgSaveasRequest withLastAgentNum(Integer lastAgentNum) {
         this.lastAgentNum = lastAgentNum;
         return this;
     }
     
+    public CfgSaveasRequest(@JsonProperty("cfgFile") String cfgFile, @JsonProperty("firstAgentNum") Integer firstAgentNum, @JsonProperty("lastAgentNum") Integer lastAgentNum) {
+        this.cfgFile = cfgFile;
+        this.firstAgentNum = firstAgentNum;
+        this.lastAgentNum = lastAgentNum;
+  }
 }

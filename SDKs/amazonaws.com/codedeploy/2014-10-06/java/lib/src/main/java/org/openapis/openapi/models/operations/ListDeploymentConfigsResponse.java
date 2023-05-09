@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDeploymentConfigsResponse {
     
     public String contentType;
+
     public ListDeploymentConfigsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDeploymentConfigsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListDeploymentConfigsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListDeploymentConfigsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDeploymentConfigsOutput listDeploymentConfigsOutput;
+
     public ListDeploymentConfigsResponse withListDeploymentConfigsOutput(org.openapis.openapi.models.shared.ListDeploymentConfigsOutput listDeploymentConfigsOutput) {
         this.listDeploymentConfigsOutput = listDeploymentConfigsOutput;
         return this;
@@ -36,6 +40,7 @@ public class ListDeploymentConfigsResponse {
     
     
     public Integer statusCode;
+
     public ListDeploymentConfigsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListDeploymentConfigsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDeploymentConfigsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDeploymentConfigsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

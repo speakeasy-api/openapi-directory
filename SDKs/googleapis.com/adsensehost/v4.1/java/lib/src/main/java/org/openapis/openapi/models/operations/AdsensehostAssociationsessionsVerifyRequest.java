@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsensehostAssociationsessionsVerifyRequest {
@@ -12,6 +13,7 @@ public class AdsensehostAssociationsessionsVerifyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdsensehostAssociationsessionsVerifyRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class AdsensehostAssociationsessionsVerifyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdsensehostAssociationsessionsVerifyRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class AdsensehostAssociationsessionsVerifyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdsensehostAssociationsessionsVerifyRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class AdsensehostAssociationsessionsVerifyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdsensehostAssociationsessionsVerifyRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -52,6 +57,7 @@ public class AdsensehostAssociationsessionsVerifyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdsensehostAssociationsessionsVerifyRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -62,6 +68,7 @@ public class AdsensehostAssociationsessionsVerifyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdsensehostAssociationsessionsVerifyRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -72,6 +79,7 @@ public class AdsensehostAssociationsessionsVerifyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public AdsensehostAssociationsessionsVerifyRequest withToken(String token) {
         this.token = token;
         return this;
@@ -82,9 +90,13 @@ public class AdsensehostAssociationsessionsVerifyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdsensehostAssociationsessionsVerifyRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdsensehostAssociationsessionsVerifyRequest(@JsonProperty("token") String token) {
+        this.token = token;
+  }
 }

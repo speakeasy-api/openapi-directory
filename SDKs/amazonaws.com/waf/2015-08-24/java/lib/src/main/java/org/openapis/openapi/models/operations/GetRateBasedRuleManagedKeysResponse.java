@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRateBasedRuleManagedKeysResponse {
     
     public String contentType;
+
     public GetRateBasedRuleManagedKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRateBasedRuleManagedKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRateBasedRuleManagedKeysResponse getRateBasedRuleManagedKeysResponse;
+
     public GetRateBasedRuleManagedKeysResponse withGetRateBasedRuleManagedKeysResponse(org.openapis.openapi.models.shared.GetRateBasedRuleManagedKeysResponse getRateBasedRuleManagedKeysResponse) {
         this.getRateBasedRuleManagedKeysResponse = getRateBasedRuleManagedKeysResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetRateBasedRuleManagedKeysResponse {
     
     
     public Integer statusCode;
+
     public GetRateBasedRuleManagedKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetRateBasedRuleManagedKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRateBasedRuleManagedKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetRateBasedRuleManagedKeysResponse {
      */
     
     public Object wafInternalErrorException;
+
     public GetRateBasedRuleManagedKeysResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class GetRateBasedRuleManagedKeysResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public GetRateBasedRuleManagedKeysResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class GetRateBasedRuleManagedKeysResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public GetRateBasedRuleManagedKeysResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -73,9 +81,14 @@ public class GetRateBasedRuleManagedKeysResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public GetRateBasedRuleManagedKeysResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public GetRateBasedRuleManagedKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

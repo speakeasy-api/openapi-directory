@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListMembershipsOutput {
     @JsonProperty("membershipSummaries")
     public MembershipSummary[] membershipSummaries;
+
     public ListMembershipsOutput withMembershipSummaries(MembershipSummary[] membershipSummaries) {
         this.membershipSummaries = membershipSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListMembershipsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListMembershipsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMembershipsOutput(@JsonProperty("membershipSummaries") MembershipSummary[] membershipSummaries) {
+        this.membershipSummaries = membershipSummaries;
+  }
 }

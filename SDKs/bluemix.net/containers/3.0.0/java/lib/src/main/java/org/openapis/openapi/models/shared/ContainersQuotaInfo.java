@@ -18,6 +18,7 @@ public class ContainersQuotaInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_type")
     public String accountType;
+
     public ContainersQuotaInfo withAccountType(String accountType) {
         this.accountType = accountType;
         return this;
@@ -29,6 +30,7 @@ public class ContainersQuotaInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     public String countryCode;
+
     public ContainersQuotaInfo withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -37,6 +39,7 @@ public class ContainersQuotaInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_quota")
     public ContainersQuotaInfoOrgQuota orgQuota;
+
     public ContainersQuotaInfo withOrgQuota(ContainersQuotaInfoOrgQuota orgQuota) {
         this.orgQuota = orgQuota;
         return this;
@@ -45,9 +48,11 @@ public class ContainersQuotaInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("space_quota")
     public ContainersQuotaInfoSpaceQuota spaceQuota;
+
     public ContainersQuotaInfo withSpaceQuota(ContainersQuotaInfoSpaceQuota spaceQuota) {
         this.spaceQuota = spaceQuota;
         return this;
     }
     
+    public ContainersQuotaInfo(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAppliedSchemaArnsResponse {
@@ -12,6 +13,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public ListAppliedSchemaArnsResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAppliedSchemaArnsResponse {
     
     
     public String contentType;
+
     public ListAppliedSchemaArnsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public ListAppliedSchemaArnsResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public ListAppliedSchemaArnsResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidNextTokenException invalidNextTokenException;
+
     public ListAppliedSchemaArnsResponse withInvalidNextTokenException(org.openapis.openapi.models.shared.InvalidNextTokenException invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public ListAppliedSchemaArnsResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAppliedSchemaArnsResponse listAppliedSchemaArnsResponse;
+
     public ListAppliedSchemaArnsResponse withListAppliedSchemaArnsResponse(org.openapis.openapi.models.shared.ListAppliedSchemaArnsResponse listAppliedSchemaArnsResponse) {
         this.listAppliedSchemaArnsResponse = listAppliedSchemaArnsResponse;
         return this;
@@ -76,6 +84,7 @@ public class ListAppliedSchemaArnsResponse {
     
     
     public Integer statusCode;
+
     public ListAppliedSchemaArnsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListAppliedSchemaArnsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAppliedSchemaArnsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public ListAppliedSchemaArnsResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public ListAppliedSchemaArnsResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public ListAppliedSchemaArnsResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAppliedSchemaArnsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

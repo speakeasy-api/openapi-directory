@@ -15,6 +15,7 @@ public class LegalEntityAssociationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTitle")
     public String jobTitle;
+
     public LegalEntityAssociationInput withJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
         return this;
@@ -25,6 +26,7 @@ public class LegalEntityAssociationInput {
      */
     @JsonProperty("legalEntityId")
     public String legalEntityId;
+
     public LegalEntityAssociationInput withLegalEntityId(String legalEntityId) {
         this.legalEntityId = legalEntityId;
         return this;
@@ -39,9 +41,14 @@ public class LegalEntityAssociationInput {
      */
     @JsonProperty("type")
     public LegalEntityAssociationTypeEnum type;
+
     public LegalEntityAssociationInput withType(LegalEntityAssociationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public LegalEntityAssociationInput(@JsonProperty("legalEntityId") String legalEntityId, @JsonProperty("type") LegalEntityAssociationTypeEnum type) {
+        this.legalEntityId = legalEntityId;
+        this.type = type;
+  }
 }

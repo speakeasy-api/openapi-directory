@@ -15,9 +15,11 @@ public class MemoryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeInMiB")
     public Long sizeInMiB;
+
     public MemoryInfo withSizeInMiB(Long sizeInMiB) {
         this.sizeInMiB = sizeInMiB;
         return this;
     }
     
+    public MemoryInfo(){}
 }

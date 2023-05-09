@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteWebACLRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public DeleteWebACLRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -16,9 +17,14 @@ public class DeleteWebACLRequest {
     
     @JsonProperty("WebACLId")
     public String webACLId;
+
     public DeleteWebACLRequest withWebACLId(String webACLId) {
         this.webACLId = webACLId;
         return this;
     }
     
+    public DeleteWebACLRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("WebACLId") String webACLId) {
+        this.changeToken = changeToken;
+        this.webACLId = webACLId;
+  }
 }

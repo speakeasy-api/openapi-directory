@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLaunchProfileResponse {
@@ -12,6 +13,7 @@ public class UpdateLaunchProfileResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateLaunchProfileResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateLaunchProfileResponse {
      */
     
     public Object conflictException;
+
     public UpdateLaunchProfileResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLaunchProfileResponse {
     
     
     public String contentType;
+
     public UpdateLaunchProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateLaunchProfileResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateLaunchProfileResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateLaunchProfileResponse {
     
     
     public Integer statusCode;
+
     public UpdateLaunchProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateLaunchProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLaunchProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateLaunchProfileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateLaunchProfileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateLaunchProfileResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateLaunchProfileResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateLaunchProfileResponse {
      */
     
     public Object throttlingException;
+
     public UpdateLaunchProfileResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateLaunchProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateLaunchProfileResponse updateLaunchProfileResponse;
+
     public UpdateLaunchProfileResponse withUpdateLaunchProfileResponse(org.openapis.openapi.models.shared.UpdateLaunchProfileResponse updateLaunchProfileResponse) {
         this.updateLaunchProfileResponse = updateLaunchProfileResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateLaunchProfileResponse {
      */
     
     public Object validationException;
+
     public UpdateLaunchProfileResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateLaunchProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

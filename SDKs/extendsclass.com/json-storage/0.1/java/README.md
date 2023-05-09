@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DeleteBinIdRequest;
 import org.openapis.openapi.models.operations.DeleteBinIdResponse;
 
@@ -26,31 +25,31 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteBinIdRequest req = new DeleteBinIdRequest() {{
-                id = "corrupti";
-            }}            
+            DeleteBinIdRequest req = new DeleteBinIdRequest("corrupti");            
 
             DeleteBinIdResponse res = sdk.deleteBinId(req);
 
-            if (res.deleteStatus.isPresent()) {
+            if (res.deleteStatus != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `deleteBinId` - Delete a json bin
-* `getBinId` - Return a json bin
-* `patchBinId` - Partially update a json bin with JSON Merge Patch
-* `postBin` - Create a json bin
-* `putBinId` - Update a json bin
+* [deleteBinId](docs/sdk/README.md#deletebinid) - Delete a json bin
+* [getBinId](docs/sdk/README.md#getbinid) - Return a json bin
+* [patchBinId](docs/sdk/README.md#patchbinid) - Partially update a json bin with JSON Merge Patch
+* [postBin](docs/sdk/README.md#postbin) - Create a json bin
+* [putBinId](docs/sdk/README.md#putbinid) - Update a json bin
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -17,6 +17,7 @@ public class ScriptCompilationResult {
      */
     @JsonProperty("done")
     public Boolean done;
+
     public ScriptCompilationResult withDone(Boolean done) {
         this.done = done;
         return this;
@@ -28,9 +29,13 @@ public class ScriptCompilationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ScriptCompilationError error;
+
     public ScriptCompilationResult withError(ScriptCompilationError error) {
         this.error = error;
         return this;
     }
     
+    public ScriptCompilationResult(@JsonProperty("done") Boolean done) {
+        this.done = done;
+  }
 }

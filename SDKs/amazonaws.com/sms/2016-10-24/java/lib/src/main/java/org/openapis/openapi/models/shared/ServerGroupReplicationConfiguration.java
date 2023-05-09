@@ -15,6 +15,7 @@ public class ServerGroupReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverGroupId")
     public String serverGroupId;
+
     public ServerGroupReplicationConfiguration withServerGroupId(String serverGroupId) {
         this.serverGroupId = serverGroupId;
         return this;
@@ -23,9 +24,11 @@ public class ServerGroupReplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverReplicationConfigurations")
     public ServerReplicationConfiguration[] serverReplicationConfigurations;
+
     public ServerGroupReplicationConfiguration withServerReplicationConfigurations(ServerReplicationConfiguration[] serverReplicationConfigurations) {
         this.serverReplicationConfigurations = serverReplicationConfigurations;
         return this;
     }
     
+    public ServerGroupReplicationConfiguration(){}
 }

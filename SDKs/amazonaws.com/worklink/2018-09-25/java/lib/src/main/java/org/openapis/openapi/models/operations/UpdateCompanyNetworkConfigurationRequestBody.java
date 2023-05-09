@@ -12,6 +12,7 @@ public class UpdateCompanyNetworkConfigurationRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public UpdateCompanyNetworkConfigurationRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -22,6 +23,7 @@ public class UpdateCompanyNetworkConfigurationRequestBody {
      */
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public UpdateCompanyNetworkConfigurationRequestBody withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -32,6 +34,7 @@ public class UpdateCompanyNetworkConfigurationRequestBody {
      */
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public UpdateCompanyNetworkConfigurationRequestBody withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -42,9 +45,16 @@ public class UpdateCompanyNetworkConfigurationRequestBody {
      */
     @JsonProperty("VpcId")
     public String vpcId;
+
     public UpdateCompanyNetworkConfigurationRequestBody withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public UpdateCompanyNetworkConfigurationRequestBody(@JsonProperty("FleetArn") String fleetArn, @JsonProperty("SecurityGroupIds") String[] securityGroupIds, @JsonProperty("SubnetIds") String[] subnetIds, @JsonProperty("VpcId") String vpcId) {
+        this.fleetArn = fleetArn;
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
+  }
 }

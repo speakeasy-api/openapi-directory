@@ -15,6 +15,7 @@ public class ListUserAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceUserSummaries")
     public InstanceUserSummary[] instanceUserSummaries;
+
     public ListUserAssociationsResponse withInstanceUserSummaries(InstanceUserSummary[] instanceUserSummaries) {
         this.instanceUserSummaries = instanceUserSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListUserAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListUserAssociationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListUserAssociationsResponse(){}
 }

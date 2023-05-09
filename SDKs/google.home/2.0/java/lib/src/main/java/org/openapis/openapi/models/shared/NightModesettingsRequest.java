@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NightModesettingsRequest {
     @JsonProperty("demo_to_user")
     public Boolean demoToUser;
+
     public NightModesettingsRequest withDemoToUser(Boolean demoToUser) {
         this.demoToUser = demoToUser;
         return this;
@@ -16,6 +17,7 @@ public class NightModesettingsRequest {
     
     @JsonProperty("do_not_disturb")
     public Boolean doNotDisturb;
+
     public NightModesettingsRequest withDoNotDisturb(Boolean doNotDisturb) {
         this.doNotDisturb = doNotDisturb;
         return this;
@@ -23,6 +25,7 @@ public class NightModesettingsRequest {
     
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public NightModesettingsRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -30,6 +33,7 @@ public class NightModesettingsRequest {
     
     @JsonProperty("led_brightness")
     public Double ledBrightness;
+
     public NightModesettingsRequest withLedBrightness(Double ledBrightness) {
         this.ledBrightness = ledBrightness;
         return this;
@@ -37,6 +41,7 @@ public class NightModesettingsRequest {
     
     @JsonProperty("volume")
     public Double volume;
+
     public NightModesettingsRequest withVolume(Double volume) {
         this.volume = volume;
         return this;
@@ -44,9 +49,18 @@ public class NightModesettingsRequest {
     
     @JsonProperty("windows")
     public Window[] windows;
+
     public NightModesettingsRequest withWindows(Window[] windows) {
         this.windows = windows;
         return this;
     }
     
+    public NightModesettingsRequest(@JsonProperty("demo_to_user") Boolean demoToUser, @JsonProperty("do_not_disturb") Boolean doNotDisturb, @JsonProperty("enabled") Boolean enabled, @JsonProperty("led_brightness") Double ledBrightness, @JsonProperty("volume") Double volume, @JsonProperty("windows") Window[] windows) {
+        this.demoToUser = demoToUser;
+        this.doNotDisturb = doNotDisturb;
+        this.enabled = enabled;
+        this.ledBrightness = ledBrightness;
+        this.volume = volume;
+        this.windows = windows;
+  }
 }

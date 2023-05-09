@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateComponentResponse {
     
     public String contentType;
+
     public UpdateComponentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateComponentResponse {
      */
     
     public Object internalServerException;
+
     public UpdateComponentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateComponentResponse {
     
     
     public Integer statusCode;
+
     public UpdateComponentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateComponentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateComponentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateComponentResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateComponentResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateComponentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateComponentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateComponentResponse {
      */
     
     public java.util.Map<String, Object> updateComponentResponse;
+
     public UpdateComponentResponse withUpdateComponentResponse(java.util.Map<String, Object> updateComponentResponse) {
         this.updateComponentResponse = updateComponentResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateComponentResponse {
      */
     
     public Object validationException;
+
     public UpdateComponentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateComponentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

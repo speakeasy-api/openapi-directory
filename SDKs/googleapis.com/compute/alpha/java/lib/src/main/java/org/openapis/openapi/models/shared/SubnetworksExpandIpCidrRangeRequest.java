@@ -15,9 +15,11 @@ public class SubnetworksExpandIpCidrRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCidrRange")
     public String ipCidrRange;
+
     public SubnetworksExpandIpCidrRangeRequest withIpCidrRange(String ipCidrRange) {
         this.ipCidrRange = ipCidrRange;
         return this;
     }
     
+    public SubnetworksExpandIpCidrRangeRequest(){}
 }

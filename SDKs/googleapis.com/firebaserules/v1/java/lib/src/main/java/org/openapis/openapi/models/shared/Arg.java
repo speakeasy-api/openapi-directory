@@ -18,6 +18,7 @@ public class Arg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("anyValue")
     public java.util.Map<String, Object> anyValue;
+
     public Arg withAnyValue(java.util.Map<String, Object> anyValue) {
         this.anyValue = anyValue;
         return this;
@@ -29,9 +30,11 @@ public class Arg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exactValue")
     public Object exactValue;
+
     public Arg withExactValue(Object exactValue) {
         this.exactValue = exactValue;
         return this;
     }
     
+    public Arg(){}
 }

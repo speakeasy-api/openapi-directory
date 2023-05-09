@@ -15,6 +15,7 @@ public class DescribeStackProvisioningParametersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentInstallerUrl")
     public String agentInstallerUrl;
+
     public DescribeStackProvisioningParametersResult withAgentInstallerUrl(String agentInstallerUrl) {
         this.agentInstallerUrl = agentInstallerUrl;
         return this;
@@ -23,9 +24,11 @@ public class DescribeStackProvisioningParametersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public DescribeStackProvisioningParametersResult withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public DescribeStackProvisioningParametersResult(){}
 }

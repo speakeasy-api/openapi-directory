@@ -18,6 +18,7 @@ public class ReportKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryId")
     public String queryId;
+
     public ReportKey withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
@@ -29,9 +30,11 @@ public class ReportKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportId")
     public String reportId;
+
     public ReportKey withReportId(String reportId) {
         this.reportId = reportId;
         return this;
     }
     
+    public ReportKey(){}
 }

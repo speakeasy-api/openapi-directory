@@ -15,9 +15,11 @@ public class INDTaxDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GSTIN")
     public String gstin;
+
     public INDTaxDocuments withGstin(String gstin) {
         this.gstin = gstin;
         return this;
     }
     
+    public INDTaxDocuments(){}
 }

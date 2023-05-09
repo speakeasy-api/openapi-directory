@@ -18,6 +18,7 @@ public class SubordinateConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateAuthority")
     public String certificateAuthority;
+
     public SubordinateConfig withCertificateAuthority(String certificateAuthority) {
         this.certificateAuthority = certificateAuthority;
         return this;
@@ -29,9 +30,11 @@ public class SubordinateConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pemIssuerChain")
     public SubordinateConfigChain pemIssuerChain;
+
     public SubordinateConfig withPemIssuerChain(SubordinateConfigChain pemIssuerChain) {
         this.pemIssuerChain = pemIssuerChain;
         return this;
     }
     
+    public SubordinateConfig(){}
 }

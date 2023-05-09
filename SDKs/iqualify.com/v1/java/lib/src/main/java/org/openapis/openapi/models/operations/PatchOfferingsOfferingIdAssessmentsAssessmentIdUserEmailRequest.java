@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequestBody requestBody;
+
     public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest withRequestBody(PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assessmentId")
     public String assessmentId;
+
     public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
@@ -29,6 +32,7 @@ public class PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
@@ -39,9 +43,16 @@ public class PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
     public String userEmail;
+
     public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest(@JsonProperty("RequestBody") PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequestBody requestBody, @JsonProperty("assessmentId") String assessmentId, @JsonProperty("offeringId") String offeringId, @JsonProperty("userEmail") String userEmail) {
+        this.requestBody = requestBody;
+        this.assessmentId = assessmentId;
+        this.offeringId = offeringId;
+        this.userEmail = userEmail;
+  }
 }

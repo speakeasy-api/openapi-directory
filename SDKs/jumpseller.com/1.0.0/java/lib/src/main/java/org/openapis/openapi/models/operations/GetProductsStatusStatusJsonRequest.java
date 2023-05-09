@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsStatusStatusJsonRequest {
@@ -12,6 +13,7 @@ public class GetProductsStatusStatusJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetProductsStatusStatusJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class GetProductsStatusStatusJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetProductsStatusStatusJsonRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -32,6 +35,7 @@ public class GetProductsStatusStatusJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetProductsStatusStatusJsonRequest withLogin(String login) {
         this.login = login;
         return this;
@@ -42,9 +46,15 @@ public class GetProductsStatusStatusJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=status")
     public GetProductsStatusStatusJsonStatusEnum status;
+
     public GetProductsStatusStatusJsonRequest withStatus(GetProductsStatusStatusJsonStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetProductsStatusStatusJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login, @JsonProperty("status") GetProductsStatusStatusJsonStatusEnum status) {
+        this.authtoken = authtoken;
+        this.login = login;
+        this.status = status;
+  }
 }

@@ -15,6 +15,7 @@ public class CompanyDeepsearchLEI200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     public CompanyDeepsearchLEI200ApplicationJSONCompany company;
+
     public CompanyDeepsearchLEI200ApplicationJSON withCompany(CompanyDeepsearchLEI200ApplicationJSONCompany company) {
         this.company = company;
         return this;
@@ -23,6 +24,7 @@ public class CompanyDeepsearchLEI200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_page")
     public Integer currentPage;
+
     public CompanyDeepsearchLEI200ApplicationJSON withCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
@@ -31,6 +33,7 @@ public class CompanyDeepsearchLEI200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isins")
     public String[] isins;
+
     public CompanyDeepsearchLEI200ApplicationJSON withIsins(String[] isins) {
         this.isins = isins;
         return this;
@@ -39,6 +42,7 @@ public class CompanyDeepsearchLEI200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_page")
     public Integer lastPage;
+
     public CompanyDeepsearchLEI200ApplicationJSON withLastPage(Integer lastPage) {
         this.lastPage = lastPage;
         return this;
@@ -47,6 +51,7 @@ public class CompanyDeepsearchLEI200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lei")
     public String lei;
+
     public CompanyDeepsearchLEI200ApplicationJSON withLei(String lei) {
         this.lei = lei;
         return this;
@@ -55,6 +60,7 @@ public class CompanyDeepsearchLEI200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next_page")
     public String nextPage;
+
     public CompanyDeepsearchLEI200ApplicationJSON withNextPage(String nextPage) {
         this.nextPage = nextPage;
         return this;
@@ -63,6 +69,7 @@ public class CompanyDeepsearchLEI200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_num_isins")
     public Integer totalNumIsins;
+
     public CompanyDeepsearchLEI200ApplicationJSON withTotalNumIsins(Integer totalNumIsins) {
         this.totalNumIsins = totalNumIsins;
         return this;
@@ -71,9 +78,11 @@ public class CompanyDeepsearchLEI200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validLei")
     public Boolean validLei;
+
     public CompanyDeepsearchLEI200ApplicationJSON withValidLei(Boolean validLei) {
         this.validLei = validLei;
         return this;
     }
     
+    public CompanyDeepsearchLEI200ApplicationJSON(){}
 }

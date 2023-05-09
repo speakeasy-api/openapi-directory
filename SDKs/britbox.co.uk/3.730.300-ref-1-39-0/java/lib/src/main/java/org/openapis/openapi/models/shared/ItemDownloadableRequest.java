@@ -15,9 +15,13 @@ public class ItemDownloadableRequest {
      */
     @JsonProperty("ids")
     public String ids;
+
     public ItemDownloadableRequest withIds(String ids) {
         this.ids = ids;
         return this;
     }
     
+    public ItemDownloadableRequest(@JsonProperty("ids") String ids) {
+        this.ids = ids;
+  }
 }

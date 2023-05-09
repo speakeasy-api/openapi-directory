@@ -12,9 +12,13 @@ public class UpdateApplicationSettingsRequestBody {
      */
     @JsonProperty("WriteApplicationSettingsRequest")
     public UpdateApplicationSettingsRequestBodyWriteApplicationSettingsRequest writeApplicationSettingsRequest;
+
     public UpdateApplicationSettingsRequestBody withWriteApplicationSettingsRequest(UpdateApplicationSettingsRequestBodyWriteApplicationSettingsRequest writeApplicationSettingsRequest) {
         this.writeApplicationSettingsRequest = writeApplicationSettingsRequest;
         return this;
     }
     
+    public UpdateApplicationSettingsRequestBody(@JsonProperty("WriteApplicationSettingsRequest") UpdateApplicationSettingsRequestBodyWriteApplicationSettingsRequest writeApplicationSettingsRequest) {
+        this.writeApplicationSettingsRequest = writeApplicationSettingsRequest;
+  }
 }

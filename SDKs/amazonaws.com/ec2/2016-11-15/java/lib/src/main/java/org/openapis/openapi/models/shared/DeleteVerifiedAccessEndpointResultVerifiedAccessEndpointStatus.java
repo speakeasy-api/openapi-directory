@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatus {
     
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum code;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatus withCode(DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatus {
     
     
     public String message;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatus(){}
 }

@@ -15,6 +15,7 @@ public class ProviderUserIdentifierType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderAttributeName")
     public String providerAttributeName;
+
     public ProviderUserIdentifierType withProviderAttributeName(String providerAttributeName) {
         this.providerAttributeName = providerAttributeName;
         return this;
@@ -23,6 +24,7 @@ public class ProviderUserIdentifierType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderAttributeValue")
     public String providerAttributeValue;
+
     public ProviderUserIdentifierType withProviderAttributeValue(String providerAttributeValue) {
         this.providerAttributeValue = providerAttributeValue;
         return this;
@@ -31,9 +33,11 @@ public class ProviderUserIdentifierType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderName")
     public String providerName;
+
     public ProviderUserIdentifierType withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
     }
     
+    public ProviderUserIdentifierType(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPayrollCalendarResponse {
@@ -12,6 +13,7 @@ public class GetPayrollCalendarResponse {
      */
     
     public org.openapis.openapi.models.shared.APIException apiException;
+
     public GetPayrollCalendarResponse withAPIException(org.openapis.openapi.models.shared.APIException apiException) {
         this.apiException = apiException;
         return this;
@@ -19,6 +21,7 @@ public class GetPayrollCalendarResponse {
     
     
     public String contentType;
+
     public GetPayrollCalendarResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPayrollCalendarResponse {
      */
     
     public org.openapis.openapi.models.shared.PayrollCalendars payrollCalendars;
+
     public GetPayrollCalendarResponse withPayrollCalendars(org.openapis.openapi.models.shared.PayrollCalendars payrollCalendars) {
         this.payrollCalendars = payrollCalendars;
         return this;
@@ -36,6 +40,7 @@ public class GetPayrollCalendarResponse {
     
     
     public Integer statusCode;
+
     public GetPayrollCalendarResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetPayrollCalendarResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPayrollCalendarResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPayrollCalendarResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

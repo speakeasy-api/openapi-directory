@@ -12,9 +12,13 @@ public class ReleasesGetPublicGroupsForReleaseByHash200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public ReleasesGetPublicGroupsForReleaseByHash200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ReleasesGetPublicGroupsForReleaseByHash200ApplicationJSON(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GkehubProjectsLocationsGlobalMembershipsInitializeHubResponse {
     
     public String contentType;
+
     public GkehubProjectsLocationsGlobalMembershipsInitializeHubResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GkehubProjectsLocationsGlobalMembershipsInitializeHubResponse {
      */
     
     public org.openapis.openapi.models.shared.InitializeHubResponse initializeHubResponse;
+
     public GkehubProjectsLocationsGlobalMembershipsInitializeHubResponse withInitializeHubResponse(org.openapis.openapi.models.shared.InitializeHubResponse initializeHubResponse) {
         this.initializeHubResponse = initializeHubResponse;
         return this;
@@ -26,6 +29,7 @@ public class GkehubProjectsLocationsGlobalMembershipsInitializeHubResponse {
     
     
     public Integer statusCode;
+
     public GkehubProjectsLocationsGlobalMembershipsInitializeHubResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GkehubProjectsLocationsGlobalMembershipsInitializeHubResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GkehubProjectsLocationsGlobalMembershipsInitializeHubResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GkehubProjectsLocationsGlobalMembershipsInitializeHubResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

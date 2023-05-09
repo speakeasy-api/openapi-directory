@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDatabasesResponse {
     
     public String contentType;
+
     public GetDatabasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDatabasesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDatabasesResponse getDatabasesResponse;
+
     public GetDatabasesResponse withGetDatabasesResponse(org.openapis.openapi.models.shared.GetDatabasesResponse getDatabasesResponse) {
         this.getDatabasesResponse = getDatabasesResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetDatabasesResponse {
      */
     
     public Object glueEncryptionException;
+
     public GetDatabasesResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -39,6 +43,7 @@ public class GetDatabasesResponse {
      */
     
     public Object internalServiceException;
+
     public GetDatabasesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetDatabasesResponse {
      */
     
     public Object invalidInputException;
+
     public GetDatabasesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetDatabasesResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetDatabasesResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetDatabasesResponse {
     
     
     public Integer statusCode;
+
     public GetDatabasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetDatabasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDatabasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDatabasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

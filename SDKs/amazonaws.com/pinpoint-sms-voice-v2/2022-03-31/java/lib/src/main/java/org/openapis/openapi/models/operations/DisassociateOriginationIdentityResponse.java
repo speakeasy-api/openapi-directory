@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateOriginationIdentityResponse {
@@ -12,6 +13,7 @@ public class DisassociateOriginationIdentityResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateOriginationIdentityResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisassociateOriginationIdentityResponse {
      */
     
     public Object conflictException;
+
     public DisassociateOriginationIdentityResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateOriginationIdentityResponse {
     
     
     public String contentType;
+
     public DisassociateOriginationIdentityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateOriginationIdentityResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateOriginationIdentityResult disassociateOriginationIdentityResult;
+
     public DisassociateOriginationIdentityResponse withDisassociateOriginationIdentityResult(org.openapis.openapi.models.shared.DisassociateOriginationIdentityResult disassociateOriginationIdentityResult) {
         this.disassociateOriginationIdentityResult = disassociateOriginationIdentityResult;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateOriginationIdentityResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateOriginationIdentityResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateOriginationIdentityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateOriginationIdentityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DisassociateOriginationIdentityResponse {
     
     
     public Integer statusCode;
+
     public DisassociateOriginationIdentityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateOriginationIdentityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateOriginationIdentityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateOriginationIdentityResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateOriginationIdentityResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DisassociateOriginationIdentityResponse {
      */
     
     public Object validationException;
+
     public DisassociateOriginationIdentityResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateOriginationIdentityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

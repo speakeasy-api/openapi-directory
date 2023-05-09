@@ -15,6 +15,7 @@ public class ListingStructurePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryId")
     public String categoryId;
+
     public ListingStructurePolicy withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -26,6 +27,7 @@ public class ListingStructurePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryTreeId")
     public String categoryTreeId;
+
     public ListingStructurePolicy withCategoryTreeId(String categoryTreeId) {
         this.categoryTreeId = categoryTreeId;
         return this;
@@ -37,9 +39,11 @@ public class ListingStructurePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variationsSupported")
     public Boolean variationsSupported;
+
     public ListingStructurePolicy withVariationsSupported(Boolean variationsSupported) {
         this.variationsSupported = variationsSupported;
         return this;
     }
     
+    public ListingStructurePolicy(){}
 }

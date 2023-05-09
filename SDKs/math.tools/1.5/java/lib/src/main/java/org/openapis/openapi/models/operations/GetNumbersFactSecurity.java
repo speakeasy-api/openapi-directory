@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersFactSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Mathtools-Api-Secret")
     public String xMathtoolsApiSecret;
+
     public GetNumbersFactSecurity withXMathtoolsApiSecret(String xMathtoolsApiSecret) {
         this.xMathtoolsApiSecret = xMathtoolsApiSecret;
         return this;
     }
     
+    public GetNumbersFactSecurity(@JsonProperty("X-Mathtools-Api-Secret") String xMathtoolsApiSecret) {
+        this.xMathtoolsApiSecret = xMathtoolsApiSecret;
+  }
 }

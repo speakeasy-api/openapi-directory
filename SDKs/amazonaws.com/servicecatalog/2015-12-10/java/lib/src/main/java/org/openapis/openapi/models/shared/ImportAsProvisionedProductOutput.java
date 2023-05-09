@@ -18,9 +18,11 @@ public class ImportAsProvisionedProductOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordDetail")
     public RecordDetail recordDetail;
+
     public ImportAsProvisionedProductOutput withRecordDetail(RecordDetail recordDetail) {
         this.recordDetail = recordDetail;
         return this;
     }
     
+    public ImportAsProvisionedProductOutput(){}
 }

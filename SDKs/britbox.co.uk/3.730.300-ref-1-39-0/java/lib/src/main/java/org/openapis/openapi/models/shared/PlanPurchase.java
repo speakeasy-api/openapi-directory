@@ -15,6 +15,7 @@ public class PlanPurchase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PlanPurchase withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class PlanPurchase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Float price;
+
     public PlanPurchase withPrice(Float price) {
         this.price = price;
         return this;
@@ -37,6 +39,7 @@ public class PlanPurchase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionId")
     public String subscriptionId;
+
     public PlanPurchase withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -47,6 +50,7 @@ public class PlanPurchase {
      */
     @JsonProperty("title")
     public String title;
+
     public PlanPurchase withTitle(String title) {
         this.title = title;
         return this;
@@ -57,9 +61,14 @@ public class PlanPurchase {
      */
     @JsonProperty("type")
     public PlanPurchaseTypeEnum type;
+
     public PlanPurchase withType(PlanPurchaseTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PlanPurchase(@JsonProperty("title") String title, @JsonProperty("type") PlanPurchaseTypeEnum type) {
+        this.title = title;
+        this.type = type;
+  }
 }

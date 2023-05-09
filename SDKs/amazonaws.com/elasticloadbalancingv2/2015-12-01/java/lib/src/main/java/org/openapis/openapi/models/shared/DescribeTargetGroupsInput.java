@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTargetGroupsInput {
     
     public String loadBalancerArn;
+
     public DescribeTargetGroupsInput withLoadBalancerArn(String loadBalancerArn) {
         this.loadBalancerArn = loadBalancerArn;
         return this;
@@ -16,6 +17,7 @@ public class DescribeTargetGroupsInput {
     
     
     public String marker;
+
     public DescribeTargetGroupsInput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +25,7 @@ public class DescribeTargetGroupsInput {
     
     
     public String[] names;
+
     public DescribeTargetGroupsInput withNames(String[] names) {
         this.names = names;
         return this;
@@ -30,6 +33,7 @@ public class DescribeTargetGroupsInput {
     
     
     public Long pageSize;
+
     public DescribeTargetGroupsInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -37,9 +41,11 @@ public class DescribeTargetGroupsInput {
     
     
     public String[] targetGroupArns;
+
     public DescribeTargetGroupsInput withTargetGroupArns(String[] targetGroupArns) {
         this.targetGroupArns = targetGroupArns;
         return this;
     }
     
+    public DescribeTargetGroupsInput(){}
 }

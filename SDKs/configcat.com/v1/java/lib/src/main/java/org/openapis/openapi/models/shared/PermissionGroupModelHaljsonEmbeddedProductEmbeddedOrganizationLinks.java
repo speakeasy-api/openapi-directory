@@ -12,6 +12,7 @@ public class PermissionGroupModelHaljsonEmbeddedProductEmbeddedOrganizationLinks
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public String members;
+
     public PermissionGroupModelHaljsonEmbeddedProductEmbeddedOrganizationLinks withMembers(String members) {
         this.members = members;
         return this;
@@ -20,9 +21,11 @@ public class PermissionGroupModelHaljsonEmbeddedProductEmbeddedOrganizationLinks
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public String products;
+
     public PermissionGroupModelHaljsonEmbeddedProductEmbeddedOrganizationLinks withProducts(String products) {
         this.products = products;
         return this;
     }
     
+    public PermissionGroupModelHaljsonEmbeddedProductEmbeddedOrganizationLinks(){}
 }

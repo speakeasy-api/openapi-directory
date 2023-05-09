@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSnippetUsingPOSTRequest {
@@ -12,6 +13,7 @@ public class CreateSnippetUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ManageSnippet manageSnippet;
+
     public CreateSnippetUsingPOSTRequest withManageSnippet(org.openapis.openapi.models.shared.ManageSnippet manageSnippet) {
         this.manageSnippet = manageSnippet;
         return this;
@@ -22,9 +24,14 @@ public class CreateSnippetUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public CreateSnippetUsingPOSTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public CreateSnippetUsingPOSTRequest(@JsonProperty("ManageSnippet") org.openapis.openapi.models.shared.ManageSnippet manageSnippet, @JsonProperty("apiKey") String apiKey) {
+        this.manageSnippet = manageSnippet;
+        this.apiKey = apiKey;
+  }
 }

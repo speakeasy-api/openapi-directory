@@ -12,6 +12,7 @@ public class ScimServiceProviderConfigAuthenticationSchemes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ScimServiceProviderConfigAuthenticationSchemes withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class ScimServiceProviderConfigAuthenticationSchemes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ScimServiceProviderConfigAuthenticationSchemes withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class ScimServiceProviderConfigAuthenticationSchemes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specUri")
     public String specUri;
+
     public ScimServiceProviderConfigAuthenticationSchemes withSpecUri(String specUri) {
         this.specUri = specUri;
         return this;
@@ -36,9 +39,11 @@ public class ScimServiceProviderConfigAuthenticationSchemes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ScimServiceProviderConfigAuthenticationSchemes withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ScimServiceProviderConfigAuthenticationSchemes(){}
 }

@@ -14,6 +14,7 @@ public class ProvisionNetworkClientsRequestBody {
      */
     @JsonProperty("devicePolicy")
     public ProvisionNetworkClientsRequestBodyDevicePolicyEnum devicePolicy;
+
     public ProvisionNetworkClientsRequestBody withDevicePolicy(ProvisionNetworkClientsRequestBodyDevicePolicyEnum devicePolicy) {
         this.devicePolicy = devicePolicy;
         return this;
@@ -25,6 +26,7 @@ public class ProvisionNetworkClientsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupPolicyId")
     public String groupPolicyId;
+
     public ProvisionNetworkClientsRequestBody withGroupPolicyId(String groupPolicyId) {
         this.groupPolicyId = groupPolicyId;
         return this;
@@ -35,6 +37,7 @@ public class ProvisionNetworkClientsRequestBody {
      */
     @JsonProperty("mac")
     public String mac;
+
     public ProvisionNetworkClientsRequestBody withMac(String mac) {
         this.mac = mac;
         return this;
@@ -46,6 +49,7 @@ public class ProvisionNetworkClientsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProvisionNetworkClientsRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -57,6 +61,7 @@ public class ProvisionNetworkClientsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policiesBySecurityAppliance")
     public ProvisionNetworkClientsRequestBodyPoliciesBySecurityAppliance policiesBySecurityAppliance;
+
     public ProvisionNetworkClientsRequestBody withPoliciesBySecurityAppliance(ProvisionNetworkClientsRequestBodyPoliciesBySecurityAppliance policiesBySecurityAppliance) {
         this.policiesBySecurityAppliance = policiesBySecurityAppliance;
         return this;
@@ -68,9 +73,14 @@ public class ProvisionNetworkClientsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policiesBySsid")
     public ProvisionNetworkClientsRequestBodyPoliciesBySsid policiesBySsid;
+
     public ProvisionNetworkClientsRequestBody withPoliciesBySsid(ProvisionNetworkClientsRequestBodyPoliciesBySsid policiesBySsid) {
         this.policiesBySsid = policiesBySsid;
         return this;
     }
     
+    public ProvisionNetworkClientsRequestBody(@JsonProperty("devicePolicy") ProvisionNetworkClientsRequestBodyDevicePolicyEnum devicePolicy, @JsonProperty("mac") String mac) {
+        this.devicePolicy = devicePolicy;
+        this.mac = mac;
+  }
 }

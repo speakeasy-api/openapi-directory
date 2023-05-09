@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeHostsResultHostsAvailableCapacityAvailableInstanceCapacity {
     
     public Long availableCapacity;
+
     public DescribeHostsResultHostsAvailableCapacityAvailableInstanceCapacity withAvailableCapacity(Long availableCapacity) {
         this.availableCapacity = availableCapacity;
         return this;
@@ -19,6 +20,7 @@ public class DescribeHostsResultHostsAvailableCapacityAvailableInstanceCapacity 
     
     
     public String instanceType;
+
     public DescribeHostsResultHostsAvailableCapacityAvailableInstanceCapacity withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -26,9 +28,11 @@ public class DescribeHostsResultHostsAvailableCapacityAvailableInstanceCapacity 
     
     
     public Long totalCapacity;
+
     public DescribeHostsResultHostsAvailableCapacityAvailableInstanceCapacity withTotalCapacity(Long totalCapacity) {
         this.totalCapacity = totalCapacity;
         return this;
     }
     
+    public DescribeHostsResultHostsAvailableCapacityAvailableInstanceCapacity(){}
 }

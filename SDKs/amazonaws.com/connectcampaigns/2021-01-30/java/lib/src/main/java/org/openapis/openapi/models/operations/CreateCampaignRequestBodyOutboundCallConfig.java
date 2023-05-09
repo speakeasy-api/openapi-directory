@@ -18,6 +18,7 @@ public class CreateCampaignRequestBodyOutboundCallConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answerMachineDetectionConfig")
     public org.openapis.openapi.models.shared.AnswerMachineDetectionConfig answerMachineDetectionConfig;
+
     public CreateCampaignRequestBodyOutboundCallConfig withAnswerMachineDetectionConfig(org.openapis.openapi.models.shared.AnswerMachineDetectionConfig answerMachineDetectionConfig) {
         this.answerMachineDetectionConfig = answerMachineDetectionConfig;
         return this;
@@ -29,6 +30,7 @@ public class CreateCampaignRequestBodyOutboundCallConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectContactFlowId")
     public String connectContactFlowId;
+
     public CreateCampaignRequestBodyOutboundCallConfig withConnectContactFlowId(String connectContactFlowId) {
         this.connectContactFlowId = connectContactFlowId;
         return this;
@@ -40,6 +42,7 @@ public class CreateCampaignRequestBodyOutboundCallConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectQueueId")
     public String connectQueueId;
+
     public CreateCampaignRequestBodyOutboundCallConfig withConnectQueueId(String connectQueueId) {
         this.connectQueueId = connectQueueId;
         return this;
@@ -51,9 +54,11 @@ public class CreateCampaignRequestBodyOutboundCallConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectSourcePhoneNumber")
     public String connectSourcePhoneNumber;
+
     public CreateCampaignRequestBodyOutboundCallConfig withConnectSourcePhoneNumber(String connectSourcePhoneNumber) {
         this.connectSourcePhoneNumber = connectSourcePhoneNumber;
         return this;
     }
     
+    public CreateCampaignRequestBodyOutboundCallConfig(){}
 }

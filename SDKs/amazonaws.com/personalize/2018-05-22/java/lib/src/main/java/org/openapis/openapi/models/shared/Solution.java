@@ -20,6 +20,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoMLResult")
     public AutoMLResult autoMLResult;
+
     public Solution withAutoMLResult(AutoMLResult autoMLResult) {
         this.autoMLResult = autoMLResult;
         return this;
@@ -30,6 +31,7 @@ public class Solution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public Solution withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -38,6 +40,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public Solution withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -46,6 +49,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public String eventType;
+
     public Solution withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -56,6 +60,7 @@ public class Solution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public Solution withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -64,6 +69,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestSolutionVersion")
     public SolutionVersionSummary latestSolutionVersion;
+
     public Solution withLatestSolutionVersion(SolutionVersionSummary latestSolutionVersion) {
         this.latestSolutionVersion = latestSolutionVersion;
         return this;
@@ -72,6 +78,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Solution withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +87,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performAutoML")
     public Boolean performAutoML;
+
     public Solution withPerformAutoML(Boolean performAutoML) {
         this.performAutoML = performAutoML;
         return this;
@@ -88,6 +96,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performHPO")
     public Boolean performHPO;
+
     public Solution withPerformHPO(Boolean performHPO) {
         this.performHPO = performHPO;
         return this;
@@ -96,6 +105,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipeArn")
     public String recipeArn;
+
     public Solution withRecipeArn(String recipeArn) {
         this.recipeArn = recipeArn;
         return this;
@@ -104,6 +114,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionArn")
     public String solutionArn;
+
     public Solution withSolutionArn(String solutionArn) {
         this.solutionArn = solutionArn;
         return this;
@@ -112,6 +123,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionConfig")
     public SolutionConfig solutionConfig;
+
     public Solution withSolutionConfig(SolutionConfig solutionConfig) {
         this.solutionConfig = solutionConfig;
         return this;
@@ -120,9 +132,11 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Solution withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Solution(){}
 }

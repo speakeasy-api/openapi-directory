@@ -15,6 +15,7 @@ public class UnfilteredPartition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizedColumns")
     public String[] authorizedColumns;
+
     public UnfilteredPartition withAuthorizedColumns(String[] authorizedColumns) {
         this.authorizedColumns = authorizedColumns;
         return this;
@@ -23,6 +24,7 @@ public class UnfilteredPartition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsRegisteredWithLakeFormation")
     public Boolean isRegisteredWithLakeFormation;
+
     public UnfilteredPartition withIsRegisteredWithLakeFormation(Boolean isRegisteredWithLakeFormation) {
         this.isRegisteredWithLakeFormation = isRegisteredWithLakeFormation;
         return this;
@@ -31,9 +33,11 @@ public class UnfilteredPartition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Partition")
     public Partition partition;
+
     public UnfilteredPartition withPartition(Partition partition) {
         this.partition = partition;
         return this;
     }
     
+    public UnfilteredPartition(){}
 }

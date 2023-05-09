@@ -15,9 +15,11 @@ public class DetectedS3SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileFormatDescriptor")
     public DetectedFileFormatDescriptor fileFormatDescriptor;
+
     public DetectedS3SourceConfig withFileFormatDescriptor(DetectedFileFormatDescriptor fileFormatDescriptor) {
         this.fileFormatDescriptor = fileFormatDescriptor;
         return this;
     }
     
+    public DetectedS3SourceConfig(){}
 }

@@ -18,6 +18,7 @@ public class ReviewsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageInfo")
     public PageInfo pageInfo;
+
     public ReviewsListResponse withPageInfo(PageInfo pageInfo) {
         this.pageInfo = pageInfo;
         return this;
@@ -29,6 +30,7 @@ public class ReviewsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviews")
     public Review[] reviews;
+
     public ReviewsListResponse withReviews(Review[] reviews) {
         this.reviews = reviews;
         return this;
@@ -40,9 +42,11 @@ public class ReviewsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenPagination")
     public TokenPagination tokenPagination;
+
     public ReviewsListResponse withTokenPagination(TokenPagination tokenPagination) {
         this.tokenPagination = tokenPagination;
         return this;
     }
     
+    public ReviewsListResponse(){}
 }

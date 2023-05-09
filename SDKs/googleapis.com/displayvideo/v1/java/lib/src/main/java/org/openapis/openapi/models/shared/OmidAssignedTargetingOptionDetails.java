@@ -18,6 +18,7 @@ public class OmidAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("omid")
     public OmidAssignedTargetingOptionDetailsOmidEnum omid;
+
     public OmidAssignedTargetingOptionDetails withOmid(OmidAssignedTargetingOptionDetailsOmidEnum omid) {
         this.omid = omid;
         return this;
@@ -29,9 +30,11 @@ public class OmidAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public OmidAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public OmidAssignedTargetingOptionDetails(){}
 }

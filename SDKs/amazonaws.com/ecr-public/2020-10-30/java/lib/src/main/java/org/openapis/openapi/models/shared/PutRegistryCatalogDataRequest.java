@@ -12,9 +12,11 @@ public class PutRegistryCatalogDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PutRegistryCatalogDataRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public PutRegistryCatalogDataRequest(){}
 }

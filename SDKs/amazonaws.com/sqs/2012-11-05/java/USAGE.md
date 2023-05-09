@@ -3,38 +3,30 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GETAddPermissionActionEnum;
-import org.openapis.openapi.models.operations.GETAddPermissionVersionEnum;
 import org.openapis.openapi.models.operations.GETAddPermissionRequest;
 import org.openapis.openapi.models.operations.GETAddPermissionResponse;
+import org.openapis.openapi.models.operations.GETAddPermissionVersionEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GETAddPermissionRequest req = new GETAddPermissionRequest() {{
-                awsAccountIds = new String[]{{
-                    add("provident"),
-                    add("distinctio"),
-                    add("quibusdam"),
-                }};
-                accountNumber = 602763;
-                action = "AddPermission";
-                actions = new String[]{{
-                    add("corrupti"),
-                    add("illum"),
-                    add("vel"),
-                    add("error"),
-                }};
-                label = "deserunt";
-                queueName = "suscipit";
-                version = "2012-11-05";
+            GETAddPermissionRequest req = new GETAddPermissionRequest(                new String[]{{
+                                add("distinctio"),
+                                add("quibusdam"),
+                                add("unde"),
+                            }}, 857946L, GETAddPermissionActionEnum.ADD_PERMISSION,                 new String[]{{
+                                add("illum"),
+                                add("vel"),
+                                add("error"),
+                            }}, "deserunt", "suscipit", GETAddPermissionVersionEnum.TWO_THOUSAND_AND_TWELVE1105) {{
                 xAmzAlgorithm = "iure";
                 xAmzContentSha256 = "magnam";
                 xAmzCredential = "debitis";
@@ -42,7 +34,7 @@ public class Application {
                 xAmzSecurityToken = "delectus";
                 xAmzSignature = "tempora";
                 xAmzSignedHeaders = "suscipit";
-            }}            
+            }};            
 
             GETAddPermissionResponse res = sdk.getAddPermission(req);
 
@@ -52,5 +44,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

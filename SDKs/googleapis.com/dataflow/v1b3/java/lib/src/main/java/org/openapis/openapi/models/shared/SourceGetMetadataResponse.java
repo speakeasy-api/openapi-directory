@@ -18,9 +18,11 @@ public class SourceGetMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public SourceMetadata metadata;
+
     public SourceGetMetadataResponse withMetadata(SourceMetadata metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public SourceGetMetadataResponse(){}
 }

@@ -12,6 +12,7 @@ public class CreateConfigurationSetEventDestinationRequestBody {
      */
     @JsonProperty("EventDestination")
     public CreateConfigurationSetEventDestinationRequestBodyEventDestination eventDestination;
+
     public CreateConfigurationSetEventDestinationRequestBody withEventDestination(CreateConfigurationSetEventDestinationRequestBodyEventDestination eventDestination) {
         this.eventDestination = eventDestination;
         return this;
@@ -22,9 +23,14 @@ public class CreateConfigurationSetEventDestinationRequestBody {
      */
     @JsonProperty("EventDestinationName")
     public String eventDestinationName;
+
     public CreateConfigurationSetEventDestinationRequestBody withEventDestinationName(String eventDestinationName) {
         this.eventDestinationName = eventDestinationName;
         return this;
     }
     
+    public CreateConfigurationSetEventDestinationRequestBody(@JsonProperty("EventDestination") CreateConfigurationSetEventDestinationRequestBodyEventDestination eventDestination, @JsonProperty("EventDestinationName") String eventDestinationName) {
+        this.eventDestination = eventDestination;
+        this.eventDestinationName = eventDestinationName;
+  }
 }

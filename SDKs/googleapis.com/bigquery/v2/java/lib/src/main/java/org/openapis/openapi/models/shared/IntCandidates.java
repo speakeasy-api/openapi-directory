@@ -18,9 +18,11 @@ public class IntCandidates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidates")
     public String[] candidates;
+
     public IntCandidates withCandidates(String[] candidates) {
         this.candidates = candidates;
         return this;
     }
     
+    public IntCandidates(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCalculationExecutionRequest {
     @JsonProperty("CalculationExecutionId")
     public String calculationExecutionId;
+
     public GetCalculationExecutionRequest withCalculationExecutionId(String calculationExecutionId) {
         this.calculationExecutionId = calculationExecutionId;
         return this;
     }
     
+    public GetCalculationExecutionRequest(@JsonProperty("CalculationExecutionId") String calculationExecutionId) {
+        this.calculationExecutionId = calculationExecutionId;
+  }
 }

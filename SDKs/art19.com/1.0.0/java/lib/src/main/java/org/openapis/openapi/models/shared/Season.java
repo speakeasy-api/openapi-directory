@@ -12,6 +12,7 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public SeasonAttributes attributes;
+
     public Season withAttributes(SeasonAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -20,6 +21,7 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Season withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public SeasonRelationships relationships;
+
     public Season withRelationships(SeasonRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -39,9 +42,11 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Season withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Season(){}
 }

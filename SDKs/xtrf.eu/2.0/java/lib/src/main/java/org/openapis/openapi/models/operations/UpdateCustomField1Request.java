@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomField1Request {
@@ -12,6 +13,7 @@ public class UpdateCustomField1Request {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CustomFieldDTO customFieldDTO;
+
     public UpdateCustomField1Request withCustomFieldDTO(org.openapis.openapi.models.shared.CustomFieldDTO customFieldDTO) {
         this.customFieldDTO = customFieldDTO;
         return this;
@@ -22,6 +24,7 @@ public class UpdateCustomField1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customFieldKey")
     public String customFieldKey;
+
     public UpdateCustomField1Request withCustomFieldKey(String customFieldKey) {
         this.customFieldKey = customFieldKey;
         return this;
@@ -32,9 +35,15 @@ public class UpdateCustomField1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public Long userId;
+
     public UpdateCustomField1Request withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public UpdateCustomField1Request(@JsonProperty("CustomFieldDTO") org.openapis.openapi.models.shared.CustomFieldDTO customFieldDTO, @JsonProperty("customFieldKey") String customFieldKey, @JsonProperty("userId") Long userId) {
+        this.customFieldDTO = customFieldDTO;
+        this.customFieldKey = customFieldKey;
+        this.userId = userId;
+  }
 }

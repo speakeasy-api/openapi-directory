@@ -18,6 +18,7 @@ public class SocialMetaTagInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("socialDescription")
     public String socialDescription;
+
     public SocialMetaTagInfo withSocialDescription(String socialDescription) {
         this.socialDescription = socialDescription;
         return this;
@@ -29,6 +30,7 @@ public class SocialMetaTagInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("socialImageLink")
     public String socialImageLink;
+
     public SocialMetaTagInfo withSocialImageLink(String socialImageLink) {
         this.socialImageLink = socialImageLink;
         return this;
@@ -40,9 +42,11 @@ public class SocialMetaTagInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("socialTitle")
     public String socialTitle;
+
     public SocialMetaTagInfo withSocialTitle(String socialTitle) {
         this.socialTitle = socialTitle;
         return this;
     }
     
+    public SocialMetaTagInfo(){}
 }

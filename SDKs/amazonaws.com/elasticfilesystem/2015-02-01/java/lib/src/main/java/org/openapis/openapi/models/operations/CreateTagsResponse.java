@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTagsResponse {
@@ -12,6 +13,7 @@ public class CreateTagsResponse {
      */
     
     public Object badRequest;
+
     public CreateTagsResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class CreateTagsResponse {
     
     
     public String contentType;
+
     public CreateTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateTagsResponse {
      */
     
     public Object fileSystemNotFound;
+
     public CreateTagsResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -39,6 +43,7 @@ public class CreateTagsResponse {
      */
     
     public Object internalServerError;
+
     public CreateTagsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class CreateTagsResponse {
     
     
     public Integer statusCode;
+
     public CreateTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class StartSpeakerEnrollmentJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public StartSpeakerEnrollmentJobRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class StartSpeakerEnrollmentJobRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public StartSpeakerEnrollmentJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -26,6 +28,7 @@ public class StartSpeakerEnrollmentJobRequest {
     
     @JsonProperty("DomainId")
     public String domainId;
+
     public StartSpeakerEnrollmentJobRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -34,6 +37,7 @@ public class StartSpeakerEnrollmentJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnrollmentConfig")
     public EnrollmentConfig enrollmentConfig;
+
     public StartSpeakerEnrollmentJobRequest withEnrollmentConfig(EnrollmentConfig enrollmentConfig) {
         this.enrollmentConfig = enrollmentConfig;
         return this;
@@ -41,6 +45,7 @@ public class StartSpeakerEnrollmentJobRequest {
     
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public StartSpeakerEnrollmentJobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -49,6 +54,7 @@ public class StartSpeakerEnrollmentJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public StartSpeakerEnrollmentJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -56,9 +62,16 @@ public class StartSpeakerEnrollmentJobRequest {
     
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public StartSpeakerEnrollmentJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
     }
     
+    public StartSpeakerEnrollmentJobRequest(@JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("DomainId") String domainId, @JsonProperty("InputDataConfig") InputDataConfig inputDataConfig, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.domainId = domainId;
+        this.inputDataConfig = inputDataConfig;
+        this.outputDataConfig = outputDataConfig;
+  }
 }

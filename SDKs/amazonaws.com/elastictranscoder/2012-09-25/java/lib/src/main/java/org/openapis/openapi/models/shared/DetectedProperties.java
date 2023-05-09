@@ -15,6 +15,7 @@ public class DetectedProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationMillis")
     public Long durationMillis;
+
     public DetectedProperties withDurationMillis(Long durationMillis) {
         this.durationMillis = durationMillis;
         return this;
@@ -23,6 +24,7 @@ public class DetectedProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSize")
     public Long fileSize;
+
     public DetectedProperties withFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
@@ -31,6 +33,7 @@ public class DetectedProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FrameRate")
     public String frameRate;
+
     public DetectedProperties withFrameRate(String frameRate) {
         this.frameRate = frameRate;
         return this;
@@ -39,6 +42,7 @@ public class DetectedProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Height")
     public Long height;
+
     public DetectedProperties withHeight(Long height) {
         this.height = height;
         return this;
@@ -47,9 +51,11 @@ public class DetectedProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Width")
     public Long width;
+
     public DetectedProperties withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public DetectedProperties(){}
 }

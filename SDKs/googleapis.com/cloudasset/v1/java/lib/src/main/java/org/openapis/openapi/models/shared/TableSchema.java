@@ -18,9 +18,11 @@ public class TableSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public TableFieldSchema[] fields;
+
     public TableSchema withFields(TableFieldSchema[] fields) {
         this.fields = fields;
         return this;
     }
     
+    public TableSchema(){}
 }

@@ -19,6 +19,7 @@ public class ChannelCatalogCategoryConfiguration {
      */
     @JsonProperty("autoMapNewSubCategories")
     public Boolean autoMapNewSubCategories;
+
     public ChannelCatalogCategoryConfiguration withAutoMapNewSubCategories(Boolean autoMapNewSubCategories) {
         this.autoMapNewSubCategories = autoMapNewSubCategories;
         return this;
@@ -29,6 +30,7 @@ public class ChannelCatalogCategoryConfiguration {
      */
     @JsonProperty("catalogCategoryPath")
     public String[] catalogCategoryPath;
+
     public ChannelCatalogCategoryConfiguration withCatalogCategoryPath(String[] catalogCategoryPath) {
         this.catalogCategoryPath = catalogCategoryPath;
         return this;
@@ -40,6 +42,7 @@ public class ChannelCatalogCategoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCategoryPath")
     public String[] channelCategoryPath;
+
     public ChannelCatalogCategoryConfiguration withChannelCategoryPath(String[] channelCategoryPath) {
         this.channelCategoryPath = channelCategoryPath;
         return this;
@@ -51,9 +54,14 @@ public class ChannelCatalogCategoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costValue")
     public Double costValue;
+
     public ChannelCatalogCategoryConfiguration withCostValue(Double costValue) {
         this.costValue = costValue;
         return this;
     }
     
+    public ChannelCatalogCategoryConfiguration(@JsonProperty("autoMapNewSubCategories") Boolean autoMapNewSubCategories, @JsonProperty("catalogCategoryPath") String[] catalogCategoryPath) {
+        this.autoMapNewSubCategories = autoMapNewSubCategories;
+        this.catalogCategoryPath = catalogCategoryPath;
+  }
 }

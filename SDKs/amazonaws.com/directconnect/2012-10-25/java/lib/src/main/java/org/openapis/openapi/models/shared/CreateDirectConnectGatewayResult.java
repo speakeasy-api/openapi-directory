@@ -15,9 +15,11 @@ public class CreateDirectConnectGatewayResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directConnectGateway")
     public DirectConnectGateway directConnectGateway;
+
     public CreateDirectConnectGatewayResult withDirectConnectGateway(DirectConnectGateway directConnectGateway) {
         this.directConnectGateway = directConnectGateway;
         return this;
     }
     
+    public CreateDirectConnectGatewayResult(){}
 }

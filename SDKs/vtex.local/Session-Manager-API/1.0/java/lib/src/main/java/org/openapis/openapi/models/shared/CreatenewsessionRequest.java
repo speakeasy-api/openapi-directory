@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatenewsessionRequest {
     @JsonProperty("public")
     public Public public_;
+
     public CreatenewsessionRequest withPublic(Public public_) {
         this.public_ = public_;
         return this;
     }
     
+    public CreatenewsessionRequest(@JsonProperty("public") Public public_) {
+        this.public_ = public_;
+  }
 }

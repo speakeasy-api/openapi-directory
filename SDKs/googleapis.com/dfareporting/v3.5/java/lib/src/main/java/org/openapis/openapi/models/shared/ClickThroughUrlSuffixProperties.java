@@ -18,6 +18,7 @@ public class ClickThroughUrlSuffixProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickThroughUrlSuffix")
     public String clickThroughUrlSuffix;
+
     public ClickThroughUrlSuffixProperties withClickThroughUrlSuffix(String clickThroughUrlSuffix) {
         this.clickThroughUrlSuffix = clickThroughUrlSuffix;
         return this;
@@ -29,9 +30,11 @@ public class ClickThroughUrlSuffixProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideInheritedSuffix")
     public Boolean overrideInheritedSuffix;
+
     public ClickThroughUrlSuffixProperties withOverrideInheritedSuffix(Boolean overrideInheritedSuffix) {
         this.overrideInheritedSuffix = overrideInheritedSuffix;
         return this;
     }
     
+    public ClickThroughUrlSuffixProperties(){}
 }

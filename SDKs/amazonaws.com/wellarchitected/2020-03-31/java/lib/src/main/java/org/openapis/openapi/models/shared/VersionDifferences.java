@@ -15,9 +15,11 @@ public class VersionDifferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PillarDifferences")
     public PillarDifference[] pillarDifferences;
+
     public VersionDifferences withPillarDifferences(PillarDifference[] pillarDifferences) {
         this.pillarDifferences = pillarDifferences;
         return this;
     }
     
+    public VersionDifferences(){}
 }

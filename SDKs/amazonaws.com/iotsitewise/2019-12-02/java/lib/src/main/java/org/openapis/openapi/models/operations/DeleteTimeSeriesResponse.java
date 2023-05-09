@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTimeSeriesResponse {
@@ -12,6 +13,7 @@ public class DeleteTimeSeriesResponse {
      */
     
     public Object conflictingOperationException;
+
     public DeleteTimeSeriesResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTimeSeriesResponse {
     
     
     public String contentType;
+
     public DeleteTimeSeriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTimeSeriesResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteTimeSeriesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTimeSeriesResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteTimeSeriesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTimeSeriesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteTimeSeriesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteTimeSeriesResponse {
     
     
     public Integer statusCode;
+
     public DeleteTimeSeriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteTimeSeriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTimeSeriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteTimeSeriesResponse {
      */
     
     public Object throttlingException;
+
     public DeleteTimeSeriesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteTimeSeriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

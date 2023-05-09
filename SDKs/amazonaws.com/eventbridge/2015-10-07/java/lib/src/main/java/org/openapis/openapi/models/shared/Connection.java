@@ -20,6 +20,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizationType")
     public ConnectionAuthorizationTypeEnum authorizationType;
+
     public Connection withAuthorizationType(ConnectionAuthorizationTypeEnum authorizationType) {
         this.authorizationType = authorizationType;
         return this;
@@ -28,6 +29,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionArn")
     public String connectionArn;
+
     public Connection withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
@@ -36,6 +38,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionState")
     public ConnectionStateEnum connectionState;
+
     public Connection withConnectionState(ConnectionStateEnum connectionState) {
         this.connectionState = connectionState;
         return this;
@@ -46,6 +49,7 @@ public class Connection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Connection withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -56,6 +60,7 @@ public class Connection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAuthorizedTime")
     public OffsetDateTime lastAuthorizedTime;
+
     public Connection withLastAuthorizedTime(OffsetDateTime lastAuthorizedTime) {
         this.lastAuthorizedTime = lastAuthorizedTime;
         return this;
@@ -66,6 +71,7 @@ public class Connection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public Connection withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -74,6 +80,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Connection withName(String name) {
         this.name = name;
         return this;
@@ -82,9 +89,11 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReason")
     public String stateReason;
+
     public Connection withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
     }
     
+    public Connection(){}
 }

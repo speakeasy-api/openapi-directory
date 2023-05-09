@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LabelsS3InputConfiguration {
     @JsonProperty("Bucket")
     public String bucket;
+
     public LabelsS3InputConfiguration withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -22,9 +23,13 @@ public class LabelsS3InputConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prefix")
     public String prefix;
+
     public LabelsS3InputConfiguration withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public LabelsS3InputConfiguration(@JsonProperty("Bucket") String bucket) {
+        this.bucket = bucket;
+  }
 }

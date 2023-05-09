@@ -18,6 +18,7 @@ public class ImageType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clipArtType")
     public Integer clipArtType;
+
     public ImageType withClipArtType(Integer clipArtType) {
         this.clipArtType = clipArtType;
         return this;
@@ -29,9 +30,11 @@ public class ImageType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineDrawingType")
     public Integer lineDrawingType;
+
     public ImageType withLineDrawingType(Integer lineDrawingType) {
         this.lineDrawingType = lineDrawingType;
         return this;
     }
     
+    public ImageType(){}
 }

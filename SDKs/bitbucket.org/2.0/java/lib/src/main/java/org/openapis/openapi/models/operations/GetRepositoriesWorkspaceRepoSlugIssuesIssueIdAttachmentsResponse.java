@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedIssueAttachments paginatedIssueAttachments;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse withPaginatedIssueAttachments(org.openapis.openapi.models.shared.PaginatedIssueAttachments paginatedIssueAttachments) {
         this.paginatedIssueAttachments = paginatedIssueAttachments;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

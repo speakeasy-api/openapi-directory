@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBusinessDaysRequest {
@@ -12,6 +13,7 @@ public class UpdateBusinessDaysRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Integer requestBody;
+
     public UpdateBusinessDaysRequest withRequestBody(Integer requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class UpdateBusinessDaysRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
     public String quoteId;
+
     public UpdateBusinessDaysRequest withQuoteId(String quoteId) {
         this.quoteId = quoteId;
         return this;
     }
     
+    public UpdateBusinessDaysRequest(@JsonProperty("RequestBody") Integer requestBody, @JsonProperty("quoteId") String quoteId) {
+        this.requestBody = requestBody;
+        this.quoteId = quoteId;
+  }
 }

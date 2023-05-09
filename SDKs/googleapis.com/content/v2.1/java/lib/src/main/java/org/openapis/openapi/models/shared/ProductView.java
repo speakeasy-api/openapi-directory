@@ -18,6 +18,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregatedDestinationStatus")
     public ProductViewAggregatedDestinationStatusEnum aggregatedDestinationStatus;
+
     public ProductView withAggregatedDestinationStatus(ProductViewAggregatedDestinationStatusEnum aggregatedDestinationStatus) {
         this.aggregatedDestinationStatus = aggregatedDestinationStatus;
         return this;
@@ -29,6 +30,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public String availability;
+
     public ProductView withAvailability(String availability) {
         this.availability = availability;
         return this;
@@ -40,6 +42,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public ProductView withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -51,6 +54,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryL1")
     public String categoryL1;
+
     public ProductView withCategoryL1(String categoryL1) {
         this.categoryL1 = categoryL1;
         return this;
@@ -62,6 +66,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryL2")
     public String categoryL2;
+
     public ProductView withCategoryL2(String categoryL2) {
         this.categoryL2 = categoryL2;
         return this;
@@ -73,6 +78,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryL3")
     public String categoryL3;
+
     public ProductView withCategoryL3(String categoryL3) {
         this.categoryL3 = categoryL3;
         return this;
@@ -84,6 +90,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryL4")
     public String categoryL4;
+
     public ProductView withCategoryL4(String categoryL4) {
         this.categoryL4 = categoryL4;
         return this;
@@ -95,6 +102,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryL5")
     public String categoryL5;
+
     public ProductView withCategoryL5(String categoryL5) {
         this.categoryL5 = categoryL5;
         return this;
@@ -106,6 +114,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public ProductViewChannelEnum channel;
+
     public ProductView withChannel(ProductViewChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -117,6 +126,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public ProductView withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -128,6 +138,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public ProductView withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -139,6 +150,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public ProductView withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -150,6 +162,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationDate")
     public Date expirationDate;
+
     public ProductView withExpirationDate(Date expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -161,6 +174,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gtin")
     public String[] gtin;
+
     public ProductView withGtin(String[] gtin) {
         this.gtin = gtin;
         return this;
@@ -172,6 +186,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ProductView withId(String id) {
         this.id = id;
         return this;
@@ -183,6 +198,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemGroupId")
     public String itemGroupId;
+
     public ProductView withItemGroupId(String itemGroupId) {
         this.itemGroupId = itemGroupId;
         return this;
@@ -194,6 +210,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemIssues")
     public ProductViewItemIssue[] itemIssues;
+
     public ProductView withItemIssues(ProductViewItemIssue[] itemIssues) {
         this.itemIssues = itemIssues;
         return this;
@@ -205,6 +222,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public ProductView withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -216,6 +234,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerId")
     public String offerId;
+
     public ProductView withOfferId(String offerId) {
         this.offerId = offerId;
         return this;
@@ -227,6 +246,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceMicros")
     public String priceMicros;
+
     public ProductView withPriceMicros(String priceMicros) {
         this.priceMicros = priceMicros;
         return this;
@@ -238,6 +258,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTypeL1")
     public String productTypeL1;
+
     public ProductView withProductTypeL1(String productTypeL1) {
         this.productTypeL1 = productTypeL1;
         return this;
@@ -249,6 +270,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTypeL2")
     public String productTypeL2;
+
     public ProductView withProductTypeL2(String productTypeL2) {
         this.productTypeL2 = productTypeL2;
         return this;
@@ -260,6 +282,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTypeL3")
     public String productTypeL3;
+
     public ProductView withProductTypeL3(String productTypeL3) {
         this.productTypeL3 = productTypeL3;
         return this;
@@ -271,6 +294,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTypeL4")
     public String productTypeL4;
+
     public ProductView withProductTypeL4(String productTypeL4) {
         this.productTypeL4 = productTypeL4;
         return this;
@@ -282,6 +306,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTypeL5")
     public String productTypeL5;
+
     public ProductView withProductTypeL5(String productTypeL5) {
         this.productTypeL5 = productTypeL5;
         return this;
@@ -293,6 +318,7 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingLabel")
     public String shippingLabel;
+
     public ProductView withShippingLabel(String shippingLabel) {
         this.shippingLabel = shippingLabel;
         return this;
@@ -304,9 +330,11 @@ public class ProductView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProductView withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ProductView(){}
 }

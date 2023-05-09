@@ -15,6 +15,7 @@ public class SmsConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalId")
     public String externalId;
+
     public SmsConfigurationType withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -22,6 +23,7 @@ public class SmsConfigurationType {
     
     @JsonProperty("SnsCallerArn")
     public String snsCallerArn;
+
     public SmsConfigurationType withSnsCallerArn(String snsCallerArn) {
         this.snsCallerArn = snsCallerArn;
         return this;
@@ -30,9 +32,13 @@ public class SmsConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsRegion")
     public String snsRegion;
+
     public SmsConfigurationType withSnsRegion(String snsRegion) {
         this.snsRegion = snsRegion;
         return this;
     }
     
+    public SmsConfigurationType(@JsonProperty("SnsCallerArn") String snsCallerArn) {
+        this.snsCallerArn = snsCallerArn;
+  }
 }

@@ -18,6 +18,7 @@ public class Charity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("charityId")
     public String charityId;
+
     public Charity withCharityId(String charityId) {
         this.charityId = charityId;
         return this;
@@ -29,9 +30,11 @@ public class Charity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("donationPercentage")
     public String donationPercentage;
+
     public Charity withDonationPercentage(String donationPercentage) {
         this.donationPercentage = donationPercentage;
         return this;
     }
     
+    public Charity(){}
 }

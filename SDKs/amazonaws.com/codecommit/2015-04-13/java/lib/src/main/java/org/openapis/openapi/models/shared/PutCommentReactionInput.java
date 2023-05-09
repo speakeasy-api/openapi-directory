@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutCommentReactionInput {
     @JsonProperty("commentId")
     public String commentId;
+
     public PutCommentReactionInput withCommentId(String commentId) {
         this.commentId = commentId;
         return this;
@@ -16,9 +17,14 @@ public class PutCommentReactionInput {
     
     @JsonProperty("reactionValue")
     public String reactionValue;
+
     public PutCommentReactionInput withReactionValue(String reactionValue) {
         this.reactionValue = reactionValue;
         return this;
     }
     
+    public PutCommentReactionInput(@JsonProperty("commentId") String commentId, @JsonProperty("reactionValue") String reactionValue) {
+        this.commentId = commentId;
+        this.reactionValue = reactionValue;
+  }
 }

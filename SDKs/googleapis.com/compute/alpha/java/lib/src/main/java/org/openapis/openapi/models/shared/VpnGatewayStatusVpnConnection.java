@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * VpnGatewayStatusVpnConnection - A VPN connection contains all VPN tunnels connected from this VpnGateway to the same peer gateway. The peer gateway could either be a external VPN gateway or GCP VPN gateway.
+ * VpnGatewayStatusVpnConnection - A VPN connection contains all VPN tunnels connected from this VpnGateway to the same peer gateway. The peer gateway could either be an external VPN gateway or a Google Cloud VPN gateway.
  */
 public class VpnGatewayStatusVpnConnection {
     /**
@@ -18,6 +18,7 @@ public class VpnGatewayStatusVpnConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerExternalGateway")
     public String peerExternalGateway;
+
     public VpnGatewayStatusVpnConnection withPeerExternalGateway(String peerExternalGateway) {
         this.peerExternalGateway = peerExternalGateway;
         return this;
@@ -29,6 +30,7 @@ public class VpnGatewayStatusVpnConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerGcpGateway")
     public String peerGcpGateway;
+
     public VpnGatewayStatusVpnConnection withPeerGcpGateway(String peerGcpGateway) {
         this.peerGcpGateway = peerGcpGateway;
         return this;
@@ -40,6 +42,7 @@ public class VpnGatewayStatusVpnConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public VpnGatewayStatusHighAvailabilityRequirementState state;
+
     public VpnGatewayStatusVpnConnection withState(VpnGatewayStatusHighAvailabilityRequirementState state) {
         this.state = state;
         return this;
@@ -51,9 +54,11 @@ public class VpnGatewayStatusVpnConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tunnels")
     public VpnGatewayStatusTunnel[] tunnels;
+
     public VpnGatewayStatusVpnConnection withTunnels(VpnGatewayStatusTunnel[] tunnels) {
         this.tunnels = tunnels;
         return this;
     }
     
+    public VpnGatewayStatusVpnConnection(){}
 }

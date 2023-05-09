@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OutletsGetAllOutletsResponse {
     
     public byte[] body;
+
     public OutletsGetAllOutletsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class OutletsGetAllOutletsResponse {
     
     
     public String contentType;
+
     public OutletsGetAllOutletsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class OutletsGetAllOutletsResponse {
     
     
     public Integer statusCode;
+
     public OutletsGetAllOutletsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class OutletsGetAllOutletsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OutletsGetAllOutletsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class OutletsGetAllOutletsResponse {
      */
     
     public org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse;
+
     public OutletsGetAllOutletsResponse withV3ErrorResponse(org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse) {
         this.v3ErrorResponse = v3ErrorResponse;
         return this;
@@ -50,9 +56,14 @@ public class OutletsGetAllOutletsResponse {
      */
     
     public org.openapis.openapi.models.shared.V3OutletResponse v3OutletResponse;
+
     public OutletsGetAllOutletsResponse withV3OutletResponse(org.openapis.openapi.models.shared.V3OutletResponse v3OutletResponse) {
         this.v3OutletResponse = v3OutletResponse;
         return this;
     }
     
+    public OutletsGetAllOutletsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

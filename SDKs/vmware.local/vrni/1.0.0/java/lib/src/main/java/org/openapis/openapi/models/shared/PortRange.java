@@ -12,6 +12,7 @@ public class PortRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
     public String display;
+
     public PortRange withDisplay(String display) {
         this.display = display;
         return this;
@@ -20,6 +21,7 @@ public class PortRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Integer end;
+
     public PortRange withEnd(Integer end) {
         this.end = end;
         return this;
@@ -28,6 +30,7 @@ public class PortRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iana_name")
     public String ianaName;
+
     public PortRange withIanaName(String ianaName) {
         this.ianaName = ianaName;
         return this;
@@ -36,6 +39,7 @@ public class PortRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iana_port_display")
     public String ianaPortDisplay;
+
     public PortRange withIanaPortDisplay(String ianaPortDisplay) {
         this.ianaPortDisplay = ianaPortDisplay;
         return this;
@@ -44,9 +48,11 @@ public class PortRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Integer start;
+
     public PortRange withStart(Integer start) {
         this.start = start;
         return this;
     }
     
+    public PortRange(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfoliosPortfolioWorstDrawdowns {
     @JsonProperty("drawdownBottom")
     public Long drawdownBottom;
+
     public PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfoliosPortfolioWorstDrawdowns withDrawdownBottom(Long drawdownBottom) {
         this.drawdownBottom = drawdownBottom;
         return this;
@@ -16,6 +17,7 @@ public class PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfoliosPortfolio
     
     @JsonProperty("drawdownDepth")
     public Double drawdownDepth;
+
     public PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfoliosPortfolioWorstDrawdowns withDrawdownDepth(Double drawdownDepth) {
         this.drawdownDepth = drawdownDepth;
         return this;
@@ -23,6 +25,7 @@ public class PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfoliosPortfolio
     
     @JsonProperty("drawdownEnd")
     public Long drawdownEnd;
+
     public PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfoliosPortfolioWorstDrawdowns withDrawdownEnd(Long drawdownEnd) {
         this.drawdownEnd = drawdownEnd;
         return this;
@@ -30,9 +33,16 @@ public class PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfoliosPortfolio
     
     @JsonProperty("drawdownStart")
     public Long drawdownStart;
+
     public PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfoliosPortfolioWorstDrawdowns withDrawdownStart(Long drawdownStart) {
         this.drawdownStart = drawdownStart;
         return this;
     }
     
+    public PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfoliosPortfolioWorstDrawdowns(@JsonProperty("drawdownBottom") Long drawdownBottom, @JsonProperty("drawdownDepth") Double drawdownDepth, @JsonProperty("drawdownEnd") Long drawdownEnd, @JsonProperty("drawdownStart") Long drawdownStart) {
+        this.drawdownBottom = drawdownBottom;
+        this.drawdownDepth = drawdownDepth;
+        this.drawdownEnd = drawdownEnd;
+        this.drawdownStart = drawdownStart;
+  }
 }

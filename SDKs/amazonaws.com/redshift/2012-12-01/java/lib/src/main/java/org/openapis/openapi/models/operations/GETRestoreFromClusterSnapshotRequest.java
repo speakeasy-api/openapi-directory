@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRestoreFromClusterSnapshotRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRestoreFromClusterSnapshotActionEnum action;
+
     public GETRestoreFromClusterSnapshotRequest withAction(GETRestoreFromClusterSnapshotActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AdditionalInfo")
     public String additionalInfo;
+
     public GETRestoreFromClusterSnapshotRequest withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -29,6 +32,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowVersionUpgrade")
     public Boolean allowVersionUpgrade;
+
     public GETRestoreFromClusterSnapshotRequest withAllowVersionUpgrade(Boolean allowVersionUpgrade) {
         this.allowVersionUpgrade = allowVersionUpgrade;
         return this;
@@ -39,6 +43,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AquaConfigurationStatus")
     public GETRestoreFromClusterSnapshotAquaConfigurationStatusEnum aquaConfigurationStatus;
+
     public GETRestoreFromClusterSnapshotRequest withAquaConfigurationStatus(GETRestoreFromClusterSnapshotAquaConfigurationStatusEnum aquaConfigurationStatus) {
         this.aquaConfigurationStatus = aquaConfigurationStatus;
         return this;
@@ -49,6 +54,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutomatedSnapshotRetentionPeriod")
     public Long automatedSnapshotRetentionPeriod;
+
     public GETRestoreFromClusterSnapshotRequest withAutomatedSnapshotRetentionPeriod(Long automatedSnapshotRetentionPeriod) {
         this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
         return this;
@@ -59,6 +65,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AvailabilityZone")
     public String availabilityZone;
+
     public GETRestoreFromClusterSnapshotRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -69,6 +76,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AvailabilityZoneRelocation")
     public Boolean availabilityZoneRelocation;
+
     public GETRestoreFromClusterSnapshotRequest withAvailabilityZoneRelocation(Boolean availabilityZoneRelocation) {
         this.availabilityZoneRelocation = availabilityZoneRelocation;
         return this;
@@ -79,6 +87,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
     public String clusterIdentifier;
+
     public GETRestoreFromClusterSnapshotRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -89,6 +98,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterParameterGroupName")
     public String clusterParameterGroupName;
+
     public GETRestoreFromClusterSnapshotRequest withClusterParameterGroupName(String clusterParameterGroupName) {
         this.clusterParameterGroupName = clusterParameterGroupName;
         return this;
@@ -99,6 +109,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterSecurityGroups")
     public String[] clusterSecurityGroups;
+
     public GETRestoreFromClusterSnapshotRequest withClusterSecurityGroups(String[] clusterSecurityGroups) {
         this.clusterSecurityGroups = clusterSecurityGroups;
         return this;
@@ -109,6 +120,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterSubnetGroupName")
     public String clusterSubnetGroupName;
+
     public GETRestoreFromClusterSnapshotRequest withClusterSubnetGroupName(String clusterSubnetGroupName) {
         this.clusterSubnetGroupName = clusterSubnetGroupName;
         return this;
@@ -119,6 +131,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DefaultIamRoleArn")
     public String defaultIamRoleArn;
+
     public GETRestoreFromClusterSnapshotRequest withDefaultIamRoleArn(String defaultIamRoleArn) {
         this.defaultIamRoleArn = defaultIamRoleArn;
         return this;
@@ -129,6 +142,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ElasticIp")
     public String elasticIp;
+
     public GETRestoreFromClusterSnapshotRequest withElasticIp(String elasticIp) {
         this.elasticIp = elasticIp;
         return this;
@@ -139,6 +153,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Encrypted")
     public Boolean encrypted;
+
     public GETRestoreFromClusterSnapshotRequest withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -149,6 +164,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnhancedVpcRouting")
     public Boolean enhancedVpcRouting;
+
     public GETRestoreFromClusterSnapshotRequest withEnhancedVpcRouting(Boolean enhancedVpcRouting) {
         this.enhancedVpcRouting = enhancedVpcRouting;
         return this;
@@ -159,6 +175,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HsmClientCertificateIdentifier")
     public String hsmClientCertificateIdentifier;
+
     public GETRestoreFromClusterSnapshotRequest withHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
         this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
         return this;
@@ -169,6 +186,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HsmConfigurationIdentifier")
     public String hsmConfigurationIdentifier;
+
     public GETRestoreFromClusterSnapshotRequest withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
         this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
         return this;
@@ -179,6 +197,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IamRoles")
     public String[] iamRoles;
+
     public GETRestoreFromClusterSnapshotRequest withIamRoles(String[] iamRoles) {
         this.iamRoles = iamRoles;
         return this;
@@ -189,6 +208,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=KmsKeyId")
     public String kmsKeyId;
+
     public GETRestoreFromClusterSnapshotRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -199,6 +219,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaintenanceTrackName")
     public String maintenanceTrackName;
+
     public GETRestoreFromClusterSnapshotRequest withMaintenanceTrackName(String maintenanceTrackName) {
         this.maintenanceTrackName = maintenanceTrackName;
         return this;
@@ -209,6 +230,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ManualSnapshotRetentionPeriod")
     public Long manualSnapshotRetentionPeriod;
+
     public GETRestoreFromClusterSnapshotRequest withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -219,6 +241,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NodeType")
     public String nodeType;
+
     public GETRestoreFromClusterSnapshotRequest withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -229,6 +252,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NumberOfNodes")
     public Long numberOfNodes;
+
     public GETRestoreFromClusterSnapshotRequest withNumberOfNodes(Long numberOfNodes) {
         this.numberOfNodes = numberOfNodes;
         return this;
@@ -239,6 +263,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OwnerAccount")
     public String ownerAccount;
+
     public GETRestoreFromClusterSnapshotRequest withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -249,6 +274,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Port")
     public Long port;
+
     public GETRestoreFromClusterSnapshotRequest withPort(Long port) {
         this.port = port;
         return this;
@@ -259,6 +285,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public GETRestoreFromClusterSnapshotRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -269,6 +296,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PubliclyAccessible")
     public Boolean publiclyAccessible;
+
     public GETRestoreFromClusterSnapshotRequest withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -279,6 +307,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservedNodeId")
     public String reservedNodeId;
+
     public GETRestoreFromClusterSnapshotRequest withReservedNodeId(String reservedNodeId) {
         this.reservedNodeId = reservedNodeId;
         return this;
@@ -289,6 +318,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotArn")
     public String snapshotArn;
+
     public GETRestoreFromClusterSnapshotRequest withSnapshotArn(String snapshotArn) {
         this.snapshotArn = snapshotArn;
         return this;
@@ -299,6 +329,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotClusterIdentifier")
     public String snapshotClusterIdentifier;
+
     public GETRestoreFromClusterSnapshotRequest withSnapshotClusterIdentifier(String snapshotClusterIdentifier) {
         this.snapshotClusterIdentifier = snapshotClusterIdentifier;
         return this;
@@ -309,6 +340,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotIdentifier")
     public String snapshotIdentifier;
+
     public GETRestoreFromClusterSnapshotRequest withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
@@ -319,6 +351,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotScheduleIdentifier")
     public String snapshotScheduleIdentifier;
+
     public GETRestoreFromClusterSnapshotRequest withSnapshotScheduleIdentifier(String snapshotScheduleIdentifier) {
         this.snapshotScheduleIdentifier = snapshotScheduleIdentifier;
         return this;
@@ -329,6 +362,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetReservedNodeOfferingId")
     public String targetReservedNodeOfferingId;
+
     public GETRestoreFromClusterSnapshotRequest withTargetReservedNodeOfferingId(String targetReservedNodeOfferingId) {
         this.targetReservedNodeOfferingId = targetReservedNodeOfferingId;
         return this;
@@ -336,6 +370,7 @@ public class GETRestoreFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRestoreFromClusterSnapshotVersionEnum version;
+
     public GETRestoreFromClusterSnapshotRequest withVersion(GETRestoreFromClusterSnapshotVersionEnum version) {
         this.version = version;
         return this;
@@ -346,6 +381,7 @@ public class GETRestoreFromClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcSecurityGroupIds")
     public String[] vpcSecurityGroupIds;
+
     public GETRestoreFromClusterSnapshotRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
@@ -353,6 +389,7 @@ public class GETRestoreFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRestoreFromClusterSnapshotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -360,6 +397,7 @@ public class GETRestoreFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRestoreFromClusterSnapshotRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -367,6 +405,7 @@ public class GETRestoreFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRestoreFromClusterSnapshotRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -374,6 +413,7 @@ public class GETRestoreFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRestoreFromClusterSnapshotRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -381,6 +421,7 @@ public class GETRestoreFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRestoreFromClusterSnapshotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -388,6 +429,7 @@ public class GETRestoreFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRestoreFromClusterSnapshotRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -395,9 +437,15 @@ public class GETRestoreFromClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRestoreFromClusterSnapshotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRestoreFromClusterSnapshotRequest(@JsonProperty("Action") GETRestoreFromClusterSnapshotActionEnum action, @JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("Version") GETRestoreFromClusterSnapshotVersionEnum version) {
+        this.action = action;
+        this.clusterIdentifier = clusterIdentifier;
+        this.version = version;
+  }
 }

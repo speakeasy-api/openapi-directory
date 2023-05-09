@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1PhysicalSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avro")
     public GoogleCloudDatacatalogV1PhysicalSchemaAvroSchema avro;
+
     public GoogleCloudDatacatalogV1PhysicalSchema withAvro(GoogleCloudDatacatalogV1PhysicalSchemaAvroSchema avro) {
         this.avro = avro;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1PhysicalSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csv")
     public java.util.Map<String, Object> csv;
+
     public GoogleCloudDatacatalogV1PhysicalSchema withCsv(java.util.Map<String, Object> csv) {
         this.csv = csv;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1PhysicalSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orc")
     public java.util.Map<String, Object> orc;
+
     public GoogleCloudDatacatalogV1PhysicalSchema withOrc(java.util.Map<String, Object> orc) {
         this.orc = orc;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1PhysicalSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parquet")
     public java.util.Map<String, Object> parquet;
+
     public GoogleCloudDatacatalogV1PhysicalSchema withParquet(java.util.Map<String, Object> parquet) {
         this.parquet = parquet;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatacatalogV1PhysicalSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protobuf")
     public GoogleCloudDatacatalogV1PhysicalSchemaProtobufSchema protobuf;
+
     public GoogleCloudDatacatalogV1PhysicalSchema withProtobuf(GoogleCloudDatacatalogV1PhysicalSchemaProtobufSchema protobuf) {
         this.protobuf = protobuf;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDatacatalogV1PhysicalSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thrift")
     public GoogleCloudDatacatalogV1PhysicalSchemaThriftSchema thrift;
+
     public GoogleCloudDatacatalogV1PhysicalSchema withThrift(GoogleCloudDatacatalogV1PhysicalSchemaThriftSchema thrift) {
         this.thrift = thrift;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1PhysicalSchema(){}
 }

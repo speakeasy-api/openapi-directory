@@ -15,6 +15,7 @@ public class OrderList {
      */
     @JsonProperty("orders")
     public OrderSummary[] orders;
+
     public OrderList withOrders(OrderSummary[] orders) {
         this.orders = orders;
         return this;
@@ -22,9 +23,14 @@ public class OrderList {
     
     @JsonProperty("pagination")
     public Pagination pagination;
+
     public OrderList withPagination(Pagination pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public OrderList(@JsonProperty("orders") OrderSummary[] orders, @JsonProperty("pagination") Pagination pagination) {
+        this.orders = orders;
+        this.pagination = pagination;
+  }
 }

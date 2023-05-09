@@ -15,6 +15,7 @@ public class SearchFreetextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public SearchFreetextRequestBody withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -28,6 +29,7 @@ public class SearchFreetextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destId")
     public Long destId;
+
     public SearchFreetextRequestBody withDestId(Long destId) {
         this.destId = destId;
         return this;
@@ -44,6 +46,7 @@ public class SearchFreetextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchTypes")
     public SearchFreetextRequestBodySearchTypesEnum[] searchTypes;
+
     public SearchFreetextRequestBody withSearchTypes(SearchFreetextRequestBodySearchTypesEnum[] searchTypes) {
         this.searchTypes = searchTypes;
         return this;
@@ -62,6 +65,7 @@ public class SearchFreetextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public org.openapis.openapi.models.shared.SortOrderEnum sortOrder;
+
     public SearchFreetextRequestBody withSortOrder(org.openapis.openapi.models.shared.SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -73,6 +77,7 @@ public class SearchFreetextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public SearchFreetextRequestBody withText(String text) {
         this.text = text;
         return this;
@@ -90,9 +95,11 @@ public class SearchFreetextRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topX")
     public String topX;
+
     public SearchFreetextRequestBody withTopX(String topX) {
         this.topX = topX;
         return this;
     }
     
+    public SearchFreetextRequestBody(){}
 }

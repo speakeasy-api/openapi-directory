@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnableAddOnRequest {
     @JsonProperty("addOnRequest")
     public AddOnRequest addOnRequest;
+
     public EnableAddOnRequest withAddOnRequest(AddOnRequest addOnRequest) {
         this.addOnRequest = addOnRequest;
         return this;
@@ -16,9 +17,14 @@ public class EnableAddOnRequest {
     
     @JsonProperty("resourceName")
     public String resourceName;
+
     public EnableAddOnRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public EnableAddOnRequest(@JsonProperty("addOnRequest") AddOnRequest addOnRequest, @JsonProperty("resourceName") String resourceName) {
+        this.addOnRequest = addOnRequest;
+        this.resourceName = resourceName;
+  }
 }

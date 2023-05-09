@@ -15,9 +15,11 @@ public class GetAdminScenarios200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scenarios")
     public GetAdminScenarios200ApplicationJSONScenarios[] scenarios;
+
     public GetAdminScenarios200ApplicationJSON withScenarios(GetAdminScenarios200ApplicationJSONScenarios[] scenarios) {
         this.scenarios = scenarios;
         return this;
     }
     
+    public GetAdminScenarios200ApplicationJSON(){}
 }

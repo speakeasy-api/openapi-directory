@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPortfolioSummaryResponse {
@@ -12,6 +13,7 @@ public class GetPortfolioSummaryResponse {
      */
     
     public Object accessDeniedException;
+
     public GetPortfolioSummaryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetPortfolioSummaryResponse {
     
     
     public String contentType;
+
     public GetPortfolioSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPortfolioSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPortfolioSummaryResponse getPortfolioSummaryResponse;
+
     public GetPortfolioSummaryResponse withGetPortfolioSummaryResponse(org.openapis.openapi.models.shared.GetPortfolioSummaryResponse getPortfolioSummaryResponse) {
         this.getPortfolioSummaryResponse = getPortfolioSummaryResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetPortfolioSummaryResponse {
      */
     
     public Object internalServerException;
+
     public GetPortfolioSummaryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetPortfolioSummaryResponse {
     
     
     public Integer statusCode;
+
     public GetPortfolioSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetPortfolioSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPortfolioSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetPortfolioSummaryResponse {
      */
     
     public Object throttlingException;
+
     public GetPortfolioSummaryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetPortfolioSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

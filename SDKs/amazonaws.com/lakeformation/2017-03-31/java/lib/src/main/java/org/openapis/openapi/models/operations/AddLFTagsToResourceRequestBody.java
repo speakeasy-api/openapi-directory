@@ -15,6 +15,7 @@ public class AddLFTagsToResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public AddLFTagsToResourceRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -25,6 +26,7 @@ public class AddLFTagsToResourceRequestBody {
      */
     @JsonProperty("LFTags")
     public org.openapis.openapi.models.shared.LFTagPair[] lfTags;
+
     public AddLFTagsToResourceRequestBody withLFTags(org.openapis.openapi.models.shared.LFTagPair[] lfTags) {
         this.lfTags = lfTags;
         return this;
@@ -35,9 +37,14 @@ public class AddLFTagsToResourceRequestBody {
      */
     @JsonProperty("Resource")
     public AddLFTagsToResourceRequestBodyResource resource;
+
     public AddLFTagsToResourceRequestBody withResource(AddLFTagsToResourceRequestBodyResource resource) {
         this.resource = resource;
         return this;
     }
     
+    public AddLFTagsToResourceRequestBody(@JsonProperty("LFTags") org.openapis.openapi.models.shared.LFTagPair[] lfTags, @JsonProperty("Resource") AddLFTagsToResourceRequestBodyResource resource) {
+        this.lfTags = lfTags;
+        this.resource = resource;
+  }
 }

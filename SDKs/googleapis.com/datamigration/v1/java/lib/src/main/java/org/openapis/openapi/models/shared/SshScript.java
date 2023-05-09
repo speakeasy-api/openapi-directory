@@ -18,9 +18,11 @@ public class SshScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public SshScript withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public SshScript(){}
 }

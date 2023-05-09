@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class VehicleRegistrationSchemaCertificateDataVehicleRegistration {
     
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance insurance;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistration withInsurance(VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance insurance) {
         this.insurance = insurance;
         return this;
@@ -16,6 +17,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistration {
     
     
     public VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle vehicle;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistration withVehicle(VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle vehicle) {
         this.vehicle = vehicle;
         return this;
@@ -23,6 +25,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistration {
     
     
     public String financer;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistration withFinancer(String financer) {
         this.financer = financer;
         return this;
@@ -30,6 +33,7 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistration {
     
     
     public String normsDesc;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistration withNormsDesc(String normsDesc) {
         this.normsDesc = normsDesc;
         return this;
@@ -37,9 +41,15 @@ public class VehicleRegistrationSchemaCertificateDataVehicleRegistration {
     
     
     public String statusDate;
+
     public VehicleRegistrationSchemaCertificateDataVehicleRegistration withStatusDate(String statusDate) {
         this.statusDate = statusDate;
         return this;
     }
     
+    public VehicleRegistrationSchemaCertificateDataVehicleRegistration(@JsonProperty("financer") String financer, @JsonProperty("normsDesc") String normsDesc, @JsonProperty("statusDate") String statusDate) {
+        this.financer = financer;
+        this.normsDesc = normsDesc;
+        this.statusDate = statusDate;
+  }
 }

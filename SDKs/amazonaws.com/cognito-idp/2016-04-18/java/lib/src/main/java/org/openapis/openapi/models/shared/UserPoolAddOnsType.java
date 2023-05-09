@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UserPoolAddOnsType {
     @JsonProperty("AdvancedSecurityMode")
     public AdvancedSecurityModeTypeEnum advancedSecurityMode;
+
     public UserPoolAddOnsType withAdvancedSecurityMode(AdvancedSecurityModeTypeEnum advancedSecurityMode) {
         this.advancedSecurityMode = advancedSecurityMode;
         return this;
     }
     
+    public UserPoolAddOnsType(@JsonProperty("AdvancedSecurityMode") AdvancedSecurityModeTypeEnum advancedSecurityMode) {
+        this.advancedSecurityMode = advancedSecurityMode;
+  }
 }

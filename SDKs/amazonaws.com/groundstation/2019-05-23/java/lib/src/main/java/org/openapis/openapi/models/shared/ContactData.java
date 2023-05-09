@@ -20,6 +20,7 @@ public class ContactData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactId")
     public String contactId;
+
     public ContactData withContactId(String contactId) {
         this.contactId = contactId;
         return this;
@@ -28,6 +29,7 @@ public class ContactData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactStatus")
     public ContactStatusEnum contactStatus;
+
     public ContactData withContactStatus(ContactStatusEnum contactStatus) {
         this.contactStatus = contactStatus;
         return this;
@@ -38,6 +40,7 @@ public class ContactData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public ContactData withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -46,6 +49,7 @@ public class ContactData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public ContactData withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -54,6 +58,7 @@ public class ContactData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groundStation")
     public String groundStation;
+
     public ContactData withGroundStation(String groundStation) {
         this.groundStation = groundStation;
         return this;
@@ -62,6 +67,7 @@ public class ContactData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumElevation")
     public Elevation maximumElevation;
+
     public ContactData withMaximumElevation(Elevation maximumElevation) {
         this.maximumElevation = maximumElevation;
         return this;
@@ -70,6 +76,7 @@ public class ContactData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missionProfileArn")
     public String missionProfileArn;
+
     public ContactData withMissionProfileArn(String missionProfileArn) {
         this.missionProfileArn = missionProfileArn;
         return this;
@@ -80,6 +87,7 @@ public class ContactData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("postPassEndTime")
     public OffsetDateTime postPassEndTime;
+
     public ContactData withPostPassEndTime(OffsetDateTime postPassEndTime) {
         this.postPassEndTime = postPassEndTime;
         return this;
@@ -90,6 +98,7 @@ public class ContactData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("prePassStartTime")
     public OffsetDateTime prePassStartTime;
+
     public ContactData withPrePassStartTime(OffsetDateTime prePassStartTime) {
         this.prePassStartTime = prePassStartTime;
         return this;
@@ -98,6 +107,7 @@ public class ContactData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public ContactData withRegion(String region) {
         this.region = region;
         return this;
@@ -106,6 +116,7 @@ public class ContactData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satelliteArn")
     public String satelliteArn;
+
     public ContactData withSatelliteArn(String satelliteArn) {
         this.satelliteArn = satelliteArn;
         return this;
@@ -116,6 +127,7 @@ public class ContactData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ContactData withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -124,9 +136,11 @@ public class ContactData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ContactData withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ContactData(){}
 }

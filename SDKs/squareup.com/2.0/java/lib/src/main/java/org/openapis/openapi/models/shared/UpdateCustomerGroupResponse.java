@@ -21,6 +21,7 @@ public class UpdateCustomerGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public UpdateCustomerGroupResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -35,9 +36,11 @@ public class UpdateCustomerGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public CustomerGroup group;
+
     public UpdateCustomerGroupResponse withGroup(CustomerGroup group) {
         this.group = group;
         return this;
     }
     
+    public UpdateCustomerGroupResponse(){}
 }

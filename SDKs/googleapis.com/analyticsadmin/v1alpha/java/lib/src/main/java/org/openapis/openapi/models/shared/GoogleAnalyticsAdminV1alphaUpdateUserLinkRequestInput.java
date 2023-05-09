@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaUpdateUserLinkRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userLink")
     public GoogleAnalyticsAdminV1alphaUserLinkInput userLink;
+
     public GoogleAnalyticsAdminV1alphaUpdateUserLinkRequestInput withUserLink(GoogleAnalyticsAdminV1alphaUserLinkInput userLink) {
         this.userLink = userLink;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaUpdateUserLinkRequestInput(){}
 }

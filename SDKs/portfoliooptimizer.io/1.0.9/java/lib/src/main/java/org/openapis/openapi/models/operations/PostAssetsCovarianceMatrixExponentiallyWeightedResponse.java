@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAssetsCovarianceMatrixExponentiallyWeightedResponse {
     
     public String contentType;
+
     public PostAssetsCovarianceMatrixExponentiallyWeightedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostAssetsCovarianceMatrixExponentiallyWeightedResponse {
     
     
     public Integer statusCode;
+
     public PostAssetsCovarianceMatrixExponentiallyWeightedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostAssetsCovarianceMatrixExponentiallyWeightedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAssetsCovarianceMatrixExponentiallyWeightedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostAssetsCovarianceMatrixExponentiallyWeightedResponse {
      */
     
     public PostAssetsCovarianceMatrixExponentiallyWeighted200ApplicationJSON postAssetsCovarianceMatrixExponentiallyWeighted200ApplicationJSONObject;
+
     public PostAssetsCovarianceMatrixExponentiallyWeightedResponse withPostAssetsCovarianceMatrixExponentiallyWeighted200ApplicationJSONObject(PostAssetsCovarianceMatrixExponentiallyWeighted200ApplicationJSON postAssetsCovarianceMatrixExponentiallyWeighted200ApplicationJSONObject) {
         this.postAssetsCovarianceMatrixExponentiallyWeighted200ApplicationJSONObject = postAssetsCovarianceMatrixExponentiallyWeighted200ApplicationJSONObject;
         return this;
     }
     
+    public PostAssetsCovarianceMatrixExponentiallyWeightedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

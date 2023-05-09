@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostMerchantsMerchantIdActivateResponse {
     
     public String contentType;
+
     public PostMerchantsMerchantIdActivateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostMerchantsMerchantIdActivateResponse {
      */
     
     public org.openapis.openapi.models.shared.RequestActivationResponse requestActivationResponse;
+
     public PostMerchantsMerchantIdActivateResponse withRequestActivationResponse(org.openapis.openapi.models.shared.RequestActivationResponse requestActivationResponse) {
         this.requestActivationResponse = requestActivationResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostMerchantsMerchantIdActivateResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PostMerchantsMerchantIdActivateResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class PostMerchantsMerchantIdActivateResponse {
     
     
     public Integer statusCode;
+
     public PostMerchantsMerchantIdActivateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostMerchantsMerchantIdActivateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostMerchantsMerchantIdActivateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostMerchantsMerchantIdActivateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

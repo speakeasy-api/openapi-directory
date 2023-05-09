@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoPropertyEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public EnterpriseCrmEventbusProtoPropertyEntry withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class EnterpriseCrmEventbusProtoPropertyEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public EnterpriseCrmEventbusProtoValueType value;
+
     public EnterpriseCrmEventbusProtoPropertyEntry withValue(EnterpriseCrmEventbusProtoValueType value) {
         this.value = value;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoPropertyEntry(){}
 }

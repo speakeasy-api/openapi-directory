@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePanoramaFirewallResponse {
@@ -12,6 +13,7 @@ public class UpdatePanoramaFirewallResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public UpdatePanoramaFirewallResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePanoramaFirewallResponse {
     
     
     public String contentType;
+
     public UpdatePanoramaFirewallResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class UpdatePanoramaFirewallResponse {
     
     
     public Integer statusCode;
+
     public UpdatePanoramaFirewallResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdatePanoramaFirewallResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePanoramaFirewallResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class UpdatePanoramaFirewallResponse {
      */
     
     public org.openapis.openapi.models.shared.SwitchDataSource switchDataSource;
+
     public UpdatePanoramaFirewallResponse withSwitchDataSource(org.openapis.openapi.models.shared.SwitchDataSource switchDataSource) {
         this.switchDataSource = switchDataSource;
         return this;
     }
     
+    public UpdatePanoramaFirewallResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ListVectorEnrichmentJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListVectorEnrichmentJobOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListVectorEnrichmentJobOutput {
     
     @JsonProperty("VectorEnrichmentJobSummaries")
     public ListVectorEnrichmentJobOutputConfig[] vectorEnrichmentJobSummaries;
+
     public ListVectorEnrichmentJobOutput withVectorEnrichmentJobSummaries(ListVectorEnrichmentJobOutputConfig[] vectorEnrichmentJobSummaries) {
         this.vectorEnrichmentJobSummaries = vectorEnrichmentJobSummaries;
         return this;
     }
     
+    public ListVectorEnrichmentJobOutput(@JsonProperty("VectorEnrichmentJobSummaries") ListVectorEnrichmentJobOutputConfig[] vectorEnrichmentJobSummaries) {
+        this.vectorEnrichmentJobSummaries = vectorEnrichmentJobSummaries;
+  }
 }

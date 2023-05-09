@@ -18,6 +18,7 @@ public class QueryInterpretationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableNlInterpretation")
     public Boolean disableNlInterpretation;
+
     public QueryInterpretationOptions withDisableNlInterpretation(Boolean disableNlInterpretation) {
         this.disableNlInterpretation = disableNlInterpretation;
         return this;
@@ -29,6 +30,7 @@ public class QueryInterpretationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableSupplementalResults")
     public Boolean disableSupplementalResults;
+
     public QueryInterpretationOptions withDisableSupplementalResults(Boolean disableSupplementalResults) {
         this.disableSupplementalResults = disableSupplementalResults;
         return this;
@@ -40,9 +42,11 @@ public class QueryInterpretationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableVerbatimMode")
     public Boolean enableVerbatimMode;
+
     public QueryInterpretationOptions withEnableVerbatimMode(Boolean enableVerbatimMode) {
         this.enableVerbatimMode = enableVerbatimMode;
         return this;
     }
     
+    public QueryInterpretationOptions(){}
 }

@@ -15,6 +15,7 @@ public class SalesforceConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceUrl")
     public String instanceUrl;
+
     public SalesforceConnectorProfileProperties withInstanceUrl(String instanceUrl) {
         this.instanceUrl = instanceUrl;
         return this;
@@ -23,6 +24,7 @@ public class SalesforceConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSandboxEnvironment")
     public Boolean isSandboxEnvironment;
+
     public SalesforceConnectorProfileProperties withIsSandboxEnvironment(Boolean isSandboxEnvironment) {
         this.isSandboxEnvironment = isSandboxEnvironment;
         return this;
@@ -31,9 +33,11 @@ public class SalesforceConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usePrivateLinkForMetadataAndAuthorization")
     public Boolean usePrivateLinkForMetadataAndAuthorization;
+
     public SalesforceConnectorProfileProperties withUsePrivateLinkForMetadataAndAuthorization(Boolean usePrivateLinkForMetadataAndAuthorization) {
         this.usePrivateLinkForMetadataAndAuthorization = usePrivateLinkForMetadataAndAuthorization;
         return this;
     }
     
+    public SalesforceConnectorProfileProperties(){}
 }

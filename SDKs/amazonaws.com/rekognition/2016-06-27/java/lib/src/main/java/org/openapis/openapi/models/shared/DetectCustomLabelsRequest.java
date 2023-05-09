@@ -14,6 +14,7 @@ public class DetectCustomLabelsRequest {
      */
     @JsonProperty("Image")
     public Image image;
+
     public DetectCustomLabelsRequest withImage(Image image) {
         this.image = image;
         return this;
@@ -22,6 +23,7 @@ public class DetectCustomLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DetectCustomLabelsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +32,7 @@ public class DetectCustomLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinConfidence")
     public Float minConfidence;
+
     public DetectCustomLabelsRequest withMinConfidence(Float minConfidence) {
         this.minConfidence = minConfidence;
         return this;
@@ -37,9 +40,14 @@ public class DetectCustomLabelsRequest {
     
     @JsonProperty("ProjectVersionArn")
     public String projectVersionArn;
+
     public DetectCustomLabelsRequest withProjectVersionArn(String projectVersionArn) {
         this.projectVersionArn = projectVersionArn;
         return this;
     }
     
+    public DetectCustomLabelsRequest(@JsonProperty("Image") Image image, @JsonProperty("ProjectVersionArn") String projectVersionArn) {
+        this.image = image;
+        this.projectVersionArn = projectVersionArn;
+  }
 }

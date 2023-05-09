@@ -63,12 +63,10 @@ public class APICredentialsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsResponse(contentType, httpRes.statusCode()) {{
             listMerchantApiCredentialsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,12 +115,10 @@ public class APICredentialsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdResponse(contentType, httpRes.statusCode()) {{
             apiCredential = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -173,12 +169,10 @@ public class APICredentialsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse() {{
+        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse(contentType, httpRes.statusCode()) {{
             apiCredential = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -238,12 +232,10 @@ public class APICredentialsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsResponse(contentType, httpRes.statusCode()) {{
             createApiCredentialResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

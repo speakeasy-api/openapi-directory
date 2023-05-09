@@ -15,6 +15,7 @@ public class EndpointInputConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnvironmentParameterRanges")
     public EnvironmentParameterRanges environmentParameterRanges;
+
     public EndpointInputConfiguration withEnvironmentParameterRanges(EnvironmentParameterRanges environmentParameterRanges) {
         this.environmentParameterRanges = environmentParameterRanges;
         return this;
@@ -23,6 +24,7 @@ public class EndpointInputConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSpecificationName")
     public String inferenceSpecificationName;
+
     public EndpointInputConfiguration withInferenceSpecificationName(String inferenceSpecificationName) {
         this.inferenceSpecificationName = inferenceSpecificationName;
         return this;
@@ -30,9 +32,13 @@ public class EndpointInputConfiguration {
     
     @JsonProperty("InstanceType")
     public ProductionVariantInstanceTypeEnum instanceType;
+
     public EndpointInputConfiguration withInstanceType(ProductionVariantInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
     }
     
+    public EndpointInputConfiguration(@JsonProperty("InstanceType") ProductionVariantInstanceTypeEnum instanceType) {
+        this.instanceType = instanceType;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFilesByIdOrUrlRequest {
@@ -12,9 +13,13 @@ public class GetFilesByIdOrUrlRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fileIdOrUrl")
     public String fileIdOrUrl;
+
     public GetFilesByIdOrUrlRequest withFileIdOrUrl(String fileIdOrUrl) {
         this.fileIdOrUrl = fileIdOrUrl;
         return this;
     }
     
+    public GetFilesByIdOrUrlRequest(@JsonProperty("fileIdOrUrl") String fileIdOrUrl) {
+        this.fileIdOrUrl = fileIdOrUrl;
+  }
 }

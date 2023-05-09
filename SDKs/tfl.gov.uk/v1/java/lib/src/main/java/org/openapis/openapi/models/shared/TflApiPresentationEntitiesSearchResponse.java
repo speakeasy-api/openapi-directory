@@ -15,6 +15,7 @@ public class TflApiPresentationEntitiesSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public Integer from;
+
     public TflApiPresentationEntitiesSearchResponse withFrom(Integer from) {
         this.from = from;
         return this;
@@ -23,6 +24,7 @@ public class TflApiPresentationEntitiesSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matches")
     public TflApiPresentationEntitiesSearchMatch[] matches;
+
     public TflApiPresentationEntitiesSearchResponse withMatches(TflApiPresentationEntitiesSearchMatch[] matches) {
         this.matches = matches;
         return this;
@@ -31,6 +33,7 @@ public class TflApiPresentationEntitiesSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxScore")
     public Double maxScore;
+
     public TflApiPresentationEntitiesSearchResponse withMaxScore(Double maxScore) {
         this.maxScore = maxScore;
         return this;
@@ -39,6 +42,7 @@ public class TflApiPresentationEntitiesSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Integer page;
+
     public TflApiPresentationEntitiesSearchResponse withPage(Integer page) {
         this.page = page;
         return this;
@@ -47,6 +51,7 @@ public class TflApiPresentationEntitiesSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public TflApiPresentationEntitiesSearchResponse withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -55,6 +60,7 @@ public class TflApiPresentationEntitiesSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public String provider;
+
     public TflApiPresentationEntitiesSearchResponse withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -63,6 +69,7 @@ public class TflApiPresentationEntitiesSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public TflApiPresentationEntitiesSearchResponse withQuery(String query) {
         this.query = query;
         return this;
@@ -71,9 +78,11 @@ public class TflApiPresentationEntitiesSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Integer total;
+
     public TflApiPresentationEntitiesSearchResponse withTotal(Integer total) {
         this.total = total;
         return this;
     }
     
+    public TflApiPresentationEntitiesSearchResponse(){}
 }

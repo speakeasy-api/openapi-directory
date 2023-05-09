@@ -12,6 +12,7 @@ public class Referrer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public Referrer withCount(Long count) {
         this.count = count;
         return this;
@@ -20,9 +21,11 @@ public class Referrer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public Referrer withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public Referrer(){}
 }

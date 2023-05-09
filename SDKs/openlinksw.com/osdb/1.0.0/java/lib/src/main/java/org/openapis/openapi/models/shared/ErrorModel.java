@@ -18,6 +18,7 @@ public class ErrorModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api")
     public String api;
+
     public ErrorModel withApi(String api) {
         this.api = api;
         return this;
@@ -29,6 +30,7 @@ public class ErrorModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public ErrorModel withMethod(String method) {
         this.method = method;
         return this;
@@ -40,6 +42,7 @@ public class ErrorModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public String response;
+
     public ErrorModel withResponse(String response) {
         this.response = response;
         return this;
@@ -48,9 +51,11 @@ public class ErrorModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ErrorModelStatusEnum status;
+
     public ErrorModel withStatus(ErrorModelStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ErrorModel(){}
 }

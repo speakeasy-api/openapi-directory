@@ -18,6 +18,7 @@ public class BuildsListXamarinSDKBundles200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current")
     public Boolean current;
+
     public BuildsListXamarinSDKBundles200ApplicationJSON withCurrent(Boolean current) {
         this.current = current;
         return this;
@@ -29,6 +30,7 @@ public class BuildsListXamarinSDKBundles200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monoVersion")
     public String monoVersion;
+
     public BuildsListXamarinSDKBundles200ApplicationJSON withMonoVersion(String monoVersion) {
         this.monoVersion = monoVersion;
         return this;
@@ -40,6 +42,7 @@ public class BuildsListXamarinSDKBundles200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkBundle")
     public String sdkBundle;
+
     public BuildsListXamarinSDKBundles200ApplicationJSON withSDKBundle(String sdkBundle) {
         this.sdkBundle = sdkBundle;
         return this;
@@ -51,6 +54,7 @@ public class BuildsListXamarinSDKBundles200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stable")
     public Boolean stable;
+
     public BuildsListXamarinSDKBundles200ApplicationJSON withStable(Boolean stable) {
         this.stable = stable;
         return this;
@@ -62,9 +66,11 @@ public class BuildsListXamarinSDKBundles200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xcodeVersions")
     public String[] xcodeVersions;
+
     public BuildsListXamarinSDKBundles200ApplicationJSON withXcodeVersions(String[] xcodeVersions) {
         this.xcodeVersions = xcodeVersions;
         return this;
     }
     
+    public BuildsListXamarinSDKBundles200ApplicationJSON(){}
 }

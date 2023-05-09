@@ -12,6 +12,7 @@ public class DistributionsResponseMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpStatus")
     public String httpStatus;
+
     public DistributionsResponseMeta withHttpStatus(String httpStatus) {
         this.httpStatus = httpStatus;
         return this;
@@ -20,9 +21,11 @@ public class DistributionsResponseMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public DistributionsResponseMeta withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public DistributionsResponseMeta(){}
 }

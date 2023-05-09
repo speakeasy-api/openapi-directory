@@ -15,6 +15,7 @@ public class SetPrincipalTagAttributeMapResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public SetPrincipalTagAttributeMapResponse withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -23,6 +24,7 @@ public class SetPrincipalTagAttributeMapResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityProviderName")
     public String identityProviderName;
+
     public SetPrincipalTagAttributeMapResponse withIdentityProviderName(String identityProviderName) {
         this.identityProviderName = identityProviderName;
         return this;
@@ -31,6 +33,7 @@ public class SetPrincipalTagAttributeMapResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalTags")
     public java.util.Map<String, String> principalTags;
+
     public SetPrincipalTagAttributeMapResponse withPrincipalTags(java.util.Map<String, String> principalTags) {
         this.principalTags = principalTags;
         return this;
@@ -39,9 +42,11 @@ public class SetPrincipalTagAttributeMapResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseDefaults")
     public Boolean useDefaults;
+
     public SetPrincipalTagAttributeMapResponse withUseDefaults(Boolean useDefaults) {
         this.useDefaults = useDefaults;
         return this;
     }
     
+    public SetPrincipalTagAttributeMapResponse(){}
 }

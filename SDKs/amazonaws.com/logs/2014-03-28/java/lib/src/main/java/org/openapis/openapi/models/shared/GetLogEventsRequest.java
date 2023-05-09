@@ -12,6 +12,7 @@ public class GetLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public Long endTime;
+
     public GetLogEventsRequest withEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
@@ -20,6 +21,7 @@ public class GetLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public GetLogEventsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,6 +30,7 @@ public class GetLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupIdentifier")
     public String logGroupIdentifier;
+
     public GetLogEventsRequest withLogGroupIdentifier(String logGroupIdentifier) {
         this.logGroupIdentifier = logGroupIdentifier;
         return this;
@@ -36,6 +39,7 @@ public class GetLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public GetLogEventsRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -43,6 +47,7 @@ public class GetLogEventsRequest {
     
     @JsonProperty("logStreamName")
     public String logStreamName;
+
     public GetLogEventsRequest withLogStreamName(String logStreamName) {
         this.logStreamName = logStreamName;
         return this;
@@ -51,6 +56,7 @@ public class GetLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetLogEventsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -59,6 +65,7 @@ public class GetLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startFromHead")
     public Boolean startFromHead;
+
     public GetLogEventsRequest withStartFromHead(Boolean startFromHead) {
         this.startFromHead = startFromHead;
         return this;
@@ -67,6 +74,7 @@ public class GetLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public Long startTime;
+
     public GetLogEventsRequest withStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
@@ -75,9 +83,13 @@ public class GetLogEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unmask")
     public Boolean unmask;
+
     public GetLogEventsRequest withUnmask(Boolean unmask) {
         this.unmask = unmask;
         return this;
     }
     
+    public GetLogEventsRequest(@JsonProperty("logStreamName") String logStreamName) {
+        this.logStreamName = logStreamName;
+  }
 }

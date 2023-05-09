@@ -15,6 +15,7 @@ public class SendMessageRequestBody4VideoMessenger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public SendMessageRequestBody4VideoMessengerCategoryEnum category;
+
     public SendMessageRequestBody4VideoMessenger withCategory(SendMessageRequestBody4VideoMessengerCategoryEnum category) {
         this.category = category;
         return this;
@@ -26,9 +27,11 @@ public class SendMessageRequestBody4VideoMessenger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public SendMessageRequestBody4VideoMessenger withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public SendMessageRequestBody4VideoMessenger(){}
 }

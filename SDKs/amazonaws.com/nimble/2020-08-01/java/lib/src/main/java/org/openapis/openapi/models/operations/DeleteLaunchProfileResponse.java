@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLaunchProfileResponse {
@@ -12,6 +13,7 @@ public class DeleteLaunchProfileResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteLaunchProfileResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteLaunchProfileResponse {
      */
     
     public Object conflictException;
+
     public DeleteLaunchProfileResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLaunchProfileResponse {
     
     
     public String contentType;
+
     public DeleteLaunchProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLaunchProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteLaunchProfileResponse deleteLaunchProfileResponse;
+
     public DeleteLaunchProfileResponse withDeleteLaunchProfileResponse(org.openapis.openapi.models.shared.DeleteLaunchProfileResponse deleteLaunchProfileResponse) {
         this.deleteLaunchProfileResponse = deleteLaunchProfileResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteLaunchProfileResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteLaunchProfileResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteLaunchProfileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteLaunchProfileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteLaunchProfileResponse {
     
     
     public Integer statusCode;
+
     public DeleteLaunchProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteLaunchProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLaunchProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteLaunchProfileResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteLaunchProfileResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteLaunchProfileResponse {
      */
     
     public Object throttlingException;
+
     public DeleteLaunchProfileResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteLaunchProfileResponse {
      */
     
     public Object validationException;
+
     public DeleteLaunchProfileResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteLaunchProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

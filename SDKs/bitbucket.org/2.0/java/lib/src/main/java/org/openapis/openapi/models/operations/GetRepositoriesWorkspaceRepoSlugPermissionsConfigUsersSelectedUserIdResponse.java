@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserI
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserI
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserI
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserI
      */
     
     public java.util.Map<String, Object> repositoryUserPermission;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse withRepositoryUserPermission(java.util.Map<String, Object> repositoryUserPermission) {
         this.repositoryUserPermission = repositoryUserPermission;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

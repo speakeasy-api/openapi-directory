@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StopStackSetOperationInput {
     
     public CallAsEnum callAs;
+
     public StopStackSetOperationInput withCallAs(CallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -16,6 +17,7 @@ public class StopStackSetOperationInput {
     
     
     public String operationId;
+
     public StopStackSetOperationInput withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -23,9 +25,14 @@ public class StopStackSetOperationInput {
     
     
     public String stackSetName;
+
     public StopStackSetOperationInput withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
     }
     
+    public StopStackSetOperationInput(@JsonProperty("OperationId") String operationId, @JsonProperty("StackSetName") String stackSetName) {
+        this.operationId = operationId;
+        this.stackSetName = stackSetName;
+  }
 }

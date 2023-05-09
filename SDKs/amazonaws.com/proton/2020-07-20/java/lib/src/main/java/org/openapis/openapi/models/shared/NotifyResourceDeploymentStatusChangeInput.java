@@ -12,6 +12,7 @@ public class NotifyResourceDeploymentStatusChangeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public NotifyResourceDeploymentStatusChangeInput withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -20,6 +21,7 @@ public class NotifyResourceDeploymentStatusChangeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputs")
     public Output[] outputs;
+
     public NotifyResourceDeploymentStatusChangeInput withOutputs(Output[] outputs) {
         this.outputs = outputs;
         return this;
@@ -27,6 +29,7 @@ public class NotifyResourceDeploymentStatusChangeInput {
     
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public NotifyResourceDeploymentStatusChangeInput withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -35,6 +38,7 @@ public class NotifyResourceDeploymentStatusChangeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ResourceDeploymentStatusEnum status;
+
     public NotifyResourceDeploymentStatusChangeInput withStatus(ResourceDeploymentStatusEnum status) {
         this.status = status;
         return this;
@@ -43,9 +47,13 @@ public class NotifyResourceDeploymentStatusChangeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public NotifyResourceDeploymentStatusChangeInput withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public NotifyResourceDeploymentStatusChangeInput(@JsonProperty("resourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

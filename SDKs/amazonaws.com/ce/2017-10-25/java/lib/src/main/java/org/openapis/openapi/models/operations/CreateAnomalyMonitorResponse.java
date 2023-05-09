@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAnomalyMonitorResponse {
     
     public String contentType;
+
     public CreateAnomalyMonitorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAnomalyMonitorResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAnomalyMonitorResponse createAnomalyMonitorResponse;
+
     public CreateAnomalyMonitorResponse withCreateAnomalyMonitorResponse(org.openapis.openapi.models.shared.CreateAnomalyMonitorResponse createAnomalyMonitorResponse) {
         this.createAnomalyMonitorResponse = createAnomalyMonitorResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateAnomalyMonitorResponse {
      */
     
     public Object limitExceededException;
+
     public CreateAnomalyMonitorResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -36,6 +40,7 @@ public class CreateAnomalyMonitorResponse {
     
     
     public Integer statusCode;
+
     public CreateAnomalyMonitorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateAnomalyMonitorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAnomalyMonitorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateAnomalyMonitorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class GetMetricDataInput {
     
     public OffsetDateTime endTime;
+
     public GetMetricDataInput withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -16,6 +18,7 @@ public class GetMetricDataInput {
     
     
     public LabelOptions labelOptions;
+
     public GetMetricDataInput withLabelOptions(LabelOptions labelOptions) {
         this.labelOptions = labelOptions;
         return this;
@@ -23,6 +26,7 @@ public class GetMetricDataInput {
     
     
     public Long maxDatapoints;
+
     public GetMetricDataInput withMaxDatapoints(Long maxDatapoints) {
         this.maxDatapoints = maxDatapoints;
         return this;
@@ -30,6 +34,7 @@ public class GetMetricDataInput {
     
     
     public MetricDataQuery[] metricDataQueries;
+
     public GetMetricDataInput withMetricDataQueries(MetricDataQuery[] metricDataQueries) {
         this.metricDataQueries = metricDataQueries;
         return this;
@@ -37,6 +42,7 @@ public class GetMetricDataInput {
     
     
     public String nextToken;
+
     public GetMetricDataInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,6 +50,7 @@ public class GetMetricDataInput {
     
     
     public ScanByEnum scanBy;
+
     public GetMetricDataInput withScanBy(ScanByEnum scanBy) {
         this.scanBy = scanBy;
         return this;
@@ -51,9 +58,15 @@ public class GetMetricDataInput {
     
     
     public OffsetDateTime startTime;
+
     public GetMetricDataInput withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetMetricDataInput(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("MetricDataQueries") MetricDataQuery[] metricDataQueries, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.metricDataQueries = metricDataQueries;
+        this.startTime = startTime;
+  }
 }

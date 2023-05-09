@@ -15,6 +15,7 @@ public class CallInstruction {
      */
     
     public OffsetDateTime createdAt;
+
     public CallInstruction withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -25,6 +26,7 @@ public class CallInstruction {
      */
     
     public Long id;
+
     public CallInstruction withId(Long id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class CallInstruction {
      */
     
     public String instructions;
+
     public CallInstruction withInstructions(String instructions) {
         this.instructions = instructions;
         return this;
@@ -45,9 +48,11 @@ public class CallInstruction {
      */
     
     public OffsetDateTime updatedAt;
+
     public CallInstruction withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CallInstruction(){}
 }

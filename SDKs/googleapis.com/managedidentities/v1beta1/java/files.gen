@@ -166,4 +166,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsResponse.
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListLocationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Location.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

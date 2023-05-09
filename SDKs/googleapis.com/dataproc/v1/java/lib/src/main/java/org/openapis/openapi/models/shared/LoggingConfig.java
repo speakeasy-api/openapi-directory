@@ -13,14 +13,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class LoggingConfig {
     /**
-     * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+     * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: - 'com.google = FATAL' - 'root = INFO' - 'org.apache = DEBUG'
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driverLogLevels")
     public java.util.Map<String, LoggingConfigDriverLogLevelsEnum> driverLogLevels;
+
     public LoggingConfig withDriverLogLevels(java.util.Map<String, LoggingConfigDriverLogLevelsEnum> driverLogLevels) {
         this.driverLogLevels = driverLogLevels;
         return this;
     }
     
+    public LoggingConfig(){}
 }

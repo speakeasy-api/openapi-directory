@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -14,6 +15,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Consent-ID")
     public String consentID;
+
     public GetTransactionListRequest withConsentID(String consentID) {
         this.consentID = consentID;
         return this;
@@ -24,6 +26,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
     public String digest;
+
     public GetTransactionListRequest withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -35,6 +38,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
     public String psuAccept;
+
     public GetTransactionListRequest withPSUAccept(String psuAccept) {
         this.psuAccept = psuAccept;
         return this;
@@ -46,6 +50,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
     public String psuAcceptCharset;
+
     public GetTransactionListRequest withPSUAcceptCharset(String psuAcceptCharset) {
         this.psuAcceptCharset = psuAcceptCharset;
         return this;
@@ -57,6 +62,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
     public String psuAcceptEncoding;
+
     public GetTransactionListRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
         this.psuAcceptEncoding = psuAcceptEncoding;
         return this;
@@ -68,6 +74,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
     public String psuAcceptLanguage;
+
     public GetTransactionListRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
         this.psuAcceptLanguage = psuAcceptLanguage;
         return this;
@@ -81,6 +88,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
     public String psuDeviceID;
+
     public GetTransactionListRequest withPSUDeviceID(String psuDeviceID) {
         this.psuDeviceID = psuDeviceID;
         return this;
@@ -92,6 +100,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
     public String psuGeoLocation;
+
     public GetTransactionListRequest withPSUGeoLocation(String psuGeoLocation) {
         this.psuGeoLocation = psuGeoLocation;
         return this;
@@ -109,6 +118,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
     public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+
     public GetTransactionListRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
         this.psuHttpMethod = psuHttpMethod;
         return this;
@@ -122,6 +132,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
     public String psuIPAddress;
+
     public GetTransactionListRequest withPSUIPAddress(String psuIPAddress) {
         this.psuIPAddress = psuIPAddress;
         return this;
@@ -133,6 +144,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
     public String psuIPPort;
+
     public GetTransactionListRequest withPSUIPPort(String psuIPPort) {
         this.psuIPPort = psuIPPort;
         return this;
@@ -144,6 +156,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
     public String psuUserAgent;
+
     public GetTransactionListRequest withPSUUserAgent(String psuUserAgent) {
         this.psuUserAgent = psuUserAgent;
         return this;
@@ -155,6 +168,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
     public String signature;
+
     public GetTransactionListRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -167,6 +181,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
     public String tppSignatureCertificate;
+
     public GetTransactionListRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
         this.tppSignatureCertificate = tppSignatureCertificate;
         return this;
@@ -177,6 +192,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
     public String xRequestID;
+
     public GetTransactionListRequest withXRequestID(String xRequestID) {
         this.xRequestID = xRequestID;
         return this;
@@ -191,6 +207,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account-id")
     public String accountId;
+
     public GetTransactionListRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -209,6 +226,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bookingStatus")
     public org.openapis.openapi.models.shared.BookingStatusEnum bookingStatus;
+
     public GetTransactionListRequest withBookingStatus(org.openapis.openapi.models.shared.BookingStatusEnum bookingStatus) {
         this.bookingStatus = bookingStatus;
         return this;
@@ -226,6 +244,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateFrom")
     public LocalDate dateFrom;
+
     public GetTransactionListRequest withDateFrom(LocalDate dateFrom) {
         this.dateFrom = dateFrom;
         return this;
@@ -244,6 +263,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateTo")
     public LocalDate dateTo;
+
     public GetTransactionListRequest withDateTo(LocalDate dateTo) {
         this.dateTo = dateTo;
         return this;
@@ -256,6 +276,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deltaList")
     public Boolean deltaList;
+
     public GetTransactionListRequest withDeltaList(Boolean deltaList) {
         this.deltaList = deltaList;
         return this;
@@ -273,6 +294,7 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entryReferenceFrom")
     public String entryReferenceFrom;
+
     public GetTransactionListRequest withEntryReferenceFrom(String entryReferenceFrom) {
         this.entryReferenceFrom = entryReferenceFrom;
         return this;
@@ -286,9 +308,16 @@ public class GetTransactionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=withBalance")
     public Boolean withBalance;
+
     public GetTransactionListRequest withWithBalance(Boolean withBalance) {
         this.withBalance = withBalance;
         return this;
     }
     
+    public GetTransactionListRequest(@JsonProperty("Consent-ID") String consentID, @JsonProperty("X-Request-ID") String xRequestID, @JsonProperty("account-id") String accountId, @JsonProperty("bookingStatus") org.openapis.openapi.models.shared.BookingStatusEnum bookingStatus) {
+        this.consentID = consentID;
+        this.xRequestID = xRequestID;
+        this.accountId = accountId;
+        this.bookingStatus = bookingStatus;
+  }
 }

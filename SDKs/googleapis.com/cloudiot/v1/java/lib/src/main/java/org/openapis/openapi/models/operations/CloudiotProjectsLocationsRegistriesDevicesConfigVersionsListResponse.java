@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListResponse {
     
     public String contentType;
+
     public CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListRespons
      */
     
     public org.openapis.openapi.models.shared.ListDeviceConfigVersionsResponse listDeviceConfigVersionsResponse;
+
     public CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListResponse withListDeviceConfigVersionsResponse(org.openapis.openapi.models.shared.ListDeviceConfigVersionsResponse listDeviceConfigVersionsResponse) {
         this.listDeviceConfigVersionsResponse = listDeviceConfigVersionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListRespons
     
     
     public Integer statusCode;
+
     public CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

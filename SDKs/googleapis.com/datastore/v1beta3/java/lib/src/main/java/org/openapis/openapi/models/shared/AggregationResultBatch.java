@@ -18,6 +18,7 @@ public class AggregationResultBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationResults")
     public AggregationResult[] aggregationResults;
+
     public AggregationResultBatch withAggregationResults(AggregationResult[] aggregationResults) {
         this.aggregationResults = aggregationResults;
         return this;
@@ -29,6 +30,7 @@ public class AggregationResultBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moreResults")
     public AggregationResultBatchMoreResultsEnum moreResults;
+
     public AggregationResultBatch withMoreResults(AggregationResultBatchMoreResultsEnum moreResults) {
         this.moreResults = moreResults;
         return this;
@@ -40,9 +42,11 @@ public class AggregationResultBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public AggregationResultBatch withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
     }
     
+    public AggregationResultBatch(){}
 }

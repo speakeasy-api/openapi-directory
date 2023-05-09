@@ -18,6 +18,7 @@ public class QueryAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("done")
     public Boolean done;
+
     public QueryAssetsResponse withDone(Boolean done) {
         this.done = done;
         return this;
@@ -29,6 +30,7 @@ public class QueryAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public QueryAssetsResponse withError(Status error) {
         this.error = error;
         return this;
@@ -40,6 +42,7 @@ public class QueryAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobReference")
     public String jobReference;
+
     public QueryAssetsResponse withJobReference(String jobReference) {
         this.jobReference = jobReference;
         return this;
@@ -51,6 +54,7 @@ public class QueryAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfig")
     public QueryAssetsOutputConfig outputConfig;
+
     public QueryAssetsResponse withOutputConfig(QueryAssetsOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -62,9 +66,11 @@ public class QueryAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryResult")
     public QueryResult queryResult;
+
     public QueryAssetsResponse withQueryResult(QueryResult queryResult) {
         this.queryResult = queryResult;
         return this;
     }
     
+    public QueryAssetsResponse(){}
 }

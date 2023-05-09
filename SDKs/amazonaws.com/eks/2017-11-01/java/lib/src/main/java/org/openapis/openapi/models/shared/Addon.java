@@ -20,6 +20,7 @@ public class Addon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addonArn")
     public String addonArn;
+
     public Addon withAddonArn(String addonArn) {
         this.addonArn = addonArn;
         return this;
@@ -28,6 +29,7 @@ public class Addon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addonName")
     public String addonName;
+
     public Addon withAddonName(String addonName) {
         this.addonName = addonName;
         return this;
@@ -36,6 +38,7 @@ public class Addon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addonVersion")
     public String addonVersion;
+
     public Addon withAddonVersion(String addonVersion) {
         this.addonVersion = addonVersion;
         return this;
@@ -44,6 +47,7 @@ public class Addon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterName")
     public String clusterName;
+
     public Addon withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -52,6 +56,7 @@ public class Addon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationValues")
     public String configurationValues;
+
     public Addon withConfigurationValues(String configurationValues) {
         this.configurationValues = configurationValues;
         return this;
@@ -62,6 +67,7 @@ public class Addon {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Addon withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -70,6 +76,7 @@ public class Addon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("health")
     public AddonHealth health;
+
     public Addon withHealth(AddonHealth health) {
         this.health = health;
         return this;
@@ -78,6 +85,7 @@ public class Addon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceInformation")
     public MarketplaceInformation marketplaceInformation;
+
     public Addon withMarketplaceInformation(MarketplaceInformation marketplaceInformation) {
         this.marketplaceInformation = marketplaceInformation;
         return this;
@@ -88,6 +96,7 @@ public class Addon {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedAt")
     public OffsetDateTime modifiedAt;
+
     public Addon withModifiedAt(OffsetDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -96,6 +105,7 @@ public class Addon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public Addon withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -104,6 +114,7 @@ public class Addon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher")
     public String publisher;
+
     public Addon withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
@@ -112,6 +123,7 @@ public class Addon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountRoleArn")
     public String serviceAccountRoleArn;
+
     public Addon withServiceAccountRoleArn(String serviceAccountRoleArn) {
         this.serviceAccountRoleArn = serviceAccountRoleArn;
         return this;
@@ -120,6 +132,7 @@ public class Addon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AddonStatusEnum status;
+
     public Addon withStatus(AddonStatusEnum status) {
         this.status = status;
         return this;
@@ -128,9 +141,11 @@ public class Addon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Addon withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public Addon(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AllowedPublishers {
     @JsonProperty("SigningProfileVersionArns")
     public String[] signingProfileVersionArns;
+
     public AllowedPublishers withSigningProfileVersionArns(String[] signingProfileVersionArns) {
         this.signingProfileVersionArns = signingProfileVersionArns;
         return this;
     }
     
+    public AllowedPublishers(@JsonProperty("SigningProfileVersionArns") String[] signingProfileVersionArns) {
+        this.signingProfileVersionArns = signingProfileVersionArns;
+  }
 }

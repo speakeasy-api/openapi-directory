@@ -22,6 +22,7 @@ public class ProvisioningTemplateVersionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public ProvisioningTemplateVersionSummary withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +31,7 @@ public class ProvisioningTemplateVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefaultVersion")
     public Boolean isDefaultVersion;
+
     public ProvisioningTemplateVersionSummary withIsDefaultVersion(Boolean isDefaultVersion) {
         this.isDefaultVersion = isDefaultVersion;
         return this;
@@ -38,9 +40,11 @@ public class ProvisioningTemplateVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionId")
     public Long versionId;
+
     public ProvisioningTemplateVersionSummary withVersionId(Long versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public ProvisioningTemplateVersionSummary(){}
 }

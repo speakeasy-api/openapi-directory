@@ -15,6 +15,7 @@ public class EndpointBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public String address;
+
     public EndpointBatchItem withAddress(String address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class EndpointBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String[]> attributes;
+
     public EndpointBatchItem withAttributes(java.util.Map<String, String[]> attributes) {
         this.attributes = attributes;
         return this;
@@ -31,6 +33,7 @@ public class EndpointBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelType")
     public ChannelTypeEnum channelType;
+
     public EndpointBatchItem withChannelType(ChannelTypeEnum channelType) {
         this.channelType = channelType;
         return this;
@@ -39,6 +42,7 @@ public class EndpointBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Demographic")
     public EndpointDemographic demographic;
+
     public EndpointBatchItem withDemographic(EndpointDemographic demographic) {
         this.demographic = demographic;
         return this;
@@ -47,6 +51,7 @@ public class EndpointBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectiveDate")
     public String effectiveDate;
+
     public EndpointBatchItem withEffectiveDate(String effectiveDate) {
         this.effectiveDate = effectiveDate;
         return this;
@@ -55,6 +60,7 @@ public class EndpointBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointStatus")
     public String endpointStatus;
+
     public EndpointBatchItem withEndpointStatus(String endpointStatus) {
         this.endpointStatus = endpointStatus;
         return this;
@@ -63,6 +69,7 @@ public class EndpointBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public EndpointBatchItem withId(String id) {
         this.id = id;
         return this;
@@ -71,6 +78,7 @@ public class EndpointBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public EndpointLocation location;
+
     public EndpointBatchItem withLocation(EndpointLocation location) {
         this.location = location;
         return this;
@@ -79,6 +87,7 @@ public class EndpointBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public java.util.Map<String, Double> metrics;
+
     public EndpointBatchItem withMetrics(java.util.Map<String, Double> metrics) {
         this.metrics = metrics;
         return this;
@@ -87,6 +96,7 @@ public class EndpointBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOut")
     public String optOut;
+
     public EndpointBatchItem withOptOut(String optOut) {
         this.optOut = optOut;
         return this;
@@ -95,6 +105,7 @@ public class EndpointBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestId")
     public String requestId;
+
     public EndpointBatchItem withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -103,9 +114,11 @@ public class EndpointBatchItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("User")
     public EndpointUser user;
+
     public EndpointBatchItem withUser(EndpointUser user) {
         this.user = user;
         return this;
     }
     
+    public EndpointBatchItem(){}
 }

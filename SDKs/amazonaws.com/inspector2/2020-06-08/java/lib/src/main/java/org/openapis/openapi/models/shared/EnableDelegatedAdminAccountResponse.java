@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnableDelegatedAdminAccountResponse {
     @JsonProperty("delegatedAdminAccountId")
     public String delegatedAdminAccountId;
+
     public EnableDelegatedAdminAccountResponse withDelegatedAdminAccountId(String delegatedAdminAccountId) {
         this.delegatedAdminAccountId = delegatedAdminAccountId;
         return this;
     }
     
+    public EnableDelegatedAdminAccountResponse(@JsonProperty("delegatedAdminAccountId") String delegatedAdminAccountId) {
+        this.delegatedAdminAccountId = delegatedAdminAccountId;
+  }
 }

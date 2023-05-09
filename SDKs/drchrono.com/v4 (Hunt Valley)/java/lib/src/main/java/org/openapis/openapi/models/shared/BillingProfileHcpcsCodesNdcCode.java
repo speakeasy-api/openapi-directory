@@ -15,6 +15,7 @@ public class BillingProfileHcpcsCodesNdcCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ndc_package_code")
     public String ndcPackageCode;
+
     public BillingProfileHcpcsCodesNdcCode withNdcPackageCode(String ndcPackageCode) {
         this.ndcPackageCode = ndcPackageCode;
         return this;
@@ -23,6 +24,7 @@ public class BillingProfileHcpcsCodesNdcCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public BillingProfileHcpcsCodesNdcCode withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -34,9 +36,11 @@ public class BillingProfileHcpcsCodesNdcCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("units")
     public BillingProfileHcpcsCodesNdcCodeUnitsEnum units;
+
     public BillingProfileHcpcsCodesNdcCode withUnits(BillingProfileHcpcsCodesNdcCodeUnitsEnum units) {
         this.units = units;
         return this;
     }
     
+    public BillingProfileHcpcsCodesNdcCode(){}
 }

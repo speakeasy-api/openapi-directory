@@ -18,6 +18,7 @@ public class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdate
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceLocation")
     public String deviceLocation;
+
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints withDeviceLocation(String deviceLocation) {
         this.deviceLocation = deviceLocation;
         return this;
@@ -29,6 +30,7 @@ public class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdate
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints withLanguage(String language) {
         this.language = language;
         return this;
@@ -40,6 +42,7 @@ public class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdate
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDatabaseEntries")
     public Integer maxDatabaseEntries;
+
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints withMaxDatabaseEntries(Integer maxDatabaseEntries) {
         this.maxDatabaseEntries = maxDatabaseEntries;
         return this;
@@ -51,6 +54,7 @@ public class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdate
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUpdateEntries")
     public Integer maxUpdateEntries;
+
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints withMaxUpdateEntries(Integer maxUpdateEntries) {
         this.maxUpdateEntries = maxUpdateEntries;
         return this;
@@ -62,6 +66,7 @@ public class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdate
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints withRegion(String region) {
         this.region = region;
         return this;
@@ -73,9 +78,11 @@ public class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdate
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedCompressions")
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraintsSupportedCompressionsEnum[] supportedCompressions;
+
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints withSupportedCompressions(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraintsSupportedCompressionsEnum[] supportedCompressions) {
         this.supportedCompressions = supportedCompressions;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints(){}
 }

@@ -55,10 +55,8 @@ public class Directions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.GetDirectionsOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.GetDirectionsOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,10 +93,8 @@ public class Directions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOptimalDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.GetOptimalDirectionsOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetOptimalDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.GetOptimalDirectionsOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,10 +131,8 @@ public class Directions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTruckDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.GetTruckDirectionsOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetTruckDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.GetTruckDirectionsOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,10 +169,8 @@ public class Directions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTruckOptimalDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.GetTruckOptimalDirectionsOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetTruckOptimalDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.GetTruckOptimalDirectionsOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -215,10 +207,8 @@ public class Directions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.PostDirectionsOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.PostDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.PostDirectionsOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -255,10 +245,8 @@ public class Directions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOptimalDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.PostOptimalDirectionsOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.PostOptimalDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.PostOptimalDirectionsOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,10 +283,8 @@ public class Directions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTruckDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.PostTruckDirectionsOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.PostTruckDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.PostTruckDirectionsOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -335,10 +321,8 @@ public class Directions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTruckOptimalDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.PostTruckOptimalDirectionsOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.PostTruckOptimalDirectionsOutputFormatResponse res = new org.openapis.openapi.models.operations.PostTruckOptimalDirectionsOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

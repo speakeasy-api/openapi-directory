@@ -18,6 +18,7 @@ public class ConfigManagementHierarchyControllerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ConfigManagementHierarchyControllerDeploymentState state;
+
     public ConfigManagementHierarchyControllerState withState(ConfigManagementHierarchyControllerDeploymentState state) {
         this.state = state;
         return this;
@@ -29,9 +30,11 @@ public class ConfigManagementHierarchyControllerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public ConfigManagementHierarchyControllerVersion version;
+
     public ConfigManagementHierarchyControllerState withVersion(ConfigManagementHierarchyControllerVersion version) {
         this.version = version;
         return this;
     }
     
+    public ConfigManagementHierarchyControllerState(){}
 }

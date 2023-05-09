@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetNumbersBaseSecurity;
 import org.openapis.openapi.models.operations.GetNumbersBaseRequest;
 import org.openapis.openapi.models.operations.GetNumbersBaseResponse;
+import org.openapis.openapi.models.operations.GetNumbersBaseSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,13 +13,11 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetNumbersBaseRequest req = new GetNumbersBaseRequest() {{
-                from = 548814;
-                number = 592845;
-                to = 715190;
-            }}            
+            GetNumbersBaseRequest req = new GetNumbersBaseRequest(548814L, 592845L) {{
+                from = 715190L;
+            }};            
 
-            GetNumbersBaseResponse res = sdk.baseConversion.getNumbersBase(req, new GetNumbersBaseSecurity() {{
+            GetNumbersBaseResponse res = sdk.baseConversion.getNumbersBase(req, new GetNumbersBaseSecurity("quibusdam") {{
                 xMathtoolsApiSecret = "YOUR_API_KEY_HERE";
             }});
 
@@ -30,5 +27,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

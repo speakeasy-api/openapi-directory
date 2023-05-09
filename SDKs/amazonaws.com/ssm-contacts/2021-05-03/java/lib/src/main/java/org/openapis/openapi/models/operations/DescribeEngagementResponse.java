@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEngagementResponse {
@@ -12,6 +13,7 @@ public class DescribeEngagementResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeEngagementResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEngagementResponse {
     
     
     public String contentType;
+
     public DescribeEngagementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEngagementResponse {
      */
     
     public Object dataEncryptionException;
+
     public DescribeEngagementResponse withDataEncryptionException(Object dataEncryptionException) {
         this.dataEncryptionException = dataEncryptionException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEngagementResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEngagementResult describeEngagementResult;
+
     public DescribeEngagementResponse withDescribeEngagementResult(org.openapis.openapi.models.shared.DescribeEngagementResult describeEngagementResult) {
         this.describeEngagementResult = describeEngagementResult;
         return this;
@@ -49,6 +54,7 @@ public class DescribeEngagementResponse {
      */
     
     public Object internalServerException;
+
     public DescribeEngagementResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeEngagementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeEngagementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeEngagementResponse {
     
     
     public Integer statusCode;
+
     public DescribeEngagementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeEngagementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEngagementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeEngagementResponse {
      */
     
     public Object throttlingException;
+
     public DescribeEngagementResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeEngagementResponse {
      */
     
     public Object validationException;
+
     public DescribeEngagementResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeEngagementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

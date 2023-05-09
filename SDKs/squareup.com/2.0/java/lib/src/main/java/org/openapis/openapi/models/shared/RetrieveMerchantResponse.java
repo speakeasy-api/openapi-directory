@@ -18,6 +18,7 @@ public class RetrieveMerchantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveMerchantResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -29,9 +30,11 @@ public class RetrieveMerchantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant")
     public Merchant merchant;
+
     public RetrieveMerchantResponse withMerchant(Merchant merchant) {
         this.merchant = merchant;
         return this;
     }
     
+    public RetrieveMerchantResponse(){}
 }

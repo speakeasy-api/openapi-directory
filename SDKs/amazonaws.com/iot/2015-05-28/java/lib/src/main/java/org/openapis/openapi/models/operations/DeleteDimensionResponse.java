@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDimensionResponse {
     
     public String contentType;
+
     public DeleteDimensionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDimensionResponse {
      */
     
     public java.util.Map<String, Object> deleteDimensionResponse;
+
     public DeleteDimensionResponse withDeleteDimensionResponse(java.util.Map<String, Object> deleteDimensionResponse) {
         this.deleteDimensionResponse = deleteDimensionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDimensionResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteDimensionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDimensionResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteDimensionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteDimensionResponse {
     
     
     public Integer statusCode;
+
     public DeleteDimensionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteDimensionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDimensionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteDimensionResponse {
      */
     
     public Object throttlingException;
+
     public DeleteDimensionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteDimensionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class CollectionSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allDescendants")
     public Boolean allDescendants;
+
     public CollectionSelector withAllDescendants(Boolean allDescendants) {
         this.allDescendants = allDescendants;
         return this;
@@ -29,9 +30,11 @@ public class CollectionSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionId")
     public String collectionId;
+
     public CollectionSelector withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
     }
     
+    public CollectionSelector(){}
 }

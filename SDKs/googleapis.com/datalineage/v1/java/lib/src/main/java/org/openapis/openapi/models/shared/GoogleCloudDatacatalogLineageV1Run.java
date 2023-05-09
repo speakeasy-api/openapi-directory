@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogLineageV1Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, Object> attributes;
+
     public GoogleCloudDatacatalogLineageV1Run withAttributes(java.util.Map<String, Object> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogLineageV1Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogLineageV1Run withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogLineageV1Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudDatacatalogLineageV1Run withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogLineageV1Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatacatalogLineageV1Run withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatacatalogLineageV1Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudDatacatalogLineageV1Run withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDatacatalogLineageV1Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDatacatalogLineageV1RunStateEnum state;
+
     public GoogleCloudDatacatalogLineageV1Run withState(GoogleCloudDatacatalogLineageV1RunStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleCloudDatacatalogLineageV1Run(){}
 }

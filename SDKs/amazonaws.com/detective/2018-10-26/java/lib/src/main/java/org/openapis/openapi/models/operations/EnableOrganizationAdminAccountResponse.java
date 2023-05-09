@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableOrganizationAdminAccountResponse {
@@ -12,6 +13,7 @@ public class EnableOrganizationAdminAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public EnableOrganizationAdminAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class EnableOrganizationAdminAccountResponse {
     
     
     public String contentType;
+
     public EnableOrganizationAdminAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class EnableOrganizationAdminAccountResponse {
      */
     
     public Object internalServerException;
+
     public EnableOrganizationAdminAccountResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class EnableOrganizationAdminAccountResponse {
     
     
     public Integer statusCode;
+
     public EnableOrganizationAdminAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class EnableOrganizationAdminAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableOrganizationAdminAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class EnableOrganizationAdminAccountResponse {
      */
     
     public Object tooManyRequestsException;
+
     public EnableOrganizationAdminAccountResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -63,9 +70,14 @@ public class EnableOrganizationAdminAccountResponse {
      */
     
     public Object validationException;
+
     public EnableOrganizationAdminAccountResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public EnableOrganizationAdminAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

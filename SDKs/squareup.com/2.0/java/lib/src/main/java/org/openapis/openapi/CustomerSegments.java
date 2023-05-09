@@ -59,11 +59,9 @@ public class CustomerSegments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCustomerSegmentsResponse res = new org.openapis.openapi.models.operations.ListCustomerSegmentsResponse() {{
+        org.openapis.openapi.models.operations.ListCustomerSegmentsResponse res = new org.openapis.openapi.models.operations.ListCustomerSegmentsResponse(contentType, httpRes.statusCode()) {{
             listCustomerSegmentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class CustomerSegments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveCustomerSegmentResponse res = new org.openapis.openapi.models.operations.RetrieveCustomerSegmentResponse() {{
+        org.openapis.openapi.models.operations.RetrieveCustomerSegmentResponse res = new org.openapis.openapi.models.operations.RetrieveCustomerSegmentResponse(contentType, httpRes.statusCode()) {{
             retrieveCustomerSegmentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

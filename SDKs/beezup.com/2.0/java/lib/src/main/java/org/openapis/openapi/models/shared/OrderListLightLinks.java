@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OrderListLightLinks {
     @JsonProperty("clearMerchantInfos")
     public LinksClearMerchantOrderInfoListLink clearMerchantInfos;
+
     public OrderListLightLinks withClearMerchantInfos(LinksClearMerchantOrderInfoListLink clearMerchantInfos) {
         this.clearMerchantInfos = clearMerchantInfos;
         return this;
@@ -19,6 +20,7 @@ public class OrderListLightLinks {
     
     @JsonProperty("export")
     public LinksExportOrdersLink export;
+
     public OrderListLightLinks withExport(LinksExportOrdersLink export) {
         this.export = export;
         return this;
@@ -26,6 +28,7 @@ public class OrderListLightLinks {
     
     @JsonProperty("harvest")
     public LinksHarvestAllLink harvest;
+
     public OrderListLightLinks withHarvest(LinksHarvestAllLink harvest) {
         this.harvest = harvest;
         return this;
@@ -33,6 +36,7 @@ public class OrderListLightLinks {
     
     @JsonProperty("self")
     public LinksGetOrderListLightLink self;
+
     public OrderListLightLinks withSelf(LinksGetOrderListLightLink self) {
         this.self = self;
         return this;
@@ -40,6 +44,7 @@ public class OrderListLightLinks {
     
     @JsonProperty("setMerchantInfos")
     public LinksSetMerchantOrderInfoListLink setMerchantInfos;
+
     public OrderListLightLinks withSetMerchantInfos(LinksSetMerchantOrderInfoListLink setMerchantInfos) {
         this.setMerchantInfos = setMerchantInfos;
         return this;
@@ -47,9 +52,18 @@ public class OrderListLightLinks {
     
     @JsonProperty("status")
     public LinksGetMarketplaceAccountsSynchronizationLink status;
+
     public OrderListLightLinks withStatus(LinksGetMarketplaceAccountsSynchronizationLink status) {
         this.status = status;
         return this;
     }
     
+    public OrderListLightLinks(@JsonProperty("clearMerchantInfos") LinksClearMerchantOrderInfoListLink clearMerchantInfos, @JsonProperty("export") LinksExportOrdersLink export, @JsonProperty("harvest") LinksHarvestAllLink harvest, @JsonProperty("self") LinksGetOrderListLightLink self, @JsonProperty("setMerchantInfos") LinksSetMerchantOrderInfoListLink setMerchantInfos, @JsonProperty("status") LinksGetMarketplaceAccountsSynchronizationLink status) {
+        this.clearMerchantInfos = clearMerchantInfos;
+        this.export = export;
+        this.harvest = harvest;
+        this.self = self;
+        this.setMerchantInfos = setMerchantInfos;
+        this.status = status;
+  }
 }

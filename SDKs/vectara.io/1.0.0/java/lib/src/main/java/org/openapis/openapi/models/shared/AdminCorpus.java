@@ -12,6 +12,7 @@ public class AdminCorpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDimensions")
     public AdminDimension[] customDimensions;
+
     public AdminCorpus withCustomDimensions(AdminDimension[] customDimensions) {
         this.customDimensions = customDimensions;
         return this;
@@ -23,6 +24,7 @@ public class AdminCorpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AdminCorpus withDescription(String description) {
         this.description = description;
         return this;
@@ -34,6 +36,7 @@ public class AdminCorpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dtProvision")
     public String dtProvision;
+
     public AdminCorpus withDtProvision(String dtProvision) {
         this.dtProvision = dtProvision;
         return this;
@@ -45,6 +48,7 @@ public class AdminCorpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AdminCorpus withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -59,6 +63,7 @@ public class AdminCorpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoderId")
     public String encoderId;
+
     public AdminCorpus withEncoderId(String encoderId) {
         this.encoderId = encoderId;
         return this;
@@ -70,6 +75,7 @@ public class AdminCorpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encrypted")
     public Boolean encrypted;
+
     public AdminCorpus withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -78,6 +84,7 @@ public class AdminCorpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterAttributes")
     public AdminFilterAttribute[] filterAttributes;
+
     public AdminCorpus withFilterAttributes(AdminFilterAttribute[] filterAttributes) {
         this.filterAttributes = filterAttributes;
         return this;
@@ -89,6 +96,7 @@ public class AdminCorpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public AdminCorpus withId(Long id) {
         this.id = id;
         return this;
@@ -100,6 +108,7 @@ public class AdminCorpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataMaxBytes")
     public Long metadataMaxBytes;
+
     public AdminCorpus withMetadataMaxBytes(Long metadataMaxBytes) {
         this.metadataMaxBytes = metadataMaxBytes;
         return this;
@@ -111,6 +120,7 @@ public class AdminCorpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AdminCorpus withName(String name) {
         this.name = name;
         return this;
@@ -126,6 +136,7 @@ public class AdminCorpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("swapIenc")
     public Boolean swapIenc;
+
     public AdminCorpus withSwapIenc(Boolean swapIenc) {
         this.swapIenc = swapIenc;
         return this;
@@ -134,6 +145,7 @@ public class AdminCorpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("swapQenc")
     public Boolean swapQenc;
+
     public AdminCorpus withSwapQenc(Boolean swapQenc) {
         this.swapQenc = swapQenc;
         return this;
@@ -146,9 +158,11 @@ public class AdminCorpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textless")
     public Boolean textless;
+
     public AdminCorpus withTextless(Boolean textless) {
         this.textless = textless;
         return this;
     }
     
+    public AdminCorpus(){}
 }

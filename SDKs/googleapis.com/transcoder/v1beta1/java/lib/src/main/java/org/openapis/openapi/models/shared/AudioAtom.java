@@ -18,6 +18,7 @@ public class AudioAtom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channels")
     public AudioChannel[] channels;
+
     public AudioAtom withChannels(AudioChannel[] channels) {
         this.channels = channels;
         return this;
@@ -29,9 +30,11 @@ public class AudioAtom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public AudioAtom withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public AudioAtom(){}
 }

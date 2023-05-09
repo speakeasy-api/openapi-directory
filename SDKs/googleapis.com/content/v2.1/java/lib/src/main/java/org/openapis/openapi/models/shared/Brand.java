@@ -18,9 +18,11 @@ public class Brand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Brand withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Brand(){}
 }

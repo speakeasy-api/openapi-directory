@@ -18,6 +18,7 @@ public class StartInstanceOnboardingJobRequestBodyEncryptionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public StartInstanceOnboardingJobRequestBodyEncryptionConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,6 +30,7 @@ public class StartInstanceOnboardingJobRequestBodyEncryptionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionType")
     public org.openapis.openapi.models.shared.EncryptionTypeEnum encryptionType;
+
     public StartInstanceOnboardingJobRequestBodyEncryptionConfig withEncryptionType(org.openapis.openapi.models.shared.EncryptionTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -40,9 +42,11 @@ public class StartInstanceOnboardingJobRequestBodyEncryptionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyArn")
     public String keyArn;
+
     public StartInstanceOnboardingJobRequestBodyEncryptionConfig withKeyArn(String keyArn) {
         this.keyArn = keyArn;
         return this;
     }
     
+    public StartInstanceOnboardingJobRequestBodyEncryptionConfig(){}
 }

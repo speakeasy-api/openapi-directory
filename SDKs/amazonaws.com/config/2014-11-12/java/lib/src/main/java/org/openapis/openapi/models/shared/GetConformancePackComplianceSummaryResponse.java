@@ -15,6 +15,7 @@ public class GetConformancePackComplianceSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConformancePackComplianceSummaryList")
     public ConformancePackComplianceSummary[] conformancePackComplianceSummaryList;
+
     public GetConformancePackComplianceSummaryResponse withConformancePackComplianceSummaryList(ConformancePackComplianceSummary[] conformancePackComplianceSummaryList) {
         this.conformancePackComplianceSummaryList = conformancePackComplianceSummaryList;
         return this;
@@ -23,9 +24,11 @@ public class GetConformancePackComplianceSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetConformancePackComplianceSummaryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetConformancePackComplianceSummaryResponse(){}
 }

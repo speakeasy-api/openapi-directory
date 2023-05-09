@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductCatalogSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=user_key")
     public String userKey;
+
     public ProductCatalogSecurity withUserKey(String userKey) {
         this.userKey = userKey;
         return this;
     }
     
+    public ProductCatalogSecurity(@JsonProperty("user_key") String userKey) {
+        this.userKey = userKey;
+  }
 }

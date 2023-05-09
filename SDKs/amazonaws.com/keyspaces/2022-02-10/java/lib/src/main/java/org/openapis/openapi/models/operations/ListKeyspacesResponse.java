@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListKeyspacesResponse {
@@ -12,6 +13,7 @@ public class ListKeyspacesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListKeyspacesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListKeyspacesResponse {
     
     
     public String contentType;
+
     public ListKeyspacesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListKeyspacesResponse {
      */
     
     public Object internalServerException;
+
     public ListKeyspacesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListKeyspacesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListKeyspacesResponse listKeyspacesResponse;
+
     public ListKeyspacesResponse withListKeyspacesResponse(org.openapis.openapi.models.shared.ListKeyspacesResponse listKeyspacesResponse) {
         this.listKeyspacesResponse = listKeyspacesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListKeyspacesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListKeyspacesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListKeyspacesResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListKeyspacesResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class ListKeyspacesResponse {
     
     
     public Integer statusCode;
+
     public ListKeyspacesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListKeyspacesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListKeyspacesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListKeyspacesResponse {
      */
     
     public Object validationException;
+
     public ListKeyspacesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListKeyspacesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

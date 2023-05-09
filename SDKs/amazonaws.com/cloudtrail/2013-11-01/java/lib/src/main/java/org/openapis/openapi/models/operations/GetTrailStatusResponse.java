@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTrailStatusResponse {
@@ -12,6 +13,7 @@ public class GetTrailStatusResponse {
      */
     
     public Object cloudTrailARNInvalidException;
+
     public GetTrailStatusResponse withCloudTrailARNInvalidException(Object cloudTrailARNInvalidException) {
         this.cloudTrailARNInvalidException = cloudTrailARNInvalidException;
         return this;
@@ -19,6 +21,7 @@ public class GetTrailStatusResponse {
     
     
     public String contentType;
+
     public GetTrailStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTrailStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTrailStatusResponse getTrailStatusResponse;
+
     public GetTrailStatusResponse withGetTrailStatusResponse(org.openapis.openapi.models.shared.GetTrailStatusResponse getTrailStatusResponse) {
         this.getTrailStatusResponse = getTrailStatusResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetTrailStatusResponse {
      */
     
     public Object invalidTrailNameException;
+
     public GetTrailStatusResponse withInvalidTrailNameException(Object invalidTrailNameException) {
         this.invalidTrailNameException = invalidTrailNameException;
         return this;
@@ -49,6 +54,7 @@ public class GetTrailStatusResponse {
      */
     
     public Object operationNotPermittedException;
+
     public GetTrailStatusResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -56,6 +62,7 @@ public class GetTrailStatusResponse {
     
     
     public Integer statusCode;
+
     public GetTrailStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetTrailStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTrailStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetTrailStatusResponse {
      */
     
     public Object trailNotFoundException;
+
     public GetTrailStatusResponse withTrailNotFoundException(Object trailNotFoundException) {
         this.trailNotFoundException = trailNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class GetTrailStatusResponse {
      */
     
     public Object unsupportedOperationException;
+
     public GetTrailStatusResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public GetTrailStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

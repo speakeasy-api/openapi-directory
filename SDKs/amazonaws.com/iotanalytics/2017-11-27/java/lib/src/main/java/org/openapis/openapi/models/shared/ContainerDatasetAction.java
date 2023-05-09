@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContainerDatasetAction {
     @JsonProperty("executionRoleArn")
     public String executionRoleArn;
+
     public ContainerDatasetAction withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -21,6 +22,7 @@ public class ContainerDatasetAction {
     
     @JsonProperty("image")
     public String image;
+
     public ContainerDatasetAction withImage(String image) {
         this.image = image;
         return this;
@@ -28,6 +30,7 @@ public class ContainerDatasetAction {
     
     @JsonProperty("resourceConfiguration")
     public ResourceConfiguration resourceConfiguration;
+
     public ContainerDatasetAction withResourceConfiguration(ResourceConfiguration resourceConfiguration) {
         this.resourceConfiguration = resourceConfiguration;
         return this;
@@ -36,9 +39,15 @@ public class ContainerDatasetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variables")
     public Variable[] variables;
+
     public ContainerDatasetAction withVariables(Variable[] variables) {
         this.variables = variables;
         return this;
     }
     
+    public ContainerDatasetAction(@JsonProperty("executionRoleArn") String executionRoleArn, @JsonProperty("image") String image, @JsonProperty("resourceConfiguration") ResourceConfiguration resourceConfiguration) {
+        this.executionRoleArn = executionRoleArn;
+        this.image = image;
+        this.resourceConfiguration = resourceConfiguration;
+  }
 }

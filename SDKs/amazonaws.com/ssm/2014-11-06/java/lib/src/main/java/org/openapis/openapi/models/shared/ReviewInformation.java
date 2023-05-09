@@ -22,6 +22,7 @@ public class ReviewInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReviewedTime")
     public OffsetDateTime reviewedTime;
+
     public ReviewInformation withReviewedTime(OffsetDateTime reviewedTime) {
         this.reviewedTime = reviewedTime;
         return this;
@@ -30,6 +31,7 @@ public class ReviewInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reviewer")
     public String reviewer;
+
     public ReviewInformation withReviewer(String reviewer) {
         this.reviewer = reviewer;
         return this;
@@ -38,9 +40,11 @@ public class ReviewInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ReviewStatusEnum status;
+
     public ReviewInformation withStatus(ReviewStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ReviewInformation(){}
 }

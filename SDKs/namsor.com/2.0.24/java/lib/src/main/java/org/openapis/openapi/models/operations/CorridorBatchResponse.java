@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CorridorBatchResponse {
@@ -12,6 +13,7 @@ public class CorridorBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchCorridorOut batchCorridorOut;
+
     public CorridorBatchResponse withBatchCorridorOut(org.openapis.openapi.models.shared.BatchCorridorOut batchCorridorOut) {
         this.batchCorridorOut = batchCorridorOut;
         return this;
@@ -19,6 +21,7 @@ public class CorridorBatchResponse {
     
     
     public String contentType;
+
     public CorridorBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CorridorBatchResponse {
     
     
     public Integer statusCode;
+
     public CorridorBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CorridorBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CorridorBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CorridorBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

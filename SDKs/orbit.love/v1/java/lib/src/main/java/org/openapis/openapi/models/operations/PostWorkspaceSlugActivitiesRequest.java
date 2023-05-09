@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWorkspaceSlugActivitiesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ActivityAndIdentity activityAndIdentity;
+
     public PostWorkspaceSlugActivitiesRequest withActivityAndIdentity(org.openapis.openapi.models.shared.ActivityAndIdentity activityAndIdentity) {
         this.activityAndIdentity = activityAndIdentity;
         return this;
@@ -16,9 +18,13 @@ public class PostWorkspaceSlugActivitiesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
     public String workspaceSlug;
+
     public PostWorkspaceSlugActivitiesRequest withWorkspaceSlug(String workspaceSlug) {
         this.workspaceSlug = workspaceSlug;
         return this;
     }
     
+    public PostWorkspaceSlugActivitiesRequest(@JsonProperty("workspace_slug") String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
+  }
 }

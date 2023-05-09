@@ -15,6 +15,7 @@ public class FilterContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget_codes")
     public String[] budgetCodes;
+
     public FilterContents withBudgetCodes(String[] budgetCodes) {
         this.budgetCodes = budgetCodes;
         return this;
@@ -23,6 +24,7 @@ public class FilterContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public String[] categories;
+
     public FilterContents withCategories(String[] categories) {
         this.categories = categories;
         return this;
@@ -31,6 +33,7 @@ public class FilterContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clients")
     public SimpleModel[] clients;
+
     public FilterContents withClients(SimpleModel[] clients) {
         this.clients = clients;
         return this;
@@ -39,6 +42,7 @@ public class FilterContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public SimpleModel[] documents;
+
     public FilterContents withDocuments(SimpleModel[] documents) {
         this.documents = documents;
         return this;
@@ -47,6 +51,7 @@ public class FilterContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projects")
     public SimpleModel[] projects;
+
     public FilterContents withProjects(SimpleModel[] projects) {
         this.projects = projects;
         return this;
@@ -55,6 +60,7 @@ public class FilterContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severities")
     public String[] severities;
+
     public FilterContents withSeverities(String[] severities) {
         this.severities = severities;
         return this;
@@ -63,6 +69,7 @@ public class FilterContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_languages")
     public String[] sourceLanguages;
+
     public FilterContents withSourceLanguages(String[] sourceLanguages) {
         this.sourceLanguages = sourceLanguages;
         return this;
@@ -71,6 +78,7 @@ public class FilterContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjects")
     public String[] subjects;
+
     public FilterContents withSubjects(String[] subjects) {
         this.subjects = subjects;
         return this;
@@ -79,6 +87,7 @@ public class FilterContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_languages")
     public String[] targetLanguages;
+
     public FilterContents withTargetLanguages(String[] targetLanguages) {
         this.targetLanguages = targetLanguages;
         return this;
@@ -87,9 +96,11 @@ public class FilterContents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendors")
     public SimpleModel[] vendors;
+
     public FilterContents withVendors(SimpleModel[] vendors) {
         this.vendors = vendors;
         return this;
     }
     
+    public FilterContents(){}
 }

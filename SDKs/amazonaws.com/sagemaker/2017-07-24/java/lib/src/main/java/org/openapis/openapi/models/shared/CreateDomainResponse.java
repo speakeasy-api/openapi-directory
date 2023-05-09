@@ -15,6 +15,7 @@ public class CreateDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainArn")
     public String domainArn;
+
     public CreateDomainResponse withDomainArn(String domainArn) {
         this.domainArn = domainArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public CreateDomainResponse withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CreateDomainResponse(){}
 }

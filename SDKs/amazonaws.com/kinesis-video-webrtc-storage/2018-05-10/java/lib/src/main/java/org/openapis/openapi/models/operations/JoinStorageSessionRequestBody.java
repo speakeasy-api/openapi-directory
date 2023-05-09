@@ -12,9 +12,13 @@ public class JoinStorageSessionRequestBody {
      */
     @JsonProperty("channelArn")
     public String channelArn;
+
     public JoinStorageSessionRequestBody withChannelArn(String channelArn) {
         this.channelArn = channelArn;
         return this;
     }
     
+    public JoinStorageSessionRequestBody(@JsonProperty("channelArn") String channelArn) {
+        this.channelArn = channelArn;
+  }
 }

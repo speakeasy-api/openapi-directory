@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MetricAttributionOutput {
     @JsonProperty("roleArn")
     public String roleArn;
+
     public MetricAttributionOutput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -25,9 +26,13 @@ public class MetricAttributionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3DataDestination")
     public S3DataConfig s3DataDestination;
+
     public MetricAttributionOutput withS3DataDestination(S3DataConfig s3DataDestination) {
         this.s3DataDestination = s3DataDestination;
         return this;
     }
     
+    public MetricAttributionOutput(@JsonProperty("roleArn") String roleArn) {
+        this.roleArn = roleArn;
+  }
 }

@@ -18,6 +18,7 @@ public class GetUsers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetUsers200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
@@ -25,9 +26,13 @@ public class GetUsers200ApplicationJSON {
     
     @JsonProperty("users")
     public org.openapis.openapi.models.shared.User[] users;
+
     public GetUsers200ApplicationJSON withUsers(org.openapis.openapi.models.shared.User[] users) {
         this.users = users;
         return this;
     }
     
+    public GetUsers200ApplicationJSON(@JsonProperty("users") org.openapis.openapi.models.shared.User[] users) {
+        this.users = users;
+  }
 }

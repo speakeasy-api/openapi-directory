@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListReplicationSetsResponse {
@@ -12,6 +13,7 @@ public class ListReplicationSetsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListReplicationSetsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListReplicationSetsResponse {
     
     
     public String contentType;
+
     public ListReplicationSetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListReplicationSetsResponse {
      */
     
     public Object internalServerException;
+
     public ListReplicationSetsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListReplicationSetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListReplicationSetsOutput listReplicationSetsOutput;
+
     public ListReplicationSetsResponse withListReplicationSetsOutput(org.openapis.openapi.models.shared.ListReplicationSetsOutput listReplicationSetsOutput) {
         this.listReplicationSetsOutput = listReplicationSetsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListReplicationSetsResponse {
     
     
     public Integer statusCode;
+
     public ListReplicationSetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListReplicationSetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListReplicationSetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListReplicationSetsResponse {
      */
     
     public Object throttlingException;
+
     public ListReplicationSetsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListReplicationSetsResponse {
      */
     
     public Object validationException;
+
     public ListReplicationSetsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListReplicationSetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

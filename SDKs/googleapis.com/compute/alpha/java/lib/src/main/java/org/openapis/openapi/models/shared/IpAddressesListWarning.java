@@ -18,6 +18,7 @@ public class IpAddressesListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public IpAddressesListWarningCodeEnum code;
+
     public IpAddressesListWarning withCode(IpAddressesListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class IpAddressesListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public IpAddressesListWarningData[] data;
+
     public IpAddressesListWarning withData(IpAddressesListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class IpAddressesListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public IpAddressesListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public IpAddressesListWarning(){}
 }

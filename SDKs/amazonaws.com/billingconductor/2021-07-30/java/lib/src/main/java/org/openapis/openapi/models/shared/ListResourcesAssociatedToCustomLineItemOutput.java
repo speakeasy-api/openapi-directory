@@ -15,6 +15,7 @@ public class ListResourcesAssociatedToCustomLineItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ListResourcesAssociatedToCustomLineItemOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ListResourcesAssociatedToCustomLineItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociatedResources")
     public ListResourcesAssociatedToCustomLineItemResponseElement[] associatedResources;
+
     public ListResourcesAssociatedToCustomLineItemOutput withAssociatedResources(ListResourcesAssociatedToCustomLineItemResponseElement[] associatedResources) {
         this.associatedResources = associatedResources;
         return this;
@@ -31,9 +33,11 @@ public class ListResourcesAssociatedToCustomLineItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourcesAssociatedToCustomLineItemOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListResourcesAssociatedToCustomLineItemOutput(){}
 }

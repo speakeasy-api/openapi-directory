@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteEndpointMessage {
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public DeleteEndpointMessage withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
     }
     
+    public DeleteEndpointMessage(@JsonProperty("EndpointArn") String endpointArn) {
+        this.endpointArn = endpointArn;
+  }
 }

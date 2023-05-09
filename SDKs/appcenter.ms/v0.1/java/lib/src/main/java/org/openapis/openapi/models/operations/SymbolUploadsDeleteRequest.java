@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SymbolUploadsDeleteRequest {
@@ -12,6 +13,7 @@ public class SymbolUploadsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public SymbolUploadsDeleteRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class SymbolUploadsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public SymbolUploadsDeleteRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -32,9 +35,15 @@ public class SymbolUploadsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=symbol_upload_id")
     public String symbolUploadId;
+
     public SymbolUploadsDeleteRequest withSymbolUploadId(String symbolUploadId) {
         this.symbolUploadId = symbolUploadId;
         return this;
     }
     
+    public SymbolUploadsDeleteRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("symbol_upload_id") String symbolUploadId) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.symbolUploadId = symbolUploadId;
+  }
 }

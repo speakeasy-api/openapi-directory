@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEePlansResponse {
     
     public String contentType;
+
     public GetEePlansResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEePlansResponse {
      */
     
     public org.openapis.openapi.models.shared.EePlans eePlans;
+
     public GetEePlansResponse withEePlans(org.openapis.openapi.models.shared.EePlans eePlans) {
         this.eePlans = eePlans;
         return this;
@@ -29,6 +32,7 @@ public class GetEePlansResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetEePlansResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetEePlansResponse {
     
     
     public Integer statusCode;
+
     public GetEePlansResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetEePlansResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEePlansResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEePlansResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

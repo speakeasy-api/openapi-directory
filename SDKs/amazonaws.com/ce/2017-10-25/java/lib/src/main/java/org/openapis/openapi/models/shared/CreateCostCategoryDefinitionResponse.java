@@ -15,6 +15,7 @@ public class CreateCostCategoryDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CostCategoryArn")
     public String costCategoryArn;
+
     public CreateCostCategoryDefinitionResponse withCostCategoryArn(String costCategoryArn) {
         this.costCategoryArn = costCategoryArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateCostCategoryDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectiveStart")
     public String effectiveStart;
+
     public CreateCostCategoryDefinitionResponse withEffectiveStart(String effectiveStart) {
         this.effectiveStart = effectiveStart;
         return this;
     }
     
+    public CreateCostCategoryDefinitionResponse(){}
 }

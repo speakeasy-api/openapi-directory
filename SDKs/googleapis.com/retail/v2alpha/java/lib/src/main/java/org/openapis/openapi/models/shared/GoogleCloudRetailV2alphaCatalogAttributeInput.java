@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaCatalogAttributeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicFacetableOption")
     public GoogleCloudRetailV2alphaCatalogAttributeDynamicFacetableOptionEnum dynamicFacetableOption;
+
     public GoogleCloudRetailV2alphaCatalogAttributeInput withDynamicFacetableOption(GoogleCloudRetailV2alphaCatalogAttributeDynamicFacetableOptionEnum dynamicFacetableOption) {
         this.dynamicFacetableOption = dynamicFacetableOption;
         return this;
@@ -29,8 +30,33 @@ public class GoogleCloudRetailV2alphaCatalogAttributeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exactSearchableOption")
     public GoogleCloudRetailV2alphaCatalogAttributeExactSearchableOptionEnum exactSearchableOption;
+
     public GoogleCloudRetailV2alphaCatalogAttributeInput withExactSearchableOption(GoogleCloudRetailV2alphaCatalogAttributeExactSearchableOptionEnum exactSearchableOption) {
         this.exactSearchableOption = exactSearchableOption;
+        return this;
+    }
+    
+    /**
+     * If you don't set the facet SearchRequest.FacetSpec.FacetKey.intervals to a numerical attribute, then a weekly pipeline calculates intervals using some percentiles on the distribution of all its product numerical attribute values. The calculated intervals might not be ideal for some attributes. Therefore, we give you the option the overwrite them. For any numerical attribute that is passed as a facet key in the request along with given intervals, the given intervals are the facet intervals returned in the response.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("facetIntervals")
+    public GoogleCloudRetailV2alphaInterval[] facetIntervals;
+
+    public GoogleCloudRetailV2alphaCatalogAttributeInput withFacetIntervals(GoogleCloudRetailV2alphaInterval[] facetIntervals) {
+        this.facetIntervals = facetIntervals;
+        return this;
+    }
+    
+    /**
+     * Each instance represents a list of attribute values to ignore as facet values for a specific time range.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ignoredFacetValues")
+    public GoogleCloudRetailV2alphaCatalogAttributeIgnoredFacetValues[] ignoredFacetValues;
+
+    public GoogleCloudRetailV2alphaCatalogAttributeInput withIgnoredFacetValues(GoogleCloudRetailV2alphaCatalogAttributeIgnoredFacetValues[] ignoredFacetValues) {
+        this.ignoredFacetValues = ignoredFacetValues;
         return this;
     }
     
@@ -40,6 +66,7 @@ public class GoogleCloudRetailV2alphaCatalogAttributeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexableOption")
     public GoogleCloudRetailV2alphaCatalogAttributeIndexableOptionEnum indexableOption;
+
     public GoogleCloudRetailV2alphaCatalogAttributeInput withIndexableOption(GoogleCloudRetailV2alphaCatalogAttributeIndexableOptionEnum indexableOption) {
         this.indexableOption = indexableOption;
         return this;
@@ -51,6 +78,7 @@ public class GoogleCloudRetailV2alphaCatalogAttributeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleCloudRetailV2alphaCatalogAttributeInput withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +90,7 @@ public class GoogleCloudRetailV2alphaCatalogAttributeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationsFilteringOption")
     public GoogleCloudRetailV2alphaCatalogAttributeRecommendationsFilteringOptionEnum recommendationsFilteringOption;
+
     public GoogleCloudRetailV2alphaCatalogAttributeInput withRecommendationsFilteringOption(GoogleCloudRetailV2alphaCatalogAttributeRecommendationsFilteringOptionEnum recommendationsFilteringOption) {
         this.recommendationsFilteringOption = recommendationsFilteringOption;
         return this;
@@ -73,6 +102,7 @@ public class GoogleCloudRetailV2alphaCatalogAttributeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retrievableOption")
     public GoogleCloudRetailV2alphaCatalogAttributeRetrievableOptionEnum retrievableOption;
+
     public GoogleCloudRetailV2alphaCatalogAttributeInput withRetrievableOption(GoogleCloudRetailV2alphaCatalogAttributeRetrievableOptionEnum retrievableOption) {
         this.retrievableOption = retrievableOption;
         return this;
@@ -84,9 +114,11 @@ public class GoogleCloudRetailV2alphaCatalogAttributeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchableOption")
     public GoogleCloudRetailV2alphaCatalogAttributeSearchableOptionEnum searchableOption;
+
     public GoogleCloudRetailV2alphaCatalogAttributeInput withSearchableOption(GoogleCloudRetailV2alphaCatalogAttributeSearchableOptionEnum searchableOption) {
         this.searchableOption = searchableOption;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaCatalogAttributeInput(){}
 }

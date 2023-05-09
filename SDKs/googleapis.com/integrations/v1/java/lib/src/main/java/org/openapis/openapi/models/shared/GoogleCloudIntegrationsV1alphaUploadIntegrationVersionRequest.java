@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest withContent(String content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileFormat")
     public GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequestFileFormatEnum fileFormat;
+
     public GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest withFileFormat(GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequestFileFormatEnum fileFormat) {
         this.fileFormat = fileFormat;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest(){}
 }

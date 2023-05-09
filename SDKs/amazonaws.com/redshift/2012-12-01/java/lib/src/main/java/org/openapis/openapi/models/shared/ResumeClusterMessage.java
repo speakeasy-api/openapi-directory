@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ResumeClusterMessage - Describes a resume cluster operation. For example, a scheduled action to run the &lt;code&gt;ResumeCluster&lt;/code&gt; API operation. 
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class ResumeClusterMessage {
     
     public String clusterIdentifier;
+
     public ResumeClusterMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
     }
     
+    public ResumeClusterMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+  }
 }

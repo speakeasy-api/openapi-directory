@@ -15,9 +15,11 @@ public class EksHostPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public EksHostPath withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public EksHostPath(){}
 }

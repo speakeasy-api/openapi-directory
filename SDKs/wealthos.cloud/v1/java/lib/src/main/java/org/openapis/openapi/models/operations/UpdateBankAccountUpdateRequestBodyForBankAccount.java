@@ -15,6 +15,7 @@ public class UpdateBankAccountUpdateRequestBodyForBankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_name")
     public String accountName;
+
     public UpdateBankAccountUpdateRequestBodyForBankAccount withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -23,6 +24,7 @@ public class UpdateBankAccountUpdateRequestBodyForBankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_status")
     public UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum accountStatus;
+
     public UpdateBankAccountUpdateRequestBodyForBankAccount withAccountStatus(UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum accountStatus) {
         this.accountStatus = accountStatus;
         return this;
@@ -34,6 +36,7 @@ public class UpdateBankAccountUpdateRequestBodyForBankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_account")
     public UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum defaultAccount;
+
     public UpdateBankAccountUpdateRequestBodyForBankAccount withDefaultAccount(UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum defaultAccount) {
         this.defaultAccount = defaultAccount;
         return this;
@@ -41,9 +44,13 @@ public class UpdateBankAccountUpdateRequestBodyForBankAccount {
     
     @JsonProperty("reference_version")
     public Long referenceVersion;
+
     public UpdateBankAccountUpdateRequestBodyForBankAccount withReferenceVersion(Long referenceVersion) {
         this.referenceVersion = referenceVersion;
         return this;
     }
     
+    public UpdateBankAccountUpdateRequestBodyForBankAccount(@JsonProperty("reference_version") Long referenceVersion) {
+        this.referenceVersion = referenceVersion;
+  }
 }

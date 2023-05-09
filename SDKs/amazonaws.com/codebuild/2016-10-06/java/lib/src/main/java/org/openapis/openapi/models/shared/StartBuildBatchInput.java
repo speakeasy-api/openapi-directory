@@ -12,6 +12,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactsOverride")
     public ProjectArtifacts artifactsOverride;
+
     public StartBuildBatchInput withArtifactsOverride(ProjectArtifacts artifactsOverride) {
         this.artifactsOverride = artifactsOverride;
         return this;
@@ -20,6 +21,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildBatchConfigOverride")
     public ProjectBuildBatchConfig buildBatchConfigOverride;
+
     public StartBuildBatchInput withBuildBatchConfigOverride(ProjectBuildBatchConfig buildBatchConfigOverride) {
         this.buildBatchConfigOverride = buildBatchConfigOverride;
         return this;
@@ -28,6 +30,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildTimeoutInMinutesOverride")
     public Long buildTimeoutInMinutesOverride;
+
     public StartBuildBatchInput withBuildTimeoutInMinutesOverride(Long buildTimeoutInMinutesOverride) {
         this.buildTimeoutInMinutesOverride = buildTimeoutInMinutesOverride;
         return this;
@@ -36,6 +39,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildspecOverride")
     public String buildspecOverride;
+
     public StartBuildBatchInput withBuildspecOverride(String buildspecOverride) {
         this.buildspecOverride = buildspecOverride;
         return this;
@@ -44,6 +48,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheOverride")
     public ProjectCache cacheOverride;
+
     public StartBuildBatchInput withCacheOverride(ProjectCache cacheOverride) {
         this.cacheOverride = cacheOverride;
         return this;
@@ -52,6 +57,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateOverride")
     public String certificateOverride;
+
     public StartBuildBatchInput withCertificateOverride(String certificateOverride) {
         this.certificateOverride = certificateOverride;
         return this;
@@ -60,6 +66,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeTypeOverride")
     public ComputeTypeEnum computeTypeOverride;
+
     public StartBuildBatchInput withComputeTypeOverride(ComputeTypeEnum computeTypeOverride) {
         this.computeTypeOverride = computeTypeOverride;
         return this;
@@ -68,6 +75,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugSessionEnabled")
     public Boolean debugSessionEnabled;
+
     public StartBuildBatchInput withDebugSessionEnabled(Boolean debugSessionEnabled) {
         this.debugSessionEnabled = debugSessionEnabled;
         return this;
@@ -76,6 +84,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKeyOverride")
     public String encryptionKeyOverride;
+
     public StartBuildBatchInput withEncryptionKeyOverride(String encryptionKeyOverride) {
         this.encryptionKeyOverride = encryptionKeyOverride;
         return this;
@@ -84,6 +93,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentTypeOverride")
     public EnvironmentTypeEnum environmentTypeOverride;
+
     public StartBuildBatchInput withEnvironmentTypeOverride(EnvironmentTypeEnum environmentTypeOverride) {
         this.environmentTypeOverride = environmentTypeOverride;
         return this;
@@ -92,6 +102,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentVariablesOverride")
     public EnvironmentVariable[] environmentVariablesOverride;
+
     public StartBuildBatchInput withEnvironmentVariablesOverride(EnvironmentVariable[] environmentVariablesOverride) {
         this.environmentVariablesOverride = environmentVariablesOverride;
         return this;
@@ -100,6 +111,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gitCloneDepthOverride")
     public Long gitCloneDepthOverride;
+
     public StartBuildBatchInput withGitCloneDepthOverride(Long gitCloneDepthOverride) {
         this.gitCloneDepthOverride = gitCloneDepthOverride;
         return this;
@@ -108,6 +120,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gitSubmodulesConfigOverride")
     public GitSubmodulesConfig gitSubmodulesConfigOverride;
+
     public StartBuildBatchInput withGitSubmodulesConfigOverride(GitSubmodulesConfig gitSubmodulesConfigOverride) {
         this.gitSubmodulesConfigOverride = gitSubmodulesConfigOverride;
         return this;
@@ -116,6 +129,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageOverride")
     public String imageOverride;
+
     public StartBuildBatchInput withImageOverride(String imageOverride) {
         this.imageOverride = imageOverride;
         return this;
@@ -124,6 +138,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imagePullCredentialsTypeOverride")
     public ImagePullCredentialsTypeEnum imagePullCredentialsTypeOverride;
+
     public StartBuildBatchInput withImagePullCredentialsTypeOverride(ImagePullCredentialsTypeEnum imagePullCredentialsTypeOverride) {
         this.imagePullCredentialsTypeOverride = imagePullCredentialsTypeOverride;
         return this;
@@ -132,6 +147,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insecureSslOverride")
     public Boolean insecureSslOverride;
+
     public StartBuildBatchInput withInsecureSslOverride(Boolean insecureSslOverride) {
         this.insecureSslOverride = insecureSslOverride;
         return this;
@@ -140,6 +156,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logsConfigOverride")
     public LogsConfig logsConfigOverride;
+
     public StartBuildBatchInput withLogsConfigOverride(LogsConfig logsConfigOverride) {
         this.logsConfigOverride = logsConfigOverride;
         return this;
@@ -148,6 +165,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privilegedModeOverride")
     public Boolean privilegedModeOverride;
+
     public StartBuildBatchInput withPrivilegedModeOverride(Boolean privilegedModeOverride) {
         this.privilegedModeOverride = privilegedModeOverride;
         return this;
@@ -155,6 +173,7 @@ public class StartBuildBatchInput {
     
     @JsonProperty("projectName")
     public String projectName;
+
     public StartBuildBatchInput withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -163,6 +182,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queuedTimeoutInMinutesOverride")
     public Long queuedTimeoutInMinutesOverride;
+
     public StartBuildBatchInput withQueuedTimeoutInMinutesOverride(Long queuedTimeoutInMinutesOverride) {
         this.queuedTimeoutInMinutesOverride = queuedTimeoutInMinutesOverride;
         return this;
@@ -171,6 +191,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryCredentialOverride")
     public RegistryCredential registryCredentialOverride;
+
     public StartBuildBatchInput withRegistryCredentialOverride(RegistryCredential registryCredentialOverride) {
         this.registryCredentialOverride = registryCredentialOverride;
         return this;
@@ -179,6 +200,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportBuildBatchStatusOverride")
     public Boolean reportBuildBatchStatusOverride;
+
     public StartBuildBatchInput withReportBuildBatchStatusOverride(Boolean reportBuildBatchStatusOverride) {
         this.reportBuildBatchStatusOverride = reportBuildBatchStatusOverride;
         return this;
@@ -187,6 +209,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryArtifactsOverride")
     public ProjectArtifacts[] secondaryArtifactsOverride;
+
     public StartBuildBatchInput withSecondaryArtifactsOverride(ProjectArtifacts[] secondaryArtifactsOverride) {
         this.secondaryArtifactsOverride = secondaryArtifactsOverride;
         return this;
@@ -195,6 +218,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondarySourcesOverride")
     public ProjectSource[] secondarySourcesOverride;
+
     public StartBuildBatchInput withSecondarySourcesOverride(ProjectSource[] secondarySourcesOverride) {
         this.secondarySourcesOverride = secondarySourcesOverride;
         return this;
@@ -203,6 +227,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondarySourcesVersionOverride")
     public ProjectSourceVersion[] secondarySourcesVersionOverride;
+
     public StartBuildBatchInput withSecondarySourcesVersionOverride(ProjectSourceVersion[] secondarySourcesVersionOverride) {
         this.secondarySourcesVersionOverride = secondarySourcesVersionOverride;
         return this;
@@ -211,6 +236,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRoleOverride")
     public String serviceRoleOverride;
+
     public StartBuildBatchInput withServiceRoleOverride(String serviceRoleOverride) {
         this.serviceRoleOverride = serviceRoleOverride;
         return this;
@@ -219,6 +245,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceAuthOverride")
     public SourceAuth sourceAuthOverride;
+
     public StartBuildBatchInput withSourceAuthOverride(SourceAuth sourceAuthOverride) {
         this.sourceAuthOverride = sourceAuthOverride;
         return this;
@@ -227,6 +254,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLocationOverride")
     public String sourceLocationOverride;
+
     public StartBuildBatchInput withSourceLocationOverride(String sourceLocationOverride) {
         this.sourceLocationOverride = sourceLocationOverride;
         return this;
@@ -235,6 +263,7 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceTypeOverride")
     public SourceTypeEnum sourceTypeOverride;
+
     public StartBuildBatchInput withSourceTypeOverride(SourceTypeEnum sourceTypeOverride) {
         this.sourceTypeOverride = sourceTypeOverride;
         return this;
@@ -243,9 +272,13 @@ public class StartBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceVersion")
     public String sourceVersion;
+
     public StartBuildBatchInput withSourceVersion(String sourceVersion) {
         this.sourceVersion = sourceVersion;
         return this;
     }
     
+    public StartBuildBatchInput(@JsonProperty("projectName") String projectName) {
+        this.projectName = projectName;
+  }
 }

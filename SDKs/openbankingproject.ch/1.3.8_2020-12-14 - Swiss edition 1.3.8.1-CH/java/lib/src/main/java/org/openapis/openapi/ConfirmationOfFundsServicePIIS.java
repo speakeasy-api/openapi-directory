@@ -73,7 +73,7 @@ public class ConfirmationOfFundsServicePIIS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckAvailabilityOfFundsResponse res = new org.openapis.openapi.models.operations.CheckAvailabilityOfFundsResponse() {{
+        org.openapis.openapi.models.operations.CheckAvailabilityOfFundsResponse res = new org.openapis.openapi.models.operations.CheckAvailabilityOfFundsResponse(contentType, httpRes.statusCode()) {{
             checkAvailabilityOfFunds200ApplicationJSONObject = null;
             error400NGAIS = null;
             error400AIS = null;
@@ -88,8 +88,6 @@ public class ConfirmationOfFundsServicePIIS {
             error409NGPIIS = null;
             error409PIIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

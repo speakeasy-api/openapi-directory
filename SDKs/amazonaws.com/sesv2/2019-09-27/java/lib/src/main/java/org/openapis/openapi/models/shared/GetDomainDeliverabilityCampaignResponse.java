@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDomainDeliverabilityCampaignResponse {
     @JsonProperty("DomainDeliverabilityCampaign")
     public DomainDeliverabilityCampaign domainDeliverabilityCampaign;
+
     public GetDomainDeliverabilityCampaignResponse withDomainDeliverabilityCampaign(DomainDeliverabilityCampaign domainDeliverabilityCampaign) {
         this.domainDeliverabilityCampaign = domainDeliverabilityCampaign;
         return this;
     }
     
+    public GetDomainDeliverabilityCampaignResponse(@JsonProperty("DomainDeliverabilityCampaign") DomainDeliverabilityCampaign domainDeliverabilityCampaign) {
+        this.domainDeliverabilityCampaign = domainDeliverabilityCampaign;
+  }
 }

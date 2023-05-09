@@ -18,6 +18,7 @@ public class GetApiV2CddriveFoldersFolderIdItems200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public org.openapis.openapi.models.shared.CDDriveItem[] entries;
+
     public GetApiV2CddriveFoldersFolderIdItems200ApplicationJSON withEntries(org.openapis.openapi.models.shared.CDDriveItem[] entries) {
         this.entries = entries;
         return this;
@@ -29,6 +30,7 @@ public class GetApiV2CddriveFoldersFolderIdItems200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public GetApiV2CddriveFoldersFolderIdItems200ApplicationJSON withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -40,6 +42,7 @@ public class GetApiV2CddriveFoldersFolderIdItems200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public GetApiV2CddriveFoldersFolderIdItems200ApplicationJSON withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -51,9 +54,11 @@ public class GetApiV2CddriveFoldersFolderIdItems200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public GetApiV2CddriveFoldersFolderIdItems200ApplicationJSON withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public GetApiV2CddriveFoldersFolderIdItems200ApplicationJSON(){}
 }

@@ -15,6 +15,7 @@ public class OrderPromotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicableItems")
     public OrderPromotionItem[] applicableItems;
+
     public OrderPromotion withApplicableItems(OrderPromotionItem[] applicableItems) {
         this.applicableItems = applicableItems;
         return this;
@@ -26,6 +27,7 @@ public class OrderPromotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliedItems")
     public OrderPromotionItem[] appliedItems;
+
     public OrderPromotion withAppliedItems(OrderPromotionItem[] appliedItems) {
         this.appliedItems = appliedItems;
         return this;
@@ -37,6 +39,7 @@ public class OrderPromotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public OrderPromotion withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -48,6 +51,7 @@ public class OrderPromotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("funder")
     public String funder;
+
     public OrderPromotion withFunder(String funder) {
         this.funder = funder;
         return this;
@@ -59,6 +63,7 @@ public class OrderPromotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantPromotionId")
     public String merchantPromotionId;
+
     public OrderPromotion withMerchantPromotionId(String merchantPromotionId) {
         this.merchantPromotionId = merchantPromotionId;
         return this;
@@ -67,6 +72,7 @@ public class OrderPromotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceValue")
     public Price priceValue;
+
     public OrderPromotion withPriceValue(Price priceValue) {
         this.priceValue = priceValue;
         return this;
@@ -78,6 +84,7 @@ public class OrderPromotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortTitle")
     public String shortTitle;
+
     public OrderPromotion withShortTitle(String shortTitle) {
         this.shortTitle = shortTitle;
         return this;
@@ -89,6 +96,7 @@ public class OrderPromotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public OrderPromotion withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -100,6 +108,7 @@ public class OrderPromotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtype")
     public String subtype;
+
     public OrderPromotion withSubtype(String subtype) {
         this.subtype = subtype;
         return this;
@@ -108,6 +117,7 @@ public class OrderPromotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxValue")
     public Price taxValue;
+
     public OrderPromotion withTaxValue(Price taxValue) {
         this.taxValue = taxValue;
         return this;
@@ -119,6 +129,7 @@ public class OrderPromotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public OrderPromotion withTitle(String title) {
         this.title = title;
         return this;
@@ -130,9 +141,11 @@ public class OrderPromotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public OrderPromotion withType(String type) {
         this.type = type;
         return this;
     }
     
+    public OrderPromotion(){}
 }

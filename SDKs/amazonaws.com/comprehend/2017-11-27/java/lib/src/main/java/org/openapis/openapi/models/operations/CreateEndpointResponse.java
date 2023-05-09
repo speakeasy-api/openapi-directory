@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEndpointResponse {
     
     public String contentType;
+
     public CreateEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEndpointResponse createEndpointResponse;
+
     public CreateEndpointResponse withCreateEndpointResponse(org.openapis.openapi.models.shared.CreateEndpointResponse createEndpointResponse) {
         this.createEndpointResponse = createEndpointResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateEndpointResponse {
      */
     
     public Object internalServerException;
+
     public CreateEndpointResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateEndpointResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateEndpointResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateEndpointResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateEndpointResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateEndpointResponse {
      */
     
     public Object resourceUnavailableException;
+
     public CreateEndpointResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class CreateEndpointResponse {
     
     
     public Integer statusCode;
+
     public CreateEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateEndpointResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateEndpointResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -93,6 +103,7 @@ public class CreateEndpointResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateEndpointResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class CreateEndpointResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateEndpointResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,9 +125,14 @@ public class CreateEndpointResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateEndpointResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreateEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

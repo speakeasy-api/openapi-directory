@@ -19,6 +19,7 @@ public class MappingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contractSize")
     public Double[] contractSize;
+
     public MappingJob withContractSize(Double[] contractSize) {
         this.contractSize = contractSize;
         return this;
@@ -30,6 +31,7 @@ public class MappingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coupon")
     public Double[] coupon;
+
     public MappingJob withCoupon(Double[] coupon) {
         this.coupon = coupon;
         return this;
@@ -38,6 +40,7 @@ public class MappingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public MappingJob withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -46,6 +49,7 @@ public class MappingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchCode")
     public String exchCode;
+
     public MappingJob withExchCode(String exchCode) {
         this.exchCode = exchCode;
         return this;
@@ -57,6 +61,7 @@ public class MappingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiration")
     public LocalDate[] expiration;
+
     public MappingJob withExpiration(LocalDate[] expiration) {
         this.expiration = expiration;
         return this;
@@ -64,6 +69,7 @@ public class MappingJob {
     
     @JsonProperty("idType")
     public MappingJobIdTypeEnum idType;
+
     public MappingJob withIdType(MappingJobIdTypeEnum idType) {
         this.idType = idType;
         return this;
@@ -71,6 +77,7 @@ public class MappingJob {
     
     @JsonProperty("idValue")
     public Object idValue;
+
     public MappingJob withIdValue(Object idValue) {
         this.idValue = idValue;
         return this;
@@ -79,6 +86,7 @@ public class MappingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeUnlistedEquities")
     public Boolean includeUnlistedEquities;
+
     public MappingJob withIncludeUnlistedEquities(Boolean includeUnlistedEquities) {
         this.includeUnlistedEquities = includeUnlistedEquities;
         return this;
@@ -87,6 +95,7 @@ public class MappingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketSecDes")
     public String marketSecDes;
+
     public MappingJob withMarketSecDes(String marketSecDes) {
         this.marketSecDes = marketSecDes;
         return this;
@@ -98,6 +107,7 @@ public class MappingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maturity")
     public LocalDate[] maturity;
+
     public MappingJob withMaturity(LocalDate[] maturity) {
         this.maturity = maturity;
         return this;
@@ -106,6 +116,7 @@ public class MappingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("micCode")
     public String micCode;
+
     public MappingJob withMicCode(String micCode) {
         this.micCode = micCode;
         return this;
@@ -114,6 +125,7 @@ public class MappingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optionType")
     public MappingJobOptionTypeEnum optionType;
+
     public MappingJob withOptionType(MappingJobOptionTypeEnum optionType) {
         this.optionType = optionType;
         return this;
@@ -122,6 +134,7 @@ public class MappingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityType")
     public String securityType;
+
     public MappingJob withSecurityType(String securityType) {
         this.securityType = securityType;
         return this;
@@ -130,6 +143,7 @@ public class MappingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityType2")
     public String securityType2;
+
     public MappingJob withSecurityType2(String securityType2) {
         this.securityType2 = securityType2;
         return this;
@@ -138,6 +152,7 @@ public class MappingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateCode")
     public MappingJobStateCodeEnum stateCode;
+
     public MappingJob withStateCode(MappingJobStateCodeEnum stateCode) {
         this.stateCode = stateCode;
         return this;
@@ -149,9 +164,14 @@ public class MappingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strike")
     public Double[] strike;
+
     public MappingJob withStrike(Double[] strike) {
         this.strike = strike;
         return this;
     }
     
+    public MappingJob(@JsonProperty("idType") MappingJobIdTypeEnum idType, @JsonProperty("idValue") Object idValue) {
+        this.idType = idType;
+        this.idValue = idValue;
+  }
 }

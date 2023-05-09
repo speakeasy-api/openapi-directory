@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleasesAddDistributionGroupResponse {
     
     public String contentType;
+
     public ReleasesAddDistributionGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReleasesAddDistributionGroupResponse {
     
     
     public Integer statusCode;
+
     public ReleasesAddDistributionGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReleasesAddDistributionGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleasesAddDistributionGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReleasesAddDistributionGroupResponse {
      */
     
     public ReleasesAddDistributionGroup201ApplicationJSON releasesAddDistributionGroup201ApplicationJSONObject;
+
     public ReleasesAddDistributionGroupResponse withReleasesAddDistributionGroup201ApplicationJSONObject(ReleasesAddDistributionGroup201ApplicationJSON releasesAddDistributionGroup201ApplicationJSONObject) {
         this.releasesAddDistributionGroup201ApplicationJSONObject = releasesAddDistributionGroup201ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ReleasesAddDistributionGroupResponse {
      */
     
     public ReleasesAddDistributionGroup400ApplicationJSON releasesAddDistributionGroup400ApplicationJSONObject;
+
     public ReleasesAddDistributionGroupResponse withReleasesAddDistributionGroup400ApplicationJSONObject(ReleasesAddDistributionGroup400ApplicationJSON releasesAddDistributionGroup400ApplicationJSONObject) {
         this.releasesAddDistributionGroup400ApplicationJSONObject = releasesAddDistributionGroup400ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class ReleasesAddDistributionGroupResponse {
      */
     
     public ReleasesAddDistributionGroup404ApplicationJSON releasesAddDistributionGroup404ApplicationJSONObject;
+
     public ReleasesAddDistributionGroupResponse withReleasesAddDistributionGroup404ApplicationJSONObject(ReleasesAddDistributionGroup404ApplicationJSON releasesAddDistributionGroup404ApplicationJSONObject) {
         this.releasesAddDistributionGroup404ApplicationJSONObject = releasesAddDistributionGroup404ApplicationJSONObject;
         return this;
     }
     
+    public ReleasesAddDistributionGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

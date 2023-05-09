@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCategoriesJsonRequest {
@@ -12,6 +13,7 @@ public class PostCategoriesJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CategoryEdit categoryEdit;
+
     public PostCategoriesJsonRequest withCategoryEdit(org.openapis.openapi.models.shared.CategoryEdit categoryEdit) {
         this.categoryEdit = categoryEdit;
         return this;
@@ -22,6 +24,7 @@ public class PostCategoriesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostCategoriesJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,9 +35,15 @@ public class PostCategoriesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostCategoriesJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostCategoriesJsonRequest(@JsonProperty("CategoryEdit") org.openapis.openapi.models.shared.CategoryEdit categoryEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login) {
+        this.categoryEdit = categoryEdit;
+        this.authtoken = authtoken;
+        this.login = login;
+  }
 }

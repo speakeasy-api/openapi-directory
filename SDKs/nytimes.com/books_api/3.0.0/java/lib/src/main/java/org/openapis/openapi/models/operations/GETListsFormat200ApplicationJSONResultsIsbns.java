@@ -12,6 +12,7 @@ public class GETListsFormat200ApplicationJSONResultsIsbns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isbn10")
     public String isbn10;
+
     public GETListsFormat200ApplicationJSONResultsIsbns withIsbn10(String isbn10) {
         this.isbn10 = isbn10;
         return this;
@@ -20,9 +21,11 @@ public class GETListsFormat200ApplicationJSONResultsIsbns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isbn13")
     public String isbn13;
+
     public GETListsFormat200ApplicationJSONResultsIsbns withIsbn13(String isbn13) {
         this.isbn13 = isbn13;
         return this;
     }
     
+    public GETListsFormat200ApplicationJSONResultsIsbns(){}
 }

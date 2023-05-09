@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteACLRequest {
     @JsonProperty("ACLName")
     public String aclName;
+
     public DeleteACLRequest withACLName(String aclName) {
         this.aclName = aclName;
         return this;
     }
     
+    public DeleteACLRequest(@JsonProperty("ACLName") String aclName) {
+        this.aclName = aclName;
+  }
 }

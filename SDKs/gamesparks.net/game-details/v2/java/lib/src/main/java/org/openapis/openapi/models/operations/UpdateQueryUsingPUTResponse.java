@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateQueryUsingPUTResponse {
     
     public String contentType;
+
     public UpdateQueryUsingPUTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateQueryUsingPUTResponse {
      */
     
     public org.openapis.openapi.models.shared.ManageQuery manageQuery;
+
     public UpdateQueryUsingPUTResponse withManageQuery(org.openapis.openapi.models.shared.ManageQuery manageQuery) {
         this.manageQuery = manageQuery;
         return this;
@@ -29,6 +32,7 @@ public class UpdateQueryUsingPUTResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public UpdateQueryUsingPUTResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -36,6 +40,7 @@ public class UpdateQueryUsingPUTResponse {
     
     
     public Integer statusCode;
+
     public UpdateQueryUsingPUTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class UpdateQueryUsingPUTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateQueryUsingPUTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateQueryUsingPUTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

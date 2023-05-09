@@ -15,6 +15,7 @@ public class SsmgrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public SsmgrRequestBodyCertificateParameters certificateParameters;
+
     public SsmgrRequestBody withCertificateParameters(SsmgrRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class SsmgrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public SsmgrRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class SsmgrRequestBody {
      */
     @JsonProperty("format")
     public SsmgrRequestBodyFormatEnum format;
+
     public SsmgrRequestBody withFormat(SsmgrRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class SsmgrRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public SsmgrRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public SsmgrRequestBody(@JsonProperty("format") SsmgrRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

@@ -15,9 +15,11 @@ public class AwsEc2LaunchTemplateDataMaintenanceOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoRecovery")
     public String autoRecovery;
+
     public AwsEc2LaunchTemplateDataMaintenanceOptionsDetails withAutoRecovery(String autoRecovery) {
         this.autoRecovery = autoRecovery;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataMaintenanceOptionsDetails(){}
 }

@@ -15,6 +15,7 @@ public class RemoveRegionsFromReplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public RemoveRegionsFromReplicationResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class RemoveRegionsFromReplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationStatus")
     public ReplicationStatusType[] replicationStatus;
+
     public RemoveRegionsFromReplicationResponse withReplicationStatus(ReplicationStatusType[] replicationStatus) {
         this.replicationStatus = replicationStatus;
         return this;
     }
     
+    public RemoveRegionsFromReplicationResponse(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DrivePermissionsInsertSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DrivePermissionsInsertSecurityOption1 option1;
+
     public DrivePermissionsInsertSecurity withOption1(DrivePermissionsInsertSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DrivePermissionsInsertSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DrivePermissionsInsertSecurityOption2 option2;
+
     public DrivePermissionsInsertSecurity withOption2(DrivePermissionsInsertSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DrivePermissionsInsertSecurity(){}
 }

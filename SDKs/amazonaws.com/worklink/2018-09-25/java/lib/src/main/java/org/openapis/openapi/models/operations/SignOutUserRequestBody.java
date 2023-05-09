@@ -12,6 +12,7 @@ public class SignOutUserRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public SignOutUserRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -22,9 +23,14 @@ public class SignOutUserRequestBody {
      */
     @JsonProperty("Username")
     public String username;
+
     public SignOutUserRequestBody withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public SignOutUserRequestBody(@JsonProperty("FleetArn") String fleetArn, @JsonProperty("Username") String username) {
+        this.fleetArn = fleetArn;
+        this.username = username;
+  }
 }

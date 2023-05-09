@@ -10,10 +10,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteAppVersionResourceRequestBody {
     /**
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
      */
     @JsonProperty("appArn")
     public String appArn;
+
     public DeleteAppVersionResourceRequestBody withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -25,6 +26,7 @@ public class DeleteAppVersionResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsAccountId")
     public String awsAccountId;
+
     public DeleteAppVersionResourceRequestBody withAwsAccountId(String awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -36,6 +38,7 @@ public class DeleteAppVersionResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public DeleteAppVersionResourceRequestBody withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -47,6 +50,7 @@ public class DeleteAppVersionResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DeleteAppVersionResourceRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -58,6 +62,7 @@ public class DeleteAppVersionResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicalResourceId")
     public DeleteAppVersionResourceRequestBodyLogicalResourceId logicalResourceId;
+
     public DeleteAppVersionResourceRequestBody withLogicalResourceId(DeleteAppVersionResourceRequestBodyLogicalResourceId logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -69,6 +74,7 @@ public class DeleteAppVersionResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("physicalResourceId")
     public String physicalResourceId;
+
     public DeleteAppVersionResourceRequestBody withPhysicalResourceId(String physicalResourceId) {
         this.physicalResourceId = physicalResourceId;
         return this;
@@ -80,9 +86,13 @@ public class DeleteAppVersionResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public DeleteAppVersionResourceRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public DeleteAppVersionResourceRequestBody(@JsonProperty("appArn") String appArn) {
+        this.appArn = appArn;
+  }
 }

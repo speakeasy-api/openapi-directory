@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTransitGatewayRouteTablesRequestFilters {
     
     public String name;
+
     public DescribeTransitGatewayRouteTablesRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeTransitGatewayRouteTablesRequestFilters {
     
     
     public String[] values;
+
     public DescribeTransitGatewayRouteTablesRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeTransitGatewayRouteTablesRequestFilters(){}
 }

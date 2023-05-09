@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostApiV1PollsIdResponse {
     
     public String contentType;
+
     public PostApiV1PollsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostApiV1PollsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PostApiV1PollsIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class PostApiV1PollsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Poll poll;
+
     public PostApiV1PollsIdResponse withPoll(org.openapis.openapi.models.shared.Poll poll) {
         this.poll = poll;
         return this;
@@ -36,6 +40,7 @@ public class PostApiV1PollsIdResponse {
     
     
     public Integer statusCode;
+
     public PostApiV1PollsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostApiV1PollsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostApiV1PollsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostApiV1PollsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

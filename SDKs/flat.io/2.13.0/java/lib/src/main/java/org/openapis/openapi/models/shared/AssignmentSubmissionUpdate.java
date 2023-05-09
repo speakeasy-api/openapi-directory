@@ -15,6 +15,7 @@ public class AssignmentSubmissionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public ClassAttachmentCreation[] attachments;
+
     public AssignmentSubmissionUpdate withAttachments(ClassAttachmentCreation[] attachments) {
         this.attachments = attachments;
         return this;
@@ -23,6 +24,7 @@ public class AssignmentSubmissionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public AssignmentSubmissionUpdateComments comments;
+
     public AssignmentSubmissionUpdate withComments(AssignmentSubmissionUpdateComments comments) {
         this.comments = comments;
         return this;
@@ -34,6 +36,7 @@ public class AssignmentSubmissionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("draftGrade")
     public Double draftGrade;
+
     public AssignmentSubmissionUpdate withDraftGrade(Double draftGrade) {
         this.draftGrade = draftGrade;
         return this;
@@ -45,6 +48,7 @@ public class AssignmentSubmissionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grade")
     public Double grade;
+
     public AssignmentSubmissionUpdate withGrade(Double grade) {
         this.grade = grade;
         return this;
@@ -56,6 +60,7 @@ public class AssignmentSubmissionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return")
     public Boolean return_;
+
     public AssignmentSubmissionUpdate withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
@@ -67,9 +72,11 @@ public class AssignmentSubmissionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submit")
     public Boolean submit;
+
     public AssignmentSubmissionUpdate withSubmit(Boolean submit) {
         this.submit = submit;
         return this;
     }
     
+    public AssignmentSubmissionUpdate(){}
 }

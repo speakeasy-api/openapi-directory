@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForumGetCoreTopicsPagedRequest {
@@ -12,6 +13,7 @@ public class ForumGetCoreTopicsPagedRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=categoryFilter")
     public Integer categoryFilter;
+
     public ForumGetCoreTopicsPagedRequest withCategoryFilter(Integer categoryFilter) {
         this.categoryFilter = categoryFilter;
         return this;
@@ -22,6 +24,7 @@ public class ForumGetCoreTopicsPagedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locales")
     public String locales;
+
     public ForumGetCoreTopicsPagedRequest withLocales(String locales) {
         this.locales = locales;
         return this;
@@ -32,6 +35,7 @@ public class ForumGetCoreTopicsPagedRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
     public Integer page;
+
     public ForumGetCoreTopicsPagedRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class ForumGetCoreTopicsPagedRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quickDate")
     public Integer quickDate;
+
     public ForumGetCoreTopicsPagedRequest withQuickDate(Integer quickDate) {
         this.quickDate = quickDate;
         return this;
@@ -52,9 +57,16 @@ public class ForumGetCoreTopicsPagedRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sort")
     public Long sort;
+
     public ForumGetCoreTopicsPagedRequest withSort(Long sort) {
         this.sort = sort;
         return this;
     }
     
+    public ForumGetCoreTopicsPagedRequest(@JsonProperty("categoryFilter") Integer categoryFilter, @JsonProperty("page") Integer page, @JsonProperty("quickDate") Integer quickDate, @JsonProperty("sort") Long sort) {
+        this.categoryFilter = categoryFilter;
+        this.page = page;
+        this.quickDate = quickDate;
+        this.sort = sort;
+  }
 }

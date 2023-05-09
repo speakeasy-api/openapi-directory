@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchMetaSearchProvidersResponse {
     
     public byte[] body;
+
     public SearchMetaSearchProvidersResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class SearchMetaSearchProvidersResponse {
     
     
     public String contentType;
+
     public SearchMetaSearchProvidersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SearchMetaSearchProvidersResponse {
      */
     
     public String[] searchMetaSearchProviders200ApplicationJSONStrings;
+
     public SearchMetaSearchProvidersResponse withSearchMetaSearchProviders200ApplicationJSONStrings(String[] searchMetaSearchProviders200ApplicationJSONStrings) {
         this.searchMetaSearchProviders200ApplicationJSONStrings = searchMetaSearchProviders200ApplicationJSONStrings;
         return this;
@@ -33,6 +37,7 @@ public class SearchMetaSearchProvidersResponse {
     
     
     public Integer statusCode;
+
     public SearchMetaSearchProvidersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class SearchMetaSearchProvidersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchMetaSearchProvidersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class SearchMetaSearchProvidersResponse {
      */
     
     public String[] searchMetaSearchProviders200TextJSONStrings;
+
     public SearchMetaSearchProvidersResponse withSearchMetaSearchProviders200TextJSONStrings(String[] searchMetaSearchProviders200TextJSONStrings) {
         this.searchMetaSearchProviders200TextJSONStrings = searchMetaSearchProviders200TextJSONStrings;
         return this;
     }
     
+    public SearchMetaSearchProvidersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class UpdateLabelGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaultCodes")
     public String[] faultCodes;
+
     public UpdateLabelGroupRequest withFaultCodes(String[] faultCodes) {
         this.faultCodes = faultCodes;
         return this;
@@ -19,9 +20,13 @@ public class UpdateLabelGroupRequest {
     
     @JsonProperty("LabelGroupName")
     public String labelGroupName;
+
     public UpdateLabelGroupRequest withLabelGroupName(String labelGroupName) {
         this.labelGroupName = labelGroupName;
         return this;
     }
     
+    public UpdateLabelGroupRequest(@JsonProperty("LabelGroupName") String labelGroupName) {
+        this.labelGroupName = labelGroupName;
+  }
 }

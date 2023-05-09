@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgas {
     
     public Long count;
+
     public DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgas withCount(Long count) {
         this.count = count;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgas {
     
     
     public String manufacturer;
+
     public DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgas withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgas {
     
     
     public DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgasMemoryInfo memoryInfo;
+
     public DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgas withMemoryInfo(DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgasMemoryInfo memoryInfo) {
         this.memoryInfo = memoryInfo;
         return this;
@@ -33,9 +36,11 @@ public class DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgas {
     
     
     public String name;
+
     public DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgas withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesFpgaInfoFpgas(){}
 }

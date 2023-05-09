@@ -10,10 +10,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RemoveDraftAppVersionResourceMappingsRequestBody {
     /**
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
      */
     @JsonProperty("appArn")
     public String appArn;
+
     public RemoveDraftAppVersionResourceMappingsRequestBody withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -25,6 +26,7 @@ public class RemoveDraftAppVersionResourceMappingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appRegistryAppNames")
     public String[] appRegistryAppNames;
+
     public RemoveDraftAppVersionResourceMappingsRequestBody withAppRegistryAppNames(String[] appRegistryAppNames) {
         this.appRegistryAppNames = appRegistryAppNames;
         return this;
@@ -36,6 +38,7 @@ public class RemoveDraftAppVersionResourceMappingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksSourceNames")
     public String[] eksSourceNames;
+
     public RemoveDraftAppVersionResourceMappingsRequestBody withEksSourceNames(String[] eksSourceNames) {
         this.eksSourceNames = eksSourceNames;
         return this;
@@ -47,6 +50,7 @@ public class RemoveDraftAppVersionResourceMappingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicalStackNames")
     public String[] logicalStackNames;
+
     public RemoveDraftAppVersionResourceMappingsRequestBody withLogicalStackNames(String[] logicalStackNames) {
         this.logicalStackNames = logicalStackNames;
         return this;
@@ -58,6 +62,7 @@ public class RemoveDraftAppVersionResourceMappingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroupNames")
     public String[] resourceGroupNames;
+
     public RemoveDraftAppVersionResourceMappingsRequestBody withResourceGroupNames(String[] resourceGroupNames) {
         this.resourceGroupNames = resourceGroupNames;
         return this;
@@ -69,6 +74,7 @@ public class RemoveDraftAppVersionResourceMappingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceNames")
     public String[] resourceNames;
+
     public RemoveDraftAppVersionResourceMappingsRequestBody withResourceNames(String[] resourceNames) {
         this.resourceNames = resourceNames;
         return this;
@@ -80,9 +86,13 @@ public class RemoveDraftAppVersionResourceMappingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terraformSourceNames")
     public String[] terraformSourceNames;
+
     public RemoveDraftAppVersionResourceMappingsRequestBody withTerraformSourceNames(String[] terraformSourceNames) {
         this.terraformSourceNames = terraformSourceNames;
         return this;
     }
     
+    public RemoveDraftAppVersionResourceMappingsRequestBody(@JsonProperty("appArn") String appArn) {
+        this.appArn = appArn;
+  }
 }

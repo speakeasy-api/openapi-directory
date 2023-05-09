@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETBatchStopUpdateActionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETBatchStopUpdateActionActionEnum action;
+
     public GETBatchStopUpdateActionRequest withAction(GETBatchStopUpdateActionActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETBatchStopUpdateActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheClusterIds")
     public String[] cacheClusterIds;
+
     public GETBatchStopUpdateActionRequest withCacheClusterIds(String[] cacheClusterIds) {
         this.cacheClusterIds = cacheClusterIds;
         return this;
@@ -29,6 +32,7 @@ public class GETBatchStopUpdateActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReplicationGroupIds")
     public String[] replicationGroupIds;
+
     public GETBatchStopUpdateActionRequest withReplicationGroupIds(String[] replicationGroupIds) {
         this.replicationGroupIds = replicationGroupIds;
         return this;
@@ -39,6 +43,7 @@ public class GETBatchStopUpdateActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceUpdateName")
     public String serviceUpdateName;
+
     public GETBatchStopUpdateActionRequest withServiceUpdateName(String serviceUpdateName) {
         this.serviceUpdateName = serviceUpdateName;
         return this;
@@ -46,6 +51,7 @@ public class GETBatchStopUpdateActionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETBatchStopUpdateActionVersionEnum version;
+
     public GETBatchStopUpdateActionRequest withVersion(GETBatchStopUpdateActionVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETBatchStopUpdateActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETBatchStopUpdateActionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETBatchStopUpdateActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETBatchStopUpdateActionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETBatchStopUpdateActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETBatchStopUpdateActionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETBatchStopUpdateActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETBatchStopUpdateActionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETBatchStopUpdateActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETBatchStopUpdateActionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETBatchStopUpdateActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETBatchStopUpdateActionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETBatchStopUpdateActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETBatchStopUpdateActionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETBatchStopUpdateActionRequest(@JsonProperty("Action") GETBatchStopUpdateActionActionEnum action, @JsonProperty("ServiceUpdateName") String serviceUpdateName, @JsonProperty("Version") GETBatchStopUpdateActionVersionEnum version) {
+        this.action = action;
+        this.serviceUpdateName = serviceUpdateName;
+        this.version = version;
+  }
 }

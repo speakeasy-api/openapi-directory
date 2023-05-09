@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteScriptRequest {
@@ -12,9 +13,13 @@ public class DeleteScriptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scriptId")
     public String scriptId;
+
     public DeleteScriptRequest withScriptId(String scriptId) {
         this.scriptId = scriptId;
         return this;
     }
     
+    public DeleteScriptRequest(@JsonProperty("scriptId") String scriptId) {
+        this.scriptId = scriptId;
+  }
 }

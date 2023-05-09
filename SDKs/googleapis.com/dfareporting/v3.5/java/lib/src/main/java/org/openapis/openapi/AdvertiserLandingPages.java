@@ -59,11 +59,9 @@ public class AdvertiserLandingPages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesGetResponse res = new org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesGetResponse res = new org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesGetResponse(contentType, httpRes.statusCode()) {{
             landingPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class AdvertiserLandingPages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesInsertResponse(contentType, httpRes.statusCode()) {{
             landingPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class AdvertiserLandingPages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesListResponse res = new org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesListResponse res = new org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesListResponse(contentType, httpRes.statusCode()) {{
             advertiserLandingPagesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class AdvertiserLandingPages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesPatchResponse(contentType, httpRes.statusCode()) {{
             landingPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class AdvertiserLandingPages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesUpdateResponse(contentType, httpRes.statusCode()) {{
             landingPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

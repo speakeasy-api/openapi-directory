@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeServiceAttachmentsPatchRequest {
@@ -12,6 +13,7 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeServiceAttachmentsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeServiceAttachmentsPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ServiceAttachment serviceAttachment1;
+
     public ComputeServiceAttachmentsPatchRequest withServiceAttachment1(org.openapis.openapi.models.shared.ServiceAttachment serviceAttachment1) {
         this.serviceAttachment1 = serviceAttachment1;
         return this;
@@ -29,6 +32,7 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeServiceAttachmentsPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeServiceAttachmentsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeServiceAttachmentsPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeServiceAttachmentsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeServiceAttachmentsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeServiceAttachmentsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeServiceAttachmentsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeServiceAttachmentsPatchRequest withProject(String project) {
         this.project = project;
         return this;
@@ -109,18 +120,9 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeServiceAttachmentsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
-        return this;
-    }
-    
-    /**
-     * This flag determines how to change the status of consumer connections, when the connection policy for the corresponding project or network is modified. If the flag is false, the default case, then existing ACCEPTED and REJECTED consumer connections stay in that state. For example, even if the project is removed from the accept list, existing ACCEPTED connections will stay the same. If the flag is true, then the connection can change from ACCEPTED or REJECTED to pending when the connection policy is modified. For example, if a project is removed from the reject list, its existing REJECTED connections will move to the PENDING state. If the project is also added to the accept list, then those connections will move to the ACCEPTED state.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reconcileConnections")
-    public Boolean reconcileConnections;
-    public ComputeServiceAttachmentsPatchRequest withReconcileConnections(Boolean reconcileConnections) {
-        this.reconcileConnections = reconcileConnections;
         return this;
     }
     
@@ -129,6 +131,7 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public ComputeServiceAttachmentsPatchRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -139,6 +142,7 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeServiceAttachmentsPatchRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -149,6 +153,7 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceAttachment")
     public String serviceAttachmentPathParameter;
+
     public ComputeServiceAttachmentsPatchRequest withServiceAttachmentPathParameter(String serviceAttachmentPathParameter) {
         this.serviceAttachmentPathParameter = serviceAttachmentPathParameter;
         return this;
@@ -159,6 +164,7 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeServiceAttachmentsPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -169,6 +175,7 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeServiceAttachmentsPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -179,9 +186,15 @@ public class ComputeServiceAttachmentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeServiceAttachmentsPatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeServiceAttachmentsPatchRequest(@JsonProperty("project") String project, @JsonProperty("region") String region, @JsonProperty("serviceAttachmentPathParameter") String serviceAttachmentPathParameter) {
+        this.project = project;
+        this.region = region;
+        this.serviceAttachmentPathParameter = serviceAttachmentPathParameter;
+  }
 }

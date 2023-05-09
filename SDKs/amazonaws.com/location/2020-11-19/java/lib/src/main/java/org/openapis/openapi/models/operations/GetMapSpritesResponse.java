@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMapSpritesResponse {
@@ -12,6 +13,7 @@ public class GetMapSpritesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetMapSpritesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetMapSpritesResponse {
     
     
     public String contentType;
+
     public GetMapSpritesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetMapSpritesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMapSpritesResponse getMapSpritesResponse;
+
     public GetMapSpritesResponse withGetMapSpritesResponse(org.openapis.openapi.models.shared.GetMapSpritesResponse getMapSpritesResponse) {
         this.getMapSpritesResponse = getMapSpritesResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetMapSpritesResponse {
      */
     
     public Object internalServerException;
+
     public GetMapSpritesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetMapSpritesResponse {
     
     
     public Integer statusCode;
+
     public GetMapSpritesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetMapSpritesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMapSpritesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetMapSpritesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetMapSpritesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetMapSpritesResponse {
      */
     
     public Object throttlingException;
+
     public GetMapSpritesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetMapSpritesResponse {
      */
     
     public Object validationException;
+
     public GetMapSpritesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetMapSpritesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

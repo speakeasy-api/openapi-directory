@@ -18,6 +18,7 @@ public class DefaultClickThroughEventTagProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultClickThroughEventTagId")
     public String defaultClickThroughEventTagId;
+
     public DefaultClickThroughEventTagProperties withDefaultClickThroughEventTagId(String defaultClickThroughEventTagId) {
         this.defaultClickThroughEventTagId = defaultClickThroughEventTagId;
         return this;
@@ -29,9 +30,11 @@ public class DefaultClickThroughEventTagProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideInheritedEventTag")
     public Boolean overrideInheritedEventTag;
+
     public DefaultClickThroughEventTagProperties withOverrideInheritedEventTag(Boolean overrideInheritedEventTag) {
         this.overrideInheritedEventTag = overrideInheritedEventTag;
         return this;
     }
     
+    public DefaultClickThroughEventTagProperties(){}
 }

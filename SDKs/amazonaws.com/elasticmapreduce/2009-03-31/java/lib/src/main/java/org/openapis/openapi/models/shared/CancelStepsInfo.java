@@ -15,6 +15,7 @@ public class CancelStepsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public CancelStepsInfo withReason(String reason) {
         this.reason = reason;
         return this;
@@ -23,6 +24,7 @@ public class CancelStepsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CancelStepsRequestStatusEnum status;
+
     public CancelStepsInfo withStatus(CancelStepsRequestStatusEnum status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class CancelStepsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepId")
     public String stepId;
+
     public CancelStepsInfo withStepId(String stepId) {
         this.stepId = stepId;
         return this;
     }
     
+    public CancelStepsInfo(){}
 }

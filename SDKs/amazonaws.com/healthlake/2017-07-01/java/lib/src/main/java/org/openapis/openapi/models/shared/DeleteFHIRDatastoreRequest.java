@@ -12,9 +12,11 @@ public class DeleteFHIRDatastoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatastoreId")
     public String datastoreId;
+
     public DeleteFHIRDatastoreRequest withDatastoreId(String datastoreId) {
         this.datastoreId = datastoreId;
         return this;
     }
     
+    public DeleteFHIRDatastoreRequest(){}
 }

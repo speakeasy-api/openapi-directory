@@ -15,9 +15,11 @@ public class ListPipelinesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marker")
     public String marker;
+
     public ListPipelinesInput withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListPipelinesInput(){}
 }

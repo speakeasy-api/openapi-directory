@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -12,6 +13,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETDefineRankExpressionRankExpression {
     @SpeakeasyMetadata("queryParam:name=RankExpression")
     public String rankExpression;
+
     public GETDefineRankExpressionRankExpression withRankExpression(String rankExpression) {
         this.rankExpression = rankExpression;
         return this;
@@ -19,9 +21,14 @@ public class GETDefineRankExpressionRankExpression {
     
     @SpeakeasyMetadata("queryParam:name=RankName")
     public String rankName;
+
     public GETDefineRankExpressionRankExpression withRankName(String rankName) {
         this.rankName = rankName;
         return this;
     }
     
+    public GETDefineRankExpressionRankExpression(@JsonProperty("RankExpression") String rankExpression, @JsonProperty("RankName") String rankName) {
+        this.rankExpression = rankExpression;
+        this.rankName = rankName;
+  }
 }

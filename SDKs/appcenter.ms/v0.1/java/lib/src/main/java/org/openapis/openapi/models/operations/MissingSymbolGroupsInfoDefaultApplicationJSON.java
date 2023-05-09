@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MissingSymbolGroupsInfoDefaultApplicationJSON {
     @JsonProperty("code")
     public String code;
+
     public MissingSymbolGroupsInfoDefaultApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,14 @@ public class MissingSymbolGroupsInfoDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public MissingSymbolGroupsInfoDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public MissingSymbolGroupsInfoDefaultApplicationJSON(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

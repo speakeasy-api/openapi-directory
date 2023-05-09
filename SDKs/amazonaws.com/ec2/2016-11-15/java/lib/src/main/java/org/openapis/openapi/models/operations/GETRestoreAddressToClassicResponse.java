@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETRestoreAddressToClassicResponse {
     
     public byte[] body;
+
     public GETRestoreAddressToClassicResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETRestoreAddressToClassicResponse {
     
     
     public String contentType;
+
     public GETRestoreAddressToClassicResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETRestoreAddressToClassicResponse {
     
     
     public Integer statusCode;
+
     public GETRestoreAddressToClassicResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETRestoreAddressToClassicResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETRestoreAddressToClassicResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETRestoreAddressToClassicResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class BucketByTimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZoneId")
     public String timeZoneId;
+
     public BucketByTimePeriod withTimeZoneId(String timeZoneId) {
         this.timeZoneId = timeZoneId;
         return this;
@@ -23,6 +24,7 @@ public class BucketByTimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public BucketByTimePeriodTypeEnum type;
+
     public BucketByTimePeriod withType(BucketByTimePeriodTypeEnum type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class BucketByTimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Integer value;
+
     public BucketByTimePeriod withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public BucketByTimePeriod(){}
 }

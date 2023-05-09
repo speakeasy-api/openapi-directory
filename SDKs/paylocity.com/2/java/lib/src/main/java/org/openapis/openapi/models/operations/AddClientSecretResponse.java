@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddClientSecretResponse {
     
     public String contentType;
+
     public AddClientSecretResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AddClientSecretResponse {
     
     
     public Integer statusCode;
+
     public AddClientSecretResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AddClientSecretResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddClientSecretResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AddClientSecretResponse {
      */
     
     public org.openapis.openapi.models.shared.ClientCredentialsResponse[] clientCredentialsResponses;
+
     public AddClientSecretResponse withClientCredentialsResponses(org.openapis.openapi.models.shared.ClientCredentialsResponse[] clientCredentialsResponses) {
         this.clientCredentialsResponses = clientCredentialsResponses;
         return this;
@@ -43,9 +48,14 @@ public class AddClientSecretResponse {
      */
     
     public org.openapis.openapi.models.shared.Error[] errors;
+
     public AddClientSecretResponse withErrors(org.openapis.openapi.models.shared.Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public AddClientSecretResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

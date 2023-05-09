@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSshKeysIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PutSshKeysIdRequestBody requestBody;
+
     public PutSshKeysIdRequest withRequestBody(PutSshKeysIdRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class PutSshKeysIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutSshKeysIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutSshKeysIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

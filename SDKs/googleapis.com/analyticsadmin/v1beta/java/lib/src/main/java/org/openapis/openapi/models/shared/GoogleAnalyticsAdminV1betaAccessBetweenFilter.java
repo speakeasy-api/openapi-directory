@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaAccessBetweenFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromValue")
     public GoogleAnalyticsAdminV1betaNumericValue fromValue;
+
     public GoogleAnalyticsAdminV1betaAccessBetweenFilter withFromValue(GoogleAnalyticsAdminV1betaNumericValue fromValue) {
         this.fromValue = fromValue;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1betaAccessBetweenFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toValue")
     public GoogleAnalyticsAdminV1betaNumericValue toValue;
+
     public GoogleAnalyticsAdminV1betaAccessBetweenFilter withToValue(GoogleAnalyticsAdminV1betaNumericValue toValue) {
         this.toValue = toValue;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaAccessBetweenFilter(){}
 }

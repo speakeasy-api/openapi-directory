@@ -12,6 +12,7 @@ public class OrganizationsList200ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public OrganizationsList200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -22,6 +23,7 @@ public class OrganizationsList200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public OrganizationsList200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,15 @@ public class OrganizationsList200ApplicationJSON {
      */
     @JsonProperty("origin")
     public OrganizationsList200ApplicationJSONOriginEnum origin;
+
     public OrganizationsList200ApplicationJSON withOrigin(OrganizationsList200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
     }
     
+    public OrganizationsList200ApplicationJSON(@JsonProperty("display_name") String displayName, @JsonProperty("name") String name, @JsonProperty("origin") OrganizationsList200ApplicationJSONOriginEnum origin) {
+        this.displayName = displayName;
+        this.name = name;
+        this.origin = origin;
+  }
 }

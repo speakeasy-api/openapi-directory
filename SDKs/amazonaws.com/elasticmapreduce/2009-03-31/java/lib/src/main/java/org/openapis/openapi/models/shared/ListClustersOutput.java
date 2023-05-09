@@ -15,6 +15,7 @@ public class ListClustersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Clusters")
     public ClusterSummary[] clusters;
+
     public ListClustersOutput withClusters(ClusterSummary[] clusters) {
         this.clusters = clusters;
         return this;
@@ -23,9 +24,11 @@ public class ListClustersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListClustersOutput withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListClustersOutput(){}
 }

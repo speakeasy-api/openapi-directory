@@ -18,6 +18,7 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relation")
     public String relation;
+
     public Statement withRelation(String relation) {
         this.relation = relation;
         return this;
@@ -29,6 +30,7 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Asset source;
+
     public Statement withSource(Asset source) {
         this.source = source;
         return this;
@@ -40,9 +42,11 @@ public class Statement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public Asset target;
+
     public Statement withTarget(Asset target) {
         this.target = target;
         return this;
     }
     
+    public Statement(){}
 }

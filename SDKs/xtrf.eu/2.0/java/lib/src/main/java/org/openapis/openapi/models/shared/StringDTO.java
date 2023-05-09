@@ -15,9 +15,11 @@ public class StringDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public StringDTO withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public StringDTO(){}
 }

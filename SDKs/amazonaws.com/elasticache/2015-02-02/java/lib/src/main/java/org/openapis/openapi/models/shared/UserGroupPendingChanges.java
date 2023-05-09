@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UserGroupPendingChanges {
     
     public String[] userIdsToAdd;
+
     public UserGroupPendingChanges withUserIdsToAdd(String[] userIdsToAdd) {
         this.userIdsToAdd = userIdsToAdd;
         return this;
@@ -19,9 +20,11 @@ public class UserGroupPendingChanges {
     
     
     public String[] userIdsToRemove;
+
     public UserGroupPendingChanges withUserIdsToRemove(String[] userIdsToRemove) {
         this.userIdsToRemove = userIdsToRemove;
         return this;
     }
     
+    public UserGroupPendingChanges(){}
 }

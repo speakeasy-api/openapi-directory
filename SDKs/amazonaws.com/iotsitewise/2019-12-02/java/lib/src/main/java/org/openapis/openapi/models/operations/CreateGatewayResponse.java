@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGatewayResponse {
     
     public String contentType;
+
     public CreateGatewayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateGatewayResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGatewayResponse createGatewayResponse;
+
     public CreateGatewayResponse withCreateGatewayResponse(org.openapis.openapi.models.shared.CreateGatewayResponse createGatewayResponse) {
         this.createGatewayResponse = createGatewayResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateGatewayResponse {
      */
     
     public Object internalFailureException;
+
     public CreateGatewayResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateGatewayResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateGatewayResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateGatewayResponse {
      */
     
     public Object limitExceededException;
+
     public CreateGatewayResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateGatewayResponse {
     
     
     public Integer statusCode;
+
     public CreateGatewayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateGatewayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGatewayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateGatewayResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateGatewayResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,9 +92,14 @@ public class CreateGatewayResponse {
      */
     
     public Object throttlingException;
+
     public CreateGatewayResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateGatewayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

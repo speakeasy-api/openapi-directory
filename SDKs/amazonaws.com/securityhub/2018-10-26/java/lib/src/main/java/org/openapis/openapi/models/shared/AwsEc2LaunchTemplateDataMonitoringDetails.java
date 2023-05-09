@@ -15,9 +15,11 @@ public class AwsEc2LaunchTemplateDataMonitoringDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public AwsEc2LaunchTemplateDataMonitoringDetails withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataMonitoringDetails(){}
 }

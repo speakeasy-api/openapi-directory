@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetOrderResponse {
     @JsonProperty("order")
     public Order order;
+
     public GetOrderResponse withOrder(Order order) {
         this.order = order;
         return this;
@@ -22,9 +23,13 @@ public class GetOrderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetOrderResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetOrderResponse(@JsonProperty("order") Order order) {
+        this.order = order;
+  }
 }

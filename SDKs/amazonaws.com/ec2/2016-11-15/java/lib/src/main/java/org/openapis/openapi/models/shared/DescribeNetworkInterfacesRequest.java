@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInterfacesRequest {
     
     public Boolean dryRun;
+
     public DescribeNetworkInterfacesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInterfacesRequest {
     
     
     public DescribeNetworkInterfacesRequestFilters[] filters;
+
     public DescribeNetworkInterfacesRequest withFilters(DescribeNetworkInterfacesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInterfacesRequest {
     
     
     public Long maxResults;
+
     public DescribeNetworkInterfacesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkInterfacesRequest {
     
     
     public String[] networkInterfaceIds;
+
     public DescribeNetworkInterfacesRequest withNetworkInterfaceIds(String[] networkInterfaceIds) {
         this.networkInterfaceIds = networkInterfaceIds;
         return this;
@@ -40,9 +44,11 @@ public class DescribeNetworkInterfacesRequest {
     
     
     public String nextToken;
+
     public DescribeNetworkInterfacesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeNetworkInterfacesRequest(){}
 }

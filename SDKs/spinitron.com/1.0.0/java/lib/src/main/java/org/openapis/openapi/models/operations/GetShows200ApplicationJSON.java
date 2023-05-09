@@ -15,6 +15,7 @@ public class GetShows200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public GetShows200ApplicationJSONLinks links;
+
     public GetShows200ApplicationJSON withLinks(GetShows200ApplicationJSONLinks links) {
         this.links = links;
         return this;
@@ -23,6 +24,7 @@ public class GetShows200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_meta")
     public org.openapis.openapi.models.shared.Pagination meta;
+
     public GetShows200ApplicationJSON withMeta(org.openapis.openapi.models.shared.Pagination meta) {
         this.meta = meta;
         return this;
@@ -31,9 +33,11 @@ public class GetShows200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public org.openapis.openapi.models.shared.Show[] items;
+
     public GetShows200ApplicationJSON withItems(org.openapis.openapi.models.shared.Show[] items) {
         this.items = items;
         return this;
     }
     
+    public GetShows200ApplicationJSON(){}
 }

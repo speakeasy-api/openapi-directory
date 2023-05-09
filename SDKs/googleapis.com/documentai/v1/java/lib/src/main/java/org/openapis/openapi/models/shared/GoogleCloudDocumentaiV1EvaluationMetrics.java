@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("f1Score")
     public Float f1Score;
+
     public GoogleCloudDocumentaiV1EvaluationMetrics withF1Score(Float f1Score) {
         this.f1Score = f1Score;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("falseNegativesCount")
     public Integer falseNegativesCount;
+
     public GoogleCloudDocumentaiV1EvaluationMetrics withFalseNegativesCount(Integer falseNegativesCount) {
         this.falseNegativesCount = falseNegativesCount;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("falsePositivesCount")
     public Integer falsePositivesCount;
+
     public GoogleCloudDocumentaiV1EvaluationMetrics withFalsePositivesCount(Integer falsePositivesCount) {
         this.falsePositivesCount = falsePositivesCount;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groundTruthDocumentCount")
     public Integer groundTruthDocumentCount;
+
     public GoogleCloudDocumentaiV1EvaluationMetrics withGroundTruthDocumentCount(Integer groundTruthDocumentCount) {
         this.groundTruthDocumentCount = groundTruthDocumentCount;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groundTruthOccurrencesCount")
     public Integer groundTruthOccurrencesCount;
+
     public GoogleCloudDocumentaiV1EvaluationMetrics withGroundTruthOccurrencesCount(Integer groundTruthOccurrencesCount) {
         this.groundTruthOccurrencesCount = groundTruthOccurrencesCount;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDocumentaiV1EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Float precision;
+
     public GoogleCloudDocumentaiV1EvaluationMetrics withPrecision(Float precision) {
         this.precision = precision;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDocumentaiV1EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedDocumentCount")
     public Integer predictedDocumentCount;
+
     public GoogleCloudDocumentaiV1EvaluationMetrics withPredictedDocumentCount(Integer predictedDocumentCount) {
         this.predictedDocumentCount = predictedDocumentCount;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDocumentaiV1EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedOccurrencesCount")
     public Integer predictedOccurrencesCount;
+
     public GoogleCloudDocumentaiV1EvaluationMetrics withPredictedOccurrencesCount(Integer predictedOccurrencesCount) {
         this.predictedOccurrencesCount = predictedOccurrencesCount;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDocumentaiV1EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recall")
     public Float recall;
+
     public GoogleCloudDocumentaiV1EvaluationMetrics withRecall(Float recall) {
         this.recall = recall;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDocumentaiV1EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalDocumentsCount")
     public Integer totalDocumentsCount;
+
     public GoogleCloudDocumentaiV1EvaluationMetrics withTotalDocumentsCount(Integer totalDocumentsCount) {
         this.totalDocumentsCount = totalDocumentsCount;
         return this;
@@ -128,9 +138,11 @@ public class GoogleCloudDocumentaiV1EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("truePositivesCount")
     public Integer truePositivesCount;
+
     public GoogleCloudDocumentaiV1EvaluationMetrics withTruePositivesCount(Integer truePositivesCount) {
         this.truePositivesCount = truePositivesCount;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1EvaluationMetrics(){}
 }

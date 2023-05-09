@@ -71,12 +71,10 @@ public class OrganisationsElectronicAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdElectronicAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdElectronicAddressesAddressIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdElectronicAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdElectronicAddressesAddressIdResponse(contentType, httpRes.statusCode()) {{
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -127,13 +125,11 @@ public class OrganisationsElectronicAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganisationsPartyIdElectronicAddressesResponse res = new org.openapis.openapi.models.operations.GetOrganisationsPartyIdElectronicAddressesResponse() {{
+        org.openapis.openapi.models.operations.GetOrganisationsPartyIdElectronicAddressesResponse res = new org.openapis.openapi.models.operations.GetOrganisationsPartyIdElectronicAddressesResponse(contentType, httpRes.statusCode()) {{
             electronicAddresses = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,13 +189,11 @@ public class OrganisationsElectronicAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganisationsPartyIdElectronicAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.GetOrganisationsPartyIdElectronicAddressesAddressIdResponse() {{
+        org.openapis.openapi.models.operations.GetOrganisationsPartyIdElectronicAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.GetOrganisationsPartyIdElectronicAddressesAddressIdResponse(contentType, httpRes.statusCode()) {{
             electronicAddress = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -262,13 +256,11 @@ public class OrganisationsElectronicAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOrganisationsPartyIdElectronicAddressesResponse res = new org.openapis.openapi.models.operations.PostOrganisationsPartyIdElectronicAddressesResponse() {{
+        org.openapis.openapi.models.operations.PostOrganisationsPartyIdElectronicAddressesResponse res = new org.openapis.openapi.models.operations.PostOrganisationsPartyIdElectronicAddressesResponse(contentType, httpRes.statusCode()) {{
             electronicAddress = null;
             invalidArgument = null;
             unauthenticated = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -333,14 +325,12 @@ public class OrganisationsElectronicAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutOrganisationsPartyIdElectronicAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.PutOrganisationsPartyIdElectronicAddressesAddressIdResponse() {{
+        org.openapis.openapi.models.operations.PutOrganisationsPartyIdElectronicAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.PutOrganisationsPartyIdElectronicAddressesAddressIdResponse(contentType, httpRes.statusCode()) {{
             electronicAddress = null;
             invalidArgument = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

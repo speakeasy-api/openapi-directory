@@ -12,6 +12,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameId")
     public Long gameId;
+
     public Lineup withGameId(Long gameId) {
         this.gameId = gameId;
         return this;
@@ -20,6 +21,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameMinute")
     public Long gameMinute;
+
     public Lineup withGameMinute(Long gameMinute) {
         this.gameMinute = gameMinute;
         return this;
@@ -28,6 +30,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameMinuteExtra")
     public Long gameMinuteExtra;
+
     public Lineup withGameMinuteExtra(Long gameMinuteExtra) {
         this.gameMinuteExtra = gameMinuteExtra;
         return this;
@@ -36,6 +39,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineupId")
     public Long lineupId;
+
     public Lineup withLineupId(Long lineupId) {
         this.lineupId = lineupId;
         return this;
@@ -44,6 +48,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Lineup withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchPositionHorizontal")
     public Long pitchPositionHorizontal;
+
     public Lineup withPitchPositionHorizontal(Long pitchPositionHorizontal) {
         this.pitchPositionHorizontal = pitchPositionHorizontal;
         return this;
@@ -60,6 +66,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchPositionVertical")
     public Long pitchPositionVertical;
+
     public Lineup withPitchPositionVertical(Long pitchPositionVertical) {
         this.pitchPositionVertical = pitchPositionVertical;
         return this;
@@ -68,6 +75,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerId")
     public Long playerId;
+
     public Lineup withPlayerId(Long playerId) {
         this.playerId = playerId;
         return this;
@@ -76,6 +84,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public Lineup withPosition(String position) {
         this.position = position;
         return this;
@@ -84,6 +93,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplacedPlayerId")
     public Long replacedPlayerId;
+
     public Lineup withReplacedPlayerId(Long replacedPlayerId) {
         this.replacedPlayerId = replacedPlayerId;
         return this;
@@ -92,6 +102,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplacedPlayerName")
     public String replacedPlayerName;
+
     public Lineup withReplacedPlayerName(String replacedPlayerName) {
         this.replacedPlayerName = replacedPlayerName;
         return this;
@@ -100,6 +111,7 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamId")
     public Long teamId;
+
     public Lineup withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -108,9 +120,11 @@ public class Lineup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Lineup withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Lineup(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsGroupOperatingSystemCountsRequest {
@@ -12,6 +13,7 @@ public class ErrorsGroupOperatingSystemCountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$top")
     public Long dollarTop;
+
     public ErrorsGroupOperatingSystemCountsRequest withDollarTop(Long dollarTop) {
         this.dollarTop = dollarTop;
         return this;
@@ -22,6 +24,7 @@ public class ErrorsGroupOperatingSystemCountsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ErrorsGroupOperatingSystemCountsRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,6 +35,7 @@ public class ErrorsGroupOperatingSystemCountsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorGroupId")
     public String errorGroupId;
+
     public ErrorsGroupOperatingSystemCountsRequest withErrorGroupId(String errorGroupId) {
         this.errorGroupId = errorGroupId;
         return this;
@@ -42,9 +46,15 @@ public class ErrorsGroupOperatingSystemCountsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ErrorsGroupOperatingSystemCountsRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public ErrorsGroupOperatingSystemCountsRequest(@JsonProperty("app_name") String appName, @JsonProperty("errorGroupId") String errorGroupId, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.errorGroupId = errorGroupId;
+        this.ownerName = ownerName;
+  }
 }

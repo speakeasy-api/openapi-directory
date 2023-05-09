@@ -18,6 +18,7 @@ public class UrlDispatchRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public UrlDispatchRule withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -29,6 +30,7 @@ public class UrlDispatchRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public UrlDispatchRule withPath(String path) {
         this.path = path;
         return this;
@@ -40,9 +42,11 @@ public class UrlDispatchRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public UrlDispatchRule withService(String service) {
         this.service = service;
         return this;
     }
     
+    public UrlDispatchRule(){}
 }

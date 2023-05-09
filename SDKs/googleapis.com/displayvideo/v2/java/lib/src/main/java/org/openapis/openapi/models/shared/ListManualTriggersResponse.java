@@ -18,6 +18,7 @@ public class ListManualTriggersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualTriggers")
     public ManualTrigger[] manualTriggers;
+
     public ListManualTriggersResponse withManualTriggers(ManualTrigger[] manualTriggers) {
         this.manualTriggers = manualTriggers;
         return this;
@@ -29,9 +30,11 @@ public class ListManualTriggersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListManualTriggersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListManualTriggersResponse(){}
 }

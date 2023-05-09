@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdCollaboratorsPostRequest {
@@ -12,6 +13,7 @@ public class StoryIdCollaboratorsPostRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AddNewCollaboratorRequest addNewCollaboratorRequest;
+
     public StoryIdCollaboratorsPostRequest withAddNewCollaboratorRequest(org.openapis.openapi.models.shared.AddNewCollaboratorRequest addNewCollaboratorRequest) {
         this.addNewCollaboratorRequest = addNewCollaboratorRequest;
         return this;
@@ -22,9 +24,14 @@ public class StoryIdCollaboratorsPostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public StoryIdCollaboratorsPostRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public StoryIdCollaboratorsPostRequest(@JsonProperty("add_new_collaborator_request") org.openapis.openapi.models.shared.AddNewCollaboratorRequest addNewCollaboratorRequest, @JsonProperty("id") String id) {
+        this.addNewCollaboratorRequest = addNewCollaboratorRequest;
+        this.id = id;
+  }
 }

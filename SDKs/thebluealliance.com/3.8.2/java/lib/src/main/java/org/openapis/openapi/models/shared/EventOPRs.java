@@ -18,6 +18,7 @@ public class EventOPRs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ccwms")
     public java.util.Map<String, Float> ccwms;
+
     public EventOPRs withCcwms(java.util.Map<String, Float> ccwms) {
         this.ccwms = ccwms;
         return this;
@@ -29,6 +30,7 @@ public class EventOPRs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dprs")
     public java.util.Map<String, Float> dprs;
+
     public EventOPRs withDprs(java.util.Map<String, Float> dprs) {
         this.dprs = dprs;
         return this;
@@ -40,9 +42,11 @@ public class EventOPRs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oprs")
     public java.util.Map<String, Float> oprs;
+
     public EventOPRs withOprs(java.util.Map<String, Float> oprs) {
         this.oprs = oprs;
         return this;
     }
     
+    public EventOPRs(){}
 }

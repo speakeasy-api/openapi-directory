@@ -18,6 +18,7 @@ public class PredictResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public PredictResponse withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -29,6 +30,7 @@ public class PredictResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public AnnotationPayload[] payload;
+
     public PredictResponse withPayload(AnnotationPayload[] payload) {
         this.payload = payload;
         return this;
@@ -40,9 +42,11 @@ public class PredictResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preprocessedInput")
     public ExamplePayload preprocessedInput;
+
     public PredictResponse withPreprocessedInput(ExamplePayload preprocessedInput) {
         this.preprocessedInput = preprocessedInput;
         return this;
     }
     
+    public PredictResponse(){}
 }

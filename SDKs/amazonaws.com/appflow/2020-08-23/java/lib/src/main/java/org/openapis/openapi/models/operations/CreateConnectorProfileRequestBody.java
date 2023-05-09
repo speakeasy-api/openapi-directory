@@ -10,10 +10,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateConnectorProfileRequestBody {
     /**
+     * &lt;p&gt;The &lt;code&gt;clientToken&lt;/code&gt; parameter is an idempotency token. It ensures that your &lt;code&gt;CreateConnectorProfile&lt;/code&gt; request completes only once. You choose the value to pass. For example, if you don't receive a response from your request, you can safely retry the request with the same &lt;code&gt;clientToken&lt;/code&gt; parameter value.&lt;/p&gt; &lt;p&gt;If you omit a &lt;code&gt;clientToken&lt;/code&gt; value, the Amazon Web Services SDK that you are using inserts a value for you. This way, the SDK can safely retry requests multiple times after a network error. You must provide your own value for other use cases.&lt;/p&gt; &lt;p&gt;If you specify input parameters that differ from your first request, an error occurs. If you use a different value for &lt;code&gt;clientToken&lt;/code&gt;, Amazon AppFlow considers it a new call to &lt;code&gt;CreateConnectorProfile&lt;/code&gt;. The token is active for 8 hours.&lt;/p&gt;
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientToken")
+    public String clientToken;
+
+    public CreateConnectorProfileRequestBody withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    
+    /**
      *  Indicates the connection mode and specifies whether it is public or private. Private flows use Amazon Web Services PrivateLink to route data over Amazon Web Services infrastructure without exposing it to the public internet. 
      */
     @JsonProperty("connectionMode")
     public CreateConnectorProfileRequestBodyConnectionModeEnum connectionMode;
+
     public CreateConnectorProfileRequestBody withConnectionMode(CreateConnectorProfileRequestBodyConnectionModeEnum connectionMode) {
         this.connectionMode = connectionMode;
         return this;
@@ -25,6 +38,7 @@ public class CreateConnectorProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorLabel")
     public String connectorLabel;
+
     public CreateConnectorProfileRequestBody withConnectorLabel(String connectorLabel) {
         this.connectorLabel = connectorLabel;
         return this;
@@ -35,6 +49,7 @@ public class CreateConnectorProfileRequestBody {
      */
     @JsonProperty("connectorProfileConfig")
     public CreateConnectorProfileRequestBodyConnectorProfileConfig connectorProfileConfig;
+
     public CreateConnectorProfileRequestBody withConnectorProfileConfig(CreateConnectorProfileRequestBodyConnectorProfileConfig connectorProfileConfig) {
         this.connectorProfileConfig = connectorProfileConfig;
         return this;
@@ -45,6 +60,7 @@ public class CreateConnectorProfileRequestBody {
      */
     @JsonProperty("connectorProfileName")
     public String connectorProfileName;
+
     public CreateConnectorProfileRequestBody withConnectorProfileName(String connectorProfileName) {
         this.connectorProfileName = connectorProfileName;
         return this;
@@ -55,6 +71,7 @@ public class CreateConnectorProfileRequestBody {
      */
     @JsonProperty("connectorType")
     public CreateConnectorProfileRequestBodyConnectorTypeEnum connectorType;
+
     public CreateConnectorProfileRequestBody withConnectorType(CreateConnectorProfileRequestBodyConnectorTypeEnum connectorType) {
         this.connectorType = connectorType;
         return this;
@@ -66,9 +83,16 @@ public class CreateConnectorProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsArn")
     public String kmsArn;
+
     public CreateConnectorProfileRequestBody withKmsArn(String kmsArn) {
         this.kmsArn = kmsArn;
         return this;
     }
     
+    public CreateConnectorProfileRequestBody(@JsonProperty("connectionMode") CreateConnectorProfileRequestBodyConnectionModeEnum connectionMode, @JsonProperty("connectorProfileConfig") CreateConnectorProfileRequestBodyConnectorProfileConfig connectorProfileConfig, @JsonProperty("connectorProfileName") String connectorProfileName, @JsonProperty("connectorType") CreateConnectorProfileRequestBodyConnectorTypeEnum connectorType) {
+        this.connectionMode = connectionMode;
+        this.connectorProfileConfig = connectorProfileConfig;
+        this.connectorProfileName = connectorProfileName;
+        this.connectorType = connectorType;
+  }
 }

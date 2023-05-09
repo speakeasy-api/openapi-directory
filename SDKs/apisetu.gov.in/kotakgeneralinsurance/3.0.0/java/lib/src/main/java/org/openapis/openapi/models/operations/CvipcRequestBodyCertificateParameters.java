@@ -12,6 +12,7 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyNo")
     public String policyNo;
+
     public CvipcRequestBodyCertificateParameters withPolicyNo(String policyNo) {
         this.policyNo = policyNo;
         return this;
@@ -22,6 +23,7 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("Val")
     public String val;
+
     public CvipcRequestBodyCertificateParameters withVal(String val) {
         this.val = val;
         return this;
@@ -32,9 +34,15 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("Verification")
     public String verification;
+
     public CvipcRequestBodyCertificateParameters withVerification(String verification) {
         this.verification = verification;
         return this;
     }
     
+    public CvipcRequestBodyCertificateParameters(@JsonProperty("PolicyNo") String policyNo, @JsonProperty("Val") String val, @JsonProperty("Verification") String verification) {
+        this.policyNo = policyNo;
+        this.val = val;
+        this.verification = verification;
+  }
 }

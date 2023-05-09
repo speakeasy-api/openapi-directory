@@ -15,9 +15,11 @@ public class AwsEc2LaunchTemplateDataLicenseSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseConfigurationArn")
     public String licenseConfigurationArn;
+
     public AwsEc2LaunchTemplateDataLicenseSetDetails withLicenseConfigurationArn(String licenseConfigurationArn) {
         this.licenseConfigurationArn = licenseConfigurationArn;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataLicenseSetDetails(){}
 }

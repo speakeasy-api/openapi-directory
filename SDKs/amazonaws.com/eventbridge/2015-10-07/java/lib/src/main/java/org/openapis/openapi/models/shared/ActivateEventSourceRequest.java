@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActivateEventSourceRequest {
     @JsonProperty("Name")
     public String name;
+
     public ActivateEventSourceRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ActivateEventSourceRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

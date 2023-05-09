@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Rule {
     @JsonProperty("antifraudImplementation")
     public String antifraudImplementation;
+
     public Rule withAntifraudImplementation(String antifraudImplementation) {
         this.antifraudImplementation = antifraudImplementation;
         return this;
@@ -16,6 +17,7 @@ public class Rule {
     
     @JsonProperty("connectorImplementation")
     public String connectorImplementation;
+
     public Rule withConnectorImplementation(String connectorImplementation) {
         this.connectorImplementation = connectorImplementation;
         return this;
@@ -23,9 +25,15 @@ public class Rule {
     
     @JsonProperty("id")
     public String id;
+
     public Rule withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Rule(@JsonProperty("antifraudImplementation") String antifraudImplementation, @JsonProperty("connectorImplementation") String connectorImplementation, @JsonProperty("id") String id) {
+        this.antifraudImplementation = antifraudImplementation;
+        this.connectorImplementation = connectorImplementation;
+        this.id = id;
+  }
 }

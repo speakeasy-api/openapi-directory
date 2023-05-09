@@ -80,4 +80,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetUserRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUserResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ResetFactorsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ResetFactorsResponse.java
+docs/sdk/README.md
+docs/createuser/README.md
+docs/credentialoperations/README.md
+docs/lifecycleoperations/README.md
 USAGE.md

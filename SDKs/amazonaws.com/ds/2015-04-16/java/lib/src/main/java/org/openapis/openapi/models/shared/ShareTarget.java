@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ShareTarget {
     @JsonProperty("Id")
     public String id;
+
     public ShareTarget withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class ShareTarget {
     
     @JsonProperty("Type")
     public TargetTypeEnum type;
+
     public ShareTarget withType(TargetTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ShareTarget(@JsonProperty("Id") String id, @JsonProperty("Type") TargetTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

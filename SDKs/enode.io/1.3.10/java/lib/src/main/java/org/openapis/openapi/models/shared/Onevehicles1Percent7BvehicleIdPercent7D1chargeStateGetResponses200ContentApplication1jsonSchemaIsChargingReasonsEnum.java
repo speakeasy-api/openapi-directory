@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum Onevehicles1Percent7BvehicleIdPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnum {
-    UNKNOWN(""),
+    LESS_THAN_NIL_GREATER_THAN("<nil>"),
     DEFAULT_("DEFAULT");
 
     @JsonValue

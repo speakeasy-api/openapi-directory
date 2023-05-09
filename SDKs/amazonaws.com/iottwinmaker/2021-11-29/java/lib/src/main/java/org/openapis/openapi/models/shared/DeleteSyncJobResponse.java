@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteSyncJobResponse {
     @JsonProperty("state")
     public SyncJobStateEnum state;
+
     public DeleteSyncJobResponse withState(SyncJobStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DeleteSyncJobResponse(@JsonProperty("state") SyncJobStateEnum state) {
+        this.state = state;
+  }
 }

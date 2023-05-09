@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSlotRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteSlotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class DeleteSlotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteSlotRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class DeleteSlotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteSlotRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class DeleteSlotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteSlotRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class DeleteSlotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteSlotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class DeleteSlotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteSlotRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class DeleteSlotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteSlotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class DeleteSlotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botId")
     public String botId;
+
     public DeleteSlotRequest withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -71,6 +80,7 @@ public class DeleteSlotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botVersion")
     public String botVersion;
+
     public DeleteSlotRequest withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -81,6 +91,7 @@ public class DeleteSlotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=intentId")
     public String intentId;
+
     public DeleteSlotRequest withIntentId(String intentId) {
         this.intentId = intentId;
         return this;
@@ -91,6 +102,7 @@ public class DeleteSlotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=localeId")
     public String localeId;
+
     public DeleteSlotRequest withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -101,9 +113,17 @@ public class DeleteSlotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slotId")
     public String slotId;
+
     public DeleteSlotRequest withSlotId(String slotId) {
         this.slotId = slotId;
         return this;
     }
     
+    public DeleteSlotRequest(@JsonProperty("botId") String botId, @JsonProperty("botVersion") String botVersion, @JsonProperty("intentId") String intentId, @JsonProperty("localeId") String localeId, @JsonProperty("slotId") String slotId) {
+        this.botId = botId;
+        this.botVersion = botVersion;
+        this.intentId = intentId;
+        this.localeId = localeId;
+        this.slotId = slotId;
+  }
 }

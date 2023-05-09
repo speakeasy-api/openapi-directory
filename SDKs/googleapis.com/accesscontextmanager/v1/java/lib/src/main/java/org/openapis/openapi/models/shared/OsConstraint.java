@@ -18,6 +18,7 @@ public class OsConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumVersion")
     public String minimumVersion;
+
     public OsConstraint withMinimumVersion(String minimumVersion) {
         this.minimumVersion = minimumVersion;
         return this;
@@ -29,6 +30,7 @@ public class OsConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osType")
     public OsConstraintOsTypeEnum osType;
+
     public OsConstraint withOsType(OsConstraintOsTypeEnum osType) {
         this.osType = osType;
         return this;
@@ -40,9 +42,11 @@ public class OsConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireVerifiedChromeOs")
     public Boolean requireVerifiedChromeOs;
+
     public OsConstraint withRequireVerifiedChromeOs(Boolean requireVerifiedChromeOs) {
         this.requireVerifiedChromeOs = requireVerifiedChromeOs;
         return this;
     }
     
+    public OsConstraint(){}
 }

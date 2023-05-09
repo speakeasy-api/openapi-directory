@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesAddonsFoldersListRequest {
@@ -12,6 +13,7 @@ public class NodesAddonsFoldersListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
     public String nodeId;
+
     public NodesAddonsFoldersListRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -22,9 +24,14 @@ public class NodesAddonsFoldersListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
     public String provider;
+
     public NodesAddonsFoldersListRequest withProvider(String provider) {
         this.provider = provider;
         return this;
     }
     
+    public NodesAddonsFoldersListRequest(@JsonProperty("node_id") String nodeId, @JsonProperty("provider") String provider) {
+        this.nodeId = nodeId;
+        this.provider = provider;
+  }
 }

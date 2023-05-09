@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class OrgUnit {
     /**
-     * Determines if a sub-organizational unit can inherit the settings of the parent organization. The default value is `false`, meaning a sub-organizational unit inherits the settings of the nearest parent organizational unit. For more information on inheritance and users in an organization structure, see the [administration help center](https://support.google.com/a/answer/4352075).
+     * Determines if a sub-organizational unit can inherit the settings of the parent organization. The default value is `false`, meaning a sub-organizational unit inherits the settings of the nearest parent organizational unit. We recommend using the default value because setting `block_inheritance` to `true` can have _unintended consequences_. For more information about inheritance and users in an organization structure, see the [administration help center](https://support.google.com/a/answer/4352075).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockInheritance")
     public Boolean blockInheritance;
+
     public OrgUnit withBlockInheritance(Boolean blockInheritance) {
         this.blockInheritance = blockInheritance;
         return this;
@@ -29,6 +30,7 @@ public class OrgUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OrgUnit withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class OrgUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public OrgUnit withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class OrgUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OrgUnit withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class OrgUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrgUnit withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class OrgUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitId")
     public String orgUnitId;
+
     public OrgUnit withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
@@ -84,6 +90,7 @@ public class OrgUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitPath")
     public String orgUnitPath;
+
     public OrgUnit withOrgUnitPath(String orgUnitPath) {
         this.orgUnitPath = orgUnitPath;
         return this;
@@ -95,6 +102,7 @@ public class OrgUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentOrgUnitId")
     public String parentOrgUnitId;
+
     public OrgUnit withParentOrgUnitId(String parentOrgUnitId) {
         this.parentOrgUnitId = parentOrgUnitId;
         return this;
@@ -106,9 +114,11 @@ public class OrgUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentOrgUnitPath")
     public String parentOrgUnitPath;
+
     public OrgUnit withParentOrgUnitPath(String parentOrgUnitPath) {
         this.parentOrgUnitPath = parentOrgUnitPath;
         return this;
     }
     
+    public OrgUnit(){}
 }

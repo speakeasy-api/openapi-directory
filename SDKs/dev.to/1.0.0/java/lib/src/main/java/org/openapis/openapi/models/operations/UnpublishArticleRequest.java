@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnpublishArticleRequest {
@@ -12,6 +13,7 @@ public class UnpublishArticleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public UnpublishArticleRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class UnpublishArticleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=note")
     public String note;
+
     public UnpublishArticleRequest withNote(String note) {
         this.note = note;
         return this;
     }
     
+    public UnpublishArticleRequest(@JsonProperty("id") Integer id) {
+        this.id = id;
+  }
 }

@@ -18,6 +18,7 @@ public class CancelBookingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingId")
     public String bookingId;
+
     public CancelBookingResponse withBookingId(String bookingId) {
         this.bookingId = bookingId;
         return this;
@@ -26,6 +27,7 @@ public class CancelBookingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public CancelBookingResponseReasonEnum reason;
+
     public CancelBookingResponse withReason(CancelBookingResponseReasonEnum reason) {
         this.reason = reason;
         return this;
@@ -41,9 +43,11 @@ public class CancelBookingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CancelBookingResponseStatusEnum status;
+
     public CancelBookingResponse withStatus(CancelBookingResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CancelBookingResponse(){}
 }

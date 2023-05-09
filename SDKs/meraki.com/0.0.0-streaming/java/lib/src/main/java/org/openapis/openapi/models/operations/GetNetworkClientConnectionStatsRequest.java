@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkClientConnectionStatsRequest {
@@ -12,6 +13,7 @@ public class GetNetworkClientConnectionStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apTag")
     public String apTag;
+
     public GetNetworkClientConnectionStatsRequest withApTag(String apTag) {
         this.apTag = apTag;
         return this;
@@ -22,6 +24,7 @@ public class GetNetworkClientConnectionStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=band")
     public GetNetworkClientConnectionStatsBandEnum band;
+
     public GetNetworkClientConnectionStatsRequest withBand(GetNetworkClientConnectionStatsBandEnum band) {
         this.band = band;
         return this;
@@ -29,6 +32,7 @@ public class GetNetworkClientConnectionStatsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
     public String clientId;
+
     public GetNetworkClientConnectionStatsRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -36,6 +40,7 @@ public class GetNetworkClientConnectionStatsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public GetNetworkClientConnectionStatsRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -46,6 +51,7 @@ public class GetNetworkClientConnectionStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ssid")
     public Long ssid;
+
     public GetNetworkClientConnectionStatsRequest withSsid(Long ssid) {
         this.ssid = ssid;
         return this;
@@ -56,6 +62,7 @@ public class GetNetworkClientConnectionStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
     public String t0;
+
     public GetNetworkClientConnectionStatsRequest withT0(String t0) {
         this.t0 = t0;
         return this;
@@ -66,6 +73,7 @@ public class GetNetworkClientConnectionStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
     public String t1;
+
     public GetNetworkClientConnectionStatsRequest withT1(String t1) {
         this.t1 = t1;
         return this;
@@ -76,6 +84,7 @@ public class GetNetworkClientConnectionStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
     public Float timespan;
+
     public GetNetworkClientConnectionStatsRequest withTimespan(Float timespan) {
         this.timespan = timespan;
         return this;
@@ -86,9 +95,14 @@ public class GetNetworkClientConnectionStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vlan")
     public Long vlan;
+
     public GetNetworkClientConnectionStatsRequest withVlan(Long vlan) {
         this.vlan = vlan;
         return this;
     }
     
+    public GetNetworkClientConnectionStatsRequest(@JsonProperty("clientId") String clientId, @JsonProperty("networkId") String networkId) {
+        this.clientId = clientId;
+        this.networkId = networkId;
+  }
 }

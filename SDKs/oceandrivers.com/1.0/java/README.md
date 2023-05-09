@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CompareStationRequest;
 import org.openapis.openapi.models.operations.CompareStationResponse;
 
@@ -26,9 +25,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CompareStationRequest req = new CompareStationRequest() {{
-                stationName = "corrupti";
-            }}            
+            CompareStationRequest req = new CompareStationRequest("corrupti");            
 
             CompareStationResponse res = sdk.odWeather.compareStation(req);
 
@@ -38,6 +35,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -45,18 +44,18 @@ public class Application {
 ## Available Resources and Operations
 
 
-### odWeather
+### [odWeather](docs/odweather/README.md)
 
-* `compareStation` - Get forecast and realtime information for known points<br/>None
-* `getAemetStation` - Get data from the aemet stations<br/>None
-* `getEasywind` - Get data from the easywind weather stations<br/>None
-* `getEventStations` - Get stations in an event<br/>None
-* `getForecastPoints` - Get forecast points of a yatchclub<br/>None
-* `getForecastTimeSeries` - Get timeseries forecast information<br/>None
-* `getForecastTimeSeriesWrf` - Get timeseries forecast information<br/>None
-* `getSocibWeatherStation` - Get data from the socib bahia de palma buoy<br/>None
-* `getWeatherDisplay` - Get data from the weather display software<br/>None
-* `getWebCams` - Get forecast and realtime information for known points<br/>None
+* [compareStation](docs/odweather/README.md#comparestation) - Get forecast and realtime information for known points<br/>None
+* [getAemetStation](docs/odweather/README.md#getaemetstation) - Get data from the aemet stations<br/>None
+* [getEasywind](docs/odweather/README.md#geteasywind) - Get data from the easywind weather stations<br/>None
+* [getEventStations](docs/odweather/README.md#geteventstations) - Get stations in an event<br/>None
+* [getForecastPoints](docs/odweather/README.md#getforecastpoints) - Get forecast points of a yatchclub<br/>None
+* [getForecastTimeSeries](docs/odweather/README.md#getforecasttimeseries) - Get timeseries forecast information<br/>None
+* [getForecastTimeSeriesWrf](docs/odweather/README.md#getforecasttimeserieswrf) - Get timeseries forecast information<br/>None
+* [getSocibWeatherStation](docs/odweather/README.md#getsocibweatherstation) - Get data from the socib bahia de palma buoy<br/>None
+* [getWeatherDisplay](docs/odweather/README.md#getweatherdisplay) - Get data from the weather display software<br/>None
+* [getWebCams](docs/odweather/README.md#getwebcams) - Get forecast and realtime information for known points<br/>None
 <!-- End SDK Available Operations -->
 
 ### Maturity

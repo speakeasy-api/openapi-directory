@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCustomLogSourceResponse {
@@ -12,6 +13,7 @@ public class CreateCustomLogSourceResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateCustomLogSourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateCustomLogSourceResponse {
      */
     
     public Object accountNotFoundException;
+
     public CreateCustomLogSourceResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -32,6 +35,7 @@ public class CreateCustomLogSourceResponse {
      */
     
     public Object bucketNotFoundException;
+
     public CreateCustomLogSourceResponse withBucketNotFoundException(Object bucketNotFoundException) {
         this.bucketNotFoundException = bucketNotFoundException;
         return this;
@@ -42,6 +46,7 @@ public class CreateCustomLogSourceResponse {
      */
     
     public Object conflictSourceNamesException;
+
     public CreateCustomLogSourceResponse withConflictSourceNamesException(Object conflictSourceNamesException) {
         this.conflictSourceNamesException = conflictSourceNamesException;
         return this;
@@ -49,6 +54,7 @@ public class CreateCustomLogSourceResponse {
     
     
     public String contentType;
+
     public CreateCustomLogSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class CreateCustomLogSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCustomLogSourceResponse createCustomLogSourceResponse;
+
     public CreateCustomLogSourceResponse withCreateCustomLogSourceResponse(org.openapis.openapi.models.shared.CreateCustomLogSourceResponse createCustomLogSourceResponse) {
         this.createCustomLogSourceResponse = createCustomLogSourceResponse;
         return this;
@@ -69,6 +76,7 @@ public class CreateCustomLogSourceResponse {
      */
     
     public Object internalServerException;
+
     public CreateCustomLogSourceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -76,6 +84,7 @@ public class CreateCustomLogSourceResponse {
     
     
     public Integer statusCode;
+
     public CreateCustomLogSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateCustomLogSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCustomLogSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateCustomLogSourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateCustomLogSourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class CreateCustomLogSourceResponse {
      */
     
     public Object validationException;
+
     public CreateCustomLogSourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateCustomLogSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

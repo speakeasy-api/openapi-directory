@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRegisterTransitGatewayMulticastGroupSourcesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRegisterTransitGatewayMulticastGroupSourcesActionEnum action;
+
     public GETRegisterTransitGatewayMulticastGroupSourcesRequest withAction(GETRegisterTransitGatewayMulticastGroupSourcesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRegisterTransitGatewayMulticastGroupSourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETRegisterTransitGatewayMulticastGroupSourcesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETRegisterTransitGatewayMulticastGroupSourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GroupIpAddress")
     public String groupIpAddress;
+
     public GETRegisterTransitGatewayMulticastGroupSourcesRequest withGroupIpAddress(String groupIpAddress) {
         this.groupIpAddress = groupIpAddress;
         return this;
@@ -39,6 +43,7 @@ public class GETRegisterTransitGatewayMulticastGroupSourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceIds")
     public String[] networkInterfaceIds;
+
     public GETRegisterTransitGatewayMulticastGroupSourcesRequest withNetworkInterfaceIds(String[] networkInterfaceIds) {
         this.networkInterfaceIds = networkInterfaceIds;
         return this;
@@ -49,6 +54,7 @@ public class GETRegisterTransitGatewayMulticastGroupSourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayMulticastDomainId")
     public String transitGatewayMulticastDomainId;
+
     public GETRegisterTransitGatewayMulticastGroupSourcesRequest withTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
         this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
         return this;
@@ -56,6 +62,7 @@ public class GETRegisterTransitGatewayMulticastGroupSourcesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRegisterTransitGatewayMulticastGroupSourcesVersionEnum version;
+
     public GETRegisterTransitGatewayMulticastGroupSourcesRequest withVersion(GETRegisterTransitGatewayMulticastGroupSourcesVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETRegisterTransitGatewayMulticastGroupSourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRegisterTransitGatewayMulticastGroupSourcesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETRegisterTransitGatewayMulticastGroupSourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRegisterTransitGatewayMulticastGroupSourcesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETRegisterTransitGatewayMulticastGroupSourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRegisterTransitGatewayMulticastGroupSourcesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETRegisterTransitGatewayMulticastGroupSourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRegisterTransitGatewayMulticastGroupSourcesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETRegisterTransitGatewayMulticastGroupSourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRegisterTransitGatewayMulticastGroupSourcesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETRegisterTransitGatewayMulticastGroupSourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRegisterTransitGatewayMulticastGroupSourcesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,16 @@ public class GETRegisterTransitGatewayMulticastGroupSourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRegisterTransitGatewayMulticastGroupSourcesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRegisterTransitGatewayMulticastGroupSourcesRequest(@JsonProperty("Action") GETRegisterTransitGatewayMulticastGroupSourcesActionEnum action, @JsonProperty("NetworkInterfaceIds") String[] networkInterfaceIds, @JsonProperty("TransitGatewayMulticastDomainId") String transitGatewayMulticastDomainId, @JsonProperty("Version") GETRegisterTransitGatewayMulticastGroupSourcesVersionEnum version) {
+        this.action = action;
+        this.networkInterfaceIds = networkInterfaceIds;
+        this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
+        this.version = version;
+  }
 }

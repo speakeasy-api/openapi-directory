@@ -18,6 +18,7 @@ public class AccountHolderBalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balancePerAccount")
     public AccountDetailBalance[] balancePerAccount;
+
     public AccountHolderBalanceResponse withBalancePerAccount(AccountDetailBalance[] balancePerAccount) {
         this.balancePerAccount = balancePerAccount;
         return this;
@@ -29,6 +30,7 @@ public class AccountHolderBalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public AccountHolderBalanceResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -40,6 +42,7 @@ public class AccountHolderBalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public AccountHolderBalanceResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -51,6 +54,7 @@ public class AccountHolderBalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public AccountHolderBalanceResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -59,9 +63,11 @@ public class AccountHolderBalanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalBalance")
     public DetailBalance totalBalance;
+
     public AccountHolderBalanceResponse withTotalBalance(DetailBalance totalBalance) {
         this.totalBalance = totalBalance;
         return this;
     }
     
+    public AccountHolderBalanceResponse(){}
 }

@@ -59,11 +59,9 @@ public class LicenseCodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeLicenseCodesGetResponse res = new org.openapis.openapi.models.operations.ComputeLicenseCodesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeLicenseCodesGetResponse res = new org.openapis.openapi.models.operations.ComputeLicenseCodesGetResponse(contentType, httpRes.statusCode()) {{
             licenseCode = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class LicenseCodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeLicenseCodesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeLicenseCodesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeLicenseCodesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeLicenseCodesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

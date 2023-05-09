@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudRetailV2alphaModel withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataState")
     public GoogleCloudRetailV2alphaModelDataStateEnum dataState;
+
     public GoogleCloudRetailV2alphaModel withDataState(GoogleCloudRetailV2alphaModelDataStateEnum dataState) {
         this.dataState = dataState;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2alphaModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudRetailV2alphaModel withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2alphaModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filteringOption")
     public GoogleCloudRetailV2alphaModelFilteringOptionEnum filteringOption;
+
     public GoogleCloudRetailV2alphaModel withFilteringOption(GoogleCloudRetailV2alphaModelFilteringOptionEnum filteringOption) {
         this.filteringOption = filteringOption;
         return this;
@@ -62,8 +66,21 @@ public class GoogleCloudRetailV2alphaModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastTuneTime")
     public String lastTuneTime;
+
     public GoogleCloudRetailV2alphaModel withLastTuneTime(String lastTuneTime) {
         this.lastTuneTime = lastTuneTime;
+        return this;
+    }
+    
+    /**
+     * Additional model features config.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("modelFeaturesConfig")
+    public GoogleCloudRetailV2alphaModelModelFeaturesConfig modelFeaturesConfig;
+
+    public GoogleCloudRetailV2alphaModel withModelFeaturesConfig(GoogleCloudRetailV2alphaModelModelFeaturesConfig modelFeaturesConfig) {
+        this.modelFeaturesConfig = modelFeaturesConfig;
         return this;
     }
     
@@ -73,6 +90,7 @@ public class GoogleCloudRetailV2alphaModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRetailV2alphaModel withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +102,7 @@ public class GoogleCloudRetailV2alphaModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimizationObjective")
     public String optimizationObjective;
+
     public GoogleCloudRetailV2alphaModel withOptimizationObjective(String optimizationObjective) {
         this.optimizationObjective = optimizationObjective;
         return this;
@@ -95,6 +114,7 @@ public class GoogleCloudRetailV2alphaModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageOptimizationConfig")
     public GoogleCloudRetailV2alphaModelPageOptimizationConfig pageOptimizationConfig;
+
     public GoogleCloudRetailV2alphaModel withPageOptimizationConfig(GoogleCloudRetailV2alphaModelPageOptimizationConfig pageOptimizationConfig) {
         this.pageOptimizationConfig = pageOptimizationConfig;
         return this;
@@ -106,6 +126,7 @@ public class GoogleCloudRetailV2alphaModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodicTuningState")
     public GoogleCloudRetailV2alphaModelPeriodicTuningStateEnum periodicTuningState;
+
     public GoogleCloudRetailV2alphaModel withPeriodicTuningState(GoogleCloudRetailV2alphaModelPeriodicTuningStateEnum periodicTuningState) {
         this.periodicTuningState = periodicTuningState;
         return this;
@@ -117,6 +138,7 @@ public class GoogleCloudRetailV2alphaModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servingConfigLists")
     public GoogleCloudRetailV2alphaModelServingConfigList[] servingConfigLists;
+
     public GoogleCloudRetailV2alphaModel withServingConfigLists(GoogleCloudRetailV2alphaModelServingConfigList[] servingConfigLists) {
         this.servingConfigLists = servingConfigLists;
         return this;
@@ -128,6 +150,7 @@ public class GoogleCloudRetailV2alphaModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servingState")
     public GoogleCloudRetailV2alphaModelServingStateEnum servingState;
+
     public GoogleCloudRetailV2alphaModel withServingState(GoogleCloudRetailV2alphaModelServingStateEnum servingState) {
         this.servingState = servingState;
         return this;
@@ -139,6 +162,7 @@ public class GoogleCloudRetailV2alphaModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingState")
     public GoogleCloudRetailV2alphaModelTrainingStateEnum trainingState;
+
     public GoogleCloudRetailV2alphaModel withTrainingState(GoogleCloudRetailV2alphaModelTrainingStateEnum trainingState) {
         this.trainingState = trainingState;
         return this;
@@ -150,6 +174,7 @@ public class GoogleCloudRetailV2alphaModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tuningOperation")
     public String tuningOperation;
+
     public GoogleCloudRetailV2alphaModel withTuningOperation(String tuningOperation) {
         this.tuningOperation = tuningOperation;
         return this;
@@ -161,6 +186,7 @@ public class GoogleCloudRetailV2alphaModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudRetailV2alphaModel withType(String type) {
         this.type = type;
         return this;
@@ -172,9 +198,11 @@ public class GoogleCloudRetailV2alphaModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudRetailV2alphaModel withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaModel(){}
 }

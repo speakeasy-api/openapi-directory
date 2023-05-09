@@ -19,6 +19,7 @@ public class BatchGetFrameMetricDataResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public BatchGetFrameMetricDataResponse withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -26,6 +27,7 @@ public class BatchGetFrameMetricDataResponse {
     
     @JsonProperty("endTimes")
     public TimestampStructure[] endTimes;
+
     public BatchGetFrameMetricDataResponse withEndTimes(TimestampStructure[] endTimes) {
         this.endTimes = endTimes;
         return this;
@@ -33,6 +35,7 @@ public class BatchGetFrameMetricDataResponse {
     
     @JsonProperty("frameMetricData")
     public FrameMetricDatum[] frameMetricData;
+
     public BatchGetFrameMetricDataResponse withFrameMetricData(FrameMetricDatum[] frameMetricData) {
         this.frameMetricData = frameMetricData;
         return this;
@@ -40,6 +43,7 @@ public class BatchGetFrameMetricDataResponse {
     
     @JsonProperty("resolution")
     public AggregationPeriodEnum resolution;
+
     public BatchGetFrameMetricDataResponse withResolution(AggregationPeriodEnum resolution) {
         this.resolution = resolution;
         return this;
@@ -49,6 +53,7 @@ public class BatchGetFrameMetricDataResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public BatchGetFrameMetricDataResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -56,9 +61,18 @@ public class BatchGetFrameMetricDataResponse {
     
     @JsonProperty("unprocessedEndTimes")
     public java.util.Map<String, TimestampStructure[]> unprocessedEndTimes;
+
     public BatchGetFrameMetricDataResponse withUnprocessedEndTimes(java.util.Map<String, TimestampStructure[]> unprocessedEndTimes) {
         this.unprocessedEndTimes = unprocessedEndTimes;
         return this;
     }
     
+    public BatchGetFrameMetricDataResponse(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("endTimes") TimestampStructure[] endTimes, @JsonProperty("frameMetricData") FrameMetricDatum[] frameMetricData, @JsonProperty("resolution") AggregationPeriodEnum resolution, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("unprocessedEndTimes") java.util.Map<String, TimestampStructure[]> unprocessedEndTimes) {
+        this.endTime = endTime;
+        this.endTimes = endTimes;
+        this.frameMetricData = frameMetricData;
+        this.resolution = resolution;
+        this.startTime = startTime;
+        this.unprocessedEndTimes = unprocessedEndTimes;
+  }
 }

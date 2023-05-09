@@ -12,9 +12,11 @@ public class DeleteAnApi200ApplicationJSONApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeleteAnApi200ApplicationJSONApi withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteAnApi200ApplicationJSONApi(){}
 }

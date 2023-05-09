@@ -39,4 +39,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/APIErrorErrors.java
 lib/src/main/java/org/openapis/openapi/models/shared/APIError.java
 lib/src/main/java/org/openapis/openapi/models/shared/VeteranStatusRequestGenderEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/VeteranStatusRequest.java
+docs/sdk/README.md
+docs/veteranconfirmationstatus/README.md
 USAGE.md

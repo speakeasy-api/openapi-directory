@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEnvironmentTemplateResponse {
@@ -12,6 +13,7 @@ public class GetEnvironmentTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public GetEnvironmentTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetEnvironmentTemplateResponse {
     
     
     public String contentType;
+
     public GetEnvironmentTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEnvironmentTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEnvironmentTemplateOutput getEnvironmentTemplateOutput;
+
     public GetEnvironmentTemplateResponse withGetEnvironmentTemplateOutput(org.openapis.openapi.models.shared.GetEnvironmentTemplateOutput getEnvironmentTemplateOutput) {
         this.getEnvironmentTemplateOutput = getEnvironmentTemplateOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetEnvironmentTemplateResponse {
      */
     
     public Object internalServerException;
+
     public GetEnvironmentTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetEnvironmentTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEnvironmentTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetEnvironmentTemplateResponse {
     
     
     public Integer statusCode;
+
     public GetEnvironmentTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetEnvironmentTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEnvironmentTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetEnvironmentTemplateResponse {
      */
     
     public Object throttlingException;
+
     public GetEnvironmentTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetEnvironmentTemplateResponse {
      */
     
     public Object validationException;
+
     public GetEnvironmentTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetEnvironmentTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

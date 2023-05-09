@@ -15,6 +15,7 @@ public class CreateNetworkSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateNetworkSettingsRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateNetworkSettingsRequestBody {
      */
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public CreateNetworkSettingsRequestBody withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -35,6 +37,7 @@ public class CreateNetworkSettingsRequestBody {
      */
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public CreateNetworkSettingsRequestBody withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -46,6 +49,7 @@ public class CreateNetworkSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateNetworkSettingsRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -56,9 +60,15 @@ public class CreateNetworkSettingsRequestBody {
      */
     @JsonProperty("vpcId")
     public String vpcId;
+
     public CreateNetworkSettingsRequestBody withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateNetworkSettingsRequestBody(@JsonProperty("securityGroupIds") String[] securityGroupIds, @JsonProperty("subnetIds") String[] subnetIds, @JsonProperty("vpcId") String vpcId) {
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
+  }
 }

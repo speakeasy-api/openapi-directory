@@ -12,9 +12,11 @@ public class FindFormsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public FindFormsRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public FindFormsRequest(){}
 }

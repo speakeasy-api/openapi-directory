@@ -18,6 +18,7 @@ public class ManagedGroupConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceGroupManagerName")
     public String instanceGroupManagerName;
+
     public ManagedGroupConfig withInstanceGroupManagerName(String instanceGroupManagerName) {
         this.instanceGroupManagerName = instanceGroupManagerName;
         return this;
@@ -29,9 +30,11 @@ public class ManagedGroupConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTemplateName")
     public String instanceTemplateName;
+
     public ManagedGroupConfig withInstanceTemplateName(String instanceTemplateName) {
         this.instanceTemplateName = instanceTemplateName;
         return this;
     }
     
+    public ManagedGroupConfig(){}
 }

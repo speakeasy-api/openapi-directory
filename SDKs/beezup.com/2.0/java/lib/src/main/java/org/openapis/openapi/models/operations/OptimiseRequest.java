@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptimiseRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=actionName")
     public org.openapis.openapi.models.shared.OptimisationActionNameGeneralParametersEnum actionName;
+
     public OptimiseRequest withActionName(org.openapis.openapi.models.shared.OptimisationActionNameGeneralParametersEnum actionName) {
         this.actionName = actionName;
         return this;
@@ -16,6 +18,7 @@ public class OptimiseRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OptimiseRequest optimiseRequest;
+
     public OptimiseRequest withOptimiseRequest(org.openapis.openapi.models.shared.OptimiseRequest optimiseRequest) {
         this.optimiseRequest = optimiseRequest;
         return this;
@@ -26,9 +29,15 @@ public class OptimiseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public OptimiseRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public OptimiseRequest(@JsonProperty("actionName") org.openapis.openapi.models.shared.OptimisationActionNameGeneralParametersEnum actionName, @JsonProperty("optimiseRequest") org.openapis.openapi.models.shared.OptimiseRequest optimiseRequest, @JsonProperty("storeId") String storeId) {
+        this.actionName = actionName;
+        this.optimiseRequest = optimiseRequest;
+        this.storeId = storeId;
+  }
 }

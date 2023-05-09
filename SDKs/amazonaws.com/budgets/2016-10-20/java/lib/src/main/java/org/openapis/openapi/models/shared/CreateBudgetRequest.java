@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateBudgetRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public CreateBudgetRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -21,6 +22,7 @@ public class CreateBudgetRequest {
     
     @JsonProperty("Budget")
     public Budget budget;
+
     public CreateBudgetRequest withBudget(Budget budget) {
         this.budget = budget;
         return this;
@@ -29,9 +31,14 @@ public class CreateBudgetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationsWithSubscribers")
     public NotificationWithSubscribers[] notificationsWithSubscribers;
+
     public CreateBudgetRequest withNotificationsWithSubscribers(NotificationWithSubscribers[] notificationsWithSubscribers) {
         this.notificationsWithSubscribers = notificationsWithSubscribers;
         return this;
     }
     
+    public CreateBudgetRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("Budget") Budget budget) {
+        this.accountId = accountId;
+        this.budget = budget;
+  }
 }

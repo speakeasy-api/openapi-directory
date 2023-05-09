@@ -15,6 +15,7 @@ public class ListMailboxPermissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMailboxPermissionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListMailboxPermissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permissions")
     public Permission[] permissions;
+
     public ListMailboxPermissionsResponse withPermissions(Permission[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public ListMailboxPermissionsResponse(){}
 }

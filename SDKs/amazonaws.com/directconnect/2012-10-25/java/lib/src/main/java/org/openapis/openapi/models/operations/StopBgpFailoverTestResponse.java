@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopBgpFailoverTestResponse {
     
     public String contentType;
+
     public StopBgpFailoverTestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopBgpFailoverTestResponse {
      */
     
     public Object directConnectClientException;
+
     public StopBgpFailoverTestResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -29,6 +32,7 @@ public class StopBgpFailoverTestResponse {
      */
     
     public Object directConnectServerException;
+
     public StopBgpFailoverTestResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -36,6 +40,7 @@ public class StopBgpFailoverTestResponse {
     
     
     public Integer statusCode;
+
     public StopBgpFailoverTestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopBgpFailoverTestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopBgpFailoverTestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class StopBgpFailoverTestResponse {
      */
     
     public org.openapis.openapi.models.shared.StopBgpFailoverTestResponse stopBgpFailoverTestResponse;
+
     public StopBgpFailoverTestResponse withStopBgpFailoverTestResponse(org.openapis.openapi.models.shared.StopBgpFailoverTestResponse stopBgpFailoverTestResponse) {
         this.stopBgpFailoverTestResponse = stopBgpFailoverTestResponse;
         return this;
     }
     
+    public StopBgpFailoverTestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

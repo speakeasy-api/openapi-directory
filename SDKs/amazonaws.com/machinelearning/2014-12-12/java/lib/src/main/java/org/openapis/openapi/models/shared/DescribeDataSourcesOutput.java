@@ -15,6 +15,7 @@ public class DescribeDataSourcesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeDataSourcesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeDataSourcesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Results")
     public DataSource[] results;
+
     public DescribeDataSourcesOutput withResults(DataSource[] results) {
         this.results = results;
         return this;
     }
     
+    public DescribeDataSourcesOutput(){}
 }

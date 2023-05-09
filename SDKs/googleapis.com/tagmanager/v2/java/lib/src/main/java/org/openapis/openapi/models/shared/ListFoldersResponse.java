@@ -18,6 +18,7 @@ public class ListFoldersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folder")
     public Folder[] folder;
+
     public ListFoldersResponse withFolder(Folder[] folder) {
         this.folder = folder;
         return this;
@@ -29,9 +30,11 @@ public class ListFoldersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListFoldersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListFoldersResponse(){}
 }

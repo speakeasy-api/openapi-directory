@@ -25,6 +25,7 @@ public class TflApiPresentationEntitiesValidityPeriod {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fromDate")
     public OffsetDateTime fromDate;
+
     public TflApiPresentationEntitiesValidityPeriod withFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -36,6 +37,7 @@ public class TflApiPresentationEntitiesValidityPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isNow")
     public Boolean isNow;
+
     public TflApiPresentationEntitiesValidityPeriod withIsNow(Boolean isNow) {
         this.isNow = isNow;
         return this;
@@ -49,9 +51,11 @@ public class TflApiPresentationEntitiesValidityPeriod {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("toDate")
     public OffsetDateTime toDate;
+
     public TflApiPresentationEntitiesValidityPeriod withToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public TflApiPresentationEntitiesValidityPeriod(){}
 }

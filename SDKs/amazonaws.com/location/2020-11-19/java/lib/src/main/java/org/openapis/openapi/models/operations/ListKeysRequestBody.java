@@ -15,6 +15,7 @@ public class ListKeysRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public ListKeysRequestBodyFilter filter;
+
     public ListKeysRequestBody withFilter(ListKeysRequestBodyFilter filter) {
         this.filter = filter;
         return this;
@@ -26,6 +27,7 @@ public class ListKeysRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListKeysRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListKeysRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListKeysRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListKeysRequestBody(){}
 }

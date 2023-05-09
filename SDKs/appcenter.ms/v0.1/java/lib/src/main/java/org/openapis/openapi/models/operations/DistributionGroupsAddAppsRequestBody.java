@@ -18,9 +18,11 @@ public class DistributionGroupsAddAppsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apps")
     public DistributionGroupsAddAppsRequestBodyApps[] apps;
+
     public DistributionGroupsAddAppsRequestBody withApps(DistributionGroupsAddAppsRequestBodyApps[] apps) {
         this.apps = apps;
         return this;
     }
     
+    public DistributionGroupsAddAppsRequestBody(){}
 }

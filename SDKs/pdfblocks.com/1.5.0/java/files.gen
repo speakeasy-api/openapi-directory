@@ -82,4 +82,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/RotatePagesV1RequestBod
 lib/src/main/java/org/openapis/openapi/models/operations/RotatePagesV14XXApplicationProblemPlusJson.java
 lib/src/main/java/org/openapis/openapi/models/operations/RotatePagesV1Response.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

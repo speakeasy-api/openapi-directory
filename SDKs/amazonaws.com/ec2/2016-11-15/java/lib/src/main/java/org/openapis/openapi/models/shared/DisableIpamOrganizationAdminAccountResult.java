@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DisableIpamOrganizationAdminAccountResult {
     
     public Boolean success;
+
     public DisableIpamOrganizationAdminAccountResult withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public DisableIpamOrganizationAdminAccountResult(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateServiceSettingsResponse {
     
     public String contentType;
+
     public UpdateServiceSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateServiceSettingsResponse {
      */
     
     public Object internalServerException;
+
     public UpdateServiceSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateServiceSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateServiceSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateServiceSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateServiceSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateServiceSettingsResponse {
      */
     
     public Object throttlingException;
+
     public UpdateServiceSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateServiceSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateServiceSettingsResponse updateServiceSettingsResponse;
+
     public UpdateServiceSettingsResponse withUpdateServiceSettingsResponse(org.openapis.openapi.models.shared.UpdateServiceSettingsResponse updateServiceSettingsResponse) {
         this.updateServiceSettingsResponse = updateServiceSettingsResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateServiceSettingsResponse {
      */
     
     public Object validationException;
+
     public UpdateServiceSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateServiceSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

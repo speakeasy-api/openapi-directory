@@ -18,6 +18,7 @@ public class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attestationStatement")
     public String attestationStatement;
+
     public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest withAttestationStatement(String attestationStatement) {
         this.attestationStatement = attestationStatement;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("challenge")
     public String challenge;
+
     public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest withChallenge(String challenge) {
         this.challenge = challenge;
         return this;
@@ -40,9 +42,11 @@ public class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyId")
     public String keyId;
+
     public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest(){}
 }

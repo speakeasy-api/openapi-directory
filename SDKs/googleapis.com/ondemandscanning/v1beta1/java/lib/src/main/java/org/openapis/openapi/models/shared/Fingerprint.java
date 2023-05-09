@@ -18,6 +18,7 @@ public class Fingerprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("v1Name")
     public String v1Name;
+
     public Fingerprint withV1Name(String v1Name) {
         this.v1Name = v1Name;
         return this;
@@ -29,6 +30,7 @@ public class Fingerprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("v2Blob")
     public String[] v2Blob;
+
     public Fingerprint withV2Blob(String[] v2Blob) {
         this.v2Blob = v2Blob;
         return this;
@@ -40,9 +42,11 @@ public class Fingerprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("v2Name")
     public String v2Name;
+
     public Fingerprint withV2Name(String v2Name) {
         this.v2Name = v2Name;
         return this;
     }
     
+    public Fingerprint(){}
 }

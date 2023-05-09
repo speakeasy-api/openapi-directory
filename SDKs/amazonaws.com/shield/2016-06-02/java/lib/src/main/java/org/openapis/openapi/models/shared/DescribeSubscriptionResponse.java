@@ -15,9 +15,11 @@ public class DescribeSubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subscription")
     public Subscription subscription;
+
     public DescribeSubscriptionResponse withSubscription(Subscription subscription) {
         this.subscription = subscription;
         return this;
     }
     
+    public DescribeSubscriptionResponse(){}
 }

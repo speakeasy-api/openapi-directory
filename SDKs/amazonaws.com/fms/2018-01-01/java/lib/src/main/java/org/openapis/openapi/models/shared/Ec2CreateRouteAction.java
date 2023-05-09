@@ -15,6 +15,7 @@ public class Ec2CreateRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Ec2CreateRouteAction withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class Ec2CreateRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationCidrBlock")
     public String destinationCidrBlock;
+
     public Ec2CreateRouteAction withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -31,6 +33,7 @@ public class Ec2CreateRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationIpv6CidrBlock")
     public String destinationIpv6CidrBlock;
+
     public Ec2CreateRouteAction withDestinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
         this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
         return this;
@@ -39,6 +42,7 @@ public class Ec2CreateRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationPrefixListId")
     public String destinationPrefixListId;
+
     public Ec2CreateRouteAction withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -47,6 +51,7 @@ public class Ec2CreateRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayId")
     public ActionTarget gatewayId;
+
     public Ec2CreateRouteAction withGatewayId(ActionTarget gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -54,6 +59,7 @@ public class Ec2CreateRouteAction {
     
     @JsonProperty("RouteTableId")
     public ActionTarget routeTableId;
+
     public Ec2CreateRouteAction withRouteTableId(ActionTarget routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -62,9 +68,13 @@ public class Ec2CreateRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcEndpointId")
     public ActionTarget vpcEndpointId;
+
     public Ec2CreateRouteAction withVpcEndpointId(ActionTarget vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
     }
     
+    public Ec2CreateRouteAction(@JsonProperty("RouteTableId") ActionTarget routeTableId) {
+        this.routeTableId = routeTableId;
+  }
 }

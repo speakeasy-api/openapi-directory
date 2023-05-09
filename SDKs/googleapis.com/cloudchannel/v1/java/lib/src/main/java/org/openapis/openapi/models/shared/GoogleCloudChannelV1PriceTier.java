@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1PriceTier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstResource")
     public Integer firstResource;
+
     public GoogleCloudChannelV1PriceTier withFirstResource(Integer firstResource) {
         this.firstResource = firstResource;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1PriceTier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastResource")
     public Integer lastResource;
+
     public GoogleCloudChannelV1PriceTier withLastResource(Integer lastResource) {
         this.lastResource = lastResource;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudChannelV1PriceTier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public GoogleCloudChannelV1Price price;
+
     public GoogleCloudChannelV1PriceTier withPrice(GoogleCloudChannelV1Price price) {
         this.price = price;
         return this;
     }
     
+    public GoogleCloudChannelV1PriceTier(){}
 }

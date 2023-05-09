@@ -12,26 +12,44 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
     public String accountId;
+
     public GetV2MeetingsJsonRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
     /**
-     * Filters meetings by event IDs
+     * Equality filters that are applied to the created_at field. A single filter can be used by itself or combined with other filters to create a range.
+     * 
+     * ---CUSTOM---
+     * {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=created_at")
+    public String[] createdAt;
+
+    public GetV2MeetingsJsonRequest withCreatedAt(String[] createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    
+    /**
+     * List of event IDs. If both event_ids and i_cal_uids params are passed, this filters will be ORed. If a record can't be found, that record won't be returned and your request will be successful
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=event_ids")
-    public Long[] eventIds;
-    public GetV2MeetingsJsonRequest withEventIds(Long[] eventIds) {
+    public String[] eventIds;
+
+    public GetV2MeetingsJsonRequest withEventIds(String[] eventIds) {
         this.eventIds = eventIds;
         return this;
     }
     
     /**
-     * Filters meetings by UIDs provided by calendar provider
+     * List of UIDs provided by calendar provider. If both event_ids and i_cal_uids params are passed, this filters will be ORed. If a record can't be found, that record won't be returned and your request will be successful
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=i_cal_uids")
     public String[] iCalUids;
+
     public GetV2MeetingsJsonRequest withICalUids(String[] iCalUids) {
         this.iCalUids = iCalUids;
         return this;
@@ -42,6 +60,7 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2MeetingsJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -52,6 +71,7 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_meetings_settings")
     public Boolean includeMeetingsSettings;
+
     public GetV2MeetingsJsonRequest withIncludeMeetingsSettings(Boolean includeMeetingsSettings) {
         this.includeMeetingsSettings = includeMeetingsSettings;
         return this;
@@ -62,6 +82,7 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2MeetingsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -72,6 +93,7 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2MeetingsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -82,6 +104,7 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2MeetingsJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -92,6 +115,7 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2MeetingsJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -102,6 +126,7 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=person_id")
     public String personId;
+
     public GetV2MeetingsJsonRequest withPersonId(String personId) {
         this.personId = personId;
         return this;
@@ -112,6 +137,7 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=person_ids")
     public Long[] personIds;
+
     public GetV2MeetingsJsonRequest withPersonIds(Long[] personIds) {
         this.personIds = personIds;
         return this;
@@ -122,6 +148,7 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=show_deleted")
     public Boolean showDeleted;
+
     public GetV2MeetingsJsonRequest withShowDeleted(Boolean showDeleted) {
         this.showDeleted = showDeleted;
         return this;
@@ -132,6 +159,7 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2MeetingsJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -142,6 +170,7 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2MeetingsJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -156,6 +185,7 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=start_time")
     public String[] startTime;
+
     public GetV2MeetingsJsonRequest withStartTime(String[] startTime) {
         this.startTime = startTime;
         return this;
@@ -166,6 +196,7 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public GetV2MeetingsJsonRequest withStatus(String status) {
         this.status = status;
         return this;
@@ -176,6 +207,7 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=task_ids")
     public Long[] taskIds;
+
     public GetV2MeetingsJsonRequest withTaskIds(Long[] taskIds) {
         this.taskIds = taskIds;
         return this;
@@ -186,9 +218,11 @@ public class GetV2MeetingsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_guids")
     public String[] userGuids;
+
     public GetV2MeetingsJsonRequest withUserGuids(String[] userGuids) {
         this.userGuids = userGuids;
         return this;
     }
     
+    public GetV2MeetingsJsonRequest(){}
 }

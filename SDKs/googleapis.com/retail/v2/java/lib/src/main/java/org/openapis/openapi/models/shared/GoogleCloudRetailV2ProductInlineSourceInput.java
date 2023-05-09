@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2ProductInlineSourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public GoogleCloudRetailV2ProductInput[] products;
+
     public GoogleCloudRetailV2ProductInlineSourceInput withProducts(GoogleCloudRetailV2ProductInput[] products) {
         this.products = products;
         return this;
     }
     
+    public GoogleCloudRetailV2ProductInlineSourceInput(){}
 }

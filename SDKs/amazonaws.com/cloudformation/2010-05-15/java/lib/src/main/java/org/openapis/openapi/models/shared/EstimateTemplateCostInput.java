@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class EstimateTemplateCostInput {
     
     public Parameter[] parameters;
+
     public EstimateTemplateCostInput withParameters(Parameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -19,6 +20,7 @@ public class EstimateTemplateCostInput {
     
     
     public String templateBody;
+
     public EstimateTemplateCostInput withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -26,9 +28,11 @@ public class EstimateTemplateCostInput {
     
     
     public String templateURL;
+
     public EstimateTemplateCostInput withTemplateURL(String templateURL) {
         this.templateURL = templateURL;
         return this;
     }
     
+    public EstimateTemplateCostInput(){}
 }

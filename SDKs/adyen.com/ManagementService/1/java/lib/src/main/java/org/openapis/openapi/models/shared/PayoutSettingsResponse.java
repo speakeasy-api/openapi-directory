@@ -18,9 +18,11 @@ public class PayoutSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public PayoutSettings[] data;
+
     public PayoutSettingsResponse withData(PayoutSettings[] data) {
         this.data = data;
         return this;
     }
     
+    public PayoutSettingsResponse(){}
 }

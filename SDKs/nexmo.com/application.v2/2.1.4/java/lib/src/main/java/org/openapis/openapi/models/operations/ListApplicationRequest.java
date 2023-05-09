@@ -12,6 +12,7 @@ public class ListApplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ListApplicationRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,9 +23,11 @@ public class ListApplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public ListApplicationRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public ListApplicationRequest(){}
 }

@@ -12,6 +12,7 @@ public class EmailCounts {
      */
     
     public Long attachments;
+
     public EmailCounts withAttachments(Long attachments) {
         this.attachments = attachments;
         return this;
@@ -22,6 +23,7 @@ public class EmailCounts {
      */
     
     public Long clicks;
+
     public EmailCounts withClicks(Long clicks) {
         this.clicks = clicks;
         return this;
@@ -32,6 +34,7 @@ public class EmailCounts {
      */
     
     public Long replies;
+
     public EmailCounts withReplies(Long replies) {
         this.replies = replies;
         return this;
@@ -42,6 +45,7 @@ public class EmailCounts {
      */
     
     public Long uniqueDevices;
+
     public EmailCounts withUniqueDevices(Long uniqueDevices) {
         this.uniqueDevices = uniqueDevices;
         return this;
@@ -52,6 +56,7 @@ public class EmailCounts {
      */
     
     public Long uniqueLocations;
+
     public EmailCounts withUniqueLocations(Long uniqueLocations) {
         this.uniqueLocations = uniqueLocations;
         return this;
@@ -62,9 +67,11 @@ public class EmailCounts {
      */
     
     public Long views;
+
     public EmailCounts withViews(Long views) {
         this.views = views;
         return this;
     }
     
+    public EmailCounts(){}
 }

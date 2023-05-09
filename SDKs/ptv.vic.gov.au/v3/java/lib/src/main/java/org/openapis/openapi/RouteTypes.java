@@ -56,7 +56,7 @@ public class RouteTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RouteTypesGetRouteTypesResponse res = new org.openapis.openapi.models.operations.RouteTypesGetRouteTypesResponse() {{
+        org.openapis.openapi.models.operations.RouteTypesGetRouteTypesResponse res = new org.openapis.openapi.models.operations.RouteTypesGetRouteTypesResponse(contentType, httpRes.statusCode()) {{
             v3RouteTypesResponse = null;
             v3RouteTypesResponse = null;
             body = null;
@@ -64,8 +64,6 @@ public class RouteTypes {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

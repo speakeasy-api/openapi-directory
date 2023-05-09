@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPullrequestsSelectedUserResponse {
     
     public String contentType;
+
     public GetPullrequestsSelectedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPullrequestsSelectedUserResponse {
     
     
     public Integer statusCode;
+
     public GetPullrequestsSelectedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetPullrequestsSelectedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPullrequestsSelectedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetPullrequestsSelectedUserResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetPullrequestsSelectedUserResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetPullrequestsSelectedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedPullrequests paginatedPullrequests;
+
     public GetPullrequestsSelectedUserResponse withPaginatedPullrequests(org.openapis.openapi.models.shared.PaginatedPullrequests paginatedPullrequests) {
         this.paginatedPullrequests = paginatedPullrequests;
         return this;
     }
     
+    public GetPullrequestsSelectedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

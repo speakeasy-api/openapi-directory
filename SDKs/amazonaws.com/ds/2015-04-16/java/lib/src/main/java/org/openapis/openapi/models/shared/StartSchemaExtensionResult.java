@@ -15,9 +15,11 @@ public class StartSchemaExtensionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaExtensionId")
     public String schemaExtensionId;
+
     public StartSchemaExtensionResult withSchemaExtensionId(String schemaExtensionId) {
         this.schemaExtensionId = schemaExtensionId;
         return this;
     }
     
+    public StartSchemaExtensionResult(){}
 }

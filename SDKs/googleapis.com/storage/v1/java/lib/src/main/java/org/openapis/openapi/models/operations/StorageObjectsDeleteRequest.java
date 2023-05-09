@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageObjectsDeleteRequest {
@@ -12,6 +13,7 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public StorageObjectsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
     public String bucket;
+
     public StorageObjectsDeleteRequest withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -32,6 +35,7 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public StorageObjectsDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=generation")
     public String generation;
+
     public StorageObjectsDeleteRequest withGeneration(String generation) {
         this.generation = generation;
         return this;
@@ -52,6 +57,7 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationMatch")
     public String ifGenerationMatch;
+
     public StorageObjectsDeleteRequest withIfGenerationMatch(String ifGenerationMatch) {
         this.ifGenerationMatch = ifGenerationMatch;
         return this;
@@ -62,6 +68,7 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationNotMatch")
     public String ifGenerationNotMatch;
+
     public StorageObjectsDeleteRequest withIfGenerationNotMatch(String ifGenerationNotMatch) {
         this.ifGenerationNotMatch = ifGenerationNotMatch;
         return this;
@@ -72,6 +79,7 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationMatch")
     public String ifMetagenerationMatch;
+
     public StorageObjectsDeleteRequest withIfMetagenerationMatch(String ifMetagenerationMatch) {
         this.ifMetagenerationMatch = ifMetagenerationMatch;
         return this;
@@ -82,6 +90,7 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationNotMatch")
     public String ifMetagenerationNotMatch;
+
     public StorageObjectsDeleteRequest withIfMetagenerationNotMatch(String ifMetagenerationNotMatch) {
         this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
         return this;
@@ -92,6 +101,7 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public StorageObjectsDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -102,6 +112,7 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public StorageObjectsDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
     public String object;
+
     public StorageObjectsDeleteRequest withObject(String object) {
         this.object = object;
         return this;
@@ -122,6 +134,7 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public StorageObjectsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public StorageObjectsDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public StorageObjectsDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,6 +167,7 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public StorageObjectsDeleteRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -162,9 +178,14 @@ public class StorageObjectsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userProject")
     public String userProject;
+
     public StorageObjectsDeleteRequest withUserProject(String userProject) {
         this.userProject = userProject;
         return this;
     }
     
+    public StorageObjectsDeleteRequest(@JsonProperty("bucket") String bucket, @JsonProperty("object") String object) {
+        this.bucket = bucket;
+        this.object = object;
+  }
 }

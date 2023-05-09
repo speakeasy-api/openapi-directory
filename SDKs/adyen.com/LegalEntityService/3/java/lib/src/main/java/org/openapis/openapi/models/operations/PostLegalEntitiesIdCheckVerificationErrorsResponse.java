@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostLegalEntitiesIdCheckVerificationErrorsResponse {
     
     public String contentType;
+
     public PostLegalEntitiesIdCheckVerificationErrorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostLegalEntitiesIdCheckVerificationErrorsResponse {
     
     
     public Integer statusCode;
+
     public PostLegalEntitiesIdCheckVerificationErrorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostLegalEntitiesIdCheckVerificationErrorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostLegalEntitiesIdCheckVerificationErrorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostLegalEntitiesIdCheckVerificationErrorsResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostLegalEntitiesIdCheckVerificationErrorsResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -43,9 +48,14 @@ public class PostLegalEntitiesIdCheckVerificationErrorsResponse {
      */
     
     public org.openapis.openapi.models.shared.VerificationErrors verificationErrors;
+
     public PostLegalEntitiesIdCheckVerificationErrorsResponse withVerificationErrors(org.openapis.openapi.models.shared.VerificationErrors verificationErrors) {
         this.verificationErrors = verificationErrors;
         return this;
     }
     
+    public PostLegalEntitiesIdCheckVerificationErrorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

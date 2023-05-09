@@ -12,6 +12,7 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetAllProp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetAllProperties withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetAllProp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetAllProperties withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetAllProp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, Object>[] properties;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetAllProperties withProperties(java.util.Map<String, Object>[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetAllProperties(){}
 }

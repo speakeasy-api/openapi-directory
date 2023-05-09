@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTemplateStepResponse {
@@ -12,6 +13,7 @@ public class GetTemplateStepResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTemplateStepResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetTemplateStepResponse {
     
     
     public String contentType;
+
     public GetTemplateStepResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTemplateStepResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTemplateStepResponse getTemplateStepResponse;
+
     public GetTemplateStepResponse withGetTemplateStepResponse(org.openapis.openapi.models.shared.GetTemplateStepResponse getTemplateStepResponse) {
         this.getTemplateStepResponse = getTemplateStepResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetTemplateStepResponse {
      */
     
     public Object internalServerException;
+
     public GetTemplateStepResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetTemplateStepResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetTemplateStepResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetTemplateStepResponse {
     
     
     public Integer statusCode;
+
     public GetTemplateStepResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetTemplateStepResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTemplateStepResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetTemplateStepResponse {
      */
     
     public Object throttlingException;
+
     public GetTemplateStepResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetTemplateStepResponse {
      */
     
     public Object validationException;
+
     public GetTemplateStepResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetTemplateStepResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

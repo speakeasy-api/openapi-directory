@@ -291,4 +291,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/BucketBySession.java
 lib/src/main/java/org/openapis/openapi/models/shared/BucketByActivity.java
 lib/src/main/java/org/openapis/openapi/models/shared/AggregateBy.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListSessionsResponse.java
+docs/sdk/README.md
+docs/users/README.md
 USAGE.md

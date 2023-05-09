@@ -20,6 +20,7 @@ public class AlarmModelVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelArn")
     public String alarmModelArn;
+
     public AlarmModelVersionSummary withAlarmModelArn(String alarmModelArn) {
         this.alarmModelArn = alarmModelArn;
         return this;
@@ -28,6 +29,7 @@ public class AlarmModelVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelName")
     public String alarmModelName;
+
     public AlarmModelVersionSummary withAlarmModelName(String alarmModelName) {
         this.alarmModelName = alarmModelName;
         return this;
@@ -36,6 +38,7 @@ public class AlarmModelVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelVersion")
     public String alarmModelVersion;
+
     public AlarmModelVersionSummary withAlarmModelVersion(String alarmModelVersion) {
         this.alarmModelVersion = alarmModelVersion;
         return this;
@@ -46,6 +49,7 @@ public class AlarmModelVersionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public AlarmModelVersionSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -56,6 +60,7 @@ public class AlarmModelVersionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public AlarmModelVersionSummary withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -64,6 +69,7 @@ public class AlarmModelVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public AlarmModelVersionSummary withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -72,6 +78,7 @@ public class AlarmModelVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AlarmModelVersionStatusEnum status;
+
     public AlarmModelVersionSummary withStatus(AlarmModelVersionStatusEnum status) {
         this.status = status;
         return this;
@@ -80,9 +87,11 @@ public class AlarmModelVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public AlarmModelVersionSummary withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public AlarmModelVersionSummary(){}
 }

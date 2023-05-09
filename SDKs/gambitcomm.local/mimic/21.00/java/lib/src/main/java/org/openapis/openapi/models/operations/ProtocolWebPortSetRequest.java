@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolWebPortSetRequest {
@@ -12,6 +13,7 @@ public class ProtocolWebPortSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolWebPortSetRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,6 +24,7 @@ public class ProtocolWebPortSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
     public Integer port;
+
     public ProtocolWebPortSetRequest withPort(Integer port) {
         this.port = port;
         return this;
@@ -32,6 +35,7 @@ public class ProtocolWebPortSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=protocol")
     public String protocol;
+
     public ProtocolWebPortSetRequest withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -42,9 +46,16 @@ public class ProtocolWebPortSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public ProtocolWebPortSetRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ProtocolWebPortSetRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("port") Integer port, @JsonProperty("protocol") String protocol, @JsonProperty("version") String version) {
+        this.agentNum = agentNum;
+        this.port = port;
+        this.protocol = protocol;
+        this.version = version;
+  }
 }

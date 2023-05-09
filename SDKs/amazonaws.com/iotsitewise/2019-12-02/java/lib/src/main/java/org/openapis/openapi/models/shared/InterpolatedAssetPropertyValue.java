@@ -15,6 +15,7 @@ public class InterpolatedAssetPropertyValue {
      */
     @JsonProperty("timestamp")
     public TimeInNanos timestamp;
+
     public InterpolatedAssetPropertyValue withTimestamp(TimeInNanos timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -25,9 +26,14 @@ public class InterpolatedAssetPropertyValue {
      */
     @JsonProperty("value")
     public Variant value;
+
     public InterpolatedAssetPropertyValue withValue(Variant value) {
         this.value = value;
         return this;
     }
     
+    public InterpolatedAssetPropertyValue(@JsonProperty("timestamp") TimeInNanos timestamp, @JsonProperty("value") Variant value) {
+        this.timestamp = timestamp;
+        this.value = value;
+  }
 }

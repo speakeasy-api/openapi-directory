@@ -15,6 +15,7 @@ public class GetTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetTagsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -22,6 +23,7 @@ public class GetTagsResponse {
     
     @JsonProperty("ReturnSize")
     public Long returnSize;
+
     public GetTagsResponse withReturnSize(Long returnSize) {
         this.returnSize = returnSize;
         return this;
@@ -29,6 +31,7 @@ public class GetTagsResponse {
     
     @JsonProperty("Tags")
     public String[] tags;
+
     public GetTagsResponse withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -36,9 +39,15 @@ public class GetTagsResponse {
     
     @JsonProperty("TotalSize")
     public Long totalSize;
+
     public GetTagsResponse withTotalSize(Long totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public GetTagsResponse(@JsonProperty("ReturnSize") Long returnSize, @JsonProperty("Tags") String[] tags, @JsonProperty("TotalSize") Long totalSize) {
+        this.returnSize = returnSize;
+        this.tags = tags;
+        this.totalSize = totalSize;
+  }
 }

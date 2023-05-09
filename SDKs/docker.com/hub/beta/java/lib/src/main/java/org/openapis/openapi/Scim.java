@@ -57,13 +57,11 @@ public class Scim {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2Scim20ResourceTypesResponse res = new org.openapis.openapi.models.operations.GetV2Scim20ResourceTypesResponse() {{
+        org.openapis.openapi.models.operations.GetV2Scim20ResourceTypesResponse res = new org.openapis.openapi.models.operations.GetV2Scim20ResourceTypesResponse(contentType, httpRes.statusCode()) {{
             getV2Scim20ResourceTypes200ApplicationScimPlusJsonObject = null;
             getV2Scim20ResourceTypes401ApplicationScimPlusJsonObject = null;
             getV2Scim20ResourceTypes500ApplicationScimPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,14 +111,12 @@ public class Scim {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2Scim20ResourceTypesNameResponse res = new org.openapis.openapi.models.operations.GetV2Scim20ResourceTypesNameResponse() {{
+        org.openapis.openapi.models.operations.GetV2Scim20ResourceTypesNameResponse res = new org.openapis.openapi.models.operations.GetV2Scim20ResourceTypesNameResponse(contentType, httpRes.statusCode()) {{
             scimResourceType = null;
             getV2Scim20ResourceTypesName401ApplicationScimPlusJsonObject = null;
             getV2Scim20ResourceTypesName404ApplicationScimPlusJsonObject = null;
             getV2Scim20ResourceTypesName500ApplicationScimPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,13 +172,11 @@ public class Scim {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2Scim20SchemasResponse res = new org.openapis.openapi.models.operations.GetV2Scim20SchemasResponse() {{
+        org.openapis.openapi.models.operations.GetV2Scim20SchemasResponse res = new org.openapis.openapi.models.operations.GetV2Scim20SchemasResponse(contentType, httpRes.statusCode()) {{
             getV2Scim20Schemas200ApplicationScimPlusJsonObject = null;
             getV2Scim20Schemas401ApplicationScimPlusJsonObject = null;
             getV2Scim20Schemas500ApplicationScimPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -232,14 +226,12 @@ public class Scim {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2Scim20SchemasIdResponse res = new org.openapis.openapi.models.operations.GetV2Scim20SchemasIdResponse() {{
+        org.openapis.openapi.models.operations.GetV2Scim20SchemasIdResponse res = new org.openapis.openapi.models.operations.GetV2Scim20SchemasIdResponse(contentType, httpRes.statusCode()) {{
             scimSchema = null;
             getV2Scim20SchemasId401ApplicationScimPlusJsonObject = null;
             getV2Scim20SchemasId404ApplicationScimPlusJsonObject = null;
             getV2Scim20SchemasId500ApplicationScimPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,13 +287,11 @@ public class Scim {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2Scim20ServiceProviderConfigResponse res = new org.openapis.openapi.models.operations.GetV2Scim20ServiceProviderConfigResponse() {{
+        org.openapis.openapi.models.operations.GetV2Scim20ServiceProviderConfigResponse res = new org.openapis.openapi.models.operations.GetV2Scim20ServiceProviderConfigResponse(contentType, httpRes.statusCode()) {{
             scimServiceProviderConfig = null;
             getV2Scim20ServiceProviderConfig401ApplicationScimPlusJsonObject = null;
             getV2Scim20ServiceProviderConfig500ApplicationScimPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -386,7 +376,7 @@ public class Scim {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2Scim20UsersResponse res = new org.openapis.openapi.models.operations.GetV2Scim20UsersResponse() {{
+        org.openapis.openapi.models.operations.GetV2Scim20UsersResponse res = new org.openapis.openapi.models.operations.GetV2Scim20UsersResponse(contentType, httpRes.statusCode()) {{
             getV2Scim20Users200ApplicationScimPlusJsonObject = null;
             getV2Scim20Users400ApplicationScimPlusJsonObject = null;
             getV2Scim20Users401ApplicationScimPlusJsonObject = null;
@@ -394,8 +384,6 @@ public class Scim {
             getV2Scim20Users404ApplicationScimPlusJsonObject = null;
             getV2Scim20Users500ApplicationScimPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -466,7 +454,7 @@ public class Scim {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2Scim20UsersIdResponse res = new org.openapis.openapi.models.operations.GetV2Scim20UsersIdResponse() {{
+        org.openapis.openapi.models.operations.GetV2Scim20UsersIdResponse res = new org.openapis.openapi.models.operations.GetV2Scim20UsersIdResponse(contentType, httpRes.statusCode()) {{
             scimUser = null;
             getV2Scim20UsersId400ApplicationScimPlusJsonObject = null;
             getV2Scim20UsersId401ApplicationScimPlusJsonObject = null;
@@ -474,8 +462,6 @@ public class Scim {
             getV2Scim20UsersId404ApplicationScimPlusJsonObject = null;
             getV2Scim20UsersId500ApplicationScimPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -552,7 +538,7 @@ public class Scim {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV2Scim20UsersResponse res = new org.openapis.openapi.models.operations.PostV2Scim20UsersResponse() {{
+        org.openapis.openapi.models.operations.PostV2Scim20UsersResponse res = new org.openapis.openapi.models.operations.PostV2Scim20UsersResponse(contentType, httpRes.statusCode()) {{
             scimUser = null;
             postV2Scim20Users400ApplicationScimPlusJsonObject = null;
             postV2Scim20Users401ApplicationScimPlusJsonObject = null;
@@ -561,8 +547,6 @@ public class Scim {
             postV2Scim20Users409ApplicationScimPlusJsonObject = null;
             postV2Scim20Users500ApplicationScimPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -646,7 +630,7 @@ public class Scim {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutV2Scim20UsersIdResponse res = new org.openapis.openapi.models.operations.PutV2Scim20UsersIdResponse() {{
+        org.openapis.openapi.models.operations.PutV2Scim20UsersIdResponse res = new org.openapis.openapi.models.operations.PutV2Scim20UsersIdResponse(contentType, httpRes.statusCode()) {{
             scimUser = null;
             putV2Scim20UsersId400ApplicationScimPlusJsonObject = null;
             putV2Scim20UsersId401ApplicationScimPlusJsonObject = null;
@@ -655,8 +639,6 @@ public class Scim {
             putV2Scim20UsersId409ApplicationScimPlusJsonObject = null;
             putV2Scim20UsersId500ApplicationScimPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

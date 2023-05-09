@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLoadBalancerAttributeResponse {
@@ -12,6 +13,7 @@ public class UpdateLoadBalancerAttributeResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateLoadBalancerAttributeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateLoadBalancerAttributeResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public UpdateLoadBalancerAttributeResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLoadBalancerAttributeResponse {
     
     
     public String contentType;
+
     public UpdateLoadBalancerAttributeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateLoadBalancerAttributeResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateLoadBalancerAttributeResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateLoadBalancerAttributeResponse {
      */
     
     public Object notFoundException;
+
     public UpdateLoadBalancerAttributeResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateLoadBalancerAttributeResponse {
      */
     
     public Object operationFailureException;
+
     public UpdateLoadBalancerAttributeResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateLoadBalancerAttributeResponse {
     
     
     public Integer statusCode;
+
     public UpdateLoadBalancerAttributeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateLoadBalancerAttributeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLoadBalancerAttributeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateLoadBalancerAttributeResponse {
      */
     
     public Object serviceException;
+
     public UpdateLoadBalancerAttributeResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateLoadBalancerAttributeResponse {
      */
     
     public Object unauthenticatedException;
+
     public UpdateLoadBalancerAttributeResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateLoadBalancerAttributeResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateLoadBalancerAttributeResult updateLoadBalancerAttributeResult;
+
     public UpdateLoadBalancerAttributeResponse withUpdateLoadBalancerAttributeResult(org.openapis.openapi.models.shared.UpdateLoadBalancerAttributeResult updateLoadBalancerAttributeResult) {
         this.updateLoadBalancerAttributeResult = updateLoadBalancerAttributeResult;
         return this;
     }
     
+    public UpdateLoadBalancerAttributeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

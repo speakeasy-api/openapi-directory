@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
 
@@ -13,19 +12,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetRequest req = new GetRequest() {{
-                xMarketId = "corrupti";
-                xShopperId = "provident";
-                orderId = "distinctio";
-            }}            
+            GetRequest req = new GetRequest("corrupti") {{
+                xMarketId = "provident";
+                xShopperId = "distinctio";
+            }};            
 
             GetResponse res = sdk.v1.get(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.BaggageTripAndContactSecurity;
 import org.openapis.openapi.models.operations.BaggageTripAndContactRequest;
 import org.openapis.openapi.models.operations.BaggageTripAndContactResponse;
+import org.openapis.openapi.models.operations.BaggageTripAndContactSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,21 +26,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            BaggageTripAndContactRequest req = new BaggageTripAndContactRequest() {{
-                accept = "corrupti";
-                searchID = "provident";
-            }}            
+            BaggageTripAndContactRequest req = new BaggageTripAndContactRequest("corrupti", "provident");            
 
-            BaggageTripAndContactResponse res = sdk.baggage.baggageTripAndContact(req, new BaggageTripAndContactSecurity() {{
+            BaggageTripAndContactResponse res = sdk.baggage.baggageTripAndContact(req, new BaggageTripAndContactSecurity("distinctio") {{
                 auth = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.baggageTripAndContact200ApplicationJSONString.isPresent()) {
+            if (res.baggageTripAndContact200ApplicationJSONString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -49,39 +47,39 @@ public class Application {
 ## Available Resources and Operations
 
 
-### baggage
+### [baggage](docs/baggage/README.md)
 
-* `baggageTripAndContact` - Baggage Trip and Contact
+* [baggageTripAndContact](docs/baggage/README.md#baggagetripandcontact) - Baggage Trip and Contact
 
-### offers
+### [offers](docs/offers/README.md)
 
-* `allFares` - All Fares
-* `bestFares` - Best Fares
-* `deepLinks` - Deep Links
-* `fares` - Fares
-* `faresSubscriptions` - Fares Subscriptions
-* `lhDeepLinksFFP` - LH Deep Links - FFP
-* `lhDeepLinksITCO` - LH Deep Links - ITCO
-* `lowestFares` - Lowest Fares
-* `ondRoute` - OND Route
-* `ondStatus` - OND Status
-* `topOND` - Top OND
+* [allFares](docs/offers/README.md#allfares) - All Fares
+* [bestFares](docs/offers/README.md#bestfares) - Best Fares
+* [deepLinks](docs/offers/README.md#deeplinks) - Deep Links
+* [fares](docs/offers/README.md#fares) - Fares
+* [faresSubscriptions](docs/offers/README.md#faressubscriptions) - Fares Subscriptions
+* [lhDeepLinksFFP](docs/offers/README.md#lhdeeplinksffp) - LH Deep Links - FFP
+* [lhDeepLinksITCO](docs/offers/README.md#lhdeeplinksitco) - LH Deep Links - ITCO
+* [lowestFares](docs/offers/README.md#lowestfares) - Lowest Fares
+* [ondRoute](docs/offers/README.md#ondroute) - OND Route
+* [ondStatus](docs/offers/README.md#ondstatus) - OND Status
+* [topOND](docs/offers/README.md#topond) - Top OND
 
-### orders
+### [orders](docs/orders/README.md)
 
-* `orders` - Orders
+* [orders](docs/orders/README.md#orders) - Orders
 
-### preflight
+### [preflight](docs/preflight/README.md)
 
-* `autoCheckIn` - Auto Check-In
+* [autoCheckIn](docs/preflight/README.md#autocheckin) - Auto Check-In
 
-### promotions
+### [promotions](docs/promotions/README.md)
 
-* `priceOffers` - Price Offers
+* [priceOffers](docs/promotions/README.md#priceoffers) - Price Offers
 
-### referenceData
+### [referenceData](docs/referencedata/README.md)
 
-* `seatDetails` - Seat Details
+* [seatDetails](docs/referencedata/README.md#seatdetails) - Seat Details
 <!-- End SDK Available Operations -->
 
 ### Maturity

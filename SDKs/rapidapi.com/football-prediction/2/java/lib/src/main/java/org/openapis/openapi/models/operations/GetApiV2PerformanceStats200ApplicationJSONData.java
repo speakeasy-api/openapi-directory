@@ -12,6 +12,7 @@ public class GetApiV2PerformanceStats200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accuracy")
     public GetApiV2PerformanceStats200ApplicationJSONDataAccuracy accuracy;
+
     public GetApiV2PerformanceStats200ApplicationJSONData withAccuracy(GetApiV2PerformanceStats200ApplicationJSONDataAccuracy accuracy) {
         this.accuracy = accuracy;
         return this;
@@ -20,6 +21,7 @@ public class GetApiV2PerformanceStats200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public GetApiV2PerformanceStats200ApplicationJSONDataDetails details;
+
     public GetApiV2PerformanceStats200ApplicationJSONData withDetails(GetApiV2PerformanceStats200ApplicationJSONDataDetails details) {
         this.details = details;
         return this;
@@ -28,9 +30,11 @@ public class GetApiV2PerformanceStats200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("market")
     public String market;
+
     public GetApiV2PerformanceStats200ApplicationJSONData withMarket(String market) {
         this.market = market;
         return this;
     }
     
+    public GetApiV2PerformanceStats200ApplicationJSONData(){}
 }

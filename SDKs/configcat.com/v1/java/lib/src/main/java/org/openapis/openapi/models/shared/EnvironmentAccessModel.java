@@ -12,6 +12,7 @@ public class EnvironmentAccessModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public EnvironmentAccessModel withColor(String color) {
         this.color = color;
         return this;
@@ -20,6 +21,7 @@ public class EnvironmentAccessModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EnvironmentAccessModel withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class EnvironmentAccessModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentAccessType")
     public EnvironmentAccessTypeEnum environmentAccessType;
+
     public EnvironmentAccessModel withEnvironmentAccessType(EnvironmentAccessTypeEnum environmentAccessType) {
         this.environmentAccessType = environmentAccessType;
         return this;
@@ -36,6 +39,7 @@ public class EnvironmentAccessModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentId")
     public String environmentId;
+
     public EnvironmentAccessModel withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -44,6 +48,7 @@ public class EnvironmentAccessModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnvironmentAccessModel withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class EnvironmentAccessModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public EnvironmentAccessModel withOrder(Integer order) {
         this.order = order;
         return this;
@@ -60,9 +66,11 @@ public class EnvironmentAccessModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonRequired")
     public Boolean reasonRequired;
+
     public EnvironmentAccessModel withReasonRequired(Boolean reasonRequired) {
         this.reasonRequired = reasonRequired;
         return this;
     }
     
+    public EnvironmentAccessModel(){}
 }

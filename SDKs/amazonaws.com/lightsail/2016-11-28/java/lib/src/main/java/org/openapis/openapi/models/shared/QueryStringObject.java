@@ -15,6 +15,7 @@ public class QueryStringObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("option")
     public Boolean option;
+
     public QueryStringObject withOption(Boolean option) {
         this.option = option;
         return this;
@@ -23,9 +24,11 @@ public class QueryStringObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryStringsAllowList")
     public String[] queryStringsAllowList;
+
     public QueryStringObject withQueryStringsAllowList(String[] queryStringsAllowList) {
         this.queryStringsAllowList = queryStringsAllowList;
         return this;
     }
     
+    public QueryStringObject(){}
 }

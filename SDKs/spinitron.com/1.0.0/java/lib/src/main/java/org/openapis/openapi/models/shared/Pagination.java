@@ -12,6 +12,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentPage")
     public Long currentPage;
+
     public Pagination withCurrentPage(Long currentPage) {
         this.currentPage = currentPage;
         return this;
@@ -20,6 +21,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageCount")
     public Long pageCount;
+
     public Pagination withPageCount(Long pageCount) {
         this.pageCount = pageCount;
         return this;
@@ -28,6 +30,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perPage")
     public Long perPage;
+
     public Pagination withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -36,9 +39,11 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Long totalCount;
+
     public Pagination withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public Pagination(){}
 }

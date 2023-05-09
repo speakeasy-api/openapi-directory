@@ -15,6 +15,7 @@ public class ListRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public ListRecommendationsRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class ListRecommendationsRequestBody {
      */
     @JsonProperty("InsightId")
     public String insightId;
+
     public ListRecommendationsRequestBody withInsightId(String insightId) {
         this.insightId = insightId;
         return this;
@@ -36,6 +38,7 @@ public class ListRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Locale")
     public ListRecommendationsRequestBodyLocaleEnum locale;
+
     public ListRecommendationsRequestBody withLocale(ListRecommendationsRequestBodyLocaleEnum locale) {
         this.locale = locale;
         return this;
@@ -47,9 +50,13 @@ public class ListRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRecommendationsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListRecommendationsRequestBody(@JsonProperty("InsightId") String insightId) {
+        this.insightId = insightId;
+  }
 }

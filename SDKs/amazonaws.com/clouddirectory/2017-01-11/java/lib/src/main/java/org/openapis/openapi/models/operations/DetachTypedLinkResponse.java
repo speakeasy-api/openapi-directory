@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetachTypedLinkResponse {
@@ -12,6 +13,7 @@ public class DetachTypedLinkResponse {
      */
     
     public Object accessDeniedException;
+
     public DetachTypedLinkResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DetachTypedLinkResponse {
     
     
     public String contentType;
+
     public DetachTypedLinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DetachTypedLinkResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public DetachTypedLinkResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -39,6 +43,7 @@ public class DetachTypedLinkResponse {
      */
     
     public Object facetValidationException;
+
     public DetachTypedLinkResponse withFacetValidationException(Object facetValidationException) {
         this.facetValidationException = facetValidationException;
         return this;
@@ -49,6 +54,7 @@ public class DetachTypedLinkResponse {
      */
     
     public Object internalServiceException;
+
     public DetachTypedLinkResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DetachTypedLinkResponse {
      */
     
     public Object invalidArnException;
+
     public DetachTypedLinkResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class DetachTypedLinkResponse {
      */
     
     public Object limitExceededException;
+
     public DetachTypedLinkResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class DetachTypedLinkResponse {
     
     
     public Integer statusCode;
+
     public DetachTypedLinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DetachTypedLinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetachTypedLinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DetachTypedLinkResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DetachTypedLinkResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class DetachTypedLinkResponse {
      */
     
     public Object retryableConflictException;
+
     public DetachTypedLinkResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class DetachTypedLinkResponse {
      */
     
     public Object validationException;
+
     public DetachTypedLinkResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DetachTypedLinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

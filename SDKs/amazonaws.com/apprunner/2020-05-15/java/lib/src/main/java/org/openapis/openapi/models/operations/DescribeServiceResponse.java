@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeServiceResponse {
     
     public String contentType;
+
     public DescribeServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeServiceResponse describeServiceResponse;
+
     public DescribeServiceResponse withDescribeServiceResponse(org.openapis.openapi.models.shared.DescribeServiceResponse describeServiceResponse) {
         this.describeServiceResponse = describeServiceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeServiceResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DescribeServiceResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeServiceResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeServiceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeServiceResponse {
     
     
     public Integer statusCode;
+
     public DescribeServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeServiceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeServiceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

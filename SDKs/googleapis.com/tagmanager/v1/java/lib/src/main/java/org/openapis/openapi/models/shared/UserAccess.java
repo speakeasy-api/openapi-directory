@@ -18,6 +18,7 @@ public class UserAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountAccess")
     public AccountAccess accountAccess;
+
     public UserAccess withAccountAccess(AccountAccess accountAccess) {
         this.accountAccess = accountAccess;
         return this;
@@ -29,6 +30,7 @@ public class UserAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public UserAccess withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -40,6 +42,7 @@ public class UserAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerAccess")
     public ContainerAccess[] containerAccess;
+
     public UserAccess withContainerAccess(ContainerAccess[] containerAccess) {
         this.containerAccess = containerAccess;
         return this;
@@ -51,6 +54,7 @@ public class UserAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public UserAccess withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -62,9 +66,11 @@ public class UserAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionId")
     public String permissionId;
+
     public UserAccess withPermissionId(String permissionId) {
         this.permissionId = permissionId;
         return this;
     }
     
+    public UserAccess(){}
 }

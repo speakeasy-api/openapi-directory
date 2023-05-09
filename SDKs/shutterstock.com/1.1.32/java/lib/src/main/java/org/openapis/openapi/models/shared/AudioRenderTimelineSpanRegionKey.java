@@ -18,6 +18,7 @@ public class AudioRenderTimelineSpanRegionKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tonic_accidental")
     public AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum tonicAccidental;
+
     public AudioRenderTimelineSpanRegionKey withTonicAccidental(AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum tonicAccidental) {
         this.tonicAccidental = tonicAccidental;
         return this;
@@ -29,6 +30,7 @@ public class AudioRenderTimelineSpanRegionKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tonic_note")
     public AudioRenderTimelineSpanRegionKeyTonicNoteEnum tonicNote;
+
     public AudioRenderTimelineSpanRegionKey withTonicNote(AudioRenderTimelineSpanRegionKeyTonicNoteEnum tonicNote) {
         this.tonicNote = tonicNote;
         return this;
@@ -40,9 +42,11 @@ public class AudioRenderTimelineSpanRegionKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tonic_quality")
     public AudioRenderTimelineSpanRegionKeyTonicQualityEnum tonicQuality;
+
     public AudioRenderTimelineSpanRegionKey withTonicQuality(AudioRenderTimelineSpanRegionKeyTonicQualityEnum tonicQuality) {
         this.tonicQuality = tonicQuality;
         return this;
     }
     
+    public AudioRenderTimelineSpanRegionKey(){}
 }

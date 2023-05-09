@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartAssociationsOnceResponse {
@@ -12,6 +13,7 @@ public class StartAssociationsOnceResponse {
      */
     
     public Object associationDoesNotExist;
+
     public StartAssociationsOnceResponse withAssociationDoesNotExist(Object associationDoesNotExist) {
         this.associationDoesNotExist = associationDoesNotExist;
         return this;
@@ -19,6 +21,7 @@ public class StartAssociationsOnceResponse {
     
     
     public String contentType;
+
     public StartAssociationsOnceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartAssociationsOnceResponse {
      */
     
     public Object invalidAssociation;
+
     public StartAssociationsOnceResponse withInvalidAssociation(Object invalidAssociation) {
         this.invalidAssociation = invalidAssociation;
         return this;
@@ -39,6 +43,7 @@ public class StartAssociationsOnceResponse {
      */
     
     public java.util.Map<String, Object> startAssociationsOnceResult;
+
     public StartAssociationsOnceResponse withStartAssociationsOnceResult(java.util.Map<String, Object> startAssociationsOnceResult) {
         this.startAssociationsOnceResult = startAssociationsOnceResult;
         return this;
@@ -46,6 +51,7 @@ public class StartAssociationsOnceResponse {
     
     
     public Integer statusCode;
+
     public StartAssociationsOnceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class StartAssociationsOnceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartAssociationsOnceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartAssociationsOnceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

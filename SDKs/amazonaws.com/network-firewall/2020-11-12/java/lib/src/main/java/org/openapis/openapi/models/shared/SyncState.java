@@ -15,6 +15,7 @@ public class SyncState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attachment")
     public Attachment attachment;
+
     public SyncState withAttachment(Attachment attachment) {
         this.attachment = attachment;
         return this;
@@ -23,9 +24,11 @@ public class SyncState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Config")
     public java.util.Map<String, PerObjectStatus> config;
+
     public SyncState withConfig(java.util.Map<String, PerObjectStatus> config) {
         this.config = config;
         return this;
     }
     
+    public SyncState(){}
 }

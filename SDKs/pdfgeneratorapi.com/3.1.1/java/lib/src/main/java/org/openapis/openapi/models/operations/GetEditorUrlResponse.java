@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEditorUrlResponse {
     
     public String contentType;
+
     public GetEditorUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetEditorUrlResponse {
     
     
     public Integer statusCode;
+
     public GetEditorUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetEditorUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEditorUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetEditorUrlResponse {
      */
     
     public GetEditorUrl200ApplicationJSON getEditorUrl200ApplicationJSONObject;
+
     public GetEditorUrlResponse withGetEditorUrl200ApplicationJSONObject(GetEditorUrl200ApplicationJSON getEditorUrl200ApplicationJSONObject) {
         this.getEditorUrl200ApplicationJSONObject = getEditorUrl200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetEditorUrlResponse {
      */
     
     public GetEditorUrl401ApplicationJSON getEditorUrl401ApplicationJSONObject;
+
     public GetEditorUrlResponse withGetEditorUrl401ApplicationJSONObject(GetEditorUrl401ApplicationJSON getEditorUrl401ApplicationJSONObject) {
         this.getEditorUrl401ApplicationJSONObject = getEditorUrl401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetEditorUrlResponse {
      */
     
     public GetEditorUrl403ApplicationJSON getEditorUrl403ApplicationJSONObject;
+
     public GetEditorUrlResponse withGetEditorUrl403ApplicationJSONObject(GetEditorUrl403ApplicationJSON getEditorUrl403ApplicationJSONObject) {
         this.getEditorUrl403ApplicationJSONObject = getEditorUrl403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetEditorUrlResponse {
      */
     
     public GetEditorUrl404ApplicationJSON getEditorUrl404ApplicationJSONObject;
+
     public GetEditorUrlResponse withGetEditorUrl404ApplicationJSONObject(GetEditorUrl404ApplicationJSON getEditorUrl404ApplicationJSONObject) {
         this.getEditorUrl404ApplicationJSONObject = getEditorUrl404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetEditorUrlResponse {
      */
     
     public GetEditorUrl422ApplicationJSON getEditorUrl422ApplicationJSONObject;
+
     public GetEditorUrlResponse withGetEditorUrl422ApplicationJSONObject(GetEditorUrl422ApplicationJSON getEditorUrl422ApplicationJSONObject) {
         this.getEditorUrl422ApplicationJSONObject = getEditorUrl422ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class GetEditorUrlResponse {
      */
     
     public GetEditorUrl500ApplicationJSON getEditorUrl500ApplicationJSONObject;
+
     public GetEditorUrlResponse withGetEditorUrl500ApplicationJSONObject(GetEditorUrl500ApplicationJSON getEditorUrl500ApplicationJSONObject) {
         this.getEditorUrl500ApplicationJSONObject = getEditorUrl500ApplicationJSONObject;
         return this;
     }
     
+    public GetEditorUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

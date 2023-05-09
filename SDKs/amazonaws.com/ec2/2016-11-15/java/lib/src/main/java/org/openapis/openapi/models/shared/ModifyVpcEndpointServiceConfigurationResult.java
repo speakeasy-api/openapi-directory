@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyVpcEndpointServiceConfigurationResult {
     
     public Boolean return_;
+
     public ModifyVpcEndpointServiceConfigurationResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
     }
     
+    public ModifyVpcEndpointServiceConfigurationResult(){}
 }

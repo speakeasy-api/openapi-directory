@@ -20,6 +20,7 @@ public class ProactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyReportedTimeRange")
     public AnomalyReportedTimeRange anomalyReportedTimeRange;
+
     public ProactiveAnomaly withAnomalyReportedTimeRange(AnomalyReportedTimeRange anomalyReportedTimeRange) {
         this.anomalyReportedTimeRange = anomalyReportedTimeRange;
         return this;
@@ -28,6 +29,7 @@ public class ProactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyResources")
     public AnomalyResource[] anomalyResources;
+
     public ProactiveAnomaly withAnomalyResources(AnomalyResource[] anomalyResources) {
         this.anomalyResources = anomalyResources;
         return this;
@@ -39,6 +41,7 @@ public class ProactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyTimeRange")
     public AnomalyTimeRange anomalyTimeRange;
+
     public ProactiveAnomaly withAnomalyTimeRange(AnomalyTimeRange anomalyTimeRange) {
         this.anomalyTimeRange = anomalyTimeRange;
         return this;
@@ -47,6 +50,7 @@ public class ProactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociatedInsightId")
     public String associatedInsightId;
+
     public ProactiveAnomaly withAssociatedInsightId(String associatedInsightId) {
         this.associatedInsightId = associatedInsightId;
         return this;
@@ -55,6 +59,7 @@ public class ProactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ProactiveAnomaly withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class ProactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ProactiveAnomaly withId(String id) {
         this.id = id;
         return this;
@@ -71,6 +77,7 @@ public class ProactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Double limit;
+
     public ProactiveAnomaly withLimit(Double limit) {
         this.limit = limit;
         return this;
@@ -82,6 +89,7 @@ public class ProactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictionTimeRange")
     public PredictionTimeRange predictionTimeRange;
+
     public ProactiveAnomaly withPredictionTimeRange(PredictionTimeRange predictionTimeRange) {
         this.predictionTimeRange = predictionTimeRange;
         return this;
@@ -93,6 +101,7 @@ public class ProactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceCollection")
     public ResourceCollection resourceCollection;
+
     public ProactiveAnomaly withResourceCollection(ResourceCollection resourceCollection) {
         this.resourceCollection = resourceCollection;
         return this;
@@ -101,6 +110,7 @@ public class ProactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public AnomalySeverityEnum severity;
+
     public ProactiveAnomaly withSeverity(AnomalySeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -109,6 +119,7 @@ public class ProactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceDetails")
     public AnomalySourceDetails sourceDetails;
+
     public ProactiveAnomaly withSourceDetails(AnomalySourceDetails sourceDetails) {
         this.sourceDetails = sourceDetails;
         return this;
@@ -117,6 +128,7 @@ public class ProactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceMetadata")
     public AnomalySourceMetadata sourceMetadata;
+
     public ProactiveAnomaly withSourceMetadata(AnomalySourceMetadata sourceMetadata) {
         this.sourceMetadata = sourceMetadata;
         return this;
@@ -125,6 +137,7 @@ public class ProactiveAnomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AnomalyStatusEnum status;
+
     public ProactiveAnomaly withStatus(AnomalyStatusEnum status) {
         this.status = status;
         return this;
@@ -135,9 +148,11 @@ public class ProactiveAnomaly {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public ProactiveAnomaly withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ProactiveAnomaly(){}
 }

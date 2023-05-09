@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDashboardResponse {
     
     public String contentType;
+
     public DescribeDashboardResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDashboardResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDashboardResponse describeDashboardResponse;
+
     public DescribeDashboardResponse withDescribeDashboardResponse(org.openapis.openapi.models.shared.DescribeDashboardResponse describeDashboardResponse) {
         this.describeDashboardResponse = describeDashboardResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDashboardResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeDashboardResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDashboardResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeDashboardResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeDashboardResponse {
     
     
     public Integer statusCode;
+
     public DescribeDashboardResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeDashboardResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDashboardResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeDashboardResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDashboardResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeDashboardResponse {
      */
     
     public Object throttlingException;
+
     public DescribeDashboardResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeDashboardResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

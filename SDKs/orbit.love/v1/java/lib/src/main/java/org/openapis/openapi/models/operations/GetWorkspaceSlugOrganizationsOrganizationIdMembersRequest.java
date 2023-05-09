@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugOrganizationsOrganizationIdMembersRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=items")
     public GetWorkspaceSlugOrganizationsOrganizationIdMembersItemsEnum items;
+
     public GetWorkspaceSlugOrganizationsOrganizationIdMembersRequest withItems(GetWorkspaceSlugOrganizationsOrganizationIdMembersItemsEnum items) {
         this.items = items;
         return this;
@@ -16,6 +18,7 @@ public class GetWorkspaceSlugOrganizationsOrganizationIdMembersRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organization_id")
     public String organizationId;
+
     public GetWorkspaceSlugOrganizationsOrganizationIdMembersRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -23,6 +26,7 @@ public class GetWorkspaceSlugOrganizationsOrganizationIdMembersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetWorkspaceSlugOrganizationsOrganizationIdMembersRequest withPage(String page) {
         this.page = page;
         return this;
@@ -30,9 +34,14 @@ public class GetWorkspaceSlugOrganizationsOrganizationIdMembersRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
     public String workspaceSlug;
+
     public GetWorkspaceSlugOrganizationsOrganizationIdMembersRequest withWorkspaceSlug(String workspaceSlug) {
         this.workspaceSlug = workspaceSlug;
         return this;
     }
     
+    public GetWorkspaceSlugOrganizationsOrganizationIdMembersRequest(@JsonProperty("organization_id") String organizationId, @JsonProperty("workspace_slug") String workspaceSlug) {
+        this.organizationId = organizationId;
+        this.workspaceSlug = workspaceSlug;
+  }
 }

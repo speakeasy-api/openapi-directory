@@ -15,6 +15,7 @@ public class ChannelCatalogListLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCatalogExclusionFilterOperatorLov")
     public BeezUPCommonLOVLink3 channelCatalogExclusionFilterOperatorLov;
+
     public ChannelCatalogListLovLinks withChannelCatalogExclusionFilterOperatorLov(BeezUPCommonLOVLink3 channelCatalogExclusionFilterOperatorLov) {
         this.channelCatalogExclusionFilterOperatorLov = channelCatalogExclusionFilterOperatorLov;
         return this;
@@ -26,9 +27,11 @@ public class ChannelCatalogListLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCatalogExportCacheStatusLov")
     public BeezUPCommonLOVLink3 channelCatalogExportCacheStatusLov;
+
     public ChannelCatalogListLovLinks withChannelCatalogExportCacheStatusLov(BeezUPCommonLOVLink3 channelCatalogExportCacheStatusLov) {
         this.channelCatalogExportCacheStatusLov = channelCatalogExportCacheStatusLov;
         return this;
     }
     
+    public ChannelCatalogListLovLinks(){}
 }

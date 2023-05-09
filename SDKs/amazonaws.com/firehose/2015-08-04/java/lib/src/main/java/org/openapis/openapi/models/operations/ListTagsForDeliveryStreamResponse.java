@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTagsForDeliveryStreamResponse {
     
     public String contentType;
+
     public ListTagsForDeliveryStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTagsForDeliveryStreamResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListTagsForDeliveryStreamResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -29,6 +32,7 @@ public class ListTagsForDeliveryStreamResponse {
      */
     
     public Object limitExceededException;
+
     public ListTagsForDeliveryStreamResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class ListTagsForDeliveryStreamResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTagsForDeliveryStreamOutput listTagsForDeliveryStreamOutput;
+
     public ListTagsForDeliveryStreamResponse withListTagsForDeliveryStreamOutput(org.openapis.openapi.models.shared.ListTagsForDeliveryStreamOutput listTagsForDeliveryStreamOutput) {
         this.listTagsForDeliveryStreamOutput = listTagsForDeliveryStreamOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListTagsForDeliveryStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTagsForDeliveryStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListTagsForDeliveryStreamResponse {
     
     
     public Integer statusCode;
+
     public ListTagsForDeliveryStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListTagsForDeliveryStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTagsForDeliveryStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTagsForDeliveryStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

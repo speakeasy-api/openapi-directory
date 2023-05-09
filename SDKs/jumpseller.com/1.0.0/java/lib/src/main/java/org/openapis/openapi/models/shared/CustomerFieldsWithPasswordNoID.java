@@ -12,6 +12,7 @@ public class CustomerFieldsWithPasswordNoID {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     public BillingAddress billingAddress;
+
     public CustomerFieldsWithPasswordNoID withBillingAddress(BillingAddress billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -20,6 +21,7 @@ public class CustomerFieldsWithPasswordNoID {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_category")
     public Long[] customerCategory;
+
     public CustomerFieldsWithPasswordNoID withCustomerCategory(Long[] customerCategory) {
         this.customerCategory = customerCategory;
         return this;
@@ -31,6 +33,7 @@ public class CustomerFieldsWithPasswordNoID {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public CustomerFieldsWithPasswordNoID withEmail(String email) {
         this.email = email;
         return this;
@@ -42,6 +45,7 @@ public class CustomerFieldsWithPasswordNoID {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public CustomerFieldsWithPasswordNoID withPassword(String password) {
         this.password = password;
         return this;
@@ -53,6 +57,7 @@ public class CustomerFieldsWithPasswordNoID {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public CustomerFieldsWithPasswordNoID withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -61,6 +66,7 @@ public class CustomerFieldsWithPasswordNoID {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     public ShippingAddress shippingAddress;
+
     public CustomerFieldsWithPasswordNoID withShippingAddress(ShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -72,9 +78,11 @@ public class CustomerFieldsWithPasswordNoID {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CustomerFieldsWithPasswordNoIDStatusEnum status;
+
     public CustomerFieldsWithPasswordNoID withStatus(CustomerFieldsWithPasswordNoIDStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CustomerFieldsWithPasswordNoID(){}
 }

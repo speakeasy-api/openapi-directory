@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateDataSetResponse {
     
     public String contentType;
+
     public GenerateDataSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GenerateDataSetResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateDataSetResult generateDataSetResult;
+
     public GenerateDataSetResponse withGenerateDataSetResult(org.openapis.openapi.models.shared.GenerateDataSetResult generateDataSetResult) {
         this.generateDataSetResult = generateDataSetResult;
         return this;
@@ -29,6 +32,7 @@ public class GenerateDataSetResponse {
      */
     
     public Object marketplaceCommerceAnalyticsException;
+
     public GenerateDataSetResponse withMarketplaceCommerceAnalyticsException(Object marketplaceCommerceAnalyticsException) {
         this.marketplaceCommerceAnalyticsException = marketplaceCommerceAnalyticsException;
         return this;
@@ -36,6 +40,7 @@ public class GenerateDataSetResponse {
     
     
     public Integer statusCode;
+
     public GenerateDataSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GenerateDataSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateDataSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GenerateDataSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

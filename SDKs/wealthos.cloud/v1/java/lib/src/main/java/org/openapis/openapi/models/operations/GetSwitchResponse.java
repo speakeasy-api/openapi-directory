@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSwitchResponse {
     
     public String contentType;
+
     public GetSwitchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSwitchResponse {
     
     
     public Integer statusCode;
+
     public GetSwitchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetSwitchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSwitchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetSwitchResponse {
      */
     
     public GetSwitch200ApplicationJSON getSwitch200ApplicationJSONObject;
+
     public GetSwitchResponse withGetSwitch200ApplicationJSONObject(GetSwitch200ApplicationJSON getSwitch200ApplicationJSONObject) {
         this.getSwitch200ApplicationJSONObject = getSwitch200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetSwitchResponse {
      */
     
     public GetSwitch400ApplicationJSON getSwitch400ApplicationJSONObject;
+
     public GetSwitchResponse withGetSwitch400ApplicationJSONObject(GetSwitch400ApplicationJSON getSwitch400ApplicationJSONObject) {
         this.getSwitch400ApplicationJSONObject = getSwitch400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetSwitchResponse {
      */
     
     public GetSwitch401ApplicationJSON getSwitch401ApplicationJSONObject;
+
     public GetSwitchResponse withGetSwitch401ApplicationJSONObject(GetSwitch401ApplicationJSON getSwitch401ApplicationJSONObject) {
         this.getSwitch401ApplicationJSONObject = getSwitch401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetSwitchResponse {
      */
     
     public GetSwitch403ApplicationJSON getSwitch403ApplicationJSONObject;
+
     public GetSwitchResponse withGetSwitch403ApplicationJSONObject(GetSwitch403ApplicationJSON getSwitch403ApplicationJSONObject) {
         this.getSwitch403ApplicationJSONObject = getSwitch403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetSwitchResponse {
      */
     
     public GetSwitch404ApplicationJSON getSwitch404ApplicationJSONObject;
+
     public GetSwitchResponse withGetSwitch404ApplicationJSONObject(GetSwitch404ApplicationJSON getSwitch404ApplicationJSONObject) {
         this.getSwitch404ApplicationJSONObject = getSwitch404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class GetSwitchResponse {
      */
     
     public GetSwitch409ApplicationJSON getSwitch409ApplicationJSONObject;
+
     public GetSwitchResponse withGetSwitch409ApplicationJSONObject(GetSwitch409ApplicationJSON getSwitch409ApplicationJSONObject) {
         this.getSwitch409ApplicationJSONObject = getSwitch409ApplicationJSONObject;
         return this;
@@ -93,6 +103,7 @@ public class GetSwitchResponse {
      */
     
     public GetSwitch429ApplicationJSON getSwitch429ApplicationJSONObject;
+
     public GetSwitchResponse withGetSwitch429ApplicationJSONObject(GetSwitch429ApplicationJSON getSwitch429ApplicationJSONObject) {
         this.getSwitch429ApplicationJSONObject = getSwitch429ApplicationJSONObject;
         return this;
@@ -103,9 +114,14 @@ public class GetSwitchResponse {
      */
     
     public GetSwitch500ApplicationJSON getSwitch500ApplicationJSONObject;
+
     public GetSwitchResponse withGetSwitch500ApplicationJSONObject(GetSwitch500ApplicationJSON getSwitch500ApplicationJSONObject) {
         this.getSwitch500ApplicationJSONObject = getSwitch500ApplicationJSONObject;
         return this;
     }
     
+    public GetSwitchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

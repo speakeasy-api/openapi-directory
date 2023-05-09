@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePaymentMultipartResponse {
     
     public String contentType;
+
     public CreatePaymentMultipartResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePaymentMultipartResponse {
      */
     
     public org.openapis.openapi.models.shared.PaymentWrite paymentWrite;
+
     public CreatePaymentMultipartResponse withPaymentWrite(org.openapis.openapi.models.shared.PaymentWrite paymentWrite) {
         this.paymentWrite = paymentWrite;
         return this;
@@ -26,6 +29,7 @@ public class CreatePaymentMultipartResponse {
     
     
     public Integer statusCode;
+
     public CreatePaymentMultipartResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreatePaymentMultipartResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePaymentMultipartResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreatePaymentMultipartResponse {
      */
     
     public java.util.Map<String, Object> createPaymentMultipart400ApplicationJSONObject;
+
     public CreatePaymentMultipartResponse withCreatePaymentMultipart400ApplicationJSONObject(java.util.Map<String, Object> createPaymentMultipart400ApplicationJSONObject) {
         this.createPaymentMultipart400ApplicationJSONObject = createPaymentMultipart400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreatePaymentMultipartResponse {
      */
     
     public java.util.Map<String, Object> createPaymentMultipart401ApplicationJSONObject;
+
     public CreatePaymentMultipartResponse withCreatePaymentMultipart401ApplicationJSONObject(java.util.Map<String, Object> createPaymentMultipart401ApplicationJSONObject) {
         this.createPaymentMultipart401ApplicationJSONObject = createPaymentMultipart401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreatePaymentMultipartResponse {
      */
     
     public java.util.Map<String, Object> createPaymentMultipart403ApplicationJSONObject;
+
     public CreatePaymentMultipartResponse withCreatePaymentMultipart403ApplicationJSONObject(java.util.Map<String, Object> createPaymentMultipart403ApplicationJSONObject) {
         this.createPaymentMultipart403ApplicationJSONObject = createPaymentMultipart403ApplicationJSONObject;
         return this;
     }
     
+    public CreatePaymentMultipartResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class ColorRgb {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("b")
     public Long b;
+
     public ColorRgb withB(Long b) {
         this.b = b;
         return this;
@@ -20,6 +21,7 @@ public class ColorRgb {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("g")
     public Long g;
+
     public ColorRgb withG(Long g) {
         this.g = g;
         return this;
@@ -28,9 +30,11 @@ public class ColorRgb {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("r")
     public Long r;
+
     public ColorRgb withR(Long r) {
         this.r = r;
         return this;
     }
     
+    public ColorRgb(){}
 }

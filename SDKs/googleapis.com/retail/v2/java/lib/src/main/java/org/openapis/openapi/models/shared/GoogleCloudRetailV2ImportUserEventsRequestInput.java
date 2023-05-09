@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2ImportUserEventsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorsConfig")
     public GoogleCloudRetailV2ImportErrorsConfig errorsConfig;
+
     public GoogleCloudRetailV2ImportUserEventsRequestInput withErrorsConfig(GoogleCloudRetailV2ImportErrorsConfig errorsConfig) {
         this.errorsConfig = errorsConfig;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2ImportUserEventsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfig")
     public GoogleCloudRetailV2UserEventInputConfigInput inputConfig;
+
     public GoogleCloudRetailV2ImportUserEventsRequestInput withInputConfig(GoogleCloudRetailV2UserEventInputConfigInput inputConfig) {
         this.inputConfig = inputConfig;
         return this;
     }
     
+    public GoogleCloudRetailV2ImportUserEventsRequestInput(){}
 }

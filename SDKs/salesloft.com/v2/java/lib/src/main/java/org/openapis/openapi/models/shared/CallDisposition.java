@@ -12,6 +12,7 @@ public class CallDisposition {
      */
     
     public OffsetDateTime createdAt;
+
     public CallDisposition withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -22,6 +23,7 @@ public class CallDisposition {
      */
     
     public Long id;
+
     public CallDisposition withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class CallDisposition {
      */
     
     public String name;
+
     public CallDisposition withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +45,11 @@ public class CallDisposition {
      */
     
     public OffsetDateTime updatedAt;
+
     public CallDisposition withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CallDisposition(){}
 }

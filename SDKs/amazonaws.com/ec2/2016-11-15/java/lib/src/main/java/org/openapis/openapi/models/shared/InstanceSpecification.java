@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * InstanceSpecification - The instance details to specify which volumes should be snapshotted.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstanceSpecification {
     
     public Boolean excludeBootVolume;
+
     public InstanceSpecification withExcludeBootVolume(Boolean excludeBootVolume) {
         this.excludeBootVolume = excludeBootVolume;
         return this;
@@ -19,6 +20,7 @@ public class InstanceSpecification {
     
     
     public String[] excludeDataVolumeIds;
+
     public InstanceSpecification withExcludeDataVolumeIds(String[] excludeDataVolumeIds) {
         this.excludeDataVolumeIds = excludeDataVolumeIds;
         return this;
@@ -26,9 +28,13 @@ public class InstanceSpecification {
     
     
     public String instanceId;
+
     public InstanceSpecification withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public InstanceSpecification(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

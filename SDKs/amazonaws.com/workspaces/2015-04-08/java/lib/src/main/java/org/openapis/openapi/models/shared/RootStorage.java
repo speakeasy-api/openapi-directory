@@ -15,9 +15,11 @@ public class RootStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Capacity")
     public String capacity;
+
     public RootStorage withCapacity(String capacity) {
         this.capacity = capacity;
         return this;
     }
     
+    public RootStorage(){}
 }

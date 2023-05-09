@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAppsAppIdVersionsVersionStatusRequest {
@@ -12,6 +13,7 @@ public class PostAppsAppIdVersionsVersionStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public String appId;
+
     public PostAppsAppIdVersionsVersionStatusRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -22,6 +24,7 @@ public class PostAppsAppIdVersionsVersionStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
     public String developerId;
+
     public PostAppsAppIdVersionsVersionStatusRequest withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -32,6 +35,7 @@ public class PostAppsAppIdVersionsVersionStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modifiedBy")
     public PostAppsAppIdVersionsVersionStatusModifiedByEnum modifiedBy;
+
     public PostAppsAppIdVersionsVersionStatusRequest withModifiedBy(PostAppsAppIdVersionsVersionStatusModifiedByEnum modifiedBy) {
         this.modifiedBy = modifiedBy;
         return this;
@@ -42,6 +46,7 @@ public class PostAppsAppIdVersionsVersionStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
     public String reason;
+
     public PostAppsAppIdVersionsVersionStatusRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -52,6 +57,7 @@ public class PostAppsAppIdVersionsVersionStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public PostAppsAppIdVersionsVersionStatusStatusEnum status;
+
     public PostAppsAppIdVersionsVersionStatusRequest withStatus(PostAppsAppIdVersionsVersionStatusStatusEnum status) {
         this.status = status;
         return this;
@@ -62,9 +68,14 @@ public class PostAppsAppIdVersionsVersionStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public Long version;
+
     public PostAppsAppIdVersionsVersionStatusRequest withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public PostAppsAppIdVersionsVersionStatusRequest(@JsonProperty("appId") String appId, @JsonProperty("version") Long version) {
+        this.appId = appId;
+        this.version = version;
+  }
 }

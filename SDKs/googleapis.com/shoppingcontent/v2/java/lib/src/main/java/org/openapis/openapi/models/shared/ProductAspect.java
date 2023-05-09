@@ -15,6 +15,7 @@ public class ProductAspect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspectName")
     public String aspectName;
+
     public ProductAspect withAspectName(String aspectName) {
         this.aspectName = aspectName;
         return this;
@@ -26,6 +27,7 @@ public class ProductAspect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationName")
     public String destinationName;
+
     public ProductAspect withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -37,9 +39,11 @@ public class ProductAspect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intention")
     public String intention;
+
     public ProductAspect withIntention(String intention) {
         this.intention = intention;
         return this;
     }
     
+    public ProductAspect(){}
 }

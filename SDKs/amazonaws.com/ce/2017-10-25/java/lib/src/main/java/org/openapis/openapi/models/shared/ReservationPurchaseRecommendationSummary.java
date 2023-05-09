@@ -15,6 +15,7 @@ public class ReservationPurchaseRecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrencyCode")
     public String currencyCode;
+
     public ReservationPurchaseRecommendationSummary withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -23,6 +24,7 @@ public class ReservationPurchaseRecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalEstimatedMonthlySavingsAmount")
     public String totalEstimatedMonthlySavingsAmount;
+
     public ReservationPurchaseRecommendationSummary withTotalEstimatedMonthlySavingsAmount(String totalEstimatedMonthlySavingsAmount) {
         this.totalEstimatedMonthlySavingsAmount = totalEstimatedMonthlySavingsAmount;
         return this;
@@ -31,9 +33,11 @@ public class ReservationPurchaseRecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalEstimatedMonthlySavingsPercentage")
     public String totalEstimatedMonthlySavingsPercentage;
+
     public ReservationPurchaseRecommendationSummary withTotalEstimatedMonthlySavingsPercentage(String totalEstimatedMonthlySavingsPercentage) {
         this.totalEstimatedMonthlySavingsPercentage = totalEstimatedMonthlySavingsPercentage;
         return this;
     }
     
+    public ReservationPurchaseRecommendationSummary(){}
 }

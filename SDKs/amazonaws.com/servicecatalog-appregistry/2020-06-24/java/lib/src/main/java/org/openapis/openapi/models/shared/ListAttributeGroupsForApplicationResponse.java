@@ -15,6 +15,7 @@ public class ListAttributeGroupsForApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeGroupsDetails")
     public AttributeGroupDetails[] attributeGroupsDetails;
+
     public ListAttributeGroupsForApplicationResponse withAttributeGroupsDetails(AttributeGroupDetails[] attributeGroupsDetails) {
         this.attributeGroupsDetails = attributeGroupsDetails;
         return this;
@@ -23,9 +24,11 @@ public class ListAttributeGroupsForApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAttributeGroupsForApplicationResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAttributeGroupsForApplicationResponse(){}
 }

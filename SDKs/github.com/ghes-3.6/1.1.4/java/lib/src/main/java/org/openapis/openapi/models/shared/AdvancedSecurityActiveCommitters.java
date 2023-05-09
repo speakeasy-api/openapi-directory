@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdvancedSecurityActiveCommitters {
     @JsonProperty("repositories")
     public AdvancedSecurityActiveCommittersRepository[] repositories;
+
     public AdvancedSecurityActiveCommitters withRepositories(AdvancedSecurityActiveCommittersRepository[] repositories) {
         this.repositories = repositories;
         return this;
@@ -22,6 +23,7 @@ public class AdvancedSecurityActiveCommitters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_advanced_security_committers")
     public Long totalAdvancedSecurityCommitters;
+
     public AdvancedSecurityActiveCommitters withTotalAdvancedSecurityCommitters(Long totalAdvancedSecurityCommitters) {
         this.totalAdvancedSecurityCommitters = totalAdvancedSecurityCommitters;
         return this;
@@ -30,9 +32,13 @@ public class AdvancedSecurityActiveCommitters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_count")
     public Long totalCount;
+
     public AdvancedSecurityActiveCommitters withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public AdvancedSecurityActiveCommitters(@JsonProperty("repositories") AdvancedSecurityActiveCommittersRepository[] repositories) {
+        this.repositories = repositories;
+  }
 }

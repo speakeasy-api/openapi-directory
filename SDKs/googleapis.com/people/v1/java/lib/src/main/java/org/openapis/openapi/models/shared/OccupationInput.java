@@ -18,6 +18,7 @@ public class OccupationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadataInput metadata;
+
     public OccupationInput withMetadata(FieldMetadataInput metadata) {
         this.metadata = metadata;
         return this;
@@ -29,9 +30,11 @@ public class OccupationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public OccupationInput withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public OccupationInput(){}
 }

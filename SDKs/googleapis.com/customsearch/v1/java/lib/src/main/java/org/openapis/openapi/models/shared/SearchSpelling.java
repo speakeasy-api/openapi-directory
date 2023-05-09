@@ -18,6 +18,7 @@ public class SearchSpelling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correctedQuery")
     public String correctedQuery;
+
     public SearchSpelling withCorrectedQuery(String correctedQuery) {
         this.correctedQuery = correctedQuery;
         return this;
@@ -29,9 +30,11 @@ public class SearchSpelling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("htmlCorrectedQuery")
     public String htmlCorrectedQuery;
+
     public SearchSpelling withHtmlCorrectedQuery(String htmlCorrectedQuery) {
         this.htmlCorrectedQuery = htmlCorrectedQuery;
         return this;
     }
     
+    public SearchSpelling(){}
 }

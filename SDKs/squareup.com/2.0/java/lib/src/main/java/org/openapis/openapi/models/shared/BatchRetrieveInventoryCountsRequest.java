@@ -21,6 +21,7 @@ public class BatchRetrieveInventoryCountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_ids")
     public String[] catalogObjectIds;
+
     public BatchRetrieveInventoryCountsRequest withCatalogObjectIds(String[] catalogObjectIds) {
         this.catalogObjectIds = catalogObjectIds;
         return this;
@@ -35,6 +36,7 @@ public class BatchRetrieveInventoryCountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public BatchRetrieveInventoryCountsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -47,6 +49,7 @@ public class BatchRetrieveInventoryCountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_ids")
     public String[] locationIds;
+
     public BatchRetrieveInventoryCountsRequest withLocationIds(String[] locationIds) {
         this.locationIds = locationIds;
         return this;
@@ -60,6 +63,7 @@ public class BatchRetrieveInventoryCountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("states")
     public String[] states;
+
     public BatchRetrieveInventoryCountsRequest withStates(String[] states) {
         this.states = states;
         return this;
@@ -73,9 +77,11 @@ public class BatchRetrieveInventoryCountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_after")
     public String updatedAfter;
+
     public BatchRetrieveInventoryCountsRequest withUpdatedAfter(String updatedAfter) {
         this.updatedAfter = updatedAfter;
         return this;
     }
     
+    public BatchRetrieveInventoryCountsRequest(){}
 }

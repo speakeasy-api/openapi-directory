@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePaymentPolicyRequest {
@@ -12,6 +13,7 @@ public class UpdatePaymentPolicyRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PaymentPolicyRequest paymentPolicyRequest;
+
     public UpdatePaymentPolicyRequest withPaymentPolicyRequest(org.openapis.openapi.models.shared.PaymentPolicyRequest paymentPolicyRequest) {
         this.paymentPolicyRequest = paymentPolicyRequest;
         return this;
@@ -22,9 +24,14 @@ public class UpdatePaymentPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment_policy_id")
     public String paymentPolicyId;
+
     public UpdatePaymentPolicyRequest withPaymentPolicyId(String paymentPolicyId) {
         this.paymentPolicyId = paymentPolicyId;
         return this;
     }
     
+    public UpdatePaymentPolicyRequest(@JsonProperty("PaymentPolicyRequest") org.openapis.openapi.models.shared.PaymentPolicyRequest paymentPolicyRequest, @JsonProperty("payment_policy_id") String paymentPolicyId) {
+        this.paymentPolicyRequest = paymentPolicyRequest;
+        this.paymentPolicyId = paymentPolicyId;
+  }
 }

@@ -15,6 +15,7 @@ public class TaxRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public Boolean default_;
+
     public TaxRate withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -22,6 +23,7 @@ public class TaxRate {
     
     @JsonProperty("label")
     public String label;
+
     public TaxRate withLabel(String label) {
         this.label = label;
         return this;
@@ -30,6 +32,7 @@ public class TaxRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Double percentage;
+
     public TaxRate withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
@@ -37,9 +40,14 @@ public class TaxRate {
     
     @JsonProperty("uuid")
     public String uuid;
+
     public TaxRate withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public TaxRate(@JsonProperty("label") String label, @JsonProperty("uuid") String uuid) {
+        this.label = label;
+        this.uuid = uuid;
+  }
 }

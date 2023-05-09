@@ -18,9 +18,11 @@ public class SearchSuggestions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searches")
     public SearchSuggestionsSearches[] searches;
+
     public SearchSuggestions withSearches(SearchSuggestionsSearches[] searches) {
         this.searches = searches;
         return this;
     }
     
+    public SearchSuggestions(){}
 }

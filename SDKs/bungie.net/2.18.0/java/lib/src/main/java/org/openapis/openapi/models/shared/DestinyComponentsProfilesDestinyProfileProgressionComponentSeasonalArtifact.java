@@ -13,6 +13,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyComponentsProfilesDestinyProfileProgressionComponentSeasonalArtifact {
     
     public Long artifactHash;
+
     public DestinyComponentsProfilesDestinyProfileProgressionComponentSeasonalArtifact withArtifactHash(Long artifactHash) {
         this.artifactHash = artifactHash;
         return this;
@@ -23,6 +24,7 @@ public class DestinyComponentsProfilesDestinyProfileProgressionComponentSeasonal
      */
     
     public DestinyDestinyProgression pointProgression;
+
     public DestinyComponentsProfilesDestinyProfileProgressionComponentSeasonalArtifact withPointProgression(DestinyDestinyProgression pointProgression) {
         this.pointProgression = pointProgression;
         return this;
@@ -30,6 +32,7 @@ public class DestinyComponentsProfilesDestinyProfileProgressionComponentSeasonal
     
     
     public Integer pointsAcquired;
+
     public DestinyComponentsProfilesDestinyProfileProgressionComponentSeasonalArtifact withPointsAcquired(Integer pointsAcquired) {
         this.pointsAcquired = pointsAcquired;
         return this;
@@ -37,6 +40,7 @@ public class DestinyComponentsProfilesDestinyProfileProgressionComponentSeasonal
     
     
     public Integer powerBonus;
+
     public DestinyComponentsProfilesDestinyProfileProgressionComponentSeasonalArtifact withPowerBonus(Integer powerBonus) {
         this.powerBonus = powerBonus;
         return this;
@@ -47,9 +51,11 @@ public class DestinyComponentsProfilesDestinyProfileProgressionComponentSeasonal
      */
     
     public DestinyDestinyProgression powerBonusProgression;
+
     public DestinyComponentsProfilesDestinyProfileProgressionComponentSeasonalArtifact withPowerBonusProgression(DestinyDestinyProgression powerBonusProgression) {
         this.powerBonusProgression = powerBonusProgression;
         return this;
     }
     
+    public DestinyComponentsProfilesDestinyProfileProgressionComponentSeasonalArtifact(){}
 }

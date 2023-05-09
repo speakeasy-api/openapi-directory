@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDKIMResponse {
@@ -12,6 +13,7 @@ public class CreateDKIMResponse {
      */
     
     public java.util.Map<String, Object> twoHundredOK;
+
     public CreateDKIMResponse withTwoHundredOK(java.util.Map<String, Object> twoHundredOK) {
         this.twoHundredOK = twoHundredOK;
         return this;
@@ -22,6 +24,7 @@ public class CreateDKIMResponse {
      */
     
     public java.util.Map<String, Object> fourHundredAndOneUnauthorized;
+
     public CreateDKIMResponse withFourHundredAndOneUnauthorized(java.util.Map<String, Object> fourHundredAndOneUnauthorized) {
         this.fourHundredAndOneUnauthorized = fourHundredAndOneUnauthorized;
         return this;
@@ -29,6 +32,7 @@ public class CreateDKIMResponse {
     
     
     public String contentType;
+
     public CreateDKIMResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class CreateDKIMResponse {
     
     
     public Integer statusCode;
+
     public CreateDKIMResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateDKIMResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDKIMResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDKIMResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

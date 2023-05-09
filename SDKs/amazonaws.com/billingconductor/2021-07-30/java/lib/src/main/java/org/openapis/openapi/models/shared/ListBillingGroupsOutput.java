@@ -15,6 +15,7 @@ public class ListBillingGroupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingGroups")
     public BillingGroupListElement[] billingGroups;
+
     public ListBillingGroupsOutput withBillingGroups(BillingGroupListElement[] billingGroups) {
         this.billingGroups = billingGroups;
         return this;
@@ -23,9 +24,11 @@ public class ListBillingGroupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListBillingGroupsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBillingGroupsOutput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFirewallPolicyChangeProtectionResponse {
     
     public String contentType;
+
     public UpdateFirewallPolicyChangeProtectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFirewallPolicyChangeProtectionResponse {
      */
     
     public Object internalServerError;
+
     public UpdateFirewallPolicyChangeProtectionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFirewallPolicyChangeProtectionResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateFirewallPolicyChangeProtectionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFirewallPolicyChangeProtectionResponse {
      */
     
     public Object invalidTokenException;
+
     public UpdateFirewallPolicyChangeProtectionResponse withInvalidTokenException(Object invalidTokenException) {
         this.invalidTokenException = invalidTokenException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFirewallPolicyChangeProtectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFirewallPolicyChangeProtectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateFirewallPolicyChangeProtectionResponse {
     
     
     public Integer statusCode;
+
     public UpdateFirewallPolicyChangeProtectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFirewallPolicyChangeProtectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFirewallPolicyChangeProtectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFirewallPolicyChangeProtectionResponse {
      */
     
     public Object resourceOwnerCheckException;
+
     public UpdateFirewallPolicyChangeProtectionResponse withResourceOwnerCheckException(Object resourceOwnerCheckException) {
         this.resourceOwnerCheckException = resourceOwnerCheckException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateFirewallPolicyChangeProtectionResponse {
      */
     
     public Object throttlingException;
+
     public UpdateFirewallPolicyChangeProtectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateFirewallPolicyChangeProtectionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFirewallPolicyChangeProtectionResponse updateFirewallPolicyChangeProtectionResponse;
+
     public UpdateFirewallPolicyChangeProtectionResponse withUpdateFirewallPolicyChangeProtectionResponse(org.openapis.openapi.models.shared.UpdateFirewallPolicyChangeProtectionResponse updateFirewallPolicyChangeProtectionResponse) {
         this.updateFirewallPolicyChangeProtectionResponse = updateFirewallPolicyChangeProtectionResponse;
         return this;
     }
     
+    public UpdateFirewallPolicyChangeProtectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleAdsSearchads360V0ResourcesKeywordView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GoogleAdsSearchads360V0ResourcesKeywordView withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesKeywordView(){}
 }

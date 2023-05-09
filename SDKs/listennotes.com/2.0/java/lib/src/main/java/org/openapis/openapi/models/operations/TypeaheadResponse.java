@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TypeaheadResponse {
     
     public String contentType;
+
     public TypeaheadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TypeaheadResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public TypeaheadResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class TypeaheadResponse {
     
     
     public Integer statusCode;
+
     public TypeaheadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class TypeaheadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TypeaheadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class TypeaheadResponse {
      */
     
     public org.openapis.openapi.models.shared.TypeaheadResponse typeaheadResponse;
+
     public TypeaheadResponse withTypeaheadResponse(org.openapis.openapi.models.shared.TypeaheadResponse typeaheadResponse) {
         this.typeaheadResponse = typeaheadResponse;
         return this;
     }
     
+    public TypeaheadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

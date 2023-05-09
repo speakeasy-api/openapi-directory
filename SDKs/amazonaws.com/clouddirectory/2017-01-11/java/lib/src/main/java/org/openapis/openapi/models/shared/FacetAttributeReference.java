@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FacetAttributeReference {
     @JsonProperty("TargetAttributeName")
     public String targetAttributeName;
+
     public FacetAttributeReference withTargetAttributeName(String targetAttributeName) {
         this.targetAttributeName = targetAttributeName;
         return this;
@@ -19,9 +20,14 @@ public class FacetAttributeReference {
     
     @JsonProperty("TargetFacetName")
     public String targetFacetName;
+
     public FacetAttributeReference withTargetFacetName(String targetFacetName) {
         this.targetFacetName = targetFacetName;
         return this;
     }
     
+    public FacetAttributeReference(@JsonProperty("TargetAttributeName") String targetAttributeName, @JsonProperty("TargetFacetName") String targetFacetName) {
+        this.targetAttributeName = targetAttributeName;
+        this.targetFacetName = targetFacetName;
+  }
 }

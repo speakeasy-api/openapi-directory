@@ -18,6 +18,7 @@ public class GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSecret")
     public GoogleCloudConnectorsV1Secret clientSecret;
+
     public GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials withClientSecret(GoogleCloudConnectorsV1Secret clientSecret) {
         this.clientSecret = clientSecret;
         return this;
     }
     
+    public GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials(){}
 }

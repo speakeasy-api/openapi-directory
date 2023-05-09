@@ -15,6 +15,7 @@ public class Denied {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explicitDeny")
     public ExplicitDeny explicitDeny;
+
     public Denied withExplicitDeny(ExplicitDeny explicitDeny) {
         this.explicitDeny = explicitDeny;
         return this;
@@ -23,9 +24,11 @@ public class Denied {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("implicitDeny")
     public ImplicitDeny implicitDeny;
+
     public Denied withImplicitDeny(ImplicitDeny implicitDeny) {
         this.implicitDeny = implicitDeny;
         return this;
     }
     
+    public Denied(){}
 }

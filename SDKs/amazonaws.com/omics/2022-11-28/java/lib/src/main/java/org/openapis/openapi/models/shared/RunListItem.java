@@ -20,6 +20,7 @@ public class RunListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public RunListItem withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class RunListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public RunListItem withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class RunListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RunListItem withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class RunListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RunListItem withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class RunListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public RunListItem withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -64,6 +69,7 @@ public class RunListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public RunListItem withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -72,6 +78,7 @@ public class RunListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RunStatusEnum status;
+
     public RunListItem withStatus(RunStatusEnum status) {
         this.status = status;
         return this;
@@ -82,6 +89,7 @@ public class RunListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopTime")
     public OffsetDateTime stopTime;
+
     public RunListItem withStopTime(OffsetDateTime stopTime) {
         this.stopTime = stopTime;
         return this;
@@ -90,6 +98,7 @@ public class RunListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageCapacity")
     public Long storageCapacity;
+
     public RunListItem withStorageCapacity(Long storageCapacity) {
         this.storageCapacity = storageCapacity;
         return this;
@@ -98,9 +107,11 @@ public class RunListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowId")
     public String workflowId;
+
     public RunListItem withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public RunListItem(){}
 }

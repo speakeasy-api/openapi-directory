@@ -15,6 +15,7 @@ public class RaidArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public RaidArray withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -23,6 +24,7 @@ public class RaidArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedAt")
     public String createdAt;
+
     public RaidArray withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +33,7 @@ public class RaidArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Device")
     public String device;
+
     public RaidArray withDevice(String device) {
         this.device = device;
         return this;
@@ -39,6 +42,7 @@ public class RaidArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public RaidArray withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -47,6 +51,7 @@ public class RaidArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Iops")
     public Long iops;
+
     public RaidArray withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -55,6 +60,7 @@ public class RaidArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountPoint")
     public String mountPoint;
+
     public RaidArray withMountPoint(String mountPoint) {
         this.mountPoint = mountPoint;
         return this;
@@ -63,6 +69,7 @@ public class RaidArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RaidArray withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class RaidArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfDisks")
     public Long numberOfDisks;
+
     public RaidArray withNumberOfDisks(Long numberOfDisks) {
         this.numberOfDisks = numberOfDisks;
         return this;
@@ -79,6 +87,7 @@ public class RaidArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RaidArrayId")
     public String raidArrayId;
+
     public RaidArray withRaidArrayId(String raidArrayId) {
         this.raidArrayId = raidArrayId;
         return this;
@@ -87,6 +96,7 @@ public class RaidArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RaidLevel")
     public Long raidLevel;
+
     public RaidArray withRaidLevel(Long raidLevel) {
         this.raidLevel = raidLevel;
         return this;
@@ -95,6 +105,7 @@ public class RaidArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Long size;
+
     public RaidArray withSize(Long size) {
         this.size = size;
         return this;
@@ -103,6 +114,7 @@ public class RaidArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public RaidArray withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -111,9 +123,11 @@ public class RaidArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeType")
     public String volumeType;
+
     public RaidArray withVolumeType(String volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public RaidArray(){}
 }

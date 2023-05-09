@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEventSourcesConfigResponse {
@@ -12,6 +13,7 @@ public class UpdateEventSourcesConfigResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateEventSourcesConfigResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateEventSourcesConfigResponse {
     
     
     public String contentType;
+
     public UpdateEventSourcesConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEventSourcesConfigResponse {
      */
     
     public Object internalServerException;
+
     public UpdateEventSourcesConfigResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateEventSourcesConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateEventSourcesConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateEventSourcesConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEventSourcesConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateEventSourcesConfigResponse {
      */
     
     public Object throttlingException;
+
     public UpdateEventSourcesConfigResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateEventSourcesConfigResponse {
      */
     
     public java.util.Map<String, Object> updateEventSourcesConfigResponse;
+
     public UpdateEventSourcesConfigResponse withUpdateEventSourcesConfigResponse(java.util.Map<String, Object> updateEventSourcesConfigResponse) {
         this.updateEventSourcesConfigResponse = updateEventSourcesConfigResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateEventSourcesConfigResponse {
      */
     
     public Object validationException;
+
     public UpdateEventSourcesConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateEventSourcesConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

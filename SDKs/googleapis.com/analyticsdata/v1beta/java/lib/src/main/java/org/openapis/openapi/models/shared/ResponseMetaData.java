@@ -18,6 +18,7 @@ public class ResponseMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public ResponseMetaData withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -29,6 +30,7 @@ public class ResponseMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataLossFromOtherRow")
     public Boolean dataLossFromOtherRow;
+
     public ResponseMetaData withDataLossFromOtherRow(Boolean dataLossFromOtherRow) {
         this.dataLossFromOtherRow = dataLossFromOtherRow;
         return this;
@@ -40,6 +42,7 @@ public class ResponseMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emptyReason")
     public String emptyReason;
+
     public ResponseMetaData withEmptyReason(String emptyReason) {
         this.emptyReason = emptyReason;
         return this;
@@ -51,6 +54,7 @@ public class ResponseMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaRestrictionResponse")
     public SchemaRestrictionResponse schemaRestrictionResponse;
+
     public ResponseMetaData withSchemaRestrictionResponse(SchemaRestrictionResponse schemaRestrictionResponse) {
         this.schemaRestrictionResponse = schemaRestrictionResponse;
         return this;
@@ -62,6 +66,7 @@ public class ResponseMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectToThresholding")
     public Boolean subjectToThresholding;
+
     public ResponseMetaData withSubjectToThresholding(Boolean subjectToThresholding) {
         this.subjectToThresholding = subjectToThresholding;
         return this;
@@ -73,9 +78,11 @@ public class ResponseMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public ResponseMetaData withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public ResponseMetaData(){}
 }

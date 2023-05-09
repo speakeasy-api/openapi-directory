@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetVolumes200ApplicationJSONMeta {
     @JsonProperty("pagination")
     public GetVolumes200ApplicationJSONMetaPagination pagination;
+
     public GetVolumes200ApplicationJSONMeta withPagination(GetVolumes200ApplicationJSONMetaPagination pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public GetVolumes200ApplicationJSONMeta(@JsonProperty("pagination") GetVolumes200ApplicationJSONMetaPagination pagination) {
+        this.pagination = pagination;
+  }
 }

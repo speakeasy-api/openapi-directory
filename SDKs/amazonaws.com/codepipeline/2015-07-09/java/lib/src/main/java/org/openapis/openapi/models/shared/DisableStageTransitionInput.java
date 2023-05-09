@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisableStageTransitionInput {
     @JsonProperty("pipelineName")
     public String pipelineName;
+
     public DisableStageTransitionInput withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -19,6 +20,7 @@ public class DisableStageTransitionInput {
     
     @JsonProperty("reason")
     public String reason;
+
     public DisableStageTransitionInput withReason(String reason) {
         this.reason = reason;
         return this;
@@ -26,6 +28,7 @@ public class DisableStageTransitionInput {
     
     @JsonProperty("stageName")
     public String stageName;
+
     public DisableStageTransitionInput withStageName(String stageName) {
         this.stageName = stageName;
         return this;
@@ -33,9 +36,16 @@ public class DisableStageTransitionInput {
     
     @JsonProperty("transitionType")
     public StageTransitionTypeEnum transitionType;
+
     public DisableStageTransitionInput withTransitionType(StageTransitionTypeEnum transitionType) {
         this.transitionType = transitionType;
         return this;
     }
     
+    public DisableStageTransitionInput(@JsonProperty("pipelineName") String pipelineName, @JsonProperty("reason") String reason, @JsonProperty("stageName") String stageName, @JsonProperty("transitionType") StageTransitionTypeEnum transitionType) {
+        this.pipelineName = pipelineName;
+        this.reason = reason;
+        this.stageName = stageName;
+        this.transitionType = transitionType;
+  }
 }

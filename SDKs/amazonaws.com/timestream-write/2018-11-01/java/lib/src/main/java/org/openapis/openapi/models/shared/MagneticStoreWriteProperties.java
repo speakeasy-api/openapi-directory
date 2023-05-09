@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MagneticStoreWriteProperties {
     @JsonProperty("EnableMagneticStoreWrites")
     public Boolean enableMagneticStoreWrites;
+
     public MagneticStoreWriteProperties withEnableMagneticStoreWrites(Boolean enableMagneticStoreWrites) {
         this.enableMagneticStoreWrites = enableMagneticStoreWrites;
         return this;
@@ -22,9 +23,13 @@ public class MagneticStoreWriteProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MagneticStoreRejectedDataLocation")
     public MagneticStoreRejectedDataLocation magneticStoreRejectedDataLocation;
+
     public MagneticStoreWriteProperties withMagneticStoreRejectedDataLocation(MagneticStoreRejectedDataLocation magneticStoreRejectedDataLocation) {
         this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
         return this;
     }
     
+    public MagneticStoreWriteProperties(@JsonProperty("EnableMagneticStoreWrites") Boolean enableMagneticStoreWrites) {
+        this.enableMagneticStoreWrites = enableMagneticStoreWrites;
+  }
 }

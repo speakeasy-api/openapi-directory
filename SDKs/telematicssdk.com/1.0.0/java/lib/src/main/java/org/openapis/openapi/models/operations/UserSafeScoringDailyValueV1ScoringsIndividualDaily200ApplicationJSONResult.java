@@ -12,6 +12,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccelerationScore")
     public Double accelerationScore;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult withAccelerationScore(Double accelerationScore) {
         this.accelerationScore = accelerationScore;
         return this;
@@ -20,6 +21,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppId")
     public String appId;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -28,6 +30,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BrakingScore")
     public Double brakingScore;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult withBrakingScore(Double brakingScore) {
         this.brakingScore = brakingScore;
         return this;
@@ -36,6 +39,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CalcDate")
     public String calcDate;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult withCalcDate(String calcDate) {
         this.calcDate = calcDate;
         return this;
@@ -44,6 +48,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompanyId")
     public String companyId;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -52,6 +57,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CorneringScore")
     public Double corneringScore;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult withCorneringScore(Double corneringScore) {
         this.corneringScore = corneringScore;
         return this;
@@ -60,6 +66,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceToken")
     public String deviceToken;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult withDeviceToken(String deviceToken) {
         this.deviceToken = deviceToken;
         return this;
@@ -68,6 +75,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DistractedScore")
     public Double distractedScore;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult withDistractedScore(Double distractedScore) {
         this.distractedScore = distractedScore;
         return this;
@@ -76,6 +84,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -84,6 +93,7 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverallScore")
     public Double overallScore;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult withOverallScore(Double overallScore) {
         this.overallScore = overallScore;
         return this;
@@ -92,9 +102,11 @@ public class UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpeedingScore")
     public Double speedingScore;
+
     public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult withSpeedingScore(Double speedingScore) {
         this.speedingScore = speedingScore;
         return this;
     }
     
+    public UserSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONResult(){}
 }

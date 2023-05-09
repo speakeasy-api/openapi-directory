@@ -12,6 +12,7 @@ public class StartingLineups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayLineup")
     public Lineup[] awayLineup;
+
     public StartingLineups withAwayLineup(Lineup[] awayLineup) {
         this.awayLineup = awayLineup;
         return this;
@@ -20,6 +21,7 @@ public class StartingLineups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeam")
     public String awayTeam;
+
     public StartingLineups withAwayTeam(String awayTeam) {
         this.awayTeam = awayTeam;
         return this;
@@ -28,6 +30,7 @@ public class StartingLineups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeamID")
     public Long awayTeamID;
+
     public StartingLineups withAwayTeamID(Long awayTeamID) {
         this.awayTeamID = awayTeamID;
         return this;
@@ -36,6 +39,7 @@ public class StartingLineups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateTime")
     public String dateTime;
+
     public StartingLineups withDateTime(String dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -44,6 +48,7 @@ public class StartingLineups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Day")
     public String day;
+
     public StartingLineups withDay(String day) {
         this.day = day;
         return this;
@@ -52,6 +57,7 @@ public class StartingLineups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameID")
     public Long gameID;
+
     public StartingLineups withGameID(Long gameID) {
         this.gameID = gameID;
         return this;
@@ -60,6 +66,7 @@ public class StartingLineups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeLineup")
     public Lineup[] homeLineup;
+
     public StartingLineups withHomeLineup(Lineup[] homeLineup) {
         this.homeLineup = homeLineup;
         return this;
@@ -68,6 +75,7 @@ public class StartingLineups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeam")
     public String homeTeam;
+
     public StartingLineups withHomeTeam(String homeTeam) {
         this.homeTeam = homeTeam;
         return this;
@@ -76,6 +84,7 @@ public class StartingLineups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeamID")
     public Long homeTeamID;
+
     public StartingLineups withHomeTeamID(Long homeTeamID) {
         this.homeTeamID = homeTeamID;
         return this;
@@ -84,6 +93,7 @@ public class StartingLineups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public StartingLineups withSeason(Long season) {
         this.season = season;
         return this;
@@ -92,6 +102,7 @@ public class StartingLineups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public StartingLineups withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -100,9 +111,11 @@ public class StartingLineups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public StartingLineups withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public StartingLineups(){}
 }

@@ -15,9 +15,11 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Status withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Status(){}
 }

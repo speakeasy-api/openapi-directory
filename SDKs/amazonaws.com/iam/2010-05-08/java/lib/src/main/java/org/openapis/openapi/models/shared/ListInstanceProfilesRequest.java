@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListInstanceProfilesRequest {
     
     public String marker;
+
     public ListInstanceProfilesRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class ListInstanceProfilesRequest {
     
     
     public Long maxItems;
+
     public ListInstanceProfilesRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -23,9 +25,11 @@ public class ListInstanceProfilesRequest {
     
     
     public String pathPrefix;
+
     public ListInstanceProfilesRequest withPathPrefix(String pathPrefix) {
         this.pathPrefix = pathPrefix;
         return this;
     }
     
+    public ListInstanceProfilesRequest(){}
 }

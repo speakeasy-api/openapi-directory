@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLatestConfigurationResponse {
@@ -12,6 +13,7 @@ public class GetLatestConfigurationResponse {
      */
     
     public Object badRequestException;
+
     public GetLatestConfigurationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetLatestConfigurationResponse {
     
     
     public String contentType;
+
     public GetLatestConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetLatestConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLatestConfigurationResponse getLatestConfigurationResponse;
+
     public GetLatestConfigurationResponse withGetLatestConfigurationResponse(org.openapis.openapi.models.shared.GetLatestConfigurationResponse getLatestConfigurationResponse) {
         this.getLatestConfigurationResponse = getLatestConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetLatestConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public GetLatestConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetLatestConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetLatestConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetLatestConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetLatestConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetLatestConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLatestConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetLatestConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public GetLatestConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetLatestConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

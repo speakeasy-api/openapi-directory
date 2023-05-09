@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteIntegrationResponse {
@@ -12,6 +13,7 @@ public class DeleteIntegrationResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteIntegrationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteIntegrationResponse {
      */
     
     public Object badRequestException;
+
     public DeleteIntegrationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteIntegrationResponse {
     
     
     public String contentType;
+
     public DeleteIntegrationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteIntegrationResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteIntegrationResponse deleteIntegrationResponse;
+
     public DeleteIntegrationResponse withDeleteIntegrationResponse(org.openapis.openapi.models.shared.DeleteIntegrationResponse deleteIntegrationResponse) {
         this.deleteIntegrationResponse = deleteIntegrationResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteIntegrationResponse {
      */
     
     public Object internalServerException;
+
     public DeleteIntegrationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteIntegrationResponse {
     
     
     public Integer statusCode;
+
     public DeleteIntegrationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteIntegrationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteIntegrationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteIntegrationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteIntegrationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteIntegrationResponse {
      */
     
     public Object throttlingException;
+
     public DeleteIntegrationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteIntegrationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

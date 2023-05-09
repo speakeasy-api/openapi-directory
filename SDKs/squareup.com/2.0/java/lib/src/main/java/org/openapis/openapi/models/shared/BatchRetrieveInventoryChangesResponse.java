@@ -19,6 +19,7 @@ public class BatchRetrieveInventoryChangesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changes")
     public InventoryChange[] changes;
+
     public BatchRetrieveInventoryChangesResponse withChanges(InventoryChange[] changes) {
         this.changes = changes;
         return this;
@@ -32,6 +33,7 @@ public class BatchRetrieveInventoryChangesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public BatchRetrieveInventoryChangesResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -43,9 +45,11 @@ public class BatchRetrieveInventoryChangesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public BatchRetrieveInventoryChangesResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchRetrieveInventoryChangesResponse(){}
 }

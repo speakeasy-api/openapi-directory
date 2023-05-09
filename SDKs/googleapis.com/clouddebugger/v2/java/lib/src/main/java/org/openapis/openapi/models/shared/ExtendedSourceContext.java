@@ -18,6 +18,7 @@ public class ExtendedSourceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public SourceContext context;
+
     public ExtendedSourceContext withContext(SourceContext context) {
         this.context = context;
         return this;
@@ -29,9 +30,11 @@ public class ExtendedSourceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ExtendedSourceContext withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public ExtendedSourceContext(){}
 }

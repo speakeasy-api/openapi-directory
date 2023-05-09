@@ -15,9 +15,11 @@ public class StopStreamingSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeRetentionMode")
     public StopStreamingSessionRequestBodyVolumeRetentionModeEnum volumeRetentionMode;
+
     public StopStreamingSessionRequestBody withVolumeRetentionMode(StopStreamingSessionRequestBodyVolumeRetentionModeEnum volumeRetentionMode) {
         this.volumeRetentionMode = volumeRetentionMode;
         return this;
     }
     
+    public StopStreamingSessionRequestBody(){}
 }

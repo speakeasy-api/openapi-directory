@@ -15,9 +15,11 @@ public class EnterpriseAdminUnsuspendUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public EnterpriseAdminUnsuspendUserRequestBody withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public EnterpriseAdminUnsuspendUserRequestBody(){}
 }

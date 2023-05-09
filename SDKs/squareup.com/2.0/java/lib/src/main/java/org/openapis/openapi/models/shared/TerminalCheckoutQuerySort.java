@@ -17,9 +17,11 @@ public class TerminalCheckoutQuerySort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort_order")
     public String sortOrder;
+
     public TerminalCheckoutQuerySort withSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public TerminalCheckoutQuerySort(){}
 }

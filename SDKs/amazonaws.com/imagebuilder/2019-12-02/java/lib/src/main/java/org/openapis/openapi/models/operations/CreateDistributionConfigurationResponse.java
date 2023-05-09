@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDistributionConfigurationResponse {
@@ -12,6 +13,7 @@ public class CreateDistributionConfigurationResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public CreateDistributionConfigurationResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDistributionConfigurationResponse {
      */
     
     public Object clientException;
+
     public CreateDistributionConfigurationResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class CreateDistributionConfigurationResponse {
     
     
     public String contentType;
+
     public CreateDistributionConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateDistributionConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDistributionConfigurationResponse createDistributionConfigurationResponse;
+
     public CreateDistributionConfigurationResponse withCreateDistributionConfigurationResponse(org.openapis.openapi.models.shared.CreateDistributionConfigurationResponse createDistributionConfigurationResponse) {
         this.createDistributionConfigurationResponse = createDistributionConfigurationResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateDistributionConfigurationResponse {
      */
     
     public Object forbiddenException;
+
     public CreateDistributionConfigurationResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDistributionConfigurationResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateDistributionConfigurationResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDistributionConfigurationResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public CreateDistributionConfigurationResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -79,6 +87,7 @@ public class CreateDistributionConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateDistributionConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -89,6 +98,7 @@ public class CreateDistributionConfigurationResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateDistributionConfigurationResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -99,6 +109,7 @@ public class CreateDistributionConfigurationResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateDistributionConfigurationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -109,6 +120,7 @@ public class CreateDistributionConfigurationResponse {
      */
     
     public Object serviceException;
+
     public CreateDistributionConfigurationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -119,6 +131,7 @@ public class CreateDistributionConfigurationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateDistributionConfigurationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -126,6 +139,7 @@ public class CreateDistributionConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateDistributionConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class CreateDistributionConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDistributionConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,9 +158,14 @@ public class CreateDistributionConfigurationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateDistributionConfigurationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public CreateDistributionConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

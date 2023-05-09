@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminSetInformationForProvisionedEnterpriseGroupRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Group group;
+
     public EnterpriseAdminSetInformationForProvisionedEnterpriseGroupRequest withGroup(org.openapis.openapi.models.shared.Group group) {
         this.group = group;
         return this;
@@ -19,9 +21,14 @@ public class EnterpriseAdminSetInformationForProvisionedEnterpriseGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scim_group_id")
     public String scimGroupId;
+
     public EnterpriseAdminSetInformationForProvisionedEnterpriseGroupRequest withScimGroupId(String scimGroupId) {
         this.scimGroupId = scimGroupId;
         return this;
     }
     
+    public EnterpriseAdminSetInformationForProvisionedEnterpriseGroupRequest(@JsonProperty("group") org.openapis.openapi.models.shared.Group group, @JsonProperty("scim_group_id") String scimGroupId) {
+        this.group = group;
+        this.scimGroupId = scimGroupId;
+  }
 }

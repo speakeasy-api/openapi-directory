@@ -15,6 +15,7 @@ public class TransferCallResponse {
      */
     @JsonProperty("Message")
     public TransferCallResponseMessageEnum message;
+
     public TransferCallResponse withMessage(TransferCallResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,9 +26,14 @@ public class TransferCallResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public TransferCallResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public TransferCallResponse(@JsonProperty("Message") TransferCallResponseMessageEnum message, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.success = success;
+  }
 }

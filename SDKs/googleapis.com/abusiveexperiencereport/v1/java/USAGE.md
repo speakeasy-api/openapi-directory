@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AbusiveexperiencereportSitesGetRequest;
 import org.openapis.openapi.models.operations.AbusiveexperiencereportSitesGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -15,28 +14,29 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AbusiveexperiencereportSitesGetRequest req = new AbusiveexperiencereportSitesGetRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                name = "corrupti";
+            AbusiveexperiencereportSitesGetRequest req = new AbusiveexperiencereportSitesGetRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
                 oauthToken = "illum";
                 prettyPrint = false;
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
             AbusiveexperiencereportSitesGetResponse res = sdk.sites.abusiveexperiencereportSitesGet(req);
 
-            if (res.siteSummaryResponse.isPresent()) {
+            if (res.siteSummaryResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

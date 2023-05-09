@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListUsersResponse {
     
     public String contentType;
+
     public ListUsersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListUsersResponse {
      */
     
     public Object invalidParameterException;
+
     public ListUsersResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class ListUsersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListUsersResponse listUsersResponse;
+
     public ListUsersResponse withListUsersResponse(org.openapis.openapi.models.shared.ListUsersResponse listUsersResponse) {
         this.listUsersResponse = listUsersResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListUsersResponse {
      */
     
     public Object organizationNotFoundException;
+
     public ListUsersResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ListUsersResponse {
      */
     
     public Object organizationStateException;
+
     public ListUsersResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -56,6 +62,7 @@ public class ListUsersResponse {
     
     
     public Integer statusCode;
+
     public ListUsersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListUsersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListUsersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListUsersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

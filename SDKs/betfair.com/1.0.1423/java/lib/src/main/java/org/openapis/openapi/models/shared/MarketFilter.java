@@ -12,6 +12,7 @@ public class MarketFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bettingTypes")
     public MarketFilterBettingTypesEnum[] bettingTypes;
+
     public MarketFilter withBettingTypes(MarketFilterBettingTypesEnum[] bettingTypes) {
         this.bettingTypes = bettingTypes;
         return this;
@@ -20,6 +21,7 @@ public class MarketFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bspMarket")
     public Boolean bspMarket;
+
     public MarketFilter withBspMarket(Boolean bspMarket) {
         this.bspMarket = bspMarket;
         return this;
@@ -28,6 +30,7 @@ public class MarketFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCodes")
     public String[] countryCodes;
+
     public MarketFilter withCountryCodes(String[] countryCodes) {
         this.countryCodes = countryCodes;
         return this;
@@ -36,6 +39,7 @@ public class MarketFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventIds")
     public String[] eventIds;
+
     public MarketFilter withEventIds(String[] eventIds) {
         this.eventIds = eventIds;
         return this;
@@ -44,6 +48,7 @@ public class MarketFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTypeIds")
     public String[] eventTypeIds;
+
     public MarketFilter withEventTypeIds(String[] eventTypeIds) {
         this.eventTypeIds = eventTypeIds;
         return this;
@@ -52,6 +57,7 @@ public class MarketFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketIds")
     public String[] marketIds;
+
     public MarketFilter withMarketIds(String[] marketIds) {
         this.marketIds = marketIds;
         return this;
@@ -60,6 +66,7 @@ public class MarketFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketTypes")
     public String[] marketTypes;
+
     public MarketFilter withMarketTypes(String[] marketTypes) {
         this.marketTypes = marketTypes;
         return this;
@@ -68,6 +75,7 @@ public class MarketFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raceTypes")
     public String[] raceTypes;
+
     public MarketFilter withRaceTypes(String[] raceTypes) {
         this.raceTypes = raceTypes;
         return this;
@@ -76,6 +84,7 @@ public class MarketFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("turnInPlayEnabled")
     public Boolean turnInPlayEnabled;
+
     public MarketFilter withTurnInPlayEnabled(Boolean turnInPlayEnabled) {
         this.turnInPlayEnabled = turnInPlayEnabled;
         return this;
@@ -84,9 +93,11 @@ public class MarketFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("venues")
     public String[] venues;
+
     public MarketFilter withVenues(String[] venues) {
         this.venues = venues;
         return this;
     }
     
+    public MarketFilter(){}
 }

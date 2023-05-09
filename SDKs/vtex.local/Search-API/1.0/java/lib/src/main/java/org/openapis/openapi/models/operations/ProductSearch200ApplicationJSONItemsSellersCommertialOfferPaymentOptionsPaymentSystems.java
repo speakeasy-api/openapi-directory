@@ -12,6 +12,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("availablePayments")
     public String availablePayments;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems withAvailablePayments(String availablePayments) {
         this.availablePayments = availablePayments;
         return this;
@@ -22,6 +23,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("description")
     public String description;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +34,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("dueDate")
     public String dueDate;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems withDueDate(String dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -42,6 +45,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("groupName")
     public String groupName;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -52,6 +56,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("id")
     public Long id;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems withId(Long id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("isCustom")
     public Boolean isCustom;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems withIsCustom(Boolean isCustom) {
         this.isCustom = isCustom;
         return this;
@@ -72,6 +78,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("name")
     public String name;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems withName(String name) {
         this.name = name;
         return this;
@@ -82,6 +89,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("requiresAuthentication")
     public Boolean requiresAuthentication;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems withRequiresAuthentication(Boolean requiresAuthentication) {
         this.requiresAuthentication = requiresAuthentication;
         return this;
@@ -92,6 +100,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("requiresDocument")
     public Boolean requiresDocument;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems withRequiresDocument(Boolean requiresDocument) {
         this.requiresDocument = requiresDocument;
         return this;
@@ -102,6 +111,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("stringId")
     public String stringId;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems withStringId(String stringId) {
         this.stringId = stringId;
         return this;
@@ -112,6 +122,7 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("template")
     public String template;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems withTemplate(String template) {
         this.template = template;
         return this;
@@ -122,9 +133,24 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOp
      */
     @JsonProperty("validator")
     public String validator;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems withValidator(String validator) {
         this.validator = validator;
         return this;
     }
     
+    public ProductSearch200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems(@JsonProperty("availablePayments") String availablePayments, @JsonProperty("description") String description, @JsonProperty("dueDate") String dueDate, @JsonProperty("groupName") String groupName, @JsonProperty("id") Long id, @JsonProperty("isCustom") Boolean isCustom, @JsonProperty("name") String name, @JsonProperty("requiresAuthentication") Boolean requiresAuthentication, @JsonProperty("requiresDocument") Boolean requiresDocument, @JsonProperty("stringId") String stringId, @JsonProperty("template") String template, @JsonProperty("validator") String validator) {
+        this.availablePayments = availablePayments;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.groupName = groupName;
+        this.id = id;
+        this.isCustom = isCustom;
+        this.name = name;
+        this.requiresAuthentication = requiresAuthentication;
+        this.requiresDocument = requiresDocument;
+        this.stringId = stringId;
+        this.template = template;
+        this.validator = validator;
+  }
 }

@@ -12,6 +12,7 @@ public class PrivateInstitutionAccountsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public PrivateInstitutionAccountsListRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -22,6 +23,7 @@ public class PrivateInstitutionAccountsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_gte")
     public Long idGte;
+
     public PrivateInstitutionAccountsListRequest withIdGte(Long idGte) {
         this.idGte = idGte;
         return this;
@@ -32,6 +34,7 @@ public class PrivateInstitutionAccountsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_lte")
     public Long idLte;
+
     public PrivateInstitutionAccountsListRequest withIdLte(Long idLte) {
         this.idLte = idLte;
         return this;
@@ -42,6 +45,7 @@ public class PrivateInstitutionAccountsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=institution_user_id")
     public String institutionUserId;
+
     public PrivateInstitutionAccountsListRequest withInstitutionUserId(String institutionUserId) {
         this.institutionUserId = institutionUserId;
         return this;
@@ -52,6 +56,7 @@ public class PrivateInstitutionAccountsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_active")
     public Long isActive;
+
     public PrivateInstitutionAccountsListRequest withIsActive(Long isActive) {
         this.isActive = isActive;
         return this;
@@ -62,6 +67,7 @@ public class PrivateInstitutionAccountsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public PrivateInstitutionAccountsListRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -72,6 +78,7 @@ public class PrivateInstitutionAccountsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public PrivateInstitutionAccountsListRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -82,6 +89,7 @@ public class PrivateInstitutionAccountsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public PrivateInstitutionAccountsListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -92,9 +100,11 @@ public class PrivateInstitutionAccountsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public PrivateInstitutionAccountsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public PrivateInstitutionAccountsListRequest(){}
 }

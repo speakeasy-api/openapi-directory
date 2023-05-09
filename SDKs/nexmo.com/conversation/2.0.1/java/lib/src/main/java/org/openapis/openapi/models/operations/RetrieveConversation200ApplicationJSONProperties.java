@@ -12,9 +12,11 @@ public class RetrieveConversation200ApplicationJSONProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video")
     public Boolean video;
+
     public RetrieveConversation200ApplicationJSONProperties withVideo(Boolean video) {
         this.video = video;
         return this;
     }
     
+    public RetrieveConversation200ApplicationJSONProperties(){}
 }

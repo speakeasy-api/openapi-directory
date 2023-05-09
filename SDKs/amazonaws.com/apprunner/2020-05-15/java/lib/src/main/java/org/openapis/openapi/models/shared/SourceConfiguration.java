@@ -15,6 +15,7 @@ public class SourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthenticationConfiguration")
     public AuthenticationConfiguration authenticationConfiguration;
+
     public SourceConfiguration withAuthenticationConfiguration(AuthenticationConfiguration authenticationConfiguration) {
         this.authenticationConfiguration = authenticationConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class SourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoDeploymentsEnabled")
     public Boolean autoDeploymentsEnabled;
+
     public SourceConfiguration withAutoDeploymentsEnabled(Boolean autoDeploymentsEnabled) {
         this.autoDeploymentsEnabled = autoDeploymentsEnabled;
         return this;
@@ -31,6 +33,7 @@ public class SourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeRepository")
     public CodeRepository codeRepository;
+
     public SourceConfiguration withCodeRepository(CodeRepository codeRepository) {
         this.codeRepository = codeRepository;
         return this;
@@ -39,9 +42,11 @@ public class SourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageRepository")
     public ImageRepository imageRepository;
+
     public SourceConfiguration withImageRepository(ImageRepository imageRepository) {
         this.imageRepository = imageRepository;
         return this;
     }
     
+    public SourceConfiguration(){}
 }

@@ -20,9 +20,11 @@ public class ApplePayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domains")
     public String[] domains;
+
     public ApplePayInfo withDomains(String[] domains) {
         this.domains = domains;
         return this;
     }
     
+    public ApplePayInfo(){}
 }

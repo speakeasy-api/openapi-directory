@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class EnvironmentResourceDescriptionsMessage {
     
     public EnvironmentResourceDescription environmentResources;
+
     public EnvironmentResourceDescriptionsMessage withEnvironmentResources(EnvironmentResourceDescription environmentResources) {
         this.environmentResources = environmentResources;
         return this;
     }
     
+    public EnvironmentResourceDescriptionsMessage(){}
 }

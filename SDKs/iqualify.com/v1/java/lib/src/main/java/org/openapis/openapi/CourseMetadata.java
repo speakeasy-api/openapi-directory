@@ -58,12 +58,10 @@ public class CourseMetadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutCoursesContentIdMetadataCategoryResponse res = new org.openapis.openapi.models.operations.PutCoursesContentIdMetadataCategoryResponse() {{
+        org.openapis.openapi.models.operations.PutCoursesContentIdMetadataCategoryResponse res = new org.openapis.openapi.models.operations.PutCoursesContentIdMetadataCategoryResponse(contentType, httpRes.statusCode()) {{
             courseMetaResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,12 +109,10 @@ public class CourseMetadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutCoursesContentIdMetadataLevelResponse res = new org.openapis.openapi.models.operations.PutCoursesContentIdMetadataLevelResponse() {{
+        org.openapis.openapi.models.operations.PutCoursesContentIdMetadataLevelResponse res = new org.openapis.openapi.models.operations.PutCoursesContentIdMetadataLevelResponse(contentType, httpRes.statusCode()) {{
             courseMetaResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -164,12 +160,10 @@ public class CourseMetadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutCoursesContentIdMetadataTagsResponse res = new org.openapis.openapi.models.operations.PutCoursesContentIdMetadataTagsResponse() {{
+        org.openapis.openapi.models.operations.PutCoursesContentIdMetadataTagsResponse res = new org.openapis.openapi.models.operations.PutCoursesContentIdMetadataTagsResponse(contentType, httpRes.statusCode()) {{
             courseMetaResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -217,12 +211,10 @@ public class CourseMetadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutCoursesContentIdMetadataTopicResponse res = new org.openapis.openapi.models.operations.PutCoursesContentIdMetadataTopicResponse() {{
+        org.openapis.openapi.models.operations.PutCoursesContentIdMetadataTopicResponse res = new org.openapis.openapi.models.operations.PutCoursesContentIdMetadataTopicResponse(contentType, httpRes.statusCode()) {{
             courseMetaResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

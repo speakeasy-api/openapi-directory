@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCountriesCountryCodeJsonResponse {
     
     public String contentType;
+
     public GetCountriesCountryCodeJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCountriesCountryCodeJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.Country country;
+
     public GetCountriesCountryCodeJsonResponse withCountry(org.openapis.openapi.models.shared.Country country) {
         this.country = country;
         return this;
@@ -29,6 +32,7 @@ public class GetCountriesCountryCodeJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetCountriesCountryCodeJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -36,6 +40,7 @@ public class GetCountriesCountryCodeJsonResponse {
     
     
     public Integer statusCode;
+
     public GetCountriesCountryCodeJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCountriesCountryCodeJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCountriesCountryCodeJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCountriesCountryCodeJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

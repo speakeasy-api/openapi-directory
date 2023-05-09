@@ -21,6 +21,7 @@ public class PutIntegrationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public PutIntegrationResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -28,6 +29,7 @@ public class PutIntegrationResponse {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public PutIntegrationResponse withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -36,6 +38,7 @@ public class PutIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsUnstructured")
     public Boolean isUnstructured;
+
     public PutIntegrationResponse withIsUnstructured(Boolean isUnstructured) {
         this.isUnstructured = isUnstructured;
         return this;
@@ -45,6 +48,7 @@ public class PutIntegrationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public PutIntegrationResponse withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -53,6 +57,7 @@ public class PutIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectTypeName")
     public String objectTypeName;
+
     public PutIntegrationResponse withObjectTypeName(String objectTypeName) {
         this.objectTypeName = objectTypeName;
         return this;
@@ -61,6 +66,7 @@ public class PutIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectTypeNames")
     public java.util.Map<String, String> objectTypeNames;
+
     public PutIntegrationResponse withObjectTypeNames(java.util.Map<String, String> objectTypeNames) {
         this.objectTypeNames = objectTypeNames;
         return this;
@@ -69,6 +75,7 @@ public class PutIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public PutIntegrationResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -76,6 +83,7 @@ public class PutIntegrationResponse {
     
     @JsonProperty("Uri")
     public String uri;
+
     public PutIntegrationResponse withUri(String uri) {
         this.uri = uri;
         return this;
@@ -84,9 +92,16 @@ public class PutIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkflowId")
     public String workflowId;
+
     public PutIntegrationResponse withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public PutIntegrationResponse(@JsonProperty("CreatedAt") OffsetDateTime createdAt, @JsonProperty("DomainName") String domainName, @JsonProperty("LastUpdatedAt") OffsetDateTime lastUpdatedAt, @JsonProperty("Uri") String uri) {
+        this.createdAt = createdAt;
+        this.domainName = domainName;
+        this.lastUpdatedAt = lastUpdatedAt;
+        this.uri = uri;
+  }
 }

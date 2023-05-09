@@ -18,9 +18,11 @@ public class CreateCustomerRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public CompanyInput customer;
+
     public CreateCustomerRequestInput withCustomer(CompanyInput customer) {
         this.customer = customer;
         return this;
     }
     
+    public CreateCustomerRequestInput(){}
 }

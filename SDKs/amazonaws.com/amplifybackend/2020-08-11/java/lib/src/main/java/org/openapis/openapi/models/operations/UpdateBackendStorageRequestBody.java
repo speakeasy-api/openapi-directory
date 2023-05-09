@@ -12,6 +12,7 @@ public class UpdateBackendStorageRequestBody {
      */
     @JsonProperty("resourceConfig")
     public UpdateBackendStorageRequestBodyResourceConfig resourceConfig;
+
     public UpdateBackendStorageRequestBody withResourceConfig(UpdateBackendStorageRequestBodyResourceConfig resourceConfig) {
         this.resourceConfig = resourceConfig;
         return this;
@@ -22,9 +23,14 @@ public class UpdateBackendStorageRequestBody {
      */
     @JsonProperty("resourceName")
     public String resourceName;
+
     public UpdateBackendStorageRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public UpdateBackendStorageRequestBody(@JsonProperty("resourceConfig") UpdateBackendStorageRequestBodyResourceConfig resourceConfig, @JsonProperty("resourceName") String resourceName) {
+        this.resourceConfig = resourceConfig;
+        this.resourceName = resourceName;
+  }
 }

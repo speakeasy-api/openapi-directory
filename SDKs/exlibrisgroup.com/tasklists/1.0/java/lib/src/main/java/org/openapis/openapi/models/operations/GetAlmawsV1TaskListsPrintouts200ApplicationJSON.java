@@ -18,6 +18,7 @@ public class GetAlmawsV1TaskListsPrintouts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printout")
     public GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout[] printout;
+
     public GetAlmawsV1TaskListsPrintouts200ApplicationJSON withPrintout(GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout[] printout) {
         this.printout = printout;
         return this;
@@ -29,9 +30,11 @@ public class GetAlmawsV1TaskListsPrintouts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_record_count")
     public Integer totalRecordCount;
+
     public GetAlmawsV1TaskListsPrintouts200ApplicationJSON withTotalRecordCount(Integer totalRecordCount) {
         this.totalRecordCount = totalRecordCount;
         return this;
     }
     
+    public GetAlmawsV1TaskListsPrintouts200ApplicationJSON(){}
 }

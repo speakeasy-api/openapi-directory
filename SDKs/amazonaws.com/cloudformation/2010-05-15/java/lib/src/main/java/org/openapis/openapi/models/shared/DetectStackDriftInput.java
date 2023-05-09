@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DetectStackDriftInput {
     
     public String[] logicalResourceIds;
+
     public DetectStackDriftInput withLogicalResourceIds(String[] logicalResourceIds) {
         this.logicalResourceIds = logicalResourceIds;
         return this;
@@ -16,9 +17,13 @@ public class DetectStackDriftInput {
     
     
     public String stackName;
+
     public DetectStackDriftInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public DetectStackDriftInput(@JsonProperty("StackName") String stackName) {
+        this.stackName = stackName;
+  }
 }

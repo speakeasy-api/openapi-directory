@@ -12,9 +12,13 @@ public class PutConfigurationRequestBody {
      */
     @JsonProperty("configuration")
     public PutConfigurationRequestBodyConfiguration configuration;
+
     public PutConfigurationRequestBody withConfiguration(PutConfigurationRequestBodyConfiguration configuration) {
         this.configuration = configuration;
         return this;
     }
     
+    public PutConfigurationRequestBody(@JsonProperty("configuration") PutConfigurationRequestBodyConfiguration configuration) {
+        this.configuration = configuration;
+  }
 }

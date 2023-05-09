@@ -15,6 +15,7 @@ public class DeleteComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentBuildVersionArn")
     public String componentBuildVersionArn;
+
     public DeleteComponentResponse withComponentBuildVersionArn(String componentBuildVersionArn) {
         this.componentBuildVersionArn = componentBuildVersionArn;
         return this;
@@ -23,9 +24,11 @@ public class DeleteComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public DeleteComponentResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public DeleteComponentResponse(){}
 }

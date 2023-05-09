@@ -18,6 +18,7 @@ public class AdvertiserAdServerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cmHybridConfig")
     public CmHybridConfig cmHybridConfig;
+
     public AdvertiserAdServerConfig withCmHybridConfig(CmHybridConfig cmHybridConfig) {
         this.cmHybridConfig = cmHybridConfig;
         return this;
@@ -29,9 +30,11 @@ public class AdvertiserAdServerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thirdPartyOnlyConfig")
     public ThirdPartyOnlyConfig thirdPartyOnlyConfig;
+
     public AdvertiserAdServerConfig withThirdPartyOnlyConfig(ThirdPartyOnlyConfig thirdPartyOnlyConfig) {
         this.thirdPartyOnlyConfig = thirdPartyOnlyConfig;
         return this;
     }
     
+    public AdvertiserAdServerConfig(){}
 }

@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetRenderSecurity;
 import org.openapis.openapi.models.operations.GetRenderRequest;
 import org.openapis.openapi.models.operations.GetRenderResponse;
+import org.openapis.openapi.models.operations.GetRenderSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,20 +26,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetRenderRequest req = new GetRenderRequest() {{
-                id = "corrupti";
-            }}            
+            GetRenderRequest req = new GetRenderRequest("corrupti");            
 
-            GetRenderResponse res = sdk.edit.getRender(req, new GetRenderSecurity() {{
+            GetRenderResponse res = sdk.edit.getRender(req, new GetRenderSecurity("provident") {{
                 developerKey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.renderResponse.isPresent()) {
+            if (res.renderResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,16 +47,16 @@ public class Application {
 ## Available Resources and Operations
 
 
-### edit
+### [edit](docs/edit/README.md)
 
-* `getRender` - Get Render Status
-* `postRender` - Render Asset
+* [getRender](docs/edit/README.md#getrender) - Get Render Status
+* [postRender](docs/edit/README.md#postrender) - Render Asset
 
-### serve
+### [serve](docs/serve/README.md)
 
-* `deleteAsset` - Delete Asset
-* `getAsset` - Get Asset
-* `getAssetByRenderId` - Get Asset by Render ID
+* [deleteAsset](docs/serve/README.md#deleteasset) - Delete Asset
+* [getAsset](docs/serve/README.md#getasset) - Get Asset
+* [getAssetByRenderId](docs/serve/README.md#getassetbyrenderid) - Get Asset by Render ID
 <!-- End SDK Available Operations -->
 
 ### Maturity

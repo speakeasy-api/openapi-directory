@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpecSet")
     public GoogleCloudDatalabelingV1beta1AnnotationSpecSet annotationSpecSet;
+
     public GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest withAnnotationSpecSet(GoogleCloudDatalabelingV1beta1AnnotationSpecSet annotationSpecSet) {
         this.annotationSpecSet = annotationSpecSet;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLicenseConversionTaskResponse {
@@ -12,6 +13,7 @@ public class GetLicenseConversionTaskResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLicenseConversionTaskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetLicenseConversionTaskResponse {
      */
     
     public Object authorizationException;
+
     public GetLicenseConversionTaskResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class GetLicenseConversionTaskResponse {
     
     
     public String contentType;
+
     public GetLicenseConversionTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetLicenseConversionTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLicenseConversionTaskResponse getLicenseConversionTaskResponse;
+
     public GetLicenseConversionTaskResponse withGetLicenseConversionTaskResponse(org.openapis.openapi.models.shared.GetLicenseConversionTaskResponse getLicenseConversionTaskResponse) {
         this.getLicenseConversionTaskResponse = getLicenseConversionTaskResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetLicenseConversionTaskResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetLicenseConversionTaskResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class GetLicenseConversionTaskResponse {
      */
     
     public Object rateLimitExceededException;
+
     public GetLicenseConversionTaskResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class GetLicenseConversionTaskResponse {
     
     
     public Integer statusCode;
+
     public GetLicenseConversionTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetLicenseConversionTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLicenseConversionTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetLicenseConversionTaskResponse {
      */
     
     public Object serverInternalException;
+
     public GetLicenseConversionTaskResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
     }
     
+    public GetLicenseConversionTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

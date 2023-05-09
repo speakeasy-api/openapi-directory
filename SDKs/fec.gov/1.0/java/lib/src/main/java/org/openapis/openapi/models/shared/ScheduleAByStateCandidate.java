@@ -12,6 +12,7 @@ public class ScheduleAByStateCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     public String candidateId;
+
     public ScheduleAByStateCandidate withCandidateId(String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -20,6 +21,7 @@ public class ScheduleAByStateCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public ScheduleAByStateCandidate withCount(Integer count) {
         this.count = count;
         return this;
@@ -28,6 +30,7 @@ public class ScheduleAByStateCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycle")
     public Integer cycle;
+
     public ScheduleAByStateCandidate withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -36,6 +39,7 @@ public class ScheduleAByStateCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ScheduleAByStateCandidate withState(String state) {
         this.state = state;
         return this;
@@ -44,6 +48,7 @@ public class ScheduleAByStateCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state_full")
     public String stateFull;
+
     public ScheduleAByStateCandidate withStateFull(String stateFull) {
         this.stateFull = stateFull;
         return this;
@@ -52,9 +57,11 @@ public class ScheduleAByStateCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public ScheduleAByStateCandidate withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public ScheduleAByStateCandidate(){}
 }

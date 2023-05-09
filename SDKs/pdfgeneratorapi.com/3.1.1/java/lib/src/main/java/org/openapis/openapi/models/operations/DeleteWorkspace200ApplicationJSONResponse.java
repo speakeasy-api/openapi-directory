@@ -12,9 +12,11 @@ public class DeleteWorkspace200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public DeleteWorkspace200ApplicationJSONResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public DeleteWorkspace200ApplicationJSONResponse(){}
 }

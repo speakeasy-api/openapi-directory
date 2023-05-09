@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetachDiskResponse {
@@ -12,6 +13,7 @@ public class DetachDiskResponse {
      */
     
     public Object accessDeniedException;
+
     public DetachDiskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DetachDiskResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public DetachDiskResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class DetachDiskResponse {
     
     
     public String contentType;
+
     public DetachDiskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DetachDiskResponse {
      */
     
     public org.openapis.openapi.models.shared.DetachDiskResult detachDiskResult;
+
     public DetachDiskResponse withDetachDiskResult(org.openapis.openapi.models.shared.DetachDiskResult detachDiskResult) {
         this.detachDiskResult = detachDiskResult;
         return this;
@@ -49,6 +54,7 @@ public class DetachDiskResponse {
      */
     
     public Object invalidInputException;
+
     public DetachDiskResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DetachDiskResponse {
      */
     
     public Object notFoundException;
+
     public DetachDiskResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DetachDiskResponse {
      */
     
     public Object operationFailureException;
+
     public DetachDiskResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class DetachDiskResponse {
      */
     
     public Object serviceException;
+
     public DetachDiskResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class DetachDiskResponse {
     
     
     public Integer statusCode;
+
     public DetachDiskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DetachDiskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetachDiskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DetachDiskResponse {
      */
     
     public Object unauthenticatedException;
+
     public DetachDiskResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public DetachDiskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

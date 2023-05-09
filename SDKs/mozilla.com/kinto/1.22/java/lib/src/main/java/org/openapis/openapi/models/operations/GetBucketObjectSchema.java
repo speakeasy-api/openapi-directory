@@ -15,6 +15,7 @@ public class GetBucketObjectSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetBucketObjectSchemaData data;
+
     public GetBucketObjectSchema withData(GetBucketObjectSchemaData data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class GetBucketObjectSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public GetBucketObjectSchemaPermissions permissions;
+
     public GetBucketObjectSchema withPermissions(GetBucketObjectSchemaPermissions permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public GetBucketObjectSchema(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class GroupsV2GroupPotentialMembershipSearchResponse {
     
     public Boolean hasMore;
+
     public GroupsV2GroupPotentialMembershipSearchResponse withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
@@ -16,6 +17,7 @@ public class GroupsV2GroupPotentialMembershipSearchResponse {
     
     
     public QueriesPagedQuery query;
+
     public GroupsV2GroupPotentialMembershipSearchResponse withQuery(QueriesPagedQuery query) {
         this.query = query;
         return this;
@@ -23,6 +25,7 @@ public class GroupsV2GroupPotentialMembershipSearchResponse {
     
     
     public String replacementContinuationToken;
+
     public GroupsV2GroupPotentialMembershipSearchResponse withReplacementContinuationToken(String replacementContinuationToken) {
         this.replacementContinuationToken = replacementContinuationToken;
         return this;
@@ -30,6 +33,7 @@ public class GroupsV2GroupPotentialMembershipSearchResponse {
     
     
     public GroupsV2GroupPotentialMembership[] results;
+
     public GroupsV2GroupPotentialMembershipSearchResponse withResults(GroupsV2GroupPotentialMembership[] results) {
         this.results = results;
         return this;
@@ -37,6 +41,7 @@ public class GroupsV2GroupPotentialMembershipSearchResponse {
     
     
     public Integer totalResults;
+
     public GroupsV2GroupPotentialMembershipSearchResponse withTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
         return this;
@@ -50,9 +55,11 @@ public class GroupsV2GroupPotentialMembershipSearchResponse {
      */
     
     public Boolean useTotalResults;
+
     public GroupsV2GroupPotentialMembershipSearchResponse withUseTotalResults(Boolean useTotalResults) {
         this.useTotalResults = useTotalResults;
         return this;
     }
     
+    public GroupsV2GroupPotentialMembershipSearchResponse(){}
 }

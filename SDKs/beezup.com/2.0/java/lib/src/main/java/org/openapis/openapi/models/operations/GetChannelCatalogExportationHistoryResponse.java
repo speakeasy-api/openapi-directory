@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChannelCatalogExportationHistoryResponse {
@@ -12,6 +13,7 @@ public class GetChannelCatalogExportationHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetChannelCatalogExportationHistoryResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetChannelCatalogExportationHistoryResponse {
     
     
     public String contentType;
+
     public GetChannelCatalogExportationHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetChannelCatalogExportationHistoryResponse {
     
     
     public Integer statusCode;
+
     public GetChannelCatalogExportationHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetChannelCatalogExportationHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChannelCatalogExportationHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetChannelCatalogExportationHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ChannelCatalogExportationHistory channelCatalogExportationHistory;
+
     public GetChannelCatalogExportationHistoryResponse withChannelCatalogExportationHistory(org.openapis.openapi.models.shared.ChannelCatalogExportationHistory channelCatalogExportationHistory) {
         this.channelCatalogExportationHistory = channelCatalogExportationHistory;
         return this;
     }
     
+    public GetChannelCatalogExportationHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

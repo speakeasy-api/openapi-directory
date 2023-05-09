@@ -15,9 +15,11 @@ public class ListProvisionedCapacityOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedCapacityList")
     public ProvisionedCapacityDescription[] provisionedCapacityList;
+
     public ListProvisionedCapacityOutput withProvisionedCapacityList(ProvisionedCapacityDescription[] provisionedCapacityList) {
         this.provisionedCapacityList = provisionedCapacityList;
         return this;
     }
     
+    public ListProvisionedCapacityOutput(){}
 }

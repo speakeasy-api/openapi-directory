@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeElasticIpsResponse {
     
     public String contentType;
+
     public DescribeElasticIpsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeElasticIpsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeElasticIpsResult describeElasticIpsResult;
+
     public DescribeElasticIpsResponse withDescribeElasticIpsResult(org.openapis.openapi.models.shared.DescribeElasticIpsResult describeElasticIpsResult) {
         this.describeElasticIpsResult = describeElasticIpsResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeElasticIpsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeElasticIpsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeElasticIpsResponse {
     
     
     public Integer statusCode;
+
     public DescribeElasticIpsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeElasticIpsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeElasticIpsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeElasticIpsResponse {
      */
     
     public Object validationException;
+
     public DescribeElasticIpsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeElasticIpsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

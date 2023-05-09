@@ -15,9 +15,11 @@ public class StartFaceSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StartFaceSearchResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public StartFaceSearchResponse(){}
 }

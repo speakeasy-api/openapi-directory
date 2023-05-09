@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DnsResourceRecordSetsPatchRequest {
@@ -12,6 +13,7 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DnsResourceRecordSetsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DnsResourceRecordSetsPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ResourceRecordSet resourceRecordSet;
+
     public DnsResourceRecordSetsPatchRequest withResourceRecordSet(org.openapis.openapi.models.shared.ResourceRecordSet resourceRecordSet) {
         this.resourceRecordSet = resourceRecordSet;
         return this;
@@ -29,6 +32,7 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DnsResourceRecordSetsPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DnsResourceRecordSetsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DnsResourceRecordSetsPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientOperationId")
     public String clientOperationId;
+
     public DnsResourceRecordSetsPatchRequest withClientOperationId(String clientOperationId) {
         this.clientOperationId = clientOperationId;
         return this;
@@ -69,6 +76,7 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DnsResourceRecordSetsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DnsResourceRecordSetsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=managedZone")
     public String managedZone;
+
     public DnsResourceRecordSetsPatchRequest withManagedZone(String managedZone) {
         this.managedZone = managedZone;
         return this;
@@ -99,6 +109,7 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public DnsResourceRecordSetsPatchRequest withName(String name) {
         this.name = name;
         return this;
@@ -109,6 +120,7 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DnsResourceRecordSetsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -119,6 +131,7 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DnsResourceRecordSetsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -129,6 +142,7 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public DnsResourceRecordSetsPatchRequest withProject(String project) {
         this.project = project;
         return this;
@@ -139,6 +153,7 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DnsResourceRecordSetsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -149,6 +164,7 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String type;
+
     public DnsResourceRecordSetsPatchRequest withType(String type) {
         this.type = type;
         return this;
@@ -159,6 +175,7 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DnsResourceRecordSetsPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -169,9 +186,16 @@ public class DnsResourceRecordSetsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DnsResourceRecordSetsPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DnsResourceRecordSetsPatchRequest(@JsonProperty("managedZone") String managedZone, @JsonProperty("name") String name, @JsonProperty("project") String project, @JsonProperty("type") String type) {
+        this.managedZone = managedZone;
+        this.name = name;
+        this.project = project;
+        this.type = type;
+  }
 }

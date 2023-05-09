@@ -15,6 +15,7 @@ public class TextLogSetting {
      */
     @JsonProperty("destination")
     public TextLogDestination destination;
+
     public TextLogSetting withDestination(TextLogDestination destination) {
         this.destination = destination;
         return this;
@@ -22,9 +23,14 @@ public class TextLogSetting {
     
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public TextLogSetting withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public TextLogSetting(@JsonProperty("destination") TextLogDestination destination, @JsonProperty("enabled") Boolean enabled) {
+        this.destination = destination;
+        this.enabled = enabled;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpsertAccount201ApplicationJSON {
     @JsonProperty("message")
     public String message;
+
     public UpsertAccount201ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -21,6 +22,7 @@ public class UpsertAccount201ApplicationJSON {
     
     @JsonProperty("meta")
     public UpsertAccount201ApplicationJSONMeta meta;
+
     public UpsertAccount201ApplicationJSON withMeta(UpsertAccount201ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
@@ -32,9 +34,14 @@ public class UpsertAccount201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejected")
     public java.util.Map<String, String> rejected;
+
     public UpsertAccount201ApplicationJSON withRejected(java.util.Map<String, String> rejected) {
         this.rejected = rejected;
         return this;
     }
     
+    public UpsertAccount201ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("meta") UpsertAccount201ApplicationJSONMeta meta) {
+        this.message = message;
+        this.meta = meta;
+  }
 }

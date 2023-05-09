@@ -18,6 +18,7 @@ public class GoalUrlDestinationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseSensitive")
     public Boolean caseSensitive;
+
     public GoalUrlDestinationDetails withCaseSensitive(Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
         return this;
@@ -29,6 +30,7 @@ public class GoalUrlDestinationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstStepRequired")
     public Boolean firstStepRequired;
+
     public GoalUrlDestinationDetails withFirstStepRequired(Boolean firstStepRequired) {
         this.firstStepRequired = firstStepRequired;
         return this;
@@ -40,6 +42,7 @@ public class GoalUrlDestinationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchType")
     public String matchType;
+
     public GoalUrlDestinationDetails withMatchType(String matchType) {
         this.matchType = matchType;
         return this;
@@ -51,6 +54,7 @@ public class GoalUrlDestinationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public GoalUrlDestinationDetailsSteps[] steps;
+
     public GoalUrlDestinationDetails withSteps(GoalUrlDestinationDetailsSteps[] steps) {
         this.steps = steps;
         return this;
@@ -62,9 +66,11 @@ public class GoalUrlDestinationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GoalUrlDestinationDetails withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GoalUrlDestinationDetails(){}
 }

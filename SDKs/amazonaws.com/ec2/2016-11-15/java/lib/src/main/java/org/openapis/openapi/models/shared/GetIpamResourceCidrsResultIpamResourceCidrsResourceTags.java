@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetIpamResourceCidrsResultIpamResourceCidrsResourceTags {
     
     public String key;
+
     public GetIpamResourceCidrsResultIpamResourceCidrsResourceTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class GetIpamResourceCidrsResultIpamResourceCidrsResourceTags {
     
     
     public String value;
+
     public GetIpamResourceCidrsResultIpamResourceCidrsResourceTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetIpamResourceCidrsResultIpamResourceCidrsResourceTags(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContactDetails {
     @JsonProperty("address")
     public Address address;
+
     public ContactDetails withAddress(Address address) {
         this.address = address;
         return this;
@@ -21,6 +22,7 @@ public class ContactDetails {
      */
     @JsonProperty("email")
     public String email;
+
     public ContactDetails withEmail(String email) {
         this.email = email;
         return this;
@@ -28,6 +30,7 @@ public class ContactDetails {
     
     @JsonProperty("phone")
     public Phone phone;
+
     public ContactDetails withPhone(Phone phone) {
         this.phone = phone;
         return this;
@@ -39,9 +42,15 @@ public class ContactDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webAddress")
     public String webAddress;
+
     public ContactDetails withWebAddress(String webAddress) {
         this.webAddress = webAddress;
         return this;
     }
     
+    public ContactDetails(@JsonProperty("address") Address address, @JsonProperty("email") String email, @JsonProperty("phone") Phone phone) {
+        this.address = address;
+        this.email = email;
+        this.phone = phone;
+  }
 }

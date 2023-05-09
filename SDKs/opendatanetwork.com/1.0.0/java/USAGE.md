@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateAMapRequest;
 import org.openapis.openapi.models.operations.CreateAMapResponse;
 
@@ -13,13 +12,11 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateAMapRequest req = new CreateAMapRequest() {{
-                xAppToken = "corrupti";
-                appToken = "provident";
-                constraint = "distinctio";
-                entityId = "quibusdam";
-                variable = "unde";
-            }}            
+            CreateAMapRequest req = new CreateAMapRequest("corrupti", "provident") {{
+                xAppToken = "distinctio";
+                appToken = "quibusdam";
+                constraint = "unde";
+            }};            
 
             CreateAMapResponse res = sdk.createAMap(req);
 
@@ -29,5 +26,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

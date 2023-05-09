@@ -15,6 +15,7 @@ public class SaleRepsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public SaleRepsDto withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class SaleRepsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyId")
     public Long companyId;
+
     public SaleRepsDto withCompanyId(Long companyId) {
         this.companyId = companyId;
         return this;
@@ -31,6 +33,7 @@ public class SaleRepsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public SaleRepsDto withEmail(String email) {
         this.email = email;
         return this;
@@ -39,6 +42,7 @@ public class SaleRepsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public SaleRepsDto withId(Long id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class SaleRepsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SaleRepsDto withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class SaleRepsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public SaleRepsDto withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -63,9 +69,11 @@ public class SaleRepsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeStamp")
     public String timeStamp;
+
     public SaleRepsDto withTimeStamp(String timeStamp) {
         this.timeStamp = timeStamp;
         return this;
     }
     
+    public SaleRepsDto(){}
 }

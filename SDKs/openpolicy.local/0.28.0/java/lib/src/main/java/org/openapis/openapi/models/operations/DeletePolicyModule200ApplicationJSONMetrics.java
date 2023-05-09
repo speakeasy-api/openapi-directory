@@ -15,6 +15,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("counter_server_query_cache_hit")
     public Double counterServerQueryCacheHit;
+
     public DeletePolicyModule200ApplicationJSONMetrics withCounterServerQueryCacheHit(Double counterServerQueryCacheHit) {
         this.counterServerQueryCacheHit = counterServerQueryCacheHit;
         return this;
@@ -26,6 +27,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_query_compile_stage_build_comprehension_index_ns")
     public Double timerQueryCompileStageBuildComprehensionIndexNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerQueryCompileStageBuildComprehensionIndexNs(Double timerQueryCompileStageBuildComprehensionIndexNs) {
         this.timerQueryCompileStageBuildComprehensionIndexNs = timerQueryCompileStageBuildComprehensionIndexNs;
         return this;
@@ -37,6 +39,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_query_compile_stage_check_safety_ns")
     public Double timerQueryCompileStageCheckSafetyNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerQueryCompileStageCheckSafetyNs(Double timerQueryCompileStageCheckSafetyNs) {
         this.timerQueryCompileStageCheckSafetyNs = timerQueryCompileStageCheckSafetyNs;
         return this;
@@ -48,6 +51,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_query_compile_stage_check_types_ns")
     public Double timerQueryCompileStageCheckTypesNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerQueryCompileStageCheckTypesNs(Double timerQueryCompileStageCheckTypesNs) {
         this.timerQueryCompileStageCheckTypesNs = timerQueryCompileStageCheckTypesNs;
         return this;
@@ -59,6 +63,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_query_compile_stage_check_undefined_funcs_ns")
     public Double timerQueryCompileStageCheckUndefinedFuncsNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerQueryCompileStageCheckUndefinedFuncsNs(Double timerQueryCompileStageCheckUndefinedFuncsNs) {
         this.timerQueryCompileStageCheckUndefinedFuncsNs = timerQueryCompileStageCheckUndefinedFuncsNs;
         return this;
@@ -70,6 +75,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_query_compile_stage_check_unsafe_builtins_ns")
     public Double timerQueryCompileStageCheckUnsafeBuiltinsNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerQueryCompileStageCheckUnsafeBuiltinsNs(Double timerQueryCompileStageCheckUnsafeBuiltinsNs) {
         this.timerQueryCompileStageCheckUnsafeBuiltinsNs = timerQueryCompileStageCheckUnsafeBuiltinsNs;
         return this;
@@ -81,6 +87,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_query_compile_stage_resolve_refs_ns")
     public Double timerQueryCompileStageResolveRefsNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerQueryCompileStageResolveRefsNs(Double timerQueryCompileStageResolveRefsNs) {
         this.timerQueryCompileStageResolveRefsNs = timerQueryCompileStageResolveRefsNs;
         return this;
@@ -92,6 +99,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_query_compile_stage_rewrite_comprehension_terms_ns")
     public Double timerQueryCompileStageRewriteComprehensionTermsNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerQueryCompileStageRewriteComprehensionTermsNs(Double timerQueryCompileStageRewriteComprehensionTermsNs) {
         this.timerQueryCompileStageRewriteComprehensionTermsNs = timerQueryCompileStageRewriteComprehensionTermsNs;
         return this;
@@ -103,6 +111,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_query_compile_stage_rewrite_dynamic_terms_ns")
     public Double timerQueryCompileStageRewriteDynamicTermsNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerQueryCompileStageRewriteDynamicTermsNs(Double timerQueryCompileStageRewriteDynamicTermsNs) {
         this.timerQueryCompileStageRewriteDynamicTermsNs = timerQueryCompileStageRewriteDynamicTermsNs;
         return this;
@@ -114,6 +123,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_query_compile_stage_rewrite_expr_terms_ns")
     public Double timerQueryCompileStageRewriteExprTermsNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerQueryCompileStageRewriteExprTermsNs(Double timerQueryCompileStageRewriteExprTermsNs) {
         this.timerQueryCompileStageRewriteExprTermsNs = timerQueryCompileStageRewriteExprTermsNs;
         return this;
@@ -125,6 +135,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_query_compile_stage_rewrite_local_vars_ns")
     public Double timerQueryCompileStageRewriteLocalVarsNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerQueryCompileStageRewriteLocalVarsNs(Double timerQueryCompileStageRewriteLocalVarsNs) {
         this.timerQueryCompileStageRewriteLocalVarsNs = timerQueryCompileStageRewriteLocalVarsNs;
         return this;
@@ -136,6 +147,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_query_compile_stage_rewrite_to_capture_value_ns")
     public Double timerQueryCompileStageRewriteToCaptureValueNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerQueryCompileStageRewriteToCaptureValueNs(Double timerQueryCompileStageRewriteToCaptureValueNs) {
         this.timerQueryCompileStageRewriteToCaptureValueNs = timerQueryCompileStageRewriteToCaptureValueNs;
         return this;
@@ -147,6 +159,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_query_compile_stage_rewrite_with_values_ns")
     public Double timerQueryCompileStageRewriteWithValuesNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerQueryCompileStageRewriteWithValuesNs(Double timerQueryCompileStageRewriteWithValuesNs) {
         this.timerQueryCompileStageRewriteWithValuesNs = timerQueryCompileStageRewriteWithValuesNs;
         return this;
@@ -158,6 +171,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_rego_input_parse_ns")
     public Double timerRegoInputParseNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerRegoInputParseNs(Double timerRegoInputParseNs) {
         this.timerRegoInputParseNs = timerRegoInputParseNs;
         return this;
@@ -169,6 +183,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_rego_module_compile_ns")
     public Double timerRegoModuleCompileNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerRegoModuleCompileNs(Double timerRegoModuleCompileNs) {
         this.timerRegoModuleCompileNs = timerRegoModuleCompileNs;
         return this;
@@ -180,6 +195,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_rego_module_parse_ns")
     public Double timerRegoModuleParseNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerRegoModuleParseNs(Double timerRegoModuleParseNs) {
         this.timerRegoModuleParseNs = timerRegoModuleParseNs;
         return this;
@@ -191,6 +207,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_rego_query_compile_ns")
     public Double timerRegoQueryCompileNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerRegoQueryCompileNs(Double timerRegoQueryCompileNs) {
         this.timerRegoQueryCompileNs = timerRegoQueryCompileNs;
         return this;
@@ -202,6 +219,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_rego_query_eval_ns")
     public Double timerRegoQueryEvalNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerRegoQueryEvalNs(Double timerRegoQueryEvalNs) {
         this.timerRegoQueryEvalNs = timerRegoQueryEvalNs;
         return this;
@@ -213,6 +231,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_rego_query_parse_ns")
     public Double timerRegoQueryParseNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerRegoQueryParseNs(Double timerRegoQueryParseNs) {
         this.timerRegoQueryParseNs = timerRegoQueryParseNs;
         return this;
@@ -224,6 +243,7 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_server_handler_ns")
     public Double timerServerHandlerNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerServerHandlerNs(Double timerServerHandlerNs) {
         this.timerServerHandlerNs = timerServerHandlerNs;
         return this;
@@ -235,9 +255,11 @@ public class DeletePolicyModule200ApplicationJSONMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timer_server_read_bytes_ns")
     public Double timerServerReadBytesNs;
+
     public DeletePolicyModule200ApplicationJSONMetrics withTimerServerReadBytesNs(Double timerServerReadBytesNs) {
         this.timerServerReadBytesNs = timerServerReadBytesNs;
         return this;
     }
     
+    public DeletePolicyModule200ApplicationJSONMetrics(){}
 }

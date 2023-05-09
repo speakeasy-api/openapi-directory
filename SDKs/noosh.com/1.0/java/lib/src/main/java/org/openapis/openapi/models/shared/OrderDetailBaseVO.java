@@ -18,6 +18,7 @@ public class OrderDetailBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("accepted_date")
     public LocalDate acceptedDate;
+
     public OrderDetailBaseVO withAcceptedDate(LocalDate acceptedDate) {
         this.acceptedDate = acceptedDate;
         return this;
@@ -27,6 +28,7 @@ public class OrderDetailBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("annulled_date")
     public LocalDate annulledDate;
+
     public OrderDetailBaseVO withAnnulledDate(LocalDate annulledDate) {
         this.annulledDate = annulledDate;
         return this;
@@ -36,6 +38,7 @@ public class OrderDetailBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("approved_date")
     public LocalDate approvedDate;
+
     public OrderDetailBaseVO withApprovedDate(LocalDate approvedDate) {
         this.approvedDate = approvedDate;
         return this;
@@ -45,6 +48,7 @@ public class OrderDetailBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("awarded_date")
     public LocalDate awardedDate;
+
     public OrderDetailBaseVO withAwardedDate(LocalDate awardedDate) {
         this.awardedDate = awardedDate;
         return this;
@@ -53,6 +57,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget_type")
     public String budgetType;
+
     public OrderDetailBaseVO withBudgetType(String budgetType) {
         this.budgetType = budgetType;
         return this;
@@ -64,6 +69,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer")
     public UserVO buyer;
+
     public OrderDetailBaseVO withBuyer(UserVO buyer) {
         this.buyer = buyer;
         return this;
@@ -75,6 +81,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer_workgroup")
     public WorkgroupBaseVO buyerWorkgroup;
+
     public OrderDetailBaseVO withBuyerWorkgroup(WorkgroupBaseVO buyerWorkgroup) {
         this.buyerWorkgroup = buyerWorkgroup;
         return this;
@@ -83,6 +90,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classification")
     public String classification;
+
     public OrderDetailBaseVO withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -92,6 +100,7 @@ public class OrderDetailBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("closed_date")
     public LocalDate closedDate;
+
     public OrderDetailBaseVO withClosedDate(LocalDate closedDate) {
         this.closedDate = closedDate;
         return this;
@@ -100,6 +109,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public OrderDetailBaseVO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -109,6 +119,7 @@ public class OrderDetailBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("completion_date")
     public LocalDate completionDate;
+
     public OrderDetailBaseVO withCompletionDate(LocalDate completionDate) {
         this.completionDate = completionDate;
         return this;
@@ -117,6 +128,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator_user_id")
     public Long creatorUserId;
+
     public OrderDetailBaseVO withCreatorUserId(Long creatorUserId) {
         this.creatorUserId = creatorUserId;
         return this;
@@ -125,6 +137,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public OrderDetailBaseVO withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -133,6 +146,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public PropertyPaAndAttVO[] customFields;
+
     public OrderDetailBaseVO withCustomFields(PropertyPaAndAttVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -144,6 +158,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grand_total")
     public Object grandTotal;
+
     public OrderDetailBaseVO withGrandTotal(Object grandTotal) {
         this.grandTotal = grandTotal;
         return this;
@@ -152,6 +167,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_count")
     public Integer itemCount;
+
     public OrderDetailBaseVO withItemCount(Integer itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -161,6 +177,7 @@ public class OrderDetailBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_activity_date")
     public LocalDate lastActivityDate;
+
     public OrderDetailBaseVO withLastActivityDate(LocalDate lastActivityDate) {
         this.lastActivityDate = lastActivityDate;
         return this;
@@ -170,6 +187,7 @@ public class OrderDetailBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_changed")
     public LocalDate lastChanged;
+
     public OrderDetailBaseVO withLastChanged(LocalDate lastChanged) {
         this.lastChanged = lastChanged;
         return this;
@@ -179,6 +197,7 @@ public class OrderDetailBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_status_change")
     public LocalDate lastStatusChange;
+
     public OrderDetailBaseVO withLastStatusChange(LocalDate lastStatusChange) {
         this.lastStatusChange = lastStatusChange;
         return this;
@@ -187,6 +206,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("misc_cost")
     public Double miscCost;
+
     public OrderDetailBaseVO withMiscCost(Double miscCost) {
         this.miscCost = miscCost;
         return this;
@@ -195,6 +215,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public Long orderId;
+
     public OrderDetailBaseVO withOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
@@ -203,6 +224,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_number")
     public String orderNumber;
+
     public OrderDetailBaseVO withOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
@@ -211,6 +233,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_title")
     public String orderTitle;
+
     public OrderDetailBaseVO withOrderTitle(String orderTitle) {
         this.orderTitle = orderTitle;
         return this;
@@ -222,6 +245,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_total")
     public Object orderTotal;
+
     public OrderDetailBaseVO withOrderTotal(Object orderTotal) {
         this.orderTotal = orderTotal;
         return this;
@@ -230,6 +254,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overs_percent")
     public Double oversPercent;
+
     public OrderDetailBaseVO withOversPercent(Double oversPercent) {
         this.oversPercent = oversPercent;
         return this;
@@ -238,6 +263,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_order_id")
     public Long parentOrderId;
+
     public OrderDetailBaseVO withParentOrderId(Long parentOrderId) {
         this.parentOrderId = parentOrderId;
         return this;
@@ -246,6 +272,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_reference")
     public String paymentReference;
+
     public OrderDetailBaseVO withPaymentReference(String paymentReference) {
         this.paymentReference = paymentReference;
         return this;
@@ -254,6 +281,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("print_order_ids")
     public Long[] printOrderIds;
+
     public OrderDetailBaseVO withPrintOrderIds(Long[] printOrderIds) {
         this.printOrderIds = printOrderIds;
         return this;
@@ -262,6 +290,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_id")
     public Long quoteId;
+
     public OrderDetailBaseVO withQuoteId(Long quoteId) {
         this.quoteId = quoteId;
         return this;
@@ -273,6 +302,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping")
     public Object shipping;
+
     public OrderDetailBaseVO withShipping(Object shipping) {
         this.shipping = shipping;
         return this;
@@ -281,6 +311,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public OrderDetailBaseVO withStatus(String status) {
         this.status = status;
         return this;
@@ -289,6 +320,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_comments")
     public String statusComments;
+
     public OrderDetailBaseVO withStatusComments(String statusComments) {
         this.statusComments = statusComments;
         return this;
@@ -300,6 +332,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier")
     public UserVO supplier;
+
     public OrderDetailBaseVO withSupplier(UserVO supplier) {
         this.supplier = supplier;
         return this;
@@ -308,6 +341,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_reference")
     public String supplierReference;
+
     public OrderDetailBaseVO withSupplierReference(String supplierReference) {
         this.supplierReference = supplierReference;
         return this;
@@ -316,6 +350,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_selection_reason")
     public String supplierSelectionReason;
+
     public OrderDetailBaseVO withSupplierSelectionReason(String supplierSelectionReason) {
         this.supplierSelectionReason = supplierSelectionReason;
         return this;
@@ -327,6 +362,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_workgroup")
     public WorkgroupBaseVO supplierWorkgroup;
+
     public OrderDetailBaseVO withSupplierWorkgroup(WorkgroupBaseVO supplierWorkgroup) {
         this.supplierWorkgroup = supplierWorkgroup;
         return this;
@@ -338,6 +374,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Object tax;
+
     public OrderDetailBaseVO withTax(Object tax) {
         this.tax = tax;
         return this;
@@ -346,6 +383,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_currency")
     public String transactionalCurrency;
+
     public OrderDetailBaseVO withTransactionalCurrency(String transactionalCurrency) {
         this.transactionalCurrency = transactionalCurrency;
         return this;
@@ -357,6 +395,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_grand_total")
     public Object transactionalGrandTotal;
+
     public OrderDetailBaseVO withTransactionalGrandTotal(Object transactionalGrandTotal) {
         this.transactionalGrandTotal = transactionalGrandTotal;
         return this;
@@ -368,6 +407,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_order_total")
     public Object transactionalOrderTotal;
+
     public OrderDetailBaseVO withTransactionalOrderTotal(Object transactionalOrderTotal) {
         this.transactionalOrderTotal = transactionalOrderTotal;
         return this;
@@ -379,6 +419,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_shipping")
     public Object transactionalShipping;
+
     public OrderDetailBaseVO withTransactionalShipping(Object transactionalShipping) {
         this.transactionalShipping = transactionalShipping;
         return this;
@@ -390,6 +431,7 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_tax")
     public Object transactionalTax;
+
     public OrderDetailBaseVO withTransactionalTax(Object transactionalTax) {
         this.transactionalTax = transactionalTax;
         return this;
@@ -398,9 +440,11 @@ public class OrderDetailBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unders_percent")
     public Double undersPercent;
+
     public OrderDetailBaseVO withUndersPercent(Double undersPercent) {
         this.undersPercent = undersPercent;
         return this;
     }
     
+    public OrderDetailBaseVO(){}
 }

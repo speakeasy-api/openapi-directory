@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDomainAssociationResponse {
@@ -12,6 +13,7 @@ public class UpdateDomainAssociationResponse {
      */
     
     public Object badRequestException;
+
     public UpdateDomainAssociationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDomainAssociationResponse {
     
     
     public String contentType;
+
     public UpdateDomainAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDomainAssociationResponse {
      */
     
     public Object dependentServiceFailureException;
+
     public UpdateDomainAssociationResponse withDependentServiceFailureException(Object dependentServiceFailureException) {
         this.dependentServiceFailureException = dependentServiceFailureException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDomainAssociationResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateDomainAssociationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDomainAssociationResponse {
      */
     
     public Object notFoundException;
+
     public UpdateDomainAssociationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateDomainAssociationResponse {
     
     
     public Integer statusCode;
+
     public UpdateDomainAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDomainAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDomainAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDomainAssociationResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateDomainAssociationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDomainAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDomainAssociationResult updateDomainAssociationResult;
+
     public UpdateDomainAssociationResponse withUpdateDomainAssociationResult(org.openapis.openapi.models.shared.UpdateDomainAssociationResult updateDomainAssociationResult) {
         this.updateDomainAssociationResult = updateDomainAssociationResult;
         return this;
     }
     
+    public UpdateDomainAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

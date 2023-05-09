@@ -18,6 +18,7 @@ public class AttributeValueUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public AttributeActionEnum action;
+
     public AttributeValueUpdate withAction(AttributeActionEnum action) {
         this.action = action;
         return this;
@@ -29,9 +30,11 @@ public class AttributeValueUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public AttributeValue value;
+
     public AttributeValueUpdate withValue(AttributeValue value) {
         this.value = value;
         return this;
     }
     
+    public AttributeValueUpdate(){}
 }

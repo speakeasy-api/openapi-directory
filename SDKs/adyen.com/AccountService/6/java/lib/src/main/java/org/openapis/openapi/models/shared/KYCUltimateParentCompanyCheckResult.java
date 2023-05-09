@@ -15,6 +15,7 @@ public class KYCUltimateParentCompanyCheckResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checks")
     public KYCCheckStatusData[] checks;
+
     public KYCUltimateParentCompanyCheckResult withChecks(KYCCheckStatusData[] checks) {
         this.checks = checks;
         return this;
@@ -26,9 +27,11 @@ public class KYCUltimateParentCompanyCheckResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ultimateParentCompanyCode")
     public String ultimateParentCompanyCode;
+
     public KYCUltimateParentCompanyCheckResult withUltimateParentCompanyCode(String ultimateParentCompanyCode) {
         this.ultimateParentCompanyCode = ultimateParentCompanyCode;
         return this;
     }
     
+    public KYCUltimateParentCompanyCheckResult(){}
 }

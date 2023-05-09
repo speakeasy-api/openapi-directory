@@ -52,10 +52,8 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCommitHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.DeleteCommitHostedPropertyValueResponse() {{
+        org.openapis.openapi.models.operations.DeleteCommitHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.DeleteCommitHostedPropertyValueResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -85,10 +83,8 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePullRequestHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.DeletePullRequestHostedPropertyValueResponse() {{
+        org.openapis.openapi.models.operations.DeletePullRequestHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.DeletePullRequestHostedPropertyValueResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -118,10 +114,8 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoryHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryHostedPropertyValueResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoryHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryHostedPropertyValueResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -151,10 +145,8 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUserHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.DeleteUserHostedPropertyValueResponse() {{
+        org.openapis.openapi.models.operations.DeleteUserHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.DeleteUserHostedPropertyValueResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -184,11 +176,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommitHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.GetCommitHostedPropertyValueResponse() {{
+        org.openapis.openapi.models.operations.GetCommitHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.GetCommitHostedPropertyValueResponse(contentType, httpRes.statusCode()) {{
             applicationProperty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -223,11 +213,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPullRequestHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.GetPullRequestHostedPropertyValueResponse() {{
+        org.openapis.openapi.models.operations.GetPullRequestHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.GetPullRequestHostedPropertyValueResponse(contentType, httpRes.statusCode()) {{
             applicationProperty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -262,11 +250,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoryHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.GetRepositoryHostedPropertyValueResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoryHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.GetRepositoryHostedPropertyValueResponse(contentType, httpRes.statusCode()) {{
             applicationProperty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -301,11 +287,9 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveUserHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.RetrieveUserHostedPropertyValueResponse() {{
+        org.openapis.openapi.models.operations.RetrieveUserHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.RetrieveUserHostedPropertyValueResponse(contentType, httpRes.statusCode()) {{
             applicationProperty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,10 +329,8 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCommitHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.UpdateCommitHostedPropertyValueResponse() {{
+        org.openapis.openapi.models.operations.UpdateCommitHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.UpdateCommitHostedPropertyValueResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -383,10 +365,8 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePullRequestHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.UpdatePullRequestHostedPropertyValueResponse() {{
+        org.openapis.openapi.models.operations.UpdatePullRequestHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.UpdatePullRequestHostedPropertyValueResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -421,10 +401,8 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRepositoryHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryHostedPropertyValueResponse() {{
+        org.openapis.openapi.models.operations.UpdateRepositoryHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryHostedPropertyValueResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -459,10 +437,8 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateUserHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.UpdateUserHostedPropertyValueResponse() {{
+        org.openapis.openapi.models.operations.UpdateUserHostedPropertyValueResponse res = new org.openapis.openapi.models.operations.UpdateUserHostedPropertyValueResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

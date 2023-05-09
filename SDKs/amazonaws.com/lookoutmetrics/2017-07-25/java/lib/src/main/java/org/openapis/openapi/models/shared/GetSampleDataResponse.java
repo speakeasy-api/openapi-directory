@@ -15,6 +15,7 @@ public class GetSampleDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeaderValues")
     public String[] headerValues;
+
     public GetSampleDataResponse withHeaderValues(String[] headerValues) {
         this.headerValues = headerValues;
         return this;
@@ -23,9 +24,11 @@ public class GetSampleDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SampleRows")
     public String[][] sampleRows;
+
     public GetSampleDataResponse withSampleRows(String[][] sampleRows) {
         this.sampleRows = sampleRows;
         return this;
     }
     
+    public GetSampleDataResponse(){}
 }

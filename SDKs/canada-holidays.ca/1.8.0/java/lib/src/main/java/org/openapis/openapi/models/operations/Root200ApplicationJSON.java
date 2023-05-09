@@ -15,6 +15,7 @@ public class Root200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public Root200ApplicationJSONLinks links;
+
     public Root200ApplicationJSON withLinks(Root200ApplicationJSONLinks links) {
         this.links = links;
         return this;
@@ -26,9 +27,11 @@ public class Root200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Root200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public Root200ApplicationJSON(){}
 }

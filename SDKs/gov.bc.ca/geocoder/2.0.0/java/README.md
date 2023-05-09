@@ -16,59 +16,58 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetAddressesOutputFormatInterpolationEnum;
 import org.openapis.openapi.models.operations.GetAddressesOutputFormatLocationDescriptorEnum;
 import org.openapis.openapi.models.operations.GetAddressesOutputFormatOutputFormatEnum;
 import org.openapis.openapi.models.operations.GetAddressesOutputFormatOutputSrsEnum;
-import org.openapis.openapi.models.operations.GetAddressesOutputFormatStreetDirectionEnum;
-import org.openapis.openapi.models.operations.GetAddressesOutputFormatUnitDesignatorEnum;
 import org.openapis.openapi.models.operations.GetAddressesOutputFormatRequest;
 import org.openapis.openapi.models.operations.GetAddressesOutputFormatResponse;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatStreetDirectionEnum;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatUnitDesignatorEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apikey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetAddressesOutputFormatRequest req = new GetAddressesOutputFormatRequest() {{
-                addressString = "corrupti";
+            GetAddressesOutputFormatRequest req = new GetAddressesOutputFormatRequest(GetAddressesOutputFormatOutputFormatEnum.GML) {{
+                addressString = "distinctio";
                 autoComplete = false;
-                bbox = "provident";
+                bbox = "quibusdam";
                 brief = false;
-                centre = "distinctio";
-                civicNumber = "quibusdam";
-                civicNumberSuffix = "unde";
+                centre = "unde";
+                civicNumber = "nulla";
+                civicNumberSuffix = "corrupti";
                 echo = false;
                 extrapolate = false;
-                interpolation = "none";
-                localities = "corrupti";
-                localityName = "illum";
-                locationDescriptor = "frontDoorPoint";
-                matchPrecision = "error";
-                matchPrecisionNot = "deserunt";
-                maxDistance = 3843.82;
-                maxResults = 437587;
-                minScore = 297534;
-                notLocalities = "debitis";
-                outputFormat = "json";
-                outputSRS = "26911";
-                parcelPoint = "tempora";
-                provinceCode = "suscipit";
-                setBack = 477665;
-                siteName = "minus";
-                streetDirection = "SE";
-                streetName = "voluptatum";
-                streetQualifier = "iusto";
-                streetType = "excepturi";
-                unitDesignator = "PAD";
-                unitNumber = "recusandae";
-                unitNumberSuffix = "temporibus";
-            }}            
+                interpolation = GetAddressesOutputFormatInterpolationEnum.NONE;
+                localities = "vel";
+                localityName = "error";
+                locationDescriptor = GetAddressesOutputFormatLocationDescriptorEnum.PARCEL_POINT;
+                matchPrecision = "suscipit";
+                matchPrecisionNot = "iure";
+                maxDistance = 2975.34;
+                maxResults = 891773L;
+                minScore = 56713L;
+                notLocalities = "delectus";
+                outputSRS = GetAddressesOutputFormatOutputSrsEnum.THREE_THOUSAND_AND_FIVE;
+                parcelPoint = "suscipit";
+                provinceCode = "molestiae";
+                setBack = 791725L;
+                siteName = "placeat";
+                streetDirection = GetAddressesOutputFormatStreetDirectionEnum.NE;
+                streetName = "iusto";
+                streetQualifier = "excepturi";
+                streetType = "nisi";
+                unitDesignator = GetAddressesOutputFormatUnitDesignatorEnum.UNIT;
+                unitNumber = "temporibus";
+                unitNumberSuffix = "ab";
+            }};            
 
             GetAddressesOutputFormatResponse res = sdk.intersections.getAddressesOutputFormat(req);
 
@@ -78,6 +77,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -85,34 +86,34 @@ public class Application {
 ## Available Resources and Operations
 
 
-### intersections
+### [intersections](docs/intersections/README.md)
 
-* `getAddressesOutputFormat` - Geocode an address
-* `getIntersectionsNearOutputFormat` - Find intersections near to a geographic point
-* `getIntersectionsNearestOutputFormat` - Find nearest intersection to a geographic point
-* `getIntersectionsWithinOutputFormat` - Find intersections in a geographic area
-* `getIntersectionsIntersectionIDOutputFormat` - Get an intersection by its unique ID
+* [getAddressesOutputFormat](docs/intersections/README.md#getaddressesoutputformat) - Geocode an address
+* [getIntersectionsNearOutputFormat](docs/intersections/README.md#getintersectionsnearoutputformat) - Find intersections near to a geographic point
+* [getIntersectionsNearestOutputFormat](docs/intersections/README.md#getintersectionsnearestoutputformat) - Find nearest intersection to a geographic point
+* [getIntersectionsWithinOutputFormat](docs/intersections/README.md#getintersectionswithinoutputformat) - Find intersections in a geographic area
+* [getIntersectionsIntersectionIDOutputFormat](docs/intersections/README.md#getintersectionsintersectionidoutputformat) - Get an intersection by its unique ID
 
-### occupants
+### [occupants](docs/occupants/README.md)
 
-* `getOccupantsAddressesOutputFormat` - Geocode an address and identify site occupants
-* `getOccupantsNearOutputFormat` - Find occupants of sites near to a geographic point
-* `getOccupantsNearestOutputFormat` - Find occupants of the site nearest to a geographic point
-* `getOccupantsWithinOutputFormat` - Find occupants of sites in a geographic area
-* `getOccupantsOccupantIDOutputFormat` - Get an occupant (of a site) by its unique ID
+* [getOccupantsAddressesOutputFormat](docs/occupants/README.md#getoccupantsaddressesoutputformat) - Geocode an address and identify site occupants
+* [getOccupantsNearOutputFormat](docs/occupants/README.md#getoccupantsnearoutputformat) - Find occupants of sites near to a geographic point
+* [getOccupantsNearestOutputFormat](docs/occupants/README.md#getoccupantsnearestoutputformat) - Find occupants of the site nearest to a geographic point
+* [getOccupantsWithinOutputFormat](docs/occupants/README.md#getoccupantswithinoutputformat) - Find occupants of sites in a geographic area
+* [getOccupantsOccupantIDOutputFormat](docs/occupants/README.md#getoccupantsoccupantidoutputformat) - Get an occupant (of a site) by its unique ID
 
-### parcels
+### [parcels](docs/parcels/README.md)
 
-* `getParcelsPidsSiteIDOutputFormat` - Get a comma-separated string of all pids for a given site
+* [getParcelsPidsSiteIDOutputFormat](docs/parcels/README.md#getparcelspidssiteidoutputformat) - Get a comma-separated string of all pids for a given site
 
-### sites
+### [sites](docs/sites/README.md)
 
-* `getAddressesOutputFormat` - Geocode an address
-* `getSitesNearOutputFormat` - Find sites near to a geographic point
-* `getSitesNearestOutputFormat` - Find the site nearest to a geographic point
-* `getSitesWithinOutputFormat` - Find sites in a geographic area
-* `getSitesSiteIDOutputFormat` - Get a site by its unique ID
-* `getSitesSiteIDSubsitesOutputFormat` - Represents all subsites of a given site
+* [getAddressesOutputFormat](docs/sites/README.md#getaddressesoutputformat) - Geocode an address
+* [getSitesNearOutputFormat](docs/sites/README.md#getsitesnearoutputformat) - Find sites near to a geographic point
+* [getSitesNearestOutputFormat](docs/sites/README.md#getsitesnearestoutputformat) - Find the site nearest to a geographic point
+* [getSitesWithinOutputFormat](docs/sites/README.md#getsiteswithinoutputformat) - Find sites in a geographic area
+* [getSitesSiteIDOutputFormat](docs/sites/README.md#getsitessiteidoutputformat) - Get a site by its unique ID
+* [getSitesSiteIDSubsitesOutputFormat](docs/sites/README.md#getsitessiteidsubsitesoutputformat) - Represents all subsites of a given site
 <!-- End SDK Available Operations -->
 
 ### Maturity

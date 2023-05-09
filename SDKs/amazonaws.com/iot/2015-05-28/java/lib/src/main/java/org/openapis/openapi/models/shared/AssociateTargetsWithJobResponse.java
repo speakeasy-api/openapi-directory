@@ -15,6 +15,7 @@ public class AssociateTargetsWithJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AssociateTargetsWithJobResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class AssociateTargetsWithJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobArn")
     public String jobArn;
+
     public AssociateTargetsWithJobResponse withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -31,9 +33,11 @@ public class AssociateTargetsWithJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public AssociateTargetsWithJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public AssociateTargetsWithJobResponse(){}
 }

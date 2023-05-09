@@ -15,9 +15,11 @@ public class SingleWorkspace404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public SingleWorkspace404ApplicationJSONError error;
+
     public SingleWorkspace404ApplicationJSON withError(SingleWorkspace404ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public SingleWorkspace404ApplicationJSON(){}
 }

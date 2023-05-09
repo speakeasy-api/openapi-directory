@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaSearchAds360LinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsPersonalizationEnabled")
     public Boolean adsPersonalizationEnabled;
+
     public GoogleAnalyticsAdminV1alphaSearchAds360LinkInput withAdsPersonalizationEnabled(Boolean adsPersonalizationEnabled) {
         this.adsPersonalizationEnabled = adsPersonalizationEnabled;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaSearchAds360LinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public GoogleAnalyticsAdminV1alphaSearchAds360LinkInput withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaSearchAds360LinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignDataSharingEnabled")
     public Boolean campaignDataSharingEnabled;
+
     public GoogleAnalyticsAdminV1alphaSearchAds360LinkInput withCampaignDataSharingEnabled(Boolean campaignDataSharingEnabled) {
         this.campaignDataSharingEnabled = campaignDataSharingEnabled;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaSearchAds360LinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costDataSharingEnabled")
     public Boolean costDataSharingEnabled;
+
     public GoogleAnalyticsAdminV1alphaSearchAds360LinkInput withCostDataSharingEnabled(Boolean costDataSharingEnabled) {
         this.costDataSharingEnabled = costDataSharingEnabled;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAnalyticsAdminV1alphaSearchAds360LinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siteStatsSharingEnabled")
     public Boolean siteStatsSharingEnabled;
+
     public GoogleAnalyticsAdminV1alphaSearchAds360LinkInput withSiteStatsSharingEnabled(Boolean siteStatsSharingEnabled) {
         this.siteStatsSharingEnabled = siteStatsSharingEnabled;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaSearchAds360LinkInput(){}
 }

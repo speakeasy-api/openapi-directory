@@ -18,6 +18,7 @@ public class Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Identity withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +30,7 @@ public class Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Identity withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +41,7 @@ public class Identity {
      */
     @JsonProperty("source")
     public String source;
+
     public Identity withSource(String source) {
         this.source = source;
         return this;
@@ -50,6 +53,7 @@ public class Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_host")
     public String sourceHost;
+
     public Identity withSourceHost(String sourceHost) {
         this.sourceHost = sourceHost;
         return this;
@@ -61,6 +65,7 @@ public class Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public Identity withUid(String uid) {
         this.uid = uid;
         return this;
@@ -72,6 +77,7 @@ public class Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Identity withUrl(String url) {
         this.url = url;
         return this;
@@ -83,9 +89,13 @@ public class Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public Identity withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public Identity(@JsonProperty("source") String source) {
+        this.source = source;
+  }
 }

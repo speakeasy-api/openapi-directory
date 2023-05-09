@@ -15,6 +15,7 @@ public class DeleteSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaArn")
     public String schemaArn;
+
     public DeleteSchemaResponse withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
@@ -23,6 +24,7 @@ public class DeleteSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaName")
     public String schemaName;
+
     public DeleteSchemaResponse withSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
@@ -31,9 +33,11 @@ public class DeleteSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SchemaStatusEnum status;
+
     public DeleteSchemaResponse withStatus(SchemaStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DeleteSchemaResponse(){}
 }

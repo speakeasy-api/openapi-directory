@@ -15,6 +15,7 @@ public class CreateEmailIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DkimAttributes")
     public DkimAttributes dkimAttributes;
+
     public CreateEmailIdentityResponse withDkimAttributes(DkimAttributes dkimAttributes) {
         this.dkimAttributes = dkimAttributes;
         return this;
@@ -23,6 +24,7 @@ public class CreateEmailIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityType")
     public IdentityTypeEnum identityType;
+
     public CreateEmailIdentityResponse withIdentityType(IdentityTypeEnum identityType) {
         this.identityType = identityType;
         return this;
@@ -31,9 +33,11 @@ public class CreateEmailIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VerifiedForSendingStatus")
     public Boolean verifiedForSendingStatus;
+
     public CreateEmailIdentityResponse withVerifiedForSendingStatus(Boolean verifiedForSendingStatus) {
         this.verifiedForSendingStatus = verifiedForSendingStatus;
         return this;
     }
     
+    public CreateEmailIdentityResponse(){}
 }

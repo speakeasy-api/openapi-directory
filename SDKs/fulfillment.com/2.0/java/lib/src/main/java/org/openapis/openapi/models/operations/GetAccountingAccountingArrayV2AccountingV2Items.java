@@ -12,6 +12,7 @@ public class GetAccountingAccountingArrayV2AccountingV2Items {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetAccountingAccountingArrayV2AccountingV2Items withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class GetAccountingAccountingArrayV2AccountingV2Items {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetAccountingAccountingArrayV2AccountingV2Items withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class GetAccountingAccountingArrayV2AccountingV2Items {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public GetAccountingAccountingArrayV2AccountingV2Items withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -36,9 +39,11 @@ public class GetAccountingAccountingArrayV2AccountingV2Items {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wmsItemId")
     public String wmsItemId;
+
     public GetAccountingAccountingArrayV2AccountingV2Items withWmsItemId(String wmsItemId) {
         this.wmsItemId = wmsItemId;
         return this;
     }
     
+    public GetAccountingAccountingArrayV2AccountingV2Items(){}
 }

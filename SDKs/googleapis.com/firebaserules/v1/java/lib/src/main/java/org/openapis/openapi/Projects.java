@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesCreateResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesCreateResponse() {{
+        org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesCreateResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesCreateResponse(contentType, httpRes.statusCode()) {{
             release = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesGetExecutableResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesGetExecutableResponse() {{
+        org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesGetExecutableResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesGetExecutableResponse(contentType, httpRes.statusCode()) {{
             getReleaseExecutableResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesListResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesListResponse() {{
+        org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesListResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesListResponse(contentType, httpRes.statusCode()) {{
             listReleasesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesPatchResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesPatchResponse() {{
+        org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesPatchResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesPatchResponse(contentType, httpRes.statusCode()) {{
             release = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsCreateResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsCreateResponse() {{
+        org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsCreateResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsCreateResponse(contentType, httpRes.statusCode()) {{
             ruleset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsDeleteResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsDeleteResponse() {{
+        org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsDeleteResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsGetResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsGetResponse() {{
+        org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsGetResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsGetResponse(contentType, httpRes.statusCode()) {{
             ruleset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsListResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsListResponse() {{
+        org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsListResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsRulesetsListResponse(contentType, httpRes.statusCode()) {{
             listRulesetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,11 +420,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebaserulesProjectsTestResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsTestResponse() {{
+        org.openapis.openapi.models.operations.FirebaserulesProjectsTestResponse res = new org.openapis.openapi.models.operations.FirebaserulesProjectsTestResponse(contentType, httpRes.statusCode()) {{
             testRulesetResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

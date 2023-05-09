@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetPreparedStatementInput {
     @JsonProperty("PreparedStatementNames")
     public String[] preparedStatementNames;
+
     public BatchGetPreparedStatementInput withPreparedStatementNames(String[] preparedStatementNames) {
         this.preparedStatementNames = preparedStatementNames;
         return this;
@@ -16,9 +17,14 @@ public class BatchGetPreparedStatementInput {
     
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public BatchGetPreparedStatementInput withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public BatchGetPreparedStatementInput(@JsonProperty("PreparedStatementNames") String[] preparedStatementNames, @JsonProperty("WorkGroup") String workGroup) {
+        this.preparedStatementNames = preparedStatementNames;
+        this.workGroup = workGroup;
+  }
 }

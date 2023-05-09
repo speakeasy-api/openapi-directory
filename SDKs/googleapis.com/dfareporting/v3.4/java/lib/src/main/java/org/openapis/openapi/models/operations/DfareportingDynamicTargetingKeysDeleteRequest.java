@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingDynamicTargetingKeysDeleteRequest {
@@ -12,6 +13,7 @@ public class DfareportingDynamicTargetingKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DfareportingDynamicTargetingKeysDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DfareportingDynamicTargetingKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DfareportingDynamicTargetingKeysDeleteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DfareportingDynamicTargetingKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DfareportingDynamicTargetingKeysDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DfareportingDynamicTargetingKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DfareportingDynamicTargetingKeysDeleteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DfareportingDynamicTargetingKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DfareportingDynamicTargetingKeysDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class DfareportingDynamicTargetingKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DfareportingDynamicTargetingKeysDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class DfareportingDynamicTargetingKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public DfareportingDynamicTargetingKeysDeleteRequest withName(String name) {
         this.name = name;
         return this;
@@ -82,6 +90,7 @@ public class DfareportingDynamicTargetingKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DfareportingDynamicTargetingKeysDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class DfareportingDynamicTargetingKeysDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectId")
     public String objectId;
+
     public DfareportingDynamicTargetingKeysDeleteRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -102,6 +112,7 @@ public class DfareportingDynamicTargetingKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=objectType")
     public DfareportingDynamicTargetingKeysDeleteObjectTypeEnum objectType;
+
     public DfareportingDynamicTargetingKeysDeleteRequest withObjectType(DfareportingDynamicTargetingKeysDeleteObjectTypeEnum objectType) {
         this.objectType = objectType;
         return this;
@@ -112,6 +123,7 @@ public class DfareportingDynamicTargetingKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DfareportingDynamicTargetingKeysDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class DfareportingDynamicTargetingKeysDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public DfareportingDynamicTargetingKeysDeleteRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -132,6 +145,7 @@ public class DfareportingDynamicTargetingKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DfareportingDynamicTargetingKeysDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class DfareportingDynamicTargetingKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DfareportingDynamicTargetingKeysDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +167,16 @@ public class DfareportingDynamicTargetingKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DfareportingDynamicTargetingKeysDeleteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DfareportingDynamicTargetingKeysDeleteRequest(@JsonProperty("name") String name, @JsonProperty("objectId") String objectId, @JsonProperty("objectType") DfareportingDynamicTargetingKeysDeleteObjectTypeEnum objectType, @JsonProperty("profileId") String profileId) {
+        this.name = name;
+        this.objectId = objectId;
+        this.objectType = objectType;
+        this.profileId = profileId;
+  }
 }

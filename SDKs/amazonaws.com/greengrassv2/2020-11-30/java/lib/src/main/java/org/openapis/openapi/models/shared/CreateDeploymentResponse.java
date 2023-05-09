@@ -15,6 +15,7 @@ public class CreateDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public CreateDeploymentResponse withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -23,6 +24,7 @@ public class CreateDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotJobArn")
     public String iotJobArn;
+
     public CreateDeploymentResponse withIotJobArn(String iotJobArn) {
         this.iotJobArn = iotJobArn;
         return this;
@@ -31,9 +33,11 @@ public class CreateDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotJobId")
     public String iotJobId;
+
     public CreateDeploymentResponse withIotJobId(String iotJobId) {
         this.iotJobId = iotJobId;
         return this;
     }
     
+    public CreateDeploymentResponse(){}
 }

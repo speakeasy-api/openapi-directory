@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RouteMatrixEntryError {
     @JsonProperty("Code")
     public RouteMatrixErrorCodeEnum code;
+
     public RouteMatrixEntryError withCode(RouteMatrixErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -22,9 +23,13 @@ public class RouteMatrixEntryError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public RouteMatrixEntryError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public RouteMatrixEntryError(@JsonProperty("Code") RouteMatrixErrorCodeEnum code) {
+        this.code = code;
+  }
 }

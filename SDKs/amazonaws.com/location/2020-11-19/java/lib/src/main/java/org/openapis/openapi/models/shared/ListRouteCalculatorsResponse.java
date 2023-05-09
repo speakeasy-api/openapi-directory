@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListRouteCalculatorsResponse {
     @JsonProperty("Entries")
     public ListRouteCalculatorsResponseEntry[] entries;
+
     public ListRouteCalculatorsResponse withEntries(ListRouteCalculatorsResponseEntry[] entries) {
         this.entries = entries;
         return this;
@@ -22,9 +23,13 @@ public class ListRouteCalculatorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRouteCalculatorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListRouteCalculatorsResponse(@JsonProperty("Entries") ListRouteCalculatorsResponseEntry[] entries) {
+        this.entries = entries;
+  }
 }

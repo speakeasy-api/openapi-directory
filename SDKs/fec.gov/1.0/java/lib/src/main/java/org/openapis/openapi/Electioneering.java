@@ -66,11 +66,9 @@ public class Electioneering {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetElectioneeringResponse res = new org.openapis.openapi.models.operations.GetElectioneeringResponse() {{
+        org.openapis.openapi.models.operations.GetElectioneeringResponse res = new org.openapis.openapi.models.operations.GetElectioneeringResponse(contentType, httpRes.statusCode()) {{
             electioneeringPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -111,11 +109,9 @@ public class Electioneering {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetElectioneeringAggregatesResponse res = new org.openapis.openapi.models.operations.GetElectioneeringAggregatesResponse() {{
+        org.openapis.openapi.models.operations.GetElectioneeringAggregatesResponse res = new org.openapis.openapi.models.operations.GetElectioneeringAggregatesResponse(contentType, httpRes.statusCode()) {{
             electioneeringByCandidatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -156,11 +152,9 @@ public class Electioneering {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetElectioneeringByCandidateResponse res = new org.openapis.openapi.models.operations.GetElectioneeringByCandidateResponse() {{
+        org.openapis.openapi.models.operations.GetElectioneeringByCandidateResponse res = new org.openapis.openapi.models.operations.GetElectioneeringByCandidateResponse(contentType, httpRes.statusCode()) {{
             electioneeringByCandidatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -201,11 +195,9 @@ public class Electioneering {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetElectioneeringTotalsByCandidateResponse res = new org.openapis.openapi.models.operations.GetElectioneeringTotalsByCandidateResponse() {{
+        org.openapis.openapi.models.operations.GetElectioneeringTotalsByCandidateResponse res = new org.openapis.openapi.models.operations.GetElectioneeringTotalsByCandidateResponse(contentType, httpRes.statusCode()) {{
             ecTotalsByCandidatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

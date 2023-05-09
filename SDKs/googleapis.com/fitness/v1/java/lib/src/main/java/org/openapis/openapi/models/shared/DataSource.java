@@ -15,6 +15,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application")
     public Application application;
+
     public DataSource withApplication(Application application) {
         this.application = application;
         return this;
@@ -26,6 +27,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataQualityStandard")
     public DataSourceDataQualityStandardEnum[] dataQualityStandard;
+
     public DataSource withDataQualityStandard(DataSourceDataQualityStandardEnum[] dataQualityStandard) {
         this.dataQualityStandard = dataQualityStandard;
         return this;
@@ -37,6 +39,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataStreamId")
     public String dataStreamId;
+
     public DataSource withDataStreamId(String dataStreamId) {
         this.dataStreamId = dataStreamId;
         return this;
@@ -48,6 +51,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataStreamName")
     public String dataStreamName;
+
     public DataSource withDataStreamName(String dataStreamName) {
         this.dataStreamName = dataStreamName;
         return this;
@@ -56,6 +60,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public DataType dataType;
+
     public DataSource withDataType(DataType dataType) {
         this.dataType = dataType;
         return this;
@@ -67,6 +72,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public Device device;
+
     public DataSource withDevice(Device device) {
         this.device = device;
         return this;
@@ -78,6 +84,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DataSource withName(String name) {
         this.name = name;
         return this;
@@ -89,9 +96,11 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DataSourceTypeEnum type;
+
     public DataSource withType(DataSourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DataSource(){}
 }

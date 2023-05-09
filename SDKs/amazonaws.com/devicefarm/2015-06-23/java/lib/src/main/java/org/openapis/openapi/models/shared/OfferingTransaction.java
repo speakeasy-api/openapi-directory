@@ -20,6 +20,7 @@ public class OfferingTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost")
     public MonetaryAmount cost;
+
     public OfferingTransaction withCost(MonetaryAmount cost) {
         this.cost = cost;
         return this;
@@ -30,6 +31,7 @@ public class OfferingTransaction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdOn")
     public OffsetDateTime createdOn;
+
     public OfferingTransaction withCreatedOn(OffsetDateTime createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -38,6 +40,7 @@ public class OfferingTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringPromotionId")
     public String offeringPromotionId;
+
     public OfferingTransaction withOfferingPromotionId(String offeringPromotionId) {
         this.offeringPromotionId = offeringPromotionId;
         return this;
@@ -46,6 +49,7 @@ public class OfferingTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringStatus")
     public OfferingStatus offeringStatus;
+
     public OfferingTransaction withOfferingStatus(OfferingStatus offeringStatus) {
         this.offeringStatus = offeringStatus;
         return this;
@@ -54,9 +58,11 @@ public class OfferingTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionId")
     public String transactionId;
+
     public OfferingTransaction withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public OfferingTransaction(){}
 }

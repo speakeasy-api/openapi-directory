@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateJobResponse {
@@ -12,6 +13,7 @@ public class CreateJobResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateJobResponse {
      */
     
     public Object conflictException;
+
     public CreateJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateJobResponse {
     
     
     public String contentType;
+
     public CreateJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateJobResponse createJobResponse;
+
     public CreateJobResponse withCreateJobResponse(org.openapis.openapi.models.shared.CreateJobResponse createJobResponse) {
         this.createJobResponse = createJobResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateJobResponse {
      */
     
     public Object deviceRetiredException;
+
     public CreateJobResponse withDeviceRetiredException(Object deviceRetiredException) {
         this.deviceRetiredException = deviceRetiredException;
         return this;
@@ -59,6 +65,7 @@ public class CreateJobResponse {
      */
     
     public Object internalServiceException;
+
     public CreateJobResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -66,6 +73,7 @@ public class CreateJobResponse {
     
     
     public Integer statusCode;
+
     public CreateJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateJobResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateJobResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateJobResponse {
      */
     
     public Object throttlingException;
+
     public CreateJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateJobResponse {
      */
     
     public Object validationException;
+
     public CreateJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

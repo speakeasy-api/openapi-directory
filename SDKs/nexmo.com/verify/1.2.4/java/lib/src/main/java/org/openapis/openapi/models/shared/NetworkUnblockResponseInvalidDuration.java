@@ -18,6 +18,7 @@ public class NetworkUnblockResponseInvalidDuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public NetworkUnblockResponseInvalidDuration withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -29,6 +30,7 @@ public class NetworkUnblockResponseInvalidDuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public NetworkUnblockResponseInvalidDuration withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -40,6 +42,7 @@ public class NetworkUnblockResponseInvalidDuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalid_parameters")
     public NetworkUnblockResponseInvalidDurationInvalidParameters[] invalidParameters;
+
     public NetworkUnblockResponseInvalidDuration withInvalidParameters(NetworkUnblockResponseInvalidDurationInvalidParameters[] invalidParameters) {
         this.invalidParameters = invalidParameters;
         return this;
@@ -51,6 +54,7 @@ public class NetworkUnblockResponseInvalidDuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public NetworkUnblockResponseInvalidDuration withTitle(String title) {
         this.title = title;
         return this;
@@ -62,9 +66,11 @@ public class NetworkUnblockResponseInvalidDuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public NetworkUnblockResponseInvalidDuration withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NetworkUnblockResponseInvalidDuration(){}
 }

@@ -14,12 +14,13 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * DataRepositoryAssociation - &lt;p&gt;The configuration of a data repository association that links an Amazon FSx for Lustre file system to an Amazon S3 bucket or an Amazon File Cache resource to an Amazon S3 bucket or an NFS file system. The data repository association configuration object is returned in the response of the following operations:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;CreateDataRepositoryAssociation&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;UpdateDataRepositoryAssociation&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DescribeDataRepositoryAssociations&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Data repository associations are supported only for an Amazon FSx for Lustre file system with the &lt;code&gt;Persistent_2&lt;/code&gt; deployment type and for an Amazon File Cache resource.&lt;/p&gt;
+ * DataRepositoryAssociation - &lt;p&gt;The configuration of a data repository association that links an Amazon FSx for Lustre file system to an Amazon S3 bucket or an Amazon File Cache resource to an Amazon S3 bucket or an NFS file system. The data repository association configuration object is returned in the response of the following operations:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;CreateDataRepositoryAssociation&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;UpdateDataRepositoryAssociation&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DescribeDataRepositoryAssociations&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Data repository associations are supported on Amazon File Cache resources and all Amazon FSx for Lustre file systems excluding &lt;code&gt;Scratch_1&lt;/code&gt; deployment types.&lt;/p&gt;
  */
 public class DataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public DataRepositoryAssociation withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -28,6 +29,7 @@ public class DataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchImportMetaDataOnCreate")
     public Boolean batchImportMetaDataOnCreate;
+
     public DataRepositoryAssociation withBatchImportMetaDataOnCreate(Boolean batchImportMetaDataOnCreate) {
         this.batchImportMetaDataOnCreate = batchImportMetaDataOnCreate;
         return this;
@@ -41,6 +43,7 @@ public class DataRepositoryAssociation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DataRepositoryAssociation withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -49,6 +52,7 @@ public class DataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataRepositoryPath")
     public String dataRepositoryPath;
+
     public DataRepositoryAssociation withDataRepositoryPath(String dataRepositoryPath) {
         this.dataRepositoryPath = dataRepositoryPath;
         return this;
@@ -57,6 +61,7 @@ public class DataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataRepositorySubdirectories")
     public String[] dataRepositorySubdirectories;
+
     public DataRepositoryAssociation withDataRepositorySubdirectories(String[] dataRepositorySubdirectories) {
         this.dataRepositorySubdirectories = dataRepositorySubdirectories;
         return this;
@@ -68,6 +73,7 @@ public class DataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureDetails")
     public DataRepositoryFailureDetails failureDetails;
+
     public DataRepositoryAssociation withFailureDetails(DataRepositoryFailureDetails failureDetails) {
         this.failureDetails = failureDetails;
         return this;
@@ -76,6 +82,7 @@ public class DataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileCacheId")
     public String fileCacheId;
+
     public DataRepositoryAssociation withFileCacheId(String fileCacheId) {
         this.fileCacheId = fileCacheId;
         return this;
@@ -84,6 +91,7 @@ public class DataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileCachePath")
     public String fileCachePath;
+
     public DataRepositoryAssociation withFileCachePath(String fileCachePath) {
         this.fileCachePath = fileCachePath;
         return this;
@@ -95,6 +103,7 @@ public class DataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public DataRepositoryAssociation withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -103,6 +112,7 @@ public class DataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemPath")
     public String fileSystemPath;
+
     public DataRepositoryAssociation withFileSystemPath(String fileSystemPath) {
         this.fileSystemPath = fileSystemPath;
         return this;
@@ -111,6 +121,7 @@ public class DataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportedFileChunkSize")
     public Long importedFileChunkSize;
+
     public DataRepositoryAssociation withImportedFileChunkSize(Long importedFileChunkSize) {
         this.importedFileChunkSize = importedFileChunkSize;
         return this;
@@ -119,6 +130,7 @@ public class DataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public DataRepositoryLifecycleEnum lifecycle;
+
     public DataRepositoryAssociation withLifecycle(DataRepositoryLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -127,6 +139,7 @@ public class DataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NFS")
     public NFSDataRepositoryConfiguration nfs;
+
     public DataRepositoryAssociation withNfs(NFSDataRepositoryConfiguration nfs) {
         this.nfs = nfs;
         return this;
@@ -138,6 +151,7 @@ public class DataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public DataRepositoryAssociation withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -146,6 +160,7 @@ public class DataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3")
     public S3DataRepositoryConfiguration s3;
+
     public DataRepositoryAssociation withS3(S3DataRepositoryConfiguration s3) {
         this.s3 = s3;
         return this;
@@ -157,9 +172,11 @@ public class DataRepositoryAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DataRepositoryAssociation withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DataRepositoryAssociation(){}
 }

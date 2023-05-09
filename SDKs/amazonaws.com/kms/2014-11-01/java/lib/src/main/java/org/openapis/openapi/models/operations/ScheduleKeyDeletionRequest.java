@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ScheduleKeyDeletionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ScheduleKeyDeletionRequest scheduleKeyDeletionRequest;
+
     public ScheduleKeyDeletionRequest withScheduleKeyDeletionRequest(org.openapis.openapi.models.shared.ScheduleKeyDeletionRequest scheduleKeyDeletionRequest) {
         this.scheduleKeyDeletionRequest = scheduleKeyDeletionRequest;
         return this;
@@ -16,6 +18,7 @@ public class ScheduleKeyDeletionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ScheduleKeyDeletionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class ScheduleKeyDeletionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ScheduleKeyDeletionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class ScheduleKeyDeletionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ScheduleKeyDeletionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class ScheduleKeyDeletionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ScheduleKeyDeletionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class ScheduleKeyDeletionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ScheduleKeyDeletionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class ScheduleKeyDeletionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ScheduleKeyDeletionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class ScheduleKeyDeletionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ScheduleKeyDeletionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class ScheduleKeyDeletionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ScheduleKeyDeletionXAmzTargetEnum xAmzTarget;
+
     public ScheduleKeyDeletionRequest withXAmzTarget(ScheduleKeyDeletionXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ScheduleKeyDeletionRequest(@JsonProperty("ScheduleKeyDeletionRequest") org.openapis.openapi.models.shared.ScheduleKeyDeletionRequest scheduleKeyDeletionRequest, @JsonProperty("X-Amz-Target") ScheduleKeyDeletionXAmzTargetEnum xAmzTarget) {
+        this.scheduleKeyDeletionRequest = scheduleKeyDeletionRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

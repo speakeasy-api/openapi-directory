@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingTargetableRemarketingListsListRequest {
@@ -12,6 +13,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DfareportingTargetableRemarketingListsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DfareportingTargetableRemarketingListsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active")
     public Boolean active;
+
     public DfareportingTargetableRemarketingListsListRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -42,6 +46,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserId")
     public String advertiserId;
+
     public DfareportingTargetableRemarketingListsListRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -52,6 +57,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DfareportingTargetableRemarketingListsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -62,6 +68,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DfareportingTargetableRemarketingListsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -72,6 +79,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DfareportingTargetableRemarketingListsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DfareportingTargetableRemarketingListsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DfareportingTargetableRemarketingListsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -102,6 +112,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public DfareportingTargetableRemarketingListsListRequest withName(String name) {
         this.name = name;
         return this;
@@ -112,6 +123,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DfareportingTargetableRemarketingListsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +134,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DfareportingTargetableRemarketingListsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -132,6 +145,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DfareportingTargetableRemarketingListsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +156,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public DfareportingTargetableRemarketingListsListRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -152,6 +167,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DfareportingTargetableRemarketingListsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +178,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
     public DfareportingTargetableRemarketingListsListSortFieldEnum sortField;
+
     public DfareportingTargetableRemarketingListsListRequest withSortField(DfareportingTargetableRemarketingListsListSortFieldEnum sortField) {
         this.sortField = sortField;
         return this;
@@ -172,6 +189,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public DfareportingTargetableRemarketingListsListSortOrderEnum sortOrder;
+
     public DfareportingTargetableRemarketingListsListRequest withSortOrder(DfareportingTargetableRemarketingListsListSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -182,6 +200,7 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DfareportingTargetableRemarketingListsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -192,9 +211,14 @@ public class DfareportingTargetableRemarketingListsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DfareportingTargetableRemarketingListsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DfareportingTargetableRemarketingListsListRequest(@JsonProperty("advertiserId") String advertiserId, @JsonProperty("profileId") String profileId) {
+        this.advertiserId = advertiserId;
+        this.profileId = profileId;
+  }
 }

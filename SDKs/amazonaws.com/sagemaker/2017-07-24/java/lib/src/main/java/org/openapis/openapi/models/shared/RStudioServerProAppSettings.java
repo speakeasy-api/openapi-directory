@@ -15,6 +15,7 @@ public class RStudioServerProAppSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessStatus")
     public RStudioServerProAccessStatusEnum accessStatus;
+
     public RStudioServerProAppSettings withAccessStatus(RStudioServerProAccessStatusEnum accessStatus) {
         this.accessStatus = accessStatus;
         return this;
@@ -23,9 +24,11 @@ public class RStudioServerProAppSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserGroup")
     public RStudioServerProUserGroupEnum userGroup;
+
     public RStudioServerProAppSettings withUserGroup(RStudioServerProUserGroupEnum userGroup) {
         this.userGroup = userGroup;
         return this;
     }
     
+    public RStudioServerProAppSettings(){}
 }

@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurrencePeriodDuration")
     public String recurrencePeriodDuration;
+
     public GooglePrivacyDlpV2Schedule withRecurrencePeriodDuration(String recurrencePeriodDuration) {
         this.recurrencePeriodDuration = recurrencePeriodDuration;
         return this;
     }
     
+    public GooglePrivacyDlpV2Schedule(){}
 }

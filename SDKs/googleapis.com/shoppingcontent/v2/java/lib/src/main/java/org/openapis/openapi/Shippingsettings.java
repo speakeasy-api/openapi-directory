@@ -61,11 +61,9 @@ public class Shippingsettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentShippingsettingsCustombatchResponse res = new org.openapis.openapi.models.operations.ContentShippingsettingsCustombatchResponse() {{
+        org.openapis.openapi.models.operations.ContentShippingsettingsCustombatchResponse res = new org.openapis.openapi.models.operations.ContentShippingsettingsCustombatchResponse(contentType, httpRes.statusCode()) {{
             shippingsettingsCustomBatchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Shippingsettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentShippingsettingsGetResponse res = new org.openapis.openapi.models.operations.ContentShippingsettingsGetResponse() {{
+        org.openapis.openapi.models.operations.ContentShippingsettingsGetResponse res = new org.openapis.openapi.models.operations.ContentShippingsettingsGetResponse(contentType, httpRes.statusCode()) {{
             shippingSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Shippingsettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedcarriersResponse res = new org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedcarriersResponse() {{
+        org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedcarriersResponse res = new org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedcarriersResponse(contentType, httpRes.statusCode()) {{
             shippingsettingsGetSupportedCarriersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Shippingsettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedholidaysResponse res = new org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedholidaysResponse() {{
+        org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedholidaysResponse res = new org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedholidaysResponse(contentType, httpRes.statusCode()) {{
             shippingsettingsGetSupportedHolidaysResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class Shippingsettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedpickupservicesResponse res = new org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedpickupservicesResponse() {{
+        org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedpickupservicesResponse res = new org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedpickupservicesResponse(contentType, httpRes.statusCode()) {{
             shippingsettingsGetSupportedPickupServicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class Shippingsettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentShippingsettingsListResponse res = new org.openapis.openapi.models.operations.ContentShippingsettingsListResponse() {{
+        org.openapis.openapi.models.operations.ContentShippingsettingsListResponse res = new org.openapis.openapi.models.operations.ContentShippingsettingsListResponse(contentType, httpRes.statusCode()) {{
             shippingsettingsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class Shippingsettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentShippingsettingsUpdateResponse res = new org.openapis.openapi.models.operations.ContentShippingsettingsUpdateResponse() {{
+        org.openapis.openapi.models.operations.ContentShippingsettingsUpdateResponse res = new org.openapis.openapi.models.operations.ContentShippingsettingsUpdateResponse(contentType, httpRes.statusCode()) {{
             shippingSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

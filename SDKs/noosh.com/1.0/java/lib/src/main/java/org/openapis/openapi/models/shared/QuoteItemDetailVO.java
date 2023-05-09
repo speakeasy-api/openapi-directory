@@ -20,6 +20,7 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chosen_quantity")
     public Object chosenQuantity;
+
     public QuoteItemDetailVO withChosenQuantity(Object chosenQuantity) {
         this.chosenQuantity = chosenQuantity;
         return this;
@@ -28,6 +29,7 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public QuoteItemDetailVO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -37,6 +39,7 @@ public class QuoteItemDetailVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("completion_date")
     public LocalDate completionDate;
+
     public QuoteItemDetailVO withCompletionDate(LocalDate completionDate) {
         this.completionDate = completionDate;
         return this;
@@ -45,6 +48,7 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public PropertyPaAndAttVO[] customFields;
+
     public QuoteItemDetailVO withCustomFields(PropertyPaAndAttVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -53,6 +57,7 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     public Long itemId;
+
     public QuoteItemDetailVO withItemId(Long itemId) {
         this.itemId = itemId;
         return this;
@@ -61,6 +66,7 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_prices")
     public QuotePriceDetailVO[] itemPrices;
+
     public QuoteItemDetailVO withItemPrices(QuotePriceDetailVO[] itemPrices) {
         this.itemPrices = itemPrices;
         return this;
@@ -72,6 +78,7 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_shipping_total")
     public Object itemShippingTotal;
+
     public QuoteItemDetailVO withItemShippingTotal(Object itemShippingTotal) {
         this.itemShippingTotal = itemShippingTotal;
         return this;
@@ -83,6 +90,7 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_tax_total")
     public Object itemTaxTotal;
+
     public QuoteItemDetailVO withItemTaxTotal(Object itemTaxTotal) {
         this.itemTaxTotal = itemTaxTotal;
         return this;
@@ -94,6 +102,7 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_total")
     public Object itemTotal;
+
     public QuoteItemDetailVO withItemTotal(Object itemTotal) {
         this.itemTotal = itemTotal;
         return this;
@@ -102,6 +111,7 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason_for_quote_selection")
     public String reasonForQuoteSelection;
+
     public QuoteItemDetailVO withReasonForQuoteSelection(String reasonForQuoteSelection) {
         this.reasonForQuoteSelection = reasonForQuoteSelection;
         return this;
@@ -110,6 +120,7 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_cost_prices_and_markup")
     public Boolean showCostPricesAndMarkup;
+
     public QuoteItemDetailVO withShowCostPricesAndMarkup(Boolean showCostPricesAndMarkup) {
         this.showCostPricesAndMarkup = showCostPricesAndMarkup;
         return this;
@@ -121,6 +132,7 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public SpecBaseVO spec;
+
     public QuoteItemDetailVO withSpec(SpecBaseVO spec) {
         this.spec = spec;
         return this;
@@ -132,6 +144,7 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_item_shipping_total")
     public Object transactionalItemShippingTotal;
+
     public QuoteItemDetailVO withTransactionalItemShippingTotal(Object transactionalItemShippingTotal) {
         this.transactionalItemShippingTotal = transactionalItemShippingTotal;
         return this;
@@ -143,6 +156,7 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_item_tax_total")
     public Object transactionalItemTaxTotal;
+
     public QuoteItemDetailVO withTransactionalItemTaxTotal(Object transactionalItemTaxTotal) {
         this.transactionalItemTaxTotal = transactionalItemTaxTotal;
         return this;
@@ -154,6 +168,7 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_item_total")
     public Object transactionalItemTotal;
+
     public QuoteItemDetailVO withTransactionalItemTotal(Object transactionalItemTotal) {
         this.transactionalItemTotal = transactionalItemTotal;
         return this;
@@ -162,6 +177,7 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vat_code")
     public String vatCode;
+
     public QuoteItemDetailVO withVatCode(String vatCode) {
         this.vatCode = vatCode;
         return this;
@@ -173,9 +189,11 @@ public class QuoteItemDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vat_rate")
     public Object vatRate;
+
     public QuoteItemDetailVO withVatRate(Object vatRate) {
         this.vatRate = vatRate;
         return this;
     }
     
+    public QuoteItemDetailVO(){}
 }

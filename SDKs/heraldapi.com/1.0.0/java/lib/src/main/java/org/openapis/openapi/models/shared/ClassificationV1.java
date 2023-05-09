@@ -18,6 +18,7 @@ public class ClassificationV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ClassificationV1 withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class ClassificationV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ClassificationV1 withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class ClassificationV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naics_2017_6_digit")
     public Long naics20176Digit;
+
     public ClassificationV1 withNaics20176Digit(Long naics20176Digit) {
         this.naics20176Digit = naics20176Digit;
         return this;
@@ -51,9 +54,11 @@ public class ClassificationV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naics_2017_6_digit_description")
     public String naics20176DigitDescription;
+
     public ClassificationV1 withNaics20176DigitDescription(String naics20176DigitDescription) {
         this.naics20176DigitDescription = naics20176DigitDescription;
         return this;
     }
     
+    public ClassificationV1(){}
 }

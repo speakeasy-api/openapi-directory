@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetRequest;
 import org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -15,14 +14,13 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            SafebrowsingEncodedFullHashesGetRequest req = new SafebrowsingEncodedFullHashesGetRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                clientId = "unde";
-                clientVersion = "nulla";
-                encodedRequest = "corrupti";
+            SafebrowsingEncodedFullHashesGetRequest req = new SafebrowsingEncodedFullHashesGetRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                clientId = "nulla";
+                clientVersion = "corrupti";
                 fields = "illum";
                 key = "vel";
                 oauthToken = "error";
@@ -30,15 +28,17 @@ public class Application {
                 quotaUser = "deserunt";
                 uploadType = "suscipit";
                 uploadProtocol = "iure";
-            }}            
+            }};            
 
             SafebrowsingEncodedFullHashesGetResponse res = sdk.encodedFullHashes.safebrowsingEncodedFullHashesGet(req);
 
-            if (res.googleSecuritySafebrowsingV4FindFullHashesResponse.isPresent()) {
+            if (res.googleSecuritySafebrowsingV4FindFullHashesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

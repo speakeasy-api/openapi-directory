@@ -25,6 +25,7 @@ public class ProjectRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public ProjectRequestInput withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -36,6 +37,7 @@ public class ProjectRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public ProjectRequestColorEnum color;
+
     public ProjectRequestInput withColor(ProjectRequestColorEnum color) {
         this.color = color;
         return this;
@@ -47,6 +49,7 @@ public class ProjectRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_status")
     public ProjectRequestCurrentStatusInput currentStatus;
+
     public ProjectRequestInput withCurrentStatus(ProjectRequestCurrentStatusInput currentStatus) {
         this.currentStatus = currentStatus;
         return this;
@@ -58,6 +61,7 @@ public class ProjectRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_status_update")
     public ProjectRequestCurrentStatusUpdateInput currentStatusUpdate;
+
     public ProjectRequestInput withCurrentStatusUpdate(ProjectRequestCurrentStatusUpdateInput currentStatusUpdate) {
         this.currentStatusUpdate = currentStatusUpdate;
         return this;
@@ -69,6 +73,7 @@ public class ProjectRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public java.util.Map<String, String> customFields;
+
     public ProjectRequestInput withCustomFields(java.util.Map<String, String> customFields) {
         this.customFields = customFields;
         return this;
@@ -80,6 +85,7 @@ public class ProjectRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_view")
     public ProjectRequestDefaultViewEnum defaultView;
+
     public ProjectRequestInput withDefaultView(ProjectRequestDefaultViewEnum defaultView) {
         this.defaultView = defaultView;
         return this;
@@ -93,6 +99,7 @@ public class ProjectRequestInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("due_date")
     public OffsetDateTime dueDate;
+
     public ProjectRequestInput withDueDate(OffsetDateTime dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -106,6 +113,7 @@ public class ProjectRequestInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("due_on")
     public OffsetDateTime dueOn;
+
     public ProjectRequestInput withDueOn(OffsetDateTime dueOn) {
         this.dueOn = dueOn;
         return this;
@@ -117,6 +125,7 @@ public class ProjectRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followers")
     public String followers;
+
     public ProjectRequestInput withFollowers(String followers) {
         this.followers = followers;
         return this;
@@ -128,6 +137,7 @@ public class ProjectRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_notes")
     public String htmlNotes;
+
     public ProjectRequestInput withHtmlNotes(String htmlNotes) {
         this.htmlNotes = htmlNotes;
         return this;
@@ -139,6 +149,7 @@ public class ProjectRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_template")
     public Boolean isTemplate;
+
     public ProjectRequestInput withIsTemplate(Boolean isTemplate) {
         this.isTemplate = isTemplate;
         return this;
@@ -150,6 +161,7 @@ public class ProjectRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProjectRequestInput withName(String name) {
         this.name = name;
         return this;
@@ -161,6 +173,7 @@ public class ProjectRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public ProjectRequestInput withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -172,6 +185,7 @@ public class ProjectRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public ProjectRequestInput withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -183,6 +197,7 @@ public class ProjectRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public")
     public Boolean public_;
+
     public ProjectRequestInput withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -195,6 +210,7 @@ public class ProjectRequestInput {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("start_on")
     public LocalDate startOn;
+
     public ProjectRequestInput withStartOn(LocalDate startOn) {
         this.startOn = startOn;
         return this;
@@ -206,6 +222,7 @@ public class ProjectRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public ProjectRequestInput withTeam(String team) {
         this.team = team;
         return this;
@@ -214,9 +231,11 @@ public class ProjectRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace")
     public ProjectRequestWorkspaceInput workspace;
+
     public ProjectRequestInput withWorkspace(ProjectRequestWorkspaceInput workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public ProjectRequestInput(){}
 }

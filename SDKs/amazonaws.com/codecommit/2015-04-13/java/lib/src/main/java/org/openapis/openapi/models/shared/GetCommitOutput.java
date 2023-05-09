@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCommitOutput {
     @JsonProperty("commit")
     public Commit commit;
+
     public GetCommitOutput withCommit(Commit commit) {
         this.commit = commit;
         return this;
     }
     
+    public GetCommitOutput(@JsonProperty("commit") Commit commit) {
+        this.commit = commit;
+  }
 }

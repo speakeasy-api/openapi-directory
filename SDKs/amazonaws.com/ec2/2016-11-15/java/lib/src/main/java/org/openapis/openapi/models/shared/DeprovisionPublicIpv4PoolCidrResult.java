@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeprovisionPublicIpv4PoolCidrResult {
     
     public String[] deprovisionedAddresses;
+
     public DeprovisionPublicIpv4PoolCidrResult withDeprovisionedAddresses(String[] deprovisionedAddresses) {
         this.deprovisionedAddresses = deprovisionedAddresses;
         return this;
@@ -19,9 +20,11 @@ public class DeprovisionPublicIpv4PoolCidrResult {
     
     
     public String poolId;
+
     public DeprovisionPublicIpv4PoolCidrResult withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
     }
     
+    public DeprovisionPublicIpv4PoolCidrResult(){}
 }

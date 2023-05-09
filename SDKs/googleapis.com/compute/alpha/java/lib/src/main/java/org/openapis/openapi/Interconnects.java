@@ -59,11 +59,9 @@ public class Interconnects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInterconnectsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeInterconnectsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Interconnects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInterconnectsGetResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeInterconnectsGetResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsGetResponse(contentType, httpRes.statusCode()) {{
             interconnect = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Interconnects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInterconnectsGetDiagnosticsResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsGetDiagnosticsResponse() {{
+        org.openapis.openapi.models.operations.ComputeInterconnectsGetDiagnosticsResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsGetDiagnosticsResponse(contentType, httpRes.statusCode()) {{
             interconnectsGetDiagnosticsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class Interconnects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInterconnectsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeInterconnectsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,11 +235,9 @@ public class Interconnects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInterconnectsGetMacsecConfigResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsGetMacsecConfigResponse() {{
+        org.openapis.openapi.models.operations.ComputeInterconnectsGetMacsecConfigResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsGetMacsecConfigResponse(contentType, httpRes.statusCode()) {{
             interconnectsGetMacsecConfigResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class Interconnects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInterconnectsInsertResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeInterconnectsInsertResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,11 +325,9 @@ public class Interconnects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInterconnectsListResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeInterconnectsListResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsListResponse(contentType, httpRes.statusCode()) {{
             interconnectList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -385,11 +371,9 @@ public class Interconnects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInterconnectsPatchResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeInterconnectsPatchResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -433,11 +417,9 @@ public class Interconnects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInterconnectsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeInterconnectsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -481,11 +463,9 @@ public class Interconnects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInterconnectsSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsSetLabelsResponse() {{
+        org.openapis.openapi.models.operations.ComputeInterconnectsSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsSetLabelsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -529,11 +509,9 @@ public class Interconnects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInterconnectsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeInterconnectsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

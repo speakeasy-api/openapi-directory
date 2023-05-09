@@ -61,11 +61,9 @@ public class AssetsAnalysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsAnalysisAbsorptionRatioResponse res = new org.openapis.openapi.models.operations.PostAssetsAnalysisAbsorptionRatioResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsAnalysisAbsorptionRatioResponse res = new org.openapis.openapi.models.operations.PostAssetsAnalysisAbsorptionRatioResponse(contentType, httpRes.statusCode()) {{
             postAssetsAnalysisAbsorptionRatio200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,11 +109,9 @@ public class AssetsAnalysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsAnalysisTurbulenceIndexResponse res = new org.openapis.openapi.models.operations.PostAssetsAnalysisTurbulenceIndexResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsAnalysisTurbulenceIndexResponse res = new org.openapis.openapi.models.operations.PostAssetsAnalysisTurbulenceIndexResponse(contentType, httpRes.statusCode()) {{
             postAssetsAnalysisTurbulenceIndex200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

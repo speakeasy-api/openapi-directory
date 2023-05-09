@@ -18,6 +18,7 @@ public class GoogleCloudDiscoveryengineV1alphaGcsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSchema")
     public String dataSchema;
+
     public GoogleCloudDiscoveryengineV1alphaGcsSource withDataSchema(String dataSchema) {
         this.dataSchema = dataSchema;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDiscoveryengineV1alphaGcsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputUris")
     public String[] inputUris;
+
     public GoogleCloudDiscoveryengineV1alphaGcsSource withInputUris(String[] inputUris) {
         this.inputUris = inputUris;
         return this;
     }
     
+    public GoogleCloudDiscoveryengineV1alphaGcsSource(){}
 }

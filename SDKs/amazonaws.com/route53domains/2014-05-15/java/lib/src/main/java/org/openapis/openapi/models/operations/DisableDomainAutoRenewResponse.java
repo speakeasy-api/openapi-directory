@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableDomainAutoRenewResponse {
     
     public String contentType;
+
     public DisableDomainAutoRenewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisableDomainAutoRenewResponse {
      */
     
     public java.util.Map<String, Object> disableDomainAutoRenewResponse;
+
     public DisableDomainAutoRenewResponse withDisableDomainAutoRenewResponse(java.util.Map<String, Object> disableDomainAutoRenewResponse) {
         this.disableDomainAutoRenewResponse = disableDomainAutoRenewResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisableDomainAutoRenewResponse {
      */
     
     public Object invalidInput;
+
     public DisableDomainAutoRenewResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -36,6 +40,7 @@ public class DisableDomainAutoRenewResponse {
     
     
     public Integer statusCode;
+
     public DisableDomainAutoRenewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DisableDomainAutoRenewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableDomainAutoRenewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DisableDomainAutoRenewResponse {
      */
     
     public Object unsupportedTLD;
+
     public DisableDomainAutoRenewResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public DisableDomainAutoRenewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

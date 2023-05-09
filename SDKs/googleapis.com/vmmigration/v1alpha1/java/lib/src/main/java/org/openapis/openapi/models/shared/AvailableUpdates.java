@@ -18,6 +18,7 @@ public class AvailableUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inPlaceUpdate")
     public ApplianceVersion inPlaceUpdate;
+
     public AvailableUpdates withInPlaceUpdate(ApplianceVersion inPlaceUpdate) {
         this.inPlaceUpdate = inPlaceUpdate;
         return this;
@@ -29,9 +30,11 @@ public class AvailableUpdates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newDeployableAppliance")
     public ApplianceVersion newDeployableAppliance;
+
     public AvailableUpdates withNewDeployableAppliance(ApplianceVersion newDeployableAppliance) {
         this.newDeployableAppliance = newDeployableAppliance;
         return this;
     }
     
+    public AvailableUpdates(){}
 }

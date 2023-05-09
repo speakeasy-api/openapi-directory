@@ -20,6 +20,7 @@ public class DominantLanguageDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public DominantLanguageDetectionJobProperties withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -30,6 +31,7 @@ public class DominantLanguageDetectionJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public DominantLanguageDetectionJobProperties withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class DominantLanguageDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public DominantLanguageDetectionJobProperties withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -46,6 +49,7 @@ public class DominantLanguageDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobArn")
     public String jobArn;
+
     public DominantLanguageDetectionJobProperties withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -54,6 +58,7 @@ public class DominantLanguageDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public DominantLanguageDetectionJobProperties withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -62,6 +67,7 @@ public class DominantLanguageDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public DominantLanguageDetectionJobProperties withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -70,6 +76,7 @@ public class DominantLanguageDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public DominantLanguageDetectionJobProperties withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -78,6 +85,7 @@ public class DominantLanguageDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DominantLanguageDetectionJobProperties withMessage(String message) {
         this.message = message;
         return this;
@@ -86,6 +94,7 @@ public class DominantLanguageDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public DominantLanguageDetectionJobProperties withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -96,6 +105,7 @@ public class DominantLanguageDetectionJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTime")
     public OffsetDateTime submitTime;
+
     public DominantLanguageDetectionJobProperties withSubmitTime(OffsetDateTime submitTime) {
         this.submitTime = submitTime;
         return this;
@@ -104,6 +114,7 @@ public class DominantLanguageDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public DominantLanguageDetectionJobProperties withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
@@ -112,9 +123,11 @@ public class DominantLanguageDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public DominantLanguageDetectionJobProperties withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public DominantLanguageDetectionJobProperties(){}
 }

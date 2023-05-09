@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListClosedWorkflowExecutionsResponse {
     
     public String contentType;
+
     public ListClosedWorkflowExecutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListClosedWorkflowExecutionsResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public ListClosedWorkflowExecutionsResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -26,6 +29,7 @@ public class ListClosedWorkflowExecutionsResponse {
     
     
     public Integer statusCode;
+
     public ListClosedWorkflowExecutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListClosedWorkflowExecutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListClosedWorkflowExecutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ListClosedWorkflowExecutionsResponse {
      */
     
     public Object unknownResourceFault;
+
     public ListClosedWorkflowExecutionsResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
@@ -53,9 +59,14 @@ public class ListClosedWorkflowExecutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.WorkflowExecutionInfos workflowExecutionInfos;
+
     public ListClosedWorkflowExecutionsResponse withWorkflowExecutionInfos(org.openapis.openapi.models.shared.WorkflowExecutionInfos workflowExecutionInfos) {
         this.workflowExecutionInfos = workflowExecutionInfos;
         return this;
     }
     
+    public ListClosedWorkflowExecutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

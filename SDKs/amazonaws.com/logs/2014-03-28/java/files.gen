@@ -276,4 +276,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/TestMetricFilterRequest.jav
 lib/src/main/java/org/openapis/openapi/models/shared/UntagLogGroupRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UntagResourceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

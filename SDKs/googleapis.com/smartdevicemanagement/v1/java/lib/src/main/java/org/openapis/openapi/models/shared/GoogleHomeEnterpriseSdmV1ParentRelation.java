@@ -18,6 +18,7 @@ public class GoogleHomeEnterpriseSdmV1ParentRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleHomeEnterpriseSdmV1ParentRelation withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class GoogleHomeEnterpriseSdmV1ParentRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleHomeEnterpriseSdmV1ParentRelation withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public GoogleHomeEnterpriseSdmV1ParentRelation(){}
 }

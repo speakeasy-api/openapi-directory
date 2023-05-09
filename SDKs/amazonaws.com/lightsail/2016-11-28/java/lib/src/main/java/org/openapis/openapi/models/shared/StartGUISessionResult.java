@@ -15,9 +15,11 @@ public class StartGUISessionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public StartGUISessionResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public StartGUISessionResult(){}
 }

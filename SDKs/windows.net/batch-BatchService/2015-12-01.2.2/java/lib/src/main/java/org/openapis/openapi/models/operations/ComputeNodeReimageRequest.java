@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeNodeReimageRequest {
@@ -12,6 +13,7 @@ public class ComputeNodeReimageRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NodeReimageParameter nodeReimageParameter;
+
     public ComputeNodeReimageRequest withNodeReimageParameter(org.openapis.openapi.models.shared.NodeReimageParameter nodeReimageParameter) {
         this.nodeReimageParameter = nodeReimageParameter;
         return this;
@@ -22,6 +24,7 @@ public class ComputeNodeReimageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public ComputeNodeReimageRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -32,6 +35,7 @@ public class ComputeNodeReimageRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public ComputeNodeReimageRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -42,6 +46,7 @@ public class ComputeNodeReimageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nodeId")
     public String nodeId;
+
     public ComputeNodeReimageRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -52,6 +57,7 @@ public class ComputeNodeReimageRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public ComputeNodeReimageRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -62,6 +68,7 @@ public class ComputeNodeReimageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
     public String poolId;
+
     public ComputeNodeReimageRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -72,6 +79,7 @@ public class ComputeNodeReimageRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public ComputeNodeReimageRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -82,9 +90,15 @@ public class ComputeNodeReimageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public ComputeNodeReimageRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public ComputeNodeReimageRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("nodeId") String nodeId, @JsonProperty("poolId") String poolId) {
+        this.apiVersion = apiVersion;
+        this.nodeId = nodeId;
+        this.poolId = poolId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutLifecycleConfigurationResponse {
@@ -12,6 +13,7 @@ public class PutLifecycleConfigurationResponse {
      */
     
     public Object badRequest;
+
     public PutLifecycleConfigurationResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class PutLifecycleConfigurationResponse {
     
     
     public String contentType;
+
     public PutLifecycleConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutLifecycleConfigurationResponse {
      */
     
     public Object fileSystemNotFound;
+
     public PutLifecycleConfigurationResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -39,6 +43,7 @@ public class PutLifecycleConfigurationResponse {
      */
     
     public Object incorrectFileSystemLifeCycleState;
+
     public PutLifecycleConfigurationResponse withIncorrectFileSystemLifeCycleState(Object incorrectFileSystemLifeCycleState) {
         this.incorrectFileSystemLifeCycleState = incorrectFileSystemLifeCycleState;
         return this;
@@ -49,6 +54,7 @@ public class PutLifecycleConfigurationResponse {
      */
     
     public Object internalServerError;
+
     public PutLifecycleConfigurationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class PutLifecycleConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.LifecycleConfigurationDescription lifecycleConfigurationDescription;
+
     public PutLifecycleConfigurationResponse withLifecycleConfigurationDescription(org.openapis.openapi.models.shared.LifecycleConfigurationDescription lifecycleConfigurationDescription) {
         this.lifecycleConfigurationDescription = lifecycleConfigurationDescription;
         return this;
@@ -66,6 +73,7 @@ public class PutLifecycleConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutLifecycleConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class PutLifecycleConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutLifecycleConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutLifecycleConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

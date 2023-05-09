@@ -18,6 +18,7 @@ public class VideoAbuseReportReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public VideoAbuseReportReason withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class VideoAbuseReportReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public VideoAbuseReportReason withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class VideoAbuseReportReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public VideoAbuseReportReason withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class VideoAbuseReportReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public VideoAbuseReportReasonSnippet snippet;
+
     public VideoAbuseReportReason withSnippet(VideoAbuseReportReasonSnippet snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public VideoAbuseReportReason(){}
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1DocumentOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsOutputConfig")
     public GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig gcsOutputConfig;
+
     public GoogleCloudDocumentaiV1DocumentOutputConfig withGcsOutputConfig(GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig gcsOutputConfig) {
         this.gcsOutputConfig = gcsOutputConfig;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentOutputConfig(){}
 }

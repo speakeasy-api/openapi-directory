@@ -18,6 +18,7 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalExperiments")
     public String[] additionalExperiments;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withAdditionalExperiments(String[] additionalExperiments) {
         this.additionalExperiments = additionalExperiments;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalUserLabels")
     public java.util.Map<String, String> additionalUserLabels;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withAdditionalUserLabels(java.util.Map<String, String> additionalUserLabels) {
         this.additionalUserLabels = additionalUserLabels;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bypassTempDirValidation")
     public Boolean bypassTempDirValidation;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withBypassTempDirValidation(Boolean bypassTempDirValidation) {
         this.bypassTempDirValidation = bypassTempDirValidation;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableStreamingEngine")
     public Boolean enableStreamingEngine;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withEnableStreamingEngine(Boolean enableStreamingEngine) {
         this.enableStreamingEngine = enableStreamingEngine;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipConfiguration")
     public GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfigurationEnum ipConfiguration;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withIpConfiguration(GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfigurationEnum ipConfiguration) {
         this.ipConfiguration = ipConfiguration;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxWorkers")
     public Integer maxWorkers;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withMaxWorkers(Integer maxWorkers) {
         this.maxWorkers = maxWorkers;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withNetwork(String network) {
         this.network = network;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numWorkers")
     public Integer numWorkers;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withNumWorkers(Integer numWorkers) {
         this.numWorkers = numWorkers;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountEmail")
     public String serviceAccountEmail;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withServiceAccountEmail(String serviceAccountEmail) {
         this.serviceAccountEmail = serviceAccountEmail;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tempLocation")
     public String tempLocation;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withTempLocation(String tempLocation) {
         this.tempLocation = tempLocation;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerRegion")
     public String workerRegion;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withWorkerRegion(String workerRegion) {
         this.workerRegion = workerRegion;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerZone")
     public String workerZone;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withWorkerZone(String workerZone) {
         this.workerZone = workerZone;
         return this;
@@ -183,9 +198,11 @@ public class GoogleCloudDatapipelinesV1RuntimeEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public GoogleCloudDatapipelinesV1RuntimeEnvironment withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public GoogleCloudDatapipelinesV1RuntimeEnvironment(){}
 }

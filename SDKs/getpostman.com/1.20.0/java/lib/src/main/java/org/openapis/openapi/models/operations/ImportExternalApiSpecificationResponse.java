@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportExternalApiSpecificationResponse {
     
     public String contentType;
+
     public ImportExternalApiSpecificationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ImportExternalApiSpecificationResponse {
     
     
     public Integer statusCode;
+
     public ImportExternalApiSpecificationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ImportExternalApiSpecificationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportExternalApiSpecificationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ImportExternalApiSpecificationResponse {
      */
     
     public ImportExternalApiSpecification200ApplicationJSON importExternalApiSpecification200ApplicationJSONObject;
+
     public ImportExternalApiSpecificationResponse withImportExternalApiSpecification200ApplicationJSONObject(ImportExternalApiSpecification200ApplicationJSON importExternalApiSpecification200ApplicationJSONObject) {
         this.importExternalApiSpecification200ApplicationJSONObject = importExternalApiSpecification200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class ImportExternalApiSpecificationResponse {
      */
     
     public ImportExternalApiSpecification400ApplicationJSON importExternalApiSpecification400ApplicationJSONObject;
+
     public ImportExternalApiSpecificationResponse withImportExternalApiSpecification400ApplicationJSONObject(ImportExternalApiSpecification400ApplicationJSON importExternalApiSpecification400ApplicationJSONObject) {
         this.importExternalApiSpecification400ApplicationJSONObject = importExternalApiSpecification400ApplicationJSONObject;
         return this;
     }
     
+    public ImportExternalApiSpecificationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

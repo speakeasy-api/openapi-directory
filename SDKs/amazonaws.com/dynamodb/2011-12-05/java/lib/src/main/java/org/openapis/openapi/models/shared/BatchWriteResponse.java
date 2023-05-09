@@ -15,9 +15,11 @@ public class BatchWriteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedCapacityUnits")
     public Double consumedCapacityUnits;
+
     public BatchWriteResponse withConsumedCapacityUnits(Double consumedCapacityUnits) {
         this.consumedCapacityUnits = consumedCapacityUnits;
         return this;
     }
     
+    public BatchWriteResponse(){}
 }

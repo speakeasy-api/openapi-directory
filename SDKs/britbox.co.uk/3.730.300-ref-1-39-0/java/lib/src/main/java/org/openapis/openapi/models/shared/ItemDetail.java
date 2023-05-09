@@ -23,6 +23,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advisoryText")
     public String advisoryText;
+
     public ItemDetail withAdvisoryText(String advisoryText) {
         this.advisoryText = advisoryText;
         return this;
@@ -34,6 +35,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableEpisodeCount")
     public Integer availableEpisodeCount;
+
     public ItemDetail withAvailableEpisodeCount(Integer availableEpisodeCount) {
         this.availableEpisodeCount = availableEpisodeCount;
         return this;
@@ -45,6 +47,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableSeasonCount")
     public Integer availableSeasonCount;
+
     public ItemDetail withAvailableSeasonCount(Integer availableSeasonCount) {
         this.availableSeasonCount = availableSeasonCount;
         return this;
@@ -58,6 +61,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageUserRating")
     public Double averageUserRating;
+
     public ItemDetail withAverageUserRating(Double averageUserRating) {
         this.averageUserRating = averageUserRating;
         return this;
@@ -69,6 +73,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("badge")
     public String badge;
+
     public ItemDetail withBadge(String badge) {
         this.badge = badge;
         return this;
@@ -80,6 +85,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelShortCode")
     public String channelShortCode;
+
     public ItemDetail withChannelShortCode(String channelShortCode) {
         this.channelShortCode = channelShortCode;
         return this;
@@ -88,6 +94,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classification")
     public ClassificationSummary classification;
+
     public ItemDetail withClassification(ClassificationSummary classification) {
         this.classification = classification;
         return this;
@@ -101,6 +108,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextualTitle")
     public String contextualTitle;
+
     public ItemDetail withContextualTitle(String contextualTitle) {
         this.contextualTitle = contextualTitle;
         return this;
@@ -112,6 +120,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public ItemDetail withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -123,6 +132,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credits")
     public Credit[] credits;
+
     public ItemDetail withCredits(Credit[] credits) {
         this.credits = credits;
         return this;
@@ -134,6 +144,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public java.util.Map<String, Object> customFields;
+
     public ItemDetail withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -147,6 +158,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customId")
     public String customId;
+
     public ItemDetail withCustomId(String customId) {
         this.customId = customId;
         return this;
@@ -161,6 +173,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customMetadata")
     public ItemCustomMetadata[] customMetadata;
+
     public ItemDetail withCustomMetadata(ItemCustomMetadata[] customMetadata) {
         this.customMetadata = customMetadata;
         return this;
@@ -172,6 +185,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ItemDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -183,6 +197,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributor")
     public String distributor;
+
     public ItemDetail withDistributor(String distributor) {
         this.distributor = distributor;
         return this;
@@ -194,6 +209,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Integer duration;
+
     public ItemDetail withDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -205,6 +221,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("episodeCount")
     public Integer episodeCount;
+
     public ItemDetail withEpisodeCount(Integer episodeCount) {
         this.episodeCount = episodeCount;
         return this;
@@ -216,6 +233,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("episodeName")
     public String episodeName;
+
     public ItemDetail withEpisodeName(String episodeName) {
         this.episodeName = episodeName;
         return this;
@@ -227,6 +245,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("episodeNumber")
     public Integer episodeNumber;
+
     public ItemDetail withEpisodeNumber(Integer episodeNumber) {
         this.episodeNumber = episodeNumber;
         return this;
@@ -238,6 +257,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("episodes")
     public ItemList episodes;
+
     public ItemDetail withEpisodes(ItemList episodes) {
         this.episodes = episodes;
         return this;
@@ -253,6 +273,7 @@ public class ItemDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("eventDate")
     public OffsetDateTime eventDate;
+
     public ItemDetail withEventDate(OffsetDateTime eventDate) {
         this.eventDate = eventDate;
         return this;
@@ -265,6 +286,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genrePaths")
     public String[] genrePaths;
+
     public ItemDetail withGenrePaths(String[] genrePaths) {
         this.genrePaths = genrePaths;
         return this;
@@ -276,6 +298,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genres")
     public String[] genres;
+
     public ItemDetail withGenres(String[] genres) {
         this.genres = genres;
         return this;
@@ -287,6 +310,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasClosedCaptions")
     public Boolean hasClosedCaptions;
+
     public ItemDetail withHasClosedCaptions(Boolean hasClosedCaptions) {
         this.hasClosedCaptions = hasClosedCaptions;
         return this;
@@ -297,6 +321,7 @@ public class ItemDetail {
      */
     @JsonProperty("id")
     public String id;
+
     public ItemDetail withId(String id) {
         this.id = id;
         return this;
@@ -305,6 +330,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public java.util.Map<String, String> images;
+
     public ItemDetail withImages(java.util.Map<String, String> images) {
         this.images = images;
         return this;
@@ -318,6 +344,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public ItemDetail withLocation(String location) {
         this.location = location;
         return this;
@@ -329,6 +356,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offers")
     public Offer[] offers;
+
     public ItemDetail withOffers(Offer[] offers) {
         this.offers = offers;
         return this;
@@ -339,6 +367,7 @@ public class ItemDetail {
      */
     @JsonProperty("path")
     public String path;
+
     public ItemDetail withPath(String path) {
         this.path = path;
         return this;
@@ -350,6 +379,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseYear")
     public Integer releaseYear;
+
     public ItemDetail withReleaseYear(Integer releaseYear) {
         this.releaseYear = releaseYear;
         return this;
@@ -361,6 +391,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public String[] scopes;
+
     public ItemDetail withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
@@ -369,6 +400,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("season")
     public ItemDetail season;
+
     public ItemDetail withSeason(ItemDetail season) {
         this.season = season;
         return this;
@@ -380,6 +412,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seasonId")
     public String seasonId;
+
     public ItemDetail withSeasonId(String seasonId) {
         this.seasonId = seasonId;
         return this;
@@ -391,6 +424,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seasonNumber")
     public Integer seasonNumber;
+
     public ItemDetail withSeasonNumber(Integer seasonNumber) {
         this.seasonNumber = seasonNumber;
         return this;
@@ -402,6 +436,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seasons")
     public ItemList seasons;
+
     public ItemDetail withSeasons(ItemList seasons) {
         this.seasons = seasons;
         return this;
@@ -413,6 +448,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortDescription")
     public String shortDescription;
+
     public ItemDetail withShortDescription(String shortDescription) {
         this.shortDescription = shortDescription;
         return this;
@@ -421,6 +457,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show")
     public ItemDetail show;
+
     public ItemDetail withShow(ItemDetail show) {
         this.show = show;
         return this;
@@ -432,6 +469,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showId")
     public String showId;
+
     public ItemDetail withShowId(String showId) {
         this.showId = showId;
         return this;
@@ -440,6 +478,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showTitle")
     public String showTitle;
+
     public ItemDetail withShowTitle(String showTitle) {
         this.showTitle = showTitle;
         return this;
@@ -453,6 +492,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtype")
     public String subtype;
+
     public ItemDetail withSubtype(String subtype) {
         this.subtype = subtype;
         return this;
@@ -464,6 +504,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagline")
     public String tagline;
+
     public ItemDetail withTagline(String tagline) {
         this.tagline = tagline;
         return this;
@@ -475,6 +516,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("themes")
     public Theme[] themes;
+
     public ItemDetail withThemes(Theme[] themes) {
         this.themes = themes;
         return this;
@@ -485,6 +527,7 @@ public class ItemDetail {
      */
     @JsonProperty("title")
     public String title;
+
     public ItemDetail withTitle(String title) {
         this.title = title;
         return this;
@@ -496,6 +539,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalUserRatings")
     public Integer totalUserRatings;
+
     public ItemDetail withTotalUserRatings(Integer totalUserRatings) {
         this.totalUserRatings = totalUserRatings;
         return this;
@@ -507,6 +551,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trailers")
     public ItemSummary[] trailers;
+
     public ItemDetail withTrailers(ItemSummary[] trailers) {
         this.trailers = trailers;
         return this;
@@ -517,6 +562,7 @@ public class ItemDetail {
      */
     @JsonProperty("type")
     public ItemDetailTypeEnum type;
+
     public ItemDetail withType(ItemDetailTypeEnum type) {
         this.type = type;
         return this;
@@ -530,6 +576,7 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("venue")
     public String venue;
+
     public ItemDetail withVenue(String venue) {
         this.venue = venue;
         return this;
@@ -541,9 +588,16 @@ public class ItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("watchPath")
     public String watchPath;
+
     public ItemDetail withWatchPath(String watchPath) {
         this.watchPath = watchPath;
         return this;
     }
     
+    public ItemDetail(@JsonProperty("id") String id, @JsonProperty("path") String path, @JsonProperty("title") String title, @JsonProperty("type") ItemDetailTypeEnum type) {
+        this.id = id;
+        this.path = path;
+        this.title = title;
+        this.type = type;
+  }
 }

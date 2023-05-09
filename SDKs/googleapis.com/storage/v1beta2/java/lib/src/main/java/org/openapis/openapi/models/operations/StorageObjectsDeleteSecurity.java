@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class StorageObjectsDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public StorageObjectsDeleteSecurityOption1 option1;
+
     public StorageObjectsDeleteSecurity withOption1(StorageObjectsDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class StorageObjectsDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public StorageObjectsDeleteSecurityOption2 option2;
+
     public StorageObjectsDeleteSecurity withOption2(StorageObjectsDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public StorageObjectsDeleteSecurity(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Actor {
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public Actor withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -22,6 +23,7 @@ public class Actor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_login")
     public String displayLogin;
+
     public Actor withDisplayLogin(String displayLogin) {
         this.displayLogin = displayLogin;
         return this;
@@ -29,6 +31,7 @@ public class Actor {
     
     @JsonProperty("gravatar_id")
     public String gravatarId;
+
     public Actor withGravatarId(String gravatarId) {
         this.gravatarId = gravatarId;
         return this;
@@ -36,6 +39,7 @@ public class Actor {
     
     @JsonProperty("id")
     public Long id;
+
     public Actor withId(Long id) {
         this.id = id;
         return this;
@@ -43,6 +47,7 @@ public class Actor {
     
     @JsonProperty("login")
     public String login;
+
     public Actor withLogin(String login) {
         this.login = login;
         return this;
@@ -50,9 +55,17 @@ public class Actor {
     
     @JsonProperty("url")
     public String url;
+
     public Actor withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Actor(@JsonProperty("avatar_url") String avatarUrl, @JsonProperty("gravatar_id") String gravatarId, @JsonProperty("id") Long id, @JsonProperty("login") String login, @JsonProperty("url") String url) {
+        this.avatarUrl = avatarUrl;
+        this.gravatarId = gravatarId;
+        this.id = id;
+        this.login = login;
+        this.url = url;
+  }
 }

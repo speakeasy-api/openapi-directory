@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateIpamScopeResultIpamScope {
     
     public String description;
+
     public CreateIpamScopeResultIpamScope withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateIpamScopeResultIpamScope {
     
     
     public String ipamArn;
+
     public CreateIpamScopeResultIpamScope withIpamArn(String ipamArn) {
         this.ipamArn = ipamArn;
         return this;
@@ -26,6 +28,7 @@ public class CreateIpamScopeResultIpamScope {
     
     
     public String ipamRegion;
+
     public CreateIpamScopeResultIpamScope withIpamRegion(String ipamRegion) {
         this.ipamRegion = ipamRegion;
         return this;
@@ -33,6 +36,7 @@ public class CreateIpamScopeResultIpamScope {
     
     
     public String ipamScopeArn;
+
     public CreateIpamScopeResultIpamScope withIpamScopeArn(String ipamScopeArn) {
         this.ipamScopeArn = ipamScopeArn;
         return this;
@@ -40,6 +44,7 @@ public class CreateIpamScopeResultIpamScope {
     
     
     public String ipamScopeId;
+
     public CreateIpamScopeResultIpamScope withIpamScopeId(String ipamScopeId) {
         this.ipamScopeId = ipamScopeId;
         return this;
@@ -47,6 +52,7 @@ public class CreateIpamScopeResultIpamScope {
     
     
     public CreateIpamScopeResultIpamScopeIpamScopeTypeEnum ipamScopeType;
+
     public CreateIpamScopeResultIpamScope withIpamScopeType(CreateIpamScopeResultIpamScopeIpamScopeTypeEnum ipamScopeType) {
         this.ipamScopeType = ipamScopeType;
         return this;
@@ -54,6 +60,7 @@ public class CreateIpamScopeResultIpamScope {
     
     
     public Boolean isDefault;
+
     public CreateIpamScopeResultIpamScope withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -61,6 +68,7 @@ public class CreateIpamScopeResultIpamScope {
     
     
     public String ownerId;
+
     public CreateIpamScopeResultIpamScope withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -68,6 +76,7 @@ public class CreateIpamScopeResultIpamScope {
     
     
     public Long poolCount;
+
     public CreateIpamScopeResultIpamScope withPoolCount(Long poolCount) {
         this.poolCount = poolCount;
         return this;
@@ -75,6 +84,7 @@ public class CreateIpamScopeResultIpamScope {
     
     
     public CreateIpamScopeResultIpamScopeStateEnum state;
+
     public CreateIpamScopeResultIpamScope withState(CreateIpamScopeResultIpamScopeStateEnum state) {
         this.state = state;
         return this;
@@ -82,9 +92,11 @@ public class CreateIpamScopeResultIpamScope {
     
     
     public CreateIpamScopeResultIpamScopeTags[] tags;
+
     public CreateIpamScopeResultIpamScope withTags(CreateIpamScopeResultIpamScopeTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateIpamScopeResultIpamScope(){}
 }

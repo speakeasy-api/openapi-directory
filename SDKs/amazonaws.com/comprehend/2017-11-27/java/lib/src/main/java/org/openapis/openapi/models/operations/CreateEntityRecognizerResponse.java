@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEntityRecognizerResponse {
     
     public String contentType;
+
     public CreateEntityRecognizerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateEntityRecognizerResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEntityRecognizerResponse createEntityRecognizerResponse;
+
     public CreateEntityRecognizerResponse withCreateEntityRecognizerResponse(org.openapis.openapi.models.shared.CreateEntityRecognizerResponse createEntityRecognizerResponse) {
         this.createEntityRecognizerResponse = createEntityRecognizerResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateEntityRecognizerResponse {
      */
     
     public Object internalServerException;
+
     public CreateEntityRecognizerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateEntityRecognizerResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateEntityRecognizerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateEntityRecognizerResponse {
      */
     
     public Object kmsKeyValidationException;
+
     public CreateEntityRecognizerResponse withKmsKeyValidationException(Object kmsKeyValidationException) {
         this.kmsKeyValidationException = kmsKeyValidationException;
         return this;
@@ -56,6 +62,7 @@ public class CreateEntityRecognizerResponse {
     
     
     public Integer statusCode;
+
     public CreateEntityRecognizerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateEntityRecognizerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEntityRecognizerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateEntityRecognizerResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateEntityRecognizerResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -83,6 +92,7 @@ public class CreateEntityRecognizerResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateEntityRecognizerResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateEntityRecognizerResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateEntityRecognizerResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,6 +114,7 @@ public class CreateEntityRecognizerResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateEntityRecognizerResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
@@ -113,9 +125,14 @@ public class CreateEntityRecognizerResponse {
      */
     
     public Object unsupportedLanguageException;
+
     public CreateEntityRecognizerResponse withUnsupportedLanguageException(Object unsupportedLanguageException) {
         this.unsupportedLanguageException = unsupportedLanguageException;
         return this;
     }
     
+    public CreateEntityRecognizerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

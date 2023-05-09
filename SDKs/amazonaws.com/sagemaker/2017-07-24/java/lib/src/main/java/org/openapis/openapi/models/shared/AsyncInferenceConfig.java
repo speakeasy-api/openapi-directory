@@ -15,6 +15,7 @@ public class AsyncInferenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientConfig")
     public AsyncInferenceClientConfig clientConfig;
+
     public AsyncInferenceConfig withClientConfig(AsyncInferenceClientConfig clientConfig) {
         this.clientConfig = clientConfig;
         return this;
@@ -22,9 +23,13 @@ public class AsyncInferenceConfig {
     
     @JsonProperty("OutputConfig")
     public AsyncInferenceOutputConfig outputConfig;
+
     public AsyncInferenceConfig withOutputConfig(AsyncInferenceOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
     
+    public AsyncInferenceConfig(@JsonProperty("OutputConfig") AsyncInferenceOutputConfig outputConfig) {
+        this.outputConfig = outputConfig;
+  }
 }

@@ -12,6 +12,7 @@ public class DescribeInstancePatchesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public PatchOrchestratorFilter[] filters;
+
     public DescribeInstancePatchesRequest withFilters(PatchOrchestratorFilter[] filters) {
         this.filters = filters;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstancePatchesRequest {
     
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public DescribeInstancePatchesRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -27,6 +29,7 @@ public class DescribeInstancePatchesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeInstancePatchesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,9 +38,13 @@ public class DescribeInstancePatchesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeInstancePatchesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstancePatchesRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

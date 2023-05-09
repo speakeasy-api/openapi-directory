@@ -15,9 +15,11 @@ public class ImageClassificationJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompletionCriteria")
     public AutoMLJobCompletionCriteria completionCriteria;
+
     public ImageClassificationJobConfig withCompletionCriteria(AutoMLJobCompletionCriteria completionCriteria) {
         this.completionCriteria = completionCriteria;
         return this;
     }
     
+    public ImageClassificationJobConfig(){}
 }

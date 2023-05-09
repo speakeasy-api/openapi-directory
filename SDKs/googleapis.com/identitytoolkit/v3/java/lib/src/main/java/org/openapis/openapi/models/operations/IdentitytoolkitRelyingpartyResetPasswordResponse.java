@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitRelyingpartyResetPasswordResponse {
     
     public String contentType;
+
     public IdentitytoolkitRelyingpartyResetPasswordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitRelyingpartyResetPasswordResponse {
      */
     
     public org.openapis.openapi.models.shared.ResetPasswordResponse resetPasswordResponse;
+
     public IdentitytoolkitRelyingpartyResetPasswordResponse withResetPasswordResponse(org.openapis.openapi.models.shared.ResetPasswordResponse resetPasswordResponse) {
         this.resetPasswordResponse = resetPasswordResponse;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitRelyingpartyResetPasswordResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitRelyingpartyResetPasswordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitRelyingpartyResetPasswordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitRelyingpartyResetPasswordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyResetPasswordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DestinyMilestonesDestinyMilestoneActivityPhase {
      */
     
     public Boolean complete;
+
     public DestinyMilestonesDestinyMilestoneActivityPhase withComplete(Boolean complete) {
         this.complete = complete;
         return this;
@@ -25,9 +26,11 @@ public class DestinyMilestonesDestinyMilestoneActivityPhase {
      */
     
     public Long phaseHash;
+
     public DestinyMilestonesDestinyMilestoneActivityPhase withPhaseHash(Long phaseHash) {
         this.phaseHash = phaseHash;
         return this;
     }
     
+    public DestinyMilestonesDestinyMilestoneActivityPhase(){}
 }

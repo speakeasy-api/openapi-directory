@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAuditMitigationActionsExecutionsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListAuditMitigationActionsExecutionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class ListAuditMitigationActionsExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListAuditMitigationActionsExecutionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class ListAuditMitigationActionsExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListAuditMitigationActionsExecutionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class ListAuditMitigationActionsExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListAuditMitigationActionsExecutionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class ListAuditMitigationActionsExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListAuditMitigationActionsExecutionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class ListAuditMitigationActionsExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListAuditMitigationActionsExecutionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class ListAuditMitigationActionsExecutionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListAuditMitigationActionsExecutionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class ListAuditMitigationActionsExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=actionStatus")
     public ListAuditMitigationActionsExecutionsActionStatusEnum actionStatus;
+
     public ListAuditMitigationActionsExecutionsRequest withActionStatus(ListAuditMitigationActionsExecutionsActionStatusEnum actionStatus) {
         this.actionStatus = actionStatus;
         return this;
@@ -71,6 +80,7 @@ public class ListAuditMitigationActionsExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=findingId")
     public String findingId;
+
     public ListAuditMitigationActionsExecutionsRequest withFindingId(String findingId) {
         this.findingId = findingId;
         return this;
@@ -81,6 +91,7 @@ public class ListAuditMitigationActionsExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListAuditMitigationActionsExecutionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -91,6 +102,7 @@ public class ListAuditMitigationActionsExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListAuditMitigationActionsExecutionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -101,9 +113,14 @@ public class ListAuditMitigationActionsExecutionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taskId")
     public String taskId;
+
     public ListAuditMitigationActionsExecutionsRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public ListAuditMitigationActionsExecutionsRequest(@JsonProperty("findingId") String findingId, @JsonProperty("taskId") String taskId) {
+        this.findingId = findingId;
+        this.taskId = taskId;
+  }
 }

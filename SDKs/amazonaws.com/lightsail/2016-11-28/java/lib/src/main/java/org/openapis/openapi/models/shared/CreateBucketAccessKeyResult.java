@@ -15,6 +15,7 @@ public class CreateBucketAccessKeyResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessKey")
     public AccessKey accessKey;
+
     public CreateBucketAccessKeyResult withAccessKey(AccessKey accessKey) {
         this.accessKey = accessKey;
         return this;
@@ -23,9 +24,11 @@ public class CreateBucketAccessKeyResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public CreateBucketAccessKeyResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public CreateBucketAccessKeyResult(){}
 }

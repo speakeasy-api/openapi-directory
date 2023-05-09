@@ -12,6 +12,7 @@ public class ControllersAdvisoryInlineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advisory_type")
     public Long advisoryType;
+
     public ControllersAdvisoryInlineItem withAdvisoryType(Long advisoryType) {
         this.advisoryType = advisoryType;
         return this;
@@ -20,6 +21,7 @@ public class ControllersAdvisoryInlineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicable_systems")
     public Long applicableSystems;
+
     public ControllersAdvisoryInlineItem withApplicableSystems(Long applicableSystems) {
         this.applicableSystems = applicableSystems;
         return this;
@@ -28,6 +30,7 @@ public class ControllersAdvisoryInlineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cve_count")
     public Long cveCount;
+
     public ControllersAdvisoryInlineItem withCveCount(Long cveCount) {
         this.cveCount = cveCount;
         return this;
@@ -36,6 +39,7 @@ public class ControllersAdvisoryInlineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ControllersAdvisoryInlineItem withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +48,7 @@ public class ControllersAdvisoryInlineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ControllersAdvisoryInlineItem withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +57,7 @@ public class ControllersAdvisoryInlineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_date")
     public String publicDate;
+
     public ControllersAdvisoryInlineItem withPublicDate(String publicDate) {
         this.publicDate = publicDate;
         return this;
@@ -60,6 +66,7 @@ public class ControllersAdvisoryInlineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public Long severity;
+
     public ControllersAdvisoryInlineItem withSeverity(Long severity) {
         this.severity = severity;
         return this;
@@ -68,9 +75,11 @@ public class ControllersAdvisoryInlineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synopsis")
     public String synopsis;
+
     public ControllersAdvisoryInlineItem withSynopsis(String synopsis) {
         this.synopsis = synopsis;
         return this;
     }
     
+    public ControllersAdvisoryInlineItem(){}
 }

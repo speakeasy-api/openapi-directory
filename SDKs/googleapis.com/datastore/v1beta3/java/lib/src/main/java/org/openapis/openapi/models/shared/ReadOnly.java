@@ -18,9 +18,11 @@ public class ReadOnly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public ReadOnly withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
     }
     
+    public ReadOnly(){}
 }

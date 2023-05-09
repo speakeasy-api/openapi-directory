@@ -12,9 +12,11 @@ public class GetFactCategoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public GetFactCategoriesRequest withStart(Long start) {
         this.start = start;
         return this;
     }
     
+    public GetFactCategoriesRequest(){}
 }

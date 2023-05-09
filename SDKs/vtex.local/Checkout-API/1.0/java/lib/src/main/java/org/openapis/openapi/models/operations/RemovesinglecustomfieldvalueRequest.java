@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemovesinglecustomfieldvalueRequest {
@@ -12,6 +13,7 @@ public class RemovesinglecustomfieldvalueRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public RemovesinglecustomfieldvalueRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class RemovesinglecustomfieldvalueRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public RemovesinglecustomfieldvalueRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class RemovesinglecustomfieldvalueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appFieldName")
     public String appFieldName;
+
     public RemovesinglecustomfieldvalueRequest withAppFieldName(String appFieldName) {
         this.appFieldName = appFieldName;
         return this;
@@ -42,6 +46,7 @@ public class RemovesinglecustomfieldvalueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public String appId;
+
     public RemovesinglecustomfieldvalueRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -52,9 +57,17 @@ public class RemovesinglecustomfieldvalueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
     public String orderFormId;
+
     public RemovesinglecustomfieldvalueRequest withOrderFormId(String orderFormId) {
         this.orderFormId = orderFormId;
         return this;
     }
     
+    public RemovesinglecustomfieldvalueRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("appFieldName") String appFieldName, @JsonProperty("appId") String appId, @JsonProperty("orderFormId") String orderFormId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.appFieldName = appFieldName;
+        this.appId = appId;
+        this.orderFormId = orderFormId;
+  }
 }

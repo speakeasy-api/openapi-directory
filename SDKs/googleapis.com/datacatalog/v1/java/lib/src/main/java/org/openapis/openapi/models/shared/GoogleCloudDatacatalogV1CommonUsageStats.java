@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1CommonUsageStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewCount")
     public String viewCount;
+
     public GoogleCloudDatacatalogV1CommonUsageStats withViewCount(String viewCount) {
         this.viewCount = viewCount;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1CommonUsageStats(){}
 }

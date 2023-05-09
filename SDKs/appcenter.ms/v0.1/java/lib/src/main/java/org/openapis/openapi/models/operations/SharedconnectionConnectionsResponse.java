@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SharedconnectionConnectionsResponse {
     
     public String contentType;
+
     public SharedconnectionConnectionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SharedconnectionConnectionsResponse {
     
     
     public Integer statusCode;
+
     public SharedconnectionConnectionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SharedconnectionConnectionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SharedconnectionConnectionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SharedconnectionConnectionsResponse {
      */
     
     public SharedconnectionConnections200ApplicationJSON[] sharedconnectionConnections200ApplicationJSONObjects;
+
     public SharedconnectionConnectionsResponse withSharedconnectionConnections200ApplicationJSONObjects(SharedconnectionConnections200ApplicationJSON[] sharedconnectionConnections200ApplicationJSONObjects) {
         this.sharedconnectionConnections200ApplicationJSONObjects = sharedconnectionConnections200ApplicationJSONObjects;
         return this;
@@ -44,9 +49,14 @@ public class SharedconnectionConnectionsResponse {
      */
     
     public SharedconnectionConnectionsDefaultApplicationJSON sharedconnectionConnectionsDefaultApplicationJSONObject;
+
     public SharedconnectionConnectionsResponse withSharedconnectionConnectionsDefaultApplicationJSONObject(SharedconnectionConnectionsDefaultApplicationJSON sharedconnectionConnectionsDefaultApplicationJSONObject) {
         this.sharedconnectionConnectionsDefaultApplicationJSONObject = sharedconnectionConnectionsDefaultApplicationJSONObject;
         return this;
     }
     
+    public SharedconnectionConnectionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

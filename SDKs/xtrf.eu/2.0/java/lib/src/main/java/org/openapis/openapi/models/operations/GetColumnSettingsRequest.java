@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetColumnSettingsRequest {
@@ -12,6 +13,7 @@ public class GetColumnSettingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnName")
     public String columnName;
+
     public GetColumnSettingsRequest withColumnName(String columnName) {
         this.columnName = columnName;
         return this;
@@ -22,9 +24,14 @@ public class GetColumnSettingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
     public Long viewId;
+
     public GetColumnSettingsRequest withViewId(Long viewId) {
         this.viewId = viewId;
         return this;
     }
     
+    public GetColumnSettingsRequest(@JsonProperty("columnName") String columnName, @JsonProperty("viewId") Long viewId) {
+        this.columnName = columnName;
+        this.viewId = viewId;
+  }
 }

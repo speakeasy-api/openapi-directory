@@ -12,9 +12,13 @@ public class GetAppliedSchemaVersionRequestBody {
      */
     @JsonProperty("SchemaArn")
     public String schemaArn;
+
     public GetAppliedSchemaVersionRequestBody withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
     }
     
+    public GetAppliedSchemaVersionRequestBody(@JsonProperty("SchemaArn") String schemaArn) {
+        this.schemaArn = schemaArn;
+  }
 }

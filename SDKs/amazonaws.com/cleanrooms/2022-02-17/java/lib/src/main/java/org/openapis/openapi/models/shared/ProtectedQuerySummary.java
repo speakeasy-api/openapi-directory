@@ -19,6 +19,7 @@ public class ProtectedQuerySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public ProtectedQuerySummary withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -26,6 +27,7 @@ public class ProtectedQuerySummary {
     
     @JsonProperty("id")
     public String id;
+
     public ProtectedQuerySummary withId(String id) {
         this.id = id;
         return this;
@@ -33,6 +35,7 @@ public class ProtectedQuerySummary {
     
     @JsonProperty("membershipArn")
     public String membershipArn;
+
     public ProtectedQuerySummary withMembershipArn(String membershipArn) {
         this.membershipArn = membershipArn;
         return this;
@@ -40,6 +43,7 @@ public class ProtectedQuerySummary {
     
     @JsonProperty("membershipId")
     public String membershipId;
+
     public ProtectedQuerySummary withMembershipId(String membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -47,9 +51,17 @@ public class ProtectedQuerySummary {
     
     @JsonProperty("status")
     public ProtectedQueryStatusEnum status;
+
     public ProtectedQuerySummary withStatus(ProtectedQueryStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ProtectedQuerySummary(@JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("id") String id, @JsonProperty("membershipArn") String membershipArn, @JsonProperty("membershipId") String membershipId, @JsonProperty("status") ProtectedQueryStatusEnum status) {
+        this.createTime = createTime;
+        this.id = id;
+        this.membershipArn = membershipArn;
+        this.membershipId = membershipId;
+        this.status = status;
+  }
 }

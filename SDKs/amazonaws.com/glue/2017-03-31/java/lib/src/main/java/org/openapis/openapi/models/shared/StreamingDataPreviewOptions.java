@@ -15,6 +15,7 @@ public class StreamingDataPreviewOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PollingTime")
     public Long pollingTime;
+
     public StreamingDataPreviewOptions withPollingTime(Long pollingTime) {
         this.pollingTime = pollingTime;
         return this;
@@ -23,9 +24,11 @@ public class StreamingDataPreviewOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordPollingLimit")
     public Long recordPollingLimit;
+
     public StreamingDataPreviewOptions withRecordPollingLimit(Long recordPollingLimit) {
         this.recordPollingLimit = recordPollingLimit;
         return this;
     }
     
+    public StreamingDataPreviewOptions(){}
 }

@@ -17,6 +17,7 @@ public class CreateTrialComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public CreateTrialComponentRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -27,6 +28,7 @@ public class CreateTrialComponentRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public CreateTrialComponentRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -35,6 +37,7 @@ public class CreateTrialComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputArtifacts")
     public java.util.Map<String, TrialComponentArtifact> inputArtifacts;
+
     public CreateTrialComponentRequest withInputArtifacts(java.util.Map<String, TrialComponentArtifact> inputArtifacts) {
         this.inputArtifacts = inputArtifacts;
         return this;
@@ -46,6 +49,7 @@ public class CreateTrialComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataProperties")
     public MetadataProperties metadataProperties;
+
     public CreateTrialComponentRequest withMetadataProperties(MetadataProperties metadataProperties) {
         this.metadataProperties = metadataProperties;
         return this;
@@ -54,6 +58,7 @@ public class CreateTrialComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputArtifacts")
     public java.util.Map<String, TrialComponentArtifact> outputArtifacts;
+
     public CreateTrialComponentRequest withOutputArtifacts(java.util.Map<String, TrialComponentArtifact> outputArtifacts) {
         this.outputArtifacts = outputArtifacts;
         return this;
@@ -62,6 +67,7 @@ public class CreateTrialComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, TrialComponentParameterValue> parameters;
+
     public CreateTrialComponentRequest withParameters(java.util.Map<String, TrialComponentParameterValue> parameters) {
         this.parameters = parameters;
         return this;
@@ -72,6 +78,7 @@ public class CreateTrialComponentRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public CreateTrialComponentRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -80,6 +87,7 @@ public class CreateTrialComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TrialComponentStatus status;
+
     public CreateTrialComponentRequest withStatus(TrialComponentStatus status) {
         this.status = status;
         return this;
@@ -88,6 +96,7 @@ public class CreateTrialComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateTrialComponentRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -95,9 +104,13 @@ public class CreateTrialComponentRequest {
     
     @JsonProperty("TrialComponentName")
     public String trialComponentName;
+
     public CreateTrialComponentRequest withTrialComponentName(String trialComponentName) {
         this.trialComponentName = trialComponentName;
         return this;
     }
     
+    public CreateTrialComponentRequest(@JsonProperty("TrialComponentName") String trialComponentName) {
+        this.trialComponentName = trialComponentName;
+  }
 }

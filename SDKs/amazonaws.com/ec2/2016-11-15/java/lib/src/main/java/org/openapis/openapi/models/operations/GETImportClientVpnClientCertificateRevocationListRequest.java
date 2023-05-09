@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETImportClientVpnClientCertificateRevocationListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETImportClientVpnClientCertificateRevocationListActionEnum action;
+
     public GETImportClientVpnClientCertificateRevocationListRequest withAction(GETImportClientVpnClientCertificateRevocationListActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETImportClientVpnClientCertificateRevocationListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CertificateRevocationList")
     public String certificateRevocationList;
+
     public GETImportClientVpnClientCertificateRevocationListRequest withCertificateRevocationList(String certificateRevocationList) {
         this.certificateRevocationList = certificateRevocationList;
         return this;
@@ -29,6 +32,7 @@ public class GETImportClientVpnClientCertificateRevocationListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientVpnEndpointId")
     public String clientVpnEndpointId;
+
     public GETImportClientVpnClientCertificateRevocationListRequest withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -39,6 +43,7 @@ public class GETImportClientVpnClientCertificateRevocationListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETImportClientVpnClientCertificateRevocationListRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -46,6 +51,7 @@ public class GETImportClientVpnClientCertificateRevocationListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETImportClientVpnClientCertificateRevocationListVersionEnum version;
+
     public GETImportClientVpnClientCertificateRevocationListRequest withVersion(GETImportClientVpnClientCertificateRevocationListVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETImportClientVpnClientCertificateRevocationListRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETImportClientVpnClientCertificateRevocationListRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETImportClientVpnClientCertificateRevocationListRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETImportClientVpnClientCertificateRevocationListRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETImportClientVpnClientCertificateRevocationListRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETImportClientVpnClientCertificateRevocationListRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETImportClientVpnClientCertificateRevocationListRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETImportClientVpnClientCertificateRevocationListRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETImportClientVpnClientCertificateRevocationListRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETImportClientVpnClientCertificateRevocationListRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETImportClientVpnClientCertificateRevocationListRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETImportClientVpnClientCertificateRevocationListRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETImportClientVpnClientCertificateRevocationListRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETImportClientVpnClientCertificateRevocationListRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETImportClientVpnClientCertificateRevocationListRequest(@JsonProperty("Action") GETImportClientVpnClientCertificateRevocationListActionEnum action, @JsonProperty("CertificateRevocationList") String certificateRevocationList, @JsonProperty("ClientVpnEndpointId") String clientVpnEndpointId, @JsonProperty("Version") GETImportClientVpnClientCertificateRevocationListVersionEnum version) {
+        this.action = action;
+        this.certificateRevocationList = certificateRevocationList;
+        this.clientVpnEndpointId = clientVpnEndpointId;
+        this.version = version;
+  }
 }

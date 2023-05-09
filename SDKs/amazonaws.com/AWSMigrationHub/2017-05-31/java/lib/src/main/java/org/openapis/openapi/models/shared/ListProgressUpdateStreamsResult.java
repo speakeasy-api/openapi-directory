@@ -15,6 +15,7 @@ public class ListProgressUpdateStreamsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListProgressUpdateStreamsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListProgressUpdateStreamsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgressUpdateStreamSummaryList")
     public ProgressUpdateStreamSummary[] progressUpdateStreamSummaryList;
+
     public ListProgressUpdateStreamsResult withProgressUpdateStreamSummaryList(ProgressUpdateStreamSummary[] progressUpdateStreamSummaryList) {
         this.progressUpdateStreamSummaryList = progressUpdateStreamSummaryList;
         return this;
     }
     
+    public ListProgressUpdateStreamsResult(){}
 }

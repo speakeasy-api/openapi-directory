@@ -18,6 +18,7 @@ public class OrganizationInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customCode")
     public String customCode;
+
     public OrganizationInvitation withCustomCode(String customCode) {
         this.customCode = customCode;
         return this;
@@ -29,6 +30,7 @@ public class OrganizationInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public OrganizationInvitation withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class OrganizationInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OrganizationInvitation withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class OrganizationInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invitedBy")
     public String invitedBy;
+
     public OrganizationInvitation withInvitedBy(String invitedBy) {
         this.invitedBy = invitedBy;
         return this;
@@ -62,6 +66,7 @@ public class OrganizationInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public OrganizationInvitation withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -73,6 +78,7 @@ public class OrganizationInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationRole")
     public OrganizationRolesEnum organizationRole;
+
     public OrganizationInvitation withOrganizationRole(OrganizationRolesEnum organizationRole) {
         this.organizationRole = organizationRole;
         return this;
@@ -84,9 +90,11 @@ public class OrganizationInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usedBy")
     public String usedBy;
+
     public OrganizationInvitation withUsedBy(String usedBy) {
         this.usedBy = usedBy;
         return this;
     }
     
+    public OrganizationInvitation(){}
 }

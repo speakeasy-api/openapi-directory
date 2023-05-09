@@ -15,6 +15,7 @@ public class ErrorsGroupList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorGroups")
     public ErrorsGroupList200ApplicationJSONErrorGroups[] errorGroups;
+
     public ErrorsGroupList200ApplicationJSON withErrorGroups(ErrorsGroupList200ApplicationJSONErrorGroups[] errorGroups) {
         this.errorGroups = errorGroups;
         return this;
@@ -23,9 +24,11 @@ public class ErrorsGroupList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextLink")
     public String nextLink;
+
     public ErrorsGroupList200ApplicationJSON withNextLink(String nextLink) {
         this.nextLink = nextLink;
         return this;
     }
     
+    public ErrorsGroupList200ApplicationJSON(){}
 }

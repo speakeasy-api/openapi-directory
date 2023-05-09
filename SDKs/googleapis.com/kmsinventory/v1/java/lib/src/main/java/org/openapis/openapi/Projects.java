@@ -58,11 +58,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KmsinventoryProjectsCryptoKeysListResponse res = new org.openapis.openapi.models.operations.KmsinventoryProjectsCryptoKeysListResponse() {{
+        org.openapis.openapi.models.operations.KmsinventoryProjectsCryptoKeysListResponse res = new org.openapis.openapi.models.operations.KmsinventoryProjectsCryptoKeysListResponse(contentType, httpRes.statusCode()) {{
             googleCloudKmsInventoryV1ListCryptoKeysResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KmsinventoryProjectsLocationsKeyRingsCryptoKeysGetProtectedResourcesSummaryResponse res = new org.openapis.openapi.models.operations.KmsinventoryProjectsLocationsKeyRingsCryptoKeysGetProtectedResourcesSummaryResponse() {{
+        org.openapis.openapi.models.operations.KmsinventoryProjectsLocationsKeyRingsCryptoKeysGetProtectedResourcesSummaryResponse res = new org.openapis.openapi.models.operations.KmsinventoryProjectsLocationsKeyRingsCryptoKeysGetProtectedResourcesSummaryResponse(contentType, httpRes.statusCode()) {{
             googleCloudKmsInventoryV1ProtectedResourcesSummary = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

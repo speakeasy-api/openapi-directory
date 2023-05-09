@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCollectionResponse {
@@ -12,6 +13,7 @@ public class GetCollectionResponse {
      */
     
     public org.openapis.openapi.models.shared.Collection collection;
+
     public GetCollectionResponse withCollection(org.openapis.openapi.models.shared.Collection collection) {
         this.collection = collection;
         return this;
@@ -19,6 +21,7 @@ public class GetCollectionResponse {
     
     
     public String contentType;
+
     public GetCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCollectionResponse {
      */
     
     public org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse;
+
     public GetCollectionResponse withFlatErrorResponse(org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse) {
         this.flatErrorResponse = flatErrorResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetCollectionResponse {
     
     
     public Integer statusCode;
+
     public GetCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

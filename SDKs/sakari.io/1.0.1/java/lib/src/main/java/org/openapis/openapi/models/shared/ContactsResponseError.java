@@ -12,6 +12,7 @@ public class ContactsResponseError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ContactsResponseError withCode(String code) {
         this.code = code;
         return this;
@@ -20,9 +21,11 @@ public class ContactsResponseError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ContactsResponseError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ContactsResponseError(){}
 }

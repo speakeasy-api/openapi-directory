@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
@@ -12,6 +13,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connectAgent.name")
     public String connectAgentName;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withConnectAgentName(String connectAgentName) {
         this.connectAgentName = connectAgentName;
         return this;
@@ -62,6 +68,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connectAgent.namespace")
     public String connectAgentNamespace;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withConnectAgentNamespace(String connectAgentNamespace) {
         this.connectAgentNamespace = connectAgentNamespace;
         return this;
@@ -72,6 +79,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connectAgent.proxy")
     public String connectAgentProxy;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withConnectAgentProxy(String connectAgentProxy) {
         this.connectAgentProxy = connectAgentProxy;
         return this;
@@ -82,6 +90,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -92,6 +101,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=imagePullSecretContent")
     public String imagePullSecretContent;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withImagePullSecretContent(String imagePullSecretContent) {
         this.imagePullSecretContent = imagePullSecretContent;
         return this;
@@ -102,6 +112,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isUpgrade")
     public Boolean isUpgrade;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withIsUpgrade(Boolean isUpgrade) {
         this.isUpgrade = isUpgrade;
         return this;
@@ -112,6 +123,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withKey(String key) {
         this.key = key;
         return this;
@@ -122,6 +134,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withName(String name) {
         this.name = name;
         return this;
@@ -132,6 +145,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -142,6 +156,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -152,6 +167,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +178,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=registry")
     public String registry;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withRegistry(String registry) {
         this.registry = registry;
         return this;
@@ -172,6 +189,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -182,6 +200,7 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -192,9 +211,13 @@ public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
     public String version;
+
     public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

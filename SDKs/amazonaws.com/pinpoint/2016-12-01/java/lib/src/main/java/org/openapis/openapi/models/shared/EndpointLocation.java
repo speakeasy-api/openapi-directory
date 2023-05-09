@@ -15,6 +15,7 @@ public class EndpointLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public EndpointLocation withCity(String city) {
         this.city = city;
         return this;
@@ -23,6 +24,7 @@ public class EndpointLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public EndpointLocation withCountry(String country) {
         this.country = country;
         return this;
@@ -31,6 +33,7 @@ public class EndpointLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Latitude")
     public Double latitude;
+
     public EndpointLocation withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -39,6 +42,7 @@ public class EndpointLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Longitude")
     public Double longitude;
+
     public EndpointLocation withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -47,6 +51,7 @@ public class EndpointLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostalCode")
     public String postalCode;
+
     public EndpointLocation withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -55,9 +60,11 @@ public class EndpointLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public EndpointLocation withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public EndpointLocation(){}
 }

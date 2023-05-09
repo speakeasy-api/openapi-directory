@@ -12,6 +12,7 @@ public class GetOpsSummaryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aggregators")
     public OpsAggregator[] aggregators;
+
     public GetOpsSummaryRequest withAggregators(OpsAggregator[] aggregators) {
         this.aggregators = aggregators;
         return this;
@@ -20,6 +21,7 @@ public class GetOpsSummaryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public OpsFilter[] filters;
+
     public GetOpsSummaryRequest withFilters(OpsFilter[] filters) {
         this.filters = filters;
         return this;
@@ -28,6 +30,7 @@ public class GetOpsSummaryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetOpsSummaryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +39,7 @@ public class GetOpsSummaryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetOpsSummaryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,6 +48,7 @@ public class GetOpsSummaryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultAttributes")
     public OpsResultAttribute[] resultAttributes;
+
     public GetOpsSummaryRequest withResultAttributes(OpsResultAttribute[] resultAttributes) {
         this.resultAttributes = resultAttributes;
         return this;
@@ -52,9 +57,11 @@ public class GetOpsSummaryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncName")
     public String syncName;
+
     public GetOpsSummaryRequest withSyncName(String syncName) {
         this.syncName = syncName;
         return this;
     }
     
+    public GetOpsSummaryRequest(){}
 }

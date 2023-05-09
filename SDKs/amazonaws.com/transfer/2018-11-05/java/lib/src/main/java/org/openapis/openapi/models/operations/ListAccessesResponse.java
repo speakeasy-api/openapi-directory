@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAccessesResponse {
     
     public String contentType;
+
     public ListAccessesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAccessesResponse {
      */
     
     public Object internalServiceError;
+
     public ListAccessesResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ListAccessesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListAccessesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListAccessesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListAccessesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListAccessesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAccessesResponse listAccessesResponse;
+
     public ListAccessesResponse withListAccessesResponse(org.openapis.openapi.models.shared.ListAccessesResponse listAccessesResponse) {
         this.listAccessesResponse = listAccessesResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListAccessesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAccessesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListAccessesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListAccessesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ListAccessesResponse {
     
     
     public Integer statusCode;
+
     public ListAccessesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListAccessesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAccessesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAccessesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GetHealthVendors200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GetHealthVendors200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GetHealthVendors200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetHealthVendors200ApplicationJSONStatusEnum status;
+
     public GetHealthVendors200ApplicationJSON withStatus(GetHealthVendors200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
@@ -40,9 +42,11 @@ public class GetHealthVendors200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public org.openapis.openapi.models.shared.Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum vendor;
+
     public GetHealthVendors200ApplicationJSON withVendor(org.openapis.openapi.models.shared.Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public GetHealthVendors200ApplicationJSON(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DirectoryGroupsAliasesInsertResponse {
@@ -12,6 +13,7 @@ public class DirectoryGroupsAliasesInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.Alias alias;
+
     public DirectoryGroupsAliasesInsertResponse withAlias(org.openapis.openapi.models.shared.Alias alias) {
         this.alias = alias;
         return this;
@@ -19,6 +21,7 @@ public class DirectoryGroupsAliasesInsertResponse {
     
     
     public String contentType;
+
     public DirectoryGroupsAliasesInsertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DirectoryGroupsAliasesInsertResponse {
     
     
     public Integer statusCode;
+
     public DirectoryGroupsAliasesInsertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DirectoryGroupsAliasesInsertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DirectoryGroupsAliasesInsertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DirectoryGroupsAliasesInsertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class MysqlSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeObjects")
     public MysqlRdbms excludeObjects;
+
     public MysqlSourceConfig withExcludeObjects(MysqlRdbms excludeObjects) {
         this.excludeObjects = excludeObjects;
         return this;
@@ -29,6 +30,7 @@ public class MysqlSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeObjects")
     public MysqlRdbms includeObjects;
+
     public MysqlSourceConfig withIncludeObjects(MysqlRdbms includeObjects) {
         this.includeObjects = includeObjects;
         return this;
@@ -40,6 +42,7 @@ public class MysqlSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxConcurrentBackfillTasks")
     public Integer maxConcurrentBackfillTasks;
+
     public MysqlSourceConfig withMaxConcurrentBackfillTasks(Integer maxConcurrentBackfillTasks) {
         this.maxConcurrentBackfillTasks = maxConcurrentBackfillTasks;
         return this;
@@ -51,9 +54,11 @@ public class MysqlSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxConcurrentCdcTasks")
     public Integer maxConcurrentCdcTasks;
+
     public MysqlSourceConfig withMaxConcurrentCdcTasks(Integer maxConcurrentCdcTasks) {
         this.maxConcurrentCdcTasks = maxConcurrentCdcTasks;
         return this;
     }
     
+    public MysqlSourceConfig(){}
 }

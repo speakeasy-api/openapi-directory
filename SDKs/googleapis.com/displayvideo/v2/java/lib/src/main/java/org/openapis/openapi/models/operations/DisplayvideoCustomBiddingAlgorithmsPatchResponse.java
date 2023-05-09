@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoCustomBiddingAlgorithmsPatchResponse {
     
     public String contentType;
+
     public DisplayvideoCustomBiddingAlgorithmsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoCustomBiddingAlgorithmsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomBiddingAlgorithm customBiddingAlgorithm;
+
     public DisplayvideoCustomBiddingAlgorithmsPatchResponse withCustomBiddingAlgorithm(org.openapis.openapi.models.shared.CustomBiddingAlgorithm customBiddingAlgorithm) {
         this.customBiddingAlgorithm = customBiddingAlgorithm;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoCustomBiddingAlgorithmsPatchResponse {
     
     
     public Integer statusCode;
+
     public DisplayvideoCustomBiddingAlgorithmsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoCustomBiddingAlgorithmsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoCustomBiddingAlgorithmsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoCustomBiddingAlgorithmsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateStandbyWorkspacesRequest {
     @JsonProperty("PrimaryRegion")
     public String primaryRegion;
+
     public CreateStandbyWorkspacesRequest withPrimaryRegion(String primaryRegion) {
         this.primaryRegion = primaryRegion;
         return this;
@@ -16,9 +17,14 @@ public class CreateStandbyWorkspacesRequest {
     
     @JsonProperty("StandbyWorkspaces")
     public StandbyWorkspace[] standbyWorkspaces;
+
     public CreateStandbyWorkspacesRequest withStandbyWorkspaces(StandbyWorkspace[] standbyWorkspaces) {
         this.standbyWorkspaces = standbyWorkspaces;
         return this;
     }
     
+    public CreateStandbyWorkspacesRequest(@JsonProperty("PrimaryRegion") String primaryRegion, @JsonProperty("StandbyWorkspaces") StandbyWorkspace[] standbyWorkspaces) {
+        this.primaryRegion = primaryRegion;
+        this.standbyWorkspaces = standbyWorkspaces;
+  }
 }

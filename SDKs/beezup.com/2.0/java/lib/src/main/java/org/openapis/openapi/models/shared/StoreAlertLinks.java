@@ -15,9 +15,11 @@ public class StoreAlertLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("save")
     public LinksSaveStoreAlertsLink save;
+
     public StoreAlertLinks withSave(LinksSaveStoreAlertsLink save) {
         this.save = save;
         return this;
     }
     
+    public StoreAlertLinks(){}
 }

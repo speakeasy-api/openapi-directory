@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings {
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents[] findingComponents;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings withFindingComponents(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponents[] findingComponents) {
         this.findingComponents = findingComponents;
         return this;
@@ -19,6 +20,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String findingId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings withFindingId(String findingId) {
         this.findingId = findingId;
         return this;
@@ -26,6 +28,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String networkInsightsAccessScopeAnalysisId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings withNetworkInsightsAccessScopeAnalysisId(String networkInsightsAccessScopeAnalysisId) {
         this.networkInsightsAccessScopeAnalysisId = networkInsightsAccessScopeAnalysisId;
         return this;
@@ -33,9 +36,11 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public String networkInsightsAccessScopeId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings withNetworkInsightsAccessScopeId(String networkInsightsAccessScopeId) {
         this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings(){}
 }

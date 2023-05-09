@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FirebaserulesProjectsReleasesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public FirebaserulesProjectsReleasesListSecurityOption1 option1;
+
     public FirebaserulesProjectsReleasesListSecurity withOption1(FirebaserulesProjectsReleasesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class FirebaserulesProjectsReleasesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirebaserulesProjectsReleasesListSecurityOption2 option2;
+
     public FirebaserulesProjectsReleasesListSecurity withOption2(FirebaserulesProjectsReleasesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class FirebaserulesProjectsReleasesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirebaserulesProjectsReleasesListSecurityOption3 option3;
+
     public FirebaserulesProjectsReleasesListSecurity withOption3(FirebaserulesProjectsReleasesListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public FirebaserulesProjectsReleasesListSecurity(){}
 }

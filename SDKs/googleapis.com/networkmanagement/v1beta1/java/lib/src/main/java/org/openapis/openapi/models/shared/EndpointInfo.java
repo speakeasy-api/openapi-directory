@@ -18,6 +18,7 @@ public class EndpointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationIp")
     public String destinationIp;
+
     public EndpointInfo withDestinationIp(String destinationIp) {
         this.destinationIp = destinationIp;
         return this;
@@ -29,6 +30,7 @@ public class EndpointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationNetworkUri")
     public String destinationNetworkUri;
+
     public EndpointInfo withDestinationNetworkUri(String destinationNetworkUri) {
         this.destinationNetworkUri = destinationNetworkUri;
         return this;
@@ -40,6 +42,7 @@ public class EndpointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationPort")
     public Integer destinationPort;
+
     public EndpointInfo withDestinationPort(Integer destinationPort) {
         this.destinationPort = destinationPort;
         return this;
@@ -51,6 +54,7 @@ public class EndpointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public String protocol;
+
     public EndpointInfo withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -62,6 +66,7 @@ public class EndpointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceAgentUri")
     public String sourceAgentUri;
+
     public EndpointInfo withSourceAgentUri(String sourceAgentUri) {
         this.sourceAgentUri = sourceAgentUri;
         return this;
@@ -73,6 +78,7 @@ public class EndpointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceIp")
     public String sourceIp;
+
     public EndpointInfo withSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;
@@ -84,6 +90,7 @@ public class EndpointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceNetworkUri")
     public String sourceNetworkUri;
+
     public EndpointInfo withSourceNetworkUri(String sourceNetworkUri) {
         this.sourceNetworkUri = sourceNetworkUri;
         return this;
@@ -95,9 +102,11 @@ public class EndpointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourcePort")
     public Integer sourcePort;
+
     public EndpointInfo withSourcePort(Integer sourcePort) {
         this.sourcePort = sourcePort;
         return this;
     }
     
+    public EndpointInfo(){}
 }

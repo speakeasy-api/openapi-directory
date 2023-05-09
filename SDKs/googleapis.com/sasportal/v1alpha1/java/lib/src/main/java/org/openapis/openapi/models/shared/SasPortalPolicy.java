@@ -18,6 +18,7 @@ public class SasPortalPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignments")
     public SasPortalAssignment[] assignments;
+
     public SasPortalPolicy withAssignments(SasPortalAssignment[] assignments) {
         this.assignments = assignments;
         return this;
@@ -29,9 +30,11 @@ public class SasPortalPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public SasPortalPolicy withEtag(String etag) {
         this.etag = etag;
         return this;
     }
     
+    public SasPortalPolicy(){}
 }

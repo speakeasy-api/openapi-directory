@@ -54,10 +54,8 @@ public class AdditionalData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtResponse() {{
+        org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 408 || httpRes.statusCode() == 414 || httpRes.statusCode() == 500 || httpRes.statusCode() == 502 || httpRes.statusCode() == 503 || httpRes.statusCode() == 504 || httpRes.statusCode() == 596) {

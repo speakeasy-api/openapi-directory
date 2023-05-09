@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimestreamAction {
     @JsonProperty("databaseName")
     public String databaseName;
+
     public TimestreamAction withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -21,6 +22,7 @@ public class TimestreamAction {
     
     @JsonProperty("dimensions")
     public TimestreamDimension[] dimensions;
+
     public TimestreamAction withDimensions(TimestreamDimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -28,6 +30,7 @@ public class TimestreamAction {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public TimestreamAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -35,6 +38,7 @@ public class TimestreamAction {
     
     @JsonProperty("tableName")
     public String tableName;
+
     public TimestreamAction withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -43,9 +47,16 @@ public class TimestreamAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public TimestreamTimestamp timestamp;
+
     public TimestreamAction withTimestamp(TimestreamTimestamp timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public TimestreamAction(@JsonProperty("databaseName") String databaseName, @JsonProperty("dimensions") TimestreamDimension[] dimensions, @JsonProperty("roleArn") String roleArn, @JsonProperty("tableName") String tableName) {
+        this.databaseName = databaseName;
+        this.dimensions = dimensions;
+        this.roleArn = roleArn;
+        this.tableName = tableName;
+  }
 }

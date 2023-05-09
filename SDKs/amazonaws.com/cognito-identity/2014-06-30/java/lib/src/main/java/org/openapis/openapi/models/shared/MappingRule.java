@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MappingRule {
     @JsonProperty("Claim")
     public String claim;
+
     public MappingRule withClaim(String claim) {
         this.claim = claim;
         return this;
@@ -19,6 +20,7 @@ public class MappingRule {
     
     @JsonProperty("MatchType")
     public MappingRuleMatchTypeEnum matchType;
+
     public MappingRule withMatchType(MappingRuleMatchTypeEnum matchType) {
         this.matchType = matchType;
         return this;
@@ -26,6 +28,7 @@ public class MappingRule {
     
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public MappingRule withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -33,9 +36,16 @@ public class MappingRule {
     
     @JsonProperty("Value")
     public String value;
+
     public MappingRule withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public MappingRule(@JsonProperty("Claim") String claim, @JsonProperty("MatchType") MappingRuleMatchTypeEnum matchType, @JsonProperty("RoleARN") String roleARN, @JsonProperty("Value") String value) {
+        this.claim = claim;
+        this.matchType = matchType;
+        this.roleARN = roleARN;
+        this.value = value;
+  }
 }

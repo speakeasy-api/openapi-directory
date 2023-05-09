@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConsumerV1ServicesAllocationsIdRequest {
@@ -12,9 +13,13 @@ public class GetConsumerV1ServicesAllocationsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetConsumerV1ServicesAllocationsIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetConsumerV1ServicesAllocationsIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

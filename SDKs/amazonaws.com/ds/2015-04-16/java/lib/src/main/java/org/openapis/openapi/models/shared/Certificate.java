@@ -20,6 +20,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateId")
     public String certificateId;
+
     public Certificate withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -28,6 +29,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientCertAuthSettings")
     public ClientCertAuthSettings clientCertAuthSettings;
+
     public Certificate withClientCertAuthSettings(ClientCertAuthSettings clientCertAuthSettings) {
         this.clientCertAuthSettings = clientCertAuthSettings;
         return this;
@@ -36,6 +38,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommonName")
     public String commonName;
+
     public Certificate withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -46,6 +49,7 @@ public class Certificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpiryDateTime")
     public OffsetDateTime expiryDateTime;
+
     public Certificate withExpiryDateTime(OffsetDateTime expiryDateTime) {
         this.expiryDateTime = expiryDateTime;
         return this;
@@ -56,6 +60,7 @@ public class Certificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RegisteredDateTime")
     public OffsetDateTime registeredDateTime;
+
     public Certificate withRegisteredDateTime(OffsetDateTime registeredDateTime) {
         this.registeredDateTime = registeredDateTime;
         return this;
@@ -64,6 +69,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public CertificateStateEnum state;
+
     public Certificate withState(CertificateStateEnum state) {
         this.state = state;
         return this;
@@ -72,6 +78,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReason")
     public String stateReason;
+
     public Certificate withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -80,9 +87,11 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public CertificateTypeEnum type;
+
     public Certificate withType(CertificateTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Certificate(){}
 }

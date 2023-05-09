@@ -12,6 +12,7 @@ public class ListWordSensesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Ocp-Apim-Subscription-Key")
     public String ocpApimSubscriptionKey;
+
     public ListWordSensesRequest withOcpApimSubscriptionKey(String ocpApimSubscriptionKey) {
         this.ocpApimSubscriptionKey = ocpApimSubscriptionKey;
         return this;
@@ -22,6 +23,7 @@ public class ListWordSensesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public ListWordSensesRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -32,9 +34,11 @@ public class ListWordSensesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=word")
     public String word;
+
     public ListWordSensesRequest withWord(String word) {
         this.word = word;
         return this;
     }
     
+    public ListWordSensesRequest(){}
 }

@@ -18,6 +18,7 @@ public class CloudTaskListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("odata.nextLink")
     public String odataNextLink;
+
     public CloudTaskListResult withOdataNextLink(String odataNextLink) {
         this.odataNextLink = odataNextLink;
         return this;
@@ -29,9 +30,11 @@ public class CloudTaskListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public CloudTask[] value;
+
     public CloudTaskListResult withValue(CloudTask[] value) {
         this.value = value;
         return this;
     }
     
+    public CloudTaskListResult(){}
 }

@@ -15,6 +15,7 @@ public class SearchProductsAsAdminOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public SearchProductsAsAdminOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class SearchProductsAsAdminOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductViewDetails")
     public ProductViewDetail[] productViewDetails;
+
     public SearchProductsAsAdminOutput withProductViewDetails(ProductViewDetail[] productViewDetails) {
         this.productViewDetails = productViewDetails;
         return this;
     }
     
+    public SearchProductsAsAdminOutput(){}
 }

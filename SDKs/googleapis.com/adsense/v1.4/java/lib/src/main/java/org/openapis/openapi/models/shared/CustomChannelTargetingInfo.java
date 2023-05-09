@@ -18,6 +18,7 @@ public class CustomChannelTargetingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsAppearOn")
     public String adsAppearOn;
+
     public CustomChannelTargetingInfo withAdsAppearOn(String adsAppearOn) {
         this.adsAppearOn = adsAppearOn;
         return this;
@@ -29,6 +30,7 @@ public class CustomChannelTargetingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CustomChannelTargetingInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class CustomChannelTargetingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public CustomChannelTargetingInfo withLocation(String location) {
         this.location = location;
         return this;
@@ -51,9 +54,11 @@ public class CustomChannelTargetingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siteLanguage")
     public String siteLanguage;
+
     public CustomChannelTargetingInfo withSiteLanguage(String siteLanguage) {
         this.siteLanguage = siteLanguage;
         return this;
     }
     
+    public CustomChannelTargetingInfo(){}
 }

@@ -15,9 +15,11 @@ public class GetBucketAccessKeysResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessKeys")
     public AccessKey[] accessKeys;
+
     public GetBucketAccessKeysResult withAccessKeys(AccessKey[] accessKeys) {
         this.accessKeys = accessKeys;
         return this;
     }
     
+    public GetBucketAccessKeysResult(){}
 }

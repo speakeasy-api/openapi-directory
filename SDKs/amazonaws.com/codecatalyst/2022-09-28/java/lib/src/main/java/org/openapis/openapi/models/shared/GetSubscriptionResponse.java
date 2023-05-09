@@ -15,6 +15,7 @@ public class GetSubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsAccountName")
     public String awsAccountName;
+
     public GetSubscriptionResponse withAwsAccountName(String awsAccountName) {
         this.awsAccountName = awsAccountName;
         return this;
@@ -23,9 +24,11 @@ public class GetSubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionType")
     public String subscriptionType;
+
     public GetSubscriptionResponse withSubscriptionType(String subscriptionType) {
         this.subscriptionType = subscriptionType;
         return this;
     }
     
+    public GetSubscriptionResponse(){}
 }

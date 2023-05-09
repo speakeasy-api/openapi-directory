@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAuthorizeDataShareRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAuthorizeDataShareActionEnum action;
+
     public GETAuthorizeDataShareRequest withAction(GETAuthorizeDataShareActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETAuthorizeDataShareRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConsumerIdentifier")
     public String consumerIdentifier;
+
     public GETAuthorizeDataShareRequest withConsumerIdentifier(String consumerIdentifier) {
         this.consumerIdentifier = consumerIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETAuthorizeDataShareRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DataShareArn")
     public String dataShareArn;
+
     public GETAuthorizeDataShareRequest withDataShareArn(String dataShareArn) {
         this.dataShareArn = dataShareArn;
         return this;
@@ -36,6 +40,7 @@ public class GETAuthorizeDataShareRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAuthorizeDataShareVersionEnum version;
+
     public GETAuthorizeDataShareRequest withVersion(GETAuthorizeDataShareVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETAuthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAuthorizeDataShareRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETAuthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAuthorizeDataShareRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETAuthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAuthorizeDataShareRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETAuthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAuthorizeDataShareRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETAuthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAuthorizeDataShareRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETAuthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAuthorizeDataShareRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETAuthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAuthorizeDataShareRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAuthorizeDataShareRequest(@JsonProperty("Action") GETAuthorizeDataShareActionEnum action, @JsonProperty("ConsumerIdentifier") String consumerIdentifier, @JsonProperty("DataShareArn") String dataShareArn, @JsonProperty("Version") GETAuthorizeDataShareVersionEnum version) {
+        this.action = action;
+        this.consumerIdentifier = consumerIdentifier;
+        this.dataShareArn = dataShareArn;
+        this.version = version;
+  }
 }

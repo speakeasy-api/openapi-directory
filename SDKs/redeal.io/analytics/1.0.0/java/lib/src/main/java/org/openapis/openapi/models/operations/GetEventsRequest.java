@@ -12,6 +12,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company")
     public String company;
+
     public GetEventsRequest withCompany(String company) {
         this.company = company;
         return this;
@@ -22,6 +23,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deal")
     public String deal;
+
     public GetEventsRequest withDeal(String deal) {
         this.deal = deal;
         return this;
@@ -32,6 +34,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nexttoken")
     public String nexttoken;
+
     public GetEventsRequest withNexttoken(String nexttoken) {
         this.nexttoken = nexttoken;
         return this;
@@ -42,6 +45,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryexecutionid")
     public String queryexecutionid;
+
     public GetEventsRequest withQueryexecutionid(String queryexecutionid) {
         this.queryexecutionid = queryexecutionid;
         return this;
@@ -52,6 +56,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetEventsRequest withSite(String site) {
         this.site = site;
         return this;
@@ -62,9 +67,11 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GetEventsTypeEnum type;
+
     public GetEventsRequest withType(GetEventsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetEventsRequest(){}
 }

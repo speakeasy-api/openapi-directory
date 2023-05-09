@@ -18,6 +18,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterConfig")
     public ClusterConfig clusterConfig;
+
     public Cluster withClusterConfig(ClusterConfig clusterConfig) {
         this.clusterConfig = clusterConfig;
         return this;
@@ -29,6 +30,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultStorageType")
     public ClusterDefaultStorageTypeEnum defaultStorageType;
+
     public Cluster withDefaultStorageType(ClusterDefaultStorageTypeEnum defaultStorageType) {
         this.defaultStorageType = defaultStorageType;
         return this;
@@ -40,6 +42,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionConfig")
     public EncryptionConfig encryptionConfig;
+
     public Cluster withEncryptionConfig(EncryptionConfig encryptionConfig) {
         this.encryptionConfig = encryptionConfig;
         return this;
@@ -51,6 +54,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Cluster withLocation(String location) {
         this.location = location;
         return this;
@@ -62,6 +66,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Cluster withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serveNodes")
     public Integer serveNodes;
+
     public Cluster withServeNodes(Integer serveNodes) {
         this.serveNodes = serveNodes;
         return this;
@@ -84,9 +90,11 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ClusterStateEnum state;
+
     public Cluster withState(ClusterStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Cluster(){}
 }

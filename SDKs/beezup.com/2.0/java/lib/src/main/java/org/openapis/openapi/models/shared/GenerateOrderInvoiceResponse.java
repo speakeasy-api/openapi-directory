@@ -14,6 +14,7 @@ public class GenerateOrderInvoiceResponse {
      */
     @JsonProperty("accountId")
     public Long accountId;
+
     public GenerateOrderInvoiceResponse withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -24,6 +25,7 @@ public class GenerateOrderInvoiceResponse {
      */
     @JsonProperty("beezUPOrderUUID")
     public String beezUPOrderUUID;
+
     public GenerateOrderInvoiceResponse withBeezUPOrderUUID(String beezUPOrderUUID) {
         this.beezUPOrderUUID = beezUPOrderUUID;
         return this;
@@ -32,6 +34,7 @@ public class GenerateOrderInvoiceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceLocation")
     public String invoiceLocation;
+
     public GenerateOrderInvoiceResponse withInvoiceLocation(String invoiceLocation) {
         this.invoiceLocation = invoiceLocation;
         return this;
@@ -43,6 +46,7 @@ public class GenerateOrderInvoiceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceSequenceNumber")
     public Long invoiceSequenceNumber;
+
     public GenerateOrderInvoiceResponse withInvoiceSequenceNumber(Long invoiceSequenceNumber) {
         this.invoiceSequenceNumber = invoiceSequenceNumber;
         return this;
@@ -53,9 +57,15 @@ public class GenerateOrderInvoiceResponse {
      */
     @JsonProperty("marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public GenerateOrderInvoiceResponse withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
     }
     
+    public GenerateOrderInvoiceResponse(@JsonProperty("accountId") Long accountId, @JsonProperty("beezUPOrderUUID") String beezUPOrderUUID, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode) {
+        this.accountId = accountId;
+        this.beezUPOrderUUID = beezUPOrderUUID;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+  }
 }

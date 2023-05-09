@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ErrorResponseMessagePaymentRequired {
     @JsonProperty("errors")
     public BeezUPCommonUserErrorMessage[] errors;
+
     public ErrorResponseMessagePaymentRequired withErrors(BeezUPCommonUserErrorMessage[] errors) {
         this.errors = errors;
         return this;
@@ -19,9 +20,14 @@ public class ErrorResponseMessagePaymentRequired {
     
     @JsonProperty("links")
     public ErrorResponseMessagePaymentRequiredLinks links;
+
     public ErrorResponseMessagePaymentRequired withLinks(ErrorResponseMessagePaymentRequiredLinks links) {
         this.links = links;
         return this;
     }
     
+    public ErrorResponseMessagePaymentRequired(@JsonProperty("errors") BeezUPCommonUserErrorMessage[] errors, @JsonProperty("links") ErrorResponseMessagePaymentRequiredLinks links) {
+        this.errors = errors;
+        this.links = links;
+  }
 }

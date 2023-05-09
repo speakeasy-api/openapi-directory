@@ -14,6 +14,7 @@ public class CreateCampaignRequestBody {
      */
     @JsonProperty("connectInstanceId")
     public String connectInstanceId;
+
     public CreateCampaignRequestBody withConnectInstanceId(String connectInstanceId) {
         this.connectInstanceId = connectInstanceId;
         return this;
@@ -24,6 +25,7 @@ public class CreateCampaignRequestBody {
      */
     @JsonProperty("dialerConfig")
     public CreateCampaignRequestBodyDialerConfig dialerConfig;
+
     public CreateCampaignRequestBody withDialerConfig(CreateCampaignRequestBodyDialerConfig dialerConfig) {
         this.dialerConfig = dialerConfig;
         return this;
@@ -34,6 +36,7 @@ public class CreateCampaignRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateCampaignRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +47,7 @@ public class CreateCampaignRequestBody {
      */
     @JsonProperty("outboundCallConfig")
     public CreateCampaignRequestBodyOutboundCallConfig outboundCallConfig;
+
     public CreateCampaignRequestBody withOutboundCallConfig(CreateCampaignRequestBodyOutboundCallConfig outboundCallConfig) {
         this.outboundCallConfig = outboundCallConfig;
         return this;
@@ -55,9 +59,16 @@ public class CreateCampaignRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateCampaignRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCampaignRequestBody(@JsonProperty("connectInstanceId") String connectInstanceId, @JsonProperty("dialerConfig") CreateCampaignRequestBodyDialerConfig dialerConfig, @JsonProperty("name") String name, @JsonProperty("outboundCallConfig") CreateCampaignRequestBodyOutboundCallConfig outboundCallConfig) {
+        this.connectInstanceId = connectInstanceId;
+        this.dialerConfig = dialerConfig;
+        this.name = name;
+        this.outboundCallConfig = outboundCallConfig;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDhcpOptionsRequestFilters {
     
     public String name;
+
     public DescribeDhcpOptionsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeDhcpOptionsRequestFilters {
     
     
     public String[] values;
+
     public DescribeDhcpOptionsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeDhcpOptionsRequestFilters(){}
 }

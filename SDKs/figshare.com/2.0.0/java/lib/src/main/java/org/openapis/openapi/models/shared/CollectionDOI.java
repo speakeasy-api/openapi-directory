@@ -15,9 +15,13 @@ public class CollectionDOI {
      */
     @JsonProperty("doi")
     public String doi;
+
     public CollectionDOI withDoi(String doi) {
         this.doi = doi;
         return this;
     }
     
+    public CollectionDOI(@JsonProperty("doi") String doi) {
+        this.doi = doi;
+  }
 }

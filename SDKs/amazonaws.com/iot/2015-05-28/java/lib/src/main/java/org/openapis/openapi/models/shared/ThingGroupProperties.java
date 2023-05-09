@@ -15,6 +15,7 @@ public class ThingGroupProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributePayload")
     public AttributePayload attributePayload;
+
     public ThingGroupProperties withAttributePayload(AttributePayload attributePayload) {
         this.attributePayload = attributePayload;
         return this;
@@ -23,9 +24,11 @@ public class ThingGroupProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingGroupDescription")
     public String thingGroupDescription;
+
     public ThingGroupProperties withThingGroupDescription(String thingGroupDescription) {
         this.thingGroupDescription = thingGroupDescription;
         return this;
     }
     
+    public ThingGroupProperties(){}
 }

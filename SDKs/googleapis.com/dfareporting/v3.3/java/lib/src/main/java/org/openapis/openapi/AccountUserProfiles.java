@@ -59,11 +59,9 @@ public class AccountUserProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAccountUserProfilesGetResponse res = new org.openapis.openapi.models.operations.DfareportingAccountUserProfilesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAccountUserProfilesGetResponse res = new org.openapis.openapi.models.operations.DfareportingAccountUserProfilesGetResponse(contentType, httpRes.statusCode()) {{
             accountUserProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class AccountUserProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAccountUserProfilesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingAccountUserProfilesInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAccountUserProfilesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingAccountUserProfilesInsertResponse(contentType, httpRes.statusCode()) {{
             accountUserProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class AccountUserProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAccountUserProfilesListResponse res = new org.openapis.openapi.models.operations.DfareportingAccountUserProfilesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAccountUserProfilesListResponse res = new org.openapis.openapi.models.operations.DfareportingAccountUserProfilesListResponse(contentType, httpRes.statusCode()) {{
             accountUserProfilesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class AccountUserProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAccountUserProfilesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingAccountUserProfilesPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAccountUserProfilesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingAccountUserProfilesPatchResponse(contentType, httpRes.statusCode()) {{
             accountUserProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class AccountUserProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAccountUserProfilesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingAccountUserProfilesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAccountUserProfilesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingAccountUserProfilesUpdateResponse(contentType, httpRes.statusCode()) {{
             accountUserProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

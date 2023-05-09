@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCoipPoolsRequest {
     
     public Boolean dryRun;
+
     public DescribeCoipPoolsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeCoipPoolsRequest {
     
     
     public DescribeCoipPoolsRequestFilters[] filters;
+
     public DescribeCoipPoolsRequest withFilters(DescribeCoipPoolsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeCoipPoolsRequest {
     
     
     public Long maxResults;
+
     public DescribeCoipPoolsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeCoipPoolsRequest {
     
     
     public String nextToken;
+
     public DescribeCoipPoolsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeCoipPoolsRequest {
     
     
     public String[] poolIds;
+
     public DescribeCoipPoolsRequest withPoolIds(String[] poolIds) {
         this.poolIds = poolIds;
         return this;
     }
     
+    public DescribeCoipPoolsRequest(){}
 }

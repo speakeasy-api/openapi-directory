@@ -15,6 +15,7 @@ public class FileUpload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_length")
     public Long contentLength;
+
     public FileUpload withContentLength(Long contentLength) {
         this.contentLength = contentLength;
         return this;
@@ -23,6 +24,7 @@ public class FileUpload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public String file;
+
     public FileUpload withFile(String file) {
         this.file = file;
         return this;
@@ -31,6 +33,7 @@ public class FileUpload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_name")
     public String fileName;
+
     public FileUpload withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -39,9 +42,11 @@ public class FileUpload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimetype")
     public String mimetype;
+
     public FileUpload withMimetype(String mimetype) {
         this.mimetype = mimetype;
         return this;
     }
     
+    public FileUpload(){}
 }

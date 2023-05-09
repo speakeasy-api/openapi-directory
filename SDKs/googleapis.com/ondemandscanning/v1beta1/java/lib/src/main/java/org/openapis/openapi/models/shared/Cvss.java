@@ -15,6 +15,7 @@ public class Cvss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attackComplexity")
     public CVSSAttackComplexityEnum attackComplexity;
+
     public Cvss withAttackComplexity(CVSSAttackComplexityEnum attackComplexity) {
         this.attackComplexity = attackComplexity;
         return this;
@@ -26,6 +27,7 @@ public class Cvss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attackVector")
     public CVSSAttackVectorEnum attackVector;
+
     public Cvss withAttackVector(CVSSAttackVectorEnum attackVector) {
         this.attackVector = attackVector;
         return this;
@@ -34,6 +36,7 @@ public class Cvss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authentication")
     public CVSSAuthenticationEnum authentication;
+
     public Cvss withAuthentication(CVSSAuthenticationEnum authentication) {
         this.authentication = authentication;
         return this;
@@ -42,6 +45,7 @@ public class Cvss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityImpact")
     public CVSSAvailabilityImpactEnum availabilityImpact;
+
     public Cvss withAvailabilityImpact(CVSSAvailabilityImpactEnum availabilityImpact) {
         this.availabilityImpact = availabilityImpact;
         return this;
@@ -53,6 +57,7 @@ public class Cvss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseScore")
     public Float baseScore;
+
     public Cvss withBaseScore(Float baseScore) {
         this.baseScore = baseScore;
         return this;
@@ -61,6 +66,7 @@ public class Cvss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidentialityImpact")
     public CVSSConfidentialityImpactEnum confidentialityImpact;
+
     public Cvss withConfidentialityImpact(CVSSConfidentialityImpactEnum confidentialityImpact) {
         this.confidentialityImpact = confidentialityImpact;
         return this;
@@ -69,6 +75,7 @@ public class Cvss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exploitabilityScore")
     public Float exploitabilityScore;
+
     public Cvss withExploitabilityScore(Float exploitabilityScore) {
         this.exploitabilityScore = exploitabilityScore;
         return this;
@@ -77,6 +84,7 @@ public class Cvss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impactScore")
     public Float impactScore;
+
     public Cvss withImpactScore(Float impactScore) {
         this.impactScore = impactScore;
         return this;
@@ -85,6 +93,7 @@ public class Cvss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrityImpact")
     public CVSSIntegrityImpactEnum integrityImpact;
+
     public Cvss withIntegrityImpact(CVSSIntegrityImpactEnum integrityImpact) {
         this.integrityImpact = integrityImpact;
         return this;
@@ -93,6 +102,7 @@ public class Cvss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privilegesRequired")
     public CVSSPrivilegesRequiredEnum privilegesRequired;
+
     public Cvss withPrivilegesRequired(CVSSPrivilegesRequiredEnum privilegesRequired) {
         this.privilegesRequired = privilegesRequired;
         return this;
@@ -101,6 +111,7 @@ public class Cvss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public CVSSScopeEnum scope;
+
     public Cvss withScope(CVSSScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -109,9 +120,11 @@ public class Cvss {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userInteraction")
     public CVSSUserInteractionEnum userInteraction;
+
     public Cvss withUserInteraction(CVSSUserInteractionEnum userInteraction) {
         this.userInteraction = userInteraction;
         return this;
     }
     
+    public Cvss(){}
 }

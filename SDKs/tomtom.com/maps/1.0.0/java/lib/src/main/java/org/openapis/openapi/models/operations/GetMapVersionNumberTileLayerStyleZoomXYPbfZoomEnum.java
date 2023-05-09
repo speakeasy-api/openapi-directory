@@ -10,34 +10,34 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * GetMapVersionNumberTileLayerStyleZoomXYPbfZoomEnum - Zoom level of tile to be rendered
  */
 public enum GetMapVersionNumberTileLayerStyleZoomXYPbfZoomEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2"),
-    THREE("3"),
-    FOUR("4"),
-    FIVE("5"),
-    SIX("6"),
-    SEVEN("7"),
-    EIGHT("8"),
-    NINE("9"),
-    TEN("10"),
-    ELEVEN("11"),
-    TWELVE("12"),
-    THIRTEEN("13"),
-    FOURTEEN("14"),
-    FIFTEEN("15"),
-    SIXTEEN("16"),
-    SEVENTEEN("17"),
-    EIGHTEEN("18"),
-    NINETEEN("19"),
-    TWENTY("20"),
-    TWENTY_ONE("21"),
-    TWENTY_TWO("22");
+    ZERO(0L),
+    ONE(1L),
+    TWO(2L),
+    THREE(3L),
+    FOUR(4L),
+    FIVE(5L),
+    SIX(6L),
+    SEVEN(7L),
+    EIGHT(8L),
+    NINE(9L),
+    TEN(10L),
+    ELEVEN(11L),
+    TWELVE(12L),
+    THIRTEEN(13L),
+    FOURTEEN(14L),
+    FIFTEEN(15L),
+    SIXTEEN(16L),
+    SEVENTEEN(17L),
+    EIGHTEEN(18L),
+    NINETEEN(19L),
+    TWENTY(20L),
+    TWENTY_ONE(21L),
+    TWENTY_TWO(22L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private GetMapVersionNumberTileLayerStyleZoomXYPbfZoomEnum(String value) {
+    private GetMapVersionNumberTileLayerStyleZoomXYPbfZoomEnum(Long value) {
         this.value = value;
     }
 }

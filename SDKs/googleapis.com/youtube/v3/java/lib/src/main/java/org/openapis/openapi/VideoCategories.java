@@ -58,11 +58,9 @@ public class VideoCategories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeVideoCategoriesListResponse res = new org.openapis.openapi.models.operations.YoutubeVideoCategoriesListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeVideoCategoriesListResponse res = new org.openapis.openapi.models.operations.YoutubeVideoCategoriesListResponse(contentType, httpRes.statusCode()) {{
             videoCategoryListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

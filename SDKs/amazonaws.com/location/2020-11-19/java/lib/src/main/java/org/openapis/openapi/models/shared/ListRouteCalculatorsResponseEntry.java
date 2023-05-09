@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ListRouteCalculatorsResponseEntry {
     @JsonProperty("CalculatorName")
     public String calculatorName;
+
     public ListRouteCalculatorsResponseEntry withCalculatorName(String calculatorName) {
         this.calculatorName = calculatorName;
         return this;
@@ -28,6 +29,7 @@ public class ListRouteCalculatorsResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public ListRouteCalculatorsResponseEntry withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -35,6 +37,7 @@ public class ListRouteCalculatorsResponseEntry {
     
     @JsonProperty("DataSource")
     public String dataSource;
+
     public ListRouteCalculatorsResponseEntry withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -42,6 +45,7 @@ public class ListRouteCalculatorsResponseEntry {
     
     @JsonProperty("Description")
     public String description;
+
     public ListRouteCalculatorsResponseEntry withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +54,7 @@ public class ListRouteCalculatorsResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public ListRouteCalculatorsResponseEntryPricingPlanEnum pricingPlan;
+
     public ListRouteCalculatorsResponseEntry withPricingPlan(ListRouteCalculatorsResponseEntryPricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -59,9 +64,17 @@ public class ListRouteCalculatorsResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public ListRouteCalculatorsResponseEntry withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ListRouteCalculatorsResponseEntry(@JsonProperty("CalculatorName") String calculatorName, @JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("DataSource") String dataSource, @JsonProperty("Description") String description, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.calculatorName = calculatorName;
+        this.createTime = createTime;
+        this.dataSource = dataSource;
+        this.description = description;
+        this.updateTime = updateTime;
+  }
 }

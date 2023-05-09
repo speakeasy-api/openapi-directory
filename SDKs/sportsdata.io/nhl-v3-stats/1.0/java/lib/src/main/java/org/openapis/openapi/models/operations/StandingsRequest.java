@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StandingsRequest {
@@ -12,6 +13,7 @@ public class StandingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public StandingsFormatEnum format;
+
     public StandingsRequest withFormat(StandingsFormatEnum format) {
         this.format = format;
         return this;
@@ -24,9 +26,14 @@ public class StandingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
     public String season;
+
     public StandingsRequest withSeason(String season) {
         this.season = season;
         return this;
     }
     
+    public StandingsRequest(@JsonProperty("format") StandingsFormatEnum format, @JsonProperty("season") String season) {
+        this.format = format;
+        this.season = season;
+  }
 }

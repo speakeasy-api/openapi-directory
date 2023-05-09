@@ -12,6 +12,7 @@ public class SourcesV1GetV1SourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public SourcesV1GetV1SourcesGetRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -19,6 +20,7 @@ public class SourcesV1GetV1SourcesGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SourcesV1GetV1SourcesGetRequest withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class SourcesV1GetV1SourcesGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public SourcesV1GetV1SourcesGetRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -36,6 +39,7 @@ public class SourcesV1GetV1SourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public SourcesV1GetV1SourcesGetOrderBySourcesV1OrderEnum orderBy;
+
     public SourcesV1GetV1SourcesGetRequest withOrderBy(SourcesV1GetV1SourcesGetOrderBySourcesV1OrderEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -46,6 +50,7 @@ public class SourcesV1GetV1SourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SourcesV1GetV1SourcesGetRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -56,9 +61,11 @@ public class SourcesV1GetV1SourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public SourcesV1GetV1SourcesGetSortSortEnum sort;
+
     public SourcesV1GetV1SourcesGetRequest withSort(SourcesV1GetV1SourcesGetSortSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public SourcesV1GetV1SourcesGetRequest(){}
 }

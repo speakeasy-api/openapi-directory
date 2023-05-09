@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListVirtualMFADevicesRequest {
     
     public AssignmentStatusTypeEnum assignmentStatus;
+
     public ListVirtualMFADevicesRequest withAssignmentStatus(AssignmentStatusTypeEnum assignmentStatus) {
         this.assignmentStatus = assignmentStatus;
         return this;
@@ -16,6 +17,7 @@ public class ListVirtualMFADevicesRequest {
     
     
     public String marker;
+
     public ListVirtualMFADevicesRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +25,11 @@ public class ListVirtualMFADevicesRequest {
     
     
     public Long maxItems;
+
     public ListVirtualMFADevicesRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
     }
     
+    public ListVirtualMFADevicesRequest(){}
 }

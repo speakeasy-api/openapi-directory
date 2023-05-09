@@ -15,6 +15,7 @@ public class DescribeRemediationExceptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeRemediationExceptionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeRemediationExceptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemediationExceptions")
     public RemediationException[] remediationExceptions;
+
     public DescribeRemediationExceptionsResponse withRemediationExceptions(RemediationException[] remediationExceptions) {
         this.remediationExceptions = remediationExceptions;
         return this;
     }
     
+    public DescribeRemediationExceptionsResponse(){}
 }

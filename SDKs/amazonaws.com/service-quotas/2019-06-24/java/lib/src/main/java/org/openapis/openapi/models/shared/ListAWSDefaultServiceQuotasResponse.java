@@ -15,6 +15,7 @@ public class ListAWSDefaultServiceQuotasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAWSDefaultServiceQuotasResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListAWSDefaultServiceQuotasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quotas")
     public ServiceQuota[] quotas;
+
     public ListAWSDefaultServiceQuotasResponse withQuotas(ServiceQuota[] quotas) {
         this.quotas = quotas;
         return this;
     }
     
+    public ListAWSDefaultServiceQuotasResponse(){}
 }

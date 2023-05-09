@@ -15,6 +15,7 @@ public class GetProfileObjectTypeTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowProfileCreation")
     public Boolean allowProfileCreation;
+
     public GetProfileObjectTypeTemplateResponse withAllowProfileCreation(Boolean allowProfileCreation) {
         this.allowProfileCreation = allowProfileCreation;
         return this;
@@ -23,6 +24,7 @@ public class GetProfileObjectTypeTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fields")
     public java.util.Map<String, ObjectTypeField> fields;
+
     public GetProfileObjectTypeTemplateResponse withFields(java.util.Map<String, ObjectTypeField> fields) {
         this.fields = fields;
         return this;
@@ -31,6 +33,7 @@ public class GetProfileObjectTypeTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keys")
     public java.util.Map<String, ObjectTypeKey[]> keys;
+
     public GetProfileObjectTypeTemplateResponse withKeys(java.util.Map<String, ObjectTypeKey[]> keys) {
         this.keys = keys;
         return this;
@@ -39,6 +42,7 @@ public class GetProfileObjectTypeTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceLastUpdatedTimestampFormat")
     public String sourceLastUpdatedTimestampFormat;
+
     public GetProfileObjectTypeTemplateResponse withSourceLastUpdatedTimestampFormat(String sourceLastUpdatedTimestampFormat) {
         this.sourceLastUpdatedTimestampFormat = sourceLastUpdatedTimestampFormat;
         return this;
@@ -47,6 +51,7 @@ public class GetProfileObjectTypeTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceName")
     public String sourceName;
+
     public GetProfileObjectTypeTemplateResponse withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
@@ -55,6 +60,7 @@ public class GetProfileObjectTypeTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceObject")
     public String sourceObject;
+
     public GetProfileObjectTypeTemplateResponse withSourceObject(String sourceObject) {
         this.sourceObject = sourceObject;
         return this;
@@ -63,9 +69,11 @@ public class GetProfileObjectTypeTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateId")
     public String templateId;
+
     public GetProfileObjectTypeTemplateResponse withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public GetProfileObjectTypeTemplateResponse(){}
 }

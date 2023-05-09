@@ -15,6 +15,7 @@ public class DataResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public DataResource withType(String type) {
         this.type = type;
         return this;
@@ -23,9 +24,11 @@ public class DataResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public DataResource withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DataResource(){}
 }

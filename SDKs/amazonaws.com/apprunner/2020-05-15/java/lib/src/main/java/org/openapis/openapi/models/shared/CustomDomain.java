@@ -15,6 +15,7 @@ public class CustomDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateValidationRecords")
     public CertificateValidationRecord[] certificateValidationRecords;
+
     public CustomDomain withCertificateValidationRecords(CertificateValidationRecord[] certificateValidationRecords) {
         this.certificateValidationRecords = certificateValidationRecords;
         return this;
@@ -22,6 +23,7 @@ public class CustomDomain {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public CustomDomain withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -29,6 +31,7 @@ public class CustomDomain {
     
     @JsonProperty("EnableWWWSubdomain")
     public Boolean enableWWWSubdomain;
+
     public CustomDomain withEnableWWWSubdomain(Boolean enableWWWSubdomain) {
         this.enableWWWSubdomain = enableWWWSubdomain;
         return this;
@@ -36,9 +39,15 @@ public class CustomDomain {
     
     @JsonProperty("Status")
     public CustomDomainAssociationStatusEnum status;
+
     public CustomDomain withStatus(CustomDomainAssociationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CustomDomain(@JsonProperty("DomainName") String domainName, @JsonProperty("EnableWWWSubdomain") Boolean enableWWWSubdomain, @JsonProperty("Status") CustomDomainAssociationStatusEnum status) {
+        this.domainName = domainName;
+        this.enableWWWSubdomain = enableWWWSubdomain;
+        this.status = status;
+  }
 }

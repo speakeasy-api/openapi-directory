@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETMoveAddressToVpcResponse {
     
     public byte[] body;
+
     public GETMoveAddressToVpcResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETMoveAddressToVpcResponse {
     
     
     public String contentType;
+
     public GETMoveAddressToVpcResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETMoveAddressToVpcResponse {
     
     
     public Integer statusCode;
+
     public GETMoveAddressToVpcResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETMoveAddressToVpcResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETMoveAddressToVpcResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETMoveAddressToVpcResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResourceValue {
     @JsonProperty("Value")
     public ResourceValueTypeEnum value;
+
     public ResourceValue withValue(ResourceValueTypeEnum value) {
         this.value = value;
         return this;
     }
     
+    public ResourceValue(@JsonProperty("Value") ResourceValueTypeEnum value) {
+        this.value = value;
+  }
 }

@@ -15,6 +15,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AspectRatio")
     public String aspectRatio;
+
     public JobInput withAspectRatio(String aspectRatio) {
         this.aspectRatio = aspectRatio;
         return this;
@@ -23,6 +24,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Container")
     public String container;
+
     public JobInput withContainer(String container) {
         this.container = container;
         return this;
@@ -31,6 +33,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetectedProperties")
     public DetectedProperties detectedProperties;
+
     public JobInput withDetectedProperties(DetectedProperties detectedProperties) {
         this.detectedProperties = detectedProperties;
         return this;
@@ -39,6 +42,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encryption")
     public Encryption encryption;
+
     public JobInput withEncryption(Encryption encryption) {
         this.encryption = encryption;
         return this;
@@ -47,6 +51,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FrameRate")
     public String frameRate;
+
     public JobInput withFrameRate(String frameRate) {
         this.frameRate = frameRate;
         return this;
@@ -55,6 +60,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputCaptions")
     public InputCaptions inputCaptions;
+
     public JobInput withInputCaptions(InputCaptions inputCaptions) {
         this.inputCaptions = inputCaptions;
         return this;
@@ -63,6 +69,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interlaced")
     public String interlaced;
+
     public JobInput withInterlaced(String interlaced) {
         this.interlaced = interlaced;
         return this;
@@ -71,6 +78,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public JobInput withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resolution")
     public String resolution;
+
     public JobInput withResolution(String resolution) {
         this.resolution = resolution;
         return this;
@@ -87,9 +96,11 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSpan")
     public TimeSpan timeSpan;
+
     public JobInput withTimeSpan(TimeSpan timeSpan) {
         this.timeSpan = timeSpan;
         return this;
     }
     
+    public JobInput(){}
 }

@@ -15,9 +15,11 @@ public class DeleteVirtualClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeleteVirtualClusterResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteVirtualClusterResponse(){}
 }

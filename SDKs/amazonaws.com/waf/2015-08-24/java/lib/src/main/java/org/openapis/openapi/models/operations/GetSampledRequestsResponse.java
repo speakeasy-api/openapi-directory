@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSampledRequestsResponse {
     
     public String contentType;
+
     public GetSampledRequestsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSampledRequestsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSampledRequestsResponse getSampledRequestsResponse;
+
     public GetSampledRequestsResponse withGetSampledRequestsResponse(org.openapis.openapi.models.shared.GetSampledRequestsResponse getSampledRequestsResponse) {
         this.getSampledRequestsResponse = getSampledRequestsResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetSampledRequestsResponse {
     
     
     public Integer statusCode;
+
     public GetSampledRequestsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetSampledRequestsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSampledRequestsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetSampledRequestsResponse {
      */
     
     public Object wafInternalErrorException;
+
     public GetSampledRequestsResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,9 +59,14 @@ public class GetSampledRequestsResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public GetSampledRequestsResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public GetSampledRequestsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

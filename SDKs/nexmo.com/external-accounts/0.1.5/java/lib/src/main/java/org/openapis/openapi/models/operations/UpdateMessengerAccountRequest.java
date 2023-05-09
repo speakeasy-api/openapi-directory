@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMessengerAccountRequest {
@@ -12,6 +13,7 @@ public class UpdateMessengerAccountRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateMessengerAccountRequestBody requestBody;
+
     public UpdateMessengerAccountRequest withRequestBody(UpdateMessengerAccountRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class UpdateMessengerAccountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_id")
     public String externalId;
+
     public UpdateMessengerAccountRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
     }
     
+    public UpdateMessengerAccountRequest(@JsonProperty("RequestBody") UpdateMessengerAccountRequestBody requestBody, @JsonProperty("external_id") String externalId) {
+        this.requestBody = requestBody;
+        this.externalId = externalId;
+  }
 }

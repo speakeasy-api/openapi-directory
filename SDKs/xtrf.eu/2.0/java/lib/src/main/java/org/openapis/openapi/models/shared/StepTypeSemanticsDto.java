@@ -12,6 +12,7 @@ public class StepTypeSemanticsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canVerifyFiles")
     public Boolean canVerifyFiles;
+
     public StepTypeSemanticsDto withCanVerifyFiles(Boolean canVerifyFiles) {
         this.canVerifyFiles = canVerifyFiles;
         return this;
@@ -20,9 +21,11 @@ public class StepTypeSemanticsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isScripted")
     public Boolean isScripted;
+
     public StepTypeSemanticsDto withIsScripted(Boolean isScripted) {
         this.isScripted = isScripted;
         return this;
     }
     
+    public StepTypeSemanticsDto(){}
 }

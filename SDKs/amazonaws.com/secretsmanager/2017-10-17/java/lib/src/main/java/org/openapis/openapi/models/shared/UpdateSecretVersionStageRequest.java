@@ -12,6 +12,7 @@ public class UpdateSecretVersionStageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MoveToVersionId")
     public String moveToVersionId;
+
     public UpdateSecretVersionStageRequest withMoveToVersionId(String moveToVersionId) {
         this.moveToVersionId = moveToVersionId;
         return this;
@@ -20,6 +21,7 @@ public class UpdateSecretVersionStageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoveFromVersionId")
     public String removeFromVersionId;
+
     public UpdateSecretVersionStageRequest withRemoveFromVersionId(String removeFromVersionId) {
         this.removeFromVersionId = removeFromVersionId;
         return this;
@@ -27,6 +29,7 @@ public class UpdateSecretVersionStageRequest {
     
     @JsonProperty("SecretId")
     public String secretId;
+
     public UpdateSecretVersionStageRequest withSecretId(String secretId) {
         this.secretId = secretId;
         return this;
@@ -34,9 +37,14 @@ public class UpdateSecretVersionStageRequest {
     
     @JsonProperty("VersionStage")
     public String versionStage;
+
     public UpdateSecretVersionStageRequest withVersionStage(String versionStage) {
         this.versionStage = versionStage;
         return this;
     }
     
+    public UpdateSecretVersionStageRequest(@JsonProperty("SecretId") String secretId, @JsonProperty("VersionStage") String versionStage) {
+        this.secretId = secretId;
+        this.versionStage = versionStage;
+  }
 }

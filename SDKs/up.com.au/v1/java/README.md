@@ -16,35 +16,37 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetAccountsRequest;
 import org.openapis.openapi.models.operations.GetAccountsResponse;
-import org.openapis.openapi.models.shared.OwnershipTypeEnumEnum;
 import org.openapis.openapi.models.shared.AccountTypeEnumEnum;
+import org.openapis.openapi.models.shared.OwnershipTypeEnumEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             GetAccountsRequest req = new GetAccountsRequest() {{
-                filterAccountType = "TRANSACTIONAL";
-                filterOwnershipType = "JOINT";
-                pageSize = 715190;
-            }}            
+                filterAccountType = AccountTypeEnumEnum.TRANSACTIONAL;
+                filterOwnershipType = OwnershipTypeEnumEnum.JOINT;
+                pageSize = 844266L;
+            }};            
 
             GetAccountsResponse res = sdk.accounts.getAccounts(req);
 
-            if (res.listAccountsResponse.isPresent()) {
+            if (res.listAccountsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -52,41 +54,41 @@ public class Application {
 ## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `getAccounts` - List accounts
-* `getAccountsId` - Retrieve account
+* [getAccounts](docs/accounts/README.md#getaccounts) - List accounts
+* [getAccountsId](docs/accounts/README.md#getaccountsid) - Retrieve account
 
-### categories
+### [categories](docs/categories/README.md)
 
-* `getCategories` - List categories
-* `getCategoriesId` - Retrieve category
-* `patchTransactionsTransactionIdRelationshipsCategory` - Categorize transaction
+* [getCategories](docs/categories/README.md#getcategories) - List categories
+* [getCategoriesId](docs/categories/README.md#getcategoriesid) - Retrieve category
+* [patchTransactionsTransactionIdRelationshipsCategory](docs/categories/README.md#patchtransactionstransactionidrelationshipscategory) - Categorize transaction
 
-### tags
+### [tags](docs/tags/README.md)
 
-* `deleteTransactionsTransactionIdRelationshipsTags` - Remove tags from transaction
-* `getTags` - List tags
-* `postTransactionsTransactionIdRelationshipsTags` - Add tags to transaction
+* [deleteTransactionsTransactionIdRelationshipsTags](docs/tags/README.md#deletetransactionstransactionidrelationshipstags) - Remove tags from transaction
+* [getTags](docs/tags/README.md#gettags) - List tags
+* [postTransactionsTransactionIdRelationshipsTags](docs/tags/README.md#posttransactionstransactionidrelationshipstags) - Add tags to transaction
 
-### transactions
+### [transactions](docs/transactions/README.md)
 
-* `getAccountsAccountIdTransactions` - List transactions by account
-* `getTransactions` - List transactions
-* `getTransactionsId` - Retrieve transaction
+* [getAccountsAccountIdTransactions](docs/transactions/README.md#getaccountsaccountidtransactions) - List transactions by account
+* [getTransactions](docs/transactions/README.md#gettransactions) - List transactions
+* [getTransactionsId](docs/transactions/README.md#gettransactionsid) - Retrieve transaction
 
-### utilityEndpoints
+### [utilityEndpoints](docs/utilityendpoints/README.md)
 
-* `getUtilPing` - Ping
+* [getUtilPing](docs/utilityendpoints/README.md#getutilping) - Ping
 
-### webhooks
+### [webhooks](docs/webhooks/README.md)
 
-* `deleteWebhooksId` - Delete webhook
-* `getWebhooks` - List webhooks
-* `getWebhooksId` - Retrieve webhook
-* `getWebhooksWebhookIdLogs` - List webhook logs
-* `postWebhooks` - Create webhook
-* `postWebhooksWebhookIdPing` - Ping webhook
+* [deleteWebhooksId](docs/webhooks/README.md#deletewebhooksid) - Delete webhook
+* [getWebhooks](docs/webhooks/README.md#getwebhooks) - List webhooks
+* [getWebhooksId](docs/webhooks/README.md#getwebhooksid) - Retrieve webhook
+* [getWebhooksWebhookIdLogs](docs/webhooks/README.md#getwebhookswebhookidlogs) - List webhook logs
+* [postWebhooks](docs/webhooks/README.md#postwebhooks) - Create webhook
+* [postWebhooksWebhookIdPing](docs/webhooks/README.md#postwebhookswebhookidping) - Ping webhook
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -103,4 +103,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ScanRunErrorTraceCodeEnum.j
 lib/src/main/java/org/openapis/openapi/models/shared/ScanRunErrorTrace.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScanConfigErrorCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScanConfigError.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

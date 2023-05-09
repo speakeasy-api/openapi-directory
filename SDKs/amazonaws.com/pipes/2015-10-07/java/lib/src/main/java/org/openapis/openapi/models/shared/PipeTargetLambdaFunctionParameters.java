@@ -15,9 +15,11 @@ public class PipeTargetLambdaFunctionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvocationType")
     public PipeTargetInvocationTypeEnum invocationType;
+
     public PipeTargetLambdaFunctionParameters withInvocationType(PipeTargetInvocationTypeEnum invocationType) {
         this.invocationType = invocationType;
         return this;
     }
     
+    public PipeTargetLambdaFunctionParameters(){}
 }

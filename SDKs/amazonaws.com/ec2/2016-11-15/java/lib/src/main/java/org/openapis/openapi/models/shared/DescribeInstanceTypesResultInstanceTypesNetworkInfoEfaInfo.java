@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesNetworkInfoEfaInfo {
     
     public Long maximumEfaInterfaces;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfoEfaInfo withMaximumEfaInterfaces(Long maximumEfaInterfaces) {
         this.maximumEfaInterfaces = maximumEfaInterfaces;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesNetworkInfoEfaInfo(){}
 }

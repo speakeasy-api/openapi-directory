@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposCreateAutolinkResponse {
     
     public String contentType;
+
     public ReposCreateAutolinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposCreateAutolinkResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReposCreateAutolinkResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReposCreateAutolinkResponse {
     
     
     public Integer statusCode;
+
     public ReposCreateAutolinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReposCreateAutolinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposCreateAutolinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReposCreateAutolinkResponse {
      */
     
     public org.openapis.openapi.models.shared.Autolink autolink;
+
     public ReposCreateAutolinkResponse withAutolink(org.openapis.openapi.models.shared.Autolink autolink) {
         this.autolink = autolink;
         return this;
@@ -50,9 +56,14 @@ public class ReposCreateAutolinkResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposCreateAutolinkResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposCreateAutolinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

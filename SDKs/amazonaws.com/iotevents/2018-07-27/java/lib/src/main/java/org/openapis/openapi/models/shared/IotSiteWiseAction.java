@@ -15,6 +15,7 @@ public class IotSiteWiseAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetId")
     public String assetId;
+
     public IotSiteWiseAction withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -23,6 +24,7 @@ public class IotSiteWiseAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryId")
     public String entryId;
+
     public IotSiteWiseAction withEntryId(String entryId) {
         this.entryId = entryId;
         return this;
@@ -31,6 +33,7 @@ public class IotSiteWiseAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyAlias")
     public String propertyAlias;
+
     public IotSiteWiseAction withPropertyAlias(String propertyAlias) {
         this.propertyAlias = propertyAlias;
         return this;
@@ -39,6 +42,7 @@ public class IotSiteWiseAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyId")
     public String propertyId;
+
     public IotSiteWiseAction withPropertyId(String propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -47,9 +51,11 @@ public class IotSiteWiseAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyValue")
     public AssetPropertyValue propertyValue;
+
     public IotSiteWiseAction withPropertyValue(AssetPropertyValue propertyValue) {
         this.propertyValue = propertyValue;
         return this;
     }
     
+    public IotSiteWiseAction(){}
 }

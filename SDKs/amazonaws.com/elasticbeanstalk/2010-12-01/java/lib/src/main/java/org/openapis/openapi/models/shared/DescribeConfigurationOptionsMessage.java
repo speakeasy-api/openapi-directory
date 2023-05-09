@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeConfigurationOptionsMessage {
     
     public String applicationName;
+
     public DescribeConfigurationOptionsMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeConfigurationOptionsMessage {
     
     
     public String environmentName;
+
     public DescribeConfigurationOptionsMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -26,6 +28,7 @@ public class DescribeConfigurationOptionsMessage {
     
     
     public OptionSpecification[] options;
+
     public DescribeConfigurationOptionsMessage withOptions(OptionSpecification[] options) {
         this.options = options;
         return this;
@@ -33,6 +36,7 @@ public class DescribeConfigurationOptionsMessage {
     
     
     public String platformArn;
+
     public DescribeConfigurationOptionsMessage withPlatformArn(String platformArn) {
         this.platformArn = platformArn;
         return this;
@@ -40,6 +44,7 @@ public class DescribeConfigurationOptionsMessage {
     
     
     public String solutionStackName;
+
     public DescribeConfigurationOptionsMessage withSolutionStackName(String solutionStackName) {
         this.solutionStackName = solutionStackName;
         return this;
@@ -47,9 +52,11 @@ public class DescribeConfigurationOptionsMessage {
     
     
     public String templateName;
+
     public DescribeConfigurationOptionsMessage withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public DescribeConfigurationOptionsMessage(){}
 }

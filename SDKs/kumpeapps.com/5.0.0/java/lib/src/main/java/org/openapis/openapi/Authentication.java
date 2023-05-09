@@ -39,7 +39,9 @@ public class Authentication {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AppkeyPatchResponse appkeyPatch(org.openapis.openapi.models.operations.AppkeyPatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/appkey");
@@ -61,11 +63,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppkeyPatchResponse res = new org.openapis.openapi.models.operations.AppkeyPatchResponse() {{
+        org.openapis.openapi.models.operations.AppkeyPatchResponse res = new org.openapis.openapi.models.operations.AppkeyPatchResponse(contentType, httpRes.statusCode()) {{
             inlineResponse202 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -85,7 +85,9 @@ public class Authentication {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AppkeyPostResponse appkeyPost(org.openapis.openapi.models.operations.AppkeyPostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/appkey");
@@ -107,11 +109,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppkeyPostResponse res = new org.openapis.openapi.models.operations.AppkeyPostResponse() {{
+        org.openapis.openapi.models.operations.AppkeyPostResponse res = new org.openapis.openapi.models.operations.AppkeyPostResponse(contentType, httpRes.statusCode()) {{
             inlineResponse201 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -132,7 +132,9 @@ public class Authentication {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AppkeyPutResponse appkeyPut(org.openapis.openapi.models.operations.AppkeyPutRequest request, org.openapis.openapi.models.operations.AppkeyPutSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/appkey");
@@ -154,11 +156,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppkeyPutResponse res = new org.openapis.openapi.models.operations.AppkeyPutResponse() {{
+        org.openapis.openapi.models.operations.AppkeyPutResponse res = new org.openapis.openapi.models.operations.AppkeyPutResponse(contentType, httpRes.statusCode()) {{
             inlineResponse202 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -200,11 +200,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthAppkeyPatchResponse res = new org.openapis.openapi.models.operations.AuthAppkeyPatchResponse() {{
+        org.openapis.openapi.models.operations.AuthAppkeyPatchResponse res = new org.openapis.openapi.models.operations.AuthAppkeyPatchResponse(contentType, httpRes.statusCode()) {{
             inlineResponse202 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -246,11 +244,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthAppkeyPostResponse res = new org.openapis.openapi.models.operations.AuthAppkeyPostResponse() {{
+        org.openapis.openapi.models.operations.AuthAppkeyPostResponse res = new org.openapis.openapi.models.operations.AuthAppkeyPostResponse(contentType, httpRes.statusCode()) {{
             inlineResponse201 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -293,11 +289,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthAppkeyPutResponse res = new org.openapis.openapi.models.operations.AuthAppkeyPutResponse() {{
+        org.openapis.openapi.models.operations.AuthAppkeyPutResponse res = new org.openapis.openapi.models.operations.AuthAppkeyPutResponse(contentType, httpRes.statusCode()) {{
             inlineResponse202 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -340,13 +334,11 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthAuthkeyGetResponse res = new org.openapis.openapi.models.operations.AuthAuthkeyGetResponse() {{
+        org.openapis.openapi.models.operations.AuthAuthkeyGetResponse res = new org.openapis.openapi.models.operations.AuthAuthkeyGetResponse(contentType, httpRes.statusCode()) {{
             inlineResponse2011 = null;
             fourHundredAndThree = null;
             fourHundredAndFortyNine = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -404,11 +396,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthAuthkeyPatchResponse res = new org.openapis.openapi.models.operations.AuthAuthkeyPatchResponse() {{
+        org.openapis.openapi.models.operations.AuthAuthkeyPatchResponse res = new org.openapis.openapi.models.operations.AuthAuthkeyPatchResponse(contentType, httpRes.statusCode()) {{
             inlineResponse202 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -453,13 +443,11 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthAuthkeyPostResponse res = new org.openapis.openapi.models.operations.AuthAuthkeyPostResponse() {{
+        org.openapis.openapi.models.operations.AuthAuthkeyPostResponse res = new org.openapis.openapi.models.operations.AuthAuthkeyPostResponse(contentType, httpRes.statusCode()) {{
             inlineResponse2011 = null;
             fourHundredAndThree = null;
             fourHundredAndFortyNine = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -518,11 +506,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthAuthkeyPutResponse res = new org.openapis.openapi.models.operations.AuthAuthkeyPutResponse() {{
+        org.openapis.openapi.models.operations.AuthAuthkeyPutResponse res = new org.openapis.openapi.models.operations.AuthAuthkeyPutResponse(contentType, httpRes.statusCode()) {{
             inlineResponse202 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -567,11 +553,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthVerifyotpGetResponse res = new org.openapis.openapi.models.operations.AuthVerifyotpGetResponse() {{
+        org.openapis.openapi.models.operations.AuthVerifyotpGetResponse res = new org.openapis.openapi.models.operations.AuthVerifyotpGetResponse(contentType, httpRes.statusCode()) {{
             fourHundredAndThree = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -594,7 +578,9 @@ public class Authentication {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AuthkeyGetResponse authkeyGet(org.openapis.openapi.models.operations.AuthkeyGetRequest request, org.openapis.openapi.models.operations.AuthkeyGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/authkey");
@@ -616,13 +602,11 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthkeyGetResponse res = new org.openapis.openapi.models.operations.AuthkeyGetResponse() {{
+        org.openapis.openapi.models.operations.AuthkeyGetResponse res = new org.openapis.openapi.models.operations.AuthkeyGetResponse(contentType, httpRes.statusCode()) {{
             inlineResponse2011 = null;
             fourHundredAndThree = null;
             fourHundredAndFortyNine = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -658,7 +642,9 @@ public class Authentication {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AuthkeyPatchResponse authkeyPatch(org.openapis.openapi.models.operations.AuthkeyPatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/authkey");
@@ -680,11 +666,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthkeyPatchResponse res = new org.openapis.openapi.models.operations.AuthkeyPatchResponse() {{
+        org.openapis.openapi.models.operations.AuthkeyPatchResponse res = new org.openapis.openapi.models.operations.AuthkeyPatchResponse(contentType, httpRes.statusCode()) {{
             inlineResponse202 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -707,7 +691,9 @@ public class Authentication {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AuthkeyPostResponse authkeyPost(org.openapis.openapi.models.operations.AuthkeyPostRequest request, org.openapis.openapi.models.operations.AuthkeyPostSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/authkey");
@@ -729,13 +715,11 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthkeyPostResponse res = new org.openapis.openapi.models.operations.AuthkeyPostResponse() {{
+        org.openapis.openapi.models.operations.AuthkeyPostResponse res = new org.openapis.openapi.models.operations.AuthkeyPostResponse(contentType, httpRes.statusCode()) {{
             inlineResponse2011 = null;
             fourHundredAndThree = null;
             fourHundredAndFortyNine = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -772,7 +756,9 @@ public class Authentication {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AuthkeyPutResponse authkeyPut(org.openapis.openapi.models.operations.AuthkeyPutRequest request, org.openapis.openapi.models.operations.AuthkeyPutSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/authkey");
@@ -794,11 +780,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthkeyPutResponse res = new org.openapis.openapi.models.operations.AuthkeyPutResponse() {{
+        org.openapis.openapi.models.operations.AuthkeyPutResponse res = new org.openapis.openapi.models.operations.AuthkeyPutResponse(contentType, httpRes.statusCode()) {{
             inlineResponse202 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

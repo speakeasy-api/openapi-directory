@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectionGroupPatternTypeLimits {
     @JsonProperty("ArbitraryPatternLimits")
     public ProtectionGroupArbitraryPatternLimits arbitraryPatternLimits;
+
     public ProtectionGroupPatternTypeLimits withArbitraryPatternLimits(ProtectionGroupArbitraryPatternLimits arbitraryPatternLimits) {
         this.arbitraryPatternLimits = arbitraryPatternLimits;
         return this;
     }
     
+    public ProtectionGroupPatternTypeLimits(@JsonProperty("ArbitraryPatternLimits") ProtectionGroupArbitraryPatternLimits arbitraryPatternLimits) {
+        this.arbitraryPatternLimits = arbitraryPatternLimits;
+  }
 }

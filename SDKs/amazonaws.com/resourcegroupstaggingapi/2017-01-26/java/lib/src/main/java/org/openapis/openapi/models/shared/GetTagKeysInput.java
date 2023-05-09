@@ -12,9 +12,11 @@ public class GetTagKeysInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public GetTagKeysInput withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
     }
     
+    public GetTagKeysInput(){}
 }

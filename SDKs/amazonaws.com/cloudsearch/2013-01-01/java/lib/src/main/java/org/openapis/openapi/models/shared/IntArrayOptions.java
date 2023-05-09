@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class IntArrayOptions {
     
     public Long defaultValue;
+
     public IntArrayOptions withDefaultValue(Long defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -19,6 +20,7 @@ public class IntArrayOptions {
     
     
     public Boolean facetEnabled;
+
     public IntArrayOptions withFacetEnabled(Boolean facetEnabled) {
         this.facetEnabled = facetEnabled;
         return this;
@@ -26,6 +28,7 @@ public class IntArrayOptions {
     
     
     public Boolean returnEnabled;
+
     public IntArrayOptions withReturnEnabled(Boolean returnEnabled) {
         this.returnEnabled = returnEnabled;
         return this;
@@ -33,6 +36,7 @@ public class IntArrayOptions {
     
     
     public Boolean searchEnabled;
+
     public IntArrayOptions withSearchEnabled(Boolean searchEnabled) {
         this.searchEnabled = searchEnabled;
         return this;
@@ -40,9 +44,11 @@ public class IntArrayOptions {
     
     
     public String sourceFields;
+
     public IntArrayOptions withSourceFields(String sourceFields) {
         this.sourceFields = sourceFields;
         return this;
     }
     
+    public IntArrayOptions(){}
 }

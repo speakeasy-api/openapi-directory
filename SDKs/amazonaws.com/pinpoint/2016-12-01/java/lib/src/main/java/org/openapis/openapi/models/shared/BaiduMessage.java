@@ -15,6 +15,7 @@ public class BaiduMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public ActionEnum action;
+
     public BaiduMessage withAction(ActionEnum action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class BaiduMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public BaiduMessage withBody(String body) {
         this.body = body;
         return this;
@@ -31,6 +33,7 @@ public class BaiduMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public java.util.Map<String, String> data;
+
     public BaiduMessage withData(java.util.Map<String, String> data) {
         this.data = data;
         return this;
@@ -39,6 +42,7 @@ public class BaiduMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IconReference")
     public String iconReference;
+
     public BaiduMessage withIconReference(String iconReference) {
         this.iconReference = iconReference;
         return this;
@@ -47,6 +51,7 @@ public class BaiduMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageIconUrl")
     public String imageIconUrl;
+
     public BaiduMessage withImageIconUrl(String imageIconUrl) {
         this.imageIconUrl = imageIconUrl;
         return this;
@@ -55,6 +60,7 @@ public class BaiduMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageUrl")
     public String imageUrl;
+
     public BaiduMessage withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -63,6 +69,7 @@ public class BaiduMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RawContent")
     public String rawContent;
+
     public BaiduMessage withRawContent(String rawContent) {
         this.rawContent = rawContent;
         return this;
@@ -71,6 +78,7 @@ public class BaiduMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SilentPush")
     public Boolean silentPush;
+
     public BaiduMessage withSilentPush(Boolean silentPush) {
         this.silentPush = silentPush;
         return this;
@@ -79,6 +87,7 @@ public class BaiduMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmallImageIconUrl")
     public String smallImageIconUrl;
+
     public BaiduMessage withSmallImageIconUrl(String smallImageIconUrl) {
         this.smallImageIconUrl = smallImageIconUrl;
         return this;
@@ -87,6 +96,7 @@ public class BaiduMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sound")
     public String sound;
+
     public BaiduMessage withSound(String sound) {
         this.sound = sound;
         return this;
@@ -95,6 +105,7 @@ public class BaiduMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Substitutions")
     public java.util.Map<String, String[]> substitutions;
+
     public BaiduMessage withSubstitutions(java.util.Map<String, String[]> substitutions) {
         this.substitutions = substitutions;
         return this;
@@ -103,6 +114,7 @@ public class BaiduMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeToLive")
     public Long timeToLive;
+
     public BaiduMessage withTimeToLive(Long timeToLive) {
         this.timeToLive = timeToLive;
         return this;
@@ -111,6 +123,7 @@ public class BaiduMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public BaiduMessage withTitle(String title) {
         this.title = title;
         return this;
@@ -119,9 +132,11 @@ public class BaiduMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public BaiduMessage withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public BaiduMessage(){}
 }

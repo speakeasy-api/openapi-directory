@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest {
@@ -12,6 +13,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -72,6 +79,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.customFilter")
     public String filterParamsCustomFilter;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsCustomFilter(String filterParamsCustomFilter) {
         this.filterParamsCustomFilter = filterParamsCustomFilter;
         return this;
@@ -82,6 +90,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.endTime")
     public String filterParamsEndTime;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsEndTime(String filterParamsEndTime) {
         this.filterParamsEndTime = filterParamsEndTime;
         return this;
@@ -92,6 +101,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.eventStatuses")
     public String[] filterParamsEventStatuses;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsEventStatuses(String[] filterParamsEventStatuses) {
         this.filterParamsEventStatuses = filterParamsEventStatuses;
         return this;
@@ -102,6 +112,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.executionId")
     public String filterParamsExecutionId;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsExecutionId(String filterParamsExecutionId) {
         this.filterParamsExecutionId = filterParamsExecutionId;
         return this;
@@ -112,6 +123,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.parameterKey")
     public String filterParamsParameterKey;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsParameterKey(String filterParamsParameterKey) {
         this.filterParamsParameterKey = filterParamsParameterKey;
         return this;
@@ -122,6 +134,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.parameterPairKey")
     public String filterParamsParameterPairKey;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsParameterPairKey(String filterParamsParameterPairKey) {
         this.filterParamsParameterPairKey = filterParamsParameterPairKey;
         return this;
@@ -132,6 +145,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.parameterPairValue")
     public String filterParamsParameterPairValue;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsParameterPairValue(String filterParamsParameterPairValue) {
         this.filterParamsParameterPairValue = filterParamsParameterPairValue;
         return this;
@@ -142,6 +156,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.parameterType")
     public String filterParamsParameterType;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsParameterType(String filterParamsParameterType) {
         this.filterParamsParameterType = filterParamsParameterType;
         return this;
@@ -152,6 +167,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.parameterValue")
     public String filterParamsParameterValue;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsParameterValue(String filterParamsParameterValue) {
         this.filterParamsParameterValue = filterParamsParameterValue;
         return this;
@@ -162,6 +178,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.startTime")
     public String filterParamsStartTime;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsStartTime(String filterParamsStartTime) {
         this.filterParamsStartTime = filterParamsStartTime;
         return this;
@@ -172,6 +189,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.taskStatuses")
     public String[] filterParamsTaskStatuses;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsTaskStatuses(String[] filterParamsTaskStatuses) {
         this.filterParamsTaskStatuses = filterParamsTaskStatuses;
         return this;
@@ -182,6 +200,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.workflowName")
     public String filterParamsWorkflowName;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsWorkflowName(String filterParamsWorkflowName) {
         this.filterParamsWorkflowName = filterParamsWorkflowName;
         return this;
@@ -192,6 +211,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -202,6 +222,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -212,6 +233,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -222,6 +244,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -232,6 +255,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -242,6 +266,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -252,6 +277,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -262,6 +288,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -272,6 +299,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=readMask")
     public String readMask;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withReadMask(String readMask) {
         this.readMask = readMask;
         return this;
@@ -282,6 +310,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=refreshAcl")
     public Boolean refreshAcl;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withRefreshAcl(Boolean refreshAcl) {
         this.refreshAcl = refreshAcl;
         return this;
@@ -292,6 +321,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=truncateParams")
     public Boolean truncateParams;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withTruncateParams(Boolean truncateParams) {
         this.truncateParams = truncateParams;
         return this;
@@ -302,6 +332,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -312,9 +343,13 @@ public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

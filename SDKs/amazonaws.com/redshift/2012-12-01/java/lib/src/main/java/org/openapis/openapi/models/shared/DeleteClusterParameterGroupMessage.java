@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteClusterParameterGroupMessage - &lt;p/&gt;
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteClusterParameterGroupMessage {
     
     public String parameterGroupName;
+
     public DeleteClusterParameterGroupMessage withParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
         return this;
     }
     
+    public DeleteClusterParameterGroupMessage(@JsonProperty("ParameterGroupName") String parameterGroupName) {
+        this.parameterGroupName = parameterGroupName;
+  }
 }

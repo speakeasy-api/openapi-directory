@@ -15,6 +15,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Alias")
     public String alias;
+
     public Query withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -23,6 +24,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pages")
     public String[] pages;
+
     public Query withPages(String[] pages) {
         this.pages = pages;
         return this;
@@ -30,9 +32,13 @@ public class Query {
     
     @JsonProperty("Text")
     public String text;
+
     public Query withText(String text) {
         this.text = text;
         return this;
     }
     
+    public Query(@JsonProperty("Text") String text) {
+        this.text = text;
+  }
 }

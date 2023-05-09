@@ -59,10 +59,8 @@ public class RoleAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryRoleAssignmentsDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryRoleAssignmentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DirectoryRoleAssignmentsDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryRoleAssignmentsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class RoleAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryRoleAssignmentsGetResponse res = new org.openapis.openapi.models.operations.DirectoryRoleAssignmentsGetResponse() {{
+        org.openapis.openapi.models.operations.DirectoryRoleAssignmentsGetResponse res = new org.openapis.openapi.models.operations.DirectoryRoleAssignmentsGetResponse(contentType, httpRes.statusCode()) {{
             roleAssignment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class RoleAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryRoleAssignmentsInsertResponse res = new org.openapis.openapi.models.operations.DirectoryRoleAssignmentsInsertResponse() {{
+        org.openapis.openapi.models.operations.DirectoryRoleAssignmentsInsertResponse res = new org.openapis.openapi.models.operations.DirectoryRoleAssignmentsInsertResponse(contentType, httpRes.statusCode()) {{
             roleAssignment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class RoleAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryRoleAssignmentsListResponse res = new org.openapis.openapi.models.operations.DirectoryRoleAssignmentsListResponse() {{
+        org.openapis.openapi.models.operations.DirectoryRoleAssignmentsListResponse res = new org.openapis.openapi.models.operations.DirectoryRoleAssignmentsListResponse(contentType, httpRes.statusCode()) {{
             roleAssignments = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

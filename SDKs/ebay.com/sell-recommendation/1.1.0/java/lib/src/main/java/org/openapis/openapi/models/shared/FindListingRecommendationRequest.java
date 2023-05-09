@@ -18,9 +18,11 @@ public class FindListingRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listingIds")
     public String[] listingIds;
+
     public FindListingRecommendationRequest withListingIds(String[] listingIds) {
         this.listingIds = listingIds;
         return this;
     }
     
+    public FindListingRecommendationRequest(){}
 }

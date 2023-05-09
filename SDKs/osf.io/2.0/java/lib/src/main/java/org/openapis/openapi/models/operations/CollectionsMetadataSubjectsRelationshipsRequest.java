@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionsMetadataSubjectsRelationshipsRequest {
@@ -12,6 +13,7 @@ public class CollectionsMetadataSubjectsRelationshipsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cgm_id")
     public String cgmId;
+
     public CollectionsMetadataSubjectsRelationshipsRequest withCgmId(String cgmId) {
         this.cgmId = cgmId;
         return this;
@@ -22,9 +24,14 @@ public class CollectionsMetadataSubjectsRelationshipsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
     public String collectionId;
+
     public CollectionsMetadataSubjectsRelationshipsRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
     }
     
+    public CollectionsMetadataSubjectsRelationshipsRequest(@JsonProperty("cgm_id") String cgmId, @JsonProperty("collection_id") String collectionId) {
+        this.cgmId = cgmId;
+        this.collectionId = collectionId;
+  }
 }

@@ -18,6 +18,7 @@ public class KubernetesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatewayServiceMesh")
     public GatewayServiceMesh gatewayServiceMesh;
+
     public KubernetesConfig withGatewayServiceMesh(GatewayServiceMesh gatewayServiceMesh) {
         this.gatewayServiceMesh = gatewayServiceMesh;
         return this;
@@ -29,9 +30,11 @@ public class KubernetesConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceNetworking")
     public ServiceNetworking serviceNetworking;
+
     public KubernetesConfig withServiceNetworking(ServiceNetworking serviceNetworking) {
         this.serviceNetworking = serviceNetworking;
         return this;
     }
     
+    public KubernetesConfig(){}
 }

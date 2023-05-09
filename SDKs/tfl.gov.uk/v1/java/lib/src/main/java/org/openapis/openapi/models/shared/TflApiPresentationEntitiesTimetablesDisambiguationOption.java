@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesTimetablesDisambiguationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TflApiPresentationEntitiesTimetablesDisambiguationOption withDescription(String description) {
         this.description = description;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesTimetablesDisambiguationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public TflApiPresentationEntitiesTimetablesDisambiguationOption withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public TflApiPresentationEntitiesTimetablesDisambiguationOption(){}
 }

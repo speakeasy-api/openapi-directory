@@ -12,6 +12,7 @@ public class TrainRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=algorithm")
     public String algorithm;
+
     public TrainRequestBody withAlgorithm(String algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -22,6 +23,7 @@ public class TrainRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=datasetId")
     public Long datasetId;
+
     public TrainRequestBody withDatasetId(Long datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -32,6 +34,7 @@ public class TrainRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=epochs")
     public Integer epochs;
+
     public TrainRequestBody withEpochs(Integer epochs) {
         this.epochs = epochs;
         return this;
@@ -42,6 +45,7 @@ public class TrainRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=learningRate")
     public Double learningRate;
+
     public TrainRequestBody withLearningRate(Double learningRate) {
         this.learningRate = learningRate;
         return this;
@@ -52,6 +56,7 @@ public class TrainRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public TrainRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +67,11 @@ public class TrainRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=trainParams,json")
     public org.openapis.openapi.models.shared.V2LanguageTrainParams trainParams;
+
     public TrainRequestBody withTrainParams(org.openapis.openapi.models.shared.V2LanguageTrainParams trainParams) {
         this.trainParams = trainParams;
         return this;
     }
     
+    public TrainRequestBody(){}
 }

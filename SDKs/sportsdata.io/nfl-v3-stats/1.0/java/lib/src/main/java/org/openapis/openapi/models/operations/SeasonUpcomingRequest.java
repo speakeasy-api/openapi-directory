@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SeasonUpcomingRequest {
@@ -12,9 +13,13 @@ public class SeasonUpcomingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public String format;
+
     public SeasonUpcomingRequest withFormat(String format) {
         this.format = format;
         return this;
     }
     
+    public SeasonUpcomingRequest(@JsonProperty("format") String format) {
+        this.format = format;
+  }
 }

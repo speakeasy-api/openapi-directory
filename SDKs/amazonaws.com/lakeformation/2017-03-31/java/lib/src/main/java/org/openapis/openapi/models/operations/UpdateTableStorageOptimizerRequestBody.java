@@ -15,6 +15,7 @@ public class UpdateTableStorageOptimizerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public UpdateTableStorageOptimizerRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -25,6 +26,7 @@ public class UpdateTableStorageOptimizerRequestBody {
      */
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public UpdateTableStorageOptimizerRequestBody withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -35,6 +37,7 @@ public class UpdateTableStorageOptimizerRequestBody {
      */
     @JsonProperty("StorageOptimizerConfig")
     public java.util.Map<String, java.util.Map<String, String>> storageOptimizerConfig;
+
     public UpdateTableStorageOptimizerRequestBody withStorageOptimizerConfig(java.util.Map<String, java.util.Map<String, String>> storageOptimizerConfig) {
         this.storageOptimizerConfig = storageOptimizerConfig;
         return this;
@@ -45,9 +48,15 @@ public class UpdateTableStorageOptimizerRequestBody {
      */
     @JsonProperty("TableName")
     public String tableName;
+
     public UpdateTableStorageOptimizerRequestBody withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public UpdateTableStorageOptimizerRequestBody(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("StorageOptimizerConfig") java.util.Map<String, java.util.Map<String, String>> storageOptimizerConfig, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.storageOptimizerConfig = storageOptimizerConfig;
+        this.tableName = tableName;
+  }
 }

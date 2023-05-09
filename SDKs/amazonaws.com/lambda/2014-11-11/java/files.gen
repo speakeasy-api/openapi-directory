@@ -70,4 +70,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/InvalidRequestContentExcept
 lib/src/main/java/org/openapis/openapi/models/shared/ListEventSourcesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListFunctionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class InstructionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputNum")
     public Integer outputNum;
+
     public InstructionInput withOutputNum(Integer outputNum) {
         this.outputNum = outputNum;
         return this;
@@ -29,9 +30,11 @@ public class InstructionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerInstructionIndex")
     public Integer producerInstructionIndex;
+
     public InstructionInput withProducerInstructionIndex(Integer producerInstructionIndex) {
         this.producerInstructionIndex = producerInstructionIndex;
         return this;
     }
     
+    public InstructionInput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateConfiguredTableAnalysisRuleResponse {
@@ -12,6 +13,7 @@ public class CreateConfiguredTableAnalysisRuleResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateConfiguredTableAnalysisRuleResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateConfiguredTableAnalysisRuleResponse {
      */
     
     public Object conflictException;
+
     public CreateConfiguredTableAnalysisRuleResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateConfiguredTableAnalysisRuleResponse {
     
     
     public String contentType;
+
     public CreateConfiguredTableAnalysisRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateConfiguredTableAnalysisRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateConfiguredTableAnalysisRuleOutput createConfiguredTableAnalysisRuleOutput;
+
     public CreateConfiguredTableAnalysisRuleResponse withCreateConfiguredTableAnalysisRuleOutput(org.openapis.openapi.models.shared.CreateConfiguredTableAnalysisRuleOutput createConfiguredTableAnalysisRuleOutput) {
         this.createConfiguredTableAnalysisRuleOutput = createConfiguredTableAnalysisRuleOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateConfiguredTableAnalysisRuleResponse {
      */
     
     public Object internalServerException;
+
     public CreateConfiguredTableAnalysisRuleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateConfiguredTableAnalysisRuleResponse {
     
     
     public Integer statusCode;
+
     public CreateConfiguredTableAnalysisRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateConfiguredTableAnalysisRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateConfiguredTableAnalysisRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateConfiguredTableAnalysisRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateConfiguredTableAnalysisRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class CreateConfiguredTableAnalysisRuleResponse {
      */
     
     public Object throttlingException;
+
     public CreateConfiguredTableAnalysisRuleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateConfiguredTableAnalysisRuleResponse {
      */
     
     public Object validationException;
+
     public CreateConfiguredTableAnalysisRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateConfiguredTableAnalysisRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

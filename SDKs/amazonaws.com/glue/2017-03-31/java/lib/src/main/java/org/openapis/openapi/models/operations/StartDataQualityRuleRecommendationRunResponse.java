@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartDataQualityRuleRecommendationRunResponse {
@@ -12,6 +13,7 @@ public class StartDataQualityRuleRecommendationRunResponse {
      */
     
     public Object conflictException;
+
     public StartDataQualityRuleRecommendationRunResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StartDataQualityRuleRecommendationRunResponse {
     
     
     public String contentType;
+
     public StartDataQualityRuleRecommendationRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartDataQualityRuleRecommendationRunResponse {
      */
     
     public Object internalServiceException;
+
     public StartDataQualityRuleRecommendationRunResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class StartDataQualityRuleRecommendationRunResponse {
      */
     
     public Object invalidInputException;
+
     public StartDataQualityRuleRecommendationRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class StartDataQualityRuleRecommendationRunResponse {
      */
     
     public Object operationTimeoutException;
+
     public StartDataQualityRuleRecommendationRunResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -59,6 +65,7 @@ public class StartDataQualityRuleRecommendationRunResponse {
      */
     
     public org.openapis.openapi.models.shared.StartDataQualityRuleRecommendationRunResponse startDataQualityRuleRecommendationRunResponse;
+
     public StartDataQualityRuleRecommendationRunResponse withStartDataQualityRuleRecommendationRunResponse(org.openapis.openapi.models.shared.StartDataQualityRuleRecommendationRunResponse startDataQualityRuleRecommendationRunResponse) {
         this.startDataQualityRuleRecommendationRunResponse = startDataQualityRuleRecommendationRunResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartDataQualityRuleRecommendationRunResponse {
     
     
     public Integer statusCode;
+
     public StartDataQualityRuleRecommendationRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class StartDataQualityRuleRecommendationRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartDataQualityRuleRecommendationRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartDataQualityRuleRecommendationRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

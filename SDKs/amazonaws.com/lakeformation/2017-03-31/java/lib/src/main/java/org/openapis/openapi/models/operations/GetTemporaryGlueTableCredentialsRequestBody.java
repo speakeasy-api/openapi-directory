@@ -15,6 +15,7 @@ public class GetTemporaryGlueTableCredentialsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuditContext")
     public GetTemporaryGlueTableCredentialsRequestBodyAuditContext auditContext;
+
     public GetTemporaryGlueTableCredentialsRequestBody withAuditContext(GetTemporaryGlueTableCredentialsRequestBodyAuditContext auditContext) {
         this.auditContext = auditContext;
         return this;
@@ -26,6 +27,7 @@ public class GetTemporaryGlueTableCredentialsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationSeconds")
     public Long durationSeconds;
+
     public GetTemporaryGlueTableCredentialsRequestBody withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -37,6 +39,7 @@ public class GetTemporaryGlueTableCredentialsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permissions")
     public org.openapis.openapi.models.shared.PermissionEnum[] permissions;
+
     public GetTemporaryGlueTableCredentialsRequestBody withPermissions(org.openapis.openapi.models.shared.PermissionEnum[] permissions) {
         this.permissions = permissions;
         return this;
@@ -47,6 +50,7 @@ public class GetTemporaryGlueTableCredentialsRequestBody {
      */
     @JsonProperty("SupportedPermissionTypes")
     public org.openapis.openapi.models.shared.PermissionTypeEnum[] supportedPermissionTypes;
+
     public GetTemporaryGlueTableCredentialsRequestBody withSupportedPermissionTypes(org.openapis.openapi.models.shared.PermissionTypeEnum[] supportedPermissionTypes) {
         this.supportedPermissionTypes = supportedPermissionTypes;
         return this;
@@ -57,9 +61,14 @@ public class GetTemporaryGlueTableCredentialsRequestBody {
      */
     @JsonProperty("TableArn")
     public String tableArn;
+
     public GetTemporaryGlueTableCredentialsRequestBody withTableArn(String tableArn) {
         this.tableArn = tableArn;
         return this;
     }
     
+    public GetTemporaryGlueTableCredentialsRequestBody(@JsonProperty("SupportedPermissionTypes") org.openapis.openapi.models.shared.PermissionTypeEnum[] supportedPermissionTypes, @JsonProperty("TableArn") String tableArn) {
+        this.supportedPermissionTypes = supportedPermissionTypes;
+        this.tableArn = tableArn;
+  }
 }

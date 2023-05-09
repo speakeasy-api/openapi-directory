@@ -18,6 +18,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formId")
     public String formId;
+
     public Form withFormId(String formId) {
         this.formId = formId;
         return this;
@@ -29,6 +30,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public Info info;
+
     public Form withInfo(Info info) {
         this.info = info;
         return this;
@@ -40,6 +42,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Item[] items;
+
     public Form withItems(Item[] items) {
         this.items = items;
         return this;
@@ -51,6 +54,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedSheetId")
     public String linkedSheetId;
+
     public Form withLinkedSheetId(String linkedSheetId) {
         this.linkedSheetId = linkedSheetId;
         return this;
@@ -62,6 +66,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responderUri")
     public String responderUri;
+
     public Form withResponderUri(String responderUri) {
         this.responderUri = responderUri;
         return this;
@@ -73,6 +78,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public Form withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -84,9 +90,11 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public FormSettings settings;
+
     public Form withSettings(FormSettings settings) {
         this.settings = settings;
         return this;
     }
     
+    public Form(){}
 }

@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Pod - Kubernetes Pod.
+ * Pod - A Kubernetes Pod.
  */
 public class Pod {
     /**
@@ -18,6 +18,7 @@ public class Pod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public Container[] containers;
+
     public Pod withContainers(Container[] containers) {
         this.containers = containers;
         return this;
@@ -29,6 +30,7 @@ public class Pod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public Label[] labels;
+
     public Pod withLabels(Label[] labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class Pod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Pod withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class Pod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ns")
     public String ns;
+
     public Pod withNs(String ns) {
         this.ns = ns;
         return this;
     }
     
+    public Pod(){}
 }

@@ -15,6 +15,7 @@ public class ConfigRuleComplianceFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public ConfigRuleComplianceFilters withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class ConfigRuleComplianceFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRegion")
     public String awsRegion;
+
     public ConfigRuleComplianceFilters withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -31,6 +33,7 @@ public class ConfigRuleComplianceFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceType")
     public ComplianceTypeEnum complianceType;
+
     public ConfigRuleComplianceFilters withComplianceType(ComplianceTypeEnum complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -39,9 +42,11 @@ public class ConfigRuleComplianceFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public ConfigRuleComplianceFilters withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
     }
     
+    public ConfigRuleComplianceFilters(){}
 }

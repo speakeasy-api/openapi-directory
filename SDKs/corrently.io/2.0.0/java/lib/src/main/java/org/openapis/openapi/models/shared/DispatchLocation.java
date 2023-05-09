@@ -15,6 +15,7 @@ public class DispatchLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("energy")
     public Double energy;
+
     public DispatchLocation withEnergy(Double energy) {
         this.energy = energy;
         return this;
@@ -26,9 +27,11 @@ public class DispatchLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public java.util.Map<String, Object> location;
+
     public DispatchLocation withLocation(java.util.Map<String, Object> location) {
         this.location = location;
         return this;
     }
     
+    public DispatchLocation(){}
 }

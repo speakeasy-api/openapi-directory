@@ -77,11 +77,9 @@ public class DirectoryAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBestPodcastsResponse res = new org.openapis.openapi.models.operations.GetBestPodcastsResponse() {{
+        org.openapis.openapi.models.operations.GetBestPodcastsResponse res = new org.openapis.openapi.models.operations.GetBestPodcastsResponse(contentType, httpRes.statusCode()) {{
             bestPodcastsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,11 +128,9 @@ public class DirectoryAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCuratedPodcastByIdResponse res = new org.openapis.openapi.models.operations.GetCuratedPodcastByIdResponse() {{
+        org.openapis.openapi.models.operations.GetCuratedPodcastByIdResponse res = new org.openapis.openapi.models.operations.GetCuratedPodcastByIdResponse(contentType, httpRes.statusCode()) {{
             curatedListFull = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,11 +184,9 @@ public class DirectoryAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCuratedPodcastsResponse res = new org.openapis.openapi.models.operations.GetCuratedPodcastsResponse() {{
+        org.openapis.openapi.models.operations.GetCuratedPodcastsResponse res = new org.openapis.openapi.models.operations.GetCuratedPodcastsResponse(contentType, httpRes.statusCode()) {{
             getCuratedPodcastsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +239,9 @@ public class DirectoryAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEpisodeByIdResponse res = new org.openapis.openapi.models.operations.GetEpisodeByIdResponse() {{
+        org.openapis.openapi.models.operations.GetEpisodeByIdResponse res = new org.openapis.openapi.models.operations.GetEpisodeByIdResponse(contentType, httpRes.statusCode()) {{
             episodeFull = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +294,9 @@ public class DirectoryAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEpisodeRecommendationsResponse res = new org.openapis.openapi.models.operations.GetEpisodeRecommendationsResponse() {{
+        org.openapis.openapi.models.operations.GetEpisodeRecommendationsResponse res = new org.openapis.openapi.models.operations.GetEpisodeRecommendationsResponse(contentType, httpRes.statusCode()) {{
             getEpisodeRecommendationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -359,11 +349,9 @@ public class DirectoryAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEpisodesInBatchResponse res = new org.openapis.openapi.models.operations.GetEpisodesInBatchResponse() {{
+        org.openapis.openapi.models.operations.GetEpisodesInBatchResponse res = new org.openapis.openapi.models.operations.GetEpisodesInBatchResponse(contentType, httpRes.statusCode()) {{
             getEpisodesInBatchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -420,11 +408,9 @@ public class DirectoryAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenresResponse res = new org.openapis.openapi.models.operations.GetGenresResponse() {{
+        org.openapis.openapi.models.operations.GetGenresResponse res = new org.openapis.openapi.models.operations.GetGenresResponse(contentType, httpRes.statusCode()) {{
             getGenresResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -472,11 +458,9 @@ public class DirectoryAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLanguagesResponse res = new org.openapis.openapi.models.operations.GetLanguagesResponse() {{
+        org.openapis.openapi.models.operations.GetLanguagesResponse res = new org.openapis.openapi.models.operations.GetLanguagesResponse(contentType, httpRes.statusCode()) {{
             getLanguagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -531,11 +515,9 @@ public class DirectoryAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPodcastByIdResponse res = new org.openapis.openapi.models.operations.GetPodcastByIdResponse() {{
+        org.openapis.openapi.models.operations.GetPodcastByIdResponse res = new org.openapis.openapi.models.operations.GetPodcastByIdResponse(contentType, httpRes.statusCode()) {{
             podcastFull = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -588,11 +570,9 @@ public class DirectoryAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPodcastRecommendationsResponse res = new org.openapis.openapi.models.operations.GetPodcastRecommendationsResponse() {{
+        org.openapis.openapi.models.operations.GetPodcastRecommendationsResponse res = new org.openapis.openapi.models.operations.GetPodcastRecommendationsResponse(contentType, httpRes.statusCode()) {{
             getPodcastRecommendationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -645,11 +625,9 @@ public class DirectoryAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPodcastsInBatchResponse res = new org.openapis.openapi.models.operations.GetPodcastsInBatchResponse() {{
+        org.openapis.openapi.models.operations.GetPodcastsInBatchResponse res = new org.openapis.openapi.models.operations.GetPodcastsInBatchResponse(contentType, httpRes.statusCode()) {{
             getPodcastsInBatchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -697,11 +675,9 @@ public class DirectoryAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRegionsResponse res = new org.openapis.openapi.models.operations.GetRegionsResponse() {{
+        org.openapis.openapi.models.operations.GetRegionsResponse res = new org.openapis.openapi.models.operations.GetRegionsResponse(contentType, httpRes.statusCode()) {{
             getRegionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -748,11 +724,9 @@ public class DirectoryAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JustListenResponse res = new org.openapis.openapi.models.operations.JustListenResponse() {{
+        org.openapis.openapi.models.operations.JustListenResponse res = new org.openapis.openapi.models.operations.JustListenResponse(contentType, httpRes.statusCode()) {{
             episodeSimple = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

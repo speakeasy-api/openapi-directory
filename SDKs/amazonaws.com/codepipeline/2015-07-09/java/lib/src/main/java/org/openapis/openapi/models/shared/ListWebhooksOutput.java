@@ -15,6 +15,7 @@ public class ListWebhooksOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListWebhooksOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListWebhooksOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhooks")
     public ListWebhookItem[] webhooks;
+
     public ListWebhooksOutput withWebhooks(ListWebhookItem[] webhooks) {
         this.webhooks = webhooks;
         return this;
     }
     
+    public ListWebhooksOutput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportRequest {
@@ -12,6 +13,7 @@ public class ExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file")
     public String file;
+
     public ExportRequest withFile(String file) {
         this.file = file;
         return this;
@@ -22,9 +24,14 @@ public class ExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fmt")
     public ExportFmtEnum fmt;
+
     public ExportRequest withFmt(ExportFmtEnum fmt) {
         this.fmt = fmt;
         return this;
     }
     
+    public ExportRequest(@JsonProperty("file") String file, @JsonProperty("fmt") ExportFmtEnum fmt) {
+        this.file = file;
+        this.fmt = fmt;
+  }
 }

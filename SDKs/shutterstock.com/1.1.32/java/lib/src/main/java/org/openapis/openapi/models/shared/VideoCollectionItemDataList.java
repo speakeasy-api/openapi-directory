@@ -18,6 +18,7 @@ public class VideoCollectionItemDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CollectionItem[] data;
+
     public VideoCollectionItemDataList withData(CollectionItem[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class VideoCollectionItemDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public VideoCollectionItemDataList withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -40,6 +42,7 @@ public class VideoCollectionItemDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public VideoCollectionItemDataList withMessage(String message) {
         this.message = message;
         return this;
@@ -51,6 +54,7 @@ public class VideoCollectionItemDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public VideoCollectionItemDataList withPage(Long page) {
         this.page = page;
         return this;
@@ -62,6 +66,7 @@ public class VideoCollectionItemDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public VideoCollectionItemDataList withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -73,9 +78,11 @@ public class VideoCollectionItemDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_count")
     public Long totalCount;
+
     public VideoCollectionItemDataList withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public VideoCollectionItemDataList(){}
 }

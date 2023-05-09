@@ -16,9 +16,11 @@ public class DestinyChallengesDestinyChallengeStatus {
      */
     
     public DestinyChallengesDestinyChallengeStatusObjective objective;
+
     public DestinyChallengesDestinyChallengeStatus withObjective(DestinyChallengesDestinyChallengeStatusObjective objective) {
         this.objective = objective;
         return this;
     }
     
+    public DestinyChallengesDestinyChallengeStatus(){}
 }

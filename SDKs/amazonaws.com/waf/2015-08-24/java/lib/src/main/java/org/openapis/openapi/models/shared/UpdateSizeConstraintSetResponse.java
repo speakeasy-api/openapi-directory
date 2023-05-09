@@ -15,9 +15,11 @@ public class UpdateSizeConstraintSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public UpdateSizeConstraintSetResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
     }
     
+    public UpdateSizeConstraintSetResponse(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SearchCasesResponseItem {
     @JsonProperty("caseId")
     public String caseId;
+
     public SearchCasesResponseItem withCaseId(String caseId) {
         this.caseId = caseId;
         return this;
@@ -21,6 +22,7 @@ public class SearchCasesResponseItem {
     
     @JsonProperty("fields")
     public FieldValue[] fields;
+
     public SearchCasesResponseItem withFields(FieldValue[] fields) {
         this.fields = fields;
         return this;
@@ -29,6 +31,7 @@ public class SearchCasesResponseItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public SearchCasesResponseItem withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -36,9 +39,15 @@ public class SearchCasesResponseItem {
     
     @JsonProperty("templateId")
     public String templateId;
+
     public SearchCasesResponseItem withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public SearchCasesResponseItem(@JsonProperty("caseId") String caseId, @JsonProperty("fields") FieldValue[] fields, @JsonProperty("templateId") String templateId) {
+        this.caseId = caseId;
+        this.fields = fields;
+        this.templateId = templateId;
+  }
 }

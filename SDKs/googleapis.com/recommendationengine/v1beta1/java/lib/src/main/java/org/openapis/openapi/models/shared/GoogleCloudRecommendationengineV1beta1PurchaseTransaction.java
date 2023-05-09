@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1PurchaseTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costs")
     public java.util.Map<String, Float> costs;
+
     public GoogleCloudRecommendationengineV1beta1PurchaseTransaction withCosts(java.util.Map<String, Float> costs) {
         this.costs = costs;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecommendationengineV1beta1PurchaseTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public GoogleCloudRecommendationengineV1beta1PurchaseTransaction withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecommendationengineV1beta1PurchaseTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudRecommendationengineV1beta1PurchaseTransaction withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecommendationengineV1beta1PurchaseTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revenue")
     public Float revenue;
+
     public GoogleCloudRecommendationengineV1beta1PurchaseTransaction withRevenue(Float revenue) {
         this.revenue = revenue;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudRecommendationengineV1beta1PurchaseTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxes")
     public java.util.Map<String, Float> taxes;
+
     public GoogleCloudRecommendationengineV1beta1PurchaseTransaction withTaxes(java.util.Map<String, Float> taxes) {
         this.taxes = taxes;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1PurchaseTransaction(){}
 }

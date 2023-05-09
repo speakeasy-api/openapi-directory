@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteCustomActionTypeInput {
     @JsonProperty("category")
     public ActionCategoryEnum category;
+
     public DeleteCustomActionTypeInput withCategory(ActionCategoryEnum category) {
         this.category = category;
         return this;
@@ -19,6 +20,7 @@ public class DeleteCustomActionTypeInput {
     
     @JsonProperty("provider")
     public String provider;
+
     public DeleteCustomActionTypeInput withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -26,9 +28,15 @@ public class DeleteCustomActionTypeInput {
     
     @JsonProperty("version")
     public String version;
+
     public DeleteCustomActionTypeInput withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DeleteCustomActionTypeInput(@JsonProperty("category") ActionCategoryEnum category, @JsonProperty("provider") String provider, @JsonProperty("version") String version) {
+        this.category = category;
+        this.provider = provider;
+        this.version = version;
+  }
 }

@@ -21,6 +21,7 @@ public class StepExecutionStatusDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public StepExecutionStatusDetail withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -31,6 +32,7 @@ public class StepExecutionStatusDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndDateTime")
     public OffsetDateTime endDateTime;
+
     public StepExecutionStatusDetail withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -39,6 +41,7 @@ public class StepExecutionStatusDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastStateChangeReason")
     public String lastStateChangeReason;
+
     public StepExecutionStatusDetail withLastStateChangeReason(String lastStateChangeReason) {
         this.lastStateChangeReason = lastStateChangeReason;
         return this;
@@ -49,6 +52,7 @@ public class StepExecutionStatusDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartDateTime")
     public OffsetDateTime startDateTime;
+
     public StepExecutionStatusDetail withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -56,9 +60,14 @@ public class StepExecutionStatusDetail {
     
     @JsonProperty("State")
     public StepExecutionStateEnum state;
+
     public StepExecutionStatusDetail withState(StepExecutionStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public StepExecutionStatusDetail(@JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("State") StepExecutionStateEnum state) {
+        this.creationDateTime = creationDateTime;
+        this.state = state;
+  }
 }

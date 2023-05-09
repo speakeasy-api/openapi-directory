@@ -15,9 +15,13 @@ public class Queue {
      */
     @JsonProperty("name")
     public String name;
+
     public Queue withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Queue(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

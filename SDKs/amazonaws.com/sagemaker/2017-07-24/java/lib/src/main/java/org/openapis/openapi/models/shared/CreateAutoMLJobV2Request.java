@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAutoMLJobV2Request {
     @JsonProperty("AutoMLJobInputDataConfig")
     public AutoMLJobChannel[] autoMLJobInputDataConfig;
+
     public CreateAutoMLJobV2Request withAutoMLJobInputDataConfig(AutoMLJobChannel[] autoMLJobInputDataConfig) {
         this.autoMLJobInputDataConfig = autoMLJobInputDataConfig;
         return this;
@@ -18,6 +19,7 @@ public class CreateAutoMLJobV2Request {
     
     @JsonProperty("AutoMLJobName")
     public String autoMLJobName;
+
     public CreateAutoMLJobV2Request withAutoMLJobName(String autoMLJobName) {
         this.autoMLJobName = autoMLJobName;
         return this;
@@ -26,6 +28,7 @@ public class CreateAutoMLJobV2Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLJobObjective")
     public AutoMLJobObjective autoMLJobObjective;
+
     public CreateAutoMLJobV2Request withAutoMLJobObjective(AutoMLJobObjective autoMLJobObjective) {
         this.autoMLJobObjective = autoMLJobObjective;
         return this;
@@ -33,6 +36,7 @@ public class CreateAutoMLJobV2Request {
     
     @JsonProperty("AutoMLProblemTypeConfig")
     public AutoMLProblemTypeConfig autoMLProblemTypeConfig;
+
     public CreateAutoMLJobV2Request withAutoMLProblemTypeConfig(AutoMLProblemTypeConfig autoMLProblemTypeConfig) {
         this.autoMLProblemTypeConfig = autoMLProblemTypeConfig;
         return this;
@@ -41,6 +45,7 @@ public class CreateAutoMLJobV2Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSplitConfig")
     public AutoMLDataSplitConfig dataSplitConfig;
+
     public CreateAutoMLJobV2Request withDataSplitConfig(AutoMLDataSplitConfig dataSplitConfig) {
         this.dataSplitConfig = dataSplitConfig;
         return this;
@@ -49,6 +54,7 @@ public class CreateAutoMLJobV2Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelDeployConfig")
     public ModelDeployConfig modelDeployConfig;
+
     public CreateAutoMLJobV2Request withModelDeployConfig(ModelDeployConfig modelDeployConfig) {
         this.modelDeployConfig = modelDeployConfig;
         return this;
@@ -56,6 +62,7 @@ public class CreateAutoMLJobV2Request {
     
     @JsonProperty("OutputDataConfig")
     public AutoMLOutputDataConfig outputDataConfig;
+
     public CreateAutoMLJobV2Request withOutputDataConfig(AutoMLOutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -63,6 +70,7 @@ public class CreateAutoMLJobV2Request {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateAutoMLJobV2Request withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -71,6 +79,7 @@ public class CreateAutoMLJobV2Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfig")
     public AutoMLSecurityConfig securityConfig;
+
     public CreateAutoMLJobV2Request withSecurityConfig(AutoMLSecurityConfig securityConfig) {
         this.securityConfig = securityConfig;
         return this;
@@ -79,9 +88,17 @@ public class CreateAutoMLJobV2Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateAutoMLJobV2Request withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAutoMLJobV2Request(@JsonProperty("AutoMLJobInputDataConfig") AutoMLJobChannel[] autoMLJobInputDataConfig, @JsonProperty("AutoMLJobName") String autoMLJobName, @JsonProperty("AutoMLProblemTypeConfig") AutoMLProblemTypeConfig autoMLProblemTypeConfig, @JsonProperty("OutputDataConfig") AutoMLOutputDataConfig outputDataConfig, @JsonProperty("RoleArn") String roleArn) {
+        this.autoMLJobInputDataConfig = autoMLJobInputDataConfig;
+        this.autoMLJobName = autoMLJobName;
+        this.autoMLProblemTypeConfig = autoMLProblemTypeConfig;
+        this.outputDataConfig = outputDataConfig;
+        this.roleArn = roleArn;
+  }
 }

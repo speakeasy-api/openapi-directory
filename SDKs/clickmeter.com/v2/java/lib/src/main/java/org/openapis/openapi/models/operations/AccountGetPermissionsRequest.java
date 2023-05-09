@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountGetPermissionsRequest {
@@ -12,6 +13,7 @@ public class AccountGetPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entityId")
     public Long entityId;
+
     public AccountGetPermissionsRequest withEntityId(Long entityId) {
         this.entityId = entityId;
         return this;
@@ -22,6 +24,7 @@ public class AccountGetPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entityType")
     public AccountGetPermissionsEntityTypeEnum entityType;
+
     public AccountGetPermissionsRequest withEntityType(AccountGetPermissionsEntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -32,6 +35,7 @@ public class AccountGetPermissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
     public Long guestId;
+
     public AccountGetPermissionsRequest withGuestId(Long guestId) {
         this.guestId = guestId;
         return this;
@@ -42,6 +46,7 @@ public class AccountGetPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public AccountGetPermissionsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -52,6 +57,7 @@ public class AccountGetPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public AccountGetPermissionsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -62,9 +68,13 @@ public class AccountGetPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public AccountGetPermissionsTypeEnum type;
+
     public AccountGetPermissionsRequest withType(AccountGetPermissionsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AccountGetPermissionsRequest(@JsonProperty("guestId") Long guestId) {
+        this.guestId = guestId;
+  }
 }

@@ -23,6 +23,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public String createdBy;
+
     public Report withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -34,6 +35,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_checks_count")
     public Long createdChecksCount;
+
     public Report withCreatedChecksCount(Long createdChecksCount) {
         this.createdChecksCount = createdChecksCount;
         return this;
@@ -46,6 +48,7 @@ public class Report {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creation_date")
     public OffsetDateTime creationDate;
+
     public Report withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -57,6 +60,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_data")
     public Boolean hasData;
+
     public Report withHasData(Boolean hasData) {
         this.hasData = hasData;
         return this;
@@ -67,6 +71,7 @@ public class Report {
      */
     @JsonProperty("id")
     public String id;
+
     public Report withId(String id) {
         this.id = id;
         return this;
@@ -78,6 +83,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalid_checks_count")
     public Long invalidChecksCount;
+
     public Report withInvalidChecksCount(Long invalidChecksCount) {
         this.invalidChecksCount = invalidChecksCount;
         return this;
@@ -88,6 +94,7 @@ public class Report {
      */
     @JsonProperty("name")
     public String name;
+
     public Report withName(String name) {
         this.name = name;
         return this;
@@ -99,6 +106,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public Report withSize(Long size) {
         this.size = size;
         return this;
@@ -111,9 +119,16 @@ public class Report {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("update_date")
     public OffsetDateTime updateDate;
+
     public Report withUpdateDate(OffsetDateTime updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public Report(@JsonProperty("creation_date") OffsetDateTime creationDate, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("update_date") OffsetDateTime updateDate) {
+        this.creationDate = creationDate;
+        this.id = id;
+        this.name = name;
+        this.updateDate = updateDate;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchDocumentRequest {
@@ -12,6 +13,7 @@ public class PatchDocumentRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatchesSchema[] requestBody;
+
     public PatchDocumentRequest withRequestBody(org.openapis.openapi.models.shared.PatchesSchema[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class PatchDocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public PatchDocumentRequest withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public PatchDocumentRequest(@JsonProperty("RequestBody") org.openapis.openapi.models.shared.PatchesSchema[] requestBody, @JsonProperty("path") String path) {
+        this.requestBody = requestBody;
+        this.path = path;
+  }
 }

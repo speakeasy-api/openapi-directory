@@ -20,6 +20,7 @@ public class StopMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public StopMigrationWorkflowResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class StopMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public StopMigrationWorkflowResponse withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class StopMigrationWorkflowResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStopTime")
     public OffsetDateTime lastStopTime;
+
     public StopMigrationWorkflowResponse withLastStopTime(OffsetDateTime lastStopTime) {
         this.lastStopTime = lastStopTime;
         return this;
@@ -46,6 +49,7 @@ public class StopMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public MigrationWorkflowStatusEnumEnum status;
+
     public StopMigrationWorkflowResponse withStatus(MigrationWorkflowStatusEnumEnum status) {
         this.status = status;
         return this;
@@ -54,9 +58,11 @@ public class StopMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public StopMigrationWorkflowResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public StopMigrationWorkflowResponse(){}
 }

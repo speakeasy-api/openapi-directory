@@ -15,6 +15,7 @@ public class UpdateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateResult withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class UpdateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateAvailable")
     public Boolean updateAvailable;
+
     public UpdateResult withUpdateAvailable(Boolean updateAvailable) {
         this.updateAvailable = updateAvailable;
         return this;
     }
     
+    public UpdateResult(){}
 }

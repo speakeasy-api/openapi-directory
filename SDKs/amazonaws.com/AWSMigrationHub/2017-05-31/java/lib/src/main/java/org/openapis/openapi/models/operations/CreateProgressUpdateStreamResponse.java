@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateProgressUpdateStreamResponse {
@@ -12,6 +13,7 @@ public class CreateProgressUpdateStreamResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateProgressUpdateStreamResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateProgressUpdateStreamResponse {
     
     
     public String contentType;
+
     public CreateProgressUpdateStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateProgressUpdateStreamResponse {
      */
     
     public java.util.Map<String, Object> createProgressUpdateStreamResult;
+
     public CreateProgressUpdateStreamResponse withCreateProgressUpdateStreamResult(java.util.Map<String, Object> createProgressUpdateStreamResult) {
         this.createProgressUpdateStreamResult = createProgressUpdateStreamResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateProgressUpdateStreamResponse {
      */
     
     public Object dryRunOperation;
+
     public CreateProgressUpdateStreamResponse withDryRunOperation(Object dryRunOperation) {
         this.dryRunOperation = dryRunOperation;
         return this;
@@ -49,6 +54,7 @@ public class CreateProgressUpdateStreamResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public CreateProgressUpdateStreamResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -59,6 +65,7 @@ public class CreateProgressUpdateStreamResponse {
      */
     
     public Object internalServerError;
+
     public CreateProgressUpdateStreamResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class CreateProgressUpdateStreamResponse {
      */
     
     public Object invalidInputException;
+
     public CreateProgressUpdateStreamResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -76,6 +84,7 @@ public class CreateProgressUpdateStreamResponse {
     
     
     public Integer statusCode;
+
     public CreateProgressUpdateStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateProgressUpdateStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateProgressUpdateStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateProgressUpdateStreamResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateProgressUpdateStreamResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,6 +114,7 @@ public class CreateProgressUpdateStreamResponse {
      */
     
     public Object throttlingException;
+
     public CreateProgressUpdateStreamResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class CreateProgressUpdateStreamResponse {
      */
     
     public Object unauthorizedOperation;
+
     public CreateProgressUpdateStreamResponse withUnauthorizedOperation(Object unauthorizedOperation) {
         this.unauthorizedOperation = unauthorizedOperation;
         return this;
     }
     
+    public CreateProgressUpdateStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

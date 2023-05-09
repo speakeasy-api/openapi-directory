@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishIterationRequest {
@@ -12,6 +13,7 @@ public class PublishIterationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public PublishIterationRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -22,6 +24,7 @@ public class PublishIterationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iterationId")
     public String iterationId;
+
     public PublishIterationRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -32,6 +35,7 @@ public class PublishIterationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=predictionId")
     public String predictionId;
+
     public PublishIterationRequest withPredictionId(String predictionId) {
         this.predictionId = predictionId;
         return this;
@@ -42,6 +46,7 @@ public class PublishIterationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public PublishIterationRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -52,9 +57,17 @@ public class PublishIterationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publishName")
     public String publishName;
+
     public PublishIterationRequest withPublishName(String publishName) {
         this.publishName = publishName;
         return this;
     }
     
+    public PublishIterationRequest(@JsonProperty("Training-Key") String trainingKey, @JsonProperty("iterationId") String iterationId, @JsonProperty("predictionId") String predictionId, @JsonProperty("projectId") String projectId, @JsonProperty("publishName") String publishName) {
+        this.trainingKey = trainingKey;
+        this.iterationId = iterationId;
+        this.predictionId = predictionId;
+        this.projectId = projectId;
+        this.publishName = publishName;
+  }
 }

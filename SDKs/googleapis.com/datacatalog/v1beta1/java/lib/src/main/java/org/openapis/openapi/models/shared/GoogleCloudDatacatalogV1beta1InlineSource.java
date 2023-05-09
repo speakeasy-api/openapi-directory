@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1beta1InlineSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxonomies")
     public GoogleCloudDatacatalogV1beta1SerializedTaxonomy[] taxonomies;
+
     public GoogleCloudDatacatalogV1beta1InlineSource withTaxonomies(GoogleCloudDatacatalogV1beta1SerializedTaxonomy[] taxonomies) {
         this.taxonomies = taxonomies;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1InlineSource(){}
 }

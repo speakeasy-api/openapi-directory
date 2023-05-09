@@ -12,6 +12,7 @@ public class DeleteColumnStatisticsForPartitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public DeleteColumnStatisticsForPartitionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteColumnStatisticsForPartitionRequest {
     
     @JsonProperty("ColumnName")
     public String columnName;
+
     public DeleteColumnStatisticsForPartitionRequest withColumnName(String columnName) {
         this.columnName = columnName;
         return this;
@@ -26,6 +28,7 @@ public class DeleteColumnStatisticsForPartitionRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DeleteColumnStatisticsForPartitionRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -33,6 +36,7 @@ public class DeleteColumnStatisticsForPartitionRequest {
     
     @JsonProperty("PartitionValues")
     public String[] partitionValues;
+
     public DeleteColumnStatisticsForPartitionRequest withPartitionValues(String[] partitionValues) {
         this.partitionValues = partitionValues;
         return this;
@@ -40,9 +44,16 @@ public class DeleteColumnStatisticsForPartitionRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public DeleteColumnStatisticsForPartitionRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DeleteColumnStatisticsForPartitionRequest(@JsonProperty("ColumnName") String columnName, @JsonProperty("DatabaseName") String databaseName, @JsonProperty("PartitionValues") String[] partitionValues, @JsonProperty("TableName") String tableName) {
+        this.columnName = columnName;
+        this.databaseName = databaseName;
+        this.partitionValues = partitionValues;
+        this.tableName = tableName;
+  }
 }

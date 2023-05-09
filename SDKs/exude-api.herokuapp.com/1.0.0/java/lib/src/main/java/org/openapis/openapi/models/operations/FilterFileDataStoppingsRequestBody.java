@@ -12,9 +12,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FilterFileDataStoppingsRequestBody {
     @SpeakeasyMetadata("multipartForm:file")
     public FilterFileDataStoppingsRequestBodyFile file;
+
     public FilterFileDataStoppingsRequestBody withFile(FilterFileDataStoppingsRequestBodyFile file) {
         this.file = file;
         return this;
     }
     
+    public FilterFileDataStoppingsRequestBody(){}
 }

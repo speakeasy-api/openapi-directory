@@ -15,6 +15,7 @@ public class GetSampledRequestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PopulationSize")
     public Long populationSize;
+
     public GetSampledRequestsResponse withPopulationSize(Long populationSize) {
         this.populationSize = populationSize;
         return this;
@@ -23,6 +24,7 @@ public class GetSampledRequestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SampledRequests")
     public SampledHTTPRequest[] sampledRequests;
+
     public GetSampledRequestsResponse withSampledRequests(SampledHTTPRequest[] sampledRequests) {
         this.sampledRequests = sampledRequests;
         return this;
@@ -31,9 +33,11 @@ public class GetSampledRequestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeWindow")
     public TimeWindow timeWindow;
+
     public GetSampledRequestsResponse withTimeWindow(TimeWindow timeWindow) {
         this.timeWindow = timeWindow;
         return this;
     }
     
+    public GetSampledRequestsResponse(){}
 }

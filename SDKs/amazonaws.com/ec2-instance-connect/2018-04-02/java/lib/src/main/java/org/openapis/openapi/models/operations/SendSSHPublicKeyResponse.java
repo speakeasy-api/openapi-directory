@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendSSHPublicKeyResponse {
@@ -12,6 +13,7 @@ public class SendSSHPublicKeyResponse {
      */
     
     public Object authException;
+
     public SendSSHPublicKeyResponse withAuthException(Object authException) {
         this.authException = authException;
         return this;
@@ -19,6 +21,7 @@ public class SendSSHPublicKeyResponse {
     
     
     public String contentType;
+
     public SendSSHPublicKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SendSSHPublicKeyResponse {
      */
     
     public Object ec2InstanceNotFoundException;
+
     public SendSSHPublicKeyResponse withEc2InstanceNotFoundException(Object ec2InstanceNotFoundException) {
         this.ec2InstanceNotFoundException = ec2InstanceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class SendSSHPublicKeyResponse {
      */
     
     public Object ec2InstanceStateInvalidException;
+
     public SendSSHPublicKeyResponse withEc2InstanceStateInvalidException(Object ec2InstanceStateInvalidException) {
         this.ec2InstanceStateInvalidException = ec2InstanceStateInvalidException;
         return this;
@@ -49,6 +54,7 @@ public class SendSSHPublicKeyResponse {
      */
     
     public Object ec2InstanceUnavailableException;
+
     public SendSSHPublicKeyResponse withEc2InstanceUnavailableException(Object ec2InstanceUnavailableException) {
         this.ec2InstanceUnavailableException = ec2InstanceUnavailableException;
         return this;
@@ -59,6 +65,7 @@ public class SendSSHPublicKeyResponse {
      */
     
     public Object invalidArgsException;
+
     public SendSSHPublicKeyResponse withInvalidArgsException(Object invalidArgsException) {
         this.invalidArgsException = invalidArgsException;
         return this;
@@ -69,6 +76,7 @@ public class SendSSHPublicKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.SendSSHPublicKeyResponse sendSSHPublicKeyResponse;
+
     public SendSSHPublicKeyResponse withSendSSHPublicKeyResponse(org.openapis.openapi.models.shared.SendSSHPublicKeyResponse sendSSHPublicKeyResponse) {
         this.sendSSHPublicKeyResponse = sendSSHPublicKeyResponse;
         return this;
@@ -76,6 +84,7 @@ public class SendSSHPublicKeyResponse {
     
     
     public Integer statusCode;
+
     public SendSSHPublicKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class SendSSHPublicKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendSSHPublicKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class SendSSHPublicKeyResponse {
      */
     
     public Object serviceException;
+
     public SendSSHPublicKeyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -103,9 +114,14 @@ public class SendSSHPublicKeyResponse {
      */
     
     public Object throttlingException;
+
     public SendSSHPublicKeyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public SendSSHPublicKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

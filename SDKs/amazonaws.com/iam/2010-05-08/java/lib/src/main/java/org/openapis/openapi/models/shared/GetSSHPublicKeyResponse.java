@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetSSHPublicKeyResponse {
     
     public SSHPublicKey sshPublicKey;
+
     public GetSSHPublicKeyResponse withSSHPublicKey(SSHPublicKey sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
     }
     
+    public GetSSHPublicKeyResponse(){}
 }

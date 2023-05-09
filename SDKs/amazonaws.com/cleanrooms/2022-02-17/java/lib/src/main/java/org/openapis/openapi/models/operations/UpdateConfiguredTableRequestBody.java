@@ -15,6 +15,7 @@ public class UpdateConfiguredTableRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateConfiguredTableRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class UpdateConfiguredTableRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateConfiguredTableRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateConfiguredTableRequestBody(){}
 }

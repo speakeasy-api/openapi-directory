@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementUnsampledReportsGetRequest {
@@ -12,6 +13,7 @@ public class AnalyticsManagementUnsampledReportsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AnalyticsManagementUnsampledReportsGetRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsManagementUnsampledReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsManagementUnsampledReportsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +35,7 @@ public class AnalyticsManagementUnsampledReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsManagementUnsampledReportsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class AnalyticsManagementUnsampledReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsManagementUnsampledReportsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class AnalyticsManagementUnsampledReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsManagementUnsampledReportsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +68,7 @@ public class AnalyticsManagementUnsampledReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsManagementUnsampledReportsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -72,6 +79,7 @@ public class AnalyticsManagementUnsampledReportsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public AnalyticsManagementUnsampledReportsGetRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -82,6 +90,7 @@ public class AnalyticsManagementUnsampledReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsManagementUnsampledReportsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,6 +101,7 @@ public class AnalyticsManagementUnsampledReportsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=unsampledReportId")
     public String unsampledReportId;
+
     public AnalyticsManagementUnsampledReportsGetRequest withUnsampledReportId(String unsampledReportId) {
         this.unsampledReportId = unsampledReportId;
         return this;
@@ -102,6 +112,7 @@ public class AnalyticsManagementUnsampledReportsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AnalyticsManagementUnsampledReportsGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -112,9 +123,16 @@ public class AnalyticsManagementUnsampledReportsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
     public String webPropertyId;
+
     public AnalyticsManagementUnsampledReportsGetRequest withWebPropertyId(String webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public AnalyticsManagementUnsampledReportsGetRequest(@JsonProperty("accountId") String accountId, @JsonProperty("profileId") String profileId, @JsonProperty("unsampledReportId") String unsampledReportId, @JsonProperty("webPropertyId") String webPropertyId) {
+        this.accountId = accountId;
+        this.profileId = profileId;
+        this.unsampledReportId = unsampledReportId;
+        this.webPropertyId = webPropertyId;
+  }
 }

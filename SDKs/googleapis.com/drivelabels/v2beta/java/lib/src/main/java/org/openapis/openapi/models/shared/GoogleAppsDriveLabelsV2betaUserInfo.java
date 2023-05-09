@@ -18,9 +18,11 @@ public class GoogleAppsDriveLabelsV2betaUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("person")
     public String person;
+
     public GoogleAppsDriveLabelsV2betaUserInfo withPerson(String person) {
         this.person = person;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaUserInfo(){}
 }

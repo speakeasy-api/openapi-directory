@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListFlowExecutionMessagesRequest {
     @JsonProperty("flowExecutionId")
     public String flowExecutionId;
+
     public ListFlowExecutionMessagesRequest withFlowExecutionId(String flowExecutionId) {
         this.flowExecutionId = flowExecutionId;
         return this;
@@ -19,6 +20,7 @@ public class ListFlowExecutionMessagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListFlowExecutionMessagesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListFlowExecutionMessagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFlowExecutionMessagesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFlowExecutionMessagesRequest(@JsonProperty("flowExecutionId") String flowExecutionId) {
+        this.flowExecutionId = flowExecutionId;
+  }
 }

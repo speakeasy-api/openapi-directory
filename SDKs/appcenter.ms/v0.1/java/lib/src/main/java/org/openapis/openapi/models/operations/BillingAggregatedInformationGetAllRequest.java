@@ -12,6 +12,7 @@ public class BillingAggregatedInformationGetAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
     public BillingAggregatedInformationGetAllPeriodEnum period;
+
     public BillingAggregatedInformationGetAllRequest withPeriod(BillingAggregatedInformationGetAllPeriodEnum period) {
         this.period = period;
         return this;
@@ -22,6 +23,7 @@ public class BillingAggregatedInformationGetAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
     public BillingAggregatedInformationGetAllServiceEnum service;
+
     public BillingAggregatedInformationGetAllRequest withService(BillingAggregatedInformationGetAllServiceEnum service) {
         this.service = service;
         return this;
@@ -32,9 +34,11 @@ public class BillingAggregatedInformationGetAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showOriginalPlans")
     public Boolean showOriginalPlans;
+
     public BillingAggregatedInformationGetAllRequest withShowOriginalPlans(Boolean showOriginalPlans) {
         this.showOriginalPlans = showOriginalPlans;
         return this;
     }
     
+    public BillingAggregatedInformationGetAllRequest(){}
 }

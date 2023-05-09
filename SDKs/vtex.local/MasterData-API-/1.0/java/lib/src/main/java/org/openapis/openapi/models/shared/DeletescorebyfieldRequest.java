@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeletescorebyfieldRequest {
     @JsonProperty("key")
     public String key;
+
     public DeletescorebyfieldRequest withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public DeletescorebyfieldRequest(@JsonProperty("key") String key) {
+        this.key = key;
+  }
 }

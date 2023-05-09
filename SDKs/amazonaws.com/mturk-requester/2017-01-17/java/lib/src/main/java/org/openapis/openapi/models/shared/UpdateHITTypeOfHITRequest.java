@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateHITTypeOfHITRequest {
     @JsonProperty("HITId")
     public String hitId;
+
     public UpdateHITTypeOfHITRequest withHITId(String hitId) {
         this.hitId = hitId;
         return this;
@@ -16,9 +17,14 @@ public class UpdateHITTypeOfHITRequest {
     
     @JsonProperty("HITTypeId")
     public String hitTypeId;
+
     public UpdateHITTypeOfHITRequest withHITTypeId(String hitTypeId) {
         this.hitTypeId = hitTypeId;
         return this;
     }
     
+    public UpdateHITTypeOfHITRequest(@JsonProperty("HITId") String hitId, @JsonProperty("HITTypeId") String hitTypeId) {
+        this.hitId = hitId;
+        this.hitTypeId = hitTypeId;
+  }
 }

@@ -21,6 +21,7 @@ public class BatchResponseSubscriptionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completedAt")
     public OffsetDateTime completedAt;
+
     public BatchResponseSubscriptionResponse withCompletedAt(OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -29,6 +30,7 @@ public class BatchResponseSubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public java.util.Map<String, String> links;
+
     public BatchResponseSubscriptionResponse withLinks(java.util.Map<String, String> links) {
         this.links = links;
         return this;
@@ -39,6 +41,7 @@ public class BatchResponseSubscriptionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("requestedAt")
     public OffsetDateTime requestedAt;
+
     public BatchResponseSubscriptionResponse withRequestedAt(OffsetDateTime requestedAt) {
         this.requestedAt = requestedAt;
         return this;
@@ -46,6 +49,7 @@ public class BatchResponseSubscriptionResponse {
     
     @JsonProperty("results")
     public SubscriptionResponse[] results;
+
     public BatchResponseSubscriptionResponse withResults(SubscriptionResponse[] results) {
         this.results = results;
         return this;
@@ -55,6 +59,7 @@ public class BatchResponseSubscriptionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedAt")
     public OffsetDateTime startedAt;
+
     public BatchResponseSubscriptionResponse withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -62,9 +67,16 @@ public class BatchResponseSubscriptionResponse {
     
     @JsonProperty("status")
     public BatchResponseSubscriptionResponseStatusEnum status;
+
     public BatchResponseSubscriptionResponse withStatus(BatchResponseSubscriptionResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public BatchResponseSubscriptionResponse(@JsonProperty("completedAt") OffsetDateTime completedAt, @JsonProperty("results") SubscriptionResponse[] results, @JsonProperty("startedAt") OffsetDateTime startedAt, @JsonProperty("status") BatchResponseSubscriptionResponseStatusEnum status) {
+        this.completedAt = completedAt;
+        this.results = results;
+        this.startedAt = startedAt;
+        this.status = status;
+  }
 }

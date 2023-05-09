@@ -18,6 +18,7 @@ public class Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionValues")
     public DimensionValue[] dimensionValues;
+
     public Row withDimensionValues(DimensionValue[] dimensionValues) {
         this.dimensionValues = dimensionValues;
         return this;
@@ -29,9 +30,11 @@ public class Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricValues")
     public MetricValue[] metricValues;
+
     public Row withMetricValues(MetricValue[] metricValues) {
         this.metricValues = metricValues;
         return this;
     }
     
+    public Row(){}
 }

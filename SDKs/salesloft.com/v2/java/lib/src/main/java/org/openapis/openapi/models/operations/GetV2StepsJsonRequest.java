@@ -12,6 +12,7 @@ public class GetV2StepsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cadence_id")
     public Long cadenceId;
+
     public GetV2StepsJsonRequest withCadenceId(Long cadenceId) {
         this.cadenceId = cadenceId;
         return this;
@@ -22,6 +23,7 @@ public class GetV2StepsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_due_actions")
     public Boolean hasDueActions;
+
     public GetV2StepsJsonRequest withHasDueActions(Boolean hasDueActions) {
         this.hasDueActions = hasDueActions;
         return this;
@@ -32,6 +34,7 @@ public class GetV2StepsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2StepsJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -42,6 +45,7 @@ public class GetV2StepsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2StepsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -52,6 +56,7 @@ public class GetV2StepsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2StepsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -62,6 +67,7 @@ public class GetV2StepsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2StepsJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -72,6 +78,7 @@ public class GetV2StepsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2StepsJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -82,6 +89,7 @@ public class GetV2StepsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2StepsJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -92,6 +100,7 @@ public class GetV2StepsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2StepsJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -102,9 +111,11 @@ public class GetV2StepsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public GetV2StepsJsonRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetV2StepsJsonRequest(){}
 }

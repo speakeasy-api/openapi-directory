@@ -18,6 +18,7 @@ public class CustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomField withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class CustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CustomField withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CustomField(){}
 }

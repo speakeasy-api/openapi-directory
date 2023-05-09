@@ -12,6 +12,7 @@ public class PostLocationsRequestBodyCoordinates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public PostLocationsRequestBodyCoordinates withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -20,9 +21,11 @@ public class PostLocationsRequestBodyCoordinates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public PostLocationsRequestBodyCoordinates withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public PostLocationsRequestBodyCoordinates(){}
 }

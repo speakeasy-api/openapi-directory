@@ -12,6 +12,7 @@ public class ReviewDismissedIssueEventDismissedReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dismissal_commit_id")
     public String dismissalCommitId;
+
     public ReviewDismissedIssueEventDismissedReview withDismissalCommitId(String dismissalCommitId) {
         this.dismissalCommitId = dismissalCommitId;
         return this;
@@ -19,6 +20,7 @@ public class ReviewDismissedIssueEventDismissedReview {
     
     @JsonProperty("dismissal_message")
     public String dismissalMessage;
+
     public ReviewDismissedIssueEventDismissedReview withDismissalMessage(String dismissalMessage) {
         this.dismissalMessage = dismissalMessage;
         return this;
@@ -26,6 +28,7 @@ public class ReviewDismissedIssueEventDismissedReview {
     
     @JsonProperty("review_id")
     public Long reviewId;
+
     public ReviewDismissedIssueEventDismissedReview withReviewId(Long reviewId) {
         this.reviewId = reviewId;
         return this;
@@ -33,9 +36,15 @@ public class ReviewDismissedIssueEventDismissedReview {
     
     @JsonProperty("state")
     public String state;
+
     public ReviewDismissedIssueEventDismissedReview withState(String state) {
         this.state = state;
         return this;
     }
     
+    public ReviewDismissedIssueEventDismissedReview(@JsonProperty("dismissal_message") String dismissalMessage, @JsonProperty("review_id") Long reviewId, @JsonProperty("state") String state) {
+        this.dismissalMessage = dismissalMessage;
+        this.reviewId = reviewId;
+        this.state = state;
+  }
 }

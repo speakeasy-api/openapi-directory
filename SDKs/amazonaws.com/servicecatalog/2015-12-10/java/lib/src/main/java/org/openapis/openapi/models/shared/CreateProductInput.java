@@ -12,6 +12,7 @@ public class CreateProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public CreateProductInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class CreateProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateProductInput withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class CreateProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Distributor")
     public String distributor;
+
     public CreateProductInput withDistributor(String distributor) {
         this.distributor = distributor;
         return this;
@@ -35,6 +38,7 @@ public class CreateProductInput {
     
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CreateProductInput withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -42,6 +46,7 @@ public class CreateProductInput {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateProductInput withName(String name) {
         this.name = name;
         return this;
@@ -49,6 +54,7 @@ public class CreateProductInput {
     
     @JsonProperty("Owner")
     public String owner;
+
     public CreateProductInput withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -56,6 +62,7 @@ public class CreateProductInput {
     
     @JsonProperty("ProductType")
     public ProductTypeEnum productType;
+
     public CreateProductInput withProductType(ProductTypeEnum productType) {
         this.productType = productType;
         return this;
@@ -64,6 +71,7 @@ public class CreateProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactParameters")
     public ProvisioningArtifactProperties provisioningArtifactParameters;
+
     public CreateProductInput withProvisioningArtifactParameters(ProvisioningArtifactProperties provisioningArtifactParameters) {
         this.provisioningArtifactParameters = provisioningArtifactParameters;
         return this;
@@ -72,6 +80,7 @@ public class CreateProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceConnection")
     public SourceConnection sourceConnection;
+
     public CreateProductInput withSourceConnection(SourceConnection sourceConnection) {
         this.sourceConnection = sourceConnection;
         return this;
@@ -80,6 +89,7 @@ public class CreateProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportDescription")
     public String supportDescription;
+
     public CreateProductInput withSupportDescription(String supportDescription) {
         this.supportDescription = supportDescription;
         return this;
@@ -88,6 +98,7 @@ public class CreateProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportEmail")
     public String supportEmail;
+
     public CreateProductInput withSupportEmail(String supportEmail) {
         this.supportEmail = supportEmail;
         return this;
@@ -96,6 +107,7 @@ public class CreateProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportUrl")
     public String supportUrl;
+
     public CreateProductInput withSupportUrl(String supportUrl) {
         this.supportUrl = supportUrl;
         return this;
@@ -104,9 +116,16 @@ public class CreateProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateProductInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateProductInput(@JsonProperty("IdempotencyToken") String idempotencyToken, @JsonProperty("Name") String name, @JsonProperty("Owner") String owner, @JsonProperty("ProductType") ProductTypeEnum productType) {
+        this.idempotencyToken = idempotencyToken;
+        this.name = name;
+        this.owner = owner;
+        this.productType = productType;
+  }
 }

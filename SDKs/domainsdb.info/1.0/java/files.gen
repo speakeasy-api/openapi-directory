@@ -66,4 +66,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ZoneInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/APIKeyInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/ZoneStats.java
 lib/src/main/java/org/openapis/openapi/models/shared/ZoneStatistics.java
+docs/sdk/README.md
+docs/domains/README.md
+docs/info/README.md
 USAGE.md

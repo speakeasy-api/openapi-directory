@@ -40,7 +40,9 @@ public class MetaPub {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetApiV2MetapubProgramInformationBatchBatchIdResponse getApiV2MetapubProgramInformationBatchBatchId(org.openapis.openapi.models.operations.GetApiV2MetapubProgramInformationBatchBatchIdRequest request, org.openapis.openapi.models.operations.GetApiV2MetapubProgramInformationBatchBatchIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2MetapubProgramInformationBatchBatchIdRequest.class, baseUrl, "/api/v2/metapub/program-information/batch/{batch-id}", request, null);
@@ -56,11 +58,9 @@ public class MetaPub {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV2MetapubProgramInformationBatchBatchIdResponse res = new org.openapis.openapi.models.operations.GetApiV2MetapubProgramInformationBatchBatchIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiV2MetapubProgramInformationBatchBatchIdResponse res = new org.openapis.openapi.models.operations.GetApiV2MetapubProgramInformationBatchBatchIdResponse(contentType, httpRes.statusCode()) {{
             programInformationBatch = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -87,7 +87,9 @@ public class MetaPub {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.PostApiV2MetapubProgramInformationBatchResponse postApiV2MetapubProgramInformationBatch(org.openapis.openapi.models.operations.PostApiV2MetapubProgramInformationBatchRequestBody request, org.openapis.openapi.models.operations.PostApiV2MetapubProgramInformationBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/metapub/program-information/batch");
@@ -105,11 +107,9 @@ public class MetaPub {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiV2MetapubProgramInformationBatchResponse res = new org.openapis.openapi.models.operations.PostApiV2MetapubProgramInformationBatchResponse() {{
+        org.openapis.openapi.models.operations.PostApiV2MetapubProgramInformationBatchResponse res = new org.openapis.openapi.models.operations.PostApiV2MetapubProgramInformationBatchResponse(contentType, httpRes.statusCode()) {{
             programInformationBatch = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

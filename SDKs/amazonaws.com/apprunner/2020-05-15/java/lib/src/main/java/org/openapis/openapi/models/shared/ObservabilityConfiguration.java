@@ -22,6 +22,7 @@ public class ObservabilityConfiguration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public ObservabilityConfiguration withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -32,6 +33,7 @@ public class ObservabilityConfiguration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeletedAt")
     public OffsetDateTime deletedAt;
+
     public ObservabilityConfiguration withDeletedAt(OffsetDateTime deletedAt) {
         this.deletedAt = deletedAt;
         return this;
@@ -40,6 +42,7 @@ public class ObservabilityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Latest")
     public Boolean latest;
+
     public ObservabilityConfiguration withLatest(Boolean latest) {
         this.latest = latest;
         return this;
@@ -48,6 +51,7 @@ public class ObservabilityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObservabilityConfigurationArn")
     public String observabilityConfigurationArn;
+
     public ObservabilityConfiguration withObservabilityConfigurationArn(String observabilityConfigurationArn) {
         this.observabilityConfigurationArn = observabilityConfigurationArn;
         return this;
@@ -56,6 +60,7 @@ public class ObservabilityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObservabilityConfigurationName")
     public String observabilityConfigurationName;
+
     public ObservabilityConfiguration withObservabilityConfigurationName(String observabilityConfigurationName) {
         this.observabilityConfigurationName = observabilityConfigurationName;
         return this;
@@ -64,6 +69,7 @@ public class ObservabilityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObservabilityConfigurationRevision")
     public Long observabilityConfigurationRevision;
+
     public ObservabilityConfiguration withObservabilityConfigurationRevision(Long observabilityConfigurationRevision) {
         this.observabilityConfigurationRevision = observabilityConfigurationRevision;
         return this;
@@ -72,6 +78,7 @@ public class ObservabilityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ObservabilityConfigurationStatusEnum status;
+
     public ObservabilityConfiguration withStatus(ObservabilityConfigurationStatusEnum status) {
         this.status = status;
         return this;
@@ -80,9 +87,11 @@ public class ObservabilityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TraceConfiguration")
     public TraceConfiguration traceConfiguration;
+
     public ObservabilityConfiguration withTraceConfiguration(TraceConfiguration traceConfiguration) {
         this.traceConfiguration = traceConfiguration;
         return this;
     }
     
+    public ObservabilityConfiguration(){}
 }

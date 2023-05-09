@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Tag - Describes a tag for an Auto Scaling group.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Tag {
     
     public String key;
+
     public Tag withKey(String key) {
         this.key = key;
         return this;
@@ -19,6 +20,7 @@ public class Tag {
     
     
     public Boolean propagateAtLaunch;
+
     public Tag withPropagateAtLaunch(Boolean propagateAtLaunch) {
         this.propagateAtLaunch = propagateAtLaunch;
         return this;
@@ -26,6 +28,7 @@ public class Tag {
     
     
     public String resourceId;
+
     public Tag withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -33,6 +36,7 @@ public class Tag {
     
     
     public String resourceType;
+
     public Tag withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -40,9 +44,13 @@ public class Tag {
     
     
     public String value;
+
     public Tag withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Tag(@JsonProperty("Key") String key) {
+        this.key = key;
+  }
 }

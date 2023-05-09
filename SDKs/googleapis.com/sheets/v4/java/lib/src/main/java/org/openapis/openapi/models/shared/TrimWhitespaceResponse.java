@@ -18,9 +18,11 @@ public class TrimWhitespaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cellsChangedCount")
     public Integer cellsChangedCount;
+
     public TrimWhitespaceResponse withCellsChangedCount(Integer cellsChangedCount) {
         this.cellsChangedCount = cellsChangedCount;
         return this;
     }
     
+    public TrimWhitespaceResponse(){}
 }

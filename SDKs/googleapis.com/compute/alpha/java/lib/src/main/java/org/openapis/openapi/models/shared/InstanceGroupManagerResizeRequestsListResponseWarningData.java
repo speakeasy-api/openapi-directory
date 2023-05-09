@@ -15,6 +15,7 @@ public class InstanceGroupManagerResizeRequestsListResponseWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public InstanceGroupManagerResizeRequestsListResponseWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class InstanceGroupManagerResizeRequestsListResponseWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public InstanceGroupManagerResizeRequestsListResponseWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InstanceGroupManagerResizeRequestsListResponseWarningData(){}
 }

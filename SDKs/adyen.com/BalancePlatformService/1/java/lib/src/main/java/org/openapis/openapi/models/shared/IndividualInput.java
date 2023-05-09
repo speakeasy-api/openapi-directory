@@ -12,6 +12,7 @@ public class IndividualInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthData")
     public BirthData birthData;
+
     public IndividualInput withBirthData(BirthData birthData) {
         this.birthData = birthData;
         return this;
@@ -23,6 +24,7 @@ public class IndividualInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public IndividualInput withEmail(String email) {
         this.email = email;
         return this;
@@ -31,6 +33,7 @@ public class IndividualInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identificationData")
     public IdentificationData identificationData;
+
     public IndividualInput withIdentificationData(IdentificationData identificationData) {
         this.identificationData = identificationData;
         return this;
@@ -38,6 +41,7 @@ public class IndividualInput {
     
     @JsonProperty("name")
     public Name3 name;
+
     public IndividualInput withName(Name3 name) {
         this.name = name;
         return this;
@@ -49,6 +53,7 @@ public class IndividualInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nationality")
     public String nationality;
+
     public IndividualInput withNationality(String nationality) {
         this.nationality = nationality;
         return this;
@@ -57,6 +62,7 @@ public class IndividualInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public PhoneNumber2 phone;
+
     public IndividualInput withPhone(PhoneNumber2 phone) {
         this.phone = phone;
         return this;
@@ -64,6 +70,7 @@ public class IndividualInput {
     
     @JsonProperty("residentialAddress")
     public Address3 residentialAddress;
+
     public IndividualInput withResidentialAddress(Address3 residentialAddress) {
         this.residentialAddress = residentialAddress;
         return this;
@@ -72,9 +79,14 @@ public class IndividualInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webData")
     public WebDataInput webData;
+
     public IndividualInput withWebData(WebDataInput webData) {
         this.webData = webData;
         return this;
     }
     
+    public IndividualInput(@JsonProperty("name") Name3 name, @JsonProperty("residentialAddress") Address3 residentialAddress) {
+        this.name = name;
+        this.residentialAddress = residentialAddress;
+  }
 }

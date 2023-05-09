@@ -15,6 +15,7 @@ public class DescribeConnectionAliasPermissionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AliasId")
     public String aliasId;
+
     public DescribeConnectionAliasPermissionsResult withAliasId(String aliasId) {
         this.aliasId = aliasId;
         return this;
@@ -23,6 +24,7 @@ public class DescribeConnectionAliasPermissionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionAliasPermissions")
     public ConnectionAliasPermission[] connectionAliasPermissions;
+
     public DescribeConnectionAliasPermissionsResult withConnectionAliasPermissions(ConnectionAliasPermission[] connectionAliasPermissions) {
         this.connectionAliasPermissions = connectionAliasPermissions;
         return this;
@@ -31,9 +33,11 @@ public class DescribeConnectionAliasPermissionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeConnectionAliasPermissionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeConnectionAliasPermissionsResult(){}
 }

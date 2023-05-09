@@ -15,6 +15,7 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public SavingsPlansPurchaseRecommendationDetail withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrencyCode")
     public String currencyCode;
+
     public SavingsPlansPurchaseRecommendationDetail withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -31,6 +33,7 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentAverageHourlyOnDemandSpend")
     public String currentAverageHourlyOnDemandSpend;
+
     public SavingsPlansPurchaseRecommendationDetail withCurrentAverageHourlyOnDemandSpend(String currentAverageHourlyOnDemandSpend) {
         this.currentAverageHourlyOnDemandSpend = currentAverageHourlyOnDemandSpend;
         return this;
@@ -39,6 +42,7 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentMaximumHourlyOnDemandSpend")
     public String currentMaximumHourlyOnDemandSpend;
+
     public SavingsPlansPurchaseRecommendationDetail withCurrentMaximumHourlyOnDemandSpend(String currentMaximumHourlyOnDemandSpend) {
         this.currentMaximumHourlyOnDemandSpend = currentMaximumHourlyOnDemandSpend;
         return this;
@@ -47,6 +51,7 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentMinimumHourlyOnDemandSpend")
     public String currentMinimumHourlyOnDemandSpend;
+
     public SavingsPlansPurchaseRecommendationDetail withCurrentMinimumHourlyOnDemandSpend(String currentMinimumHourlyOnDemandSpend) {
         this.currentMinimumHourlyOnDemandSpend = currentMinimumHourlyOnDemandSpend;
         return this;
@@ -55,6 +60,7 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedAverageUtilization")
     public String estimatedAverageUtilization;
+
     public SavingsPlansPurchaseRecommendationDetail withEstimatedAverageUtilization(String estimatedAverageUtilization) {
         this.estimatedAverageUtilization = estimatedAverageUtilization;
         return this;
@@ -63,6 +69,7 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedMonthlySavingsAmount")
     public String estimatedMonthlySavingsAmount;
+
     public SavingsPlansPurchaseRecommendationDetail withEstimatedMonthlySavingsAmount(String estimatedMonthlySavingsAmount) {
         this.estimatedMonthlySavingsAmount = estimatedMonthlySavingsAmount;
         return this;
@@ -71,6 +78,7 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedOnDemandCost")
     public String estimatedOnDemandCost;
+
     public SavingsPlansPurchaseRecommendationDetail withEstimatedOnDemandCost(String estimatedOnDemandCost) {
         this.estimatedOnDemandCost = estimatedOnDemandCost;
         return this;
@@ -79,6 +87,7 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedOnDemandCostWithCurrentCommitment")
     public String estimatedOnDemandCostWithCurrentCommitment;
+
     public SavingsPlansPurchaseRecommendationDetail withEstimatedOnDemandCostWithCurrentCommitment(String estimatedOnDemandCostWithCurrentCommitment) {
         this.estimatedOnDemandCostWithCurrentCommitment = estimatedOnDemandCostWithCurrentCommitment;
         return this;
@@ -87,6 +96,7 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedROI")
     public String estimatedROI;
+
     public SavingsPlansPurchaseRecommendationDetail withEstimatedROI(String estimatedROI) {
         this.estimatedROI = estimatedROI;
         return this;
@@ -95,6 +105,7 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedSPCost")
     public String estimatedSPCost;
+
     public SavingsPlansPurchaseRecommendationDetail withEstimatedSPCost(String estimatedSPCost) {
         this.estimatedSPCost = estimatedSPCost;
         return this;
@@ -103,6 +114,7 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedSavingsAmount")
     public String estimatedSavingsAmount;
+
     public SavingsPlansPurchaseRecommendationDetail withEstimatedSavingsAmount(String estimatedSavingsAmount) {
         this.estimatedSavingsAmount = estimatedSavingsAmount;
         return this;
@@ -111,6 +123,7 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedSavingsPercentage")
     public String estimatedSavingsPercentage;
+
     public SavingsPlansPurchaseRecommendationDetail withEstimatedSavingsPercentage(String estimatedSavingsPercentage) {
         this.estimatedSavingsPercentage = estimatedSavingsPercentage;
         return this;
@@ -119,6 +132,7 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HourlyCommitmentToPurchase")
     public String hourlyCommitmentToPurchase;
+
     public SavingsPlansPurchaseRecommendationDetail withHourlyCommitmentToPurchase(String hourlyCommitmentToPurchase) {
         this.hourlyCommitmentToPurchase = hourlyCommitmentToPurchase;
         return this;
@@ -127,6 +141,7 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SavingsPlansDetails")
     public SavingsPlansDetails savingsPlansDetails;
+
     public SavingsPlansPurchaseRecommendationDetail withSavingsPlansDetails(SavingsPlansDetails savingsPlansDetails) {
         this.savingsPlansDetails = savingsPlansDetails;
         return this;
@@ -135,9 +150,11 @@ public class SavingsPlansPurchaseRecommendationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpfrontCost")
     public String upfrontCost;
+
     public SavingsPlansPurchaseRecommendationDetail withUpfrontCost(String upfrontCost) {
         this.upfrontCost = upfrontCost;
         return this;
     }
     
+    public SavingsPlansPurchaseRecommendationDetail(){}
 }

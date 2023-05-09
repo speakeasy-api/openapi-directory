@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSessionUsingPOSTResponse {
     
     public String contentType;
+
     public DeleteSessionUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteSessionUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public DeleteSessionUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteSessionUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSessionUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeleteSessionUsingPOSTResponse {
      */
     
     public DeleteSessionUsingPOST200ApplicationJSON deleteSessionUsingPOST200ApplicationJSONObject;
+
     public DeleteSessionUsingPOSTResponse withDeleteSessionUsingPOST200ApplicationJSONObject(DeleteSessionUsingPOST200ApplicationJSON deleteSessionUsingPOST200ApplicationJSONObject) {
         this.deleteSessionUsingPOST200ApplicationJSONObject = deleteSessionUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DeleteSessionUsingPOSTResponse {
      */
     
     public DeleteSessionUsingPOST400ApplicationJSON deleteSessionUsingPOST400ApplicationJSONObject;
+
     public DeleteSessionUsingPOSTResponse withDeleteSessionUsingPOST400ApplicationJSONObject(DeleteSessionUsingPOST400ApplicationJSON deleteSessionUsingPOST400ApplicationJSONObject) {
         this.deleteSessionUsingPOST400ApplicationJSONObject = deleteSessionUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSessionUsingPOSTResponse {
      */
     
     public DeleteSessionUsingPOST401ApplicationJSON deleteSessionUsingPOST401ApplicationJSONObject;
+
     public DeleteSessionUsingPOSTResponse withDeleteSessionUsingPOST401ApplicationJSONObject(DeleteSessionUsingPOST401ApplicationJSON deleteSessionUsingPOST401ApplicationJSONObject) {
         this.deleteSessionUsingPOST401ApplicationJSONObject = deleteSessionUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class DeleteSessionUsingPOSTResponse {
      */
     
     public DeleteSessionUsingPOST500ApplicationJSON deleteSessionUsingPOST500ApplicationJSONObject;
+
     public DeleteSessionUsingPOSTResponse withDeleteSessionUsingPOST500ApplicationJSONObject(DeleteSessionUsingPOST500ApplicationJSON deleteSessionUsingPOST500ApplicationJSONObject) {
         this.deleteSessionUsingPOST500ApplicationJSONObject = deleteSessionUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public DeleteSessionUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

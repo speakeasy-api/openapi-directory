@@ -20,6 +20,7 @@ public class LifecyclePolicyPreviewResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public LifecyclePolicyRuleAction action;
+
     public LifecyclePolicyPreviewResult withAction(LifecyclePolicyRuleAction action) {
         this.action = action;
         return this;
@@ -28,6 +29,7 @@ public class LifecyclePolicyPreviewResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliedRulePriority")
     public Long appliedRulePriority;
+
     public LifecyclePolicyPreviewResult withAppliedRulePriority(Long appliedRulePriority) {
         this.appliedRulePriority = appliedRulePriority;
         return this;
@@ -36,6 +38,7 @@ public class LifecyclePolicyPreviewResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageDigest")
     public String imageDigest;
+
     public LifecyclePolicyPreviewResult withImageDigest(String imageDigest) {
         this.imageDigest = imageDigest;
         return this;
@@ -46,6 +49,7 @@ public class LifecyclePolicyPreviewResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("imagePushedAt")
     public OffsetDateTime imagePushedAt;
+
     public LifecyclePolicyPreviewResult withImagePushedAt(OffsetDateTime imagePushedAt) {
         this.imagePushedAt = imagePushedAt;
         return this;
@@ -54,9 +58,11 @@ public class LifecyclePolicyPreviewResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTags")
     public String[] imageTags;
+
     public LifecyclePolicyPreviewResult withImageTags(String[] imageTags) {
         this.imageTags = imageTags;
         return this;
     }
     
+    public LifecyclePolicyPreviewResult(){}
 }

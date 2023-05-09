@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModifyClusterInput {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public ModifyClusterInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -19,9 +20,13 @@ public class ModifyClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepConcurrencyLevel")
     public Long stepConcurrencyLevel;
+
     public ModifyClusterInput withStepConcurrencyLevel(Long stepConcurrencyLevel) {
         this.stepConcurrencyLevel = stepConcurrencyLevel;
         return this;
     }
     
+    public ModifyClusterInput(@JsonProperty("ClusterId") String clusterId) {
+        this.clusterId = clusterId;
+  }
 }

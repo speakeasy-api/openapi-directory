@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEmailIdentityPolicyResponse {
@@ -12,6 +13,7 @@ public class CreateEmailIdentityPolicyResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateEmailIdentityPolicyResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateEmailIdentityPolicyResponse {
      */
     
     public Object badRequestException;
+
     public CreateEmailIdentityPolicyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class CreateEmailIdentityPolicyResponse {
     
     
     public String contentType;
+
     public CreateEmailIdentityPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateEmailIdentityPolicyResponse {
      */
     
     public java.util.Map<String, Object> createEmailIdentityPolicyResponse;
+
     public CreateEmailIdentityPolicyResponse withCreateEmailIdentityPolicyResponse(java.util.Map<String, Object> createEmailIdentityPolicyResponse) {
         this.createEmailIdentityPolicyResponse = createEmailIdentityPolicyResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateEmailIdentityPolicyResponse {
      */
     
     public Object limitExceededException;
+
     public CreateEmailIdentityPolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateEmailIdentityPolicyResponse {
      */
     
     public Object notFoundException;
+
     public CreateEmailIdentityPolicyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateEmailIdentityPolicyResponse {
     
     
     public Integer statusCode;
+
     public CreateEmailIdentityPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateEmailIdentityPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEmailIdentityPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateEmailIdentityPolicyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateEmailIdentityPolicyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateEmailIdentityPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

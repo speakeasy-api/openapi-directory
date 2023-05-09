@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETDetectStackSetDriftOperationPreferences {
     @SpeakeasyMetadata("queryParam:name=FailureToleranceCount")
     public Long failureToleranceCount;
+
     public GETDetectStackSetDriftOperationPreferences withFailureToleranceCount(Long failureToleranceCount) {
         this.failureToleranceCount = failureToleranceCount;
         return this;
@@ -19,6 +20,7 @@ public class GETDetectStackSetDriftOperationPreferences {
     
     @SpeakeasyMetadata("queryParam:name=FailureTolerancePercentage")
     public Long failureTolerancePercentage;
+
     public GETDetectStackSetDriftOperationPreferences withFailureTolerancePercentage(Long failureTolerancePercentage) {
         this.failureTolerancePercentage = failureTolerancePercentage;
         return this;
@@ -26,6 +28,7 @@ public class GETDetectStackSetDriftOperationPreferences {
     
     @SpeakeasyMetadata("queryParam:name=MaxConcurrentCount")
     public Long maxConcurrentCount;
+
     public GETDetectStackSetDriftOperationPreferences withMaxConcurrentCount(Long maxConcurrentCount) {
         this.maxConcurrentCount = maxConcurrentCount;
         return this;
@@ -33,6 +36,7 @@ public class GETDetectStackSetDriftOperationPreferences {
     
     @SpeakeasyMetadata("queryParam:name=MaxConcurrentPercentage")
     public Long maxConcurrentPercentage;
+
     public GETDetectStackSetDriftOperationPreferences withMaxConcurrentPercentage(Long maxConcurrentPercentage) {
         this.maxConcurrentPercentage = maxConcurrentPercentage;
         return this;
@@ -40,6 +44,7 @@ public class GETDetectStackSetDriftOperationPreferences {
     
     @SpeakeasyMetadata("queryParam:name=RegionConcurrencyType")
     public org.openapis.openapi.models.shared.RegionConcurrencyTypeEnum regionConcurrencyType;
+
     public GETDetectStackSetDriftOperationPreferences withRegionConcurrencyType(org.openapis.openapi.models.shared.RegionConcurrencyTypeEnum regionConcurrencyType) {
         this.regionConcurrencyType = regionConcurrencyType;
         return this;
@@ -47,9 +52,11 @@ public class GETDetectStackSetDriftOperationPreferences {
     
     @SpeakeasyMetadata("queryParam:name=RegionOrder")
     public String[] regionOrder;
+
     public GETDetectStackSetDriftOperationPreferences withRegionOrder(String[] regionOrder) {
         this.regionOrder = regionOrder;
         return this;
     }
     
+    public GETDetectStackSetDriftOperationPreferences(){}
 }

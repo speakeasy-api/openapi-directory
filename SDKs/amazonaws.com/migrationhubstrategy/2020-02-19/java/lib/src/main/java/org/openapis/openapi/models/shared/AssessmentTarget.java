@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssessmentTarget {
     @JsonProperty("condition")
     public ConditionEnum condition;
+
     public AssessmentTarget withCondition(ConditionEnum condition) {
         this.condition = condition;
         return this;
@@ -19,6 +20,7 @@ public class AssessmentTarget {
     
     @JsonProperty("name")
     public String name;
+
     public AssessmentTarget withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class AssessmentTarget {
     
     @JsonProperty("values")
     public String[] values;
+
     public AssessmentTarget withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public AssessmentTarget(@JsonProperty("condition") ConditionEnum condition, @JsonProperty("name") String name, @JsonProperty("values") String[] values) {
+        this.condition = condition;
+        this.name = name;
+        this.values = values;
+  }
 }

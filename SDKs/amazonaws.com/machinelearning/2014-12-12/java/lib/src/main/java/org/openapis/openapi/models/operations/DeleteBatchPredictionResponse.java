@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBatchPredictionResponse {
     
     public String contentType;
+
     public DeleteBatchPredictionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBatchPredictionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBatchPredictionOutput deleteBatchPredictionOutput;
+
     public DeleteBatchPredictionResponse withDeleteBatchPredictionOutput(org.openapis.openapi.models.shared.DeleteBatchPredictionOutput deleteBatchPredictionOutput) {
         this.deleteBatchPredictionOutput = deleteBatchPredictionOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBatchPredictionResponse {
      */
     
     public Object internalServerException;
+
     public DeleteBatchPredictionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBatchPredictionResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteBatchPredictionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteBatchPredictionResponse {
     
     
     public Integer statusCode;
+
     public DeleteBatchPredictionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteBatchPredictionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBatchPredictionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteBatchPredictionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteBatchPredictionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteBatchPredictionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

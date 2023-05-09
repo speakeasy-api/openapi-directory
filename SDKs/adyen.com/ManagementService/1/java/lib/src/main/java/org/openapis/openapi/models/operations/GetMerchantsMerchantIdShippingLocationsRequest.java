@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdShippingLocationsRequest {
@@ -12,6 +13,7 @@ public class GetMerchantsMerchantIdShippingLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetMerchantsMerchantIdShippingLocationsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,6 +24,7 @@ public class GetMerchantsMerchantIdShippingLocationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public GetMerchantsMerchantIdShippingLocationsRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -32,6 +35,7 @@ public class GetMerchantsMerchantIdShippingLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetMerchantsMerchantIdShippingLocationsRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +46,13 @@ public class GetMerchantsMerchantIdShippingLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetMerchantsMerchantIdShippingLocationsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetMerchantsMerchantIdShippingLocationsRequest(@JsonProperty("merchantId") String merchantId) {
+        this.merchantId = merchantId;
+  }
 }

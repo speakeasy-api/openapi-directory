@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSpaceResponse {
     
     public String contentType;
+
     public CreateSpaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSpaceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSpaceResponse createSpaceResponse;
+
     public CreateSpaceResponse withCreateSpaceResponse(org.openapis.openapi.models.shared.CreateSpaceResponse createSpaceResponse) {
         this.createSpaceResponse = createSpaceResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateSpaceResponse {
      */
     
     public Object resourceInUse;
+
     public CreateSpaceResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -39,6 +43,7 @@ public class CreateSpaceResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateSpaceResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -46,6 +51,7 @@ public class CreateSpaceResponse {
     
     
     public Integer statusCode;
+
     public CreateSpaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateSpaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSpaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateSpaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

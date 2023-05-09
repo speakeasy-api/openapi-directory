@@ -18,9 +18,11 @@ public class ExistingDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disk")
     public String disk;
+
     public ExistingDisk withDisk(String disk) {
         this.disk = disk;
         return this;
     }
     
+    public ExistingDisk(){}
 }

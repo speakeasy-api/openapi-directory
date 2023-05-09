@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Attraction - Attraction
@@ -15,6 +15,7 @@ public class Attraction {
      */
     
     public String additionalInfo;
+
     public Attraction withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -25,6 +26,7 @@ public class Attraction {
      */
     
     public Classification[] classifications;
+
     public Attraction withClassifications(Classification[] classifications) {
         this.classifications = classifications;
         return this;
@@ -35,6 +37,7 @@ public class Attraction {
      */
     
     public String description;
+
     public Attraction withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class Attraction {
      */
     
     public java.util.Map<String, ExternalLink[]> externalLinks;
+
     public Attraction withExternalLinks(java.util.Map<String, ExternalLink[]> externalLinks) {
         this.externalLinks = externalLinks;
         return this;
@@ -55,6 +59,7 @@ public class Attraction {
      */
     
     public String id;
+
     public Attraction withId(String id) {
         this.id = id;
         return this;
@@ -65,6 +70,7 @@ public class Attraction {
      */
     
     public Image[] images;
+
     public Attraction withImages(Image[] images) {
         this.images = images;
         return this;
@@ -75,6 +81,7 @@ public class Attraction {
      */
     
     public String locale;
+
     public Attraction withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -85,6 +92,7 @@ public class Attraction {
      */
     
     public String name;
+
     public Attraction withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +103,7 @@ public class Attraction {
      */
     
     public Boolean test;
+
     public Attraction withTest(Boolean test) {
         this.test = test;
         return this;
@@ -105,6 +114,7 @@ public class Attraction {
      */
     
     public AttractionTypeEnum type;
+
     public Attraction withType(AttractionTypeEnum type) {
         this.type = type;
         return this;
@@ -115,6 +125,7 @@ public class Attraction {
      */
     
     public java.util.Map<String, Integer> upcomingEvents;
+
     public Attraction withUpcomingEvents(java.util.Map<String, Integer> upcomingEvents) {
         this.upcomingEvents = upcomingEvents;
         return this;
@@ -125,9 +136,14 @@ public class Attraction {
      */
     
     public String url;
+
     public Attraction withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Attraction(@JsonProperty("id") String id, @JsonProperty("type") AttractionTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

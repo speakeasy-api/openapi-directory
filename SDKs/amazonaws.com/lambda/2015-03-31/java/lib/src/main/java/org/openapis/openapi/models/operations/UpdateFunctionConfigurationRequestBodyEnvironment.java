@@ -15,9 +15,11 @@ public class UpdateFunctionConfigurationRequestBodyEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Variables")
     public java.util.Map<String, String> variables;
+
     public UpdateFunctionConfigurationRequestBodyEnvironment withVariables(java.util.Map<String, String> variables) {
         this.variables = variables;
         return this;
     }
     
+    public UpdateFunctionConfigurationRequestBodyEnvironment(){}
 }

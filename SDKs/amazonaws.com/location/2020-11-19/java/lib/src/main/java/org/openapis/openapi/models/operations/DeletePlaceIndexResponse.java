@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePlaceIndexResponse {
@@ -12,6 +13,7 @@ public class DeletePlaceIndexResponse {
      */
     
     public Object accessDeniedException;
+
     public DeletePlaceIndexResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeletePlaceIndexResponse {
     
     
     public String contentType;
+
     public DeletePlaceIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeletePlaceIndexResponse {
      */
     
     public java.util.Map<String, Object> deletePlaceIndexResponse;
+
     public DeletePlaceIndexResponse withDeletePlaceIndexResponse(java.util.Map<String, Object> deletePlaceIndexResponse) {
         this.deletePlaceIndexResponse = deletePlaceIndexResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeletePlaceIndexResponse {
      */
     
     public Object internalServerException;
+
     public DeletePlaceIndexResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeletePlaceIndexResponse {
     
     
     public Integer statusCode;
+
     public DeletePlaceIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeletePlaceIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePlaceIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeletePlaceIndexResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePlaceIndexResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DeletePlaceIndexResponse {
      */
     
     public Object throttlingException;
+
     public DeletePlaceIndexResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeletePlaceIndexResponse {
      */
     
     public Object validationException;
+
     public DeletePlaceIndexResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeletePlaceIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

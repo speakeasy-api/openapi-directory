@@ -20,6 +20,7 @@ public class PiiEntitiesDetectionJobFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public PiiEntitiesDetectionJobFilter withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -28,6 +29,7 @@ public class PiiEntitiesDetectionJobFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public PiiEntitiesDetectionJobFilter withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -38,6 +40,7 @@ public class PiiEntitiesDetectionJobFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTimeAfter")
     public OffsetDateTime submitTimeAfter;
+
     public PiiEntitiesDetectionJobFilter withSubmitTimeAfter(OffsetDateTime submitTimeAfter) {
         this.submitTimeAfter = submitTimeAfter;
         return this;
@@ -48,9 +51,11 @@ public class PiiEntitiesDetectionJobFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTimeBefore")
     public OffsetDateTime submitTimeBefore;
+
     public PiiEntitiesDetectionJobFilter withSubmitTimeBefore(OffsetDateTime submitTimeBefore) {
         this.submitTimeBefore = submitTimeBefore;
         return this;
     }
     
+    public PiiEntitiesDetectionJobFilter(){}
 }

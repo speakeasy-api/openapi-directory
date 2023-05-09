@@ -3,13 +3,12 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.FindIncludeLicensedContentEnum;
 import org.openapis.openapi.models.operations.FindIncludeSpellcheckEnum;
 import org.openapis.openapi.models.operations.FindIncludeTestEnum;
-import org.openapis.openapi.models.operations.FindSourceEnum;
 import org.openapis.openapi.models.operations.FindRequest;
 import org.openapis.openapi.models.operations.FindResponse;
+import org.openapis.openapi.models.operations.FindSourceEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -28,25 +27,27 @@ public class Application {
                     add("corrupti"),
                     add("illum"),
                 }};
-                id = "vel";
-                includeLicensedContent = " no";
-                includeSpellcheck = " no";
-                includeTest = " no";
-                keyword = "iure";
-                locale = "magnam";
-                page = "debitis";
-                size = "ipsa";
-                sort = "delectus";
-                source = " universe";
-            }}            
+                id = "69a674e0-f467-4cc8-b96e-d151a05dfc2d";
+                includeLicensedContent = FindIncludeLicensedContentEnum.NO;
+                includeSpellcheck = FindIncludeSpellcheckEnum.NO;
+                includeTest = FindIncludeTestEnum.NO;
+                keyword = "quod";
+                locale = "quod";
+                page = "esse";
+                size = "totam";
+                sort = "porro";
+                source = FindSourceEnum.FRONTGATE;
+            }};            
 
             FindResponse res = sdk.find(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

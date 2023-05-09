@@ -17,6 +17,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionValue {
      */
     
     public DestinyDestinyItemQuantity[] itemValue;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionValue withItemValue(DestinyDestinyItemQuantity[] itemValue) {
         this.itemValue = itemValue;
         return this;
@@ -27,9 +28,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionValue {
      */
     
     public String valueDescription;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionValue withValueDescription(String valueDescription) {
         this.valueDescription = valueDescription;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionValue(){}
 }

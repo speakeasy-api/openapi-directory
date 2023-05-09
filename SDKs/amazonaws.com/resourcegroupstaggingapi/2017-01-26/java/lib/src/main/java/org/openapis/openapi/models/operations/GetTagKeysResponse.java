@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTagKeysResponse {
     
     public String contentType;
+
     public GetTagKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTagKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTagKeysOutput getTagKeysOutput;
+
     public GetTagKeysResponse withGetTagKeysOutput(org.openapis.openapi.models.shared.GetTagKeysOutput getTagKeysOutput) {
         this.getTagKeysOutput = getTagKeysOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetTagKeysResponse {
      */
     
     public Object internalServiceException;
+
     public GetTagKeysResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class GetTagKeysResponse {
      */
     
     public Object invalidParameterException;
+
     public GetTagKeysResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetTagKeysResponse {
      */
     
     public Object paginationTokenExpiredException;
+
     public GetTagKeysResponse withPaginationTokenExpiredException(Object paginationTokenExpiredException) {
         this.paginationTokenExpiredException = paginationTokenExpiredException;
         return this;
@@ -56,6 +62,7 @@ public class GetTagKeysResponse {
     
     
     public Integer statusCode;
+
     public GetTagKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetTagKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTagKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetTagKeysResponse {
      */
     
     public Object throttledException;
+
     public GetTagKeysResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public GetTagKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

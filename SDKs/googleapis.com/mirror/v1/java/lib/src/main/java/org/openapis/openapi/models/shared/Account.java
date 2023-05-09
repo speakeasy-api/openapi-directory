@@ -15,6 +15,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authTokens")
     public AuthToken[] authTokens;
+
     public Account withAuthTokens(AuthToken[] authTokens) {
         this.authTokens = authTokens;
         return this;
@@ -23,6 +24,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public String[] features;
+
     public Account withFeatures(String[] features) {
         this.features = features;
         return this;
@@ -31,6 +33,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public Account withPassword(String password) {
         this.password = password;
         return this;
@@ -39,9 +42,11 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userData")
     public UserData[] userData;
+
     public Account withUserData(UserData[] userData) {
         this.userData = userData;
         return this;
     }
     
+    public Account(){}
 }

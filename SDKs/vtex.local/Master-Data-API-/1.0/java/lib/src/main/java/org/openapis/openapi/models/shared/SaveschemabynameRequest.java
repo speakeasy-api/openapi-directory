@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SaveschemabynameRequest {
     @JsonProperty("properties")
     public Properties properties;
+
     public SaveschemabynameRequest withProperties(Properties properties) {
         this.properties = properties;
         return this;
     }
     
+    public SaveschemabynameRequest(@JsonProperty("properties") Properties properties) {
+        this.properties = properties;
+  }
 }

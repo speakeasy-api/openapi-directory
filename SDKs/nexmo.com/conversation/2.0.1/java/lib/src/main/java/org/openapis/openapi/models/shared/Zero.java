@@ -15,6 +15,7 @@ public class Zero {
      */
     @JsonProperty("type")
     public String type;
+
     public Zero withType(String type) {
         this.type = type;
         return this;
@@ -25,9 +26,14 @@ public class Zero {
      */
     @JsonProperty("user")
     public String user;
+
     public Zero withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public Zero(@JsonProperty("type") String type, @JsonProperty("user") String user) {
+        this.type = type;
+        this.user = user;
+  }
 }

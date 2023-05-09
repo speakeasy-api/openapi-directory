@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class Snapshot {
     
     public AccountsWithRestoreAccessList[] accountsWithRestoreAccess;
+
     public Snapshot withAccountsWithRestoreAccess(AccountsWithRestoreAccessList[] accountsWithRestoreAccess) {
         this.accountsWithRestoreAccess = accountsWithRestoreAccess;
         return this;
@@ -19,6 +20,7 @@ public class Snapshot {
     
     
     public Double actualIncrementalBackupSizeInMegaBytes;
+
     public Snapshot withActualIncrementalBackupSizeInMegaBytes(Double actualIncrementalBackupSizeInMegaBytes) {
         this.actualIncrementalBackupSizeInMegaBytes = actualIncrementalBackupSizeInMegaBytes;
         return this;
@@ -26,6 +28,7 @@ public class Snapshot {
     
     
     public String availabilityZone;
+
     public Snapshot withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -33,6 +36,7 @@ public class Snapshot {
     
     
     public Double backupProgressInMegaBytes;
+
     public Snapshot withBackupProgressInMegaBytes(Double backupProgressInMegaBytes) {
         this.backupProgressInMegaBytes = backupProgressInMegaBytes;
         return this;
@@ -40,6 +44,7 @@ public class Snapshot {
     
     
     public OffsetDateTime clusterCreateTime;
+
     public Snapshot withClusterCreateTime(OffsetDateTime clusterCreateTime) {
         this.clusterCreateTime = clusterCreateTime;
         return this;
@@ -47,6 +52,7 @@ public class Snapshot {
     
     
     public String clusterIdentifier;
+
     public Snapshot withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -54,6 +60,7 @@ public class Snapshot {
     
     
     public String clusterVersion;
+
     public Snapshot withClusterVersion(String clusterVersion) {
         this.clusterVersion = clusterVersion;
         return this;
@@ -61,6 +68,7 @@ public class Snapshot {
     
     
     public Double currentBackupRateInMegaBytesPerSecond;
+
     public Snapshot withCurrentBackupRateInMegaBytesPerSecond(Double currentBackupRateInMegaBytesPerSecond) {
         this.currentBackupRateInMegaBytesPerSecond = currentBackupRateInMegaBytesPerSecond;
         return this;
@@ -68,6 +76,7 @@ public class Snapshot {
     
     
     public String dbName;
+
     public Snapshot withDBName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -75,6 +84,7 @@ public class Snapshot {
     
     
     public Long elapsedTimeInSeconds;
+
     public Snapshot withElapsedTimeInSeconds(Long elapsedTimeInSeconds) {
         this.elapsedTimeInSeconds = elapsedTimeInSeconds;
         return this;
@@ -82,6 +92,7 @@ public class Snapshot {
     
     
     public Boolean encrypted;
+
     public Snapshot withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -89,6 +100,7 @@ public class Snapshot {
     
     
     public Boolean encryptedWithHSM;
+
     public Snapshot withEncryptedWithHSM(Boolean encryptedWithHSM) {
         this.encryptedWithHSM = encryptedWithHSM;
         return this;
@@ -96,6 +108,7 @@ public class Snapshot {
     
     
     public String engineFullVersion;
+
     public Snapshot withEngineFullVersion(String engineFullVersion) {
         this.engineFullVersion = engineFullVersion;
         return this;
@@ -103,6 +116,7 @@ public class Snapshot {
     
     
     public Boolean enhancedVpcRouting;
+
     public Snapshot withEnhancedVpcRouting(Boolean enhancedVpcRouting) {
         this.enhancedVpcRouting = enhancedVpcRouting;
         return this;
@@ -110,6 +124,7 @@ public class Snapshot {
     
     
     public Long estimatedSecondsToCompletion;
+
     public Snapshot withEstimatedSecondsToCompletion(Long estimatedSecondsToCompletion) {
         this.estimatedSecondsToCompletion = estimatedSecondsToCompletion;
         return this;
@@ -117,6 +132,7 @@ public class Snapshot {
     
     
     public String kmsKeyId;
+
     public Snapshot withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -124,6 +140,7 @@ public class Snapshot {
     
     
     public String maintenanceTrackName;
+
     public Snapshot withMaintenanceTrackName(String maintenanceTrackName) {
         this.maintenanceTrackName = maintenanceTrackName;
         return this;
@@ -131,6 +148,7 @@ public class Snapshot {
     
     
     public Long manualSnapshotRemainingDays;
+
     public Snapshot withManualSnapshotRemainingDays(Long manualSnapshotRemainingDays) {
         this.manualSnapshotRemainingDays = manualSnapshotRemainingDays;
         return this;
@@ -138,6 +156,7 @@ public class Snapshot {
     
     
     public Long manualSnapshotRetentionPeriod;
+
     public Snapshot withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -145,6 +164,7 @@ public class Snapshot {
     
     
     public String masterUsername;
+
     public Snapshot withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -152,6 +172,7 @@ public class Snapshot {
     
     
     public String nodeType;
+
     public Snapshot withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -159,6 +180,7 @@ public class Snapshot {
     
     
     public Long numberOfNodes;
+
     public Snapshot withNumberOfNodes(Long numberOfNodes) {
         this.numberOfNodes = numberOfNodes;
         return this;
@@ -166,6 +188,7 @@ public class Snapshot {
     
     
     public String ownerAccount;
+
     public Snapshot withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -173,6 +196,7 @@ public class Snapshot {
     
     
     public Long port;
+
     public Snapshot withPort(Long port) {
         this.port = port;
         return this;
@@ -180,6 +204,7 @@ public class Snapshot {
     
     
     public String[] restorableNodeTypes;
+
     public Snapshot withRestorableNodeTypes(String[] restorableNodeTypes) {
         this.restorableNodeTypes = restorableNodeTypes;
         return this;
@@ -187,6 +212,7 @@ public class Snapshot {
     
     
     public OffsetDateTime snapshotCreateTime;
+
     public Snapshot withSnapshotCreateTime(OffsetDateTime snapshotCreateTime) {
         this.snapshotCreateTime = snapshotCreateTime;
         return this;
@@ -194,6 +220,7 @@ public class Snapshot {
     
     
     public String snapshotIdentifier;
+
     public Snapshot withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
@@ -201,6 +228,7 @@ public class Snapshot {
     
     
     public OffsetDateTime snapshotRetentionStartTime;
+
     public Snapshot withSnapshotRetentionStartTime(OffsetDateTime snapshotRetentionStartTime) {
         this.snapshotRetentionStartTime = snapshotRetentionStartTime;
         return this;
@@ -208,6 +236,7 @@ public class Snapshot {
     
     
     public String snapshotType;
+
     public Snapshot withSnapshotType(String snapshotType) {
         this.snapshotType = snapshotType;
         return this;
@@ -215,6 +244,7 @@ public class Snapshot {
     
     
     public String sourceRegion;
+
     public Snapshot withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
@@ -222,6 +252,7 @@ public class Snapshot {
     
     
     public String status;
+
     public Snapshot withStatus(String status) {
         this.status = status;
         return this;
@@ -229,6 +260,7 @@ public class Snapshot {
     
     
     public TagList[] tags;
+
     public Snapshot withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -236,6 +268,7 @@ public class Snapshot {
     
     
     public Double totalBackupSizeInMegaBytes;
+
     public Snapshot withTotalBackupSizeInMegaBytes(Double totalBackupSizeInMegaBytes) {
         this.totalBackupSizeInMegaBytes = totalBackupSizeInMegaBytes;
         return this;
@@ -243,9 +276,11 @@ public class Snapshot {
     
     
     public String vpcId;
+
     public Snapshot withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public Snapshot(){}
 }

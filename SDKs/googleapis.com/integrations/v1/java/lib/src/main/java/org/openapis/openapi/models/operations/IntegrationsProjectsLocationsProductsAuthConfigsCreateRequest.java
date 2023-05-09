@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
@@ -12,6 +13,7 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaAuthConfigInput googleCloudIntegrationsV1alphaAuthConfigInput;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withGoogleCloudIntegrationsV1alphaAuthConfigInput(org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaAuthConfigInput googleCloudIntegrationsV1alphaAuthConfigInput) {
         this.googleCloudIntegrationsV1alphaAuthConfigInput = googleCloudIntegrationsV1alphaAuthConfigInput;
         return this;
@@ -29,6 +32,7 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientCertificate.encryptedPrivateKey")
     public String clientCertificateEncryptedPrivateKey;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withClientCertificateEncryptedPrivateKey(String clientCertificateEncryptedPrivateKey) {
         this.clientCertificateEncryptedPrivateKey = clientCertificateEncryptedPrivateKey;
         return this;
@@ -69,6 +76,7 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientCertificate.passphrase")
     public String clientCertificatePassphrase;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withClientCertificatePassphrase(String clientCertificatePassphrase) {
         this.clientCertificatePassphrase = clientCertificatePassphrase;
         return this;
@@ -79,6 +87,7 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientCertificate.sslCertificate")
     public String clientCertificateSslCertificate;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withClientCertificateSslCertificate(String clientCertificateSslCertificate) {
         this.clientCertificateSslCertificate = clientCertificateSslCertificate;
         return this;
@@ -89,6 +98,7 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -99,6 +109,7 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -109,6 +120,7 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -119,6 +131,7 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -129,6 +142,7 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -139,6 +153,7 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -149,6 +164,7 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,9 +175,13 @@ public class IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

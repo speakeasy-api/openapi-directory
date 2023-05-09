@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1betaAccessMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public String metricName;
+
     public GoogleAnalyticsAdminV1betaAccessMetric withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaAccessMetric(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopyTemplateResponse {
     
     public String contentType;
+
     public CopyTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CopyTemplateResponse {
     
     
     public Integer statusCode;
+
     public CopyTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CopyTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopyTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CopyTemplateResponse {
      */
     
     public CopyTemplate200ApplicationJSON copyTemplate200ApplicationJSONObject;
+
     public CopyTemplateResponse withCopyTemplate200ApplicationJSONObject(CopyTemplate200ApplicationJSON copyTemplate200ApplicationJSONObject) {
         this.copyTemplate200ApplicationJSONObject = copyTemplate200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CopyTemplateResponse {
      */
     
     public CopyTemplate401ApplicationJSON copyTemplate401ApplicationJSONObject;
+
     public CopyTemplateResponse withCopyTemplate401ApplicationJSONObject(CopyTemplate401ApplicationJSON copyTemplate401ApplicationJSONObject) {
         this.copyTemplate401ApplicationJSONObject = copyTemplate401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CopyTemplateResponse {
      */
     
     public CopyTemplate403ApplicationJSON copyTemplate403ApplicationJSONObject;
+
     public CopyTemplateResponse withCopyTemplate403ApplicationJSONObject(CopyTemplate403ApplicationJSON copyTemplate403ApplicationJSONObject) {
         this.copyTemplate403ApplicationJSONObject = copyTemplate403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CopyTemplateResponse {
      */
     
     public CopyTemplate404ApplicationJSON copyTemplate404ApplicationJSONObject;
+
     public CopyTemplateResponse withCopyTemplate404ApplicationJSONObject(CopyTemplate404ApplicationJSON copyTemplate404ApplicationJSONObject) {
         this.copyTemplate404ApplicationJSONObject = copyTemplate404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CopyTemplateResponse {
      */
     
     public CopyTemplate422ApplicationJSON copyTemplate422ApplicationJSONObject;
+
     public CopyTemplateResponse withCopyTemplate422ApplicationJSONObject(CopyTemplate422ApplicationJSON copyTemplate422ApplicationJSONObject) {
         this.copyTemplate422ApplicationJSONObject = copyTemplate422ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class CopyTemplateResponse {
      */
     
     public CopyTemplate500ApplicationJSON copyTemplate500ApplicationJSONObject;
+
     public CopyTemplateResponse withCopyTemplate500ApplicationJSONObject(CopyTemplate500ApplicationJSON copyTemplate500ApplicationJSONObject) {
         this.copyTemplate500ApplicationJSONObject = copyTemplate500ApplicationJSONObject;
         return this;
     }
     
+    public CopyTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SheetsSpreadsheetsValuesBatchClearByDataFilterResponse {
@@ -12,6 +13,7 @@ public class SheetsSpreadsheetsValuesBatchClearByDataFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchClearValuesByDataFilterResponse batchClearValuesByDataFilterResponse;
+
     public SheetsSpreadsheetsValuesBatchClearByDataFilterResponse withBatchClearValuesByDataFilterResponse(org.openapis.openapi.models.shared.BatchClearValuesByDataFilterResponse batchClearValuesByDataFilterResponse) {
         this.batchClearValuesByDataFilterResponse = batchClearValuesByDataFilterResponse;
         return this;
@@ -19,6 +21,7 @@ public class SheetsSpreadsheetsValuesBatchClearByDataFilterResponse {
     
     
     public String contentType;
+
     public SheetsSpreadsheetsValuesBatchClearByDataFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SheetsSpreadsheetsValuesBatchClearByDataFilterResponse {
     
     
     public Integer statusCode;
+
     public SheetsSpreadsheetsValuesBatchClearByDataFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SheetsSpreadsheetsValuesBatchClearByDataFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SheetsSpreadsheetsValuesBatchClearByDataFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SheetsSpreadsheetsValuesBatchClearByDataFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

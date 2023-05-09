@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateRowData {
     @JsonProperty("batchItemId")
     public String batchItemId;
+
     public CreateRowData withBatchItemId(String batchItemId) {
         this.batchItemId = batchItemId;
         return this;
@@ -19,9 +20,14 @@ public class CreateRowData {
     
     @JsonProperty("cellsToCreate")
     public java.util.Map<String, CellInput> cellsToCreate;
+
     public CreateRowData withCellsToCreate(java.util.Map<String, CellInput> cellsToCreate) {
         this.cellsToCreate = cellsToCreate;
         return this;
     }
     
+    public CreateRowData(@JsonProperty("batchItemId") String batchItemId, @JsonProperty("cellsToCreate") java.util.Map<String, CellInput> cellsToCreate) {
+        this.batchItemId = batchItemId;
+        this.cellsToCreate = cellsToCreate;
+  }
 }

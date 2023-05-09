@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkflowExecutionContinuedAsNewEventAttributes {
     @JsonProperty("childPolicy")
     public ChildPolicyEnum childPolicy;
+
     public WorkflowExecutionContinuedAsNewEventAttributes withChildPolicy(ChildPolicyEnum childPolicy) {
         this.childPolicy = childPolicy;
         return this;
@@ -21,6 +22,7 @@ public class WorkflowExecutionContinuedAsNewEventAttributes {
     
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public WorkflowExecutionContinuedAsNewEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
@@ -29,6 +31,7 @@ public class WorkflowExecutionContinuedAsNewEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionStartToCloseTimeout")
     public String executionStartToCloseTimeout;
+
     public WorkflowExecutionContinuedAsNewEventAttributes withExecutionStartToCloseTimeout(String executionStartToCloseTimeout) {
         this.executionStartToCloseTimeout = executionStartToCloseTimeout;
         return this;
@@ -37,6 +40,7 @@ public class WorkflowExecutionContinuedAsNewEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public WorkflowExecutionContinuedAsNewEventAttributes withInput(String input) {
         this.input = input;
         return this;
@@ -45,6 +49,7 @@ public class WorkflowExecutionContinuedAsNewEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaRole")
     public String lambdaRole;
+
     public WorkflowExecutionContinuedAsNewEventAttributes withLambdaRole(String lambdaRole) {
         this.lambdaRole = lambdaRole;
         return this;
@@ -52,6 +57,7 @@ public class WorkflowExecutionContinuedAsNewEventAttributes {
     
     @JsonProperty("newExecutionRunId")
     public String newExecutionRunId;
+
     public WorkflowExecutionContinuedAsNewEventAttributes withNewExecutionRunId(String newExecutionRunId) {
         this.newExecutionRunId = newExecutionRunId;
         return this;
@@ -60,6 +66,7 @@ public class WorkflowExecutionContinuedAsNewEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagList")
     public String[] tagList;
+
     public WorkflowExecutionContinuedAsNewEventAttributes withTagList(String[] tagList) {
         this.tagList = tagList;
         return this;
@@ -67,6 +74,7 @@ public class WorkflowExecutionContinuedAsNewEventAttributes {
     
     @JsonProperty("taskList")
     public TaskList taskList;
+
     public WorkflowExecutionContinuedAsNewEventAttributes withTaskList(TaskList taskList) {
         this.taskList = taskList;
         return this;
@@ -75,6 +83,7 @@ public class WorkflowExecutionContinuedAsNewEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskPriority")
     public String taskPriority;
+
     public WorkflowExecutionContinuedAsNewEventAttributes withTaskPriority(String taskPriority) {
         this.taskPriority = taskPriority;
         return this;
@@ -83,6 +92,7 @@ public class WorkflowExecutionContinuedAsNewEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskStartToCloseTimeout")
     public String taskStartToCloseTimeout;
+
     public WorkflowExecutionContinuedAsNewEventAttributes withTaskStartToCloseTimeout(String taskStartToCloseTimeout) {
         this.taskStartToCloseTimeout = taskStartToCloseTimeout;
         return this;
@@ -90,9 +100,17 @@ public class WorkflowExecutionContinuedAsNewEventAttributes {
     
     @JsonProperty("workflowType")
     public WorkflowType workflowType;
+
     public WorkflowExecutionContinuedAsNewEventAttributes withWorkflowType(WorkflowType workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public WorkflowExecutionContinuedAsNewEventAttributes(@JsonProperty("childPolicy") ChildPolicyEnum childPolicy, @JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId, @JsonProperty("newExecutionRunId") String newExecutionRunId, @JsonProperty("taskList") TaskList taskList, @JsonProperty("workflowType") WorkflowType workflowType) {
+        this.childPolicy = childPolicy;
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+        this.newExecutionRunId = newExecutionRunId;
+        this.taskList = taskList;
+        this.workflowType = workflowType;
+  }
 }

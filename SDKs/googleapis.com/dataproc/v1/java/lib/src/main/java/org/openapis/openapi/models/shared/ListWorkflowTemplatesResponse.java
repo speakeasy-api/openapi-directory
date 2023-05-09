@@ -18,6 +18,7 @@ public class ListWorkflowTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListWorkflowTemplatesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListWorkflowTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templates")
     public WorkflowTemplate[] templates;
+
     public ListWorkflowTemplatesResponse withTemplates(WorkflowTemplate[] templates) {
         this.templates = templates;
         return this;
     }
     
+    public ListWorkflowTemplatesResponse(){}
 }

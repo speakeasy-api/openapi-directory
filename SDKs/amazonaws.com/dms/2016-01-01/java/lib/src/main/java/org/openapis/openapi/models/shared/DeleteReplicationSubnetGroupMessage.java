@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteReplicationSubnetGroupMessage {
     @JsonProperty("ReplicationSubnetGroupIdentifier")
     public String replicationSubnetGroupIdentifier;
+
     public DeleteReplicationSubnetGroupMessage withReplicationSubnetGroupIdentifier(String replicationSubnetGroupIdentifier) {
         this.replicationSubnetGroupIdentifier = replicationSubnetGroupIdentifier;
         return this;
     }
     
+    public DeleteReplicationSubnetGroupMessage(@JsonProperty("ReplicationSubnetGroupIdentifier") String replicationSubnetGroupIdentifier) {
+        this.replicationSubnetGroupIdentifier = replicationSubnetGroupIdentifier;
+  }
 }

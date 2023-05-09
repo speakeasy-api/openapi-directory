@@ -18,6 +18,7 @@ public class SuperChatEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public SuperChatEvent withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class SuperChatEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SuperChatEvent withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class SuperChatEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SuperChatEvent withKind(String kind) {
         this.kind = kind;
         return this;
@@ -48,9 +51,11 @@ public class SuperChatEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public SuperChatEventSnippet snippet;
+
     public SuperChatEvent withSnippet(SuperChatEventSnippet snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public SuperChatEvent(){}
 }

@@ -15,9 +15,11 @@ public class CreateBillingGroupRequestBodyAccountGrouping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinkedAccountIds")
     public String[] linkedAccountIds;
+
     public CreateBillingGroupRequestBodyAccountGrouping withLinkedAccountIds(String[] linkedAccountIds) {
         this.linkedAccountIds = linkedAccountIds;
         return this;
     }
     
+    public CreateBillingGroupRequestBodyAccountGrouping(){}
 }

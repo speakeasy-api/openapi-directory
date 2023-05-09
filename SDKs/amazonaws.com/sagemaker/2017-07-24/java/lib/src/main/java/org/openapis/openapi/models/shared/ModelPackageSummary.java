@@ -21,6 +21,7 @@ public class ModelPackageSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ModelPackageSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class ModelPackageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelApprovalStatus")
     public ModelApprovalStatusEnum modelApprovalStatus;
+
     public ModelPackageSummary withModelApprovalStatus(ModelApprovalStatusEnum modelApprovalStatus) {
         this.modelApprovalStatus = modelApprovalStatus;
         return this;
@@ -36,6 +38,7 @@ public class ModelPackageSummary {
     
     @JsonProperty("ModelPackageArn")
     public String modelPackageArn;
+
     public ModelPackageSummary withModelPackageArn(String modelPackageArn) {
         this.modelPackageArn = modelPackageArn;
         return this;
@@ -44,6 +47,7 @@ public class ModelPackageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageDescription")
     public String modelPackageDescription;
+
     public ModelPackageSummary withModelPackageDescription(String modelPackageDescription) {
         this.modelPackageDescription = modelPackageDescription;
         return this;
@@ -52,6 +56,7 @@ public class ModelPackageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageGroupName")
     public String modelPackageGroupName;
+
     public ModelPackageSummary withModelPackageGroupName(String modelPackageGroupName) {
         this.modelPackageGroupName = modelPackageGroupName;
         return this;
@@ -59,6 +64,7 @@ public class ModelPackageSummary {
     
     @JsonProperty("ModelPackageName")
     public String modelPackageName;
+
     public ModelPackageSummary withModelPackageName(String modelPackageName) {
         this.modelPackageName = modelPackageName;
         return this;
@@ -66,6 +72,7 @@ public class ModelPackageSummary {
     
     @JsonProperty("ModelPackageStatus")
     public ModelPackageStatusEnum modelPackageStatus;
+
     public ModelPackageSummary withModelPackageStatus(ModelPackageStatusEnum modelPackageStatus) {
         this.modelPackageStatus = modelPackageStatus;
         return this;
@@ -74,9 +81,16 @@ public class ModelPackageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageVersion")
     public Long modelPackageVersion;
+
     public ModelPackageSummary withModelPackageVersion(Long modelPackageVersion) {
         this.modelPackageVersion = modelPackageVersion;
         return this;
     }
     
+    public ModelPackageSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ModelPackageArn") String modelPackageArn, @JsonProperty("ModelPackageName") String modelPackageName, @JsonProperty("ModelPackageStatus") ModelPackageStatusEnum modelPackageStatus) {
+        this.creationTime = creationTime;
+        this.modelPackageArn = modelPackageArn;
+        this.modelPackageName = modelPackageName;
+        this.modelPackageStatus = modelPackageStatus;
+  }
 }

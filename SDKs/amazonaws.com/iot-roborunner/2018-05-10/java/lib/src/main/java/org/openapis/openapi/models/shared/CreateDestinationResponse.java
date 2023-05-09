@@ -20,6 +20,7 @@ public class CreateDestinationResponse {
      */
     @JsonProperty("arn")
     public String arn;
+
     public CreateDestinationResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -32,6 +33,7 @@ public class CreateDestinationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CreateDestinationResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -42,6 +44,7 @@ public class CreateDestinationResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public CreateDestinationResponse withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +55,7 @@ public class CreateDestinationResponse {
      */
     @JsonProperty("state")
     public DestinationStateEnum state;
+
     public CreateDestinationResponse withState(DestinationStateEnum state) {
         this.state = state;
         return this;
@@ -64,9 +68,17 @@ public class CreateDestinationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public CreateDestinationResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CreateDestinationResponse(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("state") DestinationStateEnum state, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.state = state;
+        this.updatedAt = updatedAt;
+  }
 }

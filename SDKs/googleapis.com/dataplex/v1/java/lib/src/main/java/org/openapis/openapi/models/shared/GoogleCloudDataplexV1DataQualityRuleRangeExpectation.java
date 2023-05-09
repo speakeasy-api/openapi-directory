@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataQualityRuleRangeExpectation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public String maxValue;
+
     public GoogleCloudDataplexV1DataQualityRuleRangeExpectation withMaxValue(String maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1DataQualityRuleRangeExpectation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public String minValue;
+
     public GoogleCloudDataplexV1DataQualityRuleRangeExpectation withMinValue(String minValue) {
         this.minValue = minValue;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1DataQualityRuleRangeExpectation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strictMaxEnabled")
     public Boolean strictMaxEnabled;
+
     public GoogleCloudDataplexV1DataQualityRuleRangeExpectation withStrictMaxEnabled(Boolean strictMaxEnabled) {
         this.strictMaxEnabled = strictMaxEnabled;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDataplexV1DataQualityRuleRangeExpectation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strictMinEnabled")
     public Boolean strictMinEnabled;
+
     public GoogleCloudDataplexV1DataQualityRuleRangeExpectation withStrictMinEnabled(Boolean strictMinEnabled) {
         this.strictMinEnabled = strictMinEnabled;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataQualityRuleRangeExpectation(){}
 }

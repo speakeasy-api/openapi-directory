@@ -18,9 +18,11 @@ public class DescribePiiEntitiesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PiiEntitiesDetectionJobProperties")
     public PiiEntitiesDetectionJobProperties piiEntitiesDetectionJobProperties;
+
     public DescribePiiEntitiesDetectionJobResponse withPiiEntitiesDetectionJobProperties(PiiEntitiesDetectionJobProperties piiEntitiesDetectionJobProperties) {
         this.piiEntitiesDetectionJobProperties = piiEntitiesDetectionJobProperties;
         return this;
     }
     
+    public DescribePiiEntitiesDetectionJobResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelTaskResponse {
@@ -12,6 +13,7 @@ public class CancelTaskResponse {
      */
     
     public Object accessDeniedException;
+
     public CancelTaskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CancelTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelTaskOutput cancelTaskOutput;
+
     public CancelTaskResponse withCancelTaskOutput(org.openapis.openapi.models.shared.CancelTaskOutput cancelTaskOutput) {
         this.cancelTaskOutput = cancelTaskOutput;
         return this;
@@ -29,6 +32,7 @@ public class CancelTaskResponse {
     
     
     public String contentType;
+
     public CancelTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CancelTaskResponse {
      */
     
     public Object internalServerException;
+
     public CancelTaskResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CancelTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CancelTaskResponse {
     
     
     public Integer statusCode;
+
     public CancelTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CancelTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CancelTaskResponse {
      */
     
     public Object throttlingException;
+
     public CancelTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class CancelTaskResponse {
      */
     
     public Object validationException;
+
     public CancelTaskResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CancelTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

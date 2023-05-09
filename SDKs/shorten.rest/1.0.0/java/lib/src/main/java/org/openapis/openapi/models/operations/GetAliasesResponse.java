@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAliasesResponse {
     
     public String contentType;
+
     public GetAliasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAliasesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAliasesModel getAliasesModel;
+
     public GetAliasesResponse withGetAliasesModel(org.openapis.openapi.models.shared.GetAliasesModel getAliasesModel) {
         this.getAliasesModel = getAliasesModel;
         return this;
@@ -26,6 +29,7 @@ public class GetAliasesResponse {
     
     
     public Integer statusCode;
+
     public GetAliasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetAliasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAliasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAliasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

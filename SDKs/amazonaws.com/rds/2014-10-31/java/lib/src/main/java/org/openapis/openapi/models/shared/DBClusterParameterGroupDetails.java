@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBClusterParameterGroupDetails {
     
     public String marker;
+
     public DBClusterParameterGroupDetails withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class DBClusterParameterGroupDetails {
     
     
     public ParametersList[] parameters;
+
     public DBClusterParameterGroupDetails withParameters(ParametersList[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public DBClusterParameterGroupDetails(){}
 }

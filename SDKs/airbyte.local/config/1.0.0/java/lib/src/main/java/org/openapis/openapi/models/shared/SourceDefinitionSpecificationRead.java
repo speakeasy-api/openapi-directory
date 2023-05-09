@@ -15,6 +15,7 @@ public class SourceDefinitionSpecificationRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advancedAuth")
     public AdvancedAuth advancedAuth;
+
     public SourceDefinitionSpecificationRead withAdvancedAuth(AdvancedAuth advancedAuth) {
         this.advancedAuth = advancedAuth;
         return this;
@@ -23,6 +24,7 @@ public class SourceDefinitionSpecificationRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authSpecification")
     public SourceAuthSpecification authSpecification;
+
     public SourceDefinitionSpecificationRead withAuthSpecification(SourceAuthSpecification authSpecification) {
         this.authSpecification = authSpecification;
         return this;
@@ -34,6 +36,7 @@ public class SourceDefinitionSpecificationRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionSpecification")
     public java.util.Map<String, Object> connectionSpecification;
+
     public SourceDefinitionSpecificationRead withConnectionSpecification(java.util.Map<String, Object> connectionSpecification) {
         this.connectionSpecification = connectionSpecification;
         return this;
@@ -42,6 +45,7 @@ public class SourceDefinitionSpecificationRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentationUrl")
     public String documentationUrl;
+
     public SourceDefinitionSpecificationRead withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -49,6 +53,7 @@ public class SourceDefinitionSpecificationRead {
     
     @JsonProperty("jobInfo")
     public SynchronousJobRead jobInfo;
+
     public SourceDefinitionSpecificationRead withJobInfo(SynchronousJobRead jobInfo) {
         this.jobInfo = jobInfo;
         return this;
@@ -56,9 +61,14 @@ public class SourceDefinitionSpecificationRead {
     
     @JsonProperty("sourceDefinitionId")
     public String sourceDefinitionId;
+
     public SourceDefinitionSpecificationRead withSourceDefinitionId(String sourceDefinitionId) {
         this.sourceDefinitionId = sourceDefinitionId;
         return this;
     }
     
+    public SourceDefinitionSpecificationRead(@JsonProperty("jobInfo") SynchronousJobRead jobInfo, @JsonProperty("sourceDefinitionId") String sourceDefinitionId) {
+        this.jobInfo = jobInfo;
+        this.sourceDefinitionId = sourceDefinitionId;
+  }
 }

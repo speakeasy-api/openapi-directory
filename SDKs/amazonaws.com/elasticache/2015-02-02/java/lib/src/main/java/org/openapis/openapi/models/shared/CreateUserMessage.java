@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateUserMessage {
     
     public String accessString;
+
     public CreateUserMessage withAccessString(String accessString) {
         this.accessString = accessString;
         return this;
@@ -16,6 +17,7 @@ public class CreateUserMessage {
     
     
     public AuthenticationMode authenticationMode;
+
     public CreateUserMessage withAuthenticationMode(AuthenticationMode authenticationMode) {
         this.authenticationMode = authenticationMode;
         return this;
@@ -23,6 +25,7 @@ public class CreateUserMessage {
     
     
     public String engine;
+
     public CreateUserMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -30,6 +33,7 @@ public class CreateUserMessage {
     
     
     public Boolean noPasswordRequired;
+
     public CreateUserMessage withNoPasswordRequired(Boolean noPasswordRequired) {
         this.noPasswordRequired = noPasswordRequired;
         return this;
@@ -37,6 +41,7 @@ public class CreateUserMessage {
     
     
     public String[] passwords;
+
     public CreateUserMessage withPasswords(String[] passwords) {
         this.passwords = passwords;
         return this;
@@ -44,6 +49,7 @@ public class CreateUserMessage {
     
     
     public TagList[] tags;
+
     public CreateUserMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -51,6 +57,7 @@ public class CreateUserMessage {
     
     
     public String userId;
+
     public CreateUserMessage withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -58,9 +65,16 @@ public class CreateUserMessage {
     
     
     public String userName;
+
     public CreateUserMessage withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public CreateUserMessage(@JsonProperty("AccessString") String accessString, @JsonProperty("Engine") String engine, @JsonProperty("UserId") String userId, @JsonProperty("UserName") String userName) {
+        this.accessString = accessString;
+        this.engine = engine;
+        this.userId = userId;
+        this.userName = userName;
+  }
 }

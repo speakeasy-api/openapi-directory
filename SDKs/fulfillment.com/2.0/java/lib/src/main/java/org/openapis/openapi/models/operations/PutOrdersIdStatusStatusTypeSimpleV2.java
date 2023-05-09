@@ -15,6 +15,7 @@ public class PutOrdersIdStatusStatusTypeSimpleV2 {
      */
     @JsonProperty("reason")
     public String reason;
+
     public PutOrdersIdStatusStatusTypeSimpleV2 withReason(String reason) {
         this.reason = reason;
         return this;
@@ -22,9 +23,14 @@ public class PutOrdersIdStatusStatusTypeSimpleV2 {
     
     @JsonProperty("status")
     public PutOrdersIdStatusStatusTypeSimpleV2Status status;
+
     public PutOrdersIdStatusStatusTypeSimpleV2 withStatus(PutOrdersIdStatusStatusTypeSimpleV2Status status) {
         this.status = status;
         return this;
     }
     
+    public PutOrdersIdStatusStatusTypeSimpleV2(@JsonProperty("reason") String reason, @JsonProperty("status") PutOrdersIdStatusStatusTypeSimpleV2Status status) {
+        this.reason = reason;
+        this.status = status;
+  }
 }

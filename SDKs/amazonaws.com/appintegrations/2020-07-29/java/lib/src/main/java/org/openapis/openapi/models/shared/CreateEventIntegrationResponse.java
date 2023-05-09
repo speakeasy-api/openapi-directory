@@ -15,9 +15,11 @@ public class CreateEventIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventIntegrationArn")
     public String eventIntegrationArn;
+
     public CreateEventIntegrationResponse withEventIntegrationArn(String eventIntegrationArn) {
         this.eventIntegrationArn = eventIntegrationArn;
         return this;
     }
     
+    public CreateEventIntegrationResponse(){}
 }

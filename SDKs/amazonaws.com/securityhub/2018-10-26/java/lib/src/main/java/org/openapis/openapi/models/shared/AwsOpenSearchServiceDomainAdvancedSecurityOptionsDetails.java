@@ -15,6 +15,7 @@ public class AwsOpenSearchServiceDomainAdvancedSecurityOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public AwsOpenSearchServiceDomainAdvancedSecurityOptionsDetails withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,6 +24,7 @@ public class AwsOpenSearchServiceDomainAdvancedSecurityOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InternalUserDatabaseEnabled")
     public Boolean internalUserDatabaseEnabled;
+
     public AwsOpenSearchServiceDomainAdvancedSecurityOptionsDetails withInternalUserDatabaseEnabled(Boolean internalUserDatabaseEnabled) {
         this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
         return this;
@@ -31,9 +33,11 @@ public class AwsOpenSearchServiceDomainAdvancedSecurityOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterUserOptions")
     public AwsOpenSearchServiceDomainMasterUserOptionsDetails masterUserOptions;
+
     public AwsOpenSearchServiceDomainAdvancedSecurityOptionsDetails withMasterUserOptions(AwsOpenSearchServiceDomainMasterUserOptionsDetails masterUserOptions) {
         this.masterUserOptions = masterUserOptions;
         return this;
     }
     
+    public AwsOpenSearchServiceDomainAdvancedSecurityOptionsDetails(){}
 }

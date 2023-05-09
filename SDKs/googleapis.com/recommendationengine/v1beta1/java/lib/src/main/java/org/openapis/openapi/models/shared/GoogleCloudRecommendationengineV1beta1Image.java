@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public GoogleCloudRecommendationengineV1beta1Image withHeight(Integer height) {
         this.height = height;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecommendationengineV1beta1Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudRecommendationengineV1beta1Image withUri(String uri) {
         this.uri = uri;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRecommendationengineV1beta1Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public GoogleCloudRecommendationengineV1beta1Image withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1Image(){}
 }

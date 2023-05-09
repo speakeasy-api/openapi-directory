@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest {
@@ -12,6 +13,7 @@ public class RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudRetailV2betaAddFulfillmentPlacesRequest googleCloudRetailV2betaAddFulfillmentPlacesRequest;
+
     public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withGoogleCloudRetailV2betaAddFulfillmentPlacesRequest(org.openapis.openapi.models.shared.GoogleCloudRetailV2betaAddFulfillmentPlacesRequest googleCloudRetailV2betaAddFulfillmentPlacesRequest) {
         this.googleCloudRetailV2betaAddFulfillmentPlacesRequest = googleCloudRetailV2betaAddFulfillmentPlacesRequest;
         return this;
@@ -29,6 +32,7 @@ public class RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=product")
     public String product;
+
     public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withProduct(String product) {
         this.product = product;
         return this;
@@ -109,6 +120,7 @@ public class RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest(@JsonProperty("product") String product) {
+        this.product = product;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUpdatedWorkspaceImageResponse {
@@ -12,6 +13,7 @@ public class CreateUpdatedWorkspaceImageResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateUpdatedWorkspaceImageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateUpdatedWorkspaceImageResponse {
     
     
     public String contentType;
+
     public CreateUpdatedWorkspaceImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateUpdatedWorkspaceImageResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUpdatedWorkspaceImageResult createUpdatedWorkspaceImageResult;
+
     public CreateUpdatedWorkspaceImageResponse withCreateUpdatedWorkspaceImageResult(org.openapis.openapi.models.shared.CreateUpdatedWorkspaceImageResult createUpdatedWorkspaceImageResult) {
         this.createUpdatedWorkspaceImageResult = createUpdatedWorkspaceImageResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateUpdatedWorkspaceImageResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public CreateUpdatedWorkspaceImageResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class CreateUpdatedWorkspaceImageResponse {
      */
     
     public Object invalidResourceStateException;
+
     public CreateUpdatedWorkspaceImageResponse withInvalidResourceStateException(Object invalidResourceStateException) {
         this.invalidResourceStateException = invalidResourceStateException;
         return this;
@@ -59,6 +65,7 @@ public class CreateUpdatedWorkspaceImageResponse {
      */
     
     public Object operationNotSupportedException;
+
     public CreateUpdatedWorkspaceImageResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -69,6 +76,7 @@ public class CreateUpdatedWorkspaceImageResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateUpdatedWorkspaceImageResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -79,6 +87,7 @@ public class CreateUpdatedWorkspaceImageResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateUpdatedWorkspaceImageResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -86,6 +95,7 @@ public class CreateUpdatedWorkspaceImageResponse {
     
     
     public Integer statusCode;
+
     public CreateUpdatedWorkspaceImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateUpdatedWorkspaceImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUpdatedWorkspaceImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateUpdatedWorkspaceImageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateUpdatedWorkspaceImageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateUpdatedWorkspaceImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

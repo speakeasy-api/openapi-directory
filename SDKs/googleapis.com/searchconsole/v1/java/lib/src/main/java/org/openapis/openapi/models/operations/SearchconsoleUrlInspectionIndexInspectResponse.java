@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchconsoleUrlInspectionIndexInspectResponse {
     
     public String contentType;
+
     public SearchconsoleUrlInspectionIndexInspectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SearchconsoleUrlInspectionIndexInspectResponse {
      */
     
     public org.openapis.openapi.models.shared.InspectUrlIndexResponse inspectUrlIndexResponse;
+
     public SearchconsoleUrlInspectionIndexInspectResponse withInspectUrlIndexResponse(org.openapis.openapi.models.shared.InspectUrlIndexResponse inspectUrlIndexResponse) {
         this.inspectUrlIndexResponse = inspectUrlIndexResponse;
         return this;
@@ -26,6 +29,7 @@ public class SearchconsoleUrlInspectionIndexInspectResponse {
     
     
     public Integer statusCode;
+
     public SearchconsoleUrlInspectionIndexInspectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SearchconsoleUrlInspectionIndexInspectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchconsoleUrlInspectionIndexInspectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchconsoleUrlInspectionIndexInspectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

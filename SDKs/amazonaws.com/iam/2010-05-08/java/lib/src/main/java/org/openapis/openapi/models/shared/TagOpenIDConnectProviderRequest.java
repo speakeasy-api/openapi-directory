@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TagOpenIDConnectProviderRequest {
     
     public String openIDConnectProviderArn;
+
     public TagOpenIDConnectProviderRequest withOpenIDConnectProviderArn(String openIDConnectProviderArn) {
         this.openIDConnectProviderArn = openIDConnectProviderArn;
         return this;
@@ -16,9 +17,14 @@ public class TagOpenIDConnectProviderRequest {
     
     
     public Tag[] tags;
+
     public TagOpenIDConnectProviderRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagOpenIDConnectProviderRequest(@JsonProperty("OpenIDConnectProviderArn") String openIDConnectProviderArn, @JsonProperty("Tags") Tag[] tags) {
+        this.openIDConnectProviderArn = openIDConnectProviderArn;
+        this.tags = tags;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListNotificationsResponse {
@@ -12,6 +13,7 @@ public class ListNotificationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListNotificationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListNotificationsResponse {
     
     
     public String contentType;
+
     public ListNotificationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListNotificationsResponse {
      */
     
     public Object internalServerException;
+
     public ListNotificationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListNotificationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListNotificationsOutput listNotificationsOutput;
+
     public ListNotificationsResponse withListNotificationsOutput(org.openapis.openapi.models.shared.ListNotificationsOutput listNotificationsOutput) {
         this.listNotificationsOutput = listNotificationsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListNotificationsResponse {
     
     
     public Integer statusCode;
+
     public ListNotificationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListNotificationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListNotificationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListNotificationsResponse {
      */
     
     public Object throttlingException;
+
     public ListNotificationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListNotificationsResponse {
      */
     
     public Object validationException;
+
     public ListNotificationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListNotificationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

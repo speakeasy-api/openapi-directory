@@ -15,6 +15,7 @@ public class AwsRedshiftClusterLoggingStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketName")
     public String bucketName;
+
     public AwsRedshiftClusterLoggingStatus withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -23,6 +24,7 @@ public class AwsRedshiftClusterLoggingStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastFailureMessage")
     public String lastFailureMessage;
+
     public AwsRedshiftClusterLoggingStatus withLastFailureMessage(String lastFailureMessage) {
         this.lastFailureMessage = lastFailureMessage;
         return this;
@@ -31,6 +33,7 @@ public class AwsRedshiftClusterLoggingStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastFailureTime")
     public String lastFailureTime;
+
     public AwsRedshiftClusterLoggingStatus withLastFailureTime(String lastFailureTime) {
         this.lastFailureTime = lastFailureTime;
         return this;
@@ -39,6 +42,7 @@ public class AwsRedshiftClusterLoggingStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastSuccessfulDeliveryTime")
     public String lastSuccessfulDeliveryTime;
+
     public AwsRedshiftClusterLoggingStatus withLastSuccessfulDeliveryTime(String lastSuccessfulDeliveryTime) {
         this.lastSuccessfulDeliveryTime = lastSuccessfulDeliveryTime;
         return this;
@@ -47,6 +51,7 @@ public class AwsRedshiftClusterLoggingStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggingEnabled")
     public Boolean loggingEnabled;
+
     public AwsRedshiftClusterLoggingStatus withLoggingEnabled(Boolean loggingEnabled) {
         this.loggingEnabled = loggingEnabled;
         return this;
@@ -55,9 +60,11 @@ public class AwsRedshiftClusterLoggingStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3KeyPrefix")
     public String s3KeyPrefix;
+
     public AwsRedshiftClusterLoggingStatus withS3KeyPrefix(String s3KeyPrefix) {
         this.s3KeyPrefix = s3KeyPrefix;
         return this;
     }
     
+    public AwsRedshiftClusterLoggingStatus(){}
 }

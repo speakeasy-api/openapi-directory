@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteCustomRoutingAcceleratorRequest {
     @JsonProperty("AcceleratorArn")
     public String acceleratorArn;
+
     public DeleteCustomRoutingAcceleratorRequest withAcceleratorArn(String acceleratorArn) {
         this.acceleratorArn = acceleratorArn;
         return this;
     }
     
+    public DeleteCustomRoutingAcceleratorRequest(@JsonProperty("AcceleratorArn") String acceleratorArn) {
+        this.acceleratorArn = acceleratorArn;
+  }
 }

@@ -12,6 +12,7 @@ public class BusinessUserPermissionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access")
     public String access;
+
     public BusinessUserPermissionViewModel withAccess(String access) {
         this.access = access;
         return this;
@@ -20,6 +21,7 @@ public class BusinessUserPermissionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("function")
     public String function;
+
     public BusinessUserPermissionViewModel withFunction(String function) {
         this.function = function;
         return this;
@@ -28,9 +30,11 @@ public class BusinessUserPermissionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public BusinessUserPermissionViewModel withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public BusinessUserPermissionViewModel(){}
 }

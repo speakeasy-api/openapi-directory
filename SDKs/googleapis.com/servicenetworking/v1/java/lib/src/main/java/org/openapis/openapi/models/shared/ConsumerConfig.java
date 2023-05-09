@@ -18,6 +18,7 @@ public class ConsumerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudsqlConfigs")
     public CloudSQLConfig[] cloudsqlConfigs;
+
     public ConsumerConfig withCloudsqlConfigs(CloudSQLConfig[] cloudsqlConfigs) {
         this.cloudsqlConfigs = cloudsqlConfigs;
         return this;
@@ -29,6 +30,7 @@ public class ConsumerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerExportCustomRoutes")
     public Boolean consumerExportCustomRoutes;
+
     public ConsumerConfig withConsumerExportCustomRoutes(Boolean consumerExportCustomRoutes) {
         this.consumerExportCustomRoutes = consumerExportCustomRoutes;
         return this;
@@ -40,6 +42,7 @@ public class ConsumerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerExportSubnetRoutesWithPublicIp")
     public Boolean consumerExportSubnetRoutesWithPublicIp;
+
     public ConsumerConfig withConsumerExportSubnetRoutesWithPublicIp(Boolean consumerExportSubnetRoutesWithPublicIp) {
         this.consumerExportSubnetRoutesWithPublicIp = consumerExportSubnetRoutesWithPublicIp;
         return this;
@@ -51,6 +54,7 @@ public class ConsumerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerImportCustomRoutes")
     public Boolean consumerImportCustomRoutes;
+
     public ConsumerConfig withConsumerImportCustomRoutes(Boolean consumerImportCustomRoutes) {
         this.consumerImportCustomRoutes = consumerImportCustomRoutes;
         return this;
@@ -62,6 +66,7 @@ public class ConsumerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerImportSubnetRoutesWithPublicIp")
     public Boolean consumerImportSubnetRoutesWithPublicIp;
+
     public ConsumerConfig withConsumerImportSubnetRoutesWithPublicIp(Boolean consumerImportSubnetRoutesWithPublicIp) {
         this.consumerImportSubnetRoutesWithPublicIp = consumerImportSubnetRoutesWithPublicIp;
         return this;
@@ -73,6 +78,7 @@ public class ConsumerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerExportCustomRoutes")
     public Boolean producerExportCustomRoutes;
+
     public ConsumerConfig withProducerExportCustomRoutes(Boolean producerExportCustomRoutes) {
         this.producerExportCustomRoutes = producerExportCustomRoutes;
         return this;
@@ -84,6 +90,7 @@ public class ConsumerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerExportSubnetRoutesWithPublicIp")
     public Boolean producerExportSubnetRoutesWithPublicIp;
+
     public ConsumerConfig withProducerExportSubnetRoutesWithPublicIp(Boolean producerExportSubnetRoutesWithPublicIp) {
         this.producerExportSubnetRoutesWithPublicIp = producerExportSubnetRoutesWithPublicIp;
         return this;
@@ -95,6 +102,7 @@ public class ConsumerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerImportCustomRoutes")
     public Boolean producerImportCustomRoutes;
+
     public ConsumerConfig withProducerImportCustomRoutes(Boolean producerImportCustomRoutes) {
         this.producerImportCustomRoutes = producerImportCustomRoutes;
         return this;
@@ -106,6 +114,7 @@ public class ConsumerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerImportSubnetRoutesWithPublicIp")
     public Boolean producerImportSubnetRoutesWithPublicIp;
+
     public ConsumerConfig withProducerImportSubnetRoutesWithPublicIp(Boolean producerImportSubnetRoutesWithPublicIp) {
         this.producerImportSubnetRoutesWithPublicIp = producerImportSubnetRoutesWithPublicIp;
         return this;
@@ -117,6 +126,7 @@ public class ConsumerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerNetwork")
     public String producerNetwork;
+
     public ConsumerConfig withProducerNetwork(String producerNetwork) {
         this.producerNetwork = producerNetwork;
         return this;
@@ -128,6 +138,7 @@ public class ConsumerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedRanges")
     public GoogleCloudServicenetworkingV1ConsumerConfigReservedRange[] reservedRanges;
+
     public ConsumerConfig withReservedRanges(GoogleCloudServicenetworkingV1ConsumerConfigReservedRange[] reservedRanges) {
         this.reservedRanges = reservedRanges;
         return this;
@@ -139,6 +150,7 @@ public class ConsumerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usedIpRanges")
     public String[] usedIpRanges;
+
     public ConsumerConfig withUsedIpRanges(String[] usedIpRanges) {
         this.usedIpRanges = usedIpRanges;
         return this;
@@ -150,9 +162,11 @@ public class ConsumerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcScReferenceArchitectureEnabled")
     public Boolean vpcScReferenceArchitectureEnabled;
+
     public ConsumerConfig withVpcScReferenceArchitectureEnabled(Boolean vpcScReferenceArchitectureEnabled) {
         this.vpcScReferenceArchitectureEnabled = vpcScReferenceArchitectureEnabled;
         return this;
     }
     
+    public ConsumerConfig(){}
 }

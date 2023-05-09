@@ -15,6 +15,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternativeNameServerConfig")
     public PolicyAlternativeNameServerConfig alternativeNameServerConfig;
+
     public Policy withAlternativeNameServerConfig(PolicyAlternativeNameServerConfig alternativeNameServerConfig) {
         this.alternativeNameServerConfig = alternativeNameServerConfig;
         return this;
@@ -26,6 +27,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Policy withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableInboundForwarding")
     public Boolean enableInboundForwarding;
+
     public Policy withEnableInboundForwarding(Boolean enableInboundForwarding) {
         this.enableInboundForwarding = enableInboundForwarding;
         return this;
@@ -48,6 +51,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableLogging")
     public Boolean enableLogging;
+
     public Policy withEnableLogging(Boolean enableLogging) {
         this.enableLogging = enableLogging;
         return this;
@@ -59,6 +63,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Policy withId(String id) {
         this.id = id;
         return this;
@@ -67,6 +72,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Policy withKind(String kind) {
         this.kind = kind;
         return this;
@@ -78,6 +84,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Policy withName(String name) {
         this.name = name;
         return this;
@@ -89,9 +96,11 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networks")
     public PolicyNetwork[] networks;
+
     public Policy withNetworks(PolicyNetwork[] networks) {
         this.networks = networks;
         return this;
     }
     
+    public Policy(){}
 }

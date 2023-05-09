@@ -201,4 +201,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StartRecommendationReportGe
 lib/src/main/java/org/openapis/openapi/models/shared/SourceCode.java
 lib/src/main/java/org/openapis/openapi/models/shared/VersionControlEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class PlayerLatency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatencyInMilliseconds")
     public Float latencyInMilliseconds;
+
     public PlayerLatency withLatencyInMilliseconds(Float latencyInMilliseconds) {
         this.latencyInMilliseconds = latencyInMilliseconds;
         return this;
@@ -23,6 +24,7 @@ public class PlayerLatency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerId")
     public String playerId;
+
     public PlayerLatency withPlayerId(String playerId) {
         this.playerId = playerId;
         return this;
@@ -31,9 +33,11 @@ public class PlayerLatency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionIdentifier")
     public String regionIdentifier;
+
     public PlayerLatency withRegionIdentifier(String regionIdentifier) {
         this.regionIdentifier = regionIdentifier;
         return this;
     }
     
+    public PlayerLatency(){}
 }

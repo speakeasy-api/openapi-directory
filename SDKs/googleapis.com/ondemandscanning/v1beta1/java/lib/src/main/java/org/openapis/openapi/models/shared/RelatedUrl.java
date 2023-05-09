@@ -18,6 +18,7 @@ public class RelatedUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public RelatedUrl withLabel(String label) {
         this.label = label;
         return this;
@@ -29,9 +30,11 @@ public class RelatedUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public RelatedUrl withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public RelatedUrl(){}
 }

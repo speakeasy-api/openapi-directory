@@ -15,6 +15,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public ItemsUpdate200ApplicationJSONItemsAdditionalInfo additionalInfo;
+
     public ItemsUpdate200ApplicationJSONItems withAdditionalInfo(ItemsUpdate200ApplicationJSONItemsAdditionalInfo additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -26,6 +27,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public String[] attachments;
+
     public ItemsUpdate200ApplicationJSONItems withAttachments(String[] attachments) {
         this.attachments = attachments;
         return this;
@@ -37,6 +39,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public String availability;
+
     public ItemsUpdate200ApplicationJSONItems withAvailability(String availability) {
         this.availability = availability;
         return this;
@@ -48,6 +51,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleItems")
     public ItemsUpdate200ApplicationJSONItemsBundleItems[] bundleItems;
+
     public ItemsUpdate200ApplicationJSONItems withBundleItems(ItemsUpdate200ApplicationJSONItemsBundleItems[] bundleItems) {
         this.bundleItems = bundleItems;
         return this;
@@ -59,6 +63,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailUrl")
     public String detailUrl;
+
     public ItemsUpdate200ApplicationJSONItems withDetailUrl(String detailUrl) {
         this.detailUrl = detailUrl;
         return this;
@@ -70,6 +75,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ean")
     public String ean;
+
     public ItemsUpdate200ApplicationJSONItems withEan(String ean) {
         this.ean = ean;
         return this;
@@ -81,6 +87,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ItemsUpdate200ApplicationJSONItems withId(String id) {
         this.id = id;
         return this;
@@ -92,6 +99,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public ItemsUpdate200ApplicationJSONItems withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -103,6 +111,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isGift")
     public Boolean isGift;
+
     public ItemsUpdate200ApplicationJSONItems withIsGift(Boolean isGift) {
         this.isGift = isGift;
         return this;
@@ -114,6 +123,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listPrice")
     public Long listPrice;
+
     public ItemsUpdate200ApplicationJSONItems withListPrice(Long listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -125,6 +135,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualPrice")
     public Long manualPrice;
+
     public ItemsUpdate200ApplicationJSONItems withManualPrice(Long manualPrice) {
         this.manualPrice = manualPrice;
         return this;
@@ -136,6 +147,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualPriceAppliedBy")
     public String manualPriceAppliedBy;
+
     public ItemsUpdate200ApplicationJSONItems withManualPriceAppliedBy(String manualPriceAppliedBy) {
         this.manualPriceAppliedBy = manualPriceAppliedBy;
         return this;
@@ -147,6 +159,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturerCode")
     public String manufacturerCode;
+
     public ItemsUpdate200ApplicationJSONItems withManufacturerCode(String manufacturerCode) {
         this.manufacturerCode = manufacturerCode;
         return this;
@@ -158,6 +171,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurementUnit")
     public String measurementUnit;
+
     public ItemsUpdate200ApplicationJSONItems withMeasurementUnit(String measurementUnit) {
         this.measurementUnit = measurementUnit;
         return this;
@@ -169,6 +183,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modalType")
     public String modalType;
+
     public ItemsUpdate200ApplicationJSONItems withModalType(String modalType) {
         this.modalType = modalType;
         return this;
@@ -180,6 +195,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ItemsUpdate200ApplicationJSONItems withName(String name) {
         this.name = name;
         return this;
@@ -191,6 +207,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentAssemblyBinding")
     public String parentAssemblyBinding;
+
     public ItemsUpdate200ApplicationJSONItems withParentAssemblyBinding(String parentAssemblyBinding) {
         this.parentAssemblyBinding = parentAssemblyBinding;
         return this;
@@ -202,6 +219,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentItemIndex")
     public Long parentItemIndex;
+
     public ItemsUpdate200ApplicationJSONItems withParentItemIndex(Long parentItemIndex) {
         this.parentItemIndex = parentItemIndex;
         return this;
@@ -213,6 +231,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preSaleDate")
     public String preSaleDate;
+
     public ItemsUpdate200ApplicationJSONItems withPreSaleDate(String preSaleDate) {
         this.preSaleDate = preSaleDate;
         return this;
@@ -224,6 +243,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public ItemsUpdate200ApplicationJSONItems withPrice(Long price) {
         this.price = price;
         return this;
@@ -235,6 +255,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceDefinition")
     public ItemsUpdate200ApplicationJSONItemsPriceDefinition priceDefinition;
+
     public ItemsUpdate200ApplicationJSONItems withPriceDefinition(ItemsUpdate200ApplicationJSONItemsPriceDefinition priceDefinition) {
         this.priceDefinition = priceDefinition;
         return this;
@@ -246,6 +267,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceTags")
     public ItemsUpdate200ApplicationJSONItemsPriceTags[] priceTags;
+
     public ItemsUpdate200ApplicationJSONItems withPriceTags(ItemsUpdate200ApplicationJSONItemsPriceTags[] priceTags) {
         this.priceTags = priceTags;
         return this;
@@ -257,6 +279,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceValidUntil")
     public String priceValidUntil;
+
     public ItemsUpdate200ApplicationJSONItems withPriceValidUntil(String priceValidUntil) {
         this.priceValidUntil = priceValidUntil;
         return this;
@@ -268,6 +291,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCategories")
     public ItemsUpdate200ApplicationJSONItemsProductCategories productCategories;
+
     public ItemsUpdate200ApplicationJSONItems withProductCategories(ItemsUpdate200ApplicationJSONItemsProductCategories productCategories) {
         this.productCategories = productCategories;
         return this;
@@ -279,6 +303,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCategoryIds")
     public String productCategoryIds;
+
     public ItemsUpdate200ApplicationJSONItems withProductCategoryIds(String productCategoryIds) {
         this.productCategoryIds = productCategoryIds;
         return this;
@@ -290,6 +315,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public ItemsUpdate200ApplicationJSONItems withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -301,6 +327,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productRefId")
     public String productRefId;
+
     public ItemsUpdate200ApplicationJSONItems withProductRefId(String productRefId) {
         this.productRefId = productRefId;
         return this;
@@ -312,6 +339,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public ItemsUpdate200ApplicationJSONItems withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -323,6 +351,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refId")
     public String refId;
+
     public ItemsUpdate200ApplicationJSONItems withRefId(String refId) {
         this.refId = refId;
         return this;
@@ -334,6 +363,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rewardValue")
     public Long rewardValue;
+
     public ItemsUpdate200ApplicationJSONItems withRewardValue(Long rewardValue) {
         this.rewardValue = rewardValue;
         return this;
@@ -345,6 +375,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller")
     public String seller;
+
     public ItemsUpdate200ApplicationJSONItems withSeller(String seller) {
         this.seller = seller;
         return this;
@@ -356,6 +387,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerChain")
     public String[] sellerChain;
+
     public ItemsUpdate200ApplicationJSONItems withSellerChain(String[] sellerChain) {
         this.sellerChain = sellerChain;
         return this;
@@ -367,6 +399,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellingPrice")
     public Long sellingPrice;
+
     public ItemsUpdate200ApplicationJSONItems withSellingPrice(Long sellingPrice) {
         this.sellingPrice = sellingPrice;
         return this;
@@ -378,6 +411,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skuName")
     public String skuName;
+
     public ItemsUpdate200ApplicationJSONItems withSkuName(String skuName) {
         this.skuName = skuName;
         return this;
@@ -389,6 +423,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Long tax;
+
     public ItemsUpdate200ApplicationJSONItems withTax(Long tax) {
         this.tax = tax;
         return this;
@@ -400,6 +435,7 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniqueId")
     public String uniqueId;
+
     public ItemsUpdate200ApplicationJSONItems withUniqueId(String uniqueId) {
         this.uniqueId = uniqueId;
         return this;
@@ -411,9 +447,11 @@ public class ItemsUpdate200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitMultiplier")
     public Long unitMultiplier;
+
     public ItemsUpdate200ApplicationJSONItems withUnitMultiplier(Long unitMultiplier) {
         this.unitMultiplier = unitMultiplier;
         return this;
     }
     
+    public ItemsUpdate200ApplicationJSONItems(){}
 }

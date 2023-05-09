@@ -18,9 +18,11 @@ public class HostsEntryList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public HostsEntry[] entries;
+
     public HostsEntryList withEntries(HostsEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public HostsEntryList(){}
 }

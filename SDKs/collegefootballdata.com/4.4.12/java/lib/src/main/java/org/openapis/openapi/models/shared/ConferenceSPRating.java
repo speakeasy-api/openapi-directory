@@ -12,6 +12,7 @@ public class ConferenceSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
     public String conference;
+
     public ConferenceSPRating withConference(String conference) {
         this.conference = conference;
         return this;
@@ -20,6 +21,7 @@ public class ConferenceSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defense")
     public ConferenceSPRatingDefense defense;
+
     public ConferenceSPRating withDefense(ConferenceSPRatingDefense defense) {
         this.defense = defense;
         return this;
@@ -28,6 +30,7 @@ public class ConferenceSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offense")
     public ConferenceSPRatingOffense offense;
+
     public ConferenceSPRating withOffense(ConferenceSPRatingOffense offense) {
         this.offense = offense;
         return this;
@@ -36,6 +39,7 @@ public class ConferenceSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     public Double rating;
+
     public ConferenceSPRating withRating(Double rating) {
         this.rating = rating;
         return this;
@@ -44,6 +48,7 @@ public class ConferenceSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondOrderWins")
     public Double secondOrderWins;
+
     public ConferenceSPRating withSecondOrderWins(Double secondOrderWins) {
         this.secondOrderWins = secondOrderWins;
         return this;
@@ -52,6 +57,7 @@ public class ConferenceSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sos")
     public Double sos;
+
     public ConferenceSPRating withSos(Double sos) {
         this.sos = sos;
         return this;
@@ -60,6 +66,7 @@ public class ConferenceSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specialTeams")
     public ConferenceSPRatingSpecialTeams specialTeams;
+
     public ConferenceSPRating withSpecialTeams(ConferenceSPRatingSpecialTeams specialTeams) {
         this.specialTeams = specialTeams;
         return this;
@@ -68,9 +75,11 @@ public class ConferenceSPRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Long year;
+
     public ConferenceSPRating withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public ConferenceSPRating(){}
 }

@@ -15,6 +15,7 @@ public class PreprintProviderTaxonomiesListTaxonomy {
      */
     
     public PreprintProviderTaxonomiesListTaxonomyAttributes attributes;
+
     public PreprintProviderTaxonomiesListTaxonomy withAttributes(PreprintProviderTaxonomiesListTaxonomyAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class PreprintProviderTaxonomiesListTaxonomy {
      */
     
     public String id;
+
     public PreprintProviderTaxonomiesListTaxonomy withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class PreprintProviderTaxonomiesListTaxonomy {
      */
     
     public PreprintProviderTaxonomiesListTaxonomyLinks links;
+
     public PreprintProviderTaxonomiesListTaxonomy withLinks(PreprintProviderTaxonomiesListTaxonomyLinks links) {
         this.links = links;
         return this;
@@ -45,9 +48,11 @@ public class PreprintProviderTaxonomiesListTaxonomy {
      */
     
     public String type;
+
     public PreprintProviderTaxonomiesListTaxonomy withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PreprintProviderTaxonomiesListTaxonomy(){}
 }

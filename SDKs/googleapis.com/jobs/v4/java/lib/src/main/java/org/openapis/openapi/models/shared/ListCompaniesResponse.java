@@ -18,6 +18,7 @@ public class ListCompaniesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companies")
     public Company[] companies;
+
     public ListCompaniesResponse withCompanies(Company[] companies) {
         this.companies = companies;
         return this;
@@ -29,6 +30,7 @@ public class ListCompaniesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ResponseMetadata metadata;
+
     public ListCompaniesResponse withMetadata(ResponseMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -40,9 +42,11 @@ public class ListCompaniesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCompaniesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCompaniesResponse(){}
 }

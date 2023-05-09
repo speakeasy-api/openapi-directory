@@ -18,9 +18,11 @@ public class DuplicateLineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDisplayName")
     public String targetDisplayName;
+
     public DuplicateLineItemRequest withTargetDisplayName(String targetDisplayName) {
         this.targetDisplayName = targetDisplayName;
         return this;
     }
     
+    public DuplicateLineItemRequest(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DomainValidation {
     @JsonProperty("DomainName")
     public String domainName;
+
     public DomainValidation withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,6 +23,7 @@ public class DomainValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceRecord")
     public ResourceRecord resourceRecord;
+
     public DomainValidation withResourceRecord(ResourceRecord resourceRecord) {
         this.resourceRecord = resourceRecord;
         return this;
@@ -30,6 +32,7 @@ public class DomainValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationDomain")
     public String validationDomain;
+
     public DomainValidation withValidationDomain(String validationDomain) {
         this.validationDomain = validationDomain;
         return this;
@@ -38,6 +41,7 @@ public class DomainValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationEmails")
     public String[] validationEmails;
+
     public DomainValidation withValidationEmails(String[] validationEmails) {
         this.validationEmails = validationEmails;
         return this;
@@ -46,6 +50,7 @@ public class DomainValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationMethod")
     public ValidationMethodEnum validationMethod;
+
     public DomainValidation withValidationMethod(ValidationMethodEnum validationMethod) {
         this.validationMethod = validationMethod;
         return this;
@@ -54,9 +59,13 @@ public class DomainValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationStatus")
     public DomainStatusEnum validationStatus;
+
     public DomainValidation withValidationStatus(DomainStatusEnum validationStatus) {
         this.validationStatus = validationStatus;
         return this;
     }
     
+    public DomainValidation(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

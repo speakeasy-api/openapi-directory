@@ -12,6 +12,7 @@ public class ServiceGroupInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ServiceGroupInputModel withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class ServiceGroupInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public ServiceGroupInputModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -28,6 +30,7 @@ public class ServiceGroupInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServiceGroupInputModel withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class ServiceGroupInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Integer type;
+
     public ServiceGroupInputModel withType(Integer type) {
         this.type = type;
         return this;
     }
     
+    public ServiceGroupInputModel(){}
 }

@@ -22,6 +22,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ArchivedAt")
     public OffsetDateTime archivedAt;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withArchivedAt(OffsetDateTime archivedAt) {
         this.archivedAt = archivedAt;
         return this;
@@ -30,6 +31,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultCommercialMailAddress")
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModel defaultCommercialMailAddress;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withDefaultCommercialMailAddress(BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModel defaultCommercialMailAddress) {
         this.defaultCommercialMailAddress = defaultCommercialMailAddress;
         return this;
@@ -38,6 +40,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultFax")
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModel defaultFax;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withDefaultFax(BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModel defaultFax) {
         this.defaultFax = defaultFax;
         return this;
@@ -46,6 +49,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultMailAddress")
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModel defaultMailAddress;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withDefaultMailAddress(BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModel defaultMailAddress) {
         this.defaultMailAddress = defaultMailAddress;
         return this;
@@ -54,6 +58,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultPhone1")
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModel defaultPhone1;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withDefaultPhone1(BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModel defaultPhone1) {
         this.defaultPhone1 = defaultPhone1;
         return this;
@@ -62,6 +67,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultPhone2")
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModel defaultPhone2;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withDefaultPhone2(BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModel defaultPhone2) {
         this.defaultPhone2 = defaultPhone2;
         return this;
@@ -70,6 +76,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultStatusUpdatesMailAddress")
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModel defaultStatusUpdatesMailAddress;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withDefaultStatusUpdatesMailAddress(BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModel defaultStatusUpdatesMailAddress) {
         this.defaultStatusUpdatesMailAddress = defaultStatusUpdatesMailAddress;
         return this;
@@ -78,6 +85,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withEmail(String email) {
         this.email = email;
         return this;
@@ -89,6 +97,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withId(Long id) {
         this.id = id;
         return this;
@@ -97,6 +106,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageId")
     public Integer languageId;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withLanguageId(Integer languageId) {
         this.languageId = languageId;
         return this;
@@ -105,6 +115,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetaData")
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModel[] metaData;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withMetaData(BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModel[] metaData) {
         this.metaData = metaData;
         return this;
@@ -113,6 +124,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withName(String name) {
         this.name = name;
         return this;
@@ -121,6 +133,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Integer number;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withNumber(Integer number) {
         this.number = number;
         return this;
@@ -129,6 +142,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PriceGroupId")
     public Long priceGroupId;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withPriceGroupId(Long priceGroupId) {
         this.priceGroupId = priceGroupId;
         return this;
@@ -142,6 +156,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RestoredAt")
     public OffsetDateTime restoredAt;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withRestoredAt(OffsetDateTime restoredAt) {
         this.restoredAt = restoredAt;
         return this;
@@ -150,6 +165,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tel1")
     public String tel1;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withTel1(String tel1) {
         this.tel1 = tel1;
         return this;
@@ -158,6 +174,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tel2")
     public String tel2;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withTel2(String tel2) {
         this.tel2 = tel2;
         return this;
@@ -169,6 +186,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public Integer type;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withType(Integer type) {
         this.type = type;
         return this;
@@ -180,9 +198,11 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VatId")
     public String vatId;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel withVatId(String vatId) {
         this.vatId = vatId;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel(){}
 }

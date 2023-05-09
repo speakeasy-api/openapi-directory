@@ -61,11 +61,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsDeleteResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsDeleteResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadUrlResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadUrlResponse() {{
+        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadUrlResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadUrlResponse(contentType, httpRes.statusCode()) {{
             generateDownloadUrlResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlResponse() {{
+        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlResponse(contentType, httpRes.statusCode()) {{
             generateUploadUrlResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsListResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsListResponse() {{
+        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsListResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsListResponse(contentType, httpRes.statusCode()) {{
             listFunctionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +331,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsPatchResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsPatchResponse() {{
+        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsPatchResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,11 +377,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -439,11 +423,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,11 +467,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -531,11 +511,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -577,11 +555,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -623,11 +599,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsRuntimesListResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsRuntimesListResponse() {{
+        org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsRuntimesListResponse res = new org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsRuntimesListResponse(contentType, httpRes.statusCode()) {{
             listRuntimesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class AirportResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Airports")
     public AirportResourceAirports airports;
+
     public AirportResource withAirports(AirportResourceAirports airports) {
         this.airports = airports;
         return this;
@@ -29,9 +30,11 @@ public class AirportResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Meta")
     public AirportResourceMeta meta;
+
     public AirportResource withMeta(AirportResourceMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public AirportResource(){}
 }

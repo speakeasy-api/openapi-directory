@@ -15,9 +15,11 @@ public class ReplicaConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaCount")
     public Long replicaCount;
+
     public ReplicaConfigurationRequest withReplicaCount(Long replicaCount) {
         this.replicaCount = replicaCount;
         return this;
     }
     
+    public ReplicaConfigurationRequest(){}
 }

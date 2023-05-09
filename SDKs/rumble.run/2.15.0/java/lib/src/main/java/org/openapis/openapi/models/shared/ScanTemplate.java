@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScanTemplate {
     @JsonProperty("acl")
     public java.util.Map<String, Object> acl;
+
     public ScanTemplate withAcl(java.util.Map<String, Object> acl) {
         this.acl = acl;
         return this;
@@ -22,6 +23,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agent_id")
     public String agentId;
+
     public ScanTemplate withAgentId(String agentId) {
         this.agentId = agentId;
         return this;
@@ -30,6 +32,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_id")
     public String clientId;
+
     public ScanTemplate withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -38,6 +41,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public Long createdAt;
+
     public ScanTemplate withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +50,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public String createdBy;
+
     public ScanTemplate withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -54,6 +59,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by_user_id")
     public String createdByUserId;
+
     public ScanTemplate withCreatedByUserId(String createdByUserId) {
         this.createdByUserId = createdByUserId;
         return this;
@@ -62,6 +68,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cruncher_id")
     public String cruncherId;
+
     public ScanTemplate withCruncherId(String cruncherId) {
         this.cruncherId = cruncherId;
         return this;
@@ -70,6 +77,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ScanTemplate withDescription(String description) {
         this.description = description;
         return this;
@@ -78,6 +86,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public ScanTemplate withError(String error) {
         this.error = error;
         return this;
@@ -85,6 +94,7 @@ public class ScanTemplate {
     
     @JsonProperty("global")
     public Boolean global;
+
     public ScanTemplate withGlobal(Boolean global) {
         this.global = global;
         return this;
@@ -93,6 +103,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grace_period")
     public String gracePeriod;
+
     public ScanTemplate withGracePeriod(String gracePeriod) {
         this.gracePeriod = gracePeriod;
         return this;
@@ -101,6 +112,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public ScanTemplate withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -109,6 +121,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hosted_zone_id")
     public String hostedZoneId;
+
     public ScanTemplate withHostedZoneId(String hostedZoneId) {
         this.hostedZoneId = hostedZoneId;
         return this;
@@ -116,6 +129,7 @@ public class ScanTemplate {
     
     @JsonProperty("id")
     public String id;
+
     public ScanTemplate withId(String id) {
         this.id = id;
         return this;
@@ -124,6 +138,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linked_task_count")
     public Integer linkedTaskCount;
+
     public ScanTemplate withLinkedTaskCount(Integer linkedTaskCount) {
         this.linkedTaskCount = linkedTaskCount;
         return this;
@@ -132,6 +147,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ScanTemplate withName(String name) {
         this.name = name;
         return this;
@@ -140,6 +156,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     public String organizationId;
+
     public ScanTemplate withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -148,6 +165,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, String> params;
+
     public ScanTemplate withParams(java.util.Map<String, String> params) {
         this.params = params;
         return this;
@@ -156,6 +174,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     public String parentId;
+
     public ScanTemplate withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -164,6 +183,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recur")
     public Boolean recur;
+
     public ScanTemplate withRecur(Boolean recur) {
         this.recur = recur;
         return this;
@@ -172,6 +192,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recur_frequency")
     public String recurFrequency;
+
     public ScanTemplate withRecurFrequency(String recurFrequency) {
         this.recurFrequency = recurFrequency;
         return this;
@@ -180,6 +201,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recur_last")
     public Long recurLast;
+
     public ScanTemplate withRecurLast(Long recurLast) {
         this.recurLast = recurLast;
         return this;
@@ -188,6 +210,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recur_last_task_id")
     public String recurLastTaskId;
+
     public ScanTemplate withRecurLastTaskId(String recurLastTaskId) {
         this.recurLastTaskId = recurLastTaskId;
         return this;
@@ -196,6 +219,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recur_next")
     public Long recurNext;
+
     public ScanTemplate withRecurNext(Long recurNext) {
         this.recurNext = recurNext;
         return this;
@@ -204,6 +228,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("site_id")
     public String siteId;
+
     public ScanTemplate withSiteId(String siteId) {
         this.siteId = siteId;
         return this;
@@ -212,6 +237,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size_data")
     public Long sizeData;
+
     public ScanTemplate withSizeData(Long sizeData) {
         this.sizeData = sizeData;
         return this;
@@ -220,6 +246,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size_results")
     public Long sizeResults;
+
     public ScanTemplate withSizeResults(Long sizeResults) {
         this.sizeResults = sizeResults;
         return this;
@@ -228,6 +255,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size_site")
     public Long sizeSite;
+
     public ScanTemplate withSizeSite(Long sizeSite) {
         this.sizeSite = sizeSite;
         return this;
@@ -236,6 +264,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_id")
     public String sourceId;
+
     public ScanTemplate withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -244,6 +273,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_time")
     public Long startTime;
+
     public ScanTemplate withStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
@@ -252,6 +282,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public java.util.Map<String, Object> stats;
+
     public ScanTemplate withStats(java.util.Map<String, Object> stats) {
         this.stats = stats;
         return this;
@@ -260,6 +291,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ScanTemplate withStatus(String status) {
         this.status = status;
         return this;
@@ -268,6 +300,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template_id")
     public String templateId;
+
     public ScanTemplate withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
@@ -276,6 +309,7 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ScanTemplate withType(String type) {
         this.type = type;
         return this;
@@ -284,9 +318,15 @@ public class ScanTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public Long updatedAt;
+
     public ScanTemplate withUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ScanTemplate(@JsonProperty("acl") java.util.Map<String, Object> acl, @JsonProperty("global") Boolean global, @JsonProperty("id") String id) {
+        this.acl = acl;
+        this.global = global;
+        this.id = id;
+  }
 }

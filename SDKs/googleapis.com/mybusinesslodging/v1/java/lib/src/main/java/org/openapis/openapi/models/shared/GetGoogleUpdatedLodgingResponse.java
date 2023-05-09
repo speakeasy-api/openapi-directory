@@ -18,6 +18,7 @@ public class GetGoogleUpdatedLodgingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diffMask")
     public String diffMask;
+
     public GetGoogleUpdatedLodgingResponse withDiffMask(String diffMask) {
         this.diffMask = diffMask;
         return this;
@@ -29,9 +30,11 @@ public class GetGoogleUpdatedLodgingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lodging")
     public Lodging lodging;
+
     public GetGoogleUpdatedLodgingResponse withLodging(Lodging lodging) {
         this.lodging = lodging;
         return this;
     }
     
+    public GetGoogleUpdatedLodgingResponse(){}
 }

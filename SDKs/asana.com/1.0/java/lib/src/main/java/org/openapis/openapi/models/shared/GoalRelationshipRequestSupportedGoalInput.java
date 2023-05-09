@@ -18,6 +18,7 @@ public class GoalRelationshipRequestSupportedGoalInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoalRelationshipRequestSupportedGoalInput withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class GoalRelationshipRequestSupportedGoalInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public GoalRelationshipRequestSupportedGoalOwnerInput owner;
+
     public GoalRelationshipRequestSupportedGoalInput withOwner(GoalRelationshipRequestSupportedGoalOwnerInput owner) {
         this.owner = owner;
         return this;
     }
     
+    public GoalRelationshipRequestSupportedGoalInput(){}
 }

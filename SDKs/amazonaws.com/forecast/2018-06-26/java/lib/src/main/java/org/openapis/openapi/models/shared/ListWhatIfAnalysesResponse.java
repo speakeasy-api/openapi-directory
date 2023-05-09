@@ -15,6 +15,7 @@ public class ListWhatIfAnalysesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListWhatIfAnalysesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListWhatIfAnalysesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfAnalyses")
     public WhatIfAnalysisSummary[] whatIfAnalyses;
+
     public ListWhatIfAnalysesResponse withWhatIfAnalyses(WhatIfAnalysisSummary[] whatIfAnalyses) {
         this.whatIfAnalyses = whatIfAnalyses;
         return this;
     }
     
+    public ListWhatIfAnalysesResponse(){}
 }

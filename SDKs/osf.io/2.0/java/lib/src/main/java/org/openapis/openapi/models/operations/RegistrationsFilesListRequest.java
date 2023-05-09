@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistrationsFilesListRequest {
@@ -12,6 +13,7 @@ public class RegistrationsFilesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
     public String provider;
+
     public RegistrationsFilesListRequest withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -22,9 +24,14 @@ public class RegistrationsFilesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registration_id")
     public String registrationId;
+
     public RegistrationsFilesListRequest withRegistrationId(String registrationId) {
         this.registrationId = registrationId;
         return this;
     }
     
+    public RegistrationsFilesListRequest(@JsonProperty("provider") String provider, @JsonProperty("registration_id") String registrationId) {
+        this.provider = provider;
+        this.registrationId = registrationId;
+  }
 }

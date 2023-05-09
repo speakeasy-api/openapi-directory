@@ -16,6 +16,7 @@ public class ReportByProductResponse {
      */
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public ReportByProductResponse withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -23,6 +24,7 @@ public class ReportByProductResponse {
     
     @JsonProperty("links")
     public ReportByCommonResponseLinks links;
+
     public ReportByProductResponse withLinks(ReportByCommonResponseLinks links) {
         this.links = links;
         return this;
@@ -30,6 +32,7 @@ public class ReportByProductResponse {
     
     @JsonProperty("paginationResult")
     public BeezUPCommonPaginationResult paginationResult;
+
     public ReportByProductResponse withPaginationResult(BeezUPCommonPaginationResult paginationResult) {
         this.paginationResult = paginationResult;
         return this;
@@ -37,9 +40,16 @@ public class ReportByProductResponse {
     
     @JsonProperty("products")
     public ReportByProduct[] products;
+
     public ReportByProductResponse withProducts(ReportByProduct[] products) {
         this.products = products;
         return this;
     }
     
+    public ReportByProductResponse(@JsonProperty("currencyCode") String currencyCode, @JsonProperty("links") ReportByCommonResponseLinks links, @JsonProperty("paginationResult") BeezUPCommonPaginationResult paginationResult, @JsonProperty("products") ReportByProduct[] products) {
+        this.currencyCode = currencyCode;
+        this.links = links;
+        this.paginationResult = paginationResult;
+        this.products = products;
+  }
 }

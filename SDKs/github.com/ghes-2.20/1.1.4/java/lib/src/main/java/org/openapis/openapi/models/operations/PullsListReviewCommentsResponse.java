@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PullsListReviewCommentsResponse {
     
     public String contentType;
+
     public PullsListReviewCommentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PullsListReviewCommentsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PullsListReviewCommentsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PullsListReviewCommentsResponse {
     
     
     public Integer statusCode;
+
     public PullsListReviewCommentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PullsListReviewCommentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PullsListReviewCommentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class PullsListReviewCommentsResponse {
      */
     
     public org.openapis.openapi.models.shared.PullRequestReviewComment[] pullRequestReviewComments;
+
     public PullsListReviewCommentsResponse withPullRequestReviewComments(org.openapis.openapi.models.shared.PullRequestReviewComment[] pullRequestReviewComments) {
         this.pullRequestReviewComments = pullRequestReviewComments;
         return this;
     }
     
+    public PullsListReviewCommentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

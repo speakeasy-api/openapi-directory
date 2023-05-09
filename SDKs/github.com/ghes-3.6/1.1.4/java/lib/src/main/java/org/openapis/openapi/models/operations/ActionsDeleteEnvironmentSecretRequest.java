@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDeleteEnvironmentSecretRequest {
@@ -12,6 +13,7 @@ public class ActionsDeleteEnvironmentSecretRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
     public String environmentName;
+
     public ActionsDeleteEnvironmentSecretRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -22,6 +24,7 @@ public class ActionsDeleteEnvironmentSecretRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
     public Long repositoryId;
+
     public ActionsDeleteEnvironmentSecretRequest withRepositoryId(Long repositoryId) {
         this.repositoryId = repositoryId;
         return this;
@@ -32,9 +35,15 @@ public class ActionsDeleteEnvironmentSecretRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
     public String secretName;
+
     public ActionsDeleteEnvironmentSecretRequest withSecretName(String secretName) {
         this.secretName = secretName;
         return this;
     }
     
+    public ActionsDeleteEnvironmentSecretRequest(@JsonProperty("environment_name") String environmentName, @JsonProperty("repository_id") Long repositoryId, @JsonProperty("secret_name") String secretName) {
+        this.environmentName = environmentName;
+        this.repositoryId = repositoryId;
+        this.secretName = secretName;
+  }
 }

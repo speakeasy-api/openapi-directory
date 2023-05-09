@@ -15,6 +15,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Layer withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeSize")
     public Long codeSize;
+
     public Layer withCodeSize(Long codeSize) {
         this.codeSize = codeSize;
         return this;
@@ -31,6 +33,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SigningJobArn")
     public String signingJobArn;
+
     public Layer withSigningJobArn(String signingJobArn) {
         this.signingJobArn = signingJobArn;
         return this;
@@ -39,9 +42,11 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SigningProfileVersionArn")
     public String signingProfileVersionArn;
+
     public Layer withSigningProfileVersionArn(String signingProfileVersionArn) {
         this.signingProfileVersionArn = signingProfileVersionArn;
         return this;
     }
     
+    public Layer(){}
 }

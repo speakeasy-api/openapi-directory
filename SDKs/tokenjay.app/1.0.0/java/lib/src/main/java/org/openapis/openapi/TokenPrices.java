@@ -47,15 +47,13 @@ public class TokenPrices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTokenPriceResponse res = new org.openapis.openapi.models.operations.GetTokenPriceResponse() {{
+        org.openapis.openapi.models.operations.GetTokenPriceResponse res = new org.openapis.openapi.models.operations.GetTokenPriceResponse(contentType, httpRes.statusCode()) {{
             body = null;
             getTokenPrice400WildcardString = null;
             getTokenPrice401WildcardString = null;
             getTokenPrice404WildcardString = null;
             getTokenPrice409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,15 +109,13 @@ public class TokenPrices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTokenPricesResponse res = new org.openapis.openapi.models.operations.GetTokenPricesResponse() {{
+        org.openapis.openapi.models.operations.GetTokenPricesResponse res = new org.openapis.openapi.models.operations.GetTokenPricesResponse(contentType, httpRes.statusCode()) {{
             body = null;
             getTokenPrices400WildcardString = null;
             getTokenPrices401WildcardString = null;
             getTokenPrices404WildcardString = null;
             getTokenPrices409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

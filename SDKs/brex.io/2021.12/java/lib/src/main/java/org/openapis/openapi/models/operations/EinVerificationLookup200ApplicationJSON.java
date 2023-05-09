@@ -15,6 +15,7 @@ public class EinVerificationLookup200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matched_ein_companies")
     public EinVerificationLookup200ApplicationJSONMatchedEinCompanies[] matchedEinCompanies;
+
     public EinVerificationLookup200ApplicationJSON withMatchedEinCompanies(EinVerificationLookup200ApplicationJSONMatchedEinCompanies[] matchedEinCompanies) {
         this.matchedEinCompanies = matchedEinCompanies;
         return this;
@@ -22,6 +23,7 @@ public class EinVerificationLookup200ApplicationJSON {
     
     @JsonProperty("searchterm_name")
     public String searchtermName;
+
     public EinVerificationLookup200ApplicationJSON withSearchtermName(String searchtermName) {
         this.searchtermName = searchtermName;
         return this;
@@ -29,6 +31,7 @@ public class EinVerificationLookup200ApplicationJSON {
     
     @JsonProperty("searchterm_state")
     public String searchtermState;
+
     public EinVerificationLookup200ApplicationJSON withSearchtermState(String searchtermState) {
         this.searchtermState = searchtermState;
         return this;
@@ -36,6 +39,7 @@ public class EinVerificationLookup200ApplicationJSON {
     
     @JsonProperty("searchterm_zip")
     public String searchtermZip;
+
     public EinVerificationLookup200ApplicationJSON withSearchtermZip(String searchtermZip) {
         this.searchtermZip = searchtermZip;
         return this;
@@ -43,6 +47,7 @@ public class EinVerificationLookup200ApplicationJSON {
     
     @JsonProperty("tight_search")
     public Boolean tightSearch;
+
     public EinVerificationLookup200ApplicationJSON withTightSearch(Boolean tightSearch) {
         this.tightSearch = tightSearch;
         return this;
@@ -50,9 +55,17 @@ public class EinVerificationLookup200ApplicationJSON {
     
     @JsonProperty("timestamp")
     public Double timestamp;
+
     public EinVerificationLookup200ApplicationJSON withTimestamp(Double timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public EinVerificationLookup200ApplicationJSON(@JsonProperty("searchterm_name") String searchtermName, @JsonProperty("searchterm_state") String searchtermState, @JsonProperty("searchterm_zip") String searchtermZip, @JsonProperty("tight_search") Boolean tightSearch, @JsonProperty("timestamp") Double timestamp) {
+        this.searchtermName = searchtermName;
+        this.searchtermState = searchtermState;
+        this.searchtermZip = searchtermZip;
+        this.tightSearch = tightSearch;
+        this.timestamp = timestamp;
+  }
 }

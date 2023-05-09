@@ -15,6 +15,7 @@ public class TaskSetParentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_after")
     public String insertAfter;
+
     public TaskSetParentRequest withInsertAfter(String insertAfter) {
         this.insertAfter = insertAfter;
         return this;
@@ -26,6 +27,7 @@ public class TaskSetParentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_before")
     public String insertBefore;
+
     public TaskSetParentRequest withInsertBefore(String insertBefore) {
         this.insertBefore = insertBefore;
         return this;
@@ -36,9 +38,13 @@ public class TaskSetParentRequest {
      */
     @JsonProperty("parent")
     public String parent;
+
     public TaskSetParentRequest withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public TaskSetParentRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

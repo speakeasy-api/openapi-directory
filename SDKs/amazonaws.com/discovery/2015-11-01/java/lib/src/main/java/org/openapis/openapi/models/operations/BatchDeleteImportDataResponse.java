@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDeleteImportDataResponse {
@@ -12,6 +13,7 @@ public class BatchDeleteImportDataResponse {
      */
     
     public Object authorizationErrorException;
+
     public BatchDeleteImportDataResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -22,6 +24,7 @@ public class BatchDeleteImportDataResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDeleteImportDataResponse batchDeleteImportDataResponse;
+
     public BatchDeleteImportDataResponse withBatchDeleteImportDataResponse(org.openapis.openapi.models.shared.BatchDeleteImportDataResponse batchDeleteImportDataResponse) {
         this.batchDeleteImportDataResponse = batchDeleteImportDataResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchDeleteImportDataResponse {
     
     
     public String contentType;
+
     public BatchDeleteImportDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchDeleteImportDataResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public BatchDeleteImportDataResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class BatchDeleteImportDataResponse {
      */
     
     public Object invalidParameterException;
+
     public BatchDeleteImportDataResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class BatchDeleteImportDataResponse {
      */
     
     public Object invalidParameterValueException;
+
     public BatchDeleteImportDataResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class BatchDeleteImportDataResponse {
      */
     
     public Object serverInternalErrorException;
+
     public BatchDeleteImportDataResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -76,6 +84,7 @@ public class BatchDeleteImportDataResponse {
     
     
     public Integer statusCode;
+
     public BatchDeleteImportDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class BatchDeleteImportDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDeleteImportDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchDeleteImportDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

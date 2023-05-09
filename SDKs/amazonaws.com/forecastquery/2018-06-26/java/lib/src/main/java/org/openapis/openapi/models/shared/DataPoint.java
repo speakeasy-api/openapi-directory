@@ -15,6 +15,7 @@ public class DataPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timestamp")
     public String timestamp;
+
     public DataPoint withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -23,9 +24,11 @@ public class DataPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Double value;
+
     public DataPoint withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public DataPoint(){}
 }

@@ -15,6 +15,7 @@ public class ListBotLocalesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.BotLocaleFilter[] filters;
+
     public ListBotLocalesRequestBody withFilters(org.openapis.openapi.models.shared.BotLocaleFilter[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class ListBotLocalesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListBotLocalesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class ListBotLocalesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBotLocalesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,9 +51,11 @@ public class ListBotLocalesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public ListBotLocalesRequestBodySortBy sortBy;
+
     public ListBotLocalesRequestBody withSortBy(ListBotLocalesRequestBodySortBy sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public ListBotLocalesRequestBody(){}
 }

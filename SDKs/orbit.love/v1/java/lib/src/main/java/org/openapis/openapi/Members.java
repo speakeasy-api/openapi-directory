@@ -50,10 +50,8 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugResponse res = new org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugResponse() {{
+        org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugResponse res = new org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 403) {
@@ -86,10 +84,8 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugIdentitiesResponse res = new org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugIdentitiesResponse() {{
+        org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugIdentitiesResponse res = new org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugIdentitiesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 403 || httpRes.statusCode() == 422) {
@@ -126,10 +122,8 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspaceSlugMembersResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugMembersResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspaceSlugMembersResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugMembersResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -167,10 +161,8 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspaceSlugMembersFindResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugMembersFindResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspaceSlugMembersFindResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugMembersFindResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -201,10 +193,8 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,10 +231,8 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsOrganizationIdMembersResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsOrganizationIdMembersResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsOrganizationIdMembersResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsOrganizationIdMembersResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -278,10 +266,8 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWorkspaceSlugMembersResponse res = new org.openapis.openapi.models.operations.PostWorkspaceSlugMembersResponse() {{
+        org.openapis.openapi.models.operations.PostWorkspaceSlugMembersResponse res = new org.openapis.openapi.models.operations.PostWorkspaceSlugMembersResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201 || httpRes.statusCode() == 403 || httpRes.statusCode() == 422) {
@@ -314,10 +300,8 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWorkspaceSlugMembersMemberSlugIdentitiesResponse res = new org.openapis.openapi.models.operations.PostWorkspaceSlugMembersMemberSlugIdentitiesResponse() {{
+        org.openapis.openapi.models.operations.PostWorkspaceSlugMembersMemberSlugIdentitiesResponse res = new org.openapis.openapi.models.operations.PostWorkspaceSlugMembersMemberSlugIdentitiesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 403 || httpRes.statusCode() == 422) {
@@ -350,10 +334,8 @@ public class Members {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutWorkspaceSlugMembersMemberSlugResponse res = new org.openapis.openapi.models.operations.PutWorkspaceSlugMembersMemberSlugResponse() {{
+        org.openapis.openapi.models.operations.PutWorkspaceSlugMembersMemberSlugResponse res = new org.openapis.openapi.models.operations.PutWorkspaceSlugMembersMemberSlugResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 403) {

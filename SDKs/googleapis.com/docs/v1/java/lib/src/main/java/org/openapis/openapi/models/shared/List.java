@@ -18,6 +18,7 @@ public class List {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listProperties")
     public ListProperties listProperties;
+
     public List withListProperties(ListProperties listProperties) {
         this.listProperties = listProperties;
         return this;
@@ -29,6 +30,7 @@ public class List {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedDeletionIds")
     public String[] suggestedDeletionIds;
+
     public List withSuggestedDeletionIds(String[] suggestedDeletionIds) {
         this.suggestedDeletionIds = suggestedDeletionIds;
         return this;
@@ -40,6 +42,7 @@ public class List {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedInsertionId")
     public String suggestedInsertionId;
+
     public List withSuggestedInsertionId(String suggestedInsertionId) {
         this.suggestedInsertionId = suggestedInsertionId;
         return this;
@@ -51,9 +54,11 @@ public class List {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedListPropertiesChanges")
     public java.util.Map<String, SuggestedListProperties> suggestedListPropertiesChanges;
+
     public List withSuggestedListPropertiesChanges(java.util.Map<String, SuggestedListProperties> suggestedListPropertiesChanges) {
         this.suggestedListPropertiesChanges = suggestedListPropertiesChanges;
         return this;
     }
     
+    public List(){}
 }

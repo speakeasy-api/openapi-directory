@@ -15,6 +15,7 @@ public class CostCategoryReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CostCategoryArn")
     public String costCategoryArn;
+
     public CostCategoryReference withCostCategoryArn(String costCategoryArn) {
         this.costCategoryArn = costCategoryArn;
         return this;
@@ -26,6 +27,7 @@ public class CostCategoryReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultValue")
     public String defaultValue;
+
     public CostCategoryReference withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -34,6 +36,7 @@ public class CostCategoryReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectiveEnd")
     public String effectiveEnd;
+
     public CostCategoryReference withEffectiveEnd(String effectiveEnd) {
         this.effectiveEnd = effectiveEnd;
         return this;
@@ -42,6 +45,7 @@ public class CostCategoryReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectiveStart")
     public String effectiveStart;
+
     public CostCategoryReference withEffectiveStart(String effectiveStart) {
         this.effectiveStart = effectiveStart;
         return this;
@@ -53,6 +57,7 @@ public class CostCategoryReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CostCategoryReference withName(String name) {
         this.name = name;
         return this;
@@ -61,6 +66,7 @@ public class CostCategoryReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfRules")
     public Long numberOfRules;
+
     public CostCategoryReference withNumberOfRules(Long numberOfRules) {
         this.numberOfRules = numberOfRules;
         return this;
@@ -69,6 +75,7 @@ public class CostCategoryReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingStatus")
     public CostCategoryProcessingStatus[] processingStatus;
+
     public CostCategoryReference withProcessingStatus(CostCategoryProcessingStatus[] processingStatus) {
         this.processingStatus = processingStatus;
         return this;
@@ -77,9 +84,11 @@ public class CostCategoryReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public CostCategoryReference withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public CostCategoryReference(){}
 }

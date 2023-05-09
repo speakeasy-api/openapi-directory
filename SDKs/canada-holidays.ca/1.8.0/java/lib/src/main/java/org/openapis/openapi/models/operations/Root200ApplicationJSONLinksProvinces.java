@@ -15,9 +15,11 @@ public class Root200ApplicationJSONLinksProvinces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public Root200ApplicationJSONLinksProvinces withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public Root200ApplicationJSONLinksProvinces(){}
 }

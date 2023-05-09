@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AllTaxRatesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Product_code")
     public String productCode;
+
     public AllTaxRatesRequest withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -19,6 +20,7 @@ public class AllTaxRatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public AllTaxRatesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -29,6 +31,7 @@ public class AllTaxRatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
     public String domain;
+
     public AllTaxRatesRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -39,9 +42,11 @@ public class AllTaxRatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public AllTaxRatesRequest withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public AllTaxRatesRequest(){}
 }

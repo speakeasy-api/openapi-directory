@@ -18,6 +18,7 @@ public class UpdateRowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("row")
     public Row row;
+
     public UpdateRowRequest withRow(Row row) {
         this.row = row;
         return this;
@@ -29,6 +30,7 @@ public class UpdateRowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public UpdateRowRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -40,9 +42,11 @@ public class UpdateRowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view")
     public UpdateRowRequestViewEnum view;
+
     public UpdateRowRequest withView(UpdateRowRequestViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public UpdateRowRequest(){}
 }

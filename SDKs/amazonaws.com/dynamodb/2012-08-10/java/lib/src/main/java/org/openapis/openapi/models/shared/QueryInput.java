@@ -15,6 +15,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributesToGet")
     public String[] attributesToGet;
+
     public QueryInput withAttributesToGet(String[] attributesToGet) {
         this.attributesToGet = attributesToGet;
         return this;
@@ -23,6 +24,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConditionalOperator")
     public ConditionalOperatorEnum conditionalOperator;
+
     public QueryInput withConditionalOperator(ConditionalOperatorEnum conditionalOperator) {
         this.conditionalOperator = conditionalOperator;
         return this;
@@ -31,6 +33,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsistentRead")
     public Boolean consistentRead;
+
     public QueryInput withConsistentRead(Boolean consistentRead) {
         this.consistentRead = consistentRead;
         return this;
@@ -39,6 +42,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveStartKey")
     public java.util.Map<String, AttributeValue> exclusiveStartKey;
+
     public QueryInput withExclusiveStartKey(java.util.Map<String, AttributeValue> exclusiveStartKey) {
         this.exclusiveStartKey = exclusiveStartKey;
         return this;
@@ -47,6 +51,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeNames")
     public java.util.Map<String, String> expressionAttributeNames;
+
     public QueryInput withExpressionAttributeNames(java.util.Map<String, String> expressionAttributeNames) {
         this.expressionAttributeNames = expressionAttributeNames;
         return this;
@@ -55,6 +60,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeValues")
     public java.util.Map<String, AttributeValue> expressionAttributeValues;
+
     public QueryInput withExpressionAttributeValues(java.util.Map<String, AttributeValue> expressionAttributeValues) {
         this.expressionAttributeValues = expressionAttributeValues;
         return this;
@@ -63,6 +69,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterExpression")
     public String filterExpression;
+
     public QueryInput withFilterExpression(String filterExpression) {
         this.filterExpression = filterExpression;
         return this;
@@ -71,6 +78,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public QueryInput withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -79,6 +87,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyConditionExpression")
     public String keyConditionExpression;
+
     public QueryInput withKeyConditionExpression(String keyConditionExpression) {
         this.keyConditionExpression = keyConditionExpression;
         return this;
@@ -87,6 +96,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyConditions")
     public java.util.Map<String, Condition> keyConditions;
+
     public QueryInput withKeyConditions(java.util.Map<String, Condition> keyConditions) {
         this.keyConditions = keyConditions;
         return this;
@@ -95,6 +105,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public QueryInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -103,6 +114,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectionExpression")
     public String projectionExpression;
+
     public QueryInput withProjectionExpression(String projectionExpression) {
         this.projectionExpression = projectionExpression;
         return this;
@@ -111,6 +123,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryFilter")
     public java.util.Map<String, Condition> queryFilter;
+
     public QueryInput withQueryFilter(java.util.Map<String, Condition> queryFilter) {
         this.queryFilter = queryFilter;
         return this;
@@ -122,6 +135,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnConsumedCapacity")
     public ReturnConsumedCapacityEnum returnConsumedCapacity;
+
     public QueryInput withReturnConsumedCapacity(ReturnConsumedCapacityEnum returnConsumedCapacity) {
         this.returnConsumedCapacity = returnConsumedCapacity;
         return this;
@@ -130,6 +144,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScanIndexForward")
     public Boolean scanIndexForward;
+
     public QueryInput withScanIndexForward(Boolean scanIndexForward) {
         this.scanIndexForward = scanIndexForward;
         return this;
@@ -138,6 +153,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Select")
     public SelectEnum select;
+
     public QueryInput withSelect(SelectEnum select) {
         this.select = select;
         return this;
@@ -145,9 +161,13 @@ public class QueryInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public QueryInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public QueryInput(@JsonProperty("TableName") String tableName) {
+        this.tableName = tableName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivateUserRequest {
     @SpeakeasyMetadata("request:mediaType=text/plain")
     public byte[] requestBody;
+
     public ActivateUserRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class ActivateUserRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendEmail")
     public String sendEmail;
+
     public ActivateUserRequest withSendEmail(String sendEmail) {
         this.sendEmail = sendEmail;
         return this;
@@ -23,9 +26,13 @@ public class ActivateUserRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public ActivateUserRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ActivateUserRequest(@JsonProperty("userId") String userId) {
+        this.userId = userId;
+  }
 }

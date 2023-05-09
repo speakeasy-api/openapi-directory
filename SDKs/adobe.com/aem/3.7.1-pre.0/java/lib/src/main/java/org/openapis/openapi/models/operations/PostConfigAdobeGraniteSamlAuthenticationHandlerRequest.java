@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=addGroupMemberships")
     public Boolean addGroupMemberships;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withAddGroupMemberships(Boolean addGroupMemberships) {
         this.addGroupMemberships = addGroupMemberships;
         return this;
@@ -16,6 +17,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=addGroupMemberships@TypeHint")
     public String addGroupMembershipsAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withAddGroupMembershipsAtTypeHint(String addGroupMembershipsAtTypeHint) {
         this.addGroupMembershipsAtTypeHint = addGroupMembershipsAtTypeHint;
         return this;
@@ -23,6 +25,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assertionConsumerServiceURL")
     public String assertionConsumerServiceURL;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withAssertionConsumerServiceURL(String assertionConsumerServiceURL) {
         this.assertionConsumerServiceURL = assertionConsumerServiceURL;
         return this;
@@ -30,6 +33,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assertionConsumerServiceURL@TypeHint")
     public String assertionConsumerServiceURLAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withAssertionConsumerServiceURLAtTypeHint(String assertionConsumerServiceURLAtTypeHint) {
         this.assertionConsumerServiceURLAtTypeHint = assertionConsumerServiceURLAtTypeHint;
         return this;
@@ -37,6 +41,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clockTolerance")
     public Long clockTolerance;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withClockTolerance(Long clockTolerance) {
         this.clockTolerance = clockTolerance;
         return this;
@@ -44,6 +49,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clockTolerance@TypeHint")
     public String clockToleranceAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withClockToleranceAtTypeHint(String clockToleranceAtTypeHint) {
         this.clockToleranceAtTypeHint = clockToleranceAtTypeHint;
         return this;
@@ -51,6 +57,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createUser")
     public Boolean createUser;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withCreateUser(Boolean createUser) {
         this.createUser = createUser;
         return this;
@@ -58,6 +65,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createUser@TypeHint")
     public String createUserAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withCreateUserAtTypeHint(String createUserAtTypeHint) {
         this.createUserAtTypeHint = createUserAtTypeHint;
         return this;
@@ -65,6 +73,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultGroups")
     public String[] defaultGroups;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withDefaultGroups(String[] defaultGroups) {
         this.defaultGroups = defaultGroups;
         return this;
@@ -72,6 +81,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultGroups@TypeHint")
     public String defaultGroupsAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withDefaultGroupsAtTypeHint(String defaultGroupsAtTypeHint) {
         this.defaultGroupsAtTypeHint = defaultGroupsAtTypeHint;
         return this;
@@ -79,6 +89,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultRedirectUrl")
     public String defaultRedirectUrl;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withDefaultRedirectUrl(String defaultRedirectUrl) {
         this.defaultRedirectUrl = defaultRedirectUrl;
         return this;
@@ -86,6 +97,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultRedirectUrl@TypeHint")
     public String defaultRedirectUrlAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withDefaultRedirectUrlAtTypeHint(String defaultRedirectUrlAtTypeHint) {
         this.defaultRedirectUrlAtTypeHint = defaultRedirectUrlAtTypeHint;
         return this;
@@ -93,6 +105,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=digestMethod")
     public String digestMethod;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withDigestMethod(String digestMethod) {
         this.digestMethod = digestMethod;
         return this;
@@ -100,6 +113,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=digestMethod@TypeHint")
     public String digestMethodAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withDigestMethodAtTypeHint(String digestMethodAtTypeHint) {
         this.digestMethodAtTypeHint = digestMethodAtTypeHint;
         return this;
@@ -107,6 +121,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupMembershipAttribute")
     public String groupMembershipAttribute;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withGroupMembershipAttribute(String groupMembershipAttribute) {
         this.groupMembershipAttribute = groupMembershipAttribute;
         return this;
@@ -114,6 +129,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupMembershipAttribute@TypeHint")
     public String groupMembershipAttributeAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withGroupMembershipAttributeAtTypeHint(String groupMembershipAttributeAtTypeHint) {
         this.groupMembershipAttributeAtTypeHint = groupMembershipAttributeAtTypeHint;
         return this;
@@ -121,6 +137,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=handleLogout")
     public Boolean handleLogout;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withHandleLogout(Boolean handleLogout) {
         this.handleLogout = handleLogout;
         return this;
@@ -128,6 +145,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=handleLogout@TypeHint")
     public String handleLogoutAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withHandleLogoutAtTypeHint(String handleLogoutAtTypeHint) {
         this.handleLogoutAtTypeHint = handleLogoutAtTypeHint;
         return this;
@@ -135,6 +153,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idpCertAlias")
     public String idpCertAlias;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withIdpCertAlias(String idpCertAlias) {
         this.idpCertAlias = idpCertAlias;
         return this;
@@ -142,6 +161,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idpCertAlias@TypeHint")
     public String idpCertAliasAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withIdpCertAliasAtTypeHint(String idpCertAliasAtTypeHint) {
         this.idpCertAliasAtTypeHint = idpCertAliasAtTypeHint;
         return this;
@@ -149,6 +169,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idpHttpRedirect")
     public Boolean idpHttpRedirect;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withIdpHttpRedirect(Boolean idpHttpRedirect) {
         this.idpHttpRedirect = idpHttpRedirect;
         return this;
@@ -156,6 +177,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idpHttpRedirect@TypeHint")
     public String idpHttpRedirectAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withIdpHttpRedirectAtTypeHint(String idpHttpRedirectAtTypeHint) {
         this.idpHttpRedirectAtTypeHint = idpHttpRedirectAtTypeHint;
         return this;
@@ -163,6 +185,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idpUrl")
     public String idpUrl;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withIdpUrl(String idpUrl) {
         this.idpUrl = idpUrl;
         return this;
@@ -170,6 +193,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idpUrl@TypeHint")
     public String idpUrlAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withIdpUrlAtTypeHint(String idpUrlAtTypeHint) {
         this.idpUrlAtTypeHint = idpUrlAtTypeHint;
         return this;
@@ -177,6 +201,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyStorePassword")
     public String keyStorePassword;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withKeyStorePassword(String keyStorePassword) {
         this.keyStorePassword = keyStorePassword;
         return this;
@@ -184,6 +209,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyStorePassword@TypeHint")
     public String keyStorePasswordAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withKeyStorePasswordAtTypeHint(String keyStorePasswordAtTypeHint) {
         this.keyStorePasswordAtTypeHint = keyStorePasswordAtTypeHint;
         return this;
@@ -191,6 +217,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=logoutUrl")
     public String logoutUrl;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withLogoutUrl(String logoutUrl) {
         this.logoutUrl = logoutUrl;
         return this;
@@ -198,6 +225,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=logoutUrl@TypeHint")
     public String logoutUrlAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withLogoutUrlAtTypeHint(String logoutUrlAtTypeHint) {
         this.logoutUrlAtTypeHint = logoutUrlAtTypeHint;
         return this;
@@ -205,6 +233,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nameIdFormat")
     public String nameIdFormat;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withNameIdFormat(String nameIdFormat) {
         this.nameIdFormat = nameIdFormat;
         return this;
@@ -212,6 +241,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nameIdFormat@TypeHint")
     public String nameIdFormatAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withNameIdFormatAtTypeHint(String nameIdFormatAtTypeHint) {
         this.nameIdFormatAtTypeHint = nameIdFormatAtTypeHint;
         return this;
@@ -219,6 +249,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
     public String[] path;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withPath(String[] path) {
         this.path = path;
         return this;
@@ -226,6 +257,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path@TypeHint")
     public String pathAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withPathAtTypeHint(String pathAtTypeHint) {
         this.pathAtTypeHint = pathAtTypeHint;
         return this;
@@ -233,6 +265,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service.ranking")
     public Long serviceRanking;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withServiceRanking(Long serviceRanking) {
         this.serviceRanking = serviceRanking;
         return this;
@@ -240,6 +273,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service.ranking@TypeHint")
     public String serviceRankingAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withServiceRankingAtTypeHint(String serviceRankingAtTypeHint) {
         this.serviceRankingAtTypeHint = serviceRankingAtTypeHint;
         return this;
@@ -247,6 +281,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceProviderEntityId")
     public String serviceProviderEntityId;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withServiceProviderEntityId(String serviceProviderEntityId) {
         this.serviceProviderEntityId = serviceProviderEntityId;
         return this;
@@ -254,6 +289,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceProviderEntityId@TypeHint")
     public String serviceProviderEntityIdAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withServiceProviderEntityIdAtTypeHint(String serviceProviderEntityIdAtTypeHint) {
         this.serviceProviderEntityIdAtTypeHint = serviceProviderEntityIdAtTypeHint;
         return this;
@@ -261,6 +297,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signatureMethod")
     public String signatureMethod;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withSignatureMethod(String signatureMethod) {
         this.signatureMethod = signatureMethod;
         return this;
@@ -268,6 +305,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signatureMethod@TypeHint")
     public String signatureMethodAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withSignatureMethodAtTypeHint(String signatureMethodAtTypeHint) {
         this.signatureMethodAtTypeHint = signatureMethodAtTypeHint;
         return this;
@@ -275,6 +313,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spPrivateKeyAlias")
     public String spPrivateKeyAlias;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withSpPrivateKeyAlias(String spPrivateKeyAlias) {
         this.spPrivateKeyAlias = spPrivateKeyAlias;
         return this;
@@ -282,6 +321,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spPrivateKeyAlias@TypeHint")
     public String spPrivateKeyAliasAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withSpPrivateKeyAliasAtTypeHint(String spPrivateKeyAliasAtTypeHint) {
         this.spPrivateKeyAliasAtTypeHint = spPrivateKeyAliasAtTypeHint;
         return this;
@@ -289,6 +329,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=synchronizeAttributes")
     public String[] synchronizeAttributes;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withSynchronizeAttributes(String[] synchronizeAttributes) {
         this.synchronizeAttributes = synchronizeAttributes;
         return this;
@@ -296,6 +337,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=synchronizeAttributes@TypeHint")
     public String synchronizeAttributesAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withSynchronizeAttributesAtTypeHint(String synchronizeAttributesAtTypeHint) {
         this.synchronizeAttributesAtTypeHint = synchronizeAttributesAtTypeHint;
         return this;
@@ -303,6 +345,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useEncryption")
     public Boolean useEncryption;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withUseEncryption(Boolean useEncryption) {
         this.useEncryption = useEncryption;
         return this;
@@ -310,6 +353,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useEncryption@TypeHint")
     public String useEncryptionAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withUseEncryptionAtTypeHint(String useEncryptionAtTypeHint) {
         this.useEncryptionAtTypeHint = useEncryptionAtTypeHint;
         return this;
@@ -317,6 +361,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIDAttribute")
     public String userIDAttribute;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withUserIDAttribute(String userIDAttribute) {
         this.userIDAttribute = userIDAttribute;
         return this;
@@ -324,6 +369,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIDAttribute@TypeHint")
     public String userIDAttributeAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withUserIDAttributeAtTypeHint(String userIDAttributeAtTypeHint) {
         this.userIDAttributeAtTypeHint = userIDAttributeAtTypeHint;
         return this;
@@ -331,6 +377,7 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIntermediatePath")
     public String userIntermediatePath;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withUserIntermediatePath(String userIntermediatePath) {
         this.userIntermediatePath = userIntermediatePath;
         return this;
@@ -338,9 +385,11 @@ public class PostConfigAdobeGraniteSamlAuthenticationHandlerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIntermediatePath@TypeHint")
     public String userIntermediatePathAtTypeHint;
+
     public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest withUserIntermediatePathAtTypeHint(String userIntermediatePathAtTypeHint) {
         this.userIntermediatePathAtTypeHint = userIntermediatePathAtTypeHint;
         return this;
     }
     
+    public PostConfigAdobeGraniteSamlAuthenticationHandlerRequest(){}
 }

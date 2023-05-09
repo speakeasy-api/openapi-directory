@@ -15,6 +15,7 @@ public class GenerateDataKeyPairResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public GenerateDataKeyPairResponse withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -23,6 +24,7 @@ public class GenerateDataKeyPairResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyPairSpec")
     public DataKeyPairSpecEnum keyPairSpec;
+
     public GenerateDataKeyPairResponse withKeyPairSpec(DataKeyPairSpecEnum keyPairSpec) {
         this.keyPairSpec = keyPairSpec;
         return this;
@@ -31,6 +33,7 @@ public class GenerateDataKeyPairResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateKeyCiphertextBlob")
     public String privateKeyCiphertextBlob;
+
     public GenerateDataKeyPairResponse withPrivateKeyCiphertextBlob(String privateKeyCiphertextBlob) {
         this.privateKeyCiphertextBlob = privateKeyCiphertextBlob;
         return this;
@@ -39,6 +42,7 @@ public class GenerateDataKeyPairResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateKeyPlaintext")
     public String privateKeyPlaintext;
+
     public GenerateDataKeyPairResponse withPrivateKeyPlaintext(String privateKeyPlaintext) {
         this.privateKeyPlaintext = privateKeyPlaintext;
         return this;
@@ -47,9 +51,11 @@ public class GenerateDataKeyPairResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicKey")
     public String publicKey;
+
     public GenerateDataKeyPairResponse withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public GenerateDataKeyPairResponse(){}
 }

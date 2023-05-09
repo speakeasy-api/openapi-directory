@@ -18,6 +18,7 @@ public class PropertyPaAndAttVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date_value")
     public LocalDate dateValue;
+
     public PropertyPaAndAttVO withDateValue(LocalDate dateValue) {
         this.dateValue = dateValue;
         return this;
@@ -29,6 +30,7 @@ public class PropertyPaAndAttVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number_value")
     public Object numberValue;
+
     public PropertyPaAndAttVO withNumberValue(Object numberValue) {
         this.numberValue = numberValue;
         return this;
@@ -37,6 +39,7 @@ public class PropertyPaAndAttVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("param_id")
     public Long paramId;
+
     public PropertyPaAndAttVO withParamId(Long paramId) {
         this.paramId = paramId;
         return this;
@@ -45,6 +48,7 @@ public class PropertyPaAndAttVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("param_name")
     public String paramName;
+
     public PropertyPaAndAttVO withParamName(String paramName) {
         this.paramName = paramName;
         return this;
@@ -53,6 +57,7 @@ public class PropertyPaAndAttVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property_attribute_id")
     public Long propertyAttributeId;
+
     public PropertyPaAndAttVO withPropertyAttributeId(Long propertyAttributeId) {
         this.propertyAttributeId = propertyAttributeId;
         return this;
@@ -61,9 +66,11 @@ public class PropertyPaAndAttVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("string_value")
     public String stringValue;
+
     public PropertyPaAndAttVO withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public PropertyPaAndAttVO(){}
 }

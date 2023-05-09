@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchAssociateResourceResponse {
@@ -12,6 +13,7 @@ public class BatchAssociateResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchAssociateResourceResponse batchAssociateResourceResponse;
+
     public BatchAssociateResourceResponse withBatchAssociateResourceResponse(org.openapis.openapi.models.shared.BatchAssociateResourceResponse batchAssociateResourceResponse) {
         this.batchAssociateResourceResponse = batchAssociateResourceResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchAssociateResourceResponse {
     
     
     public String contentType;
+
     public BatchAssociateResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchAssociateResourceResponse {
      */
     
     public Object internalErrorException;
+
     public BatchAssociateResourceResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class BatchAssociateResourceResponse {
      */
     
     public Object invalidInputException;
+
     public BatchAssociateResourceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class BatchAssociateResourceResponse {
      */
     
     public Object invalidOperationException;
+
     public BatchAssociateResourceResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -59,6 +65,7 @@ public class BatchAssociateResourceResponse {
      */
     
     public Object limitExceededException;
+
     public BatchAssociateResourceResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class BatchAssociateResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchAssociateResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class BatchAssociateResourceResponse {
     
     
     public Integer statusCode;
+
     public BatchAssociateResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class BatchAssociateResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchAssociateResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchAssociateResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

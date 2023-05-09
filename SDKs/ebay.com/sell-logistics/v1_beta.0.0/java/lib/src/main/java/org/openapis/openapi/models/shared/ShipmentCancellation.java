@@ -18,6 +18,7 @@ public class ShipmentCancellation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellationRequestedDate")
     public String cancellationRequestedDate;
+
     public ShipmentCancellation withCancellationRequestedDate(String cancellationRequestedDate) {
         this.cancellationRequestedDate = cancellationRequestedDate;
         return this;
@@ -29,9 +30,11 @@ public class ShipmentCancellation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellationStatus")
     public String cancellationStatus;
+
     public ShipmentCancellation withCancellationStatus(String cancellationStatus) {
         this.cancellationStatus = cancellationStatus;
         return this;
     }
     
+    public ShipmentCancellation(){}
 }

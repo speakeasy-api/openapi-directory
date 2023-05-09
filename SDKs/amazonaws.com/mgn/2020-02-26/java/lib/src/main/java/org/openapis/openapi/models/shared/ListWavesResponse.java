@@ -15,6 +15,7 @@ public class ListWavesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Wave[] items;
+
     public ListWavesResponse withItems(Wave[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class ListWavesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListWavesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListWavesResponse(){}
 }

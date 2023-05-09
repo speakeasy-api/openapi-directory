@@ -18,6 +18,7 @@ public class WorkloadShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionType")
     public PermissionTypeEnum permissionType;
+
     public WorkloadShare withPermissionType(PermissionTypeEnum permissionType) {
         this.permissionType = permissionType;
         return this;
@@ -29,6 +30,7 @@ public class WorkloadShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareId")
     public String shareId;
+
     public WorkloadShare withShareId(String shareId) {
         this.shareId = shareId;
         return this;
@@ -40,6 +42,7 @@ public class WorkloadShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedBy")
     public String sharedBy;
+
     public WorkloadShare withSharedBy(String sharedBy) {
         this.sharedBy = sharedBy;
         return this;
@@ -51,6 +54,7 @@ public class WorkloadShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedWith")
     public String sharedWith;
+
     public WorkloadShare withSharedWith(String sharedWith) {
         this.sharedWith = sharedWith;
         return this;
@@ -62,6 +66,7 @@ public class WorkloadShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ShareStatusEnum status;
+
     public WorkloadShare withStatus(ShareStatusEnum status) {
         this.status = status;
         return this;
@@ -73,6 +78,7 @@ public class WorkloadShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadId")
     public String workloadId;
+
     public WorkloadShare withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
@@ -84,9 +90,11 @@ public class WorkloadShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadName")
     public String workloadName;
+
     public WorkloadShare withWorkloadName(String workloadName) {
         this.workloadName = workloadName;
         return this;
     }
     
+    public WorkloadShare(){}
 }

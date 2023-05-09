@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTrialComponentsResponse {
     
     public String contentType;
+
     public ListTrialComponentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTrialComponentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTrialComponentsResponse listTrialComponentsResponse;
+
     public ListTrialComponentsResponse withListTrialComponentsResponse(org.openapis.openapi.models.shared.ListTrialComponentsResponse listTrialComponentsResponse) {
         this.listTrialComponentsResponse = listTrialComponentsResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListTrialComponentsResponse {
      */
     
     public Object resourceNotFound;
+
     public ListTrialComponentsResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class ListTrialComponentsResponse {
     
     
     public Integer statusCode;
+
     public ListTrialComponentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListTrialComponentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTrialComponentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTrialComponentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

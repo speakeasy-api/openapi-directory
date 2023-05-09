@@ -15,6 +15,7 @@ public class LibraryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedDiscounts")
     public String[] deletedDiscounts;
+
     public LibraryResponse withDeletedDiscounts(String[] deletedDiscounts) {
         this.deletedDiscounts = deletedDiscounts;
         return this;
@@ -23,6 +24,7 @@ public class LibraryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedProducts")
     public String[] deletedProducts;
+
     public LibraryResponse withDeletedProducts(String[] deletedProducts) {
         this.deletedProducts = deletedProducts;
         return this;
@@ -31,6 +33,7 @@ public class LibraryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discounts")
     public DiscountResponse[] discounts;
+
     public LibraryResponse withDiscounts(DiscountResponse[] discounts) {
         this.discounts = discounts;
         return this;
@@ -39,6 +42,7 @@ public class LibraryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromEventLogUuid")
     public String fromEventLogUuid;
+
     public LibraryResponse withFromEventLogUuid(String fromEventLogUuid) {
         this.fromEventLogUuid = fromEventLogUuid;
         return this;
@@ -47,6 +51,7 @@ public class LibraryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public ProductResponse[] products;
+
     public LibraryResponse withProducts(ProductResponse[] products) {
         this.products = products;
         return this;
@@ -55,9 +60,11 @@ public class LibraryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("untilEventLogUuid")
     public String untilEventLogUuid;
+
     public LibraryResponse withUntilEventLogUuid(String untilEventLogUuid) {
         this.untilEventLogUuid = untilEventLogUuid;
         return this;
     }
     
+    public LibraryResponse(){}
 }

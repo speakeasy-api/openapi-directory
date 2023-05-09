@@ -15,6 +15,7 @@ public class CreateFacetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public org.openapis.openapi.models.shared.FacetAttribute[] attributes;
+
     public CreateFacetRequestBody withAttributes(org.openapis.openapi.models.shared.FacetAttribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -26,6 +27,7 @@ public class CreateFacetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FacetStyle")
     public CreateFacetRequestBodyFacetStyleEnum facetStyle;
+
     public CreateFacetRequestBody withFacetStyle(CreateFacetRequestBodyFacetStyleEnum facetStyle) {
         this.facetStyle = facetStyle;
         return this;
@@ -36,6 +38,7 @@ public class CreateFacetRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateFacetRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +50,13 @@ public class CreateFacetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectType")
     public CreateFacetRequestBodyObjectTypeEnum objectType;
+
     public CreateFacetRequestBody withObjectType(CreateFacetRequestBodyObjectTypeEnum objectType) {
         this.objectType = objectType;
         return this;
     }
     
+    public CreateFacetRequestBody(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

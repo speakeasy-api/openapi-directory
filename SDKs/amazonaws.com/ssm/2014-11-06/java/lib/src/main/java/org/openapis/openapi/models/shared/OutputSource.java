@@ -15,6 +15,7 @@ public class OutputSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSourceId")
     public String outputSourceId;
+
     public OutputSource withOutputSourceId(String outputSourceId) {
         this.outputSourceId = outputSourceId;
         return this;
@@ -23,9 +24,11 @@ public class OutputSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSourceType")
     public String outputSourceType;
+
     public OutputSource withOutputSourceType(String outputSourceType) {
         this.outputSourceType = outputSourceType;
         return this;
     }
     
+    public OutputSource(){}
 }

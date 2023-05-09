@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDeleteTrafficMirrorTargetResponse {
     
     public byte[] body;
+
     public GETDeleteTrafficMirrorTargetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDeleteTrafficMirrorTargetResponse {
     
     
     public String contentType;
+
     public GETDeleteTrafficMirrorTargetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDeleteTrafficMirrorTargetResponse {
     
     
     public Integer statusCode;
+
     public GETDeleteTrafficMirrorTargetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDeleteTrafficMirrorTargetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDeleteTrafficMirrorTargetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDeleteTrafficMirrorTargetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

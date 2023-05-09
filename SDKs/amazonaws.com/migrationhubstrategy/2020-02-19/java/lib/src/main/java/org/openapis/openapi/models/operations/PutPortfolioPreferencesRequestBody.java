@@ -15,6 +15,7 @@ public class PutPortfolioPreferencesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationMode")
     public PutPortfolioPreferencesRequestBodyApplicationModeEnum applicationMode;
+
     public PutPortfolioPreferencesRequestBody withApplicationMode(PutPortfolioPreferencesRequestBodyApplicationModeEnum applicationMode) {
         this.applicationMode = applicationMode;
         return this;
@@ -26,6 +27,7 @@ public class PutPortfolioPreferencesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationPreferences")
     public PutPortfolioPreferencesRequestBodyApplicationPreferences applicationPreferences;
+
     public PutPortfolioPreferencesRequestBody withApplicationPreferences(PutPortfolioPreferencesRequestBodyApplicationPreferences applicationPreferences) {
         this.applicationPreferences = applicationPreferences;
         return this;
@@ -37,6 +39,7 @@ public class PutPortfolioPreferencesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databasePreferences")
     public PutPortfolioPreferencesRequestBodyDatabasePreferences databasePreferences;
+
     public PutPortfolioPreferencesRequestBody withDatabasePreferences(PutPortfolioPreferencesRequestBodyDatabasePreferences databasePreferences) {
         this.databasePreferences = databasePreferences;
         return this;
@@ -48,9 +51,11 @@ public class PutPortfolioPreferencesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prioritizeBusinessGoals")
     public PutPortfolioPreferencesRequestBodyPrioritizeBusinessGoals prioritizeBusinessGoals;
+
     public PutPortfolioPreferencesRequestBody withPrioritizeBusinessGoals(PutPortfolioPreferencesRequestBodyPrioritizeBusinessGoals prioritizeBusinessGoals) {
         this.prioritizeBusinessGoals = prioritizeBusinessGoals;
         return this;
     }
     
+    public PutPortfolioPreferencesRequestBody(){}
 }

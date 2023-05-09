@@ -18,6 +18,7 @@ public class ExportConfigurationsPartialUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backfill")
     public Boolean backfill;
+
     public ExportConfigurationsPartialUpdateRequestBody withBackfill(Boolean backfill) {
         this.backfill = backfill;
         return this;
@@ -26,6 +27,7 @@ public class ExportConfigurationsPartialUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_entities")
     public ExportConfigurationsPartialUpdateRequestBodyExportEntitiesEnum[] exportEntities;
+
     public ExportConfigurationsPartialUpdateRequestBody withExportEntities(ExportConfigurationsPartialUpdateRequestBodyExportEntitiesEnum[] exportEntities) {
         this.exportEntities = exportEntities;
         return this;
@@ -37,6 +39,7 @@ public class ExportConfigurationsPartialUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_group")
     public String resourceGroup;
+
     public ExportConfigurationsPartialUpdateRequestBody withResourceGroup(String resourceGroup) {
         this.resourceGroup = resourceGroup;
         return this;
@@ -48,6 +51,7 @@ public class ExportConfigurationsPartialUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_name")
     public String resourceName;
+
     public ExportConfigurationsPartialUpdateRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -58,9 +62,13 @@ public class ExportConfigurationsPartialUpdateRequestBody {
      */
     @JsonProperty("type")
     public ExportConfigurationsPartialUpdateRequestBodyTypeEnum type;
+
     public ExportConfigurationsPartialUpdateRequestBody withType(ExportConfigurationsPartialUpdateRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ExportConfigurationsPartialUpdateRequestBody(@JsonProperty("type") ExportConfigurationsPartialUpdateRequestBodyTypeEnum type) {
+        this.type = type;
+  }
 }

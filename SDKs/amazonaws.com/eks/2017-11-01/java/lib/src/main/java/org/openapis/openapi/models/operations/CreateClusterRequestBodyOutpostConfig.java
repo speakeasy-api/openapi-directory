@@ -15,6 +15,7 @@ public class CreateClusterRequestBodyOutpostConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlPlaneInstanceType")
     public String controlPlaneInstanceType;
+
     public CreateClusterRequestBodyOutpostConfig withControlPlaneInstanceType(String controlPlaneInstanceType) {
         this.controlPlaneInstanceType = controlPlaneInstanceType;
         return this;
@@ -23,6 +24,7 @@ public class CreateClusterRequestBodyOutpostConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlPlanePlacement")
     public org.openapis.openapi.models.shared.ControlPlanePlacementRequest controlPlanePlacement;
+
     public CreateClusterRequestBodyOutpostConfig withControlPlanePlacement(org.openapis.openapi.models.shared.ControlPlanePlacementRequest controlPlanePlacement) {
         this.controlPlanePlacement = controlPlanePlacement;
         return this;
@@ -31,9 +33,11 @@ public class CreateClusterRequestBodyOutpostConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outpostArns")
     public String[] outpostArns;
+
     public CreateClusterRequestBodyOutpostConfig withOutpostArns(String[] outpostArns) {
         this.outpostArns = outpostArns;
         return this;
     }
     
+    public CreateClusterRequestBodyOutpostConfig(){}
 }

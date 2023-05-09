@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1LookupEnvironmentHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environments")
     public GoogleCloudDialogflowCxV3beta1Environment[] environments;
+
     public GoogleCloudDialogflowCxV3beta1LookupEnvironmentHistoryResponse withEnvironments(GoogleCloudDialogflowCxV3beta1Environment[] environments) {
         this.environments = environments;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1LookupEnvironmentHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowCxV3beta1LookupEnvironmentHistoryResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1LookupEnvironmentHistoryResponse(){}
 }

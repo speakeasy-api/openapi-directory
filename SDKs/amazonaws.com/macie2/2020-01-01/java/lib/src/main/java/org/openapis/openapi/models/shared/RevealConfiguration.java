@@ -15,6 +15,7 @@ public class RevealConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public RevealConfiguration withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -22,9 +23,13 @@ public class RevealConfiguration {
     
     @JsonProperty("status")
     public RevealStatusEnum status;
+
     public RevealConfiguration withStatus(RevealStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public RevealConfiguration(@JsonProperty("status") RevealStatusEnum status) {
+        this.status = status;
+  }
 }

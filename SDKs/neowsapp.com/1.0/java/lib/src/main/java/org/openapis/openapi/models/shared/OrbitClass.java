@@ -12,6 +12,7 @@ public class OrbitClass {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orbit_class_description")
     public String orbitClassDescription;
+
     public OrbitClass withOrbitClassDescription(String orbitClassDescription) {
         this.orbitClassDescription = orbitClassDescription;
         return this;
@@ -20,6 +21,7 @@ public class OrbitClass {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orbit_class_range")
     public String orbitClassRange;
+
     public OrbitClass withOrbitClassRange(String orbitClassRange) {
         this.orbitClassRange = orbitClassRange;
         return this;
@@ -28,9 +30,11 @@ public class OrbitClass {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orbit_class_type")
     public OrbitClassOrbitClassTypeEnum orbitClassType;
+
     public OrbitClass withOrbitClassType(OrbitClassOrbitClassTypeEnum orbitClassType) {
         this.orbitClassType = orbitClassType;
         return this;
     }
     
+    public OrbitClass(){}
 }

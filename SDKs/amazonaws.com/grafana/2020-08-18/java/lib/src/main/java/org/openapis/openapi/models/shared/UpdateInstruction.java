@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateInstruction {
     @JsonProperty("action")
     public UpdateActionEnum action;
+
     public UpdateInstruction withAction(UpdateActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class UpdateInstruction {
     
     @JsonProperty("role")
     public RoleEnum role;
+
     public UpdateInstruction withRole(RoleEnum role) {
         this.role = role;
         return this;
@@ -26,9 +28,15 @@ public class UpdateInstruction {
     
     @JsonProperty("users")
     public User[] users;
+
     public UpdateInstruction withUsers(User[] users) {
         this.users = users;
         return this;
     }
     
+    public UpdateInstruction(@JsonProperty("action") UpdateActionEnum action, @JsonProperty("role") RoleEnum role, @JsonProperty("users") User[] users) {
+        this.action = action;
+        this.role = role;
+        this.users = users;
+  }
 }

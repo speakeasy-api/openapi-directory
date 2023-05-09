@@ -155,6 +155,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -192,7 +197,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSlackChannelConfigurationResponse res = new org.openapis.openapi.models.operations.CreateSlackChannelConfigurationResponse() {{
+        org.openapis.openapi.models.operations.CreateSlackChannelConfigurationResponse res = new org.openapis.openapi.models.operations.CreateSlackChannelConfigurationResponse(contentType, httpRes.statusCode()) {{
             createSlackChannelConfigurationResult = null;
             serviceQuotaExceededException = null;
             conflictException = null;
@@ -200,8 +205,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -279,14 +282,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAccountAliasResponse res = new org.openapis.openapi.models.operations.DeleteAccountAliasResponse() {{
+        org.openapis.openapi.models.operations.DeleteAccountAliasResponse res = new org.openapis.openapi.models.operations.DeleteAccountAliasResponse(contentType, httpRes.statusCode()) {{
             deleteAccountAliasResult = null;
             resourceNotFoundException = null;
             accessDeniedException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -355,7 +356,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSlackChannelConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteSlackChannelConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DeleteSlackChannelConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteSlackChannelConfigurationResponse(contentType, httpRes.statusCode()) {{
             deleteSlackChannelConfigurationResult = null;
             conflictException = null;
             resourceNotFoundException = null;
@@ -363,8 +364,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -447,7 +446,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSlackWorkspaceConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteSlackWorkspaceConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DeleteSlackWorkspaceConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteSlackWorkspaceConfigurationResponse(contentType, httpRes.statusCode()) {{
             deleteSlackWorkspaceConfigurationResult = null;
             conflictException = null;
             resourceNotFoundException = null;
@@ -455,8 +454,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,12 +531,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountAliasResponse res = new org.openapis.openapi.models.operations.GetAccountAliasResponse() {{
+        org.openapis.openapi.models.operations.GetAccountAliasResponse res = new org.openapis.openapi.models.operations.GetAccountAliasResponse(contentType, httpRes.statusCode()) {{
             getAccountAliasResult = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -600,13 +595,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSlackChannelConfigurationsResponse res = new org.openapis.openapi.models.operations.ListSlackChannelConfigurationsResponse() {{
+        org.openapis.openapi.models.operations.ListSlackChannelConfigurationsResponse res = new org.openapis.openapi.models.operations.ListSlackChannelConfigurationsResponse(contentType, httpRes.statusCode()) {{
             listSlackChannelConfigurationsResult = null;
             accessDeniedException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,13 +667,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSlackWorkspaceConfigurationsResponse res = new org.openapis.openapi.models.operations.ListSlackWorkspaceConfigurationsResponse() {{
+        org.openapis.openapi.models.operations.ListSlackWorkspaceConfigurationsResponse res = new org.openapis.openapi.models.operations.ListSlackWorkspaceConfigurationsResponse(contentType, httpRes.statusCode()) {{
             listSlackWorkspaceConfigurationsResult = null;
             accessDeniedException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -742,14 +733,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutAccountAliasResponse res = new org.openapis.openapi.models.operations.PutAccountAliasResponse() {{
+        org.openapis.openapi.models.operations.PutAccountAliasResponse res = new org.openapis.openapi.models.operations.PutAccountAliasResponse(contentType, httpRes.statusCode()) {{
             putAccountAliasResult = null;
             accessDeniedException = null;
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -818,7 +807,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterSlackWorkspaceForOrganizationResponse res = new org.openapis.openapi.models.operations.RegisterSlackWorkspaceForOrganizationResponse() {{
+        org.openapis.openapi.models.operations.RegisterSlackWorkspaceForOrganizationResponse res = new org.openapis.openapi.models.operations.RegisterSlackWorkspaceForOrganizationResponse(contentType, httpRes.statusCode()) {{
             registerSlackWorkspaceForOrganizationResult = null;
             conflictException = null;
             resourceNotFoundException = null;
@@ -826,8 +815,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -910,7 +897,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSlackChannelConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateSlackChannelConfigurationResponse() {{
+        org.openapis.openapi.models.operations.UpdateSlackChannelConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateSlackChannelConfigurationResponse(contentType, httpRes.statusCode()) {{
             updateSlackChannelConfigurationResult = null;
             conflictException = null;
             resourceNotFoundException = null;
@@ -918,8 +905,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

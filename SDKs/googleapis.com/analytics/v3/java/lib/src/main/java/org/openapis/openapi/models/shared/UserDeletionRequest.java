@@ -25,6 +25,7 @@ public class UserDeletionRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deletionRequestTime")
     public OffsetDateTime deletionRequestTime;
+
     public UserDeletionRequest withDeletionRequestTime(OffsetDateTime deletionRequestTime) {
         this.deletionRequestTime = deletionRequestTime;
         return this;
@@ -36,6 +37,7 @@ public class UserDeletionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firebaseProjectId")
     public String firebaseProjectId;
+
     public UserDeletionRequest withFirebaseProjectId(String firebaseProjectId) {
         this.firebaseProjectId = firebaseProjectId;
         return this;
@@ -47,6 +49,7 @@ public class UserDeletionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public UserDeletionRequestId id;
+
     public UserDeletionRequest withId(UserDeletionRequestId id) {
         this.id = id;
         return this;
@@ -58,6 +61,7 @@ public class UserDeletionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public UserDeletionRequest withKind(String kind) {
         this.kind = kind;
         return this;
@@ -69,6 +73,7 @@ public class UserDeletionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyId")
     public String propertyId;
+
     public UserDeletionRequest withPropertyId(String propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -80,9 +85,11 @@ public class UserDeletionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webPropertyId")
     public String webPropertyId;
+
     public UserDeletionRequest withWebPropertyId(String webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public UserDeletionRequest(){}
 }

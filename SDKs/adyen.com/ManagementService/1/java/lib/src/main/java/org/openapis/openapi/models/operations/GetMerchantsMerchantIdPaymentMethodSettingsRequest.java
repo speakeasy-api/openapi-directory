@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdPaymentMethodSettingsRequest {
@@ -12,6 +13,7 @@ public class GetMerchantsMerchantIdPaymentMethodSettingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=businessLineId")
     public String businessLineId;
+
     public GetMerchantsMerchantIdPaymentMethodSettingsRequest withBusinessLineId(String businessLineId) {
         this.businessLineId = businessLineId;
         return this;
@@ -22,6 +24,7 @@ public class GetMerchantsMerchantIdPaymentMethodSettingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public GetMerchantsMerchantIdPaymentMethodSettingsRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -32,6 +35,7 @@ public class GetMerchantsMerchantIdPaymentMethodSettingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Integer pageNumber;
+
     public GetMerchantsMerchantIdPaymentMethodSettingsRequest withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -42,6 +46,7 @@ public class GetMerchantsMerchantIdPaymentMethodSettingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public GetMerchantsMerchantIdPaymentMethodSettingsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -52,9 +57,13 @@ public class GetMerchantsMerchantIdPaymentMethodSettingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storeId")
     public String storeId;
+
     public GetMerchantsMerchantIdPaymentMethodSettingsRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public GetMerchantsMerchantIdPaymentMethodSettingsRequest(@JsonProperty("merchantId") String merchantId) {
+        this.merchantId = merchantId;
+  }
 }

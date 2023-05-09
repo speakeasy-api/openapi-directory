@@ -18,6 +18,7 @@ public class SslSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateId")
     public String certificateId;
+
     public SslSettings withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -29,9 +30,11 @@ public class SslSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isManagedCertificate")
     public Boolean isManagedCertificate;
+
     public SslSettings withIsManagedCertificate(Boolean isManagedCertificate) {
         this.isManagedCertificate = isManagedCertificate;
         return this;
     }
     
+    public SslSettings(){}
 }

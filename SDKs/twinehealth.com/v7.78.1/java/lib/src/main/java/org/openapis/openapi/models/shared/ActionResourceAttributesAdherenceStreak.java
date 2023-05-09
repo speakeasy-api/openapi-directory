@@ -12,6 +12,7 @@ public class ActionResourceAttributesAdherenceStreak {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public ActionResourceAttributesAdherenceStreak withCount(Long count) {
         this.count = count;
         return this;
@@ -20,9 +21,11 @@ public class ActionResourceAttributesAdherenceStreak {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public ActionResourceAttributesAdherenceStreak withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ActionResourceAttributesAdherenceStreak(){}
 }

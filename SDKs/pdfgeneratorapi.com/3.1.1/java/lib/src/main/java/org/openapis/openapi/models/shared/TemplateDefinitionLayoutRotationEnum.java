@@ -10,15 +10,15 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * TemplateDefinitionLayoutRotationEnum - Page rotation in degrees
  */
 public enum TemplateDefinitionLayoutRotationEnum {
-    ZERO("0"),
-    NINETY("90"),
-    ONE_HUNDRED_AND_EIGHTY("180"),
-    TWO_HUNDRED_AND_SEVENTY("270");
+    ZERO(0L),
+    NINETY(90L),
+    ONE_HUNDRED_AND_EIGHTY(180L),
+    TWO_HUNDRED_AND_SEVENTY(270L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private TemplateDefinitionLayoutRotationEnum(String value) {
+    private TemplateDefinitionLayoutRotationEnum(Long value) {
         this.value = value;
     }
 }

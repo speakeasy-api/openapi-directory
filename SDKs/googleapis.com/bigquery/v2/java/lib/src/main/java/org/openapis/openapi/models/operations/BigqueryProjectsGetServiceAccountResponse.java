@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BigqueryProjectsGetServiceAccountResponse {
     
     public String contentType;
+
     public BigqueryProjectsGetServiceAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BigqueryProjectsGetServiceAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.GetServiceAccountResponse getServiceAccountResponse;
+
     public BigqueryProjectsGetServiceAccountResponse withGetServiceAccountResponse(org.openapis.openapi.models.shared.GetServiceAccountResponse getServiceAccountResponse) {
         this.getServiceAccountResponse = getServiceAccountResponse;
         return this;
@@ -26,6 +29,7 @@ public class BigqueryProjectsGetServiceAccountResponse {
     
     
     public Integer statusCode;
+
     public BigqueryProjectsGetServiceAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BigqueryProjectsGetServiceAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BigqueryProjectsGetServiceAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BigqueryProjectsGetServiceAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

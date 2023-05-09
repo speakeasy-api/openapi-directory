@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ShareProfileRequest {
     @JsonProperty("patient")
     public ShareProfileRequestPatient patient;
+
     public ShareProfileRequest withPatient(ShareProfileRequestPatient patient) {
         this.patient = patient;
         return this;
@@ -24,6 +25,7 @@ public class ShareProfileRequest {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public ShareProfileRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -36,9 +38,15 @@ public class ShareProfileRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public ShareProfileRequest withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public ShareProfileRequest(@JsonProperty("patient") ShareProfileRequestPatient patient, @JsonProperty("requestId") String requestId, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.patient = patient;
+        this.requestId = requestId;
+        this.timestamp = timestamp;
+  }
 }

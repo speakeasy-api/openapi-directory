@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateResolverEndpointResponse {
     
     public String contentType;
+
     public UpdateResolverEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateResolverEndpointResponse {
      */
     
     public Object internalServiceErrorException;
+
     public UpdateResolverEndpointResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateResolverEndpointResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateResolverEndpointResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateResolverEndpointResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateResolverEndpointResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateResolverEndpointResponse {
     
     
     public Integer statusCode;
+
     public UpdateResolverEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateResolverEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateResolverEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateResolverEndpointResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateResolverEndpointResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateResolverEndpointResponse {
      */
     
     public Object throttlingException;
+
     public UpdateResolverEndpointResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateResolverEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateResolverEndpointResponse updateResolverEndpointResponse;
+
     public UpdateResolverEndpointResponse withUpdateResolverEndpointResponse(org.openapis.openapi.models.shared.UpdateResolverEndpointResponse updateResolverEndpointResponse) {
         this.updateResolverEndpointResponse = updateResolverEndpointResponse;
         return this;
     }
     
+    public UpdateResolverEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

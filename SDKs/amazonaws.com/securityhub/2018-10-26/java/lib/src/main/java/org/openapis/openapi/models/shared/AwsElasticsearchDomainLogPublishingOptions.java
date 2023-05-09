@@ -18,6 +18,7 @@ public class AwsElasticsearchDomainLogPublishingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuditLogs")
     public AwsElasticsearchDomainLogPublishingOptionsLogConfig auditLogs;
+
     public AwsElasticsearchDomainLogPublishingOptions withAuditLogs(AwsElasticsearchDomainLogPublishingOptionsLogConfig auditLogs) {
         this.auditLogs = auditLogs;
         return this;
@@ -26,6 +27,7 @@ public class AwsElasticsearchDomainLogPublishingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexSlowLogs")
     public AwsElasticsearchDomainLogPublishingOptionsLogConfig indexSlowLogs;
+
     public AwsElasticsearchDomainLogPublishingOptions withIndexSlowLogs(AwsElasticsearchDomainLogPublishingOptionsLogConfig indexSlowLogs) {
         this.indexSlowLogs = indexSlowLogs;
         return this;
@@ -34,9 +36,11 @@ public class AwsElasticsearchDomainLogPublishingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SearchSlowLogs")
     public AwsElasticsearchDomainLogPublishingOptionsLogConfig searchSlowLogs;
+
     public AwsElasticsearchDomainLogPublishingOptions withSearchSlowLogs(AwsElasticsearchDomainLogPublishingOptionsLogConfig searchSlowLogs) {
         this.searchSlowLogs = searchSlowLogs;
         return this;
     }
     
+    public AwsElasticsearchDomainLogPublishingOptions(){}
 }

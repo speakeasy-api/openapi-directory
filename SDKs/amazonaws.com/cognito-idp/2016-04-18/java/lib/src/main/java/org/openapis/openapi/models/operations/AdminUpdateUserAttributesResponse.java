@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminUpdateUserAttributesResponse {
@@ -12,6 +13,7 @@ public class AdminUpdateUserAttributesResponse {
      */
     
     public java.util.Map<String, Object> adminUpdateUserAttributesResponse;
+
     public AdminUpdateUserAttributesResponse withAdminUpdateUserAttributesResponse(java.util.Map<String, Object> adminUpdateUserAttributesResponse) {
         this.adminUpdateUserAttributesResponse = adminUpdateUserAttributesResponse;
         return this;
@@ -22,6 +24,7 @@ public class AdminUpdateUserAttributesResponse {
      */
     
     public Object aliasExistsException;
+
     public AdminUpdateUserAttributesResponse withAliasExistsException(Object aliasExistsException) {
         this.aliasExistsException = aliasExistsException;
         return this;
@@ -29,6 +32,7 @@ public class AdminUpdateUserAttributesResponse {
     
     
     public String contentType;
+
     public AdminUpdateUserAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AdminUpdateUserAttributesResponse {
      */
     
     public Object internalErrorException;
+
     public AdminUpdateUserAttributesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class AdminUpdateUserAttributesResponse {
      */
     
     public Object invalidEmailRoleAccessPolicyException;
+
     public AdminUpdateUserAttributesResponse withInvalidEmailRoleAccessPolicyException(Object invalidEmailRoleAccessPolicyException) {
         this.invalidEmailRoleAccessPolicyException = invalidEmailRoleAccessPolicyException;
         return this;
@@ -59,6 +65,7 @@ public class AdminUpdateUserAttributesResponse {
      */
     
     public Object invalidLambdaResponseException;
+
     public AdminUpdateUserAttributesResponse withInvalidLambdaResponseException(Object invalidLambdaResponseException) {
         this.invalidLambdaResponseException = invalidLambdaResponseException;
         return this;
@@ -69,6 +76,7 @@ public class AdminUpdateUserAttributesResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminUpdateUserAttributesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class AdminUpdateUserAttributesResponse {
      */
     
     public Object invalidSmsRoleAccessPolicyException;
+
     public AdminUpdateUserAttributesResponse withInvalidSmsRoleAccessPolicyException(Object invalidSmsRoleAccessPolicyException) {
         this.invalidSmsRoleAccessPolicyException = invalidSmsRoleAccessPolicyException;
         return this;
@@ -89,6 +98,7 @@ public class AdminUpdateUserAttributesResponse {
      */
     
     public Object invalidSmsRoleTrustRelationshipException;
+
     public AdminUpdateUserAttributesResponse withInvalidSmsRoleTrustRelationshipException(Object invalidSmsRoleTrustRelationshipException) {
         this.invalidSmsRoleTrustRelationshipException = invalidSmsRoleTrustRelationshipException;
         return this;
@@ -99,6 +109,7 @@ public class AdminUpdateUserAttributesResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminUpdateUserAttributesResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -109,6 +120,7 @@ public class AdminUpdateUserAttributesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminUpdateUserAttributesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -116,6 +128,7 @@ public class AdminUpdateUserAttributesResponse {
     
     
     public Integer statusCode;
+
     public AdminUpdateUserAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class AdminUpdateUserAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminUpdateUserAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,6 +147,7 @@ public class AdminUpdateUserAttributesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminUpdateUserAttributesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -143,6 +158,7 @@ public class AdminUpdateUserAttributesResponse {
      */
     
     public Object unexpectedLambdaException;
+
     public AdminUpdateUserAttributesResponse withUnexpectedLambdaException(Object unexpectedLambdaException) {
         this.unexpectedLambdaException = unexpectedLambdaException;
         return this;
@@ -153,6 +169,7 @@ public class AdminUpdateUserAttributesResponse {
      */
     
     public Object userLambdaValidationException;
+
     public AdminUpdateUserAttributesResponse withUserLambdaValidationException(Object userLambdaValidationException) {
         this.userLambdaValidationException = userLambdaValidationException;
         return this;
@@ -163,9 +180,14 @@ public class AdminUpdateUserAttributesResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminUpdateUserAttributesResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public AdminUpdateUserAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

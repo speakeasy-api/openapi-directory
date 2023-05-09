@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateEgressOnlyInternetGatewayResult {
     
     public String clientToken;
+
     public CreateEgressOnlyInternetGatewayResult withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,9 +20,11 @@ public class CreateEgressOnlyInternetGatewayResult {
     
     
     public CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGateway egressOnlyInternetGateway;
+
     public CreateEgressOnlyInternetGatewayResult withEgressOnlyInternetGateway(CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGateway egressOnlyInternetGateway) {
         this.egressOnlyInternetGateway = egressOnlyInternetGateway;
         return this;
     }
     
+    public CreateEgressOnlyInternetGatewayResult(){}
 }

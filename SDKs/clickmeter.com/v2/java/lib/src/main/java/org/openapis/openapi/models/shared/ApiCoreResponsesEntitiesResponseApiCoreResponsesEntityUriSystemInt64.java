@@ -12,9 +12,11 @@ public class ApiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt6
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public ApiCoreResponsesEntityUriSystemInt64[] entities;
+
     public ApiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64 withEntities(ApiCoreResponsesEntityUriSystemInt64[] entities) {
         this.entities = entities;
         return this;
     }
     
+    public ApiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64(){}
 }

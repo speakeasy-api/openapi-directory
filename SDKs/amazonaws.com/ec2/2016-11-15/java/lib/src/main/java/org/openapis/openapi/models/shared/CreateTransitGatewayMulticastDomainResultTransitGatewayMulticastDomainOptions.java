@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions {
     
     public CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptionsAutoAcceptSharedAssociationsEnum autoAcceptSharedAssociations;
+
     public CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions withAutoAcceptSharedAssociations(CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptionsAutoAcceptSharedAssociationsEnum autoAcceptSharedAssociations) {
         this.autoAcceptSharedAssociations = autoAcceptSharedAssociations;
         return this;
@@ -19,6 +20,7 @@ public class CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDom
     
     
     public CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptionsIgmpv2SupportEnum igmpv2Support;
+
     public CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions withIgmpv2Support(CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptionsIgmpv2SupportEnum igmpv2Support) {
         this.igmpv2Support = igmpv2Support;
         return this;
@@ -26,9 +28,11 @@ public class CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDom
     
     
     public CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptionsStaticSourcesSupportEnum staticSourcesSupport;
+
     public CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions withStaticSourcesSupport(CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptionsStaticSourcesSupportEnum staticSourcesSupport) {
         this.staticSourcesSupport = staticSourcesSupport;
         return this;
     }
     
+    public CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions(){}
 }

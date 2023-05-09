@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateEnvironmentTemplateVersionOutput {
     @JsonProperty("environmentTemplateVersion")
     public EnvironmentTemplateVersion environmentTemplateVersion;
+
     public UpdateEnvironmentTemplateVersionOutput withEnvironmentTemplateVersion(EnvironmentTemplateVersion environmentTemplateVersion) {
         this.environmentTemplateVersion = environmentTemplateVersion;
         return this;
     }
     
+    public UpdateEnvironmentTemplateVersionOutput(@JsonProperty("environmentTemplateVersion") EnvironmentTemplateVersion environmentTemplateVersion) {
+        this.environmentTemplateVersion = environmentTemplateVersion;
+  }
 }

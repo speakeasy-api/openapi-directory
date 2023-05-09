@@ -12,6 +12,7 @@ public class GetDatabasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetDatabasesRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -20,6 +21,7 @@ public class GetDatabasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetDatabasesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class GetDatabasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetDatabasesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class GetDatabasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceShareType")
     public ResourceShareTypeEnum resourceShareType;
+
     public GetDatabasesRequest withResourceShareType(ResourceShareTypeEnum resourceShareType) {
         this.resourceShareType = resourceShareType;
         return this;
     }
     
+    public GetDatabasesRequest(){}
 }

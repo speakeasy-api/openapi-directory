@@ -15,6 +15,7 @@ public class CreateAliasResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Alias")
     public String alias;
+
     public CreateAliasResult withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -23,9 +24,11 @@ public class CreateAliasResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public CreateAliasResult withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     
+    public CreateAliasResult(){}
 }

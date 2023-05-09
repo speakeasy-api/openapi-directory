@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelPartnerRepricingConfigs")
     public GoogleCloudChannelV1ChannelPartnerRepricingConfig[] channelPartnerRepricingConfigs;
+
     public GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse withChannelPartnerRepricingConfigs(GoogleCloudChannelV1ChannelPartnerRepricingConfig[] channelPartnerRepricingConfigs) {
         this.channelPartnerRepricingConfigs = channelPartnerRepricingConfigs;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse(){}
 }

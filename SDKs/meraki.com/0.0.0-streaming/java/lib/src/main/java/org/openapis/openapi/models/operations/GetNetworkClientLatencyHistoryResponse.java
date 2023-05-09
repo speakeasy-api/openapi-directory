@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkClientLatencyHistoryResponse {
     
     public String contentType;
+
     public GetNetworkClientLatencyHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkClientLatencyHistoryResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkClientLatencyHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkClientLatencyHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkClientLatencyHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetNetworkClientLatencyHistoryResponse {
      */
     
     public java.util.Map<String, Object>[] getNetworkClientLatencyHistory200ApplicationJSONObjects;
+
     public GetNetworkClientLatencyHistoryResponse withGetNetworkClientLatencyHistory200ApplicationJSONObjects(java.util.Map<String, Object>[] getNetworkClientLatencyHistory200ApplicationJSONObjects) {
         this.getNetworkClientLatencyHistory200ApplicationJSONObjects = getNetworkClientLatencyHistory200ApplicationJSONObjects;
         return this;
     }
     
+    public GetNetworkClientLatencyHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

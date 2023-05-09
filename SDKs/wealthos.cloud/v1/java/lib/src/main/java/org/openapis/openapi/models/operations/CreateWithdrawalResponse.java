@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWithdrawalResponse {
     
     public String contentType;
+
     public CreateWithdrawalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateWithdrawalResponse {
      */
     
     public CreateWithdrawalRootTypeForWithdrawalCreationResponse rootTypeForWithdrawalCreationResponse;
+
     public CreateWithdrawalResponse withRootTypeForWithdrawalCreationResponse(CreateWithdrawalRootTypeForWithdrawalCreationResponse rootTypeForWithdrawalCreationResponse) {
         this.rootTypeForWithdrawalCreationResponse = rootTypeForWithdrawalCreationResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateWithdrawalResponse {
     
     
     public Integer statusCode;
+
     public CreateWithdrawalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateWithdrawalResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWithdrawalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateWithdrawalResponse {
      */
     
     public CreateWithdrawal400ApplicationJSON createWithdrawal400ApplicationJSONObject;
+
     public CreateWithdrawalResponse withCreateWithdrawal400ApplicationJSONObject(CreateWithdrawal400ApplicationJSON createWithdrawal400ApplicationJSONObject) {
         this.createWithdrawal400ApplicationJSONObject = createWithdrawal400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateWithdrawalResponse {
      */
     
     public CreateWithdrawal401ApplicationJSON createWithdrawal401ApplicationJSONObject;
+
     public CreateWithdrawalResponse withCreateWithdrawal401ApplicationJSONObject(CreateWithdrawal401ApplicationJSON createWithdrawal401ApplicationJSONObject) {
         this.createWithdrawal401ApplicationJSONObject = createWithdrawal401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CreateWithdrawalResponse {
      */
     
     public CreateWithdrawal403ApplicationJSON createWithdrawal403ApplicationJSONObject;
+
     public CreateWithdrawalResponse withCreateWithdrawal403ApplicationJSONObject(CreateWithdrawal403ApplicationJSON createWithdrawal403ApplicationJSONObject) {
         this.createWithdrawal403ApplicationJSONObject = createWithdrawal403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CreateWithdrawalResponse {
      */
     
     public CreateWithdrawal404ApplicationJSON createWithdrawal404ApplicationJSONObject;
+
     public CreateWithdrawalResponse withCreateWithdrawal404ApplicationJSONObject(CreateWithdrawal404ApplicationJSON createWithdrawal404ApplicationJSONObject) {
         this.createWithdrawal404ApplicationJSONObject = createWithdrawal404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class CreateWithdrawalResponse {
      */
     
     public CreateWithdrawal409ApplicationJSON createWithdrawal409ApplicationJSONObject;
+
     public CreateWithdrawalResponse withCreateWithdrawal409ApplicationJSONObject(CreateWithdrawal409ApplicationJSON createWithdrawal409ApplicationJSONObject) {
         this.createWithdrawal409ApplicationJSONObject = createWithdrawal409ApplicationJSONObject;
         return this;
@@ -93,6 +103,7 @@ public class CreateWithdrawalResponse {
      */
     
     public CreateWithdrawal429ApplicationJSON createWithdrawal429ApplicationJSONObject;
+
     public CreateWithdrawalResponse withCreateWithdrawal429ApplicationJSONObject(CreateWithdrawal429ApplicationJSON createWithdrawal429ApplicationJSONObject) {
         this.createWithdrawal429ApplicationJSONObject = createWithdrawal429ApplicationJSONObject;
         return this;
@@ -103,9 +114,14 @@ public class CreateWithdrawalResponse {
      */
     
     public CreateWithdrawal500ApplicationJSON createWithdrawal500ApplicationJSONObject;
+
     public CreateWithdrawalResponse withCreateWithdrawal500ApplicationJSONObject(CreateWithdrawal500ApplicationJSON createWithdrawal500ApplicationJSONObject) {
         this.createWithdrawal500ApplicationJSONObject = createWithdrawal500ApplicationJSONObject;
         return this;
     }
     
+    public CreateWithdrawalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

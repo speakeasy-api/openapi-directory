@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class HsmgrResponse {
     
     public String contentType;
+
     public HsmgrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class HsmgrResponse {
     
     
     public Integer statusCode;
+
     public HsmgrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class HsmgrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public HsmgrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class HsmgrResponse {
      */
     
     public Hsmgr400ApplicationJSON hsmgr400ApplicationJSONObject;
+
     public HsmgrResponse withHsmgr400ApplicationJSONObject(Hsmgr400ApplicationJSON hsmgr400ApplicationJSONObject) {
         this.hsmgr400ApplicationJSONObject = hsmgr400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class HsmgrResponse {
      */
     
     public Hsmgr401ApplicationJSON hsmgr401ApplicationJSONObject;
+
     public HsmgrResponse withHsmgr401ApplicationJSONObject(Hsmgr401ApplicationJSON hsmgr401ApplicationJSONObject) {
         this.hsmgr401ApplicationJSONObject = hsmgr401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class HsmgrResponse {
      */
     
     public Hsmgr404ApplicationJSON hsmgr404ApplicationJSONObject;
+
     public HsmgrResponse withHsmgr404ApplicationJSONObject(Hsmgr404ApplicationJSON hsmgr404ApplicationJSONObject) {
         this.hsmgr404ApplicationJSONObject = hsmgr404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class HsmgrResponse {
      */
     
     public Hsmgr500ApplicationJSON hsmgr500ApplicationJSONObject;
+
     public HsmgrResponse withHsmgr500ApplicationJSONObject(Hsmgr500ApplicationJSON hsmgr500ApplicationJSONObject) {
         this.hsmgr500ApplicationJSONObject = hsmgr500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class HsmgrResponse {
      */
     
     public Hsmgr502ApplicationJSON hsmgr502ApplicationJSONObject;
+
     public HsmgrResponse withHsmgr502ApplicationJSONObject(Hsmgr502ApplicationJSON hsmgr502ApplicationJSONObject) {
         this.hsmgr502ApplicationJSONObject = hsmgr502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class HsmgrResponse {
      */
     
     public Hsmgr503ApplicationJSON hsmgr503ApplicationJSONObject;
+
     public HsmgrResponse withHsmgr503ApplicationJSONObject(Hsmgr503ApplicationJSON hsmgr503ApplicationJSONObject) {
         this.hsmgr503ApplicationJSONObject = hsmgr503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class HsmgrResponse {
      */
     
     public Hsmgr504ApplicationJSON hsmgr504ApplicationJSONObject;
+
     public HsmgrResponse withHsmgr504ApplicationJSONObject(Hsmgr504ApplicationJSON hsmgr504ApplicationJSONObject) {
         this.hsmgr504ApplicationJSONObject = hsmgr504ApplicationJSONObject;
         return this;
     }
     
+    public HsmgrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

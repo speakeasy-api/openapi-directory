@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttSetTraceRequest {
@@ -12,6 +13,7 @@ public class ProtocolMqttSetTraceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolMqttSetTraceRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolMqttSetTraceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enableOrNot")
     public String enableOrNot;
+
     public ProtocolMqttSetTraceRequest withEnableOrNot(String enableOrNot) {
         this.enableOrNot = enableOrNot;
         return this;
     }
     
+    public ProtocolMqttSetTraceRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("enableOrNot") String enableOrNot) {
+        this.agentNum = agentNum;
+        this.enableOrNot = enableOrNot;
+  }
 }

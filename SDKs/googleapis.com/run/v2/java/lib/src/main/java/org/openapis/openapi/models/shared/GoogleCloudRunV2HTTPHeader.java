@@ -18,6 +18,7 @@ public class GoogleCloudRunV2HTTPHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRunV2HTTPHeader withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRunV2HTTPHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleCloudRunV2HTTPHeader withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudRunV2HTTPHeader(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAddress1Request {
@@ -12,9 +13,13 @@ public class GetAddress1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=providerId")
     public Long providerId;
+
     public GetAddress1Request withProviderId(Long providerId) {
         this.providerId = providerId;
         return this;
     }
     
+    public GetAddress1Request(@JsonProperty("providerId") Long providerId) {
+        this.providerId = providerId;
+  }
 }

@@ -15,9 +15,11 @@ public class UpdateEventSourceMappingRequestBodyScalingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumConcurrency")
     public Long maximumConcurrency;
+
     public UpdateEventSourceMappingRequestBodyScalingConfig withMaximumConcurrency(Long maximumConcurrency) {
         this.maximumConcurrency = maximumConcurrency;
         return this;
     }
     
+    public UpdateEventSourceMappingRequestBodyScalingConfig(){}
 }

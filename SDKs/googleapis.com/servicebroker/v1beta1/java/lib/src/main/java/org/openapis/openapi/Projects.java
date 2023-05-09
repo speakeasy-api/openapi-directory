@@ -58,11 +58,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersCreateResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersCreateResponse() {{
+        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersCreateResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersCreateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersInstancesBindingsListResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersInstancesBindingsListResponse() {{
+        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersInstancesBindingsListResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersInstancesBindingsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersInstancesListResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersInstancesListResponse() {{
+        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersInstancesListResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersInstancesListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersListResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersListResponse() {{
+        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersListResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -238,11 +230,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2CatalogListResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2CatalogListResponse() {{
+        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2CatalogListResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2CatalogListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,11 +275,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesCreateResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesCreateResponse() {{
+        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesCreateResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesCreateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -332,11 +320,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse() {{
+        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -379,11 +365,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateResponse() {{
+        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -424,11 +408,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -469,11 +451,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetResponse() {{
+        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -514,11 +494,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse() {{
+        org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse res = new org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

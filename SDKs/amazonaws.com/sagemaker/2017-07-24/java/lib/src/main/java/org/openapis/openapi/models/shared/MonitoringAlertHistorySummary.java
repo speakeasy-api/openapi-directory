@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class MonitoringAlertHistorySummary {
     @JsonProperty("AlertStatus")
     public MonitoringAlertStatusEnum alertStatus;
+
     public MonitoringAlertHistorySummary withAlertStatus(MonitoringAlertStatusEnum alertStatus) {
         this.alertStatus = alertStatus;
         return this;
@@ -26,6 +27,7 @@ public class MonitoringAlertHistorySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public MonitoringAlertHistorySummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +35,7 @@ public class MonitoringAlertHistorySummary {
     
     @JsonProperty("MonitoringAlertName")
     public String monitoringAlertName;
+
     public MonitoringAlertHistorySummary withMonitoringAlertName(String monitoringAlertName) {
         this.monitoringAlertName = monitoringAlertName;
         return this;
@@ -40,9 +43,16 @@ public class MonitoringAlertHistorySummary {
     
     @JsonProperty("MonitoringScheduleName")
     public String monitoringScheduleName;
+
     public MonitoringAlertHistorySummary withMonitoringScheduleName(String monitoringScheduleName) {
         this.monitoringScheduleName = monitoringScheduleName;
         return this;
     }
     
+    public MonitoringAlertHistorySummary(@JsonProperty("AlertStatus") MonitoringAlertStatusEnum alertStatus, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("MonitoringAlertName") String monitoringAlertName, @JsonProperty("MonitoringScheduleName") String monitoringScheduleName) {
+        this.alertStatus = alertStatus;
+        this.creationTime = creationTime;
+        this.monitoringAlertName = monitoringAlertName;
+        this.monitoringScheduleName = monitoringScheduleName;
+  }
 }

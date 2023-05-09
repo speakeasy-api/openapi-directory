@@ -12,6 +12,7 @@ public class RunPipelineActivityRequestBody {
      */
     @JsonProperty("payloads")
     public String[] payloads;
+
     public RunPipelineActivityRequestBody withPayloads(String[] payloads) {
         this.payloads = payloads;
         return this;
@@ -22,9 +23,14 @@ public class RunPipelineActivityRequestBody {
      */
     @JsonProperty("pipelineActivity")
     public RunPipelineActivityRequestBodyPipelineActivity pipelineActivity;
+
     public RunPipelineActivityRequestBody withPipelineActivity(RunPipelineActivityRequestBodyPipelineActivity pipelineActivity) {
         this.pipelineActivity = pipelineActivity;
         return this;
     }
     
+    public RunPipelineActivityRequestBody(@JsonProperty("payloads") String[] payloads, @JsonProperty("pipelineActivity") RunPipelineActivityRequestBodyPipelineActivity pipelineActivity) {
+        this.payloads = payloads;
+        this.pipelineActivity = pipelineActivity;
+  }
 }

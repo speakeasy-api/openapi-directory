@@ -15,9 +15,11 @@ public class PlaceGeometry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Point")
     public Double[] point;
+
     public PlaceGeometry withPoint(Double[] point) {
         this.point = point;
         return this;
     }
     
+    public PlaceGeometry(){}
 }

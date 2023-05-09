@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LowestFaresRequest {
@@ -12,6 +13,7 @@ public class LowestFaresRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public LowestFaresRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class LowestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cabin-class")
     public String cabinClass;
+
     public LowestFaresRequest withCabinClass(String cabinClass) {
         this.cabinClass = cabinClass;
         return this;
@@ -32,6 +35,7 @@ public class LowestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
     public String catalogues;
+
     public LowestFaresRequest withCatalogues(String catalogues) {
         this.catalogues = catalogues;
         return this;
@@ -42,6 +46,7 @@ public class LowestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public LowestFaresRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -52,6 +57,7 @@ public class LowestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination")
     public String destination;
+
     public LowestFaresRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -62,6 +68,7 @@ public class LowestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fare-family")
     public String fareFamily;
+
     public LowestFaresRequest withFareFamily(String fareFamily) {
         this.fareFamily = fareFamily;
         return this;
@@ -72,6 +79,7 @@ public class LowestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin")
     public String origin;
+
     public LowestFaresRequest withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -82,6 +90,7 @@ public class LowestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return-date")
     public String returnDate;
+
     public LowestFaresRequest withReturnDate(String returnDate) {
         this.returnDate = returnDate;
         return this;
@@ -92,6 +101,7 @@ public class LowestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travel-date")
     public String travelDate;
+
     public LowestFaresRequest withTravelDate(String travelDate) {
         this.travelDate = travelDate;
         return this;
@@ -102,9 +112,17 @@ public class LowestFaresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelers")
     public String travelers;
+
     public LowestFaresRequest withTravelers(String travelers) {
         this.travelers = travelers;
         return this;
     }
     
+    public LowestFaresRequest(@JsonProperty("Accept") String accept, @JsonProperty("catalogues") String catalogues, @JsonProperty("destination") String destination, @JsonProperty("origin") String origin, @JsonProperty("travel-date") String travelDate) {
+        this.accept = accept;
+        this.catalogues = catalogues;
+        this.destination = destination;
+        this.origin = origin;
+        this.travelDate = travelDate;
+  }
 }

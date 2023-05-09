@@ -15,6 +15,7 @@ public class TitleAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public TitleAggregationResponse withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class TitleAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityCounts")
     public SeverityCounts severityCounts;
+
     public TitleAggregationResponse withSeverityCounts(SeverityCounts severityCounts) {
         this.severityCounts = severityCounts;
         return this;
@@ -30,6 +32,7 @@ public class TitleAggregationResponse {
     
     @JsonProperty("title")
     public String title;
+
     public TitleAggregationResponse withTitle(String title) {
         this.title = title;
         return this;
@@ -38,9 +41,13 @@ public class TitleAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vulnerabilityId")
     public String vulnerabilityId;
+
     public TitleAggregationResponse withVulnerabilityId(String vulnerabilityId) {
         this.vulnerabilityId = vulnerabilityId;
         return this;
     }
     
+    public TitleAggregationResponse(@JsonProperty("title") String title) {
+        this.title = title;
+  }
 }

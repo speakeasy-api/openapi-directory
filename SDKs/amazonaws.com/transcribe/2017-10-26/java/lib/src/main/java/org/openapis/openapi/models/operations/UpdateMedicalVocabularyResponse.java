@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMedicalVocabularyResponse {
@@ -12,6 +13,7 @@ public class UpdateMedicalVocabularyResponse {
      */
     
     public Object badRequestException;
+
     public UpdateMedicalVocabularyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateMedicalVocabularyResponse {
      */
     
     public Object conflictException;
+
     public UpdateMedicalVocabularyResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMedicalVocabularyResponse {
     
     
     public String contentType;
+
     public UpdateMedicalVocabularyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateMedicalVocabularyResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateMedicalVocabularyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateMedicalVocabularyResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateMedicalVocabularyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateMedicalVocabularyResponse {
      */
     
     public Object notFoundException;
+
     public UpdateMedicalVocabularyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateMedicalVocabularyResponse {
     
     
     public Integer statusCode;
+
     public UpdateMedicalVocabularyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateMedicalVocabularyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMedicalVocabularyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateMedicalVocabularyResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateMedicalVocabularyResponse updateMedicalVocabularyResponse;
+
     public UpdateMedicalVocabularyResponse withUpdateMedicalVocabularyResponse(org.openapis.openapi.models.shared.UpdateMedicalVocabularyResponse updateMedicalVocabularyResponse) {
         this.updateMedicalVocabularyResponse = updateMedicalVocabularyResponse;
         return this;
     }
     
+    public UpdateMedicalVocabularyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

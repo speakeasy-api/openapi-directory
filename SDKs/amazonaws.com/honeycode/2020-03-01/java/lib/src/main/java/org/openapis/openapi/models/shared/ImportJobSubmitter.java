@@ -15,6 +15,7 @@ public class ImportJobSubmitter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ImportJobSubmitter withEmail(String email) {
         this.email = email;
         return this;
@@ -23,9 +24,11 @@ public class ImportJobSubmitter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userArn")
     public String userArn;
+
     public ImportJobSubmitter withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public ImportJobSubmitter(){}
 }

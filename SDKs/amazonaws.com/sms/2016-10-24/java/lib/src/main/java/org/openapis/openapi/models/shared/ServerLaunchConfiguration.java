@@ -15,6 +15,7 @@ public class ServerLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatePublicIpAddress")
     public Boolean associatePublicIpAddress;
+
     public ServerLaunchConfiguration withAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         return this;
@@ -26,6 +27,7 @@ public class ServerLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configureScript")
     public S3Location configureScript;
+
     public ServerLaunchConfiguration withConfigureScript(S3Location configureScript) {
         this.configureScript = configureScript;
         return this;
@@ -34,6 +36,7 @@ public class ServerLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configureScriptType")
     public ScriptTypeEnum configureScriptType;
+
     public ServerLaunchConfiguration withConfigureScriptType(ScriptTypeEnum configureScriptType) {
         this.configureScriptType = configureScriptType;
         return this;
@@ -42,6 +45,7 @@ public class ServerLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2KeyName")
     public String ec2KeyName;
+
     public ServerLaunchConfiguration withEc2KeyName(String ec2KeyName) {
         this.ec2KeyName = ec2KeyName;
         return this;
@@ -50,6 +54,7 @@ public class ServerLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamInstanceProfileName")
     public String iamInstanceProfileName;
+
     public ServerLaunchConfiguration withIamInstanceProfileName(String iamInstanceProfileName) {
         this.iamInstanceProfileName = iamInstanceProfileName;
         return this;
@@ -58,6 +63,7 @@ public class ServerLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceType")
     public String instanceType;
+
     public ServerLaunchConfiguration withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -66,6 +72,7 @@ public class ServerLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicalId")
     public String logicalId;
+
     public ServerLaunchConfiguration withLogicalId(String logicalId) {
         this.logicalId = logicalId;
         return this;
@@ -74,6 +81,7 @@ public class ServerLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroup")
     public String securityGroup;
+
     public ServerLaunchConfiguration withSecurityGroup(String securityGroup) {
         this.securityGroup = securityGroup;
         return this;
@@ -82,6 +90,7 @@ public class ServerLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public Server server;
+
     public ServerLaunchConfiguration withServer(Server server) {
         this.server = server;
         return this;
@@ -90,6 +99,7 @@ public class ServerLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnet")
     public String subnet;
+
     public ServerLaunchConfiguration withSubnet(String subnet) {
         this.subnet = subnet;
         return this;
@@ -98,6 +108,7 @@ public class ServerLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userData")
     public UserData userData;
+
     public ServerLaunchConfiguration withUserData(UserData userData) {
         this.userData = userData;
         return this;
@@ -106,9 +117,11 @@ public class ServerLaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpc")
     public String vpc;
+
     public ServerLaunchConfiguration withVpc(String vpc) {
         this.vpc = vpc;
         return this;
     }
     
+    public ServerLaunchConfiguration(){}
 }

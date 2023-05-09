@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VariantOptionDefinition {
     @JsonProperty("name")
     public String name;
+
     public VariantOptionDefinition withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class VariantOptionDefinition {
     
     @JsonProperty("properties")
     public VariantOptionProperties[] properties;
+
     public VariantOptionDefinition withProperties(VariantOptionProperties[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public VariantOptionDefinition(@JsonProperty("name") String name, @JsonProperty("properties") VariantOptionProperties[] properties) {
+        this.name = name;
+        this.properties = properties;
+  }
 }

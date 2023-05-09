@@ -18,6 +18,7 @@ public class InvoiceExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public InvoiceDetailVO result;
+
     public InvoiceExpandVO withResult(InvoiceDetailVO result) {
         this.result = result;
         return this;
@@ -26,6 +27,7 @@ public class InvoiceExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public InvoiceExpandVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,9 +36,11 @@ public class InvoiceExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public InvoiceExpandVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public InvoiceExpandVO(){}
 }

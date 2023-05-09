@@ -14,6 +14,7 @@ public class CreateDeploymentJobRequestBody {
      */
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateDeploymentJobRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -24,6 +25,7 @@ public class CreateDeploymentJobRequestBody {
      */
     @JsonProperty("deploymentApplicationConfigs")
     public org.openapis.openapi.models.shared.DeploymentApplicationConfig[] deploymentApplicationConfigs;
+
     public CreateDeploymentJobRequestBody withDeploymentApplicationConfigs(org.openapis.openapi.models.shared.DeploymentApplicationConfig[] deploymentApplicationConfigs) {
         this.deploymentApplicationConfigs = deploymentApplicationConfigs;
         return this;
@@ -35,6 +37,7 @@ public class CreateDeploymentJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentConfig")
     public CreateDeploymentJobRequestBodyDeploymentConfig deploymentConfig;
+
     public CreateDeploymentJobRequestBody withDeploymentConfig(CreateDeploymentJobRequestBodyDeploymentConfig deploymentConfig) {
         this.deploymentConfig = deploymentConfig;
         return this;
@@ -45,6 +48,7 @@ public class CreateDeploymentJobRequestBody {
      */
     @JsonProperty("fleet")
     public String fleet;
+
     public CreateDeploymentJobRequestBody withFleet(String fleet) {
         this.fleet = fleet;
         return this;
@@ -56,9 +60,15 @@ public class CreateDeploymentJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateDeploymentJobRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDeploymentJobRequestBody(@JsonProperty("clientRequestToken") String clientRequestToken, @JsonProperty("deploymentApplicationConfigs") org.openapis.openapi.models.shared.DeploymentApplicationConfig[] deploymentApplicationConfigs, @JsonProperty("fleet") String fleet) {
+        this.clientRequestToken = clientRequestToken;
+        this.deploymentApplicationConfigs = deploymentApplicationConfigs;
+        this.fleet = fleet;
+  }
 }

@@ -15,6 +15,7 @@ public class Fitcer502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Fitcer502ApplicationJSONErrorEnum error;
+
     public Fitcer502ApplicationJSON withError(Fitcer502ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Fitcer502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Fitcer502ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Fitcer502ApplicationJSON withErrorDescription(Fitcer502ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Fitcer502ApplicationJSON(){}
 }

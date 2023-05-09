@@ -18,6 +18,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acknowledgedViolationCount")
     public Integer acknowledgedViolationCount;
+
     public GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus withAcknowledgedViolationCount(Integer acknowledgedViolationCount) {
         this.acknowledgedViolationCount = acknowledgedViolationCount;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeViolationCount")
     public Integer activeViolationCount;
+
     public GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus withActiveViolationCount(Integer activeViolationCount) {
         this.activeViolationCount = activeViolationCount;
         return this;
     }
     
+    public GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus(){}
 }

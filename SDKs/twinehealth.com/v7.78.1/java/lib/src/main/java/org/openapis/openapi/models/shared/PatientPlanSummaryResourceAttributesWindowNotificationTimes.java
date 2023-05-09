@@ -12,6 +12,7 @@ public class PatientPlanSummaryResourceAttributesWindowNotificationTimes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("afternoon")
     public Long afternoon;
+
     public PatientPlanSummaryResourceAttributesWindowNotificationTimes withAfternoon(Long afternoon) {
         this.afternoon = afternoon;
         return this;
@@ -20,6 +21,7 @@ public class PatientPlanSummaryResourceAttributesWindowNotificationTimes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evening")
     public Long evening;
+
     public PatientPlanSummaryResourceAttributesWindowNotificationTimes withEvening(Long evening) {
         this.evening = evening;
         return this;
@@ -28,6 +30,7 @@ public class PatientPlanSummaryResourceAttributesWindowNotificationTimes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("morning")
     public Long morning;
+
     public PatientPlanSummaryResourceAttributesWindowNotificationTimes withMorning(Long morning) {
         this.morning = morning;
         return this;
@@ -36,9 +39,11 @@ public class PatientPlanSummaryResourceAttributesWindowNotificationTimes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("night")
     public Long night;
+
     public PatientPlanSummaryResourceAttributesWindowNotificationTimes withNight(Long night) {
         this.night = night;
         return this;
     }
     
+    public PatientPlanSummaryResourceAttributesWindowNotificationTimes(){}
 }

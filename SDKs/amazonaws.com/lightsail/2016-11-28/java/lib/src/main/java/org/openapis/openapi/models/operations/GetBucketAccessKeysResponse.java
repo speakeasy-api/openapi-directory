@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBucketAccessKeysResponse {
@@ -12,6 +13,7 @@ public class GetBucketAccessKeysResponse {
      */
     
     public Object accessDeniedException;
+
     public GetBucketAccessKeysResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetBucketAccessKeysResponse {
     
     
     public String contentType;
+
     public GetBucketAccessKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetBucketAccessKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBucketAccessKeysResult getBucketAccessKeysResult;
+
     public GetBucketAccessKeysResponse withGetBucketAccessKeysResult(org.openapis.openapi.models.shared.GetBucketAccessKeysResult getBucketAccessKeysResult) {
         this.getBucketAccessKeysResult = getBucketAccessKeysResult;
         return this;
@@ -39,6 +43,7 @@ public class GetBucketAccessKeysResponse {
      */
     
     public Object invalidInputException;
+
     public GetBucketAccessKeysResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetBucketAccessKeysResponse {
      */
     
     public Object notFoundException;
+
     public GetBucketAccessKeysResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetBucketAccessKeysResponse {
      */
     
     public Object serviceException;
+
     public GetBucketAccessKeysResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class GetBucketAccessKeysResponse {
     
     
     public Integer statusCode;
+
     public GetBucketAccessKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetBucketAccessKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBucketAccessKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetBucketAccessKeysResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetBucketAccessKeysResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetBucketAccessKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

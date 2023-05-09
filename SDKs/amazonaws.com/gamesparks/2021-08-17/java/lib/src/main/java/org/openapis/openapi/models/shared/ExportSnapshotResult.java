@@ -15,9 +15,11 @@ public class ExportSnapshotResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Url")
     public String s3Url;
+
     public ExportSnapshotResult withS3Url(String s3Url) {
         this.s3Url = s3Url;
         return this;
     }
     
+    public ExportSnapshotResult(){}
 }

@@ -12,9 +12,11 @@ public class UploadAPISpecificationRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public UploadAPISpecificationRequestBodySpec spec;
+
     public UploadAPISpecificationRequestBody withSpec(UploadAPISpecificationRequestBodySpec spec) {
         this.spec = spec;
         return this;
     }
     
+    public UploadAPISpecificationRequestBody(){}
 }

@@ -12,6 +12,7 @@ public class RetargetingGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public RetargetingGetRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class RetargetingGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public RetargetingGetRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public RetargetingGetRequest(){}
 }

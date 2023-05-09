@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allEntitiesMetrics")
     public GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetrics allEntitiesMetrics;
+
     public GoogleCloudDocumentaiV1Evaluation withAllEntitiesMetrics(GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetrics allEntitiesMetrics) {
         this.allEntitiesMetrics = allEntitiesMetrics;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDocumentaiV1Evaluation withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentCounters")
     public GoogleCloudDocumentaiV1EvaluationCounters documentCounters;
+
     public GoogleCloudDocumentaiV1Evaluation withDocumentCounters(GoogleCloudDocumentaiV1EvaluationCounters documentCounters) {
         this.documentCounters = documentCounters;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityMetrics")
     public java.util.Map<String, GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetrics> entityMetrics;
+
     public GoogleCloudDocumentaiV1Evaluation withEntityMetrics(java.util.Map<String, GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetrics> entityMetrics) {
         this.entityMetrics = entityMetrics;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public GoogleCloudDocumentaiV1Evaluation withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDocumentaiV1Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyVersionName")
     public String kmsKeyVersionName;
+
     public GoogleCloudDocumentaiV1Evaluation withKmsKeyVersionName(String kmsKeyVersionName) {
         this.kmsKeyVersionName = kmsKeyVersionName;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDocumentaiV1Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDocumentaiV1Evaluation withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1Evaluation(){}
 }

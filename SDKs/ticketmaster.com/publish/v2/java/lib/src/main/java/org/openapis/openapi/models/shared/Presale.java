@@ -23,6 +23,7 @@ public class Presale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptions")
     public java.util.Map<String, String> descriptions;
+
     public Presale withDescriptions(java.util.Map<String, String> descriptions) {
         this.descriptions = descriptions;
         return this;
@@ -36,6 +37,7 @@ public class Presale {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDateTime")
     public OffsetDateTime endDateTime;
+
     public Presale withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -47,6 +49,7 @@ public class Presale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public java.util.Map<String, String> names;
+
     public Presale withNames(java.util.Map<String, String> names) {
         this.names = names;
         return this;
@@ -60,6 +63,7 @@ public class Presale {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public Presale withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -71,9 +75,11 @@ public class Presale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Presale withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Presale(){}
 }

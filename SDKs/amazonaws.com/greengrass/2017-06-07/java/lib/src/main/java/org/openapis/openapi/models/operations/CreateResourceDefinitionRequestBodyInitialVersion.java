@@ -15,9 +15,11 @@ public class CreateResourceDefinitionRequestBodyInitialVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public org.openapis.openapi.models.shared.Resource[] resources;
+
     public CreateResourceDefinitionRequestBodyInitialVersion withResources(org.openapis.openapi.models.shared.Resource[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public CreateResourceDefinitionRequestBodyInitialVersion(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3OutputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioEncoding")
     public GoogleCloudDialogflowCxV3OutputAudioConfigAudioEncodingEnum audioEncoding;
+
     public GoogleCloudDialogflowCxV3OutputAudioConfig withAudioEncoding(GoogleCloudDialogflowCxV3OutputAudioConfigAudioEncodingEnum audioEncoding) {
         this.audioEncoding = audioEncoding;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3OutputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleRateHertz")
     public Integer sampleRateHertz;
+
     public GoogleCloudDialogflowCxV3OutputAudioConfig withSampleRateHertz(Integer sampleRateHertz) {
         this.sampleRateHertz = sampleRateHertz;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3OutputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synthesizeSpeechConfig")
     public GoogleCloudDialogflowCxV3SynthesizeSpeechConfig synthesizeSpeechConfig;
+
     public GoogleCloudDialogflowCxV3OutputAudioConfig withSynthesizeSpeechConfig(GoogleCloudDialogflowCxV3SynthesizeSpeechConfig synthesizeSpeechConfig) {
         this.synthesizeSpeechConfig = synthesizeSpeechConfig;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3OutputAudioConfig(){}
 }

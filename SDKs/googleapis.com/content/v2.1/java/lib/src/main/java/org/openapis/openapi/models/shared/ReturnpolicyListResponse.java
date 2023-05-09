@@ -18,6 +18,7 @@ public class ReturnpolicyListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ReturnpolicyListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -26,9 +27,11 @@ public class ReturnpolicyListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public ReturnPolicy[] resources;
+
     public ReturnpolicyListResponse withResources(ReturnPolicy[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public ReturnpolicyListResponse(){}
 }

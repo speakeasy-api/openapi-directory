@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFileSystemResponse {
@@ -12,6 +13,7 @@ public class DeleteFileSystemResponse {
      */
     
     public Object badRequest;
+
     public DeleteFileSystemResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFileSystemResponse {
     
     
     public String contentType;
+
     public DeleteFileSystemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFileSystemResponse {
      */
     
     public Object fileSystemInUse;
+
     public DeleteFileSystemResponse withFileSystemInUse(Object fileSystemInUse) {
         this.fileSystemInUse = fileSystemInUse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFileSystemResponse {
      */
     
     public Object fileSystemNotFound;
+
     public DeleteFileSystemResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFileSystemResponse {
      */
     
     public Object internalServerError;
+
     public DeleteFileSystemResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -56,6 +62,7 @@ public class DeleteFileSystemResponse {
     
     
     public Integer statusCode;
+
     public DeleteFileSystemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteFileSystemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFileSystemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteFileSystemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

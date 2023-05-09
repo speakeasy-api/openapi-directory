@@ -18,6 +18,7 @@ public class CreateRowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public CreateRowRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -29,6 +30,7 @@ public class CreateRowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("row")
     public Row row;
+
     public CreateRowRequest withRow(Row row) {
         this.row = row;
         return this;
@@ -40,9 +42,11 @@ public class CreateRowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view")
     public CreateRowRequestViewEnum view;
+
     public CreateRowRequest withView(CreateRowRequestViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public CreateRowRequest(){}
 }

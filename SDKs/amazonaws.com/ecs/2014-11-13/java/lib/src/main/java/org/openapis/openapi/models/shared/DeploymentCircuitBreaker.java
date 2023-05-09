@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * DeploymentCircuitBreaker - &lt;note&gt; &lt;p&gt;The deployment circuit breaker can only be used for services using the rolling update (&lt;code&gt;ECS&lt;/code&gt;) deployment type.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;The &lt;b&gt;deployment circuit breaker&lt;/b&gt; determines whether a service deployment will fail if the service can't reach a steady state. If enabled, a service deployment will transition to a failed state and stop launching new tasks. You can also configure Amazon ECS to roll back your service to the last completed deployment after a failure. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html"&gt;Rolling update&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt;
+ * DeploymentCircuitBreaker - &lt;note&gt; &lt;p&gt;The deployment circuit breaker can only be used for services using the rolling update (&lt;code&gt;ECS&lt;/code&gt;) deployment type.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;The &lt;b&gt;deployment circuit breaker&lt;/b&gt; determines whether a service deployment will fail if the service can't reach a steady state. If it is turned on, a service deployment will transition to a failed state and stop launching new tasks. You can also configure Amazon ECS to roll back your service to the last completed deployment after a failure. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html"&gt;Rolling update&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt;
  */
 public class DeploymentCircuitBreaker {
     @JsonProperty("enable")
     public Boolean enable;
+
     public DeploymentCircuitBreaker withEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -19,9 +20,14 @@ public class DeploymentCircuitBreaker {
     
     @JsonProperty("rollback")
     public Boolean rollback;
+
     public DeploymentCircuitBreaker withRollback(Boolean rollback) {
         this.rollback = rollback;
         return this;
     }
     
+    public DeploymentCircuitBreaker(@JsonProperty("enable") Boolean enable, @JsonProperty("rollback") Boolean rollback) {
+        this.enable = enable;
+        this.rollback = rollback;
+  }
 }

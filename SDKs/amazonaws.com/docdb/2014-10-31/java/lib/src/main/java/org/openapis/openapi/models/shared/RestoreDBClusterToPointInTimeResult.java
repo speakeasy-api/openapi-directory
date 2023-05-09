@@ -15,9 +15,11 @@ public class RestoreDBClusterToPointInTimeResult {
      */
     
     public DBCluster dbCluster;
+
     public RestoreDBClusterToPointInTimeResult withDBCluster(DBCluster dbCluster) {
         this.dbCluster = dbCluster;
         return this;
     }
     
+    public RestoreDBClusterToPointInTimeResult(){}
 }

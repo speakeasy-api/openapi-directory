@@ -18,6 +18,7 @@ public class SecretVolumeSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultMode")
     public Integer defaultMode;
+
     public SecretVolumeSource withDefaultMode(Integer defaultMode) {
         this.defaultMode = defaultMode;
         return this;
@@ -29,6 +30,7 @@ public class SecretVolumeSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public KeyToPath[] items;
+
     public SecretVolumeSource withItems(KeyToPath[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class SecretVolumeSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optional")
     public Boolean optional;
+
     public SecretVolumeSource withOptional(Boolean optional) {
         this.optional = optional;
         return this;
@@ -51,9 +54,11 @@ public class SecretVolumeSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretName")
     public String secretName;
+
     public SecretVolumeSource withSecretName(String secretName) {
         this.secretName = secretName;
         return this;
     }
     
+    public SecretVolumeSource(){}
 }

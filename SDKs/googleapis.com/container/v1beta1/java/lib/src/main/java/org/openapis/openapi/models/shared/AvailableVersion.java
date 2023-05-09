@@ -18,6 +18,7 @@ public class AvailableVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public AvailableVersion withReason(String reason) {
         this.reason = reason;
         return this;
@@ -29,9 +30,11 @@ public class AvailableVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public AvailableVersion withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AvailableVersion(){}
 }

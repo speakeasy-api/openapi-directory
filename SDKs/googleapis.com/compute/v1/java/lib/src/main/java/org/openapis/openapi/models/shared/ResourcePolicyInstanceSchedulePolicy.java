@@ -18,6 +18,7 @@ public class ResourcePolicyInstanceSchedulePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationTime")
     public String expirationTime;
+
     public ResourcePolicyInstanceSchedulePolicy withExpirationTime(String expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -29,6 +30,7 @@ public class ResourcePolicyInstanceSchedulePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public ResourcePolicyInstanceSchedulePolicy withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -40,6 +42,7 @@ public class ResourcePolicyInstanceSchedulePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public ResourcePolicyInstanceSchedulePolicy withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -51,6 +54,7 @@ public class ResourcePolicyInstanceSchedulePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmStartSchedule")
     public ResourcePolicyInstanceSchedulePolicySchedule vmStartSchedule;
+
     public ResourcePolicyInstanceSchedulePolicy withVmStartSchedule(ResourcePolicyInstanceSchedulePolicySchedule vmStartSchedule) {
         this.vmStartSchedule = vmStartSchedule;
         return this;
@@ -62,9 +66,11 @@ public class ResourcePolicyInstanceSchedulePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmStopSchedule")
     public ResourcePolicyInstanceSchedulePolicySchedule vmStopSchedule;
+
     public ResourcePolicyInstanceSchedulePolicy withVmStopSchedule(ResourcePolicyInstanceSchedulePolicySchedule vmStopSchedule) {
         this.vmStopSchedule = vmStopSchedule;
         return this;
     }
     
+    public ResourcePolicyInstanceSchedulePolicy(){}
 }

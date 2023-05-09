@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UserGetBungieNetUserByIdResponse {
     
     public byte[] body;
+
     public UserGetBungieNetUserByIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class UserGetBungieNetUserByIdResponse {
     
     
     public String contentType;
+
     public UserGetBungieNetUserByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class UserGetBungieNetUserByIdResponse {
     
     
     public Integer statusCode;
+
     public UserGetBungieNetUserByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class UserGetBungieNetUserByIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UserGetBungieNetUserByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UserGetBungieNetUserByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

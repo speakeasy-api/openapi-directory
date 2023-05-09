@@ -15,6 +15,7 @@ public class TruststoreInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliases")
     public TruststoreItems[] aliases;
+
     public TruststoreInfo withAliases(TruststoreItems[] aliases) {
         this.aliases = aliases;
         return this;
@@ -26,9 +27,11 @@ public class TruststoreInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exists")
     public Boolean exists;
+
     public TruststoreInfo withExists(Boolean exists) {
         this.exists = exists;
         return this;
     }
     
+    public TruststoreInfo(){}
 }

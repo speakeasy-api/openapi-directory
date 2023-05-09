@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateMonitorRequest {
     @JsonProperty("MonitorName")
     public String monitorName;
+
     public CreateMonitorRequest withMonitorName(String monitorName) {
         this.monitorName = monitorName;
         return this;
@@ -18,6 +19,7 @@ public class CreateMonitorRequest {
     
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public CreateMonitorRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -26,9 +28,14 @@ public class CreateMonitorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateMonitorRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateMonitorRequest(@JsonProperty("MonitorName") String monitorName, @JsonProperty("ResourceArn") String resourceArn) {
+        this.monitorName = monitorName;
+        this.resourceArn = resourceArn;
+  }
 }

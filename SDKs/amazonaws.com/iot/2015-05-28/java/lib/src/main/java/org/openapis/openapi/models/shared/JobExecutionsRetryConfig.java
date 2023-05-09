@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JobExecutionsRetryConfig {
     @JsonProperty("criteriaList")
     public RetryCriteria[] criteriaList;
+
     public JobExecutionsRetryConfig withCriteriaList(RetryCriteria[] criteriaList) {
         this.criteriaList = criteriaList;
         return this;
     }
     
+    public JobExecutionsRetryConfig(@JsonProperty("criteriaList") RetryCriteria[] criteriaList) {
+        this.criteriaList = criteriaList;
+  }
 }

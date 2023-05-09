@@ -70,4 +70,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleTypeMoney.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudBillingBudgetsV1ListBudgetsResponse.java
+docs/sdk/README.md
+docs/billingaccounts/README.md
 USAGE.md

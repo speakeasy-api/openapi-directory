@@ -60,12 +60,10 @@ public class RecurringPaymentsAPIEmailSubscriptionsFeature {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRecurringPaymentResponse res = new org.openapis.openapi.models.operations.DeleteRecurringPaymentResponse() {{
+        org.openapis.openapi.models.operations.DeleteRecurringPaymentResponse res = new org.openapis.openapi.models.operations.DeleteRecurringPaymentResponse(contentType, httpRes.statusCode()) {{
             deleteRecurringPayment200ApplicationJSONObject = null;
             deleteRecurringPayment404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -121,11 +119,9 @@ public class RecurringPaymentsAPIEmailSubscriptionsFeature {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetManyPlansResponse res = new org.openapis.openapi.models.operations.GetManyPlansResponse() {{
+        org.openapis.openapi.models.operations.GetManyPlansResponse res = new org.openapis.openapi.models.operations.GetManyPlansResponse(contentType, httpRes.statusCode()) {{
             getManyPlans200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,11 +172,9 @@ public class RecurringPaymentsAPIEmailSubscriptionsFeature {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetManyRecurringPaymentsResponse res = new org.openapis.openapi.models.operations.GetManyRecurringPaymentsResponse() {{
+        org.openapis.openapi.models.operations.GetManyRecurringPaymentsResponse res = new org.openapis.openapi.models.operations.GetManyRecurringPaymentsResponse(contentType, httpRes.statusCode()) {{
             getManyRecurringPayments200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -224,12 +218,10 @@ public class RecurringPaymentsAPIEmailSubscriptionsFeature {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOnePlanResponse res = new org.openapis.openapi.models.operations.GetOnePlanResponse() {{
+        org.openapis.openapi.models.operations.GetOnePlanResponse res = new org.openapis.openapi.models.operations.GetOnePlanResponse(contentType, httpRes.statusCode()) {{
             getOnePlan200ApplicationJSONObject = null;
             getOnePlan404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -287,12 +279,10 @@ public class RecurringPaymentsAPIEmailSubscriptionsFeature {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOneRecurringPaymentResponse res = new org.openapis.openapi.models.operations.GetOneRecurringPaymentResponse() {{
+        org.openapis.openapi.models.operations.GetOneRecurringPaymentResponse res = new org.openapis.openapi.models.operations.GetOneRecurringPaymentResponse(contentType, httpRes.statusCode()) {{
             getOneRecurringPayment200ApplicationJSONObject = null;
             getOneRecurringPayment404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -336,10 +326,8 @@ public class RecurringPaymentsAPIEmailSubscriptionsFeature {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePlanResponse res = new org.openapis.openapi.models.operations.UpdatePlanResponse() {{
+        org.openapis.openapi.models.operations.UpdatePlanResponse res = new org.openapis.openapi.models.operations.UpdatePlanResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

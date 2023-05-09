@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsListLabelsForSelfHostedRunnerForOrgResponse {
     
     public String contentType;
+
     public ActionsListLabelsForSelfHostedRunnerForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsListLabelsForSelfHostedRunnerForOrgResponse {
     
     
     public Integer statusCode;
+
     public ActionsListLabelsForSelfHostedRunnerForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsListLabelsForSelfHostedRunnerForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsListLabelsForSelfHostedRunnerForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ActionsListLabelsForSelfHostedRunnerForOrgResponse {
      */
     
     public ActionsListLabelsForSelfHostedRunnerForOrg200ApplicationJSON actionsListLabelsForSelfHostedRunnerForOrg200ApplicationJSONObject;
+
     public ActionsListLabelsForSelfHostedRunnerForOrgResponse withActionsListLabelsForSelfHostedRunnerForOrg200ApplicationJSONObject(ActionsListLabelsForSelfHostedRunnerForOrg200ApplicationJSON actionsListLabelsForSelfHostedRunnerForOrg200ApplicationJSONObject) {
         this.actionsListLabelsForSelfHostedRunnerForOrg200ApplicationJSONObject = actionsListLabelsForSelfHostedRunnerForOrg200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class ActionsListLabelsForSelfHostedRunnerForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ActionsListLabelsForSelfHostedRunnerForOrgResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
     }
     
+    public ActionsListLabelsForSelfHostedRunnerForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

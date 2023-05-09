@@ -66,6 +66,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/ExportLensRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExportLensResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAnswerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAnswerResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetConsolidatedReportFormatEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetConsolidatedReportRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetConsolidatedReportResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLensRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLensResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLensReviewRequest.java
@@ -168,6 +171,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/AdditionalResourceTypeEnum.
 lib/src/main/java/org/openapis/openapi/models/shared/ChoiceAnswer.java
 lib/src/main/java/org/openapis/openapi/models/shared/ChoiceStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ChoiceReasonEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/GetConsolidatedReportOutput.java
+lib/src/main/java/org/openapis/openapi/models/shared/ConsolidatedReportMetric.java
+lib/src/main/java/org/openapis/openapi/models/shared/MetricTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/LensMetric.java
+lib/src/main/java/org/openapis/openapi/models/shared/PillarMetric.java
+lib/src/main/java/org/openapis/openapi/models/shared/QuestionMetric.java
+lib/src/main/java/org/openapis/openapi/models/shared/BestPractice.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetLensOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Lens.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetLensReviewOutput.java
@@ -235,4 +245,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorkloadOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorkloadShareOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/WorkloadShare.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

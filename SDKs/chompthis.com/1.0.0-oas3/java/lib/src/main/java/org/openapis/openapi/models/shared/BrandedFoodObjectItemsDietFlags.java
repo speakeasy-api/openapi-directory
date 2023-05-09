@@ -18,6 +18,7 @@ public class BrandedFoodObjectItemsDietFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibility_description")
     public String compatibilityDescription;
+
     public BrandedFoodObjectItemsDietFlags withCompatibilityDescription(String compatibilityDescription) {
         this.compatibilityDescription = compatibilityDescription;
         return this;
@@ -29,6 +30,7 @@ public class BrandedFoodObjectItemsDietFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibility_level")
     public Long compatibilityLevel;
+
     public BrandedFoodObjectItemsDietFlags withCompatibilityLevel(Long compatibilityLevel) {
         this.compatibilityLevel = compatibilityLevel;
         return this;
@@ -40,6 +42,7 @@ public class BrandedFoodObjectItemsDietFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diet_label")
     public String dietLabel;
+
     public BrandedFoodObjectItemsDietFlags withDietLabel(String dietLabel) {
         this.dietLabel = dietLabel;
         return this;
@@ -51,6 +54,7 @@ public class BrandedFoodObjectItemsDietFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingredient")
     public String ingredient;
+
     public BrandedFoodObjectItemsDietFlags withIngredient(String ingredient) {
         this.ingredient = ingredient;
         return this;
@@ -62,6 +66,7 @@ public class BrandedFoodObjectItemsDietFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingredient_description")
     public String ingredientDescription;
+
     public BrandedFoodObjectItemsDietFlags withIngredientDescription(String ingredientDescription) {
         this.ingredientDescription = ingredientDescription;
         return this;
@@ -73,6 +78,7 @@ public class BrandedFoodObjectItemsDietFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_allergen")
     public Boolean isAllergen;
+
     public BrandedFoodObjectItemsDietFlags withIsAllergen(Boolean isAllergen) {
         this.isAllergen = isAllergen;
         return this;
@@ -84,9 +90,11 @@ public class BrandedFoodObjectItemsDietFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_compatible")
     public String isCompatible;
+
     public BrandedFoodObjectItemsDietFlags withIsCompatible(String isCompatible) {
         this.isCompatible = isCompatible;
         return this;
     }
     
+    public BrandedFoodObjectItemsDietFlags(){}
 }

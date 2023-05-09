@@ -15,9 +15,11 @@ public class TagQueryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagKey")
     public String tagKey;
+
     public TagQueryConfiguration withTagKey(String tagKey) {
         this.tagKey = tagKey;
         return this;
     }
     
+    public TagQueryConfiguration(){}
 }

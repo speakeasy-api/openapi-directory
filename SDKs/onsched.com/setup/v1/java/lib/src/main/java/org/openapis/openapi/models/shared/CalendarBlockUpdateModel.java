@@ -18,6 +18,7 @@ public class CalendarBlockUpdateModel {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public CalendarBlockUpdateModel withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -26,6 +27,7 @@ public class CalendarBlockUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public Integer endTime;
+
     public CalendarBlockUpdateModel withEndTime(Integer endTime) {
         this.endTime = endTime;
         return this;
@@ -34,6 +36,7 @@ public class CalendarBlockUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public CalendarBlockUpdateModel withReason(String reason) {
         this.reason = reason;
         return this;
@@ -42,6 +45,7 @@ public class CalendarBlockUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeat")
     public RepeatInputModel repeat;
+
     public CalendarBlockUpdateModel withRepeat(RepeatInputModel repeat) {
         this.repeat = repeat;
         return this;
@@ -50,6 +54,7 @@ public class CalendarBlockUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeats")
     public Boolean repeats;
+
     public CalendarBlockUpdateModel withRepeats(Boolean repeats) {
         this.repeats = repeats;
         return this;
@@ -59,6 +64,7 @@ public class CalendarBlockUpdateModel {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public CalendarBlockUpdateModel withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -67,9 +73,11 @@ public class CalendarBlockUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public Integer startTime;
+
     public CalendarBlockUpdateModel withStartTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public CalendarBlockUpdateModel(){}
 }

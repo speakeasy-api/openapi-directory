@@ -23,6 +23,7 @@ public class SandboxRetryCacheEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheKey")
     public String cacheKey;
+
     public SandboxRetryCacheEntry withCacheKey(String cacheKey) {
         this.cacheKey = cacheKey;
         return this;
@@ -34,6 +35,7 @@ public class SandboxRetryCacheEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public SandboxRetryCacheEntry withCount(Integer count) {
         this.count = count;
         return this;
@@ -47,9 +49,11 @@ public class SandboxRetryCacheEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationTimestamp")
     public OffsetDateTime expirationTimestamp;
+
     public SandboxRetryCacheEntry withExpirationTimestamp(OffsetDateTime expirationTimestamp) {
         this.expirationTimestamp = expirationTimestamp;
         return this;
     }
     
+    public SandboxRetryCacheEntry(){}
 }

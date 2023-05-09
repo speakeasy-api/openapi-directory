@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CoprgResponse {
     
     public String contentType;
+
     public CoprgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CoprgResponse {
     
     
     public Integer statusCode;
+
     public CoprgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CoprgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CoprgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CoprgResponse {
      */
     
     public Coprg400ApplicationJSON coprg400ApplicationJSONObject;
+
     public CoprgResponse withCoprg400ApplicationJSONObject(Coprg400ApplicationJSON coprg400ApplicationJSONObject) {
         this.coprg400ApplicationJSONObject = coprg400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CoprgResponse {
      */
     
     public Coprg401ApplicationJSON coprg401ApplicationJSONObject;
+
     public CoprgResponse withCoprg401ApplicationJSONObject(Coprg401ApplicationJSON coprg401ApplicationJSONObject) {
         this.coprg401ApplicationJSONObject = coprg401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CoprgResponse {
      */
     
     public Coprg404ApplicationJSON coprg404ApplicationJSONObject;
+
     public CoprgResponse withCoprg404ApplicationJSONObject(Coprg404ApplicationJSON coprg404ApplicationJSONObject) {
         this.coprg404ApplicationJSONObject = coprg404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CoprgResponse {
      */
     
     public Coprg500ApplicationJSON coprg500ApplicationJSONObject;
+
     public CoprgResponse withCoprg500ApplicationJSONObject(Coprg500ApplicationJSON coprg500ApplicationJSONObject) {
         this.coprg500ApplicationJSONObject = coprg500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CoprgResponse {
      */
     
     public Coprg502ApplicationJSON coprg502ApplicationJSONObject;
+
     public CoprgResponse withCoprg502ApplicationJSONObject(Coprg502ApplicationJSON coprg502ApplicationJSONObject) {
         this.coprg502ApplicationJSONObject = coprg502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class CoprgResponse {
      */
     
     public Coprg503ApplicationJSON coprg503ApplicationJSONObject;
+
     public CoprgResponse withCoprg503ApplicationJSONObject(Coprg503ApplicationJSON coprg503ApplicationJSONObject) {
         this.coprg503ApplicationJSONObject = coprg503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class CoprgResponse {
      */
     
     public Coprg504ApplicationJSON coprg504ApplicationJSONObject;
+
     public CoprgResponse withCoprg504ApplicationJSONObject(Coprg504ApplicationJSON coprg504ApplicationJSONObject) {
         this.coprg504ApplicationJSONObject = coprg504ApplicationJSONObject;
         return this;
     }
     
+    public CoprgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

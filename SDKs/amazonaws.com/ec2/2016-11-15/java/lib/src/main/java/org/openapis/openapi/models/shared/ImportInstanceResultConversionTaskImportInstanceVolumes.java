@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportInstanceResultConversionTaskImportInstanceVolumes {
     
     public String availabilityZone;
+
     public ImportInstanceResultConversionTaskImportInstanceVolumes withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class ImportInstanceResultConversionTaskImportInstanceVolumes {
     
     
     public Long bytesConverted;
+
     public ImportInstanceResultConversionTaskImportInstanceVolumes withBytesConverted(Long bytesConverted) {
         this.bytesConverted = bytesConverted;
         return this;
@@ -26,6 +28,7 @@ public class ImportInstanceResultConversionTaskImportInstanceVolumes {
     
     
     public String description;
+
     public ImportInstanceResultConversionTaskImportInstanceVolumes withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class ImportInstanceResultConversionTaskImportInstanceVolumes {
     
     
     public ImportInstanceResultConversionTaskImportInstanceVolumesImage image;
+
     public ImportInstanceResultConversionTaskImportInstanceVolumes withImage(ImportInstanceResultConversionTaskImportInstanceVolumesImage image) {
         this.image = image;
         return this;
@@ -40,6 +44,7 @@ public class ImportInstanceResultConversionTaskImportInstanceVolumes {
     
     
     public String status;
+
     public ImportInstanceResultConversionTaskImportInstanceVolumes withStatus(String status) {
         this.status = status;
         return this;
@@ -47,6 +52,7 @@ public class ImportInstanceResultConversionTaskImportInstanceVolumes {
     
     
     public String statusMessage;
+
     public ImportInstanceResultConversionTaskImportInstanceVolumes withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -54,9 +60,11 @@ public class ImportInstanceResultConversionTaskImportInstanceVolumes {
     
     
     public ImportInstanceResultConversionTaskImportInstanceVolumesVolume volume;
+
     public ImportInstanceResultConversionTaskImportInstanceVolumes withVolume(ImportInstanceResultConversionTaskImportInstanceVolumesVolume volume) {
         this.volume = volume;
         return this;
     }
     
+    public ImportInstanceResultConversionTaskImportInstanceVolumes(){}
 }

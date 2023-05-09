@@ -15,6 +15,7 @@ public class BlueGreenUpdatePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumExecutionTimeoutInSeconds")
     public Long maximumExecutionTimeoutInSeconds;
+
     public BlueGreenUpdatePolicy withMaximumExecutionTimeoutInSeconds(Long maximumExecutionTimeoutInSeconds) {
         this.maximumExecutionTimeoutInSeconds = maximumExecutionTimeoutInSeconds;
         return this;
@@ -23,6 +24,7 @@ public class BlueGreenUpdatePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminationWaitInSeconds")
     public Long terminationWaitInSeconds;
+
     public BlueGreenUpdatePolicy withTerminationWaitInSeconds(Long terminationWaitInSeconds) {
         this.terminationWaitInSeconds = terminationWaitInSeconds;
         return this;
@@ -30,9 +32,13 @@ public class BlueGreenUpdatePolicy {
     
     @JsonProperty("TrafficRoutingConfiguration")
     public TrafficRoutingConfig trafficRoutingConfiguration;
+
     public BlueGreenUpdatePolicy withTrafficRoutingConfiguration(TrafficRoutingConfig trafficRoutingConfiguration) {
         this.trafficRoutingConfiguration = trafficRoutingConfiguration;
         return this;
     }
     
+    public BlueGreenUpdatePolicy(@JsonProperty("TrafficRoutingConfiguration") TrafficRoutingConfig trafficRoutingConfiguration) {
+        this.trafficRoutingConfiguration = trafficRoutingConfiguration;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1CpuTemperatureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public GoogleChromeManagementV1CpuTemperatureInfo withLabel(String label) {
         this.label = label;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromeManagementV1CpuTemperatureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperatureCelsius")
     public Integer temperatureCelsius;
+
     public GoogleChromeManagementV1CpuTemperatureInfo withTemperatureCelsius(Integer temperatureCelsius) {
         this.temperatureCelsius = temperatureCelsius;
         return this;
     }
     
+    public GoogleChromeManagementV1CpuTemperatureInfo(){}
 }

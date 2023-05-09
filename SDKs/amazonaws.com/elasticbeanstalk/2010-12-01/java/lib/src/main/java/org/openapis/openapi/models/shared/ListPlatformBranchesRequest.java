@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListPlatformBranchesRequest {
     
     public SearchFilter[] filters;
+
     public ListPlatformBranchesRequest withFilters(SearchFilter[] filters) {
         this.filters = filters;
         return this;
@@ -16,6 +17,7 @@ public class ListPlatformBranchesRequest {
     
     
     public Long maxRecords;
+
     public ListPlatformBranchesRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -23,9 +25,11 @@ public class ListPlatformBranchesRequest {
     
     
     public String nextToken;
+
     public ListPlatformBranchesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListPlatformBranchesRequest(){}
 }

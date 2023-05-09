@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class KinesisFirehoseDestinationDetails {
     
     public String deliveryStream;
+
     public KinesisFirehoseDestinationDetails withDeliveryStream(String deliveryStream) {
         this.deliveryStream = deliveryStream;
         return this;
     }
     
+    public KinesisFirehoseDestinationDetails(){}
 }

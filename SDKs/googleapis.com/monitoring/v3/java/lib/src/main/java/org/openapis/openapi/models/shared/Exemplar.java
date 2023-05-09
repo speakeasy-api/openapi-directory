@@ -18,6 +18,7 @@ public class Exemplar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public java.util.Map<String, Object>[] attachments;
+
     public Exemplar withAttachments(java.util.Map<String, Object>[] attachments) {
         this.attachments = attachments;
         return this;
@@ -29,6 +30,7 @@ public class Exemplar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public Exemplar withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -40,9 +42,11 @@ public class Exemplar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public Exemplar withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public Exemplar(){}
 }

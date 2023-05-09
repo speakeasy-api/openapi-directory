@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFirewallPolicyResponse {
     
     public String contentType;
+
     public CreateFirewallPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateFirewallPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFirewallPolicyResponse createFirewallPolicyResponse;
+
     public CreateFirewallPolicyResponse withCreateFirewallPolicyResponse(org.openapis.openapi.models.shared.CreateFirewallPolicyResponse createFirewallPolicyResponse) {
         this.createFirewallPolicyResponse = createFirewallPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateFirewallPolicyResponse {
      */
     
     public Object insufficientCapacityException;
+
     public CreateFirewallPolicyResponse withInsufficientCapacityException(Object insufficientCapacityException) {
         this.insufficientCapacityException = insufficientCapacityException;
         return this;
@@ -39,6 +43,7 @@ public class CreateFirewallPolicyResponse {
      */
     
     public Object internalServerError;
+
     public CreateFirewallPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class CreateFirewallPolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateFirewallPolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class CreateFirewallPolicyResponse {
      */
     
     public Object limitExceededException;
+
     public CreateFirewallPolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateFirewallPolicyResponse {
     
     
     public Integer statusCode;
+
     public CreateFirewallPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateFirewallPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFirewallPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateFirewallPolicyResponse {
      */
     
     public Object throttlingException;
+
     public CreateFirewallPolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateFirewallPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

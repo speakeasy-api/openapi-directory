@@ -18,6 +18,7 @@ public class HtmlAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("background")
     public String background;
+
     public HtmlAsset withBackground(String background) {
         this.background = background;
         return this;
@@ -29,6 +30,7 @@ public class HtmlAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("css")
     public String css;
+
     public HtmlAsset withCss(String css) {
         this.css = css;
         return this;
@@ -40,6 +42,7 @@ public class HtmlAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Long height;
+
     public HtmlAsset withHeight(Long height) {
         this.height = height;
         return this;
@@ -50,6 +53,7 @@ public class HtmlAsset {
      */
     @JsonProperty("html")
     public String html;
+
     public HtmlAsset withHtml(String html) {
         this.html = html;
         return this;
@@ -71,6 +75,7 @@ public class HtmlAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public HtmlAssetPositionEnum position;
+
     public HtmlAsset withPosition(HtmlAssetPositionEnum position) {
         this.position = position;
         return this;
@@ -81,6 +86,7 @@ public class HtmlAsset {
      */
     @JsonProperty("type")
     public String type;
+
     public HtmlAsset withType(String type) {
         this.type = type;
         return this;
@@ -92,9 +98,14 @@ public class HtmlAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Long width;
+
     public HtmlAsset withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public HtmlAsset(@JsonProperty("html") String html, @JsonProperty("type") String type) {
+        this.html = html;
+        this.type = type;
+  }
 }

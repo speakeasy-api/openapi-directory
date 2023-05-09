@@ -15,6 +15,7 @@ public class CreateJobRequestBodySchedulingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endBehavior")
     public org.openapis.openapi.models.shared.JobEndBehaviorEnum endBehavior;
+
     public CreateJobRequestBodySchedulingConfig withEndBehavior(org.openapis.openapi.models.shared.JobEndBehaviorEnum endBehavior) {
         this.endBehavior = endBehavior;
         return this;
@@ -23,6 +24,7 @@ public class CreateJobRequestBodySchedulingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public CreateJobRequestBodySchedulingConfig withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -31,6 +33,7 @@ public class CreateJobRequestBodySchedulingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenanceWindows")
     public org.openapis.openapi.models.shared.MaintenanceWindow[] maintenanceWindows;
+
     public CreateJobRequestBodySchedulingConfig withMaintenanceWindows(org.openapis.openapi.models.shared.MaintenanceWindow[] maintenanceWindows) {
         this.maintenanceWindows = maintenanceWindows;
         return this;
@@ -39,9 +42,11 @@ public class CreateJobRequestBodySchedulingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public CreateJobRequestBodySchedulingConfig withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public CreateJobRequestBodySchedulingConfig(){}
 }

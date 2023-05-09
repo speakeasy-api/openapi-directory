@@ -12,6 +12,7 @@ public class DomainsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public DomainsCountRequest withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,11 @@ public class DomainsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public DomainsCountTypeEnum type;
+
     public DomainsCountRequest withType(DomainsCountTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DomainsCountRequest(){}
 }

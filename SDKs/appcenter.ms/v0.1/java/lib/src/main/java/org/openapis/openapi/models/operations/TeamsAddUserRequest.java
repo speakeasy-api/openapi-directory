@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddUserRequest {
@@ -12,6 +13,7 @@ public class TeamsAddUserRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public TeamsAddUserRequestBody requestBody;
+
     public TeamsAddUserRequest withRequestBody(TeamsAddUserRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class TeamsAddUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
     public String orgName;
+
     public TeamsAddUserRequest withOrgName(String orgName) {
         this.orgName = orgName;
         return this;
@@ -32,9 +35,15 @@ public class TeamsAddUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_name")
     public String teamName;
+
     public TeamsAddUserRequest withTeamName(String teamName) {
         this.teamName = teamName;
         return this;
     }
     
+    public TeamsAddUserRequest(@JsonProperty("RequestBody") TeamsAddUserRequestBody requestBody, @JsonProperty("org_name") String orgName, @JsonProperty("team_name") String teamName) {
+        this.requestBody = requestBody;
+        this.orgName = orgName;
+        this.teamName = teamName;
+  }
 }

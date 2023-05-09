@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CreateIpamResourceDiscoveryRequest {
     
     public String clientToken;
+
     public CreateIpamResourceDiscoveryRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateIpamResourceDiscoveryRequest {
     
     
     public String description;
+
     public CreateIpamResourceDiscoveryRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateIpamResourceDiscoveryRequest {
     
     
     public Boolean dryRun;
+
     public CreateIpamResourceDiscoveryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateIpamResourceDiscoveryRequest {
     
     
     public AddIpamOperatingRegion[] operatingRegions;
+
     public CreateIpamResourceDiscoveryRequest withOperatingRegions(AddIpamOperatingRegion[] operatingRegions) {
         this.operatingRegions = operatingRegions;
         return this;
@@ -37,9 +41,11 @@ public class CreateIpamResourceDiscoveryRequest {
     
     
     public CreateIpamResourceDiscoveryRequestTagSpecifications[] tagSpecifications;
+
     public CreateIpamResourceDiscoveryRequest withTagSpecifications(CreateIpamResourceDiscoveryRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateIpamResourceDiscoveryRequest(){}
 }

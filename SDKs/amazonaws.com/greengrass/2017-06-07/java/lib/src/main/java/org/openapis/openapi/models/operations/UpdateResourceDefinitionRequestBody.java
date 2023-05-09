@@ -15,9 +15,11 @@ public class UpdateResourceDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateResourceDefinitionRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateResourceDefinitionRequestBody(){}
 }

@@ -12,9 +12,11 @@ public class AccountArticleReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
     public Long groupId;
+
     public AccountArticleReportRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public AccountArticleReportRequest(){}
 }

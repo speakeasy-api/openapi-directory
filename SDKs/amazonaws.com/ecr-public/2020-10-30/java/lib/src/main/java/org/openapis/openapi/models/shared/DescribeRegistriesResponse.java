@@ -15,6 +15,7 @@ public class DescribeRegistriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeRegistriesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class DescribeRegistriesResponse {
     
     @JsonProperty("registries")
     public Registry[] registries;
+
     public DescribeRegistriesResponse withRegistries(Registry[] registries) {
         this.registries = registries;
         return this;
     }
     
+    public DescribeRegistriesResponse(@JsonProperty("registries") Registry[] registries) {
+        this.registries = registries;
+  }
 }

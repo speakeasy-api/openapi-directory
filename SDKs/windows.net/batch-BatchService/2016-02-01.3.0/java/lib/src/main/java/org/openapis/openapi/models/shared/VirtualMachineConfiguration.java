@@ -17,6 +17,7 @@ public class VirtualMachineConfiguration {
      */
     @JsonProperty("imageReference")
     public ImageReference imageReference;
+
     public VirtualMachineConfiguration withImageReference(ImageReference imageReference) {
         this.imageReference = imageReference;
         return this;
@@ -27,6 +28,7 @@ public class VirtualMachineConfiguration {
      */
     @JsonProperty("nodeAgentSKUId")
     public String nodeAgentSKUId;
+
     public VirtualMachineConfiguration withNodeAgentSKUId(String nodeAgentSKUId) {
         this.nodeAgentSKUId = nodeAgentSKUId;
         return this;
@@ -38,9 +40,14 @@ public class VirtualMachineConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowsConfiguration")
     public WindowsConfiguration windowsConfiguration;
+
     public VirtualMachineConfiguration withWindowsConfiguration(WindowsConfiguration windowsConfiguration) {
         this.windowsConfiguration = windowsConfiguration;
         return this;
     }
     
+    public VirtualMachineConfiguration(@JsonProperty("imageReference") ImageReference imageReference, @JsonProperty("nodeAgentSKUId") String nodeAgentSKUId) {
+        this.imageReference = imageReference;
+        this.nodeAgentSKUId = nodeAgentSKUId;
+  }
 }

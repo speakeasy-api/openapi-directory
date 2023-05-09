@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberAdditionalDataExtRequest {
@@ -12,6 +13,7 @@ public class GetSearchVersionNumberAdditionalDataExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
     public GetSearchVersionNumberAdditionalDataExtExtEnum ext;
+
     public GetSearchVersionNumberAdditionalDataExtRequest withExt(GetSearchVersionNumberAdditionalDataExtExtEnum ext) {
         this.ext = ext;
         return this;
@@ -22,6 +24,7 @@ public class GetSearchVersionNumberAdditionalDataExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geometries")
     public String geometries;
+
     public GetSearchVersionNumberAdditionalDataExtRequest withGeometries(String geometries) {
         this.geometries = geometries;
         return this;
@@ -32,6 +35,7 @@ public class GetSearchVersionNumberAdditionalDataExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geometriesZoom")
     public GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum geometriesZoom;
+
     public GetSearchVersionNumberAdditionalDataExtRequest withGeometriesZoom(GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum geometriesZoom) {
         this.geometriesZoom = geometriesZoom;
         return this;
@@ -42,9 +46,15 @@ public class GetSearchVersionNumberAdditionalDataExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+
     public GetSearchVersionNumberAdditionalDataExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public GetSearchVersionNumberAdditionalDataExtRequest(@JsonProperty("ext") GetSearchVersionNumberAdditionalDataExtExtEnum ext, @JsonProperty("geometries") String geometries, @JsonProperty("versionNumber") org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.ext = ext;
+        this.geometries = geometries;
+        this.versionNumber = versionNumber;
+  }
 }

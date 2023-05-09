@@ -12,6 +12,7 @@ public class TransferInstrumentReference {
      */
     @JsonProperty("accountIdentifier")
     public String accountIdentifier;
+
     public TransferInstrumentReference withAccountIdentifier(String accountIdentifier) {
         this.accountIdentifier = accountIdentifier;
         return this;
@@ -22,9 +23,14 @@ public class TransferInstrumentReference {
      */
     @JsonProperty("id")
     public String id;
+
     public TransferInstrumentReference withId(String id) {
         this.id = id;
         return this;
     }
     
+    public TransferInstrumentReference(@JsonProperty("accountIdentifier") String accountIdentifier, @JsonProperty("id") String id) {
+        this.accountIdentifier = accountIdentifier;
+        this.id = id;
+  }
 }

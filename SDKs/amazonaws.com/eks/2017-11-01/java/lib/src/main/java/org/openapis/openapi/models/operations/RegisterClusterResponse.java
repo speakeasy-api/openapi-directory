@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterClusterResponse {
@@ -12,6 +13,7 @@ public class RegisterClusterResponse {
      */
     
     public Object accessDeniedException;
+
     public RegisterClusterResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RegisterClusterResponse {
      */
     
     public Object clientException;
+
     public RegisterClusterResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterClusterResponse {
     
     
     public String contentType;
+
     public RegisterClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RegisterClusterResponse {
      */
     
     public Object invalidParameterException;
+
     public RegisterClusterResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterClusterResponse registerClusterResponse;
+
     public RegisterClusterResponse withRegisterClusterResponse(org.openapis.openapi.models.shared.RegisterClusterResponse registerClusterResponse) {
         this.registerClusterResponse = registerClusterResponse;
         return this;
@@ -59,6 +65,7 @@ public class RegisterClusterResponse {
      */
     
     public Object resourceInUseException;
+
     public RegisterClusterResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class RegisterClusterResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public RegisterClusterResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class RegisterClusterResponse {
      */
     
     public Object resourcePropagationDelayException;
+
     public RegisterClusterResponse withResourcePropagationDelayException(Object resourcePropagationDelayException) {
         this.resourcePropagationDelayException = resourcePropagationDelayException;
         return this;
@@ -89,6 +98,7 @@ public class RegisterClusterResponse {
      */
     
     public Object serverException;
+
     public RegisterClusterResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -99,6 +109,7 @@ public class RegisterClusterResponse {
      */
     
     public Object serviceUnavailableException;
+
     public RegisterClusterResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -106,6 +117,7 @@ public class RegisterClusterResponse {
     
     
     public Integer statusCode;
+
     public RegisterClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class RegisterClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegisterClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class NormalizedCoordinate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public Double x;
+
     public NormalizedCoordinate withX(Double x) {
         this.x = x;
         return this;
@@ -29,9 +30,11 @@ public class NormalizedCoordinate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Double y;
+
     public NormalizedCoordinate withY(Double y) {
         this.y = y;
         return this;
     }
     
+    public NormalizedCoordinate(){}
 }

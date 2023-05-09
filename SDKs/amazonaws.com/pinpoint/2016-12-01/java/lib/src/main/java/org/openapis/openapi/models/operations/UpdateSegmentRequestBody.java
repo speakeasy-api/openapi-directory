@@ -12,9 +12,13 @@ public class UpdateSegmentRequestBody {
      */
     @JsonProperty("WriteSegmentRequest")
     public UpdateSegmentRequestBodyWriteSegmentRequest writeSegmentRequest;
+
     public UpdateSegmentRequestBody withWriteSegmentRequest(UpdateSegmentRequestBodyWriteSegmentRequest writeSegmentRequest) {
         this.writeSegmentRequest = writeSegmentRequest;
         return this;
     }
     
+    public UpdateSegmentRequestBody(@JsonProperty("WriteSegmentRequest") UpdateSegmentRequestBodyWriteSegmentRequest writeSegmentRequest) {
+        this.writeSegmentRequest = writeSegmentRequest;
+  }
 }

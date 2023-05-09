@@ -15,6 +15,7 @@ public class ChildBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public ChildBlock withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -23,6 +24,7 @@ public class ChildBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChildBlockId")
     public String childBlockId;
+
     public ChildBlock withChildBlockId(String childBlockId) {
         this.childBlockId = childBlockId;
         return this;
@@ -31,9 +33,11 @@ public class ChildBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public ChildBlock withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
     }
     
+    public ChildBlock(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteInsightResponse {
     
     public String contentType;
+
     public DeleteInsightResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteInsightResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteInsightResponse deleteInsightResponse;
+
     public DeleteInsightResponse withDeleteInsightResponse(org.openapis.openapi.models.shared.DeleteInsightResponse deleteInsightResponse) {
         this.deleteInsightResponse = deleteInsightResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteInsightResponse {
      */
     
     public Object internalException;
+
     public DeleteInsightResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteInsightResponse {
      */
     
     public Object invalidAccessException;
+
     public DeleteInsightResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteInsightResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteInsightResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteInsightResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteInsightResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteInsightResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteInsightResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteInsightResponse {
     
     
     public Integer statusCode;
+
     public DeleteInsightResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteInsightResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteInsightResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteInsightResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

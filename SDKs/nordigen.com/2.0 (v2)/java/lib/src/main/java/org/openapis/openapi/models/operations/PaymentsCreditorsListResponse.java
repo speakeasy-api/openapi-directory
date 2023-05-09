@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PaymentsCreditorsListResponse {
     
     public String contentType;
+
     public PaymentsCreditorsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PaymentsCreditorsListResponse {
     
     
     public org.openapis.openapi.models.shared.PaginatedCreditorAccountList paginatedCreditorAccountList;
+
     public PaymentsCreditorsListResponse withPaginatedCreditorAccountList(org.openapis.openapi.models.shared.PaginatedCreditorAccountList paginatedCreditorAccountList) {
         this.paginatedCreditorAccountList = paginatedCreditorAccountList;
         return this;
@@ -23,6 +26,7 @@ public class PaymentsCreditorsListResponse {
     
     
     public Integer statusCode;
+
     public PaymentsCreditorsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class PaymentsCreditorsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PaymentsCreditorsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PaymentsCreditorsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

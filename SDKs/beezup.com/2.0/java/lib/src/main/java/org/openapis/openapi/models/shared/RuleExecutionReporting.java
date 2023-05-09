@@ -20,6 +20,7 @@ public class RuleExecutionReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeAffectedProductCount")
     public Long activeAffectedProductCount;
+
     public RuleExecutionReporting withActiveAffectedProductCount(Long activeAffectedProductCount) {
         this.activeAffectedProductCount = activeAffectedProductCount;
         return this;
@@ -31,6 +32,7 @@ public class RuleExecutionReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affectedChannelCount")
     public Long affectedChannelCount;
+
     public RuleExecutionReporting withAffectedChannelCount(Long affectedChannelCount) {
         this.affectedChannelCount = affectedChannelCount;
         return this;
@@ -42,6 +44,7 @@ public class RuleExecutionReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affectedProductCount")
     public Long affectedProductCount;
+
     public RuleExecutionReporting withAffectedProductCount(Long affectedProductCount) {
         this.affectedProductCount = affectedProductCount;
         return this;
@@ -55,6 +58,7 @@ public class RuleExecutionReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completedUtcDate")
     public OffsetDateTime completedUtcDate;
+
     public RuleExecutionReporting withCompletedUtcDate(OffsetDateTime completedUtcDate) {
         this.completedUtcDate = completedUtcDate;
         return this;
@@ -66,6 +70,7 @@ public class RuleExecutionReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorType")
     public RuleExecutionReportingErrorTypeEnum errorType;
+
     public RuleExecutionReporting withErrorType(RuleExecutionReportingErrorTypeEnum errorType) {
         this.errorType = errorType;
         return this;
@@ -76,6 +81,7 @@ public class RuleExecutionReporting {
      */
     @JsonProperty("executionSource")
     public RuleExecutionReportingExecutionSourceEnum executionSource;
+
     public RuleExecutionReporting withExecutionSource(RuleExecutionReportingExecutionSourceEnum executionSource) {
         this.executionSource = executionSource;
         return this;
@@ -87,6 +93,7 @@ public class RuleExecutionReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public RuleExecutionReportingLinks links;
+
     public RuleExecutionReporting withLinks(RuleExecutionReportingLinks links) {
         this.links = links;
         return this;
@@ -98,6 +105,7 @@ public class RuleExecutionReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimisationActionName")
     public OptimisationActionNameEnum optimisationActionName;
+
     public RuleExecutionReporting withOptimisationActionName(OptimisationActionNameEnum optimisationActionName) {
         this.optimisationActionName = optimisationActionName;
         return this;
@@ -109,6 +117,7 @@ public class RuleExecutionReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportUrl")
     public String reportUrl;
+
     public RuleExecutionReporting withReportUrl(String reportUrl) {
         this.reportUrl = reportUrl;
         return this;
@@ -119,6 +128,7 @@ public class RuleExecutionReporting {
      */
     @JsonProperty("ruleId")
     public String ruleId;
+
     public RuleExecutionReporting withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
@@ -129,6 +139,7 @@ public class RuleExecutionReporting {
      */
     @JsonProperty("ruleName")
     public String ruleName;
+
     public RuleExecutionReporting withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -142,6 +153,7 @@ public class RuleExecutionReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedUtcDate")
     public OffsetDateTime startedUtcDate;
+
     public RuleExecutionReporting withStartedUtcDate(OffsetDateTime startedUtcDate) {
         this.startedUtcDate = startedUtcDate;
         return this;
@@ -152,6 +164,7 @@ public class RuleExecutionReporting {
      */
     @JsonProperty("status")
     public RuleExecutionReportingStatusEnum status;
+
     public RuleExecutionReporting withStatus(RuleExecutionReportingStatusEnum status) {
         this.status = status;
         return this;
@@ -163,9 +176,16 @@ public class RuleExecutionReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public RuleExecutionReporting withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public RuleExecutionReporting(@JsonProperty("executionSource") RuleExecutionReportingExecutionSourceEnum executionSource, @JsonProperty("ruleId") String ruleId, @JsonProperty("ruleName") String ruleName, @JsonProperty("status") RuleExecutionReportingStatusEnum status) {
+        this.executionSource = executionSource;
+        this.ruleId = ruleId;
+        this.ruleName = ruleName;
+        this.status = status;
+  }
 }

@@ -16,64 +16,60 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateTokenRequestBody;
 import org.openapis.openapi.models.operations.CreateTokenRequest;
+import org.openapis.openapi.models.operations.CreateTokenRequestBody;
 import org.openapis.openapi.models.operations.CreateTokenResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateTokenRequest req = new CreateTokenRequest() {{
-                requestBody = new CreateTokenRequestBody() {{
-                    clientId = "corrupti";
-                    clientSecret = "provident";
-                    code = "distinctio";
-                    deviceCode = "quibusdam";
-                    grantType = "unde";
-                    redirectUri = "nulla";
-                    refreshToken = "corrupti";
-                    scope = new String[]{{
-                        add("vel"),
-                        add("error"),
-                        add("deserunt"),
-                        add("suscipit"),
-                    }};
-                }};
-                xAmzAlgorithm = "iure";
-                xAmzContentSha256 = "magnam";
-                xAmzCredential = "debitis";
-                xAmzDate = "ipsa";
-                xAmzSecurityToken = "delectus";
-                xAmzSignature = "tempora";
-                xAmzSignedHeaders = "suscipit";
-            }}            
+            CreateTokenRequest req = new CreateTokenRequest(                new CreateTokenRequestBody("provident", "distinctio", "quibusdam") {{
+                                code = "unde";
+                                deviceCode = "nulla";
+                                redirectUri = "corrupti";
+                                refreshToken = "illum";
+                                scope = new String[]{{
+                                    add("error"),
+                                    add("deserunt"),
+                                }};
+                            }};) {{
+                xAmzAlgorithm = "suscipit";
+                xAmzContentSha256 = "iure";
+                xAmzCredential = "magnam";
+                xAmzDate = "debitis";
+                xAmzSecurityToken = "ipsa";
+                xAmzSignature = "delectus";
+                xAmzSignedHeaders = "tempora";
+            }};            
 
             CreateTokenResponse res = sdk.createToken(req);
 
-            if (res.createTokenResponse.isPresent()) {
+            if (res.createTokenResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createToken` - Creates and returns an access token for the authorized client. The access token issued will be used to fetch short-term credentials for the assigned roles in the AWS account.
-* `registerClient` - Registers a client with IAM Identity Center. This allows clients to initiate device authorization. The output should be persisted for reuse through many authentication requests.
-* `startDeviceAuthorization` - Initiates device authorization by requesting a pair of verification codes from the authorization service.
+* [createToken](docs/sdk/README.md#createtoken) - Creates and returns an access token for the authorized client. The access token issued will be used to fetch short-term credentials for the assigned roles in the AWS account.
+* [registerClient](docs/sdk/README.md#registerclient) - Registers a client with IAM Identity Center. This allows clients to initiate device authorization. The output should be persisted for reuse through many authentication requests.
+* [startDeviceAuthorization](docs/sdk/README.md#startdeviceauthorization) - Initiates device authorization by requesting a pair of verification codes from the authorization service.
 <!-- End SDK Available Operations -->
 
 ### Maturity

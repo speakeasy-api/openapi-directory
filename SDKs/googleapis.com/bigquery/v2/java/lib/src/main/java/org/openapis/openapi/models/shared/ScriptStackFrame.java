@@ -15,6 +15,7 @@ public class ScriptStackFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endColumn")
     public Integer endColumn;
+
     public ScriptStackFrame withEndColumn(Integer endColumn) {
         this.endColumn = endColumn;
         return this;
@@ -26,6 +27,7 @@ public class ScriptStackFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endLine")
     public Integer endLine;
+
     public ScriptStackFrame withEndLine(Integer endLine) {
         this.endLine = endLine;
         return this;
@@ -37,6 +39,7 @@ public class ScriptStackFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("procedureId")
     public String procedureId;
+
     public ScriptStackFrame withProcedureId(String procedureId) {
         this.procedureId = procedureId;
         return this;
@@ -48,6 +51,7 @@ public class ScriptStackFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startColumn")
     public Integer startColumn;
+
     public ScriptStackFrame withStartColumn(Integer startColumn) {
         this.startColumn = startColumn;
         return this;
@@ -59,6 +63,7 @@ public class ScriptStackFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startLine")
     public Integer startLine;
+
     public ScriptStackFrame withStartLine(Integer startLine) {
         this.startLine = startLine;
         return this;
@@ -70,9 +75,11 @@ public class ScriptStackFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public ScriptStackFrame withText(String text) {
         this.text = text;
         return this;
     }
     
+    public ScriptStackFrame(){}
 }

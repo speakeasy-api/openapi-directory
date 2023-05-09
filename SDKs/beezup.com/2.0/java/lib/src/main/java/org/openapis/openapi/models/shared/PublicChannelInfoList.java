@@ -15,6 +15,7 @@ public class PublicChannelInfoList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channels")
     public PublicChannelInfo[] channels;
+
     public PublicChannelInfoList withChannels(PublicChannelInfo[] channels) {
         this.channels = channels;
         return this;
@@ -23,9 +24,11 @@ public class PublicChannelInfoList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public PublicChannelInfoListLinks links;
+
     public PublicChannelInfoList withLinks(PublicChannelInfoListLinks links) {
         this.links = links;
         return this;
     }
     
+    public PublicChannelInfoList(){}
 }

@@ -36,10 +36,11 @@ public class Utility {
     /**
      * List License Types
      * Return a list of all License Types supported by the service
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LicenseTypesResponse licenseTypes() throws Exception {
+    public org.openapis.openapi.models.operations.LicenseTypesResponse licenseTypes(org.openapis.openapi.models.operations.LicenseTypesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/utility/licenseTypes");
         
@@ -48,17 +49,16 @@ public class Utility {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicenseTypesResponse res = new org.openapis.openapi.models.operations.LicenseTypesResponse() {{
+        org.openapis.openapi.models.operations.LicenseTypesResponse res = new org.openapis.openapi.models.operations.LicenseTypesResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -81,10 +81,11 @@ public class Utility {
     /**
      * List Licensing Models
      * Return a list of all licensing models supported by the service
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LicensingModelsResponse licensingModels() throws Exception {
+    public org.openapis.openapi.models.operations.LicensingModelsResponse licensingModels(org.openapis.openapi.models.operations.LicensingModelsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/utility/licensingModels");
         
@@ -93,17 +94,16 @@ public class Utility {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicensingModelsResponse res = new org.openapis.openapi.models.operations.LicensingModelsResponse() {{
+        org.openapis.openapi.models.operations.LicensingModelsResponse res = new org.openapis.openapi.models.operations.LicensingModelsResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

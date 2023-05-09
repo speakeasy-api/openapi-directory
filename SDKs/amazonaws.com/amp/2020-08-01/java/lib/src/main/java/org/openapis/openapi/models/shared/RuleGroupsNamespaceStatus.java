@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RuleGroupsNamespaceStatus {
     @JsonProperty("statusCode")
     public RuleGroupsNamespaceStatusCodeEnum statusCode;
+
     public RuleGroupsNamespaceStatus withStatusCode(RuleGroupsNamespaceStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -22,9 +23,13 @@ public class RuleGroupsNamespaceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public RuleGroupsNamespaceStatus withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public RuleGroupsNamespaceStatus(@JsonProperty("statusCode") RuleGroupsNamespaceStatusCodeEnum statusCode) {
+        this.statusCode = statusCode;
+  }
 }

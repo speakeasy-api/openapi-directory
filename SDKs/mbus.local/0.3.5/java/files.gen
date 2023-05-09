@@ -41,4 +41,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/ScanRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ScanResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/BaudrateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Hat.java
+docs/sdk/README.md
 USAGE.md

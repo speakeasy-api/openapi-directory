@@ -12,9 +12,11 @@ public class ConferenceSPRatingSpecialTeams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     public Double rating;
+
     public ConferenceSPRatingSpecialTeams withRating(Double rating) {
         this.rating = rating;
         return this;
     }
     
+    public ConferenceSPRatingSpecialTeams(){}
 }

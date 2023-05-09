@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListTypesInput {
     
     public DeprecatedStatusEnum deprecatedStatus;
+
     public ListTypesInput withDeprecatedStatus(DeprecatedStatusEnum deprecatedStatus) {
         this.deprecatedStatus = deprecatedStatus;
         return this;
@@ -16,6 +17,7 @@ public class ListTypesInput {
     
     
     public TypeFilters filters;
+
     public ListTypesInput withFilters(TypeFilters filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class ListTypesInput {
     
     
     public Long maxResults;
+
     public ListTypesInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class ListTypesInput {
     
     
     public String nextToken;
+
     public ListTypesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,6 +41,7 @@ public class ListTypesInput {
     
     
     public ProvisioningTypeEnum provisioningType;
+
     public ListTypesInput withProvisioningType(ProvisioningTypeEnum provisioningType) {
         this.provisioningType = provisioningType;
         return this;
@@ -44,6 +49,7 @@ public class ListTypesInput {
     
     
     public RegistryTypeEnum type;
+
     public ListTypesInput withType(RegistryTypeEnum type) {
         this.type = type;
         return this;
@@ -51,9 +57,11 @@ public class ListTypesInput {
     
     
     public VisibilityEnum visibility;
+
     public ListTypesInput withVisibility(VisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public ListTypesInput(){}
 }

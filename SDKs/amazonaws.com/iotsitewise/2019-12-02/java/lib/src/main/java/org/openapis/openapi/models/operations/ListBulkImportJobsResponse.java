@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBulkImportJobsResponse {
     
     public String contentType;
+
     public ListBulkImportJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListBulkImportJobsResponse {
      */
     
     public Object internalFailureException;
+
     public ListBulkImportJobsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListBulkImportJobsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListBulkImportJobsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListBulkImportJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBulkImportJobsResponse listBulkImportJobsResponse;
+
     public ListBulkImportJobsResponse withListBulkImportJobsResponse(org.openapis.openapi.models.shared.ListBulkImportJobsResponse listBulkImportJobsResponse) {
         this.listBulkImportJobsResponse = listBulkImportJobsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListBulkImportJobsResponse {
     
     
     public Integer statusCode;
+
     public ListBulkImportJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListBulkImportJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBulkImportJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListBulkImportJobsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListBulkImportJobsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListBulkImportJobsResponse {
      */
     
     public Object throttlingException;
+
     public ListBulkImportJobsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListBulkImportJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

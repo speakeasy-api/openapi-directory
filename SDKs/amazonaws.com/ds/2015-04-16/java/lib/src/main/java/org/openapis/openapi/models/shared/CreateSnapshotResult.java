@@ -15,9 +15,11 @@ public class CreateSnapshotResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public CreateSnapshotResult withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public CreateSnapshotResult(){}
 }

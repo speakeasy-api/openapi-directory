@@ -15,6 +15,7 @@ public class ClientConfig {
      */
     @JsonProperty("backoffFactor")
     public Integer backoffFactor;
+
     public ClientConfig withBackoffFactor(Integer backoffFactor) {
         this.backoffFactor = backoffFactor;
         return this;
@@ -25,6 +26,7 @@ public class ClientConfig {
      */
     @JsonProperty("callTimeout")
     public Integer callTimeout;
+
     public ClientConfig withCallTimeout(Integer callTimeout) {
         this.callTimeout = callTimeout;
         return this;
@@ -35,6 +37,7 @@ public class ClientConfig {
      */
     @JsonProperty("globalTimeout")
     public Integer globalTimeout;
+
     public ClientConfig withGlobalTimeout(Integer globalTimeout) {
         this.globalTimeout = globalTimeout;
         return this;
@@ -45,6 +48,7 @@ public class ClientConfig {
      */
     @JsonProperty("maxErrors")
     public Integer maxErrors;
+
     public ClientConfig withMaxErrors(Integer maxErrors) {
         this.maxErrors = maxErrors;
         return this;
@@ -55,6 +59,7 @@ public class ClientConfig {
      */
     @JsonProperty("retries")
     public Integer retries;
+
     public ClientConfig withRetries(Integer retries) {
         this.retries = retries;
         return this;
@@ -65,6 +70,7 @@ public class ClientConfig {
      */
     @JsonProperty("retryInitialDelay")
     public Integer retryInitialDelay;
+
     public ClientConfig withRetryInitialDelay(Integer retryInitialDelay) {
         this.retryInitialDelay = retryInitialDelay;
         return this;
@@ -75,6 +81,7 @@ public class ClientConfig {
      */
     @JsonProperty("sampleInterval")
     public Integer sampleInterval;
+
     public ClientConfig withSampleInterval(Integer sampleInterval) {
         this.sampleInterval = sampleInterval;
         return this;
@@ -85,9 +92,20 @@ public class ClientConfig {
      */
     @JsonProperty("useCircuitBreaker")
     public Boolean useCircuitBreaker;
+
     public ClientConfig withUseCircuitBreaker(Boolean useCircuitBreaker) {
         this.useCircuitBreaker = useCircuitBreaker;
         return this;
     }
     
+    public ClientConfig(@JsonProperty("backoffFactor") Integer backoffFactor, @JsonProperty("callTimeout") Integer callTimeout, @JsonProperty("globalTimeout") Integer globalTimeout, @JsonProperty("maxErrors") Integer maxErrors, @JsonProperty("retries") Integer retries, @JsonProperty("retryInitialDelay") Integer retryInitialDelay, @JsonProperty("sampleInterval") Integer sampleInterval, @JsonProperty("useCircuitBreaker") Boolean useCircuitBreaker) {
+        this.backoffFactor = backoffFactor;
+        this.callTimeout = callTimeout;
+        this.globalTimeout = globalTimeout;
+        this.maxErrors = maxErrors;
+        this.retries = retries;
+        this.retryInitialDelay = retryInitialDelay;
+        this.sampleInterval = sampleInterval;
+        this.useCircuitBreaker = useCircuitBreaker;
+  }
 }

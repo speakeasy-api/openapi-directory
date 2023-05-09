@@ -18,6 +18,7 @@ public class RetentionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupDeleteLockDays")
     public Integer backupDeleteLockDays;
+
     public RetentionPolicy withBackupDeleteLockDays(Integer backupDeleteLockDays) {
         this.backupDeleteLockDays = backupDeleteLockDays;
         return this;
@@ -29,6 +30,7 @@ public class RetentionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupRetainDays")
     public Integer backupRetainDays;
+
     public RetentionPolicy withBackupRetainDays(Integer backupRetainDays) {
         this.backupRetainDays = backupRetainDays;
         return this;
@@ -40,9 +42,11 @@ public class RetentionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked")
     public Boolean locked;
+
     public RetentionPolicy withLocked(Boolean locked) {
         this.locked = locked;
         return this;
     }
     
+    public RetentionPolicy(){}
 }

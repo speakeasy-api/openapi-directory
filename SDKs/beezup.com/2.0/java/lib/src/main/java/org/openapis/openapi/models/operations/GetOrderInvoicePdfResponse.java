@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrderInvoicePdfResponse {
@@ -12,6 +13,7 @@ public class GetOrderInvoicePdfResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetOrderInvoicePdfResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetOrderInvoicePdfResponse {
     
     
     public String contentType;
+
     public GetOrderInvoicePdfResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetOrderInvoicePdfResponse {
      */
     
     public byte[] getOrderInvoicePdf200ApplicationPdfBinaryString;
+
     public GetOrderInvoicePdfResponse withGetOrderInvoicePdf200ApplicationPdfBinaryString(byte[] getOrderInvoicePdf200ApplicationPdfBinaryString) {
         this.getOrderInvoicePdf200ApplicationPdfBinaryString = getOrderInvoicePdf200ApplicationPdfBinaryString;
         return this;
@@ -36,6 +40,7 @@ public class GetOrderInvoicePdfResponse {
     
     
     public Integer statusCode;
+
     public GetOrderInvoicePdfResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetOrderInvoicePdfResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrderInvoicePdfResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetOrderInvoicePdfResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage;
+
     public GetOrderInvoicePdfResponse withErrorResponseMessage(org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage) {
         this.errorResponseMessage = errorResponseMessage;
         return this;
     }
     
+    public GetOrderInvoicePdfResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

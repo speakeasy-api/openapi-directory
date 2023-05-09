@@ -15,6 +15,7 @@ public class ListUserImportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public ListUserImportJobsResponse withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
@@ -23,9 +24,11 @@ public class ListUserImportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserImportJobs")
     public UserImportJobType[] userImportJobs;
+
     public ListUserImportJobsResponse withUserImportJobs(UserImportJobType[] userImportJobs) {
         this.userImportJobs = userImportJobs;
         return this;
     }
     
+    public ListUserImportJobsResponse(){}
 }

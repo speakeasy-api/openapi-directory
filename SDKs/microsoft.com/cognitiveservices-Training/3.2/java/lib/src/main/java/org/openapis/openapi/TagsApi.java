@@ -58,7 +58,7 @@ public class TagsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTagResponse res = new org.openapis.openapi.models.operations.CreateTagResponse() {{
+        org.openapis.openapi.models.operations.CreateTagResponse res = new org.openapis.openapi.models.operations.CreateTagResponse(contentType, httpRes.statusCode()) {{
             tag = null;
             body = null;
             body = null;
@@ -66,8 +66,6 @@ public class TagsApi {
             body = null;
             customVisionError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -125,11 +123,9 @@ public class TagsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTagResponse res = new org.openapis.openapi.models.operations.DeleteTagResponse() {{
+        org.openapis.openapi.models.operations.DeleteTagResponse res = new org.openapis.openapi.models.operations.DeleteTagResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -171,7 +167,7 @@ public class TagsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTagResponse res = new org.openapis.openapi.models.operations.GetTagResponse() {{
+        org.openapis.openapi.models.operations.GetTagResponse res = new org.openapis.openapi.models.operations.GetTagResponse(contentType, httpRes.statusCode()) {{
             tag = null;
             body = null;
             body = null;
@@ -179,8 +175,6 @@ public class TagsApi {
             body = null;
             customVisionError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -244,7 +238,7 @@ public class TagsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTagsResponse res = new org.openapis.openapi.models.operations.GetTagsResponse() {{
+        org.openapis.openapi.models.operations.GetTagsResponse res = new org.openapis.openapi.models.operations.GetTagsResponse(contentType, httpRes.statusCode()) {{
             tags = null;
             body = null;
             body = null;
@@ -252,8 +246,6 @@ public class TagsApi {
             body = null;
             customVisionError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -316,7 +308,7 @@ public class TagsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTagFormResponse res = new org.openapis.openapi.models.operations.UpdateTagFormResponse() {{
+        org.openapis.openapi.models.operations.UpdateTagFormResponse res = new org.openapis.openapi.models.operations.UpdateTagFormResponse(contentType, httpRes.statusCode()) {{
             tag = null;
             body = null;
             body = null;
@@ -324,8 +316,6 @@ public class TagsApi {
             body = null;
             customVisionError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,7 +378,7 @@ public class TagsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTagJsonResponse res = new org.openapis.openapi.models.operations.UpdateTagJsonResponse() {{
+        org.openapis.openapi.models.operations.UpdateTagJsonResponse res = new org.openapis.openapi.models.operations.UpdateTagJsonResponse(contentType, httpRes.statusCode()) {{
             tag = null;
             body = null;
             body = null;
@@ -396,8 +386,6 @@ public class TagsApi {
             body = null;
             customVisionError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -460,7 +448,7 @@ public class TagsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTagRawResponse res = new org.openapis.openapi.models.operations.UpdateTagRawResponse() {{
+        org.openapis.openapi.models.operations.UpdateTagRawResponse res = new org.openapis.openapi.models.operations.UpdateTagRawResponse(contentType, httpRes.statusCode()) {{
             tag = null;
             body = null;
             body = null;
@@ -468,8 +456,6 @@ public class TagsApi {
             body = null;
             customVisionError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

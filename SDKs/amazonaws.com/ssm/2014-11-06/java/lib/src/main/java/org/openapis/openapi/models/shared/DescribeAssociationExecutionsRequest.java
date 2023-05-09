@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAssociationExecutionsRequest {
     @JsonProperty("AssociationId")
     public String associationId;
+
     public DescribeAssociationExecutionsRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeAssociationExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public AssociationExecutionFilter[] filters;
+
     public DescribeAssociationExecutionsRequest withFilters(AssociationExecutionFilter[] filters) {
         this.filters = filters;
         return this;
@@ -27,6 +29,7 @@ public class DescribeAssociationExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeAssociationExecutionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,9 +38,13 @@ public class DescribeAssociationExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAssociationExecutionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAssociationExecutionsRequest(@JsonProperty("AssociationId") String associationId) {
+        this.associationId = associationId;
+  }
 }

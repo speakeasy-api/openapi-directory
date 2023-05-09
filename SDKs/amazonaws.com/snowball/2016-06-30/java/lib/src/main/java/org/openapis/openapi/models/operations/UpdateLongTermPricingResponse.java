@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLongTermPricingResponse {
     
     public String contentType;
+
     public UpdateLongTermPricingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateLongTermPricingResponse {
      */
     
     public Object invalidResourceException;
+
     public UpdateLongTermPricingResponse withInvalidResourceException(Object invalidResourceException) {
         this.invalidResourceException = invalidResourceException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateLongTermPricingResponse {
     
     
     public Integer statusCode;
+
     public UpdateLongTermPricingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateLongTermPricingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLongTermPricingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class UpdateLongTermPricingResponse {
      */
     
     public java.util.Map<String, Object> updateLongTermPricingResult;
+
     public UpdateLongTermPricingResponse withUpdateLongTermPricingResult(java.util.Map<String, Object> updateLongTermPricingResult) {
         this.updateLongTermPricingResult = updateLongTermPricingResult;
         return this;
     }
     
+    public UpdateLongTermPricingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

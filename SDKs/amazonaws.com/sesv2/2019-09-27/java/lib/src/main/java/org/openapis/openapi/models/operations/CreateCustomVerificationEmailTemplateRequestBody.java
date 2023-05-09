@@ -12,6 +12,7 @@ public class CreateCustomVerificationEmailTemplateRequestBody {
      */
     @JsonProperty("FailureRedirectionURL")
     public String failureRedirectionURL;
+
     public CreateCustomVerificationEmailTemplateRequestBody withFailureRedirectionURL(String failureRedirectionURL) {
         this.failureRedirectionURL = failureRedirectionURL;
         return this;
@@ -22,6 +23,7 @@ public class CreateCustomVerificationEmailTemplateRequestBody {
      */
     @JsonProperty("FromEmailAddress")
     public String fromEmailAddress;
+
     public CreateCustomVerificationEmailTemplateRequestBody withFromEmailAddress(String fromEmailAddress) {
         this.fromEmailAddress = fromEmailAddress;
         return this;
@@ -32,6 +34,7 @@ public class CreateCustomVerificationEmailTemplateRequestBody {
      */
     @JsonProperty("SuccessRedirectionURL")
     public String successRedirectionURL;
+
     public CreateCustomVerificationEmailTemplateRequestBody withSuccessRedirectionURL(String successRedirectionURL) {
         this.successRedirectionURL = successRedirectionURL;
         return this;
@@ -42,6 +45,7 @@ public class CreateCustomVerificationEmailTemplateRequestBody {
      */
     @JsonProperty("TemplateContent")
     public String templateContent;
+
     public CreateCustomVerificationEmailTemplateRequestBody withTemplateContent(String templateContent) {
         this.templateContent = templateContent;
         return this;
@@ -52,6 +56,7 @@ public class CreateCustomVerificationEmailTemplateRequestBody {
      */
     @JsonProperty("TemplateName")
     public String templateName;
+
     public CreateCustomVerificationEmailTemplateRequestBody withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -62,9 +67,18 @@ public class CreateCustomVerificationEmailTemplateRequestBody {
      */
     @JsonProperty("TemplateSubject")
     public String templateSubject;
+
     public CreateCustomVerificationEmailTemplateRequestBody withTemplateSubject(String templateSubject) {
         this.templateSubject = templateSubject;
         return this;
     }
     
+    public CreateCustomVerificationEmailTemplateRequestBody(@JsonProperty("FailureRedirectionURL") String failureRedirectionURL, @JsonProperty("FromEmailAddress") String fromEmailAddress, @JsonProperty("SuccessRedirectionURL") String successRedirectionURL, @JsonProperty("TemplateContent") String templateContent, @JsonProperty("TemplateName") String templateName, @JsonProperty("TemplateSubject") String templateSubject) {
+        this.failureRedirectionURL = failureRedirectionURL;
+        this.fromEmailAddress = fromEmailAddress;
+        this.successRedirectionURL = successRedirectionURL;
+        this.templateContent = templateContent;
+        this.templateName = templateName;
+        this.templateSubject = templateSubject;
+  }
 }

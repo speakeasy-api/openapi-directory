@@ -18,9 +18,11 @@ public class GenerateIdTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public GenerateIdTokenResponse withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public GenerateIdTokenResponse(){}
 }

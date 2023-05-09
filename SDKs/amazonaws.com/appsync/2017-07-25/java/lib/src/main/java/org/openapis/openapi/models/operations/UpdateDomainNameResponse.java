@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDomainNameResponse {
@@ -12,6 +13,7 @@ public class UpdateDomainNameResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateDomainNameResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateDomainNameResponse {
      */
     
     public Object badRequestException;
+
     public UpdateDomainNameResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateDomainNameResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateDomainNameResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDomainNameResponse {
     
     
     public String contentType;
+
     public UpdateDomainNameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDomainNameResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateDomainNameResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateDomainNameResponse {
      */
     
     public Object notFoundException;
+
     public UpdateDomainNameResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateDomainNameResponse {
     
     
     public Integer statusCode;
+
     public UpdateDomainNameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDomainNameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDomainNameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDomainNameResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDomainNameResponse updateDomainNameResponse;
+
     public UpdateDomainNameResponse withUpdateDomainNameResponse(org.openapis.openapi.models.shared.UpdateDomainNameResponse updateDomainNameResponse) {
         this.updateDomainNameResponse = updateDomainNameResponse;
         return this;
     }
     
+    public UpdateDomainNameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

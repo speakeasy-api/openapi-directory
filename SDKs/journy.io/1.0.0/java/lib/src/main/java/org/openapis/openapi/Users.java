@@ -61,7 +61,7 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUserResponse res = new org.openapis.openapi.models.operations.DeleteUserResponse() {{
+        org.openapis.openapi.models.operations.DeleteUserResponse res = new org.openapis.openapi.models.operations.DeleteUserResponse(contentType, httpRes.statusCode()) {{
             deleteUser202ApplicationJSONObject = null;
             deleteUser400ApplicationJSONObject = null;
             deleteUser401ApplicationJSONObject = null;
@@ -69,8 +69,6 @@ public class Users {
             deleteUser429ApplicationJSONObject = null;
             deleteUser500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -175,7 +173,7 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LinkResponse res = new org.openapis.openapi.models.operations.LinkResponse() {{
+        org.openapis.openapi.models.operations.LinkResponse res = new org.openapis.openapi.models.operations.LinkResponse(contentType, httpRes.statusCode()) {{
             link201ApplicationJSONObject = null;
             link400ApplicationJSONObject = null;
             link401ApplicationJSONObject = null;
@@ -183,8 +181,6 @@ public class Users {
             link429ApplicationJSONObject = null;
             link500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -271,7 +267,7 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpsertUserResponse res = new org.openapis.openapi.models.operations.UpsertUserResponse() {{
+        org.openapis.openapi.models.operations.UpsertUserResponse res = new org.openapis.openapi.models.operations.UpsertUserResponse(contentType, httpRes.statusCode()) {{
             upsertUser201ApplicationJSONObject = null;
             upsertUser400ApplicationJSONObject = null;
             upsertUser401ApplicationJSONObject = null;
@@ -279,8 +275,6 @@ public class Users {
             upsertUser429ApplicationJSONObject = null;
             upsertUser500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeTableReplicaAutoScalingInput {
     @JsonProperty("TableName")
     public String tableName;
+
     public DescribeTableReplicaAutoScalingInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DescribeTableReplicaAutoScalingInput(@JsonProperty("TableName") String tableName) {
+        this.tableName = tableName;
+  }
 }

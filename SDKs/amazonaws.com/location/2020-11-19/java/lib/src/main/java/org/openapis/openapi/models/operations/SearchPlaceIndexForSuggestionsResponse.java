@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchPlaceIndexForSuggestionsResponse {
@@ -12,6 +13,7 @@ public class SearchPlaceIndexForSuggestionsResponse {
      */
     
     public Object accessDeniedException;
+
     public SearchPlaceIndexForSuggestionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SearchPlaceIndexForSuggestionsResponse {
     
     
     public String contentType;
+
     public SearchPlaceIndexForSuggestionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SearchPlaceIndexForSuggestionsResponse {
      */
     
     public Object internalServerException;
+
     public SearchPlaceIndexForSuggestionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class SearchPlaceIndexForSuggestionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SearchPlaceIndexForSuggestionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class SearchPlaceIndexForSuggestionsResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchPlaceIndexForSuggestionsResponse searchPlaceIndexForSuggestionsResponse;
+
     public SearchPlaceIndexForSuggestionsResponse withSearchPlaceIndexForSuggestionsResponse(org.openapis.openapi.models.shared.SearchPlaceIndexForSuggestionsResponse searchPlaceIndexForSuggestionsResponse) {
         this.searchPlaceIndexForSuggestionsResponse = searchPlaceIndexForSuggestionsResponse;
         return this;
@@ -56,6 +62,7 @@ public class SearchPlaceIndexForSuggestionsResponse {
     
     
     public Integer statusCode;
+
     public SearchPlaceIndexForSuggestionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class SearchPlaceIndexForSuggestionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchPlaceIndexForSuggestionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class SearchPlaceIndexForSuggestionsResponse {
      */
     
     public Object throttlingException;
+
     public SearchPlaceIndexForSuggestionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class SearchPlaceIndexForSuggestionsResponse {
      */
     
     public Object validationException;
+
     public SearchPlaceIndexForSuggestionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SearchPlaceIndexForSuggestionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

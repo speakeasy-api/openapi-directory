@@ -18,9 +18,11 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudSecret")
     public String cloudSecret;
+
     public Secret withCloudSecret(String cloudSecret) {
         this.cloudSecret = cloudSecret;
         return this;
     }
     
+    public Secret(){}
 }

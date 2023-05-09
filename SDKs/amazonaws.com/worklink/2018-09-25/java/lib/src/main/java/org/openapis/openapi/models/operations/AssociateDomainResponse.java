@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateDomainResponse {
@@ -12,6 +13,7 @@ public class AssociateDomainResponse {
      */
     
     public java.util.Map<String, Object> associateDomainResponse;
+
     public AssociateDomainResponse withAssociateDomainResponse(java.util.Map<String, Object> associateDomainResponse) {
         this.associateDomainResponse = associateDomainResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateDomainResponse {
     
     
     public String contentType;
+
     public AssociateDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateDomainResponse {
      */
     
     public Object internalServerErrorException;
+
     public AssociateDomainResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateDomainResponse {
      */
     
     public Object invalidRequestException;
+
     public AssociateDomainResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateDomainResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public AssociateDomainResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateDomainResponse {
     
     
     public Integer statusCode;
+
     public AssociateDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AssociateDomainResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateDomainResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class AssociateDomainResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AssociateDomainResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class AssociateDomainResponse {
      */
     
     public Object unauthorizedException;
+
     public AssociateDomainResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public AssociateDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class UpdateSecurityConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateSecurityConfigRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class UpdateSecurityConfigRequest {
     
     @JsonProperty("configVersion")
     public String configVersion;
+
     public UpdateSecurityConfigRequest withConfigVersion(String configVersion) {
         this.configVersion = configVersion;
         return this;
@@ -27,6 +29,7 @@ public class UpdateSecurityConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateSecurityConfigRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -34,6 +37,7 @@ public class UpdateSecurityConfigRequest {
     
     @JsonProperty("id")
     public String id;
+
     public UpdateSecurityConfigRequest withId(String id) {
         this.id = id;
         return this;
@@ -42,9 +46,14 @@ public class UpdateSecurityConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samlOptions")
     public SamlConfigOptions samlOptions;
+
     public UpdateSecurityConfigRequest withSamlOptions(SamlConfigOptions samlOptions) {
         this.samlOptions = samlOptions;
         return this;
     }
     
+    public UpdateSecurityConfigRequest(@JsonProperty("configVersion") String configVersion, @JsonProperty("id") String id) {
+        this.configVersion = configVersion;
+        this.id = id;
+  }
 }

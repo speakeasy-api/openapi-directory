@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class Instance {
     
     public String instanceId;
+
     public Instance withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public Instance(){}
 }

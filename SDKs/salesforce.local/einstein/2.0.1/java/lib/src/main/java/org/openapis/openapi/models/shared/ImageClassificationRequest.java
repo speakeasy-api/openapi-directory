@@ -16,6 +16,7 @@ public class ImageClassificationRequest {
     @JsonProperty("modelId")
     @SpeakeasyMetadata("multipartForm:name=modelId")
     public String modelId;
+
     public ImageClassificationRequest withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -28,6 +29,7 @@ public class ImageClassificationRequest {
     @JsonProperty("numResults")
     @SpeakeasyMetadata("multipartForm:name=numResults")
     public Integer numResults;
+
     public ImageClassificationRequest withNumResults(Integer numResults) {
         this.numResults = numResults;
         return this;
@@ -40,6 +42,7 @@ public class ImageClassificationRequest {
     @JsonProperty("sampleBase64Content")
     @SpeakeasyMetadata("multipartForm:name=sampleBase64Content")
     public String sampleBase64Content;
+
     public ImageClassificationRequest withSampleBase64Content(String sampleBase64Content) {
         this.sampleBase64Content = sampleBase64Content;
         return this;
@@ -52,6 +55,7 @@ public class ImageClassificationRequest {
     @JsonProperty("sampleId")
     @SpeakeasyMetadata("multipartForm:name=sampleId")
     public String sampleId;
+
     public ImageClassificationRequest withSampleId(String sampleId) {
         this.sampleId = sampleId;
         return this;
@@ -64,9 +68,13 @@ public class ImageClassificationRequest {
     @JsonProperty("sampleLocation")
     @SpeakeasyMetadata("multipartForm:name=sampleLocation")
     public String sampleLocation;
+
     public ImageClassificationRequest withSampleLocation(String sampleLocation) {
         this.sampleLocation = sampleLocation;
         return this;
     }
     
+    public ImageClassificationRequest(@JsonProperty("modelId") String modelId) {
+        this.modelId = modelId;
+  }
 }

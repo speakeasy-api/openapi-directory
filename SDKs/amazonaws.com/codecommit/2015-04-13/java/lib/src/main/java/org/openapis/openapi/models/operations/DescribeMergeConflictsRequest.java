@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeMergeConflictsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeMergeConflictsInput describeMergeConflictsInput;
+
     public DescribeMergeConflictsRequest withDescribeMergeConflictsInput(org.openapis.openapi.models.shared.DescribeMergeConflictsInput describeMergeConflictsInput) {
         this.describeMergeConflictsInput = describeMergeConflictsInput;
         return this;
@@ -16,6 +18,7 @@ public class DescribeMergeConflictsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeMergeConflictsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DescribeMergeConflictsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeMergeConflictsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DescribeMergeConflictsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeMergeConflictsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DescribeMergeConflictsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeMergeConflictsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DescribeMergeConflictsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeMergeConflictsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DescribeMergeConflictsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeMergeConflictsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DescribeMergeConflictsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeMergeConflictsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,6 +74,7 @@ public class DescribeMergeConflictsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeMergeConflictsXAmzTargetEnum xAmzTarget;
+
     public DescribeMergeConflictsRequest withXAmzTarget(DescribeMergeConflictsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
@@ -75,6 +85,7 @@ public class DescribeMergeConflictsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxMergeHunks")
     public String maxMergeHunks;
+
     public DescribeMergeConflictsRequest withMaxMergeHunks(String maxMergeHunks) {
         this.maxMergeHunks = maxMergeHunks;
         return this;
@@ -85,9 +96,14 @@ public class DescribeMergeConflictsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public DescribeMergeConflictsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeMergeConflictsRequest(@JsonProperty("DescribeMergeConflictsInput") org.openapis.openapi.models.shared.DescribeMergeConflictsInput describeMergeConflictsInput, @JsonProperty("X-Amz-Target") DescribeMergeConflictsXAmzTargetEnum xAmzTarget) {
+        this.describeMergeConflictsInput = describeMergeConflictsInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

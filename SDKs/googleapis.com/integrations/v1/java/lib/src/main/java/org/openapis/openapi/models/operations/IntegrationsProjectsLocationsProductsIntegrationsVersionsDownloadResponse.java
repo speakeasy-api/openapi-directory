@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadResponse {
     
     public String contentType;
+
     public IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadRe
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse googleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse;
+
     public IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadResponse withGoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse(org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse googleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse) {
         this.googleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse = googleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse;
         return this;
@@ -26,6 +29,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadRe
     
     
     public Integer statusCode;
+
     public IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadRe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

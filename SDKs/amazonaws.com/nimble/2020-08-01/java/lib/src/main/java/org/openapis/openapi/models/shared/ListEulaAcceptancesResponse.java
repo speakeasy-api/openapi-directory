@@ -15,6 +15,7 @@ public class ListEulaAcceptancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eulaAcceptances")
     public EulaAcceptance[] eulaAcceptances;
+
     public ListEulaAcceptancesResponse withEulaAcceptances(EulaAcceptance[] eulaAcceptances) {
         this.eulaAcceptances = eulaAcceptances;
         return this;
@@ -23,9 +24,11 @@ public class ListEulaAcceptancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEulaAcceptancesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEulaAcceptancesResponse(){}
 }

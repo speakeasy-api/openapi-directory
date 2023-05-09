@@ -37,4 +37,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetConnectionsSecurity.
 lib/src/main/java/org/openapis/openapi/models/operations/GetConnectionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConnectionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Connection.java
+docs/sdk/README.md
+docs/identity/README.md
 USAGE.md

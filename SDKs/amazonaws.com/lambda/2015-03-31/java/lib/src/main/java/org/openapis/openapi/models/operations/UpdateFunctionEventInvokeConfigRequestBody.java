@@ -15,6 +15,7 @@ public class UpdateFunctionEventInvokeConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationConfig")
     public UpdateFunctionEventInvokeConfigRequestBodyDestinationConfig destinationConfig;
+
     public UpdateFunctionEventInvokeConfigRequestBody withDestinationConfig(UpdateFunctionEventInvokeConfigRequestBodyDestinationConfig destinationConfig) {
         this.destinationConfig = destinationConfig;
         return this;
@@ -26,6 +27,7 @@ public class UpdateFunctionEventInvokeConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumEventAgeInSeconds")
     public Long maximumEventAgeInSeconds;
+
     public UpdateFunctionEventInvokeConfigRequestBody withMaximumEventAgeInSeconds(Long maximumEventAgeInSeconds) {
         this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
         return this;
@@ -37,9 +39,11 @@ public class UpdateFunctionEventInvokeConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumRetryAttempts")
     public Long maximumRetryAttempts;
+
     public UpdateFunctionEventInvokeConfigRequestBody withMaximumRetryAttempts(Long maximumRetryAttempts) {
         this.maximumRetryAttempts = maximumRetryAttempts;
         return this;
     }
     
+    public UpdateFunctionEventInvokeConfigRequestBody(){}
 }

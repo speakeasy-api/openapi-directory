@@ -208,6 +208,10 @@ public class SDK {
      */
     public RecordingSettings recordingSettings;
     /**
+     * Role Information
+     */
+    public Roles roles;
+    /**
      * Saved List Views
      */
     public SavedListViews savedListViews;
@@ -335,6 +339,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.accountStages = new AccountStages(
@@ -752,6 +761,15 @@ public class SDK {
 		);
 		
 		this.recordingSettings = new RecordingSettings(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.roles = new Roles(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,

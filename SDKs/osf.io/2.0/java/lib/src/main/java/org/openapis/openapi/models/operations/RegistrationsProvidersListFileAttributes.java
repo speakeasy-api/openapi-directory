@@ -15,6 +15,7 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public String checkout;
+
     public RegistrationsProvidersListFileAttributes withCheckout(String checkout) {
         this.checkout = checkout;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public Boolean currentUserCanComment;
+
     public RegistrationsProvidersListFileAttributes withCurrentUserCanComment(Boolean currentUserCanComment) {
         this.currentUserCanComment = currentUserCanComment;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public Long currentVersion;
+
     public RegistrationsProvidersListFileAttributes withCurrentVersion(Long currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -45,6 +48,7 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public RegistrationsProvidersListFileAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -55,6 +59,7 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public RegistrationsProvidersListFileAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -65,6 +70,7 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public Boolean deleteAllowed;
+
     public RegistrationsProvidersListFileAttributes withDeleteAllowed(Boolean deleteAllowed) {
         this.deleteAllowed = deleteAllowed;
         return this;
@@ -75,6 +81,7 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public java.util.Map<String, Object> extra;
+
     public RegistrationsProvidersListFileAttributes withExtra(java.util.Map<String, Object> extra) {
         this.extra = extra;
         return this;
@@ -85,6 +92,7 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public String guid;
+
     public RegistrationsProvidersListFileAttributes withGuid(String guid) {
         this.guid = guid;
         return this;
@@ -95,6 +103,7 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public String kind;
+
     public RegistrationsProvidersListFileAttributes withKind(String kind) {
         this.kind = kind;
         return this;
@@ -105,6 +114,7 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public OffsetDateTime lastTouched;
+
     public RegistrationsProvidersListFileAttributes withLastTouched(OffsetDateTime lastTouched) {
         this.lastTouched = lastTouched;
         return this;
@@ -115,6 +125,7 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public String materializedPath;
+
     public RegistrationsProvidersListFileAttributes withMaterializedPath(String materializedPath) {
         this.materializedPath = materializedPath;
         return this;
@@ -125,6 +136,7 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public String name;
+
     public RegistrationsProvidersListFileAttributes withName(String name) {
         this.name = name;
         return this;
@@ -135,6 +147,7 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public String path;
+
     public RegistrationsProvidersListFileAttributes withPath(String path) {
         this.path = path;
         return this;
@@ -145,6 +158,7 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public String provider;
+
     public RegistrationsProvidersListFileAttributes withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -155,6 +169,7 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public Long size;
+
     public RegistrationsProvidersListFileAttributes withSize(Long size) {
         this.size = size;
         return this;
@@ -165,9 +180,11 @@ public class RegistrationsProvidersListFileAttributes {
      */
     
     public String[] tags;
+
     public RegistrationsProvidersListFileAttributes withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public RegistrationsProvidersListFileAttributes(){}
 }

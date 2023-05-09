@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SubscriptionPriceChange {
     
     public Price newPrice;
+
     public SubscriptionPriceChange withNewPrice(Price newPrice) {
         this.newPrice = newPrice;
         return this;
@@ -24,9 +25,11 @@ public class SubscriptionPriceChange {
      */
     
     public Integer state;
+
     public SubscriptionPriceChange withState(Integer state) {
         this.state = state;
         return this;
     }
     
+    public SubscriptionPriceChange(){}
 }

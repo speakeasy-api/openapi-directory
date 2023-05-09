@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetItemResponse {
@@ -12,6 +13,7 @@ public class BatchGetItemResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetItemOutput batchGetItemOutput;
+
     public BatchGetItemResponse withBatchGetItemOutput(org.openapis.openapi.models.shared.BatchGetItemOutput batchGetItemOutput) {
         this.batchGetItemOutput = batchGetItemOutput;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetItemResponse {
     
     
     public String contentType;
+
     public BatchGetItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetItemResponse {
      */
     
     public Object internalServerError;
+
     public BatchGetItemResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetItemResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public BatchGetItemResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetItemResponse {
      */
     
     public Object requestLimitExceeded;
+
     public BatchGetItemResponse withRequestLimitExceeded(Object requestLimitExceeded) {
         this.requestLimitExceeded = requestLimitExceeded;
         return this;
@@ -56,6 +62,7 @@ public class BatchGetItemResponse {
     
     
     public Integer statusCode;
+
     public BatchGetItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchGetItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class BatchGetItemResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchGetItemResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public BatchGetItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

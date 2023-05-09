@@ -15,6 +15,7 @@ public class QueuedResourceStatusFailedDataErrorErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public QueuedResourceStatusFailedDataErrorErrors withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class QueuedResourceStatusFailedDataErrorErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDetails")
     public QueuedResourceStatusFailedDataErrorErrorsErrorDetails[] errorDetails;
+
     public QueuedResourceStatusFailedDataErrorErrors withErrorDetails(QueuedResourceStatusFailedDataErrorErrorsErrorDetails[] errorDetails) {
         this.errorDetails = errorDetails;
         return this;
@@ -37,6 +39,7 @@ public class QueuedResourceStatusFailedDataErrorErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public QueuedResourceStatusFailedDataErrorErrors withLocation(String location) {
         this.location = location;
         return this;
@@ -48,9 +51,11 @@ public class QueuedResourceStatusFailedDataErrorErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public QueuedResourceStatusFailedDataErrorErrors withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public QueuedResourceStatusFailedDataErrorErrors(){}
 }

@@ -12,6 +12,7 @@ public class GetPodcastsInBatchForm {
      */
     @SpeakeasyMetadata("form:name=ids")
     public String ids;
+
     public GetPodcastsInBatchForm withIds(String ids) {
         this.ids = ids;
         return this;
@@ -22,6 +23,7 @@ public class GetPodcastsInBatchForm {
      */
     @SpeakeasyMetadata("form:name=itunes_ids")
     public String itunesIds;
+
     public GetPodcastsInBatchForm withItunesIds(String itunesIds) {
         this.itunesIds = itunesIds;
         return this;
@@ -33,6 +35,7 @@ public class GetPodcastsInBatchForm {
      */
     @SpeakeasyMetadata("form:name=next_episode_pub_date")
     public Long nextEpisodePubDate;
+
     public GetPodcastsInBatchForm withNextEpisodePubDate(Long nextEpisodePubDate) {
         this.nextEpisodePubDate = nextEpisodePubDate;
         return this;
@@ -43,6 +46,7 @@ public class GetPodcastsInBatchForm {
      */
     @SpeakeasyMetadata("form:name=rsses")
     public String rsses;
+
     public GetPodcastsInBatchForm withRsses(String rsses) {
         this.rsses = rsses;
         return this;
@@ -54,6 +58,7 @@ public class GetPodcastsInBatchForm {
      */
     @SpeakeasyMetadata("form:name=show_latest_episodes")
     public GetPodcastsInBatchFormShowLatestEpisodesEnum showLatestEpisodes;
+
     public GetPodcastsInBatchForm withShowLatestEpisodes(GetPodcastsInBatchFormShowLatestEpisodesEnum showLatestEpisodes) {
         this.showLatestEpisodes = showLatestEpisodes;
         return this;
@@ -64,9 +69,11 @@ public class GetPodcastsInBatchForm {
      */
     @SpeakeasyMetadata("form:name=spotify_ids")
     public String spotifyIds;
+
     public GetPodcastsInBatchForm withSpotifyIds(String spotifyIds) {
         this.spotifyIds = spotifyIds;
         return this;
     }
     
+    public GetPodcastsInBatchForm(){}
 }

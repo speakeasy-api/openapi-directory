@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MapConfiguration {
     @JsonProperty("Style")
     public String style;
+
     public MapConfiguration withStyle(String style) {
         this.style = style;
         return this;
     }
     
+    public MapConfiguration(@JsonProperty("Style") String style) {
+        this.style = style;
+  }
 }

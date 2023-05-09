@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class Group {
     
     public String arn;
+
     public Group withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +21,7 @@ public class Group {
     
     
     public OffsetDateTime createDate;
+
     public Group withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -26,6 +29,7 @@ public class Group {
     
     
     public String groupId;
+
     public Group withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -33,6 +37,7 @@ public class Group {
     
     
     public String groupName;
+
     public Group withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -40,9 +45,17 @@ public class Group {
     
     
     public String path;
+
     public Group withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public Group(@JsonProperty("Arn") String arn, @JsonProperty("CreateDate") OffsetDateTime createDate, @JsonProperty("GroupId") String groupId, @JsonProperty("GroupName") String groupName, @JsonProperty("Path") String path) {
+        this.arn = arn;
+        this.createDate = createDate;
+        this.groupId = groupId;
+        this.groupName = groupName;
+        this.path = path;
+  }
 }

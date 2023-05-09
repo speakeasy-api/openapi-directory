@@ -41,4 +41,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/TravelCenterOpeningTimes.ja
 lib/src/main/java/org/openapis/openapi/models/shared/TravelCenterTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TravelCenter.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
+docs/sdk/README.md
 USAGE.md

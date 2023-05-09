@@ -12,6 +12,7 @@ public class SocerRequestBodyCertificateParameters {
      */
     @JsonProperty("APPNO")
     public String appno;
+
     public SocerRequestBodyCertificateParameters withAppno(String appno) {
         this.appno = appno;
         return this;
@@ -22,6 +23,7 @@ public class SocerRequestBodyCertificateParameters {
      */
     @JsonProperty("Date_Of_Birth")
     public String dateOfBirth;
+
     public SocerRequestBodyCertificateParameters withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -32,6 +34,7 @@ public class SocerRequestBodyCertificateParameters {
      */
     @JsonProperty("ENROLNO")
     public String enrolno;
+
     public SocerRequestBodyCertificateParameters withEnrolno(String enrolno) {
         this.enrolno = enrolno;
         return this;
@@ -42,9 +45,16 @@ public class SocerRequestBodyCertificateParameters {
      */
     @JsonProperty("TypOfCert")
     public String typOfCert;
+
     public SocerRequestBodyCertificateParameters withTypOfCert(String typOfCert) {
         this.typOfCert = typOfCert;
         return this;
     }
     
+    public SocerRequestBodyCertificateParameters(@JsonProperty("APPNO") String appno, @JsonProperty("Date_Of_Birth") String dateOfBirth, @JsonProperty("ENROLNO") String enrolno, @JsonProperty("TypOfCert") String typOfCert) {
+        this.appno = appno;
+        this.dateOfBirth = dateOfBirth;
+        this.enrolno = enrolno;
+        this.typOfCert = typOfCert;
+  }
 }

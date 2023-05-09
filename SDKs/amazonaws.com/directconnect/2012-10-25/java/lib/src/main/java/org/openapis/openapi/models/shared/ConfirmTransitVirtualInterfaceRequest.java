@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConfirmTransitVirtualInterfaceRequest {
     @JsonProperty("directConnectGatewayId")
     public String directConnectGatewayId;
+
     public ConfirmTransitVirtualInterfaceRequest withDirectConnectGatewayId(String directConnectGatewayId) {
         this.directConnectGatewayId = directConnectGatewayId;
         return this;
@@ -16,9 +17,14 @@ public class ConfirmTransitVirtualInterfaceRequest {
     
     @JsonProperty("virtualInterfaceId")
     public String virtualInterfaceId;
+
     public ConfirmTransitVirtualInterfaceRequest withVirtualInterfaceId(String virtualInterfaceId) {
         this.virtualInterfaceId = virtualInterfaceId;
         return this;
     }
     
+    public ConfirmTransitVirtualInterfaceRequest(@JsonProperty("directConnectGatewayId") String directConnectGatewayId, @JsonProperty("virtualInterfaceId") String virtualInterfaceId) {
+        this.directConnectGatewayId = directConnectGatewayId;
+        this.virtualInterfaceId = virtualInterfaceId;
+  }
 }

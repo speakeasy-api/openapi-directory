@@ -15,6 +15,7 @@ public class AdminResetCorpusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corpusId")
     public Long corpusId;
+
     public AdminResetCorpusRequest withCorpusId(Long corpusId) {
         this.corpusId = corpusId;
         return this;
@@ -26,9 +27,11 @@ public class AdminResetCorpusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public Long customerId;
+
     public AdminResetCorpusRequest withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public AdminResetCorpusRequest(){}
 }

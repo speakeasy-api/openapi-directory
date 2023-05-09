@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteEventSubscriptionMessage {
     @JsonProperty("SubscriptionName")
     public String subscriptionName;
+
     public DeleteEventSubscriptionMessage withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
     }
     
+    public DeleteEventSubscriptionMessage(@JsonProperty("SubscriptionName") String subscriptionName) {
+        this.subscriptionName = subscriptionName;
+  }
 }

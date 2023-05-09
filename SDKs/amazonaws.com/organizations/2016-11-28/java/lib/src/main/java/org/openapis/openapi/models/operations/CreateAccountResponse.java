@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAccountResponse {
@@ -12,6 +13,7 @@ public class CreateAccountResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public CreateAccountResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class CreateAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class CreateAccountResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateAccountResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -42,6 +46,7 @@ public class CreateAccountResponse {
      */
     
     public Object constraintViolationException;
+
     public CreateAccountResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAccountResponse {
     
     
     public String contentType;
+
     public CreateAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class CreateAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAccountResponse createAccountResponse;
+
     public CreateAccountResponse withCreateAccountResponse(org.openapis.openapi.models.shared.CreateAccountResponse createAccountResponse) {
         this.createAccountResponse = createAccountResponse;
         return this;
@@ -69,6 +76,7 @@ public class CreateAccountResponse {
      */
     
     public Object finalizingOrganizationException;
+
     public CreateAccountResponse withFinalizingOrganizationException(Object finalizingOrganizationException) {
         this.finalizingOrganizationException = finalizingOrganizationException;
         return this;
@@ -79,6 +87,7 @@ public class CreateAccountResponse {
      */
     
     public Object invalidInputException;
+
     public CreateAccountResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -89,6 +98,7 @@ public class CreateAccountResponse {
      */
     
     public Object serviceException;
+
     public CreateAccountResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -96,6 +106,7 @@ public class CreateAccountResponse {
     
     
     public Integer statusCode;
+
     public CreateAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class CreateAccountResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateAccountResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -123,9 +136,14 @@ public class CreateAccountResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public CreateAccountResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public CreateAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

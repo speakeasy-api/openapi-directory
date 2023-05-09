@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RunProjectsLocationsDomainmappingsCreateRequest {
@@ -12,6 +13,7 @@ public class RunProjectsLocationsDomainmappingsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public RunProjectsLocationsDomainmappingsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class RunProjectsLocationsDomainmappingsCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DomainMapping domainMapping;
+
     public RunProjectsLocationsDomainmappingsCreateRequest withDomainMapping(org.openapis.openapi.models.shared.DomainMapping domainMapping) {
         this.domainMapping = domainMapping;
         return this;
@@ -29,6 +32,7 @@ public class RunProjectsLocationsDomainmappingsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public RunProjectsLocationsDomainmappingsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class RunProjectsLocationsDomainmappingsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public RunProjectsLocationsDomainmappingsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class RunProjectsLocationsDomainmappingsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public RunProjectsLocationsDomainmappingsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class RunProjectsLocationsDomainmappingsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dryRun")
     public String dryRun;
+
     public RunProjectsLocationsDomainmappingsCreateRequest withDryRun(String dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -69,6 +76,7 @@ public class RunProjectsLocationsDomainmappingsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public RunProjectsLocationsDomainmappingsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class RunProjectsLocationsDomainmappingsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public RunProjectsLocationsDomainmappingsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,16 +98,18 @@ public class RunProjectsLocationsDomainmappingsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public RunProjectsLocationsDomainmappingsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
     }
     
     /**
-     * The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+     * Required. The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public RunProjectsLocationsDomainmappingsCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -109,6 +120,7 @@ public class RunProjectsLocationsDomainmappingsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public RunProjectsLocationsDomainmappingsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class RunProjectsLocationsDomainmappingsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public RunProjectsLocationsDomainmappingsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class RunProjectsLocationsDomainmappingsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public RunProjectsLocationsDomainmappingsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,13 @@ public class RunProjectsLocationsDomainmappingsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public RunProjectsLocationsDomainmappingsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public RunProjectsLocationsDomainmappingsCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

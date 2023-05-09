@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminCustomersChromePrintServersBatchCreatePrintServersResponse {
@@ -12,6 +13,7 @@ public class AdminCustomersChromePrintServersBatchCreatePrintServersResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchCreatePrintServersResponse batchCreatePrintServersResponse;
+
     public AdminCustomersChromePrintServersBatchCreatePrintServersResponse withBatchCreatePrintServersResponse(org.openapis.openapi.models.shared.BatchCreatePrintServersResponse batchCreatePrintServersResponse) {
         this.batchCreatePrintServersResponse = batchCreatePrintServersResponse;
         return this;
@@ -19,6 +21,7 @@ public class AdminCustomersChromePrintServersBatchCreatePrintServersResponse {
     
     
     public String contentType;
+
     public AdminCustomersChromePrintServersBatchCreatePrintServersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AdminCustomersChromePrintServersBatchCreatePrintServersResponse {
     
     
     public Integer statusCode;
+
     public AdminCustomersChromePrintServersBatchCreatePrintServersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AdminCustomersChromePrintServersBatchCreatePrintServersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminCustomersChromePrintServersBatchCreatePrintServersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AdminCustomersChromePrintServersBatchCreatePrintServersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

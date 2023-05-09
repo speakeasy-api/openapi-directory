@@ -15,6 +15,7 @@ public class StatusMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionClosed")
     public Boolean connectionClosed;
+
     public StatusMessage withConnectionClosed(Boolean connectionClosed) {
         this.connectionClosed = connectionClosed;
         return this;
@@ -26,6 +27,7 @@ public class StatusMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionId")
     public String connectionId;
+
     public StatusMessage withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -37,6 +39,7 @@ public class StatusMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionsAvailable")
     public Integer connectionsAvailable;
+
     public StatusMessage withConnectionsAvailable(Integer connectionsAvailable) {
         this.connectionsAvailable = connectionsAvailable;
         return this;
@@ -48,6 +51,7 @@ public class StatusMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public StatusMessageErrorCodeEnum errorCode;
+
     public StatusMessage withErrorCode(StatusMessageErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -59,6 +63,7 @@ public class StatusMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public StatusMessage withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -70,6 +75,7 @@ public class StatusMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public StatusMessage withId(Integer id) {
         this.id = id;
         return this;
@@ -81,6 +87,7 @@ public class StatusMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public String op;
+
     public StatusMessage withOp(String op) {
         this.op = op;
         return this;
@@ -92,9 +99,11 @@ public class StatusMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public StatusMessageStatusCodeEnum statusCode;
+
     public StatusMessage withStatusCode(StatusMessageStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public StatusMessage(){}
 }

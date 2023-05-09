@@ -22,6 +22,7 @@ public class Event {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Date")
     public OffsetDateTime date;
+
     public Event withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -30,6 +31,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventCategories")
     public String[] eventCategories;
+
     public Event withEventCategories(String[] eventCategories) {
         this.eventCategories = eventCategories;
         return this;
@@ -38,6 +40,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public Event withMessage(String message) {
         this.message = message;
         return this;
@@ -46,6 +49,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceIdentifier")
     public String sourceIdentifier;
+
     public Event withSourceIdentifier(String sourceIdentifier) {
         this.sourceIdentifier = sourceIdentifier;
         return this;
@@ -54,9 +58,11 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public SourceTypeEnum sourceType;
+
     public Event withSourceType(SourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public Event(){}
 }

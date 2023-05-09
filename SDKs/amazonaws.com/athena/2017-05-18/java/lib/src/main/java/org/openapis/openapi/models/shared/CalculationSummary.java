@@ -15,6 +15,7 @@ public class CalculationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CalculationExecutionId")
     public String calculationExecutionId;
+
     public CalculationSummary withCalculationExecutionId(String calculationExecutionId) {
         this.calculationExecutionId = calculationExecutionId;
         return this;
@@ -23,6 +24,7 @@ public class CalculationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CalculationSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -31,9 +33,11 @@ public class CalculationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CalculationStatus status;
+
     public CalculationSummary withStatus(CalculationStatus status) {
         this.status = status;
         return this;
     }
     
+    public CalculationSummary(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSamplingRuleResponse {
     
     public String contentType;
+
     public CreateSamplingRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSamplingRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSamplingRuleResult createSamplingRuleResult;
+
     public CreateSamplingRuleResponse withCreateSamplingRuleResult(org.openapis.openapi.models.shared.CreateSamplingRuleResult createSamplingRuleResult) {
         this.createSamplingRuleResult = createSamplingRuleResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateSamplingRuleResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateSamplingRuleResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class CreateSamplingRuleResponse {
      */
     
     public Object ruleLimitExceededException;
+
     public CreateSamplingRuleResponse withRuleLimitExceededException(Object ruleLimitExceededException) {
         this.ruleLimitExceededException = ruleLimitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class CreateSamplingRuleResponse {
     
     
     public Integer statusCode;
+
     public CreateSamplingRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateSamplingRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSamplingRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateSamplingRuleResponse {
      */
     
     public Object throttledException;
+
     public CreateSamplingRuleResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public CreateSamplingRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

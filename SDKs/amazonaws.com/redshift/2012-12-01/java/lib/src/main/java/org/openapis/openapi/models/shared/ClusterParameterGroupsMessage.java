@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClusterParameterGroupsMessage {
     
     public String marker;
+
     public ClusterParameterGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class ClusterParameterGroupsMessage {
     
     
     public ParameterGroupList[] parameterGroups;
+
     public ClusterParameterGroupsMessage withParameterGroups(ParameterGroupList[] parameterGroups) {
         this.parameterGroups = parameterGroups;
         return this;
     }
     
+    public ClusterParameterGroupsMessage(){}
 }

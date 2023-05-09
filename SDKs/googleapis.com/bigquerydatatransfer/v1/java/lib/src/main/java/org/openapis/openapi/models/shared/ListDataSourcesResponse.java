@@ -18,6 +18,7 @@ public class ListDataSourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSources")
     public DataSource[] dataSources;
+
     public ListDataSourcesResponse withDataSources(DataSource[] dataSources) {
         this.dataSources = dataSources;
         return this;
@@ -29,9 +30,11 @@ public class ListDataSourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDataSourcesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListDataSourcesResponse(){}
 }

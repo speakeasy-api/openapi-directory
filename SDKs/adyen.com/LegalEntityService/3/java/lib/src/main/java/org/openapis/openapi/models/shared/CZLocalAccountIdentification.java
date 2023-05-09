@@ -29,6 +29,7 @@ public class CZLocalAccountIdentification {
      */
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public CZLocalAccountIdentification withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -39,6 +40,7 @@ public class CZLocalAccountIdentification {
      */
     @JsonProperty("bankCode")
     public String bankCode;
+
     public CZLocalAccountIdentification withBankCode(String bankCode) {
         this.bankCode = bankCode;
         return this;
@@ -49,9 +51,15 @@ public class CZLocalAccountIdentification {
      */
     @JsonProperty("type")
     public CZLocalAccountIdentificationTypeEnum type;
+
     public CZLocalAccountIdentification withType(CZLocalAccountIdentificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CZLocalAccountIdentification(@JsonProperty("accountNumber") String accountNumber, @JsonProperty("bankCode") String bankCode, @JsonProperty("type") CZLocalAccountIdentificationTypeEnum type) {
+        this.accountNumber = accountNumber;
+        this.bankCode = bankCode;
+        this.type = type;
+  }
 }

@@ -20,6 +20,7 @@ public class CsvExportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("area")
     public Long area;
+
     public CsvExportStatus withArea(Long area) {
         this.area = area;
         return this;
@@ -30,6 +31,7 @@ public class CsvExportStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_created")
     public OffsetDateTime dateCreated;
+
     public CsvExportStatus withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -38,6 +40,7 @@ public class CsvExportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
     public String jobId;
+
     public CsvExportStatus withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -46,6 +49,7 @@ public class CsvExportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_status")
     public String jobStatus;
+
     public CsvExportStatus withJobStatus(String jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -54,6 +58,7 @@ public class CsvExportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_url")
     public String jobUrl;
+
     public CsvExportStatus withJobUrl(String jobUrl) {
         this.jobUrl = jobUrl;
         return this;
@@ -62,6 +67,7 @@ public class CsvExportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nb_results")
     public Long nbResults;
+
     public CsvExportStatus withNbResults(Long nbResults) {
         this.nbResults = nbResults;
         return this;
@@ -69,6 +75,7 @@ public class CsvExportStatus {
     
     @JsonProperty("query")
     public UrlsQuery query;
+
     public CsvExportStatus withQuery(UrlsQuery query) {
         this.query = query;
         return this;
@@ -77,9 +84,13 @@ public class CsvExportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public String results;
+
     public CsvExportStatus withResults(String results) {
         this.results = results;
         return this;
     }
     
+    public CsvExportStatus(@JsonProperty("query") UrlsQuery query) {
+        this.query = query;
+  }
 }

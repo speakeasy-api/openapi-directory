@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetTemplateRequest {
     
     public String templateName;
+
     public GetTemplateRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public GetTemplateRequest(@JsonProperty("TemplateName") String templateName) {
+        this.templateName = templateName;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSecurityGroupsResultSecurityGroups {
     
     public String description;
+
     public DescribeSecurityGroupsResultSecurityGroups withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSecurityGroupsResultSecurityGroups {
     
     
     public String groupId;
+
     public DescribeSecurityGroupsResultSecurityGroups withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSecurityGroupsResultSecurityGroups {
     
     
     public String groupName;
+
     public DescribeSecurityGroupsResultSecurityGroups withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSecurityGroupsResultSecurityGroups {
     
     
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissions[] ipPermissions;
+
     public DescribeSecurityGroupsResultSecurityGroups withIpPermissions(DescribeSecurityGroupsResultSecurityGroupsIpPermissions[] ipPermissions) {
         this.ipPermissions = ipPermissions;
         return this;
@@ -40,6 +44,7 @@ public class DescribeSecurityGroupsResultSecurityGroups {
     
     
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress[] ipPermissionsEgress;
+
     public DescribeSecurityGroupsResultSecurityGroups withIpPermissionsEgress(DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgress[] ipPermissionsEgress) {
         this.ipPermissionsEgress = ipPermissionsEgress;
         return this;
@@ -47,6 +52,7 @@ public class DescribeSecurityGroupsResultSecurityGroups {
     
     
     public String ownerId;
+
     public DescribeSecurityGroupsResultSecurityGroups withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeSecurityGroupsResultSecurityGroups {
     
     
     public DescribeSecurityGroupsResultSecurityGroupsTags[] tags;
+
     public DescribeSecurityGroupsResultSecurityGroups withTags(DescribeSecurityGroupsResultSecurityGroupsTags[] tags) {
         this.tags = tags;
         return this;
@@ -61,9 +68,11 @@ public class DescribeSecurityGroupsResultSecurityGroups {
     
     
     public String vpcId;
+
     public DescribeSecurityGroupsResultSecurityGroups withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeSecurityGroupsResultSecurityGroups(){}
 }

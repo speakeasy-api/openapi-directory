@@ -12,6 +12,7 @@ public class DeleteKeyPairRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedFingerprint")
     public String expectedFingerprint;
+
     public DeleteKeyPairRequest withExpectedFingerprint(String expectedFingerprint) {
         this.expectedFingerprint = expectedFingerprint;
         return this;
@@ -19,9 +20,13 @@ public class DeleteKeyPairRequest {
     
     @JsonProperty("keyPairName")
     public String keyPairName;
+
     public DeleteKeyPairRequest withKeyPairName(String keyPairName) {
         this.keyPairName = keyPairName;
         return this;
     }
     
+    public DeleteKeyPairRequest(@JsonProperty("keyPairName") String keyPairName) {
+        this.keyPairName = keyPairName;
+  }
 }

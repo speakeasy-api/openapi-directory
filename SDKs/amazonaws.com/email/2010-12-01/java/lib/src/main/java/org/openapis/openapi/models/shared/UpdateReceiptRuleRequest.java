@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateReceiptRuleRequest - Represents a request to update a receipt rule. You use receipt rules to receive email with Amazon SES. For more information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-concepts.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateReceiptRuleRequest {
     
     public ReceiptRule rule;
+
     public UpdateReceiptRuleRequest withRule(ReceiptRule rule) {
         this.rule = rule;
         return this;
@@ -19,9 +20,14 @@ public class UpdateReceiptRuleRequest {
     
     
     public String ruleSetName;
+
     public UpdateReceiptRuleRequest withRuleSetName(String ruleSetName) {
         this.ruleSetName = ruleSetName;
         return this;
     }
     
+    public UpdateReceiptRuleRequest(@JsonProperty("Rule") ReceiptRule rule, @JsonProperty("RuleSetName") String ruleSetName) {
+        this.rule = rule;
+        this.ruleSetName = ruleSetName;
+  }
 }

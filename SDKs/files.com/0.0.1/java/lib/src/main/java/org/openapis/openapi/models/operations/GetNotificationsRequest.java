@@ -12,77 +12,41 @@ public class GetNotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetNotificationsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `user_id`, `group_id` or `path`.
+     * If set, return records where the specified field is equal to the supplied value. Valid fields are `path`, `user_id` or `group_id`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public java.util.Map<String, Object> filter;
+
     public GetNotificationsRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `user_id`, `group_id` or `path`.
+     * If set, return records where the specified field is prefixed by the supplied value. Valid fields are `path`.
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gt")
-    public java.util.Map<String, Object> filterGt;
-    public GetNotificationsRequest withFilterGt(java.util.Map<String, Object> filterGt) {
-        this.filterGt = filterGt;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_prefix")
+    public java.util.Map<String, Object> filterPrefix;
+
+    public GetNotificationsRequest withFilterPrefix(java.util.Map<String, Object> filterPrefix) {
+        this.filterPrefix = filterPrefix;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `user_id`, `group_id` or `path`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gteq")
-    public java.util.Map<String, Object> filterGteq;
-    public GetNotificationsRequest withFilterGteq(java.util.Map<String, Object> filterGteq) {
-        this.filterGteq = filterGteq;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `user_id`, `group_id` or `path`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_like")
-    public java.util.Map<String, Object> filterLike;
-    public GetNotificationsRequest withFilterLike(java.util.Map<String, Object> filterLike) {
-        this.filterLike = filterLike;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `user_id`, `group_id` or `path`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lt")
-    public java.util.Map<String, Object> filterLt;
-    public GetNotificationsRequest withFilterLt(java.util.Map<String, Object> filterLt) {
-        this.filterLt = filterLt;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `user_id`, `group_id` or `path`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lteq")
-    public java.util.Map<String, Object> filterLteq;
-    public GetNotificationsRequest withFilterLteq(java.util.Map<String, Object> filterLteq) {
-        this.filterLteq = filterLteq;
-        return this;
-    }
-    
-    /**
-     * DEPRECATED: Show notifications for this Group ID. Use `filter[group_id]` instead.
+     * If set, return records where the specified field is equal to the supplied value.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
-    public Integer groupId;
-    public GetNotificationsRequest withGroupId(Integer groupId) {
+    public String groupId;
+
+    public GetNotificationsRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
@@ -92,6 +56,7 @@ public class GetNotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_ancestors")
     public Boolean includeAncestors;
+
     public GetNotificationsRequest withIncludeAncestors(Boolean includeAncestors) {
         this.includeAncestors = includeAncestors;
         return this;
@@ -102,6 +67,7 @@ public class GetNotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
     public String path;
+
     public GetNotificationsRequest withPath(String path) {
         this.path = path;
         return this;
@@ -112,6 +78,7 @@ public class GetNotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetNotificationsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -122,6 +89,7 @@ public class GetNotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public GetNotificationsRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -132,9 +100,11 @@ public class GetNotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public Integer userId;
+
     public GetNotificationsRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetNotificationsRequest(){}
 }

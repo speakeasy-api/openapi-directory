@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLayoutResponse {
@@ -12,6 +13,7 @@ public class GetLayoutResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLayoutResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetLayoutResponse {
     
     
     public String contentType;
+
     public GetLayoutResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetLayoutResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLayoutResponse getLayoutResponse;
+
     public GetLayoutResponse withGetLayoutResponse(org.openapis.openapi.models.shared.GetLayoutResponse getLayoutResponse) {
         this.getLayoutResponse = getLayoutResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetLayoutResponse {
      */
     
     public Object internalServerException;
+
     public GetLayoutResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetLayoutResponse {
     
     
     public Integer statusCode;
+
     public GetLayoutResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetLayoutResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLayoutResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetLayoutResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetLayoutResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetLayoutResponse {
      */
     
     public Object throttlingException;
+
     public GetLayoutResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetLayoutResponse {
      */
     
     public Object validationException;
+
     public GetLayoutResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetLayoutResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

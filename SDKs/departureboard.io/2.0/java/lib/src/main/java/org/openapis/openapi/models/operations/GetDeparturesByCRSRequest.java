@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeparturesByCRSRequest {
@@ -12,6 +13,7 @@ public class GetDeparturesByCRSRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CRS")
     public String crs;
+
     public GetDeparturesByCRSRequest withCrs(String crs) {
         this.crs = crs;
         return this;
@@ -22,6 +24,7 @@ public class GetDeparturesByCRSRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apiKey")
     public String apiKey;
+
     public GetDeparturesByCRSRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -32,6 +35,7 @@ public class GetDeparturesByCRSRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterStation")
     public String filterStation;
+
     public GetDeparturesByCRSRequest withFilterStation(String filterStation) {
         this.filterStation = filterStation;
         return this;
@@ -42,6 +46,7 @@ public class GetDeparturesByCRSRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=numServices")
     public Long numServices;
+
     public GetDeparturesByCRSRequest withNumServices(Long numServices) {
         this.numServices = numServices;
         return this;
@@ -52,6 +57,7 @@ public class GetDeparturesByCRSRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceDetails")
     public Boolean serviceDetails;
+
     public GetDeparturesByCRSRequest withServiceDetails(Boolean serviceDetails) {
         this.serviceDetails = serviceDetails;
         return this;
@@ -62,6 +68,7 @@ public class GetDeparturesByCRSRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeOffset")
     public Long timeOffset;
+
     public GetDeparturesByCRSRequest withTimeOffset(Long timeOffset) {
         this.timeOffset = timeOffset;
         return this;
@@ -72,9 +79,14 @@ public class GetDeparturesByCRSRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeWindow")
     public Long timeWindow;
+
     public GetDeparturesByCRSRequest withTimeWindow(Long timeWindow) {
         this.timeWindow = timeWindow;
         return this;
     }
     
+    public GetDeparturesByCRSRequest(@JsonProperty("CRS") String crs, @JsonProperty("apiKey") String apiKey) {
+        this.crs = crs;
+        this.apiKey = apiKey;
+  }
 }

@@ -57,12 +57,10 @@ public class ShippingMethods {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteShippingMethodsIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteShippingMethodsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteShippingMethodsIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteShippingMethodsIdJsonResponse(contentType, httpRes.statusCode()) {{
             deleteShippingMethodsIdJSON200ApplicationJSONString = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class ShippingMethods {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetShippingMethodsJsonResponse res = new org.openapis.openapi.models.operations.GetShippingMethodsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetShippingMethodsJsonResponse res = new org.openapis.openapi.models.operations.GetShippingMethodsJsonResponse(contentType, httpRes.statusCode()) {{
             shippingMethods = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,12 +148,10 @@ public class ShippingMethods {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetShippingMethodsIdJsonResponse res = new org.openapis.openapi.models.operations.GetShippingMethodsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetShippingMethodsIdJsonResponse res = new org.openapis.openapi.models.operations.GetShippingMethodsIdJsonResponse(contentType, httpRes.statusCode()) {{
             shippingMethod = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -209,12 +203,10 @@ public class ShippingMethods {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostShippingMethodsJsonResponse res = new org.openapis.openapi.models.operations.PostShippingMethodsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostShippingMethodsJsonResponse res = new org.openapis.openapi.models.operations.PostShippingMethodsJsonResponse(contentType, httpRes.statusCode()) {{
             shippingMethod = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -266,12 +258,10 @@ public class ShippingMethods {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutShippingMethodsIdJsonResponse res = new org.openapis.openapi.models.operations.PutShippingMethodsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutShippingMethodsIdJsonResponse res = new org.openapis.openapi.models.operations.PutShippingMethodsIdJsonResponse(contentType, httpRes.statusCode()) {{
             shippingMethod = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

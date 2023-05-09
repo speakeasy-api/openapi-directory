@@ -18,6 +18,7 @@ public class AddressVerificationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PostalAddress address;
+
     public AddressVerificationData withAddress(PostalAddress address) {
         this.address = address;
         return this;
@@ -29,9 +30,11 @@ public class AddressVerificationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessName")
     public String businessName;
+
     public AddressVerificationData withBusinessName(String businessName) {
         this.businessName = businessName;
         return this;
     }
     
+    public AddressVerificationData(){}
 }

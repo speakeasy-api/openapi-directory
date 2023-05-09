@@ -10,21 +10,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetResourceShareAssociationsRequestBody {
     /**
-     * Specifies that you want to retrieve only associations with this status.
+     * Specifies that you want to retrieve only associations that have this status.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associationStatus")
     public GetResourceShareAssociationsRequestBodyAssociationStatusEnum associationStatus;
+
     public GetResourceShareAssociationsRequestBody withAssociationStatus(GetResourceShareAssociationsRequestBodyAssociationStatusEnum associationStatus) {
         this.associationStatus = associationStatus;
         return this;
     }
     
     /**
-     * &lt;p&gt;Specifies whether you want to retrieve the associations that involve a specified resource or principal.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;PRINCIPAL&lt;/code&gt; \u2013 list the principals that are associated with the specified resource share.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;RESOURCE&lt;/code&gt; \u2013 list the resources that are associated with the specified resource share.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     * &lt;p&gt;Specifies whether you want to retrieve the associations that involve a specified resource or principal.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;PRINCIPAL&lt;/code&gt; \u2013 list the principals whose associations you want to see.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;RESOURCE&lt;/code&gt; \u2013 list the resources whose associations you want to see.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
      */
     @JsonProperty("associationType")
     public GetResourceShareAssociationsRequestBodyAssociationTypeEnum associationType;
+
     public GetResourceShareAssociationsRequestBody withAssociationType(GetResourceShareAssociationsRequestBodyAssociationTypeEnum associationType) {
         this.associationType = associationType;
         return this;
@@ -36,6 +38,7 @@ public class GetResourceShareAssociationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetResourceShareAssociationsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -47,28 +50,31 @@ public class GetResourceShareAssociationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetResourceShareAssociationsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
     /**
-     * &lt;p&gt;Specifies the ID of the principal whose resource shares you want to retrieve. This can be an Amazon Web Services account ID, an organization ID, an organizational unit ID, or the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resoure Name (ARN)&lt;/a&gt; of an individual IAM user or role.&lt;/p&gt; &lt;p&gt;You cannot specify this parameter if the association type is &lt;code&gt;RESOURCE&lt;/code&gt;.&lt;/p&gt;
+     * &lt;p&gt;Specifies the ID of the principal whose resource shares you want to retrieve. This can be an Amazon Web Services account ID, an organization ID, an organizational unit ID, or the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Name (ARN)&lt;/a&gt; of an individual IAM user or role.&lt;/p&gt; &lt;p&gt;You cannot specify this parameter if the association type is &lt;code&gt;RESOURCE&lt;/code&gt;.&lt;/p&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principal")
     public String principal;
+
     public GetResourceShareAssociationsRequestBody withPrincipal(String principal) {
         this.principal = principal;
         return this;
     }
     
     /**
-     * &lt;p&gt;Specifies the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resoure Name (ARN)&lt;/a&gt; of the resource whose resource shares you want to retrieve.&lt;/p&gt; &lt;p&gt;You cannot specify this parameter if the association type is &lt;code&gt;PRINCIPAL&lt;/code&gt;.&lt;/p&gt;
+     * &lt;p&gt;Specifies the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Name (ARN)&lt;/a&gt; of a resource whose resource shares you want to retrieve.&lt;/p&gt; &lt;p&gt;You cannot specify this parameter if the association type is &lt;code&gt;PRINCIPAL&lt;/code&gt;.&lt;/p&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public GetResourceShareAssociationsRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -80,9 +86,13 @@ public class GetResourceShareAssociationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareArns")
     public String[] resourceShareArns;
+
     public GetResourceShareAssociationsRequestBody withResourceShareArns(String[] resourceShareArns) {
         this.resourceShareArns = resourceShareArns;
         return this;
     }
     
+    public GetResourceShareAssociationsRequestBody(@JsonProperty("associationType") GetResourceShareAssociationsRequestBodyAssociationTypeEnum associationType) {
+        this.associationType = associationType;
+  }
 }

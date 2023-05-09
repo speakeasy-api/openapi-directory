@@ -15,6 +15,7 @@ public class InputTransformer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputPathsMap")
     public java.util.Map<String, String> inputPathsMap;
+
     public InputTransformer withInputPathsMap(java.util.Map<String, String> inputPathsMap) {
         this.inputPathsMap = inputPathsMap;
         return this;
@@ -22,9 +23,13 @@ public class InputTransformer {
     
     @JsonProperty("InputTemplate")
     public String inputTemplate;
+
     public InputTransformer withInputTemplate(String inputTemplate) {
         this.inputTemplate = inputTemplate;
         return this;
     }
     
+    public InputTransformer(@JsonProperty("InputTemplate") String inputTemplate) {
+        this.inputTemplate = inputTemplate;
+  }
 }

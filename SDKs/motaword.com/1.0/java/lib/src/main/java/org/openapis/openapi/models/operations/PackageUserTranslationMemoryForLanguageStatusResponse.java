@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PackageUserTranslationMemoryForLanguageStatusResponse {
@@ -12,6 +13,7 @@ public class PackageUserTranslationMemoryForLanguageStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.AsyncOperationStatus asyncOperationStatus;
+
     public PackageUserTranslationMemoryForLanguageStatusResponse withAsyncOperationStatus(org.openapis.openapi.models.shared.AsyncOperationStatus asyncOperationStatus) {
         this.asyncOperationStatus = asyncOperationStatus;
         return this;
@@ -19,6 +21,7 @@ public class PackageUserTranslationMemoryForLanguageStatusResponse {
     
     
     public String contentType;
+
     public PackageUserTranslationMemoryForLanguageStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PackageUserTranslationMemoryForLanguageStatusResponse {
     
     
     public Integer statusCode;
+
     public PackageUserTranslationMemoryForLanguageStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PackageUserTranslationMemoryForLanguageStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PackageUserTranslationMemoryForLanguageStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PackageUserTranslationMemoryForLanguageStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

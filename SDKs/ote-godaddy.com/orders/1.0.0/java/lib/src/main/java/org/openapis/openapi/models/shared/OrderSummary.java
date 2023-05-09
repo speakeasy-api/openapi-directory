@@ -14,6 +14,7 @@ public class OrderSummary {
      */
     @JsonProperty("createdAt")
     public String createdAt;
+
     public OrderSummary withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -24,6 +25,7 @@ public class OrderSummary {
      */
     @JsonProperty("currency")
     public String currency;
+
     public OrderSummary withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -34,6 +36,7 @@ public class OrderSummary {
      */
     @JsonProperty("items")
     public LineItemSummary[] items;
+
     public OrderSummary withItems(LineItemSummary[] items) {
         this.items = items;
         return this;
@@ -44,6 +47,7 @@ public class OrderSummary {
      */
     @JsonProperty("orderId")
     public String orderId;
+
     public OrderSummary withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -56,6 +60,7 @@ public class OrderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentOrderId")
     public String parentOrderId;
+
     public OrderSummary withParentOrderId(String parentOrderId) {
         this.parentOrderId = parentOrderId;
         return this;
@@ -63,9 +68,17 @@ public class OrderSummary {
     
     @JsonProperty("pricing")
     public OrderSummaryPricing pricing;
+
     public OrderSummary withPricing(OrderSummaryPricing pricing) {
         this.pricing = pricing;
         return this;
     }
     
+    public OrderSummary(@JsonProperty("createdAt") String createdAt, @JsonProperty("currency") String currency, @JsonProperty("items") LineItemSummary[] items, @JsonProperty("orderId") String orderId, @JsonProperty("pricing") OrderSummaryPricing pricing) {
+        this.createdAt = createdAt;
+        this.currency = currency;
+        this.items = items;
+        this.orderId = orderId;
+        this.pricing = pricing;
+  }
 }

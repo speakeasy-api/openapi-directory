@@ -15,6 +15,7 @@ public class GetScreenDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetScreenDataResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,6 +23,7 @@ public class GetScreenDataResult {
     
     @JsonProperty("results")
     public java.util.Map<String, ResultSet> results;
+
     public GetScreenDataResult withResults(java.util.Map<String, ResultSet> results) {
         this.results = results;
         return this;
@@ -29,9 +31,14 @@ public class GetScreenDataResult {
     
     @JsonProperty("workbookCursor")
     public Long workbookCursor;
+
     public GetScreenDataResult withWorkbookCursor(Long workbookCursor) {
         this.workbookCursor = workbookCursor;
         return this;
     }
     
+    public GetScreenDataResult(@JsonProperty("results") java.util.Map<String, ResultSet> results, @JsonProperty("workbookCursor") Long workbookCursor) {
+        this.results = results;
+        this.workbookCursor = workbookCursor;
+  }
 }

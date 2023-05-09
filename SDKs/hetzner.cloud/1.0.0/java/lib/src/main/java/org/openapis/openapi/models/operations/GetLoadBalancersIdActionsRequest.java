@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLoadBalancersIdActionsRequest {
@@ -12,6 +13,7 @@ public class GetLoadBalancersIdActionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetLoadBalancersIdActionsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetLoadBalancersIdActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetLoadBalancersIdActionsSortParameterSortEnum sort;
+
     public GetLoadBalancersIdActionsRequest withSort(GetLoadBalancersIdActionsSortParameterSortEnum sort) {
         this.sort = sort;
         return this;
@@ -32,9 +35,13 @@ public class GetLoadBalancersIdActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public GetLoadBalancersIdActionsStatusParameterStatusEnum status;
+
     public GetLoadBalancersIdActionsRequest withStatus(GetLoadBalancersIdActionsStatusParameterStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetLoadBalancersIdActionsRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

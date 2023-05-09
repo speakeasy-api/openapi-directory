@@ -12,6 +12,7 @@ public class UpdateLicenseSpecificationsForResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddLicenseSpecifications")
     public LicenseSpecification[] addLicenseSpecifications;
+
     public UpdateLicenseSpecificationsForResourceRequest withAddLicenseSpecifications(LicenseSpecification[] addLicenseSpecifications) {
         this.addLicenseSpecifications = addLicenseSpecifications;
         return this;
@@ -20,6 +21,7 @@ public class UpdateLicenseSpecificationsForResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoveLicenseSpecifications")
     public LicenseSpecification[] removeLicenseSpecifications;
+
     public UpdateLicenseSpecificationsForResourceRequest withRemoveLicenseSpecifications(LicenseSpecification[] removeLicenseSpecifications) {
         this.removeLicenseSpecifications = removeLicenseSpecifications;
         return this;
@@ -27,9 +29,13 @@ public class UpdateLicenseSpecificationsForResourceRequest {
     
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public UpdateLicenseSpecificationsForResourceRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public UpdateLicenseSpecificationsForResourceRequest(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

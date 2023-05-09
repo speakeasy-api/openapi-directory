@@ -17,6 +17,7 @@ public class LumaAsset {
      */
     @JsonProperty("src")
     public String src;
+
     public LumaAsset withSrc(String src) {
         this.src = src;
         return this;
@@ -28,6 +29,7 @@ public class LumaAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trim")
     public Double trim;
+
     public LumaAsset withTrim(Double trim) {
         this.trim = trim;
         return this;
@@ -38,9 +40,14 @@ public class LumaAsset {
      */
     @JsonProperty("type")
     public String type;
+
     public LumaAsset withType(String type) {
         this.type = type;
         return this;
     }
     
+    public LumaAsset(@JsonProperty("src") String src, @JsonProperty("type") String type) {
+        this.src = src;
+        this.type = type;
+  }
 }

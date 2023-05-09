@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetTotalPotHoldings200ApplicationJSON {
     @JsonProperty("pots")
     public GetTotalPotHoldings200ApplicationJSONPots[] pots;
+
     public GetTotalPotHoldings200ApplicationJSON withPots(GetTotalPotHoldings200ApplicationJSONPots[] pots) {
         this.pots = pots;
         return this;
     }
     
+    public GetTotalPotHoldings200ApplicationJSON(@JsonProperty("pots") GetTotalPotHoldings200ApplicationJSONPots[] pots) {
+        this.pots = pots;
+  }
 }

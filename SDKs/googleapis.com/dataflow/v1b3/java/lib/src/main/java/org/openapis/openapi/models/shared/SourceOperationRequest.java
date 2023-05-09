@@ -18,6 +18,7 @@ public class SourceOperationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("getMetadata")
     public SourceGetMetadataRequest getMetadata;
+
     public SourceOperationRequest withGetMetadata(SourceGetMetadataRequest getMetadata) {
         this.getMetadata = getMetadata;
         return this;
@@ -29,6 +30,7 @@ public class SourceOperationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SourceOperationRequest withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class SourceOperationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalName")
     public String originalName;
+
     public SourceOperationRequest withOriginalName(String originalName) {
         this.originalName = originalName;
         return this;
@@ -51,6 +54,7 @@ public class SourceOperationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("split")
     public SourceSplitRequest split;
+
     public SourceOperationRequest withSplit(SourceSplitRequest split) {
         this.split = split;
         return this;
@@ -62,6 +66,7 @@ public class SourceOperationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stageName")
     public String stageName;
+
     public SourceOperationRequest withStageName(String stageName) {
         this.stageName = stageName;
         return this;
@@ -73,9 +78,11 @@ public class SourceOperationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemName")
     public String systemName;
+
     public SourceOperationRequest withSystemName(String systemName) {
         this.systemName = systemName;
         return this;
     }
     
+    public SourceOperationRequest(){}
 }

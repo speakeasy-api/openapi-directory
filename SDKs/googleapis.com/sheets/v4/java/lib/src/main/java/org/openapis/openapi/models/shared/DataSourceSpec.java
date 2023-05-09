@@ -18,6 +18,7 @@ public class DataSourceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigQuery")
     public BigQueryDataSourceSpec bigQuery;
+
     public DataSourceSpec withBigQuery(BigQueryDataSourceSpec bigQuery) {
         this.bigQuery = bigQuery;
         return this;
@@ -29,9 +30,11 @@ public class DataSourceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public DataSourceParameter[] parameters;
+
     public DataSourceSpec withParameters(DataSourceParameter[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public DataSourceSpec(){}
 }

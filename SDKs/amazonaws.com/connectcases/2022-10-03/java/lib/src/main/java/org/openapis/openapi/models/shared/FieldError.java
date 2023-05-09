@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FieldError {
     @JsonProperty("errorCode")
     public String errorCode;
+
     public FieldError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -21,6 +22,7 @@ public class FieldError {
     
     @JsonProperty("id")
     public String id;
+
     public FieldError withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +31,14 @@ public class FieldError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public FieldError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public FieldError(@JsonProperty("errorCode") String errorCode, @JsonProperty("id") String id) {
+        this.errorCode = errorCode;
+        this.id = id;
+  }
 }

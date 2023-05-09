@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest {
@@ -12,6 +13,7 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest googleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withGoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest(org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest googleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest) {
         this.googleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest = googleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest;
         return this;
@@ -29,6 +32,7 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer")
     public String customer;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withCustomer(String customer) {
         this.customer = customer;
         return this;
@@ -69,6 +76,7 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest(@JsonProperty("customer") String customer) {
+        this.customer = customer;
+  }
 }

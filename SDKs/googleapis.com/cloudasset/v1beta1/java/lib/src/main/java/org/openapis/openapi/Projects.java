@@ -59,11 +59,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetProjectsBatchGetAssetsHistoryResponse res = new org.openapis.openapi.models.operations.CloudassetProjectsBatchGetAssetsHistoryResponse() {{
+        org.openapis.openapi.models.operations.CloudassetProjectsBatchGetAssetsHistoryResponse res = new org.openapis.openapi.models.operations.CloudassetProjectsBatchGetAssetsHistoryResponse(contentType, httpRes.statusCode()) {{
             batchGetAssetsHistoryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetProjectsExportAssetsResponse res = new org.openapis.openapi.models.operations.CloudassetProjectsExportAssetsResponse() {{
+        org.openapis.openapi.models.operations.CloudassetProjectsExportAssetsResponse res = new org.openapis.openapi.models.operations.CloudassetProjectsExportAssetsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.CloudassetProjectsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.CloudassetProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.CloudassetProjectsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

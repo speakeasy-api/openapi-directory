@@ -15,6 +15,7 @@ public class ApplicationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Item")
     public ApplicationResponse[] item;
+
     public ApplicationsResponse withItem(ApplicationResponse[] item) {
         this.item = item;
         return this;
@@ -23,9 +24,11 @@ public class ApplicationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ApplicationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ApplicationsResponse(){}
 }

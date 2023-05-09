@@ -18,6 +18,7 @@ public class SvmEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DNSName")
     public String dnsName;
+
     public SvmEndpoint withDNSName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -26,9 +27,11 @@ public class SvmEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddresses")
     public String[] ipAddresses;
+
     public SvmEndpoint withIpAddresses(String[] ipAddresses) {
         this.ipAddresses = ipAddresses;
         return this;
     }
     
+    public SvmEndpoint(){}
 }

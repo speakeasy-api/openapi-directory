@@ -22,6 +22,7 @@ public class AuditMitigationActionsTaskMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public AuditMitigationActionsTaskMetadata withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -30,6 +31,7 @@ public class AuditMitigationActionsTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public AuditMitigationActionsTaskMetadata withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -38,9 +40,11 @@ public class AuditMitigationActionsTaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskStatus")
     public AuditMitigationActionsTaskStatusEnum taskStatus;
+
     public AuditMitigationActionsTaskMetadata withTaskStatus(AuditMitigationActionsTaskStatusEnum taskStatus) {
         this.taskStatus = taskStatus;
         return this;
     }
     
+    public AuditMitigationActionsTaskMetadata(){}
 }

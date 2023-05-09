@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETShippingLabelRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=APIVersion")
     public String apiVersion;
+
     public GETGETShippingLabelRequest withAPIVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -16,6 +18,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
     public String awsAccessKeyId;
+
     public GETGETShippingLabelRequest withAWSAccessKeyId(String awsAccessKeyId) {
         this.awsAccessKeyId = awsAccessKeyId;
         return this;
@@ -23,6 +26,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETShippingLabelActionEnum action;
+
     public GETGETShippingLabelRequest withAction(GETGETShippingLabelActionEnum action) {
         this.action = action;
         return this;
@@ -30,6 +34,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Operation")
     public GETGETShippingLabelOperationEnum operation;
+
     public GETGETShippingLabelRequest withOperation(GETGETShippingLabelOperationEnum operation) {
         this.operation = operation;
         return this;
@@ -37,6 +42,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
     public String signature;
+
     public GETGETShippingLabelRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -44,6 +50,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
     public String signatureMethod;
+
     public GETGETShippingLabelRequest withSignatureMethod(String signatureMethod) {
         this.signatureMethod = signatureMethod;
         return this;
@@ -51,6 +58,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
     public String signatureVersion;
+
     public GETGETShippingLabelRequest withSignatureVersion(String signatureVersion) {
         this.signatureVersion = signatureVersion;
         return this;
@@ -58,6 +66,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
     public String timestamp;
+
     public GETGETShippingLabelRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -65,6 +74,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETShippingLabelVersionEnum version;
+
     public GETGETShippingLabelRequest withVersion(GETGETShippingLabelVersionEnum version) {
         this.version = version;
         return this;
@@ -72,6 +82,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
     public String city;
+
     public GETGETShippingLabelRequest withCity(String city) {
         this.city = city;
         return this;
@@ -79,6 +90,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company")
     public String company;
+
     public GETGETShippingLabelRequest withCompany(String company) {
         this.company = company;
         return this;
@@ -86,6 +98,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GETGETShippingLabelRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -93,6 +106,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jobIds")
     public String[] jobIds;
+
     public GETGETShippingLabelRequest withJobIds(String[] jobIds) {
         this.jobIds = jobIds;
         return this;
@@ -100,6 +114,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GETGETShippingLabelRequest withName(String name) {
         this.name = name;
         return this;
@@ -107,6 +122,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phoneNumber")
     public String phoneNumber;
+
     public GETGETShippingLabelRequest withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -114,6 +130,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=postalCode")
     public String postalCode;
+
     public GETGETShippingLabelRequest withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -121,6 +138,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stateOrProvince")
     public String stateOrProvince;
+
     public GETGETShippingLabelRequest withStateOrProvince(String stateOrProvince) {
         this.stateOrProvince = stateOrProvince;
         return this;
@@ -128,6 +146,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=street1")
     public String street1;
+
     public GETGETShippingLabelRequest withStreet1(String street1) {
         this.street1 = street1;
         return this;
@@ -135,6 +154,7 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=street2")
     public String street2;
+
     public GETGETShippingLabelRequest withStreet2(String street2) {
         this.street2 = street2;
         return this;
@@ -142,9 +162,21 @@ public class GETGETShippingLabelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=street3")
     public String street3;
+
     public GETGETShippingLabelRequest withStreet3(String street3) {
         this.street3 = street3;
         return this;
     }
     
+    public GETGETShippingLabelRequest(@JsonProperty("AWSAccessKeyId") String awsAccessKeyId, @JsonProperty("Action") GETGETShippingLabelActionEnum action, @JsonProperty("Operation") GETGETShippingLabelOperationEnum operation, @JsonProperty("Signature") String signature, @JsonProperty("SignatureMethod") String signatureMethod, @JsonProperty("SignatureVersion") String signatureVersion, @JsonProperty("Timestamp") String timestamp, @JsonProperty("Version") GETGETShippingLabelVersionEnum version, @JsonProperty("jobIds") String[] jobIds) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        this.action = action;
+        this.operation = operation;
+        this.signature = signature;
+        this.signatureMethod = signatureMethod;
+        this.signatureVersion = signatureVersion;
+        this.timestamp = timestamp;
+        this.version = version;
+        this.jobIds = jobIds;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1DateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceEndDate")
     public GoogleTypeDate invoiceEndDate;
+
     public GoogleCloudChannelV1DateRange withInvoiceEndDate(GoogleTypeDate invoiceEndDate) {
         this.invoiceEndDate = invoiceEndDate;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1DateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceStartDate")
     public GoogleTypeDate invoiceStartDate;
+
     public GoogleCloudChannelV1DateRange withInvoiceStartDate(GoogleTypeDate invoiceStartDate) {
         this.invoiceStartDate = invoiceStartDate;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudChannelV1DateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageEndDateTime")
     public GoogleTypeDateTime usageEndDateTime;
+
     public GoogleCloudChannelV1DateRange withUsageEndDateTime(GoogleTypeDateTime usageEndDateTime) {
         this.usageEndDateTime = usageEndDateTime;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudChannelV1DateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageStartDateTime")
     public GoogleTypeDateTime usageStartDateTime;
+
     public GoogleCloudChannelV1DateRange withUsageStartDateTime(GoogleTypeDateTime usageStartDateTime) {
         this.usageStartDateTime = usageStartDateTime;
         return this;
     }
     
+    public GoogleCloudChannelV1DateRange(){}
 }

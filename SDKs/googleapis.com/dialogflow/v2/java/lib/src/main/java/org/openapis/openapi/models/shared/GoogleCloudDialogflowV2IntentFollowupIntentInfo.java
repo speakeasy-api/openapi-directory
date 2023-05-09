@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2IntentFollowupIntentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followupIntentName")
     public String followupIntentName;
+
     public GoogleCloudDialogflowV2IntentFollowupIntentInfo withFollowupIntentName(String followupIntentName) {
         this.followupIntentName = followupIntentName;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2IntentFollowupIntentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentFollowupIntentName")
     public String parentFollowupIntentName;
+
     public GoogleCloudDialogflowV2IntentFollowupIntentInfo withParentFollowupIntentName(String parentFollowupIntentName) {
         this.parentFollowupIntentName = parentFollowupIntentName;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentFollowupIntentInfo(){}
 }

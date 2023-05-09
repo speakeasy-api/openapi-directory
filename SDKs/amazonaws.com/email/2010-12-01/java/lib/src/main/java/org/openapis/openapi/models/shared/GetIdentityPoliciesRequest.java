@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetIdentityPoliciesRequest - Represents a request to return the requested sending authorization policies for an identity. Sending authorization is an Amazon SES feature that enables you to authorize other senders to use your identities. For information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetIdentityPoliciesRequest {
     
     public String identity;
+
     public GetIdentityPoliciesRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -19,9 +20,14 @@ public class GetIdentityPoliciesRequest {
     
     
     public String[] policyNames;
+
     public GetIdentityPoliciesRequest withPolicyNames(String[] policyNames) {
         this.policyNames = policyNames;
         return this;
     }
     
+    public GetIdentityPoliciesRequest(@JsonProperty("Identity") String identity, @JsonProperty("PolicyNames") String[] policyNames) {
+        this.identity = identity;
+        this.policyNames = policyNames;
+  }
 }

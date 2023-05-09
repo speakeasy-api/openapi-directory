@@ -18,6 +18,7 @@ public class MethodSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longRunning")
     public LongRunning longRunning;
+
     public MethodSettings withLongRunning(LongRunning longRunning) {
         this.longRunning = longRunning;
         return this;
@@ -29,9 +30,11 @@ public class MethodSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selector")
     public String selector;
+
     public MethodSettings withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public MethodSettings(){}
 }

@@ -15,6 +15,7 @@ public class DataRepositoryTaskFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public DataRepositoryTaskFilterNameEnum name;
+
     public DataRepositoryTaskFilter withName(DataRepositoryTaskFilterNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class DataRepositoryTaskFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public DataRepositoryTaskFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DataRepositoryTaskFilter(){}
 }

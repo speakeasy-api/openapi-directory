@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResendContactReachabilityEmailResponse {
     
     public String contentType;
+
     public ResendContactReachabilityEmailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ResendContactReachabilityEmailResponse {
      */
     
     public Object invalidInput;
+
     public ResendContactReachabilityEmailResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -29,6 +32,7 @@ public class ResendContactReachabilityEmailResponse {
      */
     
     public Object operationLimitExceeded;
+
     public ResendContactReachabilityEmailResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -39,6 +43,7 @@ public class ResendContactReachabilityEmailResponse {
      */
     
     public org.openapis.openapi.models.shared.ResendContactReachabilityEmailResponse resendContactReachabilityEmailResponse;
+
     public ResendContactReachabilityEmailResponse withResendContactReachabilityEmailResponse(org.openapis.openapi.models.shared.ResendContactReachabilityEmailResponse resendContactReachabilityEmailResponse) {
         this.resendContactReachabilityEmailResponse = resendContactReachabilityEmailResponse;
         return this;
@@ -46,6 +51,7 @@ public class ResendContactReachabilityEmailResponse {
     
     
     public Integer statusCode;
+
     public ResendContactReachabilityEmailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ResendContactReachabilityEmailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResendContactReachabilityEmailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ResendContactReachabilityEmailResponse {
      */
     
     public Object unsupportedTLD;
+
     public ResendContactReachabilityEmailResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public ResendContactReachabilityEmailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class FunctionEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFeatures")
     public java.util.Map<String, Object> customFeatures;
+
     public FunctionEntity withCustomFeatures(java.util.Map<String, Object> customFeatures) {
         this.customFeatures = customFeatures;
         return this;
@@ -29,9 +30,11 @@ public class FunctionEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlCode")
     public String sqlCode;
+
     public FunctionEntity withSqlCode(String sqlCode) {
         this.sqlCode = sqlCode;
         return this;
     }
     
+    public FunctionEntity(){}
 }

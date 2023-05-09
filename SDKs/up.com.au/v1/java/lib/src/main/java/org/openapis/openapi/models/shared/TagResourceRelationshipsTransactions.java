@@ -12,9 +12,11 @@ public class TagResourceRelationshipsTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public TagResourceRelationshipsTransactionsLinks links;
+
     public TagResourceRelationshipsTransactions withLinks(TagResourceRelationshipsTransactionsLinks links) {
         this.links = links;
         return this;
     }
     
+    public TagResourceRelationshipsTransactions(){}
 }

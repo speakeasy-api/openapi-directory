@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetImportRequest {
     @JsonProperty("ImportId")
     public String importId;
+
     public GetImportRequest withImportId(String importId) {
         this.importId = importId;
         return this;
     }
     
+    public GetImportRequest(@JsonProperty("ImportId") String importId) {
+        this.importId = importId;
+  }
 }

@@ -15,6 +15,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponent {
      */
     
     public Long activeEventCardHash;
+
     public DestinyEntitiesProfilesDestinyProfileComponent withActiveEventCardHash(Long activeEventCardHash) {
         this.activeEventCardHash = activeEventCardHash;
         return this;
@@ -25,6 +26,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponent {
      */
     
     public Long[] characterIds;
+
     public DestinyEntitiesProfilesDestinyProfileComponent withCharacterIds(Long[] characterIds) {
         this.characterIds = characterIds;
         return this;
@@ -35,6 +37,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponent {
      */
     
     public Integer currentGuardianRank;
+
     public DestinyEntitiesProfilesDestinyProfileComponent withCurrentGuardianRank(Integer currentGuardianRank) {
         this.currentGuardianRank = currentGuardianRank;
         return this;
@@ -45,6 +48,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponent {
      */
     
     public Long currentSeasonHash;
+
     public DestinyEntitiesProfilesDestinyProfileComponent withCurrentSeasonHash(Long currentSeasonHash) {
         this.currentSeasonHash = currentSeasonHash;
         return this;
@@ -55,6 +59,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponent {
      */
     
     public Integer currentSeasonRewardPowerCap;
+
     public DestinyEntitiesProfilesDestinyProfileComponent withCurrentSeasonRewardPowerCap(Integer currentSeasonRewardPowerCap) {
         this.currentSeasonRewardPowerCap = currentSeasonRewardPowerCap;
         return this;
@@ -65,6 +70,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponent {
      */
     
     public OffsetDateTime dateLastPlayed;
+
     public DestinyEntitiesProfilesDestinyProfileComponent withDateLastPlayed(OffsetDateTime dateLastPlayed) {
         this.dateLastPlayed = dateLastPlayed;
         return this;
@@ -75,6 +81,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponent {
      */
     
     public Long[] eventCardHashesOwned;
+
     public DestinyEntitiesProfilesDestinyProfileComponent withEventCardHashesOwned(Long[] eventCardHashesOwned) {
         this.eventCardHashesOwned = eventCardHashesOwned;
         return this;
@@ -85,6 +92,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponent {
      */
     
     public Integer lifetimeHighestGuardianRank;
+
     public DestinyEntitiesProfilesDestinyProfileComponent withLifetimeHighestGuardianRank(Integer lifetimeHighestGuardianRank) {
         this.lifetimeHighestGuardianRank = lifetimeHighestGuardianRank;
         return this;
@@ -96,6 +104,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponent {
      */
     
     public Long[] seasonHashes;
+
     public DestinyEntitiesProfilesDestinyProfileComponent withSeasonHashes(Long[] seasonHashes) {
         this.seasonHashes = seasonHashes;
         return this;
@@ -106,6 +115,7 @@ public class DestinyEntitiesProfilesDestinyProfileComponent {
      */
     
     public DestinyEntitiesProfilesDestinyProfileComponentUserInfo userInfo;
+
     public DestinyEntitiesProfilesDestinyProfileComponent withUserInfo(DestinyEntitiesProfilesDestinyProfileComponentUserInfo userInfo) {
         this.userInfo = userInfo;
         return this;
@@ -118,9 +128,11 @@ public class DestinyEntitiesProfilesDestinyProfileComponent {
      */
     
     public Integer versionsOwned;
+
     public DestinyEntitiesProfilesDestinyProfileComponent withVersionsOwned(Integer versionsOwned) {
         this.versionsOwned = versionsOwned;
         return this;
     }
     
+    public DestinyEntitiesProfilesDestinyProfileComponent(){}
 }

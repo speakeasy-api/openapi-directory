@@ -15,6 +15,7 @@ public class Ilpmt503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Ilpmt503ApplicationJSONErrorEnum error;
+
     public Ilpmt503ApplicationJSON withError(Ilpmt503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Ilpmt503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Ilpmt503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Ilpmt503ApplicationJSON withErrorDescription(Ilpmt503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Ilpmt503ApplicationJSON(){}
 }

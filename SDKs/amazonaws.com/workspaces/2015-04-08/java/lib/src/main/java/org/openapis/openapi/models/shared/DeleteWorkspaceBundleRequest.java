@@ -12,9 +12,11 @@ public class DeleteWorkspaceBundleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BundleId")
     public String bundleId;
+
     public DeleteWorkspaceBundleRequest withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
     }
     
+    public DeleteWorkspaceBundleRequest(){}
 }

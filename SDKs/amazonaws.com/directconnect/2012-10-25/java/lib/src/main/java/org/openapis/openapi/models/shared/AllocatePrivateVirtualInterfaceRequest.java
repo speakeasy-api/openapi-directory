@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AllocatePrivateVirtualInterfaceRequest {
     @JsonProperty("connectionId")
     public String connectionId;
+
     public AllocatePrivateVirtualInterfaceRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -16,6 +17,7 @@ public class AllocatePrivateVirtualInterfaceRequest {
     
     @JsonProperty("newPrivateVirtualInterfaceAllocation")
     public NewPrivateVirtualInterfaceAllocation newPrivateVirtualInterfaceAllocation;
+
     public AllocatePrivateVirtualInterfaceRequest withNewPrivateVirtualInterfaceAllocation(NewPrivateVirtualInterfaceAllocation newPrivateVirtualInterfaceAllocation) {
         this.newPrivateVirtualInterfaceAllocation = newPrivateVirtualInterfaceAllocation;
         return this;
@@ -23,9 +25,15 @@ public class AllocatePrivateVirtualInterfaceRequest {
     
     @JsonProperty("ownerAccount")
     public String ownerAccount;
+
     public AllocatePrivateVirtualInterfaceRequest withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
     
+    public AllocatePrivateVirtualInterfaceRequest(@JsonProperty("connectionId") String connectionId, @JsonProperty("newPrivateVirtualInterfaceAllocation") NewPrivateVirtualInterfaceAllocation newPrivateVirtualInterfaceAllocation, @JsonProperty("ownerAccount") String ownerAccount) {
+        this.connectionId = connectionId;
+        this.newPrivateVirtualInterfaceAllocation = newPrivateVirtualInterfaceAllocation;
+        this.ownerAccount = ownerAccount;
+  }
 }

@@ -12,6 +12,7 @@ public class SettingModelHaljsonEmbeddedTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public SettingModelHaljsonEmbeddedTagsEmbedded embedded;
+
     public SettingModelHaljsonEmbeddedTags withEmbedded(SettingModelHaljsonEmbeddedTagsEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -20,6 +21,7 @@ public class SettingModelHaljsonEmbeddedTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public SettingModelHaljsonEmbeddedTagsLinks links;
+
     public SettingModelHaljsonEmbeddedTags withLinks(SettingModelHaljsonEmbeddedTagsLinks links) {
         this.links = links;
         return this;
@@ -28,6 +30,7 @@ public class SettingModelHaljsonEmbeddedTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public SettingModelHaljsonEmbeddedTags withColor(String color) {
         this.color = color;
         return this;
@@ -36,6 +39,7 @@ public class SettingModelHaljsonEmbeddedTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SettingModelHaljsonEmbeddedTags withName(String name) {
         this.name = name;
         return this;
@@ -44,9 +48,11 @@ public class SettingModelHaljsonEmbeddedTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagId")
     public Long tagId;
+
     public SettingModelHaljsonEmbeddedTags withTagId(Long tagId) {
         this.tagId = tagId;
         return this;
     }
     
+    public SettingModelHaljsonEmbeddedTags(){}
 }

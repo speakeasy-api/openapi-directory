@@ -12,6 +12,7 @@ public class UpdateDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateDomainRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UpdateDomainRequest {
     
     @JsonProperty("DomainId")
     public String domainId;
+
     public UpdateDomainRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -26,6 +28,7 @@ public class UpdateDomainRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateDomainRequest withName(String name) {
         this.name = name;
         return this;
@@ -33,9 +36,15 @@ public class UpdateDomainRequest {
     
     @JsonProperty("ServerSideEncryptionConfiguration")
     public ServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
+
     public UpdateDomainRequest withServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
         this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
         return this;
     }
     
+    public UpdateDomainRequest(@JsonProperty("DomainId") String domainId, @JsonProperty("Name") String name, @JsonProperty("ServerSideEncryptionConfiguration") ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
+        this.domainId = domainId;
+        this.name = name;
+        this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
+  }
 }

@@ -18,6 +18,7 @@ public class ReplicationCycleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycleNumber")
     public Integer cycleNumber;
+
     public ReplicationCycleInput withCycleNumber(Integer cycleNumber) {
         this.cycleNumber = cycleNumber;
         return this;
@@ -29,6 +30,7 @@ public class ReplicationCycleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public ReplicationCycleInput withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +42,7 @@ public class ReplicationCycleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public ReplicationCycleInput withError(Status error) {
         this.error = error;
         return this;
@@ -51,6 +54,7 @@ public class ReplicationCycleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReplicationCycleInput withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class ReplicationCycleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     public Integer progress;
+
     public ReplicationCycleInput withProgress(Integer progress) {
         this.progress = progress;
         return this;
@@ -73,6 +78,7 @@ public class ReplicationCycleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progressPercent")
     public Integer progressPercent;
+
     public ReplicationCycleInput withProgressPercent(Integer progressPercent) {
         this.progressPercent = progressPercent;
         return this;
@@ -84,6 +90,7 @@ public class ReplicationCycleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public ReplicationCycleInput withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -95,6 +102,7 @@ public class ReplicationCycleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ReplicationCycleStateEnum state;
+
     public ReplicationCycleInput withState(ReplicationCycleStateEnum state) {
         this.state = state;
         return this;
@@ -106,6 +114,7 @@ public class ReplicationCycleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public CycleStep[] steps;
+
     public ReplicationCycleInput withSteps(CycleStep[] steps) {
         this.steps = steps;
         return this;
@@ -117,9 +126,11 @@ public class ReplicationCycleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalPauseDuration")
     public String totalPauseDuration;
+
     public ReplicationCycleInput withTotalPauseDuration(String totalPauseDuration) {
         this.totalPauseDuration = totalPauseDuration;
         return this;
     }
     
+    public ReplicationCycleInput(){}
 }

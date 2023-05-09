@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetThirdPartyJobDetailsResponse {
     
     public String contentType;
+
     public GetThirdPartyJobDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetThirdPartyJobDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetThirdPartyJobDetailsOutput getThirdPartyJobDetailsOutput;
+
     public GetThirdPartyJobDetailsResponse withGetThirdPartyJobDetailsOutput(org.openapis.openapi.models.shared.GetThirdPartyJobDetailsOutput getThirdPartyJobDetailsOutput) {
         this.getThirdPartyJobDetailsOutput = getThirdPartyJobDetailsOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetThirdPartyJobDetailsResponse {
      */
     
     public Object invalidClientTokenException;
+
     public GetThirdPartyJobDetailsResponse withInvalidClientTokenException(Object invalidClientTokenException) {
         this.invalidClientTokenException = invalidClientTokenException;
         return this;
@@ -39,6 +43,7 @@ public class GetThirdPartyJobDetailsResponse {
      */
     
     public Object invalidJobException;
+
     public GetThirdPartyJobDetailsResponse withInvalidJobException(Object invalidJobException) {
         this.invalidJobException = invalidJobException;
         return this;
@@ -49,6 +54,7 @@ public class GetThirdPartyJobDetailsResponse {
      */
     
     public Object jobNotFoundException;
+
     public GetThirdPartyJobDetailsResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetThirdPartyJobDetailsResponse {
     
     
     public Integer statusCode;
+
     public GetThirdPartyJobDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetThirdPartyJobDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetThirdPartyJobDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetThirdPartyJobDetailsResponse {
      */
     
     public Object validationException;
+
     public GetThirdPartyJobDetailsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetThirdPartyJobDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

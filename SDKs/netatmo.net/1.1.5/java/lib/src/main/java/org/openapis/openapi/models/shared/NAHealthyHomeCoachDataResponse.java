@@ -15,6 +15,7 @@ public class NAHealthyHomeCoachDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public NAHealthyHomeCoachDataBody body;
+
     public NAHealthyHomeCoachDataResponse withBody(NAHealthyHomeCoachDataBody body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class NAHealthyHomeCoachDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public NAHealthyHomeCoachDataResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -31,6 +33,7 @@ public class NAHealthyHomeCoachDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_exec")
     public Double timeExec;
+
     public NAHealthyHomeCoachDataResponse withTimeExec(Double timeExec) {
         this.timeExec = timeExec;
         return this;
@@ -39,9 +42,11 @@ public class NAHealthyHomeCoachDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_server")
     public Integer timeServer;
+
     public NAHealthyHomeCoachDataResponse withTimeServer(Integer timeServer) {
         this.timeServer = timeServer;
         return this;
     }
     
+    public NAHealthyHomeCoachDataResponse(){}
 }

@@ -15,6 +15,7 @@ public class LiveStreamHealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationIssues")
     public LiveStreamConfigurationIssue[] configurationIssues;
+
     public LiveStreamHealthStatus withConfigurationIssues(LiveStreamConfigurationIssue[] configurationIssues) {
         this.configurationIssues = configurationIssues;
         return this;
@@ -26,6 +27,7 @@ public class LiveStreamHealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateTimeSeconds")
     public String lastUpdateTimeSeconds;
+
     public LiveStreamHealthStatus withLastUpdateTimeSeconds(String lastUpdateTimeSeconds) {
         this.lastUpdateTimeSeconds = lastUpdateTimeSeconds;
         return this;
@@ -37,9 +39,11 @@ public class LiveStreamHealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public LiveStreamHealthStatusStatusEnum status;
+
     public LiveStreamHealthStatus withStatus(LiveStreamHealthStatusStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public LiveStreamHealthStatus(){}
 }

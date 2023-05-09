@@ -15,6 +15,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clearTimer")
     public ClearTimerAction clearTimer;
+
     public Action withClearTimer(ClearTimerAction clearTimer) {
         this.clearTimer = clearTimer;
         return this;
@@ -23,6 +24,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamoDB")
     public DynamoDBAction dynamoDB;
+
     public Action withDynamoDB(DynamoDBAction dynamoDB) {
         this.dynamoDB = dynamoDB;
         return this;
@@ -31,6 +33,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamoDBv2")
     public DynamoDBv2Action dynamoDBv2;
+
     public Action withDynamoDBv2(DynamoDBv2Action dynamoDBv2) {
         this.dynamoDBv2 = dynamoDBv2;
         return this;
@@ -39,6 +42,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firehose")
     public FirehoseAction firehose;
+
     public Action withFirehose(FirehoseAction firehose) {
         this.firehose = firehose;
         return this;
@@ -47,6 +51,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotEvents")
     public IotEventsAction iotEvents;
+
     public Action withIotEvents(IotEventsAction iotEvents) {
         this.iotEvents = iotEvents;
         return this;
@@ -55,6 +60,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotSiteWise")
     public IotSiteWiseAction iotSiteWise;
+
     public Action withIotSiteWise(IotSiteWiseAction iotSiteWise) {
         this.iotSiteWise = iotSiteWise;
         return this;
@@ -63,6 +69,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotTopicPublish")
     public IotTopicPublishAction iotTopicPublish;
+
     public Action withIotTopicPublish(IotTopicPublishAction iotTopicPublish) {
         this.iotTopicPublish = iotTopicPublish;
         return this;
@@ -71,6 +78,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambda")
     public LambdaAction lambda;
+
     public Action withLambda(LambdaAction lambda) {
         this.lambda = lambda;
         return this;
@@ -79,6 +87,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetTimer")
     public ResetTimerAction resetTimer;
+
     public Action withResetTimer(ResetTimerAction resetTimer) {
         this.resetTimer = resetTimer;
         return this;
@@ -87,6 +96,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setTimer")
     public SetTimerAction setTimer;
+
     public Action withSetTimer(SetTimerAction setTimer) {
         this.setTimer = setTimer;
         return this;
@@ -95,6 +105,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setVariable")
     public SetVariableAction setVariable;
+
     public Action withSetVariable(SetVariableAction setVariable) {
         this.setVariable = setVariable;
         return this;
@@ -103,6 +114,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sns")
     public SNSTopicPublishAction sns;
+
     public Action withSns(SNSTopicPublishAction sns) {
         this.sns = sns;
         return this;
@@ -111,9 +123,11 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqs")
     public SqsAction sqs;
+
     public Action withSqs(SqsAction sqs) {
         this.sqs = sqs;
         return this;
     }
     
+    public Action(){}
 }

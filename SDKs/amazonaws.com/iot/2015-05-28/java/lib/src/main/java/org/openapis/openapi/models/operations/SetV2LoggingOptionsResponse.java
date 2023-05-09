@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetV2LoggingOptionsResponse {
     
     public String contentType;
+
     public SetV2LoggingOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SetV2LoggingOptionsResponse {
      */
     
     public Object internalException;
+
     public SetV2LoggingOptionsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class SetV2LoggingOptionsResponse {
      */
     
     public Object invalidRequestException;
+
     public SetV2LoggingOptionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class SetV2LoggingOptionsResponse {
     
     
     public Integer statusCode;
+
     public SetV2LoggingOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class SetV2LoggingOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetV2LoggingOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class SetV2LoggingOptionsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public SetV2LoggingOptionsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public SetV2LoggingOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

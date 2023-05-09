@@ -15,6 +15,7 @@ public class IpAddressResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTime")
     public String creationTime;
+
     public IpAddressResponse withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -23,6 +24,7 @@ public class IpAddressResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ip")
     public String ip;
+
     public IpAddressResponse withIp(String ip) {
         this.ip = ip;
         return this;
@@ -31,6 +33,7 @@ public class IpAddressResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpId")
     public String ipId;
+
     public IpAddressResponse withIpId(String ipId) {
         this.ipId = ipId;
         return this;
@@ -39,6 +42,7 @@ public class IpAddressResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv6")
     public String ipv6;
+
     public IpAddressResponse withIpv6(String ipv6) {
         this.ipv6 = ipv6;
         return this;
@@ -47,6 +51,7 @@ public class IpAddressResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModificationTime")
     public String modificationTime;
+
     public IpAddressResponse withModificationTime(String modificationTime) {
         this.modificationTime = modificationTime;
         return this;
@@ -55,6 +60,7 @@ public class IpAddressResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public IpAddressStatusEnum status;
+
     public IpAddressResponse withStatus(IpAddressStatusEnum status) {
         this.status = status;
         return this;
@@ -63,6 +69,7 @@ public class IpAddressResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public IpAddressResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -71,9 +78,11 @@ public class IpAddressResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public IpAddressResponse withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public IpAddressResponse(){}
 }

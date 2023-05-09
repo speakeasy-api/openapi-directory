@@ -17,6 +17,7 @@ public class ReportOutput {
      */
     @JsonProperty("checks")
     public String checks;
+
     public ReportOutput withChecks(String checks) {
         this.checks = checks;
         return this;
@@ -27,6 +28,7 @@ public class ReportOutput {
      */
     @JsonProperty("report")
     public Report report;
+
     public ReportOutput withReport(Report report) {
         this.report = report;
         return this;
@@ -38,9 +40,14 @@ public class ReportOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public ReportOutput withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public ReportOutput(@JsonProperty("checks") String checks, @JsonProperty("report") Report report) {
+        this.checks = checks;
+        this.report = report;
+  }
 }

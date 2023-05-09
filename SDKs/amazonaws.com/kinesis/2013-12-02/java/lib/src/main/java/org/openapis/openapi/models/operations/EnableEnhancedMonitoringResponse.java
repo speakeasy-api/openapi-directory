@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableEnhancedMonitoringResponse {
@@ -12,6 +13,7 @@ public class EnableEnhancedMonitoringResponse {
      */
     
     public Object accessDeniedException;
+
     public EnableEnhancedMonitoringResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class EnableEnhancedMonitoringResponse {
     
     
     public String contentType;
+
     public EnableEnhancedMonitoringResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class EnableEnhancedMonitoringResponse {
      */
     
     public org.openapis.openapi.models.shared.EnhancedMonitoringOutput enhancedMonitoringOutput;
+
     public EnableEnhancedMonitoringResponse withEnhancedMonitoringOutput(org.openapis.openapi.models.shared.EnhancedMonitoringOutput enhancedMonitoringOutput) {
         this.enhancedMonitoringOutput = enhancedMonitoringOutput;
         return this;
@@ -39,6 +43,7 @@ public class EnableEnhancedMonitoringResponse {
      */
     
     public Object invalidArgumentException;
+
     public EnableEnhancedMonitoringResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class EnableEnhancedMonitoringResponse {
      */
     
     public Object limitExceededException;
+
     public EnableEnhancedMonitoringResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class EnableEnhancedMonitoringResponse {
     
     
     public Integer statusCode;
+
     public EnableEnhancedMonitoringResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class EnableEnhancedMonitoringResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableEnhancedMonitoringResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class EnableEnhancedMonitoringResponse {
      */
     
     public Object resourceInUseException;
+
     public EnableEnhancedMonitoringResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -83,9 +92,14 @@ public class EnableEnhancedMonitoringResponse {
      */
     
     public Object resourceNotFoundException;
+
     public EnableEnhancedMonitoringResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public EnableEnhancedMonitoringResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

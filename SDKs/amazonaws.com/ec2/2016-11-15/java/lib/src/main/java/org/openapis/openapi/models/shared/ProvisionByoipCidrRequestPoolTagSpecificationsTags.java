@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ProvisionByoipCidrRequestPoolTagSpecificationsTags {
     
     public String key;
+
     public ProvisionByoipCidrRequestPoolTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class ProvisionByoipCidrRequestPoolTagSpecificationsTags {
     
     
     public String value;
+
     public ProvisionByoipCidrRequestPoolTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ProvisionByoipCidrRequestPoolTagSpecificationsTags(){}
 }

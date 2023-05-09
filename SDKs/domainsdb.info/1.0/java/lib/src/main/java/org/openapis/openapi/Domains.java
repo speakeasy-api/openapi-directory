@@ -59,10 +59,8 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadResponse res = new org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadResponse() {{
+        org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadResponse res = new org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -97,11 +95,9 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomainsTldZoneIdSearchResponse res = new org.openapis.openapi.models.operations.GetDomainsTldZoneIdSearchResponse() {{
+        org.openapis.openapi.models.operations.GetDomainsTldZoneIdSearchResponse res = new org.openapis.openapi.models.operations.GetDomainsTldZoneIdSearchResponse(contentType, httpRes.statusCode()) {{
             searchResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -143,11 +139,9 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomainsUpdatesAddedResponse res = new org.openapis.openapi.models.operations.GetDomainsUpdatesAddedResponse() {{
+        org.openapis.openapi.models.operations.GetDomainsUpdatesAddedResponse res = new org.openapis.openapi.models.operations.GetDomainsUpdatesAddedResponse(contentType, httpRes.statusCode()) {{
             searchResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -189,10 +183,8 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomainsUpdatesAddedDownloadResponse res = new org.openapis.openapi.models.operations.GetDomainsUpdatesAddedDownloadResponse() {{
+        org.openapis.openapi.models.operations.GetDomainsUpdatesAddedDownloadResponse res = new org.openapis.openapi.models.operations.GetDomainsUpdatesAddedDownloadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -227,11 +219,9 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomainsUpdatesDeletedResponse res = new org.openapis.openapi.models.operations.GetDomainsUpdatesDeletedResponse() {{
+        org.openapis.openapi.models.operations.GetDomainsUpdatesDeletedResponse res = new org.openapis.openapi.models.operations.GetDomainsUpdatesDeletedResponse(contentType, httpRes.statusCode()) {{
             searchResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -273,10 +263,8 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomainsUpdatesDeletedDownloadResponse res = new org.openapis.openapi.models.operations.GetDomainsUpdatesDeletedDownloadResponse() {{
+        org.openapis.openapi.models.operations.GetDomainsUpdatesDeletedDownloadResponse res = new org.openapis.openapi.models.operations.GetDomainsUpdatesDeletedDownloadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -311,11 +299,9 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomainsUpdatesListResponse res = new org.openapis.openapi.models.operations.GetDomainsUpdatesListResponse() {{
+        org.openapis.openapi.models.operations.GetDomainsUpdatesListResponse res = new org.openapis.openapi.models.operations.GetDomainsUpdatesListResponse(contentType, httpRes.statusCode()) {{
             updateModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -357,11 +343,9 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchDomainItemResponse res = new org.openapis.openapi.models.operations.GetSearchDomainItemResponse() {{
+        org.openapis.openapi.models.operations.GetSearchDomainItemResponse res = new org.openapis.openapi.models.operations.GetSearchDomainItemResponse(contentType, httpRes.statusCode()) {{
             searchResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -403,11 +387,9 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTldDomainItemResponse res = new org.openapis.openapi.models.operations.GetTldDomainItemResponse() {{
+        org.openapis.openapi.models.operations.GetTldDomainItemResponse res = new org.openapis.openapi.models.operations.GetTldDomainItemResponse(contentType, httpRes.statusCode()) {{
             searchResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

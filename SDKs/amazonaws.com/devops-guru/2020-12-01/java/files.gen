@@ -261,4 +261,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateCloudFormationCollect
 lib/src/main/java/org/openapis/openapi/models/shared/OpsCenterIntegrationConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/LogsAnomalyDetectionIntegrationConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GkebackupProjectsLocationsBackupPlansListResponse {
     
     public String contentType;
+
     public GkebackupProjectsLocationsBackupPlansListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GkebackupProjectsLocationsBackupPlansListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBackupPlansResponse listBackupPlansResponse;
+
     public GkebackupProjectsLocationsBackupPlansListResponse withListBackupPlansResponse(org.openapis.openapi.models.shared.ListBackupPlansResponse listBackupPlansResponse) {
         this.listBackupPlansResponse = listBackupPlansResponse;
         return this;
@@ -26,6 +29,7 @@ public class GkebackupProjectsLocationsBackupPlansListResponse {
     
     
     public Integer statusCode;
+
     public GkebackupProjectsLocationsBackupPlansListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GkebackupProjectsLocationsBackupPlansListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GkebackupProjectsLocationsBackupPlansListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GkebackupProjectsLocationsBackupPlansListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

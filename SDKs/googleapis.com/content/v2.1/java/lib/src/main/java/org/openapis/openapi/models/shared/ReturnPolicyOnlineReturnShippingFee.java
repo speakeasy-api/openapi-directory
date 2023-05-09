@@ -18,6 +18,7 @@ public class ReturnPolicyOnlineReturnShippingFee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedFee")
     public PriceAmount fixedFee;
+
     public ReturnPolicyOnlineReturnShippingFee withFixedFee(PriceAmount fixedFee) {
         this.fixedFee = fixedFee;
         return this;
@@ -29,9 +30,11 @@ public class ReturnPolicyOnlineReturnShippingFee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ReturnPolicyOnlineReturnShippingFeeTypeEnum type;
+
     public ReturnPolicyOnlineReturnShippingFee withType(ReturnPolicyOnlineReturnShippingFeeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ReturnPolicyOnlineReturnShippingFee(){}
 }

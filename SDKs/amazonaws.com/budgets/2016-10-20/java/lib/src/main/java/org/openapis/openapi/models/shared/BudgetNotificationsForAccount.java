@@ -18,6 +18,7 @@ public class BudgetNotificationsForAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public BudgetNotificationsForAccount withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
@@ -29,9 +30,11 @@ public class BudgetNotificationsForAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notifications")
     public Notification[] notifications;
+
     public BudgetNotificationsForAccount withNotifications(Notification[] notifications) {
         this.notifications = notifications;
         return this;
     }
     
+    public BudgetNotificationsForAccount(){}
 }

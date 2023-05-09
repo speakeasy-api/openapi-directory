@@ -18,6 +18,7 @@ public class GoogleTypeTimeOfDay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hours")
     public Integer hours;
+
     public GoogleTypeTimeOfDay withHours(Integer hours) {
         this.hours = hours;
         return this;
@@ -29,6 +30,7 @@ public class GoogleTypeTimeOfDay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minutes")
     public Integer minutes;
+
     public GoogleTypeTimeOfDay withMinutes(Integer minutes) {
         this.minutes = minutes;
         return this;
@@ -40,6 +42,7 @@ public class GoogleTypeTimeOfDay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nanos")
     public Integer nanos;
+
     public GoogleTypeTimeOfDay withNanos(Integer nanos) {
         this.nanos = nanos;
         return this;
@@ -51,9 +54,11 @@ public class GoogleTypeTimeOfDay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seconds")
     public Integer seconds;
+
     public GoogleTypeTimeOfDay withSeconds(Integer seconds) {
         this.seconds = seconds;
         return this;
     }
     
+    public GoogleTypeTimeOfDay(){}
 }

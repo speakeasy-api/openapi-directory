@@ -15,6 +15,7 @@ public class ExperienceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentSourceConfiguration")
     public ContentSourceConfiguration contentSourceConfiguration;
+
     public ExperienceConfiguration withContentSourceConfiguration(ContentSourceConfiguration contentSourceConfiguration) {
         this.contentSourceConfiguration = contentSourceConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class ExperienceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserIdentityConfiguration")
     public UserIdentityConfiguration userIdentityConfiguration;
+
     public ExperienceConfiguration withUserIdentityConfiguration(UserIdentityConfiguration userIdentityConfiguration) {
         this.userIdentityConfiguration = userIdentityConfiguration;
         return this;
     }
     
+    public ExperienceConfiguration(){}
 }

@@ -12,9 +12,13 @@ public class DeleteChannelRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public DeleteChannelRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteChannelRequestBody(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

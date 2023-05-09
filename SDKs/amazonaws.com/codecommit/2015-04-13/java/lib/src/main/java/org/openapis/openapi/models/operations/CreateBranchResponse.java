@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBranchResponse {
@@ -12,6 +13,7 @@ public class CreateBranchResponse {
      */
     
     public Object branchNameExistsException;
+
     public CreateBranchResponse withBranchNameExistsException(Object branchNameExistsException) {
         this.branchNameExistsException = branchNameExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateBranchResponse {
      */
     
     public Object branchNameRequiredException;
+
     public CreateBranchResponse withBranchNameRequiredException(Object branchNameRequiredException) {
         this.branchNameRequiredException = branchNameRequiredException;
         return this;
@@ -32,6 +35,7 @@ public class CreateBranchResponse {
      */
     
     public Object commitDoesNotExistException;
+
     public CreateBranchResponse withCommitDoesNotExistException(Object commitDoesNotExistException) {
         this.commitDoesNotExistException = commitDoesNotExistException;
         return this;
@@ -42,6 +46,7 @@ public class CreateBranchResponse {
      */
     
     public Object commitIdRequiredException;
+
     public CreateBranchResponse withCommitIdRequiredException(Object commitIdRequiredException) {
         this.commitIdRequiredException = commitIdRequiredException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBranchResponse {
     
     
     public String contentType;
+
     public CreateBranchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class CreateBranchResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public CreateBranchResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -69,6 +76,7 @@ public class CreateBranchResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public CreateBranchResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -79,6 +87,7 @@ public class CreateBranchResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public CreateBranchResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -89,6 +98,7 @@ public class CreateBranchResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public CreateBranchResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class CreateBranchResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public CreateBranchResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -109,6 +120,7 @@ public class CreateBranchResponse {
      */
     
     public Object invalidBranchNameException;
+
     public CreateBranchResponse withInvalidBranchNameException(Object invalidBranchNameException) {
         this.invalidBranchNameException = invalidBranchNameException;
         return this;
@@ -119,6 +131,7 @@ public class CreateBranchResponse {
      */
     
     public Object invalidCommitIdException;
+
     public CreateBranchResponse withInvalidCommitIdException(Object invalidCommitIdException) {
         this.invalidCommitIdException = invalidCommitIdException;
         return this;
@@ -129,6 +142,7 @@ public class CreateBranchResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public CreateBranchResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -139,6 +153,7 @@ public class CreateBranchResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public CreateBranchResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -149,6 +164,7 @@ public class CreateBranchResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public CreateBranchResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -156,6 +172,7 @@ public class CreateBranchResponse {
     
     
     public Integer statusCode;
+
     public CreateBranchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -163,9 +180,14 @@ public class CreateBranchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBranchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateBranchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

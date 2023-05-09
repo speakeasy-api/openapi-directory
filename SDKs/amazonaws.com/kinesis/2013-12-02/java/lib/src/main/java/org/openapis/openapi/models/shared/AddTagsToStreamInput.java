@@ -15,6 +15,7 @@ public class AddTagsToStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public AddTagsToStreamInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -23,6 +24,7 @@ public class AddTagsToStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public AddTagsToStreamInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -30,9 +32,13 @@ public class AddTagsToStreamInput {
     
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public AddTagsToStreamInput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public AddTagsToStreamInput(@JsonProperty("Tags") java.util.Map<String, String> tags) {
+        this.tags = tags;
+  }
 }

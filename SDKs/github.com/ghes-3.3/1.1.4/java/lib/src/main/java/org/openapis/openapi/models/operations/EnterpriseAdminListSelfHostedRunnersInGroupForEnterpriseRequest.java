@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -22,6 +24,7 @@ public class EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +46,14 @@ public class EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_group_id")
     public Long runnerGroupId;
+
     public EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseRequest withRunnerGroupId(Long runnerGroupId) {
         this.runnerGroupId = runnerGroupId;
         return this;
     }
     
+    public EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseRequest(@JsonProperty("enterprise") String enterprise, @JsonProperty("runner_group_id") Long runnerGroupId) {
+        this.enterprise = enterprise;
+        this.runnerGroupId = runnerGroupId;
+  }
 }

@@ -18,6 +18,7 @@ public class Money {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public Money withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -29,6 +30,7 @@ public class Money {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nanos")
     public Integer nanos;
+
     public Money withNanos(Integer nanos) {
         this.nanos = nanos;
         return this;
@@ -40,9 +42,11 @@ public class Money {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("units")
     public String units;
+
     public Money withUnits(String units) {
         this.units = units;
         return this;
     }
     
+    public Money(){}
 }

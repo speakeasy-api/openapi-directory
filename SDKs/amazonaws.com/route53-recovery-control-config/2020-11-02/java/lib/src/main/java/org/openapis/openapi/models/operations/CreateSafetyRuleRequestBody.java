@@ -15,6 +15,7 @@ public class CreateSafetyRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssertionRule")
     public CreateSafetyRuleRequestBodyAssertionRule assertionRule;
+
     public CreateSafetyRuleRequestBody withAssertionRule(CreateSafetyRuleRequestBodyAssertionRule assertionRule) {
         this.assertionRule = assertionRule;
         return this;
@@ -26,6 +27,7 @@ public class CreateSafetyRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateSafetyRuleRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -37,6 +39,7 @@ public class CreateSafetyRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatingRule")
     public CreateSafetyRuleRequestBodyGatingRule gatingRule;
+
     public CreateSafetyRuleRequestBody withGatingRule(CreateSafetyRuleRequestBodyGatingRule gatingRule) {
         this.gatingRule = gatingRule;
         return this;
@@ -48,9 +51,11 @@ public class CreateSafetyRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateSafetyRuleRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSafetyRuleRequestBody(){}
 }

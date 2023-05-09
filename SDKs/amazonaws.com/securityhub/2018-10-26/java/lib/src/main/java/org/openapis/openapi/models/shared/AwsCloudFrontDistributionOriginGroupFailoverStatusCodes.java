@@ -15,6 +15,7 @@ public class AwsCloudFrontDistributionOriginGroupFailoverStatusCodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public Long[] items;
+
     public AwsCloudFrontDistributionOriginGroupFailoverStatusCodes withItems(Long[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class AwsCloudFrontDistributionOriginGroupFailoverStatusCodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quantity")
     public Long quantity;
+
     public AwsCloudFrontDistributionOriginGroupFailoverStatusCodes withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public AwsCloudFrontDistributionOriginGroupFailoverStatusCodes(){}
 }

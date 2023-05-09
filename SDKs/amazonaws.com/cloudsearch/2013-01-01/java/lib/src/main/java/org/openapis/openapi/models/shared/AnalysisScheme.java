@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AnalysisScheme - Configuration information for an analysis scheme. Each analysis scheme has a unique name and specifies the language of the text to be processed. The following options can be configured for an analysis scheme: &lt;code&gt;Synonyms&lt;/code&gt;, &lt;code&gt;Stopwords&lt;/code&gt;, &lt;code&gt;StemmingDictionary&lt;/code&gt;, &lt;code&gt;JapaneseTokenizationDictionary&lt;/code&gt; and &lt;code&gt;AlgorithmicStemming&lt;/code&gt;.
@@ -15,6 +15,7 @@ public class AnalysisScheme {
      */
     
     public AnalysisOptions analysisOptions;
+
     public AnalysisScheme withAnalysisOptions(AnalysisOptions analysisOptions) {
         this.analysisOptions = analysisOptions;
         return this;
@@ -25,6 +26,7 @@ public class AnalysisScheme {
      */
     
     public AnalysisSchemeLanguageEnum analysisSchemeLanguage;
+
     public AnalysisScheme withAnalysisSchemeLanguage(AnalysisSchemeLanguageEnum analysisSchemeLanguage) {
         this.analysisSchemeLanguage = analysisSchemeLanguage;
         return this;
@@ -35,9 +37,14 @@ public class AnalysisScheme {
      */
     
     public String analysisSchemeName;
+
     public AnalysisScheme withAnalysisSchemeName(String analysisSchemeName) {
         this.analysisSchemeName = analysisSchemeName;
         return this;
     }
     
+    public AnalysisScheme(@JsonProperty("AnalysisSchemeLanguage") AnalysisSchemeLanguageEnum analysisSchemeLanguage, @JsonProperty("AnalysisSchemeName") String analysisSchemeName) {
+        this.analysisSchemeLanguage = analysisSchemeLanguage;
+        this.analysisSchemeName = analysisSchemeName;
+  }
 }

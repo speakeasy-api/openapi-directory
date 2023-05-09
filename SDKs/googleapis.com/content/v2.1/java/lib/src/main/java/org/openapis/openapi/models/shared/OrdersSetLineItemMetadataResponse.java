@@ -18,6 +18,7 @@ public class OrdersSetLineItemMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionStatus")
     public String executionStatus;
+
     public OrdersSetLineItemMetadataResponse withExecutionStatus(String executionStatus) {
         this.executionStatus = executionStatus;
         return this;
@@ -29,9 +30,11 @@ public class OrdersSetLineItemMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OrdersSetLineItemMetadataResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public OrdersSetLineItemMetadataResponse(){}
 }

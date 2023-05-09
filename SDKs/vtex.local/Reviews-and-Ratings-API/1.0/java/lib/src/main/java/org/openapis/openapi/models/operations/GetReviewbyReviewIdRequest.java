@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReviewbyReviewIdRequest {
@@ -12,6 +13,7 @@ public class GetReviewbyReviewIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetReviewbyReviewIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetReviewbyReviewIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetReviewbyReviewIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class GetReviewbyReviewIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reviewId")
     public String reviewId;
+
     public GetReviewbyReviewIdRequest withReviewId(String reviewId) {
         this.reviewId = reviewId;
         return this;
     }
     
+    public GetReviewbyReviewIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("reviewId") String reviewId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.reviewId = reviewId;
+  }
 }

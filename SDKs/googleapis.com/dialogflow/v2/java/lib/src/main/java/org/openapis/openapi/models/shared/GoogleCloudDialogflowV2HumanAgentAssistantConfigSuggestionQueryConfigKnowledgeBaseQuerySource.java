@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConf
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knowledgeBases")
     public String[] knowledgeBases;
+
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySource withKnowledgeBases(String[] knowledgeBases) {
         this.knowledgeBases = knowledgeBases;
         return this;
     }
     
+    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySource(){}
 }

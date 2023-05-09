@@ -20,6 +20,7 @@ public class ContinuousCheckEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changes")
     public Change[] changes;
+
     public ContinuousCheckEntry withChanges(Change[] changes) {
         this.changes = changes;
         return this;
@@ -31,6 +32,7 @@ public class ContinuousCheckEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("check_id")
     public String checkId;
+
     public ContinuousCheckEntry withCheckId(String checkId) {
         this.checkId = checkId;
         return this;
@@ -42,6 +44,7 @@ public class ContinuousCheckEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continuous_check_id")
     public String continuousCheckId;
+
     public ContinuousCheckEntry withContinuousCheckId(String continuousCheckId) {
         this.continuousCheckId = continuousCheckId;
         return this;
@@ -55,6 +58,7 @@ public class ContinuousCheckEntry {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("creation_date")
     public LocalDate creationDate;
+
     public ContinuousCheckEntry withCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -66,9 +70,11 @@ public class ContinuousCheckEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous_check_id")
     public String previousCheckId;
+
     public ContinuousCheckEntry withPreviousCheckId(String previousCheckId) {
         this.previousCheckId = previousCheckId;
         return this;
     }
     
+    public ContinuousCheckEntry(){}
 }

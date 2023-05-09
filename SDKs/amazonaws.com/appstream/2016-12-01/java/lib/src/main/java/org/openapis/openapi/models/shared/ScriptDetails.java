@@ -15,6 +15,7 @@ public class ScriptDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutableParameters")
     public String executableParameters;
+
     public ScriptDetails withExecutableParameters(String executableParameters) {
         this.executableParameters = executableParameters;
         return this;
@@ -22,6 +23,7 @@ public class ScriptDetails {
     
     @JsonProperty("ExecutablePath")
     public String executablePath;
+
     public ScriptDetails withExecutablePath(String executablePath) {
         this.executablePath = executablePath;
         return this;
@@ -29,6 +31,7 @@ public class ScriptDetails {
     
     @JsonProperty("ScriptS3Location")
     public S3Location scriptS3Location;
+
     public ScriptDetails withScriptS3Location(S3Location scriptS3Location) {
         this.scriptS3Location = scriptS3Location;
         return this;
@@ -36,9 +39,15 @@ public class ScriptDetails {
     
     @JsonProperty("TimeoutInSeconds")
     public Long timeoutInSeconds;
+
     public ScriptDetails withTimeoutInSeconds(Long timeoutInSeconds) {
         this.timeoutInSeconds = timeoutInSeconds;
         return this;
     }
     
+    public ScriptDetails(@JsonProperty("ExecutablePath") String executablePath, @JsonProperty("ScriptS3Location") S3Location scriptS3Location, @JsonProperty("TimeoutInSeconds") Long timeoutInSeconds) {
+        this.executablePath = executablePath;
+        this.scriptS3Location = scriptS3Location;
+        this.timeoutInSeconds = timeoutInSeconds;
+  }
 }

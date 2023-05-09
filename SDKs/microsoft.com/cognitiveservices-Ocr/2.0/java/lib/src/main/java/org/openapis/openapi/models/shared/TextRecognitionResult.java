@@ -18,6 +18,7 @@ public class TextRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clockwiseOrientation")
     public Double clockwiseOrientation;
+
     public TextRecognitionResult withClockwiseOrientation(Double clockwiseOrientation) {
         this.clockwiseOrientation = clockwiseOrientation;
         return this;
@@ -29,6 +30,7 @@ public class TextRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Double height;
+
     public TextRecognitionResult withHeight(Double height) {
         this.height = height;
         return this;
@@ -39,6 +41,7 @@ public class TextRecognitionResult {
      */
     @JsonProperty("lines")
     public Line[] lines;
+
     public TextRecognitionResult withLines(Line[] lines) {
         this.lines = lines;
         return this;
@@ -50,6 +53,7 @@ public class TextRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public TextRecognitionResult withPage(Long page) {
         this.page = page;
         return this;
@@ -61,6 +65,7 @@ public class TextRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public TextRecognitionResultUnitEnum unit;
+
     public TextRecognitionResult withUnit(TextRecognitionResultUnitEnum unit) {
         this.unit = unit;
         return this;
@@ -72,9 +77,13 @@ public class TextRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Double width;
+
     public TextRecognitionResult withWidth(Double width) {
         this.width = width;
         return this;
     }
     
+    public TextRecognitionResult(@JsonProperty("lines") Line[] lines) {
+        this.lines = lines;
+  }
 }

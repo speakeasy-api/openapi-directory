@@ -15,6 +15,7 @@ public class RetrieveConversation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public org.openapis.openapi.models.shared.LinksConversation links;
+
     public RetrieveConversation200ApplicationJSON withLinks(org.openapis.openapi.models.shared.LinksConversation links) {
         this.links = links;
         return this;
@@ -26,6 +27,7 @@ public class RetrieveConversation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_key")
     public String apiKey;
+
     public RetrieveConversation200ApplicationJSON withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -37,6 +39,7 @@ public class RetrieveConversation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public RetrieveConversation200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -48,6 +51,7 @@ public class RetrieveConversation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public RetrieveConversation200ApplicationJSONMembers[] members;
+
     public RetrieveConversation200ApplicationJSON withMembers(RetrieveConversation200ApplicationJSONMembers[] members) {
         this.members = members;
         return this;
@@ -59,6 +63,7 @@ public class RetrieveConversation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RetrieveConversation200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -67,6 +72,7 @@ public class RetrieveConversation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numbers")
     public java.util.Map<String, Object> numbers;
+
     public RetrieveConversation200ApplicationJSON withNumbers(java.util.Map<String, Object> numbers) {
         this.numbers = numbers;
         return this;
@@ -75,6 +81,7 @@ public class RetrieveConversation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public RetrieveConversation200ApplicationJSONProperties properties;
+
     public RetrieveConversation200ApplicationJSON withProperties(RetrieveConversation200ApplicationJSONProperties properties) {
         this.properties = properties;
         return this;
@@ -86,6 +93,7 @@ public class RetrieveConversation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequence_number")
     public String sequenceNumber;
+
     public RetrieveConversation200ApplicationJSON withSequenceNumber(String sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
@@ -94,6 +102,7 @@ public class RetrieveConversation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public org.openapis.openapi.models.shared.TimestampResConversation timestamp;
+
     public RetrieveConversation200ApplicationJSON withTimestamp(org.openapis.openapi.models.shared.TimestampResConversation timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -104,9 +113,13 @@ public class RetrieveConversation200ApplicationJSON {
      */
     @JsonProperty("uuid")
     public String uuid;
+
     public RetrieveConversation200ApplicationJSON withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public RetrieveConversation200ApplicationJSON(@JsonProperty("uuid") String uuid) {
+        this.uuid = uuid;
+  }
 }

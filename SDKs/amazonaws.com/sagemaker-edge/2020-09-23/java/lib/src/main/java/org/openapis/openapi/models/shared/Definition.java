@@ -15,6 +15,7 @@ public class Definition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Checksum")
     public Checksum checksum;
+
     public Definition withChecksum(Checksum checksum) {
         this.checksum = checksum;
         return this;
@@ -23,6 +24,7 @@ public class Definition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelHandle")
     public String modelHandle;
+
     public Definition withModelHandle(String modelHandle) {
         this.modelHandle = modelHandle;
         return this;
@@ -31,6 +33,7 @@ public class Definition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Url")
     public String s3Url;
+
     public Definition withS3Url(String s3Url) {
         this.s3Url = s3Url;
         return this;
@@ -39,9 +42,11 @@ public class Definition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ModelStateEnum state;
+
     public Definition withState(ModelStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Definition(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReplicationRunsResponse {
     
     public String contentType;
+
     public GetReplicationRunsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetReplicationRunsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetReplicationRunsResponse getReplicationRunsResponse;
+
     public GetReplicationRunsResponse withGetReplicationRunsResponse(org.openapis.openapi.models.shared.GetReplicationRunsResponse getReplicationRunsResponse) {
         this.getReplicationRunsResponse = getReplicationRunsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetReplicationRunsResponse {
      */
     
     public Object invalidParameterException;
+
     public GetReplicationRunsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class GetReplicationRunsResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public GetReplicationRunsResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -46,6 +51,7 @@ public class GetReplicationRunsResponse {
     
     
     public Integer statusCode;
+
     public GetReplicationRunsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetReplicationRunsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReplicationRunsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetReplicationRunsResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public GetReplicationRunsResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public GetReplicationRunsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

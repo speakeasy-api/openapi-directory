@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAppLaunchConfigurationResponse {
     
     public String contentType;
+
     public GetAppLaunchConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAppLaunchConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAppLaunchConfigurationResponse getAppLaunchConfigurationResponse;
+
     public GetAppLaunchConfigurationResponse withGetAppLaunchConfigurationResponse(org.openapis.openapi.models.shared.GetAppLaunchConfigurationResponse getAppLaunchConfigurationResponse) {
         this.getAppLaunchConfigurationResponse = getAppLaunchConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAppLaunchConfigurationResponse {
      */
     
     public Object internalError;
+
     public GetAppLaunchConfigurationResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -39,6 +43,7 @@ public class GetAppLaunchConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public GetAppLaunchConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetAppLaunchConfigurationResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public GetAppLaunchConfigurationResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetAppLaunchConfigurationResponse {
      */
     
     public Object operationNotPermittedException;
+
     public GetAppLaunchConfigurationResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class GetAppLaunchConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetAppLaunchConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetAppLaunchConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAppLaunchConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetAppLaunchConfigurationResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public GetAppLaunchConfigurationResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public GetAppLaunchConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

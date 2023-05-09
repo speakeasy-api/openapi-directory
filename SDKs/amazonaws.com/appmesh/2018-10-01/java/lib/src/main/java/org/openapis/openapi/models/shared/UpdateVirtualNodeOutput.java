@@ -15,9 +15,11 @@ public class UpdateVirtualNodeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualNode")
     public VirtualNodeData virtualNode;
+
     public UpdateVirtualNodeOutput withVirtualNode(VirtualNodeData virtualNode) {
         this.virtualNode = virtualNode;
         return this;
     }
     
+    public UpdateVirtualNodeOutput(){}
 }

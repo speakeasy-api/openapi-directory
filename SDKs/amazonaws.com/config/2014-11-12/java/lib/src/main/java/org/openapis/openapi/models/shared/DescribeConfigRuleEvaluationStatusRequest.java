@@ -15,6 +15,7 @@ public class DescribeConfigRuleEvaluationStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleNames")
     public String[] configRuleNames;
+
     public DescribeConfigRuleEvaluationStatusRequest withConfigRuleNames(String[] configRuleNames) {
         this.configRuleNames = configRuleNames;
         return this;
@@ -23,6 +24,7 @@ public class DescribeConfigRuleEvaluationStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeConfigRuleEvaluationStatusRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -31,9 +33,11 @@ public class DescribeConfigRuleEvaluationStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeConfigRuleEvaluationStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeConfigRuleEvaluationStatusRequest(){}
 }

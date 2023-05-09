@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BulkUpsertSellerCommissionsRequest {
@@ -12,6 +13,7 @@ public class BulkUpsertSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public BulkUpsertSellerCommissionsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class BulkUpsertSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public BulkUpsertSellerCommissionsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BulkUpsertSellerCommissionsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BulkUpsertSellerCommissionsRequest[] requestBody;
+
     public BulkUpsertSellerCommissionsRequest withRequestBody(org.openapis.openapi.models.shared.BulkUpsertSellerCommissionsRequest[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,6 +43,7 @@ public class BulkUpsertSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public BulkUpsertSellerCommissionsRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -49,6 +54,7 @@ public class BulkUpsertSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
     public String environment;
+
     public BulkUpsertSellerCommissionsRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -59,9 +65,18 @@ public class BulkUpsertSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public BulkUpsertSellerCommissionsRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
     }
     
+    public BulkUpsertSellerCommissionsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") org.openapis.openapi.models.shared.BulkUpsertSellerCommissionsRequest[] requestBody, @JsonProperty("accountName") String accountName, @JsonProperty("environment") String environment, @JsonProperty("sellerId") String sellerId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.accountName = accountName;
+        this.environment = environment;
+        this.sellerId = sellerId;
+  }
 }

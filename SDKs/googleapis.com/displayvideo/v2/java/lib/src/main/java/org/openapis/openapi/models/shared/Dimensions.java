@@ -18,6 +18,7 @@ public class Dimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heightPixels")
     public Integer heightPixels;
+
     public Dimensions withHeightPixels(Integer heightPixels) {
         this.heightPixels = heightPixels;
         return this;
@@ -29,9 +30,11 @@ public class Dimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("widthPixels")
     public Integer widthPixels;
+
     public Dimensions withWidthPixels(Integer widthPixels) {
         this.widthPixels = widthPixels;
         return this;
     }
     
+    public Dimensions(){}
 }

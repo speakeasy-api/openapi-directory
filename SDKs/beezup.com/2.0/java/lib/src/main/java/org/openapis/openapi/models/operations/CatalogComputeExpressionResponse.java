@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CatalogComputeExpressionResponse {
@@ -12,6 +13,7 @@ public class CatalogComputeExpressionResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public CatalogComputeExpressionResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -22,6 +24,7 @@ public class CatalogComputeExpressionResponse {
      */
     
     public String catalogComputeExpression200ApplicationJSONString;
+
     public CatalogComputeExpressionResponse withCatalogComputeExpression200ApplicationJSONString(String catalogComputeExpression200ApplicationJSONString) {
         this.catalogComputeExpression200ApplicationJSONString = catalogComputeExpression200ApplicationJSONString;
         return this;
@@ -32,6 +35,7 @@ public class CatalogComputeExpressionResponse {
      */
     
     public String catalogComputeExpression400ApplicationJSONString;
+
     public CatalogComputeExpressionResponse withCatalogComputeExpression400ApplicationJSONString(String catalogComputeExpression400ApplicationJSONString) {
         this.catalogComputeExpression400ApplicationJSONString = catalogComputeExpression400ApplicationJSONString;
         return this;
@@ -39,6 +43,7 @@ public class CatalogComputeExpressionResponse {
     
     
     public String contentType;
+
     public CatalogComputeExpressionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -46,6 +51,7 @@ public class CatalogComputeExpressionResponse {
     
     
     public Integer statusCode;
+
     public CatalogComputeExpressionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CatalogComputeExpressionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CatalogComputeExpressionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CatalogComputeExpressionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

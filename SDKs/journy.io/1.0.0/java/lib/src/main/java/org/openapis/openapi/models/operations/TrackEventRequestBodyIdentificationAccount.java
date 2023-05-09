@@ -18,6 +18,7 @@ public class TrackEventRequestBodyIdentificationAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public TrackEventRequestBodyIdentificationAccount withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,9 +30,11 @@ public class TrackEventRequestBodyIdentificationAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public TrackEventRequestBodyIdentificationAccount withDomain(String domain) {
         this.domain = domain;
         return this;
     }
     
+    public TrackEventRequestBodyIdentificationAccount(){}
 }

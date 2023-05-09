@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateModelQualityJobDefinitionResponse {
     @JsonProperty("JobDefinitionArn")
     public String jobDefinitionArn;
+
     public CreateModelQualityJobDefinitionResponse withJobDefinitionArn(String jobDefinitionArn) {
         this.jobDefinitionArn = jobDefinitionArn;
         return this;
     }
     
+    public CreateModelQualityJobDefinitionResponse(@JsonProperty("JobDefinitionArn") String jobDefinitionArn) {
+        this.jobDefinitionArn = jobDefinitionArn;
+  }
 }

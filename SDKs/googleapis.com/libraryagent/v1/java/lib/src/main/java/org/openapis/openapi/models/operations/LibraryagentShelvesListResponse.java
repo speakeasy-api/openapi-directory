@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LibraryagentShelvesListResponse {
     
     public String contentType;
+
     public LibraryagentShelvesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class LibraryagentShelvesListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleExampleLibraryagentV1ListShelvesResponse googleExampleLibraryagentV1ListShelvesResponse;
+
     public LibraryagentShelvesListResponse withGoogleExampleLibraryagentV1ListShelvesResponse(org.openapis.openapi.models.shared.GoogleExampleLibraryagentV1ListShelvesResponse googleExampleLibraryagentV1ListShelvesResponse) {
         this.googleExampleLibraryagentV1ListShelvesResponse = googleExampleLibraryagentV1ListShelvesResponse;
         return this;
@@ -26,6 +29,7 @@ public class LibraryagentShelvesListResponse {
     
     
     public Integer statusCode;
+
     public LibraryagentShelvesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class LibraryagentShelvesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LibraryagentShelvesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LibraryagentShelvesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

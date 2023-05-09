@@ -53,6 +53,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/AULocalAccountIdentificatio
 lib/src/main/java/org/openapis/openapi/models/shared/AULocalAccountIdentification.java
 lib/src/main/java/org/openapis/openapi/models/shared/BRLocalAccountIdentificationTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/BRLocalAccountIdentification.java
+lib/src/main/java/org/openapis/openapi/models/shared/CALocalAccountIdentificationAccountTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/CALocalAccountIdentificationTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/CALocalAccountIdentification.java
 lib/src/main/java/org/openapis/openapi/models/shared/CZLocalAccountIdentificationTypeEnum.java
@@ -95,8 +96,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/TransferPriorityEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransferReasonEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransferStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Transfer.java
+lib/src/main/java/org/openapis/openapi/models/shared/PaymentInstrument.java
+lib/src/main/java/org/openapis/openapi/models/shared/ResourceReference.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransferInfoCategoryEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransferInfoPriorityEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransferInfo.java
+lib/src/main/java/org/openapis/openapi/models/shared/UltimatePartyIdentificationTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/UltimatePartyIdentification.java
 lib/src/main/java/org/openapis/openapi/models/shared/CounterpartyInfoV3.java
+docs/sdk/README.md
+docs/transactions/README.md
+docs/transfers/README.md
 USAGE.md

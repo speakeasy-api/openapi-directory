@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1beta3ProcessorTypeLocationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public GoogleCloudDocumentaiV1beta3ProcessorTypeLocationInfo withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3ProcessorTypeLocationInfo(){}
 }

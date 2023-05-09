@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSystemAdvisoriesRequest {
@@ -12,6 +13,7 @@ public class ListSystemAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[advisory_type]")
     public String filterAdvisoryType;
+
     public ListSystemAdvisoriesRequest withFilterAdvisoryType(String filterAdvisoryType) {
         this.filterAdvisoryType = filterAdvisoryType;
         return this;
@@ -22,6 +24,7 @@ public class ListSystemAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[description]")
     public String filterDescription;
+
     public ListSystemAdvisoriesRequest withFilterDescription(String filterDescription) {
         this.filterDescription = filterDescription;
         return this;
@@ -32,6 +35,7 @@ public class ListSystemAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[id]")
     public String filterId;
+
     public ListSystemAdvisoriesRequest withFilterId(String filterId) {
         this.filterId = filterId;
         return this;
@@ -42,6 +46,7 @@ public class ListSystemAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[public_date]")
     public String filterPublicDate;
+
     public ListSystemAdvisoriesRequest withFilterPublicDate(String filterPublicDate) {
         this.filterPublicDate = filterPublicDate;
         return this;
@@ -52,6 +57,7 @@ public class ListSystemAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[severity]")
     public String filterSeverity;
+
     public ListSystemAdvisoriesRequest withFilterSeverity(String filterSeverity) {
         this.filterSeverity = filterSeverity;
         return this;
@@ -62,6 +68,7 @@ public class ListSystemAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[synopsis]")
     public String filterSynopsis;
+
     public ListSystemAdvisoriesRequest withFilterSynopsis(String filterSynopsis) {
         this.filterSynopsis = filterSynopsis;
         return this;
@@ -72,6 +79,7 @@ public class ListSystemAdvisoriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inventory_id")
     public String inventoryId;
+
     public ListSystemAdvisoriesRequest withInventoryId(String inventoryId) {
         this.inventoryId = inventoryId;
         return this;
@@ -82,6 +90,7 @@ public class ListSystemAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListSystemAdvisoriesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -92,6 +101,7 @@ public class ListSystemAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public ListSystemAdvisoriesRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -102,6 +112,7 @@ public class ListSystemAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public ListSystemAdvisoriesRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -112,9 +123,13 @@ public class ListSystemAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public ListSystemAdvisoriesSortEnum sort;
+
     public ListSystemAdvisoriesRequest withSort(ListSystemAdvisoriesSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public ListSystemAdvisoriesRequest(@JsonProperty("inventory_id") String inventoryId) {
+        this.inventoryId = inventoryId;
+  }
 }

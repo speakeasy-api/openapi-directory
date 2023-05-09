@@ -15,6 +15,7 @@ public class ClearorderFormMessages200ApplicationJSONSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ClearorderFormMessages200ApplicationJSONSellers withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class ClearorderFormMessages200ApplicationJSONSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public ClearorderFormMessages200ApplicationJSONSellers withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -37,9 +39,11 @@ public class ClearorderFormMessages200ApplicationJSONSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ClearorderFormMessages200ApplicationJSONSellers withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSONSellers(){}
 }

@@ -15,6 +15,7 @@ public class StepInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerValue")
     public Long integerValue;
+
     public StepInput withIntegerValue(Long integerValue) {
         this.integerValue = integerValue;
         return this;
@@ -23,6 +24,7 @@ public class StepInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listOfStringsValue")
     public String[] listOfStringsValue;
+
     public StepInput withListOfStringsValue(String[] listOfStringsValue) {
         this.listOfStringsValue = listOfStringsValue;
         return this;
@@ -31,6 +33,7 @@ public class StepInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapOfStringValue")
     public java.util.Map<String, String> mapOfStringValue;
+
     public StepInput withMapOfStringValue(java.util.Map<String, String> mapOfStringValue) {
         this.mapOfStringValue = mapOfStringValue;
         return this;
@@ -39,9 +42,11 @@ public class StepInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public StepInput withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public StepInput(){}
 }

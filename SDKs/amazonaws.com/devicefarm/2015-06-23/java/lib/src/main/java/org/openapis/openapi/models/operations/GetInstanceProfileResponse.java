@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInstanceProfileResponse {
@@ -12,6 +13,7 @@ public class GetInstanceProfileResponse {
      */
     
     public Object argumentException;
+
     public GetInstanceProfileResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class GetInstanceProfileResponse {
     
     
     public String contentType;
+
     public GetInstanceProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetInstanceProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInstanceProfileResult getInstanceProfileResult;
+
     public GetInstanceProfileResponse withGetInstanceProfileResult(org.openapis.openapi.models.shared.GetInstanceProfileResult getInstanceProfileResult) {
         this.getInstanceProfileResult = getInstanceProfileResult;
         return this;
@@ -39,6 +43,7 @@ public class GetInstanceProfileResponse {
      */
     
     public Object limitExceededException;
+
     public GetInstanceProfileResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class GetInstanceProfileResponse {
      */
     
     public Object notFoundException;
+
     public GetInstanceProfileResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetInstanceProfileResponse {
      */
     
     public Object serviceAccountException;
+
     public GetInstanceProfileResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class GetInstanceProfileResponse {
     
     
     public Integer statusCode;
+
     public GetInstanceProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetInstanceProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInstanceProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetInstanceProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DetectedJsonFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Charset")
     public DetectedField charset;
+
     public DetectedJsonFormatDescriptor withCharset(DetectedField charset) {
         this.charset = charset;
         return this;
@@ -23,9 +24,11 @@ public class DetectedJsonFormatDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileCompression")
     public DetectedField fileCompression;
+
     public DetectedJsonFormatDescriptor withFileCompression(DetectedField fileCompression) {
         this.fileCompression = fileCompression;
         return this;
     }
     
+    public DetectedJsonFormatDescriptor(){}
 }

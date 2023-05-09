@@ -18,9 +18,11 @@ public class DebugOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableHotKeyLogging")
     public Boolean enableHotKeyLogging;
+
     public DebugOptions withEnableHotKeyLogging(Boolean enableHotKeyLogging) {
         this.enableHotKeyLogging = enableHotKeyLogging;
         return this;
     }
     
+    public DebugOptions(){}
 }

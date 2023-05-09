@@ -12,6 +12,7 @@ public class NodesAddonsFoldersListAddon {
      */
     
     public NodesAddonsFoldersListAddonAttributes attributes;
+
     public NodesAddonsFoldersListAddon withAttributes(NodesAddonsFoldersListAddonAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class NodesAddonsFoldersListAddon {
      */
     
     public String id;
+
     public NodesAddonsFoldersListAddon withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +34,11 @@ public class NodesAddonsFoldersListAddon {
      */
     
     public String type;
+
     public NodesAddonsFoldersListAddon withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesAddonsFoldersListAddon(){}
 }

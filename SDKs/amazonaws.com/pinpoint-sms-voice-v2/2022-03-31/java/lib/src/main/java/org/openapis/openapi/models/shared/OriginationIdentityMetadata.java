@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OriginationIdentityMetadata {
     @JsonProperty("IsoCountryCode")
     public String isoCountryCode;
+
     public OriginationIdentityMetadata withIsoCountryCode(String isoCountryCode) {
         this.isoCountryCode = isoCountryCode;
         return this;
@@ -19,6 +20,7 @@ public class OriginationIdentityMetadata {
     
     @JsonProperty("NumberCapabilities")
     public NumberCapabilityEnum[] numberCapabilities;
+
     public OriginationIdentityMetadata withNumberCapabilities(NumberCapabilityEnum[] numberCapabilities) {
         this.numberCapabilities = numberCapabilities;
         return this;
@@ -26,6 +28,7 @@ public class OriginationIdentityMetadata {
     
     @JsonProperty("OriginationIdentity")
     public String originationIdentity;
+
     public OriginationIdentityMetadata withOriginationIdentity(String originationIdentity) {
         this.originationIdentity = originationIdentity;
         return this;
@@ -33,9 +36,16 @@ public class OriginationIdentityMetadata {
     
     @JsonProperty("OriginationIdentityArn")
     public String originationIdentityArn;
+
     public OriginationIdentityMetadata withOriginationIdentityArn(String originationIdentityArn) {
         this.originationIdentityArn = originationIdentityArn;
         return this;
     }
     
+    public OriginationIdentityMetadata(@JsonProperty("IsoCountryCode") String isoCountryCode, @JsonProperty("NumberCapabilities") NumberCapabilityEnum[] numberCapabilities, @JsonProperty("OriginationIdentity") String originationIdentity, @JsonProperty("OriginationIdentityArn") String originationIdentityArn) {
+        this.isoCountryCode = isoCountryCode;
+        this.numberCapabilities = numberCapabilities;
+        this.originationIdentity = originationIdentity;
+        this.originationIdentityArn = originationIdentityArn;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest {
@@ -12,6 +13,7 @@ public class OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destination")
     public String destination;
+
     public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -32,6 +35,7 @@ public class OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=directFlights")
     public Boolean directFlights;
+
     public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withDirectFlights(Boolean directFlights) {
         this.directFlights = directFlights;
         return this;
@@ -42,6 +46,7 @@ public class OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fromDateTime")
     public String fromDateTime;
+
     public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withFromDateTime(String fromDateTime) {
         this.fromDateTime = fromDateTime;
         return this;
@@ -52,6 +57,7 @@ public class OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -62,6 +68,7 @@ public class OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -72,9 +79,16 @@ public class OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=origin")
     public String origin;
+
     public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withOrigin(String origin) {
         this.origin = origin;
         return this;
     }
     
+    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest(@JsonProperty("Accept") String accept, @JsonProperty("destination") String destination, @JsonProperty("fromDateTime") String fromDateTime, @JsonProperty("origin") String origin) {
+        this.accept = accept;
+        this.destination = destination;
+        this.fromDateTime = fromDateTime;
+        this.origin = origin;
+  }
 }

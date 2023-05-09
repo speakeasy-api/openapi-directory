@@ -15,9 +15,11 @@ public class DescribeDetectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detector")
     public Detector detector;
+
     public DescribeDetectorResponse withDetector(Detector detector) {
         this.detector = detector;
         return this;
     }
     
+    public DescribeDetectorResponse(){}
 }

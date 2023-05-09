@@ -12,9 +12,13 @@ public class PostAssetsVariance200ApplicationJSONAssets {
      */
     @JsonProperty("assetVariance")
     public Double assetVariance;
+
     public PostAssetsVariance200ApplicationJSONAssets withAssetVariance(Double assetVariance) {
         this.assetVariance = assetVariance;
         return this;
     }
     
+    public PostAssetsVariance200ApplicationJSONAssets(@JsonProperty("assetVariance") Double assetVariance) {
+        this.assetVariance = assetVariance;
+  }
 }

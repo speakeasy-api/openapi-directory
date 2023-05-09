@@ -15,6 +15,7 @@ public class BatchGetReportsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reports")
     public Report[] reports;
+
     public BatchGetReportsOutput withReports(Report[] reports) {
         this.reports = reports;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetReportsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportsNotFound")
     public String[] reportsNotFound;
+
     public BatchGetReportsOutput withReportsNotFound(String[] reportsNotFound) {
         this.reportsNotFound = reportsNotFound;
         return this;
     }
     
+    public BatchGetReportsOutput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class ActionsListWorkflowRunsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=actor")
     public String actor;
+
     public ActionsListWorkflowRunsRequest withActor(String actor) {
         this.actor = actor;
         return this;
@@ -23,6 +25,7 @@ public class ActionsListWorkflowRunsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=branch")
     public String branch;
+
     public ActionsListWorkflowRunsRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -30,6 +33,7 @@ public class ActionsListWorkflowRunsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created")
     public OffsetDateTime created;
+
     public ActionsListWorkflowRunsRequest withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -40,6 +44,7 @@ public class ActionsListWorkflowRunsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event")
     public String event;
+
     public ActionsListWorkflowRunsRequest withEvent(String event) {
         this.event = event;
         return this;
@@ -50,6 +55,7 @@ public class ActionsListWorkflowRunsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_pull_requests")
     public Boolean excludePullRequests;
+
     public ActionsListWorkflowRunsRequest withExcludePullRequests(Boolean excludePullRequests) {
         this.excludePullRequests = excludePullRequests;
         return this;
@@ -57,6 +63,7 @@ public class ActionsListWorkflowRunsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsListWorkflowRunsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -67,6 +74,7 @@ public class ActionsListWorkflowRunsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActionsListWorkflowRunsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -77,6 +85,7 @@ public class ActionsListWorkflowRunsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActionsListWorkflowRunsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -84,6 +93,7 @@ public class ActionsListWorkflowRunsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsListWorkflowRunsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -94,6 +104,7 @@ public class ActionsListWorkflowRunsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public org.openapis.openapi.models.shared.WorkflowRunStatusEnum status;
+
     public ActionsListWorkflowRunsRequest withStatus(org.openapis.openapi.models.shared.WorkflowRunStatusEnum status) {
         this.status = status;
         return this;
@@ -104,9 +115,15 @@ public class ActionsListWorkflowRunsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workflow_id")
     public Object workflowId;
+
     public ActionsListWorkflowRunsRequest withWorkflowId(Object workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public ActionsListWorkflowRunsRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("workflow_id") Object workflowId) {
+        this.owner = owner;
+        this.repo = repo;
+        this.workflowId = workflowId;
+  }
 }

@@ -15,6 +15,7 @@ public class ListReferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListReferencesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListReferencesResponse {
     
     @JsonProperty("references")
     public ReferenceListItem[] references;
+
     public ListReferencesResponse withReferences(ReferenceListItem[] references) {
         this.references = references;
         return this;
     }
     
+    public ListReferencesResponse(@JsonProperty("references") ReferenceListItem[] references) {
+        this.references = references;
+  }
 }

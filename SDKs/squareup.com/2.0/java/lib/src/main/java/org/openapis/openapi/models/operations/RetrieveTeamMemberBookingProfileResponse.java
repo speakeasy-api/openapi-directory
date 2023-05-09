@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrieveTeamMemberBookingProfileResponse {
     
     public String contentType;
+
     public RetrieveTeamMemberBookingProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetrieveTeamMemberBookingProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.RetrieveTeamMemberBookingProfileResponse retrieveTeamMemberBookingProfileResponse;
+
     public RetrieveTeamMemberBookingProfileResponse withRetrieveTeamMemberBookingProfileResponse(org.openapis.openapi.models.shared.RetrieveTeamMemberBookingProfileResponse retrieveTeamMemberBookingProfileResponse) {
         this.retrieveTeamMemberBookingProfileResponse = retrieveTeamMemberBookingProfileResponse;
         return this;
@@ -26,6 +29,7 @@ public class RetrieveTeamMemberBookingProfileResponse {
     
     
     public Integer statusCode;
+
     public RetrieveTeamMemberBookingProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RetrieveTeamMemberBookingProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrieveTeamMemberBookingProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RetrieveTeamMemberBookingProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

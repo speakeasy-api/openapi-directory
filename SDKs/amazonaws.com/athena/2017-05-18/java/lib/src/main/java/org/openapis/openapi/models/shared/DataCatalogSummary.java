@@ -15,6 +15,7 @@ public class DataCatalogSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogName")
     public String catalogName;
+
     public DataCatalogSummary withCatalogName(String catalogName) {
         this.catalogName = catalogName;
         return this;
@@ -23,9 +24,11 @@ public class DataCatalogSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public DataCatalogTypeEnum type;
+
     public DataCatalogSummary withType(DataCatalogTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DataCatalogSummary(){}
 }

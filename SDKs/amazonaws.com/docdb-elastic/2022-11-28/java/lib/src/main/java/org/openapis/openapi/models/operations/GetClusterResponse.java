@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClusterResponse {
@@ -12,6 +13,7 @@ public class GetClusterResponse {
      */
     
     public Object accessDeniedException;
+
     public GetClusterResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetClusterResponse {
     
     
     public String contentType;
+
     public GetClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.GetClusterOutput getClusterOutput;
+
     public GetClusterResponse withGetClusterOutput(org.openapis.openapi.models.shared.GetClusterOutput getClusterOutput) {
         this.getClusterOutput = getClusterOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetClusterResponse {
      */
     
     public Object internalServerException;
+
     public GetClusterResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetClusterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetClusterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetClusterResponse {
     
     
     public Integer statusCode;
+
     public GetClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetClusterResponse {
      */
     
     public Object throttlingException;
+
     public GetClusterResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetClusterResponse {
      */
     
     public Object validationException;
+
     public GetClusterResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

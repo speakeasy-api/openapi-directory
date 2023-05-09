@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetVoiceMessageSpendLimitOverrideRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SetVoiceMessageSpendLimitOverrideRequest setVoiceMessageSpendLimitOverrideRequest;
+
     public SetVoiceMessageSpendLimitOverrideRequest withSetVoiceMessageSpendLimitOverrideRequest(org.openapis.openapi.models.shared.SetVoiceMessageSpendLimitOverrideRequest setVoiceMessageSpendLimitOverrideRequest) {
         this.setVoiceMessageSpendLimitOverrideRequest = setVoiceMessageSpendLimitOverrideRequest;
         return this;
@@ -16,6 +18,7 @@ public class SetVoiceMessageSpendLimitOverrideRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public SetVoiceMessageSpendLimitOverrideRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class SetVoiceMessageSpendLimitOverrideRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public SetVoiceMessageSpendLimitOverrideRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class SetVoiceMessageSpendLimitOverrideRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public SetVoiceMessageSpendLimitOverrideRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class SetVoiceMessageSpendLimitOverrideRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public SetVoiceMessageSpendLimitOverrideRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class SetVoiceMessageSpendLimitOverrideRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public SetVoiceMessageSpendLimitOverrideRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class SetVoiceMessageSpendLimitOverrideRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public SetVoiceMessageSpendLimitOverrideRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class SetVoiceMessageSpendLimitOverrideRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public SetVoiceMessageSpendLimitOverrideRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class SetVoiceMessageSpendLimitOverrideRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public SetVoiceMessageSpendLimitOverrideXAmzTargetEnum xAmzTarget;
+
     public SetVoiceMessageSpendLimitOverrideRequest withXAmzTarget(SetVoiceMessageSpendLimitOverrideXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public SetVoiceMessageSpendLimitOverrideRequest(@JsonProperty("SetVoiceMessageSpendLimitOverrideRequest") org.openapis.openapi.models.shared.SetVoiceMessageSpendLimitOverrideRequest setVoiceMessageSpendLimitOverrideRequest, @JsonProperty("X-Amz-Target") SetVoiceMessageSpendLimitOverrideXAmzTargetEnum xAmzTarget) {
+        this.setVoiceMessageSpendLimitOverrideRequest = setVoiceMessageSpendLimitOverrideRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

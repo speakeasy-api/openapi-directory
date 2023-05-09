@@ -59,11 +59,9 @@ public class CashDrawers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCashDrawerShiftEventsResponse res = new org.openapis.openapi.models.operations.ListCashDrawerShiftEventsResponse() {{
+        org.openapis.openapi.models.operations.ListCashDrawerShiftEventsResponse res = new org.openapis.openapi.models.operations.ListCashDrawerShiftEventsResponse(contentType, httpRes.statusCode()) {{
             listCashDrawerShiftEventsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class CashDrawers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCashDrawerShiftsResponse res = new org.openapis.openapi.models.operations.ListCashDrawerShiftsResponse() {{
+        org.openapis.openapi.models.operations.ListCashDrawerShiftsResponse res = new org.openapis.openapi.models.operations.ListCashDrawerShiftsResponse(contentType, httpRes.statusCode()) {{
             listCashDrawerShiftsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class CashDrawers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveCashDrawerShiftResponse res = new org.openapis.openapi.models.operations.RetrieveCashDrawerShiftResponse() {{
+        org.openapis.openapi.models.operations.RetrieveCashDrawerShiftResponse res = new org.openapis.openapi.models.operations.RetrieveCashDrawerShiftResponse(contentType, httpRes.statusCode()) {{
             retrieveCashDrawerShiftResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

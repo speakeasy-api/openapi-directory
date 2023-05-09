@@ -18,6 +18,7 @@ public class InitializeHubResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceIdentity")
     public String serviceIdentity;
+
     public InitializeHubResponse withServiceIdentity(String serviceIdentity) {
         this.serviceIdentity = serviceIdentity;
         return this;
@@ -29,9 +30,11 @@ public class InitializeHubResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadIdentityPool")
     public String workloadIdentityPool;
+
     public InitializeHubResponse withWorkloadIdentityPool(String workloadIdentityPool) {
         this.workloadIdentityPool = workloadIdentityPool;
         return this;
     }
     
+    public InitializeHubResponse(){}
 }

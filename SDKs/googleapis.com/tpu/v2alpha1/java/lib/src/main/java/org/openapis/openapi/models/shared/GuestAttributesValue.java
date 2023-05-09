@@ -18,9 +18,11 @@ public class GuestAttributesValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public GuestAttributesEntry[] items;
+
     public GuestAttributesValue withItems(GuestAttributesEntry[] items) {
         this.items = items;
         return this;
     }
     
+    public GuestAttributesValue(){}
 }

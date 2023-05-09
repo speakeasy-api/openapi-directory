@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest {
@@ -12,6 +13,7 @@ public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugReq
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_slug")
     public String groupSlug;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withGroupSlug(String groupSlug) {
         this.groupSlug = groupSlug;
         return this;
@@ -24,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugReq
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -36,9 +39,15 @@ public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugReq
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest(@JsonProperty("group_slug") String groupSlug, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.groupSlug = groupSlug;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

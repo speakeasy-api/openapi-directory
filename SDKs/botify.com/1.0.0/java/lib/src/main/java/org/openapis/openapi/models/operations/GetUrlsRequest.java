@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUrlsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UrlsQuery urlsQuery;
+
     public GetUrlsRequest withUrlsQuery(org.openapis.openapi.models.shared.UrlsQuery urlsQuery) {
         this.urlsQuery = urlsQuery;
         return this;
@@ -19,6 +21,7 @@ public class GetUrlsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
     public String analysisSlug;
+
     public GetUrlsRequest withAnalysisSlug(String analysisSlug) {
         this.analysisSlug = analysisSlug;
         return this;
@@ -29,6 +32,7 @@ public class GetUrlsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=area")
     public GetUrlsAreaEnum area;
+
     public GetUrlsRequest withArea(GetUrlsAreaEnum area) {
         this.area = area;
         return this;
@@ -39,6 +43,7 @@ public class GetUrlsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetUrlsRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -49,6 +54,7 @@ public class GetUrlsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
     public String projectSlug;
+
     public GetUrlsRequest withProjectSlug(String projectSlug) {
         this.projectSlug = projectSlug;
         return this;
@@ -59,6 +65,7 @@ public class GetUrlsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Integer size;
+
     public GetUrlsRequest withSize(Integer size) {
         this.size = size;
         return this;
@@ -69,9 +76,15 @@ public class GetUrlsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetUrlsRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetUrlsRequest(@JsonProperty("analysis_slug") String analysisSlug, @JsonProperty("project_slug") String projectSlug, @JsonProperty("username") String username) {
+        this.analysisSlug = analysisSlug;
+        this.projectSlug = projectSlug;
+        this.username = username;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkflowStepResponse {
@@ -12,6 +13,7 @@ public class GetWorkflowStepResponse {
      */
     
     public Object accessDeniedException;
+
     public GetWorkflowStepResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkflowStepResponse {
     
     
     public String contentType;
+
     public GetWorkflowStepResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetWorkflowStepResponse {
      */
     
     public org.openapis.openapi.models.shared.GetWorkflowStepResponse getWorkflowStepResponse;
+
     public GetWorkflowStepResponse withGetWorkflowStepResponse(org.openapis.openapi.models.shared.GetWorkflowStepResponse getWorkflowStepResponse) {
         this.getWorkflowStepResponse = getWorkflowStepResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetWorkflowStepResponse {
      */
     
     public Object internalServerException;
+
     public GetWorkflowStepResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetWorkflowStepResponse {
     
     
     public Integer statusCode;
+
     public GetWorkflowStepResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetWorkflowStepResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkflowStepResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetWorkflowStepResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetWorkflowStepResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetWorkflowStepResponse {
      */
     
     public Object throttlingException;
+
     public GetWorkflowStepResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetWorkflowStepResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

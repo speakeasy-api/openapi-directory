@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PropertyValueHistory {
     @JsonProperty("entityPropertyReference")
     public EntityPropertyReference entityPropertyReference;
+
     public PropertyValueHistory withEntityPropertyReference(EntityPropertyReference entityPropertyReference) {
         this.entityPropertyReference = entityPropertyReference;
         return this;
@@ -22,9 +23,13 @@ public class PropertyValueHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public PropertyValue[] values;
+
     public PropertyValueHistory withValues(PropertyValue[] values) {
         this.values = values;
         return this;
     }
     
+    public PropertyValueHistory(@JsonProperty("entityPropertyReference") EntityPropertyReference entityPropertyReference) {
+        this.entityPropertyReference = entityPropertyReference;
+  }
 }

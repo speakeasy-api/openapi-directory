@@ -8,7 +8,7 @@ import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
 /**
- * &gt;\u2139\ufe0f Onboarding guide
+ * &gt;ℹ️ Onboarding guide
  * &gt;
  * &gt; Check the new [Payments onboarding guide](https://developers.vtex.com/docs/guides/payments-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Payments and is organized by focusing on the developer's journey.
  * 
@@ -142,6 +142,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.configuration = new Configuration(

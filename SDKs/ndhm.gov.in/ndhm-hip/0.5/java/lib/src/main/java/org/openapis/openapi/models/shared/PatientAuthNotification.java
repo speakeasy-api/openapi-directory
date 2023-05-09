@@ -24,6 +24,7 @@ public class PatientAuthNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth")
     public PatientAuthNotificationAuth auth;
+
     public PatientAuthNotification withAuth(PatientAuthNotificationAuth auth) {
         this.auth = auth;
         return this;
@@ -34,6 +35,7 @@ public class PatientAuthNotification {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public PatientAuthNotification withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -46,9 +48,14 @@ public class PatientAuthNotification {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public PatientAuthNotification withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public PatientAuthNotification(@JsonProperty("requestId") String requestId, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.requestId = requestId;
+        this.timestamp = timestamp;
+  }
 }

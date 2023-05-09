@@ -15,6 +15,7 @@ public class CreateLaunchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateLaunchRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreateLaunchRequestBody {
      */
     @JsonProperty("groups")
     public org.openapis.openapi.models.shared.LaunchGroupConfig[] groups;
+
     public CreateLaunchRequestBody withGroups(org.openapis.openapi.models.shared.LaunchGroupConfig[] groups) {
         this.groups = groups;
         return this;
@@ -36,6 +38,7 @@ public class CreateLaunchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricMonitors")
     public org.openapis.openapi.models.shared.MetricMonitorConfig[] metricMonitors;
+
     public CreateLaunchRequestBody withMetricMonitors(org.openapis.openapi.models.shared.MetricMonitorConfig[] metricMonitors) {
         this.metricMonitors = metricMonitors;
         return this;
@@ -46,6 +49,7 @@ public class CreateLaunchRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateLaunchRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -57,6 +61,7 @@ public class CreateLaunchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("randomizationSalt")
     public String randomizationSalt;
+
     public CreateLaunchRequestBody withRandomizationSalt(String randomizationSalt) {
         this.randomizationSalt = randomizationSalt;
         return this;
@@ -68,6 +73,7 @@ public class CreateLaunchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledSplitsConfig")
     public CreateLaunchRequestBodyScheduledSplitsConfig scheduledSplitsConfig;
+
     public CreateLaunchRequestBody withScheduledSplitsConfig(CreateLaunchRequestBodyScheduledSplitsConfig scheduledSplitsConfig) {
         this.scheduledSplitsConfig = scheduledSplitsConfig;
         return this;
@@ -79,9 +85,14 @@ public class CreateLaunchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateLaunchRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLaunchRequestBody(@JsonProperty("groups") org.openapis.openapi.models.shared.LaunchGroupConfig[] groups, @JsonProperty("name") String name) {
+        this.groups = groups;
+        this.name = name;
+  }
 }

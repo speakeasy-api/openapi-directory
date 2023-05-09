@@ -15,9 +15,11 @@ public class CrmlogErrorCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonErrorCode")
     public CrmlogErrorCodeCommonErrorCodeEnum commonErrorCode;
+
     public CrmlogErrorCode withCommonErrorCode(CrmlogErrorCodeCommonErrorCodeEnum commonErrorCode) {
         this.commonErrorCode = commonErrorCode;
         return this;
     }
     
+    public CrmlogErrorCode(){}
 }

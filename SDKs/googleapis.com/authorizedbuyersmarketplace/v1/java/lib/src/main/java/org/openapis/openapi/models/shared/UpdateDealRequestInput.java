@@ -18,6 +18,7 @@ public class UpdateDealRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deal")
     public DealInput deal;
+
     public UpdateDealRequestInput withDeal(DealInput deal) {
         this.deal = deal;
         return this;
@@ -29,9 +30,11 @@ public class UpdateDealRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public UpdateDealRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public UpdateDealRequestInput(){}
 }

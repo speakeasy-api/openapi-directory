@@ -15,6 +15,7 @@ public class ListRoutingControlsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRoutingControlsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRoutingControlsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingControls")
     public RoutingControl[] routingControls;
+
     public ListRoutingControlsResponse withRoutingControls(RoutingControl[] routingControls) {
         this.routingControls = routingControls;
         return this;
     }
     
+    public ListRoutingControlsResponse(){}
 }

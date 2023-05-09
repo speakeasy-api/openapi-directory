@@ -53,6 +53,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLikesTracksTrackIdR
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteMeFollowingsUserIdSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteMeFollowingsUserIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteMeFollowingsUserIdResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetMeSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMeResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMeActivitiesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMeActivitiesRequest.java
@@ -274,4 +275,14 @@ lib/src/main/java/org/openapis/openapi/models/shared/TrackMetadataRequestTrackSh
 lib/src/main/java/org/openapis/openapi/models/shared/TrackMetadataRequestTrack.java
 lib/src/main/java/org/openapis/openapi/models/shared/TrackMetadataRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/WebProfiles.java
+docs/sdk/README.md
+docs/likes/README.md
+docs/me/README.md
+docs/miscellaneous/README.md
+docs/oauth/README.md
+docs/playlists/README.md
+docs/reposts/README.md
+docs/search/README.md
+docs/tracks/README.md
+docs/users/README.md
 USAGE.md

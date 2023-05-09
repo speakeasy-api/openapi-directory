@@ -15,6 +15,7 @@ public class PreprintProvidersPreprintsListPreprintAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public PreprintProvidersPreprintsListPreprintAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -25,6 +26,7 @@ public class PreprintProvidersPreprintsListPreprintAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public PreprintProvidersPreprintsListPreprintAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -35,6 +37,7 @@ public class PreprintProvidersPreprintsListPreprintAttributes {
      */
     
     public OffsetDateTime datePublished;
+
     public PreprintProvidersPreprintsListPreprintAttributes withDatePublished(OffsetDateTime datePublished) {
         this.datePublished = datePublished;
         return this;
@@ -45,6 +48,7 @@ public class PreprintProvidersPreprintsListPreprintAttributes {
      */
     
     public String doi;
+
     public PreprintProvidersPreprintsListPreprintAttributes withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -55,6 +59,7 @@ public class PreprintProvidersPreprintsListPreprintAttributes {
      */
     
     public Boolean isPreprintOrphan;
+
     public PreprintProvidersPreprintsListPreprintAttributes withIsPreprintOrphan(Boolean isPreprintOrphan) {
         this.isPreprintOrphan = isPreprintOrphan;
         return this;
@@ -65,6 +70,7 @@ public class PreprintProvidersPreprintsListPreprintAttributes {
      */
     
     public String licenseRecord;
+
     public PreprintProvidersPreprintsListPreprintAttributes withLicenseRecord(String licenseRecord) {
         this.licenseRecord = licenseRecord;
         return this;
@@ -75,9 +81,11 @@ public class PreprintProvidersPreprintsListPreprintAttributes {
      */
     
     public String[] subjects;
+
     public PreprintProvidersPreprintsListPreprintAttributes withSubjects(String[] subjects) {
         this.subjects = subjects;
         return this;
     }
     
+    public PreprintProvidersPreprintsListPreprintAttributes(){}
 }

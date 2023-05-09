@@ -48,4 +48,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListWordSenses200Applic
 lib/src/main/java/org/openapis/openapi/models/operations/ListWordSenses200ApplicationJSONFeatures.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListWordSenses200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListWordSensesResponse.java
+docs/sdk/README.md
+docs/languagemodeldirectaccess/README.md
 USAGE.md

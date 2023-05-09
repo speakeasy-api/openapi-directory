@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelResourceRequestResponse {
@@ -12,6 +13,7 @@ public class CancelResourceRequestResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelResourceRequestOutput cancelResourceRequestOutput;
+
     public CancelResourceRequestResponse withCancelResourceRequestOutput(org.openapis.openapi.models.shared.CancelResourceRequestOutput cancelResourceRequestOutput) {
         this.cancelResourceRequestOutput = cancelResourceRequestOutput;
         return this;
@@ -22,6 +24,7 @@ public class CancelResourceRequestResponse {
      */
     
     public Object concurrentModificationException;
+
     public CancelResourceRequestResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class CancelResourceRequestResponse {
     
     
     public String contentType;
+
     public CancelResourceRequestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class CancelResourceRequestResponse {
     
     
     public Integer statusCode;
+
     public CancelResourceRequestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CancelResourceRequestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelResourceRequestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CancelResourceRequestResponse {
      */
     
     public Object requestTokenNotFoundException;
+
     public CancelResourceRequestResponse withRequestTokenNotFoundException(Object requestTokenNotFoundException) {
         this.requestTokenNotFoundException = requestTokenNotFoundException;
         return this;
     }
     
+    public CancelResourceRequestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

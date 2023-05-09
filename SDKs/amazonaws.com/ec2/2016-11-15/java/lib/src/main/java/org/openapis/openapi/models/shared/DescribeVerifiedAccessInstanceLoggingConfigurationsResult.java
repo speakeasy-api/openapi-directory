@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessInstanceLoggingConfigurationsResult {
     
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurations[] loggingConfigurations;
+
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResult withLoggingConfigurations(DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurations[] loggingConfigurations) {
         this.loggingConfigurations = loggingConfigurations;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVerifiedAccessInstanceLoggingConfigurationsResult {
     
     
     public String nextToken;
+
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeVerifiedAccessInstanceLoggingConfigurationsResult(){}
 }

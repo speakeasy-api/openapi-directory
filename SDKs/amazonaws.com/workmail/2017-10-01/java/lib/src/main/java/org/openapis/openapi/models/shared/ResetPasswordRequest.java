@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResetPasswordRequest {
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public ResetPasswordRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -16,6 +17,7 @@ public class ResetPasswordRequest {
     
     @JsonProperty("Password")
     public String password;
+
     public ResetPasswordRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -23,9 +25,15 @@ public class ResetPasswordRequest {
     
     @JsonProperty("UserId")
     public String userId;
+
     public ResetPasswordRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ResetPasswordRequest(@JsonProperty("UserId") String userId, @JsonProperty("Password") String password, @JsonProperty("OrganizationId") String organizationId) {
+        this.userId = userId;
+        this.password = password;
+        this.organizationId = organizationId;
+  }
 }

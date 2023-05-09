@@ -15,6 +15,7 @@ public class PutEventsResultEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public PutEventsResultEntry withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class PutEventsResultEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public PutEventsResultEntry withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class PutEventsResultEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventId")
     public String eventId;
+
     public PutEventsResultEntry withEventId(String eventId) {
         this.eventId = eventId;
         return this;
     }
     
+    public PutEventsResultEntry(){}
 }

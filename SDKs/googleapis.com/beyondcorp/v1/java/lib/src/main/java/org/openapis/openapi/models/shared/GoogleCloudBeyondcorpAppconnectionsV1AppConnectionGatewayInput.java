@@ -18,6 +18,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appGateway")
     public String appGateway;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayInput withAppGateway(String appGateway) {
         this.appGateway = appGateway;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayTypeEnum type;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayInput withType(GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayInput(){}
 }

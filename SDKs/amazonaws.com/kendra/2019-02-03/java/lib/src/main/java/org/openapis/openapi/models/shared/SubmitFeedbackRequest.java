@@ -12,6 +12,7 @@ public class SubmitFeedbackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClickFeedbackItems")
     public ClickFeedback[] clickFeedbackItems;
+
     public SubmitFeedbackRequest withClickFeedbackItems(ClickFeedback[] clickFeedbackItems) {
         this.clickFeedbackItems = clickFeedbackItems;
         return this;
@@ -19,6 +20,7 @@ public class SubmitFeedbackRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public SubmitFeedbackRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -26,6 +28,7 @@ public class SubmitFeedbackRequest {
     
     @JsonProperty("QueryId")
     public String queryId;
+
     public SubmitFeedbackRequest withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
@@ -34,9 +37,14 @@ public class SubmitFeedbackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelevanceFeedbackItems")
     public RelevanceFeedback[] relevanceFeedbackItems;
+
     public SubmitFeedbackRequest withRelevanceFeedbackItems(RelevanceFeedback[] relevanceFeedbackItems) {
         this.relevanceFeedbackItems = relevanceFeedbackItems;
         return this;
     }
     
+    public SubmitFeedbackRequest(@JsonProperty("IndexId") String indexId, @JsonProperty("QueryId") String queryId) {
+        this.indexId = indexId;
+        this.queryId = queryId;
+  }
 }

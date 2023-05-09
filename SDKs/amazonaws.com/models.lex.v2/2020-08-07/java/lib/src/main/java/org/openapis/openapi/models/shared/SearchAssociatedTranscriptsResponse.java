@@ -15,6 +15,7 @@ public class SearchAssociatedTranscriptsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedTranscripts")
     public AssociatedTranscript[] associatedTranscripts;
+
     public SearchAssociatedTranscriptsResponse withAssociatedTranscripts(AssociatedTranscript[] associatedTranscripts) {
         this.associatedTranscripts = associatedTranscripts;
         return this;
@@ -23,6 +24,7 @@ public class SearchAssociatedTranscriptsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public SearchAssociatedTranscriptsResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -31,6 +33,7 @@ public class SearchAssociatedTranscriptsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botRecommendationId")
     public String botRecommendationId;
+
     public SearchAssociatedTranscriptsResponse withBotRecommendationId(String botRecommendationId) {
         this.botRecommendationId = botRecommendationId;
         return this;
@@ -39,6 +42,7 @@ public class SearchAssociatedTranscriptsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public SearchAssociatedTranscriptsResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -47,6 +51,7 @@ public class SearchAssociatedTranscriptsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public SearchAssociatedTranscriptsResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -55,6 +60,7 @@ public class SearchAssociatedTranscriptsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextIndex")
     public Long nextIndex;
+
     public SearchAssociatedTranscriptsResponse withNextIndex(Long nextIndex) {
         this.nextIndex = nextIndex;
         return this;
@@ -63,9 +69,11 @@ public class SearchAssociatedTranscriptsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalResults")
     public Long totalResults;
+
     public SearchAssociatedTranscriptsResponse withTotalResults(Long totalResults) {
         this.totalResults = totalResults;
         return this;
     }
     
+    public SearchAssociatedTranscriptsResponse(){}
 }

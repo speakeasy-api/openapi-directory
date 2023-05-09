@@ -18,6 +18,7 @@ public class DivisionSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliases")
     public String[] aliases;
+
     public DivisionSearchResult withAliases(String[] aliases) {
         this.aliases = aliases;
         return this;
@@ -29,6 +30,7 @@ public class DivisionSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DivisionSearchResult withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class DivisionSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ocdId")
     public String ocdId;
+
     public DivisionSearchResult withOcdId(String ocdId) {
         this.ocdId = ocdId;
         return this;
     }
     
+    public DivisionSearchResult(){}
 }

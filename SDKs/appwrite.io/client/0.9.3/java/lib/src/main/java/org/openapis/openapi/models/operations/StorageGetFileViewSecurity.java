@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageGetFileViewSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-JWT")
     public String jwt;
+
     public StorageGetFileViewSecurity withJwt(String jwt) {
         this.jwt = jwt;
         return this;
@@ -16,9 +18,14 @@ public class StorageGetFileViewSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Project")
     public String project;
+
     public StorageGetFileViewSecurity withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public StorageGetFileViewSecurity(@JsonProperty("JWT") String jwt, @JsonProperty("Project") String project) {
+        this.jwt = jwt;
+        this.project = project;
+  }
 }

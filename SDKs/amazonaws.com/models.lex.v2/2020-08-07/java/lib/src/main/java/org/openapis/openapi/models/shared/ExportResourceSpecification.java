@@ -15,6 +15,7 @@ public class ExportResourceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botExportSpecification")
     public BotExportSpecification botExportSpecification;
+
     public ExportResourceSpecification withBotExportSpecification(BotExportSpecification botExportSpecification) {
         this.botExportSpecification = botExportSpecification;
         return this;
@@ -23,6 +24,7 @@ public class ExportResourceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botLocaleExportSpecification")
     public BotLocaleExportSpecification botLocaleExportSpecification;
+
     public ExportResourceSpecification withBotLocaleExportSpecification(BotLocaleExportSpecification botLocaleExportSpecification) {
         this.botLocaleExportSpecification = botLocaleExportSpecification;
         return this;
@@ -31,9 +33,11 @@ public class ExportResourceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customVocabularyExportSpecification")
     public CustomVocabularyExportSpecification customVocabularyExportSpecification;
+
     public ExportResourceSpecification withCustomVocabularyExportSpecification(CustomVocabularyExportSpecification customVocabularyExportSpecification) {
         this.customVocabularyExportSpecification = customVocabularyExportSpecification;
         return this;
     }
     
+    public ExportResourceSpecification(){}
 }

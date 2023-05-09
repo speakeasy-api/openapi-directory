@@ -22,6 +22,7 @@ public class TflApiPresentationEntitiesJourneyPlannerJourney {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("arrivalDateTime")
     public OffsetDateTime arrivalDateTime;
+
     public TflApiPresentationEntitiesJourneyPlannerJourney withArrivalDateTime(OffsetDateTime arrivalDateTime) {
         this.arrivalDateTime = arrivalDateTime;
         return this;
@@ -30,6 +31,7 @@ public class TflApiPresentationEntitiesJourneyPlannerJourney {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Integer duration;
+
     public TflApiPresentationEntitiesJourneyPlannerJourney withDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -38,6 +40,7 @@ public class TflApiPresentationEntitiesJourneyPlannerJourney {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fare")
     public TflApiPresentationEntitiesJourneyPlannerJourneyFare fare;
+
     public TflApiPresentationEntitiesJourneyPlannerJourney withFare(TflApiPresentationEntitiesJourneyPlannerJourneyFare fare) {
         this.fare = fare;
         return this;
@@ -46,6 +49,7 @@ public class TflApiPresentationEntitiesJourneyPlannerJourney {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legs")
     public TflApiPresentationEntitiesJourneyPlannerLeg[] legs;
+
     public TflApiPresentationEntitiesJourneyPlannerJourney withLegs(TflApiPresentationEntitiesJourneyPlannerLeg[] legs) {
         this.legs = legs;
         return this;
@@ -56,9 +60,11 @@ public class TflApiPresentationEntitiesJourneyPlannerJourney {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public TflApiPresentationEntitiesJourneyPlannerJourney withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerJourney(){}
 }

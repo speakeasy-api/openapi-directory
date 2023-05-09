@@ -12,6 +12,7 @@ public class DgmstRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public DgmstRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class DgmstRequestBodyCertificateParameters {
      */
     @JsonProperty("EnrollmentNo")
     public String enrollmentNo;
+
     public DgmstRequestBodyCertificateParameters withEnrollmentNo(String enrollmentNo) {
         this.enrollmentNo = enrollmentNo;
         return this;
@@ -32,6 +34,7 @@ public class DgmstRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public DgmstRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -42,6 +45,7 @@ public class DgmstRequestBodyCertificateParameters {
      */
     @JsonProperty("RollNo")
     public String rollNo;
+
     public DgmstRequestBodyCertificateParameters withRollNo(String rollNo) {
         this.rollNo = rollNo;
         return this;
@@ -52,6 +56,7 @@ public class DgmstRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public DgmstRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -62,9 +67,18 @@ public class DgmstRequestBodyCertificateParameters {
      */
     @JsonProperty("Year")
     public String year;
+
     public DgmstRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public DgmstRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("EnrollmentNo") String enrollmentNo, @JsonProperty("FullName") String fullName, @JsonProperty("RollNo") String rollNo, @JsonProperty("UID") String uid, @JsonProperty("Year") String year) {
+        this.dob = dob;
+        this.enrollmentNo = enrollmentNo;
+        this.fullName = fullName;
+        this.rollNo = rollNo;
+        this.uid = uid;
+        this.year = year;
+  }
 }

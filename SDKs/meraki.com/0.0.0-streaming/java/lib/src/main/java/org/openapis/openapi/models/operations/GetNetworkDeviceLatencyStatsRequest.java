@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkDeviceLatencyStatsRequest {
@@ -12,6 +13,7 @@ public class GetNetworkDeviceLatencyStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apTag")
     public String apTag;
+
     public GetNetworkDeviceLatencyStatsRequest withApTag(String apTag) {
         this.apTag = apTag;
         return this;
@@ -22,6 +24,7 @@ public class GetNetworkDeviceLatencyStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=band")
     public GetNetworkDeviceLatencyStatsBandEnum band;
+
     public GetNetworkDeviceLatencyStatsRequest withBand(GetNetworkDeviceLatencyStatsBandEnum band) {
         this.band = band;
         return this;
@@ -32,6 +35,7 @@ public class GetNetworkDeviceLatencyStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetNetworkDeviceLatencyStatsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -39,6 +43,7 @@ public class GetNetworkDeviceLatencyStatsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public GetNetworkDeviceLatencyStatsRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -46,6 +51,7 @@ public class GetNetworkDeviceLatencyStatsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
     public String serial;
+
     public GetNetworkDeviceLatencyStatsRequest withSerial(String serial) {
         this.serial = serial;
         return this;
@@ -56,6 +62,7 @@ public class GetNetworkDeviceLatencyStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ssid")
     public Long ssid;
+
     public GetNetworkDeviceLatencyStatsRequest withSsid(Long ssid) {
         this.ssid = ssid;
         return this;
@@ -66,6 +73,7 @@ public class GetNetworkDeviceLatencyStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
     public String t0;
+
     public GetNetworkDeviceLatencyStatsRequest withT0(String t0) {
         this.t0 = t0;
         return this;
@@ -76,6 +84,7 @@ public class GetNetworkDeviceLatencyStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
     public String t1;
+
     public GetNetworkDeviceLatencyStatsRequest withT1(String t1) {
         this.t1 = t1;
         return this;
@@ -86,6 +95,7 @@ public class GetNetworkDeviceLatencyStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
     public Float timespan;
+
     public GetNetworkDeviceLatencyStatsRequest withTimespan(Float timespan) {
         this.timespan = timespan;
         return this;
@@ -96,9 +106,14 @@ public class GetNetworkDeviceLatencyStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vlan")
     public Long vlan;
+
     public GetNetworkDeviceLatencyStatsRequest withVlan(Long vlan) {
         this.vlan = vlan;
         return this;
     }
     
+    public GetNetworkDeviceLatencyStatsRequest(@JsonProperty("networkId") String networkId, @JsonProperty("serial") String serial) {
+        this.networkId = networkId;
+        this.serial = serial;
+  }
 }

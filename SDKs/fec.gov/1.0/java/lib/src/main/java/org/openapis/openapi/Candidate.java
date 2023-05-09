@@ -64,11 +64,9 @@ public class Candidate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCandidateCandidateIdResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdResponse() {{
+        org.openapis.openapi.models.operations.GetCandidateCandidateIdResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdResponse(contentType, httpRes.statusCode()) {{
             candidateDetailPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -109,11 +107,9 @@ public class Candidate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCandidateCandidateIdHistoryResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetCandidateCandidateIdHistoryResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdHistoryResponse(contentType, httpRes.statusCode()) {{
             candidateHistoryPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -154,11 +150,9 @@ public class Candidate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCandidateCandidateIdHistoryCycleResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdHistoryCycleResponse() {{
+        org.openapis.openapi.models.operations.GetCandidateCandidateIdHistoryCycleResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdHistoryCycleResponse(contentType, httpRes.statusCode()) {{
             candidateHistoryPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -199,11 +193,9 @@ public class Candidate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCandidateCandidateIdTotalsResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdTotalsResponse() {{
+        org.openapis.openapi.models.operations.GetCandidateCandidateIdTotalsResponse res = new org.openapis.openapi.models.operations.GetCandidateCandidateIdTotalsResponse(contentType, httpRes.statusCode()) {{
             committeeTotalsPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -244,11 +236,9 @@ public class Candidate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCandidatesResponse res = new org.openapis.openapi.models.operations.GetCandidatesResponse() {{
+        org.openapis.openapi.models.operations.GetCandidatesResponse res = new org.openapis.openapi.models.operations.GetCandidatesResponse(contentType, httpRes.statusCode()) {{
             candidatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -289,11 +279,9 @@ public class Candidate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCandidatesSearchResponse res = new org.openapis.openapi.models.operations.GetCandidatesSearchResponse() {{
+        org.openapis.openapi.models.operations.GetCandidatesSearchResponse res = new org.openapis.openapi.models.operations.GetCandidatesSearchResponse(contentType, httpRes.statusCode()) {{
             candidatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -334,11 +322,9 @@ public class Candidate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCandidatesTotalsResponse res = new org.openapis.openapi.models.operations.GetCandidatesTotalsResponse() {{
+        org.openapis.openapi.models.operations.GetCandidatesTotalsResponse res = new org.openapis.openapi.models.operations.GetCandidatesTotalsResponse(contentType, httpRes.statusCode()) {{
             candidateHistoryTotalPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -379,11 +365,9 @@ public class Candidate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCandidatesTotalsAggregatesResponse res = new org.openapis.openapi.models.operations.GetCandidatesTotalsAggregatesResponse() {{
+        org.openapis.openapi.models.operations.GetCandidatesTotalsAggregatesResponse res = new org.openapis.openapi.models.operations.GetCandidatesTotalsAggregatesResponse(contentType, httpRes.statusCode()) {{
             candidateTotalAggregatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -424,11 +408,9 @@ public class Candidate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCandidatesTotalsByOfficeResponse res = new org.openapis.openapi.models.operations.GetCandidatesTotalsByOfficeResponse() {{
+        org.openapis.openapi.models.operations.GetCandidatesTotalsByOfficeResponse res = new org.openapis.openapi.models.operations.GetCandidatesTotalsByOfficeResponse(contentType, httpRes.statusCode()) {{
             totalByOfficePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -469,11 +451,9 @@ public class Candidate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCandidatesTotalsByOfficeByPartyResponse res = new org.openapis.openapi.models.operations.GetCandidatesTotalsByOfficeByPartyResponse() {{
+        org.openapis.openapi.models.operations.GetCandidatesTotalsByOfficeByPartyResponse res = new org.openapis.openapi.models.operations.GetCandidatesTotalsByOfficeByPartyResponse(contentType, httpRes.statusCode()) {{
             totalByOfficeByPartyPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -514,11 +494,9 @@ public class Candidate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdCandidatesResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdCandidatesResponse() {{
+        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdCandidatesResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdCandidatesResponse(contentType, httpRes.statusCode()) {{
             candidateDetailPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -559,11 +537,9 @@ public class Candidate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdCandidatesHistoryResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdCandidatesHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdCandidatesHistoryResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdCandidatesHistoryResponse(contentType, httpRes.statusCode()) {{
             candidateHistoryPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -604,11 +580,9 @@ public class Candidate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdCandidatesHistoryCycleResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdCandidatesHistoryCycleResponse() {{
+        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdCandidatesHistoryCycleResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdCandidatesHistoryCycleResponse(contentType, httpRes.statusCode()) {{
             candidateHistoryPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

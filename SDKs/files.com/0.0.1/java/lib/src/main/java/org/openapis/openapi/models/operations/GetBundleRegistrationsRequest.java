@@ -12,6 +12,7 @@ public class GetBundleRegistrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bundle_id")
     public Integer bundleId;
+
     public GetBundleRegistrationsRequest withBundleId(Integer bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -22,6 +23,7 @@ public class GetBundleRegistrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetBundleRegistrationsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -32,6 +34,7 @@ public class GetBundleRegistrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetBundleRegistrationsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +45,11 @@ public class GetBundleRegistrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public Integer userId;
+
     public GetBundleRegistrationsRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetBundleRegistrationsRequest(){}
 }

@@ -15,9 +15,11 @@ public class CreateAnnotationStoreRequestBodyStoreOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tsvStoreOptions")
     public org.openapis.openapi.models.shared.TsvStoreOptions tsvStoreOptions;
+
     public CreateAnnotationStoreRequestBodyStoreOptions withTsvStoreOptions(org.openapis.openapi.models.shared.TsvStoreOptions tsvStoreOptions) {
         this.tsvStoreOptions = tsvStoreOptions;
         return this;
     }
     
+    public CreateAnnotationStoreRequestBodyStoreOptions(){}
 }

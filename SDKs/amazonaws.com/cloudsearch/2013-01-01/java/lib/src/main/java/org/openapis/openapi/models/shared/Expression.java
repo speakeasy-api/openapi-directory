@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Expression - A named expression that can be evaluated at search time. Can be used to sort the search results, define other expressions, or return computed information in the search results. 
@@ -15,6 +15,7 @@ public class Expression {
      */
     
     public String expressionName;
+
     public Expression withExpressionName(String expressionName) {
         this.expressionName = expressionName;
         return this;
@@ -25,9 +26,14 @@ public class Expression {
      */
     
     public String expressionValue;
+
     public Expression withExpressionValue(String expressionValue) {
         this.expressionValue = expressionValue;
         return this;
     }
     
+    public Expression(@JsonProperty("ExpressionName") String expressionName, @JsonProperty("ExpressionValue") String expressionValue) {
+        this.expressionName = expressionName;
+        this.expressionValue = expressionValue;
+  }
 }

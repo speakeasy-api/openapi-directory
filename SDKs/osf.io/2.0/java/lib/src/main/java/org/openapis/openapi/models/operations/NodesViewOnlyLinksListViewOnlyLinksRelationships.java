@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * NodesViewOnlyLinksListViewOnlyLinksRelationships - URLs to other entities or entity collections that have a relationship to the view only link entity.
@@ -15,6 +15,7 @@ public class NodesViewOnlyLinksListViewOnlyLinksRelationships {
      */
     
     public String creator;
+
     public NodesViewOnlyLinksListViewOnlyLinksRelationships withCreator(String creator) {
         this.creator = creator;
         return this;
@@ -25,9 +26,14 @@ public class NodesViewOnlyLinksListViewOnlyLinksRelationships {
      */
     
     public String nodes;
+
     public NodesViewOnlyLinksListViewOnlyLinksRelationships withNodes(String nodes) {
         this.nodes = nodes;
         return this;
     }
     
+    public NodesViewOnlyLinksListViewOnlyLinksRelationships(@JsonProperty("creator") String creator, @JsonProperty("nodes") String nodes) {
+        this.creator = creator;
+        this.nodes = nodes;
+  }
 }

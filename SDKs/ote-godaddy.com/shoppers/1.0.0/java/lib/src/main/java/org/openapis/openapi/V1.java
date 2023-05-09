@@ -57,13 +57,11 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangePasswordResponse res = new org.openapis.openapi.models.operations.ChangePasswordResponse() {{
+        org.openapis.openapi.models.operations.ChangePasswordResponse res = new org.openapis.openapi.models.operations.ChangePasswordResponse(contentType, httpRes.statusCode()) {{
             shopperId = null;
             passwordError = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,7 +114,7 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSubaccountJsonResponse res = new org.openapis.openapi.models.operations.CreateSubaccountJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateSubaccountJsonResponse res = new org.openapis.openapi.models.operations.CreateSubaccountJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -133,8 +131,6 @@ public class V1 {
             body = null;
             errorLimit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -235,7 +231,7 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSubaccountRawResponse res = new org.openapis.openapi.models.operations.CreateSubaccountRawResponse() {{
+        org.openapis.openapi.models.operations.CreateSubaccountRawResponse res = new org.openapis.openapi.models.operations.CreateSubaccountRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -252,8 +248,6 @@ public class V1 {
             body = null;
             errorLimit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -356,7 +350,7 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteResponse res = new org.openapis.openapi.models.operations.DeleteResponse() {{
+        org.openapis.openapi.models.operations.DeleteResponse res = new org.openapis.openapi.models.operations.DeleteResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -368,8 +362,6 @@ public class V1 {
             body = null;
             errorLimit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -451,7 +443,7 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResponse res = new org.openapis.openapi.models.operations.GetResponse() {{
+        org.openapis.openapi.models.operations.GetResponse res = new org.openapis.openapi.models.operations.GetResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -468,8 +460,6 @@ public class V1 {
             body = null;
             errorLimit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -572,7 +562,7 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStatusResponse res = new org.openapis.openapi.models.operations.GetStatusResponse() {{
+        org.openapis.openapi.models.operations.GetStatusResponse res = new org.openapis.openapi.models.operations.GetStatusResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -589,8 +579,6 @@ public class V1 {
             body = null;
             errorLimit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -692,7 +680,7 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateJsonResponse res = new org.openapis.openapi.models.operations.UpdateJsonResponse() {{
+        org.openapis.openapi.models.operations.UpdateJsonResponse res = new org.openapis.openapi.models.operations.UpdateJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -709,8 +697,6 @@ public class V1 {
             body = null;
             errorLimit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -812,7 +798,7 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRawResponse res = new org.openapis.openapi.models.operations.UpdateRawResponse() {{
+        org.openapis.openapi.models.operations.UpdateRawResponse res = new org.openapis.openapi.models.operations.UpdateRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -829,8 +815,6 @@ public class V1 {
             body = null;
             errorLimit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

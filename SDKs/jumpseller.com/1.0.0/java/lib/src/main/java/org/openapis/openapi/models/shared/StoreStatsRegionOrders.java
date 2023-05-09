@@ -15,6 +15,7 @@ public class StoreStatsRegionOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_mode")
     public String displayMode;
+
     public StoreStatsRegionOrders withDisplayMode(String displayMode) {
         this.displayMode = displayMode;
         return this;
@@ -26,9 +27,11 @@ public class StoreStatsRegionOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions_orders")
     public CountryOrders[] regionsOrders;
+
     public StoreStatsRegionOrders withRegionsOrders(CountryOrders[] regionsOrders) {
         this.regionsOrders = regionsOrders;
         return this;
     }
     
+    public StoreStatsRegionOrders(){}
 }

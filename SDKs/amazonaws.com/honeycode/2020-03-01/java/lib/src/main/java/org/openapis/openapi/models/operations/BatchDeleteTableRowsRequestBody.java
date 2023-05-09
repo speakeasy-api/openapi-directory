@@ -15,6 +15,7 @@ public class BatchDeleteTableRowsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public BatchDeleteTableRowsRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,9 +26,13 @@ public class BatchDeleteTableRowsRequestBody {
      */
     @JsonProperty("rowIds")
     public String[] rowIds;
+
     public BatchDeleteTableRowsRequestBody withRowIds(String[] rowIds) {
         this.rowIds = rowIds;
         return this;
     }
     
+    public BatchDeleteTableRowsRequestBody(@JsonProperty("rowIds") String[] rowIds) {
+        this.rowIds = rowIds;
+  }
 }

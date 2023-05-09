@@ -15,9 +15,11 @@ public class GetFindingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finding")
     public Finding finding;
+
     public GetFindingResponse withFinding(Finding finding) {
         this.finding = finding;
         return this;
     }
     
+    public GetFindingResponse(){}
 }

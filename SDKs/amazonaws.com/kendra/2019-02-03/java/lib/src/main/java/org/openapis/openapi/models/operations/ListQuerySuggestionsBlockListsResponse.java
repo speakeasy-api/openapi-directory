@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListQuerySuggestionsBlockListsResponse {
@@ -12,6 +13,7 @@ public class ListQuerySuggestionsBlockListsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListQuerySuggestionsBlockListsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListQuerySuggestionsBlockListsResponse {
     
     
     public String contentType;
+
     public ListQuerySuggestionsBlockListsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListQuerySuggestionsBlockListsResponse {
      */
     
     public Object internalServerException;
+
     public ListQuerySuggestionsBlockListsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListQuerySuggestionsBlockListsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListQuerySuggestionsBlockListsResponse listQuerySuggestionsBlockListsResponse;
+
     public ListQuerySuggestionsBlockListsResponse withListQuerySuggestionsBlockListsResponse(org.openapis.openapi.models.shared.ListQuerySuggestionsBlockListsResponse listQuerySuggestionsBlockListsResponse) {
         this.listQuerySuggestionsBlockListsResponse = listQuerySuggestionsBlockListsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListQuerySuggestionsBlockListsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListQuerySuggestionsBlockListsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListQuerySuggestionsBlockListsResponse {
     
     
     public Integer statusCode;
+
     public ListQuerySuggestionsBlockListsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListQuerySuggestionsBlockListsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListQuerySuggestionsBlockListsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListQuerySuggestionsBlockListsResponse {
      */
     
     public Object throttlingException;
+
     public ListQuerySuggestionsBlockListsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListQuerySuggestionsBlockListsResponse {
      */
     
     public Object validationException;
+
     public ListQuerySuggestionsBlockListsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListQuerySuggestionsBlockListsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

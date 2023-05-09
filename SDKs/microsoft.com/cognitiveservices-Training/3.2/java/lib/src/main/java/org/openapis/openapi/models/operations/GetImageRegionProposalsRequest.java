@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImageRegionProposalsRequest {
@@ -12,6 +13,7 @@ public class GetImageRegionProposalsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=imageId")
     public String imageId;
+
     public GetImageRegionProposalsRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -22,9 +24,14 @@ public class GetImageRegionProposalsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public GetImageRegionProposalsRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GetImageRegionProposalsRequest(@JsonProperty("imageId") String imageId, @JsonProperty("projectId") String projectId) {
+        this.imageId = imageId;
+        this.projectId = projectId;
+  }
 }

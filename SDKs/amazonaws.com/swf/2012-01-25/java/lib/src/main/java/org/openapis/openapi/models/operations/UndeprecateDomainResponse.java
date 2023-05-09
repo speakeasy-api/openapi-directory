@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UndeprecateDomainResponse {
     
     public String contentType;
+
     public UndeprecateDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UndeprecateDomainResponse {
      */
     
     public Object domainAlreadyExistsFault;
+
     public UndeprecateDomainResponse withDomainAlreadyExistsFault(Object domainAlreadyExistsFault) {
         this.domainAlreadyExistsFault = domainAlreadyExistsFault;
         return this;
@@ -29,6 +32,7 @@ public class UndeprecateDomainResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public UndeprecateDomainResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -36,6 +40,7 @@ public class UndeprecateDomainResponse {
     
     
     public Integer statusCode;
+
     public UndeprecateDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UndeprecateDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UndeprecateDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UndeprecateDomainResponse {
      */
     
     public Object unknownResourceFault;
+
     public UndeprecateDomainResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
     }
     
+    public UndeprecateDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

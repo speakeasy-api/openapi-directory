@@ -20,6 +20,7 @@ public class KnowledgeBaseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public KnowledgeBaseData withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +28,7 @@ public class KnowledgeBaseData {
     
     @JsonProperty("knowledgeBaseArn")
     public String knowledgeBaseArn;
+
     public KnowledgeBaseData withKnowledgeBaseArn(String knowledgeBaseArn) {
         this.knowledgeBaseArn = knowledgeBaseArn;
         return this;
@@ -34,6 +36,7 @@ public class KnowledgeBaseData {
     
     @JsonProperty("knowledgeBaseId")
     public String knowledgeBaseId;
+
     public KnowledgeBaseData withKnowledgeBaseId(String knowledgeBaseId) {
         this.knowledgeBaseId = knowledgeBaseId;
         return this;
@@ -41,6 +44,7 @@ public class KnowledgeBaseData {
     
     @JsonProperty("knowledgeBaseType")
     public KnowledgeBaseTypeEnum knowledgeBaseType;
+
     public KnowledgeBaseData withKnowledgeBaseType(KnowledgeBaseTypeEnum knowledgeBaseType) {
         this.knowledgeBaseType = knowledgeBaseType;
         return this;
@@ -51,6 +55,7 @@ public class KnowledgeBaseData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastContentModificationTime")
     public OffsetDateTime lastContentModificationTime;
+
     public KnowledgeBaseData withLastContentModificationTime(OffsetDateTime lastContentModificationTime) {
         this.lastContentModificationTime = lastContentModificationTime;
         return this;
@@ -58,6 +63,7 @@ public class KnowledgeBaseData {
     
     @JsonProperty("name")
     public String name;
+
     public KnowledgeBaseData withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +72,7 @@ public class KnowledgeBaseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renderingConfiguration")
     public RenderingConfiguration renderingConfiguration;
+
     public KnowledgeBaseData withRenderingConfiguration(RenderingConfiguration renderingConfiguration) {
         this.renderingConfiguration = renderingConfiguration;
         return this;
@@ -74,6 +81,7 @@ public class KnowledgeBaseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverSideEncryptionConfiguration")
     public ServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
+
     public KnowledgeBaseData withServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
         this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
         return this;
@@ -82,6 +90,7 @@ public class KnowledgeBaseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceConfiguration")
     public SourceConfiguration sourceConfiguration;
+
     public KnowledgeBaseData withSourceConfiguration(SourceConfiguration sourceConfiguration) {
         this.sourceConfiguration = sourceConfiguration;
         return this;
@@ -89,6 +98,7 @@ public class KnowledgeBaseData {
     
     @JsonProperty("status")
     public KnowledgeBaseStatusEnum status;
+
     public KnowledgeBaseData withStatus(KnowledgeBaseStatusEnum status) {
         this.status = status;
         return this;
@@ -97,9 +107,17 @@ public class KnowledgeBaseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public KnowledgeBaseData withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public KnowledgeBaseData(@JsonProperty("knowledgeBaseArn") String knowledgeBaseArn, @JsonProperty("knowledgeBaseId") String knowledgeBaseId, @JsonProperty("knowledgeBaseType") KnowledgeBaseTypeEnum knowledgeBaseType, @JsonProperty("name") String name, @JsonProperty("status") KnowledgeBaseStatusEnum status) {
+        this.knowledgeBaseArn = knowledgeBaseArn;
+        this.knowledgeBaseId = knowledgeBaseId;
+        this.knowledgeBaseType = knowledgeBaseType;
+        this.name = name;
+        this.status = status;
+  }
 }

@@ -18,6 +18,7 @@ public class DateRangeValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pivotValueRegions")
     public PivotValueRegion[] pivotValueRegions;
+
     public DateRangeValues withPivotValueRegions(PivotValueRegion[] pivotValueRegions) {
         this.pivotValueRegions = pivotValueRegions;
         return this;
@@ -29,9 +30,11 @@ public class DateRangeValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public DateRangeValues withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DateRangeValues(){}
 }

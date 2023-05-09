@@ -19,6 +19,7 @@ public class ZoneStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public ZoneStatistics withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -29,6 +30,7 @@ public class ZoneStatistics {
      */
     @JsonProperty("dec")
     public Long dec;
+
     public ZoneStatistics withDec(Long dec) {
         this.dec = dec;
         return this;
@@ -39,6 +41,7 @@ public class ZoneStatistics {
      */
     @JsonProperty("inc")
     public Long inc;
+
     public ZoneStatistics withInc(Long inc) {
         this.inc = inc;
         return this;
@@ -49,6 +52,7 @@ public class ZoneStatistics {
      */
     @JsonProperty("total")
     public Long total;
+
     public ZoneStatistics withTotal(Long total) {
         this.total = total;
         return this;
@@ -59,9 +63,17 @@ public class ZoneStatistics {
      */
     @JsonProperty("zone")
     public String zone;
+
     public ZoneStatistics withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ZoneStatistics(@JsonProperty("date") OffsetDateTime date, @JsonProperty("dec") Long dec, @JsonProperty("inc") Long inc, @JsonProperty("total") Long total, @JsonProperty("zone") String zone) {
+        this.date = date;
+        this.dec = dec;
+        this.inc = inc;
+        this.total = total;
+        this.zone = zone;
+  }
 }

@@ -18,6 +18,7 @@ public class PasswordError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public PasswordErrorCodeEnum code;
+
     public PasswordError withCode(PasswordErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class PasswordError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PasswordError withMessage(String message) {
         this.message = message;
         return this;
@@ -40,9 +42,11 @@ public class PasswordError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PasswordError withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PasswordError(){}
 }

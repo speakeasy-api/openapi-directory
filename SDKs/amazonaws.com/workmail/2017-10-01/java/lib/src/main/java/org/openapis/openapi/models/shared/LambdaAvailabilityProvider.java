@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LambdaAvailabilityProvider {
     @JsonProperty("LambdaArn")
     public String lambdaArn;
+
     public LambdaAvailabilityProvider withLambdaArn(String lambdaArn) {
         this.lambdaArn = lambdaArn;
         return this;
     }
     
+    public LambdaAvailabilityProvider(@JsonProperty("LambdaArn") String lambdaArn) {
+        this.lambdaArn = lambdaArn;
+  }
 }

@@ -18,6 +18,7 @@ public class Thumbnail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public Thumbnail withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +30,7 @@ public class Thumbnail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public Thumbnail withData(String data) {
         this.data = data;
         return this;
@@ -40,6 +42,7 @@ public class Thumbnail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heightPx")
     public Integer heightPx;
+
     public Thumbnail withHeightPx(Integer heightPx) {
         this.heightPx = heightPx;
         return this;
@@ -51,9 +54,11 @@ public class Thumbnail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("widthPx")
     public Integer widthPx;
+
     public Thumbnail withWidthPx(Integer widthPx) {
         this.widthPx = widthPx;
         return this;
     }
     
+    public Thumbnail(){}
 }

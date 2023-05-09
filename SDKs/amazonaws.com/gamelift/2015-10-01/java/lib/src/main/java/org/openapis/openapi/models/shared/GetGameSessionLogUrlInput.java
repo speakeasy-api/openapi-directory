@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetGameSessionLogUrlInput {
     @JsonProperty("GameSessionId")
     public String gameSessionId;
+
     public GetGameSessionLogUrlInput withGameSessionId(String gameSessionId) {
         this.gameSessionId = gameSessionId;
         return this;
     }
     
+    public GetGameSessionLogUrlInput(@JsonProperty("GameSessionId") String gameSessionId) {
+        this.gameSessionId = gameSessionId;
+  }
 }

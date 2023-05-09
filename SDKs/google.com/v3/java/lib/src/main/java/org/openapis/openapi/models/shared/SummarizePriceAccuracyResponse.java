@@ -18,6 +18,7 @@ public class SummarizePriceAccuracyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentBookOnGoogleScore")
     public SummarizePriceAccuracyResponseCurrentBookOnGoogleScoreEnum currentBookOnGoogleScore;
+
     public SummarizePriceAccuracyResponse withCurrentBookOnGoogleScore(SummarizePriceAccuracyResponseCurrentBookOnGoogleScoreEnum currentBookOnGoogleScore) {
         this.currentBookOnGoogleScore = currentBookOnGoogleScore;
         return this;
@@ -29,6 +30,7 @@ public class SummarizePriceAccuracyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentOverallScore")
     public SummarizePriceAccuracyResponseCurrentOverallScoreEnum currentOverallScore;
+
     public SummarizePriceAccuracyResponse withCurrentOverallScore(SummarizePriceAccuracyResponseCurrentOverallScoreEnum currentOverallScore) {
         this.currentOverallScore = currentOverallScore;
         return this;
@@ -40,6 +42,7 @@ public class SummarizePriceAccuracyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentScore")
     public SummarizePriceAccuracyResponseCurrentScoreEnum currentScore;
+
     public SummarizePriceAccuracyResponse withCurrentScore(SummarizePriceAccuracyResponseCurrentScoreEnum currentScore) {
         this.currentScore = currentScore;
         return this;
@@ -51,6 +54,7 @@ public class SummarizePriceAccuracyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentWebsiteScore")
     public SummarizePriceAccuracyResponseCurrentWebsiteScoreEnum currentWebsiteScore;
+
     public SummarizePriceAccuracyResponse withCurrentWebsiteScore(SummarizePriceAccuracyResponseCurrentWebsiteScoreEnum currentWebsiteScore) {
         this.currentWebsiteScore = currentWebsiteScore;
         return this;
@@ -62,6 +66,7 @@ public class SummarizePriceAccuracyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedBookOnGoogleScore")
     public SummarizePriceAccuracyResponsePredictedBookOnGoogleScoreEnum predictedBookOnGoogleScore;
+
     public SummarizePriceAccuracyResponse withPredictedBookOnGoogleScore(SummarizePriceAccuracyResponsePredictedBookOnGoogleScoreEnum predictedBookOnGoogleScore) {
         this.predictedBookOnGoogleScore = predictedBookOnGoogleScore;
         return this;
@@ -73,6 +78,7 @@ public class SummarizePriceAccuracyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedOverallScore")
     public SummarizePriceAccuracyResponsePredictedOverallScoreEnum predictedOverallScore;
+
     public SummarizePriceAccuracyResponse withPredictedOverallScore(SummarizePriceAccuracyResponsePredictedOverallScoreEnum predictedOverallScore) {
         this.predictedOverallScore = predictedOverallScore;
         return this;
@@ -84,6 +90,7 @@ public class SummarizePriceAccuracyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedScore")
     public SummarizePriceAccuracyResponsePredictedScoreEnum predictedScore;
+
     public SummarizePriceAccuracyResponse withPredictedScore(SummarizePriceAccuracyResponsePredictedScoreEnum predictedScore) {
         this.predictedScore = predictedScore;
         return this;
@@ -95,6 +102,7 @@ public class SummarizePriceAccuracyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedWebsiteScore")
     public SummarizePriceAccuracyResponsePredictedWebsiteScoreEnum predictedWebsiteScore;
+
     public SummarizePriceAccuracyResponse withPredictedWebsiteScore(SummarizePriceAccuracyResponsePredictedWebsiteScoreEnum predictedWebsiteScore) {
         this.predictedWebsiteScore = predictedWebsiteScore;
         return this;
@@ -106,9 +114,11 @@ public class SummarizePriceAccuracyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public SummarizePriceAccuracyResponse withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public SummarizePriceAccuracyResponse(){}
 }

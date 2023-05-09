@@ -15,6 +15,7 @@ public class DescribeSchemasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeSchemasResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +24,11 @@ public class DescribeSchemasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schemas")
     public String[] schemas;
+
     public DescribeSchemasResponse withSchemas(String[] schemas) {
         this.schemas = schemas;
         return this;
     }
     
+    public DescribeSchemasResponse(){}
 }

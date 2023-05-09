@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeExportTasksResponse {
@@ -12,6 +13,7 @@ public class DescribeExportTasksResponse {
      */
     
     public Object authorizationErrorException;
+
     public DescribeExportTasksResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeExportTasksResponse {
     
     
     public String contentType;
+
     public DescribeExportTasksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeExportTasksResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeExportTasksResponse describeExportTasksResponse;
+
     public DescribeExportTasksResponse withDescribeExportTasksResponse(org.openapis.openapi.models.shared.DescribeExportTasksResponse describeExportTasksResponse) {
         this.describeExportTasksResponse = describeExportTasksResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeExportTasksResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public DescribeExportTasksResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeExportTasksResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeExportTasksResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeExportTasksResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeExportTasksResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeExportTasksResponse {
      */
     
     public Object serverInternalErrorException;
+
     public DescribeExportTasksResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeExportTasksResponse {
     
     
     public Integer statusCode;
+
     public DescribeExportTasksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeExportTasksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeExportTasksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeExportTasksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

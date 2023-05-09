@@ -25,6 +25,7 @@ public class StoreTrackingStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("clickSynchronizationUtcDate")
     public OffsetDateTime clickSynchronizationUtcDate;
+
     public StoreTrackingStatus withClickSynchronizationUtcDate(OffsetDateTime clickSynchronizationUtcDate) {
         this.clickSynchronizationUtcDate = clickSynchronizationUtcDate;
         return this;
@@ -38,6 +39,7 @@ public class StoreTrackingStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("marketplaceOrderSynchonizationUtcDate")
     public OffsetDateTime marketplaceOrderSynchonizationUtcDate;
+
     public StoreTrackingStatus withMarketplaceOrderSynchonizationUtcDate(OffsetDateTime marketplaceOrderSynchonizationUtcDate) {
         this.marketplaceOrderSynchonizationUtcDate = marketplaceOrderSynchonizationUtcDate;
         return this;
@@ -51,9 +53,11 @@ public class StoreTrackingStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("orderSynchonizationUtcDate")
     public OffsetDateTime orderSynchonizationUtcDate;
+
     public StoreTrackingStatus withOrderSynchonizationUtcDate(OffsetDateTime orderSynchonizationUtcDate) {
         this.orderSynchonizationUtcDate = orderSynchonizationUtcDate;
         return this;
     }
     
+    public StoreTrackingStatus(){}
 }

@@ -15,6 +15,7 @@ public class DescribeCanariesLastRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CanariesLastRun")
     public CanaryLastRun[] canariesLastRun;
+
     public DescribeCanariesLastRunResponse withCanariesLastRun(CanaryLastRun[] canariesLastRun) {
         this.canariesLastRun = canariesLastRun;
         return this;
@@ -23,9 +24,11 @@ public class DescribeCanariesLastRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeCanariesLastRunResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeCanariesLastRunResponse(){}
 }

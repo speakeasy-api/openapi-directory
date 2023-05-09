@@ -14,6 +14,7 @@ public class CreateInvitationsRequestBody {
      */
     @JsonProperty("accountIds")
     public String[] accountIds;
+
     public CreateInvitationsRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -25,6 +26,7 @@ public class CreateInvitationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableEmailNotification")
     public Boolean disableEmailNotification;
+
     public CreateInvitationsRequestBody withDisableEmailNotification(Boolean disableEmailNotification) {
         this.disableEmailNotification = disableEmailNotification;
         return this;
@@ -36,9 +38,13 @@ public class CreateInvitationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CreateInvitationsRequestBody withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateInvitationsRequestBody(@JsonProperty("accountIds") String[] accountIds) {
+        this.accountIds = accountIds;
+  }
 }

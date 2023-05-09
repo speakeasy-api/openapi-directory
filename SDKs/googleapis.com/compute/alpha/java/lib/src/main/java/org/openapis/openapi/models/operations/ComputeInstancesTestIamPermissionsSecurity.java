@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeInstancesTestIamPermissionsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesTestIamPermissionsSecurityOption1 option1;
+
     public ComputeInstancesTestIamPermissionsSecurity withOption1(ComputeInstancesTestIamPermissionsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeInstancesTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesTestIamPermissionsSecurityOption2 option2;
+
     public ComputeInstancesTestIamPermissionsSecurity withOption2(ComputeInstancesTestIamPermissionsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeInstancesTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesTestIamPermissionsSecurityOption3 option3;
+
     public ComputeInstancesTestIamPermissionsSecurity withOption3(ComputeInstancesTestIamPermissionsSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeInstancesTestIamPermissionsSecurity(){}
 }

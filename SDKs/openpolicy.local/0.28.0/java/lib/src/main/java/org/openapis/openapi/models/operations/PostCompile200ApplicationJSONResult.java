@@ -16,6 +16,7 @@ public class PostCompile200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ast")
     public PostCompile200ApplicationJSONResultAst ast;
+
     public PostCompile200ApplicationJSONResult withAst(PostCompile200ApplicationJSONResultAst ast) {
         this.ast = ast;
         return this;
@@ -27,6 +28,7 @@ public class PostCompile200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PostCompile200ApplicationJSONResult withId(String id) {
         this.id = id;
         return this;
@@ -38,9 +40,11 @@ public class PostCompile200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public String raw;
+
     public PostCompile200ApplicationJSONResult withRaw(String raw) {
         this.raw = raw;
         return this;
     }
     
+    public PostCompile200ApplicationJSONResult(){}
 }

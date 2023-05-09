@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStoreCheckStatusJsonResponse {
     
     public String contentType;
+
     public GetStoreCheckStatusJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetStoreCheckStatusJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.PartnerError partnerError;
+
     public GetStoreCheckStatusJsonResponse withPartnerError(org.openapis.openapi.models.shared.PartnerError partnerError) {
         this.partnerError = partnerError;
         return this;
@@ -26,6 +29,7 @@ public class GetStoreCheckStatusJsonResponse {
     
     
     public Integer statusCode;
+
     public GetStoreCheckStatusJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetStoreCheckStatusJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStoreCheckStatusJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetStoreCheckStatusJsonResponse {
      */
     
     public Object getStoreCheckStatusJSON200ApplicationJSONOneOf;
+
     public GetStoreCheckStatusJsonResponse withGetStoreCheckStatusJSON200ApplicationJSONOneOf(Object getStoreCheckStatusJSON200ApplicationJSONOneOf) {
         this.getStoreCheckStatusJSON200ApplicationJSONOneOf = getStoreCheckStatusJSON200ApplicationJSONOneOf;
         return this;
     }
     
+    public GetStoreCheckStatusJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

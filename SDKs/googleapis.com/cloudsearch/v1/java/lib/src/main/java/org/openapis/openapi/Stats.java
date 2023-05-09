@@ -58,11 +58,9 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchStatsGetIndexResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsGetIndexResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchStatsGetIndexResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsGetIndexResponse(contentType, httpRes.statusCode()) {{
             getCustomerIndexStatsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchStatsGetQueryResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsGetQueryResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchStatsGetQueryResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsGetQueryResponse(contentType, httpRes.statusCode()) {{
             getCustomerQueryStatsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchStatsGetSearchapplicationResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsGetSearchapplicationResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchStatsGetSearchapplicationResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsGetSearchapplicationResponse(contentType, httpRes.statusCode()) {{
             getCustomerSearchApplicationStatsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchStatsGetSessionResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsGetSessionResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchStatsGetSessionResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsGetSessionResponse(contentType, httpRes.statusCode()) {{
             getCustomerSessionStatsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +234,9 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchStatsGetUserResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsGetUserResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchStatsGetUserResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsGetUserResponse(contentType, httpRes.statusCode()) {{
             getCustomerUserStatsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,11 +278,9 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchStatsIndexDatasourcesGetResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsIndexDatasourcesGetResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchStatsIndexDatasourcesGetResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsIndexDatasourcesGetResponse(contentType, httpRes.statusCode()) {{
             getDataSourceIndexStatsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,11 +322,9 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchStatsQuerySearchapplicationsGetResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsQuerySearchapplicationsGetResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchStatsQuerySearchapplicationsGetResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsQuerySearchapplicationsGetResponse(contentType, httpRes.statusCode()) {{
             getSearchApplicationQueryStatsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -380,11 +366,9 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchStatsSessionSearchapplicationsGetResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsSessionSearchapplicationsGetResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchStatsSessionSearchapplicationsGetResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsSessionSearchapplicationsGetResponse(contentType, httpRes.statusCode()) {{
             getSearchApplicationSessionStatsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -426,11 +410,9 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchStatsUserSearchapplicationsGetResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsUserSearchapplicationsGetResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchStatsUserSearchapplicationsGetResponse res = new org.openapis.openapi.models.operations.CloudsearchStatsUserSearchapplicationsGetResponse(contentType, httpRes.statusCode()) {{
             getSearchApplicationUserStatsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

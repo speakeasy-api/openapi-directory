@@ -18,6 +18,7 @@ public class DetectedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Double confidence;
+
     public DetectedObject withConfidence(Double confidence) {
         this.confidence = confidence;
         return this;
@@ -29,6 +30,7 @@ public class DetectedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public DetectedObject withObject(String object) {
         this.object = object;
         return this;
@@ -40,6 +42,7 @@ public class DetectedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public ObjectHierarchy parent;
+
     public DetectedObject withParent(ObjectHierarchy parent) {
         this.parent = parent;
         return this;
@@ -51,9 +54,11 @@ public class DetectedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rectangle")
     public BoundingRect rectangle;
+
     public DetectedObject withRectangle(BoundingRect rectangle) {
         this.rectangle = rectangle;
         return this;
     }
     
+    public DetectedObject(){}
 }

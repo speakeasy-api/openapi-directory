@@ -15,6 +15,7 @@ public class LendingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentGroups")
     public DocumentGroup[] documentGroups;
+
     public LendingSummary withDocumentGroups(DocumentGroup[] documentGroups) {
         this.documentGroups = documentGroups;
         return this;
@@ -23,9 +24,11 @@ public class LendingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UndetectedDocumentTypes")
     public String[] undetectedDocumentTypes;
+
     public LendingSummary withUndetectedDocumentTypes(String[] undetectedDocumentTypes) {
         this.undetectedDocumentTypes = undetectedDocumentTypes;
         return this;
     }
     
+    public LendingSummary(){}
 }

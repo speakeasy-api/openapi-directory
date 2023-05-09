@@ -18,6 +18,7 @@ public class TargetPoolsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public TargetPoolsScopedListWarningCodeEnum code;
+
     public TargetPoolsScopedListWarning withCode(TargetPoolsScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class TargetPoolsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public TargetPoolsScopedListWarningData[] data;
+
     public TargetPoolsScopedListWarning withData(TargetPoolsScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class TargetPoolsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TargetPoolsScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public TargetPoolsScopedListWarning(){}
 }

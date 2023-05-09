@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSqlInjectionMatchSetResponse {
     
     public String contentType;
+
     public UpdateSqlInjectionMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateSqlInjectionMatchSetResponse {
     
     
     public Integer statusCode;
+
     public UpdateSqlInjectionMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateSqlInjectionMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSqlInjectionMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateSqlInjectionMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSqlInjectionMatchSetResponse updateSqlInjectionMatchSetResponse;
+
     public UpdateSqlInjectionMatchSetResponse withUpdateSqlInjectionMatchSetResponse(org.openapis.openapi.models.shared.UpdateSqlInjectionMatchSetResponse updateSqlInjectionMatchSetResponse) {
         this.updateSqlInjectionMatchSetResponse = updateSqlInjectionMatchSetResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateSqlInjectionMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public UpdateSqlInjectionMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateSqlInjectionMatchSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public UpdateSqlInjectionMatchSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSqlInjectionMatchSetResponse {
      */
     
     public Object wafInvalidOperationException;
+
     public UpdateSqlInjectionMatchSetResponse withWAFInvalidOperationException(Object wafInvalidOperationException) {
         this.wafInvalidOperationException = wafInvalidOperationException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSqlInjectionMatchSetResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public UpdateSqlInjectionMatchSetResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateSqlInjectionMatchSetResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public UpdateSqlInjectionMatchSetResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateSqlInjectionMatchSetResponse {
      */
     
     public Object wafNonexistentContainerException;
+
     public UpdateSqlInjectionMatchSetResponse withWAFNonexistentContainerException(Object wafNonexistentContainerException) {
         this.wafNonexistentContainerException = wafNonexistentContainerException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateSqlInjectionMatchSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public UpdateSqlInjectionMatchSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateSqlInjectionMatchSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public UpdateSqlInjectionMatchSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public UpdateSqlInjectionMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

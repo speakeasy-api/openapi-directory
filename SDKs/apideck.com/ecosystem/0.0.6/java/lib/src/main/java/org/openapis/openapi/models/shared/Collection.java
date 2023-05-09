@@ -12,6 +12,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_background_color")
     public String cardBackgroundColor;
+
     public Collection withCardBackgroundColor(String cardBackgroundColor) {
         this.cardBackgroundColor = cardBackgroundColor;
         return this;
@@ -20,6 +21,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_background_image")
     public File cardBackgroundImage;
+
     public Collection withCardBackgroundImage(File cardBackgroundImage) {
         this.cardBackgroundImage = cardBackgroundImage;
         return this;
@@ -28,6 +30,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_columns")
     public Long cardColumns;
+
     public Collection withCardColumns(Long cardColumns) {
         this.cardColumns = cardColumns;
         return this;
@@ -36,6 +39,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_style")
     public String cardStyle;
+
     public Collection withCardStyle(String cardStyle) {
         this.cardStyle = cardStyle;
         return this;
@@ -44,6 +48,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public Collection withCount(Long count) {
         this.count = count;
         return this;
@@ -52,6 +57,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Collection withDescription(String description) {
         this.description = description;
         return this;
@@ -60,6 +66,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden_from_homepage")
     public Boolean hiddenFromHomepage;
+
     public Collection withHiddenFromHomepage(Boolean hiddenFromHomepage) {
         this.hiddenFromHomepage = hiddenFromHomepage;
         return this;
@@ -68,6 +75,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Collection withId(String id) {
         this.id = id;
         return this;
@@ -76,6 +84,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public File logo;
+
     public Collection withLogo(File logo) {
         this.logo = logo;
         return this;
@@ -83,6 +92,7 @@ public class Collection {
     
     @JsonProperty("name")
     public String name;
+
     public Collection withName(String name) {
         this.name = name;
         return this;
@@ -91,6 +101,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequence")
     public Long sequence;
+
     public Collection withSequence(Long sequence) {
         this.sequence = sequence;
         return this;
@@ -99,6 +110,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_max_items_homepage")
     public Long showMaxItemsHomepage;
+
     public Collection withShowMaxItemsHomepage(Long showMaxItemsHomepage) {
         this.showMaxItemsHomepage = showMaxItemsHomepage;
         return this;
@@ -106,6 +118,7 @@ public class Collection {
     
     @JsonProperty("slug")
     public String slug;
+
     public Collection withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -114,6 +127,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translations")
     public Translation[] translations;
+
     public Collection withTranslations(Translation[] translations) {
         this.translations = translations;
         return this;
@@ -121,9 +135,15 @@ public class Collection {
     
     @JsonProperty("visible")
     public Boolean visible;
+
     public Collection withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public Collection(@JsonProperty("name") String name, @JsonProperty("slug") String slug, @JsonProperty("visible") Boolean visible) {
+        this.name = name;
+        this.slug = slug;
+        this.visible = visible;
+  }
 }

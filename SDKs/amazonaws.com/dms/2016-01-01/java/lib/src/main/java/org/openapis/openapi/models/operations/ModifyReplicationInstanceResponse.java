@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyReplicationInstanceResponse {
@@ -12,6 +13,7 @@ public class ModifyReplicationInstanceResponse {
      */
     
     public Object accessDeniedFault;
+
     public ModifyReplicationInstanceResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class ModifyReplicationInstanceResponse {
     
     
     public String contentType;
+
     public ModifyReplicationInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ModifyReplicationInstanceResponse {
      */
     
     public Object insufficientResourceCapacityFault;
+
     public ModifyReplicationInstanceResponse withInsufficientResourceCapacityFault(Object insufficientResourceCapacityFault) {
         this.insufficientResourceCapacityFault = insufficientResourceCapacityFault;
         return this;
@@ -39,6 +43,7 @@ public class ModifyReplicationInstanceResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public ModifyReplicationInstanceResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -49,6 +54,7 @@ public class ModifyReplicationInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.ModifyReplicationInstanceResponse modifyReplicationInstanceResponse;
+
     public ModifyReplicationInstanceResponse withModifyReplicationInstanceResponse(org.openapis.openapi.models.shared.ModifyReplicationInstanceResponse modifyReplicationInstanceResponse) {
         this.modifyReplicationInstanceResponse = modifyReplicationInstanceResponse;
         return this;
@@ -56,6 +62,7 @@ public class ModifyReplicationInstanceResponse {
     
     
     public Integer statusCode;
+
     public ModifyReplicationInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ModifyReplicationInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyReplicationInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ModifyReplicationInstanceResponse {
      */
     
     public Object resourceAlreadyExistsFault;
+
     public ModifyReplicationInstanceResponse withResourceAlreadyExistsFault(Object resourceAlreadyExistsFault) {
         this.resourceAlreadyExistsFault = resourceAlreadyExistsFault;
         return this;
@@ -83,6 +92,7 @@ public class ModifyReplicationInstanceResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public ModifyReplicationInstanceResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -93,6 +103,7 @@ public class ModifyReplicationInstanceResponse {
      */
     
     public Object storageQuotaExceededFault;
+
     public ModifyReplicationInstanceResponse withStorageQuotaExceededFault(Object storageQuotaExceededFault) {
         this.storageQuotaExceededFault = storageQuotaExceededFault;
         return this;
@@ -103,9 +114,14 @@ public class ModifyReplicationInstanceResponse {
      */
     
     public Object upgradeDependencyFailureFault;
+
     public ModifyReplicationInstanceResponse withUpgradeDependencyFailureFault(Object upgradeDependencyFailureFault) {
         this.upgradeDependencyFailureFault = upgradeDependencyFailureFault;
         return this;
     }
     
+    public ModifyReplicationInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

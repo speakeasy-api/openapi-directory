@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDomainNameserversRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public UpdateDomainNameserversRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,6 +23,7 @@ public class UpdateDomainNameserversRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FIAuthKey")
     public String fiAuthKey;
+
     public UpdateDomainNameserversRequest withFIAuthKey(String fiAuthKey) {
         this.fiAuthKey = fiAuthKey;
         return this;
@@ -29,9 +31,14 @@ public class UpdateDomainNameserversRequest {
     
     @JsonProperty("Nameservers")
     public Nameserver[] nameservers;
+
     public UpdateDomainNameserversRequest withNameservers(Nameserver[] nameservers) {
         this.nameservers = nameservers;
         return this;
     }
     
+    public UpdateDomainNameserversRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("Nameservers") Nameserver[] nameservers) {
+        this.domainName = domainName;
+        this.nameservers = nameservers;
+  }
 }

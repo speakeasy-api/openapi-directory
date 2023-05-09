@@ -12,6 +12,7 @@ public class ModifySamlPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropertiesToDelete")
     public DeletableSamlPropertyEnum[] propertiesToDelete;
+
     public ModifySamlPropertiesRequest withPropertiesToDelete(DeletableSamlPropertyEnum[] propertiesToDelete) {
         this.propertiesToDelete = propertiesToDelete;
         return this;
@@ -19,6 +20,7 @@ public class ModifySamlPropertiesRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ModifySamlPropertiesRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -27,9 +29,13 @@ public class ModifySamlPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SamlProperties")
     public SamlProperties samlProperties;
+
     public ModifySamlPropertiesRequest withSamlProperties(SamlProperties samlProperties) {
         this.samlProperties = samlProperties;
         return this;
     }
     
+    public ModifySamlPropertiesRequest(@JsonProperty("ResourceId") String resourceId) {
+        this.resourceId = resourceId;
+  }
 }

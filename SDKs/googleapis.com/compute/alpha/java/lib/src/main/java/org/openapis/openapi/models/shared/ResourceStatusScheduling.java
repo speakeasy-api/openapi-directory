@@ -15,6 +15,7 @@ public class ResourceStatusScheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityDomain")
     public Integer availabilityDomain;
+
     public ResourceStatusScheduling withAvailabilityDomain(Integer availabilityDomain) {
         this.availabilityDomain = availabilityDomain;
         return this;
@@ -26,9 +27,11 @@ public class ResourceStatusScheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminationTimestamp")
     public String terminationTimestamp;
+
     public ResourceStatusScheduling withTerminationTimestamp(String terminationTimestamp) {
         this.terminationTimestamp = terminationTimestamp;
         return this;
     }
     
+    public ResourceStatusScheduling(){}
 }

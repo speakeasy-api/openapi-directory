@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostContainersCreateResponse {
@@ -12,6 +13,7 @@ public class PostContainersCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.ContainerId containerId;
+
     public PostContainersCreateResponse withContainerId(org.openapis.openapi.models.shared.ContainerId containerId) {
         this.containerId = containerId;
         return this;
@@ -19,6 +21,7 @@ public class PostContainersCreateResponse {
     
     
     public String contentType;
+
     public PostContainersCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostContainersCreateResponse {
     
     
     public Integer statusCode;
+
     public PostContainersCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostContainersCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostContainersCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostContainersCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

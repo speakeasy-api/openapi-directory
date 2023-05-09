@@ -15,6 +15,7 @@ public class Streamingbuffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedBytes")
     public String estimatedBytes;
+
     public Streamingbuffer withEstimatedBytes(String estimatedBytes) {
         this.estimatedBytes = estimatedBytes;
         return this;
@@ -26,6 +27,7 @@ public class Streamingbuffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedRows")
     public String estimatedRows;
+
     public Streamingbuffer withEstimatedRows(String estimatedRows) {
         this.estimatedRows = estimatedRows;
         return this;
@@ -37,9 +39,11 @@ public class Streamingbuffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oldestEntryTime")
     public String oldestEntryTime;
+
     public Streamingbuffer withOldestEntryTime(String oldestEntryTime) {
         this.oldestEntryTime = oldestEntryTime;
         return this;
     }
     
+    public Streamingbuffer(){}
 }

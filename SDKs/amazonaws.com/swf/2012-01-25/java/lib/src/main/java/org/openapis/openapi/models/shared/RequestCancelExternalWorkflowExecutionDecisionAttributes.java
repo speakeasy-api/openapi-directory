@@ -15,6 +15,7 @@ public class RequestCancelExternalWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public String control;
+
     public RequestCancelExternalWorkflowExecutionDecisionAttributes withControl(String control) {
         this.control = control;
         return this;
@@ -23,6 +24,7 @@ public class RequestCancelExternalWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runId")
     public String runId;
+
     public RequestCancelExternalWorkflowExecutionDecisionAttributes withRunId(String runId) {
         this.runId = runId;
         return this;
@@ -30,9 +32,13 @@ public class RequestCancelExternalWorkflowExecutionDecisionAttributes {
     
     @JsonProperty("workflowId")
     public String workflowId;
+
     public RequestCancelExternalWorkflowExecutionDecisionAttributes withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public RequestCancelExternalWorkflowExecutionDecisionAttributes(@JsonProperty("workflowId") String workflowId) {
+        this.workflowId = workflowId;
+  }
 }

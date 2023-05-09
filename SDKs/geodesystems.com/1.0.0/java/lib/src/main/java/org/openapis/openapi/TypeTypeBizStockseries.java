@@ -57,10 +57,8 @@ public class TypeTypeBizStockseries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypeBizStockseriesResponse res = new org.openapis.openapi.models.operations.SearchTypeBizStockseriesResponse() {{
+        org.openapis.openapi.models.operations.SearchTypeBizStockseriesResponse res = new org.openapis.openapi.models.operations.SearchTypeBizStockseriesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

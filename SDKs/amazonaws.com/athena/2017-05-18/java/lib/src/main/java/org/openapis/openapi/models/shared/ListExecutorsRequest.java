@@ -12,6 +12,7 @@ public class ListExecutorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutorStateFilter")
     public ExecutorStateEnum executorStateFilter;
+
     public ListExecutorsRequest withExecutorStateFilter(ExecutorStateEnum executorStateFilter) {
         this.executorStateFilter = executorStateFilter;
         return this;
@@ -20,6 +21,7 @@ public class ListExecutorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListExecutorsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListExecutorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListExecutorsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class ListExecutorsRequest {
     
     @JsonProperty("SessionId")
     public String sessionId;
+
     public ListExecutorsRequest withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public ListExecutorsRequest(@JsonProperty("SessionId") String sessionId) {
+        this.sessionId = sessionId;
+  }
 }

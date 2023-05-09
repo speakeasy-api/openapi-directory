@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AssociateEnvironmentOperationsRoleMessage - Request to add or change the operations role used by an environment.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssociateEnvironmentOperationsRoleMessage {
     
     public String environmentName;
+
     public AssociateEnvironmentOperationsRoleMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -19,9 +20,14 @@ public class AssociateEnvironmentOperationsRoleMessage {
     
     
     public String operationsRole;
+
     public AssociateEnvironmentOperationsRoleMessage withOperationsRole(String operationsRole) {
         this.operationsRole = operationsRole;
         return this;
     }
     
+    public AssociateEnvironmentOperationsRoleMessage(@JsonProperty("EnvironmentName") String environmentName, @JsonProperty("OperationsRole") String operationsRole) {
+        this.environmentName = environmentName;
+        this.operationsRole = operationsRole;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSessionsOfGroupUsingPOSTResponse {
     
     public String contentType;
+
     public ListSessionsOfGroupUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ListSessionsOfGroupUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public ListSessionsOfGroupUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ListSessionsOfGroupUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSessionsOfGroupUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ListSessionsOfGroupUsingPOSTResponse {
      */
     
     public ListSessionsOfGroupUsingPOST200ApplicationJSON listSessionsOfGroupUsingPOST200ApplicationJSONObject;
+
     public ListSessionsOfGroupUsingPOSTResponse withListSessionsOfGroupUsingPOST200ApplicationJSONObject(ListSessionsOfGroupUsingPOST200ApplicationJSON listSessionsOfGroupUsingPOST200ApplicationJSONObject) {
         this.listSessionsOfGroupUsingPOST200ApplicationJSONObject = listSessionsOfGroupUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ListSessionsOfGroupUsingPOSTResponse {
      */
     
     public ListSessionsOfGroupUsingPOST400ApplicationJSON listSessionsOfGroupUsingPOST400ApplicationJSONObject;
+
     public ListSessionsOfGroupUsingPOSTResponse withListSessionsOfGroupUsingPOST400ApplicationJSONObject(ListSessionsOfGroupUsingPOST400ApplicationJSON listSessionsOfGroupUsingPOST400ApplicationJSONObject) {
         this.listSessionsOfGroupUsingPOST400ApplicationJSONObject = listSessionsOfGroupUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ListSessionsOfGroupUsingPOSTResponse {
      */
     
     public ListSessionsOfGroupUsingPOST401ApplicationJSON listSessionsOfGroupUsingPOST401ApplicationJSONObject;
+
     public ListSessionsOfGroupUsingPOSTResponse withListSessionsOfGroupUsingPOST401ApplicationJSONObject(ListSessionsOfGroupUsingPOST401ApplicationJSON listSessionsOfGroupUsingPOST401ApplicationJSONObject) {
         this.listSessionsOfGroupUsingPOST401ApplicationJSONObject = listSessionsOfGroupUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class ListSessionsOfGroupUsingPOSTResponse {
      */
     
     public ListSessionsOfGroupUsingPOST500ApplicationJSON listSessionsOfGroupUsingPOST500ApplicationJSONObject;
+
     public ListSessionsOfGroupUsingPOSTResponse withListSessionsOfGroupUsingPOST500ApplicationJSONObject(ListSessionsOfGroupUsingPOST500ApplicationJSON listSessionsOfGroupUsingPOST500ApplicationJSONObject) {
         this.listSessionsOfGroupUsingPOST500ApplicationJSONObject = listSessionsOfGroupUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public ListSessionsOfGroupUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

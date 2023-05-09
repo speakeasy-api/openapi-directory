@@ -15,6 +15,7 @@ public class VolumeSaleInfoOffersListPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountInMicros")
     public Double amountInMicros;
+
     public VolumeSaleInfoOffersListPrice withAmountInMicros(Double amountInMicros) {
         this.amountInMicros = amountInMicros;
         return this;
@@ -23,9 +24,11 @@ public class VolumeSaleInfoOffersListPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public VolumeSaleInfoOffersListPrice withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
     
+    public VolumeSaleInfoOffersListPrice(){}
 }

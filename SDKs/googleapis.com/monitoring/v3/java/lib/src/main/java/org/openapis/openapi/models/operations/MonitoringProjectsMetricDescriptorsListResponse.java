@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MonitoringProjectsMetricDescriptorsListResponse {
     
     public String contentType;
+
     public MonitoringProjectsMetricDescriptorsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MonitoringProjectsMetricDescriptorsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMetricDescriptorsResponse listMetricDescriptorsResponse;
+
     public MonitoringProjectsMetricDescriptorsListResponse withListMetricDescriptorsResponse(org.openapis.openapi.models.shared.ListMetricDescriptorsResponse listMetricDescriptorsResponse) {
         this.listMetricDescriptorsResponse = listMetricDescriptorsResponse;
         return this;
@@ -26,6 +29,7 @@ public class MonitoringProjectsMetricDescriptorsListResponse {
     
     
     public Integer statusCode;
+
     public MonitoringProjectsMetricDescriptorsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MonitoringProjectsMetricDescriptorsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MonitoringProjectsMetricDescriptorsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MonitoringProjectsMetricDescriptorsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

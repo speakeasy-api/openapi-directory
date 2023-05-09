@@ -15,6 +15,7 @@ public class PutRecordsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionType")
     public EncryptionTypeEnum encryptionType;
+
     public PutRecordsOutput withEncryptionType(EncryptionTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -23,6 +24,7 @@ public class PutRecordsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedRecordCount")
     public Long failedRecordCount;
+
     public PutRecordsOutput withFailedRecordCount(Long failedRecordCount) {
         this.failedRecordCount = failedRecordCount;
         return this;
@@ -30,9 +32,13 @@ public class PutRecordsOutput {
     
     @JsonProperty("Records")
     public PutRecordsResultEntry[] records;
+
     public PutRecordsOutput withRecords(PutRecordsResultEntry[] records) {
         this.records = records;
         return this;
     }
     
+    public PutRecordsOutput(@JsonProperty("Records") PutRecordsResultEntry[] records) {
+        this.records = records;
+  }
 }

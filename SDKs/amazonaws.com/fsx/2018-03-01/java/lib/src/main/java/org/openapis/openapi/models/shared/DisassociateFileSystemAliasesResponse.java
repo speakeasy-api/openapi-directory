@@ -15,9 +15,11 @@ public class DisassociateFileSystemAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aliases")
     public Alias[] aliases;
+
     public DisassociateFileSystemAliasesResponse withAliases(Alias[] aliases) {
         this.aliases = aliases;
         return this;
     }
     
+    public DisassociateFileSystemAliasesResponse(){}
 }

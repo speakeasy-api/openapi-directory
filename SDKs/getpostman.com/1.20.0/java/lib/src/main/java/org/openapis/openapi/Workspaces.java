@@ -54,11 +54,9 @@ public class Workspaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllWorkspacesResponse res = new org.openapis.openapi.models.operations.AllWorkspacesResponse() {{
+        org.openapis.openapi.models.operations.AllWorkspacesResponse res = new org.openapis.openapi.models.operations.AllWorkspacesResponse(contentType, httpRes.statusCode()) {{
             allWorkspaces200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class Workspaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateWorkspaceResponse res = new org.openapis.openapi.models.operations.CreateWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.CreateWorkspaceResponse res = new org.openapis.openapi.models.operations.CreateWorkspaceResponse(contentType, httpRes.statusCode()) {{
             createWorkspace200ApplicationJSONObject = null;
             createWorkspace400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Workspaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWorkspaceResponse res = new org.openapis.openapi.models.operations.DeleteWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.DeleteWorkspaceResponse res = new org.openapis.openapi.models.operations.DeleteWorkspaceResponse(contentType, httpRes.statusCode()) {{
             deleteWorkspace200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,12 +185,10 @@ public class Workspaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SingleWorkspaceResponse res = new org.openapis.openapi.models.operations.SingleWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.SingleWorkspaceResponse res = new org.openapis.openapi.models.operations.SingleWorkspaceResponse(contentType, httpRes.statusCode()) {{
             singleWorkspace200ApplicationJSONObject = null;
             singleWorkspace404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,13 +240,11 @@ public class Workspaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateWorkspaceResponse res = new org.openapis.openapi.models.operations.UpdateWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.UpdateWorkspaceResponse res = new org.openapis.openapi.models.operations.UpdateWorkspaceResponse(contentType, httpRes.statusCode()) {{
             updateWorkspace200ApplicationJSONObject = null;
             updateWorkspace403ApplicationJSONObject = null;
             updateWorkspace404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

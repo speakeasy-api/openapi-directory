@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum GetSchedulesScheduleABySizeSizeEnum {
-    ZERO("0"),
-    TWO_HUNDRED("200"),
-    FIVE_HUNDRED("500"),
-    ONE_THOUSAND("1000"),
-    TWO_THOUSAND("2000");
+    ZERO(0),
+    TWO_HUNDRED(200),
+    FIVE_HUNDRED(500),
+    ONE_THOUSAND(1000),
+    TWO_THOUSAND(2000);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private GetSchedulesScheduleABySizeSizeEnum(String value) {
+    private GetSchedulesScheduleABySizeSizeEnum(Integer value) {
         this.value = value;
     }
 }

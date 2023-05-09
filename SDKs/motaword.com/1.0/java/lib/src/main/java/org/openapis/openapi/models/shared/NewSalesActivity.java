@@ -14,6 +14,7 @@ public class NewSalesActivity {
     @JsonProperty("subject")
     @SpeakeasyMetadata("multipartForm:name=subject")
     public String subject;
+
     public NewSalesActivity withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -23,6 +24,7 @@ public class NewSalesActivity {
     @JsonProperty("timestamp")
     @SpeakeasyMetadata("multipartForm:name=timestamp")
     public Long timestamp;
+
     public NewSalesActivity withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -35,9 +37,11 @@ public class NewSalesActivity {
     @JsonProperty("type")
     @SpeakeasyMetadata("multipartForm:name=type")
     public String type;
+
     public NewSalesActivity withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NewSalesActivity(){}
 }

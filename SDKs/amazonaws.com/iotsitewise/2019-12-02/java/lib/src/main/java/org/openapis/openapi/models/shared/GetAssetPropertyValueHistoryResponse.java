@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAssetPropertyValueHistoryResponse {
     @JsonProperty("assetPropertyValueHistory")
     public AssetPropertyValue[] assetPropertyValueHistory;
+
     public GetAssetPropertyValueHistoryResponse withAssetPropertyValueHistory(AssetPropertyValue[] assetPropertyValueHistory) {
         this.assetPropertyValueHistory = assetPropertyValueHistory;
         return this;
@@ -22,9 +23,13 @@ public class GetAssetPropertyValueHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetAssetPropertyValueHistoryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetAssetPropertyValueHistoryResponse(@JsonProperty("assetPropertyValueHistory") AssetPropertyValue[] assetPropertyValueHistory) {
+        this.assetPropertyValueHistory = assetPropertyValueHistory;
+  }
 }

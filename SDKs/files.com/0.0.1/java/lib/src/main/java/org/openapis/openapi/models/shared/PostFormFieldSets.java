@@ -17,6 +17,7 @@ public class PostFormFieldSets {
     @JsonProperty("form_fields")
     @SpeakeasyMetadata("form:name=form_fields,json multipartForm:name=form_fields,json")
     public PostFormFieldSetsFormFields[] formFields;
+
     public PostFormFieldSets withFormFields(PostFormFieldSetsFormFields[] formFields) {
         this.formFields = formFields;
         return this;
@@ -29,6 +30,7 @@ public class PostFormFieldSets {
     @JsonProperty("skip_company")
     @SpeakeasyMetadata("form:name=skip_company multipartForm:name=skip_company")
     public Boolean skipCompany;
+
     public PostFormFieldSets withSkipCompany(Boolean skipCompany) {
         this.skipCompany = skipCompany;
         return this;
@@ -41,6 +43,7 @@ public class PostFormFieldSets {
     @JsonProperty("skip_email")
     @SpeakeasyMetadata("form:name=skip_email multipartForm:name=skip_email")
     public Boolean skipEmail;
+
     public PostFormFieldSets withSkipEmail(Boolean skipEmail) {
         this.skipEmail = skipEmail;
         return this;
@@ -53,6 +56,7 @@ public class PostFormFieldSets {
     @JsonProperty("skip_name")
     @SpeakeasyMetadata("form:name=skip_name multipartForm:name=skip_name")
     public Boolean skipName;
+
     public PostFormFieldSets withSkipName(Boolean skipName) {
         this.skipName = skipName;
         return this;
@@ -65,6 +69,7 @@ public class PostFormFieldSets {
     @JsonProperty("title")
     @SpeakeasyMetadata("form:name=title multipartForm:name=title")
     public String title;
+
     public PostFormFieldSets withTitle(String title) {
         this.title = title;
         return this;
@@ -77,9 +82,11 @@ public class PostFormFieldSets {
     @JsonProperty("user_id")
     @SpeakeasyMetadata("form:name=user_id multipartForm:name=user_id")
     public Integer userId;
+
     public PostFormFieldSets withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public PostFormFieldSets(){}
 }

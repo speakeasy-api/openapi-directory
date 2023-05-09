@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWebACLMigrationStackResponse {
     
     public String contentType;
+
     public CreateWebACLMigrationStackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateWebACLMigrationStackResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWebACLMigrationStackResponse createWebACLMigrationStackResponse;
+
     public CreateWebACLMigrationStackResponse withCreateWebACLMigrationStackResponse(org.openapis.openapi.models.shared.CreateWebACLMigrationStackResponse createWebACLMigrationStackResponse) {
         this.createWebACLMigrationStackResponse = createWebACLMigrationStackResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateWebACLMigrationStackResponse {
     
     
     public Integer statusCode;
+
     public CreateWebACLMigrationStackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateWebACLMigrationStackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWebACLMigrationStackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateWebACLMigrationStackResponse {
      */
     
     public Object wafEntityMigrationException;
+
     public CreateWebACLMigrationStackResponse withWAFEntityMigrationException(Object wafEntityMigrationException) {
         this.wafEntityMigrationException = wafEntityMigrationException;
         return this;
@@ -53,6 +59,7 @@ public class CreateWebACLMigrationStackResponse {
      */
     
     public Object wafInternalErrorException;
+
     public CreateWebACLMigrationStackResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -63,6 +70,7 @@ public class CreateWebACLMigrationStackResponse {
      */
     
     public Object wafInvalidOperationException;
+
     public CreateWebACLMigrationStackResponse withWAFInvalidOperationException(Object wafInvalidOperationException) {
         this.wafInvalidOperationException = wafInvalidOperationException;
         return this;
@@ -73,6 +81,7 @@ public class CreateWebACLMigrationStackResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public CreateWebACLMigrationStackResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,9 +92,14 @@ public class CreateWebACLMigrationStackResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public CreateWebACLMigrationStackResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public CreateWebACLMigrationStackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

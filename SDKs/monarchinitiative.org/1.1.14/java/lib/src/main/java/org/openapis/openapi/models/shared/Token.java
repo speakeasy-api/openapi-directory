@@ -15,6 +15,7 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public String[] categories;
+
     public Token withCategories(String[] categories) {
         this.categories = categories;
         return this;
@@ -26,6 +27,7 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Token withId(String id) {
         this.id = id;
         return this;
@@ -37,9 +39,11 @@ public class Token {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms")
     public String[] terms;
+
     public Token withTerms(String[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public Token(){}
 }

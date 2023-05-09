@@ -18,6 +18,7 @@ public class IdentitytoolkitRelyingpartySignOutUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public IdentitytoolkitRelyingpartySignOutUserRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -29,9 +30,11 @@ public class IdentitytoolkitRelyingpartySignOutUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localId")
     public String localId;
+
     public IdentitytoolkitRelyingpartySignOutUserRequest withLocalId(String localId) {
         this.localId = localId;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartySignOutUserRequest(){}
 }

@@ -18,6 +18,7 @@ public class ServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Integer code;
+
     public ServiceError withCode(Integer code) {
         this.code = code;
         return this;
@@ -28,9 +29,13 @@ public class ServiceError {
      */
     @JsonProperty("message")
     public String message;
+
     public ServiceError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ServiceError(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

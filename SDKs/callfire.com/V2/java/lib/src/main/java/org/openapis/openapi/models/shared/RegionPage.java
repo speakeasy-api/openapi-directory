@@ -15,6 +15,7 @@ public class RegionPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Region[] items;
+
     public RegionPage withItems(Region[] items) {
         this.items = items;
         return this;
@@ -26,6 +27,7 @@ public class RegionPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public RegionPage withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -37,6 +39,7 @@ public class RegionPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public RegionPage withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -48,9 +51,11 @@ public class RegionPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public RegionPage withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public RegionPage(){}
 }

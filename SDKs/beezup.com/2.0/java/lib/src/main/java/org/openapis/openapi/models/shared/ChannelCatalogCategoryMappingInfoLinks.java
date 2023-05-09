@@ -12,9 +12,11 @@ public class ChannelCatalogCategoryMappingInfoLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configureCategories")
     public LinksConfigureChannelCatalogCategoryLink configureCategories;
+
     public ChannelCatalogCategoryMappingInfoLinks withConfigureCategories(LinksConfigureChannelCatalogCategoryLink configureCategories) {
         this.configureCategories = configureCategories;
         return this;
     }
     
+    public ChannelCatalogCategoryMappingInfoLinks(){}
 }

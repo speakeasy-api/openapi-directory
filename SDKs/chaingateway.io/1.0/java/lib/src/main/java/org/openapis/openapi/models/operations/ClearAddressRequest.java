@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClearAddressRequest {
@@ -12,6 +13,7 @@ public class ClearAddressRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public ClearAddressRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class ClearAddressRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ClearAddressRequest clearAddressRequest;
+
     public ClearAddressRequest withClearAddressRequest(org.openapis.openapi.models.shared.ClearAddressRequest clearAddressRequest) {
         this.clearAddressRequest = clearAddressRequest;
         return this;
     }
     
+    public ClearAddressRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("clearAddressRequest") org.openapis.openapi.models.shared.ClearAddressRequest clearAddressRequest) {
+        this.authorization = authorization;
+        this.clearAddressRequest = clearAddressRequest;
+  }
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetBatchJobExecutionResponse {
     @JsonProperty("applicationId")
     public String applicationId;
+
     public GetBatchJobExecutionResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -30,6 +31,7 @@ public class GetBatchJobExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchJobIdentifier")
     public BatchJobIdentifier batchJobIdentifier;
+
     public GetBatchJobExecutionResponse withBatchJobIdentifier(BatchJobIdentifier batchJobIdentifier) {
         this.batchJobIdentifier = batchJobIdentifier;
         return this;
@@ -40,6 +42,7 @@ public class GetBatchJobExecutionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetBatchJobExecutionResponse withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -47,6 +50,7 @@ public class GetBatchJobExecutionResponse {
     
     @JsonProperty("executionId")
     public String executionId;
+
     public GetBatchJobExecutionResponse withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -55,6 +59,7 @@ public class GetBatchJobExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public GetBatchJobExecutionResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -63,6 +68,7 @@ public class GetBatchJobExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobName")
     public String jobName;
+
     public GetBatchJobExecutionResponse withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -71,6 +77,7 @@ public class GetBatchJobExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobType")
     public BatchJobTypeEnum jobType;
+
     public GetBatchJobExecutionResponse withJobType(BatchJobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -79,6 +86,7 @@ public class GetBatchJobExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobUser")
     public String jobUser;
+
     public GetBatchJobExecutionResponse withJobUser(String jobUser) {
         this.jobUser = jobUser;
         return this;
@@ -87,6 +95,7 @@ public class GetBatchJobExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnCode")
     public String returnCode;
+
     public GetBatchJobExecutionResponse withReturnCode(String returnCode) {
         this.returnCode = returnCode;
         return this;
@@ -96,6 +105,7 @@ public class GetBatchJobExecutionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetBatchJobExecutionResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -103,6 +113,7 @@ public class GetBatchJobExecutionResponse {
     
     @JsonProperty("status")
     public BatchJobExecutionStatusEnum status;
+
     public GetBatchJobExecutionResponse withStatus(BatchJobExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -111,9 +122,16 @@ public class GetBatchJobExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public GetBatchJobExecutionResponse withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public GetBatchJobExecutionResponse(@JsonProperty("applicationId") String applicationId, @JsonProperty("executionId") String executionId, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("status") BatchJobExecutionStatusEnum status) {
+        this.applicationId = applicationId;
+        this.executionId = executionId;
+        this.startTime = startTime;
+        this.status = status;
+  }
 }

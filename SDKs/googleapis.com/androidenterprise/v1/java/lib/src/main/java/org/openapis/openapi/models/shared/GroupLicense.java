@@ -18,6 +18,7 @@ public class GroupLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acquisitionKind")
     public GroupLicenseAcquisitionKindEnum acquisitionKind;
+
     public GroupLicense withAcquisitionKind(GroupLicenseAcquisitionKindEnum acquisitionKind) {
         this.acquisitionKind = acquisitionKind;
         return this;
@@ -29,6 +30,7 @@ public class GroupLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approval")
     public GroupLicenseApprovalEnum approval;
+
     public GroupLicense withApproval(GroupLicenseApprovalEnum approval) {
         this.approval = approval;
         return this;
@@ -40,6 +42,7 @@ public class GroupLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numProvisioned")
     public Integer numProvisioned;
+
     public GroupLicense withNumProvisioned(Integer numProvisioned) {
         this.numProvisioned = numProvisioned;
         return this;
@@ -51,6 +54,7 @@ public class GroupLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numPurchased")
     public Integer numPurchased;
+
     public GroupLicense withNumPurchased(Integer numPurchased) {
         this.numPurchased = numPurchased;
         return this;
@@ -62,6 +66,7 @@ public class GroupLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public GroupLicensePermissionsEnum permissions;
+
     public GroupLicense withPermissions(GroupLicensePermissionsEnum permissions) {
         this.permissions = permissions;
         return this;
@@ -73,9 +78,11 @@ public class GroupLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public GroupLicense withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public GroupLicense(){}
 }

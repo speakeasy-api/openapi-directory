@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostTransactionRulesResponse {
     
     public String contentType;
+
     public PostTransactionRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostTransactionRulesResponse {
     
     
     public Integer statusCode;
+
     public PostTransactionRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostTransactionRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostTransactionRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostTransactionRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PostTransactionRulesResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -43,9 +48,14 @@ public class PostTransactionRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.TransactionRule transactionRule;
+
     public PostTransactionRulesResponse withTransactionRule(org.openapis.openapi.models.shared.TransactionRule transactionRule) {
         this.transactionRule = transactionRule;
         return this;
     }
     
+    public PostTransactionRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

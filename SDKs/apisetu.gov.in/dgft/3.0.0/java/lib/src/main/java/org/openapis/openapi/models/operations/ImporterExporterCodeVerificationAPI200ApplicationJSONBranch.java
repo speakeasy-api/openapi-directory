@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImporterExporterCodeVerificationAPI200ApplicationJSONBranch {
     @JsonProperty("badd1")
     public String badd1;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSONBranch withBadd1(String badd1) {
         this.badd1 = badd1;
         return this;
@@ -16,6 +17,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSONBranch {
     
     @JsonProperty("badd2")
     public String badd2;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSONBranch withBadd2(String badd2) {
         this.badd2 = badd2;
         return this;
@@ -23,6 +25,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSONBranch {
     
     @JsonProperty("branchCode")
     public String branchCode;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSONBranch withBranchCode(String branchCode) {
         this.branchCode = branchCode;
         return this;
@@ -30,6 +33,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSONBranch {
     
     @JsonProperty("city")
     public String city;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSONBranch withCity(String city) {
         this.city = city;
         return this;
@@ -37,6 +41,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSONBranch {
     
     @JsonProperty("pin")
     public String pin;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSONBranch withPin(String pin) {
         this.pin = pin;
         return this;
@@ -44,9 +49,18 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSONBranch {
     
     @JsonProperty("state")
     public String state;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSONBranch withState(String state) {
         this.state = state;
         return this;
     }
     
+    public ImporterExporterCodeVerificationAPI200ApplicationJSONBranch(@JsonProperty("badd1") String badd1, @JsonProperty("badd2") String badd2, @JsonProperty("branchCode") String branchCode, @JsonProperty("city") String city, @JsonProperty("pin") String pin, @JsonProperty("state") String state) {
+        this.badd1 = badd1;
+        this.badd2 = badd2;
+        this.branchCode = branchCode;
+        this.city = city;
+        this.pin = pin;
+        this.state = state;
+  }
 }

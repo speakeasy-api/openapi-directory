@@ -15,6 +15,7 @@ public class LeaveBalance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeaveName")
     public String leaveName;
+
     public LeaveBalance withLeaveName(String leaveName) {
         this.leaveName = leaveName;
         return this;
@@ -26,6 +27,7 @@ public class LeaveBalance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeaveTypeID")
     public String leaveTypeID;
+
     public LeaveBalance withLeaveTypeID(String leaveTypeID) {
         this.leaveTypeID = leaveTypeID;
         return this;
@@ -37,6 +39,7 @@ public class LeaveBalance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfUnits")
     public Double numberOfUnits;
+
     public LeaveBalance withNumberOfUnits(Double numberOfUnits) {
         this.numberOfUnits = numberOfUnits;
         return this;
@@ -48,9 +51,11 @@ public class LeaveBalance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeOfUnits")
     public String typeOfUnits;
+
     public LeaveBalance withTypeOfUnits(String typeOfUnits) {
         this.typeOfUnits = typeOfUnits;
         return this;
     }
     
+    public LeaveBalance(){}
 }

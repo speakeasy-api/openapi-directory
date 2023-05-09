@@ -18,20 +18,23 @@ public class DatedValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public DatedValue withDate(Date date) {
         this.date = date;
         return this;
     }
     
     /**
-     * The value of the datapoint.
+     * The value of the datapoint. This will not be present when the value is zero.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public DatedValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DatedValue(){}
 }

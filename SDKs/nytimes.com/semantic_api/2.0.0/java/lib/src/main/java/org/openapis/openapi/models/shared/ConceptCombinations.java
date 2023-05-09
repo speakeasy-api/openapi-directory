@@ -12,6 +12,7 @@ public class ConceptCombinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combination_note")
     public String combinationNote;
+
     public ConceptCombinations withCombinationNote(String combinationNote) {
         this.combinationNote = combinationNote;
         return this;
@@ -20,6 +21,7 @@ public class ConceptCombinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combination_source_concept_id")
     public Long combinationSourceConceptId;
+
     public ConceptCombinations withCombinationSourceConceptId(Long combinationSourceConceptId) {
         this.combinationSourceConceptId = combinationSourceConceptId;
         return this;
@@ -28,6 +30,7 @@ public class ConceptCombinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combination_source_concept_name")
     public String combinationSourceConceptName;
+
     public ConceptCombinations withCombinationSourceConceptName(String combinationSourceConceptName) {
         this.combinationSourceConceptName = combinationSourceConceptName;
         return this;
@@ -36,6 +39,7 @@ public class ConceptCombinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combination_source_concept_type")
     public String combinationSourceConceptType;
+
     public ConceptCombinations withCombinationSourceConceptType(String combinationSourceConceptType) {
         this.combinationSourceConceptType = combinationSourceConceptType;
         return this;
@@ -44,6 +48,7 @@ public class ConceptCombinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combination_target_concept_id")
     public Long combinationTargetConceptId;
+
     public ConceptCombinations withCombinationTargetConceptId(Long combinationTargetConceptId) {
         this.combinationTargetConceptId = combinationTargetConceptId;
         return this;
@@ -52,6 +57,7 @@ public class ConceptCombinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combination_target_concept_name")
     public String combinationTargetConceptName;
+
     public ConceptCombinations withCombinationTargetConceptName(String combinationTargetConceptName) {
         this.combinationTargetConceptName = combinationTargetConceptName;
         return this;
@@ -60,9 +66,11 @@ public class ConceptCombinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combination_target_concept_type")
     public String combinationTargetConceptType;
+
     public ConceptCombinations withCombinationTargetConceptType(String combinationTargetConceptType) {
         this.combinationTargetConceptType = combinationTargetConceptType;
         return this;
     }
     
+    public ConceptCombinations(){}
 }

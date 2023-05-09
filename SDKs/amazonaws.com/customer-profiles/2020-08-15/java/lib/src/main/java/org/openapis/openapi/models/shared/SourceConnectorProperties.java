@@ -15,6 +15,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marketo")
     public MarketoSourceProperties marketo;
+
     public SourceConnectorProperties withMarketo(MarketoSourceProperties marketo) {
         this.marketo = marketo;
         return this;
@@ -23,6 +24,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3")
     public S3SourceProperties s3;
+
     public SourceConnectorProperties withS3(S3SourceProperties s3) {
         this.s3 = s3;
         return this;
@@ -31,6 +33,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Salesforce")
     public SalesforceSourceProperties salesforce;
+
     public SourceConnectorProperties withSalesforce(SalesforceSourceProperties salesforce) {
         this.salesforce = salesforce;
         return this;
@@ -39,6 +42,7 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceNow")
     public ServiceNowSourceProperties serviceNow;
+
     public SourceConnectorProperties withServiceNow(ServiceNowSourceProperties serviceNow) {
         this.serviceNow = serviceNow;
         return this;
@@ -47,9 +51,11 @@ public class SourceConnectorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Zendesk")
     public ZendeskSourceProperties zendesk;
+
     public SourceConnectorProperties withZendesk(ZendeskSourceProperties zendesk) {
         this.zendesk = zendesk;
         return this;
     }
     
+    public SourceConnectorProperties(){}
 }

@@ -15,6 +15,7 @@ public class BatchWriteItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedCapacity")
     public ConsumedCapacity[] consumedCapacity;
+
     public BatchWriteItemOutput withConsumedCapacity(ConsumedCapacity[] consumedCapacity) {
         this.consumedCapacity = consumedCapacity;
         return this;
@@ -23,6 +24,7 @@ public class BatchWriteItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemCollectionMetrics")
     public java.util.Map<String, ItemCollectionMetrics[]> itemCollectionMetrics;
+
     public BatchWriteItemOutput withItemCollectionMetrics(java.util.Map<String, ItemCollectionMetrics[]> itemCollectionMetrics) {
         this.itemCollectionMetrics = itemCollectionMetrics;
         return this;
@@ -31,9 +33,11 @@ public class BatchWriteItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedItems")
     public java.util.Map<String, WriteRequest[]> unprocessedItems;
+
     public BatchWriteItemOutput withUnprocessedItems(java.util.Map<String, WriteRequest[]> unprocessedItems) {
         this.unprocessedItems = unprocessedItems;
         return this;
     }
     
+    public BatchWriteItemOutput(){}
 }

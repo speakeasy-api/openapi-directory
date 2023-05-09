@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeExternalVpnGatewaysTestIamPermissionsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeExternalVpnGatewaysTestIamPermissionsSecurityOption1 option1;
+
     public ComputeExternalVpnGatewaysTestIamPermissionsSecurity withOption1(ComputeExternalVpnGatewaysTestIamPermissionsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeExternalVpnGatewaysTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeExternalVpnGatewaysTestIamPermissionsSecurityOption2 option2;
+
     public ComputeExternalVpnGatewaysTestIamPermissionsSecurity withOption2(ComputeExternalVpnGatewaysTestIamPermissionsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeExternalVpnGatewaysTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeExternalVpnGatewaysTestIamPermissionsSecurityOption3 option3;
+
     public ComputeExternalVpnGatewaysTestIamPermissionsSecurity withOption3(ComputeExternalVpnGatewaysTestIamPermissionsSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeExternalVpnGatewaysTestIamPermissionsSecurity(){}
 }

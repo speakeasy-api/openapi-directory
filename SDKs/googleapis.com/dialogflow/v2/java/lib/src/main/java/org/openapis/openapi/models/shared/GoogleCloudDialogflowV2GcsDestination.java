@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2GcsDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudDialogflowV2GcsDestination withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudDialogflowV2GcsDestination(){}
 }

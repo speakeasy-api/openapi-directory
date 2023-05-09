@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEpisodesIdNextSiblingResponse {
     
     public String contentType;
+
     public GetEpisodesIdNextSiblingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetEpisodesIdNextSiblingResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetEpisodesIdNextSiblingResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetEpisodesIdNextSiblingResponse {
     
     
     public Integer statusCode;
+
     public GetEpisodesIdNextSiblingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetEpisodesIdNextSiblingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEpisodesIdNextSiblingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetEpisodesIdNextSiblingResponse {
      */
     
     public GetEpisodesIdNextSibling200ApplicationVndApiPlusJson getEpisodesIdNextSibling200ApplicationVndApiPlusJsonObject;
+
     public GetEpisodesIdNextSiblingResponse withGetEpisodesIdNextSibling200ApplicationVndApiPlusJsonObject(GetEpisodesIdNextSibling200ApplicationVndApiPlusJson getEpisodesIdNextSibling200ApplicationVndApiPlusJsonObject) {
         this.getEpisodesIdNextSibling200ApplicationVndApiPlusJsonObject = getEpisodesIdNextSibling200ApplicationVndApiPlusJsonObject;
         return this;
     }
     
+    public GetEpisodesIdNextSiblingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

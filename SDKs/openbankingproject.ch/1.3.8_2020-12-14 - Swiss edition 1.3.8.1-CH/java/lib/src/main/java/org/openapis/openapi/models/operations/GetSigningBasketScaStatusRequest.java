@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSigningBasketScaStatusRequest {
@@ -12,6 +13,7 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
     public String digest;
+
     public GetSigningBasketScaStatusRequest withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -23,6 +25,7 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
     public String psuAccept;
+
     public GetSigningBasketScaStatusRequest withPSUAccept(String psuAccept) {
         this.psuAccept = psuAccept;
         return this;
@@ -34,6 +37,7 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
     public String psuAcceptCharset;
+
     public GetSigningBasketScaStatusRequest withPSUAcceptCharset(String psuAcceptCharset) {
         this.psuAcceptCharset = psuAcceptCharset;
         return this;
@@ -45,6 +49,7 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
     public String psuAcceptEncoding;
+
     public GetSigningBasketScaStatusRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
         this.psuAcceptEncoding = psuAcceptEncoding;
         return this;
@@ -56,6 +61,7 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
     public String psuAcceptLanguage;
+
     public GetSigningBasketScaStatusRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
         this.psuAcceptLanguage = psuAcceptLanguage;
         return this;
@@ -69,6 +75,7 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
     public String psuDeviceID;
+
     public GetSigningBasketScaStatusRequest withPSUDeviceID(String psuDeviceID) {
         this.psuDeviceID = psuDeviceID;
         return this;
@@ -80,6 +87,7 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
     public String psuGeoLocation;
+
     public GetSigningBasketScaStatusRequest withPSUGeoLocation(String psuGeoLocation) {
         this.psuGeoLocation = psuGeoLocation;
         return this;
@@ -97,6 +105,7 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
     public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+
     public GetSigningBasketScaStatusRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
         this.psuHttpMethod = psuHttpMethod;
         return this;
@@ -108,6 +117,7 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
     public String psuIPAddress;
+
     public GetSigningBasketScaStatusRequest withPSUIPAddress(String psuIPAddress) {
         this.psuIPAddress = psuIPAddress;
         return this;
@@ -119,6 +129,7 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
     public String psuIPPort;
+
     public GetSigningBasketScaStatusRequest withPSUIPPort(String psuIPPort) {
         this.psuIPPort = psuIPPort;
         return this;
@@ -130,6 +141,7 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
     public String psuUserAgent;
+
     public GetSigningBasketScaStatusRequest withPSUUserAgent(String psuUserAgent) {
         this.psuUserAgent = psuUserAgent;
         return this;
@@ -141,6 +153,7 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
     public String signature;
+
     public GetSigningBasketScaStatusRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -153,6 +166,7 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
     public String tppSignatureCertificate;
+
     public GetSigningBasketScaStatusRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
         this.tppSignatureCertificate = tppSignatureCertificate;
         return this;
@@ -163,6 +177,7 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
     public String xRequestID;
+
     public GetSigningBasketScaStatusRequest withXRequestID(String xRequestID) {
         this.xRequestID = xRequestID;
         return this;
@@ -173,6 +188,7 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorisationId")
     public String authorisationId;
+
     public GetSigningBasketScaStatusRequest withAuthorisationId(String authorisationId) {
         this.authorisationId = authorisationId;
         return this;
@@ -184,9 +200,15 @@ public class GetSigningBasketScaStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=basketId")
     public String basketId;
+
     public GetSigningBasketScaStatusRequest withBasketId(String basketId) {
         this.basketId = basketId;
         return this;
     }
     
+    public GetSigningBasketScaStatusRequest(@JsonProperty("X-Request-ID") String xRequestID, @JsonProperty("authorisationId") String authorisationId, @JsonProperty("basketId") String basketId) {
+        this.xRequestID = xRequestID;
+        this.authorisationId = authorisationId;
+        this.basketId = basketId;
+  }
 }

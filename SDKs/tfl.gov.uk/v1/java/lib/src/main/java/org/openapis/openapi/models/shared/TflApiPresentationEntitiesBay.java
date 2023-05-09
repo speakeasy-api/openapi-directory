@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesBay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bayCount")
     public Integer bayCount;
+
     public TflApiPresentationEntitiesBay withBayCount(Integer bayCount) {
         this.bayCount = bayCount;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesBay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bayType")
     public String bayType;
+
     public TflApiPresentationEntitiesBay withBayType(String bayType) {
         this.bayType = bayType;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesBay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("free")
     public Integer free;
+
     public TflApiPresentationEntitiesBay withFree(Integer free) {
         this.free = free;
         return this;
@@ -36,9 +39,11 @@ public class TflApiPresentationEntitiesBay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occupied")
     public Integer occupied;
+
     public TflApiPresentationEntitiesBay withOccupied(Integer occupied) {
         this.occupied = occupied;
         return this;
     }
     
+    public TflApiPresentationEntitiesBay(){}
 }

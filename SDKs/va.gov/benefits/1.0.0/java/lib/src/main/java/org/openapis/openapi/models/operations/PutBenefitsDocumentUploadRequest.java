@@ -12,9 +12,11 @@ public class PutBenefitsDocumentUploadRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-MD5")
     public String contentMd5;
+
     public PutBenefitsDocumentUploadRequest withContentMd5(String contentMd5) {
         this.contentMd5 = contentMd5;
         return this;
     }
     
+    public PutBenefitsDocumentUploadRequest(){}
 }

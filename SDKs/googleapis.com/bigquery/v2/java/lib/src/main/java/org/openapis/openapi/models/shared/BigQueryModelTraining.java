@@ -15,6 +15,7 @@ public class BigQueryModelTraining {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentIteration")
     public Integer currentIteration;
+
     public BigQueryModelTraining withCurrentIteration(Integer currentIteration) {
         this.currentIteration = currentIteration;
         return this;
@@ -26,9 +27,11 @@ public class BigQueryModelTraining {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedTotalIterations")
     public String expectedTotalIterations;
+
     public BigQueryModelTraining withExpectedTotalIterations(String expectedTotalIterations) {
         this.expectedTotalIterations = expectedTotalIterations;
         return this;
     }
     
+    public BigQueryModelTraining(){}
 }

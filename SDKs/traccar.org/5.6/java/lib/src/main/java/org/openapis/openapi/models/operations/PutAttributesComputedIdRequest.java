@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutAttributesComputedIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Attribute attribute;
+
     public PutAttributesComputedIdRequest withAttribute(org.openapis.openapi.models.shared.Attribute attribute) {
         this.attribute = attribute;
         return this;
@@ -16,9 +18,14 @@ public class PutAttributesComputedIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PutAttributesComputedIdRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PutAttributesComputedIdRequest(@JsonProperty("Attribute") org.openapis.openapi.models.shared.Attribute attribute, @JsonProperty("id") Long id) {
+        this.attribute = attribute;
+        this.id = id;
+  }
 }

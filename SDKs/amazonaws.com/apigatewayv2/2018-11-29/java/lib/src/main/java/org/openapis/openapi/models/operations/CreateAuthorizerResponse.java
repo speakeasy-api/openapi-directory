@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAuthorizerResponse {
@@ -12,6 +13,7 @@ public class CreateAuthorizerResponse {
      */
     
     public Object badRequestException;
+
     public CreateAuthorizerResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateAuthorizerResponse {
      */
     
     public Object conflictException;
+
     public CreateAuthorizerResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateAuthorizerResponse {
     
     
     public String contentType;
+
     public CreateAuthorizerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateAuthorizerResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAuthorizerResponse createAuthorizerResponse;
+
     public CreateAuthorizerResponse withCreateAuthorizerResponse(org.openapis.openapi.models.shared.CreateAuthorizerResponse createAuthorizerResponse) {
         this.createAuthorizerResponse = createAuthorizerResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateAuthorizerResponse {
      */
     
     public Object notFoundException;
+
     public CreateAuthorizerResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateAuthorizerResponse {
     
     
     public Integer statusCode;
+
     public CreateAuthorizerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateAuthorizerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAuthorizerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateAuthorizerResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateAuthorizerResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateAuthorizerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

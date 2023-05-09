@@ -18,6 +18,7 @@ public class JobAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonEnvironmentSettings")
     public EnvironmentSetting[] commonEnvironmentSettings;
+
     public JobAddParameter withCommonEnvironmentSettings(EnvironmentSetting[] commonEnvironmentSettings) {
         this.commonEnvironmentSettings = commonEnvironmentSettings;
         return this;
@@ -29,6 +30,7 @@ public class JobAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public JobConstraints constraints;
+
     public JobAddParameter withConstraints(JobConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -40,6 +42,7 @@ public class JobAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public JobAddParameter withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -50,6 +53,7 @@ public class JobAddParameter {
      */
     @JsonProperty("id")
     public String id;
+
     public JobAddParameter withId(String id) {
         this.id = id;
         return this;
@@ -61,6 +65,7 @@ public class JobAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobManagerTask")
     public JobManagerTask jobManagerTask;
+
     public JobAddParameter withJobManagerTask(JobManagerTask jobManagerTask) {
         this.jobManagerTask = jobManagerTask;
         return this;
@@ -72,6 +77,7 @@ public class JobAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobPreparationTask")
     public JobPreparationTask jobPreparationTask;
+
     public JobAddParameter withJobPreparationTask(JobPreparationTask jobPreparationTask) {
         this.jobPreparationTask = jobPreparationTask;
         return this;
@@ -83,6 +89,7 @@ public class JobAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobReleaseTask")
     public JobReleaseTask jobReleaseTask;
+
     public JobAddParameter withJobReleaseTask(JobReleaseTask jobReleaseTask) {
         this.jobReleaseTask = jobReleaseTask;
         return this;
@@ -94,6 +101,7 @@ public class JobAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public MetadataItem[] metadata;
+
     public JobAddParameter withMetadata(MetadataItem[] metadata) {
         this.metadata = metadata;
         return this;
@@ -104,6 +112,7 @@ public class JobAddParameter {
      */
     @JsonProperty("poolInfo")
     public PoolInformation poolInfo;
+
     public JobAddParameter withPoolInfo(PoolInformation poolInfo) {
         this.poolInfo = poolInfo;
         return this;
@@ -115,6 +124,7 @@ public class JobAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public JobAddParameter withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -126,9 +136,14 @@ public class JobAddParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usesTaskDependencies")
     public Boolean usesTaskDependencies;
+
     public JobAddParameter withUsesTaskDependencies(Boolean usesTaskDependencies) {
         this.usesTaskDependencies = usesTaskDependencies;
         return this;
     }
     
+    public JobAddParameter(@JsonProperty("id") String id, @JsonProperty("poolInfo") PoolInformation poolInfo) {
+        this.id = id;
+        this.poolInfo = poolInfo;
+  }
 }

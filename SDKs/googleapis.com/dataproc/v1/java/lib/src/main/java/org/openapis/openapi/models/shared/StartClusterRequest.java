@@ -18,6 +18,7 @@ public class StartClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterUuid")
     public String clusterUuid;
+
     public StartClusterRequest withClusterUuid(String clusterUuid) {
         this.clusterUuid = clusterUuid;
         return this;
@@ -29,9 +30,11 @@ public class StartClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public StartClusterRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public StartClusterRequest(){}
 }

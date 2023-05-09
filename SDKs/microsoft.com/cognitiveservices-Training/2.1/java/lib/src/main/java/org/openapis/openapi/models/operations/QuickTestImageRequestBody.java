@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuickTestImageRequestBody {
     @SpeakeasyMetadata("multipartForm:file")
     public QuickTestImageRequestBodyImageData imageData;
+
     public QuickTestImageRequestBody withImageData(QuickTestImageRequestBodyImageData imageData) {
         this.imageData = imageData;
         return this;
     }
     
+    public QuickTestImageRequestBody(@JsonProperty("imageData") QuickTestImageRequestBodyImageData imageData) {
+        this.imageData = imageData;
+  }
 }

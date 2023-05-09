@@ -12,6 +12,7 @@ public class RegisterDomainInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RegisterDomainInput withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class RegisterDomainInput {
     
     @JsonProperty("name")
     public String name;
+
     public RegisterDomainInput withName(String name) {
         this.name = name;
         return this;
@@ -27,6 +29,7 @@ public class RegisterDomainInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public ResourceTag[] tags;
+
     public RegisterDomainInput withTags(ResourceTag[] tags) {
         this.tags = tags;
         return this;
@@ -34,9 +37,14 @@ public class RegisterDomainInput {
     
     @JsonProperty("workflowExecutionRetentionPeriodInDays")
     public String workflowExecutionRetentionPeriodInDays;
+
     public RegisterDomainInput withWorkflowExecutionRetentionPeriodInDays(String workflowExecutionRetentionPeriodInDays) {
         this.workflowExecutionRetentionPeriodInDays = workflowExecutionRetentionPeriodInDays;
         return this;
     }
     
+    public RegisterDomainInput(@JsonProperty("name") String name, @JsonProperty("workflowExecutionRetentionPeriodInDays") String workflowExecutionRetentionPeriodInDays) {
+        this.name = name;
+        this.workflowExecutionRetentionPeriodInDays = workflowExecutionRetentionPeriodInDays;
+  }
 }

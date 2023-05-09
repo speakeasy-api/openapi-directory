@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateConnectClientAddInResponse {
@@ -12,6 +13,7 @@ public class UpdateConnectClientAddInResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateConnectClientAddInResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateConnectClientAddInResponse {
     
     
     public String contentType;
+
     public UpdateConnectClientAddInResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateConnectClientAddInResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public UpdateConnectClientAddInResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateConnectClientAddInResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateConnectClientAddInResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateConnectClientAddInResponse {
     
     
     public Integer statusCode;
+
     public UpdateConnectClientAddInResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateConnectClientAddInResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateConnectClientAddInResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateConnectClientAddInResponse {
      */
     
     public java.util.Map<String, Object> updateConnectClientAddInResult;
+
     public UpdateConnectClientAddInResponse withUpdateConnectClientAddInResult(java.util.Map<String, Object> updateConnectClientAddInResult) {
         this.updateConnectClientAddInResult = updateConnectClientAddInResult;
         return this;
     }
     
+    public UpdateConnectClientAddInResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

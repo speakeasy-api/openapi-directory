@@ -15,9 +15,11 @@ public class GetDeploymentConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentConfigInfo")
     public DeploymentConfigInfo deploymentConfigInfo;
+
     public GetDeploymentConfigOutput withDeploymentConfigInfo(DeploymentConfigInfo deploymentConfigInfo) {
         this.deploymentConfigInfo = deploymentConfigInfo;
         return this;
     }
     
+    public GetDeploymentConfigOutput(){}
 }

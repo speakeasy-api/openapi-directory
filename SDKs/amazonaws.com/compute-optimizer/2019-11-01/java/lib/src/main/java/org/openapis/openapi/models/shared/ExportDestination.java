@@ -15,9 +15,11 @@ public class ExportDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3")
     public S3Destination s3;
+
     public ExportDestination withS3(S3Destination s3) {
         this.s3 = s3;
         return this;
     }
     
+    public ExportDestination(){}
 }

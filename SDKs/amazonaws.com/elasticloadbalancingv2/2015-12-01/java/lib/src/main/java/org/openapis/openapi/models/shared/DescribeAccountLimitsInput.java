@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAccountLimitsInput {
     
     public String marker;
+
     public DescribeAccountLimitsInput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,9 +17,11 @@ public class DescribeAccountLimitsInput {
     
     
     public Long pageSize;
+
     public DescribeAccountLimitsInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public DescribeAccountLimitsInput(){}
 }

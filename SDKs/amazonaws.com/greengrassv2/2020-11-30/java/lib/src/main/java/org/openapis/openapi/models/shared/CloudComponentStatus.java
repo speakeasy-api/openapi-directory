@@ -15,6 +15,7 @@ public class CloudComponentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentState")
     public CloudComponentStateEnum componentState;
+
     public CloudComponentStatus withComponentState(CloudComponentStateEnum componentState) {
         this.componentState = componentState;
         return this;
@@ -23,6 +24,7 @@ public class CloudComponentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public java.util.Map<String, String> errors;
+
     public CloudComponentStatus withErrors(java.util.Map<String, String> errors) {
         this.errors = errors;
         return this;
@@ -31,6 +33,7 @@ public class CloudComponentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CloudComponentStatus withMessage(String message) {
         this.message = message;
         return this;
@@ -39,6 +42,7 @@ public class CloudComponentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorGuidance")
     public VendorGuidanceEnum vendorGuidance;
+
     public CloudComponentStatus withVendorGuidance(VendorGuidanceEnum vendorGuidance) {
         this.vendorGuidance = vendorGuidance;
         return this;
@@ -47,9 +51,11 @@ public class CloudComponentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorGuidanceMessage")
     public String vendorGuidanceMessage;
+
     public CloudComponentStatus withVendorGuidanceMessage(String vendorGuidanceMessage) {
         this.vendorGuidanceMessage = vendorGuidanceMessage;
         return this;
     }
     
+    public CloudComponentStatus(){}
 }

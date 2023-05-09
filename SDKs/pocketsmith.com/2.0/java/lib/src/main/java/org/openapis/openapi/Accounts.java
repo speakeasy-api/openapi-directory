@@ -52,11 +52,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAccountsIdResponse res = new org.openapis.openapi.models.operations.DeleteAccountsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteAccountsIdResponse res = new org.openapis.openapi.models.operations.DeleteAccountsIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -94,12 +92,10 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountsIdResponse res = new org.openapis.openapi.models.operations.GetAccountsIdResponse() {{
+        org.openapis.openapi.models.operations.GetAccountsIdResponse res = new org.openapis.openapi.models.operations.GetAccountsIdResponse(contentType, httpRes.statusCode()) {{
             account = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,12 +138,10 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInstitutionsIdAccountsResponse res = new org.openapis.openapi.models.operations.GetInstitutionsIdAccountsResponse() {{
+        org.openapis.openapi.models.operations.GetInstitutionsIdAccountsResponse res = new org.openapis.openapi.models.operations.GetInstitutionsIdAccountsResponse(contentType, httpRes.statusCode()) {{
             accounts = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,12 +184,10 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdAccountsResponse res = new org.openapis.openapi.models.operations.GetUsersIdAccountsResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdAccountsResponse res = new org.openapis.openapi.models.operations.GetUsersIdAccountsResponse(contentType, httpRes.statusCode()) {{
             accounts = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,12 +232,10 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUsersIdAccountsResponse res = new org.openapis.openapi.models.operations.PostUsersIdAccountsResponse() {{
+        org.openapis.openapi.models.operations.PostUsersIdAccountsResponse res = new org.openapis.openapi.models.operations.PostUsersIdAccountsResponse(contentType, httpRes.statusCode()) {{
             account = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -290,12 +280,10 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutAccountsIdResponse res = new org.openapis.openapi.models.operations.PutAccountsIdResponse() {{
+        org.openapis.openapi.models.operations.PutAccountsIdResponse res = new org.openapis.openapi.models.operations.PutAccountsIdResponse(contentType, httpRes.statusCode()) {{
             account = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -340,12 +328,10 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutUsersIdAccountsResponse res = new org.openapis.openapi.models.operations.PutUsersIdAccountsResponse() {{
+        org.openapis.openapi.models.operations.PutUsersIdAccountsResponse res = new org.openapis.openapi.models.operations.PutUsersIdAccountsResponse(contentType, httpRes.statusCode()) {{
             accounts = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

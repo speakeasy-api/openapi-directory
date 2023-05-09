@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Leg1 {
     @JsonProperty("destination_airport_code")
     public String destinationAirportCode;
+
     public Leg1 withDestinationAirportCode(String destinationAirportCode) {
         this.destinationAirportCode = destinationAirportCode;
         return this;
@@ -16,6 +17,7 @@ public class Leg1 {
     
     @JsonProperty("origin_airport_code")
     public String originAirportCode;
+
     public Leg1 withOriginAirportCode(String originAirportCode) {
         this.originAirportCode = originAirportCode;
         return this;
@@ -23,9 +25,15 @@ public class Leg1 {
     
     @JsonProperty("travel_class")
     public String travelClass;
+
     public Leg1 withTravelClass(String travelClass) {
         this.travelClass = travelClass;
         return this;
     }
     
+    public Leg1(@JsonProperty("destination_airport_code") String destinationAirportCode, @JsonProperty("origin_airport_code") String originAirportCode, @JsonProperty("travel_class") String travelClass) {
+        this.destinationAirportCode = destinationAirportCode;
+        this.originAirportCode = originAirportCode;
+        this.travelClass = travelClass;
+  }
 }

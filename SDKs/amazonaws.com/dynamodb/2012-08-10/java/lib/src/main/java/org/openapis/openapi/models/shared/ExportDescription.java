@@ -20,6 +20,7 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BilledSizeBytes")
     public Long billedSizeBytes;
+
     public ExportDescription withBilledSizeBytes(Long billedSizeBytes) {
         this.billedSizeBytes = billedSizeBytes;
         return this;
@@ -28,6 +29,7 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public ExportDescription withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -38,6 +40,7 @@ public class ExportDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public ExportDescription withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -46,6 +49,7 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportArn")
     public String exportArn;
+
     public ExportDescription withExportArn(String exportArn) {
         this.exportArn = exportArn;
         return this;
@@ -54,6 +58,7 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportFormat")
     public ExportFormatEnum exportFormat;
+
     public ExportDescription withExportFormat(ExportFormatEnum exportFormat) {
         this.exportFormat = exportFormat;
         return this;
@@ -62,6 +67,7 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportManifest")
     public String exportManifest;
+
     public ExportDescription withExportManifest(String exportManifest) {
         this.exportManifest = exportManifest;
         return this;
@@ -70,6 +76,7 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportStatus")
     public ExportStatusEnum exportStatus;
+
     public ExportDescription withExportStatus(ExportStatusEnum exportStatus) {
         this.exportStatus = exportStatus;
         return this;
@@ -80,6 +87,7 @@ public class ExportDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExportTime")
     public OffsetDateTime exportTime;
+
     public ExportDescription withExportTime(OffsetDateTime exportTime) {
         this.exportTime = exportTime;
         return this;
@@ -88,6 +96,7 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureCode")
     public String failureCode;
+
     public ExportDescription withFailureCode(String failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -96,6 +105,7 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureMessage")
     public String failureMessage;
+
     public ExportDescription withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -104,6 +114,7 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemCount")
     public Long itemCount;
+
     public ExportDescription withItemCount(Long itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -112,6 +123,7 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Bucket")
     public String s3Bucket;
+
     public ExportDescription withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -120,6 +132,7 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketOwner")
     public String s3BucketOwner;
+
     public ExportDescription withS3BucketOwner(String s3BucketOwner) {
         this.s3BucketOwner = s3BucketOwner;
         return this;
@@ -128,6 +141,7 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Prefix")
     public String s3Prefix;
+
     public ExportDescription withS3Prefix(String s3Prefix) {
         this.s3Prefix = s3Prefix;
         return this;
@@ -136,6 +150,7 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3SseAlgorithm")
     public S3SseAlgorithmEnum s3SseAlgorithm;
+
     public ExportDescription withS3SseAlgorithm(S3SseAlgorithmEnum s3SseAlgorithm) {
         this.s3SseAlgorithm = s3SseAlgorithm;
         return this;
@@ -144,6 +159,7 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3SseKmsKeyId")
     public String s3SseKmsKeyId;
+
     public ExportDescription withS3SseKmsKeyId(String s3SseKmsKeyId) {
         this.s3SseKmsKeyId = s3SseKmsKeyId;
         return this;
@@ -154,6 +170,7 @@ public class ExportDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public ExportDescription withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -162,6 +179,7 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableArn")
     public String tableArn;
+
     public ExportDescription withTableArn(String tableArn) {
         this.tableArn = tableArn;
         return this;
@@ -170,9 +188,11 @@ public class ExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableId")
     public String tableId;
+
     public ExportDescription withTableId(String tableId) {
         this.tableId = tableId;
         return this;
     }
     
+    public ExportDescription(){}
 }

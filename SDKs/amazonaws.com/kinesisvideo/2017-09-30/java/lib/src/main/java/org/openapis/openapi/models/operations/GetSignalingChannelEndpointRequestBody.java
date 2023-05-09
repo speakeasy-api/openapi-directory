@@ -14,6 +14,7 @@ public class GetSignalingChannelEndpointRequestBody {
      */
     @JsonProperty("ChannelARN")
     public String channelARN;
+
     public GetSignalingChannelEndpointRequestBody withChannelARN(String channelARN) {
         this.channelARN = channelARN;
         return this;
@@ -25,9 +26,13 @@ public class GetSignalingChannelEndpointRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SingleMasterChannelEndpointConfiguration")
     public GetSignalingChannelEndpointRequestBodySingleMasterChannelEndpointConfiguration singleMasterChannelEndpointConfiguration;
+
     public GetSignalingChannelEndpointRequestBody withSingleMasterChannelEndpointConfiguration(GetSignalingChannelEndpointRequestBodySingleMasterChannelEndpointConfiguration singleMasterChannelEndpointConfiguration) {
         this.singleMasterChannelEndpointConfiguration = singleMasterChannelEndpointConfiguration;
         return this;
     }
     
+    public GetSignalingChannelEndpointRequestBody(@JsonProperty("ChannelARN") String channelARN) {
+        this.channelARN = channelARN;
+  }
 }

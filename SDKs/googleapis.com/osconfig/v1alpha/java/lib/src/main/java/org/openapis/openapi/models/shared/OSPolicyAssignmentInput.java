@@ -18,6 +18,7 @@ public class OSPolicyAssignmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OSPolicyAssignmentInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyAssignmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public OSPolicyAssignmentInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class OSPolicyAssignmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceFilter")
     public OSPolicyAssignmentInstanceFilter instanceFilter;
+
     public OSPolicyAssignmentInput withInstanceFilter(OSPolicyAssignmentInstanceFilter instanceFilter) {
         this.instanceFilter = instanceFilter;
         return this;
@@ -51,6 +54,7 @@ public class OSPolicyAssignmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OSPolicyAssignmentInput withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class OSPolicyAssignmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osPolicies")
     public OSPolicy[] osPolicies;
+
     public OSPolicyAssignmentInput withOsPolicies(OSPolicy[] osPolicies) {
         this.osPolicies = osPolicies;
         return this;
@@ -73,9 +78,11 @@ public class OSPolicyAssignmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollout")
     public OSPolicyAssignmentRollout rollout;
+
     public OSPolicyAssignmentInput withRollout(OSPolicyAssignmentRollout rollout) {
         this.rollout = rollout;
         return this;
     }
     
+    public OSPolicyAssignmentInput(){}
 }

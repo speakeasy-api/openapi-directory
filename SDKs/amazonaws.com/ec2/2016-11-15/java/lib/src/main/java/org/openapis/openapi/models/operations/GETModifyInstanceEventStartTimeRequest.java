@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyInstanceEventStartTimeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyInstanceEventStartTimeActionEnum action;
+
     public GETModifyInstanceEventStartTimeRequest withAction(GETModifyInstanceEventStartTimeActionEnum action) {
         this.action = action;
         return this;
@@ -20,6 +22,7 @@ public class GETModifyInstanceEventStartTimeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyInstanceEventStartTimeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class GETModifyInstanceEventStartTimeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceEventId")
     public String instanceEventId;
+
     public GETModifyInstanceEventStartTimeRequest withInstanceEventId(String instanceEventId) {
         this.instanceEventId = instanceEventId;
         return this;
@@ -40,6 +44,7 @@ public class GETModifyInstanceEventStartTimeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
     public String instanceId;
+
     public GETModifyInstanceEventStartTimeRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -50,6 +55,7 @@ public class GETModifyInstanceEventStartTimeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NotBefore")
     public OffsetDateTime notBefore;
+
     public GETModifyInstanceEventStartTimeRequest withNotBefore(OffsetDateTime notBefore) {
         this.notBefore = notBefore;
         return this;
@@ -57,6 +63,7 @@ public class GETModifyInstanceEventStartTimeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyInstanceEventStartTimeVersionEnum version;
+
     public GETModifyInstanceEventStartTimeRequest withVersion(GETModifyInstanceEventStartTimeVersionEnum version) {
         this.version = version;
         return this;
@@ -64,6 +71,7 @@ public class GETModifyInstanceEventStartTimeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyInstanceEventStartTimeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -71,6 +79,7 @@ public class GETModifyInstanceEventStartTimeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyInstanceEventStartTimeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -78,6 +87,7 @@ public class GETModifyInstanceEventStartTimeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyInstanceEventStartTimeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -85,6 +95,7 @@ public class GETModifyInstanceEventStartTimeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyInstanceEventStartTimeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -92,6 +103,7 @@ public class GETModifyInstanceEventStartTimeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyInstanceEventStartTimeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -99,6 +111,7 @@ public class GETModifyInstanceEventStartTimeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyInstanceEventStartTimeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -106,9 +119,17 @@ public class GETModifyInstanceEventStartTimeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyInstanceEventStartTimeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyInstanceEventStartTimeRequest(@JsonProperty("Action") GETModifyInstanceEventStartTimeActionEnum action, @JsonProperty("InstanceEventId") String instanceEventId, @JsonProperty("InstanceId") String instanceId, @JsonProperty("NotBefore") OffsetDateTime notBefore, @JsonProperty("Version") GETModifyInstanceEventStartTimeVersionEnum version) {
+        this.action = action;
+        this.instanceEventId = instanceEventId;
+        this.instanceId = instanceId;
+        this.notBefore = notBefore;
+        this.version = version;
+  }
 }

@@ -15,6 +15,7 @@ public class Facet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Facet withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class Facet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectType")
     public ObjectTypeEnum objectType;
+
     public Facet withObjectType(ObjectTypeEnum objectType) {
         this.objectType = objectType;
         return this;
     }
     
+    public Facet(){}
 }

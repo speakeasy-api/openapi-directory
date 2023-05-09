@@ -23,6 +23,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Float amount;
+
     public Invoice withAmount(Float amount) {
         this.amount = amount;
         return this;
@@ -34,6 +35,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base_amount")
     public Float baseAmount;
+
     public Invoice withBaseAmount(Float baseAmount) {
         this.baseAmount = baseAmount;
         return this;
@@ -42,6 +44,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base_currency")
     public String baseCurrency;
+
     public Invoice withBaseCurrency(String baseCurrency) {
         this.baseCurrency = baseCurrency;
         return this;
@@ -50,6 +53,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing")
     public BillingAddress billing;
+
     public Invoice withBilling(BillingAddress billing) {
         this.billing = billing;
         return this;
@@ -58,6 +62,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public Invoice withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -66,6 +71,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Invoice withId(Long id) {
         this.id = id;
         return this;
@@ -74,6 +80,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_no")
     public Long invoiceNo;
+
     public Invoice withInvoiceNo(Long invoiceNo) {
         this.invoiceNo = invoiceNo;
         return this;
@@ -87,6 +94,7 @@ public class Invoice {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("invoiced_at")
     public OffsetDateTime invoicedAt;
+
     public Invoice withInvoicedAt(OffsetDateTime invoicedAt) {
         this.invoicedAt = invoicedAt;
         return this;
@@ -95,6 +103,7 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public InvoiceLinks links;
+
     public Invoice withLinks(InvoiceLinks links) {
         this.links = links;
         return this;
@@ -103,9 +112,11 @@ public class Invoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Invoice withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Invoice(){}
 }

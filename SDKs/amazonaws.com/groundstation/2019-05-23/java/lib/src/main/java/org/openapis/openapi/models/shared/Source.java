@@ -15,6 +15,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configDetails")
     public ConfigDetails configDetails;
+
     public Source withConfigDetails(ConfigDetails configDetails) {
         this.configDetails = configDetails;
         return this;
@@ -23,6 +24,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configId")
     public String configId;
+
     public Source withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -31,6 +33,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configType")
     public ConfigCapabilityTypeEnum configType;
+
     public Source withConfigType(ConfigCapabilityTypeEnum configType) {
         this.configType = configType;
         return this;
@@ -39,9 +42,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataflowSourceRegion")
     public String dataflowSourceRegion;
+
     public Source withDataflowSourceRegion(String dataflowSourceRegion) {
         this.dataflowSourceRegion = dataflowSourceRegion;
         return this;
     }
     
+    public Source(){}
 }

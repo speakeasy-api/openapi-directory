@@ -18,9 +18,11 @@ public class Split {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Split withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public Split(){}
 }

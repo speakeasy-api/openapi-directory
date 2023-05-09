@@ -15,6 +15,7 @@ public class ServiceBlockInputModel {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public ServiceBlockInputModel withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -23,6 +24,7 @@ public class ServiceBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public Integer endTime;
+
     public ServiceBlockInputModel withEndTime(Integer endTime) {
         this.endTime = endTime;
         return this;
@@ -31,6 +33,7 @@ public class ServiceBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public ServiceBlockInputModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -39,6 +42,7 @@ public class ServiceBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ServiceBlockInputModel withReason(String reason) {
         this.reason = reason;
         return this;
@@ -47,6 +51,7 @@ public class ServiceBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeat")
     public RepeatInputModel repeat;
+
     public ServiceBlockInputModel withRepeat(RepeatInputModel repeat) {
         this.repeat = repeat;
         return this;
@@ -55,6 +60,7 @@ public class ServiceBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeats")
     public Boolean repeats;
+
     public ServiceBlockInputModel withRepeats(Boolean repeats) {
         this.repeats = repeats;
         return this;
@@ -64,6 +70,7 @@ public class ServiceBlockInputModel {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public ServiceBlockInputModel withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -72,9 +79,11 @@ public class ServiceBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public Integer startTime;
+
     public ServiceBlockInputModel withStartTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ServiceBlockInputModel(){}
 }

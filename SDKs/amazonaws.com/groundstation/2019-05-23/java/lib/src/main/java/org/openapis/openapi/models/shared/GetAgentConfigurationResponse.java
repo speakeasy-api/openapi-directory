@@ -15,6 +15,7 @@ public class GetAgentConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentId")
     public String agentId;
+
     public GetAgentConfigurationResponse withAgentId(String agentId) {
         this.agentId = agentId;
         return this;
@@ -23,9 +24,11 @@ public class GetAgentConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskingDocument")
     public String taskingDocument;
+
     public GetAgentConfigurationResponse withTaskingDocument(String taskingDocument) {
         this.taskingDocument = taskingDocument;
         return this;
     }
     
+    public GetAgentConfigurationResponse(){}
 }

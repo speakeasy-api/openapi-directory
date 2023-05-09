@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteFeatureGroupRequest {
     @JsonProperty("FeatureGroupName")
     public String featureGroupName;
+
     public DeleteFeatureGroupRequest withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
     }
     
+    public DeleteFeatureGroupRequest(@JsonProperty("FeatureGroupName") String featureGroupName) {
+        this.featureGroupName = featureGroupName;
+  }
 }

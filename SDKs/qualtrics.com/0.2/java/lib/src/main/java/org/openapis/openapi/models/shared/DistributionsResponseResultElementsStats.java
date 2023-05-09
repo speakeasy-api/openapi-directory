@@ -12,6 +12,7 @@ public class DistributionsResponseResultElementsStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blocked")
     public Long blocked;
+
     public DistributionsResponseResultElementsStats withBlocked(Long blocked) {
         this.blocked = blocked;
         return this;
@@ -20,6 +21,7 @@ public class DistributionsResponseResultElementsStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bounced")
     public Long bounced;
+
     public DistributionsResponseResultElementsStats withBounced(Long bounced) {
         this.bounced = bounced;
         return this;
@@ -28,6 +30,7 @@ public class DistributionsResponseResultElementsStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complaints")
     public Long complaints;
+
     public DistributionsResponseResultElementsStats withComplaints(Long complaints) {
         this.complaints = complaints;
         return this;
@@ -36,6 +39,7 @@ public class DistributionsResponseResultElementsStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed")
     public Long failed;
+
     public DistributionsResponseResultElementsStats withFailed(Long failed) {
         this.failed = failed;
         return this;
@@ -44,6 +48,7 @@ public class DistributionsResponseResultElementsStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finished")
     public Long finished;
+
     public DistributionsResponseResultElementsStats withFinished(Long finished) {
         this.finished = finished;
         return this;
@@ -52,6 +57,7 @@ public class DistributionsResponseResultElementsStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opened")
     public Long opened;
+
     public DistributionsResponseResultElementsStats withOpened(Long opened) {
         this.opened = opened;
         return this;
@@ -60,6 +66,7 @@ public class DistributionsResponseResultElementsStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sent")
     public Long sent;
+
     public DistributionsResponseResultElementsStats withSent(Long sent) {
         this.sent = sent;
         return this;
@@ -68,6 +75,7 @@ public class DistributionsResponseResultElementsStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipped")
     public Long skipped;
+
     public DistributionsResponseResultElementsStats withSkipped(Long skipped) {
         this.skipped = skipped;
         return this;
@@ -76,9 +84,11 @@ public class DistributionsResponseResultElementsStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("started")
     public Long started;
+
     public DistributionsResponseResultElementsStats withStarted(Long started) {
         this.started = started;
         return this;
     }
     
+    public DistributionsResponseResultElementsStats(){}
 }

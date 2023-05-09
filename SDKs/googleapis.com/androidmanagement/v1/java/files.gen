@@ -231,4 +231,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/WebTokenEnabledFeaturesEnum
 lib/src/main/java/org/openapis/openapi/models/shared/WebTokenPermissionsEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/WebToken.java
 lib/src/main/java/org/openapis/openapi/models/shared/SignupUrl.java
+docs/sdk/README.md
+docs/enterprises/README.md
+docs/signupurls/README.md
 USAGE.md

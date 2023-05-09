@@ -15,6 +15,7 @@ public class ListPredictorBacktestExportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPredictorBacktestExportJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPredictorBacktestExportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorBacktestExportJobs")
     public PredictorBacktestExportJobSummary[] predictorBacktestExportJobs;
+
     public ListPredictorBacktestExportJobsResponse withPredictorBacktestExportJobs(PredictorBacktestExportJobSummary[] predictorBacktestExportJobs) {
         this.predictorBacktestExportJobs = predictorBacktestExportJobs;
         return this;
     }
     
+    public ListPredictorBacktestExportJobsResponse(){}
 }

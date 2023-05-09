@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTlskeyResponse {
@@ -12,6 +13,7 @@ public class GetTlskeyResponse {
      */
     
     public org.openapis.openapi.models.shared.Certificate certificate;
+
     public GetTlskeyResponse withCertificate(org.openapis.openapi.models.shared.Certificate certificate) {
         this.certificate = certificate;
         return this;
@@ -19,6 +21,7 @@ public class GetTlskeyResponse {
     
     
     public String contentType;
+
     public GetTlskeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetTlskeyResponse {
     
     
     public Integer statusCode;
+
     public GetTlskeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetTlskeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTlskeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTlskeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

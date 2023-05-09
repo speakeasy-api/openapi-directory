@@ -54,10 +54,8 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteV2PeopleIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteV2PeopleIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteV2PeopleIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteV2PeopleIdJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -95,11 +93,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2PeopleJsonResponse res = new org.openapis.openapi.models.operations.GetV2PeopleJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2PeopleJsonResponse res = new org.openapis.openapi.models.operations.GetV2PeopleJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -134,11 +130,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2PeopleIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2PeopleIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2PeopleIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2PeopleIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,11 +170,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV2PeopleJsonResponse res = new org.openapis.openapi.models.operations.PostV2PeopleJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV2PeopleJsonResponse res = new org.openapis.openapi.models.operations.PostV2PeopleJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -217,11 +209,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutV2PeopleIdJsonResponse res = new org.openapis.openapi.models.operations.PutV2PeopleIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutV2PeopleIdJsonResponse res = new org.openapis.openapi.models.operations.PutV2PeopleIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

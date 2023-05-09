@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2CddriveFilesFileIdContentRequest {
@@ -12,6 +13,7 @@ public class GetApiV2CddriveFilesFileIdContentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
     public String range;
+
     public GetApiV2CddriveFilesFileIdContentRequest withRange(String range) {
         this.range = range;
         return this;
@@ -22,9 +24,13 @@ public class GetApiV2CddriveFilesFileIdContentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file-id")
     public Long fileId;
+
     public GetApiV2CddriveFilesFileIdContentRequest withFileId(Long fileId) {
         this.fileId = fileId;
         return this;
     }
     
+    public GetApiV2CddriveFilesFileIdContentRequest(@JsonProperty("file-id") Long fileId) {
+        this.fileId = fileId;
+  }
 }

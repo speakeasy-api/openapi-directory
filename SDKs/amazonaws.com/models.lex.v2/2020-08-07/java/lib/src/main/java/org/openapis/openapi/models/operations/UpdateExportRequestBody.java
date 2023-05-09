@@ -15,9 +15,11 @@ public class UpdateExportRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePassword")
     public String filePassword;
+
     public UpdateExportRequestBody withFilePassword(String filePassword) {
         this.filePassword = filePassword;
         return this;
     }
     
+    public UpdateExportRequestBody(){}
 }

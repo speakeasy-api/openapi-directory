@@ -18,6 +18,7 @@ public class ServerTlsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyTlsContext")
     public TlsContext proxyTlsContext;
+
     public ServerTlsSettings withProxyTlsContext(TlsContext proxyTlsContext) {
         this.proxyTlsContext = proxyTlsContext;
         return this;
@@ -29,6 +30,7 @@ public class ServerTlsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAltNames")
     public String[] subjectAltNames;
+
     public ServerTlsSettings withSubjectAltNames(String[] subjectAltNames) {
         this.subjectAltNames = subjectAltNames;
         return this;
@@ -40,9 +42,11 @@ public class ServerTlsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tlsMode")
     public ServerTlsSettingsTlsModeEnum tlsMode;
+
     public ServerTlsSettings withTlsMode(ServerTlsSettingsTlsModeEnum tlsMode) {
         this.tlsMode = tlsMode;
         return this;
     }
     
+    public ServerTlsSettings(){}
 }

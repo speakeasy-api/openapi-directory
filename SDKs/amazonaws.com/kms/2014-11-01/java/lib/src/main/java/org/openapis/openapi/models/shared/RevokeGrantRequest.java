@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RevokeGrantRequest {
     @JsonProperty("GrantId")
     public String grantId;
+
     public RevokeGrantRequest withGrantId(String grantId) {
         this.grantId = grantId;
         return this;
@@ -16,9 +17,14 @@ public class RevokeGrantRequest {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public RevokeGrantRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public RevokeGrantRequest(@JsonProperty("GrantId") String grantId, @JsonProperty("KeyId") String keyId) {
+        this.grantId = grantId;
+        this.keyId = keyId;
+  }
 }

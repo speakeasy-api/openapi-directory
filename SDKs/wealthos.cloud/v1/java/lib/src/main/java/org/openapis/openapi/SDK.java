@@ -57,7 +57,7 @@ import org.openapis.openapi.utils.SpeakeasyHTTPClient;
  * ### Socket API
  *  In order for WealthOS to authenticate a Websocket API call, a query parameter x-token must be included within the URL. 
  * 
- * x-token = your organisation\u2019s secret key 
+ * x-token = your organisation’s secret key 
  * 
  * Full URL must read as follows: 
  * ````
@@ -233,7 +233,7 @@ import org.openapis.openapi.utils.SpeakeasyHTTPClient;
  * &lt;div class="warning" style='padding:0.1em; background-color:#FFD2D2; color:#D8000C;'&gt;
  *     &lt;span&gt;
  *         &lt;p style='margin-top:0.9em;margin-bottom:0.9em;margin-left:1em; text-align:left'&gt;
- *             &lt;b&gt;\u24d8&lt;/b&gt; A live socket connection will be automatically disconnected by the server after 2 hours
+ *             &lt;b&gt;ⓘ&lt;/b&gt; A live socket connection will be automatically disconnected by the server after 2 hours
  *         &lt;/p&gt;
  *     &lt;/span&gt;
  * &lt;/div&gt;
@@ -958,7 +958,7 @@ public class SDK {
      * &lt;!-- &lt;div class="warning" style='padding:0.1em; background-color:#FEEFB3; color:#9F6000;'&gt;
      *     &lt;span&gt;
      *         &lt;p style='margin-top:0.9em;margin-bottom:0.9em;margin-left:1em; text-align:left'&gt;
-     *             &lt;b&gt;\u24d8&lt;/b&gt; This feature is currently in BETA mode
+     *             &lt;b&gt;ⓘ&lt;/b&gt; This feature is currently in BETA mode
      *         &lt;/p&gt;
      *     &lt;/span&gt;
      * &lt;/div&gt;
@@ -982,7 +982,7 @@ public class SDK {
      */
     public InvestmentProductTransactions investmentProductTransactions;
     /**
-     * Investment products  (e.g. mutual funds, ETFs, stocks etc.) are bought and sold by the investor (or by the wealth manager on the investor\u2019s behalf). 
+     * Investment products  (e.g. mutual funds, ETFs, stocks etc.) are bought and sold by the investor (or by the wealth manager on the investor’s behalf). 
      * 
      * The Investment Products endpoint returns all the investment products that are offered by the wealth manager, as well as the current market price. The wealth manager must specify the universe of supported investment products via the WealthOS Admin UI. 
      */
@@ -994,7 +994,7 @@ public class SDK {
     /**
      * The Investor endpoint allows you to create investors, update investors and retrieve investor records in bulk or individually. If a KYC/AML service has been set-up through WealthOS (e.g. Onfido), then the investor will be verified using this service. 
      * 
-     * When retrieving the investor, the following fields will provide information regarding the investor\u2019s status that can be used for deciding on what subsequent investor action must be permitted.
+     * When retrieving the investor, the following fields will provide information regarding the investor’s status that can be used for deciding on what subsequent investor action must be permitted.
      *  
      * * dealing_status: Normally set to Active once KYC/AML passes, however may be independently set by administrators if required. 
      *  
@@ -1030,9 +1030,9 @@ public class SDK {
      */
     public Payments payments;
     /**
-     * A portfolio template captures how an investor\u2019s cash (once transferred to a pot) should be automatically invested by the system. A portfolio template consists of a set of investment products and the ratios in which these products must be bought, once cleared cash is available to invest. 
+     * A portfolio template captures how an investor’s cash (once transferred to a pot) should be automatically invested by the system. A portfolio template consists of a set of investment products and the ratios in which these products must be bought, once cleared cash is available to invest. 
      * 
-     * For example, a portfolio template \u2018PT1\u2019 has the following template
+     * For example, a portfolio template ‘PT1’ has the following template
      * 
      * Investment Product | Ratio
      * -------------------|-------
@@ -1048,7 +1048,7 @@ public class SDK {
      * 
      * ### Portfolio Creation
      * 
-     * Portfolio Templates can be created by the Wealth Manger (generic set of portfolio templates created in WealthOS and a single template will be assigned to an Investor\u2019s pot based on suitability - e.g. robo advisory) 
+     * Portfolio Templates can be created by the Wealth Manger (generic set of portfolio templates created in WealthOS and a single template will be assigned to an Investor’s pot based on suitability - e.g. robo advisory) 
      * 
      * &lt;!-- If a Portfolio template is created by an investor then the request must have `owner : "investor"` and `investor_id` populated with the relevant investor ID.  --&gt;
      * 
@@ -1202,6 +1202,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.bankAccounts = new BankAccounts(

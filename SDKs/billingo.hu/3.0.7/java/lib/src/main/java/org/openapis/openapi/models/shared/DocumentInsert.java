@@ -17,6 +17,7 @@ public class DocumentInsert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_account_id")
     public Long bankAccountId;
+
     public DocumentInsert withBankAccountId(Long bankAccountId) {
         this.bankAccountId = bankAccountId;
         return this;
@@ -24,6 +25,7 @@ public class DocumentInsert {
     
     @JsonProperty("block_id")
     public Long blockId;
+
     public DocumentInsert withBlockId(Long blockId) {
         this.blockId = blockId;
         return this;
@@ -32,6 +34,7 @@ public class DocumentInsert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public DocumentInsert withComment(String comment) {
         this.comment = comment;
         return this;
@@ -40,6 +43,7 @@ public class DocumentInsert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversion_rate")
     public Float conversionRate;
+
     public DocumentInsert withConversionRate(Float conversionRate) {
         this.conversionRate = conversionRate;
         return this;
@@ -47,6 +51,7 @@ public class DocumentInsert {
     
     @JsonProperty("currency")
     public CurrencyEnum currency;
+
     public DocumentInsert withCurrency(CurrencyEnum currency) {
         this.currency = currency;
         return this;
@@ -55,6 +60,7 @@ public class DocumentInsert {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("due_date")
     public LocalDate dueDate;
+
     public DocumentInsert withDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -63,6 +69,7 @@ public class DocumentInsert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electronic")
     public Boolean electronic;
+
     public DocumentInsert withElectronic(Boolean electronic) {
         this.electronic = electronic;
         return this;
@@ -71,6 +78,7 @@ public class DocumentInsert {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("fulfillment_date")
     public LocalDate fulfillmentDate;
+
     public DocumentInsert withFulfillmentDate(LocalDate fulfillmentDate) {
         this.fulfillmentDate = fulfillmentDate;
         return this;
@@ -79,6 +87,7 @@ public class DocumentInsert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Object[] items;
+
     public DocumentInsert withItems(Object[] items) {
         this.items = items;
         return this;
@@ -86,6 +95,7 @@ public class DocumentInsert {
     
     @JsonProperty("language")
     public DocumentLanguageEnum language;
+
     public DocumentInsert withLanguage(DocumentLanguageEnum language) {
         this.language = language;
         return this;
@@ -94,6 +104,7 @@ public class DocumentInsert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paid")
     public Boolean paid;
+
     public DocumentInsert withPaid(Boolean paid) {
         this.paid = paid;
         return this;
@@ -101,6 +112,7 @@ public class DocumentInsert {
     
     @JsonProperty("partner_id")
     public Long partnerId;
+
     public DocumentInsert withPartnerId(Long partnerId) {
         this.partnerId = partnerId;
         return this;
@@ -108,6 +120,7 @@ public class DocumentInsert {
     
     @JsonProperty("payment_method")
     public PaymentMethodEnum paymentMethod;
+
     public DocumentInsert withPaymentMethod(PaymentMethodEnum paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -116,6 +129,7 @@ public class DocumentInsert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public DocumentSettings settings;
+
     public DocumentInsert withSettings(DocumentSettings settings) {
         this.settings = settings;
         return this;
@@ -123,6 +137,7 @@ public class DocumentInsert {
     
     @JsonProperty("type")
     public DocumentInsertTypeEnum type;
+
     public DocumentInsert withType(DocumentInsertTypeEnum type) {
         this.type = type;
         return this;
@@ -131,9 +146,20 @@ public class DocumentInsert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_id")
     public String vendorId;
+
     public DocumentInsert withVendorId(String vendorId) {
         this.vendorId = vendorId;
         return this;
     }
     
+    public DocumentInsert(@JsonProperty("block_id") Long blockId, @JsonProperty("currency") CurrencyEnum currency, @JsonProperty("due_date") LocalDate dueDate, @JsonProperty("fulfillment_date") LocalDate fulfillmentDate, @JsonProperty("language") DocumentLanguageEnum language, @JsonProperty("partner_id") Long partnerId, @JsonProperty("payment_method") PaymentMethodEnum paymentMethod, @JsonProperty("type") DocumentInsertTypeEnum type) {
+        this.blockId = blockId;
+        this.currency = currency;
+        this.dueDate = dueDate;
+        this.fulfillmentDate = fulfillmentDate;
+        this.language = language;
+        this.partnerId = partnerId;
+        this.paymentMethod = paymentMethod;
+        this.type = type;
+  }
 }

@@ -35,10 +35,11 @@ public class Sites {
      * 
      * 
      * __Note:__ Square Online APIs are publicly available as part of an early access program. For more information, see [Early access program for Square Online APIs](https://developer.squareup.com/docs/online-api#early-access-program-for-square-online-apis).
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListSitesResponse listSites() throws Exception {
+    public org.openapis.openapi.models.operations.ListSitesResponse listSites(org.openapis.openapi.models.operations.ListSitesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/sites");
         
@@ -47,16 +48,15 @@ public class Sites {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSitesResponse res = new org.openapis.openapi.models.operations.ListSitesResponse() {{
+        org.openapis.openapi.models.operations.ListSitesResponse res = new org.openapis.openapi.models.operations.ListSitesResponse(contentType, httpRes.statusCode()) {{
             listSitesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ParameterNameValueList {
     
     public String parameterName;
+
     public ParameterNameValueList withParameterName(String parameterName) {
         this.parameterName = parameterName;
         return this;
@@ -19,9 +20,11 @@ public class ParameterNameValueList {
     
     
     public String parameterValue;
+
     public ParameterNameValueList withParameterValue(String parameterValue) {
         this.parameterValue = parameterValue;
         return this;
     }
     
+    public ParameterNameValueList(){}
 }

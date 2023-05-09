@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse {
     
     public String contentType;
+
     public DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse {
     
     
     public Integer statusCode;
+
     public DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -35,9 +39,14 @@ public class DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
     }
     
+    public DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

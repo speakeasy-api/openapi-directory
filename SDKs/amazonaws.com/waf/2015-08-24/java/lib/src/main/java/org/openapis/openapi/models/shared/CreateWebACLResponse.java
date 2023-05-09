@@ -15,6 +15,7 @@ public class CreateWebACLResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public CreateWebACLResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -23,9 +24,11 @@ public class CreateWebACLResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebACL")
     public WebACL webACL;
+
     public CreateWebACLResponse withWebACL(WebACL webACL) {
         this.webACL = webACL;
         return this;
     }
     
+    public CreateWebACLResponse(){}
 }

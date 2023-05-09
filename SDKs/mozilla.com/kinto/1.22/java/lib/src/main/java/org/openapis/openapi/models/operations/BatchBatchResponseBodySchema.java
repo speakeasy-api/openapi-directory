@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchBatchResponseBodySchema {
     @JsonProperty("responses")
     public BatchBatchResponseBodySchemaResponses[] responses;
+
     public BatchBatchResponseBodySchema withResponses(BatchBatchResponseBodySchemaResponses[] responses) {
         this.responses = responses;
         return this;
     }
     
+    public BatchBatchResponseBodySchema(@JsonProperty("responses") BatchBatchResponseBodySchemaResponses[] responses) {
+        this.responses = responses;
+  }
 }

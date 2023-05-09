@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetServiceQuotaRequest {
     @JsonProperty("QuotaCode")
     public String quotaCode;
+
     public GetServiceQuotaRequest withQuotaCode(String quotaCode) {
         this.quotaCode = quotaCode;
         return this;
@@ -16,9 +17,14 @@ public class GetServiceQuotaRequest {
     
     @JsonProperty("ServiceCode")
     public String serviceCode;
+
     public GetServiceQuotaRequest withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
     
+    public GetServiceQuotaRequest(@JsonProperty("QuotaCode") String quotaCode, @JsonProperty("ServiceCode") String serviceCode) {
+        this.quotaCode = quotaCode;
+        this.serviceCode = serviceCode;
+  }
 }

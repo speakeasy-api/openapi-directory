@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteDBInstanceResult {
     
     public DBInstance dbInstance;
+
     public DeleteDBInstanceResult withDBInstance(DBInstance dbInstance) {
         this.dbInstance = dbInstance;
         return this;
     }
     
+    public DeleteDBInstanceResult(){}
 }

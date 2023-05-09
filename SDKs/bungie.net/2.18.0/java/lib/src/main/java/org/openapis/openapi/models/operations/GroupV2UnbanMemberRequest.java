@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2UnbanMemberRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public Long groupId;
+
     public GroupV2UnbanMemberRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -19,6 +21,7 @@ public class GroupV2UnbanMemberRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
     public Long membershipId;
+
     public GroupV2UnbanMemberRequest withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -29,9 +32,15 @@ public class GroupV2UnbanMemberRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public GroupV2UnbanMemberRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
     }
     
+    public GroupV2UnbanMemberRequest(@JsonProperty("groupId") Long groupId, @JsonProperty("membershipId") Long membershipId, @JsonProperty("membershipType") Integer membershipType) {
+        this.groupId = groupId;
+        this.membershipId = membershipId;
+        this.membershipType = membershipType;
+  }
 }

@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfiguration - The logging configuration for Amazon Web Services Verified Access instance.
+ * ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfiguration - The logging configuration for the Verified Access instance.
  */
 public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfiguration {
     
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogs accessLogs;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfiguration withAccessLogs(ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogs accessLogs) {
         this.accessLogs = accessLogs;
         return this;
@@ -19,9 +20,11 @@ public class ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfig
     
     
     public String verifiedAccessInstanceId;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfiguration withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
     }
     
+    public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfiguration(){}
 }

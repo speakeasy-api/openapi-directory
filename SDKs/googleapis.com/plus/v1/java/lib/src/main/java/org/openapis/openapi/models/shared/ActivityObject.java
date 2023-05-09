@@ -18,6 +18,7 @@ public class ActivityObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actor")
     public ActivityObjectActor actor;
+
     public ActivityObject withActor(ActivityObjectActor actor) {
         this.actor = actor;
         return this;
@@ -29,6 +30,7 @@ public class ActivityObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public ActivityObjectAttachments[] attachments;
+
     public ActivityObject withAttachments(ActivityObjectAttachments[] attachments) {
         this.attachments = attachments;
         return this;
@@ -40,6 +42,7 @@ public class ActivityObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public ActivityObject withContent(String content) {
         this.content = content;
         return this;
@@ -51,6 +54,7 @@ public class ActivityObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ActivityObject withId(String id) {
         this.id = id;
         return this;
@@ -64,6 +68,7 @@ public class ActivityObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectType")
     public String objectType;
+
     public ActivityObject withObjectType(String objectType) {
         this.objectType = objectType;
         return this;
@@ -75,6 +80,7 @@ public class ActivityObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalContent")
     public String originalContent;
+
     public ActivityObject withOriginalContent(String originalContent) {
         this.originalContent = originalContent;
         return this;
@@ -86,6 +92,7 @@ public class ActivityObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plusoners")
     public ActivityObjectPlusoners plusoners;
+
     public ActivityObject withPlusoners(ActivityObjectPlusoners plusoners) {
         this.plusoners = plusoners;
         return this;
@@ -97,6 +104,7 @@ public class ActivityObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replies")
     public ActivityObjectReplies replies;
+
     public ActivityObject withReplies(ActivityObjectReplies replies) {
         this.replies = replies;
         return this;
@@ -108,6 +116,7 @@ public class ActivityObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resharers")
     public ActivityObjectResharers resharers;
+
     public ActivityObject withResharers(ActivityObjectResharers resharers) {
         this.resharers = resharers;
         return this;
@@ -119,9 +128,11 @@ public class ActivityObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ActivityObject withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ActivityObject(){}
 }

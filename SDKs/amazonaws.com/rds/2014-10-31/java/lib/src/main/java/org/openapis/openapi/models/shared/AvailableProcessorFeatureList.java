@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AvailableProcessorFeatureList {
     
     public String allowedValues;
+
     public AvailableProcessorFeatureList withAllowedValues(String allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -19,6 +20,7 @@ public class AvailableProcessorFeatureList {
     
     
     public String defaultValue;
+
     public AvailableProcessorFeatureList withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -26,9 +28,11 @@ public class AvailableProcessorFeatureList {
     
     
     public String name;
+
     public AvailableProcessorFeatureList withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AvailableProcessorFeatureList(){}
 }

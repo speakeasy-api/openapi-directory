@@ -12,6 +12,7 @@ public class GovidRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public GovidRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,9 +23,14 @@ public class GovidRequestBodyCertificateParameters {
      */
     @JsonProperty("cardno")
     public String cardno;
+
     public GovidRequestBodyCertificateParameters withCardno(String cardno) {
         this.cardno = cardno;
         return this;
     }
     
+    public GovidRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("cardno") String cardno) {
+        this.fullName = fullName;
+        this.cardno = cardno;
+  }
 }

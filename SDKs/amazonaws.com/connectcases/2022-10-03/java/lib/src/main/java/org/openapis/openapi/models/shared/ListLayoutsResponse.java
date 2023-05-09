@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListLayoutsResponse {
     @JsonProperty("layouts")
     public LayoutSummary[] layouts;
+
     public ListLayoutsResponse withLayouts(LayoutSummary[] layouts) {
         this.layouts = layouts;
         return this;
@@ -22,9 +23,13 @@ public class ListLayoutsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListLayoutsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLayoutsResponse(@JsonProperty("layouts") LayoutSummary[] layouts) {
+        this.layouts = layouts;
+  }
 }

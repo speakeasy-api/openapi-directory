@@ -15,9 +15,11 @@ public class MemberId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public String userId;
+
     public MemberId withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public MemberId(){}
 }

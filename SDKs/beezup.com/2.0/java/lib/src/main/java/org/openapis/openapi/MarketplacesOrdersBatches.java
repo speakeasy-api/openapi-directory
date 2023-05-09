@@ -39,7 +39,9 @@ public class MarketplacesOrdersBatches {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ChangeOrderListResponse changeOrderList(org.openapis.openapi.models.operations.ChangeOrderListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeOrderListRequest.class, baseUrl, "/v2/user/marketplaces/orders/batches/changeOrders/{changeOrderType}", request, null);
@@ -65,12 +67,10 @@ public class MarketplacesOrdersBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeOrderListResponse res = new org.openapis.openapi.models.operations.ChangeOrderListResponse() {{
+        org.openapis.openapi.models.operations.ChangeOrderListResponse res = new org.openapis.openapi.models.operations.ChangeOrderListResponse(contentType, httpRes.statusCode()) {{
             batchOrderOperationResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -97,7 +97,9 @@ public class MarketplacesOrdersBatches {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ClearMerchantOrderInfoListResponse clearMerchantOrderInfoList(org.openapis.openapi.models.shared.ClearMerchantOrderInfoListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/marketplaces/orders/batches/clearMerchantOrderInfos");
@@ -117,12 +119,10 @@ public class MarketplacesOrdersBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClearMerchantOrderInfoListResponse res = new org.openapis.openapi.models.operations.ClearMerchantOrderInfoListResponse() {{
+        org.openapis.openapi.models.operations.ClearMerchantOrderInfoListResponse res = new org.openapis.openapi.models.operations.ClearMerchantOrderInfoListResponse(contentType, httpRes.statusCode()) {{
             batchOrderOperationResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -149,7 +149,9 @@ public class MarketplacesOrdersBatches {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.SetMerchantOrderInfoListResponse setMerchantOrderInfoList(org.openapis.openapi.models.shared.SetMerchantOrderInfoListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/marketplaces/orders/batches/setMerchantOrderInfos");
@@ -169,12 +171,10 @@ public class MarketplacesOrdersBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetMerchantOrderInfoListResponse res = new org.openapis.openapi.models.operations.SetMerchantOrderInfoListResponse() {{
+        org.openapis.openapi.models.operations.SetMerchantOrderInfoListResponse res = new org.openapis.openapi.models.operations.SetMerchantOrderInfoListResponse(contentType, httpRes.statusCode()) {{
             batchOrderOperationResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

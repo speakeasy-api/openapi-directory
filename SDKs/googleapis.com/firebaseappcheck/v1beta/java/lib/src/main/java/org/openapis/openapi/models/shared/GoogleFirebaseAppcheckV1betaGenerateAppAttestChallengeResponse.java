@@ -18,6 +18,7 @@ public class GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("challenge")
     public String challenge;
+
     public GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse withChallenge(String challenge) {
         this.challenge = challenge;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public String ttl;
+
     public GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse withTtl(String ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse(){}
 }

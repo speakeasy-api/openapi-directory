@@ -15,6 +15,7 @@ public class ReposDelete403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation_url")
     public String documentationUrl;
+
     public ReposDelete403ApplicationJSON withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -23,9 +24,11 @@ public class ReposDelete403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ReposDelete403ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ReposDelete403ApplicationJSON(){}
 }

@@ -15,6 +15,7 @@ public class AddJobFlowStepsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public AddJobFlowStepsInput withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -22,6 +23,7 @@ public class AddJobFlowStepsInput {
     
     @JsonProperty("JobFlowId")
     public String jobFlowId;
+
     public AddJobFlowStepsInput withJobFlowId(String jobFlowId) {
         this.jobFlowId = jobFlowId;
         return this;
@@ -29,9 +31,14 @@ public class AddJobFlowStepsInput {
     
     @JsonProperty("Steps")
     public StepConfig[] steps;
+
     public AddJobFlowStepsInput withSteps(StepConfig[] steps) {
         this.steps = steps;
         return this;
     }
     
+    public AddJobFlowStepsInput(@JsonProperty("JobFlowId") String jobFlowId, @JsonProperty("Steps") StepConfig[] steps) {
+        this.jobFlowId = jobFlowId;
+        this.steps = steps;
+  }
 }

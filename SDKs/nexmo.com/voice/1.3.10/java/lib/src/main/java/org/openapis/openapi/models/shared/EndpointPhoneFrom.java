@@ -15,6 +15,7 @@ public class EndpointPhoneFrom {
      */
     @JsonProperty("number")
     public String number;
+
     public EndpointPhoneFrom withNumber(String number) {
         this.number = number;
         return this;
@@ -25,9 +26,14 @@ public class EndpointPhoneFrom {
      */
     @JsonProperty("type")
     public String type;
+
     public EndpointPhoneFrom withType(String type) {
         this.type = type;
         return this;
     }
     
+    public EndpointPhoneFrom(@JsonProperty("number") String number, @JsonProperty("type") String type) {
+        this.number = number;
+        this.type = type;
+  }
 }

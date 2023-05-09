@@ -15,6 +15,7 @@ public class ConfirmSignUpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyticsMetadata")
     public AnalyticsMetadataType analyticsMetadata;
+
     public ConfirmSignUpRequest withAnalyticsMetadata(AnalyticsMetadataType analyticsMetadata) {
         this.analyticsMetadata = analyticsMetadata;
         return this;
@@ -22,6 +23,7 @@ public class ConfirmSignUpRequest {
     
     @JsonProperty("ClientId")
     public String clientId;
+
     public ConfirmSignUpRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -30,6 +32,7 @@ public class ConfirmSignUpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientMetadata")
     public java.util.Map<String, String> clientMetadata;
+
     public ConfirmSignUpRequest withClientMetadata(java.util.Map<String, String> clientMetadata) {
         this.clientMetadata = clientMetadata;
         return this;
@@ -37,6 +40,7 @@ public class ConfirmSignUpRequest {
     
     @JsonProperty("ConfirmationCode")
     public String confirmationCode;
+
     public ConfirmSignUpRequest withConfirmationCode(String confirmationCode) {
         this.confirmationCode = confirmationCode;
         return this;
@@ -45,6 +49,7 @@ public class ConfirmSignUpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForceAliasCreation")
     public Boolean forceAliasCreation;
+
     public ConfirmSignUpRequest withForceAliasCreation(Boolean forceAliasCreation) {
         this.forceAliasCreation = forceAliasCreation;
         return this;
@@ -53,6 +58,7 @@ public class ConfirmSignUpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretHash")
     public String secretHash;
+
     public ConfirmSignUpRequest withSecretHash(String secretHash) {
         this.secretHash = secretHash;
         return this;
@@ -61,6 +67,7 @@ public class ConfirmSignUpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserContextData")
     public UserContextDataType userContextData;
+
     public ConfirmSignUpRequest withUserContextData(UserContextDataType userContextData) {
         this.userContextData = userContextData;
         return this;
@@ -68,9 +75,15 @@ public class ConfirmSignUpRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public ConfirmSignUpRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ConfirmSignUpRequest(@JsonProperty("ClientId") String clientId, @JsonProperty("ConfirmationCode") String confirmationCode, @JsonProperty("Username") String username) {
+        this.clientId = clientId;
+        this.confirmationCode = confirmationCode;
+        this.username = username;
+  }
 }

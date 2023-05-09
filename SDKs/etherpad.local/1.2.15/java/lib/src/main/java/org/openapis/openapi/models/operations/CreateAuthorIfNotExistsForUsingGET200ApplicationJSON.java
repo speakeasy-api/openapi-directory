@@ -15,6 +15,7 @@ public class CreateAuthorIfNotExistsForUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public CreateAuthorIfNotExistsForUsingGET200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class CreateAuthorIfNotExistsForUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CreateAuthorIfNotExistsForUsingGET200ApplicationJSONData data;
+
     public CreateAuthorIfNotExistsForUsingGET200ApplicationJSON withData(CreateAuthorIfNotExistsForUsingGET200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class CreateAuthorIfNotExistsForUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CreateAuthorIfNotExistsForUsingGET200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateAuthorIfNotExistsForUsingGET200ApplicationJSON(){}
 }

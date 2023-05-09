@@ -15,9 +15,11 @@ public class FinalizeDeviceClaimResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public FinalizeDeviceClaimResponse withState(String state) {
         this.state = state;
         return this;
     }
     
+    public FinalizeDeviceClaimResponse(){}
 }

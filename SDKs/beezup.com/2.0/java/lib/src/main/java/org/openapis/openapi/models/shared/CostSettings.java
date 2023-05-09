@@ -24,6 +24,7 @@ public class CostSettings {
      */
     @JsonProperty("costType")
     public CostTypeEnum costType;
+
     public CostSettings withCostType(CostTypeEnum costType) {
         this.costType = costType;
         return this;
@@ -35,9 +36,13 @@ public class CostSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("globalCostValue")
     public Double globalCostValue;
+
     public CostSettings withGlobalCostValue(Double globalCostValue) {
         this.globalCostValue = globalCostValue;
         return this;
     }
     
+    public CostSettings(@JsonProperty("costType") CostTypeEnum costType) {
+        this.costType = costType;
+  }
 }

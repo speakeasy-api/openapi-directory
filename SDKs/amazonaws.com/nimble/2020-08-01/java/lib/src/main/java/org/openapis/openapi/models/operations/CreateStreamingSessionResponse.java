@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStreamingSessionResponse {
@@ -12,6 +13,7 @@ public class CreateStreamingSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateStreamingSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateStreamingSessionResponse {
      */
     
     public Object conflictException;
+
     public CreateStreamingSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateStreamingSessionResponse {
     
     
     public String contentType;
+
     public CreateStreamingSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateStreamingSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateStreamingSessionResponse createStreamingSessionResponse;
+
     public CreateStreamingSessionResponse withCreateStreamingSessionResponse(org.openapis.openapi.models.shared.CreateStreamingSessionResponse createStreamingSessionResponse) {
         this.createStreamingSessionResponse = createStreamingSessionResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateStreamingSessionResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateStreamingSessionResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class CreateStreamingSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateStreamingSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateStreamingSessionResponse {
     
     
     public Integer statusCode;
+
     public CreateStreamingSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateStreamingSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStreamingSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateStreamingSessionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateStreamingSessionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateStreamingSessionResponse {
      */
     
     public Object throttlingException;
+
     public CreateStreamingSessionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateStreamingSessionResponse {
      */
     
     public Object validationException;
+
     public CreateStreamingSessionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateStreamingSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

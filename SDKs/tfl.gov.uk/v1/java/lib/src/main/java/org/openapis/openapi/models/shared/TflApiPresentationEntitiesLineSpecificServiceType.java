@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesLineSpecificServiceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceType")
     public TflApiPresentationEntitiesLineServiceTypeInfo serviceType;
+
     public TflApiPresentationEntitiesLineSpecificServiceType withServiceType(TflApiPresentationEntitiesLineServiceTypeInfo serviceType) {
         this.serviceType = serviceType;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesLineSpecificServiceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopServesServiceType")
     public Boolean stopServesServiceType;
+
     public TflApiPresentationEntitiesLineSpecificServiceType withStopServesServiceType(Boolean stopServesServiceType) {
         this.stopServesServiceType = stopServesServiceType;
         return this;
     }
     
+    public TflApiPresentationEntitiesLineSpecificServiceType(){}
 }

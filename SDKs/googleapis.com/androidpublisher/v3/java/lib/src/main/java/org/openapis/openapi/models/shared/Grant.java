@@ -18,6 +18,7 @@ public class Grant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appLevelPermissions")
     public GrantAppLevelPermissionsEnum[] appLevelPermissions;
+
     public Grant withAppLevelPermissions(GrantAppLevelPermissionsEnum[] appLevelPermissions) {
         this.appLevelPermissions = appLevelPermissions;
         return this;
@@ -29,6 +30,7 @@ public class Grant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Grant withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Grant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public Grant withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
     }
     
+    public Grant(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsGetByNameResponse {
     
     public String contentType;
+
     public TeamsGetByNameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsGetByNameResponse {
     
     
     public Integer statusCode;
+
     public TeamsGetByNameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TeamsGetByNameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsGetByNameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TeamsGetByNameResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public TeamsGetByNameResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class TeamsGetByNameResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamFull teamFull;
+
     public TeamsGetByNameResponse withTeamFull(org.openapis.openapi.models.shared.TeamFull teamFull) {
         this.teamFull = teamFull;
         return this;
     }
     
+    public TeamsGetByNameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

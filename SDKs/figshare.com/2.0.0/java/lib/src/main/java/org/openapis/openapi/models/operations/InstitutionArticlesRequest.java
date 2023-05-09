@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InstitutionArticlesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filename")
     public String filename;
+
     public InstitutionArticlesRequest withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -16,6 +18,7 @@ public class InstitutionArticlesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=institution_string_id")
     public String institutionStringId;
+
     public InstitutionArticlesRequest withInstitutionStringId(String institutionStringId) {
         this.institutionStringId = institutionStringId;
         return this;
@@ -23,9 +26,15 @@ public class InstitutionArticlesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource_id")
     public String resourceId;
+
     public InstitutionArticlesRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public InstitutionArticlesRequest(@JsonProperty("filename") String filename, @JsonProperty("institution_string_id") String institutionStringId, @JsonProperty("resource_id") String resourceId) {
+        this.filename = filename;
+        this.institutionStringId = institutionStringId;
+        this.resourceId = resourceId;
+  }
 }

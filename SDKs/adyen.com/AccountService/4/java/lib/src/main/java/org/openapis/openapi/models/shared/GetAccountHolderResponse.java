@@ -18,6 +18,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public GetAccountHolderResponse withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -26,6 +27,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderDetails")
     public AccountHolderDetails accountHolderDetails;
+
     public GetAccountHolderResponse withAccountHolderDetails(AccountHolderDetails accountHolderDetails) {
         this.accountHolderDetails = accountHolderDetails;
         return this;
@@ -34,6 +36,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderStatus")
     public AccountHolderStatus accountHolderStatus;
+
     public GetAccountHolderResponse withAccountHolderStatus(AccountHolderStatus accountHolderStatus) {
         this.accountHolderStatus = accountHolderStatus;
         return this;
@@ -44,8 +47,9 @@ public class GetAccountHolderResponse {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accounts")
-    public Account[] accounts;
-    public GetAccountHolderResponse withAccounts(Account[] accounts) {
+    public AccountWrapper[] accounts;
+
+    public GetAccountHolderResponse withAccounts(AccountWrapper[] accounts) {
         this.accounts = accounts;
         return this;
     }
@@ -56,6 +60,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetAccountHolderResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -67,6 +72,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalEntity")
     public GetAccountHolderResponseLegalEntityEnum legalEntity;
+
     public GetAccountHolderResponse withLegalEntity(GetAccountHolderResponseLegalEntityEnum legalEntity) {
         this.legalEntity = legalEntity;
         return this;
@@ -78,6 +84,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryCurrency")
     public String primaryCurrency;
+
     public GetAccountHolderResponse withPrimaryCurrency(String primaryCurrency) {
         this.primaryCurrency = primaryCurrency;
         return this;
@@ -89,6 +96,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public GetAccountHolderResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -100,6 +108,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public GetAccountHolderResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -113,6 +122,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public GetAccountHolderResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
@@ -121,9 +131,11 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification")
     public KYCVerificationResult verification;
+
     public GetAccountHolderResponse withVerification(KYCVerificationResult verification) {
         this.verification = verification;
         return this;
     }
     
+    public GetAccountHolderResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EvaluateFeatureResponse {
@@ -12,6 +13,7 @@ public class EvaluateFeatureResponse {
      */
     
     public Object accessDeniedException;
+
     public EvaluateFeatureResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class EvaluateFeatureResponse {
     
     
     public String contentType;
+
     public EvaluateFeatureResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class EvaluateFeatureResponse {
      */
     
     public org.openapis.openapi.models.shared.EvaluateFeatureResponse evaluateFeatureResponse;
+
     public EvaluateFeatureResponse withEvaluateFeatureResponse(org.openapis.openapi.models.shared.EvaluateFeatureResponse evaluateFeatureResponse) {
         this.evaluateFeatureResponse = evaluateFeatureResponse;
         return this;
@@ -36,6 +40,7 @@ public class EvaluateFeatureResponse {
     
     
     public Integer statusCode;
+
     public EvaluateFeatureResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class EvaluateFeatureResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EvaluateFeatureResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class EvaluateFeatureResponse {
      */
     
     public Object resourceNotFoundException;
+
     public EvaluateFeatureResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class EvaluateFeatureResponse {
      */
     
     public Object throttlingException;
+
     public EvaluateFeatureResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class EvaluateFeatureResponse {
      */
     
     public Object validationException;
+
     public EvaluateFeatureResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public EvaluateFeatureResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

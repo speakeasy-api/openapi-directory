@@ -18,6 +18,7 @@ public class ExecutionReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completionTimestamp")
     public String completionTimestamp;
+
     public ExecutionReference withCompletionTimestamp(String completionTimestamp) {
         this.completionTimestamp = completionTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class ExecutionReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public ExecutionReference withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,9 +42,11 @@ public class ExecutionReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ExecutionReference withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ExecutionReference(){}
 }

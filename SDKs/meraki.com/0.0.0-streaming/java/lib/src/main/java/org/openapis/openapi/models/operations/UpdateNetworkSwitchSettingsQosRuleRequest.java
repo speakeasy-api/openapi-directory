@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSwitchSettingsQosRuleRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateNetworkSwitchSettingsQosRuleRequestBody requestBody;
+
     public UpdateNetworkSwitchSettingsQosRuleRequest withRequestBody(UpdateNetworkSwitchSettingsQosRuleRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateNetworkSwitchSettingsQosRuleRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public UpdateNetworkSwitchSettingsQosRuleRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -23,9 +26,14 @@ public class UpdateNetworkSwitchSettingsQosRuleRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=qosRuleId")
     public String qosRuleId;
+
     public UpdateNetworkSwitchSettingsQosRuleRequest withQosRuleId(String qosRuleId) {
         this.qosRuleId = qosRuleId;
         return this;
     }
     
+    public UpdateNetworkSwitchSettingsQosRuleRequest(@JsonProperty("networkId") String networkId, @JsonProperty("qosRuleId") String qosRuleId) {
+        this.networkId = networkId;
+        this.qosRuleId = qosRuleId;
+  }
 }

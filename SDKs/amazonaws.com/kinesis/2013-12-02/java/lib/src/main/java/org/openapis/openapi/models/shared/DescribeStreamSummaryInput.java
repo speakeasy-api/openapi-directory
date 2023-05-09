@@ -12,6 +12,7 @@ public class DescribeStreamSummaryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public DescribeStreamSummaryInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -20,9 +21,11 @@ public class DescribeStreamSummaryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public DescribeStreamSummaryInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public DescribeStreamSummaryInput(){}
 }

@@ -15,6 +15,7 @@ public class GetRegionOptStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public GetRegionOptStatusRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -25,9 +26,13 @@ public class GetRegionOptStatusRequestBody {
      */
     @JsonProperty("RegionName")
     public String regionName;
+
     public GetRegionOptStatusRequestBody withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
     }
     
+    public GetRegionOptStatusRequestBody(@JsonProperty("RegionName") String regionName) {
+        this.regionName = regionName;
+  }
 }

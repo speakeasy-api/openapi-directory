@@ -14,6 +14,7 @@ public class StartExperimentRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public StartExperimentRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -24,6 +25,7 @@ public class StartExperimentRequestBody {
      */
     @JsonProperty("experimentTemplateId")
     public String experimentTemplateId;
+
     public StartExperimentRequestBody withExperimentTemplateId(String experimentTemplateId) {
         this.experimentTemplateId = experimentTemplateId;
         return this;
@@ -35,9 +37,14 @@ public class StartExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StartExperimentRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartExperimentRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("experimentTemplateId") String experimentTemplateId) {
+        this.clientToken = clientToken;
+        this.experimentTemplateId = experimentTemplateId;
+  }
 }

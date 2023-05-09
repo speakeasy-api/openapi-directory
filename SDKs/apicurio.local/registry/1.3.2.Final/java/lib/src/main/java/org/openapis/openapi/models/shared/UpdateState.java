@@ -18,9 +18,13 @@ public class UpdateState {
      */
     @JsonProperty("state")
     public ArtifactStateEnum state;
+
     public UpdateState withState(ArtifactStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public UpdateState(@JsonProperty("state") ArtifactStateEnum state) {
+        this.state = state;
+  }
 }

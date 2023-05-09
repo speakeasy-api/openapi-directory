@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InvokeDeviceMethodResponse {
     
     public String contentType;
+
     public InvokeDeviceMethodResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InvokeDeviceMethodResponse {
      */
     
     public Object internalFailureException;
+
     public InvokeDeviceMethodResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class InvokeDeviceMethodResponse {
      */
     
     public Object invalidRequestException;
+
     public InvokeDeviceMethodResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class InvokeDeviceMethodResponse {
      */
     
     public org.openapis.openapi.models.shared.InvokeDeviceMethodResponse invokeDeviceMethodResponse;
+
     public InvokeDeviceMethodResponse withInvokeDeviceMethodResponse(org.openapis.openapi.models.shared.InvokeDeviceMethodResponse invokeDeviceMethodResponse) {
         this.invokeDeviceMethodResponse = invokeDeviceMethodResponse;
         return this;
@@ -49,6 +54,7 @@ public class InvokeDeviceMethodResponse {
      */
     
     public Object preconditionFailedException;
+
     public InvokeDeviceMethodResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -59,6 +65,7 @@ public class InvokeDeviceMethodResponse {
      */
     
     public Object rangeNotSatisfiableException;
+
     public InvokeDeviceMethodResponse withRangeNotSatisfiableException(Object rangeNotSatisfiableException) {
         this.rangeNotSatisfiableException = rangeNotSatisfiableException;
         return this;
@@ -69,6 +76,7 @@ public class InvokeDeviceMethodResponse {
      */
     
     public Object resourceConflictException;
+
     public InvokeDeviceMethodResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -79,6 +87,7 @@ public class InvokeDeviceMethodResponse {
      */
     
     public Object resourceNotFoundException;
+
     public InvokeDeviceMethodResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class InvokeDeviceMethodResponse {
     
     
     public Integer statusCode;
+
     public InvokeDeviceMethodResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class InvokeDeviceMethodResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InvokeDeviceMethodResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public InvokeDeviceMethodResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

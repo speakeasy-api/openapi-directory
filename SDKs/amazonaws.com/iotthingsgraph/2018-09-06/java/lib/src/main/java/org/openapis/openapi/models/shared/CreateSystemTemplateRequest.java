@@ -12,6 +12,7 @@ public class CreateSystemTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibleNamespaceVersion")
     public Long compatibleNamespaceVersion;
+
     public CreateSystemTemplateRequest withCompatibleNamespaceVersion(Long compatibleNamespaceVersion) {
         this.compatibleNamespaceVersion = compatibleNamespaceVersion;
         return this;
@@ -19,9 +20,13 @@ public class CreateSystemTemplateRequest {
     
     @JsonProperty("definition")
     public DefinitionDocument definition;
+
     public CreateSystemTemplateRequest withDefinition(DefinitionDocument definition) {
         this.definition = definition;
         return this;
     }
     
+    public CreateSystemTemplateRequest(@JsonProperty("definition") DefinitionDocument definition) {
+        this.definition = definition;
+  }
 }

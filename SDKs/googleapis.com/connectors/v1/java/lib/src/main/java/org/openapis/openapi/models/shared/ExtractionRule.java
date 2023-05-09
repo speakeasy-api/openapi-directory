@@ -18,6 +18,7 @@ public class ExtractionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extractionRegex")
     public String extractionRegex;
+
     public ExtractionRule withExtractionRegex(String extractionRegex) {
         this.extractionRegex = extractionRegex;
         return this;
@@ -29,9 +30,11 @@ public class ExtractionRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public ExtractionRule withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public ExtractionRule(){}
 }

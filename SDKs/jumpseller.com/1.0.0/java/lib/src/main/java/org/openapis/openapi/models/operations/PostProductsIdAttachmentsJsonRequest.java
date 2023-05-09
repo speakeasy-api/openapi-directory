@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProductsIdAttachmentsJsonRequest {
@@ -12,6 +13,7 @@ public class PostProductsIdAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AttachmentEdit attachmentEdit;
+
     public PostProductsIdAttachmentsJsonRequest withAttachmentEdit(org.openapis.openapi.models.shared.AttachmentEdit attachmentEdit) {
         this.attachmentEdit = attachmentEdit;
         return this;
@@ -22,6 +24,7 @@ public class PostProductsIdAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostProductsIdAttachmentsJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PostProductsIdAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PostProductsIdAttachmentsJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class PostProductsIdAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostProductsIdAttachmentsJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostProductsIdAttachmentsJsonRequest(@JsonProperty("AttachmentEdit") org.openapis.openapi.models.shared.AttachmentEdit attachmentEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.attachmentEdit = attachmentEdit;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

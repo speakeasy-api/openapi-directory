@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ExtensionConfigMediaQueues {
     
     public java.util.Map<String, Object> hdr;
+
     public ExtensionConfigMediaQueues withHdr(java.util.Map<String, Object> hdr) {
         this.hdr = hdr;
         return this;
@@ -16,6 +17,7 @@ public class ExtensionConfigMediaQueues {
     
     
     public ExtensionConfigMediaQueuesPlayMedia playMedia;
+
     public ExtensionConfigMediaQueues withPlayMedia(ExtensionConfigMediaQueuesPlayMedia playMedia) {
         this.playMedia = playMedia;
         return this;
@@ -23,9 +25,11 @@ public class ExtensionConfigMediaQueues {
     
     
     public ExtensionConfigMediaQueuesUpdateActivity updateActivity;
+
     public ExtensionConfigMediaQueues withUpdateActivity(ExtensionConfigMediaQueuesUpdateActivity updateActivity) {
         this.updateActivity = updateActivity;
         return this;
     }
     
+    public ExtensionConfigMediaQueues(){}
 }

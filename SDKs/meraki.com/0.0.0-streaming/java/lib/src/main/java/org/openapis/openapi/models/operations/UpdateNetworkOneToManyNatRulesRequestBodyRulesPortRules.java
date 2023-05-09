@@ -15,6 +15,7 @@ public class UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedIps")
     public String[] allowedIps;
+
     public UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules withAllowedIps(String[] allowedIps) {
         this.allowedIps = allowedIps;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localIp")
     public String localIp;
+
     public UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules withLocalIp(String localIp) {
         this.localIp = localIp;
         return this;
@@ -37,6 +39,7 @@ public class UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localPort")
     public String localPort;
+
     public UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules withLocalPort(String localPort) {
         this.localPort = localPort;
         return this;
@@ -48,6 +51,7 @@ public class UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRulesProtocolEnum protocol;
+
     public UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules withProtocol(UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRulesProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -70,9 +75,11 @@ public class UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicPort")
     public String publicPort;
+
     public UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules withPublicPort(String publicPort) {
         this.publicPort = publicPort;
         return this;
     }
     
+    public UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRules(){}
 }

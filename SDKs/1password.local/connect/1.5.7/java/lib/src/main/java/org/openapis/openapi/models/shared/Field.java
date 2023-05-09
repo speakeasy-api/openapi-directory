@@ -15,6 +15,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entropy")
     public Double entropy;
+
     public Field withEntropy(Double entropy) {
         this.entropy = entropy;
         return this;
@@ -26,6 +27,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generate")
     public Boolean generate;
+
     public Field withGenerate(Boolean generate) {
         this.generate = generate;
         return this;
@@ -33,6 +35,7 @@ public class Field {
     
     @JsonProperty("id")
     public String id;
+
     public Field withId(String id) {
         this.id = id;
         return this;
@@ -41,6 +44,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public Field withLabel(String label) {
         this.label = label;
         return this;
@@ -52,6 +56,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purpose")
     public FieldPurposeEnum purpose;
+
     public Field withPurpose(FieldPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
@@ -63,6 +68,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipe")
     public GeneratorRecipe recipe;
+
     public Field withRecipe(GeneratorRecipe recipe) {
         this.recipe = recipe;
         return this;
@@ -71,6 +77,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section")
     public FieldSection section;
+
     public Field withSection(FieldSection section) {
         this.section = section;
         return this;
@@ -78,6 +85,7 @@ public class Field {
     
     @JsonProperty("type")
     public FieldTypeEnum type;
+
     public Field withType(FieldTypeEnum type) {
         this.type = type;
         return this;
@@ -86,9 +94,14 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Field withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Field(@JsonProperty("id") String id, @JsonProperty("type") FieldTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

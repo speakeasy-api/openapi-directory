@@ -15,6 +15,7 @@ public class UpdateDomainConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainConfigurationArn")
     public String domainConfigurationArn;
+
     public UpdateDomainConfigurationResponse withDomainConfigurationArn(String domainConfigurationArn) {
         this.domainConfigurationArn = domainConfigurationArn;
         return this;
@@ -23,9 +24,11 @@ public class UpdateDomainConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainConfigurationName")
     public String domainConfigurationName;
+
     public UpdateDomainConfigurationResponse withDomainConfigurationName(String domainConfigurationName) {
         this.domainConfigurationName = domainConfigurationName;
         return this;
     }
     
+    public UpdateDomainConfigurationResponse(){}
 }

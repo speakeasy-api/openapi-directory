@@ -18,9 +18,11 @@ public class TargetingRuleScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specificSubscriptionInApp")
     public String specificSubscriptionInApp;
+
     public TargetingRuleScope withSpecificSubscriptionInApp(String specificSubscriptionInApp) {
         this.specificSubscriptionInApp = specificSubscriptionInApp;
         return this;
     }
     
+    public TargetingRuleScope(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRolesbyUserResponse {
     
     public String contentType;
+
     public GetRolesbyUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRolesbyUserResponse {
      */
     
     public GetRolesbyUser200ApplicationJSON[] getRolesbyUser200ApplicationJSONObjects;
+
     public GetRolesbyUserResponse withGetRolesbyUser200ApplicationJSONObjects(GetRolesbyUser200ApplicationJSON[] getRolesbyUser200ApplicationJSONObjects) {
         this.getRolesbyUser200ApplicationJSONObjects = getRolesbyUser200ApplicationJSONObjects;
         return this;
@@ -26,6 +29,7 @@ public class GetRolesbyUserResponse {
     
     
     public Integer statusCode;
+
     public GetRolesbyUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetRolesbyUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRolesbyUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRolesbyUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

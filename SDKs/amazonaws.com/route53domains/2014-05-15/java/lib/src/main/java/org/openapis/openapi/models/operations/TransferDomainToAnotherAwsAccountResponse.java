@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TransferDomainToAnotherAwsAccountResponse {
     
     public String contentType;
+
     public TransferDomainToAnotherAwsAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TransferDomainToAnotherAwsAccountResponse {
      */
     
     public Object duplicateRequest;
+
     public TransferDomainToAnotherAwsAccountResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -29,6 +32,7 @@ public class TransferDomainToAnotherAwsAccountResponse {
      */
     
     public Object invalidInput;
+
     public TransferDomainToAnotherAwsAccountResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class TransferDomainToAnotherAwsAccountResponse {
      */
     
     public Object operationLimitExceeded;
+
     public TransferDomainToAnotherAwsAccountResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -46,6 +51,7 @@ public class TransferDomainToAnotherAwsAccountResponse {
     
     
     public Integer statusCode;
+
     public TransferDomainToAnotherAwsAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class TransferDomainToAnotherAwsAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TransferDomainToAnotherAwsAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class TransferDomainToAnotherAwsAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.TransferDomainToAnotherAwsAccountResponse transferDomainToAnotherAwsAccountResponse;
+
     public TransferDomainToAnotherAwsAccountResponse withTransferDomainToAnotherAwsAccountResponse(org.openapis.openapi.models.shared.TransferDomainToAnotherAwsAccountResponse transferDomainToAnotherAwsAccountResponse) {
         this.transferDomainToAnotherAwsAccountResponse = transferDomainToAnotherAwsAccountResponse;
         return this;
@@ -73,9 +81,14 @@ public class TransferDomainToAnotherAwsAccountResponse {
      */
     
     public Object unsupportedTLD;
+
     public TransferDomainToAnotherAwsAccountResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public TransferDomainToAnotherAwsAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

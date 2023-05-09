@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Brl1 {
     @JsonProperty("Count")
     public Integer count;
+
     public Brl1 withCount(Integer count) {
         this.count = count;
         return this;
@@ -16,6 +17,7 @@ public class Brl1 {
     
     @JsonProperty("Facets")
     public String facets;
+
     public Brl1 withFacets(String facets) {
         this.facets = facets;
         return this;
@@ -23,6 +25,7 @@ public class Brl1 {
     
     @JsonProperty("Max")
     public Integer max;
+
     public Brl1 withMax(Integer max) {
         this.max = max;
         return this;
@@ -30,6 +33,7 @@ public class Brl1 {
     
     @JsonProperty("Mean")
     public Double mean;
+
     public Brl1 withMean(Double mean) {
         this.mean = mean;
         return this;
@@ -37,6 +41,7 @@ public class Brl1 {
     
     @JsonProperty("Min")
     public Integer min;
+
     public Brl1 withMin(Integer min) {
         this.min = min;
         return this;
@@ -44,6 +49,7 @@ public class Brl1 {
     
     @JsonProperty("Missing")
     public Integer missing;
+
     public Brl1 withMissing(Integer missing) {
         this.missing = missing;
         return this;
@@ -51,6 +57,7 @@ public class Brl1 {
     
     @JsonProperty("StdDev")
     public Double stdDev;
+
     public Brl1 withStdDev(Double stdDev) {
         this.stdDev = stdDev;
         return this;
@@ -58,6 +65,7 @@ public class Brl1 {
     
     @JsonProperty("Sum")
     public Integer sum;
+
     public Brl1 withSum(Integer sum) {
         this.sum = sum;
         return this;
@@ -65,9 +73,21 @@ public class Brl1 {
     
     @JsonProperty("SumOfSquares")
     public Integer sumOfSquares;
+
     public Brl1 withSumOfSquares(Integer sumOfSquares) {
         this.sumOfSquares = sumOfSquares;
         return this;
     }
     
+    public Brl1(@JsonProperty("Count") Integer count, @JsonProperty("Facets") String facets, @JsonProperty("Max") Integer max, @JsonProperty("Mean") Double mean, @JsonProperty("Min") Integer min, @JsonProperty("Missing") Integer missing, @JsonProperty("StdDev") Double stdDev, @JsonProperty("Sum") Integer sum, @JsonProperty("SumOfSquares") Integer sumOfSquares) {
+        this.count = count;
+        this.facets = facets;
+        this.max = max;
+        this.mean = mean;
+        this.min = min;
+        this.missing = missing;
+        this.stdDev = stdDev;
+        this.sum = sum;
+        this.sumOfSquares = sumOfSquares;
+  }
 }

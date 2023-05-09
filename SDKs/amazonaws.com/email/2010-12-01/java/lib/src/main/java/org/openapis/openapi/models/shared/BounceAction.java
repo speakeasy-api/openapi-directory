@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * BounceAction - &lt;p&gt;When included in a receipt rule, this action rejects the received email by returning a bounce response to the sender and, optionally, publishes a notification to Amazon Simple Notification Service (Amazon SNS).&lt;/p&gt; &lt;p&gt;For information about sending a bounce message in response to a received email, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-action-bounce.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class BounceAction {
     
     public String message;
+
     public BounceAction withMessage(String message) {
         this.message = message;
         return this;
@@ -19,6 +20,7 @@ public class BounceAction {
     
     
     public String sender;
+
     public BounceAction withSender(String sender) {
         this.sender = sender;
         return this;
@@ -26,6 +28,7 @@ public class BounceAction {
     
     
     public String smtpReplyCode;
+
     public BounceAction withSmtpReplyCode(String smtpReplyCode) {
         this.smtpReplyCode = smtpReplyCode;
         return this;
@@ -33,6 +36,7 @@ public class BounceAction {
     
     
     public String statusCode;
+
     public BounceAction withStatusCode(String statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +44,15 @@ public class BounceAction {
     
     
     public String topicArn;
+
     public BounceAction withTopicArn(String topicArn) {
         this.topicArn = topicArn;
         return this;
     }
     
+    public BounceAction(@JsonProperty("Message") String message, @JsonProperty("Sender") String sender, @JsonProperty("SmtpReplyCode") String smtpReplyCode) {
+        this.message = message;
+        this.sender = sender;
+        this.smtpReplyCode = smtpReplyCode;
+  }
 }

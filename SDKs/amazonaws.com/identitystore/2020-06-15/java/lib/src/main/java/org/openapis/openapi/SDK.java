@@ -16,7 +16,7 @@ import org.openapis.openapi.utils.SerializedBody;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
 /**
- * &lt;p&gt;The Identity Store service used by AWS IAM Identity Center (successor to AWS Single Sign-On) provides a single place to retrieve all of your identities (users and groups). For more information, see the &lt;a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html"&gt;IAM Identity Center User Guide&lt;/a&gt;.&lt;/p&gt; &lt;pre&gt;&lt;code&gt; &amp;lt;note&amp;gt; &amp;lt;p&amp;gt;Although AWS Single Sign-On was renamed, the &amp;lt;code&amp;gt;sso&amp;lt;/code&amp;gt; and &amp;lt;code&amp;gt;identitystore&amp;lt;/code&amp;gt; API namespaces will continue to retain their original name for backward compatibility purposes. For more information, see &amp;lt;a href=&amp;quot;https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html#renamed&amp;quot;&amp;gt;IAM Identity Center rename&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt; &amp;lt;/note&amp;gt; &amp;lt;p&amp;gt;This reference guide describes the identity store operations that you can call programatically and includes detailed information on data types and errors.&amp;lt;/p&amp;gt; &lt;/code&gt;&lt;/pre&gt;
+ * &lt;p&gt;The Identity Store service used by AWS IAM Identity Center (successor to AWS Single Sign-On) provides a single place to retrieve all of your identities (users and groups). For more information, see the &lt;a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html"&gt;IAM Identity Center User Guide&lt;/a&gt;.&lt;/p&gt; &lt;pre&gt;&lt;code&gt; &amp;lt;note&amp;gt; &amp;lt;p&amp;gt;Although AWS Single Sign-On was renamed, the &amp;lt;code&amp;gt;sso&amp;lt;/code&amp;gt; and &amp;lt;code&amp;gt;identitystore&amp;lt;/code&amp;gt; API namespaces will continue to retain their original name for backward compatibility purposes. For more information, see &amp;lt;a href=&amp;quot;https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html#renamed&amp;quot;&amp;gt;IAM Identity Center rename&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt; &amp;lt;/note&amp;gt; &amp;lt;p&amp;gt;This reference guide describes the identity store operations that you can call programatically and includes detailed information about data types and errors.&amp;lt;/p&amp;gt; &lt;/code&gt;&lt;/pre&gt;
  * https://docs.aws.amazon.com/identitystore/ - Amazon Web Services documentation
  */
 public class SDK {
@@ -164,6 +164,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -201,7 +206,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGroupResponse res = new org.openapis.openapi.models.operations.CreateGroupResponse() {{
+        org.openapis.openapi.models.operations.CreateGroupResponse res = new org.openapis.openapi.models.operations.CreateGroupResponse(contentType, httpRes.statusCode()) {{
             createGroupResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -211,8 +216,6 @@ public class SDK {
             validationException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -309,7 +312,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGroupMembershipResponse res = new org.openapis.openapi.models.operations.CreateGroupMembershipResponse() {{
+        org.openapis.openapi.models.operations.CreateGroupMembershipResponse res = new org.openapis.openapi.models.operations.CreateGroupMembershipResponse(contentType, httpRes.statusCode()) {{
             createGroupMembershipResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -319,8 +322,6 @@ public class SDK {
             validationException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -384,7 +385,7 @@ public class SDK {
     }
 
     /**
-     * Creates a new user within the specified identity store.
+     * Creates a user within the specified identity store.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -417,7 +418,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateUserResponse res = new org.openapis.openapi.models.operations.CreateUserResponse() {{
+        org.openapis.openapi.models.operations.CreateUserResponse res = new org.openapis.openapi.models.operations.CreateUserResponse(contentType, httpRes.statusCode()) {{
             createUserResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -427,8 +428,6 @@ public class SDK {
             validationException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -525,7 +524,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGroupResponse res = new org.openapis.openapi.models.operations.DeleteGroupResponse() {{
+        org.openapis.openapi.models.operations.DeleteGroupResponse res = new org.openapis.openapi.models.operations.DeleteGroupResponse(contentType, httpRes.statusCode()) {{
             deleteGroupResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -534,8 +533,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -625,7 +622,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGroupMembershipResponse res = new org.openapis.openapi.models.operations.DeleteGroupMembershipResponse() {{
+        org.openapis.openapi.models.operations.DeleteGroupMembershipResponse res = new org.openapis.openapi.models.operations.DeleteGroupMembershipResponse(contentType, httpRes.statusCode()) {{
             deleteGroupMembershipResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -634,8 +631,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -725,7 +720,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUserResponse res = new org.openapis.openapi.models.operations.DeleteUserResponse() {{
+        org.openapis.openapi.models.operations.DeleteUserResponse res = new org.openapis.openapi.models.operations.DeleteUserResponse(contentType, httpRes.statusCode()) {{
             deleteUserResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -734,8 +729,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -825,7 +818,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeGroupResponse res = new org.openapis.openapi.models.operations.DescribeGroupResponse() {{
+        org.openapis.openapi.models.operations.DescribeGroupResponse res = new org.openapis.openapi.models.operations.DescribeGroupResponse(contentType, httpRes.statusCode()) {{
             describeGroupResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -833,8 +826,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -917,7 +908,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeGroupMembershipResponse res = new org.openapis.openapi.models.operations.DescribeGroupMembershipResponse() {{
+        org.openapis.openapi.models.operations.DescribeGroupMembershipResponse res = new org.openapis.openapi.models.operations.DescribeGroupMembershipResponse(contentType, httpRes.statusCode()) {{
             describeGroupMembershipResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -925,8 +916,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1009,7 +998,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeUserResponse res = new org.openapis.openapi.models.operations.DescribeUserResponse() {{
+        org.openapis.openapi.models.operations.DescribeUserResponse res = new org.openapis.openapi.models.operations.DescribeUserResponse(contentType, httpRes.statusCode()) {{
             describeUserResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -1017,8 +1006,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1101,7 +1088,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGroupIdResponse res = new org.openapis.openapi.models.operations.GetGroupIdResponse() {{
+        org.openapis.openapi.models.operations.GetGroupIdResponse res = new org.openapis.openapi.models.operations.GetGroupIdResponse(contentType, httpRes.statusCode()) {{
             getGroupIdResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -1109,8 +1096,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1193,7 +1178,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGroupMembershipIdResponse res = new org.openapis.openapi.models.operations.GetGroupMembershipIdResponse() {{
+        org.openapis.openapi.models.operations.GetGroupMembershipIdResponse res = new org.openapis.openapi.models.operations.GetGroupMembershipIdResponse(contentType, httpRes.statusCode()) {{
             getGroupMembershipIdResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -1201,8 +1186,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1285,7 +1268,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserIdResponse res = new org.openapis.openapi.models.operations.GetUserIdResponse() {{
+        org.openapis.openapi.models.operations.GetUserIdResponse res = new org.openapis.openapi.models.operations.GetUserIdResponse(contentType, httpRes.statusCode()) {{
             getUserIdResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -1293,8 +1276,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1377,7 +1358,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IsMemberInGroupsResponse res = new org.openapis.openapi.models.operations.IsMemberInGroupsResponse() {{
+        org.openapis.openapi.models.operations.IsMemberInGroupsResponse res = new org.openapis.openapi.models.operations.IsMemberInGroupsResponse(contentType, httpRes.statusCode()) {{
             isMemberInGroupsResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -1385,8 +1366,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1475,7 +1454,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGroupMembershipsResponse res = new org.openapis.openapi.models.operations.ListGroupMembershipsResponse() {{
+        org.openapis.openapi.models.operations.ListGroupMembershipsResponse res = new org.openapis.openapi.models.operations.ListGroupMembershipsResponse(contentType, httpRes.statusCode()) {{
             listGroupMembershipsResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -1483,8 +1462,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1573,7 +1550,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGroupMembershipsForMemberResponse res = new org.openapis.openapi.models.operations.ListGroupMembershipsForMemberResponse() {{
+        org.openapis.openapi.models.operations.ListGroupMembershipsForMemberResponse res = new org.openapis.openapi.models.operations.ListGroupMembershipsForMemberResponse(contentType, httpRes.statusCode()) {{
             listGroupMembershipsForMemberResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -1581,8 +1558,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1671,7 +1646,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGroupsResponse res = new org.openapis.openapi.models.operations.ListGroupsResponse() {{
+        org.openapis.openapi.models.operations.ListGroupsResponse res = new org.openapis.openapi.models.operations.ListGroupsResponse(contentType, httpRes.statusCode()) {{
             listGroupsResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -1679,8 +1654,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1769,7 +1742,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListUsersResponse res = new org.openapis.openapi.models.operations.ListUsersResponse() {{
+        org.openapis.openapi.models.operations.ListUsersResponse res = new org.openapis.openapi.models.operations.ListUsersResponse(contentType, httpRes.statusCode()) {{
             listUsersResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -1777,8 +1750,6 @@ public class SDK {
             internalServerException = null;
             validationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1861,7 +1832,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGroupResponse res = new org.openapis.openapi.models.operations.UpdateGroupResponse() {{
+        org.openapis.openapi.models.operations.UpdateGroupResponse res = new org.openapis.openapi.models.operations.UpdateGroupResponse(contentType, httpRes.statusCode()) {{
             updateGroupResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -1871,8 +1842,6 @@ public class SDK {
             validationException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1969,7 +1938,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateUserResponse res = new org.openapis.openapi.models.operations.UpdateUserResponse() {{
+        org.openapis.openapi.models.operations.UpdateUserResponse res = new org.openapis.openapi.models.operations.UpdateUserResponse(contentType, httpRes.statusCode()) {{
             updateUserResponse = null;
             resourceNotFoundException = null;
             throttlingException = null;
@@ -1979,8 +1948,6 @@ public class SDK {
             validationException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

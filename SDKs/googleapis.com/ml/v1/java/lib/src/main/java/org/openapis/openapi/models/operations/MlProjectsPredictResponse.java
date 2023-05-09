@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MlProjectsPredictResponse {
     
     public String contentType;
+
     public MlProjectsPredictResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MlProjectsPredictResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleApiHttpBody googleApiHttpBody;
+
     public MlProjectsPredictResponse withGoogleApiHttpBody(org.openapis.openapi.models.shared.GoogleApiHttpBody googleApiHttpBody) {
         this.googleApiHttpBody = googleApiHttpBody;
         return this;
@@ -26,6 +29,7 @@ public class MlProjectsPredictResponse {
     
     
     public Integer statusCode;
+
     public MlProjectsPredictResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MlProjectsPredictResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MlProjectsPredictResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MlProjectsPredictResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

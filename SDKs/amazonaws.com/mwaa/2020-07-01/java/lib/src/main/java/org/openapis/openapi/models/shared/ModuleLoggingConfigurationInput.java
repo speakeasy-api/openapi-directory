@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModuleLoggingConfigurationInput {
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public ModuleLoggingConfigurationInput withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -19,9 +20,14 @@ public class ModuleLoggingConfigurationInput {
     
     @JsonProperty("LogLevel")
     public LoggingLevelEnum logLevel;
+
     public ModuleLoggingConfigurationInput withLogLevel(LoggingLevelEnum logLevel) {
         this.logLevel = logLevel;
         return this;
     }
     
+    public ModuleLoggingConfigurationInput(@JsonProperty("Enabled") Boolean enabled, @JsonProperty("LogLevel") LoggingLevelEnum logLevel) {
+        this.enabled = enabled;
+        this.logLevel = logLevel;
+  }
 }

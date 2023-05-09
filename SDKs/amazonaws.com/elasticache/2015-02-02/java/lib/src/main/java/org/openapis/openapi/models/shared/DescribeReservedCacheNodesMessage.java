@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedCacheNodesMessage {
     
     public String cacheNodeType;
+
     public DescribeReservedCacheNodesMessage withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -19,6 +20,7 @@ public class DescribeReservedCacheNodesMessage {
     
     
     public String duration;
+
     public DescribeReservedCacheNodesMessage withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -26,6 +28,7 @@ public class DescribeReservedCacheNodesMessage {
     
     
     public String marker;
+
     public DescribeReservedCacheNodesMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -33,6 +36,7 @@ public class DescribeReservedCacheNodesMessage {
     
     
     public Long maxRecords;
+
     public DescribeReservedCacheNodesMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -40,6 +44,7 @@ public class DescribeReservedCacheNodesMessage {
     
     
     public String offeringType;
+
     public DescribeReservedCacheNodesMessage withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -47,6 +52,7 @@ public class DescribeReservedCacheNodesMessage {
     
     
     public String productDescription;
+
     public DescribeReservedCacheNodesMessage withProductDescription(String productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -54,6 +60,7 @@ public class DescribeReservedCacheNodesMessage {
     
     
     public String reservedCacheNodeId;
+
     public DescribeReservedCacheNodesMessage withReservedCacheNodeId(String reservedCacheNodeId) {
         this.reservedCacheNodeId = reservedCacheNodeId;
         return this;
@@ -61,9 +68,11 @@ public class DescribeReservedCacheNodesMessage {
     
     
     public String reservedCacheNodesOfferingId;
+
     public DescribeReservedCacheNodesMessage withReservedCacheNodesOfferingId(String reservedCacheNodesOfferingId) {
         this.reservedCacheNodesOfferingId = reservedCacheNodesOfferingId;
         return this;
     }
     
+    public DescribeReservedCacheNodesMessage(){}
 }

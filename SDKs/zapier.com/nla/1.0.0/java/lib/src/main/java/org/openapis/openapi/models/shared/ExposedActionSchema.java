@@ -12,6 +12,7 @@ public class ExposedActionSchema {
      */
     @JsonProperty("description")
     public String description;
+
     public ExposedActionSchema withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class ExposedActionSchema {
      */
     @JsonProperty("id")
     public String id;
+
     public ExposedActionSchema withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class ExposedActionSchema {
      */
     @JsonProperty("operation_id")
     public String operationId;
+
     public ExposedActionSchema withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -42,9 +45,16 @@ public class ExposedActionSchema {
      */
     @JsonProperty("params")
     public java.util.Map<String, Object> params;
+
     public ExposedActionSchema withParams(java.util.Map<String, Object> params) {
         this.params = params;
         return this;
     }
     
+    public ExposedActionSchema(@JsonProperty("description") String description, @JsonProperty("id") String id, @JsonProperty("operation_id") String operationId, @JsonProperty("params") java.util.Map<String, Object> params) {
+        this.description = description;
+        this.id = id;
+        this.operationId = operationId;
+        this.params = params;
+  }
 }

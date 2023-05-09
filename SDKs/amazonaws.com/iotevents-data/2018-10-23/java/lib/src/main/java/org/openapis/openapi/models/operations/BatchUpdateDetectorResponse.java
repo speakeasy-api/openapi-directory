@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchUpdateDetectorResponse {
@@ -12,6 +13,7 @@ public class BatchUpdateDetectorResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchUpdateDetectorResponse batchUpdateDetectorResponse;
+
     public BatchUpdateDetectorResponse withBatchUpdateDetectorResponse(org.openapis.openapi.models.shared.BatchUpdateDetectorResponse batchUpdateDetectorResponse) {
         this.batchUpdateDetectorResponse = batchUpdateDetectorResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchUpdateDetectorResponse {
     
     
     public String contentType;
+
     public BatchUpdateDetectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchUpdateDetectorResponse {
      */
     
     public Object internalFailureException;
+
     public BatchUpdateDetectorResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class BatchUpdateDetectorResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchUpdateDetectorResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class BatchUpdateDetectorResponse {
     
     
     public Integer statusCode;
+
     public BatchUpdateDetectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchUpdateDetectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchUpdateDetectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchUpdateDetectorResponse {
      */
     
     public Object serviceUnavailableException;
+
     public BatchUpdateDetectorResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class BatchUpdateDetectorResponse {
      */
     
     public Object throttlingException;
+
     public BatchUpdateDetectorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public BatchUpdateDetectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

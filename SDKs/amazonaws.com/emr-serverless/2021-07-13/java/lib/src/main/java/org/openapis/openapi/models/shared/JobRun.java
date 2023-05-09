@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class JobRun {
     @JsonProperty("applicationId")
     public String applicationId;
+
     public JobRun withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -26,14 +27,25 @@ public class JobRun {
     
     @JsonProperty("arn")
     public String arn;
+
     public JobRun withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("billedResourceUtilization")
+    public ResourceUtilization billedResourceUtilization;
+
+    public JobRun withBilledResourceUtilization(ResourceUtilization billedResourceUtilization) {
+        this.billedResourceUtilization = billedResourceUtilization;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationOverrides")
     public ConfigurationOverrides configurationOverrides;
+
     public JobRun withConfigurationOverrides(ConfigurationOverrides configurationOverrides) {
         this.configurationOverrides = configurationOverrides;
         return this;
@@ -43,6 +55,7 @@ public class JobRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public JobRun withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -50,6 +63,7 @@ public class JobRun {
     
     @JsonProperty("createdBy")
     public String createdBy;
+
     public JobRun withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -57,13 +71,24 @@ public class JobRun {
     
     @JsonProperty("executionRole")
     public String executionRole;
+
     public JobRun withExecutionRole(String executionRole) {
         this.executionRole = executionRole;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("executionTimeoutMinutes")
+    public Long executionTimeoutMinutes;
+
+    public JobRun withExecutionTimeoutMinutes(Long executionTimeoutMinutes) {
+        this.executionTimeoutMinutes = executionTimeoutMinutes;
+        return this;
+    }
+    
     @JsonProperty("jobDriver")
     public JobDriver jobDriver;
+
     public JobRun withJobDriver(JobDriver jobDriver) {
         this.jobDriver = jobDriver;
         return this;
@@ -71,6 +96,7 @@ public class JobRun {
     
     @JsonProperty("jobRunId")
     public String jobRunId;
+
     public JobRun withJobRunId(String jobRunId) {
         this.jobRunId = jobRunId;
         return this;
@@ -79,6 +105,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public JobRun withName(String name) {
         this.name = name;
         return this;
@@ -90,6 +117,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
+
     public JobRun withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -97,6 +125,7 @@ public class JobRun {
     
     @JsonProperty("releaseLabel")
     public String releaseLabel;
+
     public JobRun withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
@@ -104,6 +133,7 @@ public class JobRun {
     
     @JsonProperty("state")
     public JobRunStateEnum state;
+
     public JobRun withState(JobRunStateEnum state) {
         this.state = state;
         return this;
@@ -111,6 +141,7 @@ public class JobRun {
     
     @JsonProperty("stateDetails")
     public String stateDetails;
+
     public JobRun withStateDetails(String stateDetails) {
         this.stateDetails = stateDetails;
         return this;
@@ -119,6 +150,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public JobRun withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -127,6 +159,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalExecutionDurationSeconds")
     public Long totalExecutionDurationSeconds;
+
     public JobRun withTotalExecutionDurationSeconds(Long totalExecutionDurationSeconds) {
         this.totalExecutionDurationSeconds = totalExecutionDurationSeconds;
         return this;
@@ -135,6 +168,7 @@ public class JobRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalResourceUtilization")
     public TotalResourceUtilization totalResourceUtilization;
+
     public JobRun withTotalResourceUtilization(TotalResourceUtilization totalResourceUtilization) {
         this.totalResourceUtilization = totalResourceUtilization;
         return this;
@@ -144,9 +178,23 @@ public class JobRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public JobRun withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public JobRun(@JsonProperty("applicationId") String applicationId, @JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("createdBy") String createdBy, @JsonProperty("executionRole") String executionRole, @JsonProperty("jobDriver") JobDriver jobDriver, @JsonProperty("jobRunId") String jobRunId, @JsonProperty("releaseLabel") String releaseLabel, @JsonProperty("state") JobRunStateEnum state, @JsonProperty("stateDetails") String stateDetails, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.applicationId = applicationId;
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.createdBy = createdBy;
+        this.executionRole = executionRole;
+        this.jobDriver = jobDriver;
+        this.jobRunId = jobRunId;
+        this.releaseLabel = releaseLabel;
+        this.state = state;
+        this.stateDetails = stateDetails;
+        this.updatedAt = updatedAt;
+  }
 }

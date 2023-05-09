@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSnapshotsRequest {
     
     public Boolean dryRun;
+
     public DescribeSnapshotsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeSnapshotsRequest {
     
     
     public DescribeSnapshotsRequestFilters[] filters;
+
     public DescribeSnapshotsRequest withFilters(DescribeSnapshotsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeSnapshotsRequest {
     
     
     public Long maxResults;
+
     public DescribeSnapshotsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeSnapshotsRequest {
     
     
     public String nextToken;
+
     public DescribeSnapshotsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,6 +41,7 @@ public class DescribeSnapshotsRequest {
     
     
     public String[] ownerIds;
+
     public DescribeSnapshotsRequest withOwnerIds(String[] ownerIds) {
         this.ownerIds = ownerIds;
         return this;
@@ -44,6 +49,7 @@ public class DescribeSnapshotsRequest {
     
     
     public String[] restorableByUserIds;
+
     public DescribeSnapshotsRequest withRestorableByUserIds(String[] restorableByUserIds) {
         this.restorableByUserIds = restorableByUserIds;
         return this;
@@ -51,9 +57,11 @@ public class DescribeSnapshotsRequest {
     
     
     public String[] snapshotIds;
+
     public DescribeSnapshotsRequest withSnapshotIds(String[] snapshotIds) {
         this.snapshotIds = snapshotIds;
         return this;
     }
     
+    public DescribeSnapshotsRequest(){}
 }

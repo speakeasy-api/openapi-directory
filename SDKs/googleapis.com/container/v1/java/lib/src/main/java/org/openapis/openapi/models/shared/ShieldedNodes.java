@@ -18,9 +18,11 @@ public class ShieldedNodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ShieldedNodes withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ShieldedNodes(){}
 }

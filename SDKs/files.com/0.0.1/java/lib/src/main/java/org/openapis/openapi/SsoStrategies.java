@@ -60,11 +60,9 @@ public class SsoStrategies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSsoStrategiesResponse res = new org.openapis.openapi.models.operations.GetSsoStrategiesResponse() {{
+        org.openapis.openapi.models.operations.GetSsoStrategiesResponse res = new org.openapis.openapi.models.operations.GetSsoStrategiesResponse(contentType, httpRes.statusCode()) {{
             ssoStrategyEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class SsoStrategies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSsoStrategiesIdResponse res = new org.openapis.openapi.models.operations.GetSsoStrategiesIdResponse() {{
+        org.openapis.openapi.models.operations.GetSsoStrategiesIdResponse res = new org.openapis.openapi.models.operations.GetSsoStrategiesIdResponse(contentType, httpRes.statusCode()) {{
             ssoStrategyEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,10 +138,8 @@ public class SsoStrategies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSsoStrategiesIdSyncResponse res = new org.openapis.openapi.models.operations.PostSsoStrategiesIdSyncResponse() {{
+        org.openapis.openapi.models.operations.PostSsoStrategiesIdSyncResponse res = new org.openapis.openapi.models.operations.PostSsoStrategiesIdSyncResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {

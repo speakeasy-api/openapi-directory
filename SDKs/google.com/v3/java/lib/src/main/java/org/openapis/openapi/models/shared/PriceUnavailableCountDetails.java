@@ -18,6 +18,7 @@ public class PriceUnavailableCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("participationNotLikelyCount")
     public String participationNotLikelyCount;
+
     public PriceUnavailableCountDetails withParticipationNotLikelyCount(String participationNotLikelyCount) {
         this.participationNotLikelyCount = participationNotLikelyCount;
         return this;
@@ -29,9 +30,11 @@ public class PriceUnavailableCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceUnavailableCount")
     public String priceUnavailableCount;
+
     public PriceUnavailableCountDetails withPriceUnavailableCount(String priceUnavailableCount) {
         this.priceUnavailableCount = priceUnavailableCount;
         return this;
     }
     
+    public PriceUnavailableCountDetails(){}
 }

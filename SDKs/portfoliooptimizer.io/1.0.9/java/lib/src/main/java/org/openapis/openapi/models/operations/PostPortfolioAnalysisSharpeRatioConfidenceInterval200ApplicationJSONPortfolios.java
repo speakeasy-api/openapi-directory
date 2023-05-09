@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisSharpeRatioConfidenceInterval200ApplicationJSO
      */
     @JsonProperty("portfolioSharpeRatioConfidenceInterval")
     public Double[] portfolioSharpeRatioConfidenceInterval;
+
     public PostPortfolioAnalysisSharpeRatioConfidenceInterval200ApplicationJSONPortfolios withPortfolioSharpeRatioConfidenceInterval(Double[] portfolioSharpeRatioConfidenceInterval) {
         this.portfolioSharpeRatioConfidenceInterval = portfolioSharpeRatioConfidenceInterval;
         return this;
     }
     
+    public PostPortfolioAnalysisSharpeRatioConfidenceInterval200ApplicationJSONPortfolios(@JsonProperty("portfolioSharpeRatioConfidenceInterval") Double[] portfolioSharpeRatioConfidenceInterval) {
+        this.portfolioSharpeRatioConfidenceInterval = portfolioSharpeRatioConfidenceInterval;
+  }
 }

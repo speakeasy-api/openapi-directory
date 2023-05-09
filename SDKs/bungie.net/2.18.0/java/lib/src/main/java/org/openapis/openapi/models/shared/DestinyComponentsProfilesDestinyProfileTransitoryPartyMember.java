@@ -16,6 +16,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryPartyMember {
      */
     
     public String displayName;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryPartyMember withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -26,6 +27,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryPartyMember {
      */
     
     public Long emblemHash;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryPartyMember withEmblemHash(Long emblemHash) {
         this.emblemHash = emblemHash;
         return this;
@@ -36,6 +38,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryPartyMember {
      */
     
     public Long membershipId;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryPartyMember withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -46,9 +49,11 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryPartyMember {
      */
     
     public Integer status;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryPartyMember withStatus(Integer status) {
         this.status = status;
         return this;
     }
     
+    public DestinyComponentsProfilesDestinyProfileTransitoryPartyMember(){}
 }

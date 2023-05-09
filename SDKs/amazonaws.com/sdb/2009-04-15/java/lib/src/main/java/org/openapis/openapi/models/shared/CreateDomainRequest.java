@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateDomainRequest {
     
     public String domainName;
+
     public CreateDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public CreateDomainRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

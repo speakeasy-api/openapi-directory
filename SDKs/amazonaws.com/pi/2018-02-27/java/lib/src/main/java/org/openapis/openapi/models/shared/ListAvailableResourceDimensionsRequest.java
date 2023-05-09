@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAvailableResourceDimensionsRequest {
     @JsonProperty("Identifier")
     public String identifier;
+
     public ListAvailableResourceDimensionsRequest withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -19,6 +20,7 @@ public class ListAvailableResourceDimensionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAvailableResourceDimensionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +28,7 @@ public class ListAvailableResourceDimensionsRequest {
     
     @JsonProperty("Metrics")
     public String[] metrics;
+
     public ListAvailableResourceDimensionsRequest withMetrics(String[] metrics) {
         this.metrics = metrics;
         return this;
@@ -34,6 +37,7 @@ public class ListAvailableResourceDimensionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAvailableResourceDimensionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -41,9 +45,15 @@ public class ListAvailableResourceDimensionsRequest {
     
     @JsonProperty("ServiceType")
     public ServiceTypeEnum serviceType;
+
     public ListAvailableResourceDimensionsRequest withServiceType(ServiceTypeEnum serviceType) {
         this.serviceType = serviceType;
         return this;
     }
     
+    public ListAvailableResourceDimensionsRequest(@JsonProperty("Identifier") String identifier, @JsonProperty("Metrics") String[] metrics, @JsonProperty("ServiceType") ServiceTypeEnum serviceType) {
+        this.identifier = identifier;
+        this.metrics = metrics;
+        this.serviceType = serviceType;
+  }
 }

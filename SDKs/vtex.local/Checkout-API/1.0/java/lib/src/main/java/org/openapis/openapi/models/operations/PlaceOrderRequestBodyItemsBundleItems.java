@@ -15,6 +15,7 @@ public class PlaceOrderRequestBodyItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PlaceOrderRequestBodyItemsBundleItems withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrderRequestBodyItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlaceOrderRequestBodyItemsBundleItems withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrderRequestBodyItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public PlaceOrderRequestBodyItemsBundleItems withPrice(Long price) {
         this.price = price;
         return this;
@@ -48,9 +51,11 @@ public class PlaceOrderRequestBodyItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PlaceOrderRequestBodyItemsBundleItems withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PlaceOrderRequestBodyItemsBundleItems(){}
 }

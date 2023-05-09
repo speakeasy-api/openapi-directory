@@ -18,6 +18,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appointment")
     public Long appointment;
+
     public PatientDrug withAppointment(Long appointment) {
         this.appointment = appointment;
         return this;
@@ -26,6 +27,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_prescribed")
     public String datePrescribed;
+
     public PatientDrug withDatePrescribed(String datePrescribed) {
         this.datePrescribed = datePrescribed;
         return this;
@@ -34,6 +36,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_started_taking")
     public String dateStartedTaking;
+
     public PatientDrug withDateStartedTaking(String dateStartedTaking) {
         this.dateStartedTaking = dateStartedTaking;
         return this;
@@ -42,6 +45,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_stopped_taking")
     public String dateStoppedTaking;
+
     public PatientDrug withDateStoppedTaking(String dateStoppedTaking) {
         this.dateStoppedTaking = dateStoppedTaking;
         return this;
@@ -53,6 +57,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daw")
     public Boolean daw;
+
     public PatientDrug withDaw(Boolean daw) {
         this.daw = daw;
         return this;
@@ -61,6 +66,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dispense_quantity")
     public Double dispenseQuantity;
+
     public PatientDrug withDispenseQuantity(Double dispenseQuantity) {
         this.dispenseQuantity = dispenseQuantity;
         return this;
@@ -71,6 +77,7 @@ public class PatientDrug {
      */
     @JsonProperty("doctor")
     public Long doctor;
+
     public PatientDrug withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -82,6 +89,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dosage_quantity")
     public String dosageQuantity;
+
     public PatientDrug withDosageQuantity(String dosageQuantity) {
         this.dosageQuantity = dosageQuantity;
         return this;
@@ -90,6 +98,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dosage_units")
     public String dosageUnits;
+
     public PatientDrug withDosageUnits(String dosageUnits) {
         this.dosageUnits = dosageUnits;
         return this;
@@ -101,6 +110,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public String frequency;
+
     public PatientDrug withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -109,6 +119,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PatientDrug withId(Long id) {
         this.id = id;
         return this;
@@ -117,6 +128,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indication")
     public String indication;
+
     public PatientDrug withIndication(String indication) {
         this.indication = indication;
         return this;
@@ -125,6 +137,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PatientDrug withName(String name) {
         this.name = name;
         return this;
@@ -133,6 +146,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ndc")
     public String ndc;
+
     public PatientDrug withNdc(String ndc) {
         this.ndc = ndc;
         return this;
@@ -144,6 +158,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public PatientDrug withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -152,6 +167,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number_refills")
     public Long numberRefills;
+
     public PatientDrug withNumberRefills(Long numberRefills) {
         this.numberRefills = numberRefills;
         return this;
@@ -163,6 +179,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_status")
     public PatientDrugOrderStatusEnum orderStatus;
+
     public PatientDrug withOrderStatus(PatientDrugOrderStatusEnum orderStatus) {
         this.orderStatus = orderStatus;
         return this;
@@ -170,6 +187,7 @@ public class PatientDrug {
     
     @JsonProperty("patient")
     public Long patient;
+
     public PatientDrug withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -178,6 +196,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pharmacy_note")
     public String pharmacyNote;
+
     public PatientDrug withPharmacyNote(String pharmacyNote) {
         this.pharmacyNote = pharmacyNote;
         return this;
@@ -189,6 +208,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prn")
     public Boolean prn;
+
     public PatientDrug withPrn(Boolean prn) {
         this.prn = prn;
         return this;
@@ -200,6 +220,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("route")
     public String route;
+
     public PatientDrug withRoute(String route) {
         this.route = route;
         return this;
@@ -211,6 +232,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rxnorm")
     public String rxnorm;
+
     public PatientDrug withRxnorm(String rxnorm) {
         this.rxnorm = rxnorm;
         return this;
@@ -219,6 +241,7 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signature_note")
     public String signatureNote;
+
     public PatientDrug withSignatureNote(String signatureNote) {
         this.signatureNote = signatureNote;
         return this;
@@ -230,9 +253,14 @@ public class PatientDrug {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PatientDrugStatusEnum status;
+
     public PatientDrug withStatus(PatientDrugStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PatientDrug(@JsonProperty("doctor") Long doctor, @JsonProperty("patient") Long patient) {
+        this.doctor = doctor;
+        this.patient = patient;
+  }
 }

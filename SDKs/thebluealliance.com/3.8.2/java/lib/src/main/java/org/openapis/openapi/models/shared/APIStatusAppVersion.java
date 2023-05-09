@@ -12,6 +12,7 @@ public class APIStatusAppVersion {
      */
     @JsonProperty("latest_app_version")
     public Long latestAppVersion;
+
     public APIStatusAppVersion withLatestAppVersion(Long latestAppVersion) {
         this.latestAppVersion = latestAppVersion;
         return this;
@@ -22,9 +23,14 @@ public class APIStatusAppVersion {
      */
     @JsonProperty("min_app_version")
     public Long minAppVersion;
+
     public APIStatusAppVersion withMinAppVersion(Long minAppVersion) {
         this.minAppVersion = minAppVersion;
         return this;
     }
     
+    public APIStatusAppVersion(@JsonProperty("latest_app_version") Long latestAppVersion, @JsonProperty("min_app_version") Long minAppVersion) {
+        this.latestAppVersion = latestAppVersion;
+        this.minAppVersion = minAppVersion;
+  }
 }

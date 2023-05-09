@@ -15,9 +15,11 @@ public class NfsMountOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public NfsVersionEnum version;
+
     public NfsMountOptions withVersion(NfsVersionEnum version) {
         this.version = version;
         return this;
     }
     
+    public NfsMountOptions(){}
 }

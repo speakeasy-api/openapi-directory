@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConsentArtifactSchemaConsentDataConsumer {
     @JsonProperty("id")
     public String id;
+
     public ConsentArtifactSchemaConsentDataConsumer withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ConsentArtifactSchemaConsentDataConsumer(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

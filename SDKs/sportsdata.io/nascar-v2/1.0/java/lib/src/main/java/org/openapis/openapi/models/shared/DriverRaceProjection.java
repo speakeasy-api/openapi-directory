@@ -12,6 +12,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bonus")
     public Double bonus;
+
     public DriverRaceProjection withBonus(Double bonus) {
         this.bonus = bonus;
         return this;
@@ -20,6 +21,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Created")
     public String created;
+
     public DriverRaceProjection withCreated(String created) {
         this.created = created;
         return this;
@@ -28,6 +30,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentPosition")
     public Double currentPosition;
+
     public DriverRaceProjection withCurrentPosition(Double currentPosition) {
         this.currentPosition = currentPosition;
         return this;
@@ -36,6 +39,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateTime")
     public String dateTime;
+
     public DriverRaceProjection withDateTime(String dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -44,6 +48,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Day")
     public String day;
+
     public DriverRaceProjection withDay(String day) {
         this.day = day;
         return this;
@@ -52,6 +57,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsSalary")
     public Long draftKingsSalary;
+
     public DriverRaceProjection withDraftKingsSalary(Long draftKingsSalary) {
         this.draftKingsSalary = draftKingsSalary;
         return this;
@@ -60,6 +66,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DriverID")
     public Long driverID;
+
     public DriverRaceProjection withDriverID(Long driverID) {
         this.driverID = driverID;
         return this;
@@ -68,6 +75,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public DriverRaceProjection withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -76,6 +84,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsDraftKings")
     public Double fantasyPointsDraftKings;
+
     public DriverRaceProjection withFantasyPointsDraftKings(Double fantasyPointsDraftKings) {
         this.fantasyPointsDraftKings = fantasyPointsDraftKings;
         return this;
@@ -84,6 +93,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FastestLaps")
     public Double fastestLaps;
+
     public DriverRaceProjection withFastestLaps(Double fastestLaps) {
         this.fastestLaps = fastestLaps;
         return this;
@@ -92,6 +102,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalPosition")
     public Double finalPosition;
+
     public DriverRaceProjection withFinalPosition(Double finalPosition) {
         this.finalPosition = finalPosition;
         return this;
@@ -100,6 +111,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Laps")
     public Double laps;
+
     public DriverRaceProjection withLaps(Double laps) {
         this.laps = laps;
         return this;
@@ -108,6 +120,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LapsLed")
     public Double lapsLed;
+
     public DriverRaceProjection withLapsLed(Double lapsLed) {
         this.lapsLed = lapsLed;
         return this;
@@ -116,6 +129,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Manufacturer")
     public String manufacturer;
+
     public DriverRaceProjection withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -124,6 +138,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DriverRaceProjection withName(String name) {
         this.name = name;
         return this;
@@ -132,6 +147,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public DriverRaceProjection withNumber(Long number) {
         this.number = number;
         return this;
@@ -140,6 +156,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberDisplay")
     public String numberDisplay;
+
     public DriverRaceProjection withNumberDisplay(String numberDisplay) {
         this.numberDisplay = numberDisplay;
         return this;
@@ -148,6 +165,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Penalty")
     public Double penalty;
+
     public DriverRaceProjection withPenalty(Double penalty) {
         this.penalty = penalty;
         return this;
@@ -156,6 +174,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Points")
     public Double points;
+
     public DriverRaceProjection withPoints(Double points) {
         this.points = points;
         return this;
@@ -164,6 +183,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoleFinalPosition")
     public Double poleFinalPosition;
+
     public DriverRaceProjection withPoleFinalPosition(Double poleFinalPosition) {
         this.poleFinalPosition = poleFinalPosition;
         return this;
@@ -172,6 +192,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Poles")
     public Double poles;
+
     public DriverRaceProjection withPoles(Double poles) {
         this.poles = poles;
         return this;
@@ -180,6 +201,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionDifferential")
     public Double positionDifferential;
+
     public DriverRaceProjection withPositionDifferential(Double positionDifferential) {
         this.positionDifferential = positionDifferential;
         return this;
@@ -188,6 +210,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QualifyingSpeed")
     public Double qualifyingSpeed;
+
     public DriverRaceProjection withQualifyingSpeed(Double qualifyingSpeed) {
         this.qualifyingSpeed = qualifyingSpeed;
         return this;
@@ -196,6 +219,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RaceID")
     public Long raceID;
+
     public DriverRaceProjection withRaceID(Long raceID) {
         this.raceID = raceID;
         return this;
@@ -204,6 +228,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public DriverRaceProjection withSeason(Long season) {
         this.season = season;
         return this;
@@ -212,6 +237,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartPosition")
     public Double startPosition;
+
     public DriverRaceProjection withStartPosition(Double startPosition) {
         this.startPosition = startPosition;
         return this;
@@ -220,6 +246,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatID")
     public Long statID;
+
     public DriverRaceProjection withStatID(Long statID) {
         this.statID = statID;
         return this;
@@ -228,6 +255,7 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public DriverRaceProjection withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -236,9 +264,11 @@ public class DriverRaceProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Wins")
     public Double wins;
+
     public DriverRaceProjection withWins(Double wins) {
         this.wins = wins;
         return this;
     }
     
+    public DriverRaceProjection(){}
 }

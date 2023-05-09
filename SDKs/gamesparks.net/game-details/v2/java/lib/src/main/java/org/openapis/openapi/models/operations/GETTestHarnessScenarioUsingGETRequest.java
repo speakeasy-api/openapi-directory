@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTestHarnessScenarioUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETTestHarnessScenarioUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public GETTestHarnessScenarioUsingGETRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,9 +24,14 @@ public class GETTestHarnessScenarioUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scenarioName")
     public String scenarioName;
+
     public GETTestHarnessScenarioUsingGETRequest withScenarioName(String scenarioName) {
         this.scenarioName = scenarioName;
         return this;
     }
     
+    public GETTestHarnessScenarioUsingGETRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("scenarioName") String scenarioName) {
+        this.apiKey = apiKey;
+        this.scenarioName = scenarioName;
+  }
 }

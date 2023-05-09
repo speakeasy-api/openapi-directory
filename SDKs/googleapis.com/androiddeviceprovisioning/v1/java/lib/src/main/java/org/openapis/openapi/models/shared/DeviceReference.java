@@ -18,6 +18,7 @@ public class DeviceReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public DeviceReference withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -29,9 +30,11 @@ public class DeviceReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceIdentifier")
     public DeviceIdentifier deviceIdentifier;
+
     public DeviceReference withDeviceIdentifier(DeviceIdentifier deviceIdentifier) {
         this.deviceIdentifier = deviceIdentifier;
         return this;
     }
     
+    public DeviceReference(){}
 }

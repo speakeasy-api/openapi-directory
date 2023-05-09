@@ -15,9 +15,11 @@ public class CreateUserProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserProfileArn")
     public String userProfileArn;
+
     public CreateUserProfileResponse withUserProfileArn(String userProfileArn) {
         this.userProfileArn = userProfileArn;
         return this;
     }
     
+    public CreateUserProfileResponse(){}
 }

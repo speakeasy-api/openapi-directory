@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateANumberResponse {
     
     public byte[] body;
+
     public UpdateANumberResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class UpdateANumberResponse {
     
     
     public String contentType;
+
     public UpdateANumberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class UpdateANumberResponse {
     
     
     public Integer statusCode;
+
     public UpdateANumberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class UpdateANumberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateANumberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class UpdateANumberResponse {
      */
     
     public org.openapis.openapi.models.shared.Response response;
+
     public UpdateANumberResponse withResponse(org.openapis.openapi.models.shared.Response response) {
         this.response = response;
         return this;
@@ -50,9 +56,14 @@ public class UpdateANumberResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthorized unauthorized;
+
     public UpdateANumberResponse withUnauthorized(org.openapis.openapi.models.shared.Unauthorized unauthorized) {
         this.unauthorized = unauthorized;
         return this;
     }
     
+    public UpdateANumberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

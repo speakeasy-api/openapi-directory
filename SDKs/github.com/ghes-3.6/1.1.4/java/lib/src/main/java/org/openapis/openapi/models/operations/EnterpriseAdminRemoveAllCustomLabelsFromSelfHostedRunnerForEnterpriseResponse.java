@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseResponse {
     
     public String contentType;
+
     public EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpri
     
     
     public Integer statusCode;
+
     public EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpri
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpri
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpri
      */
     
     public EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterprise200ApplicationJSON enterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterprise200ApplicationJSONObject;
+
     public EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseResponse withEnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterprise200ApplicationJSONObject(EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterprise200ApplicationJSON enterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterprise200ApplicationJSONObject) {
         this.enterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterprise200ApplicationJSONObject = enterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterprise200ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpri
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple;
+
     public EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseResponse withValidationErrorSimple(org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple) {
         this.validationErrorSimple = validationErrorSimple;
         return this;
     }
     
+    public EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

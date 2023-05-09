@@ -15,6 +15,7 @@ public class AttributesAttendees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_status")
     public AttributesAttendeesResponseStatusEnum responseStatus;
+
     public AttributesAttendees withResponseStatus(AttributesAttendeesResponseStatusEnum responseStatus) {
         this.responseStatus = responseStatus;
         return this;
@@ -23,9 +24,11 @@ public class AttributesAttendees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public AttributesAttendees withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public AttributesAttendees(){}
 }

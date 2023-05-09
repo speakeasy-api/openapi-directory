@@ -59,11 +59,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteConnectionsIdConnectionSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.DeleteConnectionsIdConnectionSourcesIdSourceResponse() {{
+        org.openapis.openapi.models.operations.DeleteConnectionsIdConnectionSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.DeleteConnectionsIdConnectionSourcesIdSourceResponse(contentType, httpRes.statusCode()) {{
             connectionSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteConnectorsIdConnectorLogosIdLogoResponse res = new org.openapis.openapi.models.operations.DeleteConnectorsIdConnectorLogosIdLogoResponse() {{
+        org.openapis.openapi.models.operations.DeleteConnectorsIdConnectorLogosIdLogoResponse res = new org.openapis.openapi.models.operations.DeleteConnectorsIdConnectorLogosIdLogoResponse(contentType, httpRes.statusCode()) {{
             connectorLogo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsResponse res = new org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsResponse() {{
+        org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsResponse res = new org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsResponse(contentType, httpRes.statusCode()) {{
             connection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -192,11 +186,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionResponse res = new org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionResponse() {{
+        org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionResponse res = new org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionResponse(contentType, httpRes.statusCode()) {{
             connection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -237,11 +229,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse() {{
+        org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse(contentType, httpRes.statusCode()) {{
             connectionSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,11 +271,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBanksResponse res = new org.openapis.openapi.models.operations.GetBanksResponse() {{
+        org.openapis.openapi.models.operations.GetBanksResponse res = new org.openapis.openapi.models.operations.GetBanksResponse(contentType, httpRes.statusCode()) {{
             getBanks200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -325,11 +313,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBanksIdBankResponse res = new org.openapis.openapi.models.operations.GetBanksIdBankResponse() {{
+        org.openapis.openapi.models.operations.GetBanksIdBankResponse res = new org.openapis.openapi.models.operations.GetBanksIdBankResponse(contentType, httpRes.statusCode()) {{
             connector = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -370,11 +356,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBanksIdConnectorLogosResponse res = new org.openapis.openapi.models.operations.GetBanksIdConnectorLogosResponse() {{
+        org.openapis.openapi.models.operations.GetBanksIdConnectorLogosResponse res = new org.openapis.openapi.models.operations.GetBanksIdConnectorLogosResponse(contentType, httpRes.statusCode()) {{
             getBanksIdConnectorLogos200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -415,11 +399,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBanksIdConnectorLogosMainResponse res = new org.openapis.openapi.models.operations.GetBanksIdConnectorLogosMainResponse() {{
+        org.openapis.openapi.models.operations.GetBanksIdConnectorLogosMainResponse res = new org.openapis.openapi.models.operations.GetBanksIdConnectorLogosMainResponse(contentType, httpRes.statusCode()) {{
             getBanksIdConnectorLogosMain200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -460,11 +442,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBanksIdConnectorLogosThumbnailResponse res = new org.openapis.openapi.models.operations.GetBanksIdConnectorLogosThumbnailResponse() {{
+        org.openapis.openapi.models.operations.GetBanksIdConnectorLogosThumbnailResponse res = new org.openapis.openapi.models.operations.GetBanksIdConnectorLogosThumbnailResponse(contentType, httpRes.statusCode()) {{
             getBanksIdConnectorLogosThumbnail200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -504,11 +484,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesResponse res = new org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesResponse() {{
+        org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesResponse res = new org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesResponse(contentType, httpRes.statusCode()) {{
             getBanksIdConnectorSources200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -548,11 +526,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesIdSourceResponse() {{
+        org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesIdSourceResponse(contentType, httpRes.statusCode()) {{
             connectorSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -592,11 +568,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConnectionsResponse res = new org.openapis.openapi.models.operations.GetConnectionsResponse() {{
+        org.openapis.openapi.models.operations.GetConnectionsResponse res = new org.openapis.openapi.models.operations.GetConnectionsResponse(contentType, httpRes.statusCode()) {{
             getConnections200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -637,11 +611,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConnectionsIdConnectionLogsResponse res = new org.openapis.openapi.models.operations.GetConnectionsIdConnectionLogsResponse() {{
+        org.openapis.openapi.models.operations.GetConnectionsIdConnectionLogsResponse res = new org.openapis.openapi.models.operations.GetConnectionsIdConnectionLogsResponse(contentType, httpRes.statusCode()) {{
             getConnectionsIdConnectionLogs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -681,11 +653,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConnectionsIdConnectionSourcesResponse res = new org.openapis.openapi.models.operations.GetConnectionsIdConnectionSourcesResponse() {{
+        org.openapis.openapi.models.operations.GetConnectionsIdConnectionSourcesResponse res = new org.openapis.openapi.models.operations.GetConnectionsIdConnectionSourcesResponse(contentType, httpRes.statusCode()) {{
             getConnectionsIdConnectionSources200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -725,11 +695,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConnectorsResponse res = new org.openapis.openapi.models.operations.GetConnectorsResponse() {{
+        org.openapis.openapi.models.operations.GetConnectorsResponse res = new org.openapis.openapi.models.operations.GetConnectorsResponse(contentType, httpRes.statusCode()) {{
             getConnectors200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -769,11 +737,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConnectorsIdConnectorResponse res = new org.openapis.openapi.models.operations.GetConnectorsIdConnectorResponse() {{
+        org.openapis.openapi.models.operations.GetConnectorsIdConnectorResponse res = new org.openapis.openapi.models.operations.GetConnectorsIdConnectorResponse(contentType, httpRes.statusCode()) {{
             connector = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -814,11 +780,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosResponse res = new org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosResponse() {{
+        org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosResponse res = new org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosResponse(contentType, httpRes.statusCode()) {{
             getConnectorsIdConnectorLogos200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -859,11 +823,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosMainResponse res = new org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosMainResponse() {{
+        org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosMainResponse res = new org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosMainResponse(contentType, httpRes.statusCode()) {{
             getConnectorsIdConnectorLogosMain200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -904,11 +866,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosThumbnailResponse res = new org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosThumbnailResponse() {{
+        org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosThumbnailResponse res = new org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosThumbnailResponse(contentType, httpRes.statusCode()) {{
             getConnectorsIdConnectorLogosThumbnail200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -948,11 +908,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesResponse res = new org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesResponse() {{
+        org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesResponse res = new org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesResponse(contentType, httpRes.statusCode()) {{
             getConnectorsIdConnectorSources200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -992,11 +950,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesIdSourceResponse() {{
+        org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesIdSourceResponse(contentType, httpRes.statusCode()) {{
             connectorSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1037,11 +993,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLogsResponse res = new org.openapis.openapi.models.operations.GetLogsResponse() {{
+        org.openapis.openapi.models.operations.GetLogsResponse res = new org.openapis.openapi.models.operations.GetLogsResponse(contentType, httpRes.statusCode()) {{
             getLogs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1081,11 +1035,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProvidersResponse res = new org.openapis.openapi.models.operations.GetProvidersResponse() {{
+        org.openapis.openapi.models.operations.GetProvidersResponse res = new org.openapis.openapi.models.operations.GetProvidersResponse(contentType, httpRes.statusCode()) {{
             getProviders200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1126,11 +1078,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosResponse res = new org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosResponse() {{
+        org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosResponse res = new org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosResponse(contentType, httpRes.statusCode()) {{
             getProvidersIdConnectorLogos200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1171,11 +1121,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosMainResponse res = new org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosMainResponse() {{
+        org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosMainResponse res = new org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosMainResponse(contentType, httpRes.statusCode()) {{
             getProvidersIdConnectorLogosMain200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1216,11 +1164,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosThumbnailResponse res = new org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosThumbnailResponse() {{
+        org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosThumbnailResponse res = new org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosThumbnailResponse(contentType, httpRes.statusCode()) {{
             getProvidersIdConnectorLogosThumbnail200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1260,11 +1206,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesResponse res = new org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesResponse() {{
+        org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesResponse res = new org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesResponse(contentType, httpRes.statusCode()) {{
             getProvidersIdConnectorSources200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1304,11 +1248,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesIdSourceResponse() {{
+        org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesIdSourceResponse(contentType, httpRes.statusCode()) {{
             connectorSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1348,11 +1290,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProvidersIdProviderResponse res = new org.openapis.openapi.models.operations.GetProvidersIdProviderResponse() {{
+        org.openapis.openapi.models.operations.GetProvidersIdProviderResponse res = new org.openapis.openapi.models.operations.GetProvidersIdProviderResponse(contentType, httpRes.statusCode()) {{
             connector = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1392,11 +1332,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdUserConnectionsResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserConnectionsResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdUserConnectionsResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserConnectionsResponse(contentType, httpRes.statusCode()) {{
             getUsersIdUserConnections200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1437,11 +1375,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionInformationsResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionInformationsResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionInformationsResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionInformationsResponse(contentType, httpRes.statusCode()) {{
             getUsersIdUserConnectionsIdConnectionInformations200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1482,11 +1418,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionLogsResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionLogsResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionLogsResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionLogsResponse(contentType, httpRes.statusCode()) {{
             getUsersIdUserConnectionsIdConnectionLogs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1526,11 +1460,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionSourcesResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionSourcesResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionSourcesResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionSourcesResponse(contentType, httpRes.statusCode()) {{
             getUsersIdUserConnectionsIdConnectionSources200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1571,11 +1503,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdUserLogsResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserLogsResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdUserLogsResponse res = new org.openapis.openapi.models.operations.GetUsersIdUserLogsResponse(contentType, httpRes.statusCode()) {{
             getUsersIdUserLogs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1618,11 +1548,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConnectionsIdConnectionSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.PostConnectionsIdConnectionSourcesIdSourceResponse() {{
+        org.openapis.openapi.models.operations.PostConnectionsIdConnectionSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.PostConnectionsIdConnectionSourcesIdSourceResponse(contentType, httpRes.statusCode()) {{
             connectionSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1668,11 +1596,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConnectorsResponse res = new org.openapis.openapi.models.operations.PostConnectorsResponse() {{
+        org.openapis.openapi.models.operations.PostConnectorsResponse res = new org.openapis.openapi.models.operations.PostConnectorsResponse(contentType, httpRes.statusCode()) {{
             connector = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1713,11 +1639,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConnectorsIdConnectorLogosResponse res = new org.openapis.openapi.models.operations.PostConnectorsIdConnectorLogosResponse() {{
+        org.openapis.openapi.models.operations.PostConnectorsIdConnectorLogosResponse res = new org.openapis.openapi.models.operations.PostConnectorsIdConnectorLogosResponse(contentType, httpRes.statusCode()) {{
             connectorLogo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1760,11 +1684,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUsersIdUserConnectionsResponse res = new org.openapis.openapi.models.operations.PostUsersIdUserConnectionsResponse() {{
+        org.openapis.openapi.models.operations.PostUsersIdUserConnectionsResponse res = new org.openapis.openapi.models.operations.PostUsersIdUserConnectionsResponse(contentType, httpRes.statusCode()) {{
             connection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1807,11 +1729,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionResponse res = new org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionResponse() {{
+        org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionResponse res = new org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionResponse(contentType, httpRes.statusCode()) {{
             connection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1854,11 +1774,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse() {{
+        org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse(contentType, httpRes.statusCode()) {{
             connectionSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1901,11 +1819,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutConnectionsIdConnectionSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.PutConnectionsIdConnectionSourcesIdSourceResponse() {{
+        org.openapis.openapi.models.operations.PutConnectionsIdConnectionSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.PutConnectionsIdConnectionSourcesIdSourceResponse(contentType, httpRes.statusCode()) {{
             connectionSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1946,11 +1862,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosResponse res = new org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosResponse() {{
+        org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosResponse res = new org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosResponse(contentType, httpRes.statusCode()) {{
             connectorLogo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1991,11 +1905,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosIdLogoResponse res = new org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosIdLogoResponse() {{
+        org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosIdLogoResponse res = new org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosIdLogoResponse(contentType, httpRes.statusCode()) {{
             connectorLogo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2037,11 +1949,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesResponse res = new org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesResponse() {{
+        org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesResponse res = new org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesResponse(contentType, httpRes.statusCode()) {{
             connectorSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2083,11 +1993,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesIdSourceResponse() {{
+        org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesIdSourceResponse(contentType, httpRes.statusCode()) {{
             connectorSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2128,11 +2036,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionResponse res = new org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionResponse() {{
+        org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionResponse res = new org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionResponse(contentType, httpRes.statusCode()) {{
             connection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2175,11 +2081,9 @@ public class Providers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse() {{
+        org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse res = new org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse(contentType, httpRes.statusCode()) {{
             connectionSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

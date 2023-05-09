@@ -15,9 +15,11 @@ public class Datum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VarCharValue")
     public String varCharValue;
+
     public Datum withVarCharValue(String varCharValue) {
         this.varCharValue = varCharValue;
         return this;
     }
     
+    public Datum(){}
 }

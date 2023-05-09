@@ -12,6 +12,7 @@ public class DestinyAdvancedAwaInitializeResponse {
      */
     
     public String correlationId;
+
     public DestinyAdvancedAwaInitializeResponse withCorrelationId(String correlationId) {
         this.correlationId = correlationId;
         return this;
@@ -22,9 +23,11 @@ public class DestinyAdvancedAwaInitializeResponse {
      */
     
     public Boolean sentToSelf;
+
     public DestinyAdvancedAwaInitializeResponse withSentToSelf(Boolean sentToSelf) {
         this.sentToSelf = sentToSelf;
         return this;
     }
     
+    public DestinyAdvancedAwaInitializeResponse(){}
 }

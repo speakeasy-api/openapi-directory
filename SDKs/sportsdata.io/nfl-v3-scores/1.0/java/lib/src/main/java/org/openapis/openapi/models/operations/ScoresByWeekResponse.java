@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ScoresByWeekResponse {
     
     public String contentType;
+
     public ScoresByWeekResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ScoresByWeekResponse {
     
     
     public org.openapis.openapi.models.shared.Score[] scores;
+
     public ScoresByWeekResponse withScores(org.openapis.openapi.models.shared.Score[] scores) {
         this.scores = scores;
         return this;
@@ -23,6 +26,7 @@ public class ScoresByWeekResponse {
     
     
     public Integer statusCode;
+
     public ScoresByWeekResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ScoresByWeekResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ScoresByWeekResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ScoresByWeekResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2CreateInspectTemplateRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inspectTemplate")
     public GooglePrivacyDlpV2InspectTemplateInput inspectTemplate;
+
     public GooglePrivacyDlpV2CreateInspectTemplateRequestInput withInspectTemplate(GooglePrivacyDlpV2InspectTemplateInput inspectTemplate) {
         this.inspectTemplate = inspectTemplate;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2CreateInspectTemplateRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public GooglePrivacyDlpV2CreateInspectTemplateRequestInput withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2CreateInspectTemplateRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateId")
     public String templateId;
+
     public GooglePrivacyDlpV2CreateInspectTemplateRequestInput withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public GooglePrivacyDlpV2CreateInspectTemplateRequestInput(){}
 }

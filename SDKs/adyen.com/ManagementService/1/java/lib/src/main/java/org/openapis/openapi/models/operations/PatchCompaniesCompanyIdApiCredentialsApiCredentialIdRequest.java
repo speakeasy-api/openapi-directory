@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateCompanyApiCredentialRequest updateCompanyApiCredentialRequest;
+
     public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest withUpdateCompanyApiCredentialRequest(org.openapis.openapi.models.shared.UpdateCompanyApiCredentialRequest updateCompanyApiCredentialRequest) {
         this.updateCompanyApiCredentialRequest = updateCompanyApiCredentialRequest;
         return this;
@@ -19,6 +21,7 @@ public class PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiCredentialId")
     public String apiCredentialId;
+
     public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest withApiCredentialId(String apiCredentialId) {
         this.apiCredentialId = apiCredentialId;
         return this;
@@ -29,9 +32,14 @@ public class PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
     }
     
+    public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest(@JsonProperty("apiCredentialId") String apiCredentialId, @JsonProperty("companyId") String companyId) {
+        this.apiCredentialId = apiCredentialId;
+        this.companyId = companyId;
+  }
 }

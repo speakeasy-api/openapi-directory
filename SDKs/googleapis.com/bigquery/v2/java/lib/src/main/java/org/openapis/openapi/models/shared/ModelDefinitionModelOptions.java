@@ -15,6 +15,7 @@ public class ModelDefinitionModelOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public ModelDefinitionModelOptions withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -23,6 +24,7 @@ public class ModelDefinitionModelOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lossType")
     public String lossType;
+
     public ModelDefinitionModelOptions withLossType(String lossType) {
         this.lossType = lossType;
         return this;
@@ -31,9 +33,11 @@ public class ModelDefinitionModelOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelType")
     public String modelType;
+
     public ModelDefinitionModelOptions withModelType(String modelType) {
         this.modelType = modelType;
         return this;
     }
     
+    public ModelDefinitionModelOptions(){}
 }

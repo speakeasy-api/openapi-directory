@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptionsKeyKeyRequest {
@@ -12,9 +13,13 @@ public class OptionsKeyKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
     public String key;
+
     public OptionsKeyKeyRequest withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public OptionsKeyKeyRequest(@JsonProperty("key") String key) {
+        this.key = key;
+  }
 }

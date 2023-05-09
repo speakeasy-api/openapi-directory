@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Certificate {
     
     public String certificateArn;
+
     public Certificate withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -19,9 +20,11 @@ public class Certificate {
     
     
     public Boolean isDefault;
+
     public Certificate withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
     }
     
+    public Certificate(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInsightsAccessScopeResult {
     
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScope networkInsightsAccessScope;
+
     public CreateNetworkInsightsAccessScopeResult withNetworkInsightsAccessScope(CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScope networkInsightsAccessScope) {
         this.networkInsightsAccessScope = networkInsightsAccessScope;
         return this;
@@ -19,9 +20,11 @@ public class CreateNetworkInsightsAccessScopeResult {
     
     
     public CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContent networkInsightsAccessScopeContent;
+
     public CreateNetworkInsightsAccessScopeResult withNetworkInsightsAccessScopeContent(CreateNetworkInsightsAccessScopeResultNetworkInsightsAccessScopeContent networkInsightsAccessScopeContent) {
         this.networkInsightsAccessScopeContent = networkInsightsAccessScopeContent;
         return this;
     }
     
+    public CreateNetworkInsightsAccessScopeResult(){}
 }

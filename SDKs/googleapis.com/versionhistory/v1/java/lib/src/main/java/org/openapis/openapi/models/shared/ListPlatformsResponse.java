@@ -18,6 +18,7 @@ public class ListPlatformsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPlatformsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListPlatformsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platforms")
     public Platform[] platforms;
+
     public ListPlatformsResponse withPlatforms(Platform[] platforms) {
         this.platforms = platforms;
         return this;
     }
     
+    public ListPlatformsResponse(){}
 }

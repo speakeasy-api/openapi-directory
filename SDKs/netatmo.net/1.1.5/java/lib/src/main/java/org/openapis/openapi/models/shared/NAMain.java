@@ -12,6 +12,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_id")
     public String id;
+
     public NAMain withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cipher_id")
     public String cipherId;
+
     public NAMain withCipherId(String cipherId) {
         this.cipherId = cipherId;
         return this;
@@ -28,6 +30,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("co2_calibrating")
     public Boolean co2Calibrating;
+
     public NAMain withCo2Calibrating(Boolean co2Calibrating) {
         this.co2Calibrating = co2Calibrating;
         return this;
@@ -36,6 +39,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashboard_data")
     public NADashboardData dashboardData;
+
     public NAMain withDashboardData(NADashboardData dashboardData) {
         this.dashboardData = dashboardData;
         return this;
@@ -44,6 +48,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data_type")
     public String[] dataType;
+
     public NAMain withDataType(String[] dataType) {
         this.dataType = dataType;
         return this;
@@ -52,6 +57,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_setup")
     public Integer dateSetup;
+
     public NAMain withDateSetup(Integer dateSetup) {
         this.dateSetup = dateSetup;
         return this;
@@ -63,6 +69,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("favorite")
     public Boolean favorite;
+
     public NAMain withFavorite(Boolean favorite) {
         this.favorite = favorite;
         return this;
@@ -71,6 +78,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firmware")
     public Integer firmware;
+
     public NAMain withFirmware(Integer firmware) {
         this.firmware = firmware;
         return this;
@@ -79,6 +87,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_setup")
     public Integer lastSetup;
+
     public NAMain withLastSetup(Integer lastSetup) {
         this.lastSetup = lastSetup;
         return this;
@@ -87,6 +96,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_status_store")
     public Integer lastStatusStore;
+
     public NAMain withLastStatusStore(Integer lastStatusStore) {
         this.lastStatusStore = lastStatusStore;
         return this;
@@ -95,6 +105,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_upgrade")
     public Integer lastUpgrade;
+
     public NAMain withLastUpgrade(Integer lastUpgrade) {
         this.lastUpgrade = lastUpgrade;
         return this;
@@ -103,6 +114,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("module_name")
     public String moduleName;
+
     public NAMain withModuleName(String moduleName) {
         this.moduleName = moduleName;
         return this;
@@ -111,6 +123,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modules")
     public NAStationModule[] modules;
+
     public NAMain withModules(NAStationModule[] modules) {
         this.modules = modules;
         return this;
@@ -119,6 +132,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("place")
     public NAPlace place;
+
     public NAMain withPlace(NAPlace place) {
         this.place = place;
         return this;
@@ -130,6 +144,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reachable")
     public Boolean reachable;
+
     public NAMain withReachable(Boolean reachable) {
         this.reachable = reachable;
         return this;
@@ -141,6 +156,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("read_only")
     public Boolean readOnly;
+
     public NAMain withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -149,6 +165,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("station_name")
     public String stationName;
+
     public NAMain withStationName(String stationName) {
         this.stationName = stationName;
         return this;
@@ -167,6 +184,7 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public NAMain withType(String type) {
         this.type = type;
         return this;
@@ -182,9 +200,11 @@ public class NAMain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifi_status")
     public Integer wifiStatus;
+
     public NAMain withWifiStatus(Integer wifiStatus) {
         this.wifiStatus = wifiStatus;
         return this;
     }
     
+    public NAMain(){}
 }

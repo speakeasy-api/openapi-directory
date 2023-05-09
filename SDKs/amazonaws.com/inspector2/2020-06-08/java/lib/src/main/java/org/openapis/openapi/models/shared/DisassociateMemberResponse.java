@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateMemberResponse {
     @JsonProperty("accountId")
     public String accountId;
+
     public DisassociateMemberResponse withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public DisassociateMemberResponse(@JsonProperty("accountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

@@ -15,9 +15,11 @@ public class Employees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Employees")
     public Employee[] employees;
+
     public Employees withEmployees(Employee[] employees) {
         this.employees = employees;
         return this;
     }
     
+    public Employees(){}
 }

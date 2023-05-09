@@ -18,6 +18,7 @@ public class Instruments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Instruments withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class Instruments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Instruments withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Instruments(){}
 }

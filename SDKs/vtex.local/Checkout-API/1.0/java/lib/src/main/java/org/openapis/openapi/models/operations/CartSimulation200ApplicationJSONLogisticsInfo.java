@@ -15,6 +15,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressId")
     public String addressId;
+
     public CartSimulation200ApplicationJSONLogisticsInfo withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -26,6 +27,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryChannels")
     public CartSimulation200ApplicationJSONLogisticsInfoDeliveryChannels[] deliveryChannels;
+
     public CartSimulation200ApplicationJSONLogisticsInfo withDeliveryChannels(CartSimulation200ApplicationJSONLogisticsInfoDeliveryChannels[] deliveryChannels) {
         this.deliveryChannels = deliveryChannels;
         return this;
@@ -37,6 +39,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemIndex")
     public Long itemIndex;
+
     public CartSimulation200ApplicationJSONLogisticsInfo withItemIndex(Long itemIndex) {
         this.itemIndex = itemIndex;
         return this;
@@ -48,6 +51,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemMetadata")
     public CartSimulation200ApplicationJSONLogisticsInfoItemMetadata itemMetadata;
+
     public CartSimulation200ApplicationJSONLogisticsInfo withItemMetadata(CartSimulation200ApplicationJSONLogisticsInfoItemMetadata itemMetadata) {
         this.itemMetadata = itemMetadata;
         return this;
@@ -59,6 +63,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public Object[] messages;
+
     public CartSimulation200ApplicationJSONLogisticsInfo withMessages(Object[] messages) {
         this.messages = messages;
         return this;
@@ -70,6 +75,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupPoints")
     public Object[] pickupPoints;
+
     public CartSimulation200ApplicationJSONLogisticsInfo withPickupPoints(Object[] pickupPoints) {
         this.pickupPoints = pickupPoints;
         return this;
@@ -81,6 +87,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchaseConditions")
     public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditions purchaseConditions;
+
     public CartSimulation200ApplicationJSONLogisticsInfo withPurchaseConditions(CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditions purchaseConditions) {
         this.purchaseConditions = purchaseConditions;
         return this;
@@ -92,6 +99,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public CartSimulation200ApplicationJSONLogisticsInfo withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -103,6 +111,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedDeliveryChannel")
     public String selectedDeliveryChannel;
+
     public CartSimulation200ApplicationJSONLogisticsInfo withSelectedDeliveryChannel(String selectedDeliveryChannel) {
         this.selectedDeliveryChannel = selectedDeliveryChannel;
         return this;
@@ -114,6 +123,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedSla")
     public String selectedSla;
+
     public CartSimulation200ApplicationJSONLogisticsInfo withSelectedSla(String selectedSla) {
         this.selectedSla = selectedSla;
         return this;
@@ -125,6 +135,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipsTo")
     public Object[] shipsTo;
+
     public CartSimulation200ApplicationJSONLogisticsInfo withShipsTo(Object[] shipsTo) {
         this.shipsTo = shipsTo;
         return this;
@@ -136,6 +147,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slas")
     public CartSimulation200ApplicationJSONLogisticsInfoSlas[] slas;
+
     public CartSimulation200ApplicationJSONLogisticsInfo withSlas(CartSimulation200ApplicationJSONLogisticsInfoSlas[] slas) {
         this.slas = slas;
         return this;
@@ -147,6 +159,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionData")
     public java.util.Map<String, Object> subscriptionData;
+
     public CartSimulation200ApplicationJSONLogisticsInfo withSubscriptionData(java.util.Map<String, Object> subscriptionData) {
         this.subscriptionData = subscriptionData;
         return this;
@@ -158,9 +171,11 @@ public class CartSimulation200ApplicationJSONLogisticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totals")
     public CartSimulation200ApplicationJSONLogisticsInfoTotals[] totals;
+
     public CartSimulation200ApplicationJSONLogisticsInfo withTotals(CartSimulation200ApplicationJSONLogisticsInfoTotals[] totals) {
         this.totals = totals;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONLogisticsInfo(){}
 }

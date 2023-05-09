@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataSourceToIndexFieldMapping {
     @JsonProperty("DataSourceFieldName")
     public String dataSourceFieldName;
+
     public DataSourceToIndexFieldMapping withDataSourceFieldName(String dataSourceFieldName) {
         this.dataSourceFieldName = dataSourceFieldName;
         return this;
@@ -22,6 +23,7 @@ public class DataSourceToIndexFieldMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateFieldFormat")
     public String dateFieldFormat;
+
     public DataSourceToIndexFieldMapping withDateFieldFormat(String dateFieldFormat) {
         this.dateFieldFormat = dateFieldFormat;
         return this;
@@ -29,9 +31,14 @@ public class DataSourceToIndexFieldMapping {
     
     @JsonProperty("IndexFieldName")
     public String indexFieldName;
+
     public DataSourceToIndexFieldMapping withIndexFieldName(String indexFieldName) {
         this.indexFieldName = indexFieldName;
         return this;
     }
     
+    public DataSourceToIndexFieldMapping(@JsonProperty("DataSourceFieldName") String dataSourceFieldName, @JsonProperty("IndexFieldName") String indexFieldName) {
+        this.dataSourceFieldName = dataSourceFieldName;
+        this.indexFieldName = indexFieldName;
+  }
 }

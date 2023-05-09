@@ -213,6 +213,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/MigrationWarning.java
 lib/src/main/java/org/openapis/openapi/models/shared/LocalizedMessage.java
 lib/src/main/java/org/openapis/openapi/models/shared/Link.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListMigratingVmsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/CutoverForecast.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListReplicationCyclesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UtilizationReportStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/UtilizationReportTimeFrameEnum.java
@@ -225,4 +226,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListUtilizationReportsRespo
 lib/src/main/java/org/openapis/openapi/models/shared/TargetProjectInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/TargetProject.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTargetProjectsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class AddCoupons200ApplicationJSONShippingDataLogisticsInfoSlasPickupStor
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public String additionalInfo;
+
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -29,6 +30,7 @@ public class AddCoupons200ApplicationJSONShippingDataLogisticsInfoSlasPickupStor
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress address;
+
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo withAddress(AddCoupons200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress address) {
         this.address = address;
         return this;
@@ -40,6 +42,7 @@ public class AddCoupons200ApplicationJSONShippingDataLogisticsInfoSlasPickupStor
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockId")
     public String dockId;
+
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -51,6 +54,7 @@ public class AddCoupons200ApplicationJSONShippingDataLogisticsInfoSlasPickupStor
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -62,9 +66,11 @@ public class AddCoupons200ApplicationJSONShippingDataLogisticsInfoSlasPickupStor
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPickupStore")
     public Boolean isPickupStore;
+
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo withIsPickupStore(Boolean isPickupStore) {
         this.isPickupStore = isPickupStore;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo(){}
 }

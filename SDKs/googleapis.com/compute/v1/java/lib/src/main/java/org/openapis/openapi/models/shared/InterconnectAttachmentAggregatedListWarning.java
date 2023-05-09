@@ -18,6 +18,7 @@ public class InterconnectAttachmentAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public InterconnectAttachmentAggregatedListWarningCodeEnum code;
+
     public InterconnectAttachmentAggregatedListWarning withCode(InterconnectAttachmentAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class InterconnectAttachmentAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public InterconnectAttachmentAggregatedListWarningData[] data;
+
     public InterconnectAttachmentAggregatedListWarning withData(InterconnectAttachmentAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class InterconnectAttachmentAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InterconnectAttachmentAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InterconnectAttachmentAggregatedListWarning(){}
 }

@@ -15,6 +15,7 @@ public class DescribeOpsItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeOpsItemsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeOpsItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemSummaries")
     public OpsItemSummary[] opsItemSummaries;
+
     public DescribeOpsItemsResponse withOpsItemSummaries(OpsItemSummary[] opsItemSummaries) {
         this.opsItemSummaries = opsItemSummaries;
         return this;
     }
     
+    public DescribeOpsItemsResponse(){}
 }

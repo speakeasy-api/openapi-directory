@@ -15,6 +15,7 @@ public class ServiceInstancesCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ServiceInstance[] data;
+
     public ServiceInstancesCollection withData(ServiceInstance[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class ServiceInstancesCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CollectionLinks links;
+
     public ServiceInstancesCollection withLinks(CollectionLinks links) {
         this.links = links;
         return this;
@@ -31,9 +33,11 @@ public class ServiceInstancesCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public CollectionMetadata meta;
+
     public ServiceInstancesCollection withMeta(CollectionMetadata meta) {
         this.meta = meta;
         return this;
     }
     
+    public ServiceInstancesCollection(){}
 }

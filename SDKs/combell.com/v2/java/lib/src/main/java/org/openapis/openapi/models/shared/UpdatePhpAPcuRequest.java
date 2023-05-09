@@ -18,6 +18,7 @@ public class UpdatePhpAPcuRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apcu_size")
     public Integer apcuSize;
+
     public UpdatePhpAPcuRequest withApcuSize(Integer apcuSize) {
         this.apcuSize = apcuSize;
         return this;
@@ -29,9 +30,11 @@ public class UpdatePhpAPcuRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public UpdatePhpAPcuRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public UpdatePhpAPcuRequest(){}
 }

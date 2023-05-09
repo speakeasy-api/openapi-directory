@@ -43,4 +43,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Period.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScoringPlay.java
 lib/src/main/java/org/openapis/openapi/models/shared/Penalty.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

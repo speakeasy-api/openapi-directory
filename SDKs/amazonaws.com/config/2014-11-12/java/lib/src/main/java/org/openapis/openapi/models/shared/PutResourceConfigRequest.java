@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutResourceConfigRequest {
     @JsonProperty("Configuration")
     public String configuration;
+
     public PutResourceConfigRequest withConfiguration(String configuration) {
         this.configuration = configuration;
         return this;
@@ -18,6 +19,7 @@ public class PutResourceConfigRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public PutResourceConfigRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -26,6 +28,7 @@ public class PutResourceConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceName")
     public String resourceName;
+
     public PutResourceConfigRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -33,6 +36,7 @@ public class PutResourceConfigRequest {
     
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public PutResourceConfigRequest withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -40,6 +44,7 @@ public class PutResourceConfigRequest {
     
     @JsonProperty("SchemaVersionId")
     public String schemaVersionId;
+
     public PutResourceConfigRequest withSchemaVersionId(String schemaVersionId) {
         this.schemaVersionId = schemaVersionId;
         return this;
@@ -48,9 +53,16 @@ public class PutResourceConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public PutResourceConfigRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public PutResourceConfigRequest(@JsonProperty("Configuration") String configuration, @JsonProperty("ResourceId") String resourceId, @JsonProperty("ResourceType") String resourceType, @JsonProperty("SchemaVersionId") String schemaVersionId) {
+        this.configuration = configuration;
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
+        this.schemaVersionId = schemaVersionId;
+  }
 }

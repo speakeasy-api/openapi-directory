@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AccountInstitutionCurationCommentsResponse {
     
     public String contentType;
+
     public AccountInstitutionCurationCommentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AccountInstitutionCurationCommentsResponse {
      */
     
     public org.openapis.openapi.models.shared.CurationComment curationComment;
+
     public AccountInstitutionCurationCommentsResponse withCurationComment(org.openapis.openapi.models.shared.CurationComment curationComment) {
         this.curationComment = curationComment;
         return this;
@@ -29,6 +32,7 @@ public class AccountInstitutionCurationCommentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorMessage errorMessage;
+
     public AccountInstitutionCurationCommentsResponse withErrorMessage(org.openapis.openapi.models.shared.ErrorMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -36,6 +40,7 @@ public class AccountInstitutionCurationCommentsResponse {
     
     
     public Integer statusCode;
+
     public AccountInstitutionCurationCommentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AccountInstitutionCurationCommentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AccountInstitutionCurationCommentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AccountInstitutionCurationCommentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

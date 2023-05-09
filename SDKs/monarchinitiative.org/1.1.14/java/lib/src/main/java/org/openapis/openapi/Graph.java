@@ -59,11 +59,9 @@ public class Graph {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEdgeResourceResponse res = new org.openapis.openapi.models.operations.GetEdgeResourceResponse() {{
+        org.openapis.openapi.models.operations.GetEdgeResourceResponse res = new org.openapis.openapi.models.operations.GetEdgeResourceResponse(contentType, httpRes.statusCode()) {{
             graphs = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Graph {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNodeResourceResponse res = new org.openapis.openapi.models.operations.GetNodeResourceResponse() {{
+        org.openapis.openapi.models.operations.GetNodeResourceResponse res = new org.openapis.openapi.models.operations.GetNodeResourceResponse(contentType, httpRes.statusCode()) {{
             bioObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

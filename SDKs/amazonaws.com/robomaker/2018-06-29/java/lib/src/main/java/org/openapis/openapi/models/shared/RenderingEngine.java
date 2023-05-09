@@ -15,6 +15,7 @@ public class RenderingEngine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public RenderingEngineTypeEnum name;
+
     public RenderingEngine withName(RenderingEngineTypeEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class RenderingEngine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public RenderingEngine withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public RenderingEngine(){}
 }

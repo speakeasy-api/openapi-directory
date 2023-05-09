@@ -18,6 +18,7 @@ public class APIBillingPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKey")
     public String apiKey;
+
     public APIBillingPeriodUsageOut withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -29,6 +30,7 @@ public class APIBillingPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingStatus")
     public String billingStatus;
+
     public APIBillingPeriodUsageOut withBillingStatus(String billingStatus) {
         this.billingStatus = billingStatus;
         return this;
@@ -40,6 +42,7 @@ public class APIBillingPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hardLimit")
     public Long hardLimit;
+
     public APIBillingPeriodUsageOut withHardLimit(Long hardLimit) {
         this.hardLimit = hardLimit;
         return this;
@@ -51,6 +54,7 @@ public class APIBillingPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodEnded")
     public Long periodEnded;
+
     public APIBillingPeriodUsageOut withPeriodEnded(Long periodEnded) {
         this.periodEnded = periodEnded;
         return this;
@@ -62,6 +66,7 @@ public class APIBillingPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodStarted")
     public Long periodStarted;
+
     public APIBillingPeriodUsageOut withPeriodStarted(Long periodStarted) {
         this.periodStarted = periodStarted;
         return this;
@@ -73,6 +78,7 @@ public class APIBillingPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("softLimit")
     public Long softLimit;
+
     public APIBillingPeriodUsageOut withSoftLimit(Long softLimit) {
         this.softLimit = softLimit;
         return this;
@@ -84,6 +90,7 @@ public class APIBillingPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stripeCurrentPeriodEnd")
     public Long stripeCurrentPeriodEnd;
+
     public APIBillingPeriodUsageOut withStripeCurrentPeriodEnd(Long stripeCurrentPeriodEnd) {
         this.stripeCurrentPeriodEnd = stripeCurrentPeriodEnd;
         return this;
@@ -95,6 +102,7 @@ public class APIBillingPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stripeCurrentPeriodStart")
     public Long stripeCurrentPeriodStart;
+
     public APIBillingPeriodUsageOut withStripeCurrentPeriodStart(Long stripeCurrentPeriodStart) {
         this.stripeCurrentPeriodStart = stripeCurrentPeriodStart;
         return this;
@@ -106,6 +114,7 @@ public class APIBillingPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionStarted")
     public Long subscriptionStarted;
+
     public APIBillingPeriodUsageOut withSubscriptionStarted(Long subscriptionStarted) {
         this.subscriptionStarted = subscriptionStarted;
         return this;
@@ -117,9 +126,11 @@ public class APIBillingPeriodUsageOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public Long usage;
+
     public APIBillingPeriodUsageOut withUsage(Long usage) {
         this.usage = usage;
         return this;
     }
     
+    public APIBillingPeriodUsageOut(){}
 }

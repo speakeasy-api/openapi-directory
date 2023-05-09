@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.IdeahubIdeasListRequest;
 import org.openapis.openapi.models.operations.IdeahubIdeasListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -29,32 +28,34 @@ public class Application {
                 .build();
 
             IdeahubIdeasListRequest req = new IdeahubIdeasListRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 filter = "nulla";
                 key = "corrupti";
                 oauthToken = "illum";
                 orderBy = "vel";
-                pageSize = 623564;
+                pageSize = 623564L;
                 pageToken = "deserunt";
                 parent = "suscipit";
                 prettyPrint = false;
                 quotaUser = "iure";
                 uploadType = "magnam";
                 uploadProtocol = "debitis";
-            }}            
+            }};            
 
             IdeahubIdeasListResponse res = sdk.ideas.ideahubIdeasList(req);
 
-            if (res.googleSearchIdeahubV1alphaListIdeasResponse.isPresent()) {
+            if (res.googleSearchIdeahubV1alphaListIdeasResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -62,16 +63,16 @@ public class Application {
 ## Available Resources and Operations
 
 
-### ideas
+### [ideas](docs/ideas/README.md)
 
-* `ideahubIdeasList` - List ideas for a given Creator and filter and sort options.
+* [ideahubIdeasList](docs/ideas/README.md#ideahubideaslist) - List ideas for a given Creator and filter and sort options.
 
-### platforms
+### [platforms](docs/platforms/README.md)
 
-* `ideahubPlatformsPropertiesIdeaActivitiesCreate` - Creates an idea activity entry.
-* `ideahubPlatformsPropertiesIdeasList` - List ideas for a given Creator and filter and sort options.
-* `ideahubPlatformsPropertiesLocalesList` - Returns which locales ideas are available in for a given Creator.
-* `ideahubPlatformsPropertiesTopicStatesPatch` - Update a topic state resource.
+* [ideahubPlatformsPropertiesIdeaActivitiesCreate](docs/platforms/README.md#ideahubplatformspropertiesideaactivitiescreate) - Creates an idea activity entry.
+* [ideahubPlatformsPropertiesIdeasList](docs/platforms/README.md#ideahubplatformspropertiesideaslist) - List ideas for a given Creator and filter and sort options.
+* [ideahubPlatformsPropertiesLocalesList](docs/platforms/README.md#ideahubplatformspropertieslocaleslist) - Returns which locales ideas are available in for a given Creator.
+* [ideahubPlatformsPropertiesTopicStatesPatch](docs/platforms/README.md#ideahubplatformspropertiestopicstatespatch) - Update a topic state resource.
 <!-- End SDK Available Operations -->
 
 ### Maturity

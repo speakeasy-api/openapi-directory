@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Wifi {
     @JsonProperty("bssid")
     public String bssid;
+
     public Wifi withBssid(String bssid) {
         this.bssid = bssid;
         return this;
@@ -16,6 +17,7 @@ public class Wifi {
     
     @JsonProperty("has_changes")
     public Boolean hasChanges;
+
     public Wifi withHasChanges(Boolean hasChanges) {
         this.hasChanges = hasChanges;
         return this;
@@ -23,6 +25,7 @@ public class Wifi {
     
     @JsonProperty("noise_level")
     public Integer noiseLevel;
+
     public Wifi withNoiseLevel(Integer noiseLevel) {
         this.noiseLevel = noiseLevel;
         return this;
@@ -30,6 +33,7 @@ public class Wifi {
     
     @JsonProperty("signal_level")
     public Integer signalLevel;
+
     public Wifi withSignalLevel(Integer signalLevel) {
         this.signalLevel = signalLevel;
         return this;
@@ -37,6 +41,7 @@ public class Wifi {
     
     @JsonProperty("ssid")
     public String ssid;
+
     public Wifi withSsid(String ssid) {
         this.ssid = ssid;
         return this;
@@ -44,6 +49,7 @@ public class Wifi {
     
     @JsonProperty("wpa_configured")
     public Boolean wpaConfigured;
+
     public Wifi withWpaConfigured(Boolean wpaConfigured) {
         this.wpaConfigured = wpaConfigured;
         return this;
@@ -51,6 +57,7 @@ public class Wifi {
     
     @JsonProperty("wpa_id")
     public Integer wpaId;
+
     public Wifi withWpaId(Integer wpaId) {
         this.wpaId = wpaId;
         return this;
@@ -58,9 +65,20 @@ public class Wifi {
     
     @JsonProperty("wpa_state")
     public Integer wpaState;
+
     public Wifi withWpaState(Integer wpaState) {
         this.wpaState = wpaState;
         return this;
     }
     
+    public Wifi(@JsonProperty("bssid") String bssid, @JsonProperty("has_changes") Boolean hasChanges, @JsonProperty("noise_level") Integer noiseLevel, @JsonProperty("signal_level") Integer signalLevel, @JsonProperty("ssid") String ssid, @JsonProperty("wpa_configured") Boolean wpaConfigured, @JsonProperty("wpa_id") Integer wpaId, @JsonProperty("wpa_state") Integer wpaState) {
+        this.bssid = bssid;
+        this.hasChanges = hasChanges;
+        this.noiseLevel = noiseLevel;
+        this.signalLevel = signalLevel;
+        this.ssid = ssid;
+        this.wpaConfigured = wpaConfigured;
+        this.wpaId = wpaId;
+        this.wpaState = wpaState;
+  }
 }

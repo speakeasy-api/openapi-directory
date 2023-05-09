@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateSubnetCidrReservationRequestTagSpecifications {
     
     public CreateSubnetCidrReservationRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateSubnetCidrReservationRequestTagSpecifications withResourceType(CreateSubnetCidrReservationRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateSubnetCidrReservationRequestTagSpecifications {
     
     
     public CreateSubnetCidrReservationRequestTagSpecificationsTags[] tags;
+
     public CreateSubnetCidrReservationRequestTagSpecifications withTags(CreateSubnetCidrReservationRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSubnetCidrReservationRequestTagSpecifications(){}
 }

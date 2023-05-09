@@ -12,9 +12,11 @@ public class CodeScanningAlertInstanceMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public CodeScanningAlertInstanceMessage withText(String text) {
         this.text = text;
         return this;
     }
     
+    public CodeScanningAlertInstanceMessage(){}
 }

@@ -3,58 +3,62 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateTemplateDesignerTemplatesPostResponse;
 import org.openapis.openapi.models.shared.CreateOrUpdateTemplateRequest;
-import org.openapis.openapi.models.shared.OrientationEnum;
+import org.openapis.openapi.models.shared.CreateOrUpdateTemplateRequestMargin;
 import org.openapis.openapi.models.shared.FormatEnum;
+import org.openapis.openapi.models.shared.OrientationEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apiKeyAuth = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            org.openapis.openapi.models.shared.CreateOrUpdateTemplateRequest req = new CreateOrUpdateTemplateRequest() {{
-                components = new java.util.HashMap<String, Object>[]{{
-                    add(new java.util.HashMap<String, Object>() {{
-                        put("distinctio", "quibusdam");
-                        put("unde", "nulla");
-                        put("corrupti", "illum");
-                    }}),
-                    add(new java.util.HashMap<String, Object>() {{
-                        put("error", "deserunt");
-                        put("suscipit", "iure");
-                    }}),
-                    add(new java.util.HashMap<String, Object>() {{
-                        put("debitis", "ipsa");
-                        put("delectus", "tempora");
-                    }}),
-                }};
-                css = "suscipit";
-                footerHtml = "molestiae";
-                format = "a5";
-                headerHtml = "placeat";
-                name = "voluptatum";
-                orientation = "landscape";
-                previewPayload = new java.util.HashMap<String, Object>() {{
-                    put("nisi", "recusandae");
-                    put("temporibus", "ab");
-                    put("quis", "veritatis");
-                }};
-                templateHtml = "deserunt";
-            }}            
+            org.openapis.openapi.models.shared.CreateOrUpdateTemplateRequest req = new CreateOrUpdateTemplateRequest(                new java.util.HashMap<String, Object>[]{{
+                                add(new java.util.HashMap<String, Object>() {{
+                                    put("quibusdam", "unde");
+                                    put("nulla", "corrupti");
+                                    put("illum", "vel");
+                                }}),
+                                add(new java.util.HashMap<String, Object>() {{
+                                    put("deserunt", "suscipit");
+                                    put("iure", "magnam");
+                                    put("debitis", "ipsa");
+                                }}),
+                                add(new java.util.HashMap<String, Object>() {{
+                                    put("tempora", "suscipit");
+                                    put("molestiae", "minus");
+                                    put("placeat", "voluptatum");
+                                    put("iusto", "excepturi");
+                                }}),
+                            }}, "nisi", FormatEnum.A6, "temporibus", OrientationEnum.LANDSCAPE,                 new java.util.HashMap<String, Object>() {{
+                                put("veritatis", "deserunt");
+                                put("perferendis", "ipsam");
+                            }}, "repellendus") {{
+                footerHtml = "sapiente";
+                headerHtml = "quo";
+                margin = new CreateOrUpdateTemplateRequestMargin() {{
+                    bottom = 140350L;
+                    left = 870013L;
+                    right = 870088L;
+                    top = 978619L;
+                }};;
+            }};            
 
             CreateTemplateDesignerTemplatesPostResponse res = sdk.createTemplateDesignerTemplatesPost(req);
 
-            if (res.responseOkDesignerTemplate.isPresent()) {
+            if (res.responseOkDesignerTemplate != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

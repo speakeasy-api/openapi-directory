@@ -18,6 +18,7 @@ public class AddDnsRecordSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerNetwork")
     public String consumerNetwork;
+
     public AddDnsRecordSetRequest withConsumerNetwork(String consumerNetwork) {
         this.consumerNetwork = consumerNetwork;
         return this;
@@ -29,6 +30,7 @@ public class AddDnsRecordSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsRecordSet")
     public DnsRecordSet dnsRecordSet;
+
     public AddDnsRecordSetRequest withDnsRecordSet(DnsRecordSet dnsRecordSet) {
         this.dnsRecordSet = dnsRecordSet;
         return this;
@@ -40,9 +42,11 @@ public class AddDnsRecordSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public AddDnsRecordSetRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public AddDnsRecordSetRequest(){}
 }

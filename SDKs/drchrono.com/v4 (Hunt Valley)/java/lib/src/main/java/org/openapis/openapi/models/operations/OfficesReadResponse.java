@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OfficesReadResponse {
     
     public String contentType;
+
     public OfficesReadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OfficesReadResponse {
      */
     
     public org.openapis.openapi.models.shared.Office office;
+
     public OfficesReadResponse withOffice(org.openapis.openapi.models.shared.Office office) {
         this.office = office;
         return this;
@@ -26,6 +29,7 @@ public class OfficesReadResponse {
     
     
     public Integer statusCode;
+
     public OfficesReadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class OfficesReadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OfficesReadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OfficesReadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

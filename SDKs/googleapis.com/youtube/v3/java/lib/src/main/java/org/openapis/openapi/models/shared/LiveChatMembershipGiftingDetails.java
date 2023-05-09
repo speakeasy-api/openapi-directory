@@ -15,6 +15,7 @@ public class LiveChatMembershipGiftingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftMembershipsCount")
     public Integer giftMembershipsCount;
+
     public LiveChatMembershipGiftingDetails withGiftMembershipsCount(Integer giftMembershipsCount) {
         this.giftMembershipsCount = giftMembershipsCount;
         return this;
@@ -26,9 +27,11 @@ public class LiveChatMembershipGiftingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftMembershipsLevelName")
     public String giftMembershipsLevelName;
+
     public LiveChatMembershipGiftingDetails withGiftMembershipsLevelName(String giftMembershipsLevelName) {
         this.giftMembershipsLevelName = giftMembershipsLevelName;
         return this;
     }
     
+    public LiveChatMembershipGiftingDetails(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV2Scim20ResourceTypesNameResponse {
     
     public String contentType;
+
     public GetV2Scim20ResourceTypesNameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetV2Scim20ResourceTypesNameResponse {
     
     
     public Integer statusCode;
+
     public GetV2Scim20ResourceTypesNameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetV2Scim20ResourceTypesNameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV2Scim20ResourceTypesNameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetV2Scim20ResourceTypesNameResponse {
      */
     
     public GetV2Scim20ResourceTypesName401ApplicationScimPlusJson getV2Scim20ResourceTypesName401ApplicationScimPlusJsonObject;
+
     public GetV2Scim20ResourceTypesNameResponse withGetV2Scim20ResourceTypesName401ApplicationScimPlusJsonObject(GetV2Scim20ResourceTypesName401ApplicationScimPlusJson getV2Scim20ResourceTypesName401ApplicationScimPlusJsonObject) {
         this.getV2Scim20ResourceTypesName401ApplicationScimPlusJsonObject = getV2Scim20ResourceTypesName401ApplicationScimPlusJsonObject;
         return this;
@@ -43,6 +48,7 @@ public class GetV2Scim20ResourceTypesNameResponse {
      */
     
     public GetV2Scim20ResourceTypesName404ApplicationScimPlusJson getV2Scim20ResourceTypesName404ApplicationScimPlusJsonObject;
+
     public GetV2Scim20ResourceTypesNameResponse withGetV2Scim20ResourceTypesName404ApplicationScimPlusJsonObject(GetV2Scim20ResourceTypesName404ApplicationScimPlusJson getV2Scim20ResourceTypesName404ApplicationScimPlusJsonObject) {
         this.getV2Scim20ResourceTypesName404ApplicationScimPlusJsonObject = getV2Scim20ResourceTypesName404ApplicationScimPlusJsonObject;
         return this;
@@ -53,6 +59,7 @@ public class GetV2Scim20ResourceTypesNameResponse {
      */
     
     public GetV2Scim20ResourceTypesName500ApplicationScimPlusJson getV2Scim20ResourceTypesName500ApplicationScimPlusJsonObject;
+
     public GetV2Scim20ResourceTypesNameResponse withGetV2Scim20ResourceTypesName500ApplicationScimPlusJsonObject(GetV2Scim20ResourceTypesName500ApplicationScimPlusJson getV2Scim20ResourceTypesName500ApplicationScimPlusJsonObject) {
         this.getV2Scim20ResourceTypesName500ApplicationScimPlusJsonObject = getV2Scim20ResourceTypesName500ApplicationScimPlusJsonObject;
         return this;
@@ -60,9 +67,14 @@ public class GetV2Scim20ResourceTypesNameResponse {
     
     
     public org.openapis.openapi.models.shared.ScimResourceType scimResourceType;
+
     public GetV2Scim20ResourceTypesNameResponse withScimResourceType(org.openapis.openapi.models.shared.ScimResourceType scimResourceType) {
         this.scimResourceType = scimResourceType;
         return this;
     }
     
+    public GetV2Scim20ResourceTypesNameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

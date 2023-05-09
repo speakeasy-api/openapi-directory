@@ -12,9 +12,13 @@ public class GetMembersRequestBody {
      */
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public GetMembersRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
     }
     
+    public GetMembersRequestBody(@JsonProperty("AccountIds") String[] accountIds) {
+        this.accountIds = accountIds;
+  }
 }

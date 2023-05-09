@@ -60,11 +60,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListResponse(contentType, httpRes.statusCode()) {{
             listBidMetricsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListResponse(contentType, httpRes.statusCode()) {{
             listBidResponseErrorsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListResponse(contentType, httpRes.statusCode()) {{
             listBidResponsesWithoutBidsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsCreateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsCreateResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsCreateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsCreateResponse(contentType, httpRes.statusCode()) {{
             filterSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,11 +238,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsDeleteResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsDeleteResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsDeleteResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,11 +282,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListResponse(contentType, httpRes.statusCode()) {{
             listFilteredBidRequestsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -338,11 +326,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse(contentType, httpRes.statusCode()) {{
             listCreativeStatusBreakdownByCreativeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -384,11 +370,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListResponse(contentType, httpRes.statusCode()) {{
             listCreativeStatusBreakdownByDetailResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -430,11 +414,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse(contentType, httpRes.statusCode()) {{
             listFilteredBidsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -476,11 +458,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsGetResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsGetResponse(contentType, httpRes.statusCode()) {{
             filterSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -522,11 +502,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListResponse(contentType, httpRes.statusCode()) {{
             listImpressionMetricsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -568,11 +546,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsListResponse(contentType, httpRes.statusCode()) {{
             listFilterSetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -614,11 +590,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListResponse(contentType, httpRes.statusCode()) {{
             listLosingBidsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -660,11 +634,9 @@ public class Bidders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse(contentType, httpRes.statusCode()) {{
             listNonBillableWinningBidsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

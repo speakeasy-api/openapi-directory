@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaClientConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingType")
     public GoogleCloudIntegrationsV1alphaClientConfigBillingTypeEnum billingType;
+
     public GoogleCloudIntegrationsV1alphaClientConfig withBillingType(GoogleCloudIntegrationsV1alphaClientConfigBillingTypeEnum billingType) {
         this.billingType = billingType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaClientConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientState")
     public GoogleCloudIntegrationsV1alphaClientConfigClientStateEnum clientState;
+
     public GoogleCloudIntegrationsV1alphaClientConfig withClientState(GoogleCloudIntegrationsV1alphaClientConfigClientStateEnum clientState) {
         this.clientState = clientState;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaClientConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudKmsConfig")
     public GoogleCloudIntegrationsV1alphaCloudKmsConfig cloudKmsConfig;
+
     public GoogleCloudIntegrationsV1alphaClientConfig withCloudKmsConfig(GoogleCloudIntegrationsV1alphaCloudKmsConfig cloudKmsConfig) {
         this.cloudKmsConfig = cloudKmsConfig;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaClientConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudLoggingConfig")
     public GoogleCloudIntegrationsV1alphaCloudLoggingConfig cloudLoggingConfig;
+
     public GoogleCloudIntegrationsV1alphaClientConfig withCloudLoggingConfig(GoogleCloudIntegrationsV1alphaCloudLoggingConfig cloudLoggingConfig) {
         this.cloudLoggingConfig = cloudLoggingConfig;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaClientConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudIntegrationsV1alphaClientConfig withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaClientConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudIntegrationsV1alphaClientConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudIntegrationsV1alphaClientConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudIntegrationsV1alphaClientConfig withId(String id) {
         this.id = id;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudIntegrationsV1alphaClientConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("p4ServiceAccount")
     public String p4ServiceAccount;
+
     public GoogleCloudIntegrationsV1alphaClientConfig withP4ServiceAccount(String p4ServiceAccount) {
         this.p4ServiceAccount = p4ServiceAccount;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudIntegrationsV1alphaClientConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public GoogleCloudIntegrationsV1alphaClientConfig withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudIntegrationsV1alphaClientConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public GoogleCloudIntegrationsV1alphaClientConfig withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaClientConfig(){}
 }

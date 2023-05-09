@@ -15,6 +15,7 @@ public class ModelQualityJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchTransformInput")
     public BatchTransformInput batchTransformInput;
+
     public ModelQualityJobInput withBatchTransformInput(BatchTransformInput batchTransformInput) {
         this.batchTransformInput = batchTransformInput;
         return this;
@@ -26,6 +27,7 @@ public class ModelQualityJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointInput")
     public EndpointInput endpointInput;
+
     public ModelQualityJobInput withEndpointInput(EndpointInput endpointInput) {
         this.endpointInput = endpointInput;
         return this;
@@ -33,9 +35,13 @@ public class ModelQualityJobInput {
     
     @JsonProperty("GroundTruthS3Input")
     public MonitoringGroundTruthS3Input groundTruthS3Input;
+
     public ModelQualityJobInput withGroundTruthS3Input(MonitoringGroundTruthS3Input groundTruthS3Input) {
         this.groundTruthS3Input = groundTruthS3Input;
         return this;
     }
     
+    public ModelQualityJobInput(@JsonProperty("GroundTruthS3Input") MonitoringGroundTruthS3Input groundTruthS3Input) {
+        this.groundTruthS3Input = groundTruthS3Input;
+  }
 }

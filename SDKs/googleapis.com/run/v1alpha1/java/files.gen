@@ -80,4 +80,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListJobsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListMeta.java
+docs/sdk/README.md
+docs/namespaces/README.md
 USAGE.md

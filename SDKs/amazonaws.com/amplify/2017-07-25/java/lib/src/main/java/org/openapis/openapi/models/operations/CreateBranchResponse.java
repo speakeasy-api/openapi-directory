@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBranchResponse {
@@ -12,6 +13,7 @@ public class CreateBranchResponse {
      */
     
     public Object badRequestException;
+
     public CreateBranchResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateBranchResponse {
     
     
     public String contentType;
+
     public CreateBranchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateBranchResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBranchResult createBranchResult;
+
     public CreateBranchResponse withCreateBranchResult(org.openapis.openapi.models.shared.CreateBranchResult createBranchResult) {
         this.createBranchResult = createBranchResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateBranchResponse {
      */
     
     public Object dependentServiceFailureException;
+
     public CreateBranchResponse withDependentServiceFailureException(Object dependentServiceFailureException) {
         this.dependentServiceFailureException = dependentServiceFailureException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBranchResponse {
      */
     
     public Object internalFailureException;
+
     public CreateBranchResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class CreateBranchResponse {
      */
     
     public Object limitExceededException;
+
     public CreateBranchResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateBranchResponse {
      */
     
     public Object notFoundException;
+
     public CreateBranchResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateBranchResponse {
     
     
     public Integer statusCode;
+
     public CreateBranchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateBranchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBranchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateBranchResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateBranchResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateBranchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

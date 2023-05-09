@@ -18,6 +18,7 @@ public class Items200ApplicationJSONMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coupon")
     public String coupon;
+
     public Items200ApplicationJSONMarketingData withCoupon(String coupon) {
         this.coupon = coupon;
         return this;
@@ -29,6 +30,7 @@ public class Items200ApplicationJSONMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmCampaign")
     public String utmCampaign;
+
     public Items200ApplicationJSONMarketingData withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -40,6 +42,7 @@ public class Items200ApplicationJSONMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmMedium")
     public String utmMedium;
+
     public Items200ApplicationJSONMarketingData withUtmMedium(String utmMedium) {
         this.utmMedium = utmMedium;
         return this;
@@ -51,6 +54,7 @@ public class Items200ApplicationJSONMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmSource")
     public String utmSource;
+
     public Items200ApplicationJSONMarketingData withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
@@ -62,6 +66,7 @@ public class Items200ApplicationJSONMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmiCampaign")
     public String utmiCampaign;
+
     public Items200ApplicationJSONMarketingData withUtmiCampaign(String utmiCampaign) {
         this.utmiCampaign = utmiCampaign;
         return this;
@@ -73,6 +78,7 @@ public class Items200ApplicationJSONMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmiPage")
     public String utmiPage;
+
     public Items200ApplicationJSONMarketingData withUtmiPage(String utmiPage) {
         this.utmiPage = utmiPage;
         return this;
@@ -84,9 +90,11 @@ public class Items200ApplicationJSONMarketingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmiPart")
     public String utmiPart;
+
     public Items200ApplicationJSONMarketingData withUtmiPart(String utmiPart) {
         this.utmiPart = utmiPart;
         return this;
     }
     
+    public Items200ApplicationJSONMarketingData(){}
 }

@@ -18,6 +18,7 @@ public class SearchApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceRestrictions")
     public DataSourceRestriction[] dataSourceRestrictions;
+
     public SearchApplication withDataSourceRestrictions(DataSourceRestriction[] dataSourceRestrictions) {
         this.dataSourceRestrictions = dataSourceRestrictions;
         return this;
@@ -29,6 +30,7 @@ public class SearchApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultFacetOptions")
     public FacetOptions[] defaultFacetOptions;
+
     public SearchApplication withDefaultFacetOptions(FacetOptions[] defaultFacetOptions) {
         this.defaultFacetOptions = defaultFacetOptions;
         return this;
@@ -37,6 +39,7 @@ public class SearchApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultSortOptions")
     public SortOptions defaultSortOptions;
+
     public SearchApplication withDefaultSortOptions(SortOptions defaultSortOptions) {
         this.defaultSortOptions = defaultSortOptions;
         return this;
@@ -48,6 +51,7 @@ public class SearchApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SearchApplication withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -59,6 +63,7 @@ public class SearchApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAuditLog")
     public Boolean enableAuditLog;
+
     public SearchApplication withEnableAuditLog(Boolean enableAuditLog) {
         this.enableAuditLog = enableAuditLog;
         return this;
@@ -70,6 +75,7 @@ public class SearchApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SearchApplication withName(String name) {
         this.name = name;
         return this;
@@ -81,6 +87,7 @@ public class SearchApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationIds")
     public String[] operationIds;
+
     public SearchApplication withOperationIds(String[] operationIds) {
         this.operationIds = operationIds;
         return this;
@@ -92,6 +99,7 @@ public class SearchApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryInterpretationConfig")
     public QueryInterpretationConfig queryInterpretationConfig;
+
     public SearchApplication withQueryInterpretationConfig(QueryInterpretationConfig queryInterpretationConfig) {
         this.queryInterpretationConfig = queryInterpretationConfig;
         return this;
@@ -103,6 +111,7 @@ public class SearchApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnResultThumbnailUrls")
     public Boolean returnResultThumbnailUrls;
+
     public SearchApplication withReturnResultThumbnailUrls(Boolean returnResultThumbnailUrls) {
         this.returnResultThumbnailUrls = returnResultThumbnailUrls;
         return this;
@@ -114,6 +123,7 @@ public class SearchApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scoringConfig")
     public ScoringConfig scoringConfig;
+
     public SearchApplication withScoringConfig(ScoringConfig scoringConfig) {
         this.scoringConfig = scoringConfig;
         return this;
@@ -125,9 +135,11 @@ public class SearchApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceConfig")
     public SourceConfig[] sourceConfig;
+
     public SearchApplication withSourceConfig(SourceConfig[] sourceConfig) {
         this.sourceConfig = sourceConfig;
         return this;
     }
     
+    public SearchApplication(){}
 }

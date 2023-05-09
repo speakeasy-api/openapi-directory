@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCampaignResponse {
@@ -12,6 +13,7 @@ public class UpdateCampaignResponse {
      */
     
     public Object badRequestException;
+
     public UpdateCampaignResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCampaignResponse {
     
     
     public String contentType;
+
     public UpdateCampaignResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCampaignResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateCampaignResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCampaignResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateCampaignResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateCampaignResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateCampaignResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateCampaignResponse {
      */
     
     public Object notFoundException;
+
     public UpdateCampaignResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateCampaignResponse {
      */
     
     public Object payloadTooLargeException;
+
     public UpdateCampaignResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateCampaignResponse {
     
     
     public Integer statusCode;
+
     public UpdateCampaignResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateCampaignResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCampaignResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateCampaignResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateCampaignResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateCampaignResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateCampaignResponse updateCampaignResponse;
+
     public UpdateCampaignResponse withUpdateCampaignResponse(org.openapis.openapi.models.shared.UpdateCampaignResponse updateCampaignResponse) {
         this.updateCampaignResponse = updateCampaignResponse;
         return this;
     }
     
+    public UpdateCampaignResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

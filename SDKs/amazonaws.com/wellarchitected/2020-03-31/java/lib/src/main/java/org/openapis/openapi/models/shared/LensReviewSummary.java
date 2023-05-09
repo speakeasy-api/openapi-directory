@@ -18,11 +18,12 @@ import org.openapis.openapi.utils.DateTimeSerializer;
  */
 public class LensReviewSummary {
     /**
-     * &lt;p&gt;The alias of the lens.&lt;/p&gt; &lt;p&gt;For Amazon Web Services official lenses, this is either the lens alias, such as &lt;code&gt;serverless&lt;/code&gt;, or the lens ARN, such as &lt;code&gt;arn:aws:wellarchitected:us-west-2::lens/serverless&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;For custom lenses, this is the lens ARN, such as &lt;code&gt;arn:aws:wellarchitected:us-east-1:123456789012:lens/my-lens&lt;/code&gt;. &lt;/p&gt; &lt;p&gt;Each lens is identified by its &lt;a&gt;LensSummary$LensAlias&lt;/a&gt;.&lt;/p&gt;
+     * &lt;p&gt;The alias of the lens.&lt;/p&gt; &lt;p&gt;For Amazon Web Services official lenses, this is either the lens alias, such as &lt;code&gt;serverless&lt;/code&gt;, or the lens ARN, such as &lt;code&gt;arn:aws:wellarchitected:us-east-1::lens/serverless&lt;/code&gt;. Note that some operations (such as ExportLens and CreateLensShare) are not permitted on Amazon Web Services official lenses.&lt;/p&gt; &lt;p&gt;For custom lenses, this is the lens ARN, such as &lt;code&gt;arn:aws:wellarchitected:us-west-2:123456789012:lens/0123456789abcdef01234567890abcdef&lt;/code&gt;. &lt;/p&gt; &lt;p&gt;Each lens is identified by its &lt;a&gt;LensSummary$LensAlias&lt;/a&gt;.&lt;/p&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensAlias")
     public String lensAlias;
+
     public LensReviewSummary withLensAlias(String lensAlias) {
         this.lensAlias = lensAlias;
         return this;
@@ -31,6 +32,7 @@ public class LensReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensArn")
     public String lensArn;
+
     public LensReviewSummary withLensArn(String lensArn) {
         this.lensArn = lensArn;
         return this;
@@ -42,6 +44,7 @@ public class LensReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensName")
     public String lensName;
+
     public LensReviewSummary withLensName(String lensName) {
         this.lensName = lensName;
         return this;
@@ -50,6 +53,7 @@ public class LensReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensStatus")
     public LensStatusEnum lensStatus;
+
     public LensReviewSummary withLensStatus(LensStatusEnum lensStatus) {
         this.lensStatus = lensStatus;
         return this;
@@ -58,17 +62,19 @@ public class LensReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensVersion")
     public String lensVersion;
+
     public LensReviewSummary withLensVersion(String lensVersion) {
         this.lensVersion = lensVersion;
         return this;
     }
     
     /**
-     * A map from risk names to the count of how questions have that rating.
+     * A map from risk names to the count of how many questions have that rating.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RiskCounts")
     public java.util.Map<String, Long> riskCounts;
+
     public LensReviewSummary withRiskCounts(java.util.Map<String, Long> riskCounts) {
         this.riskCounts = riskCounts;
         return this;
@@ -82,9 +88,11 @@ public class LensReviewSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public LensReviewSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public LensReviewSummary(){}
 }

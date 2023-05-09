@@ -15,6 +15,7 @@ public class DeleteAlternateContactRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public DeleteAlternateContactRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -25,9 +26,13 @@ public class DeleteAlternateContactRequestBody {
      */
     @JsonProperty("AlternateContactType")
     public DeleteAlternateContactRequestBodyAlternateContactTypeEnum alternateContactType;
+
     public DeleteAlternateContactRequestBody withAlternateContactType(DeleteAlternateContactRequestBodyAlternateContactTypeEnum alternateContactType) {
         this.alternateContactType = alternateContactType;
         return this;
     }
     
+    public DeleteAlternateContactRequestBody(@JsonProperty("AlternateContactType") DeleteAlternateContactRequestBodyAlternateContactTypeEnum alternateContactType) {
+        this.alternateContactType = alternateContactType;
+  }
 }

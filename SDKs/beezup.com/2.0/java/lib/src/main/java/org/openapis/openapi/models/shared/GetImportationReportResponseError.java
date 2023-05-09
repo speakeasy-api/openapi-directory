@@ -15,6 +15,7 @@ public class GetImportationReportResponseError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beezUPColumnName")
     public String beezUPColumnName;
+
     public GetImportationReportResponseError withBeezUPColumnName(String beezUPColumnName) {
         this.beezUPColumnName = beezUPColumnName;
         return this;
@@ -25,6 +26,7 @@ public class GetImportationReportResponseError {
      */
     @JsonProperty("errorCode")
     public String errorCode;
+
     public GetImportationReportResponseError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -32,6 +34,7 @@ public class GetImportationReportResponseError {
     
     @JsonProperty("productCount")
     public Long productCount;
+
     public GetImportationReportResponseError withProductCount(Long productCount) {
         this.productCount = productCount;
         return this;
@@ -42,9 +45,15 @@ public class GetImportationReportResponseError {
      */
     @JsonProperty("userColumName")
     public String userColumName;
+
     public GetImportationReportResponseError withUserColumName(String userColumName) {
         this.userColumName = userColumName;
         return this;
     }
     
+    public GetImportationReportResponseError(@JsonProperty("errorCode") String errorCode, @JsonProperty("productCount") Long productCount, @JsonProperty("userColumName") String userColumName) {
+        this.errorCode = errorCode;
+        this.productCount = productCount;
+        this.userColumName = userColumName;
+  }
 }

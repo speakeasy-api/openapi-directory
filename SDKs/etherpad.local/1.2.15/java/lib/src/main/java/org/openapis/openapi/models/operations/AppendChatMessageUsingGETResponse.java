@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppendChatMessageUsingGETResponse {
     
     public String contentType;
+
     public AppendChatMessageUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppendChatMessageUsingGETResponse {
     
     
     public Integer statusCode;
+
     public AppendChatMessageUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppendChatMessageUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppendChatMessageUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppendChatMessageUsingGETResponse {
      */
     
     public AppendChatMessageUsingGET200ApplicationJSON appendChatMessageUsingGET200ApplicationJSONObject;
+
     public AppendChatMessageUsingGETResponse withAppendChatMessageUsingGET200ApplicationJSONObject(AppendChatMessageUsingGET200ApplicationJSON appendChatMessageUsingGET200ApplicationJSONObject) {
         this.appendChatMessageUsingGET200ApplicationJSONObject = appendChatMessageUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AppendChatMessageUsingGETResponse {
      */
     
     public AppendChatMessageUsingGET400ApplicationJSON appendChatMessageUsingGET400ApplicationJSONObject;
+
     public AppendChatMessageUsingGETResponse withAppendChatMessageUsingGET400ApplicationJSONObject(AppendChatMessageUsingGET400ApplicationJSON appendChatMessageUsingGET400ApplicationJSONObject) {
         this.appendChatMessageUsingGET400ApplicationJSONObject = appendChatMessageUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class AppendChatMessageUsingGETResponse {
      */
     
     public AppendChatMessageUsingGET401ApplicationJSON appendChatMessageUsingGET401ApplicationJSONObject;
+
     public AppendChatMessageUsingGETResponse withAppendChatMessageUsingGET401ApplicationJSONObject(AppendChatMessageUsingGET401ApplicationJSON appendChatMessageUsingGET401ApplicationJSONObject) {
         this.appendChatMessageUsingGET401ApplicationJSONObject = appendChatMessageUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class AppendChatMessageUsingGETResponse {
      */
     
     public AppendChatMessageUsingGET500ApplicationJSON appendChatMessageUsingGET500ApplicationJSONObject;
+
     public AppendChatMessageUsingGETResponse withAppendChatMessageUsingGET500ApplicationJSONObject(AppendChatMessageUsingGET500ApplicationJSON appendChatMessageUsingGET500ApplicationJSONObject) {
         this.appendChatMessageUsingGET500ApplicationJSONObject = appendChatMessageUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public AppendChatMessageUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -22,6 +22,7 @@ public class RefundPaymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RefundPaymentResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -34,9 +35,11 @@ public class RefundPaymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund")
     public PaymentRefund refund;
+
     public RefundPaymentResponse withRefund(PaymentRefund refund) {
         this.refund = refund;
         return this;
     }
     
+    public RefundPaymentResponse(){}
 }

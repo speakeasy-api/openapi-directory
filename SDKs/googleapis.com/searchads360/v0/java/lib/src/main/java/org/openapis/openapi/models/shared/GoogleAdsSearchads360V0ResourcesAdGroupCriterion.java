@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adGroup")
     public String adGroup;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withAdGroup(String adGroup) {
         this.adGroup = adGroup;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageRange")
     public GoogleAdsSearchads360V0CommonAgeRangeInfo ageRange;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withAgeRange(GoogleAdsSearchads360V0CommonAgeRangeInfo ageRange) {
         this.ageRange = ageRange;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidModifier")
     public Double bidModifier;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withBidModifier(Double bidModifier) {
         this.bidModifier = bidModifier;
         return this;
@@ -51,8 +54,21 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpcBidMicros")
     public String cpcBidMicros;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withCpcBidMicros(String cpcBidMicros) {
         this.cpcBidMicros = cpcBidMicros;
+        return this;
+    }
+    
+    /**
+     * Output only. The timestamp when this ad group criterion was created. The timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("creationTime")
+    public String creationTime;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withCreationTime(String creationTime) {
+        this.creationTime = creationTime;
         return this;
     }
     
@@ -62,6 +78,7 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criterionId")
     public String criterionId;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withCriterionId(String criterionId) {
         this.criterionId = criterionId;
         return this;
@@ -73,8 +90,21 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveCpcBidMicros")
     public String effectiveCpcBidMicros;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withEffectiveCpcBidMicros(String effectiveCpcBidMicros) {
         this.effectiveCpcBidMicros = effectiveCpcBidMicros;
+        return this;
+    }
+    
+    /**
+     * Output only. ID of the ad group criterion in the external engine account. This field is for non-Google Ads account only, for example, Yahoo Japan, Microsoft, Baidu etc. For Google Ads entity, use "ad_group_criterion.criterion_id" instead.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("engineId")
+    public String engineId;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withEngineId(String engineId) {
+        this.engineId = engineId;
         return this;
     }
     
@@ -84,6 +114,7 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engineStatus")
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterionEngineStatusEnum engineStatus;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withEngineStatus(GoogleAdsSearchads360V0ResourcesAdGroupCriterionEngineStatusEnum engineStatus) {
         this.engineStatus = engineStatus;
         return this;
@@ -95,6 +126,7 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalUrlSuffix")
     public String finalUrlSuffix;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withFinalUrlSuffix(String finalUrlSuffix) {
         this.finalUrlSuffix = finalUrlSuffix;
         return this;
@@ -106,6 +138,7 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalUrls")
     public String[] finalUrls;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withFinalUrls(String[] finalUrls) {
         this.finalUrls = finalUrls;
         return this;
@@ -117,6 +150,7 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public GoogleAdsSearchads360V0CommonGenderInfo gender;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withGender(GoogleAdsSearchads360V0CommonGenderInfo gender) {
         this.gender = gender;
         return this;
@@ -128,8 +162,21 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyword")
     public GoogleAdsSearchads360V0CommonKeywordInfo keyword;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withKeyword(GoogleAdsSearchads360V0CommonKeywordInfo keyword) {
         this.keyword = keyword;
+        return this;
+    }
+    
+    /**
+     * Output only. The resource names of labels attached to this ad group criterion.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("labels")
+    public String[] labels;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withLabels(String[] labels) {
+        this.labels = labels;
         return this;
     }
     
@@ -139,6 +186,7 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedTime")
     public String lastModifiedTime;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withLastModifiedTime(String lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -150,8 +198,33 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listingGroup")
     public GoogleAdsSearchads360V0CommonListingGroupInfo listingGroup;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withListingGroup(GoogleAdsSearchads360V0CommonListingGroupInfo listingGroup) {
         this.listingGroup = listingGroup;
+        return this;
+    }
+    
+    /**
+     * A location criterion.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("location")
+    public GoogleAdsSearchads360V0CommonLocationInfo location;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withLocation(GoogleAdsSearchads360V0CommonLocationInfo location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * Immutable. Whether to target (`false`) or exclude (`true`) the criterion. This field is immutable. To switch a criterion from positive to negative, remove then re-add it.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("negative")
+    public Boolean negative;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withNegative(Boolean negative) {
+        this.negative = negative;
         return this;
     }
     
@@ -161,6 +234,7 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qualityInfo")
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterionQualityInfo qualityInfo;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withQualityInfo(GoogleAdsSearchads360V0ResourcesAdGroupCriterionQualityInfo qualityInfo) {
         this.qualityInfo = qualityInfo;
         return this;
@@ -172,6 +246,7 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -183,6 +258,7 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterionStatusEnum status;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withStatus(GoogleAdsSearchads360V0ResourcesAdGroupCriterionStatusEnum status) {
         this.status = status;
         return this;
@@ -194,6 +270,7 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingUrlTemplate")
     public String trackingUrlTemplate;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withTrackingUrlTemplate(String trackingUrlTemplate) {
         this.trackingUrlTemplate = trackingUrlTemplate;
         return this;
@@ -205,8 +282,21 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnum type;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withType(GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnum type) {
         this.type = type;
+        return this;
+    }
+    
+    /**
+     * A User List criterion. Represents a user list that is defined by the advertiser to be targeted.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("userList")
+    public GoogleAdsSearchads360V0CommonUserListInfo userList;
+
+    public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withUserList(GoogleAdsSearchads360V0CommonUserListInfo userList) {
+        this.userList = userList;
         return this;
     }
     
@@ -216,9 +306,11 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webpage")
     public GoogleAdsSearchads360V0CommonWebpageInfo webpage;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion withWebpage(GoogleAdsSearchads360V0CommonWebpageInfo webpage) {
         this.webpage = webpage;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesAdGroupCriterion(){}
 }

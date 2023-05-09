@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAttributeGroupResponse {
@@ -12,6 +13,7 @@ public class GetAttributeGroupResponse {
      */
     
     public Object conflictException;
+
     public GetAttributeGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class GetAttributeGroupResponse {
     
     
     public String contentType;
+
     public GetAttributeGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAttributeGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAttributeGroupResponse getAttributeGroupResponse;
+
     public GetAttributeGroupResponse withGetAttributeGroupResponse(org.openapis.openapi.models.shared.GetAttributeGroupResponse getAttributeGroupResponse) {
         this.getAttributeGroupResponse = getAttributeGroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAttributeGroupResponse {
      */
     
     public Object internalServerException;
+
     public GetAttributeGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetAttributeGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAttributeGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetAttributeGroupResponse {
     
     
     public Integer statusCode;
+
     public GetAttributeGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetAttributeGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAttributeGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetAttributeGroupResponse {
      */
     
     public Object validationException;
+
     public GetAttributeGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAttributeGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

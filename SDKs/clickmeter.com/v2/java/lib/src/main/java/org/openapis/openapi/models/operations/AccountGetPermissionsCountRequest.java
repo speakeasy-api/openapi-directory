@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountGetPermissionsCountRequest {
@@ -12,6 +13,7 @@ public class AccountGetPermissionsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entityId")
     public Long entityId;
+
     public AccountGetPermissionsCountRequest withEntityId(Long entityId) {
         this.entityId = entityId;
         return this;
@@ -22,6 +24,7 @@ public class AccountGetPermissionsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entityType")
     public AccountGetPermissionsCountEntityTypeEnum entityType;
+
     public AccountGetPermissionsCountRequest withEntityType(AccountGetPermissionsCountEntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -32,6 +35,7 @@ public class AccountGetPermissionsCountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
     public Long guestId;
+
     public AccountGetPermissionsCountRequest withGuestId(Long guestId) {
         this.guestId = guestId;
         return this;
@@ -42,9 +46,13 @@ public class AccountGetPermissionsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public AccountGetPermissionsCountTypeEnum type;
+
     public AccountGetPermissionsCountRequest withType(AccountGetPermissionsCountTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AccountGetPermissionsCountRequest(@JsonProperty("guestId") Long guestId) {
+        this.guestId = guestId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateImagePipelineResponse {
@@ -12,6 +13,7 @@ public class CreateImagePipelineResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public CreateImagePipelineResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class CreateImagePipelineResponse {
      */
     
     public Object clientException;
+
     public CreateImagePipelineResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class CreateImagePipelineResponse {
     
     
     public String contentType;
+
     public CreateImagePipelineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateImagePipelineResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateImagePipelineResponse createImagePipelineResponse;
+
     public CreateImagePipelineResponse withCreateImagePipelineResponse(org.openapis.openapi.models.shared.CreateImagePipelineResponse createImagePipelineResponse) {
         this.createImagePipelineResponse = createImagePipelineResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateImagePipelineResponse {
      */
     
     public Object forbiddenException;
+
     public CreateImagePipelineResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateImagePipelineResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateImagePipelineResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -69,6 +76,7 @@ public class CreateImagePipelineResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateImagePipelineResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -79,6 +87,7 @@ public class CreateImagePipelineResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateImagePipelineResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -89,6 +98,7 @@ public class CreateImagePipelineResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateImagePipelineResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -99,6 +109,7 @@ public class CreateImagePipelineResponse {
      */
     
     public Object serviceException;
+
     public CreateImagePipelineResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -109,6 +120,7 @@ public class CreateImagePipelineResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateImagePipelineResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -116,6 +128,7 @@ public class CreateImagePipelineResponse {
     
     
     public Integer statusCode;
+
     public CreateImagePipelineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class CreateImagePipelineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateImagePipelineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,9 +147,14 @@ public class CreateImagePipelineResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateImagePipelineResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public CreateImagePipelineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

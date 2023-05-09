@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointServicePermissionsResult {
     
     public DescribeVpcEndpointServicePermissionsResultAllowedPrincipals[] allowedPrincipals;
+
     public DescribeVpcEndpointServicePermissionsResult withAllowedPrincipals(DescribeVpcEndpointServicePermissionsResultAllowedPrincipals[] allowedPrincipals) {
         this.allowedPrincipals = allowedPrincipals;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVpcEndpointServicePermissionsResult {
     
     
     public String nextToken;
+
     public DescribeVpcEndpointServicePermissionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeVpcEndpointServicePermissionsResult(){}
 }

@@ -49,11 +49,9 @@ public class Areas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AreasGetResponse res = new org.openapis.openapi.models.operations.AreasGetResponse() {{
+        org.openapis.openapi.models.operations.AreasGetResponse res = new org.openapis.openapi.models.operations.AreasGetResponse(contentType, httpRes.statusCode()) {{
             areaResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -89,11 +87,9 @@ public class Areas {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVVersionAreasAreaIdsResponse res = new org.openapis.openapi.models.operations.GetVVersionAreasAreaIdsResponse() {{
+        org.openapis.openapi.models.operations.GetVVersionAreasAreaIdsResponse res = new org.openapis.openapi.models.operations.GetVVersionAreasAreaIdsResponse(contentType, httpRes.statusCode()) {{
             areaResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

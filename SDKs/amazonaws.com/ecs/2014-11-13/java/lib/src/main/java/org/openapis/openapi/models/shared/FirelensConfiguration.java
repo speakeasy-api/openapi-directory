@@ -15,6 +15,7 @@ public class FirelensConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public java.util.Map<String, String> options;
+
     public FirelensConfiguration withOptions(java.util.Map<String, String> options) {
         this.options = options;
         return this;
@@ -22,9 +23,13 @@ public class FirelensConfiguration {
     
     @JsonProperty("type")
     public FirelensConfigurationTypeEnum type;
+
     public FirelensConfiguration withType(FirelensConfigurationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public FirelensConfiguration(@JsonProperty("type") FirelensConfigurationTypeEnum type) {
+        this.type = type;
+  }
 }

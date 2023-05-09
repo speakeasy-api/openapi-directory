@@ -18,6 +18,7 @@ public class JobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public GoogleCloudRunV1Condition[] conditions;
+
     public JobStatus withConditions(GoogleCloudRunV1Condition[] conditions) {
         this.conditions = conditions;
         return this;
@@ -29,6 +30,7 @@ public class JobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionCount")
     public Integer executionCount;
+
     public JobStatus withExecutionCount(Integer executionCount) {
         this.executionCount = executionCount;
         return this;
@@ -40,6 +42,7 @@ public class JobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestCreatedExecution")
     public ExecutionReference latestCreatedExecution;
+
     public JobStatus withLatestCreatedExecution(ExecutionReference latestCreatedExecution) {
         this.latestCreatedExecution = latestCreatedExecution;
         return this;
@@ -51,9 +54,11 @@ public class JobStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("observedGeneration")
     public Integer observedGeneration;
+
     public JobStatus withObservedGeneration(Integer observedGeneration) {
         this.observedGeneration = observedGeneration;
         return this;
     }
     
+    public JobStatus(){}
 }

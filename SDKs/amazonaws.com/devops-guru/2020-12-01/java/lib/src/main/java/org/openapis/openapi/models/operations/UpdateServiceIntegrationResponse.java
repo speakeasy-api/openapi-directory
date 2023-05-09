@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateServiceIntegrationResponse {
@@ -12,6 +13,7 @@ public class UpdateServiceIntegrationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateServiceIntegrationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateServiceIntegrationResponse {
      */
     
     public Object conflictException;
+
     public UpdateServiceIntegrationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateServiceIntegrationResponse {
     
     
     public String contentType;
+
     public UpdateServiceIntegrationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateServiceIntegrationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateServiceIntegrationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateServiceIntegrationResponse {
     
     
     public Integer statusCode;
+
     public UpdateServiceIntegrationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateServiceIntegrationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateServiceIntegrationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateServiceIntegrationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateServiceIntegrationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateServiceIntegrationResponse {
      */
     
     public java.util.Map<String, Object> updateServiceIntegrationResponse;
+
     public UpdateServiceIntegrationResponse withUpdateServiceIntegrationResponse(java.util.Map<String, Object> updateServiceIntegrationResponse) {
         this.updateServiceIntegrationResponse = updateServiceIntegrationResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateServiceIntegrationResponse {
      */
     
     public Object validationException;
+
     public UpdateServiceIntegrationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateServiceIntegrationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class MetricTimeseries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("histogramTimeseries")
     public TimeseriesBin[] histogramTimeseries;
+
     public MetricTimeseries withHistogramTimeseries(TimeseriesBin[] histogramTimeseries) {
         this.histogramTimeseries = histogramTimeseries;
         return this;
@@ -29,9 +30,11 @@ public class MetricTimeseries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentilesTimeseries")
     public TimeseriesPercentiles percentilesTimeseries;
+
     public MetricTimeseries withPercentilesTimeseries(TimeseriesPercentiles percentilesTimeseries) {
         this.percentilesTimeseries = percentilesTimeseries;
         return this;
     }
     
+    public MetricTimeseries(){}
 }

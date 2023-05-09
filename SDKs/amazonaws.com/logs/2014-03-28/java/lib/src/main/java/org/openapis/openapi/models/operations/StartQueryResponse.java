@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartQueryResponse {
     
     public String contentType;
+
     public StartQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartQueryResponse {
      */
     
     public Object invalidParameterException;
+
     public StartQueryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class StartQueryResponse {
      */
     
     public Object limitExceededException;
+
     public StartQueryResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class StartQueryResponse {
      */
     
     public Object malformedQueryException;
+
     public StartQueryResponse withMalformedQueryException(Object malformedQueryException) {
         this.malformedQueryException = malformedQueryException;
         return this;
@@ -49,6 +54,7 @@ public class StartQueryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartQueryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartQueryResponse {
      */
     
     public Object serviceUnavailableException;
+
     public StartQueryResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -69,6 +76,7 @@ public class StartQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.StartQueryResponse startQueryResponse;
+
     public StartQueryResponse withStartQueryResponse(org.openapis.openapi.models.shared.StartQueryResponse startQueryResponse) {
         this.startQueryResponse = startQueryResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartQueryResponse {
     
     
     public Integer statusCode;
+
     public StartQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class StartQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

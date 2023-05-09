@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WwcerResponse {
     
     public String contentType;
+
     public WwcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class WwcerResponse {
     
     
     public Integer statusCode;
+
     public WwcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class WwcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WwcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class WwcerResponse {
      */
     
     public Wwcer400ApplicationJSON wwcer400ApplicationJSONObject;
+
     public WwcerResponse withWwcer400ApplicationJSONObject(Wwcer400ApplicationJSON wwcer400ApplicationJSONObject) {
         this.wwcer400ApplicationJSONObject = wwcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class WwcerResponse {
      */
     
     public Wwcer401ApplicationJSON wwcer401ApplicationJSONObject;
+
     public WwcerResponse withWwcer401ApplicationJSONObject(Wwcer401ApplicationJSON wwcer401ApplicationJSONObject) {
         this.wwcer401ApplicationJSONObject = wwcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class WwcerResponse {
      */
     
     public Wwcer404ApplicationJSON wwcer404ApplicationJSONObject;
+
     public WwcerResponse withWwcer404ApplicationJSONObject(Wwcer404ApplicationJSON wwcer404ApplicationJSONObject) {
         this.wwcer404ApplicationJSONObject = wwcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class WwcerResponse {
      */
     
     public Wwcer500ApplicationJSON wwcer500ApplicationJSONObject;
+
     public WwcerResponse withWwcer500ApplicationJSONObject(Wwcer500ApplicationJSON wwcer500ApplicationJSONObject) {
         this.wwcer500ApplicationJSONObject = wwcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class WwcerResponse {
      */
     
     public Wwcer502ApplicationJSON wwcer502ApplicationJSONObject;
+
     public WwcerResponse withWwcer502ApplicationJSONObject(Wwcer502ApplicationJSON wwcer502ApplicationJSONObject) {
         this.wwcer502ApplicationJSONObject = wwcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class WwcerResponse {
      */
     
     public Wwcer503ApplicationJSON wwcer503ApplicationJSONObject;
+
     public WwcerResponse withWwcer503ApplicationJSONObject(Wwcer503ApplicationJSON wwcer503ApplicationJSONObject) {
         this.wwcer503ApplicationJSONObject = wwcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class WwcerResponse {
      */
     
     public Wwcer504ApplicationJSON wwcer504ApplicationJSONObject;
+
     public WwcerResponse withWwcer504ApplicationJSONObject(Wwcer504ApplicationJSON wwcer504ApplicationJSONObject) {
         this.wwcer504ApplicationJSONObject = wwcer504ApplicationJSONObject;
         return this;
     }
     
+    public WwcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVolumesResult {
     
     public String nextToken;
+
     public DescribeVolumesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVolumesResult {
     
     
     public DescribeVolumesResultVolumes[] volumes;
+
     public DescribeVolumesResult withVolumes(DescribeVolumesResultVolumes[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public DescribeVolumesResult(){}
 }

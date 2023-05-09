@@ -15,6 +15,7 @@ public class ItemsUpdate200ApplicationJSONSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ItemsUpdate200ApplicationJSONSellers withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class ItemsUpdate200ApplicationJSONSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public ItemsUpdate200ApplicationJSONSellers withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -37,9 +39,11 @@ public class ItemsUpdate200ApplicationJSONSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ItemsUpdate200ApplicationJSONSellers withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ItemsUpdate200ApplicationJSONSellers(){}
 }

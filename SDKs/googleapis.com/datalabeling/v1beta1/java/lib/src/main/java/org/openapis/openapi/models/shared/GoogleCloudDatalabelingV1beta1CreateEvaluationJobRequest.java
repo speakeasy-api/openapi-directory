@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1CreateEvaluationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public GoogleCloudDatalabelingV1beta1EvaluationJob job;
+
     public GoogleCloudDatalabelingV1beta1CreateEvaluationJobRequest withJob(GoogleCloudDatalabelingV1beta1EvaluationJob job) {
         this.job = job;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1CreateEvaluationJobRequest(){}
 }

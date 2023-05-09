@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AuthenticationConfiguration {
     @JsonProperty("AcceptanceThreshold")
     public Long acceptanceThreshold;
+
     public AuthenticationConfiguration withAcceptanceThreshold(Long acceptanceThreshold) {
         this.acceptanceThreshold = acceptanceThreshold;
         return this;
     }
     
+    public AuthenticationConfiguration(@JsonProperty("AcceptanceThreshold") Long acceptanceThreshold) {
+        this.acceptanceThreshold = acceptanceThreshold;
+  }
 }

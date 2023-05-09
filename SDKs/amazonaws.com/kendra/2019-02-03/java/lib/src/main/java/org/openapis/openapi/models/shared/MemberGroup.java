@@ -15,6 +15,7 @@ public class MemberGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public MemberGroup withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -22,9 +23,13 @@ public class MemberGroup {
     
     @JsonProperty("GroupId")
     public String groupId;
+
     public MemberGroup withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public MemberGroup(@JsonProperty("GroupId") String groupId) {
+        this.groupId = groupId;
+  }
 }

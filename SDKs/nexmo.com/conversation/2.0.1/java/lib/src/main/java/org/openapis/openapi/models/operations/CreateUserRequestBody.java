@@ -18,6 +18,7 @@ public class CreateUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public CreateUserRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class CreateUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     public String imageUrl;
+
     public CreateUserRequestBody withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -40,9 +42,11 @@ public class CreateUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateUserRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateUserRequestBody(){}
 }

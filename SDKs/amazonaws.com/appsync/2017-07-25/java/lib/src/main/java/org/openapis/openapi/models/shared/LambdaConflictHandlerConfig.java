@@ -15,9 +15,11 @@ public class LambdaConflictHandlerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaConflictHandlerArn")
     public String lambdaConflictHandlerArn;
+
     public LambdaConflictHandlerConfig withLambdaConflictHandlerArn(String lambdaConflictHandlerArn) {
         this.lambdaConflictHandlerArn = lambdaConflictHandlerArn;
         return this;
     }
     
+    public LambdaConflictHandlerConfig(){}
 }

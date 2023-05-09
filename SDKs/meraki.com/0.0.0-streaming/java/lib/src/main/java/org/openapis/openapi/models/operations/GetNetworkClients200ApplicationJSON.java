@@ -18,6 +18,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetNetworkClients200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstSeen")
     public Long firstSeen;
+
     public GetNetworkClients200ApplicationJSON withFirstSeen(Long firstSeen) {
         this.firstSeen = firstSeen;
         return this;
@@ -40,6 +42,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupPolicy8021x")
     public String groupPolicy8021x;
+
     public GetNetworkClients200ApplicationJSON withGroupPolicy8021x(String groupPolicy8021x) {
         this.groupPolicy8021x = groupPolicy8021x;
         return this;
@@ -51,6 +54,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetNetworkClients200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public GetNetworkClients200ApplicationJSON withIp(String ip) {
         this.ip = ip;
         return this;
@@ -73,6 +78,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip6")
     public String ip6;
+
     public GetNetworkClients200ApplicationJSON withIp6(String ip6) {
         this.ip6 = ip6;
         return this;
@@ -84,6 +90,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip6Local")
     public String ip6Local;
+
     public GetNetworkClients200ApplicationJSON withIp6Local(String ip6Local) {
         this.ip6Local = ip6Local;
         return this;
@@ -95,6 +102,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastSeen")
     public Long lastSeen;
+
     public GetNetworkClients200ApplicationJSON withLastSeen(Long lastSeen) {
         this.lastSeen = lastSeen;
         return this;
@@ -106,6 +114,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mac")
     public String mac;
+
     public GetNetworkClients200ApplicationJSON withMac(String mac) {
         this.mac = mac;
         return this;
@@ -117,6 +126,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer")
     public String manufacturer;
+
     public GetNetworkClients200ApplicationJSON withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -128,6 +138,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public GetNetworkClients200ApplicationJSON withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -139,6 +150,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     public String os;
+
     public GetNetworkClients200ApplicationJSON withOs(String os) {
         this.os = os;
         return this;
@@ -150,6 +162,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentDeviceMac")
     public String recentDeviceMac;
+
     public GetNetworkClients200ApplicationJSON withRecentDeviceMac(String recentDeviceMac) {
         this.recentDeviceMac = recentDeviceMac;
         return this;
@@ -161,6 +174,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentDeviceName")
     public String recentDeviceName;
+
     public GetNetworkClients200ApplicationJSON withRecentDeviceName(String recentDeviceName) {
         this.recentDeviceName = recentDeviceName;
         return this;
@@ -172,6 +186,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentDeviceSerial")
     public String recentDeviceSerial;
+
     public GetNetworkClients200ApplicationJSON withRecentDeviceSerial(String recentDeviceSerial) {
         this.recentDeviceSerial = recentDeviceSerial;
         return this;
@@ -183,6 +198,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smInstalled")
     public Boolean smInstalled;
+
     public GetNetworkClients200ApplicationJSON withSmInstalled(Boolean smInstalled) {
         this.smInstalled = smInstalled;
         return this;
@@ -194,6 +210,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssid")
     public String ssid;
+
     public GetNetworkClients200ApplicationJSON withSsid(String ssid) {
         this.ssid = ssid;
         return this;
@@ -205,6 +222,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetNetworkClients200ApplicationJSONStatusEnum status;
+
     public GetNetworkClients200ApplicationJSON withStatus(GetNetworkClients200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
@@ -216,6 +234,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("switchport")
     public String switchport;
+
     public GetNetworkClients200ApplicationJSON withSwitchport(String switchport) {
         this.switchport = switchport;
         return this;
@@ -227,6 +246,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public GetNetworkClients200ApplicationJSONUsage usage;
+
     public GetNetworkClients200ApplicationJSON withUsage(GetNetworkClients200ApplicationJSONUsage usage) {
         this.usage = usage;
         return this;
@@ -238,6 +258,7 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public GetNetworkClients200ApplicationJSON withUser(String user) {
         this.user = user;
         return this;
@@ -249,9 +270,11 @@ public class GetNetworkClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vlan")
     public String vlan;
+
     public GetNetworkClients200ApplicationJSON withVlan(String vlan) {
         this.vlan = vlan;
         return this;
     }
     
+    public GetNetworkClients200ApplicationJSON(){}
 }

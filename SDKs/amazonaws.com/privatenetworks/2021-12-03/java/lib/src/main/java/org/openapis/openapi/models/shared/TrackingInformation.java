@@ -15,9 +15,11 @@ public class TrackingInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingNumber")
     public String trackingNumber;
+
     public TrackingInformation withTrackingNumber(String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
     }
     
+    public TrackingInformation(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRouteResponse {
@@ -12,6 +13,7 @@ public class CreateRouteResponse {
      */
     
     public Object badRequestException;
+
     public CreateRouteResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateRouteResponse {
      */
     
     public Object conflictException;
+
     public CreateRouteResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateRouteResponse {
     
     
     public String contentType;
+
     public CreateRouteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateRouteResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRouteResult createRouteResult;
+
     public CreateRouteResponse withCreateRouteResult(org.openapis.openapi.models.shared.CreateRouteResult createRouteResult) {
         this.createRouteResult = createRouteResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateRouteResponse {
      */
     
     public Object notFoundException;
+
     public CreateRouteResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateRouteResponse {
     
     
     public Integer statusCode;
+
     public CreateRouteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateRouteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRouteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateRouteResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateRouteResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateRouteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

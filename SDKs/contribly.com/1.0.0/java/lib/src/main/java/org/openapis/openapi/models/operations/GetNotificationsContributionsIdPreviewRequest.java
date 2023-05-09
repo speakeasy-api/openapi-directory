@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNotificationsContributionsIdPreviewRequest {
@@ -12,6 +13,7 @@ public class GetNotificationsContributionsIdPreviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetNotificationsContributionsIdPreviewRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,14 @@ public class GetNotificationsContributionsIdPreviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message")
     public String message;
+
     public GetNotificationsContributionsIdPreviewRequest withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetNotificationsContributionsIdPreviewRequest(@JsonProperty("id") String id, @JsonProperty("message") String message) {
+        this.id = id;
+        this.message = message;
+  }
 }

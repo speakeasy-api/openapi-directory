@@ -15,6 +15,7 @@ public class PutSessionRequestBodyDialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillmentState")
     public org.openapis.openapi.models.shared.FulfillmentStateEnum fulfillmentState;
+
     public PutSessionRequestBodyDialogAction withFulfillmentState(org.openapis.openapi.models.shared.FulfillmentStateEnum fulfillmentState) {
         this.fulfillmentState = fulfillmentState;
         return this;
@@ -23,6 +24,7 @@ public class PutSessionRequestBodyDialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentName")
     public String intentName;
+
     public PutSessionRequestBodyDialogAction withIntentName(String intentName) {
         this.intentName = intentName;
         return this;
@@ -31,6 +33,7 @@ public class PutSessionRequestBodyDialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PutSessionRequestBodyDialogAction withMessage(String message) {
         this.message = message;
         return this;
@@ -39,6 +42,7 @@ public class PutSessionRequestBodyDialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageFormat")
     public org.openapis.openapi.models.shared.MessageFormatTypeEnum messageFormat;
+
     public PutSessionRequestBodyDialogAction withMessageFormat(org.openapis.openapi.models.shared.MessageFormatTypeEnum messageFormat) {
         this.messageFormat = messageFormat;
         return this;
@@ -47,6 +51,7 @@ public class PutSessionRequestBodyDialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotToElicit")
     public String slotToElicit;
+
     public PutSessionRequestBodyDialogAction withSlotToElicit(String slotToElicit) {
         this.slotToElicit = slotToElicit;
         return this;
@@ -55,6 +60,7 @@ public class PutSessionRequestBodyDialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slots")
     public java.util.Map<String, String> slots;
+
     public PutSessionRequestBodyDialogAction withSlots(java.util.Map<String, String> slots) {
         this.slots = slots;
         return this;
@@ -63,9 +69,11 @@ public class PutSessionRequestBodyDialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public org.openapis.openapi.models.shared.DialogActionTypeEnum type;
+
     public PutSessionRequestBodyDialogAction withType(org.openapis.openapi.models.shared.DialogActionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PutSessionRequestBodyDialogAction(){}
 }

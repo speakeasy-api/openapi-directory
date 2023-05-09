@@ -15,9 +15,11 @@ public class ObjectValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public StructuredDataObject[] values;
+
     public ObjectValues withValues(StructuredDataObject[] values) {
         this.values = values;
         return this;
     }
     
+    public ObjectValues(){}
 }

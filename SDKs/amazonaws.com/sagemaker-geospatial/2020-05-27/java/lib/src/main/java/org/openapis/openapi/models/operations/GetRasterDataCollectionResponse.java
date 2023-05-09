@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRasterDataCollectionResponse {
@@ -12,6 +13,7 @@ public class GetRasterDataCollectionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRasterDataCollectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetRasterDataCollectionResponse {
     
     
     public String contentType;
+
     public GetRasterDataCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRasterDataCollectionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRasterDataCollectionOutput getRasterDataCollectionOutput;
+
     public GetRasterDataCollectionResponse withGetRasterDataCollectionOutput(org.openapis.openapi.models.shared.GetRasterDataCollectionOutput getRasterDataCollectionOutput) {
         this.getRasterDataCollectionOutput = getRasterDataCollectionOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetRasterDataCollectionResponse {
      */
     
     public Object internalServerException;
+
     public GetRasterDataCollectionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetRasterDataCollectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetRasterDataCollectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetRasterDataCollectionResponse {
     
     
     public Integer statusCode;
+
     public GetRasterDataCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetRasterDataCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRasterDataCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetRasterDataCollectionResponse {
      */
     
     public Object throttlingException;
+
     public GetRasterDataCollectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetRasterDataCollectionResponse {
      */
     
     public Object validationException;
+
     public GetRasterDataCollectionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetRasterDataCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

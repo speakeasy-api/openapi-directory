@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FolderConfiguration {
     @JsonProperty("Action")
     public RetentionActionEnum action;
+
     public FolderConfiguration withAction(RetentionActionEnum action) {
         this.action = action;
         return this;
@@ -21,6 +22,7 @@ public class FolderConfiguration {
     
     @JsonProperty("Name")
     public FolderNameEnum name;
+
     public FolderConfiguration withName(FolderNameEnum name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class FolderConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Period")
     public Long period;
+
     public FolderConfiguration withPeriod(Long period) {
         this.period = period;
         return this;
     }
     
+    public FolderConfiguration(@JsonProperty("Action") RetentionActionEnum action, @JsonProperty("Name") FolderNameEnum name) {
+        this.action = action;
+        this.name = name;
+  }
 }

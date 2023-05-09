@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromemanagementCustomersAppsCountChromeAppRequestsResponse {
     
     public String contentType;
+
     public ChromemanagementCustomersAppsCountChromeAppRequestsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChromemanagementCustomersAppsCountChromeAppRequestsResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleChromeManagementV1CountChromeAppRequestsResponse googleChromeManagementV1CountChromeAppRequestsResponse;
+
     public ChromemanagementCustomersAppsCountChromeAppRequestsResponse withGoogleChromeManagementV1CountChromeAppRequestsResponse(org.openapis.openapi.models.shared.GoogleChromeManagementV1CountChromeAppRequestsResponse googleChromeManagementV1CountChromeAppRequestsResponse) {
         this.googleChromeManagementV1CountChromeAppRequestsResponse = googleChromeManagementV1CountChromeAppRequestsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ChromemanagementCustomersAppsCountChromeAppRequestsResponse {
     
     
     public Integer statusCode;
+
     public ChromemanagementCustomersAppsCountChromeAppRequestsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChromemanagementCustomersAppsCountChromeAppRequestsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromemanagementCustomersAppsCountChromeAppRequestsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromemanagementCustomersAppsCountChromeAppRequestsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

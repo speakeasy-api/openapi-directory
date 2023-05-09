@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AlsblResponse {
     
     public String contentType;
+
     public AlsblResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AlsblResponse {
     
     
     public Integer statusCode;
+
     public AlsblResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AlsblResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AlsblResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AlsblResponse {
      */
     
     public Alsbl400ApplicationJSON alsbl400ApplicationJSONObject;
+
     public AlsblResponse withAlsbl400ApplicationJSONObject(Alsbl400ApplicationJSON alsbl400ApplicationJSONObject) {
         this.alsbl400ApplicationJSONObject = alsbl400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AlsblResponse {
      */
     
     public Alsbl401ApplicationJSON alsbl401ApplicationJSONObject;
+
     public AlsblResponse withAlsbl401ApplicationJSONObject(Alsbl401ApplicationJSON alsbl401ApplicationJSONObject) {
         this.alsbl401ApplicationJSONObject = alsbl401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class AlsblResponse {
      */
     
     public Alsbl404ApplicationJSON alsbl404ApplicationJSONObject;
+
     public AlsblResponse withAlsbl404ApplicationJSONObject(Alsbl404ApplicationJSON alsbl404ApplicationJSONObject) {
         this.alsbl404ApplicationJSONObject = alsbl404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class AlsblResponse {
      */
     
     public Alsbl500ApplicationJSON alsbl500ApplicationJSONObject;
+
     public AlsblResponse withAlsbl500ApplicationJSONObject(Alsbl500ApplicationJSON alsbl500ApplicationJSONObject) {
         this.alsbl500ApplicationJSONObject = alsbl500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class AlsblResponse {
      */
     
     public Alsbl502ApplicationJSON alsbl502ApplicationJSONObject;
+
     public AlsblResponse withAlsbl502ApplicationJSONObject(Alsbl502ApplicationJSON alsbl502ApplicationJSONObject) {
         this.alsbl502ApplicationJSONObject = alsbl502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class AlsblResponse {
      */
     
     public Alsbl503ApplicationJSON alsbl503ApplicationJSONObject;
+
     public AlsblResponse withAlsbl503ApplicationJSONObject(Alsbl503ApplicationJSON alsbl503ApplicationJSONObject) {
         this.alsbl503ApplicationJSONObject = alsbl503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class AlsblResponse {
      */
     
     public Alsbl504ApplicationJSON alsbl504ApplicationJSONObject;
+
     public AlsblResponse withAlsbl504ApplicationJSONObject(Alsbl504ApplicationJSON alsbl504ApplicationJSONObject) {
         this.alsbl504ApplicationJSONObject = alsbl504ApplicationJSONObject;
         return this;
     }
     
+    public AlsblResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

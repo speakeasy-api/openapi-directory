@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateCustomDomainResponse {
     
     public String contentType;
+
     public DisassociateCustomDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateCustomDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateCustomDomainResponse disassociateCustomDomainResponse;
+
     public DisassociateCustomDomainResponse withDisassociateCustomDomainResponse(org.openapis.openapi.models.shared.DisassociateCustomDomainResponse disassociateCustomDomainResponse) {
         this.disassociateCustomDomainResponse = disassociateCustomDomainResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateCustomDomainResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DisassociateCustomDomainResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateCustomDomainResponse {
      */
     
     public Object invalidRequestException;
+
     public DisassociateCustomDomainResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateCustomDomainResponse {
      */
     
     public Object invalidStateException;
+
     public DisassociateCustomDomainResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateCustomDomainResponse {
     
     
     public Integer statusCode;
+
     public DisassociateCustomDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateCustomDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateCustomDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DisassociateCustomDomainResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateCustomDomainResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DisassociateCustomDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

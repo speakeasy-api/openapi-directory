@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1BatchUpdateEntityTypesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityTypeBatchInline")
     public GoogleCloudDialogflowV2beta1EntityTypeBatch entityTypeBatchInline;
+
     public GoogleCloudDialogflowV2beta1BatchUpdateEntityTypesRequest withEntityTypeBatchInline(GoogleCloudDialogflowV2beta1EntityTypeBatch entityTypeBatchInline) {
         this.entityTypeBatchInline = entityTypeBatchInline;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1BatchUpdateEntityTypesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityTypeBatchUri")
     public String entityTypeBatchUri;
+
     public GoogleCloudDialogflowV2beta1BatchUpdateEntityTypesRequest withEntityTypeBatchUri(String entityTypeBatchUri) {
         this.entityTypeBatchUri = entityTypeBatchUri;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1BatchUpdateEntityTypesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2beta1BatchUpdateEntityTypesRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2beta1BatchUpdateEntityTypesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleCloudDialogflowV2beta1BatchUpdateEntityTypesRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1BatchUpdateEntityTypesRequest(){}
 }

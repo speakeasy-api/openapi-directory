@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMediaResponse {
@@ -12,6 +13,7 @@ public class GetMediaResponse {
      */
     
     public Object clientLimitExceededException;
+
     public GetMediaResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class GetMediaResponse {
      */
     
     public Object connectionLimitExceededException;
+
     public GetMediaResponse withConnectionLimitExceededException(Object connectionLimitExceededException) {
         this.connectionLimitExceededException = connectionLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class GetMediaResponse {
     
     
     public String contentType;
+
     public GetMediaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetMediaResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMediaOutput getMediaOutput;
+
     public GetMediaResponse withGetMediaOutput(org.openapis.openapi.models.shared.GetMediaOutput getMediaOutput) {
         this.getMediaOutput = getMediaOutput;
         return this;
@@ -49,6 +54,7 @@ public class GetMediaResponse {
      */
     
     public Object invalidArgumentException;
+
     public GetMediaResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class GetMediaResponse {
      */
     
     public Object invalidEndpointException;
+
     public GetMediaResponse withInvalidEndpointException(Object invalidEndpointException) {
         this.invalidEndpointException = invalidEndpointException;
         return this;
@@ -69,6 +76,7 @@ public class GetMediaResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetMediaResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -79,6 +87,7 @@ public class GetMediaResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetMediaResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class GetMediaResponse {
     
     
     public Integer statusCode;
+
     public GetMediaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class GetMediaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMediaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMediaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

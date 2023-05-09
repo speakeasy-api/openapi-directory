@@ -18,6 +18,7 @@ public class GetMilestoneOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Milestone")
     public Milestone milestone;
+
     public GetMilestoneOutput withMilestone(Milestone milestone) {
         this.milestone = milestone;
         return this;
@@ -29,9 +30,11 @@ public class GetMilestoneOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadId")
     public String workloadId;
+
     public GetMilestoneOutput withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
     }
     
+    public GetMilestoneOutput(){}
 }

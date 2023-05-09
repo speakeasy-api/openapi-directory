@@ -15,6 +15,7 @@ public class ListAuthorizersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizers")
     public AuthorizerSummary[] authorizers;
+
     public ListAuthorizersResponse withAuthorizers(AuthorizerSummary[] authorizers) {
         this.authorizers = authorizers;
         return this;
@@ -23,9 +24,11 @@ public class ListAuthorizersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextMarker")
     public String nextMarker;
+
     public ListAuthorizersResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListAuthorizersResponse(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InputLogEvent {
     @JsonProperty("message")
     public String message;
+
     public InputLogEvent withMessage(String message) {
         this.message = message;
         return this;
@@ -19,9 +20,14 @@ public class InputLogEvent {
     
     @JsonProperty("timestamp")
     public Long timestamp;
+
     public InputLogEvent withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public InputLogEvent(@JsonProperty("message") String message, @JsonProperty("timestamp") Long timestamp) {
+        this.message = message;
+        this.timestamp = timestamp;
+  }
 }

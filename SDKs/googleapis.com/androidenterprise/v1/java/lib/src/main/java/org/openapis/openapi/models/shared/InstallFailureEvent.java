@@ -18,6 +18,7 @@ public class InstallFailureEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public InstallFailureEvent withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -29,6 +30,7 @@ public class InstallFailureEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureDetails")
     public String failureDetails;
+
     public InstallFailureEvent withFailureDetails(String failureDetails) {
         this.failureDetails = failureDetails;
         return this;
@@ -40,6 +42,7 @@ public class InstallFailureEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public InstallFailureEventFailureReasonEnum failureReason;
+
     public InstallFailureEvent withFailureReason(InstallFailureEventFailureReasonEnum failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -51,6 +54,7 @@ public class InstallFailureEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public InstallFailureEvent withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -62,9 +66,11 @@ public class InstallFailureEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public InstallFailureEvent withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public InstallFailureEvent(){}
 }

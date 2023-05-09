@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PfdawResponse {
     
     public String contentType;
+
     public PfdawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PfdawResponse {
     
     
     public Integer statusCode;
+
     public PfdawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PfdawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PfdawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PfdawResponse {
      */
     
     public Pfdaw400ApplicationJSON pfdaw400ApplicationJSONObject;
+
     public PfdawResponse withPfdaw400ApplicationJSONObject(Pfdaw400ApplicationJSON pfdaw400ApplicationJSONObject) {
         this.pfdaw400ApplicationJSONObject = pfdaw400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PfdawResponse {
      */
     
     public Pfdaw401ApplicationJSON pfdaw401ApplicationJSONObject;
+
     public PfdawResponse withPfdaw401ApplicationJSONObject(Pfdaw401ApplicationJSON pfdaw401ApplicationJSONObject) {
         this.pfdaw401ApplicationJSONObject = pfdaw401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PfdawResponse {
      */
     
     public Pfdaw404ApplicationJSON pfdaw404ApplicationJSONObject;
+
     public PfdawResponse withPfdaw404ApplicationJSONObject(Pfdaw404ApplicationJSON pfdaw404ApplicationJSONObject) {
         this.pfdaw404ApplicationJSONObject = pfdaw404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class PfdawResponse {
      */
     
     public Pfdaw500ApplicationJSON pfdaw500ApplicationJSONObject;
+
     public PfdawResponse withPfdaw500ApplicationJSONObject(Pfdaw500ApplicationJSON pfdaw500ApplicationJSONObject) {
         this.pfdaw500ApplicationJSONObject = pfdaw500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class PfdawResponse {
      */
     
     public Pfdaw502ApplicationJSON pfdaw502ApplicationJSONObject;
+
     public PfdawResponse withPfdaw502ApplicationJSONObject(Pfdaw502ApplicationJSON pfdaw502ApplicationJSONObject) {
         this.pfdaw502ApplicationJSONObject = pfdaw502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class PfdawResponse {
      */
     
     public Pfdaw503ApplicationJSON pfdaw503ApplicationJSONObject;
+
     public PfdawResponse withPfdaw503ApplicationJSONObject(Pfdaw503ApplicationJSON pfdaw503ApplicationJSONObject) {
         this.pfdaw503ApplicationJSONObject = pfdaw503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class PfdawResponse {
      */
     
     public Pfdaw504ApplicationJSON pfdaw504ApplicationJSONObject;
+
     public PfdawResponse withPfdaw504ApplicationJSONObject(Pfdaw504ApplicationJSON pfdaw504ApplicationJSONObject) {
         this.pfdaw504ApplicationJSONObject = pfdaw504ApplicationJSONObject;
         return this;
     }
     
+    public PfdawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

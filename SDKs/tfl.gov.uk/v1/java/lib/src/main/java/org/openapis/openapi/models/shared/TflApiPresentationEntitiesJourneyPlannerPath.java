@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesJourneyPlannerPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elevation")
     public TflApiCommonJourneyPlannerJpElevation[] elevation;
+
     public TflApiPresentationEntitiesJourneyPlannerPath withElevation(TflApiCommonJourneyPlannerJpElevation[] elevation) {
         this.elevation = elevation;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesJourneyPlannerPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineString")
     public String lineString;
+
     public TflApiPresentationEntitiesJourneyPlannerPath withLineString(String lineString) {
         this.lineString = lineString;
         return this;
@@ -28,9 +30,11 @@ public class TflApiPresentationEntitiesJourneyPlannerPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopPoints")
     public TflApiPresentationEntitiesIdentifier[] stopPoints;
+
     public TflApiPresentationEntitiesJourneyPlannerPath withStopPoints(TflApiPresentationEntitiesIdentifier[] stopPoints) {
         this.stopPoints = stopPoints;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerPath(){}
 }

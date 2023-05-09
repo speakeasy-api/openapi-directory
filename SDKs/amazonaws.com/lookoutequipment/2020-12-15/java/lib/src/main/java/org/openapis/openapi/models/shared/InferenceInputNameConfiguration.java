@@ -15,6 +15,7 @@ public class InferenceInputNameConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentTimestampDelimiter")
     public String componentTimestampDelimiter;
+
     public InferenceInputNameConfiguration withComponentTimestampDelimiter(String componentTimestampDelimiter) {
         this.componentTimestampDelimiter = componentTimestampDelimiter;
         return this;
@@ -23,9 +24,11 @@ public class InferenceInputNameConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimestampFormat")
     public String timestampFormat;
+
     public InferenceInputNameConfiguration withTimestampFormat(String timestampFormat) {
         this.timestampFormat = timestampFormat;
         return this;
     }
     
+    public InferenceInputNameConfiguration(){}
 }

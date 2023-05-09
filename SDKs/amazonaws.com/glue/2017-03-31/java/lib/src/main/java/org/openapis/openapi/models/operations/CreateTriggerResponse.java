@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTriggerResponse {
@@ -12,6 +13,7 @@ public class CreateTriggerResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateTriggerResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateTriggerResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateTriggerResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class CreateTriggerResponse {
     
     
     public String contentType;
+
     public CreateTriggerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateTriggerResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTriggerResponse createTriggerResponse;
+
     public CreateTriggerResponse withCreateTriggerResponse(org.openapis.openapi.models.shared.CreateTriggerResponse createTriggerResponse) {
         this.createTriggerResponse = createTriggerResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateTriggerResponse {
      */
     
     public Object entityNotFoundException;
+
     public CreateTriggerResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateTriggerResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateTriggerResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -69,6 +76,7 @@ public class CreateTriggerResponse {
      */
     
     public Object internalServiceException;
+
     public CreateTriggerResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -79,6 +87,7 @@ public class CreateTriggerResponse {
      */
     
     public Object invalidInputException;
+
     public CreateTriggerResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -89,6 +98,7 @@ public class CreateTriggerResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateTriggerResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -99,6 +109,7 @@ public class CreateTriggerResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateTriggerResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -106,6 +117,7 @@ public class CreateTriggerResponse {
     
     
     public Integer statusCode;
+
     public CreateTriggerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class CreateTriggerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTriggerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateTriggerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class AirQualityAirQualityGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AirQualityAirQualityGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -22,6 +23,7 @@ public class AirQualityAirQualityGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
     public String lat;
+
     public AirQualityAirQualityGetRequest withLat(String lat) {
         this.lat = lat;
         return this;
@@ -32,6 +34,7 @@ public class AirQualityAirQualityGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
     public String lon;
+
     public AirQualityAirQualityGetRequest withLon(String lon) {
         this.lon = lon;
         return this;
@@ -42,6 +45,7 @@ public class AirQualityAirQualityGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=place_id")
     public String placeId;
+
     public AirQualityAirQualityGetRequest withPlaceId(String placeId) {
         this.placeId = placeId;
         return this;
@@ -56,9 +60,11 @@ public class AirQualityAirQualityGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timezone")
     public String timezone;
+
     public AirQualityAirQualityGetRequest withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public AirQualityAirQualityGetRequest(){}
 }

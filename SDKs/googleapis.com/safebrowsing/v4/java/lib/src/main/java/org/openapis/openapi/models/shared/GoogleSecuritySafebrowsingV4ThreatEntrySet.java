@@ -18,6 +18,7 @@ public class GoogleSecuritySafebrowsingV4ThreatEntrySet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compressionType")
     public GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum compressionType;
+
     public GoogleSecuritySafebrowsingV4ThreatEntrySet withCompressionType(GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum compressionType) {
         this.compressionType = compressionType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleSecuritySafebrowsingV4ThreatEntrySet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawHashes")
     public GoogleSecuritySafebrowsingV4RawHashes rawHashes;
+
     public GoogleSecuritySafebrowsingV4ThreatEntrySet withRawHashes(GoogleSecuritySafebrowsingV4RawHashes rawHashes) {
         this.rawHashes = rawHashes;
         return this;
@@ -40,6 +42,7 @@ public class GoogleSecuritySafebrowsingV4ThreatEntrySet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawIndices")
     public GoogleSecuritySafebrowsingV4RawIndices rawIndices;
+
     public GoogleSecuritySafebrowsingV4ThreatEntrySet withRawIndices(GoogleSecuritySafebrowsingV4RawIndices rawIndices) {
         this.rawIndices = rawIndices;
         return this;
@@ -51,6 +54,7 @@ public class GoogleSecuritySafebrowsingV4ThreatEntrySet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("riceHashes")
     public GoogleSecuritySafebrowsingV4RiceDeltaEncoding riceHashes;
+
     public GoogleSecuritySafebrowsingV4ThreatEntrySet withRiceHashes(GoogleSecuritySafebrowsingV4RiceDeltaEncoding riceHashes) {
         this.riceHashes = riceHashes;
         return this;
@@ -62,9 +66,11 @@ public class GoogleSecuritySafebrowsingV4ThreatEntrySet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("riceIndices")
     public GoogleSecuritySafebrowsingV4RiceDeltaEncoding riceIndices;
+
     public GoogleSecuritySafebrowsingV4ThreatEntrySet withRiceIndices(GoogleSecuritySafebrowsingV4RiceDeltaEncoding riceIndices) {
         this.riceIndices = riceIndices;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4ThreatEntrySet(){}
 }

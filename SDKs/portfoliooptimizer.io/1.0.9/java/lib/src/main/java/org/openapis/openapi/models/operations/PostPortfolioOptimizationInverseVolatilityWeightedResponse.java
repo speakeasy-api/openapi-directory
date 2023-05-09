@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioOptimizationInverseVolatilityWeightedResponse {
     
     public String contentType;
+
     public PostPortfolioOptimizationInverseVolatilityWeightedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioOptimizationInverseVolatilityWeightedResponse {
     
     
     public Integer statusCode;
+
     public PostPortfolioOptimizationInverseVolatilityWeightedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioOptimizationInverseVolatilityWeightedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioOptimizationInverseVolatilityWeightedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioOptimizationInverseVolatilityWeightedResponse {
      */
     
     public PostPortfolioOptimizationInverseVolatilityWeighted200ApplicationJSON postPortfolioOptimizationInverseVolatilityWeighted200ApplicationJSONObject;
+
     public PostPortfolioOptimizationInverseVolatilityWeightedResponse withPostPortfolioOptimizationInverseVolatilityWeighted200ApplicationJSONObject(PostPortfolioOptimizationInverseVolatilityWeighted200ApplicationJSON postPortfolioOptimizationInverseVolatilityWeighted200ApplicationJSONObject) {
         this.postPortfolioOptimizationInverseVolatilityWeighted200ApplicationJSONObject = postPortfolioOptimizationInverseVolatilityWeighted200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioOptimizationInverseVolatilityWeightedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

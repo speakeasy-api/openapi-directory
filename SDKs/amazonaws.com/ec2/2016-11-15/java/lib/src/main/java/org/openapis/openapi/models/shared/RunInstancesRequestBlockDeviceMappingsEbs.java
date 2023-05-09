@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RunInstancesRequestBlockDeviceMappingsEbs {
     
     public Boolean deleteOnTermination;
+
     public RunInstancesRequestBlockDeviceMappingsEbs withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -19,6 +20,7 @@ public class RunInstancesRequestBlockDeviceMappingsEbs {
     
     
     public Boolean encrypted;
+
     public RunInstancesRequestBlockDeviceMappingsEbs withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -26,6 +28,7 @@ public class RunInstancesRequestBlockDeviceMappingsEbs {
     
     
     public Long iops;
+
     public RunInstancesRequestBlockDeviceMappingsEbs withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -33,6 +36,7 @@ public class RunInstancesRequestBlockDeviceMappingsEbs {
     
     
     public String kmsKeyId;
+
     public RunInstancesRequestBlockDeviceMappingsEbs withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -40,6 +44,7 @@ public class RunInstancesRequestBlockDeviceMappingsEbs {
     
     
     public String outpostArn;
+
     public RunInstancesRequestBlockDeviceMappingsEbs withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -47,6 +52,7 @@ public class RunInstancesRequestBlockDeviceMappingsEbs {
     
     
     public String snapshotId;
+
     public RunInstancesRequestBlockDeviceMappingsEbs withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -54,6 +60,7 @@ public class RunInstancesRequestBlockDeviceMappingsEbs {
     
     
     public Long throughput;
+
     public RunInstancesRequestBlockDeviceMappingsEbs withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -61,6 +68,7 @@ public class RunInstancesRequestBlockDeviceMappingsEbs {
     
     
     public Long volumeSize;
+
     public RunInstancesRequestBlockDeviceMappingsEbs withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
@@ -68,9 +76,11 @@ public class RunInstancesRequestBlockDeviceMappingsEbs {
     
     
     public RunInstancesRequestBlockDeviceMappingsEbsVolumeTypeEnum volumeType;
+
     public RunInstancesRequestBlockDeviceMappingsEbs withVolumeType(RunInstancesRequestBlockDeviceMappingsEbsVolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public RunInstancesRequestBlockDeviceMappingsEbs(){}
 }

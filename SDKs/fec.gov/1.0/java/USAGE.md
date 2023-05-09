@@ -3,36 +3,32 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetAuditCaseRequest;
 import org.openapis.openapi.models.operations.GetAuditCaseResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident", "distinctio") {{
                     apiKeyHeaderAuth = "YOUR_API_KEY_HERE";
                     apiKeyQueryAuth = "YOUR_API_KEY_HERE";
                     apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetAuditCaseRequest req = new GetAuditCaseRequest() {{
-                apiKey = "corrupti";
+            GetAuditCaseRequest req = new GetAuditCaseRequest("quibusdam") {{
                 auditCaseId = new String[]{{
-                    add("distinctio"),
-                    add("quibusdam"),
-                    add("unde"),
+                    add("nulla"),
+                    add("corrupti"),
+                    add("illum"),
                 }};
                 auditId = new Integer[]{{
-                    add(544883),
-                    add(847252),
-                    add(423655),
                     add(623564),
+                    add(645894),
                 }};
                 candidateId = new String[]{{
-                    add("suscipit"),
                     add("iure"),
                     add("magnam"),
                 }};
@@ -71,7 +67,7 @@ public class Application {
                 sortNullOnly = false;
                 sortNullsLast = false;
                 subCategoryId = "at";
-            }}            
+            }};            
 
             GetAuditCaseResponse res = sdk.audit.getAuditCase(req);
 
@@ -81,5 +77,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

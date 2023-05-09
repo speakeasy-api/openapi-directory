@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAccountAuditConfigurationResponse {
     
     public String contentType;
+
     public UpdateAccountAuditConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAccountAuditConfigurationResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateAccountAuditConfigurationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAccountAuditConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateAccountAuditConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateAccountAuditConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateAccountAuditConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateAccountAuditConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAccountAuditConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAccountAuditConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAccountAuditConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateAccountAuditConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateAccountAuditConfigurationResponse;
+
     public UpdateAccountAuditConfigurationResponse withUpdateAccountAuditConfigurationResponse(java.util.Map<String, Object> updateAccountAuditConfigurationResponse) {
         this.updateAccountAuditConfigurationResponse = updateAccountAuditConfigurationResponse;
         return this;
     }
     
+    public UpdateAccountAuditConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

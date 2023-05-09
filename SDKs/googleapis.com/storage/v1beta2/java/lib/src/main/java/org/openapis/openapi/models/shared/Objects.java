@@ -18,6 +18,7 @@ public class Objects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Object[] items;
+
     public Objects withItems(Object[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class Objects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Objects withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class Objects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public Objects withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -51,9 +54,11 @@ public class Objects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefixes")
     public String[] prefixes;
+
     public Objects withPrefixes(String[] prefixes) {
         this.prefixes = prefixes;
         return this;
     }
     
+    public Objects(){}
 }

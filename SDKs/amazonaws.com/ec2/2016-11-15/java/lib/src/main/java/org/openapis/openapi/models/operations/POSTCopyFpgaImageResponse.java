@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTCopyFpgaImageResponse {
     
     public byte[] body;
+
     public POSTCopyFpgaImageResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTCopyFpgaImageResponse {
     
     
     public String contentType;
+
     public POSTCopyFpgaImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTCopyFpgaImageResponse {
     
     
     public Integer statusCode;
+
     public POSTCopyFpgaImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTCopyFpgaImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTCopyFpgaImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTCopyFpgaImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

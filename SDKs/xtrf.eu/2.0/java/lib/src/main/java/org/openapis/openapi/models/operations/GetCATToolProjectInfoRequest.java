@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCATToolProjectInfoRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public GetCATToolProjectInfoRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GetCATToolProjectInfoRequest(@JsonProperty("projectId") String projectId) {
+        this.projectId = projectId;
+  }
 }

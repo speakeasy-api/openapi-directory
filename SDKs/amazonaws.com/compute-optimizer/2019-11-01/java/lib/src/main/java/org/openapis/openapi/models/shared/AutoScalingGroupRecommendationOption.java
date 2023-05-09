@@ -15,6 +15,7 @@ public class AutoScalingGroupRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public AutoScalingGroupConfiguration configuration;
+
     public AutoScalingGroupRecommendationOption withConfiguration(AutoScalingGroupConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -23,6 +24,7 @@ public class AutoScalingGroupRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migrationEffort")
     public MigrationEffortEnum migrationEffort;
+
     public AutoScalingGroupRecommendationOption withMigrationEffort(MigrationEffortEnum migrationEffort) {
         this.migrationEffort = migrationEffort;
         return this;
@@ -31,6 +33,7 @@ public class AutoScalingGroupRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceRisk")
     public Double performanceRisk;
+
     public AutoScalingGroupRecommendationOption withPerformanceRisk(Double performanceRisk) {
         this.performanceRisk = performanceRisk;
         return this;
@@ -39,6 +42,7 @@ public class AutoScalingGroupRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectedUtilizationMetrics")
     public UtilizationMetric[] projectedUtilizationMetrics;
+
     public AutoScalingGroupRecommendationOption withProjectedUtilizationMetrics(UtilizationMetric[] projectedUtilizationMetrics) {
         this.projectedUtilizationMetrics = projectedUtilizationMetrics;
         return this;
@@ -47,6 +51,7 @@ public class AutoScalingGroupRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rank")
     public Long rank;
+
     public AutoScalingGroupRecommendationOption withRank(Long rank) {
         this.rank = rank;
         return this;
@@ -55,9 +60,11 @@ public class AutoScalingGroupRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsOpportunity")
     public SavingsOpportunity savingsOpportunity;
+
     public AutoScalingGroupRecommendationOption withSavingsOpportunity(SavingsOpportunity savingsOpportunity) {
         this.savingsOpportunity = savingsOpportunity;
         return this;
     }
     
+    public AutoScalingGroupRecommendationOption(){}
 }

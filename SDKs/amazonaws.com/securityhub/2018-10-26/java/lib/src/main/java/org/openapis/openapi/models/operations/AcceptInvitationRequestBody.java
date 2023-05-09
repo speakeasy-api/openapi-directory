@@ -12,6 +12,7 @@ public class AcceptInvitationRequestBody {
      */
     @JsonProperty("InvitationId")
     public String invitationId;
+
     public AcceptInvitationRequestBody withInvitationId(String invitationId) {
         this.invitationId = invitationId;
         return this;
@@ -22,9 +23,14 @@ public class AcceptInvitationRequestBody {
      */
     @JsonProperty("MasterId")
     public String masterId;
+
     public AcceptInvitationRequestBody withMasterId(String masterId) {
         this.masterId = masterId;
         return this;
     }
     
+    public AcceptInvitationRequestBody(@JsonProperty("InvitationId") String invitationId, @JsonProperty("MasterId") String masterId) {
+        this.invitationId = invitationId;
+        this.masterId = masterId;
+  }
 }

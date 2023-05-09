@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DomainsrdapIpGetRequest {
@@ -12,6 +13,7 @@ public class DomainsrdapIpGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DomainsrdapIpGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DomainsrdapIpGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DomainsrdapIpGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DomainsrdapIpGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DomainsrdapIpGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DomainsrdapIpGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DomainsrdapIpGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DomainsrdapIpGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DomainsrdapIpGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -59,6 +65,7 @@ public class DomainsrdapIpGetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ipId")
     public String ipId;
+
     public DomainsrdapIpGetRequest withIpId(String ipId) {
         this.ipId = ipId;
         return this;
@@ -66,6 +73,7 @@ public class DomainsrdapIpGetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ipId1")
     public String ipId1;
+
     public DomainsrdapIpGetRequest withIpId1(String ipId1) {
         this.ipId1 = ipId1;
         return this;
@@ -76,6 +84,7 @@ public class DomainsrdapIpGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DomainsrdapIpGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -86,6 +95,7 @@ public class DomainsrdapIpGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DomainsrdapIpGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -96,6 +106,7 @@ public class DomainsrdapIpGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DomainsrdapIpGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -106,6 +117,7 @@ public class DomainsrdapIpGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DomainsrdapIpGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -116,6 +128,7 @@ public class DomainsrdapIpGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DomainsrdapIpGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -126,9 +139,14 @@ public class DomainsrdapIpGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DomainsrdapIpGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DomainsrdapIpGetRequest(@JsonProperty("ipId") String ipId, @JsonProperty("ipId1") String ipId1) {
+        this.ipId = ipId;
+        this.ipId1 = ipId1;
+  }
 }

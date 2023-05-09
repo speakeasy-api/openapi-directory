@@ -15,6 +15,7 @@ public class HULocalAccountIdentification {
      */
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public HULocalAccountIdentification withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -25,9 +26,14 @@ public class HULocalAccountIdentification {
      */
     @JsonProperty("type")
     public HULocalAccountIdentificationTypeEnum type;
+
     public HULocalAccountIdentification withType(HULocalAccountIdentificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public HULocalAccountIdentification(@JsonProperty("accountNumber") String accountNumber, @JsonProperty("type") HULocalAccountIdentificationTypeEnum type) {
+        this.accountNumber = accountNumber;
+        this.type = type;
+  }
 }

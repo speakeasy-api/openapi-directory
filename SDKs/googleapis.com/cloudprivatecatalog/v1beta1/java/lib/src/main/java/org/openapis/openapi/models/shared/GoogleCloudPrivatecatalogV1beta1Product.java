@@ -20,6 +20,7 @@ public class GoogleCloudPrivatecatalogV1beta1Product {
      */
     
     public String assetType;
+
     public GoogleCloudPrivatecatalogV1beta1Product withAssetType(String assetType) {
         this.assetType = assetType;
         return this;
@@ -30,6 +31,7 @@ public class GoogleCloudPrivatecatalogV1beta1Product {
      */
     
     public String createTime;
+
     public GoogleCloudPrivatecatalogV1beta1Product withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -146,6 +148,7 @@ public class GoogleCloudPrivatecatalogV1beta1Product {
      */
     
     public java.util.Map<String, Object> displayMetadata;
+
     public GoogleCloudPrivatecatalogV1beta1Product withDisplayMetadata(java.util.Map<String, Object> displayMetadata) {
         this.displayMetadata = displayMetadata;
         return this;
@@ -156,6 +159,7 @@ public class GoogleCloudPrivatecatalogV1beta1Product {
      */
     
     public String iconUri;
+
     public GoogleCloudPrivatecatalogV1beta1Product withIconUri(String iconUri) {
         this.iconUri = iconUri;
         return this;
@@ -169,6 +173,7 @@ public class GoogleCloudPrivatecatalogV1beta1Product {
      */
     
     public String name;
+
     public GoogleCloudPrivatecatalogV1beta1Product withName(String name) {
         this.name = name;
         return this;
@@ -179,9 +184,11 @@ public class GoogleCloudPrivatecatalogV1beta1Product {
      */
     
     public String updateTime;
+
     public GoogleCloudPrivatecatalogV1beta1Product withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudPrivatecatalogV1beta1Product(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListArchiveRulesResponse {
     @JsonProperty("archiveRules")
     public ArchiveRuleSummary[] archiveRules;
+
     public ListArchiveRulesResponse withArchiveRules(ArchiveRuleSummary[] archiveRules) {
         this.archiveRules = archiveRules;
         return this;
@@ -22,9 +23,13 @@ public class ListArchiveRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListArchiveRulesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListArchiveRulesResponse(@JsonProperty("archiveRules") ArchiveRuleSummary[] archiveRules) {
+        this.archiveRules = archiveRules;
+  }
 }

@@ -15,6 +15,7 @@ public class UpdateImagePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateImagePipelineResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +24,7 @@ public class UpdateImagePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imagePipelineArn")
     public String imagePipelineArn;
+
     public UpdateImagePipelineResponse withImagePipelineArn(String imagePipelineArn) {
         this.imagePipelineArn = imagePipelineArn;
         return this;
@@ -31,9 +33,11 @@ public class UpdateImagePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public UpdateImagePipelineResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public UpdateImagePipelineResponse(){}
 }

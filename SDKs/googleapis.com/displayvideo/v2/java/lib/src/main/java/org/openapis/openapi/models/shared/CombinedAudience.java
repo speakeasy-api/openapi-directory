@@ -18,6 +18,7 @@ public class CombinedAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combinedAudienceId")
     public String combinedAudienceId;
+
     public CombinedAudience withCombinedAudienceId(String combinedAudienceId) {
         this.combinedAudienceId = combinedAudienceId;
         return this;
@@ -29,6 +30,7 @@ public class CombinedAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CombinedAudience withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,9 +42,11 @@ public class CombinedAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CombinedAudience withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CombinedAudience(){}
 }

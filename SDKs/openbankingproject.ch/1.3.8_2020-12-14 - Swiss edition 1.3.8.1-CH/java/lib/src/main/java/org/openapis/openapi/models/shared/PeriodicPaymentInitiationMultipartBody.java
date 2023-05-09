@@ -20,6 +20,7 @@ public class PeriodicPaymentInitiationMultipartBody {
      */
     @SpeakeasyMetadata("multipartForm:name=json_standingorderType,json")
     public PeriodicPaymentInitiationXmlPart2StandingorderTypeJson jsonStandingorderType;
+
     public PeriodicPaymentInitiationMultipartBody withJsonStandingorderType(PeriodicPaymentInitiationXmlPart2StandingorderTypeJson jsonStandingorderType) {
         this.jsonStandingorderType = jsonStandingorderType;
         return this;
@@ -27,9 +28,11 @@ public class PeriodicPaymentInitiationMultipartBody {
     
     @SpeakeasyMetadata("multipartForm:name=xml_sct,json")
     public Object xmlSct;
+
     public PeriodicPaymentInitiationMultipartBody withXmlSct(Object xmlSct) {
         this.xmlSct = xmlSct;
         return this;
     }
     
+    public PeriodicPaymentInitiationMultipartBody(){}
 }

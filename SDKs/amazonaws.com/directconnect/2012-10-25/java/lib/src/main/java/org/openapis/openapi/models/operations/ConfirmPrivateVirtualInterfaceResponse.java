@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConfirmPrivateVirtualInterfaceResponse {
@@ -12,6 +13,7 @@ public class ConfirmPrivateVirtualInterfaceResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfirmPrivateVirtualInterfaceResponse confirmPrivateVirtualInterfaceResponse;
+
     public ConfirmPrivateVirtualInterfaceResponse withConfirmPrivateVirtualInterfaceResponse(org.openapis.openapi.models.shared.ConfirmPrivateVirtualInterfaceResponse confirmPrivateVirtualInterfaceResponse) {
         this.confirmPrivateVirtualInterfaceResponse = confirmPrivateVirtualInterfaceResponse;
         return this;
@@ -19,6 +21,7 @@ public class ConfirmPrivateVirtualInterfaceResponse {
     
     
     public String contentType;
+
     public ConfirmPrivateVirtualInterfaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ConfirmPrivateVirtualInterfaceResponse {
      */
     
     public Object directConnectClientException;
+
     public ConfirmPrivateVirtualInterfaceResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class ConfirmPrivateVirtualInterfaceResponse {
      */
     
     public Object directConnectServerException;
+
     public ConfirmPrivateVirtualInterfaceResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class ConfirmPrivateVirtualInterfaceResponse {
     
     
     public Integer statusCode;
+
     public ConfirmPrivateVirtualInterfaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ConfirmPrivateVirtualInterfaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConfirmPrivateVirtualInterfaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ConfirmPrivateVirtualInterfaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

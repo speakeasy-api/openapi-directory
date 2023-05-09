@@ -18,17 +18,19 @@ public class GoogleCloudDiscoveryengineV1betaDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudDiscoveryengineV1betaDocument withId(String id) {
         this.id = id;
         return this;
     }
     
     /**
-     * The JSON string representation of the document. It should conform to the registered schema or an INVALID_ARGUMENT error is thrown.
+     * The JSON string representation of the document. It should conform to the registered Schema.schema or an `INVALID_ARGUMENT` error is thrown.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonData")
     public String jsonData;
+
     public GoogleCloudDiscoveryengineV1betaDocument withJsonData(String jsonData) {
         this.jsonData = jsonData;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDiscoveryengineV1betaDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDiscoveryengineV1betaDocument withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDiscoveryengineV1betaDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentDocumentId")
     public String parentDocumentId;
+
     public GoogleCloudDiscoveryengineV1betaDocument withParentDocumentId(String parentDocumentId) {
         this.parentDocumentId = parentDocumentId;
         return this;
@@ -62,20 +66,23 @@ public class GoogleCloudDiscoveryengineV1betaDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaId")
     public String schemaId;
+
     public GoogleCloudDiscoveryengineV1betaDocument withSchemaId(String schemaId) {
         this.schemaId = schemaId;
         return this;
     }
     
     /**
-     * The structured JSON data for the document. It should conform to the registered schema or an INVALID_ARGUMENT error is thrown.
+     * The structured JSON data for the document. It should conform to the registered Schema.schema or an `INVALID_ARGUMENT` error is thrown.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structData")
     public java.util.Map<String, Object> structData;
+
     public GoogleCloudDiscoveryengineV1betaDocument withStructData(java.util.Map<String, Object> structData) {
         this.structData = structData;
         return this;
     }
     
+    public GoogleCloudDiscoveryengineV1betaDocument(){}
 }

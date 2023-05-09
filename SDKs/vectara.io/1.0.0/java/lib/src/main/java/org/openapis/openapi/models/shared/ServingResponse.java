@@ -12,6 +12,7 @@ public class ServingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corpusKey")
     public ServingCorpusKey corpusKey;
+
     public ServingResponse withCorpusKey(ServingCorpusKey corpusKey) {
         this.corpusKey = corpusKey;
         return this;
@@ -23,6 +24,7 @@ public class ServingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentIndex")
     public Long documentIndex;
+
     public ServingResponse withDocumentIndex(Long documentIndex) {
         this.documentIndex = documentIndex;
         return this;
@@ -31,6 +33,7 @@ public class ServingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ServingAttribute[] metadata;
+
     public ServingResponse withMetadata(ServingAttribute[] metadata) {
         this.metadata = metadata;
         return this;
@@ -42,6 +45,7 @@ public class ServingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public ServingResponse withScore(Float score) {
         this.score = score;
         return this;
@@ -50,9 +54,11 @@ public class ServingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public ServingResponse withText(String text) {
         this.text = text;
         return this;
     }
     
+    public ServingResponse(){}
 }

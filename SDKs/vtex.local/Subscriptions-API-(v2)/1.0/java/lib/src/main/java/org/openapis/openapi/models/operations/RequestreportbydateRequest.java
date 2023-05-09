@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestreportbydateRequest {
@@ -12,6 +13,7 @@ public class RequestreportbydateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public RequestreportbydateRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class RequestreportbydateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public RequestreportbydateRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class RequestreportbydateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beginDate")
     public Integer beginDate;
+
     public RequestreportbydateRequest withBeginDate(Integer beginDate) {
         this.beginDate = beginDate;
         return this;
@@ -42,6 +46,7 @@ public class RequestreportbydateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public Integer endDate;
+
     public RequestreportbydateRequest withEndDate(Integer endDate) {
         this.endDate = endDate;
         return this;
@@ -52,9 +57,17 @@ public class RequestreportbydateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requesterEmail")
     public String requesterEmail;
+
     public RequestreportbydateRequest withRequesterEmail(String requesterEmail) {
         this.requesterEmail = requesterEmail;
         return this;
     }
     
+    public RequestreportbydateRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("beginDate") Integer beginDate, @JsonProperty("endDate") Integer endDate, @JsonProperty("requesterEmail") String requesterEmail) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.beginDate = beginDate;
+        this.endDate = endDate;
+        this.requesterEmail = requesterEmail;
+  }
 }

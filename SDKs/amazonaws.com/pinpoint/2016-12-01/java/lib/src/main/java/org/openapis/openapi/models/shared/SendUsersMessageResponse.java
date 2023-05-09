@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendUsersMessageResponse {
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public SendUsersMessageResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -22,6 +23,7 @@ public class SendUsersMessageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestId")
     public String requestId;
+
     public SendUsersMessageResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -30,9 +32,13 @@ public class SendUsersMessageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Result")
     public java.util.Map<String, java.util.Map<String, EndpointMessageResult>> result;
+
     public SendUsersMessageResponse withResult(java.util.Map<String, java.util.Map<String, EndpointMessageResult>> result) {
         this.result = result;
         return this;
     }
     
+    public SendUsersMessageResponse(@JsonProperty("ApplicationId") String applicationId) {
+        this.applicationId = applicationId;
+  }
 }

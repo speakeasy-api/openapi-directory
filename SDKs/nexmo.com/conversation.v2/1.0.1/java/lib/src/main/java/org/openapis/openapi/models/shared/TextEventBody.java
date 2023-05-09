@@ -18,9 +18,11 @@ public class TextEventBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public TextEventBody withText(String text) {
         this.text = text;
         return this;
     }
     
+    public TextEventBody(){}
 }

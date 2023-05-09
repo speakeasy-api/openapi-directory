@@ -16,6 +16,7 @@ public class ECSServiceProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowerBoundValues")
     public Double[] lowerBoundValues;
+
     public ECSServiceProjectedMetric withLowerBoundValues(Double[] lowerBoundValues) {
         this.lowerBoundValues = lowerBoundValues;
         return this;
@@ -24,6 +25,7 @@ public class ECSServiceProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public ECSServiceMetricNameEnum name;
+
     public ECSServiceProjectedMetric withName(ECSServiceMetricNameEnum name) {
         this.name = name;
         return this;
@@ -32,6 +34,7 @@ public class ECSServiceProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamps")
     public OffsetDateTime[] timestamps;
+
     public ECSServiceProjectedMetric withTimestamps(OffsetDateTime[] timestamps) {
         this.timestamps = timestamps;
         return this;
@@ -40,9 +43,11 @@ public class ECSServiceProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upperBoundValues")
     public Double[] upperBoundValues;
+
     public ECSServiceProjectedMetric withUpperBoundValues(Double[] upperBoundValues) {
         this.upperBoundValues = upperBoundValues;
         return this;
     }
     
+    public ECSServiceProjectedMetric(){}
 }

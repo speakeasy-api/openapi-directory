@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCertificateRequest {
     @JsonProperty("certificateName")
     public String certificateName;
+
     public CreateCertificateRequest withCertificateName(String certificateName) {
         this.certificateName = certificateName;
         return this;
@@ -18,6 +19,7 @@ public class CreateCertificateRequest {
     
     @JsonProperty("domainName")
     public String domainName;
+
     public CreateCertificateRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -26,6 +28,7 @@ public class CreateCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAlternativeNames")
     public String[] subjectAlternativeNames;
+
     public CreateCertificateRequest withSubjectAlternativeNames(String[] subjectAlternativeNames) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         return this;
@@ -34,9 +37,14 @@ public class CreateCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateCertificateRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCertificateRequest(@JsonProperty("certificateName") String certificateName, @JsonProperty("domainName") String domainName) {
+        this.certificateName = certificateName;
+        this.domainName = domainName;
+  }
 }

@@ -77,4 +77,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/TagResourcesInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UntagResourcesOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UntagResourcesInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

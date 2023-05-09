@@ -12,6 +12,7 @@ public class GetCalendarStateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AtTime")
     public String atTime;
+
     public GetCalendarStateRequest withAtTime(String atTime) {
         this.atTime = atTime;
         return this;
@@ -19,9 +20,13 @@ public class GetCalendarStateRequest {
     
     @JsonProperty("CalendarNames")
     public String[] calendarNames;
+
     public GetCalendarStateRequest withCalendarNames(String[] calendarNames) {
         this.calendarNames = calendarNames;
         return this;
     }
     
+    public GetCalendarStateRequest(@JsonProperty("CalendarNames") String[] calendarNames) {
+        this.calendarNames = calendarNames;
+  }
 }

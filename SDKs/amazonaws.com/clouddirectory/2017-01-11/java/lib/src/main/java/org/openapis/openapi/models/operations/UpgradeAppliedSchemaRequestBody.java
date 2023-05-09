@@ -14,6 +14,7 @@ public class UpgradeAppliedSchemaRequestBody {
      */
     @JsonProperty("DirectoryArn")
     public String directoryArn;
+
     public UpgradeAppliedSchemaRequestBody withDirectoryArn(String directoryArn) {
         this.directoryArn = directoryArn;
         return this;
@@ -25,6 +26,7 @@ public class UpgradeAppliedSchemaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public UpgradeAppliedSchemaRequestBody withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -35,9 +37,14 @@ public class UpgradeAppliedSchemaRequestBody {
      */
     @JsonProperty("PublishedSchemaArn")
     public String publishedSchemaArn;
+
     public UpgradeAppliedSchemaRequestBody withPublishedSchemaArn(String publishedSchemaArn) {
         this.publishedSchemaArn = publishedSchemaArn;
         return this;
     }
     
+    public UpgradeAppliedSchemaRequestBody(@JsonProperty("DirectoryArn") String directoryArn, @JsonProperty("PublishedSchemaArn") String publishedSchemaArn) {
+        this.directoryArn = directoryArn;
+        this.publishedSchemaArn = publishedSchemaArn;
+  }
 }

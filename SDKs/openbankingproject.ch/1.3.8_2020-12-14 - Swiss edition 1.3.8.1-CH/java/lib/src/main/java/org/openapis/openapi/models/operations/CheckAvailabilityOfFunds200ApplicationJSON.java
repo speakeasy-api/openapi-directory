@@ -24,9 +24,13 @@ public class CheckAvailabilityOfFunds200ApplicationJSON {
      */
     @JsonProperty("fundsAvailable")
     public Boolean fundsAvailable;
+
     public CheckAvailabilityOfFunds200ApplicationJSON withFundsAvailable(Boolean fundsAvailable) {
         this.fundsAvailable = fundsAvailable;
         return this;
     }
     
+    public CheckAvailabilityOfFunds200ApplicationJSON(@JsonProperty("fundsAvailable") Boolean fundsAvailable) {
+        this.fundsAvailable = fundsAvailable;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFleetAttributesResponse {
@@ -12,6 +13,7 @@ public class UpdateFleetAttributesResponse {
      */
     
     public Object conflictException;
+
     public UpdateFleetAttributesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFleetAttributesResponse {
     
     
     public String contentType;
+
     public UpdateFleetAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFleetAttributesResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateFleetAttributesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFleetAttributesResponse {
      */
     
     public Object invalidFleetStatusException;
+
     public UpdateFleetAttributesResponse withInvalidFleetStatusException(Object invalidFleetStatusException) {
         this.invalidFleetStatusException = invalidFleetStatusException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFleetAttributesResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateFleetAttributesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateFleetAttributesResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateFleetAttributesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateFleetAttributesResponse {
      */
     
     public Object notFoundException;
+
     public UpdateFleetAttributesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateFleetAttributesResponse {
     
     
     public Integer statusCode;
+
     public UpdateFleetAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateFleetAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFleetAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateFleetAttributesResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateFleetAttributesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateFleetAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFleetAttributesOutput updateFleetAttributesOutput;
+
     public UpdateFleetAttributesResponse withUpdateFleetAttributesOutput(org.openapis.openapi.models.shared.UpdateFleetAttributesOutput updateFleetAttributesOutput) {
         this.updateFleetAttributesOutput = updateFleetAttributesOutput;
         return this;
     }
     
+    public UpdateFleetAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

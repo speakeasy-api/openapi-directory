@@ -15,9 +15,13 @@ public class Response {
      */
     @JsonProperty("dispatch_uuid")
     public String dispatchUuid;
+
     public Response withDispatchUuid(String dispatchUuid) {
         this.dispatchUuid = dispatchUuid;
         return this;
     }
     
+    public Response(@JsonProperty("dispatch_uuid") String dispatchUuid) {
+        this.dispatchUuid = dispatchUuid;
+  }
 }

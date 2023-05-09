@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchUpdateClusterResponse {
@@ -12,6 +13,7 @@ public class BatchUpdateClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchUpdateClusterResponse batchUpdateClusterResponse;
+
     public BatchUpdateClusterResponse withBatchUpdateClusterResponse(org.openapis.openapi.models.shared.BatchUpdateClusterResponse batchUpdateClusterResponse) {
         this.batchUpdateClusterResponse = batchUpdateClusterResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchUpdateClusterResponse {
     
     
     public String contentType;
+
     public BatchUpdateClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchUpdateClusterResponse {
      */
     
     public Object invalidParameterValueException;
+
     public BatchUpdateClusterResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class BatchUpdateClusterResponse {
      */
     
     public Object serviceUpdateNotFoundFault;
+
     public BatchUpdateClusterResponse withServiceUpdateNotFoundFault(Object serviceUpdateNotFoundFault) {
         this.serviceUpdateNotFoundFault = serviceUpdateNotFoundFault;
         return this;
@@ -46,6 +51,7 @@ public class BatchUpdateClusterResponse {
     
     
     public Integer statusCode;
+
     public BatchUpdateClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class BatchUpdateClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchUpdateClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchUpdateClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

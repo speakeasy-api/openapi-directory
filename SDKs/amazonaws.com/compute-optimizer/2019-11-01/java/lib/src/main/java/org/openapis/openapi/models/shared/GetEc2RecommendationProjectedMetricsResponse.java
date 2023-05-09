@@ -15,9 +15,11 @@ public class GetEc2RecommendationProjectedMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedOptionProjectedMetrics")
     public RecommendedOptionProjectedMetric[] recommendedOptionProjectedMetrics;
+
     public GetEc2RecommendationProjectedMetricsResponse withRecommendedOptionProjectedMetrics(RecommendedOptionProjectedMetric[] recommendedOptionProjectedMetrics) {
         this.recommendedOptionProjectedMetrics = recommendedOptionProjectedMetrics;
         return this;
     }
     
+    public GetEc2RecommendationProjectedMetricsResponse(){}
 }

@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class RollbackInstanceRefreshType {
     
     public String autoScalingGroupName;
+
     public RollbackInstanceRefreshType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
     }
     
+    public RollbackInstanceRefreshType(){}
 }

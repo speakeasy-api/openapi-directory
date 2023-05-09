@@ -15,6 +15,7 @@ public class CustomDataSourceChildLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public CustomDataSourceChildLink withHref(String href) {
         this.href = href;
         return this;
@@ -26,9 +27,11 @@ public class CustomDataSourceChildLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CustomDataSourceChildLink withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CustomDataSourceChildLink(){}
 }

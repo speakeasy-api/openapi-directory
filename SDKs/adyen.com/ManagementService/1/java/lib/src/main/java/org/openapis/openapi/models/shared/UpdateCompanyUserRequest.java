@@ -15,6 +15,7 @@ public class UpdateCompanyUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountGroups")
     public String[] accountGroups;
+
     public UpdateCompanyUserRequest withAccountGroups(String[] accountGroups) {
         this.accountGroups = accountGroups;
         return this;
@@ -26,6 +27,7 @@ public class UpdateCompanyUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public UpdateCompanyUserRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -37,6 +39,7 @@ public class UpdateCompanyUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedMerchantAccounts")
     public String[] associatedMerchantAccounts;
+
     public UpdateCompanyUserRequest withAssociatedMerchantAccounts(String[] associatedMerchantAccounts) {
         this.associatedMerchantAccounts = associatedMerchantAccounts;
         return this;
@@ -48,6 +51,7 @@ public class UpdateCompanyUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authnAppsToAdd")
     public String[] authnAppsToAdd;
+
     public UpdateCompanyUserRequest withAuthnAppsToAdd(String[] authnAppsToAdd) {
         this.authnAppsToAdd = authnAppsToAdd;
         return this;
@@ -59,6 +63,7 @@ public class UpdateCompanyUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authnAppsToRemove")
     public String[] authnAppsToRemove;
+
     public UpdateCompanyUserRequest withAuthnAppsToRemove(String[] authnAppsToRemove) {
         this.authnAppsToRemove = authnAppsToRemove;
         return this;
@@ -70,6 +75,7 @@ public class UpdateCompanyUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UpdateCompanyUserRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -78,6 +84,7 @@ public class UpdateCompanyUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public Name2 name;
+
     public UpdateCompanyUserRequest withName(Name2 name) {
         this.name = name;
         return this;
@@ -89,6 +96,7 @@ public class UpdateCompanyUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public String[] roles;
+
     public UpdateCompanyUserRequest withRoles(String[] roles) {
         this.roles = roles;
         return this;
@@ -100,9 +108,11 @@ public class UpdateCompanyUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZoneCode")
     public String timeZoneCode;
+
     public UpdateCompanyUserRequest withTimeZoneCode(String timeZoneCode) {
         this.timeZoneCode = timeZoneCode;
         return this;
     }
     
+    public UpdateCompanyUserRequest(){}
 }

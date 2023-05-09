@@ -15,6 +15,7 @@ public class ListServicesByNamespaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListServicesByNamespaceResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListServicesByNamespaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceArns")
     public String[] serviceArns;
+
     public ListServicesByNamespaceResponse withServiceArns(String[] serviceArns) {
         this.serviceArns = serviceArns;
         return this;
     }
     
+    public ListServicesByNamespaceResponse(){}
 }

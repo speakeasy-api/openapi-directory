@@ -18,6 +18,7 @@ public class Keyword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyword")
     public String keyword;
+
     public Keyword withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -29,6 +30,7 @@ public class Keyword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public Keyword withNumber(String number) {
         this.number = number;
         return this;
@@ -40,9 +42,11 @@ public class Keyword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortCode")
     public String shortCode;
+
     public Keyword withShortCode(String shortCode) {
         this.shortCode = shortCode;
         return this;
     }
     
+    public Keyword(){}
 }

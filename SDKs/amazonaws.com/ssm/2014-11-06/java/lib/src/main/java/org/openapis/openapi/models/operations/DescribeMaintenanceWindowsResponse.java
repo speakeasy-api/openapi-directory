@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMaintenanceWindowsResponse {
     
     public String contentType;
+
     public DescribeMaintenanceWindowsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMaintenanceWindowsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMaintenanceWindowsResult describeMaintenanceWindowsResult;
+
     public DescribeMaintenanceWindowsResponse withDescribeMaintenanceWindowsResult(org.openapis.openapi.models.shared.DescribeMaintenanceWindowsResult describeMaintenanceWindowsResult) {
         this.describeMaintenanceWindowsResult = describeMaintenanceWindowsResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMaintenanceWindowsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeMaintenanceWindowsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -36,6 +40,7 @@ public class DescribeMaintenanceWindowsResponse {
     
     
     public Integer statusCode;
+
     public DescribeMaintenanceWindowsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeMaintenanceWindowsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMaintenanceWindowsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeMaintenanceWindowsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

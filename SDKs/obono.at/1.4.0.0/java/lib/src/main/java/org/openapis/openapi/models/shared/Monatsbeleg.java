@@ -12,6 +12,7 @@ public class Monatsbeleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Beleg-UUID")
     public String belegUUID;
+
     public Monatsbeleg withBelegUUID(String belegUUID) {
         this.belegUUID = belegUUID;
         return this;
@@ -20,6 +21,7 @@ public class Monatsbeleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FON-Geprueft-Datum-Uhrzeit")
     public String fonGeprueftDatumUhrzeit;
+
     public Monatsbeleg withFONGeprueftDatumUhrzeit(String fonGeprueftDatumUhrzeit) {
         this.fonGeprueftDatumUhrzeit = fonGeprueftDatumUhrzeit;
         return this;
@@ -28,6 +30,7 @@ public class Monatsbeleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FON-Geprueft-Erfolgreich")
     public Boolean fonGeprueftErfolgreich;
+
     public Monatsbeleg withFONGeprueftErfolgreich(Boolean fonGeprueftErfolgreich) {
         this.fonGeprueftErfolgreich = fonGeprueftErfolgreich;
         return this;
@@ -36,6 +39,7 @@ public class Monatsbeleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Jahr")
     public Long jahr;
+
     public Monatsbeleg withJahr(Long jahr) {
         this.jahr = jahr;
         return this;
@@ -44,9 +48,11 @@ public class Monatsbeleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Monat")
     public Long monat;
+
     public Monatsbeleg withMonat(Long monat) {
         this.monat = monat;
         return this;
     }
     
+    public Monatsbeleg(){}
 }

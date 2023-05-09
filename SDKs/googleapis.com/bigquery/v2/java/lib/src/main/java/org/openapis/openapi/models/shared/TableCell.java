@@ -12,9 +12,11 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("v")
     public Object v;
+
     public TableCell withV(Object v) {
         this.v = v;
         return this;
     }
     
+    public TableCell(){}
 }

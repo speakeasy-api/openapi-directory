@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateConfigurationSetEventDestinationResponse {
@@ -12,6 +13,7 @@ public class UpdateConfigurationSetEventDestinationResponse {
      */
     
     public Object badRequestException;
+
     public UpdateConfigurationSetEventDestinationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateConfigurationSetEventDestinationResponse {
     
     
     public String contentType;
+
     public UpdateConfigurationSetEventDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateConfigurationSetEventDestinationResponse {
      */
     
     public Object notFoundException;
+
     public UpdateConfigurationSetEventDestinationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateConfigurationSetEventDestinationResponse {
     
     
     public Integer statusCode;
+
     public UpdateConfigurationSetEventDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateConfigurationSetEventDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateConfigurationSetEventDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateConfigurationSetEventDestinationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateConfigurationSetEventDestinationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateConfigurationSetEventDestinationResponse {
      */
     
     public java.util.Map<String, Object> updateConfigurationSetEventDestinationResponse;
+
     public UpdateConfigurationSetEventDestinationResponse withUpdateConfigurationSetEventDestinationResponse(java.util.Map<String, Object> updateConfigurationSetEventDestinationResponse) {
         this.updateConfigurationSetEventDestinationResponse = updateConfigurationSetEventDestinationResponse;
         return this;
     }
     
+    public UpdateConfigurationSetEventDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

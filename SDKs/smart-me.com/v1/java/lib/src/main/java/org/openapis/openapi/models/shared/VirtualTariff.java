@@ -15,6 +15,7 @@ public class VirtualTariff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Factor")
     public Double factor;
+
     public VirtualTariff withFactor(Double factor) {
         this.factor = factor;
         return this;
@@ -23,6 +24,7 @@ public class VirtualTariff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public VirtualTariff withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class VirtualTariff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public VirtualTariff withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class VirtualTariff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public VirtualTariffTypeEnum type;
+
     public VirtualTariff withType(VirtualTariffTypeEnum type) {
         this.type = type;
         return this;
@@ -47,6 +51,7 @@ public class VirtualTariff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public String unit;
+
     public VirtualTariff withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -58,9 +63,11 @@ public class VirtualTariff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Double value;
+
     public VirtualTariff withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public VirtualTariff(){}
 }

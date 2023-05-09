@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopGameSessionPlacementInput {
     @JsonProperty("PlacementId")
     public String placementId;
+
     public StopGameSessionPlacementInput withPlacementId(String placementId) {
         this.placementId = placementId;
         return this;
     }
     
+    public StopGameSessionPlacementInput(@JsonProperty("PlacementId") String placementId) {
+        this.placementId = placementId;
+  }
 }

@@ -12,6 +12,7 @@ public class ServingResponseSetDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ServingResponseSetDocument withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class ServingResponseSetDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ServingAttribute[] metadata;
+
     public ServingResponseSetDocument withMetadata(ServingAttribute[] metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public ServingResponseSetDocument(){}
 }

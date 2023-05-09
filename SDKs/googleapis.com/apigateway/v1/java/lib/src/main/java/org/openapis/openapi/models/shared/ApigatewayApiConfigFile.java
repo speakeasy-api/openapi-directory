@@ -18,6 +18,7 @@ public class ApigatewayApiConfigFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String contents;
+
     public ApigatewayApiConfigFile withContents(String contents) {
         this.contents = contents;
         return this;
@@ -29,9 +30,11 @@ public class ApigatewayApiConfigFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public ApigatewayApiConfigFile withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public ApigatewayApiConfigFile(){}
 }

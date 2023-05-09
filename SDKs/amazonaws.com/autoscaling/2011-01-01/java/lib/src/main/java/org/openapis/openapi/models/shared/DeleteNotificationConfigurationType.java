@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteNotificationConfigurationType {
     
     public String autoScalingGroupName;
+
     public DeleteNotificationConfigurationType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteNotificationConfigurationType {
     
     
     public String topicARN;
+
     public DeleteNotificationConfigurationType withTopicARN(String topicARN) {
         this.topicARN = topicARN;
         return this;
     }
     
+    public DeleteNotificationConfigurationType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("TopicARN") String topicARN) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.topicARN = topicARN;
+  }
 }

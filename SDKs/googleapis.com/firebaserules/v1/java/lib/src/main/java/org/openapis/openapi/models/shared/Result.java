@@ -18,6 +18,7 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("undefined")
     public java.util.Map<String, Object> undefined;
+
     public Result withUndefined(java.util.Map<String, Object> undefined) {
         this.undefined = undefined;
         return this;
@@ -29,9 +30,11 @@ public class Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public Result withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public Result(){}
 }

@@ -15,6 +15,7 @@ public class ComplianceContributorCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapExceeded")
     public Boolean capExceeded;
+
     public ComplianceContributorCount withCapExceeded(Boolean capExceeded) {
         this.capExceeded = capExceeded;
         return this;
@@ -23,9 +24,11 @@ public class ComplianceContributorCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CappedCount")
     public Long cappedCount;
+
     public ComplianceContributorCount withCappedCount(Long cappedCount) {
         this.cappedCount = cappedCount;
         return this;
     }
     
+    public ComplianceContributorCount(){}
 }

@@ -15,6 +15,7 @@ public class ApplicationComponentStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPreferred")
     public Boolean isPreferred;
+
     public ApplicationComponentStrategy withIsPreferred(Boolean isPreferred) {
         this.isPreferred = isPreferred;
         return this;
@@ -23,6 +24,7 @@ public class ApplicationComponentStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendation")
     public RecommendationSet recommendation;
+
     public ApplicationComponentStrategy withRecommendation(RecommendationSet recommendation) {
         this.recommendation = recommendation;
         return this;
@@ -31,9 +33,11 @@ public class ApplicationComponentStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StrategyRecommendationEnum status;
+
     public ApplicationComponentStrategy withStatus(StrategyRecommendationEnum status) {
         this.status = status;
         return this;
     }
     
+    public ApplicationComponentStrategy(){}
 }

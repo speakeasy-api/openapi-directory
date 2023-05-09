@@ -18,6 +18,7 @@ public class ListAssignedInventorySourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedInventorySources")
     public AssignedInventorySource[] assignedInventorySources;
+
     public ListAssignedInventorySourcesResponse withAssignedInventorySources(AssignedInventorySource[] assignedInventorySources) {
         this.assignedInventorySources = assignedInventorySources;
         return this;
@@ -29,9 +30,11 @@ public class ListAssignedInventorySourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAssignedInventorySourcesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAssignedInventorySourcesResponse(){}
 }

@@ -15,6 +15,7 @@ public class DynamicListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeState")
     public DynamicListenerState activeState;
+
     public DynamicListener withActiveState(DynamicListenerState activeState) {
         this.activeState = activeState;
         return this;
@@ -23,6 +24,7 @@ public class DynamicListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drainingState")
     public DynamicListenerState drainingState;
+
     public DynamicListener withDrainingState(DynamicListenerState drainingState) {
         this.drainingState = drainingState;
         return this;
@@ -31,6 +33,7 @@ public class DynamicListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorState")
     public UpdateFailureState errorState;
+
     public DynamicListener withErrorState(UpdateFailureState errorState) {
         this.errorState = errorState;
         return this;
@@ -42,6 +45,7 @@ public class DynamicListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DynamicListener withName(String name) {
         this.name = name;
         return this;
@@ -50,9 +54,11 @@ public class DynamicListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warmingState")
     public DynamicListenerState warmingState;
+
     public DynamicListener withWarmingState(DynamicListenerState warmingState) {
         this.warmingState = warmingState;
         return this;
     }
     
+    public DynamicListener(){}
 }

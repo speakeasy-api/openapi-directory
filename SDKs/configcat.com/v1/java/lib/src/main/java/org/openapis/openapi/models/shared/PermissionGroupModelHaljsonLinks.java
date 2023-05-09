@@ -12,9 +12,11 @@ public class PermissionGroupModelHaljsonLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public PermissionGroupModelHaljsonLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public PermissionGroupModelHaljsonLinks(){}
 }

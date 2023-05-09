@@ -18,6 +18,7 @@ public class DnsResourceRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public DnsResourceRecord withData(String data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class DnsResourceRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DnsResourceRecord withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class DnsResourceRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public DnsResourceRecord withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DnsResourceRecord(){}
 }

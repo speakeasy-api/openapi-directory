@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostSimCompareResponse {
     
     public String contentType;
+
     public PostSimCompareResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostSimCompareResponse {
      */
     
     public org.openapis.openapi.models.shared.SimResult simResult;
+
     public PostSimCompareResponse withSimResult(org.openapis.openapi.models.shared.SimResult simResult) {
         this.simResult = simResult;
         return this;
@@ -26,6 +29,7 @@ public class PostSimCompareResponse {
     
     
     public Integer statusCode;
+
     public PostSimCompareResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostSimCompareResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostSimCompareResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostSimCompareResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GetFeedbackResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyGroupTimeSeriesFeedback")
     public TimeSeriesFeedback[] anomalyGroupTimeSeriesFeedback;
+
     public GetFeedbackResponse withAnomalyGroupTimeSeriesFeedback(TimeSeriesFeedback[] anomalyGroupTimeSeriesFeedback) {
         this.anomalyGroupTimeSeriesFeedback = anomalyGroupTimeSeriesFeedback;
         return this;
@@ -23,9 +24,11 @@ public class GetFeedbackResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetFeedbackResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetFeedbackResponse(){}
 }

@@ -15,6 +15,7 @@ public class ListSlotTypesRequestBodySortBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute")
     public org.openapis.openapi.models.shared.SlotTypeSortAttributeEnum attribute;
+
     public ListSlotTypesRequestBodySortBy withAttribute(org.openapis.openapi.models.shared.SlotTypeSortAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -23,9 +24,11 @@ public class ListSlotTypesRequestBodySortBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public org.openapis.openapi.models.shared.SortOrderEnum order;
+
     public ListSlotTypesRequestBodySortBy withOrder(org.openapis.openapi.models.shared.SortOrderEnum order) {
         this.order = order;
         return this;
     }
     
+    public ListSlotTypesRequestBodySortBy(){}
 }

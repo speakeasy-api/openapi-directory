@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListUserPoolsResponse {
     
     public String contentType;
+
     public ListUserPoolsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListUserPoolsResponse {
      */
     
     public Object internalErrorException;
+
     public ListUserPoolsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListUserPoolsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListUserPoolsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListUserPoolsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListUserPoolsResponse listUserPoolsResponse;
+
     public ListUserPoolsResponse withListUserPoolsResponse(org.openapis.openapi.models.shared.ListUserPoolsResponse listUserPoolsResponse) {
         this.listUserPoolsResponse = listUserPoolsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListUserPoolsResponse {
      */
     
     public Object notAuthorizedException;
+
     public ListUserPoolsResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class ListUserPoolsResponse {
     
     
     public Integer statusCode;
+
     public ListUserPoolsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListUserPoolsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListUserPoolsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListUserPoolsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListUserPoolsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListUserPoolsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

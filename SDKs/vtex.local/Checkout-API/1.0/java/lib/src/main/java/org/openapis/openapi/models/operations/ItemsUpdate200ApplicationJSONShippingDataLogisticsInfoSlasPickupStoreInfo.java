@@ -18,6 +18,7 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public String additionalInfo;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -29,6 +30,7 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress address;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo withAddress(ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress address) {
         this.address = address;
         return this;
@@ -40,6 +42,7 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockId")
     public String dockId;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -51,6 +54,7 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -62,9 +66,11 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPickupStore")
     public Boolean isPickupStore;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo withIsPickupStore(Boolean isPickupStore) {
         this.isPickupStore = isPickupStore;
         return this;
     }
     
+    public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo(){}
 }

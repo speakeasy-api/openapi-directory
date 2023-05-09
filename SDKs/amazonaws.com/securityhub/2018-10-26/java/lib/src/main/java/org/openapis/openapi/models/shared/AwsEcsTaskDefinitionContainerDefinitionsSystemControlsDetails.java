@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsSystemControlsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Namespace")
     public String namespace;
+
     public AwsEcsTaskDefinitionContainerDefinitionsSystemControlsDetails withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsSystemControlsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public AwsEcsTaskDefinitionContainerDefinitionsSystemControlsDetails withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsSystemControlsDetails(){}
 }

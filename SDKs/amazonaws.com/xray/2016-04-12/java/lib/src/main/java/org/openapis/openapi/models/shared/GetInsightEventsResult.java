@@ -15,6 +15,7 @@ public class GetInsightEventsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightEvents")
     public InsightEvent[] insightEvents;
+
     public GetInsightEventsResult withInsightEvents(InsightEvent[] insightEvents) {
         this.insightEvents = insightEvents;
         return this;
@@ -23,9 +24,11 @@ public class GetInsightEventsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetInsightEventsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetInsightEventsResult(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class User {
     
     public String arn;
+
     public User withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class User {
     
     
     public String accessString;
+
     public User withAccessString(String accessString) {
         this.accessString = accessString;
         return this;
@@ -26,6 +28,7 @@ public class User {
     
     
     public Authentication authentication;
+
     public User withAuthentication(Authentication authentication) {
         this.authentication = authentication;
         return this;
@@ -33,6 +36,7 @@ public class User {
     
     
     public String engine;
+
     public User withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -40,6 +44,7 @@ public class User {
     
     
     public String minimumEngineVersion;
+
     public User withMinimumEngineVersion(String minimumEngineVersion) {
         this.minimumEngineVersion = minimumEngineVersion;
         return this;
@@ -47,6 +52,7 @@ public class User {
     
     
     public String status;
+
     public User withStatus(String status) {
         this.status = status;
         return this;
@@ -54,6 +60,7 @@ public class User {
     
     
     public String[] userGroupIds;
+
     public User withUserGroupIds(String[] userGroupIds) {
         this.userGroupIds = userGroupIds;
         return this;
@@ -61,6 +68,7 @@ public class User {
     
     
     public String userId;
+
     public User withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -68,9 +76,11 @@ public class User {
     
     
     public String userName;
+
     public User withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public User(){}
 }

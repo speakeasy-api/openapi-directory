@@ -15,6 +15,7 @@ public class PostUsersIdAttachmentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_data")
     public String fileData;
+
     public PostUsersIdAttachmentsRequestBody withFileData(String fileData) {
         this.fileData = fileData;
         return this;
@@ -26,6 +27,7 @@ public class PostUsersIdAttachmentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_name")
     public String fileName;
+
     public PostUsersIdAttachmentsRequestBody withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -37,9 +39,11 @@ public class PostUsersIdAttachmentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PostUsersIdAttachmentsRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PostUsersIdAttachmentsRequestBody(){}
 }

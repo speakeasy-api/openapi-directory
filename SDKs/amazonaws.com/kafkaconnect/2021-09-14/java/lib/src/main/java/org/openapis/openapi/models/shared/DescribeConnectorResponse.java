@@ -20,6 +20,7 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacity")
     public CapacityDescription capacity;
+
     public DescribeConnectorResponse withCapacity(CapacityDescription capacity) {
         this.capacity = capacity;
         return this;
@@ -28,6 +29,7 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorArn")
     public String connectorArn;
+
     public DescribeConnectorResponse withConnectorArn(String connectorArn) {
         this.connectorArn = connectorArn;
         return this;
@@ -36,6 +38,7 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorConfiguration")
     public java.util.Map<String, String> connectorConfiguration;
+
     public DescribeConnectorResponse withConnectorConfiguration(java.util.Map<String, String> connectorConfiguration) {
         this.connectorConfiguration = connectorConfiguration;
         return this;
@@ -44,6 +47,7 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorDescription")
     public String connectorDescription;
+
     public DescribeConnectorResponse withConnectorDescription(String connectorDescription) {
         this.connectorDescription = connectorDescription;
         return this;
@@ -52,6 +56,7 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorName")
     public String connectorName;
+
     public DescribeConnectorResponse withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -60,6 +65,7 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorState")
     public ConnectorStateEnum connectorState;
+
     public DescribeConnectorResponse withConnectorState(ConnectorStateEnum connectorState) {
         this.connectorState = connectorState;
         return this;
@@ -70,6 +76,7 @@ public class DescribeConnectorResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public DescribeConnectorResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -78,6 +85,7 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentVersion")
     public String currentVersion;
+
     public DescribeConnectorResponse withCurrentVersion(String currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -86,6 +94,7 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kafkaCluster")
     public KafkaClusterDescription kafkaCluster;
+
     public DescribeConnectorResponse withKafkaCluster(KafkaClusterDescription kafkaCluster) {
         this.kafkaCluster = kafkaCluster;
         return this;
@@ -94,6 +103,7 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kafkaClusterClientAuthentication")
     public KafkaClusterClientAuthenticationDescription kafkaClusterClientAuthentication;
+
     public DescribeConnectorResponse withKafkaClusterClientAuthentication(KafkaClusterClientAuthenticationDescription kafkaClusterClientAuthentication) {
         this.kafkaClusterClientAuthentication = kafkaClusterClientAuthentication;
         return this;
@@ -102,6 +112,7 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kafkaClusterEncryptionInTransit")
     public KafkaClusterEncryptionInTransitDescription kafkaClusterEncryptionInTransit;
+
     public DescribeConnectorResponse withKafkaClusterEncryptionInTransit(KafkaClusterEncryptionInTransitDescription kafkaClusterEncryptionInTransit) {
         this.kafkaClusterEncryptionInTransit = kafkaClusterEncryptionInTransit;
         return this;
@@ -110,6 +121,7 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kafkaConnectVersion")
     public String kafkaConnectVersion;
+
     public DescribeConnectorResponse withKafkaConnectVersion(String kafkaConnectVersion) {
         this.kafkaConnectVersion = kafkaConnectVersion;
         return this;
@@ -118,6 +130,7 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logDelivery")
     public LogDeliveryDescription logDelivery;
+
     public DescribeConnectorResponse withLogDelivery(LogDeliveryDescription logDelivery) {
         this.logDelivery = logDelivery;
         return this;
@@ -126,6 +139,7 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plugins")
     public PluginDescription[] plugins;
+
     public DescribeConnectorResponse withPlugins(PluginDescription[] plugins) {
         this.plugins = plugins;
         return this;
@@ -134,6 +148,7 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceExecutionRoleArn")
     public String serviceExecutionRoleArn;
+
     public DescribeConnectorResponse withServiceExecutionRoleArn(String serviceExecutionRoleArn) {
         this.serviceExecutionRoleArn = serviceExecutionRoleArn;
         return this;
@@ -142,6 +157,7 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateDescription")
     public StateDescription stateDescription;
+
     public DescribeConnectorResponse withStateDescription(StateDescription stateDescription) {
         this.stateDescription = stateDescription;
         return this;
@@ -150,9 +166,11 @@ public class DescribeConnectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerConfiguration")
     public WorkerConfigurationDescription workerConfiguration;
+
     public DescribeConnectorResponse withWorkerConfiguration(WorkerConfigurationDescription workerConfiguration) {
         this.workerConfiguration = workerConfiguration;
         return this;
     }
     
+    public DescribeConnectorResponse(){}
 }

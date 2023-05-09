@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTypesResponse {
@@ -12,6 +13,7 @@ public class ListTypesResponse {
      */
     
     public Object badRequestException;
+
     public ListTypesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class ListTypesResponse {
      */
     
     public Object concurrentModificationException;
+
     public ListTypesResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class ListTypesResponse {
     
     
     public String contentType;
+
     public ListTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListTypesResponse {
      */
     
     public Object internalFailureException;
+
     public ListTypesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class ListTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTypesResponse listTypesResponse;
+
     public ListTypesResponse withListTypesResponse(org.openapis.openapi.models.shared.ListTypesResponse listTypesResponse) {
         this.listTypesResponse = listTypesResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListTypesResponse {
      */
     
     public Object notFoundException;
+
     public ListTypesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListTypesResponse {
     
     
     public Integer statusCode;
+
     public ListTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListTypesResponse {
      */
     
     public Object unauthorizedException;
+
     public ListTypesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDeleteDocumentResponse {
@@ -12,6 +13,7 @@ public class BatchDeleteDocumentResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchDeleteDocumentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchDeleteDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDeleteDocumentResponse batchDeleteDocumentResponse;
+
     public BatchDeleteDocumentResponse withBatchDeleteDocumentResponse(org.openapis.openapi.models.shared.BatchDeleteDocumentResponse batchDeleteDocumentResponse) {
         this.batchDeleteDocumentResponse = batchDeleteDocumentResponse;
         return this;
@@ -32,6 +35,7 @@ public class BatchDeleteDocumentResponse {
      */
     
     public Object conflictException;
+
     public BatchDeleteDocumentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class BatchDeleteDocumentResponse {
     
     
     public String contentType;
+
     public BatchDeleteDocumentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class BatchDeleteDocumentResponse {
      */
     
     public Object internalServerException;
+
     public BatchDeleteDocumentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class BatchDeleteDocumentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchDeleteDocumentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class BatchDeleteDocumentResponse {
     
     
     public Integer statusCode;
+
     public BatchDeleteDocumentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class BatchDeleteDocumentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDeleteDocumentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class BatchDeleteDocumentResponse {
      */
     
     public Object throttlingException;
+
     public BatchDeleteDocumentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class BatchDeleteDocumentResponse {
      */
     
     public Object validationException;
+
     public BatchDeleteDocumentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchDeleteDocumentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

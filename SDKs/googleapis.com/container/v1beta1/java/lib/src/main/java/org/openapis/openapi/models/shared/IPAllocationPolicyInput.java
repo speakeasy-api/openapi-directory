@@ -13,11 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class IPAllocationPolicyInput {
     /**
+     * AdditionalPodRangesConfig is the configuration for additional pod secondary ranges supporting the ClusterUpdate message.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("additionalPodRangesConfig")
+    public AdditionalPodRangesConfig additionalPodRangesConfig;
+
+    public IPAllocationPolicyInput withAdditionalPodRangesConfig(AdditionalPodRangesConfig additionalPodRangesConfig) {
+        this.additionalPodRangesConfig = additionalPodRangesConfig;
+        return this;
+    }
+    
+    /**
      * If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network routes. By default we do not allow cluster CIDR ranges to intersect with any user declared routes. With allow_route_overlap == true, we allow overlapping with CIDR ranges that are larger than the cluster CIDR range. If this field is set to true, then cluster and services CIDRs must be fully-specified (e.g. `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases` is true, `cluster_ipv4_cidr_block` and `services_ipv4_cidr_block` must be fully-specified. 2) When `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be fully-specified.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowRouteOverlap")
     public Boolean allowRouteOverlap;
+
     public IPAllocationPolicyInput withAllowRouteOverlap(Boolean allowRouteOverlap) {
         this.allowRouteOverlap = allowRouteOverlap;
         return this;
@@ -29,6 +42,7 @@ public class IPAllocationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterIpv4Cidr")
     public String clusterIpv4Cidr;
+
     public IPAllocationPolicyInput withClusterIpv4Cidr(String clusterIpv4Cidr) {
         this.clusterIpv4Cidr = clusterIpv4Cidr;
         return this;
@@ -40,6 +54,7 @@ public class IPAllocationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterIpv4CidrBlock")
     public String clusterIpv4CidrBlock;
+
     public IPAllocationPolicyInput withClusterIpv4CidrBlock(String clusterIpv4CidrBlock) {
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         return this;
@@ -51,6 +66,7 @@ public class IPAllocationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterSecondaryRangeName")
     public String clusterSecondaryRangeName;
+
     public IPAllocationPolicyInput withClusterSecondaryRangeName(String clusterSecondaryRangeName) {
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;
         return this;
@@ -62,6 +78,7 @@ public class IPAllocationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createSubnetwork")
     public Boolean createSubnetwork;
+
     public IPAllocationPolicyInput withCreateSubnetwork(Boolean createSubnetwork) {
         this.createSubnetwork = createSubnetwork;
         return this;
@@ -73,6 +90,7 @@ public class IPAllocationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6AccessType")
     public IPAllocationPolicyIpv6AccessTypeEnum ipv6AccessType;
+
     public IPAllocationPolicyInput withIpv6AccessType(IPAllocationPolicyIpv6AccessTypeEnum ipv6AccessType) {
         this.ipv6AccessType = ipv6AccessType;
         return this;
@@ -84,6 +102,7 @@ public class IPAllocationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeIpv4Cidr")
     public String nodeIpv4Cidr;
+
     public IPAllocationPolicyInput withNodeIpv4Cidr(String nodeIpv4Cidr) {
         this.nodeIpv4Cidr = nodeIpv4Cidr;
         return this;
@@ -95,8 +114,21 @@ public class IPAllocationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeIpv4CidrBlock")
     public String nodeIpv4CidrBlock;
+
     public IPAllocationPolicyInput withNodeIpv4CidrBlock(String nodeIpv4CidrBlock) {
         this.nodeIpv4CidrBlock = nodeIpv4CidrBlock;
+        return this;
+    }
+    
+    /**
+     * [PRIVATE FIELD] Config for pod CIDR size overprovisioning.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("podCidrOverprovisionConfig")
+    public PodCIDROverprovisionConfig podCidrOverprovisionConfig;
+
+    public IPAllocationPolicyInput withPodCidrOverprovisionConfig(PodCIDROverprovisionConfig podCidrOverprovisionConfig) {
+        this.podCidrOverprovisionConfig = podCidrOverprovisionConfig;
         return this;
     }
     
@@ -106,6 +138,7 @@ public class IPAllocationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicesIpv4Cidr")
     public String servicesIpv4Cidr;
+
     public IPAllocationPolicyInput withServicesIpv4Cidr(String servicesIpv4Cidr) {
         this.servicesIpv4Cidr = servicesIpv4Cidr;
         return this;
@@ -117,6 +150,7 @@ public class IPAllocationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicesIpv4CidrBlock")
     public String servicesIpv4CidrBlock;
+
     public IPAllocationPolicyInput withServicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
         this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
         return this;
@@ -128,6 +162,7 @@ public class IPAllocationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicesSecondaryRangeName")
     public String servicesSecondaryRangeName;
+
     public IPAllocationPolicyInput withServicesSecondaryRangeName(String servicesSecondaryRangeName) {
         this.servicesSecondaryRangeName = servicesSecondaryRangeName;
         return this;
@@ -139,6 +174,7 @@ public class IPAllocationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackType")
     public IPAllocationPolicyStackTypeEnum stackType;
+
     public IPAllocationPolicyInput withStackType(IPAllocationPolicyStackTypeEnum stackType) {
         this.stackType = stackType;
         return this;
@@ -150,6 +186,7 @@ public class IPAllocationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetworkName")
     public String subnetworkName;
+
     public IPAllocationPolicyInput withSubnetworkName(String subnetworkName) {
         this.subnetworkName = subnetworkName;
         return this;
@@ -161,6 +198,7 @@ public class IPAllocationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tpuIpv4CidrBlock")
     public String tpuIpv4CidrBlock;
+
     public IPAllocationPolicyInput withTpuIpv4CidrBlock(String tpuIpv4CidrBlock) {
         this.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
         return this;
@@ -172,6 +210,7 @@ public class IPAllocationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useIpAliases")
     public Boolean useIpAliases;
+
     public IPAllocationPolicyInput withUseIpAliases(Boolean useIpAliases) {
         this.useIpAliases = useIpAliases;
         return this;
@@ -183,9 +222,11 @@ public class IPAllocationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useRoutes")
     public Boolean useRoutes;
+
     public IPAllocationPolicyInput withUseRoutes(Boolean useRoutes) {
         this.useRoutes = useRoutes;
         return this;
     }
     
+    public IPAllocationPolicyInput(){}
 }

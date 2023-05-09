@@ -14,6 +14,7 @@ public class CreateEmailIdentityRequestBody {
      */
     @JsonProperty("EmailIdentity")
     public String emailIdentity;
+
     public CreateEmailIdentityRequestBody withEmailIdentity(String emailIdentity) {
         this.emailIdentity = emailIdentity;
         return this;
@@ -25,9 +26,13 @@ public class CreateEmailIdentityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateEmailIdentityRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEmailIdentityRequestBody(@JsonProperty("EmailIdentity") String emailIdentity) {
+        this.emailIdentity = emailIdentity;
+  }
 }

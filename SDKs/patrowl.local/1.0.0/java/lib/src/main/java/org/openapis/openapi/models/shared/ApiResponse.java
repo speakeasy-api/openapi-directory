@@ -15,6 +15,7 @@ public class ApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public String page;
+
     public ApiResponse withPage(String page) {
         this.page = page;
         return this;
@@ -23,9 +24,11 @@ public class ApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ApiResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ApiResponse(){}
 }

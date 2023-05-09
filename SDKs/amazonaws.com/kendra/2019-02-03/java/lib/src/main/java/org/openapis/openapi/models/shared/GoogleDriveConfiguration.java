@@ -15,6 +15,7 @@ public class GoogleDriveConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludeMimeTypes")
     public String[] excludeMimeTypes;
+
     public GoogleDriveConfiguration withExcludeMimeTypes(String[] excludeMimeTypes) {
         this.excludeMimeTypes = excludeMimeTypes;
         return this;
@@ -23,6 +24,7 @@ public class GoogleDriveConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludeSharedDrives")
     public String[] excludeSharedDrives;
+
     public GoogleDriveConfiguration withExcludeSharedDrives(String[] excludeSharedDrives) {
         this.excludeSharedDrives = excludeSharedDrives;
         return this;
@@ -31,6 +33,7 @@ public class GoogleDriveConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludeUserAccounts")
     public String[] excludeUserAccounts;
+
     public GoogleDriveConfiguration withExcludeUserAccounts(String[] excludeUserAccounts) {
         this.excludeUserAccounts = excludeUserAccounts;
         return this;
@@ -39,6 +42,7 @@ public class GoogleDriveConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusionPatterns")
     public String[] exclusionPatterns;
+
     public GoogleDriveConfiguration withExclusionPatterns(String[] exclusionPatterns) {
         this.exclusionPatterns = exclusionPatterns;
         return this;
@@ -47,6 +51,7 @@ public class GoogleDriveConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldMappings")
     public DataSourceToIndexFieldMapping[] fieldMappings;
+
     public GoogleDriveConfiguration withFieldMappings(DataSourceToIndexFieldMapping[] fieldMappings) {
         this.fieldMappings = fieldMappings;
         return this;
@@ -55,6 +60,7 @@ public class GoogleDriveConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusionPatterns")
     public String[] inclusionPatterns;
+
     public GoogleDriveConfiguration withInclusionPatterns(String[] inclusionPatterns) {
         this.inclusionPatterns = inclusionPatterns;
         return this;
@@ -62,9 +68,13 @@ public class GoogleDriveConfiguration {
     
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public GoogleDriveConfiguration withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
     }
     
+    public GoogleDriveConfiguration(@JsonProperty("SecretArn") String secretArn) {
+        this.secretArn = secretArn;
+  }
 }

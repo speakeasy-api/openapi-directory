@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRecordBatchResponse {
     
     public String contentType;
+
     public PutRecordBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutRecordBatchResponse {
      */
     
     public Object invalidArgumentException;
+
     public PutRecordBatchResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -29,6 +32,7 @@ public class PutRecordBatchResponse {
      */
     
     public Object invalidKMSResourceException;
+
     public PutRecordBatchResponse withInvalidKMSResourceException(Object invalidKMSResourceException) {
         this.invalidKMSResourceException = invalidKMSResourceException;
         return this;
@@ -39,6 +43,7 @@ public class PutRecordBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.PutRecordBatchOutput putRecordBatchOutput;
+
     public PutRecordBatchResponse withPutRecordBatchOutput(org.openapis.openapi.models.shared.PutRecordBatchOutput putRecordBatchOutput) {
         this.putRecordBatchOutput = putRecordBatchOutput;
         return this;
@@ -49,6 +54,7 @@ public class PutRecordBatchResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutRecordBatchResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PutRecordBatchResponse {
      */
     
     public Object serviceUnavailableException;
+
     public PutRecordBatchResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class PutRecordBatchResponse {
     
     
     public Integer statusCode;
+
     public PutRecordBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class PutRecordBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRecordBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutRecordBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

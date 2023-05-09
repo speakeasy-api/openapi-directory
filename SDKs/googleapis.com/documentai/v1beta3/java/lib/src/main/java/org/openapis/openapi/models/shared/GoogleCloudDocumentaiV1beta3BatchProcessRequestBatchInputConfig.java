@@ -18,20 +18,23 @@ public class GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public String gcsSource;
+
     public GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig withGcsSource(String gcsSource) {
         this.gcsSource = gcsSource;
         return this;
     }
     
     /**
-     * Mimetype of the input. If the input is a raw document, the supported mimetypes are application/pdf, image/tiff, and image/gif. If the input is a [Document] proto, the type should be application/json.
+     * Media type (MIME type) of the input. If the input is a raw document, refer to [supported file types](https://cloud.google.com/document-ai/docs/file-types) for the list of media types. If the input is a Document, the type should be `application/json`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig(){}
 }

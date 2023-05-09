@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeCompilationJobRequest {
     @JsonProperty("CompilationJobName")
     public String compilationJobName;
+
     public DescribeCompilationJobRequest withCompilationJobName(String compilationJobName) {
         this.compilationJobName = compilationJobName;
         return this;
     }
     
+    public DescribeCompilationJobRequest(@JsonProperty("CompilationJobName") String compilationJobName) {
+        this.compilationJobName = compilationJobName;
+  }
 }

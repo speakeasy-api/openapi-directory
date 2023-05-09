@@ -16,6 +16,7 @@ public class Credit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public CreditAttributes attributes;
+
     public Credit withAttributes(CreditAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -24,6 +25,7 @@ public class Credit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Credit withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class Credit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public CreditRelationships relationships;
+
     public Credit withRelationships(CreditRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -43,9 +46,11 @@ public class Credit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Credit withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Credit(){}
 }

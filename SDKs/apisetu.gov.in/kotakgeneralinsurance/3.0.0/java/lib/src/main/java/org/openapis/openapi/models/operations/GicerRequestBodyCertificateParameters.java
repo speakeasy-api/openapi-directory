@@ -12,6 +12,7 @@ public class GicerRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyNo")
     public String policyNo;
+
     public GicerRequestBodyCertificateParameters withPolicyNo(String policyNo) {
         this.policyNo = policyNo;
         return this;
@@ -22,6 +23,7 @@ public class GicerRequestBodyCertificateParameters {
      */
     @JsonProperty("Val")
     public String val;
+
     public GicerRequestBodyCertificateParameters withVal(String val) {
         this.val = val;
         return this;
@@ -32,9 +34,15 @@ public class GicerRequestBodyCertificateParameters {
      */
     @JsonProperty("Verification")
     public String verification;
+
     public GicerRequestBodyCertificateParameters withVerification(String verification) {
         this.verification = verification;
         return this;
     }
     
+    public GicerRequestBodyCertificateParameters(@JsonProperty("PolicyNo") String policyNo, @JsonProperty("Val") String val, @JsonProperty("Verification") String verification) {
+        this.policyNo = policyNo;
+        this.val = val;
+        this.verification = verification;
+  }
 }

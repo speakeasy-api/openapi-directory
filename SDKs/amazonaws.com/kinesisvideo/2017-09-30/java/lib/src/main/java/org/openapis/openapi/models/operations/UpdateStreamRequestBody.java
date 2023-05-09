@@ -14,6 +14,7 @@ public class UpdateStreamRequestBody {
      */
     @JsonProperty("CurrentVersion")
     public String currentVersion;
+
     public UpdateStreamRequestBody withCurrentVersion(String currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -25,6 +26,7 @@ public class UpdateStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public UpdateStreamRequestBody withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -36,6 +38,7 @@ public class UpdateStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MediaType")
     public String mediaType;
+
     public UpdateStreamRequestBody withMediaType(String mediaType) {
         this.mediaType = mediaType;
         return this;
@@ -47,6 +50,7 @@ public class UpdateStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public UpdateStreamRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -58,9 +62,13 @@ public class UpdateStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public UpdateStreamRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public UpdateStreamRequestBody(@JsonProperty("CurrentVersion") String currentVersion) {
+        this.currentVersion = currentVersion;
+  }
 }

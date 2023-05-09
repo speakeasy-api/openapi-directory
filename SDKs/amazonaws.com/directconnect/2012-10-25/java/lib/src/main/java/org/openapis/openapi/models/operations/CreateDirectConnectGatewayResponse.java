@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDirectConnectGatewayResponse {
     
     public String contentType;
+
     public CreateDirectConnectGatewayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDirectConnectGatewayResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDirectConnectGatewayResult createDirectConnectGatewayResult;
+
     public CreateDirectConnectGatewayResponse withCreateDirectConnectGatewayResult(org.openapis.openapi.models.shared.CreateDirectConnectGatewayResult createDirectConnectGatewayResult) {
         this.createDirectConnectGatewayResult = createDirectConnectGatewayResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateDirectConnectGatewayResponse {
      */
     
     public Object directConnectClientException;
+
     public CreateDirectConnectGatewayResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDirectConnectGatewayResponse {
      */
     
     public Object directConnectServerException;
+
     public CreateDirectConnectGatewayResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class CreateDirectConnectGatewayResponse {
     
     
     public Integer statusCode;
+
     public CreateDirectConnectGatewayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateDirectConnectGatewayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDirectConnectGatewayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDirectConnectGatewayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

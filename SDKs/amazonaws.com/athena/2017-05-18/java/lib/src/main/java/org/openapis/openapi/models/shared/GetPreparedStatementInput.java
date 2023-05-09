@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPreparedStatementInput {
     @JsonProperty("StatementName")
     public String statementName;
+
     public GetPreparedStatementInput withStatementName(String statementName) {
         this.statementName = statementName;
         return this;
@@ -16,9 +17,14 @@ public class GetPreparedStatementInput {
     
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public GetPreparedStatementInput withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public GetPreparedStatementInput(@JsonProperty("StatementName") String statementName, @JsonProperty("WorkGroup") String workGroup) {
+        this.statementName = statementName;
+        this.workGroup = workGroup;
+  }
 }

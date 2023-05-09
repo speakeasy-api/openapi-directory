@@ -12,6 +12,7 @@ public class ConfigModelHaljsonEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public ConfigModelHaljsonEmbeddedProductEmbedded embedded;
+
     public ConfigModelHaljsonEmbeddedProduct withEmbedded(ConfigModelHaljsonEmbeddedProductEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -20,6 +21,7 @@ public class ConfigModelHaljsonEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public ConfigModelHaljsonEmbeddedProductLinks links;
+
     public ConfigModelHaljsonEmbeddedProduct withLinks(ConfigModelHaljsonEmbeddedProductLinks links) {
         this.links = links;
         return this;
@@ -28,6 +30,7 @@ public class ConfigModelHaljsonEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ConfigModelHaljsonEmbeddedProduct withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class ConfigModelHaljsonEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConfigModelHaljsonEmbeddedProduct withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class ConfigModelHaljsonEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public ConfigModelHaljsonEmbeddedProduct withOrder(Integer order) {
         this.order = order;
         return this;
@@ -52,6 +57,7 @@ public class ConfigModelHaljsonEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public ConfigModelHaljsonEmbeddedProduct withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -60,9 +66,11 @@ public class ConfigModelHaljsonEmbeddedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonRequired")
     public Boolean reasonRequired;
+
     public ConfigModelHaljsonEmbeddedProduct withReasonRequired(Boolean reasonRequired) {
         this.reasonRequired = reasonRequired;
         return this;
     }
     
+    public ConfigModelHaljsonEmbeddedProduct(){}
 }

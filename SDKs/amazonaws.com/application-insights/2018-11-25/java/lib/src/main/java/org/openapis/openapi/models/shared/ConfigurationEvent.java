@@ -20,6 +20,7 @@ public class ConfigurationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventDetail")
     public String eventDetail;
+
     public ConfigurationEvent withEventDetail(String eventDetail) {
         this.eventDetail = eventDetail;
         return this;
@@ -28,6 +29,7 @@ public class ConfigurationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventResourceName")
     public String eventResourceName;
+
     public ConfigurationEvent withEventResourceName(String eventResourceName) {
         this.eventResourceName = eventResourceName;
         return this;
@@ -36,6 +38,7 @@ public class ConfigurationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventResourceType")
     public ConfigurationEventResourceTypeEnum eventResourceType;
+
     public ConfigurationEvent withEventResourceType(ConfigurationEventResourceTypeEnum eventResourceType) {
         this.eventResourceType = eventResourceType;
         return this;
@@ -44,6 +47,7 @@ public class ConfigurationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventStatus")
     public ConfigurationEventStatusEnum eventStatus;
+
     public ConfigurationEvent withEventStatus(ConfigurationEventStatusEnum eventStatus) {
         this.eventStatus = eventStatus;
         return this;
@@ -54,6 +58,7 @@ public class ConfigurationEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EventTime")
     public OffsetDateTime eventTime;
+
     public ConfigurationEvent withEventTime(OffsetDateTime eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -62,9 +67,11 @@ public class ConfigurationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoredResourceARN")
     public String monitoredResourceARN;
+
     public ConfigurationEvent withMonitoredResourceARN(String monitoredResourceARN) {
         this.monitoredResourceARN = monitoredResourceARN;
         return this;
     }
     
+    public ConfigurationEvent(){}
 }

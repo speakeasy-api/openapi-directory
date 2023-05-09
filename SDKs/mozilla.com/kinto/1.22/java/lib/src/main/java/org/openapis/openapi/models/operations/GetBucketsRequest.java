@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetBucketsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public GetBucketsRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -16,6 +17,7 @@ public class GetBucketsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetBucketsRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -23,6 +25,7 @@ public class GetBucketsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_before")
     public Long before;
+
     public GetBucketsRequest withBefore(Long before) {
         this.before = before;
         return this;
@@ -30,6 +33,7 @@ public class GetBucketsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=_fields")
     public String[] fields;
+
     public GetBucketsRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -37,6 +41,7 @@ public class GetBucketsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_limit")
     public Long limit;
+
     public GetBucketsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -44,6 +49,7 @@ public class GetBucketsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_since")
     public Long since;
+
     public GetBucketsRequest withSince(Long since) {
         this.since = since;
         return this;
@@ -51,6 +57,7 @@ public class GetBucketsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=_sort")
     public String[] sort;
+
     public GetBucketsRequest withSort(String[] sort) {
         this.sort = sort;
         return this;
@@ -58,6 +65,7 @@ public class GetBucketsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_to")
     public Long to;
+
     public GetBucketsRequest withTo(Long to) {
         this.to = to;
         return this;
@@ -65,6 +73,7 @@ public class GetBucketsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_token")
     public String token;
+
     public GetBucketsRequest withToken(String token) {
         this.token = token;
         return this;
@@ -72,6 +81,7 @@ public class GetBucketsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetBucketsRequest withId(String id) {
         this.id = id;
         return this;
@@ -79,9 +89,11 @@ public class GetBucketsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_modified")
     public Long lastModified;
+
     public GetBucketsRequest withLastModified(Long lastModified) {
         this.lastModified = lastModified;
         return this;
     }
     
+    public GetBucketsRequest(){}
 }

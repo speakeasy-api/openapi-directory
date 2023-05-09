@@ -15,6 +15,7 @@ public class To {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public To withNumber(String number) {
         this.number = number;
         return this;
@@ -23,9 +24,11 @@ public class To {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public To withType(String type) {
         this.type = type;
         return this;
     }
     
+    public To(){}
 }

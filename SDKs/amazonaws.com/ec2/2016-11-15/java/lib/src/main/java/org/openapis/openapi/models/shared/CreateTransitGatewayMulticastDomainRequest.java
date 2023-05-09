@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateTransitGatewayMulticastDomainRequest {
     
     public Boolean dryRun;
+
     public CreateTransitGatewayMulticastDomainRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateTransitGatewayMulticastDomainRequest {
     
     
     public CreateTransitGatewayMulticastDomainRequestOptions options;
+
     public CreateTransitGatewayMulticastDomainRequest withOptions(CreateTransitGatewayMulticastDomainRequestOptions options) {
         this.options = options;
         return this;
@@ -23,6 +25,7 @@ public class CreateTransitGatewayMulticastDomainRequest {
     
     
     public CreateTransitGatewayMulticastDomainRequestTagSpecifications[] tagSpecifications;
+
     public CreateTransitGatewayMulticastDomainRequest withTagSpecifications(CreateTransitGatewayMulticastDomainRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -30,9 +33,13 @@ public class CreateTransitGatewayMulticastDomainRequest {
     
     
     public String transitGatewayId;
+
     public CreateTransitGatewayMulticastDomainRequest withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
     }
     
+    public CreateTransitGatewayMulticastDomainRequest(@JsonProperty("TransitGatewayId") String transitGatewayId) {
+        this.transitGatewayId = transitGatewayId;
+  }
 }

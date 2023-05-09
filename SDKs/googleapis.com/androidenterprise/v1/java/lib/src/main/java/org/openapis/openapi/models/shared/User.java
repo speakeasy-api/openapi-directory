@@ -18,6 +18,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIdentifier")
     public String accountIdentifier;
+
     public User withAccountIdentifier(String accountIdentifier) {
         this.accountIdentifier = accountIdentifier;
         return this;
@@ -29,6 +30,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountType")
     public UserAccountTypeEnum accountType;
+
     public User withAccountType(UserAccountTypeEnum accountType) {
         this.accountType = accountType;
         return this;
@@ -40,6 +42,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public User withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public User withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managementType")
     public UserManagementTypeEnum managementType;
+
     public User withManagementType(UserManagementTypeEnum managementType) {
         this.managementType = managementType;
         return this;
@@ -73,9 +78,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryEmail")
     public String primaryEmail;
+
     public User withPrimaryEmail(String primaryEmail) {
         this.primaryEmail = primaryEmail;
         return this;
     }
     
+    public User(){}
 }

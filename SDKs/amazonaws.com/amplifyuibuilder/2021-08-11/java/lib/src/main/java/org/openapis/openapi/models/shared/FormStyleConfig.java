@@ -15,6 +15,7 @@ public class FormStyleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenReference")
     public String tokenReference;
+
     public FormStyleConfig withTokenReference(String tokenReference) {
         this.tokenReference = tokenReference;
         return this;
@@ -23,9 +24,11 @@ public class FormStyleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public FormStyleConfig withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public FormStyleConfig(){}
 }

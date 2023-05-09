@@ -15,9 +15,11 @@ public class RecognizeUtteranceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioStream")
     public String audioStream;
+
     public RecognizeUtteranceResponse withAudioStream(String audioStream) {
         this.audioStream = audioStream;
         return this;
     }
     
+    public RecognizeUtteranceResponse(){}
 }

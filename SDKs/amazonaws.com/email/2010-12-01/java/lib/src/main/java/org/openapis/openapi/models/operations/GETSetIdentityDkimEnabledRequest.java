@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetIdentityDkimEnabledRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETSetIdentityDkimEnabledActionEnum action;
+
     public GETSetIdentityDkimEnabledRequest withAction(GETSetIdentityDkimEnabledActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETSetIdentityDkimEnabledRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DkimEnabled")
     public Boolean dkimEnabled;
+
     public GETSetIdentityDkimEnabledRequest withDkimEnabled(Boolean dkimEnabled) {
         this.dkimEnabled = dkimEnabled;
         return this;
@@ -29,6 +32,7 @@ public class GETSetIdentityDkimEnabledRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Identity")
     public String identity;
+
     public GETSetIdentityDkimEnabledRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -36,6 +40,7 @@ public class GETSetIdentityDkimEnabledRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETSetIdentityDkimEnabledVersionEnum version;
+
     public GETSetIdentityDkimEnabledRequest withVersion(GETSetIdentityDkimEnabledVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETSetIdentityDkimEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETSetIdentityDkimEnabledRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETSetIdentityDkimEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETSetIdentityDkimEnabledRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETSetIdentityDkimEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETSetIdentityDkimEnabledRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETSetIdentityDkimEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETSetIdentityDkimEnabledRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETSetIdentityDkimEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETSetIdentityDkimEnabledRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETSetIdentityDkimEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETSetIdentityDkimEnabledRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETSetIdentityDkimEnabledRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETSetIdentityDkimEnabledRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETSetIdentityDkimEnabledRequest(@JsonProperty("Action") GETSetIdentityDkimEnabledActionEnum action, @JsonProperty("DkimEnabled") Boolean dkimEnabled, @JsonProperty("Identity") String identity, @JsonProperty("Version") GETSetIdentityDkimEnabledVersionEnum version) {
+        this.action = action;
+        this.dkimEnabled = dkimEnabled;
+        this.identity = identity;
+        this.version = version;
+  }
 }

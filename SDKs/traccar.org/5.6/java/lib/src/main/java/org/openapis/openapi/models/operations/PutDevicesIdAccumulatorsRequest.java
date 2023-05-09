@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutDevicesIdAccumulatorsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DeviceAccumulators deviceAccumulators;
+
     public PutDevicesIdAccumulatorsRequest withDeviceAccumulators(org.openapis.openapi.models.shared.DeviceAccumulators deviceAccumulators) {
         this.deviceAccumulators = deviceAccumulators;
         return this;
@@ -16,9 +18,14 @@ public class PutDevicesIdAccumulatorsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PutDevicesIdAccumulatorsRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PutDevicesIdAccumulatorsRequest(@JsonProperty("DeviceAccumulators") org.openapis.openapi.models.shared.DeviceAccumulators deviceAccumulators, @JsonProperty("id") Long id) {
+        this.deviceAccumulators = deviceAccumulators;
+        this.id = id;
+  }
 }

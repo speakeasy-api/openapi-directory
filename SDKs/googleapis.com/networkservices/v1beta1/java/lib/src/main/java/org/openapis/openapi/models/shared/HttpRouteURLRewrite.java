@@ -18,6 +18,7 @@ public class HttpRouteURLRewrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostRewrite")
     public String hostRewrite;
+
     public HttpRouteURLRewrite withHostRewrite(String hostRewrite) {
         this.hostRewrite = hostRewrite;
         return this;
@@ -29,9 +30,11 @@ public class HttpRouteURLRewrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathPrefixRewrite")
     public String pathPrefixRewrite;
+
     public HttpRouteURLRewrite withPathPrefixRewrite(String pathPrefixRewrite) {
         this.pathPrefixRewrite = pathPrefixRewrite;
         return this;
     }
     
+    public HttpRouteURLRewrite(){}
 }

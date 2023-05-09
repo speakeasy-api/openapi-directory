@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodeScanningListRecentAnalysesResponse {
     
     public String contentType;
+
     public CodeScanningListRecentAnalysesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodeScanningListRecentAnalysesResponse {
     
     
     public Integer statusCode;
+
     public CodeScanningListRecentAnalysesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CodeScanningListRecentAnalysesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodeScanningListRecentAnalysesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CodeScanningListRecentAnalysesResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public CodeScanningListRecentAnalysesResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class CodeScanningListRecentAnalysesResponse {
      */
     
     public org.openapis.openapi.models.shared.CodeScanningAnalysis[] codeScanningAnalyses;
+
     public CodeScanningListRecentAnalysesResponse withCodeScanningAnalyses(org.openapis.openapi.models.shared.CodeScanningAnalysis[] codeScanningAnalyses) {
         this.codeScanningAnalyses = codeScanningAnalyses;
         return this;
@@ -53,9 +59,14 @@ public class CodeScanningListRecentAnalysesResponse {
      */
     
     public CodeScanningListRecentAnalyses503ApplicationJSON codeScanningListRecentAnalyses503ApplicationJSONObject;
+
     public CodeScanningListRecentAnalysesResponse withCodeScanningListRecentAnalyses503ApplicationJSONObject(CodeScanningListRecentAnalyses503ApplicationJSON codeScanningListRecentAnalyses503ApplicationJSONObject) {
         this.codeScanningListRecentAnalyses503ApplicationJSONObject = codeScanningListRecentAnalyses503ApplicationJSONObject;
         return this;
     }
     
+    public CodeScanningListRecentAnalysesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

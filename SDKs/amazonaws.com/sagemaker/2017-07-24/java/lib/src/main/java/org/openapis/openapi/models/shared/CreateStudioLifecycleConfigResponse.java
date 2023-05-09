@@ -15,9 +15,11 @@ public class CreateStudioLifecycleConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioLifecycleConfigArn")
     public String studioLifecycleConfigArn;
+
     public CreateStudioLifecycleConfigResponse withStudioLifecycleConfigArn(String studioLifecycleConfigArn) {
         this.studioLifecycleConfigArn = studioLifecycleConfigArn;
         return this;
     }
     
+    public CreateStudioLifecycleConfigResponse(){}
 }

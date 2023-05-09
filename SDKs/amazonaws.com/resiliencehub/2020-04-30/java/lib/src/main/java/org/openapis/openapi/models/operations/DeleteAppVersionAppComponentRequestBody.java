@@ -10,10 +10,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteAppVersionAppComponentRequestBody {
     /**
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
      */
     @JsonProperty("appArn")
     public String appArn;
+
     public DeleteAppVersionAppComponentRequestBody withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -25,6 +26,7 @@ public class DeleteAppVersionAppComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DeleteAppVersionAppComponentRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -35,9 +37,14 @@ public class DeleteAppVersionAppComponentRequestBody {
      */
     @JsonProperty("id")
     public String id;
+
     public DeleteAppVersionAppComponentRequestBody withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteAppVersionAppComponentRequestBody(@JsonProperty("appArn") String appArn, @JsonProperty("id") String id) {
+        this.appArn = appArn;
+        this.id = id;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CitiesGetv1V1CitiesGetResponse {
     
     public String contentType;
+
     public CitiesGetv1V1CitiesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CitiesGetv1V1CitiesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public CitiesGetv1V1CitiesGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -29,6 +32,7 @@ public class CitiesGetv1V1CitiesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.OpenAQCitiesResult openAQCitiesResult;
+
     public CitiesGetv1V1CitiesGetResponse withOpenAQCitiesResult(org.openapis.openapi.models.shared.OpenAQCitiesResult openAQCitiesResult) {
         this.openAQCitiesResult = openAQCitiesResult;
         return this;
@@ -36,6 +40,7 @@ public class CitiesGetv1V1CitiesGetResponse {
     
     
     public Integer statusCode;
+
     public CitiesGetv1V1CitiesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CitiesGetv1V1CitiesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CitiesGetv1V1CitiesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CitiesGetv1V1CitiesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

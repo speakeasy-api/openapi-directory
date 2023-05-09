@@ -12,6 +12,7 @@ public class DestinyHistoricalStatsDestinyClanAggregateStat {
      */
     
     public Integer mode;
+
     public DestinyHistoricalStatsDestinyClanAggregateStat withMode(Integer mode) {
         this.mode = mode;
         return this;
@@ -22,6 +23,7 @@ public class DestinyHistoricalStatsDestinyClanAggregateStat {
      */
     
     public String statId;
+
     public DestinyHistoricalStatsDestinyClanAggregateStat withStatId(String statId) {
         this.statId = statId;
         return this;
@@ -32,9 +34,11 @@ public class DestinyHistoricalStatsDestinyClanAggregateStat {
      */
     
     public DestinyHistoricalStatsDestinyClanAggregateStatValue value;
+
     public DestinyHistoricalStatsDestinyClanAggregateStat withValue(DestinyHistoricalStatsDestinyClanAggregateStatValue value) {
         this.value = value;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyClanAggregateStat(){}
 }

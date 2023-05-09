@@ -12,6 +12,7 @@ public class Constraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowExplicitContent")
     public Boolean allowExplicitContent;
+
     public Constraints withAllowExplicitContent(Boolean allowExplicitContent) {
         this.allowExplicitContent = allowExplicitContent;
         return this;
@@ -20,6 +21,7 @@ public class Constraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumQueueSegmentItemCount")
     public Long maximumQueueSegmentItemCount;
+
     public Constraints withMaximumQueueSegmentItemCount(Long maximumQueueSegmentItemCount) {
         this.maximumQueueSegmentItemCount = maximumQueueSegmentItemCount;
         return this;
@@ -28,9 +30,11 @@ public class Constraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateUserTasteProfile")
     public Boolean updateUserTasteProfile;
+
     public Constraints withUpdateUserTasteProfile(Boolean updateUserTasteProfile) {
         this.updateUserTasteProfile = updateUserTasteProfile;
         return this;
     }
     
+    public Constraints(){}
 }

@@ -15,9 +15,11 @@ public class DescribeSeverityLevelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityLevels")
     public SeverityLevel[] severityLevels;
+
     public DescribeSeverityLevelsResponse withSeverityLevels(SeverityLevel[] severityLevels) {
         this.severityLevels = severityLevels;
         return this;
     }
     
+    public DescribeSeverityLevelsResponse(){}
 }

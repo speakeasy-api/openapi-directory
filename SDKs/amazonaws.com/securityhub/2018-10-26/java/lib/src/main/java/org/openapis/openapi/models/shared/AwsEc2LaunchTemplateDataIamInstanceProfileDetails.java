@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataIamInstanceProfileDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public AwsEc2LaunchTemplateDataIamInstanceProfileDetails withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2LaunchTemplateDataIamInstanceProfileDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsEc2LaunchTemplateDataIamInstanceProfileDetails withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataIamInstanceProfileDetails(){}
 }

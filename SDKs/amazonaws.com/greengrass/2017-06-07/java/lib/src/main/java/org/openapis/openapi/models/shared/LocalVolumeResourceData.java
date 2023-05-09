@@ -15,6 +15,7 @@ public class LocalVolumeResourceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationPath")
     public String destinationPath;
+
     public LocalVolumeResourceData withDestinationPath(String destinationPath) {
         this.destinationPath = destinationPath;
         return this;
@@ -23,6 +24,7 @@ public class LocalVolumeResourceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupOwnerSetting")
     public GroupOwnerSetting groupOwnerSetting;
+
     public LocalVolumeResourceData withGroupOwnerSetting(GroupOwnerSetting groupOwnerSetting) {
         this.groupOwnerSetting = groupOwnerSetting;
         return this;
@@ -31,9 +33,11 @@ public class LocalVolumeResourceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourcePath")
     public String sourcePath;
+
     public LocalVolumeResourceData withSourcePath(String sourcePath) {
         this.sourcePath = sourcePath;
         return this;
     }
     
+    public LocalVolumeResourceData(){}
 }

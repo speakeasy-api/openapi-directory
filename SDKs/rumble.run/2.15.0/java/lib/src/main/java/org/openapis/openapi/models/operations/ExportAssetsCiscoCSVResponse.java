@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportAssetsCiscoCSVResponse {
     
     public String contentType;
+
     public ExportAssetsCiscoCSVResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ExportAssetsCiscoCSVResponse {
     
     
     public Integer statusCode;
+
     public ExportAssetsCiscoCSVResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ExportAssetsCiscoCSVResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportAssetsCiscoCSVResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ExportAssetsCiscoCSVResponse {
      */
     
     public byte[] exportAssetsCiscoCSV200TextCSVBinaryString;
+
     public ExportAssetsCiscoCSVResponse withExportAssetsCiscoCSV200TextCSVBinaryString(byte[] exportAssetsCiscoCSV200TextCSVBinaryString) {
         this.exportAssetsCiscoCSV200TextCSVBinaryString = exportAssetsCiscoCSV200TextCSVBinaryString;
         return this;
     }
     
+    public ExportAssetsCiscoCSVResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

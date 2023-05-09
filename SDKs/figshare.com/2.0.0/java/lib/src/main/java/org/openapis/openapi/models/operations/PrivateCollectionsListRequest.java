@@ -12,6 +12,7 @@ public class PrivateCollectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public PrivateCollectionsListRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class PrivateCollectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public PrivateCollectionsListRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -32,6 +34,7 @@ public class PrivateCollectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public PrivateCollectionsListOrderEnum order;
+
     public PrivateCollectionsListRequest withOrder(PrivateCollectionsListOrderEnum order) {
         this.order = order;
         return this;
@@ -39,6 +42,7 @@ public class PrivateCollectionsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_direction")
     public PrivateCollectionsListOrderDirectionEnum orderDirection;
+
     public PrivateCollectionsListRequest withOrderDirection(PrivateCollectionsListOrderDirectionEnum orderDirection) {
         this.orderDirection = orderDirection;
         return this;
@@ -49,6 +53,7 @@ public class PrivateCollectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public PrivateCollectionsListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -59,9 +64,11 @@ public class PrivateCollectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public PrivateCollectionsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public PrivateCollectionsListRequest(){}
 }

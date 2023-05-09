@@ -12,6 +12,7 @@ package org.openapis.openapi.models.operations;
 public class GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActions {
     
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributes attributes;
+
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActions withAttributes(GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSche
      */
     
     public String id;
+
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActions withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSche
      */
     
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsLinks links;
+
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActions withLinks(GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSche
      */
     
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsRelationships relationships;
+
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActions withRelationships(GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActionsRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,11 @@ public class GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSche
      */
     
     public String type;
+
     public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActions withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdSchemaResponseActions(){}
 }

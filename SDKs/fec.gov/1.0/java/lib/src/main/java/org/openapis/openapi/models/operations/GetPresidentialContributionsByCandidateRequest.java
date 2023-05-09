@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPresidentialContributionsByCandidateRequest {
@@ -13,6 +14,7 @@ public class GetPresidentialContributionsByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetPresidentialContributionsByCandidateRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -23,6 +25,7 @@ public class GetPresidentialContributionsByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor_state")
     public String[] contributorState;
+
     public GetPresidentialContributionsByCandidateRequest withContributorState(String[] contributorState) {
         this.contributorState = contributorState;
         return this;
@@ -33,6 +36,7 @@ public class GetPresidentialContributionsByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_year")
     public Integer[] electionYear;
+
     public GetPresidentialContributionsByCandidateRequest withElectionYear(Integer[] electionYear) {
         this.electionYear = electionYear;
         return this;
@@ -43,6 +47,7 @@ public class GetPresidentialContributionsByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetPresidentialContributionsByCandidateRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -53,6 +58,7 @@ public class GetPresidentialContributionsByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetPresidentialContributionsByCandidateRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -64,6 +70,7 @@ public class GetPresidentialContributionsByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetPresidentialContributionsByCandidateRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -74,6 +81,7 @@ public class GetPresidentialContributionsByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetPresidentialContributionsByCandidateRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -84,6 +92,7 @@ public class GetPresidentialContributionsByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetPresidentialContributionsByCandidateRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -94,9 +103,13 @@ public class GetPresidentialContributionsByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetPresidentialContributionsByCandidateRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetPresidentialContributionsByCandidateRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

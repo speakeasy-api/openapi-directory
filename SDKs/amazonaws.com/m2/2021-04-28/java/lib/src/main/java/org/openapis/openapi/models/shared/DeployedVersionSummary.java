@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeployedVersionSummary {
     @JsonProperty("applicationVersion")
     public Long applicationVersion;
+
     public DeployedVersionSummary withApplicationVersion(Long applicationVersion) {
         this.applicationVersion = applicationVersion;
         return this;
@@ -21,6 +22,7 @@ public class DeployedVersionSummary {
     
     @JsonProperty("status")
     public DeploymentLifecycleEnum status;
+
     public DeployedVersionSummary withStatus(DeploymentLifecycleEnum status) {
         this.status = status;
         return this;
@@ -29,9 +31,14 @@ public class DeployedVersionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public DeployedVersionSummary withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public DeployedVersionSummary(@JsonProperty("applicationVersion") Long applicationVersion, @JsonProperty("status") DeploymentLifecycleEnum status) {
+        this.applicationVersion = applicationVersion;
+        this.status = status;
+  }
 }

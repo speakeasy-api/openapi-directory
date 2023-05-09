@@ -15,6 +15,7 @@ public class ListQuerySourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListQuerySourcesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class ListQuerySourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public QuerySource[] sources;
+
     public ListQuerySourcesResponse withSources(QuerySource[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public ListQuerySourcesResponse(){}
 }

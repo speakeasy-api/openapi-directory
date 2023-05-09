@@ -15,6 +15,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all_day")
     public Boolean allDay;
+
     public Attributes withAllDay(Boolean allDay) {
         this.allDay = allDay;
         return this;
@@ -26,6 +27,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attendees")
     public AttributesAttendees[] attendees;
+
     public Attributes withAttendees(AttributesAttendees[] attendees) {
         this.attendees = attendees;
         return this;
@@ -37,6 +39,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_at")
     public String completedAt;
+
     public Attributes withCompletedAt(String completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -48,6 +51,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_by")
     public java.util.Map<String, Object> completedBy;
+
     public Attributes withCompletedBy(java.util.Map<String, Object> completedBy) {
         this.completedBy = completedBy;
         return this;
@@ -56,6 +60,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Attributes withDescription(String description) {
         this.description = description;
         return this;
@@ -67,6 +72,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     public String endAt;
+
     public Attributes withEndAt(String endAt) {
         this.endAt = endAt;
         return this;
@@ -75,6 +81,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Attributes withLocation(String location) {
         this.location = location;
         return this;
@@ -86,6 +93,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     public String startAt;
+
     public Attributes withStartAt(String startAt) {
         this.startAt = startAt;
         return this;
@@ -97,6 +105,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_zone")
     public String timeZone;
+
     public Attributes withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -108,6 +117,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Attributes withTitle(String title) {
         this.title = title;
         return this;
@@ -119,9 +129,11 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AttributesTypeEnum type;
+
     public Attributes withType(AttributesTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Attributes(){}
 }

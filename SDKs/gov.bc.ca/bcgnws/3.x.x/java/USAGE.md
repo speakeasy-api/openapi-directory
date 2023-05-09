@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetFeaturesFeatureIdRequest;
 import org.openapis.openapi.models.operations.GetFeaturesFeatureIdResponse;
 
@@ -13,9 +12,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetFeaturesFeatureIdRequest req = new GetFeaturesFeatureIdRequest() {{
-                featureId = 548814;
-            }}            
+            GetFeaturesFeatureIdRequest req = new GetFeaturesFeatureIdRequest(548814L);            
 
             GetFeaturesFeatureIdResponse res = sdk.feature.getFeaturesFeatureId(req);
 
@@ -25,5 +22,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

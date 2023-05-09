@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse {
@@ -12,6 +13,7 @@ public class RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchRejectPublisherConnectionsResponse batchRejectPublisherConnectionsResponse;
+
     public RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse withBatchRejectPublisherConnectionsResponse(org.openapis.openapi.models.shared.BatchRejectPublisherConnectionsResponse batchRejectPublisherConnectionsResponse) {
         this.batchRejectPublisherConnectionsResponse = batchRejectPublisherConnectionsResponse;
         return this;
@@ -19,6 +21,7 @@ public class RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse {
     
     
     public String contentType;
+
     public RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse {
     
     
     public Integer statusCode;
+
     public RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

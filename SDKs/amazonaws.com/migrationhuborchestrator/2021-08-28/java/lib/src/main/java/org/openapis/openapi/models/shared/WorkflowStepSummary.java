@@ -15,6 +15,7 @@ public class WorkflowStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public WorkflowStepSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class WorkflowStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkflowStepSummary withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class WorkflowStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String[] next;
+
     public WorkflowStepSummary withNext(String[] next) {
         this.next = next;
         return this;
@@ -39,6 +42,7 @@ public class WorkflowStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noOfSrvCompleted")
     public Long noOfSrvCompleted;
+
     public WorkflowStepSummary withNoOfSrvCompleted(Long noOfSrvCompleted) {
         this.noOfSrvCompleted = noOfSrvCompleted;
         return this;
@@ -47,6 +51,7 @@ public class WorkflowStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noOfSrvFailed")
     public Long noOfSrvFailed;
+
     public WorkflowStepSummary withNoOfSrvFailed(Long noOfSrvFailed) {
         this.noOfSrvFailed = noOfSrvFailed;
         return this;
@@ -55,6 +60,7 @@ public class WorkflowStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public OwnerEnum owner;
+
     public WorkflowStepSummary withOwner(OwnerEnum owner) {
         this.owner = owner;
         return this;
@@ -63,6 +69,7 @@ public class WorkflowStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String[] previous;
+
     public WorkflowStepSummary withPrevious(String[] previous) {
         this.previous = previous;
         return this;
@@ -71,6 +78,7 @@ public class WorkflowStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptLocation")
     public String scriptLocation;
+
     public WorkflowStepSummary withScriptLocation(String scriptLocation) {
         this.scriptLocation = scriptLocation;
         return this;
@@ -79,6 +87,7 @@ public class WorkflowStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StepStatusEnum status;
+
     public WorkflowStepSummary withStatus(StepStatusEnum status) {
         this.status = status;
         return this;
@@ -87,6 +96,7 @@ public class WorkflowStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public WorkflowStepSummary withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -95,6 +105,7 @@ public class WorkflowStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepActionType")
     public StepActionTypeEnum stepActionType;
+
     public WorkflowStepSummary withStepActionType(StepActionTypeEnum stepActionType) {
         this.stepActionType = stepActionType;
         return this;
@@ -103,6 +114,7 @@ public class WorkflowStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepId")
     public String stepId;
+
     public WorkflowStepSummary withStepId(String stepId) {
         this.stepId = stepId;
         return this;
@@ -111,9 +123,11 @@ public class WorkflowStepSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalNoOfSrv")
     public Long totalNoOfSrv;
+
     public WorkflowStepSummary withTotalNoOfSrv(Long totalNoOfSrv) {
         this.totalNoOfSrv = totalNoOfSrv;
         return this;
     }
     
+    public WorkflowStepSummary(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAliasInput {
     @JsonProperty("AliasId")
     public String aliasId;
+
     public UpdateAliasInput withAliasId(String aliasId) {
         this.aliasId = aliasId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateAliasInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateAliasInput withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class UpdateAliasInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateAliasInput withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +38,13 @@ public class UpdateAliasInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingStrategy")
     public RoutingStrategy routingStrategy;
+
     public UpdateAliasInput withRoutingStrategy(RoutingStrategy routingStrategy) {
         this.routingStrategy = routingStrategy;
         return this;
     }
     
+    public UpdateAliasInput(@JsonProperty("AliasId") String aliasId) {
+        this.aliasId = aliasId;
+  }
 }

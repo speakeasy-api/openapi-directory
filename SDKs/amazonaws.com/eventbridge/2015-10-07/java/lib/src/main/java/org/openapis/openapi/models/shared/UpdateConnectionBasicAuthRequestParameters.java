@@ -15,6 +15,7 @@ public class UpdateConnectionBasicAuthRequestParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public UpdateConnectionBasicAuthRequestParameters withPassword(String password) {
         this.password = password;
         return this;
@@ -23,9 +24,11 @@ public class UpdateConnectionBasicAuthRequestParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public UpdateConnectionBasicAuthRequestParameters withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public UpdateConnectionBasicAuthRequestParameters(){}
 }

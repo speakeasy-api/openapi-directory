@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportSnapshotResponse {
@@ -12,6 +13,7 @@ public class ExportSnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public ExportSnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ExportSnapshotResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public ExportSnapshotResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class ExportSnapshotResponse {
     
     
     public String contentType;
+
     public ExportSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ExportSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.ExportSnapshotResult exportSnapshotResult;
+
     public ExportSnapshotResponse withExportSnapshotResult(org.openapis.openapi.models.shared.ExportSnapshotResult exportSnapshotResult) {
         this.exportSnapshotResult = exportSnapshotResult;
         return this;
@@ -49,6 +54,7 @@ public class ExportSnapshotResponse {
      */
     
     public Object invalidInputException;
+
     public ExportSnapshotResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class ExportSnapshotResponse {
      */
     
     public Object notFoundException;
+
     public ExportSnapshotResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ExportSnapshotResponse {
      */
     
     public Object operationFailureException;
+
     public ExportSnapshotResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class ExportSnapshotResponse {
      */
     
     public Object serviceException;
+
     public ExportSnapshotResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class ExportSnapshotResponse {
     
     
     public Integer statusCode;
+
     public ExportSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ExportSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class ExportSnapshotResponse {
      */
     
     public Object unauthenticatedException;
+
     public ExportSnapshotResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public ExportSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

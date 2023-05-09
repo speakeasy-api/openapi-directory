@@ -21,6 +21,7 @@ public class ListLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListLocationsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -32,9 +33,11 @@ public class ListLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public Location[] locations;
+
     public ListLocationsResponse withLocations(Location[] locations) {
         this.locations = locations;
         return this;
     }
     
+    public ListLocationsResponse(){}
 }

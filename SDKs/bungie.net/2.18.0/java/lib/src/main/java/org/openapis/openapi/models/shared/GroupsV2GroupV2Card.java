@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class GroupsV2GroupV2Card {
     
     public String about;
+
     public GroupsV2GroupV2Card withAbout(String about) {
         this.about = about;
         return this;
@@ -19,6 +20,7 @@ public class GroupsV2GroupV2Card {
     
     
     public String avatarPath;
+
     public GroupsV2GroupV2Card withAvatarPath(String avatarPath) {
         this.avatarPath = avatarPath;
         return this;
@@ -26,6 +28,7 @@ public class GroupsV2GroupV2Card {
     
     
     public Integer capabilities;
+
     public GroupsV2GroupV2Card withCapabilities(Integer capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -36,6 +39,7 @@ public class GroupsV2GroupV2Card {
      */
     
     public GroupsV2GroupV2ClanInfo clanInfo;
+
     public GroupsV2GroupV2Card withClanInfo(GroupsV2GroupV2ClanInfo clanInfo) {
         this.clanInfo = clanInfo;
         return this;
@@ -43,6 +47,7 @@ public class GroupsV2GroupV2Card {
     
     
     public OffsetDateTime creationDate;
+
     public GroupsV2GroupV2Card withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -50,6 +55,7 @@ public class GroupsV2GroupV2Card {
     
     
     public Long groupId;
+
     public GroupsV2GroupV2Card withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -57,6 +63,7 @@ public class GroupsV2GroupV2Card {
     
     
     public Integer groupType;
+
     public GroupsV2GroupV2Card withGroupType(Integer groupType) {
         this.groupType = groupType;
         return this;
@@ -64,6 +71,7 @@ public class GroupsV2GroupV2Card {
     
     
     public String locale;
+
     public GroupsV2GroupV2Card withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -71,6 +79,7 @@ public class GroupsV2GroupV2Card {
     
     
     public Integer memberCount;
+
     public GroupsV2GroupV2Card withMemberCount(Integer memberCount) {
         this.memberCount = memberCount;
         return this;
@@ -78,6 +87,7 @@ public class GroupsV2GroupV2Card {
     
     
     public Integer membershipOption;
+
     public GroupsV2GroupV2Card withMembershipOption(Integer membershipOption) {
         this.membershipOption = membershipOption;
         return this;
@@ -85,6 +95,7 @@ public class GroupsV2GroupV2Card {
     
     
     public String motto;
+
     public GroupsV2GroupV2Card withMotto(String motto) {
         this.motto = motto;
         return this;
@@ -92,6 +103,7 @@ public class GroupsV2GroupV2Card {
     
     
     public String name;
+
     public GroupsV2GroupV2Card withName(String name) {
         this.name = name;
         return this;
@@ -99,9 +111,11 @@ public class GroupsV2GroupV2Card {
     
     
     public String theme;
+
     public GroupsV2GroupV2Card withTheme(String theme) {
         this.theme = theme;
         return this;
     }
     
+    public GroupsV2GroupV2Card(){}
 }

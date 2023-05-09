@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewaysRequestFilters {
     
     public String name;
+
     public DescribeLocalGatewaysRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeLocalGatewaysRequestFilters {
     
     
     public String[] values;
+
     public DescribeLocalGatewaysRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeLocalGatewaysRequestFilters(){}
 }

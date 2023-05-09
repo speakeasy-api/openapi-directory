@@ -18,6 +18,7 @@ public class TabStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alignment")
     public TabStopAlignmentEnum alignment;
+
     public TabStop withAlignment(TabStopAlignmentEnum alignment) {
         this.alignment = alignment;
         return this;
@@ -29,9 +30,11 @@ public class TabStop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Dimension offset;
+
     public TabStop withOffset(Dimension offset) {
         this.offset = offset;
         return this;
     }
     
+    public TabStop(){}
 }

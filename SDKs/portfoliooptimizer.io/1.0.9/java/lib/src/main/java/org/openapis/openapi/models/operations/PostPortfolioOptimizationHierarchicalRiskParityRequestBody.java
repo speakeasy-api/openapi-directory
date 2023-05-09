@@ -14,6 +14,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationHierarchicalRiskParityRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -24,6 +25,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityRequestBody {
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioOptimizationHierarchicalRiskParityRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -35,6 +37,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusteringMethod")
     public PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringMethodEnum clusteringMethod;
+
     public PostPortfolioOptimizationHierarchicalRiskParityRequestBody withClusteringMethod(PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringMethodEnum clusteringMethod) {
         this.clusteringMethod = clusteringMethod;
         return this;
@@ -46,6 +49,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusteringOrdering")
     public PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringOrderingEnum clusteringOrdering;
+
     public PostPortfolioOptimizationHierarchicalRiskParityRequestBody withClusteringOrdering(PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringOrderingEnum clusteringOrdering) {
         this.clusteringOrdering = clusteringOrdering;
         return this;
@@ -54,9 +58,14 @@ public class PostPortfolioOptimizationHierarchicalRiskParityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PostPortfolioOptimizationHierarchicalRiskParityRequestBodyConstraints constraints;
+
     public PostPortfolioOptimizationHierarchicalRiskParityRequestBody withConstraints(PostPortfolioOptimizationHierarchicalRiskParityRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
     }
     
+    public PostPortfolioOptimizationHierarchicalRiskParityRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+  }
 }

@@ -15,6 +15,7 @@ public class DataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public DataTypeField[] field;
+
     public DataType withField(DataTypeField[] field) {
         this.field = field;
         return this;
@@ -26,9 +27,11 @@ public class DataType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DataType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DataType(){}
 }

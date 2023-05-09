@@ -4,17 +4,15 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * TargetTrackingMetricStat - &lt;p&gt;This structure defines the CloudWatch metric to return, along with the statistic, period, and unit.&lt;/p&gt; &lt;p&gt;For more information about the CloudWatch terminology below, see &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html"&gt;Amazon CloudWatch concepts&lt;/a&gt; in the &lt;i&gt;Amazon CloudWatch User Guide&lt;/i&gt;.&lt;/p&gt;
+ * TargetTrackingMetricStat - &lt;p&gt;This structure defines the CloudWatch metric to return, along with the statistic and unit.&lt;/p&gt; &lt;p&gt;For more information about the CloudWatch terminology below, see &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html"&gt;Amazon CloudWatch concepts&lt;/a&gt; in the &lt;i&gt;Amazon CloudWatch User Guide&lt;/i&gt;.&lt;/p&gt;
  */
 public class TargetTrackingMetricStat {
-    /**
-     * Represents a specific metric. 
-     */
     
     public Metric metric;
+
     public TargetTrackingMetricStat withMetric(Metric metric) {
         this.metric = metric;
         return this;
@@ -22,6 +20,7 @@ public class TargetTrackingMetricStat {
     
     
     public String stat;
+
     public TargetTrackingMetricStat withStat(String stat) {
         this.stat = stat;
         return this;
@@ -29,9 +28,14 @@ public class TargetTrackingMetricStat {
     
     
     public String unit;
+
     public TargetTrackingMetricStat withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public TargetTrackingMetricStat(@JsonProperty("Metric") Metric metric, @JsonProperty("Stat") String stat) {
+        this.metric = metric;
+        this.stat = stat;
+  }
 }

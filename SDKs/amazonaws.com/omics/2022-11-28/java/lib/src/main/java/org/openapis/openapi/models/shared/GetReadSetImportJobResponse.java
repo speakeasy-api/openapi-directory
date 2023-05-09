@@ -22,6 +22,7 @@ public class GetReadSetImportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completionTime")
     public OffsetDateTime completionTime;
+
     public GetReadSetImportJobResponse withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -31,6 +32,7 @@ public class GetReadSetImportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetReadSetImportJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class GetReadSetImportJobResponse {
     
     @JsonProperty("id")
     public String id;
+
     public GetReadSetImportJobResponse withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class GetReadSetImportJobResponse {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public GetReadSetImportJobResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -52,6 +56,7 @@ public class GetReadSetImportJobResponse {
     
     @JsonProperty("sequenceStoreId")
     public String sequenceStoreId;
+
     public GetReadSetImportJobResponse withSequenceStoreId(String sequenceStoreId) {
         this.sequenceStoreId = sequenceStoreId;
         return this;
@@ -59,6 +64,7 @@ public class GetReadSetImportJobResponse {
     
     @JsonProperty("sources")
     public ImportReadSetSourceItem[] sources;
+
     public GetReadSetImportJobResponse withSources(ImportReadSetSourceItem[] sources) {
         this.sources = sources;
         return this;
@@ -66,6 +72,7 @@ public class GetReadSetImportJobResponse {
     
     @JsonProperty("status")
     public ReadSetImportJobStatusEnum status;
+
     public GetReadSetImportJobResponse withStatus(ReadSetImportJobStatusEnum status) {
         this.status = status;
         return this;
@@ -74,9 +81,18 @@ public class GetReadSetImportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public GetReadSetImportJobResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public GetReadSetImportJobResponse(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id, @JsonProperty("roleArn") String roleArn, @JsonProperty("sequenceStoreId") String sequenceStoreId, @JsonProperty("sources") ImportReadSetSourceItem[] sources, @JsonProperty("status") ReadSetImportJobStatusEnum status) {
+        this.creationTime = creationTime;
+        this.id = id;
+        this.roleArn = roleArn;
+        this.sequenceStoreId = sequenceStoreId;
+        this.sources = sources;
+        this.status = status;
+  }
 }

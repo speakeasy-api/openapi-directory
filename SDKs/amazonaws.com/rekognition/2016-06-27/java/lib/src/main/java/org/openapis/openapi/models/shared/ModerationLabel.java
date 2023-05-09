@@ -15,6 +15,7 @@ public class ModerationLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public ModerationLabel withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -23,6 +24,7 @@ public class ModerationLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ModerationLabel withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class ModerationLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParentName")
     public String parentName;
+
     public ModerationLabel withParentName(String parentName) {
         this.parentName = parentName;
         return this;
     }
     
+    public ModerationLabel(){}
 }

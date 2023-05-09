@@ -14,9 +14,11 @@ public class CampaignDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaign_id")
     public String campaignId;
+
     public CampaignDetailsRequest withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
     }
     
+    public CampaignDetailsRequest(){}
 }

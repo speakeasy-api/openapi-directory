@@ -12,9 +12,13 @@ public class UpdateOrganizationSecurityIntrusionSettingsRequestBody {
      */
     @JsonProperty("whitelistedRules")
     public UpdateOrganizationSecurityIntrusionSettingsRequestBodyWhitelistedRules[] whitelistedRules;
+
     public UpdateOrganizationSecurityIntrusionSettingsRequestBody withWhitelistedRules(UpdateOrganizationSecurityIntrusionSettingsRequestBodyWhitelistedRules[] whitelistedRules) {
         this.whitelistedRules = whitelistedRules;
         return this;
     }
     
+    public UpdateOrganizationSecurityIntrusionSettingsRequestBody(@JsonProperty("whitelistedRules") UpdateOrganizationSecurityIntrusionSettingsRequestBodyWhitelistedRules[] whitelistedRules) {
+        this.whitelistedRules = whitelistedRules;
+  }
 }

@@ -15,9 +15,13 @@ public class UpdateApnsSandboxChannelResponse {
      */
     @JsonProperty("APNSSandboxChannelResponse")
     public APNSSandboxChannelResponse apnsSandboxChannelResponse;
+
     public UpdateApnsSandboxChannelResponse withAPNSSandboxChannelResponse(APNSSandboxChannelResponse apnsSandboxChannelResponse) {
         this.apnsSandboxChannelResponse = apnsSandboxChannelResponse;
         return this;
     }
     
+    public UpdateApnsSandboxChannelResponse(@JsonProperty("APNSSandboxChannelResponse") APNSSandboxChannelResponse apnsSandboxChannelResponse) {
+        this.apnsSandboxChannelResponse = apnsSandboxChannelResponse;
+  }
 }

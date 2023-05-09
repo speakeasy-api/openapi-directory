@@ -21,6 +21,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cape")
     public Double cape;
+
     public PointPointHourlyData withCape(Double cape) {
         this.cape = cape;
         return this;
@@ -28,6 +29,7 @@ public class PointPointHourlyData {
     
     @JsonProperty("cloud_cover")
     public PointPointHourlyCloudCoverData cloudCover;
+
     public PointPointHourlyData withCloudCover(PointPointHourlyCloudCoverData cloudCover) {
         this.cloudCover = cloudCover;
         return this;
@@ -41,6 +43,7 @@ public class PointPointHourlyData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public PointPointHourlyData withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -52,6 +55,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dew_point")
     public Double dewPoint;
+
     public PointPointHourlyData withDewPoint(Double dewPoint) {
         this.dewPoint = dewPoint;
         return this;
@@ -64,6 +68,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaporation")
     public Double evaporation;
+
     public PointPointHourlyData withEvaporation(Double evaporation) {
         this.evaporation = evaporation;
         return this;
@@ -75,6 +80,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feels_like")
     public Double feelsLike;
+
     public PointPointHourlyData withFeelsLike(Double feelsLike) {
         this.feelsLike = feelsLike;
         return this;
@@ -87,6 +93,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humidity")
     public Long humidity;
+
     public PointPointHourlyData withHumidity(Long humidity) {
         this.humidity = humidity;
         return this;
@@ -137,6 +144,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public Long icon;
+
     public PointPointHourlyData withIcon(Long icon) {
         this.icon = icon;
         return this;
@@ -149,6 +157,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("irradiance")
     public Double irradiance;
+
     public PointPointHourlyData withIrradiance(Double irradiance) {
         this.irradiance = irradiance;
         return this;
@@ -161,6 +170,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lftx")
     public Double lftx;
+
     public PointPointHourlyData withLftx(Double lftx) {
         this.lftx = lftx;
         return this;
@@ -173,6 +183,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ozone")
     public Double ozone;
+
     public PointPointHourlyData withOzone(Double ozone) {
         this.ozone = ozone;
         return this;
@@ -180,6 +191,7 @@ public class PointPointHourlyData {
     
     @JsonProperty("precipitation")
     public PointPointHourlyPrecipitationData precipitation;
+
     public PointPointHourlyData withPrecipitation(PointPointHourlyPrecipitationData precipitation) {
         this.precipitation = precipitation;
         return this;
@@ -192,6 +204,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pressure")
     public Double pressure;
+
     public PointPointHourlyData withPressure(Double pressure) {
         this.pressure = pressure;
         return this;
@@ -199,6 +212,7 @@ public class PointPointHourlyData {
     
     @JsonProperty("probability")
     public PointPointHourlyProbData probability;
+
     public PointPointHourlyData withProbability(PointPointHourlyProbData probability) {
         this.probability = probability;
         return this;
@@ -211,6 +225,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snow_depth")
     public Double snowDepth;
+
     public PointPointHourlyData withSnowDepth(Double snowDepth) {
         this.snowDepth = snowDepth;
         return this;
@@ -222,6 +237,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("soil_temperature")
     public Double soilTemperature;
+
     public PointPointHourlyData withSoilTemperature(Double soilTemperature) {
         this.soilTemperature = soilTemperature;
         return this;
@@ -233,6 +249,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public PointPointHourlyData withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -245,6 +262,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sunshine_duration")
     public Double sunshineDuration;
+
     public PointPointHourlyData withSunshineDuration(Double sunshineDuration) {
         this.sunshineDuration = sunshineDuration;
         return this;
@@ -256,6 +274,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surface_temperature")
     public Double surfaceTemperature;
+
     public PointPointHourlyData withSurfaceTemperature(Double surfaceTemperature) {
         this.surfaceTemperature = surfaceTemperature;
         return this;
@@ -267,6 +286,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature")
     public Double temperature;
+
     public PointPointHourlyData withTemperature(Double temperature) {
         this.temperature = temperature;
         return this;
@@ -279,6 +299,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uv_index")
     public Double uvIndex;
+
     public PointPointHourlyData withUvIndex(Double uvIndex) {
         this.uvIndex = uvIndex;
         return this;
@@ -291,6 +312,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public Double visibility;
+
     public PointPointHourlyData withVisibility(Double visibility) {
         this.visibility = visibility;
         return this;
@@ -302,6 +324,7 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weather")
     public String weather;
+
     public PointPointHourlyData withWeather(String weather) {
         this.weather = weather;
         return this;
@@ -309,6 +332,7 @@ public class PointPointHourlyData {
     
     @JsonProperty("wind")
     public PointPointHourlyWindData wind;
+
     public PointPointHourlyData withWind(PointPointHourlyWindData wind) {
         this.wind = wind;
         return this;
@@ -320,9 +344,16 @@ public class PointPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wind_chill")
     public Double windChill;
+
     public PointPointHourlyData withWindChill(Double windChill) {
         this.windChill = windChill;
         return this;
     }
     
+    public PointPointHourlyData(@JsonProperty("cloud_cover") PointPointHourlyCloudCoverData cloudCover, @JsonProperty("precipitation") PointPointHourlyPrecipitationData precipitation, @JsonProperty("probability") PointPointHourlyProbData probability, @JsonProperty("wind") PointPointHourlyWindData wind) {
+        this.cloudCover = cloudCover;
+        this.precipitation = precipitation;
+        this.probability = probability;
+        this.wind = wind;
+  }
 }

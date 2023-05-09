@@ -18,6 +18,7 @@ public class PublisherProfileMobileApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appStore")
     public PublisherProfileMobileApplicationAppStoreEnum appStore;
+
     public PublisherProfileMobileApplication withAppStore(PublisherProfileMobileApplicationAppStoreEnum appStore) {
         this.appStore = appStore;
         return this;
@@ -29,6 +30,7 @@ public class PublisherProfileMobileApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalAppId")
     public String externalAppId;
+
     public PublisherProfileMobileApplication withExternalAppId(String externalAppId) {
         this.externalAppId = externalAppId;
         return this;
@@ -40,9 +42,11 @@ public class PublisherProfileMobileApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PublisherProfileMobileApplication withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PublisherProfileMobileApplication(){}
 }

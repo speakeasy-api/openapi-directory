@@ -15,6 +15,7 @@ public class ListCustomMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricNames")
     public String[] metricNames;
+
     public ListCustomMetricsResponse withMetricNames(String[] metricNames) {
         this.metricNames = metricNames;
         return this;
@@ -23,9 +24,11 @@ public class ListCustomMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCustomMetricsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomMetricsResponse(){}
 }

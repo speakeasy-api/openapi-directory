@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchAttachToIndex {
     @JsonProperty("IndexReference")
     public ObjectReference indexReference;
+
     public BatchAttachToIndex withIndexReference(ObjectReference indexReference) {
         this.indexReference = indexReference;
         return this;
@@ -19,9 +20,14 @@ public class BatchAttachToIndex {
     
     @JsonProperty("TargetReference")
     public ObjectReference targetReference;
+
     public BatchAttachToIndex withTargetReference(ObjectReference targetReference) {
         this.targetReference = targetReference;
         return this;
     }
     
+    public BatchAttachToIndex(@JsonProperty("IndexReference") ObjectReference indexReference, @JsonProperty("TargetReference") ObjectReference targetReference) {
+        this.indexReference = indexReference;
+        this.targetReference = targetReference;
+  }
 }

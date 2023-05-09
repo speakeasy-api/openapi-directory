@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelSubscriptionRequest {
@@ -12,9 +13,13 @@ public class CancelSubscriptionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscription_id")
     public String subscriptionId;
+
     public CancelSubscriptionRequest withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public CancelSubscriptionRequest(@JsonProperty("subscription_id") String subscriptionId) {
+        this.subscriptionId = subscriptionId;
+  }
 }

@@ -141,11 +141,9 @@ public class PriceTables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetrulesforapricetableResponse res = new org.openapis.openapi.models.operations.GetrulesforapricetableResponse() {{
+        org.openapis.openapi.models.operations.GetrulesforapricetableResponse res = new org.openapis.openapi.models.operations.GetrulesforapricetableResponse(contentType, httpRes.statusCode()) {{
             getrulesforapricetable200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -233,11 +231,9 @@ public class PriceTables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListpricetablesResponse res = new org.openapis.openapi.models.operations.ListpricetablesResponse() {{
+        org.openapis.openapi.models.operations.ListpricetablesResponse res = new org.openapis.openapi.models.operations.ListpricetablesResponse(contentType, httpRes.statusCode()) {{
             listpricetables200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -383,11 +379,9 @@ public class PriceTables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetallpricetablesandrulesResponse res = new org.openapis.openapi.models.operations.GetallpricetablesandrulesResponse() {{
+        org.openapis.openapi.models.operations.GetallpricetablesandrulesResponse res = new org.openapis.openapi.models.operations.GetallpricetablesandrulesResponse(contentType, httpRes.statusCode()) {{
             getallpricetablesandrules200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -415,7 +409,7 @@ public class PriceTables {
      *                "context": {
      *                     "categories": {
      *                          "Category ID": "1",
-     *                          "Category Name": "Alimenta\u00e7\u00e3o"
+     *                          "Category Name": "Alimentação"
      *                     },
      *                     "brands": {
      *                          "Brand ID": "2000002",
@@ -464,10 +458,8 @@ public class PriceTables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutPricingPipelineCatalogPriceTableIdResponse res = new org.openapis.openapi.models.operations.PutPricingPipelineCatalogPriceTableIdResponse() {{
+        org.openapis.openapi.models.operations.PutPricingPipelineCatalogPriceTableIdResponse res = new org.openapis.openapi.models.operations.PutPricingPipelineCatalogPriceTableIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

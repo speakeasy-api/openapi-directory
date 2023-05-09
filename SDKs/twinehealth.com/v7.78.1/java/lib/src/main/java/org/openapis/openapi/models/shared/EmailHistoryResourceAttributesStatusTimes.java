@@ -18,6 +18,7 @@ public class EmailHistoryResourceAttributesStatusTimes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bounce")
     public String bounce;
+
     public EmailHistoryResourceAttributesStatusTimes withBounce(String bounce) {
         this.bounce = bounce;
         return this;
@@ -29,6 +30,7 @@ public class EmailHistoryResourceAttributesStatusTimes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("click")
     public String click;
+
     public EmailHistoryResourceAttributesStatusTimes withClick(String click) {
         this.click = click;
         return this;
@@ -40,6 +42,7 @@ public class EmailHistoryResourceAttributesStatusTimes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deferred")
     public String deferred;
+
     public EmailHistoryResourceAttributesStatusTimes withDeferred(String deferred) {
         this.deferred = deferred;
         return this;
@@ -51,6 +54,7 @@ public class EmailHistoryResourceAttributesStatusTimes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delivered")
     public String delivered;
+
     public EmailHistoryResourceAttributesStatusTimes withDelivered(String delivered) {
         this.delivered = delivered;
         return this;
@@ -62,6 +66,7 @@ public class EmailHistoryResourceAttributesStatusTimes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dropped")
     public String dropped;
+
     public EmailHistoryResourceAttributesStatusTimes withDropped(String dropped) {
         this.dropped = dropped;
         return this;
@@ -73,6 +78,7 @@ public class EmailHistoryResourceAttributesStatusTimes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("open")
     public String open;
+
     public EmailHistoryResourceAttributesStatusTimes withOpen(String open) {
         this.open = open;
         return this;
@@ -84,6 +90,7 @@ public class EmailHistoryResourceAttributesStatusTimes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processed")
     public String processed;
+
     public EmailHistoryResourceAttributesStatusTimes withProcessed(String processed) {
         this.processed = processed;
         return this;
@@ -95,6 +102,7 @@ public class EmailHistoryResourceAttributesStatusTimes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spamreport")
     public String spamreport;
+
     public EmailHistoryResourceAttributesStatusTimes withSpamreport(String spamreport) {
         this.spamreport = spamreport;
         return this;
@@ -106,9 +114,11 @@ public class EmailHistoryResourceAttributesStatusTimes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unsubscribe")
     public String unsubscribe;
+
     public EmailHistoryResourceAttributesStatusTimes withUnsubscribe(String unsubscribe) {
         this.unsubscribe = unsubscribe;
         return this;
     }
     
+    public EmailHistoryResourceAttributesStatusTimes(){}
 }

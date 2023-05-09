@@ -18,9 +18,11 @@ public class LatencyCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threshold")
     public String threshold;
+
     public LatencyCriteria withThreshold(String threshold) {
         this.threshold = threshold;
         return this;
     }
     
+    public LatencyCriteria(){}
 }

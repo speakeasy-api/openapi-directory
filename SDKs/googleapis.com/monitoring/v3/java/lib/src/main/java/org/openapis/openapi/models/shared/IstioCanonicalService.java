@@ -18,6 +18,7 @@ public class IstioCanonicalService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canonicalService")
     public String canonicalService;
+
     public IstioCanonicalService withCanonicalService(String canonicalService) {
         this.canonicalService = canonicalService;
         return this;
@@ -29,6 +30,7 @@ public class IstioCanonicalService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canonicalServiceNamespace")
     public String canonicalServiceNamespace;
+
     public IstioCanonicalService withCanonicalServiceNamespace(String canonicalServiceNamespace) {
         this.canonicalServiceNamespace = canonicalServiceNamespace;
         return this;
@@ -40,9 +42,11 @@ public class IstioCanonicalService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meshUid")
     public String meshUid;
+
     public IstioCanonicalService withMeshUid(String meshUid) {
         this.meshUid = meshUid;
         return this;
     }
     
+    public IstioCanonicalService(){}
 }

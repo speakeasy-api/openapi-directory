@@ -18,6 +18,7 @@ public class ListAddressGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressGroups")
     public AddressGroup[] addressGroups;
+
     public ListAddressGroupsResponse withAddressGroups(AddressGroup[] addressGroups) {
         this.addressGroups = addressGroups;
         return this;
@@ -29,9 +30,11 @@ public class ListAddressGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAddressGroupsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAddressGroupsResponse(){}
 }

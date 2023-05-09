@@ -12,6 +12,7 @@ public class SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductEmbeddedO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public String members;
+
     public SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductEmbeddedOrganizationLinks withMembers(String members) {
         this.members = members;
         return this;
@@ -20,9 +21,11 @@ public class SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductEmbeddedO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public String products;
+
     public SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductEmbeddedOrganizationLinks withProducts(String products) {
         this.products = products;
         return this;
     }
     
+    public SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductEmbeddedOrganizationLinks(){}
 }

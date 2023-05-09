@@ -18,6 +18,7 @@ public class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsol
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalLinks")
     public String[] additionalLinks;
+
     public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole withAdditionalLinks(String[] additionalLinks) {
         this.additionalLinks = additionalLinks;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsol
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consoleUris")
     public String[] consoleUris;
+
     public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole withConsoleUris(String[] consoleUris) {
         this.consoleUris = consoleUris;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsol
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public String[] steps;
+
     public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole withSteps(String[] steps) {
         this.steps = steps;
         return this;
     }
     
+    public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole(){}
 }

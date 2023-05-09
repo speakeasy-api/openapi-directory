@@ -17,6 +17,7 @@ public class ChannelStatus {
      */
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public ChannelStatus withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -28,9 +29,13 @@ public class ChannelStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occupancy")
     public Occupancy occupancy;
+
     public ChannelStatus withOccupancy(Occupancy occupancy) {
         this.occupancy = occupancy;
         return this;
     }
     
+    public ChannelStatus(@JsonProperty("isActive") Boolean isActive) {
+        this.isActive = isActive;
+  }
 }

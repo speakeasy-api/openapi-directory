@@ -18,9 +18,11 @@ public class GoogleAdsSearchads360V0CommonRealTimeBiddingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optIn")
     public Boolean optIn;
+
     public GoogleAdsSearchads360V0CommonRealTimeBiddingSetting withOptIn(Boolean optIn) {
         this.optIn = optIn;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonRealTimeBiddingSetting(){}
 }

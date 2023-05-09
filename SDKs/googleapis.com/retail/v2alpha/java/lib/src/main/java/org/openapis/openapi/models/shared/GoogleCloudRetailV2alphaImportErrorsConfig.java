@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2alphaImportErrorsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsPrefix")
     public String gcsPrefix;
+
     public GoogleCloudRetailV2alphaImportErrorsConfig withGcsPrefix(String gcsPrefix) {
         this.gcsPrefix = gcsPrefix;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaImportErrorsConfig(){}
 }

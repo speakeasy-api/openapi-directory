@@ -15,6 +15,7 @@ public class CreateCalendarEventRequestDataAttributesAttendees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_status")
     public CreateCalendarEventRequestDataAttributesAttendeesResponseStatusEnum responseStatus;
+
     public CreateCalendarEventRequestDataAttributesAttendees withResponseStatus(CreateCalendarEventRequestDataAttributesAttendeesResponseStatusEnum responseStatus) {
         this.responseStatus = responseStatus;
         return this;
@@ -23,9 +24,11 @@ public class CreateCalendarEventRequestDataAttributesAttendees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public CreateCalendarEventRequestDataAttributesAttendees withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public CreateCalendarEventRequestDataAttributesAttendees(){}
 }

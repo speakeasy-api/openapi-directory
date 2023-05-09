@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DeleteV2AccessTokensUuidRequest;
 import org.openapis.openapi.models.operations.DeleteV2AccessTokensUuidResponse;
 
@@ -13,9 +12,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteV2AccessTokensUuidRequest req = new DeleteV2AccessTokensUuidRequest() {{
-                uuid = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-            }}            
+            DeleteV2AccessTokensUuidRequest req = new DeleteV2AccessTokensUuidRequest("corrupti");            
 
             DeleteV2AccessTokensUuidResponse res = sdk.accessTokens.deleteV2AccessTokensUuid(req);
 
@@ -25,5 +22,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

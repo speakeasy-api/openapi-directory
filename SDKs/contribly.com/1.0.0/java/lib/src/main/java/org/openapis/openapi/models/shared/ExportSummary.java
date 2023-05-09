@@ -17,6 +17,7 @@ public class ExportSummary {
      */
     @JsonProperty("contributions")
     public Double contributions;
+
     public ExportSummary withContributions(Double contributions) {
         this.contributions = contributions;
         return this;
@@ -28,6 +29,7 @@ public class ExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedSize")
     public String estimatedSize;
+
     public ExportSummary withEstimatedSize(String estimatedSize) {
         this.estimatedSize = estimatedSize;
         return this;
@@ -38,6 +40,7 @@ public class ExportSummary {
      */
     @JsonProperty("media")
     public Double media;
+
     public ExportSummary withMedia(Double media) {
         this.media = media;
         return this;
@@ -48,9 +51,15 @@ public class ExportSummary {
      */
     @JsonProperty("totalMediaSize")
     public Double totalMediaSize;
+
     public ExportSummary withTotalMediaSize(Double totalMediaSize) {
         this.totalMediaSize = totalMediaSize;
         return this;
     }
     
+    public ExportSummary(@JsonProperty("contributions") Double contributions, @JsonProperty("media") Double media, @JsonProperty("totalMediaSize") Double totalMediaSize) {
+        this.contributions = contributions;
+        this.media = media;
+        this.totalMediaSize = totalMediaSize;
+  }
 }

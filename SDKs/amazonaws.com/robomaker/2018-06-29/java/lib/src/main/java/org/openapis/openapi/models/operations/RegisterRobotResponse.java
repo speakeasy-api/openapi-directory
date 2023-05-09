@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterRobotResponse {
     
     public String contentType;
+
     public RegisterRobotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterRobotResponse {
      */
     
     public Object internalServerException;
+
     public RegisterRobotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterRobotResponse {
      */
     
     public Object invalidParameterException;
+
     public RegisterRobotResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterRobotResponse {
      */
     
     public Object limitExceededException;
+
     public RegisterRobotResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterRobotResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterRobotResponse registerRobotResponse;
+
     public RegisterRobotResponse withRegisterRobotResponse(org.openapis.openapi.models.shared.RegisterRobotResponse registerRobotResponse) {
         this.registerRobotResponse = registerRobotResponse;
         return this;
@@ -56,6 +62,7 @@ public class RegisterRobotResponse {
     
     
     public Integer statusCode;
+
     public RegisterRobotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RegisterRobotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterRobotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class RegisterRobotResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RegisterRobotResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class RegisterRobotResponse {
      */
     
     public Object throttlingException;
+
     public RegisterRobotResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public RegisterRobotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

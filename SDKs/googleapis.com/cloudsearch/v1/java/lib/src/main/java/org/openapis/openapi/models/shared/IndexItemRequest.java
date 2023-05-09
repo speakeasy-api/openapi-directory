@@ -15,6 +15,7 @@ public class IndexItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorName")
     public String connectorName;
+
     public IndexItemRequest withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -26,6 +27,7 @@ public class IndexItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugOptions")
     public DebugOptions debugOptions;
+
     public IndexItemRequest withDebugOptions(DebugOptions debugOptions) {
         this.debugOptions = debugOptions;
         return this;
@@ -34,6 +36,7 @@ public class IndexItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexItemOptions")
     public IndexItemOptions indexItemOptions;
+
     public IndexItemRequest withIndexItemOptions(IndexItemOptions indexItemOptions) {
         this.indexItemOptions = indexItemOptions;
         return this;
@@ -45,6 +48,7 @@ public class IndexItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public Item item;
+
     public IndexItemRequest withItem(Item item) {
         this.item = item;
         return this;
@@ -56,9 +60,11 @@ public class IndexItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public IndexItemRequestModeEnum mode;
+
     public IndexItemRequest withMode(IndexItemRequestModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public IndexItemRequest(){}
 }

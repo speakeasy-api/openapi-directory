@@ -13,6 +13,7 @@ public class GroupsV2GetGroupsForMemberResponse {
      */
     
     public java.util.Map<String, Boolean> areAllMembershipsInactive;
+
     public GroupsV2GetGroupsForMemberResponse withAreAllMembershipsInactive(java.util.Map<String, Boolean> areAllMembershipsInactive) {
         this.areAllMembershipsInactive = areAllMembershipsInactive;
         return this;
@@ -20,6 +21,7 @@ public class GroupsV2GetGroupsForMemberResponse {
     
     
     public Boolean hasMore;
+
     public GroupsV2GetGroupsForMemberResponse withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
@@ -27,6 +29,7 @@ public class GroupsV2GetGroupsForMemberResponse {
     
     
     public QueriesPagedQuery query;
+
     public GroupsV2GetGroupsForMemberResponse withQuery(QueriesPagedQuery query) {
         this.query = query;
         return this;
@@ -34,6 +37,7 @@ public class GroupsV2GetGroupsForMemberResponse {
     
     
     public String replacementContinuationToken;
+
     public GroupsV2GetGroupsForMemberResponse withReplacementContinuationToken(String replacementContinuationToken) {
         this.replacementContinuationToken = replacementContinuationToken;
         return this;
@@ -41,6 +45,7 @@ public class GroupsV2GetGroupsForMemberResponse {
     
     
     public GroupsV2GroupMembership[] results;
+
     public GroupsV2GetGroupsForMemberResponse withResults(GroupsV2GroupMembership[] results) {
         this.results = results;
         return this;
@@ -48,6 +53,7 @@ public class GroupsV2GetGroupsForMemberResponse {
     
     
     public Integer totalResults;
+
     public GroupsV2GetGroupsForMemberResponse withTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
         return this;
@@ -61,9 +67,11 @@ public class GroupsV2GetGroupsForMemberResponse {
      */
     
     public Boolean useTotalResults;
+
     public GroupsV2GetGroupsForMemberResponse withUseTotalResults(Boolean useTotalResults) {
         this.useTotalResults = useTotalResults;
         return this;
     }
     
+    public GroupsV2GetGroupsForMemberResponse(){}
 }

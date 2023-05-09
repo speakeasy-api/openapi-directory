@@ -18,6 +18,7 @@ public class SubscriptionItemPriceChangeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedNewPriceChargeTime")
     public String expectedNewPriceChargeTime;
+
     public SubscriptionItemPriceChangeDetails withExpectedNewPriceChargeTime(String expectedNewPriceChargeTime) {
         this.expectedNewPriceChargeTime = expectedNewPriceChargeTime;
         return this;
@@ -29,6 +30,7 @@ public class SubscriptionItemPriceChangeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newPrice")
     public Money newPrice;
+
     public SubscriptionItemPriceChangeDetails withNewPrice(Money newPrice) {
         this.newPrice = newPrice;
         return this;
@@ -40,6 +42,7 @@ public class SubscriptionItemPriceChangeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceChangeMode")
     public SubscriptionItemPriceChangeDetailsPriceChangeModeEnum priceChangeMode;
+
     public SubscriptionItemPriceChangeDetails withPriceChangeMode(SubscriptionItemPriceChangeDetailsPriceChangeModeEnum priceChangeMode) {
         this.priceChangeMode = priceChangeMode;
         return this;
@@ -51,9 +54,11 @@ public class SubscriptionItemPriceChangeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceChangeState")
     public SubscriptionItemPriceChangeDetailsPriceChangeStateEnum priceChangeState;
+
     public SubscriptionItemPriceChangeDetails withPriceChangeState(SubscriptionItemPriceChangeDetailsPriceChangeStateEnum priceChangeState) {
         this.priceChangeState = priceChangeState;
         return this;
     }
     
+    public SubscriptionItemPriceChangeDetails(){}
 }

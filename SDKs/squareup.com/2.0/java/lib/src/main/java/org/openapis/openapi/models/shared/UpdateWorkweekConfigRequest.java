@@ -16,9 +16,13 @@ public class UpdateWorkweekConfigRequest {
      */
     @JsonProperty("workweek_config")
     public WorkweekConfig workweekConfig;
+
     public UpdateWorkweekConfigRequest withWorkweekConfig(WorkweekConfig workweekConfig) {
         this.workweekConfig = workweekConfig;
         return this;
     }
     
+    public UpdateWorkweekConfigRequest(@JsonProperty("workweek_config") WorkweekConfig workweekConfig) {
+        this.workweekConfig = workweekConfig;
+  }
 }

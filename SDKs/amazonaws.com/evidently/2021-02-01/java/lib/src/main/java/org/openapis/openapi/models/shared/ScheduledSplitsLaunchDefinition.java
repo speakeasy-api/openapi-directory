@@ -15,9 +15,11 @@ public class ScheduledSplitsLaunchDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public ScheduledSplit[] steps;
+
     public ScheduledSplitsLaunchDefinition withSteps(ScheduledSplit[] steps) {
         this.steps = steps;
         return this;
     }
     
+    public ScheduledSplitsLaunchDefinition(){}
 }

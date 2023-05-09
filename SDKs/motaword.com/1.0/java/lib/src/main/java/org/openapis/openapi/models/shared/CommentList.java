@@ -15,6 +15,7 @@ public class CommentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activities")
     public Comment[] activities;
+
     public CommentList withActivities(Comment[] activities) {
         this.activities = activities;
         return this;
@@ -23,9 +24,11 @@ public class CommentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public CommentList withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public CommentList(){}
 }

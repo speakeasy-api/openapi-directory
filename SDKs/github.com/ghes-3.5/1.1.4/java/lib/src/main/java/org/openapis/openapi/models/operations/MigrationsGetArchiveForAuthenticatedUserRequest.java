@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsGetArchiveForAuthenticatedUserRequest {
@@ -12,9 +13,13 @@ public class MigrationsGetArchiveForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=migration_id")
     public Long migrationId;
+
     public MigrationsGetArchiveForAuthenticatedUserRequest withMigrationId(Long migrationId) {
         this.migrationId = migrationId;
         return this;
     }
     
+    public MigrationsGetArchiveForAuthenticatedUserRequest(@JsonProperty("migration_id") Long migrationId) {
+        this.migrationId = migrationId;
+  }
 }

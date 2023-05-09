@@ -15,6 +15,7 @@ public class ColumnStatisticsError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnStatistics")
     public ColumnStatistics columnStatistics;
+
     public ColumnStatisticsError withColumnStatistics(ColumnStatistics columnStatistics) {
         this.columnStatistics = columnStatistics;
         return this;
@@ -23,9 +24,11 @@ public class ColumnStatisticsError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public ErrorDetail error;
+
     public ColumnStatisticsError withError(ErrorDetail error) {
         this.error = error;
         return this;
     }
     
+    public ColumnStatisticsError(){}
 }

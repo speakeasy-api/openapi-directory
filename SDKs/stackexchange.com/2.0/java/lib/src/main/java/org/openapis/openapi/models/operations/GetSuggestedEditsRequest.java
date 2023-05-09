@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSuggestedEditsRequest {
@@ -13,6 +14,7 @@ public class GetSuggestedEditsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetSuggestedEditsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetSuggestedEditsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetSuggestedEditsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -63,6 +66,7 @@ public class GetSuggestedEditsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public Long fromdate;
+
     public GetSuggestedEditsRequest withFromdate(Long fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -76,6 +80,7 @@ public class GetSuggestedEditsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public String max;
+
     public GetSuggestedEditsRequest withMax(String max) {
         this.max = max;
         return this;
@@ -89,6 +94,7 @@ public class GetSuggestedEditsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min")
     public String min;
+
     public GetSuggestedEditsRequest withMin(String min) {
         this.min = min;
         return this;
@@ -96,6 +102,7 @@ public class GetSuggestedEditsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetSuggestedEditsOrderEnum order;
+
     public GetSuggestedEditsRequest withOrder(GetSuggestedEditsOrderEnum order) {
         this.order = order;
         return this;
@@ -103,6 +110,7 @@ public class GetSuggestedEditsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetSuggestedEditsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -110,6 +118,7 @@ public class GetSuggestedEditsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetSuggestedEditsRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -121,6 +130,7 @@ public class GetSuggestedEditsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetSuggestedEditsRequest withSite(String site) {
         this.site = site;
         return this;
@@ -128,6 +138,7 @@ public class GetSuggestedEditsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetSuggestedEditsSortEnum sort;
+
     public GetSuggestedEditsRequest withSort(GetSuggestedEditsSortEnum sort) {
         this.sort = sort;
         return this;
@@ -138,9 +149,13 @@ public class GetSuggestedEditsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public Long todate;
+
     public GetSuggestedEditsRequest withTodate(Long todate) {
         this.todate = todate;
         return this;
     }
     
+    public GetSuggestedEditsRequest(@JsonProperty("site") String site) {
+        this.site = site;
+  }
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DBProxy {
     
     public UserAuthConfigInfo[] auth;
+
     public DBProxy withAuth(UserAuthConfigInfo[] auth) {
         this.auth = auth;
         return this;
@@ -19,6 +20,7 @@ public class DBProxy {
     
     
     public OffsetDateTime createdDate;
+
     public DBProxy withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -26,6 +28,7 @@ public class DBProxy {
     
     
     public String dbProxyArn;
+
     public DBProxy withDBProxyArn(String dbProxyArn) {
         this.dbProxyArn = dbProxyArn;
         return this;
@@ -33,6 +36,7 @@ public class DBProxy {
     
     
     public String dbProxyName;
+
     public DBProxy withDBProxyName(String dbProxyName) {
         this.dbProxyName = dbProxyName;
         return this;
@@ -40,6 +44,7 @@ public class DBProxy {
     
     
     public Boolean debugLogging;
+
     public DBProxy withDebugLogging(Boolean debugLogging) {
         this.debugLogging = debugLogging;
         return this;
@@ -47,6 +52,7 @@ public class DBProxy {
     
     
     public String endpoint;
+
     public DBProxy withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -54,6 +60,7 @@ public class DBProxy {
     
     
     public String engineFamily;
+
     public DBProxy withEngineFamily(String engineFamily) {
         this.engineFamily = engineFamily;
         return this;
@@ -61,6 +68,7 @@ public class DBProxy {
     
     
     public Long idleClientTimeout;
+
     public DBProxy withIdleClientTimeout(Long idleClientTimeout) {
         this.idleClientTimeout = idleClientTimeout;
         return this;
@@ -68,6 +76,7 @@ public class DBProxy {
     
     
     public Boolean requireTLS;
+
     public DBProxy withRequireTLS(Boolean requireTLS) {
         this.requireTLS = requireTLS;
         return this;
@@ -75,6 +84,7 @@ public class DBProxy {
     
     
     public String roleArn;
+
     public DBProxy withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -82,6 +92,7 @@ public class DBProxy {
     
     
     public DBProxyStatusEnum status;
+
     public DBProxy withStatus(DBProxyStatusEnum status) {
         this.status = status;
         return this;
@@ -89,6 +100,7 @@ public class DBProxy {
     
     
     public OffsetDateTime updatedDate;
+
     public DBProxy withUpdatedDate(OffsetDateTime updatedDate) {
         this.updatedDate = updatedDate;
         return this;
@@ -96,6 +108,7 @@ public class DBProxy {
     
     
     public String vpcId;
+
     public DBProxy withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -103,6 +116,7 @@ public class DBProxy {
     
     
     public String[] vpcSecurityGroupIds;
+
     public DBProxy withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
@@ -110,9 +124,11 @@ public class DBProxy {
     
     
     public String[] vpcSubnetIds;
+
     public DBProxy withVpcSubnetIds(String[] vpcSubnetIds) {
         this.vpcSubnetIds = vpcSubnetIds;
         return this;
     }
     
+    public DBProxy(){}
 }

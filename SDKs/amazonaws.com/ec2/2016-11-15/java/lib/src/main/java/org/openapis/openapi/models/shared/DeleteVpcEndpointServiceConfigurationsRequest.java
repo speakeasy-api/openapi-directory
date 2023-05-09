@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteVpcEndpointServiceConfigurationsRequest {
     
     public Boolean dryRun;
+
     public DeleteVpcEndpointServiceConfigurationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DeleteVpcEndpointServiceConfigurationsRequest {
     
     
     public String[] serviceIds;
+
     public DeleteVpcEndpointServiceConfigurationsRequest withServiceIds(String[] serviceIds) {
         this.serviceIds = serviceIds;
         return this;
     }
     
+    public DeleteVpcEndpointServiceConfigurationsRequest(@JsonProperty("ServiceIds") String[] serviceIds) {
+        this.serviceIds = serviceIds;
+  }
 }

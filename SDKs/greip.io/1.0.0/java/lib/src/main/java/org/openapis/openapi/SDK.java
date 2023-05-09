@@ -11,8 +11,8 @@ import org.openapis.openapi.utils.HTTPRequest;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
 /**
- * This documentation shows how to use Greip API, By highlighting the API methods, options and some other features that allow you to get the most of this API.
- * https://docs.greip.io - Find more info here
+ * This documentation shows how to use Greip API, by highlighting the API methods, options and some other features that allow you to get the most of this API.
+ * https://docs.greip.io - API Documentaion
  */
 public class SDK {
 	/**
@@ -28,6 +28,10 @@ public class SDK {
          */
         "https://dev.gregeoip.com",
 	};
+	
+	
+	
+	
 	
 	
 	
@@ -122,8 +126,87 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
+
+    /**
+     * ASNLookup endpoint: This method helps you lookup any AS Number. It returns the type, organisation details, routes, etc.
+     * https://docs.greip.io/methods/asn-lookup-api - Greip API - ASN Lookup
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetASNLookupResponse getASNLookup(org.openapis.openapi.models.operations.GetASNLookupRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ASNLookup");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetASNLookupRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetASNLookupResponse res = new org.openapis.openapi.models.operations.GetASNLookupResponse(contentType, httpRes.statusCode()) {{
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 500) {
+        }
+
+        return res;
+    }
+
+    /**
+     * This method helps you validate any BIN/IIN number and retrieve the full details related to the bank, brand, type, scheme, country, etc.
+     * https://docs.greip.io/methods/bin-iin-validation - Greip API - BIN/IIN Validation
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetBINLookupResponse getBINLookup(org.openapis.openapi.models.operations.GetBINLookupRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/BINLookup");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBINLookupRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetBINLookupResponse res = new org.openapis.openapi.models.operations.GetBINLookupResponse(contentType, httpRes.statusCode()) {{
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 500) {
+        }
+
+        return res;
+    }
 
     /**
      * BulkLookup endpoint: Returns the geolocation data of multiple IP Addresses.
@@ -152,10 +235,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBulkLookupResponse res = new org.openapis.openapi.models.operations.GetBulkLookupResponse() {{
+        org.openapis.openapi.models.operations.GetBulkLookupResponse res = new org.openapis.openapi.models.operations.GetBulkLookupResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 500) {
@@ -191,10 +272,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCountryResponse res = new org.openapis.openapi.models.operations.GetCountryResponse() {{
+        org.openapis.openapi.models.operations.GetCountryResponse res = new org.openapis.openapi.models.operations.GetCountryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 500) {
@@ -204,7 +283,7 @@ public class SDK {
     }
 
     /**
-     * GeoIP endpoint: Returns the geolocation data of the visitor.
+     * Returns the geolocation data of the visitor.
      * https://docs.greip.io/methods/retrieve-visitor-info - Greip API - Retrieve Visitor Info
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -230,10 +309,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeoIPResponse res = new org.openapis.openapi.models.operations.GetGeoIPResponse() {{
+        org.openapis.openapi.models.operations.GetGeoIPResponse res = new org.openapis.openapi.models.operations.GetGeoIPResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 500) {
@@ -243,7 +320,7 @@ public class SDK {
     }
 
     /**
-     * IPLookup endpoint: Returns the geolocation data of a specific IP Address.
+     * Returns the geolocation data of a specific IP Address.
      * https://docs.greip.io/methods/lookup-ip-address - Greip API - Lookup IP Address
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -269,10 +346,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIPLookupResponse res = new org.openapis.openapi.models.operations.GetIPLookupResponse() {{
+        org.openapis.openapi.models.operations.GetIPLookupResponse res = new org.openapis.openapi.models.operations.GetIPLookupResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 500) {
@@ -308,10 +383,82 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBadWordsResponse res = new org.openapis.openapi.models.operations.GetBadWordsResponse() {{
+        org.openapis.openapi.models.operations.GetBadWordsResponse res = new org.openapis.openapi.models.operations.GetBadWordsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 500) {
+        }
+
+        return res;
+    }
+
+    /**
+     * This method can be used as an extra-layer of your system for validating email addresses.
+     * https://docs.greip.io/methods/data-validation/email-validation - Greip API - Email Validation
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetValidateEmailResponse getValidateEmail(org.openapis.openapi.models.operations.GetValidateEmailRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/validateEmail");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetValidateEmailRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetValidateEmailResponse res = new org.openapis.openapi.models.operations.GetValidateEmailResponse(contentType, httpRes.statusCode()) {{
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 500) {
+        }
+
+        return res;
+    }
+
+    /**
+     * This method can be used as an extra-layer of your system for validating phone numbers.
+     * https://docs.greip.io/methods/data-validation/phone-number-validation - Greip API - Phone Number Validation
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetValidatePhoneResponse getValidatePhone(org.openapis.openapi.models.operations.GetValidatePhoneRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/validatePhone");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetValidatePhoneRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetValidatePhoneResponse res = new org.openapis.openapi.models.operations.GetValidatePhoneResponse(contentType, httpRes.statusCode()) {{
+        }};
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 500) {

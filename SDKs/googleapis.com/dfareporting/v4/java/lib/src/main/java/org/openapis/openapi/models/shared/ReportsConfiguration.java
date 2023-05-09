@@ -18,6 +18,7 @@ public class ReportsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exposureToConversionEnabled")
     public Boolean exposureToConversionEnabled;
+
     public ReportsConfiguration withExposureToConversionEnabled(Boolean exposureToConversionEnabled) {
         this.exposureToConversionEnabled = exposureToConversionEnabled;
         return this;
@@ -29,6 +30,7 @@ public class ReportsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lookbackConfiguration")
     public LookbackConfiguration lookbackConfiguration;
+
     public ReportsConfiguration withLookbackConfiguration(LookbackConfiguration lookbackConfiguration) {
         this.lookbackConfiguration = lookbackConfiguration;
         return this;
@@ -40,9 +42,11 @@ public class ReportsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportGenerationTimeZoneId")
     public String reportGenerationTimeZoneId;
+
     public ReportsConfiguration withReportGenerationTimeZoneId(String reportGenerationTimeZoneId) {
         this.reportGenerationTimeZoneId = reportGenerationTimeZoneId;
         return this;
     }
     
+    public ReportsConfiguration(){}
 }

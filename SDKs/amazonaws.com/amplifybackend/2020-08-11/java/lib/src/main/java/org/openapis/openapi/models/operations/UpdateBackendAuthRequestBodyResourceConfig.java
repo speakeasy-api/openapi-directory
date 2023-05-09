@@ -15,6 +15,7 @@ public class UpdateBackendAuthRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthResources")
     public UpdateBackendAuthRequestBodyResourceConfigAuthResourcesEnum authResources;
+
     public UpdateBackendAuthRequestBodyResourceConfig withAuthResources(UpdateBackendAuthRequestBodyResourceConfigAuthResourcesEnum authResources) {
         this.authResources = authResources;
         return this;
@@ -23,6 +24,7 @@ public class UpdateBackendAuthRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityPoolConfigs")
     public UpdateBackendAuthRequestBodyResourceConfigIdentityPoolConfigs identityPoolConfigs;
+
     public UpdateBackendAuthRequestBodyResourceConfig withIdentityPoolConfigs(UpdateBackendAuthRequestBodyResourceConfigIdentityPoolConfigs identityPoolConfigs) {
         this.identityPoolConfigs = identityPoolConfigs;
         return this;
@@ -31,6 +33,7 @@ public class UpdateBackendAuthRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Service")
     public UpdateBackendAuthRequestBodyResourceConfigServiceEnum service;
+
     public UpdateBackendAuthRequestBodyResourceConfig withService(UpdateBackendAuthRequestBodyResourceConfigServiceEnum service) {
         this.service = service;
         return this;
@@ -39,9 +42,11 @@ public class UpdateBackendAuthRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserPoolConfigs")
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigs userPoolConfigs;
+
     public UpdateBackendAuthRequestBodyResourceConfig withUserPoolConfigs(UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigs userPoolConfigs) {
         this.userPoolConfigs = userPoolConfigs;
         return this;
     }
     
+    public UpdateBackendAuthRequestBodyResourceConfig(){}
 }

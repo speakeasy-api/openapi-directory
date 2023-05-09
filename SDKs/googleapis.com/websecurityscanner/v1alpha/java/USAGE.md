@@ -3,21 +3,20 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateSecurity;
 import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateRequest;
 import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateResponse;
+import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.Authentication;
+import org.openapis.openapi.models.shared.CustomAccount;
+import org.openapis.openapi.models.shared.GoogleAccount;
+import org.openapis.openapi.models.shared.ScanConfig;
 import org.openapis.openapi.models.shared.ScanConfigTargetPlatformsEnum;
 import org.openapis.openapi.models.shared.ScanConfigUserAgentEnum;
-import org.openapis.openapi.models.shared.ScanConfig;
-import org.openapis.openapi.models.shared.Schedule;
+import org.openapis.openapi.models.shared.ScanRun;
 import org.openapis.openapi.models.shared.ScanRunExecutionStateEnum;
 import org.openapis.openapi.models.shared.ScanRunResultStateEnum;
-import org.openapis.openapi.models.shared.ScanRun;
-import org.openapis.openapi.models.shared.Authentication;
-import org.openapis.openapi.models.shared.GoogleAccount;
-import org.openapis.openapi.models.shared.CustomAccount;
+import org.openapis.openapi.models.shared.Schedule;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -26,20 +25,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            WebsecurityscannerProjectsScanConfigsCreateRequest req = new WebsecurityscannerProjectsScanConfigsCreateRequest() {{
-                dollarXgafv = "2";
+            WebsecurityscannerProjectsScanConfigsCreateRequest req = new WebsecurityscannerProjectsScanConfigsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 scanConfig = new ScanConfig() {{
                     authentication = new Authentication() {{
                         customAccount = new CustomAccount() {{
-                            loginUrl = "provident";
-                            password = "distinctio";
-                            username = "Rosalinda_Mitchell84";
-                        }};
+                            loginUrl = "distinctio";
+                            password = "quibusdam";
+                            username = "Leda_Stiedemann";
+                        }};;
                         googleAccount = new GoogleAccount() {{
                             password = "vel";
                             username = "Linda.Oberbrunner";
-                        }};
-                    }};
+                        }};;
+                    }};;
                     blacklistPatterns = new String[]{{
                         add("debitis"),
                         add("ipsa"),
@@ -47,53 +46,56 @@ public class Application {
                     displayName = "delectus";
                     latestRun = new ScanRun() {{
                         endTime = "tempora";
-                        executionState = "QUEUED";
+                        executionState = ScanRunExecutionStateEnum.QUEUED;
                         hasVulnerabilities = false;
-                        name = "molestiae";
-                        progressPercent = 791725;
-                        resultState = "KILLED";
-                        startTime = "voluptatum";
-                        urlsCrawledCount = "iusto";
-                        urlsTestedCount = "excepturi";
-                    }};
-                    maxQps = 392785;
-                    name = "recusandae";
+                        name = "Alexandra Schulist";
+                        progressPercent = 568045;
+                        resultState = ScanRunResultStateEnum.SUCCESS;
+                        startTime = "recusandae";
+                        urlsCrawledCount = "temporibus";
+                        urlsTestedCount = "ab";
+                    }};;
+                    maxQps = 337396;
+                    name = "Iris Aufderhar";
                     schedule = new Schedule() {{
-                        intervalDurationDays = 836079;
-                        scheduleTime = "ab";
-                    }};
+                        intervalDurationDays = 957156;
+                        scheduleTime = "quo";
+                    }};;
                     startingUrls = new String[]{{
-                        add("veritatis"),
-                        add("deserunt"),
+                        add("at"),
                     }};
                     targetPlatforms = new org.openapis.openapi.models.shared.ScanConfigTargetPlatformsEnum[]{{
-                        add("APP_ENGINE"),
+                        add(ScanConfigTargetPlatformsEnum.CLOUD_FUNCTIONS),
+                        add(ScanConfigTargetPlatformsEnum.COMPUTE),
+                        add(ScanConfigTargetPlatformsEnum.CLOUD_RUN),
+                        add(ScanConfigTargetPlatformsEnum.CLOUD_FUNCTIONS),
                     }};
-                    userAgent = "SAFARI_IPHONE";
-                }};
-                accessToken = "sapiente";
-                alt = "proto";
-                callback = "odit";
-                fields = "at";
-                key = "at";
-                oauthToken = "maiores";
-                parent = "molestiae";
+                    userAgent = ScanConfigUserAgentEnum.CHROME_LINUX;
+                }};;
+                accessToken = "totam";
+                alt = AltEnum.PROTO;
+                callback = "dolorum";
+                fields = "dicta";
+                key = "nam";
+                oauthToken = "officia";
                 prettyPrint = false;
-                quotaUser = "quod";
-                uploadType = "quod";
-                uploadProtocol = "esse";
-            }}            
+                quotaUser = "occaecati";
+                uploadType = "fugit";
+                uploadProtocol = "deleniti";
+            }};            
 
-            WebsecurityscannerProjectsScanConfigsCreateResponse res = sdk.projects.websecurityscannerProjectsScanConfigsCreate(req, new WebsecurityscannerProjectsScanConfigsCreateSecurity() {{
+            WebsecurityscannerProjectsScanConfigsCreateResponse res = sdk.projects.websecurityscannerProjectsScanConfigsCreate(req, new WebsecurityscannerProjectsScanConfigsCreateSecurity("hic", "optio") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.scanConfig.isPresent()) {
+            if (res.scanConfig != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

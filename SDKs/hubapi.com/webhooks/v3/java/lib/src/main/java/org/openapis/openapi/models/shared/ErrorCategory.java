@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ErrorCategory {
     @JsonProperty("httpStatus")
     public ErrorCategoryHttpStatusEnum httpStatus;
+
     public ErrorCategory withHttpStatus(ErrorCategoryHttpStatusEnum httpStatus) {
         this.httpStatus = httpStatus;
         return this;
@@ -16,9 +17,14 @@ public class ErrorCategory {
     
     @JsonProperty("name")
     public String name;
+
     public ErrorCategory withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ErrorCategory(@JsonProperty("httpStatus") ErrorCategoryHttpStatusEnum httpStatus, @JsonProperty("name") String name) {
+        this.httpStatus = httpStatus;
+        this.name = name;
+  }
 }

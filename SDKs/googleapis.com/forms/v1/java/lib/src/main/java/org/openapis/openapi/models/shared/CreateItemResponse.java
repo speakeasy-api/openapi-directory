@@ -18,6 +18,7 @@ public class CreateItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public CreateItemResponse withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -29,9 +30,11 @@ public class CreateItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("questionId")
     public String[] questionId;
+
     public CreateItemResponse withQuestionId(String[] questionId) {
         this.questionId = questionId;
         return this;
     }
     
+    public CreateItemResponse(){}
 }

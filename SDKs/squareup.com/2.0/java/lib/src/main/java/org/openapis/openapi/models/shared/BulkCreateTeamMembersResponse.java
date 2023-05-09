@@ -18,6 +18,7 @@ public class BulkCreateTeamMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public BulkCreateTeamMembersResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -29,9 +30,11 @@ public class BulkCreateTeamMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_members")
     public java.util.Map<String, CreateTeamMemberResponse> teamMembers;
+
     public BulkCreateTeamMembersResponse withTeamMembers(java.util.Map<String, CreateTeamMemberResponse> teamMembers) {
         this.teamMembers = teamMembers;
         return this;
     }
     
+    public BulkCreateTeamMembersResponse(){}
 }

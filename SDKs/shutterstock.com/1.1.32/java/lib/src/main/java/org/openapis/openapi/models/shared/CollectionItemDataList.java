@@ -18,6 +18,7 @@ public class CollectionItemDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CollectionItem[] data;
+
     public CollectionItemDataList withData(CollectionItem[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class CollectionItemDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CollectionItemDataList withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -40,6 +42,7 @@ public class CollectionItemDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CollectionItemDataList withMessage(String message) {
         this.message = message;
         return this;
@@ -51,6 +54,7 @@ public class CollectionItemDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public CollectionItemDataList withPage(Long page) {
         this.page = page;
         return this;
@@ -62,6 +66,7 @@ public class CollectionItemDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public CollectionItemDataList withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -73,9 +78,11 @@ public class CollectionItemDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_count")
     public Long totalCount;
+
     public CollectionItemDataList withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public CollectionItemDataList(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UndeprecateWorkflowTypeResponse {
     
     public String contentType;
+
     public UndeprecateWorkflowTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UndeprecateWorkflowTypeResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public UndeprecateWorkflowTypeResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -26,6 +29,7 @@ public class UndeprecateWorkflowTypeResponse {
     
     
     public Integer statusCode;
+
     public UndeprecateWorkflowTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UndeprecateWorkflowTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UndeprecateWorkflowTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UndeprecateWorkflowTypeResponse {
      */
     
     public Object typeAlreadyExistsFault;
+
     public UndeprecateWorkflowTypeResponse withTypeAlreadyExistsFault(Object typeAlreadyExistsFault) {
         this.typeAlreadyExistsFault = typeAlreadyExistsFault;
         return this;
@@ -53,9 +59,14 @@ public class UndeprecateWorkflowTypeResponse {
      */
     
     public Object unknownResourceFault;
+
     public UndeprecateWorkflowTypeResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
     }
     
+    public UndeprecateWorkflowTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

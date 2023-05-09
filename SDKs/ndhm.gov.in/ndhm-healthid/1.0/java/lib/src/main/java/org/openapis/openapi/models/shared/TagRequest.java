@@ -12,6 +12,7 @@ public class TagRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthId")
     public String healthId;
+
     public TagRequest withHealthId(String healthId) {
         this.healthId = healthId;
         return this;
@@ -20,9 +21,11 @@ public class TagRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public TagRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagRequest(){}
 }

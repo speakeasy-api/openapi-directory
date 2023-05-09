@@ -15,6 +15,7 @@ public class Twipc502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Twipc502ApplicationJSONErrorEnum error;
+
     public Twipc502ApplicationJSON withError(Twipc502ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Twipc502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Twipc502ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Twipc502ApplicationJSON withErrorDescription(Twipc502ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Twipc502ApplicationJSON(){}
 }

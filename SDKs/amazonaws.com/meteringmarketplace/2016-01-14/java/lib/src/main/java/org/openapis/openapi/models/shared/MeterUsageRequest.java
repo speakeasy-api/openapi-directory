@@ -17,6 +17,7 @@ public class MeterUsageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public MeterUsageRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -24,6 +25,7 @@ public class MeterUsageRequest {
     
     @JsonProperty("ProductCode")
     public String productCode;
+
     public MeterUsageRequest withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -33,6 +35,7 @@ public class MeterUsageRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public MeterUsageRequest withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -41,6 +44,7 @@ public class MeterUsageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageAllocations")
     public UsageAllocation[] usageAllocations;
+
     public MeterUsageRequest withUsageAllocations(UsageAllocation[] usageAllocations) {
         this.usageAllocations = usageAllocations;
         return this;
@@ -48,6 +52,7 @@ public class MeterUsageRequest {
     
     @JsonProperty("UsageDimension")
     public String usageDimension;
+
     public MeterUsageRequest withUsageDimension(String usageDimension) {
         this.usageDimension = usageDimension;
         return this;
@@ -56,9 +61,15 @@ public class MeterUsageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageQuantity")
     public Long usageQuantity;
+
     public MeterUsageRequest withUsageQuantity(Long usageQuantity) {
         this.usageQuantity = usageQuantity;
         return this;
     }
     
+    public MeterUsageRequest(@JsonProperty("ProductCode") String productCode, @JsonProperty("Timestamp") OffsetDateTime timestamp, @JsonProperty("UsageDimension") String usageDimension) {
+        this.productCode = productCode;
+        this.timestamp = timestamp;
+        this.usageDimension = usageDimension;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class SendDigitsParameters {
      */
     @SpeakeasyMetadata("form:name=CallUUID")
     public String callUUID;
+
     public SendDigitsParameters withCallUUID(String callUUID) {
         this.callUUID = callUUID;
         return this;
@@ -25,6 +27,7 @@ public class SendDigitsParameters {
      */
     @SpeakeasyMetadata("form:name=Digits")
     public String digits;
+
     public SendDigitsParameters withDigits(String digits) {
         this.digits = digits;
         return this;
@@ -35,9 +38,14 @@ public class SendDigitsParameters {
      */
     @SpeakeasyMetadata("form:name=Leg")
     public SendDigitsParametersLegEnum leg;
+
     public SendDigitsParameters withLeg(SendDigitsParametersLegEnum leg) {
         this.leg = leg;
         return this;
     }
     
+    public SendDigitsParameters(@JsonProperty("CallUUID") String callUUID, @JsonProperty("Digits") String digits) {
+        this.callUUID = callUUID;
+        this.digits = digits;
+  }
 }

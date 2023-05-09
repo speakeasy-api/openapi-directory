@@ -12,6 +12,7 @@ public class Criteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasCompletedCourse")
     public Boolean hasCompletedCourse;
+
     public Criteria withHasCompletedCourse(Boolean hasCompletedCourse) {
         this.hasCompletedCourse = hasCompletedCourse;
         return this;
@@ -20,9 +21,11 @@ public class Criteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasPassedMandatoryAssessedQuizzes")
     public Boolean hasPassedMandatoryAssessedQuizzes;
+
     public Criteria withHasPassedMandatoryAssessedQuizzes(Boolean hasPassedMandatoryAssessedQuizzes) {
         this.hasPassedMandatoryAssessedQuizzes = hasPassedMandatoryAssessedQuizzes;
         return this;
     }
     
+    public Criteria(){}
 }

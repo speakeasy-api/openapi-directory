@@ -15,6 +15,7 @@ public class NodesFilesListFileLinks {
      */
     
     public String delete;
+
     public NodesFilesListFileLinks withDelete(String delete) {
         this.delete = delete;
         return this;
@@ -25,6 +26,7 @@ public class NodesFilesListFileLinks {
      */
     
     public String download;
+
     public NodesFilesListFileLinks withDownload(String download) {
         this.download = download;
         return this;
@@ -35,6 +37,7 @@ public class NodesFilesListFileLinks {
      */
     
     public String info;
+
     public NodesFilesListFileLinks withInfo(String info) {
         this.info = info;
         return this;
@@ -45,6 +48,7 @@ public class NodesFilesListFileLinks {
      */
     
     public String move;
+
     public NodesFilesListFileLinks withMove(String move) {
         this.move = move;
         return this;
@@ -55,6 +59,7 @@ public class NodesFilesListFileLinks {
      */
     
     public String newFolder;
+
     public NodesFilesListFileLinks withNewFolder(String newFolder) {
         this.newFolder = newFolder;
         return this;
@@ -65,6 +70,7 @@ public class NodesFilesListFileLinks {
      */
     
     public String self;
+
     public NodesFilesListFileLinks withSelf(String self) {
         this.self = self;
         return this;
@@ -75,9 +81,11 @@ public class NodesFilesListFileLinks {
      */
     
     public String upload;
+
     public NodesFilesListFileLinks withUpload(String upload) {
         this.upload = upload;
         return this;
     }
     
+    public NodesFilesListFileLinks(){}
 }

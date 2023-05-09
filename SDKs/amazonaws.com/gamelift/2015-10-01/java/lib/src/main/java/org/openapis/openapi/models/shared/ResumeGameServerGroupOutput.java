@@ -15,9 +15,11 @@ public class ResumeGameServerGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerGroup")
     public GameServerGroup gameServerGroup;
+
     public ResumeGameServerGroupOutput withGameServerGroup(GameServerGroup gameServerGroup) {
         this.gameServerGroup = gameServerGroup;
         return this;
     }
     
+    public ResumeGameServerGroupOutput(){}
 }

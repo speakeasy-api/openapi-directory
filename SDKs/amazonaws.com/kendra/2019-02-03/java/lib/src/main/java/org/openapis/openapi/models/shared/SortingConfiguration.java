@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SortingConfiguration {
     @JsonProperty("DocumentAttributeKey")
     public String documentAttributeKey;
+
     public SortingConfiguration withDocumentAttributeKey(String documentAttributeKey) {
         this.documentAttributeKey = documentAttributeKey;
         return this;
@@ -19,9 +20,14 @@ public class SortingConfiguration {
     
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public SortingConfiguration withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public SortingConfiguration(@JsonProperty("DocumentAttributeKey") String documentAttributeKey, @JsonProperty("SortOrder") SortOrderEnum sortOrder) {
+        this.documentAttributeKey = documentAttributeKey;
+        this.sortOrder = sortOrder;
+  }
 }

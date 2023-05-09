@@ -15,9 +15,13 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("LegalName")
     public String legalName;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName withLegalName(String legalName) {
         this.legalName = legalName;
         return this;
     }
     
+    public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationParentOrganisationOrganisationName(@JsonProperty("LegalName") String legalName) {
+        this.legalName = legalName;
+  }
 }

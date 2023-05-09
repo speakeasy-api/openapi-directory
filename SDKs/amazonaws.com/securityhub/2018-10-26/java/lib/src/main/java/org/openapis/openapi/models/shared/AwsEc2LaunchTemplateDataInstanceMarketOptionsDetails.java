@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataInstanceMarketOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MarketType")
     public String marketType;
+
     public AwsEc2LaunchTemplateDataInstanceMarketOptionsDetails withMarketType(String marketType) {
         this.marketType = marketType;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2LaunchTemplateDataInstanceMarketOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpotOptions")
     public AwsEc2LaunchTemplateDataInstanceMarketOptionsSpotOptionsDetails spotOptions;
+
     public AwsEc2LaunchTemplateDataInstanceMarketOptionsDetails withSpotOptions(AwsEc2LaunchTemplateDataInstanceMarketOptionsSpotOptionsDetails spotOptions) {
         this.spotOptions = spotOptions;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataInstanceMarketOptionsDetails(){}
 }

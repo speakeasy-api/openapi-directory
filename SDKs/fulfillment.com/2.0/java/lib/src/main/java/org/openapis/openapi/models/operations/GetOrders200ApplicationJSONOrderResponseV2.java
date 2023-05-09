@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetOrders200ApplicationJSONOrderResponseV2 {
     @JsonProperty("currentStatus")
     public GetOrders200ApplicationJSONOrderResponseV2StatusEventV2 currentStatus;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withCurrentStatus(GetOrders200ApplicationJSONOrderResponseV2StatusEventV2 currentStatus) {
         this.currentStatus = currentStatus;
         return this;
@@ -32,6 +33,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("departDate")
     public OffsetDateTime departDate;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withDepartDate(OffsetDateTime departDate) {
         this.departDate = departDate;
         return this;
@@ -45,6 +47,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dispatchDate")
     public OffsetDateTime dispatchDate;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withDispatchDate(OffsetDateTime dispatchDate) {
         this.dispatchDate = dispatchDate;
         return this;
@@ -55,6 +58,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2 {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withId(Long id) {
         this.id = id;
         return this;
@@ -63,6 +67,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrator")
     public String integrator;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withIntegrator(String integrator) {
         this.integrator = integrator;
         return this;
@@ -71,6 +76,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItems")
     public GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2[] lineItems;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withLineItems(GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2[] lineItems) {
         this.lineItems = lineItems;
         return this;
@@ -78,6 +84,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2 {
     
     @JsonProperty("merchant")
     public GetOrders200ApplicationJSONOrderResponseV2MerchantV2 merchant;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withMerchant(GetOrders200ApplicationJSONOrderResponseV2MerchantV2 merchant) {
         this.merchant = merchant;
         return this;
@@ -88,6 +95,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2 {
      */
     @JsonProperty("merchantOrderId")
     public String merchantOrderId;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withMerchantOrderId(String merchantOrderId) {
         this.merchantOrderId = merchantOrderId;
         return this;
@@ -98,6 +106,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2 {
      */
     @JsonProperty("merchantShippingMethod")
     public String merchantShippingMethod;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withMerchantShippingMethod(String merchantShippingMethod) {
         this.merchantShippingMethod = merchantShippingMethod;
         return this;
@@ -105,6 +114,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2 {
     
     @JsonProperty("originalConsignee")
     public GetOrders200ApplicationJSONOrderResponseV2ConsigneeV2 originalConsignee;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withOriginalConsignee(GetOrders200ApplicationJSONOrderResponseV2ConsigneeV2 originalConsignee) {
         this.originalConsignee = originalConsignee;
         return this;
@@ -113,6 +123,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentOrder")
     public GetOrders200ApplicationJSONOrderResponseV2ParentOrder parentOrder;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withParentOrder(GetOrders200ApplicationJSONOrderResponseV2ParentOrder parentOrder) {
         this.parentOrder = parentOrder;
         return this;
@@ -124,6 +135,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchaseOrderNum")
     public String purchaseOrderNum;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withPurchaseOrderNum(String purchaseOrderNum) {
         this.purchaseOrderNum = purchaseOrderNum;
         return this;
@@ -136,6 +148,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("recordedOn")
     public OffsetDateTime recordedOn;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withRecordedOn(OffsetDateTime recordedOn) {
         this.recordedOn = recordedOn;
         return this;
@@ -144,6 +157,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingNumbers")
     public GetOrders200ApplicationJSONOrderResponseV2TrackingNumbers[] trackingNumbers;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withTrackingNumbers(GetOrders200ApplicationJSONOrderResponseV2TrackingNumbers[] trackingNumbers) {
         this.trackingNumbers = trackingNumbers;
         return this;
@@ -151,6 +165,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2 {
     
     @JsonProperty("validatedConsignee")
     public org.openapis.openapi.models.shared.OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee validatedConsignee;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withValidatedConsignee(org.openapis.openapi.models.shared.OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee validatedConsignee) {
         this.validatedConsignee = validatedConsignee;
         return this;
@@ -159,9 +174,20 @@ public class GetOrders200ApplicationJSONOrderResponseV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouse")
     public GetOrders200ApplicationJSONOrderResponseV2WarehouseV2 warehouse;
+
     public GetOrders200ApplicationJSONOrderResponseV2 withWarehouse(GetOrders200ApplicationJSONOrderResponseV2WarehouseV2 warehouse) {
         this.warehouse = warehouse;
         return this;
     }
     
+    public GetOrders200ApplicationJSONOrderResponseV2(@JsonProperty("currentStatus") GetOrders200ApplicationJSONOrderResponseV2StatusEventV2 currentStatus, @JsonProperty("id") Long id, @JsonProperty("merchant") GetOrders200ApplicationJSONOrderResponseV2MerchantV2 merchant, @JsonProperty("merchantOrderId") String merchantOrderId, @JsonProperty("merchantShippingMethod") String merchantShippingMethod, @JsonProperty("originalConsignee") GetOrders200ApplicationJSONOrderResponseV2ConsigneeV2 originalConsignee, @JsonProperty("recordedOn") OffsetDateTime recordedOn, @JsonProperty("validatedConsignee") org.openapis.openapi.models.shared.OneordersPostResponses201ContentApplication1jsonSchemaPropertiesOriginalConsignee validatedConsignee) {
+        this.currentStatus = currentStatus;
+        this.id = id;
+        this.merchant = merchant;
+        this.merchantOrderId = merchantOrderId;
+        this.merchantShippingMethod = merchantShippingMethod;
+        this.originalConsignee = originalConsignee;
+        this.recordedOn = recordedOn;
+        this.validatedConsignee = validatedConsignee;
+  }
 }

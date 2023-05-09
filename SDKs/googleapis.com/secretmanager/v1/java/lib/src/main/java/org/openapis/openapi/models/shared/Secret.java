@@ -18,6 +18,7 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public Secret withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Secret withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Secret withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public Secret withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -62,6 +66,7 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Secret withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Secret withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replication")
     public Replication replication;
+
     public Secret withReplication(Replication replication) {
         this.replication = replication;
         return this;
@@ -95,6 +102,7 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rotation")
     public Rotation rotation;
+
     public Secret withRotation(Rotation rotation) {
         this.rotation = rotation;
         return this;
@@ -106,6 +114,7 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topics")
     public Topic[] topics;
+
     public Secret withTopics(Topic[] topics) {
         this.topics = topics;
         return this;
@@ -117,6 +126,7 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public String ttl;
+
     public Secret withTtl(String ttl) {
         this.ttl = ttl;
         return this;
@@ -128,9 +138,11 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionAliases")
     public java.util.Map<String, String> versionAliases;
+
     public Secret withVersionAliases(java.util.Map<String, String> versionAliases) {
         this.versionAliases = versionAliases;
         return this;
     }
     
+    public Secret(){}
 }

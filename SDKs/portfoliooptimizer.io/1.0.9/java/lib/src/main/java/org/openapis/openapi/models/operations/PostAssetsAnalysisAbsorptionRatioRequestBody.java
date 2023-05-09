@@ -14,6 +14,7 @@ public class PostAssetsAnalysisAbsorptionRatioRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostAssetsAnalysisAbsorptionRatioRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -24,6 +25,7 @@ public class PostAssetsAnalysisAbsorptionRatioRequestBody {
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostAssetsAnalysisAbsorptionRatioRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -32,9 +34,14 @@ public class PostAssetsAnalysisAbsorptionRatioRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsCovarianceMatrixEigenvectors")
     public PostAssetsAnalysisAbsorptionRatioRequestBodyAssetsCovarianceMatrixEigenvectors assetsCovarianceMatrixEigenvectors;
+
     public PostAssetsAnalysisAbsorptionRatioRequestBody withAssetsCovarianceMatrixEigenvectors(PostAssetsAnalysisAbsorptionRatioRequestBodyAssetsCovarianceMatrixEigenvectors assetsCovarianceMatrixEigenvectors) {
         this.assetsCovarianceMatrixEigenvectors = assetsCovarianceMatrixEigenvectors;
         return this;
     }
     
+    public PostAssetsAnalysisAbsorptionRatioRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+  }
 }

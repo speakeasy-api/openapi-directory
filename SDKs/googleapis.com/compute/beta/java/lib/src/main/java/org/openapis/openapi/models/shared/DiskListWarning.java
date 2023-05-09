@@ -18,6 +18,7 @@ public class DiskListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public DiskListWarningCodeEnum code;
+
     public DiskListWarning withCode(DiskListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class DiskListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public DiskListWarningData[] data;
+
     public DiskListWarning withData(DiskListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class DiskListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DiskListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DiskListWarning(){}
 }

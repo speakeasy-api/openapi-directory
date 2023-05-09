@@ -15,6 +15,7 @@ public class ServiceCredentialTypesCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ServiceCredentialType[] data;
+
     public ServiceCredentialTypesCollection withData(ServiceCredentialType[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class ServiceCredentialTypesCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CollectionLinks links;
+
     public ServiceCredentialTypesCollection withLinks(CollectionLinks links) {
         this.links = links;
         return this;
@@ -31,9 +33,11 @@ public class ServiceCredentialTypesCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public CollectionMetadata meta;
+
     public ServiceCredentialTypesCollection withMeta(CollectionMetadata meta) {
         this.meta = meta;
         return this;
     }
     
+    public ServiceCredentialTypesCollection(){}
 }

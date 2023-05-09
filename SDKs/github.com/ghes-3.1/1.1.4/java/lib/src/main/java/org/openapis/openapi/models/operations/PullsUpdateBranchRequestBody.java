@@ -15,9 +15,11 @@ public class PullsUpdateBranchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expected_head_sha")
     public String expectedHeadSha;
+
     public PullsUpdateBranchRequestBody withExpectedHeadSha(String expectedHeadSha) {
         this.expectedHeadSha = expectedHeadSha;
         return this;
     }
     
+    public PullsUpdateBranchRequestBody(){}
 }

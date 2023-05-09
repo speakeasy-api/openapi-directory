@@ -18,6 +18,7 @@ public class RepricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cogsBasedRule")
     public RepricingRuleCostOfGoodsSaleRule cogsBasedRule;
+
     public RepricingRule withCogsBasedRule(RepricingRuleCostOfGoodsSaleRule cogsBasedRule) {
         this.cogsBasedRule = cogsBasedRule;
         return this;
@@ -29,6 +30,7 @@ public class RepricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public RepricingRule withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -37,6 +39,7 @@ public class RepricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveTimePeriod")
     public RepricingRuleEffectiveTime effectiveTimePeriod;
+
     public RepricingRule withEffectiveTimePeriod(RepricingRuleEffectiveTime effectiveTimePeriod) {
         this.effectiveTimePeriod = effectiveTimePeriod;
         return this;
@@ -48,6 +51,7 @@ public class RepricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eligibleOfferMatcher")
     public RepricingRuleEligibleOfferMatcher eligibleOfferMatcher;
+
     public RepricingRule withEligibleOfferMatcher(RepricingRuleEligibleOfferMatcher eligibleOfferMatcher) {
         this.eligibleOfferMatcher = eligibleOfferMatcher;
         return this;
@@ -59,6 +63,7 @@ public class RepricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public RepricingRule withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -70,6 +75,7 @@ public class RepricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public String merchantId;
+
     public RepricingRule withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -81,6 +87,7 @@ public class RepricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paused")
     public Boolean paused;
+
     public RepricingRule withPaused(Boolean paused) {
         this.paused = paused;
         return this;
@@ -92,6 +99,7 @@ public class RepricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restriction")
     public RepricingRuleRestriction restriction;
+
     public RepricingRule withRestriction(RepricingRuleRestriction restriction) {
         this.restriction = restriction;
         return this;
@@ -103,6 +111,7 @@ public class RepricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleId")
     public String ruleId;
+
     public RepricingRule withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
@@ -114,6 +123,7 @@ public class RepricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statsBasedRule")
     public RepricingRuleStatsBasedRule statsBasedRule;
+
     public RepricingRule withStatsBasedRule(RepricingRuleStatsBasedRule statsBasedRule) {
         this.statsBasedRule = statsBasedRule;
         return this;
@@ -125,6 +135,7 @@ public class RepricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public RepricingRule withTitle(String title) {
         this.title = title;
         return this;
@@ -136,9 +147,11 @@ public class RepricingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public RepricingRuleTypeEnum type;
+
     public RepricingRule withType(RepricingRuleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RepricingRule(){}
 }

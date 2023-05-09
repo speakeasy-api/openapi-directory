@@ -12,6 +12,7 @@ public class Shipping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingPricingModel")
     public ShippingShippingPricingModelEnum shippingPricingModel;
+
     public Shipping withShippingPricingModel(ShippingShippingPricingModelEnum shippingPricingModel) {
         this.shippingPricingModel = shippingPricingModel;
         return this;
@@ -20,6 +21,7 @@ public class Shipping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Weight weight;
+
     public Shipping withWeight(Weight weight) {
         this.weight = weight;
         return this;
@@ -28,9 +30,11 @@ public class Shipping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weightInGrams")
     public Long weightInGrams;
+
     public Shipping withWeightInGrams(Long weightInGrams) {
         this.weightInGrams = weightInGrams;
         return this;
     }
     
+    public Shipping(){}
 }

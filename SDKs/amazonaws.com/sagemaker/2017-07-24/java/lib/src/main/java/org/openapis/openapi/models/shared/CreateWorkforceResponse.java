@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateWorkforceResponse {
     @JsonProperty("WorkforceArn")
     public String workforceArn;
+
     public CreateWorkforceResponse withWorkforceArn(String workforceArn) {
         this.workforceArn = workforceArn;
         return this;
     }
     
+    public CreateWorkforceResponse(@JsonProperty("WorkforceArn") String workforceArn) {
+        this.workforceArn = workforceArn;
+  }
 }

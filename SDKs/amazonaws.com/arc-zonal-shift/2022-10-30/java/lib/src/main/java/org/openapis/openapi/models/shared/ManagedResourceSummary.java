@@ -15,6 +15,7 @@ public class ManagedResourceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ManagedResourceSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class ManagedResourceSummary {
     
     @JsonProperty("availabilityZones")
     public String[] availabilityZones;
+
     public ManagedResourceSummary withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -30,9 +32,13 @@ public class ManagedResourceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ManagedResourceSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ManagedResourceSummary(@JsonProperty("availabilityZones") String[] availabilityZones) {
+        this.availabilityZones = availabilityZones;
+  }
 }

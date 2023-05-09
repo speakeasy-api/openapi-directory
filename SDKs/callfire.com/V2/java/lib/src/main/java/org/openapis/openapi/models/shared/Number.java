@@ -18,6 +18,7 @@ public class Number {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nationalFormat")
     public String nationalFormat;
+
     public Number withNationalFormat(String nationalFormat) {
         this.nationalFormat = nationalFormat;
         return this;
@@ -29,6 +30,7 @@ public class Number {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public Number withNumber(String number) {
         this.number = number;
         return this;
@@ -40,6 +42,7 @@ public class Number {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public Region region;
+
     public Number withRegion(Region region) {
         this.region = region;
         return this;
@@ -51,6 +54,7 @@ public class Number {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sendEmailOnCreate")
     public Boolean sendEmailOnCreate;
+
     public Number withSendEmailOnCreate(Boolean sendEmailOnCreate) {
         this.sendEmailOnCreate = sendEmailOnCreate;
         return this;
@@ -62,9 +66,11 @@ public class Number {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tollFree")
     public Boolean tollFree;
+
     public Number withTollFree(Boolean tollFree) {
         this.tollFree = tollFree;
         return this;
     }
     
+    public Number(){}
 }

@@ -18,6 +18,7 @@ public class EntryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addOn")
     public GoogleAppsScriptTypeAddOnEntryPoint addOn;
+
     public EntryPoint withAddOn(GoogleAppsScriptTypeAddOnEntryPoint addOn) {
         this.addOn = addOn;
         return this;
@@ -29,6 +30,7 @@ public class EntryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryPointType")
     public EntryPointEntryPointTypeEnum entryPointType;
+
     public EntryPoint withEntryPointType(EntryPointEntryPointTypeEnum entryPointType) {
         this.entryPointType = entryPointType;
         return this;
@@ -40,6 +42,7 @@ public class EntryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionApi")
     public GoogleAppsScriptTypeExecutionApiEntryPoint executionApi;
+
     public EntryPoint withExecutionApi(GoogleAppsScriptTypeExecutionApiEntryPoint executionApi) {
         this.executionApi = executionApi;
         return this;
@@ -51,9 +54,11 @@ public class EntryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webApp")
     public GoogleAppsScriptTypeWebAppEntryPoint webApp;
+
     public EntryPoint withWebApp(GoogleAppsScriptTypeWebAppEntryPoint webApp) {
         this.webApp = webApp;
         return this;
     }
     
+    public EntryPoint(){}
 }

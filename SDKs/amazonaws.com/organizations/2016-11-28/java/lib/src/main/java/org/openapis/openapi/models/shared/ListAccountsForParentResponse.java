@@ -15,6 +15,7 @@ public class ListAccountsForParentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Accounts")
     public Account[] accounts;
+
     public ListAccountsForParentResponse withAccounts(Account[] accounts) {
         this.accounts = accounts;
         return this;
@@ -23,9 +24,11 @@ public class ListAccountsForParentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAccountsForParentResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAccountsForParentResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSlotTypeResponse {
@@ -12,6 +13,7 @@ public class DeleteSlotTypeResponse {
      */
     
     public Object conflictException;
+
     public DeleteSlotTypeResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSlotTypeResponse {
     
     
     public String contentType;
+
     public DeleteSlotTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSlotTypeResponse {
      */
     
     public Object internalServerException;
+
     public DeleteSlotTypeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSlotTypeResponse {
      */
     
     public Object preconditionFailedException;
+
     public DeleteSlotTypeResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteSlotTypeResponse {
     
     
     public Integer statusCode;
+
     public DeleteSlotTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSlotTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSlotTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteSlotTypeResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteSlotTypeResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteSlotTypeResponse {
      */
     
     public Object throttlingException;
+
     public DeleteSlotTypeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteSlotTypeResponse {
      */
     
     public Object validationException;
+
     public DeleteSlotTypeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteSlotTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

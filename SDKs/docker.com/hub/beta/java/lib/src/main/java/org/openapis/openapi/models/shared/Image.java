@@ -15,6 +15,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public String architecture;
+
     public Image withArchitecture(String architecture) {
         this.architecture = architecture;
         return this;
@@ -26,6 +27,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public String digest;
+
     public Image withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -37,6 +39,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public String features;
+
     public Image withFeatures(String features) {
         this.features = features;
         return this;
@@ -48,6 +51,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_pulled")
     public String lastPulled;
+
     public Image withLastPulled(String lastPulled) {
         this.lastPulled = lastPulled;
         return this;
@@ -59,6 +63,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_pushed")
     public String lastPushed;
+
     public Image withLastPushed(String lastPushed) {
         this.lastPushed = lastPushed;
         return this;
@@ -67,6 +72,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layers")
     public Layer[] layers;
+
     public Image withLayers(Layer[] layers) {
         this.layers = layers;
         return this;
@@ -78,6 +84,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     public String os;
+
     public Image withOs(String os) {
         this.os = os;
         return this;
@@ -89,6 +96,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os_features")
     public String osFeatures;
+
     public Image withOsFeatures(String osFeatures) {
         this.osFeatures = osFeatures;
         return this;
@@ -100,6 +108,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os_version")
     public String osVersion;
+
     public Image withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -111,6 +120,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public Image withSize(Long size) {
         this.size = size;
         return this;
@@ -122,6 +132,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ImageStatusEnum status;
+
     public Image withStatus(ImageStatusEnum status) {
         this.status = status;
         return this;
@@ -133,9 +144,11 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variant")
     public String variant;
+
     public Image withVariant(String variant) {
         this.variant = variant;
         return this;
     }
     
+    public Image(){}
 }

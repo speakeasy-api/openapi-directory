@@ -15,6 +15,7 @@ public class FindingAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionType")
     public FindingActionTypeEnum actionType;
+
     public FindingAction withActionType(FindingActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -23,9 +24,11 @@ public class FindingAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiCallDetails")
     public ApiCallDetails apiCallDetails;
+
     public FindingAction withApiCallDetails(ApiCallDetails apiCallDetails) {
         this.apiCallDetails = apiCallDetails;
         return this;
     }
     
+    public FindingAction(){}
 }

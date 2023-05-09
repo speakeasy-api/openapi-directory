@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateGatewayInformationInput {
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public UpdateGatewayInformationInput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
@@ -19,9 +20,13 @@ public class UpdateGatewayInformationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayDisplayName")
     public String gatewayDisplayName;
+
     public UpdateGatewayInformationInput withGatewayDisplayName(String gatewayDisplayName) {
         this.gatewayDisplayName = gatewayDisplayName;
         return this;
     }
     
+    public UpdateGatewayInformationInput(@JsonProperty("GatewayArn") String gatewayArn) {
+        this.gatewayArn = gatewayArn;
+  }
 }

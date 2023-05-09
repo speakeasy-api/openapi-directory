@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointDisruptionByModeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeRouteBlockedStops")
     public Boolean includeRouteBlockedStops;
+
     public StopPointDisruptionByModeRequest withIncludeRouteBlockedStops(Boolean includeRouteBlockedStops) {
         this.includeRouteBlockedStops = includeRouteBlockedStops;
         return this;
@@ -19,9 +21,13 @@ public class StopPointDisruptionByModeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modes")
     public String[] modes;
+
     public StopPointDisruptionByModeRequest withModes(String[] modes) {
         this.modes = modes;
         return this;
     }
     
+    public StopPointDisruptionByModeRequest(@JsonProperty("modes") String[] modes) {
+        this.modes = modes;
+  }
 }

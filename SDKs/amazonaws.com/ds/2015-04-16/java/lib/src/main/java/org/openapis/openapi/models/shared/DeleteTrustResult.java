@@ -15,9 +15,11 @@ public class DeleteTrustResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrustId")
     public String trustId;
+
     public DeleteTrustResult withTrustId(String trustId) {
         this.trustId = trustId;
         return this;
     }
     
+    public DeleteTrustResult(){}
 }

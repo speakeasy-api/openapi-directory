@@ -12,6 +12,7 @@ public class StopTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public StopTaskRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -20,6 +21,7 @@ public class StopTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public StopTaskRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -27,9 +29,13 @@ public class StopTaskRequest {
     
     @JsonProperty("task")
     public String task;
+
     public StopTaskRequest withTask(String task) {
         this.task = task;
         return this;
     }
     
+    public StopTaskRequest(@JsonProperty("task") String task) {
+        this.task = task;
+  }
 }

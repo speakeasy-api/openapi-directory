@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkSyslogServersResponse {
     
     public String contentType;
+
     public GetNetworkSyslogServersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkSyslogServersResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkSyslogServersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkSyslogServersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkSyslogServersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetNetworkSyslogServersResponse {
      */
     
     public java.util.Map<String, Object>[] getNetworkSyslogServers200ApplicationJSONObjects;
+
     public GetNetworkSyslogServersResponse withGetNetworkSyslogServers200ApplicationJSONObjects(java.util.Map<String, Object>[] getNetworkSyslogServers200ApplicationJSONObjects) {
         this.getNetworkSyslogServers200ApplicationJSONObjects = getNetworkSyslogServers200ApplicationJSONObjects;
         return this;
     }
     
+    public GetNetworkSyslogServersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

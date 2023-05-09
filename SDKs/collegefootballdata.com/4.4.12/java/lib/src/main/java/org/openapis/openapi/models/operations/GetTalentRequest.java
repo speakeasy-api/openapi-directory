@@ -12,9 +12,11 @@ public class GetTalentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetTalentRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetTalentRequest(){}
 }

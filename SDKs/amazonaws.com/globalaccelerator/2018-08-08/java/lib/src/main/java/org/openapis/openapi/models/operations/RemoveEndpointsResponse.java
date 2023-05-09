@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveEndpointsResponse {
@@ -12,6 +13,7 @@ public class RemoveEndpointsResponse {
      */
     
     public Object accessDeniedException;
+
     public RemoveEndpointsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class RemoveEndpointsResponse {
     
     
     public String contentType;
+
     public RemoveEndpointsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RemoveEndpointsResponse {
      */
     
     public Object endpointGroupNotFoundException;
+
     public RemoveEndpointsResponse withEndpointGroupNotFoundException(Object endpointGroupNotFoundException) {
         this.endpointGroupNotFoundException = endpointGroupNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class RemoveEndpointsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public RemoveEndpointsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveEndpointsResponse {
      */
     
     public Object invalidArgumentException;
+
     public RemoveEndpointsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -56,6 +62,7 @@ public class RemoveEndpointsResponse {
     
     
     public Integer statusCode;
+
     public RemoveEndpointsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RemoveEndpointsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveEndpointsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class RemoveEndpointsResponse {
      */
     
     public Object transactionInProgressException;
+
     public RemoveEndpointsResponse withTransactionInProgressException(Object transactionInProgressException) {
         this.transactionInProgressException = transactionInProgressException;
         return this;
     }
     
+    public RemoveEndpointsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

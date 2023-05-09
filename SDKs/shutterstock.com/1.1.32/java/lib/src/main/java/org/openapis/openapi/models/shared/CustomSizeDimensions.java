@@ -18,6 +18,7 @@ public class CustomSizeDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Long height;
+
     public CustomSizeDimensions withHeight(Long height) {
         this.height = height;
         return this;
@@ -29,9 +30,11 @@ public class CustomSizeDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Long width;
+
     public CustomSizeDimensions withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public CustomSizeDimensions(){}
 }

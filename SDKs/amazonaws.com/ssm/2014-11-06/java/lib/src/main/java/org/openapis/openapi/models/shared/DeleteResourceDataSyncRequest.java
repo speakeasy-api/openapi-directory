@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteResourceDataSyncRequest {
     @JsonProperty("SyncName")
     public String syncName;
+
     public DeleteResourceDataSyncRequest withSyncName(String syncName) {
         this.syncName = syncName;
         return this;
@@ -19,9 +20,13 @@ public class DeleteResourceDataSyncRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncType")
     public String syncType;
+
     public DeleteResourceDataSyncRequest withSyncType(String syncType) {
         this.syncType = syncType;
         return this;
     }
     
+    public DeleteResourceDataSyncRequest(@JsonProperty("SyncName") String syncName) {
+        this.syncName = syncName;
+  }
 }

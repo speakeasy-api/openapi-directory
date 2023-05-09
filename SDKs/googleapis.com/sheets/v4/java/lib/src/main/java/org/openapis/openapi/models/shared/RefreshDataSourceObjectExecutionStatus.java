@@ -18,6 +18,7 @@ public class RefreshDataSourceObjectExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataExecutionStatus")
     public DataExecutionStatus dataExecutionStatus;
+
     public RefreshDataSourceObjectExecutionStatus withDataExecutionStatus(DataExecutionStatus dataExecutionStatus) {
         this.dataExecutionStatus = dataExecutionStatus;
         return this;
@@ -29,9 +30,11 @@ public class RefreshDataSourceObjectExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public DataSourceObjectReference reference;
+
     public RefreshDataSourceObjectExecutionStatus withReference(DataSourceObjectReference reference) {
         this.reference = reference;
         return this;
     }
     
+    public RefreshDataSourceObjectExecutionStatus(){}
 }

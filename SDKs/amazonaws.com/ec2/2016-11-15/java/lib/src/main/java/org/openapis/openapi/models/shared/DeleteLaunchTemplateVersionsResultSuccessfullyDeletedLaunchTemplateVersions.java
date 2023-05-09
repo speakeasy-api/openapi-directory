@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteLaunchTemplateVersionsResultSuccessfullyDeletedLaunchTemplateVersions {
     
     public String launchTemplateId;
+
     public DeleteLaunchTemplateVersionsResultSuccessfullyDeletedLaunchTemplateVersions withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteLaunchTemplateVersionsResultSuccessfullyDeletedLaunchTemplate
     
     
     public String launchTemplateName;
+
     public DeleteLaunchTemplateVersionsResultSuccessfullyDeletedLaunchTemplateVersions withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -26,9 +28,11 @@ public class DeleteLaunchTemplateVersionsResultSuccessfullyDeletedLaunchTemplate
     
     
     public Long versionNumber;
+
     public DeleteLaunchTemplateVersionsResultSuccessfullyDeletedLaunchTemplateVersions withVersionNumber(Long versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public DeleteLaunchTemplateVersionsResultSuccessfullyDeletedLaunchTemplateVersions(){}
 }

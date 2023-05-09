@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetailProjectsLocationsCatalogsGetDefaultBranchResponse {
     
     public String contentType;
+
     public RetailProjectsLocationsCatalogsGetDefaultBranchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetailProjectsLocationsCatalogsGetDefaultBranchResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudRetailV2GetDefaultBranchResponse googleCloudRetailV2GetDefaultBranchResponse;
+
     public RetailProjectsLocationsCatalogsGetDefaultBranchResponse withGoogleCloudRetailV2GetDefaultBranchResponse(org.openapis.openapi.models.shared.GoogleCloudRetailV2GetDefaultBranchResponse googleCloudRetailV2GetDefaultBranchResponse) {
         this.googleCloudRetailV2GetDefaultBranchResponse = googleCloudRetailV2GetDefaultBranchResponse;
         return this;
@@ -26,6 +29,7 @@ public class RetailProjectsLocationsCatalogsGetDefaultBranchResponse {
     
     
     public Integer statusCode;
+
     public RetailProjectsLocationsCatalogsGetDefaultBranchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RetailProjectsLocationsCatalogsGetDefaultBranchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetailProjectsLocationsCatalogsGetDefaultBranchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RetailProjectsLocationsCatalogsGetDefaultBranchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

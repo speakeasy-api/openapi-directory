@@ -15,9 +15,11 @@ public class DeleteDomainResponse {
      */
     
     public DomainStatus domainStatus;
+
     public DeleteDomainResponse withDomainStatus(DomainStatus domainStatus) {
         this.domainStatus = domainStatus;
         return this;
     }
     
+    public DeleteDomainResponse(){}
 }

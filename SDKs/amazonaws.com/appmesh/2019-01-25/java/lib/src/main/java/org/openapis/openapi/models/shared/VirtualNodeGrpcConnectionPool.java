@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VirtualNodeGrpcConnectionPool {
     @JsonProperty("maxRequests")
     public Long maxRequests;
+
     public VirtualNodeGrpcConnectionPool withMaxRequests(Long maxRequests) {
         this.maxRequests = maxRequests;
         return this;
     }
     
+    public VirtualNodeGrpcConnectionPool(@JsonProperty("maxRequests") Long maxRequests) {
+        this.maxRequests = maxRequests;
+  }
 }

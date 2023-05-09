@@ -23,6 +23,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active_sftp_host_key_id")
     public Integer activeSftpHostKeyId;
+
     public SiteEntity withActiveSftpHostKeyId(Integer activeSftpHostKeyId) {
         this.activeSftpHostKeyId = activeSftpHostKeyId;
         return this;
@@ -34,6 +35,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admin_user_id")
     public Integer adminUserId;
+
     public SiteEntity withAdminUserId(Integer adminUserId) {
         this.adminUserId = adminUserId;
         return this;
@@ -45,6 +47,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_bundle_names")
     public Boolean allowBundleNames;
+
     public SiteEntity withAllowBundleNames(Boolean allowBundleNames) {
         this.allowBundleNames = allowBundleNames;
         return this;
@@ -56,6 +59,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_2fa_method_bypass_for_ftp_sftp_dav")
     public Boolean allowed2faMethodBypassForFtpSftpDav;
+
     public SiteEntity withAllowed2faMethodBypassForFtpSftpDav(Boolean allowed2faMethodBypassForFtpSftpDav) {
         this.allowed2faMethodBypassForFtpSftpDav = allowed2faMethodBypassForFtpSftpDav;
         return this;
@@ -67,6 +71,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_2fa_method_sms")
     public Boolean allowed2faMethodSms;
+
     public SiteEntity withAllowed2faMethodSms(Boolean allowed2faMethodSms) {
         this.allowed2faMethodSms = allowed2faMethodSms;
         return this;
@@ -78,6 +83,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_2fa_method_totp")
     public Boolean allowed2faMethodTotp;
+
     public SiteEntity withAllowed2faMethodTotp(Boolean allowed2faMethodTotp) {
         this.allowed2faMethodTotp = allowed2faMethodTotp;
         return this;
@@ -89,6 +95,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_2fa_method_u2f")
     public Boolean allowed2faMethodU2f;
+
     public SiteEntity withAllowed2faMethodU2f(Boolean allowed2faMethodU2f) {
         this.allowed2faMethodU2f = allowed2faMethodU2f;
         return this;
@@ -100,6 +107,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_2fa_method_webauthn")
     public Boolean allowed2faMethodWebauthn;
+
     public SiteEntity withAllowed2faMethodWebauthn(Boolean allowed2faMethodWebauthn) {
         this.allowed2faMethodWebauthn = allowed2faMethodWebauthn;
         return this;
@@ -111,6 +119,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_2fa_method_yubi")
     public Boolean allowed2faMethodYubi;
+
     public SiteEntity withAllowed2faMethodYubi(Boolean allowed2faMethodYubi) {
         this.allowed2faMethodYubi = allowed2faMethodYubi;
         return this;
@@ -122,6 +131,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_countries")
     public String allowedCountries;
+
     public SiteEntity withAllowedCountries(String allowedCountries) {
         this.allowedCountries = allowedCountries;
         return this;
@@ -133,6 +143,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_ips")
     public String allowedIps;
+
     public SiteEntity withAllowedIps(String allowedIps) {
         this.allowedIps = allowedIps;
         return this;
@@ -144,6 +155,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ask_about_overwrites")
     public Boolean askAboutOverwrites;
+
     public SiteEntity withAskAboutOverwrites(Boolean askAboutOverwrites) {
         this.askAboutOverwrites = askAboutOverwrites;
         return this;
@@ -155,6 +167,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundle_activity_notifications")
     public SiteEntityBundleActivityNotificationsEnum bundleActivityNotifications;
+
     public SiteEntity withBundleActivityNotifications(SiteEntityBundleActivityNotificationsEnum bundleActivityNotifications) {
         this.bundleActivityNotifications = bundleActivityNotifications;
         return this;
@@ -166,6 +179,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundle_expiration")
     public Integer bundleExpiration;
+
     public SiteEntity withBundleExpiration(Integer bundleExpiration) {
         this.bundleExpiration = bundleExpiration;
         return this;
@@ -177,6 +191,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundle_password_required")
     public Boolean bundlePasswordRequired;
+
     public SiteEntity withBundlePasswordRequired(Boolean bundlePasswordRequired) {
         this.bundlePasswordRequired = bundlePasswordRequired;
         return this;
@@ -188,6 +203,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundle_registration_notifications")
     public SiteEntityBundleRegistrationNotificationsEnum bundleRegistrationNotifications;
+
     public SiteEntity withBundleRegistrationNotifications(SiteEntityBundleRegistrationNotificationsEnum bundleRegistrationNotifications) {
         this.bundleRegistrationNotifications = bundleRegistrationNotifications;
         return this;
@@ -199,6 +215,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundle_require_share_recipient")
     public Boolean bundleRequireShareRecipient;
+
     public SiteEntity withBundleRequireShareRecipient(Boolean bundleRequireShareRecipient) {
         this.bundleRequireShareRecipient = bundleRequireShareRecipient;
         return this;
@@ -210,6 +227,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundle_upload_receipt_notifications")
     public SiteEntityBundleUploadReceiptNotificationsEnum bundleUploadReceiptNotifications;
+
     public SiteEntity withBundleUploadReceiptNotifications(SiteEntityBundleUploadReceiptNotificationsEnum bundleUploadReceiptNotifications) {
         this.bundleUploadReceiptNotifications = bundleUploadReceiptNotifications;
         return this;
@@ -218,6 +236,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundle_watermark_attachment")
     public ImageEntity bundleWatermarkAttachment;
+
     public SiteEntity withBundleWatermarkAttachment(ImageEntity bundleWatermarkAttachment) {
         this.bundleWatermarkAttachment = bundleWatermarkAttachment;
         return this;
@@ -229,6 +248,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundle_watermark_value")
     public java.util.Map<String, Object> bundleWatermarkValue;
+
     public SiteEntity withBundleWatermarkValue(java.util.Map<String, Object> bundleWatermarkValue) {
         this.bundleWatermarkValue = bundleWatermarkValue;
         return this;
@@ -240,6 +260,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color2_left")
     public String color2Left;
+
     public SiteEntity withColor2Left(String color2Left) {
         this.color2Left = color2Left;
         return this;
@@ -251,6 +272,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color2_link")
     public String color2Link;
+
     public SiteEntity withColor2Link(String color2Link) {
         this.color2Link = color2Link;
         return this;
@@ -262,6 +284,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color2_text")
     public String color2Text;
+
     public SiteEntity withColor2Text(String color2Text) {
         this.color2Text = color2Text;
         return this;
@@ -273,6 +296,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color2_top")
     public String color2Top;
+
     public SiteEntity withColor2Top(String color2Top) {
         this.color2Top = color2Top;
         return this;
@@ -284,6 +308,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color2_top_text")
     public String color2TopText;
+
     public SiteEntity withColor2TopText(String color2TopText) {
         this.color2TopText = color2TopText;
         return this;
@@ -295,6 +320,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_name")
     public String contactName;
+
     public SiteEntity withContactName(String contactName) {
         this.contactName = contactName;
         return this;
@@ -308,6 +334,7 @@ public class SiteEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public SiteEntity withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -319,6 +346,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public SiteEntity withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -330,6 +358,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_namespace")
     public Boolean customNamespace;
+
     public SiteEntity withCustomNamespace(Boolean customNamespace) {
         this.customNamespace = customNamespace;
         return this;
@@ -341,6 +370,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("days_to_retain_backups")
     public Integer daysToRetainBackups;
+
     public SiteEntity withDaysToRetainBackups(Integer daysToRetainBackups) {
         this.daysToRetainBackups = daysToRetainBackups;
         return this;
@@ -352,6 +382,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_time_zone")
     public String defaultTimeZone;
+
     public SiteEntity withDefaultTimeZone(String defaultTimeZone) {
         this.defaultTimeZone = defaultTimeZone;
         return this;
@@ -363,6 +394,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desktop_app")
     public Boolean desktopApp;
+
     public SiteEntity withDesktopApp(Boolean desktopApp) {
         this.desktopApp = desktopApp;
         return this;
@@ -374,6 +406,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desktop_app_session_ip_pinning")
     public Boolean desktopAppSessionIpPinning;
+
     public SiteEntity withDesktopAppSessionIpPinning(Boolean desktopAppSessionIpPinning) {
         this.desktopAppSessionIpPinning = desktopAppSessionIpPinning;
         return this;
@@ -385,6 +418,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desktop_app_session_lifetime")
     public Integer desktopAppSessionLifetime;
+
     public SiteEntity withDesktopAppSessionLifetime(Integer desktopAppSessionLifetime) {
         this.desktopAppSessionLifetime = desktopAppSessionLifetime;
         return this;
@@ -396,6 +430,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disable_files_certificate_generation")
     public Boolean disableFilesCertificateGeneration;
+
     public SiteEntity withDisableFilesCertificateGeneration(Boolean disableFilesCertificateGeneration) {
         this.disableFilesCertificateGeneration = disableFilesCertificateGeneration;
         return this;
@@ -407,6 +442,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disable_notifications")
     public Boolean disableNotifications;
+
     public SiteEntity withDisableNotifications(Boolean disableNotifications) {
         this.disableNotifications = disableNotifications;
         return this;
@@ -418,6 +454,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disable_password_reset")
     public Boolean disablePasswordReset;
+
     public SiteEntity withDisablePasswordReset(Boolean disablePasswordReset) {
         this.disablePasswordReset = disablePasswordReset;
         return this;
@@ -429,6 +466,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disable_users_from_inactivity_period_days")
     public Integer disableUsersFromInactivityPeriodDays;
+
     public SiteEntity withDisableUsersFromInactivityPeriodDays(Integer disableUsersFromInactivityPeriodDays) {
         this.disableUsersFromInactivityPeriodDays = disableUsersFromInactivityPeriodDays;
         return this;
@@ -440,6 +478,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disallowed_countries")
     public String disallowedCountries;
+
     public SiteEntity withDisallowedCountries(String disallowedCountries) {
         this.disallowedCountries = disallowedCountries;
         return this;
@@ -451,6 +490,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public SiteEntity withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -462,6 +502,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_hsts_header")
     public Boolean domainHstsHeader;
+
     public SiteEntity withDomainHstsHeader(Boolean domainHstsHeader) {
         this.domainHstsHeader = domainHstsHeader;
         return this;
@@ -473,6 +514,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_letsencrypt_chain")
     public SiteEntityDomainLetsencryptChainEnum domainLetsencryptChain;
+
     public SiteEntity withDomainLetsencryptChain(SiteEntityDomainLetsencryptChainEnum domainLetsencryptChain) {
         this.domainLetsencryptChain = domainLetsencryptChain;
         return this;
@@ -484,6 +526,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public SiteEntity withEmail(String email) {
         this.email = email;
         return this;
@@ -495,6 +538,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folder_permissions_groups_only")
     public Boolean folderPermissionsGroupsOnly;
+
     public SiteEntity withFolderPermissionsGroupsOnly(Boolean folderPermissionsGroupsOnly) {
         this.folderPermissionsGroupsOnly = folderPermissionsGroupsOnly;
         return this;
@@ -506,6 +550,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ftp_enabled")
     public Boolean ftpEnabled;
+
     public SiteEntity withFtpEnabled(Boolean ftpEnabled) {
         this.ftpEnabled = ftpEnabled;
         return this;
@@ -517,6 +562,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hipaa")
     public Boolean hipaa;
+
     public SiteEntity withHipaa(Boolean hipaa) {
         this.hipaa = hipaa;
         return this;
@@ -525,6 +571,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon128")
     public ImageEntity icon128;
+
     public SiteEntity withIcon128(ImageEntity icon128) {
         this.icon128 = icon128;
         return this;
@@ -533,6 +580,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon16")
     public ImageEntity icon16;
+
     public SiteEntity withIcon16(ImageEntity icon16) {
         this.icon16 = icon16;
         return this;
@@ -541,6 +589,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon32")
     public ImageEntity icon32;
+
     public SiteEntity withIcon32(ImageEntity icon32) {
         this.icon32 = icon32;
         return this;
@@ -549,6 +598,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon48")
     public ImageEntity icon48;
+
     public SiteEntity withIcon48(ImageEntity icon48) {
         this.icon48 = icon48;
         return this;
@@ -562,6 +612,7 @@ public class SiteEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("immutable_files_set_at")
     public OffsetDateTime immutableFilesSetAt;
+
     public SiteEntity withImmutableFilesSetAt(OffsetDateTime immutableFilesSetAt) {
         this.immutableFilesSetAt = immutableFilesSetAt;
         return this;
@@ -573,6 +624,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include_password_in_welcome_email")
     public Boolean includePasswordInWelcomeEmail;
+
     public SiteEntity withIncludePasswordInWelcomeEmail(Boolean includePasswordInWelcomeEmail) {
         this.includePasswordInWelcomeEmail = includePasswordInWelcomeEmail;
         return this;
@@ -584,6 +636,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public SiteEntity withLanguage(String language) {
         this.language = language;
         return this;
@@ -595,6 +648,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_base_dn")
     public String ldapBaseDn;
+
     public SiteEntity withLdapBaseDn(String ldapBaseDn) {
         this.ldapBaseDn = ldapBaseDn;
         return this;
@@ -606,6 +660,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_domain")
     public String ldapDomain;
+
     public SiteEntity withLdapDomain(String ldapDomain) {
         this.ldapDomain = ldapDomain;
         return this;
@@ -617,6 +672,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_enabled")
     public Boolean ldapEnabled;
+
     public SiteEntity withLdapEnabled(Boolean ldapEnabled) {
         this.ldapEnabled = ldapEnabled;
         return this;
@@ -628,6 +684,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_group_action")
     public String ldapGroupAction;
+
     public SiteEntity withLdapGroupAction(String ldapGroupAction) {
         this.ldapGroupAction = ldapGroupAction;
         return this;
@@ -639,6 +696,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_group_exclusion")
     public String ldapGroupExclusion;
+
     public SiteEntity withLdapGroupExclusion(String ldapGroupExclusion) {
         this.ldapGroupExclusion = ldapGroupExclusion;
         return this;
@@ -650,6 +708,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_group_inclusion")
     public String ldapGroupInclusion;
+
     public SiteEntity withLdapGroupInclusion(String ldapGroupInclusion) {
         this.ldapGroupInclusion = ldapGroupInclusion;
         return this;
@@ -661,6 +720,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_host")
     public String ldapHost;
+
     public SiteEntity withLdapHost(String ldapHost) {
         this.ldapHost = ldapHost;
         return this;
@@ -672,6 +732,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_host_2")
     public String ldapHost2;
+
     public SiteEntity withLdapHost2(String ldapHost2) {
         this.ldapHost2 = ldapHost2;
         return this;
@@ -683,6 +744,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_host_3")
     public String ldapHost3;
+
     public SiteEntity withLdapHost3(String ldapHost3) {
         this.ldapHost3 = ldapHost3;
         return this;
@@ -694,6 +756,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_port")
     public Integer ldapPort;
+
     public SiteEntity withLdapPort(Integer ldapPort) {
         this.ldapPort = ldapPort;
         return this;
@@ -705,6 +768,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_secure")
     public Boolean ldapSecure;
+
     public SiteEntity withLdapSecure(Boolean ldapSecure) {
         this.ldapSecure = ldapSecure;
         return this;
@@ -716,6 +780,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_type")
     public String ldapType;
+
     public SiteEntity withLdapType(String ldapType) {
         this.ldapType = ldapType;
         return this;
@@ -727,6 +792,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_user_action")
     public String ldapUserAction;
+
     public SiteEntity withLdapUserAction(String ldapUserAction) {
         this.ldapUserAction = ldapUserAction;
         return this;
@@ -738,6 +804,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_user_include_groups")
     public String ldapUserIncludeGroups;
+
     public SiteEntity withLdapUserIncludeGroups(String ldapUserIncludeGroups) {
         this.ldapUserIncludeGroups = ldapUserIncludeGroups;
         return this;
@@ -749,6 +816,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_username")
     public String ldapUsername;
+
     public SiteEntity withLdapUsername(String ldapUsername) {
         this.ldapUsername = ldapUsername;
         return this;
@@ -760,6 +828,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_username_field")
     public String ldapUsernameField;
+
     public SiteEntity withLdapUsernameField(String ldapUsernameField) {
         this.ldapUsernameField = ldapUsernameField;
         return this;
@@ -771,6 +840,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login_help_text")
     public String loginHelpText;
+
     public SiteEntity withLoginHelpText(String loginHelpText) {
         this.loginHelpText = loginHelpText;
         return this;
@@ -779,6 +849,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public ImageEntity logo;
+
     public SiteEntity withLogo(ImageEntity logo) {
         this.logo = logo;
         return this;
@@ -790,6 +861,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_prior_passwords")
     public Integer maxPriorPasswords;
+
     public SiteEntity withMaxPriorPasswords(Integer maxPriorPasswords) {
         this.maxPriorPasswords = maxPriorPasswords;
         return this;
@@ -801,6 +873,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile_app")
     public Boolean mobileApp;
+
     public SiteEntity withMobileApp(Boolean mobileApp) {
         this.mobileApp = mobileApp;
         return this;
@@ -812,6 +885,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile_app_session_ip_pinning")
     public Boolean mobileAppSessionIpPinning;
+
     public SiteEntity withMobileAppSessionIpPinning(Boolean mobileAppSessionIpPinning) {
         this.mobileAppSessionIpPinning = mobileAppSessionIpPinning;
         return this;
@@ -823,6 +897,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile_app_session_lifetime")
     public Integer mobileAppSessionLifetime;
+
     public SiteEntity withMobileAppSessionLifetime(Integer mobileAppSessionLifetime) {
         this.mobileAppSessionLifetime = mobileAppSessionLifetime;
         return this;
@@ -834,6 +909,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("motd_text")
     public String motdText;
+
     public SiteEntity withMotdText(String motdText) {
         this.motdText = motdText;
         return this;
@@ -845,6 +921,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("motd_use_for_ftp")
     public Boolean motdUseForFtp;
+
     public SiteEntity withMotdUseForFtp(Boolean motdUseForFtp) {
         this.motdUseForFtp = motdUseForFtp;
         return this;
@@ -856,6 +933,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("motd_use_for_sftp")
     public Boolean motdUseForSftp;
+
     public SiteEntity withMotdUseForSftp(Boolean motdUseForSftp) {
         this.motdUseForSftp = motdUseForSftp;
         return this;
@@ -867,6 +945,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SiteEntity withName(String name) {
         this.name = name;
         return this;
@@ -878,6 +957,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next_billing_amount")
     public Double nextBillingAmount;
+
     public SiteEntity withNextBillingAmount(Double nextBillingAmount) {
         this.nextBillingAmount = nextBillingAmount;
         return this;
@@ -889,6 +969,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next_billing_date")
     public String nextBillingDate;
+
     public SiteEntity withNextBillingDate(String nextBillingDate) {
         this.nextBillingDate = nextBillingDate;
         return this;
@@ -900,6 +981,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("non_sso_groups_allowed")
     public Boolean nonSsoGroupsAllowed;
+
     public SiteEntity withNonSsoGroupsAllowed(Boolean nonSsoGroupsAllowed) {
         this.nonSsoGroupsAllowed = nonSsoGroupsAllowed;
         return this;
@@ -911,6 +993,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("non_sso_users_allowed")
     public Boolean nonSsoUsersAllowed;
+
     public SiteEntity withNonSsoUsersAllowed(Boolean nonSsoUsersAllowed) {
         this.nonSsoUsersAllowed = nonSsoUsersAllowed;
         return this;
@@ -922,6 +1005,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("office_integration_available")
     public Boolean officeIntegrationAvailable;
+
     public SiteEntity withOfficeIntegrationAvailable(Boolean officeIntegrationAvailable) {
         this.officeIntegrationAvailable = officeIntegrationAvailable;
         return this;
@@ -933,6 +1017,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("office_integration_type")
     public SiteEntityOfficeIntegrationTypeEnum officeIntegrationType;
+
     public SiteEntity withOfficeIntegrationType(SiteEntityOfficeIntegrationTypeEnum officeIntegrationType) {
         this.officeIntegrationType = officeIntegrationType;
         return this;
@@ -944,6 +1029,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oncehub_link")
     public String oncehubLink;
+
     public SiteEntity withOncehubLink(String oncehubLink) {
         this.oncehubLink = oncehubLink;
         return this;
@@ -955,32 +1041,9 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opt_out_global")
     public Boolean optOutGlobal;
+
     public SiteEntity withOptOutGlobal(Boolean optOutGlobal) {
         this.optOutGlobal = optOutGlobal;
-        return this;
-    }
-    
-    /**
-     * Last time the site was notified about an overage
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonSerialize(using = DateTimeSerializer.class)
-    @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("overage_notified_at")
-    public OffsetDateTime overageNotifiedAt;
-    public SiteEntity withOverageNotifiedAt(OffsetDateTime overageNotifiedAt) {
-        this.overageNotifiedAt = overageNotifiedAt;
-        return this;
-    }
-    
-    /**
-     * Notify site email of overages?
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("overage_notify")
-    public Boolean overageNotify;
-    public SiteEntity withOverageNotify(Boolean overageNotify) {
-        this.overageNotify = overageNotify;
         return this;
     }
     
@@ -990,6 +1053,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overdue")
     public Boolean overdue;
+
     public SiteEntity withOverdue(Boolean overdue) {
         this.overdue = overdue;
         return this;
@@ -1001,6 +1065,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password_min_length")
     public Integer passwordMinLength;
+
     public SiteEntity withPasswordMinLength(Integer passwordMinLength) {
         this.passwordMinLength = passwordMinLength;
         return this;
@@ -1012,6 +1077,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password_require_letter")
     public Boolean passwordRequireLetter;
+
     public SiteEntity withPasswordRequireLetter(Boolean passwordRequireLetter) {
         this.passwordRequireLetter = passwordRequireLetter;
         return this;
@@ -1023,6 +1089,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password_require_mixed")
     public Boolean passwordRequireMixed;
+
     public SiteEntity withPasswordRequireMixed(Boolean passwordRequireMixed) {
         this.passwordRequireMixed = passwordRequireMixed;
         return this;
@@ -1034,6 +1101,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password_require_number")
     public Boolean passwordRequireNumber;
+
     public SiteEntity withPasswordRequireNumber(Boolean passwordRequireNumber) {
         this.passwordRequireNumber = passwordRequireNumber;
         return this;
@@ -1045,6 +1113,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password_require_special")
     public Boolean passwordRequireSpecial;
+
     public SiteEntity withPasswordRequireSpecial(Boolean passwordRequireSpecial) {
         this.passwordRequireSpecial = passwordRequireSpecial;
         return this;
@@ -1056,6 +1125,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password_require_unbreached")
     public Boolean passwordRequireUnbreached;
+
     public SiteEntity withPasswordRequireUnbreached(Boolean passwordRequireUnbreached) {
         this.passwordRequireUnbreached = passwordRequireUnbreached;
         return this;
@@ -1067,6 +1137,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password_requirements_apply_to_bundles")
     public Boolean passwordRequirementsApplyToBundles;
+
     public SiteEntity withPasswordRequirementsApplyToBundles(Boolean passwordRequirementsApplyToBundles) {
         this.passwordRequirementsApplyToBundles = passwordRequirementsApplyToBundles;
         return this;
@@ -1078,6 +1149,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password_validity_days")
     public Integer passwordValidityDays;
+
     public SiteEntity withPasswordValidityDays(Integer passwordValidityDays) {
         this.passwordValidityDays = passwordValidityDays;
         return this;
@@ -1089,6 +1161,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public SiteEntity withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -1100,6 +1173,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pin_all_remote_servers_to_site_region")
     public Boolean pinAllRemoteServersToSiteRegion;
+
     public SiteEntity withPinAllRemoteServersToSiteRegion(Boolean pinAllRemoteServersToSiteRegion) {
         this.pinAllRemoteServersToSiteRegion = pinAllRemoteServersToSiteRegion;
         return this;
@@ -1111,6 +1185,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reply_to_email")
     public String replyToEmail;
+
     public SiteEntity withReplyToEmail(String replyToEmail) {
         this.replyToEmail = replyToEmail;
         return this;
@@ -1122,6 +1197,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("require_2fa")
     public Boolean require2fa;
+
     public SiteEntity withRequire2fa(Boolean require2fa) {
         this.require2fa = require2fa;
         return this;
@@ -1135,6 +1211,7 @@ public class SiteEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("require_2fa_stop_time")
     public OffsetDateTime require2faStopTime;
+
     public SiteEntity withRequire2faStopTime(OffsetDateTime require2faStopTime) {
         this.require2faStopTime = require2faStopTime;
         return this;
@@ -1146,6 +1223,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("require_2fa_user_type")
     public SiteEntityRequire2faUserTypeEnum require2faUserType;
+
     public SiteEntity withRequire2faUserType(SiteEntityRequire2faUserTypeEnum require2faUserType) {
         this.require2faUserType = require2faUserType;
         return this;
@@ -1157,6 +1235,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("session")
     public SessionEntity session;
+
     public SiteEntity withSession(SessionEntity session) {
         this.session = session;
         return this;
@@ -1168,6 +1247,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("session_expiry")
     public Double sessionExpiry;
+
     public SiteEntity withSessionExpiry(Double sessionExpiry) {
         this.sessionExpiry = sessionExpiry;
         return this;
@@ -1179,6 +1259,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("session_expiry_minutes")
     public Integer sessionExpiryMinutes;
+
     public SiteEntity withSessionExpiryMinutes(Integer sessionExpiryMinutes) {
         this.sessionExpiryMinutes = sessionExpiryMinutes;
         return this;
@@ -1190,6 +1271,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("session_pinned_by_ip")
     public Boolean sessionPinnedByIp;
+
     public SiteEntity withSessionPinnedByIp(Boolean sessionPinnedByIp) {
         this.sessionPinnedByIp = sessionPinnedByIp;
         return this;
@@ -1201,6 +1283,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sftp_enabled")
     public Boolean sftpEnabled;
+
     public SiteEntity withSftpEnabled(Boolean sftpEnabled) {
         this.sftpEnabled = sftpEnabled;
         return this;
@@ -1212,6 +1295,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sftp_host_key_type")
     public SiteEntitySftpHostKeyTypeEnum sftpHostKeyType;
+
     public SiteEntity withSftpHostKeyType(SiteEntitySftpHostKeyTypeEnum sftpHostKeyType) {
         this.sftpHostKeyType = sftpHostKeyType;
         return this;
@@ -1223,6 +1307,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sftp_insecure_ciphers")
     public Boolean sftpInsecureCiphers;
+
     public SiteEntity withSftpInsecureCiphers(Boolean sftpInsecureCiphers) {
         this.sftpInsecureCiphers = sftpInsecureCiphers;
         return this;
@@ -1234,6 +1319,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sftp_user_root_enabled")
     public Boolean sftpUserRootEnabled;
+
     public SiteEntity withSftpUserRootEnabled(Boolean sftpUserRootEnabled) {
         this.sftpUserRootEnabled = sftpUserRootEnabled;
         return this;
@@ -1245,6 +1331,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharing_enabled")
     public Boolean sharingEnabled;
+
     public SiteEntity withSharingEnabled(Boolean sharingEnabled) {
         this.sharingEnabled = sharingEnabled;
         return this;
@@ -1256,6 +1343,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_request_access_link")
     public Boolean showRequestAccessLink;
+
     public SiteEntity withShowRequestAccessLink(Boolean showRequestAccessLink) {
         this.showRequestAccessLink = showRequestAccessLink;
         return this;
@@ -1267,6 +1355,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("site_footer")
     public String siteFooter;
+
     public SiteEntity withSiteFooter(String siteFooter) {
         this.siteFooter = siteFooter;
         return this;
@@ -1278,6 +1367,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("site_header")
     public String siteHeader;
+
     public SiteEntity withSiteHeader(String siteHeader) {
         this.siteHeader = siteHeader;
         return this;
@@ -1289,6 +1379,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smtp_address")
     public String smtpAddress;
+
     public SiteEntity withSmtpAddress(String smtpAddress) {
         this.smtpAddress = smtpAddress;
         return this;
@@ -1300,6 +1391,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smtp_authentication")
     public String smtpAuthentication;
+
     public SiteEntity withSmtpAuthentication(String smtpAuthentication) {
         this.smtpAuthentication = smtpAuthentication;
         return this;
@@ -1311,6 +1403,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smtp_from")
     public String smtpFrom;
+
     public SiteEntity withSmtpFrom(String smtpFrom) {
         this.smtpFrom = smtpFrom;
         return this;
@@ -1322,6 +1415,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smtp_port")
     public Integer smtpPort;
+
     public SiteEntity withSmtpPort(Integer smtpPort) {
         this.smtpPort = smtpPort;
         return this;
@@ -1333,6 +1427,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smtp_username")
     public String smtpUsername;
+
     public SiteEntity withSmtpUsername(String smtpUsername) {
         this.smtpUsername = smtpUsername;
         return this;
@@ -1344,6 +1439,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssl_required")
     public Boolean sslRequired;
+
     public SiteEntity withSslRequired(Boolean sslRequired) {
         this.sslRequired = sslRequired;
         return this;
@@ -1355,6 +1451,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subdomain")
     public String subdomain;
+
     public SiteEntity withSubdomain(String subdomain) {
         this.subdomain = subdomain;
         return this;
@@ -1368,6 +1465,7 @@ public class SiteEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("switch_to_plan_date")
     public OffsetDateTime switchToPlanDate;
+
     public SiteEntity withSwitchToPlanDate(OffsetDateTime switchToPlanDate) {
         this.switchToPlanDate = switchToPlanDate;
         return this;
@@ -1379,6 +1477,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tls_disabled")
     public Boolean tlsDisabled;
+
     public SiteEntity withTlsDisabled(Boolean tlsDisabled) {
         this.tlsDisabled = tlsDisabled;
         return this;
@@ -1390,6 +1489,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trial_days_left")
     public Integer trialDaysLeft;
+
     public SiteEntity withTrialDaysLeft(Integer trialDaysLeft) {
         this.trialDaysLeft = trialDaysLeft;
         return this;
@@ -1403,6 +1503,7 @@ public class SiteEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("trial_until")
     public OffsetDateTime trialUntil;
+
     public SiteEntity withTrialUntil(OffsetDateTime trialUntil) {
         this.trialUntil = trialUntil;
         return this;
@@ -1416,6 +1517,7 @@ public class SiteEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public SiteEntity withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -1427,6 +1529,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploads_via_email_authentication")
     public Boolean uploadsViaEmailAuthentication;
+
     public SiteEntity withUploadsViaEmailAuthentication(Boolean uploadsViaEmailAuthentication) {
         this.uploadsViaEmailAuthentication = uploadsViaEmailAuthentication;
         return this;
@@ -1438,6 +1541,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("use_provided_modified_at")
     public Boolean useProvidedModifiedAt;
+
     public SiteEntity withUseProvidedModifiedAt(Boolean useProvidedModifiedAt) {
         this.useProvidedModifiedAt = useProvidedModifiedAt;
         return this;
@@ -1449,6 +1553,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public UserEntity user;
+
     public SiteEntity withUser(UserEntity user) {
         this.user = user;
         return this;
@@ -1460,6 +1565,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_lockout")
     public Boolean userLockout;
+
     public SiteEntity withUserLockout(Boolean userLockout) {
         this.userLockout = userLockout;
         return this;
@@ -1471,6 +1577,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_lockout_lock_period")
     public Integer userLockoutLockPeriod;
+
     public SiteEntity withUserLockoutLockPeriod(Integer userLockoutLockPeriod) {
         this.userLockoutLockPeriod = userLockoutLockPeriod;
         return this;
@@ -1482,6 +1589,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_lockout_tries")
     public Integer userLockoutTries;
+
     public SiteEntity withUserLockoutTries(Integer userLockoutTries) {
         this.userLockoutTries = userLockoutTries;
         return this;
@@ -1493,6 +1601,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_lockout_within")
     public Integer userLockoutWithin;
+
     public SiteEntity withUserLockoutWithin(Integer userLockoutWithin) {
         this.userLockoutWithin = userLockoutWithin;
         return this;
@@ -1504,6 +1613,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_requests_enabled")
     public Boolean userRequestsEnabled;
+
     public SiteEntity withUserRequestsEnabled(Boolean userRequestsEnabled) {
         this.userRequestsEnabled = userRequestsEnabled;
         return this;
@@ -1515,6 +1625,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_requests_notify_admins")
     public Boolean userRequestsNotifyAdmins;
+
     public SiteEntity withUserRequestsNotifyAdmins(Boolean userRequestsNotifyAdmins) {
         this.userRequestsNotifyAdmins = userRequestsNotifyAdmins;
         return this;
@@ -1526,6 +1637,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("welcome_custom_text")
     public String welcomeCustomText;
+
     public SiteEntity withWelcomeCustomText(String welcomeCustomText) {
         this.welcomeCustomText = welcomeCustomText;
         return this;
@@ -1537,6 +1649,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("welcome_email_cc")
     public String welcomeEmailCc;
+
     public SiteEntity withWelcomeEmailCc(String welcomeEmailCc) {
         this.welcomeEmailCc = welcomeEmailCc;
         return this;
@@ -1548,6 +1661,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("welcome_email_enabled")
     public Boolean welcomeEmailEnabled;
+
     public SiteEntity withWelcomeEmailEnabled(Boolean welcomeEmailEnabled) {
         this.welcomeEmailEnabled = welcomeEmailEnabled;
         return this;
@@ -1559,6 +1673,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("welcome_email_subject")
     public String welcomeEmailSubject;
+
     public SiteEntity withWelcomeEmailSubject(String welcomeEmailSubject) {
         this.welcomeEmailSubject = welcomeEmailSubject;
         return this;
@@ -1570,6 +1685,7 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("welcome_screen")
     public SiteEntityWelcomeScreenEnum welcomeScreen;
+
     public SiteEntity withWelcomeScreen(SiteEntityWelcomeScreenEnum welcomeScreen) {
         this.welcomeScreen = welcomeScreen;
         return this;
@@ -1581,9 +1697,11 @@ public class SiteEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windows_mode_ftp")
     public Boolean windowsModeFtp;
+
     public SiteEntity withWindowsModeFtp(Boolean windowsModeFtp) {
         this.windowsModeFtp = windowsModeFtp;
         return this;
     }
     
+    public SiteEntity(){}
 }

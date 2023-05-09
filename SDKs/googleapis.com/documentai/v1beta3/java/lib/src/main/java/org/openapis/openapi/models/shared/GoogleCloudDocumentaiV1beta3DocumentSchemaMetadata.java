@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentSchemaMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentAllowMultipleLabels")
     public Boolean documentAllowMultipleLabels;
+
     public GoogleCloudDocumentaiV1beta3DocumentSchemaMetadata withDocumentAllowMultipleLabels(Boolean documentAllowMultipleLabels) {
         this.documentAllowMultipleLabels = documentAllowMultipleLabels;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentSchemaMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentSplitter")
     public Boolean documentSplitter;
+
     public GoogleCloudDocumentaiV1beta3DocumentSchemaMetadata withDocumentSplitter(Boolean documentSplitter) {
         this.documentSplitter = documentSplitter;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentSchemaMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefixedNamingOnProperties")
     public Boolean prefixedNamingOnProperties;
+
     public GoogleCloudDocumentaiV1beta3DocumentSchemaMetadata withPrefixedNamingOnProperties(Boolean prefixedNamingOnProperties) {
         this.prefixedNamingOnProperties = prefixedNamingOnProperties;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDocumentaiV1beta3DocumentSchemaMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipNamingValidation")
     public Boolean skipNamingValidation;
+
     public GoogleCloudDocumentaiV1beta3DocumentSchemaMetadata withSkipNamingValidation(Boolean skipNamingValidation) {
         this.skipNamingValidation = skipNamingValidation;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3DocumentSchemaMetadata(){}
 }

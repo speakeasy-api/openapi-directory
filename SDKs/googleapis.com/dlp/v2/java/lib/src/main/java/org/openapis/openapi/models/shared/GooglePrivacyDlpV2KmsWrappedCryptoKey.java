@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2KmsWrappedCryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cryptoKeyName")
     public String cryptoKeyName;
+
     public GooglePrivacyDlpV2KmsWrappedCryptoKey withCryptoKeyName(String cryptoKeyName) {
         this.cryptoKeyName = cryptoKeyName;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2KmsWrappedCryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wrappedKey")
     public String wrappedKey;
+
     public GooglePrivacyDlpV2KmsWrappedCryptoKey withWrappedKey(String wrappedKey) {
         this.wrappedKey = wrappedKey;
         return this;
     }
     
+    public GooglePrivacyDlpV2KmsWrappedCryptoKey(){}
 }

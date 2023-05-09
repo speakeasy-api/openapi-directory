@@ -69,10 +69,8 @@ public class PrimaryIPs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePrimaryIpsIdResponse res = new org.openapis.openapi.models.operations.DeletePrimaryIpsIdResponse() {{
+        org.openapis.openapi.models.operations.DeletePrimaryIpsIdResponse res = new org.openapis.openapi.models.operations.DeletePrimaryIpsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -108,11 +106,9 @@ public class PrimaryIPs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPrimaryIpsResponse res = new org.openapis.openapi.models.operations.GetPrimaryIpsResponse() {{
+        org.openapis.openapi.models.operations.GetPrimaryIpsResponse res = new org.openapis.openapi.models.operations.GetPrimaryIpsResponse(contentType, httpRes.statusCode()) {{
             primaryIPsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class PrimaryIPs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPrimaryIpsIdResponse res = new org.openapis.openapi.models.operations.GetPrimaryIpsIdResponse() {{
+        org.openapis.openapi.models.operations.GetPrimaryIpsIdResponse res = new org.openapis.openapi.models.operations.GetPrimaryIpsIdResponse(contentType, httpRes.statusCode()) {{
             primaryIPResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class PrimaryIPs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPrimaryIpsResponse res = new org.openapis.openapi.models.operations.PostPrimaryIpsResponse() {{
+        org.openapis.openapi.models.operations.PostPrimaryIpsResponse res = new org.openapis.openapi.models.operations.PostPrimaryIpsResponse(contentType, httpRes.statusCode()) {{
             createPrimaryIPResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -247,11 +239,9 @@ public class PrimaryIPs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutPrimaryIpsIdResponse res = new org.openapis.openapi.models.operations.PutPrimaryIpsIdResponse() {{
+        org.openapis.openapi.models.operations.PutPrimaryIpsIdResponse res = new org.openapis.openapi.models.operations.PutPrimaryIpsIdResponse(contentType, httpRes.statusCode()) {{
             primaryIPResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

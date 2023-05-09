@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadDocumentsRequest {
@@ -12,6 +13,7 @@ public class UploadDocumentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public UploadDocumentsContentTypeEnum contentType;
+
     public UploadDocumentsRequest withContentType(UploadDocumentsContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UploadDocumentsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UploadDocumentsRequestBody requestBody;
+
     public UploadDocumentsRequest withRequestBody(UploadDocumentsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class UploadDocumentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UploadDocumentsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class UploadDocumentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UploadDocumentsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class UploadDocumentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UploadDocumentsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class UploadDocumentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UploadDocumentsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class UploadDocumentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UploadDocumentsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class UploadDocumentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UploadDocumentsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,6 +77,7 @@ public class UploadDocumentsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UploadDocumentsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -75,9 +85,15 @@ public class UploadDocumentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public UploadDocumentsFormatEnum format;
+
     public UploadDocumentsRequest withFormat(UploadDocumentsFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public UploadDocumentsRequest(@JsonProperty("Content-Type") UploadDocumentsContentTypeEnum contentType, @JsonProperty("RequestBody") UploadDocumentsRequestBody requestBody, @JsonProperty("format") UploadDocumentsFormatEnum format) {
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.format = format;
+  }
 }

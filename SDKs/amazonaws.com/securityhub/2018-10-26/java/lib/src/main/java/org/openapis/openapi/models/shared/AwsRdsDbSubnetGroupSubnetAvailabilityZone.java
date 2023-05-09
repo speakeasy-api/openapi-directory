@@ -15,9 +15,11 @@ public class AwsRdsDbSubnetGroupSubnetAvailabilityZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsRdsDbSubnetGroupSubnetAvailabilityZone withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AwsRdsDbSubnetGroupSubnetAvailabilityZone(){}
 }

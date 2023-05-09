@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateJourneyStateResponse {
@@ -12,6 +13,7 @@ public class UpdateJourneyStateResponse {
      */
     
     public Object badRequestException;
+
     public UpdateJourneyStateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateJourneyStateResponse {
     
     
     public String contentType;
+
     public UpdateJourneyStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateJourneyStateResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateJourneyStateResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateJourneyStateResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateJourneyStateResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateJourneyStateResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateJourneyStateResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateJourneyStateResponse {
      */
     
     public Object notFoundException;
+
     public UpdateJourneyStateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateJourneyStateResponse {
      */
     
     public Object payloadTooLargeException;
+
     public UpdateJourneyStateResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateJourneyStateResponse {
     
     
     public Integer statusCode;
+
     public UpdateJourneyStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateJourneyStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateJourneyStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateJourneyStateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateJourneyStateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateJourneyStateResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateJourneyStateResponse updateJourneyStateResponse;
+
     public UpdateJourneyStateResponse withUpdateJourneyStateResponse(org.openapis.openapi.models.shared.UpdateJourneyStateResponse updateJourneyStateResponse) {
         this.updateJourneyStateResponse = updateJourneyStateResponse;
         return this;
     }
     
+    public UpdateJourneyStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

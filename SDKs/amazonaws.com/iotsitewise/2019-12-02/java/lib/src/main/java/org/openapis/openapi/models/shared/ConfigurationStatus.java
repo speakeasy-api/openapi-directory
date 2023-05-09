@@ -15,6 +15,7 @@ public class ConfigurationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ConfigurationErrorDetails error;
+
     public ConfigurationStatus withError(ConfigurationErrorDetails error) {
         this.error = error;
         return this;
@@ -22,9 +23,13 @@ public class ConfigurationStatus {
     
     @JsonProperty("state")
     public ConfigurationStateEnum state;
+
     public ConfigurationStatus withState(ConfigurationStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ConfigurationStatus(@JsonProperty("state") ConfigurationStateEnum state) {
+        this.state = state;
+  }
 }

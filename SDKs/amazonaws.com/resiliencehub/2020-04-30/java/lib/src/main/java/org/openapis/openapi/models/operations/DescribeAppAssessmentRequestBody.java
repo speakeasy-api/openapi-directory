@@ -12,9 +12,13 @@ public class DescribeAppAssessmentRequestBody {
      */
     @JsonProperty("assessmentArn")
     public String assessmentArn;
+
     public DescribeAppAssessmentRequestBody withAssessmentArn(String assessmentArn) {
         this.assessmentArn = assessmentArn;
         return this;
     }
     
+    public DescribeAppAssessmentRequestBody(@JsonProperty("assessmentArn") String assessmentArn) {
+        this.assessmentArn = assessmentArn;
+  }
 }

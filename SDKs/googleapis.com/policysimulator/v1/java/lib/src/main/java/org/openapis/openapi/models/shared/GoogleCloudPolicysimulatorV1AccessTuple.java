@@ -18,6 +18,7 @@ public class GoogleCloudPolicysimulatorV1AccessTuple {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullResourceName")
     public String fullResourceName;
+
     public GoogleCloudPolicysimulatorV1AccessTuple withFullResourceName(String fullResourceName) {
         this.fullResourceName = fullResourceName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudPolicysimulatorV1AccessTuple {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public String permission;
+
     public GoogleCloudPolicysimulatorV1AccessTuple withPermission(String permission) {
         this.permission = permission;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudPolicysimulatorV1AccessTuple {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principal")
     public String principal;
+
     public GoogleCloudPolicysimulatorV1AccessTuple withPrincipal(String principal) {
         this.principal = principal;
         return this;
     }
     
+    public GoogleCloudPolicysimulatorV1AccessTuple(){}
 }

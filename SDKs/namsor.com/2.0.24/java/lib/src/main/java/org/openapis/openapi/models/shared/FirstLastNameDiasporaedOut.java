@@ -18,6 +18,7 @@ public class FirstLastNameDiasporaedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryIso2")
     public String countryIso2;
+
     public FirstLastNameDiasporaedOut withCountryIso2(String countryIso2) {
         this.countryIso2 = countryIso2;
         return this;
@@ -29,6 +30,7 @@ public class FirstLastNameDiasporaedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ethnicitiesTop")
     public String[] ethnicitiesTop;
+
     public FirstLastNameDiasporaedOut withEthnicitiesTop(String[] ethnicitiesTop) {
         this.ethnicitiesTop = ethnicitiesTop;
         return this;
@@ -40,6 +42,7 @@ public class FirstLastNameDiasporaedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ethnicity")
     public String ethnicity;
+
     public FirstLastNameDiasporaedOut withEthnicity(String ethnicity) {
         this.ethnicity = ethnicity;
         return this;
@@ -51,6 +54,7 @@ public class FirstLastNameDiasporaedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ethnicityAlt")
     public String ethnicityAlt;
+
     public FirstLastNameDiasporaedOut withEthnicityAlt(String ethnicityAlt) {
         this.ethnicityAlt = ethnicityAlt;
         return this;
@@ -62,6 +66,7 @@ public class FirstLastNameDiasporaedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public FirstLastNameDiasporaedOut withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -70,6 +75,7 @@ public class FirstLastNameDiasporaedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FirstLastNameDiasporaedOut withId(String id) {
         this.id = id;
         return this;
@@ -81,6 +87,7 @@ public class FirstLastNameDiasporaedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public FirstLastNameDiasporaedOut withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -92,6 +99,7 @@ public class FirstLastNameDiasporaedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifted")
     public Boolean lifted;
+
     public FirstLastNameDiasporaedOut withLifted(Boolean lifted) {
         this.lifted = lifted;
         return this;
@@ -103,6 +111,7 @@ public class FirstLastNameDiasporaedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilityAltCalibrated")
     public Double probabilityAltCalibrated;
+
     public FirstLastNameDiasporaedOut withProbabilityAltCalibrated(Double probabilityAltCalibrated) {
         this.probabilityAltCalibrated = probabilityAltCalibrated;
         return this;
@@ -114,6 +123,7 @@ public class FirstLastNameDiasporaedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilityCalibrated")
     public Double probabilityCalibrated;
+
     public FirstLastNameDiasporaedOut withProbabilityCalibrated(Double probabilityCalibrated) {
         this.probabilityCalibrated = probabilityCalibrated;
         return this;
@@ -125,6 +135,7 @@ public class FirstLastNameDiasporaedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public FirstLastNameDiasporaedOut withScore(Double score) {
         this.score = score;
         return this;
@@ -133,9 +144,11 @@ public class FirstLastNameDiasporaedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public FirstLastNameDiasporaedOut withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public FirstLastNameDiasporaedOut(){}
 }

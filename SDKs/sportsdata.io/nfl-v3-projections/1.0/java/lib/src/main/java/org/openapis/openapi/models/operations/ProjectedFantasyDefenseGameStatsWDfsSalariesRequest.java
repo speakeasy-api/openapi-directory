@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectedFantasyDefenseGameStatsWDfsSalariesRequest {
@@ -12,6 +13,7 @@ public class ProjectedFantasyDefenseGameStatsWDfsSalariesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public ProjectedFantasyDefenseGameStatsWDfsSalariesFormatEnum format;
+
     public ProjectedFantasyDefenseGameStatsWDfsSalariesRequest withFormat(ProjectedFantasyDefenseGameStatsWDfsSalariesFormatEnum format) {
         this.format = format;
         return this;
@@ -24,6 +26,7 @@ public class ProjectedFantasyDefenseGameStatsWDfsSalariesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
     public String season;
+
     public ProjectedFantasyDefenseGameStatsWDfsSalariesRequest withSeason(String season) {
         this.season = season;
         return this;
@@ -36,9 +39,15 @@ public class ProjectedFantasyDefenseGameStatsWDfsSalariesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=week")
     public String week;
+
     public ProjectedFantasyDefenseGameStatsWDfsSalariesRequest withWeek(String week) {
         this.week = week;
         return this;
     }
     
+    public ProjectedFantasyDefenseGameStatsWDfsSalariesRequest(@JsonProperty("format") ProjectedFantasyDefenseGameStatsWDfsSalariesFormatEnum format, @JsonProperty("season") String season, @JsonProperty("week") String week) {
+        this.format = format;
+        this.season = season;
+        this.week = week;
+  }
 }

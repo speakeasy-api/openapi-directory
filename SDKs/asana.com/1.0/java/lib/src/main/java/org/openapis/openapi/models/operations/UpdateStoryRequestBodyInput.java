@@ -15,9 +15,11 @@ public class UpdateStoryRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.StoryRequestInput data;
+
     public UpdateStoryRequestBodyInput withData(org.openapis.openapi.models.shared.StoryRequestInput data) {
         this.data = data;
         return this;
     }
     
+    public UpdateStoryRequestBodyInput(){}
 }

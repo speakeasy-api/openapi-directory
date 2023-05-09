@@ -18,9 +18,11 @@ public class ChainUri {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public ChainUri withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public ChainUri(){}
 }

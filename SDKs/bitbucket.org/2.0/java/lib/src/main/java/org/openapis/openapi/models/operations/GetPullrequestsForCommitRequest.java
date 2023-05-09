@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPullrequestsForCommitRequest {
@@ -12,6 +13,7 @@ public class GetPullrequestsForCommitRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
     public String commit;
+
     public GetPullrequestsForCommitRequest withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -22,6 +24,7 @@ public class GetPullrequestsForCommitRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetPullrequestsForCommitRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class GetPullrequestsForCommitRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagelen")
     public Integer pagelen;
+
     public GetPullrequestsForCommitRequest withPagelen(Integer pagelen) {
         this.pagelen = pagelen;
         return this;
@@ -42,6 +46,7 @@ public class GetPullrequestsForCommitRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetPullrequestsForCommitRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -52,9 +57,15 @@ public class GetPullrequestsForCommitRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetPullrequestsForCommitRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetPullrequestsForCommitRequest(@JsonProperty("commit") String commit, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.commit = commit;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

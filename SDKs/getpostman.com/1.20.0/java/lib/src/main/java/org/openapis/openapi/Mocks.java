@@ -52,11 +52,9 @@ public class Mocks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllMocksResponse res = new org.openapis.openapi.models.operations.AllMocksResponse() {{
+        org.openapis.openapi.models.operations.AllMocksResponse res = new org.openapis.openapi.models.operations.AllMocksResponse(contentType, httpRes.statusCode()) {{
             allMocks200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,11 +95,9 @@ public class Mocks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateMockResponse res = new org.openapis.openapi.models.operations.CreateMockResponse() {{
+        org.openapis.openapi.models.operations.CreateMockResponse res = new org.openapis.openapi.models.operations.CreateMockResponse(contentType, httpRes.statusCode()) {{
             createMock200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,11 +134,9 @@ public class Mocks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMockResponse res = new org.openapis.openapi.models.operations.DeleteMockResponse() {{
+        org.openapis.openapi.models.operations.DeleteMockResponse res = new org.openapis.openapi.models.operations.DeleteMockResponse(contentType, httpRes.statusCode()) {{
             deleteMock200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,11 +173,9 @@ public class Mocks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PublishMockResponse res = new org.openapis.openapi.models.operations.PublishMockResponse() {{
+        org.openapis.openapi.models.operations.PublishMockResponse res = new org.openapis.openapi.models.operations.PublishMockResponse(contentType, httpRes.statusCode()) {{
             publishMock200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -220,11 +212,9 @@ public class Mocks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SingleMockResponse res = new org.openapis.openapi.models.operations.SingleMockResponse() {{
+        org.openapis.openapi.models.operations.SingleMockResponse res = new org.openapis.openapi.models.operations.SingleMockResponse(contentType, httpRes.statusCode()) {{
             singleMock200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,11 +251,9 @@ public class Mocks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnpublishMockResponse res = new org.openapis.openapi.models.operations.UnpublishMockResponse() {{
+        org.openapis.openapi.models.operations.UnpublishMockResponse res = new org.openapis.openapi.models.operations.UnpublishMockResponse(contentType, httpRes.statusCode()) {{
             unpublishMock200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -309,11 +297,9 @@ public class Mocks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateMockResponse res = new org.openapis.openapi.models.operations.UpdateMockResponse() {{
+        org.openapis.openapi.models.operations.UpdateMockResponse res = new org.openapis.openapi.models.operations.UpdateMockResponse(contentType, httpRes.statusCode()) {{
             updateMock200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InlineResponse201 {
     @JsonProperty("app_key")
     public String appKey;
+
     public InlineResponse201 withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
@@ -22,9 +23,13 @@ public class InlineResponse201 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public InlineResponse201 withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public InlineResponse201(@JsonProperty("app_key") String appKey) {
+        this.appKey = appKey;
+  }
 }

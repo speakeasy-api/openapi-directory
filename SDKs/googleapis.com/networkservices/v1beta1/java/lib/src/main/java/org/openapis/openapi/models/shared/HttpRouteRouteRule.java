@@ -18,6 +18,7 @@ public class HttpRouteRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public HttpRouteRouteAction action;
+
     public HttpRouteRouteRule withAction(HttpRouteRouteAction action) {
         this.action = action;
         return this;
@@ -29,9 +30,11 @@ public class HttpRouteRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matches")
     public HttpRouteRouteMatch[] matches;
+
     public HttpRouteRouteRule withMatches(HttpRouteRouteMatch[] matches) {
         this.matches = matches;
         return this;
     }
     
+    public HttpRouteRouteRule(){}
 }

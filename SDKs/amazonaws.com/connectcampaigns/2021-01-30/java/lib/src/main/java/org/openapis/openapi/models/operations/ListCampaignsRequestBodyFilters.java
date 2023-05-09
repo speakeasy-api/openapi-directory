@@ -18,9 +18,11 @@ public class ListCampaignsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceIdFilter")
     public org.openapis.openapi.models.shared.InstanceIdFilter instanceIdFilter;
+
     public ListCampaignsRequestBodyFilters withInstanceIdFilter(org.openapis.openapi.models.shared.InstanceIdFilter instanceIdFilter) {
         this.instanceIdFilter = instanceIdFilter;
         return this;
     }
     
+    public ListCampaignsRequestBodyFilters(){}
 }

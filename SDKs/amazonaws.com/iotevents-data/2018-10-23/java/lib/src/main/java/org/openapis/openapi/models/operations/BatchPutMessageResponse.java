@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchPutMessageResponse {
@@ -12,6 +13,7 @@ public class BatchPutMessageResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchPutMessageResponse batchPutMessageResponse;
+
     public BatchPutMessageResponse withBatchPutMessageResponse(org.openapis.openapi.models.shared.BatchPutMessageResponse batchPutMessageResponse) {
         this.batchPutMessageResponse = batchPutMessageResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchPutMessageResponse {
     
     
     public String contentType;
+
     public BatchPutMessageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchPutMessageResponse {
      */
     
     public Object internalFailureException;
+
     public BatchPutMessageResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class BatchPutMessageResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchPutMessageResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class BatchPutMessageResponse {
     
     
     public Integer statusCode;
+
     public BatchPutMessageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchPutMessageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchPutMessageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchPutMessageResponse {
      */
     
     public Object serviceUnavailableException;
+
     public BatchPutMessageResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class BatchPutMessageResponse {
      */
     
     public Object throttlingException;
+
     public BatchPutMessageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public BatchPutMessageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RunInstancesRequest {
     
     public String additionalInfo;
+
     public RunInstancesRequest withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -16,6 +17,7 @@ public class RunInstancesRequest {
     
     
     public RunInstancesRequestBlockDeviceMappings[] blockDeviceMappings;
+
     public RunInstancesRequest withBlockDeviceMappings(RunInstancesRequestBlockDeviceMappings[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -23,6 +25,7 @@ public class RunInstancesRequest {
     
     
     public CapacityReservationSpecification capacityReservationSpecification;
+
     public RunInstancesRequest withCapacityReservationSpecification(CapacityReservationSpecification capacityReservationSpecification) {
         this.capacityReservationSpecification = capacityReservationSpecification;
         return this;
@@ -30,6 +33,7 @@ public class RunInstancesRequest {
     
     
     public String clientToken;
+
     public RunInstancesRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -37,6 +41,7 @@ public class RunInstancesRequest {
     
     
     public CpuOptionsRequest cpuOptions;
+
     public RunInstancesRequest withCpuOptions(CpuOptionsRequest cpuOptions) {
         this.cpuOptions = cpuOptions;
         return this;
@@ -44,6 +49,7 @@ public class RunInstancesRequest {
     
     
     public CreditSpecificationRequest creditSpecification;
+
     public RunInstancesRequest withCreditSpecification(CreditSpecificationRequest creditSpecification) {
         this.creditSpecification = creditSpecification;
         return this;
@@ -51,6 +57,7 @@ public class RunInstancesRequest {
     
     
     public Boolean disableApiStop;
+
     public RunInstancesRequest withDisableApiStop(Boolean disableApiStop) {
         this.disableApiStop = disableApiStop;
         return this;
@@ -58,6 +65,7 @@ public class RunInstancesRequest {
     
     
     public Boolean disableApiTermination;
+
     public RunInstancesRequest withDisableApiTermination(Boolean disableApiTermination) {
         this.disableApiTermination = disableApiTermination;
         return this;
@@ -65,6 +73,7 @@ public class RunInstancesRequest {
     
     
     public Boolean dryRun;
+
     public RunInstancesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -72,6 +81,7 @@ public class RunInstancesRequest {
     
     
     public Boolean ebsOptimized;
+
     public RunInstancesRequest withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -79,6 +89,7 @@ public class RunInstancesRequest {
     
     
     public ElasticGpuSpecifications[] elasticGpuSpecification;
+
     public RunInstancesRequest withElasticGpuSpecification(ElasticGpuSpecifications[] elasticGpuSpecification) {
         this.elasticGpuSpecification = elasticGpuSpecification;
         return this;
@@ -86,6 +97,7 @@ public class RunInstancesRequest {
     
     
     public RunInstancesRequestElasticInferenceAccelerators[] elasticInferenceAccelerators;
+
     public RunInstancesRequest withElasticInferenceAccelerators(RunInstancesRequestElasticInferenceAccelerators[] elasticInferenceAccelerators) {
         this.elasticInferenceAccelerators = elasticInferenceAccelerators;
         return this;
@@ -93,6 +105,7 @@ public class RunInstancesRequest {
     
     
     public EnclaveOptionsRequest enclaveOptions;
+
     public RunInstancesRequest withEnclaveOptions(EnclaveOptionsRequest enclaveOptions) {
         this.enclaveOptions = enclaveOptions;
         return this;
@@ -100,6 +113,7 @@ public class RunInstancesRequest {
     
     
     public HibernationOptionsRequest hibernationOptions;
+
     public RunInstancesRequest withHibernationOptions(HibernationOptionsRequest hibernationOptions) {
         this.hibernationOptions = hibernationOptions;
         return this;
@@ -107,6 +121,7 @@ public class RunInstancesRequest {
     
     
     public RunInstancesRequestIamInstanceProfile iamInstanceProfile;
+
     public RunInstancesRequest withIamInstanceProfile(RunInstancesRequestIamInstanceProfile iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -114,6 +129,7 @@ public class RunInstancesRequest {
     
     
     public String imageId;
+
     public RunInstancesRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -121,6 +137,7 @@ public class RunInstancesRequest {
     
     
     public RunInstancesRequestInstanceInitiatedShutdownBehaviorEnum instanceInitiatedShutdownBehavior;
+
     public RunInstancesRequest withInstanceInitiatedShutdownBehavior(RunInstancesRequestInstanceInitiatedShutdownBehaviorEnum instanceInitiatedShutdownBehavior) {
         this.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
         return this;
@@ -128,6 +145,7 @@ public class RunInstancesRequest {
     
     
     public InstanceMarketOptionsRequest instanceMarketOptions;
+
     public RunInstancesRequest withInstanceMarketOptions(InstanceMarketOptionsRequest instanceMarketOptions) {
         this.instanceMarketOptions = instanceMarketOptions;
         return this;
@@ -135,6 +153,7 @@ public class RunInstancesRequest {
     
     
     public InstanceTypeEnum instanceType;
+
     public RunInstancesRequest withInstanceType(InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -142,6 +161,7 @@ public class RunInstancesRequest {
     
     
     public Long ipv6AddressCount;
+
     public RunInstancesRequest withIpv6AddressCount(Long ipv6AddressCount) {
         this.ipv6AddressCount = ipv6AddressCount;
         return this;
@@ -149,6 +169,7 @@ public class RunInstancesRequest {
     
     
     public RunInstancesRequestIpv6Addresses[] ipv6Addresses;
+
     public RunInstancesRequest withIpv6Addresses(RunInstancesRequestIpv6Addresses[] ipv6Addresses) {
         this.ipv6Addresses = ipv6Addresses;
         return this;
@@ -156,6 +177,7 @@ public class RunInstancesRequest {
     
     
     public String kernelId;
+
     public RunInstancesRequest withKernelId(String kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -163,6 +185,7 @@ public class RunInstancesRequest {
     
     
     public String keyName;
+
     public RunInstancesRequest withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -170,6 +193,7 @@ public class RunInstancesRequest {
     
     
     public LaunchTemplateSpecification launchTemplate;
+
     public RunInstancesRequest withLaunchTemplate(LaunchTemplateSpecification launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -177,6 +201,7 @@ public class RunInstancesRequest {
     
     
     public RunInstancesRequestLicenseSpecifications[] licenseSpecifications;
+
     public RunInstancesRequest withLicenseSpecifications(RunInstancesRequestLicenseSpecifications[] licenseSpecifications) {
         this.licenseSpecifications = licenseSpecifications;
         return this;
@@ -184,6 +209,7 @@ public class RunInstancesRequest {
     
     
     public InstanceMaintenanceOptionsRequest maintenanceOptions;
+
     public RunInstancesRequest withMaintenanceOptions(InstanceMaintenanceOptionsRequest maintenanceOptions) {
         this.maintenanceOptions = maintenanceOptions;
         return this;
@@ -191,6 +217,7 @@ public class RunInstancesRequest {
     
     
     public Long maxCount;
+
     public RunInstancesRequest withMaxCount(Long maxCount) {
         this.maxCount = maxCount;
         return this;
@@ -198,6 +225,7 @@ public class RunInstancesRequest {
     
     
     public InstanceMetadataOptionsRequest metadataOptions;
+
     public RunInstancesRequest withMetadataOptions(InstanceMetadataOptionsRequest metadataOptions) {
         this.metadataOptions = metadataOptions;
         return this;
@@ -205,6 +233,7 @@ public class RunInstancesRequest {
     
     
     public Long minCount;
+
     public RunInstancesRequest withMinCount(Long minCount) {
         this.minCount = minCount;
         return this;
@@ -212,6 +241,7 @@ public class RunInstancesRequest {
     
     
     public RunInstancesMonitoringEnabled monitoring;
+
     public RunInstancesRequest withMonitoring(RunInstancesMonitoringEnabled monitoring) {
         this.monitoring = monitoring;
         return this;
@@ -219,6 +249,7 @@ public class RunInstancesRequest {
     
     
     public RunInstancesRequestNetworkInterfaces[] networkInterfaces;
+
     public RunInstancesRequest withNetworkInterfaces(RunInstancesRequestNetworkInterfaces[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -226,6 +257,7 @@ public class RunInstancesRequest {
     
     
     public Placement placement;
+
     public RunInstancesRequest withPlacement(Placement placement) {
         this.placement = placement;
         return this;
@@ -233,6 +265,7 @@ public class RunInstancesRequest {
     
     
     public PrivateDnsNameOptionsRequest privateDnsNameOptions;
+
     public RunInstancesRequest withPrivateDnsNameOptions(PrivateDnsNameOptionsRequest privateDnsNameOptions) {
         this.privateDnsNameOptions = privateDnsNameOptions;
         return this;
@@ -240,6 +273,7 @@ public class RunInstancesRequest {
     
     
     public String privateIpAddress;
+
     public RunInstancesRequest withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -247,6 +281,7 @@ public class RunInstancesRequest {
     
     
     public String ramdiskId;
+
     public RunInstancesRequest withRamdiskId(String ramdiskId) {
         this.ramdiskId = ramdiskId;
         return this;
@@ -254,6 +289,7 @@ public class RunInstancesRequest {
     
     
     public String[] securityGroupIds;
+
     public RunInstancesRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -261,6 +297,7 @@ public class RunInstancesRequest {
     
     
     public String[] securityGroups;
+
     public RunInstancesRequest withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -268,6 +305,7 @@ public class RunInstancesRequest {
     
     
     public String subnetId;
+
     public RunInstancesRequest withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -275,6 +313,7 @@ public class RunInstancesRequest {
     
     
     public RunInstancesRequestTagSpecifications[] tagSpecifications;
+
     public RunInstancesRequest withTagSpecifications(RunInstancesRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -282,9 +321,14 @@ public class RunInstancesRequest {
     
     
     public String userData;
+
     public RunInstancesRequest withUserData(String userData) {
         this.userData = userData;
         return this;
     }
     
+    public RunInstancesRequest(@JsonProperty("MaxCount") Long maxCount, @JsonProperty("MinCount") Long minCount) {
+        this.maxCount = maxCount;
+        this.minCount = minCount;
+  }
 }

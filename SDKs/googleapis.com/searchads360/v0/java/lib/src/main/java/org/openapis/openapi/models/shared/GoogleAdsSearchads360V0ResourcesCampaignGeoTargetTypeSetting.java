@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negativeGeoTargetType")
     public GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingNegativeGeoTargetTypeEnum negativeGeoTargetType;
+
     public GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSetting withNegativeGeoTargetType(GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingNegativeGeoTargetTypeEnum negativeGeoTargetType) {
         this.negativeGeoTargetType = negativeGeoTargetType;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positiveGeoTargetType")
     public GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingPositiveGeoTargetTypeEnum positiveGeoTargetType;
+
     public GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSetting withPositiveGeoTargetType(GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingPositiveGeoTargetTypeEnum positiveGeoTargetType) {
         this.positiveGeoTargetType = positiveGeoTargetType;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSetting(){}
 }

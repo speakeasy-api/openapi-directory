@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddDellSwitchResponse {
@@ -12,6 +13,7 @@ public class AddDellSwitchResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public AddDellSwitchResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -19,6 +21,7 @@ public class AddDellSwitchResponse {
     
     
     public String contentType;
+
     public AddDellSwitchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AddDellSwitchResponse {
      */
     
     public org.openapis.openapi.models.shared.DellSwitchDataSource dellSwitchDataSource;
+
     public AddDellSwitchResponse withDellSwitchDataSource(org.openapis.openapi.models.shared.DellSwitchDataSource dellSwitchDataSource) {
         this.dellSwitchDataSource = dellSwitchDataSource;
         return this;
@@ -36,6 +40,7 @@ public class AddDellSwitchResponse {
     
     
     public Integer statusCode;
+
     public AddDellSwitchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AddDellSwitchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddDellSwitchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddDellSwitchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

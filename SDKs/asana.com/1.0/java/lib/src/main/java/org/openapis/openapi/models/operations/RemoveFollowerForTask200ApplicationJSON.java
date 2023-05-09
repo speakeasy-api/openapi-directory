@@ -15,9 +15,11 @@ public class RemoveFollowerForTask200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TaskResponse data;
+
     public RemoveFollowerForTask200ApplicationJSON withData(org.openapis.openapi.models.shared.TaskResponse data) {
         this.data = data;
         return this;
     }
     
+    public RemoveFollowerForTask200ApplicationJSON(){}
 }

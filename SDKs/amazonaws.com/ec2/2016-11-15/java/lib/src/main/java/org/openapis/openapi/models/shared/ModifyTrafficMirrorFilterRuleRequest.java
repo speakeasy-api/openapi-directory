@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyTrafficMirrorFilterRuleRequest {
     
     public String description;
+
     public ModifyTrafficMirrorFilterRuleRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class ModifyTrafficMirrorFilterRuleRequest {
     
     
     public String destinationCidrBlock;
+
     public ModifyTrafficMirrorFilterRuleRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -23,6 +25,7 @@ public class ModifyTrafficMirrorFilterRuleRequest {
     
     
     public TrafficMirrorPortRangeRequest destinationPortRange;
+
     public ModifyTrafficMirrorFilterRuleRequest withDestinationPortRange(TrafficMirrorPortRangeRequest destinationPortRange) {
         this.destinationPortRange = destinationPortRange;
         return this;
@@ -30,6 +33,7 @@ public class ModifyTrafficMirrorFilterRuleRequest {
     
     
     public Boolean dryRun;
+
     public ModifyTrafficMirrorFilterRuleRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -37,6 +41,7 @@ public class ModifyTrafficMirrorFilterRuleRequest {
     
     
     public Long protocol;
+
     public ModifyTrafficMirrorFilterRuleRequest withProtocol(Long protocol) {
         this.protocol = protocol;
         return this;
@@ -44,6 +49,7 @@ public class ModifyTrafficMirrorFilterRuleRequest {
     
     
     public TrafficMirrorFilterRuleFieldEnum[] removeFields;
+
     public ModifyTrafficMirrorFilterRuleRequest withRemoveFields(TrafficMirrorFilterRuleFieldEnum[] removeFields) {
         this.removeFields = removeFields;
         return this;
@@ -51,6 +57,7 @@ public class ModifyTrafficMirrorFilterRuleRequest {
     
     
     public TrafficMirrorRuleActionEnum ruleAction;
+
     public ModifyTrafficMirrorFilterRuleRequest withRuleAction(TrafficMirrorRuleActionEnum ruleAction) {
         this.ruleAction = ruleAction;
         return this;
@@ -58,6 +65,7 @@ public class ModifyTrafficMirrorFilterRuleRequest {
     
     
     public Long ruleNumber;
+
     public ModifyTrafficMirrorFilterRuleRequest withRuleNumber(Long ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
@@ -65,6 +73,7 @@ public class ModifyTrafficMirrorFilterRuleRequest {
     
     
     public String sourceCidrBlock;
+
     public ModifyTrafficMirrorFilterRuleRequest withSourceCidrBlock(String sourceCidrBlock) {
         this.sourceCidrBlock = sourceCidrBlock;
         return this;
@@ -72,6 +81,7 @@ public class ModifyTrafficMirrorFilterRuleRequest {
     
     
     public TrafficMirrorPortRangeRequest sourcePortRange;
+
     public ModifyTrafficMirrorFilterRuleRequest withSourcePortRange(TrafficMirrorPortRangeRequest sourcePortRange) {
         this.sourcePortRange = sourcePortRange;
         return this;
@@ -79,6 +89,7 @@ public class ModifyTrafficMirrorFilterRuleRequest {
     
     
     public TrafficDirectionEnum trafficDirection;
+
     public ModifyTrafficMirrorFilterRuleRequest withTrafficDirection(TrafficDirectionEnum trafficDirection) {
         this.trafficDirection = trafficDirection;
         return this;
@@ -86,9 +97,13 @@ public class ModifyTrafficMirrorFilterRuleRequest {
     
     
     public String trafficMirrorFilterRuleId;
+
     public ModifyTrafficMirrorFilterRuleRequest withTrafficMirrorFilterRuleId(String trafficMirrorFilterRuleId) {
         this.trafficMirrorFilterRuleId = trafficMirrorFilterRuleId;
         return this;
     }
     
+    public ModifyTrafficMirrorFilterRuleRequest(@JsonProperty("TrafficMirrorFilterRuleId") String trafficMirrorFilterRuleId) {
+        this.trafficMirrorFilterRuleId = trafficMirrorFilterRuleId;
+  }
 }

@@ -18,6 +18,7 @@ public class IndividualNameInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public IndividualNameDirectionEnum direction;
+
     public IndividualNameInput withDirection(IndividualNameDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -29,6 +30,7 @@ public class IndividualNameInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyName")
     public String familyName;
+
     public IndividualNameInput withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -40,6 +42,7 @@ public class IndividualNameInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formalSalutation")
     public String formalSalutation;
+
     public IndividualNameInput withFormalSalutation(String formalSalutation) {
         this.formalSalutation = formalSalutation;
         return this;
@@ -51,6 +54,7 @@ public class IndividualNameInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("givenName")
     public String givenName;
+
     public IndividualNameInput withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -62,6 +66,7 @@ public class IndividualNameInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("informalSalutation")
     public String informalSalutation;
+
     public IndividualNameInput withInformalSalutation(String informalSalutation) {
         this.informalSalutation = informalSalutation;
         return this;
@@ -73,6 +78,7 @@ public class IndividualNameInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middleName")
     public String middleName;
+
     public IndividualNameInput withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -84,6 +90,7 @@ public class IndividualNameInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namePrefix")
     public IndividualNameNamePrefixEnum namePrefix;
+
     public IndividualNameInput withNamePrefix(IndividualNameNamePrefixEnum namePrefix) {
         this.namePrefix = namePrefix;
         return this;
@@ -95,6 +102,7 @@ public class IndividualNameInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameSuffix")
     public String nameSuffix;
+
     public IndividualNameInput withNameSuffix(String nameSuffix) {
         this.nameSuffix = nameSuffix;
         return this;
@@ -106,9 +114,11 @@ public class IndividualNameInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameType")
     public IndividualNameNameTypeEnum nameType;
+
     public IndividualNameInput withNameType(IndividualNameNameTypeEnum nameType) {
         this.nameType = nameType;
         return this;
     }
     
+    public IndividualNameInput(){}
 }

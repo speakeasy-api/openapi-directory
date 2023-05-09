@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AppengineAppsLocationsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AppengineAppsLocationsListSecurityOption1 option1;
+
     public AppengineAppsLocationsListSecurity withOption1(AppengineAppsLocationsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class AppengineAppsLocationsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AppengineAppsLocationsListSecurityOption2 option2;
+
     public AppengineAppsLocationsListSecurity withOption2(AppengineAppsLocationsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class AppengineAppsLocationsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AppengineAppsLocationsListSecurityOption3 option3;
+
     public AppengineAppsLocationsListSecurity withOption3(AppengineAppsLocationsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public AppengineAppsLocationsListSecurity(){}
 }

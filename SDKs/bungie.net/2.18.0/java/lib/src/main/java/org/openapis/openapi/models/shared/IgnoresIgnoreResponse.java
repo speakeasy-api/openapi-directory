@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class IgnoresIgnoreResponse {
     
     public Integer ignoreFlags;
+
     public IgnoresIgnoreResponse withIgnoreFlags(Integer ignoreFlags) {
         this.ignoreFlags = ignoreFlags;
         return this;
@@ -16,9 +17,11 @@ public class IgnoresIgnoreResponse {
     
     
     public Boolean isIgnored;
+
     public IgnoresIgnoreResponse withIsIgnored(Boolean isIgnored) {
         this.isIgnored = isIgnored;
         return this;
     }
     
+    public IgnoresIgnoreResponse(){}
 }

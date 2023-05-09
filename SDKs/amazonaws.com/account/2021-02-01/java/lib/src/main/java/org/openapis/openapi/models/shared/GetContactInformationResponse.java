@@ -15,9 +15,11 @@ public class GetContactInformationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactInformation")
     public ContactInformation contactInformation;
+
     public GetContactInformationResponse withContactInformation(ContactInformation contactInformation) {
         this.contactInformation = contactInformation;
         return this;
     }
     
+    public GetContactInformationResponse(){}
 }

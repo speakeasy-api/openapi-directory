@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SicerResponse {
     
     public String contentType;
+
     public SicerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SicerResponse {
     
     
     public Integer statusCode;
+
     public SicerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SicerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SicerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SicerResponse {
      */
     
     public Sicer400ApplicationJSON sicer400ApplicationJSONObject;
+
     public SicerResponse withSicer400ApplicationJSONObject(Sicer400ApplicationJSON sicer400ApplicationJSONObject) {
         this.sicer400ApplicationJSONObject = sicer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SicerResponse {
      */
     
     public Sicer401ApplicationJSON sicer401ApplicationJSONObject;
+
     public SicerResponse withSicer401ApplicationJSONObject(Sicer401ApplicationJSON sicer401ApplicationJSONObject) {
         this.sicer401ApplicationJSONObject = sicer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SicerResponse {
      */
     
     public Sicer404ApplicationJSON sicer404ApplicationJSONObject;
+
     public SicerResponse withSicer404ApplicationJSONObject(Sicer404ApplicationJSON sicer404ApplicationJSONObject) {
         this.sicer404ApplicationJSONObject = sicer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class SicerResponse {
      */
     
     public Sicer500ApplicationJSON sicer500ApplicationJSONObject;
+
     public SicerResponse withSicer500ApplicationJSONObject(Sicer500ApplicationJSON sicer500ApplicationJSONObject) {
         this.sicer500ApplicationJSONObject = sicer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class SicerResponse {
      */
     
     public Sicer502ApplicationJSON sicer502ApplicationJSONObject;
+
     public SicerResponse withSicer502ApplicationJSONObject(Sicer502ApplicationJSON sicer502ApplicationJSONObject) {
         this.sicer502ApplicationJSONObject = sicer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class SicerResponse {
      */
     
     public Sicer503ApplicationJSON sicer503ApplicationJSONObject;
+
     public SicerResponse withSicer503ApplicationJSONObject(Sicer503ApplicationJSON sicer503ApplicationJSONObject) {
         this.sicer503ApplicationJSONObject = sicer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class SicerResponse {
      */
     
     public Sicer504ApplicationJSON sicer504ApplicationJSONObject;
+
     public SicerResponse withSicer504ApplicationJSONObject(Sicer504ApplicationJSON sicer504ApplicationJSONObject) {
         this.sicer504ApplicationJSONObject = sicer504ApplicationJSONObject;
         return this;
     }
     
+    public SicerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

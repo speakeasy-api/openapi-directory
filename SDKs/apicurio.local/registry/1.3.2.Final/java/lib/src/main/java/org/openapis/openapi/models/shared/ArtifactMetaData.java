@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ArtifactMetaData {
     @JsonProperty("createdBy")
     public String createdBy;
+
     public ArtifactMetaData withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -28,6 +29,7 @@ public class ArtifactMetaData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdOn")
     public OffsetDateTime createdOn;
+
     public ArtifactMetaData withCreatedOn(OffsetDateTime createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -36,6 +38,7 @@ public class ArtifactMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ArtifactMetaData withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class ArtifactMetaData {
     
     @JsonProperty("globalId")
     public Long globalId;
+
     public ArtifactMetaData withGlobalId(Long globalId) {
         this.globalId = globalId;
         return this;
@@ -50,6 +54,7 @@ public class ArtifactMetaData {
     
     @JsonProperty("id")
     public String id;
+
     public ArtifactMetaData withId(String id) {
         this.id = id;
         return this;
@@ -58,6 +63,7 @@ public class ArtifactMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public ArtifactMetaData withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -65,6 +71,7 @@ public class ArtifactMetaData {
     
     @JsonProperty("modifiedBy")
     public String modifiedBy;
+
     public ArtifactMetaData withModifiedBy(String modifiedBy) {
         this.modifiedBy = modifiedBy;
         return this;
@@ -74,6 +81,7 @@ public class ArtifactMetaData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedOn")
     public OffsetDateTime modifiedOn;
+
     public ArtifactMetaData withModifiedOn(OffsetDateTime modifiedOn) {
         this.modifiedOn = modifiedOn;
         return this;
@@ -82,6 +90,7 @@ public class ArtifactMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ArtifactMetaData withName(String name) {
         this.name = name;
         return this;
@@ -93,6 +102,7 @@ public class ArtifactMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public ArtifactMetaData withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -109,6 +119,7 @@ public class ArtifactMetaData {
      */
     @JsonProperty("state")
     public ArtifactStateEnum state;
+
     public ArtifactMetaData withState(ArtifactStateEnum state) {
         this.state = state;
         return this;
@@ -116,6 +127,7 @@ public class ArtifactMetaData {
     
     @JsonProperty("type")
     public ArtifactTypeEnum type;
+
     public ArtifactMetaData withType(ArtifactTypeEnum type) {
         this.type = type;
         return this;
@@ -123,9 +135,21 @@ public class ArtifactMetaData {
     
     @JsonProperty("version")
     public Long version;
+
     public ArtifactMetaData withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public ArtifactMetaData(@JsonProperty("createdBy") String createdBy, @JsonProperty("createdOn") OffsetDateTime createdOn, @JsonProperty("globalId") Long globalId, @JsonProperty("id") String id, @JsonProperty("modifiedBy") String modifiedBy, @JsonProperty("modifiedOn") OffsetDateTime modifiedOn, @JsonProperty("state") ArtifactStateEnum state, @JsonProperty("type") ArtifactTypeEnum type, @JsonProperty("version") Long version) {
+        this.createdBy = createdBy;
+        this.createdOn = createdOn;
+        this.globalId = globalId;
+        this.id = id;
+        this.modifiedBy = modifiedBy;
+        this.modifiedOn = modifiedOn;
+        this.state = state;
+        this.type = type;
+        this.version = version;
+  }
 }

@@ -18,6 +18,7 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public Metric withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -29,6 +30,7 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intValue")
     public String intValue;
+
     public Metric withIntValue(String intValue) {
         this.intValue = intValue;
         return this;
@@ -40,6 +42,7 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Metric withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public Metric withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public Metric(){}
 }

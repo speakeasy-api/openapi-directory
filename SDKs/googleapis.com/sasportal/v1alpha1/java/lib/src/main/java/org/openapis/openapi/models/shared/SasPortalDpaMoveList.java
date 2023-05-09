@@ -18,6 +18,7 @@ public class SasPortalDpaMoveList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dpaId")
     public String dpaId;
+
     public SasPortalDpaMoveList withDpaId(String dpaId) {
         this.dpaId = dpaId;
         return this;
@@ -29,9 +30,11 @@ public class SasPortalDpaMoveList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequencyRange")
     public SasPortalFrequencyRange frequencyRange;
+
     public SasPortalDpaMoveList withFrequencyRange(SasPortalFrequencyRange frequencyRange) {
         this.frequencyRange = frequencyRange;
         return this;
     }
     
+    public SasPortalDpaMoveList(){}
 }

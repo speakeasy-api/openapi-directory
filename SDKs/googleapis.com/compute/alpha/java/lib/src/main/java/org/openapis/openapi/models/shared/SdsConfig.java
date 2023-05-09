@@ -18,9 +18,11 @@ public class SdsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpcServiceConfig")
     public GrpcServiceConfig grpcServiceConfig;
+
     public SdsConfig withGrpcServiceConfig(GrpcServiceConfig grpcServiceConfig) {
         this.grpcServiceConfig = grpcServiceConfig;
         return this;
     }
     
+    public SdsConfig(){}
 }

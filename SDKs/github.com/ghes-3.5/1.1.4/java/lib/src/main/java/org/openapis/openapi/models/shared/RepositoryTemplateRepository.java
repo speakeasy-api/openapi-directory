@@ -12,6 +12,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_auto_merge")
     public Boolean allowAutoMerge;
+
     public RepositoryTemplateRepository withAllowAutoMerge(Boolean allowAutoMerge) {
         this.allowAutoMerge = allowAutoMerge;
         return this;
@@ -20,6 +21,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_merge_commit")
     public Boolean allowMergeCommit;
+
     public RepositoryTemplateRepository withAllowMergeCommit(Boolean allowMergeCommit) {
         this.allowMergeCommit = allowMergeCommit;
         return this;
@@ -28,6 +30,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_rebase_merge")
     public Boolean allowRebaseMerge;
+
     public RepositoryTemplateRepository withAllowRebaseMerge(Boolean allowRebaseMerge) {
         this.allowRebaseMerge = allowRebaseMerge;
         return this;
@@ -36,6 +39,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_squash_merge")
     public Boolean allowSquashMerge;
+
     public RepositoryTemplateRepository withAllowSquashMerge(Boolean allowSquashMerge) {
         this.allowSquashMerge = allowSquashMerge;
         return this;
@@ -44,6 +48,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_update_branch")
     public Boolean allowUpdateBranch;
+
     public RepositoryTemplateRepository withAllowUpdateBranch(Boolean allowUpdateBranch) {
         this.allowUpdateBranch = allowUpdateBranch;
         return this;
@@ -52,6 +57,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archive_url")
     public String archiveUrl;
+
     public RepositoryTemplateRepository withArchiveUrl(String archiveUrl) {
         this.archiveUrl = archiveUrl;
         return this;
@@ -60,6 +66,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public RepositoryTemplateRepository withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -68,6 +75,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignees_url")
     public String assigneesUrl;
+
     public RepositoryTemplateRepository withAssigneesUrl(String assigneesUrl) {
         this.assigneesUrl = assigneesUrl;
         return this;
@@ -76,6 +84,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blobs_url")
     public String blobsUrl;
+
     public RepositoryTemplateRepository withBlobsUrl(String blobsUrl) {
         this.blobsUrl = blobsUrl;
         return this;
@@ -84,6 +93,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branches_url")
     public String branchesUrl;
+
     public RepositoryTemplateRepository withBranchesUrl(String branchesUrl) {
         this.branchesUrl = branchesUrl;
         return this;
@@ -92,6 +102,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clone_url")
     public String cloneUrl;
+
     public RepositoryTemplateRepository withCloneUrl(String cloneUrl) {
         this.cloneUrl = cloneUrl;
         return this;
@@ -100,6 +111,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collaborators_url")
     public String collaboratorsUrl;
+
     public RepositoryTemplateRepository withCollaboratorsUrl(String collaboratorsUrl) {
         this.collaboratorsUrl = collaboratorsUrl;
         return this;
@@ -108,6 +120,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments_url")
     public String commentsUrl;
+
     public RepositoryTemplateRepository withCommentsUrl(String commentsUrl) {
         this.commentsUrl = commentsUrl;
         return this;
@@ -116,6 +129,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commits_url")
     public String commitsUrl;
+
     public RepositoryTemplateRepository withCommitsUrl(String commitsUrl) {
         this.commitsUrl = commitsUrl;
         return this;
@@ -124,6 +138,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compare_url")
     public String compareUrl;
+
     public RepositoryTemplateRepository withCompareUrl(String compareUrl) {
         this.compareUrl = compareUrl;
         return this;
@@ -132,6 +147,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents_url")
     public String contentsUrl;
+
     public RepositoryTemplateRepository withContentsUrl(String contentsUrl) {
         this.contentsUrl = contentsUrl;
         return this;
@@ -140,6 +156,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contributors_url")
     public String contributorsUrl;
+
     public RepositoryTemplateRepository withContributorsUrl(String contributorsUrl) {
         this.contributorsUrl = contributorsUrl;
         return this;
@@ -148,6 +165,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public RepositoryTemplateRepository withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -156,6 +174,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_branch")
     public String defaultBranch;
+
     public RepositoryTemplateRepository withDefaultBranch(String defaultBranch) {
         this.defaultBranch = defaultBranch;
         return this;
@@ -164,6 +183,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete_branch_on_merge")
     public Boolean deleteBranchOnMerge;
+
     public RepositoryTemplateRepository withDeleteBranchOnMerge(Boolean deleteBranchOnMerge) {
         this.deleteBranchOnMerge = deleteBranchOnMerge;
         return this;
@@ -172,6 +192,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployments_url")
     public String deploymentsUrl;
+
     public RepositoryTemplateRepository withDeploymentsUrl(String deploymentsUrl) {
         this.deploymentsUrl = deploymentsUrl;
         return this;
@@ -180,6 +201,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RepositoryTemplateRepository withDescription(String description) {
         this.description = description;
         return this;
@@ -188,6 +210,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public RepositoryTemplateRepository withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -196,6 +219,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloads_url")
     public String downloadsUrl;
+
     public RepositoryTemplateRepository withDownloadsUrl(String downloadsUrl) {
         this.downloadsUrl = downloadsUrl;
         return this;
@@ -204,6 +228,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public RepositoryTemplateRepository withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -212,6 +237,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fork")
     public Boolean fork;
+
     public RepositoryTemplateRepository withFork(Boolean fork) {
         this.fork = fork;
         return this;
@@ -220,6 +246,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forks_count")
     public Long forksCount;
+
     public RepositoryTemplateRepository withForksCount(Long forksCount) {
         this.forksCount = forksCount;
         return this;
@@ -228,6 +255,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forks_url")
     public String forksUrl;
+
     public RepositoryTemplateRepository withForksUrl(String forksUrl) {
         this.forksUrl = forksUrl;
         return this;
@@ -236,6 +264,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("full_name")
     public String fullName;
+
     public RepositoryTemplateRepository withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -244,6 +273,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("git_commits_url")
     public String gitCommitsUrl;
+
     public RepositoryTemplateRepository withGitCommitsUrl(String gitCommitsUrl) {
         this.gitCommitsUrl = gitCommitsUrl;
         return this;
@@ -252,6 +282,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("git_refs_url")
     public String gitRefsUrl;
+
     public RepositoryTemplateRepository withGitRefsUrl(String gitRefsUrl) {
         this.gitRefsUrl = gitRefsUrl;
         return this;
@@ -260,6 +291,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("git_tags_url")
     public String gitTagsUrl;
+
     public RepositoryTemplateRepository withGitTagsUrl(String gitTagsUrl) {
         this.gitTagsUrl = gitTagsUrl;
         return this;
@@ -268,6 +300,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("git_url")
     public String gitUrl;
+
     public RepositoryTemplateRepository withGitUrl(String gitUrl) {
         this.gitUrl = gitUrl;
         return this;
@@ -276,6 +309,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_downloads")
     public Boolean hasDownloads;
+
     public RepositoryTemplateRepository withHasDownloads(Boolean hasDownloads) {
         this.hasDownloads = hasDownloads;
         return this;
@@ -284,6 +318,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_issues")
     public Boolean hasIssues;
+
     public RepositoryTemplateRepository withHasIssues(Boolean hasIssues) {
         this.hasIssues = hasIssues;
         return this;
@@ -292,6 +327,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_pages")
     public Boolean hasPages;
+
     public RepositoryTemplateRepository withHasPages(Boolean hasPages) {
         this.hasPages = hasPages;
         return this;
@@ -300,6 +336,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_projects")
     public Boolean hasProjects;
+
     public RepositoryTemplateRepository withHasProjects(Boolean hasProjects) {
         this.hasProjects = hasProjects;
         return this;
@@ -308,6 +345,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_wiki")
     public Boolean hasWiki;
+
     public RepositoryTemplateRepository withHasWiki(Boolean hasWiki) {
         this.hasWiki = hasWiki;
         return this;
@@ -316,6 +354,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homepage")
     public String homepage;
+
     public RepositoryTemplateRepository withHomepage(String homepage) {
         this.homepage = homepage;
         return this;
@@ -324,6 +363,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hooks_url")
     public String hooksUrl;
+
     public RepositoryTemplateRepository withHooksUrl(String hooksUrl) {
         this.hooksUrl = hooksUrl;
         return this;
@@ -332,6 +372,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public RepositoryTemplateRepository withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -340,6 +381,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public RepositoryTemplateRepository withId(Long id) {
         this.id = id;
         return this;
@@ -348,6 +390,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_template")
     public Boolean isTemplate;
+
     public RepositoryTemplateRepository withIsTemplate(Boolean isTemplate) {
         this.isTemplate = isTemplate;
         return this;
@@ -356,6 +399,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issue_comment_url")
     public String issueCommentUrl;
+
     public RepositoryTemplateRepository withIssueCommentUrl(String issueCommentUrl) {
         this.issueCommentUrl = issueCommentUrl;
         return this;
@@ -364,6 +408,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issue_events_url")
     public String issueEventsUrl;
+
     public RepositoryTemplateRepository withIssueEventsUrl(String issueEventsUrl) {
         this.issueEventsUrl = issueEventsUrl;
         return this;
@@ -372,6 +417,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues_url")
     public String issuesUrl;
+
     public RepositoryTemplateRepository withIssuesUrl(String issuesUrl) {
         this.issuesUrl = issuesUrl;
         return this;
@@ -380,6 +426,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys_url")
     public String keysUrl;
+
     public RepositoryTemplateRepository withKeysUrl(String keysUrl) {
         this.keysUrl = keysUrl;
         return this;
@@ -388,6 +435,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels_url")
     public String labelsUrl;
+
     public RepositoryTemplateRepository withLabelsUrl(String labelsUrl) {
         this.labelsUrl = labelsUrl;
         return this;
@@ -396,6 +444,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public RepositoryTemplateRepository withLanguage(String language) {
         this.language = language;
         return this;
@@ -404,6 +453,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages_url")
     public String languagesUrl;
+
     public RepositoryTemplateRepository withLanguagesUrl(String languagesUrl) {
         this.languagesUrl = languagesUrl;
         return this;
@@ -412,6 +462,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merges_url")
     public String mergesUrl;
+
     public RepositoryTemplateRepository withMergesUrl(String mergesUrl) {
         this.mergesUrl = mergesUrl;
         return this;
@@ -420,6 +471,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("milestones_url")
     public String milestonesUrl;
+
     public RepositoryTemplateRepository withMilestonesUrl(String milestonesUrl) {
         this.milestonesUrl = milestonesUrl;
         return this;
@@ -428,6 +480,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mirror_url")
     public String mirrorUrl;
+
     public RepositoryTemplateRepository withMirrorUrl(String mirrorUrl) {
         this.mirrorUrl = mirrorUrl;
         return this;
@@ -436,6 +489,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RepositoryTemplateRepository withName(String name) {
         this.name = name;
         return this;
@@ -444,6 +498,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network_count")
     public Long networkCount;
+
     public RepositoryTemplateRepository withNetworkCount(Long networkCount) {
         this.networkCount = networkCount;
         return this;
@@ -452,6 +507,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public RepositoryTemplateRepository withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -460,6 +516,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifications_url")
     public String notificationsUrl;
+
     public RepositoryTemplateRepository withNotificationsUrl(String notificationsUrl) {
         this.notificationsUrl = notificationsUrl;
         return this;
@@ -468,6 +525,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("open_issues_count")
     public Long openIssuesCount;
+
     public RepositoryTemplateRepository withOpenIssuesCount(Long openIssuesCount) {
         this.openIssuesCount = openIssuesCount;
         return this;
@@ -476,6 +534,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public RepositoryTemplateRepositoryOwner owner;
+
     public RepositoryTemplateRepository withOwner(RepositoryTemplateRepositoryOwner owner) {
         this.owner = owner;
         return this;
@@ -484,6 +543,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public RepositoryTemplateRepositoryPermissions permissions;
+
     public RepositoryTemplateRepository withPermissions(RepositoryTemplateRepositoryPermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -492,6 +552,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private")
     public Boolean private_;
+
     public RepositoryTemplateRepository withPrivate(Boolean private_) {
         this.private_ = private_;
         return this;
@@ -500,6 +561,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pulls_url")
     public String pullsUrl;
+
     public RepositoryTemplateRepository withPullsUrl(String pullsUrl) {
         this.pullsUrl = pullsUrl;
         return this;
@@ -508,6 +570,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pushed_at")
     public String pushedAt;
+
     public RepositoryTemplateRepository withPushedAt(String pushedAt) {
         this.pushedAt = pushedAt;
         return this;
@@ -516,6 +579,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releases_url")
     public String releasesUrl;
+
     public RepositoryTemplateRepository withReleasesUrl(String releasesUrl) {
         this.releasesUrl = releasesUrl;
         return this;
@@ -524,6 +588,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public RepositoryTemplateRepository withSize(Long size) {
         this.size = size;
         return this;
@@ -532,6 +597,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssh_url")
     public String sshUrl;
+
     public RepositoryTemplateRepository withSshUrl(String sshUrl) {
         this.sshUrl = sshUrl;
         return this;
@@ -540,6 +606,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stargazers_count")
     public Long stargazersCount;
+
     public RepositoryTemplateRepository withStargazersCount(Long stargazersCount) {
         this.stargazersCount = stargazersCount;
         return this;
@@ -548,6 +615,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stargazers_url")
     public String stargazersUrl;
+
     public RepositoryTemplateRepository withStargazersUrl(String stargazersUrl) {
         this.stargazersUrl = stargazersUrl;
         return this;
@@ -556,6 +624,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statuses_url")
     public String statusesUrl;
+
     public RepositoryTemplateRepository withStatusesUrl(String statusesUrl) {
         this.statusesUrl = statusesUrl;
         return this;
@@ -564,6 +633,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscribers_count")
     public Long subscribersCount;
+
     public RepositoryTemplateRepository withSubscribersCount(Long subscribersCount) {
         this.subscribersCount = subscribersCount;
         return this;
@@ -572,6 +642,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscribers_url")
     public String subscribersUrl;
+
     public RepositoryTemplateRepository withSubscribersUrl(String subscribersUrl) {
         this.subscribersUrl = subscribersUrl;
         return this;
@@ -580,6 +651,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription_url")
     public String subscriptionUrl;
+
     public RepositoryTemplateRepository withSubscriptionUrl(String subscriptionUrl) {
         this.subscriptionUrl = subscriptionUrl;
         return this;
@@ -588,6 +660,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("svn_url")
     public String svnUrl;
+
     public RepositoryTemplateRepository withSvnUrl(String svnUrl) {
         this.svnUrl = svnUrl;
         return this;
@@ -596,6 +669,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags_url")
     public String tagsUrl;
+
     public RepositoryTemplateRepository withTagsUrl(String tagsUrl) {
         this.tagsUrl = tagsUrl;
         return this;
@@ -604,6 +678,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teams_url")
     public String teamsUrl;
+
     public RepositoryTemplateRepository withTeamsUrl(String teamsUrl) {
         this.teamsUrl = teamsUrl;
         return this;
@@ -612,6 +687,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temp_clone_token")
     public String tempCloneToken;
+
     public RepositoryTemplateRepository withTempCloneToken(String tempCloneToken) {
         this.tempCloneToken = tempCloneToken;
         return this;
@@ -620,6 +696,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topics")
     public String[] topics;
+
     public RepositoryTemplateRepository withTopics(String[] topics) {
         this.topics = topics;
         return this;
@@ -628,6 +705,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trees_url")
     public String treesUrl;
+
     public RepositoryTemplateRepository withTreesUrl(String treesUrl) {
         this.treesUrl = treesUrl;
         return this;
@@ -636,6 +714,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public RepositoryTemplateRepository withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -644,6 +723,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public RepositoryTemplateRepository withUrl(String url) {
         this.url = url;
         return this;
@@ -652,6 +732,7 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public String visibility;
+
     public RepositoryTemplateRepository withVisibility(String visibility) {
         this.visibility = visibility;
         return this;
@@ -660,9 +741,11 @@ public class RepositoryTemplateRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("watchers_count")
     public Long watchersCount;
+
     public RepositoryTemplateRepository withWatchersCount(Long watchersCount) {
         this.watchersCount = watchersCount;
         return this;
     }
     
+    public RepositoryTemplateRepository(){}
 }

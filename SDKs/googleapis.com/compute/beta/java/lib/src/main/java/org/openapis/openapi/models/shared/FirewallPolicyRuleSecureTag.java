@@ -15,6 +15,7 @@ public class FirewallPolicyRuleSecureTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FirewallPolicyRuleSecureTag withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class FirewallPolicyRuleSecureTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public FirewallPolicyRuleSecureTagStateEnum state;
+
     public FirewallPolicyRuleSecureTag withState(FirewallPolicyRuleSecureTagStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public FirewallPolicyRuleSecureTag(){}
 }

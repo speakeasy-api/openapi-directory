@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFpgaImagesResultFpgaImagesTags {
     
     public String key;
+
     public DescribeFpgaImagesResultFpgaImagesTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeFpgaImagesResultFpgaImagesTags {
     
     
     public String value;
+
     public DescribeFpgaImagesResultFpgaImagesTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeFpgaImagesResultFpgaImagesTags(){}
 }

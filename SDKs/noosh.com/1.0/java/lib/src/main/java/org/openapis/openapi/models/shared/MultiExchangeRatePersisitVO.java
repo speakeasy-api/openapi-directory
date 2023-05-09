@@ -18,6 +18,7 @@ public class MultiExchangeRatePersisitVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("activate_date")
     public LocalDate activateDate;
+
     public MultiExchangeRatePersisitVO withActivateDate(LocalDate activateDate) {
         this.activateDate = activateDate;
         return this;
@@ -26,6 +27,7 @@ public class MultiExchangeRatePersisitVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buClientWorkgroupId")
     public Long buClientWorkgroupId;
+
     public MultiExchangeRatePersisitVO withBuClientWorkgroupId(Long buClientWorkgroupId) {
         this.buClientWorkgroupId = buClientWorkgroupId;
         return this;
@@ -34,6 +36,7 @@ public class MultiExchangeRatePersisitVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public MultiExchangeRatePersisitVO withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -45,6 +48,7 @@ public class MultiExchangeRatePersisitVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     public Object rate;
+
     public MultiExchangeRatePersisitVO withRate(Object rate) {
         this.rate = rate;
         return this;
@@ -53,9 +57,11 @@ public class MultiExchangeRatePersisitVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public MultiExchangeRatePersisitVO withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public MultiExchangeRatePersisitVO(){}
 }

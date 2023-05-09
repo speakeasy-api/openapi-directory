@@ -18,6 +18,7 @@ public class GoogleCloudRunV2ListExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executions")
     public GoogleCloudRunV2Execution[] executions;
+
     public GoogleCloudRunV2ListExecutionsResponse withExecutions(GoogleCloudRunV2Execution[] executions) {
         this.executions = executions;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRunV2ListExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudRunV2ListExecutionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudRunV2ListExecutionsResponse(){}
 }

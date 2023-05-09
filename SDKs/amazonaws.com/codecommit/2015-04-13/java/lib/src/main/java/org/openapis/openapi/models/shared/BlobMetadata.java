@@ -15,6 +15,7 @@ public class BlobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blobId")
     public String blobId;
+
     public BlobMetadata withBlobId(String blobId) {
         this.blobId = blobId;
         return this;
@@ -23,6 +24,7 @@ public class BlobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public BlobMetadata withMode(String mode) {
         this.mode = mode;
         return this;
@@ -31,9 +33,11 @@ public class BlobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public BlobMetadata withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public BlobMetadata(){}
 }

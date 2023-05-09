@@ -15,6 +15,7 @@ public class PostAdminRequestsRemoveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicAuthCredentials")
     public PostAdminRequestsRemoveRequestBodyBasicAuthCredentials basicAuthCredentials;
+
     public PostAdminRequestsRemoveRequestBody withBasicAuthCredentials(PostAdminRequestsRemoveRequestBodyBasicAuthCredentials basicAuthCredentials) {
         this.basicAuthCredentials = basicAuthCredentials;
         return this;
@@ -26,6 +27,7 @@ public class PostAdminRequestsRemoveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bodyPatterns")
     public java.util.Map<String, Object>[] bodyPatterns;
+
     public PostAdminRequestsRemoveRequestBody withBodyPatterns(java.util.Map<String, Object>[] bodyPatterns) {
         this.bodyPatterns = bodyPatterns;
         return this;
@@ -37,6 +39,7 @@ public class PostAdminRequestsRemoveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookies")
     public java.util.Map<String, Object> cookies;
+
     public PostAdminRequestsRemoveRequestBody withCookies(java.util.Map<String, Object> cookies) {
         this.cookies = cookies;
         return this;
@@ -48,6 +51,7 @@ public class PostAdminRequestsRemoveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, Object> headers;
+
     public PostAdminRequestsRemoveRequestBody withHeaders(java.util.Map<String, Object> headers) {
         this.headers = headers;
         return this;
@@ -59,6 +63,7 @@ public class PostAdminRequestsRemoveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public PostAdminRequestsRemoveRequestBody withMethod(String method) {
         this.method = method;
         return this;
@@ -70,6 +75,7 @@ public class PostAdminRequestsRemoveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParameters")
     public java.util.Map<String, Object> queryParameters;
+
     public PostAdminRequestsRemoveRequestBody withQueryParameters(java.util.Map<String, Object> queryParameters) {
         this.queryParameters = queryParameters;
         return this;
@@ -81,6 +87,7 @@ public class PostAdminRequestsRemoveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PostAdminRequestsRemoveRequestBody withUrl(String url) {
         this.url = url;
         return this;
@@ -92,6 +99,7 @@ public class PostAdminRequestsRemoveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlPath")
     public String urlPath;
+
     public PostAdminRequestsRemoveRequestBody withUrlPath(String urlPath) {
         this.urlPath = urlPath;
         return this;
@@ -103,6 +111,7 @@ public class PostAdminRequestsRemoveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlPathPattern")
     public String urlPathPattern;
+
     public PostAdminRequestsRemoveRequestBody withUrlPathPattern(String urlPathPattern) {
         this.urlPathPattern = urlPathPattern;
         return this;
@@ -114,9 +123,11 @@ public class PostAdminRequestsRemoveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlPattern")
     public String urlPattern;
+
     public PostAdminRequestsRemoveRequestBody withUrlPattern(String urlPattern) {
         this.urlPattern = urlPattern;
         return this;
     }
     
+    public PostAdminRequestsRemoveRequestBody(){}
 }

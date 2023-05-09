@@ -15,6 +15,7 @@ public class PredictedIntent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentName")
     public String intentName;
+
     public PredictedIntent withIntentName(String intentName) {
         this.intentName = intentName;
         return this;
@@ -23,6 +24,7 @@ public class PredictedIntent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nluIntentConfidence")
     public IntentConfidence nluIntentConfidence;
+
     public PredictedIntent withNluIntentConfidence(IntentConfidence nluIntentConfidence) {
         this.nluIntentConfidence = nluIntentConfidence;
         return this;
@@ -31,9 +33,11 @@ public class PredictedIntent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slots")
     public java.util.Map<String, String> slots;
+
     public PredictedIntent withSlots(java.util.Map<String, String> slots) {
         this.slots = slots;
         return this;
     }
     
+    public PredictedIntent(){}
 }

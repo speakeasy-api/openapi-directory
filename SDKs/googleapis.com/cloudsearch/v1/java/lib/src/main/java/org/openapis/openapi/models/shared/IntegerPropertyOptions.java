@@ -18,6 +18,7 @@ public class IntegerPropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerFacetingOptions")
     public IntegerFacetingOptions integerFacetingOptions;
+
     public IntegerPropertyOptions withIntegerFacetingOptions(IntegerFacetingOptions integerFacetingOptions) {
         this.integerFacetingOptions = integerFacetingOptions;
         return this;
@@ -29,6 +30,7 @@ public class IntegerPropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumValue")
     public String maximumValue;
+
     public IntegerPropertyOptions withMaximumValue(String maximumValue) {
         this.maximumValue = maximumValue;
         return this;
@@ -40,6 +42,7 @@ public class IntegerPropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumValue")
     public String minimumValue;
+
     public IntegerPropertyOptions withMinimumValue(String minimumValue) {
         this.minimumValue = minimumValue;
         return this;
@@ -51,6 +54,7 @@ public class IntegerPropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorOptions")
     public IntegerOperatorOptions operatorOptions;
+
     public IntegerPropertyOptions withOperatorOptions(IntegerOperatorOptions operatorOptions) {
         this.operatorOptions = operatorOptions;
         return this;
@@ -62,9 +66,11 @@ public class IntegerPropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderedRanking")
     public IntegerPropertyOptionsOrderedRankingEnum orderedRanking;
+
     public IntegerPropertyOptions withOrderedRanking(IntegerPropertyOptionsOrderedRankingEnum orderedRanking) {
         this.orderedRanking = orderedRanking;
         return this;
     }
     
+    public IntegerPropertyOptions(){}
 }

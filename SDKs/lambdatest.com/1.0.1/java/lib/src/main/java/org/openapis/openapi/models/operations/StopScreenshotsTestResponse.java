@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopScreenshotsTestResponse {
@@ -12,6 +13,7 @@ public class StopScreenshotsTestResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDenied accessDenied;
+
     public StopScreenshotsTestResponse withAccessDenied(org.openapis.openapi.models.shared.AccessDenied accessDenied) {
         this.accessDenied = accessDenied;
         return this;
@@ -19,6 +21,7 @@ public class StopScreenshotsTestResponse {
     
     
     public String contentType;
+
     public StopScreenshotsTestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopScreenshotsTestResponse {
      */
     
     public org.openapis.openapi.models.shared.Forbidden forbidden;
+
     public StopScreenshotsTestResponse withForbidden(org.openapis.openapi.models.shared.Forbidden forbidden) {
         this.forbidden = forbidden;
         return this;
@@ -36,6 +40,7 @@ public class StopScreenshotsTestResponse {
     
     
     public Integer statusCode;
+
     public StopScreenshotsTestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopScreenshotsTestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopScreenshotsTestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StopScreenshotsTestResponse {
      */
     
     public org.openapis.openapi.models.shared.StopScreenshotNotFound stopScreenshotNotFound;
+
     public StopScreenshotsTestResponse withStopScreenshotNotFound(org.openapis.openapi.models.shared.StopScreenshotNotFound stopScreenshotNotFound) {
         this.stopScreenshotNotFound = stopScreenshotNotFound;
         return this;
@@ -63,9 +70,14 @@ public class StopScreenshotsTestResponse {
      */
     
     public org.openapis.openapi.models.shared.StopScreenshotSuccess stopScreenshotSuccess;
+
     public StopScreenshotsTestResponse withStopScreenshotSuccess(org.openapis.openapi.models.shared.StopScreenshotSuccess stopScreenshotSuccess) {
         this.stopScreenshotSuccess = stopScreenshotSuccess;
         return this;
     }
     
+    public StopScreenshotsTestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

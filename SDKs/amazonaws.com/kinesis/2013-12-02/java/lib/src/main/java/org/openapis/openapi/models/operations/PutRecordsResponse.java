@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRecordsResponse {
@@ -12,6 +13,7 @@ public class PutRecordsResponse {
      */
     
     public Object accessDeniedException;
+
     public PutRecordsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class PutRecordsResponse {
     
     
     public String contentType;
+
     public PutRecordsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutRecordsResponse {
      */
     
     public Object invalidArgumentException;
+
     public PutRecordsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class PutRecordsResponse {
      */
     
     public Object kmsAccessDeniedException;
+
     public PutRecordsResponse withKMSAccessDeniedException(Object kmsAccessDeniedException) {
         this.kmsAccessDeniedException = kmsAccessDeniedException;
         return this;
@@ -49,6 +54,7 @@ public class PutRecordsResponse {
      */
     
     public Object kmsDisabledException;
+
     public PutRecordsResponse withKMSDisabledException(Object kmsDisabledException) {
         this.kmsDisabledException = kmsDisabledException;
         return this;
@@ -59,6 +65,7 @@ public class PutRecordsResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public PutRecordsResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -69,6 +76,7 @@ public class PutRecordsResponse {
      */
     
     public Object kmsNotFoundException;
+
     public PutRecordsResponse withKMSNotFoundException(Object kmsNotFoundException) {
         this.kmsNotFoundException = kmsNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class PutRecordsResponse {
      */
     
     public Object kmsOptInRequired;
+
     public PutRecordsResponse withKMSOptInRequired(Object kmsOptInRequired) {
         this.kmsOptInRequired = kmsOptInRequired;
         return this;
@@ -89,6 +98,7 @@ public class PutRecordsResponse {
      */
     
     public Object kmsThrottlingException;
+
     public PutRecordsResponse withKMSThrottlingException(Object kmsThrottlingException) {
         this.kmsThrottlingException = kmsThrottlingException;
         return this;
@@ -99,6 +109,7 @@ public class PutRecordsResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public PutRecordsResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -109,6 +120,7 @@ public class PutRecordsResponse {
      */
     
     public org.openapis.openapi.models.shared.PutRecordsOutput putRecordsOutput;
+
     public PutRecordsResponse withPutRecordsOutput(org.openapis.openapi.models.shared.PutRecordsOutput putRecordsOutput) {
         this.putRecordsOutput = putRecordsOutput;
         return this;
@@ -119,6 +131,7 @@ public class PutRecordsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutRecordsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -126,6 +139,7 @@ public class PutRecordsResponse {
     
     
     public Integer statusCode;
+
     public PutRecordsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,9 +147,14 @@ public class PutRecordsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRecordsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutRecordsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

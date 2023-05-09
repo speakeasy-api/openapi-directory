@@ -12,6 +12,7 @@ public class PostServersIdActionsResetActionResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostServersIdActionsResetActionResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostServersIdActionsResetActionResponseAction {
      */
     @JsonProperty("error")
     public PostServersIdActionsResetActionResponseActionError error;
+
     public PostServersIdActionsResetActionResponseAction withError(PostServersIdActionsResetActionResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostServersIdActionsResetActionResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostServersIdActionsResetActionResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostServersIdActionsResetActionResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostServersIdActionsResetActionResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostServersIdActionsResetActionResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostServersIdActionsResetActionResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostServersIdActionsResetActionResponseAction {
      */
     @JsonProperty("resources")
     public PostServersIdActionsResetActionResponseActionResources[] resources;
+
     public PostServersIdActionsResetActionResponseAction withResources(PostServersIdActionsResetActionResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostServersIdActionsResetActionResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostServersIdActionsResetActionResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostServersIdActionsResetActionResponseAction {
      */
     @JsonProperty("status")
     public PostServersIdActionsResetActionResponseActionStatusEnum status;
+
     public PostServersIdActionsResetActionResponseAction withStatus(PostServersIdActionsResetActionResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostServersIdActionsResetActionResponseAction(@JsonProperty("command") String command, @JsonProperty("error") PostServersIdActionsResetActionResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostServersIdActionsResetActionResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostServersIdActionsResetActionResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

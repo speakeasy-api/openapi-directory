@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDataIntegrationResponse {
@@ -12,6 +13,7 @@ public class UpdateDataIntegrationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateDataIntegrationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDataIntegrationResponse {
     
     
     public String contentType;
+
     public UpdateDataIntegrationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDataIntegrationResponse {
      */
     
     public Object internalServiceError;
+
     public UpdateDataIntegrationResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDataIntegrationResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateDataIntegrationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDataIntegrationResponse {
     
     
     public Integer statusCode;
+
     public UpdateDataIntegrationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDataIntegrationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDataIntegrationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDataIntegrationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDataIntegrationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDataIntegrationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateDataIntegrationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDataIntegrationResponse {
      */
     
     public java.util.Map<String, Object> updateDataIntegrationResponse;
+
     public UpdateDataIntegrationResponse withUpdateDataIntegrationResponse(java.util.Map<String, Object> updateDataIntegrationResponse) {
         this.updateDataIntegrationResponse = updateDataIntegrationResponse;
         return this;
     }
     
+    public UpdateDataIntegrationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

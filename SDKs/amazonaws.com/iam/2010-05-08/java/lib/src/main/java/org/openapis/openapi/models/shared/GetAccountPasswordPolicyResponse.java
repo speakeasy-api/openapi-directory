@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetAccountPasswordPolicyResponse - Contains the response to a successful &lt;a&gt;GetAccountPasswordPolicy&lt;/a&gt; request. 
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class GetAccountPasswordPolicyResponse {
     
     public PasswordPolicy passwordPolicy;
+
     public GetAccountPasswordPolicyResponse withPasswordPolicy(PasswordPolicy passwordPolicy) {
         this.passwordPolicy = passwordPolicy;
         return this;
     }
     
+    public GetAccountPasswordPolicyResponse(@JsonProperty("PasswordPolicy") PasswordPolicy passwordPolicy) {
+        this.passwordPolicy = passwordPolicy;
+  }
 }

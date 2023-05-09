@@ -12,6 +12,7 @@ public class ElectionsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycle")
     public Integer cycle;
+
     public ElectionsList withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -23,6 +24,7 @@ public class ElectionsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("district")
     public String district;
+
     public ElectionsList withDistrict(String district) {
         this.district = district;
         return this;
@@ -34,6 +36,7 @@ public class ElectionsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("office")
     public String office;
+
     public ElectionsList withOffice(String office) {
         this.office = office;
         return this;
@@ -45,9 +48,11 @@ public class ElectionsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ElectionsList withState(String state) {
         this.state = state;
         return this;
     }
     
+    public ElectionsList(){}
 }

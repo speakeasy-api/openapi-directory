@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeGlobalPublicDelegatedPrefixesGetRequest {
@@ -12,6 +13,7 @@ public class ComputeGlobalPublicDelegatedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeGlobalPublicDelegatedPrefixesGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ComputeGlobalPublicDelegatedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeGlobalPublicDelegatedPrefixesGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ComputeGlobalPublicDelegatedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeGlobalPublicDelegatedPrefixesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ComputeGlobalPublicDelegatedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeGlobalPublicDelegatedPrefixesGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ComputeGlobalPublicDelegatedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeGlobalPublicDelegatedPrefixesGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ComputeGlobalPublicDelegatedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeGlobalPublicDelegatedPrefixesGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class ComputeGlobalPublicDelegatedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeGlobalPublicDelegatedPrefixesGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class ComputeGlobalPublicDelegatedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeGlobalPublicDelegatedPrefixesGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +101,7 @@ public class ComputeGlobalPublicDelegatedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeGlobalPublicDelegatedPrefixesGetRequest withProject(String project) {
         this.project = project;
         return this;
@@ -102,6 +112,7 @@ public class ComputeGlobalPublicDelegatedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=publicDelegatedPrefix")
     public String publicDelegatedPrefix;
+
     public ComputeGlobalPublicDelegatedPrefixesGetRequest withPublicDelegatedPrefix(String publicDelegatedPrefix) {
         this.publicDelegatedPrefix = publicDelegatedPrefix;
         return this;
@@ -112,6 +123,7 @@ public class ComputeGlobalPublicDelegatedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeGlobalPublicDelegatedPrefixesGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class ComputeGlobalPublicDelegatedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeGlobalPublicDelegatedPrefixesGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,6 +145,7 @@ public class ComputeGlobalPublicDelegatedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeGlobalPublicDelegatedPrefixesGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -142,9 +156,14 @@ public class ComputeGlobalPublicDelegatedPrefixesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeGlobalPublicDelegatedPrefixesGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeGlobalPublicDelegatedPrefixesGetRequest(@JsonProperty("project") String project, @JsonProperty("publicDelegatedPrefix") String publicDelegatedPrefix) {
+        this.project = project;
+        this.publicDelegatedPrefix = publicDelegatedPrefix;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteImageRecipeResponse {
@@ -12,6 +13,7 @@ public class DeleteImageRecipeResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public DeleteImageRecipeResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteImageRecipeResponse {
      */
     
     public Object clientException;
+
     public DeleteImageRecipeResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteImageRecipeResponse {
     
     
     public String contentType;
+
     public DeleteImageRecipeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteImageRecipeResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteImageRecipeResponse deleteImageRecipeResponse;
+
     public DeleteImageRecipeResponse withDeleteImageRecipeResponse(org.openapis.openapi.models.shared.DeleteImageRecipeResponse deleteImageRecipeResponse) {
         this.deleteImageRecipeResponse = deleteImageRecipeResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteImageRecipeResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteImageRecipeResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteImageRecipeResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteImageRecipeResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteImageRecipeResponse {
      */
     
     public Object serviceException;
+
     public DeleteImageRecipeResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteImageRecipeResponse {
     
     
     public Integer statusCode;
+
     public DeleteImageRecipeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteImageRecipeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteImageRecipeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteImageRecipeResponse {
      */
     
     public Object resourceDependencyException;
+
     public DeleteImageRecipeResponse withResourceDependencyException(Object resourceDependencyException) {
         this.resourceDependencyException = resourceDependencyException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteImageRecipeResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteImageRecipeResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public DeleteImageRecipeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ListDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Devices")
     public DeviceType[] devices;
+
     public ListDevicesResponse withDevices(DeviceType[] devices) {
         this.devices = devices;
         return this;
@@ -23,9 +24,11 @@ public class ListDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public ListDevicesResponse withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
     }
     
+    public ListDevicesResponse(){}
 }

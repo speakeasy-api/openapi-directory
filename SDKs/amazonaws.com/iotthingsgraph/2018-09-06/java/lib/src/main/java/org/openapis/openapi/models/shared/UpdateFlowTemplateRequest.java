@@ -12,6 +12,7 @@ public class UpdateFlowTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibleNamespaceVersion")
     public Long compatibleNamespaceVersion;
+
     public UpdateFlowTemplateRequest withCompatibleNamespaceVersion(Long compatibleNamespaceVersion) {
         this.compatibleNamespaceVersion = compatibleNamespaceVersion;
         return this;
@@ -19,6 +20,7 @@ public class UpdateFlowTemplateRequest {
     
     @JsonProperty("definition")
     public DefinitionDocument definition;
+
     public UpdateFlowTemplateRequest withDefinition(DefinitionDocument definition) {
         this.definition = definition;
         return this;
@@ -26,9 +28,14 @@ public class UpdateFlowTemplateRequest {
     
     @JsonProperty("id")
     public String id;
+
     public UpdateFlowTemplateRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateFlowTemplateRequest(@JsonProperty("definition") DefinitionDocument definition, @JsonProperty("id") String id) {
+        this.definition = definition;
+        this.id = id;
+  }
 }

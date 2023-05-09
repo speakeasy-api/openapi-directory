@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automatedAgentConfig")
     public GoogleCloudDialogflowV2AutomatedAgentConfig automatedAgentConfig;
+
     public GoogleCloudDialogflowV2ConversationProfile withAutomatedAgentConfig(GoogleCloudDialogflowV2AutomatedAgentConfig automatedAgentConfig) {
         this.automatedAgentConfig = automatedAgentConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDialogflowV2ConversationProfile withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowV2ConversationProfile withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humanAgentAssistantConfig")
     public GoogleCloudDialogflowV2HumanAgentAssistantConfig humanAgentAssistantConfig;
+
     public GoogleCloudDialogflowV2ConversationProfile withHumanAgentAssistantConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfig humanAgentAssistantConfig) {
         this.humanAgentAssistantConfig = humanAgentAssistantConfig;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humanAgentHandoffConfig")
     public GoogleCloudDialogflowV2HumanAgentHandoffConfig humanAgentHandoffConfig;
+
     public GoogleCloudDialogflowV2ConversationProfile withHumanAgentHandoffConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfig humanAgentHandoffConfig) {
         this.humanAgentHandoffConfig = humanAgentHandoffConfig;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2ConversationProfile withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowV2ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfig")
     public GoogleCloudDialogflowV2LoggingConfig loggingConfig;
+
     public GoogleCloudDialogflowV2ConversationProfile withLoggingConfig(GoogleCloudDialogflowV2LoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowV2ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2ConversationProfile withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowV2ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newMessageEventNotificationConfig")
     public GoogleCloudDialogflowV2NotificationConfig newMessageEventNotificationConfig;
+
     public GoogleCloudDialogflowV2ConversationProfile withNewMessageEventNotificationConfig(GoogleCloudDialogflowV2NotificationConfig newMessageEventNotificationConfig) {
         this.newMessageEventNotificationConfig = newMessageEventNotificationConfig;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDialogflowV2ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationConfig")
     public GoogleCloudDialogflowV2NotificationConfig notificationConfig;
+
     public GoogleCloudDialogflowV2ConversationProfile withNotificationConfig(GoogleCloudDialogflowV2NotificationConfig notificationConfig) {
         this.notificationConfig = notificationConfig;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDialogflowV2ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securitySettings")
     public String securitySettings;
+
     public GoogleCloudDialogflowV2ConversationProfile withSecuritySettings(String securitySettings) {
         this.securitySettings = securitySettings;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDialogflowV2ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sttConfig")
     public GoogleCloudDialogflowV2SpeechToTextConfig sttConfig;
+
     public GoogleCloudDialogflowV2ConversationProfile withSttConfig(GoogleCloudDialogflowV2SpeechToTextConfig sttConfig) {
         this.sttConfig = sttConfig;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudDialogflowV2ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public GoogleCloudDialogflowV2ConversationProfile withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudDialogflowV2ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttsConfig")
     public GoogleCloudDialogflowV2SynthesizeSpeechConfig ttsConfig;
+
     public GoogleCloudDialogflowV2ConversationProfile withTtsConfig(GoogleCloudDialogflowV2SynthesizeSpeechConfig ttsConfig) {
         this.ttsConfig = ttsConfig;
         return this;
@@ -172,9 +186,11 @@ public class GoogleCloudDialogflowV2ConversationProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDialogflowV2ConversationProfile withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ConversationProfile(){}
 }

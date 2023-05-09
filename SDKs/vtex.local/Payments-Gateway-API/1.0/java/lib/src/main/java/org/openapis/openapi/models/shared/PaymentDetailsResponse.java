@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PaymentDetailsResponse {
     @JsonProperty("ConnectorResponses")
     public String connectorResponses;
+
     public PaymentDetailsResponse withConnectorResponses(String connectorResponses) {
         this.connectorResponses = connectorResponses;
         return this;
@@ -16,6 +17,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("ShowConnectorResponses")
     public Boolean showConnectorResponses;
+
     public PaymentDetailsResponse withShowConnectorResponses(Boolean showConnectorResponses) {
         this.showConnectorResponses = showConnectorResponses;
         return this;
@@ -23,6 +25,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("allowInstallments")
     public Boolean allowInstallments;
+
     public PaymentDetailsResponse withAllowInstallments(Boolean allowInstallments) {
         this.allowInstallments = allowInstallments;
         return this;
@@ -30,6 +33,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("allowIssuer")
     public Boolean allowIssuer;
+
     public PaymentDetailsResponse withAllowIssuer(Boolean allowIssuer) {
         this.allowIssuer = allowIssuer;
         return this;
@@ -37,6 +41,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("allowNotification")
     public Boolean allowNotification;
+
     public PaymentDetailsResponse withAllowNotification(Boolean allowNotification) {
         this.allowNotification = allowNotification;
         return this;
@@ -44,6 +49,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("connector")
     public String connector;
+
     public PaymentDetailsResponse withConnector(String connector) {
         this.connector = connector;
         return this;
@@ -51,6 +57,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("connectorResponse")
     public String connectorResponse;
+
     public PaymentDetailsResponse withConnectorResponse(String connectorResponse) {
         this.connectorResponse = connectorResponse;
         return this;
@@ -58,6 +65,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public PaymentDetailsResponse withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -65,6 +73,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("description")
     public String description;
+
     public PaymentDetailsResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -72,6 +81,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("fields")
     public Fields1[] fields;
+
     public PaymentDetailsResponse withFields(Fields1[] fields) {
         this.fields = fields;
         return this;
@@ -79,6 +89,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("group")
     public String group;
+
     public PaymentDetailsResponse withGroup(String group) {
         this.group = group;
         return this;
@@ -86,6 +97,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("id")
     public String id;
+
     public PaymentDetailsResponse withId(String id) {
         this.id = id;
         return this;
@@ -93,6 +105,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("installments")
     public Integer installments;
+
     public PaymentDetailsResponse withInstallments(Integer installments) {
         this.installments = installments;
         return this;
@@ -100,6 +113,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("installmentsInterestRate")
     public Integer installmentsInterestRate;
+
     public PaymentDetailsResponse withInstallmentsInterestRate(Integer installmentsInterestRate) {
         this.installmentsInterestRate = installmentsInterestRate;
         return this;
@@ -107,6 +121,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("installmentsValue")
     public Integer installmentsValue;
+
     public PaymentDetailsResponse withInstallmentsValue(Integer installmentsValue) {
         this.installmentsValue = installmentsValue;
         return this;
@@ -114,6 +129,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("isAvailable")
     public Boolean isAvailable;
+
     public PaymentDetailsResponse withIsAvailable(Boolean isAvailable) {
         this.isAvailable = isAvailable;
         return this;
@@ -121,6 +137,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("isCustom")
     public Boolean isCustom;
+
     public PaymentDetailsResponse withIsCustom(Boolean isCustom) {
         this.isCustom = isCustom;
         return this;
@@ -128,6 +145,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("merchantName")
     public String merchantName;
+
     public PaymentDetailsResponse withMerchantName(String merchantName) {
         this.merchantName = merchantName;
         return this;
@@ -135,6 +153,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("paymentSystem")
     public Integer paymentSystem;
+
     public PaymentDetailsResponse withPaymentSystem(Integer paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
@@ -142,6 +161,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("paymentSystemName")
     public String paymentSystemName;
+
     public PaymentDetailsResponse withPaymentSystemName(String paymentSystemName) {
         this.paymentSystemName = paymentSystemName;
         return this;
@@ -149,6 +169,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("provider")
     public String provider;
+
     public PaymentDetailsResponse withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -156,6 +177,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("referenceValue")
     public Integer referenceValue;
+
     public PaymentDetailsResponse withReferenceValue(Integer referenceValue) {
         this.referenceValue = referenceValue;
         return this;
@@ -163,6 +185,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("returnCode")
     public String returnCode;
+
     public PaymentDetailsResponse withReturnCode(String returnCode) {
         this.returnCode = returnCode;
         return this;
@@ -170,6 +193,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("returnMessage")
     public String returnMessage;
+
     public PaymentDetailsResponse withReturnMessage(String returnMessage) {
         this.returnMessage = returnMessage;
         return this;
@@ -177,6 +201,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("self")
     public Self self;
+
     public PaymentDetailsResponse withSelf(Self self) {
         this.self = self;
         return this;
@@ -184,6 +209,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("sheets")
     public String sheets;
+
     public PaymentDetailsResponse withSheets(String sheets) {
         this.sheets = sheets;
         return this;
@@ -191,6 +217,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("status")
     public String status;
+
     public PaymentDetailsResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -198,6 +225,7 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("tid")
     public String tid;
+
     public PaymentDetailsResponse withTid(String tid) {
         this.tid = tid;
         return this;
@@ -205,9 +233,41 @@ public class PaymentDetailsResponse {
     
     @JsonProperty("value")
     public Integer value;
+
     public PaymentDetailsResponse withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public PaymentDetailsResponse(@JsonProperty("ConnectorResponses") String connectorResponses, @JsonProperty("ShowConnectorResponses") Boolean showConnectorResponses, @JsonProperty("allowInstallments") Boolean allowInstallments, @JsonProperty("allowIssuer") Boolean allowIssuer, @JsonProperty("allowNotification") Boolean allowNotification, @JsonProperty("connector") String connector, @JsonProperty("connectorResponse") String connectorResponse, @JsonProperty("currencyCode") String currencyCode, @JsonProperty("description") String description, @JsonProperty("fields") Fields1[] fields, @JsonProperty("group") String group, @JsonProperty("id") String id, @JsonProperty("installments") Integer installments, @JsonProperty("installmentsInterestRate") Integer installmentsInterestRate, @JsonProperty("installmentsValue") Integer installmentsValue, @JsonProperty("isAvailable") Boolean isAvailable, @JsonProperty("isCustom") Boolean isCustom, @JsonProperty("merchantName") String merchantName, @JsonProperty("paymentSystem") Integer paymentSystem, @JsonProperty("paymentSystemName") String paymentSystemName, @JsonProperty("provider") String provider, @JsonProperty("referenceValue") Integer referenceValue, @JsonProperty("returnCode") String returnCode, @JsonProperty("returnMessage") String returnMessage, @JsonProperty("self") Self self, @JsonProperty("sheets") String sheets, @JsonProperty("status") String status, @JsonProperty("tid") String tid, @JsonProperty("value") Integer value) {
+        this.connectorResponses = connectorResponses;
+        this.showConnectorResponses = showConnectorResponses;
+        this.allowInstallments = allowInstallments;
+        this.allowIssuer = allowIssuer;
+        this.allowNotification = allowNotification;
+        this.connector = connector;
+        this.connectorResponse = connectorResponse;
+        this.currencyCode = currencyCode;
+        this.description = description;
+        this.fields = fields;
+        this.group = group;
+        this.id = id;
+        this.installments = installments;
+        this.installmentsInterestRate = installmentsInterestRate;
+        this.installmentsValue = installmentsValue;
+        this.isAvailable = isAvailable;
+        this.isCustom = isCustom;
+        this.merchantName = merchantName;
+        this.paymentSystem = paymentSystem;
+        this.paymentSystemName = paymentSystemName;
+        this.provider = provider;
+        this.referenceValue = referenceValue;
+        this.returnCode = returnCode;
+        this.returnMessage = returnMessage;
+        this.self = self;
+        this.sheets = sheets;
+        this.status = status;
+        this.tid = tid;
+        this.value = value;
+  }
 }

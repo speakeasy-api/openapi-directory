@@ -20,6 +20,7 @@ public class SearchOrdersFulfillmentFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillment_states")
     public String[] fulfillmentStates;
+
     public SearchOrdersFulfillmentFilter withFulfillmentStates(String[] fulfillmentStates) {
         this.fulfillmentStates = fulfillmentStates;
         return this;
@@ -33,9 +34,11 @@ public class SearchOrdersFulfillmentFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillment_types")
     public String[] fulfillmentTypes;
+
     public SearchOrdersFulfillmentFilter withFulfillmentTypes(String[] fulfillmentTypes) {
         this.fulfillmentTypes = fulfillmentTypes;
         return this;
     }
     
+    public SearchOrdersFulfillmentFilter(){}
 }

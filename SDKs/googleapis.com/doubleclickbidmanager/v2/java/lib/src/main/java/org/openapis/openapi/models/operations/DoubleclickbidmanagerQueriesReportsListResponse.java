@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DoubleclickbidmanagerQueriesReportsListResponse {
     
     public String contentType;
+
     public DoubleclickbidmanagerQueriesReportsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DoubleclickbidmanagerQueriesReportsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListReportsResponse listReportsResponse;
+
     public DoubleclickbidmanagerQueriesReportsListResponse withListReportsResponse(org.openapis.openapi.models.shared.ListReportsResponse listReportsResponse) {
         this.listReportsResponse = listReportsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DoubleclickbidmanagerQueriesReportsListResponse {
     
     
     public Integer statusCode;
+
     public DoubleclickbidmanagerQueriesReportsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DoubleclickbidmanagerQueriesReportsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DoubleclickbidmanagerQueriesReportsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DoubleclickbidmanagerQueriesReportsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

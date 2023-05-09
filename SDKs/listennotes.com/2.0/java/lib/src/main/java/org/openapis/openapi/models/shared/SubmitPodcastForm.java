@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubmitPodcastForm {
@@ -12,6 +13,7 @@ public class SubmitPodcastForm {
      */
     @SpeakeasyMetadata("form:name=email")
     public String email;
+
     public SubmitPodcastForm withEmail(String email) {
         this.email = email;
         return this;
@@ -22,9 +24,13 @@ public class SubmitPodcastForm {
      */
     @SpeakeasyMetadata("form:name=rss")
     public String rss;
+
     public SubmitPodcastForm withRss(String rss) {
         this.rss = rss;
         return this;
     }
     
+    public SubmitPodcastForm(@JsonProperty("rss") String rss) {
+        this.rss = rss;
+  }
 }

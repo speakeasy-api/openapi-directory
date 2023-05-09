@@ -56,11 +56,9 @@ public class Platforms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListResponse res = new org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListResponse() {{
+        org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListResponse res = new org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListResponse(contentType, httpRes.statusCode()) {{
             listChannelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Platforms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsListResponse res = new org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsListResponse() {{
+        org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsListResponse res = new org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsListResponse(contentType, httpRes.statusCode()) {{
             listVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +140,9 @@ public class Platforms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsReleasesListResponse res = new org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsReleasesListResponse() {{
+        org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsReleasesListResponse res = new org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsReleasesListResponse(contentType, httpRes.statusCode()) {{
             listReleasesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,11 +182,9 @@ public class Platforms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VersionhistoryPlatformsListResponse res = new org.openapis.openapi.models.operations.VersionhistoryPlatformsListResponse() {{
+        org.openapis.openapi.models.operations.VersionhistoryPlatformsListResponse res = new org.openapis.openapi.models.operations.VersionhistoryPlatformsListResponse(contentType, httpRes.statusCode()) {{
             listPlatformsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

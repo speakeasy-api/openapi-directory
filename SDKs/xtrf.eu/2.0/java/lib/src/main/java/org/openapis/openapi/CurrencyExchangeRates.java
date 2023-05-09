@@ -60,10 +60,8 @@ public class CurrencyExchangeRates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateExchangeRateResponse res = new org.openapis.openapi.models.operations.CreateExchangeRateResponse() {{
+        org.openapis.openapi.models.operations.CreateExchangeRateResponse res = new org.openapis.openapi.models.operations.CreateExchangeRateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -94,11 +92,9 @@ public class CurrencyExchangeRates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetByIsoCodeResponse res = new org.openapis.openapi.models.operations.GetByIsoCodeResponse() {{
+        org.openapis.openapi.models.operations.GetByIsoCodeResponse res = new org.openapis.openapi.models.operations.GetByIsoCodeResponse(contentType, httpRes.statusCode()) {{
             currencyHistoryDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

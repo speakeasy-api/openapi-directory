@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeliverConfigSnapshotResponse {
     
     public String contentType;
+
     public DeliverConfigSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeliverConfigSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.DeliverConfigSnapshotResponse deliverConfigSnapshotResponse;
+
     public DeliverConfigSnapshotResponse withDeliverConfigSnapshotResponse(org.openapis.openapi.models.shared.DeliverConfigSnapshotResponse deliverConfigSnapshotResponse) {
         this.deliverConfigSnapshotResponse = deliverConfigSnapshotResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeliverConfigSnapshotResponse {
      */
     
     public Object noAvailableConfigurationRecorderException;
+
     public DeliverConfigSnapshotResponse withNoAvailableConfigurationRecorderException(Object noAvailableConfigurationRecorderException) {
         this.noAvailableConfigurationRecorderException = noAvailableConfigurationRecorderException;
         return this;
@@ -39,6 +43,7 @@ public class DeliverConfigSnapshotResponse {
      */
     
     public Object noRunningConfigurationRecorderException;
+
     public DeliverConfigSnapshotResponse withNoRunningConfigurationRecorderException(Object noRunningConfigurationRecorderException) {
         this.noRunningConfigurationRecorderException = noRunningConfigurationRecorderException;
         return this;
@@ -49,6 +54,7 @@ public class DeliverConfigSnapshotResponse {
      */
     
     public Object noSuchDeliveryChannelException;
+
     public DeliverConfigSnapshotResponse withNoSuchDeliveryChannelException(Object noSuchDeliveryChannelException) {
         this.noSuchDeliveryChannelException = noSuchDeliveryChannelException;
         return this;
@@ -56,6 +62,7 @@ public class DeliverConfigSnapshotResponse {
     
     
     public Integer statusCode;
+
     public DeliverConfigSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeliverConfigSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeliverConfigSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeliverConfigSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

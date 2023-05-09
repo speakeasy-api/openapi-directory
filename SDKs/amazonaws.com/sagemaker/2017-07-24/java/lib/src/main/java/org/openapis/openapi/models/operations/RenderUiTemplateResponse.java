@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RenderUiTemplateResponse {
     
     public String contentType;
+
     public RenderUiTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RenderUiTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.RenderUiTemplateResponse renderUiTemplateResponse;
+
     public RenderUiTemplateResponse withRenderUiTemplateResponse(org.openapis.openapi.models.shared.RenderUiTemplateResponse renderUiTemplateResponse) {
         this.renderUiTemplateResponse = renderUiTemplateResponse;
         return this;
@@ -29,6 +32,7 @@ public class RenderUiTemplateResponse {
      */
     
     public Object resourceNotFound;
+
     public RenderUiTemplateResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class RenderUiTemplateResponse {
     
     
     public Integer statusCode;
+
     public RenderUiTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class RenderUiTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RenderUiTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RenderUiTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

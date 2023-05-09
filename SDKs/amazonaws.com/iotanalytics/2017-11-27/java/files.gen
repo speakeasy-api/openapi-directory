@@ -233,4 +233,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/RunPipelineActivityResponse
 lib/src/main/java/org/openapis/openapi/models/shared/SampleChannelDataResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartPipelineReprocessingResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

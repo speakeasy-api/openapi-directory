@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteVerifiedAccessTrustProviderResult {
     
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider verifiedAccessTrustProvider;
+
     public DeleteVerifiedAccessTrustProviderResult withVerifiedAccessTrustProvider(DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider verifiedAccessTrustProvider) {
         this.verifiedAccessTrustProvider = verifiedAccessTrustProvider;
         return this;
     }
     
+    public DeleteVerifiedAccessTrustProviderResult(){}
 }

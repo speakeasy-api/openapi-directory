@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListServiceInventoryTagsResponse {
     
     public String contentType;
+
     public ListServiceInventoryTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListServiceInventoryTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorNotFound errorNotFound;
+
     public ListServiceInventoryTagsResponse withErrorNotFound(org.openapis.openapi.models.shared.ErrorNotFound errorNotFound) {
         this.errorNotFound = errorNotFound;
         return this;
@@ -26,6 +29,7 @@ public class ListServiceInventoryTagsResponse {
     
     
     public Integer statusCode;
+
     public ListServiceInventoryTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListServiceInventoryTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListServiceInventoryTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class ListServiceInventoryTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.TagsCollection tagsCollection;
+
     public ListServiceInventoryTagsResponse withTagsCollection(org.openapis.openapi.models.shared.TagsCollection tagsCollection) {
         this.tagsCollection = tagsCollection;
         return this;
     }
     
+    public ListServiceInventoryTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

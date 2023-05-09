@@ -15,6 +15,7 @@ public class BucketCountPolicyAllowsUnencryptedObjectUploads {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowsUnencryptedObjectUploads")
     public Long allowsUnencryptedObjectUploads;
+
     public BucketCountPolicyAllowsUnencryptedObjectUploads withAllowsUnencryptedObjectUploads(Long allowsUnencryptedObjectUploads) {
         this.allowsUnencryptedObjectUploads = allowsUnencryptedObjectUploads;
         return this;
@@ -23,6 +24,7 @@ public class BucketCountPolicyAllowsUnencryptedObjectUploads {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deniesUnencryptedObjectUploads")
     public Long deniesUnencryptedObjectUploads;
+
     public BucketCountPolicyAllowsUnencryptedObjectUploads withDeniesUnencryptedObjectUploads(Long deniesUnencryptedObjectUploads) {
         this.deniesUnencryptedObjectUploads = deniesUnencryptedObjectUploads;
         return this;
@@ -31,9 +33,11 @@ public class BucketCountPolicyAllowsUnencryptedObjectUploads {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unknown")
     public Long unknown;
+
     public BucketCountPolicyAllowsUnencryptedObjectUploads withUnknown(Long unknown) {
         this.unknown = unknown;
         return this;
     }
     
+    public BucketCountPolicyAllowsUnencryptedObjectUploads(){}
 }

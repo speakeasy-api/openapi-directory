@@ -15,6 +15,7 @@ public class BackfillError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public BackfillErrorCodeEnum code;
+
     public BackfillError withCode(BackfillErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class BackfillError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Partitions")
     public PartitionValueList[] partitions;
+
     public BackfillError withPartitions(PartitionValueList[] partitions) {
         this.partitions = partitions;
         return this;
     }
     
+    public BackfillError(){}
 }

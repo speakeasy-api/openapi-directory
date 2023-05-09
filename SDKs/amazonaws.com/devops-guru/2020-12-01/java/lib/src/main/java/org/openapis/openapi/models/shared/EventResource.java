@@ -15,6 +15,7 @@ public class EventResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public EventResource withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class EventResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public EventResource withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class EventResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public EventResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public EventResource(){}
 }

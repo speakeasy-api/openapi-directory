@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CompleteMigrationMessage {
     
     public Boolean force;
+
     public CompleteMigrationMessage withForce(Boolean force) {
         this.force = force;
         return this;
@@ -16,9 +17,13 @@ public class CompleteMigrationMessage {
     
     
     public String replicationGroupId;
+
     public CompleteMigrationMessage withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
     }
     
+    public CompleteMigrationMessage(@JsonProperty("ReplicationGroupId") String replicationGroupId) {
+        this.replicationGroupId = replicationGroupId;
+  }
 }

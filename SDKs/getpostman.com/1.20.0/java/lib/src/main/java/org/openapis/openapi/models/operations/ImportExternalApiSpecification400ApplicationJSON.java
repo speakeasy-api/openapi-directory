@@ -15,9 +15,11 @@ public class ImportExternalApiSpecification400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ImportExternalApiSpecification400ApplicationJSONError error;
+
     public ImportExternalApiSpecification400ApplicationJSON withError(ImportExternalApiSpecification400ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public ImportExternalApiSpecification400ApplicationJSON(){}
 }

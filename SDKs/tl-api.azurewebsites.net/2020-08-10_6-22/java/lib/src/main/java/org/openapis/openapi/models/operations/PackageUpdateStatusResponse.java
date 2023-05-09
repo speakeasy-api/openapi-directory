@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PackageUpdateStatusResponse {
     
     public org.openapis.openapi.models.shared.ApiException apiException;
+
     public PackageUpdateStatusResponse withApiException(org.openapis.openapi.models.shared.ApiException apiException) {
         this.apiException = apiException;
         return this;
@@ -16,6 +18,7 @@ public class PackageUpdateStatusResponse {
     
     
     public String contentType;
+
     public PackageUpdateStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PackageUpdateStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultResponseDTOOfBoolean defaultResponseDTOOfBoolean;
+
     public PackageUpdateStatusResponse withDefaultResponseDTOOfBoolean(org.openapis.openapi.models.shared.DefaultResponseDTOOfBoolean defaultResponseDTOOfBoolean) {
         this.defaultResponseDTOOfBoolean = defaultResponseDTOOfBoolean;
         return this;
@@ -33,6 +37,7 @@ public class PackageUpdateStatusResponse {
     
     
     public org.openapis.openapi.models.shared.DefaultResponseDTOOfString defaultResponseDTOOfString;
+
     public PackageUpdateStatusResponse withDefaultResponseDTOOfString(org.openapis.openapi.models.shared.DefaultResponseDTOOfString defaultResponseDTOOfString) {
         this.defaultResponseDTOOfString = defaultResponseDTOOfString;
         return this;
@@ -40,6 +45,7 @@ public class PackageUpdateStatusResponse {
     
     
     public Integer statusCode;
+
     public PackageUpdateStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class PackageUpdateStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PackageUpdateStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PackageUpdateStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

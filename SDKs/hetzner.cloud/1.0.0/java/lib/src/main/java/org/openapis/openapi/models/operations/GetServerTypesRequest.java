@@ -12,9 +12,11 @@ public class GetServerTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetServerTypesRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetServerTypesRequest(){}
 }

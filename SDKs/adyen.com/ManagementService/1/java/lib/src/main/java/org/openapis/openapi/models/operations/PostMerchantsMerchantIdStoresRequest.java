@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMerchantsMerchantIdStoresRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.StoreCreationRequest storeCreationRequest;
+
     public PostMerchantsMerchantIdStoresRequest withStoreCreationRequest(org.openapis.openapi.models.shared.StoreCreationRequest storeCreationRequest) {
         this.storeCreationRequest = storeCreationRequest;
         return this;
@@ -19,9 +21,13 @@ public class PostMerchantsMerchantIdStoresRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public PostMerchantsMerchantIdStoresRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
     }
     
+    public PostMerchantsMerchantIdStoresRequest(@JsonProperty("merchantId") String merchantId) {
+        this.merchantId = merchantId;
+  }
 }

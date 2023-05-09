@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDirectDebitByUuidResponse {
     
     public String contentType;
+
     public GetDirectDebitByUuidResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetDirectDebitByUuidResponse {
     
     
     public Integer statusCode;
+
     public GetDirectDebitByUuidResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetDirectDebitByUuidResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDirectDebitByUuidResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetDirectDebitByUuidResponse {
      */
     
     public GetDirectDebitByUuidDirectDebit directDebit;
+
     public GetDirectDebitByUuidResponse withDirectDebit(GetDirectDebitByUuidDirectDebit directDebit) {
         this.directDebit = directDebit;
         return this;
     }
     
+    public GetDirectDebitByUuidResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

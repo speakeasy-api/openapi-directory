@@ -18,6 +18,7 @@ public class BatchRunReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BatchRunReportsResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class BatchRunReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reports")
     public RunReportResponse[] reports;
+
     public BatchRunReportsResponse withReports(RunReportResponse[] reports) {
         this.reports = reports;
         return this;
     }
     
+    public BatchRunReportsResponse(){}
 }

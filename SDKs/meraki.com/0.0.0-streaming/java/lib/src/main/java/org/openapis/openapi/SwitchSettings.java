@@ -58,11 +58,9 @@ public class SwitchSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateNetworkSwitchSettingsQosRuleResponse res = new org.openapis.openapi.models.operations.CreateNetworkSwitchSettingsQosRuleResponse() {{
+        org.openapis.openapi.models.operations.CreateNetworkSwitchSettingsQosRuleResponse res = new org.openapis.openapi.models.operations.CreateNetworkSwitchSettingsQosRuleResponse(contentType, httpRes.statusCode()) {{
             createNetworkSwitchSettingsQosRule201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -98,10 +96,8 @@ public class SwitchSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNetworkSwitchSettingsQosRuleResponse res = new org.openapis.openapi.models.operations.DeleteNetworkSwitchSettingsQosRuleResponse() {{
+        org.openapis.openapi.models.operations.DeleteNetworkSwitchSettingsQosRuleResponse res = new org.openapis.openapi.models.operations.DeleteNetworkSwitchSettingsQosRuleResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -132,11 +128,9 @@ public class SwitchSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSwitchSettingsResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSwitchSettingsResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchSettingsResponse(contentType, httpRes.statusCode()) {{
             getNetworkSwitchSettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -172,11 +166,9 @@ public class SwitchSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSwitchSettingsMtuResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchSettingsMtuResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSwitchSettingsMtuResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchSettingsMtuResponse(contentType, httpRes.statusCode()) {{
             getNetworkSwitchSettingsMtu200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -212,11 +204,9 @@ public class SwitchSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSwitchSettingsMulticastResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchSettingsMulticastResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSwitchSettingsMulticastResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchSettingsMulticastResponse(contentType, httpRes.statusCode()) {{
             getNetworkSwitchSettingsMulticast200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +242,9 @@ public class SwitchSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSwitchSettingsQosRuleResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchSettingsQosRuleResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSwitchSettingsQosRuleResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchSettingsQosRuleResponse(contentType, httpRes.statusCode()) {{
             getNetworkSwitchSettingsQosRule200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,11 +280,9 @@ public class SwitchSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSwitchSettingsQosRulesResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchSettingsQosRulesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSwitchSettingsQosRulesResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchSettingsQosRulesResponse(contentType, httpRes.statusCode()) {{
             getNetworkSwitchSettingsQosRules200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -332,11 +318,9 @@ public class SwitchSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSwitchSettingsQosRulesOrderResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchSettingsQosRulesOrderResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSwitchSettingsQosRulesOrderResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchSettingsQosRulesOrderResponse(contentType, httpRes.statusCode()) {{
             getNetworkSwitchSettingsQosRulesOrder200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -372,11 +356,9 @@ public class SwitchSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSwitchSettingsStormControlResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchSettingsStormControlResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSwitchSettingsStormControlResponse res = new org.openapis.openapi.models.operations.GetNetworkSwitchSettingsStormControlResponse(contentType, httpRes.statusCode()) {{
             getNetworkSwitchSettingsStormControl200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -414,11 +396,9 @@ public class SwitchSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsResponse(contentType, httpRes.statusCode()) {{
             updateNetworkSwitchSettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -426,48 +406,6 @@ public class SwitchSettings {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
                 res.updateNetworkSwitchSettings200ApplicationJSONObject = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Update the MTU configuration
-     * Update the MTU configuration
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsMtuResponse updateNetworkSwitchSettingsMtu(org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsMtuRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsMtuRequest.class, baseUrl, "/networks/{networkId}/switch/settings/mtu", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PUT");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsMtuResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsMtuResponse() {{
-            updateNetworkSwitchSettingsMtu200ApplicationJSONObject = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.updateNetworkSwitchSettingsMtu200ApplicationJSONObject = out;
             }
         }
 
@@ -498,11 +436,9 @@ public class SwitchSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsMulticastResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsMulticastResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsMulticastResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsMulticastResponse(contentType, httpRes.statusCode()) {{
             updateNetworkSwitchSettingsMulticast200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -540,11 +476,9 @@ public class SwitchSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsQosRuleResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsQosRuleResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsQosRuleResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsQosRuleResponse(contentType, httpRes.statusCode()) {{
             updateNetworkSwitchSettingsQosRule200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -585,11 +519,9 @@ public class SwitchSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsQosRulesOrderResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsQosRulesOrderResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsQosRulesOrderResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsQosRulesOrderResponse(contentType, httpRes.statusCode()) {{
             updateNetworkSwitchSettingsQosRulesOrder200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -627,11 +559,9 @@ public class SwitchSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsStormControlResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsStormControlResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsStormControlResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsStormControlResponse(contentType, httpRes.statusCode()) {{
             updateNetworkSwitchSettingsStormControl200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

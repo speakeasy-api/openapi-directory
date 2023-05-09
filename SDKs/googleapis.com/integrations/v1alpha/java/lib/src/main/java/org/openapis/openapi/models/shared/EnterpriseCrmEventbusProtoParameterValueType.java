@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanArray")
     public EnterpriseCrmEventbusProtoBooleanParameterArray booleanArray;
+
     public EnterpriseCrmEventbusProtoParameterValueType withBooleanArray(EnterpriseCrmEventbusProtoBooleanParameterArray booleanArray) {
         this.booleanArray = booleanArray;
         return this;
@@ -23,6 +24,7 @@ public class EnterpriseCrmEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanValue")
     public Boolean booleanValue;
+
     public EnterpriseCrmEventbusProtoParameterValueType withBooleanValue(Boolean booleanValue) {
         this.booleanValue = booleanValue;
         return this;
@@ -31,6 +33,7 @@ public class EnterpriseCrmEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleArray")
     public EnterpriseCrmEventbusProtoDoubleParameterArray doubleArray;
+
     public EnterpriseCrmEventbusProtoParameterValueType withDoubleArray(EnterpriseCrmEventbusProtoDoubleParameterArray doubleArray) {
         this.doubleArray = doubleArray;
         return this;
@@ -39,6 +42,7 @@ public class EnterpriseCrmEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public EnterpriseCrmEventbusProtoParameterValueType withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -47,6 +51,7 @@ public class EnterpriseCrmEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intArray")
     public EnterpriseCrmEventbusProtoIntParameterArray intArray;
+
     public EnterpriseCrmEventbusProtoParameterValueType withIntArray(EnterpriseCrmEventbusProtoIntParameterArray intArray) {
         this.intArray = intArray;
         return this;
@@ -55,6 +60,7 @@ public class EnterpriseCrmEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intValue")
     public String intValue;
+
     public EnterpriseCrmEventbusProtoParameterValueType withIntValue(String intValue) {
         this.intValue = intValue;
         return this;
@@ -63,6 +69,7 @@ public class EnterpriseCrmEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protoArray")
     public EnterpriseCrmEventbusProtoProtoParameterArray protoArray;
+
     public EnterpriseCrmEventbusProtoParameterValueType withProtoArray(EnterpriseCrmEventbusProtoProtoParameterArray protoArray) {
         this.protoArray = protoArray;
         return this;
@@ -71,6 +78,7 @@ public class EnterpriseCrmEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protoValue")
     public java.util.Map<String, Object> protoValue;
+
     public EnterpriseCrmEventbusProtoParameterValueType withProtoValue(java.util.Map<String, Object> protoValue) {
         this.protoValue = protoValue;
         return this;
@@ -79,6 +87,7 @@ public class EnterpriseCrmEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serializedObjectValue")
     public EnterpriseCrmEventbusProtoSerializedObjectParameter serializedObjectValue;
+
     public EnterpriseCrmEventbusProtoParameterValueType withSerializedObjectValue(EnterpriseCrmEventbusProtoSerializedObjectParameter serializedObjectValue) {
         this.serializedObjectValue = serializedObjectValue;
         return this;
@@ -87,6 +96,7 @@ public class EnterpriseCrmEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringArray")
     public EnterpriseCrmEventbusProtoStringParameterArray stringArray;
+
     public EnterpriseCrmEventbusProtoParameterValueType withStringArray(EnterpriseCrmEventbusProtoStringParameterArray stringArray) {
         this.stringArray = stringArray;
         return this;
@@ -95,9 +105,11 @@ public class EnterpriseCrmEventbusProtoParameterValueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public EnterpriseCrmEventbusProtoParameterValueType withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoParameterValueType(){}
 }

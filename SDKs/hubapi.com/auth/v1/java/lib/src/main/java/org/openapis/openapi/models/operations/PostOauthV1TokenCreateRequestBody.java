@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostOauthV1TokenCreateRequestBody {
     @SpeakeasyMetadata("form:name=client_id")
     public String clientId;
+
     public PostOauthV1TokenCreateRequestBody withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -16,6 +17,7 @@ public class PostOauthV1TokenCreateRequestBody {
     
     @SpeakeasyMetadata("form:name=client_secret")
     public String clientSecret;
+
     public PostOauthV1TokenCreateRequestBody withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -23,6 +25,7 @@ public class PostOauthV1TokenCreateRequestBody {
     
     @SpeakeasyMetadata("form:name=code")
     public String code;
+
     public PostOauthV1TokenCreateRequestBody withCode(String code) {
         this.code = code;
         return this;
@@ -30,6 +33,7 @@ public class PostOauthV1TokenCreateRequestBody {
     
     @SpeakeasyMetadata("form:name=grant_type")
     public PostOauthV1TokenCreateRequestBodyGrantTypeEnum grantType;
+
     public PostOauthV1TokenCreateRequestBody withGrantType(PostOauthV1TokenCreateRequestBodyGrantTypeEnum grantType) {
         this.grantType = grantType;
         return this;
@@ -37,6 +41,7 @@ public class PostOauthV1TokenCreateRequestBody {
     
     @SpeakeasyMetadata("form:name=redirect_uri")
     public String redirectUri;
+
     public PostOauthV1TokenCreateRequestBody withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
@@ -44,9 +49,11 @@ public class PostOauthV1TokenCreateRequestBody {
     
     @SpeakeasyMetadata("form:name=refresh_token")
     public String refreshToken;
+
     public PostOauthV1TokenCreateRequestBody withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
     
+    public PostOauthV1TokenCreateRequestBody(){}
 }

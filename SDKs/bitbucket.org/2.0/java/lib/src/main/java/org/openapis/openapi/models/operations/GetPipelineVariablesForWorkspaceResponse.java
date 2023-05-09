@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPipelineVariablesForWorkspaceResponse {
     
     public String contentType;
+
     public GetPipelineVariablesForWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPipelineVariablesForWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public GetPipelineVariablesForWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetPipelineVariablesForWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPipelineVariablesForWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetPipelineVariablesForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedPipelineVariables paginatedPipelineVariables;
+
     public GetPipelineVariablesForWorkspaceResponse withPaginatedPipelineVariables(org.openapis.openapi.models.shared.PaginatedPipelineVariables paginatedPipelineVariables) {
         this.paginatedPipelineVariables = paginatedPipelineVariables;
         return this;
     }
     
+    public GetPipelineVariablesForWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

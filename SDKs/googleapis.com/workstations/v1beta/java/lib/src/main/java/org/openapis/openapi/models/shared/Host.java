@@ -18,9 +18,11 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gceInstance")
     public GceInstance gceInstance;
+
     public Host withGceInstance(GceInstance gceInstance) {
         this.gceInstance = gceInstance;
         return this;
     }
     
+    public Host(){}
 }

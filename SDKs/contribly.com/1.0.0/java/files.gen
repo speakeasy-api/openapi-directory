@@ -48,6 +48,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetAssignmentsIdRespons
 lib/src/main/java/org/openapis/openapi/models/operations/PostAssignmentsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCredentialsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetScopesResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PostVerifySecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVerifyResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteContributionsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteContributionsIdResponse.java
@@ -154,4 +155,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/SubscriptionSubmission.java
 lib/src/main/java/org/openapis/openapi/models/shared/TagSubmission.java
 lib/src/main/java/org/openapis/openapi/models/shared/TagSetSubmission.java
 lib/src/main/java/org/openapis/openapi/models/shared/LinkedProfile.java
+docs/sdk/README.md
+docs/assignment/README.md
+docs/auth/README.md
+docs/contribution/README.md
+docs/form/README.md
+docs/info/README.md
+docs/media/README.md
+docs/notifications/README.md
+docs/subscriptions/README.md
+docs/tag/README.md
+docs/user/README.md
 USAGE.md

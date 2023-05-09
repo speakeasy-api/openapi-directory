@@ -18,6 +18,7 @@ public class TeamDriveBackgroundImageFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TeamDriveBackgroundImageFile withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class TeamDriveBackgroundImageFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Float width;
+
     public TeamDriveBackgroundImageFile withWidth(Float width) {
         this.width = width;
         return this;
@@ -40,6 +42,7 @@ public class TeamDriveBackgroundImageFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xCoordinate")
     public Float xCoordinate;
+
     public TeamDriveBackgroundImageFile withXCoordinate(Float xCoordinate) {
         this.xCoordinate = xCoordinate;
         return this;
@@ -51,9 +54,11 @@ public class TeamDriveBackgroundImageFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yCoordinate")
     public Float yCoordinate;
+
     public TeamDriveBackgroundImageFile withYCoordinate(Float yCoordinate) {
         this.yCoordinate = yCoordinate;
         return this;
     }
     
+    public TeamDriveBackgroundImageFile(){}
 }

@@ -18,6 +18,7 @@ public class OSPolicyResourceExecResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforce")
     public OSPolicyResourceExecResourceExec enforce;
+
     public OSPolicyResourceExecResource withEnforce(OSPolicyResourceExecResourceExec enforce) {
         this.enforce = enforce;
         return this;
@@ -29,9 +30,11 @@ public class OSPolicyResourceExecResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validate")
     public OSPolicyResourceExecResourceExec validate;
+
     public OSPolicyResourceExecResource withValidate(OSPolicyResourceExecResourceExec validate) {
         this.validate = validate;
         return this;
     }
     
+    public OSPolicyResourceExecResource(){}
 }

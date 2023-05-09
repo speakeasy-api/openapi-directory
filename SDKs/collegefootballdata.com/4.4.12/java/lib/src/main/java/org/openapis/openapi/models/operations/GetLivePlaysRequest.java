@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLivePlaysRequest {
@@ -12,9 +13,13 @@ public class GetLivePlaysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public Long id;
+
     public GetLivePlaysRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetLivePlaysRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

@@ -15,6 +15,7 @@ public class RunPipelineActivityRequestBodyPipelineActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addAttributes")
     public org.openapis.openapi.models.shared.AddAttributesActivity addAttributes;
+
     public RunPipelineActivityRequestBodyPipelineActivity withAddAttributes(org.openapis.openapi.models.shared.AddAttributesActivity addAttributes) {
         this.addAttributes = addAttributes;
         return this;
@@ -23,6 +24,7 @@ public class RunPipelineActivityRequestBodyPipelineActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public org.openapis.openapi.models.shared.ChannelActivity channel;
+
     public RunPipelineActivityRequestBodyPipelineActivity withChannel(org.openapis.openapi.models.shared.ChannelActivity channel) {
         this.channel = channel;
         return this;
@@ -31,6 +33,7 @@ public class RunPipelineActivityRequestBodyPipelineActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datastore")
     public org.openapis.openapi.models.shared.DatastoreActivity datastore;
+
     public RunPipelineActivityRequestBodyPipelineActivity withDatastore(org.openapis.openapi.models.shared.DatastoreActivity datastore) {
         this.datastore = datastore;
         return this;
@@ -39,6 +42,7 @@ public class RunPipelineActivityRequestBodyPipelineActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceRegistryEnrich")
     public org.openapis.openapi.models.shared.DeviceRegistryEnrichActivity deviceRegistryEnrich;
+
     public RunPipelineActivityRequestBodyPipelineActivity withDeviceRegistryEnrich(org.openapis.openapi.models.shared.DeviceRegistryEnrichActivity deviceRegistryEnrich) {
         this.deviceRegistryEnrich = deviceRegistryEnrich;
         return this;
@@ -47,6 +51,7 @@ public class RunPipelineActivityRequestBodyPipelineActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceShadowEnrich")
     public org.openapis.openapi.models.shared.DeviceShadowEnrichActivity deviceShadowEnrich;
+
     public RunPipelineActivityRequestBodyPipelineActivity withDeviceShadowEnrich(org.openapis.openapi.models.shared.DeviceShadowEnrichActivity deviceShadowEnrich) {
         this.deviceShadowEnrich = deviceShadowEnrich;
         return this;
@@ -55,6 +60,7 @@ public class RunPipelineActivityRequestBodyPipelineActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public org.openapis.openapi.models.shared.FilterActivity filter;
+
     public RunPipelineActivityRequestBodyPipelineActivity withFilter(org.openapis.openapi.models.shared.FilterActivity filter) {
         this.filter = filter;
         return this;
@@ -63,6 +69,7 @@ public class RunPipelineActivityRequestBodyPipelineActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambda")
     public org.openapis.openapi.models.shared.LambdaActivity lambda;
+
     public RunPipelineActivityRequestBodyPipelineActivity withLambda(org.openapis.openapi.models.shared.LambdaActivity lambda) {
         this.lambda = lambda;
         return this;
@@ -71,6 +78,7 @@ public class RunPipelineActivityRequestBodyPipelineActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("math")
     public org.openapis.openapi.models.shared.MathActivity math;
+
     public RunPipelineActivityRequestBodyPipelineActivity withMath(org.openapis.openapi.models.shared.MathActivity math) {
         this.math = math;
         return this;
@@ -79,6 +87,7 @@ public class RunPipelineActivityRequestBodyPipelineActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeAttributes")
     public org.openapis.openapi.models.shared.RemoveAttributesActivity removeAttributes;
+
     public RunPipelineActivityRequestBodyPipelineActivity withRemoveAttributes(org.openapis.openapi.models.shared.RemoveAttributesActivity removeAttributes) {
         this.removeAttributes = removeAttributes;
         return this;
@@ -87,9 +96,11 @@ public class RunPipelineActivityRequestBodyPipelineActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectAttributes")
     public org.openapis.openapi.models.shared.SelectAttributesActivity selectAttributes;
+
     public RunPipelineActivityRequestBodyPipelineActivity withSelectAttributes(org.openapis.openapi.models.shared.SelectAttributesActivity selectAttributes) {
         this.selectAttributes = selectAttributes;
         return this;
     }
     
+    public RunPipelineActivityRequestBodyPipelineActivity(){}
 }

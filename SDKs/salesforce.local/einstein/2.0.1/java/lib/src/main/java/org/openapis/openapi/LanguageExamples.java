@@ -64,11 +64,9 @@ public class LanguageExamples {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExamplesResponse res = new org.openapis.openapi.models.operations.GetExamplesResponse() {{
+        org.openapis.openapi.models.operations.GetExamplesResponse res = new org.openapis.openapi.models.operations.GetExamplesResponse(contentType, httpRes.statusCode()) {{
             exampleList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,11 +109,9 @@ public class LanguageExamples {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExamplesByLabelResponse res = new org.openapis.openapi.models.operations.GetExamplesByLabelResponse() {{
+        org.openapis.openapi.models.operations.GetExamplesByLabelResponse res = new org.openapis.openapi.models.operations.GetExamplesByLabelResponse(contentType, httpRes.statusCode()) {{
             exampleList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class LanguageExamples {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProvideFeedbackResponse res = new org.openapis.openapi.models.operations.ProvideFeedbackResponse() {{
+        org.openapis.openapi.models.operations.ProvideFeedbackResponse res = new org.openapis.openapi.models.operations.ProvideFeedbackResponse(contentType, httpRes.statusCode()) {{
             example = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class LanguageExamples {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDatasetAsyncResponse res = new org.openapis.openapi.models.operations.UpdateDatasetAsyncResponse() {{
+        org.openapis.openapi.models.operations.UpdateDatasetAsyncResponse res = new org.openapis.openapi.models.operations.UpdateDatasetAsyncResponse(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

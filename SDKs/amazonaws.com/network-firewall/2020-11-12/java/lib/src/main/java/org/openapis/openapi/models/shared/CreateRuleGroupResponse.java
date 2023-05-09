@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateRuleGroupResponse {
     @JsonProperty("RuleGroupResponse")
     public RuleGroupResponse ruleGroupResponse;
+
     public CreateRuleGroupResponse withRuleGroupResponse(RuleGroupResponse ruleGroupResponse) {
         this.ruleGroupResponse = ruleGroupResponse;
         return this;
@@ -19,9 +20,14 @@ public class CreateRuleGroupResponse {
     
     @JsonProperty("UpdateToken")
     public String updateToken;
+
     public CreateRuleGroupResponse withUpdateToken(String updateToken) {
         this.updateToken = updateToken;
         return this;
     }
     
+    public CreateRuleGroupResponse(@JsonProperty("RuleGroupResponse") RuleGroupResponse ruleGroupResponse, @JsonProperty("UpdateToken") String updateToken) {
+        this.ruleGroupResponse = ruleGroupResponse;
+        this.updateToken = updateToken;
+  }
 }

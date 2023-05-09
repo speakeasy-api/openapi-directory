@@ -24,6 +24,7 @@ public class SpotInsertion {
      */
     @JsonProperty("broadcastServiceId")
     public Long broadcastServiceId;
+
     public SpotInsertion withBroadcastServiceId(Long broadcastServiceId) {
         this.broadcastServiceId = broadcastServiceId;
         return this;
@@ -37,6 +38,7 @@ public class SpotInsertion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public SpotInsertion withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -47,6 +49,7 @@ public class SpotInsertion {
      */
     @JsonProperty("cue")
     public String cue;
+
     public SpotInsertion withCue(String cue) {
         this.cue = cue;
         return this;
@@ -58,6 +61,7 @@ public class SpotInsertion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public Long customerId;
+
     public SpotInsertion withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -68,6 +72,7 @@ public class SpotInsertion {
      */
     @JsonProperty("duration")
     public Integer duration;
+
     public SpotInsertion withDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -79,6 +84,7 @@ public class SpotInsertion {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public SpotInsertion withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -90,6 +96,7 @@ public class SpotInsertion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public SpotInsertion withId(Long id) {
         this.id = id;
         return this;
@@ -100,6 +107,7 @@ public class SpotInsertion {
      */
     @JsonProperty("programId")
     public Long programId;
+
     public SpotInsertion withProgramId(Long programId) {
         this.programId = programId;
         return this;
@@ -110,6 +118,7 @@ public class SpotInsertion {
      */
     @JsonProperty("spots")
     public Long[] spots;
+
     public SpotInsertion withSpots(Long[] spots) {
         this.spots = spots;
         return this;
@@ -121,9 +130,19 @@ public class SpotInsertion {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public SpotInsertion withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public SpotInsertion(@JsonProperty("broadcastServiceId") Long broadcastServiceId, @JsonProperty("cue") String cue, @JsonProperty("duration") Integer duration, @JsonProperty("endDate") LocalDate endDate, @JsonProperty("programId") Long programId, @JsonProperty("spots") Long[] spots, @JsonProperty("startDate") LocalDate startDate) {
+        this.broadcastServiceId = broadcastServiceId;
+        this.cue = cue;
+        this.duration = duration;
+        this.endDate = endDate;
+        this.programId = programId;
+        this.spots = spots;
+        this.startDate = startDate;
+  }
 }

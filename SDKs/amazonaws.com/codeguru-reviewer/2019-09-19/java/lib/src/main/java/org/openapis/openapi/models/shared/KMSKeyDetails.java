@@ -15,6 +15,7 @@ public class KMSKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionOption")
     public EncryptionOptionEnum encryptionOption;
+
     public KMSKeyDetails withEncryptionOption(EncryptionOptionEnum encryptionOption) {
         this.encryptionOption = encryptionOption;
         return this;
@@ -23,9 +24,11 @@ public class KMSKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSKeyId")
     public String kmsKeyId;
+
     public KMSKeyDetails withKMSKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public KMSKeyDetails(){}
 }

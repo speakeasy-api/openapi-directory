@@ -12,6 +12,7 @@ public class PutUsersIdUserCategoriesFullIdFullRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=accountant_account")
     public String accountantAccount;
+
     public PutUsersIdUserCategoriesFullIdFullRequestBody withAccountantAccount(String accountantAccount) {
         this.accountantAccount = accountantAccount;
         return this;
@@ -22,9 +23,11 @@ public class PutUsersIdUserCategoriesFullIdFullRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=hide")
     public String hide;
+
     public PutUsersIdUserCategoriesFullIdFullRequestBody withHide(String hide) {
         this.hide = hide;
         return this;
     }
     
+    public PutUsersIdUserCategoriesFullIdFullRequestBody(){}
 }

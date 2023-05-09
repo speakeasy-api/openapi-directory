@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateOrganizationalUnitRequest {
     @JsonProperty("Name")
     public String name;
+
     public CreateOrganizationalUnitRequest withName(String name) {
         this.name = name;
         return this;
@@ -18,6 +19,7 @@ public class CreateOrganizationalUnitRequest {
     
     @JsonProperty("ParentId")
     public String parentId;
+
     public CreateOrganizationalUnitRequest withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -26,9 +28,14 @@ public class CreateOrganizationalUnitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateOrganizationalUnitRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateOrganizationalUnitRequest(@JsonProperty("Name") String name, @JsonProperty("ParentId") String parentId) {
+        this.name = name;
+        this.parentId = parentId;
+  }
 }

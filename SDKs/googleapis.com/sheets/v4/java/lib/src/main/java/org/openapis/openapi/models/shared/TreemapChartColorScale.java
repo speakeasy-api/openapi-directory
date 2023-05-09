@@ -18,6 +18,7 @@ public class TreemapChartColorScale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValueColor")
     public Color maxValueColor;
+
     public TreemapChartColorScale withMaxValueColor(Color maxValueColor) {
         this.maxValueColor = maxValueColor;
         return this;
@@ -29,6 +30,7 @@ public class TreemapChartColorScale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValueColorStyle")
     public ColorStyle maxValueColorStyle;
+
     public TreemapChartColorScale withMaxValueColorStyle(ColorStyle maxValueColorStyle) {
         this.maxValueColorStyle = maxValueColorStyle;
         return this;
@@ -40,6 +42,7 @@ public class TreemapChartColorScale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("midValueColor")
     public Color midValueColor;
+
     public TreemapChartColorScale withMidValueColor(Color midValueColor) {
         this.midValueColor = midValueColor;
         return this;
@@ -51,6 +54,7 @@ public class TreemapChartColorScale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("midValueColorStyle")
     public ColorStyle midValueColorStyle;
+
     public TreemapChartColorScale withMidValueColorStyle(ColorStyle midValueColorStyle) {
         this.midValueColorStyle = midValueColorStyle;
         return this;
@@ -62,6 +66,7 @@ public class TreemapChartColorScale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValueColor")
     public Color minValueColor;
+
     public TreemapChartColorScale withMinValueColor(Color minValueColor) {
         this.minValueColor = minValueColor;
         return this;
@@ -73,6 +78,7 @@ public class TreemapChartColorScale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValueColorStyle")
     public ColorStyle minValueColorStyle;
+
     public TreemapChartColorScale withMinValueColorStyle(ColorStyle minValueColorStyle) {
         this.minValueColorStyle = minValueColorStyle;
         return this;
@@ -84,6 +90,7 @@ public class TreemapChartColorScale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noDataColor")
     public Color noDataColor;
+
     public TreemapChartColorScale withNoDataColor(Color noDataColor) {
         this.noDataColor = noDataColor;
         return this;
@@ -95,9 +102,11 @@ public class TreemapChartColorScale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noDataColorStyle")
     public ColorStyle noDataColorStyle;
+
     public TreemapChartColorScale withNoDataColorStyle(ColorStyle noDataColorStyle) {
         this.noDataColorStyle = noDataColorStyle;
         return this;
     }
     
+    public TreemapChartColorScale(){}
 }

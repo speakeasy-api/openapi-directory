@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudresourcemanagerEffectiveTagsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudresourcemanagerEffectiveTagsListSecurityOption1 option1;
+
     public CloudresourcemanagerEffectiveTagsListSecurity withOption1(CloudresourcemanagerEffectiveTagsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class CloudresourcemanagerEffectiveTagsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudresourcemanagerEffectiveTagsListSecurityOption2 option2;
+
     public CloudresourcemanagerEffectiveTagsListSecurity withOption2(CloudresourcemanagerEffectiveTagsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public CloudresourcemanagerEffectiveTagsListSecurity(){}
 }

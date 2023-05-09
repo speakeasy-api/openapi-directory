@@ -14,6 +14,7 @@ public class PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -24,6 +25,7 @@ public class PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBody {
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -35,6 +37,7 @@ public class PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsReturns")
     public Double[] assetsReturns;
+
     public PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBody withAssetsReturns(Double[] assetsReturns) {
         this.assetsReturns = assetsReturns;
         return this;
@@ -43,9 +46,14 @@ public class PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBodyConstraints constraints;
+
     public PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBody withConstraints(PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
     }
     
+    public PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+  }
 }

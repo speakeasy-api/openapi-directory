@@ -18,6 +18,7 @@ public class OperationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public OperationError withCode(String code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class OperationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OperationError withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class OperationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public OperationError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public OperationError(){}
 }

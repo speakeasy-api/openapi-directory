@@ -20,6 +20,7 @@ public class PodcastEpisode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public PodcastEpisode withAuthor(String author) {
         this.author = author;
         return this;
@@ -28,6 +29,7 @@ public class PodcastEpisode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("block")
     public Boolean block;
+
     public PodcastEpisode withBlock(Boolean block) {
         this.block = block;
         return this;
@@ -35,6 +37,7 @@ public class PodcastEpisode {
     
     @JsonProperty("description")
     public String description;
+
     public PodcastEpisode withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class PodcastEpisode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Long duration;
+
     public PodcastEpisode withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -51,6 +55,7 @@ public class PodcastEpisode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("episode")
     public Long episode;
+
     public PodcastEpisode withEpisode(Long episode) {
         this.episode = episode;
         return this;
@@ -59,6 +64,7 @@ public class PodcastEpisode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("episodeType")
     public String episodeType;
+
     public PodcastEpisode withEpisodeType(String episodeType) {
         this.episodeType = episodeType;
         return this;
@@ -67,6 +73,7 @@ public class PodcastEpisode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explicit")
     public Boolean explicit;
+
     public PodcastEpisode withExplicit(Boolean explicit) {
         this.explicit = explicit;
         return this;
@@ -75,6 +82,7 @@ public class PodcastEpisode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileUrl")
     public String fileUrl;
+
     public PodcastEpisode withFileUrl(String fileUrl) {
         this.fileUrl = fileUrl;
         return this;
@@ -83,6 +91,7 @@ public class PodcastEpisode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public PodcastEpisode withImage(String image) {
         this.image = image;
         return this;
@@ -91,6 +100,7 @@ public class PodcastEpisode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public PodcastEpisode withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class PodcastEpisode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public PodcastEpisode withLink(String link) {
         this.link = link;
         return this;
@@ -108,6 +119,7 @@ public class PodcastEpisode {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("publishDate")
     public OffsetDateTime publishDate;
+
     public PodcastEpisode withPublishDate(OffsetDateTime publishDate) {
         this.publishDate = publishDate;
         return this;
@@ -116,6 +128,7 @@ public class PodcastEpisode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("season")
     public Long season;
+
     public PodcastEpisode withSeason(Long season) {
         this.season = season;
         return this;
@@ -124,6 +137,7 @@ public class PodcastEpisode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public PodcastEpisode withSize(Long size) {
         this.size = size;
         return this;
@@ -132,6 +146,7 @@ public class PodcastEpisode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle")
     public String subtitle;
+
     public PodcastEpisode withSubtitle(String subtitle) {
         this.subtitle = subtitle;
         return this;
@@ -139,6 +154,7 @@ public class PodcastEpisode {
     
     @JsonProperty("summary")
     public String summary;
+
     public PodcastEpisode withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -147,6 +163,7 @@ public class PodcastEpisode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public PodcastEpisode withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -154,9 +171,16 @@ public class PodcastEpisode {
     
     @JsonProperty("title")
     public String title;
+
     public PodcastEpisode withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PodcastEpisode(@JsonProperty("description") String description, @JsonProperty("publishDate") OffsetDateTime publishDate, @JsonProperty("summary") String summary, @JsonProperty("title") String title) {
+        this.description = description;
+        this.publishDate = publishDate;
+        this.summary = summary;
+        this.title = title;
+  }
 }

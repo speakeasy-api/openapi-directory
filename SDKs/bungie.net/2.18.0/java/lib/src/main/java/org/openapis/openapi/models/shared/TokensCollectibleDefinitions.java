@@ -12,6 +12,7 @@ public class TokensCollectibleDefinitions {
      */
     
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition collectibleDefinition;
+
     public TokensCollectibleDefinitions withCollectibleDefinition(DestinyDefinitionsCollectiblesDestinyCollectibleDefinition collectibleDefinition) {
         this.collectibleDefinition = collectibleDefinition;
         return this;
@@ -23,9 +24,11 @@ public class TokensCollectibleDefinitions {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinition destinyInventoryItemDefinition;
+
     public TokensCollectibleDefinitions withDestinyInventoryItemDefinition(DestinyDefinitionsDestinyInventoryItemDefinition destinyInventoryItemDefinition) {
         this.destinyInventoryItemDefinition = destinyInventoryItemDefinition;
         return this;
     }
     
+    public TokensCollectibleDefinitions(){}
 }

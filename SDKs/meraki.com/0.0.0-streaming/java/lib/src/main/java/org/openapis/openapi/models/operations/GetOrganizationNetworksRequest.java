@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationNetworksRequest {
@@ -12,6 +13,7 @@ public class GetOrganizationNetworksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=configTemplateId")
     public String configTemplateId;
+
     public GetOrganizationNetworksRequest withConfigTemplateId(String configTemplateId) {
         this.configTemplateId = configTemplateId;
         return this;
@@ -19,9 +21,13 @@ public class GetOrganizationNetworksRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public String organizationId;
+
     public GetOrganizationNetworksRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public GetOrganizationNetworksRequest(@JsonProperty("organizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

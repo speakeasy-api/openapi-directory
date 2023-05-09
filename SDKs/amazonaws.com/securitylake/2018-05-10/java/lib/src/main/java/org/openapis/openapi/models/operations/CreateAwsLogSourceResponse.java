@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAwsLogSourceResponse {
@@ -12,6 +13,7 @@ public class CreateAwsLogSourceResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAwsLogSourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateAwsLogSourceResponse {
      */
     
     public Object accountNotFoundException;
+
     public CreateAwsLogSourceResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class CreateAwsLogSourceResponse {
     
     
     public String contentType;
+
     public CreateAwsLogSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateAwsLogSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAwsLogSourceResponse createAwsLogSourceResponse;
+
     public CreateAwsLogSourceResponse withCreateAwsLogSourceResponse(org.openapis.openapi.models.shared.CreateAwsLogSourceResponse createAwsLogSourceResponse) {
         this.createAwsLogSourceResponse = createAwsLogSourceResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateAwsLogSourceResponse {
      */
     
     public Object internalServerException;
+
     public CreateAwsLogSourceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAwsLogSourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAwsLogSourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateAwsLogSourceResponse {
      */
     
     public Object s3Exception;
+
     public CreateAwsLogSourceResponse withS3Exception(Object s3Exception) {
         this.s3Exception = s3Exception;
         return this;
@@ -76,6 +84,7 @@ public class CreateAwsLogSourceResponse {
     
     
     public Integer statusCode;
+
     public CreateAwsLogSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateAwsLogSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAwsLogSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateAwsLogSourceResponse {
      */
     
     public Object validationException;
+
     public CreateAwsLogSourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAwsLogSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

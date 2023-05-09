@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserGetMembershipDataByIdRequest {
@@ -12,6 +13,7 @@ public class UserGetMembershipDataByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
     public Long membershipId;
+
     public UserGetMembershipDataByIdRequest withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -22,9 +24,14 @@ public class UserGetMembershipDataByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public UserGetMembershipDataByIdRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
     }
     
+    public UserGetMembershipDataByIdRequest(@JsonProperty("membershipId") Long membershipId, @JsonProperty("membershipType") Integer membershipType) {
+        this.membershipId = membershipId;
+        this.membershipType = membershipType;
+  }
 }

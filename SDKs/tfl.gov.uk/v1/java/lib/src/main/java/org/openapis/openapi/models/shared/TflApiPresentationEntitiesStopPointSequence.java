@@ -15,6 +15,7 @@ public class TflApiPresentationEntitiesStopPointSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchId")
     public Integer branchId;
+
     public TflApiPresentationEntitiesStopPointSequence withBranchId(Integer branchId) {
         this.branchId = branchId;
         return this;
@@ -23,6 +24,7 @@ public class TflApiPresentationEntitiesStopPointSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public String direction;
+
     public TflApiPresentationEntitiesStopPointSequence withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -31,6 +33,7 @@ public class TflApiPresentationEntitiesStopPointSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineId")
     public String lineId;
+
     public TflApiPresentationEntitiesStopPointSequence withLineId(String lineId) {
         this.lineId = lineId;
         return this;
@@ -39,6 +42,7 @@ public class TflApiPresentationEntitiesStopPointSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineName")
     public String lineName;
+
     public TflApiPresentationEntitiesStopPointSequence withLineName(String lineName) {
         this.lineName = lineName;
         return this;
@@ -51,6 +55,7 @@ public class TflApiPresentationEntitiesStopPointSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextBranchIds")
     public Integer[] nextBranchIds;
+
     public TflApiPresentationEntitiesStopPointSequence withNextBranchIds(Integer[] nextBranchIds) {
         this.nextBranchIds = nextBranchIds;
         return this;
@@ -63,6 +68,7 @@ public class TflApiPresentationEntitiesStopPointSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prevBranchIds")
     public Integer[] prevBranchIds;
+
     public TflApiPresentationEntitiesStopPointSequence withPrevBranchIds(Integer[] prevBranchIds) {
         this.prevBranchIds = prevBranchIds;
         return this;
@@ -71,6 +77,7 @@ public class TflApiPresentationEntitiesStopPointSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceType")
     public TflApiPresentationEntitiesStopPointSequenceServiceTypeEnum serviceType;
+
     public TflApiPresentationEntitiesStopPointSequence withServiceType(TflApiPresentationEntitiesStopPointSequenceServiceTypeEnum serviceType) {
         this.serviceType = serviceType;
         return this;
@@ -79,9 +86,11 @@ public class TflApiPresentationEntitiesStopPointSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopPoint")
     public TflApiPresentationEntitiesMatchedStop[] stopPoint;
+
     public TflApiPresentationEntitiesStopPointSequence withStopPoint(TflApiPresentationEntitiesMatchedStop[] stopPoint) {
         this.stopPoint = stopPoint;
         return this;
     }
     
+    public TflApiPresentationEntitiesStopPointSequence(){}
 }

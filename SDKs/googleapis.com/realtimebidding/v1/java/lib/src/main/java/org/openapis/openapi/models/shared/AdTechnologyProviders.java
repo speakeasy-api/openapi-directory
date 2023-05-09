@@ -18,6 +18,7 @@ public class AdTechnologyProviders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedGvlIds")
     public String[] detectedGvlIds;
+
     public AdTechnologyProviders withDetectedGvlIds(String[] detectedGvlIds) {
         this.detectedGvlIds = detectedGvlIds;
         return this;
@@ -29,6 +30,7 @@ public class AdTechnologyProviders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedProviderIds")
     public String[] detectedProviderIds;
+
     public AdTechnologyProviders withDetectedProviderIds(String[] detectedProviderIds) {
         this.detectedProviderIds = detectedProviderIds;
         return this;
@@ -40,9 +42,11 @@ public class AdTechnologyProviders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unidentifiedProviderDomains")
     public String[] unidentifiedProviderDomains;
+
     public AdTechnologyProviders withUnidentifiedProviderDomains(String[] unidentifiedProviderDomains) {
         this.unidentifiedProviderDomains = unidentifiedProviderDomains;
         return this;
     }
     
+    public AdTechnologyProviders(){}
 }

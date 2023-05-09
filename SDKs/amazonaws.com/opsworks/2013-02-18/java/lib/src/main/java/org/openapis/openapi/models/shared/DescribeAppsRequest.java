@@ -12,6 +12,7 @@ public class DescribeAppsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppIds")
     public String[] appIds;
+
     public DescribeAppsRequest withAppIds(String[] appIds) {
         this.appIds = appIds;
         return this;
@@ -20,9 +21,11 @@ public class DescribeAppsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public DescribeAppsRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public DescribeAppsRequest(){}
 }

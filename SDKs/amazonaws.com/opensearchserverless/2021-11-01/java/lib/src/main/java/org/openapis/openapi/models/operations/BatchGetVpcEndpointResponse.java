@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetVpcEndpointResponse {
@@ -12,6 +13,7 @@ public class BatchGetVpcEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetVpcEndpointResponse batchGetVpcEndpointResponse;
+
     public BatchGetVpcEndpointResponse withBatchGetVpcEndpointResponse(org.openapis.openapi.models.shared.BatchGetVpcEndpointResponse batchGetVpcEndpointResponse) {
         this.batchGetVpcEndpointResponse = batchGetVpcEndpointResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetVpcEndpointResponse {
     
     
     public String contentType;
+
     public BatchGetVpcEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetVpcEndpointResponse {
      */
     
     public Object internalServerException;
+
     public BatchGetVpcEndpointResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class BatchGetVpcEndpointResponse {
     
     
     public Integer statusCode;
+
     public BatchGetVpcEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class BatchGetVpcEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetVpcEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class BatchGetVpcEndpointResponse {
      */
     
     public Object validationException;
+
     public BatchGetVpcEndpointResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchGetVpcEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

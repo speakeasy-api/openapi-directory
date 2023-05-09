@@ -15,6 +15,7 @@ public class AutoMLCandidateGenerationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlgorithmsConfig")
     public AutoMLAlgorithmConfig[] algorithmsConfig;
+
     public AutoMLCandidateGenerationConfig withAlgorithmsConfig(AutoMLAlgorithmConfig[] algorithmsConfig) {
         this.algorithmsConfig = algorithmsConfig;
         return this;
@@ -23,9 +24,11 @@ public class AutoMLCandidateGenerationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureSpecificationS3Uri")
     public String featureSpecificationS3Uri;
+
     public AutoMLCandidateGenerationConfig withFeatureSpecificationS3Uri(String featureSpecificationS3Uri) {
         this.featureSpecificationS3Uri = featureSpecificationS3Uri;
         return this;
     }
     
+    public AutoMLCandidateGenerationConfig(){}
 }

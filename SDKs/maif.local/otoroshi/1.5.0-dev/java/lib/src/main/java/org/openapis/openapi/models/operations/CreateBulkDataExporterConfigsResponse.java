@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBulkDataExporterConfigsResponse {
     
     public String contentType;
+
     public CreateBulkDataExporterConfigsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateBulkDataExporterConfigsResponse {
     
     
     public Integer statusCode;
+
     public CreateBulkDataExporterConfigsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateBulkDataExporterConfigsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBulkDataExporterConfigsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class CreateBulkDataExporterConfigsResponse {
      */
     
     public CreateBulkDataExporterConfigs200ApplicationJSON[] createBulkDataExporterConfigs200ApplicationJSONObjects;
+
     public CreateBulkDataExporterConfigsResponse withCreateBulkDataExporterConfigs200ApplicationJSONObjects(CreateBulkDataExporterConfigs200ApplicationJSON[] createBulkDataExporterConfigs200ApplicationJSONObjects) {
         this.createBulkDataExporterConfigs200ApplicationJSONObjects = createBulkDataExporterConfigs200ApplicationJSONObjects;
         return this;
     }
     
+    public CreateBulkDataExporterConfigsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

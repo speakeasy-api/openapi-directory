@@ -12,6 +12,7 @@ public class CalendarEventResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public CalendarEventResourceAttributes attributes;
+
     public CalendarEventResource withAttributes(CalendarEventResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -20,6 +21,7 @@ public class CalendarEventResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CalendarEventResource withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class CalendarEventResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CalendarEventResourceLinks links;
+
     public CalendarEventResource withLinks(CalendarEventResourceLinks links) {
         this.links = links;
         return this;
@@ -36,6 +39,7 @@ public class CalendarEventResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public CalendarEventResourceRelationships relationships;
+
     public CalendarEventResource withRelationships(CalendarEventResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -44,9 +48,11 @@ public class CalendarEventResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CalendarEventResourceTypeEnum type;
+
     public CalendarEventResource withType(CalendarEventResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CalendarEventResource(){}
 }

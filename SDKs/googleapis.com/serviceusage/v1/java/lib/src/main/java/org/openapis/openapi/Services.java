@@ -61,11 +61,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesBatchGetResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesBatchGetResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesBatchGetResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesBatchGetResponse(contentType, httpRes.statusCode()) {{
             batchGetServicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesDisableResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesDisableResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesDisableResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesDisableResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesEnableResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesEnableResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesEnableResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesEnableResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesGetResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesGetResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesGetResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesGetResponse(contentType, httpRes.statusCode()) {{
             googleApiServiceusageV1Service = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesListResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesListResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesListResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesListResponse(contentType, httpRes.statusCode()) {{
             listServicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

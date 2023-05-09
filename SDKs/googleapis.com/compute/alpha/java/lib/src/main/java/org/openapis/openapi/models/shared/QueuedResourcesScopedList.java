@@ -15,6 +15,7 @@ public class QueuedResourcesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queuedResources")
     public QueuedResource[] queuedResources;
+
     public QueuedResourcesScopedList withQueuedResources(QueuedResource[] queuedResources) {
         this.queuedResources = queuedResources;
         return this;
@@ -26,9 +27,11 @@ public class QueuedResourcesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public QueuedResourcesScopedListWarning warning;
+
     public QueuedResourcesScopedList withWarning(QueuedResourcesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public QueuedResourcesScopedList(){}
 }

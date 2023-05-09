@@ -18,6 +18,7 @@ public class ChannelConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activationToken")
     public String activationToken;
+
     public ChannelConnection withActivationToken(String activationToken) {
         this.activationToken = activationToken;
         return this;
@@ -29,6 +30,7 @@ public class ChannelConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public String channel;
+
     public ChannelConnection withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -40,6 +42,7 @@ public class ChannelConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public ChannelConnection withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class ChannelConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ChannelConnection withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class ChannelConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public ChannelConnection withUid(String uid) {
         this.uid = uid;
         return this;
@@ -73,9 +78,11 @@ public class ChannelConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public ChannelConnection withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ChannelConnection(){}
 }

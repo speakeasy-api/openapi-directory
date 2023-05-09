@@ -15,6 +15,7 @@ public class GetTableVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetTableVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetTableVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableVersions")
     public TableVersion[] tableVersions;
+
     public GetTableVersionsResponse withTableVersions(TableVersion[] tableVersions) {
         this.tableVersions = tableVersions;
         return this;
     }
     
+    public GetTableVersionsResponse(){}
 }

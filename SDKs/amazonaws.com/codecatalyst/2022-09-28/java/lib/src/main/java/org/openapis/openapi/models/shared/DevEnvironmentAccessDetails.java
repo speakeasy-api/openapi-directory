@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DevEnvironmentAccessDetails {
     @JsonProperty("streamUrl")
     public String streamUrl;
+
     public DevEnvironmentAccessDetails withStreamUrl(String streamUrl) {
         this.streamUrl = streamUrl;
         return this;
@@ -19,9 +20,14 @@ public class DevEnvironmentAccessDetails {
     
     @JsonProperty("tokenValue")
     public String tokenValue;
+
     public DevEnvironmentAccessDetails withTokenValue(String tokenValue) {
         this.tokenValue = tokenValue;
         return this;
     }
     
+    public DevEnvironmentAccessDetails(@JsonProperty("streamUrl") String streamUrl, @JsonProperty("tokenValue") String tokenValue) {
+        this.streamUrl = streamUrl;
+        this.tokenValue = tokenValue;
+  }
 }

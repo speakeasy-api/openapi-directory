@@ -15,6 +15,7 @@ public class SetDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionType")
     public DimensionTypeEnum dimensionType;
+
     public SetDimension withDimensionType(DimensionTypeEnum dimensionType) {
         this.dimensionType = dimensionType;
         return this;
@@ -22,9 +23,13 @@ public class SetDimension {
     
     @JsonProperty("Values")
     public String[] values;
+
     public SetDimension withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SetDimension(@JsonProperty("Values") String[] values) {
+        this.values = values;
+  }
 }

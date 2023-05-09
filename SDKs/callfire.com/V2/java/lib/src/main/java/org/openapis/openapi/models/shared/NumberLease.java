@@ -18,6 +18,7 @@ public class NumberLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoRenew")
     public Boolean autoRenew;
+
     public NumberLease withAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
@@ -29,6 +30,7 @@ public class NumberLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callFeatureStatus")
     public NumberLeaseCallFeatureStatusEnum callFeatureStatus;
+
     public NumberLease withCallFeatureStatus(NumberLeaseCallFeatureStatusEnum callFeatureStatus) {
         this.callFeatureStatus = callFeatureStatus;
         return this;
@@ -40,6 +42,7 @@ public class NumberLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public NumberLease withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class NumberLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leaseBegin")
     public Long leaseBegin;
+
     public NumberLease withLeaseBegin(Long leaseBegin) {
         this.leaseBegin = leaseBegin;
         return this;
@@ -62,6 +66,7 @@ public class NumberLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leaseEnd")
     public Long leaseEnd;
+
     public NumberLease withLeaseEnd(Long leaseEnd) {
         this.leaseEnd = leaseEnd;
         return this;
@@ -73,6 +78,7 @@ public class NumberLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nationalFormat")
     public String nationalFormat;
+
     public NumberLease withNationalFormat(String nationalFormat) {
         this.nationalFormat = nationalFormat;
         return this;
@@ -84,6 +90,7 @@ public class NumberLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public NumberLease withNumber(String number) {
         this.number = number;
         return this;
@@ -95,6 +102,7 @@ public class NumberLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public Region region;
+
     public NumberLease withRegion(Region region) {
         this.region = region;
         return this;
@@ -106,6 +114,7 @@ public class NumberLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sendEmailOnCreate")
     public Boolean sendEmailOnCreate;
+
     public NumberLease withSendEmailOnCreate(Boolean sendEmailOnCreate) {
         this.sendEmailOnCreate = sendEmailOnCreate;
         return this;
@@ -117,6 +126,7 @@ public class NumberLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public NumberLeaseStatusEnum status;
+
     public NumberLease withStatus(NumberLeaseStatusEnum status) {
         this.status = status;
         return this;
@@ -128,6 +138,7 @@ public class NumberLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textFeatureStatus")
     public NumberLeaseTextFeatureStatusEnum textFeatureStatus;
+
     public NumberLease withTextFeatureStatus(NumberLeaseTextFeatureStatusEnum textFeatureStatus) {
         this.textFeatureStatus = textFeatureStatus;
         return this;
@@ -139,6 +150,7 @@ public class NumberLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tollFree")
     public Boolean tollFree;
+
     public NumberLease withTollFree(Boolean tollFree) {
         this.tollFree = tollFree;
         return this;
@@ -150,9 +162,11 @@ public class NumberLease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public NumberLeaseTypeEnum type;
+
     public NumberLease withType(NumberLeaseTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public NumberLease(){}
 }

@@ -31,6 +31,7 @@ public class ConsentStatusResponse200 {
      */
     @JsonProperty("consentStatus")
     public ConsentStatusEnum consentStatus;
+
     public ConsentStatusResponse200 withConsentStatus(ConsentStatusEnum consentStatus) {
         this.consentStatus = consentStatus;
         return this;
@@ -42,9 +43,13 @@ public class ConsentStatusResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("psuMessage")
     public String psuMessage;
+
     public ConsentStatusResponse200 withPsuMessage(String psuMessage) {
         this.psuMessage = psuMessage;
         return this;
     }
     
+    public ConsentStatusResponse200(@JsonProperty("consentStatus") ConsentStatusEnum consentStatus) {
+        this.consentStatus = consentStatus;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class RetrieveAccountTransactionsV2Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public RetrieveAccountTransactionsV2Request withCountry(String country) {
         this.country = country;
         return this;
@@ -20,6 +22,7 @@ public class RetrieveAccountTransactionsV2Request {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_from")
     public LocalDate dateFrom;
+
     public RetrieveAccountTransactionsV2Request withDateFrom(LocalDate dateFrom) {
         this.dateFrom = dateFrom;
         return this;
@@ -27,6 +30,7 @@ public class RetrieveAccountTransactionsV2Request {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_to")
     public LocalDate dateTo;
+
     public RetrieveAccountTransactionsV2Request withDateTo(LocalDate dateTo) {
         this.dateTo = dateTo;
         return this;
@@ -34,9 +38,13 @@ public class RetrieveAccountTransactionsV2Request {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public RetrieveAccountTransactionsV2Request withId(String id) {
         this.id = id;
         return this;
     }
     
+    public RetrieveAccountTransactionsV2Request(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

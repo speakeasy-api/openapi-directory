@@ -53,12 +53,10 @@ public class Authors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateAuthorDetailsResponse res = new org.openapis.openapi.models.operations.PrivateAuthorDetailsResponse() {{
+        org.openapis.openapi.models.operations.PrivateAuthorDetailsResponse res = new org.openapis.openapi.models.operations.PrivateAuthorDetailsResponse(contentType, httpRes.statusCode()) {{
             authorComplete = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,12 +104,10 @@ public class Authors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateAuthorsSearchResponse res = new org.openapis.openapi.models.operations.PrivateAuthorsSearchResponse() {{
+        org.openapis.openapi.models.operations.PrivateAuthorsSearchResponse res = new org.openapis.openapi.models.operations.PrivateAuthorsSearchResponse(contentType, httpRes.statusCode()) {{
             authors = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

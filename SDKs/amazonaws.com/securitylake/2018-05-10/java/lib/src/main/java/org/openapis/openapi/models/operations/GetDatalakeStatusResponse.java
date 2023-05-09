@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDatalakeStatusResponse {
@@ -12,6 +13,7 @@ public class GetDatalakeStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDatalakeStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetDatalakeStatusResponse {
      */
     
     public Object accountNotFoundException;
+
     public GetDatalakeStatusResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetDatalakeStatusResponse {
     
     
     public String contentType;
+
     public GetDatalakeStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetDatalakeStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDatalakeStatusResponse getDatalakeStatusResponse;
+
     public GetDatalakeStatusResponse withGetDatalakeStatusResponse(org.openapis.openapi.models.shared.GetDatalakeStatusResponse getDatalakeStatusResponse) {
         this.getDatalakeStatusResponse = getDatalakeStatusResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetDatalakeStatusResponse {
      */
     
     public Object internalServerException;
+
     public GetDatalakeStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class GetDatalakeStatusResponse {
     
     
     public Integer statusCode;
+
     public GetDatalakeStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetDatalakeStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDatalakeStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetDatalakeStatusResponse {
      */
     
     public Object validationException;
+
     public GetDatalakeStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetDatalakeStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

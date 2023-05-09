@@ -15,9 +15,11 @@ public class ResourceDataSyncOrganizationalUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnitId")
     public String organizationalUnitId;
+
     public ResourceDataSyncOrganizationalUnit withOrganizationalUnitId(String organizationalUnitId) {
         this.organizationalUnitId = organizationalUnitId;
         return this;
     }
     
+    public ResourceDataSyncOrganizationalUnit(){}
 }

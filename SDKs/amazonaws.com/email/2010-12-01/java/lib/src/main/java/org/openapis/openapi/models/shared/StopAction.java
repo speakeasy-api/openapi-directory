@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * StopAction - &lt;p&gt;When included in a receipt rule, this action terminates the evaluation of the receipt rule set and, optionally, publishes a notification to Amazon Simple Notification Service (Amazon SNS).&lt;/p&gt; &lt;p&gt;For information about setting a stop action in a receipt rule, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-action-stop.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StopAction {
     
     public StopScopeEnum scope;
+
     public StopAction withScope(StopScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -19,9 +20,13 @@ public class StopAction {
     
     
     public String topicArn;
+
     public StopAction withTopicArn(String topicArn) {
         this.topicArn = topicArn;
         return this;
     }
     
+    public StopAction(@JsonProperty("Scope") StopScopeEnum scope) {
+        this.scope = scope;
+  }
 }

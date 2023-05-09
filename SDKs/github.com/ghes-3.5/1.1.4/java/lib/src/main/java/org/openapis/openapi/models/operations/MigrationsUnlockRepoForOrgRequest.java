@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsUnlockRepoForOrgRequest {
@@ -12,6 +13,7 @@ public class MigrationsUnlockRepoForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=migration_id")
     public Long migrationId;
+
     public MigrationsUnlockRepoForOrgRequest withMigrationId(Long migrationId) {
         this.migrationId = migrationId;
         return this;
@@ -22,6 +24,7 @@ public class MigrationsUnlockRepoForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public MigrationsUnlockRepoForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -32,9 +35,15 @@ public class MigrationsUnlockRepoForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_name")
     public String repoName;
+
     public MigrationsUnlockRepoForOrgRequest withRepoName(String repoName) {
         this.repoName = repoName;
         return this;
     }
     
+    public MigrationsUnlockRepoForOrgRequest(@JsonProperty("migration_id") Long migrationId, @JsonProperty("org") String org, @JsonProperty("repo_name") String repoName) {
+        this.migrationId = migrationId;
+        this.org = org;
+        this.repoName = repoName;
+  }
 }

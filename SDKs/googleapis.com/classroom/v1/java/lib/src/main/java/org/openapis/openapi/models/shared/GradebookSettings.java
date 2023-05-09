@@ -18,6 +18,7 @@ public class GradebookSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculationType")
     public GradebookSettingsCalculationTypeEnum calculationType;
+
     public GradebookSettings withCalculationType(GradebookSettingsCalculationTypeEnum calculationType) {
         this.calculationType = calculationType;
         return this;
@@ -29,6 +30,7 @@ public class GradebookSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displaySetting")
     public GradebookSettingsDisplaySettingEnum displaySetting;
+
     public GradebookSettings withDisplaySetting(GradebookSettingsDisplaySettingEnum displaySetting) {
         this.displaySetting = displaySetting;
         return this;
@@ -40,9 +42,11 @@ public class GradebookSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradeCategories")
     public GradeCategory[] gradeCategories;
+
     public GradebookSettings withGradeCategories(GradeCategory[] gradeCategories) {
         this.gradeCategories = gradeCategories;
         return this;
     }
     
+    public GradebookSettings(){}
 }

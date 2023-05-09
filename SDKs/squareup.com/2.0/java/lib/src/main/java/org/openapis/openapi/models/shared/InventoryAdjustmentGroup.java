@@ -17,6 +17,7 @@ public class InventoryAdjustmentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from_state")
     public String fromState;
+
     public InventoryAdjustmentGroup withFromState(String fromState) {
         this.fromState = fromState;
         return this;
@@ -29,6 +30,7 @@ public class InventoryAdjustmentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public InventoryAdjustmentGroup withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class InventoryAdjustmentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("root_adjustment_id")
     public String rootAdjustmentId;
+
     public InventoryAdjustmentGroup withRootAdjustmentId(String rootAdjustmentId) {
         this.rootAdjustmentId = rootAdjustmentId;
         return this;
@@ -53,9 +56,11 @@ public class InventoryAdjustmentGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to_state")
     public String toState;
+
     public InventoryAdjustmentGroup withToState(String toState) {
         this.toState = toState;
         return this;
     }
     
+    public InventoryAdjustmentGroup(){}
 }

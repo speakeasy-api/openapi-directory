@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PlatformProgrammingLanguage {
     
     public String name;
+
     public PlatformProgrammingLanguage withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class PlatformProgrammingLanguage {
     
     
     public String version;
+
     public PlatformProgrammingLanguage withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public PlatformProgrammingLanguage(){}
 }

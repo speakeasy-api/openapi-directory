@@ -18,6 +18,7 @@ public class GoogleCloudDiscoveryengineV1alphaPageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageCategory")
     public String pageCategory;
+
     public GoogleCloudDiscoveryengineV1alphaPageInfo withPageCategory(String pageCategory) {
         this.pageCategory = pageCategory;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDiscoveryengineV1alphaPageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageviewId")
     public String pageviewId;
+
     public GoogleCloudDiscoveryengineV1alphaPageInfo withPageviewId(String pageviewId) {
         this.pageviewId = pageviewId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDiscoveryengineV1alphaPageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referrerUri")
     public String referrerUri;
+
     public GoogleCloudDiscoveryengineV1alphaPageInfo withReferrerUri(String referrerUri) {
         this.referrerUri = referrerUri;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDiscoveryengineV1alphaPageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudDiscoveryengineV1alphaPageInfo withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudDiscoveryengineV1alphaPageInfo(){}
 }

@@ -12,9 +12,11 @@ public class ApiCoreDtoDatapointsUniqueDestinationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstDestinationUrl")
     public String firstDestinationUrl;
+
     public ApiCoreDtoDatapointsUniqueDestinationItem withFirstDestinationUrl(String firstDestinationUrl) {
         this.firstDestinationUrl = firstDestinationUrl;
         return this;
     }
     
+    public ApiCoreDtoDatapointsUniqueDestinationItem(){}
 }

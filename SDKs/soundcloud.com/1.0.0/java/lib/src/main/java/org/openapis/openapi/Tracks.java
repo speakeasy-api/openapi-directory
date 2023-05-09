@@ -56,11 +56,9 @@ public class Tracks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTracksTrackIdResponse res = new org.openapis.openapi.models.operations.DeleteTracksTrackIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteTracksTrackIdResponse res = new org.openapis.openapi.models.operations.DeleteTracksTrackIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,13 +102,11 @@ public class Tracks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTracksTrackIdResponse res = new org.openapis.openapi.models.operations.GetTracksTrackIdResponse() {{
+        org.openapis.openapi.models.operations.GetTracksTrackIdResponse res = new org.openapis.openapi.models.operations.GetTracksTrackIdResponse(contentType, httpRes.statusCode()) {{
             track = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -166,13 +162,11 @@ public class Tracks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTracksTrackIdCommentsResponse res = new org.openapis.openapi.models.operations.GetTracksTrackIdCommentsResponse() {{
+        org.openapis.openapi.models.operations.GetTracksTrackIdCommentsResponse res = new org.openapis.openapi.models.operations.GetTracksTrackIdCommentsResponse(contentType, httpRes.statusCode()) {{
             getTracksTrackIdComments200ApplicationJSONOneOf = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -228,13 +222,11 @@ public class Tracks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTracksTrackIdFavoritersResponse res = new org.openapis.openapi.models.operations.GetTracksTrackIdFavoritersResponse() {{
+        org.openapis.openapi.models.operations.GetTracksTrackIdFavoritersResponse res = new org.openapis.openapi.models.operations.GetTracksTrackIdFavoritersResponse(contentType, httpRes.statusCode()) {{
             usersList = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,13 +282,11 @@ public class Tracks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTracksTrackIdRelatedResponse res = new org.openapis.openapi.models.operations.GetTracksTrackIdRelatedResponse() {{
+        org.openapis.openapi.models.operations.GetTracksTrackIdRelatedResponse res = new org.openapis.openapi.models.operations.GetTracksTrackIdRelatedResponse(contentType, httpRes.statusCode()) {{
             getTracksTrackIdRelated200ApplicationJSONOneOf = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -352,13 +342,11 @@ public class Tracks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTracksTrackIdRepostersResponse res = new org.openapis.openapi.models.operations.GetTracksTrackIdRepostersResponse() {{
+        org.openapis.openapi.models.operations.GetTracksTrackIdRepostersResponse res = new org.openapis.openapi.models.operations.GetTracksTrackIdRepostersResponse(contentType, httpRes.statusCode()) {{
             metaUsers = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -414,13 +402,11 @@ public class Tracks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTracksTrackIdStreamsResponse res = new org.openapis.openapi.models.operations.GetTracksTrackIdStreamsResponse() {{
+        org.openapis.openapi.models.operations.GetTracksTrackIdStreamsResponse res = new org.openapis.openapi.models.operations.GetTracksTrackIdStreamsResponse(contentType, httpRes.statusCode()) {{
             streams = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -472,12 +458,10 @@ public class Tracks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTracksResponse res = new org.openapis.openapi.models.operations.PostTracksResponse() {{
+        org.openapis.openapi.models.operations.PostTracksResponse res = new org.openapis.openapi.models.operations.PostTracksResponse(contentType, httpRes.statusCode()) {{
             track = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -525,13 +509,11 @@ public class Tracks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTracksTrackIdCommentsResponse res = new org.openapis.openapi.models.operations.PostTracksTrackIdCommentsResponse() {{
+        org.openapis.openapi.models.operations.PostTracksTrackIdCommentsResponse res = new org.openapis.openapi.models.operations.PostTracksTrackIdCommentsResponse(contentType, httpRes.statusCode()) {{
             comment = null;
             error = null;
             tooManyRequests = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -583,12 +565,10 @@ public class Tracks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutTracksTrackIdJsonResponse res = new org.openapis.openapi.models.operations.PutTracksTrackIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutTracksTrackIdJsonResponse res = new org.openapis.openapi.models.operations.PutTracksTrackIdJsonResponse(contentType, httpRes.statusCode()) {{
             track = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -633,12 +613,10 @@ public class Tracks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutTracksTrackIdMultipartResponse res = new org.openapis.openapi.models.operations.PutTracksTrackIdMultipartResponse() {{
+        org.openapis.openapi.models.operations.PutTracksTrackIdMultipartResponse res = new org.openapis.openapi.models.operations.PutTracksTrackIdMultipartResponse(contentType, httpRes.statusCode()) {{
             track = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

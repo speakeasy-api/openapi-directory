@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class StartInstanceRefreshAnswer {
     
     public String instanceRefreshId;
+
     public StartInstanceRefreshAnswer withInstanceRefreshId(String instanceRefreshId) {
         this.instanceRefreshId = instanceRefreshId;
         return this;
     }
     
+    public StartInstanceRefreshAnswer(){}
 }

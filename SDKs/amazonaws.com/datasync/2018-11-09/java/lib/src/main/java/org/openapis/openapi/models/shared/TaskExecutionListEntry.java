@@ -15,6 +15,7 @@ public class TaskExecutionListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TaskExecutionStatusEnum status;
+
     public TaskExecutionListEntry withStatus(TaskExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -23,9 +24,11 @@ public class TaskExecutionListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskExecutionArn")
     public String taskExecutionArn;
+
     public TaskExecutionListEntry withTaskExecutionArn(String taskExecutionArn) {
         this.taskExecutionArn = taskExecutionArn;
         return this;
     }
     
+    public TaskExecutionListEntry(){}
 }

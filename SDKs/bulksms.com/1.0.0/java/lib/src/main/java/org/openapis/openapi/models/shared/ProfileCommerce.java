@@ -12,6 +12,7 @@ public class ProfileCommerce {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public ProfileCommerceAddress address;
+
     public ProfileCommerce withAddress(ProfileCommerceAddress address) {
         this.address = address;
         return this;
@@ -20,9 +21,11 @@ public class ProfileCommerce {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankPaymentReference")
     public String bankPaymentReference;
+
     public ProfileCommerce withBankPaymentReference(String bankPaymentReference) {
         this.bankPaymentReference = bankPaymentReference;
         return this;
     }
     
+    public ProfileCommerce(){}
 }

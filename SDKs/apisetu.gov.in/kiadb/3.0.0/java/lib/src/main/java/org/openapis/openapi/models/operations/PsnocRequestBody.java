@@ -15,6 +15,7 @@ public class PsnocRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public PsnocRequestBodyCertificateParameters certificateParameters;
+
     public PsnocRequestBody withCertificateParameters(PsnocRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class PsnocRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public PsnocRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class PsnocRequestBody {
      */
     @JsonProperty("format")
     public PsnocRequestBodyFormatEnum format;
+
     public PsnocRequestBody withFormat(PsnocRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class PsnocRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public PsnocRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public PsnocRequestBody(@JsonProperty("format") PsnocRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

@@ -14,6 +14,7 @@ public class CreateSamplingRuleRequestBody {
      */
     @JsonProperty("SamplingRule")
     public CreateSamplingRuleRequestBodySamplingRule samplingRule;
+
     public CreateSamplingRuleRequestBody withSamplingRule(CreateSamplingRuleRequestBodySamplingRule samplingRule) {
         this.samplingRule = samplingRule;
         return this;
@@ -25,9 +26,13 @@ public class CreateSamplingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateSamplingRuleRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSamplingRuleRequestBody(@JsonProperty("SamplingRule") CreateSamplingRuleRequestBodySamplingRule samplingRule) {
+        this.samplingRule = samplingRule;
+  }
 }

@@ -15,9 +15,11 @@ public class TimeSeriesSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSeriesIdentifiers")
     public TimeSeriesIdentifiers timeSeriesIdentifiers;
+
     public TimeSeriesSelector withTimeSeriesIdentifiers(TimeSeriesIdentifiers timeSeriesIdentifiers) {
         this.timeSeriesIdentifiers = timeSeriesIdentifiers;
         return this;
     }
     
+    public TimeSeriesSelector(){}
 }

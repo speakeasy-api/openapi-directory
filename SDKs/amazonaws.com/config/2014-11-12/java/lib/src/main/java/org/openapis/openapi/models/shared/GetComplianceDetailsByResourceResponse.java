@@ -15,6 +15,7 @@ public class GetComplianceDetailsByResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationResults")
     public EvaluationResult[] evaluationResults;
+
     public GetComplianceDetailsByResourceResponse withEvaluationResults(EvaluationResult[] evaluationResults) {
         this.evaluationResults = evaluationResults;
         return this;
@@ -23,9 +24,11 @@ public class GetComplianceDetailsByResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetComplianceDetailsByResourceResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetComplianceDetailsByResourceResponse(){}
 }

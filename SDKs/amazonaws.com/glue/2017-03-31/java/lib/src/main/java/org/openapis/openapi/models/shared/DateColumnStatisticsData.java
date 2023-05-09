@@ -22,6 +22,7 @@ public class DateColumnStatisticsData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("MaximumValue")
     public OffsetDateTime maximumValue;
+
     public DateColumnStatisticsData withMaximumValue(OffsetDateTime maximumValue) {
         this.maximumValue = maximumValue;
         return this;
@@ -32,6 +33,7 @@ public class DateColumnStatisticsData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("MinimumValue")
     public OffsetDateTime minimumValue;
+
     public DateColumnStatisticsData withMinimumValue(OffsetDateTime minimumValue) {
         this.minimumValue = minimumValue;
         return this;
@@ -39,6 +41,7 @@ public class DateColumnStatisticsData {
     
     @JsonProperty("NumberOfDistinctValues")
     public Long numberOfDistinctValues;
+
     public DateColumnStatisticsData withNumberOfDistinctValues(Long numberOfDistinctValues) {
         this.numberOfDistinctValues = numberOfDistinctValues;
         return this;
@@ -46,9 +49,14 @@ public class DateColumnStatisticsData {
     
     @JsonProperty("NumberOfNulls")
     public Long numberOfNulls;
+
     public DateColumnStatisticsData withNumberOfNulls(Long numberOfNulls) {
         this.numberOfNulls = numberOfNulls;
         return this;
     }
     
+    public DateColumnStatisticsData(@JsonProperty("NumberOfDistinctValues") Long numberOfDistinctValues, @JsonProperty("NumberOfNulls") Long numberOfNulls) {
+        this.numberOfDistinctValues = numberOfDistinctValues;
+        this.numberOfNulls = numberOfNulls;
+  }
 }

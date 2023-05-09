@@ -18,6 +18,7 @@ public class GoogleCloudBillingBudgetsV1ThresholdRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spendBasis")
     public GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasisEnum spendBasis;
+
     public GoogleCloudBillingBudgetsV1ThresholdRule withSpendBasis(GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasisEnum spendBasis) {
         this.spendBasis = spendBasis;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudBillingBudgetsV1ThresholdRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thresholdPercent")
     public Double thresholdPercent;
+
     public GoogleCloudBillingBudgetsV1ThresholdRule withThresholdPercent(Double thresholdPercent) {
         this.thresholdPercent = thresholdPercent;
         return this;
     }
     
+    public GoogleCloudBillingBudgetsV1ThresholdRule(){}
 }

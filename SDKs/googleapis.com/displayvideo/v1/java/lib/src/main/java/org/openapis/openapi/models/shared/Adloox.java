@@ -18,9 +18,11 @@ public class Adloox {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedAdlooxCategories")
     public AdlooxExcludedAdlooxCategoriesEnum[] excludedAdlooxCategories;
+
     public Adloox withExcludedAdlooxCategories(AdlooxExcludedAdlooxCategoriesEnum[] excludedAdlooxCategories) {
         this.excludedAdlooxCategories = excludedAdlooxCategories;
         return this;
     }
     
+    public Adloox(){}
 }

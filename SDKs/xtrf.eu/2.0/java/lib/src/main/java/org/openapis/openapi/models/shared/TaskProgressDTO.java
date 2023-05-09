@@ -15,6 +15,7 @@ public class TaskProgressDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phase")
     public String phase;
+
     public TaskProgressDTO withPhase(String phase) {
         this.phase = phase;
         return this;
@@ -23,9 +24,11 @@ public class TaskProgressDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TaskProgressDTO withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public TaskProgressDTO(){}
 }

@@ -15,6 +15,7 @@ public class LabelingJobOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public LabelingJobOutputConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -22,6 +23,7 @@ public class LabelingJobOutputConfig {
     
     @JsonProperty("S3OutputPath")
     public String s3OutputPath;
+
     public LabelingJobOutputConfig withS3OutputPath(String s3OutputPath) {
         this.s3OutputPath = s3OutputPath;
         return this;
@@ -30,9 +32,13 @@ public class LabelingJobOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopicArn")
     public String snsTopicArn;
+
     public LabelingJobOutputConfig withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
     }
     
+    public LabelingJobOutputConfig(@JsonProperty("S3OutputPath") String s3OutputPath) {
+        this.s3OutputPath = s3OutputPath;
+  }
 }

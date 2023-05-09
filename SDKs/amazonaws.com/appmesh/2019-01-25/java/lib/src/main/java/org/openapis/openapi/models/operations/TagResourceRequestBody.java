@@ -12,9 +12,13 @@ public class TagResourceRequestBody {
      */
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.TagRef[] tags;
+
     public TagResourceRequestBody withTags(org.openapis.openapi.models.shared.TagRef[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagResourceRequestBody(@JsonProperty("tags") org.openapis.openapi.models.shared.TagRef[] tags) {
+        this.tags = tags;
+  }
 }

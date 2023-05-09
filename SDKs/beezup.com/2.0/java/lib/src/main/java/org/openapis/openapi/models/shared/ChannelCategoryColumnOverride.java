@@ -15,6 +15,7 @@ public class ChannelCategoryColumnOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelColumnDescription")
     public String channelColumnDescription;
+
     public ChannelCategoryColumnOverride withChannelColumnDescription(String channelColumnDescription) {
         this.channelColumnDescription = channelColumnDescription;
         return this;
@@ -25,6 +26,7 @@ public class ChannelCategoryColumnOverride {
      */
     @JsonProperty("channelColumnId")
     public String channelColumnId;
+
     public ChannelCategoryColumnOverride withChannelColumnId(String channelColumnId) {
         this.channelColumnId = channelColumnId;
         return this;
@@ -35,6 +37,7 @@ public class ChannelCategoryColumnOverride {
      */
     @JsonProperty("channelColumnName")
     public String channelColumnName;
+
     public ChannelCategoryColumnOverride withChannelColumnName(String channelColumnName) {
         this.channelColumnName = channelColumnName;
         return this;
@@ -45,6 +48,7 @@ public class ChannelCategoryColumnOverride {
      */
     @JsonProperty("configuration")
     public ChannelColumnConfiguration configuration;
+
     public ChannelCategoryColumnOverride withConfiguration(ChannelColumnConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -57,6 +61,7 @@ public class ChannelCategoryColumnOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictedValues")
     public java.util.Map<String, String> restrictedValues;
+
     public ChannelCategoryColumnOverride withRestrictedValues(java.util.Map<String, String> restrictedValues) {
         this.restrictedValues = restrictedValues;
         return this;
@@ -67,9 +72,16 @@ public class ChannelCategoryColumnOverride {
      */
     @JsonProperty("showInMapping")
     public Boolean showInMapping;
+
     public ChannelCategoryColumnOverride withShowInMapping(Boolean showInMapping) {
         this.showInMapping = showInMapping;
         return this;
     }
     
+    public ChannelCategoryColumnOverride(@JsonProperty("channelColumnId") String channelColumnId, @JsonProperty("channelColumnName") String channelColumnName, @JsonProperty("configuration") ChannelColumnConfiguration configuration, @JsonProperty("showInMapping") Boolean showInMapping) {
+        this.channelColumnId = channelColumnId;
+        this.channelColumnName = channelColumnName;
+        this.configuration = configuration;
+        this.showInMapping = showInMapping;
+  }
 }

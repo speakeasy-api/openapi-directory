@@ -12,6 +12,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("away")
     public String away;
+
     public Play withAway(String away) {
         this.away = away;
         return this;
@@ -20,6 +21,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clock")
     public PlayClock clock;
+
     public Play withClock(PlayClock clock) {
         this.clock = clock;
         return this;
@@ -28,6 +30,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defense")
     public String defense;
+
     public Play withDefense(String defense) {
         this.defense = defense;
         return this;
@@ -36,6 +39,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defense_conference")
     public String defenseConference;
+
     public Play withDefenseConference(String defenseConference) {
         this.defenseConference = defenseConference;
         return this;
@@ -44,6 +48,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defense_score")
     public Long defenseScore;
+
     public Play withDefenseScore(Long defenseScore) {
         this.defenseScore = defenseScore;
         return this;
@@ -52,6 +57,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defense_timeouts")
     public Long defenseTimeouts;
+
     public Play withDefenseTimeouts(Long defenseTimeouts) {
         this.defenseTimeouts = defenseTimeouts;
         return this;
@@ -60,6 +66,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public Long distance;
+
     public Play withDistance(Long distance) {
         this.distance = distance;
         return this;
@@ -68,6 +75,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("down")
     public Long down;
+
     public Play withDown(Long down) {
         this.down = down;
         return this;
@@ -76,6 +84,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drive_id")
     public Long driveId;
+
     public Play withDriveId(Long driveId) {
         this.driveId = driveId;
         return this;
@@ -84,6 +93,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drive_number")
     public Long driveNumber;
+
     public Play withDriveNumber(Long driveNumber) {
         this.driveNumber = driveNumber;
         return this;
@@ -92,6 +102,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("game_id")
     public Long gameId;
+
     public Play withGameId(Long gameId) {
         this.gameId = gameId;
         return this;
@@ -100,6 +111,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("home")
     public String home;
+
     public Play withHome(String home) {
         this.home = home;
         return this;
@@ -108,6 +120,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Play withId(Long id) {
         this.id = id;
         return this;
@@ -116,6 +129,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offense")
     public String offense;
+
     public Play withOffense(String offense) {
         this.offense = offense;
         return this;
@@ -124,6 +138,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offense_conference")
     public String offenseConference;
+
     public Play withOffenseConference(String offenseConference) {
         this.offenseConference = offenseConference;
         return this;
@@ -132,6 +147,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offense_score")
     public Long offenseScore;
+
     public Play withOffenseScore(Long offenseScore) {
         this.offenseScore = offenseScore;
         return this;
@@ -140,6 +156,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offense_timeouts")
     public Long offenseTimeouts;
+
     public Play withOffenseTimeouts(Long offenseTimeouts) {
         this.offenseTimeouts = offenseTimeouts;
         return this;
@@ -148,6 +165,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public Long period;
+
     public Play withPeriod(Long period) {
         this.period = period;
         return this;
@@ -156,6 +174,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("play_number")
     public Long playNumber;
+
     public Play withPlayNumber(Long playNumber) {
         this.playNumber = playNumber;
         return this;
@@ -164,6 +183,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("play_text")
     public String playText;
+
     public Play withPlayText(String playText) {
         this.playText = playText;
         return this;
@@ -172,6 +192,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("play_type")
     public String playType;
+
     public Play withPlayType(String playType) {
         this.playType = playType;
         return this;
@@ -180,6 +201,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ppa")
     public Double ppa;
+
     public Play withPpa(Double ppa) {
         this.ppa = ppa;
         return this;
@@ -188,6 +210,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scoring")
     public Boolean scoring;
+
     public Play withScoring(Boolean scoring) {
         this.scoring = scoring;
         return this;
@@ -196,6 +219,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wallclock")
     public String wallclock;
+
     public Play withWallclock(String wallclock) {
         this.wallclock = wallclock;
         return this;
@@ -204,6 +228,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yard_line")
     public Long yardLine;
+
     public Play withYardLine(Long yardLine) {
         this.yardLine = yardLine;
         return this;
@@ -212,6 +237,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yards_gained")
     public Long yardsGained;
+
     public Play withYardsGained(Long yardsGained) {
         this.yardsGained = yardsGained;
         return this;
@@ -220,9 +246,11 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yards_to_goal")
     public Long yardsToGoal;
+
     public Play withYardsToGoal(Long yardsToGoal) {
         this.yardsToGoal = yardsToGoal;
         return this;
     }
     
+    public Play(){}
 }

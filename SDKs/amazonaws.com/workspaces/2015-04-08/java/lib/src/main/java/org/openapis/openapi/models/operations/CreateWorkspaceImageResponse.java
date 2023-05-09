@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWorkspaceImageResponse {
@@ -12,6 +13,7 @@ public class CreateWorkspaceImageResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateWorkspaceImageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateWorkspaceImageResponse {
     
     
     public String contentType;
+
     public CreateWorkspaceImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateWorkspaceImageResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWorkspaceImageResult createWorkspaceImageResult;
+
     public CreateWorkspaceImageResponse withCreateWorkspaceImageResult(org.openapis.openapi.models.shared.CreateWorkspaceImageResult createWorkspaceImageResult) {
         this.createWorkspaceImageResult = createWorkspaceImageResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateWorkspaceImageResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public CreateWorkspaceImageResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class CreateWorkspaceImageResponse {
      */
     
     public Object invalidResourceStateException;
+
     public CreateWorkspaceImageResponse withInvalidResourceStateException(Object invalidResourceStateException) {
         this.invalidResourceStateException = invalidResourceStateException;
         return this;
@@ -59,6 +65,7 @@ public class CreateWorkspaceImageResponse {
      */
     
     public Object operationNotSupportedException;
+
     public CreateWorkspaceImageResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -69,6 +76,7 @@ public class CreateWorkspaceImageResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateWorkspaceImageResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -79,6 +87,7 @@ public class CreateWorkspaceImageResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateWorkspaceImageResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -86,6 +95,7 @@ public class CreateWorkspaceImageResponse {
     
     
     public Integer statusCode;
+
     public CreateWorkspaceImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateWorkspaceImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWorkspaceImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateWorkspaceImageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateWorkspaceImageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateWorkspaceImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

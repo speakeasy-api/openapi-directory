@@ -12,9 +12,13 @@ public class GlossaryUploadRequest {
      */
     @JsonProperty("glossaries")
     public byte[] glossaries;
+
     public GlossaryUploadRequest withGlossaries(byte[] glossaries) {
         this.glossaries = glossaries;
         return this;
     }
     
+    public GlossaryUploadRequest(@JsonProperty("glossaries") byte[] glossaries) {
+        this.glossaries = glossaries;
+  }
 }

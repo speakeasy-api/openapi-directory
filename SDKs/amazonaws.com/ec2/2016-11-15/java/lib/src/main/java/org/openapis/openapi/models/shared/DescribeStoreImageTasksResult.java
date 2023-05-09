@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeStoreImageTasksResult {
     
     public String nextToken;
+
     public DescribeStoreImageTasksResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeStoreImageTasksResult {
     
     
     public DescribeStoreImageTasksResultStoreImageTaskResults[] storeImageTaskResults;
+
     public DescribeStoreImageTasksResult withStoreImageTaskResults(DescribeStoreImageTasksResultStoreImageTaskResults[] storeImageTaskResults) {
         this.storeImageTaskResults = storeImageTaskResults;
         return this;
     }
     
+    public DescribeStoreImageTasksResult(){}
 }

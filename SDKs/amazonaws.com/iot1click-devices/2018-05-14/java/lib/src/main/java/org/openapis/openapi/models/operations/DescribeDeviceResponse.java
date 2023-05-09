@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDeviceResponse {
     
     public String contentType;
+
     public DescribeDeviceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDeviceResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDeviceResponse describeDeviceResponse;
+
     public DescribeDeviceResponse withDescribeDeviceResponse(org.openapis.openapi.models.shared.DescribeDeviceResponse describeDeviceResponse) {
         this.describeDeviceResponse = describeDeviceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDeviceResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeDeviceResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDeviceResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeDeviceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDeviceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDeviceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeDeviceResponse {
     
     
     public Integer statusCode;
+
     public DescribeDeviceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeDeviceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDeviceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeDeviceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

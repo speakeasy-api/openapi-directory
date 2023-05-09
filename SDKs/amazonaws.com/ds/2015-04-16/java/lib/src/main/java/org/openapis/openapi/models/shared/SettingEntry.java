@@ -20,6 +20,7 @@ public class SettingEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedValues")
     public String allowedValues;
+
     public SettingEntry withAllowedValues(String allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -28,8 +29,18 @@ public class SettingEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppliedValue")
     public String appliedValue;
+
     public SettingEntry withAppliedValue(String appliedValue) {
         this.appliedValue = appliedValue;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("DataType")
+    public String dataType;
+
+    public SettingEntry withDataType(String dataType) {
+        this.dataType = dataType;
         return this;
     }
     
@@ -38,6 +49,7 @@ public class SettingEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastRequestedDateTime")
     public OffsetDateTime lastRequestedDateTime;
+
     public SettingEntry withLastRequestedDateTime(OffsetDateTime lastRequestedDateTime) {
         this.lastRequestedDateTime = lastRequestedDateTime;
         return this;
@@ -48,6 +60,7 @@ public class SettingEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public SettingEntry withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -56,6 +69,7 @@ public class SettingEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SettingEntry withName(String name) {
         this.name = name;
         return this;
@@ -64,6 +78,7 @@ public class SettingEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestDetailedStatus")
     public java.util.Map<String, DirectoryConfigurationStatusEnum> requestDetailedStatus;
+
     public SettingEntry withRequestDetailedStatus(java.util.Map<String, DirectoryConfigurationStatusEnum> requestDetailedStatus) {
         this.requestDetailedStatus = requestDetailedStatus;
         return this;
@@ -72,6 +87,7 @@ public class SettingEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestStatus")
     public DirectoryConfigurationStatusEnum requestStatus;
+
     public SettingEntry withRequestStatus(DirectoryConfigurationStatusEnum requestStatus) {
         this.requestStatus = requestStatus;
         return this;
@@ -80,6 +96,7 @@ public class SettingEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestStatusMessage")
     public String requestStatusMessage;
+
     public SettingEntry withRequestStatusMessage(String requestStatusMessage) {
         this.requestStatusMessage = requestStatusMessage;
         return this;
@@ -88,6 +105,7 @@ public class SettingEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestedValue")
     public String requestedValue;
+
     public SettingEntry withRequestedValue(String requestedValue) {
         this.requestedValue = requestedValue;
         return this;
@@ -96,9 +114,11 @@ public class SettingEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public SettingEntry withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SettingEntry(){}
 }

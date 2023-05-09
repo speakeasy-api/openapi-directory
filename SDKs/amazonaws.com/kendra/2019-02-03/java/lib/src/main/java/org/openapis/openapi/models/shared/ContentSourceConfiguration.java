@@ -15,6 +15,7 @@ public class ContentSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceIds")
     public String[] dataSourceIds;
+
     public ContentSourceConfiguration withDataSourceIds(String[] dataSourceIds) {
         this.dataSourceIds = dataSourceIds;
         return this;
@@ -23,6 +24,7 @@ public class ContentSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectPutContent")
     public Boolean directPutContent;
+
     public ContentSourceConfiguration withDirectPutContent(Boolean directPutContent) {
         this.directPutContent = directPutContent;
         return this;
@@ -31,9 +33,11 @@ public class ContentSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaqIds")
     public String[] faqIds;
+
     public ContentSourceConfiguration withFaqIds(String[] faqIds) {
         this.faqIds = faqIds;
         return this;
     }
     
+    public ContentSourceConfiguration(){}
 }

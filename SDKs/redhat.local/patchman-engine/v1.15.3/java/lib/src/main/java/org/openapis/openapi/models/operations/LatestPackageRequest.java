@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LatestPackageRequest {
@@ -12,9 +13,13 @@ public class LatestPackageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_name")
     public String packageName;
+
     public LatestPackageRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
     }
     
+    public LatestPackageRequest(@JsonProperty("package_name") String packageName) {
+        this.packageName = packageName;
+  }
 }

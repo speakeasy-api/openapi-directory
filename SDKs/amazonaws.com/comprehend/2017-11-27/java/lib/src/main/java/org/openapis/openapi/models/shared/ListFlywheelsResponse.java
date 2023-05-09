@@ -15,6 +15,7 @@ public class ListFlywheelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelSummaryList")
     public FlywheelSummary[] flywheelSummaryList;
+
     public ListFlywheelsResponse withFlywheelSummaryList(FlywheelSummary[] flywheelSummaryList) {
         this.flywheelSummaryList = flywheelSummaryList;
         return this;
@@ -23,9 +24,11 @@ public class ListFlywheelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFlywheelsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFlywheelsResponse(){}
 }

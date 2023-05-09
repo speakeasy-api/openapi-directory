@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RevokeSecurityGroupEgressResultUnknownIpPermissions {
     
     public Long fromPort;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissions withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -19,6 +20,7 @@ public class RevokeSecurityGroupEgressResultUnknownIpPermissions {
     
     
     public String ipProtocol;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissions withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -26,6 +28,7 @@ public class RevokeSecurityGroupEgressResultUnknownIpPermissions {
     
     
     public RevokeSecurityGroupEgressResultUnknownIpPermissionsIpRanges[] ipRanges;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissions withIpRanges(RevokeSecurityGroupEgressResultUnknownIpPermissionsIpRanges[] ipRanges) {
         this.ipRanges = ipRanges;
         return this;
@@ -33,6 +36,7 @@ public class RevokeSecurityGroupEgressResultUnknownIpPermissions {
     
     
     public RevokeSecurityGroupEgressResultUnknownIpPermissionsIpv6Ranges[] ipv6Ranges;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissions withIpv6Ranges(RevokeSecurityGroupEgressResultUnknownIpPermissionsIpv6Ranges[] ipv6Ranges) {
         this.ipv6Ranges = ipv6Ranges;
         return this;
@@ -40,6 +44,7 @@ public class RevokeSecurityGroupEgressResultUnknownIpPermissions {
     
     
     public RevokeSecurityGroupEgressResultUnknownIpPermissionsPrefixListIds[] prefixListIds;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissions withPrefixListIds(RevokeSecurityGroupEgressResultUnknownIpPermissionsPrefixListIds[] prefixListIds) {
         this.prefixListIds = prefixListIds;
         return this;
@@ -47,6 +52,7 @@ public class RevokeSecurityGroupEgressResultUnknownIpPermissions {
     
     
     public Long toPort;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissions withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
@@ -54,9 +60,11 @@ public class RevokeSecurityGroupEgressResultUnknownIpPermissions {
     
     
     public RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs[] userIdGroupPairs;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissions withUserIdGroupPairs(RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs[] userIdGroupPairs) {
         this.userIdGroupPairs = userIdGroupPairs;
         return this;
     }
     
+    public RevokeSecurityGroupEgressResultUnknownIpPermissions(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSuggestionbyversionRequest {
@@ -12,6 +13,7 @@ public class GetSuggestionbyversionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetSuggestionbyversionRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetSuggestionbyversionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetSuggestionbyversionRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetSuggestionbyversionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public GetSuggestionbyversionRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -42,6 +46,7 @@ public class GetSuggestionbyversionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public GetSuggestionbyversionRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -52,6 +57,7 @@ public class GetSuggestionbyversionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerskuid")
     public String sellerskuid;
+
     public GetSuggestionbyversionRequest withSellerskuid(String sellerskuid) {
         this.sellerskuid = sellerskuid;
         return this;
@@ -62,9 +68,18 @@ public class GetSuggestionbyversionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public GetSuggestionbyversionRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GetSuggestionbyversionRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("accountName") String accountName, @JsonProperty("sellerId") String sellerId, @JsonProperty("sellerskuid") String sellerskuid, @JsonProperty("version") String version) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.accountName = accountName;
+        this.sellerId = sellerId;
+        this.sellerskuid = sellerskuid;
+        this.version = version;
+  }
 }

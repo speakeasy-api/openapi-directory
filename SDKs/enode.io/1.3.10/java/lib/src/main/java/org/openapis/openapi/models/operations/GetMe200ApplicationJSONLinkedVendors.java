@@ -15,6 +15,7 @@ public class GetMe200ApplicationJSONLinkedVendors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isValid")
     public Boolean isValid;
+
     public GetMe200ApplicationJSONLinkedVendors withIsValid(Boolean isValid) {
         this.isValid = isValid;
         return this;
@@ -26,9 +27,11 @@ public class GetMe200ApplicationJSONLinkedVendors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public org.openapis.openapi.models.shared.Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum vendor;
+
     public GetMe200ApplicationJSONLinkedVendors withVendor(org.openapis.openapi.models.shared.Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public GetMe200ApplicationJSONLinkedVendors(){}
 }

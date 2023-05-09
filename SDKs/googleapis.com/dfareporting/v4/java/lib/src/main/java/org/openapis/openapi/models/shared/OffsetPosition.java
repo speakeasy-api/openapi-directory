@@ -18,6 +18,7 @@ public class OffsetPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("left")
     public Integer left;
+
     public OffsetPosition withLeft(Integer left) {
         this.left = left;
         return this;
@@ -29,9 +30,11 @@ public class OffsetPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("top")
     public Integer top;
+
     public OffsetPosition withTop(Integer top) {
         this.top = top;
         return this;
     }
     
+    public OffsetPosition(){}
 }

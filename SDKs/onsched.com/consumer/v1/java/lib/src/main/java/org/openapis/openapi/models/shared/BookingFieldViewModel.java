@@ -12,6 +12,7 @@ public class BookingFieldViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessId")
     public String businessId;
+
     public BookingFieldViewModel withBusinessId(String businessId) {
         this.businessId = businessId;
         return this;
@@ -20,6 +21,7 @@ public class BookingFieldViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyId")
     public String companyId;
+
     public BookingFieldViewModel withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -28,6 +30,7 @@ public class BookingFieldViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldLabel")
     public String fieldLabel;
+
     public BookingFieldViewModel withFieldLabel(String fieldLabel) {
         this.fieldLabel = fieldLabel;
         return this;
@@ -36,6 +39,7 @@ public class BookingFieldViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldLength")
     public Integer fieldLength;
+
     public BookingFieldViewModel withFieldLength(Integer fieldLength) {
         this.fieldLength = fieldLength;
         return this;
@@ -44,6 +48,7 @@ public class BookingFieldViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldListItems")
     public BookingFieldListItemViewModel[] fieldListItems;
+
     public BookingFieldViewModel withFieldListItems(BookingFieldListItemViewModel[] fieldListItems) {
         this.fieldListItems = fieldListItems;
         return this;
@@ -52,6 +57,7 @@ public class BookingFieldViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public BookingFieldViewModel withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -60,6 +66,7 @@ public class BookingFieldViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldRequired")
     public Boolean fieldRequired;
+
     public BookingFieldViewModel withFieldRequired(Boolean fieldRequired) {
         this.fieldRequired = fieldRequired;
         return this;
@@ -68,6 +75,7 @@ public class BookingFieldViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldType")
     public String fieldType;
+
     public BookingFieldViewModel withFieldType(String fieldType) {
         this.fieldType = fieldType;
         return this;
@@ -76,6 +84,7 @@ public class BookingFieldViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BookingFieldViewModel withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +93,7 @@ public class BookingFieldViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadQuestion")
     public Boolean leadQuestion;
+
     public BookingFieldViewModel withLeadQuestion(Boolean leadQuestion) {
         this.leadQuestion = leadQuestion;
         return this;
@@ -92,6 +102,7 @@ public class BookingFieldViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leadQuestionWeight")
     public Double leadQuestionWeight;
+
     public BookingFieldViewModel withLeadQuestionWeight(Double leadQuestionWeight) {
         this.leadQuestionWeight = leadQuestionWeight;
         return this;
@@ -100,6 +111,7 @@ public class BookingFieldViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public BookingFieldViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -108,9 +120,11 @@ public class BookingFieldViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortKey")
     public Integer sortKey;
+
     public BookingFieldViewModel withSortKey(Integer sortKey) {
         this.sortKey = sortKey;
         return this;
     }
     
+    public BookingFieldViewModel(){}
 }

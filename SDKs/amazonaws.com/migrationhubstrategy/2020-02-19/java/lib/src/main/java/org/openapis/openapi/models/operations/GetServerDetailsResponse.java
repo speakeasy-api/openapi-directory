@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetServerDetailsResponse {
@@ -12,6 +13,7 @@ public class GetServerDetailsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetServerDetailsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetServerDetailsResponse {
     
     
     public String contentType;
+
     public GetServerDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetServerDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetServerDetailsResponse getServerDetailsResponse;
+
     public GetServerDetailsResponse withGetServerDetailsResponse(org.openapis.openapi.models.shared.GetServerDetailsResponse getServerDetailsResponse) {
         this.getServerDetailsResponse = getServerDetailsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetServerDetailsResponse {
      */
     
     public Object internalServerException;
+
     public GetServerDetailsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetServerDetailsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetServerDetailsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetServerDetailsResponse {
     
     
     public Integer statusCode;
+
     public GetServerDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetServerDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetServerDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetServerDetailsResponse {
      */
     
     public Object throttlingException;
+
     public GetServerDetailsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetServerDetailsResponse {
      */
     
     public Object validationException;
+
     public GetServerDetailsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetServerDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

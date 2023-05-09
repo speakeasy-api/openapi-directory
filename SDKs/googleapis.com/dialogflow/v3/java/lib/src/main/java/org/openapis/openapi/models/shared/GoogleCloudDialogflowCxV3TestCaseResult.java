@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3TestCaseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationTurns")
     public GoogleCloudDialogflowCxV3ConversationTurn[] conversationTurns;
+
     public GoogleCloudDialogflowCxV3TestCaseResult withConversationTurns(GoogleCloudDialogflowCxV3ConversationTurn[] conversationTurns) {
         this.conversationTurns = conversationTurns;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3TestCaseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public String environment;
+
     public GoogleCloudDialogflowCxV3TestCaseResult withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3TestCaseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3TestCaseResult withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3TestCaseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testResult")
     public GoogleCloudDialogflowCxV3TestCaseResultTestResultEnum testResult;
+
     public GoogleCloudDialogflowCxV3TestCaseResult withTestResult(GoogleCloudDialogflowCxV3TestCaseResultTestResultEnum testResult) {
         this.testResult = testResult;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowCxV3TestCaseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testTime")
     public String testTime;
+
     public GoogleCloudDialogflowCxV3TestCaseResult withTestTime(String testTime) {
         this.testTime = testTime;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3TestCaseResult(){}
 }

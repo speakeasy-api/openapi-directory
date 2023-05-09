@@ -16,6 +16,7 @@ public class Context {
      */
     @JsonProperty("ancestors")
     public Status[] ancestors;
+
     public Context withAncestors(Status[] ancestors) {
         this.ancestors = ancestors;
         return this;
@@ -26,9 +27,14 @@ public class Context {
      */
     @JsonProperty("descendants")
     public Status[] descendants;
+
     public Context withDescendants(Status[] descendants) {
         this.descendants = descendants;
         return this;
     }
     
+    public Context(@JsonProperty("ancestors") Status[] ancestors, @JsonProperty("descendants") Status[] descendants) {
+        this.ancestors = ancestors;
+        this.descendants = descendants;
+  }
 }

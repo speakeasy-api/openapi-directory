@@ -20,6 +20,7 @@ public class DescribeTransformJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLJobArn")
     public String autoMLJobArn;
+
     public DescribeTransformJobResponse withAutoMLJobArn(String autoMLJobArn) {
         this.autoMLJobArn = autoMLJobArn;
         return this;
@@ -28,6 +29,7 @@ public class DescribeTransformJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchStrategy")
     public BatchStrategyEnum batchStrategy;
+
     public DescribeTransformJobResponse withBatchStrategy(BatchStrategyEnum batchStrategy) {
         this.batchStrategy = batchStrategy;
         return this;
@@ -37,6 +39,7 @@ public class DescribeTransformJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeTransformJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -45,6 +48,7 @@ public class DescribeTransformJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCaptureConfig")
     public BatchDataCaptureConfig dataCaptureConfig;
+
     public DescribeTransformJobResponse withDataCaptureConfig(BatchDataCaptureConfig dataCaptureConfig) {
         this.dataCaptureConfig = dataCaptureConfig;
         return this;
@@ -56,6 +60,7 @@ public class DescribeTransformJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataProcessing")
     public DataProcessing dataProcessing;
+
     public DescribeTransformJobResponse withDataProcessing(DataProcessing dataProcessing) {
         this.dataProcessing = dataProcessing;
         return this;
@@ -64,17 +69,19 @@ public class DescribeTransformJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public DescribeTransformJobResponse withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
     }
     
     /**
-     * &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     * &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateProcessingJob.html"&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html"&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTransformJob.html"&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentConfig")
     public ExperimentConfig experimentConfig;
+
     public DescribeTransformJobResponse withExperimentConfig(ExperimentConfig experimentConfig) {
         this.experimentConfig = experimentConfig;
         return this;
@@ -83,6 +90,7 @@ public class DescribeTransformJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeTransformJobResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -91,6 +99,7 @@ public class DescribeTransformJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelingJobArn")
     public String labelingJobArn;
+
     public DescribeTransformJobResponse withLabelingJobArn(String labelingJobArn) {
         this.labelingJobArn = labelingJobArn;
         return this;
@@ -99,6 +108,7 @@ public class DescribeTransformJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrentTransforms")
     public Long maxConcurrentTransforms;
+
     public DescribeTransformJobResponse withMaxConcurrentTransforms(Long maxConcurrentTransforms) {
         this.maxConcurrentTransforms = maxConcurrentTransforms;
         return this;
@@ -107,6 +117,7 @@ public class DescribeTransformJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxPayloadInMB")
     public Long maxPayloadInMB;
+
     public DescribeTransformJobResponse withMaxPayloadInMB(Long maxPayloadInMB) {
         this.maxPayloadInMB = maxPayloadInMB;
         return this;
@@ -115,6 +126,7 @@ public class DescribeTransformJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelClientConfig")
     public ModelClientConfig modelClientConfig;
+
     public DescribeTransformJobResponse withModelClientConfig(ModelClientConfig modelClientConfig) {
         this.modelClientConfig = modelClientConfig;
         return this;
@@ -122,6 +134,7 @@ public class DescribeTransformJobResponse {
     
     @JsonProperty("ModelName")
     public String modelName;
+
     public DescribeTransformJobResponse withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -132,6 +145,7 @@ public class DescribeTransformJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TransformEndTime")
     public OffsetDateTime transformEndTime;
+
     public DescribeTransformJobResponse withTransformEndTime(OffsetDateTime transformEndTime) {
         this.transformEndTime = transformEndTime;
         return this;
@@ -139,6 +153,7 @@ public class DescribeTransformJobResponse {
     
     @JsonProperty("TransformInput")
     public TransformInput transformInput;
+
     public DescribeTransformJobResponse withTransformInput(TransformInput transformInput) {
         this.transformInput = transformInput;
         return this;
@@ -146,6 +161,7 @@ public class DescribeTransformJobResponse {
     
     @JsonProperty("TransformJobArn")
     public String transformJobArn;
+
     public DescribeTransformJobResponse withTransformJobArn(String transformJobArn) {
         this.transformJobArn = transformJobArn;
         return this;
@@ -153,6 +169,7 @@ public class DescribeTransformJobResponse {
     
     @JsonProperty("TransformJobName")
     public String transformJobName;
+
     public DescribeTransformJobResponse withTransformJobName(String transformJobName) {
         this.transformJobName = transformJobName;
         return this;
@@ -160,6 +177,7 @@ public class DescribeTransformJobResponse {
     
     @JsonProperty("TransformJobStatus")
     public TransformJobStatusEnum transformJobStatus;
+
     public DescribeTransformJobResponse withTransformJobStatus(TransformJobStatusEnum transformJobStatus) {
         this.transformJobStatus = transformJobStatus;
         return this;
@@ -168,6 +186,7 @@ public class DescribeTransformJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformOutput")
     public TransformOutput transformOutput;
+
     public DescribeTransformJobResponse withTransformOutput(TransformOutput transformOutput) {
         this.transformOutput = transformOutput;
         return this;
@@ -175,6 +194,7 @@ public class DescribeTransformJobResponse {
     
     @JsonProperty("TransformResources")
     public TransformResources transformResources;
+
     public DescribeTransformJobResponse withTransformResources(TransformResources transformResources) {
         this.transformResources = transformResources;
         return this;
@@ -185,9 +205,19 @@ public class DescribeTransformJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TransformStartTime")
     public OffsetDateTime transformStartTime;
+
     public DescribeTransformJobResponse withTransformStartTime(OffsetDateTime transformStartTime) {
         this.transformStartTime = transformStartTime;
         return this;
     }
     
+    public DescribeTransformJobResponse(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ModelName") String modelName, @JsonProperty("TransformInput") TransformInput transformInput, @JsonProperty("TransformJobArn") String transformJobArn, @JsonProperty("TransformJobName") String transformJobName, @JsonProperty("TransformJobStatus") TransformJobStatusEnum transformJobStatus, @JsonProperty("TransformResources") TransformResources transformResources) {
+        this.creationTime = creationTime;
+        this.modelName = modelName;
+        this.transformInput = transformInput;
+        this.transformJobArn = transformJobArn;
+        this.transformJobName = transformJobName;
+        this.transformJobStatus = transformJobStatus;
+        this.transformResources = transformResources;
+  }
 }

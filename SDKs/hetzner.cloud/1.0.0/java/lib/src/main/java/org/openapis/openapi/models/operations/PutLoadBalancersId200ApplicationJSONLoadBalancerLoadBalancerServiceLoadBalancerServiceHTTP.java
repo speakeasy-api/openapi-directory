@@ -18,6 +18,7 @@ public class PutLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificates")
     public Long[] certificates;
+
     public PutLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHTTP withCertificates(Long[] certificates) {
         this.certificates = certificates;
         return this;
@@ -29,6 +30,7 @@ public class PutLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookie_lifetime")
     public Long cookieLifetime;
+
     public PutLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHTTP withCookieLifetime(Long cookieLifetime) {
         this.cookieLifetime = cookieLifetime;
         return this;
@@ -40,6 +42,7 @@ public class PutLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookie_name")
     public String cookieName;
+
     public PutLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHTTP withCookieName(String cookieName) {
         this.cookieName = cookieName;
         return this;
@@ -51,6 +54,7 @@ public class PutLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirect_http")
     public Boolean redirectHttp;
+
     public PutLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHTTP withRedirectHttp(Boolean redirectHttp) {
         this.redirectHttp = redirectHttp;
         return this;
@@ -62,9 +66,11 @@ public class PutLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sticky_sessions")
     public Boolean stickySessions;
+
     public PutLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHTTP withStickySessions(Boolean stickySessions) {
         this.stickySessions = stickySessions;
         return this;
     }
     
+    public PutLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHTTP(){}
 }

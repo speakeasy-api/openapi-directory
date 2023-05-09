@@ -18,6 +18,7 @@ public class TargetLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public TargetLocation withAddress(String address) {
         this.address = address;
         return this;
@@ -29,9 +30,11 @@ public class TargetLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationName")
     public String locationName;
+
     public TargetLocation withLocationName(String locationName) {
         this.locationName = locationName;
         return this;
     }
     
+    public TargetLocation(){}
 }

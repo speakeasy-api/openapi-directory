@@ -12,9 +12,11 @@ public class DeleteAnApiVersion200ApplicationJSONVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeleteAnApiVersion200ApplicationJSONVersion withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteAnApiVersion200ApplicationJSONVersion(){}
 }

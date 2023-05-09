@@ -12,9 +12,13 @@ public class EnterpriseAdminCreateImpersonationOAuthTokenRequestBody {
      */
     @JsonProperty("scopes")
     public String[] scopes;
+
     public EnterpriseAdminCreateImpersonationOAuthTokenRequestBody withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
     }
     
+    public EnterpriseAdminCreateImpersonationOAuthTokenRequestBody(@JsonProperty("scopes") String[] scopes) {
+        this.scopes = scopes;
+  }
 }

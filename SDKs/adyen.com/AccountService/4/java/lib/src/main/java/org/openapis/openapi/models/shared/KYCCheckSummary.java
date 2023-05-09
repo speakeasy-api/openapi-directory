@@ -14,6 +14,7 @@ public class KYCCheckSummary {
      */
     @JsonProperty("code")
     public Integer code;
+
     public KYCCheckSummary withCode(Integer code) {
         this.code = code;
         return this;
@@ -25,9 +26,13 @@ public class KYCCheckSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public KYCCheckSummary withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public KYCCheckSummary(@JsonProperty("code") Integer code) {
+        this.code = code;
+  }
 }

@@ -18,6 +18,7 @@ public class AssetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public AssetInput withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class AssetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public AssetInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class AssetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceData")
     public AssetPerformanceData performanceData;
+
     public AssetInput withPerformanceData(AssetPerformanceData performanceData) {
         this.performanceData = performanceData;
         return this;
@@ -51,9 +54,11 @@ public class AssetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualMachineDetails")
     public VirtualMachineDetails virtualMachineDetails;
+
     public AssetInput withVirtualMachineDetails(VirtualMachineDetails virtualMachineDetails) {
         this.virtualMachineDetails = virtualMachineDetails;
         return this;
     }
     
+    public AssetInput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETPutScheduledUpdateGroupActionResponse {
     
     public byte[] body;
+
     public GETPutScheduledUpdateGroupActionResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETPutScheduledUpdateGroupActionResponse {
     
     
     public String contentType;
+
     public GETPutScheduledUpdateGroupActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETPutScheduledUpdateGroupActionResponse {
     
     
     public Integer statusCode;
+
     public GETPutScheduledUpdateGroupActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETPutScheduledUpdateGroupActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETPutScheduledUpdateGroupActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETPutScheduledUpdateGroupActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetImpersonationRoleEffectResponse {
     
     public String contentType;
+
     public GetImpersonationRoleEffectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetImpersonationRoleEffectResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetImpersonationRoleEffectResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetImpersonationRoleEffectResponse {
      */
     
     public Object entityStateException;
+
     public GetImpersonationRoleEffectResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -39,6 +43,7 @@ public class GetImpersonationRoleEffectResponse {
      */
     
     public org.openapis.openapi.models.shared.GetImpersonationRoleEffectResponse getImpersonationRoleEffectResponse;
+
     public GetImpersonationRoleEffectResponse withGetImpersonationRoleEffectResponse(org.openapis.openapi.models.shared.GetImpersonationRoleEffectResponse getImpersonationRoleEffectResponse) {
         this.getImpersonationRoleEffectResponse = getImpersonationRoleEffectResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetImpersonationRoleEffectResponse {
      */
     
     public Object invalidParameterException;
+
     public GetImpersonationRoleEffectResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetImpersonationRoleEffectResponse {
      */
     
     public Object organizationNotFoundException;
+
     public GetImpersonationRoleEffectResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetImpersonationRoleEffectResponse {
      */
     
     public Object organizationStateException;
+
     public GetImpersonationRoleEffectResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -79,6 +87,7 @@ public class GetImpersonationRoleEffectResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetImpersonationRoleEffectResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class GetImpersonationRoleEffectResponse {
     
     
     public Integer statusCode;
+
     public GetImpersonationRoleEffectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class GetImpersonationRoleEffectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetImpersonationRoleEffectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetImpersonationRoleEffectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

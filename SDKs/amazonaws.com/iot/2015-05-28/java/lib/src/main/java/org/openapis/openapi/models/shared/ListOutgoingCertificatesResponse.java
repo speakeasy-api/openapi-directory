@@ -15,6 +15,7 @@ public class ListOutgoingCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextMarker")
     public String nextMarker;
+
     public ListOutgoingCertificatesResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -23,9 +24,11 @@ public class ListOutgoingCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outgoingCertificates")
     public OutgoingCertificate[] outgoingCertificates;
+
     public ListOutgoingCertificatesResponse withOutgoingCertificates(OutgoingCertificate[] outgoingCertificates) {
         this.outgoingCertificates = outgoingCertificates;
         return this;
     }
     
+    public ListOutgoingCertificatesResponse(){}
 }

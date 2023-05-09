@@ -18,6 +18,7 @@ public class IosDeviceCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("models")
     public IosModel[] models;
+
     public IosDeviceCatalog withModels(IosModel[] models) {
         this.models = models;
         return this;
@@ -29,6 +30,7 @@ public class IosDeviceCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeConfiguration")
     public IosRuntimeConfiguration runtimeConfiguration;
+
     public IosDeviceCatalog withRuntimeConfiguration(IosRuntimeConfiguration runtimeConfiguration) {
         this.runtimeConfiguration = runtimeConfiguration;
         return this;
@@ -40,6 +42,7 @@ public class IosDeviceCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public IosVersion[] versions;
+
     public IosDeviceCatalog withVersions(IosVersion[] versions) {
         this.versions = versions;
         return this;
@@ -51,9 +54,11 @@ public class IosDeviceCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xcodeVersions")
     public XcodeVersion[] xcodeVersions;
+
     public IosDeviceCatalog withXcodeVersions(XcodeVersion[] xcodeVersions) {
         this.xcodeVersions = xcodeVersions;
         return this;
     }
     
+    public IosDeviceCatalog(){}
 }

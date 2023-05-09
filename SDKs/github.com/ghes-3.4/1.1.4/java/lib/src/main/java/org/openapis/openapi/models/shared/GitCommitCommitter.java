@@ -22,6 +22,7 @@ public class GitCommitCommitter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public GitCommitCommitter withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -32,6 +33,7 @@ public class GitCommitCommitter {
      */
     @JsonProperty("email")
     public String email;
+
     public GitCommitCommitter withEmail(String email) {
         this.email = email;
         return this;
@@ -42,9 +44,15 @@ public class GitCommitCommitter {
      */
     @JsonProperty("name")
     public String name;
+
     public GitCommitCommitter withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GitCommitCommitter(@JsonProperty("date") OffsetDateTime date, @JsonProperty("email") String email, @JsonProperty("name") String name) {
+        this.date = date;
+        this.email = email;
+        this.name = name;
+  }
 }

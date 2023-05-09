@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3AccessDelRequest {
@@ -12,6 +13,7 @@ public class ProtocolSnmpv3AccessDelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accessName")
     public String accessName;
+
     public ProtocolSnmpv3AccessDelRequest withAccessName(String accessName) {
         this.accessName = accessName;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolSnmpv3AccessDelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolSnmpv3AccessDelRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
     }
     
+    public ProtocolSnmpv3AccessDelRequest(@JsonProperty("accessName") String accessName, @JsonProperty("agentNum") Integer agentNum) {
+        this.accessName = accessName;
+        this.agentNum = agentNum;
+  }
 }

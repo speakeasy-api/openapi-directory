@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchDevelopersDeveloperIdRequest {
@@ -12,6 +13,7 @@ public class PatchDevelopersDeveloperIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
     public String customData;
+
     public PatchDevelopersDeveloperIdRequest withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -22,6 +24,7 @@ public class PatchDevelopersDeveloperIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=developerId")
     public String developerId;
+
     public PatchDevelopersDeveloperIdRequest withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -32,6 +35,7 @@ public class PatchDevelopersDeveloperIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public PatchDevelopersDeveloperIdRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -42,6 +46,7 @@ public class PatchDevelopersDeveloperIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public PatchDevelopersDeveloperIdRequest withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class PatchDevelopersDeveloperIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public PatchDevelopersDeveloperIdRequest withType(String type) {
         this.type = type;
         return this;
@@ -62,9 +68,13 @@ public class PatchDevelopersDeveloperIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public PatchDevelopersDeveloperIdRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public PatchDevelopersDeveloperIdRequest(@JsonProperty("developerId") String developerId) {
+        this.developerId = developerId;
+  }
 }

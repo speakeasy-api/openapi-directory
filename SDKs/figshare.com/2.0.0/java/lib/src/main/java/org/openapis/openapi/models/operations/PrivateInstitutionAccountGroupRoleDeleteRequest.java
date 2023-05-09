@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateInstitutionAccountGroupRoleDeleteRequest {
@@ -12,6 +13,7 @@ public class PrivateInstitutionAccountGroupRoleDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
     public Long accountId;
+
     public PrivateInstitutionAccountGroupRoleDeleteRequest withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class PrivateInstitutionAccountGroupRoleDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
     public Long groupId;
+
     public PrivateInstitutionAccountGroupRoleDeleteRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -32,9 +35,15 @@ public class PrivateInstitutionAccountGroupRoleDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role_id")
     public Long roleId;
+
     public PrivateInstitutionAccountGroupRoleDeleteRequest withRoleId(Long roleId) {
         this.roleId = roleId;
         return this;
     }
     
+    public PrivateInstitutionAccountGroupRoleDeleteRequest(@JsonProperty("account_id") Long accountId, @JsonProperty("group_id") Long groupId, @JsonProperty("role_id") Long roleId) {
+        this.accountId = accountId;
+        this.groupId = groupId;
+        this.roleId = roleId;
+  }
 }

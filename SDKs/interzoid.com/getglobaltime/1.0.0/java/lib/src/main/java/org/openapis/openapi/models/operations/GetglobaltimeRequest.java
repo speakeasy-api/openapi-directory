@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetglobaltimeRequest {
@@ -12,6 +13,7 @@ public class GetglobaltimeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public String license;
+
     public GetglobaltimeRequest withLicense(String license) {
         this.license = license;
         return this;
@@ -22,9 +24,14 @@ public class GetglobaltimeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetglobaltimeRequest withLocale(String locale) {
         this.locale = locale;
         return this;
     }
     
+    public GetglobaltimeRequest(@JsonProperty("license") String license, @JsonProperty("locale") String locale) {
+        this.license = license;
+        this.locale = locale;
+  }
 }

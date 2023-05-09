@@ -18,9 +18,11 @@ public class NetworkPolicyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public NetworkPolicyConfig withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
     }
     
+    public NetworkPolicyConfig(){}
 }

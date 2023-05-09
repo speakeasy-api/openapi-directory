@@ -15,6 +15,7 @@ public class DnsKeyDigest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public String digest;
+
     public DnsKeyDigest withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -26,9 +27,11 @@ public class DnsKeyDigest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DnsKeyDigestTypeEnum type;
+
     public DnsKeyDigest withType(DnsKeyDigestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DnsKeyDigest(){}
 }

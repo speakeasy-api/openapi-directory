@@ -15,6 +15,7 @@ public class ListExtensibleSourceServersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public StagingSourceServer[] items;
+
     public ListExtensibleSourceServersResponse withItems(StagingSourceServer[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class ListExtensibleSourceServersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListExtensibleSourceServersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListExtensibleSourceServersResponse(){}
 }

@@ -18,6 +18,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public NetworkEndpointGroup withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appEngine")
     public NetworkEndpointGroupAppEngine appEngine;
+
     public NetworkEndpointGroup withAppEngine(NetworkEndpointGroupAppEngine appEngine) {
         this.appEngine = appEngine;
         return this;
@@ -40,6 +42,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudFunction")
     public NetworkEndpointGroupCloudFunction cloudFunction;
+
     public NetworkEndpointGroup withCloudFunction(NetworkEndpointGroupCloudFunction cloudFunction) {
         this.cloudFunction = cloudFunction;
         return this;
@@ -51,6 +54,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudRun")
     public NetworkEndpointGroupCloudRun cloudRun;
+
     public NetworkEndpointGroup withCloudRun(NetworkEndpointGroupCloudRun cloudRun) {
         this.cloudRun = cloudRun;
         return this;
@@ -62,6 +66,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public NetworkEndpointGroup withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -73,6 +78,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultPort")
     public Integer defaultPort;
+
     public NetworkEndpointGroup withDefaultPort(Integer defaultPort) {
         this.defaultPort = defaultPort;
         return this;
@@ -84,6 +90,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NetworkEndpointGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -95,6 +102,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NetworkEndpointGroup withId(String id) {
         this.id = id;
         return this;
@@ -106,6 +114,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public NetworkEndpointGroup withKind(String kind) {
         this.kind = kind;
         return this;
@@ -117,6 +126,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancer")
     public NetworkEndpointGroupLbNetworkEndpointGroup loadBalancer;
+
     public NetworkEndpointGroup withLoadBalancer(NetworkEndpointGroupLbNetworkEndpointGroup loadBalancer) {
         this.loadBalancer = loadBalancer;
         return this;
@@ -128,6 +138,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NetworkEndpointGroup withName(String name) {
         this.name = name;
         return this;
@@ -139,6 +150,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public NetworkEndpointGroup withNetwork(String network) {
         this.network = network;
         return this;
@@ -150,6 +162,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkEndpointType")
     public NetworkEndpointGroupNetworkEndpointTypeEnum networkEndpointType;
+
     public NetworkEndpointGroup withNetworkEndpointType(NetworkEndpointGroupNetworkEndpointTypeEnum networkEndpointType) {
         this.networkEndpointType = networkEndpointType;
         return this;
@@ -161,6 +174,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pscData")
     public NetworkEndpointGroupPscData pscData;
+
     public NetworkEndpointGroup withPscData(NetworkEndpointGroupPscData pscData) {
         this.pscData = pscData;
         return this;
@@ -172,6 +186,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pscTargetService")
     public String pscTargetService;
+
     public NetworkEndpointGroup withPscTargetService(String pscTargetService) {
         this.pscTargetService = pscTargetService;
         return this;
@@ -183,6 +198,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public NetworkEndpointGroup withRegion(String region) {
         this.region = region;
         return this;
@@ -194,6 +210,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public NetworkEndpointGroup withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -205,6 +222,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverlessDeployment")
     public NetworkEndpointGroupServerlessDeployment serverlessDeployment;
+
     public NetworkEndpointGroup withServerlessDeployment(NetworkEndpointGroupServerlessDeployment serverlessDeployment) {
         this.serverlessDeployment = serverlessDeployment;
         return this;
@@ -216,6 +234,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Integer size;
+
     public NetworkEndpointGroup withSize(Integer size) {
         this.size = size;
         return this;
@@ -227,6 +246,7 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public NetworkEndpointGroup withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
@@ -238,9 +258,11 @@ public class NetworkEndpointGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public NetworkEndpointGroup withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public NetworkEndpointGroup(){}
 }

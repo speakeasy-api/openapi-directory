@@ -15,6 +15,7 @@ public class ListStagingAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accounts")
     public Account[] accounts;
+
     public ListStagingAccountsResponse withAccounts(Account[] accounts) {
         this.accounts = accounts;
         return this;
@@ -23,9 +24,11 @@ public class ListStagingAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListStagingAccountsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListStagingAccountsResponse(){}
 }

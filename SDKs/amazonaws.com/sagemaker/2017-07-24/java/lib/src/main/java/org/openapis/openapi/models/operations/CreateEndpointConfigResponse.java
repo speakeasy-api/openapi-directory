@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEndpointConfigResponse {
     
     public String contentType;
+
     public CreateEndpointConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateEndpointConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEndpointConfigOutput createEndpointConfigOutput;
+
     public CreateEndpointConfigResponse withCreateEndpointConfigOutput(org.openapis.openapi.models.shared.CreateEndpointConfigOutput createEndpointConfigOutput) {
         this.createEndpointConfigOutput = createEndpointConfigOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateEndpointConfigResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateEndpointConfigResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -36,6 +40,7 @@ public class CreateEndpointConfigResponse {
     
     
     public Integer statusCode;
+
     public CreateEndpointConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateEndpointConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEndpointConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateEndpointConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

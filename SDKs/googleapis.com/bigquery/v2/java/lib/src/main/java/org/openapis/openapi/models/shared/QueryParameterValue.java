@@ -15,6 +15,7 @@ public class QueryParameterValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrayValues")
     public QueryParameterValue[] arrayValues;
+
     public QueryParameterValue withArrayValues(QueryParameterValue[] arrayValues) {
         this.arrayValues = arrayValues;
         return this;
@@ -26,6 +27,7 @@ public class QueryParameterValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structValues")
     public java.util.Map<String, QueryParameterValue> structValues;
+
     public QueryParameterValue withStructValues(java.util.Map<String, QueryParameterValue> structValues) {
         this.structValues = structValues;
         return this;
@@ -37,9 +39,11 @@ public class QueryParameterValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public QueryParameterValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public QueryParameterValue(){}
 }

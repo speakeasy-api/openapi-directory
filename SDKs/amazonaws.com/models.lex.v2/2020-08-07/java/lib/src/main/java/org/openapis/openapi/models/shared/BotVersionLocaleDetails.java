@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BotVersionLocaleDetails {
     @JsonProperty("sourceBotVersion")
     public String sourceBotVersion;
+
     public BotVersionLocaleDetails withSourceBotVersion(String sourceBotVersion) {
         this.sourceBotVersion = sourceBotVersion;
         return this;
     }
     
+    public BotVersionLocaleDetails(@JsonProperty("sourceBotVersion") String sourceBotVersion) {
+        this.sourceBotVersion = sourceBotVersion;
+  }
 }

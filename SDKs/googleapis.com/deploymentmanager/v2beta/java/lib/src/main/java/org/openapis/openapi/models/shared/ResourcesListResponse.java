@@ -18,6 +18,7 @@ public class ResourcesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ResourcesListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ResourcesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public Resource[] resources;
+
     public ResourcesListResponse withResources(Resource[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public ResourcesListResponse(){}
 }

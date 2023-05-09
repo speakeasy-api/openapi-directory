@@ -22,9 +22,11 @@ public class BookingBookRequestBodyPartnerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributorRef")
     public String distributorRef;
+
     public BookingBookRequestBodyPartnerDetail withDistributorRef(String distributorRef) {
         this.distributorRef = distributorRef;
         return this;
     }
     
+    public BookingBookRequestBodyPartnerDetail(){}
 }

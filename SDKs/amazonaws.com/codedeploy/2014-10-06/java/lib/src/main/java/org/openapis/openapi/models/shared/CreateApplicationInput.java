@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateApplicationInput {
     @JsonProperty("applicationName")
     public String applicationName;
+
     public CreateApplicationInput withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -22,6 +23,7 @@ public class CreateApplicationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computePlatform")
     public ComputePlatformEnum computePlatform;
+
     public CreateApplicationInput withComputePlatform(ComputePlatformEnum computePlatform) {
         this.computePlatform = computePlatform;
         return this;
@@ -30,9 +32,13 @@ public class CreateApplicationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateApplicationInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateApplicationInput(@JsonProperty("applicationName") String applicationName) {
+        this.applicationName = applicationName;
+  }
 }

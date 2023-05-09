@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AppEngineVersionEndpoint - Wrapper for app engine service version attributes.
+ * AppEngineVersionEndpoint - Wrapper for the App Engine service version attributes.
  */
 public class AppEngineVersionEndpoint {
     /**
@@ -18,9 +18,11 @@ public class AppEngineVersionEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public AppEngineVersionEndpoint withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public AppEngineVersionEndpoint(){}
 }

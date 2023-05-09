@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEntitlementsResponse {
     
     public String contentType;
+
     public GetEntitlementsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEntitlementsResponse {
      */
     
     public org.openapis.openapi.models.shared.Entitlement[] entitlements;
+
     public GetEntitlementsResponse withEntitlements(org.openapis.openapi.models.shared.Entitlement[] entitlements) {
         this.entitlements = entitlements;
         return this;
@@ -29,6 +32,7 @@ public class GetEntitlementsResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetEntitlementsResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetEntitlementsResponse {
     
     
     public Integer statusCode;
+
     public GetEntitlementsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetEntitlementsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEntitlementsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEntitlementsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

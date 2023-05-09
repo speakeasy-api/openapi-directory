@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSyslogSendRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SyslogMsg syslogMsg;
+
     public ProtocolSyslogSendRequest withSyslogMsg(org.openapis.openapi.models.shared.SyslogMsg syslogMsg) {
         this.syslogMsg = syslogMsg;
         return this;
@@ -19,6 +21,7 @@ public class ProtocolSyslogSendRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolSyslogSendRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -29,9 +32,15 @@ public class ProtocolSyslogSendRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pri")
     public Integer pri;
+
     public ProtocolSyslogSendRequest withPri(Integer pri) {
         this.pri = pri;
         return this;
     }
     
+    public ProtocolSyslogSendRequest(@JsonProperty("SyslogMsg") org.openapis.openapi.models.shared.SyslogMsg syslogMsg, @JsonProperty("agentNum") Integer agentNum, @JsonProperty("pri") Integer pri) {
+        this.syslogMsg = syslogMsg;
+        this.agentNum = agentNum;
+        this.pri = pri;
+  }
 }

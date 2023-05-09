@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApplicationResponse {
@@ -12,6 +13,7 @@ public class GetApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.ApplicationResponse applicationResponse;
+
     public GetApplicationResponse withApplicationResponse(org.openapis.openapi.models.shared.ApplicationResponse applicationResponse) {
         this.applicationResponse = applicationResponse;
         return this;
@@ -19,6 +21,7 @@ public class GetApplicationResponse {
     
     
     public String contentType;
+
     public GetApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetApplicationResponse {
     
     
     public Integer statusCode;
+
     public GetApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetApplicationResponse {
      */
     
     public GetApplication401ApplicationJSON getApplication401ApplicationJSONObject;
+
     public GetApplicationResponse withGetApplication401ApplicationJSONObject(GetApplication401ApplicationJSON getApplication401ApplicationJSONObject) {
         this.getApplication401ApplicationJSONObject = getApplication401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetApplicationResponse {
      */
     
     public GetApplication404ApplicationJSON getApplication404ApplicationJSONObject;
+
     public GetApplicationResponse withGetApplication404ApplicationJSONObject(GetApplication404ApplicationJSON getApplication404ApplicationJSONObject) {
         this.getApplication404ApplicationJSONObject = getApplication404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetApplicationResponse {
      */
     
     public GetApplication405ApplicationJSON getApplication405ApplicationJSONObject;
+
     public GetApplicationResponse withGetApplication405ApplicationJSONObject(GetApplication405ApplicationJSON getApplication405ApplicationJSONObject) {
         this.getApplication405ApplicationJSONObject = getApplication405ApplicationJSONObject;
         return this;
@@ -73,9 +81,14 @@ public class GetApplicationResponse {
      */
     
     public GetApplication406ApplicationJSON getApplication406ApplicationJSONObject;
+
     public GetApplicationResponse withGetApplication406ApplicationJSONObject(GetApplication406ApplicationJSON getApplication406ApplicationJSONObject) {
         this.getApplication406ApplicationJSONObject = getApplication406ApplicationJSONObject;
         return this;
     }
     
+    public GetApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

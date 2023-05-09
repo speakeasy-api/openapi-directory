@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutLoggingConfigurationResponse {
     
     public String contentType;
+
     public PutLoggingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutLoggingConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.PutLoggingConfigurationResponse putLoggingConfigurationResponse;
+
     public PutLoggingConfigurationResponse withPutLoggingConfigurationResponse(org.openapis.openapi.models.shared.PutLoggingConfigurationResponse putLoggingConfigurationResponse) {
         this.putLoggingConfigurationResponse = putLoggingConfigurationResponse;
         return this;
@@ -26,6 +29,7 @@ public class PutLoggingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutLoggingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PutLoggingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutLoggingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class PutLoggingConfigurationResponse {
      */
     
     public Object wafInternalErrorException;
+
     public PutLoggingConfigurationResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class PutLoggingConfigurationResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public PutLoggingConfigurationResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -63,6 +70,7 @@ public class PutLoggingConfigurationResponse {
      */
     
     public Object wafServiceLinkedRoleErrorException;
+
     public PutLoggingConfigurationResponse withWAFServiceLinkedRoleErrorException(Object wafServiceLinkedRoleErrorException) {
         this.wafServiceLinkedRoleErrorException = wafServiceLinkedRoleErrorException;
         return this;
@@ -73,9 +81,14 @@ public class PutLoggingConfigurationResponse {
      */
     
     public Object wafStaleDataException;
+
     public PutLoggingConfigurationResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public PutLoggingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

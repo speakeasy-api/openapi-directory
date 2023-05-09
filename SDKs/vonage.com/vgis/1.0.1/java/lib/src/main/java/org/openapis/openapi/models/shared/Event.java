@@ -16,6 +16,7 @@ public class Event {
      */
     @JsonProperty("accountId")
     public Long accountId;
+
     public Event withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +29,7 @@ public class Event {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("answerTime")
     public LocalDate answerTime;
+
     public Event withAnswerTime(LocalDate answerTime) {
         this.answerTime = answerTime;
         return this;
@@ -39,6 +41,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callerId")
     public String callerId;
+
     public Event withCallerId(String callerId) {
         this.callerId = callerId;
         return this;
@@ -49,6 +52,7 @@ public class Event {
      */
     @JsonProperty("direction")
     public EventDirectionEnum direction;
+
     public Event withDirection(EventDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -60,6 +64,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Long duration;
+
     public Event withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -72,6 +77,7 @@ public class Event {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endTime")
     public LocalDate endTime;
+
     public Event withEndTime(LocalDate endTime) {
         this.endTime = endTime;
         return this;
@@ -83,6 +89,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public Event withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -93,6 +100,7 @@ public class Event {
      */
     @JsonProperty("id")
     public Long id;
+
     public Event withId(Long id) {
         this.id = id;
         return this;
@@ -103,6 +111,7 @@ public class Event {
      */
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public Event withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -111,6 +120,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smsData")
     public String smsData;
+
     public Event withSmsData(String smsData) {
         this.smsData = smsData;
         return this;
@@ -122,6 +132,7 @@ public class Event {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startTime")
     public LocalDate startTime;
+
     public Event withStartTime(LocalDate startTime) {
         this.startTime = startTime;
         return this;
@@ -132,6 +143,7 @@ public class Event {
      */
     @JsonProperty("state")
     public EventStateEnum state;
+
     public Event withState(EventStateEnum state) {
         this.state = state;
         return this;
@@ -142,6 +154,7 @@ public class Event {
      */
     @JsonProperty("type")
     public EventTypeEnum type;
+
     public Event withType(EventTypeEnum type) {
         this.type = type;
         return this;
@@ -152,6 +165,7 @@ public class Event {
      */
     @JsonProperty("uciId")
     public Long uciId;
+
     public Event withUciId(Long uciId) {
         this.uciId = uciId;
         return this;
@@ -162,9 +176,21 @@ public class Event {
      */
     @JsonProperty("userId")
     public Long userId;
+
     public Event withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public Event(@JsonProperty("accountId") Long accountId, @JsonProperty("direction") EventDirectionEnum direction, @JsonProperty("id") Long id, @JsonProperty("phoneNumber") String phoneNumber, @JsonProperty("startTime") LocalDate startTime, @JsonProperty("state") EventStateEnum state, @JsonProperty("type") EventTypeEnum type, @JsonProperty("uciId") Long uciId, @JsonProperty("userId") Long userId) {
+        this.accountId = accountId;
+        this.direction = direction;
+        this.id = id;
+        this.phoneNumber = phoneNumber;
+        this.startTime = startTime;
+        this.state = state;
+        this.type = type;
+        this.uciId = uciId;
+        this.userId = userId;
+  }
 }

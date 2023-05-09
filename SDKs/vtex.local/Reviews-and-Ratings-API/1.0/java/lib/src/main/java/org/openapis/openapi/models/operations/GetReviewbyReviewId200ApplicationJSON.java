@@ -18,6 +18,7 @@ public class GetReviewbyReviewId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approved")
     public Boolean approved;
+
     public GetReviewbyReviewId200ApplicationJSON withApproved(Boolean approved) {
         this.approved = approved;
         return this;
@@ -29,6 +30,7 @@ public class GetReviewbyReviewId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetReviewbyReviewId200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class GetReviewbyReviewId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public GetReviewbyReviewId200ApplicationJSON withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -51,6 +54,7 @@ public class GetReviewbyReviewId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GetReviewbyReviewId200ApplicationJSON withLocation(String location) {
         this.location = location;
         return this;
@@ -62,6 +66,7 @@ public class GetReviewbyReviewId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pastReviews")
     public String pastReviews;
+
     public GetReviewbyReviewId200ApplicationJSON withPastReviews(String pastReviews) {
         this.pastReviews = pastReviews;
         return this;
@@ -73,6 +78,7 @@ public class GetReviewbyReviewId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public GetReviewbyReviewId200ApplicationJSON withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -84,6 +90,7 @@ public class GetReviewbyReviewId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     public Double rating;
+
     public GetReviewbyReviewId200ApplicationJSON withRating(Double rating) {
         this.rating = rating;
         return this;
@@ -95,6 +102,7 @@ public class GetReviewbyReviewId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewDateTime")
     public String reviewDateTime;
+
     public GetReviewbyReviewId200ApplicationJSON withReviewDateTime(String reviewDateTime) {
         this.reviewDateTime = reviewDateTime;
         return this;
@@ -106,6 +114,7 @@ public class GetReviewbyReviewId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewerName")
     public String reviewerName;
+
     public GetReviewbyReviewId200ApplicationJSON withReviewerName(String reviewerName) {
         this.reviewerName = reviewerName;
         return this;
@@ -117,6 +126,7 @@ public class GetReviewbyReviewId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchDate")
     public String searchDate;
+
     public GetReviewbyReviewId200ApplicationJSON withSearchDate(String searchDate) {
         this.searchDate = searchDate;
         return this;
@@ -128,6 +138,7 @@ public class GetReviewbyReviewId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperId")
     public String shopperId;
+
     public GetReviewbyReviewId200ApplicationJSON withShopperId(String shopperId) {
         this.shopperId = shopperId;
         return this;
@@ -139,6 +150,7 @@ public class GetReviewbyReviewId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public GetReviewbyReviewId200ApplicationJSON withSku(String sku) {
         this.sku = sku;
         return this;
@@ -150,6 +162,7 @@ public class GetReviewbyReviewId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GetReviewbyReviewId200ApplicationJSON withText(String text) {
         this.text = text;
         return this;
@@ -161,6 +174,7 @@ public class GetReviewbyReviewId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GetReviewbyReviewId200ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
@@ -172,9 +186,11 @@ public class GetReviewbyReviewId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verifiedPurchaser")
     public Boolean verifiedPurchaser;
+
     public GetReviewbyReviewId200ApplicationJSON withVerifiedPurchaser(Boolean verifiedPurchaser) {
         this.verifiedPurchaser = verifiedPurchaser;
         return this;
     }
     
+    public GetReviewbyReviewId200ApplicationJSON(){}
 }

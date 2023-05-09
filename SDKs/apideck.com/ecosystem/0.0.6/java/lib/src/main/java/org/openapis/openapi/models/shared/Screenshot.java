@@ -12,6 +12,7 @@ public class Screenshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caption")
     public String caption;
+
     public Screenshot withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -20,6 +21,7 @@ public class Screenshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public File file;
+
     public Screenshot withFile(File file) {
         this.file = file;
         return this;
@@ -28,6 +30,7 @@ public class Screenshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Screenshot withId(String id) {
         this.id = id;
         return this;
@@ -36,9 +39,11 @@ public class Screenshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translations")
     public Translation[] translations;
+
     public Screenshot withTranslations(Translation[] translations) {
         this.translations = translations;
         return this;
     }
     
+    public Screenshot(){}
 }

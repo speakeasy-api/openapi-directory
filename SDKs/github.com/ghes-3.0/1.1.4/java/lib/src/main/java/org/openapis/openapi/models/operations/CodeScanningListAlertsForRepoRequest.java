@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodeScanningListAlertsForRepoRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public CodeScanningListAlertsForRepoRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -19,6 +21,7 @@ public class CodeScanningListAlertsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public CodeScanningListAlertsForRepoRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -29,6 +32,7 @@ public class CodeScanningListAlertsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public CodeScanningListAlertsForRepoRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -39,6 +43,7 @@ public class CodeScanningListAlertsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
     public String ref;
+
     public CodeScanningListAlertsForRepoRequest withRef(String ref) {
         this.ref = ref;
         return this;
@@ -46,6 +51,7 @@ public class CodeScanningListAlertsForRepoRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public CodeScanningListAlertsForRepoRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -56,6 +62,7 @@ public class CodeScanningListAlertsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public org.openapis.openapi.models.shared.CodeScanningAlertStateEnum state;
+
     public CodeScanningListAlertsForRepoRequest withState(org.openapis.openapi.models.shared.CodeScanningAlertStateEnum state) {
         this.state = state;
         return this;
@@ -66,6 +73,7 @@ public class CodeScanningListAlertsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tool_guid")
     public String toolGuid;
+
     public CodeScanningListAlertsForRepoRequest withToolGuid(String toolGuid) {
         this.toolGuid = toolGuid;
         return this;
@@ -76,9 +84,14 @@ public class CodeScanningListAlertsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tool_name")
     public String toolName;
+
     public CodeScanningListAlertsForRepoRequest withToolName(String toolName) {
         this.toolName = toolName;
         return this;
     }
     
+    public CodeScanningListAlertsForRepoRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

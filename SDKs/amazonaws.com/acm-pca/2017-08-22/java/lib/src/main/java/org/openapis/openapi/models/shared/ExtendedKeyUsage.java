@@ -15,6 +15,7 @@ public class ExtendedKeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtendedKeyUsageObjectIdentifier")
     public String extendedKeyUsageObjectIdentifier;
+
     public ExtendedKeyUsage withExtendedKeyUsageObjectIdentifier(String extendedKeyUsageObjectIdentifier) {
         this.extendedKeyUsageObjectIdentifier = extendedKeyUsageObjectIdentifier;
         return this;
@@ -23,9 +24,11 @@ public class ExtendedKeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtendedKeyUsageType")
     public ExtendedKeyUsageTypeEnum extendedKeyUsageType;
+
     public ExtendedKeyUsage withExtendedKeyUsageType(ExtendedKeyUsageTypeEnum extendedKeyUsageType) {
         this.extendedKeyUsageType = extendedKeyUsageType;
         return this;
     }
     
+    public ExtendedKeyUsage(){}
 }

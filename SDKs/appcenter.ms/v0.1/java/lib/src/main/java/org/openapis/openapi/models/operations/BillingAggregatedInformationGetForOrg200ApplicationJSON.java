@@ -18,6 +18,7 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azureSubscriptionId")
     public String azureSubscriptionId;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSON withAzureSubscriptionId(String azureSubscriptionId) {
         this.azureSubscriptionId = azureSubscriptionId;
         return this;
@@ -29,6 +30,7 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azureSubscriptionState")
     public BillingAggregatedInformationGetForOrg200ApplicationJSONAzureSubscriptionStateEnum azureSubscriptionState;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSON withAzureSubscriptionState(BillingAggregatedInformationGetForOrg200ApplicationJSONAzureSubscriptionStateEnum azureSubscriptionState) {
         this.azureSubscriptionState = azureSubscriptionState;
         return this;
@@ -40,6 +42,7 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingPlans")
     public BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlans billingPlans;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSON withBillingPlans(BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlans billingPlans) {
         this.billingPlans = billingPlans;
         return this;
@@ -51,6 +54,7 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSON withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -73,6 +78,7 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public BillingAggregatedInformationGetForOrg200ApplicationJSONUsage usage;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSON withUsage(BillingAggregatedInformationGetForOrg200ApplicationJSONUsage usage) {
         this.usage = usage;
         return this;
@@ -84,9 +90,11 @@ public class BillingAggregatedInformationGetForOrg200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public BillingAggregatedInformationGetForOrg200ApplicationJSON withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public BillingAggregatedInformationGetForOrg200ApplicationJSON(){}
 }

@@ -20,6 +20,7 @@ public class Error405NGPISCANC {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public Error405NGPISCANC withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -28,9 +29,11 @@ public class Error405NGPISCANC {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tppMessages")
     public TppMessage405PISCANC[] tppMessages;
+
     public Error405NGPISCANC withTppMessages(TppMessage405PISCANC[] tppMessages) {
         this.tppMessages = tppMessages;
         return this;
     }
     
+    public Error405NGPISCANC(){}
 }

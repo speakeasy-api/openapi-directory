@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class BatchSnapshotOperationErrors {
     
     public String failureCode;
+
     public BatchSnapshotOperationErrors withFailureCode(String failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -19,6 +20,7 @@ public class BatchSnapshotOperationErrors {
     
     
     public String failureReason;
+
     public BatchSnapshotOperationErrors withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -26,6 +28,7 @@ public class BatchSnapshotOperationErrors {
     
     
     public String snapshotClusterIdentifier;
+
     public BatchSnapshotOperationErrors withSnapshotClusterIdentifier(String snapshotClusterIdentifier) {
         this.snapshotClusterIdentifier = snapshotClusterIdentifier;
         return this;
@@ -33,9 +36,11 @@ public class BatchSnapshotOperationErrors {
     
     
     public String snapshotIdentifier;
+
     public BatchSnapshotOperationErrors withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
     }
     
+    public BatchSnapshotOperationErrors(){}
 }

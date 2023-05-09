@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimerCanceledEventAttributes {
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public TimerCanceledEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
@@ -19,6 +20,7 @@ public class TimerCanceledEventAttributes {
     
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public TimerCanceledEventAttributes withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
@@ -26,9 +28,15 @@ public class TimerCanceledEventAttributes {
     
     @JsonProperty("timerId")
     public String timerId;
+
     public TimerCanceledEventAttributes withTimerId(String timerId) {
         this.timerId = timerId;
         return this;
     }
     
+    public TimerCanceledEventAttributes(@JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId, @JsonProperty("startedEventId") Long startedEventId, @JsonProperty("timerId") String timerId) {
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+        this.startedEventId = startedEventId;
+        this.timerId = timerId;
+  }
 }

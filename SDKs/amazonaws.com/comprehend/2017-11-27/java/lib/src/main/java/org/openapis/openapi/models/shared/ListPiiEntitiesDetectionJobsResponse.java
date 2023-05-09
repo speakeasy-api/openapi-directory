@@ -15,6 +15,7 @@ public class ListPiiEntitiesDetectionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPiiEntitiesDetectionJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPiiEntitiesDetectionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PiiEntitiesDetectionJobPropertiesList")
     public PiiEntitiesDetectionJobProperties[] piiEntitiesDetectionJobPropertiesList;
+
     public ListPiiEntitiesDetectionJobsResponse withPiiEntitiesDetectionJobPropertiesList(PiiEntitiesDetectionJobProperties[] piiEntitiesDetectionJobPropertiesList) {
         this.piiEntitiesDetectionJobPropertiesList = piiEntitiesDetectionJobPropertiesList;
         return this;
     }
     
+    public ListPiiEntitiesDetectionJobsResponse(){}
 }

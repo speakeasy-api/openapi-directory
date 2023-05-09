@@ -15,9 +15,11 @@ public class ConditionStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Outcome")
     public ConditionOutcomeEnum outcome;
+
     public ConditionStepMetadata withOutcome(ConditionOutcomeEnum outcome) {
         this.outcome = outcome;
         return this;
     }
     
+    public ConditionStepMetadata(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAdminRecordingsStop200ApplicationJSONMeta {
     @JsonProperty("total")
     public Long total;
+
     public PostAdminRecordingsStop200ApplicationJSONMeta withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public PostAdminRecordingsStop200ApplicationJSONMeta(@JsonProperty("total") Long total) {
+        this.total = total;
+  }
 }

@@ -22,6 +22,7 @@ public class SearchCatalogObjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("begin_time")
     public String beginTime;
+
     public SearchCatalogObjectsRequest withBeginTime(String beginTime) {
         this.beginTime = beginTime;
         return this;
@@ -34,6 +35,7 @@ public class SearchCatalogObjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchCatalogObjectsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -46,6 +48,7 @@ public class SearchCatalogObjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include_deleted_objects")
     public Boolean includeDeletedObjects;
+
     public SearchCatalogObjectsRequest withIncludeDeletedObjects(Boolean includeDeletedObjects) {
         this.includeDeletedObjects = includeDeletedObjects;
         return this;
@@ -67,6 +70,7 @@ public class SearchCatalogObjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include_related_objects")
     public Boolean includeRelatedObjects;
+
     public SearchCatalogObjectsRequest withIncludeRelatedObjects(Boolean includeRelatedObjects) {
         this.includeRelatedObjects = includeRelatedObjects;
         return this;
@@ -80,6 +84,7 @@ public class SearchCatalogObjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public SearchCatalogObjectsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -91,6 +96,7 @@ public class SearchCatalogObjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object_types")
     public String[] objectTypes;
+
     public SearchCatalogObjectsRequest withObjectTypes(String[] objectTypes) {
         this.objectTypes = objectTypes;
         return this;
@@ -126,9 +132,11 @@ public class SearchCatalogObjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public CatalogQuery query;
+
     public SearchCatalogObjectsRequest withQuery(CatalogQuery query) {
         this.query = query;
         return this;
     }
     
+    public SearchCatalogObjectsRequest(){}
 }

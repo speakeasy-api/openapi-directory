@@ -18,6 +18,7 @@ public class PublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public PublicDelegatedPrefix withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class PublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PublicDelegatedPrefix withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class PublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public PublicDelegatedPrefix withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -51,6 +54,7 @@ public class PublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PublicDelegatedPrefix withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class PublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCidrRange")
     public String ipCidrRange;
+
     public PublicDelegatedPrefix withIpCidrRange(String ipCidrRange) {
         this.ipCidrRange = ipCidrRange;
         return this;
@@ -73,6 +78,7 @@ public class PublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isLiveMigration")
     public Boolean isLiveMigration;
+
     public PublicDelegatedPrefix withIsLiveMigration(Boolean isLiveMigration) {
         this.isLiveMigration = isLiveMigration;
         return this;
@@ -84,6 +90,7 @@ public class PublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PublicDelegatedPrefix withKind(String kind) {
         this.kind = kind;
         return this;
@@ -95,6 +102,7 @@ public class PublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PublicDelegatedPrefix withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class PublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentPrefix")
     public String parentPrefix;
+
     public PublicDelegatedPrefix withParentPrefix(String parentPrefix) {
         this.parentPrefix = parentPrefix;
         return this;
@@ -117,6 +126,7 @@ public class PublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicDelegatedSubPrefixs")
     public PublicDelegatedPrefixPublicDelegatedSubPrefix[] publicDelegatedSubPrefixs;
+
     public PublicDelegatedPrefix withPublicDelegatedSubPrefixs(PublicDelegatedPrefixPublicDelegatedSubPrefix[] publicDelegatedSubPrefixs) {
         this.publicDelegatedSubPrefixs = publicDelegatedSubPrefixs;
         return this;
@@ -128,6 +138,7 @@ public class PublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public PublicDelegatedPrefix withRegion(String region) {
         this.region = region;
         return this;
@@ -139,6 +150,7 @@ public class PublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public PublicDelegatedPrefix withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -150,6 +162,7 @@ public class PublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public PublicDelegatedPrefix withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -161,9 +174,11 @@ public class PublicDelegatedPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PublicDelegatedPrefixStatusEnum status;
+
     public PublicDelegatedPrefix withStatus(PublicDelegatedPrefixStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PublicDelegatedPrefix(){}
 }

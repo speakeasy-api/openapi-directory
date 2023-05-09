@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExecuteStatementResponse {
@@ -12,6 +13,7 @@ public class ExecuteStatementResponse {
      */
     
     public Object accessDeniedException;
+
     public ExecuteStatementResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ExecuteStatementResponse {
      */
     
     public Object badRequestException;
+
     public ExecuteStatementResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class ExecuteStatementResponse {
     
     
     public String contentType;
+
     public ExecuteStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ExecuteStatementResponse {
      */
     
     public org.openapis.openapi.models.shared.ExecuteStatementResponse executeStatementResponse;
+
     public ExecuteStatementResponse withExecuteStatementResponse(org.openapis.openapi.models.shared.ExecuteStatementResponse executeStatementResponse) {
         this.executeStatementResponse = executeStatementResponse;
         return this;
@@ -49,6 +54,7 @@ public class ExecuteStatementResponse {
      */
     
     public Object forbiddenException;
+
     public ExecuteStatementResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class ExecuteStatementResponse {
      */
     
     public Object internalServerErrorException;
+
     public ExecuteStatementResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -66,6 +73,7 @@ public class ExecuteStatementResponse {
     
     
     public Integer statusCode;
+
     public ExecuteStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ExecuteStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExecuteStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ExecuteStatementResponse {
      */
     
     public Object serviceUnavailableError;
+
     public ExecuteStatementResponse withServiceUnavailableError(Object serviceUnavailableError) {
         this.serviceUnavailableError = serviceUnavailableError;
         return this;
@@ -93,9 +103,14 @@ public class ExecuteStatementResponse {
      */
     
     public Object statementTimeoutException;
+
     public ExecuteStatementResponse withStatementTimeoutException(Object statementTimeoutException) {
         this.statementTimeoutException = statementTimeoutException;
         return this;
     }
     
+    public ExecuteStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

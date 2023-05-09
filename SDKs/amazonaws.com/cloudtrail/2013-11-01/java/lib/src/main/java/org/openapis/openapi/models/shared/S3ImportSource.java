@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3ImportSource {
     @JsonProperty("S3BucketAccessRoleArn")
     public String s3BucketAccessRoleArn;
+
     public S3ImportSource withS3BucketAccessRoleArn(String s3BucketAccessRoleArn) {
         this.s3BucketAccessRoleArn = s3BucketAccessRoleArn;
         return this;
@@ -19,6 +20,7 @@ public class S3ImportSource {
     
     @JsonProperty("S3BucketRegion")
     public String s3BucketRegion;
+
     public S3ImportSource withS3BucketRegion(String s3BucketRegion) {
         this.s3BucketRegion = s3BucketRegion;
         return this;
@@ -26,9 +28,15 @@ public class S3ImportSource {
     
     @JsonProperty("S3LocationUri")
     public String s3LocationUri;
+
     public S3ImportSource withS3LocationUri(String s3LocationUri) {
         this.s3LocationUri = s3LocationUri;
         return this;
     }
     
+    public S3ImportSource(@JsonProperty("S3BucketAccessRoleArn") String s3BucketAccessRoleArn, @JsonProperty("S3BucketRegion") String s3BucketRegion, @JsonProperty("S3LocationUri") String s3LocationUri) {
+        this.s3BucketAccessRoleArn = s3BucketAccessRoleArn;
+        this.s3BucketRegion = s3BucketRegion;
+        this.s3LocationUri = s3LocationUri;
+  }
 }

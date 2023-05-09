@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ProvisionPublicIpv4PoolCidrResultPoolAddressRange {
     
     public Long addressCount;
+
     public ProvisionPublicIpv4PoolCidrResultPoolAddressRange withAddressCount(Long addressCount) {
         this.addressCount = addressCount;
         return this;
@@ -19,6 +20,7 @@ public class ProvisionPublicIpv4PoolCidrResultPoolAddressRange {
     
     
     public Long availableAddressCount;
+
     public ProvisionPublicIpv4PoolCidrResultPoolAddressRange withAvailableAddressCount(Long availableAddressCount) {
         this.availableAddressCount = availableAddressCount;
         return this;
@@ -26,6 +28,7 @@ public class ProvisionPublicIpv4PoolCidrResultPoolAddressRange {
     
     
     public String firstAddress;
+
     public ProvisionPublicIpv4PoolCidrResultPoolAddressRange withFirstAddress(String firstAddress) {
         this.firstAddress = firstAddress;
         return this;
@@ -33,9 +36,11 @@ public class ProvisionPublicIpv4PoolCidrResultPoolAddressRange {
     
     
     public String lastAddress;
+
     public ProvisionPublicIpv4PoolCidrResultPoolAddressRange withLastAddress(String lastAddress) {
         this.lastAddress = lastAddress;
         return this;
     }
     
+    public ProvisionPublicIpv4PoolCidrResultPoolAddressRange(){}
 }

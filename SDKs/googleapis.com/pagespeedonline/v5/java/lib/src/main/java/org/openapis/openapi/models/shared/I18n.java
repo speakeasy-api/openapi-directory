@@ -18,9 +18,11 @@ public class I18n {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rendererFormattedStrings")
     public RendererFormattedStrings rendererFormattedStrings;
+
     public I18n withRendererFormattedStrings(RendererFormattedStrings rendererFormattedStrings) {
         this.rendererFormattedStrings = rendererFormattedStrings;
         return this;
     }
     
+    public I18n(){}
 }

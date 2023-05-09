@@ -12,6 +12,7 @@ public class NAPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("altitude")
     public Float altitude;
+
     public NAPlace withAltitude(Float altitude) {
         this.altitude = altitude;
         return this;
@@ -20,6 +21,7 @@ public class NAPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public NAPlace withCity(String city) {
         this.city = city;
         return this;
@@ -28,6 +30,7 @@ public class NAPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public NAPlace withCountry(String country) {
         this.country = country;
         return this;
@@ -36,6 +39,7 @@ public class NAPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from_ip")
     public Boolean fromIp;
+
     public NAPlace withFromIp(Boolean fromIp) {
         this.fromIp = fromIp;
         return this;
@@ -44,6 +48,7 @@ public class NAPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("improveLocProposed")
     public Boolean improveLocProposed;
+
     public NAPlace withImproveLocProposed(Boolean improveLocProposed) {
         this.improveLocProposed = improveLocProposed;
         return this;
@@ -52,6 +57,7 @@ public class NAPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Double[] location;
+
     public NAPlace withLocation(Double[] location) {
         this.location = location;
         return this;
@@ -60,6 +66,7 @@ public class NAPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public NAPlace withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -68,9 +75,11 @@ public class NAPlace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trust_location")
     public Boolean trustLocation;
+
     public NAPlace withTrustLocation(Boolean trustLocation) {
         this.trustLocation = trustLocation;
         return this;
     }
     
+    public NAPlace(){}
 }

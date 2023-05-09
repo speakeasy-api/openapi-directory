@@ -9,15 +9,17 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * TextParagraph - A paragraph of text. Formatted text supported.
+ * TextParagraph - A paragraph of text. Formatted text supported. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
  */
 public class TextParagraph {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public TextParagraph withText(String text) {
         this.text = text;
         return this;
     }
     
+    public TextParagraph(){}
 }

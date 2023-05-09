@@ -15,6 +15,7 @@ public class ResourceCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Complete")
     public Boolean complete;
+
     public ResourceCount withComplete(Boolean complete) {
         this.complete = complete;
         return this;
@@ -23,9 +24,11 @@ public class ResourceCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalResources")
     public Long totalResources;
+
     public ResourceCount withTotalResources(Long totalResources) {
         this.totalResources = totalResources;
         return this;
     }
     
+    public ResourceCount(){}
 }

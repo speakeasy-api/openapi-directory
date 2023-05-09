@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClinicalNoteFieldValuesReadSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String drchronoOauth2;
+
     public ClinicalNoteFieldValuesReadSecurity withDrchronoOauth2(String drchronoOauth2) {
         this.drchronoOauth2 = drchronoOauth2;
         return this;
     }
     
+    public ClinicalNoteFieldValuesReadSecurity(@JsonProperty("drchrono_oauth2") String drchronoOauth2) {
+        this.drchronoOauth2 = drchronoOauth2;
+  }
 }

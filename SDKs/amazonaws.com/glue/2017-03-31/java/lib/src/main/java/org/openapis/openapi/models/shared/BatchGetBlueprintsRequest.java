@@ -12,6 +12,7 @@ public class BatchGetBlueprintsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeBlueprint")
     public Boolean includeBlueprint;
+
     public BatchGetBlueprintsRequest withIncludeBlueprint(Boolean includeBlueprint) {
         this.includeBlueprint = includeBlueprint;
         return this;
@@ -20,6 +21,7 @@ public class BatchGetBlueprintsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeParameterSpec")
     public Boolean includeParameterSpec;
+
     public BatchGetBlueprintsRequest withIncludeParameterSpec(Boolean includeParameterSpec) {
         this.includeParameterSpec = includeParameterSpec;
         return this;
@@ -27,9 +29,13 @@ public class BatchGetBlueprintsRequest {
     
     @JsonProperty("Names")
     public String[] names;
+
     public BatchGetBlueprintsRequest withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public BatchGetBlueprintsRequest(@JsonProperty("Names") String[] names) {
+        this.names = names;
+  }
 }

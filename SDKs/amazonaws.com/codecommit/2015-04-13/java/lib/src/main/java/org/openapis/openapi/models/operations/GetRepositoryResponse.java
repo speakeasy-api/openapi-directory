@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoryResponse {
     
     public String contentType;
+
     public GetRepositoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRepositoryResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public GetRepositoryResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -29,6 +32,7 @@ public class GetRepositoryResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public GetRepositoryResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -39,6 +43,7 @@ public class GetRepositoryResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public GetRepositoryResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -49,6 +54,7 @@ public class GetRepositoryResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public GetRepositoryResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetRepositoryResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public GetRepositoryResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -69,6 +76,7 @@ public class GetRepositoryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRepositoryOutput getRepositoryOutput;
+
     public GetRepositoryResponse withGetRepositoryOutput(org.openapis.openapi.models.shared.GetRepositoryOutput getRepositoryOutput) {
         this.getRepositoryOutput = getRepositoryOutput;
         return this;
@@ -79,6 +87,7 @@ public class GetRepositoryResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public GetRepositoryResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -89,6 +98,7 @@ public class GetRepositoryResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public GetRepositoryResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -99,6 +109,7 @@ public class GetRepositoryResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public GetRepositoryResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -106,6 +117,7 @@ public class GetRepositoryResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class GetRepositoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRepositoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

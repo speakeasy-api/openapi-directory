@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReceiptsPhotoToCSVResponse {
     
     public byte[] body;
+
     public ReceiptsPhotoToCSVResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ReceiptsPhotoToCSVResponse {
     
     
     public String contentType;
+
     public ReceiptsPhotoToCSVResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ReceiptsPhotoToCSVResponse {
      */
     
     public java.util.Map<String, Object> receiptsPhotoToCSV200ApplicationJSONObject;
+
     public ReceiptsPhotoToCSVResponse withReceiptsPhotoToCSV200ApplicationJSONObject(java.util.Map<String, Object> receiptsPhotoToCSV200ApplicationJSONObject) {
         this.receiptsPhotoToCSV200ApplicationJSONObject = receiptsPhotoToCSV200ApplicationJSONObject;
         return this;
@@ -33,6 +37,7 @@ public class ReceiptsPhotoToCSVResponse {
     
     
     public Integer statusCode;
+
     public ReceiptsPhotoToCSVResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class ReceiptsPhotoToCSVResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReceiptsPhotoToCSVResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class ReceiptsPhotoToCSVResponse {
      */
     
     public java.util.Map<String, Object> receiptsPhotoToCSV200TextJSONObject;
+
     public ReceiptsPhotoToCSVResponse withReceiptsPhotoToCSV200TextJSONObject(java.util.Map<String, Object> receiptsPhotoToCSV200TextJSONObject) {
         this.receiptsPhotoToCSV200TextJSONObject = receiptsPhotoToCSV200TextJSONObject;
         return this;
     }
     
+    public ReceiptsPhotoToCSVResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

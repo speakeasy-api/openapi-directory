@@ -18,9 +18,11 @@ public class CommentPlusoners {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItems")
     public Long totalItems;
+
     public CommentPlusoners withTotalItems(Long totalItems) {
         this.totalItems = totalItems;
         return this;
     }
     
+    public CommentPlusoners(){}
 }

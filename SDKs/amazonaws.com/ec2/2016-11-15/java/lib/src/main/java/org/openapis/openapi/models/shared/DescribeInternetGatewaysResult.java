@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInternetGatewaysResult {
     
     public DescribeInternetGatewaysResultInternetGateways[] internetGateways;
+
     public DescribeInternetGatewaysResult withInternetGateways(DescribeInternetGatewaysResultInternetGateways[] internetGateways) {
         this.internetGateways = internetGateways;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInternetGatewaysResult {
     
     
     public String nextToken;
+
     public DescribeInternetGatewaysResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInternetGatewaysResult(){}
 }

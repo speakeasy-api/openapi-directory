@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDataSetImportTaskResponse {
     @JsonProperty("taskId")
     public String taskId;
+
     public CreateDataSetImportTaskResponse withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public CreateDataSetImportTaskResponse(@JsonProperty("taskId") String taskId) {
+        this.taskId = taskId;
+  }
 }

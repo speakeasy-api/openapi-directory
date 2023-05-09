@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartIcd10CMInferenceJobResponse {
     
     public String contentType;
+
     public StartIcd10CMInferenceJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartIcd10CMInferenceJobResponse {
      */
     
     public Object internalServerException;
+
     public StartIcd10CMInferenceJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartIcd10CMInferenceJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StartIcd10CMInferenceJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartIcd10CMInferenceJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartIcd10CMInferenceJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartIcd10CMInferenceJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartIcd10CMInferenceJobResponse startIcd10CMInferenceJobResponse;
+
     public StartIcd10CMInferenceJobResponse withStartIcd10CMInferenceJobResponse(org.openapis.openapi.models.shared.StartIcd10CMInferenceJobResponse startIcd10CMInferenceJobResponse) {
         this.startIcd10CMInferenceJobResponse = startIcd10CMInferenceJobResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartIcd10CMInferenceJobResponse {
     
     
     public Integer statusCode;
+
     public StartIcd10CMInferenceJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartIcd10CMInferenceJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartIcd10CMInferenceJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class StartIcd10CMInferenceJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StartIcd10CMInferenceJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public StartIcd10CMInferenceJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

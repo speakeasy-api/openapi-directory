@@ -15,6 +15,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountCode")
     public String accountCode;
+
     public Account withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -26,6 +27,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beneficiaryAccount")
     public String beneficiaryAccount;
+
     public Account withBeneficiaryAccount(String beneficiaryAccount) {
         this.beneficiaryAccount = beneficiaryAccount;
         return this;
@@ -37,6 +39,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beneficiaryMerchantReference")
     public String beneficiaryMerchantReference;
+
     public Account withBeneficiaryMerchantReference(String beneficiaryMerchantReference) {
         this.beneficiaryMerchantReference = beneficiaryMerchantReference;
         return this;
@@ -48,6 +51,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Account withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +60,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutSchedule")
     public PayoutScheduleResponse payoutSchedule;
+
     public Account withPayoutSchedule(PayoutScheduleResponse payoutSchedule) {
         this.payoutSchedule = payoutSchedule;
         return this;
@@ -67,9 +72,11 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Account withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Account(){}
 }

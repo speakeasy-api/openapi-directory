@@ -15,6 +15,7 @@ public class GetLegalSearchDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admin_fines")
     public GetLegalSearchDefaultApplicationJSONAdminFines[] adminFines;
+
     public GetLegalSearchDefaultApplicationJSON withAdminFines(GetLegalSearchDefaultApplicationJSONAdminFines[] adminFines) {
         this.adminFines = adminFines;
         return this;
@@ -23,6 +24,7 @@ public class GetLegalSearchDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adrs")
     public GetLegalSearchDefaultApplicationJSONAdrs[] adrs;
+
     public GetLegalSearchDefaultApplicationJSON withAdrs(GetLegalSearchDefaultApplicationJSONAdrs[] adrs) {
         this.adrs = adrs;
         return this;
@@ -31,6 +33,7 @@ public class GetLegalSearchDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advisory_opinions")
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinions[] advisoryOpinions;
+
     public GetLegalSearchDefaultApplicationJSON withAdvisoryOpinions(GetLegalSearchDefaultApplicationJSONAdvisoryOpinions[] advisoryOpinions) {
         this.advisoryOpinions = advisoryOpinions;
         return this;
@@ -39,6 +42,7 @@ public class GetLegalSearchDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("murs")
     public GetLegalSearchDefaultApplicationJSONMurs[] murs;
+
     public GetLegalSearchDefaultApplicationJSON withMurs(GetLegalSearchDefaultApplicationJSONMurs[] murs) {
         this.murs = murs;
         return this;
@@ -47,6 +51,7 @@ public class GetLegalSearchDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regulations")
     public GetLegalSearchDefaultApplicationJSONRegulations[] regulations;
+
     public GetLegalSearchDefaultApplicationJSON withRegulations(GetLegalSearchDefaultApplicationJSONRegulations[] regulations) {
         this.regulations = regulations;
         return this;
@@ -55,6 +60,7 @@ public class GetLegalSearchDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statutes")
     public GetLegalSearchDefaultApplicationJSONStatutes[] statutes;
+
     public GetLegalSearchDefaultApplicationJSON withStatutes(GetLegalSearchDefaultApplicationJSONStatutes[] statutes) {
         this.statutes = statutes;
         return this;
@@ -66,6 +72,7 @@ public class GetLegalSearchDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_admin_fines")
     public Long totalAdminFines;
+
     public GetLegalSearchDefaultApplicationJSON withTotalAdminFines(Long totalAdminFines) {
         this.totalAdminFines = totalAdminFines;
         return this;
@@ -77,6 +84,7 @@ public class GetLegalSearchDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_adrs")
     public Long totalAdrs;
+
     public GetLegalSearchDefaultApplicationJSON withTotalAdrs(Long totalAdrs) {
         this.totalAdrs = totalAdrs;
         return this;
@@ -88,6 +96,7 @@ public class GetLegalSearchDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_advisory_opinions")
     public Long totalAdvisoryOpinions;
+
     public GetLegalSearchDefaultApplicationJSON withTotalAdvisoryOpinions(Long totalAdvisoryOpinions) {
         this.totalAdvisoryOpinions = totalAdvisoryOpinions;
         return this;
@@ -99,6 +108,7 @@ public class GetLegalSearchDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_all")
     public Long totalAll;
+
     public GetLegalSearchDefaultApplicationJSON withTotalAll(Long totalAll) {
         this.totalAll = totalAll;
         return this;
@@ -110,6 +120,7 @@ public class GetLegalSearchDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_murs")
     public Long totalMurs;
+
     public GetLegalSearchDefaultApplicationJSON withTotalMurs(Long totalMurs) {
         this.totalMurs = totalMurs;
         return this;
@@ -121,6 +132,7 @@ public class GetLegalSearchDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_regulations")
     public Long totalRegulations;
+
     public GetLegalSearchDefaultApplicationJSON withTotalRegulations(Long totalRegulations) {
         this.totalRegulations = totalRegulations;
         return this;
@@ -132,9 +144,11 @@ public class GetLegalSearchDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_statutes")
     public Long totalStatutes;
+
     public GetLegalSearchDefaultApplicationJSON withTotalStatutes(Long totalStatutes) {
         this.totalStatutes = totalStatutes;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSON(){}
 }

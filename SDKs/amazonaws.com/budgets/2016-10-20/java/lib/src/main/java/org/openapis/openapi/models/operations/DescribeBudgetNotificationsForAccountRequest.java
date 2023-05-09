@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeBudgetNotificationsForAccountRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribeBudgetNotificationsForAccountRequest describeBudgetNotificationsForAccountRequest;
+
     public DescribeBudgetNotificationsForAccountRequest withDescribeBudgetNotificationsForAccountRequest(org.openapis.openapi.models.shared.DescribeBudgetNotificationsForAccountRequest describeBudgetNotificationsForAccountRequest) {
         this.describeBudgetNotificationsForAccountRequest = describeBudgetNotificationsForAccountRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBudgetNotificationsForAccountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public DescribeBudgetNotificationsForAccountRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBudgetNotificationsForAccountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public DescribeBudgetNotificationsForAccountRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class DescribeBudgetNotificationsForAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeBudgetNotificationsForAccountRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class DescribeBudgetNotificationsForAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeBudgetNotificationsForAccountRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class DescribeBudgetNotificationsForAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeBudgetNotificationsForAccountRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class DescribeBudgetNotificationsForAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeBudgetNotificationsForAccountRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class DescribeBudgetNotificationsForAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeBudgetNotificationsForAccountRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class DescribeBudgetNotificationsForAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeBudgetNotificationsForAccountRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class DescribeBudgetNotificationsForAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeBudgetNotificationsForAccountRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class DescribeBudgetNotificationsForAccountRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribeBudgetNotificationsForAccountXAmzTargetEnum xAmzTarget;
+
     public DescribeBudgetNotificationsForAccountRequest withXAmzTarget(DescribeBudgetNotificationsForAccountXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribeBudgetNotificationsForAccountRequest(@JsonProperty("DescribeBudgetNotificationsForAccountRequest") org.openapis.openapi.models.shared.DescribeBudgetNotificationsForAccountRequest describeBudgetNotificationsForAccountRequest, @JsonProperty("X-Amz-Target") DescribeBudgetNotificationsForAccountXAmzTargetEnum xAmzTarget) {
+        this.describeBudgetNotificationsForAccountRequest = describeBudgetNotificationsForAccountRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

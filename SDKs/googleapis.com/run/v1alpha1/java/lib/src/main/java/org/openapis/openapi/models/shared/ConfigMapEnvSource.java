@@ -18,6 +18,7 @@ public class ConfigMapEnvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localObjectReference")
     public LocalObjectReference localObjectReference;
+
     public ConfigMapEnvSource withLocalObjectReference(LocalObjectReference localObjectReference) {
         this.localObjectReference = localObjectReference;
         return this;
@@ -29,6 +30,7 @@ public class ConfigMapEnvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConfigMapEnvSource withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class ConfigMapEnvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optional")
     public Boolean optional;
+
     public ConfigMapEnvSource withOptional(Boolean optional) {
         this.optional = optional;
         return this;
     }
     
+    public ConfigMapEnvSource(){}
 }

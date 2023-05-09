@@ -15,6 +15,7 @@ public class SalesforceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataTransferApis")
     public SalesforceDataTransferApiEnum[] dataTransferApis;
+
     public SalesforceMetadata withDataTransferApis(SalesforceDataTransferApiEnum[] dataTransferApis) {
         this.dataTransferApis = dataTransferApis;
         return this;
@@ -23,9 +24,11 @@ public class SalesforceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthScopes")
     public String[] oAuthScopes;
+
     public SalesforceMetadata withOAuthScopes(String[] oAuthScopes) {
         this.oAuthScopes = oAuthScopes;
         return this;
     }
     
+    public SalesforceMetadata(){}
 }

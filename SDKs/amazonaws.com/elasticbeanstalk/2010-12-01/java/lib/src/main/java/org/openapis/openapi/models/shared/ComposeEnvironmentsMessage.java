@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ComposeEnvironmentsMessage {
     
     public String applicationName;
+
     public ComposeEnvironmentsMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class ComposeEnvironmentsMessage {
     
     
     public String groupName;
+
     public ComposeEnvironmentsMessage withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -26,9 +28,11 @@ public class ComposeEnvironmentsMessage {
     
     
     public String[] versionLabels;
+
     public ComposeEnvironmentsMessage withVersionLabels(String[] versionLabels) {
         this.versionLabels = versionLabels;
         return this;
     }
     
+    public ComposeEnvironmentsMessage(){}
 }

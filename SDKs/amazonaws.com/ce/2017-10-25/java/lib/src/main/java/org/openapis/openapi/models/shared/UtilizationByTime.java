@@ -15,6 +15,7 @@ public class UtilizationByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Groups")
     public ReservationUtilizationGroup[] groups;
+
     public UtilizationByTime withGroups(ReservationUtilizationGroup[] groups) {
         this.groups = groups;
         return this;
@@ -23,6 +24,7 @@ public class UtilizationByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public UtilizationByTime withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
@@ -31,9 +33,11 @@ public class UtilizationByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Total")
     public ReservationAggregates total;
+
     public UtilizationByTime withTotal(ReservationAggregates total) {
         this.total = total;
         return this;
     }
     
+    public UtilizationByTime(){}
 }

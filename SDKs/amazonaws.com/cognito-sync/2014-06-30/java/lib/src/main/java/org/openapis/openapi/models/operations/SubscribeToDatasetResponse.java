@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SubscribeToDatasetResponse {
     
     public String contentType;
+
     public SubscribeToDatasetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SubscribeToDatasetResponse {
      */
     
     public Object internalErrorException;
+
     public SubscribeToDatasetResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class SubscribeToDatasetResponse {
      */
     
     public Object invalidConfigurationException;
+
     public SubscribeToDatasetResponse withInvalidConfigurationException(Object invalidConfigurationException) {
         this.invalidConfigurationException = invalidConfigurationException;
         return this;
@@ -39,6 +43,7 @@ public class SubscribeToDatasetResponse {
      */
     
     public Object invalidParameterException;
+
     public SubscribeToDatasetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class SubscribeToDatasetResponse {
      */
     
     public Object notAuthorizedException;
+
     public SubscribeToDatasetResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class SubscribeToDatasetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SubscribeToDatasetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class SubscribeToDatasetResponse {
     
     
     public Integer statusCode;
+
     public SubscribeToDatasetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class SubscribeToDatasetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SubscribeToDatasetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class SubscribeToDatasetResponse {
      */
     
     public java.util.Map<String, Object> subscribeToDatasetResponse;
+
     public SubscribeToDatasetResponse withSubscribeToDatasetResponse(java.util.Map<String, Object> subscribeToDatasetResponse) {
         this.subscribeToDatasetResponse = subscribeToDatasetResponse;
         return this;
@@ -93,9 +103,14 @@ public class SubscribeToDatasetResponse {
      */
     
     public Object tooManyRequestsException;
+
     public SubscribeToDatasetResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public SubscribeToDatasetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

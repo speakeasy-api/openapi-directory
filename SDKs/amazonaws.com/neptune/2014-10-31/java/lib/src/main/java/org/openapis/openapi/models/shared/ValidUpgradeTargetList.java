@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ValidUpgradeTargetList {
     
     public Boolean autoUpgrade;
+
     public ValidUpgradeTargetList withAutoUpgrade(Boolean autoUpgrade) {
         this.autoUpgrade = autoUpgrade;
         return this;
@@ -19,6 +20,7 @@ public class ValidUpgradeTargetList {
     
     
     public String description;
+
     public ValidUpgradeTargetList withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class ValidUpgradeTargetList {
     
     
     public String engine;
+
     public ValidUpgradeTargetList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -33,6 +36,7 @@ public class ValidUpgradeTargetList {
     
     
     public String engineVersion;
+
     public ValidUpgradeTargetList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -40,6 +44,7 @@ public class ValidUpgradeTargetList {
     
     
     public Boolean isMajorVersionUpgrade;
+
     public ValidUpgradeTargetList withIsMajorVersionUpgrade(Boolean isMajorVersionUpgrade) {
         this.isMajorVersionUpgrade = isMajorVersionUpgrade;
         return this;
@@ -47,9 +52,11 @@ public class ValidUpgradeTargetList {
     
     
     public Boolean supportsGlobalDatabases;
+
     public ValidUpgradeTargetList withSupportsGlobalDatabases(Boolean supportsGlobalDatabases) {
         this.supportsGlobalDatabases = supportsGlobalDatabases;
         return this;
     }
     
+    public ValidUpgradeTargetList(){}
 }

@@ -18,9 +18,11 @@ public class DeleteFooterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footerId")
     public String footerId;
+
     public DeleteFooterRequest withFooterId(String footerId) {
         this.footerId = footerId;
         return this;
     }
     
+    public DeleteFooterRequest(){}
 }

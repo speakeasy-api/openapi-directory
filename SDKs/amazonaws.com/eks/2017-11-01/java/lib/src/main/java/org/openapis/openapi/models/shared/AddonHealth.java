@@ -15,9 +15,11 @@ public class AddonHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public AddonIssue[] issues;
+
     public AddonHealth withIssues(AddonIssue[] issues) {
         this.issues = issues;
         return this;
     }
     
+    public AddonHealth(){}
 }

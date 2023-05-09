@@ -17,6 +17,7 @@ public class VideoSearchResults {
      */
     @JsonProperty("data")
     public Video[] data;
+
     public VideoSearchResults withData(Video[] data) {
         this.data = data;
         return this;
@@ -28,6 +29,7 @@ public class VideoSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public VideoSearchResults withMessage(String message) {
         this.message = message;
         return this;
@@ -39,6 +41,7 @@ public class VideoSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public VideoSearchResults withPage(Long page) {
         this.page = page;
         return this;
@@ -50,6 +53,7 @@ public class VideoSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public VideoSearchResults withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -60,6 +64,7 @@ public class VideoSearchResults {
      */
     @JsonProperty("search_id")
     public String searchId;
+
     public VideoSearchResults withSearchId(String searchId) {
         this.searchId = searchId;
         return this;
@@ -70,9 +75,15 @@ public class VideoSearchResults {
      */
     @JsonProperty("total_count")
     public Long totalCount;
+
     public VideoSearchResults withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public VideoSearchResults(@JsonProperty("data") Video[] data, @JsonProperty("search_id") String searchId, @JsonProperty("total_count") Long totalCount) {
+        this.data = data;
+        this.searchId = searchId;
+        this.totalCount = totalCount;
+  }
 }

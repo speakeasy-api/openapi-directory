@@ -15,6 +15,7 @@ public class SoundTouchStopResponse {
      */
     @JsonProperty("Message")
     public SoundTouchStopResponseMessageEnum message;
+
     public SoundTouchStopResponse withMessage(SoundTouchStopResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,9 +26,14 @@ public class SoundTouchStopResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public SoundTouchStopResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public SoundTouchStopResponse(@JsonProperty("Message") SoundTouchStopResponseMessageEnum message, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.success = success;
+  }
 }

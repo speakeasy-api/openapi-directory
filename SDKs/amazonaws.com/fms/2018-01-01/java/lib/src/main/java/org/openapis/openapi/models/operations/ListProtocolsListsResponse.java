@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProtocolsListsResponse {
     
     public String contentType;
+
     public ListProtocolsListsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListProtocolsListsResponse {
      */
     
     public Object internalErrorException;
+
     public ListProtocolsListsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListProtocolsListsResponse {
      */
     
     public Object invalidOperationException;
+
     public ListProtocolsListsResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -39,6 +43,7 @@ public class ListProtocolsListsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProtocolsListsResponse listProtocolsListsResponse;
+
     public ListProtocolsListsResponse withListProtocolsListsResponse(org.openapis.openapi.models.shared.ListProtocolsListsResponse listProtocolsListsResponse) {
         this.listProtocolsListsResponse = listProtocolsListsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListProtocolsListsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListProtocolsListsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListProtocolsListsResponse {
     
     
     public Integer statusCode;
+
     public ListProtocolsListsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListProtocolsListsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProtocolsListsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListProtocolsListsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

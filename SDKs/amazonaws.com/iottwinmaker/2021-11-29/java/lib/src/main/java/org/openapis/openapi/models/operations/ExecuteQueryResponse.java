@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExecuteQueryResponse {
@@ -12,6 +13,7 @@ public class ExecuteQueryResponse {
      */
     
     public Object accessDeniedException;
+
     public ExecuteQueryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ExecuteQueryResponse {
     
     
     public String contentType;
+
     public ExecuteQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ExecuteQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.ExecuteQueryResponse executeQueryResponse;
+
     public ExecuteQueryResponse withExecuteQueryResponse(org.openapis.openapi.models.shared.ExecuteQueryResponse executeQueryResponse) {
         this.executeQueryResponse = executeQueryResponse;
         return this;
@@ -39,6 +43,7 @@ public class ExecuteQueryResponse {
      */
     
     public Object internalServerException;
+
     public ExecuteQueryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ExecuteQueryResponse {
      */
     
     public Object queryTimeoutException;
+
     public ExecuteQueryResponse withQueryTimeoutException(Object queryTimeoutException) {
         this.queryTimeoutException = queryTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class ExecuteQueryResponse {
     
     
     public Integer statusCode;
+
     public ExecuteQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ExecuteQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExecuteQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ExecuteQueryResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ExecuteQueryResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class ExecuteQueryResponse {
      */
     
     public Object throttlingException;
+
     public ExecuteQueryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ExecuteQueryResponse {
      */
     
     public Object validationException;
+
     public ExecuteQueryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ExecuteQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

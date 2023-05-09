@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchCompaniesCompanyIdUsersUserIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateCompanyUserRequest updateCompanyUserRequest;
+
     public PatchCompaniesCompanyIdUsersUserIdRequest withUpdateCompanyUserRequest(org.openapis.openapi.models.shared.UpdateCompanyUserRequest updateCompanyUserRequest) {
         this.updateCompanyUserRequest = updateCompanyUserRequest;
         return this;
@@ -19,6 +21,7 @@ public class PatchCompaniesCompanyIdUsersUserIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public PatchCompaniesCompanyIdUsersUserIdRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -29,9 +32,14 @@ public class PatchCompaniesCompanyIdUsersUserIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public PatchCompaniesCompanyIdUsersUserIdRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public PatchCompaniesCompanyIdUsersUserIdRequest(@JsonProperty("companyId") String companyId, @JsonProperty("userId") String userId) {
+        this.companyId = companyId;
+        this.userId = userId;
+  }
 }

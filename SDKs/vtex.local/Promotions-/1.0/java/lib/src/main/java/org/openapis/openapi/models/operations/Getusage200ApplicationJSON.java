@@ -18,6 +18,7 @@ public class Getusage200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("couponCode")
     public String couponCode;
+
     public Getusage200ApplicationJSON withCouponCode(String couponCode) {
         this.couponCode = couponCode;
         return this;
@@ -29,6 +30,7 @@ public class Getusage200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostName")
     public String hostName;
+
     public Getusage200ApplicationJSON withHostName(String hostName) {
         this.hostName = hostName;
         return this;
@@ -40,9 +42,11 @@ public class Getusage200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileUsages")
     public Getusage200ApplicationJSONProfileUsages profileUsages;
+
     public Getusage200ApplicationJSON withProfileUsages(Getusage200ApplicationJSONProfileUsages profileUsages) {
         this.profileUsages = profileUsages;
         return this;
     }
     
+    public Getusage200ApplicationJSON(){}
 }

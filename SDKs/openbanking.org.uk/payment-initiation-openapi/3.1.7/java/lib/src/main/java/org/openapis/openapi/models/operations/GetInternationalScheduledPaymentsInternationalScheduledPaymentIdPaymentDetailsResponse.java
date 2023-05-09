@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsResponse {
     
     public byte[] body;
+
     public GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPay
     
     
     public String contentType;
+
     public GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPay
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPay
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -43,6 +48,7 @@ public class GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPay
      */
     
     public org.openapis.openapi.models.shared.OBWritePaymentDetailsResponse1 obWritePaymentDetailsResponse1;
+
     public GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsResponse withOBWritePaymentDetailsResponse1(org.openapis.openapi.models.shared.OBWritePaymentDetailsResponse1 obWritePaymentDetailsResponse1) {
         this.obWritePaymentDetailsResponse1 = obWritePaymentDetailsResponse1;
         return this;
@@ -50,6 +56,7 @@ public class GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPay
     
     
     public Integer statusCode;
+
     public GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPay
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

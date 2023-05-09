@@ -15,6 +15,7 @@ public class ListScheduledAuditsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListScheduledAuditsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListScheduledAuditsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledAudits")
     public ScheduledAuditMetadata[] scheduledAudits;
+
     public ListScheduledAuditsResponse withScheduledAudits(ScheduledAuditMetadata[] scheduledAudits) {
         this.scheduledAudits = scheduledAudits;
         return this;
     }
     
+    public ListScheduledAuditsResponse(){}
 }

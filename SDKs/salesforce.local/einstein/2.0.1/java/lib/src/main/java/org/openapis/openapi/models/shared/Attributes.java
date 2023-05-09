@@ -15,6 +15,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cellLocation")
     public CellLocation cellLocation;
+
     public Attributes withCellLocation(CellLocation cellLocation) {
         this.cellLocation = cellLocation;
         return this;
@@ -23,6 +24,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public Attributes withLanguage(String language) {
         this.language = language;
         return this;
@@ -31,6 +33,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageNumber")
     public String pageNumber;
+
     public Attributes withPageNumber(String pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -39,6 +42,7 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public Attributes withTag(String tag) {
         this.tag = tag;
         return this;
@@ -47,9 +51,11 @@ public class Attributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public EntityObject value;
+
     public Attributes withValue(EntityObject value) {
         this.value = value;
         return this;
     }
     
+    public Attributes(){}
 }

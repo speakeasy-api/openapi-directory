@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaxonomiesReadRequest {
@@ -12,9 +13,13 @@ public class TaxonomiesReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxonomy_id")
     public String taxonomyId;
+
     public TaxonomiesReadRequest withTaxonomyId(String taxonomyId) {
         this.taxonomyId = taxonomyId;
         return this;
     }
     
+    public TaxonomiesReadRequest(@JsonProperty("taxonomy_id") String taxonomyId) {
+        this.taxonomyId = taxonomyId;
+  }
 }

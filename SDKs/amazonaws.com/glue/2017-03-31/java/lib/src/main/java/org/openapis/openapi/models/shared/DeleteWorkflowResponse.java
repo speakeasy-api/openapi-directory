@@ -15,9 +15,11 @@ public class DeleteWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DeleteWorkflowResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteWorkflowResponse(){}
 }

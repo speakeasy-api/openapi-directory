@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticleAuthorsListRequest {
@@ -12,9 +13,13 @@ public class PrivateArticleAuthorsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
     public Long articleId;
+
     public PrivateArticleAuthorsListRequest withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
     }
     
+    public PrivateArticleAuthorsListRequest(@JsonProperty("article_id") Long articleId) {
+        this.articleId = articleId;
+  }
 }

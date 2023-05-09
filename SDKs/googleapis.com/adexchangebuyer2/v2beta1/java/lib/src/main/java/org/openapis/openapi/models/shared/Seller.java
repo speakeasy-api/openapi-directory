@@ -18,6 +18,7 @@ public class Seller {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Seller withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,9 +30,11 @@ public class Seller {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subAccountId")
     public String subAccountId;
+
     public Seller withSubAccountId(String subAccountId) {
         this.subAccountId = subAccountId;
         return this;
     }
     
+    public Seller(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RejectVpcEndpointConnectionsResult {
     
     public RejectVpcEndpointConnectionsResultUnsuccessful[] unsuccessful;
+
     public RejectVpcEndpointConnectionsResult withUnsuccessful(RejectVpcEndpointConnectionsResultUnsuccessful[] unsuccessful) {
         this.unsuccessful = unsuccessful;
         return this;
     }
     
+    public RejectVpcEndpointConnectionsResult(){}
 }

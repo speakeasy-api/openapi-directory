@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteNetworkResponse {
     @JsonProperty("network")
     public Network network;
+
     public DeleteNetworkResponse withNetwork(Network network) {
         this.network = network;
         return this;
     }
     
+    public DeleteNetworkResponse(@JsonProperty("network") Network network) {
+        this.network = network;
+  }
 }

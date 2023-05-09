@@ -12,6 +12,7 @@ public class BuildsListToolsetProjects200ApplicationJSONTestcloudProjects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frameworkProperties")
     public BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkProperties frameworkProperties;
+
     public BuildsListToolsetProjects200ApplicationJSONTestcloudProjects withFrameworkProperties(BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkProperties frameworkProperties) {
         this.frameworkProperties = frameworkProperties;
         return this;
@@ -19,6 +20,7 @@ public class BuildsListToolsetProjects200ApplicationJSONTestcloudProjects {
     
     @JsonProperty("frameworkType")
     public BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkTypeEnum frameworkType;
+
     public BuildsListToolsetProjects200ApplicationJSONTestcloudProjects withFrameworkType(BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkTypeEnum frameworkType) {
         this.frameworkType = frameworkType;
         return this;
@@ -29,9 +31,14 @@ public class BuildsListToolsetProjects200ApplicationJSONTestcloudProjects {
      */
     @JsonProperty("path")
     public String path;
+
     public BuildsListToolsetProjects200ApplicationJSONTestcloudProjects withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONTestcloudProjects(@JsonProperty("frameworkType") BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkTypeEnum frameworkType, @JsonProperty("path") String path) {
+        this.frameworkType = frameworkType;
+        this.path = path;
+  }
 }

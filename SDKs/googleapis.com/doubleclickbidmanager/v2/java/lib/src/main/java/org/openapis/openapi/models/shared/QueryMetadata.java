@@ -18,6 +18,7 @@ public class QueryMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataRange")
     public DataRange dataRange;
+
     public QueryMetadata withDataRange(DataRange dataRange) {
         this.dataRange = dataRange;
         return this;
@@ -29,6 +30,7 @@ public class QueryMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public QueryMetadataFormatEnum format;
+
     public QueryMetadata withFormat(QueryMetadataFormatEnum format) {
         this.format = format;
         return this;
@@ -40,6 +42,7 @@ public class QueryMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sendNotification")
     public Boolean sendNotification;
+
     public QueryMetadata withSendNotification(Boolean sendNotification) {
         this.sendNotification = sendNotification;
         return this;
@@ -51,6 +54,7 @@ public class QueryMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareEmailAddress")
     public String[] shareEmailAddress;
+
     public QueryMetadata withShareEmailAddress(String[] shareEmailAddress) {
         this.shareEmailAddress = shareEmailAddress;
         return this;
@@ -62,9 +66,11 @@ public class QueryMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public QueryMetadata withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public QueryMetadata(){}
 }

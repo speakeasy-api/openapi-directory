@@ -20,6 +20,7 @@ public class Handshake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public ActionTypeEnum action;
+
     public Handshake withAction(ActionTypeEnum action) {
         this.action = action;
         return this;
@@ -28,6 +29,7 @@ public class Handshake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Handshake withArn(String arn) {
         this.arn = arn;
         return this;
@@ -38,6 +40,7 @@ public class Handshake {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationTimestamp")
     public OffsetDateTime expirationTimestamp;
+
     public Handshake withExpirationTimestamp(OffsetDateTime expirationTimestamp) {
         this.expirationTimestamp = expirationTimestamp;
         return this;
@@ -46,6 +49,7 @@ public class Handshake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Handshake withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class Handshake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parties")
     public HandshakeParty[] parties;
+
     public Handshake withParties(HandshakeParty[] parties) {
         this.parties = parties;
         return this;
@@ -64,6 +69,7 @@ public class Handshake {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RequestedTimestamp")
     public OffsetDateTime requestedTimestamp;
+
     public Handshake withRequestedTimestamp(OffsetDateTime requestedTimestamp) {
         this.requestedTimestamp = requestedTimestamp;
         return this;
@@ -72,6 +78,7 @@ public class Handshake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public HandshakeResource[] resources;
+
     public Handshake withResources(HandshakeResource[] resources) {
         this.resources = resources;
         return this;
@@ -80,9 +87,11 @@ public class Handshake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public HandshakeStateEnum state;
+
     public Handshake withState(HandshakeStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Handshake(){}
 }

@@ -15,6 +15,7 @@ public class ListTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTemplatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListTemplatesResponse {
     
     @JsonProperty("templates")
     public TemplateSummary[] templates;
+
     public ListTemplatesResponse withTemplates(TemplateSummary[] templates) {
         this.templates = templates;
         return this;
     }
     
+    public ListTemplatesResponse(@JsonProperty("templates") TemplateSummary[] templates) {
+        this.templates = templates;
+  }
 }

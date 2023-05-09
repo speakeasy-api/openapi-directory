@@ -12,6 +12,7 @@ public class PatientHealthMetricCreateResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public PatientHealthMetricCreateResourceAttributesCode code;
+
     public PatientHealthMetricCreateResourceAttributes withCode(PatientHealthMetricCreateResourceAttributesCode code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class PatientHealthMetricCreateResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diastolic")
     public Double diastolic;
+
     public PatientHealthMetricCreateResourceAttributes withDiastolic(Double diastolic) {
         this.diastolic = diastolic;
         return this;
@@ -28,6 +30,7 @@ public class PatientHealthMetricCreateResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurred_at")
     public String occurredAt;
+
     public PatientHealthMetricCreateResourceAttributes withOccurredAt(String occurredAt) {
         this.occurredAt = occurredAt;
         return this;
@@ -36,6 +39,7 @@ public class PatientHealthMetricCreateResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systolic")
     public Double systolic;
+
     public PatientHealthMetricCreateResourceAttributes withSystolic(Double systolic) {
         this.systolic = systolic;
         return this;
@@ -44,6 +48,7 @@ public class PatientHealthMetricCreateResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PatientHealthMetricCreateResourceAttributesTypeEnum type;
+
     public PatientHealthMetricCreateResourceAttributes withType(PatientHealthMetricCreateResourceAttributesTypeEnum type) {
         this.type = type;
         return this;
@@ -52,6 +57,7 @@ public class PatientHealthMetricCreateResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public PatientHealthMetricCreateResourceAttributes withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -63,9 +69,11 @@ public class PatientHealthMetricCreateResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public PatientHealthMetricCreateResourceAttributes withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public PatientHealthMetricCreateResourceAttributes(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyRequest {
@@ -12,6 +13,7 @@ public class VerifyRequest {
      */
     @SpeakeasyMetadata("form:name=api_key")
     public String apiKey;
+
     public VerifyRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class VerifyRequest {
      */
     @SpeakeasyMetadata("form:name=api_secret")
     public String apiSecret;
+
     public VerifyRequest withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -32,6 +35,7 @@ public class VerifyRequest {
      */
     @SpeakeasyMetadata("form:name=brand")
     public String brand;
+
     public VerifyRequest withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -42,6 +46,7 @@ public class VerifyRequest {
      */
     @SpeakeasyMetadata("form:name=code_length")
     public VerifyRequestCodeLengthEnum codeLength;
+
     public VerifyRequest withCodeLength(VerifyRequestCodeLengthEnum codeLength) {
         this.codeLength = codeLength;
         return this;
@@ -52,6 +57,7 @@ public class VerifyRequest {
      */
     @SpeakeasyMetadata("form:name=country")
     public String country;
+
     public VerifyRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -62,6 +68,7 @@ public class VerifyRequest {
      */
     @SpeakeasyMetadata("form:name=lg")
     public VerifyRequestLgEnum lg;
+
     public VerifyRequest withLg(VerifyRequestLgEnum lg) {
         this.lg = lg;
         return this;
@@ -72,6 +79,7 @@ public class VerifyRequest {
      */
     @SpeakeasyMetadata("form:name=next_event_wait")
     public Long nextEventWait;
+
     public VerifyRequest withNextEventWait(Long nextEventWait) {
         this.nextEventWait = nextEventWait;
         return this;
@@ -82,6 +90,7 @@ public class VerifyRequest {
      */
     @SpeakeasyMetadata("form:name=number")
     public String number;
+
     public VerifyRequest withNumber(String number) {
         this.number = number;
         return this;
@@ -92,6 +101,7 @@ public class VerifyRequest {
      */
     @SpeakeasyMetadata("form:name=pin_code")
     public String pinCode;
+
     public VerifyRequest withPinCode(String pinCode) {
         this.pinCode = pinCode;
         return this;
@@ -102,6 +112,7 @@ public class VerifyRequest {
      */
     @SpeakeasyMetadata("form:name=pin_expiry")
     public Long pinExpiry;
+
     public VerifyRequest withPinExpiry(Long pinExpiry) {
         this.pinExpiry = pinExpiry;
         return this;
@@ -112,6 +123,7 @@ public class VerifyRequest {
      */
     @SpeakeasyMetadata("form:name=sender_id")
     public String senderId;
+
     public VerifyRequest withSenderId(String senderId) {
         this.senderId = senderId;
         return this;
@@ -122,9 +134,16 @@ public class VerifyRequest {
      */
     @SpeakeasyMetadata("form:name=workflow_id")
     public VerifyRequestWorkflowIdEnum workflowId;
+
     public VerifyRequest withWorkflowId(VerifyRequestWorkflowIdEnum workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public VerifyRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("api_secret") String apiSecret, @JsonProperty("brand") String brand, @JsonProperty("number") String number) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.brand = brand;
+        this.number = number;
+  }
 }

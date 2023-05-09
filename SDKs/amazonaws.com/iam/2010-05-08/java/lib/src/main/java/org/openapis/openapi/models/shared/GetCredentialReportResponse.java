@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class GetCredentialReportResponse {
     
     public String content;
+
     public GetCredentialReportResponse withContent(String content) {
         this.content = content;
         return this;
@@ -19,6 +20,7 @@ public class GetCredentialReportResponse {
     
     
     public OffsetDateTime generatedTime;
+
     public GetCredentialReportResponse withGeneratedTime(OffsetDateTime generatedTime) {
         this.generatedTime = generatedTime;
         return this;
@@ -26,9 +28,11 @@ public class GetCredentialReportResponse {
     
     
     public ReportFormatTypeEnum reportFormat;
+
     public GetCredentialReportResponse withReportFormat(ReportFormatTypeEnum reportFormat) {
         this.reportFormat = reportFormat;
         return this;
     }
     
+    public GetCredentialReportResponse(){}
 }

@@ -18,6 +18,7 @@ public class GenericError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public GenericError withCode(String code) {
         this.code = code;
         return this;
@@ -28,9 +29,13 @@ public class GenericError {
      */
     @JsonProperty("message")
     public String message;
+
     public GenericError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GenericError(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

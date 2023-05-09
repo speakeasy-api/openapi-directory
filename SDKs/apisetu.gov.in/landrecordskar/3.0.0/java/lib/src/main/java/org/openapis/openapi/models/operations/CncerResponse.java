@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CncerResponse {
     
     public byte[] body;
+
     public CncerResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CncerResponse {
     
     
     public String contentType;
+
     public CncerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CncerResponse {
     
     
     public Integer statusCode;
+
     public CncerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class CncerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CncerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class CncerResponse {
      */
     
     public Cncer400ApplicationJSON cncer400ApplicationJSONObject;
+
     public CncerResponse withCncer400ApplicationJSONObject(Cncer400ApplicationJSON cncer400ApplicationJSONObject) {
         this.cncer400ApplicationJSONObject = cncer400ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class CncerResponse {
      */
     
     public Cncer401ApplicationJSON cncer401ApplicationJSONObject;
+
     public CncerResponse withCncer401ApplicationJSONObject(Cncer401ApplicationJSON cncer401ApplicationJSONObject) {
         this.cncer401ApplicationJSONObject = cncer401ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class CncerResponse {
      */
     
     public Cncer404ApplicationJSON cncer404ApplicationJSONObject;
+
     public CncerResponse withCncer404ApplicationJSONObject(Cncer404ApplicationJSON cncer404ApplicationJSONObject) {
         this.cncer404ApplicationJSONObject = cncer404ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class CncerResponse {
      */
     
     public Cncer500ApplicationJSON cncer500ApplicationJSONObject;
+
     public CncerResponse withCncer500ApplicationJSONObject(Cncer500ApplicationJSON cncer500ApplicationJSONObject) {
         this.cncer500ApplicationJSONObject = cncer500ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class CncerResponse {
      */
     
     public Cncer502ApplicationJSON cncer502ApplicationJSONObject;
+
     public CncerResponse withCncer502ApplicationJSONObject(Cncer502ApplicationJSON cncer502ApplicationJSONObject) {
         this.cncer502ApplicationJSONObject = cncer502ApplicationJSONObject;
         return this;
@@ -90,6 +100,7 @@ public class CncerResponse {
      */
     
     public Cncer503ApplicationJSON cncer503ApplicationJSONObject;
+
     public CncerResponse withCncer503ApplicationJSONObject(Cncer503ApplicationJSON cncer503ApplicationJSONObject) {
         this.cncer503ApplicationJSONObject = cncer503ApplicationJSONObject;
         return this;
@@ -100,9 +111,14 @@ public class CncerResponse {
      */
     
     public Cncer504ApplicationJSON cncer504ApplicationJSONObject;
+
     public CncerResponse withCncer504ApplicationJSONObject(Cncer504ApplicationJSON cncer504ApplicationJSONObject) {
         this.cncer504ApplicationJSONObject = cncer504ApplicationJSONObject;
         return this;
     }
     
+    public CncerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

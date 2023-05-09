@@ -15,6 +15,7 @@ public class ListObjectAttributesRequestBodyFacetFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FacetName")
     public String facetName;
+
     public ListObjectAttributesRequestBodyFacetFilter withFacetName(String facetName) {
         this.facetName = facetName;
         return this;
@@ -23,9 +24,11 @@ public class ListObjectAttributesRequestBodyFacetFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaArn")
     public String schemaArn;
+
     public ListObjectAttributesRequestBodyFacetFilter withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
     }
     
+    public ListObjectAttributesRequestBodyFacetFilter(){}
 }

@@ -15,6 +15,7 @@ public class ListVocabularyFiltersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListVocabularyFiltersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListVocabularyFiltersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyFilters")
     public VocabularyFilterInfo[] vocabularyFilters;
+
     public ListVocabularyFiltersResponse withVocabularyFilters(VocabularyFilterInfo[] vocabularyFilters) {
         this.vocabularyFilters = vocabularyFilters;
         return this;
     }
     
+    public ListVocabularyFiltersResponse(){}
 }

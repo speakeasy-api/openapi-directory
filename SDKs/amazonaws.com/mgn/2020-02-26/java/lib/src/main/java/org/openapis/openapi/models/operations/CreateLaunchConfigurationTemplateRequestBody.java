@@ -15,6 +15,7 @@ public class CreateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatePublicIpAddress")
     public Boolean associatePublicIpAddress;
+
     public CreateLaunchConfigurationTemplateRequestBody withAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         return this;
@@ -26,6 +27,7 @@ public class CreateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootMode")
     public CreateLaunchConfigurationTemplateRequestBodyBootModeEnum bootMode;
+
     public CreateLaunchConfigurationTemplateRequestBody withBootMode(CreateLaunchConfigurationTemplateRequestBodyBootModeEnum bootMode) {
         this.bootMode = bootMode;
         return this;
@@ -37,6 +39,7 @@ public class CreateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyPrivateIp")
     public Boolean copyPrivateIp;
+
     public CreateLaunchConfigurationTemplateRequestBody withCopyPrivateIp(Boolean copyPrivateIp) {
         this.copyPrivateIp = copyPrivateIp;
         return this;
@@ -48,6 +51,7 @@ public class CreateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyTags")
     public Boolean copyTags;
+
     public CreateLaunchConfigurationTemplateRequestBody withCopyTags(Boolean copyTags) {
         this.copyTags = copyTags;
         return this;
@@ -59,6 +63,7 @@ public class CreateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableMapAutoTagging")
     public Boolean enableMapAutoTagging;
+
     public CreateLaunchConfigurationTemplateRequestBody withEnableMapAutoTagging(Boolean enableMapAutoTagging) {
         this.enableMapAutoTagging = enableMapAutoTagging;
         return this;
@@ -70,6 +75,7 @@ public class CreateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("largeVolumeConf")
     public CreateLaunchConfigurationTemplateRequestBodyLargeVolumeConf largeVolumeConf;
+
     public CreateLaunchConfigurationTemplateRequestBody withLargeVolumeConf(CreateLaunchConfigurationTemplateRequestBodyLargeVolumeConf largeVolumeConf) {
         this.largeVolumeConf = largeVolumeConf;
         return this;
@@ -81,6 +87,7 @@ public class CreateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchDisposition")
     public CreateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum launchDisposition;
+
     public CreateLaunchConfigurationTemplateRequestBody withLaunchDisposition(CreateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum launchDisposition) {
         this.launchDisposition = launchDisposition;
         return this;
@@ -92,6 +99,7 @@ public class CreateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licensing")
     public CreateLaunchConfigurationTemplateRequestBodyLicensing licensing;
+
     public CreateLaunchConfigurationTemplateRequestBody withLicensing(CreateLaunchConfigurationTemplateRequestBodyLicensing licensing) {
         this.licensing = licensing;
         return this;
@@ -103,6 +111,7 @@ public class CreateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapAutoTaggingMpeID")
     public String mapAutoTaggingMpeID;
+
     public CreateLaunchConfigurationTemplateRequestBody withMapAutoTaggingMpeID(String mapAutoTaggingMpeID) {
         this.mapAutoTaggingMpeID = mapAutoTaggingMpeID;
         return this;
@@ -114,6 +123,7 @@ public class CreateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postLaunchActions")
     public CreateLaunchConfigurationTemplateRequestBodyPostLaunchActions postLaunchActions;
+
     public CreateLaunchConfigurationTemplateRequestBody withPostLaunchActions(CreateLaunchConfigurationTemplateRequestBodyPostLaunchActions postLaunchActions) {
         this.postLaunchActions = postLaunchActions;
         return this;
@@ -125,6 +135,7 @@ public class CreateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smallVolumeConf")
     public CreateLaunchConfigurationTemplateRequestBodySmallVolumeConf smallVolumeConf;
+
     public CreateLaunchConfigurationTemplateRequestBody withSmallVolumeConf(CreateLaunchConfigurationTemplateRequestBodySmallVolumeConf smallVolumeConf) {
         this.smallVolumeConf = smallVolumeConf;
         return this;
@@ -136,6 +147,7 @@ public class CreateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smallVolumeMaxSize")
     public Long smallVolumeMaxSize;
+
     public CreateLaunchConfigurationTemplateRequestBody withSmallVolumeMaxSize(Long smallVolumeMaxSize) {
         this.smallVolumeMaxSize = smallVolumeMaxSize;
         return this;
@@ -147,6 +159,7 @@ public class CreateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateLaunchConfigurationTemplateRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -158,9 +171,11 @@ public class CreateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetInstanceTypeRightSizingMethod")
     public CreateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum targetInstanceTypeRightSizingMethod;
+
     public CreateLaunchConfigurationTemplateRequestBody withTargetInstanceTypeRightSizingMethod(CreateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum targetInstanceTypeRightSizingMethod) {
         this.targetInstanceTypeRightSizingMethod = targetInstanceTypeRightSizingMethod;
         return this;
     }
     
+    public CreateLaunchConfigurationTemplateRequestBody(){}
 }

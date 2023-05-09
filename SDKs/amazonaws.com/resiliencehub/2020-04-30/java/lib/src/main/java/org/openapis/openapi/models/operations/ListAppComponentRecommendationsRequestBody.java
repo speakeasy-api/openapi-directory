@@ -14,6 +14,7 @@ public class ListAppComponentRecommendationsRequestBody {
      */
     @JsonProperty("assessmentArn")
     public String assessmentArn;
+
     public ListAppComponentRecommendationsRequestBody withAssessmentArn(String assessmentArn) {
         this.assessmentArn = assessmentArn;
         return this;
@@ -25,6 +26,7 @@ public class ListAppComponentRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListAppComponentRecommendationsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class ListAppComponentRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAppComponentRecommendationsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAppComponentRecommendationsRequestBody(@JsonProperty("assessmentArn") String assessmentArn) {
+        this.assessmentArn = assessmentArn;
+  }
 }

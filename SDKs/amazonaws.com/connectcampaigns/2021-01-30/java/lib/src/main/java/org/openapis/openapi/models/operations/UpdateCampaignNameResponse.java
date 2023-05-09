@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCampaignNameResponse {
@@ -12,6 +13,7 @@ public class UpdateCampaignNameResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateCampaignNameResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateCampaignNameResponse {
      */
     
     public Object conflictException;
+
     public UpdateCampaignNameResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCampaignNameResponse {
     
     
     public String contentType;
+
     public UpdateCampaignNameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCampaignNameResponse {
      */
     
     public Object internalServerException;
+
     public UpdateCampaignNameResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateCampaignNameResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateCampaignNameResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateCampaignNameResponse {
     
     
     public Integer statusCode;
+
     public UpdateCampaignNameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateCampaignNameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCampaignNameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateCampaignNameResponse {
      */
     
     public Object validationException;
+
     public UpdateCampaignNameResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateCampaignNameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

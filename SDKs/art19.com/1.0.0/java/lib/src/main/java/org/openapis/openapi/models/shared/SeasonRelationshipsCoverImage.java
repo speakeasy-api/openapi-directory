@@ -15,9 +15,11 @@ public class SeasonRelationshipsCoverImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier data;
+
     public SeasonRelationshipsCoverImage withData(ResourceIdentifier data) {
         this.data = data;
         return this;
     }
     
+    public SeasonRelationshipsCoverImage(){}
 }

@@ -18,6 +18,7 @@ public class PosSale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentLanguage")
     public String contentLanguage;
+
     public PosSale withContentLanguage(String contentLanguage) {
         this.contentLanguage = contentLanguage;
         return this;
@@ -29,6 +30,7 @@ public class PosSale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gtin")
     public String gtin;
+
     public PosSale withGtin(String gtin) {
         this.gtin = gtin;
         return this;
@@ -40,6 +42,7 @@ public class PosSale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public PosSale withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -51,6 +54,7 @@ public class PosSale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PosSale withKind(String kind) {
         this.kind = kind;
         return this;
@@ -59,6 +63,7 @@ public class PosSale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Price price;
+
     public PosSale withPrice(Price price) {
         this.price = price;
         return this;
@@ -70,6 +75,7 @@ public class PosSale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public PosSale withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -81,6 +87,7 @@ public class PosSale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saleId")
     public String saleId;
+
     public PosSale withSaleId(String saleId) {
         this.saleId = saleId;
         return this;
@@ -92,6 +99,7 @@ public class PosSale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeCode")
     public String storeCode;
+
     public PosSale withStoreCode(String storeCode) {
         this.storeCode = storeCode;
         return this;
@@ -103,6 +111,7 @@ public class PosSale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetCountry")
     public String targetCountry;
+
     public PosSale withTargetCountry(String targetCountry) {
         this.targetCountry = targetCountry;
         return this;
@@ -114,9 +123,11 @@ public class PosSale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public PosSale withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public PosSale(){}
 }

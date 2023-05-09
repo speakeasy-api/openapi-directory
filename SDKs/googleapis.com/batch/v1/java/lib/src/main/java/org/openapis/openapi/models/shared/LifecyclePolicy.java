@@ -18,6 +18,7 @@ public class LifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public LifecyclePolicyActionEnum action;
+
     public LifecyclePolicy withAction(LifecyclePolicyActionEnum action) {
         this.action = action;
         return this;
@@ -29,9 +30,11 @@ public class LifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionCondition")
     public ActionCondition actionCondition;
+
     public LifecyclePolicy withActionCondition(ActionCondition actionCondition) {
         this.actionCondition = actionCondition;
         return this;
     }
     
+    public LifecyclePolicy(){}
 }

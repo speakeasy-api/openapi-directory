@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurations {
     
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogs accessLogs;
+
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurations withAccessLogs(DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogs accessLogs) {
         this.accessLogs = accessLogs;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingCon
     
     
     public String verifiedAccessInstanceId;
+
     public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurations withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
     }
     
+    public DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurations(){}
 }

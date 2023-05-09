@@ -15,6 +15,7 @@ public class TaskPriorityVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_priority_id")
     public Long taskPriorityId;
+
     public TaskPriorityVO withTaskPriorityId(Long taskPriorityId) {
         this.taskPriorityId = taskPriorityId;
         return this;
@@ -23,9 +24,11 @@ public class TaskPriorityVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_priority_name")
     public String taskPriorityName;
+
     public TaskPriorityVO withTaskPriorityName(String taskPriorityName) {
         this.taskPriorityName = taskPriorityName;
         return this;
     }
     
+    public TaskPriorityVO(){}
 }

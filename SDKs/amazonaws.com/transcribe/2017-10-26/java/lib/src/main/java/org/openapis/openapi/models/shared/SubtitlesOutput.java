@@ -15,6 +15,7 @@ public class SubtitlesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Formats")
     public SubtitleFormatEnum[] formats;
+
     public SubtitlesOutput withFormats(SubtitleFormatEnum[] formats) {
         this.formats = formats;
         return this;
@@ -23,6 +24,7 @@ public class SubtitlesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputStartIndex")
     public Long outputStartIndex;
+
     public SubtitlesOutput withOutputStartIndex(Long outputStartIndex) {
         this.outputStartIndex = outputStartIndex;
         return this;
@@ -31,9 +33,11 @@ public class SubtitlesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubtitleFileUris")
     public String[] subtitleFileUris;
+
     public SubtitlesOutput withSubtitleFileUris(String[] subtitleFileUris) {
         this.subtitleFileUris = subtitleFileUris;
         return this;
     }
     
+    public SubtitlesOutput(){}
 }

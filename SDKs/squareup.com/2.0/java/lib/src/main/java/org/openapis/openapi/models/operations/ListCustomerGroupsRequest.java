@@ -15,6 +15,7 @@ public class ListCustomerGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListCustomerGroupsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -28,9 +29,11 @@ public class ListCustomerGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListCustomerGroupsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public ListCustomerGroupsRequest(){}
 }

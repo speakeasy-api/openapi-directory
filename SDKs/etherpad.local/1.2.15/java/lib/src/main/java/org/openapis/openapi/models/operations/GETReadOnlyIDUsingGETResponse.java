@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETReadOnlyIDUsingGETResponse {
     
     public String contentType;
+
     public GETReadOnlyIDUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GETReadOnlyIDUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETReadOnlyIDUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GETReadOnlyIDUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETReadOnlyIDUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GETReadOnlyIDUsingGETResponse {
      */
     
     public GETReadOnlyIDUsingGET200ApplicationJSON getReadOnlyIDUsingGET200ApplicationJSONObject;
+
     public GETReadOnlyIDUsingGETResponse withGETReadOnlyIDUsingGET200ApplicationJSONObject(GETReadOnlyIDUsingGET200ApplicationJSON getReadOnlyIDUsingGET200ApplicationJSONObject) {
         this.getReadOnlyIDUsingGET200ApplicationJSONObject = getReadOnlyIDUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GETReadOnlyIDUsingGETResponse {
      */
     
     public GETReadOnlyIDUsingGET400ApplicationJSON getReadOnlyIDUsingGET400ApplicationJSONObject;
+
     public GETReadOnlyIDUsingGETResponse withGETReadOnlyIDUsingGET400ApplicationJSONObject(GETReadOnlyIDUsingGET400ApplicationJSON getReadOnlyIDUsingGET400ApplicationJSONObject) {
         this.getReadOnlyIDUsingGET400ApplicationJSONObject = getReadOnlyIDUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GETReadOnlyIDUsingGETResponse {
      */
     
     public GETReadOnlyIDUsingGET401ApplicationJSON getReadOnlyIDUsingGET401ApplicationJSONObject;
+
     public GETReadOnlyIDUsingGETResponse withGETReadOnlyIDUsingGET401ApplicationJSONObject(GETReadOnlyIDUsingGET401ApplicationJSON getReadOnlyIDUsingGET401ApplicationJSONObject) {
         this.getReadOnlyIDUsingGET401ApplicationJSONObject = getReadOnlyIDUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GETReadOnlyIDUsingGETResponse {
      */
     
     public GETReadOnlyIDUsingGET500ApplicationJSON getReadOnlyIDUsingGET500ApplicationJSONObject;
+
     public GETReadOnlyIDUsingGETResponse withGETReadOnlyIDUsingGET500ApplicationJSONObject(GETReadOnlyIDUsingGET500ApplicationJSON getReadOnlyIDUsingGET500ApplicationJSONObject) {
         this.getReadOnlyIDUsingGET500ApplicationJSONObject = getReadOnlyIDUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public GETReadOnlyIDUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

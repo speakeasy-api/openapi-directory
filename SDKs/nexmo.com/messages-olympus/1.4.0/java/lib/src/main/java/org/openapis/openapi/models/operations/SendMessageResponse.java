@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendMessageResponse {
     
     public String contentType;
+
     public SendMessageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SendMessageResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorInternal errorInternal;
+
     public SendMessageResponse withErrorInternal(org.openapis.openapi.models.shared.ErrorInternal errorInternal) {
         this.errorInternal = errorInternal;
         return this;
@@ -29,6 +32,7 @@ public class SendMessageResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorPaymentRequired errorPaymentRequired;
+
     public SendMessageResponse withErrorPaymentRequired(org.openapis.openapi.models.shared.ErrorPaymentRequired errorPaymentRequired) {
         this.errorPaymentRequired = errorPaymentRequired;
         return this;
@@ -39,6 +43,7 @@ public class SendMessageResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorThrottled errorThrottled;
+
     public SendMessageResponse withErrorThrottled(org.openapis.openapi.models.shared.ErrorThrottled errorThrottled) {
         this.errorThrottled = errorThrottled;
         return this;
@@ -49,6 +54,7 @@ public class SendMessageResponse {
      */
     
     public Object sendMessage202ApplicationJSONObject;
+
     public SendMessageResponse withSendMessage202ApplicationJSONObject(Object sendMessage202ApplicationJSONObject) {
         this.sendMessage202ApplicationJSONObject = sendMessage202ApplicationJSONObject;
         return this;
@@ -59,6 +65,7 @@ public class SendMessageResponse {
      */
     
     public Object sendMessage401ApplicationJSONOneOf;
+
     public SendMessageResponse withSendMessage401ApplicationJSONOneOf(Object sendMessage401ApplicationJSONOneOf) {
         this.sendMessage401ApplicationJSONOneOf = sendMessage401ApplicationJSONOneOf;
         return this;
@@ -66,6 +73,7 @@ public class SendMessageResponse {
     
     
     public Integer statusCode;
+
     public SendMessageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class SendMessageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendMessageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class SendMessageResponse {
      */
     
     public Object sendMessage422ApplicationJSONOneOf;
+
     public SendMessageResponse withSendMessage422ApplicationJSONOneOf(Object sendMessage422ApplicationJSONOneOf) {
         this.sendMessage422ApplicationJSONOneOf = sendMessage422ApplicationJSONOneOf;
         return this;
     }
     
+    public SendMessageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

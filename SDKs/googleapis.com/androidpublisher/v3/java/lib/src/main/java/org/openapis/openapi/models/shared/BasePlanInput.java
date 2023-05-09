@@ -18,6 +18,7 @@ public class BasePlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoRenewingBasePlanType")
     public AutoRenewingBasePlanType autoRenewingBasePlanType;
+
     public BasePlanInput withAutoRenewingBasePlanType(AutoRenewingBasePlanType autoRenewingBasePlanType) {
         this.autoRenewingBasePlanType = autoRenewingBasePlanType;
         return this;
@@ -29,6 +30,7 @@ public class BasePlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basePlanId")
     public String basePlanId;
+
     public BasePlanInput withBasePlanId(String basePlanId) {
         this.basePlanId = basePlanId;
         return this;
@@ -40,6 +42,7 @@ public class BasePlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerTags")
     public OfferTag[] offerTags;
+
     public BasePlanInput withOfferTags(OfferTag[] offerTags) {
         this.offerTags = offerTags;
         return this;
@@ -51,6 +54,7 @@ public class BasePlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otherRegionsConfig")
     public OtherRegionsBasePlanConfig otherRegionsConfig;
+
     public BasePlanInput withOtherRegionsConfig(OtherRegionsBasePlanConfig otherRegionsConfig) {
         this.otherRegionsConfig = otherRegionsConfig;
         return this;
@@ -62,6 +66,7 @@ public class BasePlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prepaidBasePlanType")
     public PrepaidBasePlanType prepaidBasePlanType;
+
     public BasePlanInput withPrepaidBasePlanType(PrepaidBasePlanType prepaidBasePlanType) {
         this.prepaidBasePlanType = prepaidBasePlanType;
         return this;
@@ -73,9 +78,11 @@ public class BasePlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionalConfigs")
     public RegionalBasePlanConfig[] regionalConfigs;
+
     public BasePlanInput withRegionalConfigs(RegionalBasePlanConfig[] regionalConfigs) {
         this.regionalConfigs = regionalConfigs;
         return this;
     }
     
+    public BasePlanInput(){}
 }

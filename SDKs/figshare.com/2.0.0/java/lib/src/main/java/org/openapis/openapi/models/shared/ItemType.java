@@ -12,6 +12,7 @@ public class ItemType {
      */
     @JsonProperty("icon")
     public String icon;
+
     public ItemType withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -22,6 +23,7 @@ public class ItemType {
      */
     @JsonProperty("id")
     public Long id;
+
     public ItemType withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class ItemType {
      */
     @JsonProperty("is_selectable")
     public Boolean isSelectable;
+
     public ItemType withIsSelectable(Boolean isSelectable) {
         this.isSelectable = isSelectable;
         return this;
@@ -42,6 +45,7 @@ public class ItemType {
      */
     @JsonProperty("name")
     public String name;
+
     public ItemType withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +56,7 @@ public class ItemType {
      */
     @JsonProperty("public_description")
     public String publicDescription;
+
     public ItemType withPublicDescription(String publicDescription) {
         this.publicDescription = publicDescription;
         return this;
@@ -62,6 +67,7 @@ public class ItemType {
      */
     @JsonProperty("string_id")
     public String stringId;
+
     public ItemType withStringId(String stringId) {
         this.stringId = stringId;
         return this;
@@ -72,9 +78,19 @@ public class ItemType {
      */
     @JsonProperty("url_name")
     public String urlName;
+
     public ItemType withUrlName(String urlName) {
         this.urlName = urlName;
         return this;
     }
     
+    public ItemType(@JsonProperty("icon") String icon, @JsonProperty("id") Long id, @JsonProperty("is_selectable") Boolean isSelectable, @JsonProperty("name") String name, @JsonProperty("public_description") String publicDescription, @JsonProperty("string_id") String stringId, @JsonProperty("url_name") String urlName) {
+        this.icon = icon;
+        this.id = id;
+        this.isSelectable = isSelectable;
+        this.name = name;
+        this.publicDescription = publicDescription;
+        this.stringId = stringId;
+        this.urlName = urlName;
+  }
 }

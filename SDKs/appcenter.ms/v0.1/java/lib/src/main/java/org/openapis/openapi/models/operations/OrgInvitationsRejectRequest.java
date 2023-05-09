@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgInvitationsRejectRequest {
@@ -12,6 +13,7 @@ public class OrgInvitationsRejectRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public OrgInvitationsRejectRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,13 @@ public class OrgInvitationsRejectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invitation_token")
     public String invitationToken;
+
     public OrgInvitationsRejectRequest withInvitationToken(String invitationToken) {
         this.invitationToken = invitationToken;
         return this;
     }
     
+    public OrgInvitationsRejectRequest(@JsonProperty("invitation_token") String invitationToken) {
+        this.invitationToken = invitationToken;
+  }
 }

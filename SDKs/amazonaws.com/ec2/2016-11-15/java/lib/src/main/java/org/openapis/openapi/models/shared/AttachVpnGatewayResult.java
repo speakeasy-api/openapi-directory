@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AttachVpnGatewayResult {
     
     public AttachVpnGatewayResultVpcAttachment vpcAttachment;
+
     public AttachVpnGatewayResult withVpcAttachment(AttachVpnGatewayResultVpcAttachment vpcAttachment) {
         this.vpcAttachment = vpcAttachment;
         return this;
     }
     
+    public AttachVpnGatewayResult(){}
 }

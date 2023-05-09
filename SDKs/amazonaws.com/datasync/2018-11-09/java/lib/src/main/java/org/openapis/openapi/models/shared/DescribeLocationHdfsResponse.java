@@ -20,6 +20,7 @@ public class DescribeLocationHdfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentArns")
     public String[] agentArns;
+
     public DescribeLocationHdfsResponse withAgentArns(String[] agentArns) {
         this.agentArns = agentArns;
         return this;
@@ -28,6 +29,7 @@ public class DescribeLocationHdfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthenticationType")
     public HdfsAuthenticationTypeEnum authenticationType;
+
     public DescribeLocationHdfsResponse withAuthenticationType(HdfsAuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -36,6 +38,7 @@ public class DescribeLocationHdfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockSize")
     public Long blockSize;
+
     public DescribeLocationHdfsResponse withBlockSize(Long blockSize) {
         this.blockSize = blockSize;
         return this;
@@ -46,6 +49,7 @@ public class DescribeLocationHdfsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeLocationHdfsResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -54,6 +58,7 @@ public class DescribeLocationHdfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KerberosPrincipal")
     public String kerberosPrincipal;
+
     public DescribeLocationHdfsResponse withKerberosPrincipal(String kerberosPrincipal) {
         this.kerberosPrincipal = kerberosPrincipal;
         return this;
@@ -62,6 +67,7 @@ public class DescribeLocationHdfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyProviderUri")
     public String kmsKeyProviderUri;
+
     public DescribeLocationHdfsResponse withKmsKeyProviderUri(String kmsKeyProviderUri) {
         this.kmsKeyProviderUri = kmsKeyProviderUri;
         return this;
@@ -70,6 +76,7 @@ public class DescribeLocationHdfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public DescribeLocationHdfsResponse withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
@@ -78,6 +85,7 @@ public class DescribeLocationHdfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationUri")
     public String locationUri;
+
     public DescribeLocationHdfsResponse withLocationUri(String locationUri) {
         this.locationUri = locationUri;
         return this;
@@ -86,6 +94,7 @@ public class DescribeLocationHdfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameNodes")
     public HdfsNameNode[] nameNodes;
+
     public DescribeLocationHdfsResponse withNameNodes(HdfsNameNode[] nameNodes) {
         this.nameNodes = nameNodes;
         return this;
@@ -94,6 +103,7 @@ public class DescribeLocationHdfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QopConfiguration")
     public QopConfiguration qopConfiguration;
+
     public DescribeLocationHdfsResponse withQopConfiguration(QopConfiguration qopConfiguration) {
         this.qopConfiguration = qopConfiguration;
         return this;
@@ -102,6 +112,7 @@ public class DescribeLocationHdfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationFactor")
     public Long replicationFactor;
+
     public DescribeLocationHdfsResponse withReplicationFactor(Long replicationFactor) {
         this.replicationFactor = replicationFactor;
         return this;
@@ -110,9 +121,11 @@ public class DescribeLocationHdfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SimpleUser")
     public String simpleUser;
+
     public DescribeLocationHdfsResponse withSimpleUser(String simpleUser) {
         this.simpleUser = simpleUser;
         return this;
     }
     
+    public DescribeLocationHdfsResponse(){}
 }

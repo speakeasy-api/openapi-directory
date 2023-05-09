@@ -15,9 +15,11 @@ public class ZendeskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthScopes")
     public String[] oAuthScopes;
+
     public ZendeskMetadata withOAuthScopes(String[] oAuthScopes) {
         this.oAuthScopes = oAuthScopes;
         return this;
     }
     
+    public ZendeskMetadata(){}
 }

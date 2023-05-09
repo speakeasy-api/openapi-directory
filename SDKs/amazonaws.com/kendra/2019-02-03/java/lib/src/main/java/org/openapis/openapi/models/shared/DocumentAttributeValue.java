@@ -22,6 +22,7 @@ public class DocumentAttributeValue {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateValue")
     public OffsetDateTime dateValue;
+
     public DocumentAttributeValue withDateValue(OffsetDateTime dateValue) {
         this.dateValue = dateValue;
         return this;
@@ -30,6 +31,7 @@ public class DocumentAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LongValue")
     public Long longValue;
+
     public DocumentAttributeValue withLongValue(Long longValue) {
         this.longValue = longValue;
         return this;
@@ -38,6 +40,7 @@ public class DocumentAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StringListValue")
     public String[] stringListValue;
+
     public DocumentAttributeValue withStringListValue(String[] stringListValue) {
         this.stringListValue = stringListValue;
         return this;
@@ -46,9 +49,11 @@ public class DocumentAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StringValue")
     public String stringValue;
+
     public DocumentAttributeValue withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public DocumentAttributeValue(){}
 }

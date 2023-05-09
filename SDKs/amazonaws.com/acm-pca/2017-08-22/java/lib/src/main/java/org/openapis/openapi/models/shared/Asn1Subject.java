@@ -15,6 +15,7 @@ public class Asn1Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommonName")
     public String commonName;
+
     public Asn1Subject withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -23,6 +24,7 @@ public class Asn1Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public Asn1Subject withCountry(String country) {
         this.country = country;
         return this;
@@ -31,6 +33,7 @@ public class Asn1Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomAttributes")
     public CustomAttribute[] customAttributes;
+
     public Asn1Subject withCustomAttributes(CustomAttribute[] customAttributes) {
         this.customAttributes = customAttributes;
         return this;
@@ -39,6 +42,7 @@ public class Asn1Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DistinguishedNameQualifier")
     public String distinguishedNameQualifier;
+
     public Asn1Subject withDistinguishedNameQualifier(String distinguishedNameQualifier) {
         this.distinguishedNameQualifier = distinguishedNameQualifier;
         return this;
@@ -47,6 +51,7 @@ public class Asn1Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GenerationQualifier")
     public String generationQualifier;
+
     public Asn1Subject withGenerationQualifier(String generationQualifier) {
         this.generationQualifier = generationQualifier;
         return this;
@@ -55,6 +60,7 @@ public class Asn1Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GivenName")
     public String givenName;
+
     public Asn1Subject withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -63,6 +69,7 @@ public class Asn1Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Initials")
     public String initials;
+
     public Asn1Subject withInitials(String initials) {
         this.initials = initials;
         return this;
@@ -71,6 +78,7 @@ public class Asn1Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Locality")
     public String locality;
+
     public Asn1Subject withLocality(String locality) {
         this.locality = locality;
         return this;
@@ -79,6 +87,7 @@ public class Asn1Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Organization")
     public String organization;
+
     public Asn1Subject withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -87,6 +96,7 @@ public class Asn1Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnit")
     public String organizationalUnit;
+
     public Asn1Subject withOrganizationalUnit(String organizationalUnit) {
         this.organizationalUnit = organizationalUnit;
         return this;
@@ -95,6 +105,7 @@ public class Asn1Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pseudonym")
     public String pseudonym;
+
     public Asn1Subject withPseudonym(String pseudonym) {
         this.pseudonym = pseudonym;
         return this;
@@ -103,6 +114,7 @@ public class Asn1Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SerialNumber")
     public String serialNumber;
+
     public Asn1Subject withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -111,6 +123,7 @@ public class Asn1Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public Asn1Subject withState(String state) {
         this.state = state;
         return this;
@@ -119,6 +132,7 @@ public class Asn1Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Surname")
     public String surname;
+
     public Asn1Subject withSurname(String surname) {
         this.surname = surname;
         return this;
@@ -127,9 +141,11 @@ public class Asn1Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public Asn1Subject withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Asn1Subject(){}
 }

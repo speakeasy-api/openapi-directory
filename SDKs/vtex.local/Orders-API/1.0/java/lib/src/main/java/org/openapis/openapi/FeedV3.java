@@ -66,11 +66,9 @@ public class FeedV3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CommititemfeedorderstatusResponse res = new org.openapis.openapi.models.operations.CommititemfeedorderstatusResponse() {{
+        org.openapis.openapi.models.operations.CommititemfeedorderstatusResponse res = new org.openapis.openapi.models.operations.CommititemfeedorderstatusResponse(contentType, httpRes.statusCode()) {{
             commititemfeedorderstatus200TextPlainObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,10 +118,8 @@ public class FeedV3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FeedConfigurationResponse res = new org.openapis.openapi.models.operations.FeedConfigurationResponse() {{
+        org.openapis.openapi.models.operations.FeedConfigurationResponse res = new org.openapis.openapi.models.operations.FeedConfigurationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -162,10 +158,8 @@ public class FeedV3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FeedConfigurationDeleteResponse res = new org.openapis.openapi.models.operations.FeedConfigurationDeleteResponse() {{
+        org.openapis.openapi.models.operations.FeedConfigurationDeleteResponse res = new org.openapis.openapi.models.operations.FeedConfigurationDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -178,7 +172,7 @@ public class FeedV3 {
      * Get feed configuration
      * The Orders Feed v3 is the best way to create order integrations. Below you can find details on the configuration API specification, and to know more see our [Feed v3 guide](https://developers.vtex.com/vtex-rest-api/docs/orders-feed) and our [order integration guide](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-set-up-order-integration).
      * 
-     * &gt; \ud83d\udcd8 Onboarding guide 
+     * &gt; 📘 Onboarding guide 
      * &gt;
      * &gt; Check the new [Orders onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/orders-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Orders and is organized by focusing on the developer's journey.
      * 
@@ -210,11 +204,9 @@ public class FeedV3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFeedConfigurationResponse res = new org.openapis.openapi.models.operations.GetFeedConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GetFeedConfigurationResponse res = new org.openapis.openapi.models.operations.GetFeedConfigurationResponse(contentType, httpRes.statusCode()) {{
             getFeedConfiguration200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -268,11 +260,9 @@ public class FeedV3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Getfeedorderstatus1Response res = new org.openapis.openapi.models.operations.Getfeedorderstatus1Response() {{
+        org.openapis.openapi.models.operations.Getfeedorderstatus1Response res = new org.openapis.openapi.models.operations.Getfeedorderstatus1Response(contentType, httpRes.statusCode()) {{
             getfeedorderstatuses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -322,10 +312,8 @@ public class FeedV3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestJSONataExpressionResponse res = new org.openapis.openapi.models.operations.TestJSONataExpressionResponse() {{
+        org.openapis.openapi.models.operations.TestJSONataExpressionResponse res = new org.openapis.openapi.models.operations.TestJSONataExpressionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

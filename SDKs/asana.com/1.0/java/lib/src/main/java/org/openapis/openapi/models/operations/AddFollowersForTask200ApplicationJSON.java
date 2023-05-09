@@ -15,9 +15,11 @@ public class AddFollowersForTask200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TaskResponse data;
+
     public AddFollowersForTask200ApplicationJSON withData(org.openapis.openapi.models.shared.TaskResponse data) {
         this.data = data;
         return this;
     }
     
+    public AddFollowersForTask200ApplicationJSON(){}
 }

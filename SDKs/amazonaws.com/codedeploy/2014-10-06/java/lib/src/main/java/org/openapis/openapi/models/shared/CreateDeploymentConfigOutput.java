@@ -15,9 +15,11 @@ public class CreateDeploymentConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentConfigId")
     public String deploymentConfigId;
+
     public CreateDeploymentConfigOutput withDeploymentConfigId(String deploymentConfigId) {
         this.deploymentConfigId = deploymentConfigId;
         return this;
     }
     
+    public CreateDeploymentConfigOutput(){}
 }

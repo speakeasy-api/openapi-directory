@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaUserResourceSharingRequestUserRequest {
     
     public String link;
+
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaUserResourceSharingRequestUserRequest withLink(String link) {
         this.link = link;
         return this;
@@ -19,9 +20,11 @@ public class Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentAppl
     
     
     public String value;
+
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaUserResourceSharingRequestUserRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaUserResourceSharingRequestUserRequest(){}
 }

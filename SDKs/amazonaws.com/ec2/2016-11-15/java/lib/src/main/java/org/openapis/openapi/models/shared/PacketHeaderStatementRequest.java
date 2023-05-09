@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PacketHeaderStatementRequest {
     
     public String[] destinationAddresses;
+
     public PacketHeaderStatementRequest withDestinationAddresses(String[] destinationAddresses) {
         this.destinationAddresses = destinationAddresses;
         return this;
@@ -19,6 +20,7 @@ public class PacketHeaderStatementRequest {
     
     
     public String[] destinationPorts;
+
     public PacketHeaderStatementRequest withDestinationPorts(String[] destinationPorts) {
         this.destinationPorts = destinationPorts;
         return this;
@@ -26,6 +28,7 @@ public class PacketHeaderStatementRequest {
     
     
     public String[] destinationPrefixLists;
+
     public PacketHeaderStatementRequest withDestinationPrefixLists(String[] destinationPrefixLists) {
         this.destinationPrefixLists = destinationPrefixLists;
         return this;
@@ -33,6 +36,7 @@ public class PacketHeaderStatementRequest {
     
     
     public PacketHeaderStatementRequestProtocolsEnum[] protocols;
+
     public PacketHeaderStatementRequest withProtocols(PacketHeaderStatementRequestProtocolsEnum[] protocols) {
         this.protocols = protocols;
         return this;
@@ -40,6 +44,7 @@ public class PacketHeaderStatementRequest {
     
     
     public String[] sourceAddresses;
+
     public PacketHeaderStatementRequest withSourceAddresses(String[] sourceAddresses) {
         this.sourceAddresses = sourceAddresses;
         return this;
@@ -47,6 +52,7 @@ public class PacketHeaderStatementRequest {
     
     
     public String[] sourcePorts;
+
     public PacketHeaderStatementRequest withSourcePorts(String[] sourcePorts) {
         this.sourcePorts = sourcePorts;
         return this;
@@ -54,9 +60,11 @@ public class PacketHeaderStatementRequest {
     
     
     public String[] sourcePrefixLists;
+
     public PacketHeaderStatementRequest withSourcePrefixLists(String[] sourcePrefixLists) {
         this.sourcePrefixLists = sourcePrefixLists;
         return this;
     }
     
+    public PacketHeaderStatementRequest(){}
 }

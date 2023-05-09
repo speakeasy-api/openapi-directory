@@ -18,6 +18,7 @@ public class MeteringGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("1.8.0")
     public Long one80;
+
     public MeteringGet200ApplicationJSON withOne80(Long one80) {
         this.one80 = one80;
         return this;
@@ -29,6 +30,7 @@ public class MeteringGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("1.8.1")
     public Long one81;
+
     public MeteringGet200ApplicationJSON withOne81(Long one81) {
         this.one81 = one81;
         return this;
@@ -40,6 +42,7 @@ public class MeteringGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("1.8.2")
     public Long one82;
+
     public MeteringGet200ApplicationJSON withOne82(Long one82) {
         this.one82 = one82;
         return this;
@@ -51,6 +54,7 @@ public class MeteringGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_processingTime")
     public Long processingTime;
+
     public MeteringGet200ApplicationJSON withProcessingTime(Long processingTime) {
         this.processingTime = processingTime;
         return this;
@@ -62,6 +66,7 @@ public class MeteringGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public String account;
+
     public MeteringGet200ApplicationJSON withAccount(String account) {
         this.account = account;
         return this;
@@ -73,6 +78,7 @@ public class MeteringGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("co2_g_oekostrom")
     public Long co2GOekostrom;
+
     public MeteringGet200ApplicationJSON withCo2GOekostrom(Long co2GOekostrom) {
         this.co2GOekostrom = co2GOekostrom;
         return this;
@@ -84,6 +90,7 @@ public class MeteringGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("co2_g_standard")
     public Long co2GStandard;
+
     public MeteringGet200ApplicationJSON withCo2GStandard(Long co2GStandard) {
         this.co2GStandard = co2GStandard;
         return this;
@@ -95,6 +102,7 @@ public class MeteringGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credits")
     public Object credits;
+
     public MeteringGet200ApplicationJSON withCredits(Object credits) {
         this.credits = credits;
         return this;
@@ -106,6 +114,7 @@ public class MeteringGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeStamp")
     public Long timeStamp;
+
     public MeteringGet200ApplicationJSON withTimeStamp(Long timeStamp) {
         this.timeStamp = timeStamp;
         return this;
@@ -117,9 +126,11 @@ public class MeteringGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public Long ttl;
+
     public MeteringGet200ApplicationJSON withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public MeteringGet200ApplicationJSON(){}
 }

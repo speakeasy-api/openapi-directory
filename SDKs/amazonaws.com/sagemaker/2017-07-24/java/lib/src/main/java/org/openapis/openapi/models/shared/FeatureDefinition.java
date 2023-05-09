@@ -15,6 +15,7 @@ public class FeatureDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureName")
     public String featureName;
+
     public FeatureDefinition withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
@@ -23,9 +24,11 @@ public class FeatureDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureType")
     public FeatureTypeEnum featureType;
+
     public FeatureDefinition withFeatureType(FeatureTypeEnum featureType) {
         this.featureType = featureType;
         return this;
     }
     
+    public FeatureDefinition(){}
 }

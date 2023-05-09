@@ -12,6 +12,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public Contact withAddress(Address address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Contact withEmail(String email) {
         this.email = email;
         return this;
@@ -35,6 +37,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullPhoneNumber")
     public String fullPhoneNumber;
+
     public Contact withFullPhoneNumber(String fullPhoneNumber) {
         this.fullPhoneNumber = fullPhoneNumber;
         return this;
@@ -43,6 +46,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public Name name;
+
     public Contact withName(Name name) {
         this.name = name;
         return this;
@@ -51,6 +55,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalData")
     public PersonalData personalData;
+
     public Contact withPersonalData(PersonalData personalData) {
         this.personalData = personalData;
         return this;
@@ -59,6 +64,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public PhoneNumber phoneNumber;
+
     public Contact withPhoneNumber(PhoneNumber phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -70,9 +76,11 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webAddress")
     public String webAddress;
+
     public Contact withWebAddress(String webAddress) {
         this.webAddress = webAddress;
         return this;
     }
     
+    public Contact(){}
 }

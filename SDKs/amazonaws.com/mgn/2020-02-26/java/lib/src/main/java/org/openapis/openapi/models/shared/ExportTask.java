@@ -15,6 +15,7 @@ public class ExportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDateTime")
     public String creationDateTime;
+
     public ExportTask withCreationDateTime(String creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -23,6 +24,7 @@ public class ExportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDateTime")
     public String endDateTime;
+
     public ExportTask withEndDateTime(String endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -31,6 +33,7 @@ public class ExportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportID")
     public String exportID;
+
     public ExportTask withExportID(String exportID) {
         this.exportID = exportID;
         return this;
@@ -39,6 +42,7 @@ public class ExportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progressPercentage")
     public Float progressPercentage;
+
     public ExportTask withProgressPercentage(Float progressPercentage) {
         this.progressPercentage = progressPercentage;
         return this;
@@ -47,6 +51,7 @@ public class ExportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Bucket")
     public String s3Bucket;
+
     public ExportTask withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -55,6 +60,7 @@ public class ExportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3BucketOwner")
     public String s3BucketOwner;
+
     public ExportTask withS3BucketOwner(String s3BucketOwner) {
         this.s3BucketOwner = s3BucketOwner;
         return this;
@@ -63,6 +69,7 @@ public class ExportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Key")
     public String s3Key;
+
     public ExportTask withS3Key(String s3Key) {
         this.s3Key = s3Key;
         return this;
@@ -71,6 +78,7 @@ public class ExportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ExportStatusEnum status;
+
     public ExportTask withStatus(ExportStatusEnum status) {
         this.status = status;
         return this;
@@ -79,9 +87,11 @@ public class ExportTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public ExportTaskSummary summary;
+
     public ExportTask withSummary(ExportTaskSummary summary) {
         this.summary = summary;
         return this;
     }
     
+    public ExportTask(){}
 }

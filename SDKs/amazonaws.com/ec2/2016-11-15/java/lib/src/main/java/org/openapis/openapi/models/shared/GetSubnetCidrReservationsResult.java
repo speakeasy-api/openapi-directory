@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetSubnetCidrReservationsResult {
     
     public String nextToken;
+
     public GetSubnetCidrReservationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,6 +20,7 @@ public class GetSubnetCidrReservationsResult {
     
     
     public GetSubnetCidrReservationsResultSubnetIpv4CidrReservations[] subnetIpv4CidrReservations;
+
     public GetSubnetCidrReservationsResult withSubnetIpv4CidrReservations(GetSubnetCidrReservationsResultSubnetIpv4CidrReservations[] subnetIpv4CidrReservations) {
         this.subnetIpv4CidrReservations = subnetIpv4CidrReservations;
         return this;
@@ -26,9 +28,11 @@ public class GetSubnetCidrReservationsResult {
     
     
     public GetSubnetCidrReservationsResultSubnetIpv6CidrReservations[] subnetIpv6CidrReservations;
+
     public GetSubnetCidrReservationsResult withSubnetIpv6CidrReservations(GetSubnetCidrReservationsResultSubnetIpv6CidrReservations[] subnetIpv6CidrReservations) {
         this.subnetIpv6CidrReservations = subnetIpv6CidrReservations;
         return this;
     }
     
+    public GetSubnetCidrReservationsResult(){}
 }

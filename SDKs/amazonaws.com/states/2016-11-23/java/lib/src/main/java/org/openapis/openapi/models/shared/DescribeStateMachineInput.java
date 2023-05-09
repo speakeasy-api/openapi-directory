@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeStateMachineInput {
     @JsonProperty("stateMachineArn")
     public String stateMachineArn;
+
     public DescribeStateMachineInput withStateMachineArn(String stateMachineArn) {
         this.stateMachineArn = stateMachineArn;
         return this;
     }
     
+    public DescribeStateMachineInput(@JsonProperty("stateMachineArn") String stateMachineArn) {
+        this.stateMachineArn = stateMachineArn;
+  }
 }

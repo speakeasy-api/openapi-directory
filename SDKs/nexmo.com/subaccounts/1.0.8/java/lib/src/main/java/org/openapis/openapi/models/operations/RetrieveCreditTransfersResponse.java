@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrieveCreditTransfersResponse {
     
     public String contentType;
+
     public RetrieveCreditTransfersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetrieveCreditTransfersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCreditTransfersResponse listCreditTransfersResponse;
+
     public RetrieveCreditTransfersResponse withListCreditTransfersResponse(org.openapis.openapi.models.shared.ListCreditTransfersResponse listCreditTransfersResponse) {
         this.listCreditTransfersResponse = listCreditTransfersResponse;
         return this;
@@ -26,6 +29,7 @@ public class RetrieveCreditTransfersResponse {
     
     
     public Integer statusCode;
+
     public RetrieveCreditTransfersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RetrieveCreditTransfersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrieveCreditTransfersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class RetrieveCreditTransfersResponse {
      */
     
     public org.openapis.openapi.models.shared.UnprovisionedErrorResponse unprovisionedErrorResponse;
+
     public RetrieveCreditTransfersResponse withUnprovisionedErrorResponse(org.openapis.openapi.models.shared.UnprovisionedErrorResponse unprovisionedErrorResponse) {
         this.unprovisionedErrorResponse = unprovisionedErrorResponse;
         return this;
@@ -53,6 +59,7 @@ public class RetrieveCreditTransfersResponse {
      */
     
     public RetrieveCreditTransfers401ApplicationJSON retrieveCreditTransfers401ApplicationJSONObject;
+
     public RetrieveCreditTransfersResponse withRetrieveCreditTransfers401ApplicationJSONObject(RetrieveCreditTransfers401ApplicationJSON retrieveCreditTransfers401ApplicationJSONObject) {
         this.retrieveCreditTransfers401ApplicationJSONObject = retrieveCreditTransfers401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class RetrieveCreditTransfersResponse {
      */
     
     public RetrieveCreditTransfers404ApplicationJSON retrieveCreditTransfers404ApplicationJSONObject;
+
     public RetrieveCreditTransfersResponse withRetrieveCreditTransfers404ApplicationJSONObject(RetrieveCreditTransfers404ApplicationJSON retrieveCreditTransfers404ApplicationJSONObject) {
         this.retrieveCreditTransfers404ApplicationJSONObject = retrieveCreditTransfers404ApplicationJSONObject;
         return this;
     }
     
+    public RetrieveCreditTransfersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

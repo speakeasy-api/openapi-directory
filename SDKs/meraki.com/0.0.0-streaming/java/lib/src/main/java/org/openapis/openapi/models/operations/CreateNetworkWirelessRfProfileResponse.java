@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateNetworkWirelessRfProfileResponse {
     
     public String contentType;
+
     public CreateNetworkWirelessRfProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateNetworkWirelessRfProfileResponse {
     
     
     public Integer statusCode;
+
     public CreateNetworkWirelessRfProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateNetworkWirelessRfProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateNetworkWirelessRfProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class CreateNetworkWirelessRfProfileResponse {
      */
     
     public java.util.Map<String, Object> createNetworkWirelessRfProfile201ApplicationJSONObject;
+
     public CreateNetworkWirelessRfProfileResponse withCreateNetworkWirelessRfProfile201ApplicationJSONObject(java.util.Map<String, Object> createNetworkWirelessRfProfile201ApplicationJSONObject) {
         this.createNetworkWirelessRfProfile201ApplicationJSONObject = createNetworkWirelessRfProfile201ApplicationJSONObject;
         return this;
     }
     
+    public CreateNetworkWirelessRfProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

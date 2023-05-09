@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartFleetActionsResponse {
     
     public String contentType;
+
     public StartFleetActionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartFleetActionsResponse {
      */
     
     public Object internalServiceException;
+
     public StartFleetActionsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class StartFleetActionsResponse {
      */
     
     public Object invalidRequestException;
+
     public StartFleetActionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartFleetActionsResponse {
      */
     
     public Object notFoundException;
+
     public StartFleetActionsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartFleetActionsResponse {
      */
     
     public org.openapis.openapi.models.shared.StartFleetActionsOutput startFleetActionsOutput;
+
     public StartFleetActionsResponse withStartFleetActionsOutput(org.openapis.openapi.models.shared.StartFleetActionsOutput startFleetActionsOutput) {
         this.startFleetActionsOutput = startFleetActionsOutput;
         return this;
@@ -56,6 +62,7 @@ public class StartFleetActionsResponse {
     
     
     public Integer statusCode;
+
     public StartFleetActionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartFleetActionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartFleetActionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StartFleetActionsResponse {
      */
     
     public Object unauthorizedException;
+
     public StartFleetActionsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class StartFleetActionsResponse {
      */
     
     public Object unsupportedRegionException;
+
     public StartFleetActionsResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public StartFleetActionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

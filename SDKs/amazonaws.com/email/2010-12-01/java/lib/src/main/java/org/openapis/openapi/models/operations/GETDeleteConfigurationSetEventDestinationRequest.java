@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteConfigurationSetEventDestinationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteConfigurationSetEventDestinationActionEnum action;
+
     public GETDeleteConfigurationSetEventDestinationRequest withAction(GETDeleteConfigurationSetEventDestinationActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteConfigurationSetEventDestinationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConfigurationSetName")
     public String configurationSetName;
+
     public GETDeleteConfigurationSetEventDestinationRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteConfigurationSetEventDestinationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EventDestinationName")
     public String eventDestinationName;
+
     public GETDeleteConfigurationSetEventDestinationRequest withEventDestinationName(String eventDestinationName) {
         this.eventDestinationName = eventDestinationName;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteConfigurationSetEventDestinationVersionEnum version;
+
     public GETDeleteConfigurationSetEventDestinationRequest withVersion(GETDeleteConfigurationSetEventDestinationVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDeleteConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteConfigurationSetEventDestinationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeleteConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteConfigurationSetEventDestinationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeleteConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteConfigurationSetEventDestinationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeleteConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteConfigurationSetEventDestinationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeleteConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteConfigurationSetEventDestinationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeleteConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteConfigurationSetEventDestinationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETDeleteConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteConfigurationSetEventDestinationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteConfigurationSetEventDestinationRequest(@JsonProperty("Action") GETDeleteConfigurationSetEventDestinationActionEnum action, @JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("EventDestinationName") String eventDestinationName, @JsonProperty("Version") GETDeleteConfigurationSetEventDestinationVersionEnum version) {
+        this.action = action;
+        this.configurationSetName = configurationSetName;
+        this.eventDestinationName = eventDestinationName;
+        this.version = version;
+  }
 }

@@ -56,12 +56,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssignTerminalsResponse res = new org.openapis.openapi.models.operations.PostAssignTerminalsResponse() {{
+        org.openapis.openapi.models.operations.PostAssignTerminalsResponse res = new org.openapis.openapi.models.operations.PostAssignTerminalsResponse(contentType, httpRes.statusCode()) {{
             assignTerminalsResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,12 +105,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFindTerminalResponse res = new org.openapis.openapi.models.operations.PostFindTerminalResponse() {{
+        org.openapis.openapi.models.operations.PostFindTerminalResponse res = new org.openapis.openapi.models.operations.PostFindTerminalResponse(contentType, httpRes.statusCode()) {{
             findTerminalResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,12 +154,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostGetStoresUnderAccountResponse res = new org.openapis.openapi.models.operations.PostGetStoresUnderAccountResponse() {{
+        org.openapis.openapi.models.operations.PostGetStoresUnderAccountResponse res = new org.openapis.openapi.models.operations.PostGetStoresUnderAccountResponse(contentType, httpRes.statusCode()) {{
             getStoresUnderAccountResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -209,12 +203,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostGetTerminalDetailsResponse res = new org.openapis.openapi.models.operations.PostGetTerminalDetailsResponse() {{
+        org.openapis.openapi.models.operations.PostGetTerminalDetailsResponse res = new org.openapis.openapi.models.operations.PostGetTerminalDetailsResponse(contentType, httpRes.statusCode()) {{
             getTerminalDetailsResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -260,12 +252,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostGetTerminalsUnderAccountResponse res = new org.openapis.openapi.models.operations.PostGetTerminalsUnderAccountResponse() {{
+        org.openapis.openapi.models.operations.PostGetTerminalsUnderAccountResponse res = new org.openapis.openapi.models.operations.PostGetTerminalsUnderAccountResponse(contentType, httpRes.statusCode()) {{
             getTerminalsUnderAccountResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class GameSessionConnectionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsName")
     public String dnsName;
+
     public GameSessionConnectionInfo withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -23,6 +24,7 @@ public class GameSessionConnectionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionArn")
     public String gameSessionArn;
+
     public GameSessionConnectionInfo withGameSessionArn(String gameSessionArn) {
         this.gameSessionArn = gameSessionArn;
         return this;
@@ -31,6 +33,7 @@ public class GameSessionConnectionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public GameSessionConnectionInfo withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -39,6 +42,7 @@ public class GameSessionConnectionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchedPlayerSessions")
     public MatchedPlayerSession[] matchedPlayerSessions;
+
     public GameSessionConnectionInfo withMatchedPlayerSessions(MatchedPlayerSession[] matchedPlayerSessions) {
         this.matchedPlayerSessions = matchedPlayerSessions;
         return this;
@@ -47,9 +51,11 @@ public class GameSessionConnectionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public GameSessionConnectionInfo withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public GameSessionConnectionInfo(){}
 }

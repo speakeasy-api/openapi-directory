@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeamMediaByYearResponse {
     
     public String contentType;
+
     public GetTeamMediaByYearResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTeamMediaByYearResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetTeamMediaByYearResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -26,6 +29,7 @@ public class GetTeamMediaByYearResponse {
      */
     
     public org.openapis.openapi.models.shared.Media[] media;
+
     public GetTeamMediaByYearResponse withMedia(org.openapis.openapi.models.shared.Media[] media) {
         this.media = media;
         return this;
@@ -33,6 +37,7 @@ public class GetTeamMediaByYearResponse {
     
     
     public Integer statusCode;
+
     public GetTeamMediaByYearResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetTeamMediaByYearResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeamMediaByYearResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTeamMediaByYearResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

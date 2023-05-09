@@ -15,9 +15,13 @@ public class AnalyticsListDeviceProperties200ApplicationJSON {
      */
     @JsonProperty("values")
     public java.util.Map<String, AnalyticsListDeviceProperties200ApplicationJSONValuesEnum> values;
+
     public AnalyticsListDeviceProperties200ApplicationJSON withValues(java.util.Map<String, AnalyticsListDeviceProperties200ApplicationJSONValuesEnum> values) {
         this.values = values;
         return this;
     }
     
+    public AnalyticsListDeviceProperties200ApplicationJSON(@JsonProperty("values") java.util.Map<String, AnalyticsListDeviceProperties200ApplicationJSONValuesEnum> values) {
+        this.values = values;
+  }
 }

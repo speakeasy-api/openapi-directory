@@ -18,6 +18,7 @@ public class PositionedObjectPositioning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public PositionedObjectPositioningLayoutEnum layout;
+
     public PositionedObjectPositioning withLayout(PositionedObjectPositioningLayoutEnum layout) {
         this.layout = layout;
         return this;
@@ -29,6 +30,7 @@ public class PositionedObjectPositioning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leftOffset")
     public Dimension leftOffset;
+
     public PositionedObjectPositioning withLeftOffset(Dimension leftOffset) {
         this.leftOffset = leftOffset;
         return this;
@@ -40,9 +42,11 @@ public class PositionedObjectPositioning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topOffset")
     public Dimension topOffset;
+
     public PositionedObjectPositioning withTopOffset(Dimension topOffset) {
         this.topOffset = topOffset;
         return this;
     }
     
+    public PositionedObjectPositioning(){}
 }

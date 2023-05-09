@@ -15,6 +15,7 @@ public class CreateGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterExpression")
     public String filterExpression;
+
     public CreateGroupRequestBody withFilterExpression(String filterExpression) {
         this.filterExpression = filterExpression;
         return this;
@@ -25,6 +26,7 @@ public class CreateGroupRequestBody {
      */
     @JsonProperty("GroupName")
     public String groupName;
+
     public CreateGroupRequestBody withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -36,6 +38,7 @@ public class CreateGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightsConfiguration")
     public CreateGroupRequestBodyInsightsConfiguration insightsConfiguration;
+
     public CreateGroupRequestBody withInsightsConfiguration(CreateGroupRequestBodyInsightsConfiguration insightsConfiguration) {
         this.insightsConfiguration = insightsConfiguration;
         return this;
@@ -47,9 +50,13 @@ public class CreateGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateGroupRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateGroupRequestBody(@JsonProperty("GroupName") String groupName) {
+        this.groupName = groupName;
+  }
 }

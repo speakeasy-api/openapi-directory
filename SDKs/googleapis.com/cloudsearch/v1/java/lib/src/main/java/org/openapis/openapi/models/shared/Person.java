@@ -18,6 +18,7 @@ public class Person {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddresses")
     public EmailAddress[] emailAddresses;
+
     public Person withEmailAddresses(EmailAddress[] emailAddresses) {
         this.emailAddresses = emailAddresses;
         return this;
@@ -29,6 +30,7 @@ public class Person {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Person withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class Person {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obfuscatedId")
     public String obfuscatedId;
+
     public Person withObfuscatedId(String obfuscatedId) {
         this.obfuscatedId = obfuscatedId;
         return this;
@@ -51,6 +54,7 @@ public class Person {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personNames")
     public Name[] personNames;
+
     public Person withPersonNames(Name[] personNames) {
         this.personNames = personNames;
         return this;
@@ -62,6 +66,7 @@ public class Person {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumbers")
     public PhoneNumber[] phoneNumbers;
+
     public Person withPhoneNumbers(PhoneNumber[] phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
         return this;
@@ -73,9 +78,11 @@ public class Person {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photos")
     public Photo[] photos;
+
     public Person withPhotos(Photo[] photos) {
         this.photos = photos;
         return this;
     }
     
+    public Person(){}
 }

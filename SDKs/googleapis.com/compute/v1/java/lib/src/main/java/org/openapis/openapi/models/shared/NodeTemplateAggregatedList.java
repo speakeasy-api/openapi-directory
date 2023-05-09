@@ -18,6 +18,7 @@ public class NodeTemplateAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NodeTemplateAggregatedList withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class NodeTemplateAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public java.util.Map<String, NodeTemplatesScopedList> items;
+
     public NodeTemplateAggregatedList withItems(java.util.Map<String, NodeTemplatesScopedList> items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class NodeTemplateAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public NodeTemplateAggregatedList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class NodeTemplateAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public NodeTemplateAggregatedList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -62,6 +66,7 @@ public class NodeTemplateAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public NodeTemplateAggregatedList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -73,6 +78,7 @@ public class NodeTemplateAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachables")
     public String[] unreachables;
+
     public NodeTemplateAggregatedList withUnreachables(String[] unreachables) {
         this.unreachables = unreachables;
         return this;
@@ -84,9 +90,11 @@ public class NodeTemplateAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public NodeTemplateAggregatedListWarning warning;
+
     public NodeTemplateAggregatedList withWarning(NodeTemplateAggregatedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public NodeTemplateAggregatedList(){}
 }

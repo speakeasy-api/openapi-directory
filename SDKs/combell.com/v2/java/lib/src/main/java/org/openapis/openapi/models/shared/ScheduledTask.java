@@ -19,6 +19,7 @@ public class ScheduledTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cron_expression")
     public String cronExpression;
+
     public ScheduledTask withCronExpression(String cronExpression) {
         this.cronExpression = cronExpression;
         return this;
@@ -30,6 +31,7 @@ public class ScheduledTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ScheduledTask withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -42,6 +44,7 @@ public class ScheduledTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ScheduledTask withId(String id) {
         this.id = id;
         return this;
@@ -53,9 +56,11 @@ public class ScheduledTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script_location")
     public String scriptLocation;
+
     public ScheduledTask withScriptLocation(String scriptLocation) {
         this.scriptLocation = scriptLocation;
         return this;
     }
     
+    public ScheduledTask(){}
 }

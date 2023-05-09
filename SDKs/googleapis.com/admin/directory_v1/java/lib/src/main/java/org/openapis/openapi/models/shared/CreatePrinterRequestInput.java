@@ -18,6 +18,7 @@ public class CreatePrinterRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public CreatePrinterRequestInput withParent(String parent) {
         this.parent = parent;
         return this;
@@ -29,9 +30,11 @@ public class CreatePrinterRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printer")
     public PrinterInput printer;
+
     public CreatePrinterRequestInput withPrinter(PrinterInput printer) {
         this.printer = printer;
         return this;
     }
     
+    public CreatePrinterRequestInput(){}
 }

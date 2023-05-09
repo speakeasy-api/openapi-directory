@@ -15,6 +15,7 @@ public class UpdateWorkspaceAliasRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public UpdateWorkspaceAliasRequestBody withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -26,9 +27,11 @@ public class UpdateWorkspaceAliasRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateWorkspaceAliasRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public UpdateWorkspaceAliasRequestBody(){}
 }

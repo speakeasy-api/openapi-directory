@@ -13,9 +13,13 @@ public class AccountResourceLinks {
      */
     @JsonProperty("self")
     public String self;
+
     public AccountResourceLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public AccountResourceLinks(@JsonProperty("self") String self) {
+        this.self = self;
+  }
 }

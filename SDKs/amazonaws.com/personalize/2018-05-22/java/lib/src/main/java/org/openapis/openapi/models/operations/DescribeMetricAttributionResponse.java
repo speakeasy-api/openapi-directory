@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMetricAttributionResponse {
     
     public String contentType;
+
     public DescribeMetricAttributionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMetricAttributionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMetricAttributionResponse describeMetricAttributionResponse;
+
     public DescribeMetricAttributionResponse withDescribeMetricAttributionResponse(org.openapis.openapi.models.shared.DescribeMetricAttributionResponse describeMetricAttributionResponse) {
         this.describeMetricAttributionResponse = describeMetricAttributionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMetricAttributionResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeMetricAttributionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeMetricAttributionResponse {
     
     
     public Integer statusCode;
+
     public DescribeMetricAttributionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeMetricAttributionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMetricAttributionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeMetricAttributionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeMetricAttributionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeMetricAttributionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

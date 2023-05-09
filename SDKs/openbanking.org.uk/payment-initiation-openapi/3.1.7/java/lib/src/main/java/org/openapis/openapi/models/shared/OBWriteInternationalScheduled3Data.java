@@ -12,6 +12,7 @@ public class OBWriteInternationalScheduled3Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBWriteInternationalScheduled3Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -22,9 +23,14 @@ public class OBWriteInternationalScheduled3Data {
      */
     @JsonProperty("Initiation")
     public OBWriteInternationalScheduled3DataInitiation initiation;
+
     public OBWriteInternationalScheduled3Data withInitiation(OBWriteInternationalScheduled3DataInitiation initiation) {
         this.initiation = initiation;
         return this;
     }
     
+    public OBWriteInternationalScheduled3Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("Initiation") OBWriteInternationalScheduled3DataInitiation initiation) {
+        this.consentId = consentId;
+        this.initiation = initiation;
+  }
 }

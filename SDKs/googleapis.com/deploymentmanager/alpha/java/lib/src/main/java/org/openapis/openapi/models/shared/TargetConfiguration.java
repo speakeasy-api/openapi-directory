@@ -12,6 +12,7 @@ public class TargetConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public ConfigFile config;
+
     public TargetConfiguration withConfig(ConfigFile config) {
         this.config = config;
         return this;
@@ -23,9 +24,11 @@ public class TargetConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imports")
     public ImportFile[] imports;
+
     public TargetConfiguration withImports(ImportFile[] imports) {
         this.imports = imports;
         return this;
     }
     
+    public TargetConfiguration(){}
 }

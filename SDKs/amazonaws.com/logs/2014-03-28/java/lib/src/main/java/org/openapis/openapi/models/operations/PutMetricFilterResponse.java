@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutMetricFilterResponse {
     
     public String contentType;
+
     public PutMetricFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutMetricFilterResponse {
      */
     
     public Object invalidParameterException;
+
     public PutMetricFilterResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutMetricFilterResponse {
      */
     
     public Object limitExceededException;
+
     public PutMetricFilterResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class PutMetricFilterResponse {
      */
     
     public Object operationAbortedException;
+
     public PutMetricFilterResponse withOperationAbortedException(Object operationAbortedException) {
         this.operationAbortedException = operationAbortedException;
         return this;
@@ -49,6 +54,7 @@ public class PutMetricFilterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutMetricFilterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PutMetricFilterResponse {
      */
     
     public Object serviceUnavailableException;
+
     public PutMetricFilterResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class PutMetricFilterResponse {
     
     
     public Integer statusCode;
+
     public PutMetricFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class PutMetricFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutMetricFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutMetricFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

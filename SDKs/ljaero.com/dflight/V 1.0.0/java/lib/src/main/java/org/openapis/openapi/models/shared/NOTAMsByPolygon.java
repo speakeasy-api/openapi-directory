@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NOTAMsByPolygon {
     @JsonProperty("poly")
     public java.util.Map<String, Object> poly;
+
     public NOTAMsByPolygon withPoly(java.util.Map<String, Object> poly) {
         this.poly = poly;
         return this;
     }
     
+    public NOTAMsByPolygon(@JsonProperty("poly") java.util.Map<String, Object> poly) {
+        this.poly = poly;
+  }
 }

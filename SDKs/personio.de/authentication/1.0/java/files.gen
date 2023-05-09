@@ -33,4 +33,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostAuthRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostAuthResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AuthenticationTokenResponseData.java
 lib/src/main/java/org/openapis/openapi/models/shared/AuthenticationTokenResponse.java
+docs/sdk/README.md
 USAGE.md

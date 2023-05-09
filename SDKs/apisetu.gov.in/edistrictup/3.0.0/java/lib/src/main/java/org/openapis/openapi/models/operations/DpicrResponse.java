@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DpicrResponse {
     
     public String contentType;
+
     public DpicrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DpicrResponse {
     
     
     public Integer statusCode;
+
     public DpicrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DpicrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DpicrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DpicrResponse {
      */
     
     public Dpicr400ApplicationJSON dpicr400ApplicationJSONObject;
+
     public DpicrResponse withDpicr400ApplicationJSONObject(Dpicr400ApplicationJSON dpicr400ApplicationJSONObject) {
         this.dpicr400ApplicationJSONObject = dpicr400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DpicrResponse {
      */
     
     public Dpicr401ApplicationJSON dpicr401ApplicationJSONObject;
+
     public DpicrResponse withDpicr401ApplicationJSONObject(Dpicr401ApplicationJSON dpicr401ApplicationJSONObject) {
         this.dpicr401ApplicationJSONObject = dpicr401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class DpicrResponse {
      */
     
     public Dpicr404ApplicationJSON dpicr404ApplicationJSONObject;
+
     public DpicrResponse withDpicr404ApplicationJSONObject(Dpicr404ApplicationJSON dpicr404ApplicationJSONObject) {
         this.dpicr404ApplicationJSONObject = dpicr404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class DpicrResponse {
      */
     
     public Dpicr500ApplicationJSON dpicr500ApplicationJSONObject;
+
     public DpicrResponse withDpicr500ApplicationJSONObject(Dpicr500ApplicationJSON dpicr500ApplicationJSONObject) {
         this.dpicr500ApplicationJSONObject = dpicr500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class DpicrResponse {
      */
     
     public Dpicr502ApplicationJSON dpicr502ApplicationJSONObject;
+
     public DpicrResponse withDpicr502ApplicationJSONObject(Dpicr502ApplicationJSON dpicr502ApplicationJSONObject) {
         this.dpicr502ApplicationJSONObject = dpicr502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class DpicrResponse {
      */
     
     public Dpicr503ApplicationJSON dpicr503ApplicationJSONObject;
+
     public DpicrResponse withDpicr503ApplicationJSONObject(Dpicr503ApplicationJSON dpicr503ApplicationJSONObject) {
         this.dpicr503ApplicationJSONObject = dpicr503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class DpicrResponse {
      */
     
     public Dpicr504ApplicationJSON dpicr504ApplicationJSONObject;
+
     public DpicrResponse withDpicr504ApplicationJSONObject(Dpicr504ApplicationJSON dpicr504ApplicationJSONObject) {
         this.dpicr504ApplicationJSONObject = dpicr504ApplicationJSONObject;
         return this;
     }
     
+    public DpicrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

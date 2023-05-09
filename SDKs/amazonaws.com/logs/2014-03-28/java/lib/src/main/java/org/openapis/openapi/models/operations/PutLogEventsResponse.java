@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutLogEventsResponse {
     
     public String contentType;
+
     public PutLogEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutLogEventsResponse {
      */
     
     public Object dataAlreadyAcceptedException;
+
     public PutLogEventsResponse withDataAlreadyAcceptedException(Object dataAlreadyAcceptedException) {
         this.dataAlreadyAcceptedException = dataAlreadyAcceptedException;
         return this;
@@ -29,6 +32,7 @@ public class PutLogEventsResponse {
      */
     
     public Object invalidParameterException;
+
     public PutLogEventsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class PutLogEventsResponse {
      */
     
     public Object invalidSequenceTokenException;
+
     public PutLogEventsResponse withInvalidSequenceTokenException(Object invalidSequenceTokenException) {
         this.invalidSequenceTokenException = invalidSequenceTokenException;
         return this;
@@ -49,6 +54,7 @@ public class PutLogEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.PutLogEventsResponse putLogEventsResponse;
+
     public PutLogEventsResponse withPutLogEventsResponse(org.openapis.openapi.models.shared.PutLogEventsResponse putLogEventsResponse) {
         this.putLogEventsResponse = putLogEventsResponse;
         return this;
@@ -59,6 +65,7 @@ public class PutLogEventsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutLogEventsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class PutLogEventsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public PutLogEventsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class PutLogEventsResponse {
     
     
     public Integer statusCode;
+
     public PutLogEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class PutLogEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutLogEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class PutLogEventsResponse {
      */
     
     public Object unrecognizedClientException;
+
     public PutLogEventsResponse withUnrecognizedClientException(Object unrecognizedClientException) {
         this.unrecognizedClientException = unrecognizedClientException;
         return this;
     }
     
+    public PutLogEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

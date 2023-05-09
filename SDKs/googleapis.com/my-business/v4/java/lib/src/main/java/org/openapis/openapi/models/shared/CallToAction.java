@@ -18,6 +18,7 @@ public class CallToAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionType")
     public CallToActionActionTypeEnum actionType;
+
     public CallToAction withActionType(CallToActionActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -29,9 +30,11 @@ public class CallToAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CallToAction withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CallToAction(){}
 }

@@ -15,9 +15,11 @@ public class RfeItemSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfe_item_id")
     public Long rfeItemId;
+
     public RfeItemSimpleVO withRfeItemId(Long rfeItemId) {
         this.rfeItemId = rfeItemId;
         return this;
     }
     
+    public RfeItemSimpleVO(){}
 }

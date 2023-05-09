@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCorpusRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AdminCreateCorpusRequest adminCreateCorpusRequest;
+
     public CreateCorpusRequest withAdminCreateCorpusRequest(org.openapis.openapi.models.shared.AdminCreateCorpusRequest adminCreateCorpusRequest) {
         this.adminCreateCorpusRequest = adminCreateCorpusRequest;
         return this;
@@ -19,9 +21,14 @@ public class CreateCorpusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=customer-id")
     public Long customerId;
+
     public CreateCorpusRequest withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public CreateCorpusRequest(@JsonProperty("adminCreateCorpusRequest") org.openapis.openapi.models.shared.AdminCreateCorpusRequest adminCreateCorpusRequest, @JsonProperty("customer-id") Long customerId) {
+        this.adminCreateCorpusRequest = adminCreateCorpusRequest;
+        this.customerId = customerId;
+  }
 }

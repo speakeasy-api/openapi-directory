@@ -15,9 +15,11 @@ public class SuppressionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuppressedReasons")
     public SuppressionListReasonEnum[] suppressedReasons;
+
     public SuppressionAttributes withSuppressedReasons(SuppressionListReasonEnum[] suppressedReasons) {
         this.suppressedReasons = suppressedReasons;
         return this;
     }
     
+    public SuppressionAttributes(){}
 }

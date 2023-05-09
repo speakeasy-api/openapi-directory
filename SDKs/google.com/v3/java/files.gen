@@ -161,4 +161,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ReconciliationReport.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReconciliationReportValidationIssue.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListReconciliationReportsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidateReconciliationReportResponse.java
+docs/sdk/README.md
+docs/accounts/README.md
 USAGE.md

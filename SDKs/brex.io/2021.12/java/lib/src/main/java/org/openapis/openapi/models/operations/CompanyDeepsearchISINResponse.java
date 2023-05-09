@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompanyDeepsearchISINResponse {
@@ -12,6 +13,7 @@ public class CompanyDeepsearchISINResponse {
      */
     
     public CompanyDeepsearchISIN200ApplicationJSON[] companyDeepsearchISIN200ApplicationJSONObjects;
+
     public CompanyDeepsearchISINResponse withCompanyDeepsearchISIN200ApplicationJSONObjects(CompanyDeepsearchISIN200ApplicationJSON[] companyDeepsearchISIN200ApplicationJSONObjects) {
         this.companyDeepsearchISIN200ApplicationJSONObjects = companyDeepsearchISIN200ApplicationJSONObjects;
         return this;
@@ -22,6 +24,7 @@ public class CompanyDeepsearchISINResponse {
      */
     
     public CompanyDeepsearchISINDefaultApplicationJSON companyDeepsearchISINDefaultApplicationJSONObject;
+
     public CompanyDeepsearchISINResponse withCompanyDeepsearchISINDefaultApplicationJSONObject(CompanyDeepsearchISINDefaultApplicationJSON companyDeepsearchISINDefaultApplicationJSONObject) {
         this.companyDeepsearchISINDefaultApplicationJSONObject = companyDeepsearchISINDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class CompanyDeepsearchISINResponse {
     
     
     public String contentType;
+
     public CompanyDeepsearchISINResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class CompanyDeepsearchISINResponse {
     
     
     public Integer statusCode;
+
     public CompanyDeepsearchISINResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CompanyDeepsearchISINResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompanyDeepsearchISINResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CompanyDeepsearchISINResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

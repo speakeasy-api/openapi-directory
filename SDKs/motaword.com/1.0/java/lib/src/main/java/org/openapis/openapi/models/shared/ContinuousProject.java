@@ -23,6 +23,7 @@ public class ContinuousProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analytics_enabled")
     public Boolean analyticsEnabled;
+
     public ContinuousProject withAnalyticsEnabled(Boolean analyticsEnabled) {
         this.analyticsEnabled = analyticsEnabled;
         return this;
@@ -34,6 +35,7 @@ public class ContinuousProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_start_postedit")
     public Boolean autoStartPostedit;
+
     public ContinuousProject withAutoStartPostedit(Boolean autoStartPostedit) {
         this.autoStartPostedit = autoStartPostedit;
         return this;
@@ -47,6 +49,7 @@ public class ContinuousProject {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public ContinuousProject withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -55,6 +58,7 @@ public class ContinuousProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ContinuousProject withId(Long id) {
         this.id = id;
         return this;
@@ -63,6 +67,7 @@ public class ContinuousProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_enabled")
     public Boolean isEnabled;
+
     public ContinuousProject withIsEnabled(Boolean isEnabled) {
         this.isEnabled = isEnabled;
         return this;
@@ -76,6 +81,7 @@ public class ContinuousProject {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_activity_at")
     public OffsetDateTime lastActivityAt;
+
     public ContinuousProject withLastActivityAt(OffsetDateTime lastActivityAt) {
         this.lastActivityAt = lastActivityAt;
         return this;
@@ -84,6 +90,7 @@ public class ContinuousProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public ContinuousProjectLinks links;
+
     public ContinuousProject withLinks(ContinuousProjectLinks links) {
         this.links = links;
         return this;
@@ -95,6 +102,7 @@ public class ContinuousProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mt_enabled")
     public Boolean mtEnabled;
+
     public ContinuousProject withMtEnabled(Boolean mtEnabled) {
         this.mtEnabled = mtEnabled;
         return this;
@@ -106,6 +114,7 @@ public class ContinuousProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mt_engine")
     public String mtEngine;
+
     public ContinuousProject withMtEngine(String mtEngine) {
         this.mtEngine = mtEngine;
         return this;
@@ -114,6 +123,7 @@ public class ContinuousProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContinuousProject withName(String name) {
         this.name = name;
         return this;
@@ -125,6 +135,7 @@ public class ContinuousProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postedit_enabled")
     public Boolean posteditEnabled;
+
     public ContinuousProject withPosteditEnabled(Boolean posteditEnabled) {
         this.posteditEnabled = posteditEnabled;
         return this;
@@ -133,6 +144,7 @@ public class ContinuousProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_language")
     public String sourceLanguage;
+
     public ContinuousProject withSourceLanguage(String sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
         return this;
@@ -144,6 +156,7 @@ public class ContinuousProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ContinuousProject withStatus(String status) {
         this.status = status;
         return this;
@@ -152,6 +165,7 @@ public class ContinuousProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public Subscription subscription;
+
     public ContinuousProject withSubscription(Subscription subscription) {
         this.subscription = subscription;
         return this;
@@ -160,6 +174,7 @@ public class ContinuousProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_languages")
     public String[] targetLanguages;
+
     public ContinuousProject withTargetLanguages(String[] targetLanguages) {
         this.targetLanguages = targetLanguages;
         return this;
@@ -171,6 +186,7 @@ public class ContinuousProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ContinuousProject withType(String type) {
         this.type = type;
         return this;
@@ -179,9 +195,11 @@ public class ContinuousProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("word_count")
     public Long wordCount;
+
     public ContinuousProject withWordCount(Long wordCount) {
         this.wordCount = wordCount;
         return this;
     }
     
+    public ContinuousProject(){}
 }

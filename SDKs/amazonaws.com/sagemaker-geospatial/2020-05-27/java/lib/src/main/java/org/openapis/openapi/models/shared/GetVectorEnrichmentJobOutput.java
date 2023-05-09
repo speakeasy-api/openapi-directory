@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetVectorEnrichmentJobOutput {
     @JsonProperty("Arn")
     public String arn;
+
     public GetVectorEnrichmentJobOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class GetVectorEnrichmentJobOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public GetVectorEnrichmentJobOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -35,6 +37,7 @@ public class GetVectorEnrichmentJobOutput {
     
     @JsonProperty("DurationInSeconds")
     public Long durationInSeconds;
+
     public GetVectorEnrichmentJobOutput withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
@@ -43,6 +46,7 @@ public class GetVectorEnrichmentJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDetails")
     public VectorEnrichmentJobErrorDetails errorDetails;
+
     public GetVectorEnrichmentJobOutput withErrorDetails(VectorEnrichmentJobErrorDetails errorDetails) {
         this.errorDetails = errorDetails;
         return this;
@@ -50,6 +54,7 @@ public class GetVectorEnrichmentJobOutput {
     
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public GetVectorEnrichmentJobOutput withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -58,6 +63,7 @@ public class GetVectorEnrichmentJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportErrorDetails")
     public VectorEnrichmentJobExportErrorDetails exportErrorDetails;
+
     public GetVectorEnrichmentJobOutput withExportErrorDetails(VectorEnrichmentJobExportErrorDetails exportErrorDetails) {
         this.exportErrorDetails = exportErrorDetails;
         return this;
@@ -66,6 +72,7 @@ public class GetVectorEnrichmentJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportStatus")
     public VectorEnrichmentJobExportStatusEnum exportStatus;
+
     public GetVectorEnrichmentJobOutput withExportStatus(VectorEnrichmentJobExportStatusEnum exportStatus) {
         this.exportStatus = exportStatus;
         return this;
@@ -73,6 +80,7 @@ public class GetVectorEnrichmentJobOutput {
     
     @JsonProperty("InputConfig")
     public VectorEnrichmentJobInputConfig inputConfig;
+
     public GetVectorEnrichmentJobOutput withInputConfig(VectorEnrichmentJobInputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -80,6 +88,7 @@ public class GetVectorEnrichmentJobOutput {
     
     @JsonProperty("JobConfig")
     public VectorEnrichmentJobConfig jobConfig;
+
     public GetVectorEnrichmentJobOutput withJobConfig(VectorEnrichmentJobConfig jobConfig) {
         this.jobConfig = jobConfig;
         return this;
@@ -88,6 +97,7 @@ public class GetVectorEnrichmentJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public GetVectorEnrichmentJobOutput withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -95,6 +105,7 @@ public class GetVectorEnrichmentJobOutput {
     
     @JsonProperty("Name")
     public String name;
+
     public GetVectorEnrichmentJobOutput withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +113,7 @@ public class GetVectorEnrichmentJobOutput {
     
     @JsonProperty("Status")
     public VectorEnrichmentJobStatusEnum status;
+
     public GetVectorEnrichmentJobOutput withStatus(VectorEnrichmentJobStatusEnum status) {
         this.status = status;
         return this;
@@ -110,6 +122,7 @@ public class GetVectorEnrichmentJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GetVectorEnrichmentJobOutput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -117,9 +130,21 @@ public class GetVectorEnrichmentJobOutput {
     
     @JsonProperty("Type")
     public VectorEnrichmentJobTypeEnum type;
+
     public GetVectorEnrichmentJobOutput withType(VectorEnrichmentJobTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetVectorEnrichmentJobOutput(@JsonProperty("Arn") String arn, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("DurationInSeconds") Long durationInSeconds, @JsonProperty("ExecutionRoleArn") String executionRoleArn, @JsonProperty("InputConfig") VectorEnrichmentJobInputConfig inputConfig, @JsonProperty("JobConfig") VectorEnrichmentJobConfig jobConfig, @JsonProperty("Name") String name, @JsonProperty("Status") VectorEnrichmentJobStatusEnum status, @JsonProperty("Type") VectorEnrichmentJobTypeEnum type) {
+        this.arn = arn;
+        this.creationTime = creationTime;
+        this.durationInSeconds = durationInSeconds;
+        this.executionRoleArn = executionRoleArn;
+        this.inputConfig = inputConfig;
+        this.jobConfig = jobConfig;
+        this.name = name;
+        this.status = status;
+        this.type = type;
+  }
 }

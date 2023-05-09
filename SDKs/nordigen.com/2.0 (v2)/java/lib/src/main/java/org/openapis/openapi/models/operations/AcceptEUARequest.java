@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AcceptEUARequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EnduserAcceptanceDetailsRequest enduserAcceptanceDetailsRequest;
+
     public AcceptEUARequest withEnduserAcceptanceDetailsRequest(org.openapis.openapi.models.shared.EnduserAcceptanceDetailsRequest enduserAcceptanceDetailsRequest) {
         this.enduserAcceptanceDetailsRequest = enduserAcceptanceDetailsRequest;
         return this;
@@ -19,9 +21,14 @@ public class AcceptEUARequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public AcceptEUARequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public AcceptEUARequest(@JsonProperty("EnduserAcceptanceDetailsRequest") org.openapis.openapi.models.shared.EnduserAcceptanceDetailsRequest enduserAcceptanceDetailsRequest, @JsonProperty("id") String id) {
+        this.enduserAcceptanceDetailsRequest = enduserAcceptanceDetailsRequest;
+        this.id = id;
+  }
 }

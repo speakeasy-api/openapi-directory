@@ -18,6 +18,7 @@ public class ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ModelInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ModelInput withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ModelState state;
+
     public ModelInput withState(ModelState state) {
         this.state = state;
         return this;
@@ -51,6 +54,7 @@ public class ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public ModelInput withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -62,9 +66,11 @@ public class ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tfliteModel")
     public TfLiteModelInput tfliteModel;
+
     public ModelInput withTfliteModel(TfLiteModelInput tfliteModel) {
         this.tfliteModel = tfliteModel;
         return this;
     }
     
+    public ModelInput(){}
 }

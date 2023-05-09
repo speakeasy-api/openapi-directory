@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ValidateConfigurationSettingsMessage - A list of validation messages for a specified configuration template.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ValidateConfigurationSettingsMessage {
     
     public String applicationName;
+
     public ValidateConfigurationSettingsMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class ValidateConfigurationSettingsMessage {
     
     
     public String environmentName;
+
     public ValidateConfigurationSettingsMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -26,6 +28,7 @@ public class ValidateConfigurationSettingsMessage {
     
     
     public ConfigurationOptionSetting[] optionSettings;
+
     public ValidateConfigurationSettingsMessage withOptionSettings(ConfigurationOptionSetting[] optionSettings) {
         this.optionSettings = optionSettings;
         return this;
@@ -33,9 +36,14 @@ public class ValidateConfigurationSettingsMessage {
     
     
     public String templateName;
+
     public ValidateConfigurationSettingsMessage withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public ValidateConfigurationSettingsMessage(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("OptionSettings") ConfigurationOptionSetting[] optionSettings) {
+        this.applicationName = applicationName;
+        this.optionSettings = optionSettings;
+  }
 }

@@ -18,9 +18,23 @@ public class ProductViewItemIssueItemIssueType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canonicalAttribute")
     public String canonicalAttribute;
+
     public ProductViewItemIssueItemIssueType withCanonicalAttribute(String canonicalAttribute) {
         this.canonicalAttribute = canonicalAttribute;
         return this;
     }
     
+    /**
+     * Error code of the issue.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("code")
+    public String code;
+
+    public ProductViewItemIssueItemIssueType withCode(String code) {
+        this.code = code;
+        return this;
+    }
+    
+    public ProductViewItemIssueItemIssueType(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateShippingQuoteRequest {
@@ -12,6 +13,7 @@ public class CreateShippingQuoteRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ShippingQuoteRequest shippingQuoteRequest;
+
     public CreateShippingQuoteRequest withShippingQuoteRequest(org.openapis.openapi.models.shared.ShippingQuoteRequest shippingQuoteRequest) {
         this.shippingQuoteRequest = shippingQuoteRequest;
         return this;
@@ -22,9 +24,14 @@ public class CreateShippingQuoteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public CreateShippingQuoteRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
+    public CreateShippingQuoteRequest(@JsonProperty("ShippingQuoteRequest") org.openapis.openapi.models.shared.ShippingQuoteRequest shippingQuoteRequest, @JsonProperty("X-EBAY-C-MARKETPLACE-ID") String xEbayCMarketplaceId) {
+        this.shippingQuoteRequest = shippingQuoteRequest;
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+  }
 }

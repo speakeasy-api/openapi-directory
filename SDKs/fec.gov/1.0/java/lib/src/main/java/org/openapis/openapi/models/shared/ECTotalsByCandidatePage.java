@@ -12,6 +12,7 @@ public class ECTotalsByCandidatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public ECTotalsByCandidatePage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class ECTotalsByCandidatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ECTotalsByCandidate[] results;
+
     public ECTotalsByCandidatePage withResults(ECTotalsByCandidate[] results) {
         this.results = results;
         return this;
     }
     
+    public ECTotalsByCandidatePage(){}
 }

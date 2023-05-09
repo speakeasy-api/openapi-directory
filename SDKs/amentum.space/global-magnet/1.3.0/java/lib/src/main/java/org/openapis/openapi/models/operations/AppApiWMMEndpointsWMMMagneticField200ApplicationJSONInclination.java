@@ -16,6 +16,7 @@ public class AppApiWMMEndpointsWMMMagneticField200ApplicationJSONInclination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("units")
     public String units;
+
     public AppApiWMMEndpointsWMMMagneticField200ApplicationJSONInclination withUnits(String units) {
         this.units = units;
         return this;
@@ -24,9 +25,11 @@ public class AppApiWMMEndpointsWMMMagneticField200ApplicationJSONInclination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public AppApiWMMEndpointsWMMMagneticField200ApplicationJSONInclination withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public AppApiWMMEndpointsWMMMagneticField200ApplicationJSONInclination(){}
 }

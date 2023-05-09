@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetChildrenRequest;
 import org.openapis.openapi.models.operations.GetChildrenResponse;
 
@@ -13,11 +12,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetChildrenRequest req = new GetChildrenRequest() {{
-                count = 548814;
-                cursor = "provident";
-                sha1 = "distinctio";
-            }}            
+            GetChildrenRequest req = new GetChildrenRequest(548814L, "provident", "distinctio");            
 
             GetChildrenResponse res = sdk.default_.getChildren(req);
 
@@ -27,5 +22,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

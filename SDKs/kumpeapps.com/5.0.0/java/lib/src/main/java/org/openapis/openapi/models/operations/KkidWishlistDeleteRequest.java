@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidWishlistDeleteRequest {
@@ -12,9 +13,13 @@ public class KkidWishlistDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wishId")
     public Long wishId;
+
     public KkidWishlistDeleteRequest withWishId(Long wishId) {
         this.wishId = wishId;
         return this;
     }
     
+    public KkidWishlistDeleteRequest(@JsonProperty("wishId") Long wishId) {
+        this.wishId = wishId;
+  }
 }

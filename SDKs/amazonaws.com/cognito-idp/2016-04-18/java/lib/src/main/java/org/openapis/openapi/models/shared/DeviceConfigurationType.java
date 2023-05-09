@@ -15,6 +15,7 @@ public class DeviceConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChallengeRequiredOnNewDevice")
     public Boolean challengeRequiredOnNewDevice;
+
     public DeviceConfigurationType withChallengeRequiredOnNewDevice(Boolean challengeRequiredOnNewDevice) {
         this.challengeRequiredOnNewDevice = challengeRequiredOnNewDevice;
         return this;
@@ -23,9 +24,11 @@ public class DeviceConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceOnlyRememberedOnUserPrompt")
     public Boolean deviceOnlyRememberedOnUserPrompt;
+
     public DeviceConfigurationType withDeviceOnlyRememberedOnUserPrompt(Boolean deviceOnlyRememberedOnUserPrompt) {
         this.deviceOnlyRememberedOnUserPrompt = deviceOnlyRememberedOnUserPrompt;
         return this;
     }
     
+    public DeviceConfigurationType(){}
 }

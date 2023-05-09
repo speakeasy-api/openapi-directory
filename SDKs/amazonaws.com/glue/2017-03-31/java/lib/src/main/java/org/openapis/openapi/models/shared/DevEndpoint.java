@@ -20,6 +20,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arguments")
     public java.util.Map<String, String> arguments;
+
     public DevEndpoint withArguments(java.util.Map<String, String> arguments) {
         this.arguments = arguments;
         return this;
@@ -28,6 +29,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public DevEndpoint withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -38,6 +40,7 @@ public class DevEndpoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public DevEndpoint withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -46,6 +49,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public DevEndpoint withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -54,6 +58,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraJarsS3Path")
     public String extraJarsS3Path;
+
     public DevEndpoint withExtraJarsS3Path(String extraJarsS3Path) {
         this.extraJarsS3Path = extraJarsS3Path;
         return this;
@@ -62,6 +67,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPythonLibsS3Path")
     public String extraPythonLibsS3Path;
+
     public DevEndpoint withExtraPythonLibsS3Path(String extraPythonLibsS3Path) {
         this.extraPythonLibsS3Path = extraPythonLibsS3Path;
         return this;
@@ -70,6 +76,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DevEndpoint withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -78,6 +85,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlueVersion")
     public String glueVersion;
+
     public DevEndpoint withGlueVersion(String glueVersion) {
         this.glueVersion = glueVersion;
         return this;
@@ -88,6 +96,7 @@ public class DevEndpoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimestamp")
     public OffsetDateTime lastModifiedTimestamp;
+
     public DevEndpoint withLastModifiedTimestamp(OffsetDateTime lastModifiedTimestamp) {
         this.lastModifiedTimestamp = lastModifiedTimestamp;
         return this;
@@ -96,6 +105,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdateStatus")
     public String lastUpdateStatus;
+
     public DevEndpoint withLastUpdateStatus(String lastUpdateStatus) {
         this.lastUpdateStatus = lastUpdateStatus;
         return this;
@@ -104,6 +114,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfNodes")
     public Long numberOfNodes;
+
     public DevEndpoint withNumberOfNodes(Long numberOfNodes) {
         this.numberOfNodes = numberOfNodes;
         return this;
@@ -112,6 +123,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfWorkers")
     public Long numberOfWorkers;
+
     public DevEndpoint withNumberOfWorkers(Long numberOfWorkers) {
         this.numberOfWorkers = numberOfWorkers;
         return this;
@@ -120,6 +132,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateAddress")
     public String privateAddress;
+
     public DevEndpoint withPrivateAddress(String privateAddress) {
         this.privateAddress = privateAddress;
         return this;
@@ -128,6 +141,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicAddress")
     public String publicAddress;
+
     public DevEndpoint withPublicAddress(String publicAddress) {
         this.publicAddress = publicAddress;
         return this;
@@ -136,6 +150,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicKey")
     public String publicKey;
+
     public DevEndpoint withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -144,6 +159,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicKeys")
     public String[] publicKeys;
+
     public DevEndpoint withPublicKeys(String[] publicKeys) {
         this.publicKeys = publicKeys;
         return this;
@@ -152,6 +168,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DevEndpoint withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -160,6 +177,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfiguration")
     public String securityConfiguration;
+
     public DevEndpoint withSecurityConfiguration(String securityConfiguration) {
         this.securityConfiguration = securityConfiguration;
         return this;
@@ -168,6 +186,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public DevEndpoint withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -176,6 +195,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public DevEndpoint withStatus(String status) {
         this.status = status;
         return this;
@@ -184,6 +204,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public DevEndpoint withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -192,6 +213,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public DevEndpoint withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -200,6 +222,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerType")
     public WorkerTypeEnum workerType;
+
     public DevEndpoint withWorkerType(WorkerTypeEnum workerType) {
         this.workerType = workerType;
         return this;
@@ -208,6 +231,7 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YarnEndpointAddress")
     public String yarnEndpointAddress;
+
     public DevEndpoint withYarnEndpointAddress(String yarnEndpointAddress) {
         this.yarnEndpointAddress = yarnEndpointAddress;
         return this;
@@ -216,9 +240,11 @@ public class DevEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZeppelinRemoteSparkInterpreterPort")
     public Long zeppelinRemoteSparkInterpreterPort;
+
     public DevEndpoint withZeppelinRemoteSparkInterpreterPort(Long zeppelinRemoteSparkInterpreterPort) {
         this.zeppelinRemoteSparkInterpreterPort = zeppelinRemoteSparkInterpreterPort;
         return this;
     }
     
+    public DevEndpoint(){}
 }

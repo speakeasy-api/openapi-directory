@@ -15,6 +15,7 @@ public class BucketLifecycleRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public BucketLifecycleRuleAction action;
+
     public BucketLifecycleRule withAction(BucketLifecycleRuleAction action) {
         this.action = action;
         return this;
@@ -26,9 +27,11 @@ public class BucketLifecycleRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public BucketLifecycleRuleCondition condition;
+
     public BucketLifecycleRule withCondition(BucketLifecycleRuleCondition condition) {
         this.condition = condition;
         return this;
     }
     
+    public BucketLifecycleRule(){}
 }

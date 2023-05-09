@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListHealthEventsResponse {
@@ -12,6 +13,7 @@ public class ListHealthEventsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListHealthEventsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListHealthEventsResponse {
     
     
     public String contentType;
+
     public ListHealthEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListHealthEventsResponse {
      */
     
     public Object internalServerException;
+
     public ListHealthEventsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListHealthEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListHealthEventsOutput listHealthEventsOutput;
+
     public ListHealthEventsResponse withListHealthEventsOutput(org.openapis.openapi.models.shared.ListHealthEventsOutput listHealthEventsOutput) {
         this.listHealthEventsOutput = listHealthEventsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListHealthEventsResponse {
     
     
     public Integer statusCode;
+
     public ListHealthEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListHealthEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListHealthEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListHealthEventsResponse {
      */
     
     public Object throttlingException;
+
     public ListHealthEventsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListHealthEventsResponse {
      */
     
     public Object validationException;
+
     public ListHealthEventsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListHealthEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

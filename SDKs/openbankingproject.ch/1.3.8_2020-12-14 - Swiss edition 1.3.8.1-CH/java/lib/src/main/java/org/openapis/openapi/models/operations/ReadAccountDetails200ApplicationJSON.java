@@ -22,9 +22,13 @@ public class ReadAccountDetails200ApplicationJSON {
      */
     @JsonProperty("account")
     public org.openapis.openapi.models.shared.AccountDetails account;
+
     public ReadAccountDetails200ApplicationJSON withAccount(org.openapis.openapi.models.shared.AccountDetails account) {
         this.account = account;
         return this;
     }
     
+    public ReadAccountDetails200ApplicationJSON(@JsonProperty("account") org.openapis.openapi.models.shared.AccountDetails account) {
+        this.account = account;
+  }
 }

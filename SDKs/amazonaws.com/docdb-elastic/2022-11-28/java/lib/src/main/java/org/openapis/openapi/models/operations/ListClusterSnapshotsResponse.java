@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListClusterSnapshotsResponse {
@@ -12,6 +13,7 @@ public class ListClusterSnapshotsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListClusterSnapshotsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListClusterSnapshotsResponse {
     
     
     public String contentType;
+
     public ListClusterSnapshotsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListClusterSnapshotsResponse {
      */
     
     public Object internalServerException;
+
     public ListClusterSnapshotsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListClusterSnapshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListClusterSnapshotsOutput listClusterSnapshotsOutput;
+
     public ListClusterSnapshotsResponse withListClusterSnapshotsOutput(org.openapis.openapi.models.shared.ListClusterSnapshotsOutput listClusterSnapshotsOutput) {
         this.listClusterSnapshotsOutput = listClusterSnapshotsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListClusterSnapshotsResponse {
     
     
     public Integer statusCode;
+
     public ListClusterSnapshotsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListClusterSnapshotsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListClusterSnapshotsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListClusterSnapshotsResponse {
      */
     
     public Object throttlingException;
+
     public ListClusterSnapshotsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListClusterSnapshotsResponse {
      */
     
     public Object validationException;
+
     public ListClusterSnapshotsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListClusterSnapshotsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

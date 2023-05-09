@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class OrderableDBInstanceOptionsMessage {
     
     public String marker;
+
     public OrderableDBInstanceOptionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class OrderableDBInstanceOptionsMessage {
     
     
     public OrderableDBInstanceOptionsList[] orderableDBInstanceOptions;
+
     public OrderableDBInstanceOptionsMessage withOrderableDBInstanceOptions(OrderableDBInstanceOptionsList[] orderableDBInstanceOptions) {
         this.orderableDBInstanceOptions = orderableDBInstanceOptions;
         return this;
     }
     
+    public OrderableDBInstanceOptionsMessage(){}
 }

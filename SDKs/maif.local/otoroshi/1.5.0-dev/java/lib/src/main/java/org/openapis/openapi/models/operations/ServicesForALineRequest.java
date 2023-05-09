@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServicesForALineRequest {
@@ -12,9 +13,13 @@ public class ServicesForALineRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=line")
     public String line;
+
     public ServicesForALineRequest withLine(String line) {
         this.line = line;
         return this;
     }
     
+    public ServicesForALineRequest(@JsonProperty("line") String line) {
+        this.line = line;
+  }
 }

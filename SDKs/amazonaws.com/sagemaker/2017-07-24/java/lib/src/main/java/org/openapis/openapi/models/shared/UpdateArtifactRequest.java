@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateArtifactRequest {
     @JsonProperty("ArtifactArn")
     public String artifactArn;
+
     public UpdateArtifactRequest withArtifactArn(String artifactArn) {
         this.artifactArn = artifactArn;
         return this;
@@ -19,6 +20,7 @@ public class UpdateArtifactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactName")
     public String artifactName;
+
     public UpdateArtifactRequest withArtifactName(String artifactName) {
         this.artifactName = artifactName;
         return this;
@@ -27,6 +29,7 @@ public class UpdateArtifactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public java.util.Map<String, String> properties;
+
     public UpdateArtifactRequest withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -35,9 +38,13 @@ public class UpdateArtifactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropertiesToRemove")
     public String[] propertiesToRemove;
+
     public UpdateArtifactRequest withPropertiesToRemove(String[] propertiesToRemove) {
         this.propertiesToRemove = propertiesToRemove;
         return this;
     }
     
+    public UpdateArtifactRequest(@JsonProperty("ArtifactArn") String artifactArn) {
+        this.artifactArn = artifactArn;
+  }
 }

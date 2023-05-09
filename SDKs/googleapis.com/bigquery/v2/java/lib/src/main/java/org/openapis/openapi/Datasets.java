@@ -59,10 +59,8 @@ public class Datasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryDatasetsDeleteResponse res = new org.openapis.openapi.models.operations.BigqueryDatasetsDeleteResponse() {{
+        org.openapis.openapi.models.operations.BigqueryDatasetsDeleteResponse res = new org.openapis.openapi.models.operations.BigqueryDatasetsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Datasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryDatasetsGetResponse res = new org.openapis.openapi.models.operations.BigqueryDatasetsGetResponse() {{
+        org.openapis.openapi.models.operations.BigqueryDatasetsGetResponse res = new org.openapis.openapi.models.operations.BigqueryDatasetsGetResponse(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Datasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryDatasetsInsertResponse res = new org.openapis.openapi.models.operations.BigqueryDatasetsInsertResponse() {{
+        org.openapis.openapi.models.operations.BigqueryDatasetsInsertResponse res = new org.openapis.openapi.models.operations.BigqueryDatasetsInsertResponse(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Datasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryDatasetsListResponse res = new org.openapis.openapi.models.operations.BigqueryDatasetsListResponse() {{
+        org.openapis.openapi.models.operations.BigqueryDatasetsListResponse res = new org.openapis.openapi.models.operations.BigqueryDatasetsListResponse(contentType, httpRes.statusCode()) {{
             datasetList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Datasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryDatasetsPatchResponse res = new org.openapis.openapi.models.operations.BigqueryDatasetsPatchResponse() {{
+        org.openapis.openapi.models.operations.BigqueryDatasetsPatchResponse res = new org.openapis.openapi.models.operations.BigqueryDatasetsPatchResponse(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class Datasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryDatasetsUpdateResponse res = new org.openapis.openapi.models.operations.BigqueryDatasetsUpdateResponse() {{
+        org.openapis.openapi.models.operations.BigqueryDatasetsUpdateResponse res = new org.openapis.openapi.models.operations.BigqueryDatasetsUpdateResponse(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class AmazonOpenSearchServerlessDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BufferingHints")
     public AmazonOpenSearchServerlessBufferingHints bufferingHints;
+
     public AmazonOpenSearchServerlessDestinationUpdate withBufferingHints(AmazonOpenSearchServerlessBufferingHints bufferingHints) {
         this.bufferingHints = bufferingHints;
         return this;
@@ -26,6 +27,7 @@ public class AmazonOpenSearchServerlessDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptions")
     public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+
     public AmazonOpenSearchServerlessDestinationUpdate withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         return this;
@@ -34,6 +36,7 @@ public class AmazonOpenSearchServerlessDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectionEndpoint")
     public String collectionEndpoint;
+
     public AmazonOpenSearchServerlessDestinationUpdate withCollectionEndpoint(String collectionEndpoint) {
         this.collectionEndpoint = collectionEndpoint;
         return this;
@@ -42,6 +45,7 @@ public class AmazonOpenSearchServerlessDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public AmazonOpenSearchServerlessDestinationUpdate withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -53,6 +57,7 @@ public class AmazonOpenSearchServerlessDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingConfiguration")
     public ProcessingConfiguration processingConfiguration;
+
     public AmazonOpenSearchServerlessDestinationUpdate withProcessingConfiguration(ProcessingConfiguration processingConfiguration) {
         this.processingConfiguration = processingConfiguration;
         return this;
@@ -61,6 +66,7 @@ public class AmazonOpenSearchServerlessDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryOptions")
     public AmazonOpenSearchServerlessRetryOptions retryOptions;
+
     public AmazonOpenSearchServerlessDestinationUpdate withRetryOptions(AmazonOpenSearchServerlessRetryOptions retryOptions) {
         this.retryOptions = retryOptions;
         return this;
@@ -69,6 +75,7 @@ public class AmazonOpenSearchServerlessDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public AmazonOpenSearchServerlessDestinationUpdate withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -80,9 +87,11 @@ public class AmazonOpenSearchServerlessDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Update")
     public S3DestinationUpdate s3Update;
+
     public AmazonOpenSearchServerlessDestinationUpdate withS3Update(S3DestinationUpdate s3Update) {
         this.s3Update = s3Update;
         return this;
     }
     
+    public AmazonOpenSearchServerlessDestinationUpdate(){}
 }

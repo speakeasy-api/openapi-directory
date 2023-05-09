@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetResourceMetadataRequest {
     @JsonProperty("Identifier")
     public String identifier;
+
     public GetResourceMetadataRequest withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -16,9 +17,14 @@ public class GetResourceMetadataRequest {
     
     @JsonProperty("ServiceType")
     public ServiceTypeEnum serviceType;
+
     public GetResourceMetadataRequest withServiceType(ServiceTypeEnum serviceType) {
         this.serviceType = serviceType;
         return this;
     }
     
+    public GetResourceMetadataRequest(@JsonProperty("Identifier") String identifier, @JsonProperty("ServiceType") ServiceTypeEnum serviceType) {
+        this.identifier = identifier;
+        this.serviceType = serviceType;
+  }
 }

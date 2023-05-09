@@ -12,6 +12,7 @@ public class CampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public CampaignRequestFilters filters;
+
     public CampaignRequest withFilters(CampaignRequestFilters filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class CampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public CampaignRequest withTemplate(String template) {
         this.template = template;
         return this;
@@ -28,9 +30,11 @@ public class CampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger")
     public CampaignRequestTrigger trigger;
+
     public CampaignRequest withTrigger(CampaignRequestTrigger trigger) {
         this.trigger = trigger;
         return this;
     }
     
+    public CampaignRequest(){}
 }

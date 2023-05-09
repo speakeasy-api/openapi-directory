@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateResolverEndpointIpAddressResponse {
     
     public String contentType;
+
     public DisassociateResolverEndpointIpAddressResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateResolverEndpointIpAddressResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateResolverEndpointIpAddressResponse disassociateResolverEndpointIpAddressResponse;
+
     public DisassociateResolverEndpointIpAddressResponse withDisassociateResolverEndpointIpAddressResponse(org.openapis.openapi.models.shared.DisassociateResolverEndpointIpAddressResponse disassociateResolverEndpointIpAddressResponse) {
         this.disassociateResolverEndpointIpAddressResponse = disassociateResolverEndpointIpAddressResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateResolverEndpointIpAddressResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DisassociateResolverEndpointIpAddressResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateResolverEndpointIpAddressResponse {
      */
     
     public Object invalidParameterException;
+
     public DisassociateResolverEndpointIpAddressResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateResolverEndpointIpAddressResponse {
      */
     
     public Object invalidRequestException;
+
     public DisassociateResolverEndpointIpAddressResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateResolverEndpointIpAddressResponse {
      */
     
     public Object resourceExistsException;
+
     public DisassociateResolverEndpointIpAddressResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -69,6 +76,7 @@ public class DisassociateResolverEndpointIpAddressResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateResolverEndpointIpAddressResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DisassociateResolverEndpointIpAddressResponse {
     
     
     public Integer statusCode;
+
     public DisassociateResolverEndpointIpAddressResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateResolverEndpointIpAddressResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateResolverEndpointIpAddressResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DisassociateResolverEndpointIpAddressResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateResolverEndpointIpAddressResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DisassociateResolverEndpointIpAddressResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

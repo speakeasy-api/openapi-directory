@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMultiRequest {
@@ -12,6 +13,7 @@ public class GetMultiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")
     public String address;
+
     public GetMultiRequest withAddress(String address) {
         this.address = address;
         return this;
@@ -22,6 +24,7 @@ public class GetMultiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=baudrate")
     public org.openapis.openapi.models.shared.BaudrateEnum baudrate;
+
     public GetMultiRequest withBaudrate(org.openapis.openapi.models.shared.BaudrateEnum baudrate) {
         this.baudrate = baudrate;
         return this;
@@ -32,6 +35,7 @@ public class GetMultiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=device")
     public String device;
+
     public GetMultiRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -42,9 +46,16 @@ public class GetMultiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=maxframes")
     public Integer maxframes;
+
     public GetMultiRequest withMaxframes(Integer maxframes) {
         this.maxframes = maxframes;
         return this;
     }
     
+    public GetMultiRequest(@JsonProperty("address") String address, @JsonProperty("baudrate") org.openapis.openapi.models.shared.BaudrateEnum baudrate, @JsonProperty("device") String device, @JsonProperty("maxframes") Integer maxframes) {
+        this.address = address;
+        this.baudrate = baudrate;
+        this.device = device;
+        this.maxframes = maxframes;
+  }
 }

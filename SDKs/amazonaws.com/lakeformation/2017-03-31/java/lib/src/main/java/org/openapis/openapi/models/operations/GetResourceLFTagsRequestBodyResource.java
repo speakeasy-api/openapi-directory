@@ -15,6 +15,7 @@ public class GetResourceLFTagsRequestBodyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Catalog")
     public java.util.Map<String, Object> catalog;
+
     public GetResourceLFTagsRequestBodyResource withCatalog(java.util.Map<String, Object> catalog) {
         this.catalog = catalog;
         return this;
@@ -23,6 +24,7 @@ public class GetResourceLFTagsRequestBodyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCellsFilter")
     public org.openapis.openapi.models.shared.DataCellsFilterResource dataCellsFilter;
+
     public GetResourceLFTagsRequestBodyResource withDataCellsFilter(org.openapis.openapi.models.shared.DataCellsFilterResource dataCellsFilter) {
         this.dataCellsFilter = dataCellsFilter;
         return this;
@@ -31,6 +33,7 @@ public class GetResourceLFTagsRequestBodyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataLocation")
     public org.openapis.openapi.models.shared.DataLocationResource dataLocation;
+
     public GetResourceLFTagsRequestBodyResource withDataLocation(org.openapis.openapi.models.shared.DataLocationResource dataLocation) {
         this.dataLocation = dataLocation;
         return this;
@@ -39,6 +42,7 @@ public class GetResourceLFTagsRequestBodyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Database")
     public org.openapis.openapi.models.shared.DatabaseResource database;
+
     public GetResourceLFTagsRequestBodyResource withDatabase(org.openapis.openapi.models.shared.DatabaseResource database) {
         this.database = database;
         return this;
@@ -47,6 +51,7 @@ public class GetResourceLFTagsRequestBodyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LFTag")
     public org.openapis.openapi.models.shared.LFTagKeyResource lfTag;
+
     public GetResourceLFTagsRequestBodyResource withLFTag(org.openapis.openapi.models.shared.LFTagKeyResource lfTag) {
         this.lfTag = lfTag;
         return this;
@@ -55,6 +60,7 @@ public class GetResourceLFTagsRequestBodyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LFTagPolicy")
     public org.openapis.openapi.models.shared.LFTagPolicyResource lfTagPolicy;
+
     public GetResourceLFTagsRequestBodyResource withLFTagPolicy(org.openapis.openapi.models.shared.LFTagPolicyResource lfTagPolicy) {
         this.lfTagPolicy = lfTagPolicy;
         return this;
@@ -63,6 +69,7 @@ public class GetResourceLFTagsRequestBodyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Table")
     public org.openapis.openapi.models.shared.TableResource table;
+
     public GetResourceLFTagsRequestBodyResource withTable(org.openapis.openapi.models.shared.TableResource table) {
         this.table = table;
         return this;
@@ -71,9 +78,11 @@ public class GetResourceLFTagsRequestBodyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableWithColumns")
     public org.openapis.openapi.models.shared.TableWithColumnsResource tableWithColumns;
+
     public GetResourceLFTagsRequestBodyResource withTableWithColumns(org.openapis.openapi.models.shared.TableWithColumnsResource tableWithColumns) {
         this.tableWithColumns = tableWithColumns;
         return this;
     }
     
+    public GetResourceLFTagsRequestBodyResource(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AttachLoadBalancerToSubnetsOutput {
     
     public String[] subnets;
+
     public AttachLoadBalancerToSubnetsOutput withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public AttachLoadBalancerToSubnetsOutput(){}
 }

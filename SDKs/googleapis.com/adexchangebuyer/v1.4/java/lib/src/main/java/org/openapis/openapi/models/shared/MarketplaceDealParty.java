@@ -12,6 +12,7 @@ public class MarketplaceDealParty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer")
     public Buyer buyer;
+
     public MarketplaceDealParty withBuyer(Buyer buyer) {
         this.buyer = buyer;
         return this;
@@ -20,9 +21,11 @@ public class MarketplaceDealParty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller")
     public Seller seller;
+
     public MarketplaceDealParty withSeller(Seller seller) {
         this.seller = seller;
         return this;
     }
     
+    public MarketplaceDealParty(){}
 }

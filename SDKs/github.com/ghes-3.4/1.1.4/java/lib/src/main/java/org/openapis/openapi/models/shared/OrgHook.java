@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class OrgHook {
     @JsonProperty("active")
     public Boolean active;
+
     public OrgHook withActive(Boolean active) {
         this.active = active;
         return this;
@@ -26,6 +27,7 @@ public class OrgHook {
     
     @JsonProperty("config")
     public OrgHookConfig config;
+
     public OrgHook withConfig(OrgHookConfig config) {
         this.config = config;
         return this;
@@ -35,6 +37,7 @@ public class OrgHook {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public OrgHook withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +46,7 @@ public class OrgHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveries_url")
     public String deliveriesUrl;
+
     public OrgHook withDeliveriesUrl(String deliveriesUrl) {
         this.deliveriesUrl = deliveriesUrl;
         return this;
@@ -50,6 +54,7 @@ public class OrgHook {
     
     @JsonProperty("events")
     public String[] events;
+
     public OrgHook withEvents(String[] events) {
         this.events = events;
         return this;
@@ -57,6 +62,7 @@ public class OrgHook {
     
     @JsonProperty("id")
     public Long id;
+
     public OrgHook withId(Long id) {
         this.id = id;
         return this;
@@ -64,6 +70,7 @@ public class OrgHook {
     
     @JsonProperty("name")
     public String name;
+
     public OrgHook withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class OrgHook {
     
     @JsonProperty("ping_url")
     public String pingUrl;
+
     public OrgHook withPingUrl(String pingUrl) {
         this.pingUrl = pingUrl;
         return this;
@@ -78,6 +86,7 @@ public class OrgHook {
     
     @JsonProperty("type")
     public String type;
+
     public OrgHook withType(String type) {
         this.type = type;
         return this;
@@ -87,6 +96,7 @@ public class OrgHook {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public OrgHook withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -94,9 +104,22 @@ public class OrgHook {
     
     @JsonProperty("url")
     public String url;
+
     public OrgHook withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public OrgHook(@JsonProperty("active") Boolean active, @JsonProperty("config") OrgHookConfig config, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("events") String[] events, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("ping_url") String pingUrl, @JsonProperty("type") String type, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.active = active;
+        this.config = config;
+        this.createdAt = createdAt;
+        this.events = events;
+        this.id = id;
+        this.name = name;
+        this.pingUrl = pingUrl;
+        this.type = type;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

@@ -15,9 +15,11 @@ public class BatchDeleteWorldsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unprocessedWorlds")
     public String[] unprocessedWorlds;
+
     public BatchDeleteWorldsResponse withUnprocessedWorlds(String[] unprocessedWorlds) {
         this.unprocessedWorlds = unprocessedWorlds;
         return this;
     }
     
+    public BatchDeleteWorldsResponse(){}
 }

@@ -20,6 +20,7 @@ public class PropertyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public PropertyValue withTime(String time) {
         this.time = time;
         return this;
@@ -30,6 +31,7 @@ public class PropertyValue {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public PropertyValue withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -37,9 +39,13 @@ public class PropertyValue {
     
     @JsonProperty("value")
     public DataValue value;
+
     public PropertyValue withValue(DataValue value) {
         this.value = value;
         return this;
     }
     
+    public PropertyValue(@JsonProperty("value") DataValue value) {
+        this.value = value;
+  }
 }

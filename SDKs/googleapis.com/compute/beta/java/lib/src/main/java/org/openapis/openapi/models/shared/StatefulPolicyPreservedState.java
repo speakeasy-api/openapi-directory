@@ -18,6 +18,7 @@ public class StatefulPolicyPreservedState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public java.util.Map<String, StatefulPolicyPreservedStateDiskDevice> disks;
+
     public StatefulPolicyPreservedState withDisks(java.util.Map<String, StatefulPolicyPreservedStateDiskDevice> disks) {
         this.disks = disks;
         return this;
@@ -29,6 +30,7 @@ public class StatefulPolicyPreservedState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIPs")
     public java.util.Map<String, StatefulPolicyPreservedStateNetworkIp> externalIPs;
+
     public StatefulPolicyPreservedState withExternalIPs(java.util.Map<String, StatefulPolicyPreservedStateNetworkIp> externalIPs) {
         this.externalIPs = externalIPs;
         return this;
@@ -40,9 +42,11 @@ public class StatefulPolicyPreservedState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalIPs")
     public java.util.Map<String, StatefulPolicyPreservedStateNetworkIp> internalIPs;
+
     public StatefulPolicyPreservedState withInternalIPs(java.util.Map<String, StatefulPolicyPreservedStateNetworkIp> internalIPs) {
         this.internalIPs = internalIPs;
         return this;
     }
     
+    public StatefulPolicyPreservedState(){}
 }

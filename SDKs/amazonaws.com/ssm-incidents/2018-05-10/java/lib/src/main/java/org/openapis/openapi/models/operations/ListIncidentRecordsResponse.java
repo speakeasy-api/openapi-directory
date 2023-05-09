@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListIncidentRecordsResponse {
@@ -12,6 +13,7 @@ public class ListIncidentRecordsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListIncidentRecordsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListIncidentRecordsResponse {
     
     
     public String contentType;
+
     public ListIncidentRecordsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListIncidentRecordsResponse {
      */
     
     public Object internalServerException;
+
     public ListIncidentRecordsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListIncidentRecordsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListIncidentRecordsOutput listIncidentRecordsOutput;
+
     public ListIncidentRecordsResponse withListIncidentRecordsOutput(org.openapis.openapi.models.shared.ListIncidentRecordsOutput listIncidentRecordsOutput) {
         this.listIncidentRecordsOutput = listIncidentRecordsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListIncidentRecordsResponse {
     
     
     public Integer statusCode;
+
     public ListIncidentRecordsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListIncidentRecordsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListIncidentRecordsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListIncidentRecordsResponse {
      */
     
     public Object throttlingException;
+
     public ListIncidentRecordsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListIncidentRecordsResponse {
      */
     
     public Object validationException;
+
     public ListIncidentRecordsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListIncidentRecordsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

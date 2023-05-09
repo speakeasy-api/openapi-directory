@@ -15,6 +15,7 @@ public class ResourceDataSyncSourceWithState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsOrganizationsSource")
     public ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource;
+
     public ResourceDataSyncSourceWithState withAwsOrganizationsSource(ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource) {
         this.awsOrganizationsSource = awsOrganizationsSource;
         return this;
@@ -23,6 +24,7 @@ public class ResourceDataSyncSourceWithState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableAllOpsDataSources")
     public Boolean enableAllOpsDataSources;
+
     public ResourceDataSyncSourceWithState withEnableAllOpsDataSources(Boolean enableAllOpsDataSources) {
         this.enableAllOpsDataSources = enableAllOpsDataSources;
         return this;
@@ -31,6 +33,7 @@ public class ResourceDataSyncSourceWithState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeFutureRegions")
     public Boolean includeFutureRegions;
+
     public ResourceDataSyncSourceWithState withIncludeFutureRegions(Boolean includeFutureRegions) {
         this.includeFutureRegions = includeFutureRegions;
         return this;
@@ -39,6 +42,7 @@ public class ResourceDataSyncSourceWithState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceRegions")
     public String[] sourceRegions;
+
     public ResourceDataSyncSourceWithState withSourceRegions(String[] sourceRegions) {
         this.sourceRegions = sourceRegions;
         return this;
@@ -47,6 +51,7 @@ public class ResourceDataSyncSourceWithState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public String sourceType;
+
     public ResourceDataSyncSourceWithState withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -55,9 +60,11 @@ public class ResourceDataSyncSourceWithState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public ResourceDataSyncSourceWithState withState(String state) {
         this.state = state;
         return this;
     }
     
+    public ResourceDataSyncSourceWithState(){}
 }

@@ -18,6 +18,7 @@ public class ChoiceAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChoiceId")
     public String choiceId;
+
     public ChoiceAnswer withChoiceId(String choiceId) {
         this.choiceId = choiceId;
         return this;
@@ -26,6 +27,7 @@ public class ChoiceAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public ChoiceAnswer withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -34,6 +36,7 @@ public class ChoiceAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public ChoiceReasonEnum reason;
+
     public ChoiceAnswer withReason(ChoiceReasonEnum reason) {
         this.reason = reason;
         return this;
@@ -42,9 +45,11 @@ public class ChoiceAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ChoiceStatusEnum status;
+
     public ChoiceAnswer withStatus(ChoiceStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ChoiceAnswer(){}
 }

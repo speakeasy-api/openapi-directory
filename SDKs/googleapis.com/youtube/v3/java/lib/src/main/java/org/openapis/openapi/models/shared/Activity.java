@@ -18,6 +18,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentDetails")
     public ActivityContentDetails contentDetails;
+
     public Activity withContentDetails(ActivityContentDetails contentDetails) {
         this.contentDetails = contentDetails;
         return this;
@@ -29,6 +30,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Activity withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Activity withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Activity withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,9 +66,11 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public ActivitySnippet snippet;
+
     public Activity withSnippet(ActivitySnippet snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public Activity(){}
 }

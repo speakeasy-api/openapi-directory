@@ -18,9 +18,11 @@ public class RemoveUserForWorkspace204ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public RemoveUserForWorkspace204ApplicationJSON withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
     }
     
+    public RemoveUserForWorkspace204ApplicationJSON(){}
 }

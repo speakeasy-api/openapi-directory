@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateChangeSetResponse {
     
     public String contentType;
+
     public GenerateChangeSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GenerateChangeSetResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateChangeSetResponse generateChangeSetResponse;
+
     public GenerateChangeSetResponse withGenerateChangeSetResponse(org.openapis.openapi.models.shared.GenerateChangeSetResponse generateChangeSetResponse) {
         this.generateChangeSetResponse = generateChangeSetResponse;
         return this;
@@ -29,6 +32,7 @@ public class GenerateChangeSetResponse {
      */
     
     public Object internalError;
+
     public GenerateChangeSetResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -39,6 +43,7 @@ public class GenerateChangeSetResponse {
      */
     
     public Object invalidParameterException;
+
     public GenerateChangeSetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GenerateChangeSetResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public GenerateChangeSetResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GenerateChangeSetResponse {
      */
     
     public Object operationNotPermittedException;
+
     public GenerateChangeSetResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class GenerateChangeSetResponse {
     
     
     public Integer statusCode;
+
     public GenerateChangeSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GenerateChangeSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateChangeSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GenerateChangeSetResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public GenerateChangeSetResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public GenerateChangeSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class TerminalProductPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public TerminalProductPrice withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -23,9 +24,11 @@ public class TerminalProductPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public TerminalProductPrice withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public TerminalProductPrice(){}
 }

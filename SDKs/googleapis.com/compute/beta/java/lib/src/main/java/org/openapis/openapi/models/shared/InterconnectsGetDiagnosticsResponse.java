@@ -18,9 +18,11 @@ public class InterconnectsGetDiagnosticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public InterconnectDiagnostics result;
+
     public InterconnectsGetDiagnosticsResponse withResult(InterconnectDiagnostics result) {
         this.result = result;
         return this;
     }
     
+    public InterconnectsGetDiagnosticsResponse(){}
 }

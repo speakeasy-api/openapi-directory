@@ -14,6 +14,7 @@ public class ReferenceLine {
      */
     @JsonProperty("lineNumber")
     public Integer lineNumber;
+
     public ReferenceLine withLineNumber(Integer lineNumber) {
         this.lineNumber = lineNumber;
         return this;
@@ -25,9 +26,13 @@ public class ReferenceLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineText")
     public String lineText;
+
     public ReferenceLine withLineText(String lineText) {
         this.lineText = lineText;
         return this;
     }
     
+    public ReferenceLine(@JsonProperty("lineNumber") Integer lineNumber) {
+        this.lineNumber = lineNumber;
+  }
 }

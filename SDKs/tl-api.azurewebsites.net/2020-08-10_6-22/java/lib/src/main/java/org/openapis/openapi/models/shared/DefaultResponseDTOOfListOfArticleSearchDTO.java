@@ -17,6 +17,7 @@ public class DefaultResponseDTOOfListOfArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isError")
     public Boolean isError;
+
     public DefaultResponseDTOOfListOfArticleSearchDTO withIsError(Boolean isError) {
         this.isError = isError;
         return this;
@@ -25,6 +26,7 @@ public class DefaultResponseDTOOfListOfArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DefaultResponseDTOOfListOfArticleSearchDTO withMessage(String message) {
         this.message = message;
         return this;
@@ -33,6 +35,7 @@ public class DefaultResponseDTOOfListOfArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseException")
     public Object responseException;
+
     public DefaultResponseDTOOfListOfArticleSearchDTO withResponseException(Object responseException) {
         this.responseException = responseException;
         return this;
@@ -41,9 +44,11 @@ public class DefaultResponseDTOOfListOfArticleSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public ArticleSearchDTO[] result;
+
     public DefaultResponseDTOOfListOfArticleSearchDTO withResult(ArticleSearchDTO[] result) {
         this.result = result;
         return this;
     }
     
+    public DefaultResponseDTOOfListOfArticleSearchDTO(){}
 }

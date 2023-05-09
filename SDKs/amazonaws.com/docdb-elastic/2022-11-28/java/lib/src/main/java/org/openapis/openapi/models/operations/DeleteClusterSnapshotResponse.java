@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteClusterSnapshotResponse {
@@ -12,6 +13,7 @@ public class DeleteClusterSnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteClusterSnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteClusterSnapshotResponse {
      */
     
     public Object conflictException;
+
     public DeleteClusterSnapshotResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteClusterSnapshotResponse {
     
     
     public String contentType;
+
     public DeleteClusterSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteClusterSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteClusterSnapshotOutput deleteClusterSnapshotOutput;
+
     public DeleteClusterSnapshotResponse withDeleteClusterSnapshotOutput(org.openapis.openapi.models.shared.DeleteClusterSnapshotOutput deleteClusterSnapshotOutput) {
         this.deleteClusterSnapshotOutput = deleteClusterSnapshotOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteClusterSnapshotResponse {
      */
     
     public Object internalServerException;
+
     public DeleteClusterSnapshotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteClusterSnapshotResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteClusterSnapshotResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteClusterSnapshotResponse {
     
     
     public Integer statusCode;
+
     public DeleteClusterSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteClusterSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteClusterSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteClusterSnapshotResponse {
      */
     
     public Object throttlingException;
+
     public DeleteClusterSnapshotResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteClusterSnapshotResponse {
      */
     
     public Object validationException;
+
     public DeleteClusterSnapshotResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteClusterSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

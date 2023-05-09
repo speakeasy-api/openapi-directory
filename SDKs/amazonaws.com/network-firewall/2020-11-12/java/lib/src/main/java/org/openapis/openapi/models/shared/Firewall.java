@@ -15,6 +15,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteProtection")
     public Boolean deleteProtection;
+
     public Firewall withDeleteProtection(Boolean deleteProtection) {
         this.deleteProtection = deleteProtection;
         return this;
@@ -23,6 +24,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Firewall withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public Firewall withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -39,6 +42,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallArn")
     public String firewallArn;
+
     public Firewall withFirewallArn(String firewallArn) {
         this.firewallArn = firewallArn;
         return this;
@@ -46,6 +50,7 @@ public class Firewall {
     
     @JsonProperty("FirewallId")
     public String firewallId;
+
     public Firewall withFirewallId(String firewallId) {
         this.firewallId = firewallId;
         return this;
@@ -54,6 +59,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallName")
     public String firewallName;
+
     public Firewall withFirewallName(String firewallName) {
         this.firewallName = firewallName;
         return this;
@@ -61,6 +67,7 @@ public class Firewall {
     
     @JsonProperty("FirewallPolicyArn")
     public String firewallPolicyArn;
+
     public Firewall withFirewallPolicyArn(String firewallPolicyArn) {
         this.firewallPolicyArn = firewallPolicyArn;
         return this;
@@ -69,6 +76,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallPolicyChangeProtection")
     public Boolean firewallPolicyChangeProtection;
+
     public Firewall withFirewallPolicyChangeProtection(Boolean firewallPolicyChangeProtection) {
         this.firewallPolicyChangeProtection = firewallPolicyChangeProtection;
         return this;
@@ -77,6 +85,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetChangeProtection")
     public Boolean subnetChangeProtection;
+
     public Firewall withSubnetChangeProtection(Boolean subnetChangeProtection) {
         this.subnetChangeProtection = subnetChangeProtection;
         return this;
@@ -84,6 +93,7 @@ public class Firewall {
     
     @JsonProperty("SubnetMappings")
     public SubnetMapping[] subnetMappings;
+
     public Firewall withSubnetMappings(SubnetMapping[] subnetMappings) {
         this.subnetMappings = subnetMappings;
         return this;
@@ -92,6 +102,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public Firewall withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -99,9 +110,16 @@ public class Firewall {
     
     @JsonProperty("VpcId")
     public String vpcId;
+
     public Firewall withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public Firewall(@JsonProperty("FirewallId") String firewallId, @JsonProperty("FirewallPolicyArn") String firewallPolicyArn, @JsonProperty("SubnetMappings") SubnetMapping[] subnetMappings, @JsonProperty("VpcId") String vpcId) {
+        this.firewallId = firewallId;
+        this.firewallPolicyArn = firewallPolicyArn;
+        this.subnetMappings = subnetMappings;
+        this.vpcId = vpcId;
+  }
 }

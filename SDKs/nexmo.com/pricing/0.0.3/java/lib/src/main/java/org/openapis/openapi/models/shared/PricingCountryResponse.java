@@ -18,6 +18,7 @@ public class PricingCountryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public PricingCountryResponse withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -29,6 +30,7 @@ public class PricingCountryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryDisplayName")
     public String countryDisplayName;
+
     public PricingCountryResponse withCountryDisplayName(String countryDisplayName) {
         this.countryDisplayName = countryDisplayName;
         return this;
@@ -40,6 +42,7 @@ public class PricingCountryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryName")
     public String countryName;
+
     public PricingCountryResponse withCountryName(String countryName) {
         this.countryName = countryName;
         return this;
@@ -51,6 +54,7 @@ public class PricingCountryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public PricingCountryResponse withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -62,6 +66,7 @@ public class PricingCountryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultPrice")
     public String defaultPrice;
+
     public PricingCountryResponse withDefaultPrice(String defaultPrice) {
         this.defaultPrice = defaultPrice;
         return this;
@@ -73,6 +78,7 @@ public class PricingCountryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialingPrefix")
     public String dialingPrefix;
+
     public PricingCountryResponse withDialingPrefix(String dialingPrefix) {
         this.dialingPrefix = dialingPrefix;
         return this;
@@ -84,9 +90,11 @@ public class PricingCountryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networks")
     public NetworkObject[] networks;
+
     public PricingCountryResponse withNetworks(NetworkObject[] networks) {
         this.networks = networks;
         return this;
     }
     
+    public PricingCountryResponse(){}
 }

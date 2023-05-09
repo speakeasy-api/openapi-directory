@@ -15,6 +15,7 @@ public class DescribeAutomationExecutionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomationExecutionMetadataList")
     public AutomationExecutionMetadata[] automationExecutionMetadataList;
+
     public DescribeAutomationExecutionsResult withAutomationExecutionMetadataList(AutomationExecutionMetadata[] automationExecutionMetadataList) {
         this.automationExecutionMetadataList = automationExecutionMetadataList;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAutomationExecutionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAutomationExecutionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAutomationExecutionsResult(){}
 }

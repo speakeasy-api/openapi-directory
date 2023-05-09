@@ -15,6 +15,7 @@ public class StreamProcessor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public StreamProcessor withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class StreamProcessor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StreamProcessorStatusEnum status;
+
     public StreamProcessor withStatus(StreamProcessorStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public StreamProcessor(){}
 }

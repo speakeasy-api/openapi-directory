@@ -15,9 +15,11 @@ public class ConfirmCustomerAgreementResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ConfirmCustomerAgreementResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ConfirmCustomerAgreementResponse(){}
 }

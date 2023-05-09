@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTotalPotHoldingsResponse {
     
     public String contentType;
+
     public GetTotalPotHoldingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTotalPotHoldingsResponse {
     
     
     public Integer statusCode;
+
     public GetTotalPotHoldingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetTotalPotHoldingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTotalPotHoldingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetTotalPotHoldingsResponse {
      */
     
     public GetTotalPotHoldings200ApplicationJSON getTotalPotHoldings200ApplicationJSONObject;
+
     public GetTotalPotHoldingsResponse withGetTotalPotHoldings200ApplicationJSONObject(GetTotalPotHoldings200ApplicationJSON getTotalPotHoldings200ApplicationJSONObject) {
         this.getTotalPotHoldings200ApplicationJSONObject = getTotalPotHoldings200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetTotalPotHoldingsResponse {
      */
     
     public GetTotalPotHoldings401ApplicationJSON getTotalPotHoldings401ApplicationJSONObject;
+
     public GetTotalPotHoldingsResponse withGetTotalPotHoldings401ApplicationJSONObject(GetTotalPotHoldings401ApplicationJSON getTotalPotHoldings401ApplicationJSONObject) {
         this.getTotalPotHoldings401ApplicationJSONObject = getTotalPotHoldings401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetTotalPotHoldingsResponse {
      */
     
     public GetTotalPotHoldings403ApplicationJSON getTotalPotHoldings403ApplicationJSONObject;
+
     public GetTotalPotHoldingsResponse withGetTotalPotHoldings403ApplicationJSONObject(GetTotalPotHoldings403ApplicationJSON getTotalPotHoldings403ApplicationJSONObject) {
         this.getTotalPotHoldings403ApplicationJSONObject = getTotalPotHoldings403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetTotalPotHoldingsResponse {
      */
     
     public GetTotalPotHoldings404ApplicationJSON getTotalPotHoldings404ApplicationJSONObject;
+
     public GetTotalPotHoldingsResponse withGetTotalPotHoldings404ApplicationJSONObject(GetTotalPotHoldings404ApplicationJSON getTotalPotHoldings404ApplicationJSONObject) {
         this.getTotalPotHoldings404ApplicationJSONObject = getTotalPotHoldings404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetTotalPotHoldingsResponse {
      */
     
     public GetTotalPotHoldings429ApplicationJSON getTotalPotHoldings429ApplicationJSONObject;
+
     public GetTotalPotHoldingsResponse withGetTotalPotHoldings429ApplicationJSONObject(GetTotalPotHoldings429ApplicationJSON getTotalPotHoldings429ApplicationJSONObject) {
         this.getTotalPotHoldings429ApplicationJSONObject = getTotalPotHoldings429ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class GetTotalPotHoldingsResponse {
      */
     
     public GetTotalPotHoldings500ApplicationJSON getTotalPotHoldings500ApplicationJSONObject;
+
     public GetTotalPotHoldingsResponse withGetTotalPotHoldings500ApplicationJSONObject(GetTotalPotHoldings500ApplicationJSON getTotalPotHoldings500ApplicationJSONObject) {
         this.getTotalPotHoldings500ApplicationJSONObject = getTotalPotHoldings500ApplicationJSONObject;
         return this;
     }
     
+    public GetTotalPotHoldingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

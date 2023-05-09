@@ -15,6 +15,7 @@ public class Recommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedDate")
     public String createdDate;
+
     public Recommendation withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -23,6 +24,7 @@ public class Recommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public RecommendationData data;
+
     public Recommendation withData(RecommendationData data) {
         this.data = data;
         return this;
@@ -31,6 +33,7 @@ public class Recommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseId")
     public String databaseId;
+
     public Recommendation withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -39,6 +42,7 @@ public class Recommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineName")
     public String engineName;
+
     public Recommendation withEngineName(String engineName) {
         this.engineName = engineName;
         return this;
@@ -47,6 +51,7 @@ public class Recommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Preferred")
     public Boolean preferred;
+
     public Recommendation withPreferred(Boolean preferred) {
         this.preferred = preferred;
         return this;
@@ -55,6 +60,7 @@ public class Recommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public RecommendationSettings settings;
+
     public Recommendation withSettings(RecommendationSettings settings) {
         this.settings = settings;
         return this;
@@ -63,9 +69,11 @@ public class Recommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Recommendation withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Recommendation(){}
 }

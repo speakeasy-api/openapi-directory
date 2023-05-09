@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyTargetGroupMatcher {
     @SpeakeasyMetadata("queryParam:name=GrpcCode")
     public String grpcCode;
+
     public GETModifyTargetGroupMatcher withGrpcCode(String grpcCode) {
         this.grpcCode = grpcCode;
         return this;
@@ -19,9 +20,11 @@ public class GETModifyTargetGroupMatcher {
     
     @SpeakeasyMetadata("queryParam:name=HttpCode")
     public String httpCode;
+
     public GETModifyTargetGroupMatcher withHttpCode(String httpCode) {
         this.httpCode = httpCode;
         return this;
     }
     
+    public GETModifyTargetGroupMatcher(){}
 }

@@ -15,6 +15,7 @@ public class ConsumedLicenseSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedLicenses")
     public Long consumedLicenses;
+
     public ConsumedLicenseSummary withConsumedLicenses(Long consumedLicenses) {
         this.consumedLicenses = consumedLicenses;
         return this;
@@ -23,9 +24,11 @@ public class ConsumedLicenseSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public ConsumedLicenseSummary withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ConsumedLicenseSummary(){}
 }

@@ -15,6 +15,7 @@ public class Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public Bucket withCount(Long count) {
         this.count = count;
         return this;
@@ -23,9 +24,11 @@ public class Bucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Bucket withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Bucket(){}
 }

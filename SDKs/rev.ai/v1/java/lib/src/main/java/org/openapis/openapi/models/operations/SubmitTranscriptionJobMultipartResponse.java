@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SubmitTranscriptionJobMultipartResponse {
     
     public String contentType;
+
     public SubmitTranscriptionJobMultipartResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SubmitTranscriptionJobMultipartResponse {
      */
     
     public org.openapis.openapi.models.shared.Job job;
+
     public SubmitTranscriptionJobMultipartResponse withJob(org.openapis.openapi.models.shared.Job job) {
         this.job = job;
         return this;
@@ -26,6 +29,7 @@ public class SubmitTranscriptionJobMultipartResponse {
     
     
     public Integer statusCode;
+
     public SubmitTranscriptionJobMultipartResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class SubmitTranscriptionJobMultipartResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SubmitTranscriptionJobMultipartResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class SubmitTranscriptionJobMultipartResponse {
      */
     
     public SubmitTranscriptionJobMultipart400ApplicationProblemPlusJson submitTranscriptionJobMultipart400ApplicationProblemPlusJsonObject;
+
     public SubmitTranscriptionJobMultipartResponse withSubmitTranscriptionJobMultipart400ApplicationProblemPlusJsonObject(SubmitTranscriptionJobMultipart400ApplicationProblemPlusJson submitTranscriptionJobMultipart400ApplicationProblemPlusJsonObject) {
         this.submitTranscriptionJobMultipart400ApplicationProblemPlusJsonObject = submitTranscriptionJobMultipart400ApplicationProblemPlusJsonObject;
         return this;
@@ -56,6 +62,7 @@ public class SubmitTranscriptionJobMultipartResponse {
      */
     
     public SubmitTranscriptionJobMultipart401ApplicationProblemPlusJson submitTranscriptionJobMultipart401ApplicationProblemPlusJsonObject;
+
     public SubmitTranscriptionJobMultipartResponse withSubmitTranscriptionJobMultipart401ApplicationProblemPlusJsonObject(SubmitTranscriptionJobMultipart401ApplicationProblemPlusJson submitTranscriptionJobMultipart401ApplicationProblemPlusJsonObject) {
         this.submitTranscriptionJobMultipart401ApplicationProblemPlusJsonObject = submitTranscriptionJobMultipart401ApplicationProblemPlusJsonObject;
         return this;
@@ -70,9 +77,14 @@ public class SubmitTranscriptionJobMultipartResponse {
      */
     
     public SubmitTranscriptionJobMultipart413ApplicationProblemPlusJson submitTranscriptionJobMultipart413ApplicationProblemPlusJsonObject;
+
     public SubmitTranscriptionJobMultipartResponse withSubmitTranscriptionJobMultipart413ApplicationProblemPlusJsonObject(SubmitTranscriptionJobMultipart413ApplicationProblemPlusJson submitTranscriptionJobMultipart413ApplicationProblemPlusJsonObject) {
         this.submitTranscriptionJobMultipart413ApplicationProblemPlusJsonObject = submitTranscriptionJobMultipart413ApplicationProblemPlusJsonObject;
         return this;
     }
     
+    public SubmitTranscriptionJobMultipartResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

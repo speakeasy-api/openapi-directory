@@ -15,6 +15,7 @@ public class AwsEc2NetworkInterfacePrivateIpAddressDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateDnsName")
     public String privateDnsName;
+
     public AwsEc2NetworkInterfacePrivateIpAddressDetail withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2NetworkInterfacePrivateIpAddressDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateIpAddress")
     public String privateIpAddress;
+
     public AwsEc2NetworkInterfacePrivateIpAddressDetail withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
     }
     
+    public AwsEc2NetworkInterfacePrivateIpAddressDetail(){}
 }

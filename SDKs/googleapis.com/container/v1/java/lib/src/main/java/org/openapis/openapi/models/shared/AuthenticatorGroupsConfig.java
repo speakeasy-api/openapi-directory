@@ -18,6 +18,7 @@ public class AuthenticatorGroupsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AuthenticatorGroupsConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,9 +30,11 @@ public class AuthenticatorGroupsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroup")
     public String securityGroup;
+
     public AuthenticatorGroupsConfig withSecurityGroup(String securityGroup) {
         this.securityGroup = securityGroup;
         return this;
     }
     
+    public AuthenticatorGroupsConfig(){}
 }

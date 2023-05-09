@@ -15,9 +15,11 @@ public class AwsJobPresignedUrlConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiresInSec")
     public Long expiresInSec;
+
     public AwsJobPresignedUrlConfig withExpiresInSec(Long expiresInSec) {
         this.expiresInSec = expiresInSec;
         return this;
     }
     
+    public AwsJobPresignedUrlConfig(){}
 }

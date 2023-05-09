@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DetectSentimentRequest {
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public DetectSentimentRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -16,9 +17,14 @@ public class DetectSentimentRequest {
     
     @JsonProperty("Text")
     public String text;
+
     public DetectSentimentRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public DetectSentimentRequest(@JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("Text") String text) {
+        this.languageCode = languageCode;
+        this.text = text;
+  }
 }

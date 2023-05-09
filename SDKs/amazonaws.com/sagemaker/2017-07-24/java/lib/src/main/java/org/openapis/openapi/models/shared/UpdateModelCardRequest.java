@@ -12,6 +12,7 @@ public class UpdateModelCardRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public String content;
+
     public UpdateModelCardRequest withContent(String content) {
         this.content = content;
         return this;
@@ -19,6 +20,7 @@ public class UpdateModelCardRequest {
     
     @JsonProperty("ModelCardName")
     public String modelCardName;
+
     public UpdateModelCardRequest withModelCardName(String modelCardName) {
         this.modelCardName = modelCardName;
         return this;
@@ -27,9 +29,13 @@ public class UpdateModelCardRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelCardStatus")
     public ModelCardStatusEnum modelCardStatus;
+
     public UpdateModelCardRequest withModelCardStatus(ModelCardStatusEnum modelCardStatus) {
         this.modelCardStatus = modelCardStatus;
         return this;
     }
     
+    public UpdateModelCardRequest(@JsonProperty("ModelCardName") String modelCardName) {
+        this.modelCardName = modelCardName;
+  }
 }

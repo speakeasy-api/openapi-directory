@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDocumentAnalysisResponse {
@@ -12,6 +13,7 @@ public class GetDocumentAnalysisResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDocumentAnalysisResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetDocumentAnalysisResponse {
     
     
     public String contentType;
+
     public GetDocumentAnalysisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDocumentAnalysisResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDocumentAnalysisResponse getDocumentAnalysisResponse;
+
     public GetDocumentAnalysisResponse withGetDocumentAnalysisResponse(org.openapis.openapi.models.shared.GetDocumentAnalysisResponse getDocumentAnalysisResponse) {
         this.getDocumentAnalysisResponse = getDocumentAnalysisResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDocumentAnalysisResponse {
      */
     
     public Object internalServerError;
+
     public GetDocumentAnalysisResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetDocumentAnalysisResponse {
      */
     
     public Object invalidJobIdException;
+
     public GetDocumentAnalysisResponse withInvalidJobIdException(Object invalidJobIdException) {
         this.invalidJobIdException = invalidJobIdException;
         return this;
@@ -59,6 +65,7 @@ public class GetDocumentAnalysisResponse {
      */
     
     public Object invalidKMSKeyException;
+
     public GetDocumentAnalysisResponse withInvalidKMSKeyException(Object invalidKMSKeyException) {
         this.invalidKMSKeyException = invalidKMSKeyException;
         return this;
@@ -69,6 +76,7 @@ public class GetDocumentAnalysisResponse {
      */
     
     public Object invalidParameterException;
+
     public GetDocumentAnalysisResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class GetDocumentAnalysisResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public GetDocumentAnalysisResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -89,6 +98,7 @@ public class GetDocumentAnalysisResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetDocumentAnalysisResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -96,6 +106,7 @@ public class GetDocumentAnalysisResponse {
     
     
     public Integer statusCode;
+
     public GetDocumentAnalysisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class GetDocumentAnalysisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDocumentAnalysisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class GetDocumentAnalysisResponse {
      */
     
     public Object throttlingException;
+
     public GetDocumentAnalysisResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetDocumentAnalysisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

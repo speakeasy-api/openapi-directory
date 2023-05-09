@@ -18,6 +18,7 @@ public class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessLevels")
     public String[] accessLevels;
+
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig withAccessLevels(String[] accessLevels) {
         this.accessLevels = accessLevels;
         return this;
@@ -29,6 +30,7 @@ public class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egressPolicies")
     public GoogleIdentityAccesscontextmanagerV1EgressPolicy[] egressPolicies;
+
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig withEgressPolicies(GoogleIdentityAccesscontextmanagerV1EgressPolicy[] egressPolicies) {
         this.egressPolicies = egressPolicies;
         return this;
@@ -40,6 +42,7 @@ public class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingressPolicies")
     public GoogleIdentityAccesscontextmanagerV1IngressPolicy[] ingressPolicies;
+
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig withIngressPolicies(GoogleIdentityAccesscontextmanagerV1IngressPolicy[] ingressPolicies) {
         this.ingressPolicies = ingressPolicies;
         return this;
@@ -51,6 +54,7 @@ public class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public String[] resources;
+
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig withResources(String[] resources) {
         this.resources = resources;
         return this;
@@ -62,6 +66,7 @@ public class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictedServices")
     public String[] restrictedServices;
+
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig withRestrictedServices(String[] restrictedServices) {
         this.restrictedServices = restrictedServices;
         return this;
@@ -73,9 +78,11 @@ public class GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcAccessibleServices")
     public GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices vpcAccessibleServices;
+
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig withVpcAccessibleServices(GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices vpcAccessibleServices) {
         this.vpcAccessibleServices = vpcAccessibleServices;
         return this;
     }
     
+    public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig(){}
 }

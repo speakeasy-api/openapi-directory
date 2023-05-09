@@ -15,6 +15,7 @@ public class GetUpdatePaymentEstimate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiration_estimate_date")
     public String expirationEstimateDate;
+
     public GetUpdatePaymentEstimate200ApplicationJSON withExpirationEstimateDate(String expirationEstimateDate) {
         this.expirationEstimateDate = expirationEstimateDate;
         return this;
@@ -23,6 +24,7 @@ public class GetUpdatePaymentEstimate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetUpdatePaymentEstimate200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class GetUpdatePaymentEstimate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pay_amount")
     public Double payAmount;
+
     public GetUpdatePaymentEstimate200ApplicationJSON withPayAmount(Double payAmount) {
         this.payAmount = payAmount;
         return this;
@@ -39,9 +42,11 @@ public class GetUpdatePaymentEstimate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token_id")
     public String tokenId;
+
     public GetUpdatePaymentEstimate200ApplicationJSON withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
     }
     
+    public GetUpdatePaymentEstimate200ApplicationJSON(){}
 }

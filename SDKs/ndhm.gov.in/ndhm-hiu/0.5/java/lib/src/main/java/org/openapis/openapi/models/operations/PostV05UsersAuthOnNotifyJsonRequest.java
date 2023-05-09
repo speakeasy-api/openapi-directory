@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthOnNotifyJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05UsersAuthOnNotifyJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05UsersAuthOnNotifyJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05UsersAuthOnNotifyJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatientAuthNotificationAcknowledgement patientAuthNotificationAcknowledgement;
+
     public PostV05UsersAuthOnNotifyJsonRequest withPatientAuthNotificationAcknowledgement(org.openapis.openapi.models.shared.PatientAuthNotificationAcknowledgement patientAuthNotificationAcknowledgement) {
         this.patientAuthNotificationAcknowledgement = patientAuthNotificationAcknowledgement;
         return this;
@@ -29,9 +32,15 @@ public class PostV05UsersAuthOnNotifyJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
     public String xCmId;
+
     public PostV05UsersAuthOnNotifyJsonRequest withXCmId(String xCmId) {
         this.xCmId = xCmId;
         return this;
     }
     
+    public PostV05UsersAuthOnNotifyJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("PatientAuthNotificationAcknowledgement") org.openapis.openapi.models.shared.PatientAuthNotificationAcknowledgement patientAuthNotificationAcknowledgement, @JsonProperty("X-CM-ID") String xCmId) {
+        this.authorization = authorization;
+        this.patientAuthNotificationAcknowledgement = patientAuthNotificationAcknowledgement;
+        this.xCmId = xCmId;
+  }
 }

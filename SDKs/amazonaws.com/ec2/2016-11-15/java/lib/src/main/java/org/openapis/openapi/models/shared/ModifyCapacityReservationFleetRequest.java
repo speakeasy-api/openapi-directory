@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class ModifyCapacityReservationFleetRequest {
     
     public String capacityReservationFleetId;
+
     public ModifyCapacityReservationFleetRequest withCapacityReservationFleetId(String capacityReservationFleetId) {
         this.capacityReservationFleetId = capacityReservationFleetId;
         return this;
@@ -16,6 +18,7 @@ public class ModifyCapacityReservationFleetRequest {
     
     
     public Boolean dryRun;
+
     public ModifyCapacityReservationFleetRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +26,7 @@ public class ModifyCapacityReservationFleetRequest {
     
     
     public OffsetDateTime endDate;
+
     public ModifyCapacityReservationFleetRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -30,6 +34,7 @@ public class ModifyCapacityReservationFleetRequest {
     
     
     public Boolean removeEndDate;
+
     public ModifyCapacityReservationFleetRequest withRemoveEndDate(Boolean removeEndDate) {
         this.removeEndDate = removeEndDate;
         return this;
@@ -37,9 +42,13 @@ public class ModifyCapacityReservationFleetRequest {
     
     
     public Long totalTargetCapacity;
+
     public ModifyCapacityReservationFleetRequest withTotalTargetCapacity(Long totalTargetCapacity) {
         this.totalTargetCapacity = totalTargetCapacity;
         return this;
     }
     
+    public ModifyCapacityReservationFleetRequest(@JsonProperty("CapacityReservationFleetId") String capacityReservationFleetId) {
+        this.capacityReservationFleetId = capacityReservationFleetId;
+  }
 }

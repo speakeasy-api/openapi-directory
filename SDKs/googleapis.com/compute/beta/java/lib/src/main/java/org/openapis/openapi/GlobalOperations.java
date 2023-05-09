@@ -58,11 +58,9 @@ public class GlobalOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalOperationsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOperationsAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalOperationsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOperationsAggregatedListResponse(contentType, httpRes.statusCode()) {{
             operationAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,10 +102,8 @@ public class GlobalOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +140,9 @@ public class GlobalOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalOperationsGetResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalOperationsGetResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,11 +184,9 @@ public class GlobalOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalOperationsListResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOperationsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalOperationsListResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOperationsListResponse(contentType, httpRes.statusCode()) {{
             operationList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -236,11 +228,9 @@ public class GlobalOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeGlobalOperationsWaitResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOperationsWaitResponse() {{
+        org.openapis.openapi.models.operations.ComputeGlobalOperationsWaitResponse res = new org.openapis.openapi.models.operations.ComputeGlobalOperationsWaitResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

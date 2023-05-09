@@ -15,6 +15,7 @@ public class DiskInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSystemDisk")
     public Boolean isSystemDisk;
+
     public DiskInfo withIsSystemDisk(Boolean isSystemDisk) {
         this.isSystemDisk = isSystemDisk;
         return this;
@@ -23,6 +24,7 @@ public class DiskInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DiskInfo withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class DiskInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public DiskInfo withPath(String path) {
         this.path = path;
         return this;
@@ -39,9 +42,11 @@ public class DiskInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeInGb")
     public Long sizeInGb;
+
     public DiskInfo withSizeInGb(Long sizeInGb) {
         this.sizeInGb = sizeInGb;
         return this;
     }
     
+    public DiskInfo(){}
 }

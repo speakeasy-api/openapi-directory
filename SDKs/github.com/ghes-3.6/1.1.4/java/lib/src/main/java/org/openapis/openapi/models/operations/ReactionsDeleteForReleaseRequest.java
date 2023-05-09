@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsDeleteForReleaseRequest {
@@ -12,6 +13,7 @@ public class ReactionsDeleteForReleaseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReactionsDeleteForReleaseRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class ReactionsDeleteForReleaseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reaction_id")
     public Long reactionId;
+
     public ReactionsDeleteForReleaseRequest withReactionId(Long reactionId) {
         this.reactionId = reactionId;
         return this;
@@ -32,6 +35,7 @@ public class ReactionsDeleteForReleaseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public Long releaseId;
+
     public ReactionsDeleteForReleaseRequest withReleaseId(Long releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -42,9 +46,16 @@ public class ReactionsDeleteForReleaseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReactionsDeleteForReleaseRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReactionsDeleteForReleaseRequest(@JsonProperty("owner") String owner, @JsonProperty("reaction_id") Long reactionId, @JsonProperty("release_id") Long releaseId, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.reactionId = reactionId;
+        this.releaseId = releaseId;
+        this.repo = repo;
+  }
 }

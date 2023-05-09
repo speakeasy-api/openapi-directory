@@ -18,6 +18,7 @@ public class StatusCause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public StatusCause withField(String field) {
         this.field = field;
         return this;
@@ -29,6 +30,7 @@ public class StatusCause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public StatusCause withMessage(String message) {
         this.message = message;
         return this;
@@ -40,9 +42,11 @@ public class StatusCause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public StatusCause withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public StatusCause(){}
 }

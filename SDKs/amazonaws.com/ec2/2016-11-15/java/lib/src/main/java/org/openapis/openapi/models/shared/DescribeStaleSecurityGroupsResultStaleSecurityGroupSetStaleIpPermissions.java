@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissions {
     
     public Long fromPort;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissions withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -19,6 +20,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public String ipProtocol;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissions withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -26,6 +28,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public String[] ipRanges;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissions withIpRanges(String[] ipRanges) {
         this.ipRanges = ipRanges;
         return this;
@@ -33,6 +36,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public String[] prefixListIds;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissions withPrefixListIds(String[] prefixListIds) {
         this.prefixListIds = prefixListIds;
         return this;
@@ -40,6 +44,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public Long toPort;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissions withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
@@ -47,9 +52,11 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsUserIdGroupPairs[] userIdGroupPairs;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissions withUserIdGroupPairs(DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsUserIdGroupPairs[] userIdGroupPairs) {
         this.userIdGroupPairs = userIdGroupPairs;
         return this;
     }
     
+    public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissions(){}
 }

@@ -15,6 +15,7 @@ public class UrlMapsScopedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public UrlMapsScopedListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class UrlMapsScopedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public UrlMapsScopedListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UrlMapsScopedListWarningData(){}
 }

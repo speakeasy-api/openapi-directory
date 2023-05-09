@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInterpolatedAssetPropertyValuesRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetInterpolatedAssetPropertyValuesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetInterpolatedAssetPropertyValuesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetInterpolatedAssetPropertyValuesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetInterpolatedAssetPropertyValuesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetInterpolatedAssetPropertyValuesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetInterpolatedAssetPropertyValuesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetInterpolatedAssetPropertyValuesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assetId")
     public String assetId;
+
     public GetInterpolatedAssetPropertyValuesRequest withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -71,6 +80,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTimeInSeconds")
     public Long endTimeInSeconds;
+
     public GetInterpolatedAssetPropertyValuesRequest withEndTimeInSeconds(Long endTimeInSeconds) {
         this.endTimeInSeconds = endTimeInSeconds;
         return this;
@@ -81,6 +91,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTimeOffsetInNanos")
     public Long endTimeOffsetInNanos;
+
     public GetInterpolatedAssetPropertyValuesRequest withEndTimeOffsetInNanos(Long endTimeOffsetInNanos) {
         this.endTimeOffsetInNanos = endTimeOffsetInNanos;
         return this;
@@ -91,6 +102,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalInSeconds")
     public Long intervalInSeconds;
+
     public GetInterpolatedAssetPropertyValuesRequest withIntervalInSeconds(Long intervalInSeconds) {
         this.intervalInSeconds = intervalInSeconds;
         return this;
@@ -101,6 +113,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalWindowInSeconds")
     public Long intervalWindowInSeconds;
+
     public GetInterpolatedAssetPropertyValuesRequest withIntervalWindowInSeconds(Long intervalWindowInSeconds) {
         this.intervalWindowInSeconds = intervalWindowInSeconds;
         return this;
@@ -111,6 +124,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public GetInterpolatedAssetPropertyValuesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -121,6 +135,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public GetInterpolatedAssetPropertyValuesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -131,6 +146,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyAlias")
     public String propertyAlias;
+
     public GetInterpolatedAssetPropertyValuesRequest withPropertyAlias(String propertyAlias) {
         this.propertyAlias = propertyAlias;
         return this;
@@ -141,6 +157,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyId")
     public String propertyId;
+
     public GetInterpolatedAssetPropertyValuesRequest withPropertyId(String propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -151,6 +168,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quality")
     public GetInterpolatedAssetPropertyValuesQualityEnum quality;
+
     public GetInterpolatedAssetPropertyValuesRequest withQuality(GetInterpolatedAssetPropertyValuesQualityEnum quality) {
         this.quality = quality;
         return this;
@@ -161,6 +179,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTimeInSeconds")
     public Long startTimeInSeconds;
+
     public GetInterpolatedAssetPropertyValuesRequest withStartTimeInSeconds(Long startTimeInSeconds) {
         this.startTimeInSeconds = startTimeInSeconds;
         return this;
@@ -171,6 +190,7 @@ public class GetInterpolatedAssetPropertyValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTimeOffsetInNanos")
     public Long startTimeOffsetInNanos;
+
     public GetInterpolatedAssetPropertyValuesRequest withStartTimeOffsetInNanos(Long startTimeOffsetInNanos) {
         this.startTimeOffsetInNanos = startTimeOffsetInNanos;
         return this;
@@ -181,9 +201,17 @@ public class GetInterpolatedAssetPropertyValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public GetInterpolatedAssetPropertyValuesRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetInterpolatedAssetPropertyValuesRequest(@JsonProperty("endTimeInSeconds") Long endTimeInSeconds, @JsonProperty("intervalInSeconds") Long intervalInSeconds, @JsonProperty("quality") GetInterpolatedAssetPropertyValuesQualityEnum quality, @JsonProperty("startTimeInSeconds") Long startTimeInSeconds, @JsonProperty("type") String type) {
+        this.endTimeInSeconds = endTimeInSeconds;
+        this.intervalInSeconds = intervalInSeconds;
+        this.quality = quality;
+        this.startTimeInSeconds = startTimeInSeconds;
+        this.type = type;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AssociateIamInstanceProfileRequest {
     
     public IamInstanceProfileSpecification iamInstanceProfile;
+
     public AssociateIamInstanceProfileRequest withIamInstanceProfile(IamInstanceProfileSpecification iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -16,9 +17,14 @@ public class AssociateIamInstanceProfileRequest {
     
     
     public String instanceId;
+
     public AssociateIamInstanceProfileRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public AssociateIamInstanceProfileRequest(@JsonProperty("IamInstanceProfile") IamInstanceProfileSpecification iamInstanceProfile, @JsonProperty("InstanceId") String instanceId) {
+        this.iamInstanceProfile = iamInstanceProfile;
+        this.instanceId = instanceId;
+  }
 }

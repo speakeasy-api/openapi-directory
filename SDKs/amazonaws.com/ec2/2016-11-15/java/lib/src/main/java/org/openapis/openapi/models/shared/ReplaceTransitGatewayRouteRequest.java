@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ReplaceTransitGatewayRouteRequest {
     
     public Boolean blackhole;
+
     public ReplaceTransitGatewayRouteRequest withBlackhole(Boolean blackhole) {
         this.blackhole = blackhole;
         return this;
@@ -16,6 +17,7 @@ public class ReplaceTransitGatewayRouteRequest {
     
     
     public String destinationCidrBlock;
+
     public ReplaceTransitGatewayRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -23,6 +25,7 @@ public class ReplaceTransitGatewayRouteRequest {
     
     
     public Boolean dryRun;
+
     public ReplaceTransitGatewayRouteRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class ReplaceTransitGatewayRouteRequest {
     
     
     public String transitGatewayAttachmentId;
+
     public ReplaceTransitGatewayRouteRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -37,9 +41,14 @@ public class ReplaceTransitGatewayRouteRequest {
     
     
     public String transitGatewayRouteTableId;
+
     public ReplaceTransitGatewayRouteRequest withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
     }
     
+    public ReplaceTransitGatewayRouteRequest(@JsonProperty("DestinationCidrBlock") String destinationCidrBlock, @JsonProperty("TransitGatewayRouteTableId") String transitGatewayRouteTableId) {
+        this.destinationCidrBlock = destinationCidrBlock;
+        this.transitGatewayRouteTableId = transitGatewayRouteTableId;
+  }
 }

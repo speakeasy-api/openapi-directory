@@ -12,6 +12,7 @@ public class SingleMonitor200ApplicationJSONMonitorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followRedirects")
     public Boolean followRedirects;
+
     public SingleMonitor200ApplicationJSONMonitorOptions withFollowRedirects(Boolean followRedirects) {
         this.followRedirects = followRedirects;
         return this;
@@ -20,6 +21,7 @@ public class SingleMonitor200ApplicationJSONMonitorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestDelay")
     public Double requestDelay;
+
     public SingleMonitor200ApplicationJSONMonitorOptions withRequestDelay(Double requestDelay) {
         this.requestDelay = requestDelay;
         return this;
@@ -28,6 +30,7 @@ public class SingleMonitor200ApplicationJSONMonitorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestTimeout")
     public Double requestTimeout;
+
     public SingleMonitor200ApplicationJSONMonitorOptions withRequestTimeout(Double requestTimeout) {
         this.requestTimeout = requestTimeout;
         return this;
@@ -36,9 +39,11 @@ public class SingleMonitor200ApplicationJSONMonitorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strictSSL")
     public Boolean strictSSL;
+
     public SingleMonitor200ApplicationJSONMonitorOptions withStrictSSL(Boolean strictSSL) {
         this.strictSSL = strictSSL;
         return this;
     }
     
+    public SingleMonitor200ApplicationJSONMonitorOptions(){}
 }

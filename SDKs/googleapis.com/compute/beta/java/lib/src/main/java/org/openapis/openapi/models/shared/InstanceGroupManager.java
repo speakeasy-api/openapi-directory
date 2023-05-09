@@ -15,6 +15,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allInstancesConfig")
     public InstanceGroupManagerAllInstancesConfig allInstancesConfig;
+
     public InstanceGroupManager withAllInstancesConfig(InstanceGroupManagerAllInstancesConfig allInstancesConfig) {
         this.allInstancesConfig = allInstancesConfig;
         return this;
@@ -26,6 +27,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoHealingPolicies")
     public InstanceGroupManagerAutoHealingPolicy[] autoHealingPolicies;
+
     public InstanceGroupManager withAutoHealingPolicies(InstanceGroupManagerAutoHealingPolicy[] autoHealingPolicies) {
         this.autoHealingPolicies = autoHealingPolicies;
         return this;
@@ -37,6 +39,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseInstanceName")
     public String baseInstanceName;
+
     public InstanceGroupManager withBaseInstanceName(String baseInstanceName) {
         this.baseInstanceName = baseInstanceName;
         return this;
@@ -48,6 +51,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public InstanceGroupManager withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -56,6 +60,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentActions")
     public InstanceGroupManagerActionsSummary currentActions;
+
     public InstanceGroupManager withCurrentActions(InstanceGroupManagerActionsSummary currentActions) {
         this.currentActions = currentActions;
         return this;
@@ -67,6 +72,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InstanceGroupManager withDescription(String description) {
         this.description = description;
         return this;
@@ -75,6 +81,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionPolicy")
     public DistributionPolicy distributionPolicy;
+
     public InstanceGroupManager withDistributionPolicy(DistributionPolicy distributionPolicy) {
         this.distributionPolicy = distributionPolicy;
         return this;
@@ -86,6 +93,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failoverAction")
     public InstanceGroupManagerFailoverActionEnum failoverAction;
+
     public InstanceGroupManager withFailoverAction(InstanceGroupManagerFailoverActionEnum failoverAction) {
         this.failoverAction = failoverAction;
         return this;
@@ -97,6 +105,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public InstanceGroupManager withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -108,6 +117,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public InstanceGroupManager withId(String id) {
         this.id = id;
         return this;
@@ -119,6 +129,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceGroup")
     public String instanceGroup;
+
     public InstanceGroupManager withInstanceGroup(String instanceGroup) {
         this.instanceGroup = instanceGroup;
         return this;
@@ -127,6 +138,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceLifecyclePolicy")
     public InstanceGroupManagerInstanceLifecyclePolicy instanceLifecyclePolicy;
+
     public InstanceGroupManager withInstanceLifecyclePolicy(InstanceGroupManagerInstanceLifecyclePolicy instanceLifecyclePolicy) {
         this.instanceLifecyclePolicy = instanceLifecyclePolicy;
         return this;
@@ -138,6 +150,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTemplate")
     public String instanceTemplate;
+
     public InstanceGroupManager withInstanceTemplate(String instanceTemplate) {
         this.instanceTemplate = instanceTemplate;
         return this;
@@ -149,6 +162,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public InstanceGroupManager withKind(String kind) {
         this.kind = kind;
         return this;
@@ -160,6 +174,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listManagedInstancesResults")
     public InstanceGroupManagerListManagedInstancesResultsEnum listManagedInstancesResults;
+
     public InstanceGroupManager withListManagedInstancesResults(InstanceGroupManagerListManagedInstancesResultsEnum listManagedInstancesResults) {
         this.listManagedInstancesResults = listManagedInstancesResults;
         return this;
@@ -171,6 +186,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstanceGroupManager withName(String name) {
         this.name = name;
         return this;
@@ -182,6 +198,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedPorts")
     public NamedPort[] namedPorts;
+
     public InstanceGroupManager withNamedPorts(NamedPort[] namedPorts) {
         this.namedPorts = namedPorts;
         return this;
@@ -193,6 +210,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public InstanceGroupManager withRegion(String region) {
         this.region = region;
         return this;
@@ -204,6 +222,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public InstanceGroupManager withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -215,6 +234,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public InstanceGroupManager withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -223,6 +243,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statefulPolicy")
     public StatefulPolicy statefulPolicy;
+
     public InstanceGroupManager withStatefulPolicy(StatefulPolicy statefulPolicy) {
         this.statefulPolicy = statefulPolicy;
         return this;
@@ -231,6 +252,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public InstanceGroupManagerStatus status;
+
     public InstanceGroupManager withStatus(InstanceGroupManagerStatus status) {
         this.status = status;
         return this;
@@ -242,6 +264,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetPools")
     public String[] targetPools;
+
     public InstanceGroupManager withTargetPools(String[] targetPools) {
         this.targetPools = targetPools;
         return this;
@@ -253,6 +276,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSize")
     public Integer targetSize;
+
     public InstanceGroupManager withTargetSize(Integer targetSize) {
         this.targetSize = targetSize;
         return this;
@@ -261,6 +285,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatePolicy")
     public InstanceGroupManagerUpdatePolicy updatePolicy;
+
     public InstanceGroupManager withUpdatePolicy(InstanceGroupManagerUpdatePolicy updatePolicy) {
         this.updatePolicy = updatePolicy;
         return this;
@@ -272,6 +297,7 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public InstanceGroupManagerVersion[] versions;
+
     public InstanceGroupManager withVersions(InstanceGroupManagerVersion[] versions) {
         this.versions = versions;
         return this;
@@ -283,9 +309,11 @@ public class InstanceGroupManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public InstanceGroupManager withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public InstanceGroupManager(){}
 }

@@ -18,6 +18,7 @@ public class WebToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledFeatures")
     public WebTokenEnabledFeaturesEnum[] enabledFeatures;
+
     public WebToken withEnabledFeatures(WebTokenEnabledFeaturesEnum[] enabledFeatures) {
         this.enabledFeatures = enabledFeatures;
         return this;
@@ -29,6 +30,7 @@ public class WebToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WebToken withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class WebToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentFrameUrl")
     public String parentFrameUrl;
+
     public WebToken withParentFrameUrl(String parentFrameUrl) {
         this.parentFrameUrl = parentFrameUrl;
         return this;
@@ -51,6 +54,7 @@ public class WebToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public WebTokenPermissionsEnum[] permissions;
+
     public WebToken withPermissions(WebTokenPermissionsEnum[] permissions) {
         this.permissions = permissions;
         return this;
@@ -62,9 +66,11 @@ public class WebToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public WebToken withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public WebToken(){}
 }

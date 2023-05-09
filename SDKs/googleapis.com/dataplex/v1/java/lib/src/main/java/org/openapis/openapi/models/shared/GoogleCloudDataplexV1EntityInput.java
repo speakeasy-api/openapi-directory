@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1EntityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset")
     public String asset;
+
     public GoogleCloudDataplexV1EntityInput withAsset(String asset) {
         this.asset = asset;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1EntityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataPath")
     public String dataPath;
+
     public GoogleCloudDataplexV1EntityInput withDataPath(String dataPath) {
         this.dataPath = dataPath;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1EntityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataPathPattern")
     public String dataPathPattern;
+
     public GoogleCloudDataplexV1EntityInput withDataPathPattern(String dataPathPattern) {
         this.dataPathPattern = dataPathPattern;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1EntityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1EntityInput withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1EntityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1EntityInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1EntityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudDataplexV1EntityInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -84,17 +90,19 @@ public class GoogleCloudDataplexV1EntityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public GoogleCloudDataplexV1StorageFormatInput format;
+
     public GoogleCloudDataplexV1EntityInput withFormat(GoogleCloudDataplexV1StorageFormatInput format) {
         this.format = format;
         return this;
     }
     
     /**
-     * Required. A user-provided entity ID. It is mutable, and will be used as the published table name. Specifying a new ID in an update entity request will override the existing value. The ID must contain only letters (a-z, A-Z), numbers (0-9), and underscores. Must begin with a letter and consist of 256 or fewer characters.
+     * Required. A user-provided entity ID. It is mutable, and will be used as the published table name. Specifying a new ID in an update entity request will override the existing value. The ID must contain only letters (a-z, A-Z), numbers (0-9), and underscores, and consist of 256 or fewer characters.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudDataplexV1EntityInput withId(String id) {
         this.id = id;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDataplexV1EntityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public GoogleCloudDataplexV1Schema schema;
+
     public GoogleCloudDataplexV1EntityInput withSchema(GoogleCloudDataplexV1Schema schema) {
         this.schema = schema;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDataplexV1EntityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("system")
     public GoogleCloudDataplexV1EntitySystemEnum system;
+
     public GoogleCloudDataplexV1EntityInput withSystem(GoogleCloudDataplexV1EntitySystemEnum system) {
         this.system = system;
         return this;
@@ -128,9 +138,11 @@ public class GoogleCloudDataplexV1EntityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDataplexV1EntityTypeEnum type;
+
     public GoogleCloudDataplexV1EntityInput withType(GoogleCloudDataplexV1EntityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDataplexV1EntityInput(){}
 }

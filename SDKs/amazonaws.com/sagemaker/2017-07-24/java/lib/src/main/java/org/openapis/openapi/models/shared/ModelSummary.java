@@ -19,6 +19,7 @@ public class ModelSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ModelSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +27,7 @@ public class ModelSummary {
     
     @JsonProperty("ModelArn")
     public String modelArn;
+
     public ModelSummary withModelArn(String modelArn) {
         this.modelArn = modelArn;
         return this;
@@ -33,9 +35,15 @@ public class ModelSummary {
     
     @JsonProperty("ModelName")
     public String modelName;
+
     public ModelSummary withModelName(String modelName) {
         this.modelName = modelName;
         return this;
     }
     
+    public ModelSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ModelArn") String modelArn, @JsonProperty("ModelName") String modelName) {
+        this.creationTime = creationTime;
+        this.modelArn = modelArn;
+        this.modelName = modelName;
+  }
 }

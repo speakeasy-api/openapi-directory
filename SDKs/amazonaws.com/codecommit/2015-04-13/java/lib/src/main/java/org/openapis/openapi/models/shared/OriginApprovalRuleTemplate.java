@@ -15,6 +15,7 @@ public class OriginApprovalRuleTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalRuleTemplateId")
     public String approvalRuleTemplateId;
+
     public OriginApprovalRuleTemplate withApprovalRuleTemplateId(String approvalRuleTemplateId) {
         this.approvalRuleTemplateId = approvalRuleTemplateId;
         return this;
@@ -23,9 +24,11 @@ public class OriginApprovalRuleTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalRuleTemplateName")
     public String approvalRuleTemplateName;
+
     public OriginApprovalRuleTemplate withApprovalRuleTemplateName(String approvalRuleTemplateName) {
         this.approvalRuleTemplateName = approvalRuleTemplateName;
         return this;
     }
     
+    public OriginApprovalRuleTemplate(){}
 }

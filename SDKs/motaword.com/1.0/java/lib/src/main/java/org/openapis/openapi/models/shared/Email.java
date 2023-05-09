@@ -12,9 +12,11 @@ public class Email {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Email withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public Email(){}
 }

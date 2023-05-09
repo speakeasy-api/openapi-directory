@@ -15,6 +15,7 @@ public class RegistrationSchemaReadRegistrationSchema {
      */
     
     public RegistrationSchemaReadRegistrationSchemaAttributes attributes;
+
     public RegistrationSchemaReadRegistrationSchema withAttributes(RegistrationSchemaReadRegistrationSchemaAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationSchemaReadRegistrationSchema {
      */
     
     public String id;
+
     public RegistrationSchemaReadRegistrationSchema withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationSchemaReadRegistrationSchema {
      */
     
     public RegistrationSchemaReadRegistrationSchemaLinks links;
+
     public RegistrationSchemaReadRegistrationSchema withLinks(RegistrationSchemaReadRegistrationSchemaLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class RegistrationSchemaReadRegistrationSchema {
      */
     
     public RegistrationSchemaReadRegistrationSchemaRelationships relationships;
+
     public RegistrationSchemaReadRegistrationSchema withRelationships(RegistrationSchemaReadRegistrationSchemaRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -55,9 +59,11 @@ public class RegistrationSchemaReadRegistrationSchema {
      */
     
     public String type;
+
     public RegistrationSchemaReadRegistrationSchema withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RegistrationSchemaReadRegistrationSchema(){}
 }

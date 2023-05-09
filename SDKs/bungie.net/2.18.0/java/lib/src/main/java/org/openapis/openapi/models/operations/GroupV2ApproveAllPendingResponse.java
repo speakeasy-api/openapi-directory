@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GroupV2ApproveAllPendingResponse {
     
     public byte[] body;
+
     public GroupV2ApproveAllPendingResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GroupV2ApproveAllPendingResponse {
     
     
     public String contentType;
+
     public GroupV2ApproveAllPendingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GroupV2ApproveAllPendingResponse {
     
     
     public Integer statusCode;
+
     public GroupV2ApproveAllPendingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GroupV2ApproveAllPendingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GroupV2ApproveAllPendingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GroupV2ApproveAllPendingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

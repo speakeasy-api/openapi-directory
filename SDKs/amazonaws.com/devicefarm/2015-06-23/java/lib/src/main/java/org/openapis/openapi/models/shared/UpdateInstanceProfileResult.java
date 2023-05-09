@@ -15,9 +15,11 @@ public class UpdateInstanceProfileResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceProfile")
     public InstanceProfile instanceProfile;
+
     public UpdateInstanceProfileResult withInstanceProfile(InstanceProfile instanceProfile) {
         this.instanceProfile = instanceProfile;
         return this;
     }
     
+    public UpdateInstanceProfileResult(){}
 }

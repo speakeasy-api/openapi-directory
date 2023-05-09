@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLaunchProfileDetailsResponse {
@@ -12,6 +13,7 @@ public class GetLaunchProfileDetailsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLaunchProfileDetailsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetLaunchProfileDetailsResponse {
      */
     
     public Object conflictException;
+
     public GetLaunchProfileDetailsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetLaunchProfileDetailsResponse {
     
     
     public String contentType;
+
     public GetLaunchProfileDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetLaunchProfileDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLaunchProfileDetailsResponse getLaunchProfileDetailsResponse;
+
     public GetLaunchProfileDetailsResponse withGetLaunchProfileDetailsResponse(org.openapis.openapi.models.shared.GetLaunchProfileDetailsResponse getLaunchProfileDetailsResponse) {
         this.getLaunchProfileDetailsResponse = getLaunchProfileDetailsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetLaunchProfileDetailsResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetLaunchProfileDetailsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetLaunchProfileDetailsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetLaunchProfileDetailsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetLaunchProfileDetailsResponse {
     
     
     public Integer statusCode;
+
     public GetLaunchProfileDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetLaunchProfileDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLaunchProfileDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetLaunchProfileDetailsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetLaunchProfileDetailsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class GetLaunchProfileDetailsResponse {
      */
     
     public Object throttlingException;
+
     public GetLaunchProfileDetailsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetLaunchProfileDetailsResponse {
      */
     
     public Object validationException;
+
     public GetLaunchProfileDetailsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetLaunchProfileDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

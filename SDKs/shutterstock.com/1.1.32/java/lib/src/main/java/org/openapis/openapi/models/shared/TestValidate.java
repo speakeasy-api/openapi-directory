@@ -18,6 +18,7 @@ public class TestValidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public TestValidateHeader header;
+
     public TestValidate withHeader(TestValidateHeader header) {
         this.header = header;
         return this;
@@ -29,9 +30,11 @@ public class TestValidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public TestValidateQuery query;
+
     public TestValidate withQuery(TestValidateQuery query) {
         this.query = query;
         return this;
     }
     
+    public TestValidate(){}
 }

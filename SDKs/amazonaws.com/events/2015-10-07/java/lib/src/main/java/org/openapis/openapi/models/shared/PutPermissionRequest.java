@@ -12,6 +12,7 @@ public class PutPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public String action;
+
     public PutPermissionRequest withAction(String action) {
         this.action = action;
         return this;
@@ -20,6 +21,7 @@ public class PutPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Condition")
     public Condition condition;
+
     public PutPermissionRequest withCondition(Condition condition) {
         this.condition = condition;
         return this;
@@ -28,6 +30,7 @@ public class PutPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBusName")
     public String eventBusName;
+
     public PutPermissionRequest withEventBusName(String eventBusName) {
         this.eventBusName = eventBusName;
         return this;
@@ -36,6 +39,7 @@ public class PutPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public PutPermissionRequest withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -44,6 +48,7 @@ public class PutPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Principal")
     public String principal;
+
     public PutPermissionRequest withPrincipal(String principal) {
         this.principal = principal;
         return this;
@@ -52,9 +57,11 @@ public class PutPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatementId")
     public String statementId;
+
     public PutPermissionRequest withStatementId(String statementId) {
         this.statementId = statementId;
         return this;
     }
     
+    public PutPermissionRequest(){}
 }

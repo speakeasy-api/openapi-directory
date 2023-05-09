@@ -18,6 +18,7 @@ public class MethodSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public MethodSelector withMethod(String method) {
         this.method = method;
         return this;
@@ -29,9 +30,11 @@ public class MethodSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public String permission;
+
     public MethodSelector withPermission(String permission) {
         this.permission = permission;
         return this;
     }
     
+    public MethodSelector(){}
 }

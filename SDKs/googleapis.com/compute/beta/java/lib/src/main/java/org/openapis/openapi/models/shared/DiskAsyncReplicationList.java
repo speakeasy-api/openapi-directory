@@ -12,9 +12,11 @@ public class DiskAsyncReplicationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asyncReplicationDisk")
     public DiskAsyncReplication asyncReplicationDisk;
+
     public DiskAsyncReplicationList withAsyncReplicationDisk(DiskAsyncReplication asyncReplicationDisk) {
         this.asyncReplicationDisk = asyncReplicationDisk;
         return this;
     }
     
+    public DiskAsyncReplicationList(){}
 }

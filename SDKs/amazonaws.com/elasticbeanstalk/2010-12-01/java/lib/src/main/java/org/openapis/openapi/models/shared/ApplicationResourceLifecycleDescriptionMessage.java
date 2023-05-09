@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ApplicationResourceLifecycleDescriptionMessage {
     
     public String applicationName;
+
     public ApplicationResourceLifecycleDescriptionMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,9 +20,11 @@ public class ApplicationResourceLifecycleDescriptionMessage {
     
     
     public ApplicationResourceLifecycleConfig resourceLifecycleConfig;
+
     public ApplicationResourceLifecycleDescriptionMessage withResourceLifecycleConfig(ApplicationResourceLifecycleConfig resourceLifecycleConfig) {
         this.resourceLifecycleConfig = resourceLifecycleConfig;
         return this;
     }
     
+    public ApplicationResourceLifecycleDescriptionMessage(){}
 }

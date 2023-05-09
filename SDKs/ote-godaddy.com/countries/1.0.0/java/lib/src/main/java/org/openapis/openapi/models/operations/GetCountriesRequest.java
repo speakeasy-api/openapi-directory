@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCountriesRequest {
@@ -12,6 +13,7 @@ public class GetCountriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marketId")
     public String marketId;
+
     public GetCountriesRequest withMarketId(String marketId) {
         this.marketId = marketId;
         return this;
@@ -22,6 +24,7 @@ public class GetCountriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetCountriesOrderEnum order;
+
     public GetCountriesRequest withOrder(GetCountriesOrderEnum order) {
         this.order = order;
         return this;
@@ -32,6 +35,7 @@ public class GetCountriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regionName")
     public String regionName;
+
     public GetCountriesRequest withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -42,6 +46,7 @@ public class GetCountriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regionTypeId")
     public Long regionTypeId;
+
     public GetCountriesRequest withRegionTypeId(Long regionTypeId) {
         this.regionTypeId = regionTypeId;
         return this;
@@ -52,9 +57,13 @@ public class GetCountriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetCountriesSortEnum sort;
+
     public GetCountriesRequest withSort(GetCountriesSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetCountriesRequest(@JsonProperty("marketId") String marketId) {
+        this.marketId = marketId;
+  }
 }

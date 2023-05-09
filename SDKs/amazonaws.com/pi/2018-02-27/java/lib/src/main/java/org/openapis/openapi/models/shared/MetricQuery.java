@@ -15,6 +15,7 @@ public class MetricQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public java.util.Map<String, String> filter;
+
     public MetricQuery withFilter(java.util.Map<String, String> filter) {
         this.filter = filter;
         return this;
@@ -23,6 +24,7 @@ public class MetricQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupBy")
     public DimensionGroup groupBy;
+
     public MetricQuery withGroupBy(DimensionGroup groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -30,9 +32,13 @@ public class MetricQuery {
     
     @JsonProperty("Metric")
     public String metric;
+
     public MetricQuery withMetric(String metric) {
         this.metric = metric;
         return this;
     }
     
+    public MetricQuery(@JsonProperty("Metric") String metric) {
+        this.metric = metric;
+  }
 }

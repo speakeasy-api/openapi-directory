@@ -12,9 +12,11 @@ public class PostEmailEnrichRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public PostEmailEnrichRequestBody withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public PostEmailEnrichRequestBody(){}
 }

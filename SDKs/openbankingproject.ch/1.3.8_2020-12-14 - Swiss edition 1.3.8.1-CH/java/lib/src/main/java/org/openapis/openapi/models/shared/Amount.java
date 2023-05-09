@@ -23,6 +23,7 @@ public class Amount {
      */
     @JsonProperty("amount")
     public String amount;
+
     public Amount withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -34,9 +35,14 @@ public class Amount {
      */
     @JsonProperty("currency")
     public String currency;
+
     public Amount withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
     
+    public Amount(@JsonProperty("amount") String amount, @JsonProperty("currency") String currency) {
+        this.amount = amount;
+        this.currency = currency;
+  }
 }

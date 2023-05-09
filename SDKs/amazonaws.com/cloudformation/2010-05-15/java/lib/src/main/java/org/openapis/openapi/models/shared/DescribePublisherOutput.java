@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribePublisherOutput {
     
     public IdentityProviderEnum identityProvider;
+
     public DescribePublisherOutput withIdentityProvider(IdentityProviderEnum identityProvider) {
         this.identityProvider = identityProvider;
         return this;
@@ -19,6 +20,7 @@ public class DescribePublisherOutput {
     
     
     public String publisherId;
+
     public DescribePublisherOutput withPublisherId(String publisherId) {
         this.publisherId = publisherId;
         return this;
@@ -26,6 +28,7 @@ public class DescribePublisherOutput {
     
     
     public String publisherProfile;
+
     public DescribePublisherOutput withPublisherProfile(String publisherProfile) {
         this.publisherProfile = publisherProfile;
         return this;
@@ -33,9 +36,11 @@ public class DescribePublisherOutput {
     
     
     public PublisherStatusEnum publisherStatus;
+
     public DescribePublisherOutput withPublisherStatus(PublisherStatusEnum publisherStatus) {
         this.publisherStatus = publisherStatus;
         return this;
     }
     
+    public DescribePublisherOutput(){}
 }

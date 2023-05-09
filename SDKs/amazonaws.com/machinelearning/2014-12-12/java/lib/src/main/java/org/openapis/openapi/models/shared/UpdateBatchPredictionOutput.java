@@ -15,9 +15,11 @@ public class UpdateBatchPredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchPredictionId")
     public String batchPredictionId;
+
     public UpdateBatchPredictionOutput withBatchPredictionId(String batchPredictionId) {
         this.batchPredictionId = batchPredictionId;
         return this;
     }
     
+    public UpdateBatchPredictionOutput(){}
 }

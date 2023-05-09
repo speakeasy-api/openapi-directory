@@ -18,6 +18,7 @@ public class Space {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminInstalled")
     public Boolean adminInstalled;
+
     public Space withAdminInstalled(Boolean adminInstalled) {
         this.adminInstalled = adminInstalled;
         return this;
@@ -29,6 +30,7 @@ public class Space {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Space withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class Space {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Space withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Space {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("singleUserBotDm")
     public Boolean singleUserBotDm;
+
     public Space withSingleUserBotDm(Boolean singleUserBotDm) {
         this.singleUserBotDm = singleUserBotDm;
         return this;
@@ -62,6 +66,7 @@ public class Space {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spaceDetails")
     public SpaceDetails spaceDetails;
+
     public Space withSpaceDetails(SpaceDetails spaceDetails) {
         this.spaceDetails = spaceDetails;
         return this;
@@ -73,6 +78,7 @@ public class Space {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spaceThreadingState")
     public SpaceSpaceThreadingStateEnum spaceThreadingState;
+
     public Space withSpaceThreadingState(SpaceSpaceThreadingStateEnum spaceThreadingState) {
         this.spaceThreadingState = spaceThreadingState;
         return this;
@@ -84,6 +90,7 @@ public class Space {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threaded")
     public Boolean threaded;
+
     public Space withThreaded(Boolean threaded) {
         this.threaded = threaded;
         return this;
@@ -95,9 +102,11 @@ public class Space {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SpaceTypeEnum type;
+
     public Space withType(SpaceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Space(){}
 }

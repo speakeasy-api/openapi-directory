@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVehiclesVehicleidRequest {
@@ -14,6 +15,7 @@ public class GetVehiclesVehicleidRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=field[]")
     public GetVehiclesVehicleidFieldEnum[] field;
+
     public GetVehiclesVehicleidRequest withField(GetVehiclesVehicleidFieldEnum[] field) {
         this.field = field;
         return this;
@@ -24,9 +26,13 @@ public class GetVehiclesVehicleidRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vehicleId")
     public String vehicleId;
+
     public GetVehiclesVehicleidRequest withVehicleId(String vehicleId) {
         this.vehicleId = vehicleId;
         return this;
     }
     
+    public GetVehiclesVehicleidRequest(@JsonProperty("vehicleId") String vehicleId) {
+        this.vehicleId = vehicleId;
+  }
 }

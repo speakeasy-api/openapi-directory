@@ -18,9 +18,11 @@ public class RBACRoleBindingLifecycleState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public RBACRoleBindingLifecycleStateCodeEnum code;
+
     public RBACRoleBindingLifecycleState withCode(RBACRoleBindingLifecycleStateCodeEnum code) {
         this.code = code;
         return this;
     }
     
+    public RBACRoleBindingLifecycleState(){}
 }

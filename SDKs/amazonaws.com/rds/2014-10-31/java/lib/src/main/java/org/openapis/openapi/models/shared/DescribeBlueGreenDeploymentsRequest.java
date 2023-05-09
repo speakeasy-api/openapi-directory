@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeBlueGreenDeploymentsRequest {
     
     public String blueGreenDeploymentIdentifier;
+
     public DescribeBlueGreenDeploymentsRequest withBlueGreenDeploymentIdentifier(String blueGreenDeploymentIdentifier) {
         this.blueGreenDeploymentIdentifier = blueGreenDeploymentIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class DescribeBlueGreenDeploymentsRequest {
     
     
     public FilterList[] filters;
+
     public DescribeBlueGreenDeploymentsRequest withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeBlueGreenDeploymentsRequest {
     
     
     public String marker;
+
     public DescribeBlueGreenDeploymentsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,9 +33,11 @@ public class DescribeBlueGreenDeploymentsRequest {
     
     
     public Long maxRecords;
+
     public DescribeBlueGreenDeploymentsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeBlueGreenDeploymentsRequest(){}
 }

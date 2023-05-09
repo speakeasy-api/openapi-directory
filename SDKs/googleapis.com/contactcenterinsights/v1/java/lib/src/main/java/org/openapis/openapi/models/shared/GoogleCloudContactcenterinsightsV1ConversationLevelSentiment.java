@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1ConversationLevelSentiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelTag")
     public Integer channelTag;
+
     public GoogleCloudContactcenterinsightsV1ConversationLevelSentiment withChannelTag(Integer channelTag) {
         this.channelTag = channelTag;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1ConversationLevelSentiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentimentData")
     public GoogleCloudContactcenterinsightsV1SentimentData sentimentData;
+
     public GoogleCloudContactcenterinsightsV1ConversationLevelSentiment withSentimentData(GoogleCloudContactcenterinsightsV1SentimentData sentimentData) {
         this.sentimentData = sentimentData;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ConversationLevelSentiment(){}
 }

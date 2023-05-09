@@ -15,6 +15,7 @@ public class DescribeSharedDirectoriesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeSharedDirectoriesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeSharedDirectoriesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedDirectories")
     public SharedDirectory[] sharedDirectories;
+
     public DescribeSharedDirectoriesResult withSharedDirectories(SharedDirectory[] sharedDirectories) {
         this.sharedDirectories = sharedDirectories;
         return this;
     }
     
+    public DescribeSharedDirectoriesResult(){}
 }

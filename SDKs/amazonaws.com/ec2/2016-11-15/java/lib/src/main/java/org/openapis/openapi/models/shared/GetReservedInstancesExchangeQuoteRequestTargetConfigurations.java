@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetReservedInstancesExchangeQuoteRequestTargetConfigurations - Details about the target configuration.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetReservedInstancesExchangeQuoteRequestTargetConfigurations {
     
     public Long instanceCount;
+
     public GetReservedInstancesExchangeQuoteRequestTargetConfigurations withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -19,9 +20,13 @@ public class GetReservedInstancesExchangeQuoteRequestTargetConfigurations {
     
     
     public String offeringId;
+
     public GetReservedInstancesExchangeQuoteRequestTargetConfigurations withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public GetReservedInstancesExchangeQuoteRequestTargetConfigurations(@JsonProperty("OfferingId") String offeringId) {
+        this.offeringId = offeringId;
+  }
 }

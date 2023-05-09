@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AutoCheckInRequest {
@@ -12,6 +13,7 @@ public class AutoCheckInRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public AutoCheckInRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class AutoCheckInRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=emailAddress")
     public String emailAddress;
+
     public AutoCheckInRequest withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -32,9 +35,15 @@ public class AutoCheckInRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ticketnumber")
     public String ticketnumber;
+
     public AutoCheckInRequest withTicketnumber(String ticketnumber) {
         this.ticketnumber = ticketnumber;
         return this;
     }
     
+    public AutoCheckInRequest(@JsonProperty("Accept") String accept, @JsonProperty("emailAddress") String emailAddress, @JsonProperty("ticketnumber") String ticketnumber) {
+        this.accept = accept;
+        this.emailAddress = emailAddress;
+        this.ticketnumber = ticketnumber;
+  }
 }

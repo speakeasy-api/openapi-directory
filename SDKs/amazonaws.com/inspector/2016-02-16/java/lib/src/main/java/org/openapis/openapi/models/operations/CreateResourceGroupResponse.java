@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateResourceGroupResponse {
@@ -12,6 +13,7 @@ public class CreateResourceGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateResourceGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateResourceGroupResponse {
     
     
     public String contentType;
+
     public CreateResourceGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateResourceGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateResourceGroupResponse createResourceGroupResponse;
+
     public CreateResourceGroupResponse withCreateResourceGroupResponse(org.openapis.openapi.models.shared.CreateResourceGroupResponse createResourceGroupResponse) {
         this.createResourceGroupResponse = createResourceGroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateResourceGroupResponse {
      */
     
     public Object internalException;
+
     public CreateResourceGroupResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class CreateResourceGroupResponse {
      */
     
     public Object invalidInputException;
+
     public CreateResourceGroupResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateResourceGroupResponse {
      */
     
     public Object limitExceededException;
+
     public CreateResourceGroupResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateResourceGroupResponse {
      */
     
     public Object serviceTemporarilyUnavailableException;
+
     public CreateResourceGroupResponse withServiceTemporarilyUnavailableException(Object serviceTemporarilyUnavailableException) {
         this.serviceTemporarilyUnavailableException = serviceTemporarilyUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class CreateResourceGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateResourceGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateResourceGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateResourceGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateResourceGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class UpdateAccessControlConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessControlList")
     public Principal[] accessControlList;
+
     public UpdateAccessControlConfigurationRequest withAccessControlList(Principal[] accessControlList) {
         this.accessControlList = accessControlList;
         return this;
@@ -20,6 +21,7 @@ public class UpdateAccessControlConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateAccessControlConfigurationRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class UpdateAccessControlConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HierarchicalAccessControlList")
     public HierarchicalPrincipal[] hierarchicalAccessControlList;
+
     public UpdateAccessControlConfigurationRequest withHierarchicalAccessControlList(HierarchicalPrincipal[] hierarchicalAccessControlList) {
         this.hierarchicalAccessControlList = hierarchicalAccessControlList;
         return this;
@@ -35,6 +38,7 @@ public class UpdateAccessControlConfigurationRequest {
     
     @JsonProperty("Id")
     public String id;
+
     public UpdateAccessControlConfigurationRequest withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class UpdateAccessControlConfigurationRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public UpdateAccessControlConfigurationRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -50,9 +55,14 @@ public class UpdateAccessControlConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateAccessControlConfigurationRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateAccessControlConfigurationRequest(@JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId) {
+        this.id = id;
+        this.indexId = indexId;
+  }
 }

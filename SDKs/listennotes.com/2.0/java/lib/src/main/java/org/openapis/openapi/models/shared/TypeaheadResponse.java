@@ -18,6 +18,7 @@ public class TypeaheadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genres")
     public Genre[] genres;
+
     public TypeaheadResponse withGenres(Genre[] genres) {
         this.genres = genres;
         return this;
@@ -29,6 +30,7 @@ public class TypeaheadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podcasts")
     public PodcastTypeaheadResult[] podcasts;
+
     public TypeaheadResponse withPodcasts(PodcastTypeaheadResult[] podcasts) {
         this.podcasts = podcasts;
         return this;
@@ -39,9 +41,13 @@ public class TypeaheadResponse {
      */
     @JsonProperty("terms")
     public String[] terms;
+
     public TypeaheadResponse withTerms(String[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public TypeaheadResponse(@JsonProperty("terms") String[] terms) {
+        this.terms = terms;
+  }
 }

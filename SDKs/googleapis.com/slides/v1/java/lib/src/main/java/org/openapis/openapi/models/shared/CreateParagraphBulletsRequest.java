@@ -18,6 +18,7 @@ public class CreateParagraphBulletsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bulletPreset")
     public CreateParagraphBulletsRequestBulletPresetEnum bulletPreset;
+
     public CreateParagraphBulletsRequest withBulletPreset(CreateParagraphBulletsRequestBulletPresetEnum bulletPreset) {
         this.bulletPreset = bulletPreset;
         return this;
@@ -29,6 +30,7 @@ public class CreateParagraphBulletsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cellLocation")
     public TableCellLocation cellLocation;
+
     public CreateParagraphBulletsRequest withCellLocation(TableCellLocation cellLocation) {
         this.cellLocation = cellLocation;
         return this;
@@ -40,6 +42,7 @@ public class CreateParagraphBulletsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public CreateParagraphBulletsRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -51,9 +54,11 @@ public class CreateParagraphBulletsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textRange")
     public Range textRange;
+
     public CreateParagraphBulletsRequest withTextRange(Range textRange) {
         this.textRange = textRange;
         return this;
     }
     
+    public CreateParagraphBulletsRequest(){}
 }

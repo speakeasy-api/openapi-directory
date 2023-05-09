@@ -15,6 +15,7 @@ public class DnsRuleGroupLimitExceededViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfRuleGroupsAlreadyAssociated")
     public Long numberOfRuleGroupsAlreadyAssociated;
+
     public DnsRuleGroupLimitExceededViolation withNumberOfRuleGroupsAlreadyAssociated(Long numberOfRuleGroupsAlreadyAssociated) {
         this.numberOfRuleGroupsAlreadyAssociated = numberOfRuleGroupsAlreadyAssociated;
         return this;
@@ -23,6 +24,7 @@ public class DnsRuleGroupLimitExceededViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationTarget")
     public String violationTarget;
+
     public DnsRuleGroupLimitExceededViolation withViolationTarget(String violationTarget) {
         this.violationTarget = violationTarget;
         return this;
@@ -31,9 +33,11 @@ public class DnsRuleGroupLimitExceededViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationTargetDescription")
     public String violationTargetDescription;
+
     public DnsRuleGroupLimitExceededViolation withViolationTargetDescription(String violationTargetDescription) {
         this.violationTargetDescription = violationTargetDescription;
         return this;
     }
     
+    public DnsRuleGroupLimitExceededViolation(){}
 }

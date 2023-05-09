@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSetsSetCardLocalIdResponse {
@@ -12,6 +13,7 @@ public class GetSetsSetCardLocalIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Card card;
+
     public GetSetsSetCardLocalIdResponse withCard(org.openapis.openapi.models.shared.Card card) {
         this.card = card;
         return this;
@@ -19,6 +21,7 @@ public class GetSetsSetCardLocalIdResponse {
     
     
     public String contentType;
+
     public GetSetsSetCardLocalIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetSetsSetCardLocalIdResponse {
     
     
     public Integer statusCode;
+
     public GetSetsSetCardLocalIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSetsSetCardLocalIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSetsSetCardLocalIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSetsSetCardLocalIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

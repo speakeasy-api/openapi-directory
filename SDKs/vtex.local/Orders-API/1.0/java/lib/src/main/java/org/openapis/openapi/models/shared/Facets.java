@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Facets {
     @JsonProperty("currencyCode")
     public CurrencyCode currencyCode;
+
     public Facets withCurrencyCode(CurrencyCode currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -16,9 +17,14 @@ public class Facets {
     
     @JsonProperty("origin")
     public Origin origin;
+
     public Facets withOrigin(Origin origin) {
         this.origin = origin;
         return this;
     }
     
+    public Facets(@JsonProperty("currencyCode") CurrencyCode currencyCode, @JsonProperty("origin") Origin origin) {
+        this.currencyCode = currencyCode;
+        this.origin = origin;
+  }
 }

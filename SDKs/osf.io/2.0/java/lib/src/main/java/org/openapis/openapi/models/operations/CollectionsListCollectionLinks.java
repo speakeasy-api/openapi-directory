@@ -15,9 +15,11 @@ public class CollectionsListCollectionLinks {
      */
     
     public String self;
+
     public CollectionsListCollectionLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public CollectionsListCollectionLinks(){}
 }

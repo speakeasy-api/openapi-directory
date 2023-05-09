@@ -15,6 +15,7 @@ public class CrawlsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldName")
     public FieldNameEnum fieldName;
+
     public CrawlsFilter withFieldName(FieldNameEnum fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -23,6 +24,7 @@ public class CrawlsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldValue")
     public String fieldValue;
+
     public CrawlsFilter withFieldValue(String fieldValue) {
         this.fieldValue = fieldValue;
         return this;
@@ -31,9 +33,11 @@ public class CrawlsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterOperator")
     public FilterOperatorEnum filterOperator;
+
     public CrawlsFilter withFilterOperator(FilterOperatorEnum filterOperator) {
         this.filterOperator = filterOperator;
         return this;
     }
     
+    public CrawlsFilter(){}
 }

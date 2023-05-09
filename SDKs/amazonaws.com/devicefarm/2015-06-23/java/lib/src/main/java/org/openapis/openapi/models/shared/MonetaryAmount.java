@@ -15,6 +15,7 @@ public class MonetaryAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public MonetaryAmount withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -23,9 +24,11 @@ public class MonetaryAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public CurrencyCodeEnum currencyCode;
+
     public MonetaryAmount withCurrencyCode(CurrencyCodeEnum currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
     
+    public MonetaryAmount(){}
 }

@@ -12,6 +12,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ErrorCodeEnum code;
+
     public Error withCode(ErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -28,6 +30,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public ErrorSource source;
+
     public Error withSource(ErrorSource source) {
         this.source = source;
         return this;
@@ -36,6 +39,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Error withStatus(String status) {
         this.status = status;
         return this;
@@ -44,9 +48,11 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Error(){}
 }

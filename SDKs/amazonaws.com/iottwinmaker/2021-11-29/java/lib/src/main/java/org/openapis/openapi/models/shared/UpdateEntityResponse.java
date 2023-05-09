@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class UpdateEntityResponse {
     @JsonProperty("state")
     public StateEnum state;
+
     public UpdateEntityResponse withState(StateEnum state) {
         this.state = state;
         return this;
@@ -26,9 +27,14 @@ public class UpdateEntityResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateDateTime")
     public OffsetDateTime updateDateTime;
+
     public UpdateEntityResponse withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
     }
     
+    public UpdateEntityResponse(@JsonProperty("state") StateEnum state, @JsonProperty("updateDateTime") OffsetDateTime updateDateTime) {
+        this.state = state;
+        this.updateDateTime = updateDateTime;
+  }
 }

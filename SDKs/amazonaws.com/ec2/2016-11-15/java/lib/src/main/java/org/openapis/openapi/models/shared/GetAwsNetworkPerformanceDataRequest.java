@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class GetAwsNetworkPerformanceDataRequest {
     
     public DataQuery[] dataQueries;
+
     public GetAwsNetworkPerformanceDataRequest withDataQueries(DataQuery[] dataQueries) {
         this.dataQueries = dataQueries;
         return this;
@@ -16,6 +17,7 @@ public class GetAwsNetworkPerformanceDataRequest {
     
     
     public Boolean dryRun;
+
     public GetAwsNetworkPerformanceDataRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class GetAwsNetworkPerformanceDataRequest {
     
     
     public OffsetDateTime endTime;
+
     public GetAwsNetworkPerformanceDataRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +33,7 @@ public class GetAwsNetworkPerformanceDataRequest {
     
     
     public Long maxResults;
+
     public GetAwsNetworkPerformanceDataRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +41,7 @@ public class GetAwsNetworkPerformanceDataRequest {
     
     
     public String nextToken;
+
     public GetAwsNetworkPerformanceDataRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +49,11 @@ public class GetAwsNetworkPerformanceDataRequest {
     
     
     public OffsetDateTime startTime;
+
     public GetAwsNetworkPerformanceDataRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetAwsNetworkPerformanceDataRequest(){}
 }

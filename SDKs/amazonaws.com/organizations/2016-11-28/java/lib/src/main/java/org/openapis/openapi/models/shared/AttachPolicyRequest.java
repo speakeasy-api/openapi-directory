@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttachPolicyRequest {
     @JsonProperty("PolicyId")
     public String policyId;
+
     public AttachPolicyRequest withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -16,9 +17,14 @@ public class AttachPolicyRequest {
     
     @JsonProperty("TargetId")
     public String targetId;
+
     public AttachPolicyRequest withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
     }
     
+    public AttachPolicyRequest(@JsonProperty("PolicyId") String policyId, @JsonProperty("TargetId") String targetId) {
+        this.policyId = policyId;
+        this.targetId = targetId;
+  }
 }

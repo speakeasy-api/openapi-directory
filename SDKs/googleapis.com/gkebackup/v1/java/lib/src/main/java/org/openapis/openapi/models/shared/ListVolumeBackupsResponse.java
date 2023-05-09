@@ -18,6 +18,7 @@ public class ListVolumeBackupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListVolumeBackupsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListVolumeBackupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeBackups")
     public VolumeBackup[] volumeBackups;
+
     public ListVolumeBackupsResponse withVolumeBackups(VolumeBackup[] volumeBackups) {
         this.volumeBackups = volumeBackups;
         return this;
     }
     
+    public ListVolumeBackupsResponse(){}
 }

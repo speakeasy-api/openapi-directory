@@ -15,6 +15,7 @@ public class InstanceResizePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceTerminationTimeout")
     public Long instanceTerminationTimeout;
+
     public InstanceResizePolicy withInstanceTerminationTimeout(Long instanceTerminationTimeout) {
         this.instanceTerminationTimeout = instanceTerminationTimeout;
         return this;
@@ -23,6 +24,7 @@ public class InstanceResizePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancesToProtect")
     public String[] instancesToProtect;
+
     public InstanceResizePolicy withInstancesToProtect(String[] instancesToProtect) {
         this.instancesToProtect = instancesToProtect;
         return this;
@@ -31,9 +33,11 @@ public class InstanceResizePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancesToTerminate")
     public String[] instancesToTerminate;
+
     public InstanceResizePolicy withInstancesToTerminate(String[] instancesToTerminate) {
         this.instancesToTerminate = instancesToTerminate;
         return this;
     }
     
+    public InstanceResizePolicy(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateIdentityProviderConfigurationResponse {
     
     public String contentType;
+
     public UpdateIdentityProviderConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateIdentityProviderConfigurationResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateIdentityProviderConfigurationResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateIdentityProviderConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateIdentityProviderConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateIdentityProviderConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateIdentityProviderConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateIdentityProviderConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateIdentityProviderConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateIdentityProviderConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateIdentityProviderConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateIdentityProviderConfigurationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateIdentityProviderConfigurationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateIdentityProviderConfigurationResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateIdentityProviderConfigurationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateIdentityProviderConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateIdentityProviderConfigurationResponse;
+
     public UpdateIdentityProviderConfigurationResponse withUpdateIdentityProviderConfigurationResponse(java.util.Map<String, Object> updateIdentityProviderConfigurationResponse) {
         this.updateIdentityProviderConfigurationResponse = updateIdentityProviderConfigurationResponse;
         return this;
     }
     
+    public UpdateIdentityProviderConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

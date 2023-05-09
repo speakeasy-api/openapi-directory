@@ -15,6 +15,7 @@ public class GetBng2latlongEastingNorthing200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("easting")
     public Long easting;
+
     public GetBng2latlongEastingNorthing200ApplicationJSON withEasting(Long easting) {
         this.easting = easting;
         return this;
@@ -23,6 +24,7 @@ public class GetBng2latlongEastingNorthing200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public GetBng2latlongEastingNorthing200ApplicationJSON withError(String error) {
         this.error = error;
         return this;
@@ -31,6 +33,7 @@ public class GetBng2latlongEastingNorthing200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public GetBng2latlongEastingNorthing200ApplicationJSON withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -39,6 +42,7 @@ public class GetBng2latlongEastingNorthing200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public GetBng2latlongEastingNorthing200ApplicationJSON withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -47,6 +51,7 @@ public class GetBng2latlongEastingNorthing200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("northing")
     public Long northing;
+
     public GetBng2latlongEastingNorthing200ApplicationJSON withNorthing(Long northing) {
         this.northing = northing;
         return this;
@@ -55,9 +60,11 @@ public class GetBng2latlongEastingNorthing200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetBng2latlongEastingNorthing200ApplicationJSONStatusEnum status;
+
     public GetBng2latlongEastingNorthing200ApplicationJSON withStatus(GetBng2latlongEastingNorthing200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetBng2latlongEastingNorthing200ApplicationJSON(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSubscriptionNotificationConfigurationResponse {
@@ -12,6 +13,7 @@ public class CreateSubscriptionNotificationConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateSubscriptionNotificationConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateSubscriptionNotificationConfigurationResponse {
      */
     
     public Object accountNotFoundException;
+
     public CreateSubscriptionNotificationConfigurationResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -32,6 +35,7 @@ public class CreateSubscriptionNotificationConfigurationResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateSubscriptionNotificationConfigurationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class CreateSubscriptionNotificationConfigurationResponse {
     
     
     public String contentType;
+
     public CreateSubscriptionNotificationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateSubscriptionNotificationConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSubscriptionNotificationConfigurationResponse createSubscriptionNotificationConfigurationResponse;
+
     public CreateSubscriptionNotificationConfigurationResponse withCreateSubscriptionNotificationConfigurationResponse(org.openapis.openapi.models.shared.CreateSubscriptionNotificationConfigurationResponse createSubscriptionNotificationConfigurationResponse) {
         this.createSubscriptionNotificationConfigurationResponse = createSubscriptionNotificationConfigurationResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateSubscriptionNotificationConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public CreateSubscriptionNotificationConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -69,6 +76,7 @@ public class CreateSubscriptionNotificationConfigurationResponse {
      */
     
     public Object invalidInputException;
+
     public CreateSubscriptionNotificationConfigurationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -76,6 +84,7 @@ public class CreateSubscriptionNotificationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateSubscriptionNotificationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateSubscriptionNotificationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSubscriptionNotificationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateSubscriptionNotificationConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateSubscriptionNotificationConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class CreateSubscriptionNotificationConfigurationResponse {
      */
     
     public Object validationException;
+
     public CreateSubscriptionNotificationConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateSubscriptionNotificationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

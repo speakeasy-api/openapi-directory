@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisReturnsAverage200ApplicationJSONPortfolios {
      */
     @JsonProperty("portfolioAverageReturn")
     public Double portfolioAverageReturn;
+
     public PostPortfolioAnalysisReturnsAverage200ApplicationJSONPortfolios withPortfolioAverageReturn(Double portfolioAverageReturn) {
         this.portfolioAverageReturn = portfolioAverageReturn;
         return this;
     }
     
+    public PostPortfolioAnalysisReturnsAverage200ApplicationJSONPortfolios(@JsonProperty("portfolioAverageReturn") Double portfolioAverageReturn) {
+        this.portfolioAverageReturn = portfolioAverageReturn;
+  }
 }

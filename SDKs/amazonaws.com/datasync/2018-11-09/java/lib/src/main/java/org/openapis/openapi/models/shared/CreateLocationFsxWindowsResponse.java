@@ -15,9 +15,11 @@ public class CreateLocationFsxWindowsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public CreateLocationFsxWindowsResponse withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
     }
     
+    public CreateLocationFsxWindowsResponse(){}
 }

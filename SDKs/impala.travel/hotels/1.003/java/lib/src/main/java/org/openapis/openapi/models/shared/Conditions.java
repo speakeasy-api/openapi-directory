@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Conditions {
     @JsonProperty("cancellationDeadline")
     public Double cancellationDeadline;
+
     public Conditions withCancellationDeadline(Double cancellationDeadline) {
         this.cancellationDeadline = cancellationDeadline;
         return this;
@@ -22,9 +23,14 @@ public class Conditions {
      */
     @JsonProperty("cancellationPolicy")
     public ConditionsCancellationPolicyEnum cancellationPolicy;
+
     public Conditions withCancellationPolicy(ConditionsCancellationPolicyEnum cancellationPolicy) {
         this.cancellationPolicy = cancellationPolicy;
         return this;
     }
     
+    public Conditions(@JsonProperty("cancellationDeadline") Double cancellationDeadline, @JsonProperty("cancellationPolicy") ConditionsCancellationPolicyEnum cancellationPolicy) {
+        this.cancellationDeadline = cancellationDeadline;
+        this.cancellationPolicy = cancellationPolicy;
+  }
 }

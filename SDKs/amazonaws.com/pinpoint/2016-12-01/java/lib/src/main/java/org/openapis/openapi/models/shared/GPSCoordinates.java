@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GPSCoordinates {
     @JsonProperty("Latitude")
     public Double latitude;
+
     public GPSCoordinates withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -19,9 +20,14 @@ public class GPSCoordinates {
     
     @JsonProperty("Longitude")
     public Double longitude;
+
     public GPSCoordinates withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public GPSCoordinates(@JsonProperty("Latitude") Double latitude, @JsonProperty("Longitude") Double longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+  }
 }

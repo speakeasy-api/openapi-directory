@@ -12,6 +12,7 @@ public class IntervalCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseCurrency")
     public String baseCurrency;
+
     public IntervalCollection withBaseCurrency(String baseCurrency) {
         this.baseCurrency = baseCurrency;
         return this;
@@ -20,6 +21,7 @@ public class IntervalCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervals")
     public Interval[] intervals;
+
     public IntervalCollection withIntervals(Interval[] intervals) {
         this.intervals = intervals;
         return this;
@@ -28,6 +30,7 @@ public class IntervalCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IntervalCollection withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class IntervalCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symbol")
     public String symbol;
+
     public IntervalCollection withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
     }
     
+    public IntervalCollection(){}
 }

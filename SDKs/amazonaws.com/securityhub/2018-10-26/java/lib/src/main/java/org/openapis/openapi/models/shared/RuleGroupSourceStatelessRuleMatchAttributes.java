@@ -15,6 +15,7 @@ public class RuleGroupSourceStatelessRuleMatchAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationPorts")
     public RuleGroupSourceStatelessRuleMatchAttributesDestinationPorts[] destinationPorts;
+
     public RuleGroupSourceStatelessRuleMatchAttributes withDestinationPorts(RuleGroupSourceStatelessRuleMatchAttributesDestinationPorts[] destinationPorts) {
         this.destinationPorts = destinationPorts;
         return this;
@@ -23,6 +24,7 @@ public class RuleGroupSourceStatelessRuleMatchAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destinations")
     public RuleGroupSourceStatelessRuleMatchAttributesDestinations[] destinations;
+
     public RuleGroupSourceStatelessRuleMatchAttributes withDestinations(RuleGroupSourceStatelessRuleMatchAttributesDestinations[] destinations) {
         this.destinations = destinations;
         return this;
@@ -31,6 +33,7 @@ public class RuleGroupSourceStatelessRuleMatchAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocols")
     public Long[] protocols;
+
     public RuleGroupSourceStatelessRuleMatchAttributes withProtocols(Long[] protocols) {
         this.protocols = protocols;
         return this;
@@ -39,6 +42,7 @@ public class RuleGroupSourceStatelessRuleMatchAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourcePorts")
     public RuleGroupSourceStatelessRuleMatchAttributesSourcePorts[] sourcePorts;
+
     public RuleGroupSourceStatelessRuleMatchAttributes withSourcePorts(RuleGroupSourceStatelessRuleMatchAttributesSourcePorts[] sourcePorts) {
         this.sourcePorts = sourcePorts;
         return this;
@@ -47,6 +51,7 @@ public class RuleGroupSourceStatelessRuleMatchAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sources")
     public RuleGroupSourceStatelessRuleMatchAttributesSources[] sources;
+
     public RuleGroupSourceStatelessRuleMatchAttributes withSources(RuleGroupSourceStatelessRuleMatchAttributesSources[] sources) {
         this.sources = sources;
         return this;
@@ -55,9 +60,11 @@ public class RuleGroupSourceStatelessRuleMatchAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TcpFlags")
     public RuleGroupSourceStatelessRuleMatchAttributesTcpFlags[] tcpFlags;
+
     public RuleGroupSourceStatelessRuleMatchAttributes withTcpFlags(RuleGroupSourceStatelessRuleMatchAttributesTcpFlags[] tcpFlags) {
         this.tcpFlags = tcpFlags;
         return this;
     }
     
+    public RuleGroupSourceStatelessRuleMatchAttributes(){}
 }

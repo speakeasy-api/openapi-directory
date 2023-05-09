@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETCancelSpotFleetRequestsResponse {
     
     public byte[] body;
+
     public GETCancelSpotFleetRequestsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETCancelSpotFleetRequestsResponse {
     
     
     public String contentType;
+
     public GETCancelSpotFleetRequestsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETCancelSpotFleetRequestsResponse {
     
     
     public Integer statusCode;
+
     public GETCancelSpotFleetRequestsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETCancelSpotFleetRequestsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETCancelSpotFleetRequestsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETCancelSpotFleetRequestsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

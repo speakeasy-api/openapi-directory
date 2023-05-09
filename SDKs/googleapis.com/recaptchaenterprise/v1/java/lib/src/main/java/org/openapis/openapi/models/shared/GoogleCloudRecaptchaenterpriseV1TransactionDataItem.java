@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantAccountId")
     public String merchantAccountId;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataItem withMerchantAccountId(String merchantAccountId) {
         this.merchantAccountId = merchantAccountId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataItem withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataItem withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataItem withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1TransactionDataItem(){}
 }

@@ -15,6 +15,7 @@ public class UnlabeledIssueEvent {
      */
     @JsonProperty("actor")
     public SimpleUser actor;
+
     public UnlabeledIssueEvent withActor(SimpleUser actor) {
         this.actor = actor;
         return this;
@@ -22,6 +23,7 @@ public class UnlabeledIssueEvent {
     
     @JsonProperty("commit_id")
     public String commitId;
+
     public UnlabeledIssueEvent withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -29,6 +31,7 @@ public class UnlabeledIssueEvent {
     
     @JsonProperty("commit_url")
     public String commitUrl;
+
     public UnlabeledIssueEvent withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -36,6 +39,7 @@ public class UnlabeledIssueEvent {
     
     @JsonProperty("created_at")
     public String createdAt;
+
     public UnlabeledIssueEvent withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +47,7 @@ public class UnlabeledIssueEvent {
     
     @JsonProperty("event")
     public String event;
+
     public UnlabeledIssueEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -50,6 +55,7 @@ public class UnlabeledIssueEvent {
     
     @JsonProperty("id")
     public Long id;
+
     public UnlabeledIssueEvent withId(Long id) {
         this.id = id;
         return this;
@@ -57,6 +63,7 @@ public class UnlabeledIssueEvent {
     
     @JsonProperty("label")
     public UnlabeledIssueEventLabel label;
+
     public UnlabeledIssueEvent withLabel(UnlabeledIssueEventLabel label) {
         this.label = label;
         return this;
@@ -64,6 +71,7 @@ public class UnlabeledIssueEvent {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public UnlabeledIssueEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -74,6 +82,7 @@ public class UnlabeledIssueEvent {
      */
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public UnlabeledIssueEvent withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -81,9 +90,22 @@ public class UnlabeledIssueEvent {
     
     @JsonProperty("url")
     public String url;
+
     public UnlabeledIssueEvent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UnlabeledIssueEvent(@JsonProperty("actor") SimpleUser actor, @JsonProperty("commit_id") String commitId, @JsonProperty("commit_url") String commitUrl, @JsonProperty("created_at") String createdAt, @JsonProperty("event") String event, @JsonProperty("id") Long id, @JsonProperty("label") UnlabeledIssueEventLabel label, @JsonProperty("node_id") String nodeId, @JsonProperty("performed_via_github_app") NullableIntegration performedViaGithubApp, @JsonProperty("url") String url) {
+        this.actor = actor;
+        this.commitId = commitId;
+        this.commitUrl = commitUrl;
+        this.createdAt = createdAt;
+        this.event = event;
+        this.id = id;
+        this.label = label;
+        this.nodeId = nodeId;
+        this.performedViaGithubApp = performedViaGithubApp;
+        this.url = url;
+  }
 }

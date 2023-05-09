@@ -15,9 +15,13 @@ public class BulkSMSRequest {
      */
     @JsonProperty("messages")
     public Message[] messages;
+
     public BulkSMSRequest withMessages(Message[] messages) {
         this.messages = messages;
         return this;
     }
     
+    public BulkSMSRequest(@JsonProperty("messages") Message[] messages) {
+        this.messages = messages;
+  }
 }

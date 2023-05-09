@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleAppsCardV1Button - A text, icon, or text + icon button that users can click. To make an image a clickable button, specify an Image (not an ImageComponent) and set an `onClick` action. Currently supported in Chat apps (including [dialogs] (https://developers.google.com/chat/how-tos/dialogs) and [card messages] (https://developers.google.com/chat/api/guides/message-formats/cards)) and Google Workspace Add-ons.
+ * GoogleAppsCardV1Button - A text, icon, or text + icon button that users can click. To make an image a clickable button, specify an Image (not an ImageComponent) and set an `onClick` action.
  */
 public class GoogleAppsCardV1Button {
     /**
@@ -18,6 +18,7 @@ public class GoogleAppsCardV1Button {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("altText")
     public String altText;
+
     public GoogleAppsCardV1Button withAltText(String altText) {
         this.altText = altText;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCardV1Button {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public Color color;
+
     public GoogleAppsCardV1Button withColor(Color color) {
         this.color = color;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCardV1Button {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public GoogleAppsCardV1Button withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsCardV1Button {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public GoogleAppsCardV1Icon icon;
+
     public GoogleAppsCardV1Button withIcon(GoogleAppsCardV1Icon icon) {
         this.icon = icon;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsCardV1Button {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onClick")
     public GoogleAppsCardV1OnClick onClick;
+
     public GoogleAppsCardV1Button withOnClick(GoogleAppsCardV1OnClick onClick) {
         this.onClick = onClick;
         return this;
@@ -73,9 +78,11 @@ public class GoogleAppsCardV1Button {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleAppsCardV1Button withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleAppsCardV1Button(){}
 }

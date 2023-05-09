@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsCreateOrUpdateRepoSecretResponse {
     
     public String contentType;
+
     public ActionsCreateOrUpdateRepoSecretResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsCreateOrUpdateRepoSecretResponse {
     
     
     public Integer statusCode;
+
     public ActionsCreateOrUpdateRepoSecretResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsCreateOrUpdateRepoSecretResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsCreateOrUpdateRepoSecretResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ActionsCreateOrUpdateRepoSecretResponse {
      */
     
     public java.util.Map<String, Object> actionsCreateOrUpdateRepoSecret201ApplicationJSONObject;
+
     public ActionsCreateOrUpdateRepoSecretResponse withActionsCreateOrUpdateRepoSecret201ApplicationJSONObject(java.util.Map<String, Object> actionsCreateOrUpdateRepoSecret201ApplicationJSONObject) {
         this.actionsCreateOrUpdateRepoSecret201ApplicationJSONObject = actionsCreateOrUpdateRepoSecret201ApplicationJSONObject;
         return this;
     }
     
+    public ActionsCreateOrUpdateRepoSecretResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

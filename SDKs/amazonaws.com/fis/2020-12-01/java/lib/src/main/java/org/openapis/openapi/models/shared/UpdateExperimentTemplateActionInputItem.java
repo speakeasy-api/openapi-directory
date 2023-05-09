@@ -15,6 +15,7 @@ public class UpdateExperimentTemplateActionInputItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionId")
     public String actionId;
+
     public UpdateExperimentTemplateActionInputItem withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -23,6 +24,7 @@ public class UpdateExperimentTemplateActionInputItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateExperimentTemplateActionInputItem withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class UpdateExperimentTemplateActionInputItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String> parameters;
+
     public UpdateExperimentTemplateActionInputItem withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -39,6 +42,7 @@ public class UpdateExperimentTemplateActionInputItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startAfter")
     public String[] startAfter;
+
     public UpdateExperimentTemplateActionInputItem withStartAfter(String[] startAfter) {
         this.startAfter = startAfter;
         return this;
@@ -47,9 +51,11 @@ public class UpdateExperimentTemplateActionInputItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targets")
     public java.util.Map<String, String> targets;
+
     public UpdateExperimentTemplateActionInputItem withTargets(java.util.Map<String, String> targets) {
         this.targets = targets;
         return this;
     }
     
+    public UpdateExperimentTemplateActionInputItem(){}
 }

@@ -18,6 +18,7 @@ public class TermsAndConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public UserFacingMessage content;
+
     public TermsAndConditions withContent(UserFacingMessage content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class TermsAndConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public UserFacingMessage header;
+
     public TermsAndConditions withHeader(UserFacingMessage header) {
         this.header = header;
         return this;
     }
     
+    public TermsAndConditions(){}
 }

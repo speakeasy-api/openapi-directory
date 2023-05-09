@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeNetworkInterfaceAttributeResultAttachment {
     
     public OffsetDateTime attachTime;
+
     public DescribeNetworkInterfaceAttributeResultAttachment withAttachTime(OffsetDateTime attachTime) {
         this.attachTime = attachTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInterfaceAttributeResultAttachment {
     
     
     public String attachmentId;
+
     public DescribeNetworkInterfaceAttributeResultAttachment withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInterfaceAttributeResultAttachment {
     
     
     public Boolean deleteOnTermination;
+
     public DescribeNetworkInterfaceAttributeResultAttachment withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkInterfaceAttributeResultAttachment {
     
     
     public Long deviceIndex;
+
     public DescribeNetworkInterfaceAttributeResultAttachment withDeviceIndex(Long deviceIndex) {
         this.deviceIndex = deviceIndex;
         return this;
@@ -40,6 +44,7 @@ public class DescribeNetworkInterfaceAttributeResultAttachment {
     
     
     public DescribeNetworkInterfaceAttributeResultAttachmentEnaSrdSpecification enaSrdSpecification;
+
     public DescribeNetworkInterfaceAttributeResultAttachment withEnaSrdSpecification(DescribeNetworkInterfaceAttributeResultAttachmentEnaSrdSpecification enaSrdSpecification) {
         this.enaSrdSpecification = enaSrdSpecification;
         return this;
@@ -47,6 +52,7 @@ public class DescribeNetworkInterfaceAttributeResultAttachment {
     
     
     public String instanceId;
+
     public DescribeNetworkInterfaceAttributeResultAttachment withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeNetworkInterfaceAttributeResultAttachment {
     
     
     public String instanceOwnerId;
+
     public DescribeNetworkInterfaceAttributeResultAttachment withInstanceOwnerId(String instanceOwnerId) {
         this.instanceOwnerId = instanceOwnerId;
         return this;
@@ -61,6 +68,7 @@ public class DescribeNetworkInterfaceAttributeResultAttachment {
     
     
     public Long networkCardIndex;
+
     public DescribeNetworkInterfaceAttributeResultAttachment withNetworkCardIndex(Long networkCardIndex) {
         this.networkCardIndex = networkCardIndex;
         return this;
@@ -68,9 +76,11 @@ public class DescribeNetworkInterfaceAttributeResultAttachment {
     
     
     public DescribeNetworkInterfaceAttributeResultAttachmentStatusEnum status;
+
     public DescribeNetworkInterfaceAttributeResultAttachment withStatus(DescribeNetworkInterfaceAttributeResultAttachmentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeNetworkInterfaceAttributeResultAttachment(){}
 }

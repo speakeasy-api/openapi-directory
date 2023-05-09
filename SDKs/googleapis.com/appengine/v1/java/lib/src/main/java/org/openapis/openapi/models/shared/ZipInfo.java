@@ -18,6 +18,7 @@ public class ZipInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filesCount")
     public Integer filesCount;
+
     public ZipInfo withFilesCount(Integer filesCount) {
         this.filesCount = filesCount;
         return this;
@@ -29,9 +30,11 @@ public class ZipInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceUrl")
     public String sourceUrl;
+
     public ZipInfo withSourceUrl(String sourceUrl) {
         this.sourceUrl = sourceUrl;
         return this;
     }
     
+    public ZipInfo(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListInferenceEventsResponse {
@@ -12,6 +13,7 @@ public class ListInferenceEventsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListInferenceEventsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListInferenceEventsResponse {
     
     
     public String contentType;
+
     public ListInferenceEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListInferenceEventsResponse {
      */
     
     public Object internalServerException;
+
     public ListInferenceEventsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListInferenceEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListInferenceEventsResponse listInferenceEventsResponse;
+
     public ListInferenceEventsResponse withListInferenceEventsResponse(org.openapis.openapi.models.shared.ListInferenceEventsResponse listInferenceEventsResponse) {
         this.listInferenceEventsResponse = listInferenceEventsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListInferenceEventsResponse {
     
     
     public Integer statusCode;
+
     public ListInferenceEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListInferenceEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListInferenceEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListInferenceEventsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListInferenceEventsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListInferenceEventsResponse {
      */
     
     public Object throttlingException;
+
     public ListInferenceEventsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListInferenceEventsResponse {
      */
     
     public Object validationException;
+
     public ListInferenceEventsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListInferenceEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

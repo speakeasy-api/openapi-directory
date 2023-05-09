@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2LabelPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audience")
     public String audience;
+
     public GoogleAppsDriveLabelsV2LabelPermission withAudience(String audience) {
         this.audience = audience;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2LabelPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GoogleAppsDriveLabelsV2LabelPermission withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2LabelPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
+
     public GoogleAppsDriveLabelsV2LabelPermission withGroup(String group) {
         this.group = group;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsDriveLabelsV2LabelPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAppsDriveLabelsV2LabelPermission withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsDriveLabelsV2LabelPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("person")
     public String person;
+
     public GoogleAppsDriveLabelsV2LabelPermission withPerson(String person) {
         this.person = person;
         return this;
@@ -73,9 +78,11 @@ public class GoogleAppsDriveLabelsV2LabelPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public GoogleAppsDriveLabelsV2LabelPermissionRoleEnum role;
+
     public GoogleAppsDriveLabelsV2LabelPermission withRole(GoogleAppsDriveLabelsV2LabelPermissionRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2LabelPermission(){}
 }

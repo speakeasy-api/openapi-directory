@@ -18,6 +18,7 @@ public class ListOperationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missingZones")
     public String[] missingZones;
+
     public ListOperationsResponse withMissingZones(String[] missingZones) {
         this.missingZones = missingZones;
         return this;
@@ -29,9 +30,11 @@ public class ListOperationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public ListOperationsResponse withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public ListOperationsResponse(){}
 }

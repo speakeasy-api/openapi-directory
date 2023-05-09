@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestFilterPortRange {
     
     public Long fromPort;
+
     public RequestFilterPortRange withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -19,9 +20,11 @@ public class RequestFilterPortRange {
     
     
     public Long toPort;
+
     public RequestFilterPortRange withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public RequestFilterPortRange(){}
 }

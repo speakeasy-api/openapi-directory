@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PreviewModel {
     @JsonProperty("css")
     public String css;
+
     public PreviewModel withCss(String css) {
         this.css = css;
         return this;
@@ -18,6 +19,7 @@ public class PreviewModel {
     
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public PreviewModel withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -26,6 +28,7 @@ public class PreviewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footer_html")
     public String footerHtml;
+
     public PreviewModel withFooterHtml(String footerHtml) {
         this.footerHtml = footerHtml;
         return this;
@@ -34,6 +37,7 @@ public class PreviewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header_html")
     public String headerHtml;
+
     public PreviewModel withHeaderHtml(String headerHtml) {
         this.headerHtml = headerHtml;
         return this;
@@ -41,9 +45,15 @@ public class PreviewModel {
     
     @JsonProperty("template_html")
     public String templateHtml;
+
     public PreviewModel withTemplateHtml(String templateHtml) {
         this.templateHtml = templateHtml;
         return this;
     }
     
+    public PreviewModel(@JsonProperty("css") String css, @JsonProperty("data") java.util.Map<String, Object> data, @JsonProperty("template_html") String templateHtml) {
+        this.css = css;
+        this.data = data;
+        this.templateHtml = templateHtml;
+  }
 }

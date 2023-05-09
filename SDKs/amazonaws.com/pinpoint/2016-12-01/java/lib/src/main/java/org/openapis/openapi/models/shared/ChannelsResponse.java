@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChannelsResponse {
     @JsonProperty("Channels")
     public java.util.Map<String, ChannelResponse> channels;
+
     public ChannelsResponse withChannels(java.util.Map<String, ChannelResponse> channels) {
         this.channels = channels;
         return this;
     }
     
+    public ChannelsResponse(@JsonProperty("Channels") java.util.Map<String, ChannelResponse> channels) {
+        this.channels = channels;
+  }
 }

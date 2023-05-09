@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class NodesCommentsListComment {
     /**
@@ -12,6 +12,7 @@ public class NodesCommentsListComment {
      */
     
     public NodesCommentsListCommentAttributes attributes;
+
     public NodesCommentsListComment withAttributes(NodesCommentsListCommentAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class NodesCommentsListComment {
      */
     
     public String id;
+
     public NodesCommentsListComment withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class NodesCommentsListComment {
      */
     
     public NodesCommentsListCommentLinks links;
+
     public NodesCommentsListComment withLinks(NodesCommentsListCommentLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class NodesCommentsListComment {
      */
     
     public NodesCommentsListCommentRelationships relationships;
+
     public NodesCommentsListComment withRelationships(NodesCommentsListCommentRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,13 @@ public class NodesCommentsListComment {
      */
     
     public String type;
+
     public NodesCommentsListComment withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesCommentsListComment(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

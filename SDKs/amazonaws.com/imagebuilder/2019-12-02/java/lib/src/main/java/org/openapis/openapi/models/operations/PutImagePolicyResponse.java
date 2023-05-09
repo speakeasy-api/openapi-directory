@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutImagePolicyResponse {
@@ -12,6 +13,7 @@ public class PutImagePolicyResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public PutImagePolicyResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class PutImagePolicyResponse {
      */
     
     public Object clientException;
+
     public PutImagePolicyResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class PutImagePolicyResponse {
     
     
     public String contentType;
+
     public PutImagePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutImagePolicyResponse {
      */
     
     public Object forbiddenException;
+
     public PutImagePolicyResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class PutImagePolicyResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutImagePolicyResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class PutImagePolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public PutImagePolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class PutImagePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutImagePolicyResponse putImagePolicyResponse;
+
     public PutImagePolicyResponse withPutImagePolicyResponse(org.openapis.openapi.models.shared.PutImagePolicyResponse putImagePolicyResponse) {
         this.putImagePolicyResponse = putImagePolicyResponse;
         return this;
@@ -79,6 +87,7 @@ public class PutImagePolicyResponse {
      */
     
     public Object serviceException;
+
     public PutImagePolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class PutImagePolicyResponse {
     
     
     public Integer statusCode;
+
     public PutImagePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class PutImagePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutImagePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class PutImagePolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutImagePolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,9 +125,14 @@ public class PutImagePolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public PutImagePolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public PutImagePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

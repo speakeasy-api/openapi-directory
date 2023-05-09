@@ -22,6 +22,7 @@ public class ImportJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public ImportJobSummary withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class ImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedRecordsCount")
     public Long failedRecordsCount;
+
     public ImportJobSummary withFailedRecordsCount(Long failedRecordsCount) {
         this.failedRecordsCount = failedRecordsCount;
         return this;
@@ -41,6 +43,7 @@ public class ImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportDestination")
     public ImportDestination importDestination;
+
     public ImportJobSummary withImportDestination(ImportDestination importDestination) {
         this.importDestination = importDestination;
         return this;
@@ -52,6 +55,7 @@ public class ImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public ImportJobSummary withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -63,6 +67,7 @@ public class ImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public ImportJobSummary withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -71,9 +76,11 @@ public class ImportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessedRecordsCount")
     public Long processedRecordsCount;
+
     public ImportJobSummary withProcessedRecordsCount(Long processedRecordsCount) {
         this.processedRecordsCount = processedRecordsCount;
         return this;
     }
     
+    public ImportJobSummary(){}
 }

@@ -15,6 +15,7 @@ public class ListBotVersionsRequestBodySortBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute")
     public org.openapis.openapi.models.shared.BotVersionSortAttributeEnum attribute;
+
     public ListBotVersionsRequestBodySortBy withAttribute(org.openapis.openapi.models.shared.BotVersionSortAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -23,9 +24,11 @@ public class ListBotVersionsRequestBodySortBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public org.openapis.openapi.models.shared.SortOrderEnum order;
+
     public ListBotVersionsRequestBodySortBy withOrder(org.openapis.openapi.models.shared.SortOrderEnum order) {
         this.order = order;
         return this;
     }
     
+    public ListBotVersionsRequestBodySortBy(){}
 }

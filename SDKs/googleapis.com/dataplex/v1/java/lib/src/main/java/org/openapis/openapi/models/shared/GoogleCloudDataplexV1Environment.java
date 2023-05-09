@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDataplexV1Environment withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1Environment withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1Environment withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoints")
     public GoogleCloudDataplexV1EnvironmentEndpoints endpoints;
+
     public GoogleCloudDataplexV1Environment withEndpoints(GoogleCloudDataplexV1EnvironmentEndpoints endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infrastructureSpec")
     public GoogleCloudDataplexV1EnvironmentInfrastructureSpec infrastructureSpec;
+
     public GoogleCloudDataplexV1Environment withInfrastructureSpec(GoogleCloudDataplexV1EnvironmentInfrastructureSpec infrastructureSpec) {
         this.infrastructureSpec = infrastructureSpec;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1Environment withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDataplexV1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1Environment withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDataplexV1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionSpec")
     public GoogleCloudDataplexV1EnvironmentSessionSpec sessionSpec;
+
     public GoogleCloudDataplexV1Environment withSessionSpec(GoogleCloudDataplexV1EnvironmentSessionSpec sessionSpec) {
         this.sessionSpec = sessionSpec;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDataplexV1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionStatus")
     public GoogleCloudDataplexV1EnvironmentSessionStatus sessionStatus;
+
     public GoogleCloudDataplexV1Environment withSessionStatus(GoogleCloudDataplexV1EnvironmentSessionStatus sessionStatus) {
         this.sessionStatus = sessionStatus;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDataplexV1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDataplexV1EnvironmentStateEnum state;
+
     public GoogleCloudDataplexV1Environment withState(GoogleCloudDataplexV1EnvironmentStateEnum state) {
         this.state = state;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDataplexV1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GoogleCloudDataplexV1Environment withUid(String uid) {
         this.uid = uid;
         return this;
@@ -139,9 +150,11 @@ public class GoogleCloudDataplexV1Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDataplexV1Environment withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDataplexV1Environment(){}
 }

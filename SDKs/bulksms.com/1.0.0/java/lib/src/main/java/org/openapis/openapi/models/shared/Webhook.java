@@ -15,6 +15,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public Webhook withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactEmailAddress")
     public String contactEmailAddress;
+
     public Webhook withContactEmailAddress(String contactEmailAddress) {
         this.contactEmailAddress = contactEmailAddress;
         return this;
@@ -31,6 +33,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public Webhook withId(Double id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Webhook withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onWebApp")
     public Boolean onWebApp;
+
     public Webhook withOnWebApp(Boolean onWebApp) {
         this.onWebApp = onWebApp;
         return this;
@@ -55,6 +60,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerScope")
     public String triggerScope;
+
     public Webhook withTriggerScope(String triggerScope) {
         this.triggerScope = triggerScope;
         return this;
@@ -63,9 +69,11 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Webhook withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Webhook(){}
 }

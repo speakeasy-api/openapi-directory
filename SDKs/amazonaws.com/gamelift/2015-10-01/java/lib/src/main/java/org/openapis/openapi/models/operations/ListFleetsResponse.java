@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFleetsResponse {
     
     public String contentType;
+
     public ListFleetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListFleetsResponse {
      */
     
     public Object internalServiceException;
+
     public ListFleetsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListFleetsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListFleetsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListFleetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFleetsOutput listFleetsOutput;
+
     public ListFleetsResponse withListFleetsOutput(org.openapis.openapi.models.shared.ListFleetsOutput listFleetsOutput) {
         this.listFleetsOutput = listFleetsOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListFleetsResponse {
      */
     
     public Object notFoundException;
+
     public ListFleetsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListFleetsResponse {
     
     
     public Integer statusCode;
+
     public ListFleetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListFleetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFleetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListFleetsResponse {
      */
     
     public Object unauthorizedException;
+
     public ListFleetsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListFleetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

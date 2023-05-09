@@ -15,6 +15,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public PostPrimaryIpsCreatePrimaryIPResponseAction action;
+
     public PostPrimaryIpsCreatePrimaryIPResponse withAction(PostPrimaryIpsCreatePrimaryIPResponseAction action) {
         this.action = action;
         return this;
@@ -22,9 +23,13 @@ public class PostPrimaryIpsCreatePrimaryIPResponse {
     
     @JsonProperty("primary_ip")
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIP primaryIp;
+
     public PostPrimaryIpsCreatePrimaryIPResponse withPrimaryIp(PostPrimaryIpsCreatePrimaryIPResponsePrimaryIP primaryIp) {
         this.primaryIp = primaryIp;
         return this;
     }
     
+    public PostPrimaryIpsCreatePrimaryIPResponse(@JsonProperty("primary_ip") PostPrimaryIpsCreatePrimaryIPResponsePrimaryIP primaryIp) {
+        this.primaryIp = primaryIp;
+  }
 }

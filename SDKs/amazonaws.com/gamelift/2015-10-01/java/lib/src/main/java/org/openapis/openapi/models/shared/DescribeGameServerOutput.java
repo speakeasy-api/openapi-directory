@@ -15,9 +15,11 @@ public class DescribeGameServerOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServer")
     public GameServer gameServer;
+
     public DescribeGameServerOutput withGameServer(GameServer gameServer) {
         this.gameServer = gameServer;
         return this;
     }
     
+    public DescribeGameServerOutput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiV1PushSubscriptionResponse {
     
     public String contentType;
+
     public GetApiV1PushSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetApiV1PushSubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetApiV1PushSubscriptionResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetApiV1PushSubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.PushSubscription pushSubscription;
+
     public GetApiV1PushSubscriptionResponse withPushSubscription(org.openapis.openapi.models.shared.PushSubscription pushSubscription) {
         this.pushSubscription = pushSubscription;
         return this;
@@ -36,6 +40,7 @@ public class GetApiV1PushSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public GetApiV1PushSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetApiV1PushSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiV1PushSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApiV1PushSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

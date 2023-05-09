@@ -18,6 +18,7 @@ public class I18nLanguageSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hl")
     public String hl;
+
     public I18nLanguageSnippet withHl(String hl) {
         this.hl = hl;
         return this;
@@ -29,9 +30,11 @@ public class I18nLanguageSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public I18nLanguageSnippet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public I18nLanguageSnippet(){}
 }

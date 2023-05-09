@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRegistryPolicyResponse {
     
     public String contentType;
+
     public GetRegistryPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRegistryPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRegistryPolicyResponse getRegistryPolicyResponse;
+
     public GetRegistryPolicyResponse withGetRegistryPolicyResponse(org.openapis.openapi.models.shared.GetRegistryPolicyResponse getRegistryPolicyResponse) {
         this.getRegistryPolicyResponse = getRegistryPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetRegistryPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public GetRegistryPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class GetRegistryPolicyResponse {
      */
     
     public Object registryPolicyNotFoundException;
+
     public GetRegistryPolicyResponse withRegistryPolicyNotFoundException(Object registryPolicyNotFoundException) {
         this.registryPolicyNotFoundException = registryPolicyNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class GetRegistryPolicyResponse {
      */
     
     public Object serverException;
+
     public GetRegistryPolicyResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class GetRegistryPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetRegistryPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetRegistryPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRegistryPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetRegistryPolicyResponse {
      */
     
     public Object validationException;
+
     public GetRegistryPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetRegistryPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

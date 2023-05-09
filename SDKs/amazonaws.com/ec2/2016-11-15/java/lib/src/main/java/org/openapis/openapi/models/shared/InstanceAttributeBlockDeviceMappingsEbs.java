@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class InstanceAttributeBlockDeviceMappingsEbs {
     
     public OffsetDateTime attachTime;
+
     public InstanceAttributeBlockDeviceMappingsEbs withAttachTime(OffsetDateTime attachTime) {
         this.attachTime = attachTime;
         return this;
@@ -19,6 +20,7 @@ public class InstanceAttributeBlockDeviceMappingsEbs {
     
     
     public Boolean deleteOnTermination;
+
     public InstanceAttributeBlockDeviceMappingsEbs withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -26,6 +28,7 @@ public class InstanceAttributeBlockDeviceMappingsEbs {
     
     
     public InstanceAttributeBlockDeviceMappingsEbsStatusEnum status;
+
     public InstanceAttributeBlockDeviceMappingsEbs withStatus(InstanceAttributeBlockDeviceMappingsEbsStatusEnum status) {
         this.status = status;
         return this;
@@ -33,9 +36,11 @@ public class InstanceAttributeBlockDeviceMappingsEbs {
     
     
     public String volumeId;
+
     public InstanceAttributeBlockDeviceMappingsEbs withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public InstanceAttributeBlockDeviceMappingsEbs(){}
 }

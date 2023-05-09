@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VerifyUserViaMobileUsingPOSTResponse {
     
     public byte[] body;
+
     public VerifyUserViaMobileUsingPOSTResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class VerifyUserViaMobileUsingPOSTResponse {
     
     
     public String contentType;
+
     public VerifyUserViaMobileUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class VerifyUserViaMobileUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public VerifyUserViaMobileUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class VerifyUserViaMobileUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VerifyUserViaMobileUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VerifyUserViaMobileUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

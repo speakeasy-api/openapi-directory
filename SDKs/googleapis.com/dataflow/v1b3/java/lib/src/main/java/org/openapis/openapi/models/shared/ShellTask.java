@@ -18,6 +18,7 @@ public class ShellTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public String command;
+
     public ShellTask withCommand(String command) {
         this.command = command;
         return this;
@@ -29,9 +30,11 @@ public class ShellTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCode")
     public Integer exitCode;
+
     public ShellTask withExitCode(Integer exitCode) {
         this.exitCode = exitCode;
         return this;
     }
     
+    public ShellTask(){}
 }

@@ -18,6 +18,7 @@ public class V1Beta1ConsumerQuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPrecise")
     public Boolean isPrecise;
+
     public V1Beta1ConsumerQuotaLimit withIsPrecise(Boolean isPrecise) {
         this.isPrecise = isPrecise;
         return this;
@@ -29,6 +30,7 @@ public class V1Beta1ConsumerQuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public String metric;
+
     public V1Beta1ConsumerQuotaLimit withMetric(String metric) {
         this.metric = metric;
         return this;
@@ -40,6 +42,7 @@ public class V1Beta1ConsumerQuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public V1Beta1ConsumerQuotaLimit withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class V1Beta1ConsumerQuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotaBuckets")
     public V1Beta1QuotaBucket[] quotaBuckets;
+
     public V1Beta1ConsumerQuotaLimit withQuotaBuckets(V1Beta1QuotaBucket[] quotaBuckets) {
         this.quotaBuckets = quotaBuckets;
         return this;
@@ -62,6 +66,7 @@ public class V1Beta1ConsumerQuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedLocations")
     public String[] supportedLocations;
+
     public V1Beta1ConsumerQuotaLimit withSupportedLocations(String[] supportedLocations) {
         this.supportedLocations = supportedLocations;
         return this;
@@ -73,9 +78,11 @@ public class V1Beta1ConsumerQuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public V1Beta1ConsumerQuotaLimit withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public V1Beta1ConsumerQuotaLimit(){}
 }

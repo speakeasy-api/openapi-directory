@@ -20,6 +20,7 @@ public class TrialComponentMetricSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Avg")
     public Double avg;
+
     public TrialComponentMetricSummary withAvg(Double avg) {
         this.avg = avg;
         return this;
@@ -28,6 +29,7 @@ public class TrialComponentMetricSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public TrialComponentMetricSummary withCount(Long count) {
         this.count = count;
         return this;
@@ -36,6 +38,7 @@ public class TrialComponentMetricSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Last")
     public Double last;
+
     public TrialComponentMetricSummary withLast(Double last) {
         this.last = last;
         return this;
@@ -44,6 +47,7 @@ public class TrialComponentMetricSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Max")
     public Double max;
+
     public TrialComponentMetricSummary withMax(Double max) {
         this.max = max;
         return this;
@@ -52,6 +56,7 @@ public class TrialComponentMetricSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public TrialComponentMetricSummary withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -60,6 +65,7 @@ public class TrialComponentMetricSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Min")
     public Double min;
+
     public TrialComponentMetricSummary withMin(Double min) {
         this.min = min;
         return this;
@@ -68,6 +74,7 @@ public class TrialComponentMetricSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceArn")
     public String sourceArn;
+
     public TrialComponentMetricSummary withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -76,6 +83,7 @@ public class TrialComponentMetricSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StdDev")
     public Double stdDev;
+
     public TrialComponentMetricSummary withStdDev(Double stdDev) {
         this.stdDev = stdDev;
         return this;
@@ -86,9 +94,11 @@ public class TrialComponentMetricSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TimeStamp")
     public OffsetDateTime timeStamp;
+
     public TrialComponentMetricSummary withTimeStamp(OffsetDateTime timeStamp) {
         this.timeStamp = timeStamp;
         return this;
     }
     
+    public TrialComponentMetricSummary(){}
 }

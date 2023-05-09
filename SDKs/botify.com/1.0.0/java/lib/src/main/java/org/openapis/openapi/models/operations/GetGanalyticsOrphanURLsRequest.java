@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGanalyticsOrphanURLsRequest {
@@ -12,6 +13,7 @@ public class GetGanalyticsOrphanURLsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
     public String analysisSlug;
+
     public GetGanalyticsOrphanURLsRequest withAnalysisSlug(String analysisSlug) {
         this.analysisSlug = analysisSlug;
         return this;
@@ -22,6 +24,7 @@ public class GetGanalyticsOrphanURLsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=medium")
     public GetGanalyticsOrphanURLsMediumEnum medium;
+
     public GetGanalyticsOrphanURLsRequest withMedium(GetGanalyticsOrphanURLsMediumEnum medium) {
         this.medium = medium;
         return this;
@@ -32,6 +35,7 @@ public class GetGanalyticsOrphanURLsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetGanalyticsOrphanURLsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class GetGanalyticsOrphanURLsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
     public String projectSlug;
+
     public GetGanalyticsOrphanURLsRequest withProjectSlug(String projectSlug) {
         this.projectSlug = projectSlug;
         return this;
@@ -52,6 +57,7 @@ public class GetGanalyticsOrphanURLsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Long size;
+
     public GetGanalyticsOrphanURLsRequest withSize(Long size) {
         this.size = size;
         return this;
@@ -62,6 +68,7 @@ public class GetGanalyticsOrphanURLsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=source")
     public GetGanalyticsOrphanURLsSourceEnum source;
+
     public GetGanalyticsOrphanURLsRequest withSource(GetGanalyticsOrphanURLsSourceEnum source) {
         this.source = source;
         return this;
@@ -72,9 +79,17 @@ public class GetGanalyticsOrphanURLsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetGanalyticsOrphanURLsRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetGanalyticsOrphanURLsRequest(@JsonProperty("analysis_slug") String analysisSlug, @JsonProperty("medium") GetGanalyticsOrphanURLsMediumEnum medium, @JsonProperty("project_slug") String projectSlug, @JsonProperty("source") GetGanalyticsOrphanURLsSourceEnum source, @JsonProperty("username") String username) {
+        this.analysisSlug = analysisSlug;
+        this.medium = medium;
+        this.projectSlug = projectSlug;
+        this.source = source;
+        this.username = username;
+  }
 }

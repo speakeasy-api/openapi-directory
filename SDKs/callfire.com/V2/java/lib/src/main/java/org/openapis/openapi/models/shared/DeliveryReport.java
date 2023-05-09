@@ -23,6 +23,7 @@ public class DeliveryReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignId")
     public Long campaignId;
+
     public DeliveryReport withCampaignId(Long campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -34,6 +35,7 @@ public class DeliveryReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier")
     public String carrier;
+
     public DeliveryReport withCarrier(String carrier) {
         this.carrier = carrier;
         return this;
@@ -45,6 +47,7 @@ public class DeliveryReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryCategory")
     public DeliveryReportDeliveryCategoryEnum deliveryCategory;
+
     public DeliveryReport withDeliveryCategory(DeliveryReportDeliveryCategoryEnum deliveryCategory) {
         this.deliveryCategory = deliveryCategory;
         return this;
@@ -56,6 +59,7 @@ public class DeliveryReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryState")
     public DeliveryReportDeliveryStateEnum deliveryState;
+
     public DeliveryReport withDeliveryState(DeliveryReportDeliveryStateEnum deliveryState) {
         this.deliveryState = deliveryState;
         return this;
@@ -67,6 +71,7 @@ public class DeliveryReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromNumber")
     public String fromNumber;
+
     public DeliveryReport withFromNumber(String fromNumber) {
         this.fromNumber = fromNumber;
         return this;
@@ -78,6 +83,7 @@ public class DeliveryReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageText")
     public String messageText;
+
     public DeliveryReport withMessageText(String messageText) {
         this.messageText = messageText;
         return this;
@@ -89,6 +95,7 @@ public class DeliveryReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toNumber")
     public String toNumber;
+
     public DeliveryReport withToNumber(String toNumber) {
         this.toNumber = toNumber;
         return this;
@@ -102,9 +109,11 @@ public class DeliveryReport {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated")
     public OffsetDateTime updated;
+
     public DeliveryReport withUpdated(OffsetDateTime updated) {
         this.updated = updated;
         return this;
     }
     
+    public DeliveryReport(){}
 }

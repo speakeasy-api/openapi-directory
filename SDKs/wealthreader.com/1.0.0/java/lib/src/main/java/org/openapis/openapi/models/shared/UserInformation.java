@@ -11,11 +11,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 
 /**
- * UserInformation - Informaci\u00f3n relativa a la persona que hace login
+ * UserInformation - Información relativa a la persona que hace login
  */
 public class UserInformation {
     @JsonProperty("ID")
     public String id;
+
     public UserInformation withId(String id) {
         this.id = id;
         return this;
@@ -24,6 +25,7 @@ public class UserInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public UserInformation withAddress(String address) {
         this.address = address;
         return this;
@@ -33,6 +35,7 @@ public class UserInformation {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("birth_date")
     public LocalDate birthDate;
+
     public UserInformation withBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
         return this;
@@ -41,17 +44,19 @@ public class UserInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birth_place")
     public String birthPlace;
+
     public UserInformation withBirthPlace(String birthPlace) {
         this.birthPlace = birthPlace;
         return this;
     }
     
     /**
-     * N\u00famero de tel\u00e9fono con el prefijo internacional, sin espacios
+     * Número de teléfono con el prefijo internacional, sin espacios
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cell_phone")
     public String cellPhone;
+
     public UserInformation withCellPhone(String cellPhone) {
         this.cellPhone = cellPhone;
         return this;
@@ -60,6 +65,7 @@ public class UserInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public UserInformation withCity(String city) {
         this.city = city;
         return this;
@@ -68,6 +74,7 @@ public class UserInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public UserInformation withCountry(String country) {
         this.country = country;
         return this;
@@ -76,6 +83,7 @@ public class UserInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserInformation withEmail(String email) {
         this.email = email;
         return this;
@@ -84,17 +92,19 @@ public class UserInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public UserInformationGenderEnum gender;
+
     public UserInformation withGender(UserInformationGenderEnum gender) {
         this.gender = gender;
         return this;
     }
     
     /**
-     * El valor aqu\u00ed es muy variable de una entidad a otra: de indicar solamente si es cuenta propia o cuenta ajena a indicar el tipo de profesi\u00f3n
+     * El valor aquí es muy variable de una entidad a otra: de indicar solamente si es cuenta propia o cuenta ajena a indicar el tipo de profesión
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public String job;
+
     public UserInformation withJob(String job) {
         this.job = job;
         return this;
@@ -103,6 +113,7 @@ public class UserInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marital_status")
     public UserInformationMaritalStatusEnum maritalStatus;
+
     public UserInformation withMaritalStatus(UserInformationMaritalStatusEnum maritalStatus) {
         this.maritalStatus = maritalStatus;
         return this;
@@ -110,6 +121,7 @@ public class UserInformation {
     
     @JsonProperty("name")
     public String name;
+
     public UserInformation withName(String name) {
         this.name = name;
         return this;
@@ -118,9 +130,14 @@ public class UserInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_code")
     public String postalCode;
+
     public UserInformation withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
     
+    public UserInformation(@JsonProperty("ID") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribePortfolioSharesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DescribePortfolioSharesInput describePortfolioSharesInput;
+
     public DescribePortfolioSharesRequest withDescribePortfolioSharesInput(org.openapis.openapi.models.shared.DescribePortfolioSharesInput describePortfolioSharesInput) {
         this.describePortfolioSharesInput = describePortfolioSharesInput;
         return this;
@@ -19,6 +21,7 @@ public class DescribePortfolioSharesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
     public String pageSize;
+
     public DescribePortfolioSharesRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -29,6 +32,7 @@ public class DescribePortfolioSharesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
     public String pageToken;
+
     public DescribePortfolioSharesRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -36,6 +40,7 @@ public class DescribePortfolioSharesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribePortfolioSharesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class DescribePortfolioSharesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribePortfolioSharesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class DescribePortfolioSharesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribePortfolioSharesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class DescribePortfolioSharesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribePortfolioSharesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class DescribePortfolioSharesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribePortfolioSharesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class DescribePortfolioSharesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribePortfolioSharesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class DescribePortfolioSharesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribePortfolioSharesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class DescribePortfolioSharesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DescribePortfolioSharesXAmzTargetEnum xAmzTarget;
+
     public DescribePortfolioSharesRequest withXAmzTarget(DescribePortfolioSharesXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DescribePortfolioSharesRequest(@JsonProperty("DescribePortfolioSharesInput") org.openapis.openapi.models.shared.DescribePortfolioSharesInput describePortfolioSharesInput, @JsonProperty("X-Amz-Target") DescribePortfolioSharesXAmzTargetEnum xAmzTarget) {
+        this.describePortfolioSharesInput = describePortfolioSharesInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * LawsResponse - Successful request
@@ -15,6 +15,7 @@ public class LawsResponse {
      */
     
     public Object inputs;
+
     public LawsResponse withInputs(Object inputs) {
         this.inputs = inputs;
         return this;
@@ -25,6 +26,7 @@ public class LawsResponse {
      */
     
     public Metadata metadata;
+
     public LawsResponse withMetadata(Metadata metadata) {
         this.metadata = metadata;
         return this;
@@ -35,9 +37,15 @@ public class LawsResponse {
      */
     
     public Law[] result;
+
     public LawsResponse withResult(Law[] result) {
         this.result = result;
         return this;
     }
     
+    public LawsResponse(@JsonProperty("inputs") Object inputs, @JsonProperty("metadata") Metadata metadata, @JsonProperty("result") Law[] result) {
+        this.inputs = inputs;
+        this.metadata = metadata;
+        this.result = result;
+  }
 }

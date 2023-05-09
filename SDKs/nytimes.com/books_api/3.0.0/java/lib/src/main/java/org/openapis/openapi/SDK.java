@@ -119,6 +119,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -150,11 +155,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETListsBestSellersHistoryJsonResponse res = new org.openapis.openapi.models.operations.GETListsBestSellersHistoryJsonResponse() {{
+        org.openapis.openapi.models.operations.GETListsBestSellersHistoryJsonResponse res = new org.openapis.openapi.models.operations.GETListsBestSellersHistoryJsonResponse(contentType, httpRes.statusCode()) {{
             getListsBestSellersHistoryJSON200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +199,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETListsDateListJsonResponse res = new org.openapis.openapi.models.operations.GETListsDateListJsonResponse() {{
+        org.openapis.openapi.models.operations.GETListsDateListJsonResponse res = new org.openapis.openapi.models.operations.GETListsDateListJsonResponse(contentType, httpRes.statusCode()) {{
             getListsDateListJSON200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +243,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETListsFormatResponse res = new org.openapis.openapi.models.operations.GETListsFormatResponse() {{
+        org.openapis.openapi.models.operations.GETListsFormatResponse res = new org.openapis.openapi.models.operations.GETListsFormatResponse(contentType, httpRes.statusCode()) {{
             getListsFormat200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,11 +287,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETListsNamesFormatResponse res = new org.openapis.openapi.models.operations.GETListsNamesFormatResponse() {{
+        org.openapis.openapi.models.operations.GETListsNamesFormatResponse res = new org.openapis.openapi.models.operations.GETListsNamesFormatResponse(contentType, httpRes.statusCode()) {{
             getListsNamesFormat200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,11 +331,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETListsOverviewFormatResponse res = new org.openapis.openapi.models.operations.GETListsOverviewFormatResponse() {{
+        org.openapis.openapi.models.operations.GETListsOverviewFormatResponse res = new org.openapis.openapi.models.operations.GETListsOverviewFormatResponse(contentType, httpRes.statusCode()) {{
             getListsOverviewFormat200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -380,11 +375,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETReviewsFormatResponse res = new org.openapis.openapi.models.operations.GETReviewsFormatResponse() {{
+        org.openapis.openapi.models.operations.GETReviewsFormatResponse res = new org.openapis.openapi.models.operations.GETReviewsFormatResponse(contentType, httpRes.statusCode()) {{
             getReviewsFormat200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

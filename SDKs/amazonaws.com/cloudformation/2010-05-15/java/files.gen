@@ -787,4 +787,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateStackSetInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateTerminationProtectionInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidateTemplateInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

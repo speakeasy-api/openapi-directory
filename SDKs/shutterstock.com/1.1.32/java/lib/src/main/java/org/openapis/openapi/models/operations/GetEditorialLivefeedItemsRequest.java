@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEditorialLivefeedItemsRequest {
@@ -12,6 +13,7 @@ public class GetEditorialLivefeedItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GetEditorialLivefeedItemsRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -22,9 +24,14 @@ public class GetEditorialLivefeedItemsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetEditorialLivefeedItemsRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetEditorialLivefeedItemsRequest(@JsonProperty("country") String country, @JsonProperty("id") String id) {
+        this.country = country;
+        this.id = id;
+  }
 }

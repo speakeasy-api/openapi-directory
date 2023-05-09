@@ -18,6 +18,7 @@ public class LeaseTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public LeaseTasksRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -29,6 +30,7 @@ public class LeaseTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leaseDuration")
     public String leaseDuration;
+
     public LeaseTasksRequest withLeaseDuration(String leaseDuration) {
         this.leaseDuration = leaseDuration;
         return this;
@@ -40,6 +42,7 @@ public class LeaseTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTasks")
     public Integer maxTasks;
+
     public LeaseTasksRequest withMaxTasks(Integer maxTasks) {
         this.maxTasks = maxTasks;
         return this;
@@ -51,9 +54,11 @@ public class LeaseTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseView")
     public LeaseTasksRequestResponseViewEnum responseView;
+
     public LeaseTasksRequest withResponseView(LeaseTasksRequestResponseViewEnum responseView) {
         this.responseView = responseView;
         return this;
     }
     
+    public LeaseTasksRequest(){}
 }

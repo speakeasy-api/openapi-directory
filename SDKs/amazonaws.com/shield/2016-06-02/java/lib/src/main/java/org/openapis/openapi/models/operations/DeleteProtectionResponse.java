@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProtectionResponse {
     
     public String contentType;
+
     public DeleteProtectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProtectionResponse {
      */
     
     public java.util.Map<String, Object> deleteProtectionResponse;
+
     public DeleteProtectionResponse withDeleteProtectionResponse(java.util.Map<String, Object> deleteProtectionResponse) {
         this.deleteProtectionResponse = deleteProtectionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProtectionResponse {
      */
     
     public Object internalErrorException;
+
     public DeleteProtectionResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteProtectionResponse {
      */
     
     public Object optimisticLockException;
+
     public DeleteProtectionResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteProtectionResponse {
     
     
     public Integer statusCode;
+
     public DeleteProtectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteProtectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProtectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteProtectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteProtectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteProtectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

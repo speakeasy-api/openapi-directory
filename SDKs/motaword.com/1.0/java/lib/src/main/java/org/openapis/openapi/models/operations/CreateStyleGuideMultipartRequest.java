@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateStyleGuideMultipartRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public org.openapis.openapi.models.shared.StyleGuideUploadRequest1 styleGuideUploadRequest1;
+
     public CreateStyleGuideMultipartRequest withStyleGuideUploadRequest1(org.openapis.openapi.models.shared.StyleGuideUploadRequest1 styleGuideUploadRequest1) {
         this.styleGuideUploadRequest1 = styleGuideUploadRequest1;
         return this;
@@ -19,9 +21,13 @@ public class CreateStyleGuideMultipartRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public CreateStyleGuideMultipartRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public CreateStyleGuideMultipartRequest(@JsonProperty("projectId") Long projectId) {
+        this.projectId = projectId;
+  }
 }

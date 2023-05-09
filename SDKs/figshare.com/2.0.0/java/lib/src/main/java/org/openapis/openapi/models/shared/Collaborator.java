@@ -12,6 +12,7 @@ public class Collaborator {
      */
     @JsonProperty("name")
     public String name;
+
     public Collaborator withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class Collaborator {
      */
     @JsonProperty("role_name")
     public String roleName;
+
     public Collaborator withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -32,9 +34,15 @@ public class Collaborator {
      */
     @JsonProperty("user_id")
     public Long userId;
+
     public Collaborator withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public Collaborator(@JsonProperty("name") String name, @JsonProperty("role_name") String roleName, @JsonProperty("user_id") Long userId) {
+        this.name = name;
+        this.roleName = roleName;
+        this.userId = userId;
+  }
 }

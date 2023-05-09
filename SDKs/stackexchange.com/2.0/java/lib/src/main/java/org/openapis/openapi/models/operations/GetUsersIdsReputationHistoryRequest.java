@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdsReputationHistoryRequest {
@@ -13,6 +14,7 @@ public class GetUsersIdsReputationHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetUsersIdsReputationHistoryRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetUsersIdsReputationHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetUsersIdsReputationHistoryRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -63,6 +66,7 @@ public class GetUsersIdsReputationHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
     public String ids;
+
     public GetUsersIdsReputationHistoryRequest withIds(String ids) {
         this.ids = ids;
         return this;
@@ -70,6 +74,7 @@ public class GetUsersIdsReputationHistoryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetUsersIdsReputationHistoryRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -77,6 +82,7 @@ public class GetUsersIdsReputationHistoryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetUsersIdsReputationHistoryRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -88,9 +94,14 @@ public class GetUsersIdsReputationHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetUsersIdsReputationHistoryRequest withSite(String site) {
         this.site = site;
         return this;
     }
     
+    public GetUsersIdsReputationHistoryRequest(@JsonProperty("ids") String ids, @JsonProperty("site") String site) {
+        this.ids = ids;
+        this.site = site;
+  }
 }

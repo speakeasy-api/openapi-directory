@@ -15,6 +15,7 @@ public class ImportErrorData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationID")
     public String applicationID;
+
     public ImportErrorData withApplicationID(String applicationID) {
         this.applicationID = applicationID;
         return this;
@@ -23,6 +24,7 @@ public class ImportErrorData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2LaunchTemplateID")
     public String ec2LaunchTemplateID;
+
     public ImportErrorData withEc2LaunchTemplateID(String ec2LaunchTemplateID) {
         this.ec2LaunchTemplateID = ec2LaunchTemplateID;
         return this;
@@ -31,6 +33,7 @@ public class ImportErrorData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawError")
     public String rawError;
+
     public ImportErrorData withRawError(String rawError) {
         this.rawError = rawError;
         return this;
@@ -39,6 +42,7 @@ public class ImportErrorData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowNumber")
     public Long rowNumber;
+
     public ImportErrorData withRowNumber(Long rowNumber) {
         this.rowNumber = rowNumber;
         return this;
@@ -47,6 +51,7 @@ public class ImportErrorData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public ImportErrorData withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
@@ -55,9 +60,11 @@ public class ImportErrorData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waveID")
     public String waveID;
+
     public ImportErrorData withWaveID(String waveID) {
         this.waveID = waveID;
         return this;
     }
     
+    public ImportErrorData(){}
 }

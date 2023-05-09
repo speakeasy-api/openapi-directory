@@ -15,6 +15,7 @@ public class GetArticlesearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_date")
     public String beginDate;
+
     public GetArticlesearchJsonRequest withBeginDate(String beginDate) {
         this.beginDate = beginDate;
         return this;
@@ -28,6 +29,7 @@ public class GetArticlesearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public String endDate;
+
     public GetArticlesearchJsonRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -53,6 +55,7 @@ public class GetArticlesearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet_field")
     public String facetField;
+
     public GetArticlesearchJsonRequest withFacetField(String facetField) {
         this.facetField = facetField;
         return this;
@@ -64,6 +67,7 @@ public class GetArticlesearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet_filter")
     public Boolean facetFilter;
+
     public GetArticlesearchJsonRequest withFacetFilter(Boolean facetFilter) {
         this.facetFilter = facetFilter;
         return this;
@@ -111,6 +115,7 @@ public class GetArticlesearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fl")
     public String fl;
+
     public GetArticlesearchJsonRequest withFl(String fl) {
         this.fl = fl;
         return this;
@@ -126,6 +131,7 @@ public class GetArticlesearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fq")
     public String fq;
+
     public GetArticlesearchJsonRequest withFq(String fq) {
         this.fq = fq;
         return this;
@@ -139,6 +145,7 @@ public class GetArticlesearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hl")
     public Boolean hl;
+
     public GetArticlesearchJsonRequest withHl(Boolean hl) {
         this.hl = hl;
         return this;
@@ -150,6 +157,7 @@ public class GetArticlesearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetArticlesearchJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -161,6 +169,7 @@ public class GetArticlesearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetArticlesearchJsonRequest withQ(String q) {
         this.q = q;
         return this;
@@ -172,9 +181,11 @@ public class GetArticlesearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetArticlesearchJsonSortEnum sort;
+
     public GetArticlesearchJsonRequest withSort(GetArticlesearchJsonSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetArticlesearchJsonRequest(){}
 }

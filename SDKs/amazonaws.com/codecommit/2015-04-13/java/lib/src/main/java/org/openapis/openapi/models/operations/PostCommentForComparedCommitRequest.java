@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCommentForComparedCommitRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PostCommentForComparedCommitInput postCommentForComparedCommitInput;
+
     public PostCommentForComparedCommitRequest withPostCommentForComparedCommitInput(org.openapis.openapi.models.shared.PostCommentForComparedCommitInput postCommentForComparedCommitInput) {
         this.postCommentForComparedCommitInput = postCommentForComparedCommitInput;
         return this;
@@ -16,6 +18,7 @@ public class PostCommentForComparedCommitRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public PostCommentForComparedCommitRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class PostCommentForComparedCommitRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public PostCommentForComparedCommitRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class PostCommentForComparedCommitRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public PostCommentForComparedCommitRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class PostCommentForComparedCommitRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public PostCommentForComparedCommitRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class PostCommentForComparedCommitRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public PostCommentForComparedCommitRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class PostCommentForComparedCommitRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public PostCommentForComparedCommitRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class PostCommentForComparedCommitRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public PostCommentForComparedCommitRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class PostCommentForComparedCommitRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public PostCommentForComparedCommitXAmzTargetEnum xAmzTarget;
+
     public PostCommentForComparedCommitRequest withXAmzTarget(PostCommentForComparedCommitXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public PostCommentForComparedCommitRequest(@JsonProperty("PostCommentForComparedCommitInput") org.openapis.openapi.models.shared.PostCommentForComparedCommitInput postCommentForComparedCommitInput, @JsonProperty("X-Amz-Target") PostCommentForComparedCommitXAmzTargetEnum xAmzTarget) {
+        this.postCommentForComparedCommitInput = postCommentForComparedCommitInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

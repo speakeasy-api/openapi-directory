@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RevokeGrantResponse {
     
     public String contentType;
+
     public RevokeGrantResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RevokeGrantResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public RevokeGrantResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class RevokeGrantResponse {
      */
     
     public Object invalidArnException;
+
     public RevokeGrantResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class RevokeGrantResponse {
      */
     
     public Object invalidGrantIdException;
+
     public RevokeGrantResponse withInvalidGrantIdException(Object invalidGrantIdException) {
         this.invalidGrantIdException = invalidGrantIdException;
         return this;
@@ -49,6 +54,7 @@ public class RevokeGrantResponse {
      */
     
     public Object kmsInternalException;
+
     public RevokeGrantResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -59,6 +65,7 @@ public class RevokeGrantResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public RevokeGrantResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -69,6 +76,7 @@ public class RevokeGrantResponse {
      */
     
     public Object notFoundException;
+
     public RevokeGrantResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class RevokeGrantResponse {
     
     
     public Integer statusCode;
+
     public RevokeGrantResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class RevokeGrantResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RevokeGrantResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RevokeGrantResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

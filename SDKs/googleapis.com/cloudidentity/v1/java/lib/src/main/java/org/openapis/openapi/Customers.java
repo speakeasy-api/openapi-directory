@@ -59,11 +59,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsCancelResponse res = new org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsCancelResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsCancelResponse res = new org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsCancelResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsIsInvitableUserResponse res = new org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsIsInvitableUserResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsIsInvitableUserResponse res = new org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsIsInvitableUserResponse(contentType, httpRes.statusCode()) {{
             isInvitableUserResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsListResponse res = new org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsListResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsListResponse res = new org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsListResponse(contentType, httpRes.statusCode()) {{
             listUserInvitationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsSendResponse res = new org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsSendResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsSendResponse res = new org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsSendResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

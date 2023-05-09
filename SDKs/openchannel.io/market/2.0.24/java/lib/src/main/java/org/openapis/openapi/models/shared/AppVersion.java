@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AppVersion - An AppVersion
@@ -15,6 +15,7 @@ public class AppVersion {
      */
     
     public String[] access;
+
     public AppVersion withAccess(String[] access) {
         this.access = access;
         return this;
@@ -25,6 +26,7 @@ public class AppVersion {
      */
     
     public Restrictions allow;
+
     public AppVersion withAllow(Restrictions allow) {
         this.allow = allow;
         return this;
@@ -35,6 +37,7 @@ public class AppVersion {
      */
     
     public String appId;
+
     public AppVersion withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -45,6 +48,7 @@ public class AppVersion {
      */
     
     public java.util.Map<String, Object> attributes;
+
     public AppVersion withAttributes(java.util.Map<String, Object> attributes) {
         this.attributes = attributes;
         return this;
@@ -55,6 +59,7 @@ public class AppVersion {
      */
     
     public Long created;
+
     public AppVersion withCreated(Long created) {
         this.created = created;
         return this;
@@ -65,6 +70,7 @@ public class AppVersion {
      */
     
     public java.util.Map<String, Object> customData;
+
     public AppVersion withCustomData(java.util.Map<String, Object> customData) {
         this.customData = customData;
         return this;
@@ -75,6 +81,7 @@ public class AppVersion {
      */
     
     public String developerId;
+
     public AppVersion withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -85,6 +92,7 @@ public class AppVersion {
      */
     
     public Boolean isLatestVersion;
+
     public AppVersion withIsLatestVersion(Boolean isLatestVersion) {
         this.isLatestVersion = isLatestVersion;
         return this;
@@ -95,6 +103,7 @@ public class AppVersion {
      */
     
     public Boolean isLive;
+
     public AppVersion withIsLive(Boolean isLive) {
         this.isLive = isLive;
         return this;
@@ -105,6 +114,7 @@ public class AppVersion {
      */
     
     public Long lastUpdated;
+
     public AppVersion withLastUpdated(Long lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -115,6 +125,7 @@ public class AppVersion {
      */
     
     public Model[] model;
+
     public AppVersion withModel(Model[] model) {
         this.model = model;
         return this;
@@ -125,6 +136,7 @@ public class AppVersion {
      */
     
     public String name;
+
     public AppVersion withName(String name) {
         this.name = name;
         return this;
@@ -135,6 +147,7 @@ public class AppVersion {
      */
     
     public Parent parent;
+
     public AppVersion withParent(Parent parent) {
         this.parent = parent;
         return this;
@@ -145,6 +158,7 @@ public class AppVersion {
      */
     
     public Long rating;
+
     public AppVersion withRating(Long rating) {
         this.rating = rating;
         return this;
@@ -155,6 +169,7 @@ public class AppVersion {
      */
     
     public Restrictions restrict;
+
     public AppVersion withRestrict(Restrictions restrict) {
         this.restrict = restrict;
         return this;
@@ -165,6 +180,7 @@ public class AppVersion {
      */
     
     public Long reviewCount;
+
     public AppVersion withReviewCount(Long reviewCount) {
         this.reviewCount = reviewCount;
         return this;
@@ -175,6 +191,7 @@ public class AppVersion {
      */
     
     public String[] safeName;
+
     public AppVersion withSafeName(String[] safeName) {
         this.safeName = safeName;
         return this;
@@ -185,6 +202,7 @@ public class AppVersion {
      */
     
     public Status status;
+
     public AppVersion withStatus(Status status) {
         this.status = status;
         return this;
@@ -195,6 +213,7 @@ public class AppVersion {
      */
     
     public String type;
+
     public AppVersion withType(String type) {
         this.type = type;
         return this;
@@ -205,9 +224,27 @@ public class AppVersion {
      */
     
     public Long version;
+
     public AppVersion withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public AppVersion(@JsonProperty("allow") Restrictions allow, @JsonProperty("appId") String appId, @JsonProperty("created") Long created, @JsonProperty("customData") java.util.Map<String, Object> customData, @JsonProperty("developerId") String developerId, @JsonProperty("isLatestVersion") Boolean isLatestVersion, @JsonProperty("isLive") Boolean isLive, @JsonProperty("lastUpdated") Long lastUpdated, @JsonProperty("model") Model[] model, @JsonProperty("name") String name, @JsonProperty("parent") Parent parent, @JsonProperty("restrict") Restrictions restrict, @JsonProperty("safeName") String[] safeName, @JsonProperty("status") Status status, @JsonProperty("version") Long version) {
+        this.allow = allow;
+        this.appId = appId;
+        this.created = created;
+        this.customData = customData;
+        this.developerId = developerId;
+        this.isLatestVersion = isLatestVersion;
+        this.isLive = isLive;
+        this.lastUpdated = lastUpdated;
+        this.model = model;
+        this.name = name;
+        this.parent = parent;
+        this.restrict = restrict;
+        this.safeName = safeName;
+        this.status = status;
+        this.version = version;
+  }
 }

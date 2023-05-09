@@ -15,6 +15,7 @@ public class ScheduleBByPurpose {
      */
     @JsonProperty("committee_id")
     public String committeeId;
+
     public ScheduleBByPurpose withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -27,6 +28,7 @@ public class ScheduleBByPurpose {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public ScheduleBByPurpose withCount(Integer count) {
         this.count = count;
         return this;
@@ -40,6 +42,7 @@ public class ScheduleBByPurpose {
      */
     @JsonProperty("cycle")
     public Integer cycle;
+
     public ScheduleBByPurpose withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -52,6 +55,7 @@ public class ScheduleBByPurpose {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo_count")
     public Integer memoCount;
+
     public ScheduleBByPurpose withMemoCount(Integer memoCount) {
         this.memoCount = memoCount;
         return this;
@@ -64,6 +68,7 @@ public class ScheduleBByPurpose {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo_total")
     public Double memoTotal;
+
     public ScheduleBByPurpose withMemoTotal(Double memoTotal) {
         this.memoTotal = memoTotal;
         return this;
@@ -74,6 +79,7 @@ public class ScheduleBByPurpose {
      */
     @JsonProperty("purpose")
     public String purpose;
+
     public ScheduleBByPurpose withPurpose(String purpose) {
         this.purpose = purpose;
         return this;
@@ -86,9 +92,15 @@ public class ScheduleBByPurpose {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public ScheduleBByPurpose withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public ScheduleBByPurpose(@JsonProperty("committee_id") String committeeId, @JsonProperty("cycle") Integer cycle, @JsonProperty("purpose") String purpose) {
+        this.committeeId = committeeId;
+        this.cycle = cycle;
+        this.purpose = purpose;
+  }
 }

@@ -12,6 +12,7 @@ public class EmailQuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bccAddresses")
     public String[] bccAddresses;
+
     public EmailQuoteDto withBccAddresses(String[] bccAddresses) {
         this.bccAddresses = bccAddresses;
         return this;
@@ -20,6 +21,7 @@ public class EmailQuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageBody")
     public String messageBody;
+
     public EmailQuoteDto withMessageBody(String messageBody) {
         this.messageBody = messageBody;
         return this;
@@ -28,6 +30,7 @@ public class EmailQuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quoteId")
     public Long quoteId;
+
     public EmailQuoteDto withQuoteId(Long quoteId) {
         this.quoteId = quoteId;
         return this;
@@ -36,9 +39,11 @@ public class EmailQuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toAddress")
     public String toAddress;
+
     public EmailQuoteDto withToAddress(String toAddress) {
         this.toAddress = toAddress;
         return this;
     }
     
+    public EmailQuoteDto(){}
 }

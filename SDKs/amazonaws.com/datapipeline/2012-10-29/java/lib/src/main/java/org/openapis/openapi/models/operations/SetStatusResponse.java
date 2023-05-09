@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetStatusResponse {
     
     public String contentType;
+
     public SetStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SetStatusResponse {
      */
     
     public Object internalServiceError;
+
     public SetStatusResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class SetStatusResponse {
      */
     
     public Object invalidRequestException;
+
     public SetStatusResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class SetStatusResponse {
      */
     
     public Object pipelineDeletedException;
+
     public SetStatusResponse withPipelineDeletedException(Object pipelineDeletedException) {
         this.pipelineDeletedException = pipelineDeletedException;
         return this;
@@ -49,6 +54,7 @@ public class SetStatusResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public SetStatusResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class SetStatusResponse {
     
     
     public Integer statusCode;
+
     public SetStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class SetStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SetStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

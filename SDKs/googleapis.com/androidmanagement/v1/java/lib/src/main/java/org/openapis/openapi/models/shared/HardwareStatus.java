@@ -18,6 +18,7 @@ public class HardwareStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batteryTemperatures")
     public Float[] batteryTemperatures;
+
     public HardwareStatus withBatteryTemperatures(Float[] batteryTemperatures) {
         this.batteryTemperatures = batteryTemperatures;
         return this;
@@ -29,6 +30,7 @@ public class HardwareStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuTemperatures")
     public Float[] cpuTemperatures;
+
     public HardwareStatus withCpuTemperatures(Float[] cpuTemperatures) {
         this.cpuTemperatures = cpuTemperatures;
         return this;
@@ -40,6 +42,7 @@ public class HardwareStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuUsages")
     public Float[] cpuUsages;
+
     public HardwareStatus withCpuUsages(Float[] cpuUsages) {
         this.cpuUsages = cpuUsages;
         return this;
@@ -51,6 +54,7 @@ public class HardwareStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public HardwareStatus withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -62,6 +66,7 @@ public class HardwareStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fanSpeeds")
     public Float[] fanSpeeds;
+
     public HardwareStatus withFanSpeeds(Float[] fanSpeeds) {
         this.fanSpeeds = fanSpeeds;
         return this;
@@ -73,6 +78,7 @@ public class HardwareStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gpuTemperatures")
     public Float[] gpuTemperatures;
+
     public HardwareStatus withGpuTemperatures(Float[] gpuTemperatures) {
         this.gpuTemperatures = gpuTemperatures;
         return this;
@@ -84,9 +90,11 @@ public class HardwareStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skinTemperatures")
     public Float[] skinTemperatures;
+
     public HardwareStatus withSkinTemperatures(Float[] skinTemperatures) {
         this.skinTemperatures = skinTemperatures;
         return this;
     }
     
+    public HardwareStatus(){}
 }

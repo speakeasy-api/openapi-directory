@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CareContext {
     @JsonProperty("referenceNumber")
     public String referenceNumber;
+
     public CareContext withReferenceNumber(String referenceNumber) {
         this.referenceNumber = referenceNumber;
         return this;
     }
     
+    public CareContext(@JsonProperty("referenceNumber") String referenceNumber) {
+        this.referenceNumber = referenceNumber;
+  }
 }

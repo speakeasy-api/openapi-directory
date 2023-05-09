@@ -15,9 +15,13 @@ public class CatalogQueryText {
      */
     @JsonProperty("keywords")
     public String[] keywords;
+
     public CatalogQueryText withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
     }
     
+    public CatalogQueryText(@JsonProperty("keywords") String[] keywords) {
+        this.keywords = keywords;
+  }
 }

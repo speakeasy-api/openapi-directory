@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CrawlDatamodelField {
     @JsonProperty("group")
     public String group;
+
     public CrawlDatamodelField withGroup(String group) {
         this.group = group;
         return this;
@@ -16,6 +17,7 @@ public class CrawlDatamodelField {
     
     @JsonProperty("id")
     public String id;
+
     public CrawlDatamodelField withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +25,7 @@ public class CrawlDatamodelField {
     
     @JsonProperty("multiple")
     public Boolean multiple;
+
     public CrawlDatamodelField withMultiple(Boolean multiple) {
         this.multiple = multiple;
         return this;
@@ -30,6 +33,7 @@ public class CrawlDatamodelField {
     
     @JsonProperty("name")
     public String name;
+
     public CrawlDatamodelField withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +41,7 @@ public class CrawlDatamodelField {
     
     @JsonProperty("permissions")
     public String[] permissions;
+
     public CrawlDatamodelField withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
@@ -44,6 +49,7 @@ public class CrawlDatamodelField {
     
     @JsonProperty("subtype")
     public String subtype;
+
     public CrawlDatamodelField withSubtype(String subtype) {
         this.subtype = subtype;
         return this;
@@ -51,9 +57,19 @@ public class CrawlDatamodelField {
     
     @JsonProperty("type")
     public String type;
+
     public CrawlDatamodelField withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CrawlDatamodelField(@JsonProperty("group") String group, @JsonProperty("id") String id, @JsonProperty("multiple") Boolean multiple, @JsonProperty("name") String name, @JsonProperty("permissions") String[] permissions, @JsonProperty("subtype") String subtype, @JsonProperty("type") String type) {
+        this.group = group;
+        this.id = id;
+        this.multiple = multiple;
+        this.name = name;
+        this.permissions = permissions;
+        this.subtype = subtype;
+        this.type = type;
+  }
 }

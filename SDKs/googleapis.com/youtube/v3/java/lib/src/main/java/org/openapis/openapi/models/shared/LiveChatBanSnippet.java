@@ -15,6 +15,7 @@ public class LiveChatBanSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("banDurationSeconds")
     public String banDurationSeconds;
+
     public LiveChatBanSnippet withBanDurationSeconds(String banDurationSeconds) {
         this.banDurationSeconds = banDurationSeconds;
         return this;
@@ -23,6 +24,7 @@ public class LiveChatBanSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannedUserDetails")
     public ChannelProfileDetails bannedUserDetails;
+
     public LiveChatBanSnippet withBannedUserDetails(ChannelProfileDetails bannedUserDetails) {
         this.bannedUserDetails = bannedUserDetails;
         return this;
@@ -34,6 +36,7 @@ public class LiveChatBanSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveChatId")
     public String liveChatId;
+
     public LiveChatBanSnippet withLiveChatId(String liveChatId) {
         this.liveChatId = liveChatId;
         return this;
@@ -45,9 +48,11 @@ public class LiveChatBanSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public LiveChatBanSnippetTypeEnum type;
+
     public LiveChatBanSnippet withType(LiveChatBanSnippetTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public LiveChatBanSnippet(){}
 }

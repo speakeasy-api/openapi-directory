@@ -18,9 +18,11 @@ public class LinkedContentReferenceSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetsChartReferenceSuggestionState")
     public SheetsChartReferenceSuggestionState sheetsChartReferenceSuggestionState;
+
     public LinkedContentReferenceSuggestionState withSheetsChartReferenceSuggestionState(SheetsChartReferenceSuggestionState sheetsChartReferenceSuggestionState) {
         this.sheetsChartReferenceSuggestionState = sheetsChartReferenceSuggestionState;
         return this;
     }
     
+    public LinkedContentReferenceSuggestionState(){}
 }

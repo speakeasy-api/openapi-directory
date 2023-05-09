@@ -15,6 +15,7 @@ public class ExecutionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountsCleanup")
     public Boolean accountsCleanup;
+
     public ExecutionConfiguration withAccountsCleanup(Boolean accountsCleanup) {
         this.accountsCleanup = accountsCleanup;
         return this;
@@ -23,6 +24,7 @@ public class ExecutionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appPackagesCleanup")
     public Boolean appPackagesCleanup;
+
     public ExecutionConfiguration withAppPackagesCleanup(Boolean appPackagesCleanup) {
         this.appPackagesCleanup = appPackagesCleanup;
         return this;
@@ -31,6 +33,7 @@ public class ExecutionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTimeoutMinutes")
     public Long jobTimeoutMinutes;
+
     public ExecutionConfiguration withJobTimeoutMinutes(Long jobTimeoutMinutes) {
         this.jobTimeoutMinutes = jobTimeoutMinutes;
         return this;
@@ -39,6 +42,7 @@ public class ExecutionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipAppResign")
     public Boolean skipAppResign;
+
     public ExecutionConfiguration withSkipAppResign(Boolean skipAppResign) {
         this.skipAppResign = skipAppResign;
         return this;
@@ -47,9 +51,11 @@ public class ExecutionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoCapture")
     public Boolean videoCapture;
+
     public ExecutionConfiguration withVideoCapture(Boolean videoCapture) {
         this.videoCapture = videoCapture;
         return this;
     }
     
+    public ExecutionConfiguration(){}
 }

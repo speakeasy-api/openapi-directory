@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFindingsResponse {
@@ -12,6 +13,7 @@ public class GetFindingsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetFindingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetFindingsResponse {
      */
     
     public Object conflictException;
+
     public GetFindingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetFindingsResponse {
     
     
     public String contentType;
+
     public GetFindingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetFindingsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFindingsResponse getFindingsResponse;
+
     public GetFindingsResponse withGetFindingsResponse(org.openapis.openapi.models.shared.GetFindingsResponse getFindingsResponse) {
         this.getFindingsResponse = getFindingsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetFindingsResponse {
      */
     
     public Object internalServerException;
+
     public GetFindingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class GetFindingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFindingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetFindingsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetFindingsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class GetFindingsResponse {
     
     
     public Integer statusCode;
+
     public GetFindingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetFindingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFindingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetFindingsResponse {
      */
     
     public Object throttlingException;
+
     public GetFindingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetFindingsResponse {
      */
     
     public Object validationException;
+
     public GetFindingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetFindingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

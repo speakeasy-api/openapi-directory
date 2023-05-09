@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateApplicationFleetRequest {
     @JsonProperty("ApplicationArn")
     public String applicationArn;
+
     public AssociateApplicationFleetRequest withApplicationArn(String applicationArn) {
         this.applicationArn = applicationArn;
         return this;
@@ -16,9 +17,14 @@ public class AssociateApplicationFleetRequest {
     
     @JsonProperty("FleetName")
     public String fleetName;
+
     public AssociateApplicationFleetRequest withFleetName(String fleetName) {
         this.fleetName = fleetName;
         return this;
     }
     
+    public AssociateApplicationFleetRequest(@JsonProperty("ApplicationArn") String applicationArn, @JsonProperty("FleetName") String fleetName) {
+        this.applicationArn = applicationArn;
+        this.fleetName = fleetName;
+  }
 }

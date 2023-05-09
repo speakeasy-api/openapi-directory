@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries {
     
     public String description;
+
     public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries {
     
     
     public String ipamResourceDiscoveryArn;
+
     public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries withIpamResourceDiscoveryArn(String ipamResourceDiscoveryArn) {
         this.ipamResourceDiscoveryArn = ipamResourceDiscoveryArn;
         return this;
@@ -26,6 +28,7 @@ public class DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries {
     
     
     public String ipamResourceDiscoveryId;
+
     public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries withIpamResourceDiscoveryId(String ipamResourceDiscoveryId) {
         this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries {
     
     
     public String ipamResourceDiscoveryRegion;
+
     public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries withIpamResourceDiscoveryRegion(String ipamResourceDiscoveryRegion) {
         this.ipamResourceDiscoveryRegion = ipamResourceDiscoveryRegion;
         return this;
@@ -40,6 +44,7 @@ public class DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries {
     
     
     public Boolean isDefault;
+
     public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -47,6 +52,7 @@ public class DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries {
     
     
     public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesOperatingRegions[] operatingRegions;
+
     public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries withOperatingRegions(DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesOperatingRegions[] operatingRegions) {
         this.operatingRegions = operatingRegions;
         return this;
@@ -54,6 +60,7 @@ public class DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries {
     
     
     public String ownerId;
+
     public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -61,6 +68,7 @@ public class DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries {
     
     
     public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesStateEnum state;
+
     public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries withState(DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesStateEnum state) {
         this.state = state;
         return this;
@@ -68,9 +76,11 @@ public class DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries {
     
     
     public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesTags[] tags;
+
     public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries withTags(DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries(){}
 }

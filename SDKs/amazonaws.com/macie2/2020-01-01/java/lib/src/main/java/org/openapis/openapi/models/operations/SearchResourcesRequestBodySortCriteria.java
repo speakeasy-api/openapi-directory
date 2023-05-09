@@ -15,6 +15,7 @@ public class SearchResourcesRequestBodySortCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeName")
     public org.openapis.openapi.models.shared.SearchResourcesSortAttributeNameEnum attributeName;
+
     public SearchResourcesRequestBodySortCriteria withAttributeName(org.openapis.openapi.models.shared.SearchResourcesSortAttributeNameEnum attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -23,9 +24,11 @@ public class SearchResourcesRequestBodySortCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public org.openapis.openapi.models.shared.OrderByEnum orderBy;
+
     public SearchResourcesRequestBodySortCriteria withOrderBy(org.openapis.openapi.models.shared.OrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
     }
     
+    public SearchResourcesRequestBodySortCriteria(){}
 }

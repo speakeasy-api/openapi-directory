@@ -18,6 +18,7 @@ public class EmbeddedObjectPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newSheet")
     public Boolean newSheet;
+
     public EmbeddedObjectPosition withNewSheet(Boolean newSheet) {
         this.newSheet = newSheet;
         return this;
@@ -29,6 +30,7 @@ public class EmbeddedObjectPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overlayPosition")
     public OverlayPosition overlayPosition;
+
     public EmbeddedObjectPosition withOverlayPosition(OverlayPosition overlayPosition) {
         this.overlayPosition = overlayPosition;
         return this;
@@ -40,9 +42,11 @@ public class EmbeddedObjectPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetId")
     public Integer sheetId;
+
     public EmbeddedObjectPosition withSheetId(Integer sheetId) {
         this.sheetId = sheetId;
         return this;
     }
     
+    public EmbeddedObjectPosition(){}
 }

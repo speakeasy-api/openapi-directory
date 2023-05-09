@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateGlobalRuleResponse;
 import org.openapis.openapi.models.shared.Rule;
 import org.openapis.openapi.models.shared.RuleTypeEnum;
@@ -14,10 +13,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.Rule req = new Rule() {{
-                config = "corrupti";
-                type = "VALIDITY";
-            }}            
+            org.openapis.openapi.models.shared.Rule req = new Rule("corrupti") {{
+                type = RuleTypeEnum.VALIDITY;
+            }};            
 
             CreateGlobalRuleResponse res = sdk.admin.createGlobalRule(req);
 
@@ -27,5 +25,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

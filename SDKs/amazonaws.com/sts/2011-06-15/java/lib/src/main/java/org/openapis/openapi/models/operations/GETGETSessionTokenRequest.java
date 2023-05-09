@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETSessionTokenRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETSessionTokenActionEnum action;
+
     public GETGETSessionTokenRequest withAction(GETGETSessionTokenActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGETSessionTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DurationSeconds")
     public Long durationSeconds;
+
     public GETGETSessionTokenRequest withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -29,6 +32,7 @@ public class GETGETSessionTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SerialNumber")
     public String serialNumber;
+
     public GETGETSessionTokenRequest withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -39,6 +43,7 @@ public class GETGETSessionTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TokenCode")
     public String tokenCode;
+
     public GETGETSessionTokenRequest withTokenCode(String tokenCode) {
         this.tokenCode = tokenCode;
         return this;
@@ -46,6 +51,7 @@ public class GETGETSessionTokenRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETSessionTokenVersionEnum version;
+
     public GETGETSessionTokenRequest withVersion(GETGETSessionTokenVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETGETSessionTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETSessionTokenRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETGETSessionTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETSessionTokenRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETGETSessionTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETSessionTokenRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETGETSessionTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETSessionTokenRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETGETSessionTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETSessionTokenRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETGETSessionTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETSessionTokenRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,14 @@ public class GETGETSessionTokenRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETSessionTokenRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETSessionTokenRequest(@JsonProperty("Action") GETGETSessionTokenActionEnum action, @JsonProperty("Version") GETGETSessionTokenVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

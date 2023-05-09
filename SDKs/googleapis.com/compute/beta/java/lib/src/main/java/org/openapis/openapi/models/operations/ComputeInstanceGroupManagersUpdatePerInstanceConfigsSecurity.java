@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeInstanceGroupManagersUpdatePerInstanceConfigsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstanceGroupManagersUpdatePerInstanceConfigsSecurityOption1 option1;
+
     public ComputeInstanceGroupManagersUpdatePerInstanceConfigsSecurity withOption1(ComputeInstanceGroupManagersUpdatePerInstanceConfigsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeInstanceGroupManagersUpdatePerInstanceConfigsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstanceGroupManagersUpdatePerInstanceConfigsSecurityOption2 option2;
+
     public ComputeInstanceGroupManagersUpdatePerInstanceConfigsSecurity withOption2(ComputeInstanceGroupManagersUpdatePerInstanceConfigsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeInstanceGroupManagersUpdatePerInstanceConfigsSecurity(){}
 }

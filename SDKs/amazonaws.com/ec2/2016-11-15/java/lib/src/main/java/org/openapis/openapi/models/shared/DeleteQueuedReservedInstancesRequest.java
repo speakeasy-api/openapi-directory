@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteQueuedReservedInstancesRequest {
     
     public Boolean dryRun;
+
     public DeleteQueuedReservedInstancesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DeleteQueuedReservedInstancesRequest {
     
     
     public String[] reservedInstancesIds;
+
     public DeleteQueuedReservedInstancesRequest withReservedInstancesIds(String[] reservedInstancesIds) {
         this.reservedInstancesIds = reservedInstancesIds;
         return this;
     }
     
+    public DeleteQueuedReservedInstancesRequest(@JsonProperty("ReservedInstancesIds") String[] reservedInstancesIds) {
+        this.reservedInstancesIds = reservedInstancesIds;
+  }
 }

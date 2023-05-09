@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContentAccountstatusesCustombatchResponse {
@@ -12,6 +13,7 @@ public class ContentAccountstatusesCustombatchResponse {
      */
     
     public org.openapis.openapi.models.shared.AccountstatusesCustomBatchResponse accountstatusesCustomBatchResponse;
+
     public ContentAccountstatusesCustombatchResponse withAccountstatusesCustomBatchResponse(org.openapis.openapi.models.shared.AccountstatusesCustomBatchResponse accountstatusesCustomBatchResponse) {
         this.accountstatusesCustomBatchResponse = accountstatusesCustomBatchResponse;
         return this;
@@ -19,6 +21,7 @@ public class ContentAccountstatusesCustombatchResponse {
     
     
     public String contentType;
+
     public ContentAccountstatusesCustombatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ContentAccountstatusesCustombatchResponse {
     
     
     public Integer statusCode;
+
     public ContentAccountstatusesCustombatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContentAccountstatusesCustombatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContentAccountstatusesCustombatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContentAccountstatusesCustombatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

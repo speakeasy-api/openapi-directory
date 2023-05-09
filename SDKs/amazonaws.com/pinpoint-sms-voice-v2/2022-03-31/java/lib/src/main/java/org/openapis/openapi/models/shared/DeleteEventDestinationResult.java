@@ -15,6 +15,7 @@ public class DeleteEventDestinationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetArn")
     public String configurationSetArn;
+
     public DeleteEventDestinationResult withConfigurationSetArn(String configurationSetArn) {
         this.configurationSetArn = configurationSetArn;
         return this;
@@ -23,6 +24,7 @@ public class DeleteEventDestinationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public DeleteEventDestinationResult withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -31,9 +33,11 @@ public class DeleteEventDestinationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventDestination")
     public EventDestination eventDestination;
+
     public DeleteEventDestinationResult withEventDestination(EventDestination eventDestination) {
         this.eventDestination = eventDestination;
         return this;
     }
     
+    public DeleteEventDestinationResult(){}
 }

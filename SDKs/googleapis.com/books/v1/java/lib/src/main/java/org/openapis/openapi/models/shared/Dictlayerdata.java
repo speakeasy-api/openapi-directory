@@ -12,6 +12,7 @@ public class Dictlayerdata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("common")
     public DictlayerdataCommon common;
+
     public Dictlayerdata withCommon(DictlayerdataCommon common) {
         this.common = common;
         return this;
@@ -20,6 +21,7 @@ public class Dictlayerdata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dict")
     public DictlayerdataDict dict;
+
     public Dictlayerdata withDict(DictlayerdataDict dict) {
         this.dict = dict;
         return this;
@@ -28,9 +30,11 @@ public class Dictlayerdata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Dictlayerdata withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Dictlayerdata(){}
 }

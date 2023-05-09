@@ -15,6 +15,7 @@ public class UpdateMultiNodeInventory200ApplicationJSONNodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrors[] errors;
+
     public UpdateMultiNodeInventory200ApplicationJSONNodes withErrors(UpdateMultiNodeInventory200ApplicationJSONNodesErrors[] errors) {
         this.errors = errors;
         return this;
@@ -26,6 +27,7 @@ public class UpdateMultiNodeInventory200ApplicationJSONNodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipNode")
     public String shipNode;
+
     public UpdateMultiNodeInventory200ApplicationJSONNodes withShipNode(String shipNode) {
         this.shipNode = shipNode;
         return this;
@@ -37,9 +39,11 @@ public class UpdateMultiNodeInventory200ApplicationJSONNodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public UpdateMultiNodeInventory200ApplicationJSONNodes withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public UpdateMultiNodeInventory200ApplicationJSONNodes(){}
 }

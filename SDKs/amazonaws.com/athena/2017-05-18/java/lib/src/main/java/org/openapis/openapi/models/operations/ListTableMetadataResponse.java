@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTableMetadataResponse {
     
     public String contentType;
+
     public ListTableMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTableMetadataResponse {
      */
     
     public Object internalServerException;
+
     public ListTableMetadataResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListTableMetadataResponse {
      */
     
     public Object invalidRequestException;
+
     public ListTableMetadataResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListTableMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTableMetadataOutput listTableMetadataOutput;
+
     public ListTableMetadataResponse withListTableMetadataOutput(org.openapis.openapi.models.shared.ListTableMetadataOutput listTableMetadataOutput) {
         this.listTableMetadataOutput = listTableMetadataOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListTableMetadataResponse {
      */
     
     public Object metadataException;
+
     public ListTableMetadataResponse withMetadataException(Object metadataException) {
         this.metadataException = metadataException;
         return this;
@@ -56,6 +62,7 @@ public class ListTableMetadataResponse {
     
     
     public Integer statusCode;
+
     public ListTableMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListTableMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTableMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTableMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PullRequestMinimalHeadRepo {
     @JsonProperty("id")
     public Long id;
+
     public PullRequestMinimalHeadRepo withId(Long id) {
         this.id = id;
         return this;
@@ -16,6 +17,7 @@ public class PullRequestMinimalHeadRepo {
     
     @JsonProperty("name")
     public String name;
+
     public PullRequestMinimalHeadRepo withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +25,15 @@ public class PullRequestMinimalHeadRepo {
     
     @JsonProperty("url")
     public String url;
+
     public PullRequestMinimalHeadRepo withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PullRequestMinimalHeadRepo(@JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("url") String url) {
+        this.id = id;
+        this.name = name;
+        this.url = url;
+  }
 }

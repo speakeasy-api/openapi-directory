@@ -18,6 +18,7 @@ public class DistrictRanking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_points")
     public DistrictRankingEventPoints[] eventPoints;
+
     public DistrictRanking withEventPoints(DistrictRankingEventPoints[] eventPoints) {
         this.eventPoints = eventPoints;
         return this;
@@ -28,6 +29,7 @@ public class DistrictRanking {
      */
     @JsonProperty("point_total")
     public Long pointTotal;
+
     public DistrictRanking withPointTotal(Long pointTotal) {
         this.pointTotal = pointTotal;
         return this;
@@ -38,6 +40,7 @@ public class DistrictRanking {
      */
     @JsonProperty("rank")
     public Long rank;
+
     public DistrictRanking withRank(Long rank) {
         this.rank = rank;
         return this;
@@ -49,6 +52,7 @@ public class DistrictRanking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rookie_bonus")
     public Long rookieBonus;
+
     public DistrictRanking withRookieBonus(Long rookieBonus) {
         this.rookieBonus = rookieBonus;
         return this;
@@ -59,9 +63,15 @@ public class DistrictRanking {
      */
     @JsonProperty("team_key")
     public String teamKey;
+
     public DistrictRanking withTeamKey(String teamKey) {
         this.teamKey = teamKey;
         return this;
     }
     
+    public DistrictRanking(@JsonProperty("point_total") Long pointTotal, @JsonProperty("rank") Long rank, @JsonProperty("team_key") String teamKey) {
+        this.pointTotal = pointTotal;
+        this.rank = rank;
+        this.teamKey = teamKey;
+  }
 }

@@ -12,6 +12,7 @@ public class CreateWorkGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public WorkGroupConfiguration configuration;
+
     public CreateWorkGroupInput withConfiguration(WorkGroupConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -20,6 +21,7 @@ public class CreateWorkGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateWorkGroupInput withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateWorkGroupInput {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateWorkGroupInput withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +38,13 @@ public class CreateWorkGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateWorkGroupInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateWorkGroupInput(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopWorkflowResponse {
@@ -12,6 +13,7 @@ public class StopWorkflowResponse {
      */
     
     public Object accessDeniedException;
+
     public StopWorkflowResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StopWorkflowResponse {
     
     
     public String contentType;
+
     public StopWorkflowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopWorkflowResponse {
      */
     
     public Object internalServerException;
+
     public StopWorkflowResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class StopWorkflowResponse {
     
     
     public Integer statusCode;
+
     public StopWorkflowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopWorkflowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopWorkflowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StopWorkflowResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopWorkflowResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class StopWorkflowResponse {
      */
     
     public org.openapis.openapi.models.shared.StopMigrationWorkflowResponse stopMigrationWorkflowResponse;
+
     public StopWorkflowResponse withStopMigrationWorkflowResponse(org.openapis.openapi.models.shared.StopMigrationWorkflowResponse stopMigrationWorkflowResponse) {
         this.stopMigrationWorkflowResponse = stopMigrationWorkflowResponse;
         return this;
@@ -73,6 +81,7 @@ public class StopWorkflowResponse {
      */
     
     public Object throttlingException;
+
     public StopWorkflowResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class StopWorkflowResponse {
      */
     
     public Object validationException;
+
     public StopWorkflowResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopWorkflowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

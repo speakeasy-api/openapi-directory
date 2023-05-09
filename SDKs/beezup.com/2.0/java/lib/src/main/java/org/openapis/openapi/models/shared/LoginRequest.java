@@ -12,6 +12,7 @@ public class LoginRequest {
      */
     @JsonProperty("login")
     public String login;
+
     public LoginRequest withLogin(String login) {
         this.login = login;
         return this;
@@ -22,9 +23,14 @@ public class LoginRequest {
      */
     @JsonProperty("password")
     public String password;
+
     public LoginRequest withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public LoginRequest(@JsonProperty("login") String login, @JsonProperty("password") String password) {
+        this.login = login;
+        this.password = password;
+  }
 }

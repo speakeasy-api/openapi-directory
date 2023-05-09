@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSslCertificatesResponse {
     
     public String contentType;
+
     public GetSslCertificatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSslCertificatesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetSslCertificatesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -26,6 +29,7 @@ public class GetSslCertificatesResponse {
      */
     
     public org.openapis.openapi.models.shared.SslCertificate[] sslCertificates;
+
     public GetSslCertificatesResponse withSslCertificates(org.openapis.openapi.models.shared.SslCertificate[] sslCertificates) {
         this.sslCertificates = sslCertificates;
         return this;
@@ -33,6 +37,7 @@ public class GetSslCertificatesResponse {
     
     
     public Integer statusCode;
+
     public GetSslCertificatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetSslCertificatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSslCertificatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSslCertificatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

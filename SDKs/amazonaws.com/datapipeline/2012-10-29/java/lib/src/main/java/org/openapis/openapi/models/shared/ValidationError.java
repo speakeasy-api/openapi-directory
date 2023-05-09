@@ -15,6 +15,7 @@ public class ValidationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public String[] errors;
+
     public ValidationError withErrors(String[] errors) {
         this.errors = errors;
         return this;
@@ -23,9 +24,11 @@ public class ValidationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ValidationError withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ValidationError(){}
 }

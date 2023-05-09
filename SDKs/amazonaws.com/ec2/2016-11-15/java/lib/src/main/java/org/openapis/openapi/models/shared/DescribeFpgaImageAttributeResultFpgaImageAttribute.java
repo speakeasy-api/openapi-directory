@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFpgaImageAttributeResultFpgaImageAttribute {
     
     public String description;
+
     public DescribeFpgaImageAttributeResultFpgaImageAttribute withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFpgaImageAttributeResultFpgaImageAttribute {
     
     
     public String fpgaImageId;
+
     public DescribeFpgaImageAttributeResultFpgaImageAttribute withFpgaImageId(String fpgaImageId) {
         this.fpgaImageId = fpgaImageId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeFpgaImageAttributeResultFpgaImageAttribute {
     
     
     public DescribeFpgaImageAttributeResultFpgaImageAttributeLoadPermissions[] loadPermissions;
+
     public DescribeFpgaImageAttributeResultFpgaImageAttribute withLoadPermissions(DescribeFpgaImageAttributeResultFpgaImageAttributeLoadPermissions[] loadPermissions) {
         this.loadPermissions = loadPermissions;
         return this;
@@ -33,6 +36,7 @@ public class DescribeFpgaImageAttributeResultFpgaImageAttribute {
     
     
     public String name;
+
     public DescribeFpgaImageAttributeResultFpgaImageAttribute withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +44,11 @@ public class DescribeFpgaImageAttributeResultFpgaImageAttribute {
     
     
     public DescribeFpgaImageAttributeResultFpgaImageAttributeProductCodes[] productCodes;
+
     public DescribeFpgaImageAttributeResultFpgaImageAttribute withProductCodes(DescribeFpgaImageAttributeResultFpgaImageAttributeProductCodes[] productCodes) {
         this.productCodes = productCodes;
         return this;
     }
     
+    public DescribeFpgaImageAttributeResultFpgaImageAttribute(){}
 }

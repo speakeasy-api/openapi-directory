@@ -18,6 +18,7 @@ public class UsageExportLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketName")
     public String bucketName;
+
     public UsageExportLocation withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -29,9 +30,11 @@ public class UsageExportLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportNamePrefix")
     public String reportNamePrefix;
+
     public UsageExportLocation withReportNamePrefix(String reportNamePrefix) {
         this.reportNamePrefix = reportNamePrefix;
         return this;
     }
     
+    public UsageExportLocation(){}
 }

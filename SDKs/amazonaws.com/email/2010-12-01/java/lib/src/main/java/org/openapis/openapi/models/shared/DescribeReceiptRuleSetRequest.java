@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeReceiptRuleSetRequest - Represents a request to return the details of a receipt rule set. You use receipt rule sets to receive email with Amazon SES. For more information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-concepts.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DescribeReceiptRuleSetRequest {
     
     public String ruleSetName;
+
     public DescribeReceiptRuleSetRequest withRuleSetName(String ruleSetName) {
         this.ruleSetName = ruleSetName;
         return this;
     }
     
+    public DescribeReceiptRuleSetRequest(@JsonProperty("RuleSetName") String ruleSetName) {
+        this.ruleSetName = ruleSetName;
+  }
 }

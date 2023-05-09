@@ -15,6 +15,7 @@ public class RotateTunnelAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationAccessToken")
     public String destinationAccessToken;
+
     public RotateTunnelAccessTokenResponse withDestinationAccessToken(String destinationAccessToken) {
         this.destinationAccessToken = destinationAccessToken;
         return this;
@@ -23,6 +24,7 @@ public class RotateTunnelAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceAccessToken")
     public String sourceAccessToken;
+
     public RotateTunnelAccessTokenResponse withSourceAccessToken(String sourceAccessToken) {
         this.sourceAccessToken = sourceAccessToken;
         return this;
@@ -31,9 +33,11 @@ public class RotateTunnelAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tunnelArn")
     public String tunnelArn;
+
     public RotateTunnelAccessTokenResponse withTunnelArn(String tunnelArn) {
         this.tunnelArn = tunnelArn;
         return this;
     }
     
+    public RotateTunnelAccessTokenResponse(){}
 }

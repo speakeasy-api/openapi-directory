@@ -15,6 +15,7 @@ public class SELocalAccountIdentification {
      */
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public SELocalAccountIdentification withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -25,6 +26,7 @@ public class SELocalAccountIdentification {
      */
     @JsonProperty("clearingNumber")
     public String clearingNumber;
+
     public SELocalAccountIdentification withClearingNumber(String clearingNumber) {
         this.clearingNumber = clearingNumber;
         return this;
@@ -35,9 +37,15 @@ public class SELocalAccountIdentification {
      */
     @JsonProperty("type")
     public SELocalAccountIdentificationTypeEnum type;
+
     public SELocalAccountIdentification withType(SELocalAccountIdentificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SELocalAccountIdentification(@JsonProperty("accountNumber") String accountNumber, @JsonProperty("clearingNumber") String clearingNumber, @JsonProperty("type") SELocalAccountIdentificationTypeEnum type) {
+        this.accountNumber = accountNumber;
+        this.clearingNumber = clearingNumber;
+        this.type = type;
+  }
 }

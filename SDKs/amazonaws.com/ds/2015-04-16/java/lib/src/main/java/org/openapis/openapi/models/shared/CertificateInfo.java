@@ -20,6 +20,7 @@ public class CertificateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateId")
     public String certificateId;
+
     public CertificateInfo withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -28,6 +29,7 @@ public class CertificateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommonName")
     public String commonName;
+
     public CertificateInfo withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -38,6 +40,7 @@ public class CertificateInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpiryDateTime")
     public OffsetDateTime expiryDateTime;
+
     public CertificateInfo withExpiryDateTime(OffsetDateTime expiryDateTime) {
         this.expiryDateTime = expiryDateTime;
         return this;
@@ -46,6 +49,7 @@ public class CertificateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public CertificateStateEnum state;
+
     public CertificateInfo withState(CertificateStateEnum state) {
         this.state = state;
         return this;
@@ -54,9 +58,11 @@ public class CertificateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public CertificateTypeEnum type;
+
     public CertificateInfo withType(CertificateTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CertificateInfo(){}
 }

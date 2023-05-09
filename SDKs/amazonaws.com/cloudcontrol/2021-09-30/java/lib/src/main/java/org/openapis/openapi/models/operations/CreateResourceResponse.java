@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateResourceResponse {
@@ -12,6 +13,7 @@ public class CreateResourceResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateResourceResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateResourceResponse {
      */
     
     public Object clientTokenConflictException;
+
     public CreateResourceResponse withClientTokenConflictException(Object clientTokenConflictException) {
         this.clientTokenConflictException = clientTokenConflictException;
         return this;
@@ -32,6 +35,7 @@ public class CreateResourceResponse {
      */
     
     public Object concurrentOperationException;
+
     public CreateResourceResponse withConcurrentOperationException(Object concurrentOperationException) {
         this.concurrentOperationException = concurrentOperationException;
         return this;
@@ -39,6 +43,7 @@ public class CreateResourceResponse {
     
     
     public String contentType;
+
     public CreateResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateResourceOutput createResourceOutput;
+
     public CreateResourceResponse withCreateResourceOutput(org.openapis.openapi.models.shared.CreateResourceOutput createResourceOutput) {
         this.createResourceOutput = createResourceOutput;
         return this;
@@ -59,6 +65,7 @@ public class CreateResourceResponse {
      */
     
     public Object generalServiceException;
+
     public CreateResourceResponse withGeneralServiceException(Object generalServiceException) {
         this.generalServiceException = generalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class CreateResourceResponse {
      */
     
     public Object handlerFailureException;
+
     public CreateResourceResponse withHandlerFailureException(Object handlerFailureException) {
         this.handlerFailureException = handlerFailureException;
         return this;
@@ -79,6 +87,7 @@ public class CreateResourceResponse {
      */
     
     public Object handlerInternalFailureException;
+
     public CreateResourceResponse withHandlerInternalFailureException(Object handlerInternalFailureException) {
         this.handlerInternalFailureException = handlerInternalFailureException;
         return this;
@@ -89,6 +98,7 @@ public class CreateResourceResponse {
      */
     
     public Object invalidCredentialsException;
+
     public CreateResourceResponse withInvalidCredentialsException(Object invalidCredentialsException) {
         this.invalidCredentialsException = invalidCredentialsException;
         return this;
@@ -99,6 +109,7 @@ public class CreateResourceResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateResourceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -109,6 +120,7 @@ public class CreateResourceResponse {
      */
     
     public Object networkFailureException;
+
     public CreateResourceResponse withNetworkFailureException(Object networkFailureException) {
         this.networkFailureException = networkFailureException;
         return this;
@@ -119,6 +131,7 @@ public class CreateResourceResponse {
      */
     
     public Object notStabilizedException;
+
     public CreateResourceResponse withNotStabilizedException(Object notStabilizedException) {
         this.notStabilizedException = notStabilizedException;
         return this;
@@ -129,6 +142,7 @@ public class CreateResourceResponse {
      */
     
     public Object notUpdatableException;
+
     public CreateResourceResponse withNotUpdatableException(Object notUpdatableException) {
         this.notUpdatableException = notUpdatableException;
         return this;
@@ -139,6 +153,7 @@ public class CreateResourceResponse {
      */
     
     public Object privateTypeException;
+
     public CreateResourceResponse withPrivateTypeException(Object privateTypeException) {
         this.privateTypeException = privateTypeException;
         return this;
@@ -149,6 +164,7 @@ public class CreateResourceResponse {
      */
     
     public Object resourceConflictException;
+
     public CreateResourceResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -159,6 +175,7 @@ public class CreateResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -169,6 +186,7 @@ public class CreateResourceResponse {
      */
     
     public Object serviceInternalErrorException;
+
     public CreateResourceResponse withServiceInternalErrorException(Object serviceInternalErrorException) {
         this.serviceInternalErrorException = serviceInternalErrorException;
         return this;
@@ -179,6 +197,7 @@ public class CreateResourceResponse {
      */
     
     public Object serviceLimitExceededException;
+
     public CreateResourceResponse withServiceLimitExceededException(Object serviceLimitExceededException) {
         this.serviceLimitExceededException = serviceLimitExceededException;
         return this;
@@ -186,6 +205,7 @@ public class CreateResourceResponse {
     
     
     public Integer statusCode;
+
     public CreateResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -193,6 +213,7 @@ public class CreateResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -203,6 +224,7 @@ public class CreateResourceResponse {
      */
     
     public Object throttlingException;
+
     public CreateResourceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -213,6 +235,7 @@ public class CreateResourceResponse {
      */
     
     public Object typeNotFoundException;
+
     public CreateResourceResponse withTypeNotFoundException(Object typeNotFoundException) {
         this.typeNotFoundException = typeNotFoundException;
         return this;
@@ -223,9 +246,14 @@ public class CreateResourceResponse {
      */
     
     public Object unsupportedActionException;
+
     public CreateResourceResponse withUnsupportedActionException(Object unsupportedActionException) {
         this.unsupportedActionException = unsupportedActionException;
         return this;
     }
     
+    public CreateResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2LineDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2LineDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2LineDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalSku")
     public String externalSku;
+
     public GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2LineDetails withExternalSku(String externalSku) {
         this.externalSku = externalSku;
         return this;
@@ -28,6 +30,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2LineDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2LineDetails withId(Long id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2LineDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2LineDetails withName(String name) {
         this.name = name;
         return this;
@@ -44,9 +48,11 @@ public class GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2LineDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalQuantity")
     public Long totalQuantity;
+
     public GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2LineDetails withTotalQuantity(Long totalQuantity) {
         this.totalQuantity = totalQuantity;
         return this;
     }
     
+    public GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2LineDetails(){}
 }

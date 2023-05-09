@@ -12,6 +12,7 @@ public class DescribeEnvironmentMembershipsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentId")
     public String environmentId;
+
     public DescribeEnvironmentMembershipsRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -20,6 +21,7 @@ public class DescribeEnvironmentMembershipsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeEnvironmentMembershipsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeEnvironmentMembershipsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeEnvironmentMembershipsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class DescribeEnvironmentMembershipsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public PermissionsEnum[] permissions;
+
     public DescribeEnvironmentMembershipsRequest withPermissions(PermissionsEnum[] permissions) {
         this.permissions = permissions;
         return this;
@@ -44,9 +48,11 @@ public class DescribeEnvironmentMembershipsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userArn")
     public String userArn;
+
     public DescribeEnvironmentMembershipsRequest withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public DescribeEnvironmentMembershipsRequest(){}
 }

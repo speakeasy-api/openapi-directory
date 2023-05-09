@@ -15,6 +15,7 @@ public class ListDatastoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datastoreSummaries")
     public DatastoreSummary[] datastoreSummaries;
+
     public ListDatastoresResponse withDatastoreSummaries(DatastoreSummary[] datastoreSummaries) {
         this.datastoreSummaries = datastoreSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListDatastoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDatastoresResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDatastoresResponse(){}
 }

@@ -15,6 +15,7 @@ public class TaxonomyCategories200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupName")
     public String groupName;
+
     public TaxonomyCategories200ApplicationJSONData withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -26,6 +27,7 @@ public class TaxonomyCategories200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupUrlName")
     public String groupUrlName;
+
     public TaxonomyCategories200ApplicationJSONData withGroupUrlName(String groupUrlName) {
         this.groupUrlName = groupUrlName;
         return this;
@@ -37,6 +39,7 @@ public class TaxonomyCategories200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TaxonomyCategories200ApplicationJSONData withId(Long id) {
         this.id = id;
         return this;
@@ -50,6 +53,7 @@ public class TaxonomyCategories200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCount")
     public Long productCount;
+
     public TaxonomyCategories200ApplicationJSONData withProductCount(Long productCount) {
         this.productCount = productCount;
         return this;
@@ -61,6 +65,7 @@ public class TaxonomyCategories200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subcategories")
     public TaxonomyCategories200ApplicationJSONDataSubcategories[] subcategories;
+
     public TaxonomyCategories200ApplicationJSONData withSubcategories(TaxonomyCategories200ApplicationJSONDataSubcategories[] subcategories) {
         this.subcategories = subcategories;
         return this;
@@ -74,9 +79,11 @@ public class TaxonomyCategories200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailURL")
     public String thumbnailURL;
+
     public TaxonomyCategories200ApplicationJSONData withThumbnailURL(String thumbnailURL) {
         this.thumbnailURL = thumbnailURL;
         return this;
     }
     
+    public TaxonomyCategories200ApplicationJSONData(){}
 }

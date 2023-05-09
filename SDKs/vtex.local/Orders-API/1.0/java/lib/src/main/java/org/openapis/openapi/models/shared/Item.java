@@ -12,6 +12,7 @@ public class Item {
      */
     @JsonProperty("additionalInfo")
     public AdditionalInfo additionalInfo;
+
     public Item withAdditionalInfo(AdditionalInfo additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -22,6 +23,7 @@ public class Item {
      */
     @JsonProperty("assemblies")
     public Object[] assemblies;
+
     public Item withAssemblies(Object[] assemblies) {
         this.assemblies = assemblies;
         return this;
@@ -32,6 +34,7 @@ public class Item {
      */
     @JsonProperty("attachmentOfferings")
     public ItemAttachmentOfferings[] attachmentOfferings;
+
     public Item withAttachmentOfferings(ItemAttachmentOfferings[] attachmentOfferings) {
         this.attachmentOfferings = attachmentOfferings;
         return this;
@@ -42,6 +45,7 @@ public class Item {
      */
     @JsonProperty("attachments")
     public String[] attachments;
+
     public Item withAttachments(String[] attachments) {
         this.attachments = attachments;
         return this;
@@ -52,6 +56,7 @@ public class Item {
      */
     @JsonProperty("bundleItems")
     public String[] bundleItems;
+
     public Item withBundleItems(String[] bundleItems) {
         this.bundleItems = bundleItems;
         return this;
@@ -62,6 +67,7 @@ public class Item {
      */
     @JsonProperty("callCenterOperator")
     public String callCenterOperator;
+
     public Item withCallCenterOperator(String callCenterOperator) {
         this.callCenterOperator = callCenterOperator;
         return this;
@@ -72,6 +78,7 @@ public class Item {
      */
     @JsonProperty("commission")
     public Integer commission;
+
     public Item withCommission(Integer commission) {
         this.commission = commission;
         return this;
@@ -82,6 +89,7 @@ public class Item {
      */
     @JsonProperty("components")
     public String[] components;
+
     public Item withComponents(String[] components) {
         this.components = components;
         return this;
@@ -92,6 +100,7 @@ public class Item {
      */
     @JsonProperty("costPrice")
     public Long costPrice;
+
     public Item withCostPrice(Long costPrice) {
         this.costPrice = costPrice;
         return this;
@@ -102,6 +111,7 @@ public class Item {
      */
     @JsonProperty("detailUrl")
     public String detailUrl;
+
     public Item withDetailUrl(String detailUrl) {
         this.detailUrl = detailUrl;
         return this;
@@ -112,6 +122,7 @@ public class Item {
      */
     @JsonProperty("ean")
     public String ean;
+
     public Item withEan(String ean) {
         this.ean = ean;
         return this;
@@ -122,6 +133,7 @@ public class Item {
      */
     @JsonProperty("freightCommission")
     public Integer freightCommission;
+
     public Item withFreightCommission(Integer freightCommission) {
         this.freightCommission = freightCommission;
         return this;
@@ -132,6 +144,7 @@ public class Item {
      */
     @JsonProperty("id")
     public String id;
+
     public Item withId(String id) {
         this.id = id;
         return this;
@@ -142,6 +155,7 @@ public class Item {
      */
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public Item withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -152,6 +166,7 @@ public class Item {
      */
     @JsonProperty("isGift")
     public Boolean isGift;
+
     public Item withIsGift(Boolean isGift) {
         this.isGift = isGift;
         return this;
@@ -162,6 +177,7 @@ public class Item {
      */
     @JsonProperty("itemAttachment")
     public ItemAttachment itemAttachment;
+
     public Item withItemAttachment(ItemAttachment itemAttachment) {
         this.itemAttachment = itemAttachment;
         return this;
@@ -172,6 +188,7 @@ public class Item {
      */
     @JsonProperty("listPrice")
     public Integer listPrice;
+
     public Item withListPrice(Integer listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -182,6 +199,7 @@ public class Item {
      */
     @JsonProperty("lockId")
     public String lockId;
+
     public Item withLockId(String lockId) {
         this.lockId = lockId;
         return this;
@@ -192,6 +210,7 @@ public class Item {
      */
     @JsonProperty("manualPrice")
     public String manualPrice;
+
     public Item withManualPrice(String manualPrice) {
         this.manualPrice = manualPrice;
         return this;
@@ -202,6 +221,7 @@ public class Item {
      */
     @JsonProperty("measurementUnit")
     public String measurementUnit;
+
     public Item withMeasurementUnit(String measurementUnit) {
         this.measurementUnit = measurementUnit;
         return this;
@@ -212,6 +232,7 @@ public class Item {
      */
     @JsonProperty("name")
     public String name;
+
     public Item withName(String name) {
         this.name = name;
         return this;
@@ -222,6 +243,7 @@ public class Item {
      */
     @JsonProperty("offerings")
     public String[] offerings;
+
     public Item withOfferings(String[] offerings) {
         this.offerings = offerings;
         return this;
@@ -232,6 +254,7 @@ public class Item {
      */
     @JsonProperty("params")
     public String[] params;
+
     public Item withParams(String[] params) {
         this.params = params;
         return this;
@@ -242,6 +265,7 @@ public class Item {
      */
     @JsonProperty("parentAssemblyBinding")
     public String parentAssemblyBinding;
+
     public Item withParentAssemblyBinding(String parentAssemblyBinding) {
         this.parentAssemblyBinding = parentAssemblyBinding;
         return this;
@@ -252,6 +276,7 @@ public class Item {
      */
     @JsonProperty("parentItemIndex")
     public String parentItemIndex;
+
     public Item withParentItemIndex(String parentItemIndex) {
         this.parentItemIndex = parentItemIndex;
         return this;
@@ -262,6 +287,7 @@ public class Item {
      */
     @JsonProperty("preSaleDate")
     public String preSaleDate;
+
     public Item withPreSaleDate(String preSaleDate) {
         this.preSaleDate = preSaleDate;
         return this;
@@ -272,6 +298,7 @@ public class Item {
      */
     @JsonProperty("price")
     public Integer price;
+
     public Item withPrice(Integer price) {
         this.price = price;
         return this;
@@ -282,6 +309,7 @@ public class Item {
      */
     @JsonProperty("priceDefinitions")
     public ItemPriceDefinitions priceDefinitions;
+
     public Item withPriceDefinitions(ItemPriceDefinitions priceDefinitions) {
         this.priceDefinitions = priceDefinitions;
         return this;
@@ -292,6 +320,7 @@ public class Item {
      */
     @JsonProperty("priceTags")
     public String[] priceTags;
+
     public Item withPriceTags(String[] priceTags) {
         this.priceTags = priceTags;
         return this;
@@ -302,6 +331,7 @@ public class Item {
      */
     @JsonProperty("priceValidUntil")
     public String priceValidUntil;
+
     public Item withPriceValidUntil(String priceValidUntil) {
         this.priceValidUntil = priceValidUntil;
         return this;
@@ -312,6 +342,7 @@ public class Item {
      */
     @JsonProperty("productId")
     public String productId;
+
     public Item withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -322,6 +353,7 @@ public class Item {
      */
     @JsonProperty("quantity")
     public Integer quantity;
+
     public Item withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -332,6 +364,7 @@ public class Item {
      */
     @JsonProperty("refId")
     public String refId;
+
     public Item withRefId(String refId) {
         this.refId = refId;
         return this;
@@ -342,6 +375,7 @@ public class Item {
      */
     @JsonProperty("rewardValue")
     public Integer rewardValue;
+
     public Item withRewardValue(Integer rewardValue) {
         this.rewardValue = rewardValue;
         return this;
@@ -352,6 +386,7 @@ public class Item {
      */
     @JsonProperty("seller")
     public String seller;
+
     public Item withSeller(String seller) {
         this.seller = seller;
         return this;
@@ -362,6 +397,7 @@ public class Item {
      */
     @JsonProperty("sellerSku")
     public String sellerSku;
+
     public Item withSellerSku(String sellerSku) {
         this.sellerSku = sellerSku;
         return this;
@@ -372,6 +408,7 @@ public class Item {
      */
     @JsonProperty("sellingPrice")
     public Integer sellingPrice;
+
     public Item withSellingPrice(Integer sellingPrice) {
         this.sellingPrice = sellingPrice;
         return this;
@@ -382,6 +419,7 @@ public class Item {
      */
     @JsonProperty("serialNumbers")
     public String serialNumbers;
+
     public Item withSerialNumbers(String serialNumbers) {
         this.serialNumbers = serialNumbers;
         return this;
@@ -392,6 +430,7 @@ public class Item {
      */
     @JsonProperty("shippingPrice")
     public String shippingPrice;
+
     public Item withShippingPrice(String shippingPrice) {
         this.shippingPrice = shippingPrice;
         return this;
@@ -402,6 +441,7 @@ public class Item {
      */
     @JsonProperty("tax")
     public Integer tax;
+
     public Item withTax(Integer tax) {
         this.tax = tax;
         return this;
@@ -412,6 +452,7 @@ public class Item {
      */
     @JsonProperty("taxCode")
     public String taxCode;
+
     public Item withTaxCode(String taxCode) {
         this.taxCode = taxCode;
         return this;
@@ -422,6 +463,7 @@ public class Item {
      */
     @JsonProperty("uniqueId")
     public String uniqueId;
+
     public Item withUniqueId(String uniqueId) {
         this.uniqueId = uniqueId;
         return this;
@@ -432,9 +474,55 @@ public class Item {
      */
     @JsonProperty("unitMultiplier")
     public Integer unitMultiplier;
+
     public Item withUnitMultiplier(Integer unitMultiplier) {
         this.unitMultiplier = unitMultiplier;
         return this;
     }
     
+    public Item(@JsonProperty("additionalInfo") AdditionalInfo additionalInfo, @JsonProperty("assemblies") Object[] assemblies, @JsonProperty("attachmentOfferings") ItemAttachmentOfferings[] attachmentOfferings, @JsonProperty("attachments") String[] attachments, @JsonProperty("bundleItems") String[] bundleItems, @JsonProperty("callCenterOperator") String callCenterOperator, @JsonProperty("commission") Integer commission, @JsonProperty("components") String[] components, @JsonProperty("costPrice") Long costPrice, @JsonProperty("detailUrl") String detailUrl, @JsonProperty("ean") String ean, @JsonProperty("freightCommission") Integer freightCommission, @JsonProperty("id") String id, @JsonProperty("imageUrl") String imageUrl, @JsonProperty("isGift") Boolean isGift, @JsonProperty("itemAttachment") ItemAttachment itemAttachment, @JsonProperty("listPrice") Integer listPrice, @JsonProperty("lockId") String lockId, @JsonProperty("manualPrice") String manualPrice, @JsonProperty("measurementUnit") String measurementUnit, @JsonProperty("name") String name, @JsonProperty("offerings") String[] offerings, @JsonProperty("params") String[] params, @JsonProperty("parentAssemblyBinding") String parentAssemblyBinding, @JsonProperty("parentItemIndex") String parentItemIndex, @JsonProperty("preSaleDate") String preSaleDate, @JsonProperty("price") Integer price, @JsonProperty("priceDefinitions") ItemPriceDefinitions priceDefinitions, @JsonProperty("priceTags") String[] priceTags, @JsonProperty("priceValidUntil") String priceValidUntil, @JsonProperty("productId") String productId, @JsonProperty("quantity") Integer quantity, @JsonProperty("refId") String refId, @JsonProperty("rewardValue") Integer rewardValue, @JsonProperty("seller") String seller, @JsonProperty("sellerSku") String sellerSku, @JsonProperty("sellingPrice") Integer sellingPrice, @JsonProperty("serialNumbers") String serialNumbers, @JsonProperty("shippingPrice") String shippingPrice, @JsonProperty("tax") Integer tax, @JsonProperty("taxCode") String taxCode, @JsonProperty("uniqueId") String uniqueId, @JsonProperty("unitMultiplier") Integer unitMultiplier) {
+        this.additionalInfo = additionalInfo;
+        this.assemblies = assemblies;
+        this.attachmentOfferings = attachmentOfferings;
+        this.attachments = attachments;
+        this.bundleItems = bundleItems;
+        this.callCenterOperator = callCenterOperator;
+        this.commission = commission;
+        this.components = components;
+        this.costPrice = costPrice;
+        this.detailUrl = detailUrl;
+        this.ean = ean;
+        this.freightCommission = freightCommission;
+        this.id = id;
+        this.imageUrl = imageUrl;
+        this.isGift = isGift;
+        this.itemAttachment = itemAttachment;
+        this.listPrice = listPrice;
+        this.lockId = lockId;
+        this.manualPrice = manualPrice;
+        this.measurementUnit = measurementUnit;
+        this.name = name;
+        this.offerings = offerings;
+        this.params = params;
+        this.parentAssemblyBinding = parentAssemblyBinding;
+        this.parentItemIndex = parentItemIndex;
+        this.preSaleDate = preSaleDate;
+        this.price = price;
+        this.priceDefinitions = priceDefinitions;
+        this.priceTags = priceTags;
+        this.priceValidUntil = priceValidUntil;
+        this.productId = productId;
+        this.quantity = quantity;
+        this.refId = refId;
+        this.rewardValue = rewardValue;
+        this.seller = seller;
+        this.sellerSku = sellerSku;
+        this.sellingPrice = sellingPrice;
+        this.serialNumbers = serialNumbers;
+        this.shippingPrice = shippingPrice;
+        this.tax = tax;
+        this.taxCode = taxCode;
+        this.uniqueId = uniqueId;
+        this.unitMultiplier = unitMultiplier;
+  }
 }

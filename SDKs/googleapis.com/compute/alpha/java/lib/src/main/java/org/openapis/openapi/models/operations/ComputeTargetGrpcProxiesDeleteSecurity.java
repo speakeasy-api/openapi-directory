@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeTargetGrpcProxiesDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetGrpcProxiesDeleteSecurityOption1 option1;
+
     public ComputeTargetGrpcProxiesDeleteSecurity withOption1(ComputeTargetGrpcProxiesDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeTargetGrpcProxiesDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetGrpcProxiesDeleteSecurityOption2 option2;
+
     public ComputeTargetGrpcProxiesDeleteSecurity withOption2(ComputeTargetGrpcProxiesDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeTargetGrpcProxiesDeleteSecurity(){}
 }

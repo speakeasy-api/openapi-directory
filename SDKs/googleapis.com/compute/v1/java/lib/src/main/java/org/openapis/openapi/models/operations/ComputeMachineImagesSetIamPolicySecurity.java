@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeMachineImagesSetIamPolicySecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeMachineImagesSetIamPolicySecurityOption1 option1;
+
     public ComputeMachineImagesSetIamPolicySecurity withOption1(ComputeMachineImagesSetIamPolicySecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeMachineImagesSetIamPolicySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeMachineImagesSetIamPolicySecurityOption2 option2;
+
     public ComputeMachineImagesSetIamPolicySecurity withOption2(ComputeMachineImagesSetIamPolicySecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeMachineImagesSetIamPolicySecurity(){}
 }

@@ -15,9 +15,13 @@ public class CategoryList {
      */
     @JsonProperty("categories")
     public Category[] categories;
+
     public CategoryList withCategories(Category[] categories) {
         this.categories = categories;
         return this;
     }
     
+    public CategoryList(@JsonProperty("categories") Category[] categories) {
+        this.categories = categories;
+  }
 }

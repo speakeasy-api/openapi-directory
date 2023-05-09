@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetVerifiedAccessEndpointPolicyRequest {
     
     public Boolean dryRun;
+
     public GetVerifiedAccessEndpointPolicyRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class GetVerifiedAccessEndpointPolicyRequest {
     
     
     public String verifiedAccessEndpointId;
+
     public GetVerifiedAccessEndpointPolicyRequest withVerifiedAccessEndpointId(String verifiedAccessEndpointId) {
         this.verifiedAccessEndpointId = verifiedAccessEndpointId;
         return this;
     }
     
+    public GetVerifiedAccessEndpointPolicyRequest(@JsonProperty("VerifiedAccessEndpointId") String verifiedAccessEndpointId) {
+        this.verifiedAccessEndpointId = verifiedAccessEndpointId;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateBatchRequest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.BatchResponse[] data;
+
     public CreateBatchRequest200ApplicationJSON withData(org.openapis.openapi.models.shared.BatchResponse[] data) {
         this.data = data;
         return this;
     }
     
+    public CreateBatchRequest200ApplicationJSON(){}
 }

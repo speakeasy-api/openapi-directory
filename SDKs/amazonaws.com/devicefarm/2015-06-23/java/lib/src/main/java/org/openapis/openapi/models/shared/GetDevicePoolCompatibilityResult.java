@@ -15,6 +15,7 @@ public class GetDevicePoolCompatibilityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibleDevices")
     public DevicePoolCompatibilityResult[] compatibleDevices;
+
     public GetDevicePoolCompatibilityResult withCompatibleDevices(DevicePoolCompatibilityResult[] compatibleDevices) {
         this.compatibleDevices = compatibleDevices;
         return this;
@@ -23,9 +24,11 @@ public class GetDevicePoolCompatibilityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incompatibleDevices")
     public DevicePoolCompatibilityResult[] incompatibleDevices;
+
     public GetDevicePoolCompatibilityResult withIncompatibleDevices(DevicePoolCompatibilityResult[] incompatibleDevices) {
         this.incompatibleDevices = incompatibleDevices;
         return this;
     }
     
+    public GetDevicePoolCompatibilityResult(){}
 }

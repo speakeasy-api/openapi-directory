@@ -18,6 +18,7 @@ public class CreativeFieldValuesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeFieldValues")
     public CreativeFieldValue[] creativeFieldValues;
+
     public CreativeFieldValuesListResponse withCreativeFieldValues(CreativeFieldValue[] creativeFieldValues) {
         this.creativeFieldValues = creativeFieldValues;
         return this;
@@ -29,6 +30,7 @@ public class CreativeFieldValuesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CreativeFieldValuesListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class CreativeFieldValuesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public CreativeFieldValuesListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public CreativeFieldValuesListResponse(){}
 }

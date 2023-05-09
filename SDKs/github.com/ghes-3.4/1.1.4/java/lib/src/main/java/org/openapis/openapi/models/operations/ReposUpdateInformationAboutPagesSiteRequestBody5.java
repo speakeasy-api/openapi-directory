@@ -15,6 +15,7 @@ public class ReposUpdateInformationAboutPagesSiteRequestBody5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build_type")
     public ReposUpdateInformationAboutPagesSiteRequestBody5BuildTypeEnum buildType;
+
     public ReposUpdateInformationAboutPagesSiteRequestBody5 withBuildType(ReposUpdateInformationAboutPagesSiteRequestBody5BuildTypeEnum buildType) {
         this.buildType = buildType;
         return this;
@@ -26,6 +27,7 @@ public class ReposUpdateInformationAboutPagesSiteRequestBody5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cname")
     public String cname;
+
     public ReposUpdateInformationAboutPagesSiteRequestBody5 withCname(String cname) {
         this.cname = cname;
         return this;
@@ -36,6 +38,7 @@ public class ReposUpdateInformationAboutPagesSiteRequestBody5 {
      */
     @JsonProperty("https_enforced")
     public Boolean httpsEnforced;
+
     public ReposUpdateInformationAboutPagesSiteRequestBody5 withHttpsEnforced(Boolean httpsEnforced) {
         this.httpsEnforced = httpsEnforced;
         return this;
@@ -44,9 +47,13 @@ public class ReposUpdateInformationAboutPagesSiteRequestBody5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Object source;
+
     public ReposUpdateInformationAboutPagesSiteRequestBody5 withSource(Object source) {
         this.source = source;
         return this;
     }
     
+    public ReposUpdateInformationAboutPagesSiteRequestBody5(@JsonProperty("https_enforced") Boolean httpsEnforced) {
+        this.httpsEnforced = httpsEnforced;
+  }
 }

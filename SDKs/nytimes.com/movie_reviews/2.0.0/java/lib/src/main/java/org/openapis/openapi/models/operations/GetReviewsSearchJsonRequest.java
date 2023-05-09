@@ -13,6 +13,7 @@ public class GetReviewsSearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=critics-pick")
     public GetReviewsSearchJsonCriticsPickEnum criticsPick;
+
     public GetReviewsSearchJsonRequest withCriticsPick(GetReviewsSearchJsonCriticsPickEnum criticsPick) {
         this.criticsPick = criticsPick;
         return this;
@@ -23,6 +24,7 @@ public class GetReviewsSearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetReviewsSearchJsonRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -38,6 +40,7 @@ public class GetReviewsSearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opening-date")
     public String openingDate;
+
     public GetReviewsSearchJsonRequest withOpeningDate(String openingDate) {
         this.openingDate = openingDate;
         return this;
@@ -53,6 +56,7 @@ public class GetReviewsSearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public String order;
+
     public GetReviewsSearchJsonRequest withOrder(String order) {
         this.order = order;
         return this;
@@ -68,6 +72,7 @@ public class GetReviewsSearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publication-date")
     public String publicationDate;
+
     public GetReviewsSearchJsonRequest withPublicationDate(String publicationDate) {
         this.publicationDate = publicationDate;
         return this;
@@ -85,6 +90,7 @@ public class GetReviewsSearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetReviewsSearchJsonRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -96,9 +102,11 @@ public class GetReviewsSearchJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reviewer")
     public String reviewer;
+
     public GetReviewsSearchJsonRequest withReviewer(String reviewer) {
         this.reviewer = reviewer;
         return this;
     }
     
+    public GetReviewsSearchJsonRequest(){}
 }

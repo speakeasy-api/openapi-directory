@@ -141,4 +141,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/Outline.java
 lib/src/main/java/org/openapis/openapi/models/shared/FileUpload.java
 lib/src/main/java/org/openapis/openapi/models/shared/ModifyInactiveCollaborator.java
 lib/src/main/java/org/openapis/openapi/models/shared/AddNewCollaboratorRequest.java
+docs/sdk/README.md
+docs/cache/README.md
+docs/conversation/README.md
+docs/events/README.md
+docs/permissions/README.md
+docs/restricted/README.md
+docs/schemas/README.md
+docs/sessions/README.md
+docs/story/README.md
+docs/storycollaborators/README.md
+docs/views/README.md
 USAGE.md

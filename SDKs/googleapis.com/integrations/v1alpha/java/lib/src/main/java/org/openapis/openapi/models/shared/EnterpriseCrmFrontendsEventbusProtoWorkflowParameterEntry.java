@@ -15,6 +15,7 @@ public class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public EnterpriseCrmEventbusProtoAttributes attributes;
+
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry withAttributes(EnterpriseCrmEventbusProtoAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -26,6 +27,7 @@ public class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("children")
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry[] children;
+
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry withChildren(EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry[] children) {
         this.children = children;
         return this;
@@ -37,6 +39,7 @@ public class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryDataTypeEnum dataType;
+
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry withDataType(EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -48,6 +51,7 @@ public class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public EnterpriseCrmFrontendsEventbusProtoParameterValueType defaultValue;
+
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry withDefaultValue(EnterpriseCrmFrontendsEventbusProtoParameterValueType defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -59,6 +63,7 @@ public class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inOutType")
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryInOutTypeEnum inOutType;
+
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry withInOutType(EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryInOutTypeEnum inOutType) {
         this.inOutType = inOutType;
         return this;
@@ -70,6 +75,7 @@ public class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTransient")
     public Boolean isTransient;
+
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry withIsTransient(Boolean isTransient) {
         this.isTransient = isTransient;
         return this;
@@ -81,6 +87,7 @@ public class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonSchema")
     public String jsonSchema;
+
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry withJsonSchema(String jsonSchema) {
         this.jsonSchema = jsonSchema;
         return this;
@@ -92,6 +99,7 @@ public class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry withKey(String key) {
         this.key = key;
         return this;
@@ -103,6 +111,7 @@ public class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry withName(String name) {
         this.name = name;
         return this;
@@ -114,6 +123,7 @@ public class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producedBy")
     public EnterpriseCrmEventbusProtoNodeIdentifier producedBy;
+
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry withProducedBy(EnterpriseCrmEventbusProtoNodeIdentifier producedBy) {
         this.producedBy = producedBy;
         return this;
@@ -122,6 +132,7 @@ public class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producer")
     public String producer;
+
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry withProducer(String producer) {
         this.producer = producer;
         return this;
@@ -133,6 +144,7 @@ public class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protoDefName")
     public String protoDefName;
+
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry withProtoDefName(String protoDefName) {
         this.protoDefName = protoDefName;
         return this;
@@ -144,9 +156,11 @@ public class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protoDefPath")
     public String protoDefPath;
+
     public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry withProtoDefPath(String protoDefPath) {
         this.protoDefPath = protoDefPath;
         return this;
     }
     
+    public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry(){}
 }

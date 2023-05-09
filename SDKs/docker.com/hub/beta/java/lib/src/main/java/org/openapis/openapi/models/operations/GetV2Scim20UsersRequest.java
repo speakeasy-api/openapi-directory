@@ -12,6 +12,7 @@ public class GetV2Scim20UsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=attributes")
     public String attributes;
+
     public GetV2Scim20UsersRequest withAttributes(String attributes) {
         this.attributes = attributes;
         return this;
@@ -19,6 +20,7 @@ public class GetV2Scim20UsersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Long count;
+
     public GetV2Scim20UsersRequest withCount(Long count) {
         this.count = count;
         return this;
@@ -26,6 +28,7 @@ public class GetV2Scim20UsersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetV2Scim20UsersRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -36,6 +39,7 @@ public class GetV2Scim20UsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public String sortBy;
+
     public GetV2Scim20UsersRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -43,6 +47,7 @@ public class GetV2Scim20UsersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public GetV2Scim20UsersSortOrderEnum sortOrder;
+
     public GetV2Scim20UsersRequest withSortOrder(GetV2Scim20UsersSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -50,9 +55,11 @@ public class GetV2Scim20UsersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Long startIndex;
+
     public GetV2Scim20UsersRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
     }
     
+    public GetV2Scim20UsersRequest(){}
 }

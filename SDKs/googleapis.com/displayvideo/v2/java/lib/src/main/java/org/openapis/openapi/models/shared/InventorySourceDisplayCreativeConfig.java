@@ -18,9 +18,11 @@ public class InventorySourceDisplayCreativeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeSize")
     public Dimensions creativeSize;
+
     public InventorySourceDisplayCreativeConfig withCreativeSize(Dimensions creativeSize) {
         this.creativeSize = creativeSize;
         return this;
     }
     
+    public InventorySourceDisplayCreativeConfig(){}
 }

@@ -18,6 +18,7 @@ public class Layersummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Layersummary[] items;
+
     public Layersummaries withItems(Layersummary[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class Layersummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Layersummaries withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class Layersummaries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItems")
     public Integer totalItems;
+
     public Layersummaries withTotalItems(Integer totalItems) {
         this.totalItems = totalItems;
         return this;
     }
     
+    public Layersummaries(){}
 }

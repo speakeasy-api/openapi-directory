@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MonitoringConfiguration {
     @JsonProperty("ConfigurationType")
     public ConfigurationTypeEnum configurationType;
+
     public MonitoringConfiguration withConfigurationType(ConfigurationTypeEnum configurationType) {
         this.configurationType = configurationType;
         return this;
@@ -22,6 +23,7 @@ public class MonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogLevel")
     public LogLevelEnum logLevel;
+
     public MonitoringConfiguration withLogLevel(LogLevelEnum logLevel) {
         this.logLevel = logLevel;
         return this;
@@ -30,9 +32,13 @@ public class MonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricsLevel")
     public MetricsLevelEnum metricsLevel;
+
     public MonitoringConfiguration withMetricsLevel(MetricsLevelEnum metricsLevel) {
         this.metricsLevel = metricsLevel;
         return this;
     }
     
+    public MonitoringConfiguration(@JsonProperty("ConfigurationType") ConfigurationTypeEnum configurationType) {
+        this.configurationType = configurationType;
+  }
 }

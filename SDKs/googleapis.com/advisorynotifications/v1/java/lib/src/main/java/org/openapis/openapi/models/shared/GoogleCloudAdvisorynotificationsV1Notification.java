@@ -18,6 +18,7 @@ public class GoogleCloudAdvisorynotificationsV1Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudAdvisorynotificationsV1Notification withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAdvisorynotificationsV1Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public GoogleCloudAdvisorynotificationsV1Message[] messages;
+
     public GoogleCloudAdvisorynotificationsV1Notification withMessages(GoogleCloudAdvisorynotificationsV1Message[] messages) {
         this.messages = messages;
         return this;
@@ -40,8 +42,21 @@ public class GoogleCloudAdvisorynotificationsV1Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudAdvisorynotificationsV1Notification withName(String name) {
         this.name = name;
+        return this;
+    }
+    
+    /**
+     * Type of notification
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("notificationType")
+    public GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum notificationType;
+
+    public GoogleCloudAdvisorynotificationsV1Notification withNotificationType(GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum notificationType) {
+        this.notificationType = notificationType;
         return this;
     }
     
@@ -51,9 +66,11 @@ public class GoogleCloudAdvisorynotificationsV1Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public GoogleCloudAdvisorynotificationsV1Subject subject;
+
     public GoogleCloudAdvisorynotificationsV1Notification withSubject(GoogleCloudAdvisorynotificationsV1Subject subject) {
         this.subject = subject;
         return this;
     }
     
+    public GoogleCloudAdvisorynotificationsV1Notification(){}
 }

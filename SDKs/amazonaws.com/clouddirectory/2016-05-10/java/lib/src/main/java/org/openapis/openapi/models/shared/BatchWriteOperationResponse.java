@@ -15,6 +15,7 @@ public class BatchWriteOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddFacetToObject")
     public java.util.Map<String, Object> addFacetToObject;
+
     public BatchWriteOperationResponse withAddFacetToObject(java.util.Map<String, Object> addFacetToObject) {
         this.addFacetToObject = addFacetToObject;
         return this;
@@ -23,6 +24,7 @@ public class BatchWriteOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachObject")
     public BatchAttachObjectResponse attachObject;
+
     public BatchWriteOperationResponse withAttachObject(BatchAttachObjectResponse attachObject) {
         this.attachObject = attachObject;
         return this;
@@ -31,6 +33,7 @@ public class BatchWriteOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachPolicy")
     public java.util.Map<String, Object> attachPolicy;
+
     public BatchWriteOperationResponse withAttachPolicy(java.util.Map<String, Object> attachPolicy) {
         this.attachPolicy = attachPolicy;
         return this;
@@ -39,6 +42,7 @@ public class BatchWriteOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachToIndex")
     public BatchAttachToIndexResponse attachToIndex;
+
     public BatchWriteOperationResponse withAttachToIndex(BatchAttachToIndexResponse attachToIndex) {
         this.attachToIndex = attachToIndex;
         return this;
@@ -47,6 +51,7 @@ public class BatchWriteOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachTypedLink")
     public BatchAttachTypedLinkResponse attachTypedLink;
+
     public BatchWriteOperationResponse withAttachTypedLink(BatchAttachTypedLinkResponse attachTypedLink) {
         this.attachTypedLink = attachTypedLink;
         return this;
@@ -55,6 +60,7 @@ public class BatchWriteOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateIndex")
     public BatchCreateIndexResponse createIndex;
+
     public BatchWriteOperationResponse withCreateIndex(BatchCreateIndexResponse createIndex) {
         this.createIndex = createIndex;
         return this;
@@ -63,6 +69,7 @@ public class BatchWriteOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateObject")
     public BatchCreateObjectResponse createObject;
+
     public BatchWriteOperationResponse withCreateObject(BatchCreateObjectResponse createObject) {
         this.createObject = createObject;
         return this;
@@ -71,6 +78,7 @@ public class BatchWriteOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteObject")
     public java.util.Map<String, Object> deleteObject;
+
     public BatchWriteOperationResponse withDeleteObject(java.util.Map<String, Object> deleteObject) {
         this.deleteObject = deleteObject;
         return this;
@@ -79,6 +87,7 @@ public class BatchWriteOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetachFromIndex")
     public BatchDetachFromIndexResponse detachFromIndex;
+
     public BatchWriteOperationResponse withDetachFromIndex(BatchDetachFromIndexResponse detachFromIndex) {
         this.detachFromIndex = detachFromIndex;
         return this;
@@ -87,6 +96,7 @@ public class BatchWriteOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetachObject")
     public BatchDetachObjectResponse detachObject;
+
     public BatchWriteOperationResponse withDetachObject(BatchDetachObjectResponse detachObject) {
         this.detachObject = detachObject;
         return this;
@@ -95,6 +105,7 @@ public class BatchWriteOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetachPolicy")
     public java.util.Map<String, Object> detachPolicy;
+
     public BatchWriteOperationResponse withDetachPolicy(java.util.Map<String, Object> detachPolicy) {
         this.detachPolicy = detachPolicy;
         return this;
@@ -103,6 +114,7 @@ public class BatchWriteOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetachTypedLink")
     public java.util.Map<String, Object> detachTypedLink;
+
     public BatchWriteOperationResponse withDetachTypedLink(java.util.Map<String, Object> detachTypedLink) {
         this.detachTypedLink = detachTypedLink;
         return this;
@@ -111,6 +123,7 @@ public class BatchWriteOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoveFacetFromObject")
     public java.util.Map<String, Object> removeFacetFromObject;
+
     public BatchWriteOperationResponse withRemoveFacetFromObject(java.util.Map<String, Object> removeFacetFromObject) {
         this.removeFacetFromObject = removeFacetFromObject;
         return this;
@@ -119,6 +132,7 @@ public class BatchWriteOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateLinkAttributes")
     public java.util.Map<String, Object> updateLinkAttributes;
+
     public BatchWriteOperationResponse withUpdateLinkAttributes(java.util.Map<String, Object> updateLinkAttributes) {
         this.updateLinkAttributes = updateLinkAttributes;
         return this;
@@ -127,9 +141,11 @@ public class BatchWriteOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateObjectAttributes")
     public BatchUpdateObjectAttributesResponse updateObjectAttributes;
+
     public BatchWriteOperationResponse withUpdateObjectAttributes(BatchUpdateObjectAttributesResponse updateObjectAttributes) {
         this.updateObjectAttributes = updateObjectAttributes;
         return this;
     }
     
+    public BatchWriteOperationResponse(){}
 }

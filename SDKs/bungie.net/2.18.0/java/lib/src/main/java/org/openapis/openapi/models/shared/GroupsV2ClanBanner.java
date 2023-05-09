@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class GroupsV2ClanBanner {
     
     public Long decalBackgroundColorId;
+
     public GroupsV2ClanBanner withDecalBackgroundColorId(Long decalBackgroundColorId) {
         this.decalBackgroundColorId = decalBackgroundColorId;
         return this;
@@ -16,6 +17,7 @@ public class GroupsV2ClanBanner {
     
     
     public Long decalColorId;
+
     public GroupsV2ClanBanner withDecalColorId(Long decalColorId) {
         this.decalColorId = decalColorId;
         return this;
@@ -23,6 +25,7 @@ public class GroupsV2ClanBanner {
     
     
     public Long decalId;
+
     public GroupsV2ClanBanner withDecalId(Long decalId) {
         this.decalId = decalId;
         return this;
@@ -30,6 +33,7 @@ public class GroupsV2ClanBanner {
     
     
     public Long gonfalonColorId;
+
     public GroupsV2ClanBanner withGonfalonColorId(Long gonfalonColorId) {
         this.gonfalonColorId = gonfalonColorId;
         return this;
@@ -37,6 +41,7 @@ public class GroupsV2ClanBanner {
     
     
     public Long gonfalonDetailColorId;
+
     public GroupsV2ClanBanner withGonfalonDetailColorId(Long gonfalonDetailColorId) {
         this.gonfalonDetailColorId = gonfalonDetailColorId;
         return this;
@@ -44,6 +49,7 @@ public class GroupsV2ClanBanner {
     
     
     public Long gonfalonDetailId;
+
     public GroupsV2ClanBanner withGonfalonDetailId(Long gonfalonDetailId) {
         this.gonfalonDetailId = gonfalonDetailId;
         return this;
@@ -51,9 +57,11 @@ public class GroupsV2ClanBanner {
     
     
     public Long gonfalonId;
+
     public GroupsV2ClanBanner withGonfalonId(Long gonfalonId) {
         this.gonfalonId = gonfalonId;
         return this;
     }
     
+    public GroupsV2ClanBanner(){}
 }

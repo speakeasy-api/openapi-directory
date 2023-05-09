@@ -42,4 +42,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GETVersionLocationsForm
 lib/src/main/java/org/openapis/openapi/models/operations/GETVersionLocationsMarkersFormatIncidentTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETVersionLocationsMarkersFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETVersionLocationsMarkersFormatResponse.java
+docs/sdk/README.md
+docs/incidents/README.md
+docs/locations/README.md
 USAGE.md

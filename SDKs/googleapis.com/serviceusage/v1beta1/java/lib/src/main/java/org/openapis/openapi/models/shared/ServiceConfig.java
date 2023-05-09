@@ -18,6 +18,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apis")
     public Api[] apis;
+
     public ServiceConfig withApis(Api[] apis) {
         this.apis = apis;
         return this;
@@ -29,6 +30,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authentication")
     public Authentication authentication;
+
     public ServiceConfig withAuthentication(Authentication authentication) {
         this.authentication = authentication;
         return this;
@@ -40,6 +42,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation")
     public Documentation documentation;
+
     public ServiceConfig withDocumentation(Documentation documentation) {
         this.documentation = documentation;
         return this;
@@ -51,6 +54,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoints")
     public Endpoint[] endpoints;
+
     public ServiceConfig withEndpoints(Endpoint[] endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -62,6 +66,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoredResources")
     public MonitoredResourceDescriptor[] monitoredResources;
+
     public ServiceConfig withMonitoredResources(MonitoredResourceDescriptor[] monitoredResources) {
         this.monitoredResources = monitoredResources;
         return this;
@@ -73,6 +78,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoring")
     public Monitoring monitoring;
+
     public ServiceConfig withMonitoring(Monitoring monitoring) {
         this.monitoring = monitoring;
         return this;
@@ -84,6 +90,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServiceConfig withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quota")
     public Quota quota;
+
     public ServiceConfig withQuota(Quota quota) {
         this.quota = quota;
         return this;
@@ -106,6 +114,7 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ServiceConfig withTitle(String title) {
         this.title = title;
         return this;
@@ -117,9 +126,11 @@ public class ServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public Usage usage;
+
     public ServiceConfig withUsage(Usage usage) {
         this.usage = usage;
         return this;
     }
     
+    public ServiceConfig(){}
 }

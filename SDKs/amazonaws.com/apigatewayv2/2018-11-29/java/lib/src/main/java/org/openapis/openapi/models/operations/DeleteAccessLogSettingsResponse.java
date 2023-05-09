@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAccessLogSettingsResponse {
     
     public String contentType;
+
     public DeleteAccessLogSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAccessLogSettingsResponse {
      */
     
     public Object notFoundException;
+
     public DeleteAccessLogSettingsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -26,6 +29,7 @@ public class DeleteAccessLogSettingsResponse {
     
     
     public Integer statusCode;
+
     public DeleteAccessLogSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteAccessLogSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAccessLogSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteAccessLogSettingsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteAccessLogSettingsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteAccessLogSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

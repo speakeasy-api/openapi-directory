@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeploymentApplicationConfig {
     @JsonProperty("application")
     public String application;
+
     public DeploymentApplicationConfig withApplication(String application) {
         this.application = application;
         return this;
@@ -19,6 +20,7 @@ public class DeploymentApplicationConfig {
     
     @JsonProperty("applicationVersion")
     public String applicationVersion;
+
     public DeploymentApplicationConfig withApplicationVersion(String applicationVersion) {
         this.applicationVersion = applicationVersion;
         return this;
@@ -26,9 +28,15 @@ public class DeploymentApplicationConfig {
     
     @JsonProperty("launchConfig")
     public DeploymentLaunchConfig launchConfig;
+
     public DeploymentApplicationConfig withLaunchConfig(DeploymentLaunchConfig launchConfig) {
         this.launchConfig = launchConfig;
         return this;
     }
     
+    public DeploymentApplicationConfig(@JsonProperty("application") String application, @JsonProperty("applicationVersion") String applicationVersion, @JsonProperty("launchConfig") DeploymentLaunchConfig launchConfig) {
+        this.application = application;
+        this.applicationVersion = applicationVersion;
+        this.launchConfig = launchConfig;
+  }
 }

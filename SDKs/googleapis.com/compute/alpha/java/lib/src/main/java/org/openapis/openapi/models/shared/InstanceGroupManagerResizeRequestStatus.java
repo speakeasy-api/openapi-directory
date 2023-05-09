@@ -15,6 +15,7 @@ public class InstanceGroupManagerResizeRequestStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public InstanceGroupManagerResizeRequestStatusError error;
+
     public InstanceGroupManagerResizeRequestStatus withError(InstanceGroupManagerResizeRequestStatusError error) {
         this.error = error;
         return this;
@@ -26,9 +27,11 @@ public class InstanceGroupManagerResizeRequestStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queuingPolicy")
     public QueuingPolicy queuingPolicy;
+
     public InstanceGroupManagerResizeRequestStatus withQueuingPolicy(QueuingPolicy queuingPolicy) {
         this.queuingPolicy = queuingPolicy;
         return this;
     }
     
+    public InstanceGroupManagerResizeRequestStatus(){}
 }

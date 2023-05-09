@@ -18,6 +18,7 @@ public class IntegerGauge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public IntegerGauge withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -29,9 +30,11 @@ public class IntegerGauge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public SplitInt64 value;
+
     public IntegerGauge withValue(SplitInt64 value) {
         this.value = value;
         return this;
     }
     
+    public IntegerGauge(){}
 }

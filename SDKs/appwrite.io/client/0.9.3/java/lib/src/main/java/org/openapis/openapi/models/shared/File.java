@@ -15,6 +15,7 @@ public class File {
      */
     @JsonProperty("$id")
     public String dollarId;
+
     public File withDollarId(String dollarId) {
         this.dollarId = dollarId;
         return this;
@@ -25,6 +26,7 @@ public class File {
      */
     @JsonProperty("$permissions")
     public java.util.Map<String, Object> dollarPermissions;
+
     public File withDollarPermissions(java.util.Map<String, Object> dollarPermissions) {
         this.dollarPermissions = dollarPermissions;
         return this;
@@ -35,6 +37,7 @@ public class File {
      */
     @JsonProperty("dateCreated")
     public Integer dateCreated;
+
     public File withDateCreated(Integer dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -45,6 +48,7 @@ public class File {
      */
     @JsonProperty("mimeType")
     public String mimeType;
+
     public File withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -55,6 +59,7 @@ public class File {
      */
     @JsonProperty("name")
     public String name;
+
     public File withName(String name) {
         this.name = name;
         return this;
@@ -65,6 +70,7 @@ public class File {
      */
     @JsonProperty("signature")
     public String signature;
+
     public File withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -75,9 +81,19 @@ public class File {
      */
     @JsonProperty("sizeOriginal")
     public Integer sizeOriginal;
+
     public File withSizeOriginal(Integer sizeOriginal) {
         this.sizeOriginal = sizeOriginal;
         return this;
     }
     
+    public File(@JsonProperty("$id") String dollarId, @JsonProperty("$permissions") java.util.Map<String, Object> dollarPermissions, @JsonProperty("dateCreated") Integer dateCreated, @JsonProperty("mimeType") String mimeType, @JsonProperty("name") String name, @JsonProperty("signature") String signature, @JsonProperty("sizeOriginal") Integer sizeOriginal) {
+        this.dollarId = dollarId;
+        this.dollarPermissions = dollarPermissions;
+        this.dateCreated = dateCreated;
+        this.mimeType = mimeType;
+        this.name = name;
+        this.signature = signature;
+        this.sizeOriginal = sizeOriginal;
+  }
 }

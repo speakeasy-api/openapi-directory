@@ -15,6 +15,7 @@ public class ServerStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPreferred")
     public Boolean isPreferred;
+
     public ServerStrategy withIsPreferred(Boolean isPreferred) {
         this.isPreferred = isPreferred;
         return this;
@@ -23,6 +24,7 @@ public class ServerStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfApplicationComponents")
     public Long numberOfApplicationComponents;
+
     public ServerStrategy withNumberOfApplicationComponents(Long numberOfApplicationComponents) {
         this.numberOfApplicationComponents = numberOfApplicationComponents;
         return this;
@@ -31,6 +33,7 @@ public class ServerStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendation")
     public RecommendationSet recommendation;
+
     public ServerStrategy withRecommendation(RecommendationSet recommendation) {
         this.recommendation = recommendation;
         return this;
@@ -39,9 +42,11 @@ public class ServerStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StrategyRecommendationEnum status;
+
     public ServerStrategy withStatus(StrategyRecommendationEnum status) {
         this.status = status;
         return this;
     }
     
+    public ServerStrategy(){}
 }

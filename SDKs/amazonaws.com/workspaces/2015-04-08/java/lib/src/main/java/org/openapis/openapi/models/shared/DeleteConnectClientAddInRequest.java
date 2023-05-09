@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteConnectClientAddInRequest {
     @JsonProperty("AddInId")
     public String addInId;
+
     public DeleteConnectClientAddInRequest withAddInId(String addInId) {
         this.addInId = addInId;
         return this;
@@ -16,9 +17,14 @@ public class DeleteConnectClientAddInRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public DeleteConnectClientAddInRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public DeleteConnectClientAddInRequest(@JsonProperty("AddInId") String addInId, @JsonProperty("ResourceId") String resourceId) {
+        this.addInId = addInId;
+        this.resourceId = resourceId;
+  }
 }

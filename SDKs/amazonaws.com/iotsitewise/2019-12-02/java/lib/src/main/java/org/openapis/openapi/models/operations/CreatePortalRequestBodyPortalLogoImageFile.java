@@ -15,6 +15,7 @@ public class CreatePortalRequestBodyPortalLogoImageFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public CreatePortalRequestBodyPortalLogoImageFile withData(String data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class CreatePortalRequestBodyPortalLogoImageFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public org.openapis.openapi.models.shared.ImageFileTypeEnum type;
+
     public CreatePortalRequestBodyPortalLogoImageFile withType(org.openapis.openapi.models.shared.ImageFileTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreatePortalRequestBodyPortalLogoImageFile(){}
 }

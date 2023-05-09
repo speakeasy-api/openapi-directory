@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeImportImageTasksResultImportImageTasksSnapshotDetailsUserBucket {
     
     public String s3Bucket;
+
     public DescribeImportImageTasksResultImportImageTasksSnapshotDetailsUserBucket withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -19,9 +20,11 @@ public class DescribeImportImageTasksResultImportImageTasksSnapshotDetailsUserBu
     
     
     public String s3Key;
+
     public DescribeImportImageTasksResultImportImageTasksSnapshotDetailsUserBucket withS3Key(String s3Key) {
         this.s3Key = s3Key;
         return this;
     }
     
+    public DescribeImportImageTasksResultImportImageTasksSnapshotDetailsUserBucket(){}
 }

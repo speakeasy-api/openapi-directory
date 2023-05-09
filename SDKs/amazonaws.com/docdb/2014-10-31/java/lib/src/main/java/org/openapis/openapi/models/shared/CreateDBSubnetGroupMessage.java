@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateDBSubnetGroupMessage - Represents the input to &lt;a&gt;CreateDBSubnetGroup&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateDBSubnetGroupMessage {
     
     public String dbSubnetGroupDescription;
+
     public CreateDBSubnetGroupMessage withDBSubnetGroupDescription(String dbSubnetGroupDescription) {
         this.dbSubnetGroupDescription = dbSubnetGroupDescription;
         return this;
@@ -19,6 +20,7 @@ public class CreateDBSubnetGroupMessage {
     
     
     public String dbSubnetGroupName;
+
     public CreateDBSubnetGroupMessage withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -26,6 +28,7 @@ public class CreateDBSubnetGroupMessage {
     
     
     public String[] subnetIds;
+
     public CreateDBSubnetGroupMessage withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -33,9 +36,15 @@ public class CreateDBSubnetGroupMessage {
     
     
     public TagList[] tags;
+
     public CreateDBSubnetGroupMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDBSubnetGroupMessage(@JsonProperty("DBSubnetGroupDescription") String dbSubnetGroupDescription, @JsonProperty("DBSubnetGroupName") String dbSubnetGroupName, @JsonProperty("SubnetIds") String[] subnetIds) {
+        this.dbSubnetGroupDescription = dbSubnetGroupDescription;
+        this.dbSubnetGroupName = dbSubnetGroupName;
+        this.subnetIds = subnetIds;
+  }
 }

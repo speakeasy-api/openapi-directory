@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaSearchResponseQueryExpansionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expandedQuery")
     public Boolean expandedQuery;
+
     public GoogleCloudRetailV2betaSearchResponseQueryExpansionInfo withExpandedQuery(Boolean expandedQuery) {
         this.expandedQuery = expandedQuery;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2betaSearchResponseQueryExpansionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pinnedResultCount")
     public String pinnedResultCount;
+
     public GoogleCloudRetailV2betaSearchResponseQueryExpansionInfo withPinnedResultCount(String pinnedResultCount) {
         this.pinnedResultCount = pinnedResultCount;
         return this;
     }
     
+    public GoogleCloudRetailV2betaSearchResponseQueryExpansionInfo(){}
 }

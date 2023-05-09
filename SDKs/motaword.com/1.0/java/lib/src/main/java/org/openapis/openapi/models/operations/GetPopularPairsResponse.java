@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPopularPairsResponse {
     
     public String contentType;
+
     public GetPopularPairsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPopularPairsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetPopularPairsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetPopularPairsResponse {
      */
     
     public org.openapis.openapi.models.shared.PopularLanguagePairs popularLanguagePairs;
+
     public GetPopularPairsResponse withPopularLanguagePairs(org.openapis.openapi.models.shared.PopularLanguagePairs popularLanguagePairs) {
         this.popularLanguagePairs = popularLanguagePairs;
         return this;
@@ -36,6 +40,7 @@ public class GetPopularPairsResponse {
     
     
     public Integer statusCode;
+
     public GetPopularPairsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetPopularPairsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPopularPairsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPopularPairsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

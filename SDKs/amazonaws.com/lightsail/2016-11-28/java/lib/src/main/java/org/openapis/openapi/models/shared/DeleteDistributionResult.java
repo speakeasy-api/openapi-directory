@@ -15,9 +15,11 @@ public class DeleteDistributionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public DeleteDistributionResult withOperation(Operation operation) {
         this.operation = operation;
         return this;
     }
     
+    public DeleteDistributionResult(){}
 }

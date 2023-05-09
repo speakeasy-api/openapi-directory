@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReleaseAddressRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETReleaseAddressActionEnum action;
+
     public GETReleaseAddressRequest withAction(GETReleaseAddressActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETReleaseAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllocationId")
     public String allocationId;
+
     public GETReleaseAddressRequest withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -29,6 +32,7 @@ public class GETReleaseAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETReleaseAddressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETReleaseAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkBorderGroup")
     public String networkBorderGroup;
+
     public GETReleaseAddressRequest withNetworkBorderGroup(String networkBorderGroup) {
         this.networkBorderGroup = networkBorderGroup;
         return this;
@@ -49,6 +54,7 @@ public class GETReleaseAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PublicIp")
     public String publicIp;
+
     public GETReleaseAddressRequest withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -56,6 +62,7 @@ public class GETReleaseAddressRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETReleaseAddressVersionEnum version;
+
     public GETReleaseAddressRequest withVersion(GETReleaseAddressVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETReleaseAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETReleaseAddressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETReleaseAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETReleaseAddressRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETReleaseAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETReleaseAddressRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETReleaseAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETReleaseAddressRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETReleaseAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETReleaseAddressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETReleaseAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETReleaseAddressRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,14 @@ public class GETReleaseAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETReleaseAddressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETReleaseAddressRequest(@JsonProperty("Action") GETReleaseAddressActionEnum action, @JsonProperty("Version") GETReleaseAddressVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

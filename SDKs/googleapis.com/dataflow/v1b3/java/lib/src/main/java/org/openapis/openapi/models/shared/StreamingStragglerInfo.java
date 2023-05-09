@@ -18,6 +18,7 @@ public class StreamingStragglerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataWatermarkLag")
     public String dataWatermarkLag;
+
     public StreamingStragglerInfo withDataWatermarkLag(String dataWatermarkLag) {
         this.dataWatermarkLag = dataWatermarkLag;
         return this;
@@ -29,6 +30,7 @@ public class StreamingStragglerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public StreamingStragglerInfo withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +42,7 @@ public class StreamingStragglerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public StreamingStragglerInfo withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -51,6 +54,7 @@ public class StreamingStragglerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemWatermarkLag")
     public String systemWatermarkLag;
+
     public StreamingStragglerInfo withSystemWatermarkLag(String systemWatermarkLag) {
         this.systemWatermarkLag = systemWatermarkLag;
         return this;
@@ -62,9 +66,11 @@ public class StreamingStragglerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerName")
     public String workerName;
+
     public StreamingStragglerInfo withWorkerName(String workerName) {
         this.workerName = workerName;
         return this;
     }
     
+    public StreamingStragglerInfo(){}
 }

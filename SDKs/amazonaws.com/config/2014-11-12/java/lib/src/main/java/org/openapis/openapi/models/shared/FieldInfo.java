@@ -15,9 +15,11 @@ public class FieldInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public FieldInfo withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FieldInfo(){}
 }

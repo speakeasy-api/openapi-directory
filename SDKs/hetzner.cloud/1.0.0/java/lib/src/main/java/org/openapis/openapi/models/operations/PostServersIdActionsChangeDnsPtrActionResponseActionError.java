@@ -15,6 +15,7 @@ public class PostServersIdActionsChangeDnsPtrActionResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostServersIdActionsChangeDnsPtrActionResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostServersIdActionsChangeDnsPtrActionResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostServersIdActionsChangeDnsPtrActionResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostServersIdActionsChangeDnsPtrActionResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class YoutubeLiveChatModeratorsInsertResponse {
     
     public String contentType;
+
     public YoutubeLiveChatModeratorsInsertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class YoutubeLiveChatModeratorsInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.LiveChatModerator liveChatModerator;
+
     public YoutubeLiveChatModeratorsInsertResponse withLiveChatModerator(org.openapis.openapi.models.shared.LiveChatModerator liveChatModerator) {
         this.liveChatModerator = liveChatModerator;
         return this;
@@ -26,6 +29,7 @@ public class YoutubeLiveChatModeratorsInsertResponse {
     
     
     public Integer statusCode;
+
     public YoutubeLiveChatModeratorsInsertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class YoutubeLiveChatModeratorsInsertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public YoutubeLiveChatModeratorsInsertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public YoutubeLiveChatModeratorsInsertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

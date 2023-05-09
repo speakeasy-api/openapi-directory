@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTargetResourceTypesResponse {
     
     public String contentType;
+
     public ListTargetResourceTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTargetResourceTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTargetResourceTypesResponse listTargetResourceTypesResponse;
+
     public ListTargetResourceTypesResponse withListTargetResourceTypesResponse(org.openapis.openapi.models.shared.ListTargetResourceTypesResponse listTargetResourceTypesResponse) {
         this.listTargetResourceTypesResponse = listTargetResourceTypesResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListTargetResourceTypesResponse {
     
     
     public Integer statusCode;
+
     public ListTargetResourceTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListTargetResourceTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTargetResourceTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class ListTargetResourceTypesResponse {
      */
     
     public Object validationException;
+
     public ListTargetResourceTypesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTargetResourceTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

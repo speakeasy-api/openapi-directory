@@ -15,6 +15,7 @@ public class FlexibleTimeWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumWindowInMinutes")
     public Long maximumWindowInMinutes;
+
     public FlexibleTimeWindow withMaximumWindowInMinutes(Long maximumWindowInMinutes) {
         this.maximumWindowInMinutes = maximumWindowInMinutes;
         return this;
@@ -22,9 +23,13 @@ public class FlexibleTimeWindow {
     
     @JsonProperty("Mode")
     public FlexibleTimeWindowModeEnum mode;
+
     public FlexibleTimeWindow withMode(FlexibleTimeWindowModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public FlexibleTimeWindow(@JsonProperty("Mode") FlexibleTimeWindowModeEnum mode) {
+        this.mode = mode;
+  }
 }

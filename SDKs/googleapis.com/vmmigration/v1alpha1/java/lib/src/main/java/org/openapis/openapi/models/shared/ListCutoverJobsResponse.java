@@ -18,6 +18,7 @@ public class ListCutoverJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cutoverJobs")
     public CutoverJob[] cutoverJobs;
+
     public ListCutoverJobsResponse withCutoverJobs(CutoverJob[] cutoverJobs) {
         this.cutoverJobs = cutoverJobs;
         return this;
@@ -29,6 +30,7 @@ public class ListCutoverJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCutoverJobsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListCutoverJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListCutoverJobsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListCutoverJobsResponse(){}
 }

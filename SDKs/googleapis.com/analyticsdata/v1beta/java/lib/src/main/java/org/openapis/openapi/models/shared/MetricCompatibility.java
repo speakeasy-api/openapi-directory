@@ -18,6 +18,7 @@ public class MetricCompatibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibility")
     public MetricCompatibilityCompatibilityEnum compatibility;
+
     public MetricCompatibility withCompatibility(MetricCompatibilityCompatibilityEnum compatibility) {
         this.compatibility = compatibility;
         return this;
@@ -29,9 +30,11 @@ public class MetricCompatibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricMetadata")
     public MetricMetadata metricMetadata;
+
     public MetricCompatibility withMetricMetadata(MetricMetadata metricMetadata) {
         this.metricMetadata = metricMetadata;
         return this;
     }
     
+    public MetricCompatibility(){}
 }

@@ -12,9 +12,13 @@ public class BatchDeleteDetectorRequestBody {
      */
     @JsonProperty("detectors")
     public org.openapis.openapi.models.shared.DeleteDetectorRequest[] detectors;
+
     public BatchDeleteDetectorRequestBody withDetectors(org.openapis.openapi.models.shared.DeleteDetectorRequest[] detectors) {
         this.detectors = detectors;
         return this;
     }
     
+    public BatchDeleteDetectorRequestBody(@JsonProperty("detectors") org.openapis.openapi.models.shared.DeleteDetectorRequest[] detectors) {
+        this.detectors = detectors;
+  }
 }

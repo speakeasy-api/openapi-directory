@@ -18,6 +18,7 @@ public class CallRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answerTime")
     public Long answerTime;
+
     public CallRecord withAnswerTime(Long answerTime) {
         this.answerTime = answerTime;
         return this;
@@ -29,6 +30,7 @@ public class CallRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billedAmount")
     public Float billedAmount;
+
     public CallRecord withBilledAmount(Float billedAmount) {
         this.billedAmount = billedAmount;
         return this;
@@ -40,6 +42,7 @@ public class CallRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callerName")
     public String callerName;
+
     public CallRecord withCallerName(String callerName) {
         this.callerName = callerName;
         return this;
@@ -51,6 +54,7 @@ public class CallRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Long duration;
+
     public CallRecord withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -62,6 +66,7 @@ public class CallRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finishTime")
     public Long finishTime;
+
     public CallRecord withFinishTime(Long finishTime) {
         this.finishTime = finishTime;
         return this;
@@ -73,6 +78,7 @@ public class CallRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CallRecord withId(Long id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class CallRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public CallRecord withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -95,6 +102,7 @@ public class CallRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public Note[] notes;
+
     public CallRecord withNotes(Note[] notes) {
         this.notes = notes;
         return this;
@@ -106,6 +114,7 @@ public class CallRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originateTime")
     public Long originateTime;
+
     public CallRecord withOriginateTime(Long originateTime) {
         this.originateTime = originateTime;
         return this;
@@ -117,6 +126,7 @@ public class CallRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("questionResponses")
     public QuestionResponse[] questionResponses;
+
     public CallRecord withQuestionResponses(QuestionResponse[] questionResponses) {
         this.questionResponses = questionResponses;
         return this;
@@ -128,6 +138,7 @@ public class CallRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordings")
     public CallRecording[] recordings;
+
     public CallRecord withRecordings(CallRecording[] recordings) {
         this.recordings = recordings;
         return this;
@@ -139,6 +150,7 @@ public class CallRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public CallRecordResultEnum result;
+
     public CallRecord withResult(CallRecordResultEnum result) {
         this.result = result;
         return this;
@@ -150,6 +162,7 @@ public class CallRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("switchId")
     public String switchId;
+
     public CallRecord withSwitchId(String switchId) {
         this.switchId = switchId;
         return this;
@@ -161,9 +174,11 @@ public class CallRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toNumber")
     public String toNumber;
+
     public CallRecord withToNumber(String toNumber) {
         this.toNumber = toNumber;
         return this;
     }
     
+    public CallRecord(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListPoliciesGrantingServiceAccessRequest {
     
     public String arn;
+
     public ListPoliciesGrantingServiceAccessRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -16,6 +17,7 @@ public class ListPoliciesGrantingServiceAccessRequest {
     
     
     public String marker;
+
     public ListPoliciesGrantingServiceAccessRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +25,14 @@ public class ListPoliciesGrantingServiceAccessRequest {
     
     
     public String[] serviceNamespaces;
+
     public ListPoliciesGrantingServiceAccessRequest withServiceNamespaces(String[] serviceNamespaces) {
         this.serviceNamespaces = serviceNamespaces;
         return this;
     }
     
+    public ListPoliciesGrantingServiceAccessRequest(@JsonProperty("Arn") String arn, @JsonProperty("ServiceNamespaces") String[] serviceNamespaces) {
+        this.arn = arn;
+        this.serviceNamespaces = serviceNamespaces;
+  }
 }

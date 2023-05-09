@@ -18,6 +18,7 @@ public class AcmeTxtRecordInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public String digest;
+
     public AcmeTxtRecordInput withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -29,9 +30,11 @@ public class AcmeTxtRecordInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fqdn")
     public String fqdn;
+
     public AcmeTxtRecordInput withFqdn(String fqdn) {
         this.fqdn = fqdn;
         return this;
     }
     
+    public AcmeTxtRecordInput(){}
 }

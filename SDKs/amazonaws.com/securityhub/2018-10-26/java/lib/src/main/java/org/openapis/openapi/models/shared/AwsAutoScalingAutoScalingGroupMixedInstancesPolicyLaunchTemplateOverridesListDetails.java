@@ -15,6 +15,7 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOve
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesListDetails withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -23,9 +24,11 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOve
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeightedCapacity")
     public String weightedCapacity;
+
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesListDetails withWeightedCapacity(String weightedCapacity) {
         this.weightedCapacity = weightedCapacity;
         return this;
     }
     
+    public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateOverridesListDetails(){}
 }

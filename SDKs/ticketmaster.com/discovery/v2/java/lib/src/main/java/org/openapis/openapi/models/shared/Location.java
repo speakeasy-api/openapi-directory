@@ -15,6 +15,7 @@ public class Location {
      */
     
     public Double latitude;
+
     public Location withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -25,9 +26,11 @@ public class Location {
      */
     
     public Double longitude;
+
     public Location withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public Location(){}
 }

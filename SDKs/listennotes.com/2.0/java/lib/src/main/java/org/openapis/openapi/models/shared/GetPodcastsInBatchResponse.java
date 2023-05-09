@@ -19,6 +19,7 @@ public class GetPodcastsInBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latest_episodes")
     public EpisodeSimple[] latestEpisodes;
+
     public GetPodcastsInBatchResponse withLatestEpisodes(EpisodeSimple[] latestEpisodes) {
         this.latestEpisodes = latestEpisodes;
         return this;
@@ -26,9 +27,13 @@ public class GetPodcastsInBatchResponse {
     
     @JsonProperty("podcasts")
     public PodcastSimple[] podcasts;
+
     public GetPodcastsInBatchResponse withPodcasts(PodcastSimple[] podcasts) {
         this.podcasts = podcasts;
         return this;
     }
     
+    public GetPodcastsInBatchResponse(@JsonProperty("podcasts") PodcastSimple[] podcasts) {
+        this.podcasts = podcasts;
+  }
 }

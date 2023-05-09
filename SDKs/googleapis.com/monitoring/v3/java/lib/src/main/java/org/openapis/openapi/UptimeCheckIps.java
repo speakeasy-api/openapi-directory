@@ -58,11 +58,9 @@ public class UptimeCheckIps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringUptimeCheckIpsListResponse res = new org.openapis.openapi.models.operations.MonitoringUptimeCheckIpsListResponse() {{
+        org.openapis.openapi.models.operations.MonitoringUptimeCheckIpsListResponse res = new org.openapis.openapi.models.operations.MonitoringUptimeCheckIpsListResponse(contentType, httpRes.statusCode()) {{
             listUptimeCheckIpsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

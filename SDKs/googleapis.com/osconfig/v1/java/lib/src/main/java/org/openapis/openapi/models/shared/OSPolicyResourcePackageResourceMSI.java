@@ -18,6 +18,7 @@ public class OSPolicyResourcePackageResourceMSI {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public String[] properties;
+
     public OSPolicyResourcePackageResourceMSI withProperties(String[] properties) {
         this.properties = properties;
         return this;
@@ -29,9 +30,11 @@ public class OSPolicyResourcePackageResourceMSI {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public OSPolicyResourceFile source;
+
     public OSPolicyResourcePackageResourceMSI withSource(OSPolicyResourceFile source) {
         this.source = source;
         return this;
     }
     
+    public OSPolicyResourcePackageResourceMSI(){}
 }

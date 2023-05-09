@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Usingfilters {
     @JsonProperty("campo1")
     public String campo1;
+
     public Usingfilters withCampo1(String campo1) {
         this.campo1 = campo1;
         return this;
@@ -16,6 +17,7 @@ public class Usingfilters {
     
     @JsonProperty("campo2")
     public String campo2;
+
     public Usingfilters withCampo2(String campo2) {
         this.campo2 = campo2;
         return this;
@@ -23,9 +25,15 @@ public class Usingfilters {
     
     @JsonProperty("campo3")
     public Integer campo3;
+
     public Usingfilters withCampo3(Integer campo3) {
         this.campo3 = campo3;
         return this;
     }
     
+    public Usingfilters(@JsonProperty("campo1") String campo1, @JsonProperty("campo2") String campo2, @JsonProperty("campo3") Integer campo3) {
+        this.campo1 = campo1;
+        this.campo2 = campo2;
+        this.campo3 = campo3;
+  }
 }

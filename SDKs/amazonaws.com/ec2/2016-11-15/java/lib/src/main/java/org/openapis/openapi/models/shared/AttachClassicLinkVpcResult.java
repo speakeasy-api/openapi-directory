@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AttachClassicLinkVpcResult {
     
     public Boolean return_;
+
     public AttachClassicLinkVpcResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
     }
     
+    public AttachClassicLinkVpcResult(){}
 }

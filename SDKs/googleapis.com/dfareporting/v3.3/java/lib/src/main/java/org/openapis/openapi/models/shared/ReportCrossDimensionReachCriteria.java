@@ -18,6 +18,7 @@ public class ReportCrossDimensionReachCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breakdown")
     public SortedDimension[] breakdown;
+
     public ReportCrossDimensionReachCriteria withBreakdown(SortedDimension[] breakdown) {
         this.breakdown = breakdown;
         return this;
@@ -29,6 +30,7 @@ public class ReportCrossDimensionReachCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRange")
     public DateRange dateRange;
+
     public ReportCrossDimensionReachCriteria withDateRange(DateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -40,6 +42,7 @@ public class ReportCrossDimensionReachCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public ReportCrossDimensionReachCriteriaDimensionEnum dimension;
+
     public ReportCrossDimensionReachCriteria withDimension(ReportCrossDimensionReachCriteriaDimensionEnum dimension) {
         this.dimension = dimension;
         return this;
@@ -51,6 +54,7 @@ public class ReportCrossDimensionReachCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilters")
     public DimensionValue[] dimensionFilters;
+
     public ReportCrossDimensionReachCriteria withDimensionFilters(DimensionValue[] dimensionFilters) {
         this.dimensionFilters = dimensionFilters;
         return this;
@@ -62,6 +66,7 @@ public class ReportCrossDimensionReachCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricNames")
     public String[] metricNames;
+
     public ReportCrossDimensionReachCriteria withMetricNames(String[] metricNames) {
         this.metricNames = metricNames;
         return this;
@@ -73,6 +78,7 @@ public class ReportCrossDimensionReachCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overlapMetricNames")
     public String[] overlapMetricNames;
+
     public ReportCrossDimensionReachCriteria withOverlapMetricNames(String[] overlapMetricNames) {
         this.overlapMetricNames = overlapMetricNames;
         return this;
@@ -84,9 +90,11 @@ public class ReportCrossDimensionReachCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pivoted")
     public Boolean pivoted;
+
     public ReportCrossDimensionReachCriteria withPivoted(Boolean pivoted) {
         this.pivoted = pivoted;
         return this;
     }
     
+    public ReportCrossDimensionReachCriteria(){}
 }

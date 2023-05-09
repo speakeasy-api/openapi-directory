@@ -16,6 +16,7 @@ public class SshKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public SshKey withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -27,9 +28,11 @@ public class SshKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_key")
     public String publicKey;
+
     public SshKey withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public SshKey(){}
 }

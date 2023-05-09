@@ -18,6 +18,7 @@ public class NodeKubeletConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuCfsQuota")
     public Boolean cpuCfsQuota;
+
     public NodeKubeletConfig withCpuCfsQuota(Boolean cpuCfsQuota) {
         this.cpuCfsQuota = cpuCfsQuota;
         return this;
@@ -29,6 +30,7 @@ public class NodeKubeletConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuCfsQuotaPeriod")
     public String cpuCfsQuotaPeriod;
+
     public NodeKubeletConfig withCpuCfsQuotaPeriod(String cpuCfsQuotaPeriod) {
         this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
         return this;
@@ -40,6 +42,7 @@ public class NodeKubeletConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuManagerPolicy")
     public String cpuManagerPolicy;
+
     public NodeKubeletConfig withCpuManagerPolicy(String cpuManagerPolicy) {
         this.cpuManagerPolicy = cpuManagerPolicy;
         return this;
@@ -51,9 +54,11 @@ public class NodeKubeletConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podPidsLimit")
     public String podPidsLimit;
+
     public NodeKubeletConfig withPodPidsLimit(String podPidsLimit) {
         this.podPidsLimit = podPidsLimit;
         return this;
     }
     
+    public NodeKubeletConfig(){}
 }

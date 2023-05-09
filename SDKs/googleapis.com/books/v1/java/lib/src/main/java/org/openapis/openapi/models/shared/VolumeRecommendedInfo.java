@@ -18,9 +18,11 @@ public class VolumeRecommendedInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explanation")
     public String explanation;
+
     public VolumeRecommendedInfo withExplanation(String explanation) {
         this.explanation = explanation;
         return this;
     }
     
+    public VolumeRecommendedInfo(){}
 }

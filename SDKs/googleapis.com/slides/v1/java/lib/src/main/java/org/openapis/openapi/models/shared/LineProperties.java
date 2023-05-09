@@ -18,6 +18,7 @@ public class LineProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashStyle")
     public LinePropertiesDashStyleEnum dashStyle;
+
     public LineProperties withDashStyle(LinePropertiesDashStyleEnum dashStyle) {
         this.dashStyle = dashStyle;
         return this;
@@ -29,6 +30,7 @@ public class LineProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endArrow")
     public LinePropertiesEndArrowEnum endArrow;
+
     public LineProperties withEndArrow(LinePropertiesEndArrowEnum endArrow) {
         this.endArrow = endArrow;
         return this;
@@ -40,6 +42,7 @@ public class LineProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endConnection")
     public LineConnection endConnection;
+
     public LineProperties withEndConnection(LineConnection endConnection) {
         this.endConnection = endConnection;
         return this;
@@ -51,6 +54,7 @@ public class LineProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineFill")
     public LineFill lineFill;
+
     public LineProperties withLineFill(LineFill lineFill) {
         this.lineFill = lineFill;
         return this;
@@ -62,6 +66,7 @@ public class LineProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public Link link;
+
     public LineProperties withLink(Link link) {
         this.link = link;
         return this;
@@ -73,6 +78,7 @@ public class LineProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startArrow")
     public LinePropertiesStartArrowEnum startArrow;
+
     public LineProperties withStartArrow(LinePropertiesStartArrowEnum startArrow) {
         this.startArrow = startArrow;
         return this;
@@ -84,6 +90,7 @@ public class LineProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startConnection")
     public LineConnection startConnection;
+
     public LineProperties withStartConnection(LineConnection startConnection) {
         this.startConnection = startConnection;
         return this;
@@ -95,9 +102,11 @@ public class LineProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Dimension weight;
+
     public LineProperties withWeight(Dimension weight) {
         this.weight = weight;
         return this;
     }
     
+    public LineProperties(){}
 }

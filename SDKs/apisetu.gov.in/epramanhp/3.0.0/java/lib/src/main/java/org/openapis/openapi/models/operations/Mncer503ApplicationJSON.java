@@ -15,6 +15,7 @@ public class Mncer503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Mncer503ApplicationJSONErrorEnum error;
+
     public Mncer503ApplicationJSON withError(Mncer503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Mncer503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Mncer503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Mncer503ApplicationJSON withErrorDescription(Mncer503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Mncer503ApplicationJSON(){}
 }

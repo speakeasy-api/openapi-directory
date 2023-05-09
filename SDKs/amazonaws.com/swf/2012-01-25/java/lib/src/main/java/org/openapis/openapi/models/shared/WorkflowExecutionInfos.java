@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkflowExecutionInfos {
     @JsonProperty("executionInfos")
     public WorkflowExecutionInfo[] executionInfos;
+
     public WorkflowExecutionInfos withExecutionInfos(WorkflowExecutionInfo[] executionInfos) {
         this.executionInfos = executionInfos;
         return this;
@@ -22,9 +23,13 @@ public class WorkflowExecutionInfos {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public WorkflowExecutionInfos withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public WorkflowExecutionInfos(@JsonProperty("executionInfos") WorkflowExecutionInfo[] executionInfos) {
+        this.executionInfos = executionInfos;
+  }
 }

@@ -12,6 +12,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public JobConfiguration configuration;
+
     public Job withConfiguration(JobConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -23,6 +24,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Job withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -34,6 +36,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Job withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobReference")
     public JobReference jobReference;
+
     public Job withJobReference(JobReference jobReference) {
         this.jobReference = jobReference;
         return this;
@@ -53,6 +57,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Job withKind(String kind) {
         this.kind = kind;
         return this;
@@ -64,6 +69,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Job withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -72,6 +78,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistics")
     public JobStatistics statistics;
+
     public Job withStatistics(JobStatistics statistics) {
         this.statistics = statistics;
         return this;
@@ -80,6 +87,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public JobStatus status;
+
     public Job withStatus(JobStatus status) {
         this.status = status;
         return this;
@@ -91,9 +99,11 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_email")
     public String userEmail;
+
     public Job withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public Job(){}
 }

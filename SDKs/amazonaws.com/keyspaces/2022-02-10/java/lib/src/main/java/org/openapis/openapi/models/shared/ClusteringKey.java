@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ClusteringKey {
     @JsonProperty("name")
     public String name;
+
     public ClusteringKey withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class ClusteringKey {
     
     @JsonProperty("orderBy")
     public SortOrderEnum orderBy;
+
     public ClusteringKey withOrderBy(SortOrderEnum orderBy) {
         this.orderBy = orderBy;
         return this;
     }
     
+    public ClusteringKey(@JsonProperty("name") String name, @JsonProperty("orderBy") SortOrderEnum orderBy) {
+        this.name = name;
+        this.orderBy = orderBy;
+  }
 }

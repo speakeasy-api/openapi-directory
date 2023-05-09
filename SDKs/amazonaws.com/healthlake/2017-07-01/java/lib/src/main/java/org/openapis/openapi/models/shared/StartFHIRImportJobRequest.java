@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartFHIRImportJobRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public StartFHIRImportJobRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -18,6 +19,7 @@ public class StartFHIRImportJobRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public StartFHIRImportJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -25,6 +27,7 @@ public class StartFHIRImportJobRequest {
     
     @JsonProperty("DatastoreId")
     public String datastoreId;
+
     public StartFHIRImportJobRequest withDatastoreId(String datastoreId) {
         this.datastoreId = datastoreId;
         return this;
@@ -32,6 +35,7 @@ public class StartFHIRImportJobRequest {
     
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public StartFHIRImportJobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -40,6 +44,7 @@ public class StartFHIRImportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public StartFHIRImportJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -50,9 +55,17 @@ public class StartFHIRImportJobRequest {
      */
     @JsonProperty("JobOutputDataConfig")
     public OutputDataConfig jobOutputDataConfig;
+
     public StartFHIRImportJobRequest withJobOutputDataConfig(OutputDataConfig jobOutputDataConfig) {
         this.jobOutputDataConfig = jobOutputDataConfig;
         return this;
     }
     
+    public StartFHIRImportJobRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("DatastoreId") String datastoreId, @JsonProperty("InputDataConfig") InputDataConfig inputDataConfig, @JsonProperty("JobOutputDataConfig") OutputDataConfig jobOutputDataConfig) {
+        this.clientToken = clientToken;
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.datastoreId = datastoreId;
+        this.inputDataConfig = inputDataConfig;
+        this.jobOutputDataConfig = jobOutputDataConfig;
+  }
 }

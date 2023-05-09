@@ -22,6 +22,7 @@ public class Organisation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
     public OrganisationAddress[] addresses;
+
     public Organisation withAddresses(OrganisationAddress[] addresses) {
         this.addresses = addresses;
         return this;
@@ -30,6 +31,7 @@ public class Organisation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electronicAddresses")
     public ElectronicAddress[] electronicAddresses;
+
     public Organisation withElectronicAddresses(ElectronicAddress[] electronicAddresses) {
         this.electronicAddresses = electronicAddresses;
         return this;
@@ -41,6 +43,7 @@ public class Organisation {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("establishmentDate")
     public LocalDate establishmentDate;
+
     public Organisation withEstablishmentDate(LocalDate establishmentDate) {
         this.establishmentDate = establishmentDate;
         return this;
@@ -54,6 +57,7 @@ public class Organisation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fromDate")
     public OffsetDateTime fromDate;
+
     public Organisation withFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -65,6 +69,7 @@ public class Organisation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Organisation withId(String id) {
         this.id = id;
         return this;
@@ -75,6 +80,7 @@ public class Organisation {
      */
     @JsonProperty("legalEntityType")
     public OrganisationLegalEntityTypeEnum legalEntityType;
+
     public Organisation withLegalEntityType(OrganisationLegalEntityTypeEnum legalEntityType) {
         this.legalEntityType = legalEntityType;
         return this;
@@ -83,6 +89,7 @@ public class Organisation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public OrganisationName[] names;
+
     public Organisation withNames(OrganisationName[] names) {
         this.names = names;
         return this;
@@ -91,6 +98,7 @@ public class Organisation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registeredIdentifiers")
     public RegisteredIdentifier[] registeredIdentifiers;
+
     public Organisation withRegisteredIdentifiers(RegisteredIdentifier[] registeredIdentifiers) {
         this.registeredIdentifiers = registeredIdentifiers;
         return this;
@@ -104,9 +112,14 @@ public class Organisation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("toDate")
     public OffsetDateTime toDate;
+
     public Organisation withToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public Organisation(@JsonProperty("establishmentDate") LocalDate establishmentDate, @JsonProperty("legalEntityType") OrganisationLegalEntityTypeEnum legalEntityType) {
+        this.establishmentDate = establishmentDate;
+        this.legalEntityType = legalEntityType;
+  }
 }

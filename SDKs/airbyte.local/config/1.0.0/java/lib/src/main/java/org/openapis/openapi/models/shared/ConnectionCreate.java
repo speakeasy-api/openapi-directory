@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnectionCreate {
     @JsonProperty("destinationId")
     public String destinationId;
+
     public ConnectionCreate withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -19,6 +20,7 @@ public class ConnectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geography")
     public GeographyEnum geography;
+
     public ConnectionCreate withGeography(GeographyEnum geography) {
         this.geography = geography;
         return this;
@@ -30,6 +32,7 @@ public class ConnectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConnectionCreate withName(String name) {
         this.name = name;
         return this;
@@ -41,6 +44,7 @@ public class ConnectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceDefinition")
     public NamespaceDefinitionTypeEnum namespaceDefinition;
+
     public ConnectionCreate withNamespaceDefinition(NamespaceDefinitionTypeEnum namespaceDefinition) {
         this.namespaceDefinition = namespaceDefinition;
         return this;
@@ -52,6 +56,7 @@ public class ConnectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceFormat")
     public String namespaceFormat;
+
     public ConnectionCreate withNamespaceFormat(String namespaceFormat) {
         this.namespaceFormat = namespaceFormat;
         return this;
@@ -60,6 +65,7 @@ public class ConnectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonBreakingChangesPreference")
     public NonBreakingChangesPreferenceEnum nonBreakingChangesPreference;
+
     public ConnectionCreate withNonBreakingChangesPreference(NonBreakingChangesPreferenceEnum nonBreakingChangesPreference) {
         this.nonBreakingChangesPreference = nonBreakingChangesPreference;
         return this;
@@ -68,6 +74,7 @@ public class ConnectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifySchemaChanges")
     public Boolean notifySchemaChanges;
+
     public ConnectionCreate withNotifySchemaChanges(Boolean notifySchemaChanges) {
         this.notifySchemaChanges = notifySchemaChanges;
         return this;
@@ -76,6 +83,7 @@ public class ConnectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationIds")
     public String[] operationIds;
+
     public ConnectionCreate withOperationIds(String[] operationIds) {
         this.operationIds = operationIds;
         return this;
@@ -87,6 +95,7 @@ public class ConnectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public ConnectionCreate withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -98,6 +107,7 @@ public class ConnectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public ResourceRequirements resourceRequirements;
+
     public ConnectionCreate withResourceRequirements(ResourceRequirements resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
@@ -109,6 +119,7 @@ public class ConnectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public ConnectionSchedule schedule;
+
     public ConnectionCreate withSchedule(ConnectionSchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -120,6 +131,7 @@ public class ConnectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleData")
     public ConnectionScheduleData scheduleData;
+
     public ConnectionCreate withScheduleData(ConnectionScheduleData scheduleData) {
         this.scheduleData = scheduleData;
         return this;
@@ -131,6 +143,7 @@ public class ConnectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleType")
     public ConnectionScheduleTypeEnum scheduleType;
+
     public ConnectionCreate withScheduleType(ConnectionScheduleTypeEnum scheduleType) {
         this.scheduleType = scheduleType;
         return this;
@@ -139,6 +152,7 @@ public class ConnectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceCatalogId")
     public String sourceCatalogId;
+
     public ConnectionCreate withSourceCatalogId(String sourceCatalogId) {
         this.sourceCatalogId = sourceCatalogId;
         return this;
@@ -146,6 +160,7 @@ public class ConnectionCreate {
     
     @JsonProperty("sourceId")
     public String sourceId;
+
     public ConnectionCreate withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -156,6 +171,7 @@ public class ConnectionCreate {
      */
     @JsonProperty("status")
     public ConnectionStatusEnum status;
+
     public ConnectionCreate withStatus(ConnectionStatusEnum status) {
         this.status = status;
         return this;
@@ -167,9 +183,15 @@ public class ConnectionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncCatalog")
     public AirbyteCatalog syncCatalog;
+
     public ConnectionCreate withSyncCatalog(AirbyteCatalog syncCatalog) {
         this.syncCatalog = syncCatalog;
         return this;
     }
     
+    public ConnectionCreate(@JsonProperty("destinationId") String destinationId, @JsonProperty("sourceId") String sourceId, @JsonProperty("status") ConnectionStatusEnum status) {
+        this.destinationId = destinationId;
+        this.sourceId = sourceId;
+        this.status = status;
+  }
 }

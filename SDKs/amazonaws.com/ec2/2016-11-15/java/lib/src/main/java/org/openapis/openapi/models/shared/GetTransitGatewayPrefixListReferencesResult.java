@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTransitGatewayPrefixListReferencesResult {
     
     public String nextToken;
+
     public GetTransitGatewayPrefixListReferencesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class GetTransitGatewayPrefixListReferencesResult {
     
     
     public GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferences[] transitGatewayPrefixListReferences;
+
     public GetTransitGatewayPrefixListReferencesResult withTransitGatewayPrefixListReferences(GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferences[] transitGatewayPrefixListReferences) {
         this.transitGatewayPrefixListReferences = transitGatewayPrefixListReferences;
         return this;
     }
     
+    public GetTransitGatewayPrefixListReferencesResult(){}
 }

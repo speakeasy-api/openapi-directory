@@ -56,10 +56,8 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -90,10 +88,8 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsOrganizationIdResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsOrganizationIdResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsOrganizationIdResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsOrganizationIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -126,10 +122,8 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutWorkspaceSlugOrganizationsOrganizationIdResponse res = new org.openapis.openapi.models.operations.PutWorkspaceSlugOrganizationsOrganizationIdResponse() {{
+        org.openapis.openapi.models.operations.PutWorkspaceSlugOrganizationsOrganizationIdResponse res = new org.openapis.openapi.models.operations.PutWorkspaceSlugOrganizationsOrganizationIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 403 || httpRes.statusCode() == 422) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberGeometryFilterExtRequest {
@@ -12,6 +13,7 @@ public class GetSearchVersionNumberGeometryFilterExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
     public org.openapis.openapi.models.shared.ExtEnum ext;
+
     public GetSearchVersionNumberGeometryFilterExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
         this.ext = ext;
         return this;
@@ -22,6 +24,7 @@ public class GetSearchVersionNumberGeometryFilterExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geometryList")
     public String geometryList;
+
     public GetSearchVersionNumberGeometryFilterExtRequest withGeometryList(String geometryList) {
         this.geometryList = geometryList;
         return this;
@@ -32,6 +35,7 @@ public class GetSearchVersionNumberGeometryFilterExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=poiList")
     public String poiList;
+
     public GetSearchVersionNumberGeometryFilterExtRequest withPoiList(String poiList) {
         this.poiList = poiList;
         return this;
@@ -42,9 +46,16 @@ public class GetSearchVersionNumberGeometryFilterExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+
     public GetSearchVersionNumberGeometryFilterExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public GetSearchVersionNumberGeometryFilterExtRequest(@JsonProperty("ext") org.openapis.openapi.models.shared.ExtEnum ext, @JsonProperty("geometryList") String geometryList, @JsonProperty("poiList") String poiList, @JsonProperty("versionNumber") org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.ext = ext;
+        this.geometryList = geometryList;
+        this.poiList = poiList;
+        this.versionNumber = versionNumber;
+  }
 }

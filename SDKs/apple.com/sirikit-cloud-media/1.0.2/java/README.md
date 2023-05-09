@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.ExtensionConfigurationRequest;
 import org.openapis.openapi.models.operations.ExtensionConfigurationResponse;
 
@@ -26,24 +25,21 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ExtensionConfigurationRequest req = new ExtensionConfigurationRequest() {{
-                acceptLanguage = "corrupti";
-                cacheControl = "provident";
-                ifNoneMatch = "distinctio";
-                requestTimeout = 8442.66;
-                userAgent = "unde";
-                xApplecloudextensionRetryCount = 8579.46;
-                xApplecloudextensionSessionId = "corrupti";
-            }}            
+            ExtensionConfigurationRequest req = new ExtensionConfigurationRequest("corrupti", "provident", 7151.9, "quibusdam", "unde") {{
+                ifNoneMatch = "nulla";
+                xApplecloudextensionRetryCount = 5448.83;
+            }};            
 
             ExtensionConfigurationResponse res = sdk.config.extensionConfiguration(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -51,20 +47,20 @@ public class Application {
 ## Available Resources and Operations
 
 
-### config
+### [config](docs/config/README.md)
 
-* `extensionConfiguration` - Configuration Resource
+* [extensionConfiguration](docs/config/README.md#extensionconfiguration) - Configuration Resource
 
-### intent
+### [intent](docs/intent/README.md)
 
-* `addMediaIntentHandling` - addMedia
-* `playMediaIntentHandling` - playMedia
-* `updateMediaAffinityIntentHandling` - updateMediaAffinity
+* [addMediaIntentHandling](docs/intent/README.md#addmediaintenthandling) - addMedia
+* [playMediaIntentHandling](docs/intent/README.md#playmediaintenthandling) - playMedia
+* [updateMediaAffinityIntentHandling](docs/intent/README.md#updatemediaaffinityintenthandling) - updateMediaAffinity
 
-### queues
+### [queues](docs/queues/README.md)
 
-* `playMediaOnQueue` - playMedia
-* `updateActivityOnQueue` - updateActivity
+* [playMediaOnQueue](docs/queues/README.md#playmediaonqueue) - playMedia
+* [updateActivityOnQueue](docs/queues/README.md#updateactivityonqueue) - updateActivity
 <!-- End SDK Available Operations -->
 
 ### Maturity

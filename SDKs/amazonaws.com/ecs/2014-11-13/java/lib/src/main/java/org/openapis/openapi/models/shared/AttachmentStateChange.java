@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttachmentStateChange {
     @JsonProperty("attachmentArn")
     public String attachmentArn;
+
     public AttachmentStateChange withAttachmentArn(String attachmentArn) {
         this.attachmentArn = attachmentArn;
         return this;
@@ -19,9 +20,14 @@ public class AttachmentStateChange {
     
     @JsonProperty("status")
     public String status;
+
     public AttachmentStateChange withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AttachmentStateChange(@JsonProperty("attachmentArn") String attachmentArn, @JsonProperty("status") String status) {
+        this.attachmentArn = attachmentArn;
+        this.status = status;
+  }
 }

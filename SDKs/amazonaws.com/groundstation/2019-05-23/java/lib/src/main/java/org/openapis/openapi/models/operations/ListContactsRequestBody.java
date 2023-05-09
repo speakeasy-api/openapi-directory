@@ -21,6 +21,7 @@ public class ListContactsRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public ListContactsRequestBody withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -32,6 +33,7 @@ public class ListContactsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groundStation")
     public String groundStation;
+
     public ListContactsRequestBody withGroundStation(String groundStation) {
         this.groundStation = groundStation;
         return this;
@@ -43,6 +45,7 @@ public class ListContactsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListContactsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -54,6 +57,7 @@ public class ListContactsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missionProfileArn")
     public String missionProfileArn;
+
     public ListContactsRequestBody withMissionProfileArn(String missionProfileArn) {
         this.missionProfileArn = missionProfileArn;
         return this;
@@ -65,6 +69,7 @@ public class ListContactsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListContactsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -76,6 +81,7 @@ public class ListContactsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satelliteArn")
     public String satelliteArn;
+
     public ListContactsRequestBody withSatelliteArn(String satelliteArn) {
         this.satelliteArn = satelliteArn;
         return this;
@@ -88,6 +94,7 @@ public class ListContactsRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ListContactsRequestBody withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -98,9 +105,15 @@ public class ListContactsRequestBody {
      */
     @JsonProperty("statusList")
     public org.openapis.openapi.models.shared.ContactStatusEnum[] statusList;
+
     public ListContactsRequestBody withStatusList(org.openapis.openapi.models.shared.ContactStatusEnum[] statusList) {
         this.statusList = statusList;
         return this;
     }
     
+    public ListContactsRequestBody(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("statusList") org.openapis.openapi.models.shared.ContactStatusEnum[] statusList) {
+        this.endTime = endTime;
+        this.startTime = startTime;
+        this.statusList = statusList;
+  }
 }

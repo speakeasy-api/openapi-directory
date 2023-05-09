@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest;
 import org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryResponse;
 
@@ -27,7 +26,7 @@ public class Application {
                 shortColumnNames = false;
                 startDateTime = "illum";
                 unitGroup = "vel";
-            }}            
+            }};            
 
             GetVisualCrossingWebServicesRestServicesWeatherdataHistoryResponse res = sdk.historicalWeather.getVisualCrossingWebServicesRestServicesWeatherdataHistory(req);
 
@@ -37,5 +36,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

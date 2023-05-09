@@ -200,4 +200,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/DocumentInputConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/TranslateTextResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Translation.java
 lib/src/main/java/org/openapis/openapi/models/shared/TranslateTextRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

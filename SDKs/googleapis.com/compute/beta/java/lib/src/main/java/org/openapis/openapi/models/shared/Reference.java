@@ -18,6 +18,7 @@ public class Reference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Reference withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class Reference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceType")
     public String referenceType;
+
     public Reference withReferenceType(String referenceType) {
         this.referenceType = referenceType;
         return this;
@@ -40,6 +42,7 @@ public class Reference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referrer")
     public String referrer;
+
     public Reference withReferrer(String referrer) {
         this.referrer = referrer;
         return this;
@@ -51,9 +54,11 @@ public class Reference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public Reference withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public Reference(){}
 }

@@ -20,6 +20,7 @@ public class CatalogCustomAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boolean_value")
     public Boolean booleanValue;
+
     public CatalogCustomAttributeValue withBooleanValue(Boolean booleanValue) {
         this.booleanValue = booleanValue;
         return this;
@@ -31,6 +32,7 @@ public class CatalogCustomAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_attribute_definition_id")
     public String customAttributeDefinitionId;
+
     public CatalogCustomAttributeValue withCustomAttributeDefinitionId(String customAttributeDefinitionId) {
         this.customAttributeDefinitionId = customAttributeDefinitionId;
         return this;
@@ -42,6 +44,7 @@ public class CatalogCustomAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public CatalogCustomAttributeValue withKey(String key) {
         this.key = key;
         return this;
@@ -53,6 +56,7 @@ public class CatalogCustomAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CatalogCustomAttributeValue withName(String name) {
         this.name = name;
         return this;
@@ -65,6 +69,7 @@ public class CatalogCustomAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number_value")
     public String numberValue;
+
     public CatalogCustomAttributeValue withNumberValue(String numberValue) {
         this.numberValue = numberValue;
         return this;
@@ -76,6 +81,7 @@ public class CatalogCustomAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selection_uid_values")
     public String[] selectionUidValues;
+
     public CatalogCustomAttributeValue withSelectionUidValues(String[] selectionUidValues) {
         this.selectionUidValues = selectionUidValues;
         return this;
@@ -87,6 +93,7 @@ public class CatalogCustomAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("string_value")
     public String stringValue;
+
     public CatalogCustomAttributeValue withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
@@ -98,9 +105,11 @@ public class CatalogCustomAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CatalogCustomAttributeValue withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CatalogCustomAttributeValue(){}
 }

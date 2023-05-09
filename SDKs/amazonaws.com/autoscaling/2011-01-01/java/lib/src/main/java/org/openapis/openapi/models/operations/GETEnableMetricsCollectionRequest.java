@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnableMetricsCollectionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETEnableMetricsCollectionActionEnum action;
+
     public GETEnableMetricsCollectionRequest withAction(GETEnableMetricsCollectionActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETEnableMetricsCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
     public String autoScalingGroupName;
+
     public GETEnableMetricsCollectionRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -29,6 +32,7 @@ public class GETEnableMetricsCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Granularity")
     public String granularity;
+
     public GETEnableMetricsCollectionRequest withGranularity(String granularity) {
         this.granularity = granularity;
         return this;
@@ -39,6 +43,7 @@ public class GETEnableMetricsCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Metrics")
     public String[] metrics;
+
     public GETEnableMetricsCollectionRequest withMetrics(String[] metrics) {
         this.metrics = metrics;
         return this;
@@ -46,6 +51,7 @@ public class GETEnableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETEnableMetricsCollectionVersionEnum version;
+
     public GETEnableMetricsCollectionRequest withVersion(GETEnableMetricsCollectionVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETEnableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETEnableMetricsCollectionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETEnableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETEnableMetricsCollectionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETEnableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETEnableMetricsCollectionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETEnableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETEnableMetricsCollectionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETEnableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETEnableMetricsCollectionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETEnableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETEnableMetricsCollectionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETEnableMetricsCollectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETEnableMetricsCollectionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETEnableMetricsCollectionRequest(@JsonProperty("Action") GETEnableMetricsCollectionActionEnum action, @JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("Granularity") String granularity, @JsonProperty("Version") GETEnableMetricsCollectionVersionEnum version) {
+        this.action = action;
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.granularity = granularity;
+        this.version = version;
+  }
 }

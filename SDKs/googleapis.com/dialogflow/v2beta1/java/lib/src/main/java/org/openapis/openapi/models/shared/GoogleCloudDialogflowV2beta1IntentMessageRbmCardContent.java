@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia media;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent withMedia(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia media) {
         this.media = media;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestions")
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion[] suggestions;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent withSuggestions(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion[] suggestions) {
         this.suggestions = suggestions;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent(){}
 }

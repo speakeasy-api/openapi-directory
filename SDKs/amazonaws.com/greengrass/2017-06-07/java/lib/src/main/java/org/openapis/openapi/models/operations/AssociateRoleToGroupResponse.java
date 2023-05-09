@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateRoleToGroupResponse {
@@ -12,6 +13,7 @@ public class AssociateRoleToGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateRoleToGroupResponse associateRoleToGroupResponse;
+
     public AssociateRoleToGroupResponse withAssociateRoleToGroupResponse(org.openapis.openapi.models.shared.AssociateRoleToGroupResponse associateRoleToGroupResponse) {
         this.associateRoleToGroupResponse = associateRoleToGroupResponse;
         return this;
@@ -22,6 +24,7 @@ public class AssociateRoleToGroupResponse {
      */
     
     public Object badRequestException;
+
     public AssociateRoleToGroupResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateRoleToGroupResponse {
     
     
     public String contentType;
+
     public AssociateRoleToGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateRoleToGroupResponse {
      */
     
     public Object internalServerErrorException;
+
     public AssociateRoleToGroupResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -46,6 +51,7 @@ public class AssociateRoleToGroupResponse {
     
     
     public Integer statusCode;
+
     public AssociateRoleToGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class AssociateRoleToGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateRoleToGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssociateRoleToGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

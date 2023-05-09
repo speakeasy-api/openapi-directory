@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateActiveWidgetRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ActiveWidget activeWidget;
+
     public UpdateActiveWidgetRequest withActiveWidget(org.openapis.openapi.models.shared.ActiveWidget activeWidget) {
         this.activeWidget = activeWidget;
         return this;
@@ -19,6 +21,7 @@ public class UpdateActiveWidgetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public UpdateActiveWidgetRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -29,9 +32,14 @@ public class UpdateActiveWidgetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=widgetId")
     public Long widgetId;
+
     public UpdateActiveWidgetRequest withWidgetId(Long widgetId) {
         this.widgetId = widgetId;
         return this;
     }
     
+    public UpdateActiveWidgetRequest(@JsonProperty("projectId") Long projectId, @JsonProperty("widgetId") Long widgetId) {
+        this.projectId = projectId;
+        this.widgetId = widgetId;
+  }
 }

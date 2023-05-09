@@ -25,6 +25,7 @@ public class Recurring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contract")
     public RecurringContractEnum contract;
+
     public Recurring withContract(RecurringContractEnum contract) {
         this.contract = contract;
         return this;
@@ -36,6 +37,7 @@ public class Recurring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringDetailName")
     public String recurringDetailName;
+
     public Recurring withRecurringDetailName(String recurringDetailName) {
         this.recurringDetailName = recurringDetailName;
         return this;
@@ -49,6 +51,7 @@ public class Recurring {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("recurringExpiry")
     public OffsetDateTime recurringExpiry;
+
     public Recurring withRecurringExpiry(OffsetDateTime recurringExpiry) {
         this.recurringExpiry = recurringExpiry;
         return this;
@@ -60,6 +63,7 @@ public class Recurring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringFrequency")
     public String recurringFrequency;
+
     public Recurring withRecurringFrequency(String recurringFrequency) {
         this.recurringFrequency = recurringFrequency;
         return this;
@@ -71,9 +75,11 @@ public class Recurring {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenService")
     public RecurringTokenServiceEnum tokenService;
+
     public Recurring withTokenService(RecurringTokenServiceEnum tokenService) {
         this.tokenService = tokenService;
         return this;
     }
     
+    public Recurring(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLastEditedUsingPOSTResponse {
     
     public String contentType;
+
     public GetLastEditedUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetLastEditedUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public GetLastEditedUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetLastEditedUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLastEditedUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetLastEditedUsingPOSTResponse {
      */
     
     public GetLastEditedUsingPOST200ApplicationJSON getLastEditedUsingPOST200ApplicationJSONObject;
+
     public GetLastEditedUsingPOSTResponse withGetLastEditedUsingPOST200ApplicationJSONObject(GetLastEditedUsingPOST200ApplicationJSON getLastEditedUsingPOST200ApplicationJSONObject) {
         this.getLastEditedUsingPOST200ApplicationJSONObject = getLastEditedUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetLastEditedUsingPOSTResponse {
      */
     
     public GetLastEditedUsingPOST400ApplicationJSON getLastEditedUsingPOST400ApplicationJSONObject;
+
     public GetLastEditedUsingPOSTResponse withGetLastEditedUsingPOST400ApplicationJSONObject(GetLastEditedUsingPOST400ApplicationJSON getLastEditedUsingPOST400ApplicationJSONObject) {
         this.getLastEditedUsingPOST400ApplicationJSONObject = getLastEditedUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetLastEditedUsingPOSTResponse {
      */
     
     public GetLastEditedUsingPOST401ApplicationJSON getLastEditedUsingPOST401ApplicationJSONObject;
+
     public GetLastEditedUsingPOSTResponse withGetLastEditedUsingPOST401ApplicationJSONObject(GetLastEditedUsingPOST401ApplicationJSON getLastEditedUsingPOST401ApplicationJSONObject) {
         this.getLastEditedUsingPOST401ApplicationJSONObject = getLastEditedUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GetLastEditedUsingPOSTResponse {
      */
     
     public GetLastEditedUsingPOST500ApplicationJSON getLastEditedUsingPOST500ApplicationJSONObject;
+
     public GetLastEditedUsingPOSTResponse withGetLastEditedUsingPOST500ApplicationJSONObject(GetLastEditedUsingPOST500ApplicationJSON getLastEditedUsingPOST500ApplicationJSONObject) {
         this.getLastEditedUsingPOST500ApplicationJSONObject = getLastEditedUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public GetLastEditedUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

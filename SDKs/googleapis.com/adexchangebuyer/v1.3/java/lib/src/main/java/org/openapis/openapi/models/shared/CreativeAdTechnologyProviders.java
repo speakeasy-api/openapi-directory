@@ -15,6 +15,7 @@ public class CreativeAdTechnologyProviders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedProviderIds")
     public String[] detectedProviderIds;
+
     public CreativeAdTechnologyProviders withDetectedProviderIds(String[] detectedProviderIds) {
         this.detectedProviderIds = detectedProviderIds;
         return this;
@@ -26,9 +27,11 @@ public class CreativeAdTechnologyProviders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasUnidentifiedProvider")
     public Boolean hasUnidentifiedProvider;
+
     public CreativeAdTechnologyProviders withHasUnidentifiedProvider(Boolean hasUnidentifiedProvider) {
         this.hasUnidentifiedProvider = hasUnidentifiedProvider;
         return this;
     }
     
+    public CreativeAdTechnologyProviders(){}
 }

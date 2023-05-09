@@ -20,9 +20,13 @@ public class SubmitJobMediaUrlOptionsCustomVocabularies {
      */
     @JsonProperty("phrases")
     public String[] phrases;
+
     public SubmitJobMediaUrlOptionsCustomVocabularies withPhrases(String[] phrases) {
         this.phrases = phrases;
         return this;
     }
     
+    public SubmitJobMediaUrlOptionsCustomVocabularies(@JsonProperty("phrases") String[] phrases) {
+        this.phrases = phrases;
+  }
 }

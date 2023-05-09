@@ -23,6 +23,7 @@ public class AutomationRunEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automation_id")
     public Integer automationId;
+
     public AutomationRunEntity withAutomationId(Integer automationId) {
         this.automationId = automationId;
         return this;
@@ -36,6 +37,7 @@ public class AutomationRunEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completed_at")
     public OffsetDateTime completedAt;
+
     public AutomationRunEntity withCompletedAt(OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -49,6 +51,7 @@ public class AutomationRunEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public AutomationRunEntity withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -60,6 +63,7 @@ public class AutomationRunEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public AutomationRunEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -71,6 +75,7 @@ public class AutomationRunEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AutomationRunEntityStatusEnum status;
+
     public AutomationRunEntity withStatus(AutomationRunEntityStatusEnum status) {
         this.status = status;
         return this;
@@ -82,9 +87,11 @@ public class AutomationRunEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_messages_url")
     public String statusMessagesUrl;
+
     public AutomationRunEntity withStatusMessagesUrl(String statusMessagesUrl) {
         this.statusMessagesUrl = statusMessagesUrl;
         return this;
     }
     
+    public AutomationRunEntity(){}
 }

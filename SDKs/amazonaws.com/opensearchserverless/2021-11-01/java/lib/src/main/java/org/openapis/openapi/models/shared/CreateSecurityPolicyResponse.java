@@ -15,9 +15,11 @@ public class CreateSecurityPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityPolicyDetail")
     public SecurityPolicyDetail securityPolicyDetail;
+
     public CreateSecurityPolicyResponse withSecurityPolicyDetail(SecurityPolicyDetail securityPolicyDetail) {
         this.securityPolicyDetail = securityPolicyDetail;
         return this;
     }
     
+    public CreateSecurityPolicyResponse(){}
 }

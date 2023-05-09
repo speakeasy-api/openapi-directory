@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class GetConsoleOutputResult {
     
     public String instanceId;
+
     public GetConsoleOutputResult withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -19,6 +20,7 @@ public class GetConsoleOutputResult {
     
     
     public String output;
+
     public GetConsoleOutputResult withOutput(String output) {
         this.output = output;
         return this;
@@ -26,9 +28,11 @@ public class GetConsoleOutputResult {
     
     
     public OffsetDateTime timestamp;
+
     public GetConsoleOutputResult withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public GetConsoleOutputResult(){}
 }

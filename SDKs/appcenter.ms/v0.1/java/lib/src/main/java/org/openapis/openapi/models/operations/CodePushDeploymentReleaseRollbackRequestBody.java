@@ -15,9 +15,11 @@ public class CodePushDeploymentReleaseRollbackRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CodePushDeploymentReleaseRollbackRequestBody withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public CodePushDeploymentReleaseRollbackRequestBody(){}
 }

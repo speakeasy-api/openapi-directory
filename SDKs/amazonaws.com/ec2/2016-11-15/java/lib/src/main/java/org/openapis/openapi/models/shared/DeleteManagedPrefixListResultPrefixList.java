@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteManagedPrefixListResultPrefixList {
     
     public String addressFamily;
+
     public DeleteManagedPrefixListResultPrefixList withAddressFamily(String addressFamily) {
         this.addressFamily = addressFamily;
         return this;
@@ -19,6 +20,7 @@ public class DeleteManagedPrefixListResultPrefixList {
     
     
     public Long maxEntries;
+
     public DeleteManagedPrefixListResultPrefixList withMaxEntries(Long maxEntries) {
         this.maxEntries = maxEntries;
         return this;
@@ -26,6 +28,7 @@ public class DeleteManagedPrefixListResultPrefixList {
     
     
     public String ownerId;
+
     public DeleteManagedPrefixListResultPrefixList withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -33,6 +36,7 @@ public class DeleteManagedPrefixListResultPrefixList {
     
     
     public String prefixListArn;
+
     public DeleteManagedPrefixListResultPrefixList withPrefixListArn(String prefixListArn) {
         this.prefixListArn = prefixListArn;
         return this;
@@ -40,6 +44,7 @@ public class DeleteManagedPrefixListResultPrefixList {
     
     
     public String prefixListId;
+
     public DeleteManagedPrefixListResultPrefixList withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -47,6 +52,7 @@ public class DeleteManagedPrefixListResultPrefixList {
     
     
     public String prefixListName;
+
     public DeleteManagedPrefixListResultPrefixList withPrefixListName(String prefixListName) {
         this.prefixListName = prefixListName;
         return this;
@@ -54,6 +60,7 @@ public class DeleteManagedPrefixListResultPrefixList {
     
     
     public DeleteManagedPrefixListResultPrefixListStateEnum state;
+
     public DeleteManagedPrefixListResultPrefixList withState(DeleteManagedPrefixListResultPrefixListStateEnum state) {
         this.state = state;
         return this;
@@ -61,6 +68,7 @@ public class DeleteManagedPrefixListResultPrefixList {
     
     
     public String stateMessage;
+
     public DeleteManagedPrefixListResultPrefixList withStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
         return this;
@@ -68,6 +76,7 @@ public class DeleteManagedPrefixListResultPrefixList {
     
     
     public DeleteManagedPrefixListResultPrefixListTags[] tags;
+
     public DeleteManagedPrefixListResultPrefixList withTags(DeleteManagedPrefixListResultPrefixListTags[] tags) {
         this.tags = tags;
         return this;
@@ -75,9 +84,11 @@ public class DeleteManagedPrefixListResultPrefixList {
     
     
     public Long version;
+
     public DeleteManagedPrefixListResultPrefixList withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public DeleteManagedPrefixListResultPrefixList(){}
 }

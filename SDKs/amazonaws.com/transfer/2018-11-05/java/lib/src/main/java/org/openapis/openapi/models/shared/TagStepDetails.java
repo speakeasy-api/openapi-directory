@@ -15,6 +15,7 @@ public class TagStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public TagStepDetails withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class TagStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceFileLocation")
     public String sourceFileLocation;
+
     public TagStepDetails withSourceFileLocation(String sourceFileLocation) {
         this.sourceFileLocation = sourceFileLocation;
         return this;
@@ -31,9 +33,11 @@ public class TagStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public S3Tag[] tags;
+
     public TagStepDetails withTags(S3Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagStepDetails(){}
 }

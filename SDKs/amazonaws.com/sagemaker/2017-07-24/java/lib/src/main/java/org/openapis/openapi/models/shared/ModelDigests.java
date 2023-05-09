@@ -15,9 +15,11 @@ public class ModelDigests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactDigest")
     public String artifactDigest;
+
     public ModelDigests withArtifactDigest(String artifactDigest) {
         this.artifactDigest = artifactDigest;
         return this;
     }
     
+    public ModelDigests(){}
 }

@@ -15,6 +15,7 @@ public class ListPermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListPermissionsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,20 +27,35 @@ public class ListPermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListPermissionsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
     /**
-     * Specifies that you want to list permissions for only the specified resource type. For example, to list only permissions that apply to EC2 subnets, specify &lt;code&gt;ec2:Subnet&lt;/code&gt;. You can use the &lt;a&gt;ListResourceTypes&lt;/a&gt; operation to get the specific string required.
+     * &lt;p&gt;Specifies that you want to list only permissions of this type:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AWS&lt;/code&gt; \u2013 returns only Amazon Web Services managed permissions.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;LOCAL&lt;/code&gt; \u2013 returns only customer managed permissions&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ALL&lt;/code&gt; \u2013 returns both Amazon Web Services managed permissions and customer managed permissions.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If you don't specify this parameter, the default is &lt;code&gt;All&lt;/code&gt;.&lt;/p&gt;
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("permissionType")
+    public ListPermissionsRequestBodyPermissionTypeEnum permissionType;
+
+    public ListPermissionsRequestBody withPermissionType(ListPermissionsRequestBodyPermissionTypeEnum permissionType) {
+        this.permissionType = permissionType;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies that you want to list only those permissions that apply to the specified resource type. This parameter is not case sensitive.&lt;/p&gt; &lt;p&gt;For example, to list only permissions that apply to Amazon EC2 subnets, specify &lt;code&gt;ec2:subnet&lt;/code&gt;. You can use the &lt;a&gt;ListResourceTypes&lt;/a&gt; operation to get the specific string required.&lt;/p&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public ListPermissionsRequestBody withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ListPermissionsRequestBody(){}
 }

@@ -15,6 +15,7 @@ public class UpdateIntegrationResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentHandlingStrategy")
     public UpdateIntegrationResponseResponseContentHandlingStrategyEnum contentHandlingStrategy;
+
     public UpdateIntegrationResponseResponse withContentHandlingStrategy(UpdateIntegrationResponseResponseContentHandlingStrategyEnum contentHandlingStrategy) {
         this.contentHandlingStrategy = contentHandlingStrategy;
         return this;
@@ -23,6 +24,7 @@ public class UpdateIntegrationResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegrationResponseId")
     public String integrationResponseId;
+
     public UpdateIntegrationResponseResponse withIntegrationResponseId(String integrationResponseId) {
         this.integrationResponseId = integrationResponseId;
         return this;
@@ -31,6 +33,7 @@ public class UpdateIntegrationResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegrationResponseKey")
     public String integrationResponseKey;
+
     public UpdateIntegrationResponseResponse withIntegrationResponseKey(String integrationResponseKey) {
         this.integrationResponseKey = integrationResponseKey;
         return this;
@@ -39,6 +42,7 @@ public class UpdateIntegrationResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResponseParameters")
     public java.util.Map<String, String> responseParameters;
+
     public UpdateIntegrationResponseResponse withResponseParameters(java.util.Map<String, String> responseParameters) {
         this.responseParameters = responseParameters;
         return this;
@@ -47,6 +51,7 @@ public class UpdateIntegrationResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResponseTemplates")
     public java.util.Map<String, String> responseTemplates;
+
     public UpdateIntegrationResponseResponse withResponseTemplates(java.util.Map<String, String> responseTemplates) {
         this.responseTemplates = responseTemplates;
         return this;
@@ -55,9 +60,11 @@ public class UpdateIntegrationResponseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateSelectionExpression")
     public String templateSelectionExpression;
+
     public UpdateIntegrationResponseResponse withTemplateSelectionExpression(String templateSelectionExpression) {
         this.templateSelectionExpression = templateSelectionExpression;
         return this;
     }
     
+    public UpdateIntegrationResponseResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAnomalyGroupRelatedMetricsResponse {
@@ -12,6 +13,7 @@ public class ListAnomalyGroupRelatedMetricsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAnomalyGroupRelatedMetricsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAnomalyGroupRelatedMetricsResponse {
     
     
     public String contentType;
+
     public ListAnomalyGroupRelatedMetricsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAnomalyGroupRelatedMetricsResponse {
      */
     
     public Object internalServerException;
+
     public ListAnomalyGroupRelatedMetricsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAnomalyGroupRelatedMetricsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAnomalyGroupRelatedMetricsResponse listAnomalyGroupRelatedMetricsResponse;
+
     public ListAnomalyGroupRelatedMetricsResponse withListAnomalyGroupRelatedMetricsResponse(org.openapis.openapi.models.shared.ListAnomalyGroupRelatedMetricsResponse listAnomalyGroupRelatedMetricsResponse) {
         this.listAnomalyGroupRelatedMetricsResponse = listAnomalyGroupRelatedMetricsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListAnomalyGroupRelatedMetricsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAnomalyGroupRelatedMetricsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListAnomalyGroupRelatedMetricsResponse {
     
     
     public Integer statusCode;
+
     public ListAnomalyGroupRelatedMetricsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListAnomalyGroupRelatedMetricsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAnomalyGroupRelatedMetricsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListAnomalyGroupRelatedMetricsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListAnomalyGroupRelatedMetricsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class ListAnomalyGroupRelatedMetricsResponse {
      */
     
     public Object validationException;
+
     public ListAnomalyGroupRelatedMetricsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAnomalyGroupRelatedMetricsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

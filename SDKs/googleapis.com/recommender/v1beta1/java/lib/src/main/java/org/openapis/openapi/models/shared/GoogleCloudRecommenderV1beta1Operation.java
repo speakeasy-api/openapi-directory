@@ -18,6 +18,7 @@ public class GoogleCloudRecommenderV1beta1Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public GoogleCloudRecommenderV1beta1Operation withAction(String action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecommenderV1beta1Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public GoogleCloudRecommenderV1beta1Operation withPath(String path) {
         this.path = path;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecommenderV1beta1Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathFilters")
     public java.util.Map<String, Object> pathFilters;
+
     public GoogleCloudRecommenderV1beta1Operation withPathFilters(java.util.Map<String, Object> pathFilters) {
         this.pathFilters = pathFilters;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecommenderV1beta1Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathValueMatchers")
     public java.util.Map<String, GoogleCloudRecommenderV1beta1ValueMatcher> pathValueMatchers;
+
     public GoogleCloudRecommenderV1beta1Operation withPathValueMatchers(java.util.Map<String, GoogleCloudRecommenderV1beta1ValueMatcher> pathValueMatchers) {
         this.pathValueMatchers = pathValueMatchers;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRecommenderV1beta1Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public GoogleCloudRecommenderV1beta1Operation withResource(String resource) {
         this.resource = resource;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRecommenderV1beta1Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public GoogleCloudRecommenderV1beta1Operation withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRecommenderV1beta1Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourcePath")
     public String sourcePath;
+
     public GoogleCloudRecommenderV1beta1Operation withSourcePath(String sourcePath) {
         this.sourcePath = sourcePath;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRecommenderV1beta1Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceResource")
     public String sourceResource;
+
     public GoogleCloudRecommenderV1beta1Operation withSourceResource(String sourceResource) {
         this.sourceResource = sourceResource;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudRecommenderV1beta1Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public GoogleCloudRecommenderV1beta1Operation withValue(Object value) {
         this.value = value;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudRecommenderV1beta1Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueMatcher")
     public GoogleCloudRecommenderV1beta1ValueMatcher valueMatcher;
+
     public GoogleCloudRecommenderV1beta1Operation withValueMatcher(GoogleCloudRecommenderV1beta1ValueMatcher valueMatcher) {
         this.valueMatcher = valueMatcher;
         return this;
     }
     
+    public GoogleCloudRecommenderV1beta1Operation(){}
 }

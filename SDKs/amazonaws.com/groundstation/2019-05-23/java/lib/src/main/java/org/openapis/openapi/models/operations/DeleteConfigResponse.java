@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteConfigResponse {
@@ -12,6 +13,7 @@ public class DeleteConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfigIdResponse configIdResponse;
+
     public DeleteConfigResponse withConfigIdResponse(org.openapis.openapi.models.shared.ConfigIdResponse configIdResponse) {
         this.configIdResponse = configIdResponse;
         return this;
@@ -19,6 +21,7 @@ public class DeleteConfigResponse {
     
     
     public String contentType;
+
     public DeleteConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteConfigResponse {
      */
     
     public Object dependencyException;
+
     public DeleteConfigResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteConfigResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteConfigResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteConfigResponse {
     
     
     public Integer statusCode;
+
     public DeleteConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

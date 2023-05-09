@@ -22,6 +22,7 @@ public class GetMatchesResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("MatchGenerationDate")
     public OffsetDateTime matchGenerationDate;
+
     public GetMatchesResponse withMatchGenerationDate(OffsetDateTime matchGenerationDate) {
         this.matchGenerationDate = matchGenerationDate;
         return this;
@@ -30,6 +31,7 @@ public class GetMatchesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Matches")
     public MatchItem[] matches;
+
     public GetMatchesResponse withMatches(MatchItem[] matches) {
         this.matches = matches;
         return this;
@@ -38,6 +40,7 @@ public class GetMatchesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetMatchesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -46,9 +49,11 @@ public class GetMatchesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PotentialMatches")
     public Long potentialMatches;
+
     public GetMatchesResponse withPotentialMatches(Long potentialMatches) {
         this.potentialMatches = potentialMatches;
         return this;
     }
     
+    public GetMatchesResponse(){}
 }

@@ -15,9 +15,11 @@ public class ResourceIdList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ResourceId[] items;
+
     public ResourceIdList withItems(ResourceId[] items) {
         this.items = items;
         return this;
     }
     
+    public ResourceIdList(){}
 }

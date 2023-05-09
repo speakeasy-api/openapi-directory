@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeVirtualInterfacesResponse {
     
     public String contentType;
+
     public DescribeVirtualInterfacesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeVirtualInterfacesResponse {
      */
     
     public Object directConnectClientException;
+
     public DescribeVirtualInterfacesResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeVirtualInterfacesResponse {
      */
     
     public Object directConnectServerException;
+
     public DescribeVirtualInterfacesResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeVirtualInterfacesResponse {
     
     
     public Integer statusCode;
+
     public DescribeVirtualInterfacesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeVirtualInterfacesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeVirtualInterfacesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeVirtualInterfacesResponse {
      */
     
     public org.openapis.openapi.models.shared.VirtualInterfaces virtualInterfaces;
+
     public DescribeVirtualInterfacesResponse withVirtualInterfaces(org.openapis.openapi.models.shared.VirtualInterfaces virtualInterfaces) {
         this.virtualInterfaces = virtualInterfaces;
         return this;
     }
     
+    public DescribeVirtualInterfacesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DirectMessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ADMMessage")
     public ADMMessage admMessage;
+
     public DirectMessageConfiguration withADMMessage(ADMMessage admMessage) {
         this.admMessage = admMessage;
         return this;
@@ -23,6 +24,7 @@ public class DirectMessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("APNSMessage")
     public APNSMessage apnsMessage;
+
     public DirectMessageConfiguration withAPNSMessage(APNSMessage apnsMessage) {
         this.apnsMessage = apnsMessage;
         return this;
@@ -31,6 +33,7 @@ public class DirectMessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaiduMessage")
     public BaiduMessage baiduMessage;
+
     public DirectMessageConfiguration withBaiduMessage(BaiduMessage baiduMessage) {
         this.baiduMessage = baiduMessage;
         return this;
@@ -39,6 +42,7 @@ public class DirectMessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultMessage")
     public DefaultMessage defaultMessage;
+
     public DirectMessageConfiguration withDefaultMessage(DefaultMessage defaultMessage) {
         this.defaultMessage = defaultMessage;
         return this;
@@ -47,6 +51,7 @@ public class DirectMessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultPushNotificationMessage")
     public DefaultPushNotificationMessage defaultPushNotificationMessage;
+
     public DirectMessageConfiguration withDefaultPushNotificationMessage(DefaultPushNotificationMessage defaultPushNotificationMessage) {
         this.defaultPushNotificationMessage = defaultPushNotificationMessage;
         return this;
@@ -55,6 +60,7 @@ public class DirectMessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailMessage")
     public EmailMessage emailMessage;
+
     public DirectMessageConfiguration withEmailMessage(EmailMessage emailMessage) {
         this.emailMessage = emailMessage;
         return this;
@@ -63,6 +69,7 @@ public class DirectMessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GCMMessage")
     public GCMMessage gcmMessage;
+
     public DirectMessageConfiguration withGCMMessage(GCMMessage gcmMessage) {
         this.gcmMessage = gcmMessage;
         return this;
@@ -71,6 +78,7 @@ public class DirectMessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SMSMessage")
     public SMSMessage smsMessage;
+
     public DirectMessageConfiguration withSMSMessage(SMSMessage smsMessage) {
         this.smsMessage = smsMessage;
         return this;
@@ -79,9 +87,11 @@ public class DirectMessageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VoiceMessage")
     public VoiceMessage voiceMessage;
+
     public DirectMessageConfiguration withVoiceMessage(VoiceMessage voiceMessage) {
         this.voiceMessage = voiceMessage;
         return this;
     }
     
+    public DirectMessageConfiguration(){}
 }

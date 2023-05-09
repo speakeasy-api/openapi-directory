@@ -12,6 +12,7 @@ public class ArticleGetAddonsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gymIds")
     public String gymIds;
+
     public ArticleGetAddonsRequest withGymIds(String gymIds) {
         this.gymIds = gymIds;
         return this;
@@ -19,6 +20,7 @@ public class ArticleGetAddonsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public ArticleGetAddonsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -26,6 +28,7 @@ public class ArticleGetAddonsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public ArticleGetAddonsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -36,6 +39,7 @@ public class ArticleGetAddonsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchText")
     public String searchText;
+
     public ArticleGetAddonsRequest withSearchText(String searchText) {
         this.searchText = searchText;
         return this;
@@ -43,9 +47,11 @@ public class ArticleGetAddonsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public ArticleGetAddonsRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ArticleGetAddonsRequest(){}
 }

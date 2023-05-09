@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountPostGuestJsonRequest {
@@ -12,6 +13,7 @@ public class AccountPostGuestJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApiCoreDtoAccountingGuest apiCoreDtoAccountingGuest;
+
     public AccountPostGuestJsonRequest withApiCoreDtoAccountingGuest(org.openapis.openapi.models.shared.ApiCoreDtoAccountingGuest apiCoreDtoAccountingGuest) {
         this.apiCoreDtoAccountingGuest = apiCoreDtoAccountingGuest;
         return this;
@@ -22,9 +24,14 @@ public class AccountPostGuestJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
     public Long guestId;
+
     public AccountPostGuestJsonRequest withGuestId(Long guestId) {
         this.guestId = guestId;
         return this;
     }
     
+    public AccountPostGuestJsonRequest(@JsonProperty("Api.Core.Dto.Accounting.Guest") org.openapis.openapi.models.shared.ApiCoreDtoAccountingGuest apiCoreDtoAccountingGuest, @JsonProperty("guestId") Long guestId) {
+        this.apiCoreDtoAccountingGuest = apiCoreDtoAccountingGuest;
+        this.guestId = guestId;
+  }
 }

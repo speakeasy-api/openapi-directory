@@ -18,9 +18,11 @@ public class GoogleAudienceTargetingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAudienceId")
     public String googleAudienceId;
+
     public GoogleAudienceTargetingSetting withGoogleAudienceId(String googleAudienceId) {
         this.googleAudienceId = googleAudienceId;
         return this;
     }
     
+    public GoogleAudienceTargetingSetting(){}
 }

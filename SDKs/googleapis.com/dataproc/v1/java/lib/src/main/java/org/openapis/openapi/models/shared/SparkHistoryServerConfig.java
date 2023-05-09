@@ -18,9 +18,11 @@ public class SparkHistoryServerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataprocCluster")
     public String dataprocCluster;
+
     public SparkHistoryServerConfig withDataprocCluster(String dataprocCluster) {
         this.dataprocCluster = dataprocCluster;
         return this;
     }
     
+    public SparkHistoryServerConfig(){}
 }

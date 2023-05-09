@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CloseStatusFilter {
     @JsonProperty("status")
     public CloseStatusEnum status;
+
     public CloseStatusFilter withStatus(CloseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CloseStatusFilter(@JsonProperty("status") CloseStatusEnum status) {
+        this.status = status;
+  }
 }

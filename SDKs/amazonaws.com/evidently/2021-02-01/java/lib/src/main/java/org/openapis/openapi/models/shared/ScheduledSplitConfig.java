@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ScheduledSplitConfig {
     @JsonProperty("groupWeights")
     public java.util.Map<String, Long> groupWeights;
+
     public ScheduledSplitConfig withGroupWeights(java.util.Map<String, Long> groupWeights) {
         this.groupWeights = groupWeights;
         return this;
@@ -27,6 +28,7 @@ public class ScheduledSplitConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentOverrides")
     public SegmentOverride[] segmentOverrides;
+
     public ScheduledSplitConfig withSegmentOverrides(SegmentOverride[] segmentOverrides) {
         this.segmentOverrides = segmentOverrides;
         return this;
@@ -36,9 +38,14 @@ public class ScheduledSplitConfig {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ScheduledSplitConfig withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ScheduledSplitConfig(@JsonProperty("groupWeights") java.util.Map<String, Long> groupWeights, @JsonProperty("startTime") OffsetDateTime startTime) {
+        this.groupWeights = groupWeights;
+        this.startTime = startTime;
+  }
 }

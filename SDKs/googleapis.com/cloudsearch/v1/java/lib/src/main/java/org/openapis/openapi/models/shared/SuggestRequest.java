@@ -18,6 +18,7 @@ public class SuggestRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceRestrictions")
     public DataSourceRestriction[] dataSourceRestrictions;
+
     public SuggestRequest withDataSourceRestrictions(DataSourceRestriction[] dataSourceRestrictions) {
         this.dataSourceRestrictions = dataSourceRestrictions;
         return this;
@@ -29,6 +30,7 @@ public class SuggestRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public SuggestRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -40,9 +42,11 @@ public class SuggestRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestOptions")
     public RequestOptions requestOptions;
+
     public SuggestRequest withRequestOptions(RequestOptions requestOptions) {
         this.requestOptions = requestOptions;
         return this;
     }
     
+    public SuggestRequest(){}
 }

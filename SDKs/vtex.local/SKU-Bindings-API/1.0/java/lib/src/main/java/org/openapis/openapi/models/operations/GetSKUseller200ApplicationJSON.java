@@ -15,6 +15,7 @@ public class GetSKUseller200ApplicationJSON {
      */
     @JsonProperty("IsActive")
     public Boolean isActive;
+
     public GetSKUseller200ApplicationJSON withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -25,6 +26,7 @@ public class GetSKUseller200ApplicationJSON {
      */
     @JsonProperty("IsPersisted")
     public Boolean isPersisted;
+
     public GetSKUseller200ApplicationJSON withIsPersisted(Boolean isPersisted) {
         this.isPersisted = isPersisted;
         return this;
@@ -35,6 +37,7 @@ public class GetSKUseller200ApplicationJSON {
      */
     @JsonProperty("IsRemoved")
     public Boolean isRemoved;
+
     public GetSKUseller200ApplicationJSON withIsRemoved(Boolean isRemoved) {
         this.isRemoved = isRemoved;
         return this;
@@ -45,6 +48,7 @@ public class GetSKUseller200ApplicationJSON {
      */
     @JsonProperty("RequestedUpdateDate")
     public String requestedUpdateDate;
+
     public GetSKUseller200ApplicationJSON withRequestedUpdateDate(String requestedUpdateDate) {
         this.requestedUpdateDate = requestedUpdateDate;
         return this;
@@ -55,6 +59,7 @@ public class GetSKUseller200ApplicationJSON {
      */
     @JsonProperty("SellerId")
     public String sellerId;
+
     public GetSKUseller200ApplicationJSON withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -65,6 +70,7 @@ public class GetSKUseller200ApplicationJSON {
      */
     @JsonProperty("SellerStockKeepingUnitId")
     public String sellerStockKeepingUnitId;
+
     public GetSKUseller200ApplicationJSON withSellerStockKeepingUnitId(String sellerStockKeepingUnitId) {
         this.sellerStockKeepingUnitId = sellerStockKeepingUnitId;
         return this;
@@ -75,6 +81,7 @@ public class GetSKUseller200ApplicationJSON {
      */
     @JsonProperty("SkuSellerId")
     public Integer skuSellerId;
+
     public GetSKUseller200ApplicationJSON withSkuSellerId(Integer skuSellerId) {
         this.skuSellerId = skuSellerId;
         return this;
@@ -85,6 +92,7 @@ public class GetSKUseller200ApplicationJSON {
      */
     @JsonProperty("StockKeepingUnitId")
     public Integer stockKeepingUnitId;
+
     public GetSKUseller200ApplicationJSON withStockKeepingUnitId(Integer stockKeepingUnitId) {
         this.stockKeepingUnitId = stockKeepingUnitId;
         return this;
@@ -95,9 +103,21 @@ public class GetSKUseller200ApplicationJSON {
      */
     @JsonProperty("UpdateDate")
     public String updateDate;
+
     public GetSKUseller200ApplicationJSON withUpdateDate(String updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public GetSKUseller200ApplicationJSON(@JsonProperty("IsActive") Boolean isActive, @JsonProperty("IsPersisted") Boolean isPersisted, @JsonProperty("IsRemoved") Boolean isRemoved, @JsonProperty("RequestedUpdateDate") String requestedUpdateDate, @JsonProperty("SellerId") String sellerId, @JsonProperty("SellerStockKeepingUnitId") String sellerStockKeepingUnitId, @JsonProperty("SkuSellerId") Integer skuSellerId, @JsonProperty("StockKeepingUnitId") Integer stockKeepingUnitId, @JsonProperty("UpdateDate") String updateDate) {
+        this.isActive = isActive;
+        this.isPersisted = isPersisted;
+        this.isRemoved = isRemoved;
+        this.requestedUpdateDate = requestedUpdateDate;
+        this.sellerId = sellerId;
+        this.sellerStockKeepingUnitId = sellerStockKeepingUnitId;
+        this.skuSellerId = skuSellerId;
+        this.stockKeepingUnitId = stockKeepingUnitId;
+        this.updateDate = updateDate;
+  }
 }

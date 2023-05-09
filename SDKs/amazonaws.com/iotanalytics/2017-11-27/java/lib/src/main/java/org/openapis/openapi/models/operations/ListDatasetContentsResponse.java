@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDatasetContentsResponse {
     
     public String contentType;
+
     public ListDatasetContentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDatasetContentsResponse {
      */
     
     public Object internalFailureException;
+
     public ListDatasetContentsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListDatasetContentsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDatasetContentsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListDatasetContentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDatasetContentsResponse listDatasetContentsResponse;
+
     public ListDatasetContentsResponse withListDatasetContentsResponse(org.openapis.openapi.models.shared.ListDatasetContentsResponse listDatasetContentsResponse) {
         this.listDatasetContentsResponse = listDatasetContentsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListDatasetContentsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListDatasetContentsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListDatasetContentsResponse {
     
     
     public Integer statusCode;
+
     public ListDatasetContentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListDatasetContentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDatasetContentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListDatasetContentsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListDatasetContentsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,9 +92,14 @@ public class ListDatasetContentsResponse {
      */
     
     public Object throttlingException;
+
     public ListDatasetContentsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListDatasetContentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

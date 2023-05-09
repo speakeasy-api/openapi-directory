@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeIdentityInput {
     @JsonProperty("IdentityId")
     public String identityId;
+
     public DescribeIdentityInput withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
     }
     
+    public DescribeIdentityInput(@JsonProperty("IdentityId") String identityId) {
+        this.identityId = identityId;
+  }
 }

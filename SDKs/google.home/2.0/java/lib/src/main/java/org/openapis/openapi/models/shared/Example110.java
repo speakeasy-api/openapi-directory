@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Example110 {
     @JsonProperty("audio_mode")
     public Integer audioMode;
+
     public Example110 withAudioMode(Integer audioMode) {
         this.audioMode = audioMode;
         return this;
@@ -16,6 +17,7 @@ public class Example110 {
     
     @JsonProperty("connected_devices")
     public ConnectedDevice[] connectedDevices;
+
     public Example110 withConnectedDevices(ConnectedDevice[] connectedDevices) {
         this.connectedDevices = connectedDevices;
         return this;
@@ -23,6 +25,7 @@ public class Example110 {
     
     @JsonProperty("connecting_devices")
     public String[] connectingDevices;
+
     public Example110 withConnectingDevices(String[] connectingDevices) {
         this.connectingDevices = connectingDevices;
         return this;
@@ -30,6 +33,7 @@ public class Example110 {
     
     @JsonProperty("discovery_enabled")
     public Boolean discoveryEnabled;
+
     public Example110 withDiscoveryEnabled(Boolean discoveryEnabled) {
         this.discoveryEnabled = discoveryEnabled;
         return this;
@@ -37,6 +41,7 @@ public class Example110 {
     
     @JsonProperty("remote_sink")
     public RemoteSink remoteSink;
+
     public Example110 withRemoteSink(RemoteSink remoteSink) {
         this.remoteSink = remoteSink;
         return this;
@@ -44,9 +49,18 @@ public class Example110 {
     
     @JsonProperty("scanning_enabled")
     public Boolean scanningEnabled;
+
     public Example110 withScanningEnabled(Boolean scanningEnabled) {
         this.scanningEnabled = scanningEnabled;
         return this;
     }
     
+    public Example110(@JsonProperty("audio_mode") Integer audioMode, @JsonProperty("connected_devices") ConnectedDevice[] connectedDevices, @JsonProperty("connecting_devices") String[] connectingDevices, @JsonProperty("discovery_enabled") Boolean discoveryEnabled, @JsonProperty("remote_sink") RemoteSink remoteSink, @JsonProperty("scanning_enabled") Boolean scanningEnabled) {
+        this.audioMode = audioMode;
+        this.connectedDevices = connectedDevices;
+        this.connectingDevices = connectingDevices;
+        this.discoveryEnabled = discoveryEnabled;
+        this.remoteSink = remoteSink;
+        this.scanningEnabled = scanningEnabled;
+  }
 }

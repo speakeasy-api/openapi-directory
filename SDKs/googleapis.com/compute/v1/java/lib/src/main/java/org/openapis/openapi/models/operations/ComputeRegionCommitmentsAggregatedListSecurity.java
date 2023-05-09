@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionCommitmentsAggregatedListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionCommitmentsAggregatedListSecurityOption1 option1;
+
     public ComputeRegionCommitmentsAggregatedListSecurity withOption1(ComputeRegionCommitmentsAggregatedListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeRegionCommitmentsAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionCommitmentsAggregatedListSecurityOption2 option2;
+
     public ComputeRegionCommitmentsAggregatedListSecurity withOption2(ComputeRegionCommitmentsAggregatedListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeRegionCommitmentsAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionCommitmentsAggregatedListSecurityOption3 option3;
+
     public ComputeRegionCommitmentsAggregatedListSecurity withOption3(ComputeRegionCommitmentsAggregatedListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeRegionCommitmentsAggregatedListSecurity(){}
 }

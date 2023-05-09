@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policySchema")
     public String policySchema;
+
     public GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest withPolicySchema(String policySchema) {
         this.policySchema = policySchema;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyTargetKey")
     public GoogleChromePolicyVersionsV1PolicyTargetKey policyTargetKey;
+
     public GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest withPolicyTargetKey(GoogleChromePolicyVersionsV1PolicyTargetKey policyTargetKey) {
         this.policyTargetKey = policyTargetKey;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PollForThirdPartyJobsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PollForThirdPartyJobsInput pollForThirdPartyJobsInput;
+
     public PollForThirdPartyJobsRequest withPollForThirdPartyJobsInput(org.openapis.openapi.models.shared.PollForThirdPartyJobsInput pollForThirdPartyJobsInput) {
         this.pollForThirdPartyJobsInput = pollForThirdPartyJobsInput;
         return this;
@@ -16,6 +18,7 @@ public class PollForThirdPartyJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public PollForThirdPartyJobsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class PollForThirdPartyJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public PollForThirdPartyJobsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class PollForThirdPartyJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public PollForThirdPartyJobsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class PollForThirdPartyJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public PollForThirdPartyJobsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class PollForThirdPartyJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public PollForThirdPartyJobsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class PollForThirdPartyJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public PollForThirdPartyJobsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class PollForThirdPartyJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public PollForThirdPartyJobsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class PollForThirdPartyJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public PollForThirdPartyJobsXAmzTargetEnum xAmzTarget;
+
     public PollForThirdPartyJobsRequest withXAmzTarget(PollForThirdPartyJobsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public PollForThirdPartyJobsRequest(@JsonProperty("PollForThirdPartyJobsInput") org.openapis.openapi.models.shared.PollForThirdPartyJobsInput pollForThirdPartyJobsInput, @JsonProperty("X-Amz-Target") PollForThirdPartyJobsXAmzTargetEnum xAmzTarget) {
+        this.pollForThirdPartyJobsInput = pollForThirdPartyJobsInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

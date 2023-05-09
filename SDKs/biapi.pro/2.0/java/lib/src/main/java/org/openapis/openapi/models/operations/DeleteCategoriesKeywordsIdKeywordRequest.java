@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCategoriesKeywordsIdKeywordRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public DeleteCategoriesKeywordsIdKeywordRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -16,9 +18,13 @@ public class DeleteCategoriesKeywordsIdKeywordRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_keyword")
     public Long idKeyword;
+
     public DeleteCategoriesKeywordsIdKeywordRequest withIdKeyword(Long idKeyword) {
         this.idKeyword = idKeyword;
         return this;
     }
     
+    public DeleteCategoriesKeywordsIdKeywordRequest(@JsonProperty("id_keyword") Long idKeyword) {
+        this.idKeyword = idKeyword;
+  }
 }

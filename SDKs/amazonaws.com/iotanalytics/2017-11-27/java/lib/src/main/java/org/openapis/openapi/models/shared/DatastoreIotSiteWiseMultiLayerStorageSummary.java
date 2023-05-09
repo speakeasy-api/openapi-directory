@@ -15,9 +15,11 @@ public class DatastoreIotSiteWiseMultiLayerStorageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerManagedS3Storage")
     public IotSiteWiseCustomerManagedDatastoreS3StorageSummary customerManagedS3Storage;
+
     public DatastoreIotSiteWiseMultiLayerStorageSummary withCustomerManagedS3Storage(IotSiteWiseCustomerManagedDatastoreS3StorageSummary customerManagedS3Storage) {
         this.customerManagedS3Storage = customerManagedS3Storage;
         return this;
     }
     
+    public DatastoreIotSiteWiseMultiLayerStorageSummary(){}
 }

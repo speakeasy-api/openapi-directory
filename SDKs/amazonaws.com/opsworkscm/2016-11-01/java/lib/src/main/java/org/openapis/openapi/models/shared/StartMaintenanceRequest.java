@@ -12,6 +12,7 @@ public class StartMaintenanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineAttributes")
     public EngineAttribute[] engineAttributes;
+
     public StartMaintenanceRequest withEngineAttributes(EngineAttribute[] engineAttributes) {
         this.engineAttributes = engineAttributes;
         return this;
@@ -19,9 +20,13 @@ public class StartMaintenanceRequest {
     
     @JsonProperty("ServerName")
     public String serverName;
+
     public StartMaintenanceRequest withServerName(String serverName) {
         this.serverName = serverName;
         return this;
     }
     
+    public StartMaintenanceRequest(@JsonProperty("ServerName") String serverName) {
+        this.serverName = serverName;
+  }
 }

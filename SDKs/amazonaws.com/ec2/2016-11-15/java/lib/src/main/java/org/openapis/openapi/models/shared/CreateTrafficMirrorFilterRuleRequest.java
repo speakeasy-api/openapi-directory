@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateTrafficMirrorFilterRuleRequest {
     
     public String clientToken;
+
     public CreateTrafficMirrorFilterRuleRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateTrafficMirrorFilterRuleRequest {
     
     
     public String description;
+
     public CreateTrafficMirrorFilterRuleRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateTrafficMirrorFilterRuleRequest {
     
     
     public String destinationCidrBlock;
+
     public CreateTrafficMirrorFilterRuleRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -30,6 +33,7 @@ public class CreateTrafficMirrorFilterRuleRequest {
     
     
     public TrafficMirrorPortRangeRequest destinationPortRange;
+
     public CreateTrafficMirrorFilterRuleRequest withDestinationPortRange(TrafficMirrorPortRangeRequest destinationPortRange) {
         this.destinationPortRange = destinationPortRange;
         return this;
@@ -37,6 +41,7 @@ public class CreateTrafficMirrorFilterRuleRequest {
     
     
     public Boolean dryRun;
+
     public CreateTrafficMirrorFilterRuleRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -44,6 +49,7 @@ public class CreateTrafficMirrorFilterRuleRequest {
     
     
     public Long protocol;
+
     public CreateTrafficMirrorFilterRuleRequest withProtocol(Long protocol) {
         this.protocol = protocol;
         return this;
@@ -51,6 +57,7 @@ public class CreateTrafficMirrorFilterRuleRequest {
     
     
     public TrafficMirrorRuleActionEnum ruleAction;
+
     public CreateTrafficMirrorFilterRuleRequest withRuleAction(TrafficMirrorRuleActionEnum ruleAction) {
         this.ruleAction = ruleAction;
         return this;
@@ -58,6 +65,7 @@ public class CreateTrafficMirrorFilterRuleRequest {
     
     
     public Long ruleNumber;
+
     public CreateTrafficMirrorFilterRuleRequest withRuleNumber(Long ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
@@ -65,6 +73,7 @@ public class CreateTrafficMirrorFilterRuleRequest {
     
     
     public String sourceCidrBlock;
+
     public CreateTrafficMirrorFilterRuleRequest withSourceCidrBlock(String sourceCidrBlock) {
         this.sourceCidrBlock = sourceCidrBlock;
         return this;
@@ -72,6 +81,7 @@ public class CreateTrafficMirrorFilterRuleRequest {
     
     
     public TrafficMirrorPortRangeRequest sourcePortRange;
+
     public CreateTrafficMirrorFilterRuleRequest withSourcePortRange(TrafficMirrorPortRangeRequest sourcePortRange) {
         this.sourcePortRange = sourcePortRange;
         return this;
@@ -79,6 +89,7 @@ public class CreateTrafficMirrorFilterRuleRequest {
     
     
     public TrafficDirectionEnum trafficDirection;
+
     public CreateTrafficMirrorFilterRuleRequest withTrafficDirection(TrafficDirectionEnum trafficDirection) {
         this.trafficDirection = trafficDirection;
         return this;
@@ -86,9 +97,18 @@ public class CreateTrafficMirrorFilterRuleRequest {
     
     
     public String trafficMirrorFilterId;
+
     public CreateTrafficMirrorFilterRuleRequest withTrafficMirrorFilterId(String trafficMirrorFilterId) {
         this.trafficMirrorFilterId = trafficMirrorFilterId;
         return this;
     }
     
+    public CreateTrafficMirrorFilterRuleRequest(@JsonProperty("DestinationCidrBlock") String destinationCidrBlock, @JsonProperty("RuleAction") TrafficMirrorRuleActionEnum ruleAction, @JsonProperty("RuleNumber") Long ruleNumber, @JsonProperty("SourceCidrBlock") String sourceCidrBlock, @JsonProperty("TrafficDirection") TrafficDirectionEnum trafficDirection, @JsonProperty("TrafficMirrorFilterId") String trafficMirrorFilterId) {
+        this.destinationCidrBlock = destinationCidrBlock;
+        this.ruleAction = ruleAction;
+        this.ruleNumber = ruleNumber;
+        this.sourceCidrBlock = sourceCidrBlock;
+        this.trafficDirection = trafficDirection;
+        this.trafficMirrorFilterId = trafficMirrorFilterId;
+  }
 }

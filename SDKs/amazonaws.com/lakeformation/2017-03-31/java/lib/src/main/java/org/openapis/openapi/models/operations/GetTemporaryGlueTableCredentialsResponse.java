@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTemporaryGlueTableCredentialsResponse {
@@ -12,6 +13,7 @@ public class GetTemporaryGlueTableCredentialsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTemporaryGlueTableCredentialsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetTemporaryGlueTableCredentialsResponse {
     
     
     public String contentType;
+
     public GetTemporaryGlueTableCredentialsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTemporaryGlueTableCredentialsResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetTemporaryGlueTableCredentialsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetTemporaryGlueTableCredentialsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTemporaryGlueTableCredentialsResponse getTemporaryGlueTableCredentialsResponse;
+
     public GetTemporaryGlueTableCredentialsResponse withGetTemporaryGlueTableCredentialsResponse(org.openapis.openapi.models.shared.GetTemporaryGlueTableCredentialsResponse getTemporaryGlueTableCredentialsResponse) {
         this.getTemporaryGlueTableCredentialsResponse = getTemporaryGlueTableCredentialsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetTemporaryGlueTableCredentialsResponse {
      */
     
     public Object internalServiceException;
+
     public GetTemporaryGlueTableCredentialsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetTemporaryGlueTableCredentialsResponse {
      */
     
     public Object invalidInputException;
+
     public GetTemporaryGlueTableCredentialsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class GetTemporaryGlueTableCredentialsResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetTemporaryGlueTableCredentialsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -79,6 +87,7 @@ public class GetTemporaryGlueTableCredentialsResponse {
      */
     
     public Object permissionTypeMismatchException;
+
     public GetTemporaryGlueTableCredentialsResponse withPermissionTypeMismatchException(Object permissionTypeMismatchException) {
         this.permissionTypeMismatchException = permissionTypeMismatchException;
         return this;
@@ -86,6 +95,7 @@ public class GetTemporaryGlueTableCredentialsResponse {
     
     
     public Integer statusCode;
+
     public GetTemporaryGlueTableCredentialsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class GetTemporaryGlueTableCredentialsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTemporaryGlueTableCredentialsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTemporaryGlueTableCredentialsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

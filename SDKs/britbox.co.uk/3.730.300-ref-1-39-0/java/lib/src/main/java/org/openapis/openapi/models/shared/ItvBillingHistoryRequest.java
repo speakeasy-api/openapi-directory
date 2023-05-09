@@ -15,9 +15,13 @@ public class ItvBillingHistoryRequest {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ItvBillingHistoryRequest withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
     }
     
+    public ItvBillingHistoryRequest(@JsonProperty("profileToken") String profileToken) {
+        this.profileToken = profileToken;
+  }
 }

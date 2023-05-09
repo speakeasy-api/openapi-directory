@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoSuspensionAuthPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gaiaIdentity")
     public EnterpriseCrmEventbusProtoSuspensionAuthPermissionsGaiaIdentity gaiaIdentity;
+
     public EnterpriseCrmEventbusProtoSuspensionAuthPermissions withGaiaIdentity(EnterpriseCrmEventbusProtoSuspensionAuthPermissionsGaiaIdentity gaiaIdentity) {
         this.gaiaIdentity = gaiaIdentity;
         return this;
@@ -23,6 +24,7 @@ public class EnterpriseCrmEventbusProtoSuspensionAuthPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleGroup")
     public EnterpriseCrmEventbusProtoSuspensionAuthPermissionsGaiaIdentity googleGroup;
+
     public EnterpriseCrmEventbusProtoSuspensionAuthPermissions withGoogleGroup(EnterpriseCrmEventbusProtoSuspensionAuthPermissionsGaiaIdentity googleGroup) {
         this.googleGroup = googleGroup;
         return this;
@@ -31,6 +33,7 @@ public class EnterpriseCrmEventbusProtoSuspensionAuthPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loasRole")
     public String loasRole;
+
     public EnterpriseCrmEventbusProtoSuspensionAuthPermissions withLoasRole(String loasRole) {
         this.loasRole = loasRole;
         return this;
@@ -39,9 +42,11 @@ public class EnterpriseCrmEventbusProtoSuspensionAuthPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mdbGroup")
     public String mdbGroup;
+
     public EnterpriseCrmEventbusProtoSuspensionAuthPermissions withMdbGroup(String mdbGroup) {
         this.mdbGroup = mdbGroup;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoSuspensionAuthPermissions(){}
 }

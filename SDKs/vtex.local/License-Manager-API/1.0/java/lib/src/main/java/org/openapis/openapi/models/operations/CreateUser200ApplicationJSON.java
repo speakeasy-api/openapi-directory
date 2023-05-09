@@ -18,6 +18,7 @@ public class CreateUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public CreateUser200ApplicationJSON withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +30,7 @@ public class CreateUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateUser200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class CreateUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateUser200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateUser200ApplicationJSON(){}
 }

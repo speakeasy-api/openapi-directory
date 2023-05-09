@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisassociateNatGatewayAddressResult {
     
     public DisassociateNatGatewayAddressResultNatGatewayAddresses[] natGatewayAddresses;
+
     public DisassociateNatGatewayAddressResult withNatGatewayAddresses(DisassociateNatGatewayAddressResultNatGatewayAddresses[] natGatewayAddresses) {
         this.natGatewayAddresses = natGatewayAddresses;
         return this;
@@ -19,9 +20,11 @@ public class DisassociateNatGatewayAddressResult {
     
     
     public String natGatewayId;
+
     public DisassociateNatGatewayAddressResult withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
     }
     
+    public DisassociateNatGatewayAddressResult(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetSubnetCidrReservationsRequest {
     
     public Boolean dryRun;
+
     public GetSubnetCidrReservationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetSubnetCidrReservationsRequest {
     
     
     public GetSubnetCidrReservationsRequestFilters[] filters;
+
     public GetSubnetCidrReservationsRequest withFilters(GetSubnetCidrReservationsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class GetSubnetCidrReservationsRequest {
     
     
     public Long maxResults;
+
     public GetSubnetCidrReservationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class GetSubnetCidrReservationsRequest {
     
     
     public String nextToken;
+
     public GetSubnetCidrReservationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,13 @@ public class GetSubnetCidrReservationsRequest {
     
     
     public String subnetId;
+
     public GetSubnetCidrReservationsRequest withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public GetSubnetCidrReservationsRequest(@JsonProperty("SubnetId") String subnetId) {
+        this.subnetId = subnetId;
+  }
 }

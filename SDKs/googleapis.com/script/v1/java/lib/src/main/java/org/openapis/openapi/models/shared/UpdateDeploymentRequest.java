@@ -18,9 +18,11 @@ public class UpdateDeploymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentConfig")
     public DeploymentConfig deploymentConfig;
+
     public UpdateDeploymentRequest withDeploymentConfig(DeploymentConfig deploymentConfig) {
         this.deploymentConfig = deploymentConfig;
         return this;
     }
     
+    public UpdateDeploymentRequest(){}
 }

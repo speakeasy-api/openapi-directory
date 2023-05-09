@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateWebACLMigrationStackRequest {
     @JsonProperty("IgnoreUnsupportedType")
     public Boolean ignoreUnsupportedType;
+
     public CreateWebACLMigrationStackRequest withIgnoreUnsupportedType(Boolean ignoreUnsupportedType) {
         this.ignoreUnsupportedType = ignoreUnsupportedType;
         return this;
@@ -16,6 +17,7 @@ public class CreateWebACLMigrationStackRequest {
     
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public CreateWebACLMigrationStackRequest withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -23,9 +25,15 @@ public class CreateWebACLMigrationStackRequest {
     
     @JsonProperty("WebACLId")
     public String webACLId;
+
     public CreateWebACLMigrationStackRequest withWebACLId(String webACLId) {
         this.webACLId = webACLId;
         return this;
     }
     
+    public CreateWebACLMigrationStackRequest(@JsonProperty("IgnoreUnsupportedType") Boolean ignoreUnsupportedType, @JsonProperty("S3BucketName") String s3BucketName, @JsonProperty("WebACLId") String webACLId) {
+        this.ignoreUnsupportedType = ignoreUnsupportedType;
+        this.s3BucketName = s3BucketName;
+        this.webACLId = webACLId;
+  }
 }

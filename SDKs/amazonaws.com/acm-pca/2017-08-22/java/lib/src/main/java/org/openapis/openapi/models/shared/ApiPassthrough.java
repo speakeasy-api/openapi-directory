@@ -15,6 +15,7 @@ public class ApiPassthrough {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Extensions")
     public Extensions extensions;
+
     public ApiPassthrough withExtensions(Extensions extensions) {
         this.extensions = extensions;
         return this;
@@ -26,9 +27,11 @@ public class ApiPassthrough {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subject")
     public Asn1Subject subject;
+
     public ApiPassthrough withSubject(Asn1Subject subject) {
         this.subject = subject;
         return this;
     }
     
+    public ApiPassthrough(){}
 }

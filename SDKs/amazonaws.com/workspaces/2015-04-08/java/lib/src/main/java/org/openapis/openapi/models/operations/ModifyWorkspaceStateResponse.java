@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyWorkspaceStateResponse {
     
     public String contentType;
+
     public ModifyWorkspaceStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ModifyWorkspaceStateResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public ModifyWorkspaceStateResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -29,6 +32,7 @@ public class ModifyWorkspaceStateResponse {
      */
     
     public Object invalidResourceStateException;
+
     public ModifyWorkspaceStateResponse withInvalidResourceStateException(Object invalidResourceStateException) {
         this.invalidResourceStateException = invalidResourceStateException;
         return this;
@@ -39,6 +43,7 @@ public class ModifyWorkspaceStateResponse {
      */
     
     public java.util.Map<String, Object> modifyWorkspaceStateResult;
+
     public ModifyWorkspaceStateResponse withModifyWorkspaceStateResult(java.util.Map<String, Object> modifyWorkspaceStateResult) {
         this.modifyWorkspaceStateResult = modifyWorkspaceStateResult;
         return this;
@@ -49,6 +54,7 @@ public class ModifyWorkspaceStateResponse {
      */
     
     public Object operationNotSupportedException;
+
     public ModifyWorkspaceStateResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -56,6 +62,7 @@ public class ModifyWorkspaceStateResponse {
     
     
     public Integer statusCode;
+
     public ModifyWorkspaceStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ModifyWorkspaceStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyWorkspaceStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ModifyWorkspaceStateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ModifyWorkspaceStateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ModifyWorkspaceStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

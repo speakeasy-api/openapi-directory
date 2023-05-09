@@ -17,9 +17,11 @@ public class InvoiceCategoryCreateApiModel {
     @JsonProperty("Name")
     @SpeakeasyMetadata("form:name=Name")
     public String name;
+
     public InvoiceCategoryCreateApiModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InvoiceCategoryCreateApiModel(){}
 }

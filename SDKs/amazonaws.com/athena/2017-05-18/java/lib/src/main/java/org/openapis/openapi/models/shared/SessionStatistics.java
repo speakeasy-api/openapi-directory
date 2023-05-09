@@ -15,9 +15,11 @@ public class SessionStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DpuExecutionInMillis")
     public Long dpuExecutionInMillis;
+
     public SessionStatistics withDpuExecutionInMillis(Long dpuExecutionInMillis) {
         this.dpuExecutionInMillis = dpuExecutionInMillis;
         return this;
     }
     
+    public SessionStatistics(){}
 }

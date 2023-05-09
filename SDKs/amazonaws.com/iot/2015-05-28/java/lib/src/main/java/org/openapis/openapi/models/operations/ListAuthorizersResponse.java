@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAuthorizersResponse {
     
     public String contentType;
+
     public ListAuthorizersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAuthorizersResponse {
      */
     
     public Object internalFailureException;
+
     public ListAuthorizersResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListAuthorizersResponse {
      */
     
     public Object invalidRequestException;
+
     public ListAuthorizersResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListAuthorizersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAuthorizersResponse listAuthorizersResponse;
+
     public ListAuthorizersResponse withListAuthorizersResponse(org.openapis.openapi.models.shared.ListAuthorizersResponse listAuthorizersResponse) {
         this.listAuthorizersResponse = listAuthorizersResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListAuthorizersResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListAuthorizersResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class ListAuthorizersResponse {
     
     
     public Integer statusCode;
+
     public ListAuthorizersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListAuthorizersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAuthorizersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListAuthorizersResponse {
      */
     
     public Object throttlingException;
+
     public ListAuthorizersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListAuthorizersResponse {
      */
     
     public Object unauthorizedException;
+
     public ListAuthorizersResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListAuthorizersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

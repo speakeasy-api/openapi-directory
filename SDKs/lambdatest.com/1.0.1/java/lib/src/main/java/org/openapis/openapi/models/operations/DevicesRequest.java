@@ -12,9 +12,11 @@ public class DevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=os")
     public String os;
+
     public DevicesRequest withOs(String os) {
         this.os = os;
         return this;
     }
     
+    public DevicesRequest(){}
 }

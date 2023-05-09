@@ -12,9 +12,11 @@ package org.openapis.openapi.models.operations;
 public class NodesDraftRegistrationsSubjectsSubjectEmbedsParent {
     
     public NodesDraftRegistrationsSubjectsSubjectEmbedsParentData data;
+
     public NodesDraftRegistrationsSubjectsSubjectEmbedsParent withData(NodesDraftRegistrationsSubjectsSubjectEmbedsParentData data) {
         this.data = data;
         return this;
     }
     
+    public NodesDraftRegistrationsSubjectsSubjectEmbedsParent(){}
 }

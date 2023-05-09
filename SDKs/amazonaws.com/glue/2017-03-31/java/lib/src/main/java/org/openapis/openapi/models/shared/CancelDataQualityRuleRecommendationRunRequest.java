@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelDataQualityRuleRecommendationRunRequest {
     @JsonProperty("RunId")
     public String runId;
+
     public CancelDataQualityRuleRecommendationRunRequest withRunId(String runId) {
         this.runId = runId;
         return this;
     }
     
+    public CancelDataQualityRuleRecommendationRunRequest(@JsonProperty("RunId") String runId) {
+        this.runId = runId;
+  }
 }

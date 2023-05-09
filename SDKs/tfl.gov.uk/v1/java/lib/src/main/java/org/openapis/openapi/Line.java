@@ -56,14 +56,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineArrivalsResponse res = new org.openapis.openapi.models.operations.LineArrivalsResponse() {{
+        org.openapis.openapi.models.operations.LineArrivalsResponse res = new org.openapis.openapi.models.operations.LineArrivalsResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesPredictions = null;
             tflApiPresentationEntitiesPredictions = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,14 +108,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineDisruptionResponse res = new org.openapis.openapi.models.operations.LineDisruptionResponse() {{
+        org.openapis.openapi.models.operations.LineDisruptionResponse res = new org.openapis.openapi.models.operations.LineDisruptionResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesDisruptions = null;
             tflApiPresentationEntitiesDisruptions = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -164,14 +160,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineDisruptionByModeResponse res = new org.openapis.openapi.models.operations.LineDisruptionByModeResponse() {{
+        org.openapis.openapi.models.operations.LineDisruptionByModeResponse res = new org.openapis.openapi.models.operations.LineDisruptionByModeResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesDisruptions = null;
             tflApiPresentationEntitiesDisruptions = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -218,14 +212,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineGetResponse res = new org.openapis.openapi.models.operations.LineGetResponse() {{
+        org.openapis.openapi.models.operations.LineGetResponse res = new org.openapis.openapi.models.operations.LineGetResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesLines = null;
             tflApiPresentationEntitiesLines = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -272,14 +264,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineGetByModeResponse res = new org.openapis.openapi.models.operations.LineGetByModeResponse() {{
+        org.openapis.openapi.models.operations.LineGetByModeResponse res = new org.openapis.openapi.models.operations.LineGetByModeResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesLines = null;
             tflApiPresentationEntitiesLines = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -332,14 +322,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineLineRoutesByIdsResponse res = new org.openapis.openapi.models.operations.LineLineRoutesByIdsResponse() {{
+        org.openapis.openapi.models.operations.LineLineRoutesByIdsResponse res = new org.openapis.openapi.models.operations.LineLineRoutesByIdsResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesLines = null;
             tflApiPresentationEntitiesLines = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -385,14 +373,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineMetaDisruptionCategoriesResponse res = new org.openapis.openapi.models.operations.LineMetaDisruptionCategoriesResponse() {{
+        org.openapis.openapi.models.operations.LineMetaDisruptionCategoriesResponse res = new org.openapis.openapi.models.operations.LineMetaDisruptionCategoriesResponse(contentType, httpRes.statusCode()) {{
             lineMetaDisruptionCategories200ApplicationJSONStrings = null;
             body = null;
             body = null;
             lineMetaDisruptionCategories200TextJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,14 +424,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineMetaModesResponse res = new org.openapis.openapi.models.operations.LineMetaModesResponse() {{
+        org.openapis.openapi.models.operations.LineMetaModesResponse res = new org.openapis.openapi.models.operations.LineMetaModesResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesModes = null;
             tflApiPresentationEntitiesModes = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -491,14 +475,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineMetaServiceTypesResponse res = new org.openapis.openapi.models.operations.LineMetaServiceTypesResponse() {{
+        org.openapis.openapi.models.operations.LineMetaServiceTypesResponse res = new org.openapis.openapi.models.operations.LineMetaServiceTypesResponse(contentType, httpRes.statusCode()) {{
             lineMetaServiceTypes200ApplicationJSONStrings = null;
             body = null;
             body = null;
             lineMetaServiceTypes200TextJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -544,14 +526,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineMetaSeverityResponse res = new org.openapis.openapi.models.operations.LineMetaSeverityResponse() {{
+        org.openapis.openapi.models.operations.LineMetaSeverityResponse res = new org.openapis.openapi.models.operations.LineMetaSeverityResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesStatusSeverities = null;
             tflApiPresentationEntitiesStatusSeverities = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -604,14 +584,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineRouteResponse res = new org.openapis.openapi.models.operations.LineRouteResponse() {{
+        org.openapis.openapi.models.operations.LineRouteResponse res = new org.openapis.openapi.models.operations.LineRouteResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesLines = null;
             tflApiPresentationEntitiesLines = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -664,14 +642,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineRouteByModeResponse res = new org.openapis.openapi.models.operations.LineRouteByModeResponse() {{
+        org.openapis.openapi.models.operations.LineRouteByModeResponse res = new org.openapis.openapi.models.operations.LineRouteByModeResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesLines = null;
             tflApiPresentationEntitiesLines = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -724,14 +700,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineRouteSequenceResponse res = new org.openapis.openapi.models.operations.LineRouteSequenceResponse() {{
+        org.openapis.openapi.models.operations.LineRouteSequenceResponse res = new org.openapis.openapi.models.operations.LineRouteSequenceResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesRouteSequence = null;
             tflApiPresentationEntitiesRouteSequence = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -784,14 +758,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineSearchResponse res = new org.openapis.openapi.models.operations.LineSearchResponse() {{
+        org.openapis.openapi.models.operations.LineSearchResponse res = new org.openapis.openapi.models.operations.LineSearchResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesRouteSearchResponse = null;
             tflApiPresentationEntitiesRouteSearchResponse = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -844,14 +816,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineStatusResponse res = new org.openapis.openapi.models.operations.LineStatusResponse() {{
+        org.openapis.openapi.models.operations.LineStatusResponse res = new org.openapis.openapi.models.operations.LineStatusResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesLines = null;
             tflApiPresentationEntitiesLines = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -904,14 +874,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineStatusByIdsResponse res = new org.openapis.openapi.models.operations.LineStatusByIdsResponse() {{
+        org.openapis.openapi.models.operations.LineStatusByIdsResponse res = new org.openapis.openapi.models.operations.LineStatusByIdsResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesLines = null;
             tflApiPresentationEntitiesLines = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -964,14 +932,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineStatusByModeResponse res = new org.openapis.openapi.models.operations.LineStatusByModeResponse() {{
+        org.openapis.openapi.models.operations.LineStatusByModeResponse res = new org.openapis.openapi.models.operations.LineStatusByModeResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesLines = null;
             tflApiPresentationEntitiesLines = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1018,14 +984,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineStatusBySeverityResponse res = new org.openapis.openapi.models.operations.LineStatusBySeverityResponse() {{
+        org.openapis.openapi.models.operations.LineStatusBySeverityResponse res = new org.openapis.openapi.models.operations.LineStatusBySeverityResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesLines = null;
             tflApiPresentationEntitiesLines = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1078,14 +1042,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineStopPointsResponse res = new org.openapis.openapi.models.operations.LineStopPointsResponse() {{
+        org.openapis.openapi.models.operations.LineStopPointsResponse res = new org.openapis.openapi.models.operations.LineStopPointsResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesStopPoints = null;
             tflApiPresentationEntitiesStopPoints = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1132,14 +1094,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineTimetableResponse res = new org.openapis.openapi.models.operations.LineTimetableResponse() {{
+        org.openapis.openapi.models.operations.LineTimetableResponse res = new org.openapis.openapi.models.operations.LineTimetableResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesTimetableResponse = null;
             tflApiPresentationEntitiesTimetableResponse = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1186,14 +1146,12 @@ public class Line {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LineTimetableToResponse res = new org.openapis.openapi.models.operations.LineTimetableToResponse() {{
+        org.openapis.openapi.models.operations.LineTimetableToResponse res = new org.openapis.openapi.models.operations.LineTimetableToResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesTimetableResponse = null;
             tflApiPresentationEntitiesTimetableResponse = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

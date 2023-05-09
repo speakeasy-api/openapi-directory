@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbs {
     
     public Boolean deleteOnTermination;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbs withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -19,6 +20,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public Boolean encrypted;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbs withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -26,6 +28,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public Long iops;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbs withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -33,6 +36,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String kmsKeyId;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbs withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -40,6 +44,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String snapshotId;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbs withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -47,6 +52,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public Long throughput;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbs withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -54,6 +60,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public Long volumeSize;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbs withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
@@ -61,9 +68,11 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbsVolumeTypeEnum volumeType;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbs withVolumeType(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbsVolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbs(){}
 }

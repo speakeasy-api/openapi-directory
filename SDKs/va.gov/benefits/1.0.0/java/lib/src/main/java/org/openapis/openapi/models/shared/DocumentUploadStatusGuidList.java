@@ -15,9 +15,13 @@ public class DocumentUploadStatusGuidList {
      */
     @JsonProperty("ids")
     public String[] ids;
+
     public DocumentUploadStatusGuidList withIds(String[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public DocumentUploadStatusGuidList(@JsonProperty("ids") String[] ids) {
+        this.ids = ids;
+  }
 }

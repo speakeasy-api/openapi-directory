@@ -15,9 +15,11 @@ public class ListManagedDataIdentifiersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListManagedDataIdentifiersRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListManagedDataIdentifiersRequestBody(){}
 }

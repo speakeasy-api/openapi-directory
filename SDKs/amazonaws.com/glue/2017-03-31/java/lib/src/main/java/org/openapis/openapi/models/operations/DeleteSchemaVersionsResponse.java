@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSchemaVersionsResponse {
@@ -12,6 +13,7 @@ public class DeleteSchemaVersionsResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteSchemaVersionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSchemaVersionsResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteSchemaVersionsResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSchemaVersionsResponse {
     
     
     public String contentType;
+
     public DeleteSchemaVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSchemaVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteSchemaVersionsResponse deleteSchemaVersionsResponse;
+
     public DeleteSchemaVersionsResponse withDeleteSchemaVersionsResponse(org.openapis.openapi.models.shared.DeleteSchemaVersionsResponse deleteSchemaVersionsResponse) {
         this.deleteSchemaVersionsResponse = deleteSchemaVersionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSchemaVersionsResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteSchemaVersionsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteSchemaVersionsResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteSchemaVersionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteSchemaVersionsResponse {
     
     
     public Integer statusCode;
+
     public DeleteSchemaVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteSchemaVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSchemaVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteSchemaVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

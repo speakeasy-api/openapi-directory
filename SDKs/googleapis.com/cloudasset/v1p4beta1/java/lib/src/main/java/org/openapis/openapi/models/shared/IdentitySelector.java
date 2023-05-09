@@ -18,9 +18,11 @@ public class IdentitySelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identity")
     public String identity;
+
     public IdentitySelector withIdentity(String identity) {
         this.identity = identity;
         return this;
     }
     
+    public IdentitySelector(){}
 }

@@ -18,9 +18,11 @@ public class ApplianceCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLink")
     public String resourceLink;
+
     public ApplianceCluster withResourceLink(String resourceLink) {
         this.resourceLink = resourceLink;
         return this;
     }
     
+    public ApplianceCluster(){}
 }

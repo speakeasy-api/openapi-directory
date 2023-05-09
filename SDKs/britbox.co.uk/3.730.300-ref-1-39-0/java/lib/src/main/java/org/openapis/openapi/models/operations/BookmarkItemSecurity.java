@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BookmarkItemSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String profileAuth;
+
     public BookmarkItemSecurity withProfileAuth(String profileAuth) {
         this.profileAuth = profileAuth;
         return this;
     }
     
+    public BookmarkItemSecurity(@JsonProperty("profileAuth") String profileAuth) {
+        this.profileAuth = profileAuth;
+  }
 }

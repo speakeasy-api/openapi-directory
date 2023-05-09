@@ -15,6 +15,7 @@ public class PrivateConnectionProvisioningState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCause")
     public PrivateConnectionProvisioningFailureCauseEnum failureCause;
+
     public PrivateConnectionProvisioningState withFailureCause(PrivateConnectionProvisioningFailureCauseEnum failureCause) {
         this.failureCause = failureCause;
         return this;
@@ -23,6 +24,7 @@ public class PrivateConnectionProvisioningState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureMessage")
     public String failureMessage;
+
     public PrivateConnectionProvisioningState withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -31,9 +33,11 @@ public class PrivateConnectionProvisioningState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PrivateConnectionProvisioningStatusEnum status;
+
     public PrivateConnectionProvisioningState withStatus(PrivateConnectionProvisioningStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PrivateConnectionProvisioningState(){}
 }

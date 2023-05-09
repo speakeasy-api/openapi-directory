@@ -12,6 +12,7 @@ public class BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubType")
     public String subType;
+
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput withSubType(String subType) {
         this.subType = subType;
         return this;
@@ -28,6 +30,7 @@ public class BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeId")
     public Long typeId;
+
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput withTypeId(Long typeId) {
         this.typeId = typeId;
         return this;
@@ -36,9 +39,11 @@ public class BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelsCustomerMetaDataAPIModelInput(){}
 }

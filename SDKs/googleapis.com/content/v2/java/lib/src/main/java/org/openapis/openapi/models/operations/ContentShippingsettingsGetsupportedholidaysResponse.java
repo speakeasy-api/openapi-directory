@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContentShippingsettingsGetsupportedholidaysResponse {
     
     public String contentType;
+
     public ContentShippingsettingsGetsupportedholidaysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContentShippingsettingsGetsupportedholidaysResponse {
      */
     
     public org.openapis.openapi.models.shared.ShippingsettingsGetSupportedHolidaysResponse shippingsettingsGetSupportedHolidaysResponse;
+
     public ContentShippingsettingsGetsupportedholidaysResponse withShippingsettingsGetSupportedHolidaysResponse(org.openapis.openapi.models.shared.ShippingsettingsGetSupportedHolidaysResponse shippingsettingsGetSupportedHolidaysResponse) {
         this.shippingsettingsGetSupportedHolidaysResponse = shippingsettingsGetSupportedHolidaysResponse;
         return this;
@@ -26,6 +29,7 @@ public class ContentShippingsettingsGetsupportedholidaysResponse {
     
     
     public Integer statusCode;
+
     public ContentShippingsettingsGetsupportedholidaysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContentShippingsettingsGetsupportedholidaysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContentShippingsettingsGetsupportedholidaysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContentShippingsettingsGetsupportedholidaysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

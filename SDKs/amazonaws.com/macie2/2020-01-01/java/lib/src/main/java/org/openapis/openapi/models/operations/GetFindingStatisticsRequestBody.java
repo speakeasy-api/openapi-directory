@@ -15,6 +15,7 @@ public class GetFindingStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingCriteria")
     public GetFindingStatisticsRequestBodyFindingCriteria findingCriteria;
+
     public GetFindingStatisticsRequestBody withFindingCriteria(GetFindingStatisticsRequestBodyFindingCriteria findingCriteria) {
         this.findingCriteria = findingCriteria;
         return this;
@@ -25,6 +26,7 @@ public class GetFindingStatisticsRequestBody {
      */
     @JsonProperty("groupBy")
     public GetFindingStatisticsRequestBodyGroupByEnum groupBy;
+
     public GetFindingStatisticsRequestBody withGroupBy(GetFindingStatisticsRequestBodyGroupByEnum groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -36,6 +38,7 @@ public class GetFindingStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public GetFindingStatisticsRequestBody withSize(Long size) {
         this.size = size;
         return this;
@@ -47,9 +50,13 @@ public class GetFindingStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortCriteria")
     public GetFindingStatisticsRequestBodySortCriteria sortCriteria;
+
     public GetFindingStatisticsRequestBody withSortCriteria(GetFindingStatisticsRequestBodySortCriteria sortCriteria) {
         this.sortCriteria = sortCriteria;
         return this;
     }
     
+    public GetFindingStatisticsRequestBody(@JsonProperty("groupBy") GetFindingStatisticsRequestBodyGroupByEnum groupBy) {
+        this.groupBy = groupBy;
+  }
 }

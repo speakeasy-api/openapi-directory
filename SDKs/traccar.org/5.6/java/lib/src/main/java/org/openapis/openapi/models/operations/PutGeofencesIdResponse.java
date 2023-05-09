@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutGeofencesIdResponse {
     
     public String contentType;
+
     public PutGeofencesIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutGeofencesIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Geofence geofence;
+
     public PutGeofencesIdResponse withGeofence(org.openapis.openapi.models.shared.Geofence geofence) {
         this.geofence = geofence;
         return this;
@@ -26,6 +29,7 @@ public class PutGeofencesIdResponse {
     
     
     public Integer statusCode;
+
     public PutGeofencesIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PutGeofencesIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutGeofencesIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutGeofencesIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

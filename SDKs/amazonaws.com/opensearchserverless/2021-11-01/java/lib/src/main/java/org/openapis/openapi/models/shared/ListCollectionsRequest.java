@@ -12,6 +12,7 @@ public class ListCollectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionFilters")
     public CollectionFilters collectionFilters;
+
     public ListCollectionsRequest withCollectionFilters(CollectionFilters collectionFilters) {
         this.collectionFilters = collectionFilters;
         return this;
@@ -20,6 +21,7 @@ public class ListCollectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListCollectionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListCollectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCollectionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCollectionsRequest(){}
 }

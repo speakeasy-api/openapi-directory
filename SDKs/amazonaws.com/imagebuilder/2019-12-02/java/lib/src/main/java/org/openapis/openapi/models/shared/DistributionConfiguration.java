@@ -15,6 +15,7 @@ public class DistributionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public DistributionConfiguration withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class DistributionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateCreated")
     public String dateCreated;
+
     public DistributionConfiguration withDateCreated(String dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -31,6 +33,7 @@ public class DistributionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateUpdated")
     public String dateUpdated;
+
     public DistributionConfiguration withDateUpdated(String dateUpdated) {
         this.dateUpdated = dateUpdated;
         return this;
@@ -39,6 +42,7 @@ public class DistributionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DistributionConfiguration withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +51,7 @@ public class DistributionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributions")
     public Distribution[] distributions;
+
     public DistributionConfiguration withDistributions(Distribution[] distributions) {
         this.distributions = distributions;
         return this;
@@ -55,6 +60,7 @@ public class DistributionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DistributionConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class DistributionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public DistributionConfiguration withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -70,9 +77,13 @@ public class DistributionConfiguration {
     
     @JsonProperty("timeoutMinutes")
     public Long timeoutMinutes;
+
     public DistributionConfiguration withTimeoutMinutes(Long timeoutMinutes) {
         this.timeoutMinutes = timeoutMinutes;
         return this;
     }
     
+    public DistributionConfiguration(@JsonProperty("timeoutMinutes") Long timeoutMinutes) {
+        this.timeoutMinutes = timeoutMinutes;
+  }
 }

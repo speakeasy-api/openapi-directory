@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProtectionGroupResponse {
     
     public String contentType;
+
     public DescribeProtectionGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProtectionGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProtectionGroupResponse describeProtectionGroupResponse;
+
     public DescribeProtectionGroupResponse withDescribeProtectionGroupResponse(org.openapis.openapi.models.shared.DescribeProtectionGroupResponse describeProtectionGroupResponse) {
         this.describeProtectionGroupResponse = describeProtectionGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProtectionGroupResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeProtectionGroupResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeProtectionGroupResponse {
     
     
     public Integer statusCode;
+
     public DescribeProtectionGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeProtectionGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProtectionGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeProtectionGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeProtectionGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeProtectionGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

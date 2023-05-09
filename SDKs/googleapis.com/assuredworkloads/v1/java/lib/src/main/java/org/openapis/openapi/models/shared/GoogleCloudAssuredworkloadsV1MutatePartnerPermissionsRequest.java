@@ -18,6 +18,7 @@ public class GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerPermissions")
     public GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions partnerPermissions;
+
     public GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest withPartnerPermissions(GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions partnerPermissions) {
         this.partnerPermissions = partnerPermissions;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest(){}
 }

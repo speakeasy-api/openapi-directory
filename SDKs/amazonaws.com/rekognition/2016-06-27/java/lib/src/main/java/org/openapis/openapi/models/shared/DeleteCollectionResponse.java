@@ -15,9 +15,11 @@ public class DeleteCollectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusCode")
     public Long statusCode;
+
     public DeleteCollectionResponse withStatusCode(Long statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public DeleteCollectionResponse(){}
 }

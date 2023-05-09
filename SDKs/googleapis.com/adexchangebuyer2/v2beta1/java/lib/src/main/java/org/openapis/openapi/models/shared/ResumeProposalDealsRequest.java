@@ -18,9 +18,11 @@ public class ResumeProposalDealsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalDealIds")
     public String[] externalDealIds;
+
     public ResumeProposalDealsRequest withExternalDealIds(String[] externalDealIds) {
         this.externalDealIds = externalDealIds;
         return this;
     }
     
+    public ResumeProposalDealsRequest(){}
 }

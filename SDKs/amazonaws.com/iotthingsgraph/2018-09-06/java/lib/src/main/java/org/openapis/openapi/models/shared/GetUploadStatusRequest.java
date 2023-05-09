@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetUploadStatusRequest {
     @JsonProperty("uploadId")
     public String uploadId;
+
     public GetUploadStatusRequest withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
     
+    public GetUploadStatusRequest(@JsonProperty("uploadId") String uploadId) {
+        this.uploadId = uploadId;
+  }
 }

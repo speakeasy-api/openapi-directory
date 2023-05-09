@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConf
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agent")
     public String agent;
+
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySource withAgent(String agent) {
         this.agent = agent;
         return this;
     }
     
+    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySource(){}
 }

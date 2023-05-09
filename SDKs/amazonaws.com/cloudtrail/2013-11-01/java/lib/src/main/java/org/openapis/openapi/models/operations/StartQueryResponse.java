@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartQueryResponse {
     
     public String contentType;
+
     public StartQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartQueryResponse {
      */
     
     public Object eventDataStoreARNInvalidException;
+
     public StartQueryResponse withEventDataStoreARNInvalidException(Object eventDataStoreARNInvalidException) {
         this.eventDataStoreARNInvalidException = eventDataStoreARNInvalidException;
         return this;
@@ -29,6 +32,7 @@ public class StartQueryResponse {
      */
     
     public Object eventDataStoreNotFoundException;
+
     public StartQueryResponse withEventDataStoreNotFoundException(Object eventDataStoreNotFoundException) {
         this.eventDataStoreNotFoundException = eventDataStoreNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class StartQueryResponse {
      */
     
     public Object inactiveEventDataStoreException;
+
     public StartQueryResponse withInactiveEventDataStoreException(Object inactiveEventDataStoreException) {
         this.inactiveEventDataStoreException = inactiveEventDataStoreException;
         return this;
@@ -49,6 +54,7 @@ public class StartQueryResponse {
      */
     
     public Object insufficientEncryptionPolicyException;
+
     public StartQueryResponse withInsufficientEncryptionPolicyException(Object insufficientEncryptionPolicyException) {
         this.insufficientEncryptionPolicyException = insufficientEncryptionPolicyException;
         return this;
@@ -59,6 +65,7 @@ public class StartQueryResponse {
      */
     
     public Object insufficientS3BucketPolicyException;
+
     public StartQueryResponse withInsufficientS3BucketPolicyException(Object insufficientS3BucketPolicyException) {
         this.insufficientS3BucketPolicyException = insufficientS3BucketPolicyException;
         return this;
@@ -69,6 +76,7 @@ public class StartQueryResponse {
      */
     
     public Object invalidParameterException;
+
     public StartQueryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class StartQueryResponse {
      */
     
     public Object invalidQueryStatementException;
+
     public StartQueryResponse withInvalidQueryStatementException(Object invalidQueryStatementException) {
         this.invalidQueryStatementException = invalidQueryStatementException;
         return this;
@@ -89,6 +98,7 @@ public class StartQueryResponse {
      */
     
     public Object invalidS3BucketNameException;
+
     public StartQueryResponse withInvalidS3BucketNameException(Object invalidS3BucketNameException) {
         this.invalidS3BucketNameException = invalidS3BucketNameException;
         return this;
@@ -99,6 +109,7 @@ public class StartQueryResponse {
      */
     
     public Object invalidS3PrefixException;
+
     public StartQueryResponse withInvalidS3PrefixException(Object invalidS3PrefixException) {
         this.invalidS3PrefixException = invalidS3PrefixException;
         return this;
@@ -109,6 +120,7 @@ public class StartQueryResponse {
      */
     
     public Object maxConcurrentQueriesException;
+
     public StartQueryResponse withMaxConcurrentQueriesException(Object maxConcurrentQueriesException) {
         this.maxConcurrentQueriesException = maxConcurrentQueriesException;
         return this;
@@ -119,6 +131,7 @@ public class StartQueryResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public StartQueryResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -129,6 +142,7 @@ public class StartQueryResponse {
      */
     
     public Object operationNotPermittedException;
+
     public StartQueryResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -139,6 +153,7 @@ public class StartQueryResponse {
      */
     
     public Object s3BucketDoesNotExistException;
+
     public StartQueryResponse withS3BucketDoesNotExistException(Object s3BucketDoesNotExistException) {
         this.s3BucketDoesNotExistException = s3BucketDoesNotExistException;
         return this;
@@ -149,6 +164,7 @@ public class StartQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.StartQueryResponse startQueryResponse;
+
     public StartQueryResponse withStartQueryResponse(org.openapis.openapi.models.shared.StartQueryResponse startQueryResponse) {
         this.startQueryResponse = startQueryResponse;
         return this;
@@ -156,6 +172,7 @@ public class StartQueryResponse {
     
     
     public Integer statusCode;
+
     public StartQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -163,6 +180,7 @@ public class StartQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -173,9 +191,14 @@ public class StartQueryResponse {
      */
     
     public Object unsupportedOperationException;
+
     public StartQueryResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public StartQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

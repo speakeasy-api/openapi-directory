@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Form {
     @JsonProperty("appId")
     public String appId;
+
     public Form withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -22,6 +23,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cta")
     public FormCTA cta;
+
     public Form withCta(FormCTA cta) {
         this.cta = cta;
         return this;
@@ -29,6 +31,7 @@ public class Form {
     
     @JsonProperty("dataType")
     public FormDataTypeConfig dataType;
+
     public Form withDataType(FormDataTypeConfig dataType) {
         this.dataType = dataType;
         return this;
@@ -36,6 +39,7 @@ public class Form {
     
     @JsonProperty("environmentName")
     public String environmentName;
+
     public Form withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -43,6 +47,7 @@ public class Form {
     
     @JsonProperty("fields")
     public java.util.Map<String, FieldConfig> fields;
+
     public Form withFields(java.util.Map<String, FieldConfig> fields) {
         this.fields = fields;
         return this;
@@ -50,6 +55,7 @@ public class Form {
     
     @JsonProperty("formActionType")
     public FormActionTypeEnum formActionType;
+
     public Form withFormActionType(FormActionTypeEnum formActionType) {
         this.formActionType = formActionType;
         return this;
@@ -57,13 +63,24 @@ public class Form {
     
     @JsonProperty("id")
     public String id;
+
     public Form withId(String id) {
         this.id = id;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("labelDecorator")
+    public LabelDecoratorEnum labelDecorator;
+
+    public Form withLabelDecorator(LabelDecoratorEnum labelDecorator) {
+        this.labelDecorator = labelDecorator;
+        return this;
+    }
+    
     @JsonProperty("name")
     public String name;
+
     public Form withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +88,7 @@ public class Form {
     
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public Form withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -78,6 +96,7 @@ public class Form {
     
     @JsonProperty("sectionalElements")
     public java.util.Map<String, SectionalElement> sectionalElements;
+
     public Form withSectionalElements(java.util.Map<String, SectionalElement> sectionalElements) {
         this.sectionalElements = sectionalElements;
         return this;
@@ -85,6 +104,7 @@ public class Form {
     
     @JsonProperty("style")
     public FormStyle style;
+
     public Form withStyle(FormStyle style) {
         this.style = style;
         return this;
@@ -93,9 +113,22 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Form withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public Form(@JsonProperty("appId") String appId, @JsonProperty("dataType") FormDataTypeConfig dataType, @JsonProperty("environmentName") String environmentName, @JsonProperty("fields") java.util.Map<String, FieldConfig> fields, @JsonProperty("formActionType") FormActionTypeEnum formActionType, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("schemaVersion") String schemaVersion, @JsonProperty("sectionalElements") java.util.Map<String, SectionalElement> sectionalElements, @JsonProperty("style") FormStyle style) {
+        this.appId = appId;
+        this.dataType = dataType;
+        this.environmentName = environmentName;
+        this.fields = fields;
+        this.formActionType = formActionType;
+        this.id = id;
+        this.name = name;
+        this.schemaVersion = schemaVersion;
+        this.sectionalElements = sectionalElements;
+        this.style = style;
+  }
 }

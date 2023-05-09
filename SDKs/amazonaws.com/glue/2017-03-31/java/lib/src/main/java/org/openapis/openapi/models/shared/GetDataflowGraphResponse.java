@@ -15,6 +15,7 @@ public class GetDataflowGraphResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DagEdges")
     public CodeGenEdge[] dagEdges;
+
     public GetDataflowGraphResponse withDagEdges(CodeGenEdge[] dagEdges) {
         this.dagEdges = dagEdges;
         return this;
@@ -23,9 +24,11 @@ public class GetDataflowGraphResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DagNodes")
     public CodeGenNode[] dagNodes;
+
     public GetDataflowGraphResponse withDagNodes(CodeGenNode[] dagNodes) {
         this.dagNodes = dagNodes;
         return this;
     }
     
+    public GetDataflowGraphResponse(){}
 }

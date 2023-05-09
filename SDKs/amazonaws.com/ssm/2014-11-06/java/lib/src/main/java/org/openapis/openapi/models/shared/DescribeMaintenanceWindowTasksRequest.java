@@ -12,6 +12,7 @@ public class DescribeMaintenanceWindowTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public MaintenanceWindowFilter[] filters;
+
     public DescribeMaintenanceWindowTasksRequest withFilters(MaintenanceWindowFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class DescribeMaintenanceWindowTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeMaintenanceWindowTasksRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeMaintenanceWindowTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeMaintenanceWindowTasksRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class DescribeMaintenanceWindowTasksRequest {
     
     @JsonProperty("WindowId")
     public String windowId;
+
     public DescribeMaintenanceWindowTasksRequest withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
     }
     
+    public DescribeMaintenanceWindowTasksRequest(@JsonProperty("WindowId") String windowId) {
+        this.windowId = windowId;
+  }
 }

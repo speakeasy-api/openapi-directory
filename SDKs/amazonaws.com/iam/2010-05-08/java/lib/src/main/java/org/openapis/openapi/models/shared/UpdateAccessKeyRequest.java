@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateAccessKeyRequest {
     
     public String accessKeyId;
+
     public UpdateAccessKeyRequest withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -16,6 +17,7 @@ public class UpdateAccessKeyRequest {
     
     
     public StatusTypeEnum status;
+
     public UpdateAccessKeyRequest withStatus(StatusTypeEnum status) {
         this.status = status;
         return this;
@@ -23,9 +25,14 @@ public class UpdateAccessKeyRequest {
     
     
     public String userName;
+
     public UpdateAccessKeyRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public UpdateAccessKeyRequest(@JsonProperty("AccessKeyId") String accessKeyId, @JsonProperty("Status") StatusTypeEnum status) {
+        this.accessKeyId = accessKeyId;
+        this.status = status;
+  }
 }

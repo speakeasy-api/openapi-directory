@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FailureDescription {
     @JsonProperty("Details")
     public String details;
+
     public FailureDescription withDetails(String details) {
         this.details = details;
         return this;
@@ -19,9 +20,14 @@ public class FailureDescription {
     
     @JsonProperty("Type")
     public DeliveryStreamFailureTypeEnum type;
+
     public FailureDescription withType(DeliveryStreamFailureTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public FailureDescription(@JsonProperty("Details") String details, @JsonProperty("Type") DeliveryStreamFailureTypeEnum type) {
+        this.details = details;
+        this.type = type;
+  }
 }

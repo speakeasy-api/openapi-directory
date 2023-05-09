@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Output {
     @JsonProperty("DestinationSchema")
     public DestinationSchema destinationSchema;
+
     public Output withDestinationSchema(DestinationSchema destinationSchema) {
         this.destinationSchema = destinationSchema;
         return this;
@@ -22,6 +23,7 @@ public class Output {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisFirehoseOutput")
     public KinesisFirehoseOutput kinesisFirehoseOutput;
+
     public Output withKinesisFirehoseOutput(KinesisFirehoseOutput kinesisFirehoseOutput) {
         this.kinesisFirehoseOutput = kinesisFirehoseOutput;
         return this;
@@ -30,6 +32,7 @@ public class Output {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisStreamsOutput")
     public KinesisStreamsOutput kinesisStreamsOutput;
+
     public Output withKinesisStreamsOutput(KinesisStreamsOutput kinesisStreamsOutput) {
         this.kinesisStreamsOutput = kinesisStreamsOutput;
         return this;
@@ -38,6 +41,7 @@ public class Output {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaOutput")
     public LambdaOutput lambdaOutput;
+
     public Output withLambdaOutput(LambdaOutput lambdaOutput) {
         this.lambdaOutput = lambdaOutput;
         return this;
@@ -45,9 +49,14 @@ public class Output {
     
     @JsonProperty("Name")
     public String name;
+
     public Output withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Output(@JsonProperty("DestinationSchema") DestinationSchema destinationSchema, @JsonProperty("Name") String name) {
+        this.destinationSchema = destinationSchema;
+        this.name = name;
+  }
 }

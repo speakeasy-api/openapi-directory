@@ -22,6 +22,7 @@ public class ServiceUpdate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AutoUpdateStartDate")
     public OffsetDateTime autoUpdateStartDate;
+
     public ServiceUpdate withAutoUpdateStartDate(OffsetDateTime autoUpdateStartDate) {
         this.autoUpdateStartDate = autoUpdateStartDate;
         return this;
@@ -30,6 +31,7 @@ public class ServiceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterName")
     public String clusterName;
+
     public ServiceUpdate withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -38,6 +40,7 @@ public class ServiceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ServiceUpdate withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class ServiceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodesUpdated")
     public String nodesUpdated;
+
     public ServiceUpdate withNodesUpdated(String nodesUpdated) {
         this.nodesUpdated = nodesUpdated;
         return this;
@@ -56,6 +60,7 @@ public class ServiceUpdate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReleaseDate")
     public OffsetDateTime releaseDate;
+
     public ServiceUpdate withReleaseDate(OffsetDateTime releaseDate) {
         this.releaseDate = releaseDate;
         return this;
@@ -64,6 +69,7 @@ public class ServiceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceUpdateName")
     public String serviceUpdateName;
+
     public ServiceUpdate withServiceUpdateName(String serviceUpdateName) {
         this.serviceUpdateName = serviceUpdateName;
         return this;
@@ -72,6 +78,7 @@ public class ServiceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ServiceUpdateStatusEnum status;
+
     public ServiceUpdate withStatus(ServiceUpdateStatusEnum status) {
         this.status = status;
         return this;
@@ -80,9 +87,11 @@ public class ServiceUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ServiceUpdateTypeEnum type;
+
     public ServiceUpdate withType(ServiceUpdateTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ServiceUpdate(){}
 }

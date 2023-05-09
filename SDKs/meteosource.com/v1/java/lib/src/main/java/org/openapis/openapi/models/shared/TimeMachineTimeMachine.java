@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimeMachineTimeMachine {
     @JsonProperty("data")
     public TimeMachineTimeMachineHourlyData[] data;
+
     public TimeMachineTimeMachine withData(TimeMachineTimeMachineHourlyData[] data) {
         this.data = data;
         return this;
@@ -24,6 +25,7 @@ public class TimeMachineTimeMachine {
      */
     @JsonProperty("elevation")
     public Long elevation;
+
     public TimeMachineTimeMachine withElevation(Long elevation) {
         this.elevation = elevation;
         return this;
@@ -34,6 +36,7 @@ public class TimeMachineTimeMachine {
      */
     @JsonProperty("lat")
     public String lat;
+
     public TimeMachineTimeMachine withLat(String lat) {
         this.lat = lat;
         return this;
@@ -44,6 +47,7 @@ public class TimeMachineTimeMachine {
      */
     @JsonProperty("lon")
     public String lon;
+
     public TimeMachineTimeMachine withLon(String lon) {
         this.lon = lon;
         return this;
@@ -51,6 +55,7 @@ public class TimeMachineTimeMachine {
     
     @JsonProperty("statistics")
     public TimeMachinePointDailyStatsData statistics;
+
     public TimeMachineTimeMachine withStatistics(TimeMachinePointDailyStatsData statistics) {
         this.statistics = statistics;
         return this;
@@ -62,6 +67,7 @@ public class TimeMachineTimeMachine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public TimeMachineTimeMachine withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -72,9 +78,18 @@ public class TimeMachineTimeMachine {
      */
     @JsonProperty("units")
     public String units;
+
     public TimeMachineTimeMachine withUnits(String units) {
         this.units = units;
         return this;
     }
     
+    public TimeMachineTimeMachine(@JsonProperty("data") TimeMachineTimeMachineHourlyData[] data, @JsonProperty("elevation") Long elevation, @JsonProperty("lat") String lat, @JsonProperty("lon") String lon, @JsonProperty("statistics") TimeMachinePointDailyStatsData statistics, @JsonProperty("units") String units) {
+        this.data = data;
+        this.elevation = elevation;
+        this.lat = lat;
+        this.lon = lon;
+        this.statistics = statistics;
+        this.units = units;
+  }
 }

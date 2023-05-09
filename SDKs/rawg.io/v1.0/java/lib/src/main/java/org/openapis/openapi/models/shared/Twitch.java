@@ -19,6 +19,7 @@ public class Twitch {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Twitch withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -27,6 +28,7 @@ public class Twitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Twitch withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class Twitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_id")
     public Long externalId;
+
     public Twitch withExternalId(Long externalId) {
         this.externalId = externalId;
         return this;
@@ -43,6 +46,7 @@ public class Twitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Twitch withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +55,7 @@ public class Twitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public Twitch withLanguage(String language) {
         this.language = language;
         return this;
@@ -59,6 +64,7 @@ public class Twitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Twitch withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +75,7 @@ public class Twitch {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("published")
     public OffsetDateTime published;
+
     public Twitch withPublished(OffsetDateTime published) {
         this.published = published;
         return this;
@@ -77,6 +84,7 @@ public class Twitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail")
     public String thumbnail;
+
     public Twitch withThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
         return this;
@@ -85,9 +93,11 @@ public class Twitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view_count")
     public Long viewCount;
+
     public Twitch withViewCount(Long viewCount) {
         this.viewCount = viewCount;
         return this;
     }
     
+    public Twitch(){}
 }

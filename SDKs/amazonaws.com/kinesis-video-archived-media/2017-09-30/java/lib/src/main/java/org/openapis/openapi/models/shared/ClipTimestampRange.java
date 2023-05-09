@@ -19,6 +19,7 @@ public class ClipTimestampRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTimestamp")
     public OffsetDateTime endTimestamp;
+
     public ClipTimestampRange withEndTimestamp(OffsetDateTime endTimestamp) {
         this.endTimestamp = endTimestamp;
         return this;
@@ -28,9 +29,14 @@ public class ClipTimestampRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTimestamp")
     public OffsetDateTime startTimestamp;
+
     public ClipTimestampRange withStartTimestamp(OffsetDateTime startTimestamp) {
         this.startTimestamp = startTimestamp;
         return this;
     }
     
+    public ClipTimestampRange(@JsonProperty("EndTimestamp") OffsetDateTime endTimestamp, @JsonProperty("StartTimestamp") OffsetDateTime startTimestamp) {
+        this.endTimestamp = endTimestamp;
+        this.startTimestamp = startTimestamp;
+  }
 }

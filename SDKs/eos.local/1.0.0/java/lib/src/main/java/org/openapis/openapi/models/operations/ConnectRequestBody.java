@@ -12,9 +12,13 @@ public class ConnectRequestBody {
      */
     @JsonProperty("endpoint")
     public String endpoint;
+
     public ConnectRequestBody withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public ConnectRequestBody(@JsonProperty("endpoint") String endpoint) {
+        this.endpoint = endpoint;
+  }
 }

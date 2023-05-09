@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateRegistryInput {
     @JsonProperty("Description")
     public String description;
+
     public UpdateRegistryInput withDescription(String description) {
         this.description = description;
         return this;
@@ -16,9 +17,14 @@ public class UpdateRegistryInput {
     
     @JsonProperty("RegistryId")
     public RegistryId registryId;
+
     public UpdateRegistryInput withRegistryId(RegistryId registryId) {
         this.registryId = registryId;
         return this;
     }
     
+    public UpdateRegistryInput(@JsonProperty("Description") String description, @JsonProperty("RegistryId") RegistryId registryId) {
+        this.description = description;
+        this.registryId = registryId;
+  }
 }

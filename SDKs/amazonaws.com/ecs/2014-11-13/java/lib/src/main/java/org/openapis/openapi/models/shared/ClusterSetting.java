@@ -15,6 +15,7 @@ public class ClusterSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public ClusterSettingNameEnum name;
+
     public ClusterSetting withName(ClusterSettingNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class ClusterSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ClusterSetting withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ClusterSetting(){}
 }

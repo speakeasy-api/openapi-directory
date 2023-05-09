@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
 import org.openapis.openapi.models.shared.BaudrateEnum;
@@ -27,35 +26,33 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetRequest req = new GetRequest() {{
-                address = "48";
-                baudrate = "2400";
-                device = "ttyAMA0";
-            }}            
+            GetRequest req = new GetRequest("48", BaudrateEnum.TWO_THOUSAND_FOUR_HUNDRED, "ttyAMA0");            
 
             GetResponse res = sdk.get(req);
 
-            if (res.mbusData.isPresent()) {
+            if (res.mbusData != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `get` - Gets data from the slave identified by {address}
-* `getMulti` - Gets data from the slave identified by {address}, and supports multiple responses from the slave
-* `hat` - Gets Raspberry Pi Hat information
-* `hatOff` - Turns off power to the M-Bus
-* `hatOn` - Turns on power to the M-Bus
-* `mbusApi` - Returns this API specification
-* `scan` - Scan the specified device for slaves
+* [get](docs/sdk/README.md#get) - Gets data from the slave identified by {address}
+* [getMulti](docs/sdk/README.md#getmulti) - Gets data from the slave identified by {address}, and supports multiple responses from the slave
+* [hat](docs/sdk/README.md#hat) - Gets Raspberry Pi Hat information
+* [hatOff](docs/sdk/README.md#hatoff) - Turns off power to the M-Bus
+* [hatOn](docs/sdk/README.md#haton) - Turns on power to the M-Bus
+* [mbusApi](docs/sdk/README.md#mbusapi) - Returns this API specification
+* [scan](docs/sdk/README.md#scan) - Scan the specified device for slaves
 <!-- End SDK Available Operations -->
 
 ### Maturity

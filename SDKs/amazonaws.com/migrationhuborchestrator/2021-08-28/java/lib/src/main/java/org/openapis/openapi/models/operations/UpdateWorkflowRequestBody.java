@@ -15,6 +15,7 @@ public class UpdateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateWorkflowRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputParameters")
     public java.util.Map<String, org.openapis.openapi.models.shared.StepInput> inputParameters;
+
     public UpdateWorkflowRequestBody withInputParameters(java.util.Map<String, org.openapis.openapi.models.shared.StepInput> inputParameters) {
         this.inputParameters = inputParameters;
         return this;
@@ -37,6 +39,7 @@ public class UpdateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateWorkflowRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -48,9 +51,11 @@ public class UpdateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepTargets")
     public String[] stepTargets;
+
     public UpdateWorkflowRequestBody withStepTargets(String[] stepTargets) {
         this.stepTargets = stepTargets;
         return this;
     }
     
+    public UpdateWorkflowRequestBody(){}
 }

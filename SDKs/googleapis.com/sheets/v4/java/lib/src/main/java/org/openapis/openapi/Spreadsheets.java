@@ -61,11 +61,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsBatchUpdateResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsBatchUpdateResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsBatchUpdateResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsBatchUpdateResponse(contentType, httpRes.statusCode()) {{
             batchUpdateSpreadsheetResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsCreateResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsCreateResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsCreateResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsCreateResponse(contentType, httpRes.statusCode()) {{
             spreadsheet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataGetResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataGetResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataGetResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataGetResponse(contentType, httpRes.statusCode()) {{
             developerMetadata = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataSearchResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataSearchResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataSearchResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataSearchResponse(contentType, httpRes.statusCode()) {{
             searchDeveloperMetadataResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsGetResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsGetResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsGetResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsGetResponse(contentType, httpRes.statusCode()) {{
             spreadsheet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -297,11 +287,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsGetByDataFilterResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsGetByDataFilterResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsGetByDataFilterResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsGetByDataFilterResponse(contentType, httpRes.statusCode()) {{
             spreadsheet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,11 +333,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsSheetsCopyToResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsSheetsCopyToResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsSheetsCopyToResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsSheetsCopyToResponse(contentType, httpRes.statusCode()) {{
             sheetProperties = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -393,11 +379,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesAppendResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesAppendResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesAppendResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesAppendResponse(contentType, httpRes.statusCode()) {{
             appendValuesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -441,11 +425,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearResponse(contentType, httpRes.statusCode()) {{
             batchClearValuesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -489,11 +471,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearByDataFilterResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearByDataFilterResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearByDataFilterResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearByDataFilterResponse(contentType, httpRes.statusCode()) {{
             batchClearValuesByDataFilterResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -535,11 +515,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetResponse(contentType, httpRes.statusCode()) {{
             batchGetValuesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -583,11 +561,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetByDataFilterResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetByDataFilterResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetByDataFilterResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetByDataFilterResponse(contentType, httpRes.statusCode()) {{
             batchGetValuesByDataFilterResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -631,11 +607,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateResponse(contentType, httpRes.statusCode()) {{
             batchUpdateValuesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -679,11 +653,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterResponse(contentType, httpRes.statusCode()) {{
             batchUpdateValuesByDataFilterResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -727,11 +699,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesClearResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesClearResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesClearResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesClearResponse(contentType, httpRes.statusCode()) {{
             clearValuesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -773,11 +743,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesGetResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesGetResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesGetResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesGetResponse(contentType, httpRes.statusCode()) {{
             valueRange = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -821,11 +789,9 @@ public class Spreadsheets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesUpdateResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesUpdateResponse() {{
+        org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesUpdateResponse res = new org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesUpdateResponse(contentType, httpRes.statusCode()) {{
             updateValuesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

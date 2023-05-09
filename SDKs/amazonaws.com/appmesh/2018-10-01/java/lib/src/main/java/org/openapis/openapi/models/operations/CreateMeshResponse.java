@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMeshResponse {
@@ -12,6 +13,7 @@ public class CreateMeshResponse {
      */
     
     public Object badRequestException;
+
     public CreateMeshResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateMeshResponse {
      */
     
     public Object conflictException;
+
     public CreateMeshResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateMeshResponse {
     
     
     public String contentType;
+
     public CreateMeshResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateMeshResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMeshOutput createMeshOutput;
+
     public CreateMeshResponse withCreateMeshOutput(org.openapis.openapi.models.shared.CreateMeshOutput createMeshOutput) {
         this.createMeshOutput = createMeshOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateMeshResponse {
      */
     
     public Object forbiddenException;
+
     public CreateMeshResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateMeshResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateMeshResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CreateMeshResponse {
      */
     
     public Object limitExceededException;
+
     public CreateMeshResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CreateMeshResponse {
      */
     
     public Object notFoundException;
+
     public CreateMeshResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -89,6 +98,7 @@ public class CreateMeshResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateMeshResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -96,6 +106,7 @@ public class CreateMeshResponse {
     
     
     public Integer statusCode;
+
     public CreateMeshResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateMeshResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMeshResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class CreateMeshResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateMeshResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateMeshResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

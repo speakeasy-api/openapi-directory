@@ -12,6 +12,7 @@ public class TeamPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
     public String conference;
+
     public TeamPPA withConference(String conference) {
         this.conference = conference;
         return this;
@@ -20,6 +21,7 @@ public class TeamPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defense")
     public TeamPPADefense defense;
+
     public TeamPPA withDefense(TeamPPADefense defense) {
         this.defense = defense;
         return this;
@@ -28,6 +30,7 @@ public class TeamPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offense")
     public TeamPPAOffense offense;
+
     public TeamPPA withOffense(TeamPPAOffense offense) {
         this.offense = offense;
         return this;
@@ -36,6 +39,7 @@ public class TeamPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("season")
     public Long season;
+
     public TeamPPA withSeason(Long season) {
         this.season = season;
         return this;
@@ -44,9 +48,11 @@ public class TeamPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public TeamPPA withTeam(String team) {
         this.team = team;
         return this;
     }
     
+    public TeamPPA(){}
 }

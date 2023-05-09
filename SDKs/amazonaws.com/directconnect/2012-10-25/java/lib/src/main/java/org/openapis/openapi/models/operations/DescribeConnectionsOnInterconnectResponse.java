@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeConnectionsOnInterconnectResponse {
@@ -12,6 +13,7 @@ public class DescribeConnectionsOnInterconnectResponse {
      */
     
     public org.openapis.openapi.models.shared.Connections connections;
+
     public DescribeConnectionsOnInterconnectResponse withConnections(org.openapis.openapi.models.shared.Connections connections) {
         this.connections = connections;
         return this;
@@ -19,6 +21,7 @@ public class DescribeConnectionsOnInterconnectResponse {
     
     
     public String contentType;
+
     public DescribeConnectionsOnInterconnectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeConnectionsOnInterconnectResponse {
      */
     
     public Object directConnectClientException;
+
     public DescribeConnectionsOnInterconnectResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeConnectionsOnInterconnectResponse {
      */
     
     public Object directConnectServerException;
+
     public DescribeConnectionsOnInterconnectResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeConnectionsOnInterconnectResponse {
     
     
     public Integer statusCode;
+
     public DescribeConnectionsOnInterconnectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeConnectionsOnInterconnectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeConnectionsOnInterconnectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeConnectionsOnInterconnectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

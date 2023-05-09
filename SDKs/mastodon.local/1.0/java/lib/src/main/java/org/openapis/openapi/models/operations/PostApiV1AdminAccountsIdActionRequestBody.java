@@ -15,6 +15,7 @@ public class PostApiV1AdminAccountsIdActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_id")
     public String reportId;
+
     public PostApiV1AdminAccountsIdActionRequestBody withReportId(String reportId) {
         this.reportId = reportId;
         return this;
@@ -26,6 +27,7 @@ public class PostApiV1AdminAccountsIdActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("send_email_notification")
     public Boolean sendEmailNotification;
+
     public PostApiV1AdminAccountsIdActionRequestBody withSendEmailNotification(Boolean sendEmailNotification) {
         this.sendEmailNotification = sendEmailNotification;
         return this;
@@ -37,6 +39,7 @@ public class PostApiV1AdminAccountsIdActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public PostApiV1AdminAccountsIdActionRequestBody withText(String text) {
         this.text = text;
         return this;
@@ -48,6 +51,7 @@ public class PostApiV1AdminAccountsIdActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PostApiV1AdminAccountsIdActionRequestBodyTypeEnum type;
+
     public PostApiV1AdminAccountsIdActionRequestBody withType(PostApiV1AdminAccountsIdActionRequestBodyTypeEnum type) {
         this.type = type;
         return this;
@@ -59,9 +63,11 @@ public class PostApiV1AdminAccountsIdActionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning_preset_id")
     public String warningPresetId;
+
     public PostApiV1AdminAccountsIdActionRequestBody withWarningPresetId(String warningPresetId) {
         this.warningPresetId = warningPresetId;
         return this;
     }
     
+    public PostApiV1AdminAccountsIdActionRequestBody(){}
 }

@@ -15,6 +15,7 @@ public class HealthFacilityChangedPasswordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hfrUid")
     public String hfrUid;
+
     public HealthFacilityChangedPasswordRequest withHfrUid(String hfrUid) {
         this.hfrUid = hfrUid;
         return this;
@@ -23,6 +24,7 @@ public class HealthFacilityChangedPasswordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newPassword")
     public String newPassword;
+
     public HealthFacilityChangedPasswordRequest withNewPassword(String newPassword) {
         this.newPassword = newPassword;
         return this;
@@ -31,9 +33,11 @@ public class HealthFacilityChangedPasswordRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oldPassword")
     public String oldPassword;
+
     public HealthFacilityChangedPasswordRequest withOldPassword(String oldPassword) {
         this.oldPassword = oldPassword;
         return this;
     }
     
+    public HealthFacilityChangedPasswordRequest(){}
 }

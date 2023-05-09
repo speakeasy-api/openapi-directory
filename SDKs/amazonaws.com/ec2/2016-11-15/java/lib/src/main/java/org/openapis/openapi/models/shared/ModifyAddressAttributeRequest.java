@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyAddressAttributeRequest {
     
     public String allocationId;
+
     public ModifyAddressAttributeRequest withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -16,6 +17,7 @@ public class ModifyAddressAttributeRequest {
     
     
     public String domainName;
+
     public ModifyAddressAttributeRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -23,9 +25,13 @@ public class ModifyAddressAttributeRequest {
     
     
     public Boolean dryRun;
+
     public ModifyAddressAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public ModifyAddressAttributeRequest(@JsonProperty("AllocationId") String allocationId) {
+        this.allocationId = allocationId;
+  }
 }

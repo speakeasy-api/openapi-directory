@@ -12,6 +12,7 @@ public class GetDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetDatabaseRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,9 +20,13 @@ public class GetDatabaseRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public GetDatabaseRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetDatabaseRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -51,12 +51,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ChromemanagementCustome
 lib/src/main/java/org/openapis/openapi/models/operations/ChromemanagementCustomersReportsCountInstalledAppsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ChromemanagementCustomersReportsCountInstalledAppsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ChromemanagementCustomersReportsCountInstalledAppsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ChromemanagementCustomersReportsCountPrintJobsByPrinterSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/ChromemanagementCustomersReportsCountPrintJobsByPrinterRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/ChromemanagementCustomersReportsCountPrintJobsByPrinterResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ChromemanagementCustomersReportsCountPrintJobsByUserSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/ChromemanagementCustomersReportsCountPrintJobsByUserRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/ChromemanagementCustomersReportsCountPrintJobsByUserResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ChromemanagementCustomersReportsFindInstalledAppDevicesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ChromemanagementCustomersReportsFindInstalledAppDevicesRequest.java
@@ -93,10 +87,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromeManagementV1Ins
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromeManagementV1InstalledAppAppSourceEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromeManagementV1InstalledAppAppTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromeManagementV1InstalledApp.java
-lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromeManagementV1CountPrintJobsByPrinterResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromeManagementV1PrinterReport.java
-lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromeManagementV1CountPrintJobsByUserResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromeManagementV1UserPrintReport.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromeManagementV1FindInstalledAppDevicesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromeManagementV1Device.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromeManagementV1ListTelemetryDevicesResponse.java
@@ -155,4 +145,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromeManagementV1Tel
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromeManagementV1TelemetryUser.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromeManagementV1TelemetryUserDevice.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleChromeManagementV1ListTelemetryUsersResponse.java
+docs/sdk/README.md
+docs/customers/README.md
 USAGE.md

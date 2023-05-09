@@ -58,10 +58,8 @@ public class NumberSystemsConversion {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersNumeralChineseResponse res = new org.openapis.openapi.models.operations.GetNumbersNumeralChineseResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersNumeralChineseResponse res = new org.openapis.openapi.models.operations.GetNumbersNumeralChineseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -98,10 +96,8 @@ public class NumberSystemsConversion {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersNumeralEgyptianResponse res = new org.openapis.openapi.models.operations.GetNumbersNumeralEgyptianResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersNumeralEgyptianResponse res = new org.openapis.openapi.models.operations.GetNumbersNumeralEgyptianResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -138,10 +134,8 @@ public class NumberSystemsConversion {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersNumeralRomanResponse res = new org.openapis.openapi.models.operations.GetNumbersNumeralRomanResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersNumeralRomanResponse res = new org.openapis.openapi.models.operations.GetNumbersNumeralRomanResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {

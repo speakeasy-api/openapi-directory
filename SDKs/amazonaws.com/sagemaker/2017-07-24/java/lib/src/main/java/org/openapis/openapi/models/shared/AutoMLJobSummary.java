@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AutoMLJobSummary {
     @JsonProperty("AutoMLJobArn")
     public String autoMLJobArn;
+
     public AutoMLJobSummary withAutoMLJobArn(String autoMLJobArn) {
         this.autoMLJobArn = autoMLJobArn;
         return this;
@@ -26,6 +27,7 @@ public class AutoMLJobSummary {
     
     @JsonProperty("AutoMLJobName")
     public String autoMLJobName;
+
     public AutoMLJobSummary withAutoMLJobName(String autoMLJobName) {
         this.autoMLJobName = autoMLJobName;
         return this;
@@ -33,6 +35,7 @@ public class AutoMLJobSummary {
     
     @JsonProperty("AutoMLJobSecondaryStatus")
     public AutoMLJobSecondaryStatusEnum autoMLJobSecondaryStatus;
+
     public AutoMLJobSummary withAutoMLJobSecondaryStatus(AutoMLJobSecondaryStatusEnum autoMLJobSecondaryStatus) {
         this.autoMLJobSecondaryStatus = autoMLJobSecondaryStatus;
         return this;
@@ -40,6 +43,7 @@ public class AutoMLJobSummary {
     
     @JsonProperty("AutoMLJobStatus")
     public AutoMLJobStatusEnum autoMLJobStatus;
+
     public AutoMLJobSummary withAutoMLJobStatus(AutoMLJobStatusEnum autoMLJobStatus) {
         this.autoMLJobStatus = autoMLJobStatus;
         return this;
@@ -49,6 +53,7 @@ public class AutoMLJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public AutoMLJobSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -59,6 +64,7 @@ public class AutoMLJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public AutoMLJobSummary withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -67,6 +73,7 @@ public class AutoMLJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public AutoMLJobSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -76,6 +83,7 @@ public class AutoMLJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public AutoMLJobSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -84,9 +92,18 @@ public class AutoMLJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartialFailureReasons")
     public AutoMLPartialFailureReason[] partialFailureReasons;
+
     public AutoMLJobSummary withPartialFailureReasons(AutoMLPartialFailureReason[] partialFailureReasons) {
         this.partialFailureReasons = partialFailureReasons;
         return this;
     }
     
+    public AutoMLJobSummary(@JsonProperty("AutoMLJobArn") String autoMLJobArn, @JsonProperty("AutoMLJobName") String autoMLJobName, @JsonProperty("AutoMLJobSecondaryStatus") AutoMLJobSecondaryStatusEnum autoMLJobSecondaryStatus, @JsonProperty("AutoMLJobStatus") AutoMLJobStatusEnum autoMLJobStatus, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime) {
+        this.autoMLJobArn = autoMLJobArn;
+        this.autoMLJobName = autoMLJobName;
+        this.autoMLJobSecondaryStatus = autoMLJobSecondaryStatus;
+        this.autoMLJobStatus = autoMLJobStatus;
+        this.creationTime = creationTime;
+        this.lastModifiedTime = lastModifiedTime;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
@@ -12,6 +13,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest googleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withGoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest(org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest googleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest) {
         this.googleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest = googleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest;
         return this;
@@ -29,6 +32,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=loggingEnabled")
     public Boolean loggingEnabled;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withLoggingEnabled(Boolean loggingEnabled) {
         this.loggingEnabled = loggingEnabled;
         return this;
@@ -89,6 +98,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withName(String name) {
         this.name = name;
         return this;
@@ -99,6 +109,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name1")
     public String name1;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withName1(String name1) {
         this.name1 = name1;
         return this;
@@ -109,6 +120,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -119,6 +131,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -129,6 +142,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -149,6 +164,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,9 +175,13 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

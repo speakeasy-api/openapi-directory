@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaFulfillmentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeIds")
     public String[] placeIds;
+
     public GoogleCloudRetailV2alphaFulfillmentInfo withPlaceIds(String[] placeIds) {
         this.placeIds = placeIds;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2alphaFulfillmentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudRetailV2alphaFulfillmentInfo withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaFulfillmentInfo(){}
 }

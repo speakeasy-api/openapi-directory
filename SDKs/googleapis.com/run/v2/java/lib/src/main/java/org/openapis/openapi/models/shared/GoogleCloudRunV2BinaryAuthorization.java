@@ -18,6 +18,7 @@ public class GoogleCloudRunV2BinaryAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breakglassJustification")
     public String breakglassJustification;
+
     public GoogleCloudRunV2BinaryAuthorization withBreakglassJustification(String breakglassJustification) {
         this.breakglassJustification = breakglassJustification;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRunV2BinaryAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useDefault")
     public Boolean useDefault;
+
     public GoogleCloudRunV2BinaryAuthorization withUseDefault(Boolean useDefault) {
         this.useDefault = useDefault;
         return this;
     }
     
+    public GoogleCloudRunV2BinaryAuthorization(){}
 }

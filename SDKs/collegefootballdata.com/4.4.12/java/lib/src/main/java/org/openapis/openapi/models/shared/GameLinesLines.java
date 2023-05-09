@@ -12,6 +12,7 @@ public class GameLinesLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awayMoneyline")
     public Double awayMoneyline;
+
     public GameLinesLines withAwayMoneyline(Double awayMoneyline) {
         this.awayMoneyline = awayMoneyline;
         return this;
@@ -20,6 +21,7 @@ public class GameLinesLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedSpread")
     public String formattedSpread;
+
     public GameLinesLines withFormattedSpread(String formattedSpread) {
         this.formattedSpread = formattedSpread;
         return this;
@@ -28,6 +30,7 @@ public class GameLinesLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeMoneyline")
     public Double homeMoneyline;
+
     public GameLinesLines withHomeMoneyline(Double homeMoneyline) {
         this.homeMoneyline = homeMoneyline;
         return this;
@@ -36,6 +39,7 @@ public class GameLinesLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overUnder")
     public Double overUnder;
+
     public GameLinesLines withOverUnder(Double overUnder) {
         this.overUnder = overUnder;
         return this;
@@ -44,6 +48,7 @@ public class GameLinesLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overUnderOpen")
     public Double overUnderOpen;
+
     public GameLinesLines withOverUnderOpen(Double overUnderOpen) {
         this.overUnderOpen = overUnderOpen;
         return this;
@@ -52,6 +57,7 @@ public class GameLinesLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public String provider;
+
     public GameLinesLines withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -60,6 +66,7 @@ public class GameLinesLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spread")
     public Double spread;
+
     public GameLinesLines withSpread(Double spread) {
         this.spread = spread;
         return this;
@@ -68,9 +75,11 @@ public class GameLinesLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spreadOpen")
     public Double spreadOpen;
+
     public GameLinesLines withSpreadOpen(Double spreadOpen) {
         this.spreadOpen = spreadOpen;
         return this;
     }
     
+    public GameLinesLines(){}
 }

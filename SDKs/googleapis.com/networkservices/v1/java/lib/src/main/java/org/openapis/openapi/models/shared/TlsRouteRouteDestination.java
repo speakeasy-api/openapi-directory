@@ -18,6 +18,7 @@ public class TlsRouteRouteDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public TlsRouteRouteDestination withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -29,9 +30,11 @@ public class TlsRouteRouteDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Integer weight;
+
     public TlsRouteRouteDestination withWeight(Integer weight) {
         this.weight = weight;
         return this;
     }
     
+    public TlsRouteRouteDestination(){}
 }

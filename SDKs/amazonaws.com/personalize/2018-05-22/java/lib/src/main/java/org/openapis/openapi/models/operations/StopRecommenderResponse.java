@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopRecommenderResponse {
     
     public String contentType;
+
     public StopRecommenderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopRecommenderResponse {
      */
     
     public Object invalidInputException;
+
     public StopRecommenderResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class StopRecommenderResponse {
      */
     
     public Object resourceInUseException;
+
     public StopRecommenderResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -39,6 +43,7 @@ public class StopRecommenderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopRecommenderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopRecommenderResponse {
     
     
     public Integer statusCode;
+
     public StopRecommenderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopRecommenderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopRecommenderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StopRecommenderResponse {
      */
     
     public org.openapis.openapi.models.shared.StopRecommenderResponse stopRecommenderResponse;
+
     public StopRecommenderResponse withStopRecommenderResponse(org.openapis.openapi.models.shared.StopRecommenderResponse stopRecommenderResponse) {
         this.stopRecommenderResponse = stopRecommenderResponse;
         return this;
     }
     
+    public StopRecommenderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

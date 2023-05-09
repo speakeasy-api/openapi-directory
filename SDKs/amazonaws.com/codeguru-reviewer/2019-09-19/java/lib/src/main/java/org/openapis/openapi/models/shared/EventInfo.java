@@ -15,6 +15,7 @@ public class EventInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public EventInfo withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class EventInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public EventInfo withState(String state) {
         this.state = state;
         return this;
     }
     
+    public EventInfo(){}
 }

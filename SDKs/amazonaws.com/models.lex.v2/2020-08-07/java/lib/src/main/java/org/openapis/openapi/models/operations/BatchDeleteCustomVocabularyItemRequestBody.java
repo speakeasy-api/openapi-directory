@@ -12,9 +12,13 @@ public class BatchDeleteCustomVocabularyItemRequestBody {
      */
     @JsonProperty("customVocabularyItemList")
     public org.openapis.openapi.models.shared.CustomVocabularyEntryId[] customVocabularyItemList;
+
     public BatchDeleteCustomVocabularyItemRequestBody withCustomVocabularyItemList(org.openapis.openapi.models.shared.CustomVocabularyEntryId[] customVocabularyItemList) {
         this.customVocabularyItemList = customVocabularyItemList;
         return this;
     }
     
+    public BatchDeleteCustomVocabularyItemRequestBody(@JsonProperty("customVocabularyItemList") org.openapis.openapi.models.shared.CustomVocabularyEntryId[] customVocabularyItemList) {
+        this.customVocabularyItemList = customVocabularyItemList;
+  }
 }

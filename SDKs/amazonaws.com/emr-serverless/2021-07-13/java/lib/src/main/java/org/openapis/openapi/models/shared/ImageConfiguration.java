@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImageConfiguration {
     @JsonProperty("imageUri")
     public String imageUri;
+
     public ImageConfiguration withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
@@ -22,9 +23,13 @@ public class ImageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolvedImageDigest")
     public String resolvedImageDigest;
+
     public ImageConfiguration withResolvedImageDigest(String resolvedImageDigest) {
         this.resolvedImageDigest = resolvedImageDigest;
         return this;
     }
     
+    public ImageConfiguration(@JsonProperty("imageUri") String imageUri) {
+        this.imageUri = imageUri;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAnomalyGroupResponse {
@@ -12,6 +13,7 @@ public class GetAnomalyGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAnomalyGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAnomalyGroupResponse {
     
     
     public String contentType;
+
     public GetAnomalyGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAnomalyGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAnomalyGroupResponse getAnomalyGroupResponse;
+
     public GetAnomalyGroupResponse withGetAnomalyGroupResponse(org.openapis.openapi.models.shared.GetAnomalyGroupResponse getAnomalyGroupResponse) {
         this.getAnomalyGroupResponse = getAnomalyGroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAnomalyGroupResponse {
      */
     
     public Object internalServerException;
+
     public GetAnomalyGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetAnomalyGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAnomalyGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetAnomalyGroupResponse {
     
     
     public Integer statusCode;
+
     public GetAnomalyGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetAnomalyGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAnomalyGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetAnomalyGroupResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetAnomalyGroupResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class GetAnomalyGroupResponse {
      */
     
     public Object validationException;
+
     public GetAnomalyGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAnomalyGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

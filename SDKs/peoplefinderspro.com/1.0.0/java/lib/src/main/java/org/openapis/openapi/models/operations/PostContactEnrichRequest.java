@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostContactEnrichRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostContactEnrichRequestBody requestBody;
+
     public PostContactEnrichRequest withRequestBody(PostContactEnrichRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +20,7 @@ public class PostContactEnrichRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=galaxy-ap-name")
     public String galaxyApName;
+
     public PostContactEnrichRequest withGalaxyApName(String galaxyApName) {
         this.galaxyApName = galaxyApName;
         return this;
@@ -29,6 +31,7 @@ public class PostContactEnrichRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=galaxy-ap-password")
     public String galaxyApPassword;
+
     public PostContactEnrichRequest withGalaxyApPassword(String galaxyApPassword) {
         this.galaxyApPassword = galaxyApPassword;
         return this;
@@ -39,9 +42,11 @@ public class PostContactEnrichRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=galaxy-search-type")
     public String galaxySearchType;
+
     public PostContactEnrichRequest withGalaxySearchType(String galaxySearchType) {
         this.galaxySearchType = galaxySearchType;
         return this;
     }
     
+    public PostContactEnrichRequest(){}
 }

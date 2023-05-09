@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDomainResponse {
     
     public String contentType;
+
     public UpdateDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateDomainResponse {
     
     
     public Integer statusCode;
+
     public UpdateDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateDomainResponse {
      */
     
     public Object resourceInUse;
+
     public UpdateDomainResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateDomainResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public UpdateDomainResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDomainResponse {
      */
     
     public Object resourceNotFound;
+
     public UpdateDomainResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -63,9 +70,14 @@ public class UpdateDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDomainResponse updateDomainResponse;
+
     public UpdateDomainResponse withUpdateDomainResponse(org.openapis.openapi.models.shared.UpdateDomainResponse updateDomainResponse) {
         this.updateDomainResponse = updateDomainResponse;
         return this;
     }
     
+    public UpdateDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class RetryBuildBatchOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildBatch")
     public BuildBatch buildBatch;
+
     public RetryBuildBatchOutput withBuildBatch(BuildBatch buildBatch) {
         this.buildBatch = buildBatch;
         return this;
     }
     
+    public RetryBuildBatchOutput(){}
 }

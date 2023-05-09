@@ -59,11 +59,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessbusinessinformationAccountsLocationsCreateResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationAccountsLocationsCreateResponse() {{
+        org.openapis.openapi.models.operations.MybusinessbusinessinformationAccountsLocationsCreateResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationAccountsLocationsCreateResponse(contentType, httpRes.statusCode()) {{
             location = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessbusinessinformationAccountsLocationsListResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationAccountsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.MybusinessbusinessinformationAccountsLocationsListResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationAccountsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

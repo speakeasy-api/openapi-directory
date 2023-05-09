@@ -18,6 +18,7 @@ public class TestCreateTestSeriesTestSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mostRecentActivity")
     public String mostRecentActivity;
+
     public TestCreateTestSeriesTestSeries withMostRecentActivity(String mostRecentActivity) {
         this.mostRecentActivity = mostRecentActivity;
         return this;
@@ -28,6 +29,7 @@ public class TestCreateTestSeriesTestSeries {
      */
     @JsonProperty("name")
     public String name;
+
     public TestCreateTestSeriesTestSeries withName(String name) {
         this.name = name;
         return this;
@@ -38,6 +40,7 @@ public class TestCreateTestSeriesTestSeries {
      */
     @JsonProperty("slug")
     public String slug;
+
     public TestCreateTestSeriesTestSeries withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -49,9 +52,14 @@ public class TestCreateTestSeriesTestSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testRuns")
     public TestCreateTestSeriesTestSeriesTestRunSummary[] testRuns;
+
     public TestCreateTestSeriesTestSeries withTestRuns(TestCreateTestSeriesTestSeriesTestRunSummary[] testRuns) {
         this.testRuns = testRuns;
         return this;
     }
     
+    public TestCreateTestSeriesTestSeries(@JsonProperty("name") String name, @JsonProperty("slug") String slug) {
+        this.name = name;
+        this.slug = slug;
+  }
 }

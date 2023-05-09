@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchPutPropertyValuesResponse {
     @JsonProperty("errorEntries")
     public BatchPutPropertyErrorEntry[] errorEntries;
+
     public BatchPutPropertyValuesResponse withErrorEntries(BatchPutPropertyErrorEntry[] errorEntries) {
         this.errorEntries = errorEntries;
         return this;
     }
     
+    public BatchPutPropertyValuesResponse(@JsonProperty("errorEntries") BatchPutPropertyErrorEntry[] errorEntries) {
+        this.errorEntries = errorEntries;
+  }
 }

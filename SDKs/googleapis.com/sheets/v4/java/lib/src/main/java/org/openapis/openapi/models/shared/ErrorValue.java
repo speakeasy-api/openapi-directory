@@ -18,6 +18,7 @@ public class ErrorValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ErrorValue withMessage(String message) {
         this.message = message;
         return this;
@@ -29,9 +30,11 @@ public class ErrorValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ErrorValueTypeEnum type;
+
     public ErrorValue withType(ErrorValueTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ErrorValue(){}
 }

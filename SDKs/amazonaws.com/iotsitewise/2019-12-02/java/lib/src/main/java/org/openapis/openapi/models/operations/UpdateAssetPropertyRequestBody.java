@@ -15,6 +15,7 @@ public class UpdateAssetPropertyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateAssetPropertyRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class UpdateAssetPropertyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyAlias")
     public String propertyAlias;
+
     public UpdateAssetPropertyRequestBody withPropertyAlias(String propertyAlias) {
         this.propertyAlias = propertyAlias;
         return this;
@@ -37,6 +39,7 @@ public class UpdateAssetPropertyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyNotificationState")
     public UpdateAssetPropertyRequestBodyPropertyNotificationStateEnum propertyNotificationState;
+
     public UpdateAssetPropertyRequestBody withPropertyNotificationState(UpdateAssetPropertyRequestBodyPropertyNotificationStateEnum propertyNotificationState) {
         this.propertyNotificationState = propertyNotificationState;
         return this;
@@ -48,9 +51,11 @@ public class UpdateAssetPropertyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyUnit")
     public String propertyUnit;
+
     public UpdateAssetPropertyRequestBody withPropertyUnit(String propertyUnit) {
         this.propertyUnit = propertyUnit;
         return this;
     }
     
+    public UpdateAssetPropertyRequestBody(){}
 }

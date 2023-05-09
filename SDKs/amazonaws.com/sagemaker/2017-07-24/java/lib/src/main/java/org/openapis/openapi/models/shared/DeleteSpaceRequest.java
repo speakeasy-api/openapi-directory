@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteSpaceRequest {
     @JsonProperty("DomainId")
     public String domainId;
+
     public DeleteSpaceRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -16,9 +17,14 @@ public class DeleteSpaceRequest {
     
     @JsonProperty("SpaceName")
     public String spaceName;
+
     public DeleteSpaceRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public DeleteSpaceRequest(@JsonProperty("DomainId") String domainId, @JsonProperty("SpaceName") String spaceName) {
+        this.domainId = domainId;
+        this.spaceName = spaceName;
+  }
 }

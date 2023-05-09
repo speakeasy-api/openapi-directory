@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AggregationType {
     @JsonProperty("name")
     public AggregationTypeNameEnum name;
+
     public AggregationType withName(AggregationTypeNameEnum name) {
         this.name = name;
         return this;
@@ -22,9 +23,13 @@ public class AggregationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public AggregationType withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public AggregationType(@JsonProperty("name") AggregationTypeNameEnum name) {
+        this.name = name;
+  }
 }

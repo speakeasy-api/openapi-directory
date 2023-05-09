@@ -15,6 +15,7 @@ public class SourceFlowConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectorProfileName")
     public String connectorProfileName;
+
     public SourceFlowConfig withConnectorProfileName(String connectorProfileName) {
         this.connectorProfileName = connectorProfileName;
         return this;
@@ -22,6 +23,7 @@ public class SourceFlowConfig {
     
     @JsonProperty("ConnectorType")
     public SourceConnectorTypeEnum connectorType;
+
     public SourceFlowConfig withConnectorType(SourceConnectorTypeEnum connectorType) {
         this.connectorType = connectorType;
         return this;
@@ -30,6 +32,7 @@ public class SourceFlowConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncrementalPullConfig")
     public IncrementalPullConfig incrementalPullConfig;
+
     public SourceFlowConfig withIncrementalPullConfig(IncrementalPullConfig incrementalPullConfig) {
         this.incrementalPullConfig = incrementalPullConfig;
         return this;
@@ -37,9 +40,14 @@ public class SourceFlowConfig {
     
     @JsonProperty("SourceConnectorProperties")
     public SourceConnectorProperties sourceConnectorProperties;
+
     public SourceFlowConfig withSourceConnectorProperties(SourceConnectorProperties sourceConnectorProperties) {
         this.sourceConnectorProperties = sourceConnectorProperties;
         return this;
     }
     
+    public SourceFlowConfig(@JsonProperty("ConnectorType") SourceConnectorTypeEnum connectorType, @JsonProperty("SourceConnectorProperties") SourceConnectorProperties sourceConnectorProperties) {
+        this.connectorType = connectorType;
+        this.sourceConnectorProperties = sourceConnectorProperties;
+  }
 }

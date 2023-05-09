@@ -12,6 +12,7 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Metric withKey(String key) {
         this.key = key;
         return this;
@@ -20,6 +21,7 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public MetricTypeEnum type;
+
     public Metric withType(MetricTypeEnum type) {
         this.type = type;
         return this;
@@ -28,9 +30,11 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Float value;
+
     public Metric withValue(Float value) {
         this.value = value;
         return this;
     }
     
+    public Metric(){}
 }

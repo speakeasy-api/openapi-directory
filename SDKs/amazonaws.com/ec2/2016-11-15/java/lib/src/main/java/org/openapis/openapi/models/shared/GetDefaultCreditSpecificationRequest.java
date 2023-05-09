@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetDefaultCreditSpecificationRequest {
     
     public Boolean dryRun;
+
     public GetDefaultCreditSpecificationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class GetDefaultCreditSpecificationRequest {
     
     
     public UnlimitedSupportedInstanceFamilyEnum instanceFamily;
+
     public GetDefaultCreditSpecificationRequest withInstanceFamily(UnlimitedSupportedInstanceFamilyEnum instanceFamily) {
         this.instanceFamily = instanceFamily;
         return this;
     }
     
+    public GetDefaultCreditSpecificationRequest(@JsonProperty("InstanceFamily") UnlimitedSupportedInstanceFamilyEnum instanceFamily) {
+        this.instanceFamily = instanceFamily;
+  }
 }

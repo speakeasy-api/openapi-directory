@@ -12,6 +12,7 @@ public class LanguagePairsReportReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_pair")
     public LanguagePairsReportReportLanguagePair languagePair;
+
     public LanguagePairsReportReport withLanguagePair(LanguagePairsReportReportLanguagePair languagePair) {
         this.languagePair = languagePair;
         return this;
@@ -20,6 +21,7 @@ public class LanguagePairsReportReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spending")
     public Float spending;
+
     public LanguagePairsReportReport withSpending(Float spending) {
         this.spending = spending;
         return this;
@@ -28,9 +30,11 @@ public class LanguagePairsReportReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("word_count")
     public Long wordCount;
+
     public LanguagePairsReportReport withWordCount(Long wordCount) {
         this.wordCount = wordCount;
         return this;
     }
     
+    public LanguagePairsReportReport(){}
 }

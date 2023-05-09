@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPluginsResponse {
@@ -12,6 +13,7 @@ public class ListPluginsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPluginsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPluginsResponse {
     
     
     public String contentType;
+
     public ListPluginsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPluginsResponse {
      */
     
     public Object internalServerException;
+
     public ListPluginsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListPluginsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPluginsResponse listPluginsResponse;
+
     public ListPluginsResponse withListPluginsResponse(org.openapis.openapi.models.shared.ListPluginsResponse listPluginsResponse) {
         this.listPluginsResponse = listPluginsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListPluginsResponse {
     
     
     public Integer statusCode;
+
     public ListPluginsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListPluginsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPluginsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListPluginsResponse {
      */
     
     public Object validationException;
+
     public ListPluginsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPluginsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

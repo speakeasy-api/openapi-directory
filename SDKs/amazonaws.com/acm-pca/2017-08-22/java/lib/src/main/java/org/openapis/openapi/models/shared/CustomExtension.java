@@ -15,6 +15,7 @@ public class CustomExtension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Critical")
     public Boolean critical;
+
     public CustomExtension withCritical(Boolean critical) {
         this.critical = critical;
         return this;
@@ -22,6 +23,7 @@ public class CustomExtension {
     
     @JsonProperty("ObjectIdentifier")
     public String objectIdentifier;
+
     public CustomExtension withObjectIdentifier(String objectIdentifier) {
         this.objectIdentifier = objectIdentifier;
         return this;
@@ -29,9 +31,14 @@ public class CustomExtension {
     
     @JsonProperty("Value")
     public String value;
+
     public CustomExtension withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CustomExtension(@JsonProperty("ObjectIdentifier") String objectIdentifier, @JsonProperty("Value") String value) {
+        this.objectIdentifier = objectIdentifier;
+        this.value = value;
+  }
 }

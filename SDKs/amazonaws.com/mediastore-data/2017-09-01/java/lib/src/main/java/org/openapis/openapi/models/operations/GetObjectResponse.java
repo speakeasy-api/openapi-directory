@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetObjectResponse {
@@ -12,6 +13,7 @@ public class GetObjectResponse {
      */
     
     public Object containerNotFoundException;
+
     public GetObjectResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class GetObjectResponse {
     
     
     public String contentType;
+
     public GetObjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.GetObjectResponse getObjectResponse;
+
     public GetObjectResponse withGetObjectResponse(org.openapis.openapi.models.shared.GetObjectResponse getObjectResponse) {
         this.getObjectResponse = getObjectResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetObjectResponse {
      */
     
     public Object internalServerError;
+
     public GetObjectResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetObjectResponse {
      */
     
     public Object objectNotFoundException;
+
     public GetObjectResponse withObjectNotFoundException(Object objectNotFoundException) {
         this.objectNotFoundException = objectNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetObjectResponse {
     
     
     public Integer statusCode;
+
     public GetObjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetObjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetObjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetObjectResponse {
      */
     
     public Object requestedRangeNotSatisfiableException;
+
     public GetObjectResponse withRequestedRangeNotSatisfiableException(Object requestedRangeNotSatisfiableException) {
         this.requestedRangeNotSatisfiableException = requestedRangeNotSatisfiableException;
         return this;
     }
     
+    public GetObjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

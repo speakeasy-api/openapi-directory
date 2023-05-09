@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MrcerResponse {
     
     public String contentType;
+
     public MrcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MrcerResponse {
     
     
     public Integer statusCode;
+
     public MrcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MrcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MrcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class MrcerResponse {
      */
     
     public Mrcer400ApplicationJSON mrcer400ApplicationJSONObject;
+
     public MrcerResponse withMrcer400ApplicationJSONObject(Mrcer400ApplicationJSON mrcer400ApplicationJSONObject) {
         this.mrcer400ApplicationJSONObject = mrcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class MrcerResponse {
      */
     
     public Mrcer401ApplicationJSON mrcer401ApplicationJSONObject;
+
     public MrcerResponse withMrcer401ApplicationJSONObject(Mrcer401ApplicationJSON mrcer401ApplicationJSONObject) {
         this.mrcer401ApplicationJSONObject = mrcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class MrcerResponse {
      */
     
     public Mrcer404ApplicationJSON mrcer404ApplicationJSONObject;
+
     public MrcerResponse withMrcer404ApplicationJSONObject(Mrcer404ApplicationJSON mrcer404ApplicationJSONObject) {
         this.mrcer404ApplicationJSONObject = mrcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class MrcerResponse {
      */
     
     public Mrcer500ApplicationJSON mrcer500ApplicationJSONObject;
+
     public MrcerResponse withMrcer500ApplicationJSONObject(Mrcer500ApplicationJSON mrcer500ApplicationJSONObject) {
         this.mrcer500ApplicationJSONObject = mrcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class MrcerResponse {
      */
     
     public Mrcer502ApplicationJSON mrcer502ApplicationJSONObject;
+
     public MrcerResponse withMrcer502ApplicationJSONObject(Mrcer502ApplicationJSON mrcer502ApplicationJSONObject) {
         this.mrcer502ApplicationJSONObject = mrcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class MrcerResponse {
      */
     
     public Mrcer503ApplicationJSON mrcer503ApplicationJSONObject;
+
     public MrcerResponse withMrcer503ApplicationJSONObject(Mrcer503ApplicationJSON mrcer503ApplicationJSONObject) {
         this.mrcer503ApplicationJSONObject = mrcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class MrcerResponse {
      */
     
     public Mrcer504ApplicationJSON mrcer504ApplicationJSONObject;
+
     public MrcerResponse withMrcer504ApplicationJSONObject(Mrcer504ApplicationJSON mrcer504ApplicationJSONObject) {
         this.mrcer504ApplicationJSONObject = mrcer504ApplicationJSONObject;
         return this;
     }
     
+    public MrcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

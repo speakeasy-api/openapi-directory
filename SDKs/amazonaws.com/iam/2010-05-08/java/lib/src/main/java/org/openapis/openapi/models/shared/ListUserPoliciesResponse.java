@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListUserPoliciesResponse - Contains the response to a successful &lt;a&gt;ListUserPolicies&lt;/a&gt; request. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListUserPoliciesResponse {
     
     public Boolean isTruncated;
+
     public ListUserPoliciesResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -19,6 +20,7 @@ public class ListUserPoliciesResponse {
     
     
     public String marker;
+
     public ListUserPoliciesResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,9 +28,13 @@ public class ListUserPoliciesResponse {
     
     
     public String[] policyNames;
+
     public ListUserPoliciesResponse withPolicyNames(String[] policyNames) {
         this.policyNames = policyNames;
         return this;
     }
     
+    public ListUserPoliciesResponse(@JsonProperty("PolicyNames") String[] policyNames) {
+        this.policyNames = policyNames;
+  }
 }

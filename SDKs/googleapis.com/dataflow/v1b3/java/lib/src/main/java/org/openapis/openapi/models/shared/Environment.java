@@ -18,6 +18,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterManagerApiService")
     public String clusterManagerApiService;
+
     public Environment withClusterManagerApiService(String clusterManagerApiService) {
         this.clusterManagerApiService = clusterManagerApiService;
         return this;
@@ -29,6 +30,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataset")
     public String dataset;
+
     public Environment withDataset(String dataset) {
         this.dataset = dataset;
         return this;
@@ -40,6 +42,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugOptions")
     public DebugOptions debugOptions;
+
     public Environment withDebugOptions(DebugOptions debugOptions) {
         this.debugOptions = debugOptions;
         return this;
@@ -51,6 +54,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experiments")
     public String[] experiments;
+
     public Environment withExperiments(String[] experiments) {
         this.experiments = experiments;
         return this;
@@ -62,6 +66,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flexResourceSchedulingGoal")
     public EnvironmentFlexResourceSchedulingGoalEnum flexResourceSchedulingGoal;
+
     public Environment withFlexResourceSchedulingGoal(EnvironmentFlexResourceSchedulingGoalEnum flexResourceSchedulingGoal) {
         this.flexResourceSchedulingGoal = flexResourceSchedulingGoal;
         return this;
@@ -73,6 +78,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalExperiments")
     public java.util.Map<String, Object> internalExperiments;
+
     public Environment withInternalExperiments(java.util.Map<String, Object> internalExperiments) {
         this.internalExperiments = internalExperiments;
         return this;
@@ -84,6 +90,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkPipelineOptions")
     public java.util.Map<String, Object> sdkPipelineOptions;
+
     public Environment withSDKPipelineOptions(java.util.Map<String, Object> sdkPipelineOptions) {
         this.sdkPipelineOptions = sdkPipelineOptions;
         return this;
@@ -95,6 +102,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountEmail")
     public String serviceAccountEmail;
+
     public Environment withServiceAccountEmail(String serviceAccountEmail) {
         this.serviceAccountEmail = serviceAccountEmail;
         return this;
@@ -106,6 +114,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceKmsKeyName")
     public String serviceKmsKeyName;
+
     public Environment withServiceKmsKeyName(String serviceKmsKeyName) {
         this.serviceKmsKeyName = serviceKmsKeyName;
         return this;
@@ -117,6 +126,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceOptions")
     public String[] serviceOptions;
+
     public Environment withServiceOptions(String[] serviceOptions) {
         this.serviceOptions = serviceOptions;
         return this;
@@ -128,6 +138,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shuffleMode")
     public EnvironmentShuffleModeEnum shuffleMode;
+
     public Environment withShuffleMode(EnvironmentShuffleModeEnum shuffleMode) {
         this.shuffleMode = shuffleMode;
         return this;
@@ -139,6 +150,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tempStoragePrefix")
     public String tempStoragePrefix;
+
     public Environment withTempStoragePrefix(String tempStoragePrefix) {
         this.tempStoragePrefix = tempStoragePrefix;
         return this;
@@ -150,6 +162,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAgent")
     public java.util.Map<String, Object> userAgent;
+
     public Environment withUserAgent(java.util.Map<String, Object> userAgent) {
         this.userAgent = userAgent;
         return this;
@@ -161,6 +174,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public java.util.Map<String, Object> version;
+
     public Environment withVersion(java.util.Map<String, Object> version) {
         this.version = version;
         return this;
@@ -172,6 +186,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerPools")
     public WorkerPool[] workerPools;
+
     public Environment withWorkerPools(WorkerPool[] workerPools) {
         this.workerPools = workerPools;
         return this;
@@ -183,6 +198,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerRegion")
     public String workerRegion;
+
     public Environment withWorkerRegion(String workerRegion) {
         this.workerRegion = workerRegion;
         return this;
@@ -194,9 +210,11 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerZone")
     public String workerZone;
+
     public Environment withWorkerZone(String workerZone) {
         this.workerZone = workerZone;
         return this;
     }
     
+    public Environment(){}
 }

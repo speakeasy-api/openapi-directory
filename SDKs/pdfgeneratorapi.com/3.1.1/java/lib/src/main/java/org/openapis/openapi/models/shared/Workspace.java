@@ -12,6 +12,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Workspace withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,6 +24,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Workspace withId(Long id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public Workspace withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -45,9 +48,11 @@ public class Workspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_master_workspace")
     public Boolean isMasterWorkspace;
+
     public Workspace withIsMasterWorkspace(Boolean isMasterWorkspace) {
         this.isMasterWorkspace = isMasterWorkspace;
         return this;
     }
     
+    public Workspace(){}
 }

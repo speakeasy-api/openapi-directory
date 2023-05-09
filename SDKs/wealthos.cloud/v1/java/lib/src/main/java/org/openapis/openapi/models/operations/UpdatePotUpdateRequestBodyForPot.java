@@ -15,6 +15,7 @@ public class UpdatePotUpdateRequestBodyForPot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custodian_account_reference")
     public String custodianAccountReference;
+
     public UpdatePotUpdateRequestBodyForPot withCustodianAccountReference(String custodianAccountReference) {
         this.custodianAccountReference = custodianAccountReference;
         return this;
@@ -23,6 +24,7 @@ public class UpdatePotUpdateRequestBodyForPot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custodian_client_ref")
     public String custodianClientRef;
+
     public UpdatePotUpdateRequestBodyForPot withCustodianClientRef(String custodianClientRef) {
         this.custodianClientRef = custodianClientRef;
         return this;
@@ -31,6 +33,7 @@ public class UpdatePotUpdateRequestBodyForPot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custodian_id")
     public String custodianId;
+
     public UpdatePotUpdateRequestBodyForPot withCustodianId(String custodianId) {
         this.custodianId = custodianId;
         return this;
@@ -39,6 +42,7 @@ public class UpdatePotUpdateRequestBodyForPot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolio_template_id")
     public String portfolioTemplateId;
+
     public UpdatePotUpdateRequestBodyForPot withPortfolioTemplateId(String portfolioTemplateId) {
         this.portfolioTemplateId = portfolioTemplateId;
         return this;
@@ -47,6 +51,7 @@ public class UpdatePotUpdateRequestBodyForPot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pot_name")
     public String potName;
+
     public UpdatePotUpdateRequestBodyForPot withPotName(String potName) {
         this.potName = potName;
         return this;
@@ -54,6 +59,7 @@ public class UpdatePotUpdateRequestBodyForPot {
     
     @JsonProperty("reference_version")
     public Long referenceVersion;
+
     public UpdatePotUpdateRequestBodyForPot withReferenceVersion(Long referenceVersion) {
         this.referenceVersion = referenceVersion;
         return this;
@@ -62,6 +68,7 @@ public class UpdatePotUpdateRequestBodyForPot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regulator_advisor_id")
     public String regulatorAdvisorId;
+
     public UpdatePotUpdateRequestBodyForPot withRegulatorAdvisorId(String regulatorAdvisorId) {
         this.regulatorAdvisorId = regulatorAdvisorId;
         return this;
@@ -70,9 +77,13 @@ public class UpdatePotUpdateRequestBodyForPot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public UpdatePotUpdateRequestBodyForPotStatusEnum status;
+
     public UpdatePotUpdateRequestBodyForPot withStatus(UpdatePotUpdateRequestBodyForPotStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdatePotUpdateRequestBodyForPot(@JsonProperty("reference_version") Long referenceVersion) {
+        this.referenceVersion = referenceVersion;
+  }
 }

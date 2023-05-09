@@ -25,6 +25,7 @@ public class JobPreparationTaskExecutionInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public JobPreparationTaskExecutionInformation withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -36,6 +37,7 @@ public class JobPreparationTaskExecutionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCode")
     public Integer exitCode;
+
     public JobPreparationTaskExecutionInformation withExitCode(Integer exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -49,6 +51,7 @@ public class JobPreparationTaskExecutionInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastRetryTime")
     public OffsetDateTime lastRetryTime;
+
     public JobPreparationTaskExecutionInformation withLastRetryTime(OffsetDateTime lastRetryTime) {
         this.lastRetryTime = lastRetryTime;
         return this;
@@ -59,6 +62,7 @@ public class JobPreparationTaskExecutionInformation {
      */
     @JsonProperty("retryCount")
     public Integer retryCount;
+
     public JobPreparationTaskExecutionInformation withRetryCount(Integer retryCount) {
         this.retryCount = retryCount;
         return this;
@@ -70,6 +74,7 @@ public class JobPreparationTaskExecutionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingError")
     public TaskSchedulingError schedulingError;
+
     public JobPreparationTaskExecutionInformation withSchedulingError(TaskSchedulingError schedulingError) {
         this.schedulingError = schedulingError;
         return this;
@@ -82,6 +87,7 @@ public class JobPreparationTaskExecutionInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public JobPreparationTaskExecutionInformation withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -92,6 +98,7 @@ public class JobPreparationTaskExecutionInformation {
      */
     @JsonProperty("state")
     public JobPreparationTaskExecutionInformationStateEnum state;
+
     public JobPreparationTaskExecutionInformation withState(JobPreparationTaskExecutionInformationStateEnum state) {
         this.state = state;
         return this;
@@ -103,6 +110,7 @@ public class JobPreparationTaskExecutionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskRootDirectory")
     public String taskRootDirectory;
+
     public JobPreparationTaskExecutionInformation withTaskRootDirectory(String taskRootDirectory) {
         this.taskRootDirectory = taskRootDirectory;
         return this;
@@ -114,9 +122,15 @@ public class JobPreparationTaskExecutionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskRootDirectoryUrl")
     public String taskRootDirectoryUrl;
+
     public JobPreparationTaskExecutionInformation withTaskRootDirectoryUrl(String taskRootDirectoryUrl) {
         this.taskRootDirectoryUrl = taskRootDirectoryUrl;
         return this;
     }
     
+    public JobPreparationTaskExecutionInformation(@JsonProperty("retryCount") Integer retryCount, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("state") JobPreparationTaskExecutionInformationStateEnum state) {
+        this.retryCount = retryCount;
+        this.startTime = startTime;
+        this.state = state;
+  }
 }

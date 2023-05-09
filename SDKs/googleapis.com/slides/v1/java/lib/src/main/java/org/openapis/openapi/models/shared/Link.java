@@ -18,6 +18,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageObjectId")
     public String pageObjectId;
+
     public Link withPageObjectId(String pageObjectId) {
         this.pageObjectId = pageObjectId;
         return this;
@@ -29,6 +30,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativeLink")
     public LinkRelativeLinkEnum relativeLink;
+
     public Link withRelativeLink(LinkRelativeLinkEnum relativeLink) {
         this.relativeLink = relativeLink;
         return this;
@@ -40,6 +42,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slideIndex")
     public Integer slideIndex;
+
     public Link withSlideIndex(Integer slideIndex) {
         this.slideIndex = slideIndex;
         return this;
@@ -51,9 +54,11 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Link withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Link(){}
 }

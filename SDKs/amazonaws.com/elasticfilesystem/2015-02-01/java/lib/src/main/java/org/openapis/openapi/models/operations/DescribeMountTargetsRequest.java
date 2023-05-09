@@ -12,6 +12,7 @@ public class DescribeMountTargetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccessPointId")
     public String accessPointId;
+
     public DescribeMountTargetsRequest withAccessPointId(String accessPointId) {
         this.accessPointId = accessPointId;
         return this;
@@ -22,6 +23,7 @@ public class DescribeMountTargetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FileSystemId")
     public String fileSystemId;
+
     public DescribeMountTargetsRequest withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -32,6 +34,7 @@ public class DescribeMountTargetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public DescribeMountTargetsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -42,6 +45,7 @@ public class DescribeMountTargetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
     public Long maxItems;
+
     public DescribeMountTargetsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -52,6 +56,7 @@ public class DescribeMountTargetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MountTargetId")
     public String mountTargetId;
+
     public DescribeMountTargetsRequest withMountTargetId(String mountTargetId) {
         this.mountTargetId = mountTargetId;
         return this;
@@ -59,6 +64,7 @@ public class DescribeMountTargetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeMountTargetsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -66,6 +72,7 @@ public class DescribeMountTargetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeMountTargetsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -73,6 +80,7 @@ public class DescribeMountTargetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeMountTargetsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -80,6 +88,7 @@ public class DescribeMountTargetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeMountTargetsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -87,6 +96,7 @@ public class DescribeMountTargetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeMountTargetsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -94,6 +104,7 @@ public class DescribeMountTargetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeMountTargetsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -101,9 +112,11 @@ public class DescribeMountTargetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeMountTargetsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public DescribeMountTargetsRequest(){}
 }

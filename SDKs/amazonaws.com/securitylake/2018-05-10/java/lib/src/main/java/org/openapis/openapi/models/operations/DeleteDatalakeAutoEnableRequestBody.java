@@ -12,9 +12,13 @@ public class DeleteDatalakeAutoEnableRequestBody {
      */
     @JsonProperty("removeFromConfigurationForNewAccounts")
     public org.openapis.openapi.models.shared.AutoEnableNewRegionConfiguration[] removeFromConfigurationForNewAccounts;
+
     public DeleteDatalakeAutoEnableRequestBody withRemoveFromConfigurationForNewAccounts(org.openapis.openapi.models.shared.AutoEnableNewRegionConfiguration[] removeFromConfigurationForNewAccounts) {
         this.removeFromConfigurationForNewAccounts = removeFromConfigurationForNewAccounts;
         return this;
     }
     
+    public DeleteDatalakeAutoEnableRequestBody(@JsonProperty("removeFromConfigurationForNewAccounts") org.openapis.openapi.models.shared.AutoEnableNewRegionConfiguration[] removeFromConfigurationForNewAccounts) {
+        this.removeFromConfigurationForNewAccounts = removeFromConfigurationForNewAccounts;
+  }
 }

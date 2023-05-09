@@ -20,6 +20,7 @@ public class LastActiveDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlueprintLocation")
     public String blueprintLocation;
+
     public LastActiveDefinition withBlueprintLocation(String blueprintLocation) {
         this.blueprintLocation = blueprintLocation;
         return this;
@@ -28,6 +29,7 @@ public class LastActiveDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlueprintServiceLocation")
     public String blueprintServiceLocation;
+
     public LastActiveDefinition withBlueprintServiceLocation(String blueprintServiceLocation) {
         this.blueprintServiceLocation = blueprintServiceLocation;
         return this;
@@ -36,6 +38,7 @@ public class LastActiveDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public LastActiveDefinition withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class LastActiveDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedOn")
     public OffsetDateTime lastModifiedOn;
+
     public LastActiveDefinition withLastModifiedOn(OffsetDateTime lastModifiedOn) {
         this.lastModifiedOn = lastModifiedOn;
         return this;
@@ -54,9 +58,11 @@ public class LastActiveDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterSpec")
     public String parameterSpec;
+
     public LastActiveDefinition withParameterSpec(String parameterSpec) {
         this.parameterSpec = parameterSpec;
         return this;
     }
     
+    public LastActiveDefinition(){}
 }

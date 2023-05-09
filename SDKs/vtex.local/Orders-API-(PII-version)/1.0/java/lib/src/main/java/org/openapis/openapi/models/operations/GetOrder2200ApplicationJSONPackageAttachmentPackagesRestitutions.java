@@ -18,9 +18,11 @@ public class GetOrder2200ApplicationJSONPackageAttachmentPackagesRestitutions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund")
     public GetOrder2200ApplicationJSONPackageAttachmentPackagesRestitutionsRefund refund;
+
     public GetOrder2200ApplicationJSONPackageAttachmentPackagesRestitutions withRefund(GetOrder2200ApplicationJSONPackageAttachmentPackagesRestitutionsRefund refund) {
         this.refund = refund;
         return this;
     }
     
+    public GetOrder2200ApplicationJSONPackageAttachmentPackagesRestitutions(){}
 }

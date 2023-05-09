@@ -15,9 +15,11 @@ public class PostCoursesRootContentIdPermissionsUserEmail201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentId")
     public String contentId;
+
     public PostCoursesRootContentIdPermissionsUserEmail201ApplicationJSON withContentId(String contentId) {
         this.contentId = contentId;
         return this;
     }
     
+    public PostCoursesRootContentIdPermissionsUserEmail201ApplicationJSON(){}
 }

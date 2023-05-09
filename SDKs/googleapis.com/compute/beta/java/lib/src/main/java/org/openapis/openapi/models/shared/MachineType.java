@@ -18,6 +18,7 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accelerators")
     public MachineTypeAccelerators[] accelerators;
+
     public MachineType withAccelerators(MachineTypeAccelerators[] accelerators) {
         this.accelerators = accelerators;
         return this;
@@ -26,6 +27,7 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundledLocalSsds")
     public BundledLocalSsds bundledLocalSsds;
+
     public MachineType withBundledLocalSsds(BundledLocalSsds bundledLocalSsds) {
         this.bundledLocalSsds = bundledLocalSsds;
         return this;
@@ -37,6 +39,7 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public MachineType withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -48,6 +51,7 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public DeprecationStatus deprecated;
+
     public MachineType withDeprecated(DeprecationStatus deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -59,6 +63,7 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MachineType withDescription(String description) {
         this.description = description;
         return this;
@@ -70,6 +75,7 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestCpus")
     public Integer guestCpus;
+
     public MachineType withGuestCpus(Integer guestCpus) {
         this.guestCpus = guestCpus;
         return this;
@@ -81,6 +87,7 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public MachineType withId(String id) {
         this.id = id;
         return this;
@@ -92,6 +99,7 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSharedCpu")
     public Boolean isSharedCpu;
+
     public MachineType withIsSharedCpu(Boolean isSharedCpu) {
         this.isSharedCpu = isSharedCpu;
         return this;
@@ -103,6 +111,7 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public MachineType withKind(String kind) {
         this.kind = kind;
         return this;
@@ -114,6 +123,7 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumPersistentDisks")
     public Integer maximumPersistentDisks;
+
     public MachineType withMaximumPersistentDisks(Integer maximumPersistentDisks) {
         this.maximumPersistentDisks = maximumPersistentDisks;
         return this;
@@ -125,6 +135,7 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumPersistentDisksSizeGb")
     public String maximumPersistentDisksSizeGb;
+
     public MachineType withMaximumPersistentDisksSizeGb(String maximumPersistentDisksSizeGb) {
         this.maximumPersistentDisksSizeGb = maximumPersistentDisksSizeGb;
         return this;
@@ -136,6 +147,7 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryMb")
     public Integer memoryMb;
+
     public MachineType withMemoryMb(Integer memoryMb) {
         this.memoryMb = memoryMb;
         return this;
@@ -147,6 +159,7 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MachineType withName(String name) {
         this.name = name;
         return this;
@@ -158,6 +171,7 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public MachineType withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -169,9 +183,11 @@ public class MachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public MachineType withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public MachineType(){}
 }

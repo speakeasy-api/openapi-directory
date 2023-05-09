@@ -34,4 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetUtilityV1HealthHeart
 lib/src/main/java/org/openapis/openapi/models/operations/GetUtilityV1HealthThreadinfoResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ThreadPoolInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/health/README.md
 USAGE.md

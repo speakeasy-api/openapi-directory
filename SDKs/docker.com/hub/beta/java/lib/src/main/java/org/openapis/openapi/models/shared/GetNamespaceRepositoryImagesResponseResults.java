@@ -15,6 +15,7 @@ public class GetNamespaceRepositoryImagesResponseResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public String digest;
+
     public GetNamespaceRepositoryImagesResponseResults withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -26,6 +27,7 @@ public class GetNamespaceRepositoryImagesResponseResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_pulled")
     public String lastPulled;
+
     public GetNamespaceRepositoryImagesResponseResults withLastPulled(String lastPulled) {
         this.lastPulled = lastPulled;
         return this;
@@ -37,6 +39,7 @@ public class GetNamespaceRepositoryImagesResponseResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_pushed")
     public String lastPushed;
+
     public GetNamespaceRepositoryImagesResponseResults withLastPushed(String lastPushed) {
         this.lastPushed = lastPushed;
         return this;
@@ -48,6 +51,7 @@ public class GetNamespaceRepositoryImagesResponseResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public GetNamespaceRepositoryImagesResponseResults withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -59,6 +63,7 @@ public class GetNamespaceRepositoryImagesResponseResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public String repository;
+
     public GetNamespaceRepositoryImagesResponseResults withRepository(String repository) {
         this.repository = repository;
         return this;
@@ -70,6 +75,7 @@ public class GetNamespaceRepositoryImagesResponseResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetNamespaceRepositoryImagesResponseResultsStatusEnum status;
+
     public GetNamespaceRepositoryImagesResponseResults withStatus(GetNamespaceRepositoryImagesResponseResultsStatusEnum status) {
         this.status = status;
         return this;
@@ -81,9 +87,11 @@ public class GetNamespaceRepositoryImagesResponseResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public GetNamespaceRepositoryImagesResponseResultsTags[] tags;
+
     public GetNamespaceRepositoryImagesResponseResults withTags(GetNamespaceRepositoryImagesResponseResultsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetNamespaceRepositoryImagesResponseResults(){}
 }

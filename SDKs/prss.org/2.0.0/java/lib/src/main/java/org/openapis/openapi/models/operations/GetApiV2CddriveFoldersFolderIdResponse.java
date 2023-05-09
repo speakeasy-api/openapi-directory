@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiV2CddriveFoldersFolderIdResponse {
@@ -12,6 +13,7 @@ public class GetApiV2CddriveFoldersFolderIdResponse {
      */
     
     public org.openapis.openapi.models.shared.CDDriveFolder cdDriveFolder;
+
     public GetApiV2CddriveFoldersFolderIdResponse withCDDriveFolder(org.openapis.openapi.models.shared.CDDriveFolder cdDriveFolder) {
         this.cdDriveFolder = cdDriveFolder;
         return this;
@@ -19,6 +21,7 @@ public class GetApiV2CddriveFoldersFolderIdResponse {
     
     
     public String contentType;
+
     public GetApiV2CddriveFoldersFolderIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetApiV2CddriveFoldersFolderIdResponse {
     
     
     public Integer statusCode;
+
     public GetApiV2CddriveFoldersFolderIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetApiV2CddriveFoldersFolderIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiV2CddriveFoldersFolderIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApiV2CddriveFoldersFolderIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

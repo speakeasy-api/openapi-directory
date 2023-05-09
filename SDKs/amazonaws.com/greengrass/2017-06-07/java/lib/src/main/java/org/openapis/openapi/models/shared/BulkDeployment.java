@@ -15,6 +15,7 @@ public class BulkDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BulkDeploymentArn")
     public String bulkDeploymentArn;
+
     public BulkDeployment withBulkDeploymentArn(String bulkDeploymentArn) {
         this.bulkDeploymentArn = bulkDeploymentArn;
         return this;
@@ -23,6 +24,7 @@ public class BulkDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BulkDeploymentId")
     public String bulkDeploymentId;
+
     public BulkDeployment withBulkDeploymentId(String bulkDeploymentId) {
         this.bulkDeploymentId = bulkDeploymentId;
         return this;
@@ -31,9 +33,11 @@ public class BulkDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedAt")
     public String createdAt;
+
     public BulkDeployment withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
     
+    public BulkDeployment(){}
 }

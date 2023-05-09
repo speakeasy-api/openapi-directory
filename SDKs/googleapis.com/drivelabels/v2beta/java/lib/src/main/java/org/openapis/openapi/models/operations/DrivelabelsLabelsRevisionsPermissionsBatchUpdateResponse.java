@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DrivelabelsLabelsRevisionsPermissionsBatchUpdateResponse {
     
     public String contentType;
+
     public DrivelabelsLabelsRevisionsPermissionsBatchUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DrivelabelsLabelsRevisionsPermissionsBatchUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsResponse googleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsResponse;
+
     public DrivelabelsLabelsRevisionsPermissionsBatchUpdateResponse withGoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsResponse(org.openapis.openapi.models.shared.GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsResponse googleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsResponse) {
         this.googleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsResponse = googleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DrivelabelsLabelsRevisionsPermissionsBatchUpdateResponse {
     
     
     public Integer statusCode;
+
     public DrivelabelsLabelsRevisionsPermissionsBatchUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DrivelabelsLabelsRevisionsPermissionsBatchUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DrivelabelsLabelsRevisionsPermissionsBatchUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DrivelabelsLabelsRevisionsPermissionsBatchUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

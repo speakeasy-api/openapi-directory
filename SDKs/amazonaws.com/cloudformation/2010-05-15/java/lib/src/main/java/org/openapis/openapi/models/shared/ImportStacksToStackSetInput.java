@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ImportStacksToStackSetInput {
     
     public CallAsEnum callAs;
+
     public ImportStacksToStackSetInput withCallAs(CallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -16,6 +17,7 @@ public class ImportStacksToStackSetInput {
     
     
     public String operationId;
+
     public ImportStacksToStackSetInput withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -26,6 +28,7 @@ public class ImportStacksToStackSetInput {
      */
     
     public StackSetOperationPreferences operationPreferences;
+
     public ImportStacksToStackSetInput withOperationPreferences(StackSetOperationPreferences operationPreferences) {
         this.operationPreferences = operationPreferences;
         return this;
@@ -33,6 +36,7 @@ public class ImportStacksToStackSetInput {
     
     
     public String[] organizationalUnitIds;
+
     public ImportStacksToStackSetInput withOrganizationalUnitIds(String[] organizationalUnitIds) {
         this.organizationalUnitIds = organizationalUnitIds;
         return this;
@@ -40,6 +44,7 @@ public class ImportStacksToStackSetInput {
     
     
     public String[] stackIds;
+
     public ImportStacksToStackSetInput withStackIds(String[] stackIds) {
         this.stackIds = stackIds;
         return this;
@@ -47,6 +52,7 @@ public class ImportStacksToStackSetInput {
     
     
     public String stackIdsUrl;
+
     public ImportStacksToStackSetInput withStackIdsUrl(String stackIdsUrl) {
         this.stackIdsUrl = stackIdsUrl;
         return this;
@@ -54,9 +60,13 @@ public class ImportStacksToStackSetInput {
     
     
     public String stackSetName;
+
     public ImportStacksToStackSetInput withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
     }
     
+    public ImportStacksToStackSetInput(@JsonProperty("StackSetName") String stackSetName) {
+        this.stackSetName = stackSetName;
+  }
 }

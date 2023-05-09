@@ -13,6 +13,7 @@ public class GetWorkspacesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetWorkspacesRequest withQ(String q) {
         this.q = q;
         return this;
@@ -30,6 +31,7 @@ public class GetWorkspacesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
     public GetWorkspacesRoleEnum role;
+
     public GetWorkspacesRequest withRole(GetWorkspacesRoleEnum role) {
         this.role = role;
         return this;
@@ -43,9 +45,11 @@ public class GetWorkspacesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetWorkspacesRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetWorkspacesRequest(){}
 }

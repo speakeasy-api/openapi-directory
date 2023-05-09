@@ -12,6 +12,7 @@ public class IticrRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public IticrRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,9 +23,14 @@ public class IticrRequestBodyCertificateParameters {
      */
     @JsonProperty("certno")
     public String certno;
+
     public IticrRequestBodyCertificateParameters withCertno(String certno) {
         this.certno = certno;
         return this;
     }
     
+    public IticrRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("certno") String certno) {
+        this.fullName = fullName;
+        this.certno = certno;
+  }
 }

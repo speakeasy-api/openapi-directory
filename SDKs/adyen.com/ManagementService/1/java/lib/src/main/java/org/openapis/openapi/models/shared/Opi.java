@@ -15,6 +15,7 @@ public class Opi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablePayAtTable")
     public Boolean enablePayAtTable;
+
     public Opi withEnablePayAtTable(Boolean enablePayAtTable) {
         this.enablePayAtTable = enablePayAtTable;
         return this;
@@ -26,6 +27,7 @@ public class Opi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payAtTableStoreNumber")
     public String payAtTableStoreNumber;
+
     public Opi withPayAtTableStoreNumber(String payAtTableStoreNumber) {
         this.payAtTableStoreNumber = payAtTableStoreNumber;
         return this;
@@ -37,9 +39,11 @@ public class Opi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payAtTableURL")
     public String payAtTableURL;
+
     public Opi withPayAtTableURL(String payAtTableURL) {
         this.payAtTableURL = payAtTableURL;
         return this;
     }
     
+    public Opi(){}
 }

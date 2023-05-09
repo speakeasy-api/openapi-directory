@@ -67,11 +67,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGlobalRuleResponse res = new org.openapis.openapi.models.operations.CreateGlobalRuleResponse() {{
+        org.openapis.openapi.models.operations.CreateGlobalRuleResponse res = new org.openapis.openapi.models.operations.CreateGlobalRuleResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -119,11 +117,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRoleMappingResponse res = new org.openapis.openapi.models.operations.CreateRoleMappingResponse() {{
+        org.openapis.openapi.models.operations.CreateRoleMappingResponse res = new org.openapis.openapi.models.operations.CreateRoleMappingResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -164,11 +160,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAllGlobalRulesResponse res = new org.openapis.openapi.models.operations.DeleteAllGlobalRulesResponse() {{
+        org.openapis.openapi.models.operations.DeleteAllGlobalRulesResponse res = new org.openapis.openapi.models.operations.DeleteAllGlobalRulesResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -214,11 +208,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGlobalRuleResponse res = new org.openapis.openapi.models.operations.DeleteGlobalRuleResponse() {{
+        org.openapis.openapi.models.operations.DeleteGlobalRuleResponse res = new org.openapis.openapi.models.operations.DeleteGlobalRuleResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -261,11 +253,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRoleMappingResponse res = new org.openapis.openapi.models.operations.DeleteRoleMappingResponse() {{
+        org.openapis.openapi.models.operations.DeleteRoleMappingResponse res = new org.openapis.openapi.models.operations.DeleteRoleMappingResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -308,13 +298,11 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportDataResponse res = new org.openapis.openapi.models.operations.ExportDataResponse() {{
+        org.openapis.openapi.models.operations.ExportDataResponse res = new org.openapis.openapi.models.operations.ExportDataResponse(contentType, httpRes.statusCode()) {{
             downloadRef = null;
             fileContent = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -366,12 +354,10 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConfigPropertyResponse res = new org.openapis.openapi.models.operations.GetConfigPropertyResponse() {{
+        org.openapis.openapi.models.operations.GetConfigPropertyResponse res = new org.openapis.openapi.models.operations.GetConfigPropertyResponse(contentType, httpRes.statusCode()) {{
             configurationProperty = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -420,12 +406,10 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGlobalRuleConfigResponse res = new org.openapis.openapi.models.operations.GetGlobalRuleConfigResponse() {{
+        org.openapis.openapi.models.operations.GetGlobalRuleConfigResponse res = new org.openapis.openapi.models.operations.GetGlobalRuleConfigResponse(contentType, httpRes.statusCode()) {{
             rule = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -467,12 +451,10 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLogConfigurationResponse res = new org.openapis.openapi.models.operations.GetLogConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GetLogConfigurationResponse res = new org.openapis.openapi.models.operations.GetLogConfigurationResponse(contentType, httpRes.statusCode()) {{
             namedLogConfiguration = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -520,12 +502,10 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRoleMappingResponse res = new org.openapis.openapi.models.operations.GetRoleMappingResponse() {{
+        org.openapis.openapi.models.operations.GetRoleMappingResponse res = new org.openapis.openapi.models.operations.GetRoleMappingResponse(contentType, httpRes.statusCode()) {{
             roleMapping = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +560,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportDataResponse res = new org.openapis.openapi.models.operations.ImportDataResponse() {{
+        org.openapis.openapi.models.operations.ImportDataResponse res = new org.openapis.openapi.models.operations.ImportDataResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -625,12 +603,10 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListArtifactTypesResponse res = new org.openapis.openapi.models.operations.ListArtifactTypesResponse() {{
+        org.openapis.openapi.models.operations.ListArtifactTypesResponse res = new org.openapis.openapi.models.operations.ListArtifactTypesResponse(contentType, httpRes.statusCode()) {{
             artifactTypeInfos = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -676,12 +652,10 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListConfigPropertiesResponse res = new org.openapis.openapi.models.operations.ListConfigPropertiesResponse() {{
+        org.openapis.openapi.models.operations.ListConfigPropertiesResponse res = new org.openapis.openapi.models.operations.ListConfigPropertiesResponse(contentType, httpRes.statusCode()) {{
             configurationProperties = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -727,12 +701,10 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGlobalRulesResponse res = new org.openapis.openapi.models.operations.ListGlobalRulesResponse() {{
+        org.openapis.openapi.models.operations.ListGlobalRulesResponse res = new org.openapis.openapi.models.operations.ListGlobalRulesResponse(contentType, httpRes.statusCode()) {{
             ruleTypes = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -774,12 +746,10 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLogConfigurationsResponse res = new org.openapis.openapi.models.operations.ListLogConfigurationsResponse() {{
+        org.openapis.openapi.models.operations.ListLogConfigurationsResponse res = new org.openapis.openapi.models.operations.ListLogConfigurationsResponse(contentType, httpRes.statusCode()) {{
             namedLogConfigurations = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -825,12 +795,10 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRoleMappingsResponse res = new org.openapis.openapi.models.operations.ListRoleMappingsResponse() {{
+        org.openapis.openapi.models.operations.ListRoleMappingsResponse res = new org.openapis.openapi.models.operations.ListRoleMappingsResponse(contentType, httpRes.statusCode()) {{
             roleMappings = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -872,12 +840,10 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveLogConfigurationResponse res = new org.openapis.openapi.models.operations.RemoveLogConfigurationResponse() {{
+        org.openapis.openapi.models.operations.RemoveLogConfigurationResponse res = new org.openapis.openapi.models.operations.RemoveLogConfigurationResponse(contentType, httpRes.statusCode()) {{
             namedLogConfiguration = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -927,11 +893,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResetConfigPropertyResponse res = new org.openapis.openapi.models.operations.ResetConfigPropertyResponse() {{
+        org.openapis.openapi.models.operations.ResetConfigPropertyResponse res = new org.openapis.openapi.models.operations.ResetConfigPropertyResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -973,12 +937,10 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetLogConfigurationResponse res = new org.openapis.openapi.models.operations.SetLogConfigurationResponse() {{
+        org.openapis.openapi.models.operations.SetLogConfigurationResponse res = new org.openapis.openapi.models.operations.SetLogConfigurationResponse(contentType, httpRes.statusCode()) {{
             namedLogConfiguration = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1031,11 +993,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateConfigPropertyResponse res = new org.openapis.openapi.models.operations.UpdateConfigPropertyResponse() {{
+        org.openapis.openapi.models.operations.UpdateConfigPropertyResponse res = new org.openapis.openapi.models.operations.UpdateConfigPropertyResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1084,12 +1044,10 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGlobalRuleConfigResponse res = new org.openapis.openapi.models.operations.UpdateGlobalRuleConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateGlobalRuleConfigResponse res = new org.openapis.openapi.models.operations.UpdateGlobalRuleConfigResponse(contentType, httpRes.statusCode()) {{
             rule = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1142,11 +1100,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRoleMappingResponse res = new org.openapis.openapi.models.operations.UpdateRoleMappingResponse() {{
+        org.openapis.openapi.models.operations.UpdateRoleMappingResponse res = new org.openapis.openapi.models.operations.UpdateRoleMappingResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

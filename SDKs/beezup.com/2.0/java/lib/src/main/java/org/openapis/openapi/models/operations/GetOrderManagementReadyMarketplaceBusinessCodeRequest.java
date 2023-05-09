@@ -12,6 +12,7 @@ public class GetOrderManagementReadyMarketplaceBusinessCodeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String[] acceptLanguage;
+
     public GetOrderManagementReadyMarketplaceBusinessCodeRequest withAcceptLanguage(String[] acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -22,9 +23,11 @@ public class GetOrderManagementReadyMarketplaceBusinessCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=storeIds")
     public String[] storeIds;
+
     public GetOrderManagementReadyMarketplaceBusinessCodeRequest withStoreIds(String[] storeIds) {
         this.storeIds = storeIds;
         return this;
     }
     
+    public GetOrderManagementReadyMarketplaceBusinessCodeRequest(){}
 }

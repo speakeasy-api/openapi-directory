@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostBenefitsDocumentUpload422ApplicationJSON {
     @JsonProperty("errors")
     public org.openapis.openapi.models.shared.ErrorModel[] errors;
+
     public PostBenefitsDocumentUpload422ApplicationJSON withErrors(org.openapis.openapi.models.shared.ErrorModel[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public PostBenefitsDocumentUpload422ApplicationJSON(@JsonProperty("errors") org.openapis.openapi.models.shared.ErrorModel[] errors) {
+        this.errors = errors;
+  }
 }

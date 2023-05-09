@@ -15,9 +15,11 @@ public class CloudWatchEventsExecutionDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("included")
     public Boolean included;
+
     public CloudWatchEventsExecutionDataDetails withIncluded(Boolean included) {
         this.included = included;
         return this;
     }
     
+    public CloudWatchEventsExecutionDataDetails(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeauthorizeConnectionResponse {
@@ -12,6 +13,7 @@ public class DeauthorizeConnectionResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeauthorizeConnectionResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeauthorizeConnectionResponse {
     
     
     public String contentType;
+
     public DeauthorizeConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeauthorizeConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeauthorizeConnectionResponse deauthorizeConnectionResponse;
+
     public DeauthorizeConnectionResponse withDeauthorizeConnectionResponse(org.openapis.openapi.models.shared.DeauthorizeConnectionResponse deauthorizeConnectionResponse) {
         this.deauthorizeConnectionResponse = deauthorizeConnectionResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeauthorizeConnectionResponse {
      */
     
     public Object internalException;
+
     public DeauthorizeConnectionResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -46,6 +51,7 @@ public class DeauthorizeConnectionResponse {
     
     
     public Integer statusCode;
+
     public DeauthorizeConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeauthorizeConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeauthorizeConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeauthorizeConnectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeauthorizeConnectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeauthorizeConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DefaultSearchFieldStatus - The value of the &lt;code&gt;DefaultSearchField&lt;/code&gt; configured for this search domain and its current status.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DefaultSearchFieldStatus {
     
     public String options;
+
     public DefaultSearchFieldStatus withOptions(String options) {
         this.options = options;
         return this;
@@ -22,9 +23,14 @@ public class DefaultSearchFieldStatus {
      */
     
     public OptionStatus status;
+
     public DefaultSearchFieldStatus withStatus(OptionStatus status) {
         this.status = status;
         return this;
     }
     
+    public DefaultSearchFieldStatus(@JsonProperty("Options") String options, @JsonProperty("Status") OptionStatus status) {
+        this.options = options;
+        this.status = status;
+  }
 }

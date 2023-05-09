@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesTimetableRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedules")
     public TflApiPresentationEntitiesSchedule[] schedules;
+
     public TflApiPresentationEntitiesTimetableRoute withSchedules(TflApiPresentationEntitiesSchedule[] schedules) {
         this.schedules = schedules;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesTimetableRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stationIntervals")
     public TflApiPresentationEntitiesStationInterval[] stationIntervals;
+
     public TflApiPresentationEntitiesTimetableRoute withStationIntervals(TflApiPresentationEntitiesStationInterval[] stationIntervals) {
         this.stationIntervals = stationIntervals;
         return this;
     }
     
+    public TflApiPresentationEntitiesTimetableRoute(){}
 }

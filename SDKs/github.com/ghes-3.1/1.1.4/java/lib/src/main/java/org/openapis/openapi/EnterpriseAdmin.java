@@ -158,11 +158,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminAddAuthorizedSshKeyResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminAddAuthorizedSshKeyResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminAddAuthorizedSshKeyResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminAddAuthorizedSshKeyResponse(contentType, httpRes.statusCode()) {{
             sshKeys = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -200,10 +198,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -237,10 +233,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminAddSelfHostedRunnerToGroupForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminAddSelfHostedRunnerToGroupForEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminAddSelfHostedRunnerToGroupForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminAddSelfHostedRunnerToGroupForEnterpriseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -311,10 +305,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminCreateEnterpriseServerLicenseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateEnterpriseServerLicenseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminCreateEnterpriseServerLicenseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateEnterpriseServerLicenseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -357,11 +349,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminCreateGlobalWebhookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateGlobalWebhookResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminCreateGlobalWebhookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateGlobalWebhookResponse(contentType, httpRes.statusCode()) {{
             globalHook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -401,11 +391,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminCreateImpersonationOAuthTokenResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateImpersonationOAuthTokenResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminCreateImpersonationOAuthTokenResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateImpersonationOAuthTokenResponse(contentType, httpRes.statusCode()) {{
             authorization = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {
@@ -445,11 +433,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminCreateOrgResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateOrgResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminCreateOrgResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateOrgResponse(contentType, httpRes.statusCode()) {{
             organizationSimple = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -489,11 +475,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveEnvironmentResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveEnvironmentResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveEnvironmentResponse(contentType, httpRes.statusCode()) {{
             preReceiveEnvironment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -533,11 +517,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveHookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveHookResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveHookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveHookResponse(contentType, httpRes.statusCode()) {{
             preReceiveHook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -583,11 +565,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminCreateRegistrationTokenForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateRegistrationTokenForEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminCreateRegistrationTokenForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateRegistrationTokenForEnterpriseResponse(contentType, httpRes.statusCode()) {{
             authenticationToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -634,11 +614,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminCreateRemoveTokenForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateRemoveTokenForEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminCreateRemoveTokenForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateRemoveTokenForEnterpriseResponse(contentType, httpRes.statusCode()) {{
             authenticationToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -681,11 +659,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseResponse(contentType, httpRes.statusCode()) {{
             runnerGroupsEnterprise = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -730,11 +706,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminCreateUserResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateUserResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminCreateUserResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminCreateUserResponse(contentType, httpRes.statusCode()) {{
             simpleUser = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -769,10 +743,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminDeleteGlobalWebhookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeleteGlobalWebhookResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminDeleteGlobalWebhookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeleteGlobalWebhookResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -802,10 +774,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminDeleteImpersonationOAuthTokenResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeleteImpersonationOAuthTokenResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminDeleteImpersonationOAuthTokenResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeleteImpersonationOAuthTokenResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -836,10 +806,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminDeletePersonalAccessTokenResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeletePersonalAccessTokenResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminDeletePersonalAccessTokenResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeletePersonalAccessTokenResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -876,11 +844,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveEnvironmentResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveEnvironmentResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveEnvironmentResponse(contentType, httpRes.statusCode()) {{
             enterpriseAdminDeletePreReceiveEnvironment422ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -917,10 +883,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveHookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveHookResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveHookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveHookResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -950,10 +914,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminDeletePublicKeyResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeletePublicKeyResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminDeletePublicKeyResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeletePublicKeyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -986,10 +948,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1022,10 +982,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1058,10 +1016,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminDeleteUserResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeleteUserResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminDeleteUserResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDeleteUserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1092,10 +1048,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminDemoteSiteAdministratorResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDemoteSiteAdministratorResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminDemoteSiteAdministratorResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDemoteSiteAdministratorResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1128,10 +1082,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminDisableSelectedOrganizationGithubActionsEnterpriseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1184,11 +1136,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminEnableOrDisableMaintenanceModeResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminEnableOrDisableMaintenanceModeResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminEnableOrDisableMaintenanceModeResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminEnableOrDisableMaintenanceModeResponse(contentType, httpRes.statusCode()) {{
             maintenanceStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1226,10 +1176,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1273,11 +1221,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetAllAuthorizedSshKeysResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetAllAuthorizedSshKeysResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetAllAuthorizedSshKeysResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetAllAuthorizedSshKeysResponse(contentType, httpRes.statusCode()) {{
             sshKeys = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1311,11 +1257,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetAllStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetAllStatsResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetAllStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetAllStatsResponse(contentType, httpRes.statusCode()) {{
             enterpriseOverview = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1353,11 +1297,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetAllowedActionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetAllowedActionsEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetAllowedActionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetAllowedActionsEnterpriseResponse(contentType, httpRes.statusCode()) {{
             selectedActions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1391,11 +1333,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetAnnouncementResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetAnnouncementResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetAnnouncementResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetAnnouncementResponse(contentType, httpRes.statusCode()) {{
             announcement = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1429,11 +1369,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetCommentStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetCommentStatsResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetCommentStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetCommentStatsResponse(contentType, httpRes.statusCode()) {{
             enterpriseCommentOverview = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1506,11 +1444,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetConfigurationStatusResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetConfigurationStatusResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetConfigurationStatusResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetConfigurationStatusResponse(contentType, httpRes.statusCode()) {{
             configurationStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1546,11 +1482,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse(contentType, httpRes.statusCode()) {{
             preReceiveEnvironmentDownloadStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1584,11 +1518,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetGistStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetGistStatsResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetGistStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetGistStatsResponse(contentType, httpRes.statusCode()) {{
             enterpriseGistOverview = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1626,11 +1558,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse(contentType, httpRes.statusCode()) {{
             actionsEnterprisePermissions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1673,11 +1603,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetGlobalWebhookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetGlobalWebhookResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetGlobalWebhookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetGlobalWebhookResponse(contentType, httpRes.statusCode()) {{
             globalHook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1711,11 +1639,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetHooksStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetHooksStatsResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetHooksStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetHooksStatsResponse(contentType, httpRes.statusCode()) {{
             enterpriseHookOverview = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1749,11 +1675,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetIssueStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetIssueStatsResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetIssueStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetIssueStatsResponse(contentType, httpRes.statusCode()) {{
             enterpriseIssueOverview = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1787,11 +1711,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetLicenseInformationResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetLicenseInformationResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetLicenseInformationResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetLicenseInformationResponse(contentType, httpRes.statusCode()) {{
             licenseInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1842,11 +1764,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetMaintenanceStatusResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetMaintenanceStatusResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetMaintenanceStatusResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetMaintenanceStatusResponse(contentType, httpRes.statusCode()) {{
             maintenanceStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1880,11 +1800,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetMilestoneStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetMilestoneStatsResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetMilestoneStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetMilestoneStatsResponse(contentType, httpRes.statusCode()) {{
             enterpriseMilestoneOverview = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1918,11 +1836,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetOrgStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetOrgStatsResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetOrgStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetOrgStatsResponse(contentType, httpRes.statusCode()) {{
             enterpriseOrganizationOverview = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1956,11 +1872,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetPagesStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetPagesStatsResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetPagesStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetPagesStatsResponse(contentType, httpRes.statusCode()) {{
             enterprisePageOverview = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1995,11 +1909,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveEnvironmentResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveEnvironmentResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveEnvironmentResponse(contentType, httpRes.statusCode()) {{
             preReceiveEnvironment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2034,11 +1946,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookResponse(contentType, httpRes.statusCode()) {{
             preReceiveHook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2073,11 +1983,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForOrgResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForOrgResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForOrgResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForOrgResponse(contentType, httpRes.statusCode()) {{
             orgPreReceiveHook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2112,11 +2020,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForRepoResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForRepoResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForRepoResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForRepoResponse(contentType, httpRes.statusCode()) {{
             repositoryPreReceiveHook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2150,11 +2056,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetPullRequestStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetPullRequestStatsResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetPullRequestStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetPullRequestStatsResponse(contentType, httpRes.statusCode()) {{
             enterprisePullRequestOverview = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2188,11 +2092,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetRepoStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetRepoStatsResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetRepoStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetRepoStatsResponse(contentType, httpRes.statusCode()) {{
             enterpriseRepositoryOverview = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2230,11 +2132,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerForEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerForEnterpriseResponse(contentType, httpRes.statusCode()) {{
             runner = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2272,11 +2172,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerGroupForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerGroupForEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerGroupForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerGroupForEnterpriseResponse(contentType, httpRes.statusCode()) {{
             runnerGroupsEnterprise = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2331,11 +2229,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetSettingsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetSettingsResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetSettingsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetSettingsResponse(contentType, httpRes.statusCode()) {{
             enterpriseSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2369,11 +2265,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminGetUserStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetUserStatsResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminGetUserStatsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminGetUserStatsResponse(contentType, httpRes.statusCode()) {{
             enterpriseUserOverview = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2414,11 +2308,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminListGlobalWebhooksResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListGlobalWebhooksResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminListGlobalWebhooksResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListGlobalWebhooksResponse(contentType, httpRes.statusCode()) {{
             globalHooks = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2464,11 +2356,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse(contentType, httpRes.statusCode()) {{
             enterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2510,11 +2400,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminListPersonalAccessTokensResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListPersonalAccessTokensResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminListPersonalAccessTokensResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListPersonalAccessTokensResponse(contentType, httpRes.statusCode()) {{
             authorizations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2557,11 +2445,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveEnvironmentsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveEnvironmentsResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveEnvironmentsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveEnvironmentsResponse(contentType, httpRes.statusCode()) {{
             preReceiveEnvironments = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2602,11 +2488,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksResponse(contentType, httpRes.statusCode()) {{
             preReceiveHooks = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2648,11 +2532,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForOrgResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForOrgResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForOrgResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForOrgResponse(contentType, httpRes.statusCode()) {{
             orgPreReceiveHooks = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2694,11 +2576,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForRepoResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForRepoResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForRepoResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForRepoResponse(contentType, httpRes.statusCode()) {{
             repositoryPreReceiveHooks = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2739,11 +2619,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminListPublicKeysResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListPublicKeysResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminListPublicKeysResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListPublicKeysResponse(contentType, httpRes.statusCode()) {{
             publicKeyFulls = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2783,11 +2661,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminListRunnerApplicationsForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListRunnerApplicationsForEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminListRunnerApplicationsForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListRunnerApplicationsForEnterpriseResponse(contentType, httpRes.statusCode()) {{
             runnerApplications = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2831,11 +2707,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterpriseResponse(contentType, httpRes.statusCode()) {{
             enterpriseAdminListSelectedOrganizationsEnabledGithubActionsEnterprise200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2879,11 +2753,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse(contentType, httpRes.statusCode()) {{
             enterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2927,11 +2799,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse(contentType, httpRes.statusCode()) {{
             enterpriseAdminListSelfHostedRunnersForEnterprise200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2977,11 +2847,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseResponse(contentType, httpRes.statusCode()) {{
             enterpriseAdminListSelfHostedRunnersInGroupForEnterprise200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3019,10 +2887,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminPingGlobalWebhookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminPingGlobalWebhookResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminPingGlobalWebhookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminPingGlobalWebhookResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -3053,10 +2919,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminPromoteUserToBeSiteAdministratorResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminPromoteUserToBeSiteAdministratorResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminPromoteUserToBeSiteAdministratorResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminPromoteUserToBeSiteAdministratorResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -3085,10 +2949,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminRemoveAnnouncementResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminRemoveAnnouncementResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminRemoveAnnouncementResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminRemoveAnnouncementResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -3141,11 +3003,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminRemoveAuthorizedSshKeyResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminRemoveAuthorizedSshKeyResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminRemoveAuthorizedSshKeyResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminRemoveAuthorizedSshKeyResponse(contentType, httpRes.statusCode()) {{
             sshKeys = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3183,10 +3043,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -3217,11 +3075,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForOrgResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForOrgResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForOrgResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForOrgResponse(contentType, httpRes.statusCode()) {{
             orgPreReceiveHook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3259,11 +3115,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForRepoResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForRepoResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForRepoResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForRepoResponse(contentType, httpRes.statusCode()) {{
             repositoryPreReceiveHook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3301,10 +3155,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -3342,10 +3194,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminSetAllowedActionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSetAllowedActionsEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminSetAllowedActionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSetAllowedActionsEnterpriseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -3380,11 +3230,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminSetAnnouncementResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSetAnnouncementResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminSetAnnouncementResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSetAnnouncementResponse(contentType, httpRes.statusCode()) {{
             announcement = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3427,10 +3275,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminSetGithubActionsPermissionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSetGithubActionsPermissionsEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminSetGithubActionsPermissionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSetGithubActionsPermissionsEnterpriseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -3468,10 +3314,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -3509,10 +3353,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -3550,10 +3392,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -3616,10 +3456,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminSetSettingsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSetSettingsResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminSetSettingsResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSetSettingsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -3665,10 +3503,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminStartConfigurationProcessResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminStartConfigurationProcessResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminStartConfigurationProcessResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminStartConfigurationProcessResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -3706,12 +3542,10 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse(contentType, httpRes.statusCode()) {{
             preReceiveEnvironmentDownloadStatus = null;
             enterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -3760,10 +3594,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminSuspendUserResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSuspendUserResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminSuspendUserResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSuspendUserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -3794,11 +3626,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForTeamResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForTeamResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForTeamResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForTeamResponse(contentType, httpRes.statusCode()) {{
             enterpriseAdminSyncLdapMappingForTeam201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -3834,11 +3664,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForUserResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForUserResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForUserResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForUserResponse(contentType, httpRes.statusCode()) {{
             enterpriseAdminSyncLdapMappingForUser201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -3876,10 +3704,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminUnsuspendUserResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUnsuspendUserResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminUnsuspendUserResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUnsuspendUserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -3920,11 +3746,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminUpdateGlobalWebhookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdateGlobalWebhookResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminUpdateGlobalWebhookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdateGlobalWebhookResponse(contentType, httpRes.statusCode()) {{
             globalHook2 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3967,11 +3791,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForTeamResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForTeamResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForTeamResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForTeamResponse(contentType, httpRes.statusCode()) {{
             ldapMappingTeam = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4011,11 +3833,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForUserResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForUserResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForUserResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForUserResponse(contentType, httpRes.statusCode()) {{
             ldapMappingUser = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4055,11 +3875,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminUpdateOrgNameResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdateOrgNameResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminUpdateOrgNameResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdateOrgNameResponse(contentType, httpRes.statusCode()) {{
             enterpriseAdminUpdateOrgName202ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -4097,12 +3915,10 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveEnvironmentResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveEnvironmentResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveEnvironmentResponse(contentType, httpRes.statusCode()) {{
             preReceiveEnvironment = null;
             enterpriseAdminUpdatePreReceiveEnvironment422ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4146,11 +3962,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookResponse(contentType, httpRes.statusCode()) {{
             preReceiveHook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4188,11 +4002,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse(contentType, httpRes.statusCode()) {{
             orgPreReceiveHook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4230,11 +4042,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoResponse(contentType, httpRes.statusCode()) {{
             repositoryPreReceiveHook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4274,11 +4084,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseResponse(contentType, httpRes.statusCode()) {{
             runnerGroupsEnterprise = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4318,11 +4126,9 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminUpdateUsernameForUserResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdateUsernameForUserResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminUpdateUsernameForUserResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpdateUsernameForUserResponse(contentType, httpRes.statusCode()) {{
             enterpriseAdminUpdateUsernameForUser202ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -4381,10 +4187,8 @@ public class EnterpriseAdmin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnterpriseAdminUpgradeLicenseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpgradeLicenseResponse() {{
+        org.openapis.openapi.models.operations.EnterpriseAdminUpgradeLicenseResponse res = new org.openapis.openapi.models.operations.EnterpriseAdminUpgradeLicenseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

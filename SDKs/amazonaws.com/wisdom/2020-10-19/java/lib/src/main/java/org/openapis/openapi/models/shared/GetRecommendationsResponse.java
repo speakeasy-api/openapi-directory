@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetRecommendationsResponse {
     @JsonProperty("recommendations")
     public RecommendationData[] recommendations;
+
     public GetRecommendationsResponse withRecommendations(RecommendationData[] recommendations) {
         this.recommendations = recommendations;
         return this;
@@ -22,9 +23,13 @@ public class GetRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggers")
     public RecommendationTrigger[] triggers;
+
     public GetRecommendationsResponse withTriggers(RecommendationTrigger[] triggers) {
         this.triggers = triggers;
         return this;
     }
     
+    public GetRecommendationsResponse(@JsonProperty("recommendations") RecommendationData[] recommendations) {
+        this.recommendations = recommendations;
+  }
 }

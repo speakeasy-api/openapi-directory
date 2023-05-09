@@ -12,6 +12,7 @@ public class ListArchivesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSourceArn")
     public String eventSourceArn;
+
     public ListArchivesRequest withEventSourceArn(String eventSourceArn) {
         this.eventSourceArn = eventSourceArn;
         return this;
@@ -20,6 +21,7 @@ public class ListArchivesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListArchivesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,6 +30,7 @@ public class ListArchivesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NamePrefix")
     public String namePrefix;
+
     public ListArchivesRequest withNamePrefix(String namePrefix) {
         this.namePrefix = namePrefix;
         return this;
@@ -36,6 +39,7 @@ public class ListArchivesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListArchivesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +48,11 @@ public class ListArchivesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ArchiveStateEnum state;
+
     public ListArchivesRequest withState(ArchiveStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ListArchivesRequest(){}
 }

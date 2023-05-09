@@ -18,6 +18,7 @@ public class LunRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Integer quantity;
+
     public LunRange withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -29,9 +30,11 @@ public class LunRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeGb")
     public Integer sizeGb;
+
     public LunRange withSizeGb(Integer sizeGb) {
         this.sizeGb = sizeGb;
         return this;
     }
     
+    public LunRange(){}
 }

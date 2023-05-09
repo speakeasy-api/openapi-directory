@@ -18,6 +18,7 @@ public class ChoiceImprovementPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChoiceId")
     public String choiceId;
+
     public ChoiceImprovementPlan withChoiceId(String choiceId) {
         this.choiceId = choiceId;
         return this;
@@ -26,20 +27,23 @@ public class ChoiceImprovementPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayText")
     public String displayText;
+
     public ChoiceImprovementPlan withDisplayText(String displayText) {
         this.displayText = displayText;
         return this;
     }
     
     /**
-     * &lt;p&gt;The improvement plan URL for a question.&lt;/p&gt; &lt;p&gt;This value is only available if the question has been answered.&lt;/p&gt;
+     * &lt;p&gt;The improvement plan URL for a question in an Amazon Web Services official lenses.&lt;/p&gt; &lt;p&gt;This value is only available if the question has been answered.&lt;/p&gt; &lt;p&gt;This value does not apply to custom lenses.&lt;/p&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImprovementPlanUrl")
     public String improvementPlanUrl;
+
     public ChoiceImprovementPlan withImprovementPlanUrl(String improvementPlanUrl) {
         this.improvementPlanUrl = improvementPlanUrl;
         return this;
     }
     
+    public ChoiceImprovementPlan(){}
 }

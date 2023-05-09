@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionByIDSecurity;
 import org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionByIDRequest;
 import org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionByIDResponse;
+import org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionByIDSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,31 +26,30 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ExtensionCtrlGetAccountExtensionByIDRequest req = new ExtensionCtrlGetAccountExtensionByIDRequest() {{
-                accountId = "corrupti";
-                extensionNumber = 5928.45;
-            }}            
+            ExtensionCtrlGetAccountExtensionByIDRequest req = new ExtensionCtrlGetAccountExtensionByIDRequest("corrupti", 5928.45);            
 
-            ExtensionCtrlGetAccountExtensionByIDResponse res = sdk.extensionCtrlGetAccountExtensionByID(req, new ExtensionCtrlGetAccountExtensionByIDSecurity() {{
+            ExtensionCtrlGetAccountExtensionByIDResponse res = sdk.extensionCtrlGetAccountExtensionByID(req, new ExtensionCtrlGetAccountExtensionByIDSecurity("distinctio") {{
                 bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
             }});
 
-            if (res.endUserRouteHalResponse.isPresent()) {
+            if (res.endUserRouteHalResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `extensionCtrlGetAccountExtensionByID` - Get extension data by account ID and extension number
-* `extensionCtrlGetAccountExtensions` - Get account extensions data by account ID
+* [extensionCtrlGetAccountExtensionByID](docs/sdk/README.md#extensionctrlgetaccountextensionbyid) - Get extension data by account ID and extension number
+* [extensionCtrlGetAccountExtensions](docs/sdk/README.md#extensionctrlgetaccountextensions) - Get account extensions data by account ID
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -53,11 +53,9 @@ public class MX1ManyNATRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkOneToManyNatRulesResponse res = new org.openapis.openapi.models.operations.GetNetworkOneToManyNatRulesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkOneToManyNatRulesResponse res = new org.openapis.openapi.models.operations.GetNetworkOneToManyNatRulesResponse(contentType, httpRes.statusCode()) {{
             getNetworkOneToManyNatRules200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class MX1ManyNATRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkOneToManyNatRulesResponse res = new org.openapis.openapi.models.operations.UpdateNetworkOneToManyNatRulesResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkOneToManyNatRulesResponse res = new org.openapis.openapi.models.operations.UpdateNetworkOneToManyNatRulesResponse(contentType, httpRes.statusCode()) {{
             updateNetworkOneToManyNatRules200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

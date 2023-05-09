@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameSecurity;
 import org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameRequest;
 import org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameResponse;
+import org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,42 +26,42 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteSettingsOrganizationsOrganizationNameRequest req = new DeleteSettingsOrganizationsOrganizationNameRequest() {{
-                organizationName = "corrupti";
-            }}            
+            DeleteSettingsOrganizationsOrganizationNameRequest req = new DeleteSettingsOrganizationsOrganizationNameRequest("corrupti");            
 
-            DeleteSettingsOrganizationsOrganizationNameResponse res = sdk.deleteSettingsOrganizationsOrganizationName(req, new DeleteSettingsOrganizationsOrganizationNameSecurity() {{
+            DeleteSettingsOrganizationsOrganizationNameResponse res = sdk.deleteSettingsOrganizationsOrganizationName(req, new DeleteSettingsOrganizationsOrganizationNameSecurity("provident") {{
                 oAuth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.organization.isPresent()) {
+            if (res.organization != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `deleteSettingsOrganizationsOrganizationName` - Delete an organization (and the associated receivers and senders)
-* `deleteSettingsOrganizationsOrganizationNameReceiversReceiverName` - Delete a receiver
-* `deleteSettingsOrganizationsOrganizationNameSendersSenderName` - Delete a sender
-* `getSettingsOrganizations` - The settings for all organizations of the system. Must have admin access.
-* `getSettingsOrganizationsOrganizationName` - A single organization settings
-* `getSettingsOrganizationsOrganizationNameReceivers` - A list of receivers and their current settings
-* `getSettingsOrganizationsOrganizationNameReceiversReceiverName` - The settings of a single of receiver
-* `getSettingsOrganizationsOrganizationNameSenders` - A list of senders
-* `getSettingsOrganizationsOrganizationNameSendersSenderName` - The settings of a single of sender
-* `headSettingsOrganizations` - Retrived the last modified for all settings of the system. Must have admin access.
-* `postReports` - Post a report to the data hub
-* `putSettingsOrganizationsOrganizationName` - Create or update the direct settings associated with an organization
-* `putSettingsOrganizationsOrganizationNameReceiversReceiverName` - Update a single reciever
-* `putSettingsOrganizationsOrganizationNameSendersSenderName` - Update a single sender
+* [deleteSettingsOrganizationsOrganizationName](docs/sdk/README.md#deletesettingsorganizationsorganizationname) - Delete an organization (and the associated receivers and senders)
+* [deleteSettingsOrganizationsOrganizationNameReceiversReceiverName](docs/sdk/README.md#deletesettingsorganizationsorganizationnamereceiversreceivername) - Delete a receiver
+* [deleteSettingsOrganizationsOrganizationNameSendersSenderName](docs/sdk/README.md#deletesettingsorganizationsorganizationnamesenderssendername) - Delete a sender
+* [getSettingsOrganizations](docs/sdk/README.md#getsettingsorganizations) - The settings for all organizations of the system. Must have admin access.
+* [getSettingsOrganizationsOrganizationName](docs/sdk/README.md#getsettingsorganizationsorganizationname) - A single organization settings
+* [getSettingsOrganizationsOrganizationNameReceivers](docs/sdk/README.md#getsettingsorganizationsorganizationnamereceivers) - A list of receivers and their current settings
+* [getSettingsOrganizationsOrganizationNameReceiversReceiverName](docs/sdk/README.md#getsettingsorganizationsorganizationnamereceiversreceivername) - The settings of a single of receiver
+* [getSettingsOrganizationsOrganizationNameSenders](docs/sdk/README.md#getsettingsorganizationsorganizationnamesenders) - A list of senders
+* [getSettingsOrganizationsOrganizationNameSendersSenderName](docs/sdk/README.md#getsettingsorganizationsorganizationnamesenderssendername) - The settings of a single of sender
+* [headSettingsOrganizations](docs/sdk/README.md#headsettingsorganizations) - Retrived the last modified for all settings of the system. Must have admin access.
+* [postReports](docs/sdk/README.md#postreports) - Post a report to the data hub
+* [putSettingsOrganizationsOrganizationName](docs/sdk/README.md#putsettingsorganizationsorganizationname) - Create or update the direct settings associated with an organization
+* [putSettingsOrganizationsOrganizationNameReceiversReceiverName](docs/sdk/README.md#putsettingsorganizationsorganizationnamereceiversreceivername) - Update a single reciever
+* [putSettingsOrganizationsOrganizationNameSendersSenderName](docs/sdk/README.md#putsettingsorganizationsorganizationnamesenderssendername) - Update a single sender
 <!-- End SDK Available Operations -->
 
 ### Maturity

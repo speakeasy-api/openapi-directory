@@ -14,6 +14,7 @@ public class UpdateIdentityProviderConfigurationRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public UpdateIdentityProviderConfigurationRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -25,6 +26,7 @@ public class UpdateIdentityProviderConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityProviderSamlMetadata")
     public String identityProviderSamlMetadata;
+
     public UpdateIdentityProviderConfigurationRequestBody withIdentityProviderSamlMetadata(String identityProviderSamlMetadata) {
         this.identityProviderSamlMetadata = identityProviderSamlMetadata;
         return this;
@@ -35,9 +37,14 @@ public class UpdateIdentityProviderConfigurationRequestBody {
      */
     @JsonProperty("IdentityProviderType")
     public UpdateIdentityProviderConfigurationRequestBodyIdentityProviderTypeEnum identityProviderType;
+
     public UpdateIdentityProviderConfigurationRequestBody withIdentityProviderType(UpdateIdentityProviderConfigurationRequestBodyIdentityProviderTypeEnum identityProviderType) {
         this.identityProviderType = identityProviderType;
         return this;
     }
     
+    public UpdateIdentityProviderConfigurationRequestBody(@JsonProperty("FleetArn") String fleetArn, @JsonProperty("IdentityProviderType") UpdateIdentityProviderConfigurationRequestBodyIdentityProviderTypeEnum identityProviderType) {
+        this.fleetArn = fleetArn;
+        this.identityProviderType = identityProviderType;
+  }
 }

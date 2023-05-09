@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SecerResponse {
     
     public String contentType;
+
     public SecerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SecerResponse {
     
     
     public Integer statusCode;
+
     public SecerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SecerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SecerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SecerResponse {
      */
     
     public Secer400ApplicationJSON secer400ApplicationJSONObject;
+
     public SecerResponse withSecer400ApplicationJSONObject(Secer400ApplicationJSON secer400ApplicationJSONObject) {
         this.secer400ApplicationJSONObject = secer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SecerResponse {
      */
     
     public Secer401ApplicationJSON secer401ApplicationJSONObject;
+
     public SecerResponse withSecer401ApplicationJSONObject(Secer401ApplicationJSON secer401ApplicationJSONObject) {
         this.secer401ApplicationJSONObject = secer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SecerResponse {
      */
     
     public Secer404ApplicationJSON secer404ApplicationJSONObject;
+
     public SecerResponse withSecer404ApplicationJSONObject(Secer404ApplicationJSON secer404ApplicationJSONObject) {
         this.secer404ApplicationJSONObject = secer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class SecerResponse {
      */
     
     public Secer500ApplicationJSON secer500ApplicationJSONObject;
+
     public SecerResponse withSecer500ApplicationJSONObject(Secer500ApplicationJSON secer500ApplicationJSONObject) {
         this.secer500ApplicationJSONObject = secer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class SecerResponse {
      */
     
     public Secer502ApplicationJSON secer502ApplicationJSONObject;
+
     public SecerResponse withSecer502ApplicationJSONObject(Secer502ApplicationJSON secer502ApplicationJSONObject) {
         this.secer502ApplicationJSONObject = secer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class SecerResponse {
      */
     
     public Secer503ApplicationJSON secer503ApplicationJSONObject;
+
     public SecerResponse withSecer503ApplicationJSONObject(Secer503ApplicationJSON secer503ApplicationJSONObject) {
         this.secer503ApplicationJSONObject = secer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class SecerResponse {
      */
     
     public Secer504ApplicationJSON secer504ApplicationJSONObject;
+
     public SecerResponse withSecer504ApplicationJSONObject(Secer504ApplicationJSON secer504ApplicationJSONObject) {
         this.secer504ApplicationJSONObject = secer504ApplicationJSONObject;
         return this;
     }
     
+    public SecerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFindingsFiltersResponse {
@@ -12,6 +13,7 @@ public class ListFindingsFiltersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListFindingsFiltersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListFindingsFiltersResponse {
      */
     
     public Object conflictException;
+
     public ListFindingsFiltersResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListFindingsFiltersResponse {
     
     
     public String contentType;
+
     public ListFindingsFiltersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListFindingsFiltersResponse {
      */
     
     public Object internalServerException;
+
     public ListFindingsFiltersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListFindingsFiltersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFindingsFiltersResponse listFindingsFiltersResponse;
+
     public ListFindingsFiltersResponse withListFindingsFiltersResponse(org.openapis.openapi.models.shared.ListFindingsFiltersResponse listFindingsFiltersResponse) {
         this.listFindingsFiltersResponse = listFindingsFiltersResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListFindingsFiltersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListFindingsFiltersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListFindingsFiltersResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListFindingsFiltersResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListFindingsFiltersResponse {
     
     
     public Integer statusCode;
+
     public ListFindingsFiltersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListFindingsFiltersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFindingsFiltersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListFindingsFiltersResponse {
      */
     
     public Object throttlingException;
+
     public ListFindingsFiltersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ListFindingsFiltersResponse {
      */
     
     public Object validationException;
+
     public ListFindingsFiltersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListFindingsFiltersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

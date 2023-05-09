@@ -15,6 +15,7 @@ public class DirectKinesisSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataPreviewOptions")
     public StreamingDataPreviewOptions dataPreviewOptions;
+
     public DirectKinesisSource withDataPreviewOptions(StreamingDataPreviewOptions dataPreviewOptions) {
         this.dataPreviewOptions = dataPreviewOptions;
         return this;
@@ -23,6 +24,7 @@ public class DirectKinesisSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetectSchema")
     public Boolean detectSchema;
+
     public DirectKinesisSource withDetectSchema(Boolean detectSchema) {
         this.detectSchema = detectSchema;
         return this;
@@ -30,6 +32,7 @@ public class DirectKinesisSource {
     
     @JsonProperty("Name")
     public String name;
+
     public DirectKinesisSource withName(String name) {
         this.name = name;
         return this;
@@ -38,6 +41,7 @@ public class DirectKinesisSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamingOptions")
     public KinesisStreamingSourceOptions streamingOptions;
+
     public DirectKinesisSource withStreamingOptions(KinesisStreamingSourceOptions streamingOptions) {
         this.streamingOptions = streamingOptions;
         return this;
@@ -46,9 +50,13 @@ public class DirectKinesisSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowSize")
     public Long windowSize;
+
     public DirectKinesisSource withWindowSize(Long windowSize) {
         this.windowSize = windowSize;
         return this;
     }
     
+    public DirectKinesisSource(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

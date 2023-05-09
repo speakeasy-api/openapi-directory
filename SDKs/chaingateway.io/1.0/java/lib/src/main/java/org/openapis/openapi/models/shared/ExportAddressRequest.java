@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExportAddressRequest {
     @JsonProperty("ethaddress")
     public String ethaddress;
+
     public ExportAddressRequest withEthaddress(String ethaddress) {
         this.ethaddress = ethaddress;
         return this;
@@ -16,9 +17,14 @@ public class ExportAddressRequest {
     
     @JsonProperty("password")
     public String password;
+
     public ExportAddressRequest withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public ExportAddressRequest(@JsonProperty("ethaddress") String ethaddress, @JsonProperty("password") String password) {
+        this.ethaddress = ethaddress;
+        this.password = password;
+  }
 }

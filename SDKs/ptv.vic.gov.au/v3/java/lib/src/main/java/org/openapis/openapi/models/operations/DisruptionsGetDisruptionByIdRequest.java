@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisruptionsGetDisruptionByIdRequest {
@@ -12,6 +13,7 @@ public class DisruptionsGetDisruptionByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public DisruptionsGetDisruptionByIdRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -22,6 +24,7 @@ public class DisruptionsGetDisruptionByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=disruption_id")
     public Long disruptionId;
+
     public DisruptionsGetDisruptionByIdRequest withDisruptionId(Long disruptionId) {
         this.disruptionId = disruptionId;
         return this;
@@ -32,6 +35,7 @@ public class DisruptionsGetDisruptionByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public DisruptionsGetDisruptionByIdRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -42,9 +46,13 @@ public class DisruptionsGetDisruptionByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public DisruptionsGetDisruptionByIdRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public DisruptionsGetDisruptionByIdRequest(@JsonProperty("disruption_id") Long disruptionId) {
+        this.disruptionId = disruptionId;
+  }
 }

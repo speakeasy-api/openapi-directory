@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAdmChannelResponse {
@@ -12,6 +13,7 @@ public class DeleteAdmChannelResponse {
      */
     
     public Object badRequestException;
+
     public DeleteAdmChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAdmChannelResponse {
     
     
     public String contentType;
+
     public DeleteAdmChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAdmChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteAdmChannelResponse deleteAdmChannelResponse;
+
     public DeleteAdmChannelResponse withDeleteAdmChannelResponse(org.openapis.openapi.models.shared.DeleteAdmChannelResponse deleteAdmChannelResponse) {
         this.deleteAdmChannelResponse = deleteAdmChannelResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAdmChannelResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteAdmChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAdmChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteAdmChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteAdmChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public DeleteAdmChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteAdmChannelResponse {
      */
     
     public Object notFoundException;
+
     public DeleteAdmChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteAdmChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public DeleteAdmChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteAdmChannelResponse {
     
     
     public Integer statusCode;
+
     public DeleteAdmChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteAdmChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAdmChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteAdmChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteAdmChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteAdmChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

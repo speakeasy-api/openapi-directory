@@ -16,6 +16,7 @@ public class DestinyResponsesDestinyProfileResponseVendorReceipts {
      */
     
     public DestinyEntitiesProfilesDestinyVendorReceiptsComponent data;
+
     public DestinyResponsesDestinyProfileResponseVendorReceipts withData(DestinyEntitiesProfilesDestinyVendorReceiptsComponent data) {
         this.data = data;
         return this;
@@ -26,6 +27,7 @@ public class DestinyResponsesDestinyProfileResponseVendorReceipts {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyProfileResponseVendorReceipts withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -33,9 +35,11 @@ public class DestinyResponsesDestinyProfileResponseVendorReceipts {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyProfileResponseVendorReceipts withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyProfileResponseVendorReceipts(){}
 }

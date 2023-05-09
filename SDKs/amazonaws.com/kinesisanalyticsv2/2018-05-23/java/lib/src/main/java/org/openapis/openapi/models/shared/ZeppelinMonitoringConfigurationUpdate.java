@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ZeppelinMonitoringConfigurationUpdate {
     @JsonProperty("LogLevelUpdate")
     public LogLevelEnum logLevelUpdate;
+
     public ZeppelinMonitoringConfigurationUpdate withLogLevelUpdate(LogLevelEnum logLevelUpdate) {
         this.logLevelUpdate = logLevelUpdate;
         return this;
     }
     
+    public ZeppelinMonitoringConfigurationUpdate(@JsonProperty("LogLevelUpdate") LogLevelEnum logLevelUpdate) {
+        this.logLevelUpdate = logLevelUpdate;
+  }
 }

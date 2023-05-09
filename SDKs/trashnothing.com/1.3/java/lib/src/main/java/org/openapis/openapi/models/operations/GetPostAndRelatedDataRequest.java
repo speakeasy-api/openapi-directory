@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPostAndRelatedDataRequest {
@@ -12,9 +13,13 @@ public class GetPostAndRelatedDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=post_id")
     public String postId;
+
     public GetPostAndRelatedDataRequest withPostId(String postId) {
         this.postId = postId;
         return this;
     }
     
+    public GetPostAndRelatedDataRequest(@JsonProperty("post_id") String postId) {
+        this.postId = postId;
+  }
 }

@@ -15,9 +15,11 @@ public class LifecyclePolicyPreviewFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagStatus")
     public TagStatusEnum tagStatus;
+
     public LifecyclePolicyPreviewFilter withTagStatus(TagStatusEnum tagStatus) {
         this.tagStatus = tagStatus;
         return this;
     }
     
+    public LifecyclePolicyPreviewFilter(){}
 }

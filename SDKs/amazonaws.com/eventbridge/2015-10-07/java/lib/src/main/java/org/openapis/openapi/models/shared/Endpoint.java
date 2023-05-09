@@ -20,6 +20,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Endpoint withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class Endpoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Endpoint withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Endpoint withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointId")
     public String endpointId;
+
     public Endpoint withEndpointId(String endpointId) {
         this.endpointId = endpointId;
         return this;
@@ -54,6 +58,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointUrl")
     public String endpointUrl;
+
     public Endpoint withEndpointUrl(String endpointUrl) {
         this.endpointUrl = endpointUrl;
         return this;
@@ -62,6 +67,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBuses")
     public EndpointEventBus[] eventBuses;
+
     public Endpoint withEventBuses(EndpointEventBus[] eventBuses) {
         this.eventBuses = eventBuses;
         return this;
@@ -72,6 +78,7 @@ public class Endpoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public Endpoint withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -80,6 +87,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Endpoint withName(String name) {
         this.name = name;
         return this;
@@ -88,6 +96,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationConfig")
     public ReplicationConfig replicationConfig;
+
     public Endpoint withReplicationConfig(ReplicationConfig replicationConfig) {
         this.replicationConfig = replicationConfig;
         return this;
@@ -96,6 +105,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public Endpoint withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -104,6 +114,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingConfig")
     public RoutingConfig routingConfig;
+
     public Endpoint withRoutingConfig(RoutingConfig routingConfig) {
         this.routingConfig = routingConfig;
         return this;
@@ -112,6 +123,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public EndpointStateEnum state;
+
     public Endpoint withState(EndpointStateEnum state) {
         this.state = state;
         return this;
@@ -120,9 +132,11 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReason")
     public String stateReason;
+
     public Endpoint withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
     }
     
+    public Endpoint(){}
 }

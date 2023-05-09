@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1SuspendEntitlementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleCloudChannelV1SuspendEntitlementRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GoogleCloudChannelV1SuspendEntitlementRequest(){}
 }

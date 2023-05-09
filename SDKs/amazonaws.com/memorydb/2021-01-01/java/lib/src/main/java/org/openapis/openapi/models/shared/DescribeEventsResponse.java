@@ -15,6 +15,7 @@ public class DescribeEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Events")
     public Event[] events;
+
     public DescribeEventsResponse withEvents(Event[] events) {
         this.events = events;
         return this;
@@ -23,9 +24,11 @@ public class DescribeEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeEventsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeEventsResponse(){}
 }

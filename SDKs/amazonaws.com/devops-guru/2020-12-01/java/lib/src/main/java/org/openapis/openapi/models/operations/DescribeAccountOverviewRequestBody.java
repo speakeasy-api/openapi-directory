@@ -21,6 +21,7 @@ public class DescribeAccountOverviewRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FromTime")
     public OffsetDateTime fromTime;
+
     public DescribeAccountOverviewRequestBody withFromTime(OffsetDateTime fromTime) {
         this.fromTime = fromTime;
         return this;
@@ -34,9 +35,13 @@ public class DescribeAccountOverviewRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ToTime")
     public OffsetDateTime toTime;
+
     public DescribeAccountOverviewRequestBody withToTime(OffsetDateTime toTime) {
         this.toTime = toTime;
         return this;
     }
     
+    public DescribeAccountOverviewRequestBody(@JsonProperty("FromTime") OffsetDateTime fromTime) {
+        this.fromTime = fromTime;
+  }
 }

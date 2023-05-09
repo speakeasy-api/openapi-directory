@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFileCacheResponse {
@@ -12,6 +13,7 @@ public class CreateFileCacheResponse {
      */
     
     public Object badRequest;
+
     public CreateFileCacheResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class CreateFileCacheResponse {
     
     
     public String contentType;
+
     public CreateFileCacheResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateFileCacheResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFileCacheResponse createFileCacheResponse;
+
     public CreateFileCacheResponse withCreateFileCacheResponse(org.openapis.openapi.models.shared.CreateFileCacheResponse createFileCacheResponse) {
         this.createFileCacheResponse = createFileCacheResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateFileCacheResponse {
      */
     
     public Object incompatibleParameterError;
+
     public CreateFileCacheResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -49,6 +54,7 @@ public class CreateFileCacheResponse {
      */
     
     public Object internalServerError;
+
     public CreateFileCacheResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class CreateFileCacheResponse {
      */
     
     public Object invalidNetworkSettings;
+
     public CreateFileCacheResponse withInvalidNetworkSettings(Object invalidNetworkSettings) {
         this.invalidNetworkSettings = invalidNetworkSettings;
         return this;
@@ -69,6 +76,7 @@ public class CreateFileCacheResponse {
      */
     
     public Object invalidPerUnitStorageThroughput;
+
     public CreateFileCacheResponse withInvalidPerUnitStorageThroughput(Object invalidPerUnitStorageThroughput) {
         this.invalidPerUnitStorageThroughput = invalidPerUnitStorageThroughput;
         return this;
@@ -79,6 +87,7 @@ public class CreateFileCacheResponse {
      */
     
     public Object missingFileCacheConfiguration;
+
     public CreateFileCacheResponse withMissingFileCacheConfiguration(Object missingFileCacheConfiguration) {
         this.missingFileCacheConfiguration = missingFileCacheConfiguration;
         return this;
@@ -89,6 +98,7 @@ public class CreateFileCacheResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public CreateFileCacheResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
@@ -96,6 +106,7 @@ public class CreateFileCacheResponse {
     
     
     public Integer statusCode;
+
     public CreateFileCacheResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class CreateFileCacheResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFileCacheResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateFileCacheResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

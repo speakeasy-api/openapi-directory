@@ -15,9 +15,11 @@ public class GetUserSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userSettings")
     public UserSettings userSettings;
+
     public GetUserSettingsResponse withUserSettings(UserSettings userSettings) {
         this.userSettings = userSettings;
         return this;
     }
     
+    public GetUserSettingsResponse(){}
 }

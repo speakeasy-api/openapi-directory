@@ -83,4 +83,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetScalingPlanResourceForec
 lib/src/main/java/org/openapis/openapi/models/shared/ForecastDataTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateScalingPlanRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

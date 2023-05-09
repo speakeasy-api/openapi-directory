@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAllFinancialProducts200ApplicationJSON {
     @JsonProperty("financial_products")
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts[] financialProducts;
+
     public GetAllFinancialProducts200ApplicationJSON withFinancialProducts(GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts[] financialProducts) {
         this.financialProducts = financialProducts;
         return this;
     }
     
+    public GetAllFinancialProducts200ApplicationJSON(@JsonProperty("financial_products") GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts[] financialProducts) {
+        this.financialProducts = financialProducts;
+  }
 }

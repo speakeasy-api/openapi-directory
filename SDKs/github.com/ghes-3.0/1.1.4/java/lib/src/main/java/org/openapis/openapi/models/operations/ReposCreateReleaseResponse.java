@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposCreateReleaseResponse {
     
     public String contentType;
+
     public ReposCreateReleaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposCreateReleaseResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReposCreateReleaseResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReposCreateReleaseResponse {
     
     
     public Integer statusCode;
+
     public ReposCreateReleaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReposCreateReleaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposCreateReleaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReposCreateReleaseResponse {
      */
     
     public org.openapis.openapi.models.shared.Release release;
+
     public ReposCreateReleaseResponse withRelease(org.openapis.openapi.models.shared.Release release) {
         this.release = release;
         return this;
@@ -50,9 +56,14 @@ public class ReposCreateReleaseResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposCreateReleaseResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposCreateReleaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

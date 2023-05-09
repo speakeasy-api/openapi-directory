@@ -19,6 +19,7 @@ public class ListHubContentVersionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListHubContentVersionsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListHubContentVersionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListHubContentVersionsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -36,6 +38,7 @@ public class ListHubContentVersionsRequest {
     
     @JsonProperty("HubContentName")
     public String hubContentName;
+
     public ListHubContentVersionsRequest withHubContentName(String hubContentName) {
         this.hubContentName = hubContentName;
         return this;
@@ -43,6 +46,7 @@ public class ListHubContentVersionsRequest {
     
     @JsonProperty("HubContentType")
     public HubContentTypeEnum hubContentType;
+
     public ListHubContentVersionsRequest withHubContentType(HubContentTypeEnum hubContentType) {
         this.hubContentType = hubContentType;
         return this;
@@ -50,6 +54,7 @@ public class ListHubContentVersionsRequest {
     
     @JsonProperty("HubName")
     public String hubName;
+
     public ListHubContentVersionsRequest withHubName(String hubName) {
         this.hubName = hubName;
         return this;
@@ -58,6 +63,7 @@ public class ListHubContentVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListHubContentVersionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -66,6 +72,7 @@ public class ListHubContentVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxSchemaVersion")
     public String maxSchemaVersion;
+
     public ListHubContentVersionsRequest withMaxSchemaVersion(String maxSchemaVersion) {
         this.maxSchemaVersion = maxSchemaVersion;
         return this;
@@ -74,6 +81,7 @@ public class ListHubContentVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinVersion")
     public String minVersion;
+
     public ListHubContentVersionsRequest withMinVersion(String minVersion) {
         this.minVersion = minVersion;
         return this;
@@ -82,6 +90,7 @@ public class ListHubContentVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListHubContentVersionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -90,6 +99,7 @@ public class ListHubContentVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public HubContentSortByEnum sortBy;
+
     public ListHubContentVersionsRequest withSortBy(HubContentSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -98,9 +108,15 @@ public class ListHubContentVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListHubContentVersionsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListHubContentVersionsRequest(@JsonProperty("HubContentName") String hubContentName, @JsonProperty("HubContentType") HubContentTypeEnum hubContentType, @JsonProperty("HubName") String hubName) {
+        this.hubContentName = hubContentName;
+        this.hubContentType = hubContentType;
+        this.hubName = hubName;
+  }
 }

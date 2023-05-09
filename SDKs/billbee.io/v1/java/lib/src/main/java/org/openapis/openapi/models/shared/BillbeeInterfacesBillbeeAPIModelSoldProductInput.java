@@ -15,6 +15,7 @@ public class BillbeeInterfacesBillbeeAPIModelSoldProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillbeeId")
     public Long billbeeId;
+
     public BillbeeInterfacesBillbeeAPIModelSoldProductInput withBillbeeId(Long billbeeId) {
         this.billbeeId = billbeeId;
         return this;
@@ -26,6 +27,7 @@ public class BillbeeInterfacesBillbeeAPIModelSoldProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountryOfOrigin")
     public String countryOfOrigin;
+
     public BillbeeInterfacesBillbeeAPIModelSoldProductInput withCountryOfOrigin(String countryOfOrigin) {
         this.countryOfOrigin = countryOfOrigin;
         return this;
@@ -37,6 +39,7 @@ public class BillbeeInterfacesBillbeeAPIModelSoldProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EAN")
     public String ean;
+
     public BillbeeInterfacesBillbeeAPIModelSoldProductInput withEan(String ean) {
         this.ean = ean;
         return this;
@@ -48,6 +51,7 @@ public class BillbeeInterfacesBillbeeAPIModelSoldProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public BillbeeInterfacesBillbeeAPIModelSoldProductInput withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class BillbeeInterfacesBillbeeAPIModelSoldProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Images")
     public BillbeeInterfacesBillbeeAPIModelProductImage[] images;
+
     public BillbeeInterfacesBillbeeAPIModelSoldProductInput withImages(BillbeeInterfacesBillbeeAPIModelProductImage[] images) {
         this.images = images;
         return this;
@@ -70,6 +75,7 @@ public class BillbeeInterfacesBillbeeAPIModelSoldProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsDigital")
     public Boolean isDigital;
+
     public BillbeeInterfacesBillbeeAPIModelSoldProductInput withIsDigital(Boolean isDigital) {
         this.isDigital = isDigital;
         return this;
@@ -82,6 +88,7 @@ public class BillbeeInterfacesBillbeeAPIModelSoldProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OldId")
     public String oldId;
+
     public BillbeeInterfacesBillbeeAPIModelSoldProductInput withOldId(String oldId) {
         this.oldId = oldId;
         return this;
@@ -93,6 +100,7 @@ public class BillbeeInterfacesBillbeeAPIModelSoldProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlatformData")
     public String platformData;
+
     public BillbeeInterfacesBillbeeAPIModelSoldProductInput withPlatformData(String platformData) {
         this.platformData = platformData;
         return this;
@@ -104,6 +112,7 @@ public class BillbeeInterfacesBillbeeAPIModelSoldProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SKU")
     public String sku;
+
     public BillbeeInterfacesBillbeeAPIModelSoldProductInput withSku(String sku) {
         this.sku = sku;
         return this;
@@ -115,6 +124,7 @@ public class BillbeeInterfacesBillbeeAPIModelSoldProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TARICCode")
     public String taricCode;
+
     public BillbeeInterfacesBillbeeAPIModelSoldProductInput withTARICCode(String taricCode) {
         this.taricCode = taricCode;
         return this;
@@ -126,6 +136,7 @@ public class BillbeeInterfacesBillbeeAPIModelSoldProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public BillbeeInterfacesBillbeeAPIModelSoldProductInput withTitle(String title) {
         this.title = title;
         return this;
@@ -137,6 +148,7 @@ public class BillbeeInterfacesBillbeeAPIModelSoldProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public Integer type;
+
     public BillbeeInterfacesBillbeeAPIModelSoldProductInput withType(Integer type) {
         this.type = type;
         return this;
@@ -148,9 +160,11 @@ public class BillbeeInterfacesBillbeeAPIModelSoldProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Weight")
     public Integer weight;
+
     public BillbeeInterfacesBillbeeAPIModelSoldProductInput withWeight(Integer weight) {
         this.weight = weight;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelSoldProductInput(){}
 }

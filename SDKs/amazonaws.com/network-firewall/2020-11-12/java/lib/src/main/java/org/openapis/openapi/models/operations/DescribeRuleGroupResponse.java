@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRuleGroupResponse {
     
     public String contentType;
+
     public DescribeRuleGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRuleGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRuleGroupResponse describeRuleGroupResponse;
+
     public DescribeRuleGroupResponse withDescribeRuleGroupResponse(org.openapis.openapi.models.shared.DescribeRuleGroupResponse describeRuleGroupResponse) {
         this.describeRuleGroupResponse = describeRuleGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRuleGroupResponse {
      */
     
     public Object internalServerError;
+
     public DescribeRuleGroupResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRuleGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeRuleGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeRuleGroupResponse {
     
     
     public Integer statusCode;
+
     public DescribeRuleGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeRuleGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRuleGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeRuleGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeRuleGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeRuleGroupResponse {
      */
     
     public Object throttlingException;
+
     public DescribeRuleGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeRuleGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

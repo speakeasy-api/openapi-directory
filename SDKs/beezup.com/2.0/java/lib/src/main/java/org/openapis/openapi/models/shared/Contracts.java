@@ -15,6 +15,7 @@ public class Contracts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current")
     public CurrentContractInfo current;
+
     public Contracts withCurrent(CurrentContractInfo current) {
         this.current = current;
         return this;
@@ -22,6 +23,7 @@ public class Contracts {
     
     @JsonProperty("links")
     public ContractsLinks links;
+
     public Contracts withLinks(ContractsLinks links) {
         this.links = links;
         return this;
@@ -30,9 +32,13 @@ public class Contracts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public NextContractInfo next;
+
     public Contracts withNext(NextContractInfo next) {
         this.next = next;
         return this;
     }
     
+    public Contracts(@JsonProperty("links") ContractsLinks links) {
+        this.links = links;
+  }
 }

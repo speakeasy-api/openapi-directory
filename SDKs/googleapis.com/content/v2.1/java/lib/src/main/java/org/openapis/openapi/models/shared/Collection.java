@@ -18,6 +18,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel0")
     public String customLabel0;
+
     public Collection withCustomLabel0(String customLabel0) {
         this.customLabel0 = customLabel0;
         return this;
@@ -29,6 +30,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel1")
     public String customLabel1;
+
     public Collection withCustomLabel1(String customLabel1) {
         this.customLabel1 = customLabel1;
         return this;
@@ -40,6 +42,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel2")
     public String customLabel2;
+
     public Collection withCustomLabel2(String customLabel2) {
         this.customLabel2 = customLabel2;
         return this;
@@ -51,6 +54,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel3")
     public String customLabel3;
+
     public Collection withCustomLabel3(String customLabel3) {
         this.customLabel3 = customLabel3;
         return this;
@@ -62,6 +66,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLabel4")
     public String customLabel4;
+
     public Collection withCustomLabel4(String customLabel4) {
         this.customLabel4 = customLabel4;
         return this;
@@ -73,6 +78,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featuredProduct")
     public CollectionFeaturedProduct[] featuredProduct;
+
     public Collection withFeaturedProduct(CollectionFeaturedProduct[] featuredProduct) {
         this.featuredProduct = featuredProduct;
         return this;
@@ -84,6 +90,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headline")
     public String[] headline;
+
     public Collection withHeadline(String[] headline) {
         this.headline = headline;
         return this;
@@ -95,6 +102,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Collection withId(String id) {
         this.id = id;
         return this;
@@ -106,6 +114,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageLink")
     public String[] imageLink;
+
     public Collection withImageLink(String[] imageLink) {
         this.imageLink = imageLink;
         return this;
@@ -117,6 +126,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public Collection withLanguage(String language) {
         this.language = language;
         return this;
@@ -128,6 +138,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public Collection withLink(String link) {
         this.link = link;
         return this;
@@ -139,6 +150,7 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileLink")
     public String mobileLink;
+
     public Collection withMobileLink(String mobileLink) {
         this.mobileLink = mobileLink;
         return this;
@@ -150,9 +162,11 @@ public class Collection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCountry")
     public String productCountry;
+
     public Collection withProductCountry(String productCountry) {
         this.productCountry = productCountry;
         return this;
     }
     
+    public Collection(){}
 }

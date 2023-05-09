@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AutoMLJobChannel - A channel is a named input source that training algorithms can consume. This channel is used for the non tabular training data of an AutoML job using the V2 API. For tabular training data, see &lt;code&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLChannel.html"&gt; AutoMLChannel&lt;/a&gt; &lt;/code&gt;. For more information, see &lt;code&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Channel.html"&gt; Channel&lt;/a&gt; &lt;/code&gt;.
+ * AutoMLJobChannel - A channel is a named input source that training algorithms can consume. This channel is used for the non tabular training data of an AutoML job using the V2 API. For tabular training data, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLChannel.html"&gt; AutoMLChannel&lt;/a&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Channel.html"&gt; Channel&lt;/a&gt;.
  */
 public class AutoMLJobChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelType")
     public AutoMLChannelTypeEnum channelType;
+
     public AutoMLJobChannel withChannelType(AutoMLChannelTypeEnum channelType) {
         this.channelType = channelType;
         return this;
@@ -23,6 +24,7 @@ public class AutoMLJobChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompressionType")
     public CompressionTypeEnum compressionType;
+
     public AutoMLJobChannel withCompressionType(CompressionTypeEnum compressionType) {
         this.compressionType = compressionType;
         return this;
@@ -31,6 +33,7 @@ public class AutoMLJobChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentType")
     public String contentType;
+
     public AutoMLJobChannel withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,9 +42,11 @@ public class AutoMLJobChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSource")
     public AutoMLDataSource dataSource;
+
     public AutoMLJobChannel withDataSource(AutoMLDataSource dataSource) {
         this.dataSource = dataSource;
         return this;
     }
     
+    public AutoMLJobChannel(){}
 }

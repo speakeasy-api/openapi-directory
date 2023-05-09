@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateSAMLProviderResponse {
     
     public String samlProviderArn;
+
     public CreateSAMLProviderResponse withSAMLProviderArn(String samlProviderArn) {
         this.samlProviderArn = samlProviderArn;
         return this;
@@ -19,9 +20,11 @@ public class CreateSAMLProviderResponse {
     
     
     public Tag[] tags;
+
     public CreateSAMLProviderResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSAMLProviderResponse(){}
 }

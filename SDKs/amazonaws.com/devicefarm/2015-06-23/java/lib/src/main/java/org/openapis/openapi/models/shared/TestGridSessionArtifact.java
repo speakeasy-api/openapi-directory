@@ -15,6 +15,7 @@ public class TestGridSessionArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public TestGridSessionArtifact withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -23,6 +24,7 @@ public class TestGridSessionArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TestGridSessionArtifactTypeEnum type;
+
     public TestGridSessionArtifact withType(TestGridSessionArtifactTypeEnum type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class TestGridSessionArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public TestGridSessionArtifact withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TestGridSessionArtifact(){}
 }

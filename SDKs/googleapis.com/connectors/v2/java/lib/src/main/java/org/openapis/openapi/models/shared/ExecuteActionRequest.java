@@ -18,9 +18,11 @@ public class ExecuteActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Object> parameters;
+
     public ExecuteActionRequest withParameters(java.util.Map<String, Object> parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public ExecuteActionRequest(){}
 }

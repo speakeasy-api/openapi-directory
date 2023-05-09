@@ -18,6 +18,7 @@ public class OracleSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dropLargeObjects")
     public java.util.Map<String, Object> dropLargeObjects;
+
     public OracleSourceConfig withDropLargeObjects(java.util.Map<String, Object> dropLargeObjects) {
         this.dropLargeObjects = dropLargeObjects;
         return this;
@@ -29,6 +30,7 @@ public class OracleSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeObjects")
     public OracleRdbms excludeObjects;
+
     public OracleSourceConfig withExcludeObjects(OracleRdbms excludeObjects) {
         this.excludeObjects = excludeObjects;
         return this;
@@ -40,6 +42,7 @@ public class OracleSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeObjects")
     public OracleRdbms includeObjects;
+
     public OracleSourceConfig withIncludeObjects(OracleRdbms includeObjects) {
         this.includeObjects = includeObjects;
         return this;
@@ -51,6 +54,7 @@ public class OracleSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxConcurrentBackfillTasks")
     public Integer maxConcurrentBackfillTasks;
+
     public OracleSourceConfig withMaxConcurrentBackfillTasks(Integer maxConcurrentBackfillTasks) {
         this.maxConcurrentBackfillTasks = maxConcurrentBackfillTasks;
         return this;
@@ -62,6 +66,7 @@ public class OracleSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxConcurrentCdcTasks")
     public Integer maxConcurrentCdcTasks;
+
     public OracleSourceConfig withMaxConcurrentCdcTasks(Integer maxConcurrentCdcTasks) {
         this.maxConcurrentCdcTasks = maxConcurrentCdcTasks;
         return this;
@@ -73,9 +78,11 @@ public class OracleSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamLargeObjects")
     public java.util.Map<String, Object> streamLargeObjects;
+
     public OracleSourceConfig withStreamLargeObjects(java.util.Map<String, Object> streamLargeObjects) {
         this.streamLargeObjects = streamLargeObjects;
         return this;
     }
     
+    public OracleSourceConfig(){}
 }

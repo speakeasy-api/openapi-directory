@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses {
     
     public String allocationId;
+
     public DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses {
     
     
     public String associationId;
+
     public DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses {
     
     
     public String failureMessage;
+
     public DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses {
     
     
     public Boolean isPrimary;
+
     public DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses withIsPrimary(Boolean isPrimary) {
         this.isPrimary = isPrimary;
         return this;
@@ -40,6 +44,7 @@ public class DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses {
     
     
     public String networkInterfaceId;
+
     public DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses {
     
     
     public String privateIp;
+
     public DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses withPrivateIp(String privateIp) {
         this.privateIp = privateIp;
         return this;
@@ -54,6 +60,7 @@ public class DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses {
     
     
     public String publicIp;
+
     public DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -61,9 +68,11 @@ public class DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses {
     
     
     public DescribeNatGatewaysResultNatGatewaysNatGatewayAddressesStatusEnum status;
+
     public DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses withStatus(DescribeNatGatewaysResultNatGatewaysNatGatewayAddressesStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeNatGatewaysResultNatGatewaysNatGatewayAddresses(){}
 }

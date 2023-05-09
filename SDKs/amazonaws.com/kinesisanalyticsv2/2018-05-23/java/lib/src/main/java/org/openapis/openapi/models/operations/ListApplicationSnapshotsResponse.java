@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListApplicationSnapshotsResponse {
     
     public String contentType;
+
     public ListApplicationSnapshotsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListApplicationSnapshotsResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListApplicationSnapshotsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -29,6 +32,7 @@ public class ListApplicationSnapshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListApplicationSnapshotsResponse listApplicationSnapshotsResponse;
+
     public ListApplicationSnapshotsResponse withListApplicationSnapshotsResponse(org.openapis.openapi.models.shared.ListApplicationSnapshotsResponse listApplicationSnapshotsResponse) {
         this.listApplicationSnapshotsResponse = listApplicationSnapshotsResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListApplicationSnapshotsResponse {
     
     
     public Integer statusCode;
+
     public ListApplicationSnapshotsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListApplicationSnapshotsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListApplicationSnapshotsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListApplicationSnapshotsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public ListApplicationSnapshotsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public ListApplicationSnapshotsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

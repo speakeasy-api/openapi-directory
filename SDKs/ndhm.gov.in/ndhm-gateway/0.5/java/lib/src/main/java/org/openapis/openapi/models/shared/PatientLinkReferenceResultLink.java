@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientLinkReferenceResultLink {
     @JsonProperty("authenticationType")
     public PatientLinkReferenceResultLinkAuthenticationTypeEnum authenticationType;
+
     public PatientLinkReferenceResultLink withAuthenticationType(PatientLinkReferenceResultLinkAuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -19,6 +20,7 @@ public class PatientLinkReferenceResultLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public Meta meta;
+
     public PatientLinkReferenceResultLink withMeta(Meta meta) {
         this.meta = meta;
         return this;
@@ -26,9 +28,14 @@ public class PatientLinkReferenceResultLink {
     
     @JsonProperty("referenceNumber")
     public String referenceNumber;
+
     public PatientLinkReferenceResultLink withReferenceNumber(String referenceNumber) {
         this.referenceNumber = referenceNumber;
         return this;
     }
     
+    public PatientLinkReferenceResultLink(@JsonProperty("authenticationType") PatientLinkReferenceResultLinkAuthenticationTypeEnum authenticationType, @JsonProperty("referenceNumber") String referenceNumber) {
+        this.authenticationType = authenticationType;
+        this.referenceNumber = referenceNumber;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LegacyCodePushAcquisitionUpdateCheckResponse {
     
     public String contentType;
+
     public LegacyCodePushAcquisitionUpdateCheckResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class LegacyCodePushAcquisitionUpdateCheckResponse {
     
     
     public Integer statusCode;
+
     public LegacyCodePushAcquisitionUpdateCheckResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class LegacyCodePushAcquisitionUpdateCheckResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LegacyCodePushAcquisitionUpdateCheckResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class LegacyCodePushAcquisitionUpdateCheckResponse {
      */
     
     public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSON legacyCodePushAcquisitionUpdateCheck200ApplicationJSONObject;
+
     public LegacyCodePushAcquisitionUpdateCheckResponse withLegacyCodePushAcquisitionUpdateCheck200ApplicationJSONObject(LegacyCodePushAcquisitionUpdateCheck200ApplicationJSON legacyCodePushAcquisitionUpdateCheck200ApplicationJSONObject) {
         this.legacyCodePushAcquisitionUpdateCheck200ApplicationJSONObject = legacyCodePushAcquisitionUpdateCheck200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class LegacyCodePushAcquisitionUpdateCheckResponse {
      */
     
     public LegacyCodePushAcquisitionUpdateCheckDefaultApplicationJSON legacyCodePushAcquisitionUpdateCheckDefaultApplicationJSONObject;
+
     public LegacyCodePushAcquisitionUpdateCheckResponse withLegacyCodePushAcquisitionUpdateCheckDefaultApplicationJSONObject(LegacyCodePushAcquisitionUpdateCheckDefaultApplicationJSON legacyCodePushAcquisitionUpdateCheckDefaultApplicationJSONObject) {
         this.legacyCodePushAcquisitionUpdateCheckDefaultApplicationJSONObject = legacyCodePushAcquisitionUpdateCheckDefaultApplicationJSONObject;
         return this;
     }
     
+    public LegacyCodePushAcquisitionUpdateCheckResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

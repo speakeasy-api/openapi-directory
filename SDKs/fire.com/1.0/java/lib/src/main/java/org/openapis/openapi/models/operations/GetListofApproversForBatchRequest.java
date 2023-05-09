@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListofApproversForBatchRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batchUuid")
     public String batchUuid;
+
     public GetListofApproversForBatchRequest withBatchUuid(String batchUuid) {
         this.batchUuid = batchUuid;
         return this;
     }
     
+    public GetListofApproversForBatchRequest(@JsonProperty("batchUuid") String batchUuid) {
+        this.batchUuid = batchUuid;
+  }
 }

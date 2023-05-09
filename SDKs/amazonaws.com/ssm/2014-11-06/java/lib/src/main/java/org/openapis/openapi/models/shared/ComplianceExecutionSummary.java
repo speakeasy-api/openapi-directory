@@ -20,6 +20,7 @@ public class ComplianceExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionId")
     public String executionId;
+
     public ComplianceExecutionSummary withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -29,6 +30,7 @@ public class ComplianceExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExecutionTime")
     public OffsetDateTime executionTime;
+
     public ComplianceExecutionSummary withExecutionTime(OffsetDateTime executionTime) {
         this.executionTime = executionTime;
         return this;
@@ -37,9 +39,13 @@ public class ComplianceExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionType")
     public String executionType;
+
     public ComplianceExecutionSummary withExecutionType(String executionType) {
         this.executionType = executionType;
         return this;
     }
     
+    public ComplianceExecutionSummary(@JsonProperty("ExecutionTime") OffsetDateTime executionTime) {
+        this.executionTime = executionTime;
+  }
 }

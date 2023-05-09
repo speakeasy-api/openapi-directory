@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTraceSummariesResponse {
     
     public String contentType;
+
     public GetTraceSummariesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTraceSummariesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTraceSummariesResult getTraceSummariesResult;
+
     public GetTraceSummariesResponse withGetTraceSummariesResult(org.openapis.openapi.models.shared.GetTraceSummariesResult getTraceSummariesResult) {
         this.getTraceSummariesResult = getTraceSummariesResult;
         return this;
@@ -29,6 +32,7 @@ public class GetTraceSummariesResponse {
      */
     
     public Object invalidRequestException;
+
     public GetTraceSummariesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class GetTraceSummariesResponse {
     
     
     public Integer statusCode;
+
     public GetTraceSummariesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetTraceSummariesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTraceSummariesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetTraceSummariesResponse {
      */
     
     public Object throttledException;
+
     public GetTraceSummariesResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public GetTraceSummariesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

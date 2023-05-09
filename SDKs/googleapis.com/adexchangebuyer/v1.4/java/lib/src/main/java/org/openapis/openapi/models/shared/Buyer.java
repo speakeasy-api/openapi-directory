@@ -15,9 +15,11 @@ public class Buyer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Buyer withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public Buyer(){}
 }

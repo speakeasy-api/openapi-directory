@@ -18,6 +18,7 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessibleTrackIds")
     public String[] accessibleTrackIds;
+
     public ApplicationPolicy withAccessibleTrackIds(String[] accessibleTrackIds) {
         this.accessibleTrackIds = accessibleTrackIds;
         return this;
@@ -29,6 +30,7 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alwaysOnVpnLockdownExemption")
     public ApplicationPolicyAlwaysOnVpnLockdownExemptionEnum alwaysOnVpnLockdownExemption;
+
     public ApplicationPolicy withAlwaysOnVpnLockdownExemption(ApplicationPolicyAlwaysOnVpnLockdownExemptionEnum alwaysOnVpnLockdownExemption) {
         this.alwaysOnVpnLockdownExemption = alwaysOnVpnLockdownExemption;
         return this;
@@ -40,6 +42,7 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoUpdateMode")
     public ApplicationPolicyAutoUpdateModeEnum autoUpdateMode;
+
     public ApplicationPolicy withAutoUpdateMode(ApplicationPolicyAutoUpdateModeEnum autoUpdateMode) {
         this.autoUpdateMode = autoUpdateMode;
         return this;
@@ -51,6 +54,7 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectedWorkAndPersonalApp")
     public ApplicationPolicyConnectedWorkAndPersonalAppEnum connectedWorkAndPersonalApp;
+
     public ApplicationPolicy withConnectedWorkAndPersonalApp(ApplicationPolicyConnectedWorkAndPersonalAppEnum connectedWorkAndPersonalApp) {
         this.connectedWorkAndPersonalApp = connectedWorkAndPersonalApp;
         return this;
@@ -62,6 +66,7 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultPermissionPolicy")
     public ApplicationPolicyDefaultPermissionPolicyEnum defaultPermissionPolicy;
+
     public ApplicationPolicy withDefaultPermissionPolicy(ApplicationPolicyDefaultPermissionPolicyEnum defaultPermissionPolicy) {
         this.defaultPermissionPolicy = defaultPermissionPolicy;
         return this;
@@ -73,6 +78,7 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegatedScopes")
     public ApplicationPolicyDelegatedScopesEnum[] delegatedScopes;
+
     public ApplicationPolicy withDelegatedScopes(ApplicationPolicyDelegatedScopesEnum[] delegatedScopes) {
         this.delegatedScopes = delegatedScopes;
         return this;
@@ -84,6 +90,7 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public ApplicationPolicy withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -95,6 +102,7 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extensionConfig")
     public ExtensionConfig extensionConfig;
+
     public ApplicationPolicy withExtensionConfig(ExtensionConfig extensionConfig) {
         this.extensionConfig = extensionConfig;
         return this;
@@ -106,6 +114,7 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installType")
     public ApplicationPolicyInstallTypeEnum installType;
+
     public ApplicationPolicy withInstallType(ApplicationPolicyInstallTypeEnum installType) {
         this.installType = installType;
         return this;
@@ -117,6 +126,7 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lockTaskAllowed")
     public Boolean lockTaskAllowed;
+
     public ApplicationPolicy withLockTaskAllowed(Boolean lockTaskAllowed) {
         this.lockTaskAllowed = lockTaskAllowed;
         return this;
@@ -128,6 +138,7 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedConfiguration")
     public java.util.Map<String, Object> managedConfiguration;
+
     public ApplicationPolicy withManagedConfiguration(java.util.Map<String, Object> managedConfiguration) {
         this.managedConfiguration = managedConfiguration;
         return this;
@@ -139,6 +150,7 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedConfigurationTemplate")
     public ManagedConfigurationTemplate managedConfigurationTemplate;
+
     public ApplicationPolicy withManagedConfigurationTemplate(ManagedConfigurationTemplate managedConfigurationTemplate) {
         this.managedConfigurationTemplate = managedConfigurationTemplate;
         return this;
@@ -150,6 +162,7 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumVersionCode")
     public Integer minimumVersionCode;
+
     public ApplicationPolicy withMinimumVersionCode(Integer minimumVersionCode) {
         this.minimumVersionCode = minimumVersionCode;
         return this;
@@ -161,6 +174,7 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public ApplicationPolicy withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -172,6 +186,7 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionGrants")
     public PermissionGrant[] permissionGrants;
+
     public ApplicationPolicy withPermissionGrants(PermissionGrant[] permissionGrants) {
         this.permissionGrants = permissionGrants;
         return this;
@@ -183,9 +198,11 @@ public class ApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workProfileWidgets")
     public ApplicationPolicyWorkProfileWidgetsEnum workProfileWidgets;
+
     public ApplicationPolicy withWorkProfileWidgets(ApplicationPolicyWorkProfileWidgetsEnum workProfileWidgets) {
         this.workProfileWidgets = workProfileWidgets;
         return this;
     }
     
+    public ApplicationPolicy(){}
 }

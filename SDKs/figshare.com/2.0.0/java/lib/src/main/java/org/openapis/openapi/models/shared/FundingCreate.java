@@ -15,6 +15,7 @@ public class FundingCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public FundingCreate withId(Long id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class FundingCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public FundingCreate withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public FundingCreate(){}
 }

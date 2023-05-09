@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSegmentResponse {
@@ -12,6 +13,7 @@ public class DeleteSegmentResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteSegmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSegmentResponse {
      */
     
     public Object conflictException;
+
     public DeleteSegmentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSegmentResponse {
     
     
     public String contentType;
+
     public DeleteSegmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSegmentResponse {
      */
     
     public java.util.Map<String, Object> deleteSegmentResponse;
+
     public DeleteSegmentResponse withDeleteSegmentResponse(java.util.Map<String, Object> deleteSegmentResponse) {
         this.deleteSegmentResponse = deleteSegmentResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSegmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSegmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteSegmentResponse {
     
     
     public Integer statusCode;
+
     public DeleteSegmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteSegmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSegmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteSegmentResponse {
      */
     
     public Object throttlingException;
+
     public DeleteSegmentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteSegmentResponse {
      */
     
     public Object validationException;
+
     public DeleteSegmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteSegmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

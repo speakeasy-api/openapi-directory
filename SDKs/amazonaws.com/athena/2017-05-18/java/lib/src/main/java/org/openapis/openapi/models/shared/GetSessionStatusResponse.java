@@ -15,6 +15,7 @@ public class GetSessionStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionId")
     public String sessionId;
+
     public GetSessionStatusResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -23,9 +24,11 @@ public class GetSessionStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SessionStatus status;
+
     public GetSessionStatusResponse withStatus(SessionStatus status) {
         this.status = status;
         return this;
     }
     
+    public GetSessionStatusResponse(){}
 }

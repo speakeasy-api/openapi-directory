@@ -15,9 +15,11 @@ public class RegisterContainerInstanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerInstance")
     public ContainerInstance containerInstance;
+
     public RegisterContainerInstanceResponse withContainerInstance(ContainerInstance containerInstance) {
         this.containerInstance = containerInstance;
         return this;
     }
     
+    public RegisterContainerInstanceResponse(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeTargetTcpProxiesSetBackendServiceSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetTcpProxiesSetBackendServiceSecurityOption1 option1;
+
     public ComputeTargetTcpProxiesSetBackendServiceSecurity withOption1(ComputeTargetTcpProxiesSetBackendServiceSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeTargetTcpProxiesSetBackendServiceSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetTcpProxiesSetBackendServiceSecurityOption2 option2;
+
     public ComputeTargetTcpProxiesSetBackendServiceSecurity withOption2(ComputeTargetTcpProxiesSetBackendServiceSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeTargetTcpProxiesSetBackendServiceSecurity(){}
 }

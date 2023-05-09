@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChineseNameMatchResponse {
     
     public String contentType;
+
     public ChineseNameMatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChineseNameMatchResponse {
      */
     
     public org.openapis.openapi.models.shared.NameMatchedOut nameMatchedOut;
+
     public ChineseNameMatchResponse withNameMatchedOut(org.openapis.openapi.models.shared.NameMatchedOut nameMatchedOut) {
         this.nameMatchedOut = nameMatchedOut;
         return this;
@@ -26,6 +29,7 @@ public class ChineseNameMatchResponse {
     
     
     public Integer statusCode;
+
     public ChineseNameMatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChineseNameMatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChineseNameMatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChineseNameMatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

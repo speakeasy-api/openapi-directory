@@ -18,6 +18,7 @@ public class InjectCredentialsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterUuid")
     public String clusterUuid;
+
     public InjectCredentialsRequest withClusterUuid(String clusterUuid) {
         this.clusterUuid = clusterUuid;
         return this;
@@ -29,9 +30,11 @@ public class InjectCredentialsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentialsCiphertext")
     public String credentialsCiphertext;
+
     public InjectCredentialsRequest withCredentialsCiphertext(String credentialsCiphertext) {
         this.credentialsCiphertext = credentialsCiphertext;
         return this;
     }
     
+    public InjectCredentialsRequest(){}
 }

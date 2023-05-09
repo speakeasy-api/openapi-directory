@@ -20,6 +20,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public Container withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessLoggingEnabled")
     public Boolean accessLoggingEnabled;
+
     public Container withAccessLoggingEnabled(Boolean accessLoggingEnabled) {
         this.accessLoggingEnabled = accessLoggingEnabled;
         return this;
@@ -38,6 +40,7 @@ public class Container {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Container withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -46,6 +49,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoint")
     public String endpoint;
+
     public Container withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -54,6 +58,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Container withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +67,11 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ContainerStatusEnum status;
+
     public Container withStatus(ContainerStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Container(){}
 }

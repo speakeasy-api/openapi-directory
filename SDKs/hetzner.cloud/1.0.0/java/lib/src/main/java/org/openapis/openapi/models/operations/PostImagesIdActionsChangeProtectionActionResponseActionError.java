@@ -15,6 +15,7 @@ public class PostImagesIdActionsChangeProtectionActionResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostImagesIdActionsChangeProtectionActionResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostImagesIdActionsChangeProtectionActionResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostImagesIdActionsChangeProtectionActionResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostImagesIdActionsChangeProtectionActionResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

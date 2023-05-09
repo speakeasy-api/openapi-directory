@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetByIdGetById {
     @JsonProperty("address")
     public GetByIdGetByIdAddress4 address;
+
     public GetByIdGetById withAddress(GetByIdGetByIdAddress4 address) {
         this.address = address;
         return this;
@@ -16,6 +17,7 @@ public class GetByIdGetById {
     
     @JsonProperty("businessHours")
     public GetByIdGetByIdBusinessHour[] businessHours;
+
     public GetByIdGetById withBusinessHours(GetByIdGetByIdBusinessHour[] businessHours) {
         this.businessHours = businessHours;
         return this;
@@ -23,6 +25,7 @@ public class GetByIdGetById {
     
     @JsonProperty("description")
     public String description;
+
     public GetByIdGetById withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +33,7 @@ public class GetByIdGetById {
     
     @JsonProperty("formatted_address")
     public String formattedAddress;
+
     public GetByIdGetById withFormattedAddress(String formattedAddress) {
         this.formattedAddress = formattedAddress;
         return this;
@@ -37,6 +41,7 @@ public class GetByIdGetById {
     
     @JsonProperty("id")
     public String id;
+
     public GetByIdGetById withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +49,7 @@ public class GetByIdGetById {
     
     @JsonProperty("instructions")
     public String instructions;
+
     public GetByIdGetById withInstructions(String instructions) {
         this.instructions = instructions;
         return this;
@@ -51,6 +57,7 @@ public class GetByIdGetById {
     
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public GetByIdGetById withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -58,6 +65,7 @@ public class GetByIdGetById {
     
     @JsonProperty("name")
     public String name;
+
     public GetByIdGetById withName(String name) {
         this.name = name;
         return this;
@@ -65,9 +73,21 @@ public class GetByIdGetById {
     
     @JsonProperty("warehouseId")
     public String warehouseId;
+
     public GetByIdGetById withWarehouseId(String warehouseId) {
         this.warehouseId = warehouseId;
         return this;
     }
     
+    public GetByIdGetById(@JsonProperty("address") GetByIdGetByIdAddress4 address, @JsonProperty("businessHours") GetByIdGetByIdBusinessHour[] businessHours, @JsonProperty("description") String description, @JsonProperty("formatted_address") String formattedAddress, @JsonProperty("id") String id, @JsonProperty("instructions") String instructions, @JsonProperty("isActive") Boolean isActive, @JsonProperty("name") String name, @JsonProperty("warehouseId") String warehouseId) {
+        this.address = address;
+        this.businessHours = businessHours;
+        this.description = description;
+        this.formattedAddress = formattedAddress;
+        this.id = id;
+        this.instructions = instructions;
+        this.isActive = isActive;
+        this.name = name;
+        this.warehouseId = warehouseId;
+  }
 }

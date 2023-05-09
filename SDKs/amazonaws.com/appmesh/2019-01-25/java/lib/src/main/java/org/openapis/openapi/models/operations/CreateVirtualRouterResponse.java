@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVirtualRouterResponse {
@@ -12,6 +13,7 @@ public class CreateVirtualRouterResponse {
      */
     
     public Object badRequestException;
+
     public CreateVirtualRouterResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateVirtualRouterResponse {
      */
     
     public Object conflictException;
+
     public CreateVirtualRouterResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateVirtualRouterResponse {
     
     
     public String contentType;
+
     public CreateVirtualRouterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateVirtualRouterResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateVirtualRouterOutput createVirtualRouterOutput;
+
     public CreateVirtualRouterResponse withCreateVirtualRouterOutput(org.openapis.openapi.models.shared.CreateVirtualRouterOutput createVirtualRouterOutput) {
         this.createVirtualRouterOutput = createVirtualRouterOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateVirtualRouterResponse {
      */
     
     public Object forbiddenException;
+
     public CreateVirtualRouterResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateVirtualRouterResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateVirtualRouterResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CreateVirtualRouterResponse {
      */
     
     public Object limitExceededException;
+
     public CreateVirtualRouterResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CreateVirtualRouterResponse {
      */
     
     public Object notFoundException;
+
     public CreateVirtualRouterResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class CreateVirtualRouterResponse {
     
     
     public Integer statusCode;
+
     public CreateVirtualRouterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateVirtualRouterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVirtualRouterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class CreateVirtualRouterResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateVirtualRouterResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class CreateVirtualRouterResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateVirtualRouterResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateVirtualRouterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

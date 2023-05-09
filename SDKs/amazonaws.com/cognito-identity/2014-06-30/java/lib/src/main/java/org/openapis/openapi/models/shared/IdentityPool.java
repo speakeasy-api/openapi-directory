@@ -15,6 +15,7 @@ public class IdentityPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowClassicFlow")
     public Boolean allowClassicFlow;
+
     public IdentityPool withAllowClassicFlow(Boolean allowClassicFlow) {
         this.allowClassicFlow = allowClassicFlow;
         return this;
@@ -22,6 +23,7 @@ public class IdentityPool {
     
     @JsonProperty("AllowUnauthenticatedIdentities")
     public Boolean allowUnauthenticatedIdentities;
+
     public IdentityPool withAllowUnauthenticatedIdentities(Boolean allowUnauthenticatedIdentities) {
         this.allowUnauthenticatedIdentities = allowUnauthenticatedIdentities;
         return this;
@@ -30,6 +32,7 @@ public class IdentityPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CognitoIdentityProviders")
     public CognitoIdentityProvider[] cognitoIdentityProviders;
+
     public IdentityPool withCognitoIdentityProviders(CognitoIdentityProvider[] cognitoIdentityProviders) {
         this.cognitoIdentityProviders = cognitoIdentityProviders;
         return this;
@@ -38,6 +41,7 @@ public class IdentityPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeveloperProviderName")
     public String developerProviderName;
+
     public IdentityPool withDeveloperProviderName(String developerProviderName) {
         this.developerProviderName = developerProviderName;
         return this;
@@ -45,6 +49,7 @@ public class IdentityPool {
     
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public IdentityPool withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -52,6 +57,7 @@ public class IdentityPool {
     
     @JsonProperty("IdentityPoolName")
     public String identityPoolName;
+
     public IdentityPool withIdentityPoolName(String identityPoolName) {
         this.identityPoolName = identityPoolName;
         return this;
@@ -60,6 +66,7 @@ public class IdentityPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityPoolTags")
     public java.util.Map<String, String> identityPoolTags;
+
     public IdentityPool withIdentityPoolTags(java.util.Map<String, String> identityPoolTags) {
         this.identityPoolTags = identityPoolTags;
         return this;
@@ -68,6 +75,7 @@ public class IdentityPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenIdConnectProviderARNs")
     public String[] openIdConnectProviderARNs;
+
     public IdentityPool withOpenIdConnectProviderARNs(String[] openIdConnectProviderARNs) {
         this.openIdConnectProviderARNs = openIdConnectProviderARNs;
         return this;
@@ -76,6 +84,7 @@ public class IdentityPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SamlProviderARNs")
     public String[] samlProviderARNs;
+
     public IdentityPool withSamlProviderARNs(String[] samlProviderARNs) {
         this.samlProviderARNs = samlProviderARNs;
         return this;
@@ -84,9 +93,15 @@ public class IdentityPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedLoginProviders")
     public java.util.Map<String, String> supportedLoginProviders;
+
     public IdentityPool withSupportedLoginProviders(java.util.Map<String, String> supportedLoginProviders) {
         this.supportedLoginProviders = supportedLoginProviders;
         return this;
     }
     
+    public IdentityPool(@JsonProperty("AllowUnauthenticatedIdentities") Boolean allowUnauthenticatedIdentities, @JsonProperty("IdentityPoolId") String identityPoolId, @JsonProperty("IdentityPoolName") String identityPoolName) {
+        this.allowUnauthenticatedIdentities = allowUnauthenticatedIdentities;
+        this.identityPoolId = identityPoolId;
+        this.identityPoolName = identityPoolName;
+  }
 }

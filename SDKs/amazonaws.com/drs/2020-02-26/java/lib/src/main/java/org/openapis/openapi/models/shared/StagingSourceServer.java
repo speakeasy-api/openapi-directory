@@ -15,6 +15,7 @@ public class StagingSourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public StagingSourceServer withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class StagingSourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public StagingSourceServer withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -31,9 +33,11 @@ public class StagingSourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StagingSourceServer withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StagingSourceServer(){}
 }

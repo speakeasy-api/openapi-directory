@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClipResponse {
@@ -12,6 +13,7 @@ public class GetClipResponse {
      */
     
     public Object clientLimitExceededException;
+
     public GetClipResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class GetClipResponse {
     
     
     public String contentType;
+
     public GetClipResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetClipResponse {
      */
     
     public org.openapis.openapi.models.shared.GetClipOutput getClipOutput;
+
     public GetClipResponse withGetClipOutput(org.openapis.openapi.models.shared.GetClipOutput getClipOutput) {
         this.getClipOutput = getClipOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetClipResponse {
      */
     
     public Object invalidArgumentException;
+
     public GetClipResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class GetClipResponse {
      */
     
     public Object invalidCodecPrivateDataException;
+
     public GetClipResponse withInvalidCodecPrivateDataException(Object invalidCodecPrivateDataException) {
         this.invalidCodecPrivateDataException = invalidCodecPrivateDataException;
         return this;
@@ -59,6 +65,7 @@ public class GetClipResponse {
      */
     
     public Object invalidMediaFrameException;
+
     public GetClipResponse withInvalidMediaFrameException(Object invalidMediaFrameException) {
         this.invalidMediaFrameException = invalidMediaFrameException;
         return this;
@@ -69,6 +76,7 @@ public class GetClipResponse {
      */
     
     public Object missingCodecPrivateDataException;
+
     public GetClipResponse withMissingCodecPrivateDataException(Object missingCodecPrivateDataException) {
         this.missingCodecPrivateDataException = missingCodecPrivateDataException;
         return this;
@@ -79,6 +87,7 @@ public class GetClipResponse {
      */
     
     public Object noDataRetentionException;
+
     public GetClipResponse withNoDataRetentionException(Object noDataRetentionException) {
         this.noDataRetentionException = noDataRetentionException;
         return this;
@@ -89,6 +98,7 @@ public class GetClipResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetClipResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -99,6 +109,7 @@ public class GetClipResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetClipResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -106,6 +117,7 @@ public class GetClipResponse {
     
     
     public Integer statusCode;
+
     public GetClipResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class GetClipResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClipResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,9 +136,14 @@ public class GetClipResponse {
      */
     
     public Object unsupportedStreamMediaTypeException;
+
     public GetClipResponse withUnsupportedStreamMediaTypeException(Object unsupportedStreamMediaTypeException) {
         this.unsupportedStreamMediaTypeException = unsupportedStreamMediaTypeException;
         return this;
     }
     
+    public GetClipResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

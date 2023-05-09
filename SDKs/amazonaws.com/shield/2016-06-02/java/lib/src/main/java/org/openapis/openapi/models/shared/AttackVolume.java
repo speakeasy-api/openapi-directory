@@ -15,6 +15,7 @@ public class AttackVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BitsPerSecond")
     public AttackVolumeStatistics bitsPerSecond;
+
     public AttackVolume withBitsPerSecond(AttackVolumeStatistics bitsPerSecond) {
         this.bitsPerSecond = bitsPerSecond;
         return this;
@@ -23,6 +24,7 @@ public class AttackVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PacketsPerSecond")
     public AttackVolumeStatistics packetsPerSecond;
+
     public AttackVolume withPacketsPerSecond(AttackVolumeStatistics packetsPerSecond) {
         this.packetsPerSecond = packetsPerSecond;
         return this;
@@ -31,9 +33,11 @@ public class AttackVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestsPerSecond")
     public AttackVolumeStatistics requestsPerSecond;
+
     public AttackVolume withRequestsPerSecond(AttackVolumeStatistics requestsPerSecond) {
         this.requestsPerSecond = requestsPerSecond;
         return this;
     }
     
+    public AttackVolume(){}
 }

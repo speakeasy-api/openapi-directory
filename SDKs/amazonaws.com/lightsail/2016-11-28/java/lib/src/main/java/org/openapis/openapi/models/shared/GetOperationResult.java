@@ -15,9 +15,11 @@ public class GetOperationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public GetOperationResult withOperation(Operation operation) {
         this.operation = operation;
         return this;
     }
     
+    public GetOperationResult(){}
 }

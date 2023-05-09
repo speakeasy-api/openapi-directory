@@ -20,6 +20,7 @@ public class About {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiReleaseDateIso8601")
     public String apiReleaseDateIso8601;
+
     public About withApiReleaseDateIso8601(String apiReleaseDateIso8601) {
         this.apiReleaseDateIso8601 = apiReleaseDateIso8601;
         return this;
@@ -28,6 +29,7 @@ public class About {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public AboutApiVersion apiVersion;
+
     public About withApiVersion(AboutApiVersion apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -44,9 +46,11 @@ public class About {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableLanguagesIso639_1")
     public String availableLanguagesIso6391;
+
     public About withAvailableLanguagesIso6391(String availableLanguagesIso6391) {
         this.availableLanguagesIso6391 = availableLanguagesIso6391;
         return this;
     }
     
+    public About(){}
 }

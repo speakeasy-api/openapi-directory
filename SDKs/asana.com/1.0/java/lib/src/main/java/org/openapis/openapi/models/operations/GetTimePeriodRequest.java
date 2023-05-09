@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTimePeriodRequest {
@@ -14,6 +15,7 @@ public class GetTimePeriodRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetTimePeriodRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -25,6 +27,7 @@ public class GetTimePeriodRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetTimePeriodRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -35,9 +38,13 @@ public class GetTimePeriodRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=time_period_gid")
     public String timePeriodGid;
+
     public GetTimePeriodRequest withTimePeriodGid(String timePeriodGid) {
         this.timePeriodGid = timePeriodGid;
         return this;
     }
     
+    public GetTimePeriodRequest(@JsonProperty("time_period_gid") String timePeriodGid) {
+        this.timePeriodGid = timePeriodGid;
+  }
 }

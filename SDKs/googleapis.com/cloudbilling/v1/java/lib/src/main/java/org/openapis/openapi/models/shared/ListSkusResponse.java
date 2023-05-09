@@ -18,6 +18,7 @@ public class ListSkusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSkusResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListSkusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skus")
     public Sku[] skus;
+
     public ListSkusResponse withSkus(Sku[] skus) {
         this.skus = skus;
         return this;
     }
     
+    public ListSkusResponse(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TypedLinkFacetAttributeUpdate {
     @JsonProperty("Action")
     public UpdateActionTypeEnum action;
+
     public TypedLinkFacetAttributeUpdate withAction(UpdateActionTypeEnum action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class TypedLinkFacetAttributeUpdate {
     
     @JsonProperty("Attribute")
     public TypedLinkAttributeDefinition attribute;
+
     public TypedLinkFacetAttributeUpdate withAttribute(TypedLinkAttributeDefinition attribute) {
         this.attribute = attribute;
         return this;
     }
     
+    public TypedLinkFacetAttributeUpdate(@JsonProperty("Action") UpdateActionTypeEnum action, @JsonProperty("Attribute") TypedLinkAttributeDefinition attribute) {
+        this.action = action;
+        this.attribute = attribute;
+  }
 }

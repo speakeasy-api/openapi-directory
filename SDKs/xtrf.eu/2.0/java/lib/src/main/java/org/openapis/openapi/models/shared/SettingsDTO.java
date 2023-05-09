@@ -15,6 +15,7 @@ public class SettingsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("local")
     public LocalSettingsDTO local;
+
     public SettingsDTO withLocal(LocalSettingsDTO local) {
         this.local = local;
         return this;
@@ -23,9 +24,11 @@ public class SettingsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SettingsDTO withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SettingsDTO(){}
 }

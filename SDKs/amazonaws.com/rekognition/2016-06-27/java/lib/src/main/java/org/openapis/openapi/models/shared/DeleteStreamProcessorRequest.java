@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteStreamProcessorRequest {
     @JsonProperty("Name")
     public String name;
+
     public DeleteStreamProcessorRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteStreamProcessorRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

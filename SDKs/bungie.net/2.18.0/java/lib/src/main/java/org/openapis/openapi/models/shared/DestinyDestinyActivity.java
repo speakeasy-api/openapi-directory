@@ -16,6 +16,7 @@ public class DestinyDestinyActivity {
      */
     
     public Long activityHash;
+
     public DestinyDestinyActivity withActivityHash(Long activityHash) {
         this.activityHash = activityHash;
         return this;
@@ -29,6 +30,7 @@ public class DestinyDestinyActivity {
      */
     
     public java.util.Map<String, Boolean> booleanActivityOptions;
+
     public DestinyDestinyActivity withBooleanActivityOptions(java.util.Map<String, Boolean> booleanActivityOptions) {
         this.booleanActivityOptions = booleanActivityOptions;
         return this;
@@ -39,6 +41,7 @@ public class DestinyDestinyActivity {
      */
     
     public Boolean canJoin;
+
     public DestinyDestinyActivity withCanJoin(Boolean canJoin) {
         this.canJoin = canJoin;
         return this;
@@ -49,6 +52,7 @@ public class DestinyDestinyActivity {
      */
     
     public Boolean canLead;
+
     public DestinyDestinyActivity withCanLead(Boolean canLead) {
         this.canLead = canLead;
         return this;
@@ -56,6 +60,7 @@ public class DestinyDestinyActivity {
     
     
     public DestinyChallengesDestinyChallengeStatus[] challenges;
+
     public DestinyDestinyActivity withChallenges(DestinyChallengesDestinyChallengeStatus[] challenges) {
         this.challenges = challenges;
         return this;
@@ -66,6 +71,7 @@ public class DestinyDestinyActivity {
      */
     
     public Integer difficultyTier;
+
     public DestinyDestinyActivity withDifficultyTier(Integer difficultyTier) {
         this.difficultyTier = difficultyTier;
         return this;
@@ -76,6 +82,7 @@ public class DestinyDestinyActivity {
      */
     
     public Integer displayLevel;
+
     public DestinyDestinyActivity withDisplayLevel(Integer displayLevel) {
         this.displayLevel = displayLevel;
         return this;
@@ -86,6 +93,7 @@ public class DestinyDestinyActivity {
      */
     
     public Boolean isCompleted;
+
     public DestinyDestinyActivity withIsCompleted(Boolean isCompleted) {
         this.isCompleted = isCompleted;
         return this;
@@ -96,6 +104,7 @@ public class DestinyDestinyActivity {
      */
     
     public Boolean isNew;
+
     public DestinyDestinyActivity withIsNew(Boolean isNew) {
         this.isNew = isNew;
         return this;
@@ -106,6 +115,7 @@ public class DestinyDestinyActivity {
      */
     
     public Boolean isVisible;
+
     public DestinyDestinyActivity withIsVisible(Boolean isVisible) {
         this.isVisible = isVisible;
         return this;
@@ -116,6 +126,7 @@ public class DestinyDestinyActivity {
      */
     
     public Integer loadoutRequirementIndex;
+
     public DestinyDestinyActivity withLoadoutRequirementIndex(Integer loadoutRequirementIndex) {
         this.loadoutRequirementIndex = loadoutRequirementIndex;
         return this;
@@ -127,6 +138,7 @@ public class DestinyDestinyActivity {
      */
     
     public Long[] modifierHashes;
+
     public DestinyDestinyActivity withModifierHashes(Long[] modifierHashes) {
         this.modifierHashes = modifierHashes;
         return this;
@@ -137,9 +149,11 @@ public class DestinyDestinyActivity {
      */
     
     public Integer recommendedLight;
+
     public DestinyDestinyActivity withRecommendedLight(Integer recommendedLight) {
         this.recommendedLight = recommendedLight;
         return this;
     }
     
+    public DestinyDestinyActivity(){}
 }

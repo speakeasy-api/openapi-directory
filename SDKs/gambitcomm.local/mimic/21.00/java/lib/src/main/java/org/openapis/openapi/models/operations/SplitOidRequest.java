@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SplitOidRequest {
@@ -12,6 +13,7 @@ public class SplitOidRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=OID")
     public String oid;
+
     public SplitOidRequest withOid(String oid) {
         this.oid = oid;
         return this;
@@ -22,9 +24,14 @@ public class SplitOidRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SplitOidRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
     }
     
+    public SplitOidRequest(@JsonProperty("OID") String oid, @JsonProperty("agentNum") Integer agentNum) {
+        this.oid = oid;
+        this.agentNum = agentNum;
+  }
 }

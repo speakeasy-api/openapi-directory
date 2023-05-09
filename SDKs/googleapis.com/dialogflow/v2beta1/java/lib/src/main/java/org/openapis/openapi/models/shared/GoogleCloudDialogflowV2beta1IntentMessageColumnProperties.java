@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageColumnProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public String header;
+
     public GoogleCloudDialogflowV2beta1IntentMessageColumnProperties withHeader(String header) {
         this.header = header;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageColumnProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("horizontalAlignment")
     public GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignmentEnum horizontalAlignment;
+
     public GoogleCloudDialogflowV2beta1IntentMessageColumnProperties withHorizontalAlignment(GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignmentEnum horizontalAlignment) {
         this.horizontalAlignment = horizontalAlignment;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageColumnProperties(){}
 }

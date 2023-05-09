@@ -12,6 +12,7 @@ public class News200ApplicationJSONEntries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guidislink")
     public String guidislink;
+
     public News200ApplicationJSONEntries withGuidislink(String guidislink) {
         this.guidislink = guidislink;
         return this;
@@ -20,6 +21,7 @@ public class News200ApplicationJSONEntries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public News200ApplicationJSONEntries withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class News200ApplicationJSONEntries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public News200ApplicationJSONEntries withLink(String link) {
         this.link = link;
         return this;
@@ -36,6 +39,7 @@ public class News200ApplicationJSONEntries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public String links;
+
     public News200ApplicationJSONEntries withLinks(String links) {
         this.links = links;
         return this;
@@ -44,6 +48,7 @@ public class News200ApplicationJSONEntries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published")
     public String published;
+
     public News200ApplicationJSONEntries withPublished(String published) {
         this.published = published;
         return this;
@@ -52,6 +57,7 @@ public class News200ApplicationJSONEntries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published_parsed")
     public String publishedParsed;
+
     public News200ApplicationJSONEntries withPublishedParsed(String publishedParsed) {
         this.publishedParsed = publishedParsed;
         return this;
@@ -60,6 +66,7 @@ public class News200ApplicationJSONEntries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public News200ApplicationJSONEntries withSource(String source) {
         this.source = source;
         return this;
@@ -68,6 +75,7 @@ public class News200ApplicationJSONEntries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_articles")
     public String subArticles;
+
     public News200ApplicationJSONEntries withSubArticles(String subArticles) {
         this.subArticles = subArticles;
         return this;
@@ -76,6 +84,7 @@ public class News200ApplicationJSONEntries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public News200ApplicationJSONEntries withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -84,6 +93,7 @@ public class News200ApplicationJSONEntries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary_detail")
     public String summaryDetail;
+
     public News200ApplicationJSONEntries withSummaryDetail(String summaryDetail) {
         this.summaryDetail = summaryDetail;
         return this;
@@ -92,6 +102,7 @@ public class News200ApplicationJSONEntries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public News200ApplicationJSONEntries withTitle(String title) {
         this.title = title;
         return this;
@@ -100,9 +111,11 @@ public class News200ApplicationJSONEntries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title_detail")
     public String titleDetail;
+
     public News200ApplicationJSONEntries withTitleDetail(String titleDetail) {
         this.titleDetail = titleDetail;
         return this;
     }
     
+    public News200ApplicationJSONEntries(){}
 }

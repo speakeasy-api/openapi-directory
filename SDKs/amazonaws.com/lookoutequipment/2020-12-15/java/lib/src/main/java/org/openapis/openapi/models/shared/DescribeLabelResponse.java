@@ -22,6 +22,7 @@ public class DescribeLabelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DescribeLabelResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -32,6 +33,7 @@ public class DescribeLabelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public DescribeLabelResponse withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +42,7 @@ public class DescribeLabelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Equipment")
     public String equipment;
+
     public DescribeLabelResponse withEquipment(String equipment) {
         this.equipment = equipment;
         return this;
@@ -48,6 +51,7 @@ public class DescribeLabelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaultCode")
     public String faultCode;
+
     public DescribeLabelResponse withFaultCode(String faultCode) {
         this.faultCode = faultCode;
         return this;
@@ -56,6 +60,7 @@ public class DescribeLabelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelGroupArn")
     public String labelGroupArn;
+
     public DescribeLabelResponse withLabelGroupArn(String labelGroupArn) {
         this.labelGroupArn = labelGroupArn;
         return this;
@@ -64,6 +69,7 @@ public class DescribeLabelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelGroupName")
     public String labelGroupName;
+
     public DescribeLabelResponse withLabelGroupName(String labelGroupName) {
         this.labelGroupName = labelGroupName;
         return this;
@@ -72,6 +78,7 @@ public class DescribeLabelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelId")
     public String labelId;
+
     public DescribeLabelResponse withLabelId(String labelId) {
         this.labelId = labelId;
         return this;
@@ -80,6 +87,7 @@ public class DescribeLabelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public DescribeLabelResponse withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -88,6 +96,7 @@ public class DescribeLabelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rating")
     public LabelRatingEnum rating;
+
     public DescribeLabelResponse withRating(LabelRatingEnum rating) {
         this.rating = rating;
         return this;
@@ -98,9 +107,11 @@ public class DescribeLabelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public DescribeLabelResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DescribeLabelResponse(){}
 }

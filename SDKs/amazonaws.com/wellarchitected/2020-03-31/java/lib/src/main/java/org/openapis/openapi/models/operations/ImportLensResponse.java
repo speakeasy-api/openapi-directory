@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportLensResponse {
@@ -12,6 +13,7 @@ public class ImportLensResponse {
      */
     
     public Object accessDeniedException;
+
     public ImportLensResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ImportLensResponse {
      */
     
     public Object conflictException;
+
     public ImportLensResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ImportLensResponse {
     
     
     public String contentType;
+
     public ImportLensResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ImportLensResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportLensOutput importLensOutput;
+
     public ImportLensResponse withImportLensOutput(org.openapis.openapi.models.shared.ImportLensOutput importLensOutput) {
         this.importLensOutput = importLensOutput;
         return this;
@@ -49,6 +54,7 @@ public class ImportLensResponse {
      */
     
     public Object internalServerException;
+
     public ImportLensResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class ImportLensResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ImportLensResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ImportLensResponse {
     
     
     public Integer statusCode;
+
     public ImportLensResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ImportLensResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportLensResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ImportLensResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ImportLensResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class ImportLensResponse {
      */
     
     public Object throttlingException;
+
     public ImportLensResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ImportLensResponse {
      */
     
     public Object validationException;
+
     public ImportLensResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ImportLensResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

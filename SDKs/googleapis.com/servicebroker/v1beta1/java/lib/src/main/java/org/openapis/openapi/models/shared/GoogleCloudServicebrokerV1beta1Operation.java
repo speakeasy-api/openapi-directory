@@ -15,6 +15,7 @@ public class GoogleCloudServicebrokerV1beta1Operation {
      */
     
     public String description;
+
     public GoogleCloudServicebrokerV1beta1Operation withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class GoogleCloudServicebrokerV1beta1Operation {
      */
     
     public String state;
+
     public GoogleCloudServicebrokerV1beta1Operation withState(String state) {
         this.state = state;
         return this;
     }
     
+    public GoogleCloudServicebrokerV1beta1Operation(){}
 }

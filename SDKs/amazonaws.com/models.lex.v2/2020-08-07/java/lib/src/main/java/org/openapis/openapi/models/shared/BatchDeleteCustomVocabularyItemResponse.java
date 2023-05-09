@@ -15,6 +15,7 @@ public class BatchDeleteCustomVocabularyItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public BatchDeleteCustomVocabularyItemResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -23,6 +24,7 @@ public class BatchDeleteCustomVocabularyItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public BatchDeleteCustomVocabularyItemResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -31,6 +33,7 @@ public class BatchDeleteCustomVocabularyItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public FailedCustomVocabularyItem[] errors;
+
     public BatchDeleteCustomVocabularyItemResponse withErrors(FailedCustomVocabularyItem[] errors) {
         this.errors = errors;
         return this;
@@ -39,6 +42,7 @@ public class BatchDeleteCustomVocabularyItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public BatchDeleteCustomVocabularyItemResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -47,9 +51,11 @@ public class BatchDeleteCustomVocabularyItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public CustomVocabularyItem[] resources;
+
     public BatchDeleteCustomVocabularyItemResponse withResources(CustomVocabularyItem[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public BatchDeleteCustomVocabularyItemResponse(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AddPermissionRequest - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AddPermissionRequest {
     
     public String[] awsAccountIds;
+
     public AddPermissionRequest withAWSAccountIds(String[] awsAccountIds) {
         this.awsAccountIds = awsAccountIds;
         return this;
@@ -19,6 +20,7 @@ public class AddPermissionRequest {
     
     
     public String[] actions;
+
     public AddPermissionRequest withActions(String[] actions) {
         this.actions = actions;
         return this;
@@ -26,6 +28,7 @@ public class AddPermissionRequest {
     
     
     public String label;
+
     public AddPermissionRequest withLabel(String label) {
         this.label = label;
         return this;
@@ -33,9 +36,16 @@ public class AddPermissionRequest {
     
     
     public String queueUrl;
+
     public AddPermissionRequest withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
     }
     
+    public AddPermissionRequest(@JsonProperty("AWSAccountIds") String[] awsAccountIds, @JsonProperty("Actions") String[] actions, @JsonProperty("Label") String label, @JsonProperty("QueueUrl") String queueUrl) {
+        this.awsAccountIds = awsAccountIds;
+        this.actions = actions;
+        this.label = label;
+        this.queueUrl = queueUrl;
+  }
 }

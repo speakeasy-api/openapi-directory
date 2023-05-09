@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfo {
     
     public String cidrBlock;
+
     public AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfo withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -19,6 +20,7 @@ public class AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInf
     
     
     public AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfoCidrBlockSet[] cidrBlockSet;
+
     public AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfo withCidrBlockSet(AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfoCidrBlockSet[] cidrBlockSet) {
         this.cidrBlockSet = cidrBlockSet;
         return this;
@@ -26,6 +28,7 @@ public class AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInf
     
     
     public AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfoIpv6CidrBlockSet[] ipv6CidrBlockSet;
+
     public AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfo withIpv6CidrBlockSet(AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfoIpv6CidrBlockSet[] ipv6CidrBlockSet) {
         this.ipv6CidrBlockSet = ipv6CidrBlockSet;
         return this;
@@ -33,6 +36,7 @@ public class AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInf
     
     
     public String ownerId;
+
     public AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfo withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -40,6 +44,7 @@ public class AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInf
     
     
     public AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfoPeeringOptions peeringOptions;
+
     public AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfo withPeeringOptions(AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfoPeeringOptions peeringOptions) {
         this.peeringOptions = peeringOptions;
         return this;
@@ -47,6 +52,7 @@ public class AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInf
     
     
     public String region;
+
     public AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfo withRegion(String region) {
         this.region = region;
         return this;
@@ -54,9 +60,11 @@ public class AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInf
     
     
     public String vpcId;
+
     public AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfo withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfo(){}
 }

@@ -23,6 +23,7 @@ public class TeamDrive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundImageFile")
     public TeamDriveBackgroundImageFile backgroundImageFile;
+
     public TeamDrive withBackgroundImageFile(TeamDriveBackgroundImageFile backgroundImageFile) {
         this.backgroundImageFile = backgroundImageFile;
         return this;
@@ -34,6 +35,7 @@ public class TeamDrive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundImageLink")
     public String backgroundImageLink;
+
     public TeamDrive withBackgroundImageLink(String backgroundImageLink) {
         this.backgroundImageLink = backgroundImageLink;
         return this;
@@ -45,6 +47,7 @@ public class TeamDrive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public TeamDriveCapabilities capabilities;
+
     public TeamDrive withCapabilities(TeamDriveCapabilities capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -56,6 +59,7 @@ public class TeamDrive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorRgb")
     public String colorRgb;
+
     public TeamDrive withColorRgb(String colorRgb) {
         this.colorRgb = colorRgb;
         return this;
@@ -69,6 +73,7 @@ public class TeamDrive {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public TeamDrive withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -80,6 +85,7 @@ public class TeamDrive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TeamDrive withId(String id) {
         this.id = id;
         return this;
@@ -91,6 +97,7 @@ public class TeamDrive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TeamDrive withKind(String kind) {
         this.kind = kind;
         return this;
@@ -102,6 +109,7 @@ public class TeamDrive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TeamDrive withName(String name) {
         this.name = name;
         return this;
@@ -113,6 +121,7 @@ public class TeamDrive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitId")
     public String orgUnitId;
+
     public TeamDrive withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
@@ -124,6 +133,7 @@ public class TeamDrive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictions")
     public TeamDriveRestrictions restrictions;
+
     public TeamDrive withRestrictions(TeamDriveRestrictions restrictions) {
         this.restrictions = restrictions;
         return this;
@@ -135,9 +145,11 @@ public class TeamDrive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("themeId")
     public String themeId;
+
     public TeamDrive withThemeId(String themeId) {
         this.themeId = themeId;
         return this;
     }
     
+    public TeamDrive(){}
 }

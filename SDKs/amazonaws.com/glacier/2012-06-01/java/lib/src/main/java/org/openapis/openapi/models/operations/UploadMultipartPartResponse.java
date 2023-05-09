@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UploadMultipartPartResponse {
     
     public String contentType;
+
     public UploadMultipartPartResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UploadMultipartPartResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UploadMultipartPartResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class UploadMultipartPartResponse {
      */
     
     public Object missingParameterValueException;
+
     public UploadMultipartPartResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class UploadMultipartPartResponse {
      */
     
     public Object requestTimeoutException;
+
     public UploadMultipartPartResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class UploadMultipartPartResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UploadMultipartPartResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class UploadMultipartPartResponse {
     
     
     public Integer statusCode;
+
     public UploadMultipartPartResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UploadMultipartPartResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UploadMultipartPartResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UploadMultipartPartResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UploadMultipartPartResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class UploadMultipartPartResponse {
      */
     
     public java.util.Map<String, Object> uploadMultipartPartOutput;
+
     public UploadMultipartPartResponse withUploadMultipartPartOutput(java.util.Map<String, Object> uploadMultipartPartOutput) {
         this.uploadMultipartPartOutput = uploadMultipartPartOutput;
         return this;
     }
     
+    public UploadMultipartPartResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

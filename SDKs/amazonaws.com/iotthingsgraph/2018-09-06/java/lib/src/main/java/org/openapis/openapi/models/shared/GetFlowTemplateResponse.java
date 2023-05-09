@@ -15,9 +15,11 @@ public class GetFlowTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public FlowTemplateDescription description;
+
     public GetFlowTemplateResponse withDescription(FlowTemplateDescription description) {
         this.description = description;
         return this;
     }
     
+    public GetFlowTemplateResponse(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListNetworkProfilesRequest {
     @JsonProperty("arn")
     public String arn;
+
     public ListNetworkProfilesRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class ListNetworkProfilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListNetworkProfilesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListNetworkProfilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public NetworkProfileTypeEnum type;
+
     public ListNetworkProfilesRequest withType(NetworkProfileTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListNetworkProfilesRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

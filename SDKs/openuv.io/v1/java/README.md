@@ -15,8 +15,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 ```java
 package hello.world;
 
+import java.time.OffsetDateTime;
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetForecastRequest;
 import org.openapis.openapi.models.operations.GetForecastResponse;
 
@@ -26,34 +26,33 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetForecastRequest req = new GetForecastRequest() {{
+            GetForecastRequest req = new GetForecastRequest(78.67, 115.67, "corrupti") {{
                 alt = 1050;
-                dt = "2018-02-04T04:39:06.467Z";
-                lat = 78.67;
-                lng = 115.67;
+                dt = OffsetDateTime.parse("2018-02-04T04:39:06.467Z");
                 ozone = 304.5;
-                xAccessToken = "corrupti";
-            }}            
+            }};            
 
             GetForecastResponse res = sdk.getForecast(req);
 
-            if (res.forecastResults.isPresent()) {
+            if (res.forecastResults != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getForecast` - Get hourly UV Index Forecast by location and date. Optional altitude, ozone level and datetime could be provided.
-* `getProtection` - Get daily protection time by location, UV Index from and UV Index to with 10 minutes accuracy. Optional altitide and ozone level could be provided.
-* `getUv` - Get real-time UV Index by location. Optional altitude, ozone level and datetime could be provided.
+* [getForecast](docs/sdk/README.md#getforecast) - Get hourly UV Index Forecast by location and date. Optional altitude, ozone level and datetime could be provided.
+* [getProtection](docs/sdk/README.md#getprotection) - Get daily protection time by location, UV Index from and UV Index to with 10 minutes accuracy. Optional altitide and ozone level could be provided.
+* [getUv](docs/sdk/README.md#getuv) - Get real-time UV Index by location. Optional altitude, ozone level and datetime could be provided.
 <!-- End SDK Available Operations -->
 
 ### Maturity

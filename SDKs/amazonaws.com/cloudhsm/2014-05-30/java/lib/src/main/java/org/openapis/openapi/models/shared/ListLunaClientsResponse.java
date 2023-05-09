@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListLunaClientsResponse {
     @JsonProperty("ClientList")
     public String[] clientList;
+
     public ListLunaClientsResponse withClientList(String[] clientList) {
         this.clientList = clientList;
         return this;
@@ -22,9 +23,13 @@ public class ListLunaClientsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLunaClientsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLunaClientsResponse(@JsonProperty("ClientList") String[] clientList) {
+        this.clientList = clientList;
+  }
 }

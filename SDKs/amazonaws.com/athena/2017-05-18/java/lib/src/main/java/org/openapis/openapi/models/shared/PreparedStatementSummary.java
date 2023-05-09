@@ -22,6 +22,7 @@ public class PreparedStatementSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public PreparedStatementSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -30,9 +31,11 @@ public class PreparedStatementSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatementName")
     public String statementName;
+
     public PreparedStatementSummary withStatementName(String statementName) {
         this.statementName = statementName;
         return this;
     }
     
+    public PreparedStatementSummary(){}
 }

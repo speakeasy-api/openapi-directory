@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CloudWatchLogOptionsSpecification {
     
     public Boolean logEnabled;
+
     public CloudWatchLogOptionsSpecification withLogEnabled(Boolean logEnabled) {
         this.logEnabled = logEnabled;
         return this;
@@ -19,6 +20,7 @@ public class CloudWatchLogOptionsSpecification {
     
     
     public String logGroupArn;
+
     public CloudWatchLogOptionsSpecification withLogGroupArn(String logGroupArn) {
         this.logGroupArn = logGroupArn;
         return this;
@@ -26,9 +28,11 @@ public class CloudWatchLogOptionsSpecification {
     
     
     public String logOutputFormat;
+
     public CloudWatchLogOptionsSpecification withLogOutputFormat(String logOutputFormat) {
         this.logOutputFormat = logOutputFormat;
         return this;
     }
     
+    public CloudWatchLogOptionsSpecification(){}
 }

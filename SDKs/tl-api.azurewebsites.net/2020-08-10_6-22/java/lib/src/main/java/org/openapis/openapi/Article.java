@@ -57,12 +57,10 @@ public class Article {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleAddMeasureUnitResponse res = new org.openapis.openapi.models.operations.ArticleAddMeasureUnitResponse() {{
+        org.openapis.openapi.models.operations.ArticleAddMeasureUnitResponse res = new org.openapis.openapi.models.operations.ArticleAddMeasureUnitResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfStatusDTO = null;
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -110,12 +108,10 @@ public class Article {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleDeleteResponse res = new org.openapis.openapi.models.operations.ArticleDeleteResponse() {{
+        org.openapis.openapi.models.operations.ArticleDeleteResponse res = new org.openapis.openapi.models.operations.ArticleDeleteResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfInteger = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -157,12 +153,10 @@ public class Article {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGetAddonsResponse res = new org.openapis.openapi.models.operations.ArticleGetAddonsResponse() {{
+        org.openapis.openapi.models.operations.ArticleGetAddonsResponse res = new org.openapis.openapi.models.operations.ArticleGetAddonsResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfListOfArticleSearchDTO = null;
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -210,12 +204,10 @@ public class Article {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGetMeasureUnitsResponse res = new org.openapis.openapi.models.operations.ArticleGetMeasureUnitsResponse() {{
+        org.openapis.openapi.models.operations.ArticleGetMeasureUnitsResponse res = new org.openapis.openapi.models.operations.ArticleGetMeasureUnitsResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfStatusDTO = null;
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -256,12 +248,10 @@ public class Article {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGetRevenueAccountsResponse res = new org.openapis.openapi.models.operations.ArticleGetRevenueAccountsResponse() {{
+        org.openapis.openapi.models.operations.ArticleGetRevenueAccountsResponse res = new org.openapis.openapi.models.operations.ArticleGetRevenueAccountsResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfStatusDTO = null;
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -303,13 +293,11 @@ public class Article {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGymArticleDetailsResponse res = new org.openapis.openapi.models.operations.ArticleGymArticleDetailsResponse() {{
+        org.openapis.openapi.models.operations.ArticleGymArticleDetailsResponse res = new org.openapis.openapi.models.operations.ArticleGymArticleDetailsResponse(contentType, httpRes.statusCode()) {{
             gymArticleDetailsDTO = null;
             defaultResponseDTOOfListOfArticleSearchDTO = null;
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -363,12 +351,10 @@ public class Article {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticlePostResponse res = new org.openapis.openapi.models.operations.ArticlePostResponse() {{
+        org.openapis.openapi.models.operations.ArticlePostResponse res = new org.openapis.openapi.models.operations.ArticlePostResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfStatusDTO = null;
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -415,12 +401,10 @@ public class Article {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticlePutResponse res = new org.openapis.openapi.models.operations.ArticlePutResponse() {{
+        org.openapis.openapi.models.operations.ArticlePutResponse res = new org.openapis.openapi.models.operations.ArticlePutResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfStatusDTO = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -468,12 +452,10 @@ public class Article {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleSearchResponse res = new org.openapis.openapi.models.operations.ArticleSearchResponse() {{
+        org.openapis.openapi.models.operations.ArticleSearchResponse res = new org.openapis.openapi.models.operations.ArticleSearchResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfListOfArticleSearchDTO = null;
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -520,12 +502,10 @@ public class Article {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleUpdateArticleGymDetailsResponse res = new org.openapis.openapi.models.operations.ArticleUpdateArticleGymDetailsResponse() {{
+        org.openapis.openapi.models.operations.ArticleUpdateArticleGymDetailsResponse res = new org.openapis.openapi.models.operations.ArticleUpdateArticleGymDetailsResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfStatusDTO = null;
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -573,12 +553,10 @@ public class Article {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleUpdateStatusResponse res = new org.openapis.openapi.models.operations.ArticleUpdateStatusResponse() {{
+        org.openapis.openapi.models.operations.ArticleUpdateStatusResponse res = new org.openapis.openapi.models.operations.ArticleUpdateStatusResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfInteger = null;
             apiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -620,12 +598,10 @@ public class Article {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArticleGetResponse res = new org.openapis.openapi.models.operations.ArticleGetResponse() {{
+        org.openapis.openapi.models.operations.ArticleGetResponse res = new org.openapis.openapi.models.operations.ArticleGetResponse(contentType, httpRes.statusCode()) {{
             defaultResponseDTOOfArticleDTO = null;
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,9 +15,11 @@ public class AttachTypedLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypedLinkSpecifier")
     public TypedLinkSpecifier typedLinkSpecifier;
+
     public AttachTypedLinkResponse withTypedLinkSpecifier(TypedLinkSpecifier typedLinkSpecifier) {
         this.typedLinkSpecifier = typedLinkSpecifier;
         return this;
     }
     
+    public AttachTypedLinkResponse(){}
 }

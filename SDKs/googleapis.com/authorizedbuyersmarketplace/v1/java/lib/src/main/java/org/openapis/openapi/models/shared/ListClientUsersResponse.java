@@ -18,6 +18,7 @@ public class ListClientUsersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientUsers")
     public ClientUser[] clientUsers;
+
     public ListClientUsersResponse withClientUsers(ClientUser[] clientUsers) {
         this.clientUsers = clientUsers;
         return this;
@@ -29,9 +30,11 @@ public class ListClientUsersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListClientUsersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListClientUsersResponse(){}
 }

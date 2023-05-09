@@ -16,12 +16,11 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.YoutubereportingJobsCreateSecurityOption1;
-import org.openapis.openapi.models.operations.YoutubereportingJobsCreateSecurityOption2;
-import org.openapis.openapi.models.operations.YoutubereportingJobsCreateSecurity;
 import org.openapis.openapi.models.operations.YoutubereportingJobsCreateRequest;
 import org.openapis.openapi.models.operations.YoutubereportingJobsCreateResponse;
+import org.openapis.openapi.models.operations.YoutubereportingJobsCreateSecurity;
+import org.openapis.openapi.models.operations.YoutubereportingJobsCreateSecurityOption1;
+import org.openapis.openapi.models.operations.YoutubereportingJobsCreateSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.Job;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -33,41 +32,43 @@ public class Application {
                 .build();
 
             YoutubereportingJobsCreateRequest req = new YoutubereportingJobsCreateRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 job = new Job() {{
                     createTime = "provident";
                     expireTime = "distinctio";
-                    id = "quibusdam";
-                    name = "unde";
-                    reportTypeId = "nulla";
+                    id = "d9d8d69a-674e-40f4-a7cc-8796ed151a05";
+                    name = "Timmy Satterfield";
+                    reportTypeId = "at";
                     systemManaged = false;
-                }};
-                accessToken = "corrupti";
-                alt = "proto";
-                callback = "vel";
-                fields = "error";
-                key = "deserunt";
-                oauthToken = "suscipit";
-                onBehalfOfContentOwner = "iure";
+                }};;
+                accessToken = "maiores";
+                alt = AltEnum.MEDIA;
+                callback = "quod";
+                fields = "quod";
+                key = "esse";
+                oauthToken = "totam";
+                onBehalfOfContentOwner = "porro";
                 prettyPrint = false;
-                quotaUser = "magnam";
-                uploadType = "debitis";
-                uploadProtocol = "ipsa";
-            }}            
+                quotaUser = "dolorum";
+                uploadType = "dicta";
+                uploadProtocol = "nam";
+            }};            
 
             YoutubereportingJobsCreateResponse res = sdk.jobs.youtubereportingJobsCreate(req, new YoutubereportingJobsCreateSecurity() {{
-                option1 = new YoutubereportingJobsCreateSecurityOption1() {{
+                option1 = new YoutubereportingJobsCreateSecurityOption1("officia", "occaecati") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.job.isPresent()) {
+            if (res.job != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -75,22 +76,22 @@ public class Application {
 ## Available Resources and Operations
 
 
-### jobs
+### [jobs](docs/jobs/README.md)
 
-* `youtubereportingJobsCreate` - Creates a job and returns it.
-* `youtubereportingJobsDelete` - Deletes a job.
-* `youtubereportingJobsGet` - Gets a job.
-* `youtubereportingJobsList` - Lists jobs.
-* `youtubereportingJobsReportsGet` - Gets the metadata of a specific report.
-* `youtubereportingJobsReportsList` - Lists reports created by a specific job. Returns NOT_FOUND if the job does not exist.
+* [youtubereportingJobsCreate](docs/jobs/README.md#youtubereportingjobscreate) - Creates a job and returns it.
+* [youtubereportingJobsDelete](docs/jobs/README.md#youtubereportingjobsdelete) - Deletes a job.
+* [youtubereportingJobsGet](docs/jobs/README.md#youtubereportingjobsget) - Gets a job.
+* [youtubereportingJobsList](docs/jobs/README.md#youtubereportingjobslist) - Lists jobs.
+* [youtubereportingJobsReportsGet](docs/jobs/README.md#youtubereportingjobsreportsget) - Gets the metadata of a specific report.
+* [youtubereportingJobsReportsList](docs/jobs/README.md#youtubereportingjobsreportslist) - Lists reports created by a specific job. Returns NOT_FOUND if the job does not exist.
 
-### media
+### [media](docs/media/README.md)
 
-* `youtubereportingMediaDownload` - Method for media download. Download is supported on the URI `/v1/media/{+name}?alt=media`.
+* [youtubereportingMediaDownload](docs/media/README.md#youtubereportingmediadownload) - Method for media download. Download is supported on the URI `/v1/media/{+name}?alt=media`.
 
-### reportTypes
+### [reportTypes](docs/reporttypes/README.md)
 
-* `youtubereportingReportTypesList` - Lists report types.
+* [youtubereportingReportTypesList](docs/reporttypes/README.md#youtubereportingreporttypeslist) - Lists report types.
 <!-- End SDK Available Operations -->
 
 ### Maturity

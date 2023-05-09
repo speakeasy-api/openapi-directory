@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListSigningCertificatesRequest {
     
     public String marker;
+
     public ListSigningCertificatesRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class ListSigningCertificatesRequest {
     
     
     public Long maxItems;
+
     public ListSigningCertificatesRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -23,9 +25,11 @@ public class ListSigningCertificatesRequest {
     
     
     public String userName;
+
     public ListSigningCertificatesRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ListSigningCertificatesRequest(){}
 }

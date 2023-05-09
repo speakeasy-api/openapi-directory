@@ -18,9 +18,11 @@ public class PlaceOrderRequestBodySalesAssociateData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesAssociateId")
     public String salesAssociateId;
+
     public PlaceOrderRequestBodySalesAssociateData withSalesAssociateId(String salesAssociateId) {
         this.salesAssociateId = salesAssociateId;
         return this;
     }
     
+    public PlaceOrderRequestBodySalesAssociateData(){}
 }

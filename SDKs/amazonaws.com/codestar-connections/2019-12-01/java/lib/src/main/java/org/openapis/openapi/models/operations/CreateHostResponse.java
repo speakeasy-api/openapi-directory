@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateHostResponse {
     
     public String contentType;
+
     public CreateHostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateHostResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateHostOutput createHostOutput;
+
     public CreateHostResponse withCreateHostOutput(org.openapis.openapi.models.shared.CreateHostOutput createHostOutput) {
         this.createHostOutput = createHostOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateHostResponse {
      */
     
     public Object limitExceededException;
+
     public CreateHostResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -36,6 +40,7 @@ public class CreateHostResponse {
     
     
     public Integer statusCode;
+
     public CreateHostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateHostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateHostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateHostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

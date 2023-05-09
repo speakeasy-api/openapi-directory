@@ -15,6 +15,7 @@ public class SegmentDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, AttributeDimension> attributes;
+
     public SegmentDimensions withAttributes(java.util.Map<String, AttributeDimension> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class SegmentDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Behavior")
     public SegmentBehaviors behavior;
+
     public SegmentDimensions withBehavior(SegmentBehaviors behavior) {
         this.behavior = behavior;
         return this;
@@ -31,6 +33,7 @@ public class SegmentDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Demographic")
     public SegmentDemographics demographic;
+
     public SegmentDimensions withDemographic(SegmentDemographics demographic) {
         this.demographic = demographic;
         return this;
@@ -39,6 +42,7 @@ public class SegmentDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public SegmentLocation location;
+
     public SegmentDimensions withLocation(SegmentLocation location) {
         this.location = location;
         return this;
@@ -47,6 +51,7 @@ public class SegmentDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public java.util.Map<String, MetricDimension> metrics;
+
     public SegmentDimensions withMetrics(java.util.Map<String, MetricDimension> metrics) {
         this.metrics = metrics;
         return this;
@@ -55,9 +60,11 @@ public class SegmentDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserAttributes")
     public java.util.Map<String, AttributeDimension> userAttributes;
+
     public SegmentDimensions withUserAttributes(java.util.Map<String, AttributeDimension> userAttributes) {
         this.userAttributes = userAttributes;
         return this;
     }
     
+    public SegmentDimensions(){}
 }

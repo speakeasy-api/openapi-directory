@@ -12,6 +12,7 @@ public class GetActionsIdActionResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public GetActionsIdActionResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class GetActionsIdActionResponseAction {
      */
     @JsonProperty("error")
     public GetActionsIdActionResponseActionError error;
+
     public GetActionsIdActionResponseAction withError(GetActionsIdActionResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class GetActionsIdActionResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public GetActionsIdActionResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class GetActionsIdActionResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetActionsIdActionResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class GetActionsIdActionResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public GetActionsIdActionResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class GetActionsIdActionResponseAction {
      */
     @JsonProperty("resources")
     public GetActionsIdActionResponseActionResources[] resources;
+
     public GetActionsIdActionResponseAction withResources(GetActionsIdActionResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class GetActionsIdActionResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public GetActionsIdActionResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class GetActionsIdActionResponseAction {
      */
     @JsonProperty("status")
     public GetActionsIdActionResponseActionStatusEnum status;
+
     public GetActionsIdActionResponseAction withStatus(GetActionsIdActionResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetActionsIdActionResponseAction(@JsonProperty("command") String command, @JsonProperty("error") GetActionsIdActionResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") GetActionsIdActionResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") GetActionsIdActionResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

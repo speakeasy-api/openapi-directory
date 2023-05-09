@@ -18,6 +18,7 @@ public class ScheduleOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableAutoScheduling")
     public Boolean disableAutoScheduling;
+
     public ScheduleOptions withDisableAutoScheduling(Boolean disableAutoScheduling) {
         this.disableAutoScheduling = disableAutoScheduling;
         return this;
@@ -29,6 +30,7 @@ public class ScheduleOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public ScheduleOptions withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -40,9 +42,11 @@ public class ScheduleOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public ScheduleOptions withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ScheduleOptions(){}
 }

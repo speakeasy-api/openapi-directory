@@ -18,6 +18,7 @@ public class ContinuousProjectLanguageCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mt")
     public java.util.Map<String, String> mt;
+
     public ContinuousProjectLanguageCache withMt(java.util.Map<String, String> mt) {
         this.mt = mt;
         return this;
@@ -29,6 +30,7 @@ public class ContinuousProjectLanguageCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonparsed")
     public java.util.Map<String, String> nonparsed;
+
     public ContinuousProjectLanguageCache withNonparsed(java.util.Map<String, String> nonparsed) {
         this.nonparsed = nonparsed;
         return this;
@@ -40,9 +42,11 @@ public class ContinuousProjectLanguageCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tm")
     public java.util.Map<String, String> tm;
+
     public ContinuousProjectLanguageCache withTm(java.util.Map<String, String> tm) {
         this.tm = tm;
         return this;
     }
     
+    public ContinuousProjectLanguageCache(){}
 }

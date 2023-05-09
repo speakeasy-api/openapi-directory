@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeepLinksRequest {
@@ -12,6 +13,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public DeepLinksRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cabin-class")
     public String cabinClass;
+
     public DeepLinksRequest withCabinClass(String cabinClass) {
         this.cabinClass = cabinClass;
         return this;
@@ -32,6 +35,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
     public String catalogues;
+
     public DeepLinksRequest withCatalogues(String catalogues) {
         this.catalogues = catalogues;
         return this;
@@ -42,6 +46,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public DeepLinksRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -52,6 +57,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination")
     public String destination;
+
     public DeepLinksRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -62,6 +68,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination-name")
     public String destinationName;
+
     public DeepLinksRequest withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -72,6 +79,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=encryption-key")
     public String encryptionKey;
+
     public DeepLinksRequest withEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -82,6 +90,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fare")
     public String fare;
+
     public DeepLinksRequest withFare(String fare) {
         this.fare = fare;
         return this;
@@ -92,6 +101,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fare-currency")
     public String fareCurrency;
+
     public DeepLinksRequest withFareCurrency(String fareCurrency) {
         this.fareCurrency = fareCurrency;
         return this;
@@ -102,6 +112,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public DeepLinksRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -112,6 +123,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=net-fare")
     public String netFare;
+
     public DeepLinksRequest withNetFare(String netFare) {
         this.netFare = netFare;
         return this;
@@ -122,6 +134,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin")
     public String origin;
+
     public DeepLinksRequest withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -132,6 +145,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin-name")
     public String originName;
+
     public DeepLinksRequest withOriginName(String originName) {
         this.originName = originName;
         return this;
@@ -142,6 +156,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outbound-segments")
     public String outboundSegments;
+
     public DeepLinksRequest withOutboundSegments(String outboundSegments) {
         this.outboundSegments = outboundSegments;
         return this;
@@ -152,6 +167,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partnerid")
     public String partnerid;
+
     public DeepLinksRequest withPartnerid(String partnerid) {
         this.partnerid = partnerid;
         return this;
@@ -162,6 +178,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return-date")
     public String returnDate;
+
     public DeepLinksRequest withReturnDate(String returnDate) {
         this.returnDate = returnDate;
         return this;
@@ -172,6 +189,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return-segments")
     public String returnSegments;
+
     public DeepLinksRequest withReturnSegments(String returnSegments) {
         this.returnSegments = returnSegments;
         return this;
@@ -182,6 +200,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackingid")
     public String trackingid;
+
     public DeepLinksRequest withTrackingid(String trackingid) {
         this.trackingid = trackingid;
         return this;
@@ -192,6 +211,7 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travel-date")
     public String travelDate;
+
     public DeepLinksRequest withTravelDate(String travelDate) {
         this.travelDate = travelDate;
         return this;
@@ -202,9 +222,17 @@ public class DeepLinksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelers")
     public String travelers;
+
     public DeepLinksRequest withTravelers(String travelers) {
         this.travelers = travelers;
         return this;
     }
     
+    public DeepLinksRequest(@JsonProperty("Accept") String accept, @JsonProperty("catalogues") String catalogues, @JsonProperty("country") String country, @JsonProperty("lang") String lang, @JsonProperty("trackingid") String trackingid) {
+        this.accept = accept;
+        this.catalogues = catalogues;
+        this.country = country;
+        this.lang = lang;
+        this.trackingid = trackingid;
+  }
 }

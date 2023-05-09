@@ -18,9 +18,11 @@ public class DataprocParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public DataprocParameters withCluster(String cluster) {
         this.cluster = cluster;
         return this;
     }
     
+    public DataprocParameters(){}
 }

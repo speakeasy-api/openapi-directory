@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutRetentionPolicyRequest {
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public PutRetentionPolicyRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -19,9 +20,14 @@ public class PutRetentionPolicyRequest {
      */
     @JsonProperty("retentionInDays")
     public Long retentionInDays;
+
     public PutRetentionPolicyRequest withRetentionInDays(Long retentionInDays) {
         this.retentionInDays = retentionInDays;
         return this;
     }
     
+    public PutRetentionPolicyRequest(@JsonProperty("logGroupName") String logGroupName, @JsonProperty("retentionInDays") Long retentionInDays) {
+        this.logGroupName = logGroupName;
+        this.retentionInDays = retentionInDays;
+  }
 }

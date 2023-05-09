@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImagesFromUrlsFormRequest {
@@ -12,6 +13,7 @@ public class CreateImagesFromUrlsFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.ImageUrlCreateBatch imageUrlCreateBatch;
+
     public CreateImagesFromUrlsFormRequest withImageUrlCreateBatch(org.openapis.openapi.models.shared.ImageUrlCreateBatch imageUrlCreateBatch) {
         this.imageUrlCreateBatch = imageUrlCreateBatch;
         return this;
@@ -22,9 +24,14 @@ public class CreateImagesFromUrlsFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public CreateImagesFromUrlsFormRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public CreateImagesFromUrlsFormRequest(@JsonProperty("ImageUrlCreateBatch") org.openapis.openapi.models.shared.ImageUrlCreateBatch imageUrlCreateBatch, @JsonProperty("projectId") String projectId) {
+        this.imageUrlCreateBatch = imageUrlCreateBatch;
+        this.projectId = projectId;
+  }
 }

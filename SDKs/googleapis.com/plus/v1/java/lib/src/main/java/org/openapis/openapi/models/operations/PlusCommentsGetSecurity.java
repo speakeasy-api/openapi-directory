@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PlusCommentsGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public PlusCommentsGetSecurityOption1 option1;
+
     public PlusCommentsGetSecurity withOption1(PlusCommentsGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class PlusCommentsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public PlusCommentsGetSecurityOption2 option2;
+
     public PlusCommentsGetSecurity withOption2(PlusCommentsGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public PlusCommentsGetSecurity(){}
 }

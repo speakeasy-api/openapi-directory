@@ -12,6 +12,7 @@ public class DestinyComponentsCraftablesDestinyCraftablesComponent {
      */
     
     public java.util.Map<String, DestinyComponentsCraftablesDestinyCraftableComponent> craftables;
+
     public DestinyComponentsCraftablesDestinyCraftablesComponent withCraftables(java.util.Map<String, DestinyComponentsCraftablesDestinyCraftableComponent> craftables) {
         this.craftables = craftables;
         return this;
@@ -22,9 +23,11 @@ public class DestinyComponentsCraftablesDestinyCraftablesComponent {
      */
     
     public Long craftingRootNodeHash;
+
     public DestinyComponentsCraftablesDestinyCraftablesComponent withCraftingRootNodeHash(Long craftingRootNodeHash) {
         this.craftingRootNodeHash = craftingRootNodeHash;
         return this;
     }
     
+    public DestinyComponentsCraftablesDestinyCraftablesComponent(){}
 }

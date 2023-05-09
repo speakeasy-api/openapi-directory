@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpcEndpointResultVpcEndpointLastError {
     
     public String code;
+
     public CreateVpcEndpointResultVpcEndpointLastError withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class CreateVpcEndpointResultVpcEndpointLastError {
     
     
     public String message;
+
     public CreateVpcEndpointResultVpcEndpointLastError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateVpcEndpointResultVpcEndpointLastError(){}
 }

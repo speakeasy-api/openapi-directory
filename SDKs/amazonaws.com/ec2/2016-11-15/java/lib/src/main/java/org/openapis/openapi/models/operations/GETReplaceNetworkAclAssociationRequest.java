@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReplaceNetworkAclAssociationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETReplaceNetworkAclAssociationActionEnum action;
+
     public GETReplaceNetworkAclAssociationRequest withAction(GETReplaceNetworkAclAssociationActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETReplaceNetworkAclAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AssociationId")
     public String associationId;
+
     public GETReplaceNetworkAclAssociationRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -29,6 +32,7 @@ public class GETReplaceNetworkAclAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETReplaceNetworkAclAssociationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETReplaceNetworkAclAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkAclId")
     public String networkAclId;
+
     public GETReplaceNetworkAclAssociationRequest withNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
@@ -46,6 +51,7 @@ public class GETReplaceNetworkAclAssociationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETReplaceNetworkAclAssociationVersionEnum version;
+
     public GETReplaceNetworkAclAssociationRequest withVersion(GETReplaceNetworkAclAssociationVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETReplaceNetworkAclAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETReplaceNetworkAclAssociationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETReplaceNetworkAclAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETReplaceNetworkAclAssociationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETReplaceNetworkAclAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETReplaceNetworkAclAssociationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETReplaceNetworkAclAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETReplaceNetworkAclAssociationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETReplaceNetworkAclAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETReplaceNetworkAclAssociationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETReplaceNetworkAclAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETReplaceNetworkAclAssociationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETReplaceNetworkAclAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETReplaceNetworkAclAssociationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETReplaceNetworkAclAssociationRequest(@JsonProperty("Action") GETReplaceNetworkAclAssociationActionEnum action, @JsonProperty("AssociationId") String associationId, @JsonProperty("NetworkAclId") String networkAclId, @JsonProperty("Version") GETReplaceNetworkAclAssociationVersionEnum version) {
+        this.action = action;
+        this.associationId = associationId;
+        this.networkAclId = networkAclId;
+        this.version = version;
+  }
 }

@@ -23,6 +23,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLossOfReturnRight")
     public Boolean acceptLossOfReturnRight;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withAcceptLossOfReturnRight(Boolean acceptLossOfReturnRight) {
         this.acceptLossOfReturnRight = acceptLossOfReturnRight;
         return this;
@@ -31,6 +32,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdjustmentCost")
     public Double adjustmentCost;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withAdjustmentCost(Double adjustmentCost) {
         this.adjustmentCost = adjustmentCost;
         return this;
@@ -39,6 +41,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdjustmentReason")
     public String adjustmentReason;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withAdjustmentReason(String adjustmentReason) {
         this.adjustmentReason = adjustmentReason;
         return this;
@@ -50,6 +53,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiAccountId")
     public Long apiAccountId;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withApiAccountId(Long apiAccountId) {
         this.apiAccountId = apiAccountId;
         return this;
@@ -61,6 +65,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiAccountName")
     public String apiAccountName;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withApiAccountName(String apiAccountName) {
         this.apiAccountName = apiAccountName;
         return this;
@@ -74,6 +79,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ArchivedAt")
     public OffsetDateTime archivedAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withArchivedAt(OffsetDateTime archivedAt) {
         this.archivedAt = archivedAt;
         return this;
@@ -85,6 +91,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillBeeOrderId")
     public Long billBeeOrderId;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withBillBeeOrderId(Long billBeeOrderId) {
         this.billBeeOrderId = billBeeOrderId;
         return this;
@@ -96,6 +103,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillBeeParentOrderId")
     public Long billBeeParentOrderId;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withBillBeeParentOrderId(Long billBeeParentOrderId) {
         this.billBeeParentOrderId = billBeeParentOrderId;
         return this;
@@ -104,6 +112,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Buyer")
     public BillbeeInterfacesBillbeeAPIModelOrderUser buyer;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withBuyer(BillbeeInterfacesBillbeeAPIModelOrderUser buyer) {
         this.buyer = buyer;
         return this;
@@ -115,6 +124,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Comments")
     public BillbeeInterfacesBillbeeAPIModelCommentAPIModel[] comments;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withComments(BillbeeInterfacesBillbeeAPIModelCommentAPIModel[] comments) {
         this.comments = comments;
         return this;
@@ -128,6 +138,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ConfirmedAt")
     public OffsetDateTime confirmedAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withConfirmedAt(OffsetDateTime confirmedAt) {
         this.confirmedAt = confirmedAt;
         return this;
@@ -141,6 +152,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -152,6 +164,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Currency")
     public String currency;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -163,6 +176,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomInvoiceNote")
     public String customInvoiceNote;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withCustomInvoiceNote(String customInvoiceNote) {
         this.customInvoiceNote = customInvoiceNote;
         return this;
@@ -171,6 +185,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Customer")
     public BillbeeInterfacesBillbeeAPIModelCustomerAPIModel customer;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withCustomer(BillbeeInterfacesBillbeeAPIModelCustomerAPIModel customer) {
         this.customer = customer;
         return this;
@@ -182,6 +197,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerNumber")
     public String customerNumber;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withCustomerNumber(String customerNumber) {
         this.customerNumber = customerNumber;
         return this;
@@ -193,6 +209,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerVatId")
     public String customerVatId;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withCustomerVatId(String customerVatId) {
         this.customerVatId = customerVatId;
         return this;
@@ -204,6 +221,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliverySourceCountryCode")
     public String deliverySourceCountryCode;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withDeliverySourceCountryCode(String deliverySourceCountryCode) {
         this.deliverySourceCountryCode = deliverySourceCountryCode;
         return this;
@@ -215,6 +233,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DistributionCenter")
     public String distributionCenter;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withDistributionCenter(String distributionCenter) {
         this.distributionCenter = distributionCenter;
         return this;
@@ -223,6 +242,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("History")
     public BillbeeInterfacesOrderHistoryEntry[] history;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withHistory(BillbeeInterfacesOrderHistoryEntry[] history) {
         this.history = history;
         return this;
@@ -234,6 +254,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withId(String id) {
         this.id = id;
         return this;
@@ -242,6 +263,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceAddress")
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel invoiceAddress;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withInvoiceAddress(BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel invoiceAddress) {
         this.invoiceAddress = invoiceAddress;
         return this;
@@ -255,6 +277,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("InvoiceDate")
     public OffsetDateTime invoiceDate;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withInvoiceDate(OffsetDateTime invoiceDate) {
         this.invoiceDate = invoiceDate;
         return this;
@@ -266,6 +289,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceNumber")
     public Integer invoiceNumber;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withInvoiceNumber(Integer invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
         return this;
@@ -277,6 +301,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceNumberPostfix")
     public String invoiceNumberPostfix;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withInvoiceNumberPostfix(String invoiceNumberPostfix) {
         this.invoiceNumberPostfix = invoiceNumberPostfix;
         return this;
@@ -288,6 +313,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceNumberPrefix")
     public String invoiceNumberPrefix;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withInvoiceNumberPrefix(String invoiceNumberPrefix) {
         this.invoiceNumberPrefix = invoiceNumberPrefix;
         return this;
@@ -299,6 +325,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsCancelationFor")
     public String isCancelationFor;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withIsCancelationFor(String isCancelationFor) {
         this.isCancelationFor = isCancelationFor;
         return this;
@@ -310,6 +337,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsFromBillbeeApi")
     public Boolean isFromBillbeeApi;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withIsFromBillbeeApi(Boolean isFromBillbeeApi) {
         this.isFromBillbeeApi = isFromBillbeeApi;
         return this;
@@ -321,6 +349,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public String languageCode;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -334,6 +363,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -345,6 +375,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MerchantVatId")
     public String merchantVatId;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withMerchantVatId(String merchantVatId) {
         this.merchantVatId = merchantVatId;
         return this;
@@ -356,6 +387,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderItems")
     public BillbeeInterfacesBillbeeAPIModelOrderItem[] orderItems;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withOrderItems(BillbeeInterfacesBillbeeAPIModelOrderItem[] orderItems) {
         this.orderItems = orderItems;
         return this;
@@ -367,6 +399,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderNumber")
     public String orderNumber;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
@@ -375,6 +408,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaidAmount")
     public Double paidAmount;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withPaidAmount(Double paidAmount) {
         this.paidAmount = paidAmount;
         return this;
@@ -388,6 +422,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("PayedAt")
     public OffsetDateTime payedAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withPayedAt(OffsetDateTime payedAt) {
         this.payedAt = payedAt;
         return this;
@@ -399,6 +434,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentInstruction")
     public String paymentInstruction;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withPaymentInstruction(String paymentInstruction) {
         this.paymentInstruction = paymentInstruction;
         return this;
@@ -410,6 +446,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentMethod")
     public BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum paymentMethod;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withPaymentMethod(BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -421,6 +458,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentReference")
     public String paymentReference;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withPaymentReference(String paymentReference) {
         this.paymentReference = paymentReference;
         return this;
@@ -432,6 +470,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentTransactionId")
     public String paymentTransactionId;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withPaymentTransactionId(String paymentTransactionId) {
         this.paymentTransactionId = paymentTransactionId;
         return this;
@@ -440,6 +479,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Payments")
     public BillbeeInterfacesBillbeeAPIModelsOrderPayment[] payments;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withPayments(BillbeeInterfacesBillbeeAPIModelsOrderPayment[] payments) {
         this.payments = payments;
         return this;
@@ -448,6 +488,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RebateDifference")
     public Double rebateDifference;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withRebateDifference(Double rebateDifference) {
         this.rebateDifference = rebateDifference;
         return this;
@@ -461,6 +502,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RestoredAt")
     public OffsetDateTime restoredAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withRestoredAt(OffsetDateTime restoredAt) {
         this.restoredAt = restoredAt;
         return this;
@@ -469,6 +511,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Seller")
     public BillbeeInterfacesBillbeeAPIModelOrderUser seller;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withSeller(BillbeeInterfacesBillbeeAPIModelOrderUser seller) {
         this.seller = seller;
         return this;
@@ -480,6 +523,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SellerComment")
     public String sellerComment;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withSellerComment(String sellerComment) {
         this.sellerComment = sellerComment;
         return this;
@@ -491,6 +535,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShipWeightKg")
     public Double shipWeightKg;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withShipWeightKg(Double shipWeightKg) {
         this.shipWeightKg = shipWeightKg;
         return this;
@@ -504,6 +549,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ShippedAt")
     public OffsetDateTime shippedAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withShippedAt(OffsetDateTime shippedAt) {
         this.shippedAt = shippedAt;
         return this;
@@ -512,6 +558,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingAddress")
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel shippingAddress;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withShippingAddress(BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -523,6 +570,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingCost")
     public Double shippingCost;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withShippingCost(Double shippingCost) {
         this.shippingCost = shippingCost;
         return this;
@@ -534,6 +582,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingIds")
     public BillbeeInterfacesBillbeeAPIModelShipment[] shippingIds;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withShippingIds(BillbeeInterfacesBillbeeAPIModelShipment[] shippingIds) {
         this.shippingIds = shippingIds;
         return this;
@@ -545,6 +594,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingProfileId")
     public String shippingProfileId;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withShippingProfileId(String shippingProfileId) {
         this.shippingProfileId = shippingProfileId;
         return this;
@@ -556,6 +606,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingProfileName")
     public String shippingProfileName;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withShippingProfileName(String shippingProfileName) {
         this.shippingProfileName = shippingProfileName;
         return this;
@@ -567,6 +618,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingProviderId")
     public Long shippingProviderId;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withShippingProviderId(Long shippingProviderId) {
         this.shippingProviderId = shippingProviderId;
         return this;
@@ -578,6 +630,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingProviderName")
     public String shippingProviderName;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withShippingProviderName(String shippingProviderName) {
         this.shippingProviderName = shippingProviderName;
         return this;
@@ -589,6 +642,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingProviderProductId")
     public Long shippingProviderProductId;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withShippingProviderProductId(Long shippingProviderProductId) {
         this.shippingProviderProductId = shippingProviderProductId;
         return this;
@@ -600,6 +654,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingProviderProductName")
     public String shippingProviderProductName;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withShippingProviderProductName(String shippingProviderProductName) {
         this.shippingProviderProductName = shippingProviderProductName;
         return this;
@@ -611,6 +666,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingServices")
     public BillbeeInterfacesShippingProductService[] shippingServices;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withShippingServices(BillbeeInterfacesShippingProductService[] shippingServices) {
         this.shippingServices = shippingServices;
         return this;
@@ -622,6 +678,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public BillbeeInterfacesBillbeeAPIModelOrderStateEnum state;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withState(BillbeeInterfacesBillbeeAPIModelOrderStateEnum state) {
         this.state = state;
         return this;
@@ -633,6 +690,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public String[] tags;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -644,6 +702,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxRate1")
     public Double taxRate1;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withTaxRate1(Double taxRate1) {
         this.taxRate1 = taxRate1;
         return this;
@@ -655,6 +714,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxRate2")
     public Double taxRate2;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withTaxRate2(Double taxRate2) {
         this.taxRate2 = taxRate2;
         return this;
@@ -666,6 +726,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCost")
     public Double totalCost;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withTotalCost(Double totalCost) {
         this.totalCost = totalCost;
         return this;
@@ -679,6 +740,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -690,6 +752,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VatId")
     public String vatId;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withVatId(String vatId) {
         this.vatId = vatId;
         return this;
@@ -701,9 +764,11 @@ public class BillbeeInterfacesBillbeeAPIModelOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VatMode")
     public BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum vatMode;
+
     public BillbeeInterfacesBillbeeAPIModelOrder withVatMode(BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum vatMode) {
         this.vatMode = vatMode;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelOrder(){}
 }

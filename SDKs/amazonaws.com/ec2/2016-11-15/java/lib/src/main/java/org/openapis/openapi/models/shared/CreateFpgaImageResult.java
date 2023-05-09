@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateFpgaImageResult {
     
     public String fpgaImageGlobalId;
+
     public CreateFpgaImageResult withFpgaImageGlobalId(String fpgaImageGlobalId) {
         this.fpgaImageGlobalId = fpgaImageGlobalId;
         return this;
@@ -19,9 +20,11 @@ public class CreateFpgaImageResult {
     
     
     public String fpgaImageId;
+
     public CreateFpgaImageResult withFpgaImageId(String fpgaImageId) {
         this.fpgaImageId = fpgaImageId;
         return this;
     }
     
+    public CreateFpgaImageResult(){}
 }

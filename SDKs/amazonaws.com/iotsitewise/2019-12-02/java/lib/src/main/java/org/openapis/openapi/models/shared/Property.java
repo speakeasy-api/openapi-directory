@@ -15,6 +15,7 @@ public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public Property withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -22,6 +23,7 @@ public class Property {
     
     @JsonProperty("dataType")
     public PropertyDataTypeEnum dataType;
+
     public Property withDataType(PropertyDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -29,6 +31,7 @@ public class Property {
     
     @JsonProperty("id")
     public String id;
+
     public Property withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class Property {
     
     @JsonProperty("name")
     public String name;
+
     public Property withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notification")
     public PropertyNotification notification;
+
     public Property withNotification(PropertyNotification notification) {
         this.notification = notification;
         return this;
@@ -52,6 +57,7 @@ public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PropertyType type;
+
     public Property withType(PropertyType type) {
         this.type = type;
         return this;
@@ -60,9 +66,15 @@ public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public Property withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public Property(@JsonProperty("dataType") PropertyDataTypeEnum dataType, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.dataType = dataType;
+        this.id = id;
+        this.name = name;
+  }
 }

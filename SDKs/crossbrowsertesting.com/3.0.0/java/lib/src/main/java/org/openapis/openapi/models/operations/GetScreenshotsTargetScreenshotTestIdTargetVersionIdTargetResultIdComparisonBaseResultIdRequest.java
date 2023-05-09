@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest {
@@ -12,6 +13,7 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdCo
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=base_result_id")
     public Long baseResultId;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withBaseResultId(Long baseResultId) {
         this.baseResultId = baseResultId;
         return this;
@@ -22,6 +24,7 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdCo
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -32,6 +35,7 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdCo
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public String format;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -42,6 +46,7 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdCo
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_result_id")
     public Long targetResultId;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withTargetResultId(Long targetResultId) {
         this.targetResultId = targetResultId;
         return this;
@@ -52,6 +57,7 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdCo
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_screenshot_test_id")
     public Long targetScreenshotTestId;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withTargetScreenshotTestId(Long targetScreenshotTestId) {
         this.targetScreenshotTestId = targetScreenshotTestId;
         return this;
@@ -62,6 +68,7 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdCo
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_version_id")
     public Long targetVersionId;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withTargetVersionId(Long targetVersionId) {
         this.targetVersionId = targetVersionId;
         return this;
@@ -72,9 +79,16 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdCo
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tolerance")
     public Double tolerance;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withTolerance(Double tolerance) {
         this.tolerance = tolerance;
         return this;
     }
     
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest(@JsonProperty("base_result_id") Long baseResultId, @JsonProperty("target_result_id") Long targetResultId, @JsonProperty("target_screenshot_test_id") Long targetScreenshotTestId, @JsonProperty("target_version_id") Long targetVersionId) {
+        this.baseResultId = baseResultId;
+        this.targetResultId = targetResultId;
+        this.targetScreenshotTestId = targetScreenshotTestId;
+        this.targetVersionId = targetVersionId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteMeAllowedOriginsOriginIdRequest {
@@ -12,9 +13,13 @@ public class DeleteMeAllowedOriginsOriginIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=originId")
     public String originId;
+
     public DeleteMeAllowedOriginsOriginIdRequest withOriginId(String originId) {
         this.originId = originId;
         return this;
     }
     
+    public DeleteMeAllowedOriginsOriginIdRequest(@JsonProperty("originId") String originId) {
+        this.originId = originId;
+  }
 }

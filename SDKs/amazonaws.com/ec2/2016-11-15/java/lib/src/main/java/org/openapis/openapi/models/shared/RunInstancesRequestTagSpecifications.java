@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RunInstancesRequestTagSpecifications {
     
     public RunInstancesRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public RunInstancesRequestTagSpecifications withResourceType(RunInstancesRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class RunInstancesRequestTagSpecifications {
     
     
     public RunInstancesRequestTagSpecificationsTags[] tags;
+
     public RunInstancesRequestTagSpecifications withTags(RunInstancesRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public RunInstancesRequestTagSpecifications(){}
 }

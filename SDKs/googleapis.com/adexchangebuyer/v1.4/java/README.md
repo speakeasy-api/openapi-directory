@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AdexchangebuyerAccountsGetSecurity;
 import org.openapis.openapi.models.operations.AdexchangebuyerAccountsGetRequest;
 import org.openapis.openapi.models.operations.AdexchangebuyerAccountsGetResponse;
+import org.openapis.openapi.models.operations.AdexchangebuyerAccountsGetSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
@@ -28,28 +27,29 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AdexchangebuyerAccountsGetRequest req = new AdexchangebuyerAccountsGetRequest() {{
-                alt = "json";
-                fields = "corrupti";
-                id = 592845;
+            AdexchangebuyerAccountsGetRequest req = new AdexchangebuyerAccountsGetRequest(548814L) {{
+                alt = AltEnum.JSON;
+                fields = "provident";
                 key = "distinctio";
                 oauthToken = "quibusdam";
                 prettyPrint = false;
                 quotaUser = "unde";
                 userIp = "nulla";
-            }}            
+            }};            
 
-            AdexchangebuyerAccountsGetResponse res = sdk.accounts.adexchangebuyerAccountsGet(req, new AdexchangebuyerAccountsGetSecurity() {{
+            AdexchangebuyerAccountsGetResponse res = sdk.accounts.adexchangebuyerAccountsGet(req, new AdexchangebuyerAccountsGetSecurity("corrupti", "illum") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.account.isPresent()) {
+            if (res.account != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -57,79 +57,79 @@ public class Application {
 ## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `adexchangebuyerAccountsGet` - Gets one account by ID.
-* `adexchangebuyerAccountsList` - Retrieves the authenticated user's list of accounts.
-* `adexchangebuyerAccountsPatch` - Updates an existing account. This method supports patch semantics.
-* `adexchangebuyerAccountsUpdate` - Updates an existing account.
+* [adexchangebuyerAccountsGet](docs/accounts/README.md#adexchangebuyeraccountsget) - Gets one account by ID.
+* [adexchangebuyerAccountsList](docs/accounts/README.md#adexchangebuyeraccountslist) - Retrieves the authenticated user's list of accounts.
+* [adexchangebuyerAccountsPatch](docs/accounts/README.md#adexchangebuyeraccountspatch) - Updates an existing account. This method supports patch semantics.
+* [adexchangebuyerAccountsUpdate](docs/accounts/README.md#adexchangebuyeraccountsupdate) - Updates an existing account.
 
-### billingInfo
+### [billingInfo](docs/billinginfo/README.md)
 
-* `adexchangebuyerBillingInfoGet` - Returns the billing information for one account specified by account ID.
-* `adexchangebuyerBillingInfoList` - Retrieves a list of billing information for all accounts of the authenticated user.
+* [adexchangebuyerBillingInfoGet](docs/billinginfo/README.md#adexchangebuyerbillinginfoget) - Returns the billing information for one account specified by account ID.
+* [adexchangebuyerBillingInfoList](docs/billinginfo/README.md#adexchangebuyerbillinginfolist) - Retrieves a list of billing information for all accounts of the authenticated user.
 
-### budget
+### [budget](docs/budget/README.md)
 
-* `adexchangebuyerBudgetGet` - Returns the budget information for the adgroup specified by the accountId and billingId.
-* `adexchangebuyerBudgetPatch` - Updates the budget amount for the budget of the adgroup specified by the accountId and billingId, with the budget amount in the request. This method supports patch semantics.
-* `adexchangebuyerBudgetUpdate` - Updates the budget amount for the budget of the adgroup specified by the accountId and billingId, with the budget amount in the request.
+* [adexchangebuyerBudgetGet](docs/budget/README.md#adexchangebuyerbudgetget) - Returns the budget information for the adgroup specified by the accountId and billingId.
+* [adexchangebuyerBudgetPatch](docs/budget/README.md#adexchangebuyerbudgetpatch) - Updates the budget amount for the budget of the adgroup specified by the accountId and billingId, with the budget amount in the request. This method supports patch semantics.
+* [adexchangebuyerBudgetUpdate](docs/budget/README.md#adexchangebuyerbudgetupdate) - Updates the budget amount for the budget of the adgroup specified by the accountId and billingId, with the budget amount in the request.
 
-### creatives
+### [creatives](docs/creatives/README.md)
 
-* `adexchangebuyerCreativesAddDeal` - Add a deal id association for the creative.
-* `adexchangebuyerCreativesGet` - Gets the status for a single creative. A creative will be available 30-40 minutes after submission.
-* `adexchangebuyerCreativesInsert` - Submit a new creative.
-* `adexchangebuyerCreativesList` - Retrieves a list of the authenticated user's active creatives. A creative will be available 30-40 minutes after submission.
-* `adexchangebuyerCreativesListDeals` - Lists the external deal ids associated with the creative.
-* `adexchangebuyerCreativesRemoveDeal` - Remove a deal id associated with the creative.
+* [adexchangebuyerCreativesAddDeal](docs/creatives/README.md#adexchangebuyercreativesadddeal) - Add a deal id association for the creative.
+* [adexchangebuyerCreativesGet](docs/creatives/README.md#adexchangebuyercreativesget) - Gets the status for a single creative. A creative will be available 30-40 minutes after submission.
+* [adexchangebuyerCreativesInsert](docs/creatives/README.md#adexchangebuyercreativesinsert) - Submit a new creative.
+* [adexchangebuyerCreativesList](docs/creatives/README.md#adexchangebuyercreativeslist) - Retrieves a list of the authenticated user's active creatives. A creative will be available 30-40 minutes after submission.
+* [adexchangebuyerCreativesListDeals](docs/creatives/README.md#adexchangebuyercreativeslistdeals) - Lists the external deal ids associated with the creative.
+* [adexchangebuyerCreativesRemoveDeal](docs/creatives/README.md#adexchangebuyercreativesremovedeal) - Remove a deal id associated with the creative.
 
-### marketplacedeals
+### [marketplacedeals](docs/marketplacedeals/README.md)
 
-* `adexchangebuyerMarketplacedealsDelete` - Delete the specified deals from the proposal
-* `adexchangebuyerMarketplacedealsInsert` - Add new deals for the specified proposal
-* `adexchangebuyerMarketplacedealsList` - List all the deals for a given proposal
-* `adexchangebuyerMarketplacedealsUpdate` - Replaces all the deals in the proposal with the passed in deals
+* [adexchangebuyerMarketplacedealsDelete](docs/marketplacedeals/README.md#adexchangebuyermarketplacedealsdelete) - Delete the specified deals from the proposal
+* [adexchangebuyerMarketplacedealsInsert](docs/marketplacedeals/README.md#adexchangebuyermarketplacedealsinsert) - Add new deals for the specified proposal
+* [adexchangebuyerMarketplacedealsList](docs/marketplacedeals/README.md#adexchangebuyermarketplacedealslist) - List all the deals for a given proposal
+* [adexchangebuyerMarketplacedealsUpdate](docs/marketplacedeals/README.md#adexchangebuyermarketplacedealsupdate) - Replaces all the deals in the proposal with the passed in deals
 
-### marketplacenotes
+### [marketplacenotes](docs/marketplacenotes/README.md)
 
-* `adexchangebuyerMarketplacenotesInsert` - Add notes to the proposal
-* `adexchangebuyerMarketplacenotesList` - Get all the notes associated with a proposal
+* [adexchangebuyerMarketplacenotesInsert](docs/marketplacenotes/README.md#adexchangebuyermarketplacenotesinsert) - Add notes to the proposal
+* [adexchangebuyerMarketplacenotesList](docs/marketplacenotes/README.md#adexchangebuyermarketplacenoteslist) - Get all the notes associated with a proposal
 
-### marketplaceprivateauction
+### [marketplaceprivateauction](docs/marketplaceprivateauction/README.md)
 
-* `adexchangebuyerMarketplaceprivateauctionUpdateproposal` - Update a given private auction proposal
+* [adexchangebuyerMarketplaceprivateauctionUpdateproposal](docs/marketplaceprivateauction/README.md#adexchangebuyermarketplaceprivateauctionupdateproposal) - Update a given private auction proposal
 
-### performanceReport
+### [performanceReport](docs/performancereport/README.md)
 
-* `adexchangebuyerPerformanceReportList` - Retrieves the authenticated user's list of performance metrics.
+* [adexchangebuyerPerformanceReportList](docs/performancereport/README.md#adexchangebuyerperformancereportlist) - Retrieves the authenticated user's list of performance metrics.
 
-### pretargetingConfig
+### [pretargetingConfig](docs/pretargetingconfig/README.md)
 
-* `adexchangebuyerPretargetingConfigDelete` - Deletes an existing pretargeting config.
-* `adexchangebuyerPretargetingConfigGet` - Gets a specific pretargeting configuration
-* `adexchangebuyerPretargetingConfigInsert` - Inserts a new pretargeting configuration.
-* `adexchangebuyerPretargetingConfigList` - Retrieves a list of the authenticated user's pretargeting configurations.
-* `adexchangebuyerPretargetingConfigPatch` - Updates an existing pretargeting config. This method supports patch semantics.
-* `adexchangebuyerPretargetingConfigUpdate` - Updates an existing pretargeting config.
+* [adexchangebuyerPretargetingConfigDelete](docs/pretargetingconfig/README.md#adexchangebuyerpretargetingconfigdelete) - Deletes an existing pretargeting config.
+* [adexchangebuyerPretargetingConfigGet](docs/pretargetingconfig/README.md#adexchangebuyerpretargetingconfigget) - Gets a specific pretargeting configuration
+* [adexchangebuyerPretargetingConfigInsert](docs/pretargetingconfig/README.md#adexchangebuyerpretargetingconfiginsert) - Inserts a new pretargeting configuration.
+* [adexchangebuyerPretargetingConfigList](docs/pretargetingconfig/README.md#adexchangebuyerpretargetingconfiglist) - Retrieves a list of the authenticated user's pretargeting configurations.
+* [adexchangebuyerPretargetingConfigPatch](docs/pretargetingconfig/README.md#adexchangebuyerpretargetingconfigpatch) - Updates an existing pretargeting config. This method supports patch semantics.
+* [adexchangebuyerPretargetingConfigUpdate](docs/pretargetingconfig/README.md#adexchangebuyerpretargetingconfigupdate) - Updates an existing pretargeting config.
 
-### products
+### [products](docs/products/README.md)
 
-* `adexchangebuyerProductsGet` - Gets the requested product by id.
-* `adexchangebuyerProductsSearch` - Gets the requested product.
+* [adexchangebuyerProductsGet](docs/products/README.md#adexchangebuyerproductsget) - Gets the requested product by id.
+* [adexchangebuyerProductsSearch](docs/products/README.md#adexchangebuyerproductssearch) - Gets the requested product.
 
-### proposals
+### [proposals](docs/proposals/README.md)
 
-* `adexchangebuyerProposalsGet` - Get a proposal given its id
-* `adexchangebuyerProposalsInsert` - Create the given list of proposals
-* `adexchangebuyerProposalsPatch` - Update the given proposal. This method supports patch semantics.
-* `adexchangebuyerProposalsSearch` - Search for proposals using pql query
-* `adexchangebuyerProposalsSetupcomplete` - Update the given proposal to indicate that setup has been completed.
-* `adexchangebuyerProposalsUpdate` - Update the given proposal
+* [adexchangebuyerProposalsGet](docs/proposals/README.md#adexchangebuyerproposalsget) - Get a proposal given its id
+* [adexchangebuyerProposalsInsert](docs/proposals/README.md#adexchangebuyerproposalsinsert) - Create the given list of proposals
+* [adexchangebuyerProposalsPatch](docs/proposals/README.md#adexchangebuyerproposalspatch) - Update the given proposal. This method supports patch semantics.
+* [adexchangebuyerProposalsSearch](docs/proposals/README.md#adexchangebuyerproposalssearch) - Search for proposals using pql query
+* [adexchangebuyerProposalsSetupcomplete](docs/proposals/README.md#adexchangebuyerproposalssetupcomplete) - Update the given proposal to indicate that setup has been completed.
+* [adexchangebuyerProposalsUpdate](docs/proposals/README.md#adexchangebuyerproposalsupdate) - Update the given proposal
 
-### pubprofiles
+### [pubprofiles](docs/pubprofiles/README.md)
 
-* `adexchangebuyerPubprofilesList` - Gets the requested publisher profile(s) by publisher accountId.
+* [adexchangebuyerPubprofilesList](docs/pubprofiles/README.md#adexchangebuyerpubprofileslist) - Gets the requested publisher profile(s) by publisher accountId.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -12,6 +12,7 @@ public class AllowanceAllowanceTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Long amount;
+
     public AllowanceAllowanceTransaction withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -20,6 +21,7 @@ public class AllowanceAllowanceTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public AllowanceAllowanceTransaction withDate(String date) {
         this.date = date;
         return this;
@@ -28,6 +30,7 @@ public class AllowanceAllowanceTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionDescription")
     public String transactionDescription;
+
     public AllowanceAllowanceTransaction withTransactionDescription(String transactionDescription) {
         this.transactionDescription = transactionDescription;
         return this;
@@ -36,6 +39,7 @@ public class AllowanceAllowanceTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionId")
     public Long transactionId;
+
     public AllowanceAllowanceTransaction withTransactionId(Long transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -44,6 +48,7 @@ public class AllowanceAllowanceTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionType")
     public String transactionType;
+
     public AllowanceAllowanceTransaction withTransactionType(String transactionType) {
         this.transactionType = transactionType;
         return this;
@@ -52,9 +57,11 @@ public class AllowanceAllowanceTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public Long userId;
+
     public AllowanceAllowanceTransaction withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public AllowanceAllowanceTransaction(){}
 }

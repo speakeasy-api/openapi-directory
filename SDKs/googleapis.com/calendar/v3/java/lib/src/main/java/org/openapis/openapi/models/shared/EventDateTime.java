@@ -23,6 +23,7 @@ public class EventDateTime {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date")
     public LocalDate date;
+
     public EventDateTime withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -36,6 +37,7 @@ public class EventDateTime {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateTime")
     public OffsetDateTime dateTime;
+
     public EventDateTime withDateTime(OffsetDateTime dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -47,9 +49,11 @@ public class EventDateTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public EventDateTime withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public EventDateTime(){}
 }

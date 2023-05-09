@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteGrantResponse {
@@ -12,6 +13,7 @@ public class DeleteGrantResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteGrantResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteGrantResponse {
      */
     
     public Object authorizationException;
+
     public DeleteGrantResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteGrantResponse {
     
     
     public String contentType;
+
     public DeleteGrantResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteGrantResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteGrantResponse deleteGrantResponse;
+
     public DeleteGrantResponse withDeleteGrantResponse(org.openapis.openapi.models.shared.DeleteGrantResponse deleteGrantResponse) {
         this.deleteGrantResponse = deleteGrantResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteGrantResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteGrantResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteGrantResponse {
      */
     
     public Object rateLimitExceededException;
+
     public DeleteGrantResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteGrantResponse {
     
     
     public Integer statusCode;
+
     public DeleteGrantResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteGrantResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteGrantResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteGrantResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public DeleteGrantResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteGrantResponse {
      */
     
     public Object serverInternalException;
+
     public DeleteGrantResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteGrantResponse {
      */
     
     public Object validationException;
+
     public DeleteGrantResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteGrantResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

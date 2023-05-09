@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RulesPackage {
     @JsonProperty("arn")
     public String arn;
+
     public RulesPackage withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class RulesPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RulesPackage withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +31,7 @@ public class RulesPackage {
     
     @JsonProperty("name")
     public String name;
+
     public RulesPackage withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class RulesPackage {
     
     @JsonProperty("provider")
     public String provider;
+
     public RulesPackage withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -43,9 +47,16 @@ public class RulesPackage {
     
     @JsonProperty("version")
     public String version;
+
     public RulesPackage withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public RulesPackage(@JsonProperty("arn") String arn, @JsonProperty("name") String name, @JsonProperty("provider") String provider, @JsonProperty("version") String version) {
+        this.arn = arn;
+        this.name = name;
+        this.provider = provider;
+        this.version = version;
+  }
 }

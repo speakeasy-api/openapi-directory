@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeletePolicyType {
     
     public String autoScalingGroupName;
+
     public DeletePolicyType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,9 +17,13 @@ public class DeletePolicyType {
     
     
     public String policyName;
+
     public DeletePolicyType withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public DeletePolicyType(@JsonProperty("PolicyName") String policyName) {
+        this.policyName = policyName;
+  }
 }

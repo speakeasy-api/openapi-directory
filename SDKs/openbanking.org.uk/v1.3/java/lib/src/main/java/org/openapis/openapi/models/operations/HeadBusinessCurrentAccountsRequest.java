@@ -12,6 +12,7 @@ public class HeadBusinessCurrentAccountsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
     public String ifModifiedSince;
+
     public HeadBusinessCurrentAccountsRequest withIfModifiedSince(String ifModifiedSince) {
         this.ifModifiedSince = ifModifiedSince;
         return this;
@@ -22,9 +23,11 @@ public class HeadBusinessCurrentAccountsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public HeadBusinessCurrentAccountsRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
+    public HeadBusinessCurrentAccountsRequest(){}
 }

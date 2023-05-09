@@ -15,9 +15,11 @@ public class SendCommandResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Command")
     public Command command;
+
     public SendCommandResult withCommand(Command command) {
         this.command = command;
         return this;
     }
     
+    public SendCommandResult(){}
 }

@@ -15,9 +15,13 @@ public class RemoveAttributesResponse {
      */
     @JsonProperty("AttributesResource")
     public AttributesResource attributesResource;
+
     public RemoveAttributesResponse withAttributesResource(AttributesResource attributesResource) {
         this.attributesResource = attributesResource;
         return this;
     }
     
+    public RemoveAttributesResponse(@JsonProperty("AttributesResource") AttributesResource attributesResource) {
+        this.attributesResource = attributesResource;
+  }
 }

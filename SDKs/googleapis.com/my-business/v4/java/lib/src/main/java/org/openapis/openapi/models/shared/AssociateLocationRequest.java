@@ -18,9 +18,11 @@ public class AssociateLocationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeId")
     public String placeId;
+
     public AssociateLocationRequest withPlaceId(String placeId) {
         this.placeId = placeId;
         return this;
     }
     
+    public AssociateLocationRequest(){}
 }

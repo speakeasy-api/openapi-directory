@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMemberRolesResponse {
     
     public byte[] body;
+
     public GetMemberRolesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetMemberRolesResponse {
     
     
     public String contentType;
+
     public GetMemberRolesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetMemberRolesResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetMemberRolesResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -36,6 +40,7 @@ public class GetMemberRolesResponse {
      */
     
     public org.openapis.openapi.models.shared.RoleListVO roleListVO;
+
     public GetMemberRolesResponse withRoleListVO(org.openapis.openapi.models.shared.RoleListVO roleListVO) {
         this.roleListVO = roleListVO;
         return this;
@@ -43,6 +48,7 @@ public class GetMemberRolesResponse {
     
     
     public Integer statusCode;
+
     public GetMemberRolesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetMemberRolesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMemberRolesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMemberRolesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

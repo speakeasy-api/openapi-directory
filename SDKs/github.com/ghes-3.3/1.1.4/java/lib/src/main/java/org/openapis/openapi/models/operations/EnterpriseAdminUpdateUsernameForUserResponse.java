@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminUpdateUsernameForUserResponse {
     
     public String contentType;
+
     public EnterpriseAdminUpdateUsernameForUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminUpdateUsernameForUserResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminUpdateUsernameForUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminUpdateUsernameForUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminUpdateUsernameForUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminUpdateUsernameForUserResponse {
      */
     
     public EnterpriseAdminUpdateUsernameForUser202ApplicationJSON enterpriseAdminUpdateUsernameForUser202ApplicationJSONObject;
+
     public EnterpriseAdminUpdateUsernameForUserResponse withEnterpriseAdminUpdateUsernameForUser202ApplicationJSONObject(EnterpriseAdminUpdateUsernameForUser202ApplicationJSON enterpriseAdminUpdateUsernameForUser202ApplicationJSONObject) {
         this.enterpriseAdminUpdateUsernameForUser202ApplicationJSONObject = enterpriseAdminUpdateUsernameForUser202ApplicationJSONObject;
         return this;
     }
     
+    public EnterpriseAdminUpdateUsernameForUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class Vhtax502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Vhtax502ApplicationJSONErrorEnum error;
+
     public Vhtax502ApplicationJSON withError(Vhtax502ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Vhtax502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Vhtax502ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Vhtax502ApplicationJSON withErrorDescription(Vhtax502ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Vhtax502ApplicationJSON(){}
 }

@@ -10,12 +10,12 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * GetMapVersionNumberTileLayerStyleZoomXYPbfVersionNumberEnum - Version of the service to call. The current version is 1
  */
 public enum GetMapVersionNumberTileLayerStyleZoomXYPbfVersionNumberEnum {
-    ONE("1");
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private GetMapVersionNumberTileLayerStyleZoomXYPbfVersionNumberEnum(String value) {
+    private GetMapVersionNumberTileLayerStyleZoomXYPbfVersionNumberEnum(Long value) {
         this.value = value;
     }
 }

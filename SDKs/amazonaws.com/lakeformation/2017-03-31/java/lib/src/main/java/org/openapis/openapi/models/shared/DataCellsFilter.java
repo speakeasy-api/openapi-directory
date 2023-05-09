@@ -15,6 +15,7 @@ public class DataCellsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnNames")
     public String[] columnNames;
+
     public DataCellsFilter withColumnNames(String[] columnNames) {
         this.columnNames = columnNames;
         return this;
@@ -23,6 +24,7 @@ public class DataCellsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnWildcard")
     public ColumnWildcard columnWildcard;
+
     public DataCellsFilter withColumnWildcard(ColumnWildcard columnWildcard) {
         this.columnWildcard = columnWildcard;
         return this;
@@ -30,6 +32,7 @@ public class DataCellsFilter {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DataCellsFilter withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -37,6 +40,7 @@ public class DataCellsFilter {
     
     @JsonProperty("Name")
     public String name;
+
     public DataCellsFilter withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +49,7 @@ public class DataCellsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RowFilter")
     public RowFilter rowFilter;
+
     public DataCellsFilter withRowFilter(RowFilter rowFilter) {
         this.rowFilter = rowFilter;
         return this;
@@ -52,6 +57,7 @@ public class DataCellsFilter {
     
     @JsonProperty("TableCatalogId")
     public String tableCatalogId;
+
     public DataCellsFilter withTableCatalogId(String tableCatalogId) {
         this.tableCatalogId = tableCatalogId;
         return this;
@@ -59,6 +65,7 @@ public class DataCellsFilter {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public DataCellsFilter withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -67,9 +74,16 @@ public class DataCellsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public DataCellsFilter withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public DataCellsFilter(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("Name") String name, @JsonProperty("TableCatalogId") String tableCatalogId, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.name = name;
+        this.tableCatalogId = tableCatalogId;
+        this.tableName = tableName;
+  }
 }

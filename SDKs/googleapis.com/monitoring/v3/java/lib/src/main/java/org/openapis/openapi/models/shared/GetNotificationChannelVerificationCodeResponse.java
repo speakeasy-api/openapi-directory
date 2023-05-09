@@ -18,6 +18,7 @@ public class GetNotificationChannelVerificationCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public GetNotificationChannelVerificationCodeResponse withCode(String code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class GetNotificationChannelVerificationCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public GetNotificationChannelVerificationCodeResponse withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
     }
     
+    public GetNotificationChannelVerificationCodeResponse(){}
 }

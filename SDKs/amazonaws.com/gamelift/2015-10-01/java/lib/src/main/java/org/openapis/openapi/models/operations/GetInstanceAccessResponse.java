@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInstanceAccessResponse {
     
     public String contentType;
+
     public GetInstanceAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetInstanceAccessResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInstanceAccessOutput getInstanceAccessOutput;
+
     public GetInstanceAccessResponse withGetInstanceAccessOutput(org.openapis.openapi.models.shared.GetInstanceAccessOutput getInstanceAccessOutput) {
         this.getInstanceAccessOutput = getInstanceAccessOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetInstanceAccessResponse {
      */
     
     public Object internalServiceException;
+
     public GetInstanceAccessResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class GetInstanceAccessResponse {
      */
     
     public Object invalidRequestException;
+
     public GetInstanceAccessResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetInstanceAccessResponse {
      */
     
     public Object notFoundException;
+
     public GetInstanceAccessResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetInstanceAccessResponse {
     
     
     public Integer statusCode;
+
     public GetInstanceAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetInstanceAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInstanceAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetInstanceAccessResponse {
      */
     
     public Object unauthorizedException;
+
     public GetInstanceAccessResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetInstanceAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

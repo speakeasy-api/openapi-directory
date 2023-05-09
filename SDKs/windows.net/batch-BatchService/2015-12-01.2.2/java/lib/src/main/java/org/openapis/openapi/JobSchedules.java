@@ -73,11 +73,9 @@ public class JobSchedules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobScheduleAddResponse res = new org.openapis.openapi.models.operations.JobScheduleAddResponse() {{
+        org.openapis.openapi.models.operations.JobScheduleAddResponse res = new org.openapis.openapi.models.operations.JobScheduleAddResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -129,11 +127,9 @@ public class JobSchedules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobScheduleDeleteResponse res = new org.openapis.openapi.models.operations.JobScheduleDeleteResponse() {{
+        org.openapis.openapi.models.operations.JobScheduleDeleteResponse res = new org.openapis.openapi.models.operations.JobScheduleDeleteResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -185,11 +181,9 @@ public class JobSchedules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobScheduleDisableResponse res = new org.openapis.openapi.models.operations.JobScheduleDisableResponse() {{
+        org.openapis.openapi.models.operations.JobScheduleDisableResponse res = new org.openapis.openapi.models.operations.JobScheduleDisableResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -241,11 +235,9 @@ public class JobSchedules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobScheduleEnableResponse res = new org.openapis.openapi.models.operations.JobScheduleEnableResponse() {{
+        org.openapis.openapi.models.operations.JobScheduleEnableResponse res = new org.openapis.openapi.models.operations.JobScheduleEnableResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -297,11 +289,9 @@ public class JobSchedules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobScheduleExistsResponse res = new org.openapis.openapi.models.operations.JobScheduleExistsResponse() {{
+        org.openapis.openapi.models.operations.JobScheduleExistsResponse res = new org.openapis.openapi.models.operations.JobScheduleExistsResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -355,12 +345,10 @@ public class JobSchedules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobScheduleGetResponse res = new org.openapis.openapi.models.operations.JobScheduleGetResponse() {{
+        org.openapis.openapi.models.operations.JobScheduleGetResponse res = new org.openapis.openapi.models.operations.JobScheduleGetResponse(contentType, httpRes.statusCode()) {{
             cloudJobSchedule = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -417,12 +405,10 @@ public class JobSchedules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobScheduleListResponse res = new org.openapis.openapi.models.operations.JobScheduleListResponse() {{
+        org.openapis.openapi.models.operations.JobScheduleListResponse res = new org.openapis.openapi.models.operations.JobScheduleListResponse(contentType, httpRes.statusCode()) {{
             cloudJobScheduleListResult = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +470,9 @@ public class JobSchedules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobSchedulePatchResponse res = new org.openapis.openapi.models.operations.JobSchedulePatchResponse() {{
+        org.openapis.openapi.models.operations.JobSchedulePatchResponse res = new org.openapis.openapi.models.operations.JobSchedulePatchResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -540,11 +524,9 @@ public class JobSchedules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobScheduleTerminateResponse res = new org.openapis.openapi.models.operations.JobScheduleTerminateResponse() {{
+        org.openapis.openapi.models.operations.JobScheduleTerminateResponse res = new org.openapis.openapi.models.operations.JobScheduleTerminateResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -601,11 +583,9 @@ public class JobSchedules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobScheduleUpdateResponse res = new org.openapis.openapi.models.operations.JobScheduleUpdateResponse() {{
+        org.openapis.openapi.models.operations.JobScheduleUpdateResponse res = new org.openapis.openapi.models.operations.JobScheduleUpdateResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

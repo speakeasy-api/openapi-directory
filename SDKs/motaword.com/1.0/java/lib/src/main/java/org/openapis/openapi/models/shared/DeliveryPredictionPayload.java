@@ -12,9 +12,11 @@ public class DeliveryPredictionPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public Long projectId;
+
     public DeliveryPredictionPayload withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public DeliveryPredictionPayload(){}
 }

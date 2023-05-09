@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResendConfirmationCodeResponse {
@@ -12,6 +13,7 @@ public class ResendConfirmationCodeResponse {
      */
     
     public Object codeDeliveryFailureException;
+
     public ResendConfirmationCodeResponse withCodeDeliveryFailureException(Object codeDeliveryFailureException) {
         this.codeDeliveryFailureException = codeDeliveryFailureException;
         return this;
@@ -19,6 +21,7 @@ public class ResendConfirmationCodeResponse {
     
     
     public String contentType;
+
     public ResendConfirmationCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ResendConfirmationCodeResponse {
      */
     
     public Object forbiddenException;
+
     public ResendConfirmationCodeResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class ResendConfirmationCodeResponse {
      */
     
     public Object internalErrorException;
+
     public ResendConfirmationCodeResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ResendConfirmationCodeResponse {
      */
     
     public Object invalidEmailRoleAccessPolicyException;
+
     public ResendConfirmationCodeResponse withInvalidEmailRoleAccessPolicyException(Object invalidEmailRoleAccessPolicyException) {
         this.invalidEmailRoleAccessPolicyException = invalidEmailRoleAccessPolicyException;
         return this;
@@ -59,6 +65,7 @@ public class ResendConfirmationCodeResponse {
      */
     
     public Object invalidLambdaResponseException;
+
     public ResendConfirmationCodeResponse withInvalidLambdaResponseException(Object invalidLambdaResponseException) {
         this.invalidLambdaResponseException = invalidLambdaResponseException;
         return this;
@@ -69,6 +76,7 @@ public class ResendConfirmationCodeResponse {
      */
     
     public Object invalidParameterException;
+
     public ResendConfirmationCodeResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class ResendConfirmationCodeResponse {
      */
     
     public Object invalidSmsRoleAccessPolicyException;
+
     public ResendConfirmationCodeResponse withInvalidSmsRoleAccessPolicyException(Object invalidSmsRoleAccessPolicyException) {
         this.invalidSmsRoleAccessPolicyException = invalidSmsRoleAccessPolicyException;
         return this;
@@ -89,6 +98,7 @@ public class ResendConfirmationCodeResponse {
      */
     
     public Object invalidSmsRoleTrustRelationshipException;
+
     public ResendConfirmationCodeResponse withInvalidSmsRoleTrustRelationshipException(Object invalidSmsRoleTrustRelationshipException) {
         this.invalidSmsRoleTrustRelationshipException = invalidSmsRoleTrustRelationshipException;
         return this;
@@ -99,6 +109,7 @@ public class ResendConfirmationCodeResponse {
      */
     
     public Object limitExceededException;
+
     public ResendConfirmationCodeResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -109,6 +120,7 @@ public class ResendConfirmationCodeResponse {
      */
     
     public Object notAuthorizedException;
+
     public ResendConfirmationCodeResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -119,6 +131,7 @@ public class ResendConfirmationCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.ResendConfirmationCodeResponse resendConfirmationCodeResponse;
+
     public ResendConfirmationCodeResponse withResendConfirmationCodeResponse(org.openapis.openapi.models.shared.ResendConfirmationCodeResponse resendConfirmationCodeResponse) {
         this.resendConfirmationCodeResponse = resendConfirmationCodeResponse;
         return this;
@@ -129,6 +142,7 @@ public class ResendConfirmationCodeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ResendConfirmationCodeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -136,6 +150,7 @@ public class ResendConfirmationCodeResponse {
     
     
     public Integer statusCode;
+
     public ResendConfirmationCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,6 +158,7 @@ public class ResendConfirmationCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResendConfirmationCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -153,6 +169,7 @@ public class ResendConfirmationCodeResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ResendConfirmationCodeResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -163,6 +180,7 @@ public class ResendConfirmationCodeResponse {
      */
     
     public Object unexpectedLambdaException;
+
     public ResendConfirmationCodeResponse withUnexpectedLambdaException(Object unexpectedLambdaException) {
         this.unexpectedLambdaException = unexpectedLambdaException;
         return this;
@@ -173,6 +191,7 @@ public class ResendConfirmationCodeResponse {
      */
     
     public Object userLambdaValidationException;
+
     public ResendConfirmationCodeResponse withUserLambdaValidationException(Object userLambdaValidationException) {
         this.userLambdaValidationException = userLambdaValidationException;
         return this;
@@ -183,9 +202,14 @@ public class ResendConfirmationCodeResponse {
      */
     
     public Object userNotFoundException;
+
     public ResendConfirmationCodeResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public ResendConfirmationCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

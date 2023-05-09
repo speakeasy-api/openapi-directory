@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DrivePermissionsCreateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PermissionInput permissionInput;
+
     public DrivePermissionsCreateRequest withPermissionInput(org.openapis.openapi.models.shared.PermissionInput permissionInput) {
         this.permissionInput = permissionInput;
         return this;
@@ -19,6 +21,7 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DrivePermissionsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=emailMessage")
     public String emailMessage;
+
     public DrivePermissionsCreateRequest withEmailMessage(String emailMessage) {
         this.emailMessage = emailMessage;
         return this;
@@ -39,6 +43,7 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enforceSingleParent")
     public Boolean enforceSingleParent;
+
     public DrivePermissionsCreateRequest withEnforceSingleParent(Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
         return this;
@@ -49,6 +54,7 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DrivePermissionsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -59,6 +65,7 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public DrivePermissionsCreateRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -69,6 +76,7 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DrivePermissionsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=moveToNewOwnersRoot")
     public Boolean moveToNewOwnersRoot;
+
     public DrivePermissionsCreateRequest withMoveToNewOwnersRoot(Boolean moveToNewOwnersRoot) {
         this.moveToNewOwnersRoot = moveToNewOwnersRoot;
         return this;
@@ -89,6 +98,7 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DrivePermissionsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DrivePermissionsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DrivePermissionsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendNotificationEmail")
     public Boolean sendNotificationEmail;
+
     public DrivePermissionsCreateRequest withSendNotificationEmail(Boolean sendNotificationEmail) {
         this.sendNotificationEmail = sendNotificationEmail;
         return this;
@@ -129,6 +142,7 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
     public Boolean supportsAllDrives;
+
     public DrivePermissionsCreateRequest withSupportsAllDrives(Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -139,6 +153,7 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
     public Boolean supportsTeamDrives;
+
     public DrivePermissionsCreateRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -149,6 +164,7 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transferOwnership")
     public Boolean transferOwnership;
+
     public DrivePermissionsCreateRequest withTransferOwnership(Boolean transferOwnership) {
         this.transferOwnership = transferOwnership;
         return this;
@@ -159,6 +175,7 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useDomainAdminAccess")
     public Boolean useDomainAdminAccess;
+
     public DrivePermissionsCreateRequest withUseDomainAdminAccess(Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
         return this;
@@ -169,9 +186,13 @@ public class DrivePermissionsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DrivePermissionsCreateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DrivePermissionsCreateRequest(@JsonProperty("fileId") String fileId) {
+        this.fileId = fileId;
+  }
 }

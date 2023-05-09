@@ -11,10 +11,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GetServers200ApplicationJSONServersIso {
     /**
+     * Type of cpu architecture this iso is compatible with. Null indicates no restriction on the architecture (wildcard).
+     */
+    @JsonProperty("architecture")
+    public GetServers200ApplicationJSONServersIsoArchitectureEnum architecture;
+
+    public GetServers200ApplicationJSONServersIso withArchitecture(GetServers200ApplicationJSONServersIsoArchitectureEnum architecture) {
+        this.architecture = architecture;
+        return this;
+    }
+    
+    /**
      * ISO 8601 timestamp of deprecation, null if ISO is still available. After the deprecation time it will no longer be possible to attach the ISO to Servers.
      */
     @JsonProperty("deprecated")
     public String deprecated;
+
     public GetServers200ApplicationJSONServersIso withDeprecated(String deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -25,6 +37,7 @@ public class GetServers200ApplicationJSONServersIso {
      */
     @JsonProperty("description")
     public String description;
+
     public GetServers200ApplicationJSONServersIso withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +48,7 @@ public class GetServers200ApplicationJSONServersIso {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetServers200ApplicationJSONServersIso withId(Long id) {
         this.id = id;
         return this;
@@ -45,6 +59,7 @@ public class GetServers200ApplicationJSONServersIso {
      */
     @JsonProperty("name")
     public String name;
+
     public GetServers200ApplicationJSONServersIso withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +70,18 @@ public class GetServers200ApplicationJSONServersIso {
      */
     @JsonProperty("type")
     public GetServers200ApplicationJSONServersIsoTypeEnum type;
+
     public GetServers200ApplicationJSONServersIso withType(GetServers200ApplicationJSONServersIsoTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetServers200ApplicationJSONServersIso(@JsonProperty("architecture") GetServers200ApplicationJSONServersIsoArchitectureEnum architecture, @JsonProperty("deprecated") String deprecated, @JsonProperty("description") String description, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("type") GetServers200ApplicationJSONServersIsoTypeEnum type) {
+        this.architecture = architecture;
+        this.deprecated = deprecated;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.type = type;
+  }
 }

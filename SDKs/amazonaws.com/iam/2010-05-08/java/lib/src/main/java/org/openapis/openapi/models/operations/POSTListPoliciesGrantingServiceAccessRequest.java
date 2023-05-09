@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTListPoliciesGrantingServiceAccessRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTListPoliciesGrantingServiceAccessActionEnum action;
+
     public POSTListPoliciesGrantingServiceAccessRequest withAction(POSTListPoliciesGrantingServiceAccessActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTListPoliciesGrantingServiceAccessRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTListPoliciesGrantingServiceAccessVersionEnum version;
+
     public POSTListPoliciesGrantingServiceAccessRequest withVersion(POSTListPoliciesGrantingServiceAccessVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTListPoliciesGrantingServiceAccessRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTListPoliciesGrantingServiceAccessRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTListPoliciesGrantingServiceAccessRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTListPoliciesGrantingServiceAccessRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTListPoliciesGrantingServiceAccessRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTListPoliciesGrantingServiceAccessRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTListPoliciesGrantingServiceAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTListPoliciesGrantingServiceAccessRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTListPoliciesGrantingServiceAccessRequest(@JsonProperty("Action") POSTListPoliciesGrantingServiceAccessActionEnum action, @JsonProperty("Version") POSTListPoliciesGrantingServiceAccessVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

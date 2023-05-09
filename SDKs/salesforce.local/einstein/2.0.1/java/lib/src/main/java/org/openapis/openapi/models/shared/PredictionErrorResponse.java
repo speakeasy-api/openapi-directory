@@ -15,6 +15,7 @@ public class PredictionErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PredictionErrorResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class PredictionErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public PredictionErrorResponse withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public PredictionErrorResponse(){}
 }

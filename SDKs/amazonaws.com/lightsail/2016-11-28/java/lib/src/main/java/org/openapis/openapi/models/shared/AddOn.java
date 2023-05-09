@@ -15,6 +15,7 @@ public class AddOn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public AddOn withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -23,6 +24,7 @@ public class AddOn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AddOn withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class AddOn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextSnapshotTimeOfDay")
     public String nextSnapshotTimeOfDay;
+
     public AddOn withNextSnapshotTimeOfDay(String nextSnapshotTimeOfDay) {
         this.nextSnapshotTimeOfDay = nextSnapshotTimeOfDay;
         return this;
@@ -39,6 +42,7 @@ public class AddOn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotTimeOfDay")
     public String snapshotTimeOfDay;
+
     public AddOn withSnapshotTimeOfDay(String snapshotTimeOfDay) {
         this.snapshotTimeOfDay = snapshotTimeOfDay;
         return this;
@@ -47,6 +51,7 @@ public class AddOn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public AddOn withStatus(String status) {
         this.status = status;
         return this;
@@ -55,9 +60,11 @@ public class AddOn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threshold")
     public String threshold;
+
     public AddOn withThreshold(String threshold) {
         this.threshold = threshold;
         return this;
     }
     
+    public AddOn(){}
 }

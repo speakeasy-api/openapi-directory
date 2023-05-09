@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOrdersResponse {
@@ -12,6 +13,7 @@ public class ListOrdersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListOrdersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListOrdersResponse {
     
     
     public String contentType;
+
     public ListOrdersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListOrdersResponse {
      */
     
     public Object internalServerException;
+
     public ListOrdersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListOrdersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListOrdersOutput listOrdersOutput;
+
     public ListOrdersResponse withListOrdersOutput(org.openapis.openapi.models.shared.ListOrdersOutput listOrdersOutput) {
         this.listOrdersOutput = listOrdersOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListOrdersResponse {
      */
     
     public Object notFoundException;
+
     public ListOrdersResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListOrdersResponse {
     
     
     public Integer statusCode;
+
     public ListOrdersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListOrdersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOrdersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListOrdersResponse {
      */
     
     public Object validationException;
+
     public ListOrdersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListOrdersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

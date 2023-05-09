@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateBankAccountRequestBodyInput {
     @JsonProperty("account_name")
     public String accountName;
+
     public CreateBankAccountRequestBodyInput withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -22,6 +23,7 @@ public class CreateBankAccountRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_status")
     public CreateBankAccountRequestBodyAccountStatusEnum accountStatus;
+
     public CreateBankAccountRequestBodyInput withAccountStatus(CreateBankAccountRequestBodyAccountStatusEnum accountStatus) {
         this.accountStatus = accountStatus;
         return this;
@@ -32,6 +34,7 @@ public class CreateBankAccountRequestBodyInput {
      */
     @JsonProperty("bank_account_number")
     public String bankAccountNumber;
+
     public CreateBankAccountRequestBodyInput withBankAccountNumber(String bankAccountNumber) {
         this.bankAccountNumber = bankAccountNumber;
         return this;
@@ -40,6 +43,7 @@ public class CreateBankAccountRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("building_society_roll_number")
     public String buildingSocietyRollNumber;
+
     public CreateBankAccountRequestBodyInput withBuildingSocietyRollNumber(String buildingSocietyRollNumber) {
         this.buildingSocietyRollNumber = buildingSocietyRollNumber;
         return this;
@@ -50,6 +54,7 @@ public class CreateBankAccountRequestBodyInput {
      */
     @JsonProperty("default_account")
     public CreateBankAccountRequestBodyDefaultAccountEnum defaultAccount;
+
     public CreateBankAccountRequestBodyInput withDefaultAccount(CreateBankAccountRequestBodyDefaultAccountEnum defaultAccount) {
         this.defaultAccount = defaultAccount;
         return this;
@@ -57,6 +62,7 @@ public class CreateBankAccountRequestBodyInput {
     
     @JsonProperty("investor_id")
     public String investorId;
+
     public CreateBankAccountRequestBodyInput withInvestorId(String investorId) {
         this.investorId = investorId;
         return this;
@@ -65,9 +71,16 @@ public class CreateBankAccountRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort_code")
     public String sortCode;
+
     public CreateBankAccountRequestBodyInput withSortCode(String sortCode) {
         this.sortCode = sortCode;
         return this;
     }
     
+    public CreateBankAccountRequestBodyInput(@JsonProperty("account_name") String accountName, @JsonProperty("bank_account_number") String bankAccountNumber, @JsonProperty("default_account") CreateBankAccountRequestBodyDefaultAccountEnum defaultAccount, @JsonProperty("investor_id") String investorId) {
+        this.accountName = accountName;
+        this.bankAccountNumber = bankAccountNumber;
+        this.defaultAccount = defaultAccount;
+        this.investorId = investorId;
+  }
 }

@@ -18,6 +18,7 @@ public class MachineTypesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public MachineTypesScopedListWarningCodeEnum code;
+
     public MachineTypesScopedListWarning withCode(MachineTypesScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class MachineTypesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public MachineTypesScopedListWarningData[] data;
+
     public MachineTypesScopedListWarning withData(MachineTypesScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class MachineTypesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public MachineTypesScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public MachineTypesScopedListWarning(){}
 }

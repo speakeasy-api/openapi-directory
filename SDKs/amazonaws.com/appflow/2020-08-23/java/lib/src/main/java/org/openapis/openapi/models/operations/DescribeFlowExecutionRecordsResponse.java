@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFlowExecutionRecordsResponse {
     
     public String contentType;
+
     public DescribeFlowExecutionRecordsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFlowExecutionRecordsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFlowExecutionRecordsResponse describeFlowExecutionRecordsResponse;
+
     public DescribeFlowExecutionRecordsResponse withDescribeFlowExecutionRecordsResponse(org.openapis.openapi.models.shared.DescribeFlowExecutionRecordsResponse describeFlowExecutionRecordsResponse) {
         this.describeFlowExecutionRecordsResponse = describeFlowExecutionRecordsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFlowExecutionRecordsResponse {
      */
     
     public Object internalServerException;
+
     public DescribeFlowExecutionRecordsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFlowExecutionRecordsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeFlowExecutionRecordsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeFlowExecutionRecordsResponse {
     
     
     public Integer statusCode;
+
     public DescribeFlowExecutionRecordsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeFlowExecutionRecordsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFlowExecutionRecordsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeFlowExecutionRecordsResponse {
      */
     
     public Object validationException;
+
     public DescribeFlowExecutionRecordsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeFlowExecutionRecordsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

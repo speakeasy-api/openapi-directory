@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFirewallRuleGroupResponse {
@@ -12,6 +13,7 @@ public class CreateFirewallRuleGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateFirewallRuleGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateFirewallRuleGroupResponse {
     
     
     public String contentType;
+
     public CreateFirewallRuleGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateFirewallRuleGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFirewallRuleGroupResponse createFirewallRuleGroupResponse;
+
     public CreateFirewallRuleGroupResponse withCreateFirewallRuleGroupResponse(org.openapis.openapi.models.shared.CreateFirewallRuleGroupResponse createFirewallRuleGroupResponse) {
         this.createFirewallRuleGroupResponse = createFirewallRuleGroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateFirewallRuleGroupResponse {
      */
     
     public Object internalServiceErrorException;
+
     public CreateFirewallRuleGroupResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class CreateFirewallRuleGroupResponse {
      */
     
     public Object limitExceededException;
+
     public CreateFirewallRuleGroupResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateFirewallRuleGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateFirewallRuleGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateFirewallRuleGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFirewallRuleGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateFirewallRuleGroupResponse {
      */
     
     public Object throttlingException;
+
     public CreateFirewallRuleGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class CreateFirewallRuleGroupResponse {
      */
     
     public Object validationException;
+
     public CreateFirewallRuleGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateFirewallRuleGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

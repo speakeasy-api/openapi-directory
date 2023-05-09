@@ -18,6 +18,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activate_activity_details")
     public GiftCardActivityActivate activateActivityDetails;
+
     public GiftCardActivity withActivateActivityDetails(GiftCardActivityActivate activateActivityDetails) {
         this.activateActivityDetails = activateActivityDetails;
         return this;
@@ -29,6 +30,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjust_decrement_activity_details")
     public GiftCardActivityAdjustDecrement adjustDecrementActivityDetails;
+
     public GiftCardActivity withAdjustDecrementActivityDetails(GiftCardActivityAdjustDecrement adjustDecrementActivityDetails) {
         this.adjustDecrementActivityDetails = adjustDecrementActivityDetails;
         return this;
@@ -40,6 +42,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjust_increment_activity_details")
     public GiftCardActivityAdjustIncrement adjustIncrementActivityDetails;
+
     public GiftCardActivity withAdjustIncrementActivityDetails(GiftCardActivityAdjustIncrement adjustIncrementActivityDetails) {
         this.adjustIncrementActivityDetails = adjustIncrementActivityDetails;
         return this;
@@ -51,6 +54,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("block_activity_details")
     public GiftCardActivityBlock blockActivityDetails;
+
     public GiftCardActivity withBlockActivityDetails(GiftCardActivityBlock blockActivityDetails) {
         this.blockActivityDetails = blockActivityDetails;
         return this;
@@ -62,6 +66,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clear_balance_activity_details")
     public GiftCardActivityClearBalance clearBalanceActivityDetails;
+
     public GiftCardActivity withClearBalanceActivityDetails(GiftCardActivityClearBalance clearBalanceActivityDetails) {
         this.clearBalanceActivityDetails = clearBalanceActivityDetails;
         return this;
@@ -73,6 +78,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public GiftCardActivity withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -84,6 +90,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deactivate_activity_details")
     public GiftCardActivityDeactivate deactivateActivityDetails;
+
     public GiftCardActivity withDeactivateActivityDetails(GiftCardActivityDeactivate deactivateActivityDetails) {
         this.deactivateActivityDetails = deactivateActivityDetails;
         return this;
@@ -100,6 +107,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gift_card_balance_money")
     public Money giftCardBalanceMoney;
+
     public GiftCardActivity withGiftCardBalanceMoney(Money giftCardBalanceMoney) {
         this.giftCardBalanceMoney = giftCardBalanceMoney;
         return this;
@@ -111,6 +119,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gift_card_gan")
     public String giftCardGan;
+
     public GiftCardActivity withGiftCardGan(String giftCardGan) {
         this.giftCardGan = giftCardGan;
         return this;
@@ -122,6 +131,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gift_card_id")
     public String giftCardId;
+
     public GiftCardActivity withGiftCardId(String giftCardId) {
         this.giftCardId = giftCardId;
         return this;
@@ -133,6 +143,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GiftCardActivity withId(String id) {
         this.id = id;
         return this;
@@ -145,6 +156,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("import_activity_details")
     public GiftCardActivityImport importActivityDetails;
+
     public GiftCardActivity withImportActivityDetails(GiftCardActivityImport importActivityDetails) {
         this.importActivityDetails = importActivityDetails;
         return this;
@@ -156,6 +168,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("import_reversal_activity_details")
     public GiftCardActivityImportReversal importReversalActivityDetails;
+
     public GiftCardActivity withImportReversalActivityDetails(GiftCardActivityImportReversal importReversalActivityDetails) {
         this.importReversalActivityDetails = importReversalActivityDetails;
         return this;
@@ -167,6 +180,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("load_activity_details")
     public GiftCardActivityLoad loadActivityDetails;
+
     public GiftCardActivity withLoadActivityDetails(GiftCardActivityLoad loadActivityDetails) {
         this.loadActivityDetails = loadActivityDetails;
         return this;
@@ -177,6 +191,7 @@ public class GiftCardActivity {
      */
     @JsonProperty("location_id")
     public String locationId;
+
     public GiftCardActivity withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -188,6 +203,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redeem_activity_details")
     public GiftCardActivityRedeem redeemActivityDetails;
+
     public GiftCardActivity withRedeemActivityDetails(GiftCardActivityRedeem redeemActivityDetails) {
         this.redeemActivityDetails = redeemActivityDetails;
         return this;
@@ -199,6 +215,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_activity_details")
     public GiftCardActivityRefund refundActivityDetails;
+
     public GiftCardActivity withRefundActivityDetails(GiftCardActivityRefund refundActivityDetails) {
         this.refundActivityDetails = refundActivityDetails;
         return this;
@@ -206,6 +223,7 @@ public class GiftCardActivity {
     
     @JsonProperty("type")
     public Object type;
+
     public GiftCardActivity withType(Object type) {
         this.type = type;
         return this;
@@ -217,6 +235,7 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unblock_activity_details")
     public GiftCardActivityUnblock unblockActivityDetails;
+
     public GiftCardActivity withUnblockActivityDetails(GiftCardActivityUnblock unblockActivityDetails) {
         this.unblockActivityDetails = unblockActivityDetails;
         return this;
@@ -228,9 +247,14 @@ public class GiftCardActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unlinked_activity_refund_activity_details")
     public GiftCardActivityUnlinkedActivityRefund unlinkedActivityRefundActivityDetails;
+
     public GiftCardActivity withUnlinkedActivityRefundActivityDetails(GiftCardActivityUnlinkedActivityRefund unlinkedActivityRefundActivityDetails) {
         this.unlinkedActivityRefundActivityDetails = unlinkedActivityRefundActivityDetails;
         return this;
     }
     
+    public GiftCardActivity(@JsonProperty("location_id") String locationId, @JsonProperty("type") Object type) {
+        this.locationId = locationId;
+        this.type = type;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeServiceUpdatesMessage {
     
     public String marker;
+
     public DescribeServiceUpdatesMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class DescribeServiceUpdatesMessage {
     
     
     public Long maxRecords;
+
     public DescribeServiceUpdatesMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -23,6 +25,7 @@ public class DescribeServiceUpdatesMessage {
     
     
     public String serviceUpdateName;
+
     public DescribeServiceUpdatesMessage withServiceUpdateName(String serviceUpdateName) {
         this.serviceUpdateName = serviceUpdateName;
         return this;
@@ -30,9 +33,11 @@ public class DescribeServiceUpdatesMessage {
     
     
     public ServiceUpdateStatusEnum[] serviceUpdateStatus;
+
     public DescribeServiceUpdatesMessage withServiceUpdateStatus(ServiceUpdateStatusEnum[] serviceUpdateStatus) {
         this.serviceUpdateStatus = serviceUpdateStatus;
         return this;
     }
     
+    public DescribeServiceUpdatesMessage(){}
 }

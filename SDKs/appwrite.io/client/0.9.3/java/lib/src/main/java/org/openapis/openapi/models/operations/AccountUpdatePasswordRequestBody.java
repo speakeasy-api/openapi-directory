@@ -15,6 +15,7 @@ public class AccountUpdatePasswordRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oldPassword")
     public String oldPassword;
+
     public AccountUpdatePasswordRequestBody withOldPassword(String oldPassword) {
         this.oldPassword = oldPassword;
         return this;
@@ -25,9 +26,13 @@ public class AccountUpdatePasswordRequestBody {
      */
     @JsonProperty("password")
     public String password;
+
     public AccountUpdatePasswordRequestBody withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public AccountUpdatePasswordRequestBody(@JsonProperty("password") String password) {
+        this.password = password;
+  }
 }

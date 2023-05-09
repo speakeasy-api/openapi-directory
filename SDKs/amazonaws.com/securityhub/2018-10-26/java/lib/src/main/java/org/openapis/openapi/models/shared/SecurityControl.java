@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SecurityControl {
     @JsonProperty("Description")
     public String description;
+
     public SecurityControl withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class SecurityControl {
     
     @JsonProperty("RemediationUrl")
     public String remediationUrl;
+
     public SecurityControl withRemediationUrl(String remediationUrl) {
         this.remediationUrl = remediationUrl;
         return this;
@@ -26,6 +28,7 @@ public class SecurityControl {
     
     @JsonProperty("SecurityControlArn")
     public String securityControlArn;
+
     public SecurityControl withSecurityControlArn(String securityControlArn) {
         this.securityControlArn = securityControlArn;
         return this;
@@ -33,6 +36,7 @@ public class SecurityControl {
     
     @JsonProperty("SecurityControlId")
     public String securityControlId;
+
     public SecurityControl withSecurityControlId(String securityControlId) {
         this.securityControlId = securityControlId;
         return this;
@@ -40,6 +44,7 @@ public class SecurityControl {
     
     @JsonProperty("SecurityControlStatus")
     public ControlStatusEnum securityControlStatus;
+
     public SecurityControl withSecurityControlStatus(ControlStatusEnum securityControlStatus) {
         this.securityControlStatus = securityControlStatus;
         return this;
@@ -47,6 +52,7 @@ public class SecurityControl {
     
     @JsonProperty("SeverityRating")
     public SeverityRatingEnum severityRating;
+
     public SecurityControl withSeverityRating(SeverityRatingEnum severityRating) {
         this.severityRating = severityRating;
         return this;
@@ -54,9 +60,19 @@ public class SecurityControl {
     
     @JsonProperty("Title")
     public String title;
+
     public SecurityControl withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public SecurityControl(@JsonProperty("Description") String description, @JsonProperty("RemediationUrl") String remediationUrl, @JsonProperty("SecurityControlArn") String securityControlArn, @JsonProperty("SecurityControlId") String securityControlId, @JsonProperty("SecurityControlStatus") ControlStatusEnum securityControlStatus, @JsonProperty("SeverityRating") SeverityRatingEnum severityRating, @JsonProperty("Title") String title) {
+        this.description = description;
+        this.remediationUrl = remediationUrl;
+        this.securityControlArn = securityControlArn;
+        this.securityControlId = securityControlId;
+        this.securityControlStatus = securityControlStatus;
+        this.severityRating = severityRating;
+        this.title = title;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListDeploymentBranchPoliciesRequest {
@@ -12,6 +13,7 @@ public class ReposListDeploymentBranchPoliciesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
     public String environmentName;
+
     public ReposListDeploymentBranchPoliciesRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -22,6 +24,7 @@ public class ReposListDeploymentBranchPoliciesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposListDeploymentBranchPoliciesRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,6 +35,7 @@ public class ReposListDeploymentBranchPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ReposListDeploymentBranchPoliciesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class ReposListDeploymentBranchPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ReposListDeploymentBranchPoliciesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,9 +57,15 @@ public class ReposListDeploymentBranchPoliciesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposListDeploymentBranchPoliciesRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposListDeploymentBranchPoliciesRequest(@JsonProperty("environment_name") String environmentName, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.environmentName = environmentName;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

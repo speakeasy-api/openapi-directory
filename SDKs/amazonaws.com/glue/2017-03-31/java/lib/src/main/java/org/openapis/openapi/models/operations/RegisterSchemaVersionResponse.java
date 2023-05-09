@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterSchemaVersionResponse {
@@ -12,6 +13,7 @@ public class RegisterSchemaVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public RegisterSchemaVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RegisterSchemaVersionResponse {
      */
     
     public Object concurrentModificationException;
+
     public RegisterSchemaVersionResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterSchemaVersionResponse {
     
     
     public String contentType;
+
     public RegisterSchemaVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RegisterSchemaVersionResponse {
      */
     
     public Object entityNotFoundException;
+
     public RegisterSchemaVersionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterSchemaVersionResponse {
      */
     
     public Object internalServiceException;
+
     public RegisterSchemaVersionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class RegisterSchemaVersionResponse {
      */
     
     public Object invalidInputException;
+
     public RegisterSchemaVersionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class RegisterSchemaVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterSchemaVersionResponse registerSchemaVersionResponse;
+
     public RegisterSchemaVersionResponse withRegisterSchemaVersionResponse(org.openapis.openapi.models.shared.RegisterSchemaVersionResponse registerSchemaVersionResponse) {
         this.registerSchemaVersionResponse = registerSchemaVersionResponse;
         return this;
@@ -79,6 +87,7 @@ public class RegisterSchemaVersionResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public RegisterSchemaVersionResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -86,6 +95,7 @@ public class RegisterSchemaVersionResponse {
     
     
     public Integer statusCode;
+
     public RegisterSchemaVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class RegisterSchemaVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterSchemaVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegisterSchemaVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

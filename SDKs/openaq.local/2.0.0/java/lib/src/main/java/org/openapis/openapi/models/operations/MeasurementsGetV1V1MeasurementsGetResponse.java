@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MeasurementsGetV1V1MeasurementsGetResponse {
     
     public String contentType;
+
     public MeasurementsGetV1V1MeasurementsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MeasurementsGetV1V1MeasurementsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public MeasurementsGetV1V1MeasurementsGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class MeasurementsGetV1V1MeasurementsGetResponse {
     
     
     public Integer statusCode;
+
     public MeasurementsGetV1V1MeasurementsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class MeasurementsGetV1V1MeasurementsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MeasurementsGetV1V1MeasurementsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class MeasurementsGetV1V1MeasurementsGetResponse {
      */
     
     public Object measurementsGetV1V1MeasurementsGet200ApplicationJSONAny;
+
     public MeasurementsGetV1V1MeasurementsGetResponse withMeasurementsGetV1V1MeasurementsGet200ApplicationJSONAny(Object measurementsGetV1V1MeasurementsGet200ApplicationJSONAny) {
         this.measurementsGetV1V1MeasurementsGet200ApplicationJSONAny = measurementsGetV1V1MeasurementsGet200ApplicationJSONAny;
         return this;
     }
     
+    public MeasurementsGetV1V1MeasurementsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

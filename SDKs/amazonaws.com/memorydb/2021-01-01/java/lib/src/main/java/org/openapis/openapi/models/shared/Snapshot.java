@@ -15,6 +15,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public Snapshot withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterConfiguration")
     public ClusterConfiguration clusterConfiguration;
+
     public Snapshot withClusterConfiguration(ClusterConfiguration clusterConfiguration) {
         this.clusterConfiguration = clusterConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataTiering")
     public DataTieringStatusEnum dataTiering;
+
     public Snapshot withDataTiering(DataTieringStatusEnum dataTiering) {
         this.dataTiering = dataTiering;
         return this;
@@ -39,6 +42,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public Snapshot withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -47,6 +51,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Snapshot withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public Snapshot withSource(String source) {
         this.source = source;
         return this;
@@ -63,9 +69,11 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Snapshot withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Snapshot(){}
 }

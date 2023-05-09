@@ -15,6 +15,7 @@ public class FieldViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FieldViolation withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class FieldViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public FieldViolation withField(String field) {
         this.field = field;
         return this;
     }
     
+    public FieldViolation(){}
 }

@@ -13,11 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class Webfont {
     /**
+     * Axis for variable fonts.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("axes")
+    public Axis[] axes;
+
+    public Webfont withAxes(Axis[] axes) {
+        this.axes = axes;
+        return this;
+    }
+    
+    /**
      * The category of the font.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public Webfont withCategory(String category) {
         this.category = category;
         return this;
@@ -29,6 +42,7 @@ public class Webfont {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family")
     public String family;
+
     public Webfont withFamily(String family) {
         this.family = family;
         return this;
@@ -40,6 +54,7 @@ public class Webfont {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public java.util.Map<String, String> files;
+
     public Webfont withFiles(java.util.Map<String, String> files) {
         this.files = files;
         return this;
@@ -51,6 +66,7 @@ public class Webfont {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Webfont withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,8 +78,21 @@ public class Webfont {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModified")
     public String lastModified;
+
     public Webfont withLastModified(String lastModified) {
         this.lastModified = lastModified;
+        return this;
+    }
+    
+    /**
+     * Font URL for menu subset, a subset of the font that is enough to display the font name
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("menu")
+    public String menu;
+
+    public Webfont withMenu(String menu) {
+        this.menu = menu;
         return this;
     }
     
@@ -73,6 +102,7 @@ public class Webfont {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsets")
     public String[] subsets;
+
     public Webfont withSubsets(String[] subsets) {
         this.subsets = subsets;
         return this;
@@ -84,6 +114,7 @@ public class Webfont {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variants")
     public String[] variants;
+
     public Webfont withVariants(String[] variants) {
         this.variants = variants;
         return this;
@@ -95,9 +126,11 @@ public class Webfont {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Webfont withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Webfont(){}
 }

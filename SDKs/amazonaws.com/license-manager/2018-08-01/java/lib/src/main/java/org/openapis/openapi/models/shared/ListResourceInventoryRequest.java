@@ -12,6 +12,7 @@ public class ListResourceInventoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public InventoryFilter[] filters;
+
     public ListResourceInventoryRequest withFilters(InventoryFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListResourceInventoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListResourceInventoryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListResourceInventoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourceInventoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListResourceInventoryRequest(){}
 }

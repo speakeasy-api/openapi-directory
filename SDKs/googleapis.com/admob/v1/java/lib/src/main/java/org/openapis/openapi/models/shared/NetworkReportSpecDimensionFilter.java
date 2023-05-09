@@ -18,6 +18,7 @@ public class NetworkReportSpecDimensionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public NetworkReportSpecDimensionFilterDimensionEnum dimension;
+
     public NetworkReportSpecDimensionFilter withDimension(NetworkReportSpecDimensionFilterDimensionEnum dimension) {
         this.dimension = dimension;
         return this;
@@ -29,9 +30,11 @@ public class NetworkReportSpecDimensionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchesAny")
     public StringList matchesAny;
+
     public NetworkReportSpecDimensionFilter withMatchesAny(StringList matchesAny) {
         this.matchesAny = matchesAny;
         return this;
     }
     
+    public NetworkReportSpecDimensionFilter(){}
 }

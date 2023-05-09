@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ConvertAPIRequestBody {
     @SpeakeasyMetadata("multipartForm:name=url")
     public String url;
+
     public ConvertAPIRequestBody withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ConvertAPIRequestBody(){}
 }

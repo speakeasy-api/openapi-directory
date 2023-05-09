@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEndpointResponse {
@@ -12,6 +13,7 @@ public class DeleteEndpointResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteEndpointResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEndpointResponse {
     
     
     public String contentType;
+
     public DeleteEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEndpointResponse {
      */
     
     public java.util.Map<String, Object> deleteEndpointResponse;
+
     public DeleteEndpointResponse withDeleteEndpointResponse(java.util.Map<String, Object> deleteEndpointResponse) {
         this.deleteEndpointResponse = deleteEndpointResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEndpointResponse {
      */
     
     public Object internalException;
+
     public DeleteEndpointResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteEndpointResponse {
     
     
     public Integer statusCode;
+
     public DeleteEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteEndpointResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteEndpointResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

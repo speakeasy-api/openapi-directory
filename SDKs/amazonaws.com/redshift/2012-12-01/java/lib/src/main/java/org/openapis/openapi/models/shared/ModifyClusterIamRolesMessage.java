@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyClusterIamRolesMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyClusterIamRolesMessage {
     
     public String[] addIamRoles;
+
     public ModifyClusterIamRolesMessage withAddIamRoles(String[] addIamRoles) {
         this.addIamRoles = addIamRoles;
         return this;
@@ -19,6 +20,7 @@ public class ModifyClusterIamRolesMessage {
     
     
     public String clusterIdentifier;
+
     public ModifyClusterIamRolesMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class ModifyClusterIamRolesMessage {
     
     
     public String defaultIamRoleArn;
+
     public ModifyClusterIamRolesMessage withDefaultIamRoleArn(String defaultIamRoleArn) {
         this.defaultIamRoleArn = defaultIamRoleArn;
         return this;
@@ -33,9 +36,13 @@ public class ModifyClusterIamRolesMessage {
     
     
     public String[] removeIamRoles;
+
     public ModifyClusterIamRolesMessage withRemoveIamRoles(String[] removeIamRoles) {
         this.removeIamRoles = removeIamRoles;
         return this;
     }
     
+    public ModifyClusterIamRolesMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+  }
 }

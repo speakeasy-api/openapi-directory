@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationGetProductSampleCustomColumnValueRequest {
@@ -12,6 +13,7 @@ public class ImportationGetProductSampleCustomColumnValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
     public String columnId;
+
     public ImportationGetProductSampleCustomColumnValueRequest withColumnId(String columnId) {
         this.columnId = columnId;
         return this;
@@ -22,6 +24,7 @@ public class ImportationGetProductSampleCustomColumnValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
     public String executionId;
+
     public ImportationGetProductSampleCustomColumnValueRequest withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -32,6 +35,7 @@ public class ImportationGetProductSampleCustomColumnValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productSampleIndex")
     public Integer productSampleIndex;
+
     public ImportationGetProductSampleCustomColumnValueRequest withProductSampleIndex(Integer productSampleIndex) {
         this.productSampleIndex = productSampleIndex;
         return this;
@@ -42,9 +46,16 @@ public class ImportationGetProductSampleCustomColumnValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public ImportationGetProductSampleCustomColumnValueRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public ImportationGetProductSampleCustomColumnValueRequest(@JsonProperty("columnId") String columnId, @JsonProperty("executionId") String executionId, @JsonProperty("productSampleIndex") Integer productSampleIndex, @JsonProperty("storeId") String storeId) {
+        this.columnId = columnId;
+        this.executionId = executionId;
+        this.productSampleIndex = productSampleIndex;
+        this.storeId = storeId;
+  }
 }

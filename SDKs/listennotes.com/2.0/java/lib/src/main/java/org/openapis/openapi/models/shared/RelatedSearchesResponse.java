@@ -15,9 +15,13 @@ public class RelatedSearchesResponse {
      */
     @JsonProperty("terms")
     public String[] terms;
+
     public RelatedSearchesResponse withTerms(String[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public RelatedSearchesResponse(@JsonProperty("terms") String[] terms) {
+        this.terms = terms;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAliasesRequest {
     @JsonProperty("EntityId")
     public String entityId;
+
     public ListAliasesRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -19,6 +20,7 @@ public class ListAliasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAliasesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class ListAliasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAliasesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -34,9 +37,14 @@ public class ListAliasesRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public ListAliasesRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public ListAliasesRequest(@JsonProperty("EntityId") String entityId, @JsonProperty("OrganizationId") String organizationId) {
+        this.entityId = entityId;
+        this.organizationId = organizationId;
+  }
 }

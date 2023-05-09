@@ -18,6 +18,7 @@ public class ListFirebaseProjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListFirebaseProjectsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListFirebaseProjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public FirebaseProject[] results;
+
     public ListFirebaseProjectsResponse withResults(FirebaseProject[] results) {
         this.results = results;
         return this;
     }
     
+    public ListFirebaseProjectsResponse(){}
 }

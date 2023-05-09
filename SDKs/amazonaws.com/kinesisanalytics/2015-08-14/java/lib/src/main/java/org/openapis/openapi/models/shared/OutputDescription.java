@@ -15,6 +15,7 @@ public class OutputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationSchema")
     public DestinationSchema destinationSchema;
+
     public OutputDescription withDestinationSchema(DestinationSchema destinationSchema) {
         this.destinationSchema = destinationSchema;
         return this;
@@ -23,6 +24,7 @@ public class OutputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisFirehoseOutputDescription")
     public KinesisFirehoseOutputDescription kinesisFirehoseOutputDescription;
+
     public OutputDescription withKinesisFirehoseOutputDescription(KinesisFirehoseOutputDescription kinesisFirehoseOutputDescription) {
         this.kinesisFirehoseOutputDescription = kinesisFirehoseOutputDescription;
         return this;
@@ -31,6 +33,7 @@ public class OutputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisStreamsOutputDescription")
     public KinesisStreamsOutputDescription kinesisStreamsOutputDescription;
+
     public OutputDescription withKinesisStreamsOutputDescription(KinesisStreamsOutputDescription kinesisStreamsOutputDescription) {
         this.kinesisStreamsOutputDescription = kinesisStreamsOutputDescription;
         return this;
@@ -39,6 +42,7 @@ public class OutputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaOutputDescription")
     public LambdaOutputDescription lambdaOutputDescription;
+
     public OutputDescription withLambdaOutputDescription(LambdaOutputDescription lambdaOutputDescription) {
         this.lambdaOutputDescription = lambdaOutputDescription;
         return this;
@@ -47,6 +51,7 @@ public class OutputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OutputDescription withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +60,11 @@ public class OutputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputId")
     public String outputId;
+
     public OutputDescription withOutputId(String outputId) {
         this.outputId = outputId;
         return this;
     }
     
+    public OutputDescription(){}
 }

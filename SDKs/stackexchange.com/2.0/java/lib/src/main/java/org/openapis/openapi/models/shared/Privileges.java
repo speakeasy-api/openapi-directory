@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class Privileges {
     
     public String description;
+
     public Privileges withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class Privileges {
     
     
     public Long reputation;
+
     public Privileges withReputation(Long reputation) {
         this.reputation = reputation;
         return this;
@@ -23,9 +25,11 @@ public class Privileges {
     
     
     public String shortDescription;
+
     public Privileges withShortDescription(String shortDescription) {
         this.shortDescription = shortDescription;
         return this;
     }
     
+    public Privileges(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HyperParameterTuningInstanceConfig {
     @JsonProperty("InstanceCount")
     public Long instanceCount;
+
     public HyperParameterTuningInstanceConfig withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -19,6 +20,7 @@ public class HyperParameterTuningInstanceConfig {
     
     @JsonProperty("InstanceType")
     public TrainingInstanceTypeEnum instanceType;
+
     public HyperParameterTuningInstanceConfig withInstanceType(TrainingInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -26,9 +28,15 @@ public class HyperParameterTuningInstanceConfig {
     
     @JsonProperty("VolumeSizeInGB")
     public Long volumeSizeInGB;
+
     public HyperParameterTuningInstanceConfig withVolumeSizeInGB(Long volumeSizeInGB) {
         this.volumeSizeInGB = volumeSizeInGB;
         return this;
     }
     
+    public HyperParameterTuningInstanceConfig(@JsonProperty("InstanceCount") Long instanceCount, @JsonProperty("InstanceType") TrainingInstanceTypeEnum instanceType, @JsonProperty("VolumeSizeInGB") Long volumeSizeInGB) {
+        this.instanceCount = instanceCount;
+        this.instanceType = instanceType;
+        this.volumeSizeInGB = volumeSizeInGB;
+  }
 }

@@ -12,6 +12,7 @@ public class StartMonitoringMemberRequestBody {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public StartMonitoringMemberRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,9 +23,14 @@ public class StartMonitoringMemberRequestBody {
      */
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public StartMonitoringMemberRequestBody withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
     }
     
+    public StartMonitoringMemberRequestBody(@JsonProperty("AccountId") String accountId, @JsonProperty("GraphArn") String graphArn) {
+        this.accountId = accountId;
+        this.graphArn = graphArn;
+  }
 }

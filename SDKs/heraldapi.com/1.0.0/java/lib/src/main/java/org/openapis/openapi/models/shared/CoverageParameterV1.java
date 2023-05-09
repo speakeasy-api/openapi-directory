@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CoverageParameterV1 {
     @JsonProperty("id")
     public String id;
+
     public CoverageParameterV1 withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class CoverageParameterV1 {
     
     @JsonProperty("text")
     public String text;
+
     public CoverageParameterV1 withText(String text) {
         this.text = text;
         return this;
     }
     
+    public CoverageParameterV1(@JsonProperty("id") String id, @JsonProperty("text") String text) {
+        this.id = id;
+        this.text = text;
+  }
 }

@@ -18,6 +18,7 @@ public class TimestampedEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public TimestampedEvent withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -29,9 +30,11 @@ public class TimestampedEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public TimestampedEvent withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public TimestampedEvent(){}
 }

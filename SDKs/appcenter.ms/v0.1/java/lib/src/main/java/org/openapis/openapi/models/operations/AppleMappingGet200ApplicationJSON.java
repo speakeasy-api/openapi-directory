@@ -18,6 +18,7 @@ public class AppleMappingGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_id")
     public String appId;
+
     public AppleMappingGet200ApplicationJSON withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -29,6 +30,7 @@ public class AppleMappingGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apple_id")
     public String appleId;
+
     public AppleMappingGet200ApplicationJSON withAppleId(String appleId) {
         this.appleId = appleId;
         return this;
@@ -40,6 +42,7 @@ public class AppleMappingGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_connection_id")
     public String serviceConnectionId;
+
     public AppleMappingGet200ApplicationJSON withServiceConnectionId(String serviceConnectionId) {
         this.serviceConnectionId = serviceConnectionId;
         return this;
@@ -51,9 +54,11 @@ public class AppleMappingGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_identifier")
     public String teamIdentifier;
+
     public AppleMappingGet200ApplicationJSON withTeamIdentifier(String teamIdentifier) {
         this.teamIdentifier = teamIdentifier;
         return this;
     }
     
+    public AppleMappingGet200ApplicationJSON(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCollaborationResponse {
@@ -12,6 +13,7 @@ public class DeleteCollaborationResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteCollaborationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCollaborationResponse {
     
     
     public String contentType;
+
     public DeleteCollaborationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCollaborationResponse {
      */
     
     public java.util.Map<String, Object> deleteCollaborationOutput;
+
     public DeleteCollaborationResponse withDeleteCollaborationOutput(java.util.Map<String, Object> deleteCollaborationOutput) {
         this.deleteCollaborationOutput = deleteCollaborationOutput;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCollaborationResponse {
      */
     
     public Object internalServerException;
+
     public DeleteCollaborationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteCollaborationResponse {
     
     
     public Integer statusCode;
+
     public DeleteCollaborationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteCollaborationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCollaborationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteCollaborationResponse {
      */
     
     public Object throttlingException;
+
     public DeleteCollaborationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteCollaborationResponse {
      */
     
     public Object validationException;
+
     public DeleteCollaborationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteCollaborationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

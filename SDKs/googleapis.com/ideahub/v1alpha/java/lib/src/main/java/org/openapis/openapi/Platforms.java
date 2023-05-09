@@ -59,11 +59,9 @@ public class Platforms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse res = new org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse() {{
+        org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse res = new org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse(contentType, httpRes.statusCode()) {{
             googleSearchIdeahubV1alphaIdeaActivity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Platforms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeasListResponse res = new org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeasListResponse() {{
+        org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeasListResponse res = new org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeasListResponse(contentType, httpRes.statusCode()) {{
             googleSearchIdeahubV1alphaListIdeasResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Platforms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesLocalesListResponse res = new org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesLocalesListResponse() {{
+        org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesLocalesListResponse res = new org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesLocalesListResponse(contentType, httpRes.statusCode()) {{
             googleSearchIdeahubV1alphaListAvailableLocalesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Platforms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesTopicStatesPatchResponse res = new org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesTopicStatesPatchResponse() {{
+        org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesTopicStatesPatchResponse res = new org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesTopicStatesPatchResponse(contentType, httpRes.statusCode()) {{
             googleSearchIdeahubV1alphaTopicState = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

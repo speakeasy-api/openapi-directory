@@ -18,6 +18,7 @@ public class ProgressTimeseries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentProgress")
     public Double currentProgress;
+
     public ProgressTimeseries withCurrentProgress(Double currentProgress) {
         this.currentProgress = currentProgress;
         return this;
@@ -29,9 +30,11 @@ public class ProgressTimeseries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataPoints")
     public Point[] dataPoints;
+
     public ProgressTimeseries withDataPoints(Point[] dataPoints) {
         this.dataPoints = dataPoints;
         return this;
     }
     
+    public ProgressTimeseries(){}
 }

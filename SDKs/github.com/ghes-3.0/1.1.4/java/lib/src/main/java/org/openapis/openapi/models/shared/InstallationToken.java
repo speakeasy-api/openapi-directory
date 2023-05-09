@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstallationToken {
     @JsonProperty("expires_at")
     public String expiresAt;
+
     public InstallationToken withExpiresAt(String expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -22,6 +23,7 @@ public class InstallationToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_multiple_single_files")
     public Boolean hasMultipleSingleFiles;
+
     public InstallationToken withHasMultipleSingleFiles(Boolean hasMultipleSingleFiles) {
         this.hasMultipleSingleFiles = hasMultipleSingleFiles;
         return this;
@@ -33,6 +35,7 @@ public class InstallationToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public AppPermissions permissions;
+
     public InstallationToken withPermissions(AppPermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -41,6 +44,7 @@ public class InstallationToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositories")
     public Repository[] repositories;
+
     public InstallationToken withRepositories(Repository[] repositories) {
         this.repositories = repositories;
         return this;
@@ -49,6 +53,7 @@ public class InstallationToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository_selection")
     public InstallationTokenRepositorySelectionEnum repositorySelection;
+
     public InstallationToken withRepositorySelection(InstallationTokenRepositorySelectionEnum repositorySelection) {
         this.repositorySelection = repositorySelection;
         return this;
@@ -57,6 +62,7 @@ public class InstallationToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("single_file")
     public String singleFile;
+
     public InstallationToken withSingleFile(String singleFile) {
         this.singleFile = singleFile;
         return this;
@@ -65,6 +71,7 @@ public class InstallationToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("single_file_paths")
     public String[] singleFilePaths;
+
     public InstallationToken withSingleFilePaths(String[] singleFilePaths) {
         this.singleFilePaths = singleFilePaths;
         return this;
@@ -72,9 +79,14 @@ public class InstallationToken {
     
     @JsonProperty("token")
     public String token;
+
     public InstallationToken withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public InstallationToken(@JsonProperty("expires_at") String expiresAt, @JsonProperty("token") String token) {
+        this.expiresAt = expiresAt;
+        this.token = token;
+  }
 }

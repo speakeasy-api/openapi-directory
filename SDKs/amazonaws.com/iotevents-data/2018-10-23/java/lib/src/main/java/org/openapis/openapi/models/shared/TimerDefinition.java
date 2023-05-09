@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimerDefinition {
     @JsonProperty("name")
     public String name;
+
     public TimerDefinition withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class TimerDefinition {
     
     @JsonProperty("seconds")
     public Long seconds;
+
     public TimerDefinition withSeconds(Long seconds) {
         this.seconds = seconds;
         return this;
     }
     
+    public TimerDefinition(@JsonProperty("name") String name, @JsonProperty("seconds") Long seconds) {
+        this.name = name;
+        this.seconds = seconds;
+  }
 }

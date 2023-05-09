@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SyncscheduleResponse {
     
     public String contentType;
+
     public SyncscheduleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SyncscheduleResponse {
      */
     
     public org.openapis.openapi.models.shared.NAOkResponse naOkResponse;
+
     public SyncscheduleResponse withNAOkResponse(org.openapis.openapi.models.shared.NAOkResponse naOkResponse) {
         this.naOkResponse = naOkResponse;
         return this;
@@ -26,6 +29,7 @@ public class SyncscheduleResponse {
     
     
     public Integer statusCode;
+
     public SyncscheduleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SyncscheduleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SyncscheduleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SyncscheduleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

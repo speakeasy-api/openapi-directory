@@ -12,6 +12,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public SearchRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -22,6 +23,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aspect_filter")
     public String aspectFilter;
+
     public SearchRequest withAspectFilter(String aspectFilter) {
         this.aspectFilter = aspectFilter;
         return this;
@@ -32,6 +34,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_ids")
     public String categoryIds;
+
     public SearchRequest withCategoryIds(String categoryIds) {
         this.categoryIds = categoryIds;
         return this;
@@ -42,6 +45,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fieldgroups")
     public String fieldgroups;
+
     public SearchRequest withFieldgroups(String fieldgroups) {
         this.fieldgroups = fieldgroups;
         return this;
@@ -52,6 +56,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gtin")
     public String gtin;
+
     public SearchRequest withGtin(String gtin) {
         this.gtin = gtin;
         return this;
@@ -62,6 +67,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public SearchRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -72,6 +78,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mpn")
     public String mpn;
+
     public SearchRequest withMpn(String mpn) {
         this.mpn = mpn;
         return this;
@@ -82,6 +89,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public SearchRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -92,9 +100,11 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public SearchRequest withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public SearchRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFileCacheResponse {
@@ -12,6 +13,7 @@ public class UpdateFileCacheResponse {
      */
     
     public Object badRequest;
+
     public UpdateFileCacheResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFileCacheResponse {
     
     
     public String contentType;
+
     public UpdateFileCacheResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFileCacheResponse {
      */
     
     public Object fileCacheNotFound;
+
     public UpdateFileCacheResponse withFileCacheNotFound(Object fileCacheNotFound) {
         this.fileCacheNotFound = fileCacheNotFound;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFileCacheResponse {
      */
     
     public Object incompatibleParameterError;
+
     public UpdateFileCacheResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFileCacheResponse {
      */
     
     public Object internalServerError;
+
     public UpdateFileCacheResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class UpdateFileCacheResponse {
      */
     
     public Object missingFileCacheConfiguration;
+
     public UpdateFileCacheResponse withMissingFileCacheConfiguration(Object missingFileCacheConfiguration) {
         this.missingFileCacheConfiguration = missingFileCacheConfiguration;
         return this;
@@ -66,6 +73,7 @@ public class UpdateFileCacheResponse {
     
     
     public Integer statusCode;
+
     public UpdateFileCacheResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFileCacheResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFileCacheResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateFileCacheResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public UpdateFileCacheResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
@@ -93,6 +103,7 @@ public class UpdateFileCacheResponse {
      */
     
     public Object unsupportedOperation;
+
     public UpdateFileCacheResponse withUnsupportedOperation(Object unsupportedOperation) {
         this.unsupportedOperation = unsupportedOperation;
         return this;
@@ -103,9 +114,14 @@ public class UpdateFileCacheResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFileCacheResponse updateFileCacheResponse;
+
     public UpdateFileCacheResponse withUpdateFileCacheResponse(org.openapis.openapi.models.shared.UpdateFileCacheResponse updateFileCacheResponse) {
         this.updateFileCacheResponse = updateFileCacheResponse;
         return this;
     }
     
+    public UpdateFileCacheResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

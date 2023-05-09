@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResendFailedIPNRequest {
@@ -12,6 +13,7 @@ public class ResendFailedIPNRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public ResendFailedIPNRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class ResendFailedIPNRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ResendFailedIPNRequest resendFailedIPNRequest;
+
     public ResendFailedIPNRequest withResendFailedIPNRequest(org.openapis.openapi.models.shared.ResendFailedIPNRequest resendFailedIPNRequest) {
         this.resendFailedIPNRequest = resendFailedIPNRequest;
         return this;
     }
     
+    public ResendFailedIPNRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("resendFailedIPNRequest") org.openapis.openapi.models.shared.ResendFailedIPNRequest resendFailedIPNRequest) {
+        this.authorization = authorization;
+        this.resendFailedIPNRequest = resendFailedIPNRequest;
+  }
 }

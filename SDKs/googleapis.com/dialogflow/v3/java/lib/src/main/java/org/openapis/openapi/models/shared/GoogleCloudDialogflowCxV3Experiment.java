@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDialogflowCxV3Experiment withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public GoogleCloudDialogflowCxV3ExperimentDefinition definition;
+
     public GoogleCloudDialogflowCxV3Experiment withDefinition(GoogleCloudDialogflowCxV3ExperimentDefinition definition) {
         this.definition = definition;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowCxV3Experiment withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3Experiment withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudDialogflowCxV3Experiment withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowCxV3Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experimentLength")
     public String experimentLength;
+
     public GoogleCloudDialogflowCxV3Experiment withExperimentLength(String experimentLength) {
         this.experimentLength = experimentLength;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowCxV3Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateTime")
     public String lastUpdateTime;
+
     public GoogleCloudDialogflowCxV3Experiment withLastUpdateTime(String lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowCxV3Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3Experiment withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowCxV3Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public GoogleCloudDialogflowCxV3ExperimentResult result;
+
     public GoogleCloudDialogflowCxV3Experiment withResult(GoogleCloudDialogflowCxV3ExperimentResult result) {
         this.result = result;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDialogflowCxV3Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutConfig")
     public GoogleCloudDialogflowCxV3RolloutConfig rolloutConfig;
+
     public GoogleCloudDialogflowCxV3Experiment withRolloutConfig(GoogleCloudDialogflowCxV3RolloutConfig rolloutConfig) {
         this.rolloutConfig = rolloutConfig;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDialogflowCxV3Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutFailureReason")
     public String rolloutFailureReason;
+
     public GoogleCloudDialogflowCxV3Experiment withRolloutFailureReason(String rolloutFailureReason) {
         this.rolloutFailureReason = rolloutFailureReason;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDialogflowCxV3Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutState")
     public GoogleCloudDialogflowCxV3RolloutState rolloutState;
+
     public GoogleCloudDialogflowCxV3Experiment withRolloutState(GoogleCloudDialogflowCxV3RolloutState rolloutState) {
         this.rolloutState = rolloutState;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudDialogflowCxV3Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudDialogflowCxV3Experiment withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudDialogflowCxV3Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDialogflowCxV3ExperimentStateEnum state;
+
     public GoogleCloudDialogflowCxV3Experiment withState(GoogleCloudDialogflowCxV3ExperimentStateEnum state) {
         this.state = state;
         return this;
@@ -172,9 +186,11 @@ public class GoogleCloudDialogflowCxV3Experiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variantsHistory")
     public GoogleCloudDialogflowCxV3VariantsHistory[] variantsHistory;
+
     public GoogleCloudDialogflowCxV3Experiment withVariantsHistory(GoogleCloudDialogflowCxV3VariantsHistory[] variantsHistory) {
         this.variantsHistory = variantsHistory;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3Experiment(){}
 }

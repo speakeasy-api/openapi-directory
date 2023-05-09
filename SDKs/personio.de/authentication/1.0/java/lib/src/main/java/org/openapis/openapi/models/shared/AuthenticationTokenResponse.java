@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AuthenticationTokenResponse {
     @JsonProperty("data")
     public AuthenticationTokenResponseData data;
+
     public AuthenticationTokenResponse withData(AuthenticationTokenResponseData data) {
         this.data = data;
         return this;
@@ -16,9 +17,14 @@ public class AuthenticationTokenResponse {
     
     @JsonProperty("success")
     public Boolean success;
+
     public AuthenticationTokenResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public AuthenticationTokenResponse(@JsonProperty("data") AuthenticationTokenResponseData data, @JsonProperty("success") Boolean success) {
+        this.data = data;
+        this.success = success;
+  }
 }

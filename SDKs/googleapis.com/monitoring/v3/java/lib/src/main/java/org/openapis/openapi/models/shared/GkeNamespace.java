@@ -18,6 +18,7 @@ public class GkeNamespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterName")
     public String clusterName;
+
     public GkeNamespace withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -29,6 +30,7 @@ public class GkeNamespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GkeNamespace withLocation(String location) {
         this.location = location;
         return this;
@@ -40,6 +42,7 @@ public class GkeNamespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public GkeNamespace withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -51,9 +54,11 @@ public class GkeNamespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public GkeNamespace withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GkeNamespace(){}
 }

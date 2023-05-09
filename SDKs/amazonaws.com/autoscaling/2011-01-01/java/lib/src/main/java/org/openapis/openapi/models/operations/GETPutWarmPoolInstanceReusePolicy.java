@@ -12,9 +12,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETPutWarmPoolInstanceReusePolicy {
     @SpeakeasyMetadata("queryParam:name=ReuseOnScaleIn")
     public Boolean reuseOnScaleIn;
+
     public GETPutWarmPoolInstanceReusePolicy withReuseOnScaleIn(Boolean reuseOnScaleIn) {
         this.reuseOnScaleIn = reuseOnScaleIn;
         return this;
     }
     
+    public GETPutWarmPoolInstanceReusePolicy(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLogPatternSetsResponse {
     
     public String contentType;
+
     public ListLogPatternSetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListLogPatternSetsResponse {
      */
     
     public Object internalServerException;
+
     public ListLogPatternSetsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListLogPatternSetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLogPatternSetsResponse listLogPatternSetsResponse;
+
     public ListLogPatternSetsResponse withListLogPatternSetsResponse(org.openapis.openapi.models.shared.ListLogPatternSetsResponse listLogPatternSetsResponse) {
         this.listLogPatternSetsResponse = listLogPatternSetsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListLogPatternSetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListLogPatternSetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListLogPatternSetsResponse {
     
     
     public Integer statusCode;
+
     public ListLogPatternSetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListLogPatternSetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLogPatternSetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListLogPatternSetsResponse {
      */
     
     public Object validationException;
+
     public ListLogPatternSetsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListLogPatternSetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

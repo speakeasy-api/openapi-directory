@@ -16,6 +16,7 @@ public class PointPointDailyEveningWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("angle")
     public Double angle;
+
     public PointPointDailyEveningWindData withAngle(Double angle) {
         this.angle = angle;
         return this;
@@ -28,18 +29,19 @@ public class PointPointDailyEveningWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dir")
     public byte[] dir;
+
     public PointPointDailyEveningWindData withDir(byte[] dir) {
         this.dir = dir;
         return this;
     }
     
     /**
-     * Wind gust speed. (evening max)
      * Units: metric = m/s, us = mph, uk = mph, ca = km/h
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gusts")
     public Double gusts;
+
     public PointPointDailyEveningWindData withGusts(Double gusts) {
         this.gusts = gusts;
         return this;
@@ -51,9 +53,11 @@ public class PointPointDailyEveningWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speed")
     public Double speed;
+
     public PointPointDailyEveningWindData withSpeed(Double speed) {
         this.speed = speed;
         return this;
     }
     
+    public PointPointDailyEveningWindData(){}
 }

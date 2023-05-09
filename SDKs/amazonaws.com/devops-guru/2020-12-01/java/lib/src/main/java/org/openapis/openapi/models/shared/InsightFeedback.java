@@ -15,6 +15,7 @@ public class InsightFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Feedback")
     public InsightFeedbackOptionEnum feedback;
+
     public InsightFeedback withFeedback(InsightFeedbackOptionEnum feedback) {
         this.feedback = feedback;
         return this;
@@ -23,9 +24,11 @@ public class InsightFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public InsightFeedback withId(String id) {
         this.id = id;
         return this;
     }
     
+    public InsightFeedback(){}
 }

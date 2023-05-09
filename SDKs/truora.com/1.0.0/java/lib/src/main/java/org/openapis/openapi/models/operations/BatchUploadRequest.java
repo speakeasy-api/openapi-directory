@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchUploadRequest {
@@ -12,6 +13,7 @@ public class BatchUploadRequest {
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public org.openapis.openapi.models.shared.BatchUploadInput batchUploadInput;
+
     public BatchUploadRequest withBatchUploadInput(org.openapis.openapi.models.shared.BatchUploadInput batchUploadInput) {
         this.batchUploadInput = batchUploadInput;
         return this;
@@ -22,9 +24,14 @@ public class BatchUploadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=report_id")
     public String reportId;
+
     public BatchUploadRequest withReportId(String reportId) {
         this.reportId = reportId;
         return this;
     }
     
+    public BatchUploadRequest(@JsonProperty("BatchUploadInput") org.openapis.openapi.models.shared.BatchUploadInput batchUploadInput, @JsonProperty("report_id") String reportId) {
+        this.batchUploadInput = batchUploadInput;
+        this.reportId = reportId;
+  }
 }

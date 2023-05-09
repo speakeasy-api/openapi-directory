@@ -15,6 +15,7 @@ public class GrantPermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GrantPermissionsRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -25,6 +26,7 @@ public class GrantPermissionsRequestBody {
      */
     @JsonProperty("Permissions")
     public org.openapis.openapi.models.shared.PermissionEnum[] permissions;
+
     public GrantPermissionsRequestBody withPermissions(org.openapis.openapi.models.shared.PermissionEnum[] permissions) {
         this.permissions = permissions;
         return this;
@@ -36,6 +38,7 @@ public class GrantPermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionsWithGrantOption")
     public org.openapis.openapi.models.shared.PermissionEnum[] permissionsWithGrantOption;
+
     public GrantPermissionsRequestBody withPermissionsWithGrantOption(org.openapis.openapi.models.shared.PermissionEnum[] permissionsWithGrantOption) {
         this.permissionsWithGrantOption = permissionsWithGrantOption;
         return this;
@@ -46,6 +49,7 @@ public class GrantPermissionsRequestBody {
      */
     @JsonProperty("Principal")
     public GrantPermissionsRequestBodyPrincipal principal;
+
     public GrantPermissionsRequestBody withPrincipal(GrantPermissionsRequestBodyPrincipal principal) {
         this.principal = principal;
         return this;
@@ -56,9 +60,15 @@ public class GrantPermissionsRequestBody {
      */
     @JsonProperty("Resource")
     public GrantPermissionsRequestBodyResource resource;
+
     public GrantPermissionsRequestBody withResource(GrantPermissionsRequestBodyResource resource) {
         this.resource = resource;
         return this;
     }
     
+    public GrantPermissionsRequestBody(@JsonProperty("Permissions") org.openapis.openapi.models.shared.PermissionEnum[] permissions, @JsonProperty("Principal") GrantPermissionsRequestBodyPrincipal principal, @JsonProperty("Resource") GrantPermissionsRequestBodyResource resource) {
+        this.permissions = permissions;
+        this.principal = principal;
+        this.resource = resource;
+  }
 }

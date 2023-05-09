@@ -430,4 +430,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateMobileDeviceAccessRul
 lib/src/main/java/org/openapis/openapi/models/shared/UpdatePrimaryEmailAddressRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateResourceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

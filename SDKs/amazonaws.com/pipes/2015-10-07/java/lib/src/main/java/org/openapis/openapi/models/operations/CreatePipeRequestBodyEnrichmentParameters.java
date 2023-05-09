@@ -15,6 +15,7 @@ public class CreatePipeRequestBodyEnrichmentParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpParameters")
     public org.openapis.openapi.models.shared.PipeEnrichmentHttpParameters httpParameters;
+
     public CreatePipeRequestBodyEnrichmentParameters withHttpParameters(org.openapis.openapi.models.shared.PipeEnrichmentHttpParameters httpParameters) {
         this.httpParameters = httpParameters;
         return this;
@@ -23,9 +24,11 @@ public class CreatePipeRequestBodyEnrichmentParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputTemplate")
     public String inputTemplate;
+
     public CreatePipeRequestBodyEnrichmentParameters withInputTemplate(String inputTemplate) {
         this.inputTemplate = inputTemplate;
         return this;
     }
     
+    public CreatePipeRequestBodyEnrichmentParameters(){}
 }

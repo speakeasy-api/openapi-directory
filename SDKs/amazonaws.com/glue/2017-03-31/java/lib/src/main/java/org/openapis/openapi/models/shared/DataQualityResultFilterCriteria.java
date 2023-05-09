@@ -20,6 +20,7 @@ public class DataQualityResultFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSource")
     public DataSource dataSource;
+
     public DataQualityResultFilterCriteria withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -28,6 +29,7 @@ public class DataQualityResultFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public DataQualityResultFilterCriteria withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -36,6 +38,7 @@ public class DataQualityResultFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobRunId")
     public String jobRunId;
+
     public DataQualityResultFilterCriteria withJobRunId(String jobRunId) {
         this.jobRunId = jobRunId;
         return this;
@@ -46,6 +49,7 @@ public class DataQualityResultFilterCriteria {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedAfter")
     public OffsetDateTime startedAfter;
+
     public DataQualityResultFilterCriteria withStartedAfter(OffsetDateTime startedAfter) {
         this.startedAfter = startedAfter;
         return this;
@@ -56,9 +60,11 @@ public class DataQualityResultFilterCriteria {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedBefore")
     public OffsetDateTime startedBefore;
+
     public DataQualityResultFilterCriteria withStartedBefore(OffsetDateTime startedBefore) {
         this.startedBefore = startedBefore;
         return this;
     }
     
+    public DataQualityResultFilterCriteria(){}
 }

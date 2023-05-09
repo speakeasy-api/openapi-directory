@@ -61,11 +61,9 @@ public class Welcome {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddwebhookResponse res = new org.openapis.openapi.models.operations.AddwebhookResponse() {{
+        org.openapis.openapi.models.operations.AddwebhookResponse res = new org.openapis.openapi.models.operations.AddwebhookResponse(contentType, httpRes.statusCode()) {{
             naWelcomeWebhookResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Welcome {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DropwebhookResponse res = new org.openapis.openapi.models.operations.DropwebhookResponse() {{
+        org.openapis.openapi.models.operations.DropwebhookResponse res = new org.openapis.openapi.models.operations.DropwebhookResponse(contentType, httpRes.statusCode()) {{
             naWelcomeWebhookResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Welcome {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetcamerapictureResponse res = new org.openapis.openapi.models.operations.GetcamerapictureResponse() {{
+        org.openapis.openapi.models.operations.GetcamerapictureResponse res = new org.openapis.openapi.models.operations.GetcamerapictureResponse(contentType, httpRes.statusCode()) {{
             getcamerapicture200ApplicationJSONByteString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,11 +192,9 @@ public class Welcome {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GeteventsuntilResponse res = new org.openapis.openapi.models.operations.GeteventsuntilResponse() {{
+        org.openapis.openapi.models.operations.GeteventsuntilResponse res = new org.openapis.openapi.models.operations.GeteventsuntilResponse(contentType, httpRes.statusCode()) {{
             naWelcomeEventResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -244,11 +236,9 @@ public class Welcome {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GethomedataResponse res = new org.openapis.openapi.models.operations.GethomedataResponse() {{
+        org.openapis.openapi.models.operations.GethomedataResponse res = new org.openapis.openapi.models.operations.GethomedataResponse(contentType, httpRes.statusCode()) {{
             naWelcomeHomeDataResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,11 +280,9 @@ public class Welcome {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetlasteventofResponse res = new org.openapis.openapi.models.operations.GetlasteventofResponse() {{
+        org.openapis.openapi.models.operations.GetlasteventofResponse res = new org.openapis.openapi.models.operations.GetlasteventofResponse(contentType, httpRes.statusCode()) {{
             naWelcomeEventResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -336,11 +324,9 @@ public class Welcome {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetnexteventsResponse res = new org.openapis.openapi.models.operations.GetnexteventsResponse() {{
+        org.openapis.openapi.models.operations.GetnexteventsResponse res = new org.openapis.openapi.models.operations.GetnexteventsResponse(contentType, httpRes.statusCode()) {{
             naWelcomeEventResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -382,11 +368,9 @@ public class Welcome {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetpersonsawayResponse res = new org.openapis.openapi.models.operations.SetpersonsawayResponse() {{
+        org.openapis.openapi.models.operations.SetpersonsawayResponse res = new org.openapis.openapi.models.operations.SetpersonsawayResponse(contentType, httpRes.statusCode()) {{
             naWelcomePersonsAwayResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -428,11 +412,9 @@ public class Welcome {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetpersonshomeResponse res = new org.openapis.openapi.models.operations.SetpersonshomeResponse() {{
+        org.openapis.openapi.models.operations.SetpersonshomeResponse res = new org.openapis.openapi.models.operations.SetpersonshomeResponse(contentType, httpRes.statusCode()) {{
             naWelcomePersonsHomeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,9 +15,11 @@ public class DeleteSnapshotResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public DeleteSnapshotResult withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public DeleteSnapshotResult(){}
 }

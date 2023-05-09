@@ -18,6 +18,7 @@ public class NormalizedVertex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public Float x;
+
     public NormalizedVertex withX(Float x) {
         this.x = x;
         return this;
@@ -29,9 +30,11 @@ public class NormalizedVertex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Float y;
+
     public NormalizedVertex withY(Float y) {
         this.y = y;
         return this;
     }
     
+    public NormalizedVertex(){}
 }

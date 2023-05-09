@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddAttachmentsToSetResponse {
@@ -12,6 +13,7 @@ public class AddAttachmentsToSetResponse {
      */
     
     public org.openapis.openapi.models.shared.AddAttachmentsToSetResponse addAttachmentsToSetResponse;
+
     public AddAttachmentsToSetResponse withAddAttachmentsToSetResponse(org.openapis.openapi.models.shared.AddAttachmentsToSetResponse addAttachmentsToSetResponse) {
         this.addAttachmentsToSetResponse = addAttachmentsToSetResponse;
         return this;
@@ -22,6 +24,7 @@ public class AddAttachmentsToSetResponse {
      */
     
     public Object attachmentLimitExceeded;
+
     public AddAttachmentsToSetResponse withAttachmentLimitExceeded(Object attachmentLimitExceeded) {
         this.attachmentLimitExceeded = attachmentLimitExceeded;
         return this;
@@ -32,6 +35,7 @@ public class AddAttachmentsToSetResponse {
      */
     
     public Object attachmentSetExpired;
+
     public AddAttachmentsToSetResponse withAttachmentSetExpired(Object attachmentSetExpired) {
         this.attachmentSetExpired = attachmentSetExpired;
         return this;
@@ -42,6 +46,7 @@ public class AddAttachmentsToSetResponse {
      */
     
     public Object attachmentSetIdNotFound;
+
     public AddAttachmentsToSetResponse withAttachmentSetIdNotFound(Object attachmentSetIdNotFound) {
         this.attachmentSetIdNotFound = attachmentSetIdNotFound;
         return this;
@@ -52,6 +57,7 @@ public class AddAttachmentsToSetResponse {
      */
     
     public Object attachmentSetSizeLimitExceeded;
+
     public AddAttachmentsToSetResponse withAttachmentSetSizeLimitExceeded(Object attachmentSetSizeLimitExceeded) {
         this.attachmentSetSizeLimitExceeded = attachmentSetSizeLimitExceeded;
         return this;
@@ -59,6 +65,7 @@ public class AddAttachmentsToSetResponse {
     
     
     public String contentType;
+
     public AddAttachmentsToSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class AddAttachmentsToSetResponse {
      */
     
     public Object internalServerError;
+
     public AddAttachmentsToSetResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -76,6 +84,7 @@ public class AddAttachmentsToSetResponse {
     
     
     public Integer statusCode;
+
     public AddAttachmentsToSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class AddAttachmentsToSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddAttachmentsToSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddAttachmentsToSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

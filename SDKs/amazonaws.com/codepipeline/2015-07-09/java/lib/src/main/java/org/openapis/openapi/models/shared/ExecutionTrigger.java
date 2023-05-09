@@ -15,6 +15,7 @@ public class ExecutionTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerDetail")
     public String triggerDetail;
+
     public ExecutionTrigger withTriggerDetail(String triggerDetail) {
         this.triggerDetail = triggerDetail;
         return this;
@@ -23,9 +24,11 @@ public class ExecutionTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerType")
     public TriggerTypeEnum triggerType;
+
     public ExecutionTrigger withTriggerType(TriggerTypeEnum triggerType) {
         this.triggerType = triggerType;
         return this;
     }
     
+    public ExecutionTrigger(){}
 }

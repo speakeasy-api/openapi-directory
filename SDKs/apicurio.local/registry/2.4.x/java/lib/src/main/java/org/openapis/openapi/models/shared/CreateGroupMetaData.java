@@ -12,6 +12,7 @@ public class CreateGroupMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateGroupMetaData withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateGroupMetaData {
     
     @JsonProperty("id")
     public String id;
+
     public CreateGroupMetaData withId(String id) {
         this.id = id;
         return this;
@@ -30,9 +32,13 @@ public class CreateGroupMetaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public CreateGroupMetaData withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
     }
     
+    public CreateGroupMetaData(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

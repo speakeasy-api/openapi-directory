@@ -18,6 +18,7 @@ public class PrintServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public PrintServer withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class PrintServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PrintServer withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class PrintServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PrintServer withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class PrintServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PrintServer withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class PrintServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PrintServer withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class PrintServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitId")
     public String orgUnitId;
+
     public PrintServer withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
@@ -84,9 +90,11 @@ public class PrintServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public PrintServer withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public PrintServer(){}
 }

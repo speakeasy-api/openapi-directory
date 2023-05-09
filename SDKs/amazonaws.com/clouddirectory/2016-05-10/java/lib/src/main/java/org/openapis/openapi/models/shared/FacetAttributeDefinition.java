@@ -15,6 +15,7 @@ public class FacetAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultValue")
     public TypedAttributeValue defaultValue;
+
     public FacetAttributeDefinition withDefaultValue(TypedAttributeValue defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -23,6 +24,7 @@ public class FacetAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsImmutable")
     public Boolean isImmutable;
+
     public FacetAttributeDefinition withIsImmutable(Boolean isImmutable) {
         this.isImmutable = isImmutable;
         return this;
@@ -31,6 +33,7 @@ public class FacetAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public java.util.Map<String, Rule> rules;
+
     public FacetAttributeDefinition withRules(java.util.Map<String, Rule> rules) {
         this.rules = rules;
         return this;
@@ -38,9 +41,13 @@ public class FacetAttributeDefinition {
     
     @JsonProperty("Type")
     public FacetAttributeTypeEnum type;
+
     public FacetAttributeDefinition withType(FacetAttributeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public FacetAttributeDefinition(@JsonProperty("Type") FacetAttributeTypeEnum type) {
+        this.type = type;
+  }
 }

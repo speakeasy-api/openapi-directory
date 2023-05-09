@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1GovernedContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consolidatedPolicy")
     public AnalyzerOrgPolicy consolidatedPolicy;
+
     public GoogleCloudAssetV1GovernedContainer withConsolidatedPolicy(AnalyzerOrgPolicy consolidatedPolicy) {
         this.consolidatedPolicy = consolidatedPolicy;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssetV1GovernedContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullResourceName")
     public String fullResourceName;
+
     public GoogleCloudAssetV1GovernedContainer withFullResourceName(String fullResourceName) {
         this.fullResourceName = fullResourceName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudAssetV1GovernedContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleCloudAssetV1GovernedContainer withParent(String parent) {
         this.parent = parent;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudAssetV1GovernedContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyBundle")
     public AnalyzerOrgPolicy[] policyBundle;
+
     public GoogleCloudAssetV1GovernedContainer withPolicyBundle(AnalyzerOrgPolicy[] policyBundle) {
         this.policyBundle = policyBundle;
         return this;
     }
     
+    public GoogleCloudAssetV1GovernedContainer(){}
 }

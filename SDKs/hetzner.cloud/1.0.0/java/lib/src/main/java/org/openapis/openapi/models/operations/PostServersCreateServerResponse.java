@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostServersCreateServerResponse {
     @JsonProperty("action")
     public PostServersCreateServerResponseAction action;
+
     public PostServersCreateServerResponse withAction(PostServersCreateServerResponseAction action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class PostServersCreateServerResponse {
     
     @JsonProperty("next_actions")
     public PostServersCreateServerResponseAction[] nextActions;
+
     public PostServersCreateServerResponse withNextActions(PostServersCreateServerResponseAction[] nextActions) {
         this.nextActions = nextActions;
         return this;
@@ -29,6 +31,7 @@ public class PostServersCreateServerResponse {
      */
     @JsonProperty("root_password")
     public String rootPassword;
+
     public PostServersCreateServerResponse withRootPassword(String rootPassword) {
         this.rootPassword = rootPassword;
         return this;
@@ -36,9 +39,16 @@ public class PostServersCreateServerResponse {
     
     @JsonProperty("server")
     public PostServersCreateServerResponseServer server;
+
     public PostServersCreateServerResponse withServer(PostServersCreateServerResponseServer server) {
         this.server = server;
         return this;
     }
     
+    public PostServersCreateServerResponse(@JsonProperty("action") PostServersCreateServerResponseAction action, @JsonProperty("next_actions") PostServersCreateServerResponseAction[] nextActions, @JsonProperty("root_password") String rootPassword, @JsonProperty("server") PostServersCreateServerResponseServer server) {
+        this.action = action;
+        this.nextActions = nextActions;
+        this.rootPassword = rootPassword;
+        this.server = server;
+  }
 }

@@ -18,6 +18,7 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Role withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reciprocalRole")
     public String reciprocalRole;
+
     public Role withReciprocalRole(String reciprocalRole) {
         this.reciprocalRole = reciprocalRole;
         return this;
@@ -40,6 +42,7 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reciprocalRoleDescription")
     public String reciprocalRoleDescription;
+
     public Role withReciprocalRoleDescription(String reciprocalRoleDescription) {
         this.reciprocalRoleDescription = reciprocalRoleDescription;
         return this;
@@ -51,6 +54,7 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationship")
     public String relationship;
+
     public Role withRelationship(String relationship) {
         this.relationship = relationship;
         return this;
@@ -62,6 +66,7 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public Role withRole(String role) {
         this.role = role;
         return this;
@@ -73,9 +78,11 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleDescription")
     public String roleDescription;
+
     public Role withRoleDescription(String roleDescription) {
         this.roleDescription = roleDescription;
         return this;
     }
     
+    public Role(){}
 }

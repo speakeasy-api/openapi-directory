@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2PredictResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributionToken")
     public String attributionToken;
+
     public GoogleCloudRetailV2PredictResponse withAttributionToken(String attributionToken) {
         this.attributionToken = attributionToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2PredictResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missingIds")
     public String[] missingIds;
+
     public GoogleCloudRetailV2PredictResponse withMissingIds(String[] missingIds) {
         this.missingIds = missingIds;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2PredictResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GoogleCloudRetailV2PredictResponsePredictionResult[] results;
+
     public GoogleCloudRetailV2PredictResponse withResults(GoogleCloudRetailV2PredictResponsePredictionResult[] results) {
         this.results = results;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudRetailV2PredictResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public GoogleCloudRetailV2PredictResponse withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public GoogleCloudRetailV2PredictResponse(){}
 }

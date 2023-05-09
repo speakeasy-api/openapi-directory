@@ -12,6 +12,7 @@ public class GetUserUnpublishedArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetUserUnpublishedArticlesRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -22,9 +23,11 @@ public class GetUserUnpublishedArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetUserUnpublishedArticlesRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetUserUnpublishedArticlesRequest(){}
 }

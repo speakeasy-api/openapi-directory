@@ -56,14 +56,12 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchBusSchedulesResponse res = new org.openapis.openapi.models.operations.SearchBusSchedulesResponse() {{
+        org.openapis.openapi.models.operations.SearchBusSchedulesResponse res = new org.openapis.openapi.models.operations.SearchBusSchedulesResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesSearchResponse = null;
             tflApiPresentationEntitiesSearchResponse = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,14 +114,12 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchGetResponse res = new org.openapis.openapi.models.operations.SearchGetResponse() {{
+        org.openapis.openapi.models.operations.SearchGetResponse res = new org.openapis.openapi.models.operations.SearchGetResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesSearchResponse = null;
             tflApiPresentationEntitiesSearchResponse = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,14 +165,12 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchMetaCategoriesResponse res = new org.openapis.openapi.models.operations.SearchMetaCategoriesResponse() {{
+        org.openapis.openapi.models.operations.SearchMetaCategoriesResponse res = new org.openapis.openapi.models.operations.SearchMetaCategoriesResponse(contentType, httpRes.statusCode()) {{
             searchMetaCategories200ApplicationJSONStrings = null;
             body = null;
             body = null;
             searchMetaCategories200TextJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -222,14 +216,12 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchMetaSearchProvidersResponse res = new org.openapis.openapi.models.operations.SearchMetaSearchProvidersResponse() {{
+        org.openapis.openapi.models.operations.SearchMetaSearchProvidersResponse res = new org.openapis.openapi.models.operations.SearchMetaSearchProvidersResponse(contentType, httpRes.statusCode()) {{
             searchMetaSearchProviders200ApplicationJSONStrings = null;
             body = null;
             body = null;
             searchMetaSearchProviders200TextJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -275,14 +267,12 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchMetaSortsResponse res = new org.openapis.openapi.models.operations.SearchMetaSortsResponse() {{
+        org.openapis.openapi.models.operations.SearchMetaSortsResponse res = new org.openapis.openapi.models.operations.SearchMetaSortsResponse(contentType, httpRes.statusCode()) {{
             searchMetaSorts200ApplicationJSONStrings = null;
             body = null;
             body = null;
             searchMetaSorts200TextJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

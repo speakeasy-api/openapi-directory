@@ -12,6 +12,7 @@ public class CreatePermissionSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreatePermissionSetRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreatePermissionSetRequest {
     
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public CreatePermissionSetRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -26,6 +28,7 @@ public class CreatePermissionSetRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreatePermissionSetRequest withName(String name) {
         this.name = name;
         return this;
@@ -34,6 +37,7 @@ public class CreatePermissionSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelayState")
     public String relayState;
+
     public CreatePermissionSetRequest withRelayState(String relayState) {
         this.relayState = relayState;
         return this;
@@ -42,6 +46,7 @@ public class CreatePermissionSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionDuration")
     public String sessionDuration;
+
     public CreatePermissionSetRequest withSessionDuration(String sessionDuration) {
         this.sessionDuration = sessionDuration;
         return this;
@@ -50,9 +55,14 @@ public class CreatePermissionSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreatePermissionSetRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePermissionSetRequest(@JsonProperty("InstanceArn") String instanceArn, @JsonProperty("Name") String name) {
+        this.instanceArn = instanceArn;
+        this.name = name;
+  }
 }

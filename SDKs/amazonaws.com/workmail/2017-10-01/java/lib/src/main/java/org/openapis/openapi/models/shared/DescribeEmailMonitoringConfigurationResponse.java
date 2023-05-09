@@ -15,6 +15,7 @@ public class DescribeEmailMonitoringConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogGroupArn")
     public String logGroupArn;
+
     public DescribeEmailMonitoringConfigurationResponse withLogGroupArn(String logGroupArn) {
         this.logGroupArn = logGroupArn;
         return this;
@@ -23,9 +24,11 @@ public class DescribeEmailMonitoringConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeEmailMonitoringConfigurationResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public DescribeEmailMonitoringConfigurationResponse(){}
 }

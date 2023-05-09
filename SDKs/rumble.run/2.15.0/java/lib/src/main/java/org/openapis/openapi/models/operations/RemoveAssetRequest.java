@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveAssetRequest {
@@ -12,9 +13,13 @@ public class RemoveAssetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=asset_id")
     public String assetId;
+
     public RemoveAssetRequest withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
     }
     
+    public RemoveAssetRequest(@JsonProperty("asset_id") String assetId) {
+        this.assetId = assetId;
+  }
 }

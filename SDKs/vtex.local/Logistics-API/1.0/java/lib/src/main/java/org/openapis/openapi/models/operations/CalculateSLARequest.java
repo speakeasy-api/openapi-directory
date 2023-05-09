@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalculateSLARequest {
@@ -12,6 +13,7 @@ public class CalculateSLARequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CalculateSLARequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CalculateSLARequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CalculateSLARequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class CalculateSLARequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CalculateSLACalculateSLARequest[] requestBody;
+
     public CalculateSLARequest withRequestBody(CalculateSLACalculateSLARequest[] requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public CalculateSLARequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") CalculateSLACalculateSLARequest[] requestBody) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+  }
 }

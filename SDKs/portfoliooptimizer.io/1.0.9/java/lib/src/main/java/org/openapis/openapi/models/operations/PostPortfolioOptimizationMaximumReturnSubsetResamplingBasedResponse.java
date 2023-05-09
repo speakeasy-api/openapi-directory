@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse {
     
     public String contentType;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse
     
     
     public Integer statusCode;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse
      */
     
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBased200ApplicationJSON postPortfolioOptimizationMaximumReturnSubsetResamplingBased200ApplicationJSONObject;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse withPostPortfolioOptimizationMaximumReturnSubsetResamplingBased200ApplicationJSONObject(PostPortfolioOptimizationMaximumReturnSubsetResamplingBased200ApplicationJSON postPortfolioOptimizationMaximumReturnSubsetResamplingBased200ApplicationJSONObject) {
         this.postPortfolioOptimizationMaximumReturnSubsetResamplingBased200ApplicationJSONObject = postPortfolioOptimizationMaximumReturnSubsetResamplingBased200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

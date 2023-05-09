@@ -15,6 +15,7 @@ public class AppComponentCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appComponentName")
     public String appComponentName;
+
     public AppComponentCompliance withAppComponentName(String appComponentName) {
         this.appComponentName = appComponentName;
         return this;
@@ -23,6 +24,7 @@ public class AppComponentCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compliance")
     public java.util.Map<String, DisruptionCompliance> compliance;
+
     public AppComponentCompliance withCompliance(java.util.Map<String, DisruptionCompliance> compliance) {
         this.compliance = compliance;
         return this;
@@ -31,6 +33,7 @@ public class AppComponentCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost")
     public Cost cost;
+
     public AppComponentCompliance withCost(Cost cost) {
         this.cost = cost;
         return this;
@@ -39,6 +42,7 @@ public class AppComponentCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AppComponentCompliance withMessage(String message) {
         this.message = message;
         return this;
@@ -47,6 +51,7 @@ public class AppComponentCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resiliencyScore")
     public ResiliencyScore resiliencyScore;
+
     public AppComponentCompliance withResiliencyScore(ResiliencyScore resiliencyScore) {
         this.resiliencyScore = resiliencyScore;
         return this;
@@ -55,9 +60,11 @@ public class AppComponentCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ComplianceStatusEnum status;
+
     public AppComponentCompliance withStatus(ComplianceStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AppComponentCompliance(){}
 }

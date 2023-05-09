@@ -18,6 +18,7 @@ public class CertificateChains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caviumCerts")
     public String[] caviumCerts;
+
     public CertificateChains withCaviumCerts(String[] caviumCerts) {
         this.caviumCerts = caviumCerts;
         return this;
@@ -29,6 +30,7 @@ public class CertificateChains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleCardCerts")
     public String[] googleCardCerts;
+
     public CertificateChains withGoogleCardCerts(String[] googleCardCerts) {
         this.googleCardCerts = googleCardCerts;
         return this;
@@ -40,9 +42,11 @@ public class CertificateChains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googlePartitionCerts")
     public String[] googlePartitionCerts;
+
     public CertificateChains withGooglePartitionCerts(String[] googlePartitionCerts) {
         this.googlePartitionCerts = googlePartitionCerts;
         return this;
     }
     
+    public CertificateChains(){}
 }

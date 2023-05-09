@@ -59,11 +59,9 @@ public class Urlchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsensehostUrlchannelsDeleteResponse res = new org.openapis.openapi.models.operations.AdsensehostUrlchannelsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AdsensehostUrlchannelsDeleteResponse res = new org.openapis.openapi.models.operations.AdsensehostUrlchannelsDeleteResponse(contentType, httpRes.statusCode()) {{
             urlChannel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Urlchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsensehostUrlchannelsInsertResponse res = new org.openapis.openapi.models.operations.AdsensehostUrlchannelsInsertResponse() {{
+        org.openapis.openapi.models.operations.AdsensehostUrlchannelsInsertResponse res = new org.openapis.openapi.models.operations.AdsensehostUrlchannelsInsertResponse(contentType, httpRes.statusCode()) {{
             urlChannel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Urlchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsensehostUrlchannelsListResponse res = new org.openapis.openapi.models.operations.AdsensehostUrlchannelsListResponse() {{
+        org.openapis.openapi.models.operations.AdsensehostUrlchannelsListResponse res = new org.openapis.openapi.models.operations.AdsensehostUrlchannelsListResponse(contentType, httpRes.statusCode()) {{
             urlChannels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

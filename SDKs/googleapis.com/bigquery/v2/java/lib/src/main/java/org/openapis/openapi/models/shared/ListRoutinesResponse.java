@@ -18,6 +18,7 @@ public class ListRoutinesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListRoutinesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListRoutinesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routines")
     public Routine[] routines;
+
     public ListRoutinesResponse withRoutines(Routine[] routines) {
         this.routines = routines;
         return this;
     }
     
+    public ListRoutinesResponse(){}
 }

@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListSecurity;
 import org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListRequest;
 import org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListResponse;
+import org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,36 +28,37 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            TpuProjectsLocationsAcceleratorTypesListRequest req = new TpuProjectsLocationsAcceleratorTypesListRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                filter = "nulla";
-                key = "corrupti";
-                oauthToken = "illum";
-                orderBy = "vel";
-                pageSize = 623564;
-                pageToken = "deserunt";
-                parent = "suscipit";
+            TpuProjectsLocationsAcceleratorTypesListRequest req = new TpuProjectsLocationsAcceleratorTypesListRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                filter = "corrupti";
+                key = "illum";
+                oauthToken = "vel";
+                orderBy = "error";
+                pageSize = 645894L;
+                pageToken = "suscipit";
                 prettyPrint = false;
                 quotaUser = "iure";
                 uploadType = "magnam";
                 uploadProtocol = "debitis";
-            }}            
+            }};            
 
-            TpuProjectsLocationsAcceleratorTypesListResponse res = sdk.projects.tpuProjectsLocationsAcceleratorTypesList(req, new TpuProjectsLocationsAcceleratorTypesListSecurity() {{
+            TpuProjectsLocationsAcceleratorTypesListResponse res = sdk.projects.tpuProjectsLocationsAcceleratorTypesList(req, new TpuProjectsLocationsAcceleratorTypesListSecurity("ipsa", "delectus") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.listAcceleratorTypesResponse.isPresent()) {
+            if (res.listAcceleratorTypesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -66,20 +66,20 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `tpuProjectsLocationsAcceleratorTypesList` - Lists accelerator types supported by this API.
-* `tpuProjectsLocationsList` - Lists information about the supported locations for this service.
-* `tpuProjectsLocationsNodesCreate` - Creates a node.
-* `tpuProjectsLocationsNodesList` - Lists nodes.
-* `tpuProjectsLocationsNodesReimage` - Reimages a node's OS.
-* `tpuProjectsLocationsNodesStart` - Starts a node.
-* `tpuProjectsLocationsNodesStop` - Stops a node, this operation is only available with single TPU nodes.
-* `tpuProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `tpuProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `tpuProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `tpuProjectsLocationsTensorflowVersionsGet` - Gets TensorFlow Version.
-* `tpuProjectsLocationsTensorflowVersionsList` - List TensorFlow versions supported by this API.
+* [tpuProjectsLocationsAcceleratorTypesList](docs/projects/README.md#tpuprojectslocationsacceleratortypeslist) - Lists accelerator types supported by this API.
+* [tpuProjectsLocationsList](docs/projects/README.md#tpuprojectslocationslist) - Lists information about the supported locations for this service.
+* [tpuProjectsLocationsNodesCreate](docs/projects/README.md#tpuprojectslocationsnodescreate) - Creates a node.
+* [tpuProjectsLocationsNodesList](docs/projects/README.md#tpuprojectslocationsnodeslist) - Lists nodes.
+* [tpuProjectsLocationsNodesReimage](docs/projects/README.md#tpuprojectslocationsnodesreimage) - Reimages a node's OS.
+* [tpuProjectsLocationsNodesStart](docs/projects/README.md#tpuprojectslocationsnodesstart) - Starts a node.
+* [tpuProjectsLocationsNodesStop](docs/projects/README.md#tpuprojectslocationsnodesstop) - Stops a node, this operation is only available with single TPU nodes.
+* [tpuProjectsLocationsOperationsCancel](docs/projects/README.md#tpuprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [tpuProjectsLocationsOperationsDelete](docs/projects/README.md#tpuprojectslocationsoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* [tpuProjectsLocationsOperationsList](docs/projects/README.md#tpuprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [tpuProjectsLocationsTensorflowVersionsGet](docs/projects/README.md#tpuprojectslocationstensorflowversionsget) - Gets TensorFlow Version.
+* [tpuProjectsLocationsTensorflowVersionsList](docs/projects/README.md#tpuprojectslocationstensorflowversionslist) - List TensorFlow versions supported by this API.
 <!-- End SDK Available Operations -->
 
 ### Maturity

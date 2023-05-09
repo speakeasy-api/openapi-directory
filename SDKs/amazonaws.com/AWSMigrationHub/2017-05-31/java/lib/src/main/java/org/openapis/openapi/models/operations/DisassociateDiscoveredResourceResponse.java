@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateDiscoveredResourceResponse {
@@ -12,6 +13,7 @@ public class DisassociateDiscoveredResourceResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateDiscoveredResourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateDiscoveredResourceResponse {
     
     
     public String contentType;
+
     public DisassociateDiscoveredResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateDiscoveredResourceResponse {
      */
     
     public java.util.Map<String, Object> disassociateDiscoveredResourceResult;
+
     public DisassociateDiscoveredResourceResponse withDisassociateDiscoveredResourceResult(java.util.Map<String, Object> disassociateDiscoveredResourceResult) {
         this.disassociateDiscoveredResourceResult = disassociateDiscoveredResourceResult;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateDiscoveredResourceResponse {
      */
     
     public Object dryRunOperation;
+
     public DisassociateDiscoveredResourceResponse withDryRunOperation(Object dryRunOperation) {
         this.dryRunOperation = dryRunOperation;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateDiscoveredResourceResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public DisassociateDiscoveredResourceResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateDiscoveredResourceResponse {
      */
     
     public Object internalServerError;
+
     public DisassociateDiscoveredResourceResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class DisassociateDiscoveredResourceResponse {
      */
     
     public Object invalidInputException;
+
     public DisassociateDiscoveredResourceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -76,6 +84,7 @@ public class DisassociateDiscoveredResourceResponse {
     
     
     public Integer statusCode;
+
     public DisassociateDiscoveredResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateDiscoveredResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateDiscoveredResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DisassociateDiscoveredResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateDiscoveredResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class DisassociateDiscoveredResourceResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DisassociateDiscoveredResourceResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,6 +125,7 @@ public class DisassociateDiscoveredResourceResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateDiscoveredResourceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -123,9 +136,14 @@ public class DisassociateDiscoveredResourceResponse {
      */
     
     public Object unauthorizedOperation;
+
     public DisassociateDiscoveredResourceResponse withUnauthorizedOperation(Object unauthorizedOperation) {
         this.unauthorizedOperation = unauthorizedOperation;
         return this;
     }
     
+    public DisassociateDiscoveredResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

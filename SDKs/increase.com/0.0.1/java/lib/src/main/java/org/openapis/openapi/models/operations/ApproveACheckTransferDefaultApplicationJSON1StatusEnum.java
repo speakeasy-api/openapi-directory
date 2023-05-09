@@ -7,12 +7,12 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum ApproveACheckTransferDefaultApplicationJSON1StatusEnum {
-    FOUR_HUNDRED_AND_FOUR("404");
+    FOUR_HUNDRED_AND_FOUR(404L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private ApproveACheckTransferDefaultApplicationJSON1StatusEnum(String value) {
+    private ApproveACheckTransferDefaultApplicationJSON1StatusEnum(Long value) {
         this.value = value;
     }
 }

@@ -18,6 +18,7 @@ public class ShaCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certType")
     public ShaCertificateCertTypeEnum certType;
+
     public ShaCertificate withCertType(ShaCertificateCertTypeEnum certType) {
         this.certType = certType;
         return this;
@@ -29,6 +30,7 @@ public class ShaCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ShaCertificate withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class ShaCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shaHash")
     public String shaHash;
+
     public ShaCertificate withShaHash(String shaHash) {
         this.shaHash = shaHash;
         return this;
     }
     
+    public ShaCertificate(){}
 }

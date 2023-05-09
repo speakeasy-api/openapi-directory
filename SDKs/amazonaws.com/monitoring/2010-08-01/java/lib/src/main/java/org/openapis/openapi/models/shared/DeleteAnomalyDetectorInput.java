@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteAnomalyDetectorInput {
     
     public Dimension[] dimensions;
+
     public DeleteAnomalyDetectorInput withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -16,6 +17,7 @@ public class DeleteAnomalyDetectorInput {
     
     
     public MetricMathAnomalyDetector metricMathAnomalyDetector;
+
     public DeleteAnomalyDetectorInput withMetricMathAnomalyDetector(MetricMathAnomalyDetector metricMathAnomalyDetector) {
         this.metricMathAnomalyDetector = metricMathAnomalyDetector;
         return this;
@@ -23,6 +25,7 @@ public class DeleteAnomalyDetectorInput {
     
     
     public String metricName;
+
     public DeleteAnomalyDetectorInput withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -30,6 +33,7 @@ public class DeleteAnomalyDetectorInput {
     
     
     public String namespace;
+
     public DeleteAnomalyDetectorInput withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -37,6 +41,7 @@ public class DeleteAnomalyDetectorInput {
     
     
     public SingleMetricAnomalyDetector singleMetricAnomalyDetector;
+
     public DeleteAnomalyDetectorInput withSingleMetricAnomalyDetector(SingleMetricAnomalyDetector singleMetricAnomalyDetector) {
         this.singleMetricAnomalyDetector = singleMetricAnomalyDetector;
         return this;
@@ -44,9 +49,11 @@ public class DeleteAnomalyDetectorInput {
     
     
     public String stat;
+
     public DeleteAnomalyDetectorInput withStat(String stat) {
         this.stat = stat;
         return this;
     }
     
+    public DeleteAnomalyDetectorInput(){}
 }

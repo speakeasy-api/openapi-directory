@@ -25,6 +25,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequest withComment(String comment) {
         this.comment = comment;
         return this;
@@ -36,6 +37,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestDestination destination;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequest withDestination(GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestDestination destination) {
         this.destination = destination;
         return this;
@@ -47,6 +49,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequest withId(String id) {
         this.id = id;
         return this;
@@ -55,6 +58,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequest withLink(String link) {
         this.link = link;
         return this;
@@ -66,6 +70,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printed")
     public Boolean printed;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequest withPrinted(Boolean printed) {
         this.printed = printed;
         return this;
@@ -77,6 +82,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reported")
     public Boolean reported;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequest withReported(Boolean reported) {
         this.reported = reported;
         return this;
@@ -89,6 +95,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("request_date")
     public LocalDate requestDate;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequest withRequestDate(LocalDate requestDate) {
         this.requestDate = requestDate;
         return this;
@@ -100,6 +107,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_sub_type")
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequestSubType requestSubType;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequest withRequestSubType(GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequestSubType requestSubType) {
         this.requestSubType = requestSubType;
         return this;
@@ -113,6 +121,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("request_time")
     public OffsetDateTime requestTime;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequest withRequestTime(OffsetDateTime requestTime) {
         this.requestTime = requestTime;
         return this;
@@ -120,6 +129,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     
     @JsonProperty("request_type")
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequestTypeEnum requestType;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequest withRequestType(GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequestTypeEnum requestType) {
         this.requestType = requestType;
         return this;
@@ -131,9 +141,13 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requester")
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequester requester;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequest withRequester(GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequester requester) {
         this.requester = requester;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequest(@JsonProperty("request_type") GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequestTypeEnum requestType) {
+        this.requestType = requestType;
+  }
 }

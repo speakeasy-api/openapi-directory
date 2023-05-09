@@ -15,6 +15,7 @@ public class ActionConfigurationProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ActionConfigurationProperty withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class ActionConfigurationProperty {
     
     @JsonProperty("key")
     public Boolean key;
+
     public ActionConfigurationProperty withKey(Boolean key) {
         this.key = key;
         return this;
@@ -29,6 +31,7 @@ public class ActionConfigurationProperty {
     
     @JsonProperty("name")
     public String name;
+
     public ActionConfigurationProperty withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class ActionConfigurationProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryable")
     public Boolean queryable;
+
     public ActionConfigurationProperty withQueryable(Boolean queryable) {
         this.queryable = queryable;
         return this;
@@ -44,6 +48,7 @@ public class ActionConfigurationProperty {
     
     @JsonProperty("required")
     public Boolean required;
+
     public ActionConfigurationProperty withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -51,6 +56,7 @@ public class ActionConfigurationProperty {
     
     @JsonProperty("secret")
     public Boolean secret;
+
     public ActionConfigurationProperty withSecret(Boolean secret) {
         this.secret = secret;
         return this;
@@ -59,9 +65,16 @@ public class ActionConfigurationProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ActionConfigurationPropertyTypeEnum type;
+
     public ActionConfigurationProperty withType(ActionConfigurationPropertyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ActionConfigurationProperty(@JsonProperty("key") Boolean key, @JsonProperty("name") String name, @JsonProperty("required") Boolean required, @JsonProperty("secret") Boolean secret) {
+        this.key = key;
+        this.name = name;
+        this.required = required;
+        this.secret = secret;
+  }
 }

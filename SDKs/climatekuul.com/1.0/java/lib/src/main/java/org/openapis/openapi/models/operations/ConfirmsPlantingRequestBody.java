@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfirmsPlantingRequestBody {
@@ -12,6 +13,7 @@ public class ConfirmsPlantingRequestBody {
      */
     @SpeakeasyMetadata("form:name=apiKey_l1")
     public String apiKeyL1;
+
     public ConfirmsPlantingRequestBody withApiKeyL1(String apiKeyL1) {
         this.apiKeyL1 = apiKeyL1;
         return this;
@@ -22,6 +24,7 @@ public class ConfirmsPlantingRequestBody {
      */
     @SpeakeasyMetadata("form:name=apiKey_l2")
     public String apiKeyL2;
+
     public ConfirmsPlantingRequestBody withApiKeyL2(String apiKeyL2) {
         this.apiKeyL2 = apiKeyL2;
         return this;
@@ -32,6 +35,7 @@ public class ConfirmsPlantingRequestBody {
      */
     @SpeakeasyMetadata("form:name=confirmPlanting")
     public String confirmPlanting;
+
     public ConfirmsPlantingRequestBody withConfirmPlanting(String confirmPlanting) {
         this.confirmPlanting = confirmPlanting;
         return this;
@@ -42,9 +46,16 @@ public class ConfirmsPlantingRequestBody {
      */
     @SpeakeasyMetadata("form:name=transaction_id")
     public String transactionId;
+
     public ConfirmsPlantingRequestBody withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public ConfirmsPlantingRequestBody(@JsonProperty("apiKey_l1") String apiKeyL1, @JsonProperty("apiKey_l2") String apiKeyL2, @JsonProperty("confirmPlanting") String confirmPlanting, @JsonProperty("transaction_id") String transactionId) {
+        this.apiKeyL1 = apiKeyL1;
+        this.apiKeyL2 = apiKeyL2;
+        this.confirmPlanting = confirmPlanting;
+        this.transactionId = transactionId;
+  }
 }

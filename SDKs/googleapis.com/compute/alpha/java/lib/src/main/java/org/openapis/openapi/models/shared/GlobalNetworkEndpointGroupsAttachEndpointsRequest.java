@@ -15,9 +15,11 @@ public class GlobalNetworkEndpointGroupsAttachEndpointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkEndpoints")
     public NetworkEndpoint[] networkEndpoints;
+
     public GlobalNetworkEndpointGroupsAttachEndpointsRequest withNetworkEndpoints(NetworkEndpoint[] networkEndpoints) {
         this.networkEndpoints = networkEndpoints;
         return this;
     }
     
+    public GlobalNetworkEndpointGroupsAttachEndpointsRequest(){}
 }

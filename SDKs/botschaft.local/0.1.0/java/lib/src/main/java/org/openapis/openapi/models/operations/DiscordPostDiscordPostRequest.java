@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiscordPostDiscordPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DiscordMessageRequest discordMessageRequest;
+
     public DiscordPostDiscordPostRequest withDiscordMessageRequest(org.openapis.openapi.models.shared.DiscordMessageRequest discordMessageRequest) {
         this.discordMessageRequest = discordMessageRequest;
         return this;
@@ -16,9 +18,13 @@ public class DiscordPostDiscordPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
     public String authorization;
+
     public DiscordPostDiscordPostRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
     }
     
+    public DiscordPostDiscordPostRequest(@JsonProperty("DiscordMessageRequest") org.openapis.openapi.models.shared.DiscordMessageRequest discordMessageRequest) {
+        this.discordMessageRequest = discordMessageRequest;
+  }
 }

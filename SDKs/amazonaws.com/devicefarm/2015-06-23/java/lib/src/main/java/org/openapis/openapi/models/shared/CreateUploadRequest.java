@@ -15,6 +15,7 @@ public class CreateUploadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public CreateUploadRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -22,6 +23,7 @@ public class CreateUploadRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateUploadRequest withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +31,7 @@ public class CreateUploadRequest {
     
     @JsonProperty("projectArn")
     public String projectArn;
+
     public CreateUploadRequest withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -36,9 +39,15 @@ public class CreateUploadRequest {
     
     @JsonProperty("type")
     public UploadTypeEnum type;
+
     public CreateUploadRequest withType(UploadTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateUploadRequest(@JsonProperty("name") String name, @JsonProperty("projectArn") String projectArn, @JsonProperty("type") UploadTypeEnum type) {
+        this.name = name;
+        this.projectArn = projectArn;
+        this.type = type;
+  }
 }

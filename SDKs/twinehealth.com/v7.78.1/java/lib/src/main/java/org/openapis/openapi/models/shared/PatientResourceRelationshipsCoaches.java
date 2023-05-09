@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientResourceRelationshipsCoaches {
     @JsonProperty("data")
     public PatientResourceRelationshipsCoachesData[] data;
+
     public PatientResourceRelationshipsCoaches withData(PatientResourceRelationshipsCoachesData[] data) {
         this.data = data;
         return this;
@@ -19,9 +20,13 @@ public class PatientResourceRelationshipsCoaches {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public PatientResourceRelationshipsCoachesLinks links;
+
     public PatientResourceRelationshipsCoaches withLinks(PatientResourceRelationshipsCoachesLinks links) {
         this.links = links;
         return this;
     }
     
+    public PatientResourceRelationshipsCoaches(@JsonProperty("data") PatientResourceRelationshipsCoachesData[] data) {
+        this.data = data;
+  }
 }

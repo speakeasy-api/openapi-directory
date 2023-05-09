@@ -12,6 +12,7 @@ public class UpdateTrustRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelectiveAuth")
     public SelectiveAuthEnum selectiveAuth;
+
     public UpdateTrustRequest withSelectiveAuth(SelectiveAuthEnum selectiveAuth) {
         this.selectiveAuth = selectiveAuth;
         return this;
@@ -19,9 +20,13 @@ public class UpdateTrustRequest {
     
     @JsonProperty("TrustId")
     public String trustId;
+
     public UpdateTrustRequest withTrustId(String trustId) {
         this.trustId = trustId;
         return this;
     }
     
+    public UpdateTrustRequest(@JsonProperty("TrustId") String trustId) {
+        this.trustId = trustId;
+  }
 }

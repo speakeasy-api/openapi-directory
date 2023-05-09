@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebHookManagementPutRequest {
@@ -12,6 +13,7 @@ public class WebHookManagementPutRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiWebHookApiModel rechnungsdruckWebAppControllersApiWebHookApiModel;
+
     public WebHookManagementPutRequest withRechnungsdruckWebAppControllersApiWebHookApiModel(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiWebHookApiModel rechnungsdruckWebAppControllersApiWebHookApiModel) {
         this.rechnungsdruckWebAppControllersApiWebHookApiModel = rechnungsdruckWebAppControllersApiWebHookApiModel;
         return this;
@@ -22,9 +24,14 @@ public class WebHookManagementPutRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public WebHookManagementPutRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public WebHookManagementPutRequest(@JsonProperty("Rechnungsdruck.WebApp.Controllers.Api.WebHookApiModel") org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiWebHookApiModel rechnungsdruckWebAppControllersApiWebHookApiModel, @JsonProperty("id") String id) {
+        this.rechnungsdruckWebAppControllersApiWebHookApiModel = rechnungsdruckWebAppControllersApiWebHookApiModel;
+        this.id = id;
+  }
 }

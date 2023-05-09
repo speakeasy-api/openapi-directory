@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListPoliciesGrantingServiceAccessEntry {
     
     public PolicyGrantingServiceAccess[] policies;
+
     public ListPoliciesGrantingServiceAccessEntry withPolicies(PolicyGrantingServiceAccess[] policies) {
         this.policies = policies;
         return this;
@@ -19,9 +20,11 @@ public class ListPoliciesGrantingServiceAccessEntry {
     
     
     public String serviceNamespace;
+
     public ListPoliciesGrantingServiceAccessEntry withServiceNamespace(String serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
     }
     
+    public ListPoliciesGrantingServiceAccessEntry(){}
 }

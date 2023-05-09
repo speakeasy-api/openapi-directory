@@ -12,6 +12,7 @@ public class RespondActivityTaskCanceledInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public RespondActivityTaskCanceledInput withDetails(String details) {
         this.details = details;
         return this;
@@ -19,9 +20,13 @@ public class RespondActivityTaskCanceledInput {
     
     @JsonProperty("taskToken")
     public String taskToken;
+
     public RespondActivityTaskCanceledInput withTaskToken(String taskToken) {
         this.taskToken = taskToken;
         return this;
     }
     
+    public RespondActivityTaskCanceledInput(@JsonProperty("taskToken") String taskToken) {
+        this.taskToken = taskToken;
+  }
 }

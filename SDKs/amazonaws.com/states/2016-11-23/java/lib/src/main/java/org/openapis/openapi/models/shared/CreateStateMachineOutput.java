@@ -19,6 +19,7 @@ public class CreateStateMachineOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public CreateStateMachineOutput withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -26,9 +27,14 @@ public class CreateStateMachineOutput {
     
     @JsonProperty("stateMachineArn")
     public String stateMachineArn;
+
     public CreateStateMachineOutput withStateMachineArn(String stateMachineArn) {
         this.stateMachineArn = stateMachineArn;
         return this;
     }
     
+    public CreateStateMachineOutput(@JsonProperty("creationDate") OffsetDateTime creationDate, @JsonProperty("stateMachineArn") String stateMachineArn) {
+        this.creationDate = creationDate;
+        this.stateMachineArn = stateMachineArn;
+  }
 }

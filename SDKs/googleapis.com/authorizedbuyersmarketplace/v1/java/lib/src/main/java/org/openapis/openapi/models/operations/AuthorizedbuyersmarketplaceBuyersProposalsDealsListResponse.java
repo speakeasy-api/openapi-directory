@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AuthorizedbuyersmarketplaceBuyersProposalsDealsListResponse {
     
     public String contentType;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsDealsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsDealsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDealsResponse listDealsResponse;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsDealsListResponse withListDealsResponse(org.openapis.openapi.models.shared.ListDealsResponse listDealsResponse) {
         this.listDealsResponse = listDealsResponse;
         return this;
@@ -26,6 +29,7 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsDealsListResponse {
     
     
     public Integer statusCode;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsDealsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AuthorizedbuyersmarketplaceBuyersProposalsDealsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AuthorizedbuyersmarketplaceBuyersProposalsDealsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AuthorizedbuyersmarketplaceBuyersProposalsDealsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

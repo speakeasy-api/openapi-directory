@@ -15,6 +15,7 @@ public class DisassociateResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationArn")
     public String applicationArn;
+
     public DisassociateResourceResponse withApplicationArn(String applicationArn) {
         this.applicationArn = applicationArn;
         return this;
@@ -23,9 +24,11 @@ public class DisassociateResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public DisassociateResourceResponse withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public DisassociateResourceResponse(){}
 }

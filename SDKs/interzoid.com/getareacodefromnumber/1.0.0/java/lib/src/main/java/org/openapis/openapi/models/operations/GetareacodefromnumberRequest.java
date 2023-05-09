@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetareacodefromnumberRequest {
@@ -12,6 +13,7 @@ public class GetareacodefromnumberRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public String license;
+
     public GetareacodefromnumberRequest withLicense(String license) {
         this.license = license;
         return this;
@@ -22,9 +24,14 @@ public class GetareacodefromnumberRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public String number;
+
     public GetareacodefromnumberRequest withNumber(String number) {
         this.number = number;
         return this;
     }
     
+    public GetareacodefromnumberRequest(@JsonProperty("license") String license, @JsonProperty("number") String number) {
+        this.license = license;
+        this.number = number;
+  }
 }

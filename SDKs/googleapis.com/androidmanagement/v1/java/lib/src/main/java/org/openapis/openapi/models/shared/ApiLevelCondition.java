@@ -18,9 +18,11 @@ public class ApiLevelCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minApiLevel")
     public Integer minApiLevel;
+
     public ApiLevelCondition withMinApiLevel(Integer minApiLevel) {
         this.minApiLevel = minApiLevel;
         return this;
     }
     
+    public ApiLevelCondition(){}
 }

@@ -18,9 +18,11 @@ public class ProjectRequestWorkspaceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProjectRequestWorkspaceInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ProjectRequestWorkspaceInput(){}
 }

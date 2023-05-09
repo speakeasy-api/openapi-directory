@@ -15,6 +15,7 @@ public class UnitInvoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalCharges")
     public UnitInvoiceAdditionalCharge[] additionalCharges;
+
     public UnitInvoice withAdditionalCharges(UnitInvoiceAdditionalCharge[] additionalCharges) {
         this.additionalCharges = additionalCharges;
         return this;
@@ -23,6 +24,7 @@ public class UnitInvoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitPrice")
     public Price unitPrice;
+
     public UnitInvoice withUnitPrice(Price unitPrice) {
         this.unitPrice = unitPrice;
         return this;
@@ -34,9 +36,11 @@ public class UnitInvoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitPriceTaxes")
     public UnitInvoiceTaxLine[] unitPriceTaxes;
+
     public UnitInvoice withUnitPriceTaxes(UnitInvoiceTaxLine[] unitPriceTaxes) {
         this.unitPriceTaxes = unitPriceTaxes;
         return this;
     }
     
+    public UnitInvoice(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendAutomationSignalResponse {
@@ -12,6 +13,7 @@ public class SendAutomationSignalResponse {
      */
     
     public Object automationExecutionNotFoundException;
+
     public SendAutomationSignalResponse withAutomationExecutionNotFoundException(Object automationExecutionNotFoundException) {
         this.automationExecutionNotFoundException = automationExecutionNotFoundException;
         return this;
@@ -22,6 +24,7 @@ public class SendAutomationSignalResponse {
      */
     
     public Object automationStepNotFoundException;
+
     public SendAutomationSignalResponse withAutomationStepNotFoundException(Object automationStepNotFoundException) {
         this.automationStepNotFoundException = automationStepNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class SendAutomationSignalResponse {
     
     
     public String contentType;
+
     public SendAutomationSignalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class SendAutomationSignalResponse {
      */
     
     public Object internalServerError;
+
     public SendAutomationSignalResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class SendAutomationSignalResponse {
      */
     
     public Object invalidAutomationSignalException;
+
     public SendAutomationSignalResponse withInvalidAutomationSignalException(Object invalidAutomationSignalException) {
         this.invalidAutomationSignalException = invalidAutomationSignalException;
         return this;
@@ -59,6 +65,7 @@ public class SendAutomationSignalResponse {
      */
     
     public java.util.Map<String, Object> sendAutomationSignalResult;
+
     public SendAutomationSignalResponse withSendAutomationSignalResult(java.util.Map<String, Object> sendAutomationSignalResult) {
         this.sendAutomationSignalResult = sendAutomationSignalResult;
         return this;
@@ -66,6 +73,7 @@ public class SendAutomationSignalResponse {
     
     
     public Integer statusCode;
+
     public SendAutomationSignalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class SendAutomationSignalResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendAutomationSignalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SendAutomationSignalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

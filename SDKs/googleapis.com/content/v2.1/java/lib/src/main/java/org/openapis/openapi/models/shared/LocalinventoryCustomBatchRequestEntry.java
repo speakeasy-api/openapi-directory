@@ -18,6 +18,7 @@ public class LocalinventoryCustomBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchId")
     public Long batchId;
+
     public LocalinventoryCustomBatchRequestEntry withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -29,6 +30,7 @@ public class LocalinventoryCustomBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localInventory")
     public LocalInventory localInventory;
+
     public LocalinventoryCustomBatchRequestEntry withLocalInventory(LocalInventory localInventory) {
         this.localInventory = localInventory;
         return this;
@@ -40,6 +42,7 @@ public class LocalinventoryCustomBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public String merchantId;
+
     public LocalinventoryCustomBatchRequestEntry withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -51,6 +54,7 @@ public class LocalinventoryCustomBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public LocalinventoryCustomBatchRequestEntry withMethod(String method) {
         this.method = method;
         return this;
@@ -62,9 +66,11 @@ public class LocalinventoryCustomBatchRequestEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public LocalinventoryCustomBatchRequestEntry withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public LocalinventoryCustomBatchRequestEntry(){}
 }

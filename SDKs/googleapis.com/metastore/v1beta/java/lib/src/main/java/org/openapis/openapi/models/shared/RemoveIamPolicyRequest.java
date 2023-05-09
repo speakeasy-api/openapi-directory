@@ -18,9 +18,11 @@ public class RemoveIamPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asynchronous")
     public Boolean asynchronous;
+
     public RemoveIamPolicyRequest withAsynchronous(Boolean asynchronous) {
         this.asynchronous = asynchronous;
         return this;
     }
     
+    public RemoveIamPolicyRequest(){}
 }

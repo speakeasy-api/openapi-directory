@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateIpamPoolRequestAllocationResourceTags {
     
     public String key;
+
     public CreateIpamPoolRequestAllocationResourceTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateIpamPoolRequestAllocationResourceTags {
     
     
     public String value;
+
     public CreateIpamPoolRequestAllocationResourceTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateIpamPoolRequestAllocationResourceTags(){}
 }

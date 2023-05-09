@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRepositoriesForApprovalRuleTemplateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListRepositoriesForApprovalRuleTemplateInput listRepositoriesForApprovalRuleTemplateInput;
+
     public ListRepositoriesForApprovalRuleTemplateRequest withListRepositoriesForApprovalRuleTemplateInput(org.openapis.openapi.models.shared.ListRepositoriesForApprovalRuleTemplateInput listRepositoriesForApprovalRuleTemplateInput) {
         this.listRepositoriesForApprovalRuleTemplateInput = listRepositoriesForApprovalRuleTemplateInput;
         return this;
@@ -16,6 +18,7 @@ public class ListRepositoriesForApprovalRuleTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListRepositoriesForApprovalRuleTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class ListRepositoriesForApprovalRuleTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListRepositoriesForApprovalRuleTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class ListRepositoriesForApprovalRuleTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListRepositoriesForApprovalRuleTemplateRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class ListRepositoriesForApprovalRuleTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListRepositoriesForApprovalRuleTemplateRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class ListRepositoriesForApprovalRuleTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListRepositoriesForApprovalRuleTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class ListRepositoriesForApprovalRuleTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListRepositoriesForApprovalRuleTemplateRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class ListRepositoriesForApprovalRuleTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListRepositoriesForApprovalRuleTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,6 +74,7 @@ public class ListRepositoriesForApprovalRuleTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListRepositoriesForApprovalRuleTemplateXAmzTargetEnum xAmzTarget;
+
     public ListRepositoriesForApprovalRuleTemplateRequest withXAmzTarget(ListRepositoriesForApprovalRuleTemplateXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
@@ -75,6 +85,7 @@ public class ListRepositoriesForApprovalRuleTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public String maxResults;
+
     public ListRepositoriesForApprovalRuleTemplateRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -85,9 +96,14 @@ public class ListRepositoriesForApprovalRuleTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListRepositoriesForApprovalRuleTemplateRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListRepositoriesForApprovalRuleTemplateRequest(@JsonProperty("ListRepositoriesForApprovalRuleTemplateInput") org.openapis.openapi.models.shared.ListRepositoriesForApprovalRuleTemplateInput listRepositoriesForApprovalRuleTemplateInput, @JsonProperty("X-Amz-Target") ListRepositoriesForApprovalRuleTemplateXAmzTargetEnum xAmzTarget) {
+        this.listRepositoriesForApprovalRuleTemplateInput = listRepositoriesForApprovalRuleTemplateInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

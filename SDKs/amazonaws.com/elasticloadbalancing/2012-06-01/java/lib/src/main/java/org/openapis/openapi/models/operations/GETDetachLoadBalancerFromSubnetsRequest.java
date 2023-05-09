@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDetachLoadBalancerFromSubnetsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDetachLoadBalancerFromSubnetsActionEnum action;
+
     public GETDetachLoadBalancerFromSubnetsRequest withAction(GETDetachLoadBalancerFromSubnetsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDetachLoadBalancerFromSubnetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerName")
     public String loadBalancerName;
+
     public GETDetachLoadBalancerFromSubnetsRequest withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -29,6 +32,7 @@ public class GETDetachLoadBalancerFromSubnetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Subnets")
     public String[] subnets;
+
     public GETDetachLoadBalancerFromSubnetsRequest withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
@@ -36,6 +40,7 @@ public class GETDetachLoadBalancerFromSubnetsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDetachLoadBalancerFromSubnetsVersionEnum version;
+
     public GETDetachLoadBalancerFromSubnetsRequest withVersion(GETDetachLoadBalancerFromSubnetsVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDetachLoadBalancerFromSubnetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDetachLoadBalancerFromSubnetsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDetachLoadBalancerFromSubnetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDetachLoadBalancerFromSubnetsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDetachLoadBalancerFromSubnetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDetachLoadBalancerFromSubnetsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDetachLoadBalancerFromSubnetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDetachLoadBalancerFromSubnetsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDetachLoadBalancerFromSubnetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDetachLoadBalancerFromSubnetsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDetachLoadBalancerFromSubnetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDetachLoadBalancerFromSubnetsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETDetachLoadBalancerFromSubnetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDetachLoadBalancerFromSubnetsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDetachLoadBalancerFromSubnetsRequest(@JsonProperty("Action") GETDetachLoadBalancerFromSubnetsActionEnum action, @JsonProperty("LoadBalancerName") String loadBalancerName, @JsonProperty("Subnets") String[] subnets, @JsonProperty("Version") GETDetachLoadBalancerFromSubnetsVersionEnum version) {
+        this.action = action;
+        this.loadBalancerName = loadBalancerName;
+        this.subnets = subnets;
+        this.version = version;
+  }
 }

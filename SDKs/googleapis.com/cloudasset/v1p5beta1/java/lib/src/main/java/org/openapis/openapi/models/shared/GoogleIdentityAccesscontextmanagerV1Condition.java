@@ -18,6 +18,7 @@ public class GoogleIdentityAccesscontextmanagerV1Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devicePolicy")
     public GoogleIdentityAccesscontextmanagerV1DevicePolicy devicePolicy;
+
     public GoogleIdentityAccesscontextmanagerV1Condition withDevicePolicy(GoogleIdentityAccesscontextmanagerV1DevicePolicy devicePolicy) {
         this.devicePolicy = devicePolicy;
         return this;
@@ -29,6 +30,7 @@ public class GoogleIdentityAccesscontextmanagerV1Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipSubnetworks")
     public String[] ipSubnetworks;
+
     public GoogleIdentityAccesscontextmanagerV1Condition withIpSubnetworks(String[] ipSubnetworks) {
         this.ipSubnetworks = ipSubnetworks;
         return this;
@@ -40,6 +42,7 @@ public class GoogleIdentityAccesscontextmanagerV1Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public String[] members;
+
     public GoogleIdentityAccesscontextmanagerV1Condition withMembers(String[] members) {
         this.members = members;
         return this;
@@ -51,6 +54,7 @@ public class GoogleIdentityAccesscontextmanagerV1Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negate")
     public Boolean negate;
+
     public GoogleIdentityAccesscontextmanagerV1Condition withNegate(Boolean negate) {
         this.negate = negate;
         return this;
@@ -62,6 +66,7 @@ public class GoogleIdentityAccesscontextmanagerV1Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public String[] regions;
+
     public GoogleIdentityAccesscontextmanagerV1Condition withRegions(String[] regions) {
         this.regions = regions;
         return this;
@@ -73,9 +78,11 @@ public class GoogleIdentityAccesscontextmanagerV1Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredAccessLevels")
     public String[] requiredAccessLevels;
+
     public GoogleIdentityAccesscontextmanagerV1Condition withRequiredAccessLevels(String[] requiredAccessLevels) {
         this.requiredAccessLevels = requiredAccessLevels;
         return this;
     }
     
+    public GoogleIdentityAccesscontextmanagerV1Condition(){}
 }

@@ -15,6 +15,7 @@ public class FlywheelModelEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageAccuracy")
     public Double averageAccuracy;
+
     public FlywheelModelEvaluationMetrics withAverageAccuracy(Double averageAccuracy) {
         this.averageAccuracy = averageAccuracy;
         return this;
@@ -23,6 +24,7 @@ public class FlywheelModelEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageF1Score")
     public Double averageF1Score;
+
     public FlywheelModelEvaluationMetrics withAverageF1Score(Double averageF1Score) {
         this.averageF1Score = averageF1Score;
         return this;
@@ -31,6 +33,7 @@ public class FlywheelModelEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AveragePrecision")
     public Double averagePrecision;
+
     public FlywheelModelEvaluationMetrics withAveragePrecision(Double averagePrecision) {
         this.averagePrecision = averagePrecision;
         return this;
@@ -39,9 +42,11 @@ public class FlywheelModelEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageRecall")
     public Double averageRecall;
+
     public FlywheelModelEvaluationMetrics withAverageRecall(Double averageRecall) {
         this.averageRecall = averageRecall;
         return this;
     }
     
+    public FlywheelModelEvaluationMetrics(){}
 }

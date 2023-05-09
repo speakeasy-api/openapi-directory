@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddExternalFileLinksRequest {
@@ -12,6 +13,7 @@ public class AddExternalFileLinksRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ExternalFileDto externalFileDto;
+
     public AddExternalFileLinksRequest withExternalFileDto(org.openapis.openapi.models.shared.ExternalFileDto externalFileDto) {
         this.externalFileDto = externalFileDto;
         return this;
@@ -22,9 +24,14 @@ public class AddExternalFileLinksRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public AddExternalFileLinksRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public AddExternalFileLinksRequest(@JsonProperty("ExternalFileDto") org.openapis.openapi.models.shared.ExternalFileDto externalFileDto, @JsonProperty("projectId") String projectId) {
+        this.externalFileDto = externalFileDto;
+        this.projectId = projectId;
+  }
 }

@@ -18,9 +18,11 @@ public class ListDebuggeesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debuggees")
     public Debuggee[] debuggees;
+
     public ListDebuggeesResponse withDebuggees(Debuggee[] debuggees) {
         this.debuggees = debuggees;
         return this;
     }
     
+    public ListDebuggeesResponse(){}
 }

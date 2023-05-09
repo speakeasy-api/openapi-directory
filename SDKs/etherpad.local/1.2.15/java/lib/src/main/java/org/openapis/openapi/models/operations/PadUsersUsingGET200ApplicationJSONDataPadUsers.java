@@ -12,6 +12,7 @@ public class PadUsersUsingGET200ApplicationJSONDataPadUsers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorId")
     public String colorId;
+
     public PadUsersUsingGET200ApplicationJSONDataPadUsers withColorId(String colorId) {
         this.colorId = colorId;
         return this;
@@ -20,6 +21,7 @@ public class PadUsersUsingGET200ApplicationJSONDataPadUsers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PadUsersUsingGET200ApplicationJSONDataPadUsers withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class PadUsersUsingGET200ApplicationJSONDataPadUsers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PadUsersUsingGET200ApplicationJSONDataPadUsers withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class PadUsersUsingGET200ApplicationJSONDataPadUsers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public Long timestamp;
+
     public PadUsersUsingGET200ApplicationJSONDataPadUsers withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public PadUsersUsingGET200ApplicationJSONDataPadUsers(){}
 }

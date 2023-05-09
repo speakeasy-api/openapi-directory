@@ -18,6 +18,7 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profiles")
     public String[] profiles;
+
     public Stage withProfiles(String[] profiles) {
         this.profiles = profiles;
         return this;
@@ -29,6 +30,7 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strategy")
     public Strategy strategy;
+
     public Stage withStrategy(Strategy strategy) {
         this.strategy = strategy;
         return this;
@@ -40,9 +42,11 @@ public class Stage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetId")
     public String targetId;
+
     public Stage withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
     }
     
+    public Stage(){}
 }

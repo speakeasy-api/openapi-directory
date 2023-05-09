@@ -15,6 +15,7 @@ public class ClassicPeopleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerContacts")
     public ContactsDTO customerContacts;
+
     public ClassicPeopleDTO withCustomerContacts(ContactsDTO customerContacts) {
         this.customerContacts = customerContacts;
         return this;
@@ -23,9 +24,11 @@ public class ClassicPeopleDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responsiblePersons")
     public ResponsiblePersonsDTO responsiblePersons;
+
     public ClassicPeopleDTO withResponsiblePersons(ResponsiblePersonsDTO responsiblePersons) {
         this.responsiblePersons = responsiblePersons;
         return this;
     }
     
+    public ClassicPeopleDTO(){}
 }

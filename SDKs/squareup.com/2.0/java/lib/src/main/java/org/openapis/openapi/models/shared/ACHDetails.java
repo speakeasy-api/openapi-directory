@@ -18,6 +18,7 @@ public class ACHDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_number_suffix")
     public String accountNumberSuffix;
+
     public ACHDetails withAccountNumberSuffix(String accountNumberSuffix) {
         this.accountNumberSuffix = accountNumberSuffix;
         return this;
@@ -30,6 +31,7 @@ public class ACHDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_type")
     public String accountType;
+
     public ACHDetails withAccountType(String accountType) {
         this.accountType = accountType;
         return this;
@@ -41,9 +43,11 @@ public class ACHDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routing_number")
     public String routingNumber;
+
     public ACHDetails withRoutingNumber(String routingNumber) {
         this.routingNumber = routingNumber;
         return this;
     }
     
+    public ACHDetails(){}
 }

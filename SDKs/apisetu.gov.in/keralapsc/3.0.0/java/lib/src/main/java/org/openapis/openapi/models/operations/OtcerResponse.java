@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OtcerResponse {
     
     public String contentType;
+
     public OtcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OtcerResponse {
     
     
     public Integer statusCode;
+
     public OtcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class OtcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OtcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class OtcerResponse {
      */
     
     public Otcer400ApplicationJSON otcer400ApplicationJSONObject;
+
     public OtcerResponse withOtcer400ApplicationJSONObject(Otcer400ApplicationJSON otcer400ApplicationJSONObject) {
         this.otcer400ApplicationJSONObject = otcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class OtcerResponse {
      */
     
     public Otcer401ApplicationJSON otcer401ApplicationJSONObject;
+
     public OtcerResponse withOtcer401ApplicationJSONObject(Otcer401ApplicationJSON otcer401ApplicationJSONObject) {
         this.otcer401ApplicationJSONObject = otcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class OtcerResponse {
      */
     
     public Otcer404ApplicationJSON otcer404ApplicationJSONObject;
+
     public OtcerResponse withOtcer404ApplicationJSONObject(Otcer404ApplicationJSON otcer404ApplicationJSONObject) {
         this.otcer404ApplicationJSONObject = otcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class OtcerResponse {
      */
     
     public Otcer500ApplicationJSON otcer500ApplicationJSONObject;
+
     public OtcerResponse withOtcer500ApplicationJSONObject(Otcer500ApplicationJSON otcer500ApplicationJSONObject) {
         this.otcer500ApplicationJSONObject = otcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class OtcerResponse {
      */
     
     public Otcer502ApplicationJSON otcer502ApplicationJSONObject;
+
     public OtcerResponse withOtcer502ApplicationJSONObject(Otcer502ApplicationJSON otcer502ApplicationJSONObject) {
         this.otcer502ApplicationJSONObject = otcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class OtcerResponse {
      */
     
     public Otcer503ApplicationJSON otcer503ApplicationJSONObject;
+
     public OtcerResponse withOtcer503ApplicationJSONObject(Otcer503ApplicationJSON otcer503ApplicationJSONObject) {
         this.otcer503ApplicationJSONObject = otcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class OtcerResponse {
      */
     
     public Otcer504ApplicationJSON otcer504ApplicationJSONObject;
+
     public OtcerResponse withOtcer504ApplicationJSONObject(Otcer504ApplicationJSON otcer504ApplicationJSONObject) {
         this.otcer504ApplicationJSONObject = otcer504ApplicationJSONObject;
         return this;
     }
     
+    public OtcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

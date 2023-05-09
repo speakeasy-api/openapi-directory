@@ -18,6 +18,7 @@ public class ApplicationDataTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationId")
     public String applicationId;
+
     public ApplicationDataTransfer withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -29,6 +30,7 @@ public class ApplicationDataTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationTransferParams")
     public ApplicationTransferParam[] applicationTransferParams;
+
     public ApplicationDataTransfer withApplicationTransferParams(ApplicationTransferParam[] applicationTransferParams) {
         this.applicationTransferParams = applicationTransferParams;
         return this;
@@ -40,9 +42,11 @@ public class ApplicationDataTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationTransferStatus")
     public String applicationTransferStatus;
+
     public ApplicationDataTransfer withApplicationTransferStatus(String applicationTransferStatus) {
         this.applicationTransferStatus = applicationTransferStatus;
         return this;
     }
     
+    public ApplicationDataTransfer(){}
 }

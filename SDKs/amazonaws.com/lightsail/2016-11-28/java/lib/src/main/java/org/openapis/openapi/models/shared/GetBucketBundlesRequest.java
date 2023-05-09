@@ -12,9 +12,11 @@ public class GetBucketBundlesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeInactive")
     public Boolean includeInactive;
+
     public GetBucketBundlesRequest withIncludeInactive(Boolean includeInactive) {
         this.includeInactive = includeInactive;
         return this;
     }
     
+    public GetBucketBundlesRequest(){}
 }

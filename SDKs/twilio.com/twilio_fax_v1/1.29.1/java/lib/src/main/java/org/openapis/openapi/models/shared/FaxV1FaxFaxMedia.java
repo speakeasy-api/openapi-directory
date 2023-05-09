@@ -23,6 +23,7 @@ public class FaxV1FaxFaxMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_sid")
     public String accountSid;
+
     public FaxV1FaxFaxMedia withAccountSid(String accountSid) {
         this.accountSid = accountSid;
         return this;
@@ -34,6 +35,7 @@ public class FaxV1FaxFaxMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_type")
     public String contentType;
+
     public FaxV1FaxFaxMedia withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -47,6 +49,7 @@ public class FaxV1FaxFaxMedia {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_created")
     public OffsetDateTime dateCreated;
+
     public FaxV1FaxFaxMedia withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -60,6 +63,7 @@ public class FaxV1FaxFaxMedia {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_updated")
     public OffsetDateTime dateUpdated;
+
     public FaxV1FaxFaxMedia withDateUpdated(OffsetDateTime dateUpdated) {
         this.dateUpdated = dateUpdated;
         return this;
@@ -71,6 +75,7 @@ public class FaxV1FaxFaxMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fax_sid")
     public String faxSid;
+
     public FaxV1FaxFaxMedia withFaxSid(String faxSid) {
         this.faxSid = faxSid;
         return this;
@@ -82,6 +87,7 @@ public class FaxV1FaxFaxMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sid")
     public String sid;
+
     public FaxV1FaxFaxMedia withSid(String sid) {
         this.sid = sid;
         return this;
@@ -93,9 +99,11 @@ public class FaxV1FaxFaxMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public FaxV1FaxFaxMedia withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public FaxV1FaxFaxMedia(){}
 }

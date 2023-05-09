@@ -17,6 +17,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransactionResourceRelationshipsTransferAccount {
     @JsonProperty("data")
     public TransactionResourceRelationshipsTransferAccountData data;
+
     public TransactionResourceRelationshipsTransferAccount withData(TransactionResourceRelationshipsTransferAccountData data) {
         this.data = data;
         return this;
@@ -25,9 +26,13 @@ public class TransactionResourceRelationshipsTransferAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public TransactionResourceRelationshipsTransferAccountLinks links;
+
     public TransactionResourceRelationshipsTransferAccount withLinks(TransactionResourceRelationshipsTransferAccountLinks links) {
         this.links = links;
         return this;
     }
     
+    public TransactionResourceRelationshipsTransferAccount(@JsonProperty("data") TransactionResourceRelationshipsTransferAccountData data) {
+        this.data = data;
+  }
 }

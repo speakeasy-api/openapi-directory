@@ -12,6 +12,7 @@ public class ContinuousProjectLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ContinuousProjectLanguage withCode(String code) {
         this.code = code;
         return this;
@@ -20,9 +21,11 @@ public class ContinuousProjectLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_enabled")
     public Boolean isEnabled;
+
     public ContinuousProjectLanguage withIsEnabled(Boolean isEnabled) {
         this.isEnabled = isEnabled;
         return this;
     }
     
+    public ContinuousProjectLanguage(){}
 }

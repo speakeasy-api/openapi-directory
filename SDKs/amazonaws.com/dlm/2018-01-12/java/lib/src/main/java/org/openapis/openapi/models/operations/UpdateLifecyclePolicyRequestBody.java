@@ -15,6 +15,7 @@ public class UpdateLifecyclePolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateLifecyclePolicyRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateLifecyclePolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public UpdateLifecyclePolicyRequestBody withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -37,6 +39,7 @@ public class UpdateLifecyclePolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyDetails")
     public UpdateLifecyclePolicyRequestBodyPolicyDetails policyDetails;
+
     public UpdateLifecyclePolicyRequestBody withPolicyDetails(UpdateLifecyclePolicyRequestBodyPolicyDetails policyDetails) {
         this.policyDetails = policyDetails;
         return this;
@@ -48,9 +51,11 @@ public class UpdateLifecyclePolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public UpdateLifecyclePolicyRequestBodyStateEnum state;
+
     public UpdateLifecyclePolicyRequestBody withState(UpdateLifecyclePolicyRequestBodyStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public UpdateLifecyclePolicyRequestBody(){}
 }

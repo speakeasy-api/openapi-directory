@@ -15,6 +15,7 @@ public class AggregateConformancePackCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceType")
     public ConformancePackComplianceTypeEnum complianceType;
+
     public AggregateConformancePackCompliance withComplianceType(ConformancePackComplianceTypeEnum complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -23,6 +24,7 @@ public class AggregateConformancePackCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompliantRuleCount")
     public Long compliantRuleCount;
+
     public AggregateConformancePackCompliance withCompliantRuleCount(Long compliantRuleCount) {
         this.compliantRuleCount = compliantRuleCount;
         return this;
@@ -31,6 +33,7 @@ public class AggregateConformancePackCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonCompliantRuleCount")
     public Long nonCompliantRuleCount;
+
     public AggregateConformancePackCompliance withNonCompliantRuleCount(Long nonCompliantRuleCount) {
         this.nonCompliantRuleCount = nonCompliantRuleCount;
         return this;
@@ -39,9 +42,11 @@ public class AggregateConformancePackCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalRuleCount")
     public Long totalRuleCount;
+
     public AggregateConformancePackCompliance withTotalRuleCount(Long totalRuleCount) {
         this.totalRuleCount = totalRuleCount;
         return this;
     }
     
+    public AggregateConformancePackCompliance(){}
 }

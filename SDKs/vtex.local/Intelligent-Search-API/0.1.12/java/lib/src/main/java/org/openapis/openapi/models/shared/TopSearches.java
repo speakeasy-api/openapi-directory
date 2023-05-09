@@ -18,9 +18,11 @@ public class TopSearches {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searches")
     public TopSearchesSearches[] searches;
+
     public TopSearches withSearches(TopSearchesSearches[] searches) {
         this.searches = searches;
         return this;
     }
     
+    public TopSearches(){}
 }

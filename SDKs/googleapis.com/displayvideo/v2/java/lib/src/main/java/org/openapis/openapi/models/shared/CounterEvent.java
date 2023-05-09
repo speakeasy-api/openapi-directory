@@ -18,6 +18,7 @@ public class CounterEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CounterEvent withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class CounterEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportingName")
     public String reportingName;
+
     public CounterEvent withReportingName(String reportingName) {
         this.reportingName = reportingName;
         return this;
     }
     
+    public CounterEvent(){}
 }

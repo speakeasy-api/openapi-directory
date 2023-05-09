@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class GroupsV2GroupFeatures {
     
     public Integer capabilities;
+
     public GroupsV2GroupFeatures withCapabilities(Integer capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -22,6 +23,7 @@ public class GroupsV2GroupFeatures {
      */
     
     public Integer hostGuidedGamePermissionOverride;
+
     public GroupsV2GroupFeatures withHostGuidedGamePermissionOverride(Integer hostGuidedGamePermissionOverride) {
         this.hostGuidedGamePermissionOverride = hostGuidedGamePermissionOverride;
         return this;
@@ -35,6 +37,7 @@ public class GroupsV2GroupFeatures {
      */
     
     public Boolean invitePermissionOverride;
+
     public GroupsV2GroupFeatures withInvitePermissionOverride(Boolean invitePermissionOverride) {
         this.invitePermissionOverride = invitePermissionOverride;
         return this;
@@ -46,6 +49,7 @@ public class GroupsV2GroupFeatures {
      */
     
     public Integer joinLevel;
+
     public GroupsV2GroupFeatures withJoinLevel(Integer joinLevel) {
         this.joinLevel = joinLevel;
         return this;
@@ -53,6 +57,7 @@ public class GroupsV2GroupFeatures {
     
     
     public Integer maximumMembers;
+
     public GroupsV2GroupFeatures withMaximumMembers(Integer maximumMembers) {
         this.maximumMembers = maximumMembers;
         return this;
@@ -63,6 +68,7 @@ public class GroupsV2GroupFeatures {
      */
     
     public Integer maximumMembershipsOfGroupType;
+
     public GroupsV2GroupFeatures withMaximumMembershipsOfGroupType(Integer maximumMembershipsOfGroupType) {
         this.maximumMembershipsOfGroupType = maximumMembershipsOfGroupType;
         return this;
@@ -70,6 +76,7 @@ public class GroupsV2GroupFeatures {
     
     
     public Integer[] membershipTypes;
+
     public GroupsV2GroupFeatures withMembershipTypes(Integer[] membershipTypes) {
         this.membershipTypes = membershipTypes;
         return this;
@@ -83,6 +90,7 @@ public class GroupsV2GroupFeatures {
      */
     
     public Boolean updateBannerPermissionOverride;
+
     public GroupsV2GroupFeatures withUpdateBannerPermissionOverride(Boolean updateBannerPermissionOverride) {
         this.updateBannerPermissionOverride = updateBannerPermissionOverride;
         return this;
@@ -96,9 +104,11 @@ public class GroupsV2GroupFeatures {
      */
     
     public Boolean updateCulturePermissionOverride;
+
     public GroupsV2GroupFeatures withUpdateCulturePermissionOverride(Boolean updateCulturePermissionOverride) {
         this.updateCulturePermissionOverride = updateCulturePermissionOverride;
         return this;
     }
     
+    public GroupsV2GroupFeatures(){}
 }

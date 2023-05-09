@@ -15,9 +15,11 @@ public class Alarm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Alarm withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Alarm(){}
 }

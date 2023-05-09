@@ -56,11 +56,9 @@ public class MyAPICredential {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMeAllowedOriginsOriginIdResponse res = new org.openapis.openapi.models.operations.DeleteMeAllowedOriginsOriginIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteMeAllowedOriginsOriginIdResponse res = new org.openapis.openapi.models.operations.DeleteMeAllowedOriginsOriginIdResponse(contentType, httpRes.statusCode()) {{
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -81,10 +79,11 @@ public class MyAPICredential {
      * Returns your [API credential](https://docs.adyen.com/development-resources/api-credentials) details based on the API Key you used in the request.
      * 
      * You can make this request with any of the Management API roles.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeResponse getMe() throws Exception {
+    public org.openapis.openapi.models.operations.GetMeResponse getMe(org.openapis.openapi.models.operations.GetMeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me");
         
@@ -93,17 +92,16 @@ public class MyAPICredential {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeResponse res = new org.openapis.openapi.models.operations.GetMeResponse() {{
+        org.openapis.openapi.models.operations.GetMeResponse res = new org.openapis.openapi.models.operations.GetMeResponse(contentType, httpRes.statusCode()) {{
             meApiCredential = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,10 +127,11 @@ public class MyAPICredential {
      * Returns the list of [allowed origins](https://docs.adyen.com/development-resources/client-side-authentication#allowed-origins) of your [API credential](https://docs.adyen.com/development-resources/api-credentials) based on the API key you used in the request.
      * 
      * You can make this request with any of the Management API roles.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeAllowedOriginsResponse getMeAllowedOrigins() throws Exception {
+    public org.openapis.openapi.models.operations.GetMeAllowedOriginsResponse getMeAllowedOrigins(org.openapis.openapi.models.operations.GetMeAllowedOriginsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/allowedOrigins");
         
@@ -141,17 +140,16 @@ public class MyAPICredential {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeAllowedOriginsResponse res = new org.openapis.openapi.models.operations.GetMeAllowedOriginsResponse() {{
+        org.openapis.openapi.models.operations.GetMeAllowedOriginsResponse res = new org.openapis.openapi.models.operations.GetMeAllowedOriginsResponse(contentType, httpRes.statusCode()) {{
             allowedOriginsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,12 +196,10 @@ public class MyAPICredential {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeAllowedOriginsOriginIdResponse res = new org.openapis.openapi.models.operations.GetMeAllowedOriginsOriginIdResponse() {{
+        org.openapis.openapi.models.operations.GetMeAllowedOriginsOriginIdResponse res = new org.openapis.openapi.models.operations.GetMeAllowedOriginsOriginIdResponse(contentType, httpRes.statusCode()) {{
             allowedOrigin = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,12 +248,10 @@ public class MyAPICredential {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMeAllowedOriginsResponse res = new org.openapis.openapi.models.operations.PostMeAllowedOriginsResponse() {{
+        org.openapis.openapi.models.operations.PostMeAllowedOriginsResponse res = new org.openapis.openapi.models.operations.PostMeAllowedOriginsResponse(contentType, httpRes.statusCode()) {{
             allowedOrigin = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyTargetGroupInput {
     
     public Boolean healthCheckEnabled;
+
     public ModifyTargetGroupInput withHealthCheckEnabled(Boolean healthCheckEnabled) {
         this.healthCheckEnabled = healthCheckEnabled;
         return this;
@@ -16,6 +17,7 @@ public class ModifyTargetGroupInput {
     
     
     public Long healthCheckIntervalSeconds;
+
     public ModifyTargetGroupInput withHealthCheckIntervalSeconds(Long healthCheckIntervalSeconds) {
         this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
         return this;
@@ -23,6 +25,7 @@ public class ModifyTargetGroupInput {
     
     
     public String healthCheckPath;
+
     public ModifyTargetGroupInput withHealthCheckPath(String healthCheckPath) {
         this.healthCheckPath = healthCheckPath;
         return this;
@@ -30,6 +33,7 @@ public class ModifyTargetGroupInput {
     
     
     public String healthCheckPort;
+
     public ModifyTargetGroupInput withHealthCheckPort(String healthCheckPort) {
         this.healthCheckPort = healthCheckPort;
         return this;
@@ -37,6 +41,7 @@ public class ModifyTargetGroupInput {
     
     
     public ProtocolEnumEnum healthCheckProtocol;
+
     public ModifyTargetGroupInput withHealthCheckProtocol(ProtocolEnumEnum healthCheckProtocol) {
         this.healthCheckProtocol = healthCheckProtocol;
         return this;
@@ -44,6 +49,7 @@ public class ModifyTargetGroupInput {
     
     
     public Long healthCheckTimeoutSeconds;
+
     public ModifyTargetGroupInput withHealthCheckTimeoutSeconds(Long healthCheckTimeoutSeconds) {
         this.healthCheckTimeoutSeconds = healthCheckTimeoutSeconds;
         return this;
@@ -51,6 +57,7 @@ public class ModifyTargetGroupInput {
     
     
     public Long healthyThresholdCount;
+
     public ModifyTargetGroupInput withHealthyThresholdCount(Long healthyThresholdCount) {
         this.healthyThresholdCount = healthyThresholdCount;
         return this;
@@ -58,6 +65,7 @@ public class ModifyTargetGroupInput {
     
     
     public Matcher matcher;
+
     public ModifyTargetGroupInput withMatcher(Matcher matcher) {
         this.matcher = matcher;
         return this;
@@ -65,6 +73,7 @@ public class ModifyTargetGroupInput {
     
     
     public String targetGroupArn;
+
     public ModifyTargetGroupInput withTargetGroupArn(String targetGroupArn) {
         this.targetGroupArn = targetGroupArn;
         return this;
@@ -72,9 +81,13 @@ public class ModifyTargetGroupInput {
     
     
     public Long unhealthyThresholdCount;
+
     public ModifyTargetGroupInput withUnhealthyThresholdCount(Long unhealthyThresholdCount) {
         this.unhealthyThresholdCount = unhealthyThresholdCount;
         return this;
     }
     
+    public ModifyTargetGroupInput(@JsonProperty("TargetGroupArn") String targetGroupArn) {
+        this.targetGroupArn = targetGroupArn;
+  }
 }

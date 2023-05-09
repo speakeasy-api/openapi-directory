@@ -20,6 +20,7 @@ public class GetIdentityResolutionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMerging")
     public AutoMerging autoMerging;
+
     public GetIdentityResolutionJobResponse withAutoMerging(AutoMerging autoMerging) {
         this.autoMerging = autoMerging;
         return this;
@@ -28,6 +29,7 @@ public class GetIdentityResolutionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public GetIdentityResolutionJobResponse withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -36,6 +38,7 @@ public class GetIdentityResolutionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportingLocation")
     public ExportingLocation exportingLocation;
+
     public GetIdentityResolutionJobResponse withExportingLocation(ExportingLocation exportingLocation) {
         this.exportingLocation = exportingLocation;
         return this;
@@ -46,6 +49,7 @@ public class GetIdentityResolutionJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("JobEndTime")
     public OffsetDateTime jobEndTime;
+
     public GetIdentityResolutionJobResponse withJobEndTime(OffsetDateTime jobEndTime) {
         this.jobEndTime = jobEndTime;
         return this;
@@ -56,6 +60,7 @@ public class GetIdentityResolutionJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("JobExpirationTime")
     public OffsetDateTime jobExpirationTime;
+
     public GetIdentityResolutionJobResponse withJobExpirationTime(OffsetDateTime jobExpirationTime) {
         this.jobExpirationTime = jobExpirationTime;
         return this;
@@ -64,6 +69,7 @@ public class GetIdentityResolutionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public GetIdentityResolutionJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -74,6 +80,7 @@ public class GetIdentityResolutionJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("JobStartTime")
     public OffsetDateTime jobStartTime;
+
     public GetIdentityResolutionJobResponse withJobStartTime(OffsetDateTime jobStartTime) {
         this.jobStartTime = jobStartTime;
         return this;
@@ -82,6 +89,7 @@ public class GetIdentityResolutionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStats")
     public JobStats jobStats;
+
     public GetIdentityResolutionJobResponse withJobStats(JobStats jobStats) {
         this.jobStats = jobStats;
         return this;
@@ -92,6 +100,7 @@ public class GetIdentityResolutionJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public GetIdentityResolutionJobResponse withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -100,6 +109,7 @@ public class GetIdentityResolutionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public GetIdentityResolutionJobResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -108,9 +118,11 @@ public class GetIdentityResolutionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public IdentityResolutionJobStatusEnum status;
+
     public GetIdentityResolutionJobResponse withStatus(IdentityResolutionJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetIdentityResolutionJobResponse(){}
 }

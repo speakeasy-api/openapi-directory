@@ -18,6 +18,7 @@ public class GoogleSecuritySafebrowsingV4ThreatHitUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public GoogleSecuritySafebrowsingV4ThreatHitUserInfo withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -29,9 +30,11 @@ public class GoogleSecuritySafebrowsingV4ThreatHitUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public GoogleSecuritySafebrowsingV4ThreatHitUserInfo withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4ThreatHitUserInfo(){}
 }

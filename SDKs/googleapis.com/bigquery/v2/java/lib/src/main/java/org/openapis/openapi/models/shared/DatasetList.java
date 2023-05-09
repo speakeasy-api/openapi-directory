@@ -18,6 +18,7 @@ public class DatasetList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasets")
     public DatasetListDatasets[] datasets;
+
     public DatasetList withDatasets(DatasetListDatasets[] datasets) {
         this.datasets = datasets;
         return this;
@@ -29,6 +30,7 @@ public class DatasetList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public DatasetList withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class DatasetList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DatasetList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class DatasetList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public DatasetList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public DatasetList(){}
 }

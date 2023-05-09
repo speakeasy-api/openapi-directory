@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BurnTokenResponse {
     
     public String contentType;
+
     public BurnTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BurnTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public BurnTokenResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class BurnTokenResponse {
     
     
     public Integer statusCode;
+
     public BurnTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class BurnTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BurnTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class BurnTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.BurnTokenResponse burnTokenResponse;
+
     public BurnTokenResponse withBurnTokenResponse(org.openapis.openapi.models.shared.BurnTokenResponse burnTokenResponse) {
         this.burnTokenResponse = burnTokenResponse;
         return this;
     }
     
+    public BurnTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IPSet {
     @JsonProperty("Definition")
     public String[] definition;
+
     public IPSet withDefinition(String[] definition) {
         this.definition = definition;
         return this;
     }
     
+    public IPSet(@JsonProperty("Definition") String[] definition) {
+        this.definition = definition;
+  }
 }

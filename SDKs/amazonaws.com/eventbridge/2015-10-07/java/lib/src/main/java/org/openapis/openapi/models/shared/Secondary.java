@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Secondary {
     @JsonProperty("Route")
     public String route;
+
     public Secondary withRoute(String route) {
         this.route = route;
         return this;
     }
     
+    public Secondary(@JsonProperty("Route") String route) {
+        this.route = route;
+  }
 }

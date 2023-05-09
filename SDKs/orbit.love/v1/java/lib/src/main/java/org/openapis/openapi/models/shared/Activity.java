@@ -15,6 +15,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activity_type")
     public String activityType;
+
     public Activity withActivityType(String activityType) {
         this.activityType = activityType;
         return this;
@@ -26,6 +27,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activity_type_key")
     public String activityTypeKey;
+
     public Activity withActivityTypeKey(String activityTypeKey) {
         this.activityTypeKey = activityTypeKey;
         return this;
@@ -37,6 +39,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Activity withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Activity withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +63,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public Activity withLink(String link) {
         this.link = link;
         return this;
@@ -70,6 +75,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link_text")
     public String linkText;
+
     public Activity withLinkText(String linkText) {
         this.linkText = linkText;
         return this;
@@ -81,6 +87,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurred_at")
     public String occurredAt;
+
     public Activity withOccurredAt(String occurredAt) {
         this.occurredAt = occurredAt;
         return this;
@@ -92,6 +99,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, Object> properties;
+
     public Activity withProperties(java.util.Map<String, Object> properties) {
         this.properties = properties;
         return this;
@@ -102,6 +110,7 @@ public class Activity {
      */
     @JsonProperty("title")
     public String title;
+
     public Activity withTitle(String title) {
         this.title = title;
         return this;
@@ -113,9 +122,13 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public String weight;
+
     public Activity withWeight(String weight) {
         this.weight = weight;
         return this;
     }
     
+    public Activity(@JsonProperty("title") String title) {
+        this.title = title;
+  }
 }

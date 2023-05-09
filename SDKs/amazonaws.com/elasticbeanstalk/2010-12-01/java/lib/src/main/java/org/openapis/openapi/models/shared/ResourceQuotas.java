@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ResourceQuotas {
     
     public ResourceQuota applicationQuota;
+
     public ResourceQuotas withApplicationQuota(ResourceQuota applicationQuota) {
         this.applicationQuota = applicationQuota;
         return this;
@@ -19,6 +20,7 @@ public class ResourceQuotas {
     
     
     public ResourceQuota applicationVersionQuota;
+
     public ResourceQuotas withApplicationVersionQuota(ResourceQuota applicationVersionQuota) {
         this.applicationVersionQuota = applicationVersionQuota;
         return this;
@@ -26,6 +28,7 @@ public class ResourceQuotas {
     
     
     public ResourceQuota configurationTemplateQuota;
+
     public ResourceQuotas withConfigurationTemplateQuota(ResourceQuota configurationTemplateQuota) {
         this.configurationTemplateQuota = configurationTemplateQuota;
         return this;
@@ -33,6 +36,7 @@ public class ResourceQuotas {
     
     
     public ResourceQuota customPlatformQuota;
+
     public ResourceQuotas withCustomPlatformQuota(ResourceQuota customPlatformQuota) {
         this.customPlatformQuota = customPlatformQuota;
         return this;
@@ -40,9 +44,11 @@ public class ResourceQuotas {
     
     
     public ResourceQuota environmentQuota;
+
     public ResourceQuotas withEnvironmentQuota(ResourceQuota environmentQuota) {
         this.environmentQuota = environmentQuota;
         return this;
     }
     
+    public ResourceQuotas(){}
 }

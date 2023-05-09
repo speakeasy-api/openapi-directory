@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostRemoteServersIdConfigurationFileResponse {
     
     public String contentType;
+
     public PostRemoteServersIdConfigurationFileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostRemoteServersIdConfigurationFileResponse {
      */
     
     public org.openapis.openapi.models.shared.RemoteServerConfigurationFileEntity remoteServerConfigurationFileEntity;
+
     public PostRemoteServersIdConfigurationFileResponse withRemoteServerConfigurationFileEntity(org.openapis.openapi.models.shared.RemoteServerConfigurationFileEntity remoteServerConfigurationFileEntity) {
         this.remoteServerConfigurationFileEntity = remoteServerConfigurationFileEntity;
         return this;
@@ -26,6 +29,7 @@ public class PostRemoteServersIdConfigurationFileResponse {
     
     
     public Integer statusCode;
+
     public PostRemoteServersIdConfigurationFileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostRemoteServersIdConfigurationFileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostRemoteServersIdConfigurationFileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostRemoteServersIdConfigurationFileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

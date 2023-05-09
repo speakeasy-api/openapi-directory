@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateThesaurusResponse {
@@ -12,6 +13,7 @@ public class UpdateThesaurusResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateThesaurusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateThesaurusResponse {
      */
     
     public Object conflictException;
+
     public UpdateThesaurusResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateThesaurusResponse {
     
     
     public String contentType;
+
     public UpdateThesaurusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateThesaurusResponse {
      */
     
     public Object internalServerException;
+
     public UpdateThesaurusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateThesaurusResponse {
     
     
     public Integer statusCode;
+
     public UpdateThesaurusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateThesaurusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateThesaurusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateThesaurusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateThesaurusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateThesaurusResponse {
      */
     
     public Object throttlingException;
+
     public UpdateThesaurusResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateThesaurusResponse {
      */
     
     public Object validationException;
+
     public UpdateThesaurusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateThesaurusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

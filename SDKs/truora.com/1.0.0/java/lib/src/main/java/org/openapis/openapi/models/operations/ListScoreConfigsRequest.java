@@ -12,9 +12,11 @@ public class ListScoreConfigsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_key")
     public String startKey;
+
     public ListScoreConfigsRequest withStartKey(String startKey) {
         this.startKey = startKey;
         return this;
     }
     
+    public ListScoreConfigsRequest(){}
 }

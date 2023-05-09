@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * ReinitializeActionConfigurationResetJavaSettingsEnum - When set to &lt;em&gt;1&lt;/em&gt;, removes the custom Java settings (path and credentials). The KM will try to automatically find a suitable JRE.
  */
 public enum ReinitializeActionConfigurationResetJavaSettingsEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0),
+    ONE(1);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private ReinitializeActionConfigurationResetJavaSettingsEnum(String value) {
+    private ReinitializeActionConfigurationResetJavaSettingsEnum(Integer value) {
         this.value = value;
     }
 }

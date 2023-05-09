@@ -15,6 +15,7 @@ public class Incer500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Incer500ApplicationJSONErrorEnum error;
+
     public Incer500ApplicationJSON withError(Incer500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Incer500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Incer500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Incer500ApplicationJSON withErrorDescription(Incer500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Incer500ApplicationJSON(){}
 }

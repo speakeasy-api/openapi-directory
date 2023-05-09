@@ -58,11 +58,9 @@ public class LocalTaxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddLocalTaxResponse res = new org.openapis.openapi.models.operations.AddLocalTaxResponse() {{
+        org.openapis.openapi.models.operations.AddLocalTaxResponse res = new org.openapis.openapi.models.operations.AddLocalTaxResponse(contentType, httpRes.statusCode()) {{
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 429) {
@@ -101,11 +99,9 @@ public class LocalTaxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLocalTaxByTaxCodeResponse res = new org.openapis.openapi.models.operations.DeleteLocalTaxByTaxCodeResponse() {{
+        org.openapis.openapi.models.operations.DeleteLocalTaxByTaxCodeResponse res = new org.openapis.openapi.models.operations.DeleteLocalTaxByTaxCodeResponse(contentType, httpRes.statusCode()) {{
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -144,12 +140,10 @@ public class LocalTaxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllLocalTaxesResponse res = new org.openapis.openapi.models.operations.GetAllLocalTaxesResponse() {{
+        org.openapis.openapi.models.operations.GetAllLocalTaxesResponse res = new org.openapis.openapi.models.operations.GetAllLocalTaxesResponse(contentType, httpRes.statusCode()) {{
             localTaxes = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,12 +189,10 @@ public class LocalTaxes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLocalTaxByTaxCodeResponse res = new org.openapis.openapi.models.operations.GetLocalTaxByTaxCodeResponse() {{
+        org.openapis.openapi.models.operations.GetLocalTaxByTaxCodeResponse res = new org.openapis.openapi.models.operations.GetLocalTaxByTaxCodeResponse(contentType, httpRes.statusCode()) {{
             localTaxes = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

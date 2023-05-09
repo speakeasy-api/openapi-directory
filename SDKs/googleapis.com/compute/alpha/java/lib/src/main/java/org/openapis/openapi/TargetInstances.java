@@ -59,11 +59,9 @@ public class TargetInstances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             targetInstanceAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class TargetInstances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class TargetInstances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetInstancesGetResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetInstancesGetResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesGetResponse(contentType, httpRes.statusCode()) {{
             targetInstance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class TargetInstances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetInstancesInsertResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetInstancesInsertResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class TargetInstances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetInstancesListResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetInstancesListResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesListResponse(contentType, httpRes.statusCode()) {{
             targetInstanceList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -257,6 +247,52 @@ public class TargetInstances {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.TargetInstanceList out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TargetInstanceList.class);
                 res.targetInstanceList = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Sets the Google Cloud Armor security policy for the specified target instance. For more information, see Google Cloud Armor Overview
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ComputeTargetInstancesSetSecurityPolicyResponse computeTargetInstancesSetSecurityPolicy(org.openapis.openapi.models.operations.ComputeTargetInstancesSetSecurityPolicyRequest request, org.openapis.openapi.models.operations.ComputeTargetInstancesSetSecurityPolicySecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetInstancesSetSecurityPolicyRequest.class, baseUrl, "/projects/{project}/zones/{zone}/targetInstances/{targetInstance}/setSecurityPolicy", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "securityPolicyReference", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetInstancesSetSecurityPolicyRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ComputeTargetInstancesSetSecurityPolicyResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesSetSecurityPolicyResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
             }
         }
 
@@ -293,11 +329,9 @@ public class TargetInstances {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetInstancesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetInstancesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeTargetInstancesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

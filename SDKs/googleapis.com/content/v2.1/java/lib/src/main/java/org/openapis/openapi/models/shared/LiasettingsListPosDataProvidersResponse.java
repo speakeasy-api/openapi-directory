@@ -18,6 +18,7 @@ public class LiasettingsListPosDataProvidersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LiasettingsListPosDataProvidersResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class LiasettingsListPosDataProvidersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posDataProviders")
     public PosDataProviders[] posDataProviders;
+
     public LiasettingsListPosDataProvidersResponse withPosDataProviders(PosDataProviders[] posDataProviders) {
         this.posDataProviders = posDataProviders;
         return this;
     }
     
+    public LiasettingsListPosDataProvidersResponse(){}
 }

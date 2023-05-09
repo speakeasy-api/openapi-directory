@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetachPolicyResponse {
@@ -12,6 +13,7 @@ public class DetachPolicyResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public DetachPolicyResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DetachPolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public DetachPolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class DetachPolicyResponse {
      */
     
     public Object concurrentModificationException;
+
     public DetachPolicyResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -42,6 +46,7 @@ public class DetachPolicyResponse {
      */
     
     public Object constraintViolationException;
+
     public DetachPolicyResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -49,6 +54,7 @@ public class DetachPolicyResponse {
     
     
     public String contentType;
+
     public DetachPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class DetachPolicyResponse {
      */
     
     public Object invalidInputException;
+
     public DetachPolicyResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class DetachPolicyResponse {
      */
     
     public Object policyChangesInProgressException;
+
     public DetachPolicyResponse withPolicyChangesInProgressException(Object policyChangesInProgressException) {
         this.policyChangesInProgressException = policyChangesInProgressException;
         return this;
@@ -79,6 +87,7 @@ public class DetachPolicyResponse {
      */
     
     public Object policyNotAttachedException;
+
     public DetachPolicyResponse withPolicyNotAttachedException(Object policyNotAttachedException) {
         this.policyNotAttachedException = policyNotAttachedException;
         return this;
@@ -89,6 +98,7 @@ public class DetachPolicyResponse {
      */
     
     public Object policyNotFoundException;
+
     public DetachPolicyResponse withPolicyNotFoundException(Object policyNotFoundException) {
         this.policyNotFoundException = policyNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class DetachPolicyResponse {
      */
     
     public Object serviceException;
+
     public DetachPolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -106,6 +117,7 @@ public class DetachPolicyResponse {
     
     
     public Integer statusCode;
+
     public DetachPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class DetachPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetachPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class DetachPolicyResponse {
      */
     
     public Object targetNotFoundException;
+
     public DetachPolicyResponse withTargetNotFoundException(Object targetNotFoundException) {
         this.targetNotFoundException = targetNotFoundException;
         return this;
@@ -133,6 +147,7 @@ public class DetachPolicyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DetachPolicyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -143,9 +158,14 @@ public class DetachPolicyResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public DetachPolicyResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public DetachPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

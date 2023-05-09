@@ -15,6 +15,7 @@ public class UpdateSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateSiteRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateSiteRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class UpdateSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public UpdateSiteRequestBody withNotes(String notes) {
         this.notes = notes;
         return this;
     }
     
+    public UpdateSiteRequestBody(){}
 }

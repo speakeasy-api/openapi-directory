@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoBuganizerNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assigneeEmailAddress")
     public String assigneeEmailAddress;
+
     public EnterpriseCrmEventbusProtoBuganizerNotification withAssigneeEmailAddress(String assigneeEmailAddress) {
         this.assigneeEmailAddress = assigneeEmailAddress;
         return this;
@@ -26,6 +27,7 @@ public class EnterpriseCrmEventbusProtoBuganizerNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentId")
     public String componentId;
+
     public EnterpriseCrmEventbusProtoBuganizerNotification withComponentId(String componentId) {
         this.componentId = componentId;
         return this;
@@ -37,6 +39,7 @@ public class EnterpriseCrmEventbusProtoBuganizerNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateId")
     public String templateId;
+
     public EnterpriseCrmEventbusProtoBuganizerNotification withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
@@ -48,9 +51,11 @@ public class EnterpriseCrmEventbusProtoBuganizerNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public EnterpriseCrmEventbusProtoBuganizerNotification withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoBuganizerNotification(){}
 }

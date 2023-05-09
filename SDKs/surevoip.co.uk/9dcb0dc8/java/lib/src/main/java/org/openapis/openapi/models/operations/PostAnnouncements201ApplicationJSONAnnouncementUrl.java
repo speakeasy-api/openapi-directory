@@ -12,6 +12,7 @@ public class PostAnnouncements201ApplicationJSONAnnouncementUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download")
     public String download;
+
     public PostAnnouncements201ApplicationJSONAnnouncementUrl withDownload(String download) {
         this.download = download;
         return this;
@@ -20,6 +21,7 @@ public class PostAnnouncements201ApplicationJSONAnnouncementUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public PostAnnouncements201ApplicationJSONAnnouncementUrl withHref(String href) {
         this.href = href;
         return this;
@@ -28,9 +30,11 @@ public class PostAnnouncements201ApplicationJSONAnnouncementUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PostAnnouncements201ApplicationJSONAnnouncementUrl withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PostAnnouncements201ApplicationJSONAnnouncementUrl(){}
 }

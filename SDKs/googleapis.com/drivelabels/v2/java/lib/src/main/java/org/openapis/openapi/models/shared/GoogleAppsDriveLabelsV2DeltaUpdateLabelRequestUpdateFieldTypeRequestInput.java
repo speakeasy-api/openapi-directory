@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeReques
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateOptions")
     public GoogleAppsDriveLabelsV2FieldDateOptionsInput dateOptions;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeRequestInput withDateOptions(GoogleAppsDriveLabelsV2FieldDateOptionsInput dateOptions) {
         this.dateOptions = dateOptions;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeReques
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeRequestInput withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeReques
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectionOptions")
     public GoogleAppsDriveLabelsV2FieldSelectionOptionsInput selectionOptions;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeRequestInput withSelectionOptions(GoogleAppsDriveLabelsV2FieldSelectionOptionsInput selectionOptions) {
         this.selectionOptions = selectionOptions;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeReques
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeReques
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userOptions")
     public GoogleAppsDriveLabelsV2FieldUserOptions userOptions;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeRequestInput withUserOptions(GoogleAppsDriveLabelsV2FieldUserOptions userOptions) {
         this.userOptions = userOptions;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeRequestInput(){}
 }

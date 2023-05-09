@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartApplicationResponse {
     
     public String contentType;
+
     public StartApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartApplicationResponse {
      */
     
     public Object invalidApplicationConfigurationException;
+
     public StartApplicationResponse withInvalidApplicationConfigurationException(Object invalidApplicationConfigurationException) {
         this.invalidApplicationConfigurationException = invalidApplicationConfigurationException;
         return this;
@@ -29,6 +32,7 @@ public class StartApplicationResponse {
      */
     
     public Object invalidArgumentException;
+
     public StartApplicationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class StartApplicationResponse {
      */
     
     public Object invalidRequestException;
+
     public StartApplicationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class StartApplicationResponse {
      */
     
     public Object resourceInUseException;
+
     public StartApplicationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class StartApplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartApplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class StartApplicationResponse {
      */
     
     public java.util.Map<String, Object> startApplicationResponse;
+
     public StartApplicationResponse withStartApplicationResponse(java.util.Map<String, Object> startApplicationResponse) {
         this.startApplicationResponse = startApplicationResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartApplicationResponse {
     
     
     public Integer statusCode;
+
     public StartApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class StartApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

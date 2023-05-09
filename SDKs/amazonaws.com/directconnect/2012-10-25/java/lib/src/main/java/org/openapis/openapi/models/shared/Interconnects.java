@@ -15,9 +15,11 @@ public class Interconnects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interconnects")
     public Interconnect[] interconnects;
+
     public Interconnects withInterconnects(Interconnect[] interconnects) {
         this.interconnects = interconnects;
         return this;
     }
     
+    public Interconnects(){}
 }

@@ -12,6 +12,7 @@ public class DetectFacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public AttributeEnum[] attributes;
+
     public DetectFacesRequest withAttributes(AttributeEnum[] attributes) {
         this.attributes = attributes;
         return this;
@@ -19,9 +20,13 @@ public class DetectFacesRequest {
     
     @JsonProperty("Image")
     public Image image;
+
     public DetectFacesRequest withImage(Image image) {
         this.image = image;
         return this;
     }
     
+    public DetectFacesRequest(@JsonProperty("Image") Image image) {
+        this.image = image;
+  }
 }

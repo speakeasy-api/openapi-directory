@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeGroupResponse {
@@ -12,6 +13,7 @@ public class DescribeGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeGroupResponse {
     
     
     public String contentType;
+
     public DescribeGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeGroupResponse describeGroupResponse;
+
     public DescribeGroupResponse withDescribeGroupResponse(org.openapis.openapi.models.shared.DescribeGroupResponse describeGroupResponse) {
         this.describeGroupResponse = describeGroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeGroupResponse {
      */
     
     public Object internalServerException;
+
     public DescribeGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeGroupResponse {
     
     
     public Integer statusCode;
+
     public DescribeGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeGroupResponse {
      */
     
     public Object throttlingException;
+
     public DescribeGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeGroupResponse {
      */
     
     public Object validationException;
+
     public DescribeGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

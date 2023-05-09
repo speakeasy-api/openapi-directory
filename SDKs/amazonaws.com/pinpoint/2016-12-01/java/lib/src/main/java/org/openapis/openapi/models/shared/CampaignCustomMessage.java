@@ -15,9 +15,11 @@ public class CampaignCustomMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public String data;
+
     public CampaignCustomMessage withData(String data) {
         this.data = data;
         return this;
     }
     
+    public CampaignCustomMessage(){}
 }

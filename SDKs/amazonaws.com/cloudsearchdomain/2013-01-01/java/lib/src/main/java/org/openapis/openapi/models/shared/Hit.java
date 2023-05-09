@@ -15,6 +15,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exprs")
     public java.util.Map<String, String> exprs;
+
     public Hit withExprs(java.util.Map<String, String> exprs) {
         this.exprs = exprs;
         return this;
@@ -23,6 +24,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, String[]> fields;
+
     public Hit withFields(java.util.Map<String, String[]> fields) {
         this.fields = fields;
         return this;
@@ -31,6 +33,7 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highlights")
     public java.util.Map<String, String> highlights;
+
     public Hit withHighlights(java.util.Map<String, String> highlights) {
         this.highlights = highlights;
         return this;
@@ -39,9 +42,11 @@ public class Hit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Hit withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Hit(){}
 }

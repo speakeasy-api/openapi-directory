@@ -15,6 +15,7 @@ public class ListPrincipalsForPortfolioOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListPrincipalsForPortfolioOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPrincipalsForPortfolioOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Principals")
     public Principal[] principals;
+
     public ListPrincipalsForPortfolioOutput withPrincipals(Principal[] principals) {
         this.principals = principals;
         return this;
     }
     
+    public ListPrincipalsForPortfolioOutput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GistsUpdateResponse {
     
     public String contentType;
+
     public GistsUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GistsUpdateResponse {
     
     
     public Integer statusCode;
+
     public GistsUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GistsUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GistsUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GistsUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public GistsUpdateResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class GistsUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.GistSimple gistSimple;
+
     public GistsUpdateResponse withGistSimple(org.openapis.openapi.models.shared.GistSimple gistSimple) {
         this.gistSimple = gistSimple;
         return this;
@@ -53,9 +59,14 @@ public class GistsUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public GistsUpdateResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public GistsUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

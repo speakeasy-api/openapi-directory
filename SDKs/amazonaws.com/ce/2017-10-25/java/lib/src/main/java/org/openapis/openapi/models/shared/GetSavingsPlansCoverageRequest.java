@@ -12,6 +12,7 @@ public class GetSavingsPlansCoverageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public Expression filter;
+
     public GetSavingsPlansCoverageRequest withFilter(Expression filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class GetSavingsPlansCoverageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Granularity")
     public GranularityEnum granularity;
+
     public GetSavingsPlansCoverageRequest withGranularity(GranularityEnum granularity) {
         this.granularity = granularity;
         return this;
@@ -28,6 +30,7 @@ public class GetSavingsPlansCoverageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupBy")
     public GroupDefinition[] groupBy;
+
     public GetSavingsPlansCoverageRequest withGroupBy(GroupDefinition[] groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -36,6 +39,7 @@ public class GetSavingsPlansCoverageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetSavingsPlansCoverageRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,6 +48,7 @@ public class GetSavingsPlansCoverageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public String[] metrics;
+
     public GetSavingsPlansCoverageRequest withMetrics(String[] metrics) {
         this.metrics = metrics;
         return this;
@@ -52,6 +57,7 @@ public class GetSavingsPlansCoverageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetSavingsPlansCoverageRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -60,6 +66,7 @@ public class GetSavingsPlansCoverageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortDefinition sortBy;
+
     public GetSavingsPlansCoverageRequest withSortBy(SortDefinition sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -67,9 +74,13 @@ public class GetSavingsPlansCoverageRequest {
     
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public GetSavingsPlansCoverageRequest withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public GetSavingsPlansCoverageRequest(@JsonProperty("TimePeriod") DateInterval timePeriod) {
+        this.timePeriod = timePeriod;
+  }
 }

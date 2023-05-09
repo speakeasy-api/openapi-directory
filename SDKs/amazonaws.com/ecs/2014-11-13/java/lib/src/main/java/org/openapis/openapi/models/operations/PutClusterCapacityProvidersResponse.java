@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutClusterCapacityProvidersResponse {
@@ -12,6 +13,7 @@ public class PutClusterCapacityProvidersResponse {
      */
     
     public Object clientException;
+
     public PutClusterCapacityProvidersResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -22,6 +24,7 @@ public class PutClusterCapacityProvidersResponse {
      */
     
     public Object clusterNotFoundException;
+
     public PutClusterCapacityProvidersResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class PutClusterCapacityProvidersResponse {
     
     
     public String contentType;
+
     public PutClusterCapacityProvidersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutClusterCapacityProvidersResponse {
      */
     
     public Object invalidParameterException;
+
     public PutClusterCapacityProvidersResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class PutClusterCapacityProvidersResponse {
      */
     
     public org.openapis.openapi.models.shared.PutClusterCapacityProvidersResponse putClusterCapacityProvidersResponse;
+
     public PutClusterCapacityProvidersResponse withPutClusterCapacityProvidersResponse(org.openapis.openapi.models.shared.PutClusterCapacityProvidersResponse putClusterCapacityProvidersResponse) {
         this.putClusterCapacityProvidersResponse = putClusterCapacityProvidersResponse;
         return this;
@@ -59,6 +65,7 @@ public class PutClusterCapacityProvidersResponse {
      */
     
     public Object resourceInUseException;
+
     public PutClusterCapacityProvidersResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class PutClusterCapacityProvidersResponse {
      */
     
     public Object serverException;
+
     public PutClusterCapacityProvidersResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -76,6 +84,7 @@ public class PutClusterCapacityProvidersResponse {
     
     
     public Integer statusCode;
+
     public PutClusterCapacityProvidersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class PutClusterCapacityProvidersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutClusterCapacityProvidersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class PutClusterCapacityProvidersResponse {
      */
     
     public Object updateInProgressException;
+
     public PutClusterCapacityProvidersResponse withUpdateInProgressException(Object updateInProgressException) {
         this.updateInProgressException = updateInProgressException;
         return this;
     }
     
+    public PutClusterCapacityProvidersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

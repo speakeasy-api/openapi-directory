@@ -156,6 +156,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -193,15 +198,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchAcknowledgeAlarmResponse res = new org.openapis.openapi.models.operations.BatchAcknowledgeAlarmResponse() {{
+        org.openapis.openapi.models.operations.BatchAcknowledgeAlarmResponse res = new org.openapis.openapi.models.operations.BatchAcknowledgeAlarmResponse(contentType, httpRes.statusCode()) {{
             batchAcknowledgeAlarmResponse = null;
             invalidRequestException = null;
             internalFailureException = null;
             serviceUnavailableException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -277,15 +280,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchDeleteDetectorResponse res = new org.openapis.openapi.models.operations.BatchDeleteDetectorResponse() {{
+        org.openapis.openapi.models.operations.BatchDeleteDetectorResponse res = new org.openapis.openapi.models.operations.BatchDeleteDetectorResponse(contentType, httpRes.statusCode()) {{
             batchDeleteDetectorResponse = null;
             invalidRequestException = null;
             internalFailureException = null;
             serviceUnavailableException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -361,15 +362,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchDisableAlarmResponse res = new org.openapis.openapi.models.operations.BatchDisableAlarmResponse() {{
+        org.openapis.openapi.models.operations.BatchDisableAlarmResponse res = new org.openapis.openapi.models.operations.BatchDisableAlarmResponse(contentType, httpRes.statusCode()) {{
             batchDisableAlarmResponse = null;
             invalidRequestException = null;
             internalFailureException = null;
             serviceUnavailableException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -445,15 +444,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchEnableAlarmResponse res = new org.openapis.openapi.models.operations.BatchEnableAlarmResponse() {{
+        org.openapis.openapi.models.operations.BatchEnableAlarmResponse res = new org.openapis.openapi.models.operations.BatchEnableAlarmResponse(contentType, httpRes.statusCode()) {{
             batchEnableAlarmResponse = null;
             invalidRequestException = null;
             internalFailureException = null;
             serviceUnavailableException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -529,15 +526,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchPutMessageResponse res = new org.openapis.openapi.models.operations.BatchPutMessageResponse() {{
+        org.openapis.openapi.models.operations.BatchPutMessageResponse res = new org.openapis.openapi.models.operations.BatchPutMessageResponse(contentType, httpRes.statusCode()) {{
             batchPutMessageResponse = null;
             invalidRequestException = null;
             internalFailureException = null;
             serviceUnavailableException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -613,15 +608,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchResetAlarmResponse res = new org.openapis.openapi.models.operations.BatchResetAlarmResponse() {{
+        org.openapis.openapi.models.operations.BatchResetAlarmResponse res = new org.openapis.openapi.models.operations.BatchResetAlarmResponse(contentType, httpRes.statusCode()) {{
             batchResetAlarmResponse = null;
             invalidRequestException = null;
             internalFailureException = null;
             serviceUnavailableException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -697,15 +690,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchSnoozeAlarmResponse res = new org.openapis.openapi.models.operations.BatchSnoozeAlarmResponse() {{
+        org.openapis.openapi.models.operations.BatchSnoozeAlarmResponse res = new org.openapis.openapi.models.operations.BatchSnoozeAlarmResponse(contentType, httpRes.statusCode()) {{
             batchSnoozeAlarmResponse = null;
             invalidRequestException = null;
             internalFailureException = null;
             serviceUnavailableException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -781,15 +772,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchUpdateDetectorResponse res = new org.openapis.openapi.models.operations.BatchUpdateDetectorResponse() {{
+        org.openapis.openapi.models.operations.BatchUpdateDetectorResponse res = new org.openapis.openapi.models.operations.BatchUpdateDetectorResponse(contentType, httpRes.statusCode()) {{
             batchUpdateDetectorResponse = null;
             invalidRequestException = null;
             internalFailureException = null;
             serviceUnavailableException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -866,7 +855,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeAlarmResponse res = new org.openapis.openapi.models.operations.DescribeAlarmResponse() {{
+        org.openapis.openapi.models.operations.DescribeAlarmResponse res = new org.openapis.openapi.models.operations.DescribeAlarmResponse(contentType, httpRes.statusCode()) {{
             describeAlarmResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
@@ -874,8 +863,6 @@ public class SDK {
             internalFailureException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -959,7 +946,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDetectorResponse res = new org.openapis.openapi.models.operations.DescribeDetectorResponse() {{
+        org.openapis.openapi.models.operations.DescribeDetectorResponse res = new org.openapis.openapi.models.operations.DescribeDetectorResponse(contentType, httpRes.statusCode()) {{
             describeDetectorResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
@@ -967,8 +954,6 @@ public class SDK {
             internalFailureException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1052,7 +1037,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAlarmsResponse res = new org.openapis.openapi.models.operations.ListAlarmsResponse() {{
+        org.openapis.openapi.models.operations.ListAlarmsResponse res = new org.openapis.openapi.models.operations.ListAlarmsResponse(contentType, httpRes.statusCode()) {{
             listAlarmsResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
@@ -1060,8 +1045,6 @@ public class SDK {
             internalFailureException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1145,7 +1128,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDetectorsResponse res = new org.openapis.openapi.models.operations.ListDetectorsResponse() {{
+        org.openapis.openapi.models.operations.ListDetectorsResponse res = new org.openapis.openapi.models.operations.ListDetectorsResponse(contentType, httpRes.statusCode()) {{
             listDetectorsResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
@@ -1153,8 +1136,6 @@ public class SDK {
             internalFailureException = null;
             serviceUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

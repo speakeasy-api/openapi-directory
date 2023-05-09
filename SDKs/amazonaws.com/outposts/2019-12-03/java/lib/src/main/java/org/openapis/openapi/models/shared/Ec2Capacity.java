@@ -15,6 +15,7 @@ public class Ec2Capacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Family")
     public String family;
+
     public Ec2Capacity withFamily(String family) {
         this.family = family;
         return this;
@@ -23,6 +24,7 @@ public class Ec2Capacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxSize")
     public String maxSize;
+
     public Ec2Capacity withMaxSize(String maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -31,9 +33,11 @@ public class Ec2Capacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quantity")
     public String quantity;
+
     public Ec2Capacity withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public Ec2Capacity(){}
 }

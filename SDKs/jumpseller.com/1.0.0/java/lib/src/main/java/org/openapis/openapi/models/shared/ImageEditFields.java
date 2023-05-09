@@ -15,9 +15,11 @@ public class ImageEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ImageEditFields withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ImageEditFields(){}
 }

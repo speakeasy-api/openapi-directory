@@ -15,6 +15,7 @@ public class EKSOnDeviceServiceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EKSAnywhereVersion")
     public String eksAnywhereVersion;
+
     public EKSOnDeviceServiceConfiguration withEKSAnywhereVersion(String eksAnywhereVersion) {
         this.eksAnywhereVersion = eksAnywhereVersion;
         return this;
@@ -23,9 +24,11 @@ public class EKSOnDeviceServiceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KubernetesVersion")
     public String kubernetesVersion;
+
     public EKSOnDeviceServiceConfiguration withKubernetesVersion(String kubernetesVersion) {
         this.kubernetesVersion = kubernetesVersion;
         return this;
     }
     
+    public EKSOnDeviceServiceConfiguration(){}
 }

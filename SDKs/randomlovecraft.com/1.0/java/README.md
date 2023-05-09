@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetBooksResponse;
 
 public class Application {
@@ -27,12 +26,14 @@ public class Application {
 
             GetBooksResponse res = sdk.books.getBooks();
 
-            if (res.getBooks200ApplicationJSONObject.isPresent()) {
+            if (res.getBooks200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -40,15 +41,15 @@ public class Application {
 ## Available Resources and Operations
 
 
-### books
+### [books](docs/books/README.md)
 
-* `getBooks` - List all books
+* [getBooks](docs/books/README.md#getbooks) - List all books
 
-### sentences
+### [sentences](docs/sentences/README.md)
 
-* `getSentences` - A random sentence
-* `getSentencesFromBook` - Random sentences from a specific book
-* `getSpecificSentence` - A specific sentence
+* [getSentences](docs/sentences/README.md#getsentences) - A random sentence
+* [getSentencesFromBook](docs/sentences/README.md#getsentencesfrombook) - Random sentences from a specific book
+* [getSpecificSentence](docs/sentences/README.md#getspecificsentence) - A specific sentence
 <!-- End SDK Available Operations -->
 
 ### Maturity

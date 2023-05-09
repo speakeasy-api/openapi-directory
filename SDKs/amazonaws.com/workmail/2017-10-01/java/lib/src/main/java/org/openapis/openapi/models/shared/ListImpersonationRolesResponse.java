@@ -15,6 +15,7 @@ public class ListImpersonationRolesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListImpersonationRolesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListImpersonationRolesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Roles")
     public ImpersonationRole[] roles;
+
     public ListImpersonationRolesResponse withRoles(ImpersonationRole[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public ListImpersonationRolesResponse(){}
 }

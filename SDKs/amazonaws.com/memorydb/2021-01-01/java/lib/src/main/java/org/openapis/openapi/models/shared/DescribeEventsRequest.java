@@ -17,6 +17,7 @@ public class DescribeEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public Long duration;
+
     public DescribeEventsRequest withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -27,6 +28,7 @@ public class DescribeEventsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public DescribeEventsRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -35,6 +37,7 @@ public class DescribeEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeEventsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -43,6 +46,7 @@ public class DescribeEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeEventsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -51,6 +55,7 @@ public class DescribeEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceName")
     public String sourceName;
+
     public DescribeEventsRequest withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
@@ -59,6 +64,7 @@ public class DescribeEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public SourceTypeEnum sourceType;
+
     public DescribeEventsRequest withSourceType(SourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -69,9 +75,11 @@ public class DescribeEventsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public DescribeEventsRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DescribeEventsRequest(){}
 }

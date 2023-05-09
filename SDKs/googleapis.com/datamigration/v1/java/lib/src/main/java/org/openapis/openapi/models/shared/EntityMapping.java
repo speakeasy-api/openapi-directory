@@ -18,8 +18,21 @@ public class EntityMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("draftEntity")
     public String draftEntity;
+
     public EntityMapping withDraftEntity(String draftEntity) {
         this.draftEntity = draftEntity;
+        return this;
+    }
+    
+    /**
+     * Type of draft entity.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("draftType")
+    public EntityMappingDraftTypeEnum draftType;
+
+    public EntityMapping withDraftType(EntityMappingDraftTypeEnum draftType) {
+        this.draftType = draftType;
         return this;
     }
     
@@ -29,6 +42,7 @@ public class EntityMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mappingLog")
     public EntityMappingLogEntry[] mappingLog;
+
     public EntityMapping withMappingLog(EntityMappingLogEntry[] mappingLog) {
         this.mappingLog = mappingLog;
         return this;
@@ -40,9 +54,23 @@ public class EntityMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceEntity")
     public String sourceEntity;
+
     public EntityMapping withSourceEntity(String sourceEntity) {
         this.sourceEntity = sourceEntity;
         return this;
     }
     
+    /**
+     * Type of source entity.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sourceType")
+    public EntityMappingSourceTypeEnum sourceType;
+
+    public EntityMapping withSourceType(EntityMappingSourceTypeEnum sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    
+    public EntityMapping(){}
 }

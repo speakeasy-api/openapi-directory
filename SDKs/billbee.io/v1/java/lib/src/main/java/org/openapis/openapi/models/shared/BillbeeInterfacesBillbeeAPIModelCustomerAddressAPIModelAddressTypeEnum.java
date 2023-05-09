@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum - The type of the address
  */
 public enum BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum {
-    ONE("1"),
-    TWO("2");
+    ONE(1),
+    TWO(2);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum(String value) {
+    private BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum(Integer value) {
         this.value = value;
     }
 }

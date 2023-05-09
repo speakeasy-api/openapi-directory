@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PollForDecisionTaskRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PollForDecisionTaskInput pollForDecisionTaskInput;
+
     public PollForDecisionTaskRequest withPollForDecisionTaskInput(org.openapis.openapi.models.shared.PollForDecisionTaskInput pollForDecisionTaskInput) {
         this.pollForDecisionTaskInput = pollForDecisionTaskInput;
         return this;
@@ -16,6 +18,7 @@ public class PollForDecisionTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public PollForDecisionTaskRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class PollForDecisionTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public PollForDecisionTaskRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class PollForDecisionTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public PollForDecisionTaskRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class PollForDecisionTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public PollForDecisionTaskRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class PollForDecisionTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public PollForDecisionTaskRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class PollForDecisionTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public PollForDecisionTaskRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class PollForDecisionTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public PollForDecisionTaskRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,6 +74,7 @@ public class PollForDecisionTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public PollForDecisionTaskXAmzTargetEnum xAmzTarget;
+
     public PollForDecisionTaskRequest withXAmzTarget(PollForDecisionTaskXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
@@ -75,6 +85,7 @@ public class PollForDecisionTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maximumPageSize")
     public String maximumPageSize;
+
     public PollForDecisionTaskRequest withMaximumPageSize(String maximumPageSize) {
         this.maximumPageSize = maximumPageSize;
         return this;
@@ -85,9 +96,14 @@ public class PollForDecisionTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextPageToken")
     public String nextPageToken;
+
     public PollForDecisionTaskRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public PollForDecisionTaskRequest(@JsonProperty("PollForDecisionTaskInput") org.openapis.openapi.models.shared.PollForDecisionTaskInput pollForDecisionTaskInput, @JsonProperty("X-Amz-Target") PollForDecisionTaskXAmzTargetEnum xAmzTarget) {
+        this.pollForDecisionTaskInput = pollForDecisionTaskInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

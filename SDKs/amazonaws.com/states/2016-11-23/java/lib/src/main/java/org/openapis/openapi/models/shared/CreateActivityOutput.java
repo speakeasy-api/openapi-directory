@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CreateActivityOutput {
     @JsonProperty("activityArn")
     public String activityArn;
+
     public CreateActivityOutput withActivityArn(String activityArn) {
         this.activityArn = activityArn;
         return this;
@@ -26,9 +27,14 @@ public class CreateActivityOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public CreateActivityOutput withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
     }
     
+    public CreateActivityOutput(@JsonProperty("activityArn") String activityArn, @JsonProperty("creationDate") OffsetDateTime creationDate) {
+        this.activityArn = activityArn;
+        this.creationDate = creationDate;
+  }
 }

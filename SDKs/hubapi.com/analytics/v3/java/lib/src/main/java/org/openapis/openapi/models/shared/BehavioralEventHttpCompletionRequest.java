@@ -20,6 +20,7 @@ public class BehavioralEventHttpCompletionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public BehavioralEventHttpCompletionRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -30,6 +31,7 @@ public class BehavioralEventHttpCompletionRequest {
      */
     @JsonProperty("eventName")
     public String eventName;
+
     public BehavioralEventHttpCompletionRequest withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -41,6 +43,7 @@ public class BehavioralEventHttpCompletionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public BehavioralEventHttpCompletionRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -54,6 +57,7 @@ public class BehavioralEventHttpCompletionRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("occurredAt")
     public OffsetDateTime occurredAt;
+
     public BehavioralEventHttpCompletionRequest withOccurredAt(OffsetDateTime occurredAt) {
         this.occurredAt = occurredAt;
         return this;
@@ -64,6 +68,7 @@ public class BehavioralEventHttpCompletionRequest {
      */
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public BehavioralEventHttpCompletionRequest withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -75,9 +80,14 @@ public class BehavioralEventHttpCompletionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utk")
     public String utk;
+
     public BehavioralEventHttpCompletionRequest withUtk(String utk) {
         this.utk = utk;
         return this;
     }
     
+    public BehavioralEventHttpCompletionRequest(@JsonProperty("eventName") String eventName, @JsonProperty("properties") java.util.Map<String, String> properties) {
+        this.eventName = eventName;
+        this.properties = properties;
+  }
 }

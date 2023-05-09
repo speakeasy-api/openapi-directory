@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataUser withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationMs")
     public String creationMs;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataUser withCreationMs(String creationMs) {
         this.creationMs = creationMs;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataUser withEmail(String email) {
         this.email = email;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailVerified")
     public Boolean emailVerified;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataUser withEmailVerified(Boolean emailVerified) {
         this.emailVerified = emailVerified;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataUser withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneVerified")
     public Boolean phoneVerified;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataUser withPhoneVerified(Boolean phoneVerified) {
         this.phoneVerified = phoneVerified;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1TransactionDataUser(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartProtectedQueryResponse {
@@ -12,6 +13,7 @@ public class StartProtectedQueryResponse {
      */
     
     public Object accessDeniedException;
+
     public StartProtectedQueryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartProtectedQueryResponse {
     
     
     public String contentType;
+
     public StartProtectedQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartProtectedQueryResponse {
      */
     
     public Object internalServerException;
+
     public StartProtectedQueryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartProtectedQueryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartProtectedQueryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartProtectedQueryResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartProtectedQueryResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -59,6 +65,7 @@ public class StartProtectedQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.StartProtectedQueryOutput startProtectedQueryOutput;
+
     public StartProtectedQueryResponse withStartProtectedQueryOutput(org.openapis.openapi.models.shared.StartProtectedQueryOutput startProtectedQueryOutput) {
         this.startProtectedQueryOutput = startProtectedQueryOutput;
         return this;
@@ -66,6 +73,7 @@ public class StartProtectedQueryResponse {
     
     
     public Integer statusCode;
+
     public StartProtectedQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartProtectedQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartProtectedQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class StartProtectedQueryResponse {
      */
     
     public Object throttlingException;
+
     public StartProtectedQueryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StartProtectedQueryResponse {
      */
     
     public Object validationException;
+
     public StartProtectedQueryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartProtectedQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

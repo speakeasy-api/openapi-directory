@@ -17,6 +17,7 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public BankAccountInfo withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -28,6 +29,7 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountType")
     public String accountType;
+
     public BankAccountInfo withAccountType(String accountType) {
         this.accountType = accountType;
         return this;
@@ -39,6 +41,7 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankBicSwift")
     public String bankBicSwift;
+
     public BankAccountInfo withBankBicSwift(String bankBicSwift) {
         this.bankBicSwift = bankBicSwift;
         return this;
@@ -50,6 +53,7 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankCity")
     public String bankCity;
+
     public BankAccountInfo withBankCity(String bankCity) {
         this.bankCity = bankCity;
         return this;
@@ -61,6 +65,7 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankCode")
     public String bankCode;
+
     public BankAccountInfo withBankCode(String bankCode) {
         this.bankCode = bankCode;
         return this;
@@ -72,6 +77,7 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankName")
     public String bankName;
+
     public BankAccountInfo withBankName(String bankName) {
         this.bankName = bankName;
         return this;
@@ -92,6 +98,7 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchCode")
     public String branchCode;
+
     public BankAccountInfo withBranchCode(String branchCode) {
         this.branchCode = branchCode;
         return this;
@@ -103,6 +110,7 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkCode")
     public String checkCode;
+
     public BankAccountInfo withCheckCode(String checkCode) {
         this.checkCode = checkCode;
         return this;
@@ -114,6 +122,7 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public BankAccountInfo withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -124,6 +133,7 @@ public class BankAccountInfo {
      */
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public BankAccountInfo withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -135,9 +145,13 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iban")
     public String iban;
+
     public BankAccountInfo withIban(String iban) {
         this.iban = iban;
         return this;
     }
     
+    public BankAccountInfo(@JsonProperty("currencyCode") String currencyCode) {
+        this.currencyCode = currencyCode;
+  }
 }

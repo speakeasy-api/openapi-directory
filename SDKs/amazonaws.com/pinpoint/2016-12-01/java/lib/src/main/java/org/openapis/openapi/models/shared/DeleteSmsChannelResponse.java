@@ -15,9 +15,13 @@ public class DeleteSmsChannelResponse {
      */
     @JsonProperty("SMSChannelResponse")
     public SMSChannelResponse smsChannelResponse;
+
     public DeleteSmsChannelResponse withSMSChannelResponse(SMSChannelResponse smsChannelResponse) {
         this.smsChannelResponse = smsChannelResponse;
         return this;
     }
     
+    public DeleteSmsChannelResponse(@JsonProperty("SMSChannelResponse") SMSChannelResponse smsChannelResponse) {
+        this.smsChannelResponse = smsChannelResponse;
+  }
 }

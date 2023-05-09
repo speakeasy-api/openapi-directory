@@ -9,15 +9,26 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * CanvasAppSettings - The SageMaker Canvas app settings.
+ * CanvasAppSettings - The SageMaker Canvas application settings.
  */
 public class CanvasAppSettings {
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ModelRegisterSettings")
+    public ModelRegisterSettings modelRegisterSettings;
+
+    public CanvasAppSettings withModelRegisterSettings(ModelRegisterSettings modelRegisterSettings) {
+        this.modelRegisterSettings = modelRegisterSettings;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSeriesForecastingSettings")
     public TimeSeriesForecastingSettings timeSeriesForecastingSettings;
+
     public CanvasAppSettings withTimeSeriesForecastingSettings(TimeSeriesForecastingSettings timeSeriesForecastingSettings) {
         this.timeSeriesForecastingSettings = timeSeriesForecastingSettings;
         return this;
     }
     
+    public CanvasAppSettings(){}
 }

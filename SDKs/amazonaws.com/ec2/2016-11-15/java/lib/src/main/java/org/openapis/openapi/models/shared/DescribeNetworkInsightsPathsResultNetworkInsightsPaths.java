@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeNetworkInsightsPathsResultNetworkInsightsPaths {
     
     public OffsetDateTime createdDate;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPaths withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPaths {
     
     
     public String destination;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPaths withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPaths {
     
     
     public String destinationArn;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPaths withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPaths {
     
     
     public String destinationIp;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPaths withDestinationIp(String destinationIp) {
         this.destinationIp = destinationIp;
         return this;
@@ -40,6 +44,7 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPaths {
     
     
     public Long destinationPort;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPaths withDestinationPort(Long destinationPort) {
         this.destinationPort = destinationPort;
         return this;
@@ -47,6 +52,7 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPaths {
     
     
     public DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtDestination filterAtDestination;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPaths withFilterAtDestination(DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtDestination filterAtDestination) {
         this.filterAtDestination = filterAtDestination;
         return this;
@@ -54,6 +60,7 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPaths {
     
     
     public DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtSource filterAtSource;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPaths withFilterAtSource(DescribeNetworkInsightsPathsResultNetworkInsightsPathsFilterAtSource filterAtSource) {
         this.filterAtSource = filterAtSource;
         return this;
@@ -61,6 +68,7 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPaths {
     
     
     public String networkInsightsPathArn;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPaths withNetworkInsightsPathArn(String networkInsightsPathArn) {
         this.networkInsightsPathArn = networkInsightsPathArn;
         return this;
@@ -68,6 +76,7 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPaths {
     
     
     public String networkInsightsPathId;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPaths withNetworkInsightsPathId(String networkInsightsPathId) {
         this.networkInsightsPathId = networkInsightsPathId;
         return this;
@@ -75,6 +84,7 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPaths {
     
     
     public DescribeNetworkInsightsPathsResultNetworkInsightsPathsProtocolEnum protocol;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPaths withProtocol(DescribeNetworkInsightsPathsResultNetworkInsightsPathsProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -82,6 +92,7 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPaths {
     
     
     public String source;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPaths withSource(String source) {
         this.source = source;
         return this;
@@ -89,6 +100,7 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPaths {
     
     
     public String sourceArn;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPaths withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -96,6 +108,7 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPaths {
     
     
     public String sourceIp;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPaths withSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;
@@ -103,9 +116,11 @@ public class DescribeNetworkInsightsPathsResultNetworkInsightsPaths {
     
     
     public DescribeNetworkInsightsPathsResultNetworkInsightsPathsTags[] tags;
+
     public DescribeNetworkInsightsPathsResultNetworkInsightsPaths withTags(DescribeNetworkInsightsPathsResultNetworkInsightsPathsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeNetworkInsightsPathsResultNetworkInsightsPaths(){}
 }

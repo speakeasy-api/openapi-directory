@@ -18,6 +18,7 @@ public class CartSimulation200ApplicationJSONPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAccounts")
     public Object[] availableAccounts;
+
     public CartSimulation200ApplicationJSONPaymentData withAvailableAccounts(Object[] availableAccounts) {
         this.availableAccounts = availableAccounts;
         return this;
@@ -29,6 +30,7 @@ public class CartSimulation200ApplicationJSONPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAssociations")
     public java.util.Map<String, Object> availableAssociations;
+
     public CartSimulation200ApplicationJSONPaymentData withAvailableAssociations(java.util.Map<String, Object> availableAssociations) {
         this.availableAssociations = availableAssociations;
         return this;
@@ -40,6 +42,7 @@ public class CartSimulation200ApplicationJSONPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableTokens")
     public Object[] availableTokens;
+
     public CartSimulation200ApplicationJSONPaymentData withAvailableTokens(Object[] availableTokens) {
         this.availableTokens = availableTokens;
         return this;
@@ -51,6 +54,7 @@ public class CartSimulation200ApplicationJSONPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftCardMessages")
     public Object[] giftCardMessages;
+
     public CartSimulation200ApplicationJSONPaymentData withGiftCardMessages(Object[] giftCardMessages) {
         this.giftCardMessages = giftCardMessages;
         return this;
@@ -62,6 +66,7 @@ public class CartSimulation200ApplicationJSONPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftCards")
     public Object[] giftCards;
+
     public CartSimulation200ApplicationJSONPaymentData withGiftCards(Object[] giftCards) {
         this.giftCards = giftCards;
         return this;
@@ -73,6 +78,7 @@ public class CartSimulation200ApplicationJSONPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installmentOptions")
     public Object[] installmentOptions;
+
     public CartSimulation200ApplicationJSONPaymentData withInstallmentOptions(Object[] installmentOptions) {
         this.installmentOptions = installmentOptions;
         return this;
@@ -84,6 +90,7 @@ public class CartSimulation200ApplicationJSONPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentSystems")
     public CartSimulation200ApplicationJSONPaymentDataPaymentSystems[] paymentSystems;
+
     public CartSimulation200ApplicationJSONPaymentData withPaymentSystems(CartSimulation200ApplicationJSONPaymentDataPaymentSystems[] paymentSystems) {
         this.paymentSystems = paymentSystems;
         return this;
@@ -95,9 +102,11 @@ public class CartSimulation200ApplicationJSONPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payments")
     public Object[] payments;
+
     public CartSimulation200ApplicationJSONPaymentData withPayments(Object[] payments) {
         this.payments = payments;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONPaymentData(){}
 }

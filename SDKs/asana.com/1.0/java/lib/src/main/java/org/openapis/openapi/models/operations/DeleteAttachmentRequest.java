@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAttachmentRequest {
@@ -12,6 +13,7 @@ public class DeleteAttachmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attachment_gid")
     public String attachmentGid;
+
     public DeleteAttachmentRequest withAttachmentGid(String attachmentGid) {
         this.attachmentGid = attachmentGid;
         return this;
@@ -24,6 +26,7 @@ public class DeleteAttachmentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public DeleteAttachmentRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,9 +38,13 @@ public class DeleteAttachmentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public DeleteAttachmentRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public DeleteAttachmentRequest(@JsonProperty("attachment_gid") String attachmentGid) {
+        this.attachmentGid = attachmentGid;
+  }
 }

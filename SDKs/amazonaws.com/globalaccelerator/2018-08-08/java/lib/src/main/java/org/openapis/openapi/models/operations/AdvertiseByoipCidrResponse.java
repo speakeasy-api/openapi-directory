@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdvertiseByoipCidrResponse {
@@ -12,6 +13,7 @@ public class AdvertiseByoipCidrResponse {
      */
     
     public Object accessDeniedException;
+
     public AdvertiseByoipCidrResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AdvertiseByoipCidrResponse {
      */
     
     public org.openapis.openapi.models.shared.AdvertiseByoipCidrResponse advertiseByoipCidrResponse;
+
     public AdvertiseByoipCidrResponse withAdvertiseByoipCidrResponse(org.openapis.openapi.models.shared.AdvertiseByoipCidrResponse advertiseByoipCidrResponse) {
         this.advertiseByoipCidrResponse = advertiseByoipCidrResponse;
         return this;
@@ -32,6 +35,7 @@ public class AdvertiseByoipCidrResponse {
      */
     
     public Object byoipCidrNotFoundException;
+
     public AdvertiseByoipCidrResponse withByoipCidrNotFoundException(Object byoipCidrNotFoundException) {
         this.byoipCidrNotFoundException = byoipCidrNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class AdvertiseByoipCidrResponse {
     
     
     public String contentType;
+
     public AdvertiseByoipCidrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AdvertiseByoipCidrResponse {
      */
     
     public Object incorrectCidrStateException;
+
     public AdvertiseByoipCidrResponse withIncorrectCidrStateException(Object incorrectCidrStateException) {
         this.incorrectCidrStateException = incorrectCidrStateException;
         return this;
@@ -59,6 +65,7 @@ public class AdvertiseByoipCidrResponse {
      */
     
     public Object internalServiceErrorException;
+
     public AdvertiseByoipCidrResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -69,6 +76,7 @@ public class AdvertiseByoipCidrResponse {
      */
     
     public Object invalidArgumentException;
+
     public AdvertiseByoipCidrResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -76,6 +84,7 @@ public class AdvertiseByoipCidrResponse {
     
     
     public Integer statusCode;
+
     public AdvertiseByoipCidrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class AdvertiseByoipCidrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdvertiseByoipCidrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AdvertiseByoipCidrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

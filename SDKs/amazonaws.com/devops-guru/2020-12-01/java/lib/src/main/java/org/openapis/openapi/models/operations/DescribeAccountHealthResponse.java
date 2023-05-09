@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAccountHealthResponse {
@@ -12,6 +13,7 @@ public class DescribeAccountHealthResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeAccountHealthResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAccountHealthResponse {
     
     
     public String contentType;
+
     public DescribeAccountHealthResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAccountHealthResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAccountHealthResponse describeAccountHealthResponse;
+
     public DescribeAccountHealthResponse withDescribeAccountHealthResponse(org.openapis.openapi.models.shared.DescribeAccountHealthResponse describeAccountHealthResponse) {
         this.describeAccountHealthResponse = describeAccountHealthResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAccountHealthResponse {
      */
     
     public Object internalServerException;
+
     public DescribeAccountHealthResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeAccountHealthResponse {
     
     
     public Integer statusCode;
+
     public DescribeAccountHealthResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeAccountHealthResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAccountHealthResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAccountHealthResponse {
      */
     
     public Object throttlingException;
+
     public DescribeAccountHealthResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeAccountHealthResponse {
      */
     
     public Object validationException;
+
     public DescribeAccountHealthResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeAccountHealthResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

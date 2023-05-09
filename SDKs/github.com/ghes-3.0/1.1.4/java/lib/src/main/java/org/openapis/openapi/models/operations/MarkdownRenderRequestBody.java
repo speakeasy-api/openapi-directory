@@ -15,6 +15,7 @@ public class MarkdownRenderRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public String context;
+
     public MarkdownRenderRequestBody withContext(String context) {
         this.context = context;
         return this;
@@ -26,6 +27,7 @@ public class MarkdownRenderRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public MarkdownRenderRequestBodyModeEnum mode;
+
     public MarkdownRenderRequestBody withMode(MarkdownRenderRequestBodyModeEnum mode) {
         this.mode = mode;
         return this;
@@ -36,9 +38,13 @@ public class MarkdownRenderRequestBody {
      */
     @JsonProperty("text")
     public String text;
+
     public MarkdownRenderRequestBody withText(String text) {
         this.text = text;
         return this;
     }
     
+    public MarkdownRenderRequestBody(@JsonProperty("text") String text) {
+        this.text = text;
+  }
 }

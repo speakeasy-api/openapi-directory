@@ -15,6 +15,7 @@ public class UpdateTrailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogsLogGroupArn")
     public String cloudWatchLogsLogGroupArn;
+
     public UpdateTrailResponse withCloudWatchLogsLogGroupArn(String cloudWatchLogsLogGroupArn) {
         this.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
         return this;
@@ -23,6 +24,7 @@ public class UpdateTrailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogsRoleArn")
     public String cloudWatchLogsRoleArn;
+
     public UpdateTrailResponse withCloudWatchLogsRoleArn(String cloudWatchLogsRoleArn) {
         this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
         return this;
@@ -31,6 +33,7 @@ public class UpdateTrailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeGlobalServiceEvents")
     public Boolean includeGlobalServiceEvents;
+
     public UpdateTrailResponse withIncludeGlobalServiceEvents(Boolean includeGlobalServiceEvents) {
         this.includeGlobalServiceEvents = includeGlobalServiceEvents;
         return this;
@@ -39,6 +42,7 @@ public class UpdateTrailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsMultiRegionTrail")
     public Boolean isMultiRegionTrail;
+
     public UpdateTrailResponse withIsMultiRegionTrail(Boolean isMultiRegionTrail) {
         this.isMultiRegionTrail = isMultiRegionTrail;
         return this;
@@ -47,6 +51,7 @@ public class UpdateTrailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsOrganizationTrail")
     public Boolean isOrganizationTrail;
+
     public UpdateTrailResponse withIsOrganizationTrail(Boolean isOrganizationTrail) {
         this.isOrganizationTrail = isOrganizationTrail;
         return this;
@@ -55,6 +60,7 @@ public class UpdateTrailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public UpdateTrailResponse withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -63,6 +69,7 @@ public class UpdateTrailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogFileValidationEnabled")
     public Boolean logFileValidationEnabled;
+
     public UpdateTrailResponse withLogFileValidationEnabled(Boolean logFileValidationEnabled) {
         this.logFileValidationEnabled = logFileValidationEnabled;
         return this;
@@ -71,6 +78,7 @@ public class UpdateTrailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateTrailResponse withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +87,7 @@ public class UpdateTrailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public UpdateTrailResponse withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -87,6 +96,7 @@ public class UpdateTrailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3KeyPrefix")
     public String s3KeyPrefix;
+
     public UpdateTrailResponse withS3KeyPrefix(String s3KeyPrefix) {
         this.s3KeyPrefix = s3KeyPrefix;
         return this;
@@ -95,6 +105,7 @@ public class UpdateTrailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopicARN")
     public String snsTopicARN;
+
     public UpdateTrailResponse withSnsTopicARN(String snsTopicARN) {
         this.snsTopicARN = snsTopicARN;
         return this;
@@ -103,6 +114,7 @@ public class UpdateTrailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopicName")
     public String snsTopicName;
+
     public UpdateTrailResponse withSnsTopicName(String snsTopicName) {
         this.snsTopicName = snsTopicName;
         return this;
@@ -111,9 +123,11 @@ public class UpdateTrailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrailARN")
     public String trailARN;
+
     public UpdateTrailResponse withTrailARN(String trailARN) {
         this.trailARN = trailARN;
         return this;
     }
     
+    public UpdateTrailResponse(){}
 }

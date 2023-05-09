@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest {
@@ -12,6 +13,7 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CertificateIssuanceConfigInput certificateIssuanceConfigInput;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withCertificateIssuanceConfigInput(org.openapis.openapi.models.shared.CertificateIssuanceConfigInput certificateIssuanceConfigInput) {
         this.certificateIssuanceConfigInput = certificateIssuanceConfigInput;
         return this;
@@ -29,6 +32,7 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=certificateIssuanceConfigId")
     public String certificateIssuanceConfigId;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withCertificateIssuanceConfigId(String certificateIssuanceConfigId) {
         this.certificateIssuanceConfigId = certificateIssuanceConfigId;
         return this;
@@ -69,6 +76,7 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -109,6 +120,7 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,13 @@ public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

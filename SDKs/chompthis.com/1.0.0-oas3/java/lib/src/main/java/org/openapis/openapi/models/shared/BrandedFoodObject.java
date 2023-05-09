@@ -18,9 +18,11 @@ public class BrandedFoodObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public BrandedFoodObjectItems[] items;
+
     public BrandedFoodObject withItems(BrandedFoodObjectItems[] items) {
         this.items = items;
         return this;
     }
     
+    public BrandedFoodObject(){}
 }

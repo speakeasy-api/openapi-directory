@@ -14,6 +14,7 @@ public class StartEdgeConfigurationUpdateRequestBody {
      */
     @JsonProperty("EdgeConfig")
     public StartEdgeConfigurationUpdateRequestBodyEdgeConfig edgeConfig;
+
     public StartEdgeConfigurationUpdateRequestBody withEdgeConfig(StartEdgeConfigurationUpdateRequestBodyEdgeConfig edgeConfig) {
         this.edgeConfig = edgeConfig;
         return this;
@@ -25,6 +26,7 @@ public class StartEdgeConfigurationUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public StartEdgeConfigurationUpdateRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -36,9 +38,13 @@ public class StartEdgeConfigurationUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public StartEdgeConfigurationUpdateRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public StartEdgeConfigurationUpdateRequestBody(@JsonProperty("EdgeConfig") StartEdgeConfigurationUpdateRequestBodyEdgeConfig edgeConfig) {
+        this.edgeConfig = edgeConfig;
+  }
 }

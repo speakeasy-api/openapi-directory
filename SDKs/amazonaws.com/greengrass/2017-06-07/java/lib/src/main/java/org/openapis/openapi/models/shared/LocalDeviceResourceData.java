@@ -15,6 +15,7 @@ public class LocalDeviceResourceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupOwnerSetting")
     public GroupOwnerSetting groupOwnerSetting;
+
     public LocalDeviceResourceData withGroupOwnerSetting(GroupOwnerSetting groupOwnerSetting) {
         this.groupOwnerSetting = groupOwnerSetting;
         return this;
@@ -23,9 +24,11 @@ public class LocalDeviceResourceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourcePath")
     public String sourcePath;
+
     public LocalDeviceResourceData withSourcePath(String sourcePath) {
         this.sourcePath = sourcePath;
         return this;
     }
     
+    public LocalDeviceResourceData(){}
 }

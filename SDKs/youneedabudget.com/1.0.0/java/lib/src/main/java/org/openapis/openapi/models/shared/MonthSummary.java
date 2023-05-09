@@ -16,6 +16,7 @@ public class MonthSummary {
      */
     @JsonProperty("activity")
     public Long activity;
+
     public MonthSummary withActivity(Long activity) {
         this.activity = activity;
         return this;
@@ -27,6 +28,7 @@ public class MonthSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("age_of_money")
     public Integer ageOfMoney;
+
     public MonthSummary withAgeOfMoney(Integer ageOfMoney) {
         this.ageOfMoney = ageOfMoney;
         return this;
@@ -37,6 +39,7 @@ public class MonthSummary {
      */
     @JsonProperty("budgeted")
     public Long budgeted;
+
     public MonthSummary withBudgeted(Long budgeted) {
         this.budgeted = budgeted;
         return this;
@@ -47,6 +50,7 @@ public class MonthSummary {
      */
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public MonthSummary withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -57,6 +61,7 @@ public class MonthSummary {
      */
     @JsonProperty("income")
     public Long income;
+
     public MonthSummary withIncome(Long income) {
         this.income = income;
         return this;
@@ -65,6 +70,7 @@ public class MonthSummary {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("month")
     public LocalDate month;
+
     public MonthSummary withMonth(LocalDate month) {
         this.month = month;
         return this;
@@ -73,6 +79,7 @@ public class MonthSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public MonthSummary withNote(String note) {
         this.note = note;
         return this;
@@ -83,9 +90,18 @@ public class MonthSummary {
      */
     @JsonProperty("to_be_budgeted")
     public Long toBeBudgeted;
+
     public MonthSummary withToBeBudgeted(Long toBeBudgeted) {
         this.toBeBudgeted = toBeBudgeted;
         return this;
     }
     
+    public MonthSummary(@JsonProperty("activity") Long activity, @JsonProperty("budgeted") Long budgeted, @JsonProperty("deleted") Boolean deleted, @JsonProperty("income") Long income, @JsonProperty("month") LocalDate month, @JsonProperty("to_be_budgeted") Long toBeBudgeted) {
+        this.activity = activity;
+        this.budgeted = budgeted;
+        this.deleted = deleted;
+        this.income = income;
+        this.month = month;
+        this.toBeBudgeted = toBeBudgeted;
+  }
 }

@@ -15,9 +15,11 @@ public class MapStateStartedEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public Long length;
+
     public MapStateStartedEventDetails withLength(Long length) {
         this.length = length;
         return this;
     }
     
+    public MapStateStartedEventDetails(){}
 }

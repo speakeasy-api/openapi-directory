@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpsertUserResponse {
     
     public String contentType;
+
     public UpsertUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpsertUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public UpsertUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class UpsertUserResponse {
     
     
     public Integer statusCode;
+
     public UpsertUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class UpsertUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpsertUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class UpsertUserResponse {
      */
     
     public UpsertUser201ApplicationJSON upsertUser201ApplicationJSONObject;
+
     public UpsertUserResponse withUpsertUser201ApplicationJSONObject(UpsertUser201ApplicationJSON upsertUser201ApplicationJSONObject) {
         this.upsertUser201ApplicationJSONObject = upsertUser201ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class UpsertUserResponse {
      */
     
     public UpsertUser400ApplicationJSON upsertUser400ApplicationJSONObject;
+
     public UpsertUserResponse withUpsertUser400ApplicationJSONObject(UpsertUser400ApplicationJSON upsertUser400ApplicationJSONObject) {
         this.upsertUser400ApplicationJSONObject = upsertUser400ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class UpsertUserResponse {
      */
     
     public UpsertUser401ApplicationJSON upsertUser401ApplicationJSONObject;
+
     public UpsertUserResponse withUpsertUser401ApplicationJSONObject(UpsertUser401ApplicationJSON upsertUser401ApplicationJSONObject) {
         this.upsertUser401ApplicationJSONObject = upsertUser401ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class UpsertUserResponse {
      */
     
     public UpsertUser403ApplicationJSON upsertUser403ApplicationJSONObject;
+
     public UpsertUserResponse withUpsertUser403ApplicationJSONObject(UpsertUser403ApplicationJSON upsertUser403ApplicationJSONObject) {
         this.upsertUser403ApplicationJSONObject = upsertUser403ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class UpsertUserResponse {
      */
     
     public UpsertUser429ApplicationJSON upsertUser429ApplicationJSONObject;
+
     public UpsertUserResponse withUpsertUser429ApplicationJSONObject(UpsertUser429ApplicationJSON upsertUser429ApplicationJSONObject) {
         this.upsertUser429ApplicationJSONObject = upsertUser429ApplicationJSONObject;
         return this;
@@ -90,9 +100,14 @@ public class UpsertUserResponse {
      */
     
     public UpsertUser500ApplicationJSON upsertUser500ApplicationJSONObject;
+
     public UpsertUserResponse withUpsertUser500ApplicationJSONObject(UpsertUser500ApplicationJSON upsertUser500ApplicationJSONObject) {
         this.upsertUser500ApplicationJSONObject = upsertUser500ApplicationJSONObject;
         return this;
     }
     
+    public UpsertUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

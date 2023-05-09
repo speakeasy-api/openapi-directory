@@ -15,6 +15,7 @@ public class InstancesSetNameRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentName")
     public String currentName;
+
     public InstancesSetNameRequest withCurrentName(String currentName) {
         this.currentName = currentName;
         return this;
@@ -26,9 +27,11 @@ public class InstancesSetNameRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstancesSetNameRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InstancesSetNameRequest(){}
 }

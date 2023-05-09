@@ -15,6 +15,7 @@ public class PostNamespacesDeleteImagesResponseErrorErrinfoDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrors[] errors;
+
     public PostNamespacesDeleteImagesResponseErrorErrinfoDetails withErrors(PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrors[] errors) {
         this.errors = errors;
         return this;
@@ -36,9 +37,11 @@ public class PostNamespacesDeleteImagesResponseErrorErrinfoDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarnings[] warnings;
+
     public PostNamespacesDeleteImagesResponseErrorErrinfoDetails withWarnings(PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarnings[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public PostNamespacesDeleteImagesResponseErrorErrinfoDetails(){}
 }

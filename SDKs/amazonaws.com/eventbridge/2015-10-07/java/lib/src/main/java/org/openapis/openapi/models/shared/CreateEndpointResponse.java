@@ -15,6 +15,7 @@ public class CreateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public CreateEndpointResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CreateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBuses")
     public EndpointEventBus[] eventBuses;
+
     public CreateEndpointResponse withEventBuses(EndpointEventBus[] eventBuses) {
         this.eventBuses = eventBuses;
         return this;
@@ -31,6 +33,7 @@ public class CreateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateEndpointResponse withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class CreateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationConfig")
     public ReplicationConfig replicationConfig;
+
     public CreateEndpointResponse withReplicationConfig(ReplicationConfig replicationConfig) {
         this.replicationConfig = replicationConfig;
         return this;
@@ -47,6 +51,7 @@ public class CreateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateEndpointResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -55,6 +60,7 @@ public class CreateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingConfig")
     public RoutingConfig routingConfig;
+
     public CreateEndpointResponse withRoutingConfig(RoutingConfig routingConfig) {
         this.routingConfig = routingConfig;
         return this;
@@ -63,9 +69,11 @@ public class CreateEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public EndpointStateEnum state;
+
     public CreateEndpointResponse withState(EndpointStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CreateEndpointResponse(){}
 }

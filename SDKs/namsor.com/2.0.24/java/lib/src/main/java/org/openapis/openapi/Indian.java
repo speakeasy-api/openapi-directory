@@ -55,11 +55,9 @@ public class Indian {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CastegroupIndianFullResponse res = new org.openapis.openapi.models.operations.CastegroupIndianFullResponse() {{
+        org.openapis.openapi.models.operations.CastegroupIndianFullResponse res = new org.openapis.openapi.models.operations.CastegroupIndianFullResponse(contentType, httpRes.statusCode()) {{
             personalNameCastegroupOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Indian {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CastegroupIndianFullBatchResponse res = new org.openapis.openapi.models.operations.CastegroupIndianFullBatchResponse() {{
+        org.openapis.openapi.models.operations.CastegroupIndianFullBatchResponse res = new org.openapis.openapi.models.operations.CastegroupIndianFullBatchResponse(contentType, httpRes.statusCode()) {{
             batchPersonalNameCastegroupOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,11 +137,9 @@ public class Indian {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReligionResponse res = new org.openapis.openapi.models.operations.ReligionResponse() {{
+        org.openapis.openapi.models.operations.ReligionResponse res = new org.openapis.openapi.models.operations.ReligionResponse(contentType, httpRes.statusCode()) {{
             personalNameReligionedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -185,11 +179,9 @@ public class Indian {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReligionIndianFullBatchResponse res = new org.openapis.openapi.models.operations.ReligionIndianFullBatchResponse() {{
+        org.openapis.openapi.models.operations.ReligionIndianFullBatchResponse res = new org.openapis.openapi.models.operations.ReligionIndianFullBatchResponse(contentType, httpRes.statusCode()) {{
             batchPersonalNameReligionedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -227,11 +219,9 @@ public class Indian {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubclassificationIndianResponse res = new org.openapis.openapi.models.operations.SubclassificationIndianResponse() {{
+        org.openapis.openapi.models.operations.SubclassificationIndianResponse res = new org.openapis.openapi.models.operations.SubclassificationIndianResponse(contentType, httpRes.statusCode()) {{
             firstLastNameGeoSubclassificationOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -271,11 +261,9 @@ public class Indian {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubclassificationIndianBatchResponse res = new org.openapis.openapi.models.operations.SubclassificationIndianBatchResponse() {{
+        org.openapis.openapi.models.operations.SubclassificationIndianBatchResponse res = new org.openapis.openapi.models.operations.SubclassificationIndianBatchResponse(contentType, httpRes.statusCode()) {{
             batchFirstLastNameGeoSubclassificationOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -283,6 +271,88 @@ public class Indian {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.BatchFirstLastNameGeoSubclassificationOut out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.BatchFirstLastNameGeoSubclassificationOut.class);
                 res.batchFirstLastNameGeoSubclassificationOut = out;
+            }
+        }
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403) {
+        }
+
+        return res;
+    }
+
+    /**
+     * [USES 10 UNITS PER NAME] Infer the likely Indian state of Union territory according to ISO 3166-2:IN based on the name.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.SubclassificationIndianFullResponse subclassificationIndianFull(org.openapis.openapi.models.operations.SubclassificationIndianFullRequest request, org.openapis.openapi.models.operations.SubclassificationIndianFullSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubclassificationIndianFullRequest.class, baseUrl, "/api2/json/subclassificationIndianFull/{fullName}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.SubclassificationIndianFullResponse res = new org.openapis.openapi.models.operations.SubclassificationIndianFullResponse(contentType, httpRes.statusCode()) {{
+            personalNameGeoSubclassificationOut = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.PersonalNameGeoSubclassificationOut out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.PersonalNameGeoSubclassificationOut.class);
+                res.personalNameGeoSubclassificationOut = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 403) {
+        }
+
+        return res;
+    }
+
+    /**
+     * [USES 10 UNITS PER NAME] Infer the likely Indian state of Union territory according to ISO 3166-2:IN based on a list of up to 100 names.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.SubclassificationIndianFullBatchResponse subclassificationIndianFullBatch(org.openapis.openapi.models.shared.BatchPersonalNameGeoIn request, org.openapis.openapi.models.operations.SubclassificationIndianFullBatchSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/subclassificationIndianFullBatch");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.SubclassificationIndianFullBatchResponse res = new org.openapis.openapi.models.operations.SubclassificationIndianFullBatchResponse(contentType, httpRes.statusCode()) {{
+            batchPersonalNameGeoSubclassificationOut = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.BatchPersonalNameGeoSubclassificationOut out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.BatchPersonalNameGeoSubclassificationOut.class);
+                res.batchPersonalNameGeoSubclassificationOut = out;
             }
         }
         else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403) {

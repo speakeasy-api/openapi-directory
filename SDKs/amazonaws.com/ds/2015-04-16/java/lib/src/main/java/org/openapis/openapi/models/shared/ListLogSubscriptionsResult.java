@@ -15,6 +15,7 @@ public class ListLogSubscriptionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogSubscriptions")
     public LogSubscription[] logSubscriptions;
+
     public ListLogSubscriptionsResult withLogSubscriptions(LogSubscription[] logSubscriptions) {
         this.logSubscriptions = logSubscriptions;
         return this;
@@ -23,9 +24,11 @@ public class ListLogSubscriptionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLogSubscriptionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLogSubscriptionsResult(){}
 }

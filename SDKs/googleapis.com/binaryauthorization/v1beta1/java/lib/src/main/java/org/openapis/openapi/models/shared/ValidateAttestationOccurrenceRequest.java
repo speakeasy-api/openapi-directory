@@ -18,6 +18,7 @@ public class ValidateAttestationOccurrenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attestation")
     public AttestationOccurrence attestation;
+
     public ValidateAttestationOccurrenceRequest withAttestation(AttestationOccurrence attestation) {
         this.attestation = attestation;
         return this;
@@ -29,6 +30,7 @@ public class ValidateAttestationOccurrenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurrenceNote")
     public String occurrenceNote;
+
     public ValidateAttestationOccurrenceRequest withOccurrenceNote(String occurrenceNote) {
         this.occurrenceNote = occurrenceNote;
         return this;
@@ -40,9 +42,11 @@ public class ValidateAttestationOccurrenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurrenceResourceUri")
     public String occurrenceResourceUri;
+
     public ValidateAttestationOccurrenceRequest withOccurrenceResourceUri(String occurrenceResourceUri) {
         this.occurrenceResourceUri = occurrenceResourceUri;
         return this;
     }
     
+    public ValidateAttestationOccurrenceRequest(){}
 }

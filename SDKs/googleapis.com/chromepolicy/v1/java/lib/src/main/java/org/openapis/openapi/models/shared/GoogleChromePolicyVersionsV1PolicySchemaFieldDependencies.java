@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceField")
     public String sourceField;
+
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies withSourceField(String sourceField) {
         this.sourceField = sourceField;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceFieldValue")
     public String sourceFieldValue;
+
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies withSourceFieldValue(String sourceFieldValue) {
         this.sourceFieldValue = sourceFieldValue;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies(){}
 }

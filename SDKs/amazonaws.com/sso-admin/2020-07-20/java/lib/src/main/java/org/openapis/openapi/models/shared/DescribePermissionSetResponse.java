@@ -15,9 +15,11 @@ public class DescribePermissionSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionSet")
     public PermissionSet permissionSet;
+
     public DescribePermissionSetResponse withPermissionSet(PermissionSet permissionSet) {
         this.permissionSet = permissionSet;
         return this;
     }
     
+    public DescribePermissionSetResponse(){}
 }

@@ -15,6 +15,7 @@ public class FinancialYearDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstMonth")
     public Integer firstMonth;
+
     public FinancialYearDto withFirstMonth(Integer firstMonth) {
         this.firstMonth = firstMonth;
         return this;
@@ -23,6 +24,7 @@ public class FinancialYearDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startMonth")
     public Integer startMonth;
+
     public FinancialYearDto withStartMonth(Integer startMonth) {
         this.startMonth = startMonth;
         return this;
@@ -31,9 +33,11 @@ public class FinancialYearDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startYear")
     public Integer startYear;
+
     public FinancialYearDto withStartYear(Integer startYear) {
         this.startYear = startYear;
         return this;
     }
     
+    public FinancialYearDto(){}
 }

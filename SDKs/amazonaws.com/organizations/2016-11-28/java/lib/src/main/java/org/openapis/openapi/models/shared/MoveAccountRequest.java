@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MoveAccountRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public MoveAccountRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -16,6 +17,7 @@ public class MoveAccountRequest {
     
     @JsonProperty("DestinationParentId")
     public String destinationParentId;
+
     public MoveAccountRequest withDestinationParentId(String destinationParentId) {
         this.destinationParentId = destinationParentId;
         return this;
@@ -23,9 +25,15 @@ public class MoveAccountRequest {
     
     @JsonProperty("SourceParentId")
     public String sourceParentId;
+
     public MoveAccountRequest withSourceParentId(String sourceParentId) {
         this.sourceParentId = sourceParentId;
         return this;
     }
     
+    public MoveAccountRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("DestinationParentId") String destinationParentId, @JsonProperty("SourceParentId") String sourceParentId) {
+        this.accountId = accountId;
+        this.destinationParentId = destinationParentId;
+        this.sourceParentId = sourceParentId;
+  }
 }

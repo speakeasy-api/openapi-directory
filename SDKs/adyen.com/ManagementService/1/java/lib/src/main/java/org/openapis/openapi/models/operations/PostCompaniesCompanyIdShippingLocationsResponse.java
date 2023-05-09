@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostCompaniesCompanyIdShippingLocationsResponse {
     
     public String contentType;
+
     public PostCompaniesCompanyIdShippingLocationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostCompaniesCompanyIdShippingLocationsResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PostCompaniesCompanyIdShippingLocationsResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -29,6 +32,7 @@ public class PostCompaniesCompanyIdShippingLocationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ShippingLocation shippingLocation;
+
     public PostCompaniesCompanyIdShippingLocationsResponse withShippingLocation(org.openapis.openapi.models.shared.ShippingLocation shippingLocation) {
         this.shippingLocation = shippingLocation;
         return this;
@@ -36,6 +40,7 @@ public class PostCompaniesCompanyIdShippingLocationsResponse {
     
     
     public Integer statusCode;
+
     public PostCompaniesCompanyIdShippingLocationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostCompaniesCompanyIdShippingLocationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostCompaniesCompanyIdShippingLocationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostCompaniesCompanyIdShippingLocationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

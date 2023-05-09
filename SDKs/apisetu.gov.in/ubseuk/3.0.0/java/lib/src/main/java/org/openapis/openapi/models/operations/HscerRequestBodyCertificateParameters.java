@@ -12,6 +12,7 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public HscerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public HscerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("RROLL")
     public String rroll;
+
     public HscerRequestBodyCertificateParameters withRroll(String rroll) {
         this.rroll = rroll;
         return this;
@@ -42,6 +45,7 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public HscerRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -52,9 +56,17 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("YEAR")
     public String year;
+
     public HscerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public HscerRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("RROLL") String rroll, @JsonProperty("UID") String uid, @JsonProperty("YEAR") String year) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.rroll = rroll;
+        this.uid = uid;
+        this.year = year;
+  }
 }

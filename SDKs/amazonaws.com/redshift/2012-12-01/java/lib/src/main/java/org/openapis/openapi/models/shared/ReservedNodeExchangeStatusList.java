@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ReservedNodeExchangeStatusList {
     
     public OffsetDateTime requestTime;
+
     public ReservedNodeExchangeStatusList withRequestTime(OffsetDateTime requestTime) {
         this.requestTime = requestTime;
         return this;
@@ -19,6 +20,7 @@ public class ReservedNodeExchangeStatusList {
     
     
     public String reservedNodeExchangeRequestId;
+
     public ReservedNodeExchangeStatusList withReservedNodeExchangeRequestId(String reservedNodeExchangeRequestId) {
         this.reservedNodeExchangeRequestId = reservedNodeExchangeRequestId;
         return this;
@@ -26,6 +28,7 @@ public class ReservedNodeExchangeStatusList {
     
     
     public Long sourceReservedNodeCount;
+
     public ReservedNodeExchangeStatusList withSourceReservedNodeCount(Long sourceReservedNodeCount) {
         this.sourceReservedNodeCount = sourceReservedNodeCount;
         return this;
@@ -33,6 +36,7 @@ public class ReservedNodeExchangeStatusList {
     
     
     public String sourceReservedNodeId;
+
     public ReservedNodeExchangeStatusList withSourceReservedNodeId(String sourceReservedNodeId) {
         this.sourceReservedNodeId = sourceReservedNodeId;
         return this;
@@ -40,6 +44,7 @@ public class ReservedNodeExchangeStatusList {
     
     
     public String sourceReservedNodeType;
+
     public ReservedNodeExchangeStatusList withSourceReservedNodeType(String sourceReservedNodeType) {
         this.sourceReservedNodeType = sourceReservedNodeType;
         return this;
@@ -47,6 +52,7 @@ public class ReservedNodeExchangeStatusList {
     
     
     public ReservedNodeExchangeStatusTypeEnum status;
+
     public ReservedNodeExchangeStatusList withStatus(ReservedNodeExchangeStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -54,6 +60,7 @@ public class ReservedNodeExchangeStatusList {
     
     
     public Long targetReservedNodeCount;
+
     public ReservedNodeExchangeStatusList withTargetReservedNodeCount(Long targetReservedNodeCount) {
         this.targetReservedNodeCount = targetReservedNodeCount;
         return this;
@@ -61,6 +68,7 @@ public class ReservedNodeExchangeStatusList {
     
     
     public String targetReservedNodeOfferingId;
+
     public ReservedNodeExchangeStatusList withTargetReservedNodeOfferingId(String targetReservedNodeOfferingId) {
         this.targetReservedNodeOfferingId = targetReservedNodeOfferingId;
         return this;
@@ -68,9 +76,11 @@ public class ReservedNodeExchangeStatusList {
     
     
     public String targetReservedNodeType;
+
     public ReservedNodeExchangeStatusList withTargetReservedNodeType(String targetReservedNodeType) {
         this.targetReservedNodeType = targetReservedNodeType;
         return this;
     }
     
+    public ReservedNodeExchangeStatusList(){}
 }

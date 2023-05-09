@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopyPadWithoutHistoryUsingPOSTResponse {
     
     public String contentType;
+
     public CopyPadWithoutHistoryUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CopyPadWithoutHistoryUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public CopyPadWithoutHistoryUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CopyPadWithoutHistoryUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopyPadWithoutHistoryUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CopyPadWithoutHistoryUsingPOSTResponse {
      */
     
     public CopyPadWithoutHistoryUsingPOST200ApplicationJSON copyPadWithoutHistoryUsingPOST200ApplicationJSONObject;
+
     public CopyPadWithoutHistoryUsingPOSTResponse withCopyPadWithoutHistoryUsingPOST200ApplicationJSONObject(CopyPadWithoutHistoryUsingPOST200ApplicationJSON copyPadWithoutHistoryUsingPOST200ApplicationJSONObject) {
         this.copyPadWithoutHistoryUsingPOST200ApplicationJSONObject = copyPadWithoutHistoryUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CopyPadWithoutHistoryUsingPOSTResponse {
      */
     
     public CopyPadWithoutHistoryUsingPOST400ApplicationJSON copyPadWithoutHistoryUsingPOST400ApplicationJSONObject;
+
     public CopyPadWithoutHistoryUsingPOSTResponse withCopyPadWithoutHistoryUsingPOST400ApplicationJSONObject(CopyPadWithoutHistoryUsingPOST400ApplicationJSON copyPadWithoutHistoryUsingPOST400ApplicationJSONObject) {
         this.copyPadWithoutHistoryUsingPOST400ApplicationJSONObject = copyPadWithoutHistoryUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CopyPadWithoutHistoryUsingPOSTResponse {
      */
     
     public CopyPadWithoutHistoryUsingPOST401ApplicationJSON copyPadWithoutHistoryUsingPOST401ApplicationJSONObject;
+
     public CopyPadWithoutHistoryUsingPOSTResponse withCopyPadWithoutHistoryUsingPOST401ApplicationJSONObject(CopyPadWithoutHistoryUsingPOST401ApplicationJSON copyPadWithoutHistoryUsingPOST401ApplicationJSONObject) {
         this.copyPadWithoutHistoryUsingPOST401ApplicationJSONObject = copyPadWithoutHistoryUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CopyPadWithoutHistoryUsingPOSTResponse {
      */
     
     public CopyPadWithoutHistoryUsingPOST500ApplicationJSON copyPadWithoutHistoryUsingPOST500ApplicationJSONObject;
+
     public CopyPadWithoutHistoryUsingPOSTResponse withCopyPadWithoutHistoryUsingPOST500ApplicationJSONObject(CopyPadWithoutHistoryUsingPOST500ApplicationJSON copyPadWithoutHistoryUsingPOST500ApplicationJSONObject) {
         this.copyPadWithoutHistoryUsingPOST500ApplicationJSONObject = copyPadWithoutHistoryUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public CopyPadWithoutHistoryUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

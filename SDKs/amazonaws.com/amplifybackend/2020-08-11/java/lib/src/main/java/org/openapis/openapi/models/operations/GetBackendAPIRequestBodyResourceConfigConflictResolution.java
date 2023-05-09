@@ -15,9 +15,11 @@ public class GetBackendAPIRequestBodyResourceConfigConflictResolution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolutionStrategy")
     public GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum resolutionStrategy;
+
     public GetBackendAPIRequestBodyResourceConfigConflictResolution withResolutionStrategy(GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum resolutionStrategy) {
         this.resolutionStrategy = resolutionStrategy;
         return this;
     }
     
+    public GetBackendAPIRequestBodyResourceConfigConflictResolution(){}
 }

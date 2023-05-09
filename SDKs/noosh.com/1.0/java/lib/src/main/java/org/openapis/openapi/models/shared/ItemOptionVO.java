@@ -15,6 +15,7 @@ public class ItemOptionVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_option_id")
     public Long itemOptionId;
+
     public ItemOptionVO withItemOptionId(Long itemOptionId) {
         this.itemOptionId = itemOptionId;
         return this;
@@ -23,9 +24,11 @@ public class ItemOptionVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public ItemOptionVO withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public ItemOptionVO(){}
 }

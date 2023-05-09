@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesJourneyPlannerJourneyVector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public TflApiPresentationEntitiesJourneyPlannerJourneyVector withFrom(String from) {
         this.from = from;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesJourneyPlannerJourneyVector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public String to;
+
     public TflApiPresentationEntitiesJourneyPlannerJourneyVector withTo(String to) {
         this.to = to;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesJourneyPlannerJourneyVector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public TflApiPresentationEntitiesJourneyPlannerJourneyVector withUri(String uri) {
         this.uri = uri;
         return this;
@@ -36,9 +39,11 @@ public class TflApiPresentationEntitiesJourneyPlannerJourneyVector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("via")
     public String via;
+
     public TflApiPresentationEntitiesJourneyPlannerJourneyVector withVia(String via) {
         this.via = via;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerJourneyVector(){}
 }

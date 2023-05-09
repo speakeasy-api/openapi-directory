@@ -18,6 +18,7 @@ public class GrpcRouteFaultInjectionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abort")
     public GrpcRouteFaultInjectionPolicyAbort abort;
+
     public GrpcRouteFaultInjectionPolicy withAbort(GrpcRouteFaultInjectionPolicyAbort abort) {
         this.abort = abort;
         return this;
@@ -29,9 +30,11 @@ public class GrpcRouteFaultInjectionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delay")
     public GrpcRouteFaultInjectionPolicyDelay delay;
+
     public GrpcRouteFaultInjectionPolicy withDelay(GrpcRouteFaultInjectionPolicyDelay delay) {
         this.delay = delay;
         return this;
     }
     
+    public GrpcRouteFaultInjectionPolicy(){}
 }

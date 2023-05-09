@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUserResponse {
     
     public String contentType;
+
     public GetUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUserResponse {
      */
     
     public Object forbiddenException;
+
     public GetUserResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -29,6 +32,7 @@ public class GetUserResponse {
      */
     
     public org.openapis.openapi.models.shared.GetUserResponse getUserResponse;
+
     public GetUserResponse withGetUserResponse(org.openapis.openapi.models.shared.GetUserResponse getUserResponse) {
         this.getUserResponse = getUserResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetUserResponse {
      */
     
     public Object internalErrorException;
+
     public GetUserResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class GetUserResponse {
      */
     
     public Object invalidParameterException;
+
     public GetUserResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetUserResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetUserResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -69,6 +76,7 @@ public class GetUserResponse {
      */
     
     public Object passwordResetRequiredException;
+
     public GetUserResponse withPasswordResetRequiredException(Object passwordResetRequiredException) {
         this.passwordResetRequiredException = passwordResetRequiredException;
         return this;
@@ -79,6 +87,7 @@ public class GetUserResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetUserResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class GetUserResponse {
     
     
     public Integer statusCode;
+
     public GetUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class GetUserResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetUserResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,6 +125,7 @@ public class GetUserResponse {
      */
     
     public Object userNotConfirmedException;
+
     public GetUserResponse withUserNotConfirmedException(Object userNotConfirmedException) {
         this.userNotConfirmedException = userNotConfirmedException;
         return this;
@@ -123,9 +136,14 @@ public class GetUserResponse {
      */
     
     public Object userNotFoundException;
+
     public GetUserResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public GetUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DestinationSchema {
     @JsonProperty("RecordFormatType")
     public RecordFormatTypeEnum recordFormatType;
+
     public DestinationSchema withRecordFormatType(RecordFormatTypeEnum recordFormatType) {
         this.recordFormatType = recordFormatType;
         return this;
     }
     
+    public DestinationSchema(@JsonProperty("RecordFormatType") RecordFormatTypeEnum recordFormatType) {
+        this.recordFormatType = recordFormatType;
+  }
 }

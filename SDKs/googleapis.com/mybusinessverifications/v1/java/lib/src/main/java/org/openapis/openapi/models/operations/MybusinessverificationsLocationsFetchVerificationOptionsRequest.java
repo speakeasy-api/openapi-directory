@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MybusinessverificationsLocationsFetchVerificationOptionsRequest {
@@ -12,6 +13,7 @@ public class MybusinessverificationsLocationsFetchVerificationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public MybusinessverificationsLocationsFetchVerificationOptionsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class MybusinessverificationsLocationsFetchVerificationOptionsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FetchVerificationOptionsRequest fetchVerificationOptionsRequest;
+
     public MybusinessverificationsLocationsFetchVerificationOptionsRequest withFetchVerificationOptionsRequest(org.openapis.openapi.models.shared.FetchVerificationOptionsRequest fetchVerificationOptionsRequest) {
         this.fetchVerificationOptionsRequest = fetchVerificationOptionsRequest;
         return this;
@@ -29,6 +32,7 @@ public class MybusinessverificationsLocationsFetchVerificationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public MybusinessverificationsLocationsFetchVerificationOptionsRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class MybusinessverificationsLocationsFetchVerificationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public MybusinessverificationsLocationsFetchVerificationOptionsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class MybusinessverificationsLocationsFetchVerificationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public MybusinessverificationsLocationsFetchVerificationOptionsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class MybusinessverificationsLocationsFetchVerificationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public MybusinessverificationsLocationsFetchVerificationOptionsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class MybusinessverificationsLocationsFetchVerificationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public MybusinessverificationsLocationsFetchVerificationOptionsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class MybusinessverificationsLocationsFetchVerificationOptionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public MybusinessverificationsLocationsFetchVerificationOptionsRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -89,6 +98,7 @@ public class MybusinessverificationsLocationsFetchVerificationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public MybusinessverificationsLocationsFetchVerificationOptionsRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class MybusinessverificationsLocationsFetchVerificationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public MybusinessverificationsLocationsFetchVerificationOptionsRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class MybusinessverificationsLocationsFetchVerificationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public MybusinessverificationsLocationsFetchVerificationOptionsRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class MybusinessverificationsLocationsFetchVerificationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public MybusinessverificationsLocationsFetchVerificationOptionsRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class MybusinessverificationsLocationsFetchVerificationOptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public MybusinessverificationsLocationsFetchVerificationOptionsRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public MybusinessverificationsLocationsFetchVerificationOptionsRequest(@JsonProperty("location") String location) {
+        this.location = location;
+  }
 }

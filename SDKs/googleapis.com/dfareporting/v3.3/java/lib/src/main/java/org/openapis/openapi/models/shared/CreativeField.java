@@ -18,6 +18,7 @@ public class CreativeField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public CreativeField withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class CreativeField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public CreativeField withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -40,6 +42,7 @@ public class CreativeField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserIdDimensionValue")
     public DimensionValue advertiserIdDimensionValue;
+
     public CreativeField withAdvertiserIdDimensionValue(DimensionValue advertiserIdDimensionValue) {
         this.advertiserIdDimensionValue = advertiserIdDimensionValue;
         return this;
@@ -51,6 +54,7 @@ public class CreativeField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreativeField withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class CreativeField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CreativeField withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class CreativeField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreativeField withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class CreativeField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subaccountId")
     public String subaccountId;
+
     public CreativeField withSubaccountId(String subaccountId) {
         this.subaccountId = subaccountId;
         return this;
     }
     
+    public CreativeField(){}
 }

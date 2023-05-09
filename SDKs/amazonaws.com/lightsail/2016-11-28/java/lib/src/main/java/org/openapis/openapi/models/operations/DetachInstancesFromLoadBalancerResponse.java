@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetachInstancesFromLoadBalancerResponse {
@@ -12,6 +13,7 @@ public class DetachInstancesFromLoadBalancerResponse {
      */
     
     public Object accessDeniedException;
+
     public DetachInstancesFromLoadBalancerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DetachInstancesFromLoadBalancerResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public DetachInstancesFromLoadBalancerResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class DetachInstancesFromLoadBalancerResponse {
     
     
     public String contentType;
+
     public DetachInstancesFromLoadBalancerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DetachInstancesFromLoadBalancerResponse {
      */
     
     public org.openapis.openapi.models.shared.DetachInstancesFromLoadBalancerResult detachInstancesFromLoadBalancerResult;
+
     public DetachInstancesFromLoadBalancerResponse withDetachInstancesFromLoadBalancerResult(org.openapis.openapi.models.shared.DetachInstancesFromLoadBalancerResult detachInstancesFromLoadBalancerResult) {
         this.detachInstancesFromLoadBalancerResult = detachInstancesFromLoadBalancerResult;
         return this;
@@ -49,6 +54,7 @@ public class DetachInstancesFromLoadBalancerResponse {
      */
     
     public Object invalidInputException;
+
     public DetachInstancesFromLoadBalancerResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DetachInstancesFromLoadBalancerResponse {
      */
     
     public Object notFoundException;
+
     public DetachInstancesFromLoadBalancerResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DetachInstancesFromLoadBalancerResponse {
      */
     
     public Object operationFailureException;
+
     public DetachInstancesFromLoadBalancerResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class DetachInstancesFromLoadBalancerResponse {
      */
     
     public Object serviceException;
+
     public DetachInstancesFromLoadBalancerResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class DetachInstancesFromLoadBalancerResponse {
     
     
     public Integer statusCode;
+
     public DetachInstancesFromLoadBalancerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DetachInstancesFromLoadBalancerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetachInstancesFromLoadBalancerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DetachInstancesFromLoadBalancerResponse {
      */
     
     public Object unauthenticatedException;
+
     public DetachInstancesFromLoadBalancerResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public DetachInstancesFromLoadBalancerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

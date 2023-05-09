@@ -18,9 +18,11 @@ public class FetchMultiDailyMetricsTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiDailyMetricTimeSeries")
     public MultiDailyMetricTimeSeries[] multiDailyMetricTimeSeries;
+
     public FetchMultiDailyMetricsTimeSeriesResponse withMultiDailyMetricTimeSeries(MultiDailyMetricTimeSeries[] multiDailyMetricTimeSeries) {
         this.multiDailyMetricTimeSeries = multiDailyMetricTimeSeries;
         return this;
     }
     
+    public FetchMultiDailyMetricsTimeSeriesResponse(){}
 }

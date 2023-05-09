@@ -15,7 +15,8 @@ public enum SnowballCapacityEnum {
     T8("T8"),
     T14("T14"),
     T32("T32"),
-    NO_PREFERENCE("NoPreference");
+    NO_PREFERENCE("NoPreference"),
+    T240("T240");
 
     @JsonValue
     public final String value;

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetachCustomerManagedPolicyReferenceFromPermissionSetResponse {
@@ -12,6 +13,7 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetResponse {
      */
     
     public Object accessDeniedException;
+
     public DetachCustomerManagedPolicyReferenceFromPermissionSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetResponse {
      */
     
     public Object conflictException;
+
     public DetachCustomerManagedPolicyReferenceFromPermissionSetResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetResponse {
     
     
     public String contentType;
+
     public DetachCustomerManagedPolicyReferenceFromPermissionSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetResponse {
      */
     
     public java.util.Map<String, Object> detachCustomerManagedPolicyReferenceFromPermissionSetResponse;
+
     public DetachCustomerManagedPolicyReferenceFromPermissionSetResponse withDetachCustomerManagedPolicyReferenceFromPermissionSetResponse(java.util.Map<String, Object> detachCustomerManagedPolicyReferenceFromPermissionSetResponse) {
         this.detachCustomerManagedPolicyReferenceFromPermissionSetResponse = detachCustomerManagedPolicyReferenceFromPermissionSetResponse;
         return this;
@@ -49,6 +54,7 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetResponse {
      */
     
     public Object internalServerException;
+
     public DetachCustomerManagedPolicyReferenceFromPermissionSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DetachCustomerManagedPolicyReferenceFromPermissionSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetResponse {
     
     
     public Integer statusCode;
+
     public DetachCustomerManagedPolicyReferenceFromPermissionSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetachCustomerManagedPolicyReferenceFromPermissionSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetResponse {
      */
     
     public Object throttlingException;
+
     public DetachCustomerManagedPolicyReferenceFromPermissionSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DetachCustomerManagedPolicyReferenceFromPermissionSetResponse {
      */
     
     public Object validationException;
+
     public DetachCustomerManagedPolicyReferenceFromPermissionSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DetachCustomerManagedPolicyReferenceFromPermissionSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

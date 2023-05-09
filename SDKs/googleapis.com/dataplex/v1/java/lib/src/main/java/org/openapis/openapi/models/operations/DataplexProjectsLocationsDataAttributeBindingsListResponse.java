@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DataplexProjectsLocationsDataAttributeBindingsListResponse {
     
     public String contentType;
+
     public DataplexProjectsLocationsDataAttributeBindingsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DataplexProjectsLocationsDataAttributeBindingsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDataplexV1ListDataAttributeBindingsResponse googleCloudDataplexV1ListDataAttributeBindingsResponse;
+
     public DataplexProjectsLocationsDataAttributeBindingsListResponse withGoogleCloudDataplexV1ListDataAttributeBindingsResponse(org.openapis.openapi.models.shared.GoogleCloudDataplexV1ListDataAttributeBindingsResponse googleCloudDataplexV1ListDataAttributeBindingsResponse) {
         this.googleCloudDataplexV1ListDataAttributeBindingsResponse = googleCloudDataplexV1ListDataAttributeBindingsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DataplexProjectsLocationsDataAttributeBindingsListResponse {
     
     
     public Integer statusCode;
+
     public DataplexProjectsLocationsDataAttributeBindingsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DataplexProjectsLocationsDataAttributeBindingsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DataplexProjectsLocationsDataAttributeBindingsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DataplexProjectsLocationsDataAttributeBindingsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class VersionedPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public String architecture;
+
     public VersionedPackage withArchitecture(String architecture) {
         this.architecture = architecture;
         return this;
@@ -29,6 +30,7 @@ public class VersionedPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public VersionedPackage withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -40,9 +42,11 @@ public class VersionedPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public VersionedPackage withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public VersionedPackage(){}
 }

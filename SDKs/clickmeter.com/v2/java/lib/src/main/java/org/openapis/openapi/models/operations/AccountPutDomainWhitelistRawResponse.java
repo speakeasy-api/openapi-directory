@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AccountPutDomainWhitelistRawResponse {
     
     public org.openapis.openapi.models.shared.ApiCoreDtoAccountingDomainWhitelistEntry apiCoreDtoAccountingDomainWhitelistEntry;
+
     public AccountPutDomainWhitelistRawResponse withApiCoreDtoAccountingDomainWhitelistEntry(org.openapis.openapi.models.shared.ApiCoreDtoAccountingDomainWhitelistEntry apiCoreDtoAccountingDomainWhitelistEntry) {
         this.apiCoreDtoAccountingDomainWhitelistEntry = apiCoreDtoAccountingDomainWhitelistEntry;
         return this;
@@ -16,6 +18,7 @@ public class AccountPutDomainWhitelistRawResponse {
     
     
     public byte[] body;
+
     public AccountPutDomainWhitelistRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -23,6 +26,7 @@ public class AccountPutDomainWhitelistRawResponse {
     
     
     public String contentType;
+
     public AccountPutDomainWhitelistRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,6 +34,7 @@ public class AccountPutDomainWhitelistRawResponse {
     
     
     public Integer statusCode;
+
     public AccountPutDomainWhitelistRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class AccountPutDomainWhitelistRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AccountPutDomainWhitelistRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AccountPutDomainWhitelistRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

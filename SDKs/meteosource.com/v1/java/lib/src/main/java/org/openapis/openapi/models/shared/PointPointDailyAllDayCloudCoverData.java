@@ -16,6 +16,7 @@ public class PointPointDailyAllDayCloudCoverData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("high")
     public Double high;
+
     public PointPointDailyAllDayCloudCoverData withHigh(Double high) {
         this.high = high;
         return this;
@@ -28,6 +29,7 @@ public class PointPointDailyAllDayCloudCoverData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("low")
     public Double low;
+
     public PointPointDailyAllDayCloudCoverData withLow(Double low) {
         this.low = low;
         return this;
@@ -40,6 +42,7 @@ public class PointPointDailyAllDayCloudCoverData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middle")
     public Double middle;
+
     public PointPointDailyAllDayCloudCoverData withMiddle(Double middle) {
         this.middle = middle;
         return this;
@@ -52,9 +55,11 @@ public class PointPointDailyAllDayCloudCoverData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public PointPointDailyAllDayCloudCoverData withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public PointPointDailyAllDayCloudCoverData(){}
 }

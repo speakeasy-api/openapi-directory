@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScoutingTag {
     @JsonProperty("code")
     public String code;
+
     public ScoutingTag withCode(String code) {
         this.code = code;
         return this;
     }
     
+    public ScoutingTag(@JsonProperty("code") String code) {
+        this.code = code;
+  }
 }

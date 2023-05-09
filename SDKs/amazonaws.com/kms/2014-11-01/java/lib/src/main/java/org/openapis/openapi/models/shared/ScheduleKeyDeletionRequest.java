@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScheduleKeyDeletionRequest {
     @JsonProperty("KeyId")
     public String keyId;
+
     public ScheduleKeyDeletionRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -19,9 +20,13 @@ public class ScheduleKeyDeletionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PendingWindowInDays")
     public Long pendingWindowInDays;
+
     public ScheduleKeyDeletionRequest withPendingWindowInDays(Long pendingWindowInDays) {
         this.pendingWindowInDays = pendingWindowInDays;
         return this;
     }
     
+    public ScheduleKeyDeletionRequest(@JsonProperty("KeyId") String keyId) {
+        this.keyId = keyId;
+  }
 }

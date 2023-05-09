@@ -18,6 +18,7 @@ public class GetAdminMappingsStubMappingId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetAdminMappingsStubMappingId200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class GetAdminMappingsStubMappingId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public GetAdminMappingsStubMappingId200ApplicationJSON withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -40,6 +42,7 @@ public class GetAdminMappingsStubMappingId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetAdminMappingsStubMappingId200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GetAdminMappingsStubMappingId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newScenarioState")
     public String newScenarioState;
+
     public GetAdminMappingsStubMappingId200ApplicationJSON withNewScenarioState(String newScenarioState) {
         this.newScenarioState = newScenarioState;
         return this;
@@ -62,6 +66,7 @@ public class GetAdminMappingsStubMappingId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistent")
     public Boolean persistent;
+
     public GetAdminMappingsStubMappingId200ApplicationJSON withPersistent(Boolean persistent) {
         this.persistent = persistent;
         return this;
@@ -73,6 +78,7 @@ public class GetAdminMappingsStubMappingId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postServeActions")
     public java.util.Map<String, Object> postServeActions;
+
     public GetAdminMappingsStubMappingId200ApplicationJSON withPostServeActions(java.util.Map<String, Object> postServeActions) {
         this.postServeActions = postServeActions;
         return this;
@@ -84,6 +90,7 @@ public class GetAdminMappingsStubMappingId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public GetAdminMappingsStubMappingId200ApplicationJSON withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -92,6 +99,7 @@ public class GetAdminMappingsStubMappingId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public GetAdminMappingsStubMappingId200ApplicationJSONRequest request;
+
     public GetAdminMappingsStubMappingId200ApplicationJSON withRequest(GetAdminMappingsStubMappingId200ApplicationJSONRequest request) {
         this.request = request;
         return this;
@@ -103,6 +111,7 @@ public class GetAdminMappingsStubMappingId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredScenarioState")
     public String requiredScenarioState;
+
     public GetAdminMappingsStubMappingId200ApplicationJSON withRequiredScenarioState(String requiredScenarioState) {
         this.requiredScenarioState = requiredScenarioState;
         return this;
@@ -111,6 +120,7 @@ public class GetAdminMappingsStubMappingId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public GetAdminMappingsStubMappingId200ApplicationJSONResponse response;
+
     public GetAdminMappingsStubMappingId200ApplicationJSON withResponse(GetAdminMappingsStubMappingId200ApplicationJSONResponse response) {
         this.response = response;
         return this;
@@ -122,6 +132,7 @@ public class GetAdminMappingsStubMappingId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scenarioName")
     public String scenarioName;
+
     public GetAdminMappingsStubMappingId200ApplicationJSON withScenarioName(String scenarioName) {
         this.scenarioName = scenarioName;
         return this;
@@ -133,9 +144,11 @@ public class GetAdminMappingsStubMappingId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uuid")
     public String uuid;
+
     public GetAdminMappingsStubMappingId200ApplicationJSON withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public GetAdminMappingsStubMappingId200ApplicationJSON(){}
 }

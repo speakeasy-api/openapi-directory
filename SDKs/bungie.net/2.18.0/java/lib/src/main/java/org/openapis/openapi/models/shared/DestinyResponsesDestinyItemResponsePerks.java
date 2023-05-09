@@ -18,6 +18,7 @@ public class DestinyResponsesDestinyItemResponsePerks {
      */
     
     public DestinyEntitiesItemsDestinyItemPerksComponent data;
+
     public DestinyResponsesDestinyItemResponsePerks withData(DestinyEntitiesItemsDestinyItemPerksComponent data) {
         this.data = data;
         return this;
@@ -28,6 +29,7 @@ public class DestinyResponsesDestinyItemResponsePerks {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyItemResponsePerks withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -35,9 +37,11 @@ public class DestinyResponsesDestinyItemResponsePerks {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyItemResponsePerks withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyItemResponsePerks(){}
 }

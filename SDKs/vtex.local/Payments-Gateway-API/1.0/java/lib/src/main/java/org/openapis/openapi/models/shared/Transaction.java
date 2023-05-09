@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Transaction {
     @JsonProperty("id")
     public String id;
+
     public Transaction withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class Transaction {
     
     @JsonProperty("merchantName")
     public String merchantName;
+
     public Transaction withMerchantName(String merchantName) {
         this.merchantName = merchantName;
         return this;
     }
     
+    public Transaction(@JsonProperty("id") String id, @JsonProperty("merchantName") String merchantName) {
+        this.id = id;
+        this.merchantName = merchantName;
+  }
 }

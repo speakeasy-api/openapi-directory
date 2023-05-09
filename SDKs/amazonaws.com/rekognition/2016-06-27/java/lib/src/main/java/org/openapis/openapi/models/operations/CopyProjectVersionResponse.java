@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopyProjectVersionResponse {
@@ -12,6 +13,7 @@ public class CopyProjectVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public CopyProjectVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CopyProjectVersionResponse {
     
     
     public String contentType;
+
     public CopyProjectVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CopyProjectVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.CopyProjectVersionResponse copyProjectVersionResponse;
+
     public CopyProjectVersionResponse withCopyProjectVersionResponse(org.openapis.openapi.models.shared.CopyProjectVersionResponse copyProjectVersionResponse) {
         this.copyProjectVersionResponse = copyProjectVersionResponse;
         return this;
@@ -39,6 +43,7 @@ public class CopyProjectVersionResponse {
      */
     
     public Object internalServerError;
+
     public CopyProjectVersionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class CopyProjectVersionResponse {
      */
     
     public Object invalidParameterException;
+
     public CopyProjectVersionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CopyProjectVersionResponse {
      */
     
     public Object limitExceededException;
+
     public CopyProjectVersionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CopyProjectVersionResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public CopyProjectVersionResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CopyProjectVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CopyProjectVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class CopyProjectVersionResponse {
     
     
     public Integer statusCode;
+
     public CopyProjectVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CopyProjectVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopyProjectVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class CopyProjectVersionResponse {
      */
     
     public Object resourceInUseException;
+
     public CopyProjectVersionResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -113,6 +125,7 @@ public class CopyProjectVersionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CopyProjectVersionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -123,9 +136,14 @@ public class CopyProjectVersionResponse {
      */
     
     public Object throttlingException;
+
     public CopyProjectVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CopyProjectVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class UpdateGraphqlApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalAuthenticationProviders")
     public org.openapis.openapi.models.shared.AdditionalAuthenticationProvider[] additionalAuthenticationProviders;
+
     public UpdateGraphqlApiRequestBody withAdditionalAuthenticationProviders(org.openapis.openapi.models.shared.AdditionalAuthenticationProvider[] additionalAuthenticationProviders) {
         this.additionalAuthenticationProviders = additionalAuthenticationProviders;
         return this;
@@ -26,6 +27,7 @@ public class UpdateGraphqlApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticationType")
     public UpdateGraphqlApiRequestBodyAuthenticationTypeEnum authenticationType;
+
     public UpdateGraphqlApiRequestBody withAuthenticationType(UpdateGraphqlApiRequestBodyAuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -37,6 +39,7 @@ public class UpdateGraphqlApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaAuthorizerConfig")
     public UpdateGraphqlApiRequestBodyLambdaAuthorizerConfig lambdaAuthorizerConfig;
+
     public UpdateGraphqlApiRequestBody withLambdaAuthorizerConfig(UpdateGraphqlApiRequestBodyLambdaAuthorizerConfig lambdaAuthorizerConfig) {
         this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
         return this;
@@ -48,6 +51,7 @@ public class UpdateGraphqlApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfig")
     public UpdateGraphqlApiRequestBodyLogConfig logConfig;
+
     public UpdateGraphqlApiRequestBody withLogConfig(UpdateGraphqlApiRequestBodyLogConfig logConfig) {
         this.logConfig = logConfig;
         return this;
@@ -58,6 +62,7 @@ public class UpdateGraphqlApiRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public UpdateGraphqlApiRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +74,7 @@ public class UpdateGraphqlApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openIDConnectConfig")
     public UpdateGraphqlApiRequestBodyOpenIDConnectConfig openIDConnectConfig;
+
     public UpdateGraphqlApiRequestBody withOpenIDConnectConfig(UpdateGraphqlApiRequestBodyOpenIDConnectConfig openIDConnectConfig) {
         this.openIDConnectConfig = openIDConnectConfig;
         return this;
@@ -80,6 +86,7 @@ public class UpdateGraphqlApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userPoolConfig")
     public UpdateGraphqlApiRequestBodyUserPoolConfig userPoolConfig;
+
     public UpdateGraphqlApiRequestBody withUserPoolConfig(UpdateGraphqlApiRequestBodyUserPoolConfig userPoolConfig) {
         this.userPoolConfig = userPoolConfig;
         return this;
@@ -91,9 +98,13 @@ public class UpdateGraphqlApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xrayEnabled")
     public Boolean xrayEnabled;
+
     public UpdateGraphqlApiRequestBody withXrayEnabled(Boolean xrayEnabled) {
         this.xrayEnabled = xrayEnabled;
         return this;
     }
     
+    public UpdateGraphqlApiRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

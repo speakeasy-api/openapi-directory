@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CopySnapshotResult {
     
     public String snapshotId;
+
     public CopySnapshotResult withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -19,9 +20,11 @@ public class CopySnapshotResult {
     
     
     public CopySnapshotResultTags[] tags;
+
     public CopySnapshotResult withTags(CopySnapshotResultTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CopySnapshotResult(){}
 }

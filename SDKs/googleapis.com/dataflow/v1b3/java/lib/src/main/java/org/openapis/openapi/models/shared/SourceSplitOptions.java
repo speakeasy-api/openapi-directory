@@ -18,6 +18,7 @@ public class SourceSplitOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredBundleSizeBytes")
     public String desiredBundleSizeBytes;
+
     public SourceSplitOptions withDesiredBundleSizeBytes(String desiredBundleSizeBytes) {
         this.desiredBundleSizeBytes = desiredBundleSizeBytes;
         return this;
@@ -29,9 +30,11 @@ public class SourceSplitOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredShardSizeBytes")
     public String desiredShardSizeBytes;
+
     public SourceSplitOptions withDesiredShardSizeBytes(String desiredShardSizeBytes) {
         this.desiredShardSizeBytes = desiredShardSizeBytes;
         return this;
     }
     
+    public SourceSplitOptions(){}
 }

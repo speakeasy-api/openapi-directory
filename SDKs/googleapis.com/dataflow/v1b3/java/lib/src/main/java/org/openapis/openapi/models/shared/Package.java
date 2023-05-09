@@ -18,6 +18,7 @@ public class Package {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Package withLocation(String location) {
         this.location = location;
         return this;
@@ -29,9 +30,11 @@ public class Package {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Package withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Package(){}
 }

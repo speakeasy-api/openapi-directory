@@ -57,10 +57,8 @@ public class LifecycleOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActivateUserResponse res = new org.openapis.openapi.models.operations.ActivateUserResponse() {{
+        org.openapis.openapi.models.operations.ActivateUserResponse res = new org.openapis.openapi.models.operations.ActivateUserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,10 +90,8 @@ public class LifecycleOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeactivateUserResponse res = new org.openapis.openapi.models.operations.DeactivateUserResponse() {{
+        org.openapis.openapi.models.operations.DeactivateUserResponse res = new org.openapis.openapi.models.operations.DeactivateUserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -133,10 +129,8 @@ public class LifecycleOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResetPasswordResponse res = new org.openapis.openapi.models.operations.ResetPasswordResponse() {{
+        org.openapis.openapi.models.operations.ResetPasswordResponse res = new org.openapis.openapi.models.operations.ResetPasswordResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,10 +168,8 @@ public class LifecycleOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetTempPasswordResponse res = new org.openapis.openapi.models.operations.SetTempPasswordResponse() {{
+        org.openapis.openapi.models.operations.SetTempPasswordResponse res = new org.openapis.openapi.models.operations.SetTempPasswordResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -209,10 +201,8 @@ public class LifecycleOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SuspendUserResponse res = new org.openapis.openapi.models.operations.SuspendUserResponse() {{
+        org.openapis.openapi.models.operations.SuspendUserResponse res = new org.openapis.openapi.models.operations.SuspendUserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -244,10 +234,8 @@ public class LifecycleOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnlockUserResponse res = new org.openapis.openapi.models.operations.UnlockUserResponse() {{
+        org.openapis.openapi.models.operations.UnlockUserResponse res = new org.openapis.openapi.models.operations.UnlockUserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -279,10 +267,8 @@ public class LifecycleOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnsuspendUserResponse res = new org.openapis.openapi.models.operations.UnsuspendUserResponse() {{
+        org.openapis.openapi.models.operations.UnsuspendUserResponse res = new org.openapis.openapi.models.operations.UnsuspendUserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

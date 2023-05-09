@@ -18,6 +18,7 @@ public class AnalyzePackagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packages")
     public PackageData[] packages;
+
     public AnalyzePackagesRequest withPackages(PackageData[] packages) {
         this.packages = packages;
         return this;
@@ -29,9 +30,11 @@ public class AnalyzePackagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceUri")
     public String resourceUri;
+
     public AnalyzePackagesRequest withResourceUri(String resourceUri) {
         this.resourceUri = resourceUri;
         return this;
     }
     
+    public AnalyzePackagesRequest(){}
 }

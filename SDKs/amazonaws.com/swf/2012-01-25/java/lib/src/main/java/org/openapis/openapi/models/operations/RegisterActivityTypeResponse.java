@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterActivityTypeResponse {
     
     public String contentType;
+
     public RegisterActivityTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterActivityTypeResponse {
      */
     
     public Object limitExceededFault;
+
     public RegisterActivityTypeResponse withLimitExceededFault(Object limitExceededFault) {
         this.limitExceededFault = limitExceededFault;
         return this;
@@ -29,6 +32,7 @@ public class RegisterActivityTypeResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public RegisterActivityTypeResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -36,6 +40,7 @@ public class RegisterActivityTypeResponse {
     
     
     public Integer statusCode;
+
     public RegisterActivityTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class RegisterActivityTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterActivityTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class RegisterActivityTypeResponse {
      */
     
     public Object typeAlreadyExistsFault;
+
     public RegisterActivityTypeResponse withTypeAlreadyExistsFault(Object typeAlreadyExistsFault) {
         this.typeAlreadyExistsFault = typeAlreadyExistsFault;
         return this;
@@ -63,9 +70,14 @@ public class RegisterActivityTypeResponse {
      */
     
     public Object unknownResourceFault;
+
     public RegisterActivityTypeResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
     }
     
+    public RegisterActivityTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

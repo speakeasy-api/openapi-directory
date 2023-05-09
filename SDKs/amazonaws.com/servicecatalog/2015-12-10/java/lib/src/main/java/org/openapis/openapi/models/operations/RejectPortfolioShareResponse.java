@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RejectPortfolioShareResponse {
     
     public String contentType;
+
     public RejectPortfolioShareResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RejectPortfolioShareResponse {
      */
     
     public java.util.Map<String, Object> rejectPortfolioShareOutput;
+
     public RejectPortfolioShareResponse withRejectPortfolioShareOutput(java.util.Map<String, Object> rejectPortfolioShareOutput) {
         this.rejectPortfolioShareOutput = rejectPortfolioShareOutput;
         return this;
@@ -29,6 +32,7 @@ public class RejectPortfolioShareResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RejectPortfolioShareResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class RejectPortfolioShareResponse {
     
     
     public Integer statusCode;
+
     public RejectPortfolioShareResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class RejectPortfolioShareResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RejectPortfolioShareResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RejectPortfolioShareResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

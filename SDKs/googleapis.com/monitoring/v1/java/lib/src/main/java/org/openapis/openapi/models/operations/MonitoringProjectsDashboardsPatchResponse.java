@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MonitoringProjectsDashboardsPatchResponse {
     
     public String contentType;
+
     public MonitoringProjectsDashboardsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MonitoringProjectsDashboardsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.Dashboard dashboard;
+
     public MonitoringProjectsDashboardsPatchResponse withDashboard(org.openapis.openapi.models.shared.Dashboard dashboard) {
         this.dashboard = dashboard;
         return this;
@@ -26,6 +29,7 @@ public class MonitoringProjectsDashboardsPatchResponse {
     
     
     public Integer statusCode;
+
     public MonitoringProjectsDashboardsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MonitoringProjectsDashboardsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MonitoringProjectsDashboardsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MonitoringProjectsDashboardsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

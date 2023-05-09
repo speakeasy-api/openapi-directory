@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeInterconnectRemoteLocationsGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeInterconnectRemoteLocationsGetSecurityOption1 option1;
+
     public ComputeInterconnectRemoteLocationsGetSecurity withOption1(ComputeInterconnectRemoteLocationsGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeInterconnectRemoteLocationsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInterconnectRemoteLocationsGetSecurityOption2 option2;
+
     public ComputeInterconnectRemoteLocationsGetSecurity withOption2(ComputeInterconnectRemoteLocationsGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeInterconnectRemoteLocationsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInterconnectRemoteLocationsGetSecurityOption3 option3;
+
     public ComputeInterconnectRemoteLocationsGetSecurity withOption3(ComputeInterconnectRemoteLocationsGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeInterconnectRemoteLocationsGetSecurity(){}
 }

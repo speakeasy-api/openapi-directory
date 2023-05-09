@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkAclResult {
     
     public CreateNetworkAclResultNetworkAcl networkAcl;
+
     public CreateNetworkAclResult withNetworkAcl(CreateNetworkAclResultNetworkAcl networkAcl) {
         this.networkAcl = networkAcl;
         return this;
     }
     
+    public CreateNetworkAclResult(){}
 }

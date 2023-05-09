@@ -15,9 +15,11 @@ public class JobProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PercentComplete")
     public Long percentComplete;
+
     public JobProgress withPercentComplete(Long percentComplete) {
         this.percentComplete = percentComplete;
         return this;
     }
     
+    public JobProgress(){}
 }

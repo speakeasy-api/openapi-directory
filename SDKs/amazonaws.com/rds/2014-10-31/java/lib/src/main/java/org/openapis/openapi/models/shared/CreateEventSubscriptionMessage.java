@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateEventSubscriptionMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateEventSubscriptionMessage {
     
     public Boolean enabled;
+
     public CreateEventSubscriptionMessage withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -19,6 +20,7 @@ public class CreateEventSubscriptionMessage {
     
     
     public String[] eventCategories;
+
     public CreateEventSubscriptionMessage withEventCategories(String[] eventCategories) {
         this.eventCategories = eventCategories;
         return this;
@@ -26,6 +28,7 @@ public class CreateEventSubscriptionMessage {
     
     
     public String snsTopicArn;
+
     public CreateEventSubscriptionMessage withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
@@ -33,6 +36,7 @@ public class CreateEventSubscriptionMessage {
     
     
     public String[] sourceIds;
+
     public CreateEventSubscriptionMessage withSourceIds(String[] sourceIds) {
         this.sourceIds = sourceIds;
         return this;
@@ -40,6 +44,7 @@ public class CreateEventSubscriptionMessage {
     
     
     public String sourceType;
+
     public CreateEventSubscriptionMessage withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -47,6 +52,7 @@ public class CreateEventSubscriptionMessage {
     
     
     public String subscriptionName;
+
     public CreateEventSubscriptionMessage withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
@@ -57,9 +63,14 @@ public class CreateEventSubscriptionMessage {
      */
     
     public TagList[] tags;
+
     public CreateEventSubscriptionMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEventSubscriptionMessage(@JsonProperty("SnsTopicArn") String snsTopicArn, @JsonProperty("SubscriptionName") String subscriptionName) {
+        this.snsTopicArn = snsTopicArn;
+        this.subscriptionName = subscriptionName;
+  }
 }

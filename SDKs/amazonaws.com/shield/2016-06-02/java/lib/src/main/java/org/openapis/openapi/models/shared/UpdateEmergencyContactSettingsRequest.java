@@ -12,9 +12,11 @@ public class UpdateEmergencyContactSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmergencyContactList")
     public EmergencyContact[] emergencyContactList;
+
     public UpdateEmergencyContactSettingsRequest withEmergencyContactList(EmergencyContact[] emergencyContactList) {
         this.emergencyContactList = emergencyContactList;
         return this;
     }
     
+    public UpdateEmergencyContactSettingsRequest(){}
 }

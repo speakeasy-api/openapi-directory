@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetHTMLUsingPOSTResponse {
     
     public String contentType;
+
     public SetHTMLUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SetHTMLUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public SetHTMLUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SetHTMLUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetHTMLUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SetHTMLUsingPOSTResponse {
      */
     
     public SetHTMLUsingPOST200ApplicationJSON setHTMLUsingPOST200ApplicationJSONObject;
+
     public SetHTMLUsingPOSTResponse withSetHTMLUsingPOST200ApplicationJSONObject(SetHTMLUsingPOST200ApplicationJSON setHTMLUsingPOST200ApplicationJSONObject) {
         this.setHTMLUsingPOST200ApplicationJSONObject = setHTMLUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SetHTMLUsingPOSTResponse {
      */
     
     public SetHTMLUsingPOST400ApplicationJSON setHTMLUsingPOST400ApplicationJSONObject;
+
     public SetHTMLUsingPOSTResponse withSetHTMLUsingPOST400ApplicationJSONObject(SetHTMLUsingPOST400ApplicationJSON setHTMLUsingPOST400ApplicationJSONObject) {
         this.setHTMLUsingPOST400ApplicationJSONObject = setHTMLUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SetHTMLUsingPOSTResponse {
      */
     
     public SetHTMLUsingPOST401ApplicationJSON setHTMLUsingPOST401ApplicationJSONObject;
+
     public SetHTMLUsingPOSTResponse withSetHTMLUsingPOST401ApplicationJSONObject(SetHTMLUsingPOST401ApplicationJSON setHTMLUsingPOST401ApplicationJSONObject) {
         this.setHTMLUsingPOST401ApplicationJSONObject = setHTMLUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SetHTMLUsingPOSTResponse {
      */
     
     public SetHTMLUsingPOST500ApplicationJSON setHTMLUsingPOST500ApplicationJSONObject;
+
     public SetHTMLUsingPOSTResponse withSetHTMLUsingPOST500ApplicationJSONObject(SetHTMLUsingPOST500ApplicationJSON setHTMLUsingPOST500ApplicationJSONObject) {
         this.setHTMLUsingPOST500ApplicationJSONObject = setHTMLUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public SetHTMLUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

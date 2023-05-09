@@ -18,6 +18,7 @@ public class LocalinventoryCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchId")
     public Long batchId;
+
     public LocalinventoryCustomBatchResponseEntry withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -29,6 +30,7 @@ public class LocalinventoryCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Errors errors;
+
     public LocalinventoryCustomBatchResponseEntry withErrors(Errors errors) {
         this.errors = errors;
         return this;
@@ -40,9 +42,11 @@ public class LocalinventoryCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LocalinventoryCustomBatchResponseEntry withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public LocalinventoryCustomBatchResponseEntry(){}
 }

@@ -12,9 +12,13 @@ public class UpdateConfigurationSetEventDestinationRequestBody {
      */
     @JsonProperty("EventDestination")
     public UpdateConfigurationSetEventDestinationRequestBodyEventDestination eventDestination;
+
     public UpdateConfigurationSetEventDestinationRequestBody withEventDestination(UpdateConfigurationSetEventDestinationRequestBodyEventDestination eventDestination) {
         this.eventDestination = eventDestination;
         return this;
     }
     
+    public UpdateConfigurationSetEventDestinationRequestBody(@JsonProperty("EventDestination") UpdateConfigurationSetEventDestinationRequestBodyEventDestination eventDestination) {
+        this.eventDestination = eventDestination;
+  }
 }

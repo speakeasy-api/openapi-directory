@@ -15,6 +15,7 @@ public class ResponseResourceMetricKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public java.util.Map<String, String> dimensions;
+
     public ResponseResourceMetricKey withDimensions(java.util.Map<String, String> dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -22,9 +23,13 @@ public class ResponseResourceMetricKey {
     
     @JsonProperty("Metric")
     public String metric;
+
     public ResponseResourceMetricKey withMetric(String metric) {
         this.metric = metric;
         return this;
     }
     
+    public ResponseResourceMetricKey(@JsonProperty("Metric") String metric) {
+        this.metric = metric;
+  }
 }

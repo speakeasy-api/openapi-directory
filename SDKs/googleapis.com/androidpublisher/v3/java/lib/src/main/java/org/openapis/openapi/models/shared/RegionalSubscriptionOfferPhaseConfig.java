@@ -18,6 +18,7 @@ public class RegionalSubscriptionOfferPhaseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absoluteDiscount")
     public Money absoluteDiscount;
+
     public RegionalSubscriptionOfferPhaseConfig withAbsoluteDiscount(Money absoluteDiscount) {
         this.absoluteDiscount = absoluteDiscount;
         return this;
@@ -29,6 +30,7 @@ public class RegionalSubscriptionOfferPhaseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Money price;
+
     public RegionalSubscriptionOfferPhaseConfig withPrice(Money price) {
         this.price = price;
         return this;
@@ -40,6 +42,7 @@ public class RegionalSubscriptionOfferPhaseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public RegionalSubscriptionOfferPhaseConfig withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -51,9 +54,11 @@ public class RegionalSubscriptionOfferPhaseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativeDiscount")
     public Double relativeDiscount;
+
     public RegionalSubscriptionOfferPhaseConfig withRelativeDiscount(Double relativeDiscount) {
         this.relativeDiscount = relativeDiscount;
         return this;
     }
     
+    public RegionalSubscriptionOfferPhaseConfig(){}
 }

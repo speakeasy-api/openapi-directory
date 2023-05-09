@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAppResponse {
@@ -12,6 +13,7 @@ public class UpdateAppResponse {
      */
     
     public Object badRequestException;
+
     public UpdateAppResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAppResponse {
     
     
     public String contentType;
+
     public UpdateAppResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAppResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateAppResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAppResponse {
      */
     
     public Object notFoundException;
+
     public UpdateAppResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateAppResponse {
     
     
     public Integer statusCode;
+
     public UpdateAppResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAppResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAppResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAppResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateAppResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateAppResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAppResult updateAppResult;
+
     public UpdateAppResponse withUpdateAppResult(org.openapis.openapi.models.shared.UpdateAppResult updateAppResult) {
         this.updateAppResult = updateAppResult;
         return this;
     }
     
+    public UpdateAppResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class TestGetSubscriptionsSubscriptionSubscriptionTier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TestGetSubscriptionsSubscriptionSubscriptionTier withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TestGetSubscriptionsSubscriptionSubscriptionTier(){}
 }

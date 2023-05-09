@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoresPatchRequest {
@@ -12,6 +13,7 @@ public class StoresPatchRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public StoresPatchRequestBody requestBody;
+
     public StoresPatchRequest withRequestBody(StoresPatchRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class StoresPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public StoresPatchRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,6 +35,7 @@ public class StoresPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public StoresPatchRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -42,9 +46,16 @@ public class StoresPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=store_name")
     public String storeName;
+
     public StoresPatchRequest withStoreName(String storeName) {
         this.storeName = storeName;
         return this;
     }
     
+    public StoresPatchRequest(@JsonProperty("RequestBody") StoresPatchRequestBody requestBody, @JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("store_name") String storeName) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.storeName = storeName;
+  }
 }

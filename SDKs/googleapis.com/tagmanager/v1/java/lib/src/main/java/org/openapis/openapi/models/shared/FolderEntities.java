@@ -18,6 +18,7 @@ public class FolderEntities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public Tag[] tag;
+
     public FolderEntities withTag(Tag[] tag) {
         this.tag = tag;
         return this;
@@ -29,6 +30,7 @@ public class FolderEntities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger")
     public Trigger[] trigger;
+
     public FolderEntities withTrigger(Trigger[] trigger) {
         this.trigger = trigger;
         return this;
@@ -40,9 +42,11 @@ public class FolderEntities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variable")
     public Variable[] variable;
+
     public FolderEntities withVariable(Variable[] variable) {
         this.variable = variable;
         return this;
     }
     
+    public FolderEntities(){}
 }

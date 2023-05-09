@@ -15,6 +15,7 @@ public class DevEnvironmentRepositorySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchName")
     public String branchName;
+
     public DevEnvironmentRepositorySummary withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -22,9 +23,13 @@ public class DevEnvironmentRepositorySummary {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public DevEnvironmentRepositorySummary withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public DevEnvironmentRepositorySummary(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

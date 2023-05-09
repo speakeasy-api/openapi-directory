@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedules {
     
     public Boolean active;
+
     public DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedules withActive(Boolean active) {
         this.active = active;
         return this;
@@ -19,6 +20,7 @@ public class DescribeReservedInstancesListingsResultReservedInstancesListingsPri
     
     
     public DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum currencyCode;
+
     public DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedules withCurrencyCode(DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -26,6 +28,7 @@ public class DescribeReservedInstancesListingsResultReservedInstancesListingsPri
     
     
     public Double price;
+
     public DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedules withPrice(Double price) {
         this.price = price;
         return this;
@@ -33,9 +36,11 @@ public class DescribeReservedInstancesListingsResultReservedInstancesListingsPri
     
     
     public Long term;
+
     public DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedules withTerm(Long term) {
         this.term = term;
         return this;
     }
     
+    public DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedules(){}
 }

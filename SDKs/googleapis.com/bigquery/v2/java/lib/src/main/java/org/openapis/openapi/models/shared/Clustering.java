@@ -15,9 +15,11 @@ public class Clustering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String[] fields;
+
     public Clustering withFields(String[] fields) {
         this.fields = fields;
         return this;
     }
     
+    public Clustering(){}
 }

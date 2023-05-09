@@ -18,6 +18,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoUpdatePolicy")
     public PolicyAutoUpdatePolicyEnum autoUpdatePolicy;
+
     public Policy withAutoUpdatePolicy(PolicyAutoUpdatePolicyEnum autoUpdatePolicy) {
         this.autoUpdatePolicy = autoUpdatePolicy;
         return this;
@@ -29,6 +30,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceReportPolicy")
     public PolicyDeviceReportPolicyEnum deviceReportPolicy;
+
     public Policy withDeviceReportPolicy(PolicyDeviceReportPolicyEnum deviceReportPolicy) {
         this.deviceReportPolicy = deviceReportPolicy;
         return this;
@@ -40,6 +42,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenanceWindow")
     public MaintenanceWindow maintenanceWindow;
+
     public Policy withMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
         this.maintenanceWindow = maintenanceWindow;
         return this;
@@ -51,6 +54,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productAvailabilityPolicy")
     public PolicyProductAvailabilityPolicyEnum productAvailabilityPolicy;
+
     public Policy withProductAvailabilityPolicy(PolicyProductAvailabilityPolicyEnum productAvailabilityPolicy) {
         this.productAvailabilityPolicy = productAvailabilityPolicy;
         return this;
@@ -62,9 +66,11 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productPolicy")
     public ProductPolicy[] productPolicy;
+
     public Policy withProductPolicy(ProductPolicy[] productPolicy) {
         this.productPolicy = productPolicy;
         return this;
     }
     
+    public Policy(){}
 }

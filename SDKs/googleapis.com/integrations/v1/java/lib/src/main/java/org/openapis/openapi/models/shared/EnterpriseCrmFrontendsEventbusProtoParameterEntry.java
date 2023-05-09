@@ -18,6 +18,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public EnterpriseCrmFrontendsEventbusProtoParameterEntryDataTypeEnum dataType;
+
     public EnterpriseCrmFrontendsEventbusProtoParameterEntry withDataType(EnterpriseCrmFrontendsEventbusProtoParameterEntryDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public EnterpriseCrmFrontendsEventbusProtoParameterEntry withKey(String key) {
         this.key = key;
         return this;
@@ -40,9 +42,11 @@ public class EnterpriseCrmFrontendsEventbusProtoParameterEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public EnterpriseCrmFrontendsEventbusProtoParameterValueType value;
+
     public EnterpriseCrmFrontendsEventbusProtoParameterEntry withValue(EnterpriseCrmFrontendsEventbusProtoParameterValueType value) {
         this.value = value;
         return this;
     }
     
+    public EnterpriseCrmFrontendsEventbusProtoParameterEntry(){}
 }

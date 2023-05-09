@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataSet {
     @JsonProperty("datasetName")
     public String datasetName;
+
     public DataSet withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -21,6 +22,7 @@ public class DataSet {
     
     @JsonProperty("datasetOrg")
     public DatasetOrgAttributes datasetOrg;
+
     public DataSet withDatasetOrg(DatasetOrgAttributes datasetOrg) {
         this.datasetOrg = datasetOrg;
         return this;
@@ -28,6 +30,7 @@ public class DataSet {
     
     @JsonProperty("recordLength")
     public RecordLength recordLength;
+
     public DataSet withRecordLength(RecordLength recordLength) {
         this.recordLength = recordLength;
         return this;
@@ -36,6 +39,7 @@ public class DataSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativePath")
     public String relativePath;
+
     public DataSet withRelativePath(String relativePath) {
         this.relativePath = relativePath;
         return this;
@@ -44,9 +48,15 @@ public class DataSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageType")
     public String storageType;
+
     public DataSet withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
     }
     
+    public DataSet(@JsonProperty("datasetName") String datasetName, @JsonProperty("datasetOrg") DatasetOrgAttributes datasetOrg, @JsonProperty("recordLength") RecordLength recordLength) {
+        this.datasetName = datasetName;
+        this.datasetOrg = datasetOrg;
+        this.recordLength = recordLength;
+  }
 }

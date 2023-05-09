@@ -12,6 +12,7 @@ public class ClickModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public ClickModel withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -20,6 +21,7 @@ public class ClickModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliasId")
     public String aliasId;
+
     public ClickModel withAliasId(String aliasId) {
         this.aliasId = aliasId;
         return this;
@@ -28,6 +30,7 @@ public class ClickModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browser")
     public String browser;
+
     public ClickModel withBrowser(String browser) {
         this.browser = browser;
         return this;
@@ -36,6 +39,7 @@ public class ClickModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ClickModel withCountry(String country) {
         this.country = country;
         return this;
@@ -44,6 +48,7 @@ public class ClickModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdAt")
     public Long createdAt;
+
     public ClickModel withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -52,6 +57,7 @@ public class ClickModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public ClickModel withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -60,6 +66,7 @@ public class ClickModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public ClickModel withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -68,6 +75,7 @@ public class ClickModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     public String os;
+
     public ClickModel withOs(String os) {
         this.os = os;
         return this;
@@ -76,6 +84,7 @@ public class ClickModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referrer")
     public String referrer;
+
     public ClickModel withReferrer(String referrer) {
         this.referrer = referrer;
         return this;
@@ -84,9 +93,11 @@ public class ClickModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAgent")
     public String userAgent;
+
     public ClickModel withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
     }
     
+    public ClickModel(){}
 }

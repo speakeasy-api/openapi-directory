@@ -15,9 +15,11 @@ public class BrowserSettingsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browserSettingsArn")
     public String browserSettingsArn;
+
     public BrowserSettingsSummary withBrowserSettingsArn(String browserSettingsArn) {
         this.browserSettingsArn = browserSettingsArn;
         return this;
     }
     
+    public BrowserSettingsSummary(){}
 }

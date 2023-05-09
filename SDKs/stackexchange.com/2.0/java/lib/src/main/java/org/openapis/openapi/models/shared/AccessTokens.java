@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class AccessTokens {
     
     public String accessToken;
+
     public AccessTokens withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -16,6 +17,7 @@ public class AccessTokens {
     
     
     public Long accountId;
+
     public AccessTokens withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +25,7 @@ public class AccessTokens {
     
     
     public Long expiresOnDate;
+
     public AccessTokens withExpiresOnDate(Long expiresOnDate) {
         this.expiresOnDate = expiresOnDate;
         return this;
@@ -30,9 +33,11 @@ public class AccessTokens {
     
     
     public Object[] scope;
+
     public AccessTokens withScope(Object[] scope) {
         this.scope = scope;
         return this;
     }
     
+    public AccessTokens(){}
 }

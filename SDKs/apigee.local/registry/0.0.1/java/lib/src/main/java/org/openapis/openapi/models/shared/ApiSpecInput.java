@@ -18,6 +18,7 @@ public class ApiSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public ApiSpecInput withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class ApiSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String contents;
+
     public ApiSpecInput withContents(String contents) {
         this.contents = contents;
         return this;
@@ -40,6 +42,7 @@ public class ApiSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ApiSpecInput withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class ApiSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public ApiSpecInput withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -62,6 +66,7 @@ public class ApiSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ApiSpecInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class ApiSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public ApiSpecInput withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -84,6 +90,7 @@ public class ApiSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApiSpecInput withName(String name) {
         this.name = name;
         return this;
@@ -95,9 +102,11 @@ public class ApiSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceUri")
     public String sourceUri;
+
     public ApiSpecInput withSourceUri(String sourceUri) {
         this.sourceUri = sourceUri;
         return this;
     }
     
+    public ApiSpecInput(){}
 }

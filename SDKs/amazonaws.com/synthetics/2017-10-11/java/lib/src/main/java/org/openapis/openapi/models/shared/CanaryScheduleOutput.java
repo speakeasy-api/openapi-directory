@@ -15,6 +15,7 @@ public class CanaryScheduleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationInSeconds")
     public Long durationInSeconds;
+
     public CanaryScheduleOutput withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
@@ -23,9 +24,11 @@ public class CanaryScheduleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expression")
     public String expression;
+
     public CanaryScheduleOutput withExpression(String expression) {
         this.expression = expression;
         return this;
     }
     
+    public CanaryScheduleOutput(){}
 }

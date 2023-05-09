@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVpcLinksResponse {
@@ -12,6 +13,7 @@ public class GetVpcLinksResponse {
      */
     
     public Object badRequestException;
+
     public GetVpcLinksResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetVpcLinksResponse {
     
     
     public String contentType;
+
     public GetVpcLinksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetVpcLinksResponse {
      */
     
     public org.openapis.openapi.models.shared.GetVpcLinksResponse getVpcLinksResponse;
+
     public GetVpcLinksResponse withGetVpcLinksResponse(org.openapis.openapi.models.shared.GetVpcLinksResponse getVpcLinksResponse) {
         this.getVpcLinksResponse = getVpcLinksResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetVpcLinksResponse {
     
     
     public Integer statusCode;
+
     public GetVpcLinksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetVpcLinksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVpcLinksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetVpcLinksResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetVpcLinksResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetVpcLinksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

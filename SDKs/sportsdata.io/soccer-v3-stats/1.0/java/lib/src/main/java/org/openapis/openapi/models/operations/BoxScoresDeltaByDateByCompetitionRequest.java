@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BoxScoresDeltaByDateByCompetitionRequest {
@@ -12,6 +13,7 @@ public class BoxScoresDeltaByDateByCompetitionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=competition")
     public String competition;
+
     public BoxScoresDeltaByDateByCompetitionRequest withCompetition(String competition) {
         this.competition = competition;
         return this;
@@ -23,6 +25,7 @@ public class BoxScoresDeltaByDateByCompetitionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
     public String date;
+
     public BoxScoresDeltaByDateByCompetitionRequest withDate(String date) {
         this.date = date;
         return this;
@@ -33,6 +36,7 @@ public class BoxScoresDeltaByDateByCompetitionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public BoxScoresDeltaByDateByCompetitionFormatEnum format;
+
     public BoxScoresDeltaByDateByCompetitionRequest withFormat(BoxScoresDeltaByDateByCompetitionFormatEnum format) {
         this.format = format;
         return this;
@@ -44,9 +48,16 @@ public class BoxScoresDeltaByDateByCompetitionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=minutes")
     public String minutes;
+
     public BoxScoresDeltaByDateByCompetitionRequest withMinutes(String minutes) {
         this.minutes = minutes;
         return this;
     }
     
+    public BoxScoresDeltaByDateByCompetitionRequest(@JsonProperty("competition") String competition, @JsonProperty("date") String date, @JsonProperty("format") BoxScoresDeltaByDateByCompetitionFormatEnum format, @JsonProperty("minutes") String minutes) {
+        this.competition = competition;
+        this.date = date;
+        this.format = format;
+        this.minutes = minutes;
+  }
 }

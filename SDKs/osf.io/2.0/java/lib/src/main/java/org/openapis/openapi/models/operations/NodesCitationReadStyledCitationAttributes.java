@@ -15,9 +15,11 @@ public class NodesCitationReadStyledCitationAttributes {
      */
     
     public String citation;
+
     public NodesCitationReadStyledCitationAttributes withCitation(String citation) {
         this.citation = citation;
         return this;
     }
     
+    public NodesCitationReadStyledCitationAttributes(){}
 }

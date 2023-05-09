@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DestinationCloneRequestBody {
     @JsonProperty("destinationCloneId")
     public String destinationCloneId;
+
     public DestinationCloneRequestBody withDestinationCloneId(String destinationCloneId) {
         this.destinationCloneId = destinationCloneId;
         return this;
@@ -22,9 +23,13 @@ public class DestinationCloneRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationConfiguration")
     public DestinationCloneConfiguration destinationConfiguration;
+
     public DestinationCloneRequestBody withDestinationConfiguration(DestinationCloneConfiguration destinationConfiguration) {
         this.destinationConfiguration = destinationConfiguration;
         return this;
     }
     
+    public DestinationCloneRequestBody(@JsonProperty("destinationCloneId") String destinationCloneId) {
+        this.destinationCloneId = destinationCloneId;
+  }
 }

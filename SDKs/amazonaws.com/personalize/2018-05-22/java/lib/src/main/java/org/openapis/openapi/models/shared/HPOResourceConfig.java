@@ -15,6 +15,7 @@ public class HPOResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNumberOfTrainingJobs")
     public String maxNumberOfTrainingJobs;
+
     public HPOResourceConfig withMaxNumberOfTrainingJobs(String maxNumberOfTrainingJobs) {
         this.maxNumberOfTrainingJobs = maxNumberOfTrainingJobs;
         return this;
@@ -23,9 +24,11 @@ public class HPOResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxParallelTrainingJobs")
     public String maxParallelTrainingJobs;
+
     public HPOResourceConfig withMaxParallelTrainingJobs(String maxParallelTrainingJobs) {
         this.maxParallelTrainingJobs = maxParallelTrainingJobs;
         return this;
     }
     
+    public HPOResourceConfig(){}
 }

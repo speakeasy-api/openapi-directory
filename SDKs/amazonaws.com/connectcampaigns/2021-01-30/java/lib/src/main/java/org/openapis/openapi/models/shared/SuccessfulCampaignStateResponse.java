@@ -18,6 +18,7 @@ public class SuccessfulCampaignStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignId")
     public String campaignId;
+
     public SuccessfulCampaignStateResponse withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -29,9 +30,11 @@ public class SuccessfulCampaignStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CampaignStateEnum state;
+
     public SuccessfulCampaignStateResponse withState(CampaignStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public SuccessfulCampaignStateResponse(){}
 }

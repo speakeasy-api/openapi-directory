@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PollForActivityTaskInput {
     @JsonProperty("domain")
     public String domain;
+
     public PollForActivityTaskInput withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -19,6 +20,7 @@ public class PollForActivityTaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identity")
     public String identity;
+
     public PollForActivityTaskInput withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -26,9 +28,14 @@ public class PollForActivityTaskInput {
     
     @JsonProperty("taskList")
     public TaskList taskList;
+
     public PollForActivityTaskInput withTaskList(TaskList taskList) {
         this.taskList = taskList;
         return this;
     }
     
+    public PollForActivityTaskInput(@JsonProperty("domain") String domain, @JsonProperty("taskList") TaskList taskList) {
+        this.domain = domain;
+        this.taskList = taskList;
+  }
 }

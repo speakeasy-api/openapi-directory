@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaServiceAccountCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public GoogleCloudIntegrationsV1alphaServiceAccountCredentials withScope(String scope) {
         this.scope = scope;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaServiceAccountCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public GoogleCloudIntegrationsV1alphaServiceAccountCredentials withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaServiceAccountCredentials(){}
 }

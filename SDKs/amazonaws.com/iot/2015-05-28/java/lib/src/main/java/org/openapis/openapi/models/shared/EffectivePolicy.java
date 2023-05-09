@@ -15,6 +15,7 @@ public class EffectivePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyArn")
     public String policyArn;
+
     public EffectivePolicy withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -23,6 +24,7 @@ public class EffectivePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyDocument")
     public String policyDocument;
+
     public EffectivePolicy withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -31,9 +33,11 @@ public class EffectivePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyName")
     public String policyName;
+
     public EffectivePolicy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public EffectivePolicy(){}
 }

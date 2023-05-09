@@ -12,6 +12,7 @@ public class ProjectPrivate {
      */
     @JsonProperty("id")
     public Long id;
+
     public ProjectPrivate withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class ProjectPrivate {
      */
     @JsonProperty("published_date")
     public String publishedDate;
+
     public ProjectPrivate withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
@@ -32,6 +34,7 @@ public class ProjectPrivate {
      */
     @JsonProperty("role")
     public ProjectPrivateRoleEnum role;
+
     public ProjectPrivate withRole(ProjectPrivateRoleEnum role) {
         this.role = role;
         return this;
@@ -42,6 +45,7 @@ public class ProjectPrivate {
      */
     @JsonProperty("storage")
     public ProjectPrivateStorageEnum storage;
+
     public ProjectPrivate withStorage(ProjectPrivateStorageEnum storage) {
         this.storage = storage;
         return this;
@@ -52,6 +56,7 @@ public class ProjectPrivate {
      */
     @JsonProperty("title")
     public String title;
+
     public ProjectPrivate withTitle(String title) {
         this.title = title;
         return this;
@@ -62,9 +67,18 @@ public class ProjectPrivate {
      */
     @JsonProperty("url")
     public String url;
+
     public ProjectPrivate withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ProjectPrivate(@JsonProperty("id") Long id, @JsonProperty("published_date") String publishedDate, @JsonProperty("role") ProjectPrivateRoleEnum role, @JsonProperty("storage") ProjectPrivateStorageEnum storage, @JsonProperty("title") String title, @JsonProperty("url") String url) {
+        this.id = id;
+        this.publishedDate = publishedDate;
+        this.role = role;
+        this.storage = storage;
+        this.title = title;
+        this.url = url;
+  }
 }

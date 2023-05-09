@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudsupportMediaDownloadResponse {
     
     public String contentType;
+
     public CloudsupportMediaDownloadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudsupportMediaDownloadResponse {
      */
     
     public org.openapis.openapi.models.shared.Media media;
+
     public CloudsupportMediaDownloadResponse withMedia(org.openapis.openapi.models.shared.Media media) {
         this.media = media;
         return this;
@@ -26,6 +29,7 @@ public class CloudsupportMediaDownloadResponse {
     
     
     public Integer statusCode;
+
     public CloudsupportMediaDownloadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudsupportMediaDownloadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudsupportMediaDownloadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudsupportMediaDownloadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

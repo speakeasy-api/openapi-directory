@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticlePrivateLinkCreateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PrivateLinkCreator privateLinkCreator;
+
     public PrivateArticlePrivateLinkCreateRequest withPrivateLinkCreator(org.openapis.openapi.models.shared.PrivateLinkCreator privateLinkCreator) {
         this.privateLinkCreator = privateLinkCreator;
         return this;
@@ -19,9 +21,13 @@ public class PrivateArticlePrivateLinkCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
     public Long articleId;
+
     public PrivateArticlePrivateLinkCreateRequest withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
     }
     
+    public PrivateArticlePrivateLinkCreateRequest(@JsonProperty("article_id") Long articleId) {
+        this.articleId = articleId;
+  }
 }

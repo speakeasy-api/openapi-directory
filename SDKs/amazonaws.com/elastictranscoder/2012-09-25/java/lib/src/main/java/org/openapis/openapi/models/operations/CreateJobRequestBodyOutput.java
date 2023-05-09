@@ -15,6 +15,7 @@ public class CreateJobRequestBodyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlbumArt")
     public org.openapis.openapi.models.shared.JobAlbumArt albumArt;
+
     public CreateJobRequestBodyOutput withAlbumArt(org.openapis.openapi.models.shared.JobAlbumArt albumArt) {
         this.albumArt = albumArt;
         return this;
@@ -23,6 +24,7 @@ public class CreateJobRequestBodyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Captions")
     public org.openapis.openapi.models.shared.Captions captions;
+
     public CreateJobRequestBodyOutput withCaptions(org.openapis.openapi.models.shared.Captions captions) {
         this.captions = captions;
         return this;
@@ -31,6 +33,7 @@ public class CreateJobRequestBodyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Composition")
     public org.openapis.openapi.models.shared.Clip[] composition;
+
     public CreateJobRequestBodyOutput withComposition(org.openapis.openapi.models.shared.Clip[] composition) {
         this.composition = composition;
         return this;
@@ -39,6 +42,7 @@ public class CreateJobRequestBodyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encryption")
     public org.openapis.openapi.models.shared.Encryption encryption;
+
     public CreateJobRequestBodyOutput withEncryption(org.openapis.openapi.models.shared.Encryption encryption) {
         this.encryption = encryption;
         return this;
@@ -47,6 +51,7 @@ public class CreateJobRequestBodyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public CreateJobRequestBodyOutput withKey(String key) {
         this.key = key;
         return this;
@@ -55,6 +60,7 @@ public class CreateJobRequestBodyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PresetId")
     public String presetId;
+
     public CreateJobRequestBodyOutput withPresetId(String presetId) {
         this.presetId = presetId;
         return this;
@@ -63,6 +69,7 @@ public class CreateJobRequestBodyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rotate")
     public String rotate;
+
     public CreateJobRequestBodyOutput withRotate(String rotate) {
         this.rotate = rotate;
         return this;
@@ -71,6 +78,7 @@ public class CreateJobRequestBodyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentDuration")
     public String segmentDuration;
+
     public CreateJobRequestBodyOutput withSegmentDuration(String segmentDuration) {
         this.segmentDuration = segmentDuration;
         return this;
@@ -79,6 +87,7 @@ public class CreateJobRequestBodyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThumbnailEncryption")
     public org.openapis.openapi.models.shared.Encryption thumbnailEncryption;
+
     public CreateJobRequestBodyOutput withThumbnailEncryption(org.openapis.openapi.models.shared.Encryption thumbnailEncryption) {
         this.thumbnailEncryption = thumbnailEncryption;
         return this;
@@ -87,6 +96,7 @@ public class CreateJobRequestBodyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThumbnailPattern")
     public String thumbnailPattern;
+
     public CreateJobRequestBodyOutput withThumbnailPattern(String thumbnailPattern) {
         this.thumbnailPattern = thumbnailPattern;
         return this;
@@ -95,9 +105,11 @@ public class CreateJobRequestBodyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Watermarks")
     public org.openapis.openapi.models.shared.JobWatermark[] watermarks;
+
     public CreateJobRequestBodyOutput withWatermarks(org.openapis.openapi.models.shared.JobWatermark[] watermarks) {
         this.watermarks = watermarks;
         return this;
     }
     
+    public CreateJobRequestBodyOutput(){}
 }

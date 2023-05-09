@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CashinRequest;
 import org.openapis.openapi.models.operations.CashinResponse;
 
@@ -13,22 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CashinRequest req = new CashinRequest() {{
-                apiKey = "corrupti";
-                apiSecret = "provident";
-                apiTicket = "distinctio";
-                betId = "quibusdam";
-                cashInValue = 6027.63;
-                cashinBetDelayId = "nulla";
-            }}            
+            CashinRequest req = new CashinRequest("corrupti", "provident", "distinctio", "quibusdam", 6027.63, "nulla");            
 
             CashinResponse res = sdk.bets.cashin(req);
 
-            if (res.cashInResponse.isPresent()) {
+            if (res.cashInResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

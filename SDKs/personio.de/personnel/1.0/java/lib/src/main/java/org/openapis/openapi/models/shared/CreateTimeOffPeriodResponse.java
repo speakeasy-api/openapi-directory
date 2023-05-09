@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTimeOffPeriodResponse {
     @JsonProperty("data")
     public CreateTimeOffPeriodResponseData data;
+
     public CreateTimeOffPeriodResponse withData(CreateTimeOffPeriodResponseData data) {
         this.data = data;
         return this;
@@ -16,9 +17,14 @@ public class CreateTimeOffPeriodResponse {
     
     @JsonProperty("success")
     public Boolean success;
+
     public CreateTimeOffPeriodResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public CreateTimeOffPeriodResponse(@JsonProperty("data") CreateTimeOffPeriodResponseData data, @JsonProperty("success") Boolean success) {
+        this.data = data;
+        this.success = success;
+  }
 }

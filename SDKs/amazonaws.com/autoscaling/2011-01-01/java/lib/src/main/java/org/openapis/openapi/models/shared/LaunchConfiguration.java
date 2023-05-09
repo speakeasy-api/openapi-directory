@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class LaunchConfiguration {
     
     public Boolean associatePublicIpAddress;
+
     public LaunchConfiguration withAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         return this;
@@ -19,6 +21,7 @@ public class LaunchConfiguration {
     
     
     public BlockDeviceMapping[] blockDeviceMappings;
+
     public LaunchConfiguration withBlockDeviceMappings(BlockDeviceMapping[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -26,6 +29,7 @@ public class LaunchConfiguration {
     
     
     public String classicLinkVPCId;
+
     public LaunchConfiguration withClassicLinkVPCId(String classicLinkVPCId) {
         this.classicLinkVPCId = classicLinkVPCId;
         return this;
@@ -33,6 +37,7 @@ public class LaunchConfiguration {
     
     
     public String[] classicLinkVPCSecurityGroups;
+
     public LaunchConfiguration withClassicLinkVPCSecurityGroups(String[] classicLinkVPCSecurityGroups) {
         this.classicLinkVPCSecurityGroups = classicLinkVPCSecurityGroups;
         return this;
@@ -40,6 +45,7 @@ public class LaunchConfiguration {
     
     
     public OffsetDateTime createdTime;
+
     public LaunchConfiguration withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -47,6 +53,7 @@ public class LaunchConfiguration {
     
     
     public Boolean ebsOptimized;
+
     public LaunchConfiguration withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -54,6 +61,7 @@ public class LaunchConfiguration {
     
     
     public String iamInstanceProfile;
+
     public LaunchConfiguration withIamInstanceProfile(String iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -61,6 +69,7 @@ public class LaunchConfiguration {
     
     
     public String imageId;
+
     public LaunchConfiguration withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -68,6 +77,7 @@ public class LaunchConfiguration {
     
     
     public InstanceMonitoring instanceMonitoring;
+
     public LaunchConfiguration withInstanceMonitoring(InstanceMonitoring instanceMonitoring) {
         this.instanceMonitoring = instanceMonitoring;
         return this;
@@ -75,6 +85,7 @@ public class LaunchConfiguration {
     
     
     public String instanceType;
+
     public LaunchConfiguration withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -82,6 +93,7 @@ public class LaunchConfiguration {
     
     
     public String kernelId;
+
     public LaunchConfiguration withKernelId(String kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -89,6 +101,7 @@ public class LaunchConfiguration {
     
     
     public String keyName;
+
     public LaunchConfiguration withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -96,6 +109,7 @@ public class LaunchConfiguration {
     
     
     public String launchConfigurationARN;
+
     public LaunchConfiguration withLaunchConfigurationARN(String launchConfigurationARN) {
         this.launchConfigurationARN = launchConfigurationARN;
         return this;
@@ -103,6 +117,7 @@ public class LaunchConfiguration {
     
     
     public String launchConfigurationName;
+
     public LaunchConfiguration withLaunchConfigurationName(String launchConfigurationName) {
         this.launchConfigurationName = launchConfigurationName;
         return this;
@@ -110,6 +125,7 @@ public class LaunchConfiguration {
     
     
     public InstanceMetadataOptions metadataOptions;
+
     public LaunchConfiguration withMetadataOptions(InstanceMetadataOptions metadataOptions) {
         this.metadataOptions = metadataOptions;
         return this;
@@ -117,6 +133,7 @@ public class LaunchConfiguration {
     
     
     public String placementTenancy;
+
     public LaunchConfiguration withPlacementTenancy(String placementTenancy) {
         this.placementTenancy = placementTenancy;
         return this;
@@ -124,6 +141,7 @@ public class LaunchConfiguration {
     
     
     public String ramdiskId;
+
     public LaunchConfiguration withRamdiskId(String ramdiskId) {
         this.ramdiskId = ramdiskId;
         return this;
@@ -131,6 +149,7 @@ public class LaunchConfiguration {
     
     
     public String[] securityGroups;
+
     public LaunchConfiguration withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -138,6 +157,7 @@ public class LaunchConfiguration {
     
     
     public String spotPrice;
+
     public LaunchConfiguration withSpotPrice(String spotPrice) {
         this.spotPrice = spotPrice;
         return this;
@@ -145,9 +165,16 @@ public class LaunchConfiguration {
     
     
     public String userData;
+
     public LaunchConfiguration withUserData(String userData) {
         this.userData = userData;
         return this;
     }
     
+    public LaunchConfiguration(@JsonProperty("CreatedTime") OffsetDateTime createdTime, @JsonProperty("ImageId") String imageId, @JsonProperty("InstanceType") String instanceType, @JsonProperty("LaunchConfigurationName") String launchConfigurationName) {
+        this.createdTime = createdTime;
+        this.imageId = imageId;
+        this.instanceType = instanceType;
+        this.launchConfigurationName = launchConfigurationName;
+  }
 }

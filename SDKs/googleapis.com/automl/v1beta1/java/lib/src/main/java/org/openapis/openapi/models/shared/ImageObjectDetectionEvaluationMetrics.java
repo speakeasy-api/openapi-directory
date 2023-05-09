@@ -18,6 +18,7 @@ public class ImageObjectDetectionEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBoxMeanAveragePrecision")
     public Float boundingBoxMeanAveragePrecision;
+
     public ImageObjectDetectionEvaluationMetrics withBoundingBoxMeanAveragePrecision(Float boundingBoxMeanAveragePrecision) {
         this.boundingBoxMeanAveragePrecision = boundingBoxMeanAveragePrecision;
         return this;
@@ -29,6 +30,7 @@ public class ImageObjectDetectionEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBoxMetricsEntries")
     public BoundingBoxMetricsEntry[] boundingBoxMetricsEntries;
+
     public ImageObjectDetectionEvaluationMetrics withBoundingBoxMetricsEntries(BoundingBoxMetricsEntry[] boundingBoxMetricsEntries) {
         this.boundingBoxMetricsEntries = boundingBoxMetricsEntries;
         return this;
@@ -40,9 +42,11 @@ public class ImageObjectDetectionEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluatedBoundingBoxCount")
     public Integer evaluatedBoundingBoxCount;
+
     public ImageObjectDetectionEvaluationMetrics withEvaluatedBoundingBoxCount(Integer evaluatedBoundingBoxCount) {
         this.evaluatedBoundingBoxCount = evaluatedBoundingBoxCount;
         return this;
     }
     
+    public ImageObjectDetectionEvaluationMetrics(){}
 }

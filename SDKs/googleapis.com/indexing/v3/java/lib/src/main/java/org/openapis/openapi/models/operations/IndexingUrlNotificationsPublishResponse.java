@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IndexingUrlNotificationsPublishResponse {
     
     public String contentType;
+
     public IndexingUrlNotificationsPublishResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IndexingUrlNotificationsPublishResponse {
      */
     
     public org.openapis.openapi.models.shared.PublishUrlNotificationResponse publishUrlNotificationResponse;
+
     public IndexingUrlNotificationsPublishResponse withPublishUrlNotificationResponse(org.openapis.openapi.models.shared.PublishUrlNotificationResponse publishUrlNotificationResponse) {
         this.publishUrlNotificationResponse = publishUrlNotificationResponse;
         return this;
@@ -26,6 +29,7 @@ public class IndexingUrlNotificationsPublishResponse {
     
     
     public Integer statusCode;
+
     public IndexingUrlNotificationsPublishResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IndexingUrlNotificationsPublishResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IndexingUrlNotificationsPublishResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IndexingUrlNotificationsPublishResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

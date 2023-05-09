@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdValue 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absolute")
     public String absolute;
+
     public GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdValue withAbsolute(String absolute) {
         this.absolute = absolute;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdValue 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Integer percentage;
+
     public GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdValue withPercentage(Integer percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdValue(){}
 }

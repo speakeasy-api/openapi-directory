@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeletePreparedStatementInput {
     @JsonProperty("StatementName")
     public String statementName;
+
     public DeletePreparedStatementInput withStatementName(String statementName) {
         this.statementName = statementName;
         return this;
@@ -16,9 +17,14 @@ public class DeletePreparedStatementInput {
     
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public DeletePreparedStatementInput withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public DeletePreparedStatementInput(@JsonProperty("StatementName") String statementName, @JsonProperty("WorkGroup") String workGroup) {
+        this.statementName = statementName;
+        this.workGroup = workGroup;
+  }
 }

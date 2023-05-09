@@ -15,9 +15,11 @@ public class DeleteACLResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ACL")
     public Acl acl;
+
     public DeleteACLResponse withAcl(Acl acl) {
         this.acl = acl;
         return this;
     }
     
+    public DeleteACLResponse(){}
 }

@@ -18,6 +18,7 @@ public class KubernetesResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipCrManifest")
     public String membershipCrManifest;
+
     public KubernetesResourceInput withMembershipCrManifest(String membershipCrManifest) {
         this.membershipCrManifest = membershipCrManifest;
         return this;
@@ -29,9 +30,11 @@ public class KubernetesResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceOptions")
     public ResourceOptions resourceOptions;
+
     public KubernetesResourceInput withResourceOptions(ResourceOptions resourceOptions) {
         this.resourceOptions = resourceOptions;
         return this;
     }
     
+    public KubernetesResourceInput(){}
 }

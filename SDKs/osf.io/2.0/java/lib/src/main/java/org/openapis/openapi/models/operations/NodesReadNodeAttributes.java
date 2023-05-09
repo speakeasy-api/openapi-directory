@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -15,6 +16,7 @@ public class NodesReadNodeAttributes {
      */
     
     public NodesReadNodeAttributesCategoryEnum category;
+
     public NodesReadNodeAttributes withCategory(NodesReadNodeAttributesCategoryEnum category) {
         this.category = category;
         return this;
@@ -25,6 +27,7 @@ public class NodesReadNodeAttributes {
      */
     
     public Boolean collection;
+
     public NodesReadNodeAttributes withCollection(Boolean collection) {
         this.collection = collection;
         return this;
@@ -35,6 +38,7 @@ public class NodesReadNodeAttributes {
      */
     
     public Boolean currentUserCanComment;
+
     public NodesReadNodeAttributes withCurrentUserCanComment(Boolean currentUserCanComment) {
         this.currentUserCanComment = currentUserCanComment;
         return this;
@@ -45,6 +49,7 @@ public class NodesReadNodeAttributes {
      */
     
     public String[] currentUserPermissions;
+
     public NodesReadNodeAttributes withCurrentUserPermissions(String[] currentUserPermissions) {
         this.currentUserPermissions = currentUserPermissions;
         return this;
@@ -55,6 +60,7 @@ public class NodesReadNodeAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public NodesReadNodeAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -65,6 +71,7 @@ public class NodesReadNodeAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public NodesReadNodeAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -75,6 +82,7 @@ public class NodesReadNodeAttributes {
      */
     
     public String description;
+
     public NodesReadNodeAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -85,6 +93,7 @@ public class NodesReadNodeAttributes {
      */
     
     public Boolean fork;
+
     public NodesReadNodeAttributes withFork(Boolean fork) {
         this.fork = fork;
         return this;
@@ -95,6 +104,7 @@ public class NodesReadNodeAttributes {
      */
     
     public OffsetDateTime forkedDate;
+
     public NodesReadNodeAttributes withForkedDate(OffsetDateTime forkedDate) {
         this.forkedDate = forkedDate;
         return this;
@@ -105,6 +115,7 @@ public class NodesReadNodeAttributes {
      */
     
     public String nodeLicense;
+
     public NodesReadNodeAttributes withNodeLicense(String nodeLicense) {
         this.nodeLicense = nodeLicense;
         return this;
@@ -115,6 +126,7 @@ public class NodesReadNodeAttributes {
      */
     
     public Boolean preprint;
+
     public NodesReadNodeAttributes withPreprint(Boolean preprint) {
         this.preprint = preprint;
         return this;
@@ -125,6 +137,7 @@ public class NodesReadNodeAttributes {
      */
     
     public Boolean public_;
+
     public NodesReadNodeAttributes withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -135,6 +148,7 @@ public class NodesReadNodeAttributes {
      */
     
     public Boolean registration;
+
     public NodesReadNodeAttributes withRegistration(Boolean registration) {
         this.registration = registration;
         return this;
@@ -145,6 +159,7 @@ public class NodesReadNodeAttributes {
      */
     
     public String[] tags;
+
     public NodesReadNodeAttributes withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -155,6 +170,7 @@ public class NodesReadNodeAttributes {
      */
     
     public String templateFrom;
+
     public NodesReadNodeAttributes withTemplateFrom(String templateFrom) {
         this.templateFrom = templateFrom;
         return this;
@@ -165,9 +181,14 @@ public class NodesReadNodeAttributes {
      */
     
     public String title;
+
     public NodesReadNodeAttributes withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public NodesReadNodeAttributes(@JsonProperty("category") NodesReadNodeAttributesCategoryEnum category, @JsonProperty("title") String title) {
+        this.category = category;
+        this.title = title;
+  }
 }

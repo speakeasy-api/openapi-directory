@@ -18,6 +18,7 @@ public class ItvUpdateProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateOfBirth")
     public String dateOfBirth;
+
     public ItvUpdateProfileRequest withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -29,6 +30,7 @@ public class ItvUpdateProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ItvUpdateProfileRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class ItvUpdateProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public ItvUpdateProfileRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -51,6 +54,7 @@ public class ItvUpdateProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public ItvUpdateProfileRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -62,6 +66,7 @@ public class ItvUpdateProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postcode")
     public String postcode;
+
     public ItvUpdateProfileRequest withPostcode(String postcode) {
         this.postcode = postcode;
         return this;
@@ -72,6 +77,7 @@ public class ItvUpdateProfileRequest {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ItvUpdateProfileRequest withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
@@ -83,9 +89,13 @@ public class ItvUpdateProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ItvUpdateProfileRequest withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ItvUpdateProfileRequest(@JsonProperty("profileToken") String profileToken) {
+        this.profileToken = profileToken;
+  }
 }

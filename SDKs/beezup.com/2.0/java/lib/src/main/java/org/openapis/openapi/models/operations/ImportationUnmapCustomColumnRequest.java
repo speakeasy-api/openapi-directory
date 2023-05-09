@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationUnmapCustomColumnRequest {
@@ -12,6 +13,7 @@ public class ImportationUnmapCustomColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
     public String columnId;
+
     public ImportationUnmapCustomColumnRequest withColumnId(String columnId) {
         this.columnId = columnId;
         return this;
@@ -22,6 +24,7 @@ public class ImportationUnmapCustomColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
     public String executionId;
+
     public ImportationUnmapCustomColumnRequest withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -32,9 +35,15 @@ public class ImportationUnmapCustomColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public ImportationUnmapCustomColumnRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public ImportationUnmapCustomColumnRequest(@JsonProperty("columnId") String columnId, @JsonProperty("executionId") String executionId, @JsonProperty("storeId") String storeId) {
+        this.columnId = columnId;
+        this.executionId = executionId;
+        this.storeId = storeId;
+  }
 }

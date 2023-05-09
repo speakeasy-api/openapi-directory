@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class HttpHeaderConditionConfig {
     
     public String httpHeaderName;
+
     public HttpHeaderConditionConfig withHttpHeaderName(String httpHeaderName) {
         this.httpHeaderName = httpHeaderName;
         return this;
@@ -19,9 +20,11 @@ public class HttpHeaderConditionConfig {
     
     
     public String[] values;
+
     public HttpHeaderConditionConfig withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public HttpHeaderConditionConfig(){}
 }

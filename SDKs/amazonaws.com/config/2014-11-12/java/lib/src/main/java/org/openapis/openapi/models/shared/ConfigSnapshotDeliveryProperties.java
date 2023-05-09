@@ -15,9 +15,11 @@ public class ConfigSnapshotDeliveryProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryFrequency")
     public MaximumExecutionFrequencyEnum deliveryFrequency;
+
     public ConfigSnapshotDeliveryProperties withDeliveryFrequency(MaximumExecutionFrequencyEnum deliveryFrequency) {
         this.deliveryFrequency = deliveryFrequency;
         return this;
     }
     
+    public ConfigSnapshotDeliveryProperties(){}
 }

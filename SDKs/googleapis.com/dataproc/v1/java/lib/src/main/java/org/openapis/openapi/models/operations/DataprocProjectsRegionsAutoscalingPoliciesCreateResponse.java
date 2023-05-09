@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DataprocProjectsRegionsAutoscalingPoliciesCreateResponse {
@@ -12,6 +13,7 @@ public class DataprocProjectsRegionsAutoscalingPoliciesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.AutoscalingPolicy autoscalingPolicy;
+
     public DataprocProjectsRegionsAutoscalingPoliciesCreateResponse withAutoscalingPolicy(org.openapis.openapi.models.shared.AutoscalingPolicy autoscalingPolicy) {
         this.autoscalingPolicy = autoscalingPolicy;
         return this;
@@ -19,6 +21,7 @@ public class DataprocProjectsRegionsAutoscalingPoliciesCreateResponse {
     
     
     public String contentType;
+
     public DataprocProjectsRegionsAutoscalingPoliciesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DataprocProjectsRegionsAutoscalingPoliciesCreateResponse {
     
     
     public Integer statusCode;
+
     public DataprocProjectsRegionsAutoscalingPoliciesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DataprocProjectsRegionsAutoscalingPoliciesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DataprocProjectsRegionsAutoscalingPoliciesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DataprocProjectsRegionsAutoscalingPoliciesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RestoreFromRecoveryPointRequest {
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public RestoreFromRecoveryPointRequest withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -16,6 +17,7 @@ public class RestoreFromRecoveryPointRequest {
     
     @JsonProperty("recoveryPointId")
     public String recoveryPointId;
+
     public RestoreFromRecoveryPointRequest withRecoveryPointId(String recoveryPointId) {
         this.recoveryPointId = recoveryPointId;
         return this;
@@ -23,9 +25,15 @@ public class RestoreFromRecoveryPointRequest {
     
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public RestoreFromRecoveryPointRequest withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public RestoreFromRecoveryPointRequest(@JsonProperty("namespaceName") String namespaceName, @JsonProperty("recoveryPointId") String recoveryPointId, @JsonProperty("workgroupName") String workgroupName) {
+        this.namespaceName = namespaceName;
+        this.recoveryPointId = recoveryPointId;
+        this.workgroupName = workgroupName;
+  }
 }

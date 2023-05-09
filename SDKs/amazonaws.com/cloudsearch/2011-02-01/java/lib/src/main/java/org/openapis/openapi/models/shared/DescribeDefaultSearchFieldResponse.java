@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeDefaultSearchFieldResponse - A response message that contains the default search field for a search domain.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DescribeDefaultSearchFieldResponse {
     
     public DefaultSearchFieldStatus defaultSearchField;
+
     public DescribeDefaultSearchFieldResponse withDefaultSearchField(DefaultSearchFieldStatus defaultSearchField) {
         this.defaultSearchField = defaultSearchField;
         return this;
     }
     
+    public DescribeDefaultSearchFieldResponse(@JsonProperty("DefaultSearchField") DefaultSearchFieldStatus defaultSearchField) {
+        this.defaultSearchField = defaultSearchField;
+  }
 }

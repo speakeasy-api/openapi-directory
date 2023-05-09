@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CacheNodeTypeSpecificValueList {
     
     public String cacheNodeType;
+
     public CacheNodeTypeSpecificValueList withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -19,9 +20,11 @@ public class CacheNodeTypeSpecificValueList {
     
     
     public String value;
+
     public CacheNodeTypeSpecificValueList withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CacheNodeTypeSpecificValueList(){}
 }

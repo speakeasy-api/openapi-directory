@@ -12,6 +12,7 @@ public class BtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("Cert_Type")
     public String certType;
+
     public BtcerRequestBodyCertificateParameters withCertType(String certType) {
         this.certType = certType;
         return this;
@@ -22,6 +23,7 @@ public class BtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DateofEvent")
     public String dateofEvent;
+
     public BtcerRequestBodyCertificateParameters withDateofEvent(String dateofEvent) {
         this.dateofEvent = dateofEvent;
         return this;
@@ -32,6 +34,7 @@ public class BtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RegisNumber")
     public String regisNumber;
+
     public BtcerRequestBodyCertificateParameters withRegisNumber(String regisNumber) {
         this.regisNumber = regisNumber;
         return this;
@@ -42,9 +45,16 @@ public class BtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("Year")
     public String year;
+
     public BtcerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public BtcerRequestBodyCertificateParameters(@JsonProperty("Cert_Type") String certType, @JsonProperty("DateofEvent") String dateofEvent, @JsonProperty("RegisNumber") String regisNumber, @JsonProperty("Year") String year) {
+        this.certType = certType;
+        this.dateofEvent = dateofEvent;
+        this.regisNumber = regisNumber;
+        this.year = year;
+  }
 }

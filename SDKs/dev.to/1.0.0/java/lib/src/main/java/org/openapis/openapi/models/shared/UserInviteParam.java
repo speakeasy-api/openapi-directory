@@ -15,6 +15,7 @@ public class UserInviteParam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserInviteParam withEmail(String email) {
         this.email = email;
         return this;
@@ -23,9 +24,11 @@ public class UserInviteParam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserInviteParam withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UserInviteParam(){}
 }

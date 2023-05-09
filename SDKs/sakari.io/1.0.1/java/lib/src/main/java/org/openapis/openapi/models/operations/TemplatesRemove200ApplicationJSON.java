@@ -15,9 +15,11 @@ public class TemplatesRemove200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public TemplatesRemove200ApplicationJSON withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public TemplatesRemove200ApplicationJSON(){}
 }

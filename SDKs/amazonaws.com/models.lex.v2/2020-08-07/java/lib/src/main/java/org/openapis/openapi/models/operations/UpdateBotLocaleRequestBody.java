@@ -15,6 +15,7 @@ public class UpdateBotLocaleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateBotLocaleRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class UpdateBotLocaleRequestBody {
      */
     @JsonProperty("nluIntentConfidenceThreshold")
     public Double nluIntentConfidenceThreshold;
+
     public UpdateBotLocaleRequestBody withNluIntentConfidenceThreshold(Double nluIntentConfidenceThreshold) {
         this.nluIntentConfidenceThreshold = nluIntentConfidenceThreshold;
         return this;
@@ -36,9 +38,13 @@ public class UpdateBotLocaleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voiceSettings")
     public UpdateBotLocaleRequestBodyVoiceSettings voiceSettings;
+
     public UpdateBotLocaleRequestBody withVoiceSettings(UpdateBotLocaleRequestBodyVoiceSettings voiceSettings) {
         this.voiceSettings = voiceSettings;
         return this;
     }
     
+    public UpdateBotLocaleRequestBody(@JsonProperty("nluIntentConfidenceThreshold") Double nluIntentConfidenceThreshold) {
+        this.nluIntentConfidenceThreshold = nluIntentConfidenceThreshold;
+  }
 }

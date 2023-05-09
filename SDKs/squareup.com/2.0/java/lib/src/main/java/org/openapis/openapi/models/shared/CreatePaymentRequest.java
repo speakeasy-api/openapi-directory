@@ -28,6 +28,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accept_partial_authorization")
     public Boolean acceptPartialAuthorization;
+
     public CreatePaymentRequest withAcceptPartialAuthorization(Boolean acceptPartialAuthorization) {
         this.acceptPartialAuthorization = acceptPartialAuthorization;
         return this;
@@ -43,6 +44,7 @@ public class CreatePaymentRequest {
      */
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public CreatePaymentRequest withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -59,6 +61,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_fee_money")
     public Money appFeeMoney;
+
     public CreatePaymentRequest withAppFeeMoney(Money appFeeMoney) {
         this.appFeeMoney = appFeeMoney;
         return this;
@@ -75,6 +78,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autocomplete")
     public Boolean autocomplete;
+
     public CreatePaymentRequest withAutocomplete(Boolean autocomplete) {
         this.autocomplete = autocomplete;
         return this;
@@ -113,6 +117,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     public Address billingAddress;
+
     public CreatePaymentRequest withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -124,6 +129,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer_email_address")
     public String buyerEmailAddress;
+
     public CreatePaymentRequest withBuyerEmailAddress(String buyerEmailAddress) {
         this.buyerEmailAddress = buyerEmailAddress;
         return this;
@@ -136,6 +142,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_details")
     public CashPaymentDetails cashDetails;
+
     public CreatePaymentRequest withCashDetails(CashPaymentDetails cashDetails) {
         this.cashDetails = cashDetails;
         return this;
@@ -149,6 +156,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
+
     public CreatePaymentRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -173,6 +181,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delay_duration")
     public String delayDuration;
+
     public CreatePaymentRequest withDelayDuration(String delayDuration) {
         this.delayDuration = delayDuration;
         return this;
@@ -186,6 +195,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_details")
     public ExternalPaymentDetails externalDetails;
+
     public CreatePaymentRequest withExternalDetails(ExternalPaymentDetails externalDetails) {
         this.externalDetails = externalDetails;
         return this;
@@ -204,6 +214,7 @@ public class CreatePaymentRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreatePaymentRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -216,6 +227,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public CreatePaymentRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -229,6 +241,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public CreatePaymentRequest withNote(String note) {
         this.note = note;
         return this;
@@ -240,6 +253,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public String orderId;
+
     public CreatePaymentRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -256,6 +270,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public CreatePaymentRequest withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -294,6 +309,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     public Address shippingAddress;
+
     public CreatePaymentRequest withShippingAddress(Address shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -309,6 +325,7 @@ public class CreatePaymentRequest {
      */
     @JsonProperty("source_id")
     public String sourceId;
+
     public CreatePaymentRequest withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -326,6 +343,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statement_description_identifier")
     public String statementDescriptionIdentifier;
+
     public CreatePaymentRequest withStatementDescriptionIdentifier(String statementDescriptionIdentifier) {
         this.statementDescriptionIdentifier = statementDescriptionIdentifier;
         return this;
@@ -342,6 +360,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tip_money")
     public Money tipMoney;
+
     public CreatePaymentRequest withTipMoney(Money tipMoney) {
         this.tipMoney = tipMoney;
         return this;
@@ -357,9 +376,15 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification_token")
     public String verificationToken;
+
     public CreatePaymentRequest withVerificationToken(String verificationToken) {
         this.verificationToken = verificationToken;
         return this;
     }
     
+    public CreatePaymentRequest(@JsonProperty("amount_money") Money amountMoney, @JsonProperty("idempotency_key") String idempotencyKey, @JsonProperty("source_id") String sourceId) {
+        this.amountMoney = amountMoney;
+        this.idempotencyKey = idempotencyKey;
+        this.sourceId = sourceId;
+  }
 }

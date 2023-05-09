@@ -18,6 +18,7 @@ public class ColumnDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public String dataType;
+
     public ColumnDescription withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -29,6 +30,7 @@ public class ColumnDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateDetails")
     public DateDetails dateDetails;
+
     public ColumnDescription withDateDetails(DateDetails dateDetails) {
         this.dateDetails = dateDetails;
         return this;
@@ -40,6 +42,7 @@ public class ColumnDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ColumnDescription withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class ColumnDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public LabeledItem[] labels;
+
     public ColumnDescription withLabels(LabeledItem[] labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class ColumnDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lookupDetails")
     public LookupDetails lookupDetails;
+
     public ColumnDescription withLookupDetails(LookupDetails lookupDetails) {
         this.lookupDetails = lookupDetails;
         return this;
@@ -73,6 +78,7 @@ public class ColumnDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multipleValuesDisallowed")
     public Boolean multipleValuesDisallowed;
+
     public ColumnDescription withMultipleValuesDisallowed(Boolean multipleValuesDisallowed) {
         this.multipleValuesDisallowed = multipleValuesDisallowed;
         return this;
@@ -84,6 +90,7 @@ public class ColumnDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ColumnDescription withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class ColumnDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readonly")
     public Boolean readonly;
+
     public ColumnDescription withReadonly(Boolean readonly) {
         this.readonly = readonly;
         return this;
@@ -106,9 +114,11 @@ public class ColumnDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationshipDetails")
     public RelationshipDetails relationshipDetails;
+
     public ColumnDescription withRelationshipDetails(RelationshipDetails relationshipDetails) {
         this.relationshipDetails = relationshipDetails;
         return this;
     }
     
+    public ColumnDescription(){}
 }

@@ -15,6 +15,7 @@ public class DefaultDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public DefaultDetection withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class DefaultDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurrences")
     public Occurrences occurrences;
+
     public DefaultDetection withOccurrences(Occurrences occurrences) {
         this.occurrences = occurrences;
         return this;
@@ -31,9 +33,11 @@ public class DefaultDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public DefaultDetection withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DefaultDetection(){}
 }

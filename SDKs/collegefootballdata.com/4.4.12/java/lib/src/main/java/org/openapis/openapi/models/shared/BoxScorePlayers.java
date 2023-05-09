@@ -12,6 +12,7 @@ public class BoxScorePlayers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ppa")
     public BoxScorePlayersPpa[] ppa;
+
     public BoxScorePlayers withPpa(BoxScorePlayersPpa[] ppa) {
         this.ppa = ppa;
         return this;
@@ -20,9 +21,11 @@ public class BoxScorePlayers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public BoxScorePlayersUsage[] usage;
+
     public BoxScorePlayers withUsage(BoxScorePlayersUsage[] usage) {
         this.usage = usage;
         return this;
     }
     
+    public BoxScorePlayers(){}
 }

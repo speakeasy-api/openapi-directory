@@ -18,6 +18,7 @@ public class ListHotTabletsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotTablets")
     public HotTablet[] hotTablets;
+
     public ListHotTabletsResponse withHotTablets(HotTablet[] hotTablets) {
         this.hotTablets = hotTablets;
         return this;
@@ -29,9 +30,11 @@ public class ListHotTabletsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListHotTabletsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListHotTabletsResponse(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class AllocateAddressRequest {
     
     public String address;
+
     public AllocateAddressRequest withAddress(String address) {
         this.address = address;
         return this;
@@ -16,6 +17,7 @@ public class AllocateAddressRequest {
     
     
     public String customerOwnedIpv4Pool;
+
     public AllocateAddressRequest withCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
         this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
         return this;
@@ -23,6 +25,7 @@ public class AllocateAddressRequest {
     
     
     public DomainTypeEnum domain;
+
     public AllocateAddressRequest withDomain(DomainTypeEnum domain) {
         this.domain = domain;
         return this;
@@ -30,6 +33,7 @@ public class AllocateAddressRequest {
     
     
     public Boolean dryRun;
+
     public AllocateAddressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -37,6 +41,7 @@ public class AllocateAddressRequest {
     
     
     public String networkBorderGroup;
+
     public AllocateAddressRequest withNetworkBorderGroup(String networkBorderGroup) {
         this.networkBorderGroup = networkBorderGroup;
         return this;
@@ -44,6 +49,7 @@ public class AllocateAddressRequest {
     
     
     public String publicIpv4Pool;
+
     public AllocateAddressRequest withPublicIpv4Pool(String publicIpv4Pool) {
         this.publicIpv4Pool = publicIpv4Pool;
         return this;
@@ -51,9 +57,11 @@ public class AllocateAddressRequest {
     
     
     public AllocateAddressRequestTagSpecifications[] tagSpecifications;
+
     public AllocateAddressRequest withTagSpecifications(AllocateAddressRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public AllocateAddressRequest(){}
 }

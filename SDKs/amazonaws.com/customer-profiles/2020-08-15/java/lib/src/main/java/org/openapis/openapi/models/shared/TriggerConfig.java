@@ -15,6 +15,7 @@ public class TriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TriggerProperties")
     public TriggerProperties triggerProperties;
+
     public TriggerConfig withTriggerProperties(TriggerProperties triggerProperties) {
         this.triggerProperties = triggerProperties;
         return this;
@@ -22,9 +23,13 @@ public class TriggerConfig {
     
     @JsonProperty("TriggerType")
     public TriggerTypeEnum triggerType;
+
     public TriggerConfig withTriggerType(TriggerTypeEnum triggerType) {
         this.triggerType = triggerType;
         return this;
     }
     
+    public TriggerConfig(@JsonProperty("TriggerType") TriggerTypeEnum triggerType) {
+        this.triggerType = triggerType;
+  }
 }

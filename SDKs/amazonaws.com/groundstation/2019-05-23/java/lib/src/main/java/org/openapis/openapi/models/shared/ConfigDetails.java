@@ -15,6 +15,7 @@ public class ConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antennaDemodDecodeDetails")
     public AntennaDemodDecodeDetails antennaDemodDecodeDetails;
+
     public ConfigDetails withAntennaDemodDecodeDetails(AntennaDemodDecodeDetails antennaDemodDecodeDetails) {
         this.antennaDemodDecodeDetails = antennaDemodDecodeDetails;
         return this;
@@ -26,6 +27,7 @@ public class ConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointDetails")
     public EndpointDetails endpointDetails;
+
     public ConfigDetails withEndpointDetails(EndpointDetails endpointDetails) {
         this.endpointDetails = endpointDetails;
         return this;
@@ -34,9 +36,11 @@ public class ConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3RecordingDetails")
     public S3RecordingDetails s3RecordingDetails;
+
     public ConfigDetails withS3RecordingDetails(S3RecordingDetails s3RecordingDetails) {
         this.s3RecordingDetails = s3RecordingDetails;
         return this;
     }
     
+    public ConfigDetails(){}
 }

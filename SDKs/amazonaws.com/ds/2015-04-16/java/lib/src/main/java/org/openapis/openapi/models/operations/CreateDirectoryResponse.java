@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDirectoryResponse {
@@ -12,6 +13,7 @@ public class CreateDirectoryResponse {
      */
     
     public Object clientException;
+
     public CreateDirectoryResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class CreateDirectoryResponse {
     
     
     public String contentType;
+
     public CreateDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDirectoryResult createDirectoryResult;
+
     public CreateDirectoryResponse withCreateDirectoryResult(org.openapis.openapi.models.shared.CreateDirectoryResult createDirectoryResult) {
         this.createDirectoryResult = createDirectoryResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateDirectoryResponse {
      */
     
     public Object directoryLimitExceededException;
+
     public CreateDirectoryResponse withDirectoryLimitExceededException(Object directoryLimitExceededException) {
         this.directoryLimitExceededException = directoryLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDirectoryResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateDirectoryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDirectoryResponse {
      */
     
     public Object serviceException;
+
     public CreateDirectoryResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class CreateDirectoryResponse {
     
     
     public Integer statusCode;
+
     public CreateDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

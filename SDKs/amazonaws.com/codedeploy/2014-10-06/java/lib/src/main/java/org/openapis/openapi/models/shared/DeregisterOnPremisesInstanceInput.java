@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeregisterOnPremisesInstanceInput {
     @JsonProperty("instanceName")
     public String instanceName;
+
     public DeregisterOnPremisesInstanceInput withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
     
+    public DeregisterOnPremisesInstanceInput(@JsonProperty("instanceName") String instanceName) {
+        this.instanceName = instanceName;
+  }
 }

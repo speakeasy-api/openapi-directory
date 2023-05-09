@@ -20,6 +20,7 @@ public class TextTranslationJobFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public TextTranslationJobFilter withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -28,6 +29,7 @@ public class TextTranslationJobFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public TextTranslationJobFilter withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -38,6 +40,7 @@ public class TextTranslationJobFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmittedAfterTime")
     public OffsetDateTime submittedAfterTime;
+
     public TextTranslationJobFilter withSubmittedAfterTime(OffsetDateTime submittedAfterTime) {
         this.submittedAfterTime = submittedAfterTime;
         return this;
@@ -48,9 +51,11 @@ public class TextTranslationJobFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmittedBeforeTime")
     public OffsetDateTime submittedBeforeTime;
+
     public TextTranslationJobFilter withSubmittedBeforeTime(OffsetDateTime submittedBeforeTime) {
         this.submittedBeforeTime = submittedBeforeTime;
         return this;
     }
     
+    public TextTranslationJobFilter(){}
 }

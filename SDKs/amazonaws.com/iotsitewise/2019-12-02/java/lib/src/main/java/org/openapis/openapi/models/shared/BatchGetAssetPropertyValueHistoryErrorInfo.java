@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class BatchGetAssetPropertyValueHistoryErrorInfo {
     @JsonProperty("errorCode")
     public BatchGetAssetPropertyValueHistoryErrorCodeEnum errorCode;
+
     public BatchGetAssetPropertyValueHistoryErrorInfo withErrorCode(BatchGetAssetPropertyValueHistoryErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -26,9 +27,14 @@ public class BatchGetAssetPropertyValueHistoryErrorInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("errorTimestamp")
     public OffsetDateTime errorTimestamp;
+
     public BatchGetAssetPropertyValueHistoryErrorInfo withErrorTimestamp(OffsetDateTime errorTimestamp) {
         this.errorTimestamp = errorTimestamp;
         return this;
     }
     
+    public BatchGetAssetPropertyValueHistoryErrorInfo(@JsonProperty("errorCode") BatchGetAssetPropertyValueHistoryErrorCodeEnum errorCode, @JsonProperty("errorTimestamp") OffsetDateTime errorTimestamp) {
+        this.errorCode = errorCode;
+        this.errorTimestamp = errorTimestamp;
+  }
 }

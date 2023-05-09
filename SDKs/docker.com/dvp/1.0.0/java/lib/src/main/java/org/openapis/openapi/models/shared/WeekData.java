@@ -12,9 +12,11 @@ public class WeekData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weeks")
     public WeekModel[] weeks;
+
     public WeekData withWeeks(WeekModel[] weeks) {
         this.weeks = weeks;
         return this;
     }
     
+    public WeekData(){}
 }

@@ -18,6 +18,7 @@ public class StartHandling401ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public StartHandling401ApplicationJSONError withCode(String code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class StartHandling401ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exception")
     public String exception;
+
     public StartHandling401ApplicationJSONError withException(String exception) {
         this.exception = exception;
         return this;
@@ -40,9 +42,11 @@ public class StartHandling401ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public StartHandling401ApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public StartHandling401ApplicationJSONError(){}
 }

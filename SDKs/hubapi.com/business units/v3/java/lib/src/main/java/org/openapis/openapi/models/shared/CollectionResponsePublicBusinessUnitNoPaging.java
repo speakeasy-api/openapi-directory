@@ -15,9 +15,13 @@ public class CollectionResponsePublicBusinessUnitNoPaging {
      */
     @JsonProperty("results")
     public PublicBusinessUnit[] results;
+
     public CollectionResponsePublicBusinessUnitNoPaging withResults(PublicBusinessUnit[] results) {
         this.results = results;
         return this;
     }
     
+    public CollectionResponsePublicBusinessUnitNoPaging(@JsonProperty("results") PublicBusinessUnit[] results) {
+        this.results = results;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFindingsResponse {
@@ -12,6 +13,7 @@ public class ListFindingsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListFindingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListFindingsResponse {
      */
     
     public Object conflictException;
+
     public ListFindingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListFindingsResponse {
     
     
     public String contentType;
+
     public ListFindingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListFindingsResponse {
      */
     
     public Object internalServerException;
+
     public ListFindingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListFindingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFindingsResponse listFindingsResponse;
+
     public ListFindingsResponse withListFindingsResponse(org.openapis.openapi.models.shared.ListFindingsResponse listFindingsResponse) {
         this.listFindingsResponse = listFindingsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListFindingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListFindingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListFindingsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListFindingsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListFindingsResponse {
     
     
     public Integer statusCode;
+
     public ListFindingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListFindingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFindingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListFindingsResponse {
      */
     
     public Object throttlingException;
+
     public ListFindingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ListFindingsResponse {
      */
     
     public Object validationException;
+
     public ListFindingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListFindingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

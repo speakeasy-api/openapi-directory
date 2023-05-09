@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateModelQualityJobDefinitionResponse {
     
     public String contentType;
+
     public CreateModelQualityJobDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateModelQualityJobDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateModelQualityJobDefinitionResponse createModelQualityJobDefinitionResponse;
+
     public CreateModelQualityJobDefinitionResponse withCreateModelQualityJobDefinitionResponse(org.openapis.openapi.models.shared.CreateModelQualityJobDefinitionResponse createModelQualityJobDefinitionResponse) {
         this.createModelQualityJobDefinitionResponse = createModelQualityJobDefinitionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateModelQualityJobDefinitionResponse {
      */
     
     public Object resourceInUse;
+
     public CreateModelQualityJobDefinitionResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -39,6 +43,7 @@ public class CreateModelQualityJobDefinitionResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateModelQualityJobDefinitionResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -46,6 +51,7 @@ public class CreateModelQualityJobDefinitionResponse {
     
     
     public Integer statusCode;
+
     public CreateModelQualityJobDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateModelQualityJobDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateModelQualityJobDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateModelQualityJobDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

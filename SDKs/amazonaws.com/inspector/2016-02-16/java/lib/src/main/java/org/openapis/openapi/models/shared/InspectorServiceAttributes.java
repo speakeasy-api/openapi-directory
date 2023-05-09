@@ -15,6 +15,7 @@ public class InspectorServiceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentRunArn")
     public String assessmentRunArn;
+
     public InspectorServiceAttributes withAssessmentRunArn(String assessmentRunArn) {
         this.assessmentRunArn = assessmentRunArn;
         return this;
@@ -23,6 +24,7 @@ public class InspectorServiceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesPackageArn")
     public String rulesPackageArn;
+
     public InspectorServiceAttributes withRulesPackageArn(String rulesPackageArn) {
         this.rulesPackageArn = rulesPackageArn;
         return this;
@@ -30,9 +32,13 @@ public class InspectorServiceAttributes {
     
     @JsonProperty("schemaVersion")
     public Long schemaVersion;
+
     public InspectorServiceAttributes withSchemaVersion(Long schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
     }
     
+    public InspectorServiceAttributes(@JsonProperty("schemaVersion") Long schemaVersion) {
+        this.schemaVersion = schemaVersion;
+  }
 }

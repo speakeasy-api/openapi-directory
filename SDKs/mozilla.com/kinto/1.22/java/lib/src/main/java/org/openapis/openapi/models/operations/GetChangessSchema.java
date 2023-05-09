@@ -15,9 +15,11 @@ public class GetChangessSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetChangessSchemaData[] data;
+
     public GetChangessSchema withData(GetChangessSchemaData[] data) {
         this.data = data;
         return this;
     }
     
+    public GetChangessSchema(){}
 }

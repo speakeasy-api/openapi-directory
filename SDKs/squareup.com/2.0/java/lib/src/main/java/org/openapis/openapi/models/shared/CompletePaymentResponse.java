@@ -18,6 +18,7 @@ public class CompletePaymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CompletePaymentResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -29,9 +30,11 @@ public class CompletePaymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment")
     public Payment payment;
+
     public CompletePaymentResponse withPayment(Payment payment) {
         this.payment = payment;
         return this;
     }
     
+    public CompletePaymentResponse(){}
 }

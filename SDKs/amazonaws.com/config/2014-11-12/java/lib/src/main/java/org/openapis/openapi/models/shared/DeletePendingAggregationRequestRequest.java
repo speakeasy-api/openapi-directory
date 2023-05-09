@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeletePendingAggregationRequestRequest {
     @JsonProperty("RequesterAccountId")
     public String requesterAccountId;
+
     public DeletePendingAggregationRequestRequest withRequesterAccountId(String requesterAccountId) {
         this.requesterAccountId = requesterAccountId;
         return this;
@@ -16,9 +17,14 @@ public class DeletePendingAggregationRequestRequest {
     
     @JsonProperty("RequesterAwsRegion")
     public String requesterAwsRegion;
+
     public DeletePendingAggregationRequestRequest withRequesterAwsRegion(String requesterAwsRegion) {
         this.requesterAwsRegion = requesterAwsRegion;
         return this;
     }
     
+    public DeletePendingAggregationRequestRequest(@JsonProperty("RequesterAccountId") String requesterAccountId, @JsonProperty("RequesterAwsRegion") String requesterAwsRegion) {
+        this.requesterAccountId = requesterAccountId;
+        this.requesterAwsRegion = requesterAwsRegion;
+  }
 }

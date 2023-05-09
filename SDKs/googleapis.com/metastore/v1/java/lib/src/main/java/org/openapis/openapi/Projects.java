@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsListResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsListResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsListResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsListResponse(contentType, httpRes.statusCode()) {{
             listFederationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -260,6 +250,52 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListOperationsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListOperationsResponse.class);
                 res.listOperationsResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Alter metadata resource location. The metadata resource can be a database, table, or partition. This functionality only updates the parent directory for the respective metadata resource and does not transfer any existing data to the new location.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationResponse metastoreProjectsLocationsServicesAlterLocation(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationRequest.class, baseUrl, "/v1/{service}:alterLocation", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "alterMetadataResourceLocationRequest", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
             }
         }
 
@@ -296,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsCreateResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsCreateResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsCreateResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsDeleteResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsDeleteResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsDeleteResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +420,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -434,11 +464,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsListResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsListResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsListResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsListResponse(contentType, httpRes.statusCode()) {{
             listBackupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,11 +510,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -530,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesCreateResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesCreateResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesCreateResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesExportMetadataResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesExportMetadataResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesExportMetadataResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesExportMetadataResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -624,11 +646,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesListResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesListResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesListResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesListResponse(contentType, httpRes.statusCode()) {{
             listServicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,11 +692,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsCreateResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsCreateResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsCreateResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -718,11 +736,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsGetResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsGetResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsGetResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsGetResponse(contentType, httpRes.statusCode()) {{
             metadataImport = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -764,11 +780,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsListResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsListResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsListResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsListResponse(contentType, httpRes.statusCode()) {{
             listMetadataImportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -812,11 +826,101 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsPatchResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsPatchResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsPatchResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Move a table to another database.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse metastoreProjectsLocationsServicesMoveTableToDatabase(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest.class, baseUrl, "/v1/{service}:moveTableToDatabase", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "moveTableToDatabaseRequest", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Query DPMS metadata.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataResponse metastoreProjectsLocationsServicesQueryMetadata(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataRequest.class, baseUrl, "/v1/{service}:queryMetadata", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "queryMetadataRequest", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -860,11 +964,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRestoreResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRestoreResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRestoreResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRestoreResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -908,11 +1010,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

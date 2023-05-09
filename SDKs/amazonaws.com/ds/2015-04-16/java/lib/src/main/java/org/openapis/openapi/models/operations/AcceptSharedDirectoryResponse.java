@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcceptSharedDirectoryResponse {
@@ -12,6 +13,7 @@ public class AcceptSharedDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.AcceptSharedDirectoryResult acceptSharedDirectoryResult;
+
     public AcceptSharedDirectoryResponse withAcceptSharedDirectoryResult(org.openapis.openapi.models.shared.AcceptSharedDirectoryResult acceptSharedDirectoryResult) {
         this.acceptSharedDirectoryResult = acceptSharedDirectoryResult;
         return this;
@@ -22,6 +24,7 @@ public class AcceptSharedDirectoryResponse {
      */
     
     public Object clientException;
+
     public AcceptSharedDirectoryResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class AcceptSharedDirectoryResponse {
     
     
     public String contentType;
+
     public AcceptSharedDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AcceptSharedDirectoryResponse {
      */
     
     public Object directoryAlreadySharedException;
+
     public AcceptSharedDirectoryResponse withDirectoryAlreadySharedException(Object directoryAlreadySharedException) {
         this.directoryAlreadySharedException = directoryAlreadySharedException;
         return this;
@@ -49,6 +54,7 @@ public class AcceptSharedDirectoryResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public AcceptSharedDirectoryResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class AcceptSharedDirectoryResponse {
      */
     
     public Object invalidParameterException;
+
     public AcceptSharedDirectoryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class AcceptSharedDirectoryResponse {
      */
     
     public Object serviceException;
+
     public AcceptSharedDirectoryResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class AcceptSharedDirectoryResponse {
     
     
     public Integer statusCode;
+
     public AcceptSharedDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class AcceptSharedDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcceptSharedDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AcceptSharedDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

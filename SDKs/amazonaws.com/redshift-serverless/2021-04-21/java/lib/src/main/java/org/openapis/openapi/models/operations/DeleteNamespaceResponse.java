@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteNamespaceResponse {
@@ -12,6 +13,7 @@ public class DeleteNamespaceResponse {
      */
     
     public Object conflictException;
+
     public DeleteNamespaceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteNamespaceResponse {
     
     
     public String contentType;
+
     public DeleteNamespaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteNamespaceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteNamespaceResponse deleteNamespaceResponse;
+
     public DeleteNamespaceResponse withDeleteNamespaceResponse(org.openapis.openapi.models.shared.DeleteNamespaceResponse deleteNamespaceResponse) {
         this.deleteNamespaceResponse = deleteNamespaceResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteNamespaceResponse {
      */
     
     public Object internalServerException;
+
     public DeleteNamespaceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteNamespaceResponse {
     
     
     public Integer statusCode;
+
     public DeleteNamespaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteNamespaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteNamespaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteNamespaceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteNamespaceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteNamespaceResponse {
      */
     
     public Object validationException;
+
     public DeleteNamespaceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteNamespaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

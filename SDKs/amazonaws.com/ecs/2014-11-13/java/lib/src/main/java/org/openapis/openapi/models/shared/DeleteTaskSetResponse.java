@@ -15,9 +15,11 @@ public class DeleteTaskSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskSet")
     public TaskSet taskSet;
+
     public DeleteTaskSetResponse withTaskSet(TaskSet taskSet) {
         this.taskSet = taskSet;
         return this;
     }
     
+    public DeleteTaskSetResponse(){}
 }

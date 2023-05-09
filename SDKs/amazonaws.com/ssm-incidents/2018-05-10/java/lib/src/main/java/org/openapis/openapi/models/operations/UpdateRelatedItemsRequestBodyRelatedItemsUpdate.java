@@ -15,6 +15,7 @@ public class UpdateRelatedItemsRequestBodyRelatedItemsUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemToAdd")
     public org.openapis.openapi.models.shared.RelatedItem itemToAdd;
+
     public UpdateRelatedItemsRequestBodyRelatedItemsUpdate withItemToAdd(org.openapis.openapi.models.shared.RelatedItem itemToAdd) {
         this.itemToAdd = itemToAdd;
         return this;
@@ -23,9 +24,11 @@ public class UpdateRelatedItemsRequestBodyRelatedItemsUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemToRemove")
     public org.openapis.openapi.models.shared.ItemIdentifier itemToRemove;
+
     public UpdateRelatedItemsRequestBodyRelatedItemsUpdate withItemToRemove(org.openapis.openapi.models.shared.ItemIdentifier itemToRemove) {
         this.itemToRemove = itemToRemove;
         return this;
     }
     
+    public UpdateRelatedItemsRequestBodyRelatedItemsUpdate(){}
 }

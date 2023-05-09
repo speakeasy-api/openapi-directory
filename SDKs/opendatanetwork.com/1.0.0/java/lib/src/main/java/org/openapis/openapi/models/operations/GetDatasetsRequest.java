@@ -12,6 +12,7 @@ public class GetDatasetsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-App-Token")
     public String xAppToken;
+
     public GetDatasetsRequest withXAppToken(String xAppToken) {
         this.xAppToken = xAppToken;
         return this;
@@ -23,6 +24,7 @@ public class GetDatasetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_token")
     public String appToken;
+
     public GetDatasetsRequest withAppToken(String appToken) {
         this.appToken = appToken;
         return this;
@@ -34,6 +36,7 @@ public class GetDatasetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dataset_id")
     public String datasetId;
+
     public GetDatasetsRequest withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -44,6 +47,7 @@ public class GetDatasetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_id")
     public String entityId;
+
     public GetDatasetsRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -55,6 +59,7 @@ public class GetDatasetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Double limit;
+
     public GetDatasetsRequest withLimit(Double limit) {
         this.limit = limit;
         return this;
@@ -66,9 +71,11 @@ public class GetDatasetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Double offset;
+
     public GetDatasetsRequest withOffset(Double offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetDatasetsRequest(){}
 }

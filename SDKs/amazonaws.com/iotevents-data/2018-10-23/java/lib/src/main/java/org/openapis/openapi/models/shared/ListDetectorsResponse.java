@@ -15,6 +15,7 @@ public class ListDetectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorSummaries")
     public DetectorSummary[] detectorSummaries;
+
     public ListDetectorsResponse withDetectorSummaries(DetectorSummary[] detectorSummaries) {
         this.detectorSummaries = detectorSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListDetectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDetectorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDetectorsResponse(){}
 }

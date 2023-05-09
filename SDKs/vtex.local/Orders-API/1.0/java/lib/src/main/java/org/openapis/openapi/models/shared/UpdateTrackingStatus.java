@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateTrackingStatus {
     @JsonProperty("date")
     public String date;
+
     public UpdateTrackingStatus withDate(String date) {
         this.date = date;
         return this;
@@ -19,6 +20,7 @@ public class UpdateTrackingStatus {
     
     @JsonProperty("orderId")
     public String orderId;
+
     public UpdateTrackingStatus withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -26,9 +28,15 @@ public class UpdateTrackingStatus {
     
     @JsonProperty("receipt")
     public String receipt;
+
     public UpdateTrackingStatus withReceipt(String receipt) {
         this.receipt = receipt;
         return this;
     }
     
+    public UpdateTrackingStatus(@JsonProperty("date") String date, @JsonProperty("orderId") String orderId, @JsonProperty("receipt") String receipt) {
+        this.date = date;
+        this.orderId = orderId;
+        this.receipt = receipt;
+  }
 }

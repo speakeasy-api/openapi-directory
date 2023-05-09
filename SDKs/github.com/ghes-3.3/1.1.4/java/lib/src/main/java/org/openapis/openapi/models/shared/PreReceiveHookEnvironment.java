@@ -12,6 +12,7 @@ public class PreReceiveHookEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public PreReceiveHookEnvironment withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -20,6 +21,7 @@ public class PreReceiveHookEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_environment")
     public Boolean defaultEnvironment;
+
     public PreReceiveHookEnvironment withDefaultEnvironment(Boolean defaultEnvironment) {
         this.defaultEnvironment = defaultEnvironment;
         return this;
@@ -28,6 +30,7 @@ public class PreReceiveHookEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download")
     public PreReceiveHookEnvironmentDownload download;
+
     public PreReceiveHookEnvironment withDownload(PreReceiveHookEnvironmentDownload download) {
         this.download = download;
         return this;
@@ -36,6 +39,7 @@ public class PreReceiveHookEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hooks_count")
     public Long hooksCount;
+
     public PreReceiveHookEnvironment withHooksCount(Long hooksCount) {
         this.hooksCount = hooksCount;
         return this;
@@ -44,6 +48,7 @@ public class PreReceiveHookEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public PreReceiveHookEnvironment withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -52,6 +57,7 @@ public class PreReceiveHookEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PreReceiveHookEnvironment withId(Long id) {
         this.id = id;
         return this;
@@ -60,6 +66,7 @@ public class PreReceiveHookEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     public String imageUrl;
+
     public PreReceiveHookEnvironment withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -68,6 +75,7 @@ public class PreReceiveHookEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PreReceiveHookEnvironment withName(String name) {
         this.name = name;
         return this;
@@ -76,9 +84,11 @@ public class PreReceiveHookEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PreReceiveHookEnvironment withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PreReceiveHookEnvironment(){}
 }

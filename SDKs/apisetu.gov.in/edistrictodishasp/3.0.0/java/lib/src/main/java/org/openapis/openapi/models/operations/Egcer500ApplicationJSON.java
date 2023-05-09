@@ -15,6 +15,7 @@ public class Egcer500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Egcer500ApplicationJSONErrorEnum error;
+
     public Egcer500ApplicationJSON withError(Egcer500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Egcer500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Egcer500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Egcer500ApplicationJSON withErrorDescription(Egcer500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Egcer500ApplicationJSON(){}
 }

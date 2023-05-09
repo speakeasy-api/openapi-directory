@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentEntityRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public GoogleCloudDocumentaiV1beta2DocumentEntityRelation withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentEntityRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relation")
     public String relation;
+
     public GoogleCloudDocumentaiV1beta2DocumentEntityRelation withRelation(String relation) {
         this.relation = relation;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1beta2DocumentEntityRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectId")
     public String subjectId;
+
     public GoogleCloudDocumentaiV1beta2DocumentEntityRelation withSubjectId(String subjectId) {
         this.subjectId = subjectId;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2DocumentEntityRelation(){}
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidUserlistPostSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Auth")
     public String authKey;
+
     public KkidUserlistPostSecurity withAuthKey(String authKey) {
         this.authKey = authKey;
         return this;
     }
     
+    public KkidUserlistPostSecurity(@JsonProperty("auth_key") String authKey) {
+        this.authKey = authKey;
+  }
 }

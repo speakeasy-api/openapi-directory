@@ -18,6 +18,7 @@ public class PublishRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public PubsubMessage message;
+
     public PublishRequest withMessage(PubsubMessage message) {
         this.message = message;
         return this;
@@ -29,9 +30,11 @@ public class PublishRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public PublishRequest withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public PublishRequest(){}
 }

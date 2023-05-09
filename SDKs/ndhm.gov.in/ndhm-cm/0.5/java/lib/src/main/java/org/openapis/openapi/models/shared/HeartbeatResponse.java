@@ -20,6 +20,7 @@ public class HeartbeatResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public HeartbeatResponse withError(Error error) {
         this.error = error;
         return this;
@@ -28,6 +29,7 @@ public class HeartbeatResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public HeartbeatResponseStatusEnum status;
+
     public HeartbeatResponse withStatus(HeartbeatResponseStatusEnum status) {
         this.status = status;
         return this;
@@ -41,9 +43,11 @@ public class HeartbeatResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public HeartbeatResponse withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public HeartbeatResponse(){}
 }

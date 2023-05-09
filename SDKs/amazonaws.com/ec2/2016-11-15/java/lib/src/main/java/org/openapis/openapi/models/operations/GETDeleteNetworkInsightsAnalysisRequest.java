@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteNetworkInsightsAnalysisRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteNetworkInsightsAnalysisActionEnum action;
+
     public GETDeleteNetworkInsightsAnalysisRequest withAction(GETDeleteNetworkInsightsAnalysisActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteNetworkInsightsAnalysisRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDeleteNetworkInsightsAnalysisRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteNetworkInsightsAnalysisRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInsightsAnalysisId")
     public String networkInsightsAnalysisId;
+
     public GETDeleteNetworkInsightsAnalysisRequest withNetworkInsightsAnalysisId(String networkInsightsAnalysisId) {
         this.networkInsightsAnalysisId = networkInsightsAnalysisId;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteNetworkInsightsAnalysisRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteNetworkInsightsAnalysisVersionEnum version;
+
     public GETDeleteNetworkInsightsAnalysisRequest withVersion(GETDeleteNetworkInsightsAnalysisVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDeleteNetworkInsightsAnalysisRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteNetworkInsightsAnalysisRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeleteNetworkInsightsAnalysisRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteNetworkInsightsAnalysisRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeleteNetworkInsightsAnalysisRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteNetworkInsightsAnalysisRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeleteNetworkInsightsAnalysisRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteNetworkInsightsAnalysisRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeleteNetworkInsightsAnalysisRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteNetworkInsightsAnalysisRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeleteNetworkInsightsAnalysisRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteNetworkInsightsAnalysisRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDeleteNetworkInsightsAnalysisRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteNetworkInsightsAnalysisRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteNetworkInsightsAnalysisRequest(@JsonProperty("Action") GETDeleteNetworkInsightsAnalysisActionEnum action, @JsonProperty("NetworkInsightsAnalysisId") String networkInsightsAnalysisId, @JsonProperty("Version") GETDeleteNetworkInsightsAnalysisVersionEnum version) {
+        this.action = action;
+        this.networkInsightsAnalysisId = networkInsightsAnalysisId;
+        this.version = version;
+  }
 }

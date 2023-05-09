@@ -18,6 +18,7 @@ public class ClientEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public ClientEvent withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class ClientEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventId")
     public String eventId;
+
     public ClientEvent withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -40,6 +42,7 @@ public class ClientEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraInfo")
     public java.util.Map<String, String> extraInfo;
+
     public ClientEvent withExtraInfo(java.util.Map<String, String> extraInfo) {
         this.extraInfo = extraInfo;
         return this;
@@ -51,6 +54,7 @@ public class ClientEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobEvent")
     public JobEvent jobEvent;
+
     public ClientEvent withJobEvent(JobEvent jobEvent) {
         this.jobEvent = jobEvent;
         return this;
@@ -62,6 +66,7 @@ public class ClientEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentEventId")
     public String parentEventId;
+
     public ClientEvent withParentEventId(String parentEventId) {
         this.parentEventId = parentEventId;
         return this;
@@ -73,9 +78,11 @@ public class ClientEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public ClientEvent withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public ClientEvent(){}
 }

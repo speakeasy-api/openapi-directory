@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMaintenanceWindowResponse {
     
     public String contentType;
+
     public CreateMaintenanceWindowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateMaintenanceWindowResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMaintenanceWindowResult createMaintenanceWindowResult;
+
     public CreateMaintenanceWindowResponse withCreateMaintenanceWindowResult(org.openapis.openapi.models.shared.CreateMaintenanceWindowResult createMaintenanceWindowResult) {
         this.createMaintenanceWindowResult = createMaintenanceWindowResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateMaintenanceWindowResponse {
      */
     
     public Object idempotentParameterMismatch;
+
     public CreateMaintenanceWindowResponse withIdempotentParameterMismatch(Object idempotentParameterMismatch) {
         this.idempotentParameterMismatch = idempotentParameterMismatch;
         return this;
@@ -39,6 +43,7 @@ public class CreateMaintenanceWindowResponse {
      */
     
     public Object internalServerError;
+
     public CreateMaintenanceWindowResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class CreateMaintenanceWindowResponse {
     
     
     public Integer statusCode;
+
     public CreateMaintenanceWindowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateMaintenanceWindowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMaintenanceWindowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateMaintenanceWindowResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateMaintenanceWindowResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
     }
     
+    public CreateMaintenanceWindowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

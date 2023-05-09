@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class TrendingTrendingEntryDestinyRitualMilestoneDetails {
     
     public DestinyMilestonesDestinyPublicMilestoneChallengeActivity[] activities;
+
     public TrendingTrendingEntryDestinyRitualMilestoneDetails withActivities(DestinyMilestonesDestinyPublicMilestoneChallengeActivity[] activities) {
         this.activities = activities;
         return this;
@@ -22,6 +23,7 @@ public class TrendingTrendingEntryDestinyRitualMilestoneDetails {
      */
     
     public DestinyMilestonesDestinyPublicMilestoneQuest[] availableQuests;
+
     public TrendingTrendingEntryDestinyRitualMilestoneDetails withAvailableQuests(DestinyMilestonesDestinyPublicMilestoneQuest[] availableQuests) {
         this.availableQuests = availableQuests;
         return this;
@@ -32,6 +34,7 @@ public class TrendingTrendingEntryDestinyRitualMilestoneDetails {
      */
     
     public OffsetDateTime endDate;
+
     public TrendingTrendingEntryDestinyRitualMilestoneDetails withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -42,6 +45,7 @@ public class TrendingTrendingEntryDestinyRitualMilestoneDetails {
      */
     
     public Long milestoneHash;
+
     public TrendingTrendingEntryDestinyRitualMilestoneDetails withMilestoneHash(Long milestoneHash) {
         this.milestoneHash = milestoneHash;
         return this;
@@ -52,6 +56,7 @@ public class TrendingTrendingEntryDestinyRitualMilestoneDetails {
      */
     
     public Integer order;
+
     public TrendingTrendingEntryDestinyRitualMilestoneDetails withOrder(Integer order) {
         this.order = order;
         return this;
@@ -62,6 +67,7 @@ public class TrendingTrendingEntryDestinyRitualMilestoneDetails {
      */
     
     public OffsetDateTime startDate;
+
     public TrendingTrendingEntryDestinyRitualMilestoneDetails withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -73,6 +79,7 @@ public class TrendingTrendingEntryDestinyRitualMilestoneDetails {
      */
     
     public Long[] vendorHashes;
+
     public TrendingTrendingEntryDestinyRitualMilestoneDetails withVendorHashes(Long[] vendorHashes) {
         this.vendorHashes = vendorHashes;
         return this;
@@ -83,9 +90,11 @@ public class TrendingTrendingEntryDestinyRitualMilestoneDetails {
      */
     
     public DestinyMilestonesDestinyPublicMilestoneVendor[] vendors;
+
     public TrendingTrendingEntryDestinyRitualMilestoneDetails withVendors(DestinyMilestonesDestinyPublicMilestoneVendor[] vendors) {
         this.vendors = vendors;
         return this;
     }
     
+    public TrendingTrendingEntryDestinyRitualMilestoneDetails(){}
 }

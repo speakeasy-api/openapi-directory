@@ -13,6 +13,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchTypePointAmrcFreewaveRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchTypePointAmrcFreewaveRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchTypePointAmrcFreewaveRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchTypePointAmrcFreewaveRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchTypePointAmrcFreewaveRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchTypePointAmrcFreewaveRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchTypePointAmrcFreewaveRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchTypePointAmrcFreewaveRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchTypePointAmrcFreewaveRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchTypePointAmrcFreewaveRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchTypePointAmrcFreewaveRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchTypePointAmrcFreewaveRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchTypePointAmrcFreewaveRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchTypePointAmrcFreewaveRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_amrc_freewave.datalogger_model")
     public String searchTypePointAmrcFreewaveDataloggerModel;
+
     public SearchTypePointAmrcFreewaveRequest withSearchTypePointAmrcFreewaveDataloggerModel(String searchTypePointAmrcFreewaveDataloggerModel) {
         this.searchTypePointAmrcFreewaveDataloggerModel = searchTypePointAmrcFreewaveDataloggerModel;
         return this;
@@ -163,6 +178,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_amrc_freewave.datalogger_serial")
     public String searchTypePointAmrcFreewaveDataloggerSerial;
+
     public SearchTypePointAmrcFreewaveRequest withSearchTypePointAmrcFreewaveDataloggerSerial(String searchTypePointAmrcFreewaveDataloggerSerial) {
         this.searchTypePointAmrcFreewaveDataloggerSerial = searchTypePointAmrcFreewaveDataloggerSerial;
         return this;
@@ -173,6 +189,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_amrc_freewave.format")
     public String searchTypePointAmrcFreewaveFormat;
+
     public SearchTypePointAmrcFreewaveRequest withSearchTypePointAmrcFreewaveFormat(String searchTypePointAmrcFreewaveFormat) {
         this.searchTypePointAmrcFreewaveFormat = searchTypePointAmrcFreewaveFormat;
         return this;
@@ -183,6 +200,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_amrc_freewave.station_name")
     public String searchTypePointAmrcFreewaveStationName;
+
     public SearchTypePointAmrcFreewaveRequest withSearchTypePointAmrcFreewaveStationName(String searchTypePointAmrcFreewaveStationName) {
         this.searchTypePointAmrcFreewaveStationName = searchTypePointAmrcFreewaveStationName;
         return this;
@@ -193,6 +211,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchTypePointAmrcFreewaveRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -203,6 +222,7 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchTypePointAmrcFreewaveRequest withText(String text) {
         this.text = text;
         return this;
@@ -213,9 +233,11 @@ public class SearchTypePointAmrcFreewaveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchTypePointAmrcFreewaveRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchTypePointAmrcFreewaveRequest(){}
 }

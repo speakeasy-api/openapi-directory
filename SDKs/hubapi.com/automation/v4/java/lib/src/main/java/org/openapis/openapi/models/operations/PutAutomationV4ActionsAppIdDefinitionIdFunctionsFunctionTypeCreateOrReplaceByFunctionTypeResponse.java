@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse {
@@ -12,6 +13,7 @@ public class PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateO
      */
     
     public org.openapis.openapi.models.shared.ActionFunctionIdentifier actionFunctionIdentifier;
+
     public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse withActionFunctionIdentifier(org.openapis.openapi.models.shared.ActionFunctionIdentifier actionFunctionIdentifier) {
         this.actionFunctionIdentifier = actionFunctionIdentifier;
         return this;
@@ -19,6 +21,7 @@ public class PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateO
     
     
     public byte[] body;
+
     public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -26,6 +29,7 @@ public class PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateO
     
     
     public String contentType;
+
     public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateO
     
     
     public Integer statusCode;
+
     public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateO
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

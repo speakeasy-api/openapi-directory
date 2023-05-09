@@ -20,6 +20,7 @@ public class GetMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsApplicationConfigurationId")
     public String adsApplicationConfigurationId;
+
     public GetMigrationWorkflowResponse withAdsApplicationConfigurationId(String adsApplicationConfigurationId) {
         this.adsApplicationConfigurationId = adsApplicationConfigurationId;
         return this;
@@ -28,6 +29,7 @@ public class GetMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsApplicationName")
     public String adsApplicationName;
+
     public GetMigrationWorkflowResponse withAdsApplicationName(String adsApplicationName) {
         this.adsApplicationName = adsApplicationName;
         return this;
@@ -36,6 +38,7 @@ public class GetMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public GetMigrationWorkflowResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -44,6 +47,7 @@ public class GetMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completedSteps")
     public Long completedSteps;
+
     public GetMigrationWorkflowResponse withCompletedSteps(Long completedSteps) {
         this.completedSteps = completedSteps;
         return this;
@@ -54,6 +58,7 @@ public class GetMigrationWorkflowResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetMigrationWorkflowResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -62,6 +67,7 @@ public class GetMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetMigrationWorkflowResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -72,6 +78,7 @@ public class GetMigrationWorkflowResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetMigrationWorkflowResponse withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -80,6 +87,7 @@ public class GetMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetMigrationWorkflowResponse withId(String id) {
         this.id = id;
         return this;
@@ -90,6 +98,7 @@ public class GetMigrationWorkflowResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public GetMigrationWorkflowResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -100,6 +109,7 @@ public class GetMigrationWorkflowResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStartTime")
     public OffsetDateTime lastStartTime;
+
     public GetMigrationWorkflowResponse withLastStartTime(OffsetDateTime lastStartTime) {
         this.lastStartTime = lastStartTime;
         return this;
@@ -110,6 +120,7 @@ public class GetMigrationWorkflowResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStopTime")
     public OffsetDateTime lastStopTime;
+
     public GetMigrationWorkflowResponse withLastStopTime(OffsetDateTime lastStopTime) {
         this.lastStopTime = lastStopTime;
         return this;
@@ -118,6 +129,7 @@ public class GetMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetMigrationWorkflowResponse withName(String name) {
         this.name = name;
         return this;
@@ -126,6 +138,7 @@ public class GetMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public MigrationWorkflowStatusEnumEnum status;
+
     public GetMigrationWorkflowResponse withStatus(MigrationWorkflowStatusEnumEnum status) {
         this.status = status;
         return this;
@@ -134,6 +147,7 @@ public class GetMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public GetMigrationWorkflowResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -142,6 +156,7 @@ public class GetMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetMigrationWorkflowResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -150,6 +165,7 @@ public class GetMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateId")
     public String templateId;
+
     public GetMigrationWorkflowResponse withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
@@ -158,6 +174,7 @@ public class GetMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tools")
     public Tool[] tools;
+
     public GetMigrationWorkflowResponse withTools(Tool[] tools) {
         this.tools = tools;
         return this;
@@ -166,6 +183,7 @@ public class GetMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSteps")
     public Long totalSteps;
+
     public GetMigrationWorkflowResponse withTotalSteps(Long totalSteps) {
         this.totalSteps = totalSteps;
         return this;
@@ -174,6 +192,7 @@ public class GetMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowBucket")
     public String workflowBucket;
+
     public GetMigrationWorkflowResponse withWorkflowBucket(String workflowBucket) {
         this.workflowBucket = workflowBucket;
         return this;
@@ -182,9 +201,11 @@ public class GetMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowInputs")
     public java.util.Map<String, StepInput> workflowInputs;
+
     public GetMigrationWorkflowResponse withWorkflowInputs(java.util.Map<String, StepInput> workflowInputs) {
         this.workflowInputs = workflowInputs;
         return this;
     }
     
+    public GetMigrationWorkflowResponse(){}
 }

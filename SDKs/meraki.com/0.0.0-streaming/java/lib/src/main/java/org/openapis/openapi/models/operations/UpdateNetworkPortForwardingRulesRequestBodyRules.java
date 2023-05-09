@@ -14,6 +14,7 @@ public class UpdateNetworkPortForwardingRulesRequestBodyRules {
      */
     @JsonProperty("allowedIps")
     public String[] allowedIps;
+
     public UpdateNetworkPortForwardingRulesRequestBodyRules withAllowedIps(String[] allowedIps) {
         this.allowedIps = allowedIps;
         return this;
@@ -24,6 +25,7 @@ public class UpdateNetworkPortForwardingRulesRequestBodyRules {
      */
     @JsonProperty("lanIp")
     public String lanIp;
+
     public UpdateNetworkPortForwardingRulesRequestBodyRules withLanIp(String lanIp) {
         this.lanIp = lanIp;
         return this;
@@ -34,6 +36,7 @@ public class UpdateNetworkPortForwardingRulesRequestBodyRules {
      */
     @JsonProperty("localPort")
     public String localPort;
+
     public UpdateNetworkPortForwardingRulesRequestBodyRules withLocalPort(String localPort) {
         this.localPort = localPort;
         return this;
@@ -45,6 +48,7 @@ public class UpdateNetworkPortForwardingRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateNetworkPortForwardingRulesRequestBodyRules withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +59,7 @@ public class UpdateNetworkPortForwardingRulesRequestBodyRules {
      */
     @JsonProperty("protocol")
     public UpdateNetworkPortForwardingRulesRequestBodyRulesProtocolEnum protocol;
+
     public UpdateNetworkPortForwardingRulesRequestBodyRules withProtocol(UpdateNetworkPortForwardingRulesRequestBodyRulesProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -65,6 +70,7 @@ public class UpdateNetworkPortForwardingRulesRequestBodyRules {
      */
     @JsonProperty("publicPort")
     public String publicPort;
+
     public UpdateNetworkPortForwardingRulesRequestBodyRules withPublicPort(String publicPort) {
         this.publicPort = publicPort;
         return this;
@@ -76,9 +82,17 @@ public class UpdateNetworkPortForwardingRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uplink")
     public UpdateNetworkPortForwardingRulesRequestBodyRulesUplinkEnum uplink;
+
     public UpdateNetworkPortForwardingRulesRequestBodyRules withUplink(UpdateNetworkPortForwardingRulesRequestBodyRulesUplinkEnum uplink) {
         this.uplink = uplink;
         return this;
     }
     
+    public UpdateNetworkPortForwardingRulesRequestBodyRules(@JsonProperty("allowedIps") String[] allowedIps, @JsonProperty("lanIp") String lanIp, @JsonProperty("localPort") String localPort, @JsonProperty("protocol") UpdateNetworkPortForwardingRulesRequestBodyRulesProtocolEnum protocol, @JsonProperty("publicPort") String publicPort) {
+        this.allowedIps = allowedIps;
+        this.lanIp = lanIp;
+        this.localPort = localPort;
+        this.protocol = protocol;
+        this.publicPort = publicPort;
+  }
 }

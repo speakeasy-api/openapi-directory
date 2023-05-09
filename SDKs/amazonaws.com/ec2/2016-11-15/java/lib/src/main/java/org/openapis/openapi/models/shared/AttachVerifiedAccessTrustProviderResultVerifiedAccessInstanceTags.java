@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceTags {
     
     public String key;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceTags {
     
     
     public String value;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceTags(){}
 }

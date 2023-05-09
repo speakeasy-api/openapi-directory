@@ -18,6 +18,7 @@ public class AddContactListContactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactIds")
     public Long[] contactIds;
+
     public AddContactListContactsRequest withContactIds(Long[] contactIds) {
         this.contactIds = contactIds;
         return this;
@@ -29,6 +30,7 @@ public class AddContactListContactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactNumbers")
     public String[] contactNumbers;
+
     public AddContactListContactsRequest withContactNumbers(String[] contactNumbers) {
         this.contactNumbers = contactNumbers;
         return this;
@@ -40,6 +42,7 @@ public class AddContactListContactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactNumbersField")
     public String contactNumbersField;
+
     public AddContactListContactsRequest withContactNumbersField(String contactNumbersField) {
         this.contactNumbersField = contactNumbersField;
         return this;
@@ -51,6 +54,7 @@ public class AddContactListContactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     public Contact[] contacts;
+
     public AddContactListContactsRequest withContacts(Contact[] contacts) {
         this.contacts = contacts;
         return this;
@@ -62,9 +66,11 @@ public class AddContactListContactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useCustomFields")
     public Boolean useCustomFields;
+
     public AddContactListContactsRequest withUseCustomFields(Boolean useCustomFields) {
         this.useCustomFields = useCustomFields;
         return this;
     }
     
+    public AddContactListContactsRequest(){}
 }

@@ -18,6 +18,7 @@ public class UserActivitySession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activities")
     public Activity[] activities;
+
     public UserActivitySession withActivities(Activity[] activities) {
         this.activities = activities;
         return this;
@@ -29,6 +30,7 @@ public class UserActivitySession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSource")
     public String dataSource;
+
     public UserActivitySession withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -40,6 +42,7 @@ public class UserActivitySession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceCategory")
     public String deviceCategory;
+
     public UserActivitySession withDeviceCategory(String deviceCategory) {
         this.deviceCategory = deviceCategory;
         return this;
@@ -51,6 +54,7 @@ public class UserActivitySession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public String platform;
+
     public UserActivitySession withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -62,6 +66,7 @@ public class UserActivitySession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionDate")
     public String sessionDate;
+
     public UserActivitySession withSessionDate(String sessionDate) {
         this.sessionDate = sessionDate;
         return this;
@@ -73,9 +78,11 @@ public class UserActivitySession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionId")
     public String sessionId;
+
     public UserActivitySession withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public UserActivitySession(){}
 }

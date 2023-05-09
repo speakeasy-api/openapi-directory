@@ -50,7 +50,7 @@ public class Contact {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBillingRecipientsResponse res = new org.openapis.openapi.models.operations.GetBillingRecipientsResponse() {{
+        org.openapis.openapi.models.operations.GetBillingRecipientsResponse res = new org.openapis.openapi.models.operations.GetBillingRecipientsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -68,8 +68,6 @@ public class Contact {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,7 +167,7 @@ public class Contact {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContactListResponse res = new org.openapis.openapi.models.operations.GetContactListResponse() {{
+        org.openapis.openapi.models.operations.GetContactListResponse res = new org.openapis.openapi.models.operations.GetContactListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -187,8 +185,6 @@ public class Contact {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,7 +284,7 @@ public class Contact {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContactUserInfoResponse res = new org.openapis.openapi.models.operations.GetContactUserInfoResponse() {{
+        org.openapis.openapi.models.operations.GetContactUserInfoResponse res = new org.openapis.openapi.models.operations.GetContactUserInfoResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -306,8 +302,6 @@ public class Contact {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

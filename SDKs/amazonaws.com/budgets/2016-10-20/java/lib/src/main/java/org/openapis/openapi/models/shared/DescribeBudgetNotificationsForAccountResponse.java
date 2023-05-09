@@ -15,6 +15,7 @@ public class DescribeBudgetNotificationsForAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BudgetNotificationsForAccount")
     public BudgetNotificationsForAccount[] budgetNotificationsForAccount;
+
     public DescribeBudgetNotificationsForAccountResponse withBudgetNotificationsForAccount(BudgetNotificationsForAccount[] budgetNotificationsForAccount) {
         this.budgetNotificationsForAccount = budgetNotificationsForAccount;
         return this;
@@ -26,9 +27,11 @@ public class DescribeBudgetNotificationsForAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeBudgetNotificationsForAccountResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeBudgetNotificationsForAccountResponse(){}
 }

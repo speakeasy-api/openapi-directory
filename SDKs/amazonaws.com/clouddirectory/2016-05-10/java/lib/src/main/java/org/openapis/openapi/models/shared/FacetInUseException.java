@@ -15,9 +15,11 @@ public class FacetInUseException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public FacetInUseException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public FacetInUseException(){}
 }

@@ -18,6 +18,7 @@ public class LocationListInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public LocationListInput withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -29,6 +30,7 @@ public class LocationListInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public LocationListInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,9 +42,11 @@ public class LocationListInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationType")
     public LocationListLocationTypeEnum locationType;
+
     public LocationListInput withLocationType(LocationListLocationTypeEnum locationType) {
         this.locationType = locationType;
         return this;
     }
     
+    public LocationListInput(){}
 }

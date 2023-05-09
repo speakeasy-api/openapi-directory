@@ -15,6 +15,7 @@ public class ConferenceListResponse {
      */
     @JsonProperty("List")
     public java.util.Map<String, Object> list;
+
     public ConferenceListResponse withList(java.util.Map<String, Object> list) {
         this.list = list;
         return this;
@@ -25,6 +26,7 @@ public class ConferenceListResponse {
      */
     @JsonProperty("Message")
     public ConferenceListResponseMessageEnum message;
+
     public ConferenceListResponse withMessage(ConferenceListResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -35,9 +37,15 @@ public class ConferenceListResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public ConferenceListResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ConferenceListResponse(@JsonProperty("List") java.util.Map<String, Object> list, @JsonProperty("Message") ConferenceListResponseMessageEnum message, @JsonProperty("Success") Boolean success) {
+        this.list = list;
+        this.message = message;
+        this.success = success;
+  }
 }

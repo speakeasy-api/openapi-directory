@@ -12,6 +12,7 @@ public class PaymentGatewayForInvoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public PaymentGatewayForInvoice withId(Integer id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class PaymentGatewayForInvoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PaymentGatewayForInvoice withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PaymentGatewayForInvoice(){}
 }

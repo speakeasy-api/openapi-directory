@@ -18,6 +18,7 @@ public class LeaseWorkItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unifiedWorkerResponse")
     public java.util.Map<String, Object> unifiedWorkerResponse;
+
     public LeaseWorkItemResponse withUnifiedWorkerResponse(java.util.Map<String, Object> unifiedWorkerResponse) {
         this.unifiedWorkerResponse = unifiedWorkerResponse;
         return this;
@@ -29,9 +30,11 @@ public class LeaseWorkItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workItems")
     public WorkItem[] workItems;
+
     public LeaseWorkItemResponse withWorkItems(WorkItem[] workItems) {
         this.workItems = workItems;
         return this;
     }
     
+    public LeaseWorkItemResponse(){}
 }

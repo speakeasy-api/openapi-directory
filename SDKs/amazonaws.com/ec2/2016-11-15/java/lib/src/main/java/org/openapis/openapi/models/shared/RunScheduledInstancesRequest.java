@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RunScheduledInstancesRequest - Contains the parameters for RunScheduledInstances.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RunScheduledInstancesRequest {
     
     public String clientToken;
+
     public RunScheduledInstancesRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class RunScheduledInstancesRequest {
     
     
     public Boolean dryRun;
+
     public RunScheduledInstancesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,6 +28,7 @@ public class RunScheduledInstancesRequest {
     
     
     public Long instanceCount;
+
     public RunScheduledInstancesRequest withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -33,6 +36,7 @@ public class RunScheduledInstancesRequest {
     
     
     public ScheduledInstancesLaunchSpecification launchSpecification;
+
     public RunScheduledInstancesRequest withLaunchSpecification(ScheduledInstancesLaunchSpecification launchSpecification) {
         this.launchSpecification = launchSpecification;
         return this;
@@ -40,9 +44,14 @@ public class RunScheduledInstancesRequest {
     
     
     public String scheduledInstanceId;
+
     public RunScheduledInstancesRequest withScheduledInstanceId(String scheduledInstanceId) {
         this.scheduledInstanceId = scheduledInstanceId;
         return this;
     }
     
+    public RunScheduledInstancesRequest(@JsonProperty("LaunchSpecification") ScheduledInstancesLaunchSpecification launchSpecification, @JsonProperty("ScheduledInstanceId") String scheduledInstanceId) {
+        this.launchSpecification = launchSpecification;
+        this.scheduledInstanceId = scheduledInstanceId;
+  }
 }

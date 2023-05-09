@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1PolicySchemaRequiredItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldConditions")
     public String[] fieldConditions;
+
     public GoogleChromePolicyVersionsV1PolicySchemaRequiredItems withFieldConditions(String[] fieldConditions) {
         this.fieldConditions = fieldConditions;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromePolicyVersionsV1PolicySchemaRequiredItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredFields")
     public String[] requiredFields;
+
     public GoogleChromePolicyVersionsV1PolicySchemaRequiredItems withRequiredFields(String[] requiredFields) {
         this.requiredFields = requiredFields;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1PolicySchemaRequiredItems(){}
 }

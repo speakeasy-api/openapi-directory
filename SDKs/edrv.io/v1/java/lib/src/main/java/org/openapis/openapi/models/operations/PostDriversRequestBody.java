@@ -15,6 +15,7 @@ public class PostDriversRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public PostDriversRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class PostDriversRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PostDriversRequestBodyAddress address;
+
     public PostDriversRequestBody withAddress(PostDriversRequestBodyAddress address) {
         this.address = address;
         return this;
@@ -31,6 +33,7 @@ public class PostDriversRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public PostDriversRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -38,6 +41,7 @@ public class PostDriversRequestBody {
     
     @JsonProperty("firstname")
     public String firstname;
+
     public PostDriversRequestBody withFirstname(String firstname) {
         this.firstname = firstname;
         return this;
@@ -45,6 +49,7 @@ public class PostDriversRequestBody {
     
     @JsonProperty("lastname")
     public String lastname;
+
     public PostDriversRequestBody withLastname(String lastname) {
         this.lastname = lastname;
         return this;
@@ -53,6 +58,7 @@ public class PostDriversRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public PostDriversRequestBodyPhone phone;
+
     public PostDriversRequestBody withPhone(PostDriversRequestBodyPhone phone) {
         this.phone = phone;
         return this;
@@ -60,9 +66,15 @@ public class PostDriversRequestBody {
     
     @JsonProperty("source")
     public PostDriversRequestBodySourceEnum source;
+
     public PostDriversRequestBody withSource(PostDriversRequestBodySourceEnum source) {
         this.source = source;
         return this;
     }
     
+    public PostDriversRequestBody(@JsonProperty("firstname") String firstname, @JsonProperty("lastname") String lastname, @JsonProperty("source") PostDriversRequestBodySourceEnum source) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.source = source;
+  }
 }

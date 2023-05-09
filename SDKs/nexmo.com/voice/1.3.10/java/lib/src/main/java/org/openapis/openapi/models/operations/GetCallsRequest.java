@@ -13,6 +13,7 @@ public class GetCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conversation_uuid")
     public String conversationUuid;
+
     public GetCallsRequest withConversationUuid(String conversationUuid) {
         this.conversationUuid = conversationUuid;
         return this;
@@ -23,6 +24,7 @@ public class GetCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_end")
     public OffsetDateTime dateEnd;
+
     public GetCallsRequest withDateEnd(OffsetDateTime dateEnd) {
         this.dateEnd = dateEnd;
         return this;
@@ -33,6 +35,7 @@ public class GetCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_start")
     public OffsetDateTime dateStart;
+
     public GetCallsRequest withDateStart(OffsetDateTime dateStart) {
         this.dateStart = dateStart;
         return this;
@@ -43,6 +46,7 @@ public class GetCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetCallsOrderEnum order;
+
     public GetCallsRequest withOrder(GetCallsOrderEnum order) {
         this.order = order;
         return this;
@@ -53,6 +57,7 @@ public class GetCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public GetCallsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -63,6 +68,7 @@ public class GetCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=record_index")
     public Long recordIndex;
+
     public GetCallsRequest withRecordIndex(Long recordIndex) {
         this.recordIndex = recordIndex;
         return this;
@@ -73,9 +79,11 @@ public class GetCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public GetCallsStatusEnum status;
+
     public GetCallsRequest withStatus(GetCallsStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetCallsRequest(){}
 }

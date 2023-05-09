@@ -15,9 +15,11 @@ public class UpdateResourceProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitivityScoreOverride")
     public Long sensitivityScoreOverride;
+
     public UpdateResourceProfileRequestBody withSensitivityScoreOverride(Long sensitivityScoreOverride) {
         this.sensitivityScoreOverride = sensitivityScoreOverride;
         return this;
     }
     
+    public UpdateResourceProfileRequestBody(){}
 }

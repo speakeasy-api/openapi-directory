@@ -20,6 +20,7 @@ public class PersonAgeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public Integer max;
+
     public PersonAgeRange withMax(Integer max) {
         this.max = max;
         return this;
@@ -33,9 +34,11 @@ public class PersonAgeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
     public Integer min;
+
     public PersonAgeRange withMin(Integer min) {
         this.min = min;
         return this;
     }
     
+    public PersonAgeRange(){}
 }

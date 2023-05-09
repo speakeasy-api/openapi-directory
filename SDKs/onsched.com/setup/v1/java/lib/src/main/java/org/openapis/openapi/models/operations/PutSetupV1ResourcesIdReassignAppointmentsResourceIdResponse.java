@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSetupV1ResourcesIdReassignAppointmentsResourceIdResponse {
@@ -12,6 +13,7 @@ public class PutSetupV1ResourcesIdReassignAppointmentsResourceIdResponse {
      */
     
     public org.openapis.openapi.models.shared.AppointmentViewModel[] appointmentViewModels;
+
     public PutSetupV1ResourcesIdReassignAppointmentsResourceIdResponse withAppointmentViewModels(org.openapis.openapi.models.shared.AppointmentViewModel[] appointmentViewModels) {
         this.appointmentViewModels = appointmentViewModels;
         return this;
@@ -19,6 +21,7 @@ public class PutSetupV1ResourcesIdReassignAppointmentsResourceIdResponse {
     
     
     public String contentType;
+
     public PutSetupV1ResourcesIdReassignAppointmentsResourceIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PutSetupV1ResourcesIdReassignAppointmentsResourceIdResponse {
     
     
     public Integer statusCode;
+
     public PutSetupV1ResourcesIdReassignAppointmentsResourceIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PutSetupV1ResourcesIdReassignAppointmentsResourceIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSetupV1ResourcesIdReassignAppointmentsResourceIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutSetupV1ResourcesIdReassignAppointmentsResourceIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

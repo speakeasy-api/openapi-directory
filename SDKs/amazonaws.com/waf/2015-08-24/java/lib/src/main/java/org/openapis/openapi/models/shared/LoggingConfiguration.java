@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LoggingConfiguration {
     @JsonProperty("LogDestinationConfigs")
     public String[] logDestinationConfigs;
+
     public LoggingConfiguration withLogDestinationConfigs(String[] logDestinationConfigs) {
         this.logDestinationConfigs = logDestinationConfigs;
         return this;
@@ -22,6 +23,7 @@ public class LoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedactedFields")
     public FieldToMatch[] redactedFields;
+
     public LoggingConfiguration withRedactedFields(FieldToMatch[] redactedFields) {
         this.redactedFields = redactedFields;
         return this;
@@ -29,9 +31,14 @@ public class LoggingConfiguration {
     
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public LoggingConfiguration withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public LoggingConfiguration(@JsonProperty("LogDestinationConfigs") String[] logDestinationConfigs, @JsonProperty("ResourceArn") String resourceArn) {
+        this.logDestinationConfigs = logDestinationConfigs;
+        this.resourceArn = resourceArn;
+  }
 }

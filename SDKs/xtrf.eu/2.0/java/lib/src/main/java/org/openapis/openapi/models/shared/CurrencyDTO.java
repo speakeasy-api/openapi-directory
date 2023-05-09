@@ -18,6 +18,7 @@ public class CurrencyDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public CurrencyDTO withActive(Boolean active) {
         this.active = active;
         return this;
@@ -29,6 +30,7 @@ public class CurrencyDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public Boolean default_;
+
     public CurrencyDTO withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -40,6 +42,7 @@ public class CurrencyDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CurrencyDTO withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class CurrencyDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isoCode")
     public String isoCode;
+
     public CurrencyDTO withIsoCode(String isoCode) {
         this.isoCode = isoCode;
         return this;
@@ -62,6 +66,7 @@ public class CurrencyDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CurrencyDTO withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class CurrencyDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferred")
     public Boolean preferred;
+
     public CurrencyDTO withPreferred(Boolean preferred) {
         this.preferred = preferred;
         return this;
@@ -84,9 +90,11 @@ public class CurrencyDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symbol")
     public String symbol;
+
     public CurrencyDTO withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
     }
     
+    public CurrencyDTO(){}
 }

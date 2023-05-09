@@ -15,6 +15,7 @@ public class VcenterBasedRemoteInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osType")
     public OSTypeEnum osType;
+
     public VcenterBasedRemoteInfo withOsType(OSTypeEnum osType) {
         this.osType = osType;
         return this;
@@ -23,9 +24,11 @@ public class VcenterBasedRemoteInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcenterConfigurationTimeStamp")
     public String vcenterConfigurationTimeStamp;
+
     public VcenterBasedRemoteInfo withVcenterConfigurationTimeStamp(String vcenterConfigurationTimeStamp) {
         this.vcenterConfigurationTimeStamp = vcenterConfigurationTimeStamp;
         return this;
     }
     
+    public VcenterBasedRemoteInfo(){}
 }

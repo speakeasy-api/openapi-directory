@@ -15,9 +15,11 @@ public class CreateJobTemplateRequestBodyAbortConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criteriaList")
     public org.openapis.openapi.models.shared.AbortCriteria[] criteriaList;
+
     public CreateJobTemplateRequestBodyAbortConfig withCriteriaList(org.openapis.openapi.models.shared.AbortCriteria[] criteriaList) {
         this.criteriaList = criteriaList;
         return this;
     }
     
+    public CreateJobTemplateRequestBodyAbortConfig(){}
 }

@@ -12,6 +12,7 @@ public class InstanceGroupManagerAutoHealingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoHealingTriggers")
     public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggers autoHealingTriggers;
+
     public InstanceGroupManagerAutoHealingPolicy withAutoHealingTriggers(InstanceGroupManagerAutoHealingPolicyAutoHealingTriggers autoHealingTriggers) {
         this.autoHealingTriggers = autoHealingTriggers;
         return this;
@@ -23,6 +24,7 @@ public class InstanceGroupManagerAutoHealingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheck")
     public String healthCheck;
+
     public InstanceGroupManagerAutoHealingPolicy withHealthCheck(String healthCheck) {
         this.healthCheck = healthCheck;
         return this;
@@ -34,6 +36,7 @@ public class InstanceGroupManagerAutoHealingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialDelaySec")
     public Integer initialDelaySec;
+
     public InstanceGroupManagerAutoHealingPolicy withInitialDelaySec(Integer initialDelaySec) {
         this.initialDelaySec = initialDelaySec;
         return this;
@@ -45,9 +48,11 @@ public class InstanceGroupManagerAutoHealingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUnavailable")
     public FixedOrPercent maxUnavailable;
+
     public InstanceGroupManagerAutoHealingPolicy withMaxUnavailable(FixedOrPercent maxUnavailable) {
         this.maxUnavailable = maxUnavailable;
         return this;
     }
     
+    public InstanceGroupManagerAutoHealingPolicy(){}
 }

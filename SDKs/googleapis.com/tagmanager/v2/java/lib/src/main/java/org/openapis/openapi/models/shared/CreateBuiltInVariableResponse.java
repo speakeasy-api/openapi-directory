@@ -18,9 +18,11 @@ public class CreateBuiltInVariableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("builtInVariable")
     public BuiltInVariable[] builtInVariable;
+
     public CreateBuiltInVariableResponse withBuiltInVariable(BuiltInVariable[] builtInVariable) {
         this.builtInVariable = builtInVariable;
         return this;
     }
     
+    public CreateBuiltInVariableResponse(){}
 }

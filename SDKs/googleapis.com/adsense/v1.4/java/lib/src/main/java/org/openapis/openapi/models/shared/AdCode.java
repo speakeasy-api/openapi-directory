@@ -18,6 +18,7 @@ public class AdCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adCode")
     public String adCode;
+
     public AdCode withAdCode(String adCode) {
         this.adCode = adCode;
         return this;
@@ -29,6 +30,7 @@ public class AdCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ampBody")
     public String ampBody;
+
     public AdCode withAmpBody(String ampBody) {
         this.ampBody = ampBody;
         return this;
@@ -40,6 +42,7 @@ public class AdCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ampHead")
     public String ampHead;
+
     public AdCode withAmpHead(String ampHead) {
         this.ampHead = ampHead;
         return this;
@@ -51,9 +54,11 @@ public class AdCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AdCode withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public AdCode(){}
 }

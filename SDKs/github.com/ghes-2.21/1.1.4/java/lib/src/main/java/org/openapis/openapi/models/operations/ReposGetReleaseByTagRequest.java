@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetReleaseByTagRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposGetReleaseByTagRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetReleaseByTagRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposGetReleaseByTagRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -26,9 +29,15 @@ public class ReposGetReleaseByTagRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag")
     public String tag;
+
     public ReposGetReleaseByTagRequest withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public ReposGetReleaseByTagRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("tag") String tag) {
+        this.owner = owner;
+        this.repo = repo;
+        this.tag = tag;
+  }
 }

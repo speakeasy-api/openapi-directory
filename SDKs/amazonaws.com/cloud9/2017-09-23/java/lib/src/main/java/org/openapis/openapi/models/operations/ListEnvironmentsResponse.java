@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEnvironmentsResponse {
@@ -12,6 +13,7 @@ public class ListEnvironmentsResponse {
      */
     
     public Object badRequestException;
+
     public ListEnvironmentsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class ListEnvironmentsResponse {
      */
     
     public Object conflictException;
+
     public ListEnvironmentsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListEnvironmentsResponse {
     
     
     public String contentType;
+
     public ListEnvironmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListEnvironmentsResponse {
      */
     
     public Object forbiddenException;
+
     public ListEnvironmentsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class ListEnvironmentsResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListEnvironmentsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class ListEnvironmentsResponse {
      */
     
     public Object limitExceededException;
+
     public ListEnvironmentsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ListEnvironmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEnvironmentsResult listEnvironmentsResult;
+
     public ListEnvironmentsResponse withListEnvironmentsResult(org.openapis.openapi.models.shared.ListEnvironmentsResult listEnvironmentsResult) {
         this.listEnvironmentsResult = listEnvironmentsResult;
         return this;
@@ -79,6 +87,7 @@ public class ListEnvironmentsResponse {
      */
     
     public Object notFoundException;
+
     public ListEnvironmentsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class ListEnvironmentsResponse {
     
     
     public Integer statusCode;
+
     public ListEnvironmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListEnvironmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEnvironmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class ListEnvironmentsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListEnvironmentsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListEnvironmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class BookingFieldItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BookingFieldItem withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class BookingFieldItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public BookingFieldItem withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public BookingFieldItem(){}
 }

@@ -18,6 +18,7 @@ public class EnumValuePair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerValue")
     public Integer integerValue;
+
     public EnumValuePair withIntegerValue(Integer integerValue) {
         this.integerValue = integerValue;
         return this;
@@ -29,9 +30,11 @@ public class EnumValuePair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public EnumValuePair withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public EnumValuePair(){}
 }

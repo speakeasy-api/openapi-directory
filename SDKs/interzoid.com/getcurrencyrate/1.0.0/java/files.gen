@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetcurrencyrateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getcurrencyrate200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetcurrencyrateResponse.java
+docs/sdk/README.md
+docs/currencyrates/README.md
 USAGE.md

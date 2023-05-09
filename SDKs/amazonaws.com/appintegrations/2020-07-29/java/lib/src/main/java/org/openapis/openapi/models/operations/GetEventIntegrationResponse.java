@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEventIntegrationResponse {
@@ -12,6 +13,7 @@ public class GetEventIntegrationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetEventIntegrationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetEventIntegrationResponse {
     
     
     public String contentType;
+
     public GetEventIntegrationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEventIntegrationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEventIntegrationResponse getEventIntegrationResponse;
+
     public GetEventIntegrationResponse withGetEventIntegrationResponse(org.openapis.openapi.models.shared.GetEventIntegrationResponse getEventIntegrationResponse) {
         this.getEventIntegrationResponse = getEventIntegrationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetEventIntegrationResponse {
      */
     
     public Object internalServiceError;
+
     public GetEventIntegrationResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -49,6 +54,7 @@ public class GetEventIntegrationResponse {
      */
     
     public Object invalidRequestException;
+
     public GetEventIntegrationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class GetEventIntegrationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEventIntegrationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetEventIntegrationResponse {
     
     
     public Integer statusCode;
+
     public GetEventIntegrationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetEventIntegrationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEventIntegrationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetEventIntegrationResponse {
      */
     
     public Object throttlingException;
+
     public GetEventIntegrationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetEventIntegrationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

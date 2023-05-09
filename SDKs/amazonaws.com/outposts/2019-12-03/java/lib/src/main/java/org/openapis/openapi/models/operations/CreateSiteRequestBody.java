@@ -15,6 +15,7 @@ public class CreateSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateSiteRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreateSiteRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateSiteRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class CreateSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public CreateSiteRequestBody withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -47,6 +50,7 @@ public class CreateSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingAddress")
     public CreateSiteRequestBodyOperatingAddress operatingAddress;
+
     public CreateSiteRequestBody withOperatingAddress(CreateSiteRequestBodyOperatingAddress operatingAddress) {
         this.operatingAddress = operatingAddress;
         return this;
@@ -58,6 +62,7 @@ public class CreateSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RackPhysicalProperties")
     public CreateSiteRequestBodyRackPhysicalProperties rackPhysicalProperties;
+
     public CreateSiteRequestBody withRackPhysicalProperties(CreateSiteRequestBodyRackPhysicalProperties rackPhysicalProperties) {
         this.rackPhysicalProperties = rackPhysicalProperties;
         return this;
@@ -69,6 +74,7 @@ public class CreateSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingAddress")
     public CreateSiteRequestBodyShippingAddress shippingAddress;
+
     public CreateSiteRequestBody withShippingAddress(CreateSiteRequestBodyShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -80,9 +86,13 @@ public class CreateSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateSiteRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSiteRequestBody(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

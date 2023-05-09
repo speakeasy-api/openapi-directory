@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2ClientPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabledUserDeletion")
     public Boolean disabledUserDeletion;
+
     public GoogleCloudIdentitytoolkitAdminV2ClientPermissions withDisabledUserDeletion(Boolean disabledUserDeletion) {
         this.disabledUserDeletion = disabledUserDeletion;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIdentitytoolkitAdminV2ClientPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabledUserSignup")
     public Boolean disabledUserSignup;
+
     public GoogleCloudIdentitytoolkitAdminV2ClientPermissions withDisabledUserSignup(Boolean disabledUserSignup) {
         this.disabledUserSignup = disabledUserSignup;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2ClientPermissions(){}
 }

@@ -15,6 +15,7 @@ public class LockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public LockRuleResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class LockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identifier")
     public String identifier;
+
     public LockRuleResponse withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -31,6 +33,7 @@ public class LockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LockConfiguration")
     public LockConfiguration lockConfiguration;
+
     public LockRuleResponse withLockConfiguration(LockConfiguration lockConfiguration) {
         this.lockConfiguration = lockConfiguration;
         return this;
@@ -39,6 +42,7 @@ public class LockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LockState")
     public LockStateEnum lockState;
+
     public LockRuleResponse withLockState(LockStateEnum lockState) {
         this.lockState = lockState;
         return this;
@@ -47,6 +51,7 @@ public class LockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTags")
     public ResourceTag[] resourceTags;
+
     public LockRuleResponse withResourceTags(ResourceTag[] resourceTags) {
         this.resourceTags = resourceTags;
         return this;
@@ -55,6 +60,7 @@ public class LockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public LockRuleResponse withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -66,6 +72,7 @@ public class LockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionPeriod")
     public RetentionPeriod retentionPeriod;
+
     public LockRuleResponse withRetentionPeriod(RetentionPeriod retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -74,9 +81,11 @@ public class LockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public RuleStatusEnum status;
+
     public LockRuleResponse withStatus(RuleStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public LockRuleResponse(){}
 }

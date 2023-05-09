@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPayeeLocationsResponse {
     
     public String contentType;
+
     public GetPayeeLocationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPayeeLocationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetPayeeLocationsResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetPayeeLocationsResponse {
      */
     
     public org.openapis.openapi.models.shared.PayeeLocationsResponse payeeLocationsResponse;
+
     public GetPayeeLocationsResponse withPayeeLocationsResponse(org.openapis.openapi.models.shared.PayeeLocationsResponse payeeLocationsResponse) {
         this.payeeLocationsResponse = payeeLocationsResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetPayeeLocationsResponse {
     
     
     public Integer statusCode;
+
     public GetPayeeLocationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetPayeeLocationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPayeeLocationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPayeeLocationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

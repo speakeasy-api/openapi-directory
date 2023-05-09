@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTagOptionResponse {
     
     public String contentType;
+
     public UpdateTagOptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTagOptionResponse {
      */
     
     public Object duplicateResourceException;
+
     public UpdateTagOptionResponse withDuplicateResourceException(Object duplicateResourceException) {
         this.duplicateResourceException = duplicateResourceException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTagOptionResponse {
      */
     
     public Object invalidParametersException;
+
     public UpdateTagOptionResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateTagOptionResponse {
     
     
     public Integer statusCode;
+
     public UpdateTagOptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateTagOptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTagOptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateTagOptionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateTagOptionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateTagOptionResponse {
      */
     
     public Object tagOptionNotMigratedException;
+
     public UpdateTagOptionResponse withTagOptionNotMigratedException(Object tagOptionNotMigratedException) {
         this.tagOptionNotMigratedException = tagOptionNotMigratedException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateTagOptionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateTagOptionOutput updateTagOptionOutput;
+
     public UpdateTagOptionResponse withUpdateTagOptionOutput(org.openapis.openapi.models.shared.UpdateTagOptionOutput updateTagOptionOutput) {
         this.updateTagOptionOutput = updateTagOptionOutput;
         return this;
     }
     
+    public UpdateTagOptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

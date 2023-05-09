@@ -15,9 +15,11 @@ public class FilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public FilterCriteria withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
     }
     
+    public FilterCriteria(){}
 }

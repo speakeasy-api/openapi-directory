@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTRejectTransitGatewayMulticastDomainAssociationsResponse {
     
     public byte[] body;
+
     public POSTRejectTransitGatewayMulticastDomainAssociationsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTRejectTransitGatewayMulticastDomainAssociationsResponse {
     
     
     public String contentType;
+
     public POSTRejectTransitGatewayMulticastDomainAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTRejectTransitGatewayMulticastDomainAssociationsResponse {
     
     
     public Integer statusCode;
+
     public POSTRejectTransitGatewayMulticastDomainAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTRejectTransitGatewayMulticastDomainAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTRejectTransitGatewayMulticastDomainAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTRejectTransitGatewayMulticastDomainAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

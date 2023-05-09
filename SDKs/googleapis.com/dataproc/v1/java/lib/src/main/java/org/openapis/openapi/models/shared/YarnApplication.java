@@ -18,6 +18,7 @@ public class YarnApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public YarnApplication withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class YarnApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     public Float progress;
+
     public YarnApplication withProgress(Float progress) {
         this.progress = progress;
         return this;
@@ -40,6 +42,7 @@ public class YarnApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public YarnApplicationStateEnum state;
+
     public YarnApplication withState(YarnApplicationStateEnum state) {
         this.state = state;
         return this;
@@ -51,9 +54,11 @@ public class YarnApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingUrl")
     public String trackingUrl;
+
     public YarnApplication withTrackingUrl(String trackingUrl) {
         this.trackingUrl = trackingUrl;
         return this;
     }
     
+    public YarnApplication(){}
 }

@@ -18,6 +18,7 @@ public class CaOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCa")
     public Boolean isCa;
+
     public CaOptions withIsCa(Boolean isCa) {
         this.isCa = isCa;
         return this;
@@ -29,9 +30,11 @@ public class CaOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxIssuerPathLength")
     public Integer maxIssuerPathLength;
+
     public CaOptions withMaxIssuerPathLength(Integer maxIssuerPathLength) {
         this.maxIssuerPathLength = maxIssuerPathLength;
         return this;
     }
     
+    public CaOptions(){}
 }

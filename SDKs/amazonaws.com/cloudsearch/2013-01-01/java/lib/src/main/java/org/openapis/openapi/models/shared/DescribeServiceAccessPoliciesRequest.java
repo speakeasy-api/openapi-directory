@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeServiceAccessPoliciesRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;DescribeServiceAccessPolicies&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to describe. To show the active configuration and exclude any pending changes, set the &lt;code&gt;Deployed&lt;/code&gt; option to &lt;code&gt;true&lt;/code&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeServiceAccessPoliciesRequest {
     
     public Boolean deployed;
+
     public DescribeServiceAccessPoliciesRequest withDeployed(Boolean deployed) {
         this.deployed = deployed;
         return this;
@@ -19,9 +20,13 @@ public class DescribeServiceAccessPoliciesRequest {
     
     
     public String domainName;
+
     public DescribeServiceAccessPoliciesRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public DescribeServiceAccessPoliciesRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

@@ -12,6 +12,7 @@ public class ExperimentConfigModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playerMongoQuery")
     public String playerMongoQuery;
+
     public ExperimentConfigModel withPlayerMongoQuery(String playerMongoQuery) {
         this.playerMongoQuery = playerMongoQuery;
         return this;
@@ -20,6 +21,7 @@ public class ExperimentConfigModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playerQuery")
     public String playerQuery;
+
     public ExperimentConfigModel withPlayerQuery(String playerQuery) {
         this.playerQuery = playerQuery;
         return this;
@@ -28,9 +30,11 @@ public class ExperimentConfigModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variants")
     public String variants;
+
     public ExperimentConfigModel withVariants(String variants) {
         this.variants = variants;
         return this;
     }
     
+    public ExperimentConfigModel(){}
 }

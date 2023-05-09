@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyVerifiedAccessInstanceLoggingConfigurationResult {
     
     public ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfiguration loggingConfiguration;
+
     public ModifyVerifiedAccessInstanceLoggingConfigurationResult withLoggingConfiguration(ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfiguration loggingConfiguration) {
         this.loggingConfiguration = loggingConfiguration;
         return this;
     }
     
+    public ModifyVerifiedAccessInstanceLoggingConfigurationResult(){}
 }

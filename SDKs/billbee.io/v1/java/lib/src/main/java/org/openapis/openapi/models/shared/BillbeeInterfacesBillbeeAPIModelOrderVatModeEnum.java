@@ -10,17 +10,17 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum - The vat mode of the order
  */
 public enum BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2"),
-    THREE("3"),
-    FOUR("4"),
-    FIVE("5");
+    ZERO(0),
+    ONE(1),
+    TWO(2),
+    THREE(3),
+    FOUR(4),
+    FIVE(5);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum(String value) {
+    private BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum(Integer value) {
         this.value = value;
     }
 }

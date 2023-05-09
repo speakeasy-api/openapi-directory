@@ -15,6 +15,7 @@ public class UpdateBrowserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browserPolicy")
     public String browserPolicy;
+
     public UpdateBrowserSettingsRequestBody withBrowserPolicy(String browserPolicy) {
         this.browserPolicy = browserPolicy;
         return this;
@@ -26,9 +27,11 @@ public class UpdateBrowserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateBrowserSettingsRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public UpdateBrowserSettingsRequestBody(){}
 }

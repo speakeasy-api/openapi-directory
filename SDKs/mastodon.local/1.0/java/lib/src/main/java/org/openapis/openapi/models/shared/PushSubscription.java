@@ -16,6 +16,7 @@ public class PushSubscription {
      */
     @JsonProperty("alerts")
     public java.util.Map<String, Object> alerts;
+
     public PushSubscription withAlerts(java.util.Map<String, Object> alerts) {
         this.alerts = alerts;
         return this;
@@ -26,6 +27,7 @@ public class PushSubscription {
      */
     @JsonProperty("endpoint")
     public String endpoint;
+
     public PushSubscription withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -36,6 +38,7 @@ public class PushSubscription {
      */
     @JsonProperty("id")
     public String id;
+
     public PushSubscription withId(String id) {
         this.id = id;
         return this;
@@ -46,9 +49,16 @@ public class PushSubscription {
      */
     @JsonProperty("server_key")
     public String serverKey;
+
     public PushSubscription withServerKey(String serverKey) {
         this.serverKey = serverKey;
         return this;
     }
     
+    public PushSubscription(@JsonProperty("alerts") java.util.Map<String, Object> alerts, @JsonProperty("endpoint") String endpoint, @JsonProperty("id") String id, @JsonProperty("server_key") String serverKey) {
+        this.alerts = alerts;
+        this.endpoint = endpoint;
+        this.id = id;
+        this.serverKey = serverKey;
+  }
 }

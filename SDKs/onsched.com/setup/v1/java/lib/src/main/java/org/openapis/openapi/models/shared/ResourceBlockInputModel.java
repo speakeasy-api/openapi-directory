@@ -14,6 +14,7 @@ public class ResourceBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allDay")
     public Boolean allDay;
+
     public ResourceBlockInputModel withAllDay(Boolean allDay) {
         this.allDay = allDay;
         return this;
@@ -23,6 +24,7 @@ public class ResourceBlockInputModel {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public ResourceBlockInputModel withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -31,6 +33,7 @@ public class ResourceBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public Integer endTime;
+
     public ResourceBlockInputModel withEndTime(Integer endTime) {
         this.endTime = endTime;
         return this;
@@ -39,6 +42,7 @@ public class ResourceBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ResourceBlockInputModel withReason(String reason) {
         this.reason = reason;
         return this;
@@ -47,6 +51,7 @@ public class ResourceBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeat")
     public RepeatInputModel repeat;
+
     public ResourceBlockInputModel withRepeat(RepeatInputModel repeat) {
         this.repeat = repeat;
         return this;
@@ -55,6 +60,7 @@ public class ResourceBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeats")
     public Boolean repeats;
+
     public ResourceBlockInputModel withRepeats(Boolean repeats) {
         this.repeats = repeats;
         return this;
@@ -64,6 +70,7 @@ public class ResourceBlockInputModel {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public ResourceBlockInputModel withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -72,9 +79,11 @@ public class ResourceBlockInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public Integer startTime;
+
     public ResourceBlockInputModel withStartTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ResourceBlockInputModel(){}
 }

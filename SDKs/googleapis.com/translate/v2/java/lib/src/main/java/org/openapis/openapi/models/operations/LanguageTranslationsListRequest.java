@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LanguageTranslationsListRequest {
@@ -12,6 +13,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public LanguageTranslationsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public LanguageTranslationsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public LanguageTranslationsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bearer_token")
     public String bearerToken;
+
     public LanguageTranslationsListRequest withBearerToken(String bearerToken) {
         this.bearerToken = bearerToken;
         return this;
@@ -52,6 +57,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public LanguageTranslationsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cid")
     public String[] cid;
+
     public LanguageTranslationsListRequest withCid(String[] cid) {
         this.cid = cid;
         return this;
@@ -72,6 +79,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public LanguageTranslationsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -83,6 +91,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public LanguageTranslationsListFormatEnum format;
+
     public LanguageTranslationsListRequest withFormat(LanguageTranslationsListFormatEnum format) {
         this.format = format;
         return this;
@@ -93,6 +102,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public LanguageTranslationsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -104,6 +114,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
     public String model;
+
     public LanguageTranslationsListRequest withModel(String model) {
         this.model = model;
         return this;
@@ -114,6 +125,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public LanguageTranslationsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -124,6 +136,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pp")
     public Boolean pp;
+
     public LanguageTranslationsListRequest withPp(Boolean pp) {
         this.pp = pp;
         return this;
@@ -134,6 +147,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public LanguageTranslationsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -145,6 +159,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String[] q;
+
     public LanguageTranslationsListRequest withQ(String[] q) {
         this.q = q;
         return this;
@@ -155,6 +170,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public LanguageTranslationsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -168,6 +184,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public LanguageTranslationsListRequest withSource(String source) {
         this.source = source;
         return this;
@@ -179,6 +196,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target")
     public String target;
+
     public LanguageTranslationsListRequest withTarget(String target) {
         this.target = target;
         return this;
@@ -189,6 +207,7 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public LanguageTranslationsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -199,9 +218,14 @@ public class LanguageTranslationsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public LanguageTranslationsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public LanguageTranslationsListRequest(@JsonProperty("q") String[] q, @JsonProperty("target") String target) {
+        this.q = q;
+        this.target = target;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveNotificationChannelResponse {
     
     public String contentType;
+
     public RemoveNotificationChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemoveNotificationChannelResponse {
      */
     
     public Object internalServerException;
+
     public RemoveNotificationChannelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class RemoveNotificationChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.RemoveNotificationChannelResponse removeNotificationChannelResponse;
+
     public RemoveNotificationChannelResponse withRemoveNotificationChannelResponse(org.openapis.openapi.models.shared.RemoveNotificationChannelResponse removeNotificationChannelResponse) {
         this.removeNotificationChannelResponse = removeNotificationChannelResponse;
         return this;
@@ -39,6 +43,7 @@ public class RemoveNotificationChannelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RemoveNotificationChannelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class RemoveNotificationChannelResponse {
     
     
     public Integer statusCode;
+
     public RemoveNotificationChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class RemoveNotificationChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveNotificationChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class RemoveNotificationChannelResponse {
      */
     
     public Object throttlingException;
+
     public RemoveNotificationChannelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class RemoveNotificationChannelResponse {
      */
     
     public Object validationException;
+
     public RemoveNotificationChannelResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RemoveNotificationChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

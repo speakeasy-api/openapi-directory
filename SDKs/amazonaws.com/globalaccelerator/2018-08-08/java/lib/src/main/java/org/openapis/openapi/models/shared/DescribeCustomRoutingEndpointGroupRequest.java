@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeCustomRoutingEndpointGroupRequest {
     @JsonProperty("EndpointGroupArn")
     public String endpointGroupArn;
+
     public DescribeCustomRoutingEndpointGroupRequest withEndpointGroupArn(String endpointGroupArn) {
         this.endpointGroupArn = endpointGroupArn;
         return this;
     }
     
+    public DescribeCustomRoutingEndpointGroupRequest(@JsonProperty("EndpointGroupArn") String endpointGroupArn) {
+        this.endpointGroupArn = endpointGroupArn;
+  }
 }

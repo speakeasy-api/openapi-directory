@@ -20,9 +20,11 @@ public class ListData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContinueWatching")
     public ContinueWatchingListData continueWatching;
+
     public ListData withContinueWatching(ContinueWatchingListData continueWatching) {
         this.continueWatching = continueWatching;
         return this;
     }
     
+    public ListData(){}
 }

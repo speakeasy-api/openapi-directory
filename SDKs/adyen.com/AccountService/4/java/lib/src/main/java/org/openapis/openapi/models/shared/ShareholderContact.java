@@ -12,6 +12,7 @@ public class ShareholderContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public ViasAddress address;
+
     public ShareholderContact withAddress(ViasAddress address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class ShareholderContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ShareholderContact withEmail(String email) {
         this.email = email;
         return this;
@@ -35,6 +37,7 @@ public class ShareholderContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullPhoneNumber")
     public String fullPhoneNumber;
+
     public ShareholderContact withFullPhoneNumber(String fullPhoneNumber) {
         this.fullPhoneNumber = fullPhoneNumber;
         return this;
@@ -48,6 +51,7 @@ public class ShareholderContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTitle")
     public String jobTitle;
+
     public ShareholderContact withJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
         return this;
@@ -56,6 +60,7 @@ public class ShareholderContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public ViasName name;
+
     public ShareholderContact withName(ViasName name) {
         this.name = name;
         return this;
@@ -64,6 +69,7 @@ public class ShareholderContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalData")
     public ViasPersonalData personalData;
+
     public ShareholderContact withPersonalData(ViasPersonalData personalData) {
         this.personalData = personalData;
         return this;
@@ -72,6 +78,7 @@ public class ShareholderContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public ViasPhoneNumber phoneNumber;
+
     public ShareholderContact withPhoneNumber(ViasPhoneNumber phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -91,6 +98,7 @@ public class ShareholderContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareholderCode")
     public String shareholderCode;
+
     public ShareholderContact withShareholderCode(String shareholderCode) {
         this.shareholderCode = shareholderCode;
         return this;
@@ -108,6 +116,7 @@ public class ShareholderContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareholderType")
     public ShareholderContactShareholderTypeEnum shareholderType;
+
     public ShareholderContact withShareholderType(ShareholderContactShareholderTypeEnum shareholderType) {
         this.shareholderType = shareholderType;
         return this;
@@ -119,9 +128,11 @@ public class ShareholderContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webAddress")
     public String webAddress;
+
     public ShareholderContact withWebAddress(String webAddress) {
         this.webAddress = webAddress;
         return this;
     }
     
+    public ShareholderContact(){}
 }

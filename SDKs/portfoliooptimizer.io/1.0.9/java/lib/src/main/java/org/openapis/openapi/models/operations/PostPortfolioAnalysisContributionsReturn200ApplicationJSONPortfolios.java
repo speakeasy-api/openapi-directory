@@ -15,6 +15,7 @@ public class PostPortfolioAnalysisContributionsReturn200ApplicationJSONPortfolio
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsGroupsReturnContributions")
     public Double[] assetsGroupsReturnContributions;
+
     public PostPortfolioAnalysisContributionsReturn200ApplicationJSONPortfolios withAssetsGroupsReturnContributions(Double[] assetsGroupsReturnContributions) {
         this.assetsGroupsReturnContributions = assetsGroupsReturnContributions;
         return this;
@@ -25,9 +26,13 @@ public class PostPortfolioAnalysisContributionsReturn200ApplicationJSONPortfolio
      */
     @JsonProperty("assetsReturnContributions")
     public Double[] assetsReturnContributions;
+
     public PostPortfolioAnalysisContributionsReturn200ApplicationJSONPortfolios withAssetsReturnContributions(Double[] assetsReturnContributions) {
         this.assetsReturnContributions = assetsReturnContributions;
         return this;
     }
     
+    public PostPortfolioAnalysisContributionsReturn200ApplicationJSONPortfolios(@JsonProperty("assetsReturnContributions") Double[] assetsReturnContributions) {
+        this.assetsReturnContributions = assetsReturnContributions;
+  }
 }

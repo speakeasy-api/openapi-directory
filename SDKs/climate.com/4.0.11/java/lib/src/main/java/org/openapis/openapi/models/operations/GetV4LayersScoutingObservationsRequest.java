@@ -13,6 +13,7 @@ public class GetV4LayersScoutingObservationsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Limit")
     public Integer xLimit;
+
     public GetV4LayersScoutingObservationsRequest withXLimit(Integer xLimit) {
         this.xLimit = xLimit;
         return this;
@@ -23,6 +24,7 @@ public class GetV4LayersScoutingObservationsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Next-Token")
     public String xNextToken;
+
     public GetV4LayersScoutingObservationsRequest withXNextToken(String xNextToken) {
         this.xNextToken = xNextToken;
         return this;
@@ -33,6 +35,7 @@ public class GetV4LayersScoutingObservationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurredAfter")
     public OffsetDateTime occurredAfter;
+
     public GetV4LayersScoutingObservationsRequest withOccurredAfter(OffsetDateTime occurredAfter) {
         this.occurredAfter = occurredAfter;
         return this;
@@ -43,9 +46,11 @@ public class GetV4LayersScoutingObservationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurredBefore")
     public OffsetDateTime occurredBefore;
+
     public GetV4LayersScoutingObservationsRequest withOccurredBefore(OffsetDateTime occurredBefore) {
         this.occurredBefore = occurredBefore;
         return this;
     }
     
+    public GetV4LayersScoutingObservationsRequest(){}
 }

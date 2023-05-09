@@ -12,6 +12,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Position withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Position withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public Position withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public Position(){}
 }

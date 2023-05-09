@@ -15,6 +15,7 @@ public class PutResourcePolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BypassPolicyLockoutCheck")
     public Boolean bypassPolicyLockoutCheck;
+
     public PutResourcePolicyRequestBody withBypassPolicyLockoutCheck(Boolean bypassPolicyLockoutCheck) {
         this.bypassPolicyLockoutCheck = bypassPolicyLockoutCheck;
         return this;
@@ -25,6 +26,7 @@ public class PutResourcePolicyRequestBody {
      */
     @JsonProperty("PolicyDocument")
     public String policyDocument;
+
     public PutResourcePolicyRequestBody withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -35,6 +37,7 @@ public class PutResourcePolicyRequestBody {
      */
     @JsonProperty("PolicyName")
     public String policyName;
+
     public PutResourcePolicyRequestBody withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -46,9 +49,14 @@ public class PutResourcePolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyRevisionId")
     public String policyRevisionId;
+
     public PutResourcePolicyRequestBody withPolicyRevisionId(String policyRevisionId) {
         this.policyRevisionId = policyRevisionId;
         return this;
     }
     
+    public PutResourcePolicyRequestBody(@JsonProperty("PolicyDocument") String policyDocument, @JsonProperty("PolicyName") String policyName) {
+        this.policyDocument = policyDocument;
+        this.policyName = policyName;
+  }
 }

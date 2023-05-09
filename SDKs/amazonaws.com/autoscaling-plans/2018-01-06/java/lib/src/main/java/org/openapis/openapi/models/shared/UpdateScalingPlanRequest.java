@@ -12,6 +12,7 @@ public class UpdateScalingPlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationSource")
     public ApplicationSource applicationSource;
+
     public UpdateScalingPlanRequest withApplicationSource(ApplicationSource applicationSource) {
         this.applicationSource = applicationSource;
         return this;
@@ -20,6 +21,7 @@ public class UpdateScalingPlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalingInstructions")
     public ScalingInstruction[] scalingInstructions;
+
     public UpdateScalingPlanRequest withScalingInstructions(ScalingInstruction[] scalingInstructions) {
         this.scalingInstructions = scalingInstructions;
         return this;
@@ -27,6 +29,7 @@ public class UpdateScalingPlanRequest {
     
     @JsonProperty("ScalingPlanName")
     public String scalingPlanName;
+
     public UpdateScalingPlanRequest withScalingPlanName(String scalingPlanName) {
         this.scalingPlanName = scalingPlanName;
         return this;
@@ -34,9 +37,14 @@ public class UpdateScalingPlanRequest {
     
     @JsonProperty("ScalingPlanVersion")
     public Long scalingPlanVersion;
+
     public UpdateScalingPlanRequest withScalingPlanVersion(Long scalingPlanVersion) {
         this.scalingPlanVersion = scalingPlanVersion;
         return this;
     }
     
+    public UpdateScalingPlanRequest(@JsonProperty("ScalingPlanName") String scalingPlanName, @JsonProperty("ScalingPlanVersion") Long scalingPlanVersion) {
+        this.scalingPlanName = scalingPlanName;
+        this.scalingPlanVersion = scalingPlanVersion;
+  }
 }

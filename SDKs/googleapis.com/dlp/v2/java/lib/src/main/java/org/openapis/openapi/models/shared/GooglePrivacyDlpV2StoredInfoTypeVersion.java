@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2StoredInfoTypeVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public GooglePrivacyDlpV2StoredInfoTypeConfig config;
+
     public GooglePrivacyDlpV2StoredInfoTypeVersion withConfig(GooglePrivacyDlpV2StoredInfoTypeConfig config) {
         this.config = config;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2StoredInfoTypeVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GooglePrivacyDlpV2StoredInfoTypeVersion withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2StoredInfoTypeVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public GooglePrivacyDlpV2Error[] errors;
+
     public GooglePrivacyDlpV2StoredInfoTypeVersion withErrors(GooglePrivacyDlpV2Error[] errors) {
         this.errors = errors;
         return this;
@@ -51,6 +54,7 @@ public class GooglePrivacyDlpV2StoredInfoTypeVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum state;
+
     public GooglePrivacyDlpV2StoredInfoTypeVersion withState(GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum state) {
         this.state = state;
         return this;
@@ -62,9 +66,11 @@ public class GooglePrivacyDlpV2StoredInfoTypeVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public GooglePrivacyDlpV2StoredInfoTypeStats stats;
+
     public GooglePrivacyDlpV2StoredInfoTypeVersion withStats(GooglePrivacyDlpV2StoredInfoTypeStats stats) {
         this.stats = stats;
         return this;
     }
     
+    public GooglePrivacyDlpV2StoredInfoTypeVersion(){}
 }

@@ -18,6 +18,7 @@ public class DocumentTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public String document;
+
     public DocumentTransform withDocument(String document) {
         this.document = document;
         return this;
@@ -29,9 +30,11 @@ public class DocumentTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldTransforms")
     public FieldTransform[] fieldTransforms;
+
     public DocumentTransform withFieldTransforms(FieldTransform[] fieldTransforms) {
         this.fieldTransforms = fieldTransforms;
         return this;
     }
     
+    public DocumentTransform(){}
 }

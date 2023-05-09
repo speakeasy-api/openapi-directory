@@ -18,6 +18,7 @@ public class SoftwareRecipeStepExecFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedExitCodes")
     public Integer[] allowedExitCodes;
+
     public SoftwareRecipeStepExecFile withAllowedExitCodes(Integer[] allowedExitCodes) {
         this.allowedExitCodes = allowedExitCodes;
         return this;
@@ -29,6 +30,7 @@ public class SoftwareRecipeStepExecFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public String[] args;
+
     public SoftwareRecipeStepExecFile withArgs(String[] args) {
         this.args = args;
         return this;
@@ -40,6 +42,7 @@ public class SoftwareRecipeStepExecFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactId")
     public String artifactId;
+
     public SoftwareRecipeStepExecFile withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -51,9 +54,11 @@ public class SoftwareRecipeStepExecFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localPath")
     public String localPath;
+
     public SoftwareRecipeStepExecFile withLocalPath(String localPath) {
         this.localPath = localPath;
         return this;
     }
     
+    public SoftwareRecipeStepExecFile(){}
 }

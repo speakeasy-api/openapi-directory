@@ -68,4 +68,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/LanguagesResource.java
 lib/src/main/java/org/openapis/openapi/models/shared/TranslationsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TranslationsResource.java
 lib/src/main/java/org/openapis/openapi/models/shared/TranslateTextRequest.java
+docs/sdk/README.md
+docs/detections/README.md
+docs/languages/README.md
+docs/translations/README.md
 USAGE.md

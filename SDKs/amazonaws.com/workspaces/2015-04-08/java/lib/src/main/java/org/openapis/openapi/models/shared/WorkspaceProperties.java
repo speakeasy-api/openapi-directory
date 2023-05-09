@@ -15,6 +15,7 @@ public class WorkspaceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeTypeName")
     public ComputeEnum computeTypeName;
+
     public WorkspaceProperties withComputeTypeName(ComputeEnum computeTypeName) {
         this.computeTypeName = computeTypeName;
         return this;
@@ -23,6 +24,7 @@ public class WorkspaceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocols")
     public ProtocolEnum[] protocols;
+
     public WorkspaceProperties withProtocols(ProtocolEnum[] protocols) {
         this.protocols = protocols;
         return this;
@@ -31,6 +33,7 @@ public class WorkspaceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootVolumeSizeGib")
     public Long rootVolumeSizeGib;
+
     public WorkspaceProperties withRootVolumeSizeGib(Long rootVolumeSizeGib) {
         this.rootVolumeSizeGib = rootVolumeSizeGib;
         return this;
@@ -39,6 +42,7 @@ public class WorkspaceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunningMode")
     public RunningModeEnum runningMode;
+
     public WorkspaceProperties withRunningMode(RunningModeEnum runningMode) {
         this.runningMode = runningMode;
         return this;
@@ -47,6 +51,7 @@ public class WorkspaceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunningModeAutoStopTimeoutInMinutes")
     public Long runningModeAutoStopTimeoutInMinutes;
+
     public WorkspaceProperties withRunningModeAutoStopTimeoutInMinutes(Long runningModeAutoStopTimeoutInMinutes) {
         this.runningModeAutoStopTimeoutInMinutes = runningModeAutoStopTimeoutInMinutes;
         return this;
@@ -55,9 +60,11 @@ public class WorkspaceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserVolumeSizeGib")
     public Long userVolumeSizeGib;
+
     public WorkspaceProperties withUserVolumeSizeGib(Long userVolumeSizeGib) {
         this.userVolumeSizeGib = userVolumeSizeGib;
         return this;
     }
     
+    public WorkspaceProperties(){}
 }

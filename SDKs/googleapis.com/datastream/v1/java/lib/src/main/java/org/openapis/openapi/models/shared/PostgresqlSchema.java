@@ -18,6 +18,7 @@ public class PostgresqlSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postgresqlTables")
     public PostgresqlTable[] postgresqlTables;
+
     public PostgresqlSchema withPostgresqlTables(PostgresqlTable[] postgresqlTables) {
         this.postgresqlTables = postgresqlTables;
         return this;
@@ -29,9 +30,11 @@ public class PostgresqlSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public PostgresqlSchema withSchema(String schema) {
         this.schema = schema;
         return this;
     }
     
+    public PostgresqlSchema(){}
 }

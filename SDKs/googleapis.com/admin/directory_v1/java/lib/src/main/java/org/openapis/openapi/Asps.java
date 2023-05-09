@@ -58,10 +58,8 @@ public class Asps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryAspsDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryAspsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DirectoryAspsDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryAspsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class Asps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryAspsGetResponse res = new org.openapis.openapi.models.operations.DirectoryAspsGetResponse() {{
+        org.openapis.openapi.models.operations.DirectoryAspsGetResponse res = new org.openapis.openapi.models.operations.DirectoryAspsGetResponse(contentType, httpRes.statusCode()) {{
             asp = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +140,9 @@ public class Asps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryAspsListResponse res = new org.openapis.openapi.models.operations.DirectoryAspsListResponse() {{
+        org.openapis.openapi.models.operations.DirectoryAspsListResponse res = new org.openapis.openapi.models.operations.DirectoryAspsListResponse(contentType, httpRes.statusCode()) {{
             asps = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

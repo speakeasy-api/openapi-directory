@@ -14,7 +14,7 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * TrialSummary - A summary of the properties of a trial. To get the complete set of properties, call the &lt;a&gt;DescribeTrial&lt;/a&gt; API and provide the &lt;code&gt;TrialName&lt;/code&gt;.
+ * TrialSummary - A summary of the properties of a trial. To get the complete set of properties, call the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeTrial.html"&gt;DescribeTrial&lt;/a&gt; API and provide the &lt;code&gt;TrialName&lt;/code&gt;.
  */
 public class TrialSummary {
     @JsonInclude(Include.NON_ABSENT)
@@ -22,6 +22,7 @@ public class TrialSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public TrialSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class TrialSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public TrialSummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class TrialSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public TrialSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -48,6 +51,7 @@ public class TrialSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialArn")
     public String trialArn;
+
     public TrialSummary withTrialArn(String trialArn) {
         this.trialArn = trialArn;
         return this;
@@ -56,6 +60,7 @@ public class TrialSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialName")
     public String trialName;
+
     public TrialSummary withTrialName(String trialName) {
         this.trialName = trialName;
         return this;
@@ -67,9 +72,11 @@ public class TrialSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialSource")
     public TrialSource trialSource;
+
     public TrialSummary withTrialSource(TrialSource trialSource) {
         this.trialSource = trialSource;
         return this;
     }
     
+    public TrialSummary(){}
 }

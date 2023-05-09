@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETAccessKeyInfoRequest {
@@ -12,6 +13,7 @@ public class GETGETAccessKeyInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccessKeyId")
     public String accessKeyId;
+
     public GETGETAccessKeyInfoRequest withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -19,6 +21,7 @@ public class GETGETAccessKeyInfoRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETAccessKeyInfoActionEnum action;
+
     public GETGETAccessKeyInfoRequest withAction(GETGETAccessKeyInfoActionEnum action) {
         this.action = action;
         return this;
@@ -26,6 +29,7 @@ public class GETGETAccessKeyInfoRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETAccessKeyInfoVersionEnum version;
+
     public GETGETAccessKeyInfoRequest withVersion(GETGETAccessKeyInfoVersionEnum version) {
         this.version = version;
         return this;
@@ -33,6 +37,7 @@ public class GETGETAccessKeyInfoRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETAccessKeyInfoRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -40,6 +45,7 @@ public class GETGETAccessKeyInfoRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETAccessKeyInfoRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -47,6 +53,7 @@ public class GETGETAccessKeyInfoRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETAccessKeyInfoRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -54,6 +61,7 @@ public class GETGETAccessKeyInfoRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETAccessKeyInfoRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -61,6 +69,7 @@ public class GETGETAccessKeyInfoRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETAccessKeyInfoRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -68,6 +77,7 @@ public class GETGETAccessKeyInfoRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETAccessKeyInfoRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -75,9 +85,15 @@ public class GETGETAccessKeyInfoRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETAccessKeyInfoRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETAccessKeyInfoRequest(@JsonProperty("AccessKeyId") String accessKeyId, @JsonProperty("Action") GETGETAccessKeyInfoActionEnum action, @JsonProperty("Version") GETGETAccessKeyInfoVersionEnum version) {
+        this.accessKeyId = accessKeyId;
+        this.action = action;
+        this.version = version;
+  }
 }

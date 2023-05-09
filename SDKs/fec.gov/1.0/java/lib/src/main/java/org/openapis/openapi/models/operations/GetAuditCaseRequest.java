@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAuditCaseRequest {
@@ -13,6 +14,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetAuditCaseRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -24,6 +26,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=audit_case_id")
     public String[] auditCaseId;
+
     public GetAuditCaseRequest withAuditCaseId(String[] auditCaseId) {
         this.auditCaseId = auditCaseId;
         return this;
@@ -35,6 +38,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=audit_id")
     public Integer[] auditId;
+
     public GetAuditCaseRequest withAuditId(Integer[] auditId) {
         this.auditId = auditId;
         return this;
@@ -43,10 +47,17 @@ public class GetAuditCaseRequest {
     /**
      * A unique identifier assigned to each candidate registered with the FEC.
      * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * First character indicates office - [P]residential, [H]ouse, [S]enate].
+     * Second character is the last digit of the two-year period the ID was created.
+     * Third and fourth is the candidate state. Presidential IDs don't have state.
+     * Fifth and sixth is the district when the candidate first ran. This does not change if the
+     * candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+     * The rest is sequence.
      * 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
     public String[] candidateId;
+
     public GetAuditCaseRequest withCandidateId(String[] candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -64,6 +75,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_designation")
     public String committeeDesignation;
+
     public GetAuditCaseRequest withCommitteeDesignation(String committeeDesignation) {
         this.committeeDesignation = committeeDesignation;
         return this;
@@ -75,6 +87,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
     public String[] committeeId;
+
     public GetAuditCaseRequest withCommitteeId(String[] committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -102,6 +115,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_type")
     public String[] committeeType;
+
     public GetAuditCaseRequest withCommitteeType(String[] committeeType) {
         this.committeeType = committeeType;
         return this;
@@ -117,6 +131,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
     public Integer[] cycle;
+
     public GetAuditCaseRequest withCycle(Integer[] cycle) {
         this.cycle = cycle;
         return this;
@@ -132,6 +147,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_election_cycle")
     public Integer maxElectionCycle;
+
     public GetAuditCaseRequest withMaxElectionCycle(Integer maxElectionCycle) {
         this.maxElectionCycle = maxElectionCycle;
         return this;
@@ -147,6 +163,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_election_cycle")
     public Integer minElectionCycle;
+
     public GetAuditCaseRequest withMinElectionCycle(Integer minElectionCycle) {
         this.minElectionCycle = minElectionCycle;
         return this;
@@ -157,6 +174,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetAuditCaseRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -167,6 +185,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetAuditCaseRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -178,6 +197,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=primary_category_id")
     public String primaryCategoryId;
+
     public GetAuditCaseRequest withPrimaryCategoryId(String primaryCategoryId) {
         this.primaryCategoryId = primaryCategoryId;
         return this;
@@ -188,6 +208,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String[] q;
+
     public GetAuditCaseRequest withQ(String[] q) {
         this.q = q;
         return this;
@@ -198,6 +219,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=qq")
     public String[] qq;
+
     public GetAuditCaseRequest withQq(String[] qq) {
         this.qq = qq;
         return this;
@@ -209,6 +231,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String[] sort;
+
     public GetAuditCaseRequest withSort(String[] sort) {
         this.sort = sort;
         return this;
@@ -219,6 +242,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetAuditCaseRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -229,6 +253,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetAuditCaseRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -239,6 +264,7 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetAuditCaseRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
@@ -250,9 +276,13 @@ public class GetAuditCaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub_category_id")
     public String subCategoryId;
+
     public GetAuditCaseRequest withSubCategoryId(String subCategoryId) {
         this.subCategoryId = subCategoryId;
         return this;
     }
     
+    public GetAuditCaseRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

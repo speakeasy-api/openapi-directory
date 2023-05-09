@@ -18,9 +18,11 @@ public class GoogleFirebaseAppcheckV1ExchangeRecaptchaEnterpriseTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recaptchaEnterpriseToken")
     public String recaptchaEnterpriseToken;
+
     public GoogleFirebaseAppcheckV1ExchangeRecaptchaEnterpriseTokenRequest withRecaptchaEnterpriseToken(String recaptchaEnterpriseToken) {
         this.recaptchaEnterpriseToken = recaptchaEnterpriseToken;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1ExchangeRecaptchaEnterpriseTokenRequest(){}
 }

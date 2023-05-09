@@ -20,6 +20,7 @@ public class SubscriptionDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("communicationMethod")
     public String communicationMethod;
+
     public SubscriptionDefinition withCommunicationMethod(String communicationMethod) {
         this.communicationMethod = communicationMethod;
         return this;
@@ -32,6 +33,7 @@ public class SubscriptionDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public SubscriptionDefinition withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -42,6 +44,7 @@ public class SubscriptionDefinition {
      */
     @JsonProperty("description")
     public String description;
+
     public SubscriptionDefinition withDescription(String description) {
         this.description = description;
         return this;
@@ -52,6 +55,7 @@ public class SubscriptionDefinition {
      */
     @JsonProperty("id")
     public String id;
+
     public SubscriptionDefinition withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class SubscriptionDefinition {
      */
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public SubscriptionDefinition withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -72,6 +77,7 @@ public class SubscriptionDefinition {
      */
     @JsonProperty("isDefault")
     public Boolean isDefault;
+
     public SubscriptionDefinition withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -82,6 +88,7 @@ public class SubscriptionDefinition {
      */
     @JsonProperty("isInternal")
     public Boolean isInternal;
+
     public SubscriptionDefinition withIsInternal(Boolean isInternal) {
         this.isInternal = isInternal;
         return this;
@@ -92,6 +99,7 @@ public class SubscriptionDefinition {
      */
     @JsonProperty("name")
     public String name;
+
     public SubscriptionDefinition withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +111,7 @@ public class SubscriptionDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purpose")
     public String purpose;
+
     public SubscriptionDefinition withPurpose(String purpose) {
         this.purpose = purpose;
         return this;
@@ -115,9 +124,20 @@ public class SubscriptionDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public SubscriptionDefinition withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public SubscriptionDefinition(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("description") String description, @JsonProperty("id") String id, @JsonProperty("isActive") Boolean isActive, @JsonProperty("isDefault") Boolean isDefault, @JsonProperty("isInternal") Boolean isInternal, @JsonProperty("name") String name, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.createdAt = createdAt;
+        this.description = description;
+        this.id = id;
+        this.isActive = isActive;
+        this.isDefault = isDefault;
+        this.isInternal = isInternal;
+        this.name = name;
+        this.updatedAt = updatedAt;
+  }
 }

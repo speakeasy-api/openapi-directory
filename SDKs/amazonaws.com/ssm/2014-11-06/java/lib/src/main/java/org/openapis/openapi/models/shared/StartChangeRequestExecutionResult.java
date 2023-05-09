@@ -15,9 +15,11 @@ public class StartChangeRequestExecutionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomationExecutionId")
     public String automationExecutionId;
+
     public StartChangeRequestExecutionResult withAutomationExecutionId(String automationExecutionId) {
         this.automationExecutionId = automationExecutionId;
         return this;
     }
     
+    public StartChangeRequestExecutionResult(){}
 }

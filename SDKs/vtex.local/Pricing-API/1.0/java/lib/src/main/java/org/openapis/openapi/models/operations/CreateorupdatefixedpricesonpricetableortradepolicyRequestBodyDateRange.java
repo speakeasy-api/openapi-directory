@@ -15,6 +15,7 @@ public class CreateorupdatefixedpricesonpricetableortradepolicyRequestBodyDateRa
      */
     @JsonProperty("from")
     public String from;
+
     public CreateorupdatefixedpricesonpricetableortradepolicyRequestBodyDateRange withFrom(String from) {
         this.from = from;
         return this;
@@ -25,9 +26,14 @@ public class CreateorupdatefixedpricesonpricetableortradepolicyRequestBodyDateRa
      */
     @JsonProperty("to")
     public String to;
+
     public CreateorupdatefixedpricesonpricetableortradepolicyRequestBodyDateRange withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public CreateorupdatefixedpricesonpricetableortradepolicyRequestBodyDateRange(@JsonProperty("from") String from, @JsonProperty("to") String to) {
+        this.from = from;
+        this.to = to;
+  }
 }

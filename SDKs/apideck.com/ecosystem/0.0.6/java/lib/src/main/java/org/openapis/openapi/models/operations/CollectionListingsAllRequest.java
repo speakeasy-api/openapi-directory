@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionListingsAllRequest {
@@ -12,6 +13,7 @@ public class CollectionListingsAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public CollectionListingsAllRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -19,6 +21,7 @@ public class CollectionListingsAllRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ecosystem_id")
     public String ecosystemId;
+
     public CollectionListingsAllRequest withEcosystemId(String ecosystemId) {
         this.ecosystemId = ecosystemId;
         return this;
@@ -29,6 +32,7 @@ public class CollectionListingsAllRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public CollectionListingsAllRequest withId(String id) {
         this.id = id;
         return this;
@@ -39,9 +43,14 @@ public class CollectionListingsAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public CollectionListingsAllRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public CollectionListingsAllRequest(@JsonProperty("ecosystem_id") String ecosystemId, @JsonProperty("id") String id) {
+        this.ecosystemId = ecosystemId;
+        this.id = id;
+  }
 }

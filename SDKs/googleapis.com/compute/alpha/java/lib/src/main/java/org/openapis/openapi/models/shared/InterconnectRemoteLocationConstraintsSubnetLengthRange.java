@@ -12,6 +12,7 @@ public class InterconnectRemoteLocationConstraintsSubnetLengthRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public Integer max;
+
     public InterconnectRemoteLocationConstraintsSubnetLengthRange withMax(Integer max) {
         this.max = max;
         return this;
@@ -20,9 +21,11 @@ public class InterconnectRemoteLocationConstraintsSubnetLengthRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
     public Integer min;
+
     public InterconnectRemoteLocationConstraintsSubnetLengthRange withMin(Integer min) {
         this.min = min;
         return this;
     }
     
+    public InterconnectRemoteLocationConstraintsSubnetLengthRange(){}
 }

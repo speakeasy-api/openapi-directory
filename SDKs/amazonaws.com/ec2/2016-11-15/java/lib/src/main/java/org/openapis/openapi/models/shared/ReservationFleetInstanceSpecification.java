@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservationFleetInstanceSpecification {
     
     public String availabilityZone;
+
     public ReservationFleetInstanceSpecification withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class ReservationFleetInstanceSpecification {
     
     
     public String availabilityZoneId;
+
     public ReservationFleetInstanceSpecification withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -26,6 +28,7 @@ public class ReservationFleetInstanceSpecification {
     
     
     public Boolean ebsOptimized;
+
     public ReservationFleetInstanceSpecification withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -33,6 +36,7 @@ public class ReservationFleetInstanceSpecification {
     
     
     public CapacityReservationInstancePlatformEnum instancePlatform;
+
     public ReservationFleetInstanceSpecification withInstancePlatform(CapacityReservationInstancePlatformEnum instancePlatform) {
         this.instancePlatform = instancePlatform;
         return this;
@@ -40,6 +44,7 @@ public class ReservationFleetInstanceSpecification {
     
     
     public InstanceTypeEnum instanceType;
+
     public ReservationFleetInstanceSpecification withInstanceType(InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -47,6 +52,7 @@ public class ReservationFleetInstanceSpecification {
     
     
     public Long priority;
+
     public ReservationFleetInstanceSpecification withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -54,9 +60,11 @@ public class ReservationFleetInstanceSpecification {
     
     
     public Double weight;
+
     public ReservationFleetInstanceSpecification withWeight(Double weight) {
         this.weight = weight;
         return this;
     }
     
+    public ReservationFleetInstanceSpecification(){}
 }

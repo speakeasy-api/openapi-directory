@@ -15,6 +15,7 @@ public class AwsIamAccessKeySessionContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public AwsIamAccessKeySessionContextAttributes attributes;
+
     public AwsIamAccessKeySessionContext withAttributes(AwsIamAccessKeySessionContextAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -23,9 +24,11 @@ public class AwsIamAccessKeySessionContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionIssuer")
     public AwsIamAccessKeySessionContextSessionIssuer sessionIssuer;
+
     public AwsIamAccessKeySessionContext withSessionIssuer(AwsIamAccessKeySessionContextSessionIssuer sessionIssuer) {
         this.sessionIssuer = sessionIssuer;
         return this;
     }
     
+    public AwsIamAccessKeySessionContext(){}
 }

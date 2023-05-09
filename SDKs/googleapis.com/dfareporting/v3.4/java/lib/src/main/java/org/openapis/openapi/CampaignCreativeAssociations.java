@@ -61,11 +61,9 @@ public class CampaignCreativeAssociations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsInsertResponse(contentType, httpRes.statusCode()) {{
             campaignCreativeAssociation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class CampaignCreativeAssociations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsListResponse res = new org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsListResponse res = new org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsListResponse(contentType, httpRes.statusCode()) {{
             campaignCreativeAssociationsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

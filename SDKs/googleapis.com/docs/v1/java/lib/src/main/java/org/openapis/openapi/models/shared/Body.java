@@ -18,9 +18,11 @@ public class Body {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public StructuralElement[] content;
+
     public Body withContent(StructuralElement[] content) {
         this.content = content;
         return this;
     }
     
+    public Body(){}
 }

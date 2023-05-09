@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CurrencyCode {
     @JsonProperty("BRL")
     public Brl brl;
+
     public CurrencyCode withBrl(Brl brl) {
         this.brl = brl;
         return this;
     }
     
+    public CurrencyCode(@JsonProperty("BRL") Brl brl) {
+        this.brl = brl;
+  }
 }

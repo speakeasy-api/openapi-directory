@@ -15,6 +15,7 @@ public class UpsertAccount400ApplicationJSON {
      */
     @JsonProperty("errors")
     public UpsertAccount400ApplicationJSONErrors errors;
+
     public UpsertAccount400ApplicationJSON withErrors(UpsertAccount400ApplicationJSONErrors errors) {
         this.errors = errors;
         return this;
@@ -22,6 +23,7 @@ public class UpsertAccount400ApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public UpsertAccount400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -29,9 +31,15 @@ public class UpsertAccount400ApplicationJSON {
     
     @JsonProperty("meta")
     public UpsertAccount400ApplicationJSONMeta meta;
+
     public UpsertAccount400ApplicationJSON withMeta(UpsertAccount400ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public UpsertAccount400ApplicationJSON(@JsonProperty("errors") UpsertAccount400ApplicationJSONErrors errors, @JsonProperty("message") String message, @JsonProperty("meta") UpsertAccount400ApplicationJSONMeta meta) {
+        this.errors = errors;
+        this.message = message;
+        this.meta = meta;
+  }
 }

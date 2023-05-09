@@ -12,6 +12,7 @@ public class GetConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetConnectionsRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -20,6 +21,7 @@ public class GetConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public GetConnectionsFilter filter;
+
     public GetConnectionsRequest withFilter(GetConnectionsFilter filter) {
         this.filter = filter;
         return this;
@@ -28,6 +30,7 @@ public class GetConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HidePassword")
     public Boolean hidePassword;
+
     public GetConnectionsRequest withHidePassword(Boolean hidePassword) {
         this.hidePassword = hidePassword;
         return this;
@@ -36,6 +39,7 @@ public class GetConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetConnectionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,9 +48,11 @@ public class GetConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetConnectionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetConnectionsRequest(){}
 }

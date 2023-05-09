@@ -23,6 +23,7 @@ public class ModelPackageGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public ModelPackageGroup withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -33,6 +34,7 @@ public class ModelPackageGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ModelPackageGroup withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -41,6 +43,7 @@ public class ModelPackageGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageGroupArn")
     public String modelPackageGroupArn;
+
     public ModelPackageGroup withModelPackageGroupArn(String modelPackageGroupArn) {
         this.modelPackageGroupArn = modelPackageGroupArn;
         return this;
@@ -49,6 +52,7 @@ public class ModelPackageGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageGroupDescription")
     public String modelPackageGroupDescription;
+
     public ModelPackageGroup withModelPackageGroupDescription(String modelPackageGroupDescription) {
         this.modelPackageGroupDescription = modelPackageGroupDescription;
         return this;
@@ -57,6 +61,7 @@ public class ModelPackageGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageGroupName")
     public String modelPackageGroupName;
+
     public ModelPackageGroup withModelPackageGroupName(String modelPackageGroupName) {
         this.modelPackageGroupName = modelPackageGroupName;
         return this;
@@ -65,6 +70,7 @@ public class ModelPackageGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageGroupStatus")
     public ModelPackageGroupStatusEnum modelPackageGroupStatus;
+
     public ModelPackageGroup withModelPackageGroupStatus(ModelPackageGroupStatusEnum modelPackageGroupStatus) {
         this.modelPackageGroupStatus = modelPackageGroupStatus;
         return this;
@@ -73,9 +79,11 @@ public class ModelPackageGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ModelPackageGroup withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ModelPackageGroup(){}
 }

@@ -15,9 +15,11 @@ public class CreateServerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Server")
     public Server server;
+
     public CreateServerResponse withServer(Server server) {
         this.server = server;
         return this;
     }
     
+    public CreateServerResponse(){}
 }

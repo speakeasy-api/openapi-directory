@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Delegate {
     @JsonProperty("Id")
     public String id;
+
     public Delegate withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class Delegate {
     
     @JsonProperty("Type")
     public MemberTypeEnum type;
+
     public Delegate withType(MemberTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Delegate(@JsonProperty("Id") String id, @JsonProperty("Type") MemberTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

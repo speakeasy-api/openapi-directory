@@ -18,6 +18,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Resource withArn(String arn) {
         this.arn = arn;
         return this;
@@ -29,6 +30,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public Resource withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -40,6 +42,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature")
     public String feature;
+
     public Resource withFeature(String feature) {
         this.feature = feature;
         return this;
@@ -51,6 +54,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Resource withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Resource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Resource(){}
 }

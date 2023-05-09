@@ -12,6 +12,7 @@ public class BeezUPCommonExceptionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("helpLink")
     public String helpLink;
+
     public BeezUPCommonExceptionDetail withHelpLink(String helpLink) {
         this.helpLink = helpLink;
         return this;
@@ -20,6 +21,7 @@ public class BeezUPCommonExceptionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public BeezUPCommonExceptionDetail withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +30,7 @@ public class BeezUPCommonExceptionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackTrace")
     public String stackTrace;
+
     public BeezUPCommonExceptionDetail withStackTrace(String stackTrace) {
         this.stackTrace = stackTrace;
         return this;
@@ -36,9 +39,11 @@ public class BeezUPCommonExceptionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public BeezUPCommonExceptionDetail withType(String type) {
         this.type = type;
         return this;
     }
     
+    public BeezUPCommonExceptionDetail(){}
 }

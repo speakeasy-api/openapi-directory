@@ -20,6 +20,7 @@ public class GetOperationDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public GetOperationDetailResponse withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -30,6 +31,7 @@ public class GetOperationDetailResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedDate")
     public OffsetDateTime lastUpdatedDate;
+
     public GetOperationDetailResponse withLastUpdatedDate(OffsetDateTime lastUpdatedDate) {
         this.lastUpdatedDate = lastUpdatedDate;
         return this;
@@ -38,6 +40,7 @@ public class GetOperationDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public GetOperationDetailResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -46,6 +49,7 @@ public class GetOperationDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public GetOperationDetailResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -54,6 +58,7 @@ public class GetOperationDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public OperationStatusEnum status;
+
     public GetOperationDetailResponse withStatus(OperationStatusEnum status) {
         this.status = status;
         return this;
@@ -62,6 +67,7 @@ public class GetOperationDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusFlag")
     public StatusFlagEnum statusFlag;
+
     public GetOperationDetailResponse withStatusFlag(StatusFlagEnum statusFlag) {
         this.statusFlag = statusFlag;
         return this;
@@ -72,6 +78,7 @@ public class GetOperationDetailResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmittedDate")
     public OffsetDateTime submittedDate;
+
     public GetOperationDetailResponse withSubmittedDate(OffsetDateTime submittedDate) {
         this.submittedDate = submittedDate;
         return this;
@@ -80,9 +87,11 @@ public class GetOperationDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public OperationTypeEnum type;
+
     public GetOperationDetailResponse withType(OperationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetOperationDetailResponse(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class FeatureDependency {
     /**
@@ -12,6 +12,7 @@ public class FeatureDependency {
      */
     
     public String featureName;
+
     public FeatureDependency withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
@@ -22,9 +23,14 @@ public class FeatureDependency {
      */
     
     public String version;
+
     public FeatureDependency withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public FeatureDependency(@JsonProperty("featureName") String featureName, @JsonProperty("version") String version) {
+        this.featureName = featureName;
+        this.version = version;
+  }
 }

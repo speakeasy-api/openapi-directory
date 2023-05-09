@@ -15,6 +15,7 @@ public class Gzip {
      */
     @JsonProperty("blackList")
     public String[] blackList;
+
     public Gzip withBlackList(String[] blackList) {
         this.blackList = blackList;
         return this;
@@ -25,6 +26,7 @@ public class Gzip {
      */
     @JsonProperty("bufferSize")
     public Long bufferSize;
+
     public Gzip withBufferSize(Long bufferSize) {
         this.bufferSize = bufferSize;
         return this;
@@ -35,6 +37,7 @@ public class Gzip {
      */
     @JsonProperty("chunkedThreshold")
     public Long chunkedThreshold;
+
     public Gzip withChunkedThreshold(Long chunkedThreshold) {
         this.chunkedThreshold = chunkedThreshold;
         return this;
@@ -45,6 +48,7 @@ public class Gzip {
      */
     @JsonProperty("compressionLevel")
     public Integer compressionLevel;
+
     public Gzip withCompressionLevel(Integer compressionLevel) {
         this.compressionLevel = compressionLevel;
         return this;
@@ -55,6 +59,7 @@ public class Gzip {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public Gzip withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -65,6 +70,7 @@ public class Gzip {
      */
     @JsonProperty("excludedPatterns")
     public String[] excludedPatterns;
+
     public Gzip withExcludedPatterns(String[] excludedPatterns) {
         this.excludedPatterns = excludedPatterns;
         return this;
@@ -75,9 +81,19 @@ public class Gzip {
      */
     @JsonProperty("whiteList")
     public String[] whiteList;
+
     public Gzip withWhiteList(String[] whiteList) {
         this.whiteList = whiteList;
         return this;
     }
     
+    public Gzip(@JsonProperty("blackList") String[] blackList, @JsonProperty("bufferSize") Long bufferSize, @JsonProperty("chunkedThreshold") Long chunkedThreshold, @JsonProperty("compressionLevel") Integer compressionLevel, @JsonProperty("enabled") Boolean enabled, @JsonProperty("excludedPatterns") String[] excludedPatterns, @JsonProperty("whiteList") String[] whiteList) {
+        this.blackList = blackList;
+        this.bufferSize = bufferSize;
+        this.chunkedThreshold = chunkedThreshold;
+        this.compressionLevel = compressionLevel;
+        this.enabled = enabled;
+        this.excludedPatterns = excludedPatterns;
+        this.whiteList = whiteList;
+  }
 }

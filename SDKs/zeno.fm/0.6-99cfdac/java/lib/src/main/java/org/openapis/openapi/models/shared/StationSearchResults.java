@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StationSearchResults {
     
     public Station[] hits;
+
     public StationSearchResults withHits(Station[] hits) {
         this.hits = hits;
         return this;
@@ -19,9 +20,11 @@ public class StationSearchResults {
     
     
     public Long total;
+
     public StationSearchResults withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public StationSearchResults(){}
 }

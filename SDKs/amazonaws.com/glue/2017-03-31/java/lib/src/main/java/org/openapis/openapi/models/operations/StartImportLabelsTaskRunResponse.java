@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartImportLabelsTaskRunResponse {
     
     public String contentType;
+
     public StartImportLabelsTaskRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartImportLabelsTaskRunResponse {
      */
     
     public Object entityNotFoundException;
+
     public StartImportLabelsTaskRunResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class StartImportLabelsTaskRunResponse {
      */
     
     public Object internalServiceException;
+
     public StartImportLabelsTaskRunResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class StartImportLabelsTaskRunResponse {
      */
     
     public Object invalidInputException;
+
     public StartImportLabelsTaskRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class StartImportLabelsTaskRunResponse {
      */
     
     public Object operationTimeoutException;
+
     public StartImportLabelsTaskRunResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -59,6 +65,7 @@ public class StartImportLabelsTaskRunResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public StartImportLabelsTaskRunResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class StartImportLabelsTaskRunResponse {
      */
     
     public org.openapis.openapi.models.shared.StartImportLabelsTaskRunResponse startImportLabelsTaskRunResponse;
+
     public StartImportLabelsTaskRunResponse withStartImportLabelsTaskRunResponse(org.openapis.openapi.models.shared.StartImportLabelsTaskRunResponse startImportLabelsTaskRunResponse) {
         this.startImportLabelsTaskRunResponse = startImportLabelsTaskRunResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartImportLabelsTaskRunResponse {
     
     
     public Integer statusCode;
+
     public StartImportLabelsTaskRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class StartImportLabelsTaskRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartImportLabelsTaskRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartImportLabelsTaskRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

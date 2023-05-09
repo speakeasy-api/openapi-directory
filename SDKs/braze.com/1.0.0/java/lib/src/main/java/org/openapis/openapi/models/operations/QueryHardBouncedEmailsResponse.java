@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class QueryHardBouncedEmailsResponse {
     
     public String contentType;
+
     public QueryHardBouncedEmailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class QueryHardBouncedEmailsResponse {
     
     
     public Integer statusCode;
+
     public QueryHardBouncedEmailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class QueryHardBouncedEmailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public QueryHardBouncedEmailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public QueryHardBouncedEmailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateCoipPoolResultCoipPoolTags {
     
     public String key;
+
     public CreateCoipPoolResultCoipPoolTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateCoipPoolResultCoipPoolTags {
     
     
     public String value;
+
     public CreateCoipPoolResultCoipPoolTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateCoipPoolResultCoipPoolTags(){}
 }

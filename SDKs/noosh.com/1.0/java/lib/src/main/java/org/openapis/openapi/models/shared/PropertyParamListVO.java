@@ -15,6 +15,7 @@ public class PropertyParamListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public PropertyParamSimpleVO[] result;
+
     public PropertyParamListVO withResult(PropertyParamSimpleVO[] result) {
         this.result = result;
         return this;
@@ -23,6 +24,7 @@ public class PropertyParamListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public PropertyParamListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class PropertyParamListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public PropertyParamListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public PropertyParamListVO(){}
 }

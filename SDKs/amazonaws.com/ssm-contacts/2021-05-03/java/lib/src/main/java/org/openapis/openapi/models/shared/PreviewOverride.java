@@ -22,6 +22,7 @@ public class PreviewOverride {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public PreviewOverride withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +31,7 @@ public class PreviewOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NewMembers")
     public String[] newMembers;
+
     public PreviewOverride withNewMembers(String[] newMembers) {
         this.newMembers = newMembers;
         return this;
@@ -40,9 +42,11 @@ public class PreviewOverride {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public PreviewOverride withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public PreviewOverride(){}
 }

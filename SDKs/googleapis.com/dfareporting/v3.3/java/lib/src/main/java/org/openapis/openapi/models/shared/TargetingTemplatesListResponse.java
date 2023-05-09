@@ -18,6 +18,7 @@ public class TargetingTemplatesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TargetingTemplatesListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class TargetingTemplatesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public TargetingTemplatesListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class TargetingTemplatesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingTemplates")
     public TargetingTemplate[] targetingTemplates;
+
     public TargetingTemplatesListResponse withTargetingTemplates(TargetingTemplate[] targetingTemplates) {
         this.targetingTemplates = targetingTemplates;
         return this;
     }
     
+    public TargetingTemplatesListResponse(){}
 }

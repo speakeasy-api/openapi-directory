@@ -15,6 +15,7 @@ public class ActorCatalogWithUpdatedAt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog")
     public java.util.Map<String, Object> catalog;
+
     public ActorCatalogWithUpdatedAt withCatalog(java.util.Map<String, Object> catalog) {
         this.catalog = catalog;
         return this;
@@ -23,9 +24,11 @@ public class ActorCatalogWithUpdatedAt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedAt")
     public Long updatedAt;
+
     public ActorCatalogWithUpdatedAt withUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ActorCatalogWithUpdatedAt(){}
 }

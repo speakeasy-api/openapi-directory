@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2ListLabelLocksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelLocks")
     public GoogleAppsDriveLabelsV2LabelLock[] labelLocks;
+
     public GoogleAppsDriveLabelsV2ListLabelLocksResponse withLabelLocks(GoogleAppsDriveLabelsV2LabelLock[] labelLocks) {
         this.labelLocks = labelLocks;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2ListLabelLocksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAppsDriveLabelsV2ListLabelLocksResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2ListLabelLocksResponse(){}
 }

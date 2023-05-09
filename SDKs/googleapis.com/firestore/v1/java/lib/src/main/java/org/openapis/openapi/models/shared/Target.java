@@ -18,6 +18,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public DocumentsTarget documents;
+
     public Target withDocuments(DocumentsTarget documents) {
         this.documents = documents;
         return this;
@@ -29,6 +30,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("once")
     public Boolean once;
+
     public Target withOnce(Boolean once) {
         this.once = once;
         return this;
@@ -40,6 +42,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public QueryTarget query;
+
     public Target withQuery(QueryTarget query) {
         this.query = query;
         return this;
@@ -51,6 +54,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public Target withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -62,6 +66,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resumeToken")
     public String resumeToken;
+
     public Target withResumeToken(String resumeToken) {
         this.resumeToken = resumeToken;
         return this;
@@ -73,9 +78,11 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetId")
     public Integer targetId;
+
     public Target withTargetId(Integer targetId) {
         this.targetId = targetId;
         return this;
     }
     
+    public Target(){}
 }

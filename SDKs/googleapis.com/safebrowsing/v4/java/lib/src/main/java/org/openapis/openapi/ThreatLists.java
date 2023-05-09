@@ -56,11 +56,9 @@ public class ThreatLists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SafebrowsingThreatListsListResponse res = new org.openapis.openapi.models.operations.SafebrowsingThreatListsListResponse() {{
+        org.openapis.openapi.models.operations.SafebrowsingThreatListsListResponse res = new org.openapis.openapi.models.operations.SafebrowsingThreatListsListResponse(contentType, httpRes.statusCode()) {{
             googleSecuritySafebrowsingV4ListThreatListsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

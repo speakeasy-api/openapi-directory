@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GETVersionIncidentsFormatIncidentTypeEnum;
 import org.openapis.openapi.models.operations.GETVersionIncidentsFormatRequest;
 import org.openapis.openapi.models.operations.GETVersionIncidentsFormatResponse;
@@ -28,7 +27,7 @@ public class Application {
                 .build();
 
             GETVersionIncidentsFormatRequest req = new GETVersionIncidentsFormatRequest() {{
-                incidentType = "unconfirmed";
+                incidentType = GETVersionIncidentsFormatIncidentTypeEnum.UNCONFIRMED;
                 occurredAfter = 592845;
                 occurredBefore = 715190;
                 page = 844266;
@@ -36,7 +35,7 @@ public class Application {
                 proximity = "nulla";
                 proximitySquare = 544883;
                 query = "illum";
-            }}            
+            }};            
 
             GETVersionIncidentsFormatResponse res = sdk.incidents.getVersionIncidentsFormat(req);
 
@@ -46,6 +45,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -53,15 +54,15 @@ public class Application {
 ## Available Resources and Operations
 
 
-### incidents
+### [incidents](docs/incidents/README.md)
 
-* `getVersionIncidentsFormat` - Paginated incidents matching parameters
-* `getVersionIncidentsIdFormat`
+* [getVersionIncidentsFormat](docs/incidents/README.md#getversionincidentsformat) - Paginated incidents matching parameters
+* [getVersionIncidentsIdFormat](docs/incidents/README.md#getversionincidentsidformat)
 
-### locations
+### [locations](docs/locations/README.md)
 
-* `getVersionLocationsFormat` - Unpaginated geojson response
-* `getVersionLocationsMarkersFormat` - Unpaginated geojson response with simplestyled markers
+* [getVersionLocationsFormat](docs/locations/README.md#getversionlocationsformat) - Unpaginated geojson response
+* [getVersionLocationsMarkersFormat](docs/locations/README.md#getversionlocationsmarkersformat) - Unpaginated geojson response with simplestyled markers
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ReviewsReplyResponse {
     
     public ReviewReplyResult result;
+
     public ReviewsReplyResponse withResult(ReviewReplyResult result) {
         this.result = result;
         return this;
     }
     
+    public ReviewsReplyResponse(){}
 }

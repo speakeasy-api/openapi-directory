@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClusterSecurityGroupMessage {
     
     public ClusterSecurityGroups[] clusterSecurityGroups;
+
     public ClusterSecurityGroupMessage withClusterSecurityGroups(ClusterSecurityGroups[] clusterSecurityGroups) {
         this.clusterSecurityGroups = clusterSecurityGroups;
         return this;
@@ -19,9 +20,11 @@ public class ClusterSecurityGroupMessage {
     
     
     public String marker;
+
     public ClusterSecurityGroupMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ClusterSecurityGroupMessage(){}
 }

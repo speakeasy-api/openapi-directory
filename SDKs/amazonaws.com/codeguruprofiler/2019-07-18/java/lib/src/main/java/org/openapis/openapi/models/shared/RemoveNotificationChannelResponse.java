@@ -15,9 +15,11 @@ public class RemoveNotificationChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationConfiguration")
     public NotificationConfiguration notificationConfiguration;
+
     public RemoveNotificationChannelResponse withNotificationConfiguration(NotificationConfiguration notificationConfiguration) {
         this.notificationConfiguration = notificationConfiguration;
         return this;
     }
     
+    public RemoveNotificationChannelResponse(){}
 }

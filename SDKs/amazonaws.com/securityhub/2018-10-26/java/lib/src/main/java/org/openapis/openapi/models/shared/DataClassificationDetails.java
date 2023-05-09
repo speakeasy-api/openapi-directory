@@ -15,6 +15,7 @@ public class DataClassificationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailedResultsLocation")
     public String detailedResultsLocation;
+
     public DataClassificationDetails withDetailedResultsLocation(String detailedResultsLocation) {
         this.detailedResultsLocation = detailedResultsLocation;
         return this;
@@ -23,9 +24,11 @@ public class DataClassificationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Result")
     public ClassificationResult result;
+
     public DataClassificationDetails withResult(ClassificationResult result) {
         this.result = result;
         return this;
     }
     
+    public DataClassificationDetails(){}
 }

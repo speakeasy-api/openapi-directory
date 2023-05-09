@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * EvaluationResult - &lt;p&gt;Contains the results of a simulation.&lt;/p&gt; &lt;p&gt;This data type is used by the return parameter of &lt;code&gt; &lt;a&gt;SimulateCustomPolicy&lt;/a&gt; &lt;/code&gt; and &lt;code&gt; &lt;a&gt;SimulatePrincipalPolicy&lt;/a&gt; &lt;/code&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class EvaluationResult {
     
     public String evalActionName;
+
     public EvaluationResult withEvalActionName(String evalActionName) {
         this.evalActionName = evalActionName;
         return this;
@@ -19,6 +20,7 @@ public class EvaluationResult {
     
     
     public PolicyEvaluationDecisionTypeEnum evalDecision;
+
     public EvaluationResult withEvalDecision(PolicyEvaluationDecisionTypeEnum evalDecision) {
         this.evalDecision = evalDecision;
         return this;
@@ -26,6 +28,7 @@ public class EvaluationResult {
     
     
     public java.util.Map<String, PolicyEvaluationDecisionTypeEnum> evalDecisionDetails;
+
     public EvaluationResult withEvalDecisionDetails(java.util.Map<String, PolicyEvaluationDecisionTypeEnum> evalDecisionDetails) {
         this.evalDecisionDetails = evalDecisionDetails;
         return this;
@@ -33,6 +36,7 @@ public class EvaluationResult {
     
     
     public String evalResourceName;
+
     public EvaluationResult withEvalResourceName(String evalResourceName) {
         this.evalResourceName = evalResourceName;
         return this;
@@ -40,6 +44,7 @@ public class EvaluationResult {
     
     
     public Statement[] matchedStatements;
+
     public EvaluationResult withMatchedStatements(Statement[] matchedStatements) {
         this.matchedStatements = matchedStatements;
         return this;
@@ -47,6 +52,7 @@ public class EvaluationResult {
     
     
     public String[] missingContextValues;
+
     public EvaluationResult withMissingContextValues(String[] missingContextValues) {
         this.missingContextValues = missingContextValues;
         return this;
@@ -54,6 +60,7 @@ public class EvaluationResult {
     
     
     public OrganizationsDecisionDetail organizationsDecisionDetail;
+
     public EvaluationResult withOrganizationsDecisionDetail(OrganizationsDecisionDetail organizationsDecisionDetail) {
         this.organizationsDecisionDetail = organizationsDecisionDetail;
         return this;
@@ -61,6 +68,7 @@ public class EvaluationResult {
     
     
     public PermissionsBoundaryDecisionDetail permissionsBoundaryDecisionDetail;
+
     public EvaluationResult withPermissionsBoundaryDecisionDetail(PermissionsBoundaryDecisionDetail permissionsBoundaryDecisionDetail) {
         this.permissionsBoundaryDecisionDetail = permissionsBoundaryDecisionDetail;
         return this;
@@ -68,9 +76,14 @@ public class EvaluationResult {
     
     
     public ResourceSpecificResult[] resourceSpecificResults;
+
     public EvaluationResult withResourceSpecificResults(ResourceSpecificResult[] resourceSpecificResults) {
         this.resourceSpecificResults = resourceSpecificResults;
         return this;
     }
     
+    public EvaluationResult(@JsonProperty("EvalActionName") String evalActionName, @JsonProperty("EvalDecision") PolicyEvaluationDecisionTypeEnum evalDecision) {
+        this.evalActionName = evalActionName;
+        this.evalDecision = evalDecision;
+  }
 }

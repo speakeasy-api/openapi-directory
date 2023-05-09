@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SseConfiguration {
     @JsonProperty("KmsEncryptionConfig")
     public KmsEncryptionConfig kmsEncryptionConfig;
+
     public SseConfiguration withKmsEncryptionConfig(KmsEncryptionConfig kmsEncryptionConfig) {
         this.kmsEncryptionConfig = kmsEncryptionConfig;
         return this;
     }
     
+    public SseConfiguration(@JsonProperty("KmsEncryptionConfig") KmsEncryptionConfig kmsEncryptionConfig) {
+        this.kmsEncryptionConfig = kmsEncryptionConfig;
+  }
 }

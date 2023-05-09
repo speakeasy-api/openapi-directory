@@ -15,6 +15,7 @@ public class ConditionalForwarder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsIpAddrs")
     public String[] dnsIpAddrs;
+
     public ConditionalForwarder withDnsIpAddrs(String[] dnsIpAddrs) {
         this.dnsIpAddrs = dnsIpAddrs;
         return this;
@@ -23,6 +24,7 @@ public class ConditionalForwarder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoteDomainName")
     public String remoteDomainName;
+
     public ConditionalForwarder withRemoteDomainName(String remoteDomainName) {
         this.remoteDomainName = remoteDomainName;
         return this;
@@ -31,9 +33,11 @@ public class ConditionalForwarder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationScope")
     public ReplicationScopeEnum replicationScope;
+
     public ConditionalForwarder withReplicationScope(ReplicationScopeEnum replicationScope) {
         this.replicationScope = replicationScope;
         return this;
     }
     
+    public ConditionalForwarder(){}
 }

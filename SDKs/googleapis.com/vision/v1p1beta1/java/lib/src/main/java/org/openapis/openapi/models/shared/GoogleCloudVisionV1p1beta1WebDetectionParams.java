@@ -18,9 +18,11 @@ public class GoogleCloudVisionV1p1beta1WebDetectionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeGeoResults")
     public Boolean includeGeoResults;
+
     public GoogleCloudVisionV1p1beta1WebDetectionParams withIncludeGeoResults(Boolean includeGeoResults) {
         this.includeGeoResults = includeGeoResults;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1WebDetectionParams(){}
 }

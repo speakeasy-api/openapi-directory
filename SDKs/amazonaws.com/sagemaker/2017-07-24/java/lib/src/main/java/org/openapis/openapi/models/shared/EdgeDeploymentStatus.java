@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class EdgeDeploymentStatus {
     @JsonProperty("EdgeDeploymentFailedInStage")
     public Long edgeDeploymentFailedInStage;
+
     public EdgeDeploymentStatus withEdgeDeploymentFailedInStage(Long edgeDeploymentFailedInStage) {
         this.edgeDeploymentFailedInStage = edgeDeploymentFailedInStage;
         return this;
@@ -26,6 +27,7 @@ public class EdgeDeploymentStatus {
     
     @JsonProperty("EdgeDeploymentPendingInStage")
     public Long edgeDeploymentPendingInStage;
+
     public EdgeDeploymentStatus withEdgeDeploymentPendingInStage(Long edgeDeploymentPendingInStage) {
         this.edgeDeploymentPendingInStage = edgeDeploymentPendingInStage;
         return this;
@@ -36,6 +38,7 @@ public class EdgeDeploymentStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EdgeDeploymentStageStartTime")
     public OffsetDateTime edgeDeploymentStageStartTime;
+
     public EdgeDeploymentStatus withEdgeDeploymentStageStartTime(OffsetDateTime edgeDeploymentStageStartTime) {
         this.edgeDeploymentStageStartTime = edgeDeploymentStageStartTime;
         return this;
@@ -44,6 +47,7 @@ public class EdgeDeploymentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EdgeDeploymentStatusMessage")
     public String edgeDeploymentStatusMessage;
+
     public EdgeDeploymentStatus withEdgeDeploymentStatusMessage(String edgeDeploymentStatusMessage) {
         this.edgeDeploymentStatusMessage = edgeDeploymentStatusMessage;
         return this;
@@ -51,6 +55,7 @@ public class EdgeDeploymentStatus {
     
     @JsonProperty("EdgeDeploymentSuccessInStage")
     public Long edgeDeploymentSuccessInStage;
+
     public EdgeDeploymentStatus withEdgeDeploymentSuccessInStage(Long edgeDeploymentSuccessInStage) {
         this.edgeDeploymentSuccessInStage = edgeDeploymentSuccessInStage;
         return this;
@@ -58,9 +63,16 @@ public class EdgeDeploymentStatus {
     
     @JsonProperty("StageStatus")
     public StageStatusEnum stageStatus;
+
     public EdgeDeploymentStatus withStageStatus(StageStatusEnum stageStatus) {
         this.stageStatus = stageStatus;
         return this;
     }
     
+    public EdgeDeploymentStatus(@JsonProperty("EdgeDeploymentFailedInStage") Long edgeDeploymentFailedInStage, @JsonProperty("EdgeDeploymentPendingInStage") Long edgeDeploymentPendingInStage, @JsonProperty("EdgeDeploymentSuccessInStage") Long edgeDeploymentSuccessInStage, @JsonProperty("StageStatus") StageStatusEnum stageStatus) {
+        this.edgeDeploymentFailedInStage = edgeDeploymentFailedInStage;
+        this.edgeDeploymentPendingInStage = edgeDeploymentPendingInStage;
+        this.edgeDeploymentSuccessInStage = edgeDeploymentSuccessInStage;
+        this.stageStatus = stageStatus;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartDocumentTextDetectionResponse {
@@ -12,6 +13,7 @@ public class StartDocumentTextDetectionResponse {
      */
     
     public Object accessDeniedException;
+
     public StartDocumentTextDetectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartDocumentTextDetectionResponse {
      */
     
     public Object badDocumentException;
+
     public StartDocumentTextDetectionResponse withBadDocumentException(Object badDocumentException) {
         this.badDocumentException = badDocumentException;
         return this;
@@ -29,6 +32,7 @@ public class StartDocumentTextDetectionResponse {
     
     
     public String contentType;
+
     public StartDocumentTextDetectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartDocumentTextDetectionResponse {
      */
     
     public Object documentTooLargeException;
+
     public StartDocumentTextDetectionResponse withDocumentTooLargeException(Object documentTooLargeException) {
         this.documentTooLargeException = documentTooLargeException;
         return this;
@@ -49,6 +54,7 @@ public class StartDocumentTextDetectionResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public StartDocumentTextDetectionResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -59,6 +65,7 @@ public class StartDocumentTextDetectionResponse {
      */
     
     public Object internalServerError;
+
     public StartDocumentTextDetectionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class StartDocumentTextDetectionResponse {
      */
     
     public Object invalidKMSKeyException;
+
     public StartDocumentTextDetectionResponse withInvalidKMSKeyException(Object invalidKMSKeyException) {
         this.invalidKMSKeyException = invalidKMSKeyException;
         return this;
@@ -79,6 +87,7 @@ public class StartDocumentTextDetectionResponse {
      */
     
     public Object invalidParameterException;
+
     public StartDocumentTextDetectionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class StartDocumentTextDetectionResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public StartDocumentTextDetectionResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -99,6 +109,7 @@ public class StartDocumentTextDetectionResponse {
      */
     
     public Object limitExceededException;
+
     public StartDocumentTextDetectionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -109,6 +120,7 @@ public class StartDocumentTextDetectionResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public StartDocumentTextDetectionResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -119,6 +131,7 @@ public class StartDocumentTextDetectionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartDocumentTextDetectionResponse startDocumentTextDetectionResponse;
+
     public StartDocumentTextDetectionResponse withStartDocumentTextDetectionResponse(org.openapis.openapi.models.shared.StartDocumentTextDetectionResponse startDocumentTextDetectionResponse) {
         this.startDocumentTextDetectionResponse = startDocumentTextDetectionResponse;
         return this;
@@ -126,6 +139,7 @@ public class StartDocumentTextDetectionResponse {
     
     
     public Integer statusCode;
+
     public StartDocumentTextDetectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class StartDocumentTextDetectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartDocumentTextDetectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,6 +158,7 @@ public class StartDocumentTextDetectionResponse {
      */
     
     public Object throttlingException;
+
     public StartDocumentTextDetectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -153,9 +169,14 @@ public class StartDocumentTextDetectionResponse {
      */
     
     public Object unsupportedDocumentException;
+
     public StartDocumentTextDetectionResponse withUnsupportedDocumentException(Object unsupportedDocumentException) {
         this.unsupportedDocumentException = unsupportedDocumentException;
         return this;
     }
     
+    public StartDocumentTextDetectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

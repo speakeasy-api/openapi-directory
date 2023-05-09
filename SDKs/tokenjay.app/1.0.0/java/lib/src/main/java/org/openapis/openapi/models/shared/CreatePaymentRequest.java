@@ -12,6 +12,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CreatePaymentRequest withMessage(String message) {
         this.message = message;
         return this;
@@ -19,6 +20,7 @@ public class CreatePaymentRequest {
     
     @JsonProperty("nanoErg")
     public Long nanoErg;
+
     public CreatePaymentRequest withNanoErg(Long nanoErg) {
         this.nanoErg = nanoErg;
         return this;
@@ -26,6 +28,7 @@ public class CreatePaymentRequest {
     
     @JsonProperty("receiverAddress")
     public String receiverAddress;
+
     public CreatePaymentRequest withReceiverAddress(String receiverAddress) {
         this.receiverAddress = receiverAddress;
         return this;
@@ -34,6 +37,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("senderAddress")
     public String senderAddress;
+
     public CreatePaymentRequest withSenderAddress(String senderAddress) {
         this.senderAddress = senderAddress;
         return this;
@@ -42,6 +46,7 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenId")
     public String tokenId;
+
     public CreatePaymentRequest withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
@@ -50,9 +55,14 @@ public class CreatePaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenRawAmount")
     public Long tokenRawAmount;
+
     public CreatePaymentRequest withTokenRawAmount(Long tokenRawAmount) {
         this.tokenRawAmount = tokenRawAmount;
         return this;
     }
     
+    public CreatePaymentRequest(@JsonProperty("nanoErg") Long nanoErg, @JsonProperty("receiverAddress") String receiverAddress) {
+        this.nanoErg = nanoErg;
+        this.receiverAddress = receiverAddress;
+  }
 }

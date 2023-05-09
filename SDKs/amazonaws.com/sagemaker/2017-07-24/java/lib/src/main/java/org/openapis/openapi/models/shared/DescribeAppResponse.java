@@ -20,6 +20,7 @@ public class DescribeAppResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppArn")
     public String appArn;
+
     public DescribeAppResponse withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -28,6 +29,7 @@ public class DescribeAppResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppName")
     public String appName;
+
     public DescribeAppResponse withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -36,6 +38,7 @@ public class DescribeAppResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppType")
     public AppTypeEnum appType;
+
     public DescribeAppResponse withAppType(AppTypeEnum appType) {
         this.appType = appType;
         return this;
@@ -46,6 +49,7 @@ public class DescribeAppResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeAppResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -54,6 +58,7 @@ public class DescribeAppResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public DescribeAppResponse withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -62,6 +67,7 @@ public class DescribeAppResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeAppResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -72,6 +78,7 @@ public class DescribeAppResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastHealthCheckTimestamp")
     public OffsetDateTime lastHealthCheckTimestamp;
+
     public DescribeAppResponse withLastHealthCheckTimestamp(OffsetDateTime lastHealthCheckTimestamp) {
         this.lastHealthCheckTimestamp = lastHealthCheckTimestamp;
         return this;
@@ -82,6 +89,7 @@ public class DescribeAppResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUserActivityTimestamp")
     public OffsetDateTime lastUserActivityTimestamp;
+
     public DescribeAppResponse withLastUserActivityTimestamp(OffsetDateTime lastUserActivityTimestamp) {
         this.lastUserActivityTimestamp = lastUserActivityTimestamp;
         return this;
@@ -90,6 +98,7 @@ public class DescribeAppResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceSpec")
     public ResourceSpec resourceSpec;
+
     public DescribeAppResponse withResourceSpec(ResourceSpec resourceSpec) {
         this.resourceSpec = resourceSpec;
         return this;
@@ -98,6 +107,7 @@ public class DescribeAppResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceName")
     public String spaceName;
+
     public DescribeAppResponse withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
@@ -106,6 +116,7 @@ public class DescribeAppResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AppStatusEnum status;
+
     public DescribeAppResponse withStatus(AppStatusEnum status) {
         this.status = status;
         return this;
@@ -114,9 +125,11 @@ public class DescribeAppResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserProfileName")
     public String userProfileName;
+
     public DescribeAppResponse withUserProfileName(String userProfileName) {
         this.userProfileName = userProfileName;
         return this;
     }
     
+    public DescribeAppResponse(){}
 }

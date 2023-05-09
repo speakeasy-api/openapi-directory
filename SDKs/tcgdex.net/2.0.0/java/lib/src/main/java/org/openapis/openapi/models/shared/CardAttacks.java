@@ -12,6 +12,7 @@ public class CardAttacks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost")
     public String[] cost;
+
     public CardAttacks withCost(String[] cost) {
         this.cost = cost;
         return this;
@@ -20,6 +21,7 @@ public class CardAttacks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("damage")
     public Double damage;
+
     public CardAttacks withDamage(Double damage) {
         this.damage = damage;
         return this;
@@ -28,6 +30,7 @@ public class CardAttacks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effect")
     public String effect;
+
     public CardAttacks withEffect(String effect) {
         this.effect = effect;
         return this;
@@ -35,9 +38,13 @@ public class CardAttacks {
     
     @JsonProperty("name")
     public String name;
+
     public CardAttacks withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CardAttacks(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

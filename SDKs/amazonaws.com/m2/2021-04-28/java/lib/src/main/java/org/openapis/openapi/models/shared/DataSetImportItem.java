@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataSetImportItem {
     @JsonProperty("dataSet")
     public DataSet dataSet;
+
     public DataSetImportItem withDataSet(DataSet dataSet) {
         this.dataSet = dataSet;
         return this;
@@ -19,9 +20,14 @@ public class DataSetImportItem {
     
     @JsonProperty("externalLocation")
     public ExternalLocation externalLocation;
+
     public DataSetImportItem withExternalLocation(ExternalLocation externalLocation) {
         this.externalLocation = externalLocation;
         return this;
     }
     
+    public DataSetImportItem(@JsonProperty("dataSet") DataSet dataSet, @JsonProperty("externalLocation") ExternalLocation externalLocation) {
+        this.dataSet = dataSet;
+        this.externalLocation = externalLocation;
+  }
 }

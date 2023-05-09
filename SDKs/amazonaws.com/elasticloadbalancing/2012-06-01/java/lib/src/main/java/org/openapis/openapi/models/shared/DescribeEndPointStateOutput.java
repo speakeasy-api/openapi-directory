@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeEndPointStateOutput {
     
     public InstanceState[] instanceStates;
+
     public DescribeEndPointStateOutput withInstanceStates(InstanceState[] instanceStates) {
         this.instanceStates = instanceStates;
         return this;
     }
     
+    public DescribeEndPointStateOutput(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CommitComparison {
     @JsonProperty("ahead_by")
     public Long aheadBy;
+
     public CommitComparison withAheadBy(Long aheadBy) {
         this.aheadBy = aheadBy;
         return this;
@@ -24,6 +25,7 @@ public class CommitComparison {
      */
     @JsonProperty("base_commit")
     public Commit baseCommit;
+
     public CommitComparison withBaseCommit(Commit baseCommit) {
         this.baseCommit = baseCommit;
         return this;
@@ -31,6 +33,7 @@ public class CommitComparison {
     
     @JsonProperty("behind_by")
     public Long behindBy;
+
     public CommitComparison withBehindBy(Long behindBy) {
         this.behindBy = behindBy;
         return this;
@@ -38,6 +41,7 @@ public class CommitComparison {
     
     @JsonProperty("commits")
     public Commit[] commits;
+
     public CommitComparison withCommits(Commit[] commits) {
         this.commits = commits;
         return this;
@@ -45,6 +49,7 @@ public class CommitComparison {
     
     @JsonProperty("diff_url")
     public String diffUrl;
+
     public CommitComparison withDiffUrl(String diffUrl) {
         this.diffUrl = diffUrl;
         return this;
@@ -53,6 +58,7 @@ public class CommitComparison {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public DiffEntry[] files;
+
     public CommitComparison withFiles(DiffEntry[] files) {
         this.files = files;
         return this;
@@ -60,6 +66,7 @@ public class CommitComparison {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public CommitComparison withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -70,6 +77,7 @@ public class CommitComparison {
      */
     @JsonProperty("merge_base_commit")
     public Commit mergeBaseCommit;
+
     public CommitComparison withMergeBaseCommit(Commit mergeBaseCommit) {
         this.mergeBaseCommit = mergeBaseCommit;
         return this;
@@ -77,6 +85,7 @@ public class CommitComparison {
     
     @JsonProperty("patch_url")
     public String patchUrl;
+
     public CommitComparison withPatchUrl(String patchUrl) {
         this.patchUrl = patchUrl;
         return this;
@@ -84,6 +93,7 @@ public class CommitComparison {
     
     @JsonProperty("permalink_url")
     public String permalinkUrl;
+
     public CommitComparison withPermalinkUrl(String permalinkUrl) {
         this.permalinkUrl = permalinkUrl;
         return this;
@@ -91,6 +101,7 @@ public class CommitComparison {
     
     @JsonProperty("status")
     public CommitComparisonStatusEnum status;
+
     public CommitComparison withStatus(CommitComparisonStatusEnum status) {
         this.status = status;
         return this;
@@ -98,6 +109,7 @@ public class CommitComparison {
     
     @JsonProperty("total_commits")
     public Long totalCommits;
+
     public CommitComparison withTotalCommits(Long totalCommits) {
         this.totalCommits = totalCommits;
         return this;
@@ -105,9 +117,24 @@ public class CommitComparison {
     
     @JsonProperty("url")
     public String url;
+
     public CommitComparison withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CommitComparison(@JsonProperty("ahead_by") Long aheadBy, @JsonProperty("base_commit") Commit baseCommit, @JsonProperty("behind_by") Long behindBy, @JsonProperty("commits") Commit[] commits, @JsonProperty("diff_url") String diffUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("merge_base_commit") Commit mergeBaseCommit, @JsonProperty("patch_url") String patchUrl, @JsonProperty("permalink_url") String permalinkUrl, @JsonProperty("status") CommitComparisonStatusEnum status, @JsonProperty("total_commits") Long totalCommits, @JsonProperty("url") String url) {
+        this.aheadBy = aheadBy;
+        this.baseCommit = baseCommit;
+        this.behindBy = behindBy;
+        this.commits = commits;
+        this.diffUrl = diffUrl;
+        this.htmlUrl = htmlUrl;
+        this.mergeBaseCommit = mergeBaseCommit;
+        this.patchUrl = patchUrl;
+        this.permalinkUrl = permalinkUrl;
+        this.status = status;
+        this.totalCommits = totalCommits;
+        this.url = url;
+  }
 }

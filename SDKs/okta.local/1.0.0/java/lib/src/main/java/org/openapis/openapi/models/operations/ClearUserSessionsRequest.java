@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClearUserSessionsRequest {
     @SpeakeasyMetadata("request:mediaType=application/octet-stream")
     public byte[] requestBody;
+
     public ClearUserSessionsRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class ClearUserSessionsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public ClearUserSessionsRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ClearUserSessionsRequest(@JsonProperty("userId") String userId) {
+        this.userId = userId;
+  }
 }

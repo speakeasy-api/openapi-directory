@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNumberLeaseConfigRequest {
@@ -12,6 +13,7 @@ public class UpdateNumberLeaseConfigRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NumberConfig numberConfig;
+
     public UpdateNumberLeaseConfigRequest withNumberConfig(org.openapis.openapi.models.shared.NumberConfig numberConfig) {
         this.numberConfig = numberConfig;
         return this;
@@ -22,9 +24,13 @@ public class UpdateNumberLeaseConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
     public String number;
+
     public UpdateNumberLeaseConfigRequest withNumber(String number) {
         this.number = number;
         return this;
     }
     
+    public UpdateNumberLeaseConfigRequest(@JsonProperty("number") String number) {
+        this.number = number;
+  }
 }

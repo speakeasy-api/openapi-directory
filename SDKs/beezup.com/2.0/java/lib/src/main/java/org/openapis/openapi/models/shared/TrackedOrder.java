@@ -17,6 +17,7 @@ public class TrackedOrder {
      */
     @JsonProperty("channel")
     public BeezUPCommonChannelBasicInfo channel;
+
     public TrackedOrder withChannel(BeezUPCommonChannelBasicInfo channel) {
         this.channel = channel;
         return this;
@@ -28,6 +29,7 @@ public class TrackedOrder {
      */
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public TrackedOrder withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -38,6 +40,7 @@ public class TrackedOrder {
      */
     @JsonProperty("merchantOrderId")
     public String merchantOrderId;
+
     public TrackedOrder withMerchantOrderId(String merchantOrderId) {
         this.merchantOrderId = merchantOrderId;
         return this;
@@ -48,6 +51,7 @@ public class TrackedOrder {
      */
     @JsonProperty("paymentValidated")
     public Boolean paymentValidated;
+
     public TrackedOrder withPaymentValidated(Boolean paymentValidated) {
         this.paymentValidated = paymentValidated;
         return this;
@@ -58,6 +62,7 @@ public class TrackedOrder {
      */
     @JsonProperty("products")
     public TrackedOrderProduct[] products;
+
     public TrackedOrder withProducts(TrackedOrderProduct[] products) {
         this.products = products;
         return this;
@@ -68,6 +73,7 @@ public class TrackedOrder {
      */
     @JsonProperty("totalAmount")
     public Double totalAmount;
+
     public TrackedOrder withTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -80,9 +86,19 @@ public class TrackedOrder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("utcDate")
     public OffsetDateTime utcDate;
+
     public TrackedOrder withUtcDate(OffsetDateTime utcDate) {
         this.utcDate = utcDate;
         return this;
     }
     
+    public TrackedOrder(@JsonProperty("channel") BeezUPCommonChannelBasicInfo channel, @JsonProperty("currencyCode") String currencyCode, @JsonProperty("merchantOrderId") String merchantOrderId, @JsonProperty("paymentValidated") Boolean paymentValidated, @JsonProperty("products") TrackedOrderProduct[] products, @JsonProperty("totalAmount") Double totalAmount, @JsonProperty("utcDate") OffsetDateTime utcDate) {
+        this.channel = channel;
+        this.currencyCode = currencyCode;
+        this.merchantOrderId = merchantOrderId;
+        this.paymentValidated = paymentValidated;
+        this.products = products;
+        this.totalAmount = totalAmount;
+        this.utcDate = utcDate;
+  }
 }

@@ -12,6 +12,7 @@ public class PostPrimaryIpsIdActionsAssignAssignPrimaryIPRequest {
      */
     @JsonProperty("assignee_id")
     public Long assigneeId;
+
     public PostPrimaryIpsIdActionsAssignAssignPrimaryIPRequest withAssigneeId(Long assigneeId) {
         this.assigneeId = assigneeId;
         return this;
@@ -22,9 +23,14 @@ public class PostPrimaryIpsIdActionsAssignAssignPrimaryIPRequest {
      */
     @JsonProperty("assignee_type")
     public PostPrimaryIpsIdActionsAssignAssignPrimaryIPRequestAssigneeTypeEnum assigneeType;
+
     public PostPrimaryIpsIdActionsAssignAssignPrimaryIPRequest withAssigneeType(PostPrimaryIpsIdActionsAssignAssignPrimaryIPRequestAssigneeTypeEnum assigneeType) {
         this.assigneeType = assigneeType;
         return this;
     }
     
+    public PostPrimaryIpsIdActionsAssignAssignPrimaryIPRequest(@JsonProperty("assignee_id") Long assigneeId, @JsonProperty("assignee_type") PostPrimaryIpsIdActionsAssignAssignPrimaryIPRequestAssigneeTypeEnum assigneeType) {
+        this.assigneeId = assigneeId;
+        this.assigneeType = assigneeType;
+  }
 }

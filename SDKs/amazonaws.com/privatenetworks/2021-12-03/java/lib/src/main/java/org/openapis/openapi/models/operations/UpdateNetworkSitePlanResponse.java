@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNetworkSitePlanResponse {
     
     public String contentType;
+
     public UpdateNetworkSitePlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateNetworkSitePlanResponse {
      */
     
     public Object internalServerException;
+
     public UpdateNetworkSitePlanResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateNetworkSitePlanResponse {
     
     
     public Integer statusCode;
+
     public UpdateNetworkSitePlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateNetworkSitePlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNetworkSitePlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateNetworkSitePlanResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateNetworkSitePlanResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateNetworkSitePlanResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateNetworkSiteResponse updateNetworkSiteResponse;
+
     public UpdateNetworkSitePlanResponse withUpdateNetworkSiteResponse(org.openapis.openapi.models.shared.UpdateNetworkSiteResponse updateNetworkSiteResponse) {
         this.updateNetworkSiteResponse = updateNetworkSiteResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateNetworkSitePlanResponse {
      */
     
     public Object validationException;
+
     public UpdateNetworkSitePlanResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateNetworkSitePlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

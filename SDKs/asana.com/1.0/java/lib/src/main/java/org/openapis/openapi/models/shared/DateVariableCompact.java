@@ -15,6 +15,7 @@ public class DateVariableCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DateVariableCompact withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class DateVariableCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public DateVariableCompact withGid(String gid) {
         this.gid = gid;
         return this;
@@ -37,9 +39,11 @@ public class DateVariableCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DateVariableCompact withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DateVariableCompact(){}
 }

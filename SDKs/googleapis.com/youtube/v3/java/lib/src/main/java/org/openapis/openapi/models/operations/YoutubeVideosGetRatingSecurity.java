@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class YoutubeVideosGetRatingSecurity {
     @SpeakeasyMetadata("security:option=true")
     public YoutubeVideosGetRatingSecurityOption1 option1;
+
     public YoutubeVideosGetRatingSecurity withOption1(YoutubeVideosGetRatingSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class YoutubeVideosGetRatingSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeVideosGetRatingSecurityOption2 option2;
+
     public YoutubeVideosGetRatingSecurity withOption2(YoutubeVideosGetRatingSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class YoutubeVideosGetRatingSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeVideosGetRatingSecurityOption3 option3;
+
     public YoutubeVideosGetRatingSecurity withOption3(YoutubeVideosGetRatingSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public YoutubeVideosGetRatingSecurity(){}
 }

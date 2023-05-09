@@ -21,6 +21,7 @@ public class BatchResponseSubscriptionResponseWithErrors {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completedAt")
     public OffsetDateTime completedAt;
+
     public BatchResponseSubscriptionResponseWithErrors withCompletedAt(OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -29,6 +30,7 @@ public class BatchResponseSubscriptionResponseWithErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public StandardError[] errors;
+
     public BatchResponseSubscriptionResponseWithErrors withErrors(StandardError[] errors) {
         this.errors = errors;
         return this;
@@ -37,6 +39,7 @@ public class BatchResponseSubscriptionResponseWithErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public java.util.Map<String, String> links;
+
     public BatchResponseSubscriptionResponseWithErrors withLinks(java.util.Map<String, String> links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class BatchResponseSubscriptionResponseWithErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numErrors")
     public Integer numErrors;
+
     public BatchResponseSubscriptionResponseWithErrors withNumErrors(Integer numErrors) {
         this.numErrors = numErrors;
         return this;
@@ -55,6 +59,7 @@ public class BatchResponseSubscriptionResponseWithErrors {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("requestedAt")
     public OffsetDateTime requestedAt;
+
     public BatchResponseSubscriptionResponseWithErrors withRequestedAt(OffsetDateTime requestedAt) {
         this.requestedAt = requestedAt;
         return this;
@@ -62,6 +67,7 @@ public class BatchResponseSubscriptionResponseWithErrors {
     
     @JsonProperty("results")
     public SubscriptionResponse[] results;
+
     public BatchResponseSubscriptionResponseWithErrors withResults(SubscriptionResponse[] results) {
         this.results = results;
         return this;
@@ -71,6 +77,7 @@ public class BatchResponseSubscriptionResponseWithErrors {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedAt")
     public OffsetDateTime startedAt;
+
     public BatchResponseSubscriptionResponseWithErrors withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -78,9 +85,16 @@ public class BatchResponseSubscriptionResponseWithErrors {
     
     @JsonProperty("status")
     public BatchResponseSubscriptionResponseWithErrorsStatusEnum status;
+
     public BatchResponseSubscriptionResponseWithErrors withStatus(BatchResponseSubscriptionResponseWithErrorsStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public BatchResponseSubscriptionResponseWithErrors(@JsonProperty("completedAt") OffsetDateTime completedAt, @JsonProperty("results") SubscriptionResponse[] results, @JsonProperty("startedAt") OffsetDateTime startedAt, @JsonProperty("status") BatchResponseSubscriptionResponseWithErrorsStatusEnum status) {
+        this.completedAt = completedAt;
+        this.results = results;
+        this.startedAt = startedAt;
+        this.status = status;
+  }
 }

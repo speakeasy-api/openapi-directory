@@ -15,6 +15,7 @@ public class GooglerpcStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Integer code;
+
     public GooglerpcStatus withCode(Integer code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class GooglerpcStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public ProtobufAny[] details;
+
     public GooglerpcStatus withDetails(ProtobufAny[] details) {
         this.details = details;
         return this;
@@ -31,9 +33,11 @@ public class GooglerpcStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GooglerpcStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GooglerpcStatus(){}
 }

@@ -15,9 +15,11 @@ public class SubaccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etat")
     public SubaccountResponseEtat etat;
+
     public SubaccountResponse withEtat(SubaccountResponseEtat etat) {
         this.etat = etat;
         return this;
     }
     
+    public SubaccountResponse(){}
 }

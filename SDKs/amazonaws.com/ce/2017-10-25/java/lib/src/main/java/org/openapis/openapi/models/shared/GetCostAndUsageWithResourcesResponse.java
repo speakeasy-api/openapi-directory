@@ -15,6 +15,7 @@ public class GetCostAndUsageWithResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionValueAttributes")
     public DimensionValuesWithAttributes[] dimensionValueAttributes;
+
     public GetCostAndUsageWithResourcesResponse withDimensionValueAttributes(DimensionValuesWithAttributes[] dimensionValueAttributes) {
         this.dimensionValueAttributes = dimensionValueAttributes;
         return this;
@@ -23,6 +24,7 @@ public class GetCostAndUsageWithResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupDefinitions")
     public GroupDefinition[] groupDefinitions;
+
     public GetCostAndUsageWithResourcesResponse withGroupDefinitions(GroupDefinition[] groupDefinitions) {
         this.groupDefinitions = groupDefinitions;
         return this;
@@ -31,6 +33,7 @@ public class GetCostAndUsageWithResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetCostAndUsageWithResourcesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -39,9 +42,11 @@ public class GetCostAndUsageWithResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultsByTime")
     public ResultByTime[] resultsByTime;
+
     public GetCostAndUsageWithResourcesResponse withResultsByTime(ResultByTime[] resultsByTime) {
         this.resultsByTime = resultsByTime;
         return this;
     }
     
+    public GetCostAndUsageWithResourcesResponse(){}
 }

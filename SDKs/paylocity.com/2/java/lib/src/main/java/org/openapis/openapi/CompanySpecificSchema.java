@@ -60,11 +60,9 @@ public class CompanySpecificSchema {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompanySpecificOpenAPIDocumentationResponse res = new org.openapis.openapi.models.operations.GetCompanySpecificOpenAPIDocumentationResponse() {{
+        org.openapis.openapi.models.operations.GetCompanySpecificOpenAPIDocumentationResponse res = new org.openapis.openapi.models.operations.GetCompanySpecificOpenAPIDocumentationResponse(contentType, httpRes.statusCode()) {{
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 403 || httpRes.statusCode() == 429) {

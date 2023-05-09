@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrackDataRequestOnlyForUploading {
     @SpeakeasyMetadata("multipartForm:name=Only for uploading")
     public String onlyForUploading;
+
     public TrackDataRequestOnlyForUploading withOnlyForUploading(String onlyForUploading) {
         this.onlyForUploading = onlyForUploading;
         return this;
@@ -16,9 +18,14 @@ public class TrackDataRequestOnlyForUploading {
     
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public TrackDataRequestOnlyForUploading withContent(byte[] content) {
         this.content = content;
         return this;
     }
     
+    public TrackDataRequestOnlyForUploading(@JsonProperty("Only for uploading") String onlyForUploading, @JsonProperty("content") byte[] content) {
+        this.onlyForUploading = onlyForUploading;
+        this.content = content;
+  }
 }

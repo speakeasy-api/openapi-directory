@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchPatientHealthResultsRequest {
@@ -12,6 +13,7 @@ public class FetchPatientHealthResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[actions]")
     public String filterActions;
+
     public FetchPatientHealthResultsRequest withFilterActions(String filterActions) {
         this.filterActions = filterActions;
         return this;
@@ -23,6 +25,7 @@ public class FetchPatientHealthResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[created_at]")
     public String filterCreatedAt;
+
     public FetchPatientHealthResultsRequest withFilterCreatedAt(String filterCreatedAt) {
         this.filterCreatedAt = filterCreatedAt;
         return this;
@@ -33,6 +36,7 @@ public class FetchPatientHealthResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[end_at]")
     public String filterEndAt;
+
     public FetchPatientHealthResultsRequest withFilterEndAt(String filterEndAt) {
         this.filterEndAt = filterEndAt;
         return this;
@@ -43,6 +47,7 @@ public class FetchPatientHealthResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[patient]")
     public String filterPatient;
+
     public FetchPatientHealthResultsRequest withFilterPatient(String filterPatient) {
         this.filterPatient = filterPatient;
         return this;
@@ -53,6 +58,7 @@ public class FetchPatientHealthResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[start_at]")
     public String filterStartAt;
+
     public FetchPatientHealthResultsRequest withFilterStartAt(String filterStartAt) {
         this.filterStartAt = filterStartAt;
         return this;
@@ -63,6 +69,7 @@ public class FetchPatientHealthResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[threads]")
     public String filterThreads;
+
     public FetchPatientHealthResultsRequest withFilterThreads(String filterThreads) {
         this.filterThreads = filterThreads;
         return this;
@@ -74,6 +81,7 @@ public class FetchPatientHealthResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[updated_at]")
     public String filterUpdatedAt;
+
     public FetchPatientHealthResultsRequest withFilterUpdatedAt(String filterUpdatedAt) {
         this.filterUpdatedAt = filterUpdatedAt;
         return this;
@@ -84,6 +92,7 @@ public class FetchPatientHealthResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[after]")
     public String pageAfter;
+
     public FetchPatientHealthResultsRequest withPageAfter(String pageAfter) {
         this.pageAfter = pageAfter;
         return this;
@@ -94,6 +103,7 @@ public class FetchPatientHealthResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[limit]")
     public Long pageLimit;
+
     public FetchPatientHealthResultsRequest withPageLimit(Long pageLimit) {
         this.pageLimit = pageLimit;
         return this;
@@ -104,6 +114,7 @@ public class FetchPatientHealthResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
     public Long pageNumber;
+
     public FetchPatientHealthResultsRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -114,9 +125,13 @@ public class FetchPatientHealthResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public FetchPatientHealthResultsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public FetchPatientHealthResultsRequest(@JsonProperty("filter[patient]") String filterPatient) {
+        this.filterPatient = filterPatient;
+  }
 }

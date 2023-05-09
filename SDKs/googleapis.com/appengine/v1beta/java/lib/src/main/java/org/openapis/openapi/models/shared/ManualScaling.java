@@ -18,9 +18,11 @@ public class ManualScaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public Integer instances;
+
     public ManualScaling withInstances(Integer instances) {
         this.instances = instances;
         return this;
     }
     
+    public ManualScaling(){}
 }

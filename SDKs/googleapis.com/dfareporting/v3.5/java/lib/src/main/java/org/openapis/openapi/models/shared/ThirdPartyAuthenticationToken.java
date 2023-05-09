@@ -18,6 +18,7 @@ public class ThirdPartyAuthenticationToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ThirdPartyAuthenticationToken withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class ThirdPartyAuthenticationToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ThirdPartyAuthenticationToken withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ThirdPartyAuthenticationToken(){}
 }

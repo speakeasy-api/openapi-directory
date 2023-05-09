@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutAccountSettingDefaultRequest {
     @JsonProperty("name")
     public SettingNameEnum name;
+
     public PutAccountSettingDefaultRequest withName(SettingNameEnum name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class PutAccountSettingDefaultRequest {
     
     @JsonProperty("value")
     public String value;
+
     public PutAccountSettingDefaultRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PutAccountSettingDefaultRequest(@JsonProperty("name") SettingNameEnum name, @JsonProperty("value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

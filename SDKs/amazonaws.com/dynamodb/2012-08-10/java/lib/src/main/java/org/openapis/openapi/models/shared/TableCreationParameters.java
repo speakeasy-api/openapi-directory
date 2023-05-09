@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TableCreationParameters {
     @JsonProperty("AttributeDefinitions")
     public AttributeDefinition[] attributeDefinitions;
+
     public TableCreationParameters withAttributeDefinitions(AttributeDefinition[] attributeDefinitions) {
         this.attributeDefinitions = attributeDefinitions;
         return this;
@@ -22,6 +23,7 @@ public class TableCreationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingMode")
     public BillingModeEnum billingMode;
+
     public TableCreationParameters withBillingMode(BillingModeEnum billingMode) {
         this.billingMode = billingMode;
         return this;
@@ -30,6 +32,7 @@ public class TableCreationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalSecondaryIndexes")
     public GlobalSecondaryIndex[] globalSecondaryIndexes;
+
     public TableCreationParameters withGlobalSecondaryIndexes(GlobalSecondaryIndex[] globalSecondaryIndexes) {
         this.globalSecondaryIndexes = globalSecondaryIndexes;
         return this;
@@ -37,6 +40,7 @@ public class TableCreationParameters {
     
     @JsonProperty("KeySchema")
     public KeySchemaElement[] keySchema;
+
     public TableCreationParameters withKeySchema(KeySchemaElement[] keySchema) {
         this.keySchema = keySchema;
         return this;
@@ -48,6 +52,7 @@ public class TableCreationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughput")
     public ProvisionedThroughput provisionedThroughput;
+
     public TableCreationParameters withProvisionedThroughput(ProvisionedThroughput provisionedThroughput) {
         this.provisionedThroughput = provisionedThroughput;
         return this;
@@ -59,6 +64,7 @@ public class TableCreationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SSESpecification")
     public SSESpecification sseSpecification;
+
     public TableCreationParameters withSSESpecification(SSESpecification sseSpecification) {
         this.sseSpecification = sseSpecification;
         return this;
@@ -66,9 +72,15 @@ public class TableCreationParameters {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public TableCreationParameters withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public TableCreationParameters(@JsonProperty("AttributeDefinitions") AttributeDefinition[] attributeDefinitions, @JsonProperty("KeySchema") KeySchemaElement[] keySchema, @JsonProperty("TableName") String tableName) {
+        this.attributeDefinitions = attributeDefinitions;
+        this.keySchema = keySchema;
+        this.tableName = tableName;
+  }
 }

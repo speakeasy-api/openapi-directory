@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAliasRequest {
     @JsonProperty("Alias")
     public String alias;
+
     public DeleteAliasRequest withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -16,6 +17,7 @@ public class DeleteAliasRequest {
     
     @JsonProperty("EntityId")
     public String entityId;
+
     public DeleteAliasRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -23,9 +25,15 @@ public class DeleteAliasRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public DeleteAliasRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public DeleteAliasRequest(@JsonProperty("Alias") String alias, @JsonProperty("EntityId") String entityId, @JsonProperty("OrganizationId") String organizationId) {
+        this.alias = alias;
+        this.entityId = entityId;
+        this.organizationId = organizationId;
+  }
 }

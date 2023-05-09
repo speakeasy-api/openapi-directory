@@ -15,6 +15,7 @@ public class ClientWorkgroupSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ac_workgroup_id")
     public Long clientAcWorkgroupId;
+
     public ClientWorkgroupSimpleVO withClientAcWorkgroupId(Long clientAcWorkgroupId) {
         this.clientAcWorkgroupId = clientAcWorkgroupId;
         return this;
@@ -23,6 +24,7 @@ public class ClientWorkgroupSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_workgroup_id")
     public Long clientWorkgroupId;
+
     public ClientWorkgroupSimpleVO withClientWorkgroupId(Long clientWorkgroupId) {
         this.clientWorkgroupId = clientWorkgroupId;
         return this;
@@ -31,9 +33,11 @@ public class ClientWorkgroupSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_workgroup_name")
     public String clientWorkgroupName;
+
     public ClientWorkgroupSimpleVO withClientWorkgroupName(String clientWorkgroupName) {
         this.clientWorkgroupName = clientWorkgroupName;
         return this;
     }
     
+    public ClientWorkgroupSimpleVO(){}
 }

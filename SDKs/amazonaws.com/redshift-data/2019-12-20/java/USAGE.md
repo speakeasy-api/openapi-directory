@@ -3,38 +3,34 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchExecuteStatementXAmzTargetEnum;
 import org.openapis.openapi.models.operations.BatchExecuteStatementRequest;
 import org.openapis.openapi.models.operations.BatchExecuteStatementResponse;
+import org.openapis.openapi.models.operations.BatchExecuteStatementXAmzTargetEnum;
 import org.openapis.openapi.models.shared.BatchExecuteStatementInput;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            BatchExecuteStatementRequest req = new BatchExecuteStatementRequest() {{
-                batchExecuteStatementInput = new BatchExecuteStatementInput() {{
-                    clientToken = "corrupti";
-                    clusterIdentifier = "provident";
-                    database = "distinctio";
-                    dbUser = "quibusdam";
-                    secretArn = "unde";
-                    sqls = new String[]{{
-                        add("corrupti"),
-                        add("illum"),
-                        add("vel"),
-                        add("error"),
-                    }};
-                    statementName = "deserunt";
-                    withEvent = false;
-                    workgroupName = "suscipit";
-                }};
+            BatchExecuteStatementRequest req = new BatchExecuteStatementRequest(                new BatchExecuteStatementInput("provident",                 new String[]{{
+                                                add("quibusdam"),
+                                                add("unde"),
+                                                add("nulla"),
+                                            }}) {{
+                                clientToken = "corrupti";
+                                clusterIdentifier = "illum";
+                                dbUser = "vel";
+                                secretArn = "error";
+                                statementName = "deserunt";
+                                withEvent = false;
+                                workgroupName = "suscipit";
+                            }};, BatchExecuteStatementXAmzTargetEnum.REDSHIFT_DATA_BATCH_EXECUTE_STATEMENT) {{
                 xAmzAlgorithm = "iure";
                 xAmzContentSha256 = "magnam";
                 xAmzCredential = "debitis";
@@ -42,16 +38,17 @@ public class Application {
                 xAmzSecurityToken = "delectus";
                 xAmzSignature = "tempora";
                 xAmzSignedHeaders = "suscipit";
-                xAmzTarget = "RedshiftData.BatchExecuteStatement";
-            }}            
+            }};            
 
             BatchExecuteStatementResponse res = sdk.batchExecuteStatement(req);
 
-            if (res.batchExecuteStatementOutput.isPresent()) {
+            if (res.batchExecuteStatementOutput != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -18,6 +18,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationEndpoint")
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint applicationEndpoint;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnection withApplicationEndpoint(GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint applicationEndpoint) {
         this.applicationEndpoint = applicationEndpoint;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectors")
     public String[] connectors;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnection withConnectors(String[] connectors) {
         this.connectors = connectors;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnection withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnection withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gateway")
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway gateway;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnection withGateway(GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway gateway) {
         this.gateway = gateway;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnection withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnection withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionStateEnum state;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnection withState(GoogleCloudBeyondcorpAppconnectionsV1AppConnectionStateEnum state) {
         this.state = state;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionTypeEnum type;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnection withType(GoogleCloudBeyondcorpAppconnectionsV1AppConnectionTypeEnum type) {
         this.type = type;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnection withUid(String uid) {
         this.uid = uid;
         return this;
@@ -128,9 +138,11 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnection withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectionsV1AppConnection(){}
 }

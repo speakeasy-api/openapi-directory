@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AcademicCertificateSchema - The certificate data in response body in PDF, XML or JSON format as requested in format parameter.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AcademicCertificateSchema {
     
     public AcademicCertificateSchemaCertificateData certificateData;
+
     public AcademicCertificateSchema withCertificateData(AcademicCertificateSchemaCertificateData certificateData) {
         this.certificateData = certificateData;
         return this;
@@ -19,6 +20,7 @@ public class AcademicCertificateSchema {
     
     
     public AcademicCertificateSchemaIssuedBy issuedBy;
+
     public AcademicCertificateSchema withIssuedBy(AcademicCertificateSchemaIssuedBy issuedBy) {
         this.issuedBy = issuedBy;
         return this;
@@ -26,6 +28,7 @@ public class AcademicCertificateSchema {
     
     
     public AcademicCertificateSchemaIssuedTo issuedTo;
+
     public AcademicCertificateSchema withIssuedTo(AcademicCertificateSchemaIssuedTo issuedTo) {
         this.issuedTo = issuedTo;
         return this;
@@ -33,6 +36,7 @@ public class AcademicCertificateSchema {
     
     
     public String issueDate;
+
     public AcademicCertificateSchema withIssueDate(String issueDate) {
         this.issueDate = issueDate;
         return this;
@@ -40,6 +44,7 @@ public class AcademicCertificateSchema {
     
     
     public String issuedAt;
+
     public AcademicCertificateSchema withIssuedAt(String issuedAt) {
         this.issuedAt = issuedAt;
         return this;
@@ -47,6 +52,7 @@ public class AcademicCertificateSchema {
     
     
     public String language;
+
     public AcademicCertificateSchema withLanguage(String language) {
         this.language = language;
         return this;
@@ -54,6 +60,7 @@ public class AcademicCertificateSchema {
     
     
     public String name;
+
     public AcademicCertificateSchema withName(String name) {
         this.name = name;
         return this;
@@ -61,6 +68,7 @@ public class AcademicCertificateSchema {
     
     
     public Long number;
+
     public AcademicCertificateSchema withNumber(Long number) {
         this.number = number;
         return this;
@@ -68,6 +76,7 @@ public class AcademicCertificateSchema {
     
     
     public String status;
+
     public AcademicCertificateSchema withStatus(String status) {
         this.status = status;
         return this;
@@ -75,6 +84,7 @@ public class AcademicCertificateSchema {
     
     
     public String type;
+
     public AcademicCertificateSchema withType(String type) {
         this.type = type;
         return this;
@@ -82,9 +92,23 @@ public class AcademicCertificateSchema {
     
     
     public String validFromDate;
+
     public AcademicCertificateSchema withValidFromDate(String validFromDate) {
         this.validFromDate = validFromDate;
         return this;
     }
     
+    public AcademicCertificateSchema(@JsonProperty("CertificateData") AcademicCertificateSchemaCertificateData certificateData, @JsonProperty("IssuedBy") AcademicCertificateSchemaIssuedBy issuedBy, @JsonProperty("IssuedTo") AcademicCertificateSchemaIssuedTo issuedTo, @JsonProperty("issueDate") String issueDate, @JsonProperty("issuedAt") String issuedAt, @JsonProperty("language") String language, @JsonProperty("name") String name, @JsonProperty("number") Long number, @JsonProperty("status") String status, @JsonProperty("type") String type, @JsonProperty("validFromDate") String validFromDate) {
+        this.certificateData = certificateData;
+        this.issuedBy = issuedBy;
+        this.issuedTo = issuedTo;
+        this.issueDate = issueDate;
+        this.issuedAt = issuedAt;
+        this.language = language;
+        this.name = name;
+        this.number = number;
+        this.status = status;
+        this.type = type;
+        this.validFromDate = validFromDate;
+  }
 }

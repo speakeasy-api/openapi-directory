@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PremiumNewsByPlayerRequest {
@@ -12,6 +13,7 @@ public class PremiumNewsByPlayerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public PremiumNewsByPlayerFormatEnum format;
+
     public PremiumNewsByPlayerRequest withFormat(PremiumNewsByPlayerFormatEnum format) {
         this.format = format;
         return this;
@@ -23,9 +25,14 @@ public class PremiumNewsByPlayerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playerid")
     public String playerid;
+
     public PremiumNewsByPlayerRequest withPlayerid(String playerid) {
         this.playerid = playerid;
         return this;
     }
     
+    public PremiumNewsByPlayerRequest(@JsonProperty("format") PremiumNewsByPlayerFormatEnum format, @JsonProperty("playerid") String playerid) {
+        this.format = format;
+        this.playerid = playerid;
+  }
 }

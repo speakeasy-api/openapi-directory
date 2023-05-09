@@ -15,6 +15,7 @@ public class RegexPatternSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RegexPatternSet withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class RegexPatternSet {
     
     @JsonProperty("RegexPatternSetId")
     public String regexPatternSetId;
+
     public RegexPatternSet withRegexPatternSetId(String regexPatternSetId) {
         this.regexPatternSetId = regexPatternSetId;
         return this;
@@ -29,9 +31,14 @@ public class RegexPatternSet {
     
     @JsonProperty("RegexPatternStrings")
     public String[] regexPatternStrings;
+
     public RegexPatternSet withRegexPatternStrings(String[] regexPatternStrings) {
         this.regexPatternStrings = regexPatternStrings;
         return this;
     }
     
+    public RegexPatternSet(@JsonProperty("RegexPatternSetId") String regexPatternSetId, @JsonProperty("RegexPatternStrings") String[] regexPatternStrings) {
+        this.regexPatternSetId = regexPatternSetId;
+        this.regexPatternStrings = regexPatternStrings;
+  }
 }

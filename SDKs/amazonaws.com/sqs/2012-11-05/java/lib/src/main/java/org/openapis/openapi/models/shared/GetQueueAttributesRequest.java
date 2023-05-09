@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetQueueAttributesRequest - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetQueueAttributesRequest {
     
     public AttributeNameListEnum[] attributeNames;
+
     public GetQueueAttributesRequest withAttributeNames(AttributeNameListEnum[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -19,9 +20,13 @@ public class GetQueueAttributesRequest {
     
     
     public String queueUrl;
+
     public GetQueueAttributesRequest withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
     }
     
+    public GetQueueAttributesRequest(@JsonProperty("QueueUrl") String queueUrl) {
+        this.queueUrl = queueUrl;
+  }
 }

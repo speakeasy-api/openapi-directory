@@ -15,9 +15,11 @@ public class ProjectsListXpnHostsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public ProjectsListXpnHostsRequest withOrganization(String organization) {
         this.organization = organization;
         return this;
     }
     
+    public ProjectsListXpnHostsRequest(){}
 }

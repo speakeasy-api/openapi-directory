@@ -15,6 +15,7 @@ public class JobCancelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public Job job;
+
     public JobCancelResponse withJob(Job job) {
         this.job = job;
         return this;
@@ -26,9 +27,11 @@ public class JobCancelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public JobCancelResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public JobCancelResponse(){}
 }

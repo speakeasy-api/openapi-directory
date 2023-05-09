@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDnsDomainNameRecordsRequest {
@@ -12,6 +13,7 @@ public class GetDnsDomainNameRecordsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public GetDnsDomainNameRecordsRequest withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -22,6 +24,7 @@ public class GetDnsDomainNameRecordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public GetDnsDomainNameRecordsRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
@@ -32,6 +35,7 @@ public class GetDnsDomainNameRecordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=record_name")
     public String recordName;
+
     public GetDnsDomainNameRecordsRequest withRecordName(String recordName) {
         this.recordName = recordName;
         return this;
@@ -42,6 +46,7 @@ public class GetDnsDomainNameRecordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
     public String service;
+
     public GetDnsDomainNameRecordsRequest withService(String service) {
         this.service = service;
         return this;
@@ -52,6 +57,7 @@ public class GetDnsDomainNameRecordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Integer skip;
+
     public GetDnsDomainNameRecordsRequest withSkip(Integer skip) {
         this.skip = skip;
         return this;
@@ -62,6 +68,7 @@ public class GetDnsDomainNameRecordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=take")
     public Integer take;
+
     public GetDnsDomainNameRecordsRequest withTake(Integer take) {
         this.take = take;
         return this;
@@ -72,9 +79,14 @@ public class GetDnsDomainNameRecordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public GetDnsDomainNameRecordsRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetDnsDomainNameRecordsRequest(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+  }
 }

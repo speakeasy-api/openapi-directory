@@ -54,11 +54,9 @@ public class Contributors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContributorResponse res = new org.openapis.openapi.models.operations.GetContributorResponse() {{
+        org.openapis.openapi.models.operations.GetContributorResponse res = new org.openapis.openapi.models.operations.GetContributorResponse(contentType, httpRes.statusCode()) {{
             contributorProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Contributors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContributorCollectionItemsResponse res = new org.openapis.openapi.models.operations.GetContributorCollectionItemsResponse() {{
+        org.openapis.openapi.models.operations.GetContributorCollectionItemsResponse res = new org.openapis.openapi.models.operations.GetContributorCollectionItemsResponse(contentType, httpRes.statusCode()) {{
             collectionItemDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,11 +142,9 @@ public class Contributors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContributorCollectionsResponse res = new org.openapis.openapi.models.operations.GetContributorCollectionsResponse() {{
+        org.openapis.openapi.models.operations.GetContributorCollectionsResponse res = new org.openapis.openapi.models.operations.GetContributorCollectionsResponse(contentType, httpRes.statusCode()) {{
             collection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,11 +189,9 @@ public class Contributors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContributorCollectionsListResponse res = new org.openapis.openapi.models.operations.GetContributorCollectionsListResponse() {{
+        org.openapis.openapi.models.operations.GetContributorCollectionsListResponse res = new org.openapis.openapi.models.operations.GetContributorCollectionsListResponse(contentType, httpRes.statusCode()) {{
             collectionDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -244,11 +236,9 @@ public class Contributors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContributorListResponse res = new org.openapis.openapi.models.operations.GetContributorListResponse() {{
+        org.openapis.openapi.models.operations.GetContributorListResponse res = new org.openapis.openapi.models.operations.GetContributorListResponse(contentType, httpRes.statusCode()) {{
             contributorProfileDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

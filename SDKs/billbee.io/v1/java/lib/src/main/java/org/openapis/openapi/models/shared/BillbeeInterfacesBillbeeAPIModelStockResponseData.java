@@ -12,6 +12,7 @@ public class BillbeeInterfacesBillbeeAPIModelStockResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public BillbeeInterfacesBillbeeAPIModelStockResponseData withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class BillbeeInterfacesBillbeeAPIModelStockResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public BillbeeInterfacesBillbeeAPIModelStockResponseData withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class BillbeeInterfacesBillbeeAPIModelStockResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsDefault")
     public Boolean isDefault;
+
     public BillbeeInterfacesBillbeeAPIModelStockResponseData withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -36,9 +39,11 @@ public class BillbeeInterfacesBillbeeAPIModelStockResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public BillbeeInterfacesBillbeeAPIModelStockResponseData withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelStockResponseData(){}
 }

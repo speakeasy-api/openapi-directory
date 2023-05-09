@@ -18,6 +18,7 @@ public class BatchGetAssetPropertyValueSuccessEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetPropertyValue")
     public AssetPropertyValue assetPropertyValue;
+
     public BatchGetAssetPropertyValueSuccessEntry withAssetPropertyValue(AssetPropertyValue assetPropertyValue) {
         this.assetPropertyValue = assetPropertyValue;
         return this;
@@ -25,9 +26,13 @@ public class BatchGetAssetPropertyValueSuccessEntry {
     
     @JsonProperty("entryId")
     public String entryId;
+
     public BatchGetAssetPropertyValueSuccessEntry withEntryId(String entryId) {
         this.entryId = entryId;
         return this;
     }
     
+    public BatchGetAssetPropertyValueSuccessEntry(@JsonProperty("entryId") String entryId) {
+        this.entryId = entryId;
+  }
 }

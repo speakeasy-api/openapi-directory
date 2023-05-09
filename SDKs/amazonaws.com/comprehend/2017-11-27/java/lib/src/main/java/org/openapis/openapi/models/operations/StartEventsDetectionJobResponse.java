@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartEventsDetectionJobResponse {
     
     public String contentType;
+
     public StartEventsDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartEventsDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public StartEventsDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartEventsDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StartEventsDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,8 +43,20 @@ public class StartEventsDetectionJobResponse {
      */
     
     public Object kmsKeyValidationException;
+
     public StartEventsDetectionJobResponse withKmsKeyValidationException(Object kmsKeyValidationException) {
         this.kmsKeyValidationException = kmsKeyValidationException;
+        return this;
+    }
+    
+    /**
+     * ResourceInUseException
+     */
+    
+    public Object resourceInUseException;
+
+    public StartEventsDetectionJobResponse withResourceInUseException(Object resourceInUseException) {
+        this.resourceInUseException = resourceInUseException;
         return this;
     }
     
@@ -49,6 +65,7 @@ public class StartEventsDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartEventsDetectionJobResponse startEventsDetectionJobResponse;
+
     public StartEventsDetectionJobResponse withStartEventsDetectionJobResponse(org.openapis.openapi.models.shared.StartEventsDetectionJobResponse startEventsDetectionJobResponse) {
         this.startEventsDetectionJobResponse = startEventsDetectionJobResponse;
         return this;
@@ -56,6 +73,7 @@ public class StartEventsDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public StartEventsDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +81,7 @@ public class StartEventsDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartEventsDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +92,7 @@ public class StartEventsDetectionJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StartEventsDetectionJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +103,14 @@ public class StartEventsDetectionJobResponse {
      */
     
     public Object tooManyTagsException;
+
     public StartEventsDetectionJobResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public StartEventsDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

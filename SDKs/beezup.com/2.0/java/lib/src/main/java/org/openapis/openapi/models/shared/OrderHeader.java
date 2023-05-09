@@ -22,6 +22,7 @@ public class OrderHeader {
      */
     @JsonProperty("accountId")
     public Integer accountId;
+
     public OrderHeader withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -32,6 +33,7 @@ public class OrderHeader {
      */
     @JsonProperty("beezUPOrderId")
     public String beezUPOrderId;
+
     public OrderHeader withBeezUPOrderId(String beezUPOrderId) {
         this.beezUPOrderId = beezUPOrderId;
         return this;
@@ -43,6 +45,7 @@ public class OrderHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beezUPOrderUrl")
     public String beezUPOrderUrl;
+
     public OrderHeader withBeezUPOrderUrl(String beezUPOrderUrl) {
         this.beezUPOrderUrl = beezUPOrderUrl;
         return this;
@@ -56,6 +59,7 @@ public class OrderHeader {
      */
     @JsonProperty("etag")
     public String etag;
+
     public OrderHeader withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -63,6 +67,7 @@ public class OrderHeader {
     
     @JsonProperty("links")
     public OrderHeaderLinks links;
+
     public OrderHeader withLinks(OrderHeaderLinks links) {
         this.links = links;
         return this;
@@ -73,6 +78,7 @@ public class OrderHeader {
      */
     @JsonProperty("marketplaceBusinessCode")
     public String marketplaceBusinessCode;
+
     public OrderHeader withMarketplaceBusinessCode(String marketplaceBusinessCode) {
         this.marketplaceBusinessCode = marketplaceBusinessCode;
         return this;
@@ -83,6 +89,7 @@ public class OrderHeader {
      */
     @JsonProperty("marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public OrderHeader withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
@@ -94,6 +101,7 @@ public class OrderHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_Buyer_Name")
     public String orderBuyerName;
+
     public OrderHeader withOrderBuyerName(String orderBuyerName) {
         this.orderBuyerName = orderBuyerName;
         return this;
@@ -106,6 +114,7 @@ public class OrderHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_CurrencyCode")
     public String orderCurrencyCode;
+
     public OrderHeader withOrderCurrencyCode(String orderCurrencyCode) {
         this.orderCurrencyCode = orderCurrencyCode;
         return this;
@@ -117,6 +126,7 @@ public class OrderHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_Invoice_Number")
     public String orderInvoiceNumber;
+
     public OrderHeader withOrderInvoiceNumber(String orderInvoiceNumber) {
         this.orderInvoiceNumber = orderInvoiceNumber;
         return this;
@@ -128,6 +138,7 @@ public class OrderHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_Invoice_Uri")
     public String orderInvoiceUri;
+
     public OrderHeader withOrderInvoiceUri(String orderInvoiceUri) {
         this.orderInvoiceUri = orderInvoiceUri;
         return this;
@@ -140,6 +151,7 @@ public class OrderHeader {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("order_LastModificationUtcDate")
     public OffsetDateTime orderLastModificationUtcDate;
+
     public OrderHeader withOrderLastModificationUtcDate(OffsetDateTime orderLastModificationUtcDate) {
         this.orderLastModificationUtcDate = orderLastModificationUtcDate;
         return this;
@@ -152,6 +164,7 @@ public class OrderHeader {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("order_MarketplaceLastModificationUtcDate")
     public OffsetDateTime orderMarketplaceLastModificationUtcDate;
+
     public OrderHeader withOrderMarketplaceLastModificationUtcDate(OffsetDateTime orderMarketplaceLastModificationUtcDate) {
         this.orderMarketplaceLastModificationUtcDate = orderMarketplaceLastModificationUtcDate;
         return this;
@@ -162,6 +175,7 @@ public class OrderHeader {
      */
     @JsonProperty("order_MarketplaceOrderId")
     public String orderMarketplaceOrderId;
+
     public OrderHeader withOrderMarketplaceOrderId(String orderMarketplaceOrderId) {
         this.orderMarketplaceOrderId = orderMarketplaceOrderId;
         return this;
@@ -173,6 +187,7 @@ public class OrderHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_MerchantECommerceSoftwareName")
     public String orderMerchantECommerceSoftwareName;
+
     public OrderHeader withOrderMerchantECommerceSoftwareName(String orderMerchantECommerceSoftwareName) {
         this.orderMerchantECommerceSoftwareName = orderMerchantECommerceSoftwareName;
         return this;
@@ -184,6 +199,7 @@ public class OrderHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_MerchantECommerceSoftwareVersion")
     public String orderMerchantECommerceSoftwareVersion;
+
     public OrderHeader withOrderMerchantECommerceSoftwareVersion(String orderMerchantECommerceSoftwareVersion) {
         this.orderMerchantECommerceSoftwareVersion = orderMerchantECommerceSoftwareVersion;
         return this;
@@ -195,6 +211,7 @@ public class OrderHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_MerchantOrderId")
     public String orderMerchantOrderId;
+
     public OrderHeader withOrderMerchantOrderId(String orderMerchantOrderId) {
         this.orderMerchantOrderId = orderMerchantOrderId;
         return this;
@@ -207,6 +224,7 @@ public class OrderHeader {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("order_PurchaseUtcDate")
     public OffsetDateTime orderPurchaseUtcDate;
+
     public OrderHeader withOrderPurchaseUtcDate(OffsetDateTime orderPurchaseUtcDate) {
         this.orderPurchaseUtcDate = orderPurchaseUtcDate;
         return this;
@@ -217,6 +235,7 @@ public class OrderHeader {
      */
     @JsonProperty("order_Status_BeezUPOrderStatus")
     public String orderStatusBeezUPOrderStatus;
+
     public OrderHeader withOrderStatusBeezUPOrderStatus(String orderStatusBeezUPOrderStatus) {
         this.orderStatusBeezUPOrderStatus = orderStatusBeezUPOrderStatus;
         return this;
@@ -228,6 +247,7 @@ public class OrderHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_Status_MarketplaceOrderStatus")
     public String orderStatusMarketplaceOrderStatus;
+
     public OrderHeader withOrderStatusMarketplaceOrderStatus(String orderStatusMarketplaceOrderStatus) {
         this.orderStatusMarketplaceOrderStatus = orderStatusMarketplaceOrderStatus;
         return this;
@@ -239,6 +259,7 @@ public class OrderHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_TotalPrice")
     public Double orderTotalPrice;
+
     public OrderHeader withOrderTotalPrice(Double orderTotalPrice) {
         this.orderTotalPrice = orderTotalPrice;
         return this;
@@ -249,9 +270,24 @@ public class OrderHeader {
      */
     @JsonProperty("processing")
     public Boolean processing;
+
     public OrderHeader withProcessing(Boolean processing) {
         this.processing = processing;
         return this;
     }
     
+    public OrderHeader(@JsonProperty("accountId") Integer accountId, @JsonProperty("beezUPOrderId") String beezUPOrderId, @JsonProperty("etag") String etag, @JsonProperty("links") OrderHeaderLinks links, @JsonProperty("marketplaceBusinessCode") String marketplaceBusinessCode, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode, @JsonProperty("order_LastModificationUtcDate") OffsetDateTime orderLastModificationUtcDate, @JsonProperty("order_MarketplaceLastModificationUtcDate") OffsetDateTime orderMarketplaceLastModificationUtcDate, @JsonProperty("order_MarketplaceOrderId") String orderMarketplaceOrderId, @JsonProperty("order_PurchaseUtcDate") OffsetDateTime orderPurchaseUtcDate, @JsonProperty("order_Status_BeezUPOrderStatus") String orderStatusBeezUPOrderStatus, @JsonProperty("processing") Boolean processing) {
+        this.accountId = accountId;
+        this.beezUPOrderId = beezUPOrderId;
+        this.etag = etag;
+        this.links = links;
+        this.marketplaceBusinessCode = marketplaceBusinessCode;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        this.orderLastModificationUtcDate = orderLastModificationUtcDate;
+        this.orderMarketplaceLastModificationUtcDate = orderMarketplaceLastModificationUtcDate;
+        this.orderMarketplaceOrderId = orderMarketplaceOrderId;
+        this.orderPurchaseUtcDate = orderPurchaseUtcDate;
+        this.orderStatusBeezUPOrderStatus = orderStatusBeezUPOrderStatus;
+        this.processing = processing;
+  }
 }

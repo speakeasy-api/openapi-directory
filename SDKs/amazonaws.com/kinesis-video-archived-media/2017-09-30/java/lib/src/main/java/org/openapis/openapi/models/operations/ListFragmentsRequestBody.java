@@ -15,6 +15,7 @@ public class ListFragmentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FragmentSelector")
     public ListFragmentsRequestBodyFragmentSelector fragmentSelector;
+
     public ListFragmentsRequestBody withFragmentSelector(ListFragmentsRequestBodyFragmentSelector fragmentSelector) {
         this.fragmentSelector = fragmentSelector;
         return this;
@@ -26,6 +27,7 @@ public class ListFragmentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListFragmentsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class ListFragmentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFragmentsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,6 +51,7 @@ public class ListFragmentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public ListFragmentsRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -59,9 +63,11 @@ public class ListFragmentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public ListFragmentsRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public ListFragmentsRequestBody(){}
 }

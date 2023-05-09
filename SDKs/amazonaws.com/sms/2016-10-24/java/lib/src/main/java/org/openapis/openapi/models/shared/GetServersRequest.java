@@ -12,6 +12,7 @@ public class GetServersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetServersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class GetServersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetServersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class GetServersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmServerAddressList")
     public VmServerAddress[] vmServerAddressList;
+
     public GetServersRequest withVmServerAddressList(VmServerAddress[] vmServerAddressList) {
         this.vmServerAddressList = vmServerAddressList;
         return this;
     }
     
+    public GetServersRequest(){}
 }

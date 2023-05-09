@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistrictsInARegionRequest {
@@ -12,6 +13,7 @@ public class DistrictsInARegionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
     public String country;
+
     public DistrictsInARegionRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -22,9 +24,14 @@ public class DistrictsInARegionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public DistrictsInARegionRequest withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public DistrictsInARegionRequest(@JsonProperty("country") String country, @JsonProperty("region") String region) {
+        this.country = country;
+        this.region = region;
+  }
 }

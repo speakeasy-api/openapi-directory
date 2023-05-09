@@ -15,6 +15,7 @@ public class UpdateRouteRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpcRoute")
     public org.openapis.openapi.models.shared.GrpcRoute grpcRoute;
+
     public UpdateRouteRequestBodySpec withGrpcRoute(org.openapis.openapi.models.shared.GrpcRoute grpcRoute) {
         this.grpcRoute = grpcRoute;
         return this;
@@ -23,6 +24,7 @@ public class UpdateRouteRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http2Route")
     public org.openapis.openapi.models.shared.HttpRoute http2Route;
+
     public UpdateRouteRequestBodySpec withHttp2Route(org.openapis.openapi.models.shared.HttpRoute http2Route) {
         this.http2Route = http2Route;
         return this;
@@ -31,6 +33,7 @@ public class UpdateRouteRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpRoute")
     public org.openapis.openapi.models.shared.HttpRoute httpRoute;
+
     public UpdateRouteRequestBodySpec withHttpRoute(org.openapis.openapi.models.shared.HttpRoute httpRoute) {
         this.httpRoute = httpRoute;
         return this;
@@ -39,6 +42,7 @@ public class UpdateRouteRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public UpdateRouteRequestBodySpec withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -47,9 +51,11 @@ public class UpdateRouteRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tcpRoute")
     public org.openapis.openapi.models.shared.TcpRoute tcpRoute;
+
     public UpdateRouteRequestBodySpec withTcpRoute(org.openapis.openapi.models.shared.TcpRoute tcpRoute) {
         this.tcpRoute = tcpRoute;
         return this;
     }
     
+    public UpdateRouteRequestBodySpec(){}
 }

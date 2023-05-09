@@ -15,6 +15,7 @@ public class DescribeVoicesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeVoicesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeVoicesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Voices")
     public Voice[] voices;
+
     public DescribeVoicesOutput withVoices(Voice[] voices) {
         this.voices = voices;
         return this;
     }
     
+    public DescribeVoicesOutput(){}
 }

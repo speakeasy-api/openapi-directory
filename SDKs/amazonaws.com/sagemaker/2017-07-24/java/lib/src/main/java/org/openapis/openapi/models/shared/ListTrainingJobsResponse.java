@@ -15,6 +15,7 @@ public class ListTrainingJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTrainingJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListTrainingJobsResponse {
     
     @JsonProperty("TrainingJobSummaries")
     public TrainingJobSummary[] trainingJobSummaries;
+
     public ListTrainingJobsResponse withTrainingJobSummaries(TrainingJobSummary[] trainingJobSummaries) {
         this.trainingJobSummaries = trainingJobSummaries;
         return this;
     }
     
+    public ListTrainingJobsResponse(@JsonProperty("TrainingJobSummaries") TrainingJobSummary[] trainingJobSummaries) {
+        this.trainingJobSummaries = trainingJobSummaries;
+  }
 }

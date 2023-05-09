@@ -18,6 +18,7 @@ public class SslCertificateAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public SslCertificateAggregatedListWarningCodeEnum code;
+
     public SslCertificateAggregatedListWarning withCode(SslCertificateAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class SslCertificateAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public SslCertificateAggregatedListWarningData[] data;
+
     public SslCertificateAggregatedListWarning withData(SslCertificateAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class SslCertificateAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public SslCertificateAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public SslCertificateAggregatedListWarning(){}
 }

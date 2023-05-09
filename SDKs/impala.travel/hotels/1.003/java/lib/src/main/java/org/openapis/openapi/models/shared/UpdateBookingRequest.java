@@ -24,6 +24,7 @@ public class UpdateBookingRequest {
      */
     @JsonProperty("bookingContact")
     public PersonInfo bookingContact;
+
     public UpdateBookingRequest withBookingContact(PersonInfo bookingContact) {
         this.bookingContact = bookingContact;
         return this;
@@ -35,6 +36,7 @@ public class UpdateBookingRequest {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("end")
     public LocalDate end;
+
     public UpdateBookingRequest withEnd(LocalDate end) {
         this.end = end;
         return this;
@@ -46,6 +48,7 @@ public class UpdateBookingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public NotesBooking notes;
+
     public UpdateBookingRequest withNotes(NotesBooking notes) {
         this.notes = notes;
         return this;
@@ -57,6 +60,7 @@ public class UpdateBookingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentType")
     public UpdateBookingRequestPaymentTypeEnum paymentType;
+
     public UpdateBookingRequest withPaymentType(UpdateBookingRequestPaymentTypeEnum paymentType) {
         this.paymentType = paymentType;
         return this;
@@ -67,6 +71,7 @@ public class UpdateBookingRequest {
      */
     @JsonProperty("rooms")
     public UpdateBookingRequestRooms[] rooms;
+
     public UpdateBookingRequest withRooms(UpdateBookingRequestRooms[] rooms) {
         this.rooms = rooms;
         return this;
@@ -78,6 +83,7 @@ public class UpdateBookingRequest {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("start")
     public LocalDate start;
+
     public UpdateBookingRequest withStart(LocalDate start) {
         this.start = start;
         return this;
@@ -90,9 +96,17 @@ public class UpdateBookingRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateBookingVersionAtTimestamp")
     public OffsetDateTime updateBookingVersionAtTimestamp;
+
     public UpdateBookingRequest withUpdateBookingVersionAtTimestamp(OffsetDateTime updateBookingVersionAtTimestamp) {
         this.updateBookingVersionAtTimestamp = updateBookingVersionAtTimestamp;
         return this;
     }
     
+    public UpdateBookingRequest(@JsonProperty("bookingContact") PersonInfo bookingContact, @JsonProperty("end") LocalDate end, @JsonProperty("rooms") UpdateBookingRequestRooms[] rooms, @JsonProperty("start") LocalDate start, @JsonProperty("updateBookingVersionAtTimestamp") OffsetDateTime updateBookingVersionAtTimestamp) {
+        this.bookingContact = bookingContact;
+        this.end = end;
+        this.rooms = rooms;
+        this.start = start;
+        this.updateBookingVersionAtTimestamp = updateBookingVersionAtTimestamp;
+  }
 }

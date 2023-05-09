@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateHsmRequest {
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public CreateHsmRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -18,6 +19,7 @@ public class CreateHsmRequest {
     
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public CreateHsmRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -26,9 +28,14 @@ public class CreateHsmRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public CreateHsmRequest withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
     }
     
+    public CreateHsmRequest(@JsonProperty("AvailabilityZone") String availabilityZone, @JsonProperty("ClusterId") String clusterId) {
+        this.availabilityZone = availabilityZone;
+        this.clusterId = clusterId;
+  }
 }

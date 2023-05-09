@@ -15,9 +15,11 @@ public class UpdateFirewallRuleGroupAssociationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallRuleGroupAssociation")
     public FirewallRuleGroupAssociation firewallRuleGroupAssociation;
+
     public UpdateFirewallRuleGroupAssociationResponse withFirewallRuleGroupAssociation(FirewallRuleGroupAssociation firewallRuleGroupAssociation) {
         this.firewallRuleGroupAssociation = firewallRuleGroupAssociation;
         return this;
     }
     
+    public UpdateFirewallRuleGroupAssociationResponse(){}
 }

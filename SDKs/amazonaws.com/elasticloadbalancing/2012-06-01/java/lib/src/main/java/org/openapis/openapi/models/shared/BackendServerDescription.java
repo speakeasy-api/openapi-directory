@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class BackendServerDescription {
     
     public Long instancePort;
+
     public BackendServerDescription withInstancePort(Long instancePort) {
         this.instancePort = instancePort;
         return this;
@@ -19,9 +20,11 @@ public class BackendServerDescription {
     
     
     public String[] policyNames;
+
     public BackendServerDescription withPolicyNames(String[] policyNames) {
         this.policyNames = policyNames;
         return this;
     }
     
+    public BackendServerDescription(){}
 }

@@ -15,6 +15,7 @@ public class CreateOrganizationNetworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyFromNetworkId")
     public String copyFromNetworkId;
+
     public CreateOrganizationNetworkRequestBody withCopyFromNetworkId(String copyFromNetworkId) {
         this.copyFromNetworkId = copyFromNetworkId;
         return this;
@@ -26,6 +27,7 @@ public class CreateOrganizationNetworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableMyMerakiCom")
     public Boolean disableMyMerakiCom;
+
     public CreateOrganizationNetworkRequestBody withDisableMyMerakiCom(Boolean disableMyMerakiCom) {
         this.disableMyMerakiCom = disableMyMerakiCom;
         return this;
@@ -37,6 +39,7 @@ public class CreateOrganizationNetworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableRemoteStatusPage")
     public Boolean disableRemoteStatusPage;
+
     public CreateOrganizationNetworkRequestBody withDisableRemoteStatusPage(Boolean disableRemoteStatusPage) {
         this.disableRemoteStatusPage = disableRemoteStatusPage;
         return this;
@@ -47,6 +50,7 @@ public class CreateOrganizationNetworkRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateOrganizationNetworkRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +62,7 @@ public class CreateOrganizationNetworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String tags;
+
     public CreateOrganizationNetworkRequestBody withTags(String tags) {
         this.tags = tags;
         return this;
@@ -69,6 +74,7 @@ public class CreateOrganizationNetworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public CreateOrganizationNetworkRequestBody withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -79,9 +85,14 @@ public class CreateOrganizationNetworkRequestBody {
      */
     @JsonProperty("type")
     public String type;
+
     public CreateOrganizationNetworkRequestBody withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CreateOrganizationNetworkRequestBody(@JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.name = name;
+        this.type = type;
+  }
 }

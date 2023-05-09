@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateappkeyRequest {
@@ -12,6 +13,7 @@ public class UpdateappkeyRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateappkeyRequest updateappkeyRequest;
+
     public UpdateappkeyRequest withUpdateappkeyRequest(org.openapis.openapi.models.shared.UpdateappkeyRequest updateappkeyRequest) {
         this.updateappkeyRequest = updateappkeyRequest;
         return this;
@@ -22,9 +24,14 @@ public class UpdateappkeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateappkeyRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateappkeyRequest(@JsonProperty("UpdateappkeyRequest") org.openapis.openapi.models.shared.UpdateappkeyRequest updateappkeyRequest, @JsonProperty("id") String id) {
+        this.updateappkeyRequest = updateappkeyRequest;
+        this.id = id;
+  }
 }

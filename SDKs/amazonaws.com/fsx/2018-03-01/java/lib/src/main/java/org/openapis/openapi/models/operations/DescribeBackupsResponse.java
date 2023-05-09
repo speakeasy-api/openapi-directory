@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBackupsResponse {
@@ -12,6 +13,7 @@ public class DescribeBackupsResponse {
      */
     
     public Object backupNotFound;
+
     public DescribeBackupsResponse withBackupNotFound(Object backupNotFound) {
         this.backupNotFound = backupNotFound;
         return this;
@@ -22,6 +24,7 @@ public class DescribeBackupsResponse {
      */
     
     public Object badRequest;
+
     public DescribeBackupsResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBackupsResponse {
     
     
     public String contentType;
+
     public DescribeBackupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeBackupsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBackupsResponse describeBackupsResponse;
+
     public DescribeBackupsResponse withDescribeBackupsResponse(org.openapis.openapi.models.shared.DescribeBackupsResponse describeBackupsResponse) {
         this.describeBackupsResponse = describeBackupsResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribeBackupsResponse {
      */
     
     public Object fileSystemNotFound;
+
     public DescribeBackupsResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -59,6 +65,7 @@ public class DescribeBackupsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeBackupsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -66,6 +73,7 @@ public class DescribeBackupsResponse {
     
     
     public Integer statusCode;
+
     public DescribeBackupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeBackupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBackupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DescribeBackupsResponse {
      */
     
     public Object volumeNotFound;
+
     public DescribeBackupsResponse withVolumeNotFound(Object volumeNotFound) {
         this.volumeNotFound = volumeNotFound;
         return this;
     }
     
+    public DescribeBackupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

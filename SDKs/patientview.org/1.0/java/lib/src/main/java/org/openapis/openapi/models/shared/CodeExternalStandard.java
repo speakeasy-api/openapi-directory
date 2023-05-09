@@ -12,6 +12,7 @@ public class CodeExternalStandard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeString")
     public String codeString;
+
     public CodeExternalStandard withCodeString(String codeString) {
         this.codeString = codeString;
         return this;
@@ -20,6 +21,7 @@ public class CodeExternalStandard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalStandard")
     public ExternalStandard externalStandard;
+
     public CodeExternalStandard withExternalStandard(ExternalStandard externalStandard) {
         this.externalStandard = externalStandard;
         return this;
@@ -28,9 +30,11 @@ public class CodeExternalStandard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CodeExternalStandard withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public CodeExternalStandard(){}
 }

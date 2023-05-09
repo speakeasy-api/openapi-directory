@@ -15,6 +15,7 @@ public class UpdatePipeSourceKinesisStreamParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchSize")
     public Long batchSize;
+
     public UpdatePipeSourceKinesisStreamParameters withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -23,6 +24,7 @@ public class UpdatePipeSourceKinesisStreamParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeadLetterConfig")
     public DeadLetterConfig deadLetterConfig;
+
     public UpdatePipeSourceKinesisStreamParameters withDeadLetterConfig(DeadLetterConfig deadLetterConfig) {
         this.deadLetterConfig = deadLetterConfig;
         return this;
@@ -31,6 +33,7 @@ public class UpdatePipeSourceKinesisStreamParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumBatchingWindowInSeconds")
     public Long maximumBatchingWindowInSeconds;
+
     public UpdatePipeSourceKinesisStreamParameters withMaximumBatchingWindowInSeconds(Long maximumBatchingWindowInSeconds) {
         this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
         return this;
@@ -39,6 +42,7 @@ public class UpdatePipeSourceKinesisStreamParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumRecordAgeInSeconds")
     public Long maximumRecordAgeInSeconds;
+
     public UpdatePipeSourceKinesisStreamParameters withMaximumRecordAgeInSeconds(Long maximumRecordAgeInSeconds) {
         this.maximumRecordAgeInSeconds = maximumRecordAgeInSeconds;
         return this;
@@ -47,6 +51,7 @@ public class UpdatePipeSourceKinesisStreamParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumRetryAttempts")
     public Long maximumRetryAttempts;
+
     public UpdatePipeSourceKinesisStreamParameters withMaximumRetryAttempts(Long maximumRetryAttempts) {
         this.maximumRetryAttempts = maximumRetryAttempts;
         return this;
@@ -55,6 +60,7 @@ public class UpdatePipeSourceKinesisStreamParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnPartialBatchItemFailure")
     public OnPartialBatchItemFailureStreamsEnum onPartialBatchItemFailure;
+
     public UpdatePipeSourceKinesisStreamParameters withOnPartialBatchItemFailure(OnPartialBatchItemFailureStreamsEnum onPartialBatchItemFailure) {
         this.onPartialBatchItemFailure = onPartialBatchItemFailure;
         return this;
@@ -63,9 +69,11 @@ public class UpdatePipeSourceKinesisStreamParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelizationFactor")
     public Long parallelizationFactor;
+
     public UpdatePipeSourceKinesisStreamParameters withParallelizationFactor(Long parallelizationFactor) {
         this.parallelizationFactor = parallelizationFactor;
         return this;
     }
     
+    public UpdatePipeSourceKinesisStreamParameters(){}
 }

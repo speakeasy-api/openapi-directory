@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPropertyValueResponse {
@@ -12,6 +13,7 @@ public class GetPropertyValueResponse {
      */
     
     public Object accessDeniedException;
+
     public GetPropertyValueResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetPropertyValueResponse {
      */
     
     public Object connectorFailureException;
+
     public GetPropertyValueResponse withConnectorFailureException(Object connectorFailureException) {
         this.connectorFailureException = connectorFailureException;
         return this;
@@ -32,6 +35,7 @@ public class GetPropertyValueResponse {
      */
     
     public Object connectorTimeoutException;
+
     public GetPropertyValueResponse withConnectorTimeoutException(Object connectorTimeoutException) {
         this.connectorTimeoutException = connectorTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class GetPropertyValueResponse {
     
     
     public String contentType;
+
     public GetPropertyValueResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class GetPropertyValueResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPropertyValueResponse getPropertyValueResponse;
+
     public GetPropertyValueResponse withGetPropertyValueResponse(org.openapis.openapi.models.shared.GetPropertyValueResponse getPropertyValueResponse) {
         this.getPropertyValueResponse = getPropertyValueResponse;
         return this;
@@ -59,6 +65,7 @@ public class GetPropertyValueResponse {
      */
     
     public Object internalServerException;
+
     public GetPropertyValueResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -69,6 +76,7 @@ public class GetPropertyValueResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetPropertyValueResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class GetPropertyValueResponse {
     
     
     public Integer statusCode;
+
     public GetPropertyValueResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetPropertyValueResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPropertyValueResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetPropertyValueResponse {
      */
     
     public Object throttlingException;
+
     public GetPropertyValueResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetPropertyValueResponse {
      */
     
     public Object validationException;
+
     public GetPropertyValueResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetPropertyValueResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

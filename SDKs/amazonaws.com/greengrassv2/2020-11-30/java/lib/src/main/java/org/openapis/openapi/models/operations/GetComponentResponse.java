@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetComponentResponse {
@@ -12,6 +13,7 @@ public class GetComponentResponse {
      */
     
     public Object accessDeniedException;
+
     public GetComponentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetComponentResponse {
     
     
     public String contentType;
+
     public GetComponentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetComponentResponse {
      */
     
     public org.openapis.openapi.models.shared.GetComponentResponse getComponentResponse;
+
     public GetComponentResponse withGetComponentResponse(org.openapis.openapi.models.shared.GetComponentResponse getComponentResponse) {
         this.getComponentResponse = getComponentResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetComponentResponse {
      */
     
     public Object internalServerException;
+
     public GetComponentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetComponentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetComponentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetComponentResponse {
     
     
     public Integer statusCode;
+
     public GetComponentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetComponentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetComponentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetComponentResponse {
      */
     
     public Object throttlingException;
+
     public GetComponentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetComponentResponse {
      */
     
     public Object validationException;
+
     public GetComponentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetComponentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPhenotypeDiseaseAssociationsResponse {
     
     public String contentType;
+
     public GetPhenotypeDiseaseAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPhenotypeDiseaseAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.D2PAssociationResults d2PAssociationResults;
+
     public GetPhenotypeDiseaseAssociationsResponse withD2PAssociationResults(org.openapis.openapi.models.shared.D2PAssociationResults d2PAssociationResults) {
         this.d2PAssociationResults = d2PAssociationResults;
         return this;
@@ -26,6 +29,7 @@ public class GetPhenotypeDiseaseAssociationsResponse {
     
     
     public Integer statusCode;
+
     public GetPhenotypeDiseaseAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetPhenotypeDiseaseAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPhenotypeDiseaseAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPhenotypeDiseaseAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

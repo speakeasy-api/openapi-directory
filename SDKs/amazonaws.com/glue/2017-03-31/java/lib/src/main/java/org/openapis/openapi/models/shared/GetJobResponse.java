@@ -15,9 +15,11 @@ public class GetJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Job")
     public Job job;
+
     public GetJobResponse withJob(Job job) {
         this.job = job;
         return this;
     }
     
+    public GetJobResponse(){}
 }

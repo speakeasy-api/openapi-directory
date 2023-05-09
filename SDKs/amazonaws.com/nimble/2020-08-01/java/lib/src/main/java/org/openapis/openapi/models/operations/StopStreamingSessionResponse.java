@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopStreamingSessionResponse {
@@ -12,6 +13,7 @@ public class StopStreamingSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public StopStreamingSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StopStreamingSessionResponse {
      */
     
     public Object conflictException;
+
     public StopStreamingSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StopStreamingSessionResponse {
     
     
     public String contentType;
+
     public StopStreamingSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StopStreamingSessionResponse {
      */
     
     public Object internalServerErrorException;
+
     public StopStreamingSessionResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -46,6 +51,7 @@ public class StopStreamingSessionResponse {
     
     
     public Integer statusCode;
+
     public StopStreamingSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopStreamingSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopStreamingSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopStreamingSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopStreamingSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class StopStreamingSessionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StopStreamingSessionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class StopStreamingSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.StopStreamingSessionResponse stopStreamingSessionResponse;
+
     public StopStreamingSessionResponse withStopStreamingSessionResponse(org.openapis.openapi.models.shared.StopStreamingSessionResponse stopStreamingSessionResponse) {
         this.stopStreamingSessionResponse = stopStreamingSessionResponse;
         return this;
@@ -93,6 +103,7 @@ public class StopStreamingSessionResponse {
      */
     
     public Object throttlingException;
+
     public StopStreamingSessionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class StopStreamingSessionResponse {
      */
     
     public Object validationException;
+
     public StopStreamingSessionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopStreamingSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

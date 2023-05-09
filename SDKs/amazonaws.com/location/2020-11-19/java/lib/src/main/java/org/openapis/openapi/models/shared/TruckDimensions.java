@@ -15,6 +15,7 @@ public class TruckDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Height")
     public Double height;
+
     public TruckDimensions withHeight(Double height) {
         this.height = height;
         return this;
@@ -23,6 +24,7 @@ public class TruckDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Length")
     public Double length;
+
     public TruckDimensions withLength(Double length) {
         this.length = length;
         return this;
@@ -31,6 +33,7 @@ public class TruckDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public DimensionUnitEnum unit;
+
     public TruckDimensions withUnit(DimensionUnitEnum unit) {
         this.unit = unit;
         return this;
@@ -39,9 +42,11 @@ public class TruckDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Width")
     public Double width;
+
     public TruckDimensions withWidth(Double width) {
         this.width = width;
         return this;
     }
     
+    public TruckDimensions(){}
 }

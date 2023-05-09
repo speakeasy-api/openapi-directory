@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTotalPotValueResponse {
     
     public String contentType;
+
     public GetTotalPotValueResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTotalPotValueResponse {
     
     
     public Integer statusCode;
+
     public GetTotalPotValueResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetTotalPotValueResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTotalPotValueResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetTotalPotValueResponse {
      */
     
     public GetTotalPotValue200ApplicationJSON getTotalPotValue200ApplicationJSONObject;
+
     public GetTotalPotValueResponse withGetTotalPotValue200ApplicationJSONObject(GetTotalPotValue200ApplicationJSON getTotalPotValue200ApplicationJSONObject) {
         this.getTotalPotValue200ApplicationJSONObject = getTotalPotValue200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetTotalPotValueResponse {
      */
     
     public GetTotalPotValue400ApplicationJSON getTotalPotValue400ApplicationJSONObject;
+
     public GetTotalPotValueResponse withGetTotalPotValue400ApplicationJSONObject(GetTotalPotValue400ApplicationJSON getTotalPotValue400ApplicationJSONObject) {
         this.getTotalPotValue400ApplicationJSONObject = getTotalPotValue400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetTotalPotValueResponse {
      */
     
     public GetTotalPotValue401ApplicationJSON getTotalPotValue401ApplicationJSONObject;
+
     public GetTotalPotValueResponse withGetTotalPotValue401ApplicationJSONObject(GetTotalPotValue401ApplicationJSON getTotalPotValue401ApplicationJSONObject) {
         this.getTotalPotValue401ApplicationJSONObject = getTotalPotValue401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetTotalPotValueResponse {
      */
     
     public GetTotalPotValue403ApplicationJSON getTotalPotValue403ApplicationJSONObject;
+
     public GetTotalPotValueResponse withGetTotalPotValue403ApplicationJSONObject(GetTotalPotValue403ApplicationJSON getTotalPotValue403ApplicationJSONObject) {
         this.getTotalPotValue403ApplicationJSONObject = getTotalPotValue403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetTotalPotValueResponse {
      */
     
     public GetTotalPotValue404ApplicationJSON getTotalPotValue404ApplicationJSONObject;
+
     public GetTotalPotValueResponse withGetTotalPotValue404ApplicationJSONObject(GetTotalPotValue404ApplicationJSON getTotalPotValue404ApplicationJSONObject) {
         this.getTotalPotValue404ApplicationJSONObject = getTotalPotValue404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class GetTotalPotValueResponse {
      */
     
     public GetTotalPotValue429ApplicationJSON getTotalPotValue429ApplicationJSONObject;
+
     public GetTotalPotValueResponse withGetTotalPotValue429ApplicationJSONObject(GetTotalPotValue429ApplicationJSON getTotalPotValue429ApplicationJSONObject) {
         this.getTotalPotValue429ApplicationJSONObject = getTotalPotValue429ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class GetTotalPotValueResponse {
      */
     
     public GetTotalPotValue500ApplicationJSON getTotalPotValue500ApplicationJSONObject;
+
     public GetTotalPotValueResponse withGetTotalPotValue500ApplicationJSONObject(GetTotalPotValue500ApplicationJSON getTotalPotValue500ApplicationJSONObject) {
         this.getTotalPotValue500ApplicationJSONObject = getTotalPotValue500ApplicationJSONObject;
         return this;
     }
     
+    public GetTotalPotValueResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

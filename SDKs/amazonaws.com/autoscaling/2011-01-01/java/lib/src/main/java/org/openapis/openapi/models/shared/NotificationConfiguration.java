@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class NotificationConfiguration {
     
     public String autoScalingGroupName;
+
     public NotificationConfiguration withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -19,6 +20,7 @@ public class NotificationConfiguration {
     
     
     public String notificationType;
+
     public NotificationConfiguration withNotificationType(String notificationType) {
         this.notificationType = notificationType;
         return this;
@@ -26,9 +28,11 @@ public class NotificationConfiguration {
     
     
     public String topicARN;
+
     public NotificationConfiguration withTopicARN(String topicARN) {
         this.topicARN = topicARN;
         return this;
     }
     
+    public NotificationConfiguration(){}
 }

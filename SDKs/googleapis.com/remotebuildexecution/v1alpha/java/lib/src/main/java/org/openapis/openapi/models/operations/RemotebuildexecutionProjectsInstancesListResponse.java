@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemotebuildexecutionProjectsInstancesListResponse {
     
     public String contentType;
+
     public RemotebuildexecutionProjectsInstancesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemotebuildexecutionProjectsInstancesListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse googleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse;
+
     public RemotebuildexecutionProjectsInstancesListResponse withGoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse(org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse googleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse) {
         this.googleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse = googleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse;
         return this;
@@ -26,6 +29,7 @@ public class RemotebuildexecutionProjectsInstancesListResponse {
     
     
     public Integer statusCode;
+
     public RemotebuildexecutionProjectsInstancesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RemotebuildexecutionProjectsInstancesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemotebuildexecutionProjectsInstancesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemotebuildexecutionProjectsInstancesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

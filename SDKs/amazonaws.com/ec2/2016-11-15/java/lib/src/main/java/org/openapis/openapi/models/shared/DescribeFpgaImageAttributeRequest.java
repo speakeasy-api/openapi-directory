@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeFpgaImageAttributeRequest {
     
     public FpgaImageAttributeNameEnum attribute;
+
     public DescribeFpgaImageAttributeRequest withAttribute(FpgaImageAttributeNameEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -16,6 +17,7 @@ public class DescribeFpgaImageAttributeRequest {
     
     
     public Boolean dryRun;
+
     public DescribeFpgaImageAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,14 @@ public class DescribeFpgaImageAttributeRequest {
     
     
     public String fpgaImageId;
+
     public DescribeFpgaImageAttributeRequest withFpgaImageId(String fpgaImageId) {
         this.fpgaImageId = fpgaImageId;
         return this;
     }
     
+    public DescribeFpgaImageAttributeRequest(@JsonProperty("Attribute") FpgaImageAttributeNameEnum attribute, @JsonProperty("FpgaImageId") String fpgaImageId) {
+        this.attribute = attribute;
+        this.fpgaImageId = fpgaImageId;
+  }
 }

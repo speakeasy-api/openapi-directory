@@ -12,6 +12,7 @@ public class OrderreturnsPartialRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceAmount")
     public Price priceAmount;
+
     public OrderreturnsPartialRefund withPriceAmount(Price priceAmount) {
         this.priceAmount = priceAmount;
         return this;
@@ -20,9 +21,11 @@ public class OrderreturnsPartialRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxAmount")
     public Price taxAmount;
+
     public OrderreturnsPartialRefund withTaxAmount(Price taxAmount) {
         this.taxAmount = taxAmount;
         return this;
     }
     
+    public OrderreturnsPartialRefund(){}
 }

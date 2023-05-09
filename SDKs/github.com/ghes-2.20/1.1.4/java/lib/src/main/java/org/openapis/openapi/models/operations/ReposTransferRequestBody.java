@@ -14,6 +14,7 @@ public class ReposTransferRequestBody {
      */
     @JsonProperty("new_owner")
     public String newOwner;
+
     public ReposTransferRequestBody withNewOwner(String newOwner) {
         this.newOwner = newOwner;
         return this;
@@ -25,9 +26,13 @@ public class ReposTransferRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_ids")
     public Long[] teamIds;
+
     public ReposTransferRequestBody withTeamIds(Long[] teamIds) {
         this.teamIds = teamIds;
         return this;
     }
     
+    public ReposTransferRequestBody(@JsonProperty("new_owner") String newOwner) {
+        this.newOwner = newOwner;
+  }
 }

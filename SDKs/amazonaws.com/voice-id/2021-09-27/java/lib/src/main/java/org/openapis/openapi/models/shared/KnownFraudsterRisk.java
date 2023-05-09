@@ -15,6 +15,7 @@ public class KnownFraudsterRisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeneratedFraudsterId")
     public String generatedFraudsterId;
+
     public KnownFraudsterRisk withGeneratedFraudsterId(String generatedFraudsterId) {
         this.generatedFraudsterId = generatedFraudsterId;
         return this;
@@ -22,9 +23,13 @@ public class KnownFraudsterRisk {
     
     @JsonProperty("RiskScore")
     public Long riskScore;
+
     public KnownFraudsterRisk withRiskScore(Long riskScore) {
         this.riskScore = riskScore;
         return this;
     }
     
+    public KnownFraudsterRisk(@JsonProperty("RiskScore") Long riskScore) {
+        this.riskScore = riskScore;
+  }
 }

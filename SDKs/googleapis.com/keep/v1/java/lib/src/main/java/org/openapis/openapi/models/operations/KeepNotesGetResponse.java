@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class KeepNotesGetResponse {
     
     public String contentType;
+
     public KeepNotesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class KeepNotesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Note note;
+
     public KeepNotesGetResponse withNote(org.openapis.openapi.models.shared.Note note) {
         this.note = note;
         return this;
@@ -26,6 +29,7 @@ public class KeepNotesGetResponse {
     
     
     public Integer statusCode;
+
     public KeepNotesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class KeepNotesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public KeepNotesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public KeepNotesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

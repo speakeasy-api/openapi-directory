@@ -12,9 +12,11 @@ public class InstanceGroupManagerStandbyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialDelaySec")
     public Integer initialDelaySec;
+
     public InstanceGroupManagerStandbyPolicy withInitialDelaySec(Integer initialDelaySec) {
         this.initialDelaySec = initialDelaySec;
         return this;
     }
     
+    public InstanceGroupManagerStandbyPolicy(){}
 }

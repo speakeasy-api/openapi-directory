@@ -19,6 +19,7 @@ public class UpdateAuditSuppressionRequestBody {
      */
     @JsonProperty("checkName")
     public String checkName;
+
     public UpdateAuditSuppressionRequestBody withCheckName(String checkName) {
         this.checkName = checkName;
         return this;
@@ -30,6 +31,7 @@ public class UpdateAuditSuppressionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateAuditSuppressionRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +45,7 @@ public class UpdateAuditSuppressionRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationDate")
     public OffsetDateTime expirationDate;
+
     public UpdateAuditSuppressionRequestBody withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -53,6 +56,7 @@ public class UpdateAuditSuppressionRequestBody {
      */
     @JsonProperty("resourceIdentifier")
     public UpdateAuditSuppressionRequestBodyResourceIdentifier resourceIdentifier;
+
     public UpdateAuditSuppressionRequestBody withResourceIdentifier(UpdateAuditSuppressionRequestBodyResourceIdentifier resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
@@ -64,9 +68,14 @@ public class UpdateAuditSuppressionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suppressIndefinitely")
     public Boolean suppressIndefinitely;
+
     public UpdateAuditSuppressionRequestBody withSuppressIndefinitely(Boolean suppressIndefinitely) {
         this.suppressIndefinitely = suppressIndefinitely;
         return this;
     }
     
+    public UpdateAuditSuppressionRequestBody(@JsonProperty("checkName") String checkName, @JsonProperty("resourceIdentifier") UpdateAuditSuppressionRequestBodyResourceIdentifier resourceIdentifier) {
+        this.checkName = checkName;
+        this.resourceIdentifier = resourceIdentifier;
+  }
 }

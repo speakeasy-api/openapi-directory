@@ -251,7 +251,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetAccountResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiCredentialSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiCredentialRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiCredentialResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetBillingPlanUsageSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBillingPlanUsageResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetCallerIdsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCallerIdsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCreditUsageSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCreditUsageRequest.java
@@ -555,4 +557,16 @@ lib/src/main/java/org/openapis/openapi/models/shared/Webhook.java
 lib/src/main/java/org/openapis/openapi/models/shared/ItemListWebhookResource.java
 lib/src/main/java/org/openapis/openapi/models/shared/WebhookResource.java
 lib/src/main/java/org/openapis/openapi/models/shared/WebhookPage.java
+docs/sdk/README.md
+docs/calls/README.md
+docs/campaigns/README.md
+docs/contacts/README.md
+docs/keywords/README.md
+docs/me/README.md
+docs/media/README.md
+docs/numbers/README.md
+docs/orders/README.md
+docs/reports/README.md
+docs/texts/README.md
+docs/webhooks/README.md
 USAGE.md

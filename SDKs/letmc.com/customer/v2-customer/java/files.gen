@@ -110,4 +110,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/LandlordMaintenanceCertific
 lib/src/main/java/org/openapis/openapi/models/shared/LandlordPhotoModelResults.java
 lib/src/main/java/org/openapis/openapi/models/shared/LandlordPhotoModelPhotoTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/LandlordPhotoModel.java
+docs/sdk/README.md
+docs/branchcontroller/README.md
+docs/landlordcontroller/README.md
+docs/photocontroller/README.md
+docs/propertycontroller/README.md
+docs/sessioncontroller/README.md
 USAGE.md

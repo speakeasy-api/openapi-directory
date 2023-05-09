@@ -18,6 +18,7 @@ public class DatasetDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AthenaDatasetDefinition")
     public AthenaDatasetDefinition athenaDatasetDefinition;
+
     public DatasetDefinition withAthenaDatasetDefinition(AthenaDatasetDefinition athenaDatasetDefinition) {
         this.athenaDatasetDefinition = athenaDatasetDefinition;
         return this;
@@ -26,6 +27,7 @@ public class DatasetDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataDistributionType")
     public DataDistributionTypeEnum dataDistributionType;
+
     public DatasetDefinition withDataDistributionType(DataDistributionTypeEnum dataDistributionType) {
         this.dataDistributionType = dataDistributionType;
         return this;
@@ -34,6 +36,7 @@ public class DatasetDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputMode")
     public InputModeEnum inputMode;
+
     public DatasetDefinition withInputMode(InputModeEnum inputMode) {
         this.inputMode = inputMode;
         return this;
@@ -42,6 +45,7 @@ public class DatasetDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalPath")
     public String localPath;
+
     public DatasetDefinition withLocalPath(String localPath) {
         this.localPath = localPath;
         return this;
@@ -53,9 +57,11 @@ public class DatasetDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftDatasetDefinition")
     public RedshiftDatasetDefinition redshiftDatasetDefinition;
+
     public DatasetDefinition withRedshiftDatasetDefinition(RedshiftDatasetDefinition redshiftDatasetDefinition) {
         this.redshiftDatasetDefinition = redshiftDatasetDefinition;
         return this;
     }
     
+    public DatasetDefinition(){}
 }

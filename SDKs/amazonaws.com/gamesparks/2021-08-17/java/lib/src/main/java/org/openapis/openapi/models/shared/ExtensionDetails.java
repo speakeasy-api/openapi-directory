@@ -15,6 +15,7 @@ public class ExtensionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ExtensionDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class ExtensionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ExtensionDetails withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class ExtensionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Namespace")
     public String namespace;
+
     public ExtensionDetails withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public ExtensionDetails(){}
 }

@@ -41,6 +41,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateCollectionRespons
 lib/src/main/java/org/openapis/openapi/models/operations/CreateDatasetXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateDatasetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateDatasetResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateFaceLivenessSessionXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateFaceLivenessSessionRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateFaceLivenessSessionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateProjectXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateProjectRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateProjectResponse.java
@@ -119,6 +122,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetContentModerationRes
 lib/src/main/java/org/openapis/openapi/models/operations/GetFaceDetectionXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFaceDetectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFaceDetectionResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetFaceLivenessSessionResultsXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetFaceLivenessSessionResultsRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetFaceLivenessSessionResultsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFaceSearchXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFaceSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFaceSearchResponse.java
@@ -245,6 +251,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/CreateDatasetRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/DatasetTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DatasetSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/GroundTruthManifest.java
+lib/src/main/java/org/openapis/openapi/models/shared/CreateFaceLivenessSessionResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/CreateFaceLivenessSessionRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/CreateFaceLivenessSessionRequestSettings.java
+lib/src/main/java/org/openapis/openapi/models/shared/LivenessOutputConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateProjectResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateProjectRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateProjectVersionResponse.java
@@ -379,6 +389,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/ContentModerationSortByEnum
 lib/src/main/java/org/openapis/openapi/models/shared/GetFaceDetectionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/FaceDetection.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetFaceDetectionRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/GetFaceLivenessSessionResultsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/LivenessSessionStatusEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/AuditImage.java
+lib/src/main/java/org/openapis/openapi/models/shared/GetFaceLivenessSessionResultsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetFaceSearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PersonMatch.java
 lib/src/main/java/org/openapis/openapi/models/shared/PersonDetail.java
@@ -484,4 +498,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StreamProcessorSettingsForU
 lib/src/main/java/org/openapis/openapi/models/shared/ConnectedHomeSettingsForUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/StreamProcessorParameterToDeleteEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

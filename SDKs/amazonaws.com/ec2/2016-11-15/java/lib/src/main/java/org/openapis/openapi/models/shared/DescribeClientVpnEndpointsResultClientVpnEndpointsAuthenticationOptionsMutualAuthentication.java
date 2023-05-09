@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsMutualAuthentication {
     
     public String clientRootCertificateChain;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsMutualAuthentication withClientRootCertificateChain(String clientRootCertificateChain) {
         this.clientRootCertificateChain = clientRootCertificateChain;
         return this;
     }
     
+    public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsMutualAuthentication(){}
 }

@@ -75,4 +75,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/RecognizeTextResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecognizedBotMember.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecognizeUtteranceResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

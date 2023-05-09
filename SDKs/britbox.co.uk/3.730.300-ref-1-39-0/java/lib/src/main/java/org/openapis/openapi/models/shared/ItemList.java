@@ -18,6 +18,7 @@ public class ItemList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public java.util.Map<String, Object> customFields;
+
     public ItemList withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -29,6 +30,7 @@ public class ItemList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ItemList withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +41,7 @@ public class ItemList {
      */
     @JsonProperty("id")
     public String id;
+
     public ItemList withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +50,7 @@ public class ItemList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public java.util.Map<String, String> images;
+
     public ItemList withImages(java.util.Map<String, String> images) {
         this.images = images;
         return this;
@@ -58,6 +62,7 @@ public class ItemList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemTypes")
     public ItemListItemTypesEnum[] itemTypes;
+
     public ItemList withItemTypes(ItemListItemTypesEnum[] itemTypes) {
         this.itemTypes = itemTypes;
         return this;
@@ -68,6 +73,7 @@ public class ItemList {
      */
     @JsonProperty("items")
     public ItemSummary[] items;
+
     public ItemList withItems(ItemSummary[] items) {
         this.items = items;
         return this;
@@ -81,6 +87,7 @@ public class ItemList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listData")
     public ListData listData;
+
     public ItemList withListData(ListData listData) {
         this.listData = listData;
         return this;
@@ -88,6 +95,7 @@ public class ItemList {
     
     @JsonProperty("paging")
     public Pagination paging;
+
     public ItemList withPaging(Pagination paging) {
         this.paging = paging;
         return this;
@@ -100,6 +108,7 @@ public class ItemList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public String parameter;
+
     public ItemList withParameter(String parameter) {
         this.parameter = parameter;
         return this;
@@ -110,6 +119,7 @@ public class ItemList {
      */
     @JsonProperty("path")
     public String path;
+
     public ItemList withPath(String path) {
         this.path = path;
         return this;
@@ -121,6 +131,7 @@ public class ItemList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortDescription")
     public String shortDescription;
+
     public ItemList withShortDescription(String shortDescription) {
         this.shortDescription = shortDescription;
         return this;
@@ -131,6 +142,7 @@ public class ItemList {
      */
     @JsonProperty("size")
     public Integer size;
+
     public ItemList withSize(Integer size) {
         this.size = size;
         return this;
@@ -142,6 +154,7 @@ public class ItemList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagline")
     public String tagline;
+
     public ItemList withTagline(String tagline) {
         this.tagline = tagline;
         return this;
@@ -150,6 +163,7 @@ public class ItemList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("themes")
     public Theme[] themes;
+
     public ItemList withThemes(Theme[] themes) {
         this.themes = themes;
         return this;
@@ -161,9 +175,17 @@ public class ItemList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ItemList withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ItemList(@JsonProperty("id") String id, @JsonProperty("items") ItemSummary[] items, @JsonProperty("paging") Pagination paging, @JsonProperty("path") String path, @JsonProperty("size") Integer size) {
+        this.id = id;
+        this.items = items;
+        this.paging = paging;
+        this.path = path;
+        this.size = size;
+  }
 }

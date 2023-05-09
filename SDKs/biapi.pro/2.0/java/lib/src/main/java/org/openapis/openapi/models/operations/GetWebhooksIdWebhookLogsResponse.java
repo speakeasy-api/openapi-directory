@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWebhooksIdWebhookLogsResponse {
     
     public String contentType;
+
     public GetWebhooksIdWebhookLogsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetWebhooksIdWebhookLogsResponse {
     
     
     public Integer statusCode;
+
     public GetWebhooksIdWebhookLogsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetWebhooksIdWebhookLogsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWebhooksIdWebhookLogsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetWebhooksIdWebhookLogsResponse {
      */
     
     public GetWebhooksIdWebhookLogs200ApplicationJSON getWebhooksIdWebhookLogs200ApplicationJSONObject;
+
     public GetWebhooksIdWebhookLogsResponse withGetWebhooksIdWebhookLogs200ApplicationJSONObject(GetWebhooksIdWebhookLogs200ApplicationJSON getWebhooksIdWebhookLogs200ApplicationJSONObject) {
         this.getWebhooksIdWebhookLogs200ApplicationJSONObject = getWebhooksIdWebhookLogs200ApplicationJSONObject;
         return this;
     }
     
+    public GetWebhooksIdWebhookLogsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

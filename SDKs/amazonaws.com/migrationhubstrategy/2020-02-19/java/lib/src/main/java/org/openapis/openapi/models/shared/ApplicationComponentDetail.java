@@ -20,6 +20,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisStatus")
     public SrcCodeOrDbAnalysisStatusEnum analysisStatus;
+
     public ApplicationComponentDetail withAnalysisStatus(SrcCodeOrDbAnalysisStatusEnum analysisStatus) {
         this.analysisStatus = analysisStatus;
         return this;
@@ -28,6 +29,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antipatternReportS3Object")
     public S3Object antipatternReportS3Object;
+
     public ApplicationComponentDetail withAntipatternReportS3Object(S3Object antipatternReportS3Object) {
         this.antipatternReportS3Object = antipatternReportS3Object;
         return this;
@@ -36,6 +38,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antipatternReportStatus")
     public AntipatternReportStatusEnum antipatternReportStatus;
+
     public ApplicationComponentDetail withAntipatternReportStatus(AntipatternReportStatusEnum antipatternReportStatus) {
         this.antipatternReportStatus = antipatternReportStatus;
         return this;
@@ -44,6 +47,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antipatternReportStatusMessage")
     public String antipatternReportStatusMessage;
+
     public ApplicationComponentDetail withAntipatternReportStatusMessage(String antipatternReportStatusMessage) {
         this.antipatternReportStatusMessage = antipatternReportStatusMessage;
         return this;
@@ -52,6 +56,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appType")
     public AppTypeEnum appType;
+
     public ApplicationComponentDetail withAppType(AppTypeEnum appType) {
         this.appType = appType;
         return this;
@@ -60,6 +65,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appUnitError")
     public AppUnitError appUnitError;
+
     public ApplicationComponentDetail withAppUnitError(AppUnitError appUnitError) {
         this.appUnitError = appUnitError;
         return this;
@@ -68,6 +74,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedServerId")
     public String associatedServerId;
+
     public ApplicationComponentDetail withAssociatedServerId(String associatedServerId) {
         this.associatedServerId = associatedServerId;
         return this;
@@ -76,6 +83,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseConfigDetail")
     public DatabaseConfigDetail databaseConfigDetail;
+
     public ApplicationComponentDetail withDatabaseConfigDetail(DatabaseConfigDetail databaseConfigDetail) {
         this.databaseConfigDetail = databaseConfigDetail;
         return this;
@@ -84,6 +92,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ApplicationComponentDetail withId(String id) {
         this.id = id;
         return this;
@@ -92,6 +101,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inclusionStatus")
     public InclusionStatusEnum inclusionStatus;
+
     public ApplicationComponentDetail withInclusionStatus(InclusionStatusEnum inclusionStatus) {
         this.inclusionStatus = inclusionStatus;
         return this;
@@ -102,6 +112,7 @@ public class ApplicationComponentDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastAnalyzedTimestamp")
     public OffsetDateTime lastAnalyzedTimestamp;
+
     public ApplicationComponentDetail withLastAnalyzedTimestamp(OffsetDateTime lastAnalyzedTimestamp) {
         this.lastAnalyzedTimestamp = lastAnalyzedTimestamp;
         return this;
@@ -110,6 +121,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listAntipatternSeveritySummary")
     public AntipatternSeveritySummary[] listAntipatternSeveritySummary;
+
     public ApplicationComponentDetail withListAntipatternSeveritySummary(AntipatternSeveritySummary[] listAntipatternSeveritySummary) {
         this.listAntipatternSeveritySummary = listAntipatternSeveritySummary;
         return this;
@@ -118,6 +130,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moreServerAssociationExists")
     public Boolean moreServerAssociationExists;
+
     public ApplicationComponentDetail withMoreServerAssociationExists(Boolean moreServerAssociationExists) {
         this.moreServerAssociationExists = moreServerAssociationExists;
         return this;
@@ -126,6 +139,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApplicationComponentDetail withName(String name) {
         this.name = name;
         return this;
@@ -134,6 +148,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osDriver")
     public String osDriver;
+
     public ApplicationComponentDetail withOsDriver(String osDriver) {
         this.osDriver = osDriver;
         return this;
@@ -142,6 +157,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osVersion")
     public String osVersion;
+
     public ApplicationComponentDetail withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -150,6 +166,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationSet")
     public RecommendationSet recommendationSet;
+
     public ApplicationComponentDetail withRecommendationSet(RecommendationSet recommendationSet) {
         this.recommendationSet = recommendationSet;
         return this;
@@ -158,6 +175,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceSubType")
     public ResourceSubTypeEnum resourceSubType;
+
     public ApplicationComponentDetail withResourceSubType(ResourceSubTypeEnum resourceSubType) {
         this.resourceSubType = resourceSubType;
         return this;
@@ -166,6 +184,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultList")
     public Result[] resultList;
+
     public ApplicationComponentDetail withResultList(Result[] resultList) {
         this.resultList = resultList;
         return this;
@@ -174,6 +193,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeStatus")
     public RuntimeAnalysisStatusEnum runtimeStatus;
+
     public ApplicationComponentDetail withRuntimeStatus(RuntimeAnalysisStatusEnum runtimeStatus) {
         this.runtimeStatus = runtimeStatus;
         return this;
@@ -182,6 +202,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeStatusMessage")
     public String runtimeStatusMessage;
+
     public ApplicationComponentDetail withRuntimeStatusMessage(String runtimeStatusMessage) {
         this.runtimeStatusMessage = runtimeStatusMessage;
         return this;
@@ -190,6 +211,7 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceCodeRepositories")
     public SourceCodeRepository[] sourceCodeRepositories;
+
     public ApplicationComponentDetail withSourceCodeRepositories(SourceCodeRepository[] sourceCodeRepositories) {
         this.sourceCodeRepositories = sourceCodeRepositories;
         return this;
@@ -198,9 +220,11 @@ public class ApplicationComponentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public ApplicationComponentDetail withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public ApplicationComponentDetail(){}
 }

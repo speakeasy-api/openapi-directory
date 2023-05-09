@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateResponsePlanOutput {
     @JsonProperty("arn")
     public String arn;
+
     public CreateResponsePlanOutput withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public CreateResponsePlanOutput(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

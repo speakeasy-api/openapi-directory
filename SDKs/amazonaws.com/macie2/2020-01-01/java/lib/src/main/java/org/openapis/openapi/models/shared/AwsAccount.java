@@ -15,6 +15,7 @@ public class AwsAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public AwsAccount withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,9 +24,11 @@ public class AwsAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalId")
     public String principalId;
+
     public AwsAccount withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
     }
     
+    public AwsAccount(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PurchaseScheduledInstancesRequest - Contains the parameters for PurchaseScheduledInstances.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PurchaseScheduledInstancesRequest {
     
     public String clientToken;
+
     public PurchaseScheduledInstancesRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class PurchaseScheduledInstancesRequest {
     
     
     public Boolean dryRun;
+
     public PurchaseScheduledInstancesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,9 +28,13 @@ public class PurchaseScheduledInstancesRequest {
     
     
     public PurchaseScheduledInstancesRequestPurchaseRequests[] purchaseRequests;
+
     public PurchaseScheduledInstancesRequest withPurchaseRequests(PurchaseScheduledInstancesRequestPurchaseRequests[] purchaseRequests) {
         this.purchaseRequests = purchaseRequests;
         return this;
     }
     
+    public PurchaseScheduledInstancesRequest(@JsonProperty("PurchaseRequests") PurchaseScheduledInstancesRequestPurchaseRequests[] purchaseRequests) {
+        this.purchaseRequests = purchaseRequests;
+  }
 }

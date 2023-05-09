@@ -12,6 +12,7 @@ public class CreateResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateResourceInput withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateResourceInput {
     
     @JsonProperty("DesiredState")
     public String desiredState;
+
     public CreateResourceInput withDesiredState(String desiredState) {
         this.desiredState = desiredState;
         return this;
@@ -27,6 +29,7 @@ public class CreateResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateResourceInput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -34,6 +37,7 @@ public class CreateResourceInput {
     
     @JsonProperty("TypeName")
     public String typeName;
+
     public CreateResourceInput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -42,9 +46,14 @@ public class CreateResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeVersionId")
     public String typeVersionId;
+
     public CreateResourceInput withTypeVersionId(String typeVersionId) {
         this.typeVersionId = typeVersionId;
         return this;
     }
     
+    public CreateResourceInput(@JsonProperty("DesiredState") String desiredState, @JsonProperty("TypeName") String typeName) {
+        this.desiredState = desiredState;
+        this.typeName = typeName;
+  }
 }

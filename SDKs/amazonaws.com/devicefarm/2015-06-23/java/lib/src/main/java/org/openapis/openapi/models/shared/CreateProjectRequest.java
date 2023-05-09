@@ -15,6 +15,7 @@ public class CreateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultJobTimeoutMinutes")
     public Long defaultJobTimeoutMinutes;
+
     public CreateProjectRequest withDefaultJobTimeoutMinutes(Long defaultJobTimeoutMinutes) {
         this.defaultJobTimeoutMinutes = defaultJobTimeoutMinutes;
         return this;
@@ -22,6 +23,7 @@ public class CreateProjectRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateProjectRequest withName(String name) {
         this.name = name;
         return this;
@@ -30,9 +32,13 @@ public class CreateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfig")
     public VpcConfig vpcConfig;
+
     public CreateProjectRequest withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public CreateProjectRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

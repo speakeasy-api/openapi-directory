@@ -15,9 +15,11 @@ public class DeploymentConfigurationValidationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutInSeconds")
     public Long timeoutInSeconds;
+
     public DeploymentConfigurationValidationPolicy withTimeoutInSeconds(Long timeoutInSeconds) {
         this.timeoutInSeconds = timeoutInSeconds;
         return this;
     }
     
+    public DeploymentConfigurationValidationPolicy(){}
 }

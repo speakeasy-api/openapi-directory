@@ -15,6 +15,7 @@ public class ActivityList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activities")
     public Activity[] activities;
+
     public ActivityList withActivities(Activity[] activities) {
         this.activities = activities;
         return this;
@@ -23,9 +24,11 @@ public class ActivityList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public ActivityList withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public ActivityList(){}
 }

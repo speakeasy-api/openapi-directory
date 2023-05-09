@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetStatusesForObjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_since")
     public OffsetDateTime createdSince;
+
     public GetStatusesForObjectRequest withCreatedSince(OffsetDateTime createdSince) {
         this.createdSince = createdSince;
         return this;
@@ -24,6 +26,7 @@ public class GetStatusesForObjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetStatusesForObjectRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -36,6 +39,7 @@ public class GetStatusesForObjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetStatusesForObjectRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -48,6 +52,7 @@ public class GetStatusesForObjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetStatusesForObjectRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -59,6 +64,7 @@ public class GetStatusesForObjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetStatusesForObjectRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -69,9 +75,13 @@ public class GetStatusesForObjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent")
     public String parent;
+
     public GetStatusesForObjectRequest withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public GetStatusesForObjectRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

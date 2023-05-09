@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteDBInstanceAutomatedBackupMessage {
     
     public String dbInstanceAutomatedBackupsArn;
+
     public DeleteDBInstanceAutomatedBackupMessage withDBInstanceAutomatedBackupsArn(String dbInstanceAutomatedBackupsArn) {
         this.dbInstanceAutomatedBackupsArn = dbInstanceAutomatedBackupsArn;
         return this;
@@ -19,9 +20,11 @@ public class DeleteDBInstanceAutomatedBackupMessage {
     
     
     public String dbiResourceId;
+
     public DeleteDBInstanceAutomatedBackupMessage withDbiResourceId(String dbiResourceId) {
         this.dbiResourceId = dbiResourceId;
         return this;
     }
     
+    public DeleteDBInstanceAutomatedBackupMessage(){}
 }

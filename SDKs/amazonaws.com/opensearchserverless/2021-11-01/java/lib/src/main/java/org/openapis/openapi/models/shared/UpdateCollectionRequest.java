@@ -12,6 +12,7 @@ public class UpdateCollectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateCollectionRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class UpdateCollectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateCollectionRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,9 +29,13 @@ public class UpdateCollectionRequest {
     
     @JsonProperty("id")
     public String id;
+
     public UpdateCollectionRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateCollectionRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

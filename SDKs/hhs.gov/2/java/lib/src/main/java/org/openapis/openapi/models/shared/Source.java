@@ -12,6 +12,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acronym")
     public String acronym;
+
     public Source withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -20,6 +21,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactEmail")
     public String contactEmail;
+
     public Source withContactEmail(String contactEmail) {
         this.contactEmail = contactEmail;
         return this;
@@ -28,6 +30,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Source withId(Long id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("largeLogoUrl")
     public String largeLogoUrl;
+
     public Source withLargeLogoUrl(String largeLogoUrl) {
         this.largeLogoUrl = largeLogoUrl;
         return this;
@@ -44,6 +48,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Source withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smallLogoUrl")
     public String smallLogoUrl;
+
     public Source withSmallLogoUrl(String smallLogoUrl) {
         this.smallLogoUrl = smallLogoUrl;
         return this;
@@ -60,9 +66,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("websiteUrl")
     public String websiteUrl;
+
     public Source withWebsiteUrl(String websiteUrl) {
         this.websiteUrl = websiteUrl;
         return this;
     }
     
+    public Source(){}
 }

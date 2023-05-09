@@ -18,6 +18,7 @@ public class QueryExemplarsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public String end;
+
     public QueryExemplarsRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -29,6 +30,7 @@ public class QueryExemplarsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public QueryExemplarsRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -40,9 +42,11 @@ public class QueryExemplarsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public String start;
+
     public QueryExemplarsRequest withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public QueryExemplarsRequest(){}
 }

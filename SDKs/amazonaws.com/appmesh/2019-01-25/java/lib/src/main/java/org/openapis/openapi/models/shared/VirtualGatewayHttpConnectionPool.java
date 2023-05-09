@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VirtualGatewayHttpConnectionPool {
     @JsonProperty("maxConnections")
     public Long maxConnections;
+
     public VirtualGatewayHttpConnectionPool withMaxConnections(Long maxConnections) {
         this.maxConnections = maxConnections;
         return this;
@@ -22,9 +23,13 @@ public class VirtualGatewayHttpConnectionPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPendingRequests")
     public Long maxPendingRequests;
+
     public VirtualGatewayHttpConnectionPool withMaxPendingRequests(Long maxPendingRequests) {
         this.maxPendingRequests = maxPendingRequests;
         return this;
     }
     
+    public VirtualGatewayHttpConnectionPool(@JsonProperty("maxConnections") Long maxConnections) {
+        this.maxConnections = maxConnections;
+  }
 }

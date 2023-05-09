@@ -37,6 +37,7 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetFactFodSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFactFodRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFactFodResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetFactFodCategoriesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFactFodCategoriesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFactNumbersSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFactNumbersRequest.java
@@ -68,4 +69,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetFactRandomResponse.j
 lib/src/main/java/org/openapis/openapi/models/operations/GetFactSearchSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFactSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFactSearchResponse.java
+docs/sdk/README.md
+docs/factoftheday/README.md
+docs/numberfacts/README.md
+docs/onthisday/README.md
+docs/privatefacts/README.md
+docs/randomfacts/README.md
 USAGE.md

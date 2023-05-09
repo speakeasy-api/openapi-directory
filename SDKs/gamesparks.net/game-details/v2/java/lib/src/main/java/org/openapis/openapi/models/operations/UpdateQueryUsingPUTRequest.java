@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateQueryUsingPUTRequest {
@@ -12,6 +13,7 @@ public class UpdateQueryUsingPUTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ManageQuery manageQuery;
+
     public UpdateQueryUsingPUTRequest withManageQuery(org.openapis.openapi.models.shared.ManageQuery manageQuery) {
         this.manageQuery = manageQuery;
         return this;
@@ -22,6 +24,7 @@ public class UpdateQueryUsingPUTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public UpdateQueryUsingPUTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -32,9 +35,15 @@ public class UpdateQueryUsingPUTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortCode")
     public String shortCode;
+
     public UpdateQueryUsingPUTRequest withShortCode(String shortCode) {
         this.shortCode = shortCode;
         return this;
     }
     
+    public UpdateQueryUsingPUTRequest(@JsonProperty("ManageQuery") org.openapis.openapi.models.shared.ManageQuery manageQuery, @JsonProperty("apiKey") String apiKey, @JsonProperty("shortCode") String shortCode) {
+        this.manageQuery = manageQuery;
+        this.apiKey = apiKey;
+        this.shortCode = shortCode;
+  }
 }

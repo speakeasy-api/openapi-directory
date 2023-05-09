@@ -18,6 +18,7 @@ public class AddCoupons200ApplicationJSONShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public AddCoupons200ApplicationJSONShippingDataAddress address;
+
     public AddCoupons200ApplicationJSONShippingData withAddress(AddCoupons200ApplicationJSONShippingDataAddress address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class AddCoupons200ApplicationJSONShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAddresses")
     public AddCoupons200ApplicationJSONShippingDataAvailableAddresses[] availableAddresses;
+
     public AddCoupons200ApplicationJSONShippingData withAvailableAddresses(AddCoupons200ApplicationJSONShippingDataAvailableAddresses[] availableAddresses) {
         this.availableAddresses = availableAddresses;
         return this;
@@ -40,6 +42,7 @@ public class AddCoupons200ApplicationJSONShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logisticsInfo")
     public AddCoupons200ApplicationJSONShippingDataLogisticsInfo[] logisticsInfo;
+
     public AddCoupons200ApplicationJSONShippingData withLogisticsInfo(AddCoupons200ApplicationJSONShippingDataLogisticsInfo[] logisticsInfo) {
         this.logisticsInfo = logisticsInfo;
         return this;
@@ -51,9 +54,11 @@ public class AddCoupons200ApplicationJSONShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedAddresses")
     public AddCoupons200ApplicationJSONShippingDataSelectedAddresses[] selectedAddresses;
+
     public AddCoupons200ApplicationJSONShippingData withSelectedAddresses(AddCoupons200ApplicationJSONShippingDataSelectedAddresses[] selectedAddresses) {
         this.selectedAddresses = selectedAddresses;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONShippingData(){}
 }

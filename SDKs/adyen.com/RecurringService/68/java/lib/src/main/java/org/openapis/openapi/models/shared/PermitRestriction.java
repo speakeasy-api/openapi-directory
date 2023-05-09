@@ -12,6 +12,7 @@ public class PermitRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAmount")
     public Amount maxAmount;
+
     public PermitRestriction withMaxAmount(Amount maxAmount) {
         this.maxAmount = maxAmount;
         return this;
@@ -20,6 +21,7 @@ public class PermitRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("singleTransactionLimit")
     public Amount singleTransactionLimit;
+
     public PermitRestriction withSingleTransactionLimit(Amount singleTransactionLimit) {
         this.singleTransactionLimit = singleTransactionLimit;
         return this;
@@ -31,9 +33,11 @@ public class PermitRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("singleUse")
     public Boolean singleUse;
+
     public PermitRestriction withSingleUse(Boolean singleUse) {
         this.singleUse = singleUse;
         return this;
     }
     
+    public PermitRestriction(){}
 }

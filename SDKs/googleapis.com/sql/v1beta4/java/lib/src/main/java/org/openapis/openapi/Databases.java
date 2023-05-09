@@ -59,11 +59,9 @@ public class Databases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlDatabasesDeleteResponse res = new org.openapis.openapi.models.operations.SqlDatabasesDeleteResponse() {{
+        org.openapis.openapi.models.operations.SqlDatabasesDeleteResponse res = new org.openapis.openapi.models.operations.SqlDatabasesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Databases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlDatabasesGetResponse res = new org.openapis.openapi.models.operations.SqlDatabasesGetResponse() {{
+        org.openapis.openapi.models.operations.SqlDatabasesGetResponse res = new org.openapis.openapi.models.operations.SqlDatabasesGetResponse(contentType, httpRes.statusCode()) {{
             database = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,7 +120,7 @@ public class Databases {
     }
 
     /**
-     * Inserts a resource containing information about a database inside a Cloud SQL instance.
+     * Inserts a resource containing information about a database inside a Cloud SQL instance. **Note:** You can't modify the default character set and collation.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -153,11 +149,9 @@ public class Databases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlDatabasesInsertResponse res = new org.openapis.openapi.models.operations.SqlDatabasesInsertResponse() {{
+        org.openapis.openapi.models.operations.SqlDatabasesInsertResponse res = new org.openapis.openapi.models.operations.SqlDatabasesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Databases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlDatabasesListResponse res = new org.openapis.openapi.models.operations.SqlDatabasesListResponse() {{
+        org.openapis.openapi.models.operations.SqlDatabasesListResponse res = new org.openapis.openapi.models.operations.SqlDatabasesListResponse(contentType, httpRes.statusCode()) {{
             databasesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class Databases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlDatabasesPatchResponse res = new org.openapis.openapi.models.operations.SqlDatabasesPatchResponse() {{
+        org.openapis.openapi.models.operations.SqlDatabasesPatchResponse res = new org.openapis.openapi.models.operations.SqlDatabasesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class Databases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlDatabasesUpdateResponse res = new org.openapis.openapi.models.operations.SqlDatabasesUpdateResponse() {{
+        org.openapis.openapi.models.operations.SqlDatabasesUpdateResponse res = new org.openapis.openapi.models.operations.SqlDatabasesUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

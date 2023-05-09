@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DoActionExperimentUsingPOSTRequest {
@@ -12,6 +13,7 @@ public class DoActionExperimentUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=action")
     public DoActionExperimentUsingPOSTActionEnum action;
+
     public DoActionExperimentUsingPOSTRequest withAction(DoActionExperimentUsingPOSTActionEnum action) {
         this.action = action;
         return this;
@@ -22,6 +24,7 @@ public class DoActionExperimentUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public DoActionExperimentUsingPOSTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -32,9 +35,15 @@ public class DoActionExperimentUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public DoActionExperimentUsingPOSTRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public DoActionExperimentUsingPOSTRequest(@JsonProperty("action") DoActionExperimentUsingPOSTActionEnum action, @JsonProperty("apiKey") String apiKey, @JsonProperty("id") Long id) {
+        this.action = action;
+        this.apiKey = apiKey;
+        this.id = id;
+  }
 }

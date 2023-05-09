@@ -18,6 +18,7 @@ public class ValidateAttestationOccurrenceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("denialReason")
     public String denialReason;
+
     public ValidateAttestationOccurrenceResponse withDenialReason(String denialReason) {
         this.denialReason = denialReason;
         return this;
@@ -29,9 +30,11 @@ public class ValidateAttestationOccurrenceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public ValidateAttestationOccurrenceResponseResultEnum result;
+
     public ValidateAttestationOccurrenceResponse withResult(ValidateAttestationOccurrenceResponseResultEnum result) {
         this.result = result;
         return this;
     }
     
+    public ValidateAttestationOccurrenceResponse(){}
 }

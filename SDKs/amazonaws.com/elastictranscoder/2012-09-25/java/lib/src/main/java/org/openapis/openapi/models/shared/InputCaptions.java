@@ -15,6 +15,7 @@ public class InputCaptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CaptionSources")
     public CaptionSource[] captionSources;
+
     public InputCaptions withCaptionSources(CaptionSource[] captionSources) {
         this.captionSources = captionSources;
         return this;
@@ -23,9 +24,11 @@ public class InputCaptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MergePolicy")
     public String mergePolicy;
+
     public InputCaptions withMergePolicy(String mergePolicy) {
         this.mergePolicy = mergePolicy;
         return this;
     }
     
+    public InputCaptions(){}
 }

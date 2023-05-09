@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWorkspaceResponse {
@@ -12,6 +13,7 @@ public class UpdateWorkspaceResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateWorkspaceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateWorkspaceResponse {
     
     
     public String contentType;
+
     public UpdateWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateWorkspaceResponse {
      */
     
     public Object internalServerException;
+
     public UpdateWorkspaceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateWorkspaceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateWorkspaceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateWorkspaceResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateWorkspaceResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public UpdateWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateWorkspaceResponse {
      */
     
     public Object throttlingException;
+
     public UpdateWorkspaceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateWorkspaceResponse updateWorkspaceResponse;
+
     public UpdateWorkspaceResponse withUpdateWorkspaceResponse(org.openapis.openapi.models.shared.UpdateWorkspaceResponse updateWorkspaceResponse) {
         this.updateWorkspaceResponse = updateWorkspaceResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateWorkspaceResponse {
      */
     
     public Object validationException;
+
     public UpdateWorkspaceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

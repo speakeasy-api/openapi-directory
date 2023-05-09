@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostApiV1PushSubscriptionRequestBody {
     @JsonProperty("data")
     public String data;
+
     public PostApiV1PushSubscriptionRequestBody withData(String data) {
         this.data = data;
         return this;
@@ -16,9 +17,14 @@ public class PostApiV1PushSubscriptionRequestBody {
     
     @JsonProperty("subscription")
     public String subscription;
+
     public PostApiV1PushSubscriptionRequestBody withSubscription(String subscription) {
         this.subscription = subscription;
         return this;
     }
     
+    public PostApiV1PushSubscriptionRequestBody(@JsonProperty("data") String data, @JsonProperty("subscription") String subscription) {
+        this.data = data;
+        this.subscription = subscription;
+  }
 }

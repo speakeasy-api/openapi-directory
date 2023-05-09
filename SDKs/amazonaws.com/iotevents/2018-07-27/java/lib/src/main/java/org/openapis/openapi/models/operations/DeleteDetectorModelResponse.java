@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDetectorModelResponse {
     
     public String contentType;
+
     public DeleteDetectorModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDetectorModelResponse {
      */
     
     public java.util.Map<String, Object> deleteDetectorModelResponse;
+
     public DeleteDetectorModelResponse withDeleteDetectorModelResponse(java.util.Map<String, Object> deleteDetectorModelResponse) {
         this.deleteDetectorModelResponse = deleteDetectorModelResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDetectorModelResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteDetectorModelResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDetectorModelResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteDetectorModelResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDetectorModelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteDetectorModelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteDetectorModelResponse {
     
     
     public Integer statusCode;
+
     public DeleteDetectorModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteDetectorModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDetectorModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteDetectorModelResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteDetectorModelResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteDetectorModelResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteDetectorModelResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteDetectorModelResponse {
      */
     
     public Object throttlingException;
+
     public DeleteDetectorModelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteDetectorModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

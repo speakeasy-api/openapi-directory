@@ -15,6 +15,7 @@ public class GetInlineScriptTags200ApplicationJSONInlineScriptTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     public String accountId;
+
     public GetInlineScriptTags200ApplicationJSONInlineScriptTags withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -31,6 +32,7 @@ public class GetInlineScriptTags200ApplicationJSONInlineScriptTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_scope")
     public GetInlineScriptTags200ApplicationJSONInlineScriptTagsDisplayScopeEnum displayScope;
+
     public GetInlineScriptTags200ApplicationJSONInlineScriptTags withDisplayScope(GetInlineScriptTags200ApplicationJSONInlineScriptTagsDisplayScopeEnum displayScope) {
         this.displayScope = displayScope;
         return this;
@@ -42,6 +44,7 @@ public class GetInlineScriptTags200ApplicationJSONInlineScriptTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetInlineScriptTags200ApplicationJSONInlineScriptTags withId(Long id) {
         this.id = id;
         return this;
@@ -53,6 +56,7 @@ public class GetInlineScriptTags200ApplicationJSONInlineScriptTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("make_date")
     public Long makeDate;
+
     public GetInlineScriptTags200ApplicationJSONInlineScriptTags withMakeDate(Long makeDate) {
         this.makeDate = makeDate;
         return this;
@@ -64,6 +68,7 @@ public class GetInlineScriptTags200ApplicationJSONInlineScriptTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth_application_id")
     public Long oauthApplicationId;
+
     public GetInlineScriptTags200ApplicationJSONInlineScriptTags withOauthApplicationId(Long oauthApplicationId) {
         this.oauthApplicationId = oauthApplicationId;
         return this;
@@ -75,6 +80,7 @@ public class GetInlineScriptTags200ApplicationJSONInlineScriptTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public GetInlineScriptTags200ApplicationJSONInlineScriptTags withScript(String script) {
         this.script = script;
         return this;
@@ -89,6 +95,7 @@ public class GetInlineScriptTags200ApplicationJSONInlineScriptTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger_event")
     public GetInlineScriptTags200ApplicationJSONInlineScriptTagsTriggerEventEnum triggerEvent;
+
     public GetInlineScriptTags200ApplicationJSONInlineScriptTags withTriggerEvent(GetInlineScriptTags200ApplicationJSONInlineScriptTagsTriggerEventEnum triggerEvent) {
         this.triggerEvent = triggerEvent;
         return this;
@@ -100,9 +107,11 @@ public class GetInlineScriptTags200ApplicationJSONInlineScriptTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update_date")
     public Long updateDate;
+
     public GetInlineScriptTags200ApplicationJSONInlineScriptTags withUpdateDate(Long updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public GetInlineScriptTags200ApplicationJSONInlineScriptTags(){}
 }

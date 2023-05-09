@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModelVariantConfig {
     @JsonProperty("InfrastructureConfig")
     public ModelInfrastructureConfig infrastructureConfig;
+
     public ModelVariantConfig withInfrastructureConfig(ModelInfrastructureConfig infrastructureConfig) {
         this.infrastructureConfig = infrastructureConfig;
         return this;
@@ -19,6 +20,7 @@ public class ModelVariantConfig {
     
     @JsonProperty("ModelName")
     public String modelName;
+
     public ModelVariantConfig withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -26,9 +28,15 @@ public class ModelVariantConfig {
     
     @JsonProperty("VariantName")
     public String variantName;
+
     public ModelVariantConfig withVariantName(String variantName) {
         this.variantName = variantName;
         return this;
     }
     
+    public ModelVariantConfig(@JsonProperty("InfrastructureConfig") ModelInfrastructureConfig infrastructureConfig, @JsonProperty("ModelName") String modelName, @JsonProperty("VariantName") String variantName) {
+        this.infrastructureConfig = infrastructureConfig;
+        this.modelName = modelName;
+        this.variantName = variantName;
+  }
 }

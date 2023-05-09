@@ -15,6 +15,7 @@ public class CreateImageRecipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateImageRecipeResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +24,7 @@ public class CreateImageRecipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageRecipeArn")
     public String imageRecipeArn;
+
     public CreateImageRecipeResponse withImageRecipeArn(String imageRecipeArn) {
         this.imageRecipeArn = imageRecipeArn;
         return this;
@@ -31,9 +33,11 @@ public class CreateImageRecipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public CreateImageRecipeResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public CreateImageRecipeResponse(){}
 }

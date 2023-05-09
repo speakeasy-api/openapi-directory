@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BaremetalsolutionProjectsLocationsSshKeysListResponse {
     
     public String contentType;
+
     public BaremetalsolutionProjectsLocationsSshKeysListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BaremetalsolutionProjectsLocationsSshKeysListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSSHKeysResponse listSSHKeysResponse;
+
     public BaremetalsolutionProjectsLocationsSshKeysListResponse withListSSHKeysResponse(org.openapis.openapi.models.shared.ListSSHKeysResponse listSSHKeysResponse) {
         this.listSSHKeysResponse = listSSHKeysResponse;
         return this;
@@ -26,6 +29,7 @@ public class BaremetalsolutionProjectsLocationsSshKeysListResponse {
     
     
     public Integer statusCode;
+
     public BaremetalsolutionProjectsLocationsSshKeysListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BaremetalsolutionProjectsLocationsSshKeysListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BaremetalsolutionProjectsLocationsSshKeysListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BaremetalsolutionProjectsLocationsSshKeysListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

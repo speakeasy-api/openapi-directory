@@ -15,6 +15,7 @@ public class ConnectionHttpParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BodyParameters")
     public ConnectionBodyParameter[] bodyParameters;
+
     public ConnectionHttpParameters withBodyParameters(ConnectionBodyParameter[] bodyParameters) {
         this.bodyParameters = bodyParameters;
         return this;
@@ -23,6 +24,7 @@ public class ConnectionHttpParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeaderParameters")
     public ConnectionHeaderParameter[] headerParameters;
+
     public ConnectionHttpParameters withHeaderParameters(ConnectionHeaderParameter[] headerParameters) {
         this.headerParameters = headerParameters;
         return this;
@@ -31,9 +33,11 @@ public class ConnectionHttpParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryStringParameters")
     public ConnectionQueryStringParameter[] queryStringParameters;
+
     public ConnectionHttpParameters withQueryStringParameters(ConnectionQueryStringParameter[] queryStringParameters) {
         this.queryStringParameters = queryStringParameters;
         return this;
     }
     
+    public ConnectionHttpParameters(){}
 }

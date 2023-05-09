@@ -15,9 +15,11 @@ public class NotificationProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotifyDelayAfter")
     public Long notifyDelayAfter;
+
     public NotificationProperty withNotifyDelayAfter(Long notifyDelayAfter) {
         this.notifyDelayAfter = notifyDelayAfter;
         return this;
     }
     
+    public NotificationProperty(){}
 }

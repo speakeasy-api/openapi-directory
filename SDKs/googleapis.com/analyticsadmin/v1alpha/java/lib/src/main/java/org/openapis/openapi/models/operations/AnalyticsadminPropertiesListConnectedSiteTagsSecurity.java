@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AnalyticsadminPropertiesListConnectedSiteTagsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsadminPropertiesListConnectedSiteTagsSecurityOption1 option1;
+
     public AnalyticsadminPropertiesListConnectedSiteTagsSecurity withOption1(AnalyticsadminPropertiesListConnectedSiteTagsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class AnalyticsadminPropertiesListConnectedSiteTagsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsadminPropertiesListConnectedSiteTagsSecurityOption2 option2;
+
     public AnalyticsadminPropertiesListConnectedSiteTagsSecurity withOption2(AnalyticsadminPropertiesListConnectedSiteTagsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public AnalyticsadminPropertiesListConnectedSiteTagsSecurity(){}
 }

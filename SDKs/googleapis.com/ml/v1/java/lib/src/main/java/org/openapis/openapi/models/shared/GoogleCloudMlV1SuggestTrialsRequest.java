@@ -18,6 +18,7 @@ public class GoogleCloudMlV1SuggestTrialsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public GoogleCloudMlV1SuggestTrialsRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudMlV1SuggestTrialsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestionCount")
     public Integer suggestionCount;
+
     public GoogleCloudMlV1SuggestTrialsRequest withSuggestionCount(Integer suggestionCount) {
         this.suggestionCount = suggestionCount;
         return this;
     }
     
+    public GoogleCloudMlV1SuggestTrialsRequest(){}
 }

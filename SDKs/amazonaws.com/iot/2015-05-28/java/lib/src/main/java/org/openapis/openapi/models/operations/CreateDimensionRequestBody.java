@@ -14,6 +14,7 @@ public class CreateDimensionRequestBody {
      */
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateDimensionRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -24,6 +25,7 @@ public class CreateDimensionRequestBody {
      */
     @JsonProperty("stringValues")
     public String[] stringValues;
+
     public CreateDimensionRequestBody withStringValues(String[] stringValues) {
         this.stringValues = stringValues;
         return this;
@@ -35,6 +37,7 @@ public class CreateDimensionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateDimensionRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -45,9 +48,15 @@ public class CreateDimensionRequestBody {
      */
     @JsonProperty("type")
     public CreateDimensionRequestBodyTypeEnum type;
+
     public CreateDimensionRequestBody withType(CreateDimensionRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateDimensionRequestBody(@JsonProperty("clientRequestToken") String clientRequestToken, @JsonProperty("stringValues") String[] stringValues, @JsonProperty("type") CreateDimensionRequestBodyTypeEnum type) {
+        this.clientRequestToken = clientRequestToken;
+        this.stringValues = stringValues;
+        this.type = type;
+  }
 }

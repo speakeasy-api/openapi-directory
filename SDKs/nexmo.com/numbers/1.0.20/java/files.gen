@@ -52,4 +52,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/NumberDetailsUpdateMessages
 lib/src/main/java/org/openapis/openapi/models/shared/NumberDetailsUpdateVoiceCallbackTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/NumberDetailsUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

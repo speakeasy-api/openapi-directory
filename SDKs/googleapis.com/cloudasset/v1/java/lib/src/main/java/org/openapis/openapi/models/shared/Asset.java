@@ -18,6 +18,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessLevel")
     public GoogleIdentityAccesscontextmanagerV1AccessLevel accessLevel;
+
     public Asset withAccessLevel(GoogleIdentityAccesscontextmanagerV1AccessLevel accessLevel) {
         this.accessLevel = accessLevel;
         return this;
@@ -29,6 +30,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessPolicy")
     public GoogleIdentityAccesscontextmanagerV1AccessPolicy accessPolicy;
+
     public Asset withAccessPolicy(GoogleIdentityAccesscontextmanagerV1AccessPolicy accessPolicy) {
         this.accessPolicy = accessPolicy;
         return this;
@@ -40,6 +42,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ancestors")
     public String[] ancestors;
+
     public Asset withAncestors(String[] ancestors) {
         this.ancestors = ancestors;
         return this;
@@ -51,6 +54,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetType")
     public String assetType;
+
     public Asset withAssetType(String assetType) {
         this.assetType = assetType;
         return this;
@@ -62,6 +66,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamPolicy")
     public Policy iamPolicy;
+
     public Asset withIamPolicy(Policy iamPolicy) {
         this.iamPolicy = iamPolicy;
         return this;
@@ -73,6 +78,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Asset withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgPolicy")
     public GoogleCloudOrgpolicyV1Policy[] orgPolicy;
+
     public Asset withOrgPolicy(GoogleCloudOrgpolicyV1Policy[] orgPolicy) {
         this.orgPolicy = orgPolicy;
         return this;
@@ -95,6 +102,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osInventory")
     public Inventory osInventory;
+
     public Asset withOsInventory(Inventory osInventory) {
         this.osInventory = osInventory;
         return this;
@@ -106,6 +114,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedAsset")
     public RelatedAsset relatedAsset;
+
     public Asset withRelatedAsset(RelatedAsset relatedAsset) {
         this.relatedAsset = relatedAsset;
         return this;
@@ -117,6 +126,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedAssets")
     public RelatedAssets relatedAssets;
+
     public Asset withRelatedAssets(RelatedAssets relatedAssets) {
         this.relatedAssets = relatedAssets;
         return this;
@@ -128,6 +138,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public Resource resource;
+
     public Asset withResource(Resource resource) {
         this.resource = resource;
         return this;
@@ -139,6 +150,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicePerimeter")
     public GoogleIdentityAccesscontextmanagerV1ServicePerimeter servicePerimeter;
+
     public Asset withServicePerimeter(GoogleIdentityAccesscontextmanagerV1ServicePerimeter servicePerimeter) {
         this.servicePerimeter = servicePerimeter;
         return this;
@@ -150,9 +162,11 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Asset withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Asset(){}
 }

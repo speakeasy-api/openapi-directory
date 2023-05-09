@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContentPubsubnotificationsettingsGetResponse {
     
     public String contentType;
+
     public ContentPubsubnotificationsettingsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContentPubsubnotificationsettingsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.PubsubNotificationSettings pubsubNotificationSettings;
+
     public ContentPubsubnotificationsettingsGetResponse withPubsubNotificationSettings(org.openapis.openapi.models.shared.PubsubNotificationSettings pubsubNotificationSettings) {
         this.pubsubNotificationSettings = pubsubNotificationSettings;
         return this;
@@ -26,6 +29,7 @@ public class ContentPubsubnotificationsettingsGetResponse {
     
     
     public Integer statusCode;
+
     public ContentPubsubnotificationsettingsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContentPubsubnotificationsettingsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContentPubsubnotificationsettingsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContentPubsubnotificationsettingsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

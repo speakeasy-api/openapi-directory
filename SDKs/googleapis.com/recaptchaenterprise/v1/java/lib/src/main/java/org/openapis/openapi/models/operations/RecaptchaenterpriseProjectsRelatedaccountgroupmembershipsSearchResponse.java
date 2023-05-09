@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResponse {
     
     public String contentType;
+
     public RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResp
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsResponse googleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsResponse;
+
     public RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResponse withGoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsResponse(org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsResponse googleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsResponse) {
         this.googleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsResponse = googleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsResponse;
         return this;
@@ -26,6 +29,7 @@ public class RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResp
     
     
     public Integer statusCode;
+
     public RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

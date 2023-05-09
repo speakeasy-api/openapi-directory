@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Shipping {
     @JsonProperty("city")
     public String city;
+
     public Shipping withCity(String city) {
         this.city = city;
         return this;
@@ -16,6 +17,7 @@ public class Shipping {
     
     @JsonProperty("complement")
     public String complement;
+
     public Shipping withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -23,6 +25,7 @@ public class Shipping {
     
     @JsonProperty("country")
     public String country;
+
     public Shipping withCountry(String country) {
         this.country = country;
         return this;
@@ -30,6 +33,7 @@ public class Shipping {
     
     @JsonProperty("neighborhood")
     public String neighborhood;
+
     public Shipping withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -37,6 +41,7 @@ public class Shipping {
     
     @JsonProperty("number")
     public String number;
+
     public Shipping withNumber(String number) {
         this.number = number;
         return this;
@@ -44,6 +49,7 @@ public class Shipping {
     
     @JsonProperty("postalCode")
     public String postalCode;
+
     public Shipping withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -51,6 +57,7 @@ public class Shipping {
     
     @JsonProperty("receiverName")
     public String receiverName;
+
     public Shipping withReceiverName(String receiverName) {
         this.receiverName = receiverName;
         return this;
@@ -58,6 +65,7 @@ public class Shipping {
     
     @JsonProperty("reference")
     public String reference;
+
     public Shipping withReference(String reference) {
         this.reference = reference;
         return this;
@@ -65,6 +73,7 @@ public class Shipping {
     
     @JsonProperty("state")
     public String state;
+
     public Shipping withState(String state) {
         this.state = state;
         return this;
@@ -72,9 +81,22 @@ public class Shipping {
     
     @JsonProperty("street")
     public String street;
+
     public Shipping withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public Shipping(@JsonProperty("city") String city, @JsonProperty("complement") String complement, @JsonProperty("country") String country, @JsonProperty("neighborhood") String neighborhood, @JsonProperty("number") String number, @JsonProperty("postalCode") String postalCode, @JsonProperty("receiverName") String receiverName, @JsonProperty("reference") String reference, @JsonProperty("state") String state, @JsonProperty("street") String street) {
+        this.city = city;
+        this.complement = complement;
+        this.country = country;
+        this.neighborhood = neighborhood;
+        this.number = number;
+        this.postalCode = postalCode;
+        this.receiverName = receiverName;
+        this.reference = reference;
+        this.state = state;
+        this.street = street;
+  }
 }

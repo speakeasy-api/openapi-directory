@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostDnsDomainNameRecordsResponse {
     
     public String contentType;
+
     public PostDnsDomainNameRecordsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostDnsDomainNameRecordsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostDnsDomainNameRecordsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PostDnsDomainNameRecordsResponse {
     
     
     public Integer statusCode;
+
     public PostDnsDomainNameRecordsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class PostDnsDomainNameRecordsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostDnsDomainNameRecordsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostDnsDomainNameRecordsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

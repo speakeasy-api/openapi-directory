@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRulesPackagesResponse {
@@ -12,6 +13,7 @@ public class ListRulesPackagesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRulesPackagesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListRulesPackagesResponse {
     
     
     public String contentType;
+
     public ListRulesPackagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRulesPackagesResponse {
      */
     
     public Object internalException;
+
     public ListRulesPackagesResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class ListRulesPackagesResponse {
      */
     
     public Object invalidInputException;
+
     public ListRulesPackagesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListRulesPackagesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRulesPackagesResponse listRulesPackagesResponse;
+
     public ListRulesPackagesResponse withListRulesPackagesResponse(org.openapis.openapi.models.shared.ListRulesPackagesResponse listRulesPackagesResponse) {
         this.listRulesPackagesResponse = listRulesPackagesResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListRulesPackagesResponse {
     
     
     public Integer statusCode;
+
     public ListRulesPackagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListRulesPackagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRulesPackagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListRulesPackagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

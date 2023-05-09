@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * VerifiedAccessLogCloudWatchLogsDestinationOptions - Options for CloudWatch Logs as a logging destination.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class VerifiedAccessLogCloudWatchLogsDestinationOptions {
     
     public Boolean enabled;
+
     public VerifiedAccessLogCloudWatchLogsDestinationOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -19,9 +20,13 @@ public class VerifiedAccessLogCloudWatchLogsDestinationOptions {
     
     
     public String logGroup;
+
     public VerifiedAccessLogCloudWatchLogsDestinationOptions withLogGroup(String logGroup) {
         this.logGroup = logGroup;
         return this;
     }
     
+    public VerifiedAccessLogCloudWatchLogsDestinationOptions(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

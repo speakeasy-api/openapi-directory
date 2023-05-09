@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetOwnerRequest {
@@ -12,6 +13,7 @@ public class SetOwnerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetOwnerRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class SetOwnerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public SetOwnerRequest withOwner(String owner) {
         this.owner = owner;
         return this;
     }
     
+    public SetOwnerRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("owner") String owner) {
+        this.agentNum = agentNum;
+        this.owner = owner;
+  }
 }

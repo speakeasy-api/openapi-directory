@@ -14,6 +14,7 @@ public class PostApiRnbPvtCouponRequestBody {
      */
     @JsonProperty("couponCode")
     public String couponCode;
+
     public PostApiRnbPvtCouponRequestBody withCouponCode(String couponCode) {
         this.couponCode = couponCode;
         return this;
@@ -24,6 +25,7 @@ public class PostApiRnbPvtCouponRequestBody {
      */
     @JsonProperty("expirationIntervalPerUse")
     public String expirationIntervalPerUse;
+
     public PostApiRnbPvtCouponRequestBody withExpirationIntervalPerUse(String expirationIntervalPerUse) {
         this.expirationIntervalPerUse = expirationIntervalPerUse;
         return this;
@@ -34,6 +36,7 @@ public class PostApiRnbPvtCouponRequestBody {
      */
     @JsonProperty("maxItemsPerClient")
     public Long maxItemsPerClient;
+
     public PostApiRnbPvtCouponRequestBody withMaxItemsPerClient(Long maxItemsPerClient) {
         this.maxItemsPerClient = maxItemsPerClient;
         return this;
@@ -45,6 +48,7 @@ public class PostApiRnbPvtCouponRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmCampaign")
     public String utmCampaign;
+
     public PostApiRnbPvtCouponRequestBody withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -55,9 +59,16 @@ public class PostApiRnbPvtCouponRequestBody {
      */
     @JsonProperty("utmSource")
     public String utmSource;
+
     public PostApiRnbPvtCouponRequestBody withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
     }
     
+    public PostApiRnbPvtCouponRequestBody(@JsonProperty("couponCode") String couponCode, @JsonProperty("expirationIntervalPerUse") String expirationIntervalPerUse, @JsonProperty("maxItemsPerClient") Long maxItemsPerClient, @JsonProperty("utmSource") String utmSource) {
+        this.couponCode = couponCode;
+        this.expirationIntervalPerUse = expirationIntervalPerUse;
+        this.maxItemsPerClient = maxItemsPerClient;
+        this.utmSource = utmSource;
+  }
 }

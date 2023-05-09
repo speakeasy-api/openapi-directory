@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportServicesTopTCPCSVResponse {
     
     public String contentType;
+
     public ExportServicesTopTCPCSVResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ExportServicesTopTCPCSVResponse {
     
     
     public Integer statusCode;
+
     public ExportServicesTopTCPCSVResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ExportServicesTopTCPCSVResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportServicesTopTCPCSVResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ExportServicesTopTCPCSVResponse {
      */
     
     public byte[] exportServicesTopTCPCSV200TextCsvBinaryString;
+
     public ExportServicesTopTCPCSVResponse withExportServicesTopTCPCSV200TextCsvBinaryString(byte[] exportServicesTopTCPCSV200TextCsvBinaryString) {
         this.exportServicesTopTCPCSV200TextCsvBinaryString = exportServicesTopTCPCSV200TextCsvBinaryString;
         return this;
     }
     
+    public ExportServicesTopTCPCSVResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

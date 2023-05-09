@@ -15,6 +15,7 @@ public class EcsCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcsClusterArn")
     public String ecsClusterArn;
+
     public EcsCluster withEcsClusterArn(String ecsClusterArn) {
         this.ecsClusterArn = ecsClusterArn;
         return this;
@@ -23,6 +24,7 @@ public class EcsCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcsClusterName")
     public String ecsClusterName;
+
     public EcsCluster withEcsClusterName(String ecsClusterName) {
         this.ecsClusterName = ecsClusterName;
         return this;
@@ -31,6 +33,7 @@ public class EcsCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegisteredAt")
     public String registeredAt;
+
     public EcsCluster withRegisteredAt(String registeredAt) {
         this.registeredAt = registeredAt;
         return this;
@@ -39,9 +42,11 @@ public class EcsCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public EcsCluster withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public EcsCluster(){}
 }

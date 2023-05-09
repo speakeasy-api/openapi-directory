@@ -15,6 +15,7 @@ public class CreateDatalakeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurations")
     public java.util.Map<String, org.openapis.openapi.models.shared.LakeConfigurationRequest> configurations;
+
     public CreateDatalakeRequestBody withConfigurations(java.util.Map<String, org.openapis.openapi.models.shared.LakeConfigurationRequest> configurations) {
         this.configurations = configurations;
         return this;
@@ -26,6 +27,7 @@ public class CreateDatalakeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAll")
     public Boolean enableAll;
+
     public CreateDatalakeRequestBody withEnableAll(Boolean enableAll) {
         this.enableAll = enableAll;
         return this;
@@ -37,6 +39,7 @@ public class CreateDatalakeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metaStoreManagerRoleArn")
     public String metaStoreManagerRoleArn;
+
     public CreateDatalakeRequestBody withMetaStoreManagerRoleArn(String metaStoreManagerRoleArn) {
         this.metaStoreManagerRoleArn = metaStoreManagerRoleArn;
         return this;
@@ -48,9 +51,11 @@ public class CreateDatalakeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public org.openapis.openapi.models.shared.RegionEnum[] regions;
+
     public CreateDatalakeRequestBody withRegions(org.openapis.openapi.models.shared.RegionEnum[] regions) {
         this.regions = regions;
         return this;
     }
     
+    public CreateDatalakeRequestBody(){}
 }

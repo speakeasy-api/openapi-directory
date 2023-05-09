@@ -13,6 +13,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NamedLogConfiguration {
     @JsonProperty("level")
     public LogLevelEnum level;
+
     public NamedLogConfiguration withLevel(LogLevelEnum level) {
         this.level = level;
         return this;
@@ -20,9 +21,14 @@ public class NamedLogConfiguration {
     
     @JsonProperty("name")
     public String name;
+
     public NamedLogConfiguration withName(String name) {
         this.name = name;
         return this;
     }
     
+    public NamedLogConfiguration(@JsonProperty("level") LogLevelEnum level, @JsonProperty("name") String name) {
+        this.level = level;
+        this.name = name;
+  }
 }

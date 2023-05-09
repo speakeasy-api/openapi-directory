@@ -23,6 +23,7 @@ public class TrainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public String algorithm;
+
     public TrainResponse withAlgorithm(String algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -36,6 +37,7 @@ public class TrainResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public TrainResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +48,7 @@ public class TrainResponse {
      */
     @JsonProperty("datasetId")
     public Long datasetId;
+
     public TrainResponse withDatasetId(Long datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -56,6 +59,7 @@ public class TrainResponse {
      */
     @JsonProperty("datasetVersionId")
     public Long datasetVersionId;
+
     public TrainResponse withDatasetVersionId(Long datasetVersionId) {
         this.datasetVersionId = datasetVersionId;
         return this;
@@ -67,6 +71,7 @@ public class TrainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("epochs")
     public Integer epochs;
+
     public TrainResponse withEpochs(Integer epochs) {
         this.epochs = epochs;
         return this;
@@ -78,6 +83,7 @@ public class TrainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureMsg")
     public String failureMsg;
+
     public TrainResponse withFailureMsg(String failureMsg) {
         this.failureMsg = failureMsg;
         return this;
@@ -88,6 +94,7 @@ public class TrainResponse {
      */
     @JsonProperty("language")
     public String language;
+
     public TrainResponse withLanguage(String language) {
         this.language = language;
         return this;
@@ -99,6 +106,7 @@ public class TrainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learningRate")
     public Double learningRate;
+
     public TrainResponse withLearningRate(Double learningRate) {
         this.learningRate = learningRate;
         return this;
@@ -109,6 +117,7 @@ public class TrainResponse {
      */
     @JsonProperty("modelId")
     public String modelId;
+
     public TrainResponse withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -120,6 +129,7 @@ public class TrainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelType")
     public String modelType;
+
     public TrainResponse withModelType(String modelType) {
         this.modelType = modelType;
         return this;
@@ -130,6 +140,7 @@ public class TrainResponse {
      */
     @JsonProperty("name")
     public String name;
+
     public TrainResponse withName(String name) {
         this.name = name;
         return this;
@@ -141,6 +152,7 @@ public class TrainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public TrainResponse withObject(String object) {
         this.object = object;
         return this;
@@ -151,6 +163,7 @@ public class TrainResponse {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public TrainResponse withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -162,6 +175,7 @@ public class TrainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queuePosition")
     public Integer queuePosition;
+
     public TrainResponse withQueuePosition(Integer queuePosition) {
         this.queuePosition = queuePosition;
         return this;
@@ -172,6 +186,7 @@ public class TrainResponse {
      */
     @JsonProperty("status")
     public TrainResponseStatusEnum status;
+
     public TrainResponse withStatus(TrainResponseStatusEnum status) {
         this.status = status;
         return this;
@@ -183,6 +198,7 @@ public class TrainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainParams")
     public String trainParams;
+
     public TrainResponse withTrainParams(String trainParams) {
         this.trainParams = trainParams;
         return this;
@@ -194,6 +210,7 @@ public class TrainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainStats")
     public String trainStats;
+
     public TrainResponse withTrainStats(String trainStats) {
         this.trainStats = trainStats;
         return this;
@@ -207,9 +224,19 @@ public class TrainResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public TrainResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public TrainResponse(@JsonProperty("datasetId") Long datasetId, @JsonProperty("datasetVersionId") Long datasetVersionId, @JsonProperty("language") String language, @JsonProperty("modelId") String modelId, @JsonProperty("name") String name, @JsonProperty("progress") Double progress, @JsonProperty("status") TrainResponseStatusEnum status) {
+        this.datasetId = datasetId;
+        this.datasetVersionId = datasetVersionId;
+        this.language = language;
+        this.modelId = modelId;
+        this.name = name;
+        this.progress = progress;
+        this.status = status;
+  }
 }

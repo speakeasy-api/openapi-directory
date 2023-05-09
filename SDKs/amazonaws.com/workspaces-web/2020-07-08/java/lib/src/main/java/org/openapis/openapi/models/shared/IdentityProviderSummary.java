@@ -15,6 +15,7 @@ public class IdentityProviderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProviderArn")
     public String identityProviderArn;
+
     public IdentityProviderSummary withIdentityProviderArn(String identityProviderArn) {
         this.identityProviderArn = identityProviderArn;
         return this;
@@ -23,6 +24,7 @@ public class IdentityProviderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProviderName")
     public String identityProviderName;
+
     public IdentityProviderSummary withIdentityProviderName(String identityProviderName) {
         this.identityProviderName = identityProviderName;
         return this;
@@ -31,9 +33,11 @@ public class IdentityProviderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProviderType")
     public IdentityProviderTypeEnum identityProviderType;
+
     public IdentityProviderSummary withIdentityProviderType(IdentityProviderTypeEnum identityProviderType) {
         this.identityProviderType = identityProviderType;
         return this;
     }
     
+    public IdentityProviderSummary(){}
 }

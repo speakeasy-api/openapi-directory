@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSystemTemplateResponse {
     
     public String contentType;
+
     public CreateSystemTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSystemTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSystemTemplateResponse createSystemTemplateResponse;
+
     public CreateSystemTemplateResponse withCreateSystemTemplateResponse(org.openapis.openapi.models.shared.CreateSystemTemplateResponse createSystemTemplateResponse) {
         this.createSystemTemplateResponse = createSystemTemplateResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateSystemTemplateResponse {
      */
     
     public Object internalFailureException;
+
     public CreateSystemTemplateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateSystemTemplateResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateSystemTemplateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreateSystemTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateSystemTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateSystemTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSystemTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateSystemTemplateResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateSystemTemplateResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -73,9 +81,14 @@ public class CreateSystemTemplateResponse {
      */
     
     public Object throttlingException;
+
     public CreateSystemTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateSystemTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

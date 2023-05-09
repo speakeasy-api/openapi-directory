@@ -22,6 +22,7 @@ public class ProjectPolicy {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimestamp")
     public OffsetDateTime creationTimestamp;
+
     public ProjectPolicy withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -32,6 +33,7 @@ public class ProjectPolicy {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTimestamp")
     public OffsetDateTime lastUpdatedTimestamp;
+
     public ProjectPolicy withLastUpdatedTimestamp(OffsetDateTime lastUpdatedTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class ProjectPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyDocument")
     public String policyDocument;
+
     public ProjectPolicy withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -48,6 +51,7 @@ public class ProjectPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyName")
     public String policyName;
+
     public ProjectPolicy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -56,6 +60,7 @@ public class ProjectPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyRevisionId")
     public String policyRevisionId;
+
     public ProjectPolicy withPolicyRevisionId(String policyRevisionId) {
         this.policyRevisionId = policyRevisionId;
         return this;
@@ -64,9 +69,11 @@ public class ProjectPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectArn")
     public String projectArn;
+
     public ProjectPolicy withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
     }
     
+    public ProjectPolicy(){}
 }

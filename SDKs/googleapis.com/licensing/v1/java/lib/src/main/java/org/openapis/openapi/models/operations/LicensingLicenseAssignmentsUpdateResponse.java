@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LicensingLicenseAssignmentsUpdateResponse {
     
     public String contentType;
+
     public LicensingLicenseAssignmentsUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class LicensingLicenseAssignmentsUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.LicenseAssignment licenseAssignment;
+
     public LicensingLicenseAssignmentsUpdateResponse withLicenseAssignment(org.openapis.openapi.models.shared.LicenseAssignment licenseAssignment) {
         this.licenseAssignment = licenseAssignment;
         return this;
@@ -26,6 +29,7 @@ public class LicensingLicenseAssignmentsUpdateResponse {
     
     
     public Integer statusCode;
+
     public LicensingLicenseAssignmentsUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class LicensingLicenseAssignmentsUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LicensingLicenseAssignmentsUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LicensingLicenseAssignmentsUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

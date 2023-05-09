@@ -15,6 +15,7 @@ public class UofmSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_default")
     public Boolean isDefault;
+
     public UofmSimpleVO withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -23,6 +24,7 @@ public class UofmSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uofm_id")
     public Long uofmId;
+
     public UofmSimpleVO withUofmId(Long uofmId) {
         this.uofmId = uofmId;
         return this;
@@ -31,9 +33,11 @@ public class UofmSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uofm_name")
     public String uofmName;
+
     public UofmSimpleVO withUofmName(String uofmName) {
         this.uofmName = uofmName;
         return this;
     }
     
+    public UofmSimpleVO(){}
 }

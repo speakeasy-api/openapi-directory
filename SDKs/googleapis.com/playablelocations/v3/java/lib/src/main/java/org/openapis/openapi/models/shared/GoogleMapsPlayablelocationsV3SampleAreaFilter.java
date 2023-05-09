@@ -18,9 +18,11 @@ public class GoogleMapsPlayablelocationsV3SampleAreaFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s2CellId")
     public String s2CellId;
+
     public GoogleMapsPlayablelocationsV3SampleAreaFilter withS2CellId(String s2CellId) {
         this.s2CellId = s2CellId;
         return this;
     }
     
+    public GoogleMapsPlayablelocationsV3SampleAreaFilter(){}
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateTransitGatewayConnectResultTransitGatewayConnect {
     
     public OffsetDateTime creationTime;
+
     public CreateTransitGatewayConnectResultTransitGatewayConnect withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class CreateTransitGatewayConnectResultTransitGatewayConnect {
     
     
     public CreateTransitGatewayConnectResultTransitGatewayConnectOptions options;
+
     public CreateTransitGatewayConnectResultTransitGatewayConnect withOptions(CreateTransitGatewayConnectResultTransitGatewayConnectOptions options) {
         this.options = options;
         return this;
@@ -26,6 +28,7 @@ public class CreateTransitGatewayConnectResultTransitGatewayConnect {
     
     
     public CreateTransitGatewayConnectResultTransitGatewayConnectStateEnum state;
+
     public CreateTransitGatewayConnectResultTransitGatewayConnect withState(CreateTransitGatewayConnectResultTransitGatewayConnectStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +36,7 @@ public class CreateTransitGatewayConnectResultTransitGatewayConnect {
     
     
     public CreateTransitGatewayConnectResultTransitGatewayConnectTags[] tags;
+
     public CreateTransitGatewayConnectResultTransitGatewayConnect withTags(CreateTransitGatewayConnectResultTransitGatewayConnectTags[] tags) {
         this.tags = tags;
         return this;
@@ -40,6 +44,7 @@ public class CreateTransitGatewayConnectResultTransitGatewayConnect {
     
     
     public String transitGatewayAttachmentId;
+
     public CreateTransitGatewayConnectResultTransitGatewayConnect withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -47,6 +52,7 @@ public class CreateTransitGatewayConnectResultTransitGatewayConnect {
     
     
     public String transitGatewayId;
+
     public CreateTransitGatewayConnectResultTransitGatewayConnect withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -54,9 +60,11 @@ public class CreateTransitGatewayConnectResultTransitGatewayConnect {
     
     
     public String transportTransitGatewayAttachmentId;
+
     public CreateTransitGatewayConnectResultTransitGatewayConnect withTransportTransitGatewayAttachmentId(String transportTransitGatewayAttachmentId) {
         this.transportTransitGatewayAttachmentId = transportTransitGatewayAttachmentId;
         return this;
     }
     
+    public CreateTransitGatewayConnectResultTransitGatewayConnect(){}
 }

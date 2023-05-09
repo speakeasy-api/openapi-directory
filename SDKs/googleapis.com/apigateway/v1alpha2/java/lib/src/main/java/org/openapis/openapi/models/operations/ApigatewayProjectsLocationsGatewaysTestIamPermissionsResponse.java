@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse {
@@ -12,6 +13,7 @@ public class ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ApigatewayTestIamPermissionsResponse apigatewayTestIamPermissionsResponse;
+
     public ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse withApigatewayTestIamPermissionsResponse(org.openapis.openapi.models.shared.ApigatewayTestIamPermissionsResponse apigatewayTestIamPermissionsResponse) {
         this.apigatewayTestIamPermissionsResponse = apigatewayTestIamPermissionsResponse;
         return this;
@@ -19,6 +21,7 @@ public class ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse {
     
     
     public String contentType;
+
     public ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse {
     
     
     public Integer statusCode;
+
     public ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

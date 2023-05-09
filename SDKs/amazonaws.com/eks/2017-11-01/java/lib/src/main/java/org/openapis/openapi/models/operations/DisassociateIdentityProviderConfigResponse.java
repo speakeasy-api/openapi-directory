@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateIdentityProviderConfigResponse {
@@ -12,6 +13,7 @@ public class DisassociateIdentityProviderConfigResponse {
      */
     
     public Object clientException;
+
     public DisassociateIdentityProviderConfigResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateIdentityProviderConfigResponse {
     
     
     public String contentType;
+
     public DisassociateIdentityProviderConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateIdentityProviderConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateIdentityProviderConfigResponse disassociateIdentityProviderConfigResponse;
+
     public DisassociateIdentityProviderConfigResponse withDisassociateIdentityProviderConfigResponse(org.openapis.openapi.models.shared.DisassociateIdentityProviderConfigResponse disassociateIdentityProviderConfigResponse) {
         this.disassociateIdentityProviderConfigResponse = disassociateIdentityProviderConfigResponse;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateIdentityProviderConfigResponse {
      */
     
     public Object invalidParameterException;
+
     public DisassociateIdentityProviderConfigResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateIdentityProviderConfigResponse {
      */
     
     public Object invalidRequestException;
+
     public DisassociateIdentityProviderConfigResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateIdentityProviderConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateIdentityProviderConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DisassociateIdentityProviderConfigResponse {
     
     
     public Integer statusCode;
+
     public DisassociateIdentityProviderConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateIdentityProviderConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateIdentityProviderConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateIdentityProviderConfigResponse {
      */
     
     public Object resourceInUseException;
+
     public DisassociateIdentityProviderConfigResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -93,9 +103,14 @@ public class DisassociateIdentityProviderConfigResponse {
      */
     
     public Object serverException;
+
     public DisassociateIdentityProviderConfigResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public DisassociateIdentityProviderConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

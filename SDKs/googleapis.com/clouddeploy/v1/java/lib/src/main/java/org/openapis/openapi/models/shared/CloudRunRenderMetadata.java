@@ -18,9 +18,11 @@ public class CloudRunRenderMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public CloudRunRenderMetadata withService(String service) {
         this.service = service;
         return this;
     }
     
+    public CloudRunRenderMetadata(){}
 }

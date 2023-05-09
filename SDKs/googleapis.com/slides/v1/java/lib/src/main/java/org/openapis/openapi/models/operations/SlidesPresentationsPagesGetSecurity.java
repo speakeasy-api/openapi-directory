@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SlidesPresentationsPagesGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsPagesGetSecurityOption1 option1;
+
     public SlidesPresentationsPagesGetSecurity withOption1(SlidesPresentationsPagesGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class SlidesPresentationsPagesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsPagesGetSecurityOption2 option2;
+
     public SlidesPresentationsPagesGetSecurity withOption2(SlidesPresentationsPagesGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class SlidesPresentationsPagesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsPagesGetSecurityOption3 option3;
+
     public SlidesPresentationsPagesGetSecurity withOption3(SlidesPresentationsPagesGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class SlidesPresentationsPagesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsPagesGetSecurityOption4 option4;
+
     public SlidesPresentationsPagesGetSecurity withOption4(SlidesPresentationsPagesGetSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,9 +41,11 @@ public class SlidesPresentationsPagesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsPagesGetSecurityOption5 option5;
+
     public SlidesPresentationsPagesGetSecurity withOption5(SlidesPresentationsPagesGetSecurityOption5 option5) {
         this.option5 = option5;
         return this;
     }
     
+    public SlidesPresentationsPagesGetSecurity(){}
 }

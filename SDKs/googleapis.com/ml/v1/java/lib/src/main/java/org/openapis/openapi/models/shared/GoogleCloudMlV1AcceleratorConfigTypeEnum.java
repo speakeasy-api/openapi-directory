@@ -19,9 +19,9 @@ public enum GoogleCloudMlV1AcceleratorConfigTypeEnum {
     NVIDIA_TESLA_A100("NVIDIA_TESLA_A100"),
     TPU_V2("TPU_V2"),
     TPU_V3("TPU_V3"),
-    TPU_V4("TPU_V4"),
     TPU_V2_POD("TPU_V2_POD"),
-    TPU_V3_POD("TPU_V3_POD");
+    TPU_V3_POD("TPU_V3_POD"),
+    TPU_V4_POD("TPU_V4_POD");
 
     @JsonValue
     public final String value;

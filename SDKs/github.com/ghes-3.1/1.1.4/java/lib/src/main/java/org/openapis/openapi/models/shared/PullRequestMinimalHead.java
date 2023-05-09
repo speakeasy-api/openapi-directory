@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PullRequestMinimalHead {
     @JsonProperty("ref")
     public String ref;
+
     public PullRequestMinimalHead withRef(String ref) {
         this.ref = ref;
         return this;
@@ -16,6 +17,7 @@ public class PullRequestMinimalHead {
     
     @JsonProperty("repo")
     public PullRequestMinimalHeadRepo repo;
+
     public PullRequestMinimalHead withRepo(PullRequestMinimalHeadRepo repo) {
         this.repo = repo;
         return this;
@@ -23,9 +25,15 @@ public class PullRequestMinimalHead {
     
     @JsonProperty("sha")
     public String sha;
+
     public PullRequestMinimalHead withSha(String sha) {
         this.sha = sha;
         return this;
     }
     
+    public PullRequestMinimalHead(@JsonProperty("ref") String ref, @JsonProperty("repo") PullRequestMinimalHeadRepo repo, @JsonProperty("sha") String sha) {
+        this.ref = ref;
+        this.repo = repo;
+        this.sha = sha;
+  }
 }

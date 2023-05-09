@@ -15,9 +15,11 @@ public class GetDocumentationRelations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation")
     public GetDocumentationRelations200ApplicationJSONDocumentation[] documentation;
+
     public GetDocumentationRelations200ApplicationJSON withDocumentation(GetDocumentationRelations200ApplicationJSONDocumentation[] documentation) {
         this.documentation = documentation;
         return this;
     }
     
+    public GetDocumentationRelations200ApplicationJSON(){}
 }

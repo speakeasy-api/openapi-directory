@@ -12,6 +12,7 @@ public class GetRegisteredPushDevicesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public GetRegisteredPushDevicesRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -22,6 +23,7 @@ public class GetRegisteredPushDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientId")
     public String clientId;
+
     public GetRegisteredPushDevicesRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -32,6 +34,7 @@ public class GetRegisteredPushDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
     public String deviceId;
+
     public GetRegisteredPushDevicesRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -42,6 +45,7 @@ public class GetRegisteredPushDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public GetRegisteredPushDevicesRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
@@ -52,9 +56,11 @@ public class GetRegisteredPushDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetRegisteredPushDevicesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetRegisteredPushDevicesRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportCatalogToGlueResponse {
     
     public String contentType;
+
     public ImportCatalogToGlueResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ImportCatalogToGlueResponse {
      */
     
     public java.util.Map<String, Object> importCatalogToGlueResponse;
+
     public ImportCatalogToGlueResponse withImportCatalogToGlueResponse(java.util.Map<String, Object> importCatalogToGlueResponse) {
         this.importCatalogToGlueResponse = importCatalogToGlueResponse;
         return this;
@@ -29,6 +32,7 @@ public class ImportCatalogToGlueResponse {
      */
     
     public Object internalServiceException;
+
     public ImportCatalogToGlueResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ImportCatalogToGlueResponse {
      */
     
     public Object operationTimeoutException;
+
     public ImportCatalogToGlueResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -46,6 +51,7 @@ public class ImportCatalogToGlueResponse {
     
     
     public Integer statusCode;
+
     public ImportCatalogToGlueResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ImportCatalogToGlueResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportCatalogToGlueResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ImportCatalogToGlueResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

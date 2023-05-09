@@ -15,6 +15,7 @@ public class InvoiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalChargeSummaries")
     public InvoiceSummaryAdditionalChargeSummary[] additionalChargeSummaries;
+
     public InvoiceSummary withAdditionalChargeSummaries(InvoiceSummaryAdditionalChargeSummary[] additionalChargeSummaries) {
         this.additionalChargeSummaries = additionalChargeSummaries;
         return this;
@@ -23,9 +24,11 @@ public class InvoiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTotal")
     public Amount productTotal;
+
     public InvoiceSummary withProductTotal(Amount productTotal) {
         this.productTotal = productTotal;
         return this;
     }
     
+    public InvoiceSummary(){}
 }

@@ -15,6 +15,7 @@ public class BuildsGetStatusByAppId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public BuildsGetStatusByAppId200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -23,6 +24,7 @@ public class BuildsGetStatusByAppId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     public String os;
+
     public BuildsGetStatusByAppId200ApplicationJSON withOs(String os) {
         this.os = os;
         return this;
@@ -31,6 +33,7 @@ public class BuildsGetStatusByAppId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public BuildsGetStatusByAppId200ApplicationJSON withService(String service) {
         this.service = service;
         return this;
@@ -39,6 +42,7 @@ public class BuildsGetStatusByAppId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public BuildsGetStatusByAppId200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
@@ -47,6 +51,7 @@ public class BuildsGetStatusByAppId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public BuildsGetStatusByAppId200ApplicationJSON withUrl(String url) {
         this.url = url;
         return this;
@@ -55,9 +60,11 @@ public class BuildsGetStatusByAppId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid_until")
     public Long validUntil;
+
     public BuildsGetStatusByAppId200ApplicationJSON withValidUntil(Long validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public BuildsGetStatusByAppId200ApplicationJSON(){}
 }

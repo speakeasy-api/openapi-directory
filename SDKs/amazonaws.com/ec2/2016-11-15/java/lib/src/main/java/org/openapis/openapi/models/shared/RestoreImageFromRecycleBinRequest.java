@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RestoreImageFromRecycleBinRequest {
     
     public Boolean dryRun;
+
     public RestoreImageFromRecycleBinRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class RestoreImageFromRecycleBinRequest {
     
     
     public String imageId;
+
     public RestoreImageFromRecycleBinRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public RestoreImageFromRecycleBinRequest(@JsonProperty("ImageId") String imageId) {
+        this.imageId = imageId;
+  }
 }

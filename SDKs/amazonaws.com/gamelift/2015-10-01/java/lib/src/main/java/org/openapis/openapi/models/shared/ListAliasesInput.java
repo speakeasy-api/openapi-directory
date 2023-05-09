@@ -12,6 +12,7 @@ public class ListAliasesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListAliasesInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,6 +21,7 @@ public class ListAliasesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ListAliasesInput withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class ListAliasesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAliasesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListAliasesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingStrategyType")
     public RoutingStrategyTypeEnum routingStrategyType;
+
     public ListAliasesInput withRoutingStrategyType(RoutingStrategyTypeEnum routingStrategyType) {
         this.routingStrategyType = routingStrategyType;
         return this;
     }
     
+    public ListAliasesInput(){}
 }

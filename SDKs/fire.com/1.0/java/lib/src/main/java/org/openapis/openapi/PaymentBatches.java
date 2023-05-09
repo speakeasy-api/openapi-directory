@@ -107,11 +107,9 @@ public class PaymentBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddBankTransferBatchPaymentResponse res = new org.openapis.openapi.models.operations.AddBankTransferBatchPaymentResponse() {{
+        org.openapis.openapi.models.operations.AddBankTransferBatchPaymentResponse res = new org.openapis.openapi.models.operations.AddBankTransferBatchPaymentResponse(contentType, httpRes.statusCode()) {{
             newBatchItemResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,17 +150,61 @@ public class PaymentBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddInternalTransferBatchPaymentResponse res = new org.openapis.openapi.models.operations.AddInternalTransferBatchPaymentResponse() {{
+        org.openapis.openapi.models.operations.AddInternalTransferBatchPaymentResponse res = new org.openapis.openapi.models.operations.AddInternalTransferBatchPaymentResponse(contentType, httpRes.statusCode()) {{
             newBatchItemResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.operations.AddInternalTransferBatchPaymentNewBatchItemResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AddInternalTransferBatchPaymentNewBatchItemResponse.class);
+                res.newBatchItemResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Add an international transfer payment to the batch.
+     * International transfers must be added to a batch using the Payee ID (**Mode 1**). Payees must be set up using the web application.
+     * 
+     * **Mode 1:** Use the payee IDs of existing approved payees set up against your account. These batches can be approved in the normal manner.
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AddInternationalTransferBatchPaymentResponse addInternationalTransferBatchPayment(org.openapis.openapi.models.operations.AddInternationalTransferBatchPaymentRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddInternationalTransferBatchPaymentRequest.class, baseUrl, "/v2/batches/{batchUuid}/internationaltransfers", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AddInternationalTransferBatchPaymentResponse res = new org.openapis.openapi.models.operations.AddInternationalTransferBatchPaymentResponse(contentType, httpRes.statusCode()) {{
+            newBatchItemResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AddInternationalTransferBatchPaymentNewBatchItemResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AddInternationalTransferBatchPaymentNewBatchItemResponse.class);
                 res.newBatchItemResponse = out;
             }
         }
@@ -192,10 +234,8 @@ public class PaymentBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelBatchPaymentResponse res = new org.openapis.openapi.models.operations.CancelBatchPaymentResponse() {{
+        org.openapis.openapi.models.operations.CancelBatchPaymentResponse res = new org.openapis.openapi.models.operations.CancelBatchPaymentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -273,11 +313,9 @@ public class PaymentBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateBatchPaymentResponse res = new org.openapis.openapi.models.operations.CreateBatchPaymentResponse() {{
+        org.openapis.openapi.models.operations.CreateBatchPaymentResponse res = new org.openapis.openapi.models.operations.CreateBatchPaymentResponse(contentType, httpRes.statusCode()) {{
             newBatchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -313,10 +351,8 @@ public class PaymentBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteBankTransferBatchPaymentResponse res = new org.openapis.openapi.models.operations.DeleteBankTransferBatchPaymentResponse() {{
+        org.openapis.openapi.models.operations.DeleteBankTransferBatchPaymentResponse res = new org.openapis.openapi.models.operations.DeleteBankTransferBatchPaymentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -347,10 +383,40 @@ public class PaymentBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteInternalTransferBatchPaymentResponse res = new org.openapis.openapi.models.operations.DeleteInternalTransferBatchPaymentResponse() {{
+        org.openapis.openapi.models.operations.DeleteInternalTransferBatchPaymentResponse res = new org.openapis.openapi.models.operations.DeleteInternalTransferBatchPaymentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+        }
+
+        return res;
+    }
+
+    /**
+     * Remove a Payment from the Batch (International Transfers)
+     * Removes a Payment from the Batch (International Transfers). You can only remove payments before the batch is submitted for approval (while it is in the OPEN state).
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteInternationalTransferBatchPaymentResponse deleteInternationalTransferBatchPayment(org.openapis.openapi.models.operations.DeleteInternationalTransferBatchPaymentRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInternationalTransferBatchPaymentRequest.class, baseUrl, "/v2/batches/{batchUuid}/internationaltransfers/{itemUuid}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.DeleteInternationalTransferBatchPaymentResponse res = new org.openapis.openapi.models.operations.DeleteInternationalTransferBatchPaymentResponse(contentType, httpRes.statusCode()) {{
+        }};
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +454,9 @@ public class PaymentBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBatchesResponse res = new org.openapis.openapi.models.operations.GetBatchesResponse() {{
+        org.openapis.openapi.models.operations.GetBatchesResponse res = new org.openapis.openapi.models.operations.GetBatchesResponse(contentType, httpRes.statusCode()) {{
             batchItems = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -428,11 +492,9 @@ public class PaymentBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDetailsSingleBatchResponse res = new org.openapis.openapi.models.operations.GetDetailsSingleBatchResponse() {{
+        org.openapis.openapi.models.operations.GetDetailsSingleBatchResponse res = new org.openapis.openapi.models.operations.GetDetailsSingleBatchResponse(contentType, httpRes.statusCode()) {{
             batch = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -447,7 +509,7 @@ public class PaymentBatches {
     }
 
     /**
-     * List items in a Batch
+     * List items in a Batch (Bank Transfers)
      * Returns a paginated list of items in the specified batch.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -474,11 +536,9 @@ public class PaymentBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetItemsBatchBankTransferResponse res = new org.openapis.openapi.models.operations.GetItemsBatchBankTransferResponse() {{
+        org.openapis.openapi.models.operations.GetItemsBatchBankTransferResponse res = new org.openapis.openapi.models.operations.GetItemsBatchBankTransferResponse(contentType, httpRes.statusCode()) {{
             batchItems = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -493,7 +553,7 @@ public class PaymentBatches {
     }
 
     /**
-     * List items in a Batch
+     * List items in a Batch (Internal Transfers)
      * Returns a paginated list of items in the specified batch.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -520,17 +580,59 @@ public class PaymentBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetItemsBatchInternalTrasnferResponse res = new org.openapis.openapi.models.operations.GetItemsBatchInternalTrasnferResponse() {{
+        org.openapis.openapi.models.operations.GetItemsBatchInternalTrasnferResponse res = new org.openapis.openapi.models.operations.GetItemsBatchInternalTrasnferResponse(contentType, httpRes.statusCode()) {{
             batchItems = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.operations.GetItemsBatchInternalTrasnferBatchItems out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.GetItemsBatchInternalTrasnferBatchItems.class);
+                res.batchItems = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List items in a Batch (International Transfers)
+     * Returns a paginated list of items in the specified batch.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetItemsBatchInternationalTransferResponse getItemsBatchInternationalTransfer(org.openapis.openapi.models.operations.GetItemsBatchInternationalTransferRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemsBatchInternationalTransferRequest.class, baseUrl, "/v2/batches/{batchUuid}/internationaltransfers", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemsBatchInternationalTransferRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetItemsBatchInternationalTransferResponse res = new org.openapis.openapi.models.operations.GetItemsBatchInternationalTransferResponse(contentType, httpRes.statusCode()) {{
+            batchItems = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.GetItemsBatchInternationalTransferBatchItems out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.GetItemsBatchInternationalTransferBatchItems.class);
                 res.batchItems = out;
             }
         }
@@ -560,11 +662,9 @@ public class PaymentBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetListofApproversForBatchResponse res = new org.openapis.openapi.models.operations.GetListofApproversForBatchResponse() {{
+        org.openapis.openapi.models.operations.GetListofApproversForBatchResponse res = new org.openapis.openapi.models.operations.GetListofApproversForBatchResponse(contentType, httpRes.statusCode()) {{
             batchApprovers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,7 +680,7 @@ public class PaymentBatches {
 
     /**
      * Submit a batch for approval
-     * Submits the Batch (for approval in the case of a **BANK_TRANSFER**). If this is an **INTERNAL_TRANSFER** batch, the transfers are immediately queued for processing. If this is a **BANK_TRANSFER** batch, this will trigger requests for approval to the firework mobile apps of authorised users. Once those users approve the batch, it is queued for processing.
+     * Submits the Batch (for approval in the case of a **BANK_TRANSFER** or **INTERNATIONAL_TRANSFER**). If this is an **INTERNAL_TRANSFER** batch, the transfers are immediately queued for processing. If this is a **BANK_TRANSFER** or **INTERNATIONAL_TRANSFER** batch, this will trigger requests for approval to the firework mobile apps of authorised users. Once those users approve the batch, it is queued for processing.
      * 
      * You can only submit a batch while it is in the OPEN state.
      * 
@@ -603,10 +703,8 @@ public class PaymentBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubmitBatchResponse res = new org.openapis.openapi.models.operations.SubmitBatchResponse() {{
+        org.openapis.openapi.models.operations.SubmitBatchResponse res = new org.openapis.openapi.models.operations.SubmitBatchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

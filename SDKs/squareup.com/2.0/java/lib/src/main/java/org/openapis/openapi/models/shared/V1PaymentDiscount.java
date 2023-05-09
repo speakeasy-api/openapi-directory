@@ -15,6 +15,7 @@ public class V1PaymentDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_money")
     public V1Money appliedMoney;
+
     public V1PaymentDiscount withAppliedMoney(V1Money appliedMoney) {
         this.appliedMoney = appliedMoney;
         return this;
@@ -26,6 +27,7 @@ public class V1PaymentDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_id")
     public String discountId;
+
     public V1PaymentDiscount withDiscountId(String discountId) {
         this.discountId = discountId;
         return this;
@@ -37,9 +39,11 @@ public class V1PaymentDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public V1PaymentDiscount withName(String name) {
         this.name = name;
         return this;
     }
     
+    public V1PaymentDiscount(){}
 }

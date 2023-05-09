@@ -56,4 +56,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateProfileRequestProfileTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateProfileRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

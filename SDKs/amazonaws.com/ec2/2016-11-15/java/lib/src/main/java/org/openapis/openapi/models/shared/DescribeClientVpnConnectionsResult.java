@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnConnectionsResult {
     
     public DescribeClientVpnConnectionsResultConnections[] connections;
+
     public DescribeClientVpnConnectionsResult withConnections(DescribeClientVpnConnectionsResultConnections[] connections) {
         this.connections = connections;
         return this;
@@ -19,9 +20,11 @@ public class DescribeClientVpnConnectionsResult {
     
     
     public String nextToken;
+
     public DescribeClientVpnConnectionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeClientVpnConnectionsResult(){}
 }

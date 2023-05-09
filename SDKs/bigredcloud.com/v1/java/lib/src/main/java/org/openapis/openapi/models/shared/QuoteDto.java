@@ -20,6 +20,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acCode")
     public String acCode;
+
     public QuoteDto withAcCode(String acCode) {
         this.acCode = acCode;
         return this;
@@ -30,6 +31,7 @@ public class QuoteDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("closedDate")
     public OffsetDateTime closedDate;
+
     public QuoteDto withClosedDate(OffsetDateTime closedDate) {
         this.closedDate = closedDate;
         return this;
@@ -38,6 +40,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public QuoteDto withComments(String comments) {
         this.comments = comments;
         return this;
@@ -46,6 +49,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyId")
     public Long companyId;
+
     public QuoteDto withCompanyId(Long companyId) {
         this.companyId = companyId;
         return this;
@@ -54,6 +58,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public AcudfValueDto[] customFields;
+
     public QuoteDto withCustomFields(AcudfValueDto[] customFields) {
         this.customFields = customFields;
         return this;
@@ -62,6 +67,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerOwnerId")
     public Long customerOwnerId;
+
     public QuoteDto withCustomerOwnerId(Long customerOwnerId) {
         this.customerOwnerId = customerOwnerId;
         return this;
@@ -70,6 +76,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerOwnerName")
     public String customerOwnerName;
+
     public QuoteDto withCustomerOwnerName(String customerOwnerName) {
         this.customerOwnerName = customerOwnerName;
         return this;
@@ -78,6 +85,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ddNumber")
     public String ddNumber;
+
     public QuoteDto withDdNumber(String ddNumber) {
         this.ddNumber = ddNumber;
         return this;
@@ -86,6 +94,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryList")
     public String deliveryList;
+
     public QuoteDto withDeliveryList(String deliveryList) {
         this.deliveryList = deliveryList;
         return this;
@@ -94,6 +103,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryTo")
     public String[] deliveryTo;
+
     public QuoteDto withDeliveryTo(String[] deliveryTo) {
         this.deliveryTo = deliveryTo;
         return this;
@@ -104,6 +114,7 @@ public class QuoteDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("entryDate")
     public OffsetDateTime entryDate;
+
     public QuoteDto withEntryDate(OffsetDateTime entryDate) {
         this.entryDate = entryDate;
         return this;
@@ -112,6 +123,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public QuoteDto withId(Long id) {
         this.id = id;
         return this;
@@ -120,6 +132,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layoutType")
     public Integer layoutType;
+
     public QuoteDto withLayoutType(Integer layoutType) {
         this.layoutType = layoutType;
         return this;
@@ -128,6 +141,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public QuoteDto withNote(String note) {
         this.note = note;
         return this;
@@ -136,6 +150,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poNumber")
     public String poNumber;
+
     public QuoteDto withPoNumber(String poNumber) {
         this.poNumber = poNumber;
         return this;
@@ -146,6 +161,7 @@ public class QuoteDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("procDate")
     public OffsetDateTime procDate;
+
     public QuoteDto withProcDate(OffsetDateTime procDate) {
         this.procDate = procDate;
         return this;
@@ -154,6 +170,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTrans")
     public QuoteProductTransDto[] productTrans;
+
     public QuoteDto withProductTrans(QuoteProductTransDto[] productTrans) {
         this.productTrans = productTrans;
         return this;
@@ -162,6 +179,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public QuoteDto withReference(String reference) {
         this.reference = reference;
         return this;
@@ -170,6 +188,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saleInvoiceId")
     public Long saleInvoiceId;
+
     public QuoteDto withSaleInvoiceId(Long saleInvoiceId) {
         this.saleInvoiceId = saleInvoiceId;
         return this;
@@ -178,6 +197,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saleRepCode")
     public String saleRepCode;
+
     public QuoteDto withSaleRepCode(String saleRepCode) {
         this.saleRepCode = saleRepCode;
         return this;
@@ -186,6 +206,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saleRepId")
     public Long saleRepId;
+
     public QuoteDto withSaleRepId(Long saleRepId) {
         this.saleRepId = saleRepId;
         return this;
@@ -194,6 +215,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeStamp")
     public String timeStamp;
+
     public QuoteDto withTimeStamp(String timeStamp) {
         this.timeStamp = timeStamp;
         return this;
@@ -202,6 +224,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public QuoteDto withTotal(Double total) {
         this.total = total;
         return this;
@@ -210,6 +233,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalNet")
     public Double totalNet;
+
     public QuoteDto withTotalNet(Double totalNet) {
         this.totalNet = totalNet;
         return this;
@@ -218,6 +242,7 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalVat")
     public Double totalVat;
+
     public QuoteDto withTotalVat(Double totalVat) {
         this.totalVat = totalVat;
         return this;
@@ -226,9 +251,11 @@ public class QuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatTypeId")
     public Long vatTypeId;
+
     public QuoteDto withVatTypeId(Long vatTypeId) {
         this.vatTypeId = vatTypeId;
         return this;
     }
     
+    public QuoteDto(){}
 }

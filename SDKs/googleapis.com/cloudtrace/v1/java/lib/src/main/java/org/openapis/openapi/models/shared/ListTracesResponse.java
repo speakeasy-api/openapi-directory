@@ -18,6 +18,7 @@ public class ListTracesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTracesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListTracesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traces")
     public Trace[] traces;
+
     public ListTracesResponse withTraces(Trace[] traces) {
         this.traces = traces;
         return this;
     }
     
+    public ListTracesResponse(){}
 }

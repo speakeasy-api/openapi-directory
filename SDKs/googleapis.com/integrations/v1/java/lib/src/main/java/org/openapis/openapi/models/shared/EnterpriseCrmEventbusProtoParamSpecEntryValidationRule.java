@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryValidationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleRange")
     public EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleDoubleRange doubleRange;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryValidationRule withDoubleRange(EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleDoubleRange doubleRange) {
         this.doubleRange = doubleRange;
         return this;
@@ -26,6 +27,7 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryValidationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intRange")
     public EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleIntRange intRange;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryValidationRule withIntRange(EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleIntRange intRange) {
         this.intRange = intRange;
         return this;
@@ -37,9 +39,11 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryValidationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringRegex")
     public EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleStringRegex stringRegex;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryValidationRule withStringRegex(EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleStringRegex stringRegex) {
         this.stringRegex = stringRegex;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoParamSpecEntryValidationRule(){}
 }

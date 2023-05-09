@@ -18,6 +18,7 @@ public class RegularFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public FileReference content;
+
     public RegularFile withContent(FileReference content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class RegularFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devicePath")
     public String devicePath;
+
     public RegularFile withDevicePath(String devicePath) {
         this.devicePath = devicePath;
         return this;
     }
     
+    public RegularFile(){}
 }

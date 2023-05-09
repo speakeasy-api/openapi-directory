@@ -18,9 +18,11 @@ public class CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemPurchaseConditions")
     public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditions[] itemPurchaseConditions;
+
     public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditions withItemPurchaseConditions(CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditions[] itemPurchaseConditions) {
         this.itemPurchaseConditions = itemPurchaseConditions;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditions(){}
 }

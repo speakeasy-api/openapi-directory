@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostBundleNotificationsRequestBody {
@@ -12,6 +13,7 @@ public class PostBundleNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=bundle_id")
     public Integer bundleId;
+
     public PostBundleNotificationsRequestBody withBundleId(Integer bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -22,6 +24,7 @@ public class PostBundleNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=notify_on_registration")
     public Boolean notifyOnRegistration;
+
     public PostBundleNotificationsRequestBody withNotifyOnRegistration(Boolean notifyOnRegistration) {
         this.notifyOnRegistration = notifyOnRegistration;
         return this;
@@ -32,6 +35,7 @@ public class PostBundleNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=notify_on_upload")
     public Boolean notifyOnUpload;
+
     public PostBundleNotificationsRequestBody withNotifyOnUpload(Boolean notifyOnUpload) {
         this.notifyOnUpload = notifyOnUpload;
         return this;
@@ -42,9 +46,13 @@ public class PostBundleNotificationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=user_id")
     public Integer userId;
+
     public PostBundleNotificationsRequestBody withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public PostBundleNotificationsRequestBody(@JsonProperty("bundle_id") Integer bundleId) {
+        this.bundleId = bundleId;
+  }
 }

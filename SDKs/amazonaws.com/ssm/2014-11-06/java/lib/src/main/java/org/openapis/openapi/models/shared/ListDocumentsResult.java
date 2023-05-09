@@ -15,6 +15,7 @@ public class ListDocumentsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentIdentifiers")
     public DocumentIdentifier[] documentIdentifiers;
+
     public ListDocumentsResult withDocumentIdentifiers(DocumentIdentifier[] documentIdentifiers) {
         this.documentIdentifiers = documentIdentifiers;
         return this;
@@ -23,9 +24,11 @@ public class ListDocumentsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDocumentsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDocumentsResult(){}
 }

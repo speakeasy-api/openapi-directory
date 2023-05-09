@@ -101,7 +101,7 @@ public class Artifacts {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "contentCreateRequest", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "artifactContent", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -127,13 +127,11 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateArtifactJsonResponse res = new org.openapis.openapi.models.operations.CreateArtifactJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateArtifactJsonResponse res = new org.openapis.openapi.models.operations.CreateArtifactJsonResponse(contentType, httpRes.statusCode()) {{
             artifactMetaData = null;
             error = null;
             ruleViolationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,13 +250,11 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateArtifactRawResponse res = new org.openapis.openapi.models.operations.CreateArtifactRawResponse() {{
+        org.openapis.openapi.models.operations.CreateArtifactRawResponse res = new org.openapis.openapi.models.operations.CreateArtifactRawResponse(contentType, httpRes.statusCode()) {{
             artifactMetaData = null;
             error = null;
             ruleViolationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -311,11 +307,9 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteArtifactResponse res = new org.openapis.openapi.models.operations.DeleteArtifactResponse() {{
+        org.openapis.openapi.models.operations.DeleteArtifactResponse res = new org.openapis.openapi.models.operations.DeleteArtifactResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -352,11 +346,9 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteArtifactsInGroupResponse res = new org.openapis.openapi.models.operations.DeleteArtifactsInGroupResponse() {{
+        org.openapis.openapi.models.operations.DeleteArtifactsInGroupResponse res = new org.openapis.openapi.models.operations.DeleteArtifactsInGroupResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -406,12 +398,10 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContentByGlobalIdResponse res = new org.openapis.openapi.models.operations.GetContentByGlobalIdResponse() {{
+        org.openapis.openapi.models.operations.GetContentByGlobalIdResponse res = new org.openapis.openapi.models.operations.GetContentByGlobalIdResponse(contentType, httpRes.statusCode()) {{
             fileContent = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -460,12 +450,10 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContentByHashResponse res = new org.openapis.openapi.models.operations.GetContentByHashResponse() {{
+        org.openapis.openapi.models.operations.GetContentByHashResponse res = new org.openapis.openapi.models.operations.GetContentByHashResponse(contentType, httpRes.statusCode()) {{
             fileContent = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -514,12 +502,10 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContentByIdResponse res = new org.openapis.openapi.models.operations.GetContentByIdResponse() {{
+        org.openapis.openapi.models.operations.GetContentByIdResponse res = new org.openapis.openapi.models.operations.GetContentByIdResponse(contentType, httpRes.statusCode()) {{
             fileContent = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -544,10 +530,11 @@ public class Artifacts {
      * Returns the latest version of the artifact in its raw form.  The `Content-Type` of the
      * response depends on the artifact type.  In most cases, this is `application/json`, but 
      * for some types it may be different (for example, `PROTOBUF`).
+     * If the latest version of the artifact is marked as `DISABLED`, the next available non-disabled version will be used.
      * 
      * This operation may fail for one of the following reasons:
      * 
-     * * No artifact with this `artifactId` exists (HTTP error `404`)
+     * * No artifact with this `artifactId` exists or all versions are `DISABLED` (HTTP error `404`)
      * * A server error occurred (HTTP error `500`)
      * 
      * @param request the request object containing all of the parameters for the API call
@@ -574,12 +561,10 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLatestArtifactResponse res = new org.openapis.openapi.models.operations.GetLatestArtifactResponse() {{
+        org.openapis.openapi.models.operations.GetLatestArtifactResponse res = new org.openapis.openapi.models.operations.GetLatestArtifactResponse(contentType, httpRes.statusCode()) {{
             fileContent = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,12 +611,10 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListArtifactsInGroupResponse res = new org.openapis.openapi.models.operations.ListArtifactsInGroupResponse() {{
+        org.openapis.openapi.models.operations.ListArtifactsInGroupResponse res = new org.openapis.openapi.models.operations.ListArtifactsInGroupResponse(contentType, httpRes.statusCode()) {{
             artifactSearchResults = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -678,11 +661,9 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReferencesByContentHashResponse res = new org.openapis.openapi.models.operations.ReferencesByContentHashResponse() {{
+        org.openapis.openapi.models.operations.ReferencesByContentHashResponse res = new org.openapis.openapi.models.operations.ReferencesByContentHashResponse(contentType, httpRes.statusCode()) {{
             artifactReferences = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -721,11 +702,9 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReferencesByContentIdResponse res = new org.openapis.openapi.models.operations.ReferencesByContentIdResponse() {{
+        org.openapis.openapi.models.operations.ReferencesByContentIdResponse res = new org.openapis.openapi.models.operations.ReferencesByContentIdResponse(contentType, httpRes.statusCode()) {{
             artifactReferences = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -764,11 +743,9 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReferencesByGlobalIdResponse res = new org.openapis.openapi.models.operations.ReferencesByGlobalIdResponse() {{
+        org.openapis.openapi.models.operations.ReferencesByGlobalIdResponse res = new org.openapis.openapi.models.operations.ReferencesByGlobalIdResponse(contentType, httpRes.statusCode()) {{
             artifactReferences = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -810,12 +787,10 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchArtifactsResponse res = new org.openapis.openapi.models.operations.SearchArtifactsResponse() {{
+        org.openapis.openapi.models.operations.SearchArtifactsResponse res = new org.openapis.openapi.models.operations.SearchArtifactsResponse(contentType, httpRes.statusCode()) {{
             artifactSearchResults = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -870,12 +845,10 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchArtifactsByContentResponse res = new org.openapis.openapi.models.operations.SearchArtifactsByContentResponse() {{
+        org.openapis.openapi.models.operations.SearchArtifactsByContentResponse res = new org.openapis.openapi.models.operations.SearchArtifactsByContentResponse(contentType, httpRes.statusCode()) {{
             artifactSearchResults = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -898,9 +871,7 @@ public class Artifacts {
 
     /**
      * Update artifact state
-     * Updates the state of the artifact.  For example, you can use this to mark the latest
-     * version of an artifact as `DEPRECATED`.  The operation changes the state of the latest 
-     * version of the artifact.  If multiple versions exist, only the most recent is changed.
+     * Updates the state of the artifact.  For example, you can use this to mark the latest version of an artifact as `DEPRECATED`. The operation changes the state of the latest version of the artifact, even if this version is `DISABLED`. If multiple versions exist, only the most recent is changed.
      * 
      * This operation can fail for the following reasons:
      * 
@@ -930,11 +901,9 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateArtifactStateResponse res = new org.openapis.openapi.models.operations.UpdateArtifactStateResponse() {{
+        org.openapis.openapi.models.operations.UpdateArtifactStateResponse res = new org.openapis.openapi.models.operations.UpdateArtifactStateResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -979,7 +948,7 @@ public class Artifacts {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "contentCreateRequest", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "artifactContent", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -999,12 +968,10 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateArtifactJsonResponse res = new org.openapis.openapi.models.operations.UpdateArtifactJsonResponse() {{
+        org.openapis.openapi.models.operations.UpdateArtifactJsonResponse res = new org.openapis.openapi.models.operations.UpdateArtifactJsonResponse(contentType, httpRes.statusCode()) {{
             artifactMetaData = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1074,12 +1041,10 @@ public class Artifacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateArtifactRawResponse res = new org.openapis.openapi.models.operations.UpdateArtifactRawResponse() {{
+        org.openapis.openapi.models.operations.UpdateArtifactRawResponse res = new org.openapis.openapi.models.operations.UpdateArtifactRawResponse(contentType, httpRes.statusCode()) {{
             artifactMetaData = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

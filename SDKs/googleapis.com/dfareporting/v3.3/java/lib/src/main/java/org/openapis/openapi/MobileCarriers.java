@@ -58,11 +58,9 @@ public class MobileCarriers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingMobileCarriersGetResponse res = new org.openapis.openapi.models.operations.DfareportingMobileCarriersGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingMobileCarriersGetResponse res = new org.openapis.openapi.models.operations.DfareportingMobileCarriersGetResponse(contentType, httpRes.statusCode()) {{
             mobileCarrier = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class MobileCarriers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingMobileCarriersListResponse res = new org.openapis.openapi.models.operations.DfareportingMobileCarriersListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingMobileCarriersListResponse res = new org.openapis.openapi.models.operations.DfareportingMobileCarriersListResponse(contentType, httpRes.statusCode()) {{
             mobileCarriersListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

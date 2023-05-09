@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest {
@@ -12,6 +13,7 @@ public class OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
     public String date;
+
     public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withDate(String date) {
         this.date = date;
         return this;
@@ -32,6 +35,7 @@ public class OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destination")
     public String destination;
+
     public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -42,6 +46,7 @@ public class OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -52,6 +57,7 @@ public class OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -62,9 +68,16 @@ public class OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=origin")
     public String origin;
+
     public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withOrigin(String origin) {
         this.origin = origin;
         return this;
     }
     
+    public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest(@JsonProperty("Accept") String accept, @JsonProperty("date") String date, @JsonProperty("destination") String destination, @JsonProperty("origin") String origin) {
+        this.accept = accept;
+        this.date = date;
+        this.destination = destination;
+        this.origin = origin;
+  }
 }

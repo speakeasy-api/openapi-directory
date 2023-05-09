@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateDataKeyPairWithoutPlaintextResponse {
     
     public String contentType;
+
     public GenerateDataKeyPairWithoutPlaintextResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GenerateDataKeyPairWithoutPlaintextResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public GenerateDataKeyPairWithoutPlaintextResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class GenerateDataKeyPairWithoutPlaintextResponse {
      */
     
     public Object disabledException;
+
     public GenerateDataKeyPairWithoutPlaintextResponse withDisabledException(Object disabledException) {
         this.disabledException = disabledException;
         return this;
@@ -39,6 +43,7 @@ public class GenerateDataKeyPairWithoutPlaintextResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateDataKeyPairWithoutPlaintextResponse generateDataKeyPairWithoutPlaintextResponse;
+
     public GenerateDataKeyPairWithoutPlaintextResponse withGenerateDataKeyPairWithoutPlaintextResponse(org.openapis.openapi.models.shared.GenerateDataKeyPairWithoutPlaintextResponse generateDataKeyPairWithoutPlaintextResponse) {
         this.generateDataKeyPairWithoutPlaintextResponse = generateDataKeyPairWithoutPlaintextResponse;
         return this;
@@ -49,6 +54,7 @@ public class GenerateDataKeyPairWithoutPlaintextResponse {
      */
     
     public Object invalidGrantTokenException;
+
     public GenerateDataKeyPairWithoutPlaintextResponse withInvalidGrantTokenException(Object invalidGrantTokenException) {
         this.invalidGrantTokenException = invalidGrantTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GenerateDataKeyPairWithoutPlaintextResponse {
      */
     
     public Object invalidKeyUsageException;
+
     public GenerateDataKeyPairWithoutPlaintextResponse withInvalidKeyUsageException(Object invalidKeyUsageException) {
         this.invalidKeyUsageException = invalidKeyUsageException;
         return this;
@@ -69,6 +76,7 @@ public class GenerateDataKeyPairWithoutPlaintextResponse {
      */
     
     public Object kmsInternalException;
+
     public GenerateDataKeyPairWithoutPlaintextResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -79,6 +87,7 @@ public class GenerateDataKeyPairWithoutPlaintextResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public GenerateDataKeyPairWithoutPlaintextResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -89,6 +98,7 @@ public class GenerateDataKeyPairWithoutPlaintextResponse {
      */
     
     public Object keyUnavailableException;
+
     public GenerateDataKeyPairWithoutPlaintextResponse withKeyUnavailableException(Object keyUnavailableException) {
         this.keyUnavailableException = keyUnavailableException;
         return this;
@@ -99,6 +109,7 @@ public class GenerateDataKeyPairWithoutPlaintextResponse {
      */
     
     public Object notFoundException;
+
     public GenerateDataKeyPairWithoutPlaintextResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -106,6 +117,7 @@ public class GenerateDataKeyPairWithoutPlaintextResponse {
     
     
     public Integer statusCode;
+
     public GenerateDataKeyPairWithoutPlaintextResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class GenerateDataKeyPairWithoutPlaintextResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateDataKeyPairWithoutPlaintextResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,9 +136,14 @@ public class GenerateDataKeyPairWithoutPlaintextResponse {
      */
     
     public Object unsupportedOperationException;
+
     public GenerateDataKeyPairWithoutPlaintextResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public GenerateDataKeyPairWithoutPlaintextResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

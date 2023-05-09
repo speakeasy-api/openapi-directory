@@ -15,9 +15,11 @@ public class GetDevEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DevEndpoint")
     public DevEndpoint devEndpoint;
+
     public GetDevEndpointResponse withDevEndpoint(DevEndpoint devEndpoint) {
         this.devEndpoint = devEndpoint;
         return this;
     }
     
+    public GetDevEndpointResponse(){}
 }

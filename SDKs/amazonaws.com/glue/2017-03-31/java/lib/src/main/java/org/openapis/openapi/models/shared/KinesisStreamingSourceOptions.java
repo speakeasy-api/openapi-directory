@@ -15,6 +15,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddIdleTimeBetweenReads")
     public Boolean addIdleTimeBetweenReads;
+
     public KinesisStreamingSourceOptions withAddIdleTimeBetweenReads(Boolean addIdleTimeBetweenReads) {
         this.addIdleTimeBetweenReads = addIdleTimeBetweenReads;
         return this;
@@ -23,6 +24,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddRecordTimestamp")
     public String addRecordTimestamp;
+
     public KinesisStreamingSourceOptions withAddRecordTimestamp(String addRecordTimestamp) {
         this.addRecordTimestamp = addRecordTimestamp;
         return this;
@@ -31,6 +33,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvoidEmptyBatches")
     public Boolean avoidEmptyBatches;
+
     public KinesisStreamingSourceOptions withAvoidEmptyBatches(Boolean avoidEmptyBatches) {
         this.avoidEmptyBatches = avoidEmptyBatches;
         return this;
@@ -39,6 +42,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Classification")
     public String classification;
+
     public KinesisStreamingSourceOptions withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -47,6 +51,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Delimiter")
     public String delimiter;
+
     public KinesisStreamingSourceOptions withDelimiter(String delimiter) {
         this.delimiter = delimiter;
         return this;
@@ -55,6 +60,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DescribeShardInterval")
     public Long describeShardInterval;
+
     public KinesisStreamingSourceOptions withDescribeShardInterval(Long describeShardInterval) {
         this.describeShardInterval = describeShardInterval;
         return this;
@@ -63,6 +69,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmitConsumerLagMetrics")
     public String emitConsumerLagMetrics;
+
     public KinesisStreamingSourceOptions withEmitConsumerLagMetrics(String emitConsumerLagMetrics) {
         this.emitConsumerLagMetrics = emitConsumerLagMetrics;
         return this;
@@ -71,6 +78,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointUrl")
     public String endpointUrl;
+
     public KinesisStreamingSourceOptions withEndpointUrl(String endpointUrl) {
         this.endpointUrl = endpointUrl;
         return this;
@@ -79,6 +87,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdleTimeBetweenReadsInMs")
     public Long idleTimeBetweenReadsInMs;
+
     public KinesisStreamingSourceOptions withIdleTimeBetweenReadsInMs(Long idleTimeBetweenReadsInMs) {
         this.idleTimeBetweenReadsInMs = idleTimeBetweenReadsInMs;
         return this;
@@ -87,6 +96,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxFetchRecordsPerShard")
     public Long maxFetchRecordsPerShard;
+
     public KinesisStreamingSourceOptions withMaxFetchRecordsPerShard(Long maxFetchRecordsPerShard) {
         this.maxFetchRecordsPerShard = maxFetchRecordsPerShard;
         return this;
@@ -95,6 +105,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxFetchTimeInMs")
     public Long maxFetchTimeInMs;
+
     public KinesisStreamingSourceOptions withMaxFetchTimeInMs(Long maxFetchTimeInMs) {
         this.maxFetchTimeInMs = maxFetchTimeInMs;
         return this;
@@ -103,6 +114,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRecordPerRead")
     public Long maxRecordPerRead;
+
     public KinesisStreamingSourceOptions withMaxRecordPerRead(Long maxRecordPerRead) {
         this.maxRecordPerRead = maxRecordPerRead;
         return this;
@@ -111,6 +123,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRetryIntervalMs")
     public Long maxRetryIntervalMs;
+
     public KinesisStreamingSourceOptions withMaxRetryIntervalMs(Long maxRetryIntervalMs) {
         this.maxRetryIntervalMs = maxRetryIntervalMs;
         return this;
@@ -119,6 +132,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumRetries")
     public Long numRetries;
+
     public KinesisStreamingSourceOptions withNumRetries(Long numRetries) {
         this.numRetries = numRetries;
         return this;
@@ -127,6 +141,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryIntervalMs")
     public Long retryIntervalMs;
+
     public KinesisStreamingSourceOptions withRetryIntervalMs(Long retryIntervalMs) {
         this.retryIntervalMs = retryIntervalMs;
         return this;
@@ -135,6 +150,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public KinesisStreamingSourceOptions withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -143,6 +159,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleSessionName")
     public String roleSessionName;
+
     public KinesisStreamingSourceOptions withRoleSessionName(String roleSessionName) {
         this.roleSessionName = roleSessionName;
         return this;
@@ -151,6 +168,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartingPosition")
     public StartingPositionEnum startingPosition;
+
     public KinesisStreamingSourceOptions withStartingPosition(StartingPositionEnum startingPosition) {
         this.startingPosition = startingPosition;
         return this;
@@ -159,6 +177,7 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamArn")
     public String streamArn;
+
     public KinesisStreamingSourceOptions withStreamArn(String streamArn) {
         this.streamArn = streamArn;
         return this;
@@ -167,9 +186,11 @@ public class KinesisStreamingSourceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public KinesisStreamingSourceOptions withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public KinesisStreamingSourceOptions(){}
 }

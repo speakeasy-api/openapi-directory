@@ -15,6 +15,7 @@ public class CreateCompanyApiCredentialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedOrigins")
     public String[] allowedOrigins;
+
     public CreateCompanyApiCredentialRequest withAllowedOrigins(String[] allowedOrigins) {
         this.allowedOrigins = allowedOrigins;
         return this;
@@ -26,6 +27,7 @@ public class CreateCompanyApiCredentialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedMerchantAccounts")
     public String[] associatedMerchantAccounts;
+
     public CreateCompanyApiCredentialRequest withAssociatedMerchantAccounts(String[] associatedMerchantAccounts) {
         this.associatedMerchantAccounts = associatedMerchantAccounts;
         return this;
@@ -37,6 +39,7 @@ public class CreateCompanyApiCredentialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateCompanyApiCredentialRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -48,9 +51,11 @@ public class CreateCompanyApiCredentialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public String[] roles;
+
     public CreateCompanyApiCredentialRequest withRoles(String[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public CreateCompanyApiCredentialRequest(){}
 }

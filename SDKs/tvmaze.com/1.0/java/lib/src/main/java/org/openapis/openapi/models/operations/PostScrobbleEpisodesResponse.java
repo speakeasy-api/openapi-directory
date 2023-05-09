@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostScrobbleEpisodesResponse {
@@ -12,6 +13,7 @@ public class PostScrobbleEpisodesResponse {
      */
     
     public org.openapis.openapi.models.shared.BulkResponse[] bulkResponse;
+
     public PostScrobbleEpisodesResponse withBulkResponse(org.openapis.openapi.models.shared.BulkResponse[] bulkResponse) {
         this.bulkResponse = bulkResponse;
         return this;
@@ -19,6 +21,7 @@ public class PostScrobbleEpisodesResponse {
     
     
     public String contentType;
+
     public PostScrobbleEpisodesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostScrobbleEpisodesResponse {
     
     
     public Integer statusCode;
+
     public PostScrobbleEpisodesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostScrobbleEpisodesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostScrobbleEpisodesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostScrobbleEpisodesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

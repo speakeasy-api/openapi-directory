@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DocumentaiProjectsLocationsProcessorTypesListResponse {
     
     public String contentType;
+
     public DocumentaiProjectsLocationsProcessorTypesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DocumentaiProjectsLocationsProcessorTypesListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta3ListProcessorTypesResponse googleCloudDocumentaiV1beta3ListProcessorTypesResponse;
+
     public DocumentaiProjectsLocationsProcessorTypesListResponse withGoogleCloudDocumentaiV1beta3ListProcessorTypesResponse(org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta3ListProcessorTypesResponse googleCloudDocumentaiV1beta3ListProcessorTypesResponse) {
         this.googleCloudDocumentaiV1beta3ListProcessorTypesResponse = googleCloudDocumentaiV1beta3ListProcessorTypesResponse;
         return this;
@@ -26,6 +29,7 @@ public class DocumentaiProjectsLocationsProcessorTypesListResponse {
     
     
     public Integer statusCode;
+
     public DocumentaiProjectsLocationsProcessorTypesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DocumentaiProjectsLocationsProcessorTypesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DocumentaiProjectsLocationsProcessorTypesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DocumentaiProjectsLocationsProcessorTypesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -170,4 +170,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/SchoolAdminsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StudentContactsForStudentResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GradeLevelsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/contacts/README.md
+docs/districtadmins/README.md
+docs/districts/README.md
+docs/schooladmins/README.md
+docs/schools/README.md
+docs/sections/README.md
+docs/students/README.md
+docs/teachers/README.md
 USAGE.md

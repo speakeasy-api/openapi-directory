@@ -15,6 +15,7 @@ public class CutoffTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hour")
     public Long hour;
+
     public CutoffTime withHour(Long hour) {
         this.hour = hour;
         return this;
@@ -26,6 +27,7 @@ public class CutoffTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minute")
     public Long minute;
+
     public CutoffTime withMinute(Long minute) {
         this.minute = minute;
         return this;
@@ -37,9 +39,11 @@ public class CutoffTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public CutoffTime withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public CutoffTime(){}
 }

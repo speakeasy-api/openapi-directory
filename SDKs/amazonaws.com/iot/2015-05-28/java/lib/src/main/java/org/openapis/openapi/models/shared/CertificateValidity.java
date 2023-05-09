@@ -22,6 +22,7 @@ public class CertificateValidity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("notAfter")
     public OffsetDateTime notAfter;
+
     public CertificateValidity withNotAfter(OffsetDateTime notAfter) {
         this.notAfter = notAfter;
         return this;
@@ -32,9 +33,11 @@ public class CertificateValidity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("notBefore")
     public OffsetDateTime notBefore;
+
     public CertificateValidity withNotBefore(OffsetDateTime notBefore) {
         this.notBefore = notBefore;
         return this;
     }
     
+    public CertificateValidity(){}
 }

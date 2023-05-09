@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteResourceDataSyncResponse {
     
     public String contentType;
+
     public DeleteResourceDataSyncResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteResourceDataSyncResponse {
      */
     
     public java.util.Map<String, Object> deleteResourceDataSyncResult;
+
     public DeleteResourceDataSyncResponse withDeleteResourceDataSyncResult(java.util.Map<String, Object> deleteResourceDataSyncResult) {
         this.deleteResourceDataSyncResult = deleteResourceDataSyncResult;
         return this;
@@ -29,6 +32,7 @@ public class DeleteResourceDataSyncResponse {
      */
     
     public Object internalServerError;
+
     public DeleteResourceDataSyncResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DeleteResourceDataSyncResponse {
      */
     
     public Object resourceDataSyncInvalidConfigurationException;
+
     public DeleteResourceDataSyncResponse withResourceDataSyncInvalidConfigurationException(Object resourceDataSyncInvalidConfigurationException) {
         this.resourceDataSyncInvalidConfigurationException = resourceDataSyncInvalidConfigurationException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteResourceDataSyncResponse {
     
     
     public Integer statusCode;
+
     public DeleteResourceDataSyncResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteResourceDataSyncResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteResourceDataSyncResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteResourceDataSyncResponse {
      */
     
     public Object resourceDataSyncNotFoundException;
+
     public DeleteResourceDataSyncResponse withResourceDataSyncNotFoundException(Object resourceDataSyncNotFoundException) {
         this.resourceDataSyncNotFoundException = resourceDataSyncNotFoundException;
         return this;
     }
     
+    public DeleteResourceDataSyncResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -19,6 +19,7 @@ public class FhirObservation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("applies")
     public OffsetDateTime applies;
+
     public FhirObservation withApplies(OffsetDateTime applies) {
         this.applies = applies;
         return this;
@@ -27,6 +28,7 @@ public class FhirObservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bodySite")
     public String bodySite;
+
     public FhirObservation withBodySite(String bodySite) {
         this.bodySite = bodySite;
         return this;
@@ -35,6 +37,7 @@ public class FhirObservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public FhirObservation withComments(String comments) {
         this.comments = comments;
         return this;
@@ -43,6 +46,7 @@ public class FhirObservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparator")
     public String comparator;
+
     public FhirObservation withComparator(String comparator) {
         this.comparator = comparator;
         return this;
@@ -51,6 +55,7 @@ public class FhirObservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diagram")
     public String diagram;
+
     public FhirObservation withDiagram(String diagram) {
         this.diagram = diagram;
         return this;
@@ -59,6 +64,7 @@ public class FhirObservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public Group group;
+
     public FhirObservation withGroup(Group group) {
         this.group = group;
         return this;
@@ -67,6 +73,7 @@ public class FhirObservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public FhirObservation withId(Long id) {
         this.id = id;
         return this;
@@ -75,6 +82,7 @@ public class FhirObservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public FhirObservation withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -83,6 +91,7 @@ public class FhirObservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public FhirObservation withLocation(String location) {
         this.location = location;
         return this;
@@ -91,6 +100,7 @@ public class FhirObservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FhirObservation withName(String name) {
         this.name = name;
         return this;
@@ -99,6 +109,7 @@ public class FhirObservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temporaryUuid")
     public String temporaryUuid;
+
     public FhirObservation withTemporaryUuid(String temporaryUuid) {
         this.temporaryUuid = temporaryUuid;
         return this;
@@ -107,6 +118,7 @@ public class FhirObservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("units")
     public String units;
+
     public FhirObservation withUnits(String units) {
         this.units = units;
         return this;
@@ -115,9 +127,11 @@ public class FhirObservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public FhirObservation withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public FhirObservation(){}
 }

@@ -12,6 +12,7 @@ public class District {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public District withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class District {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mdr_number")
     public String mdrNumber;
+
     public District withMdrNumber(String mdrNumber) {
         this.mdrNumber = mdrNumber;
         return this;
@@ -28,9 +30,11 @@ public class District {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public District withName(String name) {
         this.name = name;
         return this;
     }
     
+    public District(){}
 }

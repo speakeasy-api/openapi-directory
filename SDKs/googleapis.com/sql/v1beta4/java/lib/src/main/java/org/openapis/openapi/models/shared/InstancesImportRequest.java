@@ -18,9 +18,11 @@ public class InstancesImportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importContext")
     public ImportContext importContext;
+
     public InstancesImportRequest withImportContext(ImportContext importContext) {
         this.importContext = importContext;
         return this;
     }
     
+    public InstancesImportRequest(){}
 }

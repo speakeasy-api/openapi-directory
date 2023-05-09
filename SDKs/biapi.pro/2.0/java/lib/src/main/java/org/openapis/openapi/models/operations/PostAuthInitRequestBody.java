@@ -12,6 +12,7 @@ public class PostAuthInitRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=client_id")
     public String clientId;
+
     public PostAuthInitRequestBody withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -22,9 +23,11 @@ public class PostAuthInitRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=client_secret")
     public String clientSecret;
+
     public PostAuthInitRequestBody withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
     }
     
+    public PostAuthInitRequestBody(){}
 }

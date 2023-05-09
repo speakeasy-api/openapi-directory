@@ -20,6 +20,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionProperties")
     public java.util.Map<String, String> connectionProperties;
+
     public Connection withConnectionProperties(java.util.Map<String, String> connectionProperties) {
         this.connectionProperties = connectionProperties;
         return this;
@@ -28,6 +29,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionType")
     public ConnectionTypeEnum connectionType;
+
     public Connection withConnectionType(ConnectionTypeEnum connectionType) {
         this.connectionType = connectionType;
         return this;
@@ -38,6 +40,7 @@ public class Connection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Connection withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -46,6 +49,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Connection withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdatedBy")
     public String lastUpdatedBy;
+
     public Connection withLastUpdatedBy(String lastUpdatedBy) {
         this.lastUpdatedBy = lastUpdatedBy;
         return this;
@@ -64,6 +69,7 @@ public class Connection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public Connection withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -72,6 +78,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchCriteria")
     public String[] matchCriteria;
+
     public Connection withMatchCriteria(String[] matchCriteria) {
         this.matchCriteria = matchCriteria;
         return this;
@@ -80,6 +87,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Connection withName(String name) {
         this.name = name;
         return this;
@@ -88,9 +96,11 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhysicalConnectionRequirements")
     public PhysicalConnectionRequirements physicalConnectionRequirements;
+
     public Connection withPhysicalConnectionRequirements(PhysicalConnectionRequirements physicalConnectionRequirements) {
         this.physicalConnectionRequirements = physicalConnectionRequirements;
         return this;
     }
     
+    public Connection(){}
 }

@@ -15,6 +15,7 @@ public class UpdateStageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateStageRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class UpdateStageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Role")
     public String role;
+
     public UpdateStageRequestBody withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public UpdateStageRequestBody(){}
 }

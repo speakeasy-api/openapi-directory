@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteOptOutListResponse {
@@ -12,6 +13,7 @@ public class DeleteOptOutListResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteOptOutListResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteOptOutListResponse {
      */
     
     public Object conflictException;
+
     public DeleteOptOutListResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteOptOutListResponse {
     
     
     public String contentType;
+
     public DeleteOptOutListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteOptOutListResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteOptOutListResult deleteOptOutListResult;
+
     public DeleteOptOutListResponse withDeleteOptOutListResult(org.openapis.openapi.models.shared.DeleteOptOutListResult deleteOptOutListResult) {
         this.deleteOptOutListResult = deleteOptOutListResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteOptOutListResponse {
      */
     
     public Object internalServerException;
+
     public DeleteOptOutListResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteOptOutListResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteOptOutListResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteOptOutListResponse {
     
     
     public Integer statusCode;
+
     public DeleteOptOutListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteOptOutListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteOptOutListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteOptOutListResponse {
      */
     
     public Object throttlingException;
+
     public DeleteOptOutListResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteOptOutListResponse {
      */
     
     public Object validationException;
+
     public DeleteOptOutListResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteOptOutListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

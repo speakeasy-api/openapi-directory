@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, GoogleCloudRetailV2betaCustomAttribute> attributes;
+
     public GoogleCloudRetailV2betaProductInput withAttributes(java.util.Map<String, GoogleCloudRetailV2betaCustomAttribute> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audience")
     public GoogleCloudRetailV2betaAudience audience;
+
     public GoogleCloudRetailV2betaProductInput withAudience(GoogleCloudRetailV2betaAudience audience) {
         this.audience = audience;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public GoogleCloudRetailV2betaProductAvailabilityEnum availability;
+
     public GoogleCloudRetailV2betaProductInput withAvailability(GoogleCloudRetailV2betaProductAvailabilityEnum availability) {
         this.availability = availability;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableQuantity")
     public Integer availableQuantity;
+
     public GoogleCloudRetailV2betaProductInput withAvailableQuantity(Integer availableQuantity) {
         this.availableQuantity = availableQuantity;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableTime")
     public String availableTime;
+
     public GoogleCloudRetailV2betaProductInput withAvailableTime(String availableTime) {
         this.availableTime = availableTime;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brands")
     public String[] brands;
+
     public GoogleCloudRetailV2betaProductInput withBrands(String[] brands) {
         this.brands = brands;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public String[] categories;
+
     public GoogleCloudRetailV2betaProductInput withCategories(String[] categories) {
         this.categories = categories;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionMemberIds")
     public String[] collectionMemberIds;
+
     public GoogleCloudRetailV2betaProductInput withCollectionMemberIds(String[] collectionMemberIds) {
         this.collectionMemberIds = collectionMemberIds;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorInfo")
     public GoogleCloudRetailV2betaColorInfo colorInfo;
+
     public GoogleCloudRetailV2betaProductInput withColorInfo(GoogleCloudRetailV2betaColorInfo colorInfo) {
         this.colorInfo = colorInfo;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public String[] conditions;
+
     public GoogleCloudRetailV2betaProductInput withConditions(String[] conditions) {
         this.conditions = conditions;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudRetailV2betaProductInput withDescription(String description) {
         this.description = description;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public GoogleCloudRetailV2betaProductInput withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillmentInfo")
     public GoogleCloudRetailV2betaFulfillmentInfo[] fulfillmentInfo;
+
     public GoogleCloudRetailV2betaProductInput withFulfillmentInfo(GoogleCloudRetailV2betaFulfillmentInfo[] fulfillmentInfo) {
         this.fulfillmentInfo = fulfillmentInfo;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gtin")
     public String gtin;
+
     public GoogleCloudRetailV2betaProductInput withGtin(String gtin) {
         this.gtin = gtin;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudRetailV2betaProductInput withId(String id) {
         this.id = id;
         return this;
@@ -183,6 +198,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public GoogleCloudRetailV2betaImage[] images;
+
     public GoogleCloudRetailV2betaProductInput withImages(GoogleCloudRetailV2betaImage[] images) {
         this.images = images;
         return this;
@@ -194,6 +210,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudRetailV2betaProductInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -205,6 +222,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("materials")
     public String[] materials;
+
     public GoogleCloudRetailV2betaProductInput withMaterials(String[] materials) {
         this.materials = materials;
         return this;
@@ -216,6 +234,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRetailV2betaProductInput withName(String name) {
         this.name = name;
         return this;
@@ -227,6 +246,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patterns")
     public String[] patterns;
+
     public GoogleCloudRetailV2betaProductInput withPatterns(String[] patterns) {
         this.patterns = patterns;
         return this;
@@ -238,6 +258,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceInfo")
     public GoogleCloudRetailV2betaPriceInfo priceInfo;
+
     public GoogleCloudRetailV2betaProductInput withPriceInfo(GoogleCloudRetailV2betaPriceInfo priceInfo) {
         this.priceInfo = priceInfo;
         return this;
@@ -249,6 +270,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryProductId")
     public String primaryProductId;
+
     public GoogleCloudRetailV2betaProductInput withPrimaryProductId(String primaryProductId) {
         this.primaryProductId = primaryProductId;
         return this;
@@ -260,6 +282,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotions")
     public GoogleCloudRetailV2betaPromotion[] promotions;
+
     public GoogleCloudRetailV2betaProductInput withPromotions(GoogleCloudRetailV2betaPromotion[] promotions) {
         this.promotions = promotions;
         return this;
@@ -271,6 +294,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishTime")
     public String publishTime;
+
     public GoogleCloudRetailV2betaProductInput withPublishTime(String publishTime) {
         this.publishTime = publishTime;
         return this;
@@ -282,6 +306,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     public GoogleCloudRetailV2betaRating rating;
+
     public GoogleCloudRetailV2betaProductInput withRating(GoogleCloudRetailV2betaRating rating) {
         this.rating = rating;
         return this;
@@ -293,6 +318,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retrievableFields")
     public String retrievableFields;
+
     public GoogleCloudRetailV2betaProductInput withRetrievableFields(String retrievableFields) {
         this.retrievableFields = retrievableFields;
         return this;
@@ -304,6 +330,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizes")
     public String[] sizes;
+
     public GoogleCloudRetailV2betaProductInput withSizes(String[] sizes) {
         this.sizes = sizes;
         return this;
@@ -315,6 +342,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public GoogleCloudRetailV2betaProductInput withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -326,6 +354,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleCloudRetailV2betaProductInput withTitle(String title) {
         this.title = title;
         return this;
@@ -337,6 +366,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public String ttl;
+
     public GoogleCloudRetailV2betaProductInput withTtl(String ttl) {
         this.ttl = ttl;
         return this;
@@ -348,6 +378,7 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudRetailV2betaProductTypeEnum type;
+
     public GoogleCloudRetailV2betaProductInput withType(GoogleCloudRetailV2betaProductTypeEnum type) {
         this.type = type;
         return this;
@@ -359,9 +390,11 @@ public class GoogleCloudRetailV2betaProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudRetailV2betaProductInput withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudRetailV2betaProductInput(){}
 }

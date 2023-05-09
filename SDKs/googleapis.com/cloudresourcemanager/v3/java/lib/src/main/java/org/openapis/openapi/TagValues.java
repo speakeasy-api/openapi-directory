@@ -61,11 +61,9 @@ public class TagValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesCreateResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesCreateResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class TagValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetResponse(contentType, httpRes.statusCode()) {{
             tagValue = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class TagValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -167,6 +161,50 @@ public class TagValues {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.Policy out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Policy.class);
                 res.policy = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieves a TagValue by its namespaced name. This method will return `PERMISSION_DENIED` if the value does not exist or the user does not have permission to view it.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetNamespacedResponse cloudresourcemanagerTagValuesGetNamespaced(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetNamespacedRequest request, org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetNamespacedSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/tagValues/namespaced");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetNamespacedRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetNamespacedResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetNamespacedResponse(contentType, httpRes.statusCode()) {{
+            tagValue = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TagValue out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TagValue.class);
+                res.tagValue = out;
             }
         }
 
@@ -201,11 +239,9 @@ public class TagValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesListResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesListResponse(contentType, httpRes.statusCode()) {{
             listTagValuesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +285,9 @@ public class TagValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesPatchResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesPatchResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesPatchResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -297,11 +331,9 @@ public class TagValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,11 +377,9 @@ public class TagValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsCreateResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsCreateResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,11 +421,9 @@ public class TagValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsDeleteResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsDeleteResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsDeleteResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -437,11 +465,9 @@ public class TagValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsListResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsListResponse(contentType, httpRes.statusCode()) {{
             listTagHoldsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,11 +511,9 @@ public class TagValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

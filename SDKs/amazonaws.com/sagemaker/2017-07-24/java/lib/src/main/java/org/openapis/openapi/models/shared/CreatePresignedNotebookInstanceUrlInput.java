@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePresignedNotebookInstanceUrlInput {
     @JsonProperty("NotebookInstanceName")
     public String notebookInstanceName;
+
     public CreatePresignedNotebookInstanceUrlInput withNotebookInstanceName(String notebookInstanceName) {
         this.notebookInstanceName = notebookInstanceName;
         return this;
@@ -19,9 +20,13 @@ public class CreatePresignedNotebookInstanceUrlInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionExpirationDurationInSeconds")
     public Long sessionExpirationDurationInSeconds;
+
     public CreatePresignedNotebookInstanceUrlInput withSessionExpirationDurationInSeconds(Long sessionExpirationDurationInSeconds) {
         this.sessionExpirationDurationInSeconds = sessionExpirationDurationInSeconds;
         return this;
     }
     
+    public CreatePresignedNotebookInstanceUrlInput(@JsonProperty("NotebookInstanceName") String notebookInstanceName) {
+        this.notebookInstanceName = notebookInstanceName;
+  }
 }

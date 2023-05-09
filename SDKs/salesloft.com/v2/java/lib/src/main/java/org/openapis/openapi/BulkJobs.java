@@ -58,11 +58,9 @@ public class BulkJobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2BulkJobsResponse res = new org.openapis.openapi.models.operations.GetV2BulkJobsResponse() {{
+        org.openapis.openapi.models.operations.GetV2BulkJobsResponse res = new org.openapis.openapi.models.operations.GetV2BulkJobsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class BulkJobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2BulkJobsIdResponse res = new org.openapis.openapi.models.operations.GetV2BulkJobsIdResponse() {{
+        org.openapis.openapi.models.operations.GetV2BulkJobsIdResponse res = new org.openapis.openapi.models.operations.GetV2BulkJobsIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class BulkJobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV2BulkJobsResponse res = new org.openapis.openapi.models.operations.PostV2BulkJobsResponse() {{
+        org.openapis.openapi.models.operations.PostV2BulkJobsResponse res = new org.openapis.openapi.models.operations.PostV2BulkJobsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +176,9 @@ public class BulkJobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutV2BulkJobsIdResponse res = new org.openapis.openapi.models.operations.PutV2BulkJobsIdResponse() {{
+        org.openapis.openapi.models.operations.PutV2BulkJobsIdResponse res = new org.openapis.openapi.models.operations.PutV2BulkJobsIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

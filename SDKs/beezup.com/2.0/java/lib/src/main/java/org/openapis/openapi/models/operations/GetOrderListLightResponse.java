@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrderListLightResponse {
@@ -12,6 +13,7 @@ public class GetOrderListLightResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetOrderListLightResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetOrderListLightResponse {
     
     
     public String contentType;
+
     public GetOrderListLightResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetOrderListLightResponse {
     
     
     public Integer statusCode;
+
     public GetOrderListLightResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetOrderListLightResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrderListLightResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetOrderListLightResponse {
      */
     
     public org.openapis.openapi.models.shared.OrderListLight orderListLight;
+
     public GetOrderListLightResponse withOrderListLight(org.openapis.openapi.models.shared.OrderListLight orderListLight) {
         this.orderListLight = orderListLight;
         return this;
     }
     
+    public GetOrderListLightResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

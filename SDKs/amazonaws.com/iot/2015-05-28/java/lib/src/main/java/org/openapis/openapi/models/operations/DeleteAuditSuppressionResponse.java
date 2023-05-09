@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAuditSuppressionResponse {
     
     public String contentType;
+
     public DeleteAuditSuppressionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAuditSuppressionResponse {
      */
     
     public java.util.Map<String, Object> deleteAuditSuppressionResponse;
+
     public DeleteAuditSuppressionResponse withDeleteAuditSuppressionResponse(java.util.Map<String, Object> deleteAuditSuppressionResponse) {
         this.deleteAuditSuppressionResponse = deleteAuditSuppressionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAuditSuppressionResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteAuditSuppressionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAuditSuppressionResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteAuditSuppressionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteAuditSuppressionResponse {
     
     
     public Integer statusCode;
+
     public DeleteAuditSuppressionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteAuditSuppressionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAuditSuppressionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteAuditSuppressionResponse {
      */
     
     public Object throttlingException;
+
     public DeleteAuditSuppressionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteAuditSuppressionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -27,6 +27,7 @@ public class OBWriteInternationalScheduledResponse6DataMultiAuthorisation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDateTime")
     public OffsetDateTime expirationDateTime;
+
     public OBWriteInternationalScheduledResponse6DataMultiAuthorisation withExpirationDateTime(OffsetDateTime expirationDateTime) {
         this.expirationDateTime = expirationDateTime;
         return this;
@@ -42,6 +43,7 @@ public class OBWriteInternationalScheduledResponse6DataMultiAuthorisation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateDateTime")
     public OffsetDateTime lastUpdateDateTime;
+
     public OBWriteInternationalScheduledResponse6DataMultiAuthorisation withLastUpdateDateTime(OffsetDateTime lastUpdateDateTime) {
         this.lastUpdateDateTime = lastUpdateDateTime;
         return this;
@@ -53,6 +55,7 @@ public class OBWriteInternationalScheduledResponse6DataMultiAuthorisation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberReceived")
     public Long numberReceived;
+
     public OBWriteInternationalScheduledResponse6DataMultiAuthorisation withNumberReceived(Long numberReceived) {
         this.numberReceived = numberReceived;
         return this;
@@ -64,6 +67,7 @@ public class OBWriteInternationalScheduledResponse6DataMultiAuthorisation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberRequired")
     public Long numberRequired;
+
     public OBWriteInternationalScheduledResponse6DataMultiAuthorisation withNumberRequired(Long numberRequired) {
         this.numberRequired = numberRequired;
         return this;
@@ -74,9 +78,13 @@ public class OBWriteInternationalScheduledResponse6DataMultiAuthorisation {
      */
     @JsonProperty("Status")
     public OBWriteInternationalScheduledResponse6DataMultiAuthorisationStatusEnum status;
+
     public OBWriteInternationalScheduledResponse6DataMultiAuthorisation withStatus(OBWriteInternationalScheduledResponse6DataMultiAuthorisationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public OBWriteInternationalScheduledResponse6DataMultiAuthorisation(@JsonProperty("Status") OBWriteInternationalScheduledResponse6DataMultiAuthorisationStatusEnum status) {
+        this.status = status;
+  }
 }

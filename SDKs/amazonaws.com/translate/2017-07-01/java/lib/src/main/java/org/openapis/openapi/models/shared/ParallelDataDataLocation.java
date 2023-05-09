@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ParallelDataDataLocation {
     @JsonProperty("Location")
     public String location;
+
     public ParallelDataDataLocation withLocation(String location) {
         this.location = location;
         return this;
@@ -19,9 +20,14 @@ public class ParallelDataDataLocation {
     
     @JsonProperty("RepositoryType")
     public String repositoryType;
+
     public ParallelDataDataLocation withRepositoryType(String repositoryType) {
         this.repositoryType = repositoryType;
         return this;
     }
     
+    public ParallelDataDataLocation(@JsonProperty("Location") String location, @JsonProperty("RepositoryType") String repositoryType) {
+        this.location = location;
+        this.repositoryType = repositoryType;
+  }
 }

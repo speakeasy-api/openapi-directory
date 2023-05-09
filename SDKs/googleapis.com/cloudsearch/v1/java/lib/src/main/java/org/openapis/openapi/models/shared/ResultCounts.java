@@ -18,9 +18,11 @@ public class ResultCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceResultCounts")
     public SourceResultCount[] sourceResultCounts;
+
     public ResultCounts withSourceResultCounts(SourceResultCount[] sourceResultCounts) {
         this.sourceResultCounts = sourceResultCounts;
         return this;
     }
     
+    public ResultCounts(){}
 }

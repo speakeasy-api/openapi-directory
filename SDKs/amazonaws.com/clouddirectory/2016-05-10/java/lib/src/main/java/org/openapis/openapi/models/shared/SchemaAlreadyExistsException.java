@@ -15,9 +15,11 @@ public class SchemaAlreadyExistsException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public SchemaAlreadyExistsException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public SchemaAlreadyExistsException(){}
 }

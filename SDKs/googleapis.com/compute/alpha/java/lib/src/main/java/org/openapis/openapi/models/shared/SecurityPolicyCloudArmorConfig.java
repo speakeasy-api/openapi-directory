@@ -18,9 +18,11 @@ public class SecurityPolicyCloudArmorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableMl")
     public Boolean enableMl;
+
     public SecurityPolicyCloudArmorConfig withEnableMl(Boolean enableMl) {
         this.enableMl = enableMl;
         return this;
     }
     
+    public SecurityPolicyCloudArmorConfig(){}
 }

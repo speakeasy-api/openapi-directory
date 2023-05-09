@@ -15,6 +15,7 @@ public class Cfltr500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Cfltr500ApplicationJSONErrorEnum error;
+
     public Cfltr500ApplicationJSON withError(Cfltr500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Cfltr500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Cfltr500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Cfltr500ApplicationJSON withErrorDescription(Cfltr500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Cfltr500ApplicationJSON(){}
 }

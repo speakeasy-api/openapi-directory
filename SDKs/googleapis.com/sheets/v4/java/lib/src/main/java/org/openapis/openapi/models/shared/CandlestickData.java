@@ -18,6 +18,7 @@ public class CandlestickData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closeSeries")
     public CandlestickSeries closeSeries;
+
     public CandlestickData withCloseSeries(CandlestickSeries closeSeries) {
         this.closeSeries = closeSeries;
         return this;
@@ -29,6 +30,7 @@ public class CandlestickData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highSeries")
     public CandlestickSeries highSeries;
+
     public CandlestickData withHighSeries(CandlestickSeries highSeries) {
         this.highSeries = highSeries;
         return this;
@@ -40,6 +42,7 @@ public class CandlestickData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowSeries")
     public CandlestickSeries lowSeries;
+
     public CandlestickData withLowSeries(CandlestickSeries lowSeries) {
         this.lowSeries = lowSeries;
         return this;
@@ -51,9 +54,11 @@ public class CandlestickData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openSeries")
     public CandlestickSeries openSeries;
+
     public CandlestickData withOpenSeries(CandlestickSeries openSeries) {
         this.openSeries = openSeries;
         return this;
     }
     
+    public CandlestickData(){}
 }

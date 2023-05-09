@@ -18,9 +18,11 @@ public class EstimateCostScenarioForBillingAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costScenario")
     public CostScenario costScenario;
+
     public EstimateCostScenarioForBillingAccountRequest withCostScenario(CostScenario costScenario) {
         this.costScenario = costScenario;
         return this;
     }
     
+    public EstimateCostScenarioForBillingAccountRequest(){}
 }

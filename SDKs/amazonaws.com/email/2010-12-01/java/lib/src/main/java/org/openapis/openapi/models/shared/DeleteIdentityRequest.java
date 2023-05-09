@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteIdentityRequest - Represents a request to delete one of your Amazon SES identities (an email address or domain).
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteIdentityRequest {
     
     public String identity;
+
     public DeleteIdentityRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
     }
     
+    public DeleteIdentityRequest(@JsonProperty("Identity") String identity) {
+        this.identity = identity;
+  }
 }

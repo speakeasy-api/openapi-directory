@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateMLModelInput {
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public CreateMLModelInput withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
@@ -19,6 +20,7 @@ public class CreateMLModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLModelName")
     public String mlModelName;
+
     public CreateMLModelInput withMLModelName(String mlModelName) {
         this.mlModelName = mlModelName;
         return this;
@@ -26,6 +28,7 @@ public class CreateMLModelInput {
     
     @JsonProperty("MLModelType")
     public MLModelTypeEnum mlModelType;
+
     public CreateMLModelInput withMLModelType(MLModelTypeEnum mlModelType) {
         this.mlModelType = mlModelType;
         return this;
@@ -34,6 +37,7 @@ public class CreateMLModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public CreateMLModelInput withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -42,6 +46,7 @@ public class CreateMLModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Recipe")
     public String recipe;
+
     public CreateMLModelInput withRecipe(String recipe) {
         this.recipe = recipe;
         return this;
@@ -50,6 +55,7 @@ public class CreateMLModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecipeUri")
     public String recipeUri;
+
     public CreateMLModelInput withRecipeUri(String recipeUri) {
         this.recipeUri = recipeUri;
         return this;
@@ -57,9 +63,15 @@ public class CreateMLModelInput {
     
     @JsonProperty("TrainingDataSourceId")
     public String trainingDataSourceId;
+
     public CreateMLModelInput withTrainingDataSourceId(String trainingDataSourceId) {
         this.trainingDataSourceId = trainingDataSourceId;
         return this;
     }
     
+    public CreateMLModelInput(@JsonProperty("MLModelId") String mlModelId, @JsonProperty("MLModelType") MLModelTypeEnum mlModelType, @JsonProperty("TrainingDataSourceId") String trainingDataSourceId) {
+        this.mlModelId = mlModelId;
+        this.mlModelType = mlModelType;
+        this.trainingDataSourceId = trainingDataSourceId;
+  }
 }

@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ServiceSpecInput {
     /**
-     * RevisionTemplateSpec describes the data a revision should have when created from a template. Based on: https://github.com/kubernetes/api/blob/e771f807/core/v1/types.go#L3179-L3190
+     * RevisionTemplateSpec describes the data a revision should have when created from a template.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public RevisionTemplate template;
+
     public ServiceSpecInput withTemplate(RevisionTemplate template) {
         this.template = template;
         return this;
@@ -29,9 +30,11 @@ public class ServiceSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traffic")
     public TrafficTargetInput[] traffic;
+
     public ServiceSpecInput withTraffic(TrafficTargetInput[] traffic) {
         this.traffic = traffic;
         return this;
     }
     
+    public ServiceSpecInput(){}
 }

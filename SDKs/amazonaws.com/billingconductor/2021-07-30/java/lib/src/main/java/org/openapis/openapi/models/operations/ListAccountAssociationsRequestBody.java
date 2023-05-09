@@ -15,6 +15,7 @@ public class ListAccountAssociationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingPeriod")
     public String billingPeriod;
+
     public ListAccountAssociationsRequestBody withBillingPeriod(String billingPeriod) {
         this.billingPeriod = billingPeriod;
         return this;
@@ -26,6 +27,7 @@ public class ListAccountAssociationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ListAccountAssociationsRequestBodyFilters filters;
+
     public ListAccountAssociationsRequestBody withFilters(ListAccountAssociationsRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -37,9 +39,11 @@ public class ListAccountAssociationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAccountAssociationsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAccountAssociationsRequestBody(){}
 }

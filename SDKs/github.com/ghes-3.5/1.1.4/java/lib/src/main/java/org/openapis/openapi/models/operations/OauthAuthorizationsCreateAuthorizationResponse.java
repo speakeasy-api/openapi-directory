@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OauthAuthorizationsCreateAuthorizationResponse {
     
     public String contentType;
+
     public OauthAuthorizationsCreateAuthorizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OauthAuthorizationsCreateAuthorizationResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public OauthAuthorizationsCreateAuthorizationResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class OauthAuthorizationsCreateAuthorizationResponse {
     
     
     public Integer statusCode;
+
     public OauthAuthorizationsCreateAuthorizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class OauthAuthorizationsCreateAuthorizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OauthAuthorizationsCreateAuthorizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class OauthAuthorizationsCreateAuthorizationResponse {
      */
     
     public org.openapis.openapi.models.shared.Authorization authorization;
+
     public OauthAuthorizationsCreateAuthorizationResponse withAuthorization(org.openapis.openapi.models.shared.Authorization authorization) {
         this.authorization = authorization;
         return this;
@@ -50,6 +56,7 @@ public class OauthAuthorizationsCreateAuthorizationResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public OauthAuthorizationsCreateAuthorizationResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -60,9 +67,14 @@ public class OauthAuthorizationsCreateAuthorizationResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public OauthAuthorizationsCreateAuthorizationResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public OauthAuthorizationsCreateAuthorizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

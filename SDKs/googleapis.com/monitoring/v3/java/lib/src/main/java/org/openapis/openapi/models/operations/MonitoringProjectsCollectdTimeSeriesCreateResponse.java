@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MonitoringProjectsCollectdTimeSeriesCreateResponse {
     
     public String contentType;
+
     public MonitoringProjectsCollectdTimeSeriesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MonitoringProjectsCollectdTimeSeriesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCollectdTimeSeriesResponse createCollectdTimeSeriesResponse;
+
     public MonitoringProjectsCollectdTimeSeriesCreateResponse withCreateCollectdTimeSeriesResponse(org.openapis.openapi.models.shared.CreateCollectdTimeSeriesResponse createCollectdTimeSeriesResponse) {
         this.createCollectdTimeSeriesResponse = createCollectdTimeSeriesResponse;
         return this;
@@ -26,6 +29,7 @@ public class MonitoringProjectsCollectdTimeSeriesCreateResponse {
     
     
     public Integer statusCode;
+
     public MonitoringProjectsCollectdTimeSeriesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MonitoringProjectsCollectdTimeSeriesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MonitoringProjectsCollectdTimeSeriesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MonitoringProjectsCollectdTimeSeriesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

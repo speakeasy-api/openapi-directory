@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateLocalGatewayRouteRequest {
     
     public String destinationCidrBlock;
+
     public CreateLocalGatewayRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -16,6 +17,7 @@ public class CreateLocalGatewayRouteRequest {
     
     
     public String destinationPrefixListId;
+
     public CreateLocalGatewayRouteRequest withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -23,6 +25,7 @@ public class CreateLocalGatewayRouteRequest {
     
     
     public Boolean dryRun;
+
     public CreateLocalGatewayRouteRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateLocalGatewayRouteRequest {
     
     
     public String localGatewayRouteTableId;
+
     public CreateLocalGatewayRouteRequest withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -37,6 +41,7 @@ public class CreateLocalGatewayRouteRequest {
     
     
     public String localGatewayVirtualInterfaceGroupId;
+
     public CreateLocalGatewayRouteRequest withLocalGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
         this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
         return this;
@@ -44,9 +49,13 @@ public class CreateLocalGatewayRouteRequest {
     
     
     public String networkInterfaceId;
+
     public CreateLocalGatewayRouteRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
     
+    public CreateLocalGatewayRouteRequest(@JsonProperty("LocalGatewayRouteTableId") String localGatewayRouteTableId) {
+        this.localGatewayRouteTableId = localGatewayRouteTableId;
+  }
 }

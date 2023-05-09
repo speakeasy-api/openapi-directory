@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetItemFeedSecurity;
 import org.openapis.openapi.models.operations.GetItemFeedRequest;
 import org.openapis.openapi.models.operations.GetItemFeedResponse;
+import org.openapis.openapi.models.operations.GetItemFeedSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,24 +13,21 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetItemFeedRequest req = new GetItemFeedRequest() {{
-                accept = "corrupti";
-                range = "provident";
-                xEbayCMarketplaceId = "distinctio";
-                categoryId = "quibusdam";
-                date = "unde";
-                feedScope = "nulla";
-            }}            
+            GetItemFeedRequest req = new GetItemFeedRequest("corrupti", "provident", "distinctio", "quibusdam", "unde") {{
+                date = "nulla";
+            }};            
 
-            GetItemFeedResponse res = sdk.item.getItemFeed(req, new GetItemFeedSecurity() {{
+            GetItemFeedResponse res = sdk.item.getItemFeed(req, new GetItemFeedSecurity("corrupti") {{
                 clientCredentials = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.itemResponse.isPresent()) {
+            if (res.itemResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

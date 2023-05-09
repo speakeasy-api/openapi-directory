@@ -18,6 +18,7 @@ public class PartnerCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costType")
     public PartnerCostCostTypeEnum costType;
+
     public PartnerCost withCostType(PartnerCostCostTypeEnum costType) {
         this.costType = costType;
         return this;
@@ -29,6 +30,7 @@ public class PartnerCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feeAmount")
     public String feeAmount;
+
     public PartnerCost withFeeAmount(String feeAmount) {
         this.feeAmount = feeAmount;
         return this;
@@ -40,6 +42,7 @@ public class PartnerCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feePercentageMillis")
     public String feePercentageMillis;
+
     public PartnerCost withFeePercentageMillis(String feePercentageMillis) {
         this.feePercentageMillis = feePercentageMillis;
         return this;
@@ -51,6 +54,7 @@ public class PartnerCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feeType")
     public PartnerCostFeeTypeEnum feeType;
+
     public PartnerCost withFeeType(PartnerCostFeeTypeEnum feeType) {
         this.feeType = feeType;
         return this;
@@ -62,9 +66,11 @@ public class PartnerCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceType")
     public PartnerCostInvoiceTypeEnum invoiceType;
+
     public PartnerCost withInvoiceType(PartnerCostInvoiceTypeEnum invoiceType) {
         this.invoiceType = invoiceType;
         return this;
     }
     
+    public PartnerCost(){}
 }

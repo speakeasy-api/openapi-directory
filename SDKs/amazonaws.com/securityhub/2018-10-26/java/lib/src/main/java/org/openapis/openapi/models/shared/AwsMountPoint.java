@@ -15,6 +15,7 @@ public class AwsMountPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerPath")
     public String containerPath;
+
     public AwsMountPoint withContainerPath(String containerPath) {
         this.containerPath = containerPath;
         return this;
@@ -23,9 +24,11 @@ public class AwsMountPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceVolume")
     public String sourceVolume;
+
     public AwsMountPoint withSourceVolume(String sourceVolume) {
         this.sourceVolume = sourceVolume;
         return this;
     }
     
+    public AwsMountPoint(){}
 }

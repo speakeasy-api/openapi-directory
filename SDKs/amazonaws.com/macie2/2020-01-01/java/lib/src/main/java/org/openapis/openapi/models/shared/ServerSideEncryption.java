@@ -15,6 +15,7 @@ public class ServerSideEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionType")
     public EncryptionTypeEnum encryptionType;
+
     public ServerSideEncryption withEncryptionType(EncryptionTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -23,9 +24,11 @@ public class ServerSideEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsMasterKeyId")
     public String kmsMasterKeyId;
+
     public ServerSideEncryption withKmsMasterKeyId(String kmsMasterKeyId) {
         this.kmsMasterKeyId = kmsMasterKeyId;
         return this;
     }
     
+    public ServerSideEncryption(){}
 }

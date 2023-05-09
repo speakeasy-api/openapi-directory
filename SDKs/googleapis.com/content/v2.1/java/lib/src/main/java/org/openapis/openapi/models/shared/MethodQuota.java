@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * MethodQuota - The quota information per method in the Content API. Includes only methods with current usage greater than zero for your account.
+ * MethodQuota - The quota information per method in the Content API.
  */
 public class MethodQuota {
     /**
@@ -18,6 +18,7 @@ public class MethodQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public MethodQuota withMethod(String method) {
         this.method = method;
         return this;
@@ -29,6 +30,7 @@ public class MethodQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotaLimit")
     public String quotaLimit;
+
     public MethodQuota withQuotaLimit(String quotaLimit) {
         this.quotaLimit = quotaLimit;
         return this;
@@ -40,9 +42,11 @@ public class MethodQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotaUsage")
     public String quotaUsage;
+
     public MethodQuota withQuotaUsage(String quotaUsage) {
         this.quotaUsage = quotaUsage;
         return this;
     }
     
+    public MethodQuota(){}
 }

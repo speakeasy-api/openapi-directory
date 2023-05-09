@@ -15,6 +15,7 @@ public class PostServersIdActionsRebuild201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public PostServersIdActionsRebuild201ApplicationJSONAction action;
+
     public PostServersIdActionsRebuild201ApplicationJSON withAction(PostServersIdActionsRebuild201ApplicationJSONAction action) {
         this.action = action;
         return this;
@@ -26,9 +27,11 @@ public class PostServersIdActionsRebuild201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("root_password")
     public String rootPassword;
+
     public PostServersIdActionsRebuild201ApplicationJSON withRootPassword(String rootPassword) {
         this.rootPassword = rootPassword;
         return this;
     }
     
+    public PostServersIdActionsRebuild201ApplicationJSON(){}
 }

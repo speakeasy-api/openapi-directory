@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCrlResponse {
     
     public String contentType;
+
     public GetCrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCrlResponse {
      */
     
     public org.openapis.openapi.models.shared.CrlDetailResponse crlDetailResponse;
+
     public GetCrlResponse withCrlDetailResponse(org.openapis.openapi.models.shared.CrlDetailResponse crlDetailResponse) {
         this.crlDetailResponse = crlDetailResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetCrlResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetCrlResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class GetCrlResponse {
     
     
     public Integer statusCode;
+
     public GetCrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

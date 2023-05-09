@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetLoadBalancersId200ApplicationJSON {
     @JsonProperty("load_balancer")
     public GetLoadBalancersId200ApplicationJSONLoadBalancer loadBalancer;
+
     public GetLoadBalancersId200ApplicationJSON withLoadBalancer(GetLoadBalancersId200ApplicationJSONLoadBalancer loadBalancer) {
         this.loadBalancer = loadBalancer;
         return this;
     }
     
+    public GetLoadBalancersId200ApplicationJSON(@JsonProperty("load_balancer") GetLoadBalancersId200ApplicationJSONLoadBalancer loadBalancer) {
+        this.loadBalancer = loadBalancer;
+  }
 }

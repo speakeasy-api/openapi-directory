@@ -15,9 +15,11 @@ public class DeleteImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Image")
     public Image image;
+
     public DeleteImageResult withImage(Image image) {
         this.image = image;
         return this;
     }
     
+    public DeleteImageResult(){}
 }

@@ -15,9 +15,11 @@ public class DescribeDeviceEc2Output {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public InstanceSummary[] instances;
+
     public DescribeDeviceEc2Output withInstances(InstanceSummary[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public DescribeDeviceEc2Output(){}
 }

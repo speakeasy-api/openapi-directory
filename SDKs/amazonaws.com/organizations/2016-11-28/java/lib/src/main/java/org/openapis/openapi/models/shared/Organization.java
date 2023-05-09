@@ -15,6 +15,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Organization withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailablePolicyTypes")
     public PolicyTypeSummary[] availablePolicyTypes;
+
     public Organization withAvailablePolicyTypes(PolicyTypeSummary[] availablePolicyTypes) {
         this.availablePolicyTypes = availablePolicyTypes;
         return this;
@@ -31,6 +33,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureSet")
     public OrganizationFeatureSetEnum featureSet;
+
     public Organization withFeatureSet(OrganizationFeatureSetEnum featureSet) {
         this.featureSet = featureSet;
         return this;
@@ -39,6 +42,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Organization withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterAccountArn")
     public String masterAccountArn;
+
     public Organization withMasterAccountArn(String masterAccountArn) {
         this.masterAccountArn = masterAccountArn;
         return this;
@@ -55,6 +60,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterAccountEmail")
     public String masterAccountEmail;
+
     public Organization withMasterAccountEmail(String masterAccountEmail) {
         this.masterAccountEmail = masterAccountEmail;
         return this;
@@ -63,9 +69,11 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterAccountId")
     public String masterAccountId;
+
     public Organization withMasterAccountId(String masterAccountId) {
         this.masterAccountId = masterAccountId;
         return this;
     }
     
+    public Organization(){}
 }

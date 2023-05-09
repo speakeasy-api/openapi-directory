@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAvailabilityConfigurationsResponse {
     
     public String contentType;
+
     public ListAvailabilityConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAvailabilityConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAvailabilityConfigurationsResponse listAvailabilityConfigurationsResponse;
+
     public ListAvailabilityConfigurationsResponse withListAvailabilityConfigurationsResponse(org.openapis.openapi.models.shared.ListAvailabilityConfigurationsResponse listAvailabilityConfigurationsResponse) {
         this.listAvailabilityConfigurationsResponse = listAvailabilityConfigurationsResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListAvailabilityConfigurationsResponse {
      */
     
     public Object organizationNotFoundException;
+
     public ListAvailabilityConfigurationsResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class ListAvailabilityConfigurationsResponse {
      */
     
     public Object organizationStateException;
+
     public ListAvailabilityConfigurationsResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -46,6 +51,7 @@ public class ListAvailabilityConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public ListAvailabilityConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListAvailabilityConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAvailabilityConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAvailabilityConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

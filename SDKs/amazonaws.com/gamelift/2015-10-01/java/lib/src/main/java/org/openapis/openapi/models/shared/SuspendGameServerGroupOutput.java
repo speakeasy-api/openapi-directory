@@ -15,9 +15,11 @@ public class SuspendGameServerGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerGroup")
     public GameServerGroup gameServerGroup;
+
     public SuspendGameServerGroupOutput withGameServerGroup(GameServerGroup gameServerGroup) {
         this.gameServerGroup = gameServerGroup;
         return this;
     }
     
+    public SuspendGameServerGroupOutput(){}
 }

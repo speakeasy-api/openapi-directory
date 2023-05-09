@@ -18,6 +18,7 @@ public class QuestionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public Image image;
+
     public QuestionItem withImage(Image image) {
         this.image = image;
         return this;
@@ -29,9 +30,11 @@ public class QuestionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("question")
     public Question question;
+
     public QuestionItem withQuestion(Question question) {
         this.question = question;
         return this;
     }
     
+    public QuestionItem(){}
 }

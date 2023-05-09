@@ -25,6 +25,7 @@ public class License {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fromDate")
     public OffsetDateTime fromDate;
+
     public License withFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -36,6 +37,7 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public License withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +49,7 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseType")
     public LicenseLicenseTypeEnum licenseType;
+
     public License withLicenseType(LicenseLicenseTypeEnum licenseType) {
         this.licenseType = licenseType;
         return this;
@@ -58,6 +61,7 @@ public class License {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleState")
     public LicenseLifecycleStateEnum lifecycleState;
+
     public License withLifecycleState(LicenseLifecycleStateEnum lifecycleState) {
         this.lifecycleState = lifecycleState;
         return this;
@@ -71,9 +75,11 @@ public class License {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("toDate")
     public OffsetDateTime toDate;
+
     public License withToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public License(){}
 }

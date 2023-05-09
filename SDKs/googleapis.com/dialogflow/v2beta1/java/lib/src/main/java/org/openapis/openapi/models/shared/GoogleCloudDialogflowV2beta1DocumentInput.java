@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GoogleCloudDialogflowV2beta1DocumentInput withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentUri")
     public String contentUri;
+
     public GoogleCloudDialogflowV2beta1DocumentInput withContentUri(String contentUri) {
         this.contentUri = contentUri;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowV2beta1DocumentInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAutoReload")
     public Boolean enableAutoReload;
+
     public GoogleCloudDialogflowV2beta1DocumentInput withEnableAutoReload(Boolean enableAutoReload) {
         this.enableAutoReload = enableAutoReload;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knowledgeTypes")
     public GoogleCloudDialogflowV2beta1DocumentKnowledgeTypesEnum[] knowledgeTypes;
+
     public GoogleCloudDialogflowV2beta1DocumentInput withKnowledgeTypes(GoogleCloudDialogflowV2beta1DocumentKnowledgeTypesEnum[] knowledgeTypes) {
         this.knowledgeTypes = knowledgeTypes;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2beta1DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestReloadStatus")
     public GoogleCloudDialogflowV2beta1DocumentReloadStatus latestReloadStatus;
+
     public GoogleCloudDialogflowV2beta1DocumentInput withLatestReloadStatus(GoogleCloudDialogflowV2beta1DocumentReloadStatus latestReloadStatus) {
         this.latestReloadStatus = latestReloadStatus;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowV2beta1DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public GoogleCloudDialogflowV2beta1DocumentInput withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowV2beta1DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public GoogleCloudDialogflowV2beta1DocumentInput withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowV2beta1DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2beta1DocumentInput withName(String name) {
         this.name = name;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudDialogflowV2beta1DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawContent")
     public String rawContent;
+
     public GoogleCloudDialogflowV2beta1DocumentInput withRawContent(String rawContent) {
         this.rawContent = rawContent;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1DocumentInput(){}
 }

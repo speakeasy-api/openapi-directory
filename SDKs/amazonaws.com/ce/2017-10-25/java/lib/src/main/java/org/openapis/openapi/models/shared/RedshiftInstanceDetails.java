@@ -15,6 +15,7 @@ public class RedshiftInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentGeneration")
     public Boolean currentGeneration;
+
     public RedshiftInstanceDetails withCurrentGeneration(Boolean currentGeneration) {
         this.currentGeneration = currentGeneration;
         return this;
@@ -23,6 +24,7 @@ public class RedshiftInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Family")
     public String family;
+
     public RedshiftInstanceDetails withFamily(String family) {
         this.family = family;
         return this;
@@ -31,6 +33,7 @@ public class RedshiftInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeType")
     public String nodeType;
+
     public RedshiftInstanceDetails withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -39,6 +42,7 @@ public class RedshiftInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public RedshiftInstanceDetails withRegion(String region) {
         this.region = region;
         return this;
@@ -47,9 +51,11 @@ public class RedshiftInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeFlexEligible")
     public Boolean sizeFlexEligible;
+
     public RedshiftInstanceDetails withSizeFlexEligible(Boolean sizeFlexEligible) {
         this.sizeFlexEligible = sizeFlexEligible;
         return this;
     }
     
+    public RedshiftInstanceDetails(){}
 }

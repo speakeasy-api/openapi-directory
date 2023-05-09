@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AuthorizeSecurityGroupIngressResult {
     
     public Boolean return_;
+
     public AuthorizeSecurityGroupIngressResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
@@ -19,9 +20,11 @@ public class AuthorizeSecurityGroupIngressResult {
     
     
     public AuthorizeSecurityGroupIngressResultSecurityGroupRules[] securityGroupRules;
+
     public AuthorizeSecurityGroupIngressResult withSecurityGroupRules(AuthorizeSecurityGroupIngressResultSecurityGroupRules[] securityGroupRules) {
         this.securityGroupRules = securityGroupRules;
         return this;
     }
     
+    public AuthorizeSecurityGroupIngressResult(){}
 }

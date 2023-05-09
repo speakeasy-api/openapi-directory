@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchdocumentsRequest {
@@ -12,6 +13,7 @@ public class SearchdocumentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public SearchdocumentsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class SearchdocumentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public SearchdocumentsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class SearchdocumentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=REST-Range")
     public String restRange;
+
     public SearchdocumentsRequest withRESTRange(String restRange) {
         this.restRange = restRange;
         return this;
@@ -42,6 +46,7 @@ public class SearchdocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_fields")
     public String fields;
+
     public SearchdocumentsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +57,7 @@ public class SearchdocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_keyword")
     public String keyword;
+
     public SearchdocumentsRequest withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -62,6 +68,7 @@ public class SearchdocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_schema")
     public String schema;
+
     public SearchdocumentsRequest withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -72,6 +79,7 @@ public class SearchdocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_sort")
     public String sort;
+
     public SearchdocumentsRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -82,6 +90,7 @@ public class SearchdocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_where")
     public String where;
+
     public SearchdocumentsRequest withWhere(String where) {
         this.where = where;
         return this;
@@ -92,9 +101,16 @@ public class SearchdocumentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
     public String dataEntityName;
+
     public SearchdocumentsRequest withDataEntityName(String dataEntityName) {
         this.dataEntityName = dataEntityName;
         return this;
     }
     
+    public SearchdocumentsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("REST-Range") String restRange, @JsonProperty("dataEntityName") String dataEntityName) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.restRange = restRange;
+        this.dataEntityName = dataEntityName;
+  }
 }

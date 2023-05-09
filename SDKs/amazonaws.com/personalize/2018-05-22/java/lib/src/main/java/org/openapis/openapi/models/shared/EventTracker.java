@@ -20,6 +20,7 @@ public class EventTracker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public EventTracker withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -30,6 +31,7 @@ public class EventTracker {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public EventTracker withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -38,6 +40,7 @@ public class EventTracker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public EventTracker withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -46,6 +49,7 @@ public class EventTracker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTrackerArn")
     public String eventTrackerArn;
+
     public EventTracker withEventTrackerArn(String eventTrackerArn) {
         this.eventTrackerArn = eventTrackerArn;
         return this;
@@ -56,6 +60,7 @@ public class EventTracker {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public EventTracker withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -64,6 +69,7 @@ public class EventTracker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EventTracker withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class EventTracker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public EventTracker withStatus(String status) {
         this.status = status;
         return this;
@@ -80,9 +87,11 @@ public class EventTracker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingId")
     public String trackingId;
+
     public EventTracker withTrackingId(String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
     
+    public EventTracker(){}
 }

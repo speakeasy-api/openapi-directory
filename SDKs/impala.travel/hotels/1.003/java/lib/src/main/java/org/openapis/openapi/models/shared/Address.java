@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Address {
     @JsonProperty("city")
     public String city;
+
     public Address withCity(String city) {
         this.city = city;
         return this;
@@ -24,6 +25,7 @@ public class Address {
      */
     @JsonProperty("country")
     public String country;
+
     public Address withCountry(String country) {
         this.country = country;
         return this;
@@ -34,6 +36,7 @@ public class Address {
      */
     @JsonProperty("countryName")
     public String countryName;
+
     public Address withCountryName(String countryName) {
         this.countryName = countryName;
         return this;
@@ -44,6 +47,7 @@ public class Address {
      */
     @JsonProperty("line1")
     public String line1;
+
     public Address withLine1(String line1) {
         this.line1 = line1;
         return this;
@@ -55,6 +59,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line2")
     public String line2;
+
     public Address withLine2(String line2) {
         this.line2 = line2;
         return this;
@@ -62,6 +67,7 @@ public class Address {
     
     @JsonProperty("postalCode")
     public String postalCode;
+
     public Address withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -70,9 +76,17 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Address withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public Address(@JsonProperty("city") String city, @JsonProperty("country") String country, @JsonProperty("countryName") String countryName, @JsonProperty("line1") String line1, @JsonProperty("postalCode") String postalCode) {
+        this.city = city;
+        this.country = country;
+        this.countryName = countryName;
+        this.line1 = line1;
+        this.postalCode = postalCode;
+  }
 }

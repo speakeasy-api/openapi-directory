@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTunnelResponse {
     
     public String contentType;
+
     public DescribeTunnelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTunnelResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTunnelResponse describeTunnelResponse;
+
     public DescribeTunnelResponse withDescribeTunnelResponse(org.openapis.openapi.models.shared.DescribeTunnelResponse describeTunnelResponse) {
         this.describeTunnelResponse = describeTunnelResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTunnelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeTunnelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeTunnelResponse {
     
     
     public Integer statusCode;
+
     public DescribeTunnelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeTunnelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTunnelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeTunnelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CellLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colIndex")
     public Integer colIndex;
+
     public CellLocation withColIndex(Integer colIndex) {
         this.colIndex = colIndex;
         return this;
@@ -26,9 +27,11 @@ public class CellLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowIndex")
     public Integer rowIndex;
+
     public CellLocation withRowIndex(Integer rowIndex) {
         this.rowIndex = rowIndex;
         return this;
     }
     
+    public CellLocation(){}
 }

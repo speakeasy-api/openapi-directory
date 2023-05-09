@@ -12,6 +12,7 @@ public class InvoiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public InvoiceAttachment withId(Integer id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class InvoiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceId")
     public Integer invoiceId;
+
     public InvoiceAttachment withInvoiceId(Integer invoiceId) {
         this.invoiceId = invoiceId;
         return this;
@@ -28,6 +30,7 @@ public class InvoiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Link")
     public String link;
+
     public InvoiceAttachment withLink(String link) {
         this.link = link;
         return this;
@@ -36,6 +39,7 @@ public class InvoiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObfuscatedFileName")
     public String obfuscatedFileName;
+
     public InvoiceAttachment withObfuscatedFileName(String obfuscatedFileName) {
         this.obfuscatedFileName = obfuscatedFileName;
         return this;
@@ -44,6 +48,7 @@ public class InvoiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginalFileName")
     public String originalFileName;
+
     public InvoiceAttachment withOriginalFileName(String originalFileName) {
         this.originalFileName = originalFileName;
         return this;
@@ -52,6 +57,7 @@ public class InvoiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Long size;
+
     public InvoiceAttachment withSize(Long size) {
         this.size = size;
         return this;
@@ -60,9 +66,11 @@ public class InvoiceAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public InvoiceAttachmentTypeEnum type;
+
     public InvoiceAttachment withType(InvoiceAttachmentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InvoiceAttachment(){}
 }

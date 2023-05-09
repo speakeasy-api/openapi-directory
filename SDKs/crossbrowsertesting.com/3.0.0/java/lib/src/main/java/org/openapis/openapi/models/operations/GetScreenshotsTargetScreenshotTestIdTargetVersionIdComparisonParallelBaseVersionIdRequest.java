@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest {
@@ -12,6 +13,7 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParall
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=base_version_id")
     public Long baseVersionId;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest withBaseVersionId(Long baseVersionId) {
         this.baseVersionId = baseVersionId;
         return this;
@@ -22,6 +24,7 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParall
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -32,6 +35,7 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParall
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public String format;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -42,6 +46,7 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParall
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_screenshot_test_id")
     public Long targetScreenshotTestId;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest withTargetScreenshotTestId(Long targetScreenshotTestId) {
         this.targetScreenshotTestId = targetScreenshotTestId;
         return this;
@@ -52,6 +57,7 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParall
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_version_id")
     public Long targetVersionId;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest withTargetVersionId(Long targetVersionId) {
         this.targetVersionId = targetVersionId;
         return this;
@@ -62,9 +68,15 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParall
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tolerance")
     public Double tolerance;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest withTolerance(Double tolerance) {
         this.tolerance = tolerance;
         return this;
     }
     
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest(@JsonProperty("base_version_id") Long baseVersionId, @JsonProperty("target_screenshot_test_id") Long targetScreenshotTestId, @JsonProperty("target_version_id") Long targetVersionId) {
+        this.baseVersionId = baseVersionId;
+        this.targetScreenshotTestId = targetScreenshotTestId;
+        this.targetVersionId = targetVersionId;
+  }
 }

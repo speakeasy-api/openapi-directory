@@ -58,11 +58,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsensehostReportsGenerateResponse res = new org.openapis.openapi.models.operations.AdsensehostReportsGenerateResponse() {{
+        org.openapis.openapi.models.operations.AdsensehostReportsGenerateResponse res = new org.openapis.openapi.models.operations.AdsensehostReportsGenerateResponse(contentType, httpRes.statusCode()) {{
             report = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

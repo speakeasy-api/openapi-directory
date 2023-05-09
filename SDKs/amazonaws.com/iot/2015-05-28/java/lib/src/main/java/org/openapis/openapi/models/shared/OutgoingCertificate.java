@@ -20,6 +20,7 @@ public class OutgoingCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateArn")
     public String certificateArn;
+
     public OutgoingCertificate withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -28,6 +29,7 @@ public class OutgoingCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateId")
     public String certificateId;
+
     public OutgoingCertificate withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -38,6 +40,7 @@ public class OutgoingCertificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public OutgoingCertificate withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -48,6 +51,7 @@ public class OutgoingCertificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("transferDate")
     public OffsetDateTime transferDate;
+
     public OutgoingCertificate withTransferDate(OffsetDateTime transferDate) {
         this.transferDate = transferDate;
         return this;
@@ -56,6 +60,7 @@ public class OutgoingCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferMessage")
     public String transferMessage;
+
     public OutgoingCertificate withTransferMessage(String transferMessage) {
         this.transferMessage = transferMessage;
         return this;
@@ -64,9 +69,11 @@ public class OutgoingCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferredTo")
     public String transferredTo;
+
     public OutgoingCertificate withTransferredTo(String transferredTo) {
         this.transferredTo = transferredTo;
         return this;
     }
     
+    public OutgoingCertificate(){}
 }

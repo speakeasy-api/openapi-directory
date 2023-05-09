@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModelInfrastructureConfig {
     @JsonProperty("InfrastructureType")
     public ModelInfrastructureTypeEnum infrastructureType;
+
     public ModelInfrastructureConfig withInfrastructureType(ModelInfrastructureTypeEnum infrastructureType) {
         this.infrastructureType = infrastructureType;
         return this;
@@ -19,9 +20,14 @@ public class ModelInfrastructureConfig {
     
     @JsonProperty("RealTimeInferenceConfig")
     public RealTimeInferenceConfig realTimeInferenceConfig;
+
     public ModelInfrastructureConfig withRealTimeInferenceConfig(RealTimeInferenceConfig realTimeInferenceConfig) {
         this.realTimeInferenceConfig = realTimeInferenceConfig;
         return this;
     }
     
+    public ModelInfrastructureConfig(@JsonProperty("InfrastructureType") ModelInfrastructureTypeEnum infrastructureType, @JsonProperty("RealTimeInferenceConfig") RealTimeInferenceConfig realTimeInferenceConfig) {
+        this.infrastructureType = infrastructureType;
+        this.realTimeInferenceConfig = realTimeInferenceConfig;
+  }
 }

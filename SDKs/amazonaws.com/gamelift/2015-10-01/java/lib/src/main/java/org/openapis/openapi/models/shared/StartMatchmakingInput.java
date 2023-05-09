@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartMatchmakingInput {
     @JsonProperty("ConfigurationName")
     public String configurationName;
+
     public StartMatchmakingInput withConfigurationName(String configurationName) {
         this.configurationName = configurationName;
         return this;
@@ -18,6 +19,7 @@ public class StartMatchmakingInput {
     
     @JsonProperty("Players")
     public Player[] players;
+
     public StartMatchmakingInput withPlayers(Player[] players) {
         this.players = players;
         return this;
@@ -26,9 +28,14 @@ public class StartMatchmakingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TicketId")
     public String ticketId;
+
     public StartMatchmakingInput withTicketId(String ticketId) {
         this.ticketId = ticketId;
         return this;
     }
     
+    public StartMatchmakingInput(@JsonProperty("ConfigurationName") String configurationName, @JsonProperty("Players") Player[] players) {
+        this.configurationName = configurationName;
+        this.players = players;
+  }
 }

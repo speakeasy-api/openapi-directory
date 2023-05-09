@@ -15,9 +15,11 @@ public class PutOrganizationConfigRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationConfigRuleArn")
     public String organizationConfigRuleArn;
+
     public PutOrganizationConfigRuleResponse withOrganizationConfigRuleArn(String organizationConfigRuleArn) {
         this.organizationConfigRuleArn = organizationConfigRuleArn;
         return this;
     }
     
+    public PutOrganizationConfigRuleResponse(){}
 }

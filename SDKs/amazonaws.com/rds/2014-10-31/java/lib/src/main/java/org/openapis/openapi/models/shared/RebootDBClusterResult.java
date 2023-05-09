@@ -15,9 +15,11 @@ public class RebootDBClusterResult {
      */
     
     public DBCluster dbCluster;
+
     public RebootDBClusterResult withDBCluster(DBCluster dbCluster) {
         this.dbCluster = dbCluster;
         return this;
     }
     
+    public RebootDBClusterResult(){}
 }

@@ -18,6 +18,7 @@ public class ApigatewayListApisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apis")
     public ApigatewayApi[] apis;
+
     public ApigatewayListApisResponse withApis(ApigatewayApi[] apis) {
         this.apis = apis;
         return this;
@@ -29,6 +30,7 @@ public class ApigatewayListApisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ApigatewayListApisResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ApigatewayListApisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachableLocations")
     public String[] unreachableLocations;
+
     public ApigatewayListApisResponse withUnreachableLocations(String[] unreachableLocations) {
         this.unreachableLocations = unreachableLocations;
         return this;
     }
     
+    public ApigatewayListApisResponse(){}
 }

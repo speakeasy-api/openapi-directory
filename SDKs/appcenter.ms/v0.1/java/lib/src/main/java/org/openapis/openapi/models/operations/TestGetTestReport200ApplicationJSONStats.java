@@ -12,6 +12,7 @@ public class TestGetTestReport200ApplicationJSONStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifacts")
     public java.util.Map<String, String> artifacts;
+
     public TestGetTestReport200ApplicationJSONStats withArtifacts(java.util.Map<String, String> artifacts) {
         this.artifacts = artifacts;
         return this;
@@ -19,6 +20,7 @@ public class TestGetTestReport200ApplicationJSONStats {
     
     @JsonProperty("devices")
     public Double devices;
+
     public TestGetTestReport200ApplicationJSONStats withDevices(Double devices) {
         this.devices = devices;
         return this;
@@ -26,6 +28,7 @@ public class TestGetTestReport200ApplicationJSONStats {
     
     @JsonProperty("devices_failed")
     public Double devicesFailed;
+
     public TestGetTestReport200ApplicationJSONStats withDevicesFailed(Double devicesFailed) {
         this.devicesFailed = devicesFailed;
         return this;
@@ -33,6 +36,7 @@ public class TestGetTestReport200ApplicationJSONStats {
     
     @JsonProperty("devices_finished")
     public Double devicesFinished;
+
     public TestGetTestReport200ApplicationJSONStats withDevicesFinished(Double devicesFinished) {
         this.devicesFinished = devicesFinished;
         return this;
@@ -40,6 +44,7 @@ public class TestGetTestReport200ApplicationJSONStats {
     
     @JsonProperty("devices_not_runned")
     public Double devicesNotRunned;
+
     public TestGetTestReport200ApplicationJSONStats withDevicesNotRunned(Double devicesNotRunned) {
         this.devicesNotRunned = devicesNotRunned;
         return this;
@@ -47,6 +52,7 @@ public class TestGetTestReport200ApplicationJSONStats {
     
     @JsonProperty("devices_skipped")
     public Double devicesSkipped;
+
     public TestGetTestReport200ApplicationJSONStats withDevicesSkipped(Double devicesSkipped) {
         this.devicesSkipped = devicesSkipped;
         return this;
@@ -54,6 +60,7 @@ public class TestGetTestReport200ApplicationJSONStats {
     
     @JsonProperty("failed")
     public Double failed;
+
     public TestGetTestReport200ApplicationJSONStats withFailed(Double failed) {
         this.failed = failed;
         return this;
@@ -61,6 +68,7 @@ public class TestGetTestReport200ApplicationJSONStats {
     
     @JsonProperty("filesize")
     public Double filesize;
+
     public TestGetTestReport200ApplicationJSONStats withFilesize(Double filesize) {
         this.filesize = filesize;
         return this;
@@ -68,6 +76,7 @@ public class TestGetTestReport200ApplicationJSONStats {
     
     @JsonProperty("os")
     public Double os;
+
     public TestGetTestReport200ApplicationJSONStats withOs(Double os) {
         this.os = os;
         return this;
@@ -75,6 +84,7 @@ public class TestGetTestReport200ApplicationJSONStats {
     
     @JsonProperty("passed")
     public Double passed;
+
     public TestGetTestReport200ApplicationJSONStats withPassed(Double passed) {
         this.passed = passed;
         return this;
@@ -82,6 +92,7 @@ public class TestGetTestReport200ApplicationJSONStats {
     
     @JsonProperty("skipped")
     public Double skipped;
+
     public TestGetTestReport200ApplicationJSONStats withSkipped(Double skipped) {
         this.skipped = skipped;
         return this;
@@ -89,6 +100,7 @@ public class TestGetTestReport200ApplicationJSONStats {
     
     @JsonProperty("step_count")
     public Double stepCount;
+
     public TestGetTestReport200ApplicationJSONStats withStepCount(Double stepCount) {
         this.stepCount = stepCount;
         return this;
@@ -96,6 +108,7 @@ public class TestGetTestReport200ApplicationJSONStats {
     
     @JsonProperty("total")
     public Double total;
+
     public TestGetTestReport200ApplicationJSONStats withTotal(Double total) {
         this.total = total;
         return this;
@@ -103,9 +116,25 @@ public class TestGetTestReport200ApplicationJSONStats {
     
     @JsonProperty("totalDeviceMinutes")
     public Double totalDeviceMinutes;
+
     public TestGetTestReport200ApplicationJSONStats withTotalDeviceMinutes(Double totalDeviceMinutes) {
         this.totalDeviceMinutes = totalDeviceMinutes;
         return this;
     }
     
+    public TestGetTestReport200ApplicationJSONStats(@JsonProperty("devices") Double devices, @JsonProperty("devices_failed") Double devicesFailed, @JsonProperty("devices_finished") Double devicesFinished, @JsonProperty("devices_not_runned") Double devicesNotRunned, @JsonProperty("devices_skipped") Double devicesSkipped, @JsonProperty("failed") Double failed, @JsonProperty("filesize") Double filesize, @JsonProperty("os") Double os, @JsonProperty("passed") Double passed, @JsonProperty("skipped") Double skipped, @JsonProperty("step_count") Double stepCount, @JsonProperty("total") Double total, @JsonProperty("totalDeviceMinutes") Double totalDeviceMinutes) {
+        this.devices = devices;
+        this.devicesFailed = devicesFailed;
+        this.devicesFinished = devicesFinished;
+        this.devicesNotRunned = devicesNotRunned;
+        this.devicesSkipped = devicesSkipped;
+        this.failed = failed;
+        this.filesize = filesize;
+        this.os = os;
+        this.passed = passed;
+        this.skipped = skipped;
+        this.stepCount = stepCount;
+        this.total = total;
+        this.totalDeviceMinutes = totalDeviceMinutes;
+  }
 }

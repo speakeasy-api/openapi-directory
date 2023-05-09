@@ -12,6 +12,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZones")
     public String[] availabilityZones;
+
     public CreateClusterRequest withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -20,6 +21,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterEndpointEncryptionType")
     public ClusterEndpointEncryptionTypeEnum clusterEndpointEncryptionType;
+
     public CreateClusterRequest withClusterEndpointEncryptionType(ClusterEndpointEncryptionTypeEnum clusterEndpointEncryptionType) {
         this.clusterEndpointEncryptionType = clusterEndpointEncryptionType;
         return this;
@@ -27,6 +29,7 @@ public class CreateClusterRequest {
     
     @JsonProperty("ClusterName")
     public String clusterName;
+
     public CreateClusterRequest withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -35,6 +38,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateClusterRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -42,6 +46,7 @@ public class CreateClusterRequest {
     
     @JsonProperty("IamRoleArn")
     public String iamRoleArn;
+
     public CreateClusterRequest withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
@@ -49,6 +54,7 @@ public class CreateClusterRequest {
     
     @JsonProperty("NodeType")
     public String nodeType;
+
     public CreateClusterRequest withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -57,6 +63,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationTopicArn")
     public String notificationTopicArn;
+
     public CreateClusterRequest withNotificationTopicArn(String notificationTopicArn) {
         this.notificationTopicArn = notificationTopicArn;
         return this;
@@ -65,6 +72,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterGroupName")
     public String parameterGroupName;
+
     public CreateClusterRequest withParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
         return this;
@@ -73,6 +81,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public CreateClusterRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -80,6 +89,7 @@ public class CreateClusterRequest {
     
     @JsonProperty("ReplicationFactor")
     public Long replicationFactor;
+
     public CreateClusterRequest withReplicationFactor(Long replicationFactor) {
         this.replicationFactor = replicationFactor;
         return this;
@@ -88,6 +98,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SSESpecification")
     public SSESpecification sseSpecification;
+
     public CreateClusterRequest withSSESpecification(SSESpecification sseSpecification) {
         this.sseSpecification = sseSpecification;
         return this;
@@ -96,6 +107,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public CreateClusterRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -104,6 +116,7 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetGroupName")
     public String subnetGroupName;
+
     public CreateClusterRequest withSubnetGroupName(String subnetGroupName) {
         this.subnetGroupName = subnetGroupName;
         return this;
@@ -112,9 +125,16 @@ public class CreateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateClusterRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateClusterRequest(@JsonProperty("ClusterName") String clusterName, @JsonProperty("IamRoleArn") String iamRoleArn, @JsonProperty("NodeType") String nodeType, @JsonProperty("ReplicationFactor") Long replicationFactor) {
+        this.clusterName = clusterName;
+        this.iamRoleArn = iamRoleArn;
+        this.nodeType = nodeType;
+        this.replicationFactor = replicationFactor;
+  }
 }

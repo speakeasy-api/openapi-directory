@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBotRecommendationResponse {
@@ -12,6 +13,7 @@ public class UpdateBotRecommendationResponse {
      */
     
     public Object conflictException;
+
     public UpdateBotRecommendationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateBotRecommendationResponse {
     
     
     public String contentType;
+
     public UpdateBotRecommendationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBotRecommendationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateBotRecommendationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateBotRecommendationResponse {
      */
     
     public Object preconditionFailedException;
+
     public UpdateBotRecommendationResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateBotRecommendationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateBotRecommendationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateBotRecommendationResponse {
     
     
     public Integer statusCode;
+
     public UpdateBotRecommendationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateBotRecommendationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBotRecommendationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateBotRecommendationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateBotRecommendationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateBotRecommendationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateBotRecommendationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateBotRecommendationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateBotRecommendationResponse updateBotRecommendationResponse;
+
     public UpdateBotRecommendationResponse withUpdateBotRecommendationResponse(org.openapis.openapi.models.shared.UpdateBotRecommendationResponse updateBotRecommendationResponse) {
         this.updateBotRecommendationResponse = updateBotRecommendationResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateBotRecommendationResponse {
      */
     
     public Object validationException;
+
     public UpdateBotRecommendationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateBotRecommendationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingReportsCompatibleFieldsQueryResponse {
@@ -12,6 +13,7 @@ public class DfareportingReportsCompatibleFieldsQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.CompatibleFields compatibleFields;
+
     public DfareportingReportsCompatibleFieldsQueryResponse withCompatibleFields(org.openapis.openapi.models.shared.CompatibleFields compatibleFields) {
         this.compatibleFields = compatibleFields;
         return this;
@@ -19,6 +21,7 @@ public class DfareportingReportsCompatibleFieldsQueryResponse {
     
     
     public String contentType;
+
     public DfareportingReportsCompatibleFieldsQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DfareportingReportsCompatibleFieldsQueryResponse {
     
     
     public Integer statusCode;
+
     public DfareportingReportsCompatibleFieldsQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingReportsCompatibleFieldsQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingReportsCompatibleFieldsQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DfareportingReportsCompatibleFieldsQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

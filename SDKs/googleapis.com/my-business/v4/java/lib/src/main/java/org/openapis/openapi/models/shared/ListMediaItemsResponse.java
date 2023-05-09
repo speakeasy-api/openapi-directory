@@ -18,6 +18,7 @@ public class ListMediaItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaItems")
     public MediaItem[] mediaItems;
+
     public ListMediaItemsResponse withMediaItems(MediaItem[] mediaItems) {
         this.mediaItems = mediaItems;
         return this;
@@ -29,6 +30,7 @@ public class ListMediaItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListMediaItemsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListMediaItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalMediaItemCount")
     public Integer totalMediaItemCount;
+
     public ListMediaItemsResponse withTotalMediaItemCount(Integer totalMediaItemCount) {
         this.totalMediaItemCount = totalMediaItemCount;
         return this;
     }
     
+    public ListMediaItemsResponse(){}
 }

@@ -15,6 +15,7 @@ public class ListProfileObjectTypeTemplateItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceName")
     public String sourceName;
+
     public ListProfileObjectTypeTemplateItem withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
@@ -23,6 +24,7 @@ public class ListProfileObjectTypeTemplateItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceObject")
     public String sourceObject;
+
     public ListProfileObjectTypeTemplateItem withSourceObject(String sourceObject) {
         this.sourceObject = sourceObject;
         return this;
@@ -31,9 +33,11 @@ public class ListProfileObjectTypeTemplateItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateId")
     public String templateId;
+
     public ListProfileObjectTypeTemplateItem withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public ListProfileObjectTypeTemplateItem(){}
 }

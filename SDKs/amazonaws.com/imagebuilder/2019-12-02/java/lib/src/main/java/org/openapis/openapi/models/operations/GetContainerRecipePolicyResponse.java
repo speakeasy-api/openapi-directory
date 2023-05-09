@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContainerRecipePolicyResponse {
@@ -12,6 +13,7 @@ public class GetContainerRecipePolicyResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public GetContainerRecipePolicyResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class GetContainerRecipePolicyResponse {
     
     
     public String contentType;
+
     public GetContainerRecipePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetContainerRecipePolicyResponse {
      */
     
     public Object forbiddenException;
+
     public GetContainerRecipePolicyResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetContainerRecipePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetContainerRecipePolicyResponse getContainerRecipePolicyResponse;
+
     public GetContainerRecipePolicyResponse withGetContainerRecipePolicyResponse(org.openapis.openapi.models.shared.GetContainerRecipePolicyResponse getContainerRecipePolicyResponse) {
         this.getContainerRecipePolicyResponse = getContainerRecipePolicyResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetContainerRecipePolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public GetContainerRecipePolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class GetContainerRecipePolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetContainerRecipePolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetContainerRecipePolicyResponse {
      */
     
     public Object serviceException;
+
     public GetContainerRecipePolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class GetContainerRecipePolicyResponse {
     
     
     public Integer statusCode;
+
     public GetContainerRecipePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetContainerRecipePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContainerRecipePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetContainerRecipePolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetContainerRecipePolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public GetContainerRecipePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

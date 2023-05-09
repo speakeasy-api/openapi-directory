@@ -82,12 +82,10 @@ public class RoutingAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRouteResponse res = new org.openapis.openapi.models.operations.GetRouteResponse() {{
+        org.openapis.openapi.models.operations.GetRouteResponse res = new org.openapis.openapi.models.operations.GetRouteResponse(contentType, httpRes.statusCode()) {{
             routeResponse = null;
             ghError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -134,11 +132,9 @@ public class RoutingAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRouteInfoResponse res = new org.openapis.openapi.models.operations.GetRouteInfoResponse() {{
+        org.openapis.openapi.models.operations.GetRouteInfoResponse res = new org.openapis.openapi.models.operations.GetRouteInfoResponse(contentType, httpRes.statusCode()) {{
             infoResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,12 +195,10 @@ public class RoutingAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRouteResponse res = new org.openapis.openapi.models.operations.PostRouteResponse() {{
+        org.openapis.openapi.models.operations.PostRouteResponse res = new org.openapis.openapi.models.operations.PostRouteResponse(contentType, httpRes.statusCode()) {{
             routeResponse = null;
             ghError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

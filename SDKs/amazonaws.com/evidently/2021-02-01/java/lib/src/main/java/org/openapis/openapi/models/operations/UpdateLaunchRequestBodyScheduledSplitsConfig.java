@@ -15,9 +15,11 @@ public class UpdateLaunchRequestBodyScheduledSplitsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public org.openapis.openapi.models.shared.ScheduledSplitConfig[] steps;
+
     public UpdateLaunchRequestBodyScheduledSplitsConfig withSteps(org.openapis.openapi.models.shared.ScheduledSplitConfig[] steps) {
         this.steps = steps;
         return this;
     }
     
+    public UpdateLaunchRequestBodyScheduledSplitsConfig(){}
 }

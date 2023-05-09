@@ -18,6 +18,7 @@ public class TableRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnSpan")
     public Integer columnSpan;
+
     public TableRange withColumnSpan(Integer columnSpan) {
         this.columnSpan = columnSpan;
         return this;
@@ -29,6 +30,7 @@ public class TableRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowSpan")
     public Integer rowSpan;
+
     public TableRange withRowSpan(Integer rowSpan) {
         this.rowSpan = rowSpan;
         return this;
@@ -40,9 +42,11 @@ public class TableRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableCellLocation")
     public TableCellLocation tableCellLocation;
+
     public TableRange withTableCellLocation(TableCellLocation tableCellLocation) {
         this.tableCellLocation = tableCellLocation;
         return this;
     }
     
+    public TableRange(){}
 }

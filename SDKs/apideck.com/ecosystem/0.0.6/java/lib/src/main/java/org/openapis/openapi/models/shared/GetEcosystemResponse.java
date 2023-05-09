@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetEcosystemResponse {
     @JsonProperty("data")
     public Ecosystem data;
+
     public GetEcosystemResponse withData(Ecosystem data) {
         this.data = data;
         return this;
@@ -22,6 +23,7 @@ public class GetEcosystemResponse {
      */
     @JsonProperty("status")
     public String status;
+
     public GetEcosystemResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -32,9 +34,15 @@ public class GetEcosystemResponse {
      */
     @JsonProperty("status_code")
     public Long statusCode;
+
     public GetEcosystemResponse withStatusCode(Long statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public GetEcosystemResponse(@JsonProperty("data") Ecosystem data, @JsonProperty("status") String status, @JsonProperty("status_code") Long statusCode) {
+        this.data = data;
+        this.status = status;
+        this.statusCode = statusCode;
+  }
 }

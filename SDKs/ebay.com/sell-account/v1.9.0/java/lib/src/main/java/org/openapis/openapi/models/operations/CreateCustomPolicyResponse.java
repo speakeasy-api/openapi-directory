@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCustomPolicyResponse {
     
     public String contentType;
+
     public CreateCustomPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateCustomPolicyResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreateCustomPolicyResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class CreateCustomPolicyResponse {
     
     
     public Integer statusCode;
+
     public CreateCustomPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class CreateCustomPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCustomPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class CreateCustomPolicyResponse {
      */
     
     public java.util.Map<String, Object> createCustomPolicy201ApplicationJSONObject;
+
     public CreateCustomPolicyResponse withCreateCustomPolicy201ApplicationJSONObject(java.util.Map<String, Object> createCustomPolicy201ApplicationJSONObject) {
         this.createCustomPolicy201ApplicationJSONObject = createCustomPolicy201ApplicationJSONObject;
         return this;
     }
     
+    public CreateCustomPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

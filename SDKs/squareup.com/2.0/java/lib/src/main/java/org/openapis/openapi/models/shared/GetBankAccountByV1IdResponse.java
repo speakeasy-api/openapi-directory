@@ -20,6 +20,7 @@ public class GetBankAccountByV1IdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_account")
     public BankAccount bankAccount;
+
     public GetBankAccountByV1IdResponse withBankAccount(BankAccount bankAccount) {
         this.bankAccount = bankAccount;
         return this;
@@ -31,9 +32,11 @@ public class GetBankAccountByV1IdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public GetBankAccountByV1IdResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetBankAccountByV1IdResponse(){}
 }

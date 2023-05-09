@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateImagePermissionsRequest {
     @JsonProperty("ImagePermissions")
     public ImagePermissions imagePermissions;
+
     public UpdateImagePermissionsRequest withImagePermissions(ImagePermissions imagePermissions) {
         this.imagePermissions = imagePermissions;
         return this;
@@ -16,6 +17,7 @@ public class UpdateImagePermissionsRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateImagePermissionsRequest withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +25,15 @@ public class UpdateImagePermissionsRequest {
     
     @JsonProperty("SharedAccountId")
     public String sharedAccountId;
+
     public UpdateImagePermissionsRequest withSharedAccountId(String sharedAccountId) {
         this.sharedAccountId = sharedAccountId;
         return this;
     }
     
+    public UpdateImagePermissionsRequest(@JsonProperty("ImagePermissions") ImagePermissions imagePermissions, @JsonProperty("Name") String name, @JsonProperty("SharedAccountId") String sharedAccountId) {
+        this.imagePermissions = imagePermissions;
+        this.name = name;
+        this.sharedAccountId = sharedAccountId;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDatabaseInput {
     @JsonProperty("CatalogName")
     public String catalogName;
+
     public GetDatabaseInput withCatalogName(String catalogName) {
         this.catalogName = catalogName;
         return this;
@@ -16,9 +17,14 @@ public class GetDatabaseInput {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetDatabaseInput withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
     }
     
+    public GetDatabaseInput(@JsonProperty("CatalogName") String catalogName, @JsonProperty("DatabaseName") String databaseName) {
+        this.catalogName = catalogName;
+        this.databaseName = databaseName;
+  }
 }

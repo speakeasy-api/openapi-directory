@@ -12,9 +12,11 @@ public class GetBooks200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.Book[] data;
+
     public GetBooks200ApplicationJSON withData(org.openapis.openapi.models.shared.Book[] data) {
         this.data = data;
         return this;
     }
     
+    public GetBooks200ApplicationJSON(){}
 }

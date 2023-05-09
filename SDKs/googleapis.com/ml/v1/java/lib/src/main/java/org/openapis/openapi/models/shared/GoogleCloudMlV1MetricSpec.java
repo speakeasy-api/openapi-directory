@@ -18,6 +18,7 @@ public class GoogleCloudMlV1MetricSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public GoogleCloudMlV1MetricSpecNameEnum name;
+
     public GoogleCloudMlV1MetricSpec withName(GoogleCloudMlV1MetricSpecNameEnum name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudMlV1MetricSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public Integer target;
+
     public GoogleCloudMlV1MetricSpec withTarget(Integer target) {
         this.target = target;
         return this;
     }
     
+    public GoogleCloudMlV1MetricSpec(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetCustomEntityTypesRequest {
     @JsonProperty("Names")
     public String[] names;
+
     public BatchGetCustomEntityTypesRequest withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public BatchGetCustomEntityTypesRequest(@JsonProperty("Names") String[] names) {
+        this.names = names;
+  }
 }

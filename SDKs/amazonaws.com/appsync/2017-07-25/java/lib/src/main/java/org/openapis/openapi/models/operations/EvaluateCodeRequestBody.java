@@ -14,6 +14,7 @@ public class EvaluateCodeRequestBody {
      */
     @JsonProperty("code")
     public String code;
+
     public EvaluateCodeRequestBody withCode(String code) {
         this.code = code;
         return this;
@@ -24,6 +25,7 @@ public class EvaluateCodeRequestBody {
      */
     @JsonProperty("context")
     public String context;
+
     public EvaluateCodeRequestBody withContext(String context) {
         this.context = context;
         return this;
@@ -35,6 +37,7 @@ public class EvaluateCodeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("function")
     public String function;
+
     public EvaluateCodeRequestBody withFunction(String function) {
         this.function = function;
         return this;
@@ -45,9 +48,15 @@ public class EvaluateCodeRequestBody {
      */
     @JsonProperty("runtime")
     public EvaluateCodeRequestBodyRuntime runtime;
+
     public EvaluateCodeRequestBody withRuntime(EvaluateCodeRequestBodyRuntime runtime) {
         this.runtime = runtime;
         return this;
     }
     
+    public EvaluateCodeRequestBody(@JsonProperty("code") String code, @JsonProperty("context") String context, @JsonProperty("runtime") EvaluateCodeRequestBodyRuntime runtime) {
+        this.code = code;
+        this.context = context;
+        this.runtime = runtime;
+  }
 }

@@ -15,6 +15,7 @@ public class ConnectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedIps")
     public String[] allowedIps;
+
     public ConnectionDetails withAllowedIps(String[] allowedIps) {
         this.allowedIps = allowedIps;
         return this;
@@ -23,6 +24,7 @@ public class ConnectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientPublicKey")
     public String clientPublicKey;
+
     public ConnectionDetails withClientPublicKey(String clientPublicKey) {
         this.clientPublicKey = clientPublicKey;
         return this;
@@ -31,6 +33,7 @@ public class ConnectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientTunnelAddress")
     public String clientTunnelAddress;
+
     public ConnectionDetails withClientTunnelAddress(String clientTunnelAddress) {
         this.clientTunnelAddress = clientTunnelAddress;
         return this;
@@ -39,6 +42,7 @@ public class ConnectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerEndpoint")
     public String serverEndpoint;
+
     public ConnectionDetails withServerEndpoint(String serverEndpoint) {
         this.serverEndpoint = serverEndpoint;
         return this;
@@ -47,6 +51,7 @@ public class ConnectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerPublicKey")
     public String serverPublicKey;
+
     public ConnectionDetails withServerPublicKey(String serverPublicKey) {
         this.serverPublicKey = serverPublicKey;
         return this;
@@ -55,9 +60,11 @@ public class ConnectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerTunnelAddress")
     public String serverTunnelAddress;
+
     public ConnectionDetails withServerTunnelAddress(String serverTunnelAddress) {
         this.serverTunnelAddress = serverTunnelAddress;
         return this;
     }
     
+    public ConnectionDetails(){}
 }

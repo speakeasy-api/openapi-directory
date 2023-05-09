@@ -22,6 +22,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("AddressAddition")
     @SpeakeasyMetadata("form:name=AddressAddition")
     public String addressAddition;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withAddressAddition(String addressAddition) {
         this.addressAddition = addressAddition;
         return this;
@@ -34,6 +35,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("AddressType")
     @SpeakeasyMetadata("form:name=AddressType")
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum addressType;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withAddressType(BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum addressType) {
         this.addressType = addressType;
         return this;
@@ -48,6 +50,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("ArchivedAt")
     @SpeakeasyMetadata("form:name=ArchivedAt")
     public OffsetDateTime archivedAt;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withArchivedAt(OffsetDateTime archivedAt) {
         this.archivedAt = archivedAt;
         return this;
@@ -57,6 +60,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("City")
     @SpeakeasyMetadata("form:name=City")
     public String city;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withCity(String city) {
         this.city = city;
         return this;
@@ -69,6 +73,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("Company")
     @SpeakeasyMetadata("form:name=Company")
     public String company;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withCompany(String company) {
         this.company = company;
         return this;
@@ -81,6 +86,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("CountryCode")
     @SpeakeasyMetadata("form:name=CountryCode")
     public String countryCode;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -93,6 +99,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("CustomerId")
     @SpeakeasyMetadata("form:name=CustomerId")
     public Long customerId;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -102,6 +109,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("Email")
     @SpeakeasyMetadata("form:name=Email")
     public String email;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withEmail(String email) {
         this.email = email;
         return this;
@@ -111,6 +119,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("Fax")
     @SpeakeasyMetadata("form:name=Fax")
     public String fax;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withFax(String fax) {
         this.fax = fax;
         return this;
@@ -120,6 +129,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("FirstName")
     @SpeakeasyMetadata("form:name=FirstName")
     public String firstName;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -129,6 +139,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("Housenumber")
     @SpeakeasyMetadata("form:name=Housenumber")
     public String housenumber;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withHousenumber(String housenumber) {
         this.housenumber = housenumber;
         return this;
@@ -141,6 +152,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Long id;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withId(Long id) {
         this.id = id;
         return this;
@@ -150,6 +162,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("LastName")
     @SpeakeasyMetadata("form:name=LastName")
     public String lastName;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -162,6 +175,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("Name2")
     @SpeakeasyMetadata("form:name=Name2")
     public String name2;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withName2(String name2) {
         this.name2 = name2;
         return this;
@@ -176,6 +190,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("RestoredAt")
     @SpeakeasyMetadata("form:name=RestoredAt")
     public OffsetDateTime restoredAt;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withRestoredAt(OffsetDateTime restoredAt) {
         this.restoredAt = restoredAt;
         return this;
@@ -185,6 +200,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("State")
     @SpeakeasyMetadata("form:name=State")
     public String state;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withState(String state) {
         this.state = state;
         return this;
@@ -194,6 +210,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("Street")
     @SpeakeasyMetadata("form:name=Street")
     public String street;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withStreet(String street) {
         this.street = street;
         return this;
@@ -203,6 +220,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("Tel1")
     @SpeakeasyMetadata("form:name=Tel1")
     public String tel1;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withTel1(String tel1) {
         this.tel1 = tel1;
         return this;
@@ -212,6 +230,7 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("Tel2")
     @SpeakeasyMetadata("form:name=Tel2")
     public String tel2;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withTel2(String tel2) {
         this.tel2 = tel2;
         return this;
@@ -221,9 +240,11 @@ public class BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel {
     @JsonProperty("Zip")
     @SpeakeasyMetadata("form:name=Zip")
     public String zip;
+
     public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel(){}
 }

@@ -18,9 +18,11 @@ public class NetworkAddressList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
     public NetworkAddress[] addresses;
+
     public NetworkAddressList withAddresses(NetworkAddress[] addresses) {
         this.addresses = addresses;
         return this;
     }
     
+    public NetworkAddressList(){}
 }

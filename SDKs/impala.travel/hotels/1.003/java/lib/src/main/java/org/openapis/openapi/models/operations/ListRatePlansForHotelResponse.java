@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRatePlansForHotelResponse {
     
     public String contentType;
+
     public ListRatePlansForHotelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ListRatePlansForHotelResponse {
     
     
     public Integer statusCode;
+
     public ListRatePlansForHotelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ListRatePlansForHotelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRatePlansForHotelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ListRatePlansForHotelResponse {
      */
     
     public org.openapis.openapi.models.shared.GenericError genericError;
+
     public ListRatePlansForHotelResponse withGenericError(org.openapis.openapi.models.shared.GenericError genericError) {
         this.genericError = genericError;
         return this;
@@ -40,6 +45,7 @@ public class ListRatePlansForHotelResponse {
     
     
     public ListRatePlansForHotel200ApplicationJSON listRatePlansForHotel200ApplicationJSONObject;
+
     public ListRatePlansForHotelResponse withListRatePlansForHotel200ApplicationJSONObject(ListRatePlansForHotel200ApplicationJSON listRatePlansForHotel200ApplicationJSONObject) {
         this.listRatePlansForHotel200ApplicationJSONObject = listRatePlansForHotel200ApplicationJSONObject;
         return this;
@@ -50,9 +56,14 @@ public class ListRatePlansForHotelResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ListRatePlansForHotelResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ListRatePlansForHotelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

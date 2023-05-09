@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteOrganizationalUnitRequest {
     @JsonProperty("OrganizationalUnitId")
     public String organizationalUnitId;
+
     public DeleteOrganizationalUnitRequest withOrganizationalUnitId(String organizationalUnitId) {
         this.organizationalUnitId = organizationalUnitId;
         return this;
     }
     
+    public DeleteOrganizationalUnitRequest(@JsonProperty("OrganizationalUnitId") String organizationalUnitId) {
+        this.organizationalUnitId = organizationalUnitId;
+  }
 }

@@ -18,6 +18,7 @@ public class CustomTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public CustomTemplate withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class CustomTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public CustomTemplate withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -40,6 +42,7 @@ public class CustomTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public CustomTemplate withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -51,6 +54,7 @@ public class CustomTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("galleryReference")
     public GalleryReference galleryReference;
+
     public CustomTemplate withGalleryReference(GalleryReference galleryReference) {
         this.galleryReference = galleryReference;
         return this;
@@ -62,6 +66,7 @@ public class CustomTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomTemplate withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class CustomTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public CustomTemplate withPath(String path) {
         this.path = path;
         return this;
@@ -84,6 +90,7 @@ public class CustomTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagManagerUrl")
     public String tagManagerUrl;
+
     public CustomTemplate withTagManagerUrl(String tagManagerUrl) {
         this.tagManagerUrl = tagManagerUrl;
         return this;
@@ -95,6 +102,7 @@ public class CustomTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateData")
     public String templateData;
+
     public CustomTemplate withTemplateData(String templateData) {
         this.templateData = templateData;
         return this;
@@ -106,6 +114,7 @@ public class CustomTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateId")
     public String templateId;
+
     public CustomTemplate withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
@@ -117,9 +126,11 @@ public class CustomTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public CustomTemplate withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public CustomTemplate(){}
 }

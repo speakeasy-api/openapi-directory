@@ -15,9 +15,11 @@ public class RouteFilterPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cidr")
     public String cidr;
+
     public RouteFilterPrefix withCidr(String cidr) {
         this.cidr = cidr;
         return this;
     }
     
+    public RouteFilterPrefix(){}
 }

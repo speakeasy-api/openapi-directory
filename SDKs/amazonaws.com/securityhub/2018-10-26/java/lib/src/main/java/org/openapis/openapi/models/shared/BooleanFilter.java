@@ -15,9 +15,11 @@ public class BooleanFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Boolean value;
+
     public BooleanFilter withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public BooleanFilter(){}
 }

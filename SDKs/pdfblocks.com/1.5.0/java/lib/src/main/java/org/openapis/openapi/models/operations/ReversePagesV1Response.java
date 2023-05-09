@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReversePagesV1Response {
     
     public String contentType;
+
     public ReversePagesV1Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReversePagesV1Response {
     
     
     public Integer statusCode;
+
     public ReversePagesV1Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReversePagesV1Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReversePagesV1Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReversePagesV1Response {
      */
     
     public byte[] reversePagesV1200ApplicationPdfBinaryString;
+
     public ReversePagesV1Response withReversePagesV1200ApplicationPdfBinaryString(byte[] reversePagesV1200ApplicationPdfBinaryString) {
         this.reversePagesV1200ApplicationPdfBinaryString = reversePagesV1200ApplicationPdfBinaryString;
         return this;
@@ -43,9 +48,14 @@ public class ReversePagesV1Response {
      */
     
     public ReversePagesV14XXApplicationProblemPlusJson reversePagesV14XXApplicationProblemPlusJsonObject;
+
     public ReversePagesV1Response withReversePagesV14XXApplicationProblemPlusJsonObject(ReversePagesV14XXApplicationProblemPlusJson reversePagesV14XXApplicationProblemPlusJsonObject) {
         this.reversePagesV14XXApplicationProblemPlusJsonObject = reversePagesV14XXApplicationProblemPlusJsonObject;
         return this;
     }
     
+    public ReversePagesV1Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

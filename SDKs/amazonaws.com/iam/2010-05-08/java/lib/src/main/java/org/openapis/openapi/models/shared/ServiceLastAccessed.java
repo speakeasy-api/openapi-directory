@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class ServiceLastAccessed {
     
     public OffsetDateTime lastAuthenticated;
+
     public ServiceLastAccessed withLastAuthenticated(OffsetDateTime lastAuthenticated) {
         this.lastAuthenticated = lastAuthenticated;
         return this;
@@ -19,6 +21,7 @@ public class ServiceLastAccessed {
     
     
     public String lastAuthenticatedEntity;
+
     public ServiceLastAccessed withLastAuthenticatedEntity(String lastAuthenticatedEntity) {
         this.lastAuthenticatedEntity = lastAuthenticatedEntity;
         return this;
@@ -26,6 +29,7 @@ public class ServiceLastAccessed {
     
     
     public String lastAuthenticatedRegion;
+
     public ServiceLastAccessed withLastAuthenticatedRegion(String lastAuthenticatedRegion) {
         this.lastAuthenticatedRegion = lastAuthenticatedRegion;
         return this;
@@ -33,6 +37,7 @@ public class ServiceLastAccessed {
     
     
     public String serviceName;
+
     public ServiceLastAccessed withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -40,6 +45,7 @@ public class ServiceLastAccessed {
     
     
     public String serviceNamespace;
+
     public ServiceLastAccessed withServiceNamespace(String serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
@@ -47,6 +53,7 @@ public class ServiceLastAccessed {
     
     
     public Long totalAuthenticatedEntities;
+
     public ServiceLastAccessed withTotalAuthenticatedEntities(Long totalAuthenticatedEntities) {
         this.totalAuthenticatedEntities = totalAuthenticatedEntities;
         return this;
@@ -54,9 +61,14 @@ public class ServiceLastAccessed {
     
     
     public TrackedActionLastAccessed[] trackedActionsLastAccessed;
+
     public ServiceLastAccessed withTrackedActionsLastAccessed(TrackedActionLastAccessed[] trackedActionsLastAccessed) {
         this.trackedActionsLastAccessed = trackedActionsLastAccessed;
         return this;
     }
     
+    public ServiceLastAccessed(@JsonProperty("ServiceName") String serviceName, @JsonProperty("ServiceNamespace") String serviceNamespace) {
+        this.serviceName = serviceName;
+        this.serviceNamespace = serviceNamespace;
+  }
 }

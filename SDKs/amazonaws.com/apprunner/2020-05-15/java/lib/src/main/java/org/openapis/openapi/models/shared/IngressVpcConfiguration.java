@@ -15,6 +15,7 @@ public class IngressVpcConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcEndpointId")
     public String vpcEndpointId;
+
     public IngressVpcConfiguration withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
@@ -23,9 +24,11 @@ public class IngressVpcConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public IngressVpcConfiguration withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public IngressVpcConfiguration(){}
 }

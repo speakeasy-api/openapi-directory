@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberReverseGeocodePositionExtRequest {
@@ -12,6 +13,7 @@ public class GetSearchVersionNumberReverseGeocodePositionExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetSearchVersionNumberReverseGeocodePositionExtRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -22,6 +24,7 @@ public class GetSearchVersionNumberReverseGeocodePositionExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
     public org.openapis.openapi.models.shared.ExtEnum ext;
+
     public GetSearchVersionNumberReverseGeocodePositionExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
         this.ext = ext;
         return this;
@@ -32,6 +35,7 @@ public class GetSearchVersionNumberReverseGeocodePositionExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=heading")
     public Float heading;
+
     public GetSearchVersionNumberReverseGeocodePositionExtRequest withHeading(Float heading) {
         this.heading = heading;
         return this;
@@ -42,6 +46,7 @@ public class GetSearchVersionNumberReverseGeocodePositionExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public String number;
+
     public GetSearchVersionNumberReverseGeocodePositionExtRequest withNumber(String number) {
         this.number = number;
         return this;
@@ -52,6 +57,7 @@ public class GetSearchVersionNumberReverseGeocodePositionExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=position")
     public String position;
+
     public GetSearchVersionNumberReverseGeocodePositionExtRequest withPosition(String position) {
         this.position = position;
         return this;
@@ -62,6 +68,7 @@ public class GetSearchVersionNumberReverseGeocodePositionExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public Long radius;
+
     public GetSearchVersionNumberReverseGeocodePositionExtRequest withRadius(Long radius) {
         this.radius = radius;
         return this;
@@ -72,6 +79,7 @@ public class GetSearchVersionNumberReverseGeocodePositionExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnRoadUse")
     public Boolean returnRoadUse;
+
     public GetSearchVersionNumberReverseGeocodePositionExtRequest withReturnRoadUse(Boolean returnRoadUse) {
         this.returnRoadUse = returnRoadUse;
         return this;
@@ -82,6 +90,7 @@ public class GetSearchVersionNumberReverseGeocodePositionExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnSpeedLimit")
     public Boolean returnSpeedLimit;
+
     public GetSearchVersionNumberReverseGeocodePositionExtRequest withReturnSpeedLimit(Boolean returnSpeedLimit) {
         this.returnSpeedLimit = returnSpeedLimit;
         return this;
@@ -92,6 +101,7 @@ public class GetSearchVersionNumberReverseGeocodePositionExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roadUse")
     public String roadUse;
+
     public GetSearchVersionNumberReverseGeocodePositionExtRequest withRoadUse(String roadUse) {
         this.roadUse = roadUse;
         return this;
@@ -99,9 +109,13 @@ public class GetSearchVersionNumberReverseGeocodePositionExtRequest {
     
     /**
      * If the "spatialKeys" flag is set, the response will also contain a proprietary geospatial keys for a specified location.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spatialKeys")
+    @Deprecated
     public Boolean spatialKeys;
+
+    @Deprecated
     public GetSearchVersionNumberReverseGeocodePositionExtRequest withSpatialKeys(Boolean spatialKeys) {
         this.spatialKeys = spatialKeys;
         return this;
@@ -112,9 +126,15 @@ public class GetSearchVersionNumberReverseGeocodePositionExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+
     public GetSearchVersionNumberReverseGeocodePositionExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public GetSearchVersionNumberReverseGeocodePositionExtRequest(@JsonProperty("ext") org.openapis.openapi.models.shared.ExtEnum ext, @JsonProperty("position") String position, @JsonProperty("versionNumber") org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.ext = ext;
+        this.position = position;
+        this.versionNumber = versionNumber;
+  }
 }

@@ -12,6 +12,7 @@ public class GetDocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language_code")
     public String languageCode;
+
     public GetDocumentsRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -19,6 +20,7 @@ public class GetDocumentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public GetDocumentsOrderByEnum orderBy;
+
     public GetDocumentsRequest withOrderBy(GetDocumentsOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -26,6 +28,7 @@ public class GetDocumentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_type")
     public org.openapis.openapi.models.shared.ListOrderTypeEnum orderType;
+
     public GetDocumentsRequest withOrderType(org.openapis.openapi.models.shared.ListOrderTypeEnum orderType) {
         this.orderType = orderType;
         return this;
@@ -33,6 +36,7 @@ public class GetDocumentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetDocumentsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -40,6 +44,7 @@ public class GetDocumentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetDocumentsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -50,6 +55,7 @@ public class GetDocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recent")
     public Boolean recent;
+
     public GetDocumentsRequest withRecent(Boolean recent) {
         this.recent = recent;
         return this;
@@ -57,6 +63,7 @@ public class GetDocumentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public GetDocumentsRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -64,6 +71,7 @@ public class GetDocumentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type_filter")
     public GetDocumentsTypeFilterEnum typeFilter;
+
     public GetDocumentsRequest withTypeFilter(GetDocumentsTypeFilterEnum typeFilter) {
         this.typeFilter = typeFilter;
         return this;
@@ -74,9 +82,11 @@ public class GetDocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with[]")
     public GetDocumentsWithEnum[] with;
+
     public GetDocumentsRequest withWith(GetDocumentsWithEnum[] with) {
         this.with = with;
         return this;
     }
     
+    public GetDocumentsRequest(){}
 }

@@ -12,6 +12,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public AddressWithTimeZone address;
+
     public Location withAddress(AddressWithTimeZone address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public Location withId(Double id) {
         this.id = id;
         return this;
@@ -34,9 +36,11 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Location withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Location(){}
 }

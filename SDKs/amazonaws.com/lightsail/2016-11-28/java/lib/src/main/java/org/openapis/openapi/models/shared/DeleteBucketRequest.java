@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteBucketRequest {
     @JsonProperty("bucketName")
     public String bucketName;
+
     public DeleteBucketRequest withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -19,9 +20,13 @@ public class DeleteBucketRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceDelete")
     public Boolean forceDelete;
+
     public DeleteBucketRequest withForceDelete(Boolean forceDelete) {
         this.forceDelete = forceDelete;
         return this;
     }
     
+    public DeleteBucketRequest(@JsonProperty("bucketName") String bucketName) {
+        this.bucketName = bucketName;
+  }
 }

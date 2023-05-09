@@ -15,6 +15,7 @@ public class EndpointIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientIPPreservationEnabled")
     public Boolean clientIPPreservationEnabled;
+
     public EndpointIdentifier withClientIPPreservationEnabled(Boolean clientIPPreservationEnabled) {
         this.clientIPPreservationEnabled = clientIPPreservationEnabled;
         return this;
@@ -22,9 +23,13 @@ public class EndpointIdentifier {
     
     @JsonProperty("EndpointId")
     public String endpointId;
+
     public EndpointIdentifier withEndpointId(String endpointId) {
         this.endpointId = endpointId;
         return this;
     }
     
+    public EndpointIdentifier(@JsonProperty("EndpointId") String endpointId) {
+        this.endpointId = endpointId;
+  }
 }

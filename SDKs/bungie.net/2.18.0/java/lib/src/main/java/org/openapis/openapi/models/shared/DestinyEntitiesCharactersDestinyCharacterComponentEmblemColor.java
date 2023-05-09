@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyEntitiesCharactersDestinyCharacterComponentEmblemColor {
     
     public String alpha;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentEmblemColor withAlpha(String alpha) {
         this.alpha = alpha;
         return this;
@@ -19,6 +20,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentEmblemColor {
     
     
     public String blue;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentEmblemColor withBlue(String blue) {
         this.blue = blue;
         return this;
@@ -26,6 +28,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentEmblemColor {
     
     
     public String green;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentEmblemColor withGreen(String green) {
         this.green = green;
         return this;
@@ -33,9 +36,11 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentEmblemColor {
     
     
     public String red;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentEmblemColor withRed(String red) {
         this.red = red;
         return this;
     }
     
+    public DestinyEntitiesCharactersDestinyCharacterComponentEmblemColor(){}
 }

@@ -18,9 +18,11 @@ public class ExtendedPricingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedCheckedBagsOnly")
     public Boolean includedCheckedBagsOnly;
+
     public ExtendedPricingOptions withIncludedCheckedBagsOnly(Boolean includedCheckedBagsOnly) {
         this.includedCheckedBagsOnly = includedCheckedBagsOnly;
         return this;
     }
     
+    public ExtendedPricingOptions(){}
 }

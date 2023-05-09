@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RemoveSourceIdentifierFromSubscriptionMessage {
     
     public String sourceIdentifier;
+
     public RemoveSourceIdentifierFromSubscriptionMessage withSourceIdentifier(String sourceIdentifier) {
         this.sourceIdentifier = sourceIdentifier;
         return this;
@@ -16,9 +17,14 @@ public class RemoveSourceIdentifierFromSubscriptionMessage {
     
     
     public String subscriptionName;
+
     public RemoveSourceIdentifierFromSubscriptionMessage withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
     }
     
+    public RemoveSourceIdentifierFromSubscriptionMessage(@JsonProperty("SourceIdentifier") String sourceIdentifier, @JsonProperty("SubscriptionName") String subscriptionName) {
+        this.sourceIdentifier = sourceIdentifier;
+        this.subscriptionName = subscriptionName;
+  }
 }

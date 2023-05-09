@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleGetRequest {
@@ -12,9 +13,13 @@ public class ArticleGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=articleID")
     public Integer articleID;
+
     public ArticleGetRequest withArticleID(Integer articleID) {
         this.articleID = articleID;
         return this;
     }
     
+    public ArticleGetRequest(@JsonProperty("articleID") Integer articleID) {
+        this.articleID = articleID;
+  }
 }

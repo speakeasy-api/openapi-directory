@@ -12,6 +12,7 @@ public class DfsSlatePlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDefenseProjectionStatID")
     public Long fantasyDefenseProjectionStatID;
+
     public DfsSlatePlayer withFantasyDefenseProjectionStatID(Long fantasyDefenseProjectionStatID) {
         this.fantasyDefenseProjectionStatID = fantasyDefenseProjectionStatID;
         return this;
@@ -20,6 +21,7 @@ public class DfsSlatePlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorPlayerID")
     public String operatorPlayerID;
+
     public DfsSlatePlayer withOperatorPlayerID(String operatorPlayerID) {
         this.operatorPlayerID = operatorPlayerID;
         return this;
@@ -28,6 +30,7 @@ public class DfsSlatePlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorPlayerName")
     public String operatorPlayerName;
+
     public DfsSlatePlayer withOperatorPlayerName(String operatorPlayerName) {
         this.operatorPlayerName = operatorPlayerName;
         return this;
@@ -36,6 +39,7 @@ public class DfsSlatePlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorPosition")
     public String operatorPosition;
+
     public DfsSlatePlayer withOperatorPosition(String operatorPosition) {
         this.operatorPosition = operatorPosition;
         return this;
@@ -44,6 +48,7 @@ public class DfsSlatePlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorRosterSlots")
     public String[] operatorRosterSlots;
+
     public DfsSlatePlayer withOperatorRosterSlots(String[] operatorRosterSlots) {
         this.operatorRosterSlots = operatorRosterSlots;
         return this;
@@ -52,6 +57,7 @@ public class DfsSlatePlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorSalary")
     public Long operatorSalary;
+
     public DfsSlatePlayer withOperatorSalary(Long operatorSalary) {
         this.operatorSalary = operatorSalary;
         return this;
@@ -60,6 +66,7 @@ public class DfsSlatePlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorSlatePlayerID")
     public String operatorSlatePlayerID;
+
     public DfsSlatePlayer withOperatorSlatePlayerID(String operatorSlatePlayerID) {
         this.operatorSlatePlayerID = operatorSlatePlayerID;
         return this;
@@ -68,6 +75,7 @@ public class DfsSlatePlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerGameProjectionStatID")
     public Long playerGameProjectionStatID;
+
     public DfsSlatePlayer withPlayerGameProjectionStatID(Long playerGameProjectionStatID) {
         this.playerGameProjectionStatID = playerGameProjectionStatID;
         return this;
@@ -76,6 +84,7 @@ public class DfsSlatePlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public DfsSlatePlayer withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -84,6 +93,7 @@ public class DfsSlatePlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemovedByOperator")
     public Boolean removedByOperator;
+
     public DfsSlatePlayer withRemovedByOperator(Boolean removedByOperator) {
         this.removedByOperator = removedByOperator;
         return this;
@@ -92,6 +102,7 @@ public class DfsSlatePlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlateGameID")
     public Long slateGameID;
+
     public DfsSlatePlayer withSlateGameID(Long slateGameID) {
         this.slateGameID = slateGameID;
         return this;
@@ -100,6 +111,7 @@ public class DfsSlatePlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlateID")
     public Long slateID;
+
     public DfsSlatePlayer withSlateID(Long slateID) {
         this.slateID = slateID;
         return this;
@@ -108,6 +120,7 @@ public class DfsSlatePlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlatePlayerID")
     public Long slatePlayerID;
+
     public DfsSlatePlayer withSlatePlayerID(Long slatePlayerID) {
         this.slatePlayerID = slatePlayerID;
         return this;
@@ -116,6 +129,7 @@ public class DfsSlatePlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public DfsSlatePlayer withTeam(String team) {
         this.team = team;
         return this;
@@ -124,9 +138,11 @@ public class DfsSlatePlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public DfsSlatePlayer withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
     }
     
+    public DfsSlatePlayer(){}
 }

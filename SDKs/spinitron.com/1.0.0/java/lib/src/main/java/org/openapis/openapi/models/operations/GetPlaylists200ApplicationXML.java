@@ -12,6 +12,7 @@ package org.openapis.openapi.models.operations;
 public class GetPlaylists200ApplicationXML {
     
     public GetPlaylists200ApplicationXMLLinks links;
+
     public GetPlaylists200ApplicationXML withLinks(GetPlaylists200ApplicationXMLLinks links) {
         this.links = links;
         return this;
@@ -19,6 +20,7 @@ public class GetPlaylists200ApplicationXML {
     
     
     public org.openapis.openapi.models.shared.Pagination meta;
+
     public GetPlaylists200ApplicationXML withMeta(org.openapis.openapi.models.shared.Pagination meta) {
         this.meta = meta;
         return this;
@@ -26,9 +28,11 @@ public class GetPlaylists200ApplicationXML {
     
     
     public org.openapis.openapi.models.shared.Playlist[] items;
+
     public GetPlaylists200ApplicationXML withItems(org.openapis.openapi.models.shared.Playlist[] items) {
         this.items = items;
         return this;
     }
     
+    public GetPlaylists200ApplicationXML(){}
 }

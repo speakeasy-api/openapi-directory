@@ -18,6 +18,7 @@ public class RemoveAssetsFromGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowMissing")
     public Boolean allowMissing;
+
     public RemoveAssetsFromGroupRequest withAllowMissing(Boolean allowMissing) {
         this.allowMissing = allowMissing;
         return this;
@@ -29,6 +30,7 @@ public class RemoveAssetsFromGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     public AssetList assets;
+
     public RemoveAssetsFromGroupRequest withAssets(AssetList assets) {
         this.assets = assets;
         return this;
@@ -40,9 +42,11 @@ public class RemoveAssetsFromGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public RemoveAssetsFromGroupRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public RemoveAssetsFromGroupRequest(){}
 }

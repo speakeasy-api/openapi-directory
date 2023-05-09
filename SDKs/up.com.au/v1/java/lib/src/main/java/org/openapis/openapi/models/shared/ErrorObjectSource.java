@@ -23,6 +23,7 @@ public class ErrorObjectSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public String parameter;
+
     public ErrorObjectSource withParameter(String parameter) {
         this.parameter = parameter;
         return this;
@@ -36,9 +37,11 @@ public class ErrorObjectSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointer")
     public String pointer;
+
     public ErrorObjectSource withPointer(String pointer) {
         this.pointer = pointer;
         return this;
     }
     
+    public ErrorObjectSource(){}
 }

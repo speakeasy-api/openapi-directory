@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeviceFilter {
     @JsonProperty("attribute")
     public DeviceFilterAttributeEnum attribute;
+
     public DeviceFilter withAttribute(DeviceFilterAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -19,6 +20,7 @@ public class DeviceFilter {
     
     @JsonProperty("operator")
     public RuleOperatorEnum operator;
+
     public DeviceFilter withOperator(RuleOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -26,9 +28,15 @@ public class DeviceFilter {
     
     @JsonProperty("values")
     public String[] values;
+
     public DeviceFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DeviceFilter(@JsonProperty("attribute") DeviceFilterAttributeEnum attribute, @JsonProperty("operator") RuleOperatorEnum operator, @JsonProperty("values") String[] values) {
+        this.attribute = attribute;
+        this.operator = operator;
+        this.values = values;
+  }
 }

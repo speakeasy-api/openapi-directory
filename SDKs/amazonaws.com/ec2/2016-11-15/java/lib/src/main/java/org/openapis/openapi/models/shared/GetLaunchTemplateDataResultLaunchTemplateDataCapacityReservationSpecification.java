@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetLaunchTemplateDataResultLaunchTemplateDataCapacityReservationSpecification {
     
     public GetLaunchTemplateDataResultLaunchTemplateDataCapacityReservationSpecificationCapacityReservationPreferenceEnum capacityReservationPreference;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataCapacityReservationSpecification withCapacityReservationPreference(GetLaunchTemplateDataResultLaunchTemplateDataCapacityReservationSpecificationCapacityReservationPreferenceEnum capacityReservationPreference) {
         this.capacityReservationPreference = capacityReservationPreference;
         return this;
@@ -19,9 +20,11 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataCapacityReservationSpe
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataCapacityReservationSpecification withCapacityReservationTarget(GetLaunchTemplateDataResultLaunchTemplateDataCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget) {
         this.capacityReservationTarget = capacityReservationTarget;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataCapacityReservationSpecification(){}
 }

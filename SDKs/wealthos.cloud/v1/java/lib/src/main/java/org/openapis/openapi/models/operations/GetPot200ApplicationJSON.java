@@ -20,6 +20,7 @@ public class GetPot200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     public String accountId;
+
     public GetPot200ApplicationJSON withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -30,6 +31,7 @@ public class GetPot200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public GetPot200ApplicationJSON withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class GetPot200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custodian_account_reference")
     public String custodianAccountReference;
+
     public GetPot200ApplicationJSON withCustodianAccountReference(String custodianAccountReference) {
         this.custodianAccountReference = custodianAccountReference;
         return this;
@@ -46,6 +49,7 @@ public class GetPot200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custodian_client_ref")
     public String custodianClientRef;
+
     public GetPot200ApplicationJSON withCustodianClientRef(String custodianClientRef) {
         this.custodianClientRef = custodianClientRef;
         return this;
@@ -54,6 +58,7 @@ public class GetPot200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custodian_id")
     public String custodianId;
+
     public GetPot200ApplicationJSON withCustodianId(String custodianId) {
         this.custodianId = custodianId;
         return this;
@@ -61,6 +66,7 @@ public class GetPot200ApplicationJSON {
     
     @JsonProperty("financial_product_id")
     public String financialProductId;
+
     public GetPot200ApplicationJSON withFinancialProductId(String financialProductId) {
         this.financialProductId = financialProductId;
         return this;
@@ -68,6 +74,7 @@ public class GetPot200ApplicationJSON {
     
     @JsonProperty("investor_id")
     public String[] investorId;
+
     public GetPot200ApplicationJSON withInvestorId(String[] investorId) {
         this.investorId = investorId;
         return this;
@@ -76,6 +83,7 @@ public class GetPot200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolio_template_id")
     public String portfolioTemplateId;
+
     public GetPot200ApplicationJSON withPortfolioTemplateId(String portfolioTemplateId) {
         this.portfolioTemplateId = portfolioTemplateId;
         return this;
@@ -87,6 +95,7 @@ public class GetPot200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pot_currency")
     public GetPot200ApplicationJSONPotCurrencyEnum potCurrency;
+
     public GetPot200ApplicationJSON withPotCurrency(GetPot200ApplicationJSONPotCurrencyEnum potCurrency) {
         this.potCurrency = potCurrency;
         return this;
@@ -98,6 +107,7 @@ public class GetPot200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pot_id")
     public String potId;
+
     public GetPot200ApplicationJSON withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -105,6 +115,7 @@ public class GetPot200ApplicationJSON {
     
     @JsonProperty("pot_name")
     public String potName;
+
     public GetPot200ApplicationJSON withPotName(String potName) {
         this.potName = potName;
         return this;
@@ -113,6 +124,7 @@ public class GetPot200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_version")
     public Long referenceVersion;
+
     public GetPot200ApplicationJSON withReferenceVersion(Long referenceVersion) {
         this.referenceVersion = referenceVersion;
         return this;
@@ -121,6 +133,7 @@ public class GetPot200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regulator_advisor_id")
     public String regulatorAdvisorId;
+
     public GetPot200ApplicationJSON withRegulatorAdvisorId(String regulatorAdvisorId) {
         this.regulatorAdvisorId = regulatorAdvisorId;
         return this;
@@ -128,6 +141,7 @@ public class GetPot200ApplicationJSON {
     
     @JsonProperty("status")
     public GetPot200ApplicationJSONStatusEnum status;
+
     public GetPot200ApplicationJSON withStatus(GetPot200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
@@ -138,9 +152,16 @@ public class GetPot200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public GetPot200ApplicationJSON withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetPot200ApplicationJSON(@JsonProperty("financial_product_id") String financialProductId, @JsonProperty("investor_id") String[] investorId, @JsonProperty("pot_name") String potName, @JsonProperty("status") GetPot200ApplicationJSONStatusEnum status) {
+        this.financialProductId = financialProductId;
+        this.investorId = investorId;
+        this.potName = potName;
+        this.status = status;
+  }
 }

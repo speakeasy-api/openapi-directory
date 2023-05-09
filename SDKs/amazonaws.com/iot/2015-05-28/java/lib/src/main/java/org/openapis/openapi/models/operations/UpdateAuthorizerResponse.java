@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAuthorizerResponse {
     
     public String contentType;
+
     public UpdateAuthorizerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAuthorizerResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateAuthorizerResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAuthorizerResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateAuthorizerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAuthorizerResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateAuthorizerResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateAuthorizerResponse {
     
     
     public Integer statusCode;
+
     public UpdateAuthorizerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAuthorizerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAuthorizerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAuthorizerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAuthorizerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAuthorizerResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateAuthorizerResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateAuthorizerResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAuthorizerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateAuthorizerResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateAuthorizerResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateAuthorizerResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAuthorizerResponse updateAuthorizerResponse;
+
     public UpdateAuthorizerResponse withUpdateAuthorizerResponse(org.openapis.openapi.models.shared.UpdateAuthorizerResponse updateAuthorizerResponse) {
         this.updateAuthorizerResponse = updateAuthorizerResponse;
         return this;
     }
     
+    public UpdateAuthorizerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

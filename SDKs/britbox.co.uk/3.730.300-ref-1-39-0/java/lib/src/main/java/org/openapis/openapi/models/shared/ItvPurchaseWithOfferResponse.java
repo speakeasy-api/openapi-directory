@@ -18,6 +18,7 @@ public class ItvPurchaseWithOfferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public ItvPurchaseWithOfferResponse withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -29,6 +30,7 @@ public class ItvPurchaseWithOfferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public ItvPurchaseWithOfferResponse withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -40,6 +42,7 @@ public class ItvPurchaseWithOfferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentId")
     public String intentId;
+
     public ItvPurchaseWithOfferResponse withIntentId(String intentId) {
         this.intentId = intentId;
         return this;
@@ -51,6 +54,7 @@ public class ItvPurchaseWithOfferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentType")
     public String intentType;
+
     public ItvPurchaseWithOfferResponse withIntentType(String intentType) {
         this.intentType = intentType;
         return this;
@@ -62,6 +66,7 @@ public class ItvPurchaseWithOfferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethodId")
     public String paymentMethodId;
+
     public ItvPurchaseWithOfferResponse withPaymentMethodId(String paymentMethodId) {
         this.paymentMethodId = paymentMethodId;
         return this;
@@ -73,6 +78,7 @@ public class ItvPurchaseWithOfferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ItvPurchaseWithOfferResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -84,9 +90,11 @@ public class ItvPurchaseWithOfferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionId")
     public String subscriptionId;
+
     public ItvPurchaseWithOfferResponse withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public ItvPurchaseWithOfferResponse(){}
 }

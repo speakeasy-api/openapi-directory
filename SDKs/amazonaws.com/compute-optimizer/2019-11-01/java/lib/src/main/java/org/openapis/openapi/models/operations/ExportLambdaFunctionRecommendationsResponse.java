@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportLambdaFunctionRecommendationsResponse {
@@ -12,6 +13,7 @@ public class ExportLambdaFunctionRecommendationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ExportLambdaFunctionRecommendationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ExportLambdaFunctionRecommendationsResponse {
     
     
     public String contentType;
+
     public ExportLambdaFunctionRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ExportLambdaFunctionRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ExportLambdaFunctionRecommendationsResponse exportLambdaFunctionRecommendationsResponse;
+
     public ExportLambdaFunctionRecommendationsResponse withExportLambdaFunctionRecommendationsResponse(org.openapis.openapi.models.shared.ExportLambdaFunctionRecommendationsResponse exportLambdaFunctionRecommendationsResponse) {
         this.exportLambdaFunctionRecommendationsResponse = exportLambdaFunctionRecommendationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ExportLambdaFunctionRecommendationsResponse {
      */
     
     public Object internalServerException;
+
     public ExportLambdaFunctionRecommendationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ExportLambdaFunctionRecommendationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ExportLambdaFunctionRecommendationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class ExportLambdaFunctionRecommendationsResponse {
      */
     
     public Object limitExceededException;
+
     public ExportLambdaFunctionRecommendationsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ExportLambdaFunctionRecommendationsResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public ExportLambdaFunctionRecommendationsResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -79,6 +87,7 @@ public class ExportLambdaFunctionRecommendationsResponse {
      */
     
     public Object optInRequiredException;
+
     public ExportLambdaFunctionRecommendationsResponse withOptInRequiredException(Object optInRequiredException) {
         this.optInRequiredException = optInRequiredException;
         return this;
@@ -86,6 +95,7 @@ public class ExportLambdaFunctionRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public ExportLambdaFunctionRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ExportLambdaFunctionRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportLambdaFunctionRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class ExportLambdaFunctionRecommendationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ExportLambdaFunctionRecommendationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class ExportLambdaFunctionRecommendationsResponse {
      */
     
     public Object throttlingException;
+
     public ExportLambdaFunctionRecommendationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ExportLambdaFunctionRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Action {
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public Action withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,6 +20,7 @@ public class Action {
     
     @JsonProperty("Operation")
     public OperationEnum operation;
+
     public Action withOperation(OperationEnum operation) {
         this.operation = operation;
         return this;
@@ -26,9 +28,15 @@ public class Action {
     
     @JsonProperty("Value")
     public Double value;
+
     public Action withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public Action(@JsonProperty("AttributeName") String attributeName, @JsonProperty("Operation") OperationEnum operation, @JsonProperty("Value") Double value) {
+        this.attributeName = attributeName;
+        this.operation = operation;
+        this.value = value;
+  }
 }

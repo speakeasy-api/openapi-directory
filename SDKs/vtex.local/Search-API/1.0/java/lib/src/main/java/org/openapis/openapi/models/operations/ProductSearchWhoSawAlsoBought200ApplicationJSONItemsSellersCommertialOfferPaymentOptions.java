@@ -15,6 +15,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommerti
      */
     @JsonProperty("availableAccounts")
     public Object[] availableAccounts;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferPaymentOptions withAvailableAccounts(Object[] availableAccounts) {
         this.availableAccounts = availableAccounts;
         return this;
@@ -25,6 +26,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommerti
      */
     @JsonProperty("availableTokens")
     public Object[] availableTokens;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferPaymentOptions withAvailableTokens(Object[] availableTokens) {
         this.availableTokens = availableTokens;
         return this;
@@ -35,6 +37,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommerti
      */
     @JsonProperty("giftCardMessages")
     public Object[] giftCardMessages;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferPaymentOptions withGiftCardMessages(Object[] giftCardMessages) {
         this.giftCardMessages = giftCardMessages;
         return this;
@@ -45,6 +48,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommerti
      */
     @JsonProperty("giftCards")
     public Object[] giftCards;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferPaymentOptions withGiftCards(Object[] giftCards) {
         this.giftCards = giftCards;
         return this;
@@ -55,6 +59,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommerti
      */
     @JsonProperty("installmentOptions")
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions[] installmentOptions;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferPaymentOptions withInstallmentOptions(ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions[] installmentOptions) {
         this.installmentOptions = installmentOptions;
         return this;
@@ -65,6 +70,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommerti
      */
     @JsonProperty("paymentSystems")
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems[] paymentSystems;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferPaymentOptions withPaymentSystems(ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems[] paymentSystems) {
         this.paymentSystems = paymentSystems;
         return this;
@@ -75,9 +81,19 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommerti
      */
     @JsonProperty("payments")
     public Object[] payments;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferPaymentOptions withPayments(Object[] payments) {
         this.payments = payments;
         return this;
     }
     
+    public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferPaymentOptions(@JsonProperty("availableAccounts") Object[] availableAccounts, @JsonProperty("availableTokens") Object[] availableTokens, @JsonProperty("giftCardMessages") Object[] giftCardMessages, @JsonProperty("giftCards") Object[] giftCards, @JsonProperty("installmentOptions") ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions[] installmentOptions, @JsonProperty("paymentSystems") ProductSearchWhoSawAlsoBought200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsPaymentSystems[] paymentSystems, @JsonProperty("payments") Object[] payments) {
+        this.availableAccounts = availableAccounts;
+        this.availableTokens = availableTokens;
+        this.giftCardMessages = giftCardMessages;
+        this.giftCards = giftCards;
+        this.installmentOptions = installmentOptions;
+        this.paymentSystems = paymentSystems;
+        this.payments = payments;
+  }
 }

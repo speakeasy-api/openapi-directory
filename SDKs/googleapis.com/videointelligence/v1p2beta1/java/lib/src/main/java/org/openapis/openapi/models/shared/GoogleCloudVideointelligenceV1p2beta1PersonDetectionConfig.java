@@ -18,6 +18,7 @@ public class GoogleCloudVideointelligenceV1p2beta1PersonDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeAttributes")
     public Boolean includeAttributes;
+
     public GoogleCloudVideointelligenceV1p2beta1PersonDetectionConfig withIncludeAttributes(Boolean includeAttributes) {
         this.includeAttributes = includeAttributes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVideointelligenceV1p2beta1PersonDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeBoundingBoxes")
     public Boolean includeBoundingBoxes;
+
     public GoogleCloudVideointelligenceV1p2beta1PersonDetectionConfig withIncludeBoundingBoxes(Boolean includeBoundingBoxes) {
         this.includeBoundingBoxes = includeBoundingBoxes;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudVideointelligenceV1p2beta1PersonDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includePoseLandmarks")
     public Boolean includePoseLandmarks;
+
     public GoogleCloudVideointelligenceV1p2beta1PersonDetectionConfig withIncludePoseLandmarks(Boolean includePoseLandmarks) {
         this.includePoseLandmarks = includePoseLandmarks;
         return this;
     }
     
+    public GoogleCloudVideointelligenceV1p2beta1PersonDetectionConfig(){}
 }

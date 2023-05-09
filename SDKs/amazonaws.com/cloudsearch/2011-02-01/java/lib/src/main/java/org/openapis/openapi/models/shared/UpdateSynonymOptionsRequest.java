@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateSynonymOptionsRequest {
     /**
@@ -12,6 +12,7 @@ public class UpdateSynonymOptionsRequest {
      */
     
     public String domainName;
+
     public UpdateSynonymOptionsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,9 +23,14 @@ public class UpdateSynonymOptionsRequest {
      */
     
     public String synonyms;
+
     public UpdateSynonymOptionsRequest withSynonyms(String synonyms) {
         this.synonyms = synonyms;
         return this;
     }
     
+    public UpdateSynonymOptionsRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("Synonyms") String synonyms) {
+        this.domainName = domainName;
+        this.synonyms = synonyms;
+  }
 }

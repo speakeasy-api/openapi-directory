@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeamEventsByYearSimpleResponse {
     
     public String contentType;
+
     public GetTeamEventsByYearSimpleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTeamEventsByYearSimpleResponse {
      */
     
     public org.openapis.openapi.models.shared.EventSimple[] eventSimples;
+
     public GetTeamEventsByYearSimpleResponse withEventSimples(org.openapis.openapi.models.shared.EventSimple[] eventSimples) {
         this.eventSimples = eventSimples;
         return this;
@@ -26,6 +29,7 @@ public class GetTeamEventsByYearSimpleResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetTeamEventsByYearSimpleResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetTeamEventsByYearSimpleResponse {
     
     
     public Integer statusCode;
+
     public GetTeamEventsByYearSimpleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetTeamEventsByYearSimpleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeamEventsByYearSimpleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTeamEventsByYearSimpleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

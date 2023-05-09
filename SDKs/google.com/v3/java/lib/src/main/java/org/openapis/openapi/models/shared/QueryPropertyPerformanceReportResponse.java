@@ -18,6 +18,7 @@ public class QueryPropertyPerformanceReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public QueryPropertyPerformanceReportResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class QueryPropertyPerformanceReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public PropertyPerformanceResult[] results;
+
     public QueryPropertyPerformanceReportResponse withResults(PropertyPerformanceResult[] results) {
         this.results = results;
         return this;
     }
     
+    public QueryPropertyPerformanceReportResponse(){}
 }

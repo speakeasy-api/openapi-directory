@@ -61,11 +61,9 @@ public class Station {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetmeasureResponse res = new org.openapis.openapi.models.operations.GetmeasureResponse() {{
+        org.openapis.openapi.models.operations.GetmeasureResponse res = new org.openapis.openapi.models.operations.GetmeasureResponse(contentType, httpRes.statusCode()) {{
             naMeasureResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Station {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetstationsdataResponse res = new org.openapis.openapi.models.operations.GetstationsdataResponse() {{
+        org.openapis.openapi.models.operations.GetstationsdataResponse res = new org.openapis.openapi.models.operations.GetstationsdataResponse(contentType, httpRes.statusCode()) {{
             naStationDataResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

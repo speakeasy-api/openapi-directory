@@ -15,6 +15,7 @@ public class TransactionSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public Links links;
+
     public TransactionSearchResponse withLinks(Links links) {
         this.links = links;
         return this;
@@ -26,9 +27,11 @@ public class TransactionSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Transaction[] data;
+
     public TransactionSearchResponse withData(Transaction[] data) {
         this.data = data;
         return this;
     }
     
+    public TransactionSearchResponse(){}
 }

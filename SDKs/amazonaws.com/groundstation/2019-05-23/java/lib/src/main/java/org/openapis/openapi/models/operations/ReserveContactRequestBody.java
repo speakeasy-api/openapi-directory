@@ -21,6 +21,7 @@ public class ReserveContactRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public ReserveContactRequestBody withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -31,6 +32,7 @@ public class ReserveContactRequestBody {
      */
     @JsonProperty("groundStation")
     public String groundStation;
+
     public ReserveContactRequestBody withGroundStation(String groundStation) {
         this.groundStation = groundStation;
         return this;
@@ -41,6 +43,7 @@ public class ReserveContactRequestBody {
      */
     @JsonProperty("missionProfileArn")
     public String missionProfileArn;
+
     public ReserveContactRequestBody withMissionProfileArn(String missionProfileArn) {
         this.missionProfileArn = missionProfileArn;
         return this;
@@ -51,6 +54,7 @@ public class ReserveContactRequestBody {
      */
     @JsonProperty("satelliteArn")
     public String satelliteArn;
+
     public ReserveContactRequestBody withSatelliteArn(String satelliteArn) {
         this.satelliteArn = satelliteArn;
         return this;
@@ -63,6 +67,7 @@ public class ReserveContactRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ReserveContactRequestBody withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -74,9 +79,17 @@ public class ReserveContactRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ReserveContactRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ReserveContactRequestBody(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("groundStation") String groundStation, @JsonProperty("missionProfileArn") String missionProfileArn, @JsonProperty("satelliteArn") String satelliteArn, @JsonProperty("startTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.groundStation = groundStation;
+        this.missionProfileArn = missionProfileArn;
+        this.satelliteArn = satelliteArn;
+        this.startTime = startTime;
+  }
 }

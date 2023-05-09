@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterResourceResponse {
@@ -12,6 +13,7 @@ public class RegisterResourceResponse {
      */
     
     public Object accessDeniedException;
+
     public RegisterResourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RegisterResourceResponse {
      */
     
     public Object alreadyExistsException;
+
     public RegisterResourceResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterResourceResponse {
     
     
     public String contentType;
+
     public RegisterResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RegisterResourceResponse {
      */
     
     public Object entityNotFoundException;
+
     public RegisterResourceResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterResourceResponse {
      */
     
     public Object internalServiceException;
+
     public RegisterResourceResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class RegisterResourceResponse {
      */
     
     public Object invalidInputException;
+
     public RegisterResourceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class RegisterResourceResponse {
      */
     
     public Object operationTimeoutException;
+
     public RegisterResourceResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -79,6 +87,7 @@ public class RegisterResourceResponse {
      */
     
     public java.util.Map<String, Object> registerResourceResponse;
+
     public RegisterResourceResponse withRegisterResourceResponse(java.util.Map<String, Object> registerResourceResponse) {
         this.registerResourceResponse = registerResourceResponse;
         return this;
@@ -89,6 +98,7 @@ public class RegisterResourceResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public RegisterResourceResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -96,6 +106,7 @@ public class RegisterResourceResponse {
     
     
     public Integer statusCode;
+
     public RegisterResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class RegisterResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegisterResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

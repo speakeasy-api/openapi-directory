@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetQueryExecutionResponse {
@@ -12,6 +13,7 @@ public class BatchGetQueryExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetQueryExecutionOutput batchGetQueryExecutionOutput;
+
     public BatchGetQueryExecutionResponse withBatchGetQueryExecutionOutput(org.openapis.openapi.models.shared.BatchGetQueryExecutionOutput batchGetQueryExecutionOutput) {
         this.batchGetQueryExecutionOutput = batchGetQueryExecutionOutput;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetQueryExecutionResponse {
     
     
     public String contentType;
+
     public BatchGetQueryExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetQueryExecutionResponse {
      */
     
     public Object internalServerException;
+
     public BatchGetQueryExecutionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetQueryExecutionResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchGetQueryExecutionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class BatchGetQueryExecutionResponse {
     
     
     public Integer statusCode;
+
     public BatchGetQueryExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class BatchGetQueryExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetQueryExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetQueryExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

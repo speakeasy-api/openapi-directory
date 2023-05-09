@@ -15,6 +15,7 @@ public class FunctionConfigurationEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessSysfs")
     public Boolean accessSysfs;
+
     public FunctionConfigurationEnvironment withAccessSysfs(Boolean accessSysfs) {
         this.accessSysfs = accessSysfs;
         return this;
@@ -23,6 +24,7 @@ public class FunctionConfigurationEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Execution")
     public FunctionExecutionConfig execution;
+
     public FunctionConfigurationEnvironment withExecution(FunctionExecutionConfig execution) {
         this.execution = execution;
         return this;
@@ -31,6 +33,7 @@ public class FunctionConfigurationEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceAccessPolicies")
     public ResourceAccessPolicy[] resourceAccessPolicies;
+
     public FunctionConfigurationEnvironment withResourceAccessPolicies(ResourceAccessPolicy[] resourceAccessPolicies) {
         this.resourceAccessPolicies = resourceAccessPolicies;
         return this;
@@ -39,9 +42,11 @@ public class FunctionConfigurationEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Variables")
     public java.util.Map<String, String> variables;
+
     public FunctionConfigurationEnvironment withVariables(java.util.Map<String, String> variables) {
         this.variables = variables;
         return this;
     }
     
+    public FunctionConfigurationEnvironment(){}
 }

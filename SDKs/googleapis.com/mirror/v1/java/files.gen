@@ -144,4 +144,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/NotificationConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/MenuItem.java
 lib/src/main/java/org/openapis/openapi/models/shared/MenuValue.java
 lib/src/main/java/org/openapis/openapi/models/shared/TimelineListResponse.java
+docs/sdk/README.md
+docs/accounts/README.md
+docs/contacts/README.md
+docs/locations/README.md
+docs/settings/README.md
+docs/subscriptions/README.md
+docs/timeline/README.md
 USAGE.md

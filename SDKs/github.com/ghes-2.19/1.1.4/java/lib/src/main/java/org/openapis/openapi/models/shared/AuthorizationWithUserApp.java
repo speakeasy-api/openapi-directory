@@ -12,6 +12,7 @@ public class AuthorizationWithUserApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_id")
     public String clientId;
+
     public AuthorizationWithUserApp withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -20,6 +21,7 @@ public class AuthorizationWithUserApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AuthorizationWithUserApp withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class AuthorizationWithUserApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public AuthorizationWithUserApp withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AuthorizationWithUserApp(){}
 }

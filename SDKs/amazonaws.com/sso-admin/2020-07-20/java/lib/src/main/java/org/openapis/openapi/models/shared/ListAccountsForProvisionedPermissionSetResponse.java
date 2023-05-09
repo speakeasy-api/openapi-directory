@@ -15,6 +15,7 @@ public class ListAccountsForProvisionedPermissionSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public ListAccountsForProvisionedPermissionSetResponse withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -23,9 +24,11 @@ public class ListAccountsForProvisionedPermissionSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAccountsForProvisionedPermissionSetResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAccountsForProvisionedPermissionSetResponse(){}
 }

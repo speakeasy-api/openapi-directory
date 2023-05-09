@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateFunctionUrlConfigResponse {
     @JsonProperty("AuthType")
     public FunctionUrlAuthTypeEnum authType;
+
     public CreateFunctionUrlConfigResponse withAuthType(FunctionUrlAuthTypeEnum authType) {
         this.authType = authType;
         return this;
@@ -22,6 +23,7 @@ public class CreateFunctionUrlConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cors")
     public Cors cors;
+
     public CreateFunctionUrlConfigResponse withCors(Cors cors) {
         this.cors = cors;
         return this;
@@ -29,6 +31,7 @@ public class CreateFunctionUrlConfigResponse {
     
     @JsonProperty("CreationTime")
     public String creationTime;
+
     public CreateFunctionUrlConfigResponse withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -36,6 +39,7 @@ public class CreateFunctionUrlConfigResponse {
     
     @JsonProperty("FunctionArn")
     public String functionArn;
+
     public CreateFunctionUrlConfigResponse withFunctionArn(String functionArn) {
         this.functionArn = functionArn;
         return this;
@@ -43,9 +47,25 @@ public class CreateFunctionUrlConfigResponse {
     
     @JsonProperty("FunctionUrl")
     public String functionUrl;
+
     public CreateFunctionUrlConfigResponse withFunctionUrl(String functionUrl) {
         this.functionUrl = functionUrl;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InvokeMode")
+    public InvokeModeEnum invokeMode;
+
+    public CreateFunctionUrlConfigResponse withInvokeMode(InvokeModeEnum invokeMode) {
+        this.invokeMode = invokeMode;
+        return this;
+    }
+    
+    public CreateFunctionUrlConfigResponse(@JsonProperty("AuthType") FunctionUrlAuthTypeEnum authType, @JsonProperty("CreationTime") String creationTime, @JsonProperty("FunctionArn") String functionArn, @JsonProperty("FunctionUrl") String functionUrl) {
+        this.authType = authType;
+        this.creationTime = creationTime;
+        this.functionArn = functionArn;
+        this.functionUrl = functionUrl;
+  }
 }

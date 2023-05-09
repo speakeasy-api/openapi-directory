@@ -18,6 +18,7 @@ public class ExtendedProducerResponsibilityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryId")
     public String categoryId;
+
     public ExtendedProducerResponsibilityPolicy withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -29,6 +30,7 @@ public class ExtendedProducerResponsibilityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryTreeId")
     public String categoryTreeId;
+
     public ExtendedProducerResponsibilityPolicy withCategoryTreeId(String categoryTreeId) {
         this.categoryTreeId = categoryTreeId;
         return this;
@@ -40,9 +42,11 @@ public class ExtendedProducerResponsibilityPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedAttributes")
     public ExtendedProducerResponsibility[] supportedAttributes;
+
     public ExtendedProducerResponsibilityPolicy withSupportedAttributes(ExtendedProducerResponsibility[] supportedAttributes) {
         this.supportedAttributes = supportedAttributes;
         return this;
     }
     
+    public ExtendedProducerResponsibilityPolicy(){}
 }

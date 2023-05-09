@@ -15,6 +15,7 @@ public class WorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line1")
     public String addressLine1;
+
     public WorkgroupDetailVO withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -23,6 +24,7 @@ public class WorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line2")
     public String addressLine2;
+
     public WorkgroupDetailVO withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
@@ -31,6 +33,7 @@ public class WorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line3")
     public String addressLine3;
+
     public WorkgroupDetailVO withAddressLine3(String addressLine3) {
         this.addressLine3 = addressLine3;
         return this;
@@ -39,6 +42,7 @@ public class WorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public WorkgroupDetailVO withCity(String city) {
         this.city = city;
         return this;
@@ -47,6 +51,7 @@ public class WorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public WorkgroupDetailVO withCountry(String country) {
         this.country = country;
         return this;
@@ -55,6 +60,7 @@ public class WorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     public String countryCode;
+
     public WorkgroupDetailVO withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -63,6 +69,7 @@ public class WorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public PropertyPaAndAttVO[] customFields;
+
     public WorkgroupDetailVO withCustomFields(PropertyPaAndAttVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -71,6 +78,7 @@ public class WorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_currency")
     public String defaultCurrency;
+
     public WorkgroupDetailVO withDefaultCurrency(String defaultCurrency) {
         this.defaultCurrency = defaultCurrency;
         return this;
@@ -79,6 +87,7 @@ public class WorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portal")
     public String portal;
+
     public WorkgroupDetailVO withPortal(String portal) {
         this.portal = portal;
         return this;
@@ -87,6 +96,7 @@ public class WorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal")
     public String postal;
+
     public WorkgroupDetailVO withPostal(String postal) {
         this.postal = postal;
         return this;
@@ -95,6 +105,7 @@ public class WorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public WorkgroupDetailVO withState(String state) {
         this.state = state;
         return this;
@@ -103,6 +114,7 @@ public class WorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroup_id")
     public Long workgroupId;
+
     public WorkgroupDetailVO withWorkgroupId(Long workgroupId) {
         this.workgroupId = workgroupId;
         return this;
@@ -111,9 +123,11 @@ public class WorkgroupDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroup_name")
     public String workgroupName;
+
     public WorkgroupDetailVO withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public WorkgroupDetailVO(){}
 }

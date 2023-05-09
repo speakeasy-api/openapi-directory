@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PortRange {
     @JsonProperty("FromPort")
     public Long fromPort;
+
     public PortRange withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -19,9 +20,14 @@ public class PortRange {
     
     @JsonProperty("ToPort")
     public Long toPort;
+
     public PortRange withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public PortRange(@JsonProperty("FromPort") Long fromPort, @JsonProperty("ToPort") Long toPort) {
+        this.fromPort = fromPort;
+        this.toPort = toPort;
+  }
 }

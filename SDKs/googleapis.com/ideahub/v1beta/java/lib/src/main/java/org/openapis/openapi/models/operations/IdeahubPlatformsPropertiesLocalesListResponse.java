@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdeahubPlatformsPropertiesLocalesListResponse {
     
     public String contentType;
+
     public IdeahubPlatformsPropertiesLocalesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdeahubPlatformsPropertiesLocalesListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleSearchIdeahubV1betaListAvailableLocalesResponse googleSearchIdeahubV1betaListAvailableLocalesResponse;
+
     public IdeahubPlatformsPropertiesLocalesListResponse withGoogleSearchIdeahubV1betaListAvailableLocalesResponse(org.openapis.openapi.models.shared.GoogleSearchIdeahubV1betaListAvailableLocalesResponse googleSearchIdeahubV1betaListAvailableLocalesResponse) {
         this.googleSearchIdeahubV1betaListAvailableLocalesResponse = googleSearchIdeahubV1betaListAvailableLocalesResponse;
         return this;
@@ -26,6 +29,7 @@ public class IdeahubPlatformsPropertiesLocalesListResponse {
     
     
     public Integer statusCode;
+
     public IdeahubPlatformsPropertiesLocalesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdeahubPlatformsPropertiesLocalesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdeahubPlatformsPropertiesLocalesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdeahubPlatformsPropertiesLocalesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

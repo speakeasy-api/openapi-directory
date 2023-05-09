@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MavenReference {
     @JsonProperty("ArtifactId")
     public String artifactId;
+
     public MavenReference withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -19,6 +20,7 @@ public class MavenReference {
     
     @JsonProperty("GroupId")
     public String groupId;
+
     public MavenReference withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -26,9 +28,15 @@ public class MavenReference {
     
     @JsonProperty("Version")
     public String version;
+
     public MavenReference withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public MavenReference(@JsonProperty("ArtifactId") String artifactId, @JsonProperty("GroupId") String groupId, @JsonProperty("Version") String version) {
+        this.artifactId = artifactId;
+        this.groupId = groupId;
+        this.version = version;
+  }
 }

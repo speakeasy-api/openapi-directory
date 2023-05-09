@@ -51,7 +51,7 @@ public class Spec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProductTypeListOfWorkgroupResponse res = new org.openapis.openapi.models.operations.GetProductTypeListOfWorkgroupResponse() {{
+        org.openapis.openapi.models.operations.GetProductTypeListOfWorkgroupResponse res = new org.openapis.openapi.models.operations.GetProductTypeListOfWorkgroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -69,8 +69,6 @@ public class Spec {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,7 +168,7 @@ public class Spec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSpecResponse res = new org.openapis.openapi.models.operations.GetSpecResponse() {{
+        org.openapis.openapi.models.operations.GetSpecResponse res = new org.openapis.openapi.models.operations.GetSpecResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -188,8 +186,6 @@ public class Spec {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,7 +285,7 @@ public class Spec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSpecListResponse res = new org.openapis.openapi.models.operations.GetSpecListResponse() {{
+        org.openapis.openapi.models.operations.GetSpecListResponse res = new org.openapis.openapi.models.operations.GetSpecListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -307,8 +303,6 @@ public class Spec {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -408,7 +402,7 @@ public class Spec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSpecProductTypeListOfWorkgroupResponse res = new org.openapis.openapi.models.operations.GetSpecProductTypeListOfWorkgroupResponse() {{
+        org.openapis.openapi.models.operations.GetSpecProductTypeListOfWorkgroupResponse res = new org.openapis.openapi.models.operations.GetSpecProductTypeListOfWorkgroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -426,8 +420,6 @@ public class Spec {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -527,7 +519,7 @@ public class Spec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSpecTypeFieldsResponse res = new org.openapis.openapi.models.operations.GetSpecTypeFieldsResponse() {{
+        org.openapis.openapi.models.operations.GetSpecTypeFieldsResponse res = new org.openapis.openapi.models.operations.GetSpecTypeFieldsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -545,8 +537,6 @@ public class Spec {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -646,7 +636,7 @@ public class Spec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse res = new org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse() {{
+        org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse res = new org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -664,8 +654,6 @@ public class Spec {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -765,7 +753,7 @@ public class Spec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdSpecTypesSpecTypeIdSpecTypeFieldsResponse res = new org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdSpecTypesSpecTypeIdSpecTypeFieldsResponse() {{
+        org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdSpecTypesSpecTypeIdSpecTypeFieldsResponse res = new org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdSpecTypesSpecTypeIdSpecTypeFieldsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -783,8 +771,6 @@ public class Spec {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -886,7 +872,7 @@ public class Spec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupJsonResponse res = new org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupJsonResponse() {{
+        org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupJsonResponse res = new org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -904,8 +890,6 @@ public class Spec {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1007,7 +991,7 @@ public class Spec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupRawResponse res = new org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupRawResponse() {{
+        org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupRawResponse res = new org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -1025,8 +1009,6 @@ public class Spec {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1128,7 +1110,7 @@ public class Spec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSpecJsonResponse res = new org.openapis.openapi.models.operations.PostSpecJsonResponse() {{
+        org.openapis.openapi.models.operations.PostSpecJsonResponse res = new org.openapis.openapi.models.operations.PostSpecJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -1146,8 +1128,6 @@ public class Spec {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1249,7 +1229,7 @@ public class Spec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSpecRawResponse res = new org.openapis.openapi.models.operations.PostSpecRawResponse() {{
+        org.openapis.openapi.models.operations.PostSpecRawResponse res = new org.openapis.openapi.models.operations.PostSpecRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -1267,8 +1247,6 @@ public class Spec {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1370,7 +1348,7 @@ public class Spec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSpecJsonResponse res = new org.openapis.openapi.models.operations.PutSpecJsonResponse() {{
+        org.openapis.openapi.models.operations.PutSpecJsonResponse res = new org.openapis.openapi.models.operations.PutSpecJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -1388,8 +1366,6 @@ public class Spec {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1491,7 +1467,7 @@ public class Spec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSpecRawResponse res = new org.openapis.openapi.models.operations.PutSpecRawResponse() {{
+        org.openapis.openapi.models.operations.PutSpecRawResponse res = new org.openapis.openapi.models.operations.PutSpecRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -1509,8 +1485,6 @@ public class Spec {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1612,7 +1586,7 @@ public class Spec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonResponse res = new org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonResponse res = new org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -1630,8 +1604,6 @@ public class Spec {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1733,7 +1705,7 @@ public class Spec {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawResponse res = new org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawResponse() {{
+        org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawResponse res = new org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -1751,8 +1723,6 @@ public class Spec {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

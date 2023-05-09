@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StsTokenResponse {
     
     public String contentType;
+
     public StsTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StsTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleIdentityStsV1ExchangeTokenResponse googleIdentityStsV1ExchangeTokenResponse;
+
     public StsTokenResponse withGoogleIdentityStsV1ExchangeTokenResponse(org.openapis.openapi.models.shared.GoogleIdentityStsV1ExchangeTokenResponse googleIdentityStsV1ExchangeTokenResponse) {
         this.googleIdentityStsV1ExchangeTokenResponse = googleIdentityStsV1ExchangeTokenResponse;
         return this;
@@ -26,6 +29,7 @@ public class StsTokenResponse {
     
     
     public Integer statusCode;
+
     public StsTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class StsTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StsTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StsTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

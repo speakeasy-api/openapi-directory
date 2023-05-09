@@ -15,6 +15,7 @@ public class WorkDocsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlComments")
     public Boolean crawlComments;
+
     public WorkDocsConfiguration withCrawlComments(Boolean crawlComments) {
         this.crawlComments = crawlComments;
         return this;
@@ -23,6 +24,7 @@ public class WorkDocsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusionPatterns")
     public String[] exclusionPatterns;
+
     public WorkDocsConfiguration withExclusionPatterns(String[] exclusionPatterns) {
         this.exclusionPatterns = exclusionPatterns;
         return this;
@@ -31,6 +33,7 @@ public class WorkDocsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldMappings")
     public DataSourceToIndexFieldMapping[] fieldMappings;
+
     public WorkDocsConfiguration withFieldMappings(DataSourceToIndexFieldMapping[] fieldMappings) {
         this.fieldMappings = fieldMappings;
         return this;
@@ -39,6 +42,7 @@ public class WorkDocsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusionPatterns")
     public String[] inclusionPatterns;
+
     public WorkDocsConfiguration withInclusionPatterns(String[] inclusionPatterns) {
         this.inclusionPatterns = inclusionPatterns;
         return this;
@@ -46,6 +50,7 @@ public class WorkDocsConfiguration {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public WorkDocsConfiguration withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -54,9 +59,13 @@ public class WorkDocsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseChangeLog")
     public Boolean useChangeLog;
+
     public WorkDocsConfiguration withUseChangeLog(Boolean useChangeLog) {
         this.useChangeLog = useChangeLog;
         return this;
     }
     
+    public WorkDocsConfiguration(@JsonProperty("OrganizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

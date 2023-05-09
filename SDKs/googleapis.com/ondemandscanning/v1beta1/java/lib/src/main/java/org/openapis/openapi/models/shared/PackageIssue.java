@@ -18,6 +18,7 @@ public class PackageIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affectedCpeUri")
     public String affectedCpeUri;
+
     public PackageIssue withAffectedCpeUri(String affectedCpeUri) {
         this.affectedCpeUri = affectedCpeUri;
         return this;
@@ -29,6 +30,7 @@ public class PackageIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affectedPackage")
     public String affectedPackage;
+
     public PackageIssue withAffectedPackage(String affectedPackage) {
         this.affectedPackage = affectedPackage;
         return this;
@@ -40,6 +42,7 @@ public class PackageIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affectedVersion")
     public Version affectedVersion;
+
     public PackageIssue withAffectedVersion(Version affectedVersion) {
         this.affectedVersion = affectedVersion;
         return this;
@@ -51,6 +54,7 @@ public class PackageIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveSeverity")
     public PackageIssueEffectiveSeverityEnum effectiveSeverity;
+
     public PackageIssue withEffectiveSeverity(PackageIssueEffectiveSeverityEnum effectiveSeverity) {
         this.effectiveSeverity = effectiveSeverity;
         return this;
@@ -62,6 +66,7 @@ public class PackageIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileLocation")
     public GrafeasV1FileLocation[] fileLocation;
+
     public PackageIssue withFileLocation(GrafeasV1FileLocation[] fileLocation) {
         this.fileLocation = fileLocation;
         return this;
@@ -73,6 +78,7 @@ public class PackageIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixAvailable")
     public Boolean fixAvailable;
+
     public PackageIssue withFixAvailable(Boolean fixAvailable) {
         this.fixAvailable = fixAvailable;
         return this;
@@ -84,6 +90,7 @@ public class PackageIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedCpeUri")
     public String fixedCpeUri;
+
     public PackageIssue withFixedCpeUri(String fixedCpeUri) {
         this.fixedCpeUri = fixedCpeUri;
         return this;
@@ -95,6 +102,7 @@ public class PackageIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedPackage")
     public String fixedPackage;
+
     public PackageIssue withFixedPackage(String fixedPackage) {
         this.fixedPackage = fixedPackage;
         return this;
@@ -106,6 +114,7 @@ public class PackageIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedVersion")
     public Version fixedVersion;
+
     public PackageIssue withFixedVersion(Version fixedVersion) {
         this.fixedVersion = fixedVersion;
         return this;
@@ -117,9 +126,11 @@ public class PackageIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageType")
     public String packageType;
+
     public PackageIssue withPackageType(String packageType) {
         this.packageType = packageType;
         return this;
     }
     
+    public PackageIssue(){}
 }

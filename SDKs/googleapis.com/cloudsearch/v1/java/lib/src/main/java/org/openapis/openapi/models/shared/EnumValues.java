@@ -18,9 +18,11 @@ public class EnumValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public EnumValues withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public EnumValues(){}
 }

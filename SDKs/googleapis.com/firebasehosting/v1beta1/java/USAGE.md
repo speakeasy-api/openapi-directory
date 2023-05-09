@@ -3,12 +3,11 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateSecurityOption1;
-import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateSecurityOption2;
-import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateSecurity;
 import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateRequest;
 import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateResponse;
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateSecurity;
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateSecurityOption1;
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.SiteInput;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -19,42 +18,44 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            FirebasehostingProjectsSitesCreateRequest req = new FirebasehostingProjectsSitesCreateRequest() {{
-                dollarXgafv = "2";
+            FirebasehostingProjectsSitesCreateRequest req = new FirebasehostingProjectsSitesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 siteInput = new SiteInput() {{
-                    appId = "provident";
+                    appId = "distinctio";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("quibusdam", "unde");
-                        put("nulla", "corrupti");
-                        put("illum", "vel");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
+                        put("vel", "error");
+                        put("deserunt", "suscipit");
                     }};
-                }};
-                accessToken = "error";
-                alt = "media";
-                callback = "suscipit";
-                fields = "iure";
-                key = "magnam";
-                oauthToken = "debitis";
-                parent = "ipsa";
+                }};;
+                accessToken = "iure";
+                alt = AltEnum.JSON;
+                callback = "debitis";
+                fields = "ipsa";
+                key = "delectus";
+                oauthToken = "tempora";
                 prettyPrint = false;
-                quotaUser = "delectus";
-                siteId = "tempora";
-                uploadType = "suscipit";
-                uploadProtocol = "molestiae";
-            }}            
+                quotaUser = "suscipit";
+                siteId = "molestiae";
+                uploadType = "minus";
+                uploadProtocol = "placeat";
+            }};            
 
             FirebasehostingProjectsSitesCreateResponse res = sdk.projects.firebasehostingProjectsSitesCreate(req, new FirebasehostingProjectsSitesCreateSecurity() {{
-                option1 = new FirebasehostingProjectsSitesCreateSecurityOption1() {{
+                option1 = new FirebasehostingProjectsSitesCreateSecurityOption1("voluptatum", "iusto") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.site.isPresent()) {
+            if (res.site != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IapProjectsBrandsCreateResponse res = new org.openapis.openapi.models.operations.IapProjectsBrandsCreateResponse() {{
+        org.openapis.openapi.models.operations.IapProjectsBrandsCreateResponse res = new org.openapis.openapi.models.operations.IapProjectsBrandsCreateResponse(contentType, httpRes.statusCode()) {{
             brand = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsCreateResponse res = new org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsCreateResponse() {{
+        org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsCreateResponse res = new org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsCreateResponse(contentType, httpRes.statusCode()) {{
             identityAwareProxyClient = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsListResponse res = new org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsListResponse() {{
+        org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsListResponse res = new org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsListResponse(contentType, httpRes.statusCode()) {{
             listIdentityAwareProxyClientsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretResponse res = new org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretResponse() {{
+        org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretResponse res = new org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretResponse(contentType, httpRes.statusCode()) {{
             identityAwareProxyClient = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IapProjectsBrandsListResponse res = new org.openapis.openapi.models.operations.IapProjectsBrandsListResponse() {{
+        org.openapis.openapi.models.operations.IapProjectsBrandsListResponse res = new org.openapis.openapi.models.operations.IapProjectsBrandsListResponse(contentType, httpRes.statusCode()) {{
             listBrandsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsCreateResponse res = new org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsCreateResponse() {{
+        org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsCreateResponse res = new org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsCreateResponse(contentType, httpRes.statusCode()) {{
             tunnelDestGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsDeleteResponse res = new org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsDeleteResponse() {{
+        org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsDeleteResponse res = new org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsGetResponse res = new org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsGetResponse() {{
+        org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsGetResponse res = new org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsGetResponse(contentType, httpRes.statusCode()) {{
             tunnelDestGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,11 +420,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsListResponse res = new org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsListResponse() {{
+        org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsListResponse res = new org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsListResponse(contentType, httpRes.statusCode()) {{
             listTunnelDestGroupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +466,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsPatchResponse res = new org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsPatchResponse() {{
+        org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsPatchResponse res = new org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsPatchResponse(contentType, httpRes.statusCode()) {{
             tunnelDestGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,9 +18,11 @@ public class ResizeVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeGib")
     public String sizeGib;
+
     public ResizeVolumeRequest withSizeGib(String sizeGib) {
         this.sizeGib = sizeGib;
         return this;
     }
     
+    public ResizeVolumeRequest(){}
 }

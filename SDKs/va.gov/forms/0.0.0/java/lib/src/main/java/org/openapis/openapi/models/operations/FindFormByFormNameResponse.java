@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindFormByFormNameResponse {
     
     public String contentType;
+
     public FindFormByFormNameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class FindFormByFormNameResponse {
     
     
     public Integer statusCode;
+
     public FindFormByFormNameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class FindFormByFormNameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindFormByFormNameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class FindFormByFormNameResponse {
      */
     
     public FindFormByFormName200ApplicationJSON findFormByFormName200ApplicationJSONObject;
+
     public FindFormByFormNameResponse withFindFormByFormName200ApplicationJSONObject(FindFormByFormName200ApplicationJSON findFormByFormName200ApplicationJSONObject) {
         this.findFormByFormName200ApplicationJSONObject = findFormByFormName200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class FindFormByFormNameResponse {
      */
     
     public FindFormByFormName401ApplicationJSON findFormByFormName401ApplicationJSONObject;
+
     public FindFormByFormNameResponse withFindFormByFormName401ApplicationJSONObject(FindFormByFormName401ApplicationJSON findFormByFormName401ApplicationJSONObject) {
         this.findFormByFormName401ApplicationJSONObject = findFormByFormName401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class FindFormByFormNameResponse {
      */
     
     public FindFormByFormName404ApplicationJSON findFormByFormName404ApplicationJSONObject;
+
     public FindFormByFormNameResponse withFindFormByFormName404ApplicationJSONObject(FindFormByFormName404ApplicationJSON findFormByFormName404ApplicationJSONObject) {
         this.findFormByFormName404ApplicationJSONObject = findFormByFormName404ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class FindFormByFormNameResponse {
      */
     
     public FindFormByFormName429ApplicationJSON findFormByFormName429ApplicationJSONObject;
+
     public FindFormByFormNameResponse withFindFormByFormName429ApplicationJSONObject(FindFormByFormName429ApplicationJSON findFormByFormName429ApplicationJSONObject) {
         this.findFormByFormName429ApplicationJSONObject = findFormByFormName429ApplicationJSONObject;
         return this;
     }
     
+    public FindFormByFormNameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

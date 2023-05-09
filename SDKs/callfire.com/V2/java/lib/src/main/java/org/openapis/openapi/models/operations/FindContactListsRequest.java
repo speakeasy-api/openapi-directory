@@ -12,6 +12,7 @@ public class FindContactListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contactCount")
     public Integer contactCount;
+
     public FindContactListsRequest withContactCount(Integer contactCount) {
         this.contactCount = contactCount;
         return this;
@@ -22,6 +23,7 @@ public class FindContactListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exactMatch")
     public Boolean exactMatch;
+
     public FindContactListsRequest withExactMatch(Boolean exactMatch) {
         this.exactMatch = exactMatch;
         return this;
@@ -32,6 +34,7 @@ public class FindContactListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FindContactListsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +45,7 @@ public class FindContactListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FindContactListsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -52,6 +56,7 @@ public class FindContactListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public FindContactListsRequest withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class FindContactListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public FindContactListsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -72,9 +78,11 @@ public class FindContactListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public FindContactListsRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
     }
     
+    public FindContactListsRequest(){}
 }

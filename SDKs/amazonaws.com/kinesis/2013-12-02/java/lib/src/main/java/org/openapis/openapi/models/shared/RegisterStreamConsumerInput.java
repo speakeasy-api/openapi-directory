@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterStreamConsumerInput {
     @JsonProperty("ConsumerName")
     public String consumerName;
+
     public RegisterStreamConsumerInput withConsumerName(String consumerName) {
         this.consumerName = consumerName;
         return this;
@@ -16,9 +17,14 @@ public class RegisterStreamConsumerInput {
     
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public RegisterStreamConsumerInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
     }
     
+    public RegisterStreamConsumerInput(@JsonProperty("ConsumerName") String consumerName, @JsonProperty("StreamARN") String streamARN) {
+        this.consumerName = consumerName;
+        this.streamARN = streamARN;
+  }
 }

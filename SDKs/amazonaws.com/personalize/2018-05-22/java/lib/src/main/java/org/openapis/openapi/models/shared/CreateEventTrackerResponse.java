@@ -15,6 +15,7 @@ public class CreateEventTrackerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTrackerArn")
     public String eventTrackerArn;
+
     public CreateEventTrackerResponse withEventTrackerArn(String eventTrackerArn) {
         this.eventTrackerArn = eventTrackerArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateEventTrackerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingId")
     public String trackingId;
+
     public CreateEventTrackerResponse withTrackingId(String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
     
+    public CreateEventTrackerResponse(){}
 }

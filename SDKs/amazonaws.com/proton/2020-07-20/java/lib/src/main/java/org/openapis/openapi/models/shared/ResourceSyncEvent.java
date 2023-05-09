@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ResourceSyncEvent {
     @JsonProperty("event")
     public String event;
+
     public ResourceSyncEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -27,6 +28,7 @@ public class ResourceSyncEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public ResourceSyncEvent withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -36,6 +38,7 @@ public class ResourceSyncEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("time")
     public OffsetDateTime time;
+
     public ResourceSyncEvent withTime(OffsetDateTime time) {
         this.time = time;
         return this;
@@ -43,9 +46,15 @@ public class ResourceSyncEvent {
     
     @JsonProperty("type")
     public String type;
+
     public ResourceSyncEvent withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ResourceSyncEvent(@JsonProperty("event") String event, @JsonProperty("time") OffsetDateTime time, @JsonProperty("type") String type) {
+        this.event = event;
+        this.time = time;
+        this.type = type;
+  }
 }

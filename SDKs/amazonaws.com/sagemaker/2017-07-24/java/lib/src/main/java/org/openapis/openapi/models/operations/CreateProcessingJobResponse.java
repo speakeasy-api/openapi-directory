@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateProcessingJobResponse {
     
     public String contentType;
+
     public CreateProcessingJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateProcessingJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateProcessingJobResponse createProcessingJobResponse;
+
     public CreateProcessingJobResponse withCreateProcessingJobResponse(org.openapis.openapi.models.shared.CreateProcessingJobResponse createProcessingJobResponse) {
         this.createProcessingJobResponse = createProcessingJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateProcessingJobResponse {
      */
     
     public Object resourceInUse;
+
     public CreateProcessingJobResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -39,6 +43,7 @@ public class CreateProcessingJobResponse {
      */
     
     public Object resourceNotFound;
+
     public CreateProcessingJobResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -46,6 +51,7 @@ public class CreateProcessingJobResponse {
     
     
     public Integer statusCode;
+
     public CreateProcessingJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateProcessingJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateProcessingJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateProcessingJobResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateProcessingJobResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
     }
     
+    public CreateProcessingJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

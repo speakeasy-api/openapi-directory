@@ -18,6 +18,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access")
     public DatasetAccess[] access;
+
     public Dataset withAccess(DatasetAccess[] access) {
         this.access = access;
         return this;
@@ -29,6 +30,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public Dataset withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -37,6 +39,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetReference")
     public DatasetReference datasetReference;
+
     public Dataset withDatasetReference(DatasetReference datasetReference) {
         this.datasetReference = datasetReference;
         return this;
@@ -48,6 +51,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultCollation")
     public String defaultCollation;
+
     public Dataset withDefaultCollation(String defaultCollation) {
         this.defaultCollation = defaultCollation;
         return this;
@@ -56,6 +60,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultEncryptionConfiguration")
     public EncryptionConfiguration defaultEncryptionConfiguration;
+
     public Dataset withDefaultEncryptionConfiguration(EncryptionConfiguration defaultEncryptionConfiguration) {
         this.defaultEncryptionConfiguration = defaultEncryptionConfiguration;
         return this;
@@ -67,6 +72,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultPartitionExpirationMs")
     public String defaultPartitionExpirationMs;
+
     public Dataset withDefaultPartitionExpirationMs(String defaultPartitionExpirationMs) {
         this.defaultPartitionExpirationMs = defaultPartitionExpirationMs;
         return this;
@@ -78,6 +84,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultRoundingMode")
     public String defaultRoundingMode;
+
     public Dataset withDefaultRoundingMode(String defaultRoundingMode) {
         this.defaultRoundingMode = defaultRoundingMode;
         return this;
@@ -89,6 +96,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultTableExpirationMs")
     public String defaultTableExpirationMs;
+
     public Dataset withDefaultTableExpirationMs(String defaultTableExpirationMs) {
         this.defaultTableExpirationMs = defaultTableExpirationMs;
         return this;
@@ -100,6 +108,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Dataset withDescription(String description) {
         this.description = description;
         return this;
@@ -111,6 +120,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Dataset withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -122,6 +132,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public Dataset withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -133,6 +144,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Dataset withId(String id) {
         this.id = id;
         return this;
@@ -144,6 +156,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCaseInsensitive")
     public Boolean isCaseInsensitive;
+
     public Dataset withIsCaseInsensitive(Boolean isCaseInsensitive) {
         this.isCaseInsensitive = isCaseInsensitive;
         return this;
@@ -155,6 +168,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Dataset withKind(String kind) {
         this.kind = kind;
         return this;
@@ -166,6 +180,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Dataset withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -177,6 +192,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedTime")
     public String lastModifiedTime;
+
     public Dataset withLastModifiedTime(String lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -188,6 +204,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Dataset withLocation(String location) {
         this.location = location;
         return this;
@@ -199,6 +216,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTimeTravelHours")
     public String maxTimeTravelHours;
+
     public Dataset withMaxTimeTravelHours(String maxTimeTravelHours) {
         this.maxTimeTravelHours = maxTimeTravelHours;
         return this;
@@ -210,6 +228,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public Dataset withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -221,6 +240,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Dataset withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -232,6 +252,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageBillingModel")
     public String storageBillingModel;
+
     public Dataset withStorageBillingModel(String storageBillingModel) {
         this.storageBillingModel = storageBillingModel;
         return this;
@@ -243,9 +264,11 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public DatasetTags[] tags;
+
     public Dataset withTags(DatasetTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public Dataset(){}
 }

@@ -15,6 +15,7 @@ public class KmsKeyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grants")
     public KmsGrantConfiguration[] grants;
+
     public KmsKeyConfiguration withGrants(KmsGrantConfiguration[] grants) {
         this.grants = grants;
         return this;
@@ -23,9 +24,11 @@ public class KmsKeyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPolicies")
     public java.util.Map<String, String> keyPolicies;
+
     public KmsKeyConfiguration withKeyPolicies(java.util.Map<String, String> keyPolicies) {
         this.keyPolicies = keyPolicies;
         return this;
     }
     
+    public KmsKeyConfiguration(){}
 }

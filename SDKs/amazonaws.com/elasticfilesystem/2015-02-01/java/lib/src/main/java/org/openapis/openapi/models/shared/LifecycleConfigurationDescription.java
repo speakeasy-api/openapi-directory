@@ -15,9 +15,11 @@ public class LifecycleConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifecyclePolicies")
     public LifecyclePolicy[] lifecyclePolicies;
+
     public LifecycleConfigurationDescription withLifecyclePolicies(LifecyclePolicy[] lifecyclePolicies) {
         this.lifecyclePolicies = lifecyclePolicies;
         return this;
     }
     
+    public LifecycleConfigurationDescription(){}
 }

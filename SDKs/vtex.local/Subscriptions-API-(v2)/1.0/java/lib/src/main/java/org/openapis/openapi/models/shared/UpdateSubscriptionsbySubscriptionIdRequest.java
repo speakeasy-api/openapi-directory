@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateSubscriptionsbySubscriptionIdRequest {
     @JsonProperty("isSkipped")
     public Boolean isSkipped;
+
     public UpdateSubscriptionsbySubscriptionIdRequest withIsSkipped(Boolean isSkipped) {
         this.isSkipped = isSkipped;
         return this;
@@ -16,6 +17,7 @@ public class UpdateSubscriptionsbySubscriptionIdRequest {
     
     @JsonProperty("item")
     public Item item;
+
     public UpdateSubscriptionsbySubscriptionIdRequest withItem(Item item) {
         this.item = item;
         return this;
@@ -23,6 +25,7 @@ public class UpdateSubscriptionsbySubscriptionIdRequest {
     
     @JsonProperty("metadata")
     public Metadatum[] metadata;
+
     public UpdateSubscriptionsbySubscriptionIdRequest withMetadata(Metadatum[] metadata) {
         this.metadata = metadata;
         return this;
@@ -30,6 +33,7 @@ public class UpdateSubscriptionsbySubscriptionIdRequest {
     
     @JsonProperty("plan")
     public Plan plan;
+
     public UpdateSubscriptionsbySubscriptionIdRequest withPlan(Plan plan) {
         this.plan = plan;
         return this;
@@ -37,6 +41,7 @@ public class UpdateSubscriptionsbySubscriptionIdRequest {
     
     @JsonProperty("purchaseSettings")
     public PurchaseSettings purchaseSettings;
+
     public UpdateSubscriptionsbySubscriptionIdRequest withPurchaseSettings(PurchaseSettings purchaseSettings) {
         this.purchaseSettings = purchaseSettings;
         return this;
@@ -44,6 +49,7 @@ public class UpdateSubscriptionsbySubscriptionIdRequest {
     
     @JsonProperty("shippingAddress")
     public ShippingAddress shippingAddress;
+
     public UpdateSubscriptionsbySubscriptionIdRequest withShippingAddress(ShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -51,9 +57,19 @@ public class UpdateSubscriptionsbySubscriptionIdRequest {
     
     @JsonProperty("status")
     public String status;
+
     public UpdateSubscriptionsbySubscriptionIdRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public UpdateSubscriptionsbySubscriptionIdRequest(@JsonProperty("isSkipped") Boolean isSkipped, @JsonProperty("item") Item item, @JsonProperty("metadata") Metadatum[] metadata, @JsonProperty("plan") Plan plan, @JsonProperty("purchaseSettings") PurchaseSettings purchaseSettings, @JsonProperty("shippingAddress") ShippingAddress shippingAddress, @JsonProperty("status") String status) {
+        this.isSkipped = isSkipped;
+        this.item = item;
+        this.metadata = metadata;
+        this.plan = plan;
+        this.purchaseSettings = purchaseSettings;
+        this.shippingAddress = shippingAddress;
+        this.status = status;
+  }
 }

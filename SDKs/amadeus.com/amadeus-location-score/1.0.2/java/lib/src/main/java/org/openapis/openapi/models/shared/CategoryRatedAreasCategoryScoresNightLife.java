@@ -18,9 +18,11 @@ public class CategoryRatedAreasCategoryScoresNightLife {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overall")
     public Double overall;
+
     public CategoryRatedAreasCategoryScoresNightLife withOverall(Double overall) {
         this.overall = overall;
         return this;
     }
     
+    public CategoryRatedAreasCategoryScoresNightLife(){}
 }

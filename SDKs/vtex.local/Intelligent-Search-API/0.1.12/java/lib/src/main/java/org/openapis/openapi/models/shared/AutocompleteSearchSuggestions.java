@@ -18,9 +18,11 @@ public class AutocompleteSearchSuggestions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searches")
     public AutocompleteSearchSuggestionsSearches[] searches;
+
     public AutocompleteSearchSuggestions withSearches(AutocompleteSearchSuggestionsSearches[] searches) {
         this.searches = searches;
         return this;
     }
     
+    public AutocompleteSearchSuggestions(){}
 }

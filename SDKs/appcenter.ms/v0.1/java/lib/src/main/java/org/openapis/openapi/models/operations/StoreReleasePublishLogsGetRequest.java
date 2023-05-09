@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoreReleasePublishLogsGetRequest {
@@ -12,6 +13,7 @@ public class StoreReleasePublishLogsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public StoreReleasePublishLogsGetRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class StoreReleasePublishLogsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public StoreReleasePublishLogsGetRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -32,6 +35,7 @@ public class StoreReleasePublishLogsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public String releaseId;
+
     public StoreReleasePublishLogsGetRequest withReleaseId(String releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -42,9 +46,16 @@ public class StoreReleasePublishLogsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=store_name")
     public String storeName;
+
     public StoreReleasePublishLogsGetRequest withStoreName(String storeName) {
         this.storeName = storeName;
         return this;
     }
     
+    public StoreReleasePublishLogsGetRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("release_id") String releaseId, @JsonProperty("store_name") String storeName) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.releaseId = releaseId;
+        this.storeName = storeName;
+  }
 }

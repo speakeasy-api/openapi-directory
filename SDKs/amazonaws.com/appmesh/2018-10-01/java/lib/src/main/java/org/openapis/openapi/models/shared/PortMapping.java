@@ -15,6 +15,7 @@ public class PortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public PortMapping withPort(Long port) {
         this.port = port;
         return this;
@@ -23,9 +24,11 @@ public class PortMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public PortProtocolEnum protocol;
+
     public PortMapping withProtocol(PortProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public PortMapping(){}
 }

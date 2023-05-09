@@ -15,9 +15,11 @@ public class CreateSimulationJobRequestBodyLoggingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordAllRosTopics")
     public Boolean recordAllRosTopics;
+
     public CreateSimulationJobRequestBodyLoggingConfig withRecordAllRosTopics(Boolean recordAllRosTopics) {
         this.recordAllRosTopics = recordAllRosTopics;
         return this;
     }
     
+    public CreateSimulationJobRequestBodyLoggingConfig(){}
 }

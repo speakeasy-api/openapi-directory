@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstanceAccessControlAttributeConfiguration {
     @JsonProperty("AccessControlAttributes")
     public AccessControlAttribute[] accessControlAttributes;
+
     public InstanceAccessControlAttributeConfiguration withAccessControlAttributes(AccessControlAttribute[] accessControlAttributes) {
         this.accessControlAttributes = accessControlAttributes;
         return this;
     }
     
+    public InstanceAccessControlAttributeConfiguration(@JsonProperty("AccessControlAttributes") AccessControlAttribute[] accessControlAttributes) {
+        this.accessControlAttributes = accessControlAttributes;
+  }
 }

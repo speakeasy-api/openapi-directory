@@ -12,6 +12,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiAccountId")
     public Long apiAccountId;
+
     public BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel withApiAccountId(Long apiAccountId) {
         this.apiAccountId = apiAccountId;
         return this;
@@ -20,6 +21,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiAccountName")
     public String apiAccountName;
+
     public BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel withApiAccountName(String apiAccountName) {
         this.apiAccountName = apiAccountName;
         return this;
@@ -28,6 +30,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Custom")
     public java.util.Map<String, Object> custom;
+
     public BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel withCustom(java.util.Map<String, Object> custom) {
         this.custom = custom;
         return this;
@@ -36,6 +39,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportFactor")
     public Double exportFactor;
+
     public BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel withExportFactor(Double exportFactor) {
         this.exportFactor = exportFactor;
         return this;
@@ -44,6 +48,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel withId(Integer id) {
         this.id = id;
         return this;
@@ -51,6 +56,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel {
     
     @JsonProperty("Source")
     public String source;
+
     public BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel withSource(String source) {
         this.source = source;
         return this;
@@ -58,6 +64,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel {
     
     @JsonProperty("SourceId")
     public String sourceId;
+
     public BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -66,6 +73,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockSyncInactive")
     public Boolean stockSyncInactive;
+
     public BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel withStockSyncInactive(Boolean stockSyncInactive) {
         this.stockSyncInactive = stockSyncInactive;
         return this;
@@ -74,6 +82,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockSyncMax")
     public Double stockSyncMax;
+
     public BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel withStockSyncMax(Double stockSyncMax) {
         this.stockSyncMax = stockSyncMax;
         return this;
@@ -82,6 +91,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockSyncMin")
     public Double stockSyncMin;
+
     public BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel withStockSyncMin(Double stockSyncMin) {
         this.stockSyncMin = stockSyncMin;
         return this;
@@ -90,9 +100,14 @@ public class BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnitsPerItem")
     public Double unitsPerItem;
+
     public BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel withUnitsPerItem(Double unitsPerItem) {
         this.unitsPerItem = unitsPerItem;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel(@JsonProperty("Source") String source, @JsonProperty("SourceId") String sourceId) {
+        this.source = source;
+        this.sourceId = sourceId;
+  }
 }

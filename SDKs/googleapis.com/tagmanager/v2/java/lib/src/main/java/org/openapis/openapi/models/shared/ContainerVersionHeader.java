@@ -18,6 +18,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public ContainerVersionHeader withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public ContainerVersionHeader withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -40,6 +42,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerVersionId")
     public String containerVersionId;
+
     public ContainerVersionHeader withContainerVersionId(String containerVersionId) {
         this.containerVersionId = containerVersionId;
         return this;
@@ -51,6 +54,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public ContainerVersionHeader withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -62,6 +66,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContainerVersionHeader withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numClients")
     public String numClients;
+
     public ContainerVersionHeader withNumClients(String numClients) {
         this.numClients = numClients;
         return this;
@@ -84,6 +90,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numCustomTemplates")
     public String numCustomTemplates;
+
     public ContainerVersionHeader withNumCustomTemplates(String numCustomTemplates) {
         this.numCustomTemplates = numCustomTemplates;
         return this;
@@ -95,6 +102,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numGtagConfigs")
     public String numGtagConfigs;
+
     public ContainerVersionHeader withNumGtagConfigs(String numGtagConfigs) {
         this.numGtagConfigs = numGtagConfigs;
         return this;
@@ -106,6 +114,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numMacros")
     public String numMacros;
+
     public ContainerVersionHeader withNumMacros(String numMacros) {
         this.numMacros = numMacros;
         return this;
@@ -117,6 +126,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numRules")
     public String numRules;
+
     public ContainerVersionHeader withNumRules(String numRules) {
         this.numRules = numRules;
         return this;
@@ -128,8 +138,21 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numTags")
     public String numTags;
+
     public ContainerVersionHeader withNumTags(String numTags) {
         this.numTags = numTags;
+        return this;
+    }
+    
+    /**
+     * Number of transformations in the container version.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("numTransformations")
+    public String numTransformations;
+
+    public ContainerVersionHeader withNumTransformations(String numTransformations) {
+        this.numTransformations = numTransformations;
         return this;
     }
     
@@ -139,6 +162,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numTriggers")
     public String numTriggers;
+
     public ContainerVersionHeader withNumTriggers(String numTriggers) {
         this.numTriggers = numTriggers;
         return this;
@@ -150,6 +174,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numVariables")
     public String numVariables;
+
     public ContainerVersionHeader withNumVariables(String numVariables) {
         this.numVariables = numVariables;
         return this;
@@ -161,6 +186,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numZones")
     public String numZones;
+
     public ContainerVersionHeader withNumZones(String numZones) {
         this.numZones = numZones;
         return this;
@@ -172,9 +198,11 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public ContainerVersionHeader withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public ContainerVersionHeader(){}
 }

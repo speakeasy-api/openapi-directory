@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1ListKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public GoogleCloudRecaptchaenterpriseV1Key[] keys;
+
     public GoogleCloudRecaptchaenterpriseV1ListKeysResponse withKeys(GoogleCloudRecaptchaenterpriseV1Key[] keys) {
         this.keys = keys;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecaptchaenterpriseV1ListKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudRecaptchaenterpriseV1ListKeysResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1ListKeysResponse(){}
 }

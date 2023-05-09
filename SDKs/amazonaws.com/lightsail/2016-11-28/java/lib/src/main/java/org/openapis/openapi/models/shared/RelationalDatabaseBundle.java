@@ -15,6 +15,7 @@ public class RelationalDatabaseBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleId")
     public String bundleId;
+
     public RelationalDatabaseBundle withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -23,6 +24,7 @@ public class RelationalDatabaseBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuCount")
     public Long cpuCount;
+
     public RelationalDatabaseBundle withCpuCount(Long cpuCount) {
         this.cpuCount = cpuCount;
         return this;
@@ -31,6 +33,7 @@ public class RelationalDatabaseBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeInGb")
     public Long diskSizeInGb;
+
     public RelationalDatabaseBundle withDiskSizeInGb(Long diskSizeInGb) {
         this.diskSizeInGb = diskSizeInGb;
         return this;
@@ -39,6 +42,7 @@ public class RelationalDatabaseBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public RelationalDatabaseBundle withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -47,6 +51,7 @@ public class RelationalDatabaseBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isEncrypted")
     public Boolean isEncrypted;
+
     public RelationalDatabaseBundle withIsEncrypted(Boolean isEncrypted) {
         this.isEncrypted = isEncrypted;
         return this;
@@ -55,6 +60,7 @@ public class RelationalDatabaseBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RelationalDatabaseBundle withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class RelationalDatabaseBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Float price;
+
     public RelationalDatabaseBundle withPrice(Float price) {
         this.price = price;
         return this;
@@ -71,6 +78,7 @@ public class RelationalDatabaseBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ramSizeInGb")
     public Float ramSizeInGb;
+
     public RelationalDatabaseBundle withRamSizeInGb(Float ramSizeInGb) {
         this.ramSizeInGb = ramSizeInGb;
         return this;
@@ -79,9 +87,11 @@ public class RelationalDatabaseBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferPerMonthInGb")
     public Long transferPerMonthInGb;
+
     public RelationalDatabaseBundle withTransferPerMonthInGb(Long transferPerMonthInGb) {
         this.transferPerMonthInGb = transferPerMonthInGb;
         return this;
     }
     
+    public RelationalDatabaseBundle(){}
 }

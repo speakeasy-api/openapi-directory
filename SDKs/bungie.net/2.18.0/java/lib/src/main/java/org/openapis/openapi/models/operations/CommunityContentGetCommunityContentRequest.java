@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CommunityContentGetCommunityContentRequest {
@@ -12,6 +13,7 @@ public class CommunityContentGetCommunityContentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mediaFilter")
     public Integer mediaFilter;
+
     public CommunityContentGetCommunityContentRequest withMediaFilter(Integer mediaFilter) {
         this.mediaFilter = mediaFilter;
         return this;
@@ -22,6 +24,7 @@ public class CommunityContentGetCommunityContentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
     public Integer page;
+
     public CommunityContentGetCommunityContentRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -32,9 +35,15 @@ public class CommunityContentGetCommunityContentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sort")
     public Long sort;
+
     public CommunityContentGetCommunityContentRequest withSort(Long sort) {
         this.sort = sort;
         return this;
     }
     
+    public CommunityContentGetCommunityContentRequest(@JsonProperty("mediaFilter") Integer mediaFilter, @JsonProperty("page") Integer page, @JsonProperty("sort") Long sort) {
+        this.mediaFilter = mediaFilter;
+        this.page = page;
+        this.sort = sort;
+  }
 }

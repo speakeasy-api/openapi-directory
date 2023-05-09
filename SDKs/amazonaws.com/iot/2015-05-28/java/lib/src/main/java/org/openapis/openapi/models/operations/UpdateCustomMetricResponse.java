@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCustomMetricResponse {
     
     public String contentType;
+
     public UpdateCustomMetricResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCustomMetricResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateCustomMetricResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCustomMetricResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateCustomMetricResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCustomMetricResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateCustomMetricResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateCustomMetricResponse {
     
     
     public Integer statusCode;
+
     public UpdateCustomMetricResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateCustomMetricResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCustomMetricResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateCustomMetricResponse {
      */
     
     public Object throttlingException;
+
     public UpdateCustomMetricResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateCustomMetricResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateCustomMetricResponse updateCustomMetricResponse;
+
     public UpdateCustomMetricResponse withUpdateCustomMetricResponse(org.openapis.openapi.models.shared.UpdateCustomMetricResponse updateCustomMetricResponse) {
         this.updateCustomMetricResponse = updateCustomMetricResponse;
         return this;
     }
     
+    public UpdateCustomMetricResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

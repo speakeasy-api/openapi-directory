@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1FetchReportResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudChannelV1FetchReportResultsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1FetchReportResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportMetadata")
     public GoogleCloudChannelV1ReportResultsMetadata reportMetadata;
+
     public GoogleCloudChannelV1FetchReportResultsResponse withReportMetadata(GoogleCloudChannelV1ReportResultsMetadata reportMetadata) {
         this.reportMetadata = reportMetadata;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudChannelV1FetchReportResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public GoogleCloudChannelV1Row[] rows;
+
     public GoogleCloudChannelV1FetchReportResultsResponse withRows(GoogleCloudChannelV1Row[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public GoogleCloudChannelV1FetchReportResultsResponse(){}
 }

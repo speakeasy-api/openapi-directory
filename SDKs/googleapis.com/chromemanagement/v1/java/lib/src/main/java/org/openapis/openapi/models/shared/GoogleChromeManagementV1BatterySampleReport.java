@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1BatterySampleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeRate")
     public Integer chargeRate;
+
     public GoogleChromeManagementV1BatterySampleReport withChargeRate(Integer chargeRate) {
         this.chargeRate = chargeRate;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1BatterySampleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current")
     public String current;
+
     public GoogleChromeManagementV1BatterySampleReport withCurrent(String current) {
         this.current = current;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromeManagementV1BatterySampleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dischargeRate")
     public Integer dischargeRate;
+
     public GoogleChromeManagementV1BatterySampleReport withDischargeRate(Integer dischargeRate) {
         this.dischargeRate = dischargeRate;
         return this;
@@ -51,6 +54,7 @@ public class GoogleChromeManagementV1BatterySampleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remainingCapacity")
     public String remainingCapacity;
+
     public GoogleChromeManagementV1BatterySampleReport withRemainingCapacity(String remainingCapacity) {
         this.remainingCapacity = remainingCapacity;
         return this;
@@ -62,6 +66,7 @@ public class GoogleChromeManagementV1BatterySampleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportTime")
     public String reportTime;
+
     public GoogleChromeManagementV1BatterySampleReport withReportTime(String reportTime) {
         this.reportTime = reportTime;
         return this;
@@ -73,6 +78,7 @@ public class GoogleChromeManagementV1BatterySampleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GoogleChromeManagementV1BatterySampleReport withStatus(String status) {
         this.status = status;
         return this;
@@ -84,6 +90,7 @@ public class GoogleChromeManagementV1BatterySampleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature")
     public Integer temperature;
+
     public GoogleChromeManagementV1BatterySampleReport withTemperature(Integer temperature) {
         this.temperature = temperature;
         return this;
@@ -95,9 +102,11 @@ public class GoogleChromeManagementV1BatterySampleReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voltage")
     public String voltage;
+
     public GoogleChromeManagementV1BatterySampleReport withVoltage(String voltage) {
         this.voltage = voltage;
         return this;
     }
     
+    public GoogleChromeManagementV1BatterySampleReport(){}
 }

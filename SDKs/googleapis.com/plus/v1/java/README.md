@@ -16,12 +16,11 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PlusActivitiesGetSecurityOption1;
-import org.openapis.openapi.models.operations.PlusActivitiesGetSecurityOption2;
-import org.openapis.openapi.models.operations.PlusActivitiesGetSecurity;
 import org.openapis.openapi.models.operations.PlusActivitiesGetRequest;
 import org.openapis.openapi.models.operations.PlusActivitiesGetResponse;
+import org.openapis.openapi.models.operations.PlusActivitiesGetSecurity;
+import org.openapis.openapi.models.operations.PlusActivitiesGetSecurityOption1;
+import org.openapis.openapi.models.operations.PlusActivitiesGetSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
@@ -30,30 +29,31 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PlusActivitiesGetRequest req = new PlusActivitiesGetRequest() {{
-                activityId = "corrupti";
-                alt = "json";
+            PlusActivitiesGetRequest req = new PlusActivitiesGetRequest("corrupti") {{
+                alt = AltEnum.JSON;
                 fields = "provident";
                 key = "distinctio";
                 oauthToken = "quibusdam";
                 prettyPrint = false;
                 quotaUser = "unde";
                 userIp = "nulla";
-            }}            
+            }};            
 
             PlusActivitiesGetResponse res = sdk.activities.plusActivitiesGet(req, new PlusActivitiesGetSecurity() {{
-                option1 = new PlusActivitiesGetSecurityOption1() {{
+                option1 = new PlusActivitiesGetSecurityOption1("corrupti", "illum") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.activity.isPresent()) {
+            if (res.activity != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -61,23 +61,23 @@ public class Application {
 ## Available Resources and Operations
 
 
-### activities
+### [activities](docs/activities/README.md)
 
-* `plusActivitiesGet` - Shut down. See https://developers.google.com/+/api-shutdown for more details.
-* `plusActivitiesList` - Shut down. See https://developers.google.com/+/api-shutdown for more details.
-* `plusActivitiesSearch` - Shut down. See https://developers.google.com/+/api-shutdown for more details.
+* [plusActivitiesGet](docs/activities/README.md#plusactivitiesget) - Shut down. See https://developers.google.com/+/api-shutdown for more details.
+* [plusActivitiesList](docs/activities/README.md#plusactivitieslist) - Shut down. See https://developers.google.com/+/api-shutdown for more details.
+* [plusActivitiesSearch](docs/activities/README.md#plusactivitiessearch) - Shut down. See https://developers.google.com/+/api-shutdown for more details.
 
-### comments
+### [comments](docs/comments/README.md)
 
-* `plusCommentsGet` - Shut down. See https://developers.google.com/+/api-shutdown for more details.
-* `plusCommentsList` - Shut down. See https://developers.google.com/+/api-shutdown for more details.
+* [plusCommentsGet](docs/comments/README.md#pluscommentsget) - Shut down. See https://developers.google.com/+/api-shutdown for more details.
+* [plusCommentsList](docs/comments/README.md#pluscommentslist) - Shut down. See https://developers.google.com/+/api-shutdown for more details.
 
-### people
+### [people](docs/people/README.md)
 
-* `plusPeopleGet` - Get a person's profile. If your app uses scope https://www.googleapis.com/auth/plus.login, this method is guaranteed to return ageRange and language.
-* `plusPeopleList` - List all of the people in the specified collection.
-* `plusPeopleListByActivity` - Shut down. See https://developers.google.com/+/api-shutdown for more details.
-* `plusPeopleSearch` - Shut down. See https://developers.google.com/+/api-shutdown for more details.
+* [plusPeopleGet](docs/people/README.md#pluspeopleget) - Get a person's profile. If your app uses scope https://www.googleapis.com/auth/plus.login, this method is guaranteed to return ageRange and language.
+* [plusPeopleList](docs/people/README.md#pluspeoplelist) - List all of the people in the specified collection.
+* [plusPeopleListByActivity](docs/people/README.md#pluspeoplelistbyactivity) - Shut down. See https://developers.google.com/+/api-shutdown for more details.
+* [plusPeopleSearch](docs/people/README.md#pluspeoplesearch) - Shut down. See https://developers.google.com/+/api-shutdown for more details.
 <!-- End SDK Available Operations -->
 
 ### Maturity

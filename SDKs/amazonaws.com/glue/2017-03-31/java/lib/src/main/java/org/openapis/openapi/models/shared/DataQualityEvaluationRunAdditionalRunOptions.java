@@ -15,6 +15,7 @@ public class DataQualityEvaluationRunAdditionalRunOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchMetricsEnabled")
     public Boolean cloudWatchMetricsEnabled;
+
     public DataQualityEvaluationRunAdditionalRunOptions withCloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
         this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
         return this;
@@ -23,9 +24,11 @@ public class DataQualityEvaluationRunAdditionalRunOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultsS3Prefix")
     public String resultsS3Prefix;
+
     public DataQualityEvaluationRunAdditionalRunOptions withResultsS3Prefix(String resultsS3Prefix) {
         this.resultsS3Prefix = resultsS3Prefix;
         return this;
     }
     
+    public DataQualityEvaluationRunAdditionalRunOptions(){}
 }

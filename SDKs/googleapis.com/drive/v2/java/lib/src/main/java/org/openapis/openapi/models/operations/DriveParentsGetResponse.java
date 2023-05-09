@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DriveParentsGetResponse {
     
     public String contentType;
+
     public DriveParentsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DriveParentsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ParentReference parentReference;
+
     public DriveParentsGetResponse withParentReference(org.openapis.openapi.models.shared.ParentReference parentReference) {
         this.parentReference = parentReference;
         return this;
@@ -26,6 +29,7 @@ public class DriveParentsGetResponse {
     
     
     public Integer statusCode;
+
     public DriveParentsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DriveParentsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DriveParentsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DriveParentsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrderApiAddShipmentFormResponse {
     
     public String contentType;
+
     public OrderApiAddShipmentFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OrderApiAddShipmentFormResponse {
      */
     
     public java.util.Map<String, Object> orderApiAddShipmentForm200ApplicationJSONObject;
+
     public OrderApiAddShipmentFormResponse withOrderApiAddShipmentForm200ApplicationJSONObject(java.util.Map<String, Object> orderApiAddShipmentForm200ApplicationJSONObject) {
         this.orderApiAddShipmentForm200ApplicationJSONObject = orderApiAddShipmentForm200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class OrderApiAddShipmentFormResponse {
      */
     
     public java.util.Map<String, Object> orderApiAddShipmentForm200TextJSONObject;
+
     public OrderApiAddShipmentFormResponse withOrderApiAddShipmentForm200TextJSONObject(java.util.Map<String, Object> orderApiAddShipmentForm200TextJSONObject) {
         this.orderApiAddShipmentForm200TextJSONObject = orderApiAddShipmentForm200TextJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class OrderApiAddShipmentFormResponse {
     
     
     public Integer statusCode;
+
     public OrderApiAddShipmentFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class OrderApiAddShipmentFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrderApiAddShipmentFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OrderApiAddShipmentFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

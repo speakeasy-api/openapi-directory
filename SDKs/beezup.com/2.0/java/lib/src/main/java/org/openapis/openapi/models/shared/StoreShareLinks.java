@@ -15,9 +15,11 @@ public class StoreShareLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteShare")
     public LinksDeleteStoreShareLink deleteShare;
+
     public StoreShareLinks withDeleteShare(LinksDeleteStoreShareLink deleteShare) {
         this.deleteShare = deleteShare;
         return this;
     }
     
+    public StoreShareLinks(){}
 }

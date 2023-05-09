@@ -15,9 +15,11 @@ public class AssociateNodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeAssociationStatusToken")
     public String nodeAssociationStatusToken;
+
     public AssociateNodeResponse withNodeAssociationStatusToken(String nodeAssociationStatusToken) {
         this.nodeAssociationStatusToken = nodeAssociationStatusToken;
         return this;
     }
     
+    public AssociateNodeResponse(){}
 }

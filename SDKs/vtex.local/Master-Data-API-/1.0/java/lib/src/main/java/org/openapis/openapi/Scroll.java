@@ -87,11 +87,9 @@ public class Scroll {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ScrolldocumentsResponse res = new org.openapis.openapi.models.operations.ScrolldocumentsResponse() {{
+        org.openapis.openapi.models.operations.ScrolldocumentsResponse res = new org.openapis.openapi.models.operations.ScrolldocumentsResponse(contentType, httpRes.statusCode()) {{
             scrolldocuments429ApplicationJSONAny = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

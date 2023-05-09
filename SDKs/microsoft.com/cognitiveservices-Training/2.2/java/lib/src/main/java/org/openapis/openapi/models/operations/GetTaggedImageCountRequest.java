@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTaggedImageCountRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public GetTaggedImageCountRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -19,6 +21,7 @@ public class GetTaggedImageCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public GetTaggedImageCountRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -29,6 +32,7 @@ public class GetTaggedImageCountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public GetTaggedImageCountRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -39,9 +43,14 @@ public class GetTaggedImageCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tagIds")
     public String[] tagIds;
+
     public GetTaggedImageCountRequest withTagIds(String[] tagIds) {
         this.tagIds = tagIds;
         return this;
     }
     
+    public GetTaggedImageCountRequest(@JsonProperty("Training-Key") String trainingKey, @JsonProperty("projectId") String projectId) {
+        this.trainingKey = trainingKey;
+        this.projectId = projectId;
+  }
 }

@@ -15,9 +15,11 @@ public class GetChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public Channel channel;
+
     public GetChannelResponse withChannel(Channel channel) {
         this.channel = channel;
         return this;
     }
     
+    public GetChannelResponse(){}
 }

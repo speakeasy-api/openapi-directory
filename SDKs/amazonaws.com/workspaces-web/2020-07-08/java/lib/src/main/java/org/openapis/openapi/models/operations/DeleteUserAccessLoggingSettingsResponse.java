@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteUserAccessLoggingSettingsResponse {
@@ -12,6 +13,7 @@ public class DeleteUserAccessLoggingSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteUserAccessLoggingSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteUserAccessLoggingSettingsResponse {
      */
     
     public Object conflictException;
+
     public DeleteUserAccessLoggingSettingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteUserAccessLoggingSettingsResponse {
     
     
     public String contentType;
+
     public DeleteUserAccessLoggingSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteUserAccessLoggingSettingsResponse {
      */
     
     public java.util.Map<String, Object> deleteUserAccessLoggingSettingsResponse;
+
     public DeleteUserAccessLoggingSettingsResponse withDeleteUserAccessLoggingSettingsResponse(java.util.Map<String, Object> deleteUserAccessLoggingSettingsResponse) {
         this.deleteUserAccessLoggingSettingsResponse = deleteUserAccessLoggingSettingsResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteUserAccessLoggingSettingsResponse {
      */
     
     public Object internalServerException;
+
     public DeleteUserAccessLoggingSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteUserAccessLoggingSettingsResponse {
     
     
     public Integer statusCode;
+
     public DeleteUserAccessLoggingSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteUserAccessLoggingSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteUserAccessLoggingSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteUserAccessLoggingSettingsResponse {
      */
     
     public Object throttlingException;
+
     public DeleteUserAccessLoggingSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteUserAccessLoggingSettingsResponse {
      */
     
     public Object validationException;
+
     public DeleteUserAccessLoggingSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteUserAccessLoggingSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

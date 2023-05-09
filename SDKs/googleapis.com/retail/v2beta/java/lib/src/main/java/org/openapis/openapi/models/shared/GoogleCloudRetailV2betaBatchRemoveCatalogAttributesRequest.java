@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2betaBatchRemoveCatalogAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeKeys")
     public String[] attributeKeys;
+
     public GoogleCloudRetailV2betaBatchRemoveCatalogAttributesRequest withAttributeKeys(String[] attributeKeys) {
         this.attributeKeys = attributeKeys;
         return this;
     }
     
+    public GoogleCloudRetailV2betaBatchRemoveCatalogAttributesRequest(){}
 }

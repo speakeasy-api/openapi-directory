@@ -15,9 +15,11 @@ public class ExecuteSqlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlStatementResults")
     public SqlStatementResult[] sqlStatementResults;
+
     public ExecuteSqlResponse withSqlStatementResults(SqlStatementResult[] sqlStatementResults) {
         this.sqlStatementResults = sqlStatementResults;
         return this;
     }
     
+    public ExecuteSqlResponse(){}
 }

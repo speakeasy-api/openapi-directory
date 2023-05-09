@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class SnapshotList {
     
     public String arn;
+
     public SnapshotList withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class SnapshotList {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public SnapshotList withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -26,6 +28,7 @@ public class SnapshotList {
     
     
     public AutomaticFailoverStatusEnum automaticFailover;
+
     public SnapshotList withAutomaticFailover(AutomaticFailoverStatusEnum automaticFailover) {
         this.automaticFailover = automaticFailover;
         return this;
@@ -33,6 +36,7 @@ public class SnapshotList {
     
     
     public OffsetDateTime cacheClusterCreateTime;
+
     public SnapshotList withCacheClusterCreateTime(OffsetDateTime cacheClusterCreateTime) {
         this.cacheClusterCreateTime = cacheClusterCreateTime;
         return this;
@@ -40,6 +44,7 @@ public class SnapshotList {
     
     
     public String cacheClusterId;
+
     public SnapshotList withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -47,6 +52,7 @@ public class SnapshotList {
     
     
     public String cacheNodeType;
+
     public SnapshotList withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -54,6 +60,7 @@ public class SnapshotList {
     
     
     public String cacheParameterGroupName;
+
     public SnapshotList withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
@@ -61,6 +68,7 @@ public class SnapshotList {
     
     
     public String cacheSubnetGroupName;
+
     public SnapshotList withCacheSubnetGroupName(String cacheSubnetGroupName) {
         this.cacheSubnetGroupName = cacheSubnetGroupName;
         return this;
@@ -68,6 +76,7 @@ public class SnapshotList {
     
     
     public DataTieringStatusEnum dataTiering;
+
     public SnapshotList withDataTiering(DataTieringStatusEnum dataTiering) {
         this.dataTiering = dataTiering;
         return this;
@@ -75,6 +84,7 @@ public class SnapshotList {
     
     
     public String engine;
+
     public SnapshotList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -82,6 +92,7 @@ public class SnapshotList {
     
     
     public String engineVersion;
+
     public SnapshotList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -89,6 +100,7 @@ public class SnapshotList {
     
     
     public String kmsKeyId;
+
     public SnapshotList withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -96,6 +108,7 @@ public class SnapshotList {
     
     
     public NodeSnapshotList[] nodeSnapshots;
+
     public SnapshotList withNodeSnapshots(NodeSnapshotList[] nodeSnapshots) {
         this.nodeSnapshots = nodeSnapshots;
         return this;
@@ -103,6 +116,7 @@ public class SnapshotList {
     
     
     public Long numCacheNodes;
+
     public SnapshotList withNumCacheNodes(Long numCacheNodes) {
         this.numCacheNodes = numCacheNodes;
         return this;
@@ -110,6 +124,7 @@ public class SnapshotList {
     
     
     public Long numNodeGroups;
+
     public SnapshotList withNumNodeGroups(Long numNodeGroups) {
         this.numNodeGroups = numNodeGroups;
         return this;
@@ -117,6 +132,7 @@ public class SnapshotList {
     
     
     public Long port;
+
     public SnapshotList withPort(Long port) {
         this.port = port;
         return this;
@@ -124,6 +140,7 @@ public class SnapshotList {
     
     
     public String preferredAvailabilityZone;
+
     public SnapshotList withPreferredAvailabilityZone(String preferredAvailabilityZone) {
         this.preferredAvailabilityZone = preferredAvailabilityZone;
         return this;
@@ -131,6 +148,7 @@ public class SnapshotList {
     
     
     public String preferredMaintenanceWindow;
+
     public SnapshotList withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -138,6 +156,7 @@ public class SnapshotList {
     
     
     public String preferredOutpostArn;
+
     public SnapshotList withPreferredOutpostArn(String preferredOutpostArn) {
         this.preferredOutpostArn = preferredOutpostArn;
         return this;
@@ -145,6 +164,7 @@ public class SnapshotList {
     
     
     public String replicationGroupDescription;
+
     public SnapshotList withReplicationGroupDescription(String replicationGroupDescription) {
         this.replicationGroupDescription = replicationGroupDescription;
         return this;
@@ -152,6 +172,7 @@ public class SnapshotList {
     
     
     public String replicationGroupId;
+
     public SnapshotList withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -159,6 +180,7 @@ public class SnapshotList {
     
     
     public String snapshotName;
+
     public SnapshotList withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -166,6 +188,7 @@ public class SnapshotList {
     
     
     public Long snapshotRetentionLimit;
+
     public SnapshotList withSnapshotRetentionLimit(Long snapshotRetentionLimit) {
         this.snapshotRetentionLimit = snapshotRetentionLimit;
         return this;
@@ -173,6 +196,7 @@ public class SnapshotList {
     
     
     public String snapshotSource;
+
     public SnapshotList withSnapshotSource(String snapshotSource) {
         this.snapshotSource = snapshotSource;
         return this;
@@ -180,6 +204,7 @@ public class SnapshotList {
     
     
     public String snapshotStatus;
+
     public SnapshotList withSnapshotStatus(String snapshotStatus) {
         this.snapshotStatus = snapshotStatus;
         return this;
@@ -187,6 +212,7 @@ public class SnapshotList {
     
     
     public String snapshotWindow;
+
     public SnapshotList withSnapshotWindow(String snapshotWindow) {
         this.snapshotWindow = snapshotWindow;
         return this;
@@ -194,6 +220,7 @@ public class SnapshotList {
     
     
     public String topicArn;
+
     public SnapshotList withTopicArn(String topicArn) {
         this.topicArn = topicArn;
         return this;
@@ -201,9 +228,11 @@ public class SnapshotList {
     
     
     public String vpcId;
+
     public SnapshotList withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public SnapshotList(){}
 }

@@ -18,6 +18,7 @@ public class ProductsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ProductsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class ProductsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ProductsListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -37,9 +39,11 @@ public class ProductsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public Product[] resources;
+
     public ProductsListResponse withResources(Product[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public ProductsListResponse(){}
 }

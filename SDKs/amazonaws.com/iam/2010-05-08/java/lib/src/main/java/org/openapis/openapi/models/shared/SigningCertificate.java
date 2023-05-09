@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class SigningCertificate {
     
     public String certificateBody;
+
     public SigningCertificate withCertificateBody(String certificateBody) {
         this.certificateBody = certificateBody;
         return this;
@@ -19,6 +21,7 @@ public class SigningCertificate {
     
     
     public String certificateId;
+
     public SigningCertificate withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -26,6 +29,7 @@ public class SigningCertificate {
     
     
     public StatusTypeEnum status;
+
     public SigningCertificate withStatus(StatusTypeEnum status) {
         this.status = status;
         return this;
@@ -33,6 +37,7 @@ public class SigningCertificate {
     
     
     public OffsetDateTime uploadDate;
+
     public SigningCertificate withUploadDate(OffsetDateTime uploadDate) {
         this.uploadDate = uploadDate;
         return this;
@@ -40,9 +45,16 @@ public class SigningCertificate {
     
     
     public String userName;
+
     public SigningCertificate withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public SigningCertificate(@JsonProperty("CertificateBody") String certificateBody, @JsonProperty("CertificateId") String certificateId, @JsonProperty("Status") StatusTypeEnum status, @JsonProperty("UserName") String userName) {
+        this.certificateBody = certificateBody;
+        this.certificateId = certificateId;
+        this.status = status;
+        this.userName = userName;
+  }
 }

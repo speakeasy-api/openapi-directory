@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveTagsFromResourceResponse {
@@ -12,6 +13,7 @@ public class RemoveTagsFromResourceResponse {
      */
     
     public Object cloudHsmInternalException;
+
     public RemoveTagsFromResourceResponse withCloudHsmInternalException(Object cloudHsmInternalException) {
         this.cloudHsmInternalException = cloudHsmInternalException;
         return this;
@@ -22,6 +24,7 @@ public class RemoveTagsFromResourceResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public RemoveTagsFromResourceResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -29,6 +32,7 @@ public class RemoveTagsFromResourceResponse {
     
     
     public String contentType;
+
     public RemoveTagsFromResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RemoveTagsFromResourceResponse {
      */
     
     public Object invalidRequestException;
+
     public RemoveTagsFromResourceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveTagsFromResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.RemoveTagsFromResourceResponse removeTagsFromResourceResponse;
+
     public RemoveTagsFromResourceResponse withRemoveTagsFromResourceResponse(org.openapis.openapi.models.shared.RemoveTagsFromResourceResponse removeTagsFromResourceResponse) {
         this.removeTagsFromResourceResponse = removeTagsFromResourceResponse;
         return this;
@@ -56,6 +62,7 @@ public class RemoveTagsFromResourceResponse {
     
     
     public Integer statusCode;
+
     public RemoveTagsFromResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class RemoveTagsFromResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveTagsFromResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemoveTagsFromResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

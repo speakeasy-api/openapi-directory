@@ -12,6 +12,7 @@ public class ExportPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[name]")
     public String filterName;
+
     public ExportPackagesRequest withFilterName(String filterName) {
         this.filterName = filterName;
         return this;
@@ -22,6 +23,7 @@ public class ExportPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[summary]")
     public String filterSummary;
+
     public ExportPackagesRequest withFilterSummary(String filterSummary) {
         this.filterSummary = filterSummary;
         return this;
@@ -32,6 +34,7 @@ public class ExportPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[systems_installed]")
     public String filterSystemsInstalled;
+
     public ExportPackagesRequest withFilterSystemsInstalled(String filterSystemsInstalled) {
         this.filterSystemsInstalled = filterSystemsInstalled;
         return this;
@@ -42,6 +45,7 @@ public class ExportPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[systems_updatable]")
     public String filterSystemsUpdatable;
+
     public ExportPackagesRequest withFilterSystemsUpdatable(String filterSystemsUpdatable) {
         this.filterSystemsUpdatable = filterSystemsUpdatable;
         return this;
@@ -52,6 +56,7 @@ public class ExportPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public ExportPackagesRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -62,9 +67,11 @@ public class ExportPackagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public ExportPackagesSortEnum sort;
+
     public ExportPackagesRequest withSort(ExportPackagesSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public ExportPackagesRequest(){}
 }

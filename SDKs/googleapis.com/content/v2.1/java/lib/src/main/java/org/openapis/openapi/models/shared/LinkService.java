@@ -15,6 +15,7 @@ public class LinkService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public LinkService withService(String service) {
         this.service = service;
         return this;
@@ -26,9 +27,11 @@ public class LinkService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public LinkService withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public LinkService(){}
 }

@@ -12,9 +12,13 @@ public class InvokeEndpointRequestBody {
      */
     @JsonProperty("Body")
     public String body;
+
     public InvokeEndpointRequestBody withBody(String body) {
         this.body = body;
         return this;
     }
     
+    public InvokeEndpointRequestBody(@JsonProperty("Body") String body) {
+        this.body = body;
+  }
 }

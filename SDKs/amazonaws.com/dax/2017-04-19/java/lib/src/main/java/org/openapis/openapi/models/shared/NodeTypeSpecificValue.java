@@ -15,6 +15,7 @@ public class NodeTypeSpecificValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeType")
     public String nodeType;
+
     public NodeTypeSpecificValue withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -23,9 +24,11 @@ public class NodeTypeSpecificValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public NodeTypeSpecificValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public NodeTypeSpecificValue(){}
 }

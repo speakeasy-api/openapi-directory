@@ -18,6 +18,7 @@ public class BuyOnGoogleProgramStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessModel")
     public BuyOnGoogleProgramStatusBusinessModelEnum[] businessModel;
+
     public BuyOnGoogleProgramStatus withBusinessModel(BuyOnGoogleProgramStatusBusinessModelEnum[] businessModel) {
         this.businessModel = businessModel;
         return this;
@@ -29,6 +30,7 @@ public class BuyOnGoogleProgramStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerServicePendingEmail")
     public String customerServicePendingEmail;
+
     public BuyOnGoogleProgramStatus withCustomerServicePendingEmail(String customerServicePendingEmail) {
         this.customerServicePendingEmail = customerServicePendingEmail;
         return this;
@@ -40,6 +42,7 @@ public class BuyOnGoogleProgramStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerServicePendingPhoneNumber")
     public String customerServicePendingPhoneNumber;
+
     public BuyOnGoogleProgramStatus withCustomerServicePendingPhoneNumber(String customerServicePendingPhoneNumber) {
         this.customerServicePendingPhoneNumber = customerServicePendingPhoneNumber;
         return this;
@@ -51,6 +54,7 @@ public class BuyOnGoogleProgramStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerServicePendingPhoneRegionCode")
     public String customerServicePendingPhoneRegionCode;
+
     public BuyOnGoogleProgramStatus withCustomerServicePendingPhoneRegionCode(String customerServicePendingPhoneRegionCode) {
         this.customerServicePendingPhoneRegionCode = customerServicePendingPhoneRegionCode;
         return this;
@@ -62,6 +66,7 @@ public class BuyOnGoogleProgramStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerServiceVerifiedEmail")
     public String customerServiceVerifiedEmail;
+
     public BuyOnGoogleProgramStatus withCustomerServiceVerifiedEmail(String customerServiceVerifiedEmail) {
         this.customerServiceVerifiedEmail = customerServiceVerifiedEmail;
         return this;
@@ -73,6 +78,7 @@ public class BuyOnGoogleProgramStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerServiceVerifiedPhoneNumber")
     public String customerServiceVerifiedPhoneNumber;
+
     public BuyOnGoogleProgramStatus withCustomerServiceVerifiedPhoneNumber(String customerServiceVerifiedPhoneNumber) {
         this.customerServiceVerifiedPhoneNumber = customerServiceVerifiedPhoneNumber;
         return this;
@@ -84,6 +90,7 @@ public class BuyOnGoogleProgramStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerServiceVerifiedPhoneRegionCode")
     public String customerServiceVerifiedPhoneRegionCode;
+
     public BuyOnGoogleProgramStatus withCustomerServiceVerifiedPhoneRegionCode(String customerServiceVerifiedPhoneRegionCode) {
         this.customerServiceVerifiedPhoneRegionCode = customerServiceVerifiedPhoneRegionCode;
         return this;
@@ -95,6 +102,7 @@ public class BuyOnGoogleProgramStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlineSalesChannel")
     public BuyOnGoogleProgramStatusOnlineSalesChannelEnum onlineSalesChannel;
+
     public BuyOnGoogleProgramStatus withOnlineSalesChannel(BuyOnGoogleProgramStatusOnlineSalesChannelEnum onlineSalesChannel) {
         this.onlineSalesChannel = onlineSalesChannel;
         return this;
@@ -106,9 +114,11 @@ public class BuyOnGoogleProgramStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("participationStage")
     public BuyOnGoogleProgramStatusParticipationStageEnum participationStage;
+
     public BuyOnGoogleProgramStatus withParticipationStage(BuyOnGoogleProgramStatusParticipationStageEnum participationStage) {
         this.participationStage = participationStage;
         return this;
     }
     
+    public BuyOnGoogleProgramStatus(){}
 }

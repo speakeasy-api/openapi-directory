@@ -12,6 +12,7 @@ public class DestinyComponentsCraftablesDestinyCraftableComponent {
      */
     
     public Integer[] failedRequirementIndexes;
+
     public DestinyComponentsCraftablesDestinyCraftableComponent withFailedRequirementIndexes(Integer[] failedRequirementIndexes) {
         this.failedRequirementIndexes = failedRequirementIndexes;
         return this;
@@ -22,6 +23,7 @@ public class DestinyComponentsCraftablesDestinyCraftableComponent {
      */
     
     public DestinyComponentsCraftablesDestinyCraftableSocketComponent[] sockets;
+
     public DestinyComponentsCraftablesDestinyCraftableComponent withSockets(DestinyComponentsCraftablesDestinyCraftableSocketComponent[] sockets) {
         this.sockets = sockets;
         return this;
@@ -29,9 +31,11 @@ public class DestinyComponentsCraftablesDestinyCraftableComponent {
     
     
     public Boolean visible;
+
     public DestinyComponentsCraftablesDestinyCraftableComponent withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public DestinyComponentsCraftablesDestinyCraftableComponent(){}
 }

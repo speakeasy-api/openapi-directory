@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCmsV3DomainsDomainIdGetByIdRequest {
@@ -12,9 +13,13 @@ public class GetCmsV3DomainsDomainIdGetByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainId")
     public String domainId;
+
     public GetCmsV3DomainsDomainIdGetByIdRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
     }
     
+    public GetCmsV3DomainsDomainIdGetByIdRequest(@JsonProperty("domainId") String domainId) {
+        this.domainId = domainId;
+  }
 }

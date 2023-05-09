@@ -15,9 +15,11 @@ public class CreateKnowledgeBaseRequestBodySourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appIntegrations")
     public org.openapis.openapi.models.shared.AppIntegrationsConfiguration appIntegrations;
+
     public CreateKnowledgeBaseRequestBodySourceConfiguration withAppIntegrations(org.openapis.openapi.models.shared.AppIntegrationsConfiguration appIntegrations) {
         this.appIntegrations = appIntegrations;
         return this;
     }
     
+    public CreateKnowledgeBaseRequestBodySourceConfiguration(){}
 }

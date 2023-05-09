@@ -58,11 +58,9 @@ public class ImageActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetImagesIdActionsResponse res = new org.openapis.openapi.models.operations.GetImagesIdActionsResponse() {{
+        org.openapis.openapi.models.operations.GetImagesIdActionsResponse res = new org.openapis.openapi.models.operations.GetImagesIdActionsResponse(contentType, httpRes.statusCode()) {{
             actionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,11 +95,9 @@ public class ImageActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetImagesIdActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetImagesIdActionsActionIdResponse() {{
+        org.openapis.openapi.models.operations.GetImagesIdActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetImagesIdActionsActionIdResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,11 +134,9 @@ public class ImageActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostImagesIdActionsChangeProtectionResponse res = new org.openapis.openapi.models.operations.PostImagesIdActionsChangeProtectionResponse() {{
+        org.openapis.openapi.models.operations.PostImagesIdActionsChangeProtectionResponse res = new org.openapis.openapi.models.operations.PostImagesIdActionsChangeProtectionResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

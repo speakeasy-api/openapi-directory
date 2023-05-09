@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.RetrievePrefixPricingRequest;
 import org.openapis.openapi.models.operations.RetrievePrefixPricingResponse;
 
@@ -13,20 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            RetrievePrefixPricingRequest req = new RetrievePrefixPricingRequest() {{
-                apiKey = "corrupti";
-                apiSecret = "provident";
-                prefix = "distinctio";
-                type = "quibusdam";
-            }}            
+            RetrievePrefixPricingRequest req = new RetrievePrefixPricingRequest("corrupti", "provident", "distinctio", "quibusdam");            
 
             RetrievePrefixPricingResponse res = sdk.pricing.retrievePrefixPricing(req);
 
-            if (res.pricingCountriesResponse.isPresent()) {
+            if (res.pricingCountriesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

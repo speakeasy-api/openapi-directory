@@ -20,6 +20,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public Database withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -28,6 +29,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateTableDefaultPermissions")
     public PrincipalPermissions[] createTableDefaultPermissions;
+
     public Database withCreateTableDefaultPermissions(PrincipalPermissions[] createTableDefaultPermissions) {
         this.createTableDefaultPermissions = createTableDefaultPermissions;
         return this;
@@ -38,6 +40,7 @@ public class Database {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public Database withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -46,14 +49,25 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Database withDescription(String description) {
         this.description = description;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FederatedDatabase")
+    public FederatedDatabase federatedDatabase;
+
+    public Database withFederatedDatabase(FederatedDatabase federatedDatabase) {
+        this.federatedDatabase = federatedDatabase;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationUri")
     public String locationUri;
+
     public Database withLocationUri(String locationUri) {
         this.locationUri = locationUri;
         return this;
@@ -61,6 +75,7 @@ public class Database {
     
     @JsonProperty("Name")
     public String name;
+
     public Database withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +84,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public Database withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -77,9 +93,13 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetDatabase")
     public DatabaseIdentifier targetDatabase;
+
     public Database withTargetDatabase(DatabaseIdentifier targetDatabase) {
         this.targetDatabase = targetDatabase;
         return this;
     }
     
+    public Database(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

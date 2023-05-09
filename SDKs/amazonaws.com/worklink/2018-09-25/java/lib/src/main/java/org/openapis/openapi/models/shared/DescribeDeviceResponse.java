@@ -22,6 +22,7 @@ public class DescribeDeviceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FirstAccessedTime")
     public OffsetDateTime firstAccessedTime;
+
     public DescribeDeviceResponse withFirstAccessedTime(OffsetDateTime firstAccessedTime) {
         this.firstAccessedTime = firstAccessedTime;
         return this;
@@ -32,6 +33,7 @@ public class DescribeDeviceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAccessedTime")
     public OffsetDateTime lastAccessedTime;
+
     public DescribeDeviceResponse withLastAccessedTime(OffsetDateTime lastAccessedTime) {
         this.lastAccessedTime = lastAccessedTime;
         return this;
@@ -40,6 +42,7 @@ public class DescribeDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Manufacturer")
     public String manufacturer;
+
     public DescribeDeviceResponse withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -48,6 +51,7 @@ public class DescribeDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Model")
     public String model;
+
     public DescribeDeviceResponse withModel(String model) {
         this.model = model;
         return this;
@@ -56,6 +60,7 @@ public class DescribeDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystem")
     public String operatingSystem;
+
     public DescribeDeviceResponse withOperatingSystem(String operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -64,6 +69,7 @@ public class DescribeDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystemVersion")
     public String operatingSystemVersion;
+
     public DescribeDeviceResponse withOperatingSystemVersion(String operatingSystemVersion) {
         this.operatingSystemVersion = operatingSystemVersion;
         return this;
@@ -72,6 +78,7 @@ public class DescribeDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PatchLevel")
     public String patchLevel;
+
     public DescribeDeviceResponse withPatchLevel(String patchLevel) {
         this.patchLevel = patchLevel;
         return this;
@@ -80,6 +87,7 @@ public class DescribeDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DeviceStatusEnum status;
+
     public DescribeDeviceResponse withStatus(DeviceStatusEnum status) {
         this.status = status;
         return this;
@@ -88,9 +96,11 @@ public class DescribeDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public DescribeDeviceResponse withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public DescribeDeviceResponse(){}
 }

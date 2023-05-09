@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDistributionResponse {
@@ -12,6 +13,7 @@ public class UpdateDistributionResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateDistributionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDistributionResponse {
     
     
     public String contentType;
+
     public UpdateDistributionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDistributionResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateDistributionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDistributionResponse {
      */
     
     public Object notFoundException;
+
     public UpdateDistributionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDistributionResponse {
      */
     
     public Object operationFailureException;
+
     public UpdateDistributionResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateDistributionResponse {
     
     
     public Integer statusCode;
+
     public UpdateDistributionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDistributionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDistributionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDistributionResponse {
      */
     
     public Object serviceException;
+
     public UpdateDistributionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateDistributionResponse {
      */
     
     public Object unauthenticatedException;
+
     public UpdateDistributionResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateDistributionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDistributionResult updateDistributionResult;
+
     public UpdateDistributionResponse withUpdateDistributionResult(org.openapis.openapi.models.shared.UpdateDistributionResult updateDistributionResult) {
         this.updateDistributionResult = updateDistributionResult;
         return this;
     }
     
+    public UpdateDistributionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

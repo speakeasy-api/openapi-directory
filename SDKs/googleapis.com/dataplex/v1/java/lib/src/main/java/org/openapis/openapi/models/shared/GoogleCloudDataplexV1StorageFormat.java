@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1StorageFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compressionFormat")
     public GoogleCloudDataplexV1StorageFormatCompressionFormatEnum compressionFormat;
+
     public GoogleCloudDataplexV1StorageFormat withCompressionFormat(GoogleCloudDataplexV1StorageFormatCompressionFormatEnum compressionFormat) {
         this.compressionFormat = compressionFormat;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1StorageFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csv")
     public GoogleCloudDataplexV1StorageFormatCsvOptions csv;
+
     public GoogleCloudDataplexV1StorageFormat withCsv(GoogleCloudDataplexV1StorageFormatCsvOptions csv) {
         this.csv = csv;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1StorageFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public GoogleCloudDataplexV1StorageFormatFormatEnum format;
+
     public GoogleCloudDataplexV1StorageFormat withFormat(GoogleCloudDataplexV1StorageFormatFormatEnum format) {
         this.format = format;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1StorageFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iceberg")
     public GoogleCloudDataplexV1StorageFormatIcebergOptions iceberg;
+
     public GoogleCloudDataplexV1StorageFormat withIceberg(GoogleCloudDataplexV1StorageFormatIcebergOptions iceberg) {
         this.iceberg = iceberg;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1StorageFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("json")
     public GoogleCloudDataplexV1StorageFormatJsonOptions json;
+
     public GoogleCloudDataplexV1StorageFormat withJson(GoogleCloudDataplexV1StorageFormatJsonOptions json) {
         this.json = json;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDataplexV1StorageFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public GoogleCloudDataplexV1StorageFormat withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public GoogleCloudDataplexV1StorageFormat(){}
 }

@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ServicesCustomColumnHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleAdsSearchads360V0ServicesCustomColumnHeader withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ServicesCustomColumnHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAdsSearchads360V0ServicesCustomColumnHeader withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAdsSearchads360V0ServicesCustomColumnHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referencesMetrics")
     public Boolean referencesMetrics;
+
     public GoogleAdsSearchads360V0ServicesCustomColumnHeader withReferencesMetrics(Boolean referencesMetrics) {
         this.referencesMetrics = referencesMetrics;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ServicesCustomColumnHeader(){}
 }

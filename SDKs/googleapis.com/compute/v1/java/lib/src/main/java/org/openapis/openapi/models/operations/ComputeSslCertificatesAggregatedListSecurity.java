@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeSslCertificatesAggregatedListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeSslCertificatesAggregatedListSecurityOption1 option1;
+
     public ComputeSslCertificatesAggregatedListSecurity withOption1(ComputeSslCertificatesAggregatedListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeSslCertificatesAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeSslCertificatesAggregatedListSecurityOption2 option2;
+
     public ComputeSslCertificatesAggregatedListSecurity withOption2(ComputeSslCertificatesAggregatedListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeSslCertificatesAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeSslCertificatesAggregatedListSecurityOption3 option3;
+
     public ComputeSslCertificatesAggregatedListSecurity withOption3(ComputeSslCertificatesAggregatedListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeSslCertificatesAggregatedListSecurity(){}
 }

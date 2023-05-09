@@ -15,6 +15,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesRe
      */
     @JsonProperty("amount")
     public Double amount;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQty withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -25,9 +26,14 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesRe
      */
     @JsonProperty("unit")
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum unit;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQty withUnit(GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQty(@JsonProperty("amount") Double amount, @JsonProperty("unit") GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum unit) {
+        this.amount = amount;
+        this.unit = unit;
+  }
 }

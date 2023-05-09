@@ -15,6 +15,7 @@ public class ListApplicationRevisionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListApplicationRevisionsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListApplicationRevisionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisions")
     public RevisionLocation[] revisions;
+
     public ListApplicationRevisionsOutput withRevisions(RevisionLocation[] revisions) {
         this.revisions = revisions;
         return this;
     }
     
+    public ListApplicationRevisionsOutput(){}
 }

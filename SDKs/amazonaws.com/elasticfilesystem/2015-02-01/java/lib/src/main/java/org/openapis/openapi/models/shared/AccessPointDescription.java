@@ -15,6 +15,7 @@ public class AccessPointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessPointArn")
     public String accessPointArn;
+
     public AccessPointDescription withAccessPointArn(String accessPointArn) {
         this.accessPointArn = accessPointArn;
         return this;
@@ -23,6 +24,7 @@ public class AccessPointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessPointId")
     public String accessPointId;
+
     public AccessPointDescription withAccessPointId(String accessPointId) {
         this.accessPointId = accessPointId;
         return this;
@@ -31,6 +33,7 @@ public class AccessPointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public AccessPointDescription withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -39,6 +42,7 @@ public class AccessPointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public AccessPointDescription withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -47,6 +51,7 @@ public class AccessPointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifeCycleState")
     public LifeCycleStateEnum lifeCycleState;
+
     public AccessPointDescription withLifeCycleState(LifeCycleStateEnum lifeCycleState) {
         this.lifeCycleState = lifeCycleState;
         return this;
@@ -55,6 +60,7 @@ public class AccessPointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AccessPointDescription withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class AccessPointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public AccessPointDescription withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -71,6 +78,7 @@ public class AccessPointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PosixUser")
     public PosixUser posixUser;
+
     public AccessPointDescription withPosixUser(PosixUser posixUser) {
         this.posixUser = posixUser;
         return this;
@@ -79,6 +87,7 @@ public class AccessPointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootDirectory")
     public RootDirectory rootDirectory;
+
     public AccessPointDescription withRootDirectory(RootDirectory rootDirectory) {
         this.rootDirectory = rootDirectory;
         return this;
@@ -87,9 +96,11 @@ public class AccessPointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public AccessPointDescription withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public AccessPointDescription(){}
 }

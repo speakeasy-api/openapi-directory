@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PipeTargetKinesisStreamParameters {
     @JsonProperty("PartitionKey")
     public String partitionKey;
+
     public PipeTargetKinesisStreamParameters withPartitionKey(String partitionKey) {
         this.partitionKey = partitionKey;
         return this;
     }
     
+    public PipeTargetKinesisStreamParameters(@JsonProperty("PartitionKey") String partitionKey) {
+        this.partitionKey = partitionKey;
+  }
 }

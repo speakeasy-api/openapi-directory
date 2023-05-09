@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ReloadDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentUri")
     public String contentUri;
+
     public GoogleCloudDialogflowV2ReloadDocumentRequest withContentUri(String contentUri) {
         this.contentUri = contentUri;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2ReloadDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importGcsCustomMetadata")
     public Boolean importGcsCustomMetadata;
+
     public GoogleCloudDialogflowV2ReloadDocumentRequest withImportGcsCustomMetadata(Boolean importGcsCustomMetadata) {
         this.importGcsCustomMetadata = importGcsCustomMetadata;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2ReloadDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smartMessagingPartialUpdate")
     public Boolean smartMessagingPartialUpdate;
+
     public GoogleCloudDialogflowV2ReloadDocumentRequest withSmartMessagingPartialUpdate(Boolean smartMessagingPartialUpdate) {
         this.smartMessagingPartialUpdate = smartMessagingPartialUpdate;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ReloadDocumentRequest(){}
 }

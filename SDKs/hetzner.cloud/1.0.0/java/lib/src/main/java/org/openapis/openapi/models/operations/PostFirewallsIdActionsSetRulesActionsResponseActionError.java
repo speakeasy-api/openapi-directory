@@ -15,6 +15,7 @@ public class PostFirewallsIdActionsSetRulesActionsResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostFirewallsIdActionsSetRulesActionsResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostFirewallsIdActionsSetRulesActionsResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostFirewallsIdActionsSetRulesActionsResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostFirewallsIdActionsSetRulesActionsResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

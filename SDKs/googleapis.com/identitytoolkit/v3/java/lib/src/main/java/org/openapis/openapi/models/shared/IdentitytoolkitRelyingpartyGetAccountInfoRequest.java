@@ -18,6 +18,7 @@ public class IdentitytoolkitRelyingpartyGetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegatedProjectNumber")
     public String delegatedProjectNumber;
+
     public IdentitytoolkitRelyingpartyGetAccountInfoRequest withDelegatedProjectNumber(String delegatedProjectNumber) {
         this.delegatedProjectNumber = delegatedProjectNumber;
         return this;
@@ -29,6 +30,7 @@ public class IdentitytoolkitRelyingpartyGetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String[] email;
+
     public IdentitytoolkitRelyingpartyGetAccountInfoRequest withEmail(String[] email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class IdentitytoolkitRelyingpartyGetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idToken")
     public String idToken;
+
     public IdentitytoolkitRelyingpartyGetAccountInfoRequest withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -51,6 +54,7 @@ public class IdentitytoolkitRelyingpartyGetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localId")
     public String[] localId;
+
     public IdentitytoolkitRelyingpartyGetAccountInfoRequest withLocalId(String[] localId) {
         this.localId = localId;
         return this;
@@ -62,9 +66,11 @@ public class IdentitytoolkitRelyingpartyGetAccountInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String[] phoneNumber;
+
     public IdentitytoolkitRelyingpartyGetAccountInfoRequest withPhoneNumber(String[] phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyGetAccountInfoRequest(){}
 }

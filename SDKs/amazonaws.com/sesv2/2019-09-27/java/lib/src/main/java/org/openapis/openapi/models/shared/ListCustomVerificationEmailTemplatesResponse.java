@@ -15,6 +15,7 @@ public class ListCustomVerificationEmailTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomVerificationEmailTemplates")
     public CustomVerificationEmailTemplateMetadata[] customVerificationEmailTemplates;
+
     public ListCustomVerificationEmailTemplatesResponse withCustomVerificationEmailTemplates(CustomVerificationEmailTemplateMetadata[] customVerificationEmailTemplates) {
         this.customVerificationEmailTemplates = customVerificationEmailTemplates;
         return this;
@@ -23,9 +24,11 @@ public class ListCustomVerificationEmailTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCustomVerificationEmailTemplatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomVerificationEmailTemplatesResponse(){}
 }

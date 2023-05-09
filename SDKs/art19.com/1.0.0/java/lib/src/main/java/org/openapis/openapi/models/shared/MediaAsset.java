@@ -12,6 +12,7 @@ public class MediaAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public MediaAssetAttributes attributes;
+
     public MediaAsset withAttributes(MediaAssetAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -20,6 +21,7 @@ public class MediaAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public MediaAsset withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class MediaAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public MediaAsset withType(String type) {
         this.type = type;
         return this;
     }
     
+    public MediaAsset(){}
 }

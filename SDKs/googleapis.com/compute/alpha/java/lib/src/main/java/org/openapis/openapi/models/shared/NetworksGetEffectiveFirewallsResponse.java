@@ -18,6 +18,7 @@ public class NetworksGetEffectiveFirewallsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewallPolicys")
     public NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy[] firewallPolicys;
+
     public NetworksGetEffectiveFirewallsResponse withFirewallPolicys(NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy[] firewallPolicys) {
         this.firewallPolicys = firewallPolicys;
         return this;
@@ -29,6 +30,7 @@ public class NetworksGetEffectiveFirewallsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewalls")
     public Firewall[] firewalls;
+
     public NetworksGetEffectiveFirewallsResponse withFirewalls(Firewall[] firewalls) {
         this.firewalls = firewalls;
         return this;
@@ -40,9 +42,11 @@ public class NetworksGetEffectiveFirewallsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationFirewalls")
     public NetworksGetEffectiveFirewallsResponseOrganizationFirewallPolicy[] organizationFirewalls;
+
     public NetworksGetEffectiveFirewallsResponse withOrganizationFirewalls(NetworksGetEffectiveFirewallsResponseOrganizationFirewallPolicy[] organizationFirewalls) {
         this.organizationFirewalls = organizationFirewalls;
         return this;
     }
     
+    public NetworksGetEffectiveFirewallsResponse(){}
 }

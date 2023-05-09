@@ -15,9 +15,11 @@ public class DeleteProjectVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ProjectVersionStatusEnum status;
+
     public DeleteProjectVersionResponse withStatus(ProjectVersionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DeleteProjectVersionResponse(){}
 }

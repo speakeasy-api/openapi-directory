@@ -12,6 +12,7 @@ public class AdminListUserAuthEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public AdminListUserAuthEventsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class AdminListUserAuthEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public AdminListUserAuthEventsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,6 +29,7 @@ public class AdminListUserAuthEventsRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminListUserAuthEventsRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -34,9 +37,14 @@ public class AdminListUserAuthEventsRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public AdminListUserAuthEventsRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AdminListUserAuthEventsRequest(@JsonProperty("UserPoolId") String userPoolId, @JsonProperty("Username") String username) {
+        this.userPoolId = userPoolId;
+        this.username = username;
+  }
 }

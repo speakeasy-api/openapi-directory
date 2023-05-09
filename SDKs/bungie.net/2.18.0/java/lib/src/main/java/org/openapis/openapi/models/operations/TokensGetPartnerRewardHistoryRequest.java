@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TokensGetPartnerRewardHistoryRequest {
@@ -12,6 +13,7 @@ public class TokensGetPartnerRewardHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partnerApplicationId")
     public Integer partnerApplicationId;
+
     public TokensGetPartnerRewardHistoryRequest withPartnerApplicationId(Integer partnerApplicationId) {
         this.partnerApplicationId = partnerApplicationId;
         return this;
@@ -22,9 +24,14 @@ public class TokensGetPartnerRewardHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetBnetMembershipId")
     public Long targetBnetMembershipId;
+
     public TokensGetPartnerRewardHistoryRequest withTargetBnetMembershipId(Long targetBnetMembershipId) {
         this.targetBnetMembershipId = targetBnetMembershipId;
         return this;
     }
     
+    public TokensGetPartnerRewardHistoryRequest(@JsonProperty("partnerApplicationId") Integer partnerApplicationId, @JsonProperty("targetBnetMembershipId") Long targetBnetMembershipId) {
+        this.partnerApplicationId = partnerApplicationId;
+        this.targetBnetMembershipId = targetBnetMembershipId;
+  }
 }

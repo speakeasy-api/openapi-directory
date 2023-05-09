@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContinuousProjectDocumentProgressRequest {
@@ -12,6 +13,7 @@ public class GetContinuousProjectDocumentProgressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
     public Long documentId;
+
     public GetContinuousProjectDocumentProgressRequest withDocumentId(Long documentId) {
         this.documentId = documentId;
         return this;
@@ -19,6 +21,7 @@ public class GetContinuousProjectDocumentProgressRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterByLanguage")
     public String filterByLanguage;
+
     public GetContinuousProjectDocumentProgressRequest withFilterByLanguage(String filterByLanguage) {
         this.filterByLanguage = filterByLanguage;
         return this;
@@ -29,9 +32,14 @@ public class GetContinuousProjectDocumentProgressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public GetContinuousProjectDocumentProgressRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GetContinuousProjectDocumentProgressRequest(@JsonProperty("documentId") Long documentId, @JsonProperty("projectId") Long projectId) {
+        this.documentId = documentId;
+        this.projectId = projectId;
+  }
 }

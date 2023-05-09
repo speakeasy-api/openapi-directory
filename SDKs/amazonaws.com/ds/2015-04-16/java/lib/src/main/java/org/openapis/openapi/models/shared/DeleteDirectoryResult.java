@@ -15,9 +15,11 @@ public class DeleteDirectoryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DeleteDirectoryResult withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     
+    public DeleteDirectoryResult(){}
 }

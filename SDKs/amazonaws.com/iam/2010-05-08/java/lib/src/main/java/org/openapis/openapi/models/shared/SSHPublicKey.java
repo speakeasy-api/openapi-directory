@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class SSHPublicKey {
     
     public String fingerprint;
+
     public SSHPublicKey withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -19,6 +21,7 @@ public class SSHPublicKey {
     
     
     public String sshPublicKeyBody;
+
     public SSHPublicKey withSSHPublicKeyBody(String sshPublicKeyBody) {
         this.sshPublicKeyBody = sshPublicKeyBody;
         return this;
@@ -26,6 +29,7 @@ public class SSHPublicKey {
     
     
     public String sshPublicKeyId;
+
     public SSHPublicKey withSSHPublicKeyId(String sshPublicKeyId) {
         this.sshPublicKeyId = sshPublicKeyId;
         return this;
@@ -33,6 +37,7 @@ public class SSHPublicKey {
     
     
     public StatusTypeEnum status;
+
     public SSHPublicKey withStatus(StatusTypeEnum status) {
         this.status = status;
         return this;
@@ -40,6 +45,7 @@ public class SSHPublicKey {
     
     
     public OffsetDateTime uploadDate;
+
     public SSHPublicKey withUploadDate(OffsetDateTime uploadDate) {
         this.uploadDate = uploadDate;
         return this;
@@ -47,9 +53,17 @@ public class SSHPublicKey {
     
     
     public String userName;
+
     public SSHPublicKey withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public SSHPublicKey(@JsonProperty("Fingerprint") String fingerprint, @JsonProperty("SSHPublicKeyBody") String sshPublicKeyBody, @JsonProperty("SSHPublicKeyId") String sshPublicKeyId, @JsonProperty("Status") StatusTypeEnum status, @JsonProperty("UserName") String userName) {
+        this.fingerprint = fingerprint;
+        this.sshPublicKeyBody = sshPublicKeyBody;
+        this.sshPublicKeyId = sshPublicKeyId;
+        this.status = status;
+        this.userName = userName;
+  }
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AssessmentRun {
     @JsonProperty("arn")
     public String arn;
+
     public AssessmentRun withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class AssessmentRun {
     
     @JsonProperty("assessmentTemplateArn")
     public String assessmentTemplateArn;
+
     public AssessmentRun withAssessmentTemplateArn(String assessmentTemplateArn) {
         this.assessmentTemplateArn = assessmentTemplateArn;
         return this;
@@ -36,6 +38,7 @@ public class AssessmentRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completedAt")
     public OffsetDateTime completedAt;
+
     public AssessmentRun withCompletedAt(OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -45,6 +48,7 @@ public class AssessmentRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public AssessmentRun withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -52,6 +56,7 @@ public class AssessmentRun {
     
     @JsonProperty("dataCollected")
     public Boolean dataCollected;
+
     public AssessmentRun withDataCollected(Boolean dataCollected) {
         this.dataCollected = dataCollected;
         return this;
@@ -59,6 +64,7 @@ public class AssessmentRun {
     
     @JsonProperty("durationInSeconds")
     public Long durationInSeconds;
+
     public AssessmentRun withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
@@ -66,6 +72,7 @@ public class AssessmentRun {
     
     @JsonProperty("findingCounts")
     public java.util.Map<String, Long> findingCounts;
+
     public AssessmentRun withFindingCounts(java.util.Map<String, Long> findingCounts) {
         this.findingCounts = findingCounts;
         return this;
@@ -73,6 +80,7 @@ public class AssessmentRun {
     
     @JsonProperty("name")
     public String name;
+
     public AssessmentRun withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +88,7 @@ public class AssessmentRun {
     
     @JsonProperty("notifications")
     public AssessmentRunNotification[] notifications;
+
     public AssessmentRun withNotifications(AssessmentRunNotification[] notifications) {
         this.notifications = notifications;
         return this;
@@ -87,6 +96,7 @@ public class AssessmentRun {
     
     @JsonProperty("rulesPackageArns")
     public String[] rulesPackageArns;
+
     public AssessmentRun withRulesPackageArns(String[] rulesPackageArns) {
         this.rulesPackageArns = rulesPackageArns;
         return this;
@@ -97,6 +107,7 @@ public class AssessmentRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedAt")
     public OffsetDateTime startedAt;
+
     public AssessmentRun withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -104,6 +115,7 @@ public class AssessmentRun {
     
     @JsonProperty("state")
     public AssessmentRunStateEnum state;
+
     public AssessmentRun withState(AssessmentRunStateEnum state) {
         this.state = state;
         return this;
@@ -113,6 +125,7 @@ public class AssessmentRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stateChangedAt")
     public OffsetDateTime stateChangedAt;
+
     public AssessmentRun withStateChangedAt(OffsetDateTime stateChangedAt) {
         this.stateChangedAt = stateChangedAt;
         return this;
@@ -120,6 +133,7 @@ public class AssessmentRun {
     
     @JsonProperty("stateChanges")
     public AssessmentRunStateChange[] stateChanges;
+
     public AssessmentRun withStateChanges(AssessmentRunStateChange[] stateChanges) {
         this.stateChanges = stateChanges;
         return this;
@@ -127,9 +141,25 @@ public class AssessmentRun {
     
     @JsonProperty("userAttributesForFindings")
     public Attribute[] userAttributesForFindings;
+
     public AssessmentRun withUserAttributesForFindings(Attribute[] userAttributesForFindings) {
         this.userAttributesForFindings = userAttributesForFindings;
         return this;
     }
     
+    public AssessmentRun(@JsonProperty("arn") String arn, @JsonProperty("assessmentTemplateArn") String assessmentTemplateArn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("dataCollected") Boolean dataCollected, @JsonProperty("durationInSeconds") Long durationInSeconds, @JsonProperty("findingCounts") java.util.Map<String, Long> findingCounts, @JsonProperty("name") String name, @JsonProperty("notifications") AssessmentRunNotification[] notifications, @JsonProperty("rulesPackageArns") String[] rulesPackageArns, @JsonProperty("state") AssessmentRunStateEnum state, @JsonProperty("stateChangedAt") OffsetDateTime stateChangedAt, @JsonProperty("stateChanges") AssessmentRunStateChange[] stateChanges, @JsonProperty("userAttributesForFindings") Attribute[] userAttributesForFindings) {
+        this.arn = arn;
+        this.assessmentTemplateArn = assessmentTemplateArn;
+        this.createdAt = createdAt;
+        this.dataCollected = dataCollected;
+        this.durationInSeconds = durationInSeconds;
+        this.findingCounts = findingCounts;
+        this.name = name;
+        this.notifications = notifications;
+        this.rulesPackageArns = rulesPackageArns;
+        this.state = state;
+        this.stateChangedAt = stateChangedAt;
+        this.stateChanges = stateChanges;
+        this.userAttributesForFindings = userAttributesForFindings;
+  }
 }

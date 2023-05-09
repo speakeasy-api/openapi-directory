@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FirestoreProjectsLocationsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public FirestoreProjectsLocationsListSecurityOption1 option1;
+
     public FirestoreProjectsLocationsListSecurity withOption1(FirestoreProjectsLocationsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class FirestoreProjectsLocationsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirestoreProjectsLocationsListSecurityOption2 option2;
+
     public FirestoreProjectsLocationsListSecurity withOption2(FirestoreProjectsLocationsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public FirestoreProjectsLocationsListSecurity(){}
 }

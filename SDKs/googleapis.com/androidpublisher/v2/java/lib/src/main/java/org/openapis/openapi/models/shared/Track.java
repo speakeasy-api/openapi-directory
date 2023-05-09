@@ -18,6 +18,7 @@ public class Track {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("track")
     public String track;
+
     public Track withTrack(String track) {
         this.track = track;
         return this;
@@ -26,6 +27,7 @@ public class Track {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userFraction")
     public Double userFraction;
+
     public Track withUserFraction(Double userFraction) {
         this.userFraction = userFraction;
         return this;
@@ -37,9 +39,11 @@ public class Track {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionCodes")
     public Integer[] versionCodes;
+
     public Track withVersionCodes(Integer[] versionCodes) {
         this.versionCodes = versionCodes;
         return this;
     }
     
+    public Track(){}
 }

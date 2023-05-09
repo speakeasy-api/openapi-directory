@@ -22,6 +22,7 @@ public class GetSuiteRunResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetSuiteRunResponse withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +31,7 @@ public class GetSuiteRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorReason")
     public String errorReason;
+
     public GetSuiteRunResponse withErrorReason(String errorReason) {
         this.errorReason = errorReason;
         return this;
@@ -40,6 +42,7 @@ public class GetSuiteRunResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetSuiteRunResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -48,6 +51,7 @@ public class GetSuiteRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SuiteRunStatusEnum status;
+
     public GetSuiteRunResponse withStatus(SuiteRunStatusEnum status) {
         this.status = status;
         return this;
@@ -56,6 +60,7 @@ public class GetSuiteRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteDefinitionId")
     public String suiteDefinitionId;
+
     public GetSuiteRunResponse withSuiteDefinitionId(String suiteDefinitionId) {
         this.suiteDefinitionId = suiteDefinitionId;
         return this;
@@ -64,6 +69,7 @@ public class GetSuiteRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteDefinitionVersion")
     public String suiteDefinitionVersion;
+
     public GetSuiteRunResponse withSuiteDefinitionVersion(String suiteDefinitionVersion) {
         this.suiteDefinitionVersion = suiteDefinitionVersion;
         return this;
@@ -72,6 +78,7 @@ public class GetSuiteRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteRunArn")
     public String suiteRunArn;
+
     public GetSuiteRunResponse withSuiteRunArn(String suiteRunArn) {
         this.suiteRunArn = suiteRunArn;
         return this;
@@ -80,6 +87,7 @@ public class GetSuiteRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteRunConfiguration")
     public SuiteRunConfiguration suiteRunConfiguration;
+
     public GetSuiteRunResponse withSuiteRunConfiguration(SuiteRunConfiguration suiteRunConfiguration) {
         this.suiteRunConfiguration = suiteRunConfiguration;
         return this;
@@ -88,6 +96,7 @@ public class GetSuiteRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteRunId")
     public String suiteRunId;
+
     public GetSuiteRunResponse withSuiteRunId(String suiteRunId) {
         this.suiteRunId = suiteRunId;
         return this;
@@ -96,6 +105,7 @@ public class GetSuiteRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetSuiteRunResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -104,9 +114,11 @@ public class GetSuiteRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testResult")
     public TestResult testResult;
+
     public GetSuiteRunResponse withTestResult(TestResult testResult) {
         this.testResult = testResult;
         return this;
     }
     
+    public GetSuiteRunResponse(){}
 }

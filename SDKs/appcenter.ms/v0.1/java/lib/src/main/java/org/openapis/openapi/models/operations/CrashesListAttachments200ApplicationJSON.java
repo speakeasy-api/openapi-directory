@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CrashesListAttachments200ApplicationJSON {
     @JsonProperty("app_id")
     public String appId;
+
     public CrashesListAttachments200ApplicationJSON withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -21,6 +22,7 @@ public class CrashesListAttachments200ApplicationJSON {
     
     @JsonProperty("attachment_id")
     public String attachmentId;
+
     public CrashesListAttachments200ApplicationJSON withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -28,6 +30,7 @@ public class CrashesListAttachments200ApplicationJSON {
     
     @JsonProperty("blob_location")
     public String blobLocation;
+
     public CrashesListAttachments200ApplicationJSON withBlobLocation(String blobLocation) {
         this.blobLocation = blobLocation;
         return this;
@@ -35,6 +38,7 @@ public class CrashesListAttachments200ApplicationJSON {
     
     @JsonProperty("content_type")
     public String contentType;
+
     public CrashesListAttachments200ApplicationJSON withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -42,6 +46,7 @@ public class CrashesListAttachments200ApplicationJSON {
     
     @JsonProperty("crash_id")
     public String crashId;
+
     public CrashesListAttachments200ApplicationJSON withCrashId(String crashId) {
         this.crashId = crashId;
         return this;
@@ -51,6 +56,7 @@ public class CrashesListAttachments200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_time")
     public OffsetDateTime createdTime;
+
     public CrashesListAttachments200ApplicationJSON withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -58,6 +64,7 @@ public class CrashesListAttachments200ApplicationJSON {
     
     @JsonProperty("file_name")
     public String fileName;
+
     public CrashesListAttachments200ApplicationJSON withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -65,9 +72,20 @@ public class CrashesListAttachments200ApplicationJSON {
     
     @JsonProperty("size")
     public Double size;
+
     public CrashesListAttachments200ApplicationJSON withSize(Double size) {
         this.size = size;
         return this;
     }
     
+    public CrashesListAttachments200ApplicationJSON(@JsonProperty("app_id") String appId, @JsonProperty("attachment_id") String attachmentId, @JsonProperty("blob_location") String blobLocation, @JsonProperty("content_type") String contentType, @JsonProperty("crash_id") String crashId, @JsonProperty("created_time") OffsetDateTime createdTime, @JsonProperty("file_name") String fileName, @JsonProperty("size") Double size) {
+        this.appId = appId;
+        this.attachmentId = attachmentId;
+        this.blobLocation = blobLocation;
+        this.contentType = contentType;
+        this.crashId = crashId;
+        this.createdTime = createdTime;
+        this.fileName = fileName;
+        this.size = size;
+  }
 }

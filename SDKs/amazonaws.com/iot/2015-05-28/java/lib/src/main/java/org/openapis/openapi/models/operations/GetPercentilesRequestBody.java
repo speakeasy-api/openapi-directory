@@ -15,6 +15,7 @@ public class GetPercentilesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationField")
     public String aggregationField;
+
     public GetPercentilesRequestBody withAggregationField(String aggregationField) {
         this.aggregationField = aggregationField;
         return this;
@@ -26,6 +27,7 @@ public class GetPercentilesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexName")
     public String indexName;
+
     public GetPercentilesRequestBody withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -37,6 +39,7 @@ public class GetPercentilesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percents")
     public Double[] percents;
+
     public GetPercentilesRequestBody withPercents(Double[] percents) {
         this.percents = percents;
         return this;
@@ -47,6 +50,7 @@ public class GetPercentilesRequestBody {
      */
     @JsonProperty("queryString")
     public String queryString;
+
     public GetPercentilesRequestBody withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
@@ -58,9 +62,13 @@ public class GetPercentilesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryVersion")
     public String queryVersion;
+
     public GetPercentilesRequestBody withQueryVersion(String queryVersion) {
         this.queryVersion = queryVersion;
         return this;
     }
     
+    public GetPercentilesRequestBody(@JsonProperty("queryString") String queryString) {
+        this.queryString = queryString;
+  }
 }

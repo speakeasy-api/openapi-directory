@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyControlRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.ControlRequest controlRequest;
+
     public VerifyControlRequest withControlRequest(org.openapis.openapi.models.shared.ControlRequest controlRequest) {
         this.controlRequest = controlRequest;
         return this;
@@ -19,9 +21,14 @@ public class VerifyControlRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public org.openapis.openapi.models.shared.FormatEnum format;
+
     public VerifyControlRequest withFormat(org.openapis.openapi.models.shared.FormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public VerifyControlRequest(@JsonProperty("controlRequest") org.openapis.openapi.models.shared.ControlRequest controlRequest, @JsonProperty("format") org.openapis.openapi.models.shared.FormatEnum format) {
+        this.controlRequest = controlRequest;
+        this.format = format;
+  }
 }

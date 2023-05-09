@@ -15,6 +15,7 @@ public class LayerFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public LayerFailureCodeEnum failureCode;
+
     public LayerFailure withFailureCode(LayerFailureCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -23,6 +24,7 @@ public class LayerFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public LayerFailure withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -31,9 +33,11 @@ public class LayerFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layerDigest")
     public String layerDigest;
+
     public LayerFailure withLayerDigest(String layerDigest) {
         this.layerDigest = layerDigest;
         return this;
     }
     
+    public LayerFailure(){}
 }

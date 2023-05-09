@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CopyDBSnapshotMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CopyDBSnapshotMessage {
     
     public Boolean copyOptionGroup;
+
     public CopyDBSnapshotMessage withCopyOptionGroup(Boolean copyOptionGroup) {
         this.copyOptionGroup = copyOptionGroup;
         return this;
@@ -19,6 +20,7 @@ public class CopyDBSnapshotMessage {
     
     
     public Boolean copyTags;
+
     public CopyDBSnapshotMessage withCopyTags(Boolean copyTags) {
         this.copyTags = copyTags;
         return this;
@@ -26,6 +28,7 @@ public class CopyDBSnapshotMessage {
     
     
     public String kmsKeyId;
+
     public CopyDBSnapshotMessage withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -33,6 +36,7 @@ public class CopyDBSnapshotMessage {
     
     
     public String optionGroupName;
+
     public CopyDBSnapshotMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -40,6 +44,7 @@ public class CopyDBSnapshotMessage {
     
     
     public String preSignedUrl;
+
     public CopyDBSnapshotMessage withPreSignedUrl(String preSignedUrl) {
         this.preSignedUrl = preSignedUrl;
         return this;
@@ -47,6 +52,7 @@ public class CopyDBSnapshotMessage {
     
     
     public String sourceDBSnapshotIdentifier;
+
     public CopyDBSnapshotMessage withSourceDBSnapshotIdentifier(String sourceDBSnapshotIdentifier) {
         this.sourceDBSnapshotIdentifier = sourceDBSnapshotIdentifier;
         return this;
@@ -54,6 +60,7 @@ public class CopyDBSnapshotMessage {
     
     
     public String sourceRegion;
+
     public CopyDBSnapshotMessage withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
@@ -64,6 +71,7 @@ public class CopyDBSnapshotMessage {
      */
     
     public TagList[] tags;
+
     public CopyDBSnapshotMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -71,6 +79,7 @@ public class CopyDBSnapshotMessage {
     
     
     public String targetCustomAvailabilityZone;
+
     public CopyDBSnapshotMessage withTargetCustomAvailabilityZone(String targetCustomAvailabilityZone) {
         this.targetCustomAvailabilityZone = targetCustomAvailabilityZone;
         return this;
@@ -78,9 +87,14 @@ public class CopyDBSnapshotMessage {
     
     
     public String targetDBSnapshotIdentifier;
+
     public CopyDBSnapshotMessage withTargetDBSnapshotIdentifier(String targetDBSnapshotIdentifier) {
         this.targetDBSnapshotIdentifier = targetDBSnapshotIdentifier;
         return this;
     }
     
+    public CopyDBSnapshotMessage(@JsonProperty("SourceDBSnapshotIdentifier") String sourceDBSnapshotIdentifier, @JsonProperty("TargetDBSnapshotIdentifier") String targetDBSnapshotIdentifier) {
+        this.sourceDBSnapshotIdentifier = sourceDBSnapshotIdentifier;
+        this.targetDBSnapshotIdentifier = targetDBSnapshotIdentifier;
+  }
 }

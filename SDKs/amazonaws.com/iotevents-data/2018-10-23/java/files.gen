@@ -115,4 +115,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListDetectorsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DetectorSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/DetectorStateSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

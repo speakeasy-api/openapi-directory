@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ShareRule {
     @JsonProperty("TargetAccounts")
     public String[] targetAccounts;
+
     public ShareRule withTargetAccounts(String[] targetAccounts) {
         this.targetAccounts = targetAccounts;
         return this;
@@ -22,6 +23,7 @@ public class ShareRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnshareInterval")
     public Long unshareInterval;
+
     public ShareRule withUnshareInterval(Long unshareInterval) {
         this.unshareInterval = unshareInterval;
         return this;
@@ -30,9 +32,13 @@ public class ShareRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnshareIntervalUnit")
     public RetentionIntervalUnitValuesEnum unshareIntervalUnit;
+
     public ShareRule withUnshareIntervalUnit(RetentionIntervalUnitValuesEnum unshareIntervalUnit) {
         this.unshareIntervalUnit = unshareIntervalUnit;
         return this;
     }
     
+    public ShareRule(@JsonProperty("TargetAccounts") String[] targetAccounts) {
+        this.targetAccounts = targetAccounts;
+  }
 }

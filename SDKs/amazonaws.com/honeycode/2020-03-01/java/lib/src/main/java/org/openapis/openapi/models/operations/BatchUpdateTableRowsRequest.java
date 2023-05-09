@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchUpdateTableRowsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public BatchUpdateTableRowsRequestBody requestBody;
+
     public BatchUpdateTableRowsRequest withRequestBody(BatchUpdateTableRowsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class BatchUpdateTableRowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public BatchUpdateTableRowsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class BatchUpdateTableRowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public BatchUpdateTableRowsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class BatchUpdateTableRowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public BatchUpdateTableRowsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class BatchUpdateTableRowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public BatchUpdateTableRowsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class BatchUpdateTableRowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public BatchUpdateTableRowsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class BatchUpdateTableRowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public BatchUpdateTableRowsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class BatchUpdateTableRowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public BatchUpdateTableRowsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class BatchUpdateTableRowsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tableId")
     public String tableId;
+
     public BatchUpdateTableRowsRequest withTableId(String tableId) {
         this.tableId = tableId;
         return this;
@@ -78,9 +88,15 @@ public class BatchUpdateTableRowsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workbookId")
     public String workbookId;
+
     public BatchUpdateTableRowsRequest withWorkbookId(String workbookId) {
         this.workbookId = workbookId;
         return this;
     }
     
+    public BatchUpdateTableRowsRequest(@JsonProperty("RequestBody") BatchUpdateTableRowsRequestBody requestBody, @JsonProperty("tableId") String tableId, @JsonProperty("workbookId") String workbookId) {
+        this.requestBody = requestBody;
+        this.tableId = tableId;
+        this.workbookId = workbookId;
+  }
 }

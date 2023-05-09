@@ -18,6 +18,7 @@ public class LocalTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hour")
     public Integer hour;
+
     public LocalTime withHour(Integer hour) {
         this.hour = hour;
         return this;
@@ -29,6 +30,7 @@ public class LocalTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minute")
     public Integer minute;
+
     public LocalTime withMinute(Integer minute) {
         this.minute = minute;
         return this;
@@ -40,6 +42,7 @@ public class LocalTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nano")
     public Integer nano;
+
     public LocalTime withNano(Integer nano) {
         this.nano = nano;
         return this;
@@ -51,9 +54,11 @@ public class LocalTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("second")
     public Integer second;
+
     public LocalTime withSecond(Integer second) {
         this.second = second;
         return this;
     }
     
+    public LocalTime(){}
 }

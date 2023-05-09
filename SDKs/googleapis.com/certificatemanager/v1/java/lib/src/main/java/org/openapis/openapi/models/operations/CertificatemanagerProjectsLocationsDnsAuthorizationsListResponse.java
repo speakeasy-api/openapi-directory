@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CertificatemanagerProjectsLocationsDnsAuthorizationsListResponse {
     
     public String contentType;
+
     public CertificatemanagerProjectsLocationsDnsAuthorizationsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CertificatemanagerProjectsLocationsDnsAuthorizationsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDnsAuthorizationsResponse listDnsAuthorizationsResponse;
+
     public CertificatemanagerProjectsLocationsDnsAuthorizationsListResponse withListDnsAuthorizationsResponse(org.openapis.openapi.models.shared.ListDnsAuthorizationsResponse listDnsAuthorizationsResponse) {
         this.listDnsAuthorizationsResponse = listDnsAuthorizationsResponse;
         return this;
@@ -26,6 +29,7 @@ public class CertificatemanagerProjectsLocationsDnsAuthorizationsListResponse {
     
     
     public Integer statusCode;
+
     public CertificatemanagerProjectsLocationsDnsAuthorizationsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CertificatemanagerProjectsLocationsDnsAuthorizationsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CertificatemanagerProjectsLocationsDnsAuthorizationsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CertificatemanagerProjectsLocationsDnsAuthorizationsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

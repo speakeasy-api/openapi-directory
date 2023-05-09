@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ChangeSetSummary {
     
     public String changeSetId;
+
     public ChangeSetSummary withChangeSetId(String changeSetId) {
         this.changeSetId = changeSetId;
         return this;
@@ -19,6 +20,7 @@ public class ChangeSetSummary {
     
     
     public String changeSetName;
+
     public ChangeSetSummary withChangeSetName(String changeSetName) {
         this.changeSetName = changeSetName;
         return this;
@@ -26,6 +28,7 @@ public class ChangeSetSummary {
     
     
     public OffsetDateTime creationTime;
+
     public ChangeSetSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +36,7 @@ public class ChangeSetSummary {
     
     
     public String description;
+
     public ChangeSetSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +44,7 @@ public class ChangeSetSummary {
     
     
     public ExecutionStatusEnum executionStatus;
+
     public ChangeSetSummary withExecutionStatus(ExecutionStatusEnum executionStatus) {
         this.executionStatus = executionStatus;
         return this;
@@ -47,6 +52,7 @@ public class ChangeSetSummary {
     
     
     public Boolean includeNestedStacks;
+
     public ChangeSetSummary withIncludeNestedStacks(Boolean includeNestedStacks) {
         this.includeNestedStacks = includeNestedStacks;
         return this;
@@ -54,6 +60,7 @@ public class ChangeSetSummary {
     
     
     public String parentChangeSetId;
+
     public ChangeSetSummary withParentChangeSetId(String parentChangeSetId) {
         this.parentChangeSetId = parentChangeSetId;
         return this;
@@ -61,6 +68,7 @@ public class ChangeSetSummary {
     
     
     public String rootChangeSetId;
+
     public ChangeSetSummary withRootChangeSetId(String rootChangeSetId) {
         this.rootChangeSetId = rootChangeSetId;
         return this;
@@ -68,6 +76,7 @@ public class ChangeSetSummary {
     
     
     public String stackId;
+
     public ChangeSetSummary withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -75,6 +84,7 @@ public class ChangeSetSummary {
     
     
     public String stackName;
+
     public ChangeSetSummary withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -82,6 +92,7 @@ public class ChangeSetSummary {
     
     
     public ChangeSetStatusEnum status;
+
     public ChangeSetSummary withStatus(ChangeSetStatusEnum status) {
         this.status = status;
         return this;
@@ -89,9 +100,11 @@ public class ChangeSetSummary {
     
     
     public String statusReason;
+
     public ChangeSetSummary withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public ChangeSetSummary(){}
 }

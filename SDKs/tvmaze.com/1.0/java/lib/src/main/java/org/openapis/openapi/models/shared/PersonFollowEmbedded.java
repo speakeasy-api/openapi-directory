@@ -12,9 +12,11 @@ public class PersonFollowEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("person")
     public java.util.Map<String, Object> person;
+
     public PersonFollowEmbedded withPerson(java.util.Map<String, Object> person) {
         this.person = person;
         return this;
     }
     
+    public PersonFollowEmbedded(){}
 }

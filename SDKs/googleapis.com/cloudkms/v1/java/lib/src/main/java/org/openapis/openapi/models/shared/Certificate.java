@@ -18,6 +18,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuer")
     public String issuer;
+
     public Certificate withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -29,6 +30,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notAfterTime")
     public String notAfterTime;
+
     public Certificate withNotAfterTime(String notAfterTime) {
         this.notAfterTime = notAfterTime;
         return this;
@@ -40,6 +42,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notBeforeTime")
     public String notBeforeTime;
+
     public Certificate withNotBeforeTime(String notBeforeTime) {
         this.notBeforeTime = notBeforeTime;
         return this;
@@ -51,6 +54,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parsed")
     public Boolean parsed;
+
     public Certificate withParsed(Boolean parsed) {
         this.parsed = parsed;
         return this;
@@ -62,6 +66,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawDer")
     public String rawDer;
+
     public Certificate withRawDer(String rawDer) {
         this.rawDer = rawDer;
         return this;
@@ -73,6 +78,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public Certificate withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -84,6 +90,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha256Fingerprint")
     public String sha256Fingerprint;
+
     public Certificate withSha256Fingerprint(String sha256Fingerprint) {
         this.sha256Fingerprint = sha256Fingerprint;
         return this;
@@ -95,6 +102,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public Certificate withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -106,9 +114,11 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAlternativeDnsNames")
     public String[] subjectAlternativeDnsNames;
+
     public Certificate withSubjectAlternativeDnsNames(String[] subjectAlternativeDnsNames) {
         this.subjectAlternativeDnsNames = subjectAlternativeDnsNames;
         return this;
     }
     
+    public Certificate(){}
 }

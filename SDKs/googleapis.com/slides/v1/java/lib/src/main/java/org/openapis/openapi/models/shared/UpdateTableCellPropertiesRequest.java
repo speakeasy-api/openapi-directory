@@ -18,6 +18,7 @@ public class UpdateTableCellPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateTableCellPropertiesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class UpdateTableCellPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public UpdateTableCellPropertiesRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -40,6 +42,7 @@ public class UpdateTableCellPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableCellProperties")
     public TableCellProperties tableCellProperties;
+
     public UpdateTableCellPropertiesRequest withTableCellProperties(TableCellProperties tableCellProperties) {
         this.tableCellProperties = tableCellProperties;
         return this;
@@ -51,9 +54,11 @@ public class UpdateTableCellPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRange")
     public TableRange tableRange;
+
     public UpdateTableCellPropertiesRequest withTableRange(TableRange tableRange) {
         this.tableRange = tableRange;
         return this;
     }
     
+    public UpdateTableCellPropertiesRequest(){}
 }

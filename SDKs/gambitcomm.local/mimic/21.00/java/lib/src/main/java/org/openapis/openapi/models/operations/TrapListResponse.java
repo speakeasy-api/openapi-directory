@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TrapListResponse {
     
     public String contentType;
+
     public TrapListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TrapListResponse {
     
     
     public Integer statusCode;
+
     public TrapListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TrapListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TrapListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class TrapListResponse {
      */
     
     public String[] trapList200ApplicationJSONStrings;
+
     public TrapListResponse withTrapList200ApplicationJSONStrings(String[] trapList200ApplicationJSONStrings) {
         this.trapList200ApplicationJSONStrings = trapList200ApplicationJSONStrings;
         return this;
     }
     
+    public TrapListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

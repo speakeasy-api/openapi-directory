@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RejectAssignmentResponse {
     
     public String contentType;
+
     public RejectAssignmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RejectAssignmentResponse {
      */
     
     public java.util.Map<String, Object> rejectAssignmentResponse;
+
     public RejectAssignmentResponse withRejectAssignmentResponse(java.util.Map<String, Object> rejectAssignmentResponse) {
         this.rejectAssignmentResponse = rejectAssignmentResponse;
         return this;
@@ -29,6 +32,7 @@ public class RejectAssignmentResponse {
      */
     
     public Object requestError;
+
     public RejectAssignmentResponse withRequestError(Object requestError) {
         this.requestError = requestError;
         return this;
@@ -39,6 +43,7 @@ public class RejectAssignmentResponse {
      */
     
     public Object serviceFault;
+
     public RejectAssignmentResponse withServiceFault(Object serviceFault) {
         this.serviceFault = serviceFault;
         return this;
@@ -46,6 +51,7 @@ public class RejectAssignmentResponse {
     
     
     public Integer statusCode;
+
     public RejectAssignmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class RejectAssignmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RejectAssignmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RejectAssignmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

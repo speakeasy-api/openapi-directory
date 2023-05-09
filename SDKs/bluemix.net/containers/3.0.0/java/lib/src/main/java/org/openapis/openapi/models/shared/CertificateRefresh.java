@@ -18,6 +18,7 @@ public class CertificateRefresh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ca_cert")
     public String caCert;
+
     public CertificateRefresh withCaCert(String caCert) {
         this.caCert = caCert;
         return this;
@@ -29,6 +30,7 @@ public class CertificateRefresh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reg_host")
     public String regHost;
+
     public CertificateRefresh withRegHost(String regHost) {
         this.regHost = regHost;
         return this;
@@ -40,6 +42,7 @@ public class CertificateRefresh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server_cert")
     public String serverCert;
+
     public CertificateRefresh withServerCert(String serverCert) {
         this.serverCert = serverCert;
         return this;
@@ -51,6 +54,7 @@ public class CertificateRefresh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_cert")
     public String userCert;
+
     public CertificateRefresh withUserCert(String userCert) {
         this.userCert = userCert;
         return this;
@@ -62,9 +66,11 @@ public class CertificateRefresh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_key")
     public String userKey;
+
     public CertificateRefresh withUserKey(String userKey) {
         this.userKey = userKey;
         return this;
     }
     
+    public CertificateRefresh(){}
 }

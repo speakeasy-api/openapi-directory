@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReportByProductOneChannelLinks {
     @JsonProperty("disableProductForOneChannel")
     public LinksOptimiseByProductLink disableProductForOneChannel;
+
     public ReportByProductOneChannelLinks withDisableProductForOneChannel(LinksOptimiseByProductLink disableProductForOneChannel) {
         this.disableProductForOneChannel = disableProductForOneChannel;
         return this;
@@ -19,6 +20,7 @@ public class ReportByProductOneChannelLinks {
     
     @JsonProperty("enableProductForOneChannel")
     public LinksOptimiseByProductLink enableProductForOneChannel;
+
     public ReportByProductOneChannelLinks withEnableProductForOneChannel(LinksOptimiseByProductLink enableProductForOneChannel) {
         this.enableProductForOneChannel = enableProductForOneChannel;
         return this;
@@ -26,9 +28,15 @@ public class ReportByProductOneChannelLinks {
     
     @JsonProperty("productInfo")
     public LinksGetChannelCatalogProductInfoLink productInfo;
+
     public ReportByProductOneChannelLinks withProductInfo(LinksGetChannelCatalogProductInfoLink productInfo) {
         this.productInfo = productInfo;
         return this;
     }
     
+    public ReportByProductOneChannelLinks(@JsonProperty("disableProductForOneChannel") LinksOptimiseByProductLink disableProductForOneChannel, @JsonProperty("enableProductForOneChannel") LinksOptimiseByProductLink enableProductForOneChannel, @JsonProperty("productInfo") LinksGetChannelCatalogProductInfoLink productInfo) {
+        this.disableProductForOneChannel = disableProductForOneChannel;
+        this.enableProductForOneChannel = enableProductForOneChannel;
+        this.productInfo = productInfo;
+  }
 }

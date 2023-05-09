@@ -15,6 +15,7 @@ public class UpdateScheduleRequestBodyFlexibleTimeWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumWindowInMinutes")
     public Long maximumWindowInMinutes;
+
     public UpdateScheduleRequestBodyFlexibleTimeWindow withMaximumWindowInMinutes(Long maximumWindowInMinutes) {
         this.maximumWindowInMinutes = maximumWindowInMinutes;
         return this;
@@ -23,9 +24,11 @@ public class UpdateScheduleRequestBodyFlexibleTimeWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public org.openapis.openapi.models.shared.FlexibleTimeWindowModeEnum mode;
+
     public UpdateScheduleRequestBodyFlexibleTimeWindow withMode(org.openapis.openapi.models.shared.FlexibleTimeWindowModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public UpdateScheduleRequestBodyFlexibleTimeWindow(){}
 }

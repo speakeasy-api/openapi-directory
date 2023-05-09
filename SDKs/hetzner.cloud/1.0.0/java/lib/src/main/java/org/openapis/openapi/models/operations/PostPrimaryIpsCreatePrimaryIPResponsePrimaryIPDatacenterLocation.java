@@ -12,6 +12,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation {
      */
     @JsonProperty("city")
     public String city;
+
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation withCity(String city) {
         this.city = city;
         return this;
@@ -22,6 +23,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation {
      */
     @JsonProperty("country")
     public String country;
+
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation withCountry(String country) {
         this.country = country;
         return this;
@@ -32,6 +34,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation {
      */
     @JsonProperty("description")
     public String description;
+
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation withDescription(String description) {
         this.description = description;
         return this;
@@ -42,6 +45,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation {
      */
     @JsonProperty("id")
     public Double id;
+
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation withId(Double id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation {
      */
     @JsonProperty("latitude")
     public Double latitude;
+
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -62,6 +67,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation {
      */
     @JsonProperty("longitude")
     public Double longitude;
+
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -72,6 +78,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation {
      */
     @JsonProperty("name")
     public String name;
+
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation withName(String name) {
         this.name = name;
         return this;
@@ -82,9 +89,20 @@ public class PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation {
      */
     @JsonProperty("network_zone")
     public String networkZone;
+
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation withNetworkZone(String networkZone) {
         this.networkZone = networkZone;
         return this;
     }
     
+    public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation(@JsonProperty("city") String city, @JsonProperty("country") String country, @JsonProperty("description") String description, @JsonProperty("id") Double id, @JsonProperty("latitude") Double latitude, @JsonProperty("longitude") Double longitude, @JsonProperty("name") String name, @JsonProperty("network_zone") String networkZone) {
+        this.city = city;
+        this.country = country;
+        this.description = description;
+        this.id = id;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.name = name;
+        this.networkZone = networkZone;
+  }
 }

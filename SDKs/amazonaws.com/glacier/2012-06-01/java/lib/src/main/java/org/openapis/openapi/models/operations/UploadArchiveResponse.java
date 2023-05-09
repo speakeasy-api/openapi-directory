@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UploadArchiveResponse {
@@ -12,6 +13,7 @@ public class UploadArchiveResponse {
      */
     
     public java.util.Map<String, Object> archiveCreationOutput;
+
     public UploadArchiveResponse withArchiveCreationOutput(java.util.Map<String, Object> archiveCreationOutput) {
         this.archiveCreationOutput = archiveCreationOutput;
         return this;
@@ -19,6 +21,7 @@ public class UploadArchiveResponse {
     
     
     public String contentType;
+
     public UploadArchiveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UploadArchiveResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UploadArchiveResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class UploadArchiveResponse {
      */
     
     public Object missingParameterValueException;
+
     public UploadArchiveResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class UploadArchiveResponse {
      */
     
     public Object requestTimeoutException;
+
     public UploadArchiveResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -59,6 +65,7 @@ public class UploadArchiveResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UploadArchiveResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UploadArchiveResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UploadArchiveResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class UploadArchiveResponse {
     
     
     public Integer statusCode;
+
     public UploadArchiveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class UploadArchiveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UploadArchiveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UploadArchiveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

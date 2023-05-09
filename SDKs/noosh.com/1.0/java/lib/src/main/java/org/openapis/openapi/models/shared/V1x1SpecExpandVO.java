@@ -18,6 +18,7 @@ public class V1x1SpecExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public V1x1SpecDetailVO result;
+
     public V1x1SpecExpandVO withResult(V1x1SpecDetailVO result) {
         this.result = result;
         return this;
@@ -26,6 +27,7 @@ public class V1x1SpecExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public V1x1SpecExpandVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,9 +36,11 @@ public class V1x1SpecExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public V1x1SpecExpandVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public V1x1SpecExpandVO(){}
 }

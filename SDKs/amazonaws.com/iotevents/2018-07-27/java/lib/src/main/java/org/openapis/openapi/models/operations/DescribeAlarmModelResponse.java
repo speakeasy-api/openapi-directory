@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAlarmModelResponse {
     
     public String contentType;
+
     public DescribeAlarmModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAlarmModelResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAlarmModelResponse describeAlarmModelResponse;
+
     public DescribeAlarmModelResponse withDescribeAlarmModelResponse(org.openapis.openapi.models.shared.DescribeAlarmModelResponse describeAlarmModelResponse) {
         this.describeAlarmModelResponse = describeAlarmModelResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAlarmModelResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeAlarmModelResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAlarmModelResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeAlarmModelResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAlarmModelResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeAlarmModelResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeAlarmModelResponse {
     
     
     public Integer statusCode;
+
     public DescribeAlarmModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAlarmModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAlarmModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeAlarmModelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAlarmModelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeAlarmModelResponse {
      */
     
     public Object throttlingException;
+
     public DescribeAlarmModelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeAlarmModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

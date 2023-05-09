@@ -57,10 +57,8 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangePasswordResponse res = new org.openapis.openapi.models.operations.ChangePasswordResponse() {{
+        org.openapis.openapi.models.operations.ChangePasswordResponse res = new org.openapis.openapi.models.operations.ChangePasswordResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -90,11 +88,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllNamesWithIds1Response res = new org.openapis.openapi.models.operations.GetAllNamesWithIds1Response() {{
+        org.openapis.openapi.models.operations.GetAllNamesWithIds1Response res = new org.openapis.openapi.models.operations.GetAllNamesWithIds1Response(contentType, httpRes.statusCode()) {{
             entityWithNameDTOS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -130,11 +126,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetById6Response res = new org.openapis.openapi.models.operations.GetById6Response() {{
+        org.openapis.openapi.models.operations.GetById6Response res = new org.openapis.openapi.models.operations.GetById6Response(contentType, httpRes.statusCode()) {{
             userDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -170,11 +164,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomField1Response res = new org.openapis.openapi.models.operations.GetCustomField1Response() {{
+        org.openapis.openapi.models.operations.GetCustomField1Response res = new org.openapis.openapi.models.operations.GetCustomField1Response(contentType, httpRes.statusCode()) {{
             customFieldDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -210,11 +202,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomFields4Response res = new org.openapis.openapi.models.operations.GetCustomFields4Response() {{
+        org.openapis.openapi.models.operations.GetCustomFields4Response res = new org.openapis.openapi.models.operations.GetCustomFields4Response(contentType, httpRes.statusCode()) {{
             customFieldsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -249,11 +239,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeResponse res = new org.openapis.openapi.models.operations.GetMeResponse() {{
+        org.openapis.openapi.models.operations.GetMeResponse res = new org.openapis.openapi.models.operations.GetMeResponse(contentType, httpRes.statusCode()) {{
             userDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -288,11 +276,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTimeZoneResponse res = new org.openapis.openapi.models.operations.GetTimeZoneResponse() {{
+        org.openapis.openapi.models.operations.GetTimeZoneResponse res = new org.openapis.openapi.models.operations.GetTimeZoneResponse(contentType, httpRes.statusCode()) {{
             timeZoneDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -333,11 +319,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCustomField1Response res = new org.openapis.openapi.models.operations.UpdateCustomField1Response() {{
+        org.openapis.openapi.models.operations.UpdateCustomField1Response res = new org.openapis.openapi.models.operations.UpdateCustomField1Response(contentType, httpRes.statusCode()) {{
             customFieldDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -378,11 +362,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCustomFields2Response res = new org.openapis.openapi.models.operations.UpdateCustomFields2Response() {{
+        org.openapis.openapi.models.operations.UpdateCustomFields2Response res = new org.openapis.openapi.models.operations.UpdateCustomFields2Response(contentType, httpRes.statusCode()) {{
             customFieldsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -423,11 +405,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Update3Response res = new org.openapis.openapi.models.operations.Update3Response() {{
+        org.openapis.openapi.models.operations.Update3Response res = new org.openapis.openapi.models.operations.Update3Response(contentType, httpRes.statusCode()) {{
             userDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

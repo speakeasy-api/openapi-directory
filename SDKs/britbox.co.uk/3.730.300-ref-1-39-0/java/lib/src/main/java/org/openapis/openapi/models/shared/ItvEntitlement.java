@@ -22,6 +22,7 @@ public class ItvEntitlement {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("card_type")
     public OffsetDateTime cardType;
+
     public ItvEntitlement withCardType(OffsetDateTime cardType) {
         this.cardType = cardType;
         return this;
@@ -34,6 +35,7 @@ public class ItvEntitlement {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiry")
     public OffsetDateTime expiry;
+
     public ItvEntitlement withExpiry(OffsetDateTime expiry) {
         this.expiry = expiry;
         return this;
@@ -44,6 +46,7 @@ public class ItvEntitlement {
      */
     @JsonProperty("plan")
     public java.util.Map<String, Object> plan;
+
     public ItvEntitlement withPlan(java.util.Map<String, Object> plan) {
         this.plan = plan;
         return this;
@@ -54,6 +57,7 @@ public class ItvEntitlement {
      */
     @JsonProperty("source")
     public String source;
+
     public ItvEntitlement withSource(String source) {
         this.source = source;
         return this;
@@ -64,9 +68,16 @@ public class ItvEntitlement {
      */
     @JsonProperty("subscriptionId")
     public String subscriptionId;
+
     public ItvEntitlement withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public ItvEntitlement(@JsonProperty("expiry") OffsetDateTime expiry, @JsonProperty("plan") java.util.Map<String, Object> plan, @JsonProperty("source") String source, @JsonProperty("subscriptionId") String subscriptionId) {
+        this.expiry = expiry;
+        this.plan = plan;
+        this.source = source;
+        this.subscriptionId = subscriptionId;
+  }
 }

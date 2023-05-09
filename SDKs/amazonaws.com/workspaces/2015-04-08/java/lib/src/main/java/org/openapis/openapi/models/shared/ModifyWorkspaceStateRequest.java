@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModifyWorkspaceStateRequest {
     @JsonProperty("WorkspaceId")
     public String workspaceId;
+
     public ModifyWorkspaceStateRequest withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
@@ -16,9 +17,14 @@ public class ModifyWorkspaceStateRequest {
     
     @JsonProperty("WorkspaceState")
     public TargetWorkspaceStateEnum workspaceState;
+
     public ModifyWorkspaceStateRequest withWorkspaceState(TargetWorkspaceStateEnum workspaceState) {
         this.workspaceState = workspaceState;
         return this;
     }
     
+    public ModifyWorkspaceStateRequest(@JsonProperty("WorkspaceId") String workspaceId, @JsonProperty("WorkspaceState") TargetWorkspaceStateEnum workspaceState) {
+        this.workspaceId = workspaceId;
+        this.workspaceState = workspaceState;
+  }
 }

@@ -17,6 +17,7 @@ public class TaxCreateApiModel {
     @JsonProperty("Name")
     @SpeakeasyMetadata("form:name=Name")
     public String name;
+
     public TaxCreateApiModel withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class TaxCreateApiModel {
     @JsonProperty("Percentage")
     @SpeakeasyMetadata("form:name=Percentage")
     public Double percentage;
+
     public TaxCreateApiModel withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public TaxCreateApiModel(){}
 }

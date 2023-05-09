@@ -65,12 +65,10 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -125,12 +123,10 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -185,12 +181,10 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuOnInitResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuOnInitResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuOnInitResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionRequestsHiuOnInitResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -247,12 +241,10 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -309,12 +301,10 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05SubscriptionsHiuNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

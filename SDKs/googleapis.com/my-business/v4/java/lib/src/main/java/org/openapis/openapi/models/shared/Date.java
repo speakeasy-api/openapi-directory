@@ -18,6 +18,7 @@ public class Date {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day")
     public Integer day;
+
     public Date withDay(Integer day) {
         this.day = day;
         return this;
@@ -29,6 +30,7 @@ public class Date {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("month")
     public Integer month;
+
     public Date withMonth(Integer month) {
         this.month = month;
         return this;
@@ -40,9 +42,11 @@ public class Date {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Integer year;
+
     public Date withYear(Integer year) {
         this.year = year;
         return this;
     }
     
+    public Date(){}
 }

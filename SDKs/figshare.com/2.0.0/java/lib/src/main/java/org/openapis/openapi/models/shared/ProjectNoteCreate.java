@@ -15,9 +15,13 @@ public class ProjectNoteCreate {
      */
     @JsonProperty("text")
     public String text;
+
     public ProjectNoteCreate withText(String text) {
         this.text = text;
         return this;
     }
     
+    public ProjectNoteCreate(@JsonProperty("text") String text) {
+        this.text = text;
+  }
 }

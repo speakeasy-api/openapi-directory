@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UvIndexResult {
     @JsonProperty("from_time")
     public String fromTime;
+
     public UvIndexResult withFromTime(String fromTime) {
         this.fromTime = fromTime;
         return this;
@@ -16,6 +17,7 @@ public class UvIndexResult {
     
     @JsonProperty("from_uv")
     public Double fromUv;
+
     public UvIndexResult withFromUv(Double fromUv) {
         this.fromUv = fromUv;
         return this;
@@ -23,6 +25,7 @@ public class UvIndexResult {
     
     @JsonProperty("to_time")
     public String toTime;
+
     public UvIndexResult withToTime(String toTime) {
         this.toTime = toTime;
         return this;
@@ -30,9 +33,16 @@ public class UvIndexResult {
     
     @JsonProperty("to_uv")
     public Double toUv;
+
     public UvIndexResult withToUv(Double toUv) {
         this.toUv = toUv;
         return this;
     }
     
+    public UvIndexResult(@JsonProperty("from_time") String fromTime, @JsonProperty("from_uv") Double fromUv, @JsonProperty("to_time") String toTime, @JsonProperty("to_uv") Double toUv) {
+        this.fromTime = fromTime;
+        this.fromUv = fromUv;
+        this.toTime = toTime;
+        this.toUv = toUv;
+  }
 }

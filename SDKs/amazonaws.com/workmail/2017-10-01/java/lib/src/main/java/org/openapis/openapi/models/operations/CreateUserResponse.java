@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUserResponse {
     
     public String contentType;
+
     public CreateUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateUserResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUserResponse createUserResponse;
+
     public CreateUserResponse withCreateUserResponse(org.openapis.openapi.models.shared.CreateUserResponse createUserResponse) {
         this.createUserResponse = createUserResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateUserResponse {
      */
     
     public Object directoryServiceAuthenticationFailedException;
+
     public CreateUserResponse withDirectoryServiceAuthenticationFailedException(Object directoryServiceAuthenticationFailedException) {
         this.directoryServiceAuthenticationFailedException = directoryServiceAuthenticationFailedException;
         return this;
@@ -39,6 +43,7 @@ public class CreateUserResponse {
      */
     
     public Object directoryUnavailableException;
+
     public CreateUserResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -49,6 +54,7 @@ public class CreateUserResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateUserResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateUserResponse {
      */
     
     public Object invalidPasswordException;
+
     public CreateUserResponse withInvalidPasswordException(Object invalidPasswordException) {
         this.invalidPasswordException = invalidPasswordException;
         return this;
@@ -69,6 +76,7 @@ public class CreateUserResponse {
      */
     
     public Object nameAvailabilityException;
+
     public CreateUserResponse withNameAvailabilityException(Object nameAvailabilityException) {
         this.nameAvailabilityException = nameAvailabilityException;
         return this;
@@ -79,6 +87,7 @@ public class CreateUserResponse {
      */
     
     public Object organizationNotFoundException;
+
     public CreateUserResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class CreateUserResponse {
      */
     
     public Object organizationStateException;
+
     public CreateUserResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -96,6 +106,7 @@ public class CreateUserResponse {
     
     
     public Integer statusCode;
+
     public CreateUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class CreateUserResponse {
      */
     
     public Object reservedNameException;
+
     public CreateUserResponse withReservedNameException(Object reservedNameException) {
         this.reservedNameException = reservedNameException;
         return this;
@@ -123,9 +136,14 @@ public class CreateUserResponse {
      */
     
     public Object unsupportedOperationException;
+
     public CreateUserResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public CreateUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

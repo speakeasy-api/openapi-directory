@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostFactorsResidualizationRequestBody {
     @JsonProperty("factors")
     public PostFactorsResidualizationRequestBodyFactors[] factors;
+
     public PostFactorsResidualizationRequestBody withFactors(PostFactorsResidualizationRequestBodyFactors[] factors) {
         this.factors = factors;
         return this;
@@ -19,9 +20,14 @@ public class PostFactorsResidualizationRequestBody {
      */
     @JsonProperty("residualizedFactor")
     public Long residualizedFactor;
+
     public PostFactorsResidualizationRequestBody withResidualizedFactor(Long residualizedFactor) {
         this.residualizedFactor = residualizedFactor;
         return this;
     }
     
+    public PostFactorsResidualizationRequestBody(@JsonProperty("factors") PostFactorsResidualizationRequestBodyFactors[] factors, @JsonProperty("residualizedFactor") Long residualizedFactor) {
+        this.factors = factors;
+        this.residualizedFactor = residualizedFactor;
+  }
 }

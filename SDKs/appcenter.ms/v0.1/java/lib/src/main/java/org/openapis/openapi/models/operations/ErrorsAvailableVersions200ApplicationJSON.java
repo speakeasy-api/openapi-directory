@@ -18,6 +18,7 @@ public class ErrorsAvailableVersions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_count")
     public Long totalCount;
+
     public ErrorsAvailableVersions200ApplicationJSON withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -29,9 +30,11 @@ public class ErrorsAvailableVersions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public String[] versions;
+
     public ErrorsAvailableVersions200ApplicationJSON withVersions(String[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public ErrorsAvailableVersions200ApplicationJSON(){}
 }

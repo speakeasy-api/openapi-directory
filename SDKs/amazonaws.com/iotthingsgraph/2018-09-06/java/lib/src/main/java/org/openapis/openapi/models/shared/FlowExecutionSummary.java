@@ -22,6 +22,7 @@ public class FlowExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public FlowExecutionSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class FlowExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowExecutionId")
     public String flowExecutionId;
+
     public FlowExecutionSummary withFlowExecutionId(String flowExecutionId) {
         this.flowExecutionId = flowExecutionId;
         return this;
@@ -38,6 +40,7 @@ public class FlowExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowTemplateId")
     public String flowTemplateId;
+
     public FlowExecutionSummary withFlowTemplateId(String flowTemplateId) {
         this.flowTemplateId = flowTemplateId;
         return this;
@@ -46,6 +49,7 @@ public class FlowExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public FlowExecutionStatusEnum status;
+
     public FlowExecutionSummary withStatus(FlowExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -54,6 +58,7 @@ public class FlowExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemInstanceId")
     public String systemInstanceId;
+
     public FlowExecutionSummary withSystemInstanceId(String systemInstanceId) {
         this.systemInstanceId = systemInstanceId;
         return this;
@@ -64,9 +69,11 @@ public class FlowExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public FlowExecutionSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public FlowExecutionSummary(){}
 }

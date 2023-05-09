@@ -12,6 +12,7 @@ public class MediaTypeHolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MediaTypeHolder withDescription(String description) {
         this.description = description;
         return this;
@@ -20,9 +21,11 @@ public class MediaTypeHolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MediaTypeHolder withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MediaTypeHolder(){}
 }

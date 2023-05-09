@@ -64,10 +64,8 @@ public class FloatingIPs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFloatingIpsIdResponse res = new org.openapis.openapi.models.operations.DeleteFloatingIpsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteFloatingIpsIdResponse res = new org.openapis.openapi.models.operations.DeleteFloatingIpsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -103,11 +101,9 @@ public class FloatingIPs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFloatingIpsResponse res = new org.openapis.openapi.models.operations.GetFloatingIpsResponse() {{
+        org.openapis.openapi.models.operations.GetFloatingIpsResponse res = new org.openapis.openapi.models.operations.GetFloatingIpsResponse(contentType, httpRes.statusCode()) {{
             getFloatingIps200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,11 +138,9 @@ public class FloatingIPs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFloatingIpsIdResponse res = new org.openapis.openapi.models.operations.GetFloatingIpsIdResponse() {{
+        org.openapis.openapi.models.operations.GetFloatingIpsIdResponse res = new org.openapis.openapi.models.operations.GetFloatingIpsIdResponse(contentType, httpRes.statusCode()) {{
             getFloatingIpsId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,11 +177,9 @@ public class FloatingIPs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFloatingIpsResponse res = new org.openapis.openapi.models.operations.PostFloatingIpsResponse() {{
+        org.openapis.openapi.models.operations.PostFloatingIpsResponse res = new org.openapis.openapi.models.operations.PostFloatingIpsResponse(contentType, httpRes.statusCode()) {{
             postFloatingIps201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -225,11 +217,9 @@ public class FloatingIPs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutFloatingIpsIdResponse res = new org.openapis.openapi.models.operations.PutFloatingIpsIdResponse() {{
+        org.openapis.openapi.models.operations.PutFloatingIpsIdResponse res = new org.openapis.openapi.models.operations.PutFloatingIpsIdResponse(contentType, httpRes.statusCode()) {{
             putFloatingIpsId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

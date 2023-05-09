@@ -12,6 +12,7 @@ public class PostLocksPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=allow_access_by_any_user")
     public Boolean allowAccessByAnyUser;
+
     public PostLocksPathRequestBody withAllowAccessByAnyUser(Boolean allowAccessByAnyUser) {
         this.allowAccessByAnyUser = allowAccessByAnyUser;
         return this;
@@ -22,6 +23,7 @@ public class PostLocksPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=exclusive")
     public Boolean exclusive;
+
     public PostLocksPathRequestBody withExclusive(Boolean exclusive) {
         this.exclusive = exclusive;
         return this;
@@ -32,6 +34,7 @@ public class PostLocksPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=recursive")
     public String recursive;
+
     public PostLocksPathRequestBody withRecursive(String recursive) {
         this.recursive = recursive;
         return this;
@@ -42,9 +45,11 @@ public class PostLocksPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=timeout")
     public Integer timeout;
+
     public PostLocksPathRequestBody withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public PostLocksPathRequestBody(){}
 }

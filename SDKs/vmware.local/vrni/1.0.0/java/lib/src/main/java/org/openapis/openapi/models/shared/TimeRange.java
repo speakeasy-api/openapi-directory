@@ -12,6 +12,7 @@ public class TimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_time")
     public Long endTime;
+
     public TimeRange withEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
@@ -20,9 +21,11 @@ public class TimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_time")
     public Long startTime;
+
     public TimeRange withStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public TimeRange(){}
 }

@@ -15,18 +15,18 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 ```java
 package hello.world;
 
+import java.time.LocalDate;
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CreateAssetSecurity;
 import org.openapis.openapi.models.operations.CreateAssetRequest;
 import org.openapis.openapi.models.operations.CreateAssetResponse;
+import org.openapis.openapi.models.operations.CreateAssetSecurity;
 import org.openapis.openapi.models.shared.Asset;
+import org.openapis.openapi.models.shared.AssetStatusEnum;
+import org.openapis.openapi.models.shared.BookDepreciationDetail;
+import org.openapis.openapi.models.shared.BookDepreciationSetting;
 import org.openapis.openapi.models.shared.BookDepreciationSettingAveragingMethodEnum;
 import org.openapis.openapi.models.shared.BookDepreciationSettingDepreciationCalculationMethodEnum;
 import org.openapis.openapi.models.shared.BookDepreciationSettingDepreciationMethodEnum;
-import org.openapis.openapi.models.shared.BookDepreciationSetting;
-import org.openapis.openapi.models.shared.BookDepreciationDetail;
-import org.openapis.openapi.models.shared.AssetStatusEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,55 +34,53 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateAssetRequest req = new CreateAssetRequest() {{
-                asset = new Asset() {{
-                    accountingBookValue = 5488.14;
-                    assetId = "3b5b3a38-5649-495f-87a1-14a4e5918634";
-                    assetName = "Awesome Truck 3";
-                    assetNumber = "FA-0013";
-                    assetStatus = "Draft";
-                    assetTypeId = "3b5b3a38-5649-495f-87a1-14a4e5918634";
-                    bookDepreciationDetail = new BookDepreciationDetail() {{
-                        costLimit = 9000;
-                        currentAccumDepreciationAmount = 5;
-                        currentCapitalGain = 5.25;
-                        currentGainLoss = 10.5;
-                        depreciationStartDate = "2015-07-01T00:00:00";
-                        priorAccumDepreciationAmount = 0.45;
-                        residualValue = 10000;
-                    }};
-                    bookDepreciationSetting = new BookDepreciationSetting() {{
-                        averagingMethod = "ActualDays";
-                        bookEffectiveDateOfChangeId = "68f17094-af97-4f1b-b36b-013b45b6ad3c";
-                        depreciableObjectId = "68f17094-af97-4f1b-b36b-013b45b6ad3c";
-                        depreciableObjectType = "Asset";
-                        depreciationCalculationMethod = "None";
-                        depreciationMethod = "StraightLine";
-                        depreciationRate = 0.05;
-                        effectiveLifeYears = 5;
-                    }};
-                    canRollback = true;
-                    disposalDate = "2020-07-01T00:00:00";
-                    disposalPrice = 1.0000;
-                    isDeleteEnabledForDate = true;
-                    purchaseDate = "2015-07-01T00:00:00";
-                    purchasePrice = 1000.0000;
-                    serialNumber = "ca4c6b39-4f4f-43e8-98da-5e1f350a6694";
-                    warrantyExpiryDate = "ca4c6b39-4f4f-43e8-98da-5e1f350a6694";
-                }};
-                xeroTenantId = "provident";
-            }}            
+            CreateAssetRequest req = new CreateAssetRequest(                new Asset("Awesome Truck 3") {{
+                                accountingBookValue = 5488.14;
+                                assetId = "3b5b3a38-5649-495f-87a1-14a4e5918634";
+                                assetNumber = "FA-0013";
+                                assetStatus = AssetStatusEnum.DRAFT;
+                                assetTypeId = "3b5b3a38-5649-495f-87a1-14a4e5918634";
+                                bookDepreciationDetail = new BookDepreciationDetail() {{
+                                    costLimit = 9000;
+                                    currentAccumDepreciationAmount = 5;
+                                    currentCapitalGain = 5.25;
+                                    currentGainLoss = 10.5;
+                                    depreciationStartDate = LocalDate.parse("2015-07-01T00:00:00");
+                                    priorAccumDepreciationAmount = 0.45;
+                                    residualValue = 10000;
+                                }};;
+                                bookDepreciationSetting = new BookDepreciationSetting() {{
+                                    averagingMethod = BookDepreciationSettingAveragingMethodEnum.ACTUAL_DAYS;
+                                    bookEffectiveDateOfChangeId = "68f17094-af97-4f1b-b36b-013b45b6ad3c";
+                                    depreciableObjectId = "68f17094-af97-4f1b-b36b-013b45b6ad3c";
+                                    depreciableObjectType = "Asset";
+                                    depreciationCalculationMethod = BookDepreciationSettingDepreciationCalculationMethodEnum.NONE;
+                                    depreciationMethod = BookDepreciationSettingDepreciationMethodEnum.STRAIGHT_LINE;
+                                    depreciationRate = 0.05;
+                                    effectiveLifeYears = 5L;
+                                }};;
+                                canRollback = true;
+                                disposalDate = LocalDate.parse("2020-07-01T00:00:00");
+                                disposalPrice = 1.0000;
+                                isDeleteEnabledForDate = true;
+                                purchaseDate = LocalDate.parse("2015-07-01T00:00:00");
+                                purchasePrice = 1000.0000;
+                                serialNumber = "ca4c6b39-4f4f-43e8-98da-5e1f350a6694";
+                                warrantyExpiryDate = "ca4c6b39-4f4f-43e8-98da-5e1f350a6694";
+                            }};, "provident");            
 
-            CreateAssetResponse res = sdk.asset.createAsset(req, new CreateAssetSecurity() {{
+            CreateAssetResponse res = sdk.asset.createAsset(req, new CreateAssetSecurity("distinctio") {{
                 oAuth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.asset.isPresent()) {
+            if (res.asset != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -90,14 +88,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### asset
+### [asset](docs/asset/README.md)
 
-* `createAsset` - adds a fixed asset
-* `createAssetType` - adds a fixed asset type
-* `getAssetById` - Retrieves fixed asset by id
-* `getAssetSettings` - searches fixed asset settings
-* `getAssetTypes` - searches fixed asset types
-* `getAssets` - searches fixed asset
+* [createAsset](docs/asset/README.md#createasset) - adds a fixed asset
+* [createAssetType](docs/asset/README.md#createassettype) - adds a fixed asset type
+* [getAssetById](docs/asset/README.md#getassetbyid) - Retrieves fixed asset by id
+* [getAssetSettings](docs/asset/README.md#getassetsettings) - searches fixed asset settings
+* [getAssetTypes](docs/asset/README.md#getassettypes) - searches fixed asset types
+* [getAssets](docs/asset/README.md#getassets) - searches fixed asset
 <!-- End SDK Available Operations -->
 
 ### Maturity

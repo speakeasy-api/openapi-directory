@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesResponse {
     
     public String contentType;
+
     public RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAt
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudRetailV2betaBatchRemoveCatalogAttributesResponse googleCloudRetailV2betaBatchRemoveCatalogAttributesResponse;
+
     public RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesResponse withGoogleCloudRetailV2betaBatchRemoveCatalogAttributesResponse(org.openapis.openapi.models.shared.GoogleCloudRetailV2betaBatchRemoveCatalogAttributesResponse googleCloudRetailV2betaBatchRemoveCatalogAttributesResponse) {
         this.googleCloudRetailV2betaBatchRemoveCatalogAttributesResponse = googleCloudRetailV2betaBatchRemoveCatalogAttributesResponse;
         return this;
@@ -26,6 +29,7 @@ public class RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAt
     
     
     public Integer statusCode;
+
     public RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAt
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

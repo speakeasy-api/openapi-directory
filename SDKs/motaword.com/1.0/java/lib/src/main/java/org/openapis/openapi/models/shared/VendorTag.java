@@ -12,6 +12,7 @@ public class VendorTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public VendorTag withColor(String color) {
         this.color = color;
         return this;
@@ -20,9 +21,11 @@ public class VendorTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VendorTag withName(String name) {
         this.name = name;
         return this;
     }
     
+    public VendorTag(){}
 }

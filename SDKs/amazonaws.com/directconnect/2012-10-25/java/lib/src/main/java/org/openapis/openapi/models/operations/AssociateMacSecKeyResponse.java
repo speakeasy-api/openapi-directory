@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateMacSecKeyResponse {
@@ -12,6 +13,7 @@ public class AssociateMacSecKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateMacSecKeyResponse associateMacSecKeyResponse;
+
     public AssociateMacSecKeyResponse withAssociateMacSecKeyResponse(org.openapis.openapi.models.shared.AssociateMacSecKeyResponse associateMacSecKeyResponse) {
         this.associateMacSecKeyResponse = associateMacSecKeyResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateMacSecKeyResponse {
     
     
     public String contentType;
+
     public AssociateMacSecKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateMacSecKeyResponse {
      */
     
     public Object directConnectClientException;
+
     public AssociateMacSecKeyResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateMacSecKeyResponse {
      */
     
     public Object directConnectServerException;
+
     public AssociateMacSecKeyResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class AssociateMacSecKeyResponse {
     
     
     public Integer statusCode;
+
     public AssociateMacSecKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class AssociateMacSecKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateMacSecKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssociateMacSecKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

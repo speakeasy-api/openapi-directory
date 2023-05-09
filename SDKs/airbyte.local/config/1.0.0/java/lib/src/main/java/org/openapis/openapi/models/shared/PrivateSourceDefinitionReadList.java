@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PrivateSourceDefinitionReadList {
     @JsonProperty("sourceDefinitions")
     public PrivateSourceDefinitionRead[] sourceDefinitions;
+
     public PrivateSourceDefinitionReadList withSourceDefinitions(PrivateSourceDefinitionRead[] sourceDefinitions) {
         this.sourceDefinitions = sourceDefinitions;
         return this;
     }
     
+    public PrivateSourceDefinitionReadList(@JsonProperty("sourceDefinitions") PrivateSourceDefinitionRead[] sourceDefinitions) {
+        this.sourceDefinitions = sourceDefinitions;
+  }
 }

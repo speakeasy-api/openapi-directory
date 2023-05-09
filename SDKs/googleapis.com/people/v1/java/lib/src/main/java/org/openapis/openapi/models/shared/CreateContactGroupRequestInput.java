@@ -18,6 +18,7 @@ public class CreateContactGroupRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactGroup")
     public ContactGroupInput contactGroup;
+
     public CreateContactGroupRequestInput withContactGroup(ContactGroupInput contactGroup) {
         this.contactGroup = contactGroup;
         return this;
@@ -29,9 +30,11 @@ public class CreateContactGroupRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readGroupFields")
     public String readGroupFields;
+
     public CreateContactGroupRequestInput withReadGroupFields(String readGroupFields) {
         this.readGroupFields = readGroupFields;
         return this;
     }
     
+    public CreateContactGroupRequestInput(){}
 }

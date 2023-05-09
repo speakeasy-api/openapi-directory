@@ -15,6 +15,7 @@ public class GetMergeConflictsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseCommitId")
     public String baseCommitId;
+
     public GetMergeConflictsOutput withBaseCommitId(String baseCommitId) {
         this.baseCommitId = baseCommitId;
         return this;
@@ -22,6 +23,7 @@ public class GetMergeConflictsOutput {
     
     @JsonProperty("conflictMetadataList")
     public ConflictMetadata[] conflictMetadataList;
+
     public GetMergeConflictsOutput withConflictMetadataList(ConflictMetadata[] conflictMetadataList) {
         this.conflictMetadataList = conflictMetadataList;
         return this;
@@ -29,6 +31,7 @@ public class GetMergeConflictsOutput {
     
     @JsonProperty("destinationCommitId")
     public String destinationCommitId;
+
     public GetMergeConflictsOutput withDestinationCommitId(String destinationCommitId) {
         this.destinationCommitId = destinationCommitId;
         return this;
@@ -36,6 +39,7 @@ public class GetMergeConflictsOutput {
     
     @JsonProperty("mergeable")
     public Boolean mergeable;
+
     public GetMergeConflictsOutput withMergeable(Boolean mergeable) {
         this.mergeable = mergeable;
         return this;
@@ -44,6 +48,7 @@ public class GetMergeConflictsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetMergeConflictsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -51,9 +56,16 @@ public class GetMergeConflictsOutput {
     
     @JsonProperty("sourceCommitId")
     public String sourceCommitId;
+
     public GetMergeConflictsOutput withSourceCommitId(String sourceCommitId) {
         this.sourceCommitId = sourceCommitId;
         return this;
     }
     
+    public GetMergeConflictsOutput(@JsonProperty("conflictMetadataList") ConflictMetadata[] conflictMetadataList, @JsonProperty("destinationCommitId") String destinationCommitId, @JsonProperty("mergeable") Boolean mergeable, @JsonProperty("sourceCommitId") String sourceCommitId) {
+        this.conflictMetadataList = conflictMetadataList;
+        this.destinationCommitId = destinationCommitId;
+        this.mergeable = mergeable;
+        this.sourceCommitId = sourceCommitId;
+  }
 }

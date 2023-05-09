@@ -258,4 +258,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/SeriesRelationshipsAListOfT
 lib/src/main/java/org/openapis/openapi/models/shared/SeriesRelationships.java
 lib/src/main/java/org/openapis/openapi/models/shared/Series.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/classification/README.md
+docs/classificationinclusion/README.md
+docs/credit/README.md
+docs/episode/README.md
+docs/image/README.md
+docs/mediaasset/README.md
+docs/network/README.md
+docs/person/README.md
+docs/season/README.md
+docs/series/README.md
 USAGE.md

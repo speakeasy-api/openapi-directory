@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostUpdateAccountResponse {
     
     public String contentType;
+
     public PostUpdateAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostUpdateAccountResponse {
     
     
     public Integer statusCode;
+
     public PostUpdateAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostUpdateAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostUpdateAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostUpdateAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostUpdateAccountResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -43,9 +48,14 @@ public class PostUpdateAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAccountResponse updateAccountResponse;
+
     public PostUpdateAccountResponse withUpdateAccountResponse(org.openapis.openapi.models.shared.UpdateAccountResponse updateAccountResponse) {
         this.updateAccountResponse = updateAccountResponse;
         return this;
     }
     
+    public PostUpdateAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

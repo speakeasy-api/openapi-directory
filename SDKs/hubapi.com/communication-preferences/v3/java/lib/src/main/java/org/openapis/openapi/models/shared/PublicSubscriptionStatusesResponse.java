@@ -15,6 +15,7 @@ public class PublicSubscriptionStatusesResponse {
      */
     @JsonProperty("recipient")
     public String recipient;
+
     public PublicSubscriptionStatusesResponse withRecipient(String recipient) {
         this.recipient = recipient;
         return this;
@@ -25,9 +26,14 @@ public class PublicSubscriptionStatusesResponse {
      */
     @JsonProperty("subscriptionStatuses")
     public PublicSubscriptionStatus[] subscriptionStatuses;
+
     public PublicSubscriptionStatusesResponse withSubscriptionStatuses(PublicSubscriptionStatus[] subscriptionStatuses) {
         this.subscriptionStatuses = subscriptionStatuses;
         return this;
     }
     
+    public PublicSubscriptionStatusesResponse(@JsonProperty("recipient") String recipient, @JsonProperty("subscriptionStatuses") PublicSubscriptionStatus[] subscriptionStatuses) {
+        this.recipient = recipient;
+        this.subscriptionStatuses = subscriptionStatuses;
+  }
 }

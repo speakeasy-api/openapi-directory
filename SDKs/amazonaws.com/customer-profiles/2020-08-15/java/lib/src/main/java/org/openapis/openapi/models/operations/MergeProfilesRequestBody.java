@@ -15,6 +15,7 @@ public class MergeProfilesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldSourceProfileIds")
     public MergeProfilesRequestBodyFieldSourceProfileIds fieldSourceProfileIds;
+
     public MergeProfilesRequestBody withFieldSourceProfileIds(MergeProfilesRequestBodyFieldSourceProfileIds fieldSourceProfileIds) {
         this.fieldSourceProfileIds = fieldSourceProfileIds;
         return this;
@@ -25,6 +26,7 @@ public class MergeProfilesRequestBody {
      */
     @JsonProperty("MainProfileId")
     public String mainProfileId;
+
     public MergeProfilesRequestBody withMainProfileId(String mainProfileId) {
         this.mainProfileId = mainProfileId;
         return this;
@@ -35,9 +37,14 @@ public class MergeProfilesRequestBody {
      */
     @JsonProperty("ProfileIdsToBeMerged")
     public String[] profileIdsToBeMerged;
+
     public MergeProfilesRequestBody withProfileIdsToBeMerged(String[] profileIdsToBeMerged) {
         this.profileIdsToBeMerged = profileIdsToBeMerged;
         return this;
     }
     
+    public MergeProfilesRequestBody(@JsonProperty("MainProfileId") String mainProfileId, @JsonProperty("ProfileIdsToBeMerged") String[] profileIdsToBeMerged) {
+        this.mainProfileId = mainProfileId;
+        this.profileIdsToBeMerged = profileIdsToBeMerged;
+  }
 }

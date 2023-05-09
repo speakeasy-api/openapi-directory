@@ -22,6 +22,7 @@ public class OBWriteDomesticStandingOrderConsent5DataInitiation {
      */
     @JsonProperty("CreditorAccount")
     public OBWriteDomesticStandingOrderConsent5DataInitiationCreditorAccount creditorAccount;
+
     public OBWriteDomesticStandingOrderConsent5DataInitiation withCreditorAccount(OBWriteDomesticStandingOrderConsent5DataInitiationCreditorAccount creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -33,6 +34,7 @@ public class OBWriteDomesticStandingOrderConsent5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebtorAccount")
     public OBWriteDomesticStandingOrderConsent5DataInitiationDebtorAccount debtorAccount;
+
     public OBWriteDomesticStandingOrderConsent5DataInitiation withDebtorAccount(OBWriteDomesticStandingOrderConsent5DataInitiationDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -44,6 +46,7 @@ public class OBWriteDomesticStandingOrderConsent5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalPaymentAmount")
     public OBWriteDomesticStandingOrderConsent5DataInitiationFinalPaymentAmount finalPaymentAmount;
+
     public OBWriteDomesticStandingOrderConsent5DataInitiation withFinalPaymentAmount(OBWriteDomesticStandingOrderConsent5DataInitiationFinalPaymentAmount finalPaymentAmount) {
         this.finalPaymentAmount = finalPaymentAmount;
         return this;
@@ -59,6 +62,7 @@ public class OBWriteDomesticStandingOrderConsent5DataInitiation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FinalPaymentDateTime")
     public OffsetDateTime finalPaymentDateTime;
+
     public OBWriteDomesticStandingOrderConsent5DataInitiation withFinalPaymentDateTime(OffsetDateTime finalPaymentDateTime) {
         this.finalPaymentDateTime = finalPaymentDateTime;
         return this;
@@ -69,6 +73,7 @@ public class OBWriteDomesticStandingOrderConsent5DataInitiation {
      */
     @JsonProperty("FirstPaymentAmount")
     public OBWriteDomesticStandingOrderConsent5DataInitiationFirstPaymentAmount firstPaymentAmount;
+
     public OBWriteDomesticStandingOrderConsent5DataInitiation withFirstPaymentAmount(OBWriteDomesticStandingOrderConsent5DataInitiationFirstPaymentAmount firstPaymentAmount) {
         this.firstPaymentAmount = firstPaymentAmount;
         return this;
@@ -83,6 +88,7 @@ public class OBWriteDomesticStandingOrderConsent5DataInitiation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FirstPaymentDateTime")
     public OffsetDateTime firstPaymentDateTime;
+
     public OBWriteDomesticStandingOrderConsent5DataInitiation withFirstPaymentDateTime(OffsetDateTime firstPaymentDateTime) {
         this.firstPaymentDateTime = firstPaymentDateTime;
         return this;
@@ -118,6 +124,7 @@ public class OBWriteDomesticStandingOrderConsent5DataInitiation {
      */
     @JsonProperty("Frequency")
     public String frequency;
+
     public OBWriteDomesticStandingOrderConsent5DataInitiation withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -129,6 +136,7 @@ public class OBWriteDomesticStandingOrderConsent5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfPayments")
     public String numberOfPayments;
+
     public OBWriteDomesticStandingOrderConsent5DataInitiation withNumberOfPayments(String numberOfPayments) {
         this.numberOfPayments = numberOfPayments;
         return this;
@@ -140,6 +148,7 @@ public class OBWriteDomesticStandingOrderConsent5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecurringPaymentAmount")
     public OBWriteDomesticStandingOrderConsent5DataInitiationRecurringPaymentAmount recurringPaymentAmount;
+
     public OBWriteDomesticStandingOrderConsent5DataInitiation withRecurringPaymentAmount(OBWriteDomesticStandingOrderConsent5DataInitiationRecurringPaymentAmount recurringPaymentAmount) {
         this.recurringPaymentAmount = recurringPaymentAmount;
         return this;
@@ -156,6 +165,7 @@ public class OBWriteDomesticStandingOrderConsent5DataInitiation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RecurringPaymentDateTime")
     public OffsetDateTime recurringPaymentDateTime;
+
     public OBWriteDomesticStandingOrderConsent5DataInitiation withRecurringPaymentDateTime(OffsetDateTime recurringPaymentDateTime) {
         this.recurringPaymentDateTime = recurringPaymentDateTime;
         return this;
@@ -169,6 +179,7 @@ public class OBWriteDomesticStandingOrderConsent5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reference")
     public String reference;
+
     public OBWriteDomesticStandingOrderConsent5DataInitiation withReference(String reference) {
         this.reference = reference;
         return this;
@@ -180,9 +191,16 @@ public class OBWriteDomesticStandingOrderConsent5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupplementaryData")
     public java.util.Map<String, Object> supplementaryData;
+
     public OBWriteDomesticStandingOrderConsent5DataInitiation withSupplementaryData(java.util.Map<String, Object> supplementaryData) {
         this.supplementaryData = supplementaryData;
         return this;
     }
     
+    public OBWriteDomesticStandingOrderConsent5DataInitiation(@JsonProperty("CreditorAccount") OBWriteDomesticStandingOrderConsent5DataInitiationCreditorAccount creditorAccount, @JsonProperty("FirstPaymentAmount") OBWriteDomesticStandingOrderConsent5DataInitiationFirstPaymentAmount firstPaymentAmount, @JsonProperty("FirstPaymentDateTime") OffsetDateTime firstPaymentDateTime, @JsonProperty("Frequency") String frequency) {
+        this.creditorAccount = creditorAccount;
+        this.firstPaymentAmount = firstPaymentAmount;
+        this.firstPaymentDateTime = firstPaymentDateTime;
+        this.frequency = frequency;
+  }
 }

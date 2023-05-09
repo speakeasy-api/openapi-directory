@@ -22,6 +22,7 @@ public class ActionRevision {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ActionRevision withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -32,6 +33,7 @@ public class ActionRevision {
      */
     @JsonProperty("definition")
     public ExtensionActionDefinition definition;
+
     public ActionRevision withDefinition(ExtensionActionDefinition definition) {
         this.definition = definition;
         return this;
@@ -39,6 +41,7 @@ public class ActionRevision {
     
     @JsonProperty("id")
     public String id;
+
     public ActionRevision withId(String id) {
         this.id = id;
         return this;
@@ -49,9 +52,16 @@ public class ActionRevision {
      */
     @JsonProperty("revisionId")
     public String revisionId;
+
     public ActionRevision withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public ActionRevision(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("definition") ExtensionActionDefinition definition, @JsonProperty("id") String id, @JsonProperty("revisionId") String revisionId) {
+        this.createdAt = createdAt;
+        this.definition = definition;
+        this.id = id;
+        this.revisionId = revisionId;
+  }
 }

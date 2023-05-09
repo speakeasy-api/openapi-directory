@@ -107,4 +107,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateLoggingConfigurationR
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateLoggingConfigurationStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateRoomResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

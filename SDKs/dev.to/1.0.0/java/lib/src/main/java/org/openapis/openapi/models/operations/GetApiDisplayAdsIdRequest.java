@@ -4,17 +4,22 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiDisplayAdsIdRequest {
     /**
-     * The ID of the user to unpublish.
+     * The ID of the display ad.
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public GetApiDisplayAdsIdRequest withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public GetApiDisplayAdsIdRequest(@JsonProperty("id") Integer id) {
+        this.id = id;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsGetTeamRequest {
@@ -12,6 +13,7 @@ public class TeamsGetTeamRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
     public String orgName;
+
     public TeamsGetTeamRequest withOrgName(String orgName) {
         this.orgName = orgName;
         return this;
@@ -22,9 +24,14 @@ public class TeamsGetTeamRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_name")
     public String teamName;
+
     public TeamsGetTeamRequest withTeamName(String teamName) {
         this.teamName = teamName;
         return this;
     }
     
+    public TeamsGetTeamRequest(@JsonProperty("org_name") String orgName, @JsonProperty("team_name") String teamName) {
+        this.orgName = orgName;
+        this.teamName = teamName;
+  }
 }

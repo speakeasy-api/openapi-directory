@@ -64,11 +64,9 @@ public class MailZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfigureAliasResponse res = new org.openapis.openapi.models.operations.ConfigureAliasResponse() {{
+        org.openapis.openapi.models.operations.ConfigureAliasResponse res = new org.openapis.openapi.models.operations.ConfigureAliasResponse(contentType, httpRes.statusCode()) {{
             badRequestResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -112,10 +110,8 @@ public class MailZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfigureAntiSpamResponse res = new org.openapis.openapi.models.operations.ConfigureAntiSpamResponse() {{
+        org.openapis.openapi.models.operations.ConfigureAntiSpamResponse res = new org.openapis.openapi.models.operations.ConfigureAntiSpamResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -152,11 +148,9 @@ public class MailZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfigureSmtpDomainResponse res = new org.openapis.openapi.models.operations.ConfigureSmtpDomainResponse() {{
+        org.openapis.openapi.models.operations.ConfigureSmtpDomainResponse res = new org.openapis.openapi.models.operations.ConfigureSmtpDomainResponse(contentType, httpRes.statusCode()) {{
             badRequestResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -200,11 +194,9 @@ public class MailZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAliasResponse res = new org.openapis.openapi.models.operations.CreateAliasResponse() {{
+        org.openapis.openapi.models.operations.CreateAliasResponse res = new org.openapis.openapi.models.operations.CreateAliasResponse(contentType, httpRes.statusCode()) {{
             badRequestResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -250,10 +242,8 @@ public class MailZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCatchAllResponse res = new org.openapis.openapi.models.operations.CreateCatchAllResponse() {{
+        org.openapis.openapi.models.operations.CreateCatchAllResponse res = new org.openapis.openapi.models.operations.CreateCatchAllResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -292,11 +282,9 @@ public class MailZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSmtpDomainResponse res = new org.openapis.openapi.models.operations.CreateSmtpDomainResponse() {{
+        org.openapis.openapi.models.operations.CreateSmtpDomainResponse res = new org.openapis.openapi.models.operations.CreateSmtpDomainResponse(contentType, httpRes.statusCode()) {{
             badRequestResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -340,10 +328,8 @@ public class MailZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAliasResponse res = new org.openapis.openapi.models.operations.DeleteAliasResponse() {{
+        org.openapis.openapi.models.operations.DeleteAliasResponse res = new org.openapis.openapi.models.operations.DeleteAliasResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400) {
@@ -378,10 +364,8 @@ public class MailZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCatchAllResponse res = new org.openapis.openapi.models.operations.DeleteCatchAllResponse() {{
+        org.openapis.openapi.models.operations.DeleteCatchAllResponse res = new org.openapis.openapi.models.operations.DeleteCatchAllResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -416,10 +400,8 @@ public class MailZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSmtpDomainResponse res = new org.openapis.openapi.models.operations.DeleteSmtpDomainResponse() {{
+        org.openapis.openapi.models.operations.DeleteSmtpDomainResponse res = new org.openapis.openapi.models.operations.DeleteSmtpDomainResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400) {
@@ -454,11 +436,9 @@ public class MailZones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMailZoneResponse res = new org.openapis.openapi.models.operations.GetMailZoneResponse() {{
+        org.openapis.openapi.models.operations.GetMailZoneResponse res = new org.openapis.openapi.models.operations.GetMailZoneResponse(contentType, httpRes.statusCode()) {{
             mailZone = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

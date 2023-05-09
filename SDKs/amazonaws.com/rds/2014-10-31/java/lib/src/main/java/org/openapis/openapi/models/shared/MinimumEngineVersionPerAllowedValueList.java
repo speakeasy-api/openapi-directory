@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MinimumEngineVersionPerAllowedValueList {
     
     public String allowedValue;
+
     public MinimumEngineVersionPerAllowedValueList withAllowedValue(String allowedValue) {
         this.allowedValue = allowedValue;
         return this;
@@ -19,9 +20,11 @@ public class MinimumEngineVersionPerAllowedValueList {
     
     
     public String minimumEngineVersion;
+
     public MinimumEngineVersionPerAllowedValueList withMinimumEngineVersion(String minimumEngineVersion) {
         this.minimumEngineVersion = minimumEngineVersion;
         return this;
     }
     
+    public MinimumEngineVersionPerAllowedValueList(){}
 }

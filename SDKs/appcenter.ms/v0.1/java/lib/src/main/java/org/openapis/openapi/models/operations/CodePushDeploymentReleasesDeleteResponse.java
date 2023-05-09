@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodePushDeploymentReleasesDeleteResponse {
     
     public String contentType;
+
     public CodePushDeploymentReleasesDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodePushDeploymentReleasesDeleteResponse {
     
     
     public Integer statusCode;
+
     public CodePushDeploymentReleasesDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CodePushDeploymentReleasesDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodePushDeploymentReleasesDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class CodePushDeploymentReleasesDeleteResponse {
      */
     
     public CodePushDeploymentReleasesDeleteDefaultApplicationJSON codePushDeploymentReleasesDeleteDefaultApplicationJSONObject;
+
     public CodePushDeploymentReleasesDeleteResponse withCodePushDeploymentReleasesDeleteDefaultApplicationJSONObject(CodePushDeploymentReleasesDeleteDefaultApplicationJSON codePushDeploymentReleasesDeleteDefaultApplicationJSONObject) {
         this.codePushDeploymentReleasesDeleteDefaultApplicationJSONObject = codePushDeploymentReleasesDeleteDefaultApplicationJSONObject;
         return this;
     }
     
+    public CodePushDeploymentReleasesDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

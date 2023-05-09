@@ -18,6 +18,7 @@ public class ResultDisplayField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ResultDisplayField withLabel(String label) {
         this.label = label;
         return this;
@@ -29,6 +30,7 @@ public class ResultDisplayField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorName")
     public String operatorName;
+
     public ResultDisplayField withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
@@ -40,9 +42,11 @@ public class ResultDisplayField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public NamedProperty property;
+
     public ResultDisplayField withProperty(NamedProperty property) {
         this.property = property;
         return this;
     }
     
+    public ResultDisplayField(){}
 }

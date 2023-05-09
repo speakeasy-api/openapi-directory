@@ -18,6 +18,7 @@ public class EmailAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customType")
     public String customType;
+
     public EmailAddress withCustomType(String customType) {
         this.customType = customType;
         return this;
@@ -29,6 +30,7 @@ public class EmailAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public EmailAddress withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -40,6 +42,7 @@ public class EmailAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailUrl")
     public String emailUrl;
+
     public EmailAddress withEmailUrl(String emailUrl) {
         this.emailUrl = emailUrl;
         return this;
@@ -51,6 +54,7 @@ public class EmailAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public Boolean primary;
+
     public EmailAddress withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -62,9 +66,11 @@ public class EmailAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public EmailAddress withType(String type) {
         this.type = type;
         return this;
     }
     
+    public EmailAddress(){}
 }

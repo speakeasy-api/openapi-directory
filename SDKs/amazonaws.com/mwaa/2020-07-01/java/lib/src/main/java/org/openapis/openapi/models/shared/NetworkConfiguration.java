@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * NetworkConfiguration - Describes the VPC networking components used to secure and enable network traffic between the Amazon Web Services resources for your environment. To learn more, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html"&gt;About networking on Amazon MWAA&lt;/a&gt;.
+ * NetworkConfiguration - Describes the VPC networking components used to secure and enable network traffic between the Amazon Web Services resources for your environment. For more information, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html"&gt;About networking on Amazon MWAA&lt;/a&gt;.
  */
 public class NetworkConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public NetworkConfiguration withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -23,9 +24,11 @@ public class NetworkConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public NetworkConfiguration withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public NetworkConfiguration(){}
 }

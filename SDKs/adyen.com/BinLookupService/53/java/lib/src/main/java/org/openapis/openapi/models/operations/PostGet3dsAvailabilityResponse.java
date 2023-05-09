@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostGet3dsAvailabilityResponse {
     
     public String contentType;
+
     public PostGet3dsAvailabilityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostGet3dsAvailabilityResponse {
     
     
     public Integer statusCode;
+
     public PostGet3dsAvailabilityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostGet3dsAvailabilityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostGet3dsAvailabilityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostGet3dsAvailabilityResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostGet3dsAvailabilityResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -43,9 +48,14 @@ public class PostGet3dsAvailabilityResponse {
      */
     
     public org.openapis.openapi.models.shared.ThreeDSAvailabilityResponse threeDSAvailabilityResponse;
+
     public PostGet3dsAvailabilityResponse withThreeDSAvailabilityResponse(org.openapis.openapi.models.shared.ThreeDSAvailabilityResponse threeDSAvailabilityResponse) {
         this.threeDSAvailabilityResponse = threeDSAvailabilityResponse;
         return this;
     }
     
+    public PostGet3dsAvailabilityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

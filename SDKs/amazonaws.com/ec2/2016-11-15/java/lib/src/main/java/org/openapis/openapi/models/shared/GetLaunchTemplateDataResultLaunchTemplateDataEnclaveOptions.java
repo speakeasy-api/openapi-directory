@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetLaunchTemplateDataResultLaunchTemplateDataEnclaveOptions {
     
     public Boolean enabled;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataEnclaveOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataEnclaveOptions(){}
 }

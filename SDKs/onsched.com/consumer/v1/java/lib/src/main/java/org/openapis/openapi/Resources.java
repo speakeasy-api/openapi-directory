@@ -59,11 +59,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1ResourcesResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ResourcesResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1ResourcesResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ResourcesResponse(contentType, httpRes.statusCode()) {{
             resourceListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdResponse(contentType, httpRes.statusCode()) {{
             resourceViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Resources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdServicesResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdServicesResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdServicesResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdServicesResponse(contentType, httpRes.statusCode()) {{
             resourceServiceListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

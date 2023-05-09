@@ -14,6 +14,7 @@ public class SendMessageRequestBody5File {
      */
     @JsonProperty("channel")
     public SendMessageRequestBody5FileChannelEnum channel;
+
     public SendMessageRequestBody5File withChannel(SendMessageRequestBody5FileChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -25,6 +26,7 @@ public class SendMessageRequestBody5File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public SendMessageRequestBody5File withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -32,6 +34,7 @@ public class SendMessageRequestBody5File {
     
     @JsonProperty("file")
     public SendMessageRequestBody5FileFile file;
+
     public SendMessageRequestBody5File withFile(SendMessageRequestBody5FileFile file) {
         this.file = file;
         return this;
@@ -43,6 +46,7 @@ public class SendMessageRequestBody5File {
      */
     @JsonProperty("from")
     public String from;
+
     public SendMessageRequestBody5File withFrom(String from) {
         this.from = from;
         return this;
@@ -53,6 +57,7 @@ public class SendMessageRequestBody5File {
      */
     @JsonProperty("message_type")
     public SendMessageRequestBody5FileMessageTypeEnum messageType;
+
     public SendMessageRequestBody5File withMessageType(SendMessageRequestBody5FileMessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -64,6 +69,7 @@ public class SendMessageRequestBody5File {
      */
     @JsonProperty("to")
     public String to;
+
     public SendMessageRequestBody5File withTo(String to) {
         this.to = to;
         return this;
@@ -72,9 +78,17 @@ public class SendMessageRequestBody5File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viber_service")
     public SendMessageRequestBody5FileViberService viberService;
+
     public SendMessageRequestBody5File withViberService(SendMessageRequestBody5FileViberService viberService) {
         this.viberService = viberService;
         return this;
     }
     
+    public SendMessageRequestBody5File(@JsonProperty("channel") SendMessageRequestBody5FileChannelEnum channel, @JsonProperty("file") SendMessageRequestBody5FileFile file, @JsonProperty("from") String from, @JsonProperty("message_type") SendMessageRequestBody5FileMessageTypeEnum messageType, @JsonProperty("to") String to) {
+        this.channel = channel;
+        this.file = file;
+        this.from = from;
+        this.messageType = messageType;
+        this.to = to;
+  }
 }

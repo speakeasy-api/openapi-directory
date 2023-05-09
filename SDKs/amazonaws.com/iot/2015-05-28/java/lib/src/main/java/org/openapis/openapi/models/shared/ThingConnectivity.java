@@ -15,6 +15,7 @@ public class ThingConnectivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connected")
     public Boolean connected;
+
     public ThingConnectivity withConnected(Boolean connected) {
         this.connected = connected;
         return this;
@@ -23,6 +24,7 @@ public class ThingConnectivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disconnectReason")
     public String disconnectReason;
+
     public ThingConnectivity withDisconnectReason(String disconnectReason) {
         this.disconnectReason = disconnectReason;
         return this;
@@ -31,9 +33,11 @@ public class ThingConnectivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public Long timestamp;
+
     public ThingConnectivity withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public ThingConnectivity(){}
 }

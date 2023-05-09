@@ -15,6 +15,7 @@ public class CreateDataSetImportTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateDataSetImportTaskRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class CreateDataSetImportTaskRequestBody {
      */
     @JsonProperty("importConfig")
     public CreateDataSetImportTaskRequestBodyImportConfig importConfig;
+
     public CreateDataSetImportTaskRequestBody withImportConfig(CreateDataSetImportTaskRequestBodyImportConfig importConfig) {
         this.importConfig = importConfig;
         return this;
     }
     
+    public CreateDataSetImportTaskRequestBody(@JsonProperty("importConfig") CreateDataSetImportTaskRequestBodyImportConfig importConfig) {
+        this.importConfig = importConfig;
+  }
 }

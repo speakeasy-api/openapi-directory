@@ -17,6 +17,7 @@ public class AnalyticsProductColumnFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalAnalyticsProductColumnFilters")
     public java.util.Map<String, AnalyticsProductColumnFilter> additionalAnalyticsProductColumnFilters;
+
     public AnalyticsProductColumnFilters withAdditionalAnalyticsProductColumnFilters(java.util.Map<String, AnalyticsProductColumnFilter> additionalAnalyticsProductColumnFilters) {
         this.additionalAnalyticsProductColumnFilters = additionalAnalyticsProductColumnFilters;
         return this;
@@ -28,6 +29,7 @@ public class AnalyticsProductColumnFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public AnalyticsProductColumnFilters withSku(String sku) {
         this.sku = sku;
         return this;
@@ -39,9 +41,11 @@ public class AnalyticsProductColumnFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public AnalyticsProductColumnFilters withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public AnalyticsProductColumnFilters(){}
 }

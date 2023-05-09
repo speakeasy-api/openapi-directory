@@ -18,9 +18,11 @@ public class CancelTestMatrixResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testState")
     public CancelTestMatrixResponseTestStateEnum testState;
+
     public CancelTestMatrixResponse withTestState(CancelTestMatrixResponseTestStateEnum testState) {
         this.testState = testState;
         return this;
     }
     
+    public CancelTestMatrixResponse(){}
 }

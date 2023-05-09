@@ -15,9 +15,11 @@ public class ModifyCacheClusterResult {
      */
     
     public CacheCluster cacheCluster;
+
     public ModifyCacheClusterResult withCacheCluster(CacheCluster cacheCluster) {
         this.cacheCluster = cacheCluster;
         return this;
     }
     
+    public ModifyCacheClusterResult(){}
 }

@@ -22,6 +22,7 @@ public class StopImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public StopImportResponse withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class StopImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destinations")
     public String[] destinations;
+
     public StopImportResponse withDestinations(String[] destinations) {
         this.destinations = destinations;
         return this;
@@ -40,6 +42,7 @@ public class StopImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndEventTime")
     public OffsetDateTime endEventTime;
+
     public StopImportResponse withEndEventTime(OffsetDateTime endEventTime) {
         this.endEventTime = endEventTime;
         return this;
@@ -48,6 +51,7 @@ public class StopImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportId")
     public String importId;
+
     public StopImportResponse withImportId(String importId) {
         this.importId = importId;
         return this;
@@ -56,6 +60,7 @@ public class StopImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportSource")
     public ImportSource importSource;
+
     public StopImportResponse withImportSource(ImportSource importSource) {
         this.importSource = importSource;
         return this;
@@ -64,6 +69,7 @@ public class StopImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportStatistics")
     public ImportStatistics importStatistics;
+
     public StopImportResponse withImportStatistics(ImportStatistics importStatistics) {
         this.importStatistics = importStatistics;
         return this;
@@ -72,6 +78,7 @@ public class StopImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportStatus")
     public ImportStatusEnum importStatus;
+
     public StopImportResponse withImportStatus(ImportStatusEnum importStatus) {
         this.importStatus = importStatus;
         return this;
@@ -82,6 +89,7 @@ public class StopImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartEventTime")
     public OffsetDateTime startEventTime;
+
     public StopImportResponse withStartEventTime(OffsetDateTime startEventTime) {
         this.startEventTime = startEventTime;
         return this;
@@ -92,9 +100,11 @@ public class StopImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedTimestamp")
     public OffsetDateTime updatedTimestamp;
+
     public StopImportResponse withUpdatedTimestamp(OffsetDateTime updatedTimestamp) {
         this.updatedTimestamp = updatedTimestamp;
         return this;
     }
     
+    public StopImportResponse(){}
 }

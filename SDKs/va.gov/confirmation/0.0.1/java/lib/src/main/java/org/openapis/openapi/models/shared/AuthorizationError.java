@@ -15,9 +15,11 @@ public class AuthorizationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AuthorizationError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AuthorizationError(){}
 }

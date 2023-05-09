@@ -20,6 +20,7 @@ public class StatementLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public StatementLine withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -31,6 +32,7 @@ public class StatementLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chequeNumber")
     public String chequeNumber;
+
     public StatementLine withChequeNumber(String chequeNumber) {
         this.chequeNumber = chequeNumber;
         return this;
@@ -42,6 +44,7 @@ public class StatementLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditDebitIndicator")
     public CreditDebitIndicatorEnum creditDebitIndicator;
+
     public StatementLine withCreditDebitIndicator(CreditDebitIndicatorEnum creditDebitIndicator) {
         this.creditDebitIndicator = creditDebitIndicator;
         return this;
@@ -53,6 +56,7 @@ public class StatementLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public StatementLine withDescription(String description) {
         this.description = description;
         return this;
@@ -64,6 +68,7 @@ public class StatementLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payeeName")
     public String payeeName;
+
     public StatementLine withPayeeName(String payeeName) {
         this.payeeName = payeeName;
         return this;
@@ -76,6 +81,7 @@ public class StatementLine {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("postedDate")
     public LocalDate postedDate;
+
     public StatementLine withPostedDate(LocalDate postedDate) {
         this.postedDate = postedDate;
         return this;
@@ -87,6 +93,7 @@ public class StatementLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public StatementLine withReference(String reference) {
         this.reference = reference;
         return this;
@@ -98,9 +105,11 @@ public class StatementLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionId")
     public String transactionId;
+
     public StatementLine withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public StatementLine(){}
 }

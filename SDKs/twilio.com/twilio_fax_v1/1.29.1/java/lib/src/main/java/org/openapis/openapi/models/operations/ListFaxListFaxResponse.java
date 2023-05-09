@@ -15,6 +15,7 @@ public class ListFaxListFaxResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("faxes")
     public org.openapis.openapi.models.shared.FaxV1Fax[] faxes;
+
     public ListFaxListFaxResponse withFaxes(org.openapis.openapi.models.shared.FaxV1Fax[] faxes) {
         this.faxes = faxes;
         return this;
@@ -23,9 +24,11 @@ public class ListFaxListFaxResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public ListFaxListFaxResponseMeta meta;
+
     public ListFaxListFaxResponse withMeta(ListFaxListFaxResponseMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public ListFaxListFaxResponse(){}
 }

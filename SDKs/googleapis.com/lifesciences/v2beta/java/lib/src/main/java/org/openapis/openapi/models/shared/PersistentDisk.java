@@ -18,6 +18,7 @@ public class PersistentDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeGb")
     public Integer sizeGb;
+
     public PersistentDisk withSizeGb(Integer sizeGb) {
         this.sizeGb = sizeGb;
         return this;
@@ -29,6 +30,7 @@ public class PersistentDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceImage")
     public String sourceImage;
+
     public PersistentDisk withSourceImage(String sourceImage) {
         this.sourceImage = sourceImage;
         return this;
@@ -40,9 +42,11 @@ public class PersistentDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PersistentDisk withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PersistentDisk(){}
 }

@@ -12,9 +12,11 @@ public class UserMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public UserMetadata withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public UserMetadata(){}
 }

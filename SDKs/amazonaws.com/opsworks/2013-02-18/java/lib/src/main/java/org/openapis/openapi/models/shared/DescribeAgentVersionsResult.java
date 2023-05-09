@@ -15,9 +15,11 @@ public class DescribeAgentVersionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentVersions")
     public AgentVersion[] agentVersions;
+
     public DescribeAgentVersionsResult withAgentVersions(AgentVersion[] agentVersions) {
         this.agentVersions = agentVersions;
         return this;
     }
     
+    public DescribeAgentVersionsResult(){}
 }

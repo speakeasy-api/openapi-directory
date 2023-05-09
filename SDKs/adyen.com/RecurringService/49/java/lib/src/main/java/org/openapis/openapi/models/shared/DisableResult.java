@@ -18,9 +18,11 @@ public class DisableResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public String response;
+
     public DisableResult withResponse(String response) {
         this.response = response;
         return this;
     }
     
+    public DisableResult(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPullrequestsSelectedUserRequest {
@@ -14,6 +15,7 @@ public class GetPullrequestsSelectedUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
     public String selectedUser;
+
     public GetPullrequestsSelectedUserRequest withSelectedUser(String selectedUser) {
         this.selectedUser = selectedUser;
         return this;
@@ -24,9 +26,13 @@ public class GetPullrequestsSelectedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public GetPullrequestsSelectedUserStateEnum state;
+
     public GetPullrequestsSelectedUserRequest withState(GetPullrequestsSelectedUserStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GetPullrequestsSelectedUserRequest(@JsonProperty("selected_user") String selectedUser) {
+        this.selectedUser = selectedUser;
+  }
 }

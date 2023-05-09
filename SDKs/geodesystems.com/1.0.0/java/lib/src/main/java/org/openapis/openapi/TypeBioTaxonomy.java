@@ -57,10 +57,8 @@ public class TypeBioTaxonomy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchBioTaxonomyResponse res = new org.openapis.openapi.models.operations.SearchBioTaxonomyResponse() {{
+        org.openapis.openapi.models.operations.SearchBioTaxonomyResponse res = new org.openapis.openapi.models.operations.SearchBioTaxonomyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

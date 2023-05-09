@@ -18,6 +18,7 @@ public class SecondDerivativeElevationGrid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("altitudeMultiplier")
     public Float altitudeMultiplier;
+
     public SecondDerivativeElevationGrid withAltitudeMultiplier(Float altitudeMultiplier) {
         this.altitudeMultiplier = altitudeMultiplier;
         return this;
@@ -29,6 +30,7 @@ public class SecondDerivativeElevationGrid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnCount")
     public Integer columnCount;
+
     public SecondDerivativeElevationGrid withColumnCount(Integer columnCount) {
         this.columnCount = columnCount;
         return this;
@@ -40,6 +42,7 @@ public class SecondDerivativeElevationGrid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encodedData")
     public String encodedData;
+
     public SecondDerivativeElevationGrid withEncodedData(String encodedData) {
         this.encodedData = encodedData;
         return this;
@@ -51,9 +54,11 @@ public class SecondDerivativeElevationGrid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowCount")
     public Integer rowCount;
+
     public SecondDerivativeElevationGrid withRowCount(Integer rowCount) {
         this.rowCount = rowCount;
         return this;
     }
     
+    public SecondDerivativeElevationGrid(){}
 }

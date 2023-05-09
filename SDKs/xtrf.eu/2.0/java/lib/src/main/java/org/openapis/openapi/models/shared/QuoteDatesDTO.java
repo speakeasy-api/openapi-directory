@@ -15,6 +15,7 @@ public class QuoteDatesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdOn")
     public TimeDTO createdOn;
+
     public QuoteDatesDTO withCreatedOn(TimeDTO createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -23,6 +24,7 @@ public class QuoteDatesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deadline")
     public TimeDTO deadline;
+
     public QuoteDatesDTO withDeadline(TimeDTO deadline) {
         this.deadline = deadline;
         return this;
@@ -31,6 +33,7 @@ public class QuoteDatesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerExpiry")
     public TimeDTO offerExpiry;
+
     public QuoteDatesDTO withOfferExpiry(TimeDTO offerExpiry) {
         this.offerExpiry = offerExpiry;
         return this;
@@ -39,9 +42,11 @@ public class QuoteDatesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public TimeDTO startDate;
+
     public QuoteDatesDTO withStartDate(TimeDTO startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public QuoteDatesDTO(){}
 }

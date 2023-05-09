@@ -15,6 +15,7 @@ public class AssetPropertyTimestamp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetInNanos")
     public String offsetInNanos;
+
     public AssetPropertyTimestamp withOffsetInNanos(String offsetInNanos) {
         this.offsetInNanos = offsetInNanos;
         return this;
@@ -22,9 +23,13 @@ public class AssetPropertyTimestamp {
     
     @JsonProperty("timeInSeconds")
     public String timeInSeconds;
+
     public AssetPropertyTimestamp withTimeInSeconds(String timeInSeconds) {
         this.timeInSeconds = timeInSeconds;
         return this;
     }
     
+    public AssetPropertyTimestamp(@JsonProperty("timeInSeconds") String timeInSeconds) {
+        this.timeInSeconds = timeInSeconds;
+  }
 }

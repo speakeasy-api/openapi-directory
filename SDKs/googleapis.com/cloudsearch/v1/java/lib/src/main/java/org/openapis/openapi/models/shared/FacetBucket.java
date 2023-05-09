@@ -18,6 +18,7 @@ public class FacetBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public FacetBucket withCount(Integer count) {
         this.count = count;
         return this;
@@ -29,6 +30,7 @@ public class FacetBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public Filter filter;
+
     public FacetBucket withFilter(Filter filter) {
         this.filter = filter;
         return this;
@@ -40,6 +42,7 @@ public class FacetBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Integer percentage;
+
     public FacetBucket withPercentage(Integer percentage) {
         this.percentage = percentage;
         return this;
@@ -51,9 +54,11 @@ public class FacetBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Value value;
+
     public FacetBucket withValue(Value value) {
         this.value = value;
         return this;
     }
     
+    public FacetBucket(){}
 }

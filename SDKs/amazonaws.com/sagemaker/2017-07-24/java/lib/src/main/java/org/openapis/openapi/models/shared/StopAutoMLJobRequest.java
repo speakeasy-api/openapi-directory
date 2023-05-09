@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopAutoMLJobRequest {
     @JsonProperty("AutoMLJobName")
     public String autoMLJobName;
+
     public StopAutoMLJobRequest withAutoMLJobName(String autoMLJobName) {
         this.autoMLJobName = autoMLJobName;
         return this;
     }
     
+    public StopAutoMLJobRequest(@JsonProperty("AutoMLJobName") String autoMLJobName) {
+        this.autoMLJobName = autoMLJobName;
+  }
 }

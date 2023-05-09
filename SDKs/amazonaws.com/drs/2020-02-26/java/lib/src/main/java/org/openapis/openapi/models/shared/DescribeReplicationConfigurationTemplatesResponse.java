@@ -15,6 +15,7 @@ public class DescribeReplicationConfigurationTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ReplicationConfigurationTemplate[] items;
+
     public DescribeReplicationConfigurationTemplatesResponse withItems(ReplicationConfigurationTemplate[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class DescribeReplicationConfigurationTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeReplicationConfigurationTemplatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeReplicationConfigurationTemplatesResponse(){}
 }

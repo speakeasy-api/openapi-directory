@@ -15,6 +15,7 @@ public class AwsElbLoadBalancerListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancePort")
     public Long instancePort;
+
     public AwsElbLoadBalancerListener withInstancePort(Long instancePort) {
         this.instancePort = instancePort;
         return this;
@@ -23,6 +24,7 @@ public class AwsElbLoadBalancerListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceProtocol")
     public String instanceProtocol;
+
     public AwsElbLoadBalancerListener withInstanceProtocol(String instanceProtocol) {
         this.instanceProtocol = instanceProtocol;
         return this;
@@ -31,6 +33,7 @@ public class AwsElbLoadBalancerListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoadBalancerPort")
     public Long loadBalancerPort;
+
     public AwsElbLoadBalancerListener withLoadBalancerPort(Long loadBalancerPort) {
         this.loadBalancerPort = loadBalancerPort;
         return this;
@@ -39,6 +42,7 @@ public class AwsElbLoadBalancerListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public String protocol;
+
     public AwsElbLoadBalancerListener withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -47,9 +51,11 @@ public class AwsElbLoadBalancerListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SslCertificateId")
     public String sslCertificateId;
+
     public AwsElbLoadBalancerListener withSslCertificateId(String sslCertificateId) {
         this.sslCertificateId = sslCertificateId;
         return this;
     }
     
+    public AwsElbLoadBalancerListener(){}
 }

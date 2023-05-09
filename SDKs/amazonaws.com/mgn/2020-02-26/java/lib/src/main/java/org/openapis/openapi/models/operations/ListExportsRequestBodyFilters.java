@@ -15,9 +15,11 @@ public class ListExportsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportIDs")
     public String[] exportIDs;
+
     public ListExportsRequestBodyFilters withExportIDs(String[] exportIDs) {
         this.exportIDs = exportIDs;
         return this;
     }
     
+    public ListExportsRequestBodyFilters(){}
 }

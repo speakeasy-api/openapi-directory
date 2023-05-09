@@ -15,9 +15,11 @@ public class Forecast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Predictions")
     public java.util.Map<String, DataPoint[]> predictions;
+
     public Forecast withPredictions(java.util.Map<String, DataPoint[]> predictions) {
         this.predictions = predictions;
         return this;
     }
     
+    public Forecast(){}
 }

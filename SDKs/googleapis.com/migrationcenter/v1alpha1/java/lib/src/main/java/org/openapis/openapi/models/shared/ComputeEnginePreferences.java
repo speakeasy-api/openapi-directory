@@ -18,6 +18,7 @@ public class ComputeEnginePreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseType")
     public ComputeEnginePreferencesLicenseTypeEnum licenseType;
+
     public ComputeEnginePreferences withLicenseType(ComputeEnginePreferencesLicenseTypeEnum licenseType) {
         this.licenseType = licenseType;
         return this;
@@ -29,6 +30,7 @@ public class ComputeEnginePreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machinePreferences")
     public MachinePreferences machinePreferences;
+
     public ComputeEnginePreferences withMachinePreferences(MachinePreferences machinePreferences) {
         this.machinePreferences = machinePreferences;
         return this;
@@ -40,9 +42,11 @@ public class ComputeEnginePreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistentDiskType")
     public ComputeEnginePreferencesPersistentDiskTypeEnum persistentDiskType;
+
     public ComputeEnginePreferences withPersistentDiskType(ComputeEnginePreferencesPersistentDiskTypeEnum persistentDiskType) {
         this.persistentDiskType = persistentDiskType;
         return this;
     }
     
+    public ComputeEnginePreferences(){}
 }

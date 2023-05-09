@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSnippetsWorkspaceEncodedIdCommitsRequest {
@@ -12,6 +13,7 @@ public class GetSnippetsWorkspaceEncodedIdCommitsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=encoded_id")
     public String encodedId;
+
     public GetSnippetsWorkspaceEncodedIdCommitsRequest withEncodedId(String encodedId) {
         this.encodedId = encodedId;
         return this;
@@ -24,9 +26,14 @@ public class GetSnippetsWorkspaceEncodedIdCommitsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetSnippetsWorkspaceEncodedIdCommitsRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetSnippetsWorkspaceEncodedIdCommitsRequest(@JsonProperty("encoded_id") String encodedId, @JsonProperty("workspace") String workspace) {
+        this.encodedId = encodedId;
+        this.workspace = workspace;
+  }
 }

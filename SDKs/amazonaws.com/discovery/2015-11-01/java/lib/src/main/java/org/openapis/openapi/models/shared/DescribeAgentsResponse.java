@@ -15,6 +15,7 @@ public class DescribeAgentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentsInfo")
     public AgentInfo[] agentsInfo;
+
     public DescribeAgentsResponse withAgentsInfo(AgentInfo[] agentsInfo) {
         this.agentsInfo = agentsInfo;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAgentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeAgentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAgentsResponse(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ValidDBInstanceModificationsMessage {
     
     public ValidStorageOptionsList[] storage;
+
     public ValidDBInstanceModificationsMessage withStorage(ValidStorageOptionsList[] storage) {
         this.storage = storage;
         return this;
     }
     
+    public ValidDBInstanceModificationsMessage(){}
 }

@@ -12,6 +12,7 @@ public class TagMarshaller {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TagMarshaller withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class TagMarshaller {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public TagLanguageMarshaller language;
+
     public TagMarshaller withLanguage(TagLanguageMarshaller language) {
         this.language = language;
         return this;
@@ -28,6 +30,7 @@ public class TagMarshaller {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TagMarshaller withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class TagMarshaller {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TagTypeMarshaller type;
+
     public TagMarshaller withType(TagTypeMarshaller type) {
         this.type = type;
         return this;
     }
     
+    public TagMarshaller(){}
 }

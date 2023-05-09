@@ -12,6 +12,7 @@ public class ListResourceDataSyncRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListResourceDataSyncRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListResourceDataSyncRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourceDataSyncRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListResourceDataSyncRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncType")
     public String syncType;
+
     public ListResourceDataSyncRequest withSyncType(String syncType) {
         this.syncType = syncType;
         return this;
     }
     
+    public ListResourceDataSyncRequest(){}
 }

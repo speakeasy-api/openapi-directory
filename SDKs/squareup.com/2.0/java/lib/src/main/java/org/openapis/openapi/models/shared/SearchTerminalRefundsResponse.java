@@ -21,6 +21,7 @@ public class SearchTerminalRefundsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchTerminalRefundsResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -32,6 +33,7 @@ public class SearchTerminalRefundsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public SearchTerminalRefundsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -43,9 +45,11 @@ public class SearchTerminalRefundsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunds")
     public TerminalRefund[] refunds;
+
     public SearchTerminalRefundsResponse withRefunds(TerminalRefund[] refunds) {
         this.refunds = refunds;
         return this;
     }
     
+    public SearchTerminalRefundsResponse(){}
 }

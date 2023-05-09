@@ -18,6 +18,7 @@ public class Track {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releases")
     public TrackRelease[] releases;
+
     public Track withReleases(TrackRelease[] releases) {
         this.releases = releases;
         return this;
@@ -29,9 +30,11 @@ public class Track {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("track")
     public String track;
+
     public Track withTrack(String track) {
         this.track = track;
         return this;
     }
     
+    public Track(){}
 }

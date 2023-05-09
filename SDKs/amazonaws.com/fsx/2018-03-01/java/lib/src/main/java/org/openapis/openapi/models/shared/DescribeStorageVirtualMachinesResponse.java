@@ -18,6 +18,7 @@ public class DescribeStorageVirtualMachinesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeStorageVirtualMachinesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +27,11 @@ public class DescribeStorageVirtualMachinesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageVirtualMachines")
     public StorageVirtualMachine[] storageVirtualMachines;
+
     public DescribeStorageVirtualMachinesResponse withStorageVirtualMachines(StorageVirtualMachine[] storageVirtualMachines) {
         this.storageVirtualMachines = storageVirtualMachines;
         return this;
     }
     
+    public DescribeStorageVirtualMachinesResponse(){}
 }

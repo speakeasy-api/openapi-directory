@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AutoMLCandidate {
     @JsonProperty("CandidateName")
     public String candidateName;
+
     public AutoMLCandidate withCandidateName(String candidateName) {
         this.candidateName = candidateName;
         return this;
@@ -27,6 +28,7 @@ public class AutoMLCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CandidateProperties")
     public CandidateProperties candidateProperties;
+
     public AutoMLCandidate withCandidateProperties(CandidateProperties candidateProperties) {
         this.candidateProperties = candidateProperties;
         return this;
@@ -34,6 +36,7 @@ public class AutoMLCandidate {
     
     @JsonProperty("CandidateStatus")
     public CandidateStatusEnum candidateStatus;
+
     public AutoMLCandidate withCandidateStatus(CandidateStatusEnum candidateStatus) {
         this.candidateStatus = candidateStatus;
         return this;
@@ -41,6 +44,7 @@ public class AutoMLCandidate {
     
     @JsonProperty("CandidateSteps")
     public AutoMLCandidateStep[] candidateSteps;
+
     public AutoMLCandidate withCandidateSteps(AutoMLCandidateStep[] candidateSteps) {
         this.candidateSteps = candidateSteps;
         return this;
@@ -50,6 +54,7 @@ public class AutoMLCandidate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public AutoMLCandidate withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -60,6 +65,7 @@ public class AutoMLCandidate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public AutoMLCandidate withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -68,6 +74,7 @@ public class AutoMLCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public AutoMLCandidate withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -79,6 +86,7 @@ public class AutoMLCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalAutoMLJobObjectiveMetric")
     public FinalAutoMLJobObjectiveMetric finalAutoMLJobObjectiveMetric;
+
     public AutoMLCandidate withFinalAutoMLJobObjectiveMetric(FinalAutoMLJobObjectiveMetric finalAutoMLJobObjectiveMetric) {
         this.finalAutoMLJobObjectiveMetric = finalAutoMLJobObjectiveMetric;
         return this;
@@ -87,6 +95,7 @@ public class AutoMLCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceContainerDefinitions")
     public java.util.Map<String, AutoMLContainerDefinition[]> inferenceContainerDefinitions;
+
     public AutoMLCandidate withInferenceContainerDefinitions(java.util.Map<String, AutoMLContainerDefinition[]> inferenceContainerDefinitions) {
         this.inferenceContainerDefinitions = inferenceContainerDefinitions;
         return this;
@@ -95,6 +104,7 @@ public class AutoMLCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceContainers")
     public AutoMLContainerDefinition[] inferenceContainers;
+
     public AutoMLCandidate withInferenceContainers(AutoMLContainerDefinition[] inferenceContainers) {
         this.inferenceContainers = inferenceContainers;
         return this;
@@ -104,6 +114,7 @@ public class AutoMLCandidate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public AutoMLCandidate withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -111,9 +122,18 @@ public class AutoMLCandidate {
     
     @JsonProperty("ObjectiveStatus")
     public ObjectiveStatusEnum objectiveStatus;
+
     public AutoMLCandidate withObjectiveStatus(ObjectiveStatusEnum objectiveStatus) {
         this.objectiveStatus = objectiveStatus;
         return this;
     }
     
+    public AutoMLCandidate(@JsonProperty("CandidateName") String candidateName, @JsonProperty("CandidateStatus") CandidateStatusEnum candidateStatus, @JsonProperty("CandidateSteps") AutoMLCandidateStep[] candidateSteps, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("ObjectiveStatus") ObjectiveStatusEnum objectiveStatus) {
+        this.candidateName = candidateName;
+        this.candidateStatus = candidateStatus;
+        this.candidateSteps = candidateSteps;
+        this.creationTime = creationTime;
+        this.lastModifiedTime = lastModifiedTime;
+        this.objectiveStatus = objectiveStatus;
+  }
 }

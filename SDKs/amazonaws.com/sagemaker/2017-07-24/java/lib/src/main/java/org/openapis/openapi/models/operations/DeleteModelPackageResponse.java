@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteModelPackageResponse {
@@ -12,6 +13,7 @@ public class DeleteModelPackageResponse {
      */
     
     public Object conflictException;
+
     public DeleteModelPackageResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteModelPackageResponse {
     
     
     public String contentType;
+
     public DeleteModelPackageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DeleteModelPackageResponse {
     
     
     public Integer statusCode;
+
     public DeleteModelPackageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteModelPackageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteModelPackageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteModelPackageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

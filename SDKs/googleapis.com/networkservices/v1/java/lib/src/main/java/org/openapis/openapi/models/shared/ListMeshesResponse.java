@@ -18,6 +18,7 @@ public class ListMeshesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meshes")
     public Mesh[] meshes;
+
     public ListMeshesResponse withMeshes(Mesh[] meshes) {
         this.meshes = meshes;
         return this;
@@ -29,9 +30,11 @@ public class ListMeshesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListMeshesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListMeshesResponse(){}
 }

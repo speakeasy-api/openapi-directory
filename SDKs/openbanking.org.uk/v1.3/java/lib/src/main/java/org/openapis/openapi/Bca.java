@@ -63,7 +63,7 @@ public class Bca {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBusinessCurrentAccountsResponse res = new org.openapis.openapi.models.operations.GetBusinessCurrentAccountsResponse() {{
+        org.openapis.openapi.models.operations.GetBusinessCurrentAccountsResponse res = new org.openapis.openapi.models.operations.GetBusinessCurrentAccountsResponse(contentType, httpRes.statusCode()) {{
             getBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonObject = null;
             fourHundredErrorObject = null;
             fourHundredAndEightErrorObject = null;
@@ -72,8 +72,6 @@ public class Bca {
             fiveHundredAndThreeErrorObject = null;
             errorObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,11 +169,9 @@ public class Bca {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HeadBusinessCurrentAccountsResponse res = new org.openapis.openapi.models.operations.HeadBusinessCurrentAccountsResponse() {{
+        org.openapis.openapi.models.operations.HeadBusinessCurrentAccountsResponse res = new org.openapis.openapi.models.operations.HeadBusinessCurrentAccountsResponse(contentType, httpRes.statusCode()) {{
             noResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

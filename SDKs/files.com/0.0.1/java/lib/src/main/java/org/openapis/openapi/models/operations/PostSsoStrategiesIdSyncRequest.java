@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSsoStrategiesIdSyncRequest {
@@ -12,9 +13,13 @@ public class PostSsoStrategiesIdSyncRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PostSsoStrategiesIdSyncRequest withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public PostSsoStrategiesIdSyncRequest(@JsonProperty("id") Integer id) {
+        this.id = id;
+  }
 }

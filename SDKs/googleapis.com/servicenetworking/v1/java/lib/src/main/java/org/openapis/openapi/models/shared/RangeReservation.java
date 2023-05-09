@@ -18,6 +18,7 @@ public class RangeReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipPrefixLength")
     public Integer ipPrefixLength;
+
     public RangeReservation withIpPrefixLength(Integer ipPrefixLength) {
         this.ipPrefixLength = ipPrefixLength;
         return this;
@@ -29,6 +30,7 @@ public class RangeReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedRanges")
     public String[] requestedRanges;
+
     public RangeReservation withRequestedRanges(String[] requestedRanges) {
         this.requestedRanges = requestedRanges;
         return this;
@@ -40,6 +42,7 @@ public class RangeReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryRangeIpPrefixLengths")
     public Integer[] secondaryRangeIpPrefixLengths;
+
     public RangeReservation withSecondaryRangeIpPrefixLengths(Integer[] secondaryRangeIpPrefixLengths) {
         this.secondaryRangeIpPrefixLengths = secondaryRangeIpPrefixLengths;
         return this;
@@ -51,9 +54,11 @@ public class RangeReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetworkCandidates")
     public Subnetwork[] subnetworkCandidates;
+
     public RangeReservation withSubnetworkCandidates(Subnetwork[] subnetworkCandidates) {
         this.subnetworkCandidates = subnetworkCandidates;
         return this;
     }
     
+    public RangeReservation(){}
 }

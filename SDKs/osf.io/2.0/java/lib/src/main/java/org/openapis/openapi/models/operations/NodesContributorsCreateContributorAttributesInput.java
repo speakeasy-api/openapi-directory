@@ -18,6 +18,7 @@ public class NodesContributorsCreateContributorAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bibliographic")
     public Boolean bibliographic;
+
     public NodesContributorsCreateContributorAttributesInput withBibliographic(Boolean bibliographic) {
         this.bibliographic = bibliographic;
         return this;
@@ -29,6 +30,7 @@ public class NodesContributorsCreateContributorAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Long index;
+
     public NodesContributorsCreateContributorAttributesInput withIndex(Long index) {
         this.index = index;
         return this;
@@ -40,9 +42,11 @@ public class NodesContributorsCreateContributorAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public NodesContributorsCreateContributorAttributesPermissionEnum permission;
+
     public NodesContributorsCreateContributorAttributesInput withPermission(NodesContributorsCreateContributorAttributesPermissionEnum permission) {
         this.permission = permission;
         return this;
     }
     
+    public NodesContributorsCreateContributorAttributesInput(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AcceptPageRequest {
     @JsonProperty("AcceptCode")
     public String acceptCode;
+
     public AcceptPageRequest withAcceptCode(String acceptCode) {
         this.acceptCode = acceptCode;
         return this;
@@ -19,6 +20,7 @@ public class AcceptPageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptCodeValidation")
     public AcceptCodeValidationEnum acceptCodeValidation;
+
     public AcceptPageRequest withAcceptCodeValidation(AcceptCodeValidationEnum acceptCodeValidation) {
         this.acceptCodeValidation = acceptCodeValidation;
         return this;
@@ -26,6 +28,7 @@ public class AcceptPageRequest {
     
     @JsonProperty("AcceptType")
     public AcceptTypeEnum acceptType;
+
     public AcceptPageRequest withAcceptType(AcceptTypeEnum acceptType) {
         this.acceptType = acceptType;
         return this;
@@ -34,6 +37,7 @@ public class AcceptPageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactChannelId")
     public String contactChannelId;
+
     public AcceptPageRequest withContactChannelId(String contactChannelId) {
         this.contactChannelId = contactChannelId;
         return this;
@@ -42,6 +46,7 @@ public class AcceptPageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Note")
     public String note;
+
     public AcceptPageRequest withNote(String note) {
         this.note = note;
         return this;
@@ -49,9 +54,15 @@ public class AcceptPageRequest {
     
     @JsonProperty("PageId")
     public String pageId;
+
     public AcceptPageRequest withPageId(String pageId) {
         this.pageId = pageId;
         return this;
     }
     
+    public AcceptPageRequest(@JsonProperty("AcceptCode") String acceptCode, @JsonProperty("AcceptType") AcceptTypeEnum acceptType, @JsonProperty("PageId") String pageId) {
+        this.acceptCode = acceptCode;
+        this.acceptType = acceptType;
+        this.pageId = pageId;
+  }
 }

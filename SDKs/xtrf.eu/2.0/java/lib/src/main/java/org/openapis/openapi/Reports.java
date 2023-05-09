@@ -55,10 +55,8 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Delete11Response res = new org.openapis.openapi.models.operations.Delete11Response() {{
+        org.openapis.openapi.models.operations.Delete11Response res = new org.openapis.openapi.models.operations.Delete11Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -89,10 +87,8 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Duplicate1Response res = new org.openapis.openapi.models.operations.Duplicate1Response() {{
+        org.openapis.openapi.models.operations.Duplicate1Response res = new org.openapis.openapi.models.operations.Duplicate1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -128,11 +124,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportToXMLResponse res = new org.openapis.openapi.models.operations.ExportToXMLResponse() {{
+        org.openapis.openapi.models.operations.ExportToXMLResponse res = new org.openapis.openapi.models.operations.ExportToXMLResponse(contentType, httpRes.statusCode()) {{
             reportResultDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -168,11 +162,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateCSVResponse res = new org.openapis.openapi.models.operations.GenerateCSVResponse() {{
+        org.openapis.openapi.models.operations.GenerateCSVResponse res = new org.openapis.openapi.models.operations.GenerateCSVResponse(contentType, httpRes.statusCode()) {{
             reportResultDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -208,11 +200,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GeneratePrinterFriendlyResponse res = new org.openapis.openapi.models.operations.GeneratePrinterFriendlyResponse() {{
+        org.openapis.openapi.models.operations.GeneratePrinterFriendlyResponse res = new org.openapis.openapi.models.operations.GeneratePrinterFriendlyResponse(contentType, httpRes.statusCode()) {{
             reportResultDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -253,11 +243,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportFromXMLResponse res = new org.openapis.openapi.models.operations.ImportFromXMLResponse() {{
+        org.openapis.openapi.models.operations.ImportFromXMLResponse res = new org.openapis.openapi.models.operations.ImportFromXMLResponse(contentType, httpRes.statusCode()) {{
             importResultDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -298,10 +286,8 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetPreferredResponse res = new org.openapis.openapi.models.operations.SetPreferredResponse() {{
+        org.openapis.openapi.models.operations.SetPreferredResponse res = new org.openapis.openapi.models.operations.SetPreferredResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

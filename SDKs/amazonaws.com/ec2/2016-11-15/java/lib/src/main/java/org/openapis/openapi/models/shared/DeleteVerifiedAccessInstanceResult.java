@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteVerifiedAccessInstanceResult {
     
     public DeleteVerifiedAccessInstanceResultVerifiedAccessInstance verifiedAccessInstance;
+
     public DeleteVerifiedAccessInstanceResult withVerifiedAccessInstance(DeleteVerifiedAccessInstanceResultVerifiedAccessInstance verifiedAccessInstance) {
         this.verifiedAccessInstance = verifiedAccessInstance;
         return this;
     }
     
+    public DeleteVerifiedAccessInstanceResult(){}
 }

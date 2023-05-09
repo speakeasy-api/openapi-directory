@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationMonitoring - Describes the monitoring of an instance.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationMonitoring {
     
     public Boolean enabled;
+
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationMonitoring withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecificationMonitoring(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

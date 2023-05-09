@@ -18,6 +18,7 @@ public class AchievementResetAllResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AchievementResetAllResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class AchievementResetAllResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public AchievementResetResponse[] results;
+
     public AchievementResetAllResponse withResults(AchievementResetResponse[] results) {
         this.results = results;
         return this;
     }
     
+    public AchievementResetAllResponse(){}
 }

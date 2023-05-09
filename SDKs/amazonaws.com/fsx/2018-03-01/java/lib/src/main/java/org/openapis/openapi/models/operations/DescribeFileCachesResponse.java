@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFileCachesResponse {
@@ -12,6 +13,7 @@ public class DescribeFileCachesResponse {
      */
     
     public Object badRequest;
+
     public DescribeFileCachesResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFileCachesResponse {
     
     
     public String contentType;
+
     public DescribeFileCachesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFileCachesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFileCachesResponse describeFileCachesResponse;
+
     public DescribeFileCachesResponse withDescribeFileCachesResponse(org.openapis.openapi.models.shared.DescribeFileCachesResponse describeFileCachesResponse) {
         this.describeFileCachesResponse = describeFileCachesResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFileCachesResponse {
      */
     
     public Object fileCacheNotFound;
+
     public DescribeFileCachesResponse withFileCacheNotFound(Object fileCacheNotFound) {
         this.fileCacheNotFound = fileCacheNotFound;
         return this;
@@ -49,6 +54,7 @@ public class DescribeFileCachesResponse {
      */
     
     public Object internalServerError;
+
     public DescribeFileCachesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -56,6 +62,7 @@ public class DescribeFileCachesResponse {
     
     
     public Integer statusCode;
+
     public DescribeFileCachesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeFileCachesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFileCachesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeFileCachesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

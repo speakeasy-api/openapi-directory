@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFlowResponse {
@@ -12,6 +13,7 @@ public class UpdateFlowResponse {
      */
     
     public Object conflictException;
+
     public UpdateFlowResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateFlowResponse {
      */
     
     public Object connectorAuthenticationException;
+
     public UpdateFlowResponse withConnectorAuthenticationException(Object connectorAuthenticationException) {
         this.connectorAuthenticationException = connectorAuthenticationException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateFlowResponse {
      */
     
     public Object connectorServerException;
+
     public UpdateFlowResponse withConnectorServerException(Object connectorServerException) {
         this.connectorServerException = connectorServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFlowResponse {
     
     
     public String contentType;
+
     public UpdateFlowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFlowResponse {
      */
     
     public Object internalServerException;
+
     public UpdateFlowResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateFlowResponse {
     
     
     public Integer statusCode;
+
     public UpdateFlowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFlowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFlowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFlowResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFlowResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateFlowResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateFlowResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateFlowResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFlowResponse updateFlowResponse;
+
     public UpdateFlowResponse withUpdateFlowResponse(org.openapis.openapi.models.shared.UpdateFlowResponse updateFlowResponse) {
         this.updateFlowResponse = updateFlowResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateFlowResponse {
      */
     
     public Object validationException;
+
     public UpdateFlowResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateFlowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

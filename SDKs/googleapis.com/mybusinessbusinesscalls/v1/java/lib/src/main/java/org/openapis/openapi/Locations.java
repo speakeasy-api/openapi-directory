@@ -57,11 +57,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListResponse res = new org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListResponse() {{
+        org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListResponse res = new org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListResponse(contentType, httpRes.statusCode()) {{
             listBusinessCallsInsightsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsGetBusinesscallssettingsResponse res = new org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsGetBusinesscallssettingsResponse() {{
+        org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsGetBusinesscallssettingsResponse res = new org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsGetBusinesscallssettingsResponse(contentType, httpRes.statusCode()) {{
             businessCallsSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsUpdateBusinesscallssettingsResponse res = new org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsUpdateBusinesscallssettingsResponse() {{
+        org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsUpdateBusinesscallssettingsResponse res = new org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsUpdateBusinesscallssettingsResponse(contentType, httpRes.statusCode()) {{
             businessCallsSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

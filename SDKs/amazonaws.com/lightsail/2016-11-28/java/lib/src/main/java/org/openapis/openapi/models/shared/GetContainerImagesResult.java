@@ -15,9 +15,11 @@ public class GetContainerImagesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerImages")
     public ContainerImage[] containerImages;
+
     public GetContainerImagesResult withContainerImages(ContainerImage[] containerImages) {
         this.containerImages = containerImages;
         return this;
     }
     
+    public GetContainerImagesResult(){}
 }

@@ -15,9 +15,11 @@ public class UpdateSystemTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public SystemTemplateSummary summary;
+
     public UpdateSystemTemplateResponse withSummary(SystemTemplateSummary summary) {
         this.summary = summary;
         return this;
     }
     
+    public UpdateSystemTemplateResponse(){}
 }

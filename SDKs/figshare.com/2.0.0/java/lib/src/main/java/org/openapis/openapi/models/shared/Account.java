@@ -15,6 +15,7 @@ public class Account {
      */
     @JsonProperty("active")
     public Long active;
+
     public Account withActive(Long active) {
         this.active = active;
         return this;
@@ -25,6 +26,7 @@ public class Account {
      */
     @JsonProperty("created_date")
     public String createdDate;
+
     public Account withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -35,6 +37,7 @@ public class Account {
      */
     @JsonProperty("email")
     public String email;
+
     public Account withEmail(String email) {
         this.email = email;
         return this;
@@ -45,6 +48,7 @@ public class Account {
      */
     @JsonProperty("first_name")
     public String firstName;
+
     public Account withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -55,6 +59,7 @@ public class Account {
      */
     @JsonProperty("group_id")
     public Long groupId;
+
     public Account withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -65,6 +70,7 @@ public class Account {
      */
     @JsonProperty("id")
     public Long id;
+
     public Account withId(Long id) {
         this.id = id;
         return this;
@@ -75,6 +81,7 @@ public class Account {
      */
     @JsonProperty("institution_id")
     public Long institutionId;
+
     public Account withInstitutionId(Long institutionId) {
         this.institutionId = institutionId;
         return this;
@@ -85,6 +92,7 @@ public class Account {
      */
     @JsonProperty("institution_user_id")
     public String institutionUserId;
+
     public Account withInstitutionUserId(String institutionUserId) {
         this.institutionUserId = institutionUserId;
         return this;
@@ -95,6 +103,7 @@ public class Account {
      */
     @JsonProperty("last_name")
     public String lastName;
+
     public Account withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -105,6 +114,7 @@ public class Account {
      */
     @JsonProperty("maximum_file_size")
     public Long maximumFileSize;
+
     public Account withMaximumFileSize(Long maximumFileSize) {
         this.maximumFileSize = maximumFileSize;
         return this;
@@ -115,6 +125,7 @@ public class Account {
      */
     @JsonProperty("modified_date")
     public String modifiedDate;
+
     public Account withModifiedDate(String modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -125,6 +136,7 @@ public class Account {
      */
     @JsonProperty("pending_quota_request")
     public Boolean pendingQuotaRequest;
+
     public Account withPendingQuotaRequest(Boolean pendingQuotaRequest) {
         this.pendingQuotaRequest = pendingQuotaRequest;
         return this;
@@ -135,6 +147,7 @@ public class Account {
      */
     @JsonProperty("quota")
     public Long quota;
+
     public Account withQuota(Long quota) {
         this.quota = quota;
         return this;
@@ -145,6 +158,7 @@ public class Account {
      */
     @JsonProperty("used_quota")
     public Long usedQuota;
+
     public Account withUsedQuota(Long usedQuota) {
         this.usedQuota = usedQuota;
         return this;
@@ -155,6 +169,7 @@ public class Account {
      */
     @JsonProperty("used_quota_private")
     public Long usedQuotaPrivate;
+
     public Account withUsedQuotaPrivate(Long usedQuotaPrivate) {
         this.usedQuotaPrivate = usedQuotaPrivate;
         return this;
@@ -165,9 +180,28 @@ public class Account {
      */
     @JsonProperty("used_quota_public")
     public Long usedQuotaPublic;
+
     public Account withUsedQuotaPublic(Long usedQuotaPublic) {
         this.usedQuotaPublic = usedQuotaPublic;
         return this;
     }
     
+    public Account(@JsonProperty("active") Long active, @JsonProperty("created_date") String createdDate, @JsonProperty("email") String email, @JsonProperty("first_name") String firstName, @JsonProperty("group_id") Long groupId, @JsonProperty("id") Long id, @JsonProperty("institution_id") Long institutionId, @JsonProperty("institution_user_id") String institutionUserId, @JsonProperty("last_name") String lastName, @JsonProperty("maximum_file_size") Long maximumFileSize, @JsonProperty("modified_date") String modifiedDate, @JsonProperty("pending_quota_request") Boolean pendingQuotaRequest, @JsonProperty("quota") Long quota, @JsonProperty("used_quota") Long usedQuota, @JsonProperty("used_quota_private") Long usedQuotaPrivate, @JsonProperty("used_quota_public") Long usedQuotaPublic) {
+        this.active = active;
+        this.createdDate = createdDate;
+        this.email = email;
+        this.firstName = firstName;
+        this.groupId = groupId;
+        this.id = id;
+        this.institutionId = institutionId;
+        this.institutionUserId = institutionUserId;
+        this.lastName = lastName;
+        this.maximumFileSize = maximumFileSize;
+        this.modifiedDate = modifiedDate;
+        this.pendingQuotaRequest = pendingQuotaRequest;
+        this.quota = quota;
+        this.usedQuota = usedQuota;
+        this.usedQuotaPrivate = usedQuotaPrivate;
+        this.usedQuotaPublic = usedQuotaPublic;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContentSymlink {
     @JsonProperty("_links")
     public ContentSymlinkLinks links;
+
     public ContentSymlink withLinks(ContentSymlinkLinks links) {
         this.links = links;
         return this;
@@ -19,6 +20,7 @@ public class ContentSymlink {
     
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public ContentSymlink withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -26,6 +28,7 @@ public class ContentSymlink {
     
     @JsonProperty("git_url")
     public String gitUrl;
+
     public ContentSymlink withGitUrl(String gitUrl) {
         this.gitUrl = gitUrl;
         return this;
@@ -33,6 +36,7 @@ public class ContentSymlink {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public ContentSymlink withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -40,6 +44,7 @@ public class ContentSymlink {
     
     @JsonProperty("name")
     public String name;
+
     public ContentSymlink withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +52,7 @@ public class ContentSymlink {
     
     @JsonProperty("path")
     public String path;
+
     public ContentSymlink withPath(String path) {
         this.path = path;
         return this;
@@ -54,6 +60,7 @@ public class ContentSymlink {
     
     @JsonProperty("sha")
     public String sha;
+
     public ContentSymlink withSha(String sha) {
         this.sha = sha;
         return this;
@@ -61,6 +68,7 @@ public class ContentSymlink {
     
     @JsonProperty("size")
     public Long size;
+
     public ContentSymlink withSize(Long size) {
         this.size = size;
         return this;
@@ -68,6 +76,7 @@ public class ContentSymlink {
     
     @JsonProperty("target")
     public String target;
+
     public ContentSymlink withTarget(String target) {
         this.target = target;
         return this;
@@ -75,6 +84,7 @@ public class ContentSymlink {
     
     @JsonProperty("type")
     public ContentSymlinkTypeEnum type;
+
     public ContentSymlink withType(ContentSymlinkTypeEnum type) {
         this.type = type;
         return this;
@@ -82,9 +92,23 @@ public class ContentSymlink {
     
     @JsonProperty("url")
     public String url;
+
     public ContentSymlink withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ContentSymlink(@JsonProperty("_links") ContentSymlinkLinks links, @JsonProperty("download_url") String downloadUrl, @JsonProperty("git_url") String gitUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("name") String name, @JsonProperty("path") String path, @JsonProperty("sha") String sha, @JsonProperty("size") Long size, @JsonProperty("target") String target, @JsonProperty("type") ContentSymlinkTypeEnum type, @JsonProperty("url") String url) {
+        this.links = links;
+        this.downloadUrl = downloadUrl;
+        this.gitUrl = gitUrl;
+        this.htmlUrl = htmlUrl;
+        this.name = name;
+        this.path = path;
+        this.sha = sha;
+        this.size = size;
+        this.target = target;
+        this.type = type;
+        this.url = url;
+  }
 }

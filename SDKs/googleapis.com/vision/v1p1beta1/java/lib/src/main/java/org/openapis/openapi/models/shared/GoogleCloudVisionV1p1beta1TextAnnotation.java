@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1TextAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pages")
     public GoogleCloudVisionV1p1beta1Page[] pages;
+
     public GoogleCloudVisionV1p1beta1TextAnnotation withPages(GoogleCloudVisionV1p1beta1Page[] pages) {
         this.pages = pages;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVisionV1p1beta1TextAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudVisionV1p1beta1TextAnnotation withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1TextAnnotation(){}
 }

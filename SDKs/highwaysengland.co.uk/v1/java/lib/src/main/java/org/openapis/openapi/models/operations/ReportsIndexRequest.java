@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReportsIndexRequest {
@@ -12,6 +13,7 @@ public class ReportsIndexRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public String endDate;
+
     public ReportsIndexRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -22,6 +24,7 @@ public class ReportsIndexRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public ReportsIndexRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class ReportsIndexRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Integer pageSize;
+
     public ReportsIndexRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -39,6 +43,7 @@ public class ReportsIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reportSubTypeId")
     public Integer reportSubTypeId;
+
     public ReportsIndexRequest withReportSubTypeId(Integer reportSubTypeId) {
         this.reportSubTypeId = reportSubTypeId;
         return this;
@@ -49,6 +54,7 @@ public class ReportsIndexRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=report_type")
     public String reportType;
+
     public ReportsIndexRequest withReportType(String reportType) {
         this.reportType = reportType;
         return this;
@@ -59,6 +65,7 @@ public class ReportsIndexRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sites")
     public String sites;
+
     public ReportsIndexRequest withSites(String sites) {
         this.sites = sites;
         return this;
@@ -69,6 +76,7 @@ public class ReportsIndexRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public String startDate;
+
     public ReportsIndexRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -76,9 +84,19 @@ public class ReportsIndexRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public ReportsIndexRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ReportsIndexRequest(@JsonProperty("end_date") String endDate, @JsonProperty("page") Integer page, @JsonProperty("page_size") Integer pageSize, @JsonProperty("report_type") String reportType, @JsonProperty("sites") String sites, @JsonProperty("start_date") String startDate, @JsonProperty("version") String version) {
+        this.endDate = endDate;
+        this.page = page;
+        this.pageSize = pageSize;
+        this.reportType = reportType;
+        this.sites = sites;
+        this.startDate = startDate;
+        this.version = version;
+  }
 }

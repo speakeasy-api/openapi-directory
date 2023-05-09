@@ -59,11 +59,9 @@ public class BlockedNumbers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBlockedNumbersResponse res = new org.openapis.openapi.models.operations.GetBlockedNumbersResponse() {{
+        org.openapis.openapi.models.operations.GetBlockedNumbersResponse res = new org.openapis.openapi.models.operations.GetBlockedNumbersResponse(contentType, httpRes.statusCode()) {{
             blockedNumber = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,10 +109,8 @@ public class BlockedNumbers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostBlockedNumbersResponse res = new org.openapis.openapi.models.operations.PostBlockedNumbersResponse() {{
+        org.openapis.openapi.models.operations.PostBlockedNumbersResponse res = new org.openapis.openapi.models.operations.PostBlockedNumbersResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

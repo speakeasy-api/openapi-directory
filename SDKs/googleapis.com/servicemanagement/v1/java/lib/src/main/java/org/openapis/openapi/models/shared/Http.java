@@ -18,6 +18,7 @@ public class Http {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullyDecodeReservedExpansion")
     public Boolean fullyDecodeReservedExpansion;
+
     public Http withFullyDecodeReservedExpansion(Boolean fullyDecodeReservedExpansion) {
         this.fullyDecodeReservedExpansion = fullyDecodeReservedExpansion;
         return this;
@@ -29,9 +30,11 @@ public class Http {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public HttpRule[] rules;
+
     public Http withRules(HttpRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public Http(){}
 }

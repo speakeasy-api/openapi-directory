@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1BoundingPoly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalizedVertices")
     public GoogleCloudVisionV1p1beta1NormalizedVertex[] normalizedVertices;
+
     public GoogleCloudVisionV1p1beta1BoundingPoly withNormalizedVertices(GoogleCloudVisionV1p1beta1NormalizedVertex[] normalizedVertices) {
         this.normalizedVertices = normalizedVertices;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVisionV1p1beta1BoundingPoly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vertices")
     public GoogleCloudVisionV1p1beta1Vertex[] vertices;
+
     public GoogleCloudVisionV1p1beta1BoundingPoly withVertices(GoogleCloudVisionV1p1beta1Vertex[] vertices) {
         this.vertices = vertices;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1BoundingPoly(){}
 }

@@ -15,9 +15,11 @@ public class SingleCollection200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public SingleCollection200ApplicationJSONCollection collection;
+
     public SingleCollection200ApplicationJSON withCollection(SingleCollection200ApplicationJSONCollection collection) {
         this.collection = collection;
         return this;
     }
     
+    public SingleCollection200ApplicationJSON(){}
 }

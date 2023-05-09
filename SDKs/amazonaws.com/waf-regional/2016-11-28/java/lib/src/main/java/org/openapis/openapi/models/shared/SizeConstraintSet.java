@@ -15,6 +15,7 @@ public class SizeConstraintSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SizeConstraintSet withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class SizeConstraintSet {
     
     @JsonProperty("SizeConstraintSetId")
     public String sizeConstraintSetId;
+
     public SizeConstraintSet withSizeConstraintSetId(String sizeConstraintSetId) {
         this.sizeConstraintSetId = sizeConstraintSetId;
         return this;
@@ -29,9 +31,14 @@ public class SizeConstraintSet {
     
     @JsonProperty("SizeConstraints")
     public SizeConstraint[] sizeConstraints;
+
     public SizeConstraintSet withSizeConstraints(SizeConstraint[] sizeConstraints) {
         this.sizeConstraints = sizeConstraints;
         return this;
     }
     
+    public SizeConstraintSet(@JsonProperty("SizeConstraintSetId") String sizeConstraintSetId, @JsonProperty("SizeConstraints") SizeConstraint[] sizeConstraints) {
+        this.sizeConstraintSetId = sizeConstraintSetId;
+        this.sizeConstraints = sizeConstraints;
+  }
 }

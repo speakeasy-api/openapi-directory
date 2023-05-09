@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaPropertyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public String account;
+
     public GoogleAnalyticsAdminV1alphaPropertyInput withAccount(String account) {
         this.account = account;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaPropertyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public GoogleAnalyticsAdminV1alphaPropertyInput withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaPropertyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1alphaPropertyInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaPropertyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("industryCategory")
     public GoogleAnalyticsAdminV1alphaPropertyIndustryCategoryEnum industryCategory;
+
     public GoogleAnalyticsAdminV1alphaPropertyInput withIndustryCategory(GoogleAnalyticsAdminV1alphaPropertyIndustryCategoryEnum industryCategory) {
         this.industryCategory = industryCategory;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1alphaPropertyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleAnalyticsAdminV1alphaPropertyInput withParent(String parent) {
         this.parent = parent;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAnalyticsAdminV1alphaPropertyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyType")
     public GoogleAnalyticsAdminV1alphaPropertyPropertyTypeEnum propertyType;
+
     public GoogleAnalyticsAdminV1alphaPropertyInput withPropertyType(GoogleAnalyticsAdminV1alphaPropertyPropertyTypeEnum propertyType) {
         this.propertyType = propertyType;
         return this;
@@ -84,9 +90,11 @@ public class GoogleAnalyticsAdminV1alphaPropertyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public GoogleAnalyticsAdminV1alphaPropertyInput withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaPropertyInput(){}
 }

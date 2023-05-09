@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CacheSecurityGroupMembershipList {
     
     public String cacheSecurityGroupName;
+
     public CacheSecurityGroupMembershipList withCacheSecurityGroupName(String cacheSecurityGroupName) {
         this.cacheSecurityGroupName = cacheSecurityGroupName;
         return this;
@@ -19,9 +20,11 @@ public class CacheSecurityGroupMembershipList {
     
     
     public String status;
+
     public CacheSecurityGroupMembershipList withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public CacheSecurityGroupMembershipList(){}
 }

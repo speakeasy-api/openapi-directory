@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProjectListResponse {
     
     public byte[] body;
+
     public GetProjectListResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetProjectListResponse {
     
     
     public String contentType;
+
     public GetProjectListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetProjectListResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetProjectListResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -36,6 +40,7 @@ public class GetProjectListResponse {
      */
     
     public org.openapis.openapi.models.shared.ProjectListVO projectListVO;
+
     public GetProjectListResponse withProjectListVO(org.openapis.openapi.models.shared.ProjectListVO projectListVO) {
         this.projectListVO = projectListVO;
         return this;
@@ -43,6 +48,7 @@ public class GetProjectListResponse {
     
     
     public Integer statusCode;
+
     public GetProjectListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetProjectListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProjectListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetProjectListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CancellationReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellationReasonCode")
     public String cancellationReasonCode;
+
     public CancellationReason withCancellationReasonCode(String cancellationReasonCode) {
         this.cancellationReasonCode = cancellationReasonCode;
         return this;
@@ -26,9 +27,11 @@ public class CancellationReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellationReasonText")
     public String cancellationReasonText;
+
     public CancellationReason withCancellationReasonText(String cancellationReasonText) {
         this.cancellationReasonText = cancellationReasonText;
         return this;
     }
     
+    public CancellationReason(){}
 }

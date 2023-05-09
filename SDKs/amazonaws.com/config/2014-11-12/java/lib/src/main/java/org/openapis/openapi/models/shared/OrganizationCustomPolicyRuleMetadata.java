@@ -15,6 +15,7 @@ public class OrganizationCustomPolicyRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebugLogDeliveryAccounts")
     public String[] debugLogDeliveryAccounts;
+
     public OrganizationCustomPolicyRuleMetadata withDebugLogDeliveryAccounts(String[] debugLogDeliveryAccounts) {
         this.debugLogDeliveryAccounts = debugLogDeliveryAccounts;
         return this;
@@ -23,6 +24,7 @@ public class OrganizationCustomPolicyRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public OrganizationCustomPolicyRuleMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class OrganizationCustomPolicyRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputParameters")
     public String inputParameters;
+
     public OrganizationCustomPolicyRuleMetadata withInputParameters(String inputParameters) {
         this.inputParameters = inputParameters;
         return this;
@@ -39,6 +42,7 @@ public class OrganizationCustomPolicyRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumExecutionFrequency")
     public MaximumExecutionFrequencyEnum maximumExecutionFrequency;
+
     public OrganizationCustomPolicyRuleMetadata withMaximumExecutionFrequency(MaximumExecutionFrequencyEnum maximumExecutionFrequency) {
         this.maximumExecutionFrequency = maximumExecutionFrequency;
         return this;
@@ -47,6 +51,7 @@ public class OrganizationCustomPolicyRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationConfigRuleTriggerTypes")
     public OrganizationConfigRuleTriggerTypeNoSNEnum[] organizationConfigRuleTriggerTypes;
+
     public OrganizationCustomPolicyRuleMetadata withOrganizationConfigRuleTriggerTypes(OrganizationConfigRuleTriggerTypeNoSNEnum[] organizationConfigRuleTriggerTypes) {
         this.organizationConfigRuleTriggerTypes = organizationConfigRuleTriggerTypes;
         return this;
@@ -54,6 +59,7 @@ public class OrganizationCustomPolicyRuleMetadata {
     
     @JsonProperty("PolicyRuntime")
     public String policyRuntime;
+
     public OrganizationCustomPolicyRuleMetadata withPolicyRuntime(String policyRuntime) {
         this.policyRuntime = policyRuntime;
         return this;
@@ -61,6 +67,7 @@ public class OrganizationCustomPolicyRuleMetadata {
     
     @JsonProperty("PolicyText")
     public String policyText;
+
     public OrganizationCustomPolicyRuleMetadata withPolicyText(String policyText) {
         this.policyText = policyText;
         return this;
@@ -69,6 +76,7 @@ public class OrganizationCustomPolicyRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceIdScope")
     public String resourceIdScope;
+
     public OrganizationCustomPolicyRuleMetadata withResourceIdScope(String resourceIdScope) {
         this.resourceIdScope = resourceIdScope;
         return this;
@@ -77,6 +85,7 @@ public class OrganizationCustomPolicyRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypesScope")
     public String[] resourceTypesScope;
+
     public OrganizationCustomPolicyRuleMetadata withResourceTypesScope(String[] resourceTypesScope) {
         this.resourceTypesScope = resourceTypesScope;
         return this;
@@ -85,6 +94,7 @@ public class OrganizationCustomPolicyRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagKeyScope")
     public String tagKeyScope;
+
     public OrganizationCustomPolicyRuleMetadata withTagKeyScope(String tagKeyScope) {
         this.tagKeyScope = tagKeyScope;
         return this;
@@ -93,9 +103,14 @@ public class OrganizationCustomPolicyRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagValueScope")
     public String tagValueScope;
+
     public OrganizationCustomPolicyRuleMetadata withTagValueScope(String tagValueScope) {
         this.tagValueScope = tagValueScope;
         return this;
     }
     
+    public OrganizationCustomPolicyRuleMetadata(@JsonProperty("PolicyRuntime") String policyRuntime, @JsonProperty("PolicyText") String policyText) {
+        this.policyRuntime = policyRuntime;
+        this.policyText = policyText;
+  }
 }

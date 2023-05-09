@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBotVersionResponse {
     
     public String contentType;
+
     public DescribeBotVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBotVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBotVersionResponse describeBotVersionResponse;
+
     public DescribeBotVersionResponse withDescribeBotVersionResponse(org.openapis.openapi.models.shared.DescribeBotVersionResponse describeBotVersionResponse) {
         this.describeBotVersionResponse = describeBotVersionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBotVersionResponse {
      */
     
     public Object internalServerException;
+
     public DescribeBotVersionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeBotVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeBotVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeBotVersionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DescribeBotVersionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeBotVersionResponse {
     
     
     public Integer statusCode;
+
     public DescribeBotVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeBotVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBotVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeBotVersionResponse {
      */
     
     public Object throttlingException;
+
     public DescribeBotVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeBotVersionResponse {
      */
     
     public Object validationException;
+
     public DescribeBotVersionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeBotVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

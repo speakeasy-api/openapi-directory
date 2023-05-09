@@ -18,6 +18,7 @@ public class ReverseSshConnectivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vm")
     public String vm;
+
     public ReverseSshConnectivity withVm(String vm) {
         this.vm = vm;
         return this;
@@ -29,6 +30,7 @@ public class ReverseSshConnectivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmIp")
     public String vmIp;
+
     public ReverseSshConnectivity withVmIp(String vmIp) {
         this.vmIp = vmIp;
         return this;
@@ -40,6 +42,7 @@ public class ReverseSshConnectivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmPort")
     public Integer vmPort;
+
     public ReverseSshConnectivity withVmPort(Integer vmPort) {
         this.vmPort = vmPort;
         return this;
@@ -51,9 +54,11 @@ public class ReverseSshConnectivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpc")
     public String vpc;
+
     public ReverseSshConnectivity withVpc(String vpc) {
         this.vpc = vpc;
         return this;
     }
     
+    public ReverseSshConnectivity(){}
 }

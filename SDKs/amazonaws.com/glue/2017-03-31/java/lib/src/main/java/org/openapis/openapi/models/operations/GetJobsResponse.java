@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetJobsResponse {
     
     public String contentType;
+
     public GetJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetJobsResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetJobsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetJobsResponse getJobsResponse;
+
     public GetJobsResponse withGetJobsResponse(org.openapis.openapi.models.shared.GetJobsResponse getJobsResponse) {
         this.getJobsResponse = getJobsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetJobsResponse {
      */
     
     public Object internalServiceException;
+
     public GetJobsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetJobsResponse {
      */
     
     public Object invalidInputException;
+
     public GetJobsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetJobsResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetJobsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetJobsResponse {
     
     
     public Integer statusCode;
+
     public GetJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

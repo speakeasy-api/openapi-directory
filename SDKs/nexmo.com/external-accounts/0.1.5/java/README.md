@@ -16,11 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetAllAccountsSecurity;
 import org.openapis.openapi.models.operations.GetAllAccountsProviderEnum;
 import org.openapis.openapi.models.operations.GetAllAccountsRequest;
 import org.openapis.openapi.models.operations.GetAllAccountsResponse;
+import org.openapis.openapi.models.operations.GetAllAccountsSecurity;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
@@ -30,24 +29,26 @@ public class Application {
                 .build();
 
             GetAllAccountsRequest req = new GetAllAccountsRequest() {{
-                pageNumber = 1;
-                pageSize = 1;
-                provider = "viber_service_msg";
-            }}            
+                pageNumber = 1L;
+                pageSize = 1L;
+                provider = GetAllAccountsProviderEnum.VIBER_SERVICE_MSG;
+            }};            
 
             GetAllAccountsResponse res = sdk.account.getAllAccounts(req, new GetAllAccountsSecurity() {{
-                basicAuth = new SchemeBasicAuth() {{
+                basicAuth = new SchemeBasicAuth("provident", "distinctio") {{
                     password = "YOUR_PASSWORD_HERE";
                     username = "YOUR_USERNAME_HERE";
                 }};
             }});
 
-            if (res.getAllAccounts200ApplicationJSONObject.isPresent()) {
+            if (res.getAllAccounts200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -55,29 +56,29 @@ public class Application {
 ## Available Resources and Operations
 
 
-### account
+### [account](docs/account/README.md)
 
-* `getAllAccounts` - Retrieve all accounts you own
+* [getAllAccounts](docs/account/README.md#getallaccounts) - Retrieve all accounts you own
 
-### application
+### [application](docs/application/README.md)
 
-* `linkApplication` - Link application to an account
-* `unliWithoutApplicationnkApplication` - Unlink application from an account
+* [linkApplication](docs/application/README.md#linkapplication) - Link application to an account
+* [unliWithoutApplicationnkApplication](docs/application/README.md#unliwithoutapplicationnkapplication) - Unlink application from an account
 
-### facebookMessenger
+### [facebookMessenger](docs/facebookmessenger/README.md)
 
-* `createMessengerAccount` - Create a Messenger account
-* `deleteMessengerAccount` - Delete a Messenger account
-* `getMessengerAccount` - Retrieve a Messenger account
-* `updateMessengerAccount` - Update a Messenger account
+* [createMessengerAccount](docs/facebookmessenger/README.md#createmessengeraccount) - Create a Messenger account
+* [deleteMessengerAccount](docs/facebookmessenger/README.md#deletemessengeraccount) - Delete a Messenger account
+* [getMessengerAccount](docs/facebookmessenger/README.md#getmessengeraccount) - Retrieve a Messenger account
+* [updateMessengerAccount](docs/facebookmessenger/README.md#updatemessengeraccount) - Update a Messenger account
 
-### viberServiceMessage
+### [viberServiceMessage](docs/viberservicemessage/README.md)
 
-* `getVSMAccount` - Retrieve a Viber Service Message account
+* [getVSMAccount](docs/viberservicemessage/README.md#getvsmaccount) - Retrieve a Viber Service Message account
 
-### whatsApp
+### [whatsApp](docs/whatsapp/README.md)
 
-* `getWAAccount` - Retrieve a Whatsapp account
+* [getWAAccount](docs/whatsapp/README.md#getwaaccount) - Retrieve a Whatsapp account
 <!-- End SDK Available Operations -->
 
 ### Maturity

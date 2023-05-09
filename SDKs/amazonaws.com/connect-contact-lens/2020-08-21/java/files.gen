@@ -42,4 +42,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Categories.java
 lib/src/main/java/org/openapis/openapi/models/shared/CategoryDetails.java
 lib/src/main/java/org/openapis/openapi/models/shared/PointOfInterest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

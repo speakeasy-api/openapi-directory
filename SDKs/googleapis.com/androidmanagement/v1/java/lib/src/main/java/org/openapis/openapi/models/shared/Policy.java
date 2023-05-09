@@ -18,6 +18,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountTypesWithManagementDisabled")
     public String[] accountTypesWithManagementDisabled;
+
     public Policy withAccountTypesWithManagementDisabled(String[] accountTypesWithManagementDisabled) {
         this.accountTypesWithManagementDisabled = accountTypesWithManagementDisabled;
         return this;
@@ -29,6 +30,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addUserDisabled")
     public Boolean addUserDisabled;
+
     public Policy withAddUserDisabled(Boolean addUserDisabled) {
         this.addUserDisabled = addUserDisabled;
         return this;
@@ -40,6 +42,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustVolumeDisabled")
     public Boolean adjustVolumeDisabled;
+
     public Policy withAdjustVolumeDisabled(Boolean adjustVolumeDisabled) {
         this.adjustVolumeDisabled = adjustVolumeDisabled;
         return this;
@@ -51,6 +54,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advancedSecurityOverrides")
     public AdvancedSecurityOverrides advancedSecurityOverrides;
+
     public Policy withAdvancedSecurityOverrides(AdvancedSecurityOverrides advancedSecurityOverrides) {
         this.advancedSecurityOverrides = advancedSecurityOverrides;
         return this;
@@ -62,6 +66,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alwaysOnVpnPackage")
     public AlwaysOnVpnPackage alwaysOnVpnPackage;
+
     public Policy withAlwaysOnVpnPackage(AlwaysOnVpnPackage alwaysOnVpnPackage) {
         this.alwaysOnVpnPackage = alwaysOnVpnPackage;
         return this;
@@ -73,17 +78,19 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidDevicePolicyTracks")
     public PolicyAndroidDevicePolicyTracksEnum[] androidDevicePolicyTracks;
+
     public Policy withAndroidDevicePolicyTracks(PolicyAndroidDevicePolicyTracksEnum[] androidDevicePolicyTracks) {
         this.androidDevicePolicyTracks = androidDevicePolicyTracks;
         return this;
     }
     
     /**
-     * Deprecated. Use autoUpdateMode instead.When autoUpdateMode is set to AUTO_UPDATE_POSTPONED or AUTO_UPDATE_HIGH_PRIORITY, this field has no effect.The app auto update policy, which controls when automatic app updates can be applied.
+     * Recommended alternative: autoUpdateMode which is set per app, provides greater flexibility around update frequency.When autoUpdateMode is set to AUTO_UPDATE_POSTPONED or AUTO_UPDATE_HIGH_PRIORITY, this field has no effect.The app auto update policy, which controls when automatic app updates can be applied.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appAutoUpdatePolicy")
     public PolicyAppAutoUpdatePolicyEnum appAutoUpdatePolicy;
+
     public Policy withAppAutoUpdatePolicy(PolicyAppAutoUpdatePolicyEnum appAutoUpdatePolicy) {
         this.appAutoUpdatePolicy = appAutoUpdatePolicy;
         return this;
@@ -95,6 +102,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applications")
     public ApplicationPolicy[] applications;
+
     public Policy withApplications(ApplicationPolicy[] applications) {
         this.applications = applications;
         return this;
@@ -106,6 +114,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoDateAndTimeZone")
     public PolicyAutoDateAndTimeZoneEnum autoDateAndTimeZone;
+
     public Policy withAutoDateAndTimeZone(PolicyAutoDateAndTimeZoneEnum autoDateAndTimeZone) {
         this.autoDateAndTimeZone = autoDateAndTimeZone;
         return this;
@@ -117,6 +126,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoTimeRequired")
     public Boolean autoTimeRequired;
+
     public Policy withAutoTimeRequired(Boolean autoTimeRequired) {
         this.autoTimeRequired = autoTimeRequired;
         return this;
@@ -128,6 +138,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockApplicationsEnabled")
     public Boolean blockApplicationsEnabled;
+
     public Policy withBlockApplicationsEnabled(Boolean blockApplicationsEnabled) {
         this.blockApplicationsEnabled = blockApplicationsEnabled;
         return this;
@@ -139,6 +150,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bluetoothConfigDisabled")
     public Boolean bluetoothConfigDisabled;
+
     public Policy withBluetoothConfigDisabled(Boolean bluetoothConfigDisabled) {
         this.bluetoothConfigDisabled = bluetoothConfigDisabled;
         return this;
@@ -150,6 +162,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bluetoothContactSharingDisabled")
     public Boolean bluetoothContactSharingDisabled;
+
     public Policy withBluetoothContactSharingDisabled(Boolean bluetoothContactSharingDisabled) {
         this.bluetoothContactSharingDisabled = bluetoothContactSharingDisabled;
         return this;
@@ -161,6 +174,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bluetoothDisabled")
     public Boolean bluetoothDisabled;
+
     public Policy withBluetoothDisabled(Boolean bluetoothDisabled) {
         this.bluetoothDisabled = bluetoothDisabled;
         return this;
@@ -172,6 +186,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cameraAccess")
     public PolicyCameraAccessEnum cameraAccess;
+
     public Policy withCameraAccess(PolicyCameraAccessEnum cameraAccess) {
         this.cameraAccess = cameraAccess;
         return this;
@@ -183,6 +198,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cameraDisabled")
     public Boolean cameraDisabled;
+
     public Policy withCameraDisabled(Boolean cameraDisabled) {
         this.cameraDisabled = cameraDisabled;
         return this;
@@ -194,6 +210,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cellBroadcastsConfigDisabled")
     public Boolean cellBroadcastsConfigDisabled;
+
     public Policy withCellBroadcastsConfigDisabled(Boolean cellBroadcastsConfigDisabled) {
         this.cellBroadcastsConfigDisabled = cellBroadcastsConfigDisabled;
         return this;
@@ -205,6 +222,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("choosePrivateKeyRules")
     public ChoosePrivateKeyRule[] choosePrivateKeyRules;
+
     public Policy withChoosePrivateKeyRules(ChoosePrivateKeyRule[] choosePrivateKeyRules) {
         this.choosePrivateKeyRules = choosePrivateKeyRules;
         return this;
@@ -216,6 +234,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceRules")
     public ComplianceRule[] complianceRules;
+
     public Policy withComplianceRules(ComplianceRule[] complianceRules) {
         this.complianceRules = complianceRules;
         return this;
@@ -227,6 +246,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createWindowsDisabled")
     public Boolean createWindowsDisabled;
+
     public Policy withCreateWindowsDisabled(Boolean createWindowsDisabled) {
         this.createWindowsDisabled = createWindowsDisabled;
         return this;
@@ -238,6 +258,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentialsConfigDisabled")
     public Boolean credentialsConfigDisabled;
+
     public Policy withCredentialsConfigDisabled(Boolean credentialsConfigDisabled) {
         this.credentialsConfigDisabled = credentialsConfigDisabled;
         return this;
@@ -249,6 +270,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crossProfilePolicies")
     public CrossProfilePolicies crossProfilePolicies;
+
     public Policy withCrossProfilePolicies(CrossProfilePolicies crossProfilePolicies) {
         this.crossProfilePolicies = crossProfilePolicies;
         return this;
@@ -260,6 +282,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataRoamingDisabled")
     public Boolean dataRoamingDisabled;
+
     public Policy withDataRoamingDisabled(Boolean dataRoamingDisabled) {
         this.dataRoamingDisabled = dataRoamingDisabled;
         return this;
@@ -271,6 +294,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debuggingFeaturesAllowed")
     public Boolean debuggingFeaturesAllowed;
+
     public Policy withDebuggingFeaturesAllowed(Boolean debuggingFeaturesAllowed) {
         this.debuggingFeaturesAllowed = debuggingFeaturesAllowed;
         return this;
@@ -282,6 +306,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultPermissionPolicy")
     public PolicyDefaultPermissionPolicyEnum defaultPermissionPolicy;
+
     public Policy withDefaultPermissionPolicy(PolicyDefaultPermissionPolicyEnum defaultPermissionPolicy) {
         this.defaultPermissionPolicy = defaultPermissionPolicy;
         return this;
@@ -293,6 +318,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceOwnerLockScreenInfo")
     public UserFacingMessage deviceOwnerLockScreenInfo;
+
     public Policy withDeviceOwnerLockScreenInfo(UserFacingMessage deviceOwnerLockScreenInfo) {
         this.deviceOwnerLockScreenInfo = deviceOwnerLockScreenInfo;
         return this;
@@ -304,6 +330,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionPolicy")
     public PolicyEncryptionPolicyEnum encryptionPolicy;
+
     public Policy withEncryptionPolicy(PolicyEncryptionPolicyEnum encryptionPolicy) {
         this.encryptionPolicy = encryptionPolicy;
         return this;
@@ -315,6 +342,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ensureVerifyAppsEnabled")
     public Boolean ensureVerifyAppsEnabled;
+
     public Policy withEnsureVerifyAppsEnabled(Boolean ensureVerifyAppsEnabled) {
         this.ensureVerifyAppsEnabled = ensureVerifyAppsEnabled;
         return this;
@@ -326,6 +354,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("factoryResetDisabled")
     public Boolean factoryResetDisabled;
+
     public Policy withFactoryResetDisabled(Boolean factoryResetDisabled) {
         this.factoryResetDisabled = factoryResetDisabled;
         return this;
@@ -337,6 +366,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frpAdminEmails")
     public String[] frpAdminEmails;
+
     public Policy withFrpAdminEmails(String[] frpAdminEmails) {
         this.frpAdminEmails = frpAdminEmails;
         return this;
@@ -348,6 +378,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("funDisabled")
     public Boolean funDisabled;
+
     public Policy withFunDisabled(Boolean funDisabled) {
         this.funDisabled = funDisabled;
         return this;
@@ -359,6 +390,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installAppsDisabled")
     public Boolean installAppsDisabled;
+
     public Policy withInstallAppsDisabled(Boolean installAppsDisabled) {
         this.installAppsDisabled = installAppsDisabled;
         return this;
@@ -370,6 +402,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installUnknownSourcesAllowed")
     public Boolean installUnknownSourcesAllowed;
+
     public Policy withInstallUnknownSourcesAllowed(Boolean installUnknownSourcesAllowed) {
         this.installUnknownSourcesAllowed = installUnknownSourcesAllowed;
         return this;
@@ -381,6 +414,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyguardDisabled")
     public Boolean keyguardDisabled;
+
     public Policy withKeyguardDisabled(Boolean keyguardDisabled) {
         this.keyguardDisabled = keyguardDisabled;
         return this;
@@ -392,6 +426,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyguardDisabledFeatures")
     public PolicyKeyguardDisabledFeaturesEnum[] keyguardDisabledFeatures;
+
     public Policy withKeyguardDisabledFeatures(PolicyKeyguardDisabledFeaturesEnum[] keyguardDisabledFeatures) {
         this.keyguardDisabledFeatures = keyguardDisabledFeatures;
         return this;
@@ -403,6 +438,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kioskCustomLauncherEnabled")
     public Boolean kioskCustomLauncherEnabled;
+
     public Policy withKioskCustomLauncherEnabled(Boolean kioskCustomLauncherEnabled) {
         this.kioskCustomLauncherEnabled = kioskCustomLauncherEnabled;
         return this;
@@ -414,6 +450,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kioskCustomization")
     public KioskCustomization kioskCustomization;
+
     public Policy withKioskCustomization(KioskCustomization kioskCustomization) {
         this.kioskCustomization = kioskCustomization;
         return this;
@@ -425,6 +462,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationMode")
     public PolicyLocationModeEnum locationMode;
+
     public Policy withLocationMode(PolicyLocationModeEnum locationMode) {
         this.locationMode = locationMode;
         return this;
@@ -436,6 +474,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longSupportMessage")
     public UserFacingMessage longSupportMessage;
+
     public Policy withLongSupportMessage(UserFacingMessage longSupportMessage) {
         this.longSupportMessage = longSupportMessage;
         return this;
@@ -447,6 +486,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumTimeToLock")
     public String maximumTimeToLock;
+
     public Policy withMaximumTimeToLock(String maximumTimeToLock) {
         this.maximumTimeToLock = maximumTimeToLock;
         return this;
@@ -458,6 +498,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("microphoneAccess")
     public PolicyMicrophoneAccessEnum microphoneAccess;
+
     public Policy withMicrophoneAccess(PolicyMicrophoneAccessEnum microphoneAccess) {
         this.microphoneAccess = microphoneAccess;
         return this;
@@ -469,6 +510,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumApiLevel")
     public Integer minimumApiLevel;
+
     public Policy withMinimumApiLevel(Integer minimumApiLevel) {
         this.minimumApiLevel = minimumApiLevel;
         return this;
@@ -480,6 +522,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileNetworksConfigDisabled")
     public Boolean mobileNetworksConfigDisabled;
+
     public Policy withMobileNetworksConfigDisabled(Boolean mobileNetworksConfigDisabled) {
         this.mobileNetworksConfigDisabled = mobileNetworksConfigDisabled;
         return this;
@@ -491,6 +534,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifyAccountsDisabled")
     public Boolean modifyAccountsDisabled;
+
     public Policy withModifyAccountsDisabled(Boolean modifyAccountsDisabled) {
         this.modifyAccountsDisabled = modifyAccountsDisabled;
         return this;
@@ -502,6 +546,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountPhysicalMediaDisabled")
     public Boolean mountPhysicalMediaDisabled;
+
     public Policy withMountPhysicalMediaDisabled(Boolean mountPhysicalMediaDisabled) {
         this.mountPhysicalMediaDisabled = mountPhysicalMediaDisabled;
         return this;
@@ -513,6 +558,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Policy withName(String name) {
         this.name = name;
         return this;
@@ -524,6 +570,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkEscapeHatchEnabled")
     public Boolean networkEscapeHatchEnabled;
+
     public Policy withNetworkEscapeHatchEnabled(Boolean networkEscapeHatchEnabled) {
         this.networkEscapeHatchEnabled = networkEscapeHatchEnabled;
         return this;
@@ -535,6 +582,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkResetDisabled")
     public Boolean networkResetDisabled;
+
     public Policy withNetworkResetDisabled(Boolean networkResetDisabled) {
         this.networkResetDisabled = networkResetDisabled;
         return this;
@@ -546,6 +594,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oncCertificateProviders")
     public OncCertificateProvider[] oncCertificateProviders;
+
     public Policy withOncCertificateProviders(OncCertificateProvider[] oncCertificateProviders) {
         this.oncCertificateProviders = oncCertificateProviders;
         return this;
@@ -557,6 +606,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openNetworkConfiguration")
     public java.util.Map<String, Object> openNetworkConfiguration;
+
     public Policy withOpenNetworkConfiguration(java.util.Map<String, Object> openNetworkConfiguration) {
         this.openNetworkConfiguration = openNetworkConfiguration;
         return this;
@@ -568,6 +618,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outgoingBeamDisabled")
     public Boolean outgoingBeamDisabled;
+
     public Policy withOutgoingBeamDisabled(Boolean outgoingBeamDisabled) {
         this.outgoingBeamDisabled = outgoingBeamDisabled;
         return this;
@@ -579,6 +630,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outgoingCallsDisabled")
     public Boolean outgoingCallsDisabled;
+
     public Policy withOutgoingCallsDisabled(Boolean outgoingCallsDisabled) {
         this.outgoingCallsDisabled = outgoingCallsDisabled;
         return this;
@@ -590,6 +642,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordPolicies")
     public PasswordRequirements[] passwordPolicies;
+
     public Policy withPasswordPolicies(PasswordRequirements[] passwordPolicies) {
         this.passwordPolicies = passwordPolicies;
         return this;
@@ -601,6 +654,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordRequirements")
     public PasswordRequirements passwordRequirements;
+
     public Policy withPasswordRequirements(PasswordRequirements passwordRequirements) {
         this.passwordRequirements = passwordRequirements;
         return this;
@@ -612,6 +666,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionGrants")
     public PermissionGrant[] permissionGrants;
+
     public Policy withPermissionGrants(PermissionGrant[] permissionGrants) {
         this.permissionGrants = permissionGrants;
         return this;
@@ -623,6 +678,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permittedAccessibilityServices")
     public PackageNameList permittedAccessibilityServices;
+
     public Policy withPermittedAccessibilityServices(PackageNameList permittedAccessibilityServices) {
         this.permittedAccessibilityServices = permittedAccessibilityServices;
         return this;
@@ -634,6 +690,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permittedInputMethods")
     public PackageNameList permittedInputMethods;
+
     public Policy withPermittedInputMethods(PackageNameList permittedInputMethods) {
         this.permittedInputMethods = permittedInputMethods;
         return this;
@@ -645,6 +702,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistentPreferredActivities")
     public PersistentPreferredActivity[] persistentPreferredActivities;
+
     public Policy withPersistentPreferredActivities(PersistentPreferredActivity[] persistentPreferredActivities) {
         this.persistentPreferredActivities = persistentPreferredActivities;
         return this;
@@ -656,6 +714,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalUsagePolicies")
     public PersonalUsagePolicies personalUsagePolicies;
+
     public Policy withPersonalUsagePolicies(PersonalUsagePolicies personalUsagePolicies) {
         this.personalUsagePolicies = personalUsagePolicies;
         return this;
@@ -667,6 +726,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playStoreMode")
     public PolicyPlayStoreModeEnum playStoreMode;
+
     public Policy withPlayStoreMode(PolicyPlayStoreModeEnum playStoreMode) {
         this.playStoreMode = playStoreMode;
         return this;
@@ -678,6 +738,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyEnforcementRules")
     public PolicyEnforcementRule[] policyEnforcementRules;
+
     public Policy withPolicyEnforcementRules(PolicyEnforcementRule[] policyEnforcementRules) {
         this.policyEnforcementRules = policyEnforcementRules;
         return this;
@@ -689,6 +750,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferentialNetworkService")
     public PolicyPreferentialNetworkServiceEnum preferentialNetworkService;
+
     public Policy withPreferentialNetworkService(PolicyPreferentialNetworkServiceEnum preferentialNetworkService) {
         this.preferentialNetworkService = preferentialNetworkService;
         return this;
@@ -700,6 +762,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateKeySelectionEnabled")
     public Boolean privateKeySelectionEnabled;
+
     public Policy withPrivateKeySelectionEnabled(Boolean privateKeySelectionEnabled) {
         this.privateKeySelectionEnabled = privateKeySelectionEnabled;
         return this;
@@ -711,6 +774,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedGlobalProxy")
     public ProxyInfo recommendedGlobalProxy;
+
     public Policy withRecommendedGlobalProxy(ProxyInfo recommendedGlobalProxy) {
         this.recommendedGlobalProxy = recommendedGlobalProxy;
         return this;
@@ -722,6 +786,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeUserDisabled")
     public Boolean removeUserDisabled;
+
     public Policy withRemoveUserDisabled(Boolean removeUserDisabled) {
         this.removeUserDisabled = removeUserDisabled;
         return this;
@@ -733,6 +798,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("safeBootDisabled")
     public Boolean safeBootDisabled;
+
     public Policy withSafeBootDisabled(Boolean safeBootDisabled) {
         this.safeBootDisabled = safeBootDisabled;
         return this;
@@ -744,6 +810,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenCaptureDisabled")
     public Boolean screenCaptureDisabled;
+
     public Policy withScreenCaptureDisabled(Boolean screenCaptureDisabled) {
         this.screenCaptureDisabled = screenCaptureDisabled;
         return this;
@@ -755,6 +822,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setUserIconDisabled")
     public Boolean setUserIconDisabled;
+
     public Policy withSetUserIconDisabled(Boolean setUserIconDisabled) {
         this.setUserIconDisabled = setUserIconDisabled;
         return this;
@@ -766,6 +834,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setWallpaperDisabled")
     public Boolean setWallpaperDisabled;
+
     public Policy withSetWallpaperDisabled(Boolean setWallpaperDisabled) {
         this.setWallpaperDisabled = setWallpaperDisabled;
         return this;
@@ -777,6 +846,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setupActions")
     public SetupAction[] setupActions;
+
     public Policy withSetupActions(SetupAction[] setupActions) {
         this.setupActions = setupActions;
         return this;
@@ -788,6 +858,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareLocationDisabled")
     public Boolean shareLocationDisabled;
+
     public Policy withShareLocationDisabled(Boolean shareLocationDisabled) {
         this.shareLocationDisabled = shareLocationDisabled;
         return this;
@@ -799,6 +870,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortSupportMessage")
     public UserFacingMessage shortSupportMessage;
+
     public Policy withShortSupportMessage(UserFacingMessage shortSupportMessage) {
         this.shortSupportMessage = shortSupportMessage;
         return this;
@@ -810,6 +882,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipFirstUseHintsEnabled")
     public Boolean skipFirstUseHintsEnabled;
+
     public Policy withSkipFirstUseHintsEnabled(Boolean skipFirstUseHintsEnabled) {
         this.skipFirstUseHintsEnabled = skipFirstUseHintsEnabled;
         return this;
@@ -821,6 +894,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smsDisabled")
     public Boolean smsDisabled;
+
     public Policy withSmsDisabled(Boolean smsDisabled) {
         this.smsDisabled = smsDisabled;
         return this;
@@ -832,6 +906,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusBarDisabled")
     public Boolean statusBarDisabled;
+
     public Policy withStatusBarDisabled(Boolean statusBarDisabled) {
         this.statusBarDisabled = statusBarDisabled;
         return this;
@@ -843,6 +918,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReportingSettings")
     public StatusReportingSettings statusReportingSettings;
+
     public Policy withStatusReportingSettings(StatusReportingSettings statusReportingSettings) {
         this.statusReportingSettings = statusReportingSettings;
         return this;
@@ -854,6 +930,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stayOnPluggedModes")
     public PolicyStayOnPluggedModesEnum[] stayOnPluggedModes;
+
     public Policy withStayOnPluggedModes(PolicyStayOnPluggedModesEnum[] stayOnPluggedModes) {
         this.stayOnPluggedModes = stayOnPluggedModes;
         return this;
@@ -865,6 +942,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemUpdate")
     public SystemUpdate systemUpdate;
+
     public Policy withSystemUpdate(SystemUpdate systemUpdate) {
         this.systemUpdate = systemUpdate;
         return this;
@@ -876,6 +954,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tetheringConfigDisabled")
     public Boolean tetheringConfigDisabled;
+
     public Policy withTetheringConfigDisabled(Boolean tetheringConfigDisabled) {
         this.tetheringConfigDisabled = tetheringConfigDisabled;
         return this;
@@ -887,6 +966,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uninstallAppsDisabled")
     public Boolean uninstallAppsDisabled;
+
     public Policy withUninstallAppsDisabled(Boolean uninstallAppsDisabled) {
         this.uninstallAppsDisabled = uninstallAppsDisabled;
         return this;
@@ -898,6 +978,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unmuteMicrophoneDisabled")
     public Boolean unmuteMicrophoneDisabled;
+
     public Policy withUnmuteMicrophoneDisabled(Boolean unmuteMicrophoneDisabled) {
         this.unmuteMicrophoneDisabled = unmuteMicrophoneDisabled;
         return this;
@@ -909,6 +990,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageLog")
     public UsageLog usageLog;
+
     public Policy withUsageLog(UsageLog usageLog) {
         this.usageLog = usageLog;
         return this;
@@ -920,6 +1002,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usbFileTransferDisabled")
     public Boolean usbFileTransferDisabled;
+
     public Policy withUsbFileTransferDisabled(Boolean usbFileTransferDisabled) {
         this.usbFileTransferDisabled = usbFileTransferDisabled;
         return this;
@@ -931,6 +1014,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usbMassStorageEnabled")
     public Boolean usbMassStorageEnabled;
+
     public Policy withUsbMassStorageEnabled(Boolean usbMassStorageEnabled) {
         this.usbMassStorageEnabled = usbMassStorageEnabled;
         return this;
@@ -942,6 +1026,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Policy withVersion(String version) {
         this.version = version;
         return this;
@@ -953,6 +1038,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpnConfigDisabled")
     public Boolean vpnConfigDisabled;
+
     public Policy withVpnConfigDisabled(Boolean vpnConfigDisabled) {
         this.vpnConfigDisabled = vpnConfigDisabled;
         return this;
@@ -964,6 +1050,7 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifiConfigDisabled")
     public Boolean wifiConfigDisabled;
+
     public Policy withWifiConfigDisabled(Boolean wifiConfigDisabled) {
         this.wifiConfigDisabled = wifiConfigDisabled;
         return this;
@@ -975,9 +1062,11 @@ public class Policy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifiConfigsLockdownEnabled")
     public Boolean wifiConfigsLockdownEnabled;
+
     public Policy withWifiConfigsLockdownEnabled(Boolean wifiConfigsLockdownEnabled) {
         this.wifiConfigsLockdownEnabled = wifiConfigsLockdownEnabled;
         return this;
     }
     
+    public Policy(){}
 }

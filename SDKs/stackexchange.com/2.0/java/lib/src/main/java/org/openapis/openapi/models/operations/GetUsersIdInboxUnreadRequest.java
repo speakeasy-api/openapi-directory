@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdInboxUnreadRequest {
@@ -13,6 +14,7 @@ public class GetUsersIdInboxUnreadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetUsersIdInboxUnreadRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetUsersIdInboxUnreadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetUsersIdInboxUnreadRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -60,6 +63,7 @@ public class GetUsersIdInboxUnreadRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetUsersIdInboxUnreadRequest withId(Long id) {
         this.id = id;
         return this;
@@ -67,6 +71,7 @@ public class GetUsersIdInboxUnreadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetUsersIdInboxUnreadRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -74,6 +79,7 @@ public class GetUsersIdInboxUnreadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetUsersIdInboxUnreadRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -84,6 +90,7 @@ public class GetUsersIdInboxUnreadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public Long since;
+
     public GetUsersIdInboxUnreadRequest withSince(Long since) {
         this.since = since;
         return this;
@@ -95,9 +102,14 @@ public class GetUsersIdInboxUnreadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetUsersIdInboxUnreadRequest withSite(String site) {
         this.site = site;
         return this;
     }
     
+    public GetUsersIdInboxUnreadRequest(@JsonProperty("id") Long id, @JsonProperty("site") String site) {
+        this.id = id;
+        this.site = site;
+  }
 }

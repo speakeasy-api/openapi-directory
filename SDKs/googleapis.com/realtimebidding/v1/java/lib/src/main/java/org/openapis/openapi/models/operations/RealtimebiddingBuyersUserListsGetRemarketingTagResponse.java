@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RealtimebiddingBuyersUserListsGetRemarketingTagResponse {
     
     public String contentType;
+
     public RealtimebiddingBuyersUserListsGetRemarketingTagResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RealtimebiddingBuyersUserListsGetRemarketingTagResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRemarketingTagResponse getRemarketingTagResponse;
+
     public RealtimebiddingBuyersUserListsGetRemarketingTagResponse withGetRemarketingTagResponse(org.openapis.openapi.models.shared.GetRemarketingTagResponse getRemarketingTagResponse) {
         this.getRemarketingTagResponse = getRemarketingTagResponse;
         return this;
@@ -26,6 +29,7 @@ public class RealtimebiddingBuyersUserListsGetRemarketingTagResponse {
     
     
     public Integer statusCode;
+
     public RealtimebiddingBuyersUserListsGetRemarketingTagResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RealtimebiddingBuyersUserListsGetRemarketingTagResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RealtimebiddingBuyersUserListsGetRemarketingTagResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RealtimebiddingBuyersUserListsGetRemarketingTagResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

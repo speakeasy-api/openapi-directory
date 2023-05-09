@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsCrashGroupModelCountsResponse {
@@ -12,6 +13,7 @@ public class AnalyticsCrashGroupModelCountsResponse {
      */
     
     public AnalyticsCrashGroupModelCounts200ApplicationJSON analyticsCrashGroupModelCounts200ApplicationJSONObject;
+
     public AnalyticsCrashGroupModelCountsResponse withAnalyticsCrashGroupModelCounts200ApplicationJSONObject(AnalyticsCrashGroupModelCounts200ApplicationJSON analyticsCrashGroupModelCounts200ApplicationJSONObject) {
         this.analyticsCrashGroupModelCounts200ApplicationJSONObject = analyticsCrashGroupModelCounts200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsCrashGroupModelCountsResponse {
      */
     
     public AnalyticsCrashGroupModelCountsDefaultApplicationJSON analyticsCrashGroupModelCountsDefaultApplicationJSONObject;
+
     public AnalyticsCrashGroupModelCountsResponse withAnalyticsCrashGroupModelCountsDefaultApplicationJSONObject(AnalyticsCrashGroupModelCountsDefaultApplicationJSON analyticsCrashGroupModelCountsDefaultApplicationJSONObject) {
         this.analyticsCrashGroupModelCountsDefaultApplicationJSONObject = analyticsCrashGroupModelCountsDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsCrashGroupModelCountsResponse {
     
     
     public String contentType;
+
     public AnalyticsCrashGroupModelCountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class AnalyticsCrashGroupModelCountsResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsCrashGroupModelCountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AnalyticsCrashGroupModelCountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsCrashGroupModelCountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsCrashGroupModelCountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

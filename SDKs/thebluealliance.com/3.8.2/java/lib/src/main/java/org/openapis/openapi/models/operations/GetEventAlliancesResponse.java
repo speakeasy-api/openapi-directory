@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEventAlliancesResponse {
     
     public String contentType;
+
     public GetEventAlliancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEventAlliancesResponse {
      */
     
     public org.openapis.openapi.models.shared.EliminationAlliance[] eliminationAlliances;
+
     public GetEventAlliancesResponse withEliminationAlliances(org.openapis.openapi.models.shared.EliminationAlliance[] eliminationAlliances) {
         this.eliminationAlliances = eliminationAlliances;
         return this;
@@ -26,6 +29,7 @@ public class GetEventAlliancesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetEventAlliancesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetEventAlliancesResponse {
     
     
     public Integer statusCode;
+
     public GetEventAlliancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetEventAlliancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEventAlliancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEventAlliancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

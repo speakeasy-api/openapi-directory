@@ -12,9 +12,11 @@ public class GETHTMLUsingGET200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html")
     public String html;
+
     public GETHTMLUsingGET200ApplicationJSONData withHtml(String html) {
         this.html = html;
         return this;
     }
     
+    public GETHTMLUsingGET200ApplicationJSONData(){}
 }

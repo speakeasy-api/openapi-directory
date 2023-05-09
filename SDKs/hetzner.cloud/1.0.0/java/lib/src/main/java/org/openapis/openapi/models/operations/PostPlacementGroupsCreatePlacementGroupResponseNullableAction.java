@@ -12,6 +12,7 @@ public class PostPlacementGroupsCreatePlacementGroupResponseNullableAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostPlacementGroupsCreatePlacementGroupResponseNullableAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostPlacementGroupsCreatePlacementGroupResponseNullableAction {
      */
     @JsonProperty("error")
     public PostPlacementGroupsCreatePlacementGroupResponseNullableActionError error;
+
     public PostPlacementGroupsCreatePlacementGroupResponseNullableAction withError(PostPlacementGroupsCreatePlacementGroupResponseNullableActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostPlacementGroupsCreatePlacementGroupResponseNullableAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostPlacementGroupsCreatePlacementGroupResponseNullableAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostPlacementGroupsCreatePlacementGroupResponseNullableAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostPlacementGroupsCreatePlacementGroupResponseNullableAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostPlacementGroupsCreatePlacementGroupResponseNullableAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostPlacementGroupsCreatePlacementGroupResponseNullableAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostPlacementGroupsCreatePlacementGroupResponseNullableAction {
      */
     @JsonProperty("resources")
     public PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources[] resources;
+
     public PostPlacementGroupsCreatePlacementGroupResponseNullableAction withResources(PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostPlacementGroupsCreatePlacementGroupResponseNullableAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostPlacementGroupsCreatePlacementGroupResponseNullableAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostPlacementGroupsCreatePlacementGroupResponseNullableAction {
      */
     @JsonProperty("status")
     public PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum status;
+
     public PostPlacementGroupsCreatePlacementGroupResponseNullableAction withStatus(PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostPlacementGroupsCreatePlacementGroupResponseNullableAction(@JsonProperty("command") String command, @JsonProperty("error") PostPlacementGroupsCreatePlacementGroupResponseNullableActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

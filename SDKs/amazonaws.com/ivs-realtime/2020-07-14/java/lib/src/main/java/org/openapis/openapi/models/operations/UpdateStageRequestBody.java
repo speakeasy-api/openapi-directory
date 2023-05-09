@@ -14,6 +14,7 @@ public class UpdateStageRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public UpdateStageRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -25,9 +26,13 @@ public class UpdateStageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateStageRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateStageRequestBody(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

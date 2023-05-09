@@ -18,6 +18,7 @@ public class DatasetTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetIdPrefix")
     public String datasetIdPrefix;
+
     public DatasetTemplate withDatasetIdPrefix(String datasetIdPrefix) {
         this.datasetIdPrefix = datasetIdPrefix;
         return this;
@@ -29,6 +30,7 @@ public class DatasetTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public DatasetTemplate withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
@@ -40,9 +42,11 @@ public class DatasetTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public DatasetTemplate withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public DatasetTemplate(){}
 }

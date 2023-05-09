@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV4LayersAsPlantedActivityIdContentsRequest {
@@ -12,6 +13,7 @@ public class GetV4LayersAsPlantedActivityIdContentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetV4LayersAsPlantedActivityIdContentsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetV4LayersAsPlantedActivityIdContentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
     public String range;
+
     public GetV4LayersAsPlantedActivityIdContentsRequest withRange(String range) {
         this.range = range;
         return this;
@@ -32,9 +35,15 @@ public class GetV4LayersAsPlantedActivityIdContentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=activityId")
     public String activityId;
+
     public GetV4LayersAsPlantedActivityIdContentsRequest withActivityId(String activityId) {
         this.activityId = activityId;
         return this;
     }
     
+    public GetV4LayersAsPlantedActivityIdContentsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Range") String range, @JsonProperty("activityId") String activityId) {
+        this.accept = accept;
+        this.range = range;
+        this.activityId = activityId;
+  }
 }

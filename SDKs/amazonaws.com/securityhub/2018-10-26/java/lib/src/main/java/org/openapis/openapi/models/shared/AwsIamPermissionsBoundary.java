@@ -15,6 +15,7 @@ public class AwsIamPermissionsBoundary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionsBoundaryArn")
     public String permissionsBoundaryArn;
+
     public AwsIamPermissionsBoundary withPermissionsBoundaryArn(String permissionsBoundaryArn) {
         this.permissionsBoundaryArn = permissionsBoundaryArn;
         return this;
@@ -23,9 +24,11 @@ public class AwsIamPermissionsBoundary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionsBoundaryType")
     public String permissionsBoundaryType;
+
     public AwsIamPermissionsBoundary withPermissionsBoundaryType(String permissionsBoundaryType) {
         this.permissionsBoundaryType = permissionsBoundaryType;
         return this;
     }
     
+    public AwsIamPermissionsBoundary(){}
 }

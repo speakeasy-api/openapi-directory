@@ -12,6 +12,7 @@ public class ProductStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public ProductStatusDataQualityIssue withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -20,6 +21,7 @@ public class ProductStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public ProductStatusDataQualityIssue withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -28,6 +30,7 @@ public class ProductStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fetchStatus")
     public String fetchStatus;
+
     public ProductStatusDataQualityIssue withFetchStatus(String fetchStatus) {
         this.fetchStatus = fetchStatus;
         return this;
@@ -36,6 +39,7 @@ public class ProductStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ProductStatusDataQualityIssue withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class ProductStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public ProductStatusDataQualityIssue withLocation(String location) {
         this.location = location;
         return this;
@@ -52,6 +57,7 @@ public class ProductStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public String severity;
+
     public ProductStatusDataQualityIssue withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -60,6 +66,7 @@ public class ProductStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public ProductStatusDataQualityIssue withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -68,6 +75,7 @@ public class ProductStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueOnLandingPage")
     public String valueOnLandingPage;
+
     public ProductStatusDataQualityIssue withValueOnLandingPage(String valueOnLandingPage) {
         this.valueOnLandingPage = valueOnLandingPage;
         return this;
@@ -76,9 +84,11 @@ public class ProductStatusDataQualityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueProvided")
     public String valueProvided;
+
     public ProductStatusDataQualityIssue withValueProvided(String valueProvided) {
         this.valueProvided = valueProvided;
         return this;
     }
     
+    public ProductStatusDataQualityIssue(){}
 }

@@ -17,6 +17,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public ShipmentRequestBaseVO withCity(String city) {
         this.city = city;
         return this;
@@ -25,6 +26,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     public String companyName;
+
     public ShipmentRequestBaseVO withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -33,6 +35,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ShipmentRequestBaseVO withCountry(String country) {
         this.country = country;
         return this;
@@ -41,6 +44,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     public String countryCode;
+
     public ShipmentRequestBaseVO withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -49,6 +53,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public PropertyPaAndAttVO[] customFields;
+
     public ShipmentRequestBaseVO withCustomFields(PropertyPaAndAttVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -57,6 +62,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description_or_title")
     public String descriptionOrTitle;
+
     public ShipmentRequestBaseVO withDescriptionOrTitle(String descriptionOrTitle) {
         this.descriptionOrTitle = descriptionOrTitle;
         return this;
@@ -66,6 +72,7 @@ public class ShipmentRequestBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("due_date")
     public LocalDate dueDate;
+
     public ShipmentRequestBaseVO withDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -74,6 +81,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ShipmentRequestBaseVO withEmail(String email) {
         this.email = email;
         return this;
@@ -82,6 +90,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public ShipmentRequestBaseVO withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -90,6 +99,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_use_spec_packaging")
     public Boolean isUseSpecPackaging;
+
     public ShipmentRequestBaseVO withIsUseSpecPackaging(Boolean isUseSpecPackaging) {
         this.isUseSpecPackaging = isUseSpecPackaging;
         return this;
@@ -98,6 +108,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public ShipmentRequestBaseVO withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -106,6 +117,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line_1")
     public String line1;
+
     public ShipmentRequestBaseVO withLine1(String line1) {
         this.line1 = line1;
         return this;
@@ -114,6 +126,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line_2")
     public String line2;
+
     public ShipmentRequestBaseVO withLine2(String line2) {
         this.line2 = line2;
         return this;
@@ -122,6 +135,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line_3")
     public String line3;
+
     public ShipmentRequestBaseVO withLine3(String line3) {
         this.line3 = line3;
         return this;
@@ -130,6 +144,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public Long locationId;
+
     public ShipmentRequestBaseVO withLocationId(Long locationId) {
         this.locationId = locationId;
         return this;
@@ -138,6 +153,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middle_name")
     public String middleName;
+
     public ShipmentRequestBaseVO withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -146,6 +162,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal")
     public String postal;
+
     public ShipmentRequestBaseVO withPostal(String postal) {
         this.postal = postal;
         return this;
@@ -154,6 +171,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proof_type")
     public String proofType;
+
     public ShipmentRequestBaseVO withProofType(String proofType) {
         this.proofType = proofType;
         return this;
@@ -162,6 +180,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qty_received")
     public Long qtyReceived;
+
     public ShipmentRequestBaseVO withQtyReceived(Long qtyReceived) {
         this.qtyReceived = qtyReceived;
         return this;
@@ -170,6 +189,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qty_requested")
     public Long qtyRequested;
+
     public ShipmentRequestBaseVO withQtyRequested(Long qtyRequested) {
         this.qtyRequested = qtyRequested;
         return this;
@@ -178,6 +198,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qty_shipped")
     public Long qtyShipped;
+
     public ShipmentRequestBaseVO withQtyShipped(Long qtyShipped) {
         this.qtyShipped = qtyShipped;
         return this;
@@ -186,6 +207,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("received_comments")
     public String receivedComments;
+
     public ShipmentRequestBaseVO withReceivedComments(String receivedComments) {
         this.receivedComments = receivedComments;
         return this;
@@ -195,6 +217,7 @@ public class ShipmentRequestBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("received_date")
     public LocalDate receivedDate;
+
     public ShipmentRequestBaseVO withReceivedDate(LocalDate receivedDate) {
         this.receivedDate = receivedDate;
         return this;
@@ -203,6 +226,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_shipping_carrier")
     public String requestedShippingCarrier;
+
     public ShipmentRequestBaseVO withRequestedShippingCarrier(String requestedShippingCarrier) {
         this.requestedShippingCarrier = requestedShippingCarrier;
         return this;
@@ -211,6 +235,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_shipping_method")
     public String requestedShippingMethod;
+
     public ShipmentRequestBaseVO withRequestedShippingMethod(String requestedShippingMethod) {
         this.requestedShippingMethod = requestedShippingMethod;
         return this;
@@ -219,6 +244,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipped_comments")
     public String shippedComments;
+
     public ShipmentRequestBaseVO withShippedComments(String shippedComments) {
         this.shippedComments = shippedComments;
         return this;
@@ -228,6 +254,7 @@ public class ShipmentRequestBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("shipped_date")
     public LocalDate shippedDate;
+
     public ShipmentRequestBaseVO withShippedDate(LocalDate shippedDate) {
         this.shippedDate = shippedDate;
         return this;
@@ -236,6 +263,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipped_in_units")
     public Long shippedInUnits;
+
     public ShipmentRequestBaseVO withShippedInUnits(Long shippedInUnits) {
         this.shippedInUnits = shippedInUnits;
         return this;
@@ -244,6 +272,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipped_in_uofm")
     public String shippedInUofm;
+
     public ShipmentRequestBaseVO withShippedInUofm(String shippedInUofm) {
         this.shippedInUofm = shippedInUofm;
         return this;
@@ -252,6 +281,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipped_shipping_carrier")
     public String shippedShippingCarrier;
+
     public ShipmentRequestBaseVO withShippedShippingCarrier(String shippedShippingCarrier) {
         this.shippedShippingCarrier = shippedShippingCarrier;
         return this;
@@ -260,6 +290,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipped_shipping_method")
     public String shippedShippingMethod;
+
     public ShipmentRequestBaseVO withShippedShippingMethod(String shippedShippingMethod) {
         this.shippedShippingMethod = shippedShippingMethod;
         return this;
@@ -271,6 +302,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_cost")
     public Object shippingCost;
+
     public ShipmentRequestBaseVO withShippingCost(Object shippingCost) {
         this.shippingCost = shippingCost;
         return this;
@@ -279,6 +311,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_instruction")
     public String shippingInstruction;
+
     public ShipmentRequestBaseVO withShippingInstruction(String shippingInstruction) {
         this.shippingInstruction = shippingInstruction;
         return this;
@@ -287,6 +320,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ShipmentRequestBaseVO withState(String state) {
         this.state = state;
         return this;
@@ -298,6 +332,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Object tax;
+
     public ShipmentRequestBaseVO withTax(Object tax) {
         this.tax = tax;
         return this;
@@ -306,6 +341,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_number")
     public String trackingNumber;
+
     public ShipmentRequestBaseVO withTrackingNumber(String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
@@ -314,6 +350,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ShipmentRequestBaseVO withType(String type) {
         this.type = type;
         return this;
@@ -325,6 +362,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Object weight;
+
     public ShipmentRequestBaseVO withWeight(Object weight) {
         this.weight = weight;
         return this;
@@ -333,6 +371,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight_uofm")
     public String weightUofm;
+
     public ShipmentRequestBaseVO withWeightUofm(String weightUofm) {
         this.weightUofm = weightUofm;
         return this;
@@ -341,6 +380,7 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("work_phone_number")
     public String workPhoneNumber;
+
     public ShipmentRequestBaseVO withWorkPhoneNumber(String workPhoneNumber) {
         this.workPhoneNumber = workPhoneNumber;
         return this;
@@ -349,9 +389,11 @@ public class ShipmentRequestBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroup_name")
     public String workgroupName;
+
     public ShipmentRequestBaseVO withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public ShipmentRequestBaseVO(){}
 }

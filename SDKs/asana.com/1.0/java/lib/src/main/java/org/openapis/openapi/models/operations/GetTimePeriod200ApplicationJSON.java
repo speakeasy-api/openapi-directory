@@ -15,9 +15,11 @@ public class GetTimePeriod200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TimePeriodResponse data;
+
     public GetTimePeriod200ApplicationJSON withData(org.openapis.openapi.models.shared.TimePeriodResponse data) {
         this.data = data;
         return this;
     }
     
+    public GetTimePeriod200ApplicationJSON(){}
 }

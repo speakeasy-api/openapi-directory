@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.FactchecktoolsClaimsSearchRequest;
 import org.openapis.openapi.models.operations.FactchecktoolsClaimsSearchResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -29,17 +28,17 @@ public class Application {
                 .build();
 
             FactchecktoolsClaimsSearchRequest req = new FactchecktoolsClaimsSearchRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 key = "nulla";
                 languageCode = "corrupti";
-                maxAgeDays = 847252;
+                maxAgeDays = 847252L;
                 oauthToken = "vel";
-                offset = 623564;
-                pageSize = 645894;
+                offset = 623564L;
+                pageSize = 645894L;
                 pageToken = "suscipit";
                 prettyPrint = false;
                 query = "iure";
@@ -47,16 +46,18 @@ public class Application {
                 reviewPublisherSiteFilter = "debitis";
                 uploadType = "ipsa";
                 uploadProtocol = "delectus";
-            }}            
+            }};            
 
             FactchecktoolsClaimsSearchResponse res = sdk.claims.factchecktoolsClaimsSearch(req);
 
-            if (res.googleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse.isPresent()) {
+            if (res.googleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -64,17 +65,17 @@ public class Application {
 ## Available Resources and Operations
 
 
-### claims
+### [claims](docs/claims/README.md)
 
-* `factchecktoolsClaimsSearch` - Search through fact-checked claims.
+* [factchecktoolsClaimsSearch](docs/claims/README.md#factchecktoolsclaimssearch) - Search through fact-checked claims.
 
-### pages
+### [pages](docs/pages/README.md)
 
-* `factchecktoolsPagesCreate` - Create `ClaimReview` markup on a page.
-* `factchecktoolsPagesDelete` - Delete all `ClaimReview` markup on a page.
-* `factchecktoolsPagesGet` - Get all `ClaimReview` markup on a page.
-* `factchecktoolsPagesList` - List the `ClaimReview` markup pages for a specific URL or for an organization.
-* `factchecktoolsPagesUpdate` - Update for all `ClaimReview` markup on a page Note that this is a full update. To retain the existing `ClaimReview` markup on a page, first perform a Get operation, then modify the returned markup, and finally call Update with the entire `ClaimReview` markup as the body.
+* [factchecktoolsPagesCreate](docs/pages/README.md#factchecktoolspagescreate) - Create `ClaimReview` markup on a page.
+* [factchecktoolsPagesDelete](docs/pages/README.md#factchecktoolspagesdelete) - Delete all `ClaimReview` markup on a page.
+* [factchecktoolsPagesGet](docs/pages/README.md#factchecktoolspagesget) - Get all `ClaimReview` markup on a page.
+* [factchecktoolsPagesList](docs/pages/README.md#factchecktoolspageslist) - List the `ClaimReview` markup pages for a specific URL or for an organization.
+* [factchecktoolsPagesUpdate](docs/pages/README.md#factchecktoolspagesupdate) - Update for all `ClaimReview` markup on a page Note that this is a full update. To retain the existing `ClaimReview` markup on a page, first perform a Get operation, then modify the returned markup, and finally call Update with the entire `ClaimReview` markup as the body.
 <!-- End SDK Available Operations -->
 
 ### Maturity

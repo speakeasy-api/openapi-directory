@@ -59,7 +59,7 @@ public class CustomReports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportsCustomCreateResponse res = new org.openapis.openapi.models.operations.GetReportsCustomCreateResponse() {{
+        org.openapis.openapi.models.operations.GetReportsCustomCreateResponse res = new org.openapis.openapi.models.operations.GetReportsCustomCreateResponse(contentType, httpRes.statusCode()) {{
             customCreate = null;
             fourHundredError = null;
             fourHundredAndOneError = null;
@@ -67,8 +67,6 @@ public class CustomReports {
             fourHundredAndFourError = null;
             fiveHundredError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -146,15 +144,13 @@ public class CustomReports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportsCustomGenerateResponse res = new org.openapis.openapi.models.operations.GetReportsCustomGenerateResponse() {{
+        org.openapis.openapi.models.operations.GetReportsCustomGenerateResponse res = new org.openapis.openapi.models.operations.GetReportsCustomGenerateResponse(contentType, httpRes.statusCode()) {{
             customGenerate = null;
             fourHundredError = null;
             fourHundredAndOneError = null;
             fourHundredAndThreeError = null;
             fiveHundredError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,7 +221,7 @@ public class CustomReports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportsCustomInsertResponse res = new org.openapis.openapi.models.operations.GetReportsCustomInsertResponse() {{
+        org.openapis.openapi.models.operations.GetReportsCustomInsertResponse res = new org.openapis.openapi.models.operations.GetReportsCustomInsertResponse(contentType, httpRes.statusCode()) {{
             customInsert = null;
             fourHundredError = null;
             fourHundredAndOneError = null;
@@ -233,8 +229,6 @@ public class CustomReports {
             fourHundredAndFourError = null;
             fiveHundredError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -312,7 +306,7 @@ public class CustomReports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostReportsCustomCreateResponse res = new org.openapis.openapi.models.operations.PostReportsCustomCreateResponse() {{
+        org.openapis.openapi.models.operations.PostReportsCustomCreateResponse res = new org.openapis.openapi.models.operations.PostReportsCustomCreateResponse(contentType, httpRes.statusCode()) {{
             customCreate = null;
             fourHundredError = null;
             fourHundredAndOneError = null;
@@ -320,8 +314,6 @@ public class CustomReports {
             fourHundredAndFourError = null;
             fiveHundredError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -399,15 +391,13 @@ public class CustomReports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostReportsCustomGenerateResponse res = new org.openapis.openapi.models.operations.PostReportsCustomGenerateResponse() {{
+        org.openapis.openapi.models.operations.PostReportsCustomGenerateResponse res = new org.openapis.openapi.models.operations.PostReportsCustomGenerateResponse(contentType, httpRes.statusCode()) {{
             customGenerate = null;
             fourHundredError = null;
             fourHundredAndOneError = null;
             fourHundredAndThreeError = null;
             fiveHundredError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -478,7 +468,7 @@ public class CustomReports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostReportsCustomInsertResponse res = new org.openapis.openapi.models.operations.PostReportsCustomInsertResponse() {{
+        org.openapis.openapi.models.operations.PostReportsCustomInsertResponse res = new org.openapis.openapi.models.operations.PostReportsCustomInsertResponse(contentType, httpRes.statusCode()) {{
             customInsert = null;
             fourHundredError = null;
             fourHundredAndOneError = null;
@@ -486,8 +476,6 @@ public class CustomReports {
             fourHundredAndFourError = null;
             fiveHundredError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

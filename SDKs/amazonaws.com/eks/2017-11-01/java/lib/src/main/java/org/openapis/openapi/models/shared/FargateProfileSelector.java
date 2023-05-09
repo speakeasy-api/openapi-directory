@@ -15,6 +15,7 @@ public class FargateProfileSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public FargateProfileSelector withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -23,9 +24,11 @@ public class FargateProfileSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public FargateProfileSelector withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public FargateProfileSelector(){}
 }

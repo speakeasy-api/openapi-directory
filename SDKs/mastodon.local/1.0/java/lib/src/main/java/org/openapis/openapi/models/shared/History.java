@@ -16,6 +16,7 @@ public class History {
      */
     @JsonProperty("accounts")
     public String accounts;
+
     public History withAccounts(String accounts) {
         this.accounts = accounts;
         return this;
@@ -26,6 +27,7 @@ public class History {
      */
     @JsonProperty("day")
     public String day;
+
     public History withDay(String day) {
         this.day = day;
         return this;
@@ -36,9 +38,15 @@ public class History {
      */
     @JsonProperty("uses")
     public String uses;
+
     public History withUses(String uses) {
         this.uses = uses;
         return this;
     }
     
+    public History(@JsonProperty("accounts") String accounts, @JsonProperty("day") String day, @JsonProperty("uses") String uses) {
+        this.accounts = accounts;
+        this.day = day;
+        this.uses = uses;
+  }
 }

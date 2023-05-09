@@ -15,9 +15,11 @@ public class UsersAddonAccountsListAddonAccountLinks {
      */
     
     public String self;
+
     public UsersAddonAccountsListAddonAccountLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public UsersAddonAccountsListAddonAccountLinks(){}
 }

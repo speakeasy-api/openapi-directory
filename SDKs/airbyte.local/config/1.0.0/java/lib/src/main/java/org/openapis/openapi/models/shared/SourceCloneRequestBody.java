@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SourceCloneRequestBody {
     @JsonProperty("sourceCloneId")
     public String sourceCloneId;
+
     public SourceCloneRequestBody withSourceCloneId(String sourceCloneId) {
         this.sourceCloneId = sourceCloneId;
         return this;
@@ -22,9 +23,13 @@ public class SourceCloneRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceConfiguration")
     public SourceCloneConfiguration sourceConfiguration;
+
     public SourceCloneRequestBody withSourceConfiguration(SourceCloneConfiguration sourceConfiguration) {
         this.sourceConfiguration = sourceConfiguration;
         return this;
     }
     
+    public SourceCloneRequestBody(@JsonProperty("sourceCloneId") String sourceCloneId) {
+        this.sourceCloneId = sourceCloneId;
+  }
 }

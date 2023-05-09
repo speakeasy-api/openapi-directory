@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClassificationsBusinessNameLifecycleStatesResponse {
     
     public String contentType;
+
     public GetClassificationsBusinessNameLifecycleStatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetClassificationsBusinessNameLifecycleStatesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetClassificationsBusinessNameLifecycleStatesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetClassificationsBusinessNameLifecycleStatesResponse {
     
     
     public Integer statusCode;
+
     public GetClassificationsBusinessNameLifecycleStatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetClassificationsBusinessNameLifecycleStatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClassificationsBusinessNameLifecycleStatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetClassificationsBusinessNameLifecycleStatesResponse {
      */
     
     public org.openapis.openapi.models.shared.BusinessNameLifecycleState[] businessNameLifecycleStates;
+
     public GetClassificationsBusinessNameLifecycleStatesResponse withBusinessNameLifecycleStates(org.openapis.openapi.models.shared.BusinessNameLifecycleState[] businessNameLifecycleStates) {
         this.businessNameLifecycleStates = businessNameLifecycleStates;
         return this;
@@ -50,6 +56,7 @@ public class GetClassificationsBusinessNameLifecycleStatesResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetClassificationsBusinessNameLifecycleStatesResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -60,9 +67,14 @@ public class GetClassificationsBusinessNameLifecycleStatesResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetClassificationsBusinessNameLifecycleStatesResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetClassificationsBusinessNameLifecycleStatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

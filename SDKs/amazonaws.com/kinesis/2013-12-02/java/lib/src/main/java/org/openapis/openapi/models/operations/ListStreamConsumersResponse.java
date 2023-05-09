@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListStreamConsumersResponse {
     
     public String contentType;
+
     public ListStreamConsumersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListStreamConsumersResponse {
      */
     
     public Object expiredNextTokenException;
+
     public ListStreamConsumersResponse withExpiredNextTokenException(Object expiredNextTokenException) {
         this.expiredNextTokenException = expiredNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListStreamConsumersResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListStreamConsumersResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class ListStreamConsumersResponse {
      */
     
     public Object limitExceededException;
+
     public ListStreamConsumersResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ListStreamConsumersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListStreamConsumersOutput listStreamConsumersOutput;
+
     public ListStreamConsumersResponse withListStreamConsumersOutput(org.openapis.openapi.models.shared.ListStreamConsumersOutput listStreamConsumersOutput) {
         this.listStreamConsumersOutput = listStreamConsumersOutput;
         return this;
@@ -59,6 +65,7 @@ public class ListStreamConsumersResponse {
      */
     
     public Object resourceInUseException;
+
     public ListStreamConsumersResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class ListStreamConsumersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListStreamConsumersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class ListStreamConsumersResponse {
     
     
     public Integer statusCode;
+
     public ListStreamConsumersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListStreamConsumersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListStreamConsumersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListStreamConsumersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

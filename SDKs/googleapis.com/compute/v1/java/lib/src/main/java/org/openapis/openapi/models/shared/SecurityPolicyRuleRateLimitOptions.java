@@ -15,6 +15,7 @@ public class SecurityPolicyRuleRateLimitOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("banDurationSec")
     public Integer banDurationSec;
+
     public SecurityPolicyRuleRateLimitOptions withBanDurationSec(Integer banDurationSec) {
         this.banDurationSec = banDurationSec;
         return this;
@@ -23,6 +24,7 @@ public class SecurityPolicyRuleRateLimitOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("banThreshold")
     public SecurityPolicyRuleRateLimitOptionsThreshold banThreshold;
+
     public SecurityPolicyRuleRateLimitOptions withBanThreshold(SecurityPolicyRuleRateLimitOptionsThreshold banThreshold) {
         this.banThreshold = banThreshold;
         return this;
@@ -34,6 +36,7 @@ public class SecurityPolicyRuleRateLimitOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conformAction")
     public String conformAction;
+
     public SecurityPolicyRuleRateLimitOptions withConformAction(String conformAction) {
         this.conformAction = conformAction;
         return this;
@@ -45,8 +48,21 @@ public class SecurityPolicyRuleRateLimitOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforceOnKey")
     public SecurityPolicyRuleRateLimitOptionsEnforceOnKeyEnum enforceOnKey;
+
     public SecurityPolicyRuleRateLimitOptions withEnforceOnKey(SecurityPolicyRuleRateLimitOptionsEnforceOnKeyEnum enforceOnKey) {
         this.enforceOnKey = enforceOnKey;
+        return this;
+    }
+    
+    /**
+     * If specified, any combination of values of enforce_on_key_type/enforce_on_key_name is treated as the key on which ratelimit threshold/action is enforced. You can specify up to 3 enforce_on_key_configs. If enforce_on_key_configs is specified, enforce_on_key must not be specified.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("enforceOnKeyConfigs")
+    public SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig[] enforceOnKeyConfigs;
+
+    public SecurityPolicyRuleRateLimitOptions withEnforceOnKeyConfigs(SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig[] enforceOnKeyConfigs) {
+        this.enforceOnKeyConfigs = enforceOnKeyConfigs;
         return this;
     }
     
@@ -56,17 +72,19 @@ public class SecurityPolicyRuleRateLimitOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforceOnKeyName")
     public String enforceOnKeyName;
+
     public SecurityPolicyRuleRateLimitOptions withEnforceOnKeyName(String enforceOnKeyName) {
         this.enforceOnKeyName = enforceOnKeyName;
         return this;
     }
     
     /**
-     * Action to take for requests that are above the configured rate limit threshold, to either deny with a specified HTTP response code, or redirect to a different endpoint. Valid options are `deny(STATUS)`, where valid values for `STATUS` are 403, 404, 429, and 502, and `redirect`, where the redirect parameters come from `exceedRedirectOptions` below.
+     * Action to take for requests that are above the configured rate limit threshold, to either deny with a specified HTTP response code, or redirect to a different endpoint. Valid options are `deny(STATUS)`, where valid values for `STATUS` are 403, 404, 429, and 502, and `redirect`, where the redirect parameters come from `exceedRedirectOptions` below. The `redirect` action is only supported in Global Security Policies of type CLOUD_ARMOR.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceedAction")
     public String exceedAction;
+
     public SecurityPolicyRuleRateLimitOptions withExceedAction(String exceedAction) {
         this.exceedAction = exceedAction;
         return this;
@@ -75,6 +93,7 @@ public class SecurityPolicyRuleRateLimitOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceedRedirectOptions")
     public SecurityPolicyRuleRedirectOptions exceedRedirectOptions;
+
     public SecurityPolicyRuleRateLimitOptions withExceedRedirectOptions(SecurityPolicyRuleRedirectOptions exceedRedirectOptions) {
         this.exceedRedirectOptions = exceedRedirectOptions;
         return this;
@@ -83,9 +102,11 @@ public class SecurityPolicyRuleRateLimitOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateLimitThreshold")
     public SecurityPolicyRuleRateLimitOptionsThreshold rateLimitThreshold;
+
     public SecurityPolicyRuleRateLimitOptions withRateLimitThreshold(SecurityPolicyRuleRateLimitOptionsThreshold rateLimitThreshold) {
         this.rateLimitThreshold = rateLimitThreshold;
         return this;
     }
     
+    public SecurityPolicyRuleRateLimitOptions(){}
 }

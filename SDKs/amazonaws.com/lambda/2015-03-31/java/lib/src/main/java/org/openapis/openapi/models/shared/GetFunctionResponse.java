@@ -15,6 +15,7 @@ public class GetFunctionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public FunctionCodeLocation code;
+
     public GetFunctionResponse withCode(FunctionCodeLocation code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class GetFunctionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Concurrency")
     public Concurrency concurrency;
+
     public GetFunctionResponse withConcurrency(Concurrency concurrency) {
         this.concurrency = concurrency;
         return this;
@@ -31,6 +33,7 @@ public class GetFunctionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public FunctionConfiguration configuration;
+
     public GetFunctionResponse withConfiguration(FunctionConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -39,9 +42,11 @@ public class GetFunctionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GetFunctionResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetFunctionResponse(){}
 }

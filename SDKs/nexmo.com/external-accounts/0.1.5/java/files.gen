@@ -91,4 +91,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/MessengerAccountResponse.ja
 lib/src/main/java/org/openapis/openapi/models/shared/FourHundredAndThreeResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/VSMAccountResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/WAAccountResponse.java
+docs/sdk/README.md
+docs/account/README.md
+docs/application/README.md
+docs/facebookmessenger/README.md
+docs/viberservicemessage/README.md
+docs/whatsapp/README.md
 USAGE.md

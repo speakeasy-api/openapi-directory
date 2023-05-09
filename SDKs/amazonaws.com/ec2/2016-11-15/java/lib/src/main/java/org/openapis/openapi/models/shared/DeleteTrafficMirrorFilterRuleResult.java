@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteTrafficMirrorFilterRuleResult {
     
     public String trafficMirrorFilterRuleId;
+
     public DeleteTrafficMirrorFilterRuleResult withTrafficMirrorFilterRuleId(String trafficMirrorFilterRuleId) {
         this.trafficMirrorFilterRuleId = trafficMirrorFilterRuleId;
         return this;
     }
     
+    public DeleteTrafficMirrorFilterRuleResult(){}
 }

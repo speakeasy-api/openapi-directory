@@ -14,6 +14,7 @@ public class ListFindingsRequestBody {
      */
     @JsonProperty("analyzerArn")
     public String analyzerArn;
+
     public ListFindingsRequestBody withAnalyzerArn(String analyzerArn) {
         this.analyzerArn = analyzerArn;
         return this;
@@ -25,6 +26,7 @@ public class ListFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public java.util.Map<String, org.openapis.openapi.models.shared.Criterion> filter;
+
     public ListFindingsRequestBody withFilter(java.util.Map<String, org.openapis.openapi.models.shared.Criterion> filter) {
         this.filter = filter;
         return this;
@@ -36,6 +38,7 @@ public class ListFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListFindingsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -47,6 +50,7 @@ public class ListFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFindingsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -58,9 +62,13 @@ public class ListFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public ListFindingsRequestBodySort sort;
+
     public ListFindingsRequestBody withSort(ListFindingsRequestBodySort sort) {
         this.sort = sort;
         return this;
     }
     
+    public ListFindingsRequestBody(@JsonProperty("analyzerArn") String analyzerArn) {
+        this.analyzerArn = analyzerArn;
+  }
 }

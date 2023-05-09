@@ -59,15 +59,13 @@ public class Application {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApplicationsStatusResponse res = new org.openapis.openapi.models.operations.GetApplicationsStatusResponse() {{
+        org.openapis.openapi.models.operations.GetApplicationsStatusResponse res = new org.openapis.openapi.models.operations.GetApplicationsStatusResponse(contentType, httpRes.statusCode()) {{
             applicationStatus = null;
             fourHundredError = null;
             fourHundredAndOneError = null;
             fourHundredAndThreeError = null;
             fiveHundredError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

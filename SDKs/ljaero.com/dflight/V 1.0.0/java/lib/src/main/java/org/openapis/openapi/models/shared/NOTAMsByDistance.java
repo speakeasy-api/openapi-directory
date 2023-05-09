@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NOTAMsByDistance {
     @JsonProperty("distance")
     public Object distance;
+
     public NOTAMsByDistance withDistance(Object distance) {
         this.distance = distance;
         return this;
@@ -19,6 +20,7 @@ public class NOTAMsByDistance {
     
     @JsonProperty("latitude")
     public Object latitude;
+
     public NOTAMsByDistance withLatitude(Object latitude) {
         this.latitude = latitude;
         return this;
@@ -26,9 +28,15 @@ public class NOTAMsByDistance {
     
     @JsonProperty("longitude")
     public Object longitude;
+
     public NOTAMsByDistance withLongitude(Object longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public NOTAMsByDistance(@JsonProperty("distance") Object distance, @JsonProperty("latitude") Object latitude, @JsonProperty("longitude") Object longitude) {
+        this.distance = distance;
+        this.latitude = latitude;
+        this.longitude = longitude;
+  }
 }

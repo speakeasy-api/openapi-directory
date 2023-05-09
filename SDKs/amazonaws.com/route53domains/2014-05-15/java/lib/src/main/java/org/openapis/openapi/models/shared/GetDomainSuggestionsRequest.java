@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDomainSuggestionsRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public GetDomainSuggestionsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -16,6 +17,7 @@ public class GetDomainSuggestionsRequest {
     
     @JsonProperty("OnlyAvailable")
     public Boolean onlyAvailable;
+
     public GetDomainSuggestionsRequest withOnlyAvailable(Boolean onlyAvailable) {
         this.onlyAvailable = onlyAvailable;
         return this;
@@ -23,9 +25,15 @@ public class GetDomainSuggestionsRequest {
     
     @JsonProperty("SuggestionCount")
     public Long suggestionCount;
+
     public GetDomainSuggestionsRequest withSuggestionCount(Long suggestionCount) {
         this.suggestionCount = suggestionCount;
         return this;
     }
     
+    public GetDomainSuggestionsRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("OnlyAvailable") Boolean onlyAvailable, @JsonProperty("SuggestionCount") Long suggestionCount) {
+        this.domainName = domainName;
+        this.onlyAvailable = onlyAvailable;
+        this.suggestionCount = suggestionCount;
+  }
 }

@@ -12,9 +12,13 @@ public class EtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("_unique_code")
     public String uniqueCode;
+
     public EtcerRequestBodyCertificateParameters withUniqueCode(String uniqueCode) {
         this.uniqueCode = uniqueCode;
         return this;
     }
     
+    public EtcerRequestBodyCertificateParameters(@JsonProperty("_unique_code") String uniqueCode) {
+        this.uniqueCode = uniqueCode;
+  }
 }

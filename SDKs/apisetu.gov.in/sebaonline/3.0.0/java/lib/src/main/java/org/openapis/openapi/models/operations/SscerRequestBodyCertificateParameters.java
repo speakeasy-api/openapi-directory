@@ -12,6 +12,7 @@ public class SscerRequestBodyCertificateParameters {
      */
     @JsonProperty("Cent")
     public String cent;
+
     public SscerRequestBodyCertificateParameters withCent(String cent) {
         this.cent = cent;
         return this;
@@ -22,6 +23,7 @@ public class SscerRequestBodyCertificateParameters {
      */
     @JsonProperty("MName")
     public String mName;
+
     public SscerRequestBodyCertificateParameters withMName(String mName) {
         this.mName = mName;
         return this;
@@ -32,6 +34,7 @@ public class SscerRequestBodyCertificateParameters {
      */
     @JsonProperty("Name")
     public String name;
+
     public SscerRequestBodyCertificateParameters withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +45,7 @@ public class SscerRequestBodyCertificateParameters {
      */
     @JsonProperty("RROLL")
     public String rroll;
+
     public SscerRequestBodyCertificateParameters withRroll(String rroll) {
         this.rroll = rroll;
         return this;
@@ -52,9 +56,17 @@ public class SscerRequestBodyCertificateParameters {
      */
     @JsonProperty("YEAR")
     public String year;
+
     public SscerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public SscerRequestBodyCertificateParameters(@JsonProperty("Cent") String cent, @JsonProperty("MName") String mName, @JsonProperty("Name") String name, @JsonProperty("RROLL") String rroll, @JsonProperty("YEAR") String year) {
+        this.cent = cent;
+        this.mName = mName;
+        this.name = name;
+        this.rroll = rroll;
+        this.year = year;
+  }
 }

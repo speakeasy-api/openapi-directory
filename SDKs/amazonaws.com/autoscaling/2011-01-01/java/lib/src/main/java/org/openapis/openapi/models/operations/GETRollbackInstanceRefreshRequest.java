@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRollbackInstanceRefreshRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRollbackInstanceRefreshActionEnum action;
+
     public GETRollbackInstanceRefreshRequest withAction(GETRollbackInstanceRefreshActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRollbackInstanceRefreshRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
     public String autoScalingGroupName;
+
     public GETRollbackInstanceRefreshRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -26,6 +29,7 @@ public class GETRollbackInstanceRefreshRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRollbackInstanceRefreshVersionEnum version;
+
     public GETRollbackInstanceRefreshRequest withVersion(GETRollbackInstanceRefreshVersionEnum version) {
         this.version = version;
         return this;
@@ -33,6 +37,7 @@ public class GETRollbackInstanceRefreshRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRollbackInstanceRefreshRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -40,6 +45,7 @@ public class GETRollbackInstanceRefreshRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRollbackInstanceRefreshRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -47,6 +53,7 @@ public class GETRollbackInstanceRefreshRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRollbackInstanceRefreshRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -54,6 +61,7 @@ public class GETRollbackInstanceRefreshRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRollbackInstanceRefreshRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -61,6 +69,7 @@ public class GETRollbackInstanceRefreshRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRollbackInstanceRefreshRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -68,6 +77,7 @@ public class GETRollbackInstanceRefreshRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRollbackInstanceRefreshRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -75,9 +85,14 @@ public class GETRollbackInstanceRefreshRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRollbackInstanceRefreshRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRollbackInstanceRefreshRequest(@JsonProperty("Action") GETRollbackInstanceRefreshActionEnum action, @JsonProperty("Version") GETRollbackInstanceRefreshVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

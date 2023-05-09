@@ -18,6 +18,7 @@ public class EndpointPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationPolicy")
     public String authorizationPolicy;
+
     public EndpointPolicyInput withAuthorizationPolicy(String authorizationPolicy) {
         this.authorizationPolicy = authorizationPolicy;
         return this;
@@ -29,6 +30,7 @@ public class EndpointPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientTlsPolicy")
     public String clientTlsPolicy;
+
     public EndpointPolicyInput withClientTlsPolicy(String clientTlsPolicy) {
         this.clientTlsPolicy = clientTlsPolicy;
         return this;
@@ -40,6 +42,7 @@ public class EndpointPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EndpointPolicyInput withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class EndpointPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointMatcher")
     public EndpointMatcher endpointMatcher;
+
     public EndpointPolicyInput withEndpointMatcher(EndpointMatcher endpointMatcher) {
         this.endpointMatcher = endpointMatcher;
         return this;
@@ -62,6 +66,7 @@ public class EndpointPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public EndpointPolicyInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class EndpointPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EndpointPolicyInput withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class EndpointPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverTlsPolicy")
     public String serverTlsPolicy;
+
     public EndpointPolicyInput withServerTlsPolicy(String serverTlsPolicy) {
         this.serverTlsPolicy = serverTlsPolicy;
         return this;
@@ -95,6 +102,7 @@ public class EndpointPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trafficPortSelector")
     public TrafficPortSelector trafficPortSelector;
+
     public EndpointPolicyInput withTrafficPortSelector(TrafficPortSelector trafficPortSelector) {
         this.trafficPortSelector = trafficPortSelector;
         return this;
@@ -106,9 +114,11 @@ public class EndpointPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public EndpointPolicyTypeEnum type;
+
     public EndpointPolicyInput withType(EndpointPolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public EndpointPolicyInput(){}
 }

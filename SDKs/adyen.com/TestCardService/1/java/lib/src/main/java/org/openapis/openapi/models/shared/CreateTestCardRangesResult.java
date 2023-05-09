@@ -15,9 +15,13 @@ public class CreateTestCardRangesResult {
      */
     @JsonProperty("rangeCreationResults")
     public TestCardRangeCreationResult[] rangeCreationResults;
+
     public CreateTestCardRangesResult withRangeCreationResults(TestCardRangeCreationResult[] rangeCreationResults) {
         this.rangeCreationResults = rangeCreationResults;
         return this;
     }
     
+    public CreateTestCardRangesResult(@JsonProperty("rangeCreationResults") TestCardRangeCreationResult[] rangeCreationResults) {
+        this.rangeCreationResults = rangeCreationResults;
+  }
 }

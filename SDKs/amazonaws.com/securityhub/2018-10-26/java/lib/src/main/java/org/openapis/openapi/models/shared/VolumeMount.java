@@ -15,6 +15,7 @@ public class VolumeMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountPath")
     public String mountPath;
+
     public VolumeMount withMountPath(String mountPath) {
         this.mountPath = mountPath;
         return this;
@@ -23,9 +24,11 @@ public class VolumeMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public VolumeMount withName(String name) {
         this.name = name;
         return this;
     }
     
+    public VolumeMount(){}
 }

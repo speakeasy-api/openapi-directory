@@ -18,9 +18,11 @@ public class ConfidentialNodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ConfidentialNodes withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ConfidentialNodes(){}
 }

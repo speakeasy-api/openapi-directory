@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListChangeSetsOutput {
     
     public String nextToken;
+
     public ListChangeSetsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class ListChangeSetsOutput {
     
     
     public ChangeSetSummary[] summaries;
+
     public ListChangeSetsOutput withSummaries(ChangeSetSummary[] summaries) {
         this.summaries = summaries;
         return this;
     }
     
+    public ListChangeSetsOutput(){}
 }

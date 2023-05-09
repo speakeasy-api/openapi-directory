@@ -15,6 +15,7 @@ public class AwsEcsTaskVolumeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Host")
     public AwsEcsTaskVolumeHostDetails host;
+
     public AwsEcsTaskVolumeDetails withHost(AwsEcsTaskVolumeHostDetails host) {
         this.host = host;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsTaskVolumeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsEcsTaskVolumeDetails withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AwsEcsTaskVolumeDetails(){}
 }

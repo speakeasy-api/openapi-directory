@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCartInstallmentsRequest {
@@ -12,6 +13,7 @@ public class GetCartInstallmentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetCartInstallmentsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetCartInstallmentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetCartInstallmentsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetCartInstallmentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
     public String orderFormId;
+
     public GetCartInstallmentsRequest withOrderFormId(String orderFormId) {
         this.orderFormId = orderFormId;
         return this;
@@ -42,9 +46,16 @@ public class GetCartInstallmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paymentSystem")
     public Long paymentSystem;
+
     public GetCartInstallmentsRequest withPaymentSystem(Long paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
     }
     
+    public GetCartInstallmentsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("orderFormId") String orderFormId, @JsonProperty("paymentSystem") Long paymentSystem) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.orderFormId = orderFormId;
+        this.paymentSystem = paymentSystem;
+  }
 }

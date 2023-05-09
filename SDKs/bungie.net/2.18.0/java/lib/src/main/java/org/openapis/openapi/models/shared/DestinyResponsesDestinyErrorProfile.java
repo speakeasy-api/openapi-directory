@@ -16,6 +16,7 @@ public class DestinyResponsesDestinyErrorProfile {
      */
     
     public Integer errorCode;
+
     public DestinyResponsesDestinyErrorProfile withErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -26,9 +27,11 @@ public class DestinyResponsesDestinyErrorProfile {
      */
     
     public DestinyResponsesDestinyErrorProfileInfoCard infoCard;
+
     public DestinyResponsesDestinyErrorProfile withInfoCard(DestinyResponsesDestinyErrorProfileInfoCard infoCard) {
         this.infoCard = infoCard;
         return this;
     }
     
+    public DestinyResponsesDestinyErrorProfile(){}
 }

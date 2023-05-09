@@ -15,9 +15,11 @@ public class CreateUpdatedWorkspaceImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageId")
     public String imageId;
+
     public CreateUpdatedWorkspaceImageResult withImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public CreateUpdatedWorkspaceImageResult(){}
 }

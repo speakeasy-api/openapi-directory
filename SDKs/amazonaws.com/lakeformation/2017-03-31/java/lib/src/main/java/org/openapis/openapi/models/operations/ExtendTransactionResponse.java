@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExtendTransactionResponse {
     
     public String contentType;
+
     public ExtendTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ExtendTransactionResponse {
      */
     
     public Object entityNotFoundException;
+
     public ExtendTransactionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class ExtendTransactionResponse {
      */
     
     public java.util.Map<String, Object> extendTransactionResponse;
+
     public ExtendTransactionResponse withExtendTransactionResponse(java.util.Map<String, Object> extendTransactionResponse) {
         this.extendTransactionResponse = extendTransactionResponse;
         return this;
@@ -39,6 +43,7 @@ public class ExtendTransactionResponse {
      */
     
     public Object internalServiceException;
+
     public ExtendTransactionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ExtendTransactionResponse {
      */
     
     public Object invalidInputException;
+
     public ExtendTransactionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class ExtendTransactionResponse {
      */
     
     public Object operationTimeoutException;
+
     public ExtendTransactionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class ExtendTransactionResponse {
     
     
     public Integer statusCode;
+
     public ExtendTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ExtendTransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExtendTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ExtendTransactionResponse {
      */
     
     public Object transactionCanceledException;
+
     public ExtendTransactionResponse withTransactionCanceledException(Object transactionCanceledException) {
         this.transactionCanceledException = transactionCanceledException;
         return this;
@@ -93,6 +103,7 @@ public class ExtendTransactionResponse {
      */
     
     public Object transactionCommitInProgressException;
+
     public ExtendTransactionResponse withTransactionCommitInProgressException(Object transactionCommitInProgressException) {
         this.transactionCommitInProgressException = transactionCommitInProgressException;
         return this;
@@ -103,9 +114,14 @@ public class ExtendTransactionResponse {
      */
     
     public Object transactionCommittedException;
+
     public ExtendTransactionResponse withTransactionCommittedException(Object transactionCommittedException) {
         this.transactionCommittedException = transactionCommittedException;
         return this;
     }
     
+    public ExtendTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

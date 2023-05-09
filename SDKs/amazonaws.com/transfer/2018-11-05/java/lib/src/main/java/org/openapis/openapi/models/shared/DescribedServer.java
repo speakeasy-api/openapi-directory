@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribedServer {
     @JsonProperty("Arn")
     public String arn;
+
     public DescribedServer withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Certificate")
     public String certificate;
+
     public DescribedServer withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -30,6 +32,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public DomainEnum domain;
+
     public DescribedServer withDomain(DomainEnum domain) {
         this.domain = domain;
         return this;
@@ -38,6 +41,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointDetails")
     public EndpointDetails endpointDetails;
+
     public DescribedServer withEndpointDetails(EndpointDetails endpointDetails) {
         this.endpointDetails = endpointDetails;
         return this;
@@ -46,6 +50,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointType")
     public EndpointTypeEnum endpointType;
+
     public DescribedServer withEndpointType(EndpointTypeEnum endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -54,6 +59,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostKeyFingerprint")
     public String hostKeyFingerprint;
+
     public DescribedServer withHostKeyFingerprint(String hostKeyFingerprint) {
         this.hostKeyFingerprint = hostKeyFingerprint;
         return this;
@@ -62,6 +68,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityProviderDetails")
     public IdentityProviderDetails identityProviderDetails;
+
     public DescribedServer withIdentityProviderDetails(IdentityProviderDetails identityProviderDetails) {
         this.identityProviderDetails = identityProviderDetails;
         return this;
@@ -70,6 +77,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityProviderType")
     public IdentityProviderTypeEnum identityProviderType;
+
     public DescribedServer withIdentityProviderType(IdentityProviderTypeEnum identityProviderType) {
         this.identityProviderType = identityProviderType;
         return this;
@@ -78,6 +86,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggingRole")
     public String loggingRole;
+
     public DescribedServer withLoggingRole(String loggingRole) {
         this.loggingRole = loggingRole;
         return this;
@@ -86,6 +95,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostAuthenticationLoginBanner")
     public String postAuthenticationLoginBanner;
+
     public DescribedServer withPostAuthenticationLoginBanner(String postAuthenticationLoginBanner) {
         this.postAuthenticationLoginBanner = postAuthenticationLoginBanner;
         return this;
@@ -94,6 +104,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreAuthenticationLoginBanner")
     public String preAuthenticationLoginBanner;
+
     public DescribedServer withPreAuthenticationLoginBanner(String preAuthenticationLoginBanner) {
         this.preAuthenticationLoginBanner = preAuthenticationLoginBanner;
         return this;
@@ -102,6 +113,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProtocolDetails")
     public ProtocolDetails protocolDetails;
+
     public DescribedServer withProtocolDetails(ProtocolDetails protocolDetails) {
         this.protocolDetails = protocolDetails;
         return this;
@@ -110,6 +122,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocols")
     public ProtocolEnum[] protocols;
+
     public DescribedServer withProtocols(ProtocolEnum[] protocols) {
         this.protocols = protocols;
         return this;
@@ -118,6 +131,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityPolicyName")
     public String securityPolicyName;
+
     public DescribedServer withSecurityPolicyName(String securityPolicyName) {
         this.securityPolicyName = securityPolicyName;
         return this;
@@ -126,6 +140,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerId")
     public String serverId;
+
     public DescribedServer withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -134,6 +149,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public StateEnum state;
+
     public DescribedServer withState(StateEnum state) {
         this.state = state;
         return this;
@@ -142,6 +158,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DescribedServer withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -150,6 +167,7 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserCount")
     public Long userCount;
+
     public DescribedServer withUserCount(Long userCount) {
         this.userCount = userCount;
         return this;
@@ -158,9 +176,13 @@ public class DescribedServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkflowDetails")
     public WorkflowDetails workflowDetails;
+
     public DescribedServer withWorkflowDetails(WorkflowDetails workflowDetails) {
         this.workflowDetails = workflowDetails;
         return this;
     }
     
+    public DescribedServer(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

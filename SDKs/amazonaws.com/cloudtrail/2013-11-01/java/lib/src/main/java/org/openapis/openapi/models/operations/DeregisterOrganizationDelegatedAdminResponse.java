@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterOrganizationDelegatedAdminResponse {
@@ -12,6 +13,7 @@ public class DeregisterOrganizationDelegatedAdminResponse {
      */
     
     public Object accountNotFoundException;
+
     public DeregisterOrganizationDelegatedAdminResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -22,6 +24,7 @@ public class DeregisterOrganizationDelegatedAdminResponse {
      */
     
     public Object accountNotRegisteredException;
+
     public DeregisterOrganizationDelegatedAdminResponse withAccountNotRegisteredException(Object accountNotRegisteredException) {
         this.accountNotRegisteredException = accountNotRegisteredException;
         return this;
@@ -32,6 +35,7 @@ public class DeregisterOrganizationDelegatedAdminResponse {
      */
     
     public Object cloudTrailAccessNotEnabledException;
+
     public DeregisterOrganizationDelegatedAdminResponse withCloudTrailAccessNotEnabledException(Object cloudTrailAccessNotEnabledException) {
         this.cloudTrailAccessNotEnabledException = cloudTrailAccessNotEnabledException;
         return this;
@@ -42,6 +46,7 @@ public class DeregisterOrganizationDelegatedAdminResponse {
      */
     
     public Object conflictException;
+
     public DeregisterOrganizationDelegatedAdminResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -49,6 +54,7 @@ public class DeregisterOrganizationDelegatedAdminResponse {
     
     
     public String contentType;
+
     public DeregisterOrganizationDelegatedAdminResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class DeregisterOrganizationDelegatedAdminResponse {
      */
     
     public java.util.Map<String, Object> deregisterOrganizationDelegatedAdminResponse;
+
     public DeregisterOrganizationDelegatedAdminResponse withDeregisterOrganizationDelegatedAdminResponse(java.util.Map<String, Object> deregisterOrganizationDelegatedAdminResponse) {
         this.deregisterOrganizationDelegatedAdminResponse = deregisterOrganizationDelegatedAdminResponse;
         return this;
@@ -69,6 +76,7 @@ public class DeregisterOrganizationDelegatedAdminResponse {
      */
     
     public Object insufficientDependencyServiceAccessPermissionException;
+
     public DeregisterOrganizationDelegatedAdminResponse withInsufficientDependencyServiceAccessPermissionException(Object insufficientDependencyServiceAccessPermissionException) {
         this.insufficientDependencyServiceAccessPermissionException = insufficientDependencyServiceAccessPermissionException;
         return this;
@@ -79,6 +87,7 @@ public class DeregisterOrganizationDelegatedAdminResponse {
      */
     
     public Object invalidParameterException;
+
     public DeregisterOrganizationDelegatedAdminResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class DeregisterOrganizationDelegatedAdminResponse {
      */
     
     public Object notOrganizationManagementAccountException;
+
     public DeregisterOrganizationDelegatedAdminResponse withNotOrganizationManagementAccountException(Object notOrganizationManagementAccountException) {
         this.notOrganizationManagementAccountException = notOrganizationManagementAccountException;
         return this;
@@ -99,6 +109,7 @@ public class DeregisterOrganizationDelegatedAdminResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DeregisterOrganizationDelegatedAdminResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -109,6 +120,7 @@ public class DeregisterOrganizationDelegatedAdminResponse {
      */
     
     public Object organizationNotInAllFeaturesModeException;
+
     public DeregisterOrganizationDelegatedAdminResponse withOrganizationNotInAllFeaturesModeException(Object organizationNotInAllFeaturesModeException) {
         this.organizationNotInAllFeaturesModeException = organizationNotInAllFeaturesModeException;
         return this;
@@ -119,6 +131,7 @@ public class DeregisterOrganizationDelegatedAdminResponse {
      */
     
     public Object organizationsNotInUseException;
+
     public DeregisterOrganizationDelegatedAdminResponse withOrganizationsNotInUseException(Object organizationsNotInUseException) {
         this.organizationsNotInUseException = organizationsNotInUseException;
         return this;
@@ -126,6 +139,7 @@ public class DeregisterOrganizationDelegatedAdminResponse {
     
     
     public Integer statusCode;
+
     public DeregisterOrganizationDelegatedAdminResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class DeregisterOrganizationDelegatedAdminResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterOrganizationDelegatedAdminResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,9 +158,14 @@ public class DeregisterOrganizationDelegatedAdminResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DeregisterOrganizationDelegatedAdminResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DeregisterOrganizationDelegatedAdminResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

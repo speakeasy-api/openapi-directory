@@ -18,6 +18,7 @@ public class TargetVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public TargetVpnGateway withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class TargetVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TargetVpnGateway withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class TargetVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardingRules")
     public String[] forwardingRules;
+
     public TargetVpnGateway withForwardingRules(String[] forwardingRules) {
         this.forwardingRules = forwardingRules;
         return this;
@@ -51,6 +54,7 @@ public class TargetVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TargetVpnGateway withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class TargetVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TargetVpnGateway withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class TargetVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public TargetVpnGateway withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -84,6 +90,7 @@ public class TargetVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public TargetVpnGateway withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -95,6 +102,7 @@ public class TargetVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TargetVpnGateway withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class TargetVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public TargetVpnGateway withNetwork(String network) {
         this.network = network;
         return this;
@@ -117,6 +126,7 @@ public class TargetVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public TargetVpnGateway withRegion(String region) {
         this.region = region;
         return this;
@@ -128,6 +138,7 @@ public class TargetVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public TargetVpnGateway withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -139,6 +150,7 @@ public class TargetVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TargetVpnGatewayStatusEnum status;
+
     public TargetVpnGateway withStatus(TargetVpnGatewayStatusEnum status) {
         this.status = status;
         return this;
@@ -150,9 +162,11 @@ public class TargetVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tunnels")
     public String[] tunnels;
+
     public TargetVpnGateway withTunnels(String[] tunnels) {
         this.tunnels = tunnels;
         return this;
     }
     
+    public TargetVpnGateway(){}
 }

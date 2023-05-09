@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInterfaceAttributeResult {
     
     public DescribeNetworkInterfaceAttributeResultAttachment attachment;
+
     public DescribeNetworkInterfaceAttributeResult withAttachment(DescribeNetworkInterfaceAttributeResultAttachment attachment) {
         this.attachment = attachment;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInterfaceAttributeResult {
     
     
     public DescribeNetworkInterfaceAttributeResultDescription description;
+
     public DescribeNetworkInterfaceAttributeResult withDescription(DescribeNetworkInterfaceAttributeResultDescription description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInterfaceAttributeResult {
     
     
     public DescribeNetworkInterfaceAttributeResultGroups[] groups;
+
     public DescribeNetworkInterfaceAttributeResult withGroups(DescribeNetworkInterfaceAttributeResultGroups[] groups) {
         this.groups = groups;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkInterfaceAttributeResult {
     
     
     public String networkInterfaceId;
+
     public DescribeNetworkInterfaceAttributeResult withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -40,9 +44,11 @@ public class DescribeNetworkInterfaceAttributeResult {
     
     
     public DescribeNetworkInterfaceAttributeResultSourceDestCheck sourceDestCheck;
+
     public DescribeNetworkInterfaceAttributeResult withSourceDestCheck(DescribeNetworkInterfaceAttributeResultSourceDestCheck sourceDestCheck) {
         this.sourceDestCheck = sourceDestCheck;
         return this;
     }
     
+    public DescribeNetworkInterfaceAttributeResult(){}
 }

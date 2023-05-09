@@ -15,6 +15,7 @@ public class RedactionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaskCharacter")
     public String maskCharacter;
+
     public RedactionConfig withMaskCharacter(String maskCharacter) {
         this.maskCharacter = maskCharacter;
         return this;
@@ -23,6 +24,7 @@ public class RedactionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaskMode")
     public PiiEntitiesDetectionMaskModeEnum maskMode;
+
     public RedactionConfig withMaskMode(PiiEntitiesDetectionMaskModeEnum maskMode) {
         this.maskMode = maskMode;
         return this;
@@ -31,9 +33,11 @@ public class RedactionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PiiEntityTypes")
     public PiiEntityTypeEnum[] piiEntityTypes;
+
     public RedactionConfig withPiiEntityTypes(PiiEntityTypeEnum[] piiEntityTypes) {
         this.piiEntityTypes = piiEntityTypes;
         return this;
     }
     
+    public RedactionConfig(){}
 }

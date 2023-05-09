@@ -18,6 +18,7 @@ public class ServiceBlockUpdateModel {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public ServiceBlockUpdateModel withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -26,6 +27,7 @@ public class ServiceBlockUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public Integer endTime;
+
     public ServiceBlockUpdateModel withEndTime(Integer endTime) {
         this.endTime = endTime;
         return this;
@@ -34,6 +36,7 @@ public class ServiceBlockUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ServiceBlockUpdateModel withReason(String reason) {
         this.reason = reason;
         return this;
@@ -42,6 +45,7 @@ public class ServiceBlockUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeat")
     public RepeatUpdateModel repeat;
+
     public ServiceBlockUpdateModel withRepeat(RepeatUpdateModel repeat) {
         this.repeat = repeat;
         return this;
@@ -50,6 +54,7 @@ public class ServiceBlockUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeats")
     public Boolean repeats;
+
     public ServiceBlockUpdateModel withRepeats(Boolean repeats) {
         this.repeats = repeats;
         return this;
@@ -59,6 +64,7 @@ public class ServiceBlockUpdateModel {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public ServiceBlockUpdateModel withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -67,9 +73,11 @@ public class ServiceBlockUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public Integer startTime;
+
     public ServiceBlockUpdateModel withStartTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ServiceBlockUpdateModel(){}
 }

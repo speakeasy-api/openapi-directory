@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1EntityMentionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityUniqueId")
     public String entityUniqueId;
+
     public GoogleCloudContactcenterinsightsV1EntityMentionData withEntityUniqueId(String entityUniqueId) {
         this.entityUniqueId = entityUniqueId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudContactcenterinsightsV1EntityMentionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentiment")
     public GoogleCloudContactcenterinsightsV1SentimentData sentiment;
+
     public GoogleCloudContactcenterinsightsV1EntityMentionData withSentiment(GoogleCloudContactcenterinsightsV1SentimentData sentiment) {
         this.sentiment = sentiment;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudContactcenterinsightsV1EntityMentionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum type;
+
     public GoogleCloudContactcenterinsightsV1EntityMentionData withType(GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1EntityMentionData(){}
 }

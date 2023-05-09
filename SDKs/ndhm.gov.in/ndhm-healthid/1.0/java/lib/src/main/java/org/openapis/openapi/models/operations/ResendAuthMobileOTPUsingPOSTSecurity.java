@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ResendAuthMobileOTPUsingPOSTSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
     public String authorization;
+
     public ResendAuthMobileOTPUsingPOSTSecurity withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -16,9 +17,11 @@ public class ResendAuthMobileOTPUsingPOSTSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-HIP-ID")
     public String xHipId;
+
     public ResendAuthMobileOTPUsingPOSTSecurity withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
     }
     
+    public ResendAuthMobileOTPUsingPOSTSecurity(){}
 }

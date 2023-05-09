@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StandardsControlAssociationId {
     @JsonProperty("SecurityControlId")
     public String securityControlId;
+
     public StandardsControlAssociationId withSecurityControlId(String securityControlId) {
         this.securityControlId = securityControlId;
         return this;
@@ -19,9 +20,14 @@ public class StandardsControlAssociationId {
     
     @JsonProperty("StandardsArn")
     public String standardsArn;
+
     public StandardsControlAssociationId withStandardsArn(String standardsArn) {
         this.standardsArn = standardsArn;
         return this;
     }
     
+    public StandardsControlAssociationId(@JsonProperty("SecurityControlId") String securityControlId, @JsonProperty("StandardsArn") String standardsArn) {
+        this.securityControlId = securityControlId;
+        this.standardsArn = standardsArn;
+  }
 }

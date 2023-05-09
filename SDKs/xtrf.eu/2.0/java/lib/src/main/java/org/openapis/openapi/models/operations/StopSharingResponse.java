@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopSharingResponse {
     
     public String contentType;
+
     public StopSharingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopSharingResponse {
      */
     
     public org.openapis.openapi.models.shared.FilesShareStatusDto filesShareStatusDto;
+
     public StopSharingResponse withFilesShareStatusDto(org.openapis.openapi.models.shared.FilesShareStatusDto filesShareStatusDto) {
         this.filesShareStatusDto = filesShareStatusDto;
         return this;
@@ -26,6 +29,7 @@ public class StopSharingResponse {
     
     
     public Integer statusCode;
+
     public StopSharingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class StopSharingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopSharingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StopSharingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

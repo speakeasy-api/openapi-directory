@@ -14,6 +14,7 @@ public class CreateSinkRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateSinkRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,13 @@ public class CreateSinkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateSinkRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSinkRequestBody(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

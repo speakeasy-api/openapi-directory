@@ -22,6 +22,7 @@ public class Individual {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
     public IndividualAddress[] addresses;
+
     public Individual withAddresses(IndividualAddress[] addresses) {
         this.addresses = addresses;
         return this;
@@ -33,6 +34,7 @@ public class Individual {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("dateOfBirth")
     public LocalDate dateOfBirth;
+
     public Individual withDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -41,6 +43,7 @@ public class Individual {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electronicAddresses")
     public ElectronicAddress[] electronicAddresses;
+
     public Individual withElectronicAddresses(ElectronicAddress[] electronicAddresses) {
         this.electronicAddresses = electronicAddresses;
         return this;
@@ -54,6 +57,7 @@ public class Individual {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fromDate")
     public OffsetDateTime fromDate;
+
     public Individual withFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -65,6 +69,7 @@ public class Individual {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public IndividualGenderEnum gender;
+
     public Individual withGender(IndividualGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -76,6 +81,7 @@ public class Individual {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Individual withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class Individual {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public IndividualName[] names;
+
     public Individual withNames(IndividualName[] names) {
         this.names = names;
         return this;
@@ -94,6 +101,7 @@ public class Individual {
      */
     @JsonProperty("placeOfBirth")
     public String placeOfBirth;
+
     public Individual withPlaceOfBirth(String placeOfBirth) {
         this.placeOfBirth = placeOfBirth;
         return this;
@@ -107,9 +115,14 @@ public class Individual {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("toDate")
     public OffsetDateTime toDate;
+
     public Individual withToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public Individual(@JsonProperty("dateOfBirth") LocalDate dateOfBirth, @JsonProperty("placeOfBirth") String placeOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+        this.placeOfBirth = placeOfBirth;
+  }
 }

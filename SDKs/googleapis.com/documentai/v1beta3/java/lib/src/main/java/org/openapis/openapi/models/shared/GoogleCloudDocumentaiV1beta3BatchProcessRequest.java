@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDocumentaiV1beta3BatchProcessRequest - Request message for batch process document method.
+ * GoogleCloudDocumentaiV1beta3BatchProcessRequest - Request message for BatchProcessDocuments.
  */
 public class GoogleCloudDocumentaiV1beta3BatchProcessRequest {
     /**
@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3BatchProcessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentOutputConfig")
     public GoogleCloudDocumentaiV1beta3DocumentOutputConfig documentOutputConfig;
+
     public GoogleCloudDocumentaiV1beta3BatchProcessRequest withDocumentOutputConfig(GoogleCloudDocumentaiV1beta3DocumentOutputConfig documentOutputConfig) {
         this.documentOutputConfig = documentOutputConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3BatchProcessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfigs")
     public GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig[] inputConfigs;
+
     public GoogleCloudDocumentaiV1beta3BatchProcessRequest withInputConfigs(GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig[] inputConfigs) {
         this.inputConfigs = inputConfigs;
         return this;
@@ -40,17 +42,19 @@ public class GoogleCloudDocumentaiV1beta3BatchProcessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDocuments")
     public GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig inputDocuments;
+
     public GoogleCloudDocumentaiV1beta3BatchProcessRequest withInputDocuments(GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig inputDocuments) {
         this.inputDocuments = inputDocuments;
         return this;
     }
     
     /**
-     * The message for output config in batch process.
+     * The output configuration in the BatchProcessDocuments method.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfig")
     public GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig outputConfig;
+
     public GoogleCloudDocumentaiV1beta3BatchProcessRequest withOutputConfig(GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1beta3BatchProcessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processOptions")
     public GoogleCloudDocumentaiV1beta3ProcessOptions processOptions;
+
     public GoogleCloudDocumentaiV1beta3BatchProcessRequest withProcessOptions(GoogleCloudDocumentaiV1beta3ProcessOptions processOptions) {
         this.processOptions = processOptions;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDocumentaiV1beta3BatchProcessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipHumanReview")
     public Boolean skipHumanReview;
+
     public GoogleCloudDocumentaiV1beta3BatchProcessRequest withSkipHumanReview(Boolean skipHumanReview) {
         this.skipHumanReview = skipHumanReview;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3BatchProcessRequest(){}
 }

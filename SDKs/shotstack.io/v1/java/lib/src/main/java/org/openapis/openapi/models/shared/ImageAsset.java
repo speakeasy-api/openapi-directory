@@ -18,6 +18,7 @@ public class ImageAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crop")
     public Crop crop;
+
     public ImageAsset withCrop(Crop crop) {
         this.crop = crop;
         return this;
@@ -28,6 +29,7 @@ public class ImageAsset {
      */
     @JsonProperty("src")
     public String src;
+
     public ImageAsset withSrc(String src) {
         this.src = src;
         return this;
@@ -38,9 +40,14 @@ public class ImageAsset {
      */
     @JsonProperty("type")
     public String type;
+
     public ImageAsset withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ImageAsset(@JsonProperty("src") String src, @JsonProperty("type") String type) {
+        this.src = src;
+        this.type = type;
+  }
 }

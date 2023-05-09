@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BalanceGetResponse {
@@ -12,6 +13,7 @@ public class BalanceGetResponse {
      */
     
     public Object balanceGet500ApplicationJSONAny;
+
     public BalanceGetResponse withBalanceGet500ApplicationJSONAny(Object balanceGet500ApplicationJSONAny) {
         this.balanceGet500ApplicationJSONAny = balanceGet500ApplicationJSONAny;
         return this;
@@ -19,6 +21,7 @@ public class BalanceGetResponse {
     
     
     public String contentType;
+
     public BalanceGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class BalanceGetResponse {
     
     
     public Integer statusCode;
+
     public BalanceGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BalanceGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BalanceGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BalanceGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

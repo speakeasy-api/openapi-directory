@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesTagsFormatRequest {
@@ -12,6 +13,7 @@ public class GetResourcesTagsFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public String format;
+
     public GetResourcesTagsFormatRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -22,6 +24,7 @@ public class GetResourcesTagsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=max")
     public Integer max;
+
     public GetResourcesTagsFormatRequest withMax(Integer max) {
         this.max = max;
         return this;
@@ -32,6 +35,7 @@ public class GetResourcesTagsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=mediaId")
     public Long mediaId;
+
     public GetResourcesTagsFormatRequest withMediaId(Long mediaId) {
         this.mediaId = mediaId;
         return this;
@@ -42,6 +46,7 @@ public class GetResourcesTagsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=name")
     public String name;
+
     public GetResourcesTagsFormatRequest withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class GetResourcesTagsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=nameContains")
     public String nameContains;
+
     public GetResourcesTagsFormatRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -62,6 +68,7 @@ public class GetResourcesTagsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=offset")
     public Integer offset;
+
     public GetResourcesTagsFormatRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -72,6 +79,7 @@ public class GetResourcesTagsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
     public String sort;
+
     public GetResourcesTagsFormatRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -82,6 +90,7 @@ public class GetResourcesTagsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=typeId")
     public Long typeId;
+
     public GetResourcesTagsFormatRequest withTypeId(Long typeId) {
         this.typeId = typeId;
         return this;
@@ -92,9 +101,13 @@ public class GetResourcesTagsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=typeName")
     public String typeName;
+
     public GetResourcesTagsFormatRequest withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public GetResourcesTagsFormatRequest(@JsonProperty("format") String format) {
+        this.format = format;
+  }
 }

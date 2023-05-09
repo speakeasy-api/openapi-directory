@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetManagedPrefixListEntriesResultEntries {
     
     public String cidr;
+
     public GetManagedPrefixListEntriesResultEntries withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,9 +20,11 @@ public class GetManagedPrefixListEntriesResultEntries {
     
     
     public String description;
+
     public GetManagedPrefixListEntriesResultEntries withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public GetManagedPrefixListEntriesResultEntries(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RelcsResponse {
     
     public String contentType;
+
     public RelcsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RelcsResponse {
     
     
     public Integer statusCode;
+
     public RelcsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RelcsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RelcsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RelcsResponse {
      */
     
     public Relcs400ApplicationJSON relcs400ApplicationJSONObject;
+
     public RelcsResponse withRelcs400ApplicationJSONObject(Relcs400ApplicationJSON relcs400ApplicationJSONObject) {
         this.relcs400ApplicationJSONObject = relcs400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class RelcsResponse {
      */
     
     public Relcs401ApplicationJSON relcs401ApplicationJSONObject;
+
     public RelcsResponse withRelcs401ApplicationJSONObject(Relcs401ApplicationJSON relcs401ApplicationJSONObject) {
         this.relcs401ApplicationJSONObject = relcs401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RelcsResponse {
      */
     
     public Relcs404ApplicationJSON relcs404ApplicationJSONObject;
+
     public RelcsResponse withRelcs404ApplicationJSONObject(Relcs404ApplicationJSON relcs404ApplicationJSONObject) {
         this.relcs404ApplicationJSONObject = relcs404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class RelcsResponse {
      */
     
     public Relcs500ApplicationJSON relcs500ApplicationJSONObject;
+
     public RelcsResponse withRelcs500ApplicationJSONObject(Relcs500ApplicationJSON relcs500ApplicationJSONObject) {
         this.relcs500ApplicationJSONObject = relcs500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class RelcsResponse {
      */
     
     public Relcs502ApplicationJSON relcs502ApplicationJSONObject;
+
     public RelcsResponse withRelcs502ApplicationJSONObject(Relcs502ApplicationJSON relcs502ApplicationJSONObject) {
         this.relcs502ApplicationJSONObject = relcs502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class RelcsResponse {
      */
     
     public Relcs503ApplicationJSON relcs503ApplicationJSONObject;
+
     public RelcsResponse withRelcs503ApplicationJSONObject(Relcs503ApplicationJSON relcs503ApplicationJSONObject) {
         this.relcs503ApplicationJSONObject = relcs503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class RelcsResponse {
      */
     
     public Relcs504ApplicationJSON relcs504ApplicationJSONObject;
+
     public RelcsResponse withRelcs504ApplicationJSONObject(Relcs504ApplicationJSON relcs504ApplicationJSONObject) {
         this.relcs504ApplicationJSONObject = relcs504ApplicationJSONObject;
         return this;
     }
     
+    public RelcsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class BusinessHolidayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessClosed")
     public Boolean businessClosed;
+
     public BusinessHolidayViewModel withBusinessClosed(Boolean businessClosed) {
         this.businessClosed = businessClosed;
         return this;
@@ -20,6 +21,7 @@ public class BusinessHolidayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holidayName")
     public String holidayName;
+
     public BusinessHolidayViewModel withHolidayName(String holidayName) {
         this.holidayName = holidayName;
         return this;
@@ -28,6 +30,7 @@ public class BusinessHolidayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BusinessHolidayViewModel withId(String id) {
         this.id = id;
         return this;
@@ -36,9 +39,11 @@ public class BusinessHolidayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicHolidayId")
     public Integer publicHolidayId;
+
     public BusinessHolidayViewModel withPublicHolidayId(Integer publicHolidayId) {
         this.publicHolidayId = publicHolidayId;
         return this;
     }
     
+    public BusinessHolidayViewModel(){}
 }

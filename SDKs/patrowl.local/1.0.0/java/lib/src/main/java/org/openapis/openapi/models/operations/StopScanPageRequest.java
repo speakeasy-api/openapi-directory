@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopScanPageRequest {
@@ -12,9 +13,13 @@ public class StopScanPageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scanId")
     public Long scanId;
+
     public StopScanPageRequest withScanId(Long scanId) {
         this.scanId = scanId;
         return this;
     }
     
+    public StopScanPageRequest(@JsonProperty("scanId") Long scanId) {
+        this.scanId = scanId;
+  }
 }

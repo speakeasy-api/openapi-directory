@@ -22,6 +22,7 @@ public class SearchTerminalCheckoutsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchTerminalCheckoutsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -33,6 +34,7 @@ public class SearchTerminalCheckoutsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public SearchTerminalCheckoutsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -41,9 +43,11 @@ public class SearchTerminalCheckoutsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public TerminalCheckoutQuery query;
+
     public SearchTerminalCheckoutsRequest withQuery(TerminalCheckoutQuery query) {
         this.query = query;
         return this;
     }
     
+    public SearchTerminalCheckoutsRequest(){}
 }

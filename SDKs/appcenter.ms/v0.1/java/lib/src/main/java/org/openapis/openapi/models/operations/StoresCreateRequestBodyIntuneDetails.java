@@ -12,6 +12,7 @@ public class StoresCreateRequestBodyIntuneDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_category")
     public StoresCreateRequestBodyIntuneDetailsAppCategory appCategory;
+
     public StoresCreateRequestBodyIntuneDetails withAppCategory(StoresCreateRequestBodyIntuneDetailsAppCategory appCategory) {
         this.appCategory = appCategory;
         return this;
@@ -20,6 +21,7 @@ public class StoresCreateRequestBodyIntuneDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret_json")
     public StoresCreateRequestBodyIntuneDetailsSecretJson secretJson;
+
     public StoresCreateRequestBodyIntuneDetails withSecretJson(StoresCreateRequestBodyIntuneDetailsSecretJson secretJson) {
         this.secretJson = secretJson;
         return this;
@@ -28,6 +30,7 @@ public class StoresCreateRequestBodyIntuneDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_audience")
     public StoresCreateRequestBodyIntuneDetailsTargetAudience targetAudience;
+
     public StoresCreateRequestBodyIntuneDetails withTargetAudience(StoresCreateRequestBodyIntuneDetailsTargetAudience targetAudience) {
         this.targetAudience = targetAudience;
         return this;
@@ -39,9 +42,11 @@ public class StoresCreateRequestBodyIntuneDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenant_id")
     public String tenantId;
+
     public StoresCreateRequestBodyIntuneDetails withTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
     }
     
+    public StoresCreateRequestBodyIntuneDetails(){}
 }

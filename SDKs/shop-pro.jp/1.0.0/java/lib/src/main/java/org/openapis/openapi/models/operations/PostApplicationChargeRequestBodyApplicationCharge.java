@@ -15,9 +15,11 @@ public class PostApplicationChargeRequestBodyApplicationCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_charge_source_id")
     public String applicationChargeSourceId;
+
     public PostApplicationChargeRequestBodyApplicationCharge withApplicationChargeSourceId(String applicationChargeSourceId) {
         this.applicationChargeSourceId = applicationChargeSourceId;
         return this;
     }
     
+    public PostApplicationChargeRequestBodyApplicationCharge(){}
 }

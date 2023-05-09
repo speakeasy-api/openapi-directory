@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1TaskNotebookTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archiveUris")
     public String[] archiveUris;
+
     public GoogleCloudDataplexV1TaskNotebookTaskConfig withArchiveUris(String[] archiveUris) {
         this.archiveUris = archiveUris;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1TaskNotebookTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileUris")
     public String[] fileUris;
+
     public GoogleCloudDataplexV1TaskNotebookTaskConfig withFileUris(String[] fileUris) {
         this.fileUris = fileUris;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1TaskNotebookTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infrastructureSpec")
     public GoogleCloudDataplexV1TaskInfrastructureSpec infrastructureSpec;
+
     public GoogleCloudDataplexV1TaskNotebookTaskConfig withInfrastructureSpec(GoogleCloudDataplexV1TaskInfrastructureSpec infrastructureSpec) {
         this.infrastructureSpec = infrastructureSpec;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDataplexV1TaskNotebookTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notebook")
     public String notebook;
+
     public GoogleCloudDataplexV1TaskNotebookTaskConfig withNotebook(String notebook) {
         this.notebook = notebook;
         return this;
     }
     
+    public GoogleCloudDataplexV1TaskNotebookTaskConfig(){}
 }

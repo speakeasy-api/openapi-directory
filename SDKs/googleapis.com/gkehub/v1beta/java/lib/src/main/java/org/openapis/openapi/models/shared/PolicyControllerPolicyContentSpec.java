@@ -18,6 +18,7 @@ public class PolicyControllerPolicyContentSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundles")
     public java.util.Map<String, PolicyControllerBundleInstallSpec> bundles;
+
     public PolicyControllerPolicyContentSpec withBundles(java.util.Map<String, PolicyControllerBundleInstallSpec> bundles) {
         this.bundles = bundles;
         return this;
@@ -29,9 +30,11 @@ public class PolicyControllerPolicyContentSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateLibrary")
     public PolicyControllerTemplateLibraryConfig templateLibrary;
+
     public PolicyControllerPolicyContentSpec withTemplateLibrary(PolicyControllerTemplateLibraryConfig templateLibrary) {
         this.templateLibrary = templateLibrary;
         return this;
     }
     
+    public PolicyControllerPolicyContentSpec(){}
 }

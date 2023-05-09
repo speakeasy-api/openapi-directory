@@ -15,6 +15,7 @@ public class CreateLifecyclePolicyRequestBodyPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Actions")
     public org.openapis.openapi.models.shared.Action[] actions;
+
     public CreateLifecyclePolicyRequestBodyPolicyDetails withActions(org.openapis.openapi.models.shared.Action[] actions) {
         this.actions = actions;
         return this;
@@ -23,6 +24,7 @@ public class CreateLifecyclePolicyRequestBodyPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSource")
     public org.openapis.openapi.models.shared.EventSource eventSource;
+
     public CreateLifecyclePolicyRequestBodyPolicyDetails withEventSource(org.openapis.openapi.models.shared.EventSource eventSource) {
         this.eventSource = eventSource;
         return this;
@@ -31,6 +33,7 @@ public class CreateLifecyclePolicyRequestBodyPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public org.openapis.openapi.models.shared.Parameters parameters;
+
     public CreateLifecyclePolicyRequestBodyPolicyDetails withParameters(org.openapis.openapi.models.shared.Parameters parameters) {
         this.parameters = parameters;
         return this;
@@ -39,6 +42,7 @@ public class CreateLifecyclePolicyRequestBodyPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyType")
     public org.openapis.openapi.models.shared.PolicyTypeValuesEnum policyType;
+
     public CreateLifecyclePolicyRequestBodyPolicyDetails withPolicyType(org.openapis.openapi.models.shared.PolicyTypeValuesEnum policyType) {
         this.policyType = policyType;
         return this;
@@ -47,6 +51,7 @@ public class CreateLifecyclePolicyRequestBodyPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceLocations")
     public org.openapis.openapi.models.shared.ResourceLocationValuesEnum[] resourceLocations;
+
     public CreateLifecyclePolicyRequestBodyPolicyDetails withResourceLocations(org.openapis.openapi.models.shared.ResourceLocationValuesEnum[] resourceLocations) {
         this.resourceLocations = resourceLocations;
         return this;
@@ -55,6 +60,7 @@ public class CreateLifecyclePolicyRequestBodyPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypes")
     public org.openapis.openapi.models.shared.ResourceTypeValuesEnum[] resourceTypes;
+
     public CreateLifecyclePolicyRequestBodyPolicyDetails withResourceTypes(org.openapis.openapi.models.shared.ResourceTypeValuesEnum[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
@@ -63,6 +69,7 @@ public class CreateLifecyclePolicyRequestBodyPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedules")
     public org.openapis.openapi.models.shared.Schedule[] schedules;
+
     public CreateLifecyclePolicyRequestBodyPolicyDetails withSchedules(org.openapis.openapi.models.shared.Schedule[] schedules) {
         this.schedules = schedules;
         return this;
@@ -71,9 +78,11 @@ public class CreateLifecyclePolicyRequestBodyPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetTags")
     public org.openapis.openapi.models.shared.Tag[] targetTags;
+
     public CreateLifecyclePolicyRequestBodyPolicyDetails withTargetTags(org.openapis.openapi.models.shared.Tag[] targetTags) {
         this.targetTags = targetTags;
         return this;
     }
     
+    public CreateLifecyclePolicyRequestBodyPolicyDetails(){}
 }

@@ -59,10 +59,8 @@ public class OnThisDay {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFactOnthisdayBornResponse res = new org.openapis.openapi.models.operations.GetFactOnthisdayBornResponse() {{
+        org.openapis.openapi.models.operations.GetFactOnthisdayBornResponse res = new org.openapis.openapi.models.operations.GetFactOnthisdayBornResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -99,10 +97,8 @@ public class OnThisDay {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFactOnthisdayDiedResponse res = new org.openapis.openapi.models.operations.GetFactOnthisdayDiedResponse() {{
+        org.openapis.openapi.models.operations.GetFactOnthisdayDiedResponse res = new org.openapis.openapi.models.operations.GetFactOnthisdayDiedResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -139,10 +135,8 @@ public class OnThisDay {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFactOnthisdayEventResponse res = new org.openapis.openapi.models.operations.GetFactOnthisdayEventResponse() {{
+        org.openapis.openapi.models.operations.GetFactOnthisdayEventResponse res = new org.openapis.openapi.models.operations.GetFactOnthisdayEventResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {

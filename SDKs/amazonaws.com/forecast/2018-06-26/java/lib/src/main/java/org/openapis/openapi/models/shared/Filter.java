@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Filter {
     @JsonProperty("Condition")
     public FilterConditionStringEnum condition;
+
     public Filter withCondition(FilterConditionStringEnum condition) {
         this.condition = condition;
         return this;
@@ -19,6 +20,7 @@ public class Filter {
     
     @JsonProperty("Key")
     public String key;
+
     public Filter withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +28,15 @@ public class Filter {
     
     @JsonProperty("Value")
     public String value;
+
     public Filter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Filter(@JsonProperty("Condition") FilterConditionStringEnum condition, @JsonProperty("Key") String key, @JsonProperty("Value") String value) {
+        this.condition = condition;
+        this.key = key;
+        this.value = value;
+  }
 }

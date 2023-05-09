@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetFreeTrialInfoResponse {
     @JsonProperty("accounts")
     public FreeTrialAccountInfo[] accounts;
+
     public BatchGetFreeTrialInfoResponse withAccounts(FreeTrialAccountInfo[] accounts) {
         this.accounts = accounts;
         return this;
@@ -19,9 +20,14 @@ public class BatchGetFreeTrialInfoResponse {
     
     @JsonProperty("failedAccounts")
     public FreeTrialInfoError[] failedAccounts;
+
     public BatchGetFreeTrialInfoResponse withFailedAccounts(FreeTrialInfoError[] failedAccounts) {
         this.failedAccounts = failedAccounts;
         return this;
     }
     
+    public BatchGetFreeTrialInfoResponse(@JsonProperty("accounts") FreeTrialAccountInfo[] accounts, @JsonProperty("failedAccounts") FreeTrialInfoError[] failedAccounts) {
+        this.accounts = accounts;
+        this.failedAccounts = failedAccounts;
+  }
 }

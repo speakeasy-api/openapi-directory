@@ -51,11 +51,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOneServiceResponse res = new org.openapis.openapi.models.operations.GetOneServiceResponse() {{
+        org.openapis.openapi.models.operations.GetOneServiceResponse res = new org.openapis.openapi.models.operations.GetOneServiceResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -95,11 +93,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetServicesResponse res = new org.openapis.openapi.models.operations.GetServicesResponse() {{
+        org.openapis.openapi.models.operations.GetServicesResponse res = new org.openapis.openapi.models.operations.GetServicesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {

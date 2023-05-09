@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveGroupFromCustomerRequest {
@@ -12,6 +13,7 @@ public class RemoveGroupFromCustomerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer_id")
     public String customerId;
+
     public RemoveGroupFromCustomerRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -22,9 +24,14 @@ public class RemoveGroupFromCustomerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
     public String groupId;
+
     public RemoveGroupFromCustomerRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public RemoveGroupFromCustomerRequest(@JsonProperty("customer_id") String customerId, @JsonProperty("group_id") String groupId) {
+        this.customerId = customerId;
+        this.groupId = groupId;
+  }
 }

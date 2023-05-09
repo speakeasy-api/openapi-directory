@@ -15,6 +15,7 @@ public class SignUpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyticsMetadata")
     public AnalyticsMetadataType analyticsMetadata;
+
     public SignUpRequest withAnalyticsMetadata(AnalyticsMetadataType analyticsMetadata) {
         this.analyticsMetadata = analyticsMetadata;
         return this;
@@ -22,6 +23,7 @@ public class SignUpRequest {
     
     @JsonProperty("ClientId")
     public String clientId;
+
     public SignUpRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -30,6 +32,7 @@ public class SignUpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientMetadata")
     public java.util.Map<String, String> clientMetadata;
+
     public SignUpRequest withClientMetadata(java.util.Map<String, String> clientMetadata) {
         this.clientMetadata = clientMetadata;
         return this;
@@ -37,6 +40,7 @@ public class SignUpRequest {
     
     @JsonProperty("Password")
     public String password;
+
     public SignUpRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -45,6 +49,7 @@ public class SignUpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretHash")
     public String secretHash;
+
     public SignUpRequest withSecretHash(String secretHash) {
         this.secretHash = secretHash;
         return this;
@@ -53,6 +58,7 @@ public class SignUpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserAttributes")
     public AttributeType[] userAttributes;
+
     public SignUpRequest withUserAttributes(AttributeType[] userAttributes) {
         this.userAttributes = userAttributes;
         return this;
@@ -61,6 +67,7 @@ public class SignUpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserContextData")
     public UserContextDataType userContextData;
+
     public SignUpRequest withUserContextData(UserContextDataType userContextData) {
         this.userContextData = userContextData;
         return this;
@@ -68,6 +75,7 @@ public class SignUpRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public SignUpRequest withUsername(String username) {
         this.username = username;
         return this;
@@ -76,9 +84,15 @@ public class SignUpRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationData")
     public AttributeType[] validationData;
+
     public SignUpRequest withValidationData(AttributeType[] validationData) {
         this.validationData = validationData;
         return this;
     }
     
+    public SignUpRequest(@JsonProperty("Username") String username, @JsonProperty("Password") String password, @JsonProperty("ClientId") String clientId) {
+        this.username = username;
+        this.password = password;
+        this.clientId = clientId;
+  }
 }

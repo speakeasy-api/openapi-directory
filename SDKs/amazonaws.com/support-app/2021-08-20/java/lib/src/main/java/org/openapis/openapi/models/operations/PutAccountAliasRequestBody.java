@@ -12,9 +12,13 @@ public class PutAccountAliasRequestBody {
      */
     @JsonProperty("accountAlias")
     public String accountAlias;
+
     public PutAccountAliasRequestBody withAccountAlias(String accountAlias) {
         this.accountAlias = accountAlias;
         return this;
     }
     
+    public PutAccountAliasRequestBody(@JsonProperty("accountAlias") String accountAlias) {
+        this.accountAlias = accountAlias;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AnalyticsadminPropertiesBigQueryLinksListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsadminPropertiesBigQueryLinksListSecurityOption1 option1;
+
     public AnalyticsadminPropertiesBigQueryLinksListSecurity withOption1(AnalyticsadminPropertiesBigQueryLinksListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class AnalyticsadminPropertiesBigQueryLinksListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsadminPropertiesBigQueryLinksListSecurityOption2 option2;
+
     public AnalyticsadminPropertiesBigQueryLinksListSecurity withOption2(AnalyticsadminPropertiesBigQueryLinksListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public AnalyticsadminPropertiesBigQueryLinksListSecurity(){}
 }

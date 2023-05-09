@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PlayintegrityDecodeIntegrityTokenResponse {
     
     public String contentType;
+
     public PlayintegrityDecodeIntegrityTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PlayintegrityDecodeIntegrityTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.DecodeIntegrityTokenResponse decodeIntegrityTokenResponse;
+
     public PlayintegrityDecodeIntegrityTokenResponse withDecodeIntegrityTokenResponse(org.openapis.openapi.models.shared.DecodeIntegrityTokenResponse decodeIntegrityTokenResponse) {
         this.decodeIntegrityTokenResponse = decodeIntegrityTokenResponse;
         return this;
@@ -26,6 +29,7 @@ public class PlayintegrityDecodeIntegrityTokenResponse {
     
     
     public Integer statusCode;
+
     public PlayintegrityDecodeIntegrityTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PlayintegrityDecodeIntegrityTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PlayintegrityDecodeIntegrityTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PlayintegrityDecodeIntegrityTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

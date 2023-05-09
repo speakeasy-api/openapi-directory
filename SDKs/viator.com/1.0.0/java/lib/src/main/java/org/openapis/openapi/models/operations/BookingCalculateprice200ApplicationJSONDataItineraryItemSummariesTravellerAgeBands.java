@@ -17,6 +17,7 @@ public class BookingCalculateprice200ApplicationJSONDataItineraryItemSummariesTr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageBandId")
     public Long ageBandId;
+
     public BookingCalculateprice200ApplicationJSONDataItineraryItemSummariesTravellerAgeBands withAgeBandId(Long ageBandId) {
         this.ageBandId = ageBandId;
         return this;
@@ -28,6 +29,7 @@ public class BookingCalculateprice200ApplicationJSONDataItineraryItemSummariesTr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public BookingCalculateprice200ApplicationJSONDataItineraryItemSummariesTravellerAgeBands withCount(Long count) {
         this.count = count;
         return this;
@@ -39,6 +41,7 @@ public class BookingCalculateprice200ApplicationJSONDataItineraryItemSummariesTr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BookingCalculateprice200ApplicationJSONDataItineraryItemSummariesTravellerAgeBands withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +53,7 @@ public class BookingCalculateprice200ApplicationJSONDataItineraryItemSummariesTr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pluralDescription")
     public String pluralDescription;
+
     public BookingCalculateprice200ApplicationJSONDataItineraryItemSummariesTravellerAgeBands withPluralDescription(String pluralDescription) {
         this.pluralDescription = pluralDescription;
         return this;
@@ -61,9 +65,11 @@ public class BookingCalculateprice200ApplicationJSONDataItineraryItemSummariesTr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public BookingCalculateprice200ApplicationJSONDataItineraryItemSummariesTravellerAgeBands withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public BookingCalculateprice200ApplicationJSONDataItineraryItemSummariesTravellerAgeBands(){}
 }

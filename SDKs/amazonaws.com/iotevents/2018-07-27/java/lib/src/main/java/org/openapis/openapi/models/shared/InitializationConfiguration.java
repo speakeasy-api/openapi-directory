@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InitializationConfiguration {
     @JsonProperty("disabledOnInitialization")
     public Boolean disabledOnInitialization;
+
     public InitializationConfiguration withDisabledOnInitialization(Boolean disabledOnInitialization) {
         this.disabledOnInitialization = disabledOnInitialization;
         return this;
     }
     
+    public InitializationConfiguration(@JsonProperty("disabledOnInitialization") Boolean disabledOnInitialization) {
+        this.disabledOnInitialization = disabledOnInitialization;
+  }
 }

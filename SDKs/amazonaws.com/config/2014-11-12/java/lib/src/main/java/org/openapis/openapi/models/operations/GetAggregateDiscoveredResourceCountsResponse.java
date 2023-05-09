@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAggregateDiscoveredResourceCountsResponse {
     
     public String contentType;
+
     public GetAggregateDiscoveredResourceCountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAggregateDiscoveredResourceCountsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAggregateDiscoveredResourceCountsResponse getAggregateDiscoveredResourceCountsResponse;
+
     public GetAggregateDiscoveredResourceCountsResponse withGetAggregateDiscoveredResourceCountsResponse(org.openapis.openapi.models.shared.GetAggregateDiscoveredResourceCountsResponse getAggregateDiscoveredResourceCountsResponse) {
         this.getAggregateDiscoveredResourceCountsResponse = getAggregateDiscoveredResourceCountsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAggregateDiscoveredResourceCountsResponse {
      */
     
     public Object invalidLimitException;
+
     public GetAggregateDiscoveredResourceCountsResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -39,6 +43,7 @@ public class GetAggregateDiscoveredResourceCountsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetAggregateDiscoveredResourceCountsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class GetAggregateDiscoveredResourceCountsResponse {
      */
     
     public Object noSuchConfigurationAggregatorException;
+
     public GetAggregateDiscoveredResourceCountsResponse withNoSuchConfigurationAggregatorException(Object noSuchConfigurationAggregatorException) {
         this.noSuchConfigurationAggregatorException = noSuchConfigurationAggregatorException;
         return this;
@@ -56,6 +62,7 @@ public class GetAggregateDiscoveredResourceCountsResponse {
     
     
     public Integer statusCode;
+
     public GetAggregateDiscoveredResourceCountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetAggregateDiscoveredResourceCountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAggregateDiscoveredResourceCountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetAggregateDiscoveredResourceCountsResponse {
      */
     
     public Object validationException;
+
     public GetAggregateDiscoveredResourceCountsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAggregateDiscoveredResourceCountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

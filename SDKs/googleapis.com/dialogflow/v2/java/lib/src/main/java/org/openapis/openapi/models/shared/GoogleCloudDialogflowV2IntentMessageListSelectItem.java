@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2IntentMessageListSelectItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowV2IntentMessageListSelectItem withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2IntentMessageListSelectItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public GoogleCloudDialogflowV2IntentMessageImage image;
+
     public GoogleCloudDialogflowV2IntentMessageListSelectItem withImage(GoogleCloudDialogflowV2IntentMessageImage image) {
         this.image = image;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2IntentMessageListSelectItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public GoogleCloudDialogflowV2IntentMessageSelectItemInfo info;
+
     public GoogleCloudDialogflowV2IntentMessageListSelectItem withInfo(GoogleCloudDialogflowV2IntentMessageSelectItemInfo info) {
         this.info = info;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2IntentMessageListSelectItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleCloudDialogflowV2IntentMessageListSelectItem withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentMessageListSelectItem(){}
 }

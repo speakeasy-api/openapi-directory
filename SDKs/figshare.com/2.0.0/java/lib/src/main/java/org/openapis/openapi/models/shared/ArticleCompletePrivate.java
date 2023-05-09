@@ -15,6 +15,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("account_id")
     public Long accountId;
+
     public ArticleCompletePrivate withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("authors")
     public Author[] authors;
+
     public ArticleCompletePrivate withAuthors(Author[] authors) {
         this.authors = authors;
         return this;
@@ -35,6 +37,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("categories")
     public Category[] categories;
+
     public ArticleCompletePrivate withCategories(Category[] categories) {
         this.categories = categories;
         return this;
@@ -45,6 +48,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("citation")
     public String citation;
+
     public ArticleCompletePrivate withCitation(String citation) {
         this.citation = citation;
         return this;
@@ -55,6 +59,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("confidential_reason")
     public String confidentialReason;
+
     public ArticleCompletePrivate withConfidentialReason(String confidentialReason) {
         this.confidentialReason = confidentialReason;
         return this;
@@ -65,6 +70,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("created_date")
     public String createdDate;
+
     public ArticleCompletePrivate withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -75,6 +81,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("custom_fields")
     public CustomArticleField[] customFields;
+
     public ArticleCompletePrivate withCustomFields(CustomArticleField[] customFields) {
         this.customFields = customFields;
         return this;
@@ -85,6 +92,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("defined_type")
     public Long definedType;
+
     public ArticleCompletePrivate withDefinedType(Long definedType) {
         this.definedType = definedType;
         return this;
@@ -95,6 +103,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("defined_type_name")
     public String definedTypeName;
+
     public ArticleCompletePrivate withDefinedTypeName(String definedTypeName) {
         this.definedTypeName = definedTypeName;
         return this;
@@ -105,6 +114,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("description")
     public String description;
+
     public ArticleCompletePrivate withDescription(String description) {
         this.description = description;
         return this;
@@ -115,6 +125,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("doi")
     public String doi;
+
     public ArticleCompletePrivate withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -125,6 +136,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("embargo_date")
     public String embargoDate;
+
     public ArticleCompletePrivate withEmbargoDate(String embargoDate) {
         this.embargoDate = embargoDate;
         return this;
@@ -135,6 +147,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("embargo_options")
     public GroupEmbargoOptions[] embargoOptions;
+
     public ArticleCompletePrivate withEmbargoOptions(GroupEmbargoOptions[] embargoOptions) {
         this.embargoOptions = embargoOptions;
         return this;
@@ -145,6 +158,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("embargo_reason")
     public String embargoReason;
+
     public ArticleCompletePrivate withEmbargoReason(String embargoReason) {
         this.embargoReason = embargoReason;
         return this;
@@ -155,6 +169,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("embargo_title")
     public String embargoTitle;
+
     public ArticleCompletePrivate withEmbargoTitle(String embargoTitle) {
         this.embargoTitle = embargoTitle;
         return this;
@@ -165,6 +180,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("embargo_type")
     public String embargoType;
+
     public ArticleCompletePrivate withEmbargoType(String embargoType) {
         this.embargoType = embargoType;
         return this;
@@ -175,6 +191,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("figshare_url")
     public String figshareUrl;
+
     public ArticleCompletePrivate withFigshareUrl(String figshareUrl) {
         this.figshareUrl = figshareUrl;
         return this;
@@ -185,6 +202,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("files")
     public PublicFile[] files;
+
     public ArticleCompletePrivate withFiles(PublicFile[] files) {
         this.files = files;
         return this;
@@ -195,6 +213,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("funding")
     public String funding;
+
     public ArticleCompletePrivate withFunding(String funding) {
         this.funding = funding;
         return this;
@@ -202,6 +221,7 @@ public class ArticleCompletePrivate {
     
     @JsonProperty("funding_list")
     public Long[] fundingList;
+
     public ArticleCompletePrivate withFundingList(Long[] fundingList) {
         this.fundingList = fundingList;
         return this;
@@ -212,6 +232,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("group_id")
     public Double groupId;
+
     public ArticleCompletePrivate withGroupId(Double groupId) {
         this.groupId = groupId;
         return this;
@@ -222,6 +243,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("group_resource_id")
     public String groupResourceId;
+
     public ArticleCompletePrivate withGroupResourceId(String groupResourceId) {
         this.groupResourceId = groupResourceId;
         return this;
@@ -232,6 +254,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("handle")
     public String handle;
+
     public ArticleCompletePrivate withHandle(String handle) {
         this.handle = handle;
         return this;
@@ -242,6 +265,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("has_linked_file")
     public Boolean hasLinkedFile;
+
     public ArticleCompletePrivate withHasLinkedFile(Boolean hasLinkedFile) {
         this.hasLinkedFile = hasLinkedFile;
         return this;
@@ -252,6 +276,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("id")
     public Long id;
+
     public ArticleCompletePrivate withId(Long id) {
         this.id = id;
         return this;
@@ -262,6 +287,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public ArticleCompletePrivate withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -272,6 +298,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("is_confidential")
     public Boolean isConfidential;
+
     public ArticleCompletePrivate withIsConfidential(Boolean isConfidential) {
         this.isConfidential = isConfidential;
         return this;
@@ -282,6 +309,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("is_embargoed")
     public Boolean isEmbargoed;
+
     public ArticleCompletePrivate withIsEmbargoed(Boolean isEmbargoed) {
         this.isEmbargoed = isEmbargoed;
         return this;
@@ -292,6 +320,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("is_metadata_record")
     public Boolean isMetadataRecord;
+
     public ArticleCompletePrivate withIsMetadataRecord(Boolean isMetadataRecord) {
         this.isMetadataRecord = isMetadataRecord;
         return this;
@@ -302,6 +331,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("is_public")
     public Boolean isPublic;
+
     public ArticleCompletePrivate withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -309,6 +339,7 @@ public class ArticleCompletePrivate {
     
     @JsonProperty("license")
     public License license;
+
     public ArticleCompletePrivate withLicense(License license) {
         this.license = license;
         return this;
@@ -319,6 +350,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("metadata_reason")
     public String metadataReason;
+
     public ArticleCompletePrivate withMetadataReason(String metadataReason) {
         this.metadataReason = metadataReason;
         return this;
@@ -329,6 +361,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("modified_date")
     public String modifiedDate;
+
     public ArticleCompletePrivate withModifiedDate(String modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -339,6 +372,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("published_date")
     public String publishedDate;
+
     public ArticleCompletePrivate withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
@@ -349,6 +383,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("references")
     public String[] references;
+
     public ArticleCompletePrivate withReferences(String[] references) {
         this.references = references;
         return this;
@@ -359,6 +394,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("resource_doi")
     public String resourceDoi;
+
     public ArticleCompletePrivate withResourceDoi(String resourceDoi) {
         this.resourceDoi = resourceDoi;
         return this;
@@ -369,6 +405,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("resource_title")
     public String resourceTitle;
+
     public ArticleCompletePrivate withResourceTitle(String resourceTitle) {
         this.resourceTitle = resourceTitle;
         return this;
@@ -379,6 +416,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("size")
     public Long size;
+
     public ArticleCompletePrivate withSize(Long size) {
         this.size = size;
         return this;
@@ -389,6 +427,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("status")
     public String status;
+
     public ArticleCompletePrivate withStatus(String status) {
         this.status = status;
         return this;
@@ -399,6 +438,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("tags")
     public String[] tags;
+
     public ArticleCompletePrivate withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -409,6 +449,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("thumb")
     public String thumb;
+
     public ArticleCompletePrivate withThumb(String thumb) {
         this.thumb = thumb;
         return this;
@@ -416,6 +457,7 @@ public class ArticleCompletePrivate {
     
     @JsonProperty("timeline")
     public Timeline timeline;
+
     public ArticleCompletePrivate withTimeline(Timeline timeline) {
         this.timeline = timeline;
         return this;
@@ -426,6 +468,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("title")
     public String title;
+
     public ArticleCompletePrivate withTitle(String title) {
         this.title = title;
         return this;
@@ -436,6 +479,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("url")
     public String url;
+
     public ArticleCompletePrivate withUrl(String url) {
         this.url = url;
         return this;
@@ -446,6 +490,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("url_private_api")
     public String urlPrivateApi;
+
     public ArticleCompletePrivate withUrlPrivateApi(String urlPrivateApi) {
         this.urlPrivateApi = urlPrivateApi;
         return this;
@@ -456,6 +501,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("url_private_html")
     public String urlPrivateHtml;
+
     public ArticleCompletePrivate withUrlPrivateHtml(String urlPrivateHtml) {
         this.urlPrivateHtml = urlPrivateHtml;
         return this;
@@ -466,6 +512,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("url_public_api")
     public String urlPublicApi;
+
     public ArticleCompletePrivate withUrlPublicApi(String urlPublicApi) {
         this.urlPublicApi = urlPublicApi;
         return this;
@@ -476,6 +523,7 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("url_public_html")
     public String urlPublicHtml;
+
     public ArticleCompletePrivate withUrlPublicHtml(String urlPublicHtml) {
         this.urlPublicHtml = urlPublicHtml;
         return this;
@@ -486,9 +534,61 @@ public class ArticleCompletePrivate {
      */
     @JsonProperty("version")
     public Long version;
+
     public ArticleCompletePrivate withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public ArticleCompletePrivate(@JsonProperty("account_id") Long accountId, @JsonProperty("authors") Author[] authors, @JsonProperty("categories") Category[] categories, @JsonProperty("citation") String citation, @JsonProperty("confidential_reason") String confidentialReason, @JsonProperty("created_date") String createdDate, @JsonProperty("custom_fields") CustomArticleField[] customFields, @JsonProperty("defined_type") Long definedType, @JsonProperty("defined_type_name") String definedTypeName, @JsonProperty("description") String description, @JsonProperty("doi") String doi, @JsonProperty("embargo_date") String embargoDate, @JsonProperty("embargo_options") GroupEmbargoOptions[] embargoOptions, @JsonProperty("embargo_reason") String embargoReason, @JsonProperty("embargo_title") String embargoTitle, @JsonProperty("embargo_type") String embargoType, @JsonProperty("figshare_url") String figshareUrl, @JsonProperty("files") PublicFile[] files, @JsonProperty("funding") String funding, @JsonProperty("funding_list") Long[] fundingList, @JsonProperty("group_id") Double groupId, @JsonProperty("group_resource_id") String groupResourceId, @JsonProperty("handle") String handle, @JsonProperty("has_linked_file") Boolean hasLinkedFile, @JsonProperty("id") Long id, @JsonProperty("is_active") Boolean isActive, @JsonProperty("is_confidential") Boolean isConfidential, @JsonProperty("is_embargoed") Boolean isEmbargoed, @JsonProperty("is_metadata_record") Boolean isMetadataRecord, @JsonProperty("is_public") Boolean isPublic, @JsonProperty("license") License license, @JsonProperty("metadata_reason") String metadataReason, @JsonProperty("modified_date") String modifiedDate, @JsonProperty("published_date") String publishedDate, @JsonProperty("references") String[] references, @JsonProperty("resource_doi") String resourceDoi, @JsonProperty("resource_title") String resourceTitle, @JsonProperty("size") Long size, @JsonProperty("status") String status, @JsonProperty("tags") String[] tags, @JsonProperty("thumb") String thumb, @JsonProperty("timeline") Timeline timeline, @JsonProperty("title") String title, @JsonProperty("url") String url, @JsonProperty("url_private_api") String urlPrivateApi, @JsonProperty("url_private_html") String urlPrivateHtml, @JsonProperty("url_public_api") String urlPublicApi, @JsonProperty("url_public_html") String urlPublicHtml, @JsonProperty("version") Long version) {
+        this.accountId = accountId;
+        this.authors = authors;
+        this.categories = categories;
+        this.citation = citation;
+        this.confidentialReason = confidentialReason;
+        this.createdDate = createdDate;
+        this.customFields = customFields;
+        this.definedType = definedType;
+        this.definedTypeName = definedTypeName;
+        this.description = description;
+        this.doi = doi;
+        this.embargoDate = embargoDate;
+        this.embargoOptions = embargoOptions;
+        this.embargoReason = embargoReason;
+        this.embargoTitle = embargoTitle;
+        this.embargoType = embargoType;
+        this.figshareUrl = figshareUrl;
+        this.files = files;
+        this.funding = funding;
+        this.fundingList = fundingList;
+        this.groupId = groupId;
+        this.groupResourceId = groupResourceId;
+        this.handle = handle;
+        this.hasLinkedFile = hasLinkedFile;
+        this.id = id;
+        this.isActive = isActive;
+        this.isConfidential = isConfidential;
+        this.isEmbargoed = isEmbargoed;
+        this.isMetadataRecord = isMetadataRecord;
+        this.isPublic = isPublic;
+        this.license = license;
+        this.metadataReason = metadataReason;
+        this.modifiedDate = modifiedDate;
+        this.publishedDate = publishedDate;
+        this.references = references;
+        this.resourceDoi = resourceDoi;
+        this.resourceTitle = resourceTitle;
+        this.size = size;
+        this.status = status;
+        this.tags = tags;
+        this.thumb = thumb;
+        this.timeline = timeline;
+        this.title = title;
+        this.url = url;
+        this.urlPrivateApi = urlPrivateApi;
+        this.urlPrivateHtml = urlPrivateHtml;
+        this.urlPublicApi = urlPublicApi;
+        this.urlPublicHtml = urlPublicHtml;
+        this.version = version;
+  }
 }

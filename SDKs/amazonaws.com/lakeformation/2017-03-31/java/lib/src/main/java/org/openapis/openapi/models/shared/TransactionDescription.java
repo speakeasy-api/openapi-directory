@@ -22,6 +22,7 @@ public class TransactionDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TransactionEndTime")
     public OffsetDateTime transactionEndTime;
+
     public TransactionDescription withTransactionEndTime(OffsetDateTime transactionEndTime) {
         this.transactionEndTime = transactionEndTime;
         return this;
@@ -30,6 +31,7 @@ public class TransactionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public TransactionDescription withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -40,6 +42,7 @@ public class TransactionDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TransactionStartTime")
     public OffsetDateTime transactionStartTime;
+
     public TransactionDescription withTransactionStartTime(OffsetDateTime transactionStartTime) {
         this.transactionStartTime = transactionStartTime;
         return this;
@@ -48,9 +51,11 @@ public class TransactionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionStatus")
     public TransactionStatusEnum transactionStatus;
+
     public TransactionDescription withTransactionStatus(TransactionStatusEnum transactionStatus) {
         this.transactionStatus = transactionStatus;
         return this;
     }
     
+    public TransactionDescription(){}
 }

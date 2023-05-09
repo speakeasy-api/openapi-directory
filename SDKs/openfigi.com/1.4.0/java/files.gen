@@ -42,4 +42,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/MappingJobOptionTypeEnum.ja
 lib/src/main/java/org/openapis/openapi/models/shared/MappingJobStateCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/MappingJob.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

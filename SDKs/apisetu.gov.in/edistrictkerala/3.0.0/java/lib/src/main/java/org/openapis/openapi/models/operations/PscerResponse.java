@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PscerResponse {
     
     public String contentType;
+
     public PscerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PscerResponse {
     
     
     public Integer statusCode;
+
     public PscerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PscerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PscerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PscerResponse {
      */
     
     public Pscer400ApplicationJSON pscer400ApplicationJSONObject;
+
     public PscerResponse withPscer400ApplicationJSONObject(Pscer400ApplicationJSON pscer400ApplicationJSONObject) {
         this.pscer400ApplicationJSONObject = pscer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PscerResponse {
      */
     
     public Pscer401ApplicationJSON pscer401ApplicationJSONObject;
+
     public PscerResponse withPscer401ApplicationJSONObject(Pscer401ApplicationJSON pscer401ApplicationJSONObject) {
         this.pscer401ApplicationJSONObject = pscer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PscerResponse {
      */
     
     public Pscer404ApplicationJSON pscer404ApplicationJSONObject;
+
     public PscerResponse withPscer404ApplicationJSONObject(Pscer404ApplicationJSON pscer404ApplicationJSONObject) {
         this.pscer404ApplicationJSONObject = pscer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class PscerResponse {
      */
     
     public Pscer500ApplicationJSON pscer500ApplicationJSONObject;
+
     public PscerResponse withPscer500ApplicationJSONObject(Pscer500ApplicationJSON pscer500ApplicationJSONObject) {
         this.pscer500ApplicationJSONObject = pscer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class PscerResponse {
      */
     
     public Pscer502ApplicationJSON pscer502ApplicationJSONObject;
+
     public PscerResponse withPscer502ApplicationJSONObject(Pscer502ApplicationJSON pscer502ApplicationJSONObject) {
         this.pscer502ApplicationJSONObject = pscer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class PscerResponse {
      */
     
     public Pscer503ApplicationJSON pscer503ApplicationJSONObject;
+
     public PscerResponse withPscer503ApplicationJSONObject(Pscer503ApplicationJSON pscer503ApplicationJSONObject) {
         this.pscer503ApplicationJSONObject = pscer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class PscerResponse {
      */
     
     public Pscer504ApplicationJSON pscer504ApplicationJSONObject;
+
     public PscerResponse withPscer504ApplicationJSONObject(Pscer504ApplicationJSON pscer504ApplicationJSONObject) {
         this.pscer504ApplicationJSONObject = pscer504ApplicationJSONObject;
         return this;
     }
     
+    public PscerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

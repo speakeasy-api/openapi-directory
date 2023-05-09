@@ -18,6 +18,7 @@ public class BetweenFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromValue")
     public NumericValue fromValue;
+
     public BetweenFilter withFromValue(NumericValue fromValue) {
         this.fromValue = fromValue;
         return this;
@@ -29,9 +30,11 @@ public class BetweenFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toValue")
     public NumericValue toValue;
+
     public BetweenFilter withToValue(NumericValue toValue) {
         this.toValue = toValue;
         return this;
     }
     
+    public BetweenFilter(){}
 }

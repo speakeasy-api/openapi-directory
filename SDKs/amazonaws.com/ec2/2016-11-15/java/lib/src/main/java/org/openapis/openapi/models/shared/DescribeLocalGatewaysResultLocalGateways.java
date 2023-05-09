@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewaysResultLocalGateways {
     
     public String localGatewayId;
+
     public DescribeLocalGatewaysResultLocalGateways withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeLocalGatewaysResultLocalGateways {
     
     
     public String outpostArn;
+
     public DescribeLocalGatewaysResultLocalGateways withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -26,6 +28,7 @@ public class DescribeLocalGatewaysResultLocalGateways {
     
     
     public String ownerId;
+
     public DescribeLocalGatewaysResultLocalGateways withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeLocalGatewaysResultLocalGateways {
     
     
     public String state;
+
     public DescribeLocalGatewaysResultLocalGateways withState(String state) {
         this.state = state;
         return this;
@@ -40,9 +44,11 @@ public class DescribeLocalGatewaysResultLocalGateways {
     
     
     public DescribeLocalGatewaysResultLocalGatewaysTags[] tags;
+
     public DescribeLocalGatewaysResultLocalGateways withTags(DescribeLocalGatewaysResultLocalGatewaysTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeLocalGatewaysResultLocalGateways(){}
 }

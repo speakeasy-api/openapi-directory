@@ -16,11 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateSecurity;
-import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateTransportationMethodEnum;
 import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateRequest;
 import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateResponse;
+import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateSecurity;
+import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateTransportationMethodEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -28,15 +27,14 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetApiV1DonationsCarbonCalculateRequest req = new GetApiV1DonationsCarbonCalculateRequest() {{
-                destinationAddress = 5488.14;
-                distanceMi = 5928.45;
-                originAddress = 7151.9;
-                transportationMethod = "sea";
-                weightLb = 6027.63;
-            }}            
+            GetApiV1DonationsCarbonCalculateRequest req = new GetApiV1DonationsCarbonCalculateRequest(5488.14) {{
+                destinationAddress = 5928.45;
+                distanceMi = 7151.9;
+                originAddress = 8442.66;
+                transportationMethod = GetApiV1DonationsCarbonCalculateTransportationMethodEnum.RAIL;
+            }};            
 
-            GetApiV1DonationsCarbonCalculateResponse res = sdk.getApiV1DonationsCarbonCalculate(req, new GetApiV1DonationsCarbonCalculateSecurity() {{
+            GetApiV1DonationsCarbonCalculateResponse res = sdk.getApiV1DonationsCarbonCalculate(req, new GetApiV1DonationsCarbonCalculateSecurity("nulla", "corrupti") {{
                 password = "YOUR_PASSWORD_HERE";
                 username = "YOUR_USERNAME_HERE";
             }});
@@ -47,22 +45,24 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getApiV1DonationsCarbonCalculate` - Calculate shipping carbon offset
-* `getApiV1DonationsCarbonStats` - Retrieve carbon offset stats
-* `getApiV1DonationsCryptoCalculate` - Calculate crypto carbon offset
-* `getApiV1DonationsIndex` - List your donations
-* `getApiV1DonationsShow` - Retrieve a donation
-* `getApiV1NonprofitsList` - Search a nonprofit
-* `getApiV1NonprofitsShow` - Show a nonprofit
-* `postApiV1DonationsCreate` - Create a donation
+* [getApiV1DonationsCarbonCalculate](docs/sdk/README.md#getapiv1donationscarboncalculate) - Calculate shipping carbon offset
+* [getApiV1DonationsCarbonStats](docs/sdk/README.md#getapiv1donationscarbonstats) - Retrieve carbon offset stats
+* [getApiV1DonationsCryptoCalculate](docs/sdk/README.md#getapiv1donationscryptocalculate) - Calculate crypto carbon offset
+* [getApiV1DonationsIndex](docs/sdk/README.md#getapiv1donationsindex) - List your donations
+* [getApiV1DonationsShow](docs/sdk/README.md#getapiv1donationsshow) - Retrieve a donation
+* [getApiV1NonprofitsList](docs/sdk/README.md#getapiv1nonprofitslist) - Search a nonprofit
+* [getApiV1NonprofitsShow](docs/sdk/README.md#getapiv1nonprofitsshow) - Show a nonprofit
+* [postApiV1DonationsCreate](docs/sdk/README.md#postapiv1donationscreate) - Create a donation
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -18,9 +18,11 @@ public class AuthenticationToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public AuthenticationToken withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public AuthenticationToken(){}
 }

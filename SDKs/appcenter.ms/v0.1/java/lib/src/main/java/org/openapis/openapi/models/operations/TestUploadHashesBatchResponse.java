@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestUploadHashesBatchResponse {
     
     public String contentType;
+
     public TestUploadHashesBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TestUploadHashesBatchResponse {
     
     
     public Integer statusCode;
+
     public TestUploadHashesBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TestUploadHashesBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestUploadHashesBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class TestUploadHashesBatchResponse {
      */
     
     public TestUploadHashesBatchTestCloudFileHashResponse[] testCloudFileHashResponses;
+
     public TestUploadHashesBatchResponse withTestCloudFileHashResponses(TestUploadHashesBatchTestCloudFileHashResponse[] testCloudFileHashResponses) {
         this.testCloudFileHashResponses = testCloudFileHashResponses;
         return this;
     }
     
+    public TestUploadHashesBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

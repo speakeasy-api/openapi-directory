@@ -14,6 +14,7 @@ public class BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModulesBui
      */
     @JsonProperty("name")
     public String name;
+
     public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModulesBuildConfigurations withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,13 @@ public class BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModulesBui
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signingConfig")
     public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModulesBuildConfigurationsSigningConfig signingConfig;
+
     public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModulesBuildConfigurations withSigningConfig(BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModulesBuildConfigurationsSigningConfig signingConfig) {
         this.signingConfig = signingConfig;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModulesBuildConfigurations(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

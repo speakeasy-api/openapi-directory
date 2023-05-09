@@ -12,6 +12,7 @@ public class ListKeysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListKeysRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,9 +21,11 @@ public class ListKeysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListKeysRequest withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListKeysRequest(){}
 }

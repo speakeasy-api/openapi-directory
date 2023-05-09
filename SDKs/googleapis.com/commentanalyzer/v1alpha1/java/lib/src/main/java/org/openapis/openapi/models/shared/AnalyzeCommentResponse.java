@@ -18,6 +18,7 @@ public class AnalyzeCommentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeScores")
     public java.util.Map<String, AttributeScores> attributeScores;
+
     public AnalyzeCommentResponse withAttributeScores(java.util.Map<String, AttributeScores> attributeScores) {
         this.attributeScores = attributeScores;
         return this;
@@ -29,6 +30,7 @@ public class AnalyzeCommentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public AnalyzeCommentResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -40,6 +42,7 @@ public class AnalyzeCommentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedLanguages")
     public String[] detectedLanguages;
+
     public AnalyzeCommentResponse withDetectedLanguages(String[] detectedLanguages) {
         this.detectedLanguages = detectedLanguages;
         return this;
@@ -51,9 +54,11 @@ public class AnalyzeCommentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public String[] languages;
+
     public AnalyzeCommentResponse withLanguages(String[] languages) {
         this.languages = languages;
         return this;
     }
     
+    public AnalyzeCommentResponse(){}
 }

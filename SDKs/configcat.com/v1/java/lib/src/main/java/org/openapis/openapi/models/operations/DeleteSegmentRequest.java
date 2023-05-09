@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSegmentRequest {
@@ -12,9 +13,13 @@ public class DeleteSegmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=segmentId")
     public String segmentId;
+
     public DeleteSegmentRequest withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
     }
     
+    public DeleteSegmentRequest(@JsonProperty("segmentId") String segmentId) {
+        this.segmentId = segmentId;
+  }
 }

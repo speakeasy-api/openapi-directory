@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateBundleRequest {
     @JsonProperty("data")
     public BundleResource data;
+
     public UpdateBundleRequest withData(BundleResource data) {
         this.data = data;
         return this;
     }
     
+    public UpdateBundleRequest(@JsonProperty("data") BundleResource data) {
+        this.data = data;
+  }
 }

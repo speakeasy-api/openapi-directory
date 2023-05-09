@@ -18,6 +18,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Permission withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Permission withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionId")
     public String permissionId;
+
     public Permission withPermissionId(String permissionId) {
         this.permissionId = permissionId;
         return this;
     }
     
+    public Permission(){}
 }

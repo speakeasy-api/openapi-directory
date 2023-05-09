@@ -23,6 +23,7 @@ public class HmacKeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessId")
     public String accessId;
+
     public HmacKeyMetadata withAccessId(String accessId) {
         this.accessId = accessId;
         return this;
@@ -34,6 +35,7 @@ public class HmacKeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public HmacKeyMetadata withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -45,6 +47,7 @@ public class HmacKeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public HmacKeyMetadata withId(String id) {
         this.id = id;
         return this;
@@ -56,6 +59,7 @@ public class HmacKeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public HmacKeyMetadata withKind(String kind) {
         this.kind = kind;
         return this;
@@ -67,6 +71,7 @@ public class HmacKeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public HmacKeyMetadata withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -78,6 +83,7 @@ public class HmacKeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public HmacKeyMetadata withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -89,6 +95,7 @@ public class HmacKeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountEmail")
     public String serviceAccountEmail;
+
     public HmacKeyMetadata withServiceAccountEmail(String serviceAccountEmail) {
         this.serviceAccountEmail = serviceAccountEmail;
         return this;
@@ -100,6 +107,7 @@ public class HmacKeyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public HmacKeyMetadata withState(String state) {
         this.state = state;
         return this;
@@ -113,6 +121,7 @@ public class HmacKeyMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timeCreated")
     public OffsetDateTime timeCreated;
+
     public HmacKeyMetadata withTimeCreated(OffsetDateTime timeCreated) {
         this.timeCreated = timeCreated;
         return this;
@@ -126,9 +135,11 @@ public class HmacKeyMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated")
     public OffsetDateTime updated;
+
     public HmacKeyMetadata withUpdated(OffsetDateTime updated) {
         this.updated = updated;
         return this;
     }
     
+    public HmacKeyMetadata(){}
 }

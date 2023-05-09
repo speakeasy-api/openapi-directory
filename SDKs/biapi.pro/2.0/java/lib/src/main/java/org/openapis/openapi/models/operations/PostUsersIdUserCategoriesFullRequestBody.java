@@ -12,6 +12,7 @@ public class PostUsersIdUserCategoriesFullRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=accountant_account")
     public String accountantAccount;
+
     public PostUsersIdUserCategoriesFullRequestBody withAccountantAccount(String accountantAccount) {
         this.accountantAccount = accountantAccount;
         return this;
@@ -22,6 +23,7 @@ public class PostUsersIdUserCategoriesFullRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=color")
     public String color;
+
     public PostUsersIdUserCategoriesFullRequestBody withColor(String color) {
         this.color = color;
         return this;
@@ -32,6 +34,7 @@ public class PostUsersIdUserCategoriesFullRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=id_parent_category")
     public Long idParentCategory;
+
     public PostUsersIdUserCategoriesFullRequestBody withIdParentCategory(Long idParentCategory) {
         this.idParentCategory = idParentCategory;
         return this;
@@ -42,6 +45,7 @@ public class PostUsersIdUserCategoriesFullRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=id_parent_category_in_menu")
     public Long idParentCategoryInMenu;
+
     public PostUsersIdUserCategoriesFullRequestBody withIdParentCategoryInMenu(Long idParentCategoryInMenu) {
         this.idParentCategoryInMenu = idParentCategoryInMenu;
         return this;
@@ -52,6 +56,7 @@ public class PostUsersIdUserCategoriesFullRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=income")
     public Boolean income;
+
     public PostUsersIdUserCategoriesFullRequestBody withIncome(Boolean income) {
         this.income = income;
         return this;
@@ -62,6 +67,7 @@ public class PostUsersIdUserCategoriesFullRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PostUsersIdUserCategoriesFullRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -72,9 +78,11 @@ public class PostUsersIdUserCategoriesFullRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=refundable")
     public Boolean refundable;
+
     public PostUsersIdUserCategoriesFullRequestBody withRefundable(Boolean refundable) {
         this.refundable = refundable;
         return this;
     }
     
+    public PostUsersIdUserCategoriesFullRequestBody(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiAssociationResponse {
@@ -12,6 +13,7 @@ public class GetApiAssociationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetApiAssociationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetApiAssociationResponse {
      */
     
     public Object badRequestException;
+
     public GetApiAssociationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class GetApiAssociationResponse {
     
     
     public String contentType;
+
     public GetApiAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetApiAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetApiAssociationResponse getApiAssociationResponse;
+
     public GetApiAssociationResponse withGetApiAssociationResponse(org.openapis.openapi.models.shared.GetApiAssociationResponse getApiAssociationResponse) {
         this.getApiAssociationResponse = getApiAssociationResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetApiAssociationResponse {
      */
     
     public Object internalFailureException;
+
     public GetApiAssociationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class GetApiAssociationResponse {
      */
     
     public Object notFoundException;
+
     public GetApiAssociationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetApiAssociationResponse {
     
     
     public Integer statusCode;
+
     public GetApiAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetApiAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApiAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

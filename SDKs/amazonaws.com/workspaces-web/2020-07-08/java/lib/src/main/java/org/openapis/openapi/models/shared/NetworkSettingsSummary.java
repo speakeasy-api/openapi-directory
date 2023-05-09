@@ -15,6 +15,7 @@ public class NetworkSettingsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkSettingsArn")
     public String networkSettingsArn;
+
     public NetworkSettingsSummary withNetworkSettingsArn(String networkSettingsArn) {
         this.networkSettingsArn = networkSettingsArn;
         return this;
@@ -23,9 +24,11 @@ public class NetworkSettingsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcId")
     public String vpcId;
+
     public NetworkSettingsSummary withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public NetworkSettingsSummary(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MaintenanceStatusConnectionServices {
     @JsonProperty("name")
     public String name;
+
     public MaintenanceStatusConnectionServices withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class MaintenanceStatusConnectionServices {
     
     @JsonProperty("number")
     public Long number;
+
     public MaintenanceStatusConnectionServices withNumber(Long number) {
         this.number = number;
         return this;
     }
     
+    public MaintenanceStatusConnectionServices(@JsonProperty("name") String name, @JsonProperty("number") Long number) {
+        this.name = name;
+        this.number = number;
+  }
 }

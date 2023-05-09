@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetIpamDiscoveredResourceCidrsRequest {
     
     public Boolean dryRun;
+
     public GetIpamDiscoveredResourceCidrsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetIpamDiscoveredResourceCidrsRequest {
     
     
     public GetIpamDiscoveredResourceCidrsRequestFilters[] filters;
+
     public GetIpamDiscoveredResourceCidrsRequest withFilters(GetIpamDiscoveredResourceCidrsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class GetIpamDiscoveredResourceCidrsRequest {
     
     
     public String ipamResourceDiscoveryId;
+
     public GetIpamDiscoveredResourceCidrsRequest withIpamResourceDiscoveryId(String ipamResourceDiscoveryId) {
         this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
         return this;
@@ -30,6 +33,7 @@ public class GetIpamDiscoveredResourceCidrsRequest {
     
     
     public Long maxResults;
+
     public GetIpamDiscoveredResourceCidrsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +41,7 @@ public class GetIpamDiscoveredResourceCidrsRequest {
     
     
     public String nextToken;
+
     public GetIpamDiscoveredResourceCidrsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +49,14 @@ public class GetIpamDiscoveredResourceCidrsRequest {
     
     
     public String resourceRegion;
+
     public GetIpamDiscoveredResourceCidrsRequest withResourceRegion(String resourceRegion) {
         this.resourceRegion = resourceRegion;
         return this;
     }
     
+    public GetIpamDiscoveredResourceCidrsRequest(@JsonProperty("IpamResourceDiscoveryId") String ipamResourceDiscoveryId, @JsonProperty("ResourceRegion") String resourceRegion) {
+        this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
+        this.resourceRegion = resourceRegion;
+  }
 }

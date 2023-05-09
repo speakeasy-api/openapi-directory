@@ -20,6 +20,7 @@ public class SearchAvailabilityFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booking_id")
     public String bookingId;
+
     public SearchAvailabilityFilter withBookingId(String bookingId) {
         this.bookingId = bookingId;
         return this;
@@ -32,6 +33,7 @@ public class SearchAvailabilityFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public SearchAvailabilityFilter withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -44,6 +46,7 @@ public class SearchAvailabilityFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segment_filters")
     public SegmentFilter[] segmentFilters;
+
     public SearchAvailabilityFilter withSegmentFilters(SegmentFilter[] segmentFilters) {
         this.segmentFilters = segmentFilters;
         return this;
@@ -58,9 +61,13 @@ public class SearchAvailabilityFilter {
      */
     @JsonProperty("start_at_range")
     public TimeRange startAtRange;
+
     public SearchAvailabilityFilter withStartAtRange(TimeRange startAtRange) {
         this.startAtRange = startAtRange;
         return this;
     }
     
+    public SearchAvailabilityFilter(@JsonProperty("start_at_range") TimeRange startAtRange) {
+        this.startAtRange = startAtRange;
+  }
 }

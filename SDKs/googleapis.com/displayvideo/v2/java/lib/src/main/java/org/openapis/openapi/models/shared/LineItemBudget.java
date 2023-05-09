@@ -18,6 +18,7 @@ public class LineItemBudget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budgetAllocationType")
     public LineItemBudgetBudgetAllocationTypeEnum budgetAllocationType;
+
     public LineItemBudget withBudgetAllocationType(LineItemBudgetBudgetAllocationTypeEnum budgetAllocationType) {
         this.budgetAllocationType = budgetAllocationType;
         return this;
@@ -29,6 +30,7 @@ public class LineItemBudget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budgetUnit")
     public LineItemBudgetBudgetUnitEnum budgetUnit;
+
     public LineItemBudget withBudgetUnit(LineItemBudgetBudgetUnitEnum budgetUnit) {
         this.budgetUnit = budgetUnit;
         return this;
@@ -40,9 +42,11 @@ public class LineItemBudget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAmount")
     public String maxAmount;
+
     public LineItemBudget withMaxAmount(String maxAmount) {
         this.maxAmount = maxAmount;
         return this;
     }
     
+    public LineItemBudget(){}
 }

@@ -14,12 +14,13 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * TrialComponent - The properties of a trial component as returned by the &lt;a&gt;Search&lt;/a&gt; API.
+ * TrialComponent - The properties of a trial component as returned by the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html"&gt;Search&lt;/a&gt; API.
  */
 public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public TrialComponent withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -30,6 +31,7 @@ public class TrialComponent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public TrialComponent withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public TrialComponent withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -48,6 +51,7 @@ public class TrialComponent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public TrialComponent withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -56,6 +60,7 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputArtifacts")
     public java.util.Map<String, TrialComponentArtifact> inputArtifacts;
+
     public TrialComponent withInputArtifacts(java.util.Map<String, TrialComponentArtifact> inputArtifacts) {
         this.inputArtifacts = inputArtifacts;
         return this;
@@ -67,6 +72,7 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public TrialComponent withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -77,6 +83,7 @@ public class TrialComponent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public TrialComponent withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -85,6 +92,7 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineageGroupArn")
     public String lineageGroupArn;
+
     public TrialComponent withLineageGroupArn(String lineageGroupArn) {
         this.lineageGroupArn = lineageGroupArn;
         return this;
@@ -96,6 +104,7 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataProperties")
     public MetadataProperties metadataProperties;
+
     public TrialComponent withMetadataProperties(MetadataProperties metadataProperties) {
         this.metadataProperties = metadataProperties;
         return this;
@@ -104,6 +113,7 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public TrialComponentMetricSummary[] metrics;
+
     public TrialComponent withMetrics(TrialComponentMetricSummary[] metrics) {
         this.metrics = metrics;
         return this;
@@ -112,6 +122,7 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputArtifacts")
     public java.util.Map<String, TrialComponentArtifact> outputArtifacts;
+
     public TrialComponent withOutputArtifacts(java.util.Map<String, TrialComponentArtifact> outputArtifacts) {
         this.outputArtifacts = outputArtifacts;
         return this;
@@ -120,6 +131,7 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, TrialComponentParameterValue> parameters;
+
     public TrialComponent withParameters(java.util.Map<String, TrialComponentParameterValue> parameters) {
         this.parameters = parameters;
         return this;
@@ -128,6 +140,7 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parents")
     public Parent[] parents;
+
     public TrialComponent withParents(Parent[] parents) {
         this.parents = parents;
         return this;
@@ -136,6 +149,7 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunName")
     public String runName;
+
     public TrialComponent withRunName(String runName) {
         this.runName = runName;
         return this;
@@ -144,6 +158,7 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public TrialComponentSource source;
+
     public TrialComponent withSource(TrialComponentSource source) {
         this.source = source;
         return this;
@@ -152,6 +167,7 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceDetail")
     public TrialComponentSourceDetail sourceDetail;
+
     public TrialComponent withSourceDetail(TrialComponentSourceDetail sourceDetail) {
         this.sourceDetail = sourceDetail;
         return this;
@@ -162,6 +178,7 @@ public class TrialComponent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public TrialComponent withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -173,6 +190,7 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TrialComponentStatus status;
+
     public TrialComponent withStatus(TrialComponentStatus status) {
         this.status = status;
         return this;
@@ -181,6 +199,7 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public TrialComponent withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -189,6 +208,7 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentArn")
     public String trialComponentArn;
+
     public TrialComponent withTrialComponentArn(String trialComponentArn) {
         this.trialComponentArn = trialComponentArn;
         return this;
@@ -197,9 +217,11 @@ public class TrialComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentName")
     public String trialComponentName;
+
     public TrialComponent withTrialComponentName(String trialComponentName) {
         this.trialComponentName = trialComponentName;
         return this;
     }
     
+    public TrialComponent(){}
 }

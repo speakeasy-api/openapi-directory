@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCustomPluginsResponse {
@@ -12,6 +13,7 @@ public class ListCustomPluginsResponse {
      */
     
     public Object badRequestException;
+
     public ListCustomPluginsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListCustomPluginsResponse {
     
     
     public String contentType;
+
     public ListCustomPluginsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCustomPluginsResponse {
      */
     
     public Object forbiddenException;
+
     public ListCustomPluginsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class ListCustomPluginsResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListCustomPluginsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListCustomPluginsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCustomPluginsResponse listCustomPluginsResponse;
+
     public ListCustomPluginsResponse withListCustomPluginsResponse(org.openapis.openapi.models.shared.ListCustomPluginsResponse listCustomPluginsResponse) {
         this.listCustomPluginsResponse = listCustomPluginsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListCustomPluginsResponse {
      */
     
     public Object notFoundException;
+
     public ListCustomPluginsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListCustomPluginsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListCustomPluginsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ListCustomPluginsResponse {
     
     
     public Integer statusCode;
+
     public ListCustomPluginsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListCustomPluginsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCustomPluginsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListCustomPluginsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListCustomPluginsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class ListCustomPluginsResponse {
      */
     
     public Object unauthorizedException;
+
     public ListCustomPluginsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListCustomPluginsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

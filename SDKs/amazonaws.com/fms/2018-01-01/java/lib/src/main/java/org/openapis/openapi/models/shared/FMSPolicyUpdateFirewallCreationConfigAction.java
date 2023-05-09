@@ -15,6 +15,7 @@ public class FMSPolicyUpdateFirewallCreationConfigAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public FMSPolicyUpdateFirewallCreationConfigAction withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class FMSPolicyUpdateFirewallCreationConfigAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallCreationConfig")
     public String firewallCreationConfig;
+
     public FMSPolicyUpdateFirewallCreationConfigAction withFirewallCreationConfig(String firewallCreationConfig) {
         this.firewallCreationConfig = firewallCreationConfig;
         return this;
     }
     
+    public FMSPolicyUpdateFirewallCreationConfigAction(){}
 }

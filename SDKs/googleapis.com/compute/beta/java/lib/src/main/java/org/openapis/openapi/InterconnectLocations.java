@@ -58,11 +58,9 @@ public class InterconnectLocations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInterconnectLocationsGetResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectLocationsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeInterconnectLocationsGetResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectLocationsGetResponse(contentType, httpRes.statusCode()) {{
             interconnectLocation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class InterconnectLocations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInterconnectLocationsListResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectLocationsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeInterconnectLocationsListResponse res = new org.openapis.openapi.models.operations.ComputeInterconnectLocationsListResponse(contentType, httpRes.statusCode()) {{
             interconnectLocationList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateUserRequest {
     @JsonProperty("IdentityStoreId")
     public String identityStoreId;
+
     public UpdateUserRequest withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
@@ -16,6 +17,7 @@ public class UpdateUserRequest {
     
     @JsonProperty("Operations")
     public AttributeOperation[] operations;
+
     public UpdateUserRequest withOperations(AttributeOperation[] operations) {
         this.operations = operations;
         return this;
@@ -23,9 +25,15 @@ public class UpdateUserRequest {
     
     @JsonProperty("UserId")
     public String userId;
+
     public UpdateUserRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public UpdateUserRequest(@JsonProperty("IdentityStoreId") String identityStoreId, @JsonProperty("Operations") AttributeOperation[] operations, @JsonProperty("UserId") String userId) {
+        this.identityStoreId = identityStoreId;
+        this.operations = operations;
+        this.userId = userId;
+  }
 }

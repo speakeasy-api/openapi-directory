@@ -55,10 +55,8 @@ public class Notes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteV2NotesIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteV2NotesIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteV2NotesIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteV2NotesIdJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -96,11 +94,9 @@ public class Notes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2NotesJsonResponse res = new org.openapis.openapi.models.operations.GetV2NotesJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2NotesJsonResponse res = new org.openapis.openapi.models.operations.GetV2NotesJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class Notes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2NotesIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2NotesIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2NotesIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2NotesIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,11 +173,9 @@ public class Notes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV2NotesJsonResponse res = new org.openapis.openapi.models.operations.PostV2NotesJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV2NotesJsonResponse res = new org.openapis.openapi.models.operations.PostV2NotesJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -223,11 +215,9 @@ public class Notes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutV2NotesIdJsonResponse res = new org.openapis.openapi.models.operations.PutV2NotesIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutV2NotesIdJsonResponse res = new org.openapis.openapi.models.operations.PutV2NotesIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class CreateRecommenderConfigurationRequestBodyCreateRecommenderConfigura
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public CreateRecommenderConfigurationRequestBodyCreateRecommenderConfiguration withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class CreateRecommenderConfigurationRequestBodyCreateRecommenderConfigura
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateRecommenderConfigurationRequestBodyCreateRecommenderConfiguration withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class CreateRecommenderConfigurationRequestBodyCreateRecommenderConfigura
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateRecommenderConfigurationRequestBodyCreateRecommenderConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class CreateRecommenderConfigurationRequestBodyCreateRecommenderConfigura
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationProviderIdType")
     public String recommendationProviderIdType;
+
     public CreateRecommenderConfigurationRequestBodyCreateRecommenderConfiguration withRecommendationProviderIdType(String recommendationProviderIdType) {
         this.recommendationProviderIdType = recommendationProviderIdType;
         return this;
@@ -47,6 +51,7 @@ public class CreateRecommenderConfigurationRequestBodyCreateRecommenderConfigura
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationProviderRoleArn")
     public String recommendationProviderRoleArn;
+
     public CreateRecommenderConfigurationRequestBodyCreateRecommenderConfiguration withRecommendationProviderRoleArn(String recommendationProviderRoleArn) {
         this.recommendationProviderRoleArn = recommendationProviderRoleArn;
         return this;
@@ -55,6 +60,7 @@ public class CreateRecommenderConfigurationRequestBodyCreateRecommenderConfigura
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationProviderUri")
     public String recommendationProviderUri;
+
     public CreateRecommenderConfigurationRequestBodyCreateRecommenderConfiguration withRecommendationProviderUri(String recommendationProviderUri) {
         this.recommendationProviderUri = recommendationProviderUri;
         return this;
@@ -63,6 +69,7 @@ public class CreateRecommenderConfigurationRequestBodyCreateRecommenderConfigura
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationTransformerUri")
     public String recommendationTransformerUri;
+
     public CreateRecommenderConfigurationRequestBodyCreateRecommenderConfiguration withRecommendationTransformerUri(String recommendationTransformerUri) {
         this.recommendationTransformerUri = recommendationTransformerUri;
         return this;
@@ -71,6 +78,7 @@ public class CreateRecommenderConfigurationRequestBodyCreateRecommenderConfigura
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationsDisplayName")
     public String recommendationsDisplayName;
+
     public CreateRecommenderConfigurationRequestBodyCreateRecommenderConfiguration withRecommendationsDisplayName(String recommendationsDisplayName) {
         this.recommendationsDisplayName = recommendationsDisplayName;
         return this;
@@ -79,9 +87,11 @@ public class CreateRecommenderConfigurationRequestBodyCreateRecommenderConfigura
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationsPerMessage")
     public Long recommendationsPerMessage;
+
     public CreateRecommenderConfigurationRequestBodyCreateRecommenderConfiguration withRecommendationsPerMessage(Long recommendationsPerMessage) {
         this.recommendationsPerMessage = recommendationsPerMessage;
         return this;
     }
     
+    public CreateRecommenderConfigurationRequestBodyCreateRecommenderConfiguration(){}
 }

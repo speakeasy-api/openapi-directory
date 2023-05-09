@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEventDataStoreResponse {
@@ -12,6 +13,7 @@ public class DeleteEventDataStoreResponse {
      */
     
     public Object channelExistsForEDSException;
+
     public DeleteEventDataStoreResponse withChannelExistsForEDSException(Object channelExistsForEDSException) {
         this.channelExistsForEDSException = channelExistsForEDSException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEventDataStoreResponse {
     
     
     public String contentType;
+
     public DeleteEventDataStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEventDataStoreResponse {
      */
     
     public java.util.Map<String, Object> deleteEventDataStoreResponse;
+
     public DeleteEventDataStoreResponse withDeleteEventDataStoreResponse(java.util.Map<String, Object> deleteEventDataStoreResponse) {
         this.deleteEventDataStoreResponse = deleteEventDataStoreResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEventDataStoreResponse {
      */
     
     public Object eventDataStoreARNInvalidException;
+
     public DeleteEventDataStoreResponse withEventDataStoreARNInvalidException(Object eventDataStoreARNInvalidException) {
         this.eventDataStoreARNInvalidException = eventDataStoreARNInvalidException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteEventDataStoreResponse {
      */
     
     public Object eventDataStoreHasOngoingImportException;
+
     public DeleteEventDataStoreResponse withEventDataStoreHasOngoingImportException(Object eventDataStoreHasOngoingImportException) {
         this.eventDataStoreHasOngoingImportException = eventDataStoreHasOngoingImportException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteEventDataStoreResponse {
      */
     
     public Object eventDataStoreNotFoundException;
+
     public DeleteEventDataStoreResponse withEventDataStoreNotFoundException(Object eventDataStoreNotFoundException) {
         this.eventDataStoreNotFoundException = eventDataStoreNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteEventDataStoreResponse {
      */
     
     public Object eventDataStoreTerminationProtectedException;
+
     public DeleteEventDataStoreResponse withEventDataStoreTerminationProtectedException(Object eventDataStoreTerminationProtectedException) {
         this.eventDataStoreTerminationProtectedException = eventDataStoreTerminationProtectedException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteEventDataStoreResponse {
      */
     
     public Object inactiveEventDataStoreException;
+
     public DeleteEventDataStoreResponse withInactiveEventDataStoreException(Object inactiveEventDataStoreException) {
         this.inactiveEventDataStoreException = inactiveEventDataStoreException;
         return this;
@@ -89,6 +98,7 @@ public class DeleteEventDataStoreResponse {
      */
     
     public Object insufficientDependencyServiceAccessPermissionException;
+
     public DeleteEventDataStoreResponse withInsufficientDependencyServiceAccessPermissionException(Object insufficientDependencyServiceAccessPermissionException) {
         this.insufficientDependencyServiceAccessPermissionException = insufficientDependencyServiceAccessPermissionException;
         return this;
@@ -99,6 +109,7 @@ public class DeleteEventDataStoreResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteEventDataStoreResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -109,6 +120,7 @@ public class DeleteEventDataStoreResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public DeleteEventDataStoreResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -119,6 +131,7 @@ public class DeleteEventDataStoreResponse {
      */
     
     public Object notOrganizationMasterAccountException;
+
     public DeleteEventDataStoreResponse withNotOrganizationMasterAccountException(Object notOrganizationMasterAccountException) {
         this.notOrganizationMasterAccountException = notOrganizationMasterAccountException;
         return this;
@@ -129,6 +142,7 @@ public class DeleteEventDataStoreResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DeleteEventDataStoreResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -136,6 +150,7 @@ public class DeleteEventDataStoreResponse {
     
     
     public Integer statusCode;
+
     public DeleteEventDataStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,6 +158,7 @@ public class DeleteEventDataStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEventDataStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -153,9 +169,14 @@ public class DeleteEventDataStoreResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DeleteEventDataStoreResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DeleteEventDataStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class CreateProjectVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CreateProjectVersionRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -19,6 +20,7 @@ public class CreateProjectVersionRequest {
     
     @JsonProperty("OutputConfig")
     public OutputConfig outputConfig;
+
     public CreateProjectVersionRequest withOutputConfig(OutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -26,6 +28,7 @@ public class CreateProjectVersionRequest {
     
     @JsonProperty("ProjectArn")
     public String projectArn;
+
     public CreateProjectVersionRequest withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -34,6 +37,7 @@ public class CreateProjectVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateProjectVersionRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -42,6 +46,7 @@ public class CreateProjectVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TestingData")
     public TestingData testingData;
+
     public CreateProjectVersionRequest withTestingData(TestingData testingData) {
         this.testingData = testingData;
         return this;
@@ -50,6 +55,7 @@ public class CreateProjectVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingData")
     public TrainingData trainingData;
+
     public CreateProjectVersionRequest withTrainingData(TrainingData trainingData) {
         this.trainingData = trainingData;
         return this;
@@ -57,9 +63,15 @@ public class CreateProjectVersionRequest {
     
     @JsonProperty("VersionName")
     public String versionName;
+
     public CreateProjectVersionRequest withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public CreateProjectVersionRequest(@JsonProperty("OutputConfig") OutputConfig outputConfig, @JsonProperty("ProjectArn") String projectArn, @JsonProperty("VersionName") String versionName) {
+        this.outputConfig = outputConfig;
+        this.projectArn = projectArn;
+        this.versionName = versionName;
+  }
 }

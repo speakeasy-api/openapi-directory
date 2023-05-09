@@ -18,6 +18,7 @@ public class RecommendedLocationGeoCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Float latitude;
+
     public RecommendedLocationGeoCode withLatitude(Float latitude) {
         this.latitude = latitude;
         return this;
@@ -29,9 +30,11 @@ public class RecommendedLocationGeoCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Float longitude;
+
     public RecommendedLocationGeoCode withLongitude(Float longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public RecommendedLocationGeoCode(){}
 }

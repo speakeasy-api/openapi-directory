@@ -22,6 +22,7 @@ public class EulaAcceptance {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("acceptedAt")
     public OffsetDateTime acceptedAt;
+
     public EulaAcceptance withAcceptedAt(OffsetDateTime acceptedAt) {
         this.acceptedAt = acceptedAt;
         return this;
@@ -30,6 +31,7 @@ public class EulaAcceptance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptedBy")
     public String acceptedBy;
+
     public EulaAcceptance withAcceptedBy(String acceptedBy) {
         this.acceptedBy = acceptedBy;
         return this;
@@ -38,6 +40,7 @@ public class EulaAcceptance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accepteeId")
     public String accepteeId;
+
     public EulaAcceptance withAccepteeId(String accepteeId) {
         this.accepteeId = accepteeId;
         return this;
@@ -46,6 +49,7 @@ public class EulaAcceptance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eulaAcceptanceId")
     public String eulaAcceptanceId;
+
     public EulaAcceptance withEulaAcceptanceId(String eulaAcceptanceId) {
         this.eulaAcceptanceId = eulaAcceptanceId;
         return this;
@@ -54,9 +58,11 @@ public class EulaAcceptance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eulaId")
     public String eulaId;
+
     public EulaAcceptance withEulaId(String eulaId) {
         this.eulaId = eulaId;
         return this;
     }
     
+    public EulaAcceptance(){}
 }

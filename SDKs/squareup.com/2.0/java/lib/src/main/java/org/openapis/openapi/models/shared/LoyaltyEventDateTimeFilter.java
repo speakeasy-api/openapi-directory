@@ -19,9 +19,13 @@ public class LoyaltyEventDateTimeFilter {
      */
     @JsonProperty("created_at")
     public TimeRange createdAt;
+
     public LoyaltyEventDateTimeFilter withCreatedAt(TimeRange createdAt) {
         this.createdAt = createdAt;
         return this;
     }
     
+    public LoyaltyEventDateTimeFilter(@JsonProperty("created_at") TimeRange createdAt) {
+        this.createdAt = createdAt;
+  }
 }

@@ -18,6 +18,7 @@ public class TestUploadHashesBatchTestCloudFileHashResponseTestCloudHashUploadSt
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public TestUploadHashesBatchTestCloudFileHashResponseTestCloudHashUploadStatus withLocation(String location) {
         this.location = location;
         return this;
@@ -28,9 +29,13 @@ public class TestUploadHashesBatchTestCloudFileHashResponseTestCloudHashUploadSt
      */
     @JsonProperty("statusCode")
     public Double statusCode;
+
     public TestUploadHashesBatchTestCloudFileHashResponseTestCloudHashUploadStatus withStatusCode(Double statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public TestUploadHashesBatchTestCloudFileHashResponseTestCloudHashUploadStatus(@JsonProperty("statusCode") Double statusCode) {
+        this.statusCode = statusCode;
+  }
 }

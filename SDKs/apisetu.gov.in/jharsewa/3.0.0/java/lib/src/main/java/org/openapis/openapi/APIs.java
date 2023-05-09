@@ -55,7 +55,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BtcerResponse res = new org.openapis.openapi.models.operations.BtcerResponse() {{
+        org.openapis.openapi.models.operations.BtcerResponse res = new org.openapis.openapi.models.operations.BtcerResponse(contentType, httpRes.statusCode()) {{
             btcer400ApplicationJSONObject = null;
             btcer401ApplicationJSONObject = null;
             btcer404ApplicationJSONObject = null;
@@ -64,8 +64,6 @@ public class APIs {
             btcer503ApplicationJSONObject = null;
             btcer504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,7 +146,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CtcerResponse res = new org.openapis.openapi.models.operations.CtcerResponse() {{
+        org.openapis.openapi.models.operations.CtcerResponse res = new org.openapis.openapi.models.operations.CtcerResponse(contentType, httpRes.statusCode()) {{
             ctcer400ApplicationJSONObject = null;
             ctcer401ApplicationJSONObject = null;
             ctcer404ApplicationJSONObject = null;
@@ -157,8 +155,6 @@ public class APIs {
             ctcer503ApplicationJSONObject = null;
             ctcer504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,7 +237,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DtcerResponse res = new org.openapis.openapi.models.operations.DtcerResponse() {{
+        org.openapis.openapi.models.operations.DtcerResponse res = new org.openapis.openapi.models.operations.DtcerResponse(contentType, httpRes.statusCode()) {{
             dtcer400ApplicationJSONObject = null;
             dtcer401ApplicationJSONObject = null;
             dtcer404ApplicationJSONObject = null;
@@ -250,8 +246,6 @@ public class APIs {
             dtcer503ApplicationJSONObject = null;
             dtcer504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,7 +328,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EwcerResponse res = new org.openapis.openapi.models.operations.EwcerResponse() {{
+        org.openapis.openapi.models.operations.EwcerResponse res = new org.openapis.openapi.models.operations.EwcerResponse(contentType, httpRes.statusCode()) {{
             ewcer400ApplicationJSONObject = null;
             ewcer401ApplicationJSONObject = null;
             ewcer404ApplicationJSONObject = null;
@@ -343,8 +337,6 @@ public class APIs {
             ewcer503ApplicationJSONObject = null;
             ewcer504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -427,7 +419,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IncerResponse res = new org.openapis.openapi.models.operations.IncerResponse() {{
+        org.openapis.openapi.models.operations.IncerResponse res = new org.openapis.openapi.models.operations.IncerResponse(contentType, httpRes.statusCode()) {{
             incer400ApplicationJSONObject = null;
             incer401ApplicationJSONObject = null;
             incer404ApplicationJSONObject = null;
@@ -436,8 +428,6 @@ public class APIs {
             incer503ApplicationJSONObject = null;
             incer504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -520,7 +510,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RmcerResponse res = new org.openapis.openapi.models.operations.RmcerResponse() {{
+        org.openapis.openapi.models.operations.RmcerResponse res = new org.openapis.openapi.models.operations.RmcerResponse(contentType, httpRes.statusCode()) {{
             rmcer400ApplicationJSONObject = null;
             rmcer401ApplicationJSONObject = null;
             rmcer404ApplicationJSONObject = null;
@@ -529,8 +519,6 @@ public class APIs {
             rmcer503ApplicationJSONObject = null;
             rmcer504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -613,7 +601,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RscerResponse res = new org.openapis.openapi.models.operations.RscerResponse() {{
+        org.openapis.openapi.models.operations.RscerResponse res = new org.openapis.openapi.models.operations.RscerResponse(contentType, httpRes.statusCode()) {{
             rscer400ApplicationJSONObject = null;
             rscer401ApplicationJSONObject = null;
             rscer404ApplicationJSONObject = null;
@@ -622,8 +610,6 @@ public class APIs {
             rscer503ApplicationJSONObject = null;
             rscer504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

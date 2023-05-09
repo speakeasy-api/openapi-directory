@@ -58,14 +58,12 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsCountResponse res = new org.openapis.openapi.models.operations.DomainsCountResponse() {{
+        org.openapis.openapi.models.operations.DomainsCountResponse res = new org.openapis.openapi.models.operations.DomainsCountResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesCountResponce = null;
             apiCoreResponsesCountResponce = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,14 +113,12 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsDeleteResponse res = new org.openapis.openapi.models.operations.DomainsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DomainsDeleteResponse res = new org.openapis.openapi.models.operations.DomainsDeleteResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,12 +174,10 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsGetResponse res = new org.openapis.openapi.models.operations.DomainsGetResponse() {{
+        org.openapis.openapi.models.operations.DomainsGetResponse res = new org.openapis.openapi.models.operations.DomainsGetResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -230,14 +224,12 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsPutFormResponse res = new org.openapis.openapi.models.operations.DomainsPutFormResponse() {{
+        org.openapis.openapi.models.operations.DomainsPutFormResponse res = new org.openapis.openapi.models.operations.DomainsPutFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,14 +284,12 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsPutJsonResponse res = new org.openapis.openapi.models.operations.DomainsPutJsonResponse() {{
+        org.openapis.openapi.models.operations.DomainsPutJsonResponse res = new org.openapis.openapi.models.operations.DomainsPutJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -354,14 +344,12 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsPutRawResponse res = new org.openapis.openapi.models.operations.DomainsPutRawResponse() {{
+        org.openapis.openapi.models.operations.DomainsPutRawResponse res = new org.openapis.openapi.models.operations.DomainsPutRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -416,14 +404,12 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsUpdateFormResponse res = new org.openapis.openapi.models.operations.DomainsUpdateFormResponse() {{
+        org.openapis.openapi.models.operations.DomainsUpdateFormResponse res = new org.openapis.openapi.models.operations.DomainsUpdateFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -478,14 +464,12 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsUpdateJsonResponse res = new org.openapis.openapi.models.operations.DomainsUpdateJsonResponse() {{
+        org.openapis.openapi.models.operations.DomainsUpdateJsonResponse res = new org.openapis.openapi.models.operations.DomainsUpdateJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -540,14 +524,12 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsUpdateRawResponse res = new org.openapis.openapi.models.operations.DomainsUpdateRawResponse() {{
+        org.openapis.openapi.models.operations.DomainsUpdateRawResponse res = new org.openapis.openapi.models.operations.DomainsUpdateRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -597,14 +579,12 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomainsIdResponse res = new org.openapis.openapi.models.operations.GetDomainsIdResponse() {{
+        org.openapis.openapi.models.operations.GetDomainsIdResponse res = new org.openapis.openapi.models.operations.GetDomainsIdResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoDomainsDomain = null;
             apiCoreDtoDomainsDomain = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

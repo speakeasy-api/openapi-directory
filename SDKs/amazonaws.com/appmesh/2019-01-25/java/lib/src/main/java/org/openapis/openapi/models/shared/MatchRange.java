@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MatchRange {
     @JsonProperty("end")
     public Long end;
+
     public MatchRange withEnd(Long end) {
         this.end = end;
         return this;
@@ -19,9 +20,14 @@ public class MatchRange {
     
     @JsonProperty("start")
     public Long start;
+
     public MatchRange withStart(Long start) {
         this.start = start;
         return this;
     }
     
+    public MatchRange(@JsonProperty("end") Long end, @JsonProperty("start") Long start) {
+        this.end = end;
+        this.start = start;
+  }
 }

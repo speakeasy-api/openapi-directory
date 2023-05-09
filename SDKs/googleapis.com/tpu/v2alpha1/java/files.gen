@@ -75,9 +75,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/TpuProjectsLocationsQue
 lib/src/main/java/org/openapis/openapi/models/operations/TpuProjectsLocationsQueuedResourcesListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/TpuProjectsLocationsQueuedResourcesListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/TpuProjectsLocationsQueuedResourcesListResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/TpuProjectsLocationsQueuedResourcesResetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/TpuProjectsLocationsQueuedResourcesResetRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/TpuProjectsLocationsQueuedResourcesResetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/TpuProjectsLocationsRuntimeVersionsGetSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/TpuProjectsLocationsRuntimeVersionsGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/TpuProjectsLocationsRuntimeVersionsGetResponse.java
@@ -134,4 +131,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Guaranteed.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListQueuedResourcesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RuntimeVersion.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListRuntimeVersionsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

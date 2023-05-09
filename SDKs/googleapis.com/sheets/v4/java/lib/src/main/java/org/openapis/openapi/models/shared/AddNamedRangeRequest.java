@@ -18,9 +18,11 @@ public class AddNamedRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedRange")
     public NamedRange namedRange;
+
     public AddNamedRangeRequest withNamedRange(NamedRange namedRange) {
         this.namedRange = namedRange;
         return this;
     }
     
+    public AddNamedRangeRequest(){}
 }

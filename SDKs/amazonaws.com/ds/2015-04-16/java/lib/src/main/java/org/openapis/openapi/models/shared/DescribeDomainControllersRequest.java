@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeDomainControllersRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DescribeDomainControllersRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeDomainControllersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainControllerIds")
     public String[] domainControllerIds;
+
     public DescribeDomainControllersRequest withDomainControllerIds(String[] domainControllerIds) {
         this.domainControllerIds = domainControllerIds;
         return this;
@@ -27,6 +29,7 @@ public class DescribeDomainControllersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeDomainControllersRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -35,9 +38,13 @@ public class DescribeDomainControllersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeDomainControllersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeDomainControllersRequest(@JsonProperty("DirectoryId") String directoryId) {
+        this.directoryId = directoryId;
+  }
 }

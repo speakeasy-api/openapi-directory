@@ -12,6 +12,7 @@ public class DeleteTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public DeleteTableRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteTableRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DeleteTableRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class DeleteTableRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public DeleteTableRequest withName(String name) {
         this.name = name;
         return this;
@@ -34,9 +37,14 @@ public class DeleteTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public DeleteTableRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public DeleteTableRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("Name") String name) {
+        this.databaseName = databaseName;
+        this.name = name;
+  }
 }

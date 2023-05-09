@@ -14,6 +14,7 @@ public class CreateResourcePolicyStatementRequestBody {
      */
     @JsonProperty("action")
     public String[] action;
+
     public CreateResourcePolicyStatementRequestBody withAction(String[] action) {
         this.action = action;
         return this;
@@ -25,6 +26,7 @@ public class CreateResourcePolicyStatementRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public java.util.Map<String, java.util.Map<String, String>> condition;
+
     public CreateResourcePolicyStatementRequestBody withCondition(java.util.Map<String, java.util.Map<String, String>> condition) {
         this.condition = condition;
         return this;
@@ -35,6 +37,7 @@ public class CreateResourcePolicyStatementRequestBody {
      */
     @JsonProperty("effect")
     public CreateResourcePolicyStatementRequestBodyEffectEnum effect;
+
     public CreateResourcePolicyStatementRequestBody withEffect(CreateResourcePolicyStatementRequestBodyEffectEnum effect) {
         this.effect = effect;
         return this;
@@ -45,6 +48,7 @@ public class CreateResourcePolicyStatementRequestBody {
      */
     @JsonProperty("principal")
     public org.openapis.openapi.models.shared.Principal[] principal;
+
     public CreateResourcePolicyStatementRequestBody withPrincipal(org.openapis.openapi.models.shared.Principal[] principal) {
         this.principal = principal;
         return this;
@@ -55,9 +59,16 @@ public class CreateResourcePolicyStatementRequestBody {
      */
     @JsonProperty("statementId")
     public String statementId;
+
     public CreateResourcePolicyStatementRequestBody withStatementId(String statementId) {
         this.statementId = statementId;
         return this;
     }
     
+    public CreateResourcePolicyStatementRequestBody(@JsonProperty("action") String[] action, @JsonProperty("effect") CreateResourcePolicyStatementRequestBodyEffectEnum effect, @JsonProperty("principal") org.openapis.openapi.models.shared.Principal[] principal, @JsonProperty("statementId") String statementId) {
+        this.action = action;
+        this.effect = effect;
+        this.principal = principal;
+        this.statementId = statementId;
+  }
 }

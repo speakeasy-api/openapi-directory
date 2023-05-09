@@ -59,10 +59,8 @@ public class Roles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryRolesDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryRolesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DirectoryRolesDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryRolesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Roles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryRolesGetResponse res = new org.openapis.openapi.models.operations.DirectoryRolesGetResponse() {{
+        org.openapis.openapi.models.operations.DirectoryRolesGetResponse res = new org.openapis.openapi.models.operations.DirectoryRolesGetResponse(contentType, httpRes.statusCode()) {{
             role = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Roles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryRolesInsertResponse res = new org.openapis.openapi.models.operations.DirectoryRolesInsertResponse() {{
+        org.openapis.openapi.models.operations.DirectoryRolesInsertResponse res = new org.openapis.openapi.models.operations.DirectoryRolesInsertResponse(contentType, httpRes.statusCode()) {{
             role = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Roles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryRolesListResponse res = new org.openapis.openapi.models.operations.DirectoryRolesListResponse() {{
+        org.openapis.openapi.models.operations.DirectoryRolesListResponse res = new org.openapis.openapi.models.operations.DirectoryRolesListResponse(contentType, httpRes.statusCode()) {{
             roles = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Roles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryRolesPatchResponse res = new org.openapis.openapi.models.operations.DirectoryRolesPatchResponse() {{
+        org.openapis.openapi.models.operations.DirectoryRolesPatchResponse res = new org.openapis.openapi.models.operations.DirectoryRolesPatchResponse(contentType, httpRes.statusCode()) {{
             role = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class Roles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryRolesUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryRolesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DirectoryRolesUpdateResponse res = new org.openapis.openapi.models.operations.DirectoryRolesUpdateResponse(contentType, httpRes.statusCode()) {{
             role = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

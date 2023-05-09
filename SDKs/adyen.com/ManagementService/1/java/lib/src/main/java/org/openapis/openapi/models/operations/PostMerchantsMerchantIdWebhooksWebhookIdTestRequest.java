@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMerchantsMerchantIdWebhooksWebhookIdTestRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TestWebhookRequest testWebhookRequest;
+
     public PostMerchantsMerchantIdWebhooksWebhookIdTestRequest withTestWebhookRequest(org.openapis.openapi.models.shared.TestWebhookRequest testWebhookRequest) {
         this.testWebhookRequest = testWebhookRequest;
         return this;
@@ -19,6 +21,7 @@ public class PostMerchantsMerchantIdWebhooksWebhookIdTestRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public PostMerchantsMerchantIdWebhooksWebhookIdTestRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -29,9 +32,14 @@ public class PostMerchantsMerchantIdWebhooksWebhookIdTestRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhookId")
     public String webhookId;
+
     public PostMerchantsMerchantIdWebhooksWebhookIdTestRequest withWebhookId(String webhookId) {
         this.webhookId = webhookId;
         return this;
     }
     
+    public PostMerchantsMerchantIdWebhooksWebhookIdTestRequest(@JsonProperty("merchantId") String merchantId, @JsonProperty("webhookId") String webhookId) {
+        this.merchantId = merchantId;
+        this.webhookId = webhookId;
+  }
 }

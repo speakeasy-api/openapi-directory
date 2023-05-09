@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchHealthProfileAnswerRequest {
@@ -12,6 +13,7 @@ public class FetchHealthProfileAnswerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public FetchHealthProfileAnswerRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class FetchHealthProfileAnswerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
     public FetchHealthProfileAnswerIncludeEnum include;
+
     public FetchHealthProfileAnswerRequest withInclude(FetchHealthProfileAnswerIncludeEnum include) {
         this.include = include;
         return this;
     }
     
+    public FetchHealthProfileAnswerRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

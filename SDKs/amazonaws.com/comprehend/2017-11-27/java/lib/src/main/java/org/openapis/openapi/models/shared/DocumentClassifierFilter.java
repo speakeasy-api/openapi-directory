@@ -20,6 +20,7 @@ public class DocumentClassifierFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentClassifierName")
     public String documentClassifierName;
+
     public DocumentClassifierFilter withDocumentClassifierName(String documentClassifierName) {
         this.documentClassifierName = documentClassifierName;
         return this;
@@ -28,6 +29,7 @@ public class DocumentClassifierFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ModelStatusEnum status;
+
     public DocumentClassifierFilter withStatus(ModelStatusEnum status) {
         this.status = status;
         return this;
@@ -38,6 +40,7 @@ public class DocumentClassifierFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTimeAfter")
     public OffsetDateTime submitTimeAfter;
+
     public DocumentClassifierFilter withSubmitTimeAfter(OffsetDateTime submitTimeAfter) {
         this.submitTimeAfter = submitTimeAfter;
         return this;
@@ -48,9 +51,11 @@ public class DocumentClassifierFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTimeBefore")
     public OffsetDateTime submitTimeBefore;
+
     public DocumentClassifierFilter withSubmitTimeBefore(OffsetDateTime submitTimeBefore) {
         this.submitTimeBefore = submitTimeBefore;
         return this;
     }
     
+    public DocumentClassifierFilter(){}
 }

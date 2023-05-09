@@ -12,6 +12,7 @@ public class SaveReviewRequest {
      */
     @JsonProperty("productId")
     public String productId;
+
     public SaveReviewRequest withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -22,6 +23,7 @@ public class SaveReviewRequest {
      */
     @JsonProperty("rating")
     public Integer rating;
+
     public SaveReviewRequest withRating(Integer rating) {
         this.rating = rating;
         return this;
@@ -32,6 +34,7 @@ public class SaveReviewRequest {
      */
     @JsonProperty("reviewerName")
     public String reviewerName;
+
     public SaveReviewRequest withReviewerName(String reviewerName) {
         this.reviewerName = reviewerName;
         return this;
@@ -42,6 +45,7 @@ public class SaveReviewRequest {
      */
     @JsonProperty("text")
     public String text;
+
     public SaveReviewRequest withText(String text) {
         this.text = text;
         return this;
@@ -52,9 +56,17 @@ public class SaveReviewRequest {
      */
     @JsonProperty("title")
     public String title;
+
     public SaveReviewRequest withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public SaveReviewRequest(@JsonProperty("productId") String productId, @JsonProperty("rating") Integer rating, @JsonProperty("reviewerName") String reviewerName, @JsonProperty("text") String text, @JsonProperty("title") String title) {
+        this.productId = productId;
+        this.rating = rating;
+        this.reviewerName = reviewerName;
+        this.text = text;
+        this.title = title;
+  }
 }

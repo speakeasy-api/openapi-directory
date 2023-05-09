@@ -15,6 +15,7 @@ public class RegisterCACertificateRequestBodyRegistrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public RegisterCACertificateRequestBodyRegistrationConfig withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -23,6 +24,7 @@ public class RegisterCACertificateRequestBodyRegistrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateBody")
     public String templateBody;
+
     public RegisterCACertificateRequestBodyRegistrationConfig withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -31,9 +33,11 @@ public class RegisterCACertificateRequestBodyRegistrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateName")
     public String templateName;
+
     public RegisterCACertificateRequestBodyRegistrationConfig withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public RegisterCACertificateRequestBodyRegistrationConfig(){}
 }

@@ -18,9 +18,11 @@ public class MonitoredProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MonitoredProjectInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MonitoredProjectInput(){}
 }

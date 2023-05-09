@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRelationalDatabaseRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DeleteRelationalDatabaseRequest deleteRelationalDatabaseRequest;
+
     public DeleteRelationalDatabaseRequest withDeleteRelationalDatabaseRequest(org.openapis.openapi.models.shared.DeleteRelationalDatabaseRequest deleteRelationalDatabaseRequest) {
         this.deleteRelationalDatabaseRequest = deleteRelationalDatabaseRequest;
         return this;
@@ -16,6 +18,7 @@ public class DeleteRelationalDatabaseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteRelationalDatabaseRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DeleteRelationalDatabaseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteRelationalDatabaseRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DeleteRelationalDatabaseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteRelationalDatabaseRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DeleteRelationalDatabaseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteRelationalDatabaseRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DeleteRelationalDatabaseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteRelationalDatabaseRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DeleteRelationalDatabaseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteRelationalDatabaseRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DeleteRelationalDatabaseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteRelationalDatabaseRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DeleteRelationalDatabaseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DeleteRelationalDatabaseXAmzTargetEnum xAmzTarget;
+
     public DeleteRelationalDatabaseRequest withXAmzTarget(DeleteRelationalDatabaseXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DeleteRelationalDatabaseRequest(@JsonProperty("DeleteRelationalDatabaseRequest") org.openapis.openapi.models.shared.DeleteRelationalDatabaseRequest deleteRelationalDatabaseRequest, @JsonProperty("X-Amz-Target") DeleteRelationalDatabaseXAmzTargetEnum xAmzTarget) {
+        this.deleteRelationalDatabaseRequest = deleteRelationalDatabaseRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

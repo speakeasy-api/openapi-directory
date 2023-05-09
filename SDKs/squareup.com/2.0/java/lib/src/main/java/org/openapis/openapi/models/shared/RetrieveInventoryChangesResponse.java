@@ -18,6 +18,7 @@ public class RetrieveInventoryChangesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changes")
     public InventoryChange[] changes;
+
     public RetrieveInventoryChangesResponse withChanges(InventoryChange[] changes) {
         this.changes = changes;
         return this;
@@ -32,6 +33,7 @@ public class RetrieveInventoryChangesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public RetrieveInventoryChangesResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -43,9 +45,11 @@ public class RetrieveInventoryChangesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveInventoryChangesResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public RetrieveInventoryChangesResponse(){}
 }

@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaSearchAds360Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adsPersonalizationEnabled")
     public Boolean adsPersonalizationEnabled;
+
     public GoogleAnalyticsAdminV1alphaSearchAds360Link withAdsPersonalizationEnabled(Boolean adsPersonalizationEnabled) {
         this.adsPersonalizationEnabled = adsPersonalizationEnabled;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaSearchAds360Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserDisplayName")
     public String advertiserDisplayName;
+
     public GoogleAnalyticsAdminV1alphaSearchAds360Link withAdvertiserDisplayName(String advertiserDisplayName) {
         this.advertiserDisplayName = advertiserDisplayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaSearchAds360Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public GoogleAnalyticsAdminV1alphaSearchAds360Link withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaSearchAds360Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignDataSharingEnabled")
     public Boolean campaignDataSharingEnabled;
+
     public GoogleAnalyticsAdminV1alphaSearchAds360Link withCampaignDataSharingEnabled(Boolean campaignDataSharingEnabled) {
         this.campaignDataSharingEnabled = campaignDataSharingEnabled;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1alphaSearchAds360Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costDataSharingEnabled")
     public Boolean costDataSharingEnabled;
+
     public GoogleAnalyticsAdminV1alphaSearchAds360Link withCostDataSharingEnabled(Boolean costDataSharingEnabled) {
         this.costDataSharingEnabled = costDataSharingEnabled;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAnalyticsAdminV1alphaSearchAds360Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaSearchAds360Link withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class GoogleAnalyticsAdminV1alphaSearchAds360Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siteStatsSharingEnabled")
     public Boolean siteStatsSharingEnabled;
+
     public GoogleAnalyticsAdminV1alphaSearchAds360Link withSiteStatsSharingEnabled(Boolean siteStatsSharingEnabled) {
         this.siteStatsSharingEnabled = siteStatsSharingEnabled;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaSearchAds360Link(){}
 }

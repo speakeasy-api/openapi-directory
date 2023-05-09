@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ServicePipeline {
     @JsonProperty("arn")
     public String arn;
+
     public ServicePipeline withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ServicePipeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ServicePipeline withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class ServicePipeline {
     
     @JsonProperty("deploymentStatus")
     public DeploymentStatusEnum deploymentStatus;
+
     public ServicePipeline withDeploymentStatus(DeploymentStatusEnum deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -43,6 +46,7 @@ public class ServicePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentStatusMessage")
     public String deploymentStatusMessage;
+
     public ServicePipeline withDeploymentStatusMessage(String deploymentStatusMessage) {
         this.deploymentStatusMessage = deploymentStatusMessage;
         return this;
@@ -52,6 +56,7 @@ public class ServicePipeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentAttemptedAt")
     public OffsetDateTime lastDeploymentAttemptedAt;
+
     public ServicePipeline withLastDeploymentAttemptedAt(OffsetDateTime lastDeploymentAttemptedAt) {
         this.lastDeploymentAttemptedAt = lastDeploymentAttemptedAt;
         return this;
@@ -61,6 +66,7 @@ public class ServicePipeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentSucceededAt")
     public OffsetDateTime lastDeploymentSucceededAt;
+
     public ServicePipeline withLastDeploymentSucceededAt(OffsetDateTime lastDeploymentSucceededAt) {
         this.lastDeploymentSucceededAt = lastDeploymentSucceededAt;
         return this;
@@ -69,6 +75,7 @@ public class ServicePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public String spec;
+
     public ServicePipeline withSpec(String spec) {
         this.spec = spec;
         return this;
@@ -76,6 +83,7 @@ public class ServicePipeline {
     
     @JsonProperty("templateMajorVersion")
     public String templateMajorVersion;
+
     public ServicePipeline withTemplateMajorVersion(String templateMajorVersion) {
         this.templateMajorVersion = templateMajorVersion;
         return this;
@@ -83,6 +91,7 @@ public class ServicePipeline {
     
     @JsonProperty("templateMinorVersion")
     public String templateMinorVersion;
+
     public ServicePipeline withTemplateMinorVersion(String templateMinorVersion) {
         this.templateMinorVersion = templateMinorVersion;
         return this;
@@ -90,9 +99,20 @@ public class ServicePipeline {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public ServicePipeline withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public ServicePipeline(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("deploymentStatus") DeploymentStatusEnum deploymentStatus, @JsonProperty("lastDeploymentAttemptedAt") OffsetDateTime lastDeploymentAttemptedAt, @JsonProperty("lastDeploymentSucceededAt") OffsetDateTime lastDeploymentSucceededAt, @JsonProperty("templateMajorVersion") String templateMajorVersion, @JsonProperty("templateMinorVersion") String templateMinorVersion, @JsonProperty("templateName") String templateName) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.deploymentStatus = deploymentStatus;
+        this.lastDeploymentAttemptedAt = lastDeploymentAttemptedAt;
+        this.lastDeploymentSucceededAt = lastDeploymentSucceededAt;
+        this.templateMajorVersion = templateMajorVersion;
+        this.templateMinorVersion = templateMinorVersion;
+        this.templateName = templateName;
+  }
 }

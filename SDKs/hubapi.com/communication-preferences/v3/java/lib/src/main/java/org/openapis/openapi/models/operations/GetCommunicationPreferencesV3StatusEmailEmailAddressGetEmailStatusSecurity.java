@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=hapikey")
     public String hapikey;
+
     public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity withHapikey(String hapikey) {
         this.hapikey = hapikey;
         return this;
@@ -16,6 +17,7 @@ public class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusS
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2Legacy;
+
     public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity withOauth2Legacy(String oauth2Legacy) {
         this.oauth2Legacy = oauth2Legacy;
         return this;
@@ -23,6 +25,7 @@ public class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusS
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2Legacy1;
+
     public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity withOauth2Legacy1(String oauth2Legacy1) {
         this.oauth2Legacy1 = oauth2Legacy1;
         return this;
@@ -30,6 +33,7 @@ public class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusS
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
     public String privateAppsLegacy;
+
     public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity withPrivateAppsLegacy(String privateAppsLegacy) {
         this.privateAppsLegacy = privateAppsLegacy;
         return this;
@@ -37,9 +41,11 @@ public class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusS
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
     public String privateAppsLegacy1;
+
     public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity withPrivateAppsLegacy1(String privateAppsLegacy1) {
         this.privateAppsLegacy1 = privateAppsLegacy1;
         return this;
     }
     
+    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity(){}
 }

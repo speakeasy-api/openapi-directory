@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AppSummary {
     @JsonProperty("appArn")
     public String appArn;
+
     public AppSummary withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -27,6 +28,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentSchedule")
     public AppAssessmentScheduleTypeEnum assessmentSchedule;
+
     public AppSummary withAssessmentSchedule(AppAssessmentScheduleTypeEnum assessmentSchedule) {
         this.assessmentSchedule = assessmentSchedule;
         return this;
@@ -35,6 +37,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceStatus")
     public AppComplianceStatusTypeEnum complianceStatus;
+
     public AppSummary withComplianceStatus(AppComplianceStatusTypeEnum complianceStatus) {
         this.complianceStatus = complianceStatus;
         return this;
@@ -44,6 +47,7 @@ public class AppSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public AppSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -52,6 +56,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AppSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +64,7 @@ public class AppSummary {
     
     @JsonProperty("name")
     public String name;
+
     public AppSummary withName(String name) {
         this.name = name;
         return this;
@@ -67,6 +73,7 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resiliencyScore")
     public Double resiliencyScore;
+
     public AppSummary withResiliencyScore(Double resiliencyScore) {
         this.resiliencyScore = resiliencyScore;
         return this;
@@ -75,9 +82,15 @@ public class AppSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AppStatusTypeEnum status;
+
     public AppSummary withStatus(AppStatusTypeEnum status) {
         this.status = status;
         return this;
     }
     
+    public AppSummary(@JsonProperty("appArn") String appArn, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("name") String name) {
+        this.appArn = appArn;
+        this.creationTime = creationTime;
+        this.name = name;
+  }
 }

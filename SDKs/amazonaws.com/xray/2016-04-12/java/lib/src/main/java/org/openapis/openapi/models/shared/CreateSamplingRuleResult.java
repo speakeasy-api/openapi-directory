@@ -15,9 +15,11 @@ public class CreateSamplingRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SamplingRuleRecord")
     public SamplingRuleRecord samplingRuleRecord;
+
     public CreateSamplingRuleResult withSamplingRuleRecord(SamplingRuleRecord samplingRuleRecord) {
         this.samplingRuleRecord = samplingRuleRecord;
         return this;
     }
     
+    public CreateSamplingRuleResult(){}
 }

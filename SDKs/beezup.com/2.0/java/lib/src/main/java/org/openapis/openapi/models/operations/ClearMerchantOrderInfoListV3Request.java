@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClearMerchantOrderInfoListV3Request {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ClearMerchantOrderInfoListRequest clearMerchantOrderInfoListRequest;
+
     public ClearMerchantOrderInfoListV3Request withClearMerchantOrderInfoListRequest(org.openapis.openapi.models.shared.ClearMerchantOrderInfoListRequest clearMerchantOrderInfoListRequest) {
         this.clearMerchantOrderInfoListRequest = clearMerchantOrderInfoListRequest;
         return this;
@@ -19,9 +21,13 @@ public class ClearMerchantOrderInfoListV3Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=testMode")
     public Boolean testMode;
+
     public ClearMerchantOrderInfoListV3Request withTestMode(Boolean testMode) {
         this.testMode = testMode;
         return this;
     }
     
+    public ClearMerchantOrderInfoListV3Request(@JsonProperty("clearMerchantOrderInfoListRequest") org.openapis.openapi.models.shared.ClearMerchantOrderInfoListRequest clearMerchantOrderInfoListRequest) {
+        this.clearMerchantOrderInfoListRequest = clearMerchantOrderInfoListRequest;
+  }
 }

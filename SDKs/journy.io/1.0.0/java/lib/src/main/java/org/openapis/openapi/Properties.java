@@ -54,7 +54,7 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountPropertiesResponse res = new org.openapis.openapi.models.operations.GetAccountPropertiesResponse() {{
+        org.openapis.openapi.models.operations.GetAccountPropertiesResponse res = new org.openapis.openapi.models.operations.GetAccountPropertiesResponse(contentType, httpRes.statusCode()) {{
             getAccountProperties200ApplicationJSONObject = null;
             getAccountProperties400ApplicationJSONObject = null;
             getAccountProperties401ApplicationJSONObject = null;
@@ -62,8 +62,6 @@ public class Properties {
             getAccountProperties429ApplicationJSONObject = null;
             getAccountProperties500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,7 +142,7 @@ public class Properties {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserPropertiesResponse res = new org.openapis.openapi.models.operations.GetUserPropertiesResponse() {{
+        org.openapis.openapi.models.operations.GetUserPropertiesResponse res = new org.openapis.openapi.models.operations.GetUserPropertiesResponse(contentType, httpRes.statusCode()) {{
             getUserProperties200ApplicationJSONObject = null;
             getUserProperties400ApplicationJSONObject = null;
             getUserProperties401ApplicationJSONObject = null;
@@ -152,8 +150,6 @@ public class Properties {
             getUserProperties429ApplicationJSONObject = null;
             getUserProperties500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

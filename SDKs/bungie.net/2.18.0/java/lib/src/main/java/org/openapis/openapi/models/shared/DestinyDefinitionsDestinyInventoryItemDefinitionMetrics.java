@@ -15,9 +15,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionMetrics {
      */
     
     public Long[] availableMetricCategoryNodeHashes;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionMetrics withAvailableMetricCategoryNodeHashes(Long[] availableMetricCategoryNodeHashes) {
         this.availableMetricCategoryNodeHashes = availableMetricCategoryNodeHashes;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionMetrics(){}
 }

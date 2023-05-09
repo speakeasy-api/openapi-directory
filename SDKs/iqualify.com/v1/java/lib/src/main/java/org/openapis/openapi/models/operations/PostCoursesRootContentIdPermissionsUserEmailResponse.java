@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostCoursesRootContentIdPermissionsUserEmailResponse {
     
     public String contentType;
+
     public PostCoursesRootContentIdPermissionsUserEmailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostCoursesRootContentIdPermissionsUserEmailResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PostCoursesRootContentIdPermissionsUserEmailResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class PostCoursesRootContentIdPermissionsUserEmailResponse {
     
     
     public Integer statusCode;
+
     public PostCoursesRootContentIdPermissionsUserEmailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PostCoursesRootContentIdPermissionsUserEmailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostCoursesRootContentIdPermissionsUserEmailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class PostCoursesRootContentIdPermissionsUserEmailResponse {
      */
     
     public PostCoursesRootContentIdPermissionsUserEmail201ApplicationJSON postCoursesRootContentIdPermissionsUserEmail201ApplicationJSONObject;
+
     public PostCoursesRootContentIdPermissionsUserEmailResponse withPostCoursesRootContentIdPermissionsUserEmail201ApplicationJSONObject(PostCoursesRootContentIdPermissionsUserEmail201ApplicationJSON postCoursesRootContentIdPermissionsUserEmail201ApplicationJSONObject) {
         this.postCoursesRootContentIdPermissionsUserEmail201ApplicationJSONObject = postCoursesRootContentIdPermissionsUserEmail201ApplicationJSONObject;
         return this;
     }
     
+    public PostCoursesRootContentIdPermissionsUserEmailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

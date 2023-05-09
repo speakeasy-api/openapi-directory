@@ -15,9 +15,11 @@ public class UpdatePipelineExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionArn")
     public String pipelineExecutionArn;
+
     public UpdatePipelineExecutionResponse withPipelineExecutionArn(String pipelineExecutionArn) {
         this.pipelineExecutionArn = pipelineExecutionArn;
         return this;
     }
     
+    public UpdatePipelineExecutionResponse(){}
 }

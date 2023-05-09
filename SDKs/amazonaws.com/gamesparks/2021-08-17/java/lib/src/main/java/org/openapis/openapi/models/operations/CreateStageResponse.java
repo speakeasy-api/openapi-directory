@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStageResponse {
@@ -12,6 +13,7 @@ public class CreateStageResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateStageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateStageResponse {
      */
     
     public Object conflictException;
+
     public CreateStageResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateStageResponse {
     
     
     public String contentType;
+
     public CreateStageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateStageResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateStageResult createStageResult;
+
     public CreateStageResponse withCreateStageResult(org.openapis.openapi.models.shared.CreateStageResult createStageResult) {
         this.createStageResult = createStageResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateStageResponse {
      */
     
     public Object internalServerException;
+
     public CreateStageResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateStageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateStageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateStageResponse {
     
     
     public Integer statusCode;
+
     public CreateStageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateStageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateStageResponse {
      */
     
     public Object throttlingException;
+
     public CreateStageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateStageResponse {
      */
     
     public Object validationException;
+
     public CreateStageResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateStageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

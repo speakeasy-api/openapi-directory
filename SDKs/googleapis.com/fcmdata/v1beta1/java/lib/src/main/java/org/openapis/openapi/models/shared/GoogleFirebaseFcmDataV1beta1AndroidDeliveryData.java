@@ -18,6 +18,7 @@ public class GoogleFirebaseFcmDataV1beta1AndroidDeliveryData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analyticsLabel")
     public String analyticsLabel;
+
     public GoogleFirebaseFcmDataV1beta1AndroidDeliveryData withAnalyticsLabel(String analyticsLabel) {
         this.analyticsLabel = analyticsLabel;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirebaseFcmDataV1beta1AndroidDeliveryData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public GoogleFirebaseFcmDataV1beta1AndroidDeliveryData withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleFirebaseFcmDataV1beta1AndroidDeliveryData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GoogleFirebaseFcmDataV1beta1Data data;
+
     public GoogleFirebaseFcmDataV1beta1AndroidDeliveryData withData(GoogleFirebaseFcmDataV1beta1Data data) {
         this.data = data;
         return this;
@@ -51,9 +54,11 @@ public class GoogleFirebaseFcmDataV1beta1AndroidDeliveryData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public GoogleTypeDate date;
+
     public GoogleFirebaseFcmDataV1beta1AndroidDeliveryData withDate(GoogleTypeDate date) {
         this.date = date;
         return this;
     }
     
+    public GoogleFirebaseFcmDataV1beta1AndroidDeliveryData(){}
 }

@@ -18,9 +18,11 @@ public class MutualTls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public MutualTlsModeEnum mode;
+
     public MutualTls withMode(MutualTlsModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public MutualTls(){}
 }

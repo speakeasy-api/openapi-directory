@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetEmailTemplateResponse {
     @JsonProperty("TemplateContent")
     public EmailTemplateContent templateContent;
+
     public GetEmailTemplateResponse withTemplateContent(EmailTemplateContent templateContent) {
         this.templateContent = templateContent;
         return this;
@@ -19,9 +20,14 @@ public class GetEmailTemplateResponse {
     
     @JsonProperty("TemplateName")
     public String templateName;
+
     public GetEmailTemplateResponse withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public GetEmailTemplateResponse(@JsonProperty("TemplateContent") EmailTemplateContent templateContent, @JsonProperty("TemplateName") String templateName) {
+        this.templateContent = templateContent;
+        this.templateName = templateName;
+  }
 }

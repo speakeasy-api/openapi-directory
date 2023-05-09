@@ -15,6 +15,7 @@ public class Ratcr500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Ratcr500ApplicationJSONErrorEnum error;
+
     public Ratcr500ApplicationJSON withError(Ratcr500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Ratcr500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Ratcr500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Ratcr500ApplicationJSON withErrorDescription(Ratcr500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Ratcr500ApplicationJSON(){}
 }

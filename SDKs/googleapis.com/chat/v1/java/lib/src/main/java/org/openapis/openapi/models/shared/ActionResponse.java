@@ -18,6 +18,7 @@ public class ActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialogAction")
     public DialogAction dialogAction;
+
     public ActionResponse withDialogAction(DialogAction dialogAction) {
         this.dialogAction = dialogAction;
         return this;
@@ -29,6 +30,7 @@ public class ActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ActionResponseTypeEnum type;
+
     public ActionResponse withType(ActionResponseTypeEnum type) {
         this.type = type;
         return this;
@@ -40,9 +42,11 @@ public class ActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ActionResponse withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ActionResponse(){}
 }

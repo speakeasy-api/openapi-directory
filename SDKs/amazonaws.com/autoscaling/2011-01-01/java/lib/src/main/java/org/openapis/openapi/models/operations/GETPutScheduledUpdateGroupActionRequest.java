@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPutScheduledUpdateGroupActionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETPutScheduledUpdateGroupActionActionEnum action;
+
     public GETPutScheduledUpdateGroupActionRequest withAction(GETPutScheduledUpdateGroupActionActionEnum action) {
         this.action = action;
         return this;
@@ -20,6 +22,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
     public String autoScalingGroupName;
+
     public GETPutScheduledUpdateGroupActionRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -30,6 +33,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DesiredCapacity")
     public Long desiredCapacity;
+
     public GETPutScheduledUpdateGroupActionRequest withDesiredCapacity(Long desiredCapacity) {
         this.desiredCapacity = desiredCapacity;
         return this;
@@ -40,6 +44,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndTime")
     public OffsetDateTime endTime;
+
     public GETPutScheduledUpdateGroupActionRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -50,6 +55,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxSize")
     public Long maxSize;
+
     public GETPutScheduledUpdateGroupActionRequest withMaxSize(Long maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -60,6 +66,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MinSize")
     public Long minSize;
+
     public GETPutScheduledUpdateGroupActionRequest withMinSize(Long minSize) {
         this.minSize = minSize;
         return this;
@@ -70,6 +77,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Recurrence")
     public String recurrence;
+
     public GETPutScheduledUpdateGroupActionRequest withRecurrence(String recurrence) {
         this.recurrence = recurrence;
         return this;
@@ -80,6 +88,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ScheduledActionName")
     public String scheduledActionName;
+
     public GETPutScheduledUpdateGroupActionRequest withScheduledActionName(String scheduledActionName) {
         this.scheduledActionName = scheduledActionName;
         return this;
@@ -90,6 +99,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartTime")
     public OffsetDateTime startTime;
+
     public GETPutScheduledUpdateGroupActionRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -100,6 +110,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Time")
     public OffsetDateTime time;
+
     public GETPutScheduledUpdateGroupActionRequest withTime(OffsetDateTime time) {
         this.time = time;
         return this;
@@ -110,6 +121,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TimeZone")
     public String timeZone;
+
     public GETPutScheduledUpdateGroupActionRequest withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -117,6 +129,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETPutScheduledUpdateGroupActionVersionEnum version;
+
     public GETPutScheduledUpdateGroupActionRequest withVersion(GETPutScheduledUpdateGroupActionVersionEnum version) {
         this.version = version;
         return this;
@@ -124,6 +137,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETPutScheduledUpdateGroupActionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -131,6 +145,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETPutScheduledUpdateGroupActionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -138,6 +153,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETPutScheduledUpdateGroupActionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -145,6 +161,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETPutScheduledUpdateGroupActionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -152,6 +169,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETPutScheduledUpdateGroupActionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -159,6 +177,7 @@ public class GETPutScheduledUpdateGroupActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETPutScheduledUpdateGroupActionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -166,9 +185,16 @@ public class GETPutScheduledUpdateGroupActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETPutScheduledUpdateGroupActionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETPutScheduledUpdateGroupActionRequest(@JsonProperty("Action") GETPutScheduledUpdateGroupActionActionEnum action, @JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("ScheduledActionName") String scheduledActionName, @JsonProperty("Version") GETPutScheduledUpdateGroupActionVersionEnum version) {
+        this.action = action;
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.scheduledActionName = scheduledActionName;
+        this.version = version;
+  }
 }

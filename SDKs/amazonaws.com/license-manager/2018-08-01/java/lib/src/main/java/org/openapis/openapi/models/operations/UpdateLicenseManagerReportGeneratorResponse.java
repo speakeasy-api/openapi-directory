@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLicenseManagerReportGeneratorResponse {
@@ -12,6 +13,7 @@ public class UpdateLicenseManagerReportGeneratorResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateLicenseManagerReportGeneratorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateLicenseManagerReportGeneratorResponse {
      */
     
     public Object authorizationException;
+
     public UpdateLicenseManagerReportGeneratorResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLicenseManagerReportGeneratorResponse {
     
     
     public String contentType;
+
     public UpdateLicenseManagerReportGeneratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateLicenseManagerReportGeneratorResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UpdateLicenseManagerReportGeneratorResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateLicenseManagerReportGeneratorResponse {
      */
     
     public Object rateLimitExceededException;
+
     public UpdateLicenseManagerReportGeneratorResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateLicenseManagerReportGeneratorResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public UpdateLicenseManagerReportGeneratorResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateLicenseManagerReportGeneratorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateLicenseManagerReportGeneratorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateLicenseManagerReportGeneratorResponse {
      */
     
     public Object serverInternalException;
+
     public UpdateLicenseManagerReportGeneratorResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -86,6 +95,7 @@ public class UpdateLicenseManagerReportGeneratorResponse {
     
     
     public Integer statusCode;
+
     public UpdateLicenseManagerReportGeneratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class UpdateLicenseManagerReportGeneratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLicenseManagerReportGeneratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class UpdateLicenseManagerReportGeneratorResponse {
      */
     
     public java.util.Map<String, Object> updateLicenseManagerReportGeneratorResponse;
+
     public UpdateLicenseManagerReportGeneratorResponse withUpdateLicenseManagerReportGeneratorResponse(java.util.Map<String, Object> updateLicenseManagerReportGeneratorResponse) {
         this.updateLicenseManagerReportGeneratorResponse = updateLicenseManagerReportGeneratorResponse;
         return this;
@@ -113,9 +125,14 @@ public class UpdateLicenseManagerReportGeneratorResponse {
      */
     
     public Object validationException;
+
     public UpdateLicenseManagerReportGeneratorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateLicenseManagerReportGeneratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

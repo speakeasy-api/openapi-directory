@@ -15,6 +15,7 @@ public class LifeCycleLastLaunch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initiated")
     public LifeCycleLastLaunchInitiated initiated;
+
     public LifeCycleLastLaunch withInitiated(LifeCycleLastLaunchInitiated initiated) {
         this.initiated = initiated;
         return this;
@@ -23,9 +24,11 @@ public class LifeCycleLastLaunch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public LaunchStatusEnum status;
+
     public LifeCycleLastLaunch withStatus(LaunchStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public LifeCycleLastLaunch(){}
 }

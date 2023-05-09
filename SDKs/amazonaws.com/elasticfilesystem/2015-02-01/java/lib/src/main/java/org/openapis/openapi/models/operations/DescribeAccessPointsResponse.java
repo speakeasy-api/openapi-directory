@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAccessPointsResponse {
@@ -12,6 +13,7 @@ public class DescribeAccessPointsResponse {
      */
     
     public Object accessPointNotFound;
+
     public DescribeAccessPointsResponse withAccessPointNotFound(Object accessPointNotFound) {
         this.accessPointNotFound = accessPointNotFound;
         return this;
@@ -22,6 +24,7 @@ public class DescribeAccessPointsResponse {
      */
     
     public Object badRequest;
+
     public DescribeAccessPointsResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAccessPointsResponse {
     
     
     public String contentType;
+
     public DescribeAccessPointsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAccessPointsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAccessPointsResponse describeAccessPointsResponse;
+
     public DescribeAccessPointsResponse withDescribeAccessPointsResponse(org.openapis.openapi.models.shared.DescribeAccessPointsResponse describeAccessPointsResponse) {
         this.describeAccessPointsResponse = describeAccessPointsResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAccessPointsResponse {
      */
     
     public Object fileSystemNotFound;
+
     public DescribeAccessPointsResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -59,6 +65,7 @@ public class DescribeAccessPointsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeAccessPointsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -66,6 +73,7 @@ public class DescribeAccessPointsResponse {
     
     
     public Integer statusCode;
+
     public DescribeAccessPointsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeAccessPointsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAccessPointsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAccessPointsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

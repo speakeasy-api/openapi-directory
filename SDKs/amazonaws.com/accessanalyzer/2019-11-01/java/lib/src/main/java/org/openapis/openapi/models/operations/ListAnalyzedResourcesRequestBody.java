@@ -14,6 +14,7 @@ public class ListAnalyzedResourcesRequestBody {
      */
     @JsonProperty("analyzerArn")
     public String analyzerArn;
+
     public ListAnalyzedResourcesRequestBody withAnalyzerArn(String analyzerArn) {
         this.analyzerArn = analyzerArn;
         return this;
@@ -25,6 +26,7 @@ public class ListAnalyzedResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListAnalyzedResourcesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +38,7 @@ public class ListAnalyzedResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAnalyzedResourcesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -47,9 +50,13 @@ public class ListAnalyzedResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ListAnalyzedResourcesRequestBodyResourceTypeEnum resourceType;
+
     public ListAnalyzedResourcesRequestBody withResourceType(ListAnalyzedResourcesRequestBodyResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ListAnalyzedResourcesRequestBody(@JsonProperty("analyzerArn") String analyzerArn) {
+        this.analyzerArn = analyzerArn;
+  }
 }

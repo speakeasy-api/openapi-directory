@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutLifecyclePolicyResponse {
     
     public String contentType;
+
     public PutLifecyclePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutLifecyclePolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public PutLifecyclePolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutLifecyclePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutLifecyclePolicyResponse putLifecyclePolicyResponse;
+
     public PutLifecyclePolicyResponse withPutLifecyclePolicyResponse(org.openapis.openapi.models.shared.PutLifecyclePolicyResponse putLifecyclePolicyResponse) {
         this.putLifecyclePolicyResponse = putLifecyclePolicyResponse;
         return this;
@@ -39,6 +43,7 @@ public class PutLifecyclePolicyResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public PutLifecyclePolicyResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class PutLifecyclePolicyResponse {
      */
     
     public Object serverException;
+
     public PutLifecyclePolicyResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class PutLifecyclePolicyResponse {
     
     
     public Integer statusCode;
+
     public PutLifecyclePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class PutLifecyclePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutLifecyclePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutLifecyclePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

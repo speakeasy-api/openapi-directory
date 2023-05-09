@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposEnableLfsForRepoResponse {
     
     public String contentType;
+
     public ReposEnableLfsForRepoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposEnableLfsForRepoResponse {
     
     
     public Integer statusCode;
+
     public ReposEnableLfsForRepoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposEnableLfsForRepoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposEnableLfsForRepoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ReposEnableLfsForRepoResponse {
      */
     
     public java.util.Map<String, Object> reposEnableLfsForRepo202ApplicationJSONObject;
+
     public ReposEnableLfsForRepoResponse withReposEnableLfsForRepo202ApplicationJSONObject(java.util.Map<String, Object> reposEnableLfsForRepo202ApplicationJSONObject) {
         this.reposEnableLfsForRepo202ApplicationJSONObject = reposEnableLfsForRepo202ApplicationJSONObject;
         return this;
     }
     
+    public ReposEnableLfsForRepoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

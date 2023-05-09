@@ -22,6 +22,7 @@ public class StudioLifecycleConfigDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public StudioLifecycleConfigDetails withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -32,6 +33,7 @@ public class StudioLifecycleConfigDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public StudioLifecycleConfigDetails withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -40,6 +42,7 @@ public class StudioLifecycleConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioLifecycleConfigAppType")
     public StudioLifecycleConfigAppTypeEnum studioLifecycleConfigAppType;
+
     public StudioLifecycleConfigDetails withStudioLifecycleConfigAppType(StudioLifecycleConfigAppTypeEnum studioLifecycleConfigAppType) {
         this.studioLifecycleConfigAppType = studioLifecycleConfigAppType;
         return this;
@@ -48,6 +51,7 @@ public class StudioLifecycleConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioLifecycleConfigArn")
     public String studioLifecycleConfigArn;
+
     public StudioLifecycleConfigDetails withStudioLifecycleConfigArn(String studioLifecycleConfigArn) {
         this.studioLifecycleConfigArn = studioLifecycleConfigArn;
         return this;
@@ -56,9 +60,11 @@ public class StudioLifecycleConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioLifecycleConfigName")
     public String studioLifecycleConfigName;
+
     public StudioLifecycleConfigDetails withStudioLifecycleConfigName(String studioLifecycleConfigName) {
         this.studioLifecycleConfigName = studioLifecycleConfigName;
         return this;
     }
     
+    public StudioLifecycleConfigDetails(){}
 }

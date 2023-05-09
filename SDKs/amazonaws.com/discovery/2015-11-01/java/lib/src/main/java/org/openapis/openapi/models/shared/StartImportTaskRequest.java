@@ -12,6 +12,7 @@ public class StartImportTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public StartImportTaskRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class StartImportTaskRequest {
     
     @JsonProperty("importUrl")
     public String importUrl;
+
     public StartImportTaskRequest withImportUrl(String importUrl) {
         this.importUrl = importUrl;
         return this;
@@ -26,9 +28,14 @@ public class StartImportTaskRequest {
     
     @JsonProperty("name")
     public String name;
+
     public StartImportTaskRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StartImportTaskRequest(@JsonProperty("importUrl") String importUrl, @JsonProperty("name") String name) {
+        this.importUrl = importUrl;
+        this.name = name;
+  }
 }

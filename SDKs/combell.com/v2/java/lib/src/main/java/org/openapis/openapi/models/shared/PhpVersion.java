@@ -18,9 +18,11 @@ public class PhpVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public PhpVersion withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public PhpVersion(){}
 }

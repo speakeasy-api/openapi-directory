@@ -12,9 +12,11 @@ public class NASimpleAlgo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("high_deadband")
     public Integer highDeadband;
+
     public NASimpleAlgo withHighDeadband(Integer highDeadband) {
         this.highDeadband = highDeadband;
         return this;
     }
     
+    public NASimpleAlgo(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMaintenanceWindowResponse {
     
     public String contentType;
+
     public UpdateMaintenanceWindowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateMaintenanceWindowResponse {
      */
     
     public Object doesNotExistException;
+
     public UpdateMaintenanceWindowResponse withDoesNotExistException(Object doesNotExistException) {
         this.doesNotExistException = doesNotExistException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMaintenanceWindowResponse {
      */
     
     public Object internalServerError;
+
     public UpdateMaintenanceWindowResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -36,6 +40,7 @@ public class UpdateMaintenanceWindowResponse {
     
     
     public Integer statusCode;
+
     public UpdateMaintenanceWindowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateMaintenanceWindowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMaintenanceWindowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateMaintenanceWindowResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateMaintenanceWindowResult updateMaintenanceWindowResult;
+
     public UpdateMaintenanceWindowResponse withUpdateMaintenanceWindowResult(org.openapis.openapi.models.shared.UpdateMaintenanceWindowResult updateMaintenanceWindowResult) {
         this.updateMaintenanceWindowResult = updateMaintenanceWindowResult;
         return this;
     }
     
+    public UpdateMaintenanceWindowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

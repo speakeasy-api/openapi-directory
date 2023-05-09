@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GlobalCluster {
     
     public String databaseName;
+
     public GlobalCluster withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -19,6 +20,7 @@ public class GlobalCluster {
     
     
     public Boolean deletionProtection;
+
     public GlobalCluster withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -26,6 +28,7 @@ public class GlobalCluster {
     
     
     public String engine;
+
     public GlobalCluster withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -33,6 +36,7 @@ public class GlobalCluster {
     
     
     public String engineVersion;
+
     public GlobalCluster withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -40,6 +44,7 @@ public class GlobalCluster {
     
     
     public FailoverState failoverState;
+
     public GlobalCluster withFailoverState(FailoverState failoverState) {
         this.failoverState = failoverState;
         return this;
@@ -47,6 +52,7 @@ public class GlobalCluster {
     
     
     public String globalClusterArn;
+
     public GlobalCluster withGlobalClusterArn(String globalClusterArn) {
         this.globalClusterArn = globalClusterArn;
         return this;
@@ -54,6 +60,7 @@ public class GlobalCluster {
     
     
     public String globalClusterIdentifier;
+
     public GlobalCluster withGlobalClusterIdentifier(String globalClusterIdentifier) {
         this.globalClusterIdentifier = globalClusterIdentifier;
         return this;
@@ -61,6 +68,7 @@ public class GlobalCluster {
     
     
     public GlobalClusterMemberList[] globalClusterMembers;
+
     public GlobalCluster withGlobalClusterMembers(GlobalClusterMemberList[] globalClusterMembers) {
         this.globalClusterMembers = globalClusterMembers;
         return this;
@@ -68,6 +76,7 @@ public class GlobalCluster {
     
     
     public String globalClusterResourceId;
+
     public GlobalCluster withGlobalClusterResourceId(String globalClusterResourceId) {
         this.globalClusterResourceId = globalClusterResourceId;
         return this;
@@ -75,6 +84,7 @@ public class GlobalCluster {
     
     
     public String status;
+
     public GlobalCluster withStatus(String status) {
         this.status = status;
         return this;
@@ -82,9 +92,11 @@ public class GlobalCluster {
     
     
     public Boolean storageEncrypted;
+
     public GlobalCluster withStorageEncrypted(Boolean storageEncrypted) {
         this.storageEncrypted = storageEncrypted;
         return this;
     }
     
+    public GlobalCluster(){}
 }

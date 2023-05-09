@@ -15,6 +15,7 @@ public class GetReservationPurchaseRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metadata")
     public ReservationPurchaseRecommendationMetadata metadata;
+
     public GetReservationPurchaseRecommendationResponse withMetadata(ReservationPurchaseRecommendationMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -23,6 +24,7 @@ public class GetReservationPurchaseRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetReservationPurchaseRecommendationResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -31,9 +33,11 @@ public class GetReservationPurchaseRecommendationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Recommendations")
     public ReservationPurchaseRecommendation[] recommendations;
+
     public GetReservationPurchaseRecommendationResponse withRecommendations(ReservationPurchaseRecommendation[] recommendations) {
         this.recommendations = recommendations;
         return this;
     }
     
+    public GetReservationPurchaseRecommendationResponse(){}
 }

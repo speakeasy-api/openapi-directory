@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class NodesWikisListWiki {
     /**
@@ -12,6 +12,7 @@ public class NodesWikisListWiki {
      */
     
     public NodesWikisListWikiAttributes attributes;
+
     public NodesWikisListWiki withAttributes(NodesWikisListWikiAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class NodesWikisListWiki {
      */
     
     public String id;
+
     public NodesWikisListWiki withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class NodesWikisListWiki {
      */
     
     public NodesWikisListWikiLinks links;
+
     public NodesWikisListWiki withLinks(NodesWikisListWikiLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class NodesWikisListWiki {
      */
     
     public NodesWikisListWikiRelationships relationships;
+
     public NodesWikisListWiki withRelationships(NodesWikisListWikiRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,14 @@ public class NodesWikisListWiki {
      */
     
     public String type;
+
     public NodesWikisListWiki withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesWikisListWiki(@JsonProperty("relationships") NodesWikisListWikiRelationships relationships, @JsonProperty("type") String type) {
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

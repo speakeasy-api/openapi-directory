@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLabelResponse {
@@ -12,6 +13,7 @@ public class DeleteLabelResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteLabelResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteLabelResponse {
      */
     
     public Object conflictException;
+
     public DeleteLabelResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLabelResponse {
     
     
     public String contentType;
+
     public DeleteLabelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLabelResponse {
      */
     
     public Object internalServerException;
+
     public DeleteLabelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteLabelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteLabelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteLabelResponse {
     
     
     public Integer statusCode;
+
     public DeleteLabelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteLabelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLabelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteLabelResponse {
      */
     
     public Object throttlingException;
+
     public DeleteLabelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteLabelResponse {
      */
     
     public Object validationException;
+
     public DeleteLabelResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteLabelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

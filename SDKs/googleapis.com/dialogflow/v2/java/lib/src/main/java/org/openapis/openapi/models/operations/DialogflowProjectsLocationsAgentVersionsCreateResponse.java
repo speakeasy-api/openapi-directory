@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DialogflowProjectsLocationsAgentVersionsCreateResponse {
     
     public String contentType;
+
     public DialogflowProjectsLocationsAgentVersionsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DialogflowProjectsLocationsAgentVersionsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDialogflowV2Version googleCloudDialogflowV2Version;
+
     public DialogflowProjectsLocationsAgentVersionsCreateResponse withGoogleCloudDialogflowV2Version(org.openapis.openapi.models.shared.GoogleCloudDialogflowV2Version googleCloudDialogflowV2Version) {
         this.googleCloudDialogflowV2Version = googleCloudDialogflowV2Version;
         return this;
@@ -26,6 +29,7 @@ public class DialogflowProjectsLocationsAgentVersionsCreateResponse {
     
     
     public Integer statusCode;
+
     public DialogflowProjectsLocationsAgentVersionsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DialogflowProjectsLocationsAgentVersionsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DialogflowProjectsLocationsAgentVersionsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DialogflowProjectsLocationsAgentVersionsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

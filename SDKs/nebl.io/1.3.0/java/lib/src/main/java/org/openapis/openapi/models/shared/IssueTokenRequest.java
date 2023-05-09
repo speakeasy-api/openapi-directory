@@ -17,6 +17,7 @@ public class IssueTokenRequest {
      */
     @JsonProperty("amount")
     public Double amount;
+
     public IssueTokenRequest withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -27,6 +28,7 @@ public class IssueTokenRequest {
      */
     @JsonProperty("divisibility")
     public Double divisibility;
+
     public IssueTokenRequest withDivisibility(Double divisibility) {
         this.divisibility = divisibility;
         return this;
@@ -37,6 +39,7 @@ public class IssueTokenRequest {
      */
     @JsonProperty("fee")
     public Double fee;
+
     public IssueTokenRequest withFee(Double fee) {
         this.fee = fee;
         return this;
@@ -48,6 +51,7 @@ public class IssueTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flags")
     public IssueTokenRequestFlags flags;
+
     public IssueTokenRequest withFlags(IssueTokenRequestFlags flags) {
         this.flags = flags;
         return this;
@@ -58,6 +62,7 @@ public class IssueTokenRequest {
      */
     @JsonProperty("issueAddress")
     public String issueAddress;
+
     public IssueTokenRequest withIssueAddress(String issueAddress) {
         this.issueAddress = issueAddress;
         return this;
@@ -69,6 +74,7 @@ public class IssueTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public IssueTokenRequestMetadata metadata;
+
     public IssueTokenRequest withMetadata(IssueTokenRequestMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -79,6 +85,7 @@ public class IssueTokenRequest {
      */
     @JsonProperty("reissuable")
     public Boolean reissuable;
+
     public IssueTokenRequest withReissuable(Boolean reissuable) {
         this.reissuable = reissuable;
         return this;
@@ -86,9 +93,18 @@ public class IssueTokenRequest {
     
     @JsonProperty("transfer")
     public IssueTokenRequestTransfer[] transfer;
+
     public IssueTokenRequest withTransfer(IssueTokenRequestTransfer[] transfer) {
         this.transfer = transfer;
         return this;
     }
     
+    public IssueTokenRequest(@JsonProperty("amount") Double amount, @JsonProperty("divisibility") Double divisibility, @JsonProperty("fee") Double fee, @JsonProperty("issueAddress") String issueAddress, @JsonProperty("reissuable") Boolean reissuable, @JsonProperty("transfer") IssueTokenRequestTransfer[] transfer) {
+        this.amount = amount;
+        this.divisibility = divisibility;
+        this.fee = fee;
+        this.issueAddress = issueAddress;
+        this.reissuable = reissuable;
+        this.transfer = transfer;
+  }
 }

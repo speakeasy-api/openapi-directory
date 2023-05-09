@@ -18,9 +18,11 @@ public class BenchmarkMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average")
     public String average;
+
     public BenchmarkMetadata withAverage(String average) {
         this.average = average;
         return this;
     }
     
+    public BenchmarkMetadata(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSchemaResponse {
@@ -12,6 +13,7 @@ public class GetSchemaResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSchemaResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetSchemaResponse {
     
     
     public String contentType;
+
     public GetSchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSchemaOutput getSchemaOutput;
+
     public GetSchemaResponse withGetSchemaOutput(org.openapis.openapi.models.shared.GetSchemaOutput getSchemaOutput) {
         this.getSchemaOutput = getSchemaOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetSchemaResponse {
      */
     
     public Object internalServerException;
+
     public GetSchemaResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetSchemaResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSchemaResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetSchemaResponse {
     
     
     public Integer statusCode;
+
     public GetSchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetSchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetSchemaResponse {
      */
     
     public Object throttlingException;
+
     public GetSchemaResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetSchemaResponse {
      */
     
     public Object validationException;
+
     public GetSchemaResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

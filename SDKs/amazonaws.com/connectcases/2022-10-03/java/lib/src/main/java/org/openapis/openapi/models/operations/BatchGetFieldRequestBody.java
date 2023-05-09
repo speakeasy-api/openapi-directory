@@ -12,9 +12,13 @@ public class BatchGetFieldRequestBody {
      */
     @JsonProperty("fields")
     public org.openapis.openapi.models.shared.FieldIdentifier[] fields;
+
     public BatchGetFieldRequestBody withFields(org.openapis.openapi.models.shared.FieldIdentifier[] fields) {
         this.fields = fields;
         return this;
     }
     
+    public BatchGetFieldRequestBody(@JsonProperty("fields") org.openapis.openapi.models.shared.FieldIdentifier[] fields) {
+        this.fields = fields;
+  }
 }

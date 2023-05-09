@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGatewayResponse {
     
     public String contentType;
+
     public GetGatewayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetGatewayResponse {
      */
     
     public org.openapis.openapi.models.shared.GetGatewayOutput getGatewayOutput;
+
     public GetGatewayResponse withGetGatewayOutput(org.openapis.openapi.models.shared.GetGatewayOutput getGatewayOutput) {
         this.getGatewayOutput = getGatewayOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetGatewayResponse {
      */
     
     public Object internalServerException;
+
     public GetGatewayResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetGatewayResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetGatewayResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetGatewayResponse {
     
     
     public Integer statusCode;
+
     public GetGatewayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetGatewayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGatewayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetGatewayResponse {
      */
     
     public Object throttlingException;
+
     public GetGatewayResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetGatewayResponse {
      */
     
     public Object validationException;
+
     public GetGatewayResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetGatewayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

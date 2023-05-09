@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateClientVpnEndpointRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateClientVpnEndpointRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateClientVpnEndpointRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateClientVpnEndpointRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateClientVpnEndpointRequestTagSpecificationsTags(){}
 }

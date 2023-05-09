@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifySecurityGroupRulesResult {
     
     public Boolean return_;
+
     public ModifySecurityGroupRulesResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
     }
     
+    public ModifySecurityGroupRulesResult(){}
 }

@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2ValueFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public GooglePrivacyDlpV2ValueFrequency withCount(String count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2ValueFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public GooglePrivacyDlpV2Value value;
+
     public GooglePrivacyDlpV2ValueFrequency withValue(GooglePrivacyDlpV2Value value) {
         this.value = value;
         return this;
     }
     
+    public GooglePrivacyDlpV2ValueFrequency(){}
 }

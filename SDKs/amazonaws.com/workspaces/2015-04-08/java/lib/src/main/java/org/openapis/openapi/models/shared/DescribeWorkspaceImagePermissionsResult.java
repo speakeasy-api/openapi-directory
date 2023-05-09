@@ -15,6 +15,7 @@ public class DescribeWorkspaceImagePermissionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageId")
     public String imageId;
+
     public DescribeWorkspaceImagePermissionsResult withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -23,6 +24,7 @@ public class DescribeWorkspaceImagePermissionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImagePermissions")
     public ImagePermission[] imagePermissions;
+
     public DescribeWorkspaceImagePermissionsResult withImagePermissions(ImagePermission[] imagePermissions) {
         this.imagePermissions = imagePermissions;
         return this;
@@ -31,9 +33,11 @@ public class DescribeWorkspaceImagePermissionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeWorkspaceImagePermissionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeWorkspaceImagePermissionsResult(){}
 }

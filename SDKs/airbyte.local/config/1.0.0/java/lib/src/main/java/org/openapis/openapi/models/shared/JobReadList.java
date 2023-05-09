@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JobReadList {
     @JsonProperty("jobs")
     public JobWithAttemptsRead[] jobs;
+
     public JobReadList withJobs(JobWithAttemptsRead[] jobs) {
         this.jobs = jobs;
         return this;
@@ -22,9 +23,14 @@ public class JobReadList {
      */
     @JsonProperty("totalJobCount")
     public Long totalJobCount;
+
     public JobReadList withTotalJobCount(Long totalJobCount) {
         this.totalJobCount = totalJobCount;
         return this;
     }
     
+    public JobReadList(@JsonProperty("jobs") JobWithAttemptsRead[] jobs, @JsonProperty("totalJobCount") Long totalJobCount) {
+        this.jobs = jobs;
+        this.totalJobCount = totalJobCount;
+  }
 }

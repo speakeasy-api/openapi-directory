@@ -37,4 +37,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/BatchPutMetricsError.java
 lib/src/main/java/org/openapis/openapi/models/shared/PutMetricsErrorCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/RawMetricData.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -100,4 +100,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpsertSellerRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Groups.java
 lib/src/main/java/org/openapis/openapi/models/shared/AvailableSalesChannel.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/matchedoffers/README.md
+docs/notification/README.md
+docs/saleschannelmapping/README.md
+docs/sellercommissions/README.md
+docs/sellerinvite/README.md
+docs/sellers/README.md
 USAGE.md

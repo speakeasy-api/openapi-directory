@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTransitGatewayPeeringAttachmentRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateTransitGatewayPeeringAttachmentRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateTransitGatewayPeeringAttachmentRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateTransitGatewayPeeringAttachmentRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateTransitGatewayPeeringAttachmentRequestTagSpecificationsTags(){}
 }

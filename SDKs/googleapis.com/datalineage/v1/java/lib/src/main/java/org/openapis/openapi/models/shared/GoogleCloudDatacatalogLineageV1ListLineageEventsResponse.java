@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogLineageV1ListLineageEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineageEvents")
     public GoogleCloudDatacatalogLineageV1LineageEvent[] lineageEvents;
+
     public GoogleCloudDatacatalogLineageV1ListLineageEventsResponse withLineageEvents(GoogleCloudDatacatalogLineageV1LineageEvent[] lineageEvents) {
         this.lineageEvents = lineageEvents;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogLineageV1ListLineageEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatacatalogLineageV1ListLineageEventsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDatacatalogLineageV1ListLineageEventsResponse(){}
 }

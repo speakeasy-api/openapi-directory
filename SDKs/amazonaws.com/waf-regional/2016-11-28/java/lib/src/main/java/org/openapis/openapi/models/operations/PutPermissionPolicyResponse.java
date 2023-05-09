@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutPermissionPolicyResponse {
     
     public String contentType;
+
     public PutPermissionPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutPermissionPolicyResponse {
      */
     
     public java.util.Map<String, Object> putPermissionPolicyResponse;
+
     public PutPermissionPolicyResponse withPutPermissionPolicyResponse(java.util.Map<String, Object> putPermissionPolicyResponse) {
         this.putPermissionPolicyResponse = putPermissionPolicyResponse;
         return this;
@@ -26,6 +29,7 @@ public class PutPermissionPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutPermissionPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PutPermissionPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutPermissionPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class PutPermissionPolicyResponse {
      */
     
     public Object wafInternalErrorException;
+
     public PutPermissionPolicyResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class PutPermissionPolicyResponse {
      */
     
     public Object wafInvalidPermissionPolicyException;
+
     public PutPermissionPolicyResponse withWAFInvalidPermissionPolicyException(Object wafInvalidPermissionPolicyException) {
         this.wafInvalidPermissionPolicyException = wafInvalidPermissionPolicyException;
         return this;
@@ -63,6 +70,7 @@ public class PutPermissionPolicyResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public PutPermissionPolicyResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -73,9 +81,14 @@ public class PutPermissionPolicyResponse {
      */
     
     public Object wafStaleDataException;
+
     public PutPermissionPolicyResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public PutPermissionPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

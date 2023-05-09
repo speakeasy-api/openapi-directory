@@ -18,9 +18,11 @@ public class DeleteLoyaltyRewardResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public DeleteLoyaltyRewardResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public DeleteLoyaltyRewardResponse(){}
 }

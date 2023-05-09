@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class StopInstancesResult {
     
     public StopInstancesResultStoppingInstances[] stoppingInstances;
+
     public StopInstancesResult withStoppingInstances(StopInstancesResultStoppingInstances[] stoppingInstances) {
         this.stoppingInstances = stoppingInstances;
         return this;
     }
     
+    public StopInstancesResult(){}
 }

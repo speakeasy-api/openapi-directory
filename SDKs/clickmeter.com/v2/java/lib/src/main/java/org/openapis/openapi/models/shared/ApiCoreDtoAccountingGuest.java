@@ -17,6 +17,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("apiKey")
     @SpeakeasyMetadata("form:name=apiKey")
     public String apiKey;
+
     public ApiCoreDtoAccountingGuest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -26,6 +27,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("conversionOptions")
     @SpeakeasyMetadata("form:name=conversionOptions,json")
     public ApiCoreDtoAccountingConversionOptions conversionOptions;
+
     public ApiCoreDtoAccountingGuest withConversionOptions(ApiCoreDtoAccountingConversionOptions conversionOptions) {
         this.conversionOptions = conversionOptions;
         return this;
@@ -38,6 +40,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("creationDate")
     @SpeakeasyMetadata("form:name=creationDate")
     public String creationDate;
+
     public ApiCoreDtoAccountingGuest withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -47,6 +50,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("currentGrant")
     @SpeakeasyMetadata("form:name=currentGrant,json")
     public ApiCoreDtoGrantsGrant currentGrant;
+
     public ApiCoreDtoAccountingGuest withCurrentGrant(ApiCoreDtoGrantsGrant currentGrant) {
         this.currentGrant = currentGrant;
         return this;
@@ -56,6 +60,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("dateFormat")
     @SpeakeasyMetadata("form:name=dateFormat")
     public String dateFormat;
+
     public ApiCoreDtoAccountingGuest withDateFormat(String dateFormat) {
         this.dateFormat = dateFormat;
         return this;
@@ -65,6 +70,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("decimalSeparator")
     @SpeakeasyMetadata("form:name=decimalSeparator")
     public String decimalSeparator;
+
     public ApiCoreDtoAccountingGuest withDecimalSeparator(String decimalSeparator) {
         this.decimalSeparator = decimalSeparator;
         return this;
@@ -74,6 +80,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("email")
     @SpeakeasyMetadata("form:name=email")
     public String email;
+
     public ApiCoreDtoAccountingGuest withEmail(String email) {
         this.email = email;
         return this;
@@ -83,6 +90,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("extendedGrants")
     @SpeakeasyMetadata("form:name=extendedGrants,json")
     public ApiCoreDtoAccountingExtendedGrants extendedGrants;
+
     public ApiCoreDtoAccountingGuest withExtendedGrants(ApiCoreDtoAccountingExtendedGrants extendedGrants) {
         this.extendedGrants = extendedGrants;
         return this;
@@ -92,6 +100,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("groupGrants")
     @SpeakeasyMetadata("form:name=groupGrants")
     public Long groupGrants;
+
     public ApiCoreDtoAccountingGuest withGroupGrants(Long groupGrants) {
         this.groupGrants = groupGrants;
         return this;
@@ -101,6 +110,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("hitOptions")
     @SpeakeasyMetadata("form:name=hitOptions,json")
     public ApiCoreDtoAccountingHitOptions hitOptions;
+
     public ApiCoreDtoAccountingGuest withHitOptions(ApiCoreDtoAccountingHitOptions hitOptions) {
         this.hitOptions = hitOptions;
         return this;
@@ -110,6 +120,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("id")
     @SpeakeasyMetadata("form:name=id")
     public Long id;
+
     public ApiCoreDtoAccountingGuest withId(Long id) {
         this.id = id;
         return this;
@@ -119,6 +130,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("key")
     @SpeakeasyMetadata("form:name=key")
     public String key;
+
     public ApiCoreDtoAccountingGuest withKey(String key) {
         this.key = key;
         return this;
@@ -128,6 +140,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("language")
     @SpeakeasyMetadata("form:name=language")
     public String language;
+
     public ApiCoreDtoAccountingGuest withLanguage(String language) {
         this.language = language;
         return this;
@@ -137,6 +150,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("loginCount")
     @SpeakeasyMetadata("form:name=loginCount")
     public Integer loginCount;
+
     public ApiCoreDtoAccountingGuest withLoginCount(Integer loginCount) {
         this.loginCount = loginCount;
         return this;
@@ -146,6 +160,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("name")
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public ApiCoreDtoAccountingGuest withName(String name) {
         this.name = name;
         return this;
@@ -155,6 +170,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("notes")
     @SpeakeasyMetadata("form:name=notes")
     public String notes;
+
     public ApiCoreDtoAccountingGuest withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -164,6 +180,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("numberGroupSeparator")
     @SpeakeasyMetadata("form:name=numberGroupSeparator")
     public String numberGroupSeparator;
+
     public ApiCoreDtoAccountingGuest withNumberGroupSeparator(String numberGroupSeparator) {
         this.numberGroupSeparator = numberGroupSeparator;
         return this;
@@ -173,6 +190,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("password")
     @SpeakeasyMetadata("form:name=password")
     public String password;
+
     public ApiCoreDtoAccountingGuest withPassword(String password) {
         this.password = password;
         return this;
@@ -182,6 +200,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("timeFormat")
     @SpeakeasyMetadata("form:name=timeFormat")
     public ApiCoreDtoAccountingGuestTimeFormatEnum timeFormat;
+
     public ApiCoreDtoAccountingGuest withTimeFormat(ApiCoreDtoAccountingGuestTimeFormatEnum timeFormat) {
         this.timeFormat = timeFormat;
         return this;
@@ -191,6 +210,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("timeZone")
     @SpeakeasyMetadata("form:name=timeZone")
     public Integer timeZone;
+
     public ApiCoreDtoAccountingGuest withTimeZone(Integer timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -203,6 +223,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("timeframeMinDate")
     @SpeakeasyMetadata("form:name=timeframeMinDate")
     public String timeframeMinDate;
+
     public ApiCoreDtoAccountingGuest withTimeframeMinDate(String timeframeMinDate) {
         this.timeframeMinDate = timeframeMinDate;
         return this;
@@ -212,6 +233,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("timezonename")
     @SpeakeasyMetadata("form:name=timezonename")
     public String timezonename;
+
     public ApiCoreDtoAccountingGuest withTimezonename(String timezonename) {
         this.timezonename = timezonename;
         return this;
@@ -221,6 +243,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("tlGrants")
     @SpeakeasyMetadata("form:name=tlGrants")
     public Long tlGrants;
+
     public ApiCoreDtoAccountingGuest withTlGrants(Long tlGrants) {
         this.tlGrants = tlGrants;
         return this;
@@ -230,6 +253,7 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("tpGrants")
     @SpeakeasyMetadata("form:name=tpGrants")
     public Long tpGrants;
+
     public ApiCoreDtoAccountingGuest withTpGrants(Long tpGrants) {
         this.tpGrants = tpGrants;
         return this;
@@ -239,9 +263,11 @@ public class ApiCoreDtoAccountingGuest {
     @JsonProperty("userName")
     @SpeakeasyMetadata("form:name=userName")
     public String userName;
+
     public ApiCoreDtoAccountingGuest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ApiCoreDtoAccountingGuest(){}
 }

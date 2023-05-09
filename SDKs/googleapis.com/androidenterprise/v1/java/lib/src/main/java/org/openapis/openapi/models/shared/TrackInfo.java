@@ -18,6 +18,7 @@ public class TrackInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackAlias")
     public String trackAlias;
+
     public TrackInfo withTrackAlias(String trackAlias) {
         this.trackAlias = trackAlias;
         return this;
@@ -29,9 +30,11 @@ public class TrackInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackId")
     public String trackId;
+
     public TrackInfo withTrackId(String trackId) {
         this.trackId = trackId;
         return this;
     }
     
+    public TrackInfo(){}
 }

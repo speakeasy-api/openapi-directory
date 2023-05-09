@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateProductWithPortfolioResponse {
@@ -12,6 +13,7 @@ public class AssociateProductWithPortfolioResponse {
      */
     
     public java.util.Map<String, Object> associateProductWithPortfolioOutput;
+
     public AssociateProductWithPortfolioResponse withAssociateProductWithPortfolioOutput(java.util.Map<String, Object> associateProductWithPortfolioOutput) {
         this.associateProductWithPortfolioOutput = associateProductWithPortfolioOutput;
         return this;
@@ -19,6 +21,7 @@ public class AssociateProductWithPortfolioResponse {
     
     
     public String contentType;
+
     public AssociateProductWithPortfolioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateProductWithPortfolioResponse {
      */
     
     public Object invalidParametersException;
+
     public AssociateProductWithPortfolioResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateProductWithPortfolioResponse {
      */
     
     public Object limitExceededException;
+
     public AssociateProductWithPortfolioResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class AssociateProductWithPortfolioResponse {
     
     
     public Integer statusCode;
+
     public AssociateProductWithPortfolioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AssociateProductWithPortfolioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateProductWithPortfolioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class AssociateProductWithPortfolioResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateProductWithPortfolioResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public AssociateProductWithPortfolioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

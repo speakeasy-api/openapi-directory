@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetareacodefromnumberRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getareacodefromnumber200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetareacodefromnumberResponse.java
+docs/sdk/README.md
+docs/areacodeinformation/README.md
 USAGE.md

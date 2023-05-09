@@ -20,6 +20,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public RemoteAccessSession withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingMethod")
     public BillingMethodEnum billingMethod;
+
     public RemoteAccessSession withBillingMethod(BillingMethodEnum billingMethod) {
         this.billingMethod = billingMethod;
         return this;
@@ -36,6 +38,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public RemoteAccessSession withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -46,6 +49,7 @@ public class RemoteAccessSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public RemoteAccessSession withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -54,6 +58,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public Device device;
+
     public RemoteAccessSession withDevice(Device device) {
         this.device = device;
         return this;
@@ -62,6 +67,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceMinutes")
     public DeviceMinutes deviceMinutes;
+
     public RemoteAccessSession withDeviceMinutes(DeviceMinutes deviceMinutes) {
         this.deviceMinutes = deviceMinutes;
         return this;
@@ -70,6 +76,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceUdid")
     public String deviceUdid;
+
     public RemoteAccessSession withDeviceUdid(String deviceUdid) {
         this.deviceUdid = deviceUdid;
         return this;
@@ -78,6 +85,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public RemoteAccessSession withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -86,6 +94,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostAddress")
     public String hostAddress;
+
     public RemoteAccessSession withHostAddress(String hostAddress) {
         this.hostAddress = hostAddress;
         return this;
@@ -94,6 +103,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceArn")
     public String instanceArn;
+
     public RemoteAccessSession withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -102,6 +112,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interactionMode")
     public InteractionModeEnum interactionMode;
+
     public RemoteAccessSession withInteractionMode(InteractionModeEnum interactionMode) {
         this.interactionMode = interactionMode;
         return this;
@@ -110,6 +121,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public RemoteAccessSession withMessage(String message) {
         this.message = message;
         return this;
@@ -118,6 +130,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RemoteAccessSession withName(String name) {
         this.name = name;
         return this;
@@ -126,6 +139,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteDebugEnabled")
     public Boolean remoteDebugEnabled;
+
     public RemoteAccessSession withRemoteDebugEnabled(Boolean remoteDebugEnabled) {
         this.remoteDebugEnabled = remoteDebugEnabled;
         return this;
@@ -134,6 +148,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteRecordAppArn")
     public String remoteRecordAppArn;
+
     public RemoteAccessSession withRemoteRecordAppArn(String remoteRecordAppArn) {
         this.remoteRecordAppArn = remoteRecordAppArn;
         return this;
@@ -142,6 +157,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteRecordEnabled")
     public Boolean remoteRecordEnabled;
+
     public RemoteAccessSession withRemoteRecordEnabled(Boolean remoteRecordEnabled) {
         this.remoteRecordEnabled = remoteRecordEnabled;
         return this;
@@ -150,6 +166,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public ExecutionResultEnum result;
+
     public RemoteAccessSession withResult(ExecutionResultEnum result) {
         this.result = result;
         return this;
@@ -158,6 +175,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipAppResign")
     public Boolean skipAppResign;
+
     public RemoteAccessSession withSkipAppResign(Boolean skipAppResign) {
         this.skipAppResign = skipAppResign;
         return this;
@@ -168,6 +186,7 @@ public class RemoteAccessSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("started")
     public OffsetDateTime started;
+
     public RemoteAccessSession withStarted(OffsetDateTime started) {
         this.started = started;
         return this;
@@ -176,6 +195,7 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ExecutionStatusEnum status;
+
     public RemoteAccessSession withStatus(ExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -186,6 +206,7 @@ public class RemoteAccessSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopped")
     public OffsetDateTime stopped;
+
     public RemoteAccessSession withStopped(OffsetDateTime stopped) {
         this.stopped = stopped;
         return this;
@@ -194,9 +215,11 @@ public class RemoteAccessSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfig")
     public VpcConfig vpcConfig;
+
     public RemoteAccessSession withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public RemoteAccessSession(){}
 }

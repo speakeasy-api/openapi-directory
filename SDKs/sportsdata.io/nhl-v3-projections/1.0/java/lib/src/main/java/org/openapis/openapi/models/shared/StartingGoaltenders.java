@@ -12,6 +12,7 @@ public class StartingGoaltenders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayGoaltender")
     public Goaltender awayGoaltender;
+
     public StartingGoaltenders withAwayGoaltender(Goaltender awayGoaltender) {
         this.awayGoaltender = awayGoaltender;
         return this;
@@ -20,6 +21,7 @@ public class StartingGoaltenders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeam")
     public String awayTeam;
+
     public StartingGoaltenders withAwayTeam(String awayTeam) {
         this.awayTeam = awayTeam;
         return this;
@@ -28,6 +30,7 @@ public class StartingGoaltenders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeamID")
     public Long awayTeamID;
+
     public StartingGoaltenders withAwayTeamID(Long awayTeamID) {
         this.awayTeamID = awayTeamID;
         return this;
@@ -36,6 +39,7 @@ public class StartingGoaltenders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateTime")
     public String dateTime;
+
     public StartingGoaltenders withDateTime(String dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -44,6 +48,7 @@ public class StartingGoaltenders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Day")
     public String day;
+
     public StartingGoaltenders withDay(String day) {
         this.day = day;
         return this;
@@ -52,6 +57,7 @@ public class StartingGoaltenders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameID")
     public Long gameID;
+
     public StartingGoaltenders withGameID(Long gameID) {
         this.gameID = gameID;
         return this;
@@ -60,6 +66,7 @@ public class StartingGoaltenders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeGoaltender")
     public Goaltender homeGoaltender;
+
     public StartingGoaltenders withHomeGoaltender(Goaltender homeGoaltender) {
         this.homeGoaltender = homeGoaltender;
         return this;
@@ -68,6 +75,7 @@ public class StartingGoaltenders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeam")
     public String homeTeam;
+
     public StartingGoaltenders withHomeTeam(String homeTeam) {
         this.homeTeam = homeTeam;
         return this;
@@ -76,6 +84,7 @@ public class StartingGoaltenders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeamID")
     public Long homeTeamID;
+
     public StartingGoaltenders withHomeTeamID(Long homeTeamID) {
         this.homeTeamID = homeTeamID;
         return this;
@@ -84,6 +93,7 @@ public class StartingGoaltenders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public StartingGoaltenders withSeason(Long season) {
         this.season = season;
         return this;
@@ -92,6 +102,7 @@ public class StartingGoaltenders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public StartingGoaltenders withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -100,9 +111,11 @@ public class StartingGoaltenders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public StartingGoaltenders withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public StartingGoaltenders(){}
 }

@@ -59,11 +59,9 @@ public class RadioSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateNetworkWirelessRfProfileResponse res = new org.openapis.openapi.models.operations.CreateNetworkWirelessRfProfileResponse() {{
+        org.openapis.openapi.models.operations.CreateNetworkWirelessRfProfileResponse res = new org.openapis.openapi.models.operations.CreateNetworkWirelessRfProfileResponse(contentType, httpRes.statusCode()) {{
             createNetworkWirelessRfProfile201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -99,10 +97,8 @@ public class RadioSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNetworkWirelessRfProfileResponse res = new org.openapis.openapi.models.operations.DeleteNetworkWirelessRfProfileResponse() {{
+        org.openapis.openapi.models.operations.DeleteNetworkWirelessRfProfileResponse res = new org.openapis.openapi.models.operations.DeleteNetworkWirelessRfProfileResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -133,11 +129,9 @@ public class RadioSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkWirelessRfProfileResponse res = new org.openapis.openapi.models.operations.GetNetworkWirelessRfProfileResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkWirelessRfProfileResponse res = new org.openapis.openapi.models.operations.GetNetworkWirelessRfProfileResponse(contentType, httpRes.statusCode()) {{
             getNetworkWirelessRfProfile200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,11 +173,9 @@ public class RadioSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesResponse res = new org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesResponse res = new org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesResponse(contentType, httpRes.statusCode()) {{
             getNetworkWirelessRfProfiles200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -221,11 +213,9 @@ public class RadioSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkWirelessRfProfileResponse res = new org.openapis.openapi.models.operations.UpdateNetworkWirelessRfProfileResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkWirelessRfProfileResponse res = new org.openapis.openapi.models.operations.UpdateNetworkWirelessRfProfileResponse(contentType, httpRes.statusCode()) {{
             updateNetworkWirelessRfProfile200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

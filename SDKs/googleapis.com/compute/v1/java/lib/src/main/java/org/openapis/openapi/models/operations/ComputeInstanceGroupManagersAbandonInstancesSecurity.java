@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeInstanceGroupManagersAbandonInstancesSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstanceGroupManagersAbandonInstancesSecurityOption1 option1;
+
     public ComputeInstanceGroupManagersAbandonInstancesSecurity withOption1(ComputeInstanceGroupManagersAbandonInstancesSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeInstanceGroupManagersAbandonInstancesSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstanceGroupManagersAbandonInstancesSecurityOption2 option2;
+
     public ComputeInstanceGroupManagersAbandonInstancesSecurity withOption2(ComputeInstanceGroupManagersAbandonInstancesSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeInstanceGroupManagersAbandonInstancesSecurity(){}
 }

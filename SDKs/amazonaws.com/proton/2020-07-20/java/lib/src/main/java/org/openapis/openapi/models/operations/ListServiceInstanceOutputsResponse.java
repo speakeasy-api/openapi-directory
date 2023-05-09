@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListServiceInstanceOutputsResponse {
@@ -12,6 +13,7 @@ public class ListServiceInstanceOutputsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListServiceInstanceOutputsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListServiceInstanceOutputsResponse {
     
     
     public String contentType;
+
     public ListServiceInstanceOutputsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListServiceInstanceOutputsResponse {
      */
     
     public Object internalServerException;
+
     public ListServiceInstanceOutputsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListServiceInstanceOutputsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListServiceInstanceOutputsOutput listServiceInstanceOutputsOutput;
+
     public ListServiceInstanceOutputsResponse withListServiceInstanceOutputsOutput(org.openapis.openapi.models.shared.ListServiceInstanceOutputsOutput listServiceInstanceOutputsOutput) {
         this.listServiceInstanceOutputsOutput = listServiceInstanceOutputsOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListServiceInstanceOutputsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListServiceInstanceOutputsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListServiceInstanceOutputsResponse {
     
     
     public Integer statusCode;
+
     public ListServiceInstanceOutputsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListServiceInstanceOutputsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListServiceInstanceOutputsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListServiceInstanceOutputsResponse {
      */
     
     public Object throttlingException;
+
     public ListServiceInstanceOutputsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListServiceInstanceOutputsResponse {
      */
     
     public Object validationException;
+
     public ListServiceInstanceOutputsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListServiceInstanceOutputsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

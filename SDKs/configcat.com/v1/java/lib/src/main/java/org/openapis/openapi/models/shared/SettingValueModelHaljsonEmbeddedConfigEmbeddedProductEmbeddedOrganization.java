@@ -12,6 +12,7 @@ public class SettingValueModelHaljsonEmbeddedConfigEmbeddedProductEmbeddedOrgani
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public SettingValueModelHaljsonEmbeddedConfigEmbeddedProductEmbeddedOrganizationLinks links;
+
     public SettingValueModelHaljsonEmbeddedConfigEmbeddedProductEmbeddedOrganization withLinks(SettingValueModelHaljsonEmbeddedConfigEmbeddedProductEmbeddedOrganizationLinks links) {
         this.links = links;
         return this;
@@ -20,6 +21,7 @@ public class SettingValueModelHaljsonEmbeddedConfigEmbeddedProductEmbeddedOrgani
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SettingValueModelHaljsonEmbeddedConfigEmbeddedProductEmbeddedOrganization withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class SettingValueModelHaljsonEmbeddedConfigEmbeddedProductEmbeddedOrgani
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationId")
     public String organizationId;
+
     public SettingValueModelHaljsonEmbeddedConfigEmbeddedProductEmbeddedOrganization withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public SettingValueModelHaljsonEmbeddedConfigEmbeddedProductEmbeddedOrganization(){}
 }

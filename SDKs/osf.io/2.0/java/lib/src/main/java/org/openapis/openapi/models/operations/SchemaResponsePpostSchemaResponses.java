@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SchemaResponsePpostSchemaResponses - OK
@@ -15,6 +15,7 @@ public class SchemaResponsePpostSchemaResponses {
      */
     
     public SchemaResponsePpostSchemaResponsesAttributes attributes;
+
     public SchemaResponsePpostSchemaResponses withAttributes(SchemaResponsePpostSchemaResponsesAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class SchemaResponsePpostSchemaResponses {
      */
     
     public String id;
+
     public SchemaResponsePpostSchemaResponses withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class SchemaResponsePpostSchemaResponses {
      */
     
     public SchemaResponsePpostSchemaResponsesLinks links;
+
     public SchemaResponsePpostSchemaResponses withLinks(SchemaResponsePpostSchemaResponsesLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class SchemaResponsePpostSchemaResponses {
      */
     
     public SchemaResponsePpostSchemaResponsesRelationships relationships;
+
     public SchemaResponsePpostSchemaResponses withRelationships(SchemaResponsePpostSchemaResponsesRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -55,9 +59,14 @@ public class SchemaResponsePpostSchemaResponses {
      */
     
     public String type;
+
     public SchemaResponsePpostSchemaResponses withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SchemaResponsePpostSchemaResponses(@JsonProperty("attributes") SchemaResponsePpostSchemaResponsesAttributes attributes, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.type = type;
+  }
 }

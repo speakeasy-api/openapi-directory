@@ -15,6 +15,7 @@ public class LivePlayByPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clock")
     public String clock;
+
     public LivePlayByPlay withClock(String clock) {
         this.clock = clock;
         return this;
@@ -23,6 +24,7 @@ public class LivePlayByPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public Long distance;
+
     public LivePlayByPlay withDistance(Long distance) {
         this.distance = distance;
         return this;
@@ -31,6 +33,7 @@ public class LivePlayByPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("down")
     public Long down;
+
     public LivePlayByPlay withDown(Long down) {
         this.down = down;
         return this;
@@ -39,6 +42,7 @@ public class LivePlayByPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drives")
     public LivePlayByPlayDrives[] drives;
+
     public LivePlayByPlay withDrives(LivePlayByPlayDrives[] drives) {
         this.drives = drives;
         return this;
@@ -47,6 +51,7 @@ public class LivePlayByPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public LivePlayByPlay withId(Long id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class LivePlayByPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public Long period;
+
     public LivePlayByPlay withPeriod(Long period) {
         this.period = period;
         return this;
@@ -63,6 +69,7 @@ public class LivePlayByPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("possession")
     public String possession;
+
     public LivePlayByPlay withPossession(String possession) {
         this.possession = possession;
         return this;
@@ -71,6 +78,7 @@ public class LivePlayByPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public LivePlayByPlay withStatus(String status) {
         this.status = status;
         return this;
@@ -79,6 +87,7 @@ public class LivePlayByPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teams")
     public LivePlayByPlayTeams[] teams;
+
     public LivePlayByPlay withTeams(LivePlayByPlayTeams[] teams) {
         this.teams = teams;
         return this;
@@ -87,9 +96,11 @@ public class LivePlayByPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yardsToGoal")
     public Long yardsToGoal;
+
     public LivePlayByPlay withYardsToGoal(Long yardsToGoal) {
         this.yardsToGoal = yardsToGoal;
         return this;
     }
     
+    public LivePlayByPlay(){}
 }

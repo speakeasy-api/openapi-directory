@@ -15,6 +15,7 @@ public class DeleteAwsLogSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableAllDimensions")
     public java.util.Map<String, java.util.Map<String, String[]>> disableAllDimensions;
+
     public DeleteAwsLogSourceRequestBody withDisableAllDimensions(java.util.Map<String, java.util.Map<String, String[]>> disableAllDimensions) {
         this.disableAllDimensions = disableAllDimensions;
         return this;
@@ -26,6 +27,7 @@ public class DeleteAwsLogSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableSingleDimension")
     public String[] disableSingleDimension;
+
     public DeleteAwsLogSourceRequestBody withDisableSingleDimension(String[] disableSingleDimension) {
         this.disableSingleDimension = disableSingleDimension;
         return this;
@@ -37,6 +39,7 @@ public class DeleteAwsLogSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableTwoDimensions")
     public java.util.Map<String, String[]> disableTwoDimensions;
+
     public DeleteAwsLogSourceRequestBody withDisableTwoDimensions(java.util.Map<String, String[]> disableTwoDimensions) {
         this.disableTwoDimensions = disableTwoDimensions;
         return this;
@@ -47,9 +50,13 @@ public class DeleteAwsLogSourceRequestBody {
      */
     @JsonProperty("inputOrder")
     public org.openapis.openapi.models.shared.DimensionEnum[] inputOrder;
+
     public DeleteAwsLogSourceRequestBody withInputOrder(org.openapis.openapi.models.shared.DimensionEnum[] inputOrder) {
         this.inputOrder = inputOrder;
         return this;
     }
     
+    public DeleteAwsLogSourceRequestBody(@JsonProperty("inputOrder") org.openapis.openapi.models.shared.DimensionEnum[] inputOrder) {
+        this.inputOrder = inputOrder;
+  }
 }

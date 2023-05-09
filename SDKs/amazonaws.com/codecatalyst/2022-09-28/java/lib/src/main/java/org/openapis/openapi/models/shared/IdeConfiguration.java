@@ -15,6 +15,7 @@ public class IdeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IdeConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class IdeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtime")
     public String runtime;
+
     public IdeConfiguration withRuntime(String runtime) {
         this.runtime = runtime;
         return this;
     }
     
+    public IdeConfiguration(){}
 }

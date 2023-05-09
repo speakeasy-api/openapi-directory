@@ -14,6 +14,7 @@ public class CampaignListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_archived")
     public String includeArchived;
+
     public CampaignListRequest withIncludeArchived(String includeArchived) {
         this.includeArchived = includeArchived;
         return this;
@@ -26,6 +27,7 @@ public class CampaignListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_edit.time[gt]")
     public String lastEditTimeGt;
+
     public CampaignListRequest withLastEditTimeGt(String lastEditTimeGt) {
         this.lastEditTimeGt = lastEditTimeGt;
         return this;
@@ -38,6 +40,7 @@ public class CampaignListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public CampaignListRequest withPage(String page) {
         this.page = page;
         return this;
@@ -50,9 +53,11 @@ public class CampaignListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public CampaignListRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
     }
     
+    public CampaignListRequest(){}
 }

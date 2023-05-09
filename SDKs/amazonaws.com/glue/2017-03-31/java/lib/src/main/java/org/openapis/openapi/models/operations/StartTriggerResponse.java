@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartTriggerResponse {
@@ -12,6 +13,7 @@ public class StartTriggerResponse {
      */
     
     public Object concurrentRunsExceededException;
+
     public StartTriggerResponse withConcurrentRunsExceededException(Object concurrentRunsExceededException) {
         this.concurrentRunsExceededException = concurrentRunsExceededException;
         return this;
@@ -19,6 +21,7 @@ public class StartTriggerResponse {
     
     
     public String contentType;
+
     public StartTriggerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartTriggerResponse {
      */
     
     public Object entityNotFoundException;
+
     public StartTriggerResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class StartTriggerResponse {
      */
     
     public Object internalServiceException;
+
     public StartTriggerResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class StartTriggerResponse {
      */
     
     public Object invalidInputException;
+
     public StartTriggerResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class StartTriggerResponse {
      */
     
     public Object operationTimeoutException;
+
     public StartTriggerResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class StartTriggerResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public StartTriggerResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class StartTriggerResponse {
      */
     
     public org.openapis.openapi.models.shared.StartTriggerResponse startTriggerResponse;
+
     public StartTriggerResponse withStartTriggerResponse(org.openapis.openapi.models.shared.StartTriggerResponse startTriggerResponse) {
         this.startTriggerResponse = startTriggerResponse;
         return this;
@@ -86,6 +95,7 @@ public class StartTriggerResponse {
     
     
     public Integer statusCode;
+
     public StartTriggerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class StartTriggerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartTriggerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartTriggerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

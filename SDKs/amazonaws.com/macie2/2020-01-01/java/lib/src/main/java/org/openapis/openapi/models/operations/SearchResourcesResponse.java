@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchResourcesResponse {
@@ -12,6 +13,7 @@ public class SearchResourcesResponse {
      */
     
     public Object accessDeniedException;
+
     public SearchResourcesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class SearchResourcesResponse {
      */
     
     public Object conflictException;
+
     public SearchResourcesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class SearchResourcesResponse {
     
     
     public String contentType;
+
     public SearchResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class SearchResourcesResponse {
      */
     
     public Object internalServerException;
+
     public SearchResourcesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class SearchResourcesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SearchResourcesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class SearchResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchResourcesResponse searchResourcesResponse;
+
     public SearchResourcesResponse withSearchResourcesResponse(org.openapis.openapi.models.shared.SearchResourcesResponse searchResourcesResponse) {
         this.searchResourcesResponse = searchResourcesResponse;
         return this;
@@ -69,6 +76,7 @@ public class SearchResourcesResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public SearchResourcesResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class SearchResourcesResponse {
     
     
     public Integer statusCode;
+
     public SearchResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class SearchResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class SearchResourcesResponse {
      */
     
     public Object throttlingException;
+
     public SearchResourcesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class SearchResourcesResponse {
      */
     
     public Object validationException;
+
     public SearchResourcesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SearchResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

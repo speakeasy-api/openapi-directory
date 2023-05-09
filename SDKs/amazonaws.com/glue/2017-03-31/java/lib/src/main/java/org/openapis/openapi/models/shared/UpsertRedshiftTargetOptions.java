@@ -15,6 +15,7 @@ public class UpsertRedshiftTargetOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionName")
     public String connectionName;
+
     public UpsertRedshiftTargetOptions withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -23,6 +24,7 @@ public class UpsertRedshiftTargetOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableLocation")
     public String tableLocation;
+
     public UpsertRedshiftTargetOptions withTableLocation(String tableLocation) {
         this.tableLocation = tableLocation;
         return this;
@@ -31,9 +33,11 @@ public class UpsertRedshiftTargetOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpsertKeys")
     public String[] upsertKeys;
+
     public UpsertRedshiftTargetOptions withUpsertKeys(String[] upsertKeys) {
         this.upsertKeys = upsertKeys;
         return this;
     }
     
+    public UpsertRedshiftTargetOptions(){}
 }

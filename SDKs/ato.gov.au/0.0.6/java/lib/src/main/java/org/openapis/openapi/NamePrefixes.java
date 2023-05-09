@@ -63,13 +63,11 @@ public class NamePrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClassificationsNamePrefixesResponse res = new org.openapis.openapi.models.operations.GetClassificationsNamePrefixesResponse() {{
+        org.openapis.openapi.models.operations.GetClassificationsNamePrefixesResponse res = new org.openapis.openapi.models.operations.GetClassificationsNamePrefixesResponse(contentType, httpRes.statusCode()) {{
             namePrefixes = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

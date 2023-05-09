@@ -15,9 +15,11 @@ public class GetServerStrategiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverStrategies")
     public ServerStrategy[] serverStrategies;
+
     public GetServerStrategiesResponse withServerStrategies(ServerStrategy[] serverStrategies) {
         this.serverStrategies = serverStrategies;
         return this;
     }
     
+    public GetServerStrategiesResponse(){}
 }

@@ -18,6 +18,7 @@ public class DailyResourceUsageAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public DailyResourceUsageAggregationCPU cpu;
+
     public DailyResourceUsageAggregation withCpu(DailyResourceUsageAggregationCPU cpu) {
         this.cpu = cpu;
         return this;
@@ -29,6 +30,7 @@ public class DailyResourceUsageAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public DailyResourceUsageAggregation withDate(Date date) {
         this.date = date;
         return this;
@@ -40,6 +42,7 @@ public class DailyResourceUsageAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disk")
     public DailyResourceUsageAggregationDisk disk;
+
     public DailyResourceUsageAggregation withDisk(DailyResourceUsageAggregationDisk disk) {
         this.disk = disk;
         return this;
@@ -51,6 +54,7 @@ public class DailyResourceUsageAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public DailyResourceUsageAggregationMemory memory;
+
     public DailyResourceUsageAggregation withMemory(DailyResourceUsageAggregationMemory memory) {
         this.memory = memory;
         return this;
@@ -62,9 +66,11 @@ public class DailyResourceUsageAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public DailyResourceUsageAggregationNetwork network;
+
     public DailyResourceUsageAggregation withNetwork(DailyResourceUsageAggregationNetwork network) {
         this.network = network;
         return this;
     }
     
+    public DailyResourceUsageAggregation(){}
 }

@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2RedactImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byteItem")
     public GooglePrivacyDlpV2ByteContentItem byteItem;
+
     public GooglePrivacyDlpV2RedactImageRequest withByteItem(GooglePrivacyDlpV2ByteContentItem byteItem) {
         this.byteItem = byteItem;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2RedactImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageRedactionConfigs")
     public GooglePrivacyDlpV2ImageRedactionConfig[] imageRedactionConfigs;
+
     public GooglePrivacyDlpV2RedactImageRequest withImageRedactionConfigs(GooglePrivacyDlpV2ImageRedactionConfig[] imageRedactionConfigs) {
         this.imageRedactionConfigs = imageRedactionConfigs;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2RedactImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeFindings")
     public Boolean includeFindings;
+
     public GooglePrivacyDlpV2RedactImageRequest withIncludeFindings(Boolean includeFindings) {
         this.includeFindings = includeFindings;
         return this;
@@ -51,6 +54,7 @@ public class GooglePrivacyDlpV2RedactImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inspectConfig")
     public GooglePrivacyDlpV2InspectConfig inspectConfig;
+
     public GooglePrivacyDlpV2RedactImageRequest withInspectConfig(GooglePrivacyDlpV2InspectConfig inspectConfig) {
         this.inspectConfig = inspectConfig;
         return this;
@@ -62,9 +66,11 @@ public class GooglePrivacyDlpV2RedactImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public GooglePrivacyDlpV2RedactImageRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public GooglePrivacyDlpV2RedactImageRequest(){}
 }

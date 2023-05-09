@@ -16,18 +16,17 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity;
 import org.openapis.openapi.models.operations.DatastreamProjectsLocationsConnectionProfilesCreateRequest;
 import org.openapis.openapi.models.operations.DatastreamProjectsLocationsConnectionProfilesCreateResponse;
+import org.openapis.openapi.models.operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ConnectionProfileInput;
-import org.openapis.openapi.models.shared.PrivateConnectivity;
-import org.openapis.openapi.models.shared.OracleProfile;
+import org.openapis.openapi.models.shared.ForwardSshTunnelConnectivity;
+import org.openapis.openapi.models.shared.GcsProfile;
 import org.openapis.openapi.models.shared.MysqlProfileInput;
 import org.openapis.openapi.models.shared.MysqlSslConfigInput;
-import org.openapis.openapi.models.shared.GcsProfile;
-import org.openapis.openapi.models.shared.ForwardSshTunnelConnectivity;
+import org.openapis.openapi.models.shared.OracleProfile;
+import org.openapis.openapi.models.shared.PrivateConnectivity;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -36,89 +35,85 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DatastreamProjectsLocationsConnectionProfilesCreateRequest req = new DatastreamProjectsLocationsConnectionProfilesCreateRequest() {{
-                dollarXgafv = "2";
+            DatastreamProjectsLocationsConnectionProfilesCreateRequest req = new DatastreamProjectsLocationsConnectionProfilesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 connectionProfileInput = new ConnectionProfileInput() {{
-                    displayName = "provident";
+                    displayName = "distinctio";
                     forwardSshConnectivity = new ForwardSshTunnelConnectivity() {{
-                        hostname = "salty-stag.name";
-                        password = "nulla";
-                        port = 544883;
-                        privateKey = "illum";
-                        username = "Henry.Mueller";
-                    }};
+                        hostname = "terrible-nutrient.org";
+                        password = "corrupti";
+                        port = 847252;
+                        privateKey = "vel";
+                        username = "Linda.Oberbrunner";
+                    }};;
                     gcsProfile = new GcsProfile() {{
-                        bucketName = "iure";
-                        rootPath = "magnam";
-                    }};
+                        bucketName = "magnam";
+                        rootPath = "debitis";
+                    }};;
                     labels = new java.util.HashMap<String, String>() {{
-                        put("ipsa", "delectus");
-                        put("tempora", "suscipit");
-                        put("molestiae", "minus");
-                        put("placeat", "voluptatum");
+                        put("delectus", "tempora");
                     }};
                     mysqlProfile = new MysqlProfileInput() {{
-                        hostname = "lawful-missionary.info";
-                        password = "recusandae";
-                        port = 836079;
+                        hostname = "hideous-jam.net";
+                        password = "placeat";
+                        port = 528895;
                         sslConfig = new MysqlSslConfigInput() {{
-                            caCertificate = "ab";
-                            clientCertificate = "quis";
-                            clientKey = "veritatis";
-                        }};
-                        username = "Lydia_Aufderhar";
-                    }};
+                            caCertificate = "iusto";
+                            clientCertificate = "excepturi";
+                            clientKey = "nisi";
+                        }};;
+                        username = "Tianna33";
+                    }};;
                     noConnectivity = new java.util.HashMap<String, Object>() {{
-                        put("quo", "odit");
-                        put("at", "at");
-                        put("maiores", "molestiae");
-                        put("quod", "quod");
+                        put("deserunt", "perferendis");
                     }};
                     oracleProfile = new OracleProfile() {{
                         connectionAttributes = new java.util.HashMap<String, String>() {{
-                            put("totam", "porro");
-                            put("dolorum", "dicta");
+                            put("repellendus", "sapiente");
+                            put("quo", "odit");
                         }};
-                        databaseService = "nam";
-                        hostname = "posh-muffin.com";
-                        password = "deleniti";
-                        port = 944669;
-                        username = "Nina41";
-                    }};
+                        databaseService = "at";
+                        hostname = "trim-wheat.info";
+                        password = "quod";
+                        port = 800911;
+                        username = "Jakayla_Lebsack11";
+                    }};;
                     privateConnectivity = new PrivateConnectivity() {{
-                        privateConnectionName = "molestiae";
-                    }};
+                        privateConnectionName = "nam";
+                    }};;
                     staticServiceIpConnectivity = new java.util.HashMap<String, Object>() {{
-                        put("qui", "impedit");
-                        put("cum", "esse");
+                        put("occaecati", "fugit");
+                        put("deleniti", "hic");
+                        put("optio", "totam");
                     }};
-                }};
-                accessToken = "ipsum";
-                alt = "media";
-                callback = "aspernatur";
-                connectionProfileId = "perferendis";
-                fields = "ad";
-                key = "natus";
-                oauthToken = "sed";
-                parent = "iste";
+                }};;
+                accessToken = "beatae";
+                alt = AltEnum.MEDIA;
+                callback = "molestiae";
+                connectionProfileId = "modi";
+                fields = "qui";
+                key = "impedit";
+                oauthToken = "cum";
                 prettyPrint = false;
-                quotaUser = "dolor";
-                requestId = "natus";
-                uploadType = "laboriosam";
-                uploadProtocol = "hic";
-            }}            
+                quotaUser = "esse";
+                requestId = "ipsum";
+                uploadType = "excepturi";
+                uploadProtocol = "aspernatur";
+            }};            
 
-            DatastreamProjectsLocationsConnectionProfilesCreateResponse res = sdk.projects.datastreamProjectsLocationsConnectionProfilesCreate(req, new DatastreamProjectsLocationsConnectionProfilesCreateSecurity() {{
+            DatastreamProjectsLocationsConnectionProfilesCreateResponse res = sdk.projects.datastreamProjectsLocationsConnectionProfilesCreate(req, new DatastreamProjectsLocationsConnectionProfilesCreateSecurity("perferendis", "ad") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -126,28 +121,28 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `datastreamProjectsLocationsConnectionProfilesCreate` - Use this method to create a connection profile in a project and location.
-* `datastreamProjectsLocationsConnectionProfilesDiscover` - Use this method to discover a connection profile. The discover API call exposes the data objects and metadata belonging to the profile. Typically, a request returns children data objects under a parent data object that's optionally supplied in the request.
-* `datastreamProjectsLocationsConnectionProfilesList` - Use this method to list connection profiles created in a project and location.
-* `datastreamProjectsLocationsFetchStaticIps` - The FetchStaticIps API call exposes the static IP addresses used by Datastream.
-* `datastreamProjectsLocationsList` - Lists information about the supported locations for this service.
-* `datastreamProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `datastreamProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `datastreamProjectsLocationsPrivateConnectionsCreate` - Use this method to create a private connectivity configuration.
-* `datastreamProjectsLocationsPrivateConnectionsList` - Use this method to list private connectivity configurations in a project and location.
-* `datastreamProjectsLocationsPrivateConnectionsRoutesCreate` - Use this method to create a route for a private connectivity in a project and location.
-* `datastreamProjectsLocationsPrivateConnectionsRoutesList` - Use this method to list routes created for a private connectivity in a project and location.
-* `datastreamProjectsLocationsStreamsCreate` - Use this method to create a stream.
-* `datastreamProjectsLocationsStreamsDelete` - Use this method to delete a stream.
-* `datastreamProjectsLocationsStreamsFetchErrors` - Use this method to fetch any errors associated with a stream.
-* `datastreamProjectsLocationsStreamsList` - Use this method to list streams in a project and location.
-* `datastreamProjectsLocationsStreamsObjectsGet` - Use this method to get details about a stream object.
-* `datastreamProjectsLocationsStreamsObjectsList` - Use this method to list the objects of a specific stream.
-* `datastreamProjectsLocationsStreamsObjectsStartBackfillJob` - Starts backfill job for the specified stream object.
-* `datastreamProjectsLocationsStreamsObjectsStopBackfillJob` - Stops the backfill job for the specified stream object.
-* `datastreamProjectsLocationsStreamsPatch` - Use this method to update the configuration of a stream.
+* [datastreamProjectsLocationsConnectionProfilesCreate](docs/projects/README.md#datastreamprojectslocationsconnectionprofilescreate) - Use this method to create a connection profile in a project and location.
+* [datastreamProjectsLocationsConnectionProfilesDiscover](docs/projects/README.md#datastreamprojectslocationsconnectionprofilesdiscover) - Use this method to discover a connection profile. The discover API call exposes the data objects and metadata belonging to the profile. Typically, a request returns children data objects under a parent data object that's optionally supplied in the request.
+* [datastreamProjectsLocationsConnectionProfilesList](docs/projects/README.md#datastreamprojectslocationsconnectionprofileslist) - Use this method to list connection profiles created in a project and location.
+* [datastreamProjectsLocationsFetchStaticIps](docs/projects/README.md#datastreamprojectslocationsfetchstaticips) - The FetchStaticIps API call exposes the static IP addresses used by Datastream.
+* [datastreamProjectsLocationsList](docs/projects/README.md#datastreamprojectslocationslist) - Lists information about the supported locations for this service.
+* [datastreamProjectsLocationsOperationsCancel](docs/projects/README.md#datastreamprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [datastreamProjectsLocationsOperationsList](docs/projects/README.md#datastreamprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [datastreamProjectsLocationsPrivateConnectionsCreate](docs/projects/README.md#datastreamprojectslocationsprivateconnectionscreate) - Use this method to create a private connectivity configuration.
+* [datastreamProjectsLocationsPrivateConnectionsList](docs/projects/README.md#datastreamprojectslocationsprivateconnectionslist) - Use this method to list private connectivity configurations in a project and location.
+* [datastreamProjectsLocationsPrivateConnectionsRoutesCreate](docs/projects/README.md#datastreamprojectslocationsprivateconnectionsroutescreate) - Use this method to create a route for a private connectivity in a project and location.
+* [datastreamProjectsLocationsPrivateConnectionsRoutesList](docs/projects/README.md#datastreamprojectslocationsprivateconnectionsrouteslist) - Use this method to list routes created for a private connectivity in a project and location.
+* [datastreamProjectsLocationsStreamsCreate](docs/projects/README.md#datastreamprojectslocationsstreamscreate) - Use this method to create a stream.
+* [datastreamProjectsLocationsStreamsDelete](docs/projects/README.md#datastreamprojectslocationsstreamsdelete) - Use this method to delete a stream.
+* [datastreamProjectsLocationsStreamsFetchErrors](docs/projects/README.md#datastreamprojectslocationsstreamsfetcherrors) - Use this method to fetch any errors associated with a stream.
+* [datastreamProjectsLocationsStreamsList](docs/projects/README.md#datastreamprojectslocationsstreamslist) - Use this method to list streams in a project and location.
+* [datastreamProjectsLocationsStreamsObjectsGet](docs/projects/README.md#datastreamprojectslocationsstreamsobjectsget) - Use this method to get details about a stream object.
+* [datastreamProjectsLocationsStreamsObjectsList](docs/projects/README.md#datastreamprojectslocationsstreamsobjectslist) - Use this method to list the objects of a specific stream.
+* [datastreamProjectsLocationsStreamsObjectsStartBackfillJob](docs/projects/README.md#datastreamprojectslocationsstreamsobjectsstartbackfilljob) - Starts backfill job for the specified stream object.
+* [datastreamProjectsLocationsStreamsObjectsStopBackfillJob](docs/projects/README.md#datastreamprojectslocationsstreamsobjectsstopbackfilljob) - Stops the backfill job for the specified stream object.
+* [datastreamProjectsLocationsStreamsPatch](docs/projects/README.md#datastreamprojectslocationsstreamspatch) - Use this method to update the configuration of a stream.
 <!-- End SDK Available Operations -->
 
 ### Maturity

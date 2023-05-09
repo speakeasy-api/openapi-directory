@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePullRequestApprovalRuleContentResponse {
@@ -12,6 +13,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object approvalRuleContentRequiredException;
+
     public UpdatePullRequestApprovalRuleContentResponse withApprovalRuleContentRequiredException(Object approvalRuleContentRequiredException) {
         this.approvalRuleContentRequiredException = approvalRuleContentRequiredException;
         return this;
@@ -22,6 +24,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object approvalRuleDoesNotExistException;
+
     public UpdatePullRequestApprovalRuleContentResponse withApprovalRuleDoesNotExistException(Object approvalRuleDoesNotExistException) {
         this.approvalRuleDoesNotExistException = approvalRuleDoesNotExistException;
         return this;
@@ -32,6 +35,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object approvalRuleNameRequiredException;
+
     public UpdatePullRequestApprovalRuleContentResponse withApprovalRuleNameRequiredException(Object approvalRuleNameRequiredException) {
         this.approvalRuleNameRequiredException = approvalRuleNameRequiredException;
         return this;
@@ -42,6 +46,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object cannotModifyApprovalRuleFromTemplateException;
+
     public UpdatePullRequestApprovalRuleContentResponse withCannotModifyApprovalRuleFromTemplateException(Object cannotModifyApprovalRuleFromTemplateException) {
         this.cannotModifyApprovalRuleFromTemplateException = cannotModifyApprovalRuleFromTemplateException;
         return this;
@@ -49,6 +54,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
     
     
     public String contentType;
+
     public UpdatePullRequestApprovalRuleContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public UpdatePullRequestApprovalRuleContentResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -69,6 +76,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public UpdatePullRequestApprovalRuleContentResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -79,6 +87,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public UpdatePullRequestApprovalRuleContentResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -89,6 +98,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public UpdatePullRequestApprovalRuleContentResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public UpdatePullRequestApprovalRuleContentResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -109,6 +120,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object invalidApprovalRuleContentException;
+
     public UpdatePullRequestApprovalRuleContentResponse withInvalidApprovalRuleContentException(Object invalidApprovalRuleContentException) {
         this.invalidApprovalRuleContentException = invalidApprovalRuleContentException;
         return this;
@@ -119,6 +131,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object invalidApprovalRuleNameException;
+
     public UpdatePullRequestApprovalRuleContentResponse withInvalidApprovalRuleNameException(Object invalidApprovalRuleNameException) {
         this.invalidApprovalRuleNameException = invalidApprovalRuleNameException;
         return this;
@@ -129,6 +142,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object invalidPullRequestIdException;
+
     public UpdatePullRequestApprovalRuleContentResponse withInvalidPullRequestIdException(Object invalidPullRequestIdException) {
         this.invalidPullRequestIdException = invalidPullRequestIdException;
         return this;
@@ -139,6 +153,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object invalidRuleContentSha256Exception;
+
     public UpdatePullRequestApprovalRuleContentResponse withInvalidRuleContentSha256Exception(Object invalidRuleContentSha256Exception) {
         this.invalidRuleContentSha256Exception = invalidRuleContentSha256Exception;
         return this;
@@ -149,6 +164,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object pullRequestAlreadyClosedException;
+
     public UpdatePullRequestApprovalRuleContentResponse withPullRequestAlreadyClosedException(Object pullRequestAlreadyClosedException) {
         this.pullRequestAlreadyClosedException = pullRequestAlreadyClosedException;
         return this;
@@ -159,6 +175,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object pullRequestDoesNotExistException;
+
     public UpdatePullRequestApprovalRuleContentResponse withPullRequestDoesNotExistException(Object pullRequestDoesNotExistException) {
         this.pullRequestDoesNotExistException = pullRequestDoesNotExistException;
         return this;
@@ -169,6 +186,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public Object pullRequestIdRequiredException;
+
     public UpdatePullRequestApprovalRuleContentResponse withPullRequestIdRequiredException(Object pullRequestIdRequiredException) {
         this.pullRequestIdRequiredException = pullRequestIdRequiredException;
         return this;
@@ -176,6 +194,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
     
     
     public Integer statusCode;
+
     public UpdatePullRequestApprovalRuleContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -183,6 +202,7 @@ public class UpdatePullRequestApprovalRuleContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePullRequestApprovalRuleContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -193,9 +213,14 @@ public class UpdatePullRequestApprovalRuleContentResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatePullRequestApprovalRuleContentOutput updatePullRequestApprovalRuleContentOutput;
+
     public UpdatePullRequestApprovalRuleContentResponse withUpdatePullRequestApprovalRuleContentOutput(org.openapis.openapi.models.shared.UpdatePullRequestApprovalRuleContentOutput updatePullRequestApprovalRuleContentOutput) {
         this.updatePullRequestApprovalRuleContentOutput = updatePullRequestApprovalRuleContentOutput;
         return this;
     }
     
+    public UpdatePullRequestApprovalRuleContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

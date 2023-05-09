@@ -18,9 +18,11 @@ public class SearchDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registerParameters")
     public RegisterParameters[] registerParameters;
+
     public SearchDomainsResponse withRegisterParameters(RegisterParameters[] registerParameters) {
         this.registerParameters = registerParameters;
         return this;
     }
     
+    public SearchDomainsResponse(){}
 }

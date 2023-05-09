@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IotEventsInputIdentifier {
     @JsonProperty("inputName")
     public String inputName;
+
     public IotEventsInputIdentifier withInputName(String inputName) {
         this.inputName = inputName;
         return this;
     }
     
+    public IotEventsInputIdentifier(@JsonProperty("inputName") String inputName) {
+        this.inputName = inputName;
+  }
 }

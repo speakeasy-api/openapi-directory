@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2FixedSizeBucketingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketSize")
     public Double bucketSize;
+
     public GooglePrivacyDlpV2FixedSizeBucketingConfig withBucketSize(Double bucketSize) {
         this.bucketSize = bucketSize;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2FixedSizeBucketingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowerBound")
     public GooglePrivacyDlpV2Value lowerBound;
+
     public GooglePrivacyDlpV2FixedSizeBucketingConfig withLowerBound(GooglePrivacyDlpV2Value lowerBound) {
         this.lowerBound = lowerBound;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2FixedSizeBucketingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upperBound")
     public GooglePrivacyDlpV2Value upperBound;
+
     public GooglePrivacyDlpV2FixedSizeBucketingConfig withUpperBound(GooglePrivacyDlpV2Value upperBound) {
         this.upperBound = upperBound;
         return this;
     }
     
+    public GooglePrivacyDlpV2FixedSizeBucketingConfig(){}
 }

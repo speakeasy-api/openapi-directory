@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SecurityHubConfiguration {
     @JsonProperty("publishClassificationFindings")
     public Boolean publishClassificationFindings;
+
     public SecurityHubConfiguration withPublishClassificationFindings(Boolean publishClassificationFindings) {
         this.publishClassificationFindings = publishClassificationFindings;
         return this;
@@ -19,9 +20,14 @@ public class SecurityHubConfiguration {
     
     @JsonProperty("publishPolicyFindings")
     public Boolean publishPolicyFindings;
+
     public SecurityHubConfiguration withPublishPolicyFindings(Boolean publishPolicyFindings) {
         this.publishPolicyFindings = publishPolicyFindings;
         return this;
     }
     
+    public SecurityHubConfiguration(@JsonProperty("publishClassificationFindings") Boolean publishClassificationFindings, @JsonProperty("publishPolicyFindings") Boolean publishPolicyFindings) {
+        this.publishClassificationFindings = publishClassificationFindings;
+        this.publishPolicyFindings = publishPolicyFindings;
+  }
 }

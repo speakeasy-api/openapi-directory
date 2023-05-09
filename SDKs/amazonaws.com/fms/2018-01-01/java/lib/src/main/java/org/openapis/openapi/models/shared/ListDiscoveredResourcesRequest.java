@@ -12,6 +12,7 @@ public class ListDiscoveredResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDiscoveredResourcesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -19,6 +20,7 @@ public class ListDiscoveredResourcesRequest {
     
     @JsonProperty("MemberAccountIds")
     public String[] memberAccountIds;
+
     public ListDiscoveredResourcesRequest withMemberAccountIds(String[] memberAccountIds) {
         this.memberAccountIds = memberAccountIds;
         return this;
@@ -27,6 +29,7 @@ public class ListDiscoveredResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDiscoveredResourcesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -34,9 +37,14 @@ public class ListDiscoveredResourcesRequest {
     
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public ListDiscoveredResourcesRequest withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ListDiscoveredResourcesRequest(@JsonProperty("MemberAccountIds") String[] memberAccountIds, @JsonProperty("ResourceType") String resourceType) {
+        this.memberAccountIds = memberAccountIds;
+        this.resourceType = resourceType;
+  }
 }

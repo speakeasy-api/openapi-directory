@@ -18,9 +18,11 @@ public class PageBlog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PageBlog withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PageBlog(){}
 }

@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoFailurePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervalInSeconds")
     public String intervalInSeconds;
+
     public EnterpriseCrmEventbusProtoFailurePolicy withIntervalInSeconds(String intervalInSeconds) {
         this.intervalInSeconds = intervalInSeconds;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmEventbusProtoFailurePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNumRetries")
     public Integer maxNumRetries;
+
     public EnterpriseCrmEventbusProtoFailurePolicy withMaxNumRetries(Integer maxNumRetries) {
         this.maxNumRetries = maxNumRetries;
         return this;
@@ -40,9 +42,11 @@ public class EnterpriseCrmEventbusProtoFailurePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryStrategy")
     public EnterpriseCrmEventbusProtoFailurePolicyRetryStrategyEnum retryStrategy;
+
     public EnterpriseCrmEventbusProtoFailurePolicy withRetryStrategy(EnterpriseCrmEventbusProtoFailurePolicyRetryStrategyEnum retryStrategy) {
         this.retryStrategy = retryStrategy;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoFailurePolicy(){}
 }

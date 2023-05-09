@@ -180,4 +180,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/CustomRankingInfoImportance
 lib/src/main/java/org/openapis/openapi/models/shared/CustomRankingInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/Operation.java
 lib/src/main/java/org/openapis/openapi/models/shared/Status.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

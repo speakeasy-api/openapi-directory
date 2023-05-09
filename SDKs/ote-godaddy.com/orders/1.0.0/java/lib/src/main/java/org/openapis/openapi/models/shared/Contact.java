@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Contact {
     @JsonProperty("addressMailing")
     public Address addressMailing;
+
     public Contact withAddressMailing(Address addressMailing) {
         this.addressMailing = addressMailing;
         return this;
@@ -18,6 +19,7 @@ public class Contact {
     
     @JsonProperty("email")
     public String email;
+
     public Contact withEmail(String email) {
         this.email = email;
         return this;
@@ -26,6 +28,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fax")
     public String fax;
+
     public Contact withFax(String fax) {
         this.fax = fax;
         return this;
@@ -34,6 +37,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTitle")
     public String jobTitle;
+
     public Contact withJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
         return this;
@@ -41,6 +45,7 @@ public class Contact {
     
     @JsonProperty("nameFirst")
     public String nameFirst;
+
     public Contact withNameFirst(String nameFirst) {
         this.nameFirst = nameFirst;
         return this;
@@ -48,6 +53,7 @@ public class Contact {
     
     @JsonProperty("nameLast")
     public String nameLast;
+
     public Contact withNameLast(String nameLast) {
         this.nameLast = nameLast;
         return this;
@@ -56,6 +62,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameMiddle")
     public String nameMiddle;
+
     public Contact withNameMiddle(String nameMiddle) {
         this.nameMiddle = nameMiddle;
         return this;
@@ -64,6 +71,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public Contact withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -71,9 +79,17 @@ public class Contact {
     
     @JsonProperty("phone")
     public String phone;
+
     public Contact withPhone(String phone) {
         this.phone = phone;
         return this;
     }
     
+    public Contact(@JsonProperty("addressMailing") Address addressMailing, @JsonProperty("email") String email, @JsonProperty("nameFirst") String nameFirst, @JsonProperty("nameLast") String nameLast, @JsonProperty("phone") String phone) {
+        this.addressMailing = addressMailing;
+        this.email = email;
+        this.nameFirst = nameFirst;
+        this.nameLast = nameLast;
+        this.phone = phone;
+  }
 }

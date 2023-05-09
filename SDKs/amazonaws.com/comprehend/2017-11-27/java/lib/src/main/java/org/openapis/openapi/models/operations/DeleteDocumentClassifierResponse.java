@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDocumentClassifierResponse {
     
     public String contentType;
+
     public DeleteDocumentClassifierResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDocumentClassifierResponse {
      */
     
     public java.util.Map<String, Object> deleteDocumentClassifierResponse;
+
     public DeleteDocumentClassifierResponse withDeleteDocumentClassifierResponse(java.util.Map<String, Object> deleteDocumentClassifierResponse) {
         this.deleteDocumentClassifierResponse = deleteDocumentClassifierResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDocumentClassifierResponse {
      */
     
     public Object internalServerException;
+
     public DeleteDocumentClassifierResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDocumentClassifierResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteDocumentClassifierResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDocumentClassifierResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteDocumentClassifierResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDocumentClassifierResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteDocumentClassifierResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteDocumentClassifierResponse {
     
     
     public Integer statusCode;
+
     public DeleteDocumentClassifierResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteDocumentClassifierResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDocumentClassifierResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteDocumentClassifierResponse {
      */
     
     public Object resourceUnavailableException;
+
     public DeleteDocumentClassifierResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteDocumentClassifierResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteDocumentClassifierResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteDocumentClassifierResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

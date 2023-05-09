@@ -13,11 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class SqlIpConfig {
     /**
+     * Optional. The name of the allocated IP address range for the private IP Cloud SQL instance. This name refers to an already allocated IP range address. If set, the instance IP address will be created in the allocated range. Note that this IP address range can't be modified after the instance is created. If you change the VPC when configuring connectivity settings for the migration job, this field is not relevant.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("allocatedIpRange")
+    public String allocatedIpRange;
+
+    public SqlIpConfig withAllocatedIpRange(String allocatedIpRange) {
+        this.allocatedIpRange = allocatedIpRange;
+        return this;
+    }
+    
+    /**
      * The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g. `192.168.100.0/24`).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizedNetworks")
     public SqlAclEntry[] authorizedNetworks;
+
     public SqlIpConfig withAuthorizedNetworks(SqlAclEntry[] authorizedNetworks) {
         this.authorizedNetworks = authorizedNetworks;
         return this;
@@ -29,6 +42,7 @@ public class SqlIpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableIpv4")
     public Boolean enableIpv4;
+
     public SqlIpConfig withEnableIpv4(Boolean enableIpv4) {
         this.enableIpv4 = enableIpv4;
         return this;
@@ -40,6 +54,7 @@ public class SqlIpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateNetwork")
     public String privateNetwork;
+
     public SqlIpConfig withPrivateNetwork(String privateNetwork) {
         this.privateNetwork = privateNetwork;
         return this;
@@ -51,9 +66,11 @@ public class SqlIpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireSsl")
     public Boolean requireSsl;
+
     public SqlIpConfig withRequireSsl(Boolean requireSsl) {
         this.requireSsl = requireSsl;
         return this;
     }
     
+    public SqlIpConfig(){}
 }

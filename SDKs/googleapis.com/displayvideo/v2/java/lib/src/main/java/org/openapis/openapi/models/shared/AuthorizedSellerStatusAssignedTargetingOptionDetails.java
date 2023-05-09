@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AuthorizedSellerStatusAssignedTargetingOptionDetails - Represents an assigned authorized seller status. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`.
+ * AuthorizedSellerStatusAssignedTargetingOptionDetails - Represents an assigned authorized seller status. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`. If a resource does not have an `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` assigned targeting option, it is using the "Authorized Direct Sellers and Resellers" option.
  */
 public class AuthorizedSellerStatusAssignedTargetingOptionDetails {
     /**
@@ -18,6 +18,7 @@ public class AuthorizedSellerStatusAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizedSellerStatus")
     public AuthorizedSellerStatusAssignedTargetingOptionDetailsAuthorizedSellerStatusEnum authorizedSellerStatus;
+
     public AuthorizedSellerStatusAssignedTargetingOptionDetails withAuthorizedSellerStatus(AuthorizedSellerStatusAssignedTargetingOptionDetailsAuthorizedSellerStatusEnum authorizedSellerStatus) {
         this.authorizedSellerStatus = authorizedSellerStatus;
         return this;
@@ -29,9 +30,11 @@ public class AuthorizedSellerStatusAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public AuthorizedSellerStatusAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public AuthorizedSellerStatusAssignedTargetingOptionDetails(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETAddClientIDToOpenIDConnectProviderResponse {
     
     public byte[] body;
+
     public GETAddClientIDToOpenIDConnectProviderResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETAddClientIDToOpenIDConnectProviderResponse {
     
     
     public String contentType;
+
     public GETAddClientIDToOpenIDConnectProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETAddClientIDToOpenIDConnectProviderResponse {
     
     
     public Integer statusCode;
+
     public GETAddClientIDToOpenIDConnectProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETAddClientIDToOpenIDConnectProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETAddClientIDToOpenIDConnectProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETAddClientIDToOpenIDConnectProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

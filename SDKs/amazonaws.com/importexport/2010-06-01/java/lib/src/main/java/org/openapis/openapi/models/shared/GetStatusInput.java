@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetStatusInput - Input structure for the GetStatus operation.
@@ -15,6 +15,7 @@ public class GetStatusInput {
      */
     
     public String apiVersion;
+
     public GetStatusInput withAPIVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -25,9 +26,13 @@ public class GetStatusInput {
      */
     
     public String jobId;
+
     public GetStatusInput withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public GetStatusInput(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

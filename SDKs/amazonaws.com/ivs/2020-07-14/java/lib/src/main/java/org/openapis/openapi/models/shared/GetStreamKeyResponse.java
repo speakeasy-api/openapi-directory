@@ -15,9 +15,11 @@ public class GetStreamKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamKey")
     public StreamKey streamKey;
+
     public GetStreamKeyResponse withStreamKey(StreamKey streamKey) {
         this.streamKey = streamKey;
         return this;
     }
     
+    public GetStreamKeyResponse(){}
 }

@@ -15,6 +15,7 @@ public class Sicrd502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Sicrd502ApplicationJSONErrorEnum error;
+
     public Sicrd502ApplicationJSON withError(Sicrd502ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Sicrd502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Sicrd502ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Sicrd502ApplicationJSON withErrorDescription(Sicrd502ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Sicrd502ApplicationJSON(){}
 }

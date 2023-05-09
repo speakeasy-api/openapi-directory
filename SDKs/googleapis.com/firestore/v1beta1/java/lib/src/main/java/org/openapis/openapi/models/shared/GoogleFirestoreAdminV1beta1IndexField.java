@@ -18,6 +18,7 @@ public class GoogleFirestoreAdminV1beta1IndexField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldPath")
     public String fieldPath;
+
     public GoogleFirestoreAdminV1beta1IndexField withFieldPath(String fieldPath) {
         this.fieldPath = fieldPath;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirestoreAdminV1beta1IndexField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public GoogleFirestoreAdminV1beta1IndexFieldModeEnum mode;
+
     public GoogleFirestoreAdminV1beta1IndexField withMode(GoogleFirestoreAdminV1beta1IndexFieldModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public GoogleFirestoreAdminV1beta1IndexField(){}
 }

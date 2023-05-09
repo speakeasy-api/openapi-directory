@@ -15,6 +15,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyPayeeAccount withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -26,6 +27,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyPayeeAccount withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -37,6 +39,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bic")
     public String bic;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyPayeeAccount withBic(String bic) {
         this.bic = bic;
         return this;
@@ -48,6 +51,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iban")
     public String iban;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyPayeeAccount withIban(String iban) {
         this.iban = iban;
         return this;
@@ -59,6 +63,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyPayeeAccount withId(Long id) {
         this.id = id;
         return this;
@@ -70,9 +75,11 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyR
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nsc")
     public String nsc;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyPayeeAccount withNsc(String nsc) {
         this.nsc = nsc;
         return this;
     }
     
+    public GetListofCardTransactionsCardTransactionsv1TransactionRelatedPartyRelatedPartyPayeeAccount(){}
 }

@@ -18,9 +18,11 @@ public class EnterpriseCrmEventbusProtoTaskUiModuleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moduleId")
     public EnterpriseCrmEventbusProtoTaskUiModuleConfigModuleIdEnum moduleId;
+
     public EnterpriseCrmEventbusProtoTaskUiModuleConfig withModuleId(EnterpriseCrmEventbusProtoTaskUiModuleConfigModuleIdEnum moduleId) {
         this.moduleId = moduleId;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoTaskUiModuleConfig(){}
 }

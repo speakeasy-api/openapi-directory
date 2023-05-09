@@ -18,6 +18,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public GoogleCloudPaymentsResellerSubscriptionV1Location withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public GoogleCloudPaymentsResellerSubscriptionV1Location withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1Location(){}
 }

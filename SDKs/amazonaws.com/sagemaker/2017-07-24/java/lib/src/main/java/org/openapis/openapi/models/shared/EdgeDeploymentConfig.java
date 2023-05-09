@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EdgeDeploymentConfig {
     @JsonProperty("FailureHandlingPolicy")
     public FailureHandlingPolicyEnum failureHandlingPolicy;
+
     public EdgeDeploymentConfig withFailureHandlingPolicy(FailureHandlingPolicyEnum failureHandlingPolicy) {
         this.failureHandlingPolicy = failureHandlingPolicy;
         return this;
     }
     
+    public EdgeDeploymentConfig(@JsonProperty("FailureHandlingPolicy") FailureHandlingPolicyEnum failureHandlingPolicy) {
+        this.failureHandlingPolicy = failureHandlingPolicy;
+  }
 }

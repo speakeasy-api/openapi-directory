@@ -12,6 +12,7 @@ public class CreateNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminUserPassword")
     public String adminUserPassword;
+
     public CreateNamespaceRequest withAdminUserPassword(String adminUserPassword) {
         this.adminUserPassword = adminUserPassword;
         return this;
@@ -20,6 +21,7 @@ public class CreateNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminUsername")
     public String adminUsername;
+
     public CreateNamespaceRequest withAdminUsername(String adminUsername) {
         this.adminUsername = adminUsername;
         return this;
@@ -28,6 +30,7 @@ public class CreateNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dbName")
     public String dbName;
+
     public CreateNamespaceRequest withDbName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -36,6 +39,7 @@ public class CreateNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultIamRoleArn")
     public String defaultIamRoleArn;
+
     public CreateNamespaceRequest withDefaultIamRoleArn(String defaultIamRoleArn) {
         this.defaultIamRoleArn = defaultIamRoleArn;
         return this;
@@ -44,6 +48,7 @@ public class CreateNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamRoles")
     public String[] iamRoles;
+
     public CreateNamespaceRequest withIamRoles(String[] iamRoles) {
         this.iamRoles = iamRoles;
         return this;
@@ -52,6 +57,7 @@ public class CreateNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public CreateNamespaceRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -60,6 +66,7 @@ public class CreateNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logExports")
     public LogExportEnum[] logExports;
+
     public CreateNamespaceRequest withLogExports(LogExportEnum[] logExports) {
         this.logExports = logExports;
         return this;
@@ -67,6 +74,7 @@ public class CreateNamespaceRequest {
     
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public CreateNamespaceRequest withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -75,9 +83,13 @@ public class CreateNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateNamespaceRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateNamespaceRequest(@JsonProperty("namespaceName") String namespaceName) {
+        this.namespaceName = namespaceName;
+  }
 }

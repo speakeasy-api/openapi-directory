@@ -18,9 +18,11 @@ public class NavigationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableForcedRedirect")
     public Boolean enableForcedRedirect;
+
     public NavigationInfo withEnableForcedRedirect(Boolean enableForcedRedirect) {
         this.enableForcedRedirect = enableForcedRedirect;
         return this;
     }
     
+    public NavigationInfo(){}
 }

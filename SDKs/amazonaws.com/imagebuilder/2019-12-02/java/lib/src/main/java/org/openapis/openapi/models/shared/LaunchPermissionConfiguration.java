@@ -15,6 +15,7 @@ public class LaunchPermissionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationArns")
     public String[] organizationArns;
+
     public LaunchPermissionConfiguration withOrganizationArns(String[] organizationArns) {
         this.organizationArns = organizationArns;
         return this;
@@ -23,6 +24,7 @@ public class LaunchPermissionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationalUnitArns")
     public String[] organizationalUnitArns;
+
     public LaunchPermissionConfiguration withOrganizationalUnitArns(String[] organizationalUnitArns) {
         this.organizationalUnitArns = organizationalUnitArns;
         return this;
@@ -31,6 +33,7 @@ public class LaunchPermissionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userGroups")
     public String[] userGroups;
+
     public LaunchPermissionConfiguration withUserGroups(String[] userGroups) {
         this.userGroups = userGroups;
         return this;
@@ -39,9 +42,11 @@ public class LaunchPermissionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userIds")
     public String[] userIds;
+
     public LaunchPermissionConfiguration withUserIds(String[] userIds) {
         this.userIds = userIds;
         return this;
     }
     
+    public LaunchPermissionConfiguration(){}
 }

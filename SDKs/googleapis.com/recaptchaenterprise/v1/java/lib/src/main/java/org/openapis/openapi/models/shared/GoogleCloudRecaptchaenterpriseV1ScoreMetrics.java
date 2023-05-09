@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1ScoreMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionMetrics")
     public java.util.Map<String, GoogleCloudRecaptchaenterpriseV1ScoreDistribution> actionMetrics;
+
     public GoogleCloudRecaptchaenterpriseV1ScoreMetrics withActionMetrics(java.util.Map<String, GoogleCloudRecaptchaenterpriseV1ScoreDistribution> actionMetrics) {
         this.actionMetrics = actionMetrics;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecaptchaenterpriseV1ScoreMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overallMetrics")
     public GoogleCloudRecaptchaenterpriseV1ScoreDistribution overallMetrics;
+
     public GoogleCloudRecaptchaenterpriseV1ScoreMetrics withOverallMetrics(GoogleCloudRecaptchaenterpriseV1ScoreDistribution overallMetrics) {
         this.overallMetrics = overallMetrics;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1ScoreMetrics(){}
 }

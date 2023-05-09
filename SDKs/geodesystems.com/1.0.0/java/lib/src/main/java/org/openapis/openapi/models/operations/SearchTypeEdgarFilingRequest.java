@@ -13,6 +13,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchTypeEdgarFilingRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchTypeEdgarFilingRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchTypeEdgarFilingRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchTypeEdgarFilingRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchTypeEdgarFilingRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchTypeEdgarFilingRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchTypeEdgarFilingRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchTypeEdgarFilingRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchTypeEdgarFilingRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchTypeEdgarFilingRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchTypeEdgarFilingRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchTypeEdgarFilingRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchTypeEdgarFilingRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchTypeEdgarFilingRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_edgar_filing.cik_number")
     public String searchTypeEdgarFilingCikNumber;
+
     public SearchTypeEdgarFilingRequest withSearchTypeEdgarFilingCikNumber(String searchTypeEdgarFilingCikNumber) {
         this.searchTypeEdgarFilingCikNumber = searchTypeEdgarFilingCikNumber;
         return this;
@@ -163,6 +178,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_edgar_filing.company_name")
     public String searchTypeEdgarFilingCompanyName;
+
     public SearchTypeEdgarFilingRequest withSearchTypeEdgarFilingCompanyName(String searchTypeEdgarFilingCompanyName) {
         this.searchTypeEdgarFilingCompanyName = searchTypeEdgarFilingCompanyName;
         return this;
@@ -173,6 +189,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_edgar_filing.form_type")
     public String searchTypeEdgarFilingFormType;
+
     public SearchTypeEdgarFilingRequest withSearchTypeEdgarFilingFormType(String searchTypeEdgarFilingFormType) {
         this.searchTypeEdgarFilingFormType = searchTypeEdgarFilingFormType;
         return this;
@@ -183,6 +200,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_edgar_filing.irs_number")
     public String searchTypeEdgarFilingIrsNumber;
+
     public SearchTypeEdgarFilingRequest withSearchTypeEdgarFilingIrsNumber(String searchTypeEdgarFilingIrsNumber) {
         this.searchTypeEdgarFilingIrsNumber = searchTypeEdgarFilingIrsNumber;
         return this;
@@ -193,6 +211,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_edgar_filing.standard_industrial_classification")
     public String searchTypeEdgarFilingStandardIndustrialClassification;
+
     public SearchTypeEdgarFilingRequest withSearchTypeEdgarFilingStandardIndustrialClassification(String searchTypeEdgarFilingStandardIndustrialClassification) {
         this.searchTypeEdgarFilingStandardIndustrialClassification = searchTypeEdgarFilingStandardIndustrialClassification;
         return this;
@@ -203,6 +222,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_edgar_filing.state")
     public String searchTypeEdgarFilingState;
+
     public SearchTypeEdgarFilingRequest withSearchTypeEdgarFilingState(String searchTypeEdgarFilingState) {
         this.searchTypeEdgarFilingState = searchTypeEdgarFilingState;
         return this;
@@ -213,6 +233,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchTypeEdgarFilingRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -223,6 +244,7 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchTypeEdgarFilingRequest withText(String text) {
         this.text = text;
         return this;
@@ -233,9 +255,11 @@ public class SearchTypeEdgarFilingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchTypeEdgarFilingRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchTypeEdgarFilingRequest(){}
 }

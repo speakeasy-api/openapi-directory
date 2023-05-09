@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudsearchStatsIndexDatasourcesGetResponse {
     
     public String contentType;
+
     public CloudsearchStatsIndexDatasourcesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudsearchStatsIndexDatasourcesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDataSourceIndexStatsResponse getDataSourceIndexStatsResponse;
+
     public CloudsearchStatsIndexDatasourcesGetResponse withGetDataSourceIndexStatsResponse(org.openapis.openapi.models.shared.GetDataSourceIndexStatsResponse getDataSourceIndexStatsResponse) {
         this.getDataSourceIndexStatsResponse = getDataSourceIndexStatsResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudsearchStatsIndexDatasourcesGetResponse {
     
     
     public Integer statusCode;
+
     public CloudsearchStatsIndexDatasourcesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudsearchStatsIndexDatasourcesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudsearchStatsIndexDatasourcesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudsearchStatsIndexDatasourcesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

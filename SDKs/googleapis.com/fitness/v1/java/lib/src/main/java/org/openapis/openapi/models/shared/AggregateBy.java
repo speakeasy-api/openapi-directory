@@ -18,6 +18,7 @@ public class AggregateBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceId")
     public String dataSourceId;
+
     public AggregateBy withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -29,9 +30,11 @@ public class AggregateBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataTypeName")
     public String dataTypeName;
+
     public AggregateBy withDataTypeName(String dataTypeName) {
         this.dataTypeName = dataTypeName;
         return this;
     }
     
+    public AggregateBy(){}
 }

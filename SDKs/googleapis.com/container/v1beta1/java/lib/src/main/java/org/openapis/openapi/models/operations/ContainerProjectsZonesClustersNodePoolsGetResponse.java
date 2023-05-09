@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContainerProjectsZonesClustersNodePoolsGetResponse {
     
     public String contentType;
+
     public ContainerProjectsZonesClustersNodePoolsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContainerProjectsZonesClustersNodePoolsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.NodePool nodePool;
+
     public ContainerProjectsZonesClustersNodePoolsGetResponse withNodePool(org.openapis.openapi.models.shared.NodePool nodePool) {
         this.nodePool = nodePool;
         return this;
@@ -26,6 +29,7 @@ public class ContainerProjectsZonesClustersNodePoolsGetResponse {
     
     
     public Integer statusCode;
+
     public ContainerProjectsZonesClustersNodePoolsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContainerProjectsZonesClustersNodePoolsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContainerProjectsZonesClustersNodePoolsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContainerProjectsZonesClustersNodePoolsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

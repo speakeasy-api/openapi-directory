@@ -18,6 +18,7 @@ public class UserProfileList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public UserProfileList withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class UserProfileList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public UserProfile[] items;
+
     public UserProfileList withItems(UserProfile[] items) {
         this.items = items;
         return this;
@@ -40,9 +42,11 @@ public class UserProfileList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public UserProfileList withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public UserProfileList(){}
 }

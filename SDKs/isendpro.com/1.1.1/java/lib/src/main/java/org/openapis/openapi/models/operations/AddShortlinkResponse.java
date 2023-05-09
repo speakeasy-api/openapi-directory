@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddShortlinkResponse {
     
     public String contentType;
+
     public AddShortlinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AddShortlinkResponse {
      */
     
     public org.openapis.openapi.models.shared.Erreur erreur;
+
     public AddShortlinkResponse withErreur(org.openapis.openapi.models.shared.Erreur erreur) {
         this.erreur = erreur;
         return this;
@@ -29,6 +32,7 @@ public class AddShortlinkResponse {
      */
     
     public org.openapis.openapi.models.shared.ShortlinkResponse shortlinkResponse;
+
     public AddShortlinkResponse withShortlinkResponse(org.openapis.openapi.models.shared.ShortlinkResponse shortlinkResponse) {
         this.shortlinkResponse = shortlinkResponse;
         return this;
@@ -36,6 +40,7 @@ public class AddShortlinkResponse {
     
     
     public Integer statusCode;
+
     public AddShortlinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AddShortlinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddShortlinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddShortlinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

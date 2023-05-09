@@ -15,6 +15,7 @@ public class GitHubDocumentCrawlProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlIssue")
     public Boolean crawlIssue;
+
     public GitHubDocumentCrawlProperties withCrawlIssue(Boolean crawlIssue) {
         this.crawlIssue = crawlIssue;
         return this;
@@ -23,6 +24,7 @@ public class GitHubDocumentCrawlProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlIssueComment")
     public Boolean crawlIssueComment;
+
     public GitHubDocumentCrawlProperties withCrawlIssueComment(Boolean crawlIssueComment) {
         this.crawlIssueComment = crawlIssueComment;
         return this;
@@ -31,6 +33,7 @@ public class GitHubDocumentCrawlProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlIssueCommentAttachment")
     public Boolean crawlIssueCommentAttachment;
+
     public GitHubDocumentCrawlProperties withCrawlIssueCommentAttachment(Boolean crawlIssueCommentAttachment) {
         this.crawlIssueCommentAttachment = crawlIssueCommentAttachment;
         return this;
@@ -39,6 +42,7 @@ public class GitHubDocumentCrawlProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlPullRequest")
     public Boolean crawlPullRequest;
+
     public GitHubDocumentCrawlProperties withCrawlPullRequest(Boolean crawlPullRequest) {
         this.crawlPullRequest = crawlPullRequest;
         return this;
@@ -47,6 +51,7 @@ public class GitHubDocumentCrawlProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlPullRequestComment")
     public Boolean crawlPullRequestComment;
+
     public GitHubDocumentCrawlProperties withCrawlPullRequestComment(Boolean crawlPullRequestComment) {
         this.crawlPullRequestComment = crawlPullRequestComment;
         return this;
@@ -55,6 +60,7 @@ public class GitHubDocumentCrawlProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlPullRequestCommentAttachment")
     public Boolean crawlPullRequestCommentAttachment;
+
     public GitHubDocumentCrawlProperties withCrawlPullRequestCommentAttachment(Boolean crawlPullRequestCommentAttachment) {
         this.crawlPullRequestCommentAttachment = crawlPullRequestCommentAttachment;
         return this;
@@ -63,9 +69,11 @@ public class GitHubDocumentCrawlProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlRepositoryDocuments")
     public Boolean crawlRepositoryDocuments;
+
     public GitHubDocumentCrawlProperties withCrawlRepositoryDocuments(Boolean crawlRepositoryDocuments) {
         this.crawlRepositoryDocuments = crawlRepositoryDocuments;
         return this;
     }
     
+    public GitHubDocumentCrawlProperties(){}
 }

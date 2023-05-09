@@ -20,6 +20,7 @@ public class ResourceSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ResourceSet withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class ResourceSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ResourceSet withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class ResourceSet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public ResourceSet withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -45,13 +48,24 @@ public class ResourceSet {
     
     @JsonProperty("Name")
     public String name;
+
     public ResourceSet withName(String name) {
         this.name = name;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ResourceSetStatus")
+    public ResourceSetStatusEnum resourceSetStatus;
+
+    public ResourceSet withResourceSetStatus(ResourceSetStatusEnum resourceSetStatus) {
+        this.resourceSetStatus = resourceSetStatus;
+        return this;
+    }
+    
     @JsonProperty("ResourceTypeList")
     public String[] resourceTypeList;
+
     public ResourceSet withResourceTypeList(String[] resourceTypeList) {
         this.resourceTypeList = resourceTypeList;
         return this;
@@ -60,9 +74,14 @@ public class ResourceSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateToken")
     public String updateToken;
+
     public ResourceSet withUpdateToken(String updateToken) {
         this.updateToken = updateToken;
         return this;
     }
     
+    public ResourceSet(@JsonProperty("Name") String name, @JsonProperty("ResourceTypeList") String[] resourceTypeList) {
+        this.name = name;
+        this.resourceTypeList = resourceTypeList;
+  }
 }

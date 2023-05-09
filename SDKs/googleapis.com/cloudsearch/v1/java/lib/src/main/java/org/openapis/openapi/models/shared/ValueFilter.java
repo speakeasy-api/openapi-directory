@@ -15,6 +15,7 @@ public class ValueFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorName")
     public String operatorName;
+
     public ValueFilter withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
@@ -26,9 +27,11 @@ public class ValueFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Value value;
+
     public ValueFilter withValue(Value value) {
         this.value = value;
         return this;
     }
     
+    public ValueFilter(){}
 }

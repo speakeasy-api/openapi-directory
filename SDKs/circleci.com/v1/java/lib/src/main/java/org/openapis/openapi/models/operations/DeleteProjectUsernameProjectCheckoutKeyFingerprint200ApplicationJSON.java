@@ -15,9 +15,11 @@ public class DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSO
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum message;
+
     public DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSON withMessage(DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum message) {
         this.message = message;
         return this;
     }
     
+    public DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSON(){}
 }

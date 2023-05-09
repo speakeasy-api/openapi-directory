@@ -18,6 +18,7 @@ public class TlsCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cert")
     public String cert;
+
     public TlsCertificate withCert(String cert) {
         this.cert = cert;
         return this;
@@ -29,6 +30,7 @@ public class TlsCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public TlsCertificate withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class TlsCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public TlsCertificate withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -51,6 +54,7 @@ public class TlsCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public TlsCertificate withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -62,9 +66,11 @@ public class TlsCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha1Fingerprint")
     public String sha1Fingerprint;
+
     public TlsCertificate withSha1Fingerprint(String sha1Fingerprint) {
         this.sha1Fingerprint = sha1Fingerprint;
         return this;
     }
     
+    public TlsCertificate(){}
 }

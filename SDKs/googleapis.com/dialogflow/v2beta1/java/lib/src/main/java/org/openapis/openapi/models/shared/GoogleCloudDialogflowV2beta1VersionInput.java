@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1VersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowV2beta1VersionInput withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1VersionInput(){}
 }

@@ -23,6 +23,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmConfiguration")
     public AlarmConfiguration alarmConfiguration;
+
     public AssociationDescription withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
         this.alarmConfiguration = alarmConfiguration;
         return this;
@@ -31,6 +32,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplyOnlyAtCronInterval")
     public Boolean applyOnlyAtCronInterval;
+
     public AssociationDescription withApplyOnlyAtCronInterval(Boolean applyOnlyAtCronInterval) {
         this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
         return this;
@@ -39,6 +41,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public AssociationDescription withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -47,6 +50,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationName")
     public String associationName;
+
     public AssociationDescription withAssociationName(String associationName) {
         this.associationName = associationName;
         return this;
@@ -55,6 +59,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationVersion")
     public String associationVersion;
+
     public AssociationDescription withAssociationVersion(String associationVersion) {
         this.associationVersion = associationVersion;
         return this;
@@ -63,6 +68,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomationTargetParameterName")
     public String automationTargetParameterName;
+
     public AssociationDescription withAutomationTargetParameterName(String automationTargetParameterName) {
         this.automationTargetParameterName = automationTargetParameterName;
         return this;
@@ -71,6 +77,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CalendarNames")
     public String[] calendarNames;
+
     public AssociationDescription withCalendarNames(String[] calendarNames) {
         this.calendarNames = calendarNames;
         return this;
@@ -79,6 +86,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceSeverity")
     public AssociationComplianceSeverityEnum complianceSeverity;
+
     public AssociationDescription withComplianceSeverity(AssociationComplianceSeverityEnum complianceSeverity) {
         this.complianceSeverity = complianceSeverity;
         return this;
@@ -89,6 +97,7 @@ public class AssociationDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Date")
     public OffsetDateTime date;
+
     public AssociationDescription withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -97,6 +106,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public AssociationDescription withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -105,6 +115,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public AssociationDescription withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -115,6 +126,7 @@ public class AssociationDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastExecutionDate")
     public OffsetDateTime lastExecutionDate;
+
     public AssociationDescription withLastExecutionDate(OffsetDateTime lastExecutionDate) {
         this.lastExecutionDate = lastExecutionDate;
         return this;
@@ -125,6 +137,7 @@ public class AssociationDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastSuccessfulExecutionDate")
     public OffsetDateTime lastSuccessfulExecutionDate;
+
     public AssociationDescription withLastSuccessfulExecutionDate(OffsetDateTime lastSuccessfulExecutionDate) {
         this.lastSuccessfulExecutionDate = lastSuccessfulExecutionDate;
         return this;
@@ -135,6 +148,7 @@ public class AssociationDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateAssociationDate")
     public OffsetDateTime lastUpdateAssociationDate;
+
     public AssociationDescription withLastUpdateAssociationDate(OffsetDateTime lastUpdateAssociationDate) {
         this.lastUpdateAssociationDate = lastUpdateAssociationDate;
         return this;
@@ -143,6 +157,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrency")
     public String maxConcurrency;
+
     public AssociationDescription withMaxConcurrency(String maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -151,6 +166,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxErrors")
     public String maxErrors;
+
     public AssociationDescription withMaxErrors(String maxErrors) {
         this.maxErrors = maxErrors;
         return this;
@@ -159,6 +175,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AssociationDescription withName(String name) {
         this.name = name;
         return this;
@@ -167,6 +184,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputLocation")
     public InstanceAssociationOutputLocation outputLocation;
+
     public AssociationDescription withOutputLocation(InstanceAssociationOutputLocation outputLocation) {
         this.outputLocation = outputLocation;
         return this;
@@ -175,6 +193,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Overview")
     public AssociationOverview overview;
+
     public AssociationDescription withOverview(AssociationOverview overview) {
         this.overview = overview;
         return this;
@@ -183,6 +202,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String[]> parameters;
+
     public AssociationDescription withParameters(java.util.Map<String, String[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -191,6 +211,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public AssociationDescription withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
@@ -199,6 +220,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleOffset")
     public Long scheduleOffset;
+
     public AssociationDescription withScheduleOffset(Long scheduleOffset) {
         this.scheduleOffset = scheduleOffset;
         return this;
@@ -207,6 +229,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AssociationStatus status;
+
     public AssociationDescription withStatus(AssociationStatus status) {
         this.status = status;
         return this;
@@ -215,6 +238,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncCompliance")
     public AssociationSyncComplianceEnum syncCompliance;
+
     public AssociationDescription withSyncCompliance(AssociationSyncComplianceEnum syncCompliance) {
         this.syncCompliance = syncCompliance;
         return this;
@@ -223,6 +247,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetLocations")
     public TargetLocation[] targetLocations;
+
     public AssociationDescription withTargetLocations(TargetLocation[] targetLocations) {
         this.targetLocations = targetLocations;
         return this;
@@ -231,6 +256,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetMaps")
     public java.util.Map<String, String[]>[] targetMaps;
+
     public AssociationDescription withTargetMaps(java.util.Map<String, String[]>[] targetMaps) {
         this.targetMaps = targetMaps;
         return this;
@@ -239,6 +265,7 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public AssociationDescription withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -247,9 +274,11 @@ public class AssociationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TriggeredAlarms")
     public AlarmStateInformation[] triggeredAlarms;
+
     public AssociationDescription withTriggeredAlarms(AlarmStateInformation[] triggeredAlarms) {
         this.triggeredAlarms = triggeredAlarms;
         return this;
     }
     
+    public AssociationDescription(){}
 }

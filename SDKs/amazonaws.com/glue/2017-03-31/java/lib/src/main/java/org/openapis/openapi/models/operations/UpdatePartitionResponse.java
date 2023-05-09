@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePartitionResponse {
     
     public String contentType;
+
     public UpdatePartitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePartitionResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdatePartitionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePartitionResponse {
      */
     
     public Object glueEncryptionException;
+
     public UpdatePartitionResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -39,6 +43,7 @@ public class UpdatePartitionResponse {
      */
     
     public Object internalServiceException;
+
     public UpdatePartitionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class UpdatePartitionResponse {
      */
     
     public Object invalidInputException;
+
     public UpdatePartitionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class UpdatePartitionResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdatePartitionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class UpdatePartitionResponse {
     
     
     public Integer statusCode;
+
     public UpdatePartitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdatePartitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePartitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdatePartitionResponse {
      */
     
     public java.util.Map<String, Object> updatePartitionResponse;
+
     public UpdatePartitionResponse withUpdatePartitionResponse(java.util.Map<String, Object> updatePartitionResponse) {
         this.updatePartitionResponse = updatePartitionResponse;
         return this;
     }
     
+    public UpdatePartitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

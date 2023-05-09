@@ -71,11 +71,9 @@ public class TransactionProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OneCreateanewtransactionResponse res = new org.openapis.openapi.models.operations.OneCreateanewtransactionResponse() {{
+        org.openapis.openapi.models.operations.OneCreateanewtransactionResponse res = new org.openapis.openapi.models.operations.OneCreateanewtransactionResponse(contentType, httpRes.statusCode()) {{
             startTransactionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,10 +130,8 @@ public class TransactionProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TwoSendPaymentsPublicResponse res = new org.openapis.openapi.models.operations.TwoSendPaymentsPublicResponse() {{
+        org.openapis.openapi.models.operations.TwoSendPaymentsPublicResponse res = new org.openapis.openapi.models.operations.TwoSendPaymentsPublicResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,10 +175,8 @@ public class TransactionProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TwoSendPaymentsWithSavedCreditCardResponse res = new org.openapis.openapi.models.operations.TwoSendPaymentsWithSavedCreditCardResponse() {{
+        org.openapis.openapi.models.operations.TwoSendPaymentsWithSavedCreditCardResponse res = new org.openapis.openapi.models.operations.TwoSendPaymentsWithSavedCreditCardResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -226,10 +220,8 @@ public class TransactionProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ThreeSendAdditionalDataResponse res = new org.openapis.openapi.models.operations.ThreeSendAdditionalDataResponse() {{
+        org.openapis.openapi.models.operations.ThreeSendAdditionalDataResponse res = new org.openapis.openapi.models.operations.ThreeSendAdditionalDataResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -273,10 +265,8 @@ public class TransactionProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FourDoauthorizationResponse res = new org.openapis.openapi.models.operations.FourDoauthorizationResponse() {{
+        org.openapis.openapi.models.operations.FourDoauthorizationResponse res = new org.openapis.openapi.models.operations.FourDoauthorizationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -315,11 +305,9 @@ public class TransactionProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentDetailsResponse res = new org.openapis.openapi.models.operations.PaymentDetailsResponse() {{
+        org.openapis.openapi.models.operations.PaymentDetailsResponse res = new org.openapis.openapi.models.operations.PaymentDetailsResponse(contentType, httpRes.statusCode()) {{
             paymentDetailsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -365,11 +353,9 @@ public class TransactionProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransactionDetailsResponse res = new org.openapis.openapi.models.operations.TransactionDetailsResponse() {{
+        org.openapis.openapi.models.operations.TransactionDetailsResponse res = new org.openapis.openapi.models.operations.TransactionDetailsResponse(contentType, httpRes.statusCode()) {{
             transactionDetailsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -415,11 +401,9 @@ public class TransactionProcess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransactionSettlementDetailsResponse res = new org.openapis.openapi.models.operations.TransactionSettlementDetailsResponse() {{
+        org.openapis.openapi.models.operations.TransactionSettlementDetailsResponse res = new org.openapis.openapi.models.operations.TransactionSettlementDetailsResponse(contentType, httpRes.statusCode()) {{
             transactionSettlementDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

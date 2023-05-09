@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProductResponse {
     
     public String contentType;
+
     public DeleteProductResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProductResponse {
      */
     
     public java.util.Map<String, Object> deleteProductOutput;
+
     public DeleteProductResponse withDeleteProductOutput(java.util.Map<String, Object> deleteProductOutput) {
         this.deleteProductOutput = deleteProductOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProductResponse {
      */
     
     public Object invalidParametersException;
+
     public DeleteProductResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteProductResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteProductResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteProductResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteProductResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteProductResponse {
     
     
     public Integer statusCode;
+
     public DeleteProductResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteProductResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProductResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteProductResponse {
      */
     
     public Object tagOptionNotMigratedException;
+
     public DeleteProductResponse withTagOptionNotMigratedException(Object tagOptionNotMigratedException) {
         this.tagOptionNotMigratedException = tagOptionNotMigratedException;
         return this;
     }
     
+    public DeleteProductResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

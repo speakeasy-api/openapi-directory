@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2EditGroupMembershipRequest {
@@ -12,6 +13,7 @@ public class GroupV2EditGroupMembershipRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public Long groupId;
+
     public GroupV2EditGroupMembershipRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -22,6 +24,7 @@ public class GroupV2EditGroupMembershipRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=memberType")
     public Integer memberType;
+
     public GroupV2EditGroupMembershipRequest withMemberType(Integer memberType) {
         this.memberType = memberType;
         return this;
@@ -32,6 +35,7 @@ public class GroupV2EditGroupMembershipRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
     public Long membershipId;
+
     public GroupV2EditGroupMembershipRequest withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -42,9 +46,16 @@ public class GroupV2EditGroupMembershipRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public GroupV2EditGroupMembershipRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
     }
     
+    public GroupV2EditGroupMembershipRequest(@JsonProperty("groupId") Long groupId, @JsonProperty("memberType") Integer memberType, @JsonProperty("membershipId") Long membershipId, @JsonProperty("membershipType") Integer membershipType) {
+        this.groupId = groupId;
+        this.memberType = memberType;
+        this.membershipId = membershipId;
+        this.membershipType = membershipType;
+  }
 }

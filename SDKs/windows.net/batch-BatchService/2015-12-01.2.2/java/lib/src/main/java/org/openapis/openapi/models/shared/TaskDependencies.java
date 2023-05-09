@@ -18,6 +18,7 @@ public class TaskDependencies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskIdRanges")
     public TaskIdRange[] taskIdRanges;
+
     public TaskDependencies withTaskIdRanges(TaskIdRange[] taskIdRanges) {
         this.taskIdRanges = taskIdRanges;
         return this;
@@ -29,9 +30,11 @@ public class TaskDependencies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskIds")
     public String[] taskIds;
+
     public TaskDependencies withTaskIds(String[] taskIds) {
         this.taskIds = taskIds;
         return this;
     }
     
+    public TaskDependencies(){}
 }

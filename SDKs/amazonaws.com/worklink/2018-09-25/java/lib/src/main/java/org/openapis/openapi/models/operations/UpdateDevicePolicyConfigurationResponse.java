@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDevicePolicyConfigurationResponse {
     
     public String contentType;
+
     public UpdateDevicePolicyConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDevicePolicyConfigurationResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateDevicePolicyConfigurationResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDevicePolicyConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateDevicePolicyConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDevicePolicyConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDevicePolicyConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDevicePolicyConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateDevicePolicyConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDevicePolicyConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDevicePolicyConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDevicePolicyConfigurationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateDevicePolicyConfigurationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDevicePolicyConfigurationResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateDevicePolicyConfigurationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDevicePolicyConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateDevicePolicyConfigurationResponse;
+
     public UpdateDevicePolicyConfigurationResponse withUpdateDevicePolicyConfigurationResponse(java.util.Map<String, Object> updateDevicePolicyConfigurationResponse) {
         this.updateDevicePolicyConfigurationResponse = updateDevicePolicyConfigurationResponse;
         return this;
     }
     
+    public UpdateDevicePolicyConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

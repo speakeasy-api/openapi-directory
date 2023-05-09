@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsResponse {
@@ -12,6 +13,7 @@ public class BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsResp
      */
     
     public org.openapis.openapi.models.shared.CheckValidCredsResponse checkValidCredsResponse;
+
     public BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsResponse withCheckValidCredsResponse(org.openapis.openapi.models.shared.CheckValidCredsResponse checkValidCredsResponse) {
         this.checkValidCredsResponse = checkValidCredsResponse;
         return this;
@@ -19,6 +21,7 @@ public class BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsResp
     
     
     public String contentType;
+
     public BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsResp
     
     
     public Integer statusCode;
+
     public BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

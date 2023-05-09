@@ -12,6 +12,7 @@ public class KkidUserlistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public KkidUserlistGetRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -22,6 +23,7 @@ public class KkidUserlistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enableAllowance")
     public Boolean enableAllowance;
+
     public KkidUserlistGetRequest withEnableAllowance(Boolean enableAllowance) {
         this.enableAllowance = enableAllowance;
         return this;
@@ -32,6 +34,7 @@ public class KkidUserlistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enableChores")
     public Boolean enableChores;
+
     public KkidUserlistGetRequest withEnableChores(Boolean enableChores) {
         this.enableChores = enableChores;
         return this;
@@ -42,6 +45,7 @@ public class KkidUserlistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isActive")
     public Boolean isActive;
+
     public KkidUserlistGetRequest withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -52,6 +56,7 @@ public class KkidUserlistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isAdmin")
     public Boolean isAdmin;
+
     public KkidUserlistGetRequest withIsAdmin(Boolean isAdmin) {
         this.isAdmin = isAdmin;
         return this;
@@ -62,6 +67,7 @@ public class KkidUserlistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isChild")
     public Boolean isChild;
+
     public KkidUserlistGetRequest withIsChild(Boolean isChild) {
         this.isChild = isChild;
         return this;
@@ -72,6 +78,7 @@ public class KkidUserlistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userID")
     public Long userID;
+
     public KkidUserlistGetRequest withUserID(Long userID) {
         this.userID = userID;
         return this;
@@ -82,9 +89,11 @@ public class KkidUserlistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public KkidUserlistGetRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public KkidUserlistGetRequest(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeTrustedAdvisorCheckRefreshStatusesRequest {
     @JsonProperty("checkIds")
     public String[] checkIds;
+
     public DescribeTrustedAdvisorCheckRefreshStatusesRequest withCheckIds(String[] checkIds) {
         this.checkIds = checkIds;
         return this;
     }
     
+    public DescribeTrustedAdvisorCheckRefreshStatusesRequest(@JsonProperty("checkIds") String[] checkIds) {
+        this.checkIds = checkIds;
+  }
 }

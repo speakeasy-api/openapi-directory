@@ -18,6 +18,7 @@ public class ContentInstreamPositionAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentInstreamPosition")
     public ContentInstreamPositionAssignedTargetingOptionDetailsContentInstreamPositionEnum contentInstreamPosition;
+
     public ContentInstreamPositionAssignedTargetingOptionDetailsInput withContentInstreamPosition(ContentInstreamPositionAssignedTargetingOptionDetailsContentInstreamPositionEnum contentInstreamPosition) {
         this.contentInstreamPosition = contentInstreamPosition;
         return this;
@@ -29,9 +30,11 @@ public class ContentInstreamPositionAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public ContentInstreamPositionAssignedTargetingOptionDetailsInput withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public ContentInstreamPositionAssignedTargetingOptionDetailsInput(){}
 }

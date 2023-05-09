@@ -18,6 +18,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data_sets")
     public String[] dataSets;
+
     public Database withDataSets(String[] dataSets) {
         this.dataSets = dataSets;
         return this;
@@ -29,6 +30,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database_id")
     public String databaseId;
+
     public Database withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -40,6 +42,7 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database_name")
     public String databaseName;
+
     public Database withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -51,9 +54,11 @@ public class Database {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hourly_status")
     public String[] hourlyStatus;
+
     public Database withHourlyStatus(String[] hourlyStatus) {
         this.hourlyStatus = hourlyStatus;
         return this;
     }
     
+    public Database(){}
 }

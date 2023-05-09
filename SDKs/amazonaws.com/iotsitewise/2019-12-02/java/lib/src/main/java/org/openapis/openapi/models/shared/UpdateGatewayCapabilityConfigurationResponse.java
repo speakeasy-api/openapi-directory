@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateGatewayCapabilityConfigurationResponse {
     @JsonProperty("capabilityNamespace")
     public String capabilityNamespace;
+
     public UpdateGatewayCapabilityConfigurationResponse withCapabilityNamespace(String capabilityNamespace) {
         this.capabilityNamespace = capabilityNamespace;
         return this;
@@ -19,9 +20,14 @@ public class UpdateGatewayCapabilityConfigurationResponse {
     
     @JsonProperty("capabilitySyncStatus")
     public CapabilitySyncStatusEnum capabilitySyncStatus;
+
     public UpdateGatewayCapabilityConfigurationResponse withCapabilitySyncStatus(CapabilitySyncStatusEnum capabilitySyncStatus) {
         this.capabilitySyncStatus = capabilitySyncStatus;
         return this;
     }
     
+    public UpdateGatewayCapabilityConfigurationResponse(@JsonProperty("capabilityNamespace") String capabilityNamespace, @JsonProperty("capabilitySyncStatus") CapabilitySyncStatusEnum capabilitySyncStatus) {
+        this.capabilityNamespace = capabilityNamespace;
+        this.capabilitySyncStatus = capabilitySyncStatus;
+  }
 }

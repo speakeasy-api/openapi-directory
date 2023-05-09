@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RealTimeInferenceConfig {
     @JsonProperty("InstanceCount")
     public Long instanceCount;
+
     public RealTimeInferenceConfig withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -19,9 +20,14 @@ public class RealTimeInferenceConfig {
     
     @JsonProperty("InstanceType")
     public InstanceTypeEnum instanceType;
+
     public RealTimeInferenceConfig withInstanceType(InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
     }
     
+    public RealTimeInferenceConfig(@JsonProperty("InstanceCount") Long instanceCount, @JsonProperty("InstanceType") InstanceTypeEnum instanceType) {
+        this.instanceCount = instanceCount;
+        this.instanceType = instanceType;
+  }
 }

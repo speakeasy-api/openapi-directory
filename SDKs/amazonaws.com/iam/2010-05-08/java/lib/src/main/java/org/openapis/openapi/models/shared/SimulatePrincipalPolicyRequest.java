@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SimulatePrincipalPolicyRequest {
     
     public String[] actionNames;
+
     public SimulatePrincipalPolicyRequest withActionNames(String[] actionNames) {
         this.actionNames = actionNames;
         return this;
@@ -16,6 +17,7 @@ public class SimulatePrincipalPolicyRequest {
     
     
     public String callerArn;
+
     public SimulatePrincipalPolicyRequest withCallerArn(String callerArn) {
         this.callerArn = callerArn;
         return this;
@@ -23,6 +25,7 @@ public class SimulatePrincipalPolicyRequest {
     
     
     public ContextEntry[] contextEntries;
+
     public SimulatePrincipalPolicyRequest withContextEntries(ContextEntry[] contextEntries) {
         this.contextEntries = contextEntries;
         return this;
@@ -30,6 +33,7 @@ public class SimulatePrincipalPolicyRequest {
     
     
     public String marker;
+
     public SimulatePrincipalPolicyRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -37,6 +41,7 @@ public class SimulatePrincipalPolicyRequest {
     
     
     public Long maxItems;
+
     public SimulatePrincipalPolicyRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -44,6 +49,7 @@ public class SimulatePrincipalPolicyRequest {
     
     
     public String[] permissionsBoundaryPolicyInputList;
+
     public SimulatePrincipalPolicyRequest withPermissionsBoundaryPolicyInputList(String[] permissionsBoundaryPolicyInputList) {
         this.permissionsBoundaryPolicyInputList = permissionsBoundaryPolicyInputList;
         return this;
@@ -51,6 +57,7 @@ public class SimulatePrincipalPolicyRequest {
     
     
     public String[] policyInputList;
+
     public SimulatePrincipalPolicyRequest withPolicyInputList(String[] policyInputList) {
         this.policyInputList = policyInputList;
         return this;
@@ -58,6 +65,7 @@ public class SimulatePrincipalPolicyRequest {
     
     
     public String policySourceArn;
+
     public SimulatePrincipalPolicyRequest withPolicySourceArn(String policySourceArn) {
         this.policySourceArn = policySourceArn;
         return this;
@@ -65,6 +73,7 @@ public class SimulatePrincipalPolicyRequest {
     
     
     public String[] resourceArns;
+
     public SimulatePrincipalPolicyRequest withResourceArns(String[] resourceArns) {
         this.resourceArns = resourceArns;
         return this;
@@ -72,6 +81,7 @@ public class SimulatePrincipalPolicyRequest {
     
     
     public String resourceHandlingOption;
+
     public SimulatePrincipalPolicyRequest withResourceHandlingOption(String resourceHandlingOption) {
         this.resourceHandlingOption = resourceHandlingOption;
         return this;
@@ -79,6 +89,7 @@ public class SimulatePrincipalPolicyRequest {
     
     
     public String resourceOwner;
+
     public SimulatePrincipalPolicyRequest withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -86,9 +97,14 @@ public class SimulatePrincipalPolicyRequest {
     
     
     public String resourcePolicy;
+
     public SimulatePrincipalPolicyRequest withResourcePolicy(String resourcePolicy) {
         this.resourcePolicy = resourcePolicy;
         return this;
     }
     
+    public SimulatePrincipalPolicyRequest(@JsonProperty("ActionNames") String[] actionNames, @JsonProperty("PolicySourceArn") String policySourceArn) {
+        this.actionNames = actionNames;
+        this.policySourceArn = policySourceArn;
+  }
 }

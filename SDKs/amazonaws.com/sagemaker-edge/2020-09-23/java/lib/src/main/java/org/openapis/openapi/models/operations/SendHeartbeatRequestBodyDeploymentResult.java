@@ -22,6 +22,7 @@ public class SendHeartbeatRequestBodyDeploymentResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeploymentEndTime")
     public OffsetDateTime deploymentEndTime;
+
     public SendHeartbeatRequestBodyDeploymentResult withDeploymentEndTime(OffsetDateTime deploymentEndTime) {
         this.deploymentEndTime = deploymentEndTime;
         return this;
@@ -30,6 +31,7 @@ public class SendHeartbeatRequestBodyDeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentModels")
     public org.openapis.openapi.models.shared.DeploymentModel[] deploymentModels;
+
     public SendHeartbeatRequestBodyDeploymentResult withDeploymentModels(org.openapis.openapi.models.shared.DeploymentModel[] deploymentModels) {
         this.deploymentModels = deploymentModels;
         return this;
@@ -38,6 +40,7 @@ public class SendHeartbeatRequestBodyDeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentName")
     public String deploymentName;
+
     public SendHeartbeatRequestBodyDeploymentResult withDeploymentName(String deploymentName) {
         this.deploymentName = deploymentName;
         return this;
@@ -48,6 +51,7 @@ public class SendHeartbeatRequestBodyDeploymentResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeploymentStartTime")
     public OffsetDateTime deploymentStartTime;
+
     public SendHeartbeatRequestBodyDeploymentResult withDeploymentStartTime(OffsetDateTime deploymentStartTime) {
         this.deploymentStartTime = deploymentStartTime;
         return this;
@@ -56,6 +60,7 @@ public class SendHeartbeatRequestBodyDeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentStatus")
     public String deploymentStatus;
+
     public SendHeartbeatRequestBodyDeploymentResult withDeploymentStatus(String deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -64,9 +69,11 @@ public class SendHeartbeatRequestBodyDeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentStatusMessage")
     public String deploymentStatusMessage;
+
     public SendHeartbeatRequestBodyDeploymentResult withDeploymentStatusMessage(String deploymentStatusMessage) {
         this.deploymentStatusMessage = deploymentStatusMessage;
         return this;
     }
     
+    public SendHeartbeatRequestBodyDeploymentResult(){}
 }

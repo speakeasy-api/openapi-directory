@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInterfaceRequest {
@@ -12,9 +13,13 @@ public class GetInterfaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Long agentNum;
+
     public GetInterfaceRequest withAgentNum(Long agentNum) {
         this.agentNum = agentNum;
         return this;
     }
     
+    public GetInterfaceRequest(@JsonProperty("agentNum") Long agentNum) {
+        this.agentNum = agentNum;
+  }
 }

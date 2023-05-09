@@ -25,6 +25,7 @@ public class ReleasesUpdate400ApplicationJSONDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ReleasesUpdate400ApplicationJSONDestinations withCode(String code) {
         this.code = code;
         return this;
@@ -33,6 +34,7 @@ public class ReleasesUpdate400ApplicationJSONDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ReleasesUpdate400ApplicationJSONDestinations withId(String id) {
         this.id = id;
         return this;
@@ -41,6 +43,7 @@ public class ReleasesUpdate400ApplicationJSONDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ReleasesUpdate400ApplicationJSONDestinations withMessage(String message) {
         this.message = message;
         return this;
@@ -49,9 +52,11 @@ public class ReleasesUpdate400ApplicationJSONDestinations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReleasesUpdate400ApplicationJSONDestinations withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ReleasesUpdate400ApplicationJSONDestinations(){}
 }

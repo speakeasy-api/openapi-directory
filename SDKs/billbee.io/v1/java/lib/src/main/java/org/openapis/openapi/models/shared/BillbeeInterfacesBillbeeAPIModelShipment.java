@@ -23,6 +23,7 @@ public class BillbeeInterfacesBillbeeAPIModelShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillbeeId")
     public Long billbeeId;
+
     public BillbeeInterfacesBillbeeAPIModelShipment withBillbeeId(Long billbeeId) {
         this.billbeeId = billbeeId;
         return this;
@@ -36,6 +37,7 @@ public class BillbeeInterfacesBillbeeAPIModelShipment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public BillbeeInterfacesBillbeeAPIModelShipment withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -47,6 +49,7 @@ public class BillbeeInterfacesBillbeeAPIModelShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShipmentType")
     public Integer shipmentType;
+
     public BillbeeInterfacesBillbeeAPIModelShipment withShipmentType(Integer shipmentType) {
         this.shipmentType = shipmentType;
         return this;
@@ -58,6 +61,7 @@ public class BillbeeInterfacesBillbeeAPIModelShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Shipper")
     public String shipper;
+
     public BillbeeInterfacesBillbeeAPIModelShipment withShipper(String shipper) {
         this.shipper = shipper;
         return this;
@@ -69,6 +73,7 @@ public class BillbeeInterfacesBillbeeAPIModelShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingCarrier")
     public Integer shippingCarrier;
+
     public BillbeeInterfacesBillbeeAPIModelShipment withShippingCarrier(Integer shippingCarrier) {
         this.shippingCarrier = shippingCarrier;
         return this;
@@ -80,6 +85,7 @@ public class BillbeeInterfacesBillbeeAPIModelShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingId")
     public String shippingId;
+
     public BillbeeInterfacesBillbeeAPIModelShipment withShippingId(String shippingId) {
         this.shippingId = shippingId;
         return this;
@@ -91,6 +97,7 @@ public class BillbeeInterfacesBillbeeAPIModelShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingProviderId")
     public Long shippingProviderId;
+
     public BillbeeInterfacesBillbeeAPIModelShipment withShippingProviderId(Long shippingProviderId) {
         this.shippingProviderId = shippingProviderId;
         return this;
@@ -102,6 +109,7 @@ public class BillbeeInterfacesBillbeeAPIModelShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingProviderProductId")
     public Long shippingProviderProductId;
+
     public BillbeeInterfacesBillbeeAPIModelShipment withShippingProviderProductId(Long shippingProviderProductId) {
         this.shippingProviderProductId = shippingProviderProductId;
         return this;
@@ -113,9 +121,11 @@ public class BillbeeInterfacesBillbeeAPIModelShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrackingUrl")
     public String trackingUrl;
+
     public BillbeeInterfacesBillbeeAPIModelShipment withTrackingUrl(String trackingUrl) {
         this.trackingUrl = trackingUrl;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelShipment(){}
 }

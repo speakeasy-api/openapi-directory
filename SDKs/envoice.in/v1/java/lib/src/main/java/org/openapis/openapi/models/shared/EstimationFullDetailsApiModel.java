@@ -23,6 +23,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public EstimationFullDetailsApiModel withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -34,6 +35,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Activities")
     public EstimationActivityApiModel[] activities;
+
     public EstimationFullDetailsApiModel withActivities(EstimationActivityApiModel[] activities) {
         this.activities = activities;
         return this;
@@ -45,6 +47,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attachments")
     public EstimationAttachmentApiModel[] attachments;
+
     public EstimationFullDetailsApiModel withAttachments(EstimationAttachmentApiModel[] attachments) {
         this.attachments = attachments;
         return this;
@@ -53,6 +56,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Client")
     public ClientDetailsApiModel client;
+
     public EstimationFullDetailsApiModel withClient(ClientDetailsApiModel client) {
         this.client = client;
         return this;
@@ -64,6 +68,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClonedFromId")
     public Integer clonedFromId;
+
     public EstimationFullDetailsApiModel withClonedFromId(Integer clonedFromId) {
         this.clonedFromId = clonedFromId;
         return this;
@@ -72,6 +77,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Currency")
     public CurrencyDetailsApiModel currency;
+
     public EstimationFullDetailsApiModel withCurrency(CurrencyDetailsApiModel currency) {
         this.currency = currency;
         return this;
@@ -83,6 +89,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscountAmount")
     public Double discountAmount;
+
     public EstimationFullDetailsApiModel withDiscountAmount(Double discountAmount) {
         this.discountAmount = discountAmount;
         return this;
@@ -96,6 +103,7 @@ public class EstimationFullDetailsApiModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpiresOn")
     public OffsetDateTime expiresOn;
+
     public EstimationFullDetailsApiModel withExpiresOn(OffsetDateTime expiresOn) {
         this.expiresOn = expiresOn;
         return this;
@@ -107,6 +115,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public EstimationFullDetailsApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -120,6 +129,7 @@ public class EstimationFullDetailsApiModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("IssuedOn")
     public OffsetDateTime issuedOn;
+
     public EstimationFullDetailsApiModel withIssuedOn(OffsetDateTime issuedOn) {
         this.issuedOn = issuedOn;
         return this;
@@ -131,6 +141,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public EstimationItemApiModel[] items;
+
     public EstimationFullDetailsApiModel withItems(EstimationItemApiModel[] items) {
         this.items = items;
         return this;
@@ -142,6 +153,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public EstimationFullDetailsApiModel withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -153,6 +165,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public String number;
+
     public EstimationFullDetailsApiModel withNumber(String number) {
         this.number = number;
         return this;
@@ -164,6 +177,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentGateways")
     public EstimationGatewayApiModel[] paymentGateways;
+
     public EstimationFullDetailsApiModel withPaymentGateways(EstimationGatewayApiModel[] paymentGateways) {
         this.paymentGateways = paymentGateways;
         return this;
@@ -175,6 +189,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoNumber")
     public String poNumber;
+
     public EstimationFullDetailsApiModel withPoNumber(String poNumber) {
         this.poNumber = poNumber;
         return this;
@@ -186,6 +201,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EstimationFullDetailsApiModelStatusEnum status;
+
     public EstimationFullDetailsApiModel withStatus(EstimationFullDetailsApiModelStatusEnum status) {
         this.status = status;
         return this;
@@ -197,6 +213,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubTotalAmount")
     public Double subTotalAmount;
+
     public EstimationFullDetailsApiModel withSubTotalAmount(Double subTotalAmount) {
         this.subTotalAmount = subTotalAmount;
         return this;
@@ -208,6 +225,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxAmount")
     public Double taxAmount;
+
     public EstimationFullDetailsApiModel withTaxAmount(Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
@@ -219,6 +237,7 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Terms")
     public String terms;
+
     public EstimationFullDetailsApiModel withTerms(String terms) {
         this.terms = terms;
         return this;
@@ -230,9 +249,11 @@ public class EstimationFullDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalAmount")
     public Double totalAmount;
+
     public EstimationFullDetailsApiModel withTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
     
+    public EstimationFullDetailsApiModel(){}
 }

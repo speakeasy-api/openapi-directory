@@ -18,6 +18,7 @@ public class BulkEditAssignedTargetingOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Status[] errors;
+
     public BulkEditAssignedTargetingOptionsResponse withErrors(Status[] errors) {
         this.errors = errors;
         return this;
@@ -29,6 +30,7 @@ public class BulkEditAssignedTargetingOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedLineItemIds")
     public String[] failedLineItemIds;
+
     public BulkEditAssignedTargetingOptionsResponse withFailedLineItemIds(String[] failedLineItemIds) {
         this.failedLineItemIds = failedLineItemIds;
         return this;
@@ -40,9 +42,11 @@ public class BulkEditAssignedTargetingOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedLineItemIds")
     public String[] updatedLineItemIds;
+
     public BulkEditAssignedTargetingOptionsResponse withUpdatedLineItemIds(String[] updatedLineItemIds) {
         this.updatedLineItemIds = updatedLineItemIds;
         return this;
     }
     
+    public BulkEditAssignedTargetingOptionsResponse(){}
 }

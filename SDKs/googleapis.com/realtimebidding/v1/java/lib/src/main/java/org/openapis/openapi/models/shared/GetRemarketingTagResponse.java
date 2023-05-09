@@ -18,9 +18,11 @@ public class GetRemarketingTagResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public String snippet;
+
     public GetRemarketingTagResponse withSnippet(String snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public GetRemarketingTagResponse(){}
 }

@@ -20,6 +20,7 @@ public class CallAnalyticsJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CallAnalyticsJobName")
     public String callAnalyticsJobName;
+
     public CallAnalyticsJobSummary withCallAnalyticsJobName(String callAnalyticsJobName) {
         this.callAnalyticsJobName = callAnalyticsJobName;
         return this;
@@ -28,6 +29,7 @@ public class CallAnalyticsJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CallAnalyticsJobStatus")
     public CallAnalyticsJobStatusEnum callAnalyticsJobStatus;
+
     public CallAnalyticsJobSummary withCallAnalyticsJobStatus(CallAnalyticsJobStatusEnum callAnalyticsJobStatus) {
         this.callAnalyticsJobStatus = callAnalyticsJobStatus;
         return this;
@@ -38,6 +40,7 @@ public class CallAnalyticsJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletionTime")
     public OffsetDateTime completionTime;
+
     public CallAnalyticsJobSummary withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -48,6 +51,7 @@ public class CallAnalyticsJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public CallAnalyticsJobSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -56,6 +60,7 @@ public class CallAnalyticsJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public CallAnalyticsJobSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -64,6 +69,7 @@ public class CallAnalyticsJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public CallAnalyticsJobSummary withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -74,9 +80,11 @@ public class CallAnalyticsJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public CallAnalyticsJobSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public CallAnalyticsJobSummary(){}
 }

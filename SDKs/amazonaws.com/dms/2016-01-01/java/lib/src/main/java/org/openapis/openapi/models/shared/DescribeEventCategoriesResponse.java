@@ -15,9 +15,11 @@ public class DescribeEventCategoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventCategoryGroupList")
     public EventCategoryGroup[] eventCategoryGroupList;
+
     public DescribeEventCategoriesResponse withEventCategoryGroupList(EventCategoryGroup[] eventCategoryGroupList) {
         this.eventCategoryGroupList = eventCategoryGroupList;
         return this;
     }
     
+    public DescribeEventCategoriesResponse(){}
 }

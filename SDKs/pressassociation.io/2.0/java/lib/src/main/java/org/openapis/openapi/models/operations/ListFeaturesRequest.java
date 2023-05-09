@@ -12,6 +12,7 @@ public class ListFeaturesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public ListFeaturesRequest withDate(String date) {
         this.date = date;
         return this;
@@ -22,6 +23,7 @@ public class ListFeaturesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public String end;
+
     public ListFeaturesRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -32,6 +34,7 @@ public class ListFeaturesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public ListFeaturesRequest withStart(String start) {
         this.start = start;
         return this;
@@ -42,9 +45,11 @@ public class ListFeaturesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public ListFeaturesRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ListFeaturesRequest(){}
 }

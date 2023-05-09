@@ -18,6 +18,7 @@ public class OtherRegionsSubscriptionOfferPhasePrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eurPrice")
     public Money eurPrice;
+
     public OtherRegionsSubscriptionOfferPhasePrices withEurPrice(Money eurPrice) {
         this.eurPrice = eurPrice;
         return this;
@@ -29,9 +30,11 @@ public class OtherRegionsSubscriptionOfferPhasePrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usdPrice")
     public Money usdPrice;
+
     public OtherRegionsSubscriptionOfferPhasePrices withUsdPrice(Money usdPrice) {
         this.usdPrice = usdPrice;
         return this;
     }
     
+    public OtherRegionsSubscriptionOfferPhasePrices(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateACLResponse {
@@ -12,6 +13,7 @@ public class CreateACLResponse {
      */
     
     public Object aclAlreadyExistsFault;
+
     public CreateACLResponse withACLAlreadyExistsFault(Object aclAlreadyExistsFault) {
         this.aclAlreadyExistsFault = aclAlreadyExistsFault;
         return this;
@@ -22,6 +24,7 @@ public class CreateACLResponse {
      */
     
     public Object aclQuotaExceededFault;
+
     public CreateACLResponse withACLQuotaExceededFault(Object aclQuotaExceededFault) {
         this.aclQuotaExceededFault = aclQuotaExceededFault;
         return this;
@@ -29,6 +32,7 @@ public class CreateACLResponse {
     
     
     public String contentType;
+
     public CreateACLResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateACLResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateACLResponse createACLResponse;
+
     public CreateACLResponse withCreateACLResponse(org.openapis.openapi.models.shared.CreateACLResponse createACLResponse) {
         this.createACLResponse = createACLResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateACLResponse {
      */
     
     public Object defaultUserRequired;
+
     public CreateACLResponse withDefaultUserRequired(Object defaultUserRequired) {
         this.defaultUserRequired = defaultUserRequired;
         return this;
@@ -59,6 +65,7 @@ public class CreateACLResponse {
      */
     
     public Object duplicateUserNameFault;
+
     public CreateACLResponse withDuplicateUserNameFault(Object duplicateUserNameFault) {
         this.duplicateUserNameFault = duplicateUserNameFault;
         return this;
@@ -69,6 +76,7 @@ public class CreateACLResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CreateACLResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -76,6 +84,7 @@ public class CreateACLResponse {
     
     
     public Integer statusCode;
+
     public CreateACLResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateACLResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateACLResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateACLResponse {
      */
     
     public Object tagQuotaPerResourceExceeded;
+
     public CreateACLResponse withTagQuotaPerResourceExceeded(Object tagQuotaPerResourceExceeded) {
         this.tagQuotaPerResourceExceeded = tagQuotaPerResourceExceeded;
         return this;
@@ -103,9 +114,14 @@ public class CreateACLResponse {
      */
     
     public Object userNotFoundFault;
+
     public CreateACLResponse withUserNotFoundFault(Object userNotFoundFault) {
         this.userNotFoundFault = userNotFoundFault;
         return this;
     }
     
+    public CreateACLResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClassifyImageUrlWithNoStoreJsonRequest {
@@ -12,6 +13,7 @@ public class ClassifyImageUrlWithNoStoreJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+
     public ClassifyImageUrlWithNoStoreJsonRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -22,6 +24,7 @@ public class ClassifyImageUrlWithNoStoreJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
     public String application;
+
     public ClassifyImageUrlWithNoStoreJsonRequest withApplication(String application) {
         this.application = application;
         return this;
@@ -32,6 +35,7 @@ public class ClassifyImageUrlWithNoStoreJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public ClassifyImageUrlWithNoStoreJsonRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -42,9 +46,15 @@ public class ClassifyImageUrlWithNoStoreJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=publishedName")
     public String publishedName;
+
     public ClassifyImageUrlWithNoStoreJsonRequest withPublishedName(String publishedName) {
         this.publishedName = publishedName;
         return this;
     }
     
+    public ClassifyImageUrlWithNoStoreJsonRequest(@JsonProperty("ImageUrl") org.openapis.openapi.models.shared.ImageUrl imageUrl, @JsonProperty("projectId") String projectId, @JsonProperty("publishedName") String publishedName) {
+        this.imageUrl = imageUrl;
+        this.projectId = projectId;
+        this.publishedName = publishedName;
+  }
 }

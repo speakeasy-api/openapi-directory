@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PoolGetAllPoolsLifetimeStatisticsRequest {
@@ -12,6 +13,7 @@ public class PoolGetAllPoolsLifetimeStatisticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public PoolGetAllPoolsLifetimeStatisticsRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -22,6 +24,7 @@ public class PoolGetAllPoolsLifetimeStatisticsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public PoolGetAllPoolsLifetimeStatisticsRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -32,6 +35,7 @@ public class PoolGetAllPoolsLifetimeStatisticsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public PoolGetAllPoolsLifetimeStatisticsRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -42,6 +46,7 @@ public class PoolGetAllPoolsLifetimeStatisticsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public PoolGetAllPoolsLifetimeStatisticsRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -52,9 +57,13 @@ public class PoolGetAllPoolsLifetimeStatisticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public PoolGetAllPoolsLifetimeStatisticsRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public PoolGetAllPoolsLifetimeStatisticsRequest(@JsonProperty("api-version") String apiVersion) {
+        this.apiVersion = apiVersion;
+  }
 }

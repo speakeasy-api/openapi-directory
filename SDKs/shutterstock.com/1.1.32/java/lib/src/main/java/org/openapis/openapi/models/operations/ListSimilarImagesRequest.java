@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSimilarImagesRequest {
@@ -12,6 +13,7 @@ public class ListSimilarImagesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ListSimilarImagesRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class ListSimilarImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public org.openapis.openapi.models.shared.LanguageEnum language;
+
     public ListSimilarImagesRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
         this.language = language;
         return this;
@@ -32,6 +35,7 @@ public class ListSimilarImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ListSimilarImagesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class ListSimilarImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ListSimilarImagesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,9 +57,13 @@ public class ListSimilarImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public ListSimilarImagesViewEnum view;
+
     public ListSimilarImagesRequest withView(ListSimilarImagesViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public ListSimilarImagesRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

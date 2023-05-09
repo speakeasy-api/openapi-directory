@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubmitAttachmentStateChangesRequest {
     @JsonProperty("attachments")
     public AttachmentStateChange[] attachments;
+
     public SubmitAttachmentStateChangesRequest withAttachments(AttachmentStateChange[] attachments) {
         this.attachments = attachments;
         return this;
@@ -19,9 +20,13 @@ public class SubmitAttachmentStateChangesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public SubmitAttachmentStateChangesRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
     }
     
+    public SubmitAttachmentStateChangesRequest(@JsonProperty("attachments") AttachmentStateChange[] attachments) {
+        this.attachments = attachments;
+  }
 }

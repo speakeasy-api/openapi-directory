@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddTaskForSectionRequest {
@@ -12,6 +13,7 @@ public class AddTaskForSectionRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AddTaskForSectionRequestBody requestBody;
+
     public AddTaskForSectionRequest withRequestBody(AddTaskForSectionRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class AddTaskForSectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public AddTaskForSectionRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class AddTaskForSectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public AddTaskForSectionRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,9 +49,14 @@ public class AddTaskForSectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=section_gid")
     public String sectionGid;
+
     public AddTaskForSectionRequest withSectionGid(String sectionGid) {
         this.sectionGid = sectionGid;
         return this;
     }
     
+    public AddTaskForSectionRequest(@JsonProperty("RequestBody") AddTaskForSectionRequestBody requestBody, @JsonProperty("section_gid") String sectionGid) {
+        this.requestBody = requestBody;
+        this.sectionGid = sectionGid;
+  }
 }

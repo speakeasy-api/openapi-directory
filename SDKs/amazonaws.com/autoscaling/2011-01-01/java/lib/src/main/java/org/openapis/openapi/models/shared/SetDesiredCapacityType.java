@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SetDesiredCapacityType {
     
     public String autoScalingGroupName;
+
     public SetDesiredCapacityType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class SetDesiredCapacityType {
     
     
     public Long desiredCapacity;
+
     public SetDesiredCapacityType withDesiredCapacity(Long desiredCapacity) {
         this.desiredCapacity = desiredCapacity;
         return this;
@@ -23,9 +25,14 @@ public class SetDesiredCapacityType {
     
     
     public Boolean honorCooldown;
+
     public SetDesiredCapacityType withHonorCooldown(Boolean honorCooldown) {
         this.honorCooldown = honorCooldown;
         return this;
     }
     
+    public SetDesiredCapacityType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("DesiredCapacity") Long desiredCapacity) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.desiredCapacity = desiredCapacity;
+  }
 }

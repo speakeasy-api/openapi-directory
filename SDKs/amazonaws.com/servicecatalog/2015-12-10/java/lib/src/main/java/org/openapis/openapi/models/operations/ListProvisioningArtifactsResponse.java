@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProvisioningArtifactsResponse {
     
     public String contentType;
+
     public ListProvisioningArtifactsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListProvisioningArtifactsResponse {
      */
     
     public Object invalidParametersException;
+
     public ListProvisioningArtifactsResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class ListProvisioningArtifactsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProvisioningArtifactsOutput listProvisioningArtifactsOutput;
+
     public ListProvisioningArtifactsResponse withListProvisioningArtifactsOutput(org.openapis.openapi.models.shared.ListProvisioningArtifactsOutput listProvisioningArtifactsOutput) {
         this.listProvisioningArtifactsOutput = listProvisioningArtifactsOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListProvisioningArtifactsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListProvisioningArtifactsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListProvisioningArtifactsResponse {
     
     
     public Integer statusCode;
+
     public ListProvisioningArtifactsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListProvisioningArtifactsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProvisioningArtifactsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListProvisioningArtifactsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

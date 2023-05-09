@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDimensionResponse {
     
     public String contentType;
+
     public DescribeDimensionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDimensionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDimensionResponse describeDimensionResponse;
+
     public DescribeDimensionResponse withDescribeDimensionResponse(org.openapis.openapi.models.shared.DescribeDimensionResponse describeDimensionResponse) {
         this.describeDimensionResponse = describeDimensionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDimensionResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeDimensionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDimensionResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeDimensionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeDimensionResponse {
     
     
     public Integer statusCode;
+
     public DescribeDimensionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeDimensionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDimensionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeDimensionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDimensionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeDimensionResponse {
      */
     
     public Object throttlingException;
+
     public DescribeDimensionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeDimensionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

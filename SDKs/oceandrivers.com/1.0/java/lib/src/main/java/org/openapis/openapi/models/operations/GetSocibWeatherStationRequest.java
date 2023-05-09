@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSocibWeatherStationRequest {
@@ -12,6 +13,7 @@ public class GetSocibWeatherStationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=period")
     public String period;
+
     public GetSocibWeatherStationRequest withPeriod(String period) {
         this.period = period;
         return this;
@@ -22,9 +24,14 @@ public class GetSocibWeatherStationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stationName")
     public String stationName;
+
     public GetSocibWeatherStationRequest withStationName(String stationName) {
         this.stationName = stationName;
         return this;
     }
     
+    public GetSocibWeatherStationRequest(@JsonProperty("period") String period, @JsonProperty("stationName") String stationName) {
+        this.period = period;
+        this.stationName = stationName;
+  }
 }

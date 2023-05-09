@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateGUISessionAccessDetailsRequest {
     @JsonProperty("resourceName")
     public String resourceName;
+
     public CreateGUISessionAccessDetailsRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public CreateGUISessionAccessDetailsRequest(@JsonProperty("resourceName") String resourceName) {
+        this.resourceName = resourceName;
+  }
 }

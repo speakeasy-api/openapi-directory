@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SendTemplatedEmailResponse - Success
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class SendTemplatedEmailResponse {
     
     public String messageId;
+
     public SendTemplatedEmailResponse withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
     
+    public SendTemplatedEmailResponse(@JsonProperty("MessageId") String messageId) {
+        this.messageId = messageId;
+  }
 }

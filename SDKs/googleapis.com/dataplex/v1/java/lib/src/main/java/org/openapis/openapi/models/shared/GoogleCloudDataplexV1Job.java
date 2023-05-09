@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudDataplexV1Job withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GoogleCloudDataplexV1Job withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1Job withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryCount")
     public Long retryCount;
+
     public GoogleCloudDataplexV1Job withRetryCount(Long retryCount) {
         this.retryCount = retryCount;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public GoogleCloudDataplexV1JobServiceEnum service;
+
     public GoogleCloudDataplexV1Job withService(GoogleCloudDataplexV1JobServiceEnum service) {
         this.service = service;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceJob")
     public String serviceJob;
+
     public GoogleCloudDataplexV1Job withServiceJob(String serviceJob) {
         this.serviceJob = serviceJob;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDataplexV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudDataplexV1Job withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDataplexV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDataplexV1JobStateEnum state;
+
     public GoogleCloudDataplexV1Job withState(GoogleCloudDataplexV1JobStateEnum state) {
         this.state = state;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudDataplexV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GoogleCloudDataplexV1Job withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public GoogleCloudDataplexV1Job(){}
 }

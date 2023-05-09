@@ -15,9 +15,13 @@ public class DeleteAccountRequestBody {
      */
     @JsonProperty("identification")
     public DeleteAccountRequestBodyIdentification identification;
+
     public DeleteAccountRequestBody withIdentification(DeleteAccountRequestBodyIdentification identification) {
         this.identification = identification;
         return this;
     }
     
+    public DeleteAccountRequestBody(@JsonProperty("identification") DeleteAccountRequestBodyIdentification identification) {
+        this.identification = identification;
+  }
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class LoadBalancer {
     
     public AvailabilityZone[] availabilityZones;
+
     public LoadBalancer withAvailabilityZones(AvailabilityZone[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -19,6 +20,7 @@ public class LoadBalancer {
     
     
     public String canonicalHostedZoneId;
+
     public LoadBalancer withCanonicalHostedZoneId(String canonicalHostedZoneId) {
         this.canonicalHostedZoneId = canonicalHostedZoneId;
         return this;
@@ -26,6 +28,7 @@ public class LoadBalancer {
     
     
     public OffsetDateTime createdTime;
+
     public LoadBalancer withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -33,6 +36,7 @@ public class LoadBalancer {
     
     
     public String customerOwnedIpv4Pool;
+
     public LoadBalancer withCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
         this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
         return this;
@@ -40,6 +44,7 @@ public class LoadBalancer {
     
     
     public String dnsName;
+
     public LoadBalancer withDNSName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -47,6 +52,7 @@ public class LoadBalancer {
     
     
     public IpAddressTypeEnum ipAddressType;
+
     public LoadBalancer withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -54,6 +60,7 @@ public class LoadBalancer {
     
     
     public String loadBalancerArn;
+
     public LoadBalancer withLoadBalancerArn(String loadBalancerArn) {
         this.loadBalancerArn = loadBalancerArn;
         return this;
@@ -61,6 +68,7 @@ public class LoadBalancer {
     
     
     public String loadBalancerName;
+
     public LoadBalancer withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -68,6 +76,7 @@ public class LoadBalancer {
     
     
     public LoadBalancerSchemeEnumEnum scheme;
+
     public LoadBalancer withScheme(LoadBalancerSchemeEnumEnum scheme) {
         this.scheme = scheme;
         return this;
@@ -75,6 +84,7 @@ public class LoadBalancer {
     
     
     public String[] securityGroups;
+
     public LoadBalancer withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -82,6 +92,7 @@ public class LoadBalancer {
     
     
     public LoadBalancerState state;
+
     public LoadBalancer withState(LoadBalancerState state) {
         this.state = state;
         return this;
@@ -89,6 +100,7 @@ public class LoadBalancer {
     
     
     public LoadBalancerTypeEnumEnum type;
+
     public LoadBalancer withType(LoadBalancerTypeEnumEnum type) {
         this.type = type;
         return this;
@@ -96,9 +108,11 @@ public class LoadBalancer {
     
     
     public String vpcId;
+
     public LoadBalancer withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public LoadBalancer(){}
 }

@@ -12,6 +12,7 @@ public class EmailTemplateViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customized")
     public Boolean customized;
+
     public EmailTemplateViewModel withCustomized(Boolean customized) {
         this.customized = customized;
         return this;
@@ -20,6 +21,7 @@ public class EmailTemplateViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EmailTemplateViewModel withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class EmailTemplateViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EmailTemplateViewModel withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class EmailTemplateViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public EmailTemplateViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -44,9 +48,11 @@ public class EmailTemplateViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public EmailTemplateViewModel withScope(String scope) {
         this.scope = scope;
         return this;
     }
     
+    public EmailTemplateViewModel(){}
 }

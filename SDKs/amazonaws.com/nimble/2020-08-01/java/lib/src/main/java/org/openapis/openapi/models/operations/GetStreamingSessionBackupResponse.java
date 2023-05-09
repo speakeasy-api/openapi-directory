@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStreamingSessionBackupResponse {
@@ -12,6 +13,7 @@ public class GetStreamingSessionBackupResponse {
      */
     
     public Object accessDeniedException;
+
     public GetStreamingSessionBackupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetStreamingSessionBackupResponse {
      */
     
     public Object conflictException;
+
     public GetStreamingSessionBackupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetStreamingSessionBackupResponse {
     
     
     public String contentType;
+
     public GetStreamingSessionBackupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetStreamingSessionBackupResponse {
      */
     
     public org.openapis.openapi.models.shared.GetStreamingSessionBackupResponse getStreamingSessionBackupResponse;
+
     public GetStreamingSessionBackupResponse withGetStreamingSessionBackupResponse(org.openapis.openapi.models.shared.GetStreamingSessionBackupResponse getStreamingSessionBackupResponse) {
         this.getStreamingSessionBackupResponse = getStreamingSessionBackupResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetStreamingSessionBackupResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetStreamingSessionBackupResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetStreamingSessionBackupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetStreamingSessionBackupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetStreamingSessionBackupResponse {
     
     
     public Integer statusCode;
+
     public GetStreamingSessionBackupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetStreamingSessionBackupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStreamingSessionBackupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetStreamingSessionBackupResponse {
      */
     
     public Object throttlingException;
+
     public GetStreamingSessionBackupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class GetStreamingSessionBackupResponse {
      */
     
     public Object validationException;
+
     public GetStreamingSessionBackupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetStreamingSessionBackupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

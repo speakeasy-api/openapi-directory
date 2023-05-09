@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ComputeCapacity {
     @JsonProperty("DesiredInstances")
     public Long desiredInstances;
+
     public ComputeCapacity withDesiredInstances(Long desiredInstances) {
         this.desiredInstances = desiredInstances;
         return this;
     }
     
+    public ComputeCapacity(@JsonProperty("DesiredInstances") Long desiredInstances) {
+        this.desiredInstances = desiredInstances;
+  }
 }

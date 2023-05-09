@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CertificateBundle {
     @JsonProperty("pems")
     public PEMCertificates pems;
+
     public CertificateBundle withPems(PEMCertificates pems) {
         this.pems = pems;
         return this;
@@ -22,9 +23,14 @@ public class CertificateBundle {
      */
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public CertificateBundle withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
     }
     
+    public CertificateBundle(@JsonProperty("pems") PEMCertificates pems, @JsonProperty("serialNumber") String serialNumber) {
+        this.pems = pems;
+        this.serialNumber = serialNumber;
+  }
 }

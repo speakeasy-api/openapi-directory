@@ -58,11 +58,9 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductsDeleteResponse res = new org.openapis.openapi.models.operations.ProductsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ProductsDeleteResponse res = new org.openapis.openapi.models.operations.ProductsDeleteResponse(contentType, httpRes.statusCode()) {{
             productsDelete200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,11 +93,9 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductsGetResponse res = new org.openapis.openapi.models.operations.ProductsGetResponse() {{
+        org.openapis.openapi.models.operations.ProductsGetResponse res = new org.openapis.openapi.models.operations.ProductsGetResponse(contentType, httpRes.statusCode()) {{
             pageResultProductDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,11 +134,9 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductsPostResponse res = new org.openapis.openapi.models.operations.ProductsPostResponse() {{
+        org.openapis.openapi.models.operations.ProductsPostResponse res = new org.openapis.openapi.models.operations.ProductsPostResponse(contentType, httpRes.statusCode()) {{
             productsPost200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -181,11 +175,9 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductsProcessBatchResponse res = new org.openapis.openapi.models.operations.ProductsProcessBatchResponse() {{
+        org.openapis.openapi.models.operations.ProductsProcessBatchResponse res = new org.openapis.openapi.models.operations.ProductsProcessBatchResponse(contentType, httpRes.statusCode()) {{
             productsProcessBatch200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -224,11 +216,9 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductsPutResponse res = new org.openapis.openapi.models.operations.ProductsPutResponse() {{
+        org.openapis.openapi.models.operations.ProductsPutResponse res = new org.openapis.openapi.models.operations.ProductsPutResponse(contentType, httpRes.statusCode()) {{
             productsPut200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -262,11 +252,9 @@ public class Products {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV1ProductsIdResponse res = new org.openapis.openapi.models.operations.GetV1ProductsIdResponse() {{
+        org.openapis.openapi.models.operations.GetV1ProductsIdResponse res = new org.openapis.openapi.models.operations.GetV1ProductsIdResponse(contentType, httpRes.statusCode()) {{
             productDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

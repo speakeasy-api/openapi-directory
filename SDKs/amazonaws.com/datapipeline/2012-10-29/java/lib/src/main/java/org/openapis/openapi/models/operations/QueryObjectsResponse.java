@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class QueryObjectsResponse {
     
     public String contentType;
+
     public QueryObjectsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class QueryObjectsResponse {
      */
     
     public Object internalServiceError;
+
     public QueryObjectsResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class QueryObjectsResponse {
      */
     
     public Object invalidRequestException;
+
     public QueryObjectsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class QueryObjectsResponse {
      */
     
     public Object pipelineDeletedException;
+
     public QueryObjectsResponse withPipelineDeletedException(Object pipelineDeletedException) {
         this.pipelineDeletedException = pipelineDeletedException;
         return this;
@@ -49,6 +54,7 @@ public class QueryObjectsResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public QueryObjectsResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class QueryObjectsResponse {
      */
     
     public org.openapis.openapi.models.shared.QueryObjectsOutput queryObjectsOutput;
+
     public QueryObjectsResponse withQueryObjectsOutput(org.openapis.openapi.models.shared.QueryObjectsOutput queryObjectsOutput) {
         this.queryObjectsOutput = queryObjectsOutput;
         return this;
@@ -66,6 +73,7 @@ public class QueryObjectsResponse {
     
     
     public Integer statusCode;
+
     public QueryObjectsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class QueryObjectsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public QueryObjectsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public QueryObjectsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class WorkerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseUrl")
     public String baseUrl;
+
     public WorkerSettings withBaseUrl(String baseUrl) {
         this.baseUrl = baseUrl;
         return this;
@@ -29,6 +30,7 @@ public class WorkerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportingEnabled")
     public Boolean reportingEnabled;
+
     public WorkerSettings withReportingEnabled(Boolean reportingEnabled) {
         this.reportingEnabled = reportingEnabled;
         return this;
@@ -40,6 +42,7 @@ public class WorkerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicePath")
     public String servicePath;
+
     public WorkerSettings withServicePath(String servicePath) {
         this.servicePath = servicePath;
         return this;
@@ -51,6 +54,7 @@ public class WorkerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shuffleServicePath")
     public String shuffleServicePath;
+
     public WorkerSettings withShuffleServicePath(String shuffleServicePath) {
         this.shuffleServicePath = shuffleServicePath;
         return this;
@@ -62,6 +66,7 @@ public class WorkerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tempStoragePrefix")
     public String tempStoragePrefix;
+
     public WorkerSettings withTempStoragePrefix(String tempStoragePrefix) {
         this.tempStoragePrefix = tempStoragePrefix;
         return this;
@@ -73,9 +78,11 @@ public class WorkerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerId")
     public String workerId;
+
     public WorkerSettings withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public WorkerSettings(){}
 }

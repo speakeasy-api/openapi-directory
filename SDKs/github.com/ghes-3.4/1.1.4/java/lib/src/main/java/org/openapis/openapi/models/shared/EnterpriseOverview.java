@@ -15,6 +15,7 @@ public class EnterpriseOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public EnterpriseCommentOverview comments;
+
     public EnterpriseOverview withComments(EnterpriseCommentOverview comments) {
         this.comments = comments;
         return this;
@@ -23,6 +24,7 @@ public class EnterpriseOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gists")
     public EnterpriseGistOverview gists;
+
     public EnterpriseOverview withGists(EnterpriseGistOverview gists) {
         this.gists = gists;
         return this;
@@ -31,6 +33,7 @@ public class EnterpriseOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hooks")
     public EnterpriseHookOverview hooks;
+
     public EnterpriseOverview withHooks(EnterpriseHookOverview hooks) {
         this.hooks = hooks;
         return this;
@@ -39,6 +42,7 @@ public class EnterpriseOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public EnterpriseIssueOverview issues;
+
     public EnterpriseOverview withIssues(EnterpriseIssueOverview issues) {
         this.issues = issues;
         return this;
@@ -47,6 +51,7 @@ public class EnterpriseOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("milestones")
     public EnterpriseMilestoneOverview milestones;
+
     public EnterpriseOverview withMilestones(EnterpriseMilestoneOverview milestones) {
         this.milestones = milestones;
         return this;
@@ -55,6 +60,7 @@ public class EnterpriseOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgs")
     public EnterpriseOrganizationOverview orgs;
+
     public EnterpriseOverview withOrgs(EnterpriseOrganizationOverview orgs) {
         this.orgs = orgs;
         return this;
@@ -63,6 +69,7 @@ public class EnterpriseOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pages")
     public EnterprisePageOverview pages;
+
     public EnterpriseOverview withPages(EnterprisePageOverview pages) {
         this.pages = pages;
         return this;
@@ -71,6 +78,7 @@ public class EnterpriseOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pulls")
     public EnterprisePullRequestOverview pulls;
+
     public EnterpriseOverview withPulls(EnterprisePullRequestOverview pulls) {
         this.pulls = pulls;
         return this;
@@ -79,6 +87,7 @@ public class EnterpriseOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repos")
     public EnterpriseRepositoryOverview repos;
+
     public EnterpriseOverview withRepos(EnterpriseRepositoryOverview repos) {
         this.repos = repos;
         return this;
@@ -87,9 +96,11 @@ public class EnterpriseOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public EnterpriseUserOverview users;
+
     public EnterpriseOverview withUsers(EnterpriseUserOverview users) {
         this.users = users;
         return this;
     }
     
+    public EnterpriseOverview(){}
 }

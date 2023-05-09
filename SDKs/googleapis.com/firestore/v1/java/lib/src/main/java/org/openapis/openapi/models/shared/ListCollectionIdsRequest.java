@@ -18,6 +18,7 @@ public class ListCollectionIdsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public ListCollectionIdsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -29,6 +30,7 @@ public class ListCollectionIdsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public ListCollectionIdsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListCollectionIdsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public ListCollectionIdsRequest withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
     }
     
+    public ListCollectionIdsRequest(){}
 }

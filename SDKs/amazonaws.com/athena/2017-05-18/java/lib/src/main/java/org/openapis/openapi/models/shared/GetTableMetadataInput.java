@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetTableMetadataInput {
     @JsonProperty("CatalogName")
     public String catalogName;
+
     public GetTableMetadataInput withCatalogName(String catalogName) {
         this.catalogName = catalogName;
         return this;
@@ -16,6 +17,7 @@ public class GetTableMetadataInput {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetTableMetadataInput withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -23,9 +25,15 @@ public class GetTableMetadataInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public GetTableMetadataInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public GetTableMetadataInput(@JsonProperty("CatalogName") String catalogName, @JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName) {
+        this.catalogName = catalogName;
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

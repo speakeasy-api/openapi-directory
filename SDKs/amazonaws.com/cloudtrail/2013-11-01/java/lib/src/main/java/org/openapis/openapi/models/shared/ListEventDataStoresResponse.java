@@ -15,6 +15,7 @@ public class ListEventDataStoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventDataStores")
     public EventDataStore[] eventDataStores;
+
     public ListEventDataStoresResponse withEventDataStores(EventDataStore[] eventDataStores) {
         this.eventDataStores = eventDataStores;
         return this;
@@ -23,9 +24,11 @@ public class ListEventDataStoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEventDataStoresResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEventDataStoresResponse(){}
 }

@@ -51,4 +51,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVideointelligenc
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVideointelligenceV1beta2FaceDetectionConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVideointelligenceV1beta2ExplicitContentDetectionConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
+docs/sdk/README.md
+docs/videos/README.md
 USAGE.md

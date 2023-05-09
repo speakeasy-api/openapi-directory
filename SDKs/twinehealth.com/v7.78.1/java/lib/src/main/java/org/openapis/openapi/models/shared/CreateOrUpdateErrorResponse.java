@@ -15,6 +15,7 @@ public class CreateOrUpdateErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error errors;
+
     public CreateOrUpdateErrorResponse withErrors(Error errors) {
         this.errors = errors;
         return this;
@@ -23,9 +24,11 @@ public class CreateOrUpdateErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public CreateOrUpdateMetaResponse meta;
+
     public CreateOrUpdateErrorResponse withMeta(CreateOrUpdateMetaResponse meta) {
         this.meta = meta;
         return this;
     }
     
+    public CreateOrUpdateErrorResponse(){}
 }

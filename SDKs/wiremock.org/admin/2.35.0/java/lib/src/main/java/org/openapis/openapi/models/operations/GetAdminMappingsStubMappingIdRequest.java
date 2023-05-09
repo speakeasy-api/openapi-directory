@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAdminMappingsStubMappingIdRequest {
@@ -12,9 +13,13 @@ public class GetAdminMappingsStubMappingIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stubMappingId")
     public String stubMappingId;
+
     public GetAdminMappingsStubMappingIdRequest withStubMappingId(String stubMappingId) {
         this.stubMappingId = stubMappingId;
         return this;
     }
     
+    public GetAdminMappingsStubMappingIdRequest(@JsonProperty("stubMappingId") String stubMappingId) {
+        this.stubMappingId = stubMappingId;
+  }
 }

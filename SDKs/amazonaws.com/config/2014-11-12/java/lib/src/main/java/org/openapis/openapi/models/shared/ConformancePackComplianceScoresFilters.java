@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConformancePackComplianceScoresFilters {
     @JsonProperty("ConformancePackNames")
     public String[] conformancePackNames;
+
     public ConformancePackComplianceScoresFilters withConformancePackNames(String[] conformancePackNames) {
         this.conformancePackNames = conformancePackNames;
         return this;
     }
     
+    public ConformancePackComplianceScoresFilters(@JsonProperty("ConformancePackNames") String[] conformancePackNames) {
+        this.conformancePackNames = conformancePackNames;
+  }
 }

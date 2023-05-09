@@ -18,6 +18,7 @@ public class RequestOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugOptions")
     public DebugOptions debugOptions;
+
     public RequestOptions withDebugOptions(DebugOptions debugOptions) {
         this.debugOptions = debugOptions;
         return this;
@@ -29,6 +30,7 @@ public class RequestOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public RequestOptions withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -40,6 +42,7 @@ public class RequestOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchApplicationId")
     public String searchApplicationId;
+
     public RequestOptions withSearchApplicationId(String searchApplicationId) {
         this.searchApplicationId = searchApplicationId;
         return this;
@@ -51,9 +54,11 @@ public class RequestOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public RequestOptions withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public RequestOptions(){}
 }

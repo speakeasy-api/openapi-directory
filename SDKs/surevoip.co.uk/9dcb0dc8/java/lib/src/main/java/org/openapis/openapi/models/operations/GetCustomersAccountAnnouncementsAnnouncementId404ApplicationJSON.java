@@ -15,9 +15,11 @@ public class GetCustomersAccountAnnouncementsAnnouncementId404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public GetCustomersAccountAnnouncementsAnnouncementId404ApplicationJSON withError(String error) {
         this.error = error;
         return this;
     }
     
+    public GetCustomersAccountAnnouncementsAnnouncementId404ApplicationJSON(){}
 }

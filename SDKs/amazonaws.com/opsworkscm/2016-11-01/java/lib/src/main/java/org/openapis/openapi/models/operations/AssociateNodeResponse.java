@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateNodeResponse {
@@ -12,6 +13,7 @@ public class AssociateNodeResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateNodeResponse associateNodeResponse;
+
     public AssociateNodeResponse withAssociateNodeResponse(org.openapis.openapi.models.shared.AssociateNodeResponse associateNodeResponse) {
         this.associateNodeResponse = associateNodeResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateNodeResponse {
     
     
     public String contentType;
+
     public AssociateNodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateNodeResponse {
      */
     
     public Object invalidStateException;
+
     public AssociateNodeResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -36,6 +40,7 @@ public class AssociateNodeResponse {
     
     
     public Integer statusCode;
+
     public AssociateNodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class AssociateNodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateNodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class AssociateNodeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateNodeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class AssociateNodeResponse {
      */
     
     public Object validationException;
+
     public AssociateNodeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateNodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

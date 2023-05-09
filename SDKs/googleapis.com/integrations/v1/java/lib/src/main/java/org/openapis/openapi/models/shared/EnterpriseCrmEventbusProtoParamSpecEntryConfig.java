@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptivePhrase")
     public String descriptivePhrase;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryConfig withDescriptivePhrase(String descriptivePhrase) {
         this.descriptivePhrase = descriptivePhrase;
         return this;
@@ -26,6 +27,7 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("helpText")
     public String helpText;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryConfig withHelpText(String helpText) {
         this.helpText = helpText;
         return this;
@@ -37,6 +39,7 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideDefaultValue")
     public Boolean hideDefaultValue;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryConfig withHideDefaultValue(Boolean hideDefaultValue) {
         this.hideDefaultValue = hideDefaultValue;
         return this;
@@ -45,6 +48,7 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDisplayOption")
     public EnterpriseCrmEventbusProtoParamSpecEntryConfigInputDisplayOptionEnum inputDisplayOption;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryConfig withInputDisplayOption(EnterpriseCrmEventbusProtoParamSpecEntryConfigInputDisplayOptionEnum inputDisplayOption) {
         this.inputDisplayOption = inputDisplayOption;
         return this;
@@ -56,6 +60,7 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isHidden")
     public Boolean isHidden;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryConfig withIsHidden(Boolean isHidden) {
         this.isHidden = isHidden;
         return this;
@@ -67,6 +72,7 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryConfig withLabel(String label) {
         this.label = label;
         return this;
@@ -75,6 +81,7 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterNameOption")
     public EnterpriseCrmEventbusProtoParamSpecEntryConfigParameterNameOptionEnum parameterNameOption;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryConfig withParameterNameOption(EnterpriseCrmEventbusProtoParamSpecEntryConfigParameterNameOptionEnum parameterNameOption) {
         this.parameterNameOption = parameterNameOption;
         return this;
@@ -86,6 +93,7 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subSectionLabel")
     public String subSectionLabel;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryConfig withSubSectionLabel(String subSectionLabel) {
         this.subSectionLabel = subSectionLabel;
         return this;
@@ -97,9 +105,11 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uiPlaceholderText")
     public String uiPlaceholderText;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryConfig withUiPlaceholderText(String uiPlaceholderText) {
         this.uiPlaceholderText = uiPlaceholderText;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoParamSpecEntryConfig(){}
 }

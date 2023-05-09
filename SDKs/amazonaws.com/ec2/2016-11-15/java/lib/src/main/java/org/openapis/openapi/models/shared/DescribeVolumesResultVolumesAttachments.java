@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeVolumesResultVolumesAttachments {
     
     public OffsetDateTime attachTime;
+
     public DescribeVolumesResultVolumesAttachments withAttachTime(OffsetDateTime attachTime) {
         this.attachTime = attachTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVolumesResultVolumesAttachments {
     
     
     public Boolean deleteOnTermination;
+
     public DescribeVolumesResultVolumesAttachments withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVolumesResultVolumesAttachments {
     
     
     public String device;
+
     public DescribeVolumesResultVolumesAttachments withDevice(String device) {
         this.device = device;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVolumesResultVolumesAttachments {
     
     
     public String instanceId;
+
     public DescribeVolumesResultVolumesAttachments withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVolumesResultVolumesAttachments {
     
     
     public DescribeVolumesResultVolumesAttachmentsStateEnum state;
+
     public DescribeVolumesResultVolumesAttachments withState(DescribeVolumesResultVolumesAttachmentsStateEnum state) {
         this.state = state;
         return this;
@@ -47,9 +52,11 @@ public class DescribeVolumesResultVolumesAttachments {
     
     
     public String volumeId;
+
     public DescribeVolumesResultVolumesAttachments withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public DescribeVolumesResultVolumesAttachments(){}
 }

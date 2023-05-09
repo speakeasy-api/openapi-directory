@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrieveGiftCardFromGANResponse {
     
     public String contentType;
+
     public RetrieveGiftCardFromGANResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetrieveGiftCardFromGANResponse {
      */
     
     public org.openapis.openapi.models.shared.RetrieveGiftCardFromGANResponse retrieveGiftCardFromGANResponse;
+
     public RetrieveGiftCardFromGANResponse withRetrieveGiftCardFromGANResponse(org.openapis.openapi.models.shared.RetrieveGiftCardFromGANResponse retrieveGiftCardFromGANResponse) {
         this.retrieveGiftCardFromGANResponse = retrieveGiftCardFromGANResponse;
         return this;
@@ -26,6 +29,7 @@ public class RetrieveGiftCardFromGANResponse {
     
     
     public Integer statusCode;
+
     public RetrieveGiftCardFromGANResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RetrieveGiftCardFromGANResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrieveGiftCardFromGANResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RetrieveGiftCardFromGANResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

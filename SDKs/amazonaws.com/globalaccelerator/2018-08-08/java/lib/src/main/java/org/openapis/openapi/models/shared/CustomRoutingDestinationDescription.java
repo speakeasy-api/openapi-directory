@@ -15,6 +15,7 @@ public class CustomRoutingDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromPort")
     public Long fromPort;
+
     public CustomRoutingDestinationDescription withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -23,6 +24,7 @@ public class CustomRoutingDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocols")
     public ProtocolEnum[] protocols;
+
     public CustomRoutingDestinationDescription withProtocols(ProtocolEnum[] protocols) {
         this.protocols = protocols;
         return this;
@@ -31,9 +33,11 @@ public class CustomRoutingDestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ToPort")
     public Long toPort;
+
     public CustomRoutingDestinationDescription withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public CustomRoutingDestinationDescription(){}
 }

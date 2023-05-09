@@ -15,6 +15,7 @@ public class LiveChatNewSponsorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isUpgrade")
     public Boolean isUpgrade;
+
     public LiveChatNewSponsorDetails withIsUpgrade(Boolean isUpgrade) {
         this.isUpgrade = isUpgrade;
         return this;
@@ -26,9 +27,11 @@ public class LiveChatNewSponsorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberLevelName")
     public String memberLevelName;
+
     public LiveChatNewSponsorDetails withMemberLevelName(String memberLevelName) {
         this.memberLevelName = memberLevelName;
         return this;
     }
     
+    public LiveChatNewSponsorDetails(){}
 }

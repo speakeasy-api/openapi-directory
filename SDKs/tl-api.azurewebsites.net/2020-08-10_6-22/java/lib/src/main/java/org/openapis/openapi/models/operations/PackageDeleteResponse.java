@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PackageDeleteResponse {
     
     public org.openapis.openapi.models.shared.ApiException apiException;
+
     public PackageDeleteResponse withApiException(org.openapis.openapi.models.shared.ApiException apiException) {
         this.apiException = apiException;
         return this;
@@ -16,6 +18,7 @@ public class PackageDeleteResponse {
     
     
     public String contentType;
+
     public PackageDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PackageDeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultResponseDTOOfBoolean defaultResponseDTOOfBoolean;
+
     public PackageDeleteResponse withDefaultResponseDTOOfBoolean(org.openapis.openapi.models.shared.DefaultResponseDTOOfBoolean defaultResponseDTOOfBoolean) {
         this.defaultResponseDTOOfBoolean = defaultResponseDTOOfBoolean;
         return this;
@@ -33,6 +37,7 @@ public class PackageDeleteResponse {
     
     
     public org.openapis.openapi.models.shared.DefaultResponseDTOOfString defaultResponseDTOOfString;
+
     public PackageDeleteResponse withDefaultResponseDTOOfString(org.openapis.openapi.models.shared.DefaultResponseDTOOfString defaultResponseDTOOfString) {
         this.defaultResponseDTOOfString = defaultResponseDTOOfString;
         return this;
@@ -40,6 +45,7 @@ public class PackageDeleteResponse {
     
     
     public Integer statusCode;
+
     public PackageDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class PackageDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PackageDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PackageDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

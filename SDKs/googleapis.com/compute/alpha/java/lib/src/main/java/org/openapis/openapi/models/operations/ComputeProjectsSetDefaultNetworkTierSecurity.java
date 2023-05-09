@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeProjectsSetDefaultNetworkTierSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeProjectsSetDefaultNetworkTierSecurityOption1 option1;
+
     public ComputeProjectsSetDefaultNetworkTierSecurity withOption1(ComputeProjectsSetDefaultNetworkTierSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeProjectsSetDefaultNetworkTierSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeProjectsSetDefaultNetworkTierSecurityOption2 option2;
+
     public ComputeProjectsSetDefaultNetworkTierSecurity withOption2(ComputeProjectsSetDefaultNetworkTierSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeProjectsSetDefaultNetworkTierSecurity(){}
 }

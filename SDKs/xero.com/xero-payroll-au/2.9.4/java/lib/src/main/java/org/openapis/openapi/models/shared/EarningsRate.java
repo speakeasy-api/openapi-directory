@@ -15,6 +15,7 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountCode")
     public String accountCode;
+
     public EarningsRate withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -26,6 +27,7 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccrueLeave")
     public Boolean accrueLeave;
+
     public EarningsRate withAccrueLeave(Boolean accrueLeave) {
         this.accrueLeave = accrueLeave;
         return this;
@@ -34,6 +36,7 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowanceType")
     public AllowanceTypeEnum allowanceType;
+
     public EarningsRate withAllowanceType(AllowanceTypeEnum allowanceType) {
         this.allowanceType = allowanceType;
         return this;
@@ -45,6 +48,7 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Amount")
     public Double amount;
+
     public EarningsRate withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -56,6 +60,7 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentRecord")
     public Boolean currentRecord;
+
     public EarningsRate withCurrentRecord(Boolean currentRecord) {
         this.currentRecord = currentRecord;
         return this;
@@ -67,6 +72,7 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EarningsRateID")
     public String earningsRateID;
+
     public EarningsRate withEarningsRateID(String earningsRateID) {
         this.earningsRateID = earningsRateID;
         return this;
@@ -75,6 +81,7 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EarningsType")
     public EarningsTypeEnum earningsType;
+
     public EarningsRate withEarningsType(EarningsTypeEnum earningsType) {
         this.earningsType = earningsType;
         return this;
@@ -83,6 +90,7 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmploymentTerminationPaymentType")
     public EmploymentTerminationPaymentTypeEnum employmentTerminationPaymentType;
+
     public EarningsRate withEmploymentTerminationPaymentType(EmploymentTerminationPaymentTypeEnum employmentTerminationPaymentType) {
         this.employmentTerminationPaymentType = employmentTerminationPaymentType;
         return this;
@@ -94,6 +102,7 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsExemptFromSuper")
     public Boolean isExemptFromSuper;
+
     public EarningsRate withIsExemptFromSuper(Boolean isExemptFromSuper) {
         this.isExemptFromSuper = isExemptFromSuper;
         return this;
@@ -105,6 +114,7 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsExemptFromTax")
     public Boolean isExemptFromTax;
+
     public EarningsRate withIsExemptFromTax(Boolean isExemptFromTax) {
         this.isExemptFromTax = isExemptFromTax;
         return this;
@@ -116,17 +126,19 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsReportableAsW1")
     public Boolean isReportableAsW1;
+
     public EarningsRate withIsReportableAsW1(Boolean isReportableAsW1) {
         this.isReportableAsW1 = isReportableAsW1;
         return this;
     }
     
     /**
-     * This is the multiplier used to calculate the rate per unit, based on the employee\u2019s ordinary earnings rate. For example, for time and a half enter 1.5. Only applicable if RateType is MULTIPLE
+     * This is the multiplier used to calculate the rate per unit, based on the employee’s ordinary earnings rate. For example, for time and a half enter 1.5. Only applicable if RateType is MULTIPLE
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Multiplier")
     public Double multiplier;
+
     public EarningsRate withMultiplier(Double multiplier) {
         this.multiplier = multiplier;
         return this;
@@ -138,6 +150,7 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public EarningsRate withName(String name) {
         this.name = name;
         return this;
@@ -149,6 +162,7 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RatePerUnit")
     public String ratePerUnit;
+
     public EarningsRate withRatePerUnit(String ratePerUnit) {
         this.ratePerUnit = ratePerUnit;
         return this;
@@ -157,6 +171,7 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RateType")
     public RateTypeEnum rateType;
+
     public EarningsRate withRateType(RateTypeEnum rateType) {
         this.rateType = rateType;
         return this;
@@ -168,6 +183,7 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeOfUnits")
     public String typeOfUnits;
+
     public EarningsRate withTypeOfUnits(String typeOfUnits) {
         this.typeOfUnits = typeOfUnits;
         return this;
@@ -179,9 +195,11 @@ public class EarningsRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedDateUTC")
     public String updatedDateUTC;
+
     public EarningsRate withUpdatedDateUTC(String updatedDateUTC) {
         this.updatedDateUTC = updatedDateUTC;
         return this;
     }
     
+    public EarningsRate(){}
 }

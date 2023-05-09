@@ -18,6 +18,7 @@ public class Line {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineCategory")
     public LineLineCategoryEnum lineCategory;
+
     public Line withLineCategory(LineLineCategoryEnum lineCategory) {
         this.lineCategory = lineCategory;
         return this;
@@ -29,6 +30,7 @@ public class Line {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineProperties")
     public LineProperties lineProperties;
+
     public Line withLineProperties(LineProperties lineProperties) {
         this.lineProperties = lineProperties;
         return this;
@@ -40,9 +42,11 @@ public class Line {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineType")
     public LineLineTypeEnum lineType;
+
     public Line withLineType(LineLineTypeEnum lineType) {
         this.lineType = lineType;
         return this;
     }
     
+    public Line(){}
 }

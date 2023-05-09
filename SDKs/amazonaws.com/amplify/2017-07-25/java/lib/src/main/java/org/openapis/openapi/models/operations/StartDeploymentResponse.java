@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartDeploymentResponse {
@@ -12,6 +13,7 @@ public class StartDeploymentResponse {
      */
     
     public Object badRequestException;
+
     public StartDeploymentResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class StartDeploymentResponse {
     
     
     public String contentType;
+
     public StartDeploymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartDeploymentResponse {
      */
     
     public Object internalFailureException;
+
     public StartDeploymentResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class StartDeploymentResponse {
      */
     
     public Object limitExceededException;
+
     public StartDeploymentResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StartDeploymentResponse {
      */
     
     public Object notFoundException;
+
     public StartDeploymentResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.StartDeploymentResult startDeploymentResult;
+
     public StartDeploymentResponse withStartDeploymentResult(org.openapis.openapi.models.shared.StartDeploymentResult startDeploymentResult) {
         this.startDeploymentResult = startDeploymentResult;
         return this;
@@ -66,6 +73,7 @@ public class StartDeploymentResponse {
     
     
     public Integer statusCode;
+
     public StartDeploymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartDeploymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartDeploymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class StartDeploymentResponse {
      */
     
     public Object unauthorizedException;
+
     public StartDeploymentResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public StartDeploymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AdditionalResources - The choice level additional resources.
+ * AdditionalResources - &lt;p&gt;The choice level additional resources for a custom lens.&lt;/p&gt; &lt;p&gt;This field does not apply to Amazon Web Services official lenses.&lt;/p&gt;
  */
 public class AdditionalResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public ChoiceContent[] content;
+
     public AdditionalResources withContent(ChoiceContent[] content) {
         this.content = content;
         return this;
@@ -23,9 +24,11 @@ public class AdditionalResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public AdditionalResourceTypeEnum type;
+
     public AdditionalResources withType(AdditionalResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AdditionalResources(){}
 }

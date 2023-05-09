@@ -18,9 +18,11 @@ public class DeleteSnippetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public DeleteSnippetResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public DeleteSnippetResponse(){}
 }

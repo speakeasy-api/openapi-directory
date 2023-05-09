@@ -15,6 +15,7 @@ public class ListDocumentVersionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersions")
     public DocumentVersionInfo[] documentVersions;
+
     public ListDocumentVersionsResult withDocumentVersions(DocumentVersionInfo[] documentVersions) {
         this.documentVersions = documentVersions;
         return this;
@@ -23,9 +24,11 @@ public class ListDocumentVersionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDocumentVersionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDocumentVersionsResult(){}
 }

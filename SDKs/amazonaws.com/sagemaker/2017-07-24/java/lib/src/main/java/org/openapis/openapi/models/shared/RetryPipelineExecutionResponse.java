@@ -15,9 +15,11 @@ public class RetryPipelineExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionArn")
     public String pipelineExecutionArn;
+
     public RetryPipelineExecutionResponse withPipelineExecutionArn(String pipelineExecutionArn) {
         this.pipelineExecutionArn = pipelineExecutionArn;
         return this;
     }
     
+    public RetryPipelineExecutionResponse(){}
 }

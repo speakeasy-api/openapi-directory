@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequest {
@@ -12,6 +13,7 @@ public class GetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")
     public String address;
+
     public GetRequest withAddress(String address) {
         this.address = address;
         return this;
@@ -22,6 +24,7 @@ public class GetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=baudrate")
     public org.openapis.openapi.models.shared.BaudrateEnum baudrate;
+
     public GetRequest withBaudrate(org.openapis.openapi.models.shared.BaudrateEnum baudrate) {
         this.baudrate = baudrate;
         return this;
@@ -32,9 +35,15 @@ public class GetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=device")
     public String device;
+
     public GetRequest withDevice(String device) {
         this.device = device;
         return this;
     }
     
+    public GetRequest(@JsonProperty("address") String address, @JsonProperty("baudrate") org.openapis.openapi.models.shared.BaudrateEnum baudrate, @JsonProperty("device") String device) {
+        this.address = address;
+        this.baudrate = baudrate;
+        this.device = device;
+  }
 }

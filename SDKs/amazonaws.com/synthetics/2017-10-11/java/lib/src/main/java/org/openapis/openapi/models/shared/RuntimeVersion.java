@@ -22,6 +22,7 @@ public class RuntimeVersion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeprecationDate")
     public OffsetDateTime deprecationDate;
+
     public RuntimeVersion withDeprecationDate(OffsetDateTime deprecationDate) {
         this.deprecationDate = deprecationDate;
         return this;
@@ -30,6 +31,7 @@ public class RuntimeVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public RuntimeVersion withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class RuntimeVersion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReleaseDate")
     public OffsetDateTime releaseDate;
+
     public RuntimeVersion withReleaseDate(OffsetDateTime releaseDate) {
         this.releaseDate = releaseDate;
         return this;
@@ -48,9 +51,11 @@ public class RuntimeVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionName")
     public String versionName;
+
     public RuntimeVersion withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public RuntimeVersion(){}
 }

@@ -18,6 +18,7 @@ public class LicenseFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LicenseFormat withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class LicenseFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
+
     public LicenseFormat withFormat(String format) {
         this.format = format;
         return this;
@@ -40,6 +42,7 @@ public class LicenseFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media_type")
     public LicenseFormatMediaTypeEnum mediaType;
+
     public LicenseFormat withMediaType(LicenseFormatMediaTypeEnum mediaType) {
         this.mediaType = mediaType;
         return this;
@@ -51,6 +54,7 @@ public class LicenseFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min_resolution")
     public Long minResolution;
+
     public LicenseFormat withMinResolution(Long minResolution) {
         this.minResolution = minResolution;
         return this;
@@ -62,9 +66,11 @@ public class LicenseFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public LicenseFormat withSize(String size) {
         this.size = size;
         return this;
     }
     
+    public LicenseFormat(){}
 }

@@ -18,9 +18,11 @@ public class GetOrderOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Order")
     public Order order;
+
     public GetOrderOutput withOrder(Order order) {
         this.order = order;
         return this;
     }
     
+    public GetOrderOutput(){}
 }

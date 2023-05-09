@@ -15,6 +15,7 @@ public class GroupMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public Long createdAt;
+
     public GroupMapping withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,6 +24,7 @@ public class GroupMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by_email")
     public String createdByEmail;
+
     public GroupMapping withCreatedByEmail(String createdByEmail) {
         this.createdByEmail = createdByEmail;
         return this;
@@ -31,6 +33,7 @@ public class GroupMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GroupMapping withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +41,7 @@ public class GroupMapping {
     
     @JsonProperty("group_id")
     public String groupId;
+
     public GroupMapping withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -46,6 +50,7 @@ public class GroupMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_name")
     public String groupName;
+
     public GroupMapping withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -53,6 +58,7 @@ public class GroupMapping {
     
     @JsonProperty("id")
     public String id;
+
     public GroupMapping withId(String id) {
         this.id = id;
         return this;
@@ -60,6 +66,7 @@ public class GroupMapping {
     
     @JsonProperty("sso_attribute")
     public String ssoAttribute;
+
     public GroupMapping withSsoAttribute(String ssoAttribute) {
         this.ssoAttribute = ssoAttribute;
         return this;
@@ -67,6 +74,7 @@ public class GroupMapping {
     
     @JsonProperty("sso_value")
     public String ssoValue;
+
     public GroupMapping withSsoValue(String ssoValue) {
         this.ssoValue = ssoValue;
         return this;
@@ -75,9 +83,16 @@ public class GroupMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public Long updatedAt;
+
     public GroupMapping withUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GroupMapping(@JsonProperty("group_id") String groupId, @JsonProperty("id") String id, @JsonProperty("sso_attribute") String ssoAttribute, @JsonProperty("sso_value") String ssoValue) {
+        this.groupId = groupId;
+        this.id = id;
+        this.ssoAttribute = ssoAttribute;
+        this.ssoValue = ssoValue;
+  }
 }

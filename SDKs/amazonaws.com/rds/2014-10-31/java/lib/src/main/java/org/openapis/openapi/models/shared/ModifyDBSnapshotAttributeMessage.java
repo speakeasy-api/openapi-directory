@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyDBSnapshotAttributeMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyDBSnapshotAttributeMessage {
     
     public String attributeName;
+
     public ModifyDBSnapshotAttributeMessage withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,6 +20,7 @@ public class ModifyDBSnapshotAttributeMessage {
     
     
     public String dbSnapshotIdentifier;
+
     public ModifyDBSnapshotAttributeMessage withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class ModifyDBSnapshotAttributeMessage {
     
     
     public String[] valuesToAdd;
+
     public ModifyDBSnapshotAttributeMessage withValuesToAdd(String[] valuesToAdd) {
         this.valuesToAdd = valuesToAdd;
         return this;
@@ -33,9 +36,14 @@ public class ModifyDBSnapshotAttributeMessage {
     
     
     public String[] valuesToRemove;
+
     public ModifyDBSnapshotAttributeMessage withValuesToRemove(String[] valuesToRemove) {
         this.valuesToRemove = valuesToRemove;
         return this;
     }
     
+    public ModifyDBSnapshotAttributeMessage(@JsonProperty("AttributeName") String attributeName, @JsonProperty("DBSnapshotIdentifier") String dbSnapshotIdentifier) {
+        this.attributeName = attributeName;
+        this.dbSnapshotIdentifier = dbSnapshotIdentifier;
+  }
 }

@@ -15,6 +15,7 @@ public class PreSignInfoFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PreSignInfoFields withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class PreSignInfoFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PreSignInfoFields withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PreSignInfoFields(){}
 }

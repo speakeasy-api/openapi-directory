@@ -18,6 +18,7 @@ public class ErrorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_call_docker_id")
     public String apiCallDockerId;
+
     public ErrorInfo withApiCallDockerId(String apiCallDockerId) {
         this.apiCallDockerId = apiCallDockerId;
         return this;
@@ -29,6 +30,7 @@ public class ErrorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_call_name")
     public String apiCallName;
+
     public ErrorInfo withApiCallName(String apiCallName) {
         this.apiCallName = apiCallName;
         return this;
@@ -40,6 +42,7 @@ public class ErrorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_call_start")
     public String apiCallStart;
+
     public ErrorInfo withApiCallStart(String apiCallStart) {
         this.apiCallStart = apiCallStart;
         return this;
@@ -51,9 +54,11 @@ public class ErrorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_call_txnid")
     public String apiCallTxnid;
+
     public ErrorInfo withApiCallTxnid(String apiCallTxnid) {
         this.apiCallTxnid = apiCallTxnid;
         return this;
     }
     
+    public ErrorInfo(){}
 }

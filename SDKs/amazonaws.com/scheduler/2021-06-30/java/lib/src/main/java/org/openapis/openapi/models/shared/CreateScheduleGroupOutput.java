@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateScheduleGroupOutput {
     @JsonProperty("ScheduleGroupArn")
     public String scheduleGroupArn;
+
     public CreateScheduleGroupOutput withScheduleGroupArn(String scheduleGroupArn) {
         this.scheduleGroupArn = scheduleGroupArn;
         return this;
     }
     
+    public CreateScheduleGroupOutput(@JsonProperty("ScheduleGroupArn") String scheduleGroupArn) {
+        this.scheduleGroupArn = scheduleGroupArn;
+  }
 }

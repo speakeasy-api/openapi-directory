@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuickSearchRequest {
@@ -12,6 +13,7 @@ public class GetQuickSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetQuickSearchRequest withQ(String q) {
         this.q = q;
         return this;
@@ -22,9 +24,13 @@ public class GetQuickSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public String size;
+
     public GetQuickSearchRequest withSize(String size) {
         this.size = size;
         return this;
     }
     
+    public GetQuickSearchRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

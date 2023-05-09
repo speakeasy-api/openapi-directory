@@ -15,6 +15,7 @@ public class ListRotationOverridesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRotationOverridesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRotationOverridesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RotationOverrides")
     public RotationOverride[] rotationOverrides;
+
     public ListRotationOverridesResult withRotationOverrides(RotationOverride[] rotationOverrides) {
         this.rotationOverrides = rotationOverrides;
         return this;
     }
     
+    public ListRotationOverridesResult(){}
 }

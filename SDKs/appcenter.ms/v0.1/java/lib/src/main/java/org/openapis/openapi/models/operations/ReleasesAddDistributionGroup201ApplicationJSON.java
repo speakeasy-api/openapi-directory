@@ -17,6 +17,7 @@ public class ReleasesAddDistributionGroup201ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public ReleasesAddDistributionGroup201ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -27,6 +28,7 @@ public class ReleasesAddDistributionGroup201ApplicationJSON {
      */
     @JsonProperty("mandatory_update")
     public Boolean mandatoryUpdate;
+
     public ReleasesAddDistributionGroup201ApplicationJSON withMandatoryUpdate(Boolean mandatoryUpdate) {
         this.mandatoryUpdate = mandatoryUpdate;
         return this;
@@ -38,9 +40,14 @@ public class ReleasesAddDistributionGroup201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioning_status_url")
     public String provisioningStatusUrl;
+
     public ReleasesAddDistributionGroup201ApplicationJSON withProvisioningStatusUrl(String provisioningStatusUrl) {
         this.provisioningStatusUrl = provisioningStatusUrl;
         return this;
     }
     
+    public ReleasesAddDistributionGroup201ApplicationJSON(@JsonProperty("id") String id, @JsonProperty("mandatory_update") Boolean mandatoryUpdate) {
+        this.id = id;
+        this.mandatoryUpdate = mandatoryUpdate;
+  }
 }

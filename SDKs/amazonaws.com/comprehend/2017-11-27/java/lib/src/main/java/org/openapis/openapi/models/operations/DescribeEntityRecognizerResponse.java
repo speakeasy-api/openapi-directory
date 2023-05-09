@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEntityRecognizerResponse {
     
     public String contentType;
+
     public DescribeEntityRecognizerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEntityRecognizerResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEntityRecognizerResponse describeEntityRecognizerResponse;
+
     public DescribeEntityRecognizerResponse withDescribeEntityRecognizerResponse(org.openapis.openapi.models.shared.DescribeEntityRecognizerResponse describeEntityRecognizerResponse) {
         this.describeEntityRecognizerResponse = describeEntityRecognizerResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEntityRecognizerResponse {
      */
     
     public Object internalServerException;
+
     public DescribeEntityRecognizerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEntityRecognizerResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeEntityRecognizerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeEntityRecognizerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeEntityRecognizerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeEntityRecognizerResponse {
     
     
     public Integer statusCode;
+
     public DescribeEntityRecognizerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeEntityRecognizerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEntityRecognizerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeEntityRecognizerResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeEntityRecognizerResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeEntityRecognizerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

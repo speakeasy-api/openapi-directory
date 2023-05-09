@@ -18,6 +18,7 @@ public class MailExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportFormat")
     public MailExportOptionsExportFormatEnum exportFormat;
+
     public MailExportOptions withExportFormat(MailExportOptionsExportFormatEnum exportFormat) {
         this.exportFormat = exportFormat;
         return this;
@@ -29,6 +30,7 @@ public class MailExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showConfidentialModeContent")
     public Boolean showConfidentialModeContent;
+
     public MailExportOptions withShowConfidentialModeContent(Boolean showConfidentialModeContent) {
         this.showConfidentialModeContent = showConfidentialModeContent;
         return this;
@@ -40,9 +42,11 @@ public class MailExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useNewExport")
     public Boolean useNewExport;
+
     public MailExportOptions withUseNewExport(Boolean useNewExport) {
         this.useNewExport = useNewExport;
         return this;
     }
     
+    public MailExportOptions(){}
 }

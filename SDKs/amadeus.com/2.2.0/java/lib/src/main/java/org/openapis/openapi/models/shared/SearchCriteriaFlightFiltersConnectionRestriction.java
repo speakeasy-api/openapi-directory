@@ -18,6 +18,7 @@ public class SearchCriteriaFlightFiltersConnectionRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("airportChangeAllowed")
     public Boolean airportChangeAllowed;
+
     public SearchCriteriaFlightFiltersConnectionRestriction withAirportChangeAllowed(Boolean airportChangeAllowed) {
         this.airportChangeAllowed = airportChangeAllowed;
         return this;
@@ -29,6 +30,7 @@ public class SearchCriteriaFlightFiltersConnectionRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNumberOfConnections")
     public Double maxNumberOfConnections;
+
     public SearchCriteriaFlightFiltersConnectionRestriction withMaxNumberOfConnections(Double maxNumberOfConnections) {
         this.maxNumberOfConnections = maxNumberOfConnections;
         return this;
@@ -40,9 +42,11 @@ public class SearchCriteriaFlightFiltersConnectionRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("technicalStopsAllowed")
     public Boolean technicalStopsAllowed;
+
     public SearchCriteriaFlightFiltersConnectionRestriction withTechnicalStopsAllowed(Boolean technicalStopsAllowed) {
         this.technicalStopsAllowed = technicalStopsAllowed;
         return this;
     }
     
+    public SearchCriteriaFlightFiltersConnectionRestriction(){}
 }

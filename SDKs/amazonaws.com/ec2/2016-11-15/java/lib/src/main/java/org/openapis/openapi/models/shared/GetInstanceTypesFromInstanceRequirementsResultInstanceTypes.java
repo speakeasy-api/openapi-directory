@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetInstanceTypesFromInstanceRequirementsResultInstanceTypes {
     
     public String instanceType;
+
     public GetInstanceTypesFromInstanceRequirementsResultInstanceTypes withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
     }
     
+    public GetInstanceTypesFromInstanceRequirementsResultInstanceTypes(){}
 }

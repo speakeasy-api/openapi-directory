@@ -15,6 +15,7 @@ public class DiskResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiskReadBytesPerSecond")
     public String diskReadBytesPerSecond;
+
     public DiskResourceUtilization withDiskReadBytesPerSecond(String diskReadBytesPerSecond) {
         this.diskReadBytesPerSecond = diskReadBytesPerSecond;
         return this;
@@ -23,6 +24,7 @@ public class DiskResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiskReadOpsPerSecond")
     public String diskReadOpsPerSecond;
+
     public DiskResourceUtilization withDiskReadOpsPerSecond(String diskReadOpsPerSecond) {
         this.diskReadOpsPerSecond = diskReadOpsPerSecond;
         return this;
@@ -31,6 +33,7 @@ public class DiskResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiskWriteBytesPerSecond")
     public String diskWriteBytesPerSecond;
+
     public DiskResourceUtilization withDiskWriteBytesPerSecond(String diskWriteBytesPerSecond) {
         this.diskWriteBytesPerSecond = diskWriteBytesPerSecond;
         return this;
@@ -39,9 +42,11 @@ public class DiskResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiskWriteOpsPerSecond")
     public String diskWriteOpsPerSecond;
+
     public DiskResourceUtilization withDiskWriteOpsPerSecond(String diskWriteOpsPerSecond) {
         this.diskWriteOpsPerSecond = diskWriteOpsPerSecond;
         return this;
     }
     
+    public DiskResourceUtilization(){}
 }

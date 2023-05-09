@@ -12,6 +12,7 @@ public class GetWorkflowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeGraph")
     public Boolean includeGraph;
+
     public GetWorkflowRequest withIncludeGraph(Boolean includeGraph) {
         this.includeGraph = includeGraph;
         return this;
@@ -19,9 +20,13 @@ public class GetWorkflowRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public GetWorkflowRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetWorkflowRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

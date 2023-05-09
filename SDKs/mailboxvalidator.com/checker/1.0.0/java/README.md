@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetV1EmailFreeFormatEnum;
 import org.openapis.openapi.models.operations.GetV1EmailFreeRequest;
 import org.openapis.openapi.models.operations.GetV1EmailFreeResponse;
@@ -27,29 +26,29 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetV1EmailFreeRequest req = new GetV1EmailFreeRequest() {{
-                email = "Larue_Rau85@yahoo.com";
-                format = "xml";
-                key = "illum";
-            }}            
+            GetV1EmailFreeRequest req = new GetV1EmailFreeRequest("corrupti", "provident") {{
+                format = GetV1EmailFreeFormatEnum.XML;
+            }};            
 
             GetV1EmailFreeResponse res = sdk.getV1EmailFree(req);
 
-            if (res.getV1EmailFree200ApplicationJSONString.isPresent()) {
+            if (res.getV1EmailFree200ApplicationJSONString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getV1EmailFree` - The Free Email Checker API does validation on a single email address and returns if it is from a free email provider in either JSON or XML format.
+* [getV1EmailFree](docs/sdk/README.md#getv1emailfree) - The Free Email Checker API does validation on a single email address and returns if it is from a free email provider in either JSON or XML format.
 <!-- End SDK Available Operations -->
 
 ### Maturity

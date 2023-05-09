@@ -15,6 +15,7 @@ public class ServiceEndpoint {
      */
     
     public String arn;
+
     public ServiceEndpoint withArn(String arn) {
         this.arn = arn;
         return this;
@@ -25,9 +26,11 @@ public class ServiceEndpoint {
      */
     
     public String endpoint;
+
     public ServiceEndpoint withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public ServiceEndpoint(){}
 }

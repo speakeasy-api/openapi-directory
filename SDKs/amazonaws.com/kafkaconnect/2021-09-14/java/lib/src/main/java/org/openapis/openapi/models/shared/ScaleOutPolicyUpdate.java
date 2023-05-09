@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScaleOutPolicyUpdate {
     @JsonProperty("cpuUtilizationPercentage")
     public Long cpuUtilizationPercentage;
+
     public ScaleOutPolicyUpdate withCpuUtilizationPercentage(Long cpuUtilizationPercentage) {
         this.cpuUtilizationPercentage = cpuUtilizationPercentage;
         return this;
     }
     
+    public ScaleOutPolicyUpdate(@JsonProperty("cpuUtilizationPercentage") Long cpuUtilizationPercentage) {
+        this.cpuUtilizationPercentage = cpuUtilizationPercentage;
+  }
 }

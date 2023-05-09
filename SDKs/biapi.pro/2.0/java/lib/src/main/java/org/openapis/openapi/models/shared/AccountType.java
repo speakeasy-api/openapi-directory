@@ -18,6 +18,7 @@ public class AccountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public AccountType withColor(String color) {
         this.color = color;
         return this;
@@ -28,6 +29,7 @@ public class AccountType {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AccountType withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -38,6 +40,7 @@ public class AccountType {
      */
     @JsonProperty("display_name_p")
     public String displayNameP;
+
     public AccountType withDisplayNameP(String displayNameP) {
         this.displayNameP = displayNameP;
         return this;
@@ -48,6 +51,7 @@ public class AccountType {
      */
     @JsonProperty("id")
     public Long id;
+
     public AccountType withId(Long id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class AccountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_parent")
     public Long idParent;
+
     public AccountType withIdParent(Long idParent) {
         this.idParent = idParent;
         return this;
@@ -69,6 +74,7 @@ public class AccountType {
      */
     @JsonProperty("is_invest")
     public Boolean isInvest;
+
     public AccountType withIsInvest(Boolean isInvest) {
         this.isInvest = isInvest;
         return this;
@@ -79,6 +85,7 @@ public class AccountType {
      */
     @JsonProperty("name")
     public String name;
+
     public AccountType withName(String name) {
         this.name = name;
         return this;
@@ -90,6 +97,7 @@ public class AccountType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public String product;
+
     public AccountType withProduct(String product) {
         this.product = product;
         return this;
@@ -100,9 +108,18 @@ public class AccountType {
      */
     @JsonProperty("weboob_type_id")
     public Long weboobTypeId;
+
     public AccountType withWeboobTypeId(Long weboobTypeId) {
         this.weboobTypeId = weboobTypeId;
         return this;
     }
     
+    public AccountType(@JsonProperty("display_name") String displayName, @JsonProperty("display_name_p") String displayNameP, @JsonProperty("id") Long id, @JsonProperty("is_invest") Boolean isInvest, @JsonProperty("name") String name, @JsonProperty("weboob_type_id") Long weboobTypeId) {
+        this.displayName = displayName;
+        this.displayNameP = displayNameP;
+        this.id = id;
+        this.isInvest = isInvest;
+        this.name = name;
+        this.weboobTypeId = weboobTypeId;
+  }
 }

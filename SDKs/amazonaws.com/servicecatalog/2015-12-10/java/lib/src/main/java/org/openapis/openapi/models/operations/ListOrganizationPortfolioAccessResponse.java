@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOrganizationPortfolioAccessResponse {
     
     public String contentType;
+
     public ListOrganizationPortfolioAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListOrganizationPortfolioAccessResponse {
      */
     
     public Object invalidParametersException;
+
     public ListOrganizationPortfolioAccessResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class ListOrganizationPortfolioAccessResponse {
      */
     
     public org.openapis.openapi.models.shared.ListOrganizationPortfolioAccessOutput listOrganizationPortfolioAccessOutput;
+
     public ListOrganizationPortfolioAccessResponse withListOrganizationPortfolioAccessOutput(org.openapis.openapi.models.shared.ListOrganizationPortfolioAccessOutput listOrganizationPortfolioAccessOutput) {
         this.listOrganizationPortfolioAccessOutput = listOrganizationPortfolioAccessOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListOrganizationPortfolioAccessResponse {
      */
     
     public Object operationNotSupportedException;
+
     public ListOrganizationPortfolioAccessResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -49,6 +54,7 @@ public class ListOrganizationPortfolioAccessResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListOrganizationPortfolioAccessResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListOrganizationPortfolioAccessResponse {
     
     
     public Integer statusCode;
+
     public ListOrganizationPortfolioAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListOrganizationPortfolioAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOrganizationPortfolioAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListOrganizationPortfolioAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

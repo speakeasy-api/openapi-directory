@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GsiDispatchRequest;
 import org.openapis.openapi.models.operations.GsiDispatchResponse;
 
@@ -29,16 +28,18 @@ public class Application {
             GsiDispatchRequest req = new GsiDispatchRequest() {{
                 key = "corrupti";
                 zip = "provident";
-            }}            
+            }};            
 
             GsiDispatchResponse res = sdk.dispatchGreenEnergyDistributionAPI.gsiDispatch(req);
 
-            if (res.gsiDispatch200ApplicationJSONObject.isPresent()) {
+            if (res.gsiDispatch200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,73 +47,73 @@ public class Application {
 ## Available Resources and Operations
 
 
-### dispatchGreenEnergyDistributionAPI
+### [dispatchGreenEnergyDistributionAPI](docs/dispatchgreenenergydistributionapi/README.md)
 
-* `gsiDispatch` - Dispatch (Green Energy Distribution Schedule)
+* [gsiDispatch](docs/dispatchgreenenergydistributionapi/README.md#gsidispatch) - Dispatch (Green Energy Distribution Schedule)
 
-### greenPowerIndexGrunstromIndex
+### [greenPowerIndexGrunstromIndex](docs/greenpowerindexgrunstromindex/README.md)
 
-* `gsiBesthour` - Get best hour (with most regional green energy) in a given timeframe.
-* `gsiDispatch` - Dispatch (Green Energy Distribution Schedule)
-* `gsiMarketdata` - Marketdata
-* `gsiPrediction` - Prediction
+* [gsiBesthour](docs/greenpowerindexgrunstromindex/README.md#gsibesthour) - Get best hour (with most regional green energy) in a given timeframe.
+* [gsiDispatch](docs/greenpowerindexgrunstromindex/README.md#gsidispatch) - Dispatch (Green Energy Distribution Schedule)
+* [gsiMarketdata](docs/greenpowerindexgrunstromindex/README.md#gsimarketdata) - Marketdata
+* [gsiPrediction](docs/greenpowerindexgrunstromindex/README.md#gsiprediction) - Prediction
 
-### meteringDecorator
+### [meteringDecorator](docs/meteringdecorator/README.md)
 
-* `meteringGet` - Meter Reading
-* `meteringPost` - Meter Reading
+* [meteringGet](docs/meteringdecorator/README.md#meteringget) - Meter Reading
+* [meteringPost](docs/meteringdecorator/README.md#meteringpost) - Meter Reading
 
-### ocpp
+### [ocpp](docs/ocpp/README.md)
 
-* `ocppSessions` - Last Session Info
+* [ocppSessions](docs/ocpp/README.md#ocppsessions) - Last Session Info
 
-### openMETER
+### [openMETER](docs/openmeter/README.md)
 
-* `omActivities` - Public shared smart meters installed in Germany and available for subservices and exploration.
-* `omMeters` - Public shared smart meters installed in Germany and available for subservices and exploration.
-* `omReadings` - Public shared smart meters installed in Germany and available for subservices and exploration.
+* [omActivities](docs/openmeter/README.md#omactivities) - Public shared smart meters installed in Germany and available for subservices and exploration.
+* [omMeters](docs/openmeter/README.md#ommeters) - Public shared smart meters installed in Germany and available for subservices and exploration.
+* [omReadings](docs/openmeter/README.md#omreadings) - Public shared smart meters installed in Germany and available for subservices and exploration.
 
-### smartHome
+### [smartHome](docs/smarthome/README.md)
 
-* `gsiBesthour` - Get best hour (with most regional green energy) in a given timeframe.
+* [gsiBesthour](docs/smarthome/README.md#gsibesthour) - Get best hour (with most regional green energy) in a given timeframe.
 
-### stromQuittung
+### [stromQuittung](docs/stromquittung/README.md)
 
-* `quittungComit` - Finishs a collection of data and finalizes receipt. Use this method after collecting all data via quittung/prepare
-* `quittungCreate` - Create a receipt for an energy delivery (only valid in Germany).
-* `quittungPrepare` - Allows to collect data with several requests (or a single) for a receipt.
-* `quittungTSE` - Retrieve TSE (Technische Sicherheitseinrichtung) Data for a given receipt (Strom-Quittung).
-* `quittungTSEData` - Retrieve TSE (Technische Sicherheitseinrichtung) raw data  only for a given receipt (Strom-Quittung).
-* `quittungTSEsignature` - Retrieve TSE (Technische Sicherheitseinrichtung) Signature only for a given receipt (Strom-Quittung).
-* `quittungZugferd` - Retrieve Zugferd XML for a given receipt (Strom-Quittung).
+* [quittungComit](docs/stromquittung/README.md#quittungcomit) - Finishs a collection of data and finalizes receipt. Use this method after collecting all data via quittung/prepare
+* [quittungCreate](docs/stromquittung/README.md#quittungcreate) - Create a receipt for an energy delivery (only valid in Germany).
+* [quittungPrepare](docs/stromquittung/README.md#quittungprepare) - Allows to collect data with several requests (or a single) for a receipt.
+* [quittungTSE](docs/stromquittung/README.md#quittungtse) - Retrieve TSE (Technische Sicherheitseinrichtung) Data for a given receipt (Strom-Quittung).
+* [quittungTSEData](docs/stromquittung/README.md#quittungtsedata) - Retrieve TSE (Technische Sicherheitseinrichtung) raw data  only for a given receipt (Strom-Quittung).
+* [quittungTSEsignature](docs/stromquittung/README.md#quittungtsesignature) - Retrieve TSE (Technische Sicherheitseinrichtung) Signature only for a given receipt (Strom-Quittung).
+* [quittungZugferd](docs/stromquittung/README.md#quittungzugferd) - Retrieve Zugferd XML for a given receipt (Strom-Quittung).
 
-### stromkontoLedger
+### [stromkontoLedger](docs/stromkontoledger/README.md)
 
-* `prepareTransaction` - Prepare Transaction
-* `stromkontoBalances` - Balances
-* `stromkontoChoices` - Selectable Choices for customer
-* `stromkontoLogin` - Login (via Mail)
-* `stromkontoRegister` - Register (new Stromkonto)
+* [prepareTransaction](docs/stromkontoledger/README.md#preparetransaction) - Prepare Transaction
+* [stromkontoBalances](docs/stromkontoledger/README.md#stromkontobalances) - Balances
+* [stromkontoChoices](docs/stromkontoledger/README.md#stromkontochoices) - Selectable Choices for customer
+* [stromkontoLogin](docs/stromkontoledger/README.md#stromkontologin) - Login (via Mail)
+* [stromkontoRegister](docs/stromkontoledger/README.md#stromkontoregister) - Register (new Stromkonto)
 
-### tse
+### [tse](docs/tse/README.md)
 
-* `quittungTSE` - Retrieve TSE (Technische Sicherheitseinrichtung) Data for a given receipt (Strom-Quittung).
-* `quittungTSEData` - Retrieve TSE (Technische Sicherheitseinrichtung) raw data  only for a given receipt (Strom-Quittung).
-* `quittungTSEsignature` - Retrieve TSE (Technische Sicherheitseinrichtung) Signature only for a given receipt (Strom-Quittung).
-* `quittungZugferd` - Retrieve Zugferd XML for a given receipt (Strom-Quittung).
+* [quittungTSE](docs/tse/README.md#quittungtse) - Retrieve TSE (Technische Sicherheitseinrichtung) Data for a given receipt (Strom-Quittung).
+* [quittungTSEData](docs/tse/README.md#quittungtsedata) - Retrieve TSE (Technische Sicherheitseinrichtung) raw data  only for a given receipt (Strom-Quittung).
+* [quittungTSEsignature](docs/tse/README.md#quittungtsesignature) - Retrieve TSE (Technische Sicherheitseinrichtung) Signature only for a given receipt (Strom-Quittung).
+* [quittungZugferd](docs/tse/README.md#quittungzugferd) - Retrieve Zugferd XML for a given receipt (Strom-Quittung).
 
-### tariffPriceAPI
+### [tariffPriceAPI](docs/tariffpriceapi/README.md)
 
-* `tariffSlph0` - Energy Tariff information
-* `tariffcomponents` - Energy Tariff price components
+* [tariffSlph0](docs/tariffpriceapi/README.md#tariffslph0) - Energy Tariff information
+* [tariffcomponents](docs/tariffpriceapi/README.md#tariffcomponents) - Energy Tariff price components
 
-### wiMWechselprozesseImMesswesenStromStatusAPI
+### [wiMWechselprozesseImMesswesenStromStatusAPI](docs/wimwechselprozesseimmesswesenstromstatusapi/README.md)
 
-* `wimstatus` - WiM Proess Informtion
+* [wimstatus](docs/wimwechselprozesseimmesswesenstromstatusapi/README.md#wimstatus) - WiM Proess Informtion
 
-### easee
+### [easee](docs/easee/README.md)
 
-* `easeeSessions` - Returns lastSession info for all easee wallboxes (chargers) given user has access to.
+* [easeeSessions](docs/easee/README.md#easeesessions) - Returns lastSession info for all easee wallboxes (chargers) given user has access to.
 <!-- End SDK Available Operations -->
 
 ### Maturity

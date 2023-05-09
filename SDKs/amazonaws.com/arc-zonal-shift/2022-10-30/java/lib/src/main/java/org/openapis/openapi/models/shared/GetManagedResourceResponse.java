@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetManagedResourceResponse {
     @JsonProperty("appliedWeights")
     public java.util.Map<String, Float> appliedWeights;
+
     public GetManagedResourceResponse withAppliedWeights(java.util.Map<String, Float> appliedWeights) {
         this.appliedWeights = appliedWeights;
         return this;
@@ -22,6 +23,7 @@ public class GetManagedResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public GetManagedResourceResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +32,7 @@ public class GetManagedResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetManagedResourceResponse withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +40,14 @@ public class GetManagedResourceResponse {
     
     @JsonProperty("zonalShifts")
     public ZonalShiftInResource[] zonalShifts;
+
     public GetManagedResourceResponse withZonalShifts(ZonalShiftInResource[] zonalShifts) {
         this.zonalShifts = zonalShifts;
         return this;
     }
     
+    public GetManagedResourceResponse(@JsonProperty("appliedWeights") java.util.Map<String, Float> appliedWeights, @JsonProperty("zonalShifts") ZonalShiftInResource[] zonalShifts) {
+        this.appliedWeights = appliedWeights;
+        this.zonalShifts = zonalShifts;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * FileDownload - The signed URL for downloading a private file
@@ -15,9 +15,13 @@ public class FileDownload {
      */
     
     public String url;
+
     public FileDownload withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public FileDownload(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

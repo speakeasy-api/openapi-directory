@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepositoryConfigurationsCreateOrUpdateRequest {
@@ -12,6 +13,7 @@ public class RepositoryConfigurationsCreateOrUpdateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public RepositoryConfigurationsCreateOrUpdateRequestBody requestBody;
+
     public RepositoryConfigurationsCreateOrUpdateRequest withRequestBody(RepositoryConfigurationsCreateOrUpdateRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class RepositoryConfigurationsCreateOrUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public RepositoryConfigurationsCreateOrUpdateRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,9 +35,15 @@ public class RepositoryConfigurationsCreateOrUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public RepositoryConfigurationsCreateOrUpdateRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public RepositoryConfigurationsCreateOrUpdateRequest(@JsonProperty("RequestBody") RepositoryConfigurationsCreateOrUpdateRequestBody requestBody, @JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.ownerName = ownerName;
+  }
 }

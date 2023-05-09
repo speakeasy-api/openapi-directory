@@ -17,6 +17,7 @@ public class WorkTypeUpdateApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public WorkTypeUpdateApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class WorkTypeUpdateApiModel {
     @JsonProperty("Title")
     @SpeakeasyMetadata("form:name=Title")
     public String title;
+
     public WorkTypeUpdateApiModel withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public WorkTypeUpdateApiModel(){}
 }

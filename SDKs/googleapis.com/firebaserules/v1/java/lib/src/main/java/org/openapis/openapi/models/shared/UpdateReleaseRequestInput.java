@@ -18,6 +18,7 @@ public class UpdateReleaseRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release")
     public ReleaseInput release;
+
     public UpdateReleaseRequestInput withRelease(ReleaseInput release) {
         this.release = release;
         return this;
@@ -29,9 +30,11 @@ public class UpdateReleaseRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public UpdateReleaseRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public UpdateReleaseRequestInput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminListDevicesResponse {
@@ -12,6 +13,7 @@ public class AdminListDevicesResponse {
      */
     
     public org.openapis.openapi.models.shared.AdminListDevicesResponse adminListDevicesResponse;
+
     public AdminListDevicesResponse withAdminListDevicesResponse(org.openapis.openapi.models.shared.AdminListDevicesResponse adminListDevicesResponse) {
         this.adminListDevicesResponse = adminListDevicesResponse;
         return this;
@@ -19,6 +21,7 @@ public class AdminListDevicesResponse {
     
     
     public String contentType;
+
     public AdminListDevicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AdminListDevicesResponse {
      */
     
     public Object internalErrorException;
+
     public AdminListDevicesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AdminListDevicesResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminListDevicesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AdminListDevicesResponse {
      */
     
     public Object invalidUserPoolConfigurationException;
+
     public AdminListDevicesResponse withInvalidUserPoolConfigurationException(Object invalidUserPoolConfigurationException) {
         this.invalidUserPoolConfigurationException = invalidUserPoolConfigurationException;
         return this;
@@ -59,6 +65,7 @@ public class AdminListDevicesResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminListDevicesResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -66,6 +73,7 @@ public class AdminListDevicesResponse {
     
     
     public Integer statusCode;
+
     public AdminListDevicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AdminListDevicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminListDevicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AdminListDevicesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminListDevicesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class AdminListDevicesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminListDevicesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public AdminListDevicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

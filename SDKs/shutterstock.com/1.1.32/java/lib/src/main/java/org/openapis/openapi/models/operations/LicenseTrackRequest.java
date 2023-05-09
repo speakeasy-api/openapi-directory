@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LicenseTrackRequest {
@@ -12,6 +13,7 @@ public class LicenseTrackRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.LicenseAudioRequest licenseAudioRequest;
+
     public LicenseTrackRequest withLicenseAudioRequest(org.openapis.openapi.models.shared.LicenseAudioRequest licenseAudioRequest) {
         this.licenseAudioRequest = licenseAudioRequest;
         return this;
@@ -22,6 +24,7 @@ public class LicenseTrackRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public LicenseTrackLicenseEnum license;
+
     public LicenseTrackRequest withLicense(LicenseTrackLicenseEnum license) {
         this.license = license;
         return this;
@@ -32,9 +35,13 @@ public class LicenseTrackRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
     public String searchId;
+
     public LicenseTrackRequest withSearchId(String searchId) {
         this.searchId = searchId;
         return this;
     }
     
+    public LicenseTrackRequest(@JsonProperty("LicenseAudioRequest") org.openapis.openapi.models.shared.LicenseAudioRequest licenseAudioRequest) {
+        this.licenseAudioRequest = licenseAudioRequest;
+  }
 }

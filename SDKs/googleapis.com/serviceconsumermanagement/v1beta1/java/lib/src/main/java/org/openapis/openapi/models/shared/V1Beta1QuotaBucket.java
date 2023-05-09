@@ -18,6 +18,7 @@ public class V1Beta1QuotaBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminOverride")
     public V1Beta1QuotaOverride adminOverride;
+
     public V1Beta1QuotaBucket withAdminOverride(V1Beta1QuotaOverride adminOverride) {
         this.adminOverride = adminOverride;
         return this;
@@ -29,6 +30,7 @@ public class V1Beta1QuotaBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerOverride")
     public V1Beta1QuotaOverride consumerOverride;
+
     public V1Beta1QuotaBucket withConsumerOverride(V1Beta1QuotaOverride consumerOverride) {
         this.consumerOverride = consumerOverride;
         return this;
@@ -40,6 +42,7 @@ public class V1Beta1QuotaBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLimit")
     public String defaultLimit;
+
     public V1Beta1QuotaBucket withDefaultLimit(String defaultLimit) {
         this.defaultLimit = defaultLimit;
         return this;
@@ -51,6 +54,7 @@ public class V1Beta1QuotaBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public java.util.Map<String, String> dimensions;
+
     public V1Beta1QuotaBucket withDimensions(java.util.Map<String, String> dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -62,6 +66,7 @@ public class V1Beta1QuotaBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveLimit")
     public String effectiveLimit;
+
     public V1Beta1QuotaBucket withEffectiveLimit(String effectiveLimit) {
         this.effectiveLimit = effectiveLimit;
         return this;
@@ -73,9 +78,11 @@ public class V1Beta1QuotaBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerOverride")
     public V1Beta1QuotaOverride producerOverride;
+
     public V1Beta1QuotaBucket withProducerOverride(V1Beta1QuotaOverride producerOverride) {
         this.producerOverride = producerOverride;
         return this;
     }
     
+    public V1Beta1QuotaBucket(){}
 }

@@ -17,6 +17,7 @@ public class EeOffersRequest {
      */
     @JsonProperty("accessToken")
     public String accessToken;
+
     public EeOffersRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -27,6 +28,7 @@ public class EeOffersRequest {
      */
     @JsonProperty("msisdn")
     public String msisdn;
+
     public EeOffersRequest withMsisdn(String msisdn) {
         this.msisdn = msisdn;
         return this;
@@ -38,9 +40,14 @@ public class EeOffersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingHeader")
     public String trackingHeader;
+
     public EeOffersRequest withTrackingHeader(String trackingHeader) {
         this.trackingHeader = trackingHeader;
         return this;
     }
     
+    public EeOffersRequest(@JsonProperty("accessToken") String accessToken, @JsonProperty("msisdn") String msisdn) {
+        this.accessToken = accessToken;
+        this.msisdn = msisdn;
+  }
 }

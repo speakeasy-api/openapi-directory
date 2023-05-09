@@ -15,6 +15,7 @@ public class PostFirewallsCreateFirewallRequestApplyTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_selector")
     public PostFirewallsCreateFirewallRequestApplyToLabelSelector labelSelector;
+
     public PostFirewallsCreateFirewallRequestApplyTo withLabelSelector(PostFirewallsCreateFirewallRequestApplyToLabelSelector labelSelector) {
         this.labelSelector = labelSelector;
         return this;
@@ -26,6 +27,7 @@ public class PostFirewallsCreateFirewallRequestApplyTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public PostFirewallsCreateFirewallRequestApplyToServer server;
+
     public PostFirewallsCreateFirewallRequestApplyTo withServer(PostFirewallsCreateFirewallRequestApplyToServer server) {
         this.server = server;
         return this;
@@ -36,9 +38,13 @@ public class PostFirewallsCreateFirewallRequestApplyTo {
      */
     @JsonProperty("type")
     public PostFirewallsCreateFirewallRequestApplyToTypeEnum type;
+
     public PostFirewallsCreateFirewallRequestApplyTo withType(PostFirewallsCreateFirewallRequestApplyToTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostFirewallsCreateFirewallRequestApplyTo(@JsonProperty("type") PostFirewallsCreateFirewallRequestApplyToTypeEnum type) {
+        this.type = type;
+  }
 }

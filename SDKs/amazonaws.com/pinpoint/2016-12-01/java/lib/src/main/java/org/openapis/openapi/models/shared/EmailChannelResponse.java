@@ -15,6 +15,7 @@ public class EmailChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public EmailChannelResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -23,6 +24,7 @@ public class EmailChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSet")
     public String configurationSet;
+
     public EmailChannelResponse withConfigurationSet(String configurationSet) {
         this.configurationSet = configurationSet;
         return this;
@@ -31,6 +33,7 @@ public class EmailChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public EmailChannelResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -39,6 +42,7 @@ public class EmailChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public EmailChannelResponse withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -47,6 +51,7 @@ public class EmailChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromAddress")
     public String fromAddress;
+
     public EmailChannelResponse withFromAddress(String fromAddress) {
         this.fromAddress = fromAddress;
         return this;
@@ -55,6 +60,7 @@ public class EmailChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasCredential")
     public Boolean hasCredential;
+
     public EmailChannelResponse withHasCredential(Boolean hasCredential) {
         this.hasCredential = hasCredential;
         return this;
@@ -63,6 +69,7 @@ public class EmailChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public EmailChannelResponse withId(String id) {
         this.id = id;
         return this;
@@ -71,6 +78,7 @@ public class EmailChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identity")
     public String identity;
+
     public EmailChannelResponse withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -79,6 +87,7 @@ public class EmailChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsArchived")
     public Boolean isArchived;
+
     public EmailChannelResponse withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -87,6 +96,7 @@ public class EmailChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public String lastModifiedBy;
+
     public EmailChannelResponse withLastModifiedBy(String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -95,6 +105,7 @@ public class EmailChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public EmailChannelResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -103,6 +114,7 @@ public class EmailChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessagesPerSecond")
     public Long messagesPerSecond;
+
     public EmailChannelResponse withMessagesPerSecond(Long messagesPerSecond) {
         this.messagesPerSecond = messagesPerSecond;
         return this;
@@ -110,6 +122,7 @@ public class EmailChannelResponse {
     
     @JsonProperty("Platform")
     public String platform;
+
     public EmailChannelResponse withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -118,6 +131,7 @@ public class EmailChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public EmailChannelResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -126,9 +140,13 @@ public class EmailChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public EmailChannelResponse withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public EmailChannelResponse(@JsonProperty("Platform") String platform) {
+        this.platform = platform;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartCanaryResponse {
@@ -12,6 +13,7 @@ public class StartCanaryResponse {
      */
     
     public Object conflictException;
+
     public StartCanaryResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StartCanaryResponse {
     
     
     public String contentType;
+
     public StartCanaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartCanaryResponse {
      */
     
     public Object internalServerException;
+
     public StartCanaryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartCanaryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartCanaryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartCanaryResponse {
      */
     
     public java.util.Map<String, Object> startCanaryResponse;
+
     public StartCanaryResponse withStartCanaryResponse(java.util.Map<String, Object> startCanaryResponse) {
         this.startCanaryResponse = startCanaryResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartCanaryResponse {
     
     
     public Integer statusCode;
+
     public StartCanaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartCanaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartCanaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class StartCanaryResponse {
      */
     
     public Object validationException;
+
     public StartCanaryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartCanaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

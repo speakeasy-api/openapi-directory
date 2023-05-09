@@ -12,6 +12,7 @@ public class ListComplianceSummariesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ComplianceStringFilter[] filters;
+
     public ListComplianceSummariesRequest withFilters(ComplianceStringFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListComplianceSummariesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListComplianceSummariesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListComplianceSummariesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListComplianceSummariesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListComplianceSummariesRequest(){}
 }

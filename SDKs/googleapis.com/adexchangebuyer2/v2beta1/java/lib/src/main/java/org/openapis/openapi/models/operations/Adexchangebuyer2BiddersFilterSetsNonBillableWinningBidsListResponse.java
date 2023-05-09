@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse {
     
     public String contentType;
+
     public Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse
      */
     
     public org.openapis.openapi.models.shared.ListNonBillableWinningBidsResponse listNonBillableWinningBidsResponse;
+
     public Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse withListNonBillableWinningBidsResponse(org.openapis.openapi.models.shared.ListNonBillableWinningBidsResponse listNonBillableWinningBidsResponse) {
         this.listNonBillableWinningBidsResponse = listNonBillableWinningBidsResponse;
         return this;
@@ -26,6 +29,7 @@ public class Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse
     
     
     public Integer statusCode;
+
     public Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Shadow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alignment")
     public ShadowAlignmentEnum alignment;
+
     public Shadow withAlignment(ShadowAlignmentEnum alignment) {
         this.alignment = alignment;
         return this;
@@ -29,6 +30,7 @@ public class Shadow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alpha")
     public Float alpha;
+
     public Shadow withAlpha(Float alpha) {
         this.alpha = alpha;
         return this;
@@ -40,6 +42,7 @@ public class Shadow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blurRadius")
     public Dimension blurRadius;
+
     public Shadow withBlurRadius(Dimension blurRadius) {
         this.blurRadius = blurRadius;
         return this;
@@ -51,6 +54,7 @@ public class Shadow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public OpaqueColor color;
+
     public Shadow withColor(OpaqueColor color) {
         this.color = color;
         return this;
@@ -62,6 +66,7 @@ public class Shadow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyState")
     public ShadowPropertyStateEnum propertyState;
+
     public Shadow withPropertyState(ShadowPropertyStateEnum propertyState) {
         this.propertyState = propertyState;
         return this;
@@ -73,6 +78,7 @@ public class Shadow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rotateWithShape")
     public Boolean rotateWithShape;
+
     public Shadow withRotateWithShape(Boolean rotateWithShape) {
         this.rotateWithShape = rotateWithShape;
         return this;
@@ -84,6 +90,7 @@ public class Shadow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transform")
     public AffineTransform transform;
+
     public Shadow withTransform(AffineTransform transform) {
         this.transform = transform;
         return this;
@@ -95,9 +102,11 @@ public class Shadow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ShadowTypeEnum type;
+
     public Shadow withType(ShadowTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Shadow(){}
 }

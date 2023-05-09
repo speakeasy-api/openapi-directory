@@ -15,9 +15,11 @@ public class GetAWSDefaultServiceQuotaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quota")
     public ServiceQuota quota;
+
     public GetAWSDefaultServiceQuotaResponse withQuota(ServiceQuota quota) {
         this.quota = quota;
         return this;
     }
     
+    public GetAWSDefaultServiceQuotaResponse(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2IntentMessageSimpleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayText")
     public String displayText;
+
     public GoogleCloudDialogflowV2IntentMessageSimpleResponse withDisplayText(String displayText) {
         this.displayText = displayText;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2IntentMessageSimpleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssml")
     public String ssml;
+
     public GoogleCloudDialogflowV2IntentMessageSimpleResponse withSsml(String ssml) {
         this.ssml = ssml;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2IntentMessageSimpleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textToSpeech")
     public String textToSpeech;
+
     public GoogleCloudDialogflowV2IntentMessageSimpleResponse withTextToSpeech(String textToSpeech) {
         this.textToSpeech = textToSpeech;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentMessageSimpleResponse(){}
 }

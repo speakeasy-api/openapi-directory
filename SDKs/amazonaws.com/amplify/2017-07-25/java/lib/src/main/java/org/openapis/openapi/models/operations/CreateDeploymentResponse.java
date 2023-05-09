@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDeploymentResponse {
@@ -12,6 +13,7 @@ public class CreateDeploymentResponse {
      */
     
     public Object badRequestException;
+
     public CreateDeploymentResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateDeploymentResponse {
     
     
     public String contentType;
+
     public CreateDeploymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDeploymentResult createDeploymentResult;
+
     public CreateDeploymentResponse withCreateDeploymentResult(org.openapis.openapi.models.shared.CreateDeploymentResult createDeploymentResult) {
         this.createDeploymentResult = createDeploymentResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateDeploymentResponse {
      */
     
     public Object internalFailureException;
+
     public CreateDeploymentResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDeploymentResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDeploymentResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateDeploymentResponse {
     
     
     public Integer statusCode;
+
     public CreateDeploymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateDeploymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDeploymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateDeploymentResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateDeploymentResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateDeploymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

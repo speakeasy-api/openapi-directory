@@ -18,9 +18,11 @@ public class SuggestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestResults")
     public SuggestResult[] suggestResults;
+
     public SuggestResponse withSuggestResults(SuggestResult[] suggestResults) {
         this.suggestResults = suggestResults;
         return this;
     }
     
+    public SuggestResponse(){}
 }

@@ -12,6 +12,7 @@ public class GetFactSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public String category;
+
     public GetFactSearchRequest withCategory(String category) {
         this.category = category;
         return this;
@@ -22,6 +23,7 @@ public class GetFactSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetFactSearchRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -32,9 +34,11 @@ public class GetFactSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subcategory")
     public String subcategory;
+
     public GetFactSearchRequest withSubcategory(String subcategory) {
         this.subcategory = subcategory;
         return this;
     }
     
+    public GetFactSearchRequest(){}
 }

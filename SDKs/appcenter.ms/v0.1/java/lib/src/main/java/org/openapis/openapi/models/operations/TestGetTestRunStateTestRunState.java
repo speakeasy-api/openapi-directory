@@ -22,6 +22,7 @@ public class TestGetTestRunStateTestRunState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exit_code")
     public Long exitCode;
+
     public TestGetTestRunStateTestRunState withExitCode(Long exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -33,6 +34,7 @@ public class TestGetTestRunStateTestRunState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String[] message;
+
     public TestGetTestRunStateTestRunState withMessage(String[] message) {
         this.message = message;
         return this;
@@ -44,9 +46,11 @@ public class TestGetTestRunStateTestRunState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wait_time")
     public Long waitTime;
+
     public TestGetTestRunStateTestRunState withWaitTime(Long waitTime) {
         this.waitTime = waitTime;
         return this;
     }
     
+    public TestGetTestRunStateTestRunState(){}
 }

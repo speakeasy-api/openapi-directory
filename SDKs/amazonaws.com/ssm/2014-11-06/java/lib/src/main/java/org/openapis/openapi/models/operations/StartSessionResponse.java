@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartSessionResponse {
     
     public String contentType;
+
     public StartSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartSessionResponse {
      */
     
     public Object internalServerError;
+
     public StartSessionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class StartSessionResponse {
      */
     
     public Object invalidDocument;
+
     public StartSessionResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -39,6 +43,7 @@ public class StartSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartSessionResponse startSessionResponse;
+
     public StartSessionResponse withStartSessionResponse(org.openapis.openapi.models.shared.StartSessionResponse startSessionResponse) {
         this.startSessionResponse = startSessionResponse;
         return this;
@@ -46,6 +51,7 @@ public class StartSessionResponse {
     
     
     public Integer statusCode;
+
     public StartSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StartSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StartSessionResponse {
      */
     
     public Object targetNotConnected;
+
     public StartSessionResponse withTargetNotConnected(Object targetNotConnected) {
         this.targetNotConnected = targetNotConnected;
         return this;
     }
     
+    public StartSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

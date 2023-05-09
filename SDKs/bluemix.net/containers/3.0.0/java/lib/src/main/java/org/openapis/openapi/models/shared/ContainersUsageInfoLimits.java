@@ -15,6 +15,7 @@ public class ContainersUsageInfoLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public Integer containers;
+
     public ContainersUsageInfoLimits withContainers(Integer containers) {
         this.containers = containers;
         return this;
@@ -26,6 +27,7 @@ public class ContainersUsageInfoLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floating_ips")
     public Integer floatingIps;
+
     public ContainersUsageInfoLimits withFloatingIps(Integer floatingIps) {
         this.floatingIps = floatingIps;
         return this;
@@ -37,6 +39,7 @@ public class ContainersUsageInfoLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory_MB")
     public Integer memoryMB;
+
     public ContainersUsageInfoLimits withMemoryMB(Integer memoryMB) {
         this.memoryMB = memoryMB;
         return this;
@@ -48,9 +51,11 @@ public class ContainersUsageInfoLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcpu")
     public Integer vcpu;
+
     public ContainersUsageInfoLimits withVcpu(Integer vcpu) {
         this.vcpu = vcpu;
         return this;
     }
     
+    public ContainersUsageInfoLimits(){}
 }

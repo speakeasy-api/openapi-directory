@@ -21,6 +21,7 @@ public class LoyaltyAccountMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public LoyaltyAccountMapping withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -32,6 +33,7 @@ public class LoyaltyAccountMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LoyaltyAccountMapping withId(String id) {
         this.id = id;
         return this;
@@ -43,9 +45,11 @@ public class LoyaltyAccountMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public LoyaltyAccountMapping withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public LoyaltyAccountMapping(){}
 }

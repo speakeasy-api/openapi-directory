@@ -15,9 +15,11 @@ public class TimestampValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public TimestampValues withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public TimestampValues(){}
 }

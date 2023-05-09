@@ -18,6 +18,7 @@ public class GoogleCloudSecuritycenterV1ExternalSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignees")
     public String[] assignees;
+
     public GoogleCloudSecuritycenterV1ExternalSystem withAssignees(String[] assignees) {
         this.assignees = assignees;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudSecuritycenterV1ExternalSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalSystemUpdateTime")
     public String externalSystemUpdateTime;
+
     public GoogleCloudSecuritycenterV1ExternalSystem withExternalSystemUpdateTime(String externalSystemUpdateTime) {
         this.externalSystemUpdateTime = externalSystemUpdateTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudSecuritycenterV1ExternalSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalUid")
     public String externalUid;
+
     public GoogleCloudSecuritycenterV1ExternalSystem withExternalUid(String externalUid) {
         this.externalUid = externalUid;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudSecuritycenterV1ExternalSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudSecuritycenterV1ExternalSystem withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudSecuritycenterV1ExternalSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GoogleCloudSecuritycenterV1ExternalSystem withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GoogleCloudSecuritycenterV1ExternalSystem(){}
 }

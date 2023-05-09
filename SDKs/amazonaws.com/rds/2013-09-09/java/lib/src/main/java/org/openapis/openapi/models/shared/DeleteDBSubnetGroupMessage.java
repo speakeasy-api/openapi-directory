@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteDBSubnetGroupMessage {
     
     public String dbSubnetGroupName;
+
     public DeleteDBSubnetGroupMessage withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
     }
     
+    public DeleteDBSubnetGroupMessage(@JsonProperty("DBSubnetGroupName") String dbSubnetGroupName) {
+        this.dbSubnetGroupName = dbSubnetGroupName;
+  }
 }

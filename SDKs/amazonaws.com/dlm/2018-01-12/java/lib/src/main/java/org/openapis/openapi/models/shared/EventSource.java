@@ -15,6 +15,7 @@ public class EventSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public EventParameters parameters;
+
     public EventSource withParameters(EventParameters parameters) {
         this.parameters = parameters;
         return this;
@@ -22,9 +23,13 @@ public class EventSource {
     
     @JsonProperty("Type")
     public EventSourceValuesEnum type;
+
     public EventSource withType(EventSourceValuesEnum type) {
         this.type = type;
         return this;
     }
     
+    public EventSource(@JsonProperty("Type") EventSourceValuesEnum type) {
+        this.type = type;
+  }
 }

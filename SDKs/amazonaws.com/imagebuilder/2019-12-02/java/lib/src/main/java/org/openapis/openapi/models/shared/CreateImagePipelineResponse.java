@@ -15,6 +15,7 @@ public class CreateImagePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateImagePipelineResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +24,7 @@ public class CreateImagePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imagePipelineArn")
     public String imagePipelineArn;
+
     public CreateImagePipelineResponse withImagePipelineArn(String imagePipelineArn) {
         this.imagePipelineArn = imagePipelineArn;
         return this;
@@ -31,9 +33,11 @@ public class CreateImagePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public CreateImagePipelineResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public CreateImagePipelineResponse(){}
 }

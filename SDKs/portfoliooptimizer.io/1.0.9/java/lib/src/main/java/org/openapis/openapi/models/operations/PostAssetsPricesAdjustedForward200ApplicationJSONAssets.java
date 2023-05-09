@@ -12,9 +12,13 @@ public class PostAssetsPricesAdjustedForward200ApplicationJSONAssets {
      */
     @JsonProperty("assetAdjustedPrices")
     public PostAssetsPricesAdjustedForward200ApplicationJSONAssetsAssetAdjustedPrices[] assetAdjustedPrices;
+
     public PostAssetsPricesAdjustedForward200ApplicationJSONAssets withAssetAdjustedPrices(PostAssetsPricesAdjustedForward200ApplicationJSONAssetsAssetAdjustedPrices[] assetAdjustedPrices) {
         this.assetAdjustedPrices = assetAdjustedPrices;
         return this;
     }
     
+    public PostAssetsPricesAdjustedForward200ApplicationJSONAssets(@JsonProperty("assetAdjustedPrices") PostAssetsPricesAdjustedForward200ApplicationJSONAssetsAssetAdjustedPrices[] assetAdjustedPrices) {
+        this.assetAdjustedPrices = assetAdjustedPrices;
+  }
 }

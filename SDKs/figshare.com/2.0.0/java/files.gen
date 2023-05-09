@@ -38,6 +38,7 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/AccountArticleReportSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/AccountArticleReportRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AccountArticleReportResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/AccountArticleReportGenerateSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/AccountArticleReportGenerateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ArticleDetailsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ArticleDetailsResponse.java
@@ -289,6 +290,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostAccountInstitutionR
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateAccountInstitutionUserSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateAccountInstitutionUserRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateAccountInstitutionUserResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PrivateCategoriesListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateCategoriesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateGroupEmbargoOptionsDetailsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateGroupEmbargoOptionsDetailsRequest.java
@@ -317,9 +319,13 @@ lib/src/main/java/org/openapis/openapi/models/operations/PrivateInstitutionArtic
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateInstitutionArticlesOrderDirectionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateInstitutionArticlesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateInstitutionArticlesResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PrivateInstitutionDetailsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateInstitutionDetailsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PrivateInstitutionEmbargoOptionsDetailsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateInstitutionEmbargoOptionsDetailsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PrivateInstitutionGroupsListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateInstitutionGroupsListResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PrivateInstitutionRolesListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateInstitutionRolesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CategoriesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/FileDownloadRequest.java
@@ -328,9 +334,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/ItemTypesListSecurity.j
 lib/src/main/java/org/openapis/openapi/models/operations/ItemTypesListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ItemTypesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/LicensesListResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PrivateAccountSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateAccountResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateFundingSearchSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateFundingSearchResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PrivateLicensesListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateLicensesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateProjectArticleDeleteSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrivateProjectArticleDeleteRequest.java
@@ -519,4 +527,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/ProjectsSearchOrderDirectio
 lib/src/main/java/org/openapis/openapi/models/shared/ProjectsSearch.java
 lib/src/main/java/org/openapis/openapi/models/shared/ProjectComplete.java
 lib/src/main/java/org/openapis/openapi/models/shared/Project.java
+docs/sdk/README.md
+docs/articles/README.md
+docs/authors/README.md
+docs/collections/README.md
+docs/institutions/README.md
+docs/other/README.md
+docs/projects/README.md
 USAGE.md

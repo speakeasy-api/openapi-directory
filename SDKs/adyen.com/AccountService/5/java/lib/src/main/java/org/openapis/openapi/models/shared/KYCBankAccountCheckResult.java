@@ -15,6 +15,7 @@ public class KYCBankAccountCheckResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountUUID")
     public String bankAccountUUID;
+
     public KYCBankAccountCheckResult withBankAccountUUID(String bankAccountUUID) {
         this.bankAccountUUID = bankAccountUUID;
         return this;
@@ -26,9 +27,11 @@ public class KYCBankAccountCheckResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checks")
     public KYCCheckStatusData[] checks;
+
     public KYCBankAccountCheckResult withChecks(KYCCheckStatusData[] checks) {
         this.checks = checks;
         return this;
     }
     
+    public KYCBankAccountCheckResult(){}
 }

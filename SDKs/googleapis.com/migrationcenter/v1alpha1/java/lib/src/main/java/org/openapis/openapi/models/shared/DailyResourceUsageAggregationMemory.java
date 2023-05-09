@@ -18,9 +18,11 @@ public class DailyResourceUsageAggregationMemory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utilizationPercentage")
     public DailyResourceUsageAggregationStats utilizationPercentage;
+
     public DailyResourceUsageAggregationMemory withUtilizationPercentage(DailyResourceUsageAggregationStats utilizationPercentage) {
         this.utilizationPercentage = utilizationPercentage;
         return this;
     }
     
+    public DailyResourceUsageAggregationMemory(){}
 }

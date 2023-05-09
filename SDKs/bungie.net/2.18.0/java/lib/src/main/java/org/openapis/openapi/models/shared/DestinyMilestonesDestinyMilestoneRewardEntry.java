@@ -15,6 +15,7 @@ public class DestinyMilestonesDestinyMilestoneRewardEntry {
      */
     
     public Boolean earned;
+
     public DestinyMilestonesDestinyMilestoneRewardEntry withEarned(Boolean earned) {
         this.earned = earned;
         return this;
@@ -25,6 +26,7 @@ public class DestinyMilestonesDestinyMilestoneRewardEntry {
      */
     
     public Boolean redeemed;
+
     public DestinyMilestonesDestinyMilestoneRewardEntry withRedeemed(Boolean redeemed) {
         this.redeemed = redeemed;
         return this;
@@ -35,9 +37,11 @@ public class DestinyMilestonesDestinyMilestoneRewardEntry {
      */
     
     public Long rewardEntryHash;
+
     public DestinyMilestonesDestinyMilestoneRewardEntry withRewardEntryHash(Long rewardEntryHash) {
         this.rewardEntryHash = rewardEntryHash;
         return this;
     }
     
+    public DestinyMilestonesDestinyMilestoneRewardEntry(){}
 }

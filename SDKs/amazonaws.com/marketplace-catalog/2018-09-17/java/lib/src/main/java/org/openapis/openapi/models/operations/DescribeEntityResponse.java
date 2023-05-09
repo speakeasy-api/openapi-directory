@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEntityResponse {
@@ -12,6 +13,7 @@ public class DescribeEntityResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeEntityResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEntityResponse {
     
     
     public String contentType;
+
     public DescribeEntityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEntityResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEntityResponse describeEntityResponse;
+
     public DescribeEntityResponse withDescribeEntityResponse(org.openapis.openapi.models.shared.DescribeEntityResponse describeEntityResponse) {
         this.describeEntityResponse = describeEntityResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEntityResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeEntityResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeEntityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeEntityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeEntityResponse {
     
     
     public Integer statusCode;
+
     public DescribeEntityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeEntityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEntityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeEntityResponse {
      */
     
     public Object resourceNotSupportedException;
+
     public DescribeEntityResponse withResourceNotSupportedException(Object resourceNotSupportedException) {
         this.resourceNotSupportedException = resourceNotSupportedException;
         return this;
@@ -83,6 +92,7 @@ public class DescribeEntityResponse {
      */
     
     public Object throttlingException;
+
     public DescribeEntityResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeEntityResponse {
      */
     
     public Object validationException;
+
     public DescribeEntityResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeEntityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

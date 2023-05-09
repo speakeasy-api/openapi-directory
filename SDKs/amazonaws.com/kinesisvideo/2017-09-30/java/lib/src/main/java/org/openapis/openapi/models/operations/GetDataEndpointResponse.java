@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDataEndpointResponse {
@@ -12,6 +13,7 @@ public class GetDataEndpointResponse {
      */
     
     public Object clientLimitExceededException;
+
     public GetDataEndpointResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class GetDataEndpointResponse {
     
     
     public String contentType;
+
     public GetDataEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDataEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDataEndpointOutput getDataEndpointOutput;
+
     public GetDataEndpointResponse withGetDataEndpointOutput(org.openapis.openapi.models.shared.GetDataEndpointOutput getDataEndpointOutput) {
         this.getDataEndpointOutput = getDataEndpointOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetDataEndpointResponse {
      */
     
     public Object invalidArgumentException;
+
     public GetDataEndpointResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class GetDataEndpointResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetDataEndpointResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class GetDataEndpointResponse {
     
     
     public Integer statusCode;
+
     public GetDataEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetDataEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDataEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetDataEndpointResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetDataEndpointResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetDataEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

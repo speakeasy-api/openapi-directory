@@ -15,6 +15,7 @@ public class ListenerTlsValidationContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAlternativeNames")
     public SubjectAlternativeNames subjectAlternativeNames;
+
     public ListenerTlsValidationContext withSubjectAlternativeNames(SubjectAlternativeNames subjectAlternativeNames) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         return this;
@@ -22,9 +23,13 @@ public class ListenerTlsValidationContext {
     
     @JsonProperty("trust")
     public ListenerTlsValidationContextTrust trust;
+
     public ListenerTlsValidationContext withTrust(ListenerTlsValidationContextTrust trust) {
         this.trust = trust;
         return this;
     }
     
+    public ListenerTlsValidationContext(@JsonProperty("trust") ListenerTlsValidationContextTrust trust) {
+        this.trust = trust;
+  }
 }

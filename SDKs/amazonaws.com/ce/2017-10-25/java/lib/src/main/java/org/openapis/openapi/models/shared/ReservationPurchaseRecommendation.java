@@ -15,6 +15,7 @@ public class ReservationPurchaseRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountScope")
     public AccountScopeEnum accountScope;
+
     public ReservationPurchaseRecommendation withAccountScope(AccountScopeEnum accountScope) {
         this.accountScope = accountScope;
         return this;
@@ -23,6 +24,7 @@ public class ReservationPurchaseRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LookbackPeriodInDays")
     public LookbackPeriodInDaysEnum lookbackPeriodInDays;
+
     public ReservationPurchaseRecommendation withLookbackPeriodInDays(LookbackPeriodInDaysEnum lookbackPeriodInDays) {
         this.lookbackPeriodInDays = lookbackPeriodInDays;
         return this;
@@ -31,6 +33,7 @@ public class ReservationPurchaseRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentOption")
     public PaymentOptionEnum paymentOption;
+
     public ReservationPurchaseRecommendation withPaymentOption(PaymentOptionEnum paymentOption) {
         this.paymentOption = paymentOption;
         return this;
@@ -39,6 +42,7 @@ public class ReservationPurchaseRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationDetails")
     public ReservationPurchaseRecommendationDetail[] recommendationDetails;
+
     public ReservationPurchaseRecommendation withRecommendationDetails(ReservationPurchaseRecommendationDetail[] recommendationDetails) {
         this.recommendationDetails = recommendationDetails;
         return this;
@@ -47,6 +51,7 @@ public class ReservationPurchaseRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationSummary")
     public ReservationPurchaseRecommendationSummary recommendationSummary;
+
     public ReservationPurchaseRecommendation withRecommendationSummary(ReservationPurchaseRecommendationSummary recommendationSummary) {
         this.recommendationSummary = recommendationSummary;
         return this;
@@ -55,6 +60,7 @@ public class ReservationPurchaseRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceSpecification")
     public ServiceSpecification serviceSpecification;
+
     public ReservationPurchaseRecommendation withServiceSpecification(ServiceSpecification serviceSpecification) {
         this.serviceSpecification = serviceSpecification;
         return this;
@@ -63,9 +69,11 @@ public class ReservationPurchaseRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TermInYears")
     public TermInYearsEnum termInYears;
+
     public ReservationPurchaseRecommendation withTermInYears(TermInYearsEnum termInYears) {
         this.termInYears = termInYears;
         return this;
     }
     
+    public ReservationPurchaseRecommendation(){}
 }

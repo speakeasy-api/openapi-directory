@@ -15,9 +15,11 @@ public class GdataDiffDownloadResponse {
      */
     
     public GdataCompositeMedia objectLocation;
+
     public GdataDiffDownloadResponse withObjectLocation(GdataCompositeMedia objectLocation) {
         this.objectLocation = objectLocation;
         return this;
     }
     
+    public GdataDiffDownloadResponse(){}
 }

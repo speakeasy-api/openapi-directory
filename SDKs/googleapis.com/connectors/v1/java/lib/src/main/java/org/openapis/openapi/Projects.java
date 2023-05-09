@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefreshResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefreshResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefreshResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefreshResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsCreateResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsCreateResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsCreateResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsListResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsListResponse(contentType, httpRes.statusCode()) {{
             listConnectionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -168,54 +162,6 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListConnectionsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListConnectionsResponse.class);
                 res.listConnectionsResponse = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Updates the parameters of a single Connection.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsPatchResponse connectorsProjectsLocationsConnectionsPatch(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsPatchRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsPatchSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PATCH");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "connectionInput", "json");
-        req.setBody(serializedRequestBody);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsPatchRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsPatchResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsPatchResponse() {{
-            operation = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
-                res.operation = out;
             }
         }
 
@@ -250,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasListResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasListResponse(contentType, httpRes.statusCode()) {{
             listRuntimeActionSchemasResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListResponse(contentType, httpRes.statusCode()) {{
             listRuntimeEntitySchemasResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -308,6 +250,232 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListRuntimeEntitySchemasResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListRuntimeEntitySchemasResponse.class);
                 res.listRuntimeEntitySchemasResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Creates a new EndpointAttachment in a given project and location.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsEndpointAttachmentsCreateResponse connectorsProjectsLocationsEndpointAttachmentsCreate(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsEndpointAttachmentsCreateRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsEndpointAttachmentsCreateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsEndpointAttachmentsCreateRequest.class, baseUrl, "/v1/{parent}/endpointAttachments", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "endpointAttachmentInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsEndpointAttachmentsCreateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsEndpointAttachmentsCreateResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsEndpointAttachmentsCreateResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List EndpointAttachments in a given project
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsEndpointAttachmentsListResponse connectorsProjectsLocationsEndpointAttachmentsList(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsEndpointAttachmentsListRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsEndpointAttachmentsListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsEndpointAttachmentsListRequest.class, baseUrl, "/v1/{parent}/endpointAttachments", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsEndpointAttachmentsListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsEndpointAttachmentsListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsEndpointAttachmentsListResponse(contentType, httpRes.statusCode()) {{
+            listEndpointAttachmentsResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListEndpointAttachmentsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListEndpointAttachmentsResponse.class);
+                res.listEndpointAttachmentsResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Creates a new ManagedZone in a given project and location.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesCreateResponse connectorsProjectsLocationsGlobalManagedZonesCreate(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesCreateRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesCreateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesCreateRequest.class, baseUrl, "/v1/{parent}/managedZones", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "managedZoneInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesCreateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesCreateResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesCreateResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List ManagedZones in a given project
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesListResponse connectorsProjectsLocationsGlobalManagedZonesList(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesListRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesListRequest.class, baseUrl, "/v1/{parent}/managedZones", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesListResponse(contentType, httpRes.statusCode()) {{
+            listManagedZonesResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListManagedZonesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListManagedZonesResponse.class);
+                res.listManagedZonesResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Updates the parameters of a single ManagedZone.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesPatchResponse connectorsProjectsLocationsGlobalManagedZonesPatch(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesPatchRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesPatchSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesPatchRequest.class, baseUrl, "/v1/{name}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "managedZoneInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesPatchRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesPatchResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsGlobalManagedZonesPatchResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
             }
         }
 
@@ -342,11 +510,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,11 +600,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,11 +644,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -528,11 +688,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersConnectorsListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersConnectorsListResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersConnectorsListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersConnectorsListResponse(contentType, httpRes.statusCode()) {{
             listConnectorsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -574,11 +732,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsGetResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsGetResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsGetResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsGetResponse(contentType, httpRes.statusCode()) {{
             connectorVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -620,11 +776,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsListResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsListResponse(contentType, httpRes.statusCode()) {{
             listConnectorVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -666,11 +820,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -712,11 +864,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersListResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersListResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersListResponse(contentType, httpRes.statusCode()) {{
             listProvidersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -760,11 +910,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -808,11 +956,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ConnectorsProjectsLocationsProvidersTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

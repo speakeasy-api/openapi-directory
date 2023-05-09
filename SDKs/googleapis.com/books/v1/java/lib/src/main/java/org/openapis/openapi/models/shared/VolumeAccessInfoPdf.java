@@ -18,6 +18,7 @@ public class VolumeAccessInfoPdf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acsTokenLink")
     public String acsTokenLink;
+
     public VolumeAccessInfoPdf withAcsTokenLink(String acsTokenLink) {
         this.acsTokenLink = acsTokenLink;
         return this;
@@ -29,6 +30,7 @@ public class VolumeAccessInfoPdf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadLink")
     public String downloadLink;
+
     public VolumeAccessInfoPdf withDownloadLink(String downloadLink) {
         this.downloadLink = downloadLink;
         return this;
@@ -40,9 +42,11 @@ public class VolumeAccessInfoPdf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAvailable")
     public Boolean isAvailable;
+
     public VolumeAccessInfoPdf withIsAvailable(Boolean isAvailable) {
         this.isAvailable = isAvailable;
         return this;
     }
     
+    public VolumeAccessInfoPdf(){}
 }

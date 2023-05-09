@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFilePaymentConsentsConsentIdFileJsonResponse {
     
     public byte[] body;
+
     public CreateFilePaymentConsentsConsentIdFileJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CreateFilePaymentConsentsConsentIdFileJsonResponse {
     
     
     public String contentType;
+
     public CreateFilePaymentConsentsConsentIdFileJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CreateFilePaymentConsentsConsentIdFileJsonResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreateFilePaymentConsentsConsentIdFileJsonResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class CreateFilePaymentConsentsConsentIdFileJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public CreateFilePaymentConsentsConsentIdFileJsonResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -40,6 +45,7 @@ public class CreateFilePaymentConsentsConsentIdFileJsonResponse {
     
     
     public Integer statusCode;
+
     public CreateFilePaymentConsentsConsentIdFileJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class CreateFilePaymentConsentsConsentIdFileJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFilePaymentConsentsConsentIdFileJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateFilePaymentConsentsConsentIdFileJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

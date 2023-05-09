@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTrafficMirrorTargetRequestTagSpecifications {
     
     public CreateTrafficMirrorTargetRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateTrafficMirrorTargetRequestTagSpecifications withResourceType(CreateTrafficMirrorTargetRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateTrafficMirrorTargetRequestTagSpecifications {
     
     
     public CreateTrafficMirrorTargetRequestTagSpecificationsTags[] tags;
+
     public CreateTrafficMirrorTargetRequestTagSpecifications withTags(CreateTrafficMirrorTargetRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateTrafficMirrorTargetRequestTagSpecifications(){}
 }

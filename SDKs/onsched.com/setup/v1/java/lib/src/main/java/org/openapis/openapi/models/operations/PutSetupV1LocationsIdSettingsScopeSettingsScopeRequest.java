@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1LocationsIdSettingsScopeSettingsScopeRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutSetupV1LocationsIdSettingsScopeSettingsScopeRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +18,14 @@ public class PutSetupV1LocationsIdSettingsScopeSettingsScopeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingsScope")
     public String settingsScope;
+
     public PutSetupV1LocationsIdSettingsScopeSettingsScopeRequest withSettingsScope(String settingsScope) {
         this.settingsScope = settingsScope;
         return this;
     }
     
+    public PutSetupV1LocationsIdSettingsScopeSettingsScopeRequest(@JsonProperty("id") String id, @JsonProperty("settingsScope") String settingsScope) {
+        this.id = id;
+        this.settingsScope = settingsScope;
+  }
 }

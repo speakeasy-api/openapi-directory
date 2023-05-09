@@ -15,9 +15,11 @@ public class CreateComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public Component entity;
+
     public CreateComponentResponse withEntity(Component entity) {
         this.entity = entity;
         return this;
     }
     
+    public CreateComponentResponse(){}
 }

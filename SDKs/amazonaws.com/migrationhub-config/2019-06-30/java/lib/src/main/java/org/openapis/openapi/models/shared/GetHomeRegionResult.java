@@ -15,9 +15,11 @@ public class GetHomeRegionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeRegion")
     public String homeRegion;
+
     public GetHomeRegionResult withHomeRegion(String homeRegion) {
         this.homeRegion = homeRegion;
         return this;
     }
     
+    public GetHomeRegionResult(){}
 }

@@ -22,6 +22,7 @@ public class ListAnomaliesForInsightRequestBodyStartTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FromTime")
     public OffsetDateTime fromTime;
+
     public ListAnomaliesForInsightRequestBodyStartTimeRange withFromTime(OffsetDateTime fromTime) {
         this.fromTime = fromTime;
         return this;
@@ -32,9 +33,11 @@ public class ListAnomaliesForInsightRequestBodyStartTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ToTime")
     public OffsetDateTime toTime;
+
     public ListAnomaliesForInsightRequestBodyStartTimeRange withToTime(OffsetDateTime toTime) {
         this.toTime = toTime;
         return this;
     }
     
+    public ListAnomaliesForInsightRequestBodyStartTimeRange(){}
 }

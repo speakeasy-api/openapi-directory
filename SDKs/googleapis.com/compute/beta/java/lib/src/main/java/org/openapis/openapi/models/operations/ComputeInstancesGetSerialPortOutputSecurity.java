@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeInstancesGetSerialPortOutputSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesGetSerialPortOutputSecurityOption1 option1;
+
     public ComputeInstancesGetSerialPortOutputSecurity withOption1(ComputeInstancesGetSerialPortOutputSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeInstancesGetSerialPortOutputSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesGetSerialPortOutputSecurityOption2 option2;
+
     public ComputeInstancesGetSerialPortOutputSecurity withOption2(ComputeInstancesGetSerialPortOutputSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeInstancesGetSerialPortOutputSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesGetSerialPortOutputSecurityOption3 option3;
+
     public ComputeInstancesGetSerialPortOutputSecurity withOption3(ComputeInstancesGetSerialPortOutputSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeInstancesGetSerialPortOutputSecurity(){}
 }

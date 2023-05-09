@@ -15,9 +15,11 @@ public class GetFavoritesForUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.AsanaNamedResource[] data;
+
     public GetFavoritesForUser200ApplicationJSON withData(org.openapis.openapi.models.shared.AsanaNamedResource[] data) {
         this.data = data;
         return this;
     }
     
+    public GetFavoritesForUser200ApplicationJSON(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDetectorRequest {
     @JsonProperty("detectorModelName")
     public String detectorModelName;
+
     public UpdateDetectorRequest withDetectorModelName(String detectorModelName) {
         this.detectorModelName = detectorModelName;
         return this;
@@ -22,6 +23,7 @@ public class UpdateDetectorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyValue")
     public String keyValue;
+
     public UpdateDetectorRequest withKeyValue(String keyValue) {
         this.keyValue = keyValue;
         return this;
@@ -29,6 +31,7 @@ public class UpdateDetectorRequest {
     
     @JsonProperty("messageId")
     public String messageId;
+
     public UpdateDetectorRequest withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -36,9 +39,15 @@ public class UpdateDetectorRequest {
     
     @JsonProperty("state")
     public DetectorStateDefinition state;
+
     public UpdateDetectorRequest withState(DetectorStateDefinition state) {
         this.state = state;
         return this;
     }
     
+    public UpdateDetectorRequest(@JsonProperty("detectorModelName") String detectorModelName, @JsonProperty("messageId") String messageId, @JsonProperty("state") DetectorStateDefinition state) {
+        this.detectorModelName = detectorModelName;
+        this.messageId = messageId;
+        this.state = state;
+  }
 }

@@ -22,6 +22,7 @@ public class GameConfigurationDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public GameConfigurationDetails withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -32,6 +33,7 @@ public class GameConfigurationDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public GameConfigurationDetails withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -40,9 +42,11 @@ public class GameConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sections")
     public java.util.Map<String, Section> sections;
+
     public GameConfigurationDetails withSections(java.util.Map<String, Section> sections) {
         this.sections = sections;
         return this;
     }
     
+    public GameConfigurationDetails(){}
 }

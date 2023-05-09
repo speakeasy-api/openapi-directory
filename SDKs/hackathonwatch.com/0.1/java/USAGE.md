@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GETHackathonsIdFormatRequest;
 import org.openapis.openapi.models.operations.GETHackathonsIdFormatResponse;
 
@@ -13,9 +12,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GETHackathonsIdFormatRequest req = new GETHackathonsIdFormatRequest() {{
-                id = 548814;
-            }}            
+            GETHackathonsIdFormatRequest req = new GETHackathonsIdFormatRequest(548814);            
 
             GETHackathonsIdFormatResponse res = sdk.hackathons.getHackathonsIdFormat(req);
 
@@ -25,5 +22,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

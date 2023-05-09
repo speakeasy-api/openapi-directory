@@ -12,9 +12,11 @@ public class FillTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public FillTemplateRequest withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
     }
     
+    public FillTemplateRequest(){}
 }

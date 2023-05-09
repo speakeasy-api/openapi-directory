@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class SearchResultOfFireteamResponse {
     
     public Boolean hasMore;
+
     public SearchResultOfFireteamResponse withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
@@ -16,6 +17,7 @@ public class SearchResultOfFireteamResponse {
     
     
     public QueriesPagedQuery query;
+
     public SearchResultOfFireteamResponse withQuery(QueriesPagedQuery query) {
         this.query = query;
         return this;
@@ -23,6 +25,7 @@ public class SearchResultOfFireteamResponse {
     
     
     public String replacementContinuationToken;
+
     public SearchResultOfFireteamResponse withReplacementContinuationToken(String replacementContinuationToken) {
         this.replacementContinuationToken = replacementContinuationToken;
         return this;
@@ -30,6 +33,7 @@ public class SearchResultOfFireteamResponse {
     
     
     public FireteamFireteamResponse[] results;
+
     public SearchResultOfFireteamResponse withResults(FireteamFireteamResponse[] results) {
         this.results = results;
         return this;
@@ -37,6 +41,7 @@ public class SearchResultOfFireteamResponse {
     
     
     public Integer totalResults;
+
     public SearchResultOfFireteamResponse withTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
         return this;
@@ -50,9 +55,11 @@ public class SearchResultOfFireteamResponse {
      */
     
     public Boolean useTotalResults;
+
     public SearchResultOfFireteamResponse withUseTotalResults(Boolean useTotalResults) {
         this.useTotalResults = useTotalResults;
         return this;
     }
     
+    public SearchResultOfFireteamResponse(){}
 }

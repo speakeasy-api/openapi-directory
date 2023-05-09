@@ -12,6 +12,7 @@ public class NodeId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public NodeTypeEnum entityType;
+
     public NodeId withEntityType(NodeTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -23,9 +24,11 @@ public class NodeId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NodeId withId(String id) {
         this.id = id;
         return this;
     }
     
+    public NodeId(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Destination {
     @JsonProperty("Location")
     public String location;
+
     public Destination withLocation(String location) {
         this.location = location;
         return this;
@@ -19,9 +20,14 @@ public class Destination {
     
     @JsonProperty("Type")
     public DestinationTypeEnum type;
+
     public Destination withType(DestinationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Destination(@JsonProperty("Location") String location, @JsonProperty("Type") DestinationTypeEnum type) {
+        this.location = location;
+        this.type = type;
+  }
 }

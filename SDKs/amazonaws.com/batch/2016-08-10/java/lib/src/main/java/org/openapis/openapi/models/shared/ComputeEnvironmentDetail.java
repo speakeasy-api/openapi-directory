@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ComputeEnvironmentDetail {
     @JsonProperty("computeEnvironmentArn")
     public String computeEnvironmentArn;
+
     public ComputeEnvironmentDetail withComputeEnvironmentArn(String computeEnvironmentArn) {
         this.computeEnvironmentArn = computeEnvironmentArn;
         return this;
@@ -21,6 +22,7 @@ public class ComputeEnvironmentDetail {
     
     @JsonProperty("computeEnvironmentName")
     public String computeEnvironmentName;
+
     public ComputeEnvironmentDetail withComputeEnvironmentName(String computeEnvironmentName) {
         this.computeEnvironmentName = computeEnvironmentName;
         return this;
@@ -29,6 +31,7 @@ public class ComputeEnvironmentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeResources")
     public ComputeResource computeResources;
+
     public ComputeEnvironmentDetail withComputeResources(ComputeResource computeResources) {
         this.computeResources = computeResources;
         return this;
@@ -37,6 +40,7 @@ public class ComputeEnvironmentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerOrchestrationType")
     public OrchestrationTypeEnum containerOrchestrationType;
+
     public ComputeEnvironmentDetail withContainerOrchestrationType(OrchestrationTypeEnum containerOrchestrationType) {
         this.containerOrchestrationType = containerOrchestrationType;
         return this;
@@ -45,6 +49,7 @@ public class ComputeEnvironmentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecsClusterArn")
     public String ecsClusterArn;
+
     public ComputeEnvironmentDetail withEcsClusterArn(String ecsClusterArn) {
         this.ecsClusterArn = ecsClusterArn;
         return this;
@@ -53,6 +58,7 @@ public class ComputeEnvironmentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksConfiguration")
     public EksConfiguration eksConfiguration;
+
     public ComputeEnvironmentDetail withEksConfiguration(EksConfiguration eksConfiguration) {
         this.eksConfiguration = eksConfiguration;
         return this;
@@ -61,6 +67,7 @@ public class ComputeEnvironmentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRole")
     public String serviceRole;
+
     public ComputeEnvironmentDetail withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -69,6 +76,7 @@ public class ComputeEnvironmentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CEStateEnum state;
+
     public ComputeEnvironmentDetail withState(CEStateEnum state) {
         this.state = state;
         return this;
@@ -77,6 +85,7 @@ public class ComputeEnvironmentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CEStatusEnum status;
+
     public ComputeEnvironmentDetail withStatus(CEStatusEnum status) {
         this.status = status;
         return this;
@@ -85,6 +94,7 @@ public class ComputeEnvironmentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public ComputeEnvironmentDetail withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -93,6 +103,7 @@ public class ComputeEnvironmentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ComputeEnvironmentDetail withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -101,6 +112,7 @@ public class ComputeEnvironmentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CETypeEnum type;
+
     public ComputeEnvironmentDetail withType(CETypeEnum type) {
         this.type = type;
         return this;
@@ -109,6 +121,7 @@ public class ComputeEnvironmentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unmanagedvCpus")
     public Long unmanagedvCpus;
+
     public ComputeEnvironmentDetail withUnmanagedvCpus(Long unmanagedvCpus) {
         this.unmanagedvCpus = unmanagedvCpus;
         return this;
@@ -117,6 +130,7 @@ public class ComputeEnvironmentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatePolicy")
     public UpdatePolicy updatePolicy;
+
     public ComputeEnvironmentDetail withUpdatePolicy(UpdatePolicy updatePolicy) {
         this.updatePolicy = updatePolicy;
         return this;
@@ -125,9 +139,14 @@ public class ComputeEnvironmentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uuid")
     public String uuid;
+
     public ComputeEnvironmentDetail withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public ComputeEnvironmentDetail(@JsonProperty("computeEnvironmentArn") String computeEnvironmentArn, @JsonProperty("computeEnvironmentName") String computeEnvironmentName) {
+        this.computeEnvironmentArn = computeEnvironmentArn;
+        this.computeEnvironmentName = computeEnvironmentName;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudMlV1HyperparameterOutputHyperparameterMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectiveValue")
     public Double objectiveValue;
+
     public GoogleCloudMlV1HyperparameterOutputHyperparameterMetric withObjectiveValue(Double objectiveValue) {
         this.objectiveValue = objectiveValue;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudMlV1HyperparameterOutputHyperparameterMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingStep")
     public String trainingStep;
+
     public GoogleCloudMlV1HyperparameterOutputHyperparameterMetric withTrainingStep(String trainingStep) {
         this.trainingStep = trainingStep;
         return this;
     }
     
+    public GoogleCloudMlV1HyperparameterOutputHyperparameterMetric(){}
 }

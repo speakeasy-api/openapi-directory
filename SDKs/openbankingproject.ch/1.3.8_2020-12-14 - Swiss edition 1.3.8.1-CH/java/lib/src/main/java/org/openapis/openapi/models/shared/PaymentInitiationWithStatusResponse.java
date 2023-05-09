@@ -29,6 +29,7 @@ public class PaymentInitiationWithStatusResponse {
      */
     @JsonProperty("creditorAccount")
     public AccountReference16CH creditorAccount;
+
     public PaymentInitiationWithStatusResponse withCreditorAccount(AccountReference16CH creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -37,6 +38,7 @@ public class PaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorAddress")
     public Address creditorAddress;
+
     public PaymentInitiationWithStatusResponse withCreditorAddress(Address creditorAddress) {
         this.creditorAddress = creditorAddress;
         return this;
@@ -54,6 +56,7 @@ public class PaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorAgent")
     public CreditorAgent7CH creditorAgent;
+
     public PaymentInitiationWithStatusResponse withCreditorAgent(CreditorAgent7CH creditorAgent) {
         this.creditorAgent = creditorAgent;
         return this;
@@ -64,6 +67,7 @@ public class PaymentInitiationWithStatusResponse {
      */
     @JsonProperty("creditorName")
     public String creditorName;
+
     public PaymentInitiationWithStatusResponse withCreditorName(String creditorName) {
         this.creditorName = creditorName;
         return this;
@@ -78,6 +82,7 @@ public class PaymentInitiationWithStatusResponse {
      */
     @JsonProperty("debtorAccount")
     public AccountReference16CH debtorAccount;
+
     public PaymentInitiationWithStatusResponse withDebtorAccount(AccountReference16CH debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -86,6 +91,7 @@ public class PaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endToEndIdentification")
     public String endToEndIdentification;
+
     public PaymentInitiationWithStatusResponse withEndToEndIdentification(String endToEndIdentification) {
         this.endToEndIdentification = endToEndIdentification;
         return this;
@@ -93,6 +99,7 @@ public class PaymentInitiationWithStatusResponse {
     
     @JsonProperty("instructedAmount")
     public Amount instructedAmount;
+
     public PaymentInitiationWithStatusResponse withInstructedAmount(Amount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -107,6 +114,7 @@ public class PaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purposeCode")
     public PurposeCodeEnum purposeCode;
+
     public PaymentInitiationWithStatusResponse withPurposeCode(PurposeCodeEnum purposeCode) {
         this.purposeCode = purposeCode;
         return this;
@@ -119,6 +127,7 @@ public class PaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationStructured")
     public RemittanceInformationStructured remittanceInformationStructured;
+
     public PaymentInitiationWithStatusResponse withRemittanceInformationStructured(RemittanceInformationStructured remittanceInformationStructured) {
         this.remittanceInformationStructured = remittanceInformationStructured;
         return this;
@@ -131,6 +140,7 @@ public class PaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationUnstructured")
     public String remittanceInformationUnstructured;
+
     public PaymentInitiationWithStatusResponse withRemittanceInformationUnstructured(String remittanceInformationUnstructured) {
         this.remittanceInformationUnstructured = remittanceInformationUnstructured;
         return this;
@@ -143,6 +153,7 @@ public class PaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationUnstructuredArray")
     public String[] remittanceInformationUnstructuredArray;
+
     public PaymentInitiationWithStatusResponse withRemittanceInformationUnstructuredArray(String[] remittanceInformationUnstructuredArray) {
         this.remittanceInformationUnstructuredArray = remittanceInformationUnstructuredArray;
         return this;
@@ -152,6 +163,7 @@ public class PaymentInitiationWithStatusResponse {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("requestedExecutionDate")
     public LocalDate requestedExecutionDate;
+
     public PaymentInitiationWithStatusResponse withRequestedExecutionDate(LocalDate requestedExecutionDate) {
         this.requestedExecutionDate = requestedExecutionDate;
         return this;
@@ -162,6 +174,7 @@ public class PaymentInitiationWithStatusResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("requestedExecutionTime")
     public OffsetDateTime requestedExecutionTime;
+
     public PaymentInitiationWithStatusResponse withRequestedExecutionTime(OffsetDateTime requestedExecutionTime) {
         this.requestedExecutionTime = requestedExecutionTime;
         return this;
@@ -213,6 +226,7 @@ public class PaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionStatus")
     public TransactionStatusEnum transactionStatus;
+
     public PaymentInitiationWithStatusResponse withTransactionStatus(TransactionStatusEnum transactionStatus) {
         this.transactionStatus = transactionStatus;
         return this;
@@ -224,6 +238,7 @@ public class PaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ultimateCreditor")
     public String ultimateCreditor;
+
     public PaymentInitiationWithStatusResponse withUltimateCreditor(String ultimateCreditor) {
         this.ultimateCreditor = ultimateCreditor;
         return this;
@@ -235,9 +250,16 @@ public class PaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ultimateDebtor")
     public String ultimateDebtor;
+
     public PaymentInitiationWithStatusResponse withUltimateDebtor(String ultimateDebtor) {
         this.ultimateDebtor = ultimateDebtor;
         return this;
     }
     
+    public PaymentInitiationWithStatusResponse(@JsonProperty("creditorAccount") AccountReference16CH creditorAccount, @JsonProperty("creditorName") String creditorName, @JsonProperty("debtorAccount") AccountReference16CH debtorAccount, @JsonProperty("instructedAmount") Amount instructedAmount) {
+        this.creditorAccount = creditorAccount;
+        this.creditorName = creditorName;
+        this.debtorAccount = debtorAccount;
+        this.instructedAmount = instructedAmount;
+  }
 }

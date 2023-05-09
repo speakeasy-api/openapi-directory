@@ -18,6 +18,7 @@ public class SynthesizeSpeechRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioConfig")
     public AudioConfig audioConfig;
+
     public SynthesizeSpeechRequest withAudioConfig(AudioConfig audioConfig) {
         this.audioConfig = audioConfig;
         return this;
@@ -29,6 +30,7 @@ public class SynthesizeSpeechRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public SynthesisInput input;
+
     public SynthesizeSpeechRequest withInput(SynthesisInput input) {
         this.input = input;
         return this;
@@ -40,9 +42,11 @@ public class SynthesizeSpeechRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voice")
     public VoiceSelectionParams voice;
+
     public SynthesizeSpeechRequest withVoice(VoiceSelectionParams voice) {
         this.voice = voice;
         return this;
     }
     
+    public SynthesizeSpeechRequest(){}
 }

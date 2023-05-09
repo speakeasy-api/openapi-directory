@@ -15,6 +15,7 @@ public class ReimbursementTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountCode")
     public String accountCode;
+
     public ReimbursementTypeInput withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -26,6 +27,7 @@ public class ReimbursementTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentRecord")
     public Boolean currentRecord;
+
     public ReimbursementTypeInput withCurrentRecord(Boolean currentRecord) {
         this.currentRecord = currentRecord;
         return this;
@@ -37,6 +39,7 @@ public class ReimbursementTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ReimbursementTypeInput withName(String name) {
         this.name = name;
         return this;
@@ -48,9 +51,11 @@ public class ReimbursementTypeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReimbursementTypeID")
     public String reimbursementTypeID;
+
     public ReimbursementTypeInput withReimbursementTypeID(String reimbursementTypeID) {
         this.reimbursementTypeID = reimbursementTypeID;
         return this;
     }
     
+    public ReimbursementTypeInput(){}
 }

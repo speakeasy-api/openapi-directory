@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TilejsonV2LocationsTilesTilesJsonGetResponse {
     
     public String contentType;
+
     public TilejsonV2LocationsTilesTilesJsonGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TilejsonV2LocationsTilesTilesJsonGetResponse {
     
     
     public Integer statusCode;
+
     public TilejsonV2LocationsTilesTilesJsonGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TilejsonV2LocationsTilesTilesJsonGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TilejsonV2LocationsTilesTilesJsonGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class TilejsonV2LocationsTilesTilesJsonGetResponse {
      */
     
     public org.openapis.openapi.models.shared.TileJSON tileJSON;
+
     public TilejsonV2LocationsTilesTilesJsonGetResponse withTileJSON(org.openapis.openapi.models.shared.TileJSON tileJSON) {
         this.tileJSON = tileJSON;
         return this;
     }
     
+    public TilejsonV2LocationsTilesTilesJsonGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

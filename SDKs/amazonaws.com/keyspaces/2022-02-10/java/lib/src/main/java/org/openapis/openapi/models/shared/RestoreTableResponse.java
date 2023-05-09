@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RestoreTableResponse {
     @JsonProperty("restoredTableARN")
     public String restoredTableARN;
+
     public RestoreTableResponse withRestoredTableARN(String restoredTableARN) {
         this.restoredTableARN = restoredTableARN;
         return this;
     }
     
+    public RestoreTableResponse(@JsonProperty("restoredTableARN") String restoredTableARN) {
+        this.restoredTableARN = restoredTableARN;
+  }
 }

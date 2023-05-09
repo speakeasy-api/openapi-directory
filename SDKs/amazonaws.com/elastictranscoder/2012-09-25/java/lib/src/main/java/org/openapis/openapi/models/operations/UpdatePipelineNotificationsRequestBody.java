@@ -12,9 +12,13 @@ public class UpdatePipelineNotificationsRequestBody {
      */
     @JsonProperty("Notifications")
     public UpdatePipelineNotificationsRequestBodyNotifications notifications;
+
     public UpdatePipelineNotificationsRequestBody withNotifications(UpdatePipelineNotificationsRequestBodyNotifications notifications) {
         this.notifications = notifications;
         return this;
     }
     
+    public UpdatePipelineNotificationsRequestBody(@JsonProperty("Notifications") UpdatePipelineNotificationsRequestBodyNotifications notifications) {
+        this.notifications = notifications;
+  }
 }

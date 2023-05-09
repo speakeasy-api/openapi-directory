@@ -15,9 +15,11 @@ public class SingleMasterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageTtlSeconds")
     public Long messageTtlSeconds;
+
     public SingleMasterConfiguration withMessageTtlSeconds(Long messageTtlSeconds) {
         this.messageTtlSeconds = messageTtlSeconds;
         return this;
     }
     
+    public SingleMasterConfiguration(){}
 }

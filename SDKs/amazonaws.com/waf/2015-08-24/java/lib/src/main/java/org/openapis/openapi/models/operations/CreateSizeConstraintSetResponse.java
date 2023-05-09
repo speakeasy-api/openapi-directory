@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSizeConstraintSetResponse {
     
     public String contentType;
+
     public CreateSizeConstraintSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSizeConstraintSetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSizeConstraintSetResponse createSizeConstraintSetResponse;
+
     public CreateSizeConstraintSetResponse withCreateSizeConstraintSetResponse(org.openapis.openapi.models.shared.CreateSizeConstraintSetResponse createSizeConstraintSetResponse) {
         this.createSizeConstraintSetResponse = createSizeConstraintSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateSizeConstraintSetResponse {
     
     
     public Integer statusCode;
+
     public CreateSizeConstraintSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateSizeConstraintSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSizeConstraintSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateSizeConstraintSetResponse {
      */
     
     public Object wafDisallowedNameException;
+
     public CreateSizeConstraintSetResponse withWAFDisallowedNameException(Object wafDisallowedNameException) {
         this.wafDisallowedNameException = wafDisallowedNameException;
         return this;
@@ -53,6 +59,7 @@ public class CreateSizeConstraintSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public CreateSizeConstraintSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -63,6 +70,7 @@ public class CreateSizeConstraintSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public CreateSizeConstraintSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -73,6 +81,7 @@ public class CreateSizeConstraintSetResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public CreateSizeConstraintSetResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,6 +92,7 @@ public class CreateSizeConstraintSetResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public CreateSizeConstraintSetResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -93,9 +103,14 @@ public class CreateSizeConstraintSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public CreateSizeConstraintSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public CreateSizeConstraintSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

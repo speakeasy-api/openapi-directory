@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FeeSchedulesReadRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
     public String code;
+
     public FeeSchedulesReadRequest withCode(String code) {
         this.code = code;
         return this;
@@ -16,6 +18,7 @@ public class FeeSchedulesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code_type")
     public String codeType;
+
     public FeeSchedulesReadRequest withCodeType(String codeType) {
         this.codeType = codeType;
         return this;
@@ -23,6 +26,7 @@ public class FeeSchedulesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public FeeSchedulesReadRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -30,6 +34,7 @@ public class FeeSchedulesReadRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public FeeSchedulesReadRequest withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +42,7 @@ public class FeeSchedulesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payer_id")
     public String payerId;
+
     public FeeSchedulesReadRequest withPayerId(String payerId) {
         this.payerId = payerId;
         return this;
@@ -44,9 +50,13 @@ public class FeeSchedulesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public FeeSchedulesReadRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public FeeSchedulesReadRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

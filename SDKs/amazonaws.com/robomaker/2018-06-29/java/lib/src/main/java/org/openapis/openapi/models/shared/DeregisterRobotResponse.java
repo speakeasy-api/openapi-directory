@@ -15,6 +15,7 @@ public class DeregisterRobotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleet")
     public String fleet;
+
     public DeregisterRobotResponse withFleet(String fleet) {
         this.fleet = fleet;
         return this;
@@ -23,9 +24,11 @@ public class DeregisterRobotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robot")
     public String robot;
+
     public DeregisterRobotResponse withRobot(String robot) {
         this.robot = robot;
         return this;
     }
     
+    public DeregisterRobotResponse(){}
 }

@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2UserCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canAccessLabelManager")
     public Boolean canAccessLabelManager;
+
     public GoogleAppsDriveLabelsV2UserCapabilities withCanAccessLabelManager(Boolean canAccessLabelManager) {
         this.canAccessLabelManager = canAccessLabelManager;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2UserCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canAdministrateLabels")
     public Boolean canAdministrateLabels;
+
     public GoogleAppsDriveLabelsV2UserCapabilities withCanAdministrateLabels(Boolean canAdministrateLabels) {
         this.canAdministrateLabels = canAdministrateLabels;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2UserCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canCreateAdminLabels")
     public Boolean canCreateAdminLabels;
+
     public GoogleAppsDriveLabelsV2UserCapabilities withCanCreateAdminLabels(Boolean canCreateAdminLabels) {
         this.canCreateAdminLabels = canCreateAdminLabels;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsDriveLabelsV2UserCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canCreateSharedLabels")
     public Boolean canCreateSharedLabels;
+
     public GoogleAppsDriveLabelsV2UserCapabilities withCanCreateSharedLabels(Boolean canCreateSharedLabels) {
         this.canCreateSharedLabels = canCreateSharedLabels;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAppsDriveLabelsV2UserCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAppsDriveLabelsV2UserCapabilities withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2UserCapabilities(){}
 }

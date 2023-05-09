@@ -12,6 +12,7 @@ public class DeregisterTargetFromMaintenanceWindowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Safe")
     public Boolean safe;
+
     public DeregisterTargetFromMaintenanceWindowRequest withSafe(Boolean safe) {
         this.safe = safe;
         return this;
@@ -19,6 +20,7 @@ public class DeregisterTargetFromMaintenanceWindowRequest {
     
     @JsonProperty("WindowId")
     public String windowId;
+
     public DeregisterTargetFromMaintenanceWindowRequest withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
@@ -26,9 +28,14 @@ public class DeregisterTargetFromMaintenanceWindowRequest {
     
     @JsonProperty("WindowTargetId")
     public String windowTargetId;
+
     public DeregisterTargetFromMaintenanceWindowRequest withWindowTargetId(String windowTargetId) {
         this.windowTargetId = windowTargetId;
         return this;
     }
     
+    public DeregisterTargetFromMaintenanceWindowRequest(@JsonProperty("WindowId") String windowId, @JsonProperty("WindowTargetId") String windowTargetId) {
+        this.windowId = windowId;
+        this.windowTargetId = windowTargetId;
+  }
 }

@@ -18,6 +18,7 @@ public class MaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day")
     public Integer day;
+
     public MaintenanceWindow withDay(Integer day) {
         this.day = day;
         return this;
@@ -29,6 +30,7 @@ public class MaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hour")
     public Integer hour;
+
     public MaintenanceWindow withHour(Integer hour) {
         this.hour = hour;
         return this;
@@ -40,6 +42,7 @@ public class MaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public MaintenanceWindow withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class MaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTrack")
     public MaintenanceWindowUpdateTrackEnum updateTrack;
+
     public MaintenanceWindow withUpdateTrack(MaintenanceWindowUpdateTrackEnum updateTrack) {
         this.updateTrack = updateTrack;
         return this;
     }
     
+    public MaintenanceWindow(){}
 }

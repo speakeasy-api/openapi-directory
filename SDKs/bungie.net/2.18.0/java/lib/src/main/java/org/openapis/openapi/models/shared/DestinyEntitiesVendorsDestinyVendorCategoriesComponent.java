@@ -17,9 +17,11 @@ public class DestinyEntitiesVendorsDestinyVendorCategoriesComponent {
      */
     
     public DestinyEntitiesVendorsDestinyVendorCategory[] categories;
+
     public DestinyEntitiesVendorsDestinyVendorCategoriesComponent withCategories(DestinyEntitiesVendorsDestinyVendorCategory[] categories) {
         this.categories = categories;
         return this;
     }
     
+    public DestinyEntitiesVendorsDestinyVendorCategoriesComponent(){}
 }

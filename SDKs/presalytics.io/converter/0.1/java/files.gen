@@ -33,4 +33,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/SvgconvertFileToConvert
 lib/src/main/java/org/openapis/openapi/models/operations/SvgconvertFileToConvert.java
 lib/src/main/java/org/openapis/openapi/models/operations/SvgconvertFileUrl.java
 lib/src/main/java/org/openapis/openapi/models/operations/SvgconvertResponse.java
+docs/sdk/README.md
 USAGE.md

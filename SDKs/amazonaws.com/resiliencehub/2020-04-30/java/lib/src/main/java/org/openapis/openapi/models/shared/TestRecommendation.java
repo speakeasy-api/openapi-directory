@@ -15,6 +15,7 @@ public class TestRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appComponentName")
     public String appComponentName;
+
     public TestRecommendation withAppComponentName(String appComponentName) {
         this.appComponentName = appComponentName;
         return this;
@@ -23,6 +24,7 @@ public class TestRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dependsOnAlarms")
     public String[] dependsOnAlarms;
+
     public TestRecommendation withDependsOnAlarms(String[] dependsOnAlarms) {
         this.dependsOnAlarms = dependsOnAlarms;
         return this;
@@ -31,6 +33,7 @@ public class TestRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TestRecommendation withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class TestRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public String intent;
+
     public TestRecommendation withIntent(String intent) {
         this.intent = intent;
         return this;
@@ -47,6 +51,7 @@ public class TestRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public RecommendationItem[] items;
+
     public TestRecommendation withItems(RecommendationItem[] items) {
         this.items = items;
         return this;
@@ -55,6 +60,7 @@ public class TestRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TestRecommendation withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class TestRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prerequisite")
     public String prerequisite;
+
     public TestRecommendation withPrerequisite(String prerequisite) {
         this.prerequisite = prerequisite;
         return this;
@@ -71,6 +78,7 @@ public class TestRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationId")
     public String recommendationId;
+
     public TestRecommendation withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
@@ -78,6 +86,7 @@ public class TestRecommendation {
     
     @JsonProperty("referenceId")
     public String referenceId;
+
     public TestRecommendation withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -86,6 +95,7 @@ public class TestRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("risk")
     public TestRiskEnum risk;
+
     public TestRecommendation withRisk(TestRiskEnum risk) {
         this.risk = risk;
         return this;
@@ -94,9 +104,13 @@ public class TestRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TestTypeEnum type;
+
     public TestRecommendation withType(TestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TestRecommendation(@JsonProperty("referenceId") String referenceId) {
+        this.referenceId = referenceId;
+  }
 }

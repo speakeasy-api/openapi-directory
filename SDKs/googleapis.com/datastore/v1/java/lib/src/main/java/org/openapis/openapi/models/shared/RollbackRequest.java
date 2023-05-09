@@ -18,6 +18,7 @@ public class RollbackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseId")
     public String databaseId;
+
     public RollbackRequest withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -29,9 +30,11 @@ public class RollbackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public String transaction;
+
     public RollbackRequest withTransaction(String transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public RollbackRequest(){}
 }

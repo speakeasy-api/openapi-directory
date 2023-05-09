@@ -15,6 +15,7 @@ public class GetImagePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imagePipeline")
     public ImagePipeline imagePipeline;
+
     public GetImagePipelineResponse withImagePipeline(ImagePipeline imagePipeline) {
         this.imagePipeline = imagePipeline;
         return this;
@@ -23,9 +24,11 @@ public class GetImagePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GetImagePipelineResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GetImagePipelineResponse(){}
 }

@@ -242,4 +242,17 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetOrdersResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetPublisherProfilesByAccountIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PublisherProfileApiProto.java
 lib/src/main/java/org/openapis/openapi/models/shared/MobileApplication.java
+docs/sdk/README.md
+docs/accounts/README.md
+docs/billinginfo/README.md
+docs/budget/README.md
+docs/creatives/README.md
+docs/marketplacedeals/README.md
+docs/marketplacenotes/README.md
+docs/marketplaceprivateauction/README.md
+docs/performancereport/README.md
+docs/pretargetingconfig/README.md
+docs/products/README.md
+docs/proposals/README.md
+docs/pubprofiles/README.md
 USAGE.md

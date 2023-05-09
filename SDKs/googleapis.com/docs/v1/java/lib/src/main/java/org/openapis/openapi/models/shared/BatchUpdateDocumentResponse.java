@@ -18,6 +18,7 @@ public class BatchUpdateDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentId")
     public String documentId;
+
     public BatchUpdateDocumentResponse withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
@@ -29,6 +30,7 @@ public class BatchUpdateDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replies")
     public Response[] replies;
+
     public BatchUpdateDocumentResponse withReplies(Response[] replies) {
         this.replies = replies;
         return this;
@@ -40,9 +42,11 @@ public class BatchUpdateDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeControl")
     public WriteControl writeControl;
+
     public BatchUpdateDocumentResponse withWriteControl(WriteControl writeControl) {
         this.writeControl = writeControl;
         return this;
     }
     
+    public BatchUpdateDocumentResponse(){}
 }

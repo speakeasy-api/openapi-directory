@@ -15,9 +15,11 @@ public class UpdateS3ResourcesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedS3Resources")
     public FailedS3Resource[] failedS3Resources;
+
     public UpdateS3ResourcesResult withFailedS3Resources(FailedS3Resource[] failedS3Resources) {
         this.failedS3Resources = failedS3Resources;
         return this;
     }
     
+    public UpdateS3ResourcesResult(){}
 }

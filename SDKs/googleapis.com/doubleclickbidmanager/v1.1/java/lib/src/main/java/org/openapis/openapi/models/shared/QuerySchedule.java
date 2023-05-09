@@ -18,6 +18,7 @@ public class QuerySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTimeMs")
     public String endTimeMs;
+
     public QuerySchedule withEndTimeMs(String endTimeMs) {
         this.endTimeMs = endTimeMs;
         return this;
@@ -29,6 +30,7 @@ public class QuerySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public QueryScheduleFrequencyEnum frequency;
+
     public QuerySchedule withFrequency(QueryScheduleFrequencyEnum frequency) {
         this.frequency = frequency;
         return this;
@@ -40,6 +42,7 @@ public class QuerySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextRunMinuteOfDay")
     public Integer nextRunMinuteOfDay;
+
     public QuerySchedule withNextRunMinuteOfDay(Integer nextRunMinuteOfDay) {
         this.nextRunMinuteOfDay = nextRunMinuteOfDay;
         return this;
@@ -51,6 +54,7 @@ public class QuerySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextRunTimezoneCode")
     public String nextRunTimezoneCode;
+
     public QuerySchedule withNextRunTimezoneCode(String nextRunTimezoneCode) {
         this.nextRunTimezoneCode = nextRunTimezoneCode;
         return this;
@@ -62,9 +66,11 @@ public class QuerySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeMs")
     public String startTimeMs;
+
     public QuerySchedule withStartTimeMs(String startTimeMs) {
         this.startTimeMs = startTimeMs;
         return this;
     }
     
+    public QuerySchedule(){}
 }

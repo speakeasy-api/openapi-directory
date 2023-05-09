@@ -19,6 +19,7 @@ public class TerminalCheckout {
      */
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public TerminalCheckout withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -30,6 +31,7 @@ public class TerminalCheckout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_id")
     public String appId;
+
     public TerminalCheckout withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -41,6 +43,7 @@ public class TerminalCheckout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancel_reason")
     public String cancelReason;
+
     public TerminalCheckout withCancelReason(String cancelReason) {
         this.cancelReason = cancelReason;
         return this;
@@ -52,6 +55,7 @@ public class TerminalCheckout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public TerminalCheckout withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -69,6 +73,7 @@ public class TerminalCheckout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deadline_duration")
     public String deadlineDuration;
+
     public TerminalCheckout withDeadlineDuration(String deadlineDuration) {
         this.deadlineDuration = deadlineDuration;
         return this;
@@ -76,6 +81,7 @@ public class TerminalCheckout {
     
     @JsonProperty("device_options")
     public DeviceCheckoutOptions deviceOptions;
+
     public TerminalCheckout withDeviceOptions(DeviceCheckoutOptions deviceOptions) {
         this.deviceOptions = deviceOptions;
         return this;
@@ -87,6 +93,7 @@ public class TerminalCheckout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TerminalCheckout withId(String id) {
         this.id = id;
         return this;
@@ -98,6 +105,7 @@ public class TerminalCheckout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public TerminalCheckout withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -109,6 +117,7 @@ public class TerminalCheckout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public TerminalCheckout withNote(String note) {
         this.note = note;
         return this;
@@ -120,6 +129,7 @@ public class TerminalCheckout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_ids")
     public String[] paymentIds;
+
     public TerminalCheckout withPaymentIds(String[] paymentIds) {
         this.paymentIds = paymentIds;
         return this;
@@ -131,6 +141,7 @@ public class TerminalCheckout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_type")
     public String paymentType;
+
     public TerminalCheckout withPaymentType(String paymentType) {
         this.paymentType = paymentType;
         return this;
@@ -145,6 +156,7 @@ public class TerminalCheckout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public TerminalCheckout withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -157,6 +169,7 @@ public class TerminalCheckout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TerminalCheckout withStatus(String status) {
         this.status = status;
         return this;
@@ -168,9 +181,14 @@ public class TerminalCheckout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public TerminalCheckout withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public TerminalCheckout(@JsonProperty("amount_money") Money amountMoney, @JsonProperty("device_options") DeviceCheckoutOptions deviceOptions) {
+        this.amountMoney = amountMoney;
+        this.deviceOptions = deviceOptions;
+  }
 }

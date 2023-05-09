@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopySnapshotToExistingGameUsingPOSTResponse {
     
     public String contentType;
+
     public CopySnapshotToExistingGameUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CopySnapshotToExistingGameUsingPOSTResponse {
      */
     
     public org.openapis.openapi.models.shared.ManageResult manageResult;
+
     public CopySnapshotToExistingGameUsingPOSTResponse withManageResult(org.openapis.openapi.models.shared.ManageResult manageResult) {
         this.manageResult = manageResult;
         return this;
@@ -29,6 +32,7 @@ public class CopySnapshotToExistingGameUsingPOSTResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public CopySnapshotToExistingGameUsingPOSTResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -36,6 +40,7 @@ public class CopySnapshotToExistingGameUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public CopySnapshotToExistingGameUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CopySnapshotToExistingGameUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopySnapshotToExistingGameUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CopySnapshotToExistingGameUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

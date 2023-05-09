@@ -12,6 +12,7 @@ public class TransactionListForAccount {
      */
     @JsonProperty("accountCode")
     public String accountCode;
+
     public TransactionListForAccount withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -23,9 +24,14 @@ public class TransactionListForAccount {
      */
     @JsonProperty("page")
     public Integer page;
+
     public TransactionListForAccount withPage(Integer page) {
         this.page = page;
         return this;
     }
     
+    public TransactionListForAccount(@JsonProperty("accountCode") String accountCode, @JsonProperty("page") Integer page) {
+        this.accountCode = accountCode;
+        this.page = page;
+  }
 }

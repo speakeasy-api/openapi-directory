@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUnmaskedProfileByVersionRequest {
@@ -12,6 +13,7 @@ public class GetUnmaskedProfileByVersionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetUnmaskedProfileByVersionRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetUnmaskedProfileByVersionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetUnmaskedProfileByVersionRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetUnmaskedProfileByVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public GetUnmaskedProfileByVersionRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -42,6 +46,7 @@ public class GetUnmaskedProfileByVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileVersionId")
     public String profileVersionId;
+
     public GetUnmaskedProfileByVersionRequest withProfileVersionId(String profileVersionId) {
         this.profileVersionId = profileVersionId;
         return this;
@@ -52,9 +57,17 @@ public class GetUnmaskedProfileByVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
     public String reason;
+
     public GetUnmaskedProfileByVersionRequest withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public GetUnmaskedProfileByVersionRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("profileId") String profileId, @JsonProperty("profileVersionId") String profileVersionId, @JsonProperty("reason") String reason) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.profileId = profileId;
+        this.profileVersionId = profileVersionId;
+        this.reason = reason;
+  }
 }

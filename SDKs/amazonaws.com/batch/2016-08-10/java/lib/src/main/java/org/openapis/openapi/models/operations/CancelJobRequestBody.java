@@ -12,6 +12,7 @@ public class CancelJobRequestBody {
      */
     @JsonProperty("jobId")
     public String jobId;
+
     public CancelJobRequestBody withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -22,9 +23,14 @@ public class CancelJobRequestBody {
      */
     @JsonProperty("reason")
     public String reason;
+
     public CancelJobRequestBody withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public CancelJobRequestBody(@JsonProperty("jobId") String jobId, @JsonProperty("reason") String reason) {
+        this.jobId = jobId;
+        this.reason = reason;
+  }
 }

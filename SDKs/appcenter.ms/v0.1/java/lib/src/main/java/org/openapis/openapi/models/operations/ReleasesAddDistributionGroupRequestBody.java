@@ -17,6 +17,7 @@ public class ReleasesAddDistributionGroupRequestBody {
      */
     @JsonProperty("id")
     public String id;
+
     public ReleasesAddDistributionGroupRequestBody withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +29,7 @@ public class ReleasesAddDistributionGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandatory_update")
     public Boolean mandatoryUpdate;
+
     public ReleasesAddDistributionGroupRequestBody withMandatoryUpdate(Boolean mandatoryUpdate) {
         this.mandatoryUpdate = mandatoryUpdate;
         return this;
@@ -39,9 +41,13 @@ public class ReleasesAddDistributionGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notify_testers")
     public Boolean notifyTesters;
+
     public ReleasesAddDistributionGroupRequestBody withNotifyTesters(Boolean notifyTesters) {
         this.notifyTesters = notifyTesters;
         return this;
     }
     
+    public ReleasesAddDistributionGroupRequestBody(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

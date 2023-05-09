@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AutomaticTransitionInfoListLinks {
     @JsonProperty("configure")
     public LinksConfigureAutomaticTransitionsLink configure;
+
     public AutomaticTransitionInfoListLinks withConfigure(LinksConfigureAutomaticTransitionsLink configure) {
         this.configure = configure;
         return this;
@@ -16,9 +17,14 @@ public class AutomaticTransitionInfoListLinks {
     
     @JsonProperty("self")
     public LinksGetAutomaticTransitionsLink self;
+
     public AutomaticTransitionInfoListLinks withSelf(LinksGetAutomaticTransitionsLink self) {
         this.self = self;
         return this;
     }
     
+    public AutomaticTransitionInfoListLinks(@JsonProperty("configure") LinksConfigureAutomaticTransitionsLink configure, @JsonProperty("self") LinksGetAutomaticTransitionsLink self) {
+        this.configure = configure;
+        this.self = self;
+  }
 }

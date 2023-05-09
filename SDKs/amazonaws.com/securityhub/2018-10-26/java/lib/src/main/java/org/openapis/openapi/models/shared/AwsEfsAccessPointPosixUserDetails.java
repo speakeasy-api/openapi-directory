@@ -15,6 +15,7 @@ public class AwsEfsAccessPointPosixUserDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gid")
     public String gid;
+
     public AwsEfsAccessPointPosixUserDetails withGid(String gid) {
         this.gid = gid;
         return this;
@@ -23,6 +24,7 @@ public class AwsEfsAccessPointPosixUserDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryGids")
     public String[] secondaryGids;
+
     public AwsEfsAccessPointPosixUserDetails withSecondaryGids(String[] secondaryGids) {
         this.secondaryGids = secondaryGids;
         return this;
@@ -31,9 +33,11 @@ public class AwsEfsAccessPointPosixUserDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Uid")
     public String uid;
+
     public AwsEfsAccessPointPosixUserDetails withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public AwsEfsAccessPointPosixUserDetails(){}
 }

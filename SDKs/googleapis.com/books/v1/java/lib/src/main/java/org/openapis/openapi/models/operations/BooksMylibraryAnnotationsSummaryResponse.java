@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BooksMylibraryAnnotationsSummaryResponse {
@@ -12,6 +13,7 @@ public class BooksMylibraryAnnotationsSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.AnnotationsSummary annotationsSummary;
+
     public BooksMylibraryAnnotationsSummaryResponse withAnnotationsSummary(org.openapis.openapi.models.shared.AnnotationsSummary annotationsSummary) {
         this.annotationsSummary = annotationsSummary;
         return this;
@@ -19,6 +21,7 @@ public class BooksMylibraryAnnotationsSummaryResponse {
     
     
     public String contentType;
+
     public BooksMylibraryAnnotationsSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class BooksMylibraryAnnotationsSummaryResponse {
     
     
     public Integer statusCode;
+
     public BooksMylibraryAnnotationsSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BooksMylibraryAnnotationsSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BooksMylibraryAnnotationsSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BooksMylibraryAnnotationsSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

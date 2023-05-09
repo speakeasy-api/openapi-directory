@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContainersGroupsNameOrIdMaprouteRequest {
@@ -12,6 +13,7 @@ public class PostContainersGroupsNameOrIdMaprouteRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Route route;
+
     public PostContainersGroupsNameOrIdMaprouteRequest withRoute(org.openapis.openapi.models.shared.Route route) {
         this.route = route;
         return this;
@@ -22,6 +24,7 @@ public class PostContainersGroupsNameOrIdMaprouteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
     public String xAuthProjectId;
+
     public PostContainersGroupsNameOrIdMaprouteRequest withXAuthProjectId(String xAuthProjectId) {
         this.xAuthProjectId = xAuthProjectId;
         return this;
@@ -32,6 +35,7 @@ public class PostContainersGroupsNameOrIdMaprouteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
     public String xAuthToken;
+
     public PostContainersGroupsNameOrIdMaprouteRequest withXAuthToken(String xAuthToken) {
         this.xAuthToken = xAuthToken;
         return this;
@@ -42,9 +46,16 @@ public class PostContainersGroupsNameOrIdMaprouteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name_or_id")
     public String nameOrId;
+
     public PostContainersGroupsNameOrIdMaprouteRequest withNameOrId(String nameOrId) {
         this.nameOrId = nameOrId;
         return this;
     }
     
+    public PostContainersGroupsNameOrIdMaprouteRequest(@JsonProperty("Route") org.openapis.openapi.models.shared.Route route, @JsonProperty("X-Auth-Project-Id") String xAuthProjectId, @JsonProperty("X-Auth-Token") String xAuthToken, @JsonProperty("name_or_id") String nameOrId) {
+        this.route = route;
+        this.xAuthProjectId = xAuthProjectId;
+        this.xAuthToken = xAuthToken;
+        this.nameOrId = nameOrId;
+  }
 }

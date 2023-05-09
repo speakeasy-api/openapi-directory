@@ -15,6 +15,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisedRoutes")
     public Route[] advertisedRoutes;
+
     public RouterStatusBgpPeerStatus withAdvertisedRoutes(Route[] advertisedRoutes) {
         this.advertisedRoutes = advertisedRoutes;
         return this;
@@ -26,6 +27,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bfdStatus")
     public BfdStatus bfdStatus;
+
     public RouterStatusBgpPeerStatus withBfdStatus(BfdStatus bfdStatus) {
         this.bfdStatus = bfdStatus;
         return this;
@@ -37,6 +39,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableIpv6")
     public Boolean enableIpv6;
+
     public RouterStatusBgpPeerStatus withEnableIpv6(Boolean enableIpv6) {
         this.enableIpv6 = enableIpv6;
         return this;
@@ -48,6 +51,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public RouterStatusBgpPeerStatus withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -59,6 +63,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6NexthopAddress")
     public String ipv6NexthopAddress;
+
     public RouterStatusBgpPeerStatus withIpv6NexthopAddress(String ipv6NexthopAddress) {
         this.ipv6NexthopAddress = ipv6NexthopAddress;
         return this;
@@ -70,6 +75,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedVpnTunnel")
     public String linkedVpnTunnel;
+
     public RouterStatusBgpPeerStatus withLinkedVpnTunnel(String linkedVpnTunnel) {
         this.linkedVpnTunnel = linkedVpnTunnel;
         return this;
@@ -81,6 +87,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("md5AuthEnabled")
     public Boolean md5AuthEnabled;
+
     public RouterStatusBgpPeerStatus withMd5AuthEnabled(Boolean md5AuthEnabled) {
         this.md5AuthEnabled = md5AuthEnabled;
         return this;
@@ -92,6 +99,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RouterStatusBgpPeerStatus withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +111,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numLearnedRoutes")
     public Long numLearnedRoutes;
+
     public RouterStatusBgpPeerStatus withNumLearnedRoutes(Long numLearnedRoutes) {
         this.numLearnedRoutes = numLearnedRoutes;
         return this;
@@ -114,6 +123,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerIpAddress")
     public String peerIpAddress;
+
     public RouterStatusBgpPeerStatus withPeerIpAddress(String peerIpAddress) {
         this.peerIpAddress = peerIpAddress;
         return this;
@@ -125,6 +135,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerIpv6NexthopAddress")
     public String peerIpv6NexthopAddress;
+
     public RouterStatusBgpPeerStatus withPeerIpv6NexthopAddress(String peerIpv6NexthopAddress) {
         this.peerIpv6NexthopAddress = peerIpv6NexthopAddress;
         return this;
@@ -136,6 +147,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routerApplianceInstance")
     public String routerApplianceInstance;
+
     public RouterStatusBgpPeerStatus withRouterApplianceInstance(String routerApplianceInstance) {
         this.routerApplianceInstance = routerApplianceInstance;
         return this;
@@ -147,6 +159,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public RouterStatusBgpPeerStatus withState(String state) {
         this.state = state;
         return this;
@@ -158,6 +171,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RouterStatusBgpPeerStatusStatusEnum status;
+
     public RouterStatusBgpPeerStatus withStatus(RouterStatusBgpPeerStatusStatusEnum status) {
         this.status = status;
         return this;
@@ -169,6 +183,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public RouterStatusBgpPeerStatusStatusReasonEnum statusReason;
+
     public RouterStatusBgpPeerStatus withStatusReason(RouterStatusBgpPeerStatusStatusReasonEnum statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -180,6 +195,7 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uptime")
     public String uptime;
+
     public RouterStatusBgpPeerStatus withUptime(String uptime) {
         this.uptime = uptime;
         return this;
@@ -191,9 +207,11 @@ public class RouterStatusBgpPeerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uptimeSeconds")
     public String uptimeSeconds;
+
     public RouterStatusBgpPeerStatus withUptimeSeconds(String uptimeSeconds) {
         this.uptimeSeconds = uptimeSeconds;
         return this;
     }
     
+    public RouterStatusBgpPeerStatus(){}
 }

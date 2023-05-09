@@ -18,9 +18,11 @@ public class TranscriptOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsUri")
     public String gcsUri;
+
     public TranscriptOutputConfig withGcsUri(String gcsUri) {
         this.gcsUri = gcsUri;
         return this;
     }
     
+    public TranscriptOutputConfig(){}
 }

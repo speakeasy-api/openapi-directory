@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2OrdersOrderIdRequest {
@@ -12,9 +13,13 @@ public class GetV2OrdersOrderIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=order_id")
     public String orderId;
+
     public GetV2OrdersOrderIdRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     
+    public GetV2OrdersOrderIdRequest(@JsonProperty("order_id") String orderId) {
+        this.orderId = orderId;
+  }
 }

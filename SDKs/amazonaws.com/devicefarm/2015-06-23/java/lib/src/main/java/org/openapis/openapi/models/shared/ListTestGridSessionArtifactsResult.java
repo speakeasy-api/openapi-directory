@@ -15,6 +15,7 @@ public class ListTestGridSessionArtifactsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifacts")
     public TestGridSessionArtifact[] artifacts;
+
     public ListTestGridSessionArtifactsResult withArtifacts(TestGridSessionArtifact[] artifacts) {
         this.artifacts = artifacts;
         return this;
@@ -23,9 +24,11 @@ public class ListTestGridSessionArtifactsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTestGridSessionArtifactsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTestGridSessionArtifactsResult(){}
 }

@@ -15,6 +15,7 @@ public class AdminCreateUserConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowAdminCreateUserOnly")
     public Boolean allowAdminCreateUserOnly;
+
     public AdminCreateUserConfigType withAllowAdminCreateUserOnly(Boolean allowAdminCreateUserOnly) {
         this.allowAdminCreateUserOnly = allowAdminCreateUserOnly;
         return this;
@@ -23,6 +24,7 @@ public class AdminCreateUserConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InviteMessageTemplate")
     public MessageTemplateType inviteMessageTemplate;
+
     public AdminCreateUserConfigType withInviteMessageTemplate(MessageTemplateType inviteMessageTemplate) {
         this.inviteMessageTemplate = inviteMessageTemplate;
         return this;
@@ -31,9 +33,11 @@ public class AdminCreateUserConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnusedAccountValidityDays")
     public Long unusedAccountValidityDays;
+
     public AdminCreateUserConfigType withUnusedAccountValidityDays(Long unusedAccountValidityDays) {
         this.unusedAccountValidityDays = unusedAccountValidityDays;
         return this;
     }
     
+    public AdminCreateUserConfigType(){}
 }

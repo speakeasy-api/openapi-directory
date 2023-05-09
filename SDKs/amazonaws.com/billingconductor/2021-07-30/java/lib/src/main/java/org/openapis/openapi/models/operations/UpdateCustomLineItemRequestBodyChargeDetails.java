@@ -15,6 +15,7 @@ public class UpdateCustomLineItemRequestBodyChargeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Flat")
     public org.openapis.openapi.models.shared.UpdateCustomLineItemFlatChargeDetails flat;
+
     public UpdateCustomLineItemRequestBodyChargeDetails withFlat(org.openapis.openapi.models.shared.UpdateCustomLineItemFlatChargeDetails flat) {
         this.flat = flat;
         return this;
@@ -23,9 +24,11 @@ public class UpdateCustomLineItemRequestBodyChargeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Percentage")
     public org.openapis.openapi.models.shared.UpdateCustomLineItemPercentageChargeDetails percentage;
+
     public UpdateCustomLineItemRequestBodyChargeDetails withPercentage(org.openapis.openapi.models.shared.UpdateCustomLineItemPercentageChargeDetails percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public UpdateCustomLineItemRequestBodyChargeDetails(){}
 }

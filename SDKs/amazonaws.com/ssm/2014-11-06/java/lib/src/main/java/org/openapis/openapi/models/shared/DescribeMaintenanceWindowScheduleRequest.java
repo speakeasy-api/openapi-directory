@@ -12,6 +12,7 @@ public class DescribeMaintenanceWindowScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public PatchOrchestratorFilter[] filters;
+
     public DescribeMaintenanceWindowScheduleRequest withFilters(PatchOrchestratorFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class DescribeMaintenanceWindowScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeMaintenanceWindowScheduleRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeMaintenanceWindowScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeMaintenanceWindowScheduleRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class DescribeMaintenanceWindowScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public MaintenanceWindowResourceTypeEnum resourceType;
+
     public DescribeMaintenanceWindowScheduleRequest withResourceType(MaintenanceWindowResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -44,6 +48,7 @@ public class DescribeMaintenanceWindowScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public DescribeMaintenanceWindowScheduleRequest withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -52,9 +57,11 @@ public class DescribeMaintenanceWindowScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowId")
     public String windowId;
+
     public DescribeMaintenanceWindowScheduleRequest withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
     }
     
+    public DescribeMaintenanceWindowScheduleRequest(){}
 }

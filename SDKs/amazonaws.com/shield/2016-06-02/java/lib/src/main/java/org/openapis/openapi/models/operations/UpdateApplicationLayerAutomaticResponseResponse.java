@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApplicationLayerAutomaticResponseResponse {
     
     public String contentType;
+
     public UpdateApplicationLayerAutomaticResponseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateApplicationLayerAutomaticResponseResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateApplicationLayerAutomaticResponseResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateApplicationLayerAutomaticResponseResponse {
      */
     
     public Object invalidOperationException;
+
     public UpdateApplicationLayerAutomaticResponseResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateApplicationLayerAutomaticResponseResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateApplicationLayerAutomaticResponseResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateApplicationLayerAutomaticResponseResponse {
      */
     
     public Object optimisticLockException;
+
     public UpdateApplicationLayerAutomaticResponseResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateApplicationLayerAutomaticResponseResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateApplicationLayerAutomaticResponseResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateApplicationLayerAutomaticResponseResponse {
     
     
     public Integer statusCode;
+
     public UpdateApplicationLayerAutomaticResponseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateApplicationLayerAutomaticResponseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApplicationLayerAutomaticResponseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateApplicationLayerAutomaticResponseResponse {
      */
     
     public java.util.Map<String, Object> updateApplicationLayerAutomaticResponseResponse;
+
     public UpdateApplicationLayerAutomaticResponseResponse withUpdateApplicationLayerAutomaticResponseResponse(java.util.Map<String, Object> updateApplicationLayerAutomaticResponseResponse) {
         this.updateApplicationLayerAutomaticResponseResponse = updateApplicationLayerAutomaticResponseResponse;
         return this;
     }
     
+    public UpdateApplicationLayerAutomaticResponseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

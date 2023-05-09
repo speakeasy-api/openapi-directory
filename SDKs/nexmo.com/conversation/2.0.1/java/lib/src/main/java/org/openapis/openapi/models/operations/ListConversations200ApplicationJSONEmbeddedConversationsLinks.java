@@ -12,9 +12,11 @@ public class ListConversations200ApplicationJSONEmbeddedConversationsLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public ListConversations200ApplicationJSONEmbeddedConversationsLinksSelf self;
+
     public ListConversations200ApplicationJSONEmbeddedConversationsLinks withSelf(ListConversations200ApplicationJSONEmbeddedConversationsLinksSelf self) {
         this.self = self;
         return this;
     }
     
+    public ListConversations200ApplicationJSONEmbeddedConversationsLinks(){}
 }

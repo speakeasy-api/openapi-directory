@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TfrByDistanceUsV1RestrictionsDistanceQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NOTAMsByDistance notaMsByDistance;
+
     public TfrByDistanceUsV1RestrictionsDistanceQueryPostRequest withNOTAMsByDistance(org.openapis.openapi.models.shared.NOTAMsByDistance notaMsByDistance) {
         this.notaMsByDistance = notaMsByDistance;
         return this;
@@ -16,9 +18,13 @@ public class TfrByDistanceUsV1RestrictionsDistanceQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public TfrByDistanceUsV1RestrictionsDistanceQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public TfrByDistanceUsV1RestrictionsDistanceQueryPostRequest(@JsonProperty("NOTAMsByDistance") org.openapis.openapi.models.shared.NOTAMsByDistance notaMsByDistance) {
+        this.notaMsByDistance = notaMsByDistance;
+  }
 }

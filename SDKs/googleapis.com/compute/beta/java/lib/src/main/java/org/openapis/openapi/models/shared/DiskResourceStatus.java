@@ -12,6 +12,7 @@ public class DiskResourceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asyncPrimaryDisk")
     public DiskResourceStatusAsyncReplicationStatus asyncPrimaryDisk;
+
     public DiskResourceStatus withAsyncPrimaryDisk(DiskResourceStatusAsyncReplicationStatus asyncPrimaryDisk) {
         this.asyncPrimaryDisk = asyncPrimaryDisk;
         return this;
@@ -23,9 +24,11 @@ public class DiskResourceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asyncSecondaryDisks")
     public java.util.Map<String, DiskResourceStatusAsyncReplicationStatus> asyncSecondaryDisks;
+
     public DiskResourceStatus withAsyncSecondaryDisks(java.util.Map<String, DiskResourceStatusAsyncReplicationStatus> asyncSecondaryDisks) {
         this.asyncSecondaryDisks = asyncSecondaryDisks;
         return this;
     }
     
+    public DiskResourceStatus(){}
 }

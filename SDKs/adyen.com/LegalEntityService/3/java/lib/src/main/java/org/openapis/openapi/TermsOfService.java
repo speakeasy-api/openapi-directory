@@ -53,12 +53,10 @@ public class TermsOfService {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse res = new org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse() {{
+        org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse res = new org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse(contentType, httpRes.statusCode()) {{
             getTermsOfServiceAcceptanceInfosResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -66,55 +64,6 @@ public class TermsOfService {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.GetTermsOfServiceAcceptanceInfosResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GetTermsOfServiceAcceptanceInfosResponse.class);
                 res.getTermsOfServiceAcceptanceInfosResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 422 || httpRes.statusCode() == 500) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.ServiceError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ServiceError.class);
-                res.serviceError = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Get Terms of Service status
-     * Returns the required types of Terms of Service that need to be accepted by a legal entity.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceStatusResponse getLegalEntitiesIdTermsOfServiceStatus(org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceStatusRequest request, org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceStatusSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceStatusRequest.class, baseUrl, "/legalEntities/{id}/termsOfServiceStatus", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceStatusResponse res = new org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceStatusResponse() {{
-            calculateTermsOfServiceStatusResponse = null;
-            serviceError = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.CalculateTermsOfServiceStatusResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.CalculateTermsOfServiceStatusResponse.class);
-                res.calculateTermsOfServiceStatusResponse = out;
             }
         }
         else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 422 || httpRes.statusCode() == 500) {
@@ -153,12 +102,10 @@ public class TermsOfService {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse res = new org.openapis.openapi.models.operations.PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse() {{
+        org.openapis.openapi.models.operations.PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse res = new org.openapis.openapi.models.operations.PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse(contentType, httpRes.statusCode()) {{
             acceptTermsOfServiceResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,12 +151,10 @@ public class TermsOfService {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLegalEntitiesIdTermsOfServiceResponse res = new org.openapis.openapi.models.operations.PostLegalEntitiesIdTermsOfServiceResponse() {{
+        org.openapis.openapi.models.operations.PostLegalEntitiesIdTermsOfServiceResponse res = new org.openapis.openapi.models.operations.PostLegalEntitiesIdTermsOfServiceResponse(contentType, httpRes.statusCode()) {{
             getTermsOfServiceDocumentResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

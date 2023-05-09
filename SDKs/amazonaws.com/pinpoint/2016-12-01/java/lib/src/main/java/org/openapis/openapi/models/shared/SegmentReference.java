@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SegmentReference {
     @JsonProperty("Id")
     public String id;
+
     public SegmentReference withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +23,13 @@ public class SegmentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public SegmentReference withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public SegmentReference(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

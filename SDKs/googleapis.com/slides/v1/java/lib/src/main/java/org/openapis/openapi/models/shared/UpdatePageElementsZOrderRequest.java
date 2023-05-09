@@ -18,6 +18,7 @@ public class UpdatePageElementsZOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public UpdatePageElementsZOrderRequestOperationEnum operation;
+
     public UpdatePageElementsZOrderRequest withOperation(UpdatePageElementsZOrderRequestOperationEnum operation) {
         this.operation = operation;
         return this;
@@ -29,9 +30,11 @@ public class UpdatePageElementsZOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageElementObjectIds")
     public String[] pageElementObjectIds;
+
     public UpdatePageElementsZOrderRequest withPageElementObjectIds(String[] pageElementObjectIds) {
         this.pageElementObjectIds = pageElementObjectIds;
         return this;
     }
     
+    public UpdatePageElementsZOrderRequest(){}
 }

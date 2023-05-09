@@ -16,11 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AddUserToAccountRequestBodyAccount;
-import org.openapis.openapi.models.operations.AddUserToAccountRequestBodyUsersIdentification;
-import org.openapis.openapi.models.operations.AddUserToAccountRequestBodyUsers;
 import org.openapis.openapi.models.operations.AddUserToAccountRequestBody;
+import org.openapis.openapi.models.operations.AddUserToAccountRequestBodyAccount;
+import org.openapis.openapi.models.operations.AddUserToAccountRequestBodyUsers;
+import org.openapis.openapi.models.operations.AddUserToAccountRequestBodyUsersIdentification;
 import org.openapis.openapi.models.operations.AddUserToAccountResponse;
 
 public class Application {
@@ -29,41 +28,49 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AddUserToAccountRequestBody req = new AddUserToAccountRequestBody() {{
-                account = new AddUserToAccountRequestBodyAccount() {{
-                    accountId = "corrupti";
-                    domain = "provident";
-                }};
-                users = new org.openapis.openapi.models.operations.AddUserToAccountRequestBodyUsers[]{{
-                    add(new AddUserToAccountRequestBodyUsers() {{
-                        identification = new AddUserToAccountRequestBodyUsersIdentification() {{
-                            email = "Leda_Stiedemann@hotmail.com";
-                            userId = "vel";
-                        }};
-                    }}),
-                    add(new AddUserToAccountRequestBodyUsers() {{
-                        identification = new AddUserToAccountRequestBodyUsersIdentification() {{
-                            email = "Luna.Hoppe@yahoo.com";
-                            userId = "debitis";
-                        }};
-                    }}),
-                    add(new AddUserToAccountRequestBodyUsers() {{
-                        identification = new AddUserToAccountRequestBodyUsersIdentification() {{
-                            email = "Vincenzo.Goldner@gmail.com";
-                            userId = "minus";
-                        }};
-                    }}),
-                }};
-            }}            
+            AddUserToAccountRequestBody req = new AddUserToAccountRequestBody(                new AddUserToAccountRequestBodyAccount() {{
+                                accountId = "corrupti";
+                                domain = "provident";
+                            }};,                 new org.openapis.openapi.models.operations.AddUserToAccountRequestBodyUsers[]{{
+                                add(new AddUserToAccountRequestBodyUsers(                new AddUserToAccountRequestBodyUsersIdentification() {{
+                                                    email = "Luna.Hoppe@yahoo.com";
+                                                    userId = "debitis";
+                                                }};) {{
+                                    identification = new AddUserToAccountRequestBodyUsersIdentification() {{
+                                        email = "Leda_Stiedemann@hotmail.com";
+                                        userId = "vel";
+                                    }};
+                                }}),
+                                add(new AddUserToAccountRequestBodyUsers(                new AddUserToAccountRequestBodyUsersIdentification() {{
+                                                    email = "Junior.Kshlerin@hotmail.com";
+                                                    userId = "recusandae";
+                                                }};) {{
+                                    identification = new AddUserToAccountRequestBodyUsersIdentification() {{
+                                        email = "Vincenzo.Goldner@gmail.com";
+                                        userId = "minus";
+                                    }};
+                                }}),
+                                add(new AddUserToAccountRequestBodyUsers(                new AddUserToAccountRequestBodyUsersIdentification() {{
+                                                    email = "Rita.Will87@yahoo.com";
+                                                    userId = "at";
+                                                }};) {{
+                                    identification = new AddUserToAccountRequestBodyUsersIdentification() {{
+                                        email = "Antonetta64@hotmail.com";
+                                        userId = "perferendis";
+                                    }};
+                                }}),
+                            }});            
 
             AddUserToAccountResponse res = sdk.accounts.addUserToAccount(req);
 
-            if (res.addUserToAccount201ApplicationJSONObject.isPresent()) {
+            if (res.addUserToAccount201ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -71,45 +78,45 @@ public class Application {
 ## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `addUserToAccount` - Add users to an account
-* `deleteAccount` - Delete account
-* `removeUserFromAccount` - Remove user from account
-* `upsertAccount` - Create or update account
+* [addUserToAccount](docs/accounts/README.md#addusertoaccount) - Add users to an account
+* [deleteAccount](docs/accounts/README.md#deleteaccount) - Delete account
+* [removeUserFromAccount](docs/accounts/README.md#removeuserfromaccount) - Remove user from account
+* [upsertAccount](docs/accounts/README.md#upsertaccount) - Create or update account
 
-### events
+### [events](docs/events/README.md)
 
-* `getEvents` - Get events
-* `trackJourneyEvent` - Track event
+* [getEvents](docs/events/README.md#getevents) - Get events
+* [~~trackJourneyEvent~~](docs/events/README.md#trackjourneyevent) - Track event :warning: **Deprecated**
 
-### properties
+### [properties](docs/properties/README.md)
 
-* `getAccountProperties` - Get account properties
-* `getUserProperties` - Get user properties
+* [getAccountProperties](docs/properties/README.md#getaccountproperties) - Get account properties
+* [getUserProperties](docs/properties/README.md#getuserproperties) - Get user properties
 
-### segments
+### [segments](docs/segments/README.md)
 
-* `getAccountSegments` - Get account segments
-* `getUserSegments` - Get user segments
+* [getAccountSegments](docs/segments/README.md#getaccountsegments) - Get account segments
+* [getUserSegments](docs/segments/README.md#getusersegments) - Get user segments
 
-### track
+### [track](docs/track/README.md)
 
-* `trackEvent` - Track event
+* [trackEvent](docs/track/README.md#trackevent) - Track event
 
-### users
+### [users](docs/users/README.md)
 
-* `deleteUser` - Delete user
-* `link` - Link web activity to user
-* `upsertUser` - Create or update user
+* [deleteUser](docs/users/README.md#deleteuser) - Delete user
+* [link](docs/users/README.md#link) - Link web activity to user
+* [upsertUser](docs/users/README.md#upsertuser) - Create or update user
 
-### validation
+### [validation](docs/validation/README.md)
 
-* `getValidity` - Validate API key
+* [getValidity](docs/validation/README.md#getvalidity) - Validate API key
 
-### websites
+### [websites](docs/websites/README.md)
 
-* `getTrackingSnippet` - Get snippet for a website
+* [getTrackingSnippet](docs/websites/README.md#gettrackingsnippet) - Get snippet for a website
 <!-- End SDK Available Operations -->
 
 ### Maturity

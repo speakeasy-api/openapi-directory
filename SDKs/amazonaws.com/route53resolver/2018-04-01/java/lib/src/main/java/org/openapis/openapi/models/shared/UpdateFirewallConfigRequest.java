@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateFirewallConfigRequest {
     @JsonProperty("FirewallFailOpen")
     public FirewallFailOpenStatusEnum firewallFailOpen;
+
     public UpdateFirewallConfigRequest withFirewallFailOpen(FirewallFailOpenStatusEnum firewallFailOpen) {
         this.firewallFailOpen = firewallFailOpen;
         return this;
@@ -16,9 +17,14 @@ public class UpdateFirewallConfigRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public UpdateFirewallConfigRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public UpdateFirewallConfigRequest(@JsonProperty("FirewallFailOpen") FirewallFailOpenStatusEnum firewallFailOpen, @JsonProperty("ResourceId") String resourceId) {
+        this.firewallFailOpen = firewallFailOpen;
+        this.resourceId = resourceId;
+  }
 }

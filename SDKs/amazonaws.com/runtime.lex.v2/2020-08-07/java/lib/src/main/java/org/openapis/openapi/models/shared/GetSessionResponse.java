@@ -15,6 +15,7 @@ public class GetSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interpretations")
     public Interpretation[] interpretations;
+
     public GetSessionResponse withInterpretations(Interpretation[] interpretations) {
         this.interpretations = interpretations;
         return this;
@@ -23,6 +24,7 @@ public class GetSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public Message[] messages;
+
     public GetSessionResponse withMessages(Message[] messages) {
         this.messages = messages;
         return this;
@@ -31,6 +33,7 @@ public class GetSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionId")
     public String sessionId;
+
     public GetSessionResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -39,9 +42,11 @@ public class GetSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionState")
     public SessionState sessionState;
+
     public GetSessionResponse withSessionState(SessionState sessionState) {
         this.sessionState = sessionState;
         return this;
     }
     
+    public GetSessionResponse(){}
 }

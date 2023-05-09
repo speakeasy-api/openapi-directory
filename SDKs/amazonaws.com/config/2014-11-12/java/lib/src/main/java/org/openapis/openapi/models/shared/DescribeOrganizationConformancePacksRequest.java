@@ -12,6 +12,7 @@ public class DescribeOrganizationConformancePacksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeOrganizationConformancePacksRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,6 +21,7 @@ public class DescribeOrganizationConformancePacksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeOrganizationConformancePacksRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class DescribeOrganizationConformancePacksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationConformancePackNames")
     public String[] organizationConformancePackNames;
+
     public DescribeOrganizationConformancePacksRequest withOrganizationConformancePackNames(String[] organizationConformancePackNames) {
         this.organizationConformancePackNames = organizationConformancePackNames;
         return this;
     }
     
+    public DescribeOrganizationConformancePacksRequest(){}
 }

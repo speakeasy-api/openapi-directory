@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EcommerceDeliveryRequestBody {
@@ -12,6 +13,7 @@ public class EcommerceDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=apiKey_l1")
     public String apiKeyL1;
+
     public EcommerceDeliveryRequestBody withApiKeyL1(String apiKeyL1) {
         this.apiKeyL1 = apiKeyL1;
         return this;
@@ -22,6 +24,7 @@ public class EcommerceDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=apiKey_l2")
     public String apiKeyL2;
+
     public EcommerceDeliveryRequestBody withApiKeyL2(String apiKeyL2) {
         this.apiKeyL2 = apiKeyL2;
         return this;
@@ -32,6 +35,7 @@ public class EcommerceDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=destination_airport_code")
     public String destinationAirportCode;
+
     public EcommerceDeliveryRequestBody withDestinationAirportCode(String destinationAirportCode) {
         this.destinationAirportCode = destinationAirportCode;
         return this;
@@ -42,6 +46,7 @@ public class EcommerceDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=destination_latitude")
     public Double destinationLatitude;
+
     public EcommerceDeliveryRequestBody withDestinationLatitude(Double destinationLatitude) {
         this.destinationLatitude = destinationLatitude;
         return this;
@@ -52,6 +57,7 @@ public class EcommerceDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=destination_longitude")
     public Double destinationLongitude;
+
     public EcommerceDeliveryRequestBody withDestinationLongitude(Double destinationLongitude) {
         this.destinationLongitude = destinationLongitude;
         return this;
@@ -62,6 +68,7 @@ public class EcommerceDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=origin_airport_code")
     public String originAirportCode;
+
     public EcommerceDeliveryRequestBody withOriginAirportCode(String originAirportCode) {
         this.originAirportCode = originAirportCode;
         return this;
@@ -72,6 +79,7 @@ public class EcommerceDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=origin_latitude")
     public Double originLatitude;
+
     public EcommerceDeliveryRequestBody withOriginLatitude(Double originLatitude) {
         this.originLatitude = originLatitude;
         return this;
@@ -82,6 +90,7 @@ public class EcommerceDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=origin_longitude")
     public Double originLongitude;
+
     public EcommerceDeliveryRequestBody withOriginLongitude(Double originLongitude) {
         this.originLongitude = originLongitude;
         return this;
@@ -92,6 +101,7 @@ public class EcommerceDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=volumetric_weight")
     public Double volumetricWeight;
+
     public EcommerceDeliveryRequestBody withVolumetricWeight(Double volumetricWeight) {
         this.volumetricWeight = volumetricWeight;
         return this;
@@ -102,9 +112,20 @@ public class EcommerceDeliveryRequestBody {
      */
     @SpeakeasyMetadata("form:name=waybill_type")
     public String waybillType;
+
     public EcommerceDeliveryRequestBody withWaybillType(String waybillType) {
         this.waybillType = waybillType;
         return this;
     }
     
+    public EcommerceDeliveryRequestBody(@JsonProperty("apiKey_l1") String apiKeyL1, @JsonProperty("apiKey_l2") String apiKeyL2, @JsonProperty("destination_latitude") Double destinationLatitude, @JsonProperty("destination_longitude") Double destinationLongitude, @JsonProperty("origin_latitude") Double originLatitude, @JsonProperty("origin_longitude") Double originLongitude, @JsonProperty("volumetric_weight") Double volumetricWeight, @JsonProperty("waybill_type") String waybillType) {
+        this.apiKeyL1 = apiKeyL1;
+        this.apiKeyL2 = apiKeyL2;
+        this.destinationLatitude = destinationLatitude;
+        this.destinationLongitude = destinationLongitude;
+        this.originLatitude = originLatitude;
+        this.originLongitude = originLongitude;
+        this.volumetricWeight = volumetricWeight;
+        this.waybillType = waybillType;
+  }
 }

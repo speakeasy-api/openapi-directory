@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1beta1ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("column")
     public String column;
+
     public GoogleCloudDatacatalogV1beta1ColumnSchema withColumn(String column) {
         this.column = column;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1beta1ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDatacatalogV1beta1ColumnSchema withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1beta1ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public GoogleCloudDatacatalogV1beta1ColumnSchema withMode(String mode) {
         this.mode = mode;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1beta1ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subcolumns")
     public GoogleCloudDatacatalogV1beta1ColumnSchema[] subcolumns;
+
     public GoogleCloudDatacatalogV1beta1ColumnSchema withSubcolumns(GoogleCloudDatacatalogV1beta1ColumnSchema[] subcolumns) {
         this.subcolumns = subcolumns;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDatacatalogV1beta1ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudDatacatalogV1beta1ColumnSchema withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1ColumnSchema(){}
 }

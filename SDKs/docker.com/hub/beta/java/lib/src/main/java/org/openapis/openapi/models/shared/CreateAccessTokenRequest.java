@@ -13,6 +13,7 @@ public class CreateAccessTokenRequest {
      */
     @JsonProperty("scopes")
     public String[] scopes;
+
     public CreateAccessTokenRequest withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
@@ -23,9 +24,14 @@ public class CreateAccessTokenRequest {
      */
     @JsonProperty("token_label")
     public String tokenLabel;
+
     public CreateAccessTokenRequest withTokenLabel(String tokenLabel) {
         this.tokenLabel = tokenLabel;
         return this;
     }
     
+    public CreateAccessTokenRequest(@JsonProperty("scopes") String[] scopes, @JsonProperty("token_label") String tokenLabel) {
+        this.scopes = scopes;
+        this.tokenLabel = tokenLabel;
+  }
 }

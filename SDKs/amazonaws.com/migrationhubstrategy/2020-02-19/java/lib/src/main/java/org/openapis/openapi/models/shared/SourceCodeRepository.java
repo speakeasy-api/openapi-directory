@@ -15,6 +15,7 @@ public class SourceCodeRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch")
     public String branch;
+
     public SourceCodeRepository withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -23,6 +24,7 @@ public class SourceCodeRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectName")
     public String projectName;
+
     public SourceCodeRepository withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -31,6 +33,7 @@ public class SourceCodeRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public String repository;
+
     public SourceCodeRepository withRepository(String repository) {
         this.repository = repository;
         return this;
@@ -39,9 +42,11 @@ public class SourceCodeRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionControlType")
     public String versionControlType;
+
     public SourceCodeRepository withVersionControlType(String versionControlType) {
         this.versionControlType = versionControlType;
         return this;
     }
     
+    public SourceCodeRepository(){}
 }

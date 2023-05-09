@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeNodeGetRemoteDesktopRequest {
@@ -12,6 +13,7 @@ public class ComputeNodeGetRemoteDesktopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public ComputeNodeGetRemoteDesktopRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -22,6 +24,7 @@ public class ComputeNodeGetRemoteDesktopRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public ComputeNodeGetRemoteDesktopRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -32,6 +35,7 @@ public class ComputeNodeGetRemoteDesktopRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nodeId")
     public String nodeId;
+
     public ComputeNodeGetRemoteDesktopRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -42,6 +46,7 @@ public class ComputeNodeGetRemoteDesktopRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public ComputeNodeGetRemoteDesktopRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -52,6 +57,7 @@ public class ComputeNodeGetRemoteDesktopRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
     public String poolId;
+
     public ComputeNodeGetRemoteDesktopRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -62,6 +68,7 @@ public class ComputeNodeGetRemoteDesktopRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public ComputeNodeGetRemoteDesktopRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -72,9 +79,15 @@ public class ComputeNodeGetRemoteDesktopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public ComputeNodeGetRemoteDesktopRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public ComputeNodeGetRemoteDesktopRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("nodeId") String nodeId, @JsonProperty("poolId") String poolId) {
+        this.apiVersion = apiVersion;
+        this.nodeId = nodeId;
+        this.poolId = poolId;
+  }
 }

@@ -12,6 +12,7 @@ public class GetMembers200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public GetMembers200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class GetMembers200ApplicationJSON {
      */
     @JsonProperty("state")
     public org.openapis.openapi.models.shared.MemberStateEnum state;
+
     public GetMembers200ApplicationJSON withState(org.openapis.openapi.models.shared.MemberStateEnum state) {
         this.state = state;
         return this;
@@ -32,6 +34,7 @@ public class GetMembers200ApplicationJSON {
      */
     @JsonProperty("user_id")
     public String userId;
+
     public GetMembers200ApplicationJSON withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -42,9 +45,16 @@ public class GetMembers200ApplicationJSON {
      */
     @JsonProperty("user_name")
     public String userName;
+
     public GetMembers200ApplicationJSON withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public GetMembers200ApplicationJSON(@JsonProperty("name") String name, @JsonProperty("state") org.openapis.openapi.models.shared.MemberStateEnum state, @JsonProperty("user_id") String userId, @JsonProperty("user_name") String userName) {
+        this.name = name;
+        this.state = state;
+        this.userId = userId;
+        this.userName = userName;
+  }
 }

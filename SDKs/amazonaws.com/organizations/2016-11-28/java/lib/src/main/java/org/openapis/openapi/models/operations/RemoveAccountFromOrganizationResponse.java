@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveAccountFromOrganizationResponse {
@@ -12,6 +13,7 @@ public class RemoveAccountFromOrganizationResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public RemoveAccountFromOrganizationResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class RemoveAccountFromOrganizationResponse {
      */
     
     public Object accessDeniedException;
+
     public RemoveAccountFromOrganizationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class RemoveAccountFromOrganizationResponse {
      */
     
     public Object accountNotFoundException;
+
     public RemoveAccountFromOrganizationResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -42,6 +46,7 @@ public class RemoveAccountFromOrganizationResponse {
      */
     
     public Object concurrentModificationException;
+
     public RemoveAccountFromOrganizationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -52,6 +57,7 @@ public class RemoveAccountFromOrganizationResponse {
      */
     
     public Object constraintViolationException;
+
     public RemoveAccountFromOrganizationResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -59,6 +65,7 @@ public class RemoveAccountFromOrganizationResponse {
     
     
     public String contentType;
+
     public RemoveAccountFromOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class RemoveAccountFromOrganizationResponse {
      */
     
     public Object invalidInputException;
+
     public RemoveAccountFromOrganizationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class RemoveAccountFromOrganizationResponse {
      */
     
     public Object masterCannotLeaveOrganizationException;
+
     public RemoveAccountFromOrganizationResponse withMasterCannotLeaveOrganizationException(Object masterCannotLeaveOrganizationException) {
         this.masterCannotLeaveOrganizationException = masterCannotLeaveOrganizationException;
         return this;
@@ -89,6 +98,7 @@ public class RemoveAccountFromOrganizationResponse {
      */
     
     public Object serviceException;
+
     public RemoveAccountFromOrganizationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -96,6 +106,7 @@ public class RemoveAccountFromOrganizationResponse {
     
     
     public Integer statusCode;
+
     public RemoveAccountFromOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class RemoveAccountFromOrganizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveAccountFromOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class RemoveAccountFromOrganizationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public RemoveAccountFromOrganizationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public RemoveAccountFromOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class TaxEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_id")
     public Integer categoryId;
+
     public TaxEditFields withCategoryId(Integer categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -26,6 +27,7 @@ public class TaxEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public TaxEditFields withCountry(String country) {
         this.country = country;
         return this;
@@ -37,6 +39,7 @@ public class TaxEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixed")
     public Boolean fixed;
+
     public TaxEditFields withFixed(Boolean fixed) {
         this.fixed = fixed;
         return this;
@@ -48,6 +51,7 @@ public class TaxEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TaxEditFields withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class TaxEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public TaxEditFields withRegion(String region) {
         this.region = region;
         return this;
@@ -70,6 +75,7 @@ public class TaxEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping")
     public Boolean shipping;
+
     public TaxEditFields withShipping(Boolean shipping) {
         this.shipping = shipping;
         return this;
@@ -81,9 +87,11 @@ public class TaxEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Float tax;
+
     public TaxEditFields withTax(Float tax) {
         this.tax = tax;
         return this;
     }
     
+    public TaxEditFields(){}
 }

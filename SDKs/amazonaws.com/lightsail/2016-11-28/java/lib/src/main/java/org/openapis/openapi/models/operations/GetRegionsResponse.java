@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRegionsResponse {
@@ -12,6 +13,7 @@ public class GetRegionsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRegionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetRegionsResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetRegionsResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetRegionsResponse {
     
     
     public String contentType;
+
     public GetRegionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetRegionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRegionsResult getRegionsResult;
+
     public GetRegionsResponse withGetRegionsResult(org.openapis.openapi.models.shared.GetRegionsResult getRegionsResult) {
         this.getRegionsResult = getRegionsResult;
         return this;
@@ -49,6 +54,7 @@ public class GetRegionsResponse {
      */
     
     public Object invalidInputException;
+
     public GetRegionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetRegionsResponse {
      */
     
     public Object notFoundException;
+
     public GetRegionsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetRegionsResponse {
      */
     
     public Object operationFailureException;
+
     public GetRegionsResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetRegionsResponse {
      */
     
     public Object serviceException;
+
     public GetRegionsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetRegionsResponse {
     
     
     public Integer statusCode;
+
     public GetRegionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetRegionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRegionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetRegionsResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetRegionsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetRegionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

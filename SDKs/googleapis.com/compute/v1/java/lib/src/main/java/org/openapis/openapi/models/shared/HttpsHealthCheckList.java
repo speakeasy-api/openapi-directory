@@ -18,6 +18,7 @@ public class HttpsHealthCheckList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public HttpsHealthCheckList withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class HttpsHealthCheckList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public HttpsHealthCheck1[] items;
+
     public HttpsHealthCheckList withItems(HttpsHealthCheck1[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class HttpsHealthCheckList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public HttpsHealthCheckList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class HttpsHealthCheckList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public HttpsHealthCheckList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -62,6 +66,7 @@ public class HttpsHealthCheckList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public HttpsHealthCheckList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -73,9 +78,11 @@ public class HttpsHealthCheckList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public HttpsHealthCheckListWarning warning;
+
     public HttpsHealthCheckList withWarning(HttpsHealthCheckListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public HttpsHealthCheckList(){}
 }

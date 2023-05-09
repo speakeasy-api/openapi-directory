@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GitGetBlobResponse {
     
     public String contentType;
+
     public GitGetBlobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GitGetBlobResponse {
     
     
     public Integer statusCode;
+
     public GitGetBlobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GitGetBlobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GitGetBlobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GitGetBlobResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public GitGetBlobResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class GitGetBlobResponse {
      */
     
     public org.openapis.openapi.models.shared.Blob blob;
+
     public GitGetBlobResponse withBlob(org.openapis.openapi.models.shared.Blob blob) {
         this.blob = blob;
         return this;
@@ -53,9 +59,14 @@ public class GitGetBlobResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public GitGetBlobResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public GitGetBlobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

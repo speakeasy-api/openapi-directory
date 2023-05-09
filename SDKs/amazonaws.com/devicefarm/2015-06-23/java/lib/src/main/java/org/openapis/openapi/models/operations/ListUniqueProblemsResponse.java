@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListUniqueProblemsResponse {
@@ -12,6 +13,7 @@ public class ListUniqueProblemsResponse {
      */
     
     public Object argumentException;
+
     public ListUniqueProblemsResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class ListUniqueProblemsResponse {
     
     
     public String contentType;
+
     public ListUniqueProblemsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListUniqueProblemsResponse {
      */
     
     public Object limitExceededException;
+
     public ListUniqueProblemsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class ListUniqueProblemsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListUniqueProblemsResult listUniqueProblemsResult;
+
     public ListUniqueProblemsResponse withListUniqueProblemsResult(org.openapis.openapi.models.shared.ListUniqueProblemsResult listUniqueProblemsResult) {
         this.listUniqueProblemsResult = listUniqueProblemsResult;
         return this;
@@ -49,6 +54,7 @@ public class ListUniqueProblemsResponse {
      */
     
     public Object notFoundException;
+
     public ListUniqueProblemsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListUniqueProblemsResponse {
      */
     
     public Object serviceAccountException;
+
     public ListUniqueProblemsResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class ListUniqueProblemsResponse {
     
     
     public Integer statusCode;
+
     public ListUniqueProblemsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListUniqueProblemsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListUniqueProblemsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListUniqueProblemsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

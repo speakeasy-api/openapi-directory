@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FacetscategoryRequest {
@@ -12,6 +13,7 @@ public class FacetscategoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public FacetscategoryRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class FacetscategoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public FacetscategoryRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class FacetscategoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_from")
     public String from;
+
     public FacetscategoryRequest withFrom(String from) {
         this.from = from;
         return this;
@@ -42,6 +46,7 @@ public class FacetscategoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_to")
     public String to;
+
     public FacetscategoryRequest withTo(String to) {
         this.to = to;
         return this;
@@ -52,6 +57,7 @@ public class FacetscategoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=map")
     public String map;
+
     public FacetscategoryRequest withMap(String map) {
         this.map = map;
         return this;
@@ -62,9 +68,16 @@ public class FacetscategoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=term")
     public String term;
+
     public FacetscategoryRequest withTerm(String term) {
         this.term = term;
         return this;
     }
     
+    public FacetscategoryRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("map") String map, @JsonProperty("term") String term) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.map = map;
+        this.term = term;
+  }
 }

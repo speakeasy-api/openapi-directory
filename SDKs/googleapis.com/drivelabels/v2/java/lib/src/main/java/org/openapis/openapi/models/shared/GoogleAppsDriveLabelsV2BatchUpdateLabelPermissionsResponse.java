@@ -18,9 +18,11 @@ public class GoogleAppsDriveLabelsV2BatchUpdateLabelPermissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public GoogleAppsDriveLabelsV2LabelPermission[] permissions;
+
     public GoogleAppsDriveLabelsV2BatchUpdateLabelPermissionsResponse withPermissions(GoogleAppsDriveLabelsV2LabelPermission[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2BatchUpdateLabelPermissionsResponse(){}
 }

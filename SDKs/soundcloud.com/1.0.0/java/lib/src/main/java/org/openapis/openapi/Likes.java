@@ -54,12 +54,10 @@ public class Likes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLikesPlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.DeleteLikesPlaylistsPlaylistIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteLikesPlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.DeleteLikesPlaylistsPlaylistIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,12 +102,10 @@ public class Likes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLikesTracksTrackIdResponse res = new org.openapis.openapi.models.operations.DeleteLikesTracksTrackIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteLikesTracksTrackIdResponse res = new org.openapis.openapi.models.operations.DeleteLikesTracksTrackIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,13 +150,11 @@ public class Likes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLikesPlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.PostLikesPlaylistsPlaylistIdResponse() {{
+        org.openapis.openapi.models.operations.PostLikesPlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.PostLikesPlaylistsPlaylistIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
             error = null;
             tooManyRequests = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {
@@ -212,13 +206,11 @@ public class Likes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLikesTracksTrackIdResponse res = new org.openapis.openapi.models.operations.PostLikesTracksTrackIdResponse() {{
+        org.openapis.openapi.models.operations.PostLikesTracksTrackIdResponse res = new org.openapis.openapi.models.operations.PostLikesTracksTrackIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
             error = null;
             tooManyRequests = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

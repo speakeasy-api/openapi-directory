@@ -15,9 +15,11 @@ public class GoogleCloudDatalabelingV1beta1ConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("row")
     public GoogleCloudDatalabelingV1beta1Row[] row;
+
     public GoogleCloudDatalabelingV1beta1ConfusionMatrix withRow(GoogleCloudDatalabelingV1beta1Row[] row) {
         this.row = row;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ConfusionMatrix(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Message {
     @JsonProperty("Body")
     public Body body;
+
     public Message withBody(Body body) {
         this.body = body;
         return this;
@@ -19,9 +20,14 @@ public class Message {
     
     @JsonProperty("Subject")
     public Content subject;
+
     public Message withSubject(Content subject) {
         this.subject = subject;
         return this;
     }
     
+    public Message(@JsonProperty("Body") Body body, @JsonProperty("Subject") Content subject) {
+        this.body = body;
+        this.subject = subject;
+  }
 }

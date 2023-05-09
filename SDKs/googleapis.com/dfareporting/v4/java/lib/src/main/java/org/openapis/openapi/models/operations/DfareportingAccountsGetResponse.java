@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingAccountsGetResponse {
@@ -12,6 +13,7 @@ public class DfareportingAccountsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Account account;
+
     public DfareportingAccountsGetResponse withAccount(org.openapis.openapi.models.shared.Account account) {
         this.account = account;
         return this;
@@ -19,6 +21,7 @@ public class DfareportingAccountsGetResponse {
     
     
     public String contentType;
+
     public DfareportingAccountsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DfareportingAccountsGetResponse {
     
     
     public Integer statusCode;
+
     public DfareportingAccountsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingAccountsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingAccountsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DfareportingAccountsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

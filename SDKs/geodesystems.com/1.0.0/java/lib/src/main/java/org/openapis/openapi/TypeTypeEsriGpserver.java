@@ -57,10 +57,8 @@ public class TypeTypeEsriGpserver {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypeEsriGpserverResponse res = new org.openapis.openapi.models.operations.SearchTypeEsriGpserverResponse() {{
+        org.openapis.openapi.models.operations.SearchTypeEsriGpserverResponse res = new org.openapis.openapi.models.operations.SearchTypeEsriGpserverResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

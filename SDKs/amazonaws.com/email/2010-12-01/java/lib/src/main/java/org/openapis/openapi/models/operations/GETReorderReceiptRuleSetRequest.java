@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReorderReceiptRuleSetRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETReorderReceiptRuleSetActionEnum action;
+
     public GETReorderReceiptRuleSetRequest withAction(GETReorderReceiptRuleSetActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETReorderReceiptRuleSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleNames")
     public String[] ruleNames;
+
     public GETReorderReceiptRuleSetRequest withRuleNames(String[] ruleNames) {
         this.ruleNames = ruleNames;
         return this;
@@ -29,6 +32,7 @@ public class GETReorderReceiptRuleSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleSetName")
     public String ruleSetName;
+
     public GETReorderReceiptRuleSetRequest withRuleSetName(String ruleSetName) {
         this.ruleSetName = ruleSetName;
         return this;
@@ -36,6 +40,7 @@ public class GETReorderReceiptRuleSetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETReorderReceiptRuleSetVersionEnum version;
+
     public GETReorderReceiptRuleSetRequest withVersion(GETReorderReceiptRuleSetVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETReorderReceiptRuleSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETReorderReceiptRuleSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETReorderReceiptRuleSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETReorderReceiptRuleSetRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETReorderReceiptRuleSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETReorderReceiptRuleSetRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETReorderReceiptRuleSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETReorderReceiptRuleSetRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETReorderReceiptRuleSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETReorderReceiptRuleSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETReorderReceiptRuleSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETReorderReceiptRuleSetRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETReorderReceiptRuleSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETReorderReceiptRuleSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETReorderReceiptRuleSetRequest(@JsonProperty("Action") GETReorderReceiptRuleSetActionEnum action, @JsonProperty("RuleNames") String[] ruleNames, @JsonProperty("RuleSetName") String ruleSetName, @JsonProperty("Version") GETReorderReceiptRuleSetVersionEnum version) {
+        this.action = action;
+        this.ruleNames = ruleNames;
+        this.ruleSetName = ruleSetName;
+        this.version = version;
+  }
 }

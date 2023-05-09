@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Example15 {
     @JsonProperty("display_string")
     public String displayString;
+
     public Example15 withDisplayString(String displayString) {
         this.displayString = displayString;
         return this;
@@ -16,9 +17,14 @@ public class Example15 {
     
     @JsonProperty("locale")
     public String locale;
+
     public Example15 withLocale(String locale) {
         this.locale = locale;
         return this;
     }
     
+    public Example15(@JsonProperty("display_string") String displayString, @JsonProperty("locale") String locale) {
+        this.displayString = displayString;
+        this.locale = locale;
+  }
 }

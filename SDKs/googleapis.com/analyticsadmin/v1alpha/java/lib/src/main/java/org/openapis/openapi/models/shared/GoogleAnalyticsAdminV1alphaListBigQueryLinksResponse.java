@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaListBigQueryLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigqueryLinks")
     public GoogleAnalyticsAdminV1alphaBigQueryLink[] bigqueryLinks;
+
     public GoogleAnalyticsAdminV1alphaListBigQueryLinksResponse withBigqueryLinks(GoogleAnalyticsAdminV1alphaBigQueryLink[] bigqueryLinks) {
         this.bigqueryLinks = bigqueryLinks;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaListBigQueryLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAnalyticsAdminV1alphaListBigQueryLinksResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaListBigQueryLinksResponse(){}
 }

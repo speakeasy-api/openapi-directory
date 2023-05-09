@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDeviceCodeRequest {
     @JsonProperty("device_code")
     public DeviceCode deviceCode;
+
     public CreateDeviceCodeRequest withDeviceCode(DeviceCode deviceCode) {
         this.deviceCode = deviceCode;
         return this;
@@ -27,9 +28,14 @@ public class CreateDeviceCodeRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateDeviceCodeRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
     }
     
+    public CreateDeviceCodeRequest(@JsonProperty("device_code") DeviceCode deviceCode, @JsonProperty("idempotency_key") String idempotencyKey) {
+        this.deviceCode = deviceCode;
+        this.idempotencyKey = idempotencyKey;
+  }
 }

@@ -20,6 +20,7 @@ public class RoomSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public RoomSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class RoomSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public RoomSummary withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -38,6 +40,7 @@ public class RoomSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RoomSummary withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class RoomSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfigurationIdentifiers")
     public String[] loggingConfigurationIdentifiers;
+
     public RoomSummary withLoggingConfigurationIdentifiers(String[] loggingConfigurationIdentifiers) {
         this.loggingConfigurationIdentifiers = loggingConfigurationIdentifiers;
         return this;
@@ -54,6 +58,7 @@ public class RoomSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageReviewHandler")
     public MessageReviewHandler messageReviewHandler;
+
     public RoomSummary withMessageReviewHandler(MessageReviewHandler messageReviewHandler) {
         this.messageReviewHandler = messageReviewHandler;
         return this;
@@ -62,6 +67,7 @@ public class RoomSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RoomSummary withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +76,7 @@ public class RoomSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public RoomSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -80,9 +87,11 @@ public class RoomSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public RoomSummary withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public RoomSummary(){}
 }

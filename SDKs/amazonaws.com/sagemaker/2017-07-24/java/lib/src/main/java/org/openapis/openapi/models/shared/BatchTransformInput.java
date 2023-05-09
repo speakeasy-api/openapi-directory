@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchTransformInput {
     @JsonProperty("DataCapturedDestinationS3Uri")
     public String dataCapturedDestinationS3Uri;
+
     public BatchTransformInput withDataCapturedDestinationS3Uri(String dataCapturedDestinationS3Uri) {
         this.dataCapturedDestinationS3Uri = dataCapturedDestinationS3Uri;
         return this;
@@ -21,6 +22,7 @@ public class BatchTransformInput {
     
     @JsonProperty("DatasetFormat")
     public MonitoringDatasetFormat datasetFormat;
+
     public BatchTransformInput withDatasetFormat(MonitoringDatasetFormat datasetFormat) {
         this.datasetFormat = datasetFormat;
         return this;
@@ -29,6 +31,7 @@ public class BatchTransformInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndTimeOffset")
     public String endTimeOffset;
+
     public BatchTransformInput withEndTimeOffset(String endTimeOffset) {
         this.endTimeOffset = endTimeOffset;
         return this;
@@ -37,6 +40,7 @@ public class BatchTransformInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeaturesAttribute")
     public String featuresAttribute;
+
     public BatchTransformInput withFeaturesAttribute(String featuresAttribute) {
         this.featuresAttribute = featuresAttribute;
         return this;
@@ -45,6 +49,7 @@ public class BatchTransformInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceAttribute")
     public String inferenceAttribute;
+
     public BatchTransformInput withInferenceAttribute(String inferenceAttribute) {
         this.inferenceAttribute = inferenceAttribute;
         return this;
@@ -52,6 +57,7 @@ public class BatchTransformInput {
     
     @JsonProperty("LocalPath")
     public String localPath;
+
     public BatchTransformInput withLocalPath(String localPath) {
         this.localPath = localPath;
         return this;
@@ -60,6 +66,7 @@ public class BatchTransformInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProbabilityAttribute")
     public String probabilityAttribute;
+
     public BatchTransformInput withProbabilityAttribute(String probabilityAttribute) {
         this.probabilityAttribute = probabilityAttribute;
         return this;
@@ -68,6 +75,7 @@ public class BatchTransformInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProbabilityThresholdAttribute")
     public Double probabilityThresholdAttribute;
+
     public BatchTransformInput withProbabilityThresholdAttribute(Double probabilityThresholdAttribute) {
         this.probabilityThresholdAttribute = probabilityThresholdAttribute;
         return this;
@@ -76,6 +84,7 @@ public class BatchTransformInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DataDistributionType")
     public ProcessingS3DataDistributionTypeEnum s3DataDistributionType;
+
     public BatchTransformInput withS3DataDistributionType(ProcessingS3DataDistributionTypeEnum s3DataDistributionType) {
         this.s3DataDistributionType = s3DataDistributionType;
         return this;
@@ -84,6 +93,7 @@ public class BatchTransformInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3InputMode")
     public ProcessingS3InputModeEnum s3InputMode;
+
     public BatchTransformInput withS3InputMode(ProcessingS3InputModeEnum s3InputMode) {
         this.s3InputMode = s3InputMode;
         return this;
@@ -92,9 +102,15 @@ public class BatchTransformInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartTimeOffset")
     public String startTimeOffset;
+
     public BatchTransformInput withStartTimeOffset(String startTimeOffset) {
         this.startTimeOffset = startTimeOffset;
         return this;
     }
     
+    public BatchTransformInput(@JsonProperty("DataCapturedDestinationS3Uri") String dataCapturedDestinationS3Uri, @JsonProperty("DatasetFormat") MonitoringDatasetFormat datasetFormat, @JsonProperty("LocalPath") String localPath) {
+        this.dataCapturedDestinationS3Uri = dataCapturedDestinationS3Uri;
+        this.datasetFormat = datasetFormat;
+        this.localPath = localPath;
+  }
 }

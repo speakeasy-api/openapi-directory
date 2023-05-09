@@ -15,6 +15,7 @@ public class InstancesSetServiceAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public InstancesSetServiceAccountRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -26,9 +27,11 @@ public class InstancesSetServiceAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public String[] scopes;
+
     public InstancesSetServiceAccountRequest withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
     }
     
+    public InstancesSetServiceAccountRequest(){}
 }

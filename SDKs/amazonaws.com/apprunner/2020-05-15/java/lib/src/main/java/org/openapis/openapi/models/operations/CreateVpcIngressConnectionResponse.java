@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVpcIngressConnectionResponse {
     
     public String contentType;
+
     public CreateVpcIngressConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateVpcIngressConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateVpcIngressConnectionResponse createVpcIngressConnectionResponse;
+
     public CreateVpcIngressConnectionResponse withCreateVpcIngressConnectionResponse(org.openapis.openapi.models.shared.CreateVpcIngressConnectionResponse createVpcIngressConnectionResponse) {
         this.createVpcIngressConnectionResponse = createVpcIngressConnectionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateVpcIngressConnectionResponse {
      */
     
     public Object internalServiceErrorException;
+
     public CreateVpcIngressConnectionResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class CreateVpcIngressConnectionResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateVpcIngressConnectionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateVpcIngressConnectionResponse {
      */
     
     public Object invalidStateException;
+
     public CreateVpcIngressConnectionResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -59,6 +65,7 @@ public class CreateVpcIngressConnectionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateVpcIngressConnectionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateVpcIngressConnectionResponse {
     
     
     public Integer statusCode;
+
     public CreateVpcIngressConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateVpcIngressConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVpcIngressConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateVpcIngressConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

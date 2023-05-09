@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SafebrowsingThreatListUpdatesFetchResponse {
     
     public String contentType;
+
     public SafebrowsingThreatListUpdatesFetchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SafebrowsingThreatListUpdatesFetchResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse googleSecuritySafebrowsingV4FetchThreatListUpdatesResponse;
+
     public SafebrowsingThreatListUpdatesFetchResponse withGoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse(org.openapis.openapi.models.shared.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse googleSecuritySafebrowsingV4FetchThreatListUpdatesResponse) {
         this.googleSecuritySafebrowsingV4FetchThreatListUpdatesResponse = googleSecuritySafebrowsingV4FetchThreatListUpdatesResponse;
         return this;
@@ -26,6 +29,7 @@ public class SafebrowsingThreatListUpdatesFetchResponse {
     
     
     public Integer statusCode;
+
     public SafebrowsingThreatListUpdatesFetchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SafebrowsingThreatListUpdatesFetchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SafebrowsingThreatListUpdatesFetchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SafebrowsingThreatListUpdatesFetchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

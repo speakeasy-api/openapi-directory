@@ -15,6 +15,7 @@ public class ColumnStatisticsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BinaryColumnStatisticsData")
     public BinaryColumnStatisticsData binaryColumnStatisticsData;
+
     public ColumnStatisticsData withBinaryColumnStatisticsData(BinaryColumnStatisticsData binaryColumnStatisticsData) {
         this.binaryColumnStatisticsData = binaryColumnStatisticsData;
         return this;
@@ -23,6 +24,7 @@ public class ColumnStatisticsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BooleanColumnStatisticsData")
     public BooleanColumnStatisticsData booleanColumnStatisticsData;
+
     public ColumnStatisticsData withBooleanColumnStatisticsData(BooleanColumnStatisticsData booleanColumnStatisticsData) {
         this.booleanColumnStatisticsData = booleanColumnStatisticsData;
         return this;
@@ -31,6 +33,7 @@ public class ColumnStatisticsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateColumnStatisticsData")
     public DateColumnStatisticsData dateColumnStatisticsData;
+
     public ColumnStatisticsData withDateColumnStatisticsData(DateColumnStatisticsData dateColumnStatisticsData) {
         this.dateColumnStatisticsData = dateColumnStatisticsData;
         return this;
@@ -39,6 +42,7 @@ public class ColumnStatisticsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DecimalColumnStatisticsData")
     public DecimalColumnStatisticsData decimalColumnStatisticsData;
+
     public ColumnStatisticsData withDecimalColumnStatisticsData(DecimalColumnStatisticsData decimalColumnStatisticsData) {
         this.decimalColumnStatisticsData = decimalColumnStatisticsData;
         return this;
@@ -47,6 +51,7 @@ public class ColumnStatisticsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DoubleColumnStatisticsData")
     public DoubleColumnStatisticsData doubleColumnStatisticsData;
+
     public ColumnStatisticsData withDoubleColumnStatisticsData(DoubleColumnStatisticsData doubleColumnStatisticsData) {
         this.doubleColumnStatisticsData = doubleColumnStatisticsData;
         return this;
@@ -55,6 +60,7 @@ public class ColumnStatisticsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LongColumnStatisticsData")
     public LongColumnStatisticsData longColumnStatisticsData;
+
     public ColumnStatisticsData withLongColumnStatisticsData(LongColumnStatisticsData longColumnStatisticsData) {
         this.longColumnStatisticsData = longColumnStatisticsData;
         return this;
@@ -63,6 +69,7 @@ public class ColumnStatisticsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StringColumnStatisticsData")
     public StringColumnStatisticsData stringColumnStatisticsData;
+
     public ColumnStatisticsData withStringColumnStatisticsData(StringColumnStatisticsData stringColumnStatisticsData) {
         this.stringColumnStatisticsData = stringColumnStatisticsData;
         return this;
@@ -70,9 +77,13 @@ public class ColumnStatisticsData {
     
     @JsonProperty("Type")
     public ColumnStatisticsTypeEnum type;
+
     public ColumnStatisticsData withType(ColumnStatisticsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ColumnStatisticsData(@JsonProperty("Type") ColumnStatisticsTypeEnum type) {
+        this.type = type;
+  }
 }

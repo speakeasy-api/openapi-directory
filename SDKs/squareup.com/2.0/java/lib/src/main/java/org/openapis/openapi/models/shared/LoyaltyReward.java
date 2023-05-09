@@ -18,6 +18,7 @@ public class LoyaltyReward {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public LoyaltyReward withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class LoyaltyReward {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LoyaltyReward withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +41,7 @@ public class LoyaltyReward {
      */
     @JsonProperty("loyalty_account_id")
     public String loyaltyAccountId;
+
     public LoyaltyReward withLoyaltyAccountId(String loyaltyAccountId) {
         this.loyaltyAccountId = loyaltyAccountId;
         return this;
@@ -50,6 +53,7 @@ public class LoyaltyReward {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public String orderId;
+
     public LoyaltyReward withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -61,6 +65,7 @@ public class LoyaltyReward {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("points")
     public Long points;
+
     public LoyaltyReward withPoints(Long points) {
         this.points = points;
         return this;
@@ -72,6 +77,7 @@ public class LoyaltyReward {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redeemed_at")
     public String redeemedAt;
+
     public LoyaltyReward withRedeemedAt(String redeemedAt) {
         this.redeemedAt = redeemedAt;
         return this;
@@ -82,6 +88,7 @@ public class LoyaltyReward {
      */
     @JsonProperty("reward_tier_id")
     public String rewardTierId;
+
     public LoyaltyReward withRewardTierId(String rewardTierId) {
         this.rewardTierId = rewardTierId;
         return this;
@@ -93,6 +100,7 @@ public class LoyaltyReward {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public LoyaltyReward withStatus(String status) {
         this.status = status;
         return this;
@@ -104,9 +112,14 @@ public class LoyaltyReward {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public LoyaltyReward withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public LoyaltyReward(@JsonProperty("loyalty_account_id") String loyaltyAccountId, @JsonProperty("reward_tier_id") String rewardTierId) {
+        this.loyaltyAccountId = loyaltyAccountId;
+        this.rewardTierId = rewardTierId;
+  }
 }

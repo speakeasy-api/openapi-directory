@@ -15,9 +15,11 @@ public class CreateNotebookOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookId")
     public String notebookId;
+
     public CreateNotebookOutput withNotebookId(String notebookId) {
         this.notebookId = notebookId;
         return this;
     }
     
+    public CreateNotebookOutput(){}
 }

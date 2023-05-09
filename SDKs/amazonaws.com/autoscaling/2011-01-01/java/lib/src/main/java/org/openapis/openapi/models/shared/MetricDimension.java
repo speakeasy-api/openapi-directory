@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * MetricDimension - Describes the dimension of a metric.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MetricDimension {
     
     public String name;
+
     public MetricDimension withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class MetricDimension {
     
     
     public String value;
+
     public MetricDimension withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public MetricDimension(@JsonProperty("Name") String name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

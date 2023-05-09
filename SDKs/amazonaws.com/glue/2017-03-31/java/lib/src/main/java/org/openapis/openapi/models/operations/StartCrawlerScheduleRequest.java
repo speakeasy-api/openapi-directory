@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartCrawlerScheduleRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.StartCrawlerScheduleRequest startCrawlerScheduleRequest;
+
     public StartCrawlerScheduleRequest withStartCrawlerScheduleRequest(org.openapis.openapi.models.shared.StartCrawlerScheduleRequest startCrawlerScheduleRequest) {
         this.startCrawlerScheduleRequest = startCrawlerScheduleRequest;
         return this;
@@ -16,6 +18,7 @@ public class StartCrawlerScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public StartCrawlerScheduleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class StartCrawlerScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public StartCrawlerScheduleRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class StartCrawlerScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public StartCrawlerScheduleRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class StartCrawlerScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public StartCrawlerScheduleRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class StartCrawlerScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public StartCrawlerScheduleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class StartCrawlerScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public StartCrawlerScheduleRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class StartCrawlerScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public StartCrawlerScheduleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class StartCrawlerScheduleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public StartCrawlerScheduleXAmzTargetEnum xAmzTarget;
+
     public StartCrawlerScheduleRequest withXAmzTarget(StartCrawlerScheduleXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public StartCrawlerScheduleRequest(@JsonProperty("StartCrawlerScheduleRequest") org.openapis.openapi.models.shared.StartCrawlerScheduleRequest startCrawlerScheduleRequest, @JsonProperty("X-Amz-Target") StartCrawlerScheduleXAmzTargetEnum xAmzTarget) {
+        this.startCrawlerScheduleRequest = startCrawlerScheduleRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

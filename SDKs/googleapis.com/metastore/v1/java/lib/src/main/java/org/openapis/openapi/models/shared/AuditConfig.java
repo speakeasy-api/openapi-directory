@@ -18,6 +18,7 @@ public class AuditConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditLogConfigs")
     public AuditLogConfig[] auditLogConfigs;
+
     public AuditConfig withAuditLogConfigs(AuditLogConfig[] auditLogConfigs) {
         this.auditLogConfigs = auditLogConfigs;
         return this;
@@ -29,9 +30,11 @@ public class AuditConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public AuditConfig withService(String service) {
         this.service = service;
         return this;
     }
     
+    public AuditConfig(){}
 }

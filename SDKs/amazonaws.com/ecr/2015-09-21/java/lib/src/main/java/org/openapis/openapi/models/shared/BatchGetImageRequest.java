@@ -12,6 +12,7 @@ public class BatchGetImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptedMediaTypes")
     public String[] acceptedMediaTypes;
+
     public BatchGetImageRequest withAcceptedMediaTypes(String[] acceptedMediaTypes) {
         this.acceptedMediaTypes = acceptedMediaTypes;
         return this;
@@ -19,6 +20,7 @@ public class BatchGetImageRequest {
     
     @JsonProperty("imageIds")
     public ImageIdentifier[] imageIds;
+
     public BatchGetImageRequest withImageIds(ImageIdentifier[] imageIds) {
         this.imageIds = imageIds;
         return this;
@@ -27,6 +29,7 @@ public class BatchGetImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public BatchGetImageRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -34,9 +37,14 @@ public class BatchGetImageRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public BatchGetImageRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public BatchGetImageRequest(@JsonProperty("imageIds") ImageIdentifier[] imageIds, @JsonProperty("repositoryName") String repositoryName) {
+        this.imageIds = imageIds;
+        this.repositoryName = repositoryName;
+  }
 }

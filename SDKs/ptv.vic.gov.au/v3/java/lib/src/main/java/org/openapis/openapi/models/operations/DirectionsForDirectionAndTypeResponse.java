@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DirectionsForDirectionAndTypeResponse {
     
     public byte[] body;
+
     public DirectionsForDirectionAndTypeResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DirectionsForDirectionAndTypeResponse {
     
     
     public String contentType;
+
     public DirectionsForDirectionAndTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class DirectionsForDirectionAndTypeResponse {
     
     
     public Integer statusCode;
+
     public DirectionsForDirectionAndTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class DirectionsForDirectionAndTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DirectionsForDirectionAndTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class DirectionsForDirectionAndTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.V3DirectionsResponse v3DirectionsResponse;
+
     public DirectionsForDirectionAndTypeResponse withV3DirectionsResponse(org.openapis.openapi.models.shared.V3DirectionsResponse v3DirectionsResponse) {
         this.v3DirectionsResponse = v3DirectionsResponse;
         return this;
@@ -50,9 +56,14 @@ public class DirectionsForDirectionAndTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse;
+
     public DirectionsForDirectionAndTypeResponse withV3ErrorResponse(org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse) {
         this.v3ErrorResponse = v3ErrorResponse;
         return this;
     }
     
+    public DirectionsForDirectionAndTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

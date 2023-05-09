@@ -15,6 +15,7 @@ public class SchemaColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataType")
     public String dataType;
+
     public SchemaColumn withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -23,9 +24,11 @@ public class SchemaColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SchemaColumn withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SchemaColumn(){}
 }

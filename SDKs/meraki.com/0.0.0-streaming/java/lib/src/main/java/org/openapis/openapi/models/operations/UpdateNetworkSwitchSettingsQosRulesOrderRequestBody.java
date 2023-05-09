@@ -12,9 +12,13 @@ public class UpdateNetworkSwitchSettingsQosRulesOrderRequestBody {
      */
     @JsonProperty("ruleIds")
     public String[] ruleIds;
+
     public UpdateNetworkSwitchSettingsQosRulesOrderRequestBody withRuleIds(String[] ruleIds) {
         this.ruleIds = ruleIds;
         return this;
     }
     
+    public UpdateNetworkSwitchSettingsQosRulesOrderRequestBody(@JsonProperty("ruleIds") String[] ruleIds) {
+        this.ruleIds = ruleIds;
+  }
 }

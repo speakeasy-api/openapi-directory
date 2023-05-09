@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1ImageClassificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowMultiLabel")
     public Boolean allowMultiLabel;
+
     public GoogleCloudDatalabelingV1beta1ImageClassificationConfig withAllowMultiLabel(Boolean allowMultiLabel) {
         this.allowMultiLabel = allowMultiLabel;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatalabelingV1beta1ImageClassificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpecSet")
     public String annotationSpecSet;
+
     public GoogleCloudDatalabelingV1beta1ImageClassificationConfig withAnnotationSpecSet(String annotationSpecSet) {
         this.annotationSpecSet = annotationSpecSet;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatalabelingV1beta1ImageClassificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answerAggregationType")
     public GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationTypeEnum answerAggregationType;
+
     public GoogleCloudDatalabelingV1beta1ImageClassificationConfig withAnswerAggregationType(GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationTypeEnum answerAggregationType) {
         this.answerAggregationType = answerAggregationType;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ImageClassificationConfig(){}
 }

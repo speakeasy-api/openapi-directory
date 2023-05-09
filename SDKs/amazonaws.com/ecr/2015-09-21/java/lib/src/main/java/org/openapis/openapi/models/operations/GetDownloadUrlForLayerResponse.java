@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDownloadUrlForLayerResponse {
     
     public String contentType;
+
     public GetDownloadUrlForLayerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDownloadUrlForLayerResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDownloadUrlForLayerResponse getDownloadUrlForLayerResponse;
+
     public GetDownloadUrlForLayerResponse withGetDownloadUrlForLayerResponse(org.openapis.openapi.models.shared.GetDownloadUrlForLayerResponse getDownloadUrlForLayerResponse) {
         this.getDownloadUrlForLayerResponse = getDownloadUrlForLayerResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetDownloadUrlForLayerResponse {
      */
     
     public Object invalidParameterException;
+
     public GetDownloadUrlForLayerResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class GetDownloadUrlForLayerResponse {
      */
     
     public Object layerInaccessibleException;
+
     public GetDownloadUrlForLayerResponse withLayerInaccessibleException(Object layerInaccessibleException) {
         this.layerInaccessibleException = layerInaccessibleException;
         return this;
@@ -49,6 +54,7 @@ public class GetDownloadUrlForLayerResponse {
      */
     
     public Object layersNotFoundException;
+
     public GetDownloadUrlForLayerResponse withLayersNotFoundException(Object layersNotFoundException) {
         this.layersNotFoundException = layersNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetDownloadUrlForLayerResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public GetDownloadUrlForLayerResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetDownloadUrlForLayerResponse {
      */
     
     public Object serverException;
+
     public GetDownloadUrlForLayerResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -76,6 +84,7 @@ public class GetDownloadUrlForLayerResponse {
     
     
     public Integer statusCode;
+
     public GetDownloadUrlForLayerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetDownloadUrlForLayerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDownloadUrlForLayerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDownloadUrlForLayerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

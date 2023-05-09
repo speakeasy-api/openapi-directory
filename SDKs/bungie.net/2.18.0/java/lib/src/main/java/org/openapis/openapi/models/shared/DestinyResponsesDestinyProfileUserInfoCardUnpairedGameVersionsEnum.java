@@ -12,22 +12,22 @@ import com.fasterxml.jackson.annotation.JsonValue;
  *  If we ever can get this data, this field will be deprecated and replaced with data on the DestinyLinkedProfileResponse itself, with game versions per linked Platform. But since we can't get that, we have this as a stop-gap measure for getting the data in the only situation that we currently need it.
  */
 public enum DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2"),
-    FOUR("4"),
-    EIGHT("8"),
-    SIXTEEN("16"),
-    THIRTY_TWO("32"),
-    SIXTY_FOUR("64"),
-    ONE_HUNDRED_AND_TWENTY_EIGHT("128"),
-    TWO_HUNDRED_AND_FIFTY_SIX("256"),
-    FIVE_HUNDRED_AND_TWELVE("512");
+    ZERO(0),
+    ONE(1),
+    TWO(2),
+    FOUR(4),
+    EIGHT(8),
+    SIXTEEN(16),
+    THIRTY_TWO(32),
+    SIXTY_FOUR(64),
+    ONE_HUNDRED_AND_TWENTY_EIGHT(128),
+    TWO_HUNDRED_AND_FIFTY_SIX(256),
+    FIVE_HUNDRED_AND_TWELVE(512);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum(String value) {
+    private DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum(Integer value) {
         this.value = value;
     }
 }

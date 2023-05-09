@@ -18,6 +18,7 @@ public class SymbolUploadsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build")
     public String build;
+
     public SymbolUploadsCreateRequestBody withBuild(String build) {
         this.build = build;
         return this;
@@ -29,6 +30,7 @@ public class SymbolUploadsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_callback")
     public String clientCallback;
+
     public SymbolUploadsCreateRequestBody withClientCallback(String clientCallback) {
         this.clientCallback = clientCallback;
         return this;
@@ -40,6 +42,7 @@ public class SymbolUploadsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_name")
     public String fileName;
+
     public SymbolUploadsCreateRequestBody withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -50,6 +53,7 @@ public class SymbolUploadsCreateRequestBody {
      */
     @JsonProperty("symbol_type")
     public SymbolUploadsCreateRequestBodySymbolTypeEnum symbolType;
+
     public SymbolUploadsCreateRequestBody withSymbolType(SymbolUploadsCreateRequestBodySymbolTypeEnum symbolType) {
         this.symbolType = symbolType;
         return this;
@@ -61,9 +65,13 @@ public class SymbolUploadsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public SymbolUploadsCreateRequestBody withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public SymbolUploadsCreateRequestBody(@JsonProperty("symbol_type") SymbolUploadsCreateRequestBodySymbolTypeEnum symbolType) {
+        this.symbolType = symbolType;
+  }
 }

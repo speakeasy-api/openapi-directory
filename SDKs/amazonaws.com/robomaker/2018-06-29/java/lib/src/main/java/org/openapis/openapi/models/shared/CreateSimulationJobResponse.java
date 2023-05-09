@@ -20,6 +20,7 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CreateSimulationJobResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateSimulationJobResponse withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -36,6 +38,7 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compute")
     public ComputeResponse compute;
+
     public CreateSimulationJobResponse withCompute(ComputeResponse compute) {
         this.compute = compute;
         return this;
@@ -44,6 +47,7 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSources")
     public DataSource[] dataSources;
+
     public CreateSimulationJobResponse withDataSources(DataSource[] dataSources) {
         this.dataSources = dataSources;
         return this;
@@ -52,6 +56,7 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureBehavior")
     public FailureBehaviorEnum failureBehavior;
+
     public CreateSimulationJobResponse withFailureBehavior(FailureBehaviorEnum failureBehavior) {
         this.failureBehavior = failureBehavior;
         return this;
@@ -60,6 +65,7 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public SimulationJobErrorCodeEnum failureCode;
+
     public CreateSimulationJobResponse withFailureCode(SimulationJobErrorCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -68,6 +74,7 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamRole")
     public String iamRole;
+
     public CreateSimulationJobResponse withIamRole(String iamRole) {
         this.iamRole = iamRole;
         return this;
@@ -78,6 +85,7 @@ public class CreateSimulationJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStartedAt")
     public OffsetDateTime lastStartedAt;
+
     public CreateSimulationJobResponse withLastStartedAt(OffsetDateTime lastStartedAt) {
         this.lastStartedAt = lastStartedAt;
         return this;
@@ -88,6 +96,7 @@ public class CreateSimulationJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public CreateSimulationJobResponse withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -96,6 +105,7 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfig")
     public LoggingConfig loggingConfig;
+
     public CreateSimulationJobResponse withLoggingConfig(LoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
@@ -104,6 +114,7 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxJobDurationInSeconds")
     public Long maxJobDurationInSeconds;
+
     public CreateSimulationJobResponse withMaxJobDurationInSeconds(Long maxJobDurationInSeconds) {
         this.maxJobDurationInSeconds = maxJobDurationInSeconds;
         return this;
@@ -112,6 +123,7 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputLocation")
     public OutputLocation outputLocation;
+
     public CreateSimulationJobResponse withOutputLocation(OutputLocation outputLocation) {
         this.outputLocation = outputLocation;
         return this;
@@ -120,6 +132,7 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robotApplications")
     public RobotApplicationConfig[] robotApplications;
+
     public CreateSimulationJobResponse withRobotApplications(RobotApplicationConfig[] robotApplications) {
         this.robotApplications = robotApplications;
         return this;
@@ -128,6 +141,7 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simulationApplications")
     public SimulationApplicationConfig[] simulationApplications;
+
     public CreateSimulationJobResponse withSimulationApplications(SimulationApplicationConfig[] simulationApplications) {
         this.simulationApplications = simulationApplications;
         return this;
@@ -136,6 +150,7 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simulationTimeMillis")
     public Long simulationTimeMillis;
+
     public CreateSimulationJobResponse withSimulationTimeMillis(Long simulationTimeMillis) {
         this.simulationTimeMillis = simulationTimeMillis;
         return this;
@@ -144,6 +159,7 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SimulationJobStatusEnum status;
+
     public CreateSimulationJobResponse withStatus(SimulationJobStatusEnum status) {
         this.status = status;
         return this;
@@ -152,6 +168,7 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateSimulationJobResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -160,9 +177,11 @@ public class CreateSimulationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfig")
     public VPCConfigResponse vpcConfig;
+
     public CreateSimulationJobResponse withVpcConfig(VPCConfigResponse vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public CreateSimulationJobResponse(){}
 }

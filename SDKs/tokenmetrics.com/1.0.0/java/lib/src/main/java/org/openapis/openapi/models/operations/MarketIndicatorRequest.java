@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class MarketIndicatorRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public String endDate;
+
     public MarketIndicatorRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -16,6 +17,7 @@ public class MarketIndicatorRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public MarketIndicatorRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -23,9 +25,11 @@ public class MarketIndicatorRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public String startDate;
+
     public MarketIndicatorRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public MarketIndicatorRequest(){}
 }

@@ -15,6 +15,7 @@ public class AnalyticsCrashGroupCounts200ApplicationJSONCrashes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public AnalyticsCrashGroupCounts200ApplicationJSONCrashes withCount(Long count) {
         this.count = count;
         return this;
@@ -26,9 +27,11 @@ public class AnalyticsCrashGroupCounts200ApplicationJSONCrashes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datetime")
     public String datetime;
+
     public AnalyticsCrashGroupCounts200ApplicationJSONCrashes withDatetime(String datetime) {
         this.datetime = datetime;
         return this;
     }
     
+    public AnalyticsCrashGroupCounts200ApplicationJSONCrashes(){}
 }

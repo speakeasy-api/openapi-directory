@@ -17,9 +17,13 @@ public class LoyaltyEventTypeFilter {
      */
     @JsonProperty("types")
     public String[] types;
+
     public LoyaltyEventTypeFilter withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public LoyaltyEventTypeFilter(@JsonProperty("types") String[] types) {
+        this.types = types;
+  }
 }

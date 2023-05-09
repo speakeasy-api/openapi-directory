@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchUploadResponse {
     
     public String contentType;
+
     public BatchUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BatchUploadResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public BatchUploadResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class BatchUploadResponse {
     
     
     public org.openapis.openapi.models.shared.ReportOutput reportOutput;
+
     public BatchUploadResponse withReportOutput(org.openapis.openapi.models.shared.ReportOutput reportOutput) {
         this.reportOutput = reportOutput;
         return this;
@@ -33,6 +37,7 @@ public class BatchUploadResponse {
     
     
     public Integer statusCode;
+
     public BatchUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class BatchUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

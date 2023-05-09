@@ -15,6 +15,7 @@ public class UnprocessedQueryExecutionId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public UnprocessedQueryExecutionId withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class UnprocessedQueryExecutionId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public UnprocessedQueryExecutionId withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class UnprocessedQueryExecutionId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryExecutionId")
     public String queryExecutionId;
+
     public UnprocessedQueryExecutionId withQueryExecutionId(String queryExecutionId) {
         this.queryExecutionId = queryExecutionId;
         return this;
     }
     
+    public UnprocessedQueryExecutionId(){}
 }

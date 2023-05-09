@@ -23,6 +23,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activity_log")
     public String activityLog;
+
     public As2OutgoingMessageEntity withActivityLog(String activityLog) {
         this.activityLog = activityLog;
         return this;
@@ -34,6 +35,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("as2_from")
     public String as2From;
+
     public As2OutgoingMessageEntity withAs2From(String as2From) {
         this.as2From = as2From;
         return this;
@@ -45,6 +47,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("as2_partner_id")
     public Integer as2PartnerId;
+
     public As2OutgoingMessageEntity withAs2PartnerId(Integer as2PartnerId) {
         this.as2PartnerId = as2PartnerId;
         return this;
@@ -56,6 +59,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("as2_station_id")
     public Integer as2StationId;
+
     public As2OutgoingMessageEntity withAs2StationId(Integer as2StationId) {
         this.as2StationId = as2StationId;
         return this;
@@ -67,6 +71,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("as2_to")
     public String as2To;
+
     public As2OutgoingMessageEntity withAs2To(String as2To) {
         this.as2To = as2To;
         return this;
@@ -78,6 +83,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachment_filename")
     public String attachmentFilename;
+
     public As2OutgoingMessageEntity withAttachmentFilename(String attachmentFilename) {
         this.attachmentFilename = attachmentFilename;
         return this;
@@ -89,6 +95,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_size")
     public String bodySize;
+
     public As2OutgoingMessageEntity withBodySize(String bodySize) {
         this.bodySize = bodySize;
         return this;
@@ -102,6 +109,7 @@ public class As2OutgoingMessageEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public As2OutgoingMessageEntity withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -113,6 +121,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public As2OutgoingMessageEntity withDate(String date) {
         this.date = date;
         return this;
@@ -124,6 +133,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encrypted_uri")
     public String encryptedUri;
+
     public As2OutgoingMessageEntity withEncryptedUri(String encryptedUri) {
         this.encryptedUri = encryptedUri;
         return this;
@@ -135,6 +145,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http_headers")
     public java.util.Map<String, Object> httpHeaders;
+
     public As2OutgoingMessageEntity withHttpHeaders(java.util.Map<String, Object> httpHeaders) {
         this.httpHeaders = httpHeaders;
         return this;
@@ -146,6 +157,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http_response_code")
     public String httpResponseCode;
+
     public As2OutgoingMessageEntity withHttpResponseCode(String httpResponseCode) {
         this.httpResponseCode = httpResponseCode;
         return this;
@@ -157,6 +169,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http_response_headers")
     public java.util.Map<String, Object> httpResponseHeaders;
+
     public As2OutgoingMessageEntity withHttpResponseHeaders(java.util.Map<String, Object> httpResponseHeaders) {
         this.httpResponseHeaders = httpResponseHeaders;
         return this;
@@ -168,6 +181,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http_transmission_duration")
     public Double httpTransmissionDuration;
+
     public As2OutgoingMessageEntity withHttpTransmissionDuration(Double httpTransmissionDuration) {
         this.httpTransmissionDuration = httpTransmissionDuration;
         return this;
@@ -179,6 +193,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public As2OutgoingMessageEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -190,6 +205,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mdn_message_id_matched")
     public Boolean mdnMessageIdMatched;
+
     public As2OutgoingMessageEntity withMdnMessageIdMatched(Boolean mdnMessageIdMatched) {
         this.mdnMessageIdMatched = mdnMessageIdMatched;
         return this;
@@ -201,6 +217,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mdn_mic_matched")
     public Boolean mdnMicMatched;
+
     public As2OutgoingMessageEntity withMdnMicMatched(Boolean mdnMicMatched) {
         this.mdnMicMatched = mdnMicMatched;
         return this;
@@ -212,6 +229,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mdn_processing_success")
     public Boolean mdnProcessingSuccess;
+
     public As2OutgoingMessageEntity withMdnProcessingSuccess(Boolean mdnProcessingSuccess) {
         this.mdnProcessingSuccess = mdnProcessingSuccess;
         return this;
@@ -223,6 +241,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mdn_received")
     public Boolean mdnReceived;
+
     public As2OutgoingMessageEntity withMdnReceived(Boolean mdnReceived) {
         this.mdnReceived = mdnReceived;
         return this;
@@ -234,6 +253,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mdn_response_uri")
     public String mdnResponseUri;
+
     public As2OutgoingMessageEntity withMdnResponseUri(String mdnResponseUri) {
         this.mdnResponseUri = mdnResponseUri;
         return this;
@@ -245,6 +265,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mdn_signature_verified")
     public Boolean mdnSignatureVerified;
+
     public As2OutgoingMessageEntity withMdnSignatureVerified(Boolean mdnSignatureVerified) {
         this.mdnSignatureVerified = mdnSignatureVerified;
         return this;
@@ -256,6 +277,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mdn_valid")
     public Boolean mdnValid;
+
     public As2OutgoingMessageEntity withMdnValid(Boolean mdnValid) {
         this.mdnValid = mdnValid;
         return this;
@@ -267,6 +289,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message_id")
     public String messageId;
+
     public As2OutgoingMessageEntity withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -278,6 +301,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mic")
     public String mic;
+
     public As2OutgoingMessageEntity withMic(String mic) {
         this.mic = mic;
         return this;
@@ -289,6 +313,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mic_sha_256")
     public String micSha256;
+
     public As2OutgoingMessageEntity withMicSha256(String micSha256) {
         this.micSha256 = micSha256;
         return this;
@@ -300,6 +325,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processing_result")
     public As2OutgoingMessageEntityProcessingResultEnum processingResult;
+
     public As2OutgoingMessageEntity withProcessingResult(As2OutgoingMessageEntityProcessingResultEnum processingResult) {
         this.processingResult = processingResult;
         return this;
@@ -311,6 +337,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processing_result_description")
     public String processingResultDescription;
+
     public As2OutgoingMessageEntity withProcessingResultDescription(String processingResultDescription) {
         this.processingResultDescription = processingResultDescription;
         return this;
@@ -322,6 +349,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw_uri")
     public String rawUri;
+
     public As2OutgoingMessageEntity withRawUri(String rawUri) {
         this.rawUri = rawUri;
         return this;
@@ -333,6 +361,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smime_signed_uri")
     public String smimeSignedUri;
+
     public As2OutgoingMessageEntity withSmimeSignedUri(String smimeSignedUri) {
         this.smimeSignedUri = smimeSignedUri;
         return this;
@@ -344,6 +373,7 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smime_uri")
     public String smimeUri;
+
     public As2OutgoingMessageEntity withSmimeUri(String smimeUri) {
         this.smimeUri = smimeUri;
         return this;
@@ -355,9 +385,11 @@ public class As2OutgoingMessageEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uuid")
     public String uuid;
+
     public As2OutgoingMessageEntity withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public As2OutgoingMessageEntity(){}
 }

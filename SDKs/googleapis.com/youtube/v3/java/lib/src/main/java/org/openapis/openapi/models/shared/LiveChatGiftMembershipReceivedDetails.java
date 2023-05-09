@@ -15,6 +15,7 @@ public class LiveChatGiftMembershipReceivedDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedMembershipGiftingMessageId")
     public String associatedMembershipGiftingMessageId;
+
     public LiveChatGiftMembershipReceivedDetails withAssociatedMembershipGiftingMessageId(String associatedMembershipGiftingMessageId) {
         this.associatedMembershipGiftingMessageId = associatedMembershipGiftingMessageId;
         return this;
@@ -26,6 +27,7 @@ public class LiveChatGiftMembershipReceivedDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gifterChannelId")
     public String gifterChannelId;
+
     public LiveChatGiftMembershipReceivedDetails withGifterChannelId(String gifterChannelId) {
         this.gifterChannelId = gifterChannelId;
         return this;
@@ -37,9 +39,11 @@ public class LiveChatGiftMembershipReceivedDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberLevelName")
     public String memberLevelName;
+
     public LiveChatGiftMembershipReceivedDetails withMemberLevelName(String memberLevelName) {
         this.memberLevelName = memberLevelName;
         return this;
     }
     
+    public LiveChatGiftMembershipReceivedDetails(){}
 }

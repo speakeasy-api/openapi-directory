@@ -15,9 +15,11 @@ public class UpdateClassificationScopeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3")
     public UpdateClassificationScopeRequestBodyS3 s3;
+
     public UpdateClassificationScopeRequestBody withS3(UpdateClassificationScopeRequestBodyS3 s3) {
         this.s3 = s3;
         return this;
     }
     
+    public UpdateClassificationScopeRequestBody(){}
 }

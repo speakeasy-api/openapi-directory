@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1ListReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudChannelV1ListReportsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudChannelV1ListReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reports")
     public GoogleCloudChannelV1Report[] reports;
+
     public GoogleCloudChannelV1ListReportsResponse withReports(GoogleCloudChannelV1Report[] reports) {
         this.reports = reports;
         return this;
     }
     
+    public GoogleCloudChannelV1ListReportsResponse(){}
 }

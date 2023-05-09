@@ -18,6 +18,7 @@ public class ListServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListServicesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public GoogleApiServiceusageV1Service[] services;
+
     public ListServicesResponse withServices(GoogleApiServiceusageV1Service[] services) {
         this.services = services;
         return this;
     }
     
+    public ListServicesResponse(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateContextRequest {
     @JsonProperty("ContextName")
     public String contextName;
+
     public CreateContextRequest withContextName(String contextName) {
         this.contextName = contextName;
         return this;
@@ -18,6 +19,7 @@ public class CreateContextRequest {
     
     @JsonProperty("ContextType")
     public String contextType;
+
     public CreateContextRequest withContextType(String contextType) {
         this.contextType = contextType;
         return this;
@@ -26,6 +28,7 @@ public class CreateContextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateContextRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -34,6 +37,7 @@ public class CreateContextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public java.util.Map<String, String> properties;
+
     public CreateContextRequest withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -41,6 +45,7 @@ public class CreateContextRequest {
     
     @JsonProperty("Source")
     public ContextSource source;
+
     public CreateContextRequest withSource(ContextSource source) {
         this.source = source;
         return this;
@@ -49,9 +54,15 @@ public class CreateContextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateContextRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateContextRequest(@JsonProperty("ContextName") String contextName, @JsonProperty("ContextType") String contextType, @JsonProperty("Source") ContextSource source) {
+        this.contextName = contextName;
+        this.contextType = contextType;
+        this.source = source;
+  }
 }

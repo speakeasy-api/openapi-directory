@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartTestResponse {
@@ -12,6 +13,7 @@ public class StartTestResponse {
      */
     
     public Object conflictException;
+
     public StartTestResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StartTestResponse {
     
     
     public String contentType;
+
     public StartTestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartTestResponse {
      */
     
     public org.openapis.openapi.models.shared.StartTestResponse startTestResponse;
+
     public StartTestResponse withStartTestResponse(org.openapis.openapi.models.shared.StartTestResponse startTestResponse) {
         this.startTestResponse = startTestResponse;
         return this;
@@ -36,6 +40,7 @@ public class StartTestResponse {
     
     
     public Integer statusCode;
+
     public StartTestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StartTestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartTestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StartTestResponse {
      */
     
     public Object uninitializedAccountException;
+
     public StartTestResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -63,9 +70,14 @@ public class StartTestResponse {
      */
     
     public Object validationException;
+
     public StartTestResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartTestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

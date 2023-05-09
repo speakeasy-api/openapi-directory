@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddPaymentMethodRequest {
@@ -12,6 +13,7 @@ public class AddPaymentMethodRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AddPaymentMethodRequest addPaymentMethodRequest;
+
     public AddPaymentMethodRequest withAddPaymentMethodRequest(org.openapis.openapi.models.shared.AddPaymentMethodRequest addPaymentMethodRequest) {
         this.addPaymentMethodRequest = addPaymentMethodRequest;
         return this;
@@ -42,6 +44,7 @@ public class AddPaymentMethodRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public AddPaymentMethodRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -62,9 +65,13 @@ public class AddPaymentMethodRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public AddPaymentMethodRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public AddPaymentMethodRequest(@JsonProperty("AddPaymentMethodRequest") org.openapis.openapi.models.shared.AddPaymentMethodRequest addPaymentMethodRequest) {
+        this.addPaymentMethodRequest = addPaymentMethodRequest;
+  }
 }

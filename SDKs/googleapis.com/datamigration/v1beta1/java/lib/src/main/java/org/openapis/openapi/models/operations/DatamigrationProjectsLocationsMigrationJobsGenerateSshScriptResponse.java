@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse {
     
     public String contentType;
+
     public DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptRespons
      */
     
     public org.openapis.openapi.models.shared.SshScript sshScript;
+
     public DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse withSshScript(org.openapis.openapi.models.shared.SshScript sshScript) {
         this.sshScript = sshScript;
         return this;
@@ -26,6 +29,7 @@ public class DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptRespons
     
     
     public Integer statusCode;
+
     public DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

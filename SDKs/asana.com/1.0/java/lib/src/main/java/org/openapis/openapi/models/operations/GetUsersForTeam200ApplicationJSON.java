@@ -15,9 +15,11 @@ public class GetUsersForTeam200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.UserCompact[] data;
+
     public GetUsersForTeam200ApplicationJSON withData(org.openapis.openapi.models.shared.UserCompact[] data) {
         this.data = data;
         return this;
     }
     
+    public GetUsersForTeam200ApplicationJSON(){}
 }

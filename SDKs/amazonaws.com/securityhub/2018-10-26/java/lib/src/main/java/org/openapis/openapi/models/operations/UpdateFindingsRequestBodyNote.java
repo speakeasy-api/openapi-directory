@@ -15,6 +15,7 @@ public class UpdateFindingsRequestBodyNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public UpdateFindingsRequestBodyNote withText(String text) {
         this.text = text;
         return this;
@@ -23,9 +24,11 @@ public class UpdateFindingsRequestBodyNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedBy")
     public String updatedBy;
+
     public UpdateFindingsRequestBodyNote withUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
         return this;
     }
     
+    public UpdateFindingsRequestBodyNote(){}
 }

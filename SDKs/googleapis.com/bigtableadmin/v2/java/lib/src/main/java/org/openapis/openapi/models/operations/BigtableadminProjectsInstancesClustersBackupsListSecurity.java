@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigtableadminProjectsInstancesClustersBackupsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersBackupsListSecurityOption1 option1;
+
     public BigtableadminProjectsInstancesClustersBackupsListSecurity withOption1(BigtableadminProjectsInstancesClustersBackupsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigtableadminProjectsInstancesClustersBackupsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersBackupsListSecurityOption2 option2;
+
     public BigtableadminProjectsInstancesClustersBackupsListSecurity withOption2(BigtableadminProjectsInstancesClustersBackupsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class BigtableadminProjectsInstancesClustersBackupsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersBackupsListSecurityOption3 option3;
+
     public BigtableadminProjectsInstancesClustersBackupsListSecurity withOption3(BigtableadminProjectsInstancesClustersBackupsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class BigtableadminProjectsInstancesClustersBackupsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersBackupsListSecurityOption4 option4;
+
     public BigtableadminProjectsInstancesClustersBackupsListSecurity withOption4(BigtableadminProjectsInstancesClustersBackupsListSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,9 +41,11 @@ public class BigtableadminProjectsInstancesClustersBackupsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersBackupsListSecurityOption5 option5;
+
     public BigtableadminProjectsInstancesClustersBackupsListSecurity withOption5(BigtableadminProjectsInstancesClustersBackupsListSecurityOption5 option5) {
         this.option5 = option5;
         return this;
     }
     
+    public BigtableadminProjectsInstancesClustersBackupsListSecurity(){}
 }

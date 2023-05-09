@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateInternetGatewayResultInternetGateway {
     
     public CreateInternetGatewayResultInternetGatewayAttachments[] attachments;
+
     public CreateInternetGatewayResultInternetGateway withAttachments(CreateInternetGatewayResultInternetGatewayAttachments[] attachments) {
         this.attachments = attachments;
         return this;
@@ -19,6 +20,7 @@ public class CreateInternetGatewayResultInternetGateway {
     
     
     public String internetGatewayId;
+
     public CreateInternetGatewayResultInternetGateway withInternetGatewayId(String internetGatewayId) {
         this.internetGatewayId = internetGatewayId;
         return this;
@@ -26,6 +28,7 @@ public class CreateInternetGatewayResultInternetGateway {
     
     
     public String ownerId;
+
     public CreateInternetGatewayResultInternetGateway withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -33,9 +36,11 @@ public class CreateInternetGatewayResultInternetGateway {
     
     
     public CreateInternetGatewayResultInternetGatewayTags[] tags;
+
     public CreateInternetGatewayResultInternetGateway withTags(CreateInternetGatewayResultInternetGatewayTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateInternetGatewayResultInternetGateway(){}
 }

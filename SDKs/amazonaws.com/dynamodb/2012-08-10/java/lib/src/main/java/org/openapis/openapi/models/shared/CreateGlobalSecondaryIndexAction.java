@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateGlobalSecondaryIndexAction {
     @JsonProperty("IndexName")
     public String indexName;
+
     public CreateGlobalSecondaryIndexAction withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -21,6 +22,7 @@ public class CreateGlobalSecondaryIndexAction {
     
     @JsonProperty("KeySchema")
     public KeySchemaElement[] keySchema;
+
     public CreateGlobalSecondaryIndexAction withKeySchema(KeySchemaElement[] keySchema) {
         this.keySchema = keySchema;
         return this;
@@ -28,6 +30,7 @@ public class CreateGlobalSecondaryIndexAction {
     
     @JsonProperty("Projection")
     public Projection projection;
+
     public CreateGlobalSecondaryIndexAction withProjection(Projection projection) {
         this.projection = projection;
         return this;
@@ -36,9 +39,15 @@ public class CreateGlobalSecondaryIndexAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughput")
     public ProvisionedThroughput provisionedThroughput;
+
     public CreateGlobalSecondaryIndexAction withProvisionedThroughput(ProvisionedThroughput provisionedThroughput) {
         this.provisionedThroughput = provisionedThroughput;
         return this;
     }
     
+    public CreateGlobalSecondaryIndexAction(@JsonProperty("IndexName") String indexName, @JsonProperty("KeySchema") KeySchemaElement[] keySchema, @JsonProperty("Projection") Projection projection) {
+        this.indexName = indexName;
+        this.keySchema = keySchema;
+        this.projection = projection;
+  }
 }

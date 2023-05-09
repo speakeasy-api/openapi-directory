@@ -18,9 +18,11 @@ public class ClientUserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ClientUserInput withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public ClientUserInput(){}
 }

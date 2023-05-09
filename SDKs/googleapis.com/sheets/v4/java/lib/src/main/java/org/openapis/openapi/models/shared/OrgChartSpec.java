@@ -18,6 +18,7 @@ public class OrgChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public ChartData labels;
+
     public OrgChartSpec withLabels(ChartData labels) {
         this.labels = labels;
         return this;
@@ -29,6 +30,7 @@ public class OrgChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeColor")
     public Color nodeColor;
+
     public OrgChartSpec withNodeColor(Color nodeColor) {
         this.nodeColor = nodeColor;
         return this;
@@ -40,6 +42,7 @@ public class OrgChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeColorStyle")
     public ColorStyle nodeColorStyle;
+
     public OrgChartSpec withNodeColorStyle(ColorStyle nodeColorStyle) {
         this.nodeColorStyle = nodeColorStyle;
         return this;
@@ -51,6 +54,7 @@ public class OrgChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeSize")
     public OrgChartSpecNodeSizeEnum nodeSize;
+
     public OrgChartSpec withNodeSize(OrgChartSpecNodeSizeEnum nodeSize) {
         this.nodeSize = nodeSize;
         return this;
@@ -62,6 +66,7 @@ public class OrgChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentLabels")
     public ChartData parentLabels;
+
     public OrgChartSpec withParentLabels(ChartData parentLabels) {
         this.parentLabels = parentLabels;
         return this;
@@ -73,6 +78,7 @@ public class OrgChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedNodeColor")
     public Color selectedNodeColor;
+
     public OrgChartSpec withSelectedNodeColor(Color selectedNodeColor) {
         this.selectedNodeColor = selectedNodeColor;
         return this;
@@ -84,6 +90,7 @@ public class OrgChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedNodeColorStyle")
     public ColorStyle selectedNodeColorStyle;
+
     public OrgChartSpec withSelectedNodeColorStyle(ColorStyle selectedNodeColorStyle) {
         this.selectedNodeColorStyle = selectedNodeColorStyle;
         return this;
@@ -95,9 +102,11 @@ public class OrgChartSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tooltips")
     public ChartData tooltips;
+
     public OrgChartSpec withTooltips(ChartData tooltips) {
         this.tooltips = tooltips;
         return this;
     }
     
+    public OrgChartSpec(){}
 }

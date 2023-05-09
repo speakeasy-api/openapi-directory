@@ -17,6 +17,7 @@ public class CreateFee409ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public CreateFee409ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +29,7 @@ public class CreateFee409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public java.util.Map<String, Object> response;
+
     public CreateFee409ApplicationJSON withResponse(java.util.Map<String, Object> response) {
         this.response = response;
         return this;
@@ -38,9 +40,14 @@ public class CreateFee409ApplicationJSON {
      */
     @JsonProperty("status")
     public CreateFee409ApplicationJSONStatusEnum status;
+
     public CreateFee409ApplicationJSON withStatus(CreateFee409ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateFee409ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("status") CreateFee409ApplicationJSONStatusEnum status) {
+        this.message = message;
+        this.status = status;
+  }
 }

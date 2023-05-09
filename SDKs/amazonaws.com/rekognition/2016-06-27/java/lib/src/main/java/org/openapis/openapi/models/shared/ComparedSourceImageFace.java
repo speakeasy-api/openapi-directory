@@ -15,6 +15,7 @@ public class ComparedSourceImageFace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundingBox")
     public BoundingBox boundingBox;
+
     public ComparedSourceImageFace withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -23,9 +24,11 @@ public class ComparedSourceImageFace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public ComparedSourceImageFace withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
     }
     
+    public ComparedSourceImageFace(){}
 }

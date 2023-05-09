@@ -18,9 +18,11 @@ public class CreateBatchRequestRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.BatchRequest data;
+
     public CreateBatchRequestRequestBody withData(org.openapis.openapi.models.shared.BatchRequest data) {
         this.data = data;
         return this;
     }
     
+    public CreateBatchRequestRequestBody(){}
 }

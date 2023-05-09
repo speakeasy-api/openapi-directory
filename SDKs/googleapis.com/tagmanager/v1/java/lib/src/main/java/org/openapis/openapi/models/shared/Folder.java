@@ -18,6 +18,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Folder withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public Folder withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -40,6 +42,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Folder withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -51,6 +54,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folderId")
     public String folderId;
+
     public Folder withFolderId(String folderId) {
         this.folderId = folderId;
         return this;
@@ -62,9 +66,11 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Folder withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Folder(){}
 }

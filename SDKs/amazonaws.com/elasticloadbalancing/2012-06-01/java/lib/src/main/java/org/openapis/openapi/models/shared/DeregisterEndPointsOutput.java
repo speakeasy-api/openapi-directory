@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeregisterEndPointsOutput {
     
     public Instance[] instances;
+
     public DeregisterEndPointsOutput withInstances(Instance[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public DeregisterEndPointsOutput(){}
 }

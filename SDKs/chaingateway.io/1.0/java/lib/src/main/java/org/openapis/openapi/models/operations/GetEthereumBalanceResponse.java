@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEthereumBalanceResponse {
     
     public String contentType;
+
     public GetEthereumBalanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetEthereumBalanceResponse {
     
     
     public Integer statusCode;
+
     public GetEthereumBalanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetEthereumBalanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEthereumBalanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class GetEthereumBalanceResponse {
     
     
     public org.openapis.openapi.models.shared.GetEthereumBalance getEthereumBalance;
+
     public GetEthereumBalanceResponse withGetEthereumBalance(org.openapis.openapi.models.shared.GetEthereumBalance getEthereumBalance) {
         this.getEthereumBalance = getEthereumBalance;
         return this;
     }
     
+    public GetEthereumBalanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

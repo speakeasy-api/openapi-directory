@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest {
@@ -12,6 +13,7 @@ public class RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,16 +79,18 @@ public class RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
     }
     
     /**
-     * Required. The parent Catalog of the resource. It must match this format: projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}
+     * Required. The parent Catalog of the resource. It must match this format: `projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}`
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -92,6 +101,7 @@ public class RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -122,9 +134,13 @@ public class RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

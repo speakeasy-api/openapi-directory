@@ -22,6 +22,7 @@ public class DatasetMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimestamp")
     public OffsetDateTime creationTimestamp;
+
     public DatasetMetadata withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class DatasetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetArn")
     public String datasetArn;
+
     public DatasetMetadata withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
@@ -38,6 +40,7 @@ public class DatasetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetType")
     public DatasetTypeEnum datasetType;
+
     public DatasetMetadata withDatasetType(DatasetTypeEnum datasetType) {
         this.datasetType = datasetType;
         return this;
@@ -46,6 +49,7 @@ public class DatasetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DatasetStatusEnum status;
+
     public DatasetMetadata withStatus(DatasetStatusEnum status) {
         this.status = status;
         return this;
@@ -54,6 +58,7 @@ public class DatasetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public DatasetMetadata withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -62,9 +67,11 @@ public class DatasetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessageCode")
     public DatasetStatusMessageCodeEnum statusMessageCode;
+
     public DatasetMetadata withStatusMessageCode(DatasetStatusMessageCodeEnum statusMessageCode) {
         this.statusMessageCode = statusMessageCode;
         return this;
     }
     
+    public DatasetMetadata(){}
 }

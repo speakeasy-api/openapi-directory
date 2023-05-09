@@ -16,9 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GenerateTokenV2RequestBodyGrantTypeEnum;
 import org.openapis.openapi.models.operations.GenerateTokenV2RequestBody;
+import org.openapis.openapi.models.operations.GenerateTokenV2RequestBodyGrantTypeEnum;
 import org.openapis.openapi.models.operations.GenerateTokenV2Response;
 
 public class Application {
@@ -29,20 +28,22 @@ public class Application {
 
             GenerateTokenV2RequestBody req = new GenerateTokenV2RequestBody() {{
                 assertion = "SOME_ASSERTION_STRING";
-                grantType = "urn:ietf:params:oauth:grant-type:jwt-bearer";
+                grantType = GenerateTokenV2RequestBodyGrantTypeEnum.URN_IETF_PARAMS_OAUTH_GRANT_TYPE_JWT_BEARER;
                 refreshToken = "SomeRefreshToken";
                 scope = "offline";
                 validFor = 120;
-            }}            
+            }};            
 
             GenerateTokenV2Response res = sdk.authorization.generateTokenV2(req);
 
-            if (res.generateAccessTokenResponse.isPresent()) {
+            if (res.generateAccessTokenResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -50,86 +51,86 @@ public class Application {
 ## Available Resources and Operations
 
 
-### authorization
+### [authorization](docs/authorization/README.md)
 
-* `generateTokenV2` - Generate an OAuth Token
-* `revokeRefreshTokenV2` - Delete a Refresh Token
+* [generateTokenV2](docs/authorization/README.md#generatetokenv2) - Generate an OAuth Token
+* [revokeRefreshTokenV2](docs/authorization/README.md#revokerefreshtokenv2) - Delete a Refresh Token
 
-### checkAPIUsage
+### [checkAPIUsage](docs/checkapiusage/README.md)
 
-* `getApiUsagePlansV2` - Get API Isage
+* [getApiUsagePlansV2](docs/checkapiusage/README.md#getapiusageplansv2) - Get API Isage
 
-### languageDatasets
+### [languageDatasets](docs/languagedatasets/README.md)
 
-* `deleteDataset` - Delete a Dataset
-* `get` - Get Deletion Status
-* `getDataset` - Get a Dataset
-* `listDatasets` - Get All Datasets
-* `uploadDatasetAsync` - Create a Dataset From a File Asynchronously
-* `uploadDatasetSync` - Create a Dataset From a File Synchronously
+* [deleteDataset](docs/languagedatasets/README.md#deletedataset) - Delete a Dataset
+* [get](docs/languagedatasets/README.md#get) - Get Deletion Status
+* [getDataset](docs/languagedatasets/README.md#getdataset) - Get a Dataset
+* [listDatasets](docs/languagedatasets/README.md#listdatasets) - Get All Datasets
+* [uploadDatasetAsync](docs/languagedatasets/README.md#uploaddatasetasync) - Create a Dataset From a File Asynchronously
+* [uploadDatasetSync](docs/languagedatasets/README.md#uploaddatasetsync) - Create a Dataset From a File Synchronously
 
-### languageExamples
+### [languageExamples](docs/languageexamples/README.md)
 
-* `getExamples` - Get All Examples
-* `getExamplesByLabel` - Get All Examples for Label
-* `provideFeedback` - Create a Feedback Example
-* `updateDatasetAsync` - Create Examples From a File
+* [getExamples](docs/languageexamples/README.md#getexamples) - Get All Examples
+* [getExamplesByLabel](docs/languageexamples/README.md#getexamplesbylabel) - Get All Examples for Label
+* [provideFeedback](docs/languageexamples/README.md#providefeedback) - Create a Feedback Example
+* [updateDatasetAsync](docs/languageexamples/README.md#updatedatasetasync) - Create Examples From a File
 
-### languageModels
+### [languageModels](docs/languagemodels/README.md)
 
-* `deleteModel` - Delete a Model
-* `getTrainedModelLearningCurve` - Get Model Learning Curve
-* `getTrainedModelMetrics` - Get Model Metrics
-* `getTrainedModels` - Get All Models
+* [deleteModel](docs/languagemodels/README.md#deletemodel) - Delete a Model
+* [getTrainedModelLearningCurve](docs/languagemodels/README.md#gettrainedmodellearningcurve) - Get Model Learning Curve
+* [getTrainedModelMetrics](docs/languagemodels/README.md#gettrainedmodelmetrics) - Get Model Metrics
+* [getTrainedModels](docs/languagemodels/README.md#gettrainedmodels) - Get All Models
 
-### languagePrediction
+### [languagePrediction](docs/languageprediction/README.md)
 
-* `intentMultipart` - Prediction for Intent
-* `sentimentMultipart` - Prediction for Sentiment
+* [intentMultipart](docs/languageprediction/README.md#intentmultipart) - Prediction for Intent
+* [sentimentMultipart](docs/languageprediction/README.md#sentimentmultipart) - Prediction for Sentiment
 
-### languageTraining
+### [languageTraining](docs/languagetraining/README.md)
 
-* `getTrainStatusAndProgress` - Get Training Status
-* `retrain` - Retrain a Dataset
-* `train` - Train a Dataset
+* [getTrainStatusAndProgress](docs/languagetraining/README.md#gettrainstatusandprogress) - Get Training Status
+* [retrain](docs/languagetraining/README.md#retrain) - Retrain a Dataset
+* [train](docs/languagetraining/README.md#train) - Train a Dataset
 
-### visionDatasets
+### [visionDatasets](docs/visiondatasets/README.md)
 
-* `createDataset` - Create a Dataset
-* `deleteDataset1` - Delete a Dataset
-* `getDataset1` - Get a Dataset
-* `get1` - Get Deletion Status
-* `listDatasets1` - Get All Datasets
-* `uploadDatasetAsync1` - Create a Dataset From a Zip File Asynchronously
-* `uploadDatasetSync1` - Create a Dataset From a Zip File Synchronously
+* [createDataset](docs/visiondatasets/README.md#createdataset) - Create a Dataset
+* [deleteDataset1](docs/visiondatasets/README.md#deletedataset1) - Delete a Dataset
+* [getDataset1](docs/visiondatasets/README.md#getdataset1) - Get a Dataset
+* [get1](docs/visiondatasets/README.md#get1) - Get Deletion Status
+* [listDatasets1](docs/visiondatasets/README.md#listdatasets1) - Get All Datasets
+* [uploadDatasetAsync1](docs/visiondatasets/README.md#uploaddatasetasync1) - Create a Dataset From a Zip File Asynchronously
+* [uploadDatasetSync1](docs/visiondatasets/README.md#uploaddatasetsync1) - Create a Dataset From a Zip File Synchronously
 
-### visionExamples
+### [visionExamples](docs/visionexamples/README.md)
 
-* `addExample` - Create an Example
-* `getExamplesByLabel1` - Get All Examples for Label
-* `getExamples1` - Get All Examples
-* `provideFeedback1` - Create a Feedback Example
-* `updateDatasetAsync1` - Create Feedback Examples From a Zip File
-* `updateDatasetAsync2` - Create Examples From a Zip File
+* [addExample](docs/visionexamples/README.md#addexample) - Create an Example
+* [getExamplesByLabel1](docs/visionexamples/README.md#getexamplesbylabel1) - Get All Examples for Label
+* [getExamples1](docs/visionexamples/README.md#getexamples1) - Get All Examples
+* [provideFeedback1](docs/visionexamples/README.md#providefeedback1) - Create a Feedback Example
+* [updateDatasetAsync1](docs/visionexamples/README.md#updatedatasetasync1) - Create Feedback Examples From a Zip File
+* [updateDatasetAsync2](docs/visionexamples/README.md#updatedatasetasync2) - Create Examples From a Zip File
 
-### visionModels
+### [visionModels](docs/visionmodels/README.md)
 
-* `deleteModel1` - Delete a Model
-* `getTrainedModelLearningCurve1` - Get Model Learning Curve
-* `getTrainedModelMetrics1` - Get Model Metrics
-* `getTrainedModels1` - Get All Models
+* [deleteModel1](docs/visionmodels/README.md#deletemodel1) - Delete a Model
+* [getTrainedModelLearningCurve1](docs/visionmodels/README.md#gettrainedmodellearningcurve1) - Get Model Learning Curve
+* [getTrainedModelMetrics1](docs/visionmodels/README.md#gettrainedmodelmetrics1) - Get Model Metrics
+* [getTrainedModels1](docs/visionmodels/README.md#gettrainedmodels1) - Get All Models
 
-### visionPrediction
+### [visionPrediction](docs/visionprediction/README.md)
 
-* `detectMultipart` - Detection with Image File
-* `ocrMultipart` - Detect Text
-* `predictMultipart` - Make Prediction
+* [detectMultipart](docs/visionprediction/README.md#detectmultipart) - Detection with Image File
+* [ocrMultipart](docs/visionprediction/README.md#ocrmultipart) - Detect Text
+* [predictMultipart](docs/visionprediction/README.md#predictmultipart) - Make Prediction
 
-### visionTraining
+### [visionTraining](docs/visiontraining/README.md)
 
-* `getTrainStatusAndProgress1` - Get Training Status
-* `retrain1` - Retrain a Dataset
-* `train1` - Train a Dataset
+* [getTrainStatusAndProgress1](docs/visiontraining/README.md#gettrainstatusandprogress1) - Get Training Status
+* [retrain1](docs/visiontraining/README.md#retrain1) - Retrain a Dataset
+* [train1](docs/visiontraining/README.md#train1) - Train a Dataset
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProjectsResponse {
@@ -12,6 +13,7 @@ public class DescribeProjectsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeProjectsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProjectsResponse {
     
     
     public String contentType;
+
     public DescribeProjectsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProjectsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProjectsResponse describeProjectsResponse;
+
     public DescribeProjectsResponse withDescribeProjectsResponse(org.openapis.openapi.models.shared.DescribeProjectsResponse describeProjectsResponse) {
         this.describeProjectsResponse = describeProjectsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeProjectsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeProjectsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DescribeProjectsResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public DescribeProjectsResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeProjectsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeProjectsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeProjectsResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public DescribeProjectsResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeProjectsResponse {
     
     
     public Integer statusCode;
+
     public DescribeProjectsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeProjectsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProjectsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DescribeProjectsResponse {
      */
     
     public Object throttlingException;
+
     public DescribeProjectsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeProjectsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

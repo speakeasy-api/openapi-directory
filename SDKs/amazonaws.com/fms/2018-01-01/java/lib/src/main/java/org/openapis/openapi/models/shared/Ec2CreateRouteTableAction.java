@@ -15,6 +15,7 @@ public class Ec2CreateRouteTableAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Ec2CreateRouteTableAction withDescription(String description) {
         this.description = description;
         return this;
@@ -22,9 +23,13 @@ public class Ec2CreateRouteTableAction {
     
     @JsonProperty("VpcId")
     public ActionTarget vpcId;
+
     public Ec2CreateRouteTableAction withVpcId(ActionTarget vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public Ec2CreateRouteTableAction(@JsonProperty("VpcId") ActionTarget vpcId) {
+        this.vpcId = vpcId;
+  }
 }

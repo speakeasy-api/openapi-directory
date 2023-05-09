@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioOptimizationMaximumReturnResponse {
     
     public String contentType;
+
     public PostPortfolioOptimizationMaximumReturnResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioOptimizationMaximumReturnResponse {
     
     
     public Integer statusCode;
+
     public PostPortfolioOptimizationMaximumReturnResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioOptimizationMaximumReturnResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioOptimizationMaximumReturnResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioOptimizationMaximumReturnResponse {
      */
     
     public PostPortfolioOptimizationMaximumReturn200ApplicationJSON postPortfolioOptimizationMaximumReturn200ApplicationJSONObject;
+
     public PostPortfolioOptimizationMaximumReturnResponse withPostPortfolioOptimizationMaximumReturn200ApplicationJSONObject(PostPortfolioOptimizationMaximumReturn200ApplicationJSON postPortfolioOptimizationMaximumReturn200ApplicationJSONObject) {
         this.postPortfolioOptimizationMaximumReturn200ApplicationJSONObject = postPortfolioOptimizationMaximumReturn200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioOptimizationMaximumReturnResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

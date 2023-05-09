@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDatasetResponse {
     
     public String contentType;
+
     public DeleteDatasetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDatasetResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDatasetResponse deleteDatasetResponse;
+
     public DeleteDatasetResponse withDeleteDatasetResponse(org.openapis.openapi.models.shared.DeleteDatasetResponse deleteDatasetResponse) {
         this.deleteDatasetResponse = deleteDatasetResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object internalErrorException;
+
     public DeleteDatasetResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteDatasetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object notAuthorizedException;
+
     public DeleteDatasetResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteDatasetResponse {
     
     
     public Integer statusCode;
+
     public DeleteDatasetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteDatasetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDatasetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object resourceConflictException;
+
     public DeleteDatasetResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteDatasetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteDatasetResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteDatasetResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteDatasetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class AwsSageMakerNotebookInstanceMetadataServiceConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumInstanceMetadataServiceVersion")
     public String minimumInstanceMetadataServiceVersion;
+
     public AwsSageMakerNotebookInstanceMetadataServiceConfigurationDetails withMinimumInstanceMetadataServiceVersion(String minimumInstanceMetadataServiceVersion) {
         this.minimumInstanceMetadataServiceVersion = minimumInstanceMetadataServiceVersion;
         return this;
     }
     
+    public AwsSageMakerNotebookInstanceMetadataServiceConfigurationDetails(){}
 }

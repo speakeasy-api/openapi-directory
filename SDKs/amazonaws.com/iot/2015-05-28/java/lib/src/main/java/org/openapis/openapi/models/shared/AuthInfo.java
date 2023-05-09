@@ -15,6 +15,7 @@ public class AuthInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionType")
     public ActionTypeEnum actionType;
+
     public AuthInfo withActionType(ActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -22,9 +23,13 @@ public class AuthInfo {
     
     @JsonProperty("resources")
     public String[] resources;
+
     public AuthInfo withResources(String[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public AuthInfo(@JsonProperty("resources") String[] resources) {
+        this.resources = resources;
+  }
 }

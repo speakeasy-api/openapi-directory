@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateEndpointWeightsAndCapacitiesOutput {
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public UpdateEndpointWeightsAndCapacitiesOutput withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
     }
     
+    public UpdateEndpointWeightsAndCapacitiesOutput(@JsonProperty("EndpointArn") String endpointArn) {
+        this.endpointArn = endpointArn;
+  }
 }

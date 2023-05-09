@@ -12,6 +12,7 @@ public class DataPointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public String createdAfter;
+
     public DataPointsCountRequest withCreatedAfter(String createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -22,6 +23,7 @@ public class DataPointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public String createdBefore;
+
     public DataPointsCountRequest withCreatedBefore(String createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -32,6 +34,7 @@ public class DataPointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyFavorites")
     public Boolean onlyFavorites;
+
     public DataPointsCountRequest withOnlyFavorites(Boolean onlyFavorites) {
         this.onlyFavorites = onlyFavorites;
         return this;
@@ -42,6 +45,7 @@ public class DataPointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public DataPointsCountStatusEnum status;
+
     public DataPointsCountRequest withStatus(DataPointsCountStatusEnum status) {
         this.status = status;
         return this;
@@ -52,6 +56,7 @@ public class DataPointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public DataPointsCountRequest withTags(String tags) {
         this.tags = tags;
         return this;
@@ -62,6 +67,7 @@ public class DataPointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public DataPointsCountRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
@@ -72,9 +78,11 @@ public class DataPointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public DataPointsCountTypeEnum type;
+
     public DataPointsCountRequest withType(DataPointsCountTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DataPointsCountRequest(){}
 }

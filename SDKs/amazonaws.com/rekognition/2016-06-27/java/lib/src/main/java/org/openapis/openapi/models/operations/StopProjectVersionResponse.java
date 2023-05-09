@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopProjectVersionResponse {
@@ -12,6 +13,7 @@ public class StopProjectVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public StopProjectVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StopProjectVersionResponse {
     
     
     public String contentType;
+
     public StopProjectVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopProjectVersionResponse {
      */
     
     public Object internalServerError;
+
     public StopProjectVersionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class StopProjectVersionResponse {
      */
     
     public Object invalidParameterException;
+
     public StopProjectVersionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class StopProjectVersionResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public StopProjectVersionResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -56,6 +62,7 @@ public class StopProjectVersionResponse {
     
     
     public Integer statusCode;
+
     public StopProjectVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StopProjectVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopProjectVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StopProjectVersionResponse {
      */
     
     public Object resourceInUseException;
+
     public StopProjectVersionResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -83,6 +92,7 @@ public class StopProjectVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopProjectVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class StopProjectVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.StopProjectVersionResponse stopProjectVersionResponse;
+
     public StopProjectVersionResponse withStopProjectVersionResponse(org.openapis.openapi.models.shared.StopProjectVersionResponse stopProjectVersionResponse) {
         this.stopProjectVersionResponse = stopProjectVersionResponse;
         return this;
@@ -103,9 +114,14 @@ public class StopProjectVersionResponse {
      */
     
     public Object throttlingException;
+
     public StopProjectVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public StopProjectVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

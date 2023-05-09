@@ -18,6 +18,7 @@ public class MessageCommentReactionEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emoji")
     public String emoji;
+
     public MessageCommentReactionEntity withEmoji(String emoji) {
         this.emoji = emoji;
         return this;
@@ -29,9 +30,11 @@ public class MessageCommentReactionEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public MessageCommentReactionEntity withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public MessageCommentReactionEntity(){}
 }

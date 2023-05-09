@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelCommandResponse {
@@ -12,6 +13,7 @@ public class CancelCommandResponse {
      */
     
     public java.util.Map<String, Object> cancelCommandResult;
+
     public CancelCommandResponse withCancelCommandResult(java.util.Map<String, Object> cancelCommandResult) {
         this.cancelCommandResult = cancelCommandResult;
         return this;
@@ -19,6 +21,7 @@ public class CancelCommandResponse {
     
     
     public String contentType;
+
     public CancelCommandResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelCommandResponse {
      */
     
     public Object duplicateInstanceId;
+
     public CancelCommandResponse withDuplicateInstanceId(Object duplicateInstanceId) {
         this.duplicateInstanceId = duplicateInstanceId;
         return this;
@@ -39,6 +43,7 @@ public class CancelCommandResponse {
      */
     
     public Object internalServerError;
+
     public CancelCommandResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class CancelCommandResponse {
      */
     
     public Object invalidCommandId;
+
     public CancelCommandResponse withInvalidCommandId(Object invalidCommandId) {
         this.invalidCommandId = invalidCommandId;
         return this;
@@ -59,6 +65,7 @@ public class CancelCommandResponse {
      */
     
     public Object invalidInstanceId;
+
     public CancelCommandResponse withInvalidInstanceId(Object invalidInstanceId) {
         this.invalidInstanceId = invalidInstanceId;
         return this;
@@ -66,6 +73,7 @@ public class CancelCommandResponse {
     
     
     public Integer statusCode;
+
     public CancelCommandResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CancelCommandResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelCommandResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CancelCommandResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

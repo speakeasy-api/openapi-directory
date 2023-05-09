@@ -15,6 +15,7 @@ public class AwsRedshiftClusterClusterParameterStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterApplyErrorDescription")
     public String parameterApplyErrorDescription;
+
     public AwsRedshiftClusterClusterParameterStatus withParameterApplyErrorDescription(String parameterApplyErrorDescription) {
         this.parameterApplyErrorDescription = parameterApplyErrorDescription;
         return this;
@@ -23,6 +24,7 @@ public class AwsRedshiftClusterClusterParameterStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterApplyStatus")
     public String parameterApplyStatus;
+
     public AwsRedshiftClusterClusterParameterStatus withParameterApplyStatus(String parameterApplyStatus) {
         this.parameterApplyStatus = parameterApplyStatus;
         return this;
@@ -31,9 +33,11 @@ public class AwsRedshiftClusterClusterParameterStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterName")
     public String parameterName;
+
     public AwsRedshiftClusterClusterParameterStatus withParameterName(String parameterName) {
         this.parameterName = parameterName;
         return this;
     }
     
+    public AwsRedshiftClusterClusterParameterStatus(){}
 }

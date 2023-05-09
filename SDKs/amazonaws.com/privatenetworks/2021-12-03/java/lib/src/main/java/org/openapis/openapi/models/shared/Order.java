@@ -20,6 +20,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acknowledgmentStatus")
     public AcknowledgmentStatusEnum acknowledgmentStatus;
+
     public Order withAcknowledgmentStatus(AcknowledgmentStatusEnum acknowledgmentStatus) {
         this.acknowledgmentStatus = acknowledgmentStatus;
         return this;
@@ -30,6 +31,7 @@ public class Order {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Order withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkArn")
     public String networkArn;
+
     public Order withNetworkArn(String networkArn) {
         this.networkArn = networkArn;
         return this;
@@ -46,6 +49,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkSiteArn")
     public String networkSiteArn;
+
     public Order withNetworkSiteArn(String networkSiteArn) {
         this.networkSiteArn = networkSiteArn;
         return this;
@@ -54,6 +58,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderArn")
     public String orderArn;
+
     public Order withOrderArn(String orderArn) {
         this.orderArn = orderArn;
         return this;
@@ -62,6 +67,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingAddress")
     public Address shippingAddress;
+
     public Order withShippingAddress(Address shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -70,9 +76,11 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingInformation")
     public TrackingInformation[] trackingInformation;
+
     public Order withTrackingInformation(TrackingInformation[] trackingInformation) {
         this.trackingInformation = trackingInformation;
         return this;
     }
     
+    public Order(){}
 }

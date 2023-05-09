@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointGetByTypeRequest {
@@ -13,9 +14,13 @@ public class StopPointGetByTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=types")
     public String[] types;
+
     public StopPointGetByTypeRequest withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public StopPointGetByTypeRequest(@JsonProperty("types") String[] types) {
+        this.types = types;
+  }
 }

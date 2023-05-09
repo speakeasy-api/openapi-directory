@@ -15,6 +15,7 @@ public class GetContactPolicyResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactArn")
     public String contactArn;
+
     public GetContactPolicyResult withContactArn(String contactArn) {
         this.contactArn = contactArn;
         return this;
@@ -23,9 +24,11 @@ public class GetContactPolicyResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public GetContactPolicyResult withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public GetContactPolicyResult(){}
 }

@@ -18,6 +18,7 @@ public class ListPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPoliciesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policies")
     public Policy[] policies;
+
     public ListPoliciesResponse withPolicies(Policy[] policies) {
         this.policies = policies;
         return this;
     }
     
+    public ListPoliciesResponse(){}
 }

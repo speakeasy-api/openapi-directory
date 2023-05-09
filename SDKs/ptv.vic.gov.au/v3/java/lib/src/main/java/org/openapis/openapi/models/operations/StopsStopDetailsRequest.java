@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopsStopDetailsRequest {
@@ -12,6 +13,7 @@ public class StopsStopDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public StopsStopDetailsRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -22,6 +24,7 @@ public class StopsStopDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gtfs")
     public Boolean gtfs;
+
     public StopsStopDetailsRequest withGtfs(Boolean gtfs) {
         this.gtfs = gtfs;
         return this;
@@ -32,6 +35,7 @@ public class StopsStopDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_type")
     public StopsStopDetailsRouteTypeEnum routeType;
+
     public StopsStopDetailsRequest withRouteType(StopsStopDetailsRouteTypeEnum routeType) {
         this.routeType = routeType;
         return this;
@@ -42,6 +46,7 @@ public class StopsStopDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public StopsStopDetailsRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -52,6 +57,7 @@ public class StopsStopDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_accessibility")
     public Boolean stopAccessibility;
+
     public StopsStopDetailsRequest withStopAccessibility(Boolean stopAccessibility) {
         this.stopAccessibility = stopAccessibility;
         return this;
@@ -62,6 +68,7 @@ public class StopsStopDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_amenities")
     public Boolean stopAmenities;
+
     public StopsStopDetailsRequest withStopAmenities(Boolean stopAmenities) {
         this.stopAmenities = stopAmenities;
         return this;
@@ -72,6 +79,7 @@ public class StopsStopDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_contact")
     public Boolean stopContact;
+
     public StopsStopDetailsRequest withStopContact(Boolean stopContact) {
         this.stopContact = stopContact;
         return this;
@@ -82,6 +90,7 @@ public class StopsStopDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_disruptions")
     public Boolean stopDisruptions;
+
     public StopsStopDetailsRequest withStopDisruptions(Boolean stopDisruptions) {
         this.stopDisruptions = stopDisruptions;
         return this;
@@ -92,6 +101,7 @@ public class StopsStopDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stop_id")
     public Integer stopId;
+
     public StopsStopDetailsRequest withStopId(Integer stopId) {
         this.stopId = stopId;
         return this;
@@ -102,6 +112,7 @@ public class StopsStopDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_location")
     public Boolean stopLocation;
+
     public StopsStopDetailsRequest withStopLocation(Boolean stopLocation) {
         this.stopLocation = stopLocation;
         return this;
@@ -112,6 +123,7 @@ public class StopsStopDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_staffing")
     public Boolean stopStaffing;
+
     public StopsStopDetailsRequest withStopStaffing(Boolean stopStaffing) {
         this.stopStaffing = stopStaffing;
         return this;
@@ -122,6 +134,7 @@ public class StopsStopDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_ticket")
     public Boolean stopTicket;
+
     public StopsStopDetailsRequest withStopTicket(Boolean stopTicket) {
         this.stopTicket = stopTicket;
         return this;
@@ -132,9 +145,14 @@ public class StopsStopDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public StopsStopDetailsRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public StopsStopDetailsRequest(@JsonProperty("route_type") StopsStopDetailsRouteTypeEnum routeType, @JsonProperty("stop_id") Integer stopId) {
+        this.routeType = routeType;
+        this.stopId = stopId;
+  }
 }

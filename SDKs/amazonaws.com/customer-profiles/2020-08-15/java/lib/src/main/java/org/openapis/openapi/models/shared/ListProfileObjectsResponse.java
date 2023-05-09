@@ -15,6 +15,7 @@ public class ListProfileObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public ListProfileObjectsItem[] items;
+
     public ListProfileObjectsResponse withItems(ListProfileObjectsItem[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class ListProfileObjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListProfileObjectsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListProfileObjectsResponse(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EfsStorageConfiguration {
     @JsonProperty("fileSystemId")
     public String fileSystemId;
+
     public EfsStorageConfiguration withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -19,9 +20,14 @@ public class EfsStorageConfiguration {
     
     @JsonProperty("mountPoint")
     public String mountPoint;
+
     public EfsStorageConfiguration withMountPoint(String mountPoint) {
         this.mountPoint = mountPoint;
         return this;
     }
     
+    public EfsStorageConfiguration(@JsonProperty("fileSystemId") String fileSystemId, @JsonProperty("mountPoint") String mountPoint) {
+        this.fileSystemId = fileSystemId;
+        this.mountPoint = mountPoint;
+  }
 }

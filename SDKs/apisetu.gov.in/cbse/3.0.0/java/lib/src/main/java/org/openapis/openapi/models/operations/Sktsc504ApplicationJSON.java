@@ -15,6 +15,7 @@ public class Sktsc504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Sktsc504ApplicationJSONErrorEnum error;
+
     public Sktsc504ApplicationJSON withError(Sktsc504ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Sktsc504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Sktsc504ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Sktsc504ApplicationJSON withErrorDescription(Sktsc504ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Sktsc504ApplicationJSON(){}
 }

@@ -60,15 +60,13 @@ public class Client {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClientApiAllResponse res = new org.openapis.openapi.models.operations.ClientApiAllResponse() {{
+        org.openapis.openapi.models.operations.ClientApiAllResponse res = new org.openapis.openapi.models.operations.ClientApiAllResponse(contentType, httpRes.statusCode()) {{
             clientDetailsApiModels = null;
             clientDetailsApiModels = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -133,15 +131,13 @@ public class Client {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClientApiCanDeleteResponse res = new org.openapis.openapi.models.operations.ClientApiCanDeleteResponse() {{
+        org.openapis.openapi.models.operations.ClientApiCanDeleteResponse res = new org.openapis.openapi.models.operations.ClientApiCanDeleteResponse(contentType, httpRes.statusCode()) {{
             clientApiCanDelete200ApplicationJSONBoolean = null;
             body = null;
             body = null;
             body = null;
             clientApiCanDelete200TextJSONBoolean = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,15 +201,13 @@ public class Client {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClientApiDeleteFormResponse res = new org.openapis.openapi.models.operations.ClientApiDeleteFormResponse() {{
+        org.openapis.openapi.models.operations.ClientApiDeleteFormResponse res = new org.openapis.openapi.models.operations.ClientApiDeleteFormResponse(contentType, httpRes.statusCode()) {{
             clientApiDeleteForm200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             clientApiDeleteForm200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -277,15 +271,13 @@ public class Client {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClientApiDeleteJsonResponse res = new org.openapis.openapi.models.operations.ClientApiDeleteJsonResponse() {{
+        org.openapis.openapi.models.operations.ClientApiDeleteJsonResponse res = new org.openapis.openapi.models.operations.ClientApiDeleteJsonResponse(contentType, httpRes.statusCode()) {{
             clientApiDeleteJSON200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             clientApiDeleteJSON200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -349,15 +341,13 @@ public class Client {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClientApiDeleteRawResponse res = new org.openapis.openapi.models.operations.ClientApiDeleteRawResponse() {{
+        org.openapis.openapi.models.operations.ClientApiDeleteRawResponse res = new org.openapis.openapi.models.operations.ClientApiDeleteRawResponse(contentType, httpRes.statusCode()) {{
             clientApiDeleteRaw200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             clientApiDeleteRaw200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -422,15 +412,13 @@ public class Client {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClientApiDetailsResponse res = new org.openapis.openapi.models.operations.ClientApiDetailsResponse() {{
+        org.openapis.openapi.models.operations.ClientApiDetailsResponse res = new org.openapis.openapi.models.operations.ClientApiDetailsResponse(contentType, httpRes.statusCode()) {{
             clientDetailsApiModel = null;
             clientDetailsApiModel = null;
             body = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -494,15 +482,13 @@ public class Client {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClientApiNewFormResponse res = new org.openapis.openapi.models.operations.ClientApiNewFormResponse() {{
+        org.openapis.openapi.models.operations.ClientApiNewFormResponse res = new org.openapis.openapi.models.operations.ClientApiNewFormResponse(contentType, httpRes.statusCode()) {{
             clientApiNewForm200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             clientApiNewForm200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -566,15 +552,13 @@ public class Client {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClientApiNewJsonResponse res = new org.openapis.openapi.models.operations.ClientApiNewJsonResponse() {{
+        org.openapis.openapi.models.operations.ClientApiNewJsonResponse res = new org.openapis.openapi.models.operations.ClientApiNewJsonResponse(contentType, httpRes.statusCode()) {{
             clientApiNewJSON200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             clientApiNewJSON200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -638,15 +622,13 @@ public class Client {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClientApiNewRawResponse res = new org.openapis.openapi.models.operations.ClientApiNewRawResponse() {{
+        org.openapis.openapi.models.operations.ClientApiNewRawResponse res = new org.openapis.openapi.models.operations.ClientApiNewRawResponse(contentType, httpRes.statusCode()) {{
             clientApiNewRaw200ApplicationJSONInt32Integer = null;
             body = null;
             body = null;
             body = null;
             clientApiNewRaw200TextJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -710,10 +692,8 @@ public class Client {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClientApiUpdateFormResponse res = new org.openapis.openapi.models.operations.ClientApiUpdateFormResponse() {{
+        org.openapis.openapi.models.operations.ClientApiUpdateFormResponse res = new org.openapis.openapi.models.operations.ClientApiUpdateFormResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -755,10 +735,8 @@ public class Client {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClientApiUpdateJsonResponse res = new org.openapis.openapi.models.operations.ClientApiUpdateJsonResponse() {{
+        org.openapis.openapi.models.operations.ClientApiUpdateJsonResponse res = new org.openapis.openapi.models.operations.ClientApiUpdateJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -800,10 +778,8 @@ public class Client {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClientApiUpdateRawResponse res = new org.openapis.openapi.models.operations.ClientApiUpdateRawResponse() {{
+        org.openapis.openapi.models.operations.ClientApiUpdateRawResponse res = new org.openapis.openapi.models.operations.ClientApiUpdateRawResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

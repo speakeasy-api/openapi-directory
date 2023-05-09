@@ -15,6 +15,7 @@ public class ListRootsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRootsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRootsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Roots")
     public Root[] roots;
+
     public ListRootsResponse withRoots(Root[] roots) {
         this.roots = roots;
         return this;
     }
     
+    public ListRootsResponse(){}
 }

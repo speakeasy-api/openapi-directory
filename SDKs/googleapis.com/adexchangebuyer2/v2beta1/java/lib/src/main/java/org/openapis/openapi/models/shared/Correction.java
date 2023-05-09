@@ -18,6 +18,7 @@ public class Correction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contexts")
     public ServingContext[] contexts;
+
     public Correction withContexts(ServingContext[] contexts) {
         this.contexts = contexts;
         return this;
@@ -29,6 +30,7 @@ public class Correction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String[] details;
+
     public Correction withDetails(String[] details) {
         this.details = details;
         return this;
@@ -40,9 +42,11 @@ public class Correction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CorrectionTypeEnum type;
+
     public Correction withType(CorrectionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Correction(){}
 }

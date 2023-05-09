@@ -15,9 +15,11 @@ public class Extras {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("push")
     public Push push;
+
     public Extras withPush(Push push) {
         this.push = push;
         return this;
     }
     
+    public Extras(){}
 }

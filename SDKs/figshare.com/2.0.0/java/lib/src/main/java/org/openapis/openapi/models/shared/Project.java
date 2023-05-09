@@ -12,6 +12,7 @@ public class Project {
      */
     @JsonProperty("id")
     public Long id;
+
     public Project withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class Project {
      */
     @JsonProperty("published_date")
     public String publishedDate;
+
     public Project withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
@@ -32,6 +34,7 @@ public class Project {
      */
     @JsonProperty("title")
     public String title;
+
     public Project withTitle(String title) {
         this.title = title;
         return this;
@@ -42,9 +45,16 @@ public class Project {
      */
     @JsonProperty("url")
     public String url;
+
     public Project withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Project(@JsonProperty("id") Long id, @JsonProperty("published_date") String publishedDate, @JsonProperty("title") String title, @JsonProperty("url") String url) {
+        this.id = id;
+        this.publishedDate = publishedDate;
+        this.title = title;
+        this.url = url;
+  }
 }

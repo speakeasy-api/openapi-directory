@@ -15,6 +15,7 @@ public class OrdersCustomBatchRequestEntryCreateTestReturnReturnItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemId")
     public String lineItemId;
+
     public OrdersCustomBatchRequestEntryCreateTestReturnReturnItem withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -26,9 +27,11 @@ public class OrdersCustomBatchRequestEntryCreateTestReturnReturnItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public OrdersCustomBatchRequestEntryCreateTestReturnReturnItem withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public OrdersCustomBatchRequestEntryCreateTestReturnReturnItem(){}
 }

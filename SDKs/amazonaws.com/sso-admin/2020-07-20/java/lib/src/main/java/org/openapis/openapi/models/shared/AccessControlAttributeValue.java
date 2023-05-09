@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccessControlAttributeValue {
     @JsonProperty("Source")
     public String[] source;
+
     public AccessControlAttributeValue withSource(String[] source) {
         this.source = source;
         return this;
     }
     
+    public AccessControlAttributeValue(@JsonProperty("Source") String[] source) {
+        this.source = source;
+  }
 }

@@ -18,6 +18,7 @@ public class IssuancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedIssuanceModes")
     public IssuanceModes allowedIssuanceModes;
+
     public IssuancePolicy withAllowedIssuanceModes(IssuanceModes allowedIssuanceModes) {
         this.allowedIssuanceModes = allowedIssuanceModes;
         return this;
@@ -29,6 +30,7 @@ public class IssuancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedKeyTypes")
     public AllowedKeyType[] allowedKeyTypes;
+
     public IssuancePolicy withAllowedKeyTypes(AllowedKeyType[] allowedKeyTypes) {
         this.allowedKeyTypes = allowedKeyTypes;
         return this;
@@ -40,6 +42,7 @@ public class IssuancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baselineValues")
     public X509Parameters baselineValues;
+
     public IssuancePolicy withBaselineValues(X509Parameters baselineValues) {
         this.baselineValues = baselineValues;
         return this;
@@ -51,6 +54,7 @@ public class IssuancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityConstraints")
     public CertificateIdentityConstraints identityConstraints;
+
     public IssuancePolicy withIdentityConstraints(CertificateIdentityConstraints identityConstraints) {
         this.identityConstraints = identityConstraints;
         return this;
@@ -62,6 +66,7 @@ public class IssuancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumLifetime")
     public String maximumLifetime;
+
     public IssuancePolicy withMaximumLifetime(String maximumLifetime) {
         this.maximumLifetime = maximumLifetime;
         return this;
@@ -73,9 +78,11 @@ public class IssuancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passthroughExtensions")
     public CertificateExtensionConstraints passthroughExtensions;
+
     public IssuancePolicy withPassthroughExtensions(CertificateExtensionConstraints passthroughExtensions) {
         this.passthroughExtensions = passthroughExtensions;
         return this;
     }
     
+    public IssuancePolicy(){}
 }

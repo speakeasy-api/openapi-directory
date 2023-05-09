@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AreasCountriesResponse {
     
     public org.openapis.openapi.models.shared.Area[] areas;
+
     public AreasCountriesResponse withAreas(org.openapis.openapi.models.shared.Area[] areas) {
         this.areas = areas;
         return this;
@@ -16,6 +18,7 @@ public class AreasCountriesResponse {
     
     
     public String contentType;
+
     public AreasCountriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class AreasCountriesResponse {
     
     
     public Integer statusCode;
+
     public AreasCountriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class AreasCountriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AreasCountriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AreasCountriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

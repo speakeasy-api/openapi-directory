@@ -12,6 +12,7 @@ public class CreateConferenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conferenceSolutionKey")
     public ConferenceSolutionKey conferenceSolutionKey;
+
     public CreateConferenceRequest withConferenceSolutionKey(ConferenceSolutionKey conferenceSolutionKey) {
         this.conferenceSolutionKey = conferenceSolutionKey;
         return this;
@@ -24,6 +25,7 @@ public class CreateConferenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public CreateConferenceRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -32,9 +34,11 @@ public class CreateConferenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ConferenceRequestStatus status;
+
     public CreateConferenceRequest withStatus(ConferenceRequestStatus status) {
         this.status = status;
         return this;
     }
     
+    public CreateConferenceRequest(){}
 }

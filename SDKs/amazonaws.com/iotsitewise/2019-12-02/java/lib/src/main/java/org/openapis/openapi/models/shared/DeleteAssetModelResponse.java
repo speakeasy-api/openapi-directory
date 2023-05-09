@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAssetModelResponse {
     @JsonProperty("assetModelStatus")
     public AssetModelStatus assetModelStatus;
+
     public DeleteAssetModelResponse withAssetModelStatus(AssetModelStatus assetModelStatus) {
         this.assetModelStatus = assetModelStatus;
         return this;
     }
     
+    public DeleteAssetModelResponse(@JsonProperty("assetModelStatus") AssetModelStatus assetModelStatus) {
+        this.assetModelStatus = assetModelStatus;
+  }
 }

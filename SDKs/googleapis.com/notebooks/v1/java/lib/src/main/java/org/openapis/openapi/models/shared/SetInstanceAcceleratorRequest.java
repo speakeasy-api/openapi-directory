@@ -18,6 +18,7 @@ public class SetInstanceAcceleratorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coreCount")
     public String coreCount;
+
     public SetInstanceAcceleratorRequest withCoreCount(String coreCount) {
         this.coreCount = coreCount;
         return this;
@@ -29,9 +30,11 @@ public class SetInstanceAcceleratorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SetInstanceAcceleratorRequestTypeEnum type;
+
     public SetInstanceAcceleratorRequest withType(SetInstanceAcceleratorRequestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SetInstanceAcceleratorRequest(){}
 }

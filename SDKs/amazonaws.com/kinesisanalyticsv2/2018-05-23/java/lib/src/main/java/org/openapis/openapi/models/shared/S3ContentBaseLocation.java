@@ -15,6 +15,7 @@ public class S3ContentBaseLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BasePath")
     public String basePath;
+
     public S3ContentBaseLocation withBasePath(String basePath) {
         this.basePath = basePath;
         return this;
@@ -22,9 +23,13 @@ public class S3ContentBaseLocation {
     
     @JsonProperty("BucketARN")
     public String bucketARN;
+
     public S3ContentBaseLocation withBucketARN(String bucketARN) {
         this.bucketARN = bucketARN;
         return this;
     }
     
+    public S3ContentBaseLocation(@JsonProperty("BucketARN") String bucketARN) {
+        this.bucketARN = bucketARN;
+  }
 }

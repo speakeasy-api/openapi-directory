@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateNetworkStaticRouteResponse {
     
     public String contentType;
+
     public CreateNetworkStaticRouteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateNetworkStaticRouteResponse {
     
     
     public Integer statusCode;
+
     public CreateNetworkStaticRouteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateNetworkStaticRouteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateNetworkStaticRouteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class CreateNetworkStaticRouteResponse {
      */
     
     public java.util.Map<String, Object> createNetworkStaticRoute201ApplicationJSONObject;
+
     public CreateNetworkStaticRouteResponse withCreateNetworkStaticRoute201ApplicationJSONObject(java.util.Map<String, Object> createNetworkStaticRoute201ApplicationJSONObject) {
         this.createNetworkStaticRoute201ApplicationJSONObject = createNetworkStaticRoute201ApplicationJSONObject;
         return this;
     }
     
+    public CreateNetworkStaticRouteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

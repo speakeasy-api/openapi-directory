@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelReplayResponse {
@@ -12,6 +13,7 @@ public class CancelReplayResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelReplayResponse cancelReplayResponse;
+
     public CancelReplayResponse withCancelReplayResponse(org.openapis.openapi.models.shared.CancelReplayResponse cancelReplayResponse) {
         this.cancelReplayResponse = cancelReplayResponse;
         return this;
@@ -22,6 +24,7 @@ public class CancelReplayResponse {
      */
     
     public Object concurrentModificationException;
+
     public CancelReplayResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class CancelReplayResponse {
     
     
     public String contentType;
+
     public CancelReplayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CancelReplayResponse {
      */
     
     public Object illegalStatusException;
+
     public CancelReplayResponse withIllegalStatusException(Object illegalStatusException) {
         this.illegalStatusException = illegalStatusException;
         return this;
@@ -49,6 +54,7 @@ public class CancelReplayResponse {
      */
     
     public Object internalException;
+
     public CancelReplayResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -59,6 +65,7 @@ public class CancelReplayResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelReplayResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CancelReplayResponse {
     
     
     public Integer statusCode;
+
     public CancelReplayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CancelReplayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelReplayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CancelReplayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

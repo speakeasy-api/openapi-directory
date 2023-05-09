@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUsageChargeRequest {
@@ -12,6 +13,7 @@ public class CreateUsageChargeRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateUsageChargeRequestBody requestBody;
+
     public CreateUsageChargeRequest withRequestBody(CreateUsageChargeRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -25,6 +27,7 @@ public class CreateUsageChargeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Appstore-Usage-Charge-Token")
     public String xAppstoreUsageChargeToken;
+
     public CreateUsageChargeRequest withXAppstoreUsageChargeToken(String xAppstoreUsageChargeToken) {
         this.xAppstoreUsageChargeToken = xAppstoreUsageChargeToken;
         return this;
@@ -35,9 +38,14 @@ public class CreateUsageChargeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=recurringApplicationChargeId")
     public String recurringApplicationChargeId;
+
     public CreateUsageChargeRequest withRecurringApplicationChargeId(String recurringApplicationChargeId) {
         this.recurringApplicationChargeId = recurringApplicationChargeId;
         return this;
     }
     
+    public CreateUsageChargeRequest(@JsonProperty("RequestBody") CreateUsageChargeRequestBody requestBody, @JsonProperty("recurringApplicationChargeId") String recurringApplicationChargeId) {
+        this.requestBody = requestBody;
+        this.recurringApplicationChargeId = recurringApplicationChargeId;
+  }
 }

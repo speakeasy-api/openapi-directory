@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCampaignOutboundCallConfigResponse {
@@ -12,6 +13,7 @@ public class UpdateCampaignOutboundCallConfigResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateCampaignOutboundCallConfigResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateCampaignOutboundCallConfigResponse {
      */
     
     public Object conflictException;
+
     public UpdateCampaignOutboundCallConfigResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCampaignOutboundCallConfigResponse {
     
     
     public String contentType;
+
     public UpdateCampaignOutboundCallConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCampaignOutboundCallConfigResponse {
      */
     
     public Object internalServerException;
+
     public UpdateCampaignOutboundCallConfigResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateCampaignOutboundCallConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateCampaignOutboundCallConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateCampaignOutboundCallConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateCampaignOutboundCallConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateCampaignOutboundCallConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCampaignOutboundCallConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateCampaignOutboundCallConfigResponse {
      */
     
     public Object throttlingException;
+
     public UpdateCampaignOutboundCallConfigResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateCampaignOutboundCallConfigResponse {
      */
     
     public Object validationException;
+
     public UpdateCampaignOutboundCallConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateCampaignOutboundCallConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ public class EventRankingRankings {
      */
     @JsonProperty("dq")
     public Long dq;
+
     public EventRankingRankings withDq(Long dq) {
         this.dq = dq;
         return this;
@@ -25,6 +26,7 @@ public class EventRankingRankings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extra_stats")
     public Double[] extraStats;
+
     public EventRankingRankings withExtraStats(Double[] extraStats) {
         this.extraStats = extraStats;
         return this;
@@ -35,6 +37,7 @@ public class EventRankingRankings {
      */
     @JsonProperty("matches_played")
     public Long matchesPlayed;
+
     public EventRankingRankings withMatchesPlayed(Long matchesPlayed) {
         this.matchesPlayed = matchesPlayed;
         return this;
@@ -46,6 +49,7 @@ public class EventRankingRankings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qual_average")
     public Long qualAverage;
+
     public EventRankingRankings withQualAverage(Long qualAverage) {
         this.qualAverage = qualAverage;
         return this;
@@ -56,6 +60,7 @@ public class EventRankingRankings {
      */
     @JsonProperty("rank")
     public Long rank;
+
     public EventRankingRankings withRank(Long rank) {
         this.rank = rank;
         return this;
@@ -66,6 +71,7 @@ public class EventRankingRankings {
      */
     @JsonProperty("record")
     public WLTRecord record;
+
     public EventRankingRankings withRecord(WLTRecord record) {
         this.record = record;
         return this;
@@ -77,6 +83,7 @@ public class EventRankingRankings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort_orders")
     public Double[] sortOrders;
+
     public EventRankingRankings withSortOrders(Double[] sortOrders) {
         this.sortOrders = sortOrders;
         return this;
@@ -87,9 +94,17 @@ public class EventRankingRankings {
      */
     @JsonProperty("team_key")
     public String teamKey;
+
     public EventRankingRankings withTeamKey(String teamKey) {
         this.teamKey = teamKey;
         return this;
     }
     
+    public EventRankingRankings(@JsonProperty("dq") Long dq, @JsonProperty("matches_played") Long matchesPlayed, @JsonProperty("rank") Long rank, @JsonProperty("record") WLTRecord record, @JsonProperty("team_key") String teamKey) {
+        this.dq = dq;
+        this.matchesPlayed = matchesPlayed;
+        this.rank = rank;
+        this.record = record;
+        this.teamKey = teamKey;
+  }
 }

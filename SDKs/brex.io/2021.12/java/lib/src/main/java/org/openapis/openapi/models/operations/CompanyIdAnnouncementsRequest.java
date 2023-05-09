@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyIdAnnouncementsRequest {
@@ -12,6 +13,7 @@ public class CompanyIdAnnouncementsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=data")
     public Boolean data;
+
     public CompanyIdAnnouncementsRequest withData(Boolean data) {
         this.data = data;
         return this;
@@ -22,6 +24,7 @@ public class CompanyIdAnnouncementsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public CompanyIdAnnouncementsRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class CompanyIdAnnouncementsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public CompanyIdAnnouncementsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,9 +46,13 @@ public class CompanyIdAnnouncementsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public CompanyIdAnnouncementsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public CompanyIdAnnouncementsRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

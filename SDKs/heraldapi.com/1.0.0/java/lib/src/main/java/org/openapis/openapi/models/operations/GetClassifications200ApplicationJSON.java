@@ -15,9 +15,11 @@ public class GetClassifications200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classifications")
     public org.openapis.openapi.models.shared.ClassificationV1[] classifications;
+
     public GetClassifications200ApplicationJSON withClassifications(org.openapis.openapi.models.shared.ClassificationV1[] classifications) {
         this.classifications = classifications;
         return this;
     }
     
+    public GetClassifications200ApplicationJSON(){}
 }

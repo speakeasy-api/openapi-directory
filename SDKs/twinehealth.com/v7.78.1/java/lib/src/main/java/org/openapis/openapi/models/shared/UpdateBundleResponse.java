@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateBundleResponse {
     @JsonProperty("data")
     public BundleResource data;
+
     public UpdateBundleResponse withData(BundleResource data) {
         this.data = data;
         return this;
@@ -22,9 +23,13 @@ public class UpdateBundleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public CreateOrUpdateMetaResponse meta;
+
     public UpdateBundleResponse withMeta(CreateOrUpdateMetaResponse meta) {
         this.meta = meta;
         return this;
     }
     
+    public UpdateBundleResponse(@JsonProperty("data") BundleResource data) {
+        this.data = data;
+  }
 }

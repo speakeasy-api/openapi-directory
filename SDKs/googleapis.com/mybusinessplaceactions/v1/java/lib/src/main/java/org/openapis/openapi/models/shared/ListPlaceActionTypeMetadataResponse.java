@@ -18,6 +18,7 @@ public class ListPlaceActionTypeMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPlaceActionTypeMetadataResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListPlaceActionTypeMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeActionTypeMetadata")
     public PlaceActionTypeMetadata[] placeActionTypeMetadata;
+
     public ListPlaceActionTypeMetadataResponse withPlaceActionTypeMetadata(PlaceActionTypeMetadata[] placeActionTypeMetadata) {
         this.placeActionTypeMetadata = placeActionTypeMetadata;
         return this;
     }
     
+    public ListPlaceActionTypeMetadataResponse(){}
 }

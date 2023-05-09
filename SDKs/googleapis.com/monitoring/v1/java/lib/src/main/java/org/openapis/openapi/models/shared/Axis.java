@@ -18,6 +18,7 @@ public class Axis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public Axis withLabel(String label) {
         this.label = label;
         return this;
@@ -29,9 +30,11 @@ public class Axis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scale")
     public AxisScaleEnum scale;
+
     public Axis withScale(AxisScaleEnum scale) {
         this.scale = scale;
         return this;
     }
     
+    public Axis(){}
 }

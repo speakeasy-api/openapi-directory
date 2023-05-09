@@ -150,12 +150,10 @@ public class MatrixAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalculateMatrixResponse res = new org.openapis.openapi.models.operations.CalculateMatrixResponse() {{
+        org.openapis.openapi.models.operations.CalculateMatrixResponse res = new org.openapis.openapi.models.operations.CalculateMatrixResponse(contentType, httpRes.statusCode()) {{
             jobId = null;
             ghError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,12 +208,10 @@ public class MatrixAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMatrixResponse res = new org.openapis.openapi.models.operations.GetMatrixResponse() {{
+        org.openapis.openapi.models.operations.GetMatrixResponse res = new org.openapis.openapi.models.operations.GetMatrixResponse(contentType, httpRes.statusCode()) {{
             matrixResponse = null;
             ghError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,12 +257,10 @@ public class MatrixAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMatrixSolutionResponse res = new org.openapis.openapi.models.operations.GetMatrixSolutionResponse() {{
+        org.openapis.openapi.models.operations.GetMatrixSolutionResponse res = new org.openapis.openapi.models.operations.GetMatrixSolutionResponse(contentType, httpRes.statusCode()) {{
             matrixResponse = null;
             ghError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -331,12 +325,10 @@ public class MatrixAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMatrixResponse res = new org.openapis.openapi.models.operations.PostMatrixResponse() {{
+        org.openapis.openapi.models.operations.PostMatrixResponse res = new org.openapis.openapi.models.operations.PostMatrixResponse(contentType, httpRes.statusCode()) {{
             matrixResponse = null;
             ghError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

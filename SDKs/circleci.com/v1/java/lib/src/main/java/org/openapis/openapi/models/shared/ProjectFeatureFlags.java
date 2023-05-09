@@ -12,6 +12,7 @@ public class ProjectFeatureFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build-fork-prs")
     public Boolean buildForkPrs;
+
     public ProjectFeatureFlags withBuildForkPrs(Boolean buildForkPrs) {
         this.buildForkPrs = buildForkPrs;
         return this;
@@ -20,6 +21,7 @@ public class ProjectFeatureFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleet")
     public Boolean fleet;
+
     public ProjectFeatureFlags withFleet(Boolean fleet) {
         this.fleet = fleet;
         return this;
@@ -28,6 +30,7 @@ public class ProjectFeatureFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("junit")
     public Boolean junit;
+
     public ProjectFeatureFlags withJunit(Boolean junit) {
         this.junit = junit;
         return this;
@@ -36,6 +39,7 @@ public class ProjectFeatureFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oss")
     public Boolean oss;
+
     public ProjectFeatureFlags withOss(Boolean oss) {
         this.oss = oss;
         return this;
@@ -44,6 +48,7 @@ public class ProjectFeatureFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osx")
     public Boolean osx;
+
     public ProjectFeatureFlags withOsx(Boolean osx) {
         this.osx = osx;
         return this;
@@ -52,6 +57,7 @@ public class ProjectFeatureFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("set-github-status")
     public Boolean setGithubStatus;
+
     public ProjectFeatureFlags withSetGithubStatus(Boolean setGithubStatus) {
         this.setGithubStatus = setGithubStatus;
         return this;
@@ -60,9 +66,11 @@ public class ProjectFeatureFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trusty-beta")
     public Boolean trustyBeta;
+
     public ProjectFeatureFlags withTrustyBeta(Boolean trustyBeta) {
         this.trustyBeta = trustyBeta;
         return this;
     }
     
+    public ProjectFeatureFlags(){}
 }

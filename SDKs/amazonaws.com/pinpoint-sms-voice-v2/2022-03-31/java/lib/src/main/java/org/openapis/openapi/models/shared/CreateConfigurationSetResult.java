@@ -20,6 +20,7 @@ public class CreateConfigurationSetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetArn")
     public String configurationSetArn;
+
     public CreateConfigurationSetResult withConfigurationSetArn(String configurationSetArn) {
         this.configurationSetArn = configurationSetArn;
         return this;
@@ -28,6 +29,7 @@ public class CreateConfigurationSetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public CreateConfigurationSetResult withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -38,6 +40,7 @@ public class CreateConfigurationSetResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public CreateConfigurationSetResult withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -46,9 +49,11 @@ public class CreateConfigurationSetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateConfigurationSetResult withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateConfigurationSetResult(){}
 }

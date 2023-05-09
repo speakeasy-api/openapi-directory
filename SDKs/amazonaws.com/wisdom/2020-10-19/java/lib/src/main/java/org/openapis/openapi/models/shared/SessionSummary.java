@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SessionSummary {
     @JsonProperty("assistantArn")
     public String assistantArn;
+
     public SessionSummary withAssistantArn(String assistantArn) {
         this.assistantArn = assistantArn;
         return this;
@@ -19,6 +20,7 @@ public class SessionSummary {
     
     @JsonProperty("assistantId")
     public String assistantId;
+
     public SessionSummary withAssistantId(String assistantId) {
         this.assistantId = assistantId;
         return this;
@@ -26,6 +28,7 @@ public class SessionSummary {
     
     @JsonProperty("sessionArn")
     public String sessionArn;
+
     public SessionSummary withSessionArn(String sessionArn) {
         this.sessionArn = sessionArn;
         return this;
@@ -33,9 +36,16 @@ public class SessionSummary {
     
     @JsonProperty("sessionId")
     public String sessionId;
+
     public SessionSummary withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public SessionSummary(@JsonProperty("assistantArn") String assistantArn, @JsonProperty("assistantId") String assistantId, @JsonProperty("sessionArn") String sessionArn, @JsonProperty("sessionId") String sessionId) {
+        this.assistantArn = assistantArn;
+        this.assistantId = assistantId;
+        this.sessionArn = sessionArn;
+        this.sessionId = sessionId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLocationObjectStorageResponse {
     
     public String contentType;
+
     public CreateLocationObjectStorageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateLocationObjectStorageResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLocationObjectStorageResponse createLocationObjectStorageResponse;
+
     public CreateLocationObjectStorageResponse withCreateLocationObjectStorageResponse(org.openapis.openapi.models.shared.CreateLocationObjectStorageResponse createLocationObjectStorageResponse) {
         this.createLocationObjectStorageResponse = createLocationObjectStorageResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateLocationObjectStorageResponse {
      */
     
     public Object internalException;
+
     public CreateLocationObjectStorageResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class CreateLocationObjectStorageResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateLocationObjectStorageResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreateLocationObjectStorageResponse {
     
     
     public Integer statusCode;
+
     public CreateLocationObjectStorageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateLocationObjectStorageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLocationObjectStorageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateLocationObjectStorageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

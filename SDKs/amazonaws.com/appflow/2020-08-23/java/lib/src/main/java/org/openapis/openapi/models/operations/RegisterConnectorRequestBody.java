@@ -10,11 +10,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RegisterConnectorRequestBody {
     /**
+     * &lt;p&gt;The &lt;code&gt;clientToken&lt;/code&gt; parameter is an idempotency token. It ensures that your &lt;code&gt;RegisterConnector&lt;/code&gt; request completes only once. You choose the value to pass. For example, if you don't receive a response from your request, you can safely retry the request with the same &lt;code&gt;clientToken&lt;/code&gt; parameter value.&lt;/p&gt; &lt;p&gt;If you omit a &lt;code&gt;clientToken&lt;/code&gt; value, the Amazon Web Services SDK that you are using inserts a value for you. This way, the SDK can safely retry requests multiple times after a network error. You must provide your own value for other use cases.&lt;/p&gt; &lt;p&gt;If you specify input parameters that differ from your first request, an error occurs. If you use a different value for &lt;code&gt;clientToken&lt;/code&gt;, Amazon AppFlow considers it a new call to &lt;code&gt;RegisterConnector&lt;/code&gt;. The token is active for 8 hours.&lt;/p&gt;
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientToken")
+    public String clientToken;
+
+    public RegisterConnectorRequestBody withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    
+    /**
      *  The name of the connector. The name is unique for each &lt;code&gt;ConnectorRegistration&lt;/code&gt; in your Amazon Web Services account.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorLabel")
     public String connectorLabel;
+
     public RegisterConnectorRequestBody withConnectorLabel(String connectorLabel) {
         this.connectorLabel = connectorLabel;
         return this;
@@ -26,6 +39,7 @@ public class RegisterConnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProvisioningConfig")
     public RegisterConnectorRequestBodyConnectorProvisioningConfig connectorProvisioningConfig;
+
     public RegisterConnectorRequestBody withConnectorProvisioningConfig(RegisterConnectorRequestBodyConnectorProvisioningConfig connectorProvisioningConfig) {
         this.connectorProvisioningConfig = connectorProvisioningConfig;
         return this;
@@ -37,6 +51,7 @@ public class RegisterConnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProvisioningType")
     public RegisterConnectorRequestBodyConnectorProvisioningTypeEnum connectorProvisioningType;
+
     public RegisterConnectorRequestBody withConnectorProvisioningType(RegisterConnectorRequestBodyConnectorProvisioningTypeEnum connectorProvisioningType) {
         this.connectorProvisioningType = connectorProvisioningType;
         return this;
@@ -48,9 +63,11 @@ public class RegisterConnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RegisterConnectorRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public RegisterConnectorRequestBody(){}
 }

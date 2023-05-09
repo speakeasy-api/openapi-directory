@@ -15,6 +15,7 @@ public class UpdateFleetCapacityOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public UpdateFleetCapacityOutput withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -23,6 +24,7 @@ public class UpdateFleetCapacityOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public UpdateFleetCapacityOutput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -31,9 +33,11 @@ public class UpdateFleetCapacityOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public UpdateFleetCapacityOutput withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public UpdateFleetCapacityOutput(){}
 }

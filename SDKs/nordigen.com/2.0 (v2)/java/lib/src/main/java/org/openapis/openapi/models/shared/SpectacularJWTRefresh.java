@@ -18,6 +18,7 @@ public class SpectacularJWTRefresh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access")
     public String access;
+
     public SpectacularJWTRefresh withAccess(String access) {
         this.access = access;
         return this;
@@ -29,9 +30,11 @@ public class SpectacularJWTRefresh {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access_expires")
     public Long accessExpires;
+
     public SpectacularJWTRefresh withAccessExpires(Long accessExpires) {
         this.accessExpires = accessExpires;
         return this;
     }
     
+    public SpectacularJWTRefresh(){}
 }

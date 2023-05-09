@@ -15,6 +15,7 @@ public class UpdatePipeRequestBodySourceParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveMQBrokerParameters")
     public org.openapis.openapi.models.shared.UpdatePipeSourceActiveMQBrokerParameters activeMQBrokerParameters;
+
     public UpdatePipeRequestBodySourceParameters withActiveMQBrokerParameters(org.openapis.openapi.models.shared.UpdatePipeSourceActiveMQBrokerParameters activeMQBrokerParameters) {
         this.activeMQBrokerParameters = activeMQBrokerParameters;
         return this;
@@ -23,6 +24,7 @@ public class UpdatePipeRequestBodySourceParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DynamoDBStreamParameters")
     public org.openapis.openapi.models.shared.UpdatePipeSourceDynamoDBStreamParameters dynamoDBStreamParameters;
+
     public UpdatePipeRequestBodySourceParameters withDynamoDBStreamParameters(org.openapis.openapi.models.shared.UpdatePipeSourceDynamoDBStreamParameters dynamoDBStreamParameters) {
         this.dynamoDBStreamParameters = dynamoDBStreamParameters;
         return this;
@@ -31,6 +33,7 @@ public class UpdatePipeRequestBodySourceParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterCriteria")
     public org.openapis.openapi.models.shared.FilterCriteria filterCriteria;
+
     public UpdatePipeRequestBodySourceParameters withFilterCriteria(org.openapis.openapi.models.shared.FilterCriteria filterCriteria) {
         this.filterCriteria = filterCriteria;
         return this;
@@ -39,6 +42,7 @@ public class UpdatePipeRequestBodySourceParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisStreamParameters")
     public org.openapis.openapi.models.shared.UpdatePipeSourceKinesisStreamParameters kinesisStreamParameters;
+
     public UpdatePipeRequestBodySourceParameters withKinesisStreamParameters(org.openapis.openapi.models.shared.UpdatePipeSourceKinesisStreamParameters kinesisStreamParameters) {
         this.kinesisStreamParameters = kinesisStreamParameters;
         return this;
@@ -47,6 +51,7 @@ public class UpdatePipeRequestBodySourceParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManagedStreamingKafkaParameters")
     public org.openapis.openapi.models.shared.UpdatePipeSourceManagedStreamingKafkaParameters managedStreamingKafkaParameters;
+
     public UpdatePipeRequestBodySourceParameters withManagedStreamingKafkaParameters(org.openapis.openapi.models.shared.UpdatePipeSourceManagedStreamingKafkaParameters managedStreamingKafkaParameters) {
         this.managedStreamingKafkaParameters = managedStreamingKafkaParameters;
         return this;
@@ -55,6 +60,7 @@ public class UpdatePipeRequestBodySourceParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RabbitMQBrokerParameters")
     public org.openapis.openapi.models.shared.UpdatePipeSourceRabbitMQBrokerParameters rabbitMQBrokerParameters;
+
     public UpdatePipeRequestBodySourceParameters withRabbitMQBrokerParameters(org.openapis.openapi.models.shared.UpdatePipeSourceRabbitMQBrokerParameters rabbitMQBrokerParameters) {
         this.rabbitMQBrokerParameters = rabbitMQBrokerParameters;
         return this;
@@ -63,6 +69,7 @@ public class UpdatePipeRequestBodySourceParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelfManagedKafkaParameters")
     public org.openapis.openapi.models.shared.UpdatePipeSourceSelfManagedKafkaParameters selfManagedKafkaParameters;
+
     public UpdatePipeRequestBodySourceParameters withSelfManagedKafkaParameters(org.openapis.openapi.models.shared.UpdatePipeSourceSelfManagedKafkaParameters selfManagedKafkaParameters) {
         this.selfManagedKafkaParameters = selfManagedKafkaParameters;
         return this;
@@ -71,9 +78,11 @@ public class UpdatePipeRequestBodySourceParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqsQueueParameters")
     public org.openapis.openapi.models.shared.UpdatePipeSourceSqsQueueParameters sqsQueueParameters;
+
     public UpdatePipeRequestBodySourceParameters withSqsQueueParameters(org.openapis.openapi.models.shared.UpdatePipeSourceSqsQueueParameters sqsQueueParameters) {
         this.sqsQueueParameters = sqsQueueParameters;
         return this;
     }
     
+    public UpdatePipeRequestBodySourceParameters(){}
 }

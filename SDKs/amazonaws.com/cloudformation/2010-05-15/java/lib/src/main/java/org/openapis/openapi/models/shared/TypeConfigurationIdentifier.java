@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TypeConfigurationIdentifier {
     
     public ThirdPartyTypeEnum type;
+
     public TypeConfigurationIdentifier withType(ThirdPartyTypeEnum type) {
         this.type = type;
         return this;
@@ -19,6 +20,7 @@ public class TypeConfigurationIdentifier {
     
     
     public String typeArn;
+
     public TypeConfigurationIdentifier withTypeArn(String typeArn) {
         this.typeArn = typeArn;
         return this;
@@ -26,6 +28,7 @@ public class TypeConfigurationIdentifier {
     
     
     public String typeConfigurationAlias;
+
     public TypeConfigurationIdentifier withTypeConfigurationAlias(String typeConfigurationAlias) {
         this.typeConfigurationAlias = typeConfigurationAlias;
         return this;
@@ -33,6 +36,7 @@ public class TypeConfigurationIdentifier {
     
     
     public String typeConfigurationArn;
+
     public TypeConfigurationIdentifier withTypeConfigurationArn(String typeConfigurationArn) {
         this.typeConfigurationArn = typeConfigurationArn;
         return this;
@@ -40,9 +44,11 @@ public class TypeConfigurationIdentifier {
     
     
     public String typeName;
+
     public TypeConfigurationIdentifier withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public TypeConfigurationIdentifier(){}
 }

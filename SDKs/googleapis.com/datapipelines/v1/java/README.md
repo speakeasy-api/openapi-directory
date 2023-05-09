@@ -16,25 +16,24 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateSecurity;
 import org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateRequest;
 import org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateResponse;
+import org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1PipelineStateEnum;
-import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1PipelineTypeEnum;
-import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1PipelineInput;
-import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1Workload;
-import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1LaunchTemplateRequest;
-import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1LaunchTemplateParameters;
-import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfigurationEnum;
-import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1RuntimeEnvironment;
-import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest;
-import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter;
+import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironment;
 import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoalEnum;
 import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfigurationEnum;
-import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironment;
+import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter;
+import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest;
+import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1LaunchTemplateParameters;
+import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1LaunchTemplateRequest;
+import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1PipelineInput;
+import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1PipelineStateEnum;
+import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1PipelineTypeEnum;
+import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1RuntimeEnvironment;
+import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfigurationEnum;
 import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1ScheduleSpecInput;
+import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1Workload;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -43,147 +42,143 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DatapipelinesProjectsLocationsPipelinesCreateRequest req = new DatapipelinesProjectsLocationsPipelinesCreateRequest() {{
-                dollarXgafv = "2";
+            DatapipelinesProjectsLocationsPipelinesCreateRequest req = new DatapipelinesProjectsLocationsPipelinesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 googleCloudDatapipelinesV1PipelineInput = new GoogleCloudDatapipelinesV1PipelineInput() {{
-                    displayName = "provident";
-                    name = "distinctio";
+                    displayName = "distinctio";
+                    name = "Stuart Stiedemann";
                     pipelineSources = new java.util.HashMap<String, String>() {{
-                        put("unde", "nulla");
-                        put("corrupti", "illum");
-                        put("vel", "error");
-                        put("deserunt", "suscipit");
+                        put("error", "deserunt");
+                        put("suscipit", "iure");
                     }};
                     scheduleInfo = new GoogleCloudDatapipelinesV1ScheduleSpecInput() {{
-                        schedule = "iure";
-                        timeZone = "magnam";
-                    }};
-                    schedulerServiceAccountEmail = "debitis";
-                    state = "STATE_UNSPECIFIED";
-                    type = "PIPELINE_TYPE_STREAMING";
+                        schedule = "magnam";
+                        timeZone = "debitis";
+                    }};;
+                    schedulerServiceAccountEmail = "ipsa";
+                    state = GoogleCloudDatapipelinesV1PipelineStateEnum.STATE_PAUSED;
+                    type = GoogleCloudDatapipelinesV1PipelineTypeEnum.PIPELINE_TYPE_UNSPECIFIED;
                     workload = new GoogleCloudDatapipelinesV1Workload() {{
                         dataflowFlexTemplateRequest = new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest() {{
                             launchParameter = new GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter() {{
-                                containerSpecGcsPath = "tempora";
+                                containerSpecGcsPath = "suscipit";
                                 environment = new GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironment() {{
                                     additionalExperiments = new String[]{{
-                                        add("molestiae"),
                                         add("minus"),
+                                        add("placeat"),
                                     }};
                                     additionalUserLabels = new java.util.HashMap<String, String>() {{
-                                        put("voluptatum", "iusto");
-                                        put("excepturi", "nisi");
-                                        put("recusandae", "temporibus");
-                                        put("ab", "quis");
+                                        put("iusto", "excepturi");
+                                        put("nisi", "recusandae");
+                                        put("temporibus", "ab");
                                     }};
                                     enableStreamingEngine = false;
-                                    flexrsGoal = "FLEXRS_UNSPECIFIED";
-                                    ipConfiguration = "WORKER_IP_PUBLIC";
-                                    kmsKeyName = "perferendis";
-                                    machineType = "ipsam";
-                                    maxWorkers = 832620;
-                                    network = "sapiente";
-                                    numWorkers = 778157;
-                                    serviceAccountEmail = "odit";
-                                    subnetwork = "at";
+                                    flexrsGoal = GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoalEnum.FLEXRS_SPEED_OPTIMIZED;
+                                    ipConfiguration = GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfigurationEnum.WORKER_IP_UNSPECIFIED;
+                                    kmsKeyName = "deserunt";
+                                    machineType = "perferendis";
+                                    maxWorkers = 368241;
+                                    network = "repellendus";
+                                    numWorkers = 957156;
+                                    serviceAccountEmail = "quo";
+                                    subnetwork = "odit";
                                     tempLocation = "at";
-                                    workerRegion = "maiores";
-                                    workerZone = "molestiae";
-                                    zone = "quod";
-                                }};
+                                    workerRegion = "at";
+                                    workerZone = "maiores";
+                                    zone = "molestiae";
+                                }};;
                                 jobName = "quod";
                                 launchOptions = new java.util.HashMap<String, String>() {{
-                                    put("totam", "porro");
-                                    put("dolorum", "dicta");
+                                    put("esse", "totam");
+                                    put("porro", "dolorum");
+                                    put("dicta", "nam");
+                                    put("officia", "occaecati");
                                 }};
                                 parameters = new java.util.HashMap<String, String>() {{
-                                    put("officia", "occaecati");
-                                    put("fugit", "deleniti");
-                                    put("hic", "optio");
+                                    put("deleniti", "hic");
                                 }};
                                 transformNameMappings = new java.util.HashMap<String, String>() {{
-                                    put("beatae", "commodi");
-                                    put("molestiae", "modi");
-                                    put("qui", "impedit");
+                                    put("totam", "beatae");
+                                    put("commodi", "molestiae");
+                                    put("modi", "qui");
+                                    put("impedit", "cum");
                                 }};
                                 update = false;
-                            }};
-                            location = "cum";
-                            projectId = "esse";
+                            }};;
+                            location = "esse";
+                            projectId = "ipsum";
                             validateOnly = false;
-                        }};
+                        }};;
                         dataflowLaunchTemplateRequest = new GoogleCloudDatapipelinesV1LaunchTemplateRequest() {{
-                            gcsPath = "ipsum";
+                            gcsPath = "excepturi";
                             launchParameters = new GoogleCloudDatapipelinesV1LaunchTemplateParameters() {{
                                 environment = new GoogleCloudDatapipelinesV1RuntimeEnvironment() {{
                                     additionalExperiments = new String[]{{
-                                        add("aspernatur"),
                                         add("perferendis"),
-                                        add("ad"),
                                     }};
                                     additionalUserLabels = new java.util.HashMap<String, String>() {{
-                                        put("sed", "iste");
-                                        put("dolor", "natus");
-                                        put("laboriosam", "hic");
+                                        put("natus", "sed");
+                                        put("iste", "dolor");
                                     }};
                                     bypassTempDirValidation = false;
                                     enableStreamingEngine = false;
-                                    ipConfiguration = "WORKER_IP_PRIVATE";
-                                    kmsKeyName = "fuga";
-                                    machineType = "in";
-                                    maxWorkers = 359508;
-                                    network = "iste";
-                                    numWorkers = 437032;
-                                    serviceAccountEmail = "saepe";
-                                    subnetwork = "quidem";
-                                    tempLocation = "architecto";
-                                    workerRegion = "ipsa";
-                                    workerZone = "reiciendis";
-                                    zone = "est";
-                                }};
-                                jobName = "mollitia";
+                                    ipConfiguration = GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfigurationEnum.WORKER_IP_PUBLIC;
+                                    kmsKeyName = "laboriosam";
+                                    machineType = "hic";
+                                    maxWorkers = 902599;
+                                    network = "fuga";
+                                    numWorkers = 449950;
+                                    serviceAccountEmail = "corporis";
+                                    subnetwork = "iste";
+                                    tempLocation = "iure";
+                                    workerRegion = "saepe";
+                                    workerZone = "quidem";
+                                    zone = "architecto";
+                                }};;
+                                jobName = "ipsa";
                                 parameters = new java.util.HashMap<String, String>() {{
-                                    put("dolores", "dolorem");
-                                    put("corporis", "explicabo");
-                                    put("nobis", "enim");
+                                    put("est", "mollitia");
+                                    put("laborum", "dolores");
+                                    put("dolorem", "corporis");
+                                    put("explicabo", "nobis");
                                 }};
                                 transformNameMapping = new java.util.HashMap<String, String>() {{
-                                    put("nemo", "minima");
-                                    put("excepturi", "accusantium");
-                                    put("iure", "culpa");
+                                    put("omnis", "nemo");
+                                    put("minima", "excepturi");
                                 }};
                                 update = false;
-                            }};
-                            location = "doloribus";
-                            projectId = "sapiente";
+                            }};;
+                            location = "accusantium";
+                            projectId = "iure";
                             validateOnly = false;
-                        }};
-                    }};
-                }};
-                accessToken = "architecto";
-                alt = "media";
-                callback = "dolorem";
-                fields = "culpa";
-                key = "consequuntur";
-                oauthToken = "repellat";
-                parent = "mollitia";
+                        }};;
+                    }};;
+                }};;
+                accessToken = "culpa";
+                alt = AltEnum.PROTO;
+                callback = "sapiente";
+                fields = "architecto";
+                key = "mollitia";
+                oauthToken = "dolorem";
                 prettyPrint = false;
-                quotaUser = "occaecati";
-                uploadType = "numquam";
-                uploadProtocol = "commodi";
-            }}            
+                quotaUser = "culpa";
+                uploadType = "consequuntur";
+                uploadProtocol = "repellat";
+            }};            
 
-            DatapipelinesProjectsLocationsPipelinesCreateResponse res = sdk.projects.datapipelinesProjectsLocationsPipelinesCreate(req, new DatapipelinesProjectsLocationsPipelinesCreateSecurity() {{
+            DatapipelinesProjectsLocationsPipelinesCreateResponse res = sdk.projects.datapipelinesProjectsLocationsPipelinesCreate(req, new DatapipelinesProjectsLocationsPipelinesCreateSecurity("mollitia", "occaecati") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleCloudDatapipelinesV1Pipeline.isPresent()) {
+            if (res.googleCloudDatapipelinesV1Pipeline != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -191,16 +186,16 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `datapipelinesProjectsLocationsPipelinesCreate` - Creates a pipeline. For a batch pipeline, you can pass scheduler information. Data Pipelines uses the scheduler information to create an internal scheduler that runs jobs periodically. If the internal scheduler is not configured, you can use RunPipeline to run jobs.
-* `datapipelinesProjectsLocationsPipelinesDelete` - Deletes a pipeline. If a scheduler job is attached to the pipeline, it will be deleted.
-* `datapipelinesProjectsLocationsPipelinesGet` - Looks up a single pipeline. Returns a "NOT_FOUND" error if no such pipeline exists. Returns a "FORBIDDEN" error if the caller doesn't have permission to access it.
-* `datapipelinesProjectsLocationsPipelinesJobsList` - Lists jobs for a given pipeline. Throws a "FORBIDDEN" error if the caller doesn't have permission to access it.
-* `datapipelinesProjectsLocationsPipelinesList` - Lists pipelines. Returns a "FORBIDDEN" error if the caller doesn't have permission to access it.
-* `datapipelinesProjectsLocationsPipelinesPatch` - Updates a pipeline. If successful, the updated Pipeline is returned. Returns `NOT_FOUND` if the pipeline doesn't exist. If UpdatePipeline does not return successfully, you can retry the UpdatePipeline request until you receive a successful response.
-* `datapipelinesProjectsLocationsPipelinesRun` - Creates a job for the specified pipeline directly. You can use this method when the internal scheduler is not configured and you want to trigger the job directly or through an external system. Returns a "NOT_FOUND" error if the pipeline doesn't exist. Returns a "FORBIDDEN" error if the user doesn't have permission to access the pipeline or run jobs for the pipeline.
-* `datapipelinesProjectsLocationsPipelinesStop` - Freezes pipeline execution permanently. If there's a corresponding scheduler entry, it's deleted, and the pipeline state is changed to "ARCHIVED". However, pipeline metadata is retained.
+* [datapipelinesProjectsLocationsPipelinesCreate](docs/projects/README.md#datapipelinesprojectslocationspipelinescreate) - Creates a pipeline. For a batch pipeline, you can pass scheduler information. Data Pipelines uses the scheduler information to create an internal scheduler that runs jobs periodically. If the internal scheduler is not configured, you can use RunPipeline to run jobs.
+* [datapipelinesProjectsLocationsPipelinesDelete](docs/projects/README.md#datapipelinesprojectslocationspipelinesdelete) - Deletes a pipeline. If a scheduler job is attached to the pipeline, it will be deleted.
+* [datapipelinesProjectsLocationsPipelinesGet](docs/projects/README.md#datapipelinesprojectslocationspipelinesget) - Looks up a single pipeline. Returns a "NOT_FOUND" error if no such pipeline exists. Returns a "FORBIDDEN" error if the caller doesn't have permission to access it.
+* [datapipelinesProjectsLocationsPipelinesJobsList](docs/projects/README.md#datapipelinesprojectslocationspipelinesjobslist) - Lists jobs for a given pipeline. Throws a "FORBIDDEN" error if the caller doesn't have permission to access it.
+* [datapipelinesProjectsLocationsPipelinesList](docs/projects/README.md#datapipelinesprojectslocationspipelineslist) - Lists pipelines. Returns a "FORBIDDEN" error if the caller doesn't have permission to access it.
+* [datapipelinesProjectsLocationsPipelinesPatch](docs/projects/README.md#datapipelinesprojectslocationspipelinespatch) - Updates a pipeline. If successful, the updated Pipeline is returned. Returns `NOT_FOUND` if the pipeline doesn't exist. If UpdatePipeline does not return successfully, you can retry the UpdatePipeline request until you receive a successful response.
+* [datapipelinesProjectsLocationsPipelinesRun](docs/projects/README.md#datapipelinesprojectslocationspipelinesrun) - Creates a job for the specified pipeline directly. You can use this method when the internal scheduler is not configured and you want to trigger the job directly or through an external system. Returns a "NOT_FOUND" error if the pipeline doesn't exist. Returns a "FORBIDDEN" error if the user doesn't have permission to access the pipeline or run jobs for the pipeline.
+* [datapipelinesProjectsLocationsPipelinesStop](docs/projects/README.md#datapipelinesprojectslocationspipelinesstop) - Freezes pipeline execution permanently. If there's a corresponding scheduler entry, it's deleted, and the pipeline state is changed to "ARCHIVED". However, pipeline metadata is retained.
 <!-- End SDK Available Operations -->
 
 ### Maturity

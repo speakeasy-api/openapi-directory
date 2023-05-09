@@ -18,6 +18,7 @@ public class GooglePlayDeveloperReportingV1alpha1ErrorIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public String cause;
+
     public GooglePlayDeveloperReportingV1alpha1ErrorIssue withCause(String cause) {
         this.cause = cause;
         return this;
@@ -29,6 +30,7 @@ public class GooglePlayDeveloperReportingV1alpha1ErrorIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GooglePlayDeveloperReportingV1alpha1ErrorIssue withLocation(String location) {
         this.location = location;
         return this;
@@ -40,6 +42,7 @@ public class GooglePlayDeveloperReportingV1alpha1ErrorIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GooglePlayDeveloperReportingV1alpha1ErrorIssue withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class GooglePlayDeveloperReportingV1alpha1ErrorIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GooglePlayDeveloperReportingV1alpha1ErrorIssueTypeEnum type;
+
     public GooglePlayDeveloperReportingV1alpha1ErrorIssue withType(GooglePlayDeveloperReportingV1alpha1ErrorIssueTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GooglePlayDeveloperReportingV1alpha1ErrorIssue(){}
 }

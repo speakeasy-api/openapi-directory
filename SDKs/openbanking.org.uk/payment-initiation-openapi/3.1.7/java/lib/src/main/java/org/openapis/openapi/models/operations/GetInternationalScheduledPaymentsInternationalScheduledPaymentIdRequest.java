@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInternationalScheduledPaymentsInternationalScheduledPaymentIdRequest {
@@ -12,6 +13,7 @@ public class GetInternationalScheduledPaymentsInternationalScheduledPaymentIdReq
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public GetInternationalScheduledPaymentsInternationalScheduledPaymentIdRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -22,6 +24,7 @@ public class GetInternationalScheduledPaymentsInternationalScheduledPaymentIdReq
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=InternationalScheduledPaymentId")
     public String internationalScheduledPaymentId;
+
     public GetInternationalScheduledPaymentsInternationalScheduledPaymentIdRequest withInternationalScheduledPaymentId(String internationalScheduledPaymentId) {
         this.internationalScheduledPaymentId = internationalScheduledPaymentId;
         return this;
@@ -32,6 +35,7 @@ public class GetInternationalScheduledPaymentsInternationalScheduledPaymentIdReq
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public GetInternationalScheduledPaymentsInternationalScheduledPaymentIdRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -44,6 +48,7 @@ public class GetInternationalScheduledPaymentsInternationalScheduledPaymentIdReq
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public GetInternationalScheduledPaymentsInternationalScheduledPaymentIdRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -54,6 +59,7 @@ public class GetInternationalScheduledPaymentsInternationalScheduledPaymentIdReq
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public GetInternationalScheduledPaymentsInternationalScheduledPaymentIdRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -64,9 +70,14 @@ public class GetInternationalScheduledPaymentsInternationalScheduledPaymentIdReq
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public GetInternationalScheduledPaymentsInternationalScheduledPaymentIdRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     
+    public GetInternationalScheduledPaymentsInternationalScheduledPaymentIdRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("InternationalScheduledPaymentId") String internationalScheduledPaymentId) {
+        this.authorization = authorization;
+        this.internationalScheduledPaymentId = internationalScheduledPaymentId;
+  }
 }

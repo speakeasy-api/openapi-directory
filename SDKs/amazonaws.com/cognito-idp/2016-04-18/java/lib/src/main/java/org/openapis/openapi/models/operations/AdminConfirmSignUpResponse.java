@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminConfirmSignUpResponse {
@@ -12,6 +13,7 @@ public class AdminConfirmSignUpResponse {
      */
     
     public java.util.Map<String, Object> adminConfirmSignUpResponse;
+
     public AdminConfirmSignUpResponse withAdminConfirmSignUpResponse(java.util.Map<String, Object> adminConfirmSignUpResponse) {
         this.adminConfirmSignUpResponse = adminConfirmSignUpResponse;
         return this;
@@ -19,6 +21,7 @@ public class AdminConfirmSignUpResponse {
     
     
     public String contentType;
+
     public AdminConfirmSignUpResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AdminConfirmSignUpResponse {
      */
     
     public Object internalErrorException;
+
     public AdminConfirmSignUpResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AdminConfirmSignUpResponse {
      */
     
     public Object invalidLambdaResponseException;
+
     public AdminConfirmSignUpResponse withInvalidLambdaResponseException(Object invalidLambdaResponseException) {
         this.invalidLambdaResponseException = invalidLambdaResponseException;
         return this;
@@ -49,6 +54,7 @@ public class AdminConfirmSignUpResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminConfirmSignUpResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class AdminConfirmSignUpResponse {
      */
     
     public Object limitExceededException;
+
     public AdminConfirmSignUpResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class AdminConfirmSignUpResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminConfirmSignUpResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -79,6 +87,7 @@ public class AdminConfirmSignUpResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminConfirmSignUpResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class AdminConfirmSignUpResponse {
     
     
     public Integer statusCode;
+
     public AdminConfirmSignUpResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class AdminConfirmSignUpResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminConfirmSignUpResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class AdminConfirmSignUpResponse {
      */
     
     public Object tooManyFailedAttemptsException;
+
     public AdminConfirmSignUpResponse withTooManyFailedAttemptsException(Object tooManyFailedAttemptsException) {
         this.tooManyFailedAttemptsException = tooManyFailedAttemptsException;
         return this;
@@ -113,6 +125,7 @@ public class AdminConfirmSignUpResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminConfirmSignUpResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -123,6 +136,7 @@ public class AdminConfirmSignUpResponse {
      */
     
     public Object unexpectedLambdaException;
+
     public AdminConfirmSignUpResponse withUnexpectedLambdaException(Object unexpectedLambdaException) {
         this.unexpectedLambdaException = unexpectedLambdaException;
         return this;
@@ -133,6 +147,7 @@ public class AdminConfirmSignUpResponse {
      */
     
     public Object userLambdaValidationException;
+
     public AdminConfirmSignUpResponse withUserLambdaValidationException(Object userLambdaValidationException) {
         this.userLambdaValidationException = userLambdaValidationException;
         return this;
@@ -143,9 +158,14 @@ public class AdminConfirmSignUpResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminConfirmSignUpResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public AdminConfirmSignUpResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

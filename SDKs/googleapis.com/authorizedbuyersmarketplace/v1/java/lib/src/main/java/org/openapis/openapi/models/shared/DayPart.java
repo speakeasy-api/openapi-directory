@@ -18,6 +18,7 @@ public class DayPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfWeek")
     public DayPartDayOfWeekEnum dayOfWeek;
+
     public DayPart withDayOfWeek(DayPartDayOfWeekEnum dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -29,6 +30,7 @@ public class DayPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public TimeOfDay endTime;
+
     public DayPart withEndTime(TimeOfDay endTime) {
         this.endTime = endTime;
         return this;
@@ -40,9 +42,11 @@ public class DayPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public TimeOfDay startTime;
+
     public DayPart withStartTime(TimeOfDay startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DayPart(){}
 }

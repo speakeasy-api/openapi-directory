@@ -15,6 +15,7 @@ public class GetBackendStorageResponseResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketName")
     public String bucketName;
+
     public GetBackendStorageResponseResourceConfig withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -22,6 +23,7 @@ public class GetBackendStorageResponseResourceConfig {
     
     @JsonProperty("Imported")
     public Boolean imported;
+
     public GetBackendStorageResponseResourceConfig withImported(Boolean imported) {
         this.imported = imported;
         return this;
@@ -30,6 +32,7 @@ public class GetBackendStorageResponseResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permissions")
     public GetBackendStorageResponseResourceConfigPermissions permissions;
+
     public GetBackendStorageResponseResourceConfig withPermissions(GetBackendStorageResponseResourceConfigPermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -37,9 +40,14 @@ public class GetBackendStorageResponseResourceConfig {
     
     @JsonProperty("ServiceName")
     public GetBackendStorageResponseResourceConfigServiceNameEnum serviceName;
+
     public GetBackendStorageResponseResourceConfig withServiceName(GetBackendStorageResponseResourceConfigServiceNameEnum serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public GetBackendStorageResponseResourceConfig(@JsonProperty("Imported") Boolean imported, @JsonProperty("ServiceName") GetBackendStorageResponseResourceConfigServiceNameEnum serviceName) {
+        this.imported = imported;
+        this.serviceName = serviceName;
+  }
 }

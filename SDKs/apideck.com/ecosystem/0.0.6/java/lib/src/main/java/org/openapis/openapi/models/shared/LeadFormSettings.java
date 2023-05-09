@@ -12,6 +12,7 @@ public class LeadFormSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capture_form_enabled")
     public Boolean captureFormEnabled;
+
     public LeadFormSettings withCaptureFormEnabled(Boolean captureFormEnabled) {
         this.captureFormEnabled = captureFormEnabled;
         return this;
@@ -20,6 +21,7 @@ public class LeadFormSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name_field_enabled")
     public Boolean firstNameFieldEnabled;
+
     public LeadFormSettings withFirstNameFieldEnabled(Boolean firstNameFieldEnabled) {
         this.firstNameFieldEnabled = firstNameFieldEnabled;
         return this;
@@ -28,6 +30,7 @@ public class LeadFormSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name_field_required")
     public Boolean firstNameFieldRequired;
+
     public LeadFormSettings withFirstNameFieldRequired(Boolean firstNameFieldRequired) {
         this.firstNameFieldRequired = firstNameFieldRequired;
         return this;
@@ -36,6 +39,7 @@ public class LeadFormSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integration_enabled")
     public Boolean integrationEnabled;
+
     public LeadFormSettings withIntegrationEnabled(Boolean integrationEnabled) {
         this.integrationEnabled = integrationEnabled;
         return this;
@@ -44,6 +48,7 @@ public class LeadFormSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name_field_enabled")
     public Boolean lastNameFieldEnabled;
+
     public LeadFormSettings withLastNameFieldEnabled(Boolean lastNameFieldEnabled) {
         this.lastNameFieldEnabled = lastNameFieldEnabled;
         return this;
@@ -52,6 +57,7 @@ public class LeadFormSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name_field_required")
     public Boolean lastNameFieldRequired;
+
     public LeadFormSettings withLastNameFieldRequired(Boolean lastNameFieldRequired) {
         this.lastNameFieldRequired = lastNameFieldRequired;
         return this;
@@ -60,6 +66,7 @@ public class LeadFormSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephone_field_enabled")
     public Boolean telephoneFieldEnabled;
+
     public LeadFormSettings withTelephoneFieldEnabled(Boolean telephoneFieldEnabled) {
         this.telephoneFieldEnabled = telephoneFieldEnabled;
         return this;
@@ -68,6 +75,7 @@ public class LeadFormSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephone_field_required")
     public Boolean telephoneFieldRequired;
+
     public LeadFormSettings withTelephoneFieldRequired(Boolean telephoneFieldRequired) {
         this.telephoneFieldRequired = telephoneFieldRequired;
         return this;
@@ -76,9 +84,11 @@ public class LeadFormSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("work_email_validation")
     public Boolean workEmailValidation;
+
     public LeadFormSettings withWorkEmailValidation(Boolean workEmailValidation) {
         this.workEmailValidation = workEmailValidation;
         return this;
     }
     
+    public LeadFormSettings(){}
 }

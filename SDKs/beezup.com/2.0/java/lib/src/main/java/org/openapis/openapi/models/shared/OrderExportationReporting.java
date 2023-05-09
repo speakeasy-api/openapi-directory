@@ -22,6 +22,7 @@ public class OrderExportationReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("abortionUtcDate")
     public OffsetDateTime abortionUtcDate;
+
     public OrderExportationReporting withAbortionUtcDate(OffsetDateTime abortionUtcDate) {
         this.abortionUtcDate = abortionUtcDate;
         return this;
@@ -32,6 +33,7 @@ public class OrderExportationReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("beginUtcDate")
     public OffsetDateTime beginUtcDate;
+
     public OrderExportationReporting withBeginUtcDate(OffsetDateTime beginUtcDate) {
         this.beginUtcDate = beginUtcDate;
         return this;
@@ -40,6 +42,7 @@ public class OrderExportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blobNameUri")
     public String blobNameUri;
+
     public OrderExportationReporting withBlobNameUri(String blobNameUri) {
         this.blobNameUri = blobNameUri;
         return this;
@@ -50,6 +53,7 @@ public class OrderExportationReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endUtcDate")
     public OffsetDateTime endUtcDate;
+
     public OrderExportationReporting withEndUtcDate(OffsetDateTime endUtcDate) {
         this.endUtcDate = endUtcDate;
         return this;
@@ -59,6 +63,7 @@ public class OrderExportationReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("enqueuedUtcDate")
     public OffsetDateTime enqueuedUtcDate;
+
     public OrderExportationReporting withEnqueuedUtcDate(OffsetDateTime enqueuedUtcDate) {
         this.enqueuedUtcDate = enqueuedUtcDate;
         return this;
@@ -67,6 +72,7 @@ public class OrderExportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public OrderExportationReporting withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -74,6 +80,7 @@ public class OrderExportationReporting {
     
     @JsonProperty("executionUUID")
     public String executionUUID;
+
     public OrderExportationReporting withExecutionUUID(String executionUUID) {
         this.executionUUID = executionUUID;
         return this;
@@ -84,6 +91,7 @@ public class OrderExportationReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationUtcDate")
     public OffsetDateTime expirationUtcDate;
+
     public OrderExportationReporting withExpirationUtcDate(OffsetDateTime expirationUtcDate) {
         this.expirationUtcDate = expirationUtcDate;
         return this;
@@ -94,6 +102,7 @@ public class OrderExportationReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("failureUtcDate")
     public OffsetDateTime failureUtcDate;
+
     public OrderExportationReporting withFailureUtcDate(OffsetDateTime failureUtcDate) {
         this.failureUtcDate = failureUtcDate;
         return this;
@@ -101,6 +110,7 @@ public class OrderExportationReporting {
     
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public OrderExportationReporting withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -112,6 +122,7 @@ public class OrderExportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonCriteria")
     public String jsonCriteria;
+
     public OrderExportationReporting withJsonCriteria(String jsonCriteria) {
         this.jsonCriteria = jsonCriteria;
         return this;
@@ -122,6 +133,7 @@ public class OrderExportationReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateUtcDate")
     public OffsetDateTime lastUpdateUtcDate;
+
     public OrderExportationReporting withLastUpdateUtcDate(OffsetDateTime lastUpdateUtcDate) {
         this.lastUpdateUtcDate = lastUpdateUtcDate;
         return this;
@@ -130,6 +142,7 @@ public class OrderExportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderCount")
     public Integer orderCount;
+
     public OrderExportationReporting withOrderCount(Integer orderCount) {
         this.orderCount = orderCount;
         return this;
@@ -137,6 +150,7 @@ public class OrderExportationReporting {
     
     @JsonProperty("processingStatus")
     public OrderExportationReportingProcessingStatusEnum processingStatus;
+
     public OrderExportationReporting withProcessingStatus(OrderExportationReportingProcessingStatusEnum processingStatus) {
         this.processingStatus = processingStatus;
         return this;
@@ -145,6 +159,7 @@ public class OrderExportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remainingOrderCount")
     public Integer remainingOrderCount;
+
     public OrderExportationReporting withRemainingOrderCount(Integer remainingOrderCount) {
         this.remainingOrderCount = remainingOrderCount;
         return this;
@@ -155,6 +170,7 @@ public class OrderExportationReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("resumedUtcDate")
     public OffsetDateTime resumedUtcDate;
+
     public OrderExportationReporting withResumedUtcDate(OffsetDateTime resumedUtcDate) {
         this.resumedUtcDate = resumedUtcDate;
         return this;
@@ -165,6 +181,7 @@ public class OrderExportationReporting {
      */
     @JsonProperty("sourceType")
     public SourceTypeEnum sourceType;
+
     public OrderExportationReporting withSourceType(SourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -176,6 +193,7 @@ public class OrderExportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceUserId")
     public String sourceUserId;
+
     public OrderExportationReporting withSourceUserId(String sourceUserId) {
         this.sourceUserId = sourceUserId;
         return this;
@@ -183,6 +201,7 @@ public class OrderExportationReporting {
     
     @JsonProperty("sourceUserName")
     public String sourceUserName;
+
     public OrderExportationReporting withSourceUserName(String sourceUserName) {
         this.sourceUserName = sourceUserName;
         return this;
@@ -193,6 +212,7 @@ public class OrderExportationReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("suspendedUtcDate")
     public OffsetDateTime suspendedUtcDate;
+
     public OrderExportationReporting withSuspendedUtcDate(OffsetDateTime suspendedUtcDate) {
         this.suspendedUtcDate = suspendedUtcDate;
         return this;
@@ -201,6 +221,7 @@ public class OrderExportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutDuration")
     public String timeoutDuration;
+
     public OrderExportationReporting withTimeoutDuration(String timeoutDuration) {
         this.timeoutDuration = timeoutDuration;
         return this;
@@ -209,9 +230,18 @@ public class OrderExportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warningMessage")
     public String warningMessage;
+
     public OrderExportationReporting withWarningMessage(String warningMessage) {
         this.warningMessage = warningMessage;
         return this;
     }
     
+    public OrderExportationReporting(@JsonProperty("enqueuedUtcDate") OffsetDateTime enqueuedUtcDate, @JsonProperty("executionUUID") String executionUUID, @JsonProperty("ipAddress") String ipAddress, @JsonProperty("processingStatus") OrderExportationReportingProcessingStatusEnum processingStatus, @JsonProperty("sourceType") SourceTypeEnum sourceType, @JsonProperty("sourceUserName") String sourceUserName) {
+        this.enqueuedUtcDate = enqueuedUtcDate;
+        this.executionUUID = executionUUID;
+        this.ipAddress = ipAddress;
+        this.processingStatus = processingStatus;
+        this.sourceType = sourceType;
+        this.sourceUserName = sourceUserName;
+  }
 }

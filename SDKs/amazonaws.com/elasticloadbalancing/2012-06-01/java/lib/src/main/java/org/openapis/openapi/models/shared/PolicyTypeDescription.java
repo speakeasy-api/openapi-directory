@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PolicyTypeDescription {
     
     public String description;
+
     public PolicyTypeDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class PolicyTypeDescription {
     
     
     public PolicyAttributeTypeDescription[] policyAttributeTypeDescriptions;
+
     public PolicyTypeDescription withPolicyAttributeTypeDescriptions(PolicyAttributeTypeDescription[] policyAttributeTypeDescriptions) {
         this.policyAttributeTypeDescriptions = policyAttributeTypeDescriptions;
         return this;
@@ -26,9 +28,11 @@ public class PolicyTypeDescription {
     
     
     public String policyTypeName;
+
     public PolicyTypeDescription withPolicyTypeName(String policyTypeName) {
         this.policyTypeName = policyTypeName;
         return this;
     }
     
+    public PolicyTypeDescription(){}
 }

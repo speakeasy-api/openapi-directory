@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class UpdateSAMLProviderResponse {
     
     public String samlProviderArn;
+
     public UpdateSAMLProviderResponse withSAMLProviderArn(String samlProviderArn) {
         this.samlProviderArn = samlProviderArn;
         return this;
     }
     
+    public UpdateSAMLProviderResponse(){}
 }

@@ -1106,6 +1106,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/CodeRepository.java
 lib/src/main/java/org/openapis/openapi/models/shared/CanvasAppSettings.java
 lib/src/main/java/org/openapis/openapi/models/shared/TimeSeriesForecastingSettings.java
 lib/src/main/java/org/openapis/openapi/models/shared/FeatureStatusEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/ModelRegisterSettings.java
 lib/src/main/java/org/openapis/openapi/models/shared/DefaultSpaceSettings.java
 lib/src/main/java/org/openapis/openapi/models/shared/AuthModeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AppSecurityGroupManagementEnum.java
@@ -1152,6 +1153,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/CaptureContentTypeHeader.ja
 lib/src/main/java/org/openapis/openapi/models/shared/AsyncInferenceConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/AsyncInferenceOutputConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/AsyncInferenceNotificationConfig.java
+lib/src/main/java/org/openapis/openapi/models/shared/AsyncNotificationTopicTypesEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AsyncInferenceClientConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateExperimentResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateExperimentRequest.java
@@ -2182,4 +2184,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorkforceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorkteamResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorkteamRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

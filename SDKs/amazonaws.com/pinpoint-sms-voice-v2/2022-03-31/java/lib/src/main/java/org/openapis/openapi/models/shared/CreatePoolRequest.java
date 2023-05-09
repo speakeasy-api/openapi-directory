@@ -12,6 +12,7 @@ public class CreatePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreatePoolRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreatePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionProtectionEnabled")
     public Boolean deletionProtectionEnabled;
+
     public CreatePoolRequest withDeletionProtectionEnabled(Boolean deletionProtectionEnabled) {
         this.deletionProtectionEnabled = deletionProtectionEnabled;
         return this;
@@ -27,6 +29,7 @@ public class CreatePoolRequest {
     
     @JsonProperty("IsoCountryCode")
     public String isoCountryCode;
+
     public CreatePoolRequest withIsoCountryCode(String isoCountryCode) {
         this.isoCountryCode = isoCountryCode;
         return this;
@@ -34,6 +37,7 @@ public class CreatePoolRequest {
     
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public CreatePoolRequest withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -41,6 +45,7 @@ public class CreatePoolRequest {
     
     @JsonProperty("OriginationIdentity")
     public String originationIdentity;
+
     public CreatePoolRequest withOriginationIdentity(String originationIdentity) {
         this.originationIdentity = originationIdentity;
         return this;
@@ -49,9 +54,15 @@ public class CreatePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreatePoolRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePoolRequest(@JsonProperty("IsoCountryCode") String isoCountryCode, @JsonProperty("MessageType") MessageTypeEnum messageType, @JsonProperty("OriginationIdentity") String originationIdentity) {
+        this.isoCountryCode = isoCountryCode;
+        this.messageType = messageType;
+        this.originationIdentity = originationIdentity;
+  }
 }

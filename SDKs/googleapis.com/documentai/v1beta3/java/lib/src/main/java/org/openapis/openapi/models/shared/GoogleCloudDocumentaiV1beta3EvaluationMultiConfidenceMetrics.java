@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auprc")
     public Float auprc;
+
     public GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetrics withAuprc(Float auprc) {
         this.auprc = auprc;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auprcExact")
     public Float auprcExact;
+
     public GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetrics withAuprcExact(Float auprcExact) {
         this.auprcExact = auprcExact;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceLevelMetrics")
     public GoogleCloudDocumentaiV1beta3EvaluationConfidenceLevelMetrics[] confidenceLevelMetrics;
+
     public GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetrics withConfidenceLevelMetrics(GoogleCloudDocumentaiV1beta3EvaluationConfidenceLevelMetrics[] confidenceLevelMetrics) {
         this.confidenceLevelMetrics = confidenceLevelMetrics;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceLevelMetricsExact")
     public GoogleCloudDocumentaiV1beta3EvaluationConfidenceLevelMetrics[] confidenceLevelMetricsExact;
+
     public GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetrics withConfidenceLevelMetricsExact(GoogleCloudDocumentaiV1beta3EvaluationConfidenceLevelMetrics[] confidenceLevelMetricsExact) {
         this.confidenceLevelMetricsExact = confidenceLevelMetricsExact;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedCalibrationError")
     public Float estimatedCalibrationError;
+
     public GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetrics withEstimatedCalibrationError(Float estimatedCalibrationError) {
         this.estimatedCalibrationError = estimatedCalibrationError;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedCalibrationErrorExact")
     public Float estimatedCalibrationErrorExact;
+
     public GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetrics withEstimatedCalibrationErrorExact(Float estimatedCalibrationErrorExact) {
         this.estimatedCalibrationErrorExact = estimatedCalibrationErrorExact;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricsType")
     public GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetricsMetricsTypeEnum metricsType;
+
     public GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetrics withMetricsType(GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetricsMetricsTypeEnum metricsType) {
         this.metricsType = metricsType;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3EvaluationMultiConfidenceMetrics(){}
 }

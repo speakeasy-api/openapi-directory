@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribePipelinesInput {
     @JsonProperty("pipelineIds")
     public String[] pipelineIds;
+
     public DescribePipelinesInput withPipelineIds(String[] pipelineIds) {
         this.pipelineIds = pipelineIds;
         return this;
     }
     
+    public DescribePipelinesInput(@JsonProperty("pipelineIds") String[] pipelineIds) {
+        this.pipelineIds = pipelineIds;
+  }
 }

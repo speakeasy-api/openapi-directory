@@ -149,6 +149,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -181,7 +186,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSessionResponse res = new org.openapis.openapi.models.operations.DeleteSessionResponse() {{
+        org.openapis.openapi.models.operations.DeleteSessionResponse res = new org.openapis.openapi.models.operations.DeleteSessionResponse(contentType, httpRes.statusCode()) {{
             deleteSessionResponse = null;
             notFoundException = null;
             badRequestException = null;
@@ -189,8 +194,6 @@ public class SDK {
             internalFailureException = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -274,15 +277,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSessionResponse res = new org.openapis.openapi.models.operations.GetSessionResponse() {{
+        org.openapis.openapi.models.operations.GetSessionResponse res = new org.openapis.openapi.models.operations.GetSessionResponse(contentType, httpRes.statusCode()) {{
             getSessionResponse = null;
             notFoundException = null;
             badRequestException = null;
             limitExceededException = null;
             internalFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -358,7 +359,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostContentResponse res = new org.openapis.openapi.models.operations.PostContentResponse() {{
+        org.openapis.openapi.models.operations.PostContentResponse res = new org.openapis.openapi.models.operations.PostContentResponse(contentType, httpRes.statusCode()) {{
             postContentResponse = null;
             notFoundException = null;
             badRequestException = null;
@@ -372,8 +373,6 @@ public class SDK {
             badGatewayException = null;
             loopDetectedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -498,7 +497,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTextResponse res = new org.openapis.openapi.models.operations.PostTextResponse() {{
+        org.openapis.openapi.models.operations.PostTextResponse res = new org.openapis.openapi.models.operations.PostTextResponse(contentType, httpRes.statusCode()) {{
             postTextResponse = null;
             notFoundException = null;
             badRequestException = null;
@@ -509,8 +508,6 @@ public class SDK {
             badGatewayException = null;
             loopDetectedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -614,7 +611,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSessionResponse res = new org.openapis.openapi.models.operations.PutSessionResponse() {{
+        org.openapis.openapi.models.operations.PutSessionResponse res = new org.openapis.openapi.models.operations.PutSessionResponse(contentType, httpRes.statusCode()) {{
             putSessionResponse = null;
             notFoundException = null;
             badRequestException = null;
@@ -625,8 +622,6 @@ public class SDK {
             dependencyFailedException = null;
             badGatewayException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

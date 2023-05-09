@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2RedactImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extractedText")
     public String extractedText;
+
     public GooglePrivacyDlpV2RedactImageResponse withExtractedText(String extractedText) {
         this.extractedText = extractedText;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2RedactImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inspectResult")
     public GooglePrivacyDlpV2InspectResult inspectResult;
+
     public GooglePrivacyDlpV2RedactImageResponse withInspectResult(GooglePrivacyDlpV2InspectResult inspectResult) {
         this.inspectResult = inspectResult;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2RedactImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redactedImage")
     public String redactedImage;
+
     public GooglePrivacyDlpV2RedactImageResponse withRedactedImage(String redactedImage) {
         this.redactedImage = redactedImage;
         return this;
     }
     
+    public GooglePrivacyDlpV2RedactImageResponse(){}
 }

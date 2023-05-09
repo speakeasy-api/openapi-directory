@@ -15,6 +15,7 @@ public class ListLensSharesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensShareSummaries")
     public LensShareSummary[] lensShareSummaries;
+
     public ListLensSharesOutput withLensShareSummaries(LensShareSummary[] lensShareSummaries) {
         this.lensShareSummaries = lensShareSummaries;
         return this;
@@ -26,9 +27,11 @@ public class ListLensSharesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLensSharesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLensSharesOutput(){}
 }

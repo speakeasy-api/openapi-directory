@@ -20,6 +20,7 @@ public class ImportFailureListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public ImportFailureListItem withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -28,6 +29,7 @@ public class ImportFailureListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorType")
     public String errorType;
+
     public ImportFailureListItem withErrorType(String errorType) {
         this.errorType = errorType;
         return this;
@@ -38,6 +40,7 @@ public class ImportFailureListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public ImportFailureListItem withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -46,6 +49,7 @@ public class ImportFailureListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public ImportFailureListItem withLocation(String location) {
         this.location = location;
         return this;
@@ -54,9 +58,11 @@ public class ImportFailureListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ImportFailureStatusEnum status;
+
     public ImportFailureListItem withStatus(ImportFailureStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ImportFailureListItem(){}
 }

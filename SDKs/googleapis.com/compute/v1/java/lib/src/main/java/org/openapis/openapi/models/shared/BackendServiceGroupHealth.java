@@ -18,6 +18,7 @@ public class BackendServiceGroupHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public BackendServiceGroupHealth withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class BackendServiceGroupHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthStatus")
     public HealthStatus[] healthStatus;
+
     public BackendServiceGroupHealth withHealthStatus(HealthStatus[] healthStatus) {
         this.healthStatus = healthStatus;
         return this;
@@ -40,9 +42,11 @@ public class BackendServiceGroupHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BackendServiceGroupHealth withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public BackendServiceGroupHealth(){}
 }

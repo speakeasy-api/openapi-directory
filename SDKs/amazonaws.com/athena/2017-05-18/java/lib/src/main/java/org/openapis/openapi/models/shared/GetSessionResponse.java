@@ -15,6 +15,7 @@ public class GetSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GetSessionResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class GetSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineConfiguration")
     public EngineConfiguration engineConfiguration;
+
     public GetSessionResponse withEngineConfiguration(EngineConfiguration engineConfiguration) {
         this.engineConfiguration = engineConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class GetSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public String engineVersion;
+
     public GetSessionResponse withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -39,6 +42,7 @@ public class GetSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookVersion")
     public String notebookVersion;
+
     public GetSessionResponse withNotebookVersion(String notebookVersion) {
         this.notebookVersion = notebookVersion;
         return this;
@@ -47,6 +51,7 @@ public class GetSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionConfiguration")
     public SessionConfiguration sessionConfiguration;
+
     public GetSessionResponse withSessionConfiguration(SessionConfiguration sessionConfiguration) {
         this.sessionConfiguration = sessionConfiguration;
         return this;
@@ -55,6 +60,7 @@ public class GetSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionId")
     public String sessionId;
+
     public GetSessionResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -63,6 +69,7 @@ public class GetSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statistics")
     public SessionStatistics statistics;
+
     public GetSessionResponse withStatistics(SessionStatistics statistics) {
         this.statistics = statistics;
         return this;
@@ -71,6 +78,7 @@ public class GetSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SessionStatus status;
+
     public GetSessionResponse withStatus(SessionStatus status) {
         this.status = status;
         return this;
@@ -79,9 +87,11 @@ public class GetSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public GetSessionResponse withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public GetSessionResponse(){}
 }

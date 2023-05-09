@@ -53,11 +53,9 @@ public class ContentFilteringRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkContentFilteringResponse res = new org.openapis.openapi.models.operations.GetNetworkContentFilteringResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkContentFilteringResponse res = new org.openapis.openapi.models.operations.GetNetworkContentFilteringResponse(contentType, httpRes.statusCode()) {{
             getNetworkContentFiltering200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,11 +93,9 @@ public class ContentFilteringRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkContentFilteringResponse res = new org.openapis.openapi.models.operations.UpdateNetworkContentFilteringResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkContentFilteringResponse res = new org.openapis.openapi.models.operations.UpdateNetworkContentFilteringResponse(contentType, httpRes.statusCode()) {{
             updateNetworkContentFiltering200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

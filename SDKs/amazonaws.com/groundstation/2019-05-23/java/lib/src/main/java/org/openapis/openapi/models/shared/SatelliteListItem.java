@@ -15,6 +15,7 @@ public class SatelliteListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentEphemeris")
     public EphemerisMetaData currentEphemeris;
+
     public SatelliteListItem withCurrentEphemeris(EphemerisMetaData currentEphemeris) {
         this.currentEphemeris = currentEphemeris;
         return this;
@@ -23,6 +24,7 @@ public class SatelliteListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groundStations")
     public String[] groundStations;
+
     public SatelliteListItem withGroundStations(String[] groundStations) {
         this.groundStations = groundStations;
         return this;
@@ -31,6 +33,7 @@ public class SatelliteListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noradSatelliteID")
     public Long noradSatelliteID;
+
     public SatelliteListItem withNoradSatelliteID(Long noradSatelliteID) {
         this.noradSatelliteID = noradSatelliteID;
         return this;
@@ -39,6 +42,7 @@ public class SatelliteListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satelliteArn")
     public String satelliteArn;
+
     public SatelliteListItem withSatelliteArn(String satelliteArn) {
         this.satelliteArn = satelliteArn;
         return this;
@@ -47,9 +51,11 @@ public class SatelliteListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satelliteId")
     public String satelliteId;
+
     public SatelliteListItem withSatelliteId(String satelliteId) {
         this.satelliteId = satelliteId;
         return this;
     }
     
+    public SatelliteListItem(){}
 }

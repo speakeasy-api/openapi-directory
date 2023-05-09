@@ -15,9 +15,11 @@ public class AddJobFlowStepsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepIds")
     public String[] stepIds;
+
     public AddJobFlowStepsOutput withStepIds(String[] stepIds) {
         this.stepIds = stepIds;
         return this;
     }
     
+    public AddJobFlowStepsOutput(){}
 }

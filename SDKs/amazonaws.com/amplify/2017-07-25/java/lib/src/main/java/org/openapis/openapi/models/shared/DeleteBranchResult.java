@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteBranchResult {
     @JsonProperty("branch")
     public Branch branch;
+
     public DeleteBranchResult withBranch(Branch branch) {
         this.branch = branch;
         return this;
     }
     
+    public DeleteBranchResult(@JsonProperty("branch") Branch branch) {
+        this.branch = branch;
+  }
 }

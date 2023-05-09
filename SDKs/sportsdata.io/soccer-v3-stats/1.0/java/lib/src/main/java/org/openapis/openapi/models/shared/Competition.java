@@ -12,6 +12,7 @@ public class Competition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AreaId")
     public Long areaId;
+
     public Competition withAreaId(Long areaId) {
         this.areaId = areaId;
         return this;
@@ -20,6 +21,7 @@ public class Competition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AreaName")
     public String areaName;
+
     public Competition withAreaName(String areaName) {
         this.areaName = areaName;
         return this;
@@ -28,6 +30,7 @@ public class Competition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompetitionId")
     public Long competitionId;
+
     public Competition withCompetitionId(Long competitionId) {
         this.competitionId = competitionId;
         return this;
@@ -36,6 +39,7 @@ public class Competition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public Competition withFormat(String format) {
         this.format = format;
         return this;
@@ -44,6 +48,7 @@ public class Competition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gender")
     public String gender;
+
     public Competition withGender(String gender) {
         this.gender = gender;
         return this;
@@ -52,6 +57,7 @@ public class Competition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public Competition withKey(String key) {
         this.key = key;
         return this;
@@ -60,6 +66,7 @@ public class Competition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Competition withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +75,7 @@ public class Competition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Seasons")
     public Season[] seasons;
+
     public Competition withSeasons(Season[] seasons) {
         this.seasons = seasons;
         return this;
@@ -76,9 +84,11 @@ public class Competition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Competition withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Competition(){}
 }

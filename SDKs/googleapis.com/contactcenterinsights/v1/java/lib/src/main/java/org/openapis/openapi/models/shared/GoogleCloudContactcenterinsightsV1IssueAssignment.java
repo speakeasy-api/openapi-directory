@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1IssueAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudContactcenterinsightsV1IssueAssignment withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudContactcenterinsightsV1IssueAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issue")
     public String issue;
+
     public GoogleCloudContactcenterinsightsV1IssueAssignment withIssue(String issue) {
         this.issue = issue;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudContactcenterinsightsV1IssueAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public GoogleCloudContactcenterinsightsV1IssueAssignment withScore(Double score) {
         this.score = score;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1IssueAssignment(){}
 }

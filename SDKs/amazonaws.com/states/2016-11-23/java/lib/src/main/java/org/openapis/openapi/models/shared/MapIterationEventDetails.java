@@ -15,6 +15,7 @@ public class MapIterationEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Long index;
+
     public MapIterationEventDetails withIndex(Long index) {
         this.index = index;
         return this;
@@ -23,9 +24,11 @@ public class MapIterationEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MapIterationEventDetails withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MapIterationEventDetails(){}
 }

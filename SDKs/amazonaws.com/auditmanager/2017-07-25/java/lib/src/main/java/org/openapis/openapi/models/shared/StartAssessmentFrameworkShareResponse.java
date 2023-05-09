@@ -15,9 +15,11 @@ public class StartAssessmentFrameworkShareResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentFrameworkShareRequest")
     public AssessmentFrameworkShareRequest assessmentFrameworkShareRequest;
+
     public StartAssessmentFrameworkShareResponse withAssessmentFrameworkShareRequest(AssessmentFrameworkShareRequest assessmentFrameworkShareRequest) {
         this.assessmentFrameworkShareRequest = assessmentFrameworkShareRequest;
         return this;
     }
     
+    public StartAssessmentFrameworkShareResponse(){}
 }

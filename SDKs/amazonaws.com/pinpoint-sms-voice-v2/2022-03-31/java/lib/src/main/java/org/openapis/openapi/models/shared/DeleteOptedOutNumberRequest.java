@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteOptedOutNumberRequest {
     @JsonProperty("OptOutListName")
     public String optOutListName;
+
     public DeleteOptedOutNumberRequest withOptOutListName(String optOutListName) {
         this.optOutListName = optOutListName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteOptedOutNumberRequest {
     
     @JsonProperty("OptedOutNumber")
     public String optedOutNumber;
+
     public DeleteOptedOutNumberRequest withOptedOutNumber(String optedOutNumber) {
         this.optedOutNumber = optedOutNumber;
         return this;
     }
     
+    public DeleteOptedOutNumberRequest(@JsonProperty("OptOutListName") String optOutListName, @JsonProperty("OptedOutNumber") String optedOutNumber) {
+        this.optOutListName = optOutListName;
+        this.optedOutNumber = optedOutNumber;
+  }
 }

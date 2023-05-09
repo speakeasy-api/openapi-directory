@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetImportJobsResponse {
@@ -12,6 +13,7 @@ public class GetImportJobsResponse {
      */
     
     public Object badRequestException;
+
     public GetImportJobsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetImportJobsResponse {
     
     
     public String contentType;
+
     public GetImportJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetImportJobsResponse {
      */
     
     public Object forbiddenException;
+
     public GetImportJobsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetImportJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetImportJobsResponse getImportJobsResponse;
+
     public GetImportJobsResponse withGetImportJobsResponse(org.openapis.openapi.models.shared.GetImportJobsResponse getImportJobsResponse) {
         this.getImportJobsResponse = getImportJobsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetImportJobsResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetImportJobsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetImportJobsResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetImportJobsResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetImportJobsResponse {
      */
     
     public Object notFoundException;
+
     public GetImportJobsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetImportJobsResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetImportJobsResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetImportJobsResponse {
     
     
     public Integer statusCode;
+
     public GetImportJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetImportJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetImportJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetImportJobsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetImportJobsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetImportJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

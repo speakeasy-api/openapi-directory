@@ -12,9 +12,11 @@ public class GetRiddleRandomRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public String category;
+
     public GetRiddleRandomRequest withCategory(String category) {
         this.category = category;
         return this;
     }
     
+    public GetRiddleRandomRequest(){}
 }

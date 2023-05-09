@@ -15,6 +15,7 @@ public class ListComputeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeList")
     public Compute[] computeList;
+
     public ListComputeOutput withComputeList(Compute[] computeList) {
         this.computeList = computeList;
         return this;
@@ -23,9 +24,11 @@ public class ListComputeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListComputeOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListComputeOutput(){}
 }

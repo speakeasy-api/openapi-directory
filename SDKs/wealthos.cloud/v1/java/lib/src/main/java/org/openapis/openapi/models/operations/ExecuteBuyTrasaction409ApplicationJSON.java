@@ -17,6 +17,7 @@ public class ExecuteBuyTrasaction409ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public ExecuteBuyTrasaction409ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +29,7 @@ public class ExecuteBuyTrasaction409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public java.util.Map<String, Object> response;
+
     public ExecuteBuyTrasaction409ApplicationJSON withResponse(java.util.Map<String, Object> response) {
         this.response = response;
         return this;
@@ -38,9 +40,14 @@ public class ExecuteBuyTrasaction409ApplicationJSON {
      */
     @JsonProperty("status")
     public ExecuteBuyTrasaction409ApplicationJSONStatusEnum status;
+
     public ExecuteBuyTrasaction409ApplicationJSON withStatus(ExecuteBuyTrasaction409ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ExecuteBuyTrasaction409ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("status") ExecuteBuyTrasaction409ApplicationJSONStatusEnum status) {
+        this.message = message;
+        this.status = status;
+  }
 }

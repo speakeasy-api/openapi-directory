@@ -15,6 +15,7 @@ public class DatasetInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AugmentedManifests")
     public DatasetAugmentedManifestsListItem[] augmentedManifests;
+
     public DatasetInputDataConfig withAugmentedManifests(DatasetAugmentedManifestsListItem[] augmentedManifests) {
         this.augmentedManifests = augmentedManifests;
         return this;
@@ -23,6 +24,7 @@ public class DatasetInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataFormat")
     public DatasetDataFormatEnum dataFormat;
+
     public DatasetInputDataConfig withDataFormat(DatasetDataFormatEnum dataFormat) {
         this.dataFormat = dataFormat;
         return this;
@@ -31,6 +33,7 @@ public class DatasetInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentClassifierInputDataConfig")
     public DatasetDocumentClassifierInputDataConfig documentClassifierInputDataConfig;
+
     public DatasetInputDataConfig withDocumentClassifierInputDataConfig(DatasetDocumentClassifierInputDataConfig documentClassifierInputDataConfig) {
         this.documentClassifierInputDataConfig = documentClassifierInputDataConfig;
         return this;
@@ -39,9 +42,11 @@ public class DatasetInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityRecognizerInputDataConfig")
     public DatasetEntityRecognizerInputDataConfig entityRecognizerInputDataConfig;
+
     public DatasetInputDataConfig withEntityRecognizerInputDataConfig(DatasetEntityRecognizerInputDataConfig entityRecognizerInputDataConfig) {
         this.entityRecognizerInputDataConfig = entityRecognizerInputDataConfig;
         return this;
     }
     
+    public DatasetInputDataConfig(){}
 }

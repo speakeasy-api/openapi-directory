@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CacheSecurityGroups {
     
     public String arn;
+
     public CacheSecurityGroups withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class CacheSecurityGroups {
     
     
     public String cacheSecurityGroupName;
+
     public CacheSecurityGroups withCacheSecurityGroupName(String cacheSecurityGroupName) {
         this.cacheSecurityGroupName = cacheSecurityGroupName;
         return this;
@@ -26,6 +28,7 @@ public class CacheSecurityGroups {
     
     
     public String description;
+
     public CacheSecurityGroups withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class CacheSecurityGroups {
     
     
     public Ec2SecurityGroupList[] ec2SecurityGroups;
+
     public CacheSecurityGroups withEc2SecurityGroups(Ec2SecurityGroupList[] ec2SecurityGroups) {
         this.ec2SecurityGroups = ec2SecurityGroups;
         return this;
@@ -40,9 +44,11 @@ public class CacheSecurityGroups {
     
     
     public String ownerId;
+
     public CacheSecurityGroups withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     
+    public CacheSecurityGroups(){}
 }

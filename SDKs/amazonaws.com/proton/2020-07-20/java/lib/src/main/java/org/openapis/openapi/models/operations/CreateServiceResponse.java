@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateServiceResponse {
@@ -12,6 +13,7 @@ public class CreateServiceResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateServiceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateServiceResponse {
      */
     
     public Object conflictException;
+
     public CreateServiceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateServiceResponse {
     
     
     public String contentType;
+
     public CreateServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateServiceOutput createServiceOutput;
+
     public CreateServiceResponse withCreateServiceOutput(org.openapis.openapi.models.shared.CreateServiceOutput createServiceOutput) {
         this.createServiceOutput = createServiceOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateServiceResponse {
      */
     
     public Object internalServerException;
+
     public CreateServiceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateServiceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateServiceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateServiceResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateServiceResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateServiceResponse {
     
     
     public Integer statusCode;
+
     public CreateServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateServiceResponse {
      */
     
     public Object throttlingException;
+
     public CreateServiceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateServiceResponse {
      */
     
     public Object validationException;
+
     public CreateServiceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

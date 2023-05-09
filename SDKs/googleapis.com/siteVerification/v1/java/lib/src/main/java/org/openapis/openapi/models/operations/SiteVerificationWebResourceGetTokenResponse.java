@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SiteVerificationWebResourceGetTokenResponse {
     
     public String contentType;
+
     public SiteVerificationWebResourceGetTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SiteVerificationWebResourceGetTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.SiteVerificationWebResourceGettokenResponse siteVerificationWebResourceGettokenResponse;
+
     public SiteVerificationWebResourceGetTokenResponse withSiteVerificationWebResourceGettokenResponse(org.openapis.openapi.models.shared.SiteVerificationWebResourceGettokenResponse siteVerificationWebResourceGettokenResponse) {
         this.siteVerificationWebResourceGettokenResponse = siteVerificationWebResourceGettokenResponse;
         return this;
@@ -26,6 +29,7 @@ public class SiteVerificationWebResourceGetTokenResponse {
     
     
     public Integer statusCode;
+
     public SiteVerificationWebResourceGetTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SiteVerificationWebResourceGetTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SiteVerificationWebResourceGetTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SiteVerificationWebResourceGetTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

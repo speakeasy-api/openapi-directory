@@ -18,6 +18,7 @@ public class GraphQLResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public GraphQLResponse withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -29,9 +30,11 @@ public class GraphQLResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public java.util.Map<String, Object>[] errors;
+
     public GraphQLResponse withErrors(java.util.Map<String, Object>[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GraphQLResponse(){}
 }

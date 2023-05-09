@@ -18,6 +18,7 @@ public class VmEndpointNatMappingsInterfaceNatMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drainNatIpPortRanges")
     public String[] drainNatIpPortRanges;
+
     public VmEndpointNatMappingsInterfaceNatMappings withDrainNatIpPortRanges(String[] drainNatIpPortRanges) {
         this.drainNatIpPortRanges = drainNatIpPortRanges;
         return this;
@@ -29,6 +30,7 @@ public class VmEndpointNatMappingsInterfaceNatMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("natIpPortRanges")
     public String[] natIpPortRanges;
+
     public VmEndpointNatMappingsInterfaceNatMappings withNatIpPortRanges(String[] natIpPortRanges) {
         this.natIpPortRanges = natIpPortRanges;
         return this;
@@ -40,6 +42,7 @@ public class VmEndpointNatMappingsInterfaceNatMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numTotalDrainNatPorts")
     public Integer numTotalDrainNatPorts;
+
     public VmEndpointNatMappingsInterfaceNatMappings withNumTotalDrainNatPorts(Integer numTotalDrainNatPorts) {
         this.numTotalDrainNatPorts = numTotalDrainNatPorts;
         return this;
@@ -51,6 +54,7 @@ public class VmEndpointNatMappingsInterfaceNatMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numTotalNatPorts")
     public Integer numTotalNatPorts;
+
     public VmEndpointNatMappingsInterfaceNatMappings withNumTotalNatPorts(Integer numTotalNatPorts) {
         this.numTotalNatPorts = numTotalNatPorts;
         return this;
@@ -62,6 +66,7 @@ public class VmEndpointNatMappingsInterfaceNatMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleMappings")
     public VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings[] ruleMappings;
+
     public VmEndpointNatMappingsInterfaceNatMappings withRuleMappings(VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings[] ruleMappings) {
         this.ruleMappings = ruleMappings;
         return this;
@@ -73,6 +78,7 @@ public class VmEndpointNatMappingsInterfaceNatMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceAliasIpRange")
     public String sourceAliasIpRange;
+
     public VmEndpointNatMappingsInterfaceNatMappings withSourceAliasIpRange(String sourceAliasIpRange) {
         this.sourceAliasIpRange = sourceAliasIpRange;
         return this;
@@ -84,9 +90,11 @@ public class VmEndpointNatMappingsInterfaceNatMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceVirtualIp")
     public String sourceVirtualIp;
+
     public VmEndpointNatMappingsInterfaceNatMappings withSourceVirtualIp(String sourceVirtualIp) {
         this.sourceVirtualIp = sourceVirtualIp;
         return this;
     }
     
+    public VmEndpointNatMappingsInterfaceNatMappings(){}
 }

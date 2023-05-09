@@ -15,6 +15,7 @@ public class ReposGenerateReleaseNotesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration_file_path")
     public String configurationFilePath;
+
     public ReposGenerateReleaseNotesRequestBody withConfigurationFilePath(String configurationFilePath) {
         this.configurationFilePath = configurationFilePath;
         return this;
@@ -26,6 +27,7 @@ public class ReposGenerateReleaseNotesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous_tag_name")
     public String previousTagName;
+
     public ReposGenerateReleaseNotesRequestBody withPreviousTagName(String previousTagName) {
         this.previousTagName = previousTagName;
         return this;
@@ -36,6 +38,7 @@ public class ReposGenerateReleaseNotesRequestBody {
      */
     @JsonProperty("tag_name")
     public String tagName;
+
     public ReposGenerateReleaseNotesRequestBody withTagName(String tagName) {
         this.tagName = tagName;
         return this;
@@ -47,9 +50,13 @@ public class ReposGenerateReleaseNotesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_commitish")
     public String targetCommitish;
+
     public ReposGenerateReleaseNotesRequestBody withTargetCommitish(String targetCommitish) {
         this.targetCommitish = targetCommitish;
         return this;
     }
     
+    public ReposGenerateReleaseNotesRequestBody(@JsonProperty("tag_name") String tagName) {
+        this.tagName = tagName;
+  }
 }

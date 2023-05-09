@@ -15,9 +15,11 @@ public class GetAppValidationOutputResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationOutputList")
     public ValidationOutput[] validationOutputList;
+
     public GetAppValidationOutputResponse withValidationOutputList(ValidationOutput[] validationOutputList) {
         this.validationOutputList = validationOutputList;
         return this;
     }
     
+    public GetAppValidationOutputResponse(){}
 }

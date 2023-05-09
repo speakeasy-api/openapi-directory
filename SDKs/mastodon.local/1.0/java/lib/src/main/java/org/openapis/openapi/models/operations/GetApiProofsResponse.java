@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiProofsResponse {
     
     public String contentType;
+
     public GetApiProofsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetApiProofsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetApiProofsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetApiProofsResponse {
      */
     
     public org.openapis.openapi.models.shared.IdentityProof identityProof;
+
     public GetApiProofsResponse withIdentityProof(org.openapis.openapi.models.shared.IdentityProof identityProof) {
         this.identityProof = identityProof;
         return this;
@@ -36,6 +40,7 @@ public class GetApiProofsResponse {
     
     
     public Integer statusCode;
+
     public GetApiProofsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetApiProofsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiProofsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApiProofsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

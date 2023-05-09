@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLogSubscriptionResponse {
@@ -12,6 +13,7 @@ public class DeleteLogSubscriptionResponse {
      */
     
     public Object clientException;
+
     public DeleteLogSubscriptionResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteLogSubscriptionResponse {
     
     
     public String contentType;
+
     public DeleteLogSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLogSubscriptionResponse {
      */
     
     public java.util.Map<String, Object> deleteLogSubscriptionResult;
+
     public DeleteLogSubscriptionResponse withDeleteLogSubscriptionResult(java.util.Map<String, Object> deleteLogSubscriptionResult) {
         this.deleteLogSubscriptionResult = deleteLogSubscriptionResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLogSubscriptionResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public DeleteLogSubscriptionResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteLogSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public DeleteLogSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteLogSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLogSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteLogSubscriptionResponse {
      */
     
     public Object serviceException;
+
     public DeleteLogSubscriptionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteLogSubscriptionResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DeleteLogSubscriptionResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DeleteLogSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

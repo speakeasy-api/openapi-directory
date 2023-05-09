@@ -17,6 +17,7 @@ public class UpdatePot409ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public UpdatePot409ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +29,7 @@ public class UpdatePot409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public java.util.Map<String, Object> response;
+
     public UpdatePot409ApplicationJSON withResponse(java.util.Map<String, Object> response) {
         this.response = response;
         return this;
@@ -38,9 +40,14 @@ public class UpdatePot409ApplicationJSON {
      */
     @JsonProperty("status")
     public UpdatePot409ApplicationJSONStatusEnum status;
+
     public UpdatePot409ApplicationJSON withStatus(UpdatePot409ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdatePot409ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("status") UpdatePot409ApplicationJSONStatusEnum status) {
+        this.message = message;
+        this.status = status;
+  }
 }

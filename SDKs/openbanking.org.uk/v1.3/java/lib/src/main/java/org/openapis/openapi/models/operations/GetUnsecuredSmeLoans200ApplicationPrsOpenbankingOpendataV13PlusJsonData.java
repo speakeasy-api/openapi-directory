@@ -18,6 +18,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArrearsTreatment")
     public String arrearsTreatment;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withArrearsTreatment(String arrearsTreatment) {
         this.arrearsTreatment = arrearsTreatment;
         return this;
@@ -28,6 +29,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("Benefits")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits benefits;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withBenefits(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits benefits) {
         this.benefits = benefits;
         return this;
@@ -38,6 +40,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("Currency")
     public String[] currency;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withCurrency(String[] currency) {
         this.currency = currency;
         return this;
@@ -48,6 +51,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("CustomerAccessChannels")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum[] customerAccessChannels;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withCustomerAccessChannels(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum[] customerAccessChannels) {
         this.customerAccessChannels = customerAccessChannels;
         return this;
@@ -58,6 +62,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("Eligibility")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility eligibility;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withEligibility(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility eligibility) {
         this.eligibility = eligibility;
         return this;
@@ -65,6 +70,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     
     @JsonProperty("FeesAndCharges")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges[] feesAndCharges;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withFeesAndCharges(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges[] feesAndCharges) {
         this.feesAndCharges = feesAndCharges;
         return this;
@@ -72,6 +78,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     
     @JsonProperty("LoanItem")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem[] loanItem;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withLoanItem(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem[] loanItem) {
         this.loanItem = loanItem;
         return this;
@@ -82,6 +89,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("MaximumLoanAmount")
     public String maximumLoanAmount;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withMaximumLoanAmount(String maximumLoanAmount) {
         this.maximumLoanAmount = maximumLoanAmount;
         return this;
@@ -92,6 +100,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("MaximumLoanTerm")
     public Long maximumLoanTerm;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withMaximumLoanTerm(Long maximumLoanTerm) {
         this.maximumLoanTerm = maximumLoanTerm;
         return this;
@@ -102,6 +111,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("MinimumLoanAmount")
     public String minimumLoanAmount;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withMinimumLoanAmount(String minimumLoanAmount) {
         this.minimumLoanAmount = minimumLoanAmount;
         return this;
@@ -112,6 +122,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("MinimumLoanTerm")
     public Long minimumLoanTerm;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withMinimumLoanTerm(Long minimumLoanTerm) {
         this.minimumLoanTerm = minimumLoanTerm;
         return this;
@@ -122,6 +133,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("Organisation")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation organisation;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withOrganisation(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation organisation) {
         this.organisation = organisation;
         return this;
@@ -132,6 +144,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("PaymentHoliday")
     public Boolean paymentHoliday;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withPaymentHoliday(Boolean paymentHoliday) {
         this.paymentHoliday = paymentHoliday;
         return this;
@@ -142,6 +155,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("ProductDescription")
     public String productDescription;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withProductDescription(String productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -152,6 +166,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("ProductIdentifier")
     public String productIdentifier;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withProductIdentifier(String productIdentifier) {
         this.productIdentifier = productIdentifier;
         return this;
@@ -162,6 +177,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("ProductName")
     public String productName;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -169,6 +185,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     
     @JsonProperty("ProductSegment")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum[] productSegment;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withProductSegment(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum[] productSegment) {
         this.productSegment = productSegment;
         return this;
@@ -179,6 +196,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("ProductTypeName")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum productTypeName;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withProductTypeName(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum productTypeName) {
         this.productTypeName = productTypeName;
         return this;
@@ -186,6 +204,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     
     @JsonProperty("ProductURL")
     public String[] productURL;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withProductURL(String[] productURL) {
         this.productURL = productURL;
         return this;
@@ -196,9 +215,31 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("TsandCs")
     public String[] tsandCs;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData withTsandCs(String[] tsandCs) {
         this.tsandCs = tsandCs;
         return this;
     }
     
+    public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonData(@JsonProperty("Benefits") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits benefits, @JsonProperty("Currency") String[] currency, @JsonProperty("CustomerAccessChannels") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCustomerAccessChannelsEnum[] customerAccessChannels, @JsonProperty("Eligibility") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataEligibility eligibility, @JsonProperty("FeesAndCharges") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataFeesAndCharges[] feesAndCharges, @JsonProperty("LoanItem") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem[] loanItem, @JsonProperty("MaximumLoanAmount") String maximumLoanAmount, @JsonProperty("MaximumLoanTerm") Long maximumLoanTerm, @JsonProperty("MinimumLoanAmount") String minimumLoanAmount, @JsonProperty("MinimumLoanTerm") Long minimumLoanTerm, @JsonProperty("Organisation") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisation organisation, @JsonProperty("PaymentHoliday") Boolean paymentHoliday, @JsonProperty("ProductDescription") String productDescription, @JsonProperty("ProductIdentifier") String productIdentifier, @JsonProperty("ProductName") String productName, @JsonProperty("ProductSegment") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum[] productSegment, @JsonProperty("ProductTypeName") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum productTypeName, @JsonProperty("ProductURL") String[] productURL, @JsonProperty("TsandCs") String[] tsandCs) {
+        this.benefits = benefits;
+        this.currency = currency;
+        this.customerAccessChannels = customerAccessChannels;
+        this.eligibility = eligibility;
+        this.feesAndCharges = feesAndCharges;
+        this.loanItem = loanItem;
+        this.maximumLoanAmount = maximumLoanAmount;
+        this.maximumLoanTerm = maximumLoanTerm;
+        this.minimumLoanAmount = minimumLoanAmount;
+        this.minimumLoanTerm = minimumLoanTerm;
+        this.organisation = organisation;
+        this.paymentHoliday = paymentHoliday;
+        this.productDescription = productDescription;
+        this.productIdentifier = productIdentifier;
+        this.productName = productName;
+        this.productSegment = productSegment;
+        this.productTypeName = productTypeName;
+        this.productURL = productURL;
+        this.tsandCs = tsandCs;
+  }
 }

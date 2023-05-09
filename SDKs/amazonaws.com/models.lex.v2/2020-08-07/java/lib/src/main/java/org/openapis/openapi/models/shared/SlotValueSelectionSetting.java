@@ -15,6 +15,7 @@ public class SlotValueSelectionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advancedRecognitionSetting")
     public AdvancedRecognitionSetting advancedRecognitionSetting;
+
     public SlotValueSelectionSetting withAdvancedRecognitionSetting(AdvancedRecognitionSetting advancedRecognitionSetting) {
         this.advancedRecognitionSetting = advancedRecognitionSetting;
         return this;
@@ -23,6 +24,7 @@ public class SlotValueSelectionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regexFilter")
     public SlotValueRegexFilter regexFilter;
+
     public SlotValueSelectionSetting withRegexFilter(SlotValueRegexFilter regexFilter) {
         this.regexFilter = regexFilter;
         return this;
@@ -30,9 +32,13 @@ public class SlotValueSelectionSetting {
     
     @JsonProperty("resolutionStrategy")
     public SlotValueResolutionStrategyEnum resolutionStrategy;
+
     public SlotValueSelectionSetting withResolutionStrategy(SlotValueResolutionStrategyEnum resolutionStrategy) {
         this.resolutionStrategy = resolutionStrategy;
         return this;
     }
     
+    public SlotValueSelectionSetting(@JsonProperty("resolutionStrategy") SlotValueResolutionStrategyEnum resolutionStrategy) {
+        this.resolutionStrategy = resolutionStrategy;
+  }
 }

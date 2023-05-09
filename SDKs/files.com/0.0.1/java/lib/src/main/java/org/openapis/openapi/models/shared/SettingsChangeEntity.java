@@ -23,6 +23,7 @@ public class SettingsChangeEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changes")
     public String[] changes;
+
     public SettingsChangeEntity withChanges(String[] changes) {
         this.changes = changes;
         return this;
@@ -36,6 +37,7 @@ public class SettingsChangeEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public SettingsChangeEntity withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -47,6 +49,7 @@ public class SettingsChangeEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Integer userId;
+
     public SettingsChangeEntity withUserId(Integer userId) {
         this.userId = userId;
         return this;
@@ -58,6 +61,7 @@ public class SettingsChangeEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_is_files_support")
     public Boolean userIsFilesSupport;
+
     public SettingsChangeEntity withUserIsFilesSupport(Boolean userIsFilesSupport) {
         this.userIsFilesSupport = userIsFilesSupport;
         return this;
@@ -69,9 +73,11 @@ public class SettingsChangeEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public SettingsChangeEntity withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public SettingsChangeEntity(){}
 }

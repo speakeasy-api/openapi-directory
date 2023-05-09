@@ -22,6 +22,7 @@ public class GetInsightImpactGraphResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public GetInsightImpactGraphResult withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +31,7 @@ public class GetInsightImpactGraphResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightId")
     public String insightId;
+
     public GetInsightImpactGraphResult withInsightId(String insightId) {
         this.insightId = insightId;
         return this;
@@ -38,6 +40,7 @@ public class GetInsightImpactGraphResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetInsightImpactGraphResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,6 +51,7 @@ public class GetInsightImpactGraphResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ServiceGraphEndTime")
     public OffsetDateTime serviceGraphEndTime;
+
     public GetInsightImpactGraphResult withServiceGraphEndTime(OffsetDateTime serviceGraphEndTime) {
         this.serviceGraphEndTime = serviceGraphEndTime;
         return this;
@@ -58,6 +62,7 @@ public class GetInsightImpactGraphResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ServiceGraphStartTime")
     public OffsetDateTime serviceGraphStartTime;
+
     public GetInsightImpactGraphResult withServiceGraphStartTime(OffsetDateTime serviceGraphStartTime) {
         this.serviceGraphStartTime = serviceGraphStartTime;
         return this;
@@ -66,6 +71,7 @@ public class GetInsightImpactGraphResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Services")
     public InsightImpactGraphService[] services;
+
     public GetInsightImpactGraphResult withServices(InsightImpactGraphService[] services) {
         this.services = services;
         return this;
@@ -76,9 +82,11 @@ public class GetInsightImpactGraphResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public GetInsightImpactGraphResult withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetInsightImpactGraphResult(){}
 }

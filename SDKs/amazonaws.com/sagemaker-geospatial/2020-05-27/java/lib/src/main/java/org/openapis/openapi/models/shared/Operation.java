@@ -9,11 +9,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Operation - &lt;p/&gt;
+ * Operation - Represents an arithmetic operation to compute spectral index.
  */
 public class Operation {
     @JsonProperty("Equation")
     public String equation;
+
     public Operation withEquation(String equation) {
         this.equation = equation;
         return this;
@@ -21,6 +22,7 @@ public class Operation {
     
     @JsonProperty("Name")
     public String name;
+
     public Operation withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputType")
     public OutputTypeEnum outputType;
+
     public Operation withOutputType(OutputTypeEnum outputType) {
         this.outputType = outputType;
         return this;
     }
     
+    public Operation(@JsonProperty("Equation") String equation, @JsonProperty("Name") String name) {
+        this.equation = equation;
+        this.name = name;
+  }
 }

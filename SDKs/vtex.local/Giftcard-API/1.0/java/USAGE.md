@@ -3,44 +3,36 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateGiftCardRequest;
 import org.openapis.openapi.models.operations.CreateGiftCardResponse;
 import org.openapis.openapi.models.shared.CreateGiftCardRequest;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateGiftCardRequest req = new CreateGiftCardRequest() {{
-                accept = "corrupti";
-                contentType = "provident";
-                createGiftCardRequest = new CreateGiftCardRequest() {{
-                    caption = "rewards program";
-                    expiringDate = "2020-09-01T13:15:30Z";
-                    multipleCredits = false;
-                    multipleRedemptions = false;
-                    profileId = "1234";
-                    relationName = "insert example here";
-                    restrictedToOwner = false;
-                }};
-                xVTEXAPIAppKey = "distinctio";
-                xVTEXAPIAppToken = "quibusdam";
-            }}            
+            CreateGiftCardRequest req = new CreateGiftCardRequest("distinctio", "quibusdam",                 new CreateGiftCardRequest("rewards program", "2020-09-01T13:15:30Z", "1234", "insert example here") {{
+                                multipleCredits = false;
+                                multipleRedemptions = false;
+                                restrictedToOwner = false;
+                            }};, "unde", "nulla");            
 
             CreateGiftCardResponse res = sdk.giftCard.createGiftCard(req);
 
-            if (res.response.isPresent()) {
+            if (res.response != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

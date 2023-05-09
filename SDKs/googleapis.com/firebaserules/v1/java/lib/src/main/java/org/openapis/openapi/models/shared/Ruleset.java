@@ -18,6 +18,7 @@ public class Ruleset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Ruleset withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Ruleset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public Metadata metadata;
+
     public Ruleset withMetadata(Metadata metadata) {
         this.metadata = metadata;
         return this;
@@ -40,6 +42,7 @@ public class Ruleset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Ruleset withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class Ruleset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public Ruleset withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public Ruleset(){}
 }

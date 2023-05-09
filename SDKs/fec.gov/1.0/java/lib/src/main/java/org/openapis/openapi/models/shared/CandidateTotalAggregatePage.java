@@ -12,6 +12,7 @@ public class CandidateTotalAggregatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public CandidateTotalAggregatePage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class CandidateTotalAggregatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public CandidateTotalAggregate[] results;
+
     public CandidateTotalAggregatePage withResults(CandidateTotalAggregate[] results) {
         this.results = results;
         return this;
     }
     
+    public CandidateTotalAggregatePage(){}
 }

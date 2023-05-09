@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class HistoryListForFolderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public HistoryListForFolderRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -23,6 +25,7 @@ public class HistoryListForFolderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=display")
     public String display;
+
     public HistoryListForFolderRequest withDisplay(String display) {
         this.display = display;
         return this;
@@ -33,6 +36,7 @@ public class HistoryListForFolderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_at")
     public OffsetDateTime endAt;
+
     public HistoryListForFolderRequest withEndAt(OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -43,6 +47,7 @@ public class HistoryListForFolderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public HistoryListForFolderRequest withPath(String path) {
         this.path = path;
         return this;
@@ -53,6 +58,7 @@ public class HistoryListForFolderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public HistoryListForFolderRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -63,6 +69,7 @@ public class HistoryListForFolderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public HistoryListForFolderRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -73,9 +80,13 @@ public class HistoryListForFolderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_at")
     public OffsetDateTime startAt;
+
     public HistoryListForFolderRequest withStartAt(OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
     
+    public HistoryListForFolderRequest(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

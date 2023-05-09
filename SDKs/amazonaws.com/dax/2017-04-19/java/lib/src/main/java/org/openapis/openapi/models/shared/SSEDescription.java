@@ -15,9 +15,11 @@ public class SSEDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SSEStatusEnum status;
+
     public SSEDescription withStatus(SSEStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public SSEDescription(){}
 }

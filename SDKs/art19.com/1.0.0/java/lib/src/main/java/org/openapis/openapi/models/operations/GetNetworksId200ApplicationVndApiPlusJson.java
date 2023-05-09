@@ -15,6 +15,7 @@ public class GetNetworksId200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.Network data;
+
     public GetNetworksId200ApplicationVndApiPlusJson withData(org.openapis.openapi.models.shared.Network data) {
         this.data = data;
         return this;
@@ -26,9 +27,11 @@ public class GetNetworksId200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public org.openapis.openapi.models.shared.ResourceLink links;
+
     public GetNetworksId200ApplicationVndApiPlusJson withLinks(org.openapis.openapi.models.shared.ResourceLink links) {
         this.links = links;
         return this;
     }
     
+    public GetNetworksId200ApplicationVndApiPlusJson(){}
 }

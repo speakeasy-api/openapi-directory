@@ -15,6 +15,7 @@ public class NodeGroupNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accelerators")
     public AcceleratorConfig[] accelerators;
+
     public NodeGroupNode withAccelerators(AcceleratorConfig[] accelerators) {
         this.accelerators = accelerators;
         return this;
@@ -23,6 +24,7 @@ public class NodeGroupNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumedResources")
     public InstanceConsumptionInfo consumedResources;
+
     public NodeGroupNode withConsumedResources(InstanceConsumptionInfo consumedResources) {
         this.consumedResources = consumedResources;
         return this;
@@ -34,6 +36,7 @@ public class NodeGroupNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuOvercommitType")
     public NodeGroupNodeCpuOvercommitTypeEnum cpuOvercommitType;
+
     public NodeGroupNode withCpuOvercommitType(NodeGroupNodeCpuOvercommitTypeEnum cpuOvercommitType) {
         this.cpuOvercommitType = cpuOvercommitType;
         return this;
@@ -45,6 +48,7 @@ public class NodeGroupNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public LocalDisk[] disks;
+
     public NodeGroupNode withDisks(LocalDisk[] disks) {
         this.disks = disks;
         return this;
@@ -56,6 +60,7 @@ public class NodeGroupNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceConsumptionData")
     public InstanceConsumptionData[] instanceConsumptionData;
+
     public NodeGroupNode withInstanceConsumptionData(InstanceConsumptionData[] instanceConsumptionData) {
         this.instanceConsumptionData = instanceConsumptionData;
         return this;
@@ -67,6 +72,7 @@ public class NodeGroupNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public String[] instances;
+
     public NodeGroupNode withInstances(String[] instances) {
         this.instances = instances;
         return this;
@@ -78,6 +84,7 @@ public class NodeGroupNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NodeGroupNode withName(String name) {
         this.name = name;
         return this;
@@ -89,6 +96,7 @@ public class NodeGroupNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeType")
     public String nodeType;
+
     public NodeGroupNode withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -100,6 +108,7 @@ public class NodeGroupNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public NodeGroupNode withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -108,6 +117,7 @@ public class NodeGroupNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverBinding")
     public ServerBinding serverBinding;
+
     public NodeGroupNode withServerBinding(ServerBinding serverBinding) {
         this.serverBinding = serverBinding;
         return this;
@@ -119,6 +129,7 @@ public class NodeGroupNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverId")
     public String serverId;
+
     public NodeGroupNode withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -127,6 +138,7 @@ public class NodeGroupNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public NodeGroupNodeStatusEnum status;
+
     public NodeGroupNode withStatus(NodeGroupNodeStatusEnum status) {
         this.status = status;
         return this;
@@ -135,6 +147,7 @@ public class NodeGroupNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalResources")
     public InstanceConsumptionInfo totalResources;
+
     public NodeGroupNode withTotalResources(InstanceConsumptionInfo totalResources) {
         this.totalResources = totalResources;
         return this;
@@ -146,9 +159,11 @@ public class NodeGroupNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upcomingMaintenance")
     public UpcomingMaintenance upcomingMaintenance;
+
     public NodeGroupNode withUpcomingMaintenance(UpcomingMaintenance upcomingMaintenance) {
         this.upcomingMaintenance = upcomingMaintenance;
         return this;
     }
     
+    public NodeGroupNode(){}
 }

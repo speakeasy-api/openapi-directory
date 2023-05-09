@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSshPublicKeyResponse {
     
     public String contentType;
+
     public DeleteSshPublicKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSshPublicKeyResponse {
      */
     
     public Object internalServiceError;
+
     public DeleteSshPublicKeyResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSshPublicKeyResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteSshPublicKeyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSshPublicKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSshPublicKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSshPublicKeyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteSshPublicKeyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteSshPublicKeyResponse {
     
     
     public Integer statusCode;
+
     public DeleteSshPublicKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteSshPublicKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSshPublicKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteSshPublicKeyResponse {
      */
     
     public Object throttlingException;
+
     public DeleteSshPublicKeyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteSshPublicKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

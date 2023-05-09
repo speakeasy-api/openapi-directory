@@ -17,6 +17,7 @@ public class TransactionResourceAttributesRoundUpBoostPortion {
      */
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public TransactionResourceAttributesRoundUpBoostPortion withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -30,6 +31,7 @@ public class TransactionResourceAttributesRoundUpBoostPortion {
      */
     @JsonProperty("value")
     public String value;
+
     public TransactionResourceAttributesRoundUpBoostPortion withValue(String value) {
         this.value = value;
         return this;
@@ -43,9 +45,15 @@ public class TransactionResourceAttributesRoundUpBoostPortion {
      */
     @JsonProperty("valueInBaseUnits")
     public Long valueInBaseUnits;
+
     public TransactionResourceAttributesRoundUpBoostPortion withValueInBaseUnits(Long valueInBaseUnits) {
         this.valueInBaseUnits = valueInBaseUnits;
         return this;
     }
     
+    public TransactionResourceAttributesRoundUpBoostPortion(@JsonProperty("currencyCode") String currencyCode, @JsonProperty("value") String value, @JsonProperty("valueInBaseUnits") Long valueInBaseUnits) {
+        this.currencyCode = currencyCode;
+        this.value = value;
+        this.valueInBaseUnits = valueInBaseUnits;
+  }
 }

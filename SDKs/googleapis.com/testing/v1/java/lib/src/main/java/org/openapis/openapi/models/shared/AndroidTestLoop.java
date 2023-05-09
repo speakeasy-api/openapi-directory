@@ -18,6 +18,7 @@ public class AndroidTestLoop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appApk")
     public FileReference appApk;
+
     public AndroidTestLoop withAppApk(FileReference appApk) {
         this.appApk = appApk;
         return this;
@@ -29,6 +30,7 @@ public class AndroidTestLoop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appBundle")
     public AppBundle appBundle;
+
     public AndroidTestLoop withAppBundle(AppBundle appBundle) {
         this.appBundle = appBundle;
         return this;
@@ -40,6 +42,7 @@ public class AndroidTestLoop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appPackageId")
     public String appPackageId;
+
     public AndroidTestLoop withAppPackageId(String appPackageId) {
         this.appPackageId = appPackageId;
         return this;
@@ -51,6 +54,7 @@ public class AndroidTestLoop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scenarioLabels")
     public String[] scenarioLabels;
+
     public AndroidTestLoop withScenarioLabels(String[] scenarioLabels) {
         this.scenarioLabels = scenarioLabels;
         return this;
@@ -62,9 +66,11 @@ public class AndroidTestLoop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scenarios")
     public Integer[] scenarios;
+
     public AndroidTestLoop withScenarios(Integer[] scenarios) {
         this.scenarios = scenarios;
         return this;
     }
     
+    public AndroidTestLoop(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SqlRunConfiguration {
     @JsonProperty("InputId")
     public String inputId;
+
     public SqlRunConfiguration withInputId(String inputId) {
         this.inputId = inputId;
         return this;
@@ -19,9 +20,14 @@ public class SqlRunConfiguration {
     
     @JsonProperty("InputStartingPositionConfiguration")
     public InputStartingPositionConfiguration inputStartingPositionConfiguration;
+
     public SqlRunConfiguration withInputStartingPositionConfiguration(InputStartingPositionConfiguration inputStartingPositionConfiguration) {
         this.inputStartingPositionConfiguration = inputStartingPositionConfiguration;
         return this;
     }
     
+    public SqlRunConfiguration(@JsonProperty("InputId") String inputId, @JsonProperty("InputStartingPositionConfiguration") InputStartingPositionConfiguration inputStartingPositionConfiguration) {
+        this.inputId = inputId;
+        this.inputStartingPositionConfiguration = inputStartingPositionConfiguration;
+  }
 }

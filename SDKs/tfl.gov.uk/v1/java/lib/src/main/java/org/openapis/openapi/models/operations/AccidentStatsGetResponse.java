@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AccidentStatsGetResponse {
     
     public byte[] body;
+
     public AccidentStatsGetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class AccidentStatsGetResponse {
     
     
     public String contentType;
+
     public AccidentStatsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class AccidentStatsGetResponse {
     
     
     public Integer statusCode;
+
     public AccidentStatsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class AccidentStatsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AccidentStatsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class AccidentStatsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesAccidentStatsAccidentDetail[] tflApiPresentationEntitiesAccidentStatsAccidentDetails;
+
     public AccidentStatsGetResponse withTflApiPresentationEntitiesAccidentStatsAccidentDetails(org.openapis.openapi.models.shared.TflApiPresentationEntitiesAccidentStatsAccidentDetail[] tflApiPresentationEntitiesAccidentStatsAccidentDetails) {
         this.tflApiPresentationEntitiesAccidentStatsAccidentDetails = tflApiPresentationEntitiesAccidentStatsAccidentDetails;
         return this;
     }
     
+    public AccidentStatsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

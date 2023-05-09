@@ -15,6 +15,7 @@ public class DescribeAggregateComplianceByConfigRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AggregateComplianceByConfigRules")
     public AggregateComplianceByConfigRule[] aggregateComplianceByConfigRules;
+
     public DescribeAggregateComplianceByConfigRulesResponse withAggregateComplianceByConfigRules(AggregateComplianceByConfigRule[] aggregateComplianceByConfigRules) {
         this.aggregateComplianceByConfigRules = aggregateComplianceByConfigRules;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAggregateComplianceByConfigRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAggregateComplianceByConfigRulesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAggregateComplianceByConfigRulesResponse(){}
 }

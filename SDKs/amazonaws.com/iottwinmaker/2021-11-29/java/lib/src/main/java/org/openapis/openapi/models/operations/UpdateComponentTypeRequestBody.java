@@ -15,6 +15,7 @@ public class UpdateComponentTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentTypeName")
     public String componentTypeName;
+
     public UpdateComponentTypeRequestBody withComponentTypeName(String componentTypeName) {
         this.componentTypeName = componentTypeName;
         return this;
@@ -26,6 +27,7 @@ public class UpdateComponentTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateComponentTypeRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class UpdateComponentTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extendsFrom")
     public String[] extendsFrom;
+
     public UpdateComponentTypeRequestBody withExtendsFrom(String[] extendsFrom) {
         this.extendsFrom = extendsFrom;
         return this;
@@ -48,6 +51,7 @@ public class UpdateComponentTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functions")
     public java.util.Map<String, org.openapis.openapi.models.shared.FunctionRequest> functions;
+
     public UpdateComponentTypeRequestBody withFunctions(java.util.Map<String, org.openapis.openapi.models.shared.FunctionRequest> functions) {
         this.functions = functions;
         return this;
@@ -59,6 +63,7 @@ public class UpdateComponentTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSingleton")
     public Boolean isSingleton;
+
     public UpdateComponentTypeRequestBody withIsSingleton(Boolean isSingleton) {
         this.isSingleton = isSingleton;
         return this;
@@ -70,6 +75,7 @@ public class UpdateComponentTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyDefinitions")
     public java.util.Map<String, org.openapis.openapi.models.shared.PropertyDefinitionRequest> propertyDefinitions;
+
     public UpdateComponentTypeRequestBody withPropertyDefinitions(java.util.Map<String, org.openapis.openapi.models.shared.PropertyDefinitionRequest> propertyDefinitions) {
         this.propertyDefinitions = propertyDefinitions;
         return this;
@@ -81,9 +87,11 @@ public class UpdateComponentTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyGroups")
     public java.util.Map<String, org.openapis.openapi.models.shared.PropertyGroupRequest> propertyGroups;
+
     public UpdateComponentTypeRequestBody withPropertyGroups(java.util.Map<String, org.openapis.openapi.models.shared.PropertyGroupRequest> propertyGroups) {
         this.propertyGroups = propertyGroups;
         return this;
     }
     
+    public UpdateComponentTypeRequestBody(){}
 }

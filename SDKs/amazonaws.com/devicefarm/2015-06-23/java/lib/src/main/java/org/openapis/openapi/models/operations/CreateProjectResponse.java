@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateProjectResponse {
@@ -12,6 +13,7 @@ public class CreateProjectResponse {
      */
     
     public Object argumentException;
+
     public CreateProjectResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class CreateProjectResponse {
     
     
     public String contentType;
+
     public CreateProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateProjectResult createProjectResult;
+
     public CreateProjectResponse withCreateProjectResult(org.openapis.openapi.models.shared.CreateProjectResult createProjectResult) {
         this.createProjectResult = createProjectResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateProjectResponse {
      */
     
     public Object limitExceededException;
+
     public CreateProjectResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateProjectResponse {
      */
     
     public Object notFoundException;
+
     public CreateProjectResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateProjectResponse {
      */
     
     public Object serviceAccountException;
+
     public CreateProjectResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class CreateProjectResponse {
     
     
     public Integer statusCode;
+
     public CreateProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateProjectResponse {
      */
     
     public Object tagOperationException;
+
     public CreateProjectResponse withTagOperationException(Object tagOperationException) {
         this.tagOperationException = tagOperationException;
         return this;
     }
     
+    public CreateProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -3,13 +3,12 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootSecurity;
 import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootRequest;
 import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootResponse;
+import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest;
 import org.openapis.openapi.models.shared.GoogleCloudPolicytroubleshooterV1betaAccessTuple;
+import org.openapis.openapi.models.shared.GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -19,16 +18,16 @@ public class Application {
                 .build();
 
             PolicytroubleshooterIamTroubleshootRequest req = new PolicytroubleshooterIamTroubleshootRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 googleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest = new GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest() {{
                     accessTuple = new GoogleCloudPolicytroubleshooterV1betaAccessTuple() {{
                         fullResourceName = "provident";
                         permission = "distinctio";
                         principal = "quibusdam";
-                    }};
-                }};
+                    }};;
+                }};;
                 accessToken = "unde";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "corrupti";
                 fields = "illum";
                 key = "vel";
@@ -37,18 +36,20 @@ public class Application {
                 quotaUser = "deserunt";
                 uploadType = "suscipit";
                 uploadProtocol = "iure";
-            }}            
+            }};            
 
-            PolicytroubleshooterIamTroubleshootResponse res = sdk.iam.policytroubleshooterIamTroubleshoot(req, new PolicytroubleshooterIamTroubleshootSecurity() {{
+            PolicytroubleshooterIamTroubleshootResponse res = sdk.iam.policytroubleshooterIamTroubleshoot(req, new PolicytroubleshooterIamTroubleshootSecurity("magnam", "debitis") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyResponse.isPresent()) {
+            if (res.googleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

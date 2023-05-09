@@ -18,6 +18,7 @@ public class PaymentsProgramOnboardingSteps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PaymentsProgramOnboardingSteps withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class PaymentsProgramOnboardingSteps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public PaymentsProgramOnboardingSteps withStatus(String status) {
         this.status = status;
         return this;
@@ -40,9 +42,11 @@ public class PaymentsProgramOnboardingSteps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webUrl")
     public String webUrl;
+
     public PaymentsProgramOnboardingSteps withWebUrl(String webUrl) {
         this.webUrl = webUrl;
         return this;
     }
     
+    public PaymentsProgramOnboardingSteps(){}
 }

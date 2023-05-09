@@ -18,6 +18,7 @@ public class SensitiveDataEthnicity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ethnicRacialIdentities")
     public SensitiveDataEthnicityEthnicRacialIdentities[] ethnicRacialIdentities;
+
     public SensitiveDataEthnicity withEthnicRacialIdentities(SensitiveDataEthnicityEthnicRacialIdentities[] ethnicRacialIdentities) {
         this.ethnicRacialIdentities = ethnicRacialIdentities;
         return this;
@@ -29,9 +30,11 @@ public class SensitiveDataEthnicity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ethnicity")
     public String ethnicity;
+
     public SensitiveDataEthnicity withEthnicity(String ethnicity) {
         this.ethnicity = ethnicity;
         return this;
     }
     
+    public SensitiveDataEthnicity(){}
 }

@@ -15,6 +15,7 @@ public class BucketAccessLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public BucketAccessLogConfig withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -22,6 +23,7 @@ public class BucketAccessLogConfig {
     
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public BucketAccessLogConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -30,9 +32,13 @@ public class BucketAccessLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public BucketAccessLogConfig withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public BucketAccessLogConfig(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

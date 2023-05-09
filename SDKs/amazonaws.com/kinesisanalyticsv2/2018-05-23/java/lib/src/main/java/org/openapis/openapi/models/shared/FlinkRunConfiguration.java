@@ -15,9 +15,11 @@ public class FlinkRunConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowNonRestoredState")
     public Boolean allowNonRestoredState;
+
     public FlinkRunConfiguration withAllowNonRestoredState(Boolean allowNonRestoredState) {
         this.allowNonRestoredState = allowNonRestoredState;
         return this;
     }
     
+    public FlinkRunConfiguration(){}
 }

@@ -58,11 +58,9 @@ public class VideoAbuseReportReasons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeVideoAbuseReportReasonsListResponse res = new org.openapis.openapi.models.operations.YoutubeVideoAbuseReportReasonsListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeVideoAbuseReportReasonsListResponse res = new org.openapis.openapi.models.operations.YoutubeVideoAbuseReportReasonsListResponse(contentType, httpRes.statusCode()) {{
             videoAbuseReportReasonListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

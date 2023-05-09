@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateParameterGroupResponse {
     
     public String contentType;
+
     public CreateParameterGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateParameterGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateParameterGroupResponse createParameterGroupResponse;
+
     public CreateParameterGroupResponse withCreateParameterGroupResponse(org.openapis.openapi.models.shared.CreateParameterGroupResponse createParameterGroupResponse) {
         this.createParameterGroupResponse = createParameterGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateParameterGroupResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public CreateParameterGroupResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -39,6 +43,7 @@ public class CreateParameterGroupResponse {
      */
     
     public Object invalidParameterGroupStateFault;
+
     public CreateParameterGroupResponse withInvalidParameterGroupStateFault(Object invalidParameterGroupStateFault) {
         this.invalidParameterGroupStateFault = invalidParameterGroupStateFault;
         return this;
@@ -49,6 +54,7 @@ public class CreateParameterGroupResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CreateParameterGroupResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class CreateParameterGroupResponse {
      */
     
     public Object parameterGroupAlreadyExistsFault;
+
     public CreateParameterGroupResponse withParameterGroupAlreadyExistsFault(Object parameterGroupAlreadyExistsFault) {
         this.parameterGroupAlreadyExistsFault = parameterGroupAlreadyExistsFault;
         return this;
@@ -69,6 +76,7 @@ public class CreateParameterGroupResponse {
      */
     
     public Object parameterGroupQuotaExceededFault;
+
     public CreateParameterGroupResponse withParameterGroupQuotaExceededFault(Object parameterGroupQuotaExceededFault) {
         this.parameterGroupQuotaExceededFault = parameterGroupQuotaExceededFault;
         return this;
@@ -79,6 +87,7 @@ public class CreateParameterGroupResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public CreateParameterGroupResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -86,6 +95,7 @@ public class CreateParameterGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateParameterGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateParameterGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateParameterGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateParameterGroupResponse {
      */
     
     public Object tagQuotaPerResourceExceeded;
+
     public CreateParameterGroupResponse withTagQuotaPerResourceExceeded(Object tagQuotaPerResourceExceeded) {
         this.tagQuotaPerResourceExceeded = tagQuotaPerResourceExceeded;
         return this;
     }
     
+    public CreateParameterGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

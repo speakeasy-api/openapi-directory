@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExportReadSetDetail {
     @JsonProperty("id")
     public String id;
+
     public ExportReadSetDetail withId(String id) {
         this.id = id;
         return this;
@@ -21,6 +22,7 @@ public class ExportReadSetDetail {
     
     @JsonProperty("status")
     public ReadSetExportJobItemStatusEnum status;
+
     public ExportReadSetDetail withStatus(ReadSetExportJobItemStatusEnum status) {
         this.status = status;
         return this;
@@ -29,9 +31,14 @@ public class ExportReadSetDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public ExportReadSetDetail withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public ExportReadSetDetail(@JsonProperty("id") String id, @JsonProperty("status") ReadSetExportJobItemStatusEnum status) {
+        this.id = id;
+        this.status = status;
+  }
 }

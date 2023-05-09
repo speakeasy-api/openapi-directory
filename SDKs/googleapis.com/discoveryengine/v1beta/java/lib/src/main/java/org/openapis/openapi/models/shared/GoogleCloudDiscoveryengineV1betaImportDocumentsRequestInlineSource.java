@@ -18,9 +18,11 @@ public class GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public GoogleCloudDiscoveryengineV1betaDocument[] documents;
+
     public GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource withDocuments(GoogleCloudDiscoveryengineV1betaDocument[] documents) {
         this.documents = documents;
         return this;
     }
     
+    public GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource(){}
 }

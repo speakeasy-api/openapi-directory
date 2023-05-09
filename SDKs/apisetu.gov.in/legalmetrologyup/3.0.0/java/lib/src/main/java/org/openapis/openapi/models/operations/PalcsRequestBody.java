@@ -15,6 +15,7 @@ public class PalcsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public PalcsRequestBodyCertificateParameters certificateParameters;
+
     public PalcsRequestBody withCertificateParameters(PalcsRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class PalcsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public PalcsRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class PalcsRequestBody {
      */
     @JsonProperty("format")
     public PalcsRequestBodyFormatEnum format;
+
     public PalcsRequestBody withFormat(PalcsRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class PalcsRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public PalcsRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public PalcsRequestBody(@JsonProperty("format") PalcsRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

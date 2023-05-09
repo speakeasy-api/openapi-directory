@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UntagResourcesResponse {
     
     public String contentType;
+
     public UntagResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UntagResourcesResponse {
      */
     
     public Object internalServiceException;
+
     public UntagResourcesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class UntagResourcesResponse {
      */
     
     public Object invalidParameterException;
+
     public UntagResourcesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -36,6 +40,7 @@ public class UntagResourcesResponse {
     
     
     public Integer statusCode;
+
     public UntagResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UntagResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UntagResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UntagResourcesResponse {
      */
     
     public Object throttledException;
+
     public UntagResourcesResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
@@ -63,9 +70,14 @@ public class UntagResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.UntagResourcesOutput untagResourcesOutput;
+
     public UntagResourcesResponse withUntagResourcesOutput(org.openapis.openapi.models.shared.UntagResourcesOutput untagResourcesOutput) {
         this.untagResourcesOutput = untagResourcesOutput;
         return this;
     }
     
+    public UntagResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

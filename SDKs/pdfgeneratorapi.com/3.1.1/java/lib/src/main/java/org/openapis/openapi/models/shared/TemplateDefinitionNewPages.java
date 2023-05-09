@@ -12,6 +12,7 @@ public class TemplateDefinitionNewPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("components")
     public Component[] components;
+
     public TemplateDefinitionNewPages withComponents(Component[] components) {
         this.components = components;
         return this;
@@ -23,6 +24,7 @@ public class TemplateDefinitionNewPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Double height;
+
     public TemplateDefinitionNewPages withHeight(Double height) {
         this.height = height;
         return this;
@@ -31,6 +33,7 @@ public class TemplateDefinitionNewPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("margins")
     public TemplateDefinitionNewPagesMargins margins;
+
     public TemplateDefinitionNewPages withMargins(TemplateDefinitionNewPagesMargins margins) {
         this.margins = margins;
         return this;
@@ -42,9 +45,11 @@ public class TemplateDefinitionNewPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Double width;
+
     public TemplateDefinitionNewPages withWidth(Double width) {
         this.width = width;
         return this;
     }
     
+    public TemplateDefinitionNewPages(){}
 }

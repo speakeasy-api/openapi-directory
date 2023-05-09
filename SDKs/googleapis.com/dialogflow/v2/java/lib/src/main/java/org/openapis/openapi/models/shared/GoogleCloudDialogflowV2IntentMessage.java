@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicCard")
     public GoogleCloudDialogflowV2IntentMessageBasicCard basicCard;
+
     public GoogleCloudDialogflowV2IntentMessage withBasicCard(GoogleCloudDialogflowV2IntentMessageBasicCard basicCard) {
         this.basicCard = basicCard;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browseCarouselCard")
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCard browseCarouselCard;
+
     public GoogleCloudDialogflowV2IntentMessage withBrowseCarouselCard(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCard browseCarouselCard) {
         this.browseCarouselCard = browseCarouselCard;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public GoogleCloudDialogflowV2IntentMessageCard card;
+
     public GoogleCloudDialogflowV2IntentMessage withCard(GoogleCloudDialogflowV2IntentMessageCard card) {
         this.card = card;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carouselSelect")
     public GoogleCloudDialogflowV2IntentMessageCarouselSelect carouselSelect;
+
     public GoogleCloudDialogflowV2IntentMessage withCarouselSelect(GoogleCloudDialogflowV2IntentMessageCarouselSelect carouselSelect) {
         this.carouselSelect = carouselSelect;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public GoogleCloudDialogflowV2IntentMessageImage image;
+
     public GoogleCloudDialogflowV2IntentMessage withImage(GoogleCloudDialogflowV2IntentMessageImage image) {
         this.image = image;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkOutSuggestion")
     public GoogleCloudDialogflowV2IntentMessageLinkOutSuggestion linkOutSuggestion;
+
     public GoogleCloudDialogflowV2IntentMessage withLinkOutSuggestion(GoogleCloudDialogflowV2IntentMessageLinkOutSuggestion linkOutSuggestion) {
         this.linkOutSuggestion = linkOutSuggestion;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowV2IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listSelect")
     public GoogleCloudDialogflowV2IntentMessageListSelect listSelect;
+
     public GoogleCloudDialogflowV2IntentMessage withListSelect(GoogleCloudDialogflowV2IntentMessageListSelect listSelect) {
         this.listSelect = listSelect;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowV2IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaContent")
     public GoogleCloudDialogflowV2IntentMessageMediaContent mediaContent;
+
     public GoogleCloudDialogflowV2IntentMessage withMediaContent(GoogleCloudDialogflowV2IntentMessageMediaContent mediaContent) {
         this.mediaContent = mediaContent;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowV2IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public java.util.Map<String, Object> payload;
+
     public GoogleCloudDialogflowV2IntentMessage withPayload(java.util.Map<String, Object> payload) {
         this.payload = payload;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDialogflowV2IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public GoogleCloudDialogflowV2IntentMessagePlatformEnum platform;
+
     public GoogleCloudDialogflowV2IntentMessage withPlatform(GoogleCloudDialogflowV2IntentMessagePlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDialogflowV2IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quickReplies")
     public GoogleCloudDialogflowV2IntentMessageQuickReplies quickReplies;
+
     public GoogleCloudDialogflowV2IntentMessage withQuickReplies(GoogleCloudDialogflowV2IntentMessageQuickReplies quickReplies) {
         this.quickReplies = quickReplies;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDialogflowV2IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simpleResponses")
     public GoogleCloudDialogflowV2IntentMessageSimpleResponses simpleResponses;
+
     public GoogleCloudDialogflowV2IntentMessage withSimpleResponses(GoogleCloudDialogflowV2IntentMessageSimpleResponses simpleResponses) {
         this.simpleResponses = simpleResponses;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudDialogflowV2IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestions")
     public GoogleCloudDialogflowV2IntentMessageSuggestions suggestions;
+
     public GoogleCloudDialogflowV2IntentMessage withSuggestions(GoogleCloudDialogflowV2IntentMessageSuggestions suggestions) {
         this.suggestions = suggestions;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudDialogflowV2IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableCard")
     public GoogleCloudDialogflowV2IntentMessageTableCard tableCard;
+
     public GoogleCloudDialogflowV2IntentMessage withTableCard(GoogleCloudDialogflowV2IntentMessageTableCard tableCard) {
         this.tableCard = tableCard;
         return this;
@@ -172,9 +186,11 @@ public class GoogleCloudDialogflowV2IntentMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public GoogleCloudDialogflowV2IntentMessageText text;
+
     public GoogleCloudDialogflowV2IntentMessage withText(GoogleCloudDialogflowV2IntentMessageText text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentMessage(){}
 }

@@ -15,6 +15,7 @@ public class Gratuity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowCustomAmount")
     public Boolean allowCustomAmount;
+
     public Gratuity withAllowCustomAmount(Boolean allowCustomAmount) {
         this.allowCustomAmount = allowCustomAmount;
         return this;
@@ -26,6 +27,7 @@ public class Gratuity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public Gratuity withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -41,6 +43,7 @@ public class Gratuity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predefinedTipEntries")
     public String[] predefinedTipEntries;
+
     public Gratuity withPredefinedTipEntries(String[] predefinedTipEntries) {
         this.predefinedTipEntries = predefinedTipEntries;
         return this;
@@ -52,9 +55,11 @@ public class Gratuity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usePredefinedTipEntries")
     public Boolean usePredefinedTipEntries;
+
     public Gratuity withUsePredefinedTipEntries(Boolean usePredefinedTipEntries) {
         this.usePredefinedTipEntries = usePredefinedTipEntries;
         return this;
     }
     
+    public Gratuity(){}
 }

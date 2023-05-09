@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateConnectionRequest {
     @JsonProperty("bandwidth")
     public String bandwidth;
+
     public CreateConnectionRequest withBandwidth(String bandwidth) {
         this.bandwidth = bandwidth;
         return this;
@@ -18,6 +19,7 @@ public class CreateConnectionRequest {
     
     @JsonProperty("connectionName")
     public String connectionName;
+
     public CreateConnectionRequest withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -26,6 +28,7 @@ public class CreateConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lagId")
     public String lagId;
+
     public CreateConnectionRequest withLagId(String lagId) {
         this.lagId = lagId;
         return this;
@@ -33,6 +36,7 @@ public class CreateConnectionRequest {
     
     @JsonProperty("location")
     public String location;
+
     public CreateConnectionRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -41,6 +45,7 @@ public class CreateConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providerName")
     public String providerName;
+
     public CreateConnectionRequest withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
@@ -49,6 +54,7 @@ public class CreateConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestMACSec")
     public Boolean requestMACSec;
+
     public CreateConnectionRequest withRequestMACSec(Boolean requestMACSec) {
         this.requestMACSec = requestMACSec;
         return this;
@@ -57,9 +63,15 @@ public class CreateConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateConnectionRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateConnectionRequest(@JsonProperty("bandwidth") String bandwidth, @JsonProperty("connectionName") String connectionName, @JsonProperty("location") String location) {
+        this.bandwidth = bandwidth;
+        this.connectionName = connectionName;
+        this.location = location;
+  }
 }

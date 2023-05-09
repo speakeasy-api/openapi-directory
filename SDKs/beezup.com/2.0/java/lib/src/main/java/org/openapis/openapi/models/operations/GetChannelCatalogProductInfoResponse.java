@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChannelCatalogProductInfoResponse {
@@ -12,6 +13,7 @@ public class GetChannelCatalogProductInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetChannelCatalogProductInfoResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetChannelCatalogProductInfoResponse {
     
     
     public String contentType;
+
     public GetChannelCatalogProductInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetChannelCatalogProductInfoResponse {
     
     
     public Integer statusCode;
+
     public GetChannelCatalogProductInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetChannelCatalogProductInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChannelCatalogProductInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetChannelCatalogProductInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.ChannelCatalogProductInfo channelCatalogProductInfo;
+
     public GetChannelCatalogProductInfoResponse withChannelCatalogProductInfo(org.openapis.openapi.models.shared.ChannelCatalogProductInfo channelCatalogProductInfo) {
         this.channelCatalogProductInfo = channelCatalogProductInfo;
         return this;
     }
     
+    public GetChannelCatalogProductInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

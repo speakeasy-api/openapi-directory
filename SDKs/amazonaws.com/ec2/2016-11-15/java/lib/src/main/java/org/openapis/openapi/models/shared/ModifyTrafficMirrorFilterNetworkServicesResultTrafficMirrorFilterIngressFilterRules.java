@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRules {
     
     public String description;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRules withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIn
     
     
     public String destinationCidrBlock;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRules withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -26,6 +28,7 @@ public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIn
     
     
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesDestinationPortRange destinationPortRange;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRules withDestinationPortRange(ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesDestinationPortRange destinationPortRange) {
         this.destinationPortRange = destinationPortRange;
         return this;
@@ -33,6 +36,7 @@ public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIn
     
     
     public Long protocol;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRules withProtocol(Long protocol) {
         this.protocol = protocol;
         return this;
@@ -40,6 +44,7 @@ public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIn
     
     
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum ruleAction;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRules withRuleAction(ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum ruleAction) {
         this.ruleAction = ruleAction;
         return this;
@@ -47,6 +52,7 @@ public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIn
     
     
     public Long ruleNumber;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRules withRuleNumber(Long ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
@@ -54,6 +60,7 @@ public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIn
     
     
     public String sourceCidrBlock;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRules withSourceCidrBlock(String sourceCidrBlock) {
         this.sourceCidrBlock = sourceCidrBlock;
         return this;
@@ -61,6 +68,7 @@ public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIn
     
     
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesSourcePortRange sourcePortRange;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRules withSourcePortRange(ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesSourcePortRange sourcePortRange) {
         this.sourcePortRange = sourcePortRange;
         return this;
@@ -68,6 +76,7 @@ public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIn
     
     
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum trafficDirection;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRules withTrafficDirection(ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum trafficDirection) {
         this.trafficDirection = trafficDirection;
         return this;
@@ -75,6 +84,7 @@ public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIn
     
     
     public String trafficMirrorFilterId;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRules withTrafficMirrorFilterId(String trafficMirrorFilterId) {
         this.trafficMirrorFilterId = trafficMirrorFilterId;
         return this;
@@ -82,9 +92,11 @@ public class ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIn
     
     
     public String trafficMirrorFilterRuleId;
+
     public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRules withTrafficMirrorFilterRuleId(String trafficMirrorFilterRuleId) {
         this.trafficMirrorFilterRuleId = trafficMirrorFilterRuleId;
         return this;
     }
     
+    public ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRules(){}
 }

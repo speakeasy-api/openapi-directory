@@ -15,9 +15,11 @@ public class ControllersAdvisoriesSystemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, String[]> data;
+
     public ControllersAdvisoriesSystemsResponse withData(java.util.Map<String, String[]> data) {
         this.data = data;
         return this;
     }
     
+    public ControllersAdvisoriesSystemsResponse(){}
 }

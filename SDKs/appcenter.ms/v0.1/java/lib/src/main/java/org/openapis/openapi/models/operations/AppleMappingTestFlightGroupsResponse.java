@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppleMappingTestFlightGroupsResponse {
     
     public String contentType;
+
     public AppleMappingTestFlightGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppleMappingTestFlightGroupsResponse {
     
     
     public Integer statusCode;
+
     public AppleMappingTestFlightGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppleMappingTestFlightGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppleMappingTestFlightGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppleMappingTestFlightGroupsResponse {
      */
     
     public AppleMappingTestFlightGroups200ApplicationJSON[] appleMappingTestFlightGroups200ApplicationJSONObjects;
+
     public AppleMappingTestFlightGroupsResponse withAppleMappingTestFlightGroups200ApplicationJSONObjects(AppleMappingTestFlightGroups200ApplicationJSON[] appleMappingTestFlightGroups200ApplicationJSONObjects) {
         this.appleMappingTestFlightGroups200ApplicationJSONObjects = appleMappingTestFlightGroups200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class AppleMappingTestFlightGroupsResponse {
      */
     
     public AppleMappingTestFlightGroupsDefaultApplicationJSON appleMappingTestFlightGroupsDefaultApplicationJSONObject;
+
     public AppleMappingTestFlightGroupsResponse withAppleMappingTestFlightGroupsDefaultApplicationJSONObject(AppleMappingTestFlightGroupsDefaultApplicationJSON appleMappingTestFlightGroupsDefaultApplicationJSONObject) {
         this.appleMappingTestFlightGroupsDefaultApplicationJSONObject = appleMappingTestFlightGroupsDefaultApplicationJSONObject;
         return this;
     }
     
+    public AppleMappingTestFlightGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConditionalBranch {
     @JsonProperty("condition")
     public Condition condition;
+
     public ConditionalBranch withCondition(Condition condition) {
         this.condition = condition;
         return this;
@@ -21,6 +22,7 @@ public class ConditionalBranch {
     
     @JsonProperty("name")
     public String name;
+
     public ConditionalBranch withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class ConditionalBranch {
     
     @JsonProperty("nextStep")
     public DialogState nextStep;
+
     public ConditionalBranch withNextStep(DialogState nextStep) {
         this.nextStep = nextStep;
         return this;
@@ -39,9 +42,15 @@ public class ConditionalBranch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public ResponseSpecification response;
+
     public ConditionalBranch withResponse(ResponseSpecification response) {
         this.response = response;
         return this;
     }
     
+    public ConditionalBranch(@JsonProperty("condition") Condition condition, @JsonProperty("name") String name, @JsonProperty("nextStep") DialogState nextStep) {
+        this.condition = condition;
+        this.name = name;
+        this.nextStep = nextStep;
+  }
 }

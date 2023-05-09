@@ -15,9 +15,11 @@ public class AddTaskForSectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.SectionTaskInsertRequest data;
+
     public AddTaskForSectionRequestBody withData(org.openapis.openapi.models.shared.SectionTaskInsertRequest data) {
         this.data = data;
         return this;
     }
     
+    public AddTaskForSectionRequestBody(){}
 }

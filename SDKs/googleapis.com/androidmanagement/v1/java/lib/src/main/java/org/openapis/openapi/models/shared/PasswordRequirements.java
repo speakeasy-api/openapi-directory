@@ -18,6 +18,7 @@ public class PasswordRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumFailedPasswordsForWipe")
     public Integer maximumFailedPasswordsForWipe;
+
     public PasswordRequirements withMaximumFailedPasswordsForWipe(Integer maximumFailedPasswordsForWipe) {
         this.maximumFailedPasswordsForWipe = maximumFailedPasswordsForWipe;
         return this;
@@ -29,6 +30,7 @@ public class PasswordRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordExpirationTimeout")
     public String passwordExpirationTimeout;
+
     public PasswordRequirements withPasswordExpirationTimeout(String passwordExpirationTimeout) {
         this.passwordExpirationTimeout = passwordExpirationTimeout;
         return this;
@@ -40,6 +42,7 @@ public class PasswordRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordHistoryLength")
     public Integer passwordHistoryLength;
+
     public PasswordRequirements withPasswordHistoryLength(Integer passwordHistoryLength) {
         this.passwordHistoryLength = passwordHistoryLength;
         return this;
@@ -51,6 +54,7 @@ public class PasswordRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordMinimumLength")
     public Integer passwordMinimumLength;
+
     public PasswordRequirements withPasswordMinimumLength(Integer passwordMinimumLength) {
         this.passwordMinimumLength = passwordMinimumLength;
         return this;
@@ -62,6 +66,7 @@ public class PasswordRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordMinimumLetters")
     public Integer passwordMinimumLetters;
+
     public PasswordRequirements withPasswordMinimumLetters(Integer passwordMinimumLetters) {
         this.passwordMinimumLetters = passwordMinimumLetters;
         return this;
@@ -73,6 +78,7 @@ public class PasswordRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordMinimumLowerCase")
     public Integer passwordMinimumLowerCase;
+
     public PasswordRequirements withPasswordMinimumLowerCase(Integer passwordMinimumLowerCase) {
         this.passwordMinimumLowerCase = passwordMinimumLowerCase;
         return this;
@@ -84,6 +90,7 @@ public class PasswordRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordMinimumNonLetter")
     public Integer passwordMinimumNonLetter;
+
     public PasswordRequirements withPasswordMinimumNonLetter(Integer passwordMinimumNonLetter) {
         this.passwordMinimumNonLetter = passwordMinimumNonLetter;
         return this;
@@ -95,6 +102,7 @@ public class PasswordRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordMinimumNumeric")
     public Integer passwordMinimumNumeric;
+
     public PasswordRequirements withPasswordMinimumNumeric(Integer passwordMinimumNumeric) {
         this.passwordMinimumNumeric = passwordMinimumNumeric;
         return this;
@@ -106,6 +114,7 @@ public class PasswordRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordMinimumSymbols")
     public Integer passwordMinimumSymbols;
+
     public PasswordRequirements withPasswordMinimumSymbols(Integer passwordMinimumSymbols) {
         this.passwordMinimumSymbols = passwordMinimumSymbols;
         return this;
@@ -117,6 +126,7 @@ public class PasswordRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordMinimumUpperCase")
     public Integer passwordMinimumUpperCase;
+
     public PasswordRequirements withPasswordMinimumUpperCase(Integer passwordMinimumUpperCase) {
         this.passwordMinimumUpperCase = passwordMinimumUpperCase;
         return this;
@@ -128,6 +138,7 @@ public class PasswordRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordQuality")
     public PasswordRequirementsPasswordQualityEnum passwordQuality;
+
     public PasswordRequirements withPasswordQuality(PasswordRequirementsPasswordQualityEnum passwordQuality) {
         this.passwordQuality = passwordQuality;
         return this;
@@ -139,6 +150,7 @@ public class PasswordRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordScope")
     public PasswordRequirementsPasswordScopeEnum passwordScope;
+
     public PasswordRequirements withPasswordScope(PasswordRequirementsPasswordScopeEnum passwordScope) {
         this.passwordScope = passwordScope;
         return this;
@@ -150,6 +162,7 @@ public class PasswordRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requirePasswordUnlock")
     public PasswordRequirementsRequirePasswordUnlockEnum requirePasswordUnlock;
+
     public PasswordRequirements withRequirePasswordUnlock(PasswordRequirementsRequirePasswordUnlockEnum requirePasswordUnlock) {
         this.requirePasswordUnlock = requirePasswordUnlock;
         return this;
@@ -161,9 +174,11 @@ public class PasswordRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unifiedLockSettings")
     public PasswordRequirementsUnifiedLockSettingsEnum unifiedLockSettings;
+
     public PasswordRequirements withUnifiedLockSettings(PasswordRequirementsUnifiedLockSettingsEnum unifiedLockSettings) {
         this.unifiedLockSettings = unifiedLockSettings;
         return this;
     }
     
+    public PasswordRequirements(){}
 }

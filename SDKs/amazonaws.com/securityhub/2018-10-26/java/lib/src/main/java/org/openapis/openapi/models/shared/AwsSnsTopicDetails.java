@@ -15,6 +15,7 @@ public class AwsSnsTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationSuccessFeedbackRoleArn")
     public String applicationSuccessFeedbackRoleArn;
+
     public AwsSnsTopicDetails withApplicationSuccessFeedbackRoleArn(String applicationSuccessFeedbackRoleArn) {
         this.applicationSuccessFeedbackRoleArn = applicationSuccessFeedbackRoleArn;
         return this;
@@ -23,6 +24,7 @@ public class AwsSnsTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirehoseFailureFeedbackRoleArn")
     public String firehoseFailureFeedbackRoleArn;
+
     public AwsSnsTopicDetails withFirehoseFailureFeedbackRoleArn(String firehoseFailureFeedbackRoleArn) {
         this.firehoseFailureFeedbackRoleArn = firehoseFailureFeedbackRoleArn;
         return this;
@@ -31,6 +33,7 @@ public class AwsSnsTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirehoseSuccessFeedbackRoleArn")
     public String firehoseSuccessFeedbackRoleArn;
+
     public AwsSnsTopicDetails withFirehoseSuccessFeedbackRoleArn(String firehoseSuccessFeedbackRoleArn) {
         this.firehoseSuccessFeedbackRoleArn = firehoseSuccessFeedbackRoleArn;
         return this;
@@ -39,6 +42,7 @@ public class AwsSnsTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpFailureFeedbackRoleArn")
     public String httpFailureFeedbackRoleArn;
+
     public AwsSnsTopicDetails withHttpFailureFeedbackRoleArn(String httpFailureFeedbackRoleArn) {
         this.httpFailureFeedbackRoleArn = httpFailureFeedbackRoleArn;
         return this;
@@ -47,6 +51,7 @@ public class AwsSnsTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpSuccessFeedbackRoleArn")
     public String httpSuccessFeedbackRoleArn;
+
     public AwsSnsTopicDetails withHttpSuccessFeedbackRoleArn(String httpSuccessFeedbackRoleArn) {
         this.httpSuccessFeedbackRoleArn = httpSuccessFeedbackRoleArn;
         return this;
@@ -55,6 +60,7 @@ public class AwsSnsTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsMasterKeyId")
     public String kmsMasterKeyId;
+
     public AwsSnsTopicDetails withKmsMasterKeyId(String kmsMasterKeyId) {
         this.kmsMasterKeyId = kmsMasterKeyId;
         return this;
@@ -63,6 +69,7 @@ public class AwsSnsTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public AwsSnsTopicDetails withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -71,6 +78,7 @@ public class AwsSnsTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqsFailureFeedbackRoleArn")
     public String sqsFailureFeedbackRoleArn;
+
     public AwsSnsTopicDetails withSqsFailureFeedbackRoleArn(String sqsFailureFeedbackRoleArn) {
         this.sqsFailureFeedbackRoleArn = sqsFailureFeedbackRoleArn;
         return this;
@@ -79,6 +87,7 @@ public class AwsSnsTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqsSuccessFeedbackRoleArn")
     public String sqsSuccessFeedbackRoleArn;
+
     public AwsSnsTopicDetails withSqsSuccessFeedbackRoleArn(String sqsSuccessFeedbackRoleArn) {
         this.sqsSuccessFeedbackRoleArn = sqsSuccessFeedbackRoleArn;
         return this;
@@ -87,6 +96,7 @@ public class AwsSnsTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subscription")
     public AwsSnsTopicSubscription[] subscription;
+
     public AwsSnsTopicDetails withSubscription(AwsSnsTopicSubscription[] subscription) {
         this.subscription = subscription;
         return this;
@@ -95,9 +105,11 @@ public class AwsSnsTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopicName")
     public String topicName;
+
     public AwsSnsTopicDetails withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public AwsSnsTopicDetails(){}
 }

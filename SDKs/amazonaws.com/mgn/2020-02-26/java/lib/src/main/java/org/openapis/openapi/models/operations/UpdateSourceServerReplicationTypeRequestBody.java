@@ -12,6 +12,7 @@ public class UpdateSourceServerReplicationTypeRequestBody {
      */
     @JsonProperty("replicationType")
     public UpdateSourceServerReplicationTypeRequestBodyReplicationTypeEnum replicationType;
+
     public UpdateSourceServerReplicationTypeRequestBody withReplicationType(UpdateSourceServerReplicationTypeRequestBodyReplicationTypeEnum replicationType) {
         this.replicationType = replicationType;
         return this;
@@ -22,9 +23,14 @@ public class UpdateSourceServerReplicationTypeRequestBody {
      */
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public UpdateSourceServerReplicationTypeRequestBody withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
     }
     
+    public UpdateSourceServerReplicationTypeRequestBody(@JsonProperty("replicationType") UpdateSourceServerReplicationTypeRequestBodyReplicationTypeEnum replicationType, @JsonProperty("sourceServerID") String sourceServerID) {
+        this.replicationType = replicationType;
+        this.sourceServerID = sourceServerID;
+  }
 }

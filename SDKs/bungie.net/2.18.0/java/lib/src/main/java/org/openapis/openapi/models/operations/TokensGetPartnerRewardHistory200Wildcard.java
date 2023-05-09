@@ -12,6 +12,7 @@ package org.openapis.openapi.models.operations;
 public class TokensGetPartnerRewardHistory200Wildcard {
     
     public String detailedErrorTrace;
+
     public TokensGetPartnerRewardHistory200Wildcard withDetailedErrorTrace(String detailedErrorTrace) {
         this.detailedErrorTrace = detailedErrorTrace;
         return this;
@@ -19,6 +20,7 @@ public class TokensGetPartnerRewardHistory200Wildcard {
     
     
     public Integer errorCode;
+
     public TokensGetPartnerRewardHistory200Wildcard withErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -26,6 +28,7 @@ public class TokensGetPartnerRewardHistory200Wildcard {
     
     
     public String errorStatus;
+
     public TokensGetPartnerRewardHistory200Wildcard withErrorStatus(String errorStatus) {
         this.errorStatus = errorStatus;
         return this;
@@ -33,6 +36,7 @@ public class TokensGetPartnerRewardHistory200Wildcard {
     
     
     public String message;
+
     public TokensGetPartnerRewardHistory200Wildcard withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +44,7 @@ public class TokensGetPartnerRewardHistory200Wildcard {
     
     
     public java.util.Map<String, String> messageData;
+
     public TokensGetPartnerRewardHistory200Wildcard withMessageData(java.util.Map<String, String> messageData) {
         this.messageData = messageData;
         return this;
@@ -47,6 +52,7 @@ public class TokensGetPartnerRewardHistory200Wildcard {
     
     
     public org.openapis.openapi.models.shared.TokensPartnerRewardHistoryResponse response;
+
     public TokensGetPartnerRewardHistory200Wildcard withResponse(org.openapis.openapi.models.shared.TokensPartnerRewardHistoryResponse response) {
         this.response = response;
         return this;
@@ -54,9 +60,11 @@ public class TokensGetPartnerRewardHistory200Wildcard {
     
     
     public Integer throttleSeconds;
+
     public TokensGetPartnerRewardHistory200Wildcard withThrottleSeconds(Integer throttleSeconds) {
         this.throttleSeconds = throttleSeconds;
         return this;
     }
     
+    public TokensGetPartnerRewardHistory200Wildcard(){}
 }

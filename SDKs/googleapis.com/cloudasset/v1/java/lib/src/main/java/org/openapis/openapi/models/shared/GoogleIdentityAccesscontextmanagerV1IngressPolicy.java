@@ -18,6 +18,7 @@ public class GoogleIdentityAccesscontextmanagerV1IngressPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingressFrom")
     public GoogleIdentityAccesscontextmanagerV1IngressFrom ingressFrom;
+
     public GoogleIdentityAccesscontextmanagerV1IngressPolicy withIngressFrom(GoogleIdentityAccesscontextmanagerV1IngressFrom ingressFrom) {
         this.ingressFrom = ingressFrom;
         return this;
@@ -29,9 +30,11 @@ public class GoogleIdentityAccesscontextmanagerV1IngressPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingressTo")
     public GoogleIdentityAccesscontextmanagerV1IngressTo ingressTo;
+
     public GoogleIdentityAccesscontextmanagerV1IngressPolicy withIngressTo(GoogleIdentityAccesscontextmanagerV1IngressTo ingressTo) {
         this.ingressTo = ingressTo;
         return this;
     }
     
+    public GoogleIdentityAccesscontextmanagerV1IngressPolicy(){}
 }

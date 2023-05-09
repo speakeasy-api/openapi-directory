@@ -18,6 +18,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public String[] args;
+
     public GoogleCloudMlV1TrainingInput withArgs(String[] args) {
         this.args = args;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableWebAccess")
     public Boolean enableWebAccess;
+
     public GoogleCloudMlV1TrainingInput withEnableWebAccess(Boolean enableWebAccess) {
         this.enableWebAccess = enableWebAccess;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionConfig")
     public GoogleCloudMlV1EncryptionConfig encryptionConfig;
+
     public GoogleCloudMlV1TrainingInput withEncryptionConfig(GoogleCloudMlV1EncryptionConfig encryptionConfig) {
         this.encryptionConfig = encryptionConfig;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluatorConfig")
     public GoogleCloudMlV1ReplicaConfig evaluatorConfig;
+
     public GoogleCloudMlV1TrainingInput withEvaluatorConfig(GoogleCloudMlV1ReplicaConfig evaluatorConfig) {
         this.evaluatorConfig = evaluatorConfig;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluatorCount")
     public String evaluatorCount;
+
     public GoogleCloudMlV1TrainingInput withEvaluatorCount(String evaluatorCount) {
         this.evaluatorCount = evaluatorCount;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluatorType")
     public String evaluatorType;
+
     public GoogleCloudMlV1TrainingInput withEvaluatorType(String evaluatorType) {
         this.evaluatorType = evaluatorType;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hyperparameters")
     public GoogleCloudMlV1HyperparameterSpec hyperparameters;
+
     public GoogleCloudMlV1TrainingInput withHyperparameters(GoogleCloudMlV1HyperparameterSpec hyperparameters) {
         this.hyperparameters = hyperparameters;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobDir")
     public String jobDir;
+
     public GoogleCloudMlV1TrainingInput withJobDir(String jobDir) {
         this.jobDir = jobDir;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterConfig")
     public GoogleCloudMlV1ReplicaConfig masterConfig;
+
     public GoogleCloudMlV1TrainingInput withMasterConfig(GoogleCloudMlV1ReplicaConfig masterConfig) {
         this.masterConfig = masterConfig;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterType")
     public String masterType;
+
     public GoogleCloudMlV1TrainingInput withMasterType(String masterType) {
         this.masterType = masterType;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public GoogleCloudMlV1TrainingInput withNetwork(String network) {
         this.network = network;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageUris")
     public String[] packageUris;
+
     public GoogleCloudMlV1TrainingInput withPackageUris(String[] packageUris) {
         this.packageUris = packageUris;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterServerConfig")
     public GoogleCloudMlV1ReplicaConfig parameterServerConfig;
+
     public GoogleCloudMlV1TrainingInput withParameterServerConfig(GoogleCloudMlV1ReplicaConfig parameterServerConfig) {
         this.parameterServerConfig = parameterServerConfig;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterServerCount")
     public String parameterServerCount;
+
     public GoogleCloudMlV1TrainingInput withParameterServerCount(String parameterServerCount) {
         this.parameterServerCount = parameterServerCount;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterServerType")
     public String parameterServerType;
+
     public GoogleCloudMlV1TrainingInput withParameterServerType(String parameterServerType) {
         this.parameterServerType = parameterServerType;
         return this;
@@ -183,6 +198,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pythonModule")
     public String pythonModule;
+
     public GoogleCloudMlV1TrainingInput withPythonModule(String pythonModule) {
         this.pythonModule = pythonModule;
         return this;
@@ -194,6 +210,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pythonVersion")
     public String pythonVersion;
+
     public GoogleCloudMlV1TrainingInput withPythonVersion(String pythonVersion) {
         this.pythonVersion = pythonVersion;
         return this;
@@ -205,6 +222,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public GoogleCloudMlV1TrainingInput withRegion(String region) {
         this.region = region;
         return this;
@@ -216,6 +234,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeVersion")
     public String runtimeVersion;
+
     public GoogleCloudMlV1TrainingInput withRuntimeVersion(String runtimeVersion) {
         this.runtimeVersion = runtimeVersion;
         return this;
@@ -227,6 +246,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaleTier")
     public GoogleCloudMlV1TrainingInputScaleTierEnum scaleTier;
+
     public GoogleCloudMlV1TrainingInput withScaleTier(GoogleCloudMlV1TrainingInputScaleTierEnum scaleTier) {
         this.scaleTier = scaleTier;
         return this;
@@ -238,6 +258,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduling")
     public GoogleCloudMlV1Scheduling scheduling;
+
     public GoogleCloudMlV1TrainingInput withScheduling(GoogleCloudMlV1Scheduling scheduling) {
         this.scheduling = scheduling;
         return this;
@@ -249,6 +270,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public GoogleCloudMlV1TrainingInput withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -260,6 +282,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useChiefInTfConfig")
     public Boolean useChiefInTfConfig;
+
     public GoogleCloudMlV1TrainingInput withUseChiefInTfConfig(Boolean useChiefInTfConfig) {
         this.useChiefInTfConfig = useChiefInTfConfig;
         return this;
@@ -271,6 +294,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerConfig")
     public GoogleCloudMlV1ReplicaConfig workerConfig;
+
     public GoogleCloudMlV1TrainingInput withWorkerConfig(GoogleCloudMlV1ReplicaConfig workerConfig) {
         this.workerConfig = workerConfig;
         return this;
@@ -282,6 +306,7 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerCount")
     public String workerCount;
+
     public GoogleCloudMlV1TrainingInput withWorkerCount(String workerCount) {
         this.workerCount = workerCount;
         return this;
@@ -293,9 +318,11 @@ public class GoogleCloudMlV1TrainingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerType")
     public String workerType;
+
     public GoogleCloudMlV1TrainingInput withWorkerType(String workerType) {
         this.workerType = workerType;
         return this;
     }
     
+    public GoogleCloudMlV1TrainingInput(){}
 }

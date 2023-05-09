@@ -20,6 +20,7 @@ public class ShardFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShardId")
     public String shardId;
+
     public ShardFilter withShardId(String shardId) {
         this.shardId = shardId;
         return this;
@@ -30,6 +31,7 @@ public class ShardFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public ShardFilter withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -37,9 +39,13 @@ public class ShardFilter {
     
     @JsonProperty("Type")
     public ShardFilterTypeEnum type;
+
     public ShardFilter withType(ShardFilterTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ShardFilter(@JsonProperty("Type") ShardFilterTypeEnum type) {
+        this.type = type;
+  }
 }

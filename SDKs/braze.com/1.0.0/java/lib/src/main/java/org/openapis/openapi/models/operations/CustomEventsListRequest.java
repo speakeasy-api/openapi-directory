@@ -14,9 +14,11 @@ public class CustomEventsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public CustomEventsListRequest withPage(String page) {
         this.page = page;
         return this;
     }
     
+    public CustomEventsListRequest(){}
 }

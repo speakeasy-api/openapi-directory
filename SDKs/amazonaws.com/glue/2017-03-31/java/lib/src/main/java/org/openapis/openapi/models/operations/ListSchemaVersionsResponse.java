@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSchemaVersionsResponse {
@@ -12,6 +13,7 @@ public class ListSchemaVersionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSchemaVersionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListSchemaVersionsResponse {
     
     
     public String contentType;
+
     public ListSchemaVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSchemaVersionsResponse {
      */
     
     public Object entityNotFoundException;
+
     public ListSchemaVersionsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class ListSchemaVersionsResponse {
      */
     
     public Object internalServiceException;
+
     public ListSchemaVersionsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ListSchemaVersionsResponse {
      */
     
     public Object invalidInputException;
+
     public ListSchemaVersionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class ListSchemaVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSchemaVersionsResponse listSchemaVersionsResponse;
+
     public ListSchemaVersionsResponse withListSchemaVersionsResponse(org.openapis.openapi.models.shared.ListSchemaVersionsResponse listSchemaVersionsResponse) {
         this.listSchemaVersionsResponse = listSchemaVersionsResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListSchemaVersionsResponse {
     
     
     public Integer statusCode;
+
     public ListSchemaVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListSchemaVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSchemaVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListSchemaVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

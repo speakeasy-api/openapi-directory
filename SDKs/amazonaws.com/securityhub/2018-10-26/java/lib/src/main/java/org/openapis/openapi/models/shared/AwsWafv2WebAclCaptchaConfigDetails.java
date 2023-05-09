@@ -15,9 +15,11 @@ public class AwsWafv2WebAclCaptchaConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImmunityTimeProperty")
     public AwsWafv2WebAclCaptchaConfigImmunityTimePropertyDetails immunityTimeProperty;
+
     public AwsWafv2WebAclCaptchaConfigDetails withImmunityTimeProperty(AwsWafv2WebAclCaptchaConfigImmunityTimePropertyDetails immunityTimeProperty) {
         this.immunityTimeProperty = immunityTimeProperty;
         return this;
     }
     
+    public AwsWafv2WebAclCaptchaConfigDetails(){}
 }

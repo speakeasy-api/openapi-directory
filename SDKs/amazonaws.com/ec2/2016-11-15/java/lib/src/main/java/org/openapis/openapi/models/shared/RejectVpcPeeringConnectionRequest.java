@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RejectVpcPeeringConnectionRequest {
     
     public Boolean dryRun;
+
     public RejectVpcPeeringConnectionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class RejectVpcPeeringConnectionRequest {
     
     
     public String vpcPeeringConnectionId;
+
     public RejectVpcPeeringConnectionRequest withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public RejectVpcPeeringConnectionRequest(@JsonProperty("VpcPeeringConnectionId") String vpcPeeringConnectionId) {
+        this.vpcPeeringConnectionId = vpcPeeringConnectionId;
+  }
 }

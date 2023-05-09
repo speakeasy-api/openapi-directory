@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnumApiGetShippingCarriersResponse {
     
     public String contentType;
+
     public EnumApiGetShippingCarriersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EnumApiGetShippingCarriersResponse {
      */
     
     public java.util.Map<String, Object> enumApiGetShippingCarriers200ApplicationJSONObject;
+
     public EnumApiGetShippingCarriersResponse withEnumApiGetShippingCarriers200ApplicationJSONObject(java.util.Map<String, Object> enumApiGetShippingCarriers200ApplicationJSONObject) {
         this.enumApiGetShippingCarriers200ApplicationJSONObject = enumApiGetShippingCarriers200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class EnumApiGetShippingCarriersResponse {
      */
     
     public java.util.Map<String, Object> enumApiGetShippingCarriers200TextJSONObject;
+
     public EnumApiGetShippingCarriersResponse withEnumApiGetShippingCarriers200TextJSONObject(java.util.Map<String, Object> enumApiGetShippingCarriers200TextJSONObject) {
         this.enumApiGetShippingCarriers200TextJSONObject = enumApiGetShippingCarriers200TextJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class EnumApiGetShippingCarriersResponse {
     
     
     public Integer statusCode;
+
     public EnumApiGetShippingCarriersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class EnumApiGetShippingCarriersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnumApiGetShippingCarriersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EnumApiGetShippingCarriersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

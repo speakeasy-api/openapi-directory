@@ -14,6 +14,7 @@ public class ApiCoreDtoAccountingUser {
     @JsonProperty("boGoVal")
     @SpeakeasyMetadata("form:name=boGoVal")
     public String boGoVal;
+
     public ApiCoreDtoAccountingUser withBoGoVal(String boGoVal) {
         this.boGoVal = boGoVal;
         return this;
@@ -23,6 +24,7 @@ public class ApiCoreDtoAccountingUser {
     @JsonProperty("bonusClicks")
     @SpeakeasyMetadata("form:name=bonusClicks")
     public Long bonusClicks;
+
     public ApiCoreDtoAccountingUser withBonusClicks(Long bonusClicks) {
         this.bonusClicks = bonusClicks;
         return this;
@@ -32,6 +34,7 @@ public class ApiCoreDtoAccountingUser {
     @JsonProperty("companyName")
     @SpeakeasyMetadata("form:name=companyName")
     public String companyName;
+
     public ApiCoreDtoAccountingUser withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -41,6 +44,7 @@ public class ApiCoreDtoAccountingUser {
     @JsonProperty("companyRole")
     @SpeakeasyMetadata("form:name=companyRole")
     public String companyRole;
+
     public ApiCoreDtoAccountingUser withCompanyRole(String companyRole) {
         this.companyRole = companyRole;
         return this;
@@ -50,6 +54,7 @@ public class ApiCoreDtoAccountingUser {
     @JsonProperty("email")
     @SpeakeasyMetadata("form:name=email")
     public String email;
+
     public ApiCoreDtoAccountingUser withEmail(String email) {
         this.email = email;
         return this;
@@ -59,6 +64,7 @@ public class ApiCoreDtoAccountingUser {
     @JsonProperty("firstName")
     @SpeakeasyMetadata("form:name=firstName")
     public String firstName;
+
     public ApiCoreDtoAccountingUser withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -68,6 +74,7 @@ public class ApiCoreDtoAccountingUser {
     @JsonProperty("lastName")
     @SpeakeasyMetadata("form:name=lastName")
     public String lastName;
+
     public ApiCoreDtoAccountingUser withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -77,6 +84,7 @@ public class ApiCoreDtoAccountingUser {
     @JsonProperty("phone")
     @SpeakeasyMetadata("form:name=phone")
     public String phone;
+
     public ApiCoreDtoAccountingUser withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -86,6 +94,7 @@ public class ApiCoreDtoAccountingUser {
     @JsonProperty("redirectOnly")
     @SpeakeasyMetadata("form:name=redirectOnly")
     public Boolean redirectOnly;
+
     public ApiCoreDtoAccountingUser withRedirectOnly(Boolean redirectOnly) {
         this.redirectOnly = redirectOnly;
         return this;
@@ -98,6 +107,7 @@ public class ApiCoreDtoAccountingUser {
     @JsonProperty("registrationDate")
     @SpeakeasyMetadata("form:name=registrationDate")
     public String registrationDate;
+
     public ApiCoreDtoAccountingUser withRegistrationDate(String registrationDate) {
         this.registrationDate = registrationDate;
         return this;
@@ -110,6 +120,7 @@ public class ApiCoreDtoAccountingUser {
     @JsonProperty("timeframeMinDate")
     @SpeakeasyMetadata("form:name=timeframeMinDate")
     public String timeframeMinDate;
+
     public ApiCoreDtoAccountingUser withTimeframeMinDate(String timeframeMinDate) {
         this.timeframeMinDate = timeframeMinDate;
         return this;
@@ -119,6 +130,7 @@ public class ApiCoreDtoAccountingUser {
     @JsonProperty("timezone")
     @SpeakeasyMetadata("form:name=timezone")
     public Integer timezone;
+
     public ApiCoreDtoAccountingUser withTimezone(Integer timezone) {
         this.timezone = timezone;
         return this;
@@ -128,9 +140,11 @@ public class ApiCoreDtoAccountingUser {
     @JsonProperty("timezonename")
     @SpeakeasyMetadata("form:name=timezonename")
     public String timezonename;
+
     public ApiCoreDtoAccountingUser withTimezonename(String timezonename) {
         this.timezonename = timezonename;
         return this;
     }
     
+    public ApiCoreDtoAccountingUser(){}
 }

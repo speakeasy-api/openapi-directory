@@ -18,6 +18,7 @@ public class ListNetworksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networks")
     public Network[] networks;
+
     public ListNetworksResponse withNetworks(Network[] networks) {
         this.networks = networks;
         return this;
@@ -29,6 +30,7 @@ public class ListNetworksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListNetworksResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListNetworksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListNetworksResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListNetworksResponse(){}
 }

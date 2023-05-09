@@ -12,6 +12,7 @@ public class CreateDataSourceFromRedshiftInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeStatistics")
     public Boolean computeStatistics;
+
     public CreateDataSourceFromRedshiftInput withComputeStatistics(Boolean computeStatistics) {
         this.computeStatistics = computeStatistics;
         return this;
@@ -19,6 +20,7 @@ public class CreateDataSourceFromRedshiftInput {
     
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public CreateDataSourceFromRedshiftInput withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -27,6 +29,7 @@ public class CreateDataSourceFromRedshiftInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceName")
     public String dataSourceName;
+
     public CreateDataSourceFromRedshiftInput withDataSourceName(String dataSourceName) {
         this.dataSourceName = dataSourceName;
         return this;
@@ -34,6 +37,7 @@ public class CreateDataSourceFromRedshiftInput {
     
     @JsonProperty("DataSpec")
     public RedshiftDataSpec dataSpec;
+
     public CreateDataSourceFromRedshiftInput withDataSpec(RedshiftDataSpec dataSpec) {
         this.dataSpec = dataSpec;
         return this;
@@ -41,9 +45,15 @@ public class CreateDataSourceFromRedshiftInput {
     
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public CreateDataSourceFromRedshiftInput withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
     }
     
+    public CreateDataSourceFromRedshiftInput(@JsonProperty("DataSourceId") String dataSourceId, @JsonProperty("DataSpec") RedshiftDataSpec dataSpec, @JsonProperty("RoleARN") String roleARN) {
+        this.dataSourceId = dataSourceId;
+        this.dataSpec = dataSpec;
+        this.roleARN = roleARN;
+  }
 }

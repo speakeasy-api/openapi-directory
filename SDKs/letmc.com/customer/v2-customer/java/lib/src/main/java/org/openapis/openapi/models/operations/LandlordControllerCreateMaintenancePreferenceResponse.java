@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LandlordControllerCreateMaintenancePreferenceResponse {
     
     public String contentType;
+
     public LandlordControllerCreateMaintenancePreferenceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class LandlordControllerCreateMaintenancePreferenceResponse {
      */
     
     public String landlordControllerCreateMaintenancePreference200ApplicationJSONString;
+
     public LandlordControllerCreateMaintenancePreferenceResponse withLandlordControllerCreateMaintenancePreference200ApplicationJSONString(String landlordControllerCreateMaintenancePreference200ApplicationJSONString) {
         this.landlordControllerCreateMaintenancePreference200ApplicationJSONString = landlordControllerCreateMaintenancePreference200ApplicationJSONString;
         return this;
@@ -29,6 +32,7 @@ public class LandlordControllerCreateMaintenancePreferenceResponse {
      */
     
     public String landlordControllerCreateMaintenancePreference200ApplicationXMLString;
+
     public LandlordControllerCreateMaintenancePreferenceResponse withLandlordControllerCreateMaintenancePreference200ApplicationXMLString(String landlordControllerCreateMaintenancePreference200ApplicationXMLString) {
         this.landlordControllerCreateMaintenancePreference200ApplicationXMLString = landlordControllerCreateMaintenancePreference200ApplicationXMLString;
         return this;
@@ -39,6 +43,7 @@ public class LandlordControllerCreateMaintenancePreferenceResponse {
      */
     
     public String landlordControllerCreateMaintenancePreference200TextJSONString;
+
     public LandlordControllerCreateMaintenancePreferenceResponse withLandlordControllerCreateMaintenancePreference200TextJSONString(String landlordControllerCreateMaintenancePreference200TextJSONString) {
         this.landlordControllerCreateMaintenancePreference200TextJSONString = landlordControllerCreateMaintenancePreference200TextJSONString;
         return this;
@@ -49,6 +54,7 @@ public class LandlordControllerCreateMaintenancePreferenceResponse {
      */
     
     public String landlordControllerCreateMaintenancePreference200TextXMLString;
+
     public LandlordControllerCreateMaintenancePreferenceResponse withLandlordControllerCreateMaintenancePreference200TextXMLString(String landlordControllerCreateMaintenancePreference200TextXMLString) {
         this.landlordControllerCreateMaintenancePreference200TextXMLString = landlordControllerCreateMaintenancePreference200TextXMLString;
         return this;
@@ -56,6 +62,7 @@ public class LandlordControllerCreateMaintenancePreferenceResponse {
     
     
     public Integer statusCode;
+
     public LandlordControllerCreateMaintenancePreferenceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class LandlordControllerCreateMaintenancePreferenceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LandlordControllerCreateMaintenancePreferenceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LandlordControllerCreateMaintenancePreferenceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

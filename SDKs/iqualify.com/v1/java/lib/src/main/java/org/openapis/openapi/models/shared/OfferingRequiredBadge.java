@@ -12,6 +12,7 @@ public class OfferingRequiredBadge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("badgeExpiry")
     public BadgeExpiry badgeExpiry;
+
     public OfferingRequiredBadge withBadgeExpiry(BadgeExpiry badgeExpiry) {
         this.badgeExpiry = badgeExpiry;
         return this;
@@ -20,6 +21,7 @@ public class OfferingRequiredBadge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OfferingRequiredBadge withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class OfferingRequiredBadge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiresApproval")
     public Boolean requiresApproval;
+
     public OfferingRequiredBadge withRequiresApproval(Boolean requiresApproval) {
         this.requiresApproval = requiresApproval;
         return this;
@@ -36,9 +39,11 @@ public class OfferingRequiredBadge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public OfferingRequiredBadge withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public OfferingRequiredBadge(){}
 }

@@ -12,6 +12,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Parameter withType(String type) {
         this.type = type;
         return this;
@@ -20,9 +21,11 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Parameter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Parameter(){}
 }

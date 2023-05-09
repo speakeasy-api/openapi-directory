@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLocationFsxOpenZfsRequest {
     @JsonProperty("FsxFilesystemArn")
     public String fsxFilesystemArn;
+
     public CreateLocationFsxOpenZfsRequest withFsxFilesystemArn(String fsxFilesystemArn) {
         this.fsxFilesystemArn = fsxFilesystemArn;
         return this;
@@ -18,6 +19,7 @@ public class CreateLocationFsxOpenZfsRequest {
     
     @JsonProperty("Protocol")
     public FsxProtocol protocol;
+
     public CreateLocationFsxOpenZfsRequest withProtocol(FsxProtocol protocol) {
         this.protocol = protocol;
         return this;
@@ -25,6 +27,7 @@ public class CreateLocationFsxOpenZfsRequest {
     
     @JsonProperty("SecurityGroupArns")
     public String[] securityGroupArns;
+
     public CreateLocationFsxOpenZfsRequest withSecurityGroupArns(String[] securityGroupArns) {
         this.securityGroupArns = securityGroupArns;
         return this;
@@ -33,6 +36,7 @@ public class CreateLocationFsxOpenZfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subdirectory")
     public String subdirectory;
+
     public CreateLocationFsxOpenZfsRequest withSubdirectory(String subdirectory) {
         this.subdirectory = subdirectory;
         return this;
@@ -41,9 +45,15 @@ public class CreateLocationFsxOpenZfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagListEntry[] tags;
+
     public CreateLocationFsxOpenZfsRequest withTags(TagListEntry[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLocationFsxOpenZfsRequest(@JsonProperty("FsxFilesystemArn") String fsxFilesystemArn, @JsonProperty("Protocol") FsxProtocol protocol, @JsonProperty("SecurityGroupArns") String[] securityGroupArns) {
+        this.fsxFilesystemArn = fsxFilesystemArn;
+        this.protocol = protocol;
+        this.securityGroupArns = securityGroupArns;
+  }
 }

@@ -18,6 +18,7 @@ public class BadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hints")
     public ErrorMessage[] hints;
+
     public BadRequest withHints(ErrorMessage[] hints) {
         this.hints = hints;
         return this;
@@ -29,6 +30,7 @@ public class BadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public BadRequest withMessage(String message) {
         this.message = message;
         return this;
@@ -40,9 +42,11 @@ public class BadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public BadRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public BadRequest(){}
 }

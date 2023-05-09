@@ -15,6 +15,7 @@ public class InputLambdaProcessorDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public InputLambdaProcessorDescription withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -23,9 +24,11 @@ public class InputLambdaProcessorDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public InputLambdaProcessorDescription withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
     }
     
+    public InputLambdaProcessorDescription(){}
 }

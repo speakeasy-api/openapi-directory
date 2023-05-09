@@ -12,6 +12,7 @@ public class UserLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login_as")
     public Href loginAs;
+
     public UserLinks withLoginAs(Href loginAs) {
         this.loginAs = loginAs;
         return this;
@@ -20,6 +21,7 @@ public class UserLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projects")
     public Href projects;
+
     public UserLinks withProjects(Href projects) {
         this.projects = projects;
         return this;
@@ -28,6 +30,7 @@ public class UserLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responsivity")
     public Href responsivity;
+
     public UserLinks withResponsivity(Href responsivity) {
         this.responsivity = responsivity;
         return this;
@@ -36,6 +39,7 @@ public class UserLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Href self;
+
     public UserLinks withSelf(Href self) {
         this.self = self;
         return this;
@@ -44,9 +48,11 @@ public class UserLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public Href stats;
+
     public UserLinks withStats(Href stats) {
         this.stats = stats;
         return this;
     }
     
+    public UserLinks(){}
 }

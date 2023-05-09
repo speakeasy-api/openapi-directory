@@ -15,6 +15,7 @@ public class ECSServiceRecommendationFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public ECSServiceRecommendationFilterNameEnum name;
+
     public ECSServiceRecommendationFilter withName(ECSServiceRecommendationFilterNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class ECSServiceRecommendationFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public ECSServiceRecommendationFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ECSServiceRecommendationFilter(){}
 }

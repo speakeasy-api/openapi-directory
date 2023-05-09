@@ -15,6 +15,7 @@ public class LoggingFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("json")
     public JsonFormatRef[] json;
+
     public LoggingFormat withJson(JsonFormatRef[] json) {
         this.json = json;
         return this;
@@ -23,9 +24,11 @@ public class LoggingFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public LoggingFormat withText(String text) {
         this.text = text;
         return this;
     }
     
+    public LoggingFormat(){}
 }

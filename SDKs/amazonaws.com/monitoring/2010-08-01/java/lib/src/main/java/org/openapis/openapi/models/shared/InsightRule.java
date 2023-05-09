@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * InsightRule - This structure contains the definition for a Contributor Insights rule. For more information about this rule, see&lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContributorInsights.html"&gt; Using Constributor Insights to analyze high-cardinality data&lt;/a&gt; in the &lt;i&gt;Amazon CloudWatch User Guide&lt;/i&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InsightRule {
     
     public String definition;
+
     public InsightRule withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -19,6 +20,7 @@ public class InsightRule {
     
     
     public Boolean managedRule;
+
     public InsightRule withManagedRule(Boolean managedRule) {
         this.managedRule = managedRule;
         return this;
@@ -26,6 +28,7 @@ public class InsightRule {
     
     
     public String name;
+
     public InsightRule withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +36,7 @@ public class InsightRule {
     
     
     public String schema;
+
     public InsightRule withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -40,9 +44,16 @@ public class InsightRule {
     
     
     public String state;
+
     public InsightRule withState(String state) {
         this.state = state;
         return this;
     }
     
+    public InsightRule(@JsonProperty("Definition") String definition, @JsonProperty("Name") String name, @JsonProperty("Schema") String schema, @JsonProperty("State") String state) {
+        this.definition = definition;
+        this.name = name;
+        this.schema = schema;
+        this.state = state;
+  }
 }

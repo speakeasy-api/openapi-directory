@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResultsReadRequest {
@@ -12,9 +13,13 @@ public class ResultsReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=result_file_id")
     public String resultFileId;
+
     public ResultsReadRequest withResultFileId(String resultFileId) {
         this.resultFileId = resultFileId;
         return this;
     }
     
+    public ResultsReadRequest(@JsonProperty("result_file_id") String resultFileId) {
+        this.resultFileId = resultFileId;
+  }
 }

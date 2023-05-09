@@ -18,6 +18,7 @@ public class ConversionCountingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floodlightActivityConfigs")
     public TrackingFloodlightActivityConfig[] floodlightActivityConfigs;
+
     public ConversionCountingConfig withFloodlightActivityConfigs(TrackingFloodlightActivityConfig[] floodlightActivityConfigs) {
         this.floodlightActivityConfigs = floodlightActivityConfigs;
         return this;
@@ -29,9 +30,11 @@ public class ConversionCountingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postViewCountPercentageMillis")
     public String postViewCountPercentageMillis;
+
     public ConversionCountingConfig withPostViewCountPercentageMillis(String postViewCountPercentageMillis) {
         this.postViewCountPercentageMillis = postViewCountPercentageMillis;
         return this;
     }
     
+    public ConversionCountingConfig(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNetworkSsidResponse {
     
     public String contentType;
+
     public UpdateNetworkSsidResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateNetworkSsidResponse {
     
     
     public Integer statusCode;
+
     public UpdateNetworkSsidResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateNetworkSsidResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNetworkSsidResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class UpdateNetworkSsidResponse {
      */
     
     public java.util.Map<String, Object> updateNetworkSsid200ApplicationJSONObject;
+
     public UpdateNetworkSsidResponse withUpdateNetworkSsid200ApplicationJSONObject(java.util.Map<String, Object> updateNetworkSsid200ApplicationJSONObject) {
         this.updateNetworkSsid200ApplicationJSONObject = updateNetworkSsid200ApplicationJSONObject;
         return this;
     }
     
+    public UpdateNetworkSsidResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

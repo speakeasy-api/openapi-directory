@@ -18,6 +18,7 @@ public class ListFilteredBidsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeStatusRows")
     public CreativeStatusRow[] creativeStatusRows;
+
     public ListFilteredBidsResponse withCreativeStatusRows(CreativeStatusRow[] creativeStatusRows) {
         this.creativeStatusRows = creativeStatusRows;
         return this;
@@ -29,9 +30,11 @@ public class ListFilteredBidsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListFilteredBidsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListFilteredBidsResponse(){}
 }

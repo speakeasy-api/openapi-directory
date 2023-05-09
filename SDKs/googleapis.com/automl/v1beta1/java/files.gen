@@ -220,4 +220,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListOperationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/WaitOperationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

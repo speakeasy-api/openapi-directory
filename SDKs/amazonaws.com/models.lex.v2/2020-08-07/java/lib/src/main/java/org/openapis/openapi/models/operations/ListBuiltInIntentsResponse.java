@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBuiltInIntentsResponse {
     
     public String contentType;
+
     public ListBuiltInIntentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListBuiltInIntentsResponse {
      */
     
     public Object internalServerException;
+
     public ListBuiltInIntentsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListBuiltInIntentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBuiltInIntentsResponse listBuiltInIntentsResponse;
+
     public ListBuiltInIntentsResponse withListBuiltInIntentsResponse(org.openapis.openapi.models.shared.ListBuiltInIntentsResponse listBuiltInIntentsResponse) {
         this.listBuiltInIntentsResponse = listBuiltInIntentsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListBuiltInIntentsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListBuiltInIntentsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -46,6 +51,7 @@ public class ListBuiltInIntentsResponse {
     
     
     public Integer statusCode;
+
     public ListBuiltInIntentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListBuiltInIntentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBuiltInIntentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListBuiltInIntentsResponse {
      */
     
     public Object throttlingException;
+
     public ListBuiltInIntentsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListBuiltInIntentsResponse {
      */
     
     public Object validationException;
+
     public ListBuiltInIntentsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListBuiltInIntentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

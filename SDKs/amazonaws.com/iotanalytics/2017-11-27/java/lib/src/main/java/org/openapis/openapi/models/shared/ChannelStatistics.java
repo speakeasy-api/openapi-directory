@@ -15,9 +15,11 @@ public class ChannelStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public EstimatedResourceSize size;
+
     public ChannelStatistics withSize(EstimatedResourceSize size) {
         this.size = size;
         return this;
     }
     
+    public ChannelStatistics(){}
 }

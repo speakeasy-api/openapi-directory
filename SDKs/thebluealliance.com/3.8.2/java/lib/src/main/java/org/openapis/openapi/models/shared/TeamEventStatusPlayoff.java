@@ -18,6 +18,7 @@ public class TeamEventStatusPlayoff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_level_record")
     public WLTRecord currentLevelRecord;
+
     public TeamEventStatusPlayoff withCurrentLevelRecord(WLTRecord currentLevelRecord) {
         this.currentLevelRecord = currentLevelRecord;
         return this;
@@ -29,6 +30,7 @@ public class TeamEventStatusPlayoff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public TeamEventStatusPlayoffLevelEnum level;
+
     public TeamEventStatusPlayoff withLevel(TeamEventStatusPlayoffLevelEnum level) {
         this.level = level;
         return this;
@@ -40,6 +42,7 @@ public class TeamEventStatusPlayoff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playoff_average")
     public Long playoffAverage;
+
     public TeamEventStatusPlayoff withPlayoffAverage(Long playoffAverage) {
         this.playoffAverage = playoffAverage;
         return this;
@@ -51,6 +54,7 @@ public class TeamEventStatusPlayoff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("record")
     public WLTRecord record;
+
     public TeamEventStatusPlayoff withRecord(WLTRecord record) {
         this.record = record;
         return this;
@@ -62,9 +66,11 @@ public class TeamEventStatusPlayoff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TeamEventStatusPlayoffStatusEnum status;
+
     public TeamEventStatusPlayoff withStatus(TeamEventStatusPlayoffStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public TeamEventStatusPlayoff(){}
 }

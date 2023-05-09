@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQuery
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataset")
     public String dataset;
+
     public GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination withDataset(String dataset) {
         this.dataset = dataset;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQuery
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQuery
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public String table;
+
     public GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination(){}
 }

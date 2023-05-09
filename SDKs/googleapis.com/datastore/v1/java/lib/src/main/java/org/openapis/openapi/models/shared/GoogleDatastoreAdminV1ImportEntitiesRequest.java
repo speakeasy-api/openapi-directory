@@ -18,6 +18,7 @@ public class GoogleDatastoreAdminV1ImportEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityFilter")
     public GoogleDatastoreAdminV1EntityFilter entityFilter;
+
     public GoogleDatastoreAdminV1ImportEntitiesRequest withEntityFilter(GoogleDatastoreAdminV1EntityFilter entityFilter) {
         this.entityFilter = entityFilter;
         return this;
@@ -29,6 +30,7 @@ public class GoogleDatastoreAdminV1ImportEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputUrl")
     public String inputUrl;
+
     public GoogleDatastoreAdminV1ImportEntitiesRequest withInputUrl(String inputUrl) {
         this.inputUrl = inputUrl;
         return this;
@@ -40,9 +42,11 @@ public class GoogleDatastoreAdminV1ImportEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleDatastoreAdminV1ImportEntitiesRequest withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public GoogleDatastoreAdminV1ImportEntitiesRequest(){}
 }

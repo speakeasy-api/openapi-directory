@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImageVariationRequest {
@@ -12,6 +13,7 @@ public class CreateImageVariationRequest {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public CreateImageVariationRequestImage image;
+
     public CreateImageVariationRequest withImage(CreateImageVariationRequestImage image) {
         this.image = image;
         return this;
@@ -22,6 +24,7 @@ public class CreateImageVariationRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=n")
     public Long n;
+
     public CreateImageVariationRequest withN(Long n) {
         this.n = n;
         return this;
@@ -32,6 +35,7 @@ public class CreateImageVariationRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=response_format")
     public ResponseFormatEnum responseFormat;
+
     public CreateImageVariationRequest withResponseFormat(ResponseFormatEnum responseFormat) {
         this.responseFormat = responseFormat;
         return this;
@@ -42,6 +46,7 @@ public class CreateImageVariationRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=size")
     public SizeEnum size;
+
     public CreateImageVariationRequest withSize(SizeEnum size) {
         this.size = size;
         return this;
@@ -53,9 +58,13 @@ public class CreateImageVariationRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=user")
     public String user;
+
     public CreateImageVariationRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public CreateImageVariationRequest(@JsonProperty("image") CreateImageVariationRequestImage image) {
+        this.image = image;
+  }
 }

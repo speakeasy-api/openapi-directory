@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeProjectsDisableXpnResourceSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeProjectsDisableXpnResourceSecurityOption1 option1;
+
     public ComputeProjectsDisableXpnResourceSecurity withOption1(ComputeProjectsDisableXpnResourceSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeProjectsDisableXpnResourceSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeProjectsDisableXpnResourceSecurityOption2 option2;
+
     public ComputeProjectsDisableXpnResourceSecurity withOption2(ComputeProjectsDisableXpnResourceSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeProjectsDisableXpnResourceSecurity(){}
 }

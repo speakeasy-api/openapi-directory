@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PreprocessingUnrotateAdvancedSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Apikey")
     public String apikey;
+
     public PreprocessingUnrotateAdvancedSecurity withApikey(String apikey) {
         this.apikey = apikey;
         return this;
     }
     
+    public PreprocessingUnrotateAdvancedSecurity(@JsonProperty("Apikey") String apikey) {
+        this.apikey = apikey;
+  }
 }

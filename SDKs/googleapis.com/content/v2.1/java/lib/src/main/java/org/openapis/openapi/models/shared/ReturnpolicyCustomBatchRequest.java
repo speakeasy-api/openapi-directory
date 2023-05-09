@@ -15,9 +15,11 @@ public class ReturnpolicyCustomBatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public ReturnpolicyCustomBatchRequestEntry[] entries;
+
     public ReturnpolicyCustomBatchRequest withEntries(ReturnpolicyCustomBatchRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public ReturnpolicyCustomBatchRequest(){}
 }

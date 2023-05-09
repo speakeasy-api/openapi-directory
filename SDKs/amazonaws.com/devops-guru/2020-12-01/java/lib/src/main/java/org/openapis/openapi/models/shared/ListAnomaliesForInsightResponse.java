@@ -15,6 +15,7 @@ public class ListAnomaliesForInsightResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAnomaliesForInsightResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class ListAnomaliesForInsightResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProactiveAnomalies")
     public ProactiveAnomalySummary[] proactiveAnomalies;
+
     public ListAnomaliesForInsightResponse withProactiveAnomalies(ProactiveAnomalySummary[] proactiveAnomalies) {
         this.proactiveAnomalies = proactiveAnomalies;
         return this;
@@ -31,9 +33,11 @@ public class ListAnomaliesForInsightResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReactiveAnomalies")
     public ReactiveAnomalySummary[] reactiveAnomalies;
+
     public ListAnomaliesForInsightResponse withReactiveAnomalies(ReactiveAnomalySummary[] reactiveAnomalies) {
         this.reactiveAnomalies = reactiveAnomalies;
         return this;
     }
     
+    public ListAnomaliesForInsightResponse(){}
 }

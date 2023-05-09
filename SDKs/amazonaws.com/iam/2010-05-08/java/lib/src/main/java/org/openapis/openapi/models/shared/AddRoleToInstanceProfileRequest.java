@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AddRoleToInstanceProfileRequest {
     
     public String instanceProfileName;
+
     public AddRoleToInstanceProfileRequest withInstanceProfileName(String instanceProfileName) {
         this.instanceProfileName = instanceProfileName;
         return this;
@@ -16,9 +17,14 @@ public class AddRoleToInstanceProfileRequest {
     
     
     public String roleName;
+
     public AddRoleToInstanceProfileRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
     }
     
+    public AddRoleToInstanceProfileRequest(@JsonProperty("InstanceProfileName") String instanceProfileName, @JsonProperty("RoleName") String roleName) {
+        this.instanceProfileName = instanceProfileName;
+        this.roleName = roleName;
+  }
 }

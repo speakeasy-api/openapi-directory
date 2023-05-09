@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticleConfidentialityUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ConfidentialityCreator confidentialityCreator;
+
     public PrivateArticleConfidentialityUpdateRequest withConfidentialityCreator(org.openapis.openapi.models.shared.ConfidentialityCreator confidentialityCreator) {
         this.confidentialityCreator = confidentialityCreator;
         return this;
@@ -19,9 +21,14 @@ public class PrivateArticleConfidentialityUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
     public Long articleId;
+
     public PrivateArticleConfidentialityUpdateRequest withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
     }
     
+    public PrivateArticleConfidentialityUpdateRequest(@JsonProperty("ConfidentialityCreator") org.openapis.openapi.models.shared.ConfidentialityCreator confidentialityCreator, @JsonProperty("article_id") Long articleId) {
+        this.confidentialityCreator = confidentialityCreator;
+        this.articleId = articleId;
+  }
 }

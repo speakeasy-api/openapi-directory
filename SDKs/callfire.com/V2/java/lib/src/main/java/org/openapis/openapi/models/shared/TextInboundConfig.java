@@ -18,6 +18,7 @@ public class TextInboundConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardEnabled")
     public Boolean forwardEnabled;
+
     public TextInboundConfig withForwardEnabled(Boolean forwardEnabled) {
         this.forwardEnabled = forwardEnabled;
         return this;
@@ -29,9 +30,11 @@ public class TextInboundConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardNumber")
     public String forwardNumber;
+
     public TextInboundConfig withForwardNumber(String forwardNumber) {
         this.forwardNumber = forwardNumber;
         return this;
     }
     
+    public TextInboundConfig(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateGatewayCapabilityConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateGatewayCapabilityConfigurationResponse {
      */
     
     public Object conflictingOperationException;
+
     public UpdateGatewayCapabilityConfigurationResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateGatewayCapabilityConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateGatewayCapabilityConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateGatewayCapabilityConfigurationResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateGatewayCapabilityConfigurationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateGatewayCapabilityConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateGatewayCapabilityConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateGatewayCapabilityConfigurationResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateGatewayCapabilityConfigurationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateGatewayCapabilityConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateGatewayCapabilityConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateGatewayCapabilityConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateGatewayCapabilityConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateGatewayCapabilityConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateGatewayCapabilityConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateGatewayCapabilityConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateGatewayCapabilityConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateGatewayCapabilityConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateGatewayCapabilityConfigurationResponse updateGatewayCapabilityConfigurationResponse;
+
     public UpdateGatewayCapabilityConfigurationResponse withUpdateGatewayCapabilityConfigurationResponse(org.openapis.openapi.models.shared.UpdateGatewayCapabilityConfigurationResponse updateGatewayCapabilityConfigurationResponse) {
         this.updateGatewayCapabilityConfigurationResponse = updateGatewayCapabilityConfigurationResponse;
         return this;
     }
     
+    public UpdateGatewayCapabilityConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

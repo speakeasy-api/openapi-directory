@@ -20,6 +20,7 @@ public class CreateSourceRepositoryBranchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headCommitId")
     public String headCommitId;
+
     public CreateSourceRepositoryBranchResponse withHeadCommitId(String headCommitId) {
         this.headCommitId = headCommitId;
         return this;
@@ -30,6 +31,7 @@ public class CreateSourceRepositoryBranchResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public CreateSourceRepositoryBranchResponse withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -38,6 +40,7 @@ public class CreateSourceRepositoryBranchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateSourceRepositoryBranchResponse withName(String name) {
         this.name = name;
         return this;
@@ -46,9 +49,11 @@ public class CreateSourceRepositoryBranchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ref")
     public String ref;
+
     public CreateSourceRepositoryBranchResponse withRef(String ref) {
         this.ref = ref;
         return this;
     }
     
+    public CreateSourceRepositoryBranchResponse(){}
 }

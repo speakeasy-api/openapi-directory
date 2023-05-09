@@ -15,9 +15,11 @@ public class GetGameSessionLogUrlOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreSignedUrl")
     public String preSignedUrl;
+
     public GetGameSessionLogUrlOutput withPreSignedUrl(String preSignedUrl) {
         this.preSignedUrl = preSignedUrl;
         return this;
     }
     
+    public GetGameSessionLogUrlOutput(){}
 }

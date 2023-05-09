@@ -15,9 +15,11 @@ public class ModifyDBClusterSnapshotAttributeResult {
      */
     
     public DBClusterSnapshotAttributesResult dbClusterSnapshotAttributesResult;
+
     public ModifyDBClusterSnapshotAttributeResult withDBClusterSnapshotAttributesResult(DBClusterSnapshotAttributesResult dbClusterSnapshotAttributesResult) {
         this.dbClusterSnapshotAttributesResult = dbClusterSnapshotAttributesResult;
         return this;
     }
     
+    public ModifyDBClusterSnapshotAttributeResult(){}
 }

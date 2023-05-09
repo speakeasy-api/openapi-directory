@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPutNotificationConfigurationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETPutNotificationConfigurationActionEnum action;
+
     public GETPutNotificationConfigurationRequest withAction(GETPutNotificationConfigurationActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETPutNotificationConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
     public String autoScalingGroupName;
+
     public GETPutNotificationConfigurationRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -29,6 +32,7 @@ public class GETPutNotificationConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NotificationTypes")
     public String[] notificationTypes;
+
     public GETPutNotificationConfigurationRequest withNotificationTypes(String[] notificationTypes) {
         this.notificationTypes = notificationTypes;
         return this;
@@ -39,6 +43,7 @@ public class GETPutNotificationConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TopicARN")
     public String topicARN;
+
     public GETPutNotificationConfigurationRequest withTopicARN(String topicARN) {
         this.topicARN = topicARN;
         return this;
@@ -46,6 +51,7 @@ public class GETPutNotificationConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETPutNotificationConfigurationVersionEnum version;
+
     public GETPutNotificationConfigurationRequest withVersion(GETPutNotificationConfigurationVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETPutNotificationConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETPutNotificationConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETPutNotificationConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETPutNotificationConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETPutNotificationConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETPutNotificationConfigurationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETPutNotificationConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETPutNotificationConfigurationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETPutNotificationConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETPutNotificationConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETPutNotificationConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETPutNotificationConfigurationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,17 @@ public class GETPutNotificationConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETPutNotificationConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETPutNotificationConfigurationRequest(@JsonProperty("Action") GETPutNotificationConfigurationActionEnum action, @JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("NotificationTypes") String[] notificationTypes, @JsonProperty("TopicARN") String topicARN, @JsonProperty("Version") GETPutNotificationConfigurationVersionEnum version) {
+        this.action = action;
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.notificationTypes = notificationTypes;
+        this.topicARN = topicARN;
+        this.version = version;
+  }
 }

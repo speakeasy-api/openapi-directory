@@ -40,4 +40,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Aspect.java
 lib/src/main/java/org/openapis/openapi/models/shared/PricingSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/Amount.java
 lib/src/main/java/org/openapis/openapi/models/shared/Charity.java
+docs/sdk/README.md
+docs/itemdraft/README.md
 USAGE.md

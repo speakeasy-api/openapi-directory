@@ -22,6 +22,7 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("benefit_categories")
     public FormShowAttributesBenefitCategories[] benefitCategories;
+
     public FormShowAttributes withBenefitCategories(FormShowAttributesBenefitCategories[] benefitCategories) {
         this.benefitCategories = benefitCategories;
         return this;
@@ -35,6 +36,7 @@ public class FormShowAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public FormShowAttributes withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -48,6 +50,7 @@ public class FormShowAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deleted_at")
     public OffsetDateTime deletedAt;
+
     public FormShowAttributes withDeletedAt(OffsetDateTime deletedAt) {
         this.deletedAt = deletedAt;
         return this;
@@ -60,6 +63,7 @@ public class FormShowAttributes {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("first_issued_on")
     public LocalDate firstIssuedOn;
+
     public FormShowAttributes withFirstIssuedOn(LocalDate firstIssuedOn) {
         this.firstIssuedOn = firstIssuedOn;
         return this;
@@ -71,6 +75,7 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form_details_url")
     public String formDetailsUrl;
+
     public FormShowAttributes withFormDetailsUrl(String formDetailsUrl) {
         this.formDetailsUrl = formDetailsUrl;
         return this;
@@ -82,6 +87,7 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form_name")
     public String formName;
+
     public FormShowAttributes withFormName(String formName) {
         this.formName = formName;
         return this;
@@ -93,6 +99,7 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form_tool_intro")
     public String formToolIntro;
+
     public FormShowAttributes withFormToolIntro(String formToolIntro) {
         this.formToolIntro = formToolIntro;
         return this;
@@ -104,6 +111,7 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form_tool_url")
     public String formToolUrl;
+
     public FormShowAttributes withFormToolUrl(String formToolUrl) {
         this.formToolUrl = formToolUrl;
         return this;
@@ -115,6 +123,7 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form_type")
     public String formType;
+
     public FormShowAttributes withFormType(String formType) {
         this.formType = formType;
         return this;
@@ -126,6 +135,7 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form_usage")
     public String formUsage;
+
     public FormShowAttributes withFormUsage(String formUsage) {
         this.formUsage = formUsage;
         return this;
@@ -137,6 +147,7 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public FormShowAttributes withLanguage(String language) {
         this.language = language;
         return this;
@@ -149,6 +160,7 @@ public class FormShowAttributes {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_revision_on")
     public LocalDate lastRevisionOn;
+
     public FormShowAttributes withLastRevisionOn(LocalDate lastRevisionOn) {
         this.lastRevisionOn = lastRevisionOn;
         return this;
@@ -160,6 +172,7 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pages")
     public Long pages;
+
     public FormShowAttributes withPages(Long pages) {
         this.pages = pages;
         return this;
@@ -171,6 +184,7 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("related_forms")
     public String[] relatedForms;
+
     public FormShowAttributes withRelatedForms(String[] relatedForms) {
         this.relatedForms = relatedForms;
         return this;
@@ -182,6 +196,7 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha256")
     public String sha256;
+
     public FormShowAttributes withSha256(String sha256) {
         this.sha256 = sha256;
         return this;
@@ -193,6 +208,7 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public FormShowAttributes withTitle(String title) {
         this.title = title;
         return this;
@@ -204,6 +220,7 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public FormShowAttributes withUrl(String url) {
         this.url = url;
         return this;
@@ -215,6 +232,7 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("va_form_administration")
     public String vaFormAdministration;
+
     public FormShowAttributes withVaFormAdministration(String vaFormAdministration) {
         this.vaFormAdministration = vaFormAdministration;
         return this;
@@ -226,6 +244,7 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid_pdf")
     public Boolean validPdf;
+
     public FormShowAttributes withValidPdf(Boolean validPdf) {
         this.validPdf = validPdf;
         return this;
@@ -237,9 +256,11 @@ public class FormShowAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public FormShowAttributesVersions[] versions;
+
     public FormShowAttributes withVersions(FormShowAttributesVersions[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public FormShowAttributes(){}
 }

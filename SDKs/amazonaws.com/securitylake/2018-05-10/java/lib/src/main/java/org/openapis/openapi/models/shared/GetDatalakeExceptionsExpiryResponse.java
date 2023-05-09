@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDatalakeExceptionsExpiryResponse {
     @JsonProperty("exceptionMessageExpiry")
     public Long exceptionMessageExpiry;
+
     public GetDatalakeExceptionsExpiryResponse withExceptionMessageExpiry(Long exceptionMessageExpiry) {
         this.exceptionMessageExpiry = exceptionMessageExpiry;
         return this;
     }
     
+    public GetDatalakeExceptionsExpiryResponse(@JsonProperty("exceptionMessageExpiry") Long exceptionMessageExpiry) {
+        this.exceptionMessageExpiry = exceptionMessageExpiry;
+  }
 }

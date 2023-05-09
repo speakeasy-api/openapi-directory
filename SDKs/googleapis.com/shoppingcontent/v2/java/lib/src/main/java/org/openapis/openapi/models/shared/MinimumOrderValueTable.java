@@ -12,9 +12,11 @@ public class MinimumOrderValueTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeCodeSetWithMovs")
     public MinimumOrderValueTableStoreCodeSetWithMov[] storeCodeSetWithMovs;
+
     public MinimumOrderValueTable withStoreCodeSetWithMovs(MinimumOrderValueTableStoreCodeSetWithMov[] storeCodeSetWithMovs) {
         this.storeCodeSetWithMovs = storeCodeSetWithMovs;
         return this;
     }
     
+    public MinimumOrderValueTable(){}
 }

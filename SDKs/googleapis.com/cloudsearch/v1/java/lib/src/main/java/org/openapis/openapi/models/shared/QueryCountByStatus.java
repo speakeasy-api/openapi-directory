@@ -12,6 +12,7 @@ public class QueryCountByStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public QueryCountByStatus withCount(String count) {
         this.count = count;
         return this;
@@ -23,9 +24,11 @@ public class QueryCountByStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public Integer statusCode;
+
     public QueryCountByStatus withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public QueryCountByStatus(){}
 }

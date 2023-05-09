@@ -18,6 +18,7 @@ public class YoutubeAndPartnersThirdPartyMeasurementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandLiftVendorConfigs")
     public ThirdPartyVendorConfig[] brandLiftVendorConfigs;
+
     public YoutubeAndPartnersThirdPartyMeasurementSettings withBrandLiftVendorConfigs(ThirdPartyVendorConfig[] brandLiftVendorConfigs) {
         this.brandLiftVendorConfigs = brandLiftVendorConfigs;
         return this;
@@ -29,6 +30,7 @@ public class YoutubeAndPartnersThirdPartyMeasurementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandSafetyVendorConfigs")
     public ThirdPartyVendorConfig[] brandSafetyVendorConfigs;
+
     public YoutubeAndPartnersThirdPartyMeasurementSettings withBrandSafetyVendorConfigs(ThirdPartyVendorConfig[] brandSafetyVendorConfigs) {
         this.brandSafetyVendorConfigs = brandSafetyVendorConfigs;
         return this;
@@ -40,6 +42,7 @@ public class YoutubeAndPartnersThirdPartyMeasurementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reachVendorConfigs")
     public ThirdPartyVendorConfig[] reachVendorConfigs;
+
     public YoutubeAndPartnersThirdPartyMeasurementSettings withReachVendorConfigs(ThirdPartyVendorConfig[] reachVendorConfigs) {
         this.reachVendorConfigs = reachVendorConfigs;
         return this;
@@ -51,9 +54,11 @@ public class YoutubeAndPartnersThirdPartyMeasurementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewabilityVendorConfigs")
     public ThirdPartyVendorConfig[] viewabilityVendorConfigs;
+
     public YoutubeAndPartnersThirdPartyMeasurementSettings withViewabilityVendorConfigs(ThirdPartyVendorConfig[] viewabilityVendorConfigs) {
         this.viewabilityVendorConfigs = viewabilityVendorConfigs;
         return this;
     }
     
+    public YoutubeAndPartnersThirdPartyMeasurementSettings(){}
 }

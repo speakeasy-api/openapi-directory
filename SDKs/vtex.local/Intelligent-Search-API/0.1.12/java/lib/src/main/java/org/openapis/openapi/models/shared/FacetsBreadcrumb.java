@@ -15,6 +15,7 @@ public class FacetsBreadcrumb {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public FacetsBreadcrumb withHref(String href) {
         this.href = href;
         return this;
@@ -26,9 +27,11 @@ public class FacetsBreadcrumb {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FacetsBreadcrumb withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FacetsBreadcrumb(){}
 }

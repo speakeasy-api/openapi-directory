@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateOpsMetadataResponse {
     
     public String contentType;
+
     public CreateOpsMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateOpsMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateOpsMetadataResult createOpsMetadataResult;
+
     public CreateOpsMetadataResponse withCreateOpsMetadataResult(org.openapis.openapi.models.shared.CreateOpsMetadataResult createOpsMetadataResult) {
         this.createOpsMetadataResult = createOpsMetadataResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateOpsMetadataResponse {
      */
     
     public Object internalServerError;
+
     public CreateOpsMetadataResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class CreateOpsMetadataResponse {
      */
     
     public Object opsMetadataAlreadyExistsException;
+
     public CreateOpsMetadataResponse withOpsMetadataAlreadyExistsException(Object opsMetadataAlreadyExistsException) {
         this.opsMetadataAlreadyExistsException = opsMetadataAlreadyExistsException;
         return this;
@@ -49,6 +54,7 @@ public class CreateOpsMetadataResponse {
      */
     
     public Object opsMetadataInvalidArgumentException;
+
     public CreateOpsMetadataResponse withOpsMetadataInvalidArgumentException(Object opsMetadataInvalidArgumentException) {
         this.opsMetadataInvalidArgumentException = opsMetadataInvalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class CreateOpsMetadataResponse {
      */
     
     public Object opsMetadataLimitExceededException;
+
     public CreateOpsMetadataResponse withOpsMetadataLimitExceededException(Object opsMetadataLimitExceededException) {
         this.opsMetadataLimitExceededException = opsMetadataLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateOpsMetadataResponse {
      */
     
     public Object opsMetadataTooManyUpdatesException;
+
     public CreateOpsMetadataResponse withOpsMetadataTooManyUpdatesException(Object opsMetadataTooManyUpdatesException) {
         this.opsMetadataTooManyUpdatesException = opsMetadataTooManyUpdatesException;
         return this;
@@ -76,6 +84,7 @@ public class CreateOpsMetadataResponse {
     
     
     public Integer statusCode;
+
     public CreateOpsMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateOpsMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateOpsMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateOpsMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

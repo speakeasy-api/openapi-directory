@@ -12,9 +12,13 @@ public class AddNotificationChannelsRequestBody {
      */
     @JsonProperty("channels")
     public org.openapis.openapi.models.shared.Channel[] channels;
+
     public AddNotificationChannelsRequestBody withChannels(org.openapis.openapi.models.shared.Channel[] channels) {
         this.channels = channels;
         return this;
     }
     
+    public AddNotificationChannelsRequestBody(@JsonProperty("channels") org.openapis.openapi.models.shared.Channel[] channels) {
+        this.channels = channels;
+  }
 }

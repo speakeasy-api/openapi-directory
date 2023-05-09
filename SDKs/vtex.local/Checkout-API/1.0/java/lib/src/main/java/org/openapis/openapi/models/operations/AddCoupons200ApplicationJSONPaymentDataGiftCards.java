@@ -15,6 +15,7 @@ public class AddCoupons200ApplicationJSONPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Long balance;
+
     public AddCoupons200ApplicationJSONPaymentDataGiftCards withBalance(Long balance) {
         this.balance = balance;
         return this;
@@ -26,6 +27,7 @@ public class AddCoupons200ApplicationJSONPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AddCoupons200ApplicationJSONPaymentDataGiftCards withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class AddCoupons200ApplicationJSONPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inUse")
     public Boolean inUse;
+
     public AddCoupons200ApplicationJSONPaymentDataGiftCards withInUse(Boolean inUse) {
         this.inUse = inUse;
         return this;
@@ -48,6 +51,7 @@ public class AddCoupons200ApplicationJSONPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSpecialCard")
     public Boolean isSpecialCard;
+
     public AddCoupons200ApplicationJSONPaymentDataGiftCards withIsSpecialCard(Boolean isSpecialCard) {
         this.isSpecialCard = isSpecialCard;
         return this;
@@ -59,6 +63,7 @@ public class AddCoupons200ApplicationJSONPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AddCoupons200ApplicationJSONPaymentDataGiftCards withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +75,7 @@ public class AddCoupons200ApplicationJSONPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redemptionCode")
     public String redemptionCode;
+
     public AddCoupons200ApplicationJSONPaymentDataGiftCards withRedemptionCode(String redemptionCode) {
         this.redemptionCode = redemptionCode;
         return this;
@@ -81,9 +87,11 @@ public class AddCoupons200ApplicationJSONPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public AddCoupons200ApplicationJSONPaymentDataGiftCards withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONPaymentDataGiftCards(){}
 }

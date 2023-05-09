@@ -58,11 +58,9 @@ public class FloatingIPActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFloatingIpsIdActionsResponse res = new org.openapis.openapi.models.operations.GetFloatingIpsIdActionsResponse() {{
+        org.openapis.openapi.models.operations.GetFloatingIpsIdActionsResponse res = new org.openapis.openapi.models.operations.GetFloatingIpsIdActionsResponse(contentType, httpRes.statusCode()) {{
             getFloatingIpsIdActions200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,11 +95,9 @@ public class FloatingIPActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFloatingIpsIdActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetFloatingIpsIdActionsActionIdResponse() {{
+        org.openapis.openapi.models.operations.GetFloatingIpsIdActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetFloatingIpsIdActionsActionIdResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,11 +134,9 @@ public class FloatingIPActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFloatingIpsIdActionsAssignResponse res = new org.openapis.openapi.models.operations.PostFloatingIpsIdActionsAssignResponse() {{
+        org.openapis.openapi.models.operations.PostFloatingIpsIdActionsAssignResponse res = new org.openapis.openapi.models.operations.PostFloatingIpsIdActionsAssignResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -179,11 +173,9 @@ public class FloatingIPActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeDnsPtrResponse res = new org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeDnsPtrResponse() {{
+        org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeDnsPtrResponse res = new org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeDnsPtrResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -220,11 +212,9 @@ public class FloatingIPActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeProtectionResponse res = new org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeProtectionResponse() {{
+        org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeProtectionResponse res = new org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeProtectionResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -259,11 +249,9 @@ public class FloatingIPActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFloatingIpsIdActionsUnassignResponse res = new org.openapis.openapi.models.operations.PostFloatingIpsIdActionsUnassignResponse() {{
+        org.openapis.openapi.models.operations.PostFloatingIpsIdActionsUnassignResponse res = new org.openapis.openapi.models.operations.PostFloatingIpsIdActionsUnassignResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopPHIDetectionJobResponse {
     
     public String contentType;
+
     public StopPHIDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopPHIDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public StopPHIDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StopPHIDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StopPHIDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StopPHIDetectionJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopPHIDetectionJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopPHIDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public StopPHIDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopPHIDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopPHIDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StopPHIDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StopPHIDetectionJobResponse stopPHIDetectionJobResponse;
+
     public StopPHIDetectionJobResponse withStopPHIDetectionJobResponse(org.openapis.openapi.models.shared.StopPHIDetectionJobResponse stopPHIDetectionJobResponse) {
         this.stopPHIDetectionJobResponse = stopPHIDetectionJobResponse;
         return this;
     }
     
+    public StopPHIDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

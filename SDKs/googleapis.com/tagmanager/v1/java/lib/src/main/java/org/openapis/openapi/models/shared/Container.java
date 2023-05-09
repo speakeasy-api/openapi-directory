@@ -18,6 +18,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Container withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public Container withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -40,6 +42,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String[] domainName;
+
     public Container withDomainName(String[] domainName) {
         this.domainName = domainName;
         return this;
@@ -51,6 +54,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledBuiltInVariable")
     public ContainerEnabledBuiltInVariableEnum[] enabledBuiltInVariable;
+
     public Container withEnabledBuiltInVariable(ContainerEnabledBuiltInVariableEnum[] enabledBuiltInVariable) {
         this.enabledBuiltInVariable = enabledBuiltInVariable;
         return this;
@@ -62,6 +66,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Container withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -73,6 +78,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Container withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public Container withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -95,6 +102,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicId")
     public String publicId;
+
     public Container withPublicId(String publicId) {
         this.publicId = publicId;
         return this;
@@ -106,6 +114,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZoneCountryId")
     public String timeZoneCountryId;
+
     public Container withTimeZoneCountryId(String timeZoneCountryId) {
         this.timeZoneCountryId = timeZoneCountryId;
         return this;
@@ -117,6 +126,7 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZoneId")
     public String timeZoneId;
+
     public Container withTimeZoneId(String timeZoneId) {
         this.timeZoneId = timeZoneId;
         return this;
@@ -128,9 +138,11 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageContext")
     public ContainerUsageContextEnum[] usageContext;
+
     public Container withUsageContext(ContainerUsageContextEnum[] usageContext) {
         this.usageContext = usageContext;
         return this;
     }
     
+    public Container(){}
 }

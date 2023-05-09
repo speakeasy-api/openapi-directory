@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringProjectsDashboardsCreateResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsDashboardsCreateResponse() {{
+        org.openapis.openapi.models.operations.MonitoringProjectsDashboardsCreateResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsDashboardsCreateResponse(contentType, httpRes.statusCode()) {{
             dashboard = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringProjectsDashboardsDeleteResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsDashboardsDeleteResponse() {{
+        org.openapis.openapi.models.operations.MonitoringProjectsDashboardsDeleteResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsDashboardsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringProjectsDashboardsGetResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsDashboardsGetResponse() {{
+        org.openapis.openapi.models.operations.MonitoringProjectsDashboardsGetResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsDashboardsGetResponse(contentType, httpRes.statusCode()) {{
             dashboard = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringProjectsDashboardsListResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsDashboardsListResponse() {{
+        org.openapis.openapi.models.operations.MonitoringProjectsDashboardsListResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsDashboardsListResponse(contentType, httpRes.statusCode()) {{
             listDashboardsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringProjectsDashboardsPatchResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsDashboardsPatchResponse() {{
+        org.openapis.openapi.models.operations.MonitoringProjectsDashboardsPatchResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsDashboardsPatchResponse(contentType, httpRes.statusCode()) {{
             dashboard = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelValuesResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelValuesResponse() {{
+        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelValuesResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelValuesResponse(contentType, httpRes.statusCode()) {{
             httpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsResponse() {{
+        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsResponse(contentType, httpRes.statusCode()) {{
             httpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsListResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsListResponse() {{
+        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsListResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsListResponse(contentType, httpRes.statusCode()) {{
             httpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -434,11 +418,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1MetadataListResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1MetadataListResponse() {{
+        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1MetadataListResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1MetadataListResponse(contentType, httpRes.statusCode()) {{
             httpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,11 +464,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryResponse() {{
+        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryResponse(contentType, httpRes.statusCode()) {{
             httpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -530,11 +510,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryExemplarsResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryExemplarsResponse() {{
+        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryExemplarsResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryExemplarsResponse(contentType, httpRes.statusCode()) {{
             httpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRangeResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRangeResponse() {{
+        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRangeResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRangeResponse(contentType, httpRes.statusCode()) {{
             httpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1SeriesResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1SeriesResponse() {{
+        org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1SeriesResponse res = new org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1SeriesResponse(contentType, httpRes.statusCode()) {{
             httpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

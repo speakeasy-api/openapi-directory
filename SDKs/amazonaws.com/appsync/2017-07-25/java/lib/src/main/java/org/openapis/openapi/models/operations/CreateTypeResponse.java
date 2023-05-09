@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTypeResponse {
@@ -12,6 +13,7 @@ public class CreateTypeResponse {
      */
     
     public Object badRequestException;
+
     public CreateTypeResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateTypeResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateTypeResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class CreateTypeResponse {
     
     
     public String contentType;
+
     public CreateTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTypeResponse createTypeResponse;
+
     public CreateTypeResponse withCreateTypeResponse(org.openapis.openapi.models.shared.CreateTypeResponse createTypeResponse) {
         this.createTypeResponse = createTypeResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateTypeResponse {
      */
     
     public Object internalFailureException;
+
     public CreateTypeResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class CreateTypeResponse {
      */
     
     public Object notFoundException;
+
     public CreateTypeResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateTypeResponse {
     
     
     public Integer statusCode;
+
     public CreateTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateTypeResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateTypeResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

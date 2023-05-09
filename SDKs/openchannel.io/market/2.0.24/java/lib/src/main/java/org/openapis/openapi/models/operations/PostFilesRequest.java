@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFilesRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostFilesRequestBody requestBody;
+
     public PostFilesRequest withRequestBody(PostFilesRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PostFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hash")
     public String hash;
+
     public PostFilesRequest withHash(String hash) {
         this.hash = hash;
         return this;
@@ -29,9 +32,13 @@ public class PostFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isPrivate")
     public Boolean isPrivate;
+
     public PostFilesRequest withIsPrivate(Boolean isPrivate) {
         this.isPrivate = isPrivate;
         return this;
     }
     
+    public PostFilesRequest(@JsonProperty("RequestBody") PostFilesRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

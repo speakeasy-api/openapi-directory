@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudVisionV1p1beta1Product withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p1beta1Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudVisionV1p1beta1Product withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudVisionV1p1beta1Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudVisionV1p1beta1Product withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudVisionV1p1beta1Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCategory")
     public String productCategory;
+
     public GoogleCloudVisionV1p1beta1Product withProductCategory(String productCategory) {
         this.productCategory = productCategory;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudVisionV1p1beta1Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productLabels")
     public GoogleCloudVisionV1p1beta1ProductKeyValue[] productLabels;
+
     public GoogleCloudVisionV1p1beta1Product withProductLabels(GoogleCloudVisionV1p1beta1ProductKeyValue[] productLabels) {
         this.productLabels = productLabels;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1Product(){}
 }

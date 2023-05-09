@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FineTune {
     @JsonProperty("created_at")
     public Long createdAt;
+
     public FineTune withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -22,6 +23,7 @@ public class FineTune {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public FineTuneEvent[] events;
+
     public FineTune withEvents(FineTuneEvent[] events) {
         this.events = events;
         return this;
@@ -29,6 +31,7 @@ public class FineTune {
     
     @JsonProperty("fine_tuned_model")
     public String fineTunedModel;
+
     public FineTune withFineTunedModel(String fineTunedModel) {
         this.fineTunedModel = fineTunedModel;
         return this;
@@ -36,6 +39,7 @@ public class FineTune {
     
     @JsonProperty("hyperparams")
     public java.util.Map<String, Object> hyperparams;
+
     public FineTune withHyperparams(java.util.Map<String, Object> hyperparams) {
         this.hyperparams = hyperparams;
         return this;
@@ -43,6 +47,7 @@ public class FineTune {
     
     @JsonProperty("id")
     public String id;
+
     public FineTune withId(String id) {
         this.id = id;
         return this;
@@ -50,6 +55,7 @@ public class FineTune {
     
     @JsonProperty("model")
     public String model;
+
     public FineTune withModel(String model) {
         this.model = model;
         return this;
@@ -57,6 +63,7 @@ public class FineTune {
     
     @JsonProperty("object")
     public String object;
+
     public FineTune withObject(String object) {
         this.object = object;
         return this;
@@ -64,6 +71,7 @@ public class FineTune {
     
     @JsonProperty("organization_id")
     public String organizationId;
+
     public FineTune withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -71,6 +79,7 @@ public class FineTune {
     
     @JsonProperty("result_files")
     public OpenAIFile[] resultFiles;
+
     public FineTune withResultFiles(OpenAIFile[] resultFiles) {
         this.resultFiles = resultFiles;
         return this;
@@ -78,6 +87,7 @@ public class FineTune {
     
     @JsonProperty("status")
     public String status;
+
     public FineTune withStatus(String status) {
         this.status = status;
         return this;
@@ -85,6 +95,7 @@ public class FineTune {
     
     @JsonProperty("training_files")
     public OpenAIFile[] trainingFiles;
+
     public FineTune withTrainingFiles(OpenAIFile[] trainingFiles) {
         this.trainingFiles = trainingFiles;
         return this;
@@ -92,6 +103,7 @@ public class FineTune {
     
     @JsonProperty("updated_at")
     public Long updatedAt;
+
     public FineTune withUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -99,9 +111,24 @@ public class FineTune {
     
     @JsonProperty("validation_files")
     public OpenAIFile[] validationFiles;
+
     public FineTune withValidationFiles(OpenAIFile[] validationFiles) {
         this.validationFiles = validationFiles;
         return this;
     }
     
+    public FineTune(@JsonProperty("created_at") Long createdAt, @JsonProperty("fine_tuned_model") String fineTunedModel, @JsonProperty("hyperparams") java.util.Map<String, Object> hyperparams, @JsonProperty("id") String id, @JsonProperty("model") String model, @JsonProperty("object") String object, @JsonProperty("organization_id") String organizationId, @JsonProperty("result_files") OpenAIFile[] resultFiles, @JsonProperty("status") String status, @JsonProperty("training_files") OpenAIFile[] trainingFiles, @JsonProperty("updated_at") Long updatedAt, @JsonProperty("validation_files") OpenAIFile[] validationFiles) {
+        this.createdAt = createdAt;
+        this.fineTunedModel = fineTunedModel;
+        this.hyperparams = hyperparams;
+        this.id = id;
+        this.model = model;
+        this.object = object;
+        this.organizationId = organizationId;
+        this.resultFiles = resultFiles;
+        this.status = status;
+        this.trainingFiles = trainingFiles;
+        this.updatedAt = updatedAt;
+        this.validationFiles = validationFiles;
+  }
 }

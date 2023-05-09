@@ -18,6 +18,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public Integer columns;
+
     public Table withColumns(Integer columns) {
         this.columns = columns;
         return this;
@@ -29,6 +30,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("horizontalBorderRows")
     public TableBorderRow[] horizontalBorderRows;
+
     public Table withHorizontalBorderRows(TableBorderRow[] horizontalBorderRows) {
         this.horizontalBorderRows = horizontalBorderRows;
         return this;
@@ -40,6 +42,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public Integer rows;
+
     public Table withRows(Integer rows) {
         this.rows = rows;
         return this;
@@ -51,6 +54,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableColumns")
     public TableColumnProperties[] tableColumns;
+
     public Table withTableColumns(TableColumnProperties[] tableColumns) {
         this.tableColumns = tableColumns;
         return this;
@@ -62,6 +66,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRows")
     public TableRow[] tableRows;
+
     public Table withTableRows(TableRow[] tableRows) {
         this.tableRows = tableRows;
         return this;
@@ -73,9 +78,11 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verticalBorderRows")
     public TableBorderRow[] verticalBorderRows;
+
     public Table withVerticalBorderRows(TableBorderRow[] verticalBorderRows) {
         this.verticalBorderRows = verticalBorderRows;
         return this;
     }
     
+    public Table(){}
 }

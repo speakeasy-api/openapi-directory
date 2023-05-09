@@ -18,6 +18,7 @@ public class GlossaryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GlossaryEntry withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GlossaryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GlossaryEntry withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GlossaryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termsPair")
     public GlossaryTermsPair termsPair;
+
     public GlossaryEntry withTermsPair(GlossaryTermsPair termsPair) {
         this.termsPair = termsPair;
         return this;
@@ -51,9 +54,11 @@ public class GlossaryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termsSet")
     public GlossaryTermsSet termsSet;
+
     public GlossaryEntry withTermsSet(GlossaryTermsSet termsSet) {
         this.termsSet = termsSet;
         return this;
     }
     
+    public GlossaryEntry(){}
 }

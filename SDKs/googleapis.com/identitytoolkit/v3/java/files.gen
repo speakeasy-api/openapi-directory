@@ -137,4 +137,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/VerifyPasswordResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/IdentitytoolkitRelyingpartyVerifyPasswordRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest.java
+docs/sdk/README.md
+docs/relyingparty/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class BacerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public BacerRequestBodyCertificateParameters certificateParameters;
+
     public BacerRequestBody withCertificateParameters(BacerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class BacerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public BacerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class BacerRequestBody {
      */
     @JsonProperty("format")
     public BacerRequestBodyFormatEnum format;
+
     public BacerRequestBody withFormat(BacerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class BacerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public BacerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public BacerRequestBody(@JsonProperty("format") BacerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

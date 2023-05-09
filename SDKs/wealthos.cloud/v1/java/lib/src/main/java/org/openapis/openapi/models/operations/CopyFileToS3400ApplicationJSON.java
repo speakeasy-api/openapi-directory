@@ -18,6 +18,7 @@ public class CopyFileToS3400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public CopyFileToS3400ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class CopyFileToS3400ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public CopyFileToS3400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CopyFileToS3400ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

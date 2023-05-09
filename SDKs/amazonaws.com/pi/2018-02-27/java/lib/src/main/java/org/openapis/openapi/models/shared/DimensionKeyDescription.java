@@ -15,6 +15,7 @@ public class DimensionKeyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalMetrics")
     public java.util.Map<String, Double> additionalMetrics;
+
     public DimensionKeyDescription withAdditionalMetrics(java.util.Map<String, Double> additionalMetrics) {
         this.additionalMetrics = additionalMetrics;
         return this;
@@ -23,6 +24,7 @@ public class DimensionKeyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public java.util.Map<String, String> dimensions;
+
     public DimensionKeyDescription withDimensions(java.util.Map<String, String> dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -31,6 +33,7 @@ public class DimensionKeyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Partitions")
     public Double[] partitions;
+
     public DimensionKeyDescription withPartitions(Double[] partitions) {
         this.partitions = partitions;
         return this;
@@ -39,9 +42,11 @@ public class DimensionKeyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Total")
     public Double total;
+
     public DimensionKeyDescription withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public DimensionKeyDescription(){}
 }

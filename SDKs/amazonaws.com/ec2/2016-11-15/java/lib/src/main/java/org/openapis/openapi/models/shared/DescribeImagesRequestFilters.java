@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeImagesRequestFilters {
     
     public String name;
+
     public DescribeImagesRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeImagesRequestFilters {
     
     
     public String[] values;
+
     public DescribeImagesRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeImagesRequestFilters(){}
 }

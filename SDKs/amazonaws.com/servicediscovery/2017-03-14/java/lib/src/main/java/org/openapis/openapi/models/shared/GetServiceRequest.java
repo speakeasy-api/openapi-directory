@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetServiceRequest {
     @JsonProperty("Id")
     public String id;
+
     public GetServiceRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetServiceRequest(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

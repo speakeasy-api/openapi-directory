@@ -69,4 +69,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/CalculateRoutePostDataParam
 lib/src/main/java/org/openapis/openapi/models/shared/CalculateRoutePostDataParametersSupportingPoints.java
 lib/src/main/java/org/openapis/openapi/models/shared/CalculateRoutePostDataParameters.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/routing/README.md
 USAGE.md

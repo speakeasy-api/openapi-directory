@@ -52,10 +52,8 @@ public class TaggedShows {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUserTagsTagIdResponse res = new org.openapis.openapi.models.operations.DeleteUserTagsTagIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteUserTagsTagIdResponse res = new org.openapis.openapi.models.operations.DeleteUserTagsTagIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -85,10 +83,8 @@ public class TaggedShows {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUserTagsTagIdShowsShowIdResponse res = new org.openapis.openapi.models.operations.DeleteUserTagsTagIdShowsShowIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteUserTagsTagIdShowsShowIdResponse res = new org.openapis.openapi.models.operations.DeleteUserTagsTagIdShowsShowIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -117,11 +113,9 @@ public class TaggedShows {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserTagsResponse res = new org.openapis.openapi.models.operations.GetUserTagsResponse() {{
+        org.openapis.openapi.models.operations.GetUserTagsResponse res = new org.openapis.openapi.models.operations.GetUserTagsResponse(contentType, httpRes.statusCode()) {{
             tags = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,11 +156,9 @@ public class TaggedShows {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserTagsTagIdShowsResponse res = new org.openapis.openapi.models.operations.GetUserTagsTagIdShowsResponse() {{
+        org.openapis.openapi.models.operations.GetUserTagsTagIdShowsResponse res = new org.openapis.openapi.models.operations.GetUserTagsTagIdShowsResponse(contentType, httpRes.statusCode()) {{
             tagInstances = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,11 +197,9 @@ public class TaggedShows {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchUserTagsTagIdResponse res = new org.openapis.openapi.models.operations.PatchUserTagsTagIdResponse() {{
+        org.openapis.openapi.models.operations.PatchUserTagsTagIdResponse res = new org.openapis.openapi.models.operations.PatchUserTagsTagIdResponse(contentType, httpRes.statusCode()) {{
             tag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +238,9 @@ public class TaggedShows {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUserTagsResponse res = new org.openapis.openapi.models.operations.PostUserTagsResponse() {{
+        org.openapis.openapi.models.operations.PostUserTagsResponse res = new org.openapis.openapi.models.operations.PostUserTagsResponse(contentType, httpRes.statusCode()) {{
             tag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +277,9 @@ public class TaggedShows {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutUserTagsTagIdShowsShowIdResponse res = new org.openapis.openapi.models.operations.PutUserTagsTagIdShowsShowIdResponse() {{
+        org.openapis.openapi.models.operations.PutUserTagsTagIdShowsShowIdResponse res = new org.openapis.openapi.models.operations.PutUserTagsTagIdShowsShowIdResponse(contentType, httpRes.statusCode()) {{
             tagInstance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

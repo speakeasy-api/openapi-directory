@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTransitGatewayMulticastDomainsResultTransitGatewayMulticastDomainsTags {
     
     public String key;
+
     public DescribeTransitGatewayMulticastDomainsResultTransitGatewayMulticastDomainsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeTransitGatewayMulticastDomainsResultTransitGatewayMulticast
     
     
     public String value;
+
     public DescribeTransitGatewayMulticastDomainsResultTransitGatewayMulticastDomainsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeTransitGatewayMulticastDomainsResultTransitGatewayMulticastDomainsTags(){}
 }

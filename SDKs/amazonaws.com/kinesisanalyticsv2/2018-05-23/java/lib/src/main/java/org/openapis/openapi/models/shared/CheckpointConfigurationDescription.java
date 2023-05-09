@@ -15,6 +15,7 @@ public class CheckpointConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CheckpointInterval")
     public Long checkpointInterval;
+
     public CheckpointConfigurationDescription withCheckpointInterval(Long checkpointInterval) {
         this.checkpointInterval = checkpointInterval;
         return this;
@@ -23,6 +24,7 @@ public class CheckpointConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CheckpointingEnabled")
     public Boolean checkpointingEnabled;
+
     public CheckpointConfigurationDescription withCheckpointingEnabled(Boolean checkpointingEnabled) {
         this.checkpointingEnabled = checkpointingEnabled;
         return this;
@@ -31,6 +33,7 @@ public class CheckpointConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationType")
     public ConfigurationTypeEnum configurationType;
+
     public CheckpointConfigurationDescription withConfigurationType(ConfigurationTypeEnum configurationType) {
         this.configurationType = configurationType;
         return this;
@@ -39,9 +42,11 @@ public class CheckpointConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinPauseBetweenCheckpoints")
     public Long minPauseBetweenCheckpoints;
+
     public CheckpointConfigurationDescription withMinPauseBetweenCheckpoints(Long minPauseBetweenCheckpoints) {
         this.minPauseBetweenCheckpoints = minPauseBetweenCheckpoints;
         return this;
     }
     
+    public CheckpointConfigurationDescription(){}
 }

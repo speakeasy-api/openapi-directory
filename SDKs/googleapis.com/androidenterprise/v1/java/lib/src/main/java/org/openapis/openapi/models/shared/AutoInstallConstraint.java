@@ -18,6 +18,7 @@ public class AutoInstallConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargingStateConstraint")
     public AutoInstallConstraintChargingStateConstraintEnum chargingStateConstraint;
+
     public AutoInstallConstraint withChargingStateConstraint(AutoInstallConstraintChargingStateConstraintEnum chargingStateConstraint) {
         this.chargingStateConstraint = chargingStateConstraint;
         return this;
@@ -29,6 +30,7 @@ public class AutoInstallConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceIdleStateConstraint")
     public AutoInstallConstraintDeviceIdleStateConstraintEnum deviceIdleStateConstraint;
+
     public AutoInstallConstraint withDeviceIdleStateConstraint(AutoInstallConstraintDeviceIdleStateConstraintEnum deviceIdleStateConstraint) {
         this.deviceIdleStateConstraint = deviceIdleStateConstraint;
         return this;
@@ -40,9 +42,11 @@ public class AutoInstallConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkTypeConstraint")
     public AutoInstallConstraintNetworkTypeConstraintEnum networkTypeConstraint;
+
     public AutoInstallConstraint withNetworkTypeConstraint(AutoInstallConstraintNetworkTypeConstraintEnum networkTypeConstraint) {
         this.networkTypeConstraint = networkTypeConstraint;
         return this;
     }
     
+    public AutoInstallConstraint(){}
 }

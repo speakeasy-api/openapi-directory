@@ -15,9 +15,11 @@ public class UpdateAlertResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertArn")
     public String alertArn;
+
     public UpdateAlertResponse withAlertArn(String alertArn) {
         this.alertArn = alertArn;
         return this;
     }
     
+    public UpdateAlertResponse(){}
 }

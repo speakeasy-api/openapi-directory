@@ -20,6 +20,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Domain withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class Domain {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public Domain withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Domain withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public Domain withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -54,6 +58,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainStatus")
     public DomainStatusEnum domainStatus;
+
     public Domain withDomainStatus(DomainStatusEnum domainStatus) {
         this.domainStatus = domainStatus;
         return this;
@@ -62,6 +67,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Domain withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +76,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerSideEncryptionConfiguration")
     public ServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
+
     public Domain withServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
         this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
         return this;
@@ -78,6 +85,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerSideEncryptionUpdateDetails")
     public ServerSideEncryptionUpdateDetails serverSideEncryptionUpdateDetails;
+
     public Domain withServerSideEncryptionUpdateDetails(ServerSideEncryptionUpdateDetails serverSideEncryptionUpdateDetails) {
         this.serverSideEncryptionUpdateDetails = serverSideEncryptionUpdateDetails;
         return this;
@@ -88,6 +96,7 @@ public class Domain {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public Domain withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -96,9 +105,11 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WatchlistDetails")
     public WatchlistDetails watchlistDetails;
+
     public Domain withWatchlistDetails(WatchlistDetails watchlistDetails) {
         this.watchlistDetails = watchlistDetails;
         return this;
     }
     
+    public Domain(){}
 }

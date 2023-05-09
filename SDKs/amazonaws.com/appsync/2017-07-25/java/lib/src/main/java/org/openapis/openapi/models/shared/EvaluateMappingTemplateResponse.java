@@ -15,6 +15,7 @@ public class EvaluateMappingTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ErrorDetail error;
+
     public EvaluateMappingTemplateResponse withError(ErrorDetail error) {
         this.error = error;
         return this;
@@ -23,6 +24,7 @@ public class EvaluateMappingTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationResult")
     public String evaluationResult;
+
     public EvaluateMappingTemplateResponse withEvaluationResult(String evaluationResult) {
         this.evaluationResult = evaluationResult;
         return this;
@@ -31,9 +33,11 @@ public class EvaluateMappingTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logs")
     public String[] logs;
+
     public EvaluateMappingTemplateResponse withLogs(String[] logs) {
         this.logs = logs;
         return this;
     }
     
+    public EvaluateMappingTemplateResponse(){}
 }

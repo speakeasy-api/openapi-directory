@@ -12,6 +12,7 @@ public class ActivityListReposStarredByAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public org.openapis.openapi.models.shared.DirectionEnum direction;
+
     public ActivityListReposStarredByAuthenticatedUserRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -22,6 +23,7 @@ public class ActivityListReposStarredByAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActivityListReposStarredByAuthenticatedUserRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +34,7 @@ public class ActivityListReposStarredByAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActivityListReposStarredByAuthenticatedUserRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +45,11 @@ public class ActivityListReposStarredByAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public org.openapis.openapi.models.shared.SortEnum sort;
+
     public ActivityListReposStarredByAuthenticatedUserRequest withSort(org.openapis.openapi.models.shared.SortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public ActivityListReposStarredByAuthenticatedUserRequest(){}
 }

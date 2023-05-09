@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteUserRequest {
     @JsonProperty("AuthenticationType")
     public AuthenticationTypeEnum authenticationType;
+
     public DeleteUserRequest withAuthenticationType(AuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -16,9 +17,14 @@ public class DeleteUserRequest {
     
     @JsonProperty("UserName")
     public String userName;
+
     public DeleteUserRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public DeleteUserRequest(@JsonProperty("AuthenticationType") AuthenticationTypeEnum authenticationType, @JsonProperty("UserName") String userName) {
+        this.authenticationType = authenticationType;
+        this.userName = userName;
+  }
 }

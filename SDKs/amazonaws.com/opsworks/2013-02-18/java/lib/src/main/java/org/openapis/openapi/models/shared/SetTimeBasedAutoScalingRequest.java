@@ -12,6 +12,7 @@ public class SetTimeBasedAutoScalingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingSchedule")
     public WeeklyAutoScalingSchedule autoScalingSchedule;
+
     public SetTimeBasedAutoScalingRequest withAutoScalingSchedule(WeeklyAutoScalingSchedule autoScalingSchedule) {
         this.autoScalingSchedule = autoScalingSchedule;
         return this;
@@ -19,9 +20,13 @@ public class SetTimeBasedAutoScalingRequest {
     
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public SetTimeBasedAutoScalingRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public SetTimeBasedAutoScalingRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

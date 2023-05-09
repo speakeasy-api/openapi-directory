@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterForRealtimeApiGetResponse {
     
     public byte[] body;
+
     public RegisterForRealtimeApiGetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class RegisterForRealtimeApiGetResponse {
     
     
     public String contentType;
+
     public RegisterForRealtimeApiGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class RegisterForRealtimeApiGetResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterRealtimeApiData[] registerRealtimeApiData;
+
     public RegisterForRealtimeApiGetResponse withRegisterRealtimeApiData(org.openapis.openapi.models.shared.RegisterRealtimeApiData[] registerRealtimeApiData) {
         this.registerRealtimeApiData = registerRealtimeApiData;
         return this;
@@ -33,6 +37,7 @@ public class RegisterForRealtimeApiGetResponse {
     
     
     public Integer statusCode;
+
     public RegisterForRealtimeApiGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class RegisterForRealtimeApiGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterForRealtimeApiGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegisterForRealtimeApiGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

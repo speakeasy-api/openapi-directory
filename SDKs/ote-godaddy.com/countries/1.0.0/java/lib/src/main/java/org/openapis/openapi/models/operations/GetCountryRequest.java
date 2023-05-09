@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCountryRequest {
@@ -12,6 +13,7 @@ public class GetCountryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryKey")
     public String countryKey;
+
     public GetCountryRequest withCountryKey(String countryKey) {
         this.countryKey = countryKey;
         return this;
@@ -22,6 +24,7 @@ public class GetCountryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marketId")
     public String marketId;
+
     public GetCountryRequest withMarketId(String marketId) {
         this.marketId = marketId;
         return this;
@@ -32,6 +35,7 @@ public class GetCountryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetCountryOrderEnum order;
+
     public GetCountryRequest withOrder(GetCountryOrderEnum order) {
         this.order = order;
         return this;
@@ -42,9 +46,14 @@ public class GetCountryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetCountrySortEnum sort;
+
     public GetCountryRequest withSort(GetCountrySortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetCountryRequest(@JsonProperty("countryKey") String countryKey, @JsonProperty("marketId") String marketId) {
+        this.countryKey = countryKey;
+        this.marketId = marketId;
+  }
 }

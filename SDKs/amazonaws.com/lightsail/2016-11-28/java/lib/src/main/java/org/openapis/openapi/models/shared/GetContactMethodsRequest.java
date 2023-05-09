@@ -12,9 +12,11 @@ public class GetContactMethodsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocols")
     public ContactProtocolEnum[] protocols;
+
     public GetContactMethodsRequest withProtocols(ContactProtocolEnum[] protocols) {
         this.protocols = protocols;
         return this;
     }
     
+    public GetContactMethodsRequest(){}
 }

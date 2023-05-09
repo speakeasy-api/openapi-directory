@@ -15,9 +15,11 @@ public class BinDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerCountry")
     public String issuerCountry;
+
     public BinDetail withIssuerCountry(String issuerCountry) {
         this.issuerCountry = issuerCountry;
         return this;
     }
     
+    public BinDetail(){}
 }

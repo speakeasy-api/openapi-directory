@@ -18,6 +18,7 @@ public class GetCustomerSearchApplicationStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageSearchApplicationCount")
     public String averageSearchApplicationCount;
+
     public GetCustomerSearchApplicationStatsResponse withAverageSearchApplicationCount(String averageSearchApplicationCount) {
         this.averageSearchApplicationCount = averageSearchApplicationCount;
         return this;
@@ -29,9 +30,11 @@ public class GetCustomerSearchApplicationStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public CustomerSearchApplicationStats[] stats;
+
     public GetCustomerSearchApplicationStatsResponse withStats(CustomerSearchApplicationStats[] stats) {
         this.stats = stats;
         return this;
     }
     
+    public GetCustomerSearchApplicationStatsResponse(){}
 }

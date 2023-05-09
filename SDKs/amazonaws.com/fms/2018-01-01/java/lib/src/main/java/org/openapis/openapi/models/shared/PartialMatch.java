@@ -15,6 +15,7 @@ public class PartialMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reference")
     public String reference;
+
     public PartialMatch withReference(String reference) {
         this.reference = reference;
         return this;
@@ -23,9 +24,11 @@ public class PartialMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetViolationReasons")
     public String[] targetViolationReasons;
+
     public PartialMatch withTargetViolationReasons(String[] targetViolationReasons) {
         this.targetViolationReasons = targetViolationReasons;
         return this;
     }
     
+    public PartialMatch(){}
 }

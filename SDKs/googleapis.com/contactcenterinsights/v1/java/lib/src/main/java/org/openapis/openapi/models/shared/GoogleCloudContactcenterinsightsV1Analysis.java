@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1Analysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisResult")
     public GoogleCloudContactcenterinsightsV1AnalysisResult analysisResult;
+
     public GoogleCloudContactcenterinsightsV1Analysis withAnalysisResult(GoogleCloudContactcenterinsightsV1AnalysisResult analysisResult) {
         this.analysisResult = analysisResult;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudContactcenterinsightsV1Analysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotatorSelector")
     public GoogleCloudContactcenterinsightsV1AnnotatorSelector annotatorSelector;
+
     public GoogleCloudContactcenterinsightsV1Analysis withAnnotatorSelector(GoogleCloudContactcenterinsightsV1AnnotatorSelector annotatorSelector) {
         this.annotatorSelector = annotatorSelector;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudContactcenterinsightsV1Analysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudContactcenterinsightsV1Analysis withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudContactcenterinsightsV1Analysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudContactcenterinsightsV1Analysis withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudContactcenterinsightsV1Analysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestTime")
     public String requestTime;
+
     public GoogleCloudContactcenterinsightsV1Analysis withRequestTime(String requestTime) {
         this.requestTime = requestTime;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1Analysis(){}
 }

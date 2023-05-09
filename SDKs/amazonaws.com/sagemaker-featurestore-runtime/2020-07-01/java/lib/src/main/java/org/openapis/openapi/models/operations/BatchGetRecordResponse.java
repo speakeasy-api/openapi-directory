@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetRecordResponse {
@@ -12,6 +13,7 @@ public class BatchGetRecordResponse {
      */
     
     public Object accessForbidden;
+
     public BatchGetRecordResponse withAccessForbidden(Object accessForbidden) {
         this.accessForbidden = accessForbidden;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetRecordResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetRecordResponse batchGetRecordResponse;
+
     public BatchGetRecordResponse withBatchGetRecordResponse(org.openapis.openapi.models.shared.BatchGetRecordResponse batchGetRecordResponse) {
         this.batchGetRecordResponse = batchGetRecordResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetRecordResponse {
     
     
     public String contentType;
+
     public BatchGetRecordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetRecordResponse {
      */
     
     public Object internalFailure;
+
     public BatchGetRecordResponse withInternalFailure(Object internalFailure) {
         this.internalFailure = internalFailure;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetRecordResponse {
      */
     
     public Object serviceUnavailable;
+
     public BatchGetRecordResponse withServiceUnavailable(Object serviceUnavailable) {
         this.serviceUnavailable = serviceUnavailable;
         return this;
@@ -56,6 +62,7 @@ public class BatchGetRecordResponse {
     
     
     public Integer statusCode;
+
     public BatchGetRecordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchGetRecordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetRecordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class BatchGetRecordResponse {
      */
     
     public Object validationError;
+
     public BatchGetRecordResponse withValidationError(Object validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public BatchGetRecordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

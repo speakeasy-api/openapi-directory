@@ -18,6 +18,7 @@ public class ListBucketsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buckets")
     public Bucket[] buckets;
+
     public ListBucketsResponse withBuckets(Bucket[] buckets) {
         this.buckets = buckets;
         return this;
@@ -29,9 +30,11 @@ public class ListBucketsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListBucketsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListBucketsResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWorkerFleetResponse {
@@ -12,6 +13,7 @@ public class DeleteWorkerFleetResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteWorkerFleetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteWorkerFleetResponse {
      */
     
     public Object conflictException;
+
     public DeleteWorkerFleetResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWorkerFleetResponse {
     
     
     public String contentType;
+
     public DeleteWorkerFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWorkerFleetResponse {
      */
     
     public java.util.Map<String, Object> deleteWorkerFleetResponse;
+
     public DeleteWorkerFleetResponse withDeleteWorkerFleetResponse(java.util.Map<String, Object> deleteWorkerFleetResponse) {
         this.deleteWorkerFleetResponse = deleteWorkerFleetResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteWorkerFleetResponse {
      */
     
     public Object internalServerException;
+
     public DeleteWorkerFleetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteWorkerFleetResponse {
     
     
     public Integer statusCode;
+
     public DeleteWorkerFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteWorkerFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWorkerFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteWorkerFleetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteWorkerFleetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteWorkerFleetResponse {
      */
     
     public Object throttlingException;
+
     public DeleteWorkerFleetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteWorkerFleetResponse {
      */
     
     public Object validationException;
+
     public DeleteWorkerFleetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteWorkerFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

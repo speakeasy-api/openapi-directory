@@ -53,12 +53,10 @@ public class System {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourceLimitsResponse res = new org.openapis.openapi.models.operations.GetResourceLimitsResponse() {{
+        org.openapis.openapi.models.operations.GetResourceLimitsResponse res = new org.openapis.openapi.models.operations.GetResourceLimitsResponse(contentType, httpRes.statusCode()) {{
             limits = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,12 +98,10 @@ public class System {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSystemInfoResponse res = new org.openapis.openapi.models.operations.GetSystemInfoResponse() {{
+        org.openapis.openapi.models.operations.GetSystemInfoResponse res = new org.openapis.openapi.models.operations.GetSystemInfoResponse(contentType, httpRes.statusCode()) {{
             systemInfo = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

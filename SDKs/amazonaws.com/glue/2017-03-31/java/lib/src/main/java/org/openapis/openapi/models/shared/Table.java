@@ -20,6 +20,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public Table withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -30,6 +31,7 @@ public class Table {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public Table withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -38,6 +40,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public String createdBy;
+
     public Table withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -46,6 +49,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public Table withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -54,14 +58,25 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Table withDescription(String description) {
         this.description = description;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FederatedTable")
+    public FederatedTable federatedTable;
+
+    public Table withFederatedTable(FederatedTable federatedTable) {
+        this.federatedTable = federatedTable;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsRegisteredWithLakeFormation")
     public Boolean isRegisteredWithLakeFormation;
+
     public Table withIsRegisteredWithLakeFormation(Boolean isRegisteredWithLakeFormation) {
         this.isRegisteredWithLakeFormation = isRegisteredWithLakeFormation;
         return this;
@@ -72,6 +87,7 @@ public class Table {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAccessTime")
     public OffsetDateTime lastAccessTime;
+
     public Table withLastAccessTime(OffsetDateTime lastAccessTime) {
         this.lastAccessTime = lastAccessTime;
         return this;
@@ -82,6 +98,7 @@ public class Table {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAnalyzedTime")
     public OffsetDateTime lastAnalyzedTime;
+
     public Table withLastAnalyzedTime(OffsetDateTime lastAnalyzedTime) {
         this.lastAnalyzedTime = lastAnalyzedTime;
         return this;
@@ -89,6 +106,7 @@ public class Table {
     
     @JsonProperty("Name")
     public String name;
+
     public Table withName(String name) {
         this.name = name;
         return this;
@@ -97,6 +115,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public Table withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -105,6 +124,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public Table withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -113,6 +133,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionKeys")
     public Column[] partitionKeys;
+
     public Table withPartitionKeys(Column[] partitionKeys) {
         this.partitionKeys = partitionKeys;
         return this;
@@ -121,6 +142,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Retention")
     public Long retention;
+
     public Table withRetention(Long retention) {
         this.retention = retention;
         return this;
@@ -129,6 +151,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageDescriptor")
     public StorageDescriptor storageDescriptor;
+
     public Table withStorageDescriptor(StorageDescriptor storageDescriptor) {
         this.storageDescriptor = storageDescriptor;
         return this;
@@ -137,6 +160,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableType")
     public String tableType;
+
     public Table withTableType(String tableType) {
         this.tableType = tableType;
         return this;
@@ -145,6 +169,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetTable")
     public TableIdentifier targetTable;
+
     public Table withTargetTable(TableIdentifier targetTable) {
         this.targetTable = targetTable;
         return this;
@@ -155,6 +180,7 @@ public class Table {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public Table withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -163,6 +189,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public Table withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
@@ -171,6 +198,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewExpandedText")
     public String viewExpandedText;
+
     public Table withViewExpandedText(String viewExpandedText) {
         this.viewExpandedText = viewExpandedText;
         return this;
@@ -179,9 +207,13 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewOriginalText")
     public String viewOriginalText;
+
     public Table withViewOriginalText(String viewOriginalText) {
         this.viewOriginalText = viewOriginalText;
         return this;
     }
     
+    public Table(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

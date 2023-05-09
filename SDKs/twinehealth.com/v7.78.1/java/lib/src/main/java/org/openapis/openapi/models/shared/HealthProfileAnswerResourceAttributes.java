@@ -15,6 +15,7 @@ public class HealthProfileAnswerResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("history")
     public HealthProfileAnswerResourceAttributesHistory[] history;
+
     public HealthProfileAnswerResourceAttributes withHistory(HealthProfileAnswerResourceAttributesHistory[] history) {
         this.history = history;
         return this;
@@ -26,6 +27,7 @@ public class HealthProfileAnswerResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latest")
     public HealthProfileAnswerResourceAttributesLatest latest;
+
     public HealthProfileAnswerResourceAttributes withLatest(HealthProfileAnswerResourceAttributesLatest latest) {
         this.latest = latest;
         return this;
@@ -34,9 +36,11 @@ public class HealthProfileAnswerResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("question_id")
     public String questionId;
+
     public HealthProfileAnswerResourceAttributes withQuestionId(String questionId) {
         this.questionId = questionId;
         return this;
     }
     
+    public HealthProfileAnswerResourceAttributes(){}
 }

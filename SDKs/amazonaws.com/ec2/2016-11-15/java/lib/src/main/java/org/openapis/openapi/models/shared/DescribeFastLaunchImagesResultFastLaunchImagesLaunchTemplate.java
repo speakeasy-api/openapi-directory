@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFastLaunchImagesResultFastLaunchImagesLaunchTemplate {
     
     public String launchTemplateId;
+
     public DescribeFastLaunchImagesResultFastLaunchImagesLaunchTemplate withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFastLaunchImagesResultFastLaunchImagesLaunchTemplate {
     
     
     public String launchTemplateName;
+
     public DescribeFastLaunchImagesResultFastLaunchImagesLaunchTemplate withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -26,9 +28,11 @@ public class DescribeFastLaunchImagesResultFastLaunchImagesLaunchTemplate {
     
     
     public String version;
+
     public DescribeFastLaunchImagesResultFastLaunchImagesLaunchTemplate withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DescribeFastLaunchImagesResultFastLaunchImagesLaunchTemplate(){}
 }

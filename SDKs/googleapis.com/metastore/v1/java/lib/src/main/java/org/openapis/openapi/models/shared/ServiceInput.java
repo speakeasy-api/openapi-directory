@@ -18,6 +18,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseType")
     public ServiceDatabaseTypeEnum databaseType;
+
     public ServiceInput withDatabaseType(ServiceDatabaseTypeEnum databaseType) {
         this.databaseType = databaseType;
         return this;
@@ -29,6 +30,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionConfig")
     public EncryptionConfig encryptionConfig;
+
     public ServiceInput withEncryptionConfig(EncryptionConfig encryptionConfig) {
         this.encryptionConfig = encryptionConfig;
         return this;
@@ -40,6 +42,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiveMetastoreConfig")
     public HiveMetastoreConfigInput hiveMetastoreConfig;
+
     public ServiceInput withHiveMetastoreConfig(HiveMetastoreConfigInput hiveMetastoreConfig) {
         this.hiveMetastoreConfig = hiveMetastoreConfig;
         return this;
@@ -51,6 +54,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ServiceInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenanceWindow")
     public MaintenanceWindow maintenanceWindow;
+
     public ServiceInput withMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
         this.maintenanceWindow = maintenanceWindow;
         return this;
@@ -73,6 +78,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServiceInput withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public ServiceInput withNetwork(String network) {
         this.network = network;
         return this;
@@ -95,6 +102,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfig")
     public NetworkConfigInput networkConfig;
+
     public ServiceInput withNetworkConfig(NetworkConfigInput networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -106,6 +114,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public ServiceInput withPort(Integer port) {
         this.port = port;
         return this;
@@ -117,6 +126,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseChannel")
     public ServiceReleaseChannelEnum releaseChannel;
+
     public ServiceInput withReleaseChannel(ServiceReleaseChannelEnum releaseChannel) {
         this.releaseChannel = releaseChannel;
         return this;
@@ -128,6 +138,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scalingConfig")
     public ScalingConfig scalingConfig;
+
     public ServiceInput withScalingConfig(ScalingConfig scalingConfig) {
         this.scalingConfig = scalingConfig;
         return this;
@@ -139,6 +150,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telemetryConfig")
     public TelemetryConfig telemetryConfig;
+
     public ServiceInput withTelemetryConfig(TelemetryConfig telemetryConfig) {
         this.telemetryConfig = telemetryConfig;
         return this;
@@ -150,9 +162,11 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tier")
     public ServiceTierEnum tier;
+
     public ServiceInput withTier(ServiceTierEnum tier) {
         this.tier = tier;
         return this;
     }
     
+    public ServiceInput(){}
 }

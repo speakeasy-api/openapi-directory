@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMetricSetResponse {
@@ -12,6 +13,7 @@ public class UpdateMetricSetResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateMetricSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateMetricSetResponse {
     
     
     public String contentType;
+
     public UpdateMetricSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMetricSetResponse {
      */
     
     public Object internalServerException;
+
     public UpdateMetricSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateMetricSetResponse {
     
     
     public Integer statusCode;
+
     public UpdateMetricSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateMetricSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMetricSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateMetricSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateMetricSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateMetricSetResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateMetricSetResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateMetricSetResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateMetricSetResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateMetricSetResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateMetricSetResponse updateMetricSetResponse;
+
     public UpdateMetricSetResponse withUpdateMetricSetResponse(org.openapis.openapi.models.shared.UpdateMetricSetResponse updateMetricSetResponse) {
         this.updateMetricSetResponse = updateMetricSetResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateMetricSetResponse {
      */
     
     public Object validationException;
+
     public UpdateMetricSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateMetricSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

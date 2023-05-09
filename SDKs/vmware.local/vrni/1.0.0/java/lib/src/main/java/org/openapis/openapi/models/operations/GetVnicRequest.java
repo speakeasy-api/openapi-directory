@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVnicRequest {
@@ -12,6 +13,7 @@ public class GetVnicRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetVnicRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class GetVnicRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time")
     public Long time;
+
     public GetVnicRequest withTime(Long time) {
         this.time = time;
         return this;
     }
     
+    public GetVnicRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

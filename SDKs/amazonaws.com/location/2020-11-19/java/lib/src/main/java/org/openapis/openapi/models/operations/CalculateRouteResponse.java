@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CalculateRouteResponse {
@@ -12,6 +13,7 @@ public class CalculateRouteResponse {
      */
     
     public Object accessDeniedException;
+
     public CalculateRouteResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CalculateRouteResponse {
      */
     
     public org.openapis.openapi.models.shared.CalculateRouteResponse calculateRouteResponse;
+
     public CalculateRouteResponse withCalculateRouteResponse(org.openapis.openapi.models.shared.CalculateRouteResponse calculateRouteResponse) {
         this.calculateRouteResponse = calculateRouteResponse;
         return this;
@@ -29,6 +32,7 @@ public class CalculateRouteResponse {
     
     
     public String contentType;
+
     public CalculateRouteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CalculateRouteResponse {
      */
     
     public Object internalServerException;
+
     public CalculateRouteResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class CalculateRouteResponse {
     
     
     public Integer statusCode;
+
     public CalculateRouteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CalculateRouteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CalculateRouteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CalculateRouteResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CalculateRouteResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class CalculateRouteResponse {
      */
     
     public Object throttlingException;
+
     public CalculateRouteResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class CalculateRouteResponse {
      */
     
     public Object validationException;
+
     public CalculateRouteResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CalculateRouteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

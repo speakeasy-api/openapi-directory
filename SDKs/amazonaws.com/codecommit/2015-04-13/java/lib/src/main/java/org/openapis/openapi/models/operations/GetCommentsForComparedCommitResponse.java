@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCommentsForComparedCommitResponse {
@@ -12,6 +13,7 @@ public class GetCommentsForComparedCommitResponse {
      */
     
     public Object commitDoesNotExistException;
+
     public GetCommentsForComparedCommitResponse withCommitDoesNotExistException(Object commitDoesNotExistException) {
         this.commitDoesNotExistException = commitDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class GetCommentsForComparedCommitResponse {
      */
     
     public Object commitIdRequiredException;
+
     public GetCommentsForComparedCommitResponse withCommitIdRequiredException(Object commitIdRequiredException) {
         this.commitIdRequiredException = commitIdRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class GetCommentsForComparedCommitResponse {
     
     
     public String contentType;
+
     public GetCommentsForComparedCommitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetCommentsForComparedCommitResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public GetCommentsForComparedCommitResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -49,6 +54,7 @@ public class GetCommentsForComparedCommitResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public GetCommentsForComparedCommitResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -59,6 +65,7 @@ public class GetCommentsForComparedCommitResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public GetCommentsForComparedCommitResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -69,6 +76,7 @@ public class GetCommentsForComparedCommitResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public GetCommentsForComparedCommitResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetCommentsForComparedCommitResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public GetCommentsForComparedCommitResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class GetCommentsForComparedCommitResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCommentsForComparedCommitOutput getCommentsForComparedCommitOutput;
+
     public GetCommentsForComparedCommitResponse withGetCommentsForComparedCommitOutput(org.openapis.openapi.models.shared.GetCommentsForComparedCommitOutput getCommentsForComparedCommitOutput) {
         this.getCommentsForComparedCommitOutput = getCommentsForComparedCommitOutput;
         return this;
@@ -99,6 +109,7 @@ public class GetCommentsForComparedCommitResponse {
      */
     
     public Object invalidCommitIdException;
+
     public GetCommentsForComparedCommitResponse withInvalidCommitIdException(Object invalidCommitIdException) {
         this.invalidCommitIdException = invalidCommitIdException;
         return this;
@@ -109,6 +120,7 @@ public class GetCommentsForComparedCommitResponse {
      */
     
     public Object invalidContinuationTokenException;
+
     public GetCommentsForComparedCommitResponse withInvalidContinuationTokenException(Object invalidContinuationTokenException) {
         this.invalidContinuationTokenException = invalidContinuationTokenException;
         return this;
@@ -119,6 +131,7 @@ public class GetCommentsForComparedCommitResponse {
      */
     
     public Object invalidMaxResultsException;
+
     public GetCommentsForComparedCommitResponse withInvalidMaxResultsException(Object invalidMaxResultsException) {
         this.invalidMaxResultsException = invalidMaxResultsException;
         return this;
@@ -129,6 +142,7 @@ public class GetCommentsForComparedCommitResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public GetCommentsForComparedCommitResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -139,6 +153,7 @@ public class GetCommentsForComparedCommitResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public GetCommentsForComparedCommitResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -149,6 +164,7 @@ public class GetCommentsForComparedCommitResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public GetCommentsForComparedCommitResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -156,6 +172,7 @@ public class GetCommentsForComparedCommitResponse {
     
     
     public Integer statusCode;
+
     public GetCommentsForComparedCommitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -163,9 +180,14 @@ public class GetCommentsForComparedCommitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCommentsForComparedCommitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCommentsForComparedCommitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

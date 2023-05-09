@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PodocResponse {
     
     public String contentType;
+
     public PodocResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PodocResponse {
     
     
     public Integer statusCode;
+
     public PodocResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PodocResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PodocResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PodocResponse {
      */
     
     public Podoc400ApplicationJSON podoc400ApplicationJSONObject;
+
     public PodocResponse withPodoc400ApplicationJSONObject(Podoc400ApplicationJSON podoc400ApplicationJSONObject) {
         this.podoc400ApplicationJSONObject = podoc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PodocResponse {
      */
     
     public Podoc401ApplicationJSON podoc401ApplicationJSONObject;
+
     public PodocResponse withPodoc401ApplicationJSONObject(Podoc401ApplicationJSON podoc401ApplicationJSONObject) {
         this.podoc401ApplicationJSONObject = podoc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PodocResponse {
      */
     
     public Podoc404ApplicationJSON podoc404ApplicationJSONObject;
+
     public PodocResponse withPodoc404ApplicationJSONObject(Podoc404ApplicationJSON podoc404ApplicationJSONObject) {
         this.podoc404ApplicationJSONObject = podoc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class PodocResponse {
      */
     
     public Podoc500ApplicationJSON podoc500ApplicationJSONObject;
+
     public PodocResponse withPodoc500ApplicationJSONObject(Podoc500ApplicationJSON podoc500ApplicationJSONObject) {
         this.podoc500ApplicationJSONObject = podoc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class PodocResponse {
      */
     
     public Podoc502ApplicationJSON podoc502ApplicationJSONObject;
+
     public PodocResponse withPodoc502ApplicationJSONObject(Podoc502ApplicationJSON podoc502ApplicationJSONObject) {
         this.podoc502ApplicationJSONObject = podoc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class PodocResponse {
      */
     
     public Podoc503ApplicationJSON podoc503ApplicationJSONObject;
+
     public PodocResponse withPodoc503ApplicationJSONObject(Podoc503ApplicationJSON podoc503ApplicationJSONObject) {
         this.podoc503ApplicationJSONObject = podoc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class PodocResponse {
      */
     
     public Podoc504ApplicationJSON podoc504ApplicationJSONObject;
+
     public PodocResponse withPodoc504ApplicationJSONObject(Podoc504ApplicationJSON podoc504ApplicationJSONObject) {
         this.podoc504ApplicationJSONObject = podoc504ApplicationJSONObject;
         return this;
     }
     
+    public PodocResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

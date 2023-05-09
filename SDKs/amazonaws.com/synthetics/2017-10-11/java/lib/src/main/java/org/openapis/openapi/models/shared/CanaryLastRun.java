@@ -15,6 +15,7 @@ public class CanaryLastRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CanaryName")
     public String canaryName;
+
     public CanaryLastRun withCanaryName(String canaryName) {
         this.canaryName = canaryName;
         return this;
@@ -23,9 +24,11 @@ public class CanaryLastRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastRun")
     public CanaryRun lastRun;
+
     public CanaryLastRun withLastRun(CanaryRun lastRun) {
         this.lastRun = lastRun;
         return this;
     }
     
+    public CanaryLastRun(){}
 }

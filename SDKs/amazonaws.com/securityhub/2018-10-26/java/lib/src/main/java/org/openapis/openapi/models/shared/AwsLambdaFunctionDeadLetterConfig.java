@@ -15,9 +15,11 @@ public class AwsLambdaFunctionDeadLetterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetArn")
     public String targetArn;
+
     public AwsLambdaFunctionDeadLetterConfig withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
     }
     
+    public AwsLambdaFunctionDeadLetterConfig(){}
 }

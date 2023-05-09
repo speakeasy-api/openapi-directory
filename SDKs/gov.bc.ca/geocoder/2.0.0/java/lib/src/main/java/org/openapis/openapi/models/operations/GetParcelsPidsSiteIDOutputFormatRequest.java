@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetParcelsPidsSiteIDOutputFormatRequest {
@@ -14,6 +15,7 @@ public class GetParcelsPidsSiteIDOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public GetParcelsPidsSiteIDOutputFormatOutputFormatEnum outputFormat;
+
     public GetParcelsPidsSiteIDOutputFormatRequest withOutputFormat(GetParcelsPidsSiteIDOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -24,9 +26,14 @@ public class GetParcelsPidsSiteIDOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteID")
     public String siteID;
+
     public GetParcelsPidsSiteIDOutputFormatRequest withSiteID(String siteID) {
         this.siteID = siteID;
         return this;
     }
     
+    public GetParcelsPidsSiteIDOutputFormatRequest(@JsonProperty("outputFormat") GetParcelsPidsSiteIDOutputFormatOutputFormatEnum outputFormat, @JsonProperty("siteID") String siteID) {
+        this.outputFormat = outputFormat;
+        this.siteID = siteID;
+  }
 }

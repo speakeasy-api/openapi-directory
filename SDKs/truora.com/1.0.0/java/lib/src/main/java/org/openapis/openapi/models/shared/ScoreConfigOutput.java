@@ -18,9 +18,11 @@ public class ScoreConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreConfigByCountry")
     public ScoreConfig[] scoreConfigByCountry;
+
     public ScoreConfigOutput withScoreConfigByCountry(ScoreConfig[] scoreConfigByCountry) {
         this.scoreConfigByCountry = scoreConfigByCountry;
         return this;
     }
     
+    public ScoreConfigOutput(){}
 }

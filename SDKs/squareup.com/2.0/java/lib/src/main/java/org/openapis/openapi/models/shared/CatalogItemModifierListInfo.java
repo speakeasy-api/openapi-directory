@@ -18,6 +18,7 @@ public class CatalogItemModifierListInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CatalogItemModifierListInfo withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,6 +30,7 @@ public class CatalogItemModifierListInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_selected_modifiers")
     public Long maxSelectedModifiers;
+
     public CatalogItemModifierListInfo withMaxSelectedModifiers(Long maxSelectedModifiers) {
         this.maxSelectedModifiers = maxSelectedModifiers;
         return this;
@@ -40,6 +42,7 @@ public class CatalogItemModifierListInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min_selected_modifiers")
     public Long minSelectedModifiers;
+
     public CatalogItemModifierListInfo withMinSelectedModifiers(Long minSelectedModifiers) {
         this.minSelectedModifiers = minSelectedModifiers;
         return this;
@@ -50,6 +53,7 @@ public class CatalogItemModifierListInfo {
      */
     @JsonProperty("modifier_list_id")
     public String modifierListId;
+
     public CatalogItemModifierListInfo withModifierListId(String modifierListId) {
         this.modifierListId = modifierListId;
         return this;
@@ -61,9 +65,13 @@ public class CatalogItemModifierListInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifier_overrides")
     public CatalogModifierOverride[] modifierOverrides;
+
     public CatalogItemModifierListInfo withModifierOverrides(CatalogModifierOverride[] modifierOverrides) {
         this.modifierOverrides = modifierOverrides;
         return this;
     }
     
+    public CatalogItemModifierListInfo(@JsonProperty("modifier_list_id") String modifierListId) {
+        this.modifierListId = modifierListId;
+  }
 }

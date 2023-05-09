@@ -15,6 +15,7 @@ public class Range {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximum")
     public Double maximum;
+
     public Range withMaximum(Double maximum) {
         this.maximum = maximum;
         return this;
@@ -23,9 +24,11 @@ public class Range {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum")
     public Double minimum;
+
     public Range withMinimum(Double minimum) {
         this.minimum = minimum;
         return this;
     }
     
+    public Range(){}
 }

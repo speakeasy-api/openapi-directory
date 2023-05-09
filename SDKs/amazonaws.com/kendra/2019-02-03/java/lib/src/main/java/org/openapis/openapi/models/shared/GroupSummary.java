@@ -15,6 +15,7 @@ public class GroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupId")
     public String groupId;
+
     public GroupSummary withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -23,9 +24,11 @@ public class GroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderingId")
     public Long orderingId;
+
     public GroupSummary withOrderingId(Long orderingId) {
         this.orderingId = orderingId;
         return this;
     }
     
+    public GroupSummary(){}
 }

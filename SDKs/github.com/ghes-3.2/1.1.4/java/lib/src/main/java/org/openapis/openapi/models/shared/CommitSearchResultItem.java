@@ -17,6 +17,7 @@ public class CommitSearchResultItem {
      */
     @JsonProperty("author")
     public NullableSimpleUser author;
+
     public CommitSearchResultItem withAuthor(NullableSimpleUser author) {
         this.author = author;
         return this;
@@ -24,6 +25,7 @@ public class CommitSearchResultItem {
     
     @JsonProperty("comments_url")
     public String commentsUrl;
+
     public CommitSearchResultItem withCommentsUrl(String commentsUrl) {
         this.commentsUrl = commentsUrl;
         return this;
@@ -31,6 +33,7 @@ public class CommitSearchResultItem {
     
     @JsonProperty("commit")
     public CommitSearchResultItemCommit commit;
+
     public CommitSearchResultItem withCommit(CommitSearchResultItemCommit commit) {
         this.commit = commit;
         return this;
@@ -41,6 +44,7 @@ public class CommitSearchResultItem {
      */
     @JsonProperty("committer")
     public NullableGitUser committer;
+
     public CommitSearchResultItem withCommitter(NullableGitUser committer) {
         this.committer = committer;
         return this;
@@ -48,6 +52,7 @@ public class CommitSearchResultItem {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public CommitSearchResultItem withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -55,6 +60,7 @@ public class CommitSearchResultItem {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public CommitSearchResultItem withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -62,6 +68,7 @@ public class CommitSearchResultItem {
     
     @JsonProperty("parents")
     public CommitSearchResultItemParents[] parents;
+
     public CommitSearchResultItem withParents(CommitSearchResultItemParents[] parents) {
         this.parents = parents;
         return this;
@@ -72,6 +79,7 @@ public class CommitSearchResultItem {
      */
     @JsonProperty("repository")
     public MinimalRepository repository;
+
     public CommitSearchResultItem withRepository(MinimalRepository repository) {
         this.repository = repository;
         return this;
@@ -79,6 +87,7 @@ public class CommitSearchResultItem {
     
     @JsonProperty("score")
     public Double score;
+
     public CommitSearchResultItem withScore(Double score) {
         this.score = score;
         return this;
@@ -86,6 +95,7 @@ public class CommitSearchResultItem {
     
     @JsonProperty("sha")
     public String sha;
+
     public CommitSearchResultItem withSha(String sha) {
         this.sha = sha;
         return this;
@@ -94,6 +104,7 @@ public class CommitSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_matches")
     public SearchResultTextMatches[] textMatches;
+
     public CommitSearchResultItem withTextMatches(SearchResultTextMatches[] textMatches) {
         this.textMatches = textMatches;
         return this;
@@ -101,9 +112,23 @@ public class CommitSearchResultItem {
     
     @JsonProperty("url")
     public String url;
+
     public CommitSearchResultItem withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CommitSearchResultItem(@JsonProperty("author") NullableSimpleUser author, @JsonProperty("comments_url") String commentsUrl, @JsonProperty("commit") CommitSearchResultItemCommit commit, @JsonProperty("committer") NullableGitUser committer, @JsonProperty("html_url") String htmlUrl, @JsonProperty("node_id") String nodeId, @JsonProperty("parents") CommitSearchResultItemParents[] parents, @JsonProperty("repository") MinimalRepository repository, @JsonProperty("score") Double score, @JsonProperty("sha") String sha, @JsonProperty("url") String url) {
+        this.author = author;
+        this.commentsUrl = commentsUrl;
+        this.commit = commit;
+        this.committer = committer;
+        this.htmlUrl = htmlUrl;
+        this.nodeId = nodeId;
+        this.parents = parents;
+        this.repository = repository;
+        this.score = score;
+        this.sha = sha;
+        this.url = url;
+  }
 }

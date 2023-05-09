@@ -15,9 +15,11 @@ public class ListObjectChildrenRequestBodyObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Selector")
     public String selector;
+
     public ListObjectChildrenRequestBodyObjectReference withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public ListObjectChildrenRequestBodyObjectReference(){}
 }

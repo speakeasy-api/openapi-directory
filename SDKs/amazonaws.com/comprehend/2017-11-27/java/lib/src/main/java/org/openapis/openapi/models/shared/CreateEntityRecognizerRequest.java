@@ -12,6 +12,7 @@ public class CreateEntityRecognizerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateEntityRecognizerRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateEntityRecognizerRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public CreateEntityRecognizerRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -26,6 +28,7 @@ public class CreateEntityRecognizerRequest {
     
     @JsonProperty("InputDataConfig")
     public EntityRecognizerInputDataConfig inputDataConfig;
+
     public CreateEntityRecognizerRequest withInputDataConfig(EntityRecognizerInputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -33,6 +36,7 @@ public class CreateEntityRecognizerRequest {
     
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public CreateEntityRecognizerRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -41,6 +45,7 @@ public class CreateEntityRecognizerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelKmsKeyId")
     public String modelKmsKeyId;
+
     public CreateEntityRecognizerRequest withModelKmsKeyId(String modelKmsKeyId) {
         this.modelKmsKeyId = modelKmsKeyId;
         return this;
@@ -49,6 +54,7 @@ public class CreateEntityRecognizerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPolicy")
     public String modelPolicy;
+
     public CreateEntityRecognizerRequest withModelPolicy(String modelPolicy) {
         this.modelPolicy = modelPolicy;
         return this;
@@ -56,6 +62,7 @@ public class CreateEntityRecognizerRequest {
     
     @JsonProperty("RecognizerName")
     public String recognizerName;
+
     public CreateEntityRecognizerRequest withRecognizerName(String recognizerName) {
         this.recognizerName = recognizerName;
         return this;
@@ -64,6 +71,7 @@ public class CreateEntityRecognizerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateEntityRecognizerRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -72,6 +80,7 @@ public class CreateEntityRecognizerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionName")
     public String versionName;
+
     public CreateEntityRecognizerRequest withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
@@ -80,6 +89,7 @@ public class CreateEntityRecognizerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public CreateEntityRecognizerRequest withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
@@ -88,9 +98,16 @@ public class CreateEntityRecognizerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public CreateEntityRecognizerRequest withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public CreateEntityRecognizerRequest(@JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("InputDataConfig") EntityRecognizerInputDataConfig inputDataConfig, @JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("RecognizerName") String recognizerName) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.inputDataConfig = inputDataConfig;
+        this.languageCode = languageCode;
+        this.recognizerName = recognizerName;
+  }
 }

@@ -12,9 +12,13 @@ public class TeamsCreateDiscussionCommentInOrgRequestBody {
      */
     @JsonProperty("body")
     public String body;
+
     public TeamsCreateDiscussionCommentInOrgRequestBody withBody(String body) {
         this.body = body;
         return this;
     }
     
+    public TeamsCreateDiscussionCommentInOrgRequestBody(@JsonProperty("body") String body) {
+        this.body = body;
+  }
 }

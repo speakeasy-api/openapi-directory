@@ -15,6 +15,7 @@ public class UserVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserVO withEmail(String email) {
         this.email = email;
         return this;
@@ -23,6 +24,7 @@ public class UserVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public UserVO withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -31,6 +33,7 @@ public class UserVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public UserVO withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -39,6 +42,7 @@ public class UserVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middle_name")
     public String middleName;
+
     public UserVO withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -47,9 +51,11 @@ public class UserVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Long userId;
+
     public UserVO withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public UserVO(){}
 }

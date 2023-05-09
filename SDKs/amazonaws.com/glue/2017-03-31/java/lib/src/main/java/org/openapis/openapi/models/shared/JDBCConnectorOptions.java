@@ -15,6 +15,7 @@ public class JDBCConnectorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataTypeMapping")
     public java.util.Map<String, GlueRecordTypeEnum> dataTypeMapping;
+
     public JDBCConnectorOptions withDataTypeMapping(java.util.Map<String, GlueRecordTypeEnum> dataTypeMapping) {
         this.dataTypeMapping = dataTypeMapping;
         return this;
@@ -23,6 +24,7 @@ public class JDBCConnectorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterPredicate")
     public String filterPredicate;
+
     public JDBCConnectorOptions withFilterPredicate(String filterPredicate) {
         this.filterPredicate = filterPredicate;
         return this;
@@ -31,6 +33,7 @@ public class JDBCConnectorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobBookmarkKeys")
     public String[] jobBookmarkKeys;
+
     public JDBCConnectorOptions withJobBookmarkKeys(String[] jobBookmarkKeys) {
         this.jobBookmarkKeys = jobBookmarkKeys;
         return this;
@@ -39,6 +42,7 @@ public class JDBCConnectorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobBookmarkKeysSortOrder")
     public String jobBookmarkKeysSortOrder;
+
     public JDBCConnectorOptions withJobBookmarkKeysSortOrder(String jobBookmarkKeysSortOrder) {
         this.jobBookmarkKeysSortOrder = jobBookmarkKeysSortOrder;
         return this;
@@ -47,6 +51,7 @@ public class JDBCConnectorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LowerBound")
     public Long lowerBound;
+
     public JDBCConnectorOptions withLowerBound(Long lowerBound) {
         this.lowerBound = lowerBound;
         return this;
@@ -55,6 +60,7 @@ public class JDBCConnectorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumPartitions")
     public Long numPartitions;
+
     public JDBCConnectorOptions withNumPartitions(Long numPartitions) {
         this.numPartitions = numPartitions;
         return this;
@@ -63,6 +69,7 @@ public class JDBCConnectorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionColumn")
     public String partitionColumn;
+
     public JDBCConnectorOptions withPartitionColumn(String partitionColumn) {
         this.partitionColumn = partitionColumn;
         return this;
@@ -71,9 +78,11 @@ public class JDBCConnectorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpperBound")
     public Long upperBound;
+
     public JDBCConnectorOptions withUpperBound(Long upperBound) {
         this.upperBound = upperBound;
         return this;
     }
     
+    public JDBCConnectorOptions(){}
 }

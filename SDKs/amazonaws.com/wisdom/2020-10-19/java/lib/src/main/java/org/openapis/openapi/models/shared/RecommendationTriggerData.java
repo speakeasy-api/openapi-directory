@@ -15,9 +15,11 @@ public class RecommendationTriggerData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public QueryRecommendationTriggerData query;
+
     public RecommendationTriggerData withQuery(QueryRecommendationTriggerData query) {
         this.query = query;
         return this;
     }
     
+    public RecommendationTriggerData(){}
 }

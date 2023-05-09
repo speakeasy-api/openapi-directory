@@ -57,11 +57,9 @@ public class Member {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateMemberResponse res = new org.openapis.openapi.models.operations.CreateMemberResponse() {{
+        org.openapis.openapi.models.operations.CreateMemberResponse res = new org.openapis.openapi.models.operations.CreateMemberResponse(contentType, httpRes.statusCode()) {{
             createMember201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -96,11 +94,9 @@ public class Member {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMemberResponse res = new org.openapis.openapi.models.operations.DeleteMemberResponse() {{
+        org.openapis.openapi.models.operations.DeleteMemberResponse res = new org.openapis.openapi.models.operations.DeleteMemberResponse(contentType, httpRes.statusCode()) {{
             deleteMember200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class Member {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMemberResponse res = new org.openapis.openapi.models.operations.GetMemberResponse() {{
+        org.openapis.openapi.models.operations.GetMemberResponse res = new org.openapis.openapi.models.operations.GetMemberResponse(contentType, httpRes.statusCode()) {{
             getMember200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,7 +153,9 @@ public class Member {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetMembersResponse getMembers(org.openapis.openapi.models.operations.GetMembersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMembersRequest.class, baseUrl, "/conversations/{conversation_id}/members", request, null);
@@ -175,11 +171,9 @@ public class Member {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMembersResponse res = new org.openapis.openapi.models.operations.GetMembersResponse() {{
+        org.openapis.openapi.models.operations.GetMembersResponse res = new org.openapis.openapi.models.operations.GetMembersResponse(contentType, httpRes.statusCode()) {{
             getMembers200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -216,11 +210,9 @@ public class Member {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateMemberResponse res = new org.openapis.openapi.models.operations.UpdateMemberResponse() {{
+        org.openapis.openapi.models.operations.UpdateMemberResponse res = new org.openapis.openapi.models.operations.UpdateMemberResponse(contentType, httpRes.statusCode()) {{
             updateMember200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

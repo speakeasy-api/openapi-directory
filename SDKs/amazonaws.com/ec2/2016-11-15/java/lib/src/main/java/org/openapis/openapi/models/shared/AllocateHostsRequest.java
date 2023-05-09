@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AllocateHostsRequest {
     
     public AllocateHostsRequestAutoPlacementEnum autoPlacement;
+
     public AllocateHostsRequest withAutoPlacement(AllocateHostsRequestAutoPlacementEnum autoPlacement) {
         this.autoPlacement = autoPlacement;
         return this;
@@ -16,6 +17,7 @@ public class AllocateHostsRequest {
     
     
     public String availabilityZone;
+
     public AllocateHostsRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -23,6 +25,7 @@ public class AllocateHostsRequest {
     
     
     public String clientToken;
+
     public AllocateHostsRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -30,6 +33,7 @@ public class AllocateHostsRequest {
     
     
     public HostMaintenanceEnum hostMaintenance;
+
     public AllocateHostsRequest withHostMaintenance(HostMaintenanceEnum hostMaintenance) {
         this.hostMaintenance = hostMaintenance;
         return this;
@@ -37,6 +41,7 @@ public class AllocateHostsRequest {
     
     
     public HostRecoveryEnum hostRecovery;
+
     public AllocateHostsRequest withHostRecovery(HostRecoveryEnum hostRecovery) {
         this.hostRecovery = hostRecovery;
         return this;
@@ -44,6 +49,7 @@ public class AllocateHostsRequest {
     
     
     public String instanceFamily;
+
     public AllocateHostsRequest withInstanceFamily(String instanceFamily) {
         this.instanceFamily = instanceFamily;
         return this;
@@ -51,6 +57,7 @@ public class AllocateHostsRequest {
     
     
     public String instanceType;
+
     public AllocateHostsRequest withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -58,6 +65,7 @@ public class AllocateHostsRequest {
     
     
     public String outpostArn;
+
     public AllocateHostsRequest withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -65,6 +73,7 @@ public class AllocateHostsRequest {
     
     
     public Long quantity;
+
     public AllocateHostsRequest withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -72,9 +81,14 @@ public class AllocateHostsRequest {
     
     
     public AllocateHostsRequestTagSpecifications[] tagSpecifications;
+
     public AllocateHostsRequest withTagSpecifications(AllocateHostsRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public AllocateHostsRequest(@JsonProperty("AvailabilityZone") String availabilityZone, @JsonProperty("Quantity") Long quantity) {
+        this.availabilityZone = availabilityZone;
+        this.quantity = quantity;
+  }
 }

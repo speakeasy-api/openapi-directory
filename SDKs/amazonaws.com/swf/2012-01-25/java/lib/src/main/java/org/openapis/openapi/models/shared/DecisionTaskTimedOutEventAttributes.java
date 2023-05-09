@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DecisionTaskTimedOutEventAttributes {
     @JsonProperty("scheduledEventId")
     public Long scheduledEventId;
+
     public DecisionTaskTimedOutEventAttributes withScheduledEventId(Long scheduledEventId) {
         this.scheduledEventId = scheduledEventId;
         return this;
@@ -19,6 +20,7 @@ public class DecisionTaskTimedOutEventAttributes {
     
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public DecisionTaskTimedOutEventAttributes withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
@@ -26,9 +28,15 @@ public class DecisionTaskTimedOutEventAttributes {
     
     @JsonProperty("timeoutType")
     public DecisionTaskTimeoutTypeEnum timeoutType;
+
     public DecisionTaskTimedOutEventAttributes withTimeoutType(DecisionTaskTimeoutTypeEnum timeoutType) {
         this.timeoutType = timeoutType;
         return this;
     }
     
+    public DecisionTaskTimedOutEventAttributes(@JsonProperty("scheduledEventId") Long scheduledEventId, @JsonProperty("startedEventId") Long startedEventId, @JsonProperty("timeoutType") DecisionTaskTimeoutTypeEnum timeoutType) {
+        this.scheduledEventId = scheduledEventId;
+        this.startedEventId = startedEventId;
+        this.timeoutType = timeoutType;
+  }
 }

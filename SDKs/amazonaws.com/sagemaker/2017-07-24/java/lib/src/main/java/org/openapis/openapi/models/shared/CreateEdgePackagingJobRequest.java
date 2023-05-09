@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateEdgePackagingJobRequest {
     @JsonProperty("CompilationJobName")
     public String compilationJobName;
+
     public CreateEdgePackagingJobRequest withCompilationJobName(String compilationJobName) {
         this.compilationJobName = compilationJobName;
         return this;
@@ -18,6 +19,7 @@ public class CreateEdgePackagingJobRequest {
     
     @JsonProperty("EdgePackagingJobName")
     public String edgePackagingJobName;
+
     public CreateEdgePackagingJobRequest withEdgePackagingJobName(String edgePackagingJobName) {
         this.edgePackagingJobName = edgePackagingJobName;
         return this;
@@ -25,6 +27,7 @@ public class CreateEdgePackagingJobRequest {
     
     @JsonProperty("ModelName")
     public String modelName;
+
     public CreateEdgePackagingJobRequest withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -32,6 +35,7 @@ public class CreateEdgePackagingJobRequest {
     
     @JsonProperty("ModelVersion")
     public String modelVersion;
+
     public CreateEdgePackagingJobRequest withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
@@ -39,6 +43,7 @@ public class CreateEdgePackagingJobRequest {
     
     @JsonProperty("OutputConfig")
     public EdgeOutputConfig outputConfig;
+
     public CreateEdgePackagingJobRequest withOutputConfig(EdgeOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -47,6 +52,7 @@ public class CreateEdgePackagingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceKey")
     public String resourceKey;
+
     public CreateEdgePackagingJobRequest withResourceKey(String resourceKey) {
         this.resourceKey = resourceKey;
         return this;
@@ -54,6 +60,7 @@ public class CreateEdgePackagingJobRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateEdgePackagingJobRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -62,9 +69,18 @@ public class CreateEdgePackagingJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateEdgePackagingJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEdgePackagingJobRequest(@JsonProperty("CompilationJobName") String compilationJobName, @JsonProperty("EdgePackagingJobName") String edgePackagingJobName, @JsonProperty("ModelName") String modelName, @JsonProperty("ModelVersion") String modelVersion, @JsonProperty("OutputConfig") EdgeOutputConfig outputConfig, @JsonProperty("RoleArn") String roleArn) {
+        this.compilationJobName = compilationJobName;
+        this.edgePackagingJobName = edgePackagingJobName;
+        this.modelName = modelName;
+        this.modelVersion = modelVersion;
+        this.outputConfig = outputConfig;
+        this.roleArn = roleArn;
+  }
 }

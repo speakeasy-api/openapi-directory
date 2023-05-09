@@ -120,4 +120,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ResourceId.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetAncestryResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Ancestor.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListProjectsResponse.java
+docs/sdk/README.md
+docs/organizations/README.md
+docs/projects/README.md
 USAGE.md

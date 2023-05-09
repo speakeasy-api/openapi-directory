@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeRankExpressionsResponse - A response message that contains the rank expressions for a search domain.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DescribeRankExpressionsResponse {
     
     public RankExpressionStatus[] rankExpressions;
+
     public DescribeRankExpressionsResponse withRankExpressions(RankExpressionStatus[] rankExpressions) {
         this.rankExpressions = rankExpressions;
         return this;
     }
     
+    public DescribeRankExpressionsResponse(@JsonProperty("RankExpressions") RankExpressionStatus[] rankExpressions) {
+        this.rankExpressions = rankExpressions;
+  }
 }

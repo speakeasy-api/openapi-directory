@@ -15,6 +15,7 @@ public class GetIndexingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingGroupIndexingConfiguration")
     public ThingGroupIndexingConfiguration thingGroupIndexingConfiguration;
+
     public GetIndexingConfigurationResponse withThingGroupIndexingConfiguration(ThingGroupIndexingConfiguration thingGroupIndexingConfiguration) {
         this.thingGroupIndexingConfiguration = thingGroupIndexingConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class GetIndexingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingIndexingConfiguration")
     public ThingIndexingConfiguration thingIndexingConfiguration;
+
     public GetIndexingConfigurationResponse withThingIndexingConfiguration(ThingIndexingConfiguration thingIndexingConfiguration) {
         this.thingIndexingConfiguration = thingIndexingConfiguration;
         return this;
     }
     
+    public GetIndexingConfigurationResponse(){}
 }

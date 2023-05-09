@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LaunchTemplatePlacementRequest {
     
     public String affinity;
+
     public LaunchTemplatePlacementRequest withAffinity(String affinity) {
         this.affinity = affinity;
         return this;
@@ -19,6 +20,7 @@ public class LaunchTemplatePlacementRequest {
     
     
     public String availabilityZone;
+
     public LaunchTemplatePlacementRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class LaunchTemplatePlacementRequest {
     
     
     public String groupId;
+
     public LaunchTemplatePlacementRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -33,6 +36,7 @@ public class LaunchTemplatePlacementRequest {
     
     
     public String groupName;
+
     public LaunchTemplatePlacementRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -40,6 +44,7 @@ public class LaunchTemplatePlacementRequest {
     
     
     public String hostId;
+
     public LaunchTemplatePlacementRequest withHostId(String hostId) {
         this.hostId = hostId;
         return this;
@@ -47,6 +52,7 @@ public class LaunchTemplatePlacementRequest {
     
     
     public String hostResourceGroupArn;
+
     public LaunchTemplatePlacementRequest withHostResourceGroupArn(String hostResourceGroupArn) {
         this.hostResourceGroupArn = hostResourceGroupArn;
         return this;
@@ -54,6 +60,7 @@ public class LaunchTemplatePlacementRequest {
     
     
     public Long partitionNumber;
+
     public LaunchTemplatePlacementRequest withPartitionNumber(Long partitionNumber) {
         this.partitionNumber = partitionNumber;
         return this;
@@ -61,6 +68,7 @@ public class LaunchTemplatePlacementRequest {
     
     
     public String spreadDomain;
+
     public LaunchTemplatePlacementRequest withSpreadDomain(String spreadDomain) {
         this.spreadDomain = spreadDomain;
         return this;
@@ -68,9 +76,11 @@ public class LaunchTemplatePlacementRequest {
     
     
     public TenancyEnum tenancy;
+
     public LaunchTemplatePlacementRequest withTenancy(TenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
     }
     
+    public LaunchTemplatePlacementRequest(){}
 }

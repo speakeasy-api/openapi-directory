@@ -12,6 +12,7 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public SearchRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public SearchRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,6 +29,7 @@ public class SearchRequest {
     
     @JsonProperty("Resource")
     public ResourceTypeEnum resource;
+
     public SearchRequest withResource(ResourceTypeEnum resource) {
         this.resource = resource;
         return this;
@@ -35,6 +38,7 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SearchExpression")
     public SearchExpression searchExpression;
+
     public SearchRequest withSearchExpression(SearchExpression searchExpression) {
         this.searchExpression = searchExpression;
         return this;
@@ -43,6 +47,7 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public String sortBy;
+
     public SearchRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -51,9 +56,13 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SearchSortOrderEnum sortOrder;
+
     public SearchRequest withSortOrder(SearchSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public SearchRequest(@JsonProperty("Resource") ResourceTypeEnum resource) {
+        this.resource = resource;
+  }
 }

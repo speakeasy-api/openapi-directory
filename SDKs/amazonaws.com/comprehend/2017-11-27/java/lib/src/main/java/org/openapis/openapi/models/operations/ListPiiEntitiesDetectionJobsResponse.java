@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPiiEntitiesDetectionJobsResponse {
     
     public String contentType;
+
     public ListPiiEntitiesDetectionJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPiiEntitiesDetectionJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListPiiEntitiesDetectionJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListPiiEntitiesDetectionJobsResponse {
      */
     
     public Object invalidFilterException;
+
     public ListPiiEntitiesDetectionJobsResponse withInvalidFilterException(Object invalidFilterException) {
         this.invalidFilterException = invalidFilterException;
         return this;
@@ -39,6 +43,7 @@ public class ListPiiEntitiesDetectionJobsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListPiiEntitiesDetectionJobsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListPiiEntitiesDetectionJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPiiEntitiesDetectionJobsResponse listPiiEntitiesDetectionJobsResponse;
+
     public ListPiiEntitiesDetectionJobsResponse withListPiiEntitiesDetectionJobsResponse(org.openapis.openapi.models.shared.ListPiiEntitiesDetectionJobsResponse listPiiEntitiesDetectionJobsResponse) {
         this.listPiiEntitiesDetectionJobsResponse = listPiiEntitiesDetectionJobsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListPiiEntitiesDetectionJobsResponse {
     
     
     public Integer statusCode;
+
     public ListPiiEntitiesDetectionJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListPiiEntitiesDetectionJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPiiEntitiesDetectionJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListPiiEntitiesDetectionJobsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListPiiEntitiesDetectionJobsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListPiiEntitiesDetectionJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

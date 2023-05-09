@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableSharingWithAwsOrganizationResponse {
     
     public String contentType;
+
     public EnableSharingWithAwsOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EnableSharingWithAwsOrganizationResponse {
      */
     
     public org.openapis.openapi.models.shared.EnableSharingWithAwsOrganizationResponse enableSharingWithAwsOrganizationResponse;
+
     public EnableSharingWithAwsOrganizationResponse withEnableSharingWithAwsOrganizationResponse(org.openapis.openapi.models.shared.EnableSharingWithAwsOrganizationResponse enableSharingWithAwsOrganizationResponse) {
         this.enableSharingWithAwsOrganizationResponse = enableSharingWithAwsOrganizationResponse;
         return this;
@@ -29,6 +32,7 @@ public class EnableSharingWithAwsOrganizationResponse {
      */
     
     public Object operationNotPermittedException;
+
     public EnableSharingWithAwsOrganizationResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -39,6 +43,7 @@ public class EnableSharingWithAwsOrganizationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public EnableSharingWithAwsOrganizationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -46,6 +51,7 @@ public class EnableSharingWithAwsOrganizationResponse {
     
     
     public Integer statusCode;
+
     public EnableSharingWithAwsOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class EnableSharingWithAwsOrganizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableSharingWithAwsOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class EnableSharingWithAwsOrganizationResponse {
      */
     
     public Object serverInternalException;
+
     public EnableSharingWithAwsOrganizationResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
     }
     
+    public EnableSharingWithAwsOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

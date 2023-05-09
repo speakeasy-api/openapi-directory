@@ -37,10 +37,11 @@ public class V1Pepsanction {
     /**
      * Retrieves a list of monitor entries
      * Retrieve a list of all active Pep Sanction Report monitors for this account
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PepMonitorListResponse pepMonitorList() throws Exception {
+    public org.openapis.openapi.models.operations.PepMonitorListResponse pepMonitorList(org.openapis.openapi.models.operations.PepMonitorListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/pepsanction/monitor/list");
         
@@ -49,17 +50,16 @@ public class V1Pepsanction {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PepMonitorListResponse res = new org.openapis.openapi.models.operations.PepMonitorListResponse() {{
+        org.openapis.openapi.models.operations.PepMonitorListResponse res = new org.openapis.openapi.models.operations.PepMonitorListResponse(contentType, httpRes.statusCode()) {{
             pepMonitorList200ApplicationJSONObjects = null;
             pepMonitorListDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,12 +103,10 @@ public class V1Pepsanction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PepMonitorUnregisterResponse res = new org.openapis.openapi.models.operations.PepMonitorUnregisterResponse() {{
+        org.openapis.openapi.models.operations.PepMonitorUnregisterResponse res = new org.openapis.openapi.models.operations.PepMonitorUnregisterResponse(contentType, httpRes.statusCode()) {{
             pepMonitorUnregister200ApplicationJSONObject = null;
             pepMonitorUnregisterDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,12 +152,10 @@ public class V1Pepsanction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PepMonitorUpdateResponse res = new org.openapis.openapi.models.operations.PepMonitorUpdateResponse() {{
+        org.openapis.openapi.models.operations.PepMonitorUpdateResponse res = new org.openapis.openapi.models.operations.PepMonitorUpdateResponse(contentType, httpRes.statusCode()) {{
             pepMonitorUpdate200ApplicationJSONObject = null;
             pepMonitorUpdateDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,12 +201,10 @@ public class V1Pepsanction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PepOrderResponse res = new org.openapis.openapi.models.operations.PepOrderResponse() {{
+        org.openapis.openapi.models.operations.PepOrderResponse res = new org.openapis.openapi.models.operations.PepOrderResponse(contentType, httpRes.statusCode()) {{
             pepOrder200ApplicationJSONObject = null;
             pepOrderDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -262,12 +256,10 @@ public class V1Pepsanction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PepRetrieveResponse res = new org.openapis.openapi.models.operations.PepRetrieveResponse() {{
+        org.openapis.openapi.models.operations.PepRetrieveResponse res = new org.openapis.openapi.models.operations.PepRetrieveResponse(contentType, httpRes.statusCode()) {{
             pepRetrieve200ApplicationJSONObject = null;
             pepRetrieveDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

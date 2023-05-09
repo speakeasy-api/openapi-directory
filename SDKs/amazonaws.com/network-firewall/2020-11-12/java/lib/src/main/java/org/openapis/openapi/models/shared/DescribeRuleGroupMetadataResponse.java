@@ -20,6 +20,7 @@ public class DescribeRuleGroupMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Capacity")
     public Long capacity;
+
     public DescribeRuleGroupMetadataResponse withCapacity(Long capacity) {
         this.capacity = capacity;
         return this;
@@ -28,6 +29,7 @@ public class DescribeRuleGroupMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeRuleGroupMetadataResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class DescribeRuleGroupMetadataResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeRuleGroupMetadataResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -45,6 +48,7 @@ public class DescribeRuleGroupMetadataResponse {
     
     @JsonProperty("RuleGroupArn")
     public String ruleGroupArn;
+
     public DescribeRuleGroupMetadataResponse withRuleGroupArn(String ruleGroupArn) {
         this.ruleGroupArn = ruleGroupArn;
         return this;
@@ -52,6 +56,7 @@ public class DescribeRuleGroupMetadataResponse {
     
     @JsonProperty("RuleGroupName")
     public String ruleGroupName;
+
     public DescribeRuleGroupMetadataResponse withRuleGroupName(String ruleGroupName) {
         this.ruleGroupName = ruleGroupName;
         return this;
@@ -63,6 +68,7 @@ public class DescribeRuleGroupMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatefulRuleOptions")
     public StatefulRuleOptions statefulRuleOptions;
+
     public DescribeRuleGroupMetadataResponse withStatefulRuleOptions(StatefulRuleOptions statefulRuleOptions) {
         this.statefulRuleOptions = statefulRuleOptions;
         return this;
@@ -71,9 +77,14 @@ public class DescribeRuleGroupMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public RuleGroupTypeEnum type;
+
     public DescribeRuleGroupMetadataResponse withType(RuleGroupTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DescribeRuleGroupMetadataResponse(@JsonProperty("RuleGroupArn") String ruleGroupArn, @JsonProperty("RuleGroupName") String ruleGroupName) {
+        this.ruleGroupArn = ruleGroupArn;
+        this.ruleGroupName = ruleGroupName;
+  }
 }

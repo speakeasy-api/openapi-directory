@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateIpamRequestTagSpecifications {
     
     public CreateIpamRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateIpamRequestTagSpecifications withResourceType(CreateIpamRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateIpamRequestTagSpecifications {
     
     
     public CreateIpamRequestTagSpecificationsTags[] tags;
+
     public CreateIpamRequestTagSpecifications withTags(CreateIpamRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateIpamRequestTagSpecifications(){}
 }

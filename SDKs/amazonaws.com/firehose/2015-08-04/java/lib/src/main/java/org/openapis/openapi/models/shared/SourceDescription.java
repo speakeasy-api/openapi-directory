@@ -15,9 +15,11 @@ public class SourceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisStreamSourceDescription")
     public KinesisStreamSourceDescription kinesisStreamSourceDescription;
+
     public SourceDescription withKinesisStreamSourceDescription(KinesisStreamSourceDescription kinesisStreamSourceDescription) {
         this.kinesisStreamSourceDescription = kinesisStreamSourceDescription;
         return this;
     }
     
+    public SourceDescription(){}
 }

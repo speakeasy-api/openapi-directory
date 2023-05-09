@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePermissionsResponse {
@@ -12,6 +13,7 @@ public class UpdatePermissionsResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdatePermissionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePermissionsResponse {
     
     
     public String contentType;
+
     public UpdatePermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePermissionsResponse {
      */
     
     public Object internalServerException;
+
     public UpdatePermissionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdatePermissionsResponse {
     
     
     public Integer statusCode;
+
     public UpdatePermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdatePermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdatePermissionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdatePermissionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdatePermissionsResponse {
      */
     
     public Object throttlingException;
+
     public UpdatePermissionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdatePermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatePermissionsResponse updatePermissionsResponse;
+
     public UpdatePermissionsResponse withUpdatePermissionsResponse(org.openapis.openapi.models.shared.UpdatePermissionsResponse updatePermissionsResponse) {
         this.updatePermissionsResponse = updatePermissionsResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdatePermissionsResponse {
      */
     
     public Object validationException;
+
     public UpdatePermissionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdatePermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

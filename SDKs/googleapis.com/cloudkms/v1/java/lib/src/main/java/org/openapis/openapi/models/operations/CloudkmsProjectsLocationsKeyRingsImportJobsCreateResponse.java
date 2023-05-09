@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse {
     
     public String contentType;
+
     public CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportJob importJob;
+
     public CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse withImportJob(org.openapis.openapi.models.shared.ImportJob importJob) {
         this.importJob = importJob;
         return this;
@@ -26,6 +29,7 @@ public class CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse {
     
     
     public Integer statusCode;
+
     public CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

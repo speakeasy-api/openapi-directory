@@ -15,6 +15,7 @@ public class ContactsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalIds")
     public Long[] additionalIds;
+
     public ContactsDTO withAdditionalIds(Long[] additionalIds) {
         this.additionalIds = additionalIds;
         return this;
@@ -23,6 +24,7 @@ public class ContactsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryId")
     public Long primaryId;
+
     public ContactsDTO withPrimaryId(Long primaryId) {
         this.primaryId = primaryId;
         return this;
@@ -31,9 +33,11 @@ public class ContactsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sendBackToId")
     public Long sendBackToId;
+
     public ContactsDTO withSendBackToId(Long sendBackToId) {
         this.sendBackToId = sendBackToId;
         return this;
     }
     
+    public ContactsDTO(){}
 }

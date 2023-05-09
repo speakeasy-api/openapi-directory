@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTokenRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateTokenRequest createTokenRequest;
+
     public CreateTokenRequest withCreateTokenRequest(org.openapis.openapi.models.shared.CreateTokenRequest createTokenRequest) {
         this.createTokenRequest = createTokenRequest;
         return this;
@@ -19,9 +21,13 @@ public class CreateTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
     public CreateTokenIncludeEnum include;
+
     public CreateTokenRequest withInclude(CreateTokenIncludeEnum include) {
         this.include = include;
         return this;
     }
     
+    public CreateTokenRequest(@JsonProperty("CreateTokenRequest") org.openapis.openapi.models.shared.CreateTokenRequest createTokenRequest) {
+        this.createTokenRequest = createTokenRequest;
+  }
 }

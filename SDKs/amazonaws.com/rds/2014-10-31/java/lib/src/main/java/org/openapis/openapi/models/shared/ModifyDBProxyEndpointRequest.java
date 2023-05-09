@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyDBProxyEndpointRequest {
     
     public String dbProxyEndpointName;
+
     public ModifyDBProxyEndpointRequest withDBProxyEndpointName(String dbProxyEndpointName) {
         this.dbProxyEndpointName = dbProxyEndpointName;
         return this;
@@ -16,6 +17,7 @@ public class ModifyDBProxyEndpointRequest {
     
     
     public String newDBProxyEndpointName;
+
     public ModifyDBProxyEndpointRequest withNewDBProxyEndpointName(String newDBProxyEndpointName) {
         this.newDBProxyEndpointName = newDBProxyEndpointName;
         return this;
@@ -23,9 +25,13 @@ public class ModifyDBProxyEndpointRequest {
     
     
     public String[] vpcSecurityGroupIds;
+
     public ModifyDBProxyEndpointRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public ModifyDBProxyEndpointRequest(@JsonProperty("DBProxyEndpointName") String dbProxyEndpointName) {
+        this.dbProxyEndpointName = dbProxyEndpointName;
+  }
 }

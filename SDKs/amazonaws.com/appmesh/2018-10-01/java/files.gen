@@ -130,4 +130,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateRouteOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateVirtualNodeOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateVirtualRouterOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

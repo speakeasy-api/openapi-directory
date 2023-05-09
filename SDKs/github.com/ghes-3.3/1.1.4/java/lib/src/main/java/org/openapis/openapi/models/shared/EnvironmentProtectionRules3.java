@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnvironmentProtectionRules3 {
     @JsonProperty("id")
     public Long id;
+
     public EnvironmentProtectionRules3 withId(Long id) {
         this.id = id;
         return this;
@@ -16,6 +17,7 @@ public class EnvironmentProtectionRules3 {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public EnvironmentProtectionRules3 withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -23,9 +25,15 @@ public class EnvironmentProtectionRules3 {
     
     @JsonProperty("type")
     public String type;
+
     public EnvironmentProtectionRules3 withType(String type) {
         this.type = type;
         return this;
     }
     
+    public EnvironmentProtectionRules3(@JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("type") String type) {
+        this.id = id;
+        this.nodeId = nodeId;
+        this.type = type;
+  }
 }

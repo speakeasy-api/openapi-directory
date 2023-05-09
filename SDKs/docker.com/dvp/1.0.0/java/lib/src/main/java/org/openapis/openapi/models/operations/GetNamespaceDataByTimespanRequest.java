@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamespaceDataByTimespanRequest {
@@ -12,6 +13,7 @@ public class GetNamespaceDataByTimespanRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataview")
     public org.openapis.openapi.models.shared.DataviewTypeEnum dataview;
+
     public GetNamespaceDataByTimespanRequest withDataview(org.openapis.openapi.models.shared.DataviewTypeEnum dataview) {
         this.dataview = dataview;
         return this;
@@ -22,6 +24,7 @@ public class GetNamespaceDataByTimespanRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
     public String namespace;
+
     public GetNamespaceDataByTimespanRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -32,6 +35,7 @@ public class GetNamespaceDataByTimespanRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=timespan")
     public Long timespan;
+
     public GetNamespaceDataByTimespanRequest withTimespan(Long timespan) {
         this.timespan = timespan;
         return this;
@@ -42,6 +46,7 @@ public class GetNamespaceDataByTimespanRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=timespantype")
     public org.openapis.openapi.models.shared.TimespanTypeEnum timespantype;
+
     public GetNamespaceDataByTimespanRequest withTimespantype(org.openapis.openapi.models.shared.TimespanTypeEnum timespantype) {
         this.timespantype = timespantype;
         return this;
@@ -52,9 +57,17 @@ public class GetNamespaceDataByTimespanRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
     public Long year;
+
     public GetNamespaceDataByTimespanRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetNamespaceDataByTimespanRequest(@JsonProperty("dataview") org.openapis.openapi.models.shared.DataviewTypeEnum dataview, @JsonProperty("namespace") String namespace, @JsonProperty("timespan") Long timespan, @JsonProperty("timespantype") org.openapis.openapi.models.shared.TimespanTypeEnum timespantype, @JsonProperty("year") Long year) {
+        this.dataview = dataview;
+        this.namespace = namespace;
+        this.timespan = timespan;
+        this.timespantype = timespantype;
+        this.year = year;
+  }
 }

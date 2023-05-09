@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SnsPostSnsPostResponse {
     
     public String contentType;
+
     public SnsPostSnsPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SnsPostSnsPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public SnsPostSnsPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class SnsPostSnsPostResponse {
     
     
     public Integer statusCode;
+
     public SnsPostSnsPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class SnsPostSnsPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SnsPostSnsPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class SnsPostSnsPostResponse {
      */
     
     public Object snsPostSnsPost200ApplicationJSONAny;
+
     public SnsPostSnsPostResponse withSnsPostSnsPost200ApplicationJSONAny(Object snsPostSnsPost200ApplicationJSONAny) {
         this.snsPostSnsPost200ApplicationJSONAny = snsPostSnsPost200ApplicationJSONAny;
         return this;
     }
     
+    public SnsPostSnsPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSecretValueRequest {
     @JsonProperty("SecretId")
     public String secretId;
+
     public GetSecretValueRequest withSecretId(String secretId) {
         this.secretId = secretId;
         return this;
@@ -19,6 +20,7 @@ public class GetSecretValueRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public GetSecretValueRequest withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
@@ -27,9 +29,13 @@ public class GetSecretValueRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionStage")
     public String versionStage;
+
     public GetSecretValueRequest withVersionStage(String versionStage) {
         this.versionStage = versionStage;
         return this;
     }
     
+    public GetSecretValueRequest(@JsonProperty("SecretId") String secretId) {
+        this.secretId = secretId;
+  }
 }

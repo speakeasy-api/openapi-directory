@@ -12,6 +12,7 @@ public class SearchResponseEvents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SearchResponseEvents withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class SearchResponseEvents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SearchResponseEventsTypeEnum type;
+
     public SearchResponseEvents withType(SearchResponseEventsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SearchResponseEvents(){}
 }

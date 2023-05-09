@@ -12,6 +12,7 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acCode")
     public String acCode;
+
     public BankAccountQueryDto withAcCode(String acCode) {
         this.acCode = acCode;
         return this;
@@ -20,6 +21,7 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountName")
     public String accountName;
+
     public BankAccountQueryDto withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -28,6 +30,7 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public BankAccountQueryDto withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -36,6 +39,7 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String[] address;
+
     public BankAccountQueryDto withAddress(String[] address) {
         this.address = address;
         return this;
@@ -44,6 +48,7 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankFeedSource")
     public Integer bankFeedSource;
+
     public BankAccountQueryDto withBankFeedSource(Integer bankFeedSource) {
         this.bankFeedSource = bankFeedSource;
         return this;
@@ -52,6 +57,7 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessIdentifierCodes")
     public String businessIdentifierCodes;
+
     public BankAccountQueryDto withBusinessIdentifierCodes(String businessIdentifierCodes) {
         this.businessIdentifierCodes = businessIdentifierCodes;
         return this;
@@ -60,6 +66,7 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryId")
     public Long categoryId;
+
     public BankAccountQueryDto withCategoryId(Long categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -68,6 +75,7 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorScheme")
     public String creditorScheme;
+
     public BankAccountQueryDto withCreditorScheme(String creditorScheme) {
         this.creditorScheme = creditorScheme;
         return this;
@@ -76,6 +84,7 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public BankAccountQueryDto withDetails(String details) {
         this.details = details;
         return this;
@@ -84,6 +93,7 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public BankAccountQueryDto withId(Long id) {
         this.id = id;
         return this;
@@ -92,6 +102,7 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internationalBankAccountNumber")
     public String internationalBankAccountNumber;
+
     public BankAccountQueryDto withInternationalBankAccountNumber(String internationalBankAccountNumber) {
         this.internationalBankAccountNumber = internationalBankAccountNumber;
         return this;
@@ -100,6 +111,7 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefaultBank")
     public Boolean isDefaultBank;
+
     public BankAccountQueryDto withIsDefaultBank(Boolean isDefaultBank) {
         this.isDefaultBank = isDefaultBank;
         return this;
@@ -108,6 +120,7 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastChq")
     public String lastChq;
+
     public BankAccountQueryDto withLastChq(String lastChq) {
         this.lastChq = lastChq;
         return this;
@@ -116,6 +129,7 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nominalAcCode")
     public String nominalAcCode;
+
     public BankAccountQueryDto withNominalAcCode(String nominalAcCode) {
         this.nominalAcCode = nominalAcCode;
         return this;
@@ -124,6 +138,7 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortCode")
     public String sortCode;
+
     public BankAccountQueryDto withSortCode(String sortCode) {
         this.sortCode = sortCode;
         return this;
@@ -132,9 +147,11 @@ public class BankAccountQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public BankAccountQueryDto withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public BankAccountQueryDto(){}
 }

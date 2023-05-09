@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTimePeriodResponse {
     
     public String contentType;
+
     public GetTimePeriodResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTimePeriodResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetTimePeriodResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetTimePeriodResponse {
     
     
     public Integer statusCode;
+
     public GetTimePeriodResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetTimePeriodResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTimePeriodResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetTimePeriodResponse {
      */
     
     public GetTimePeriod200ApplicationJSON getTimePeriod200ApplicationJSONObject;
+
     public GetTimePeriodResponse withGetTimePeriod200ApplicationJSONObject(GetTimePeriod200ApplicationJSON getTimePeriod200ApplicationJSONObject) {
         this.getTimePeriod200ApplicationJSONObject = getTimePeriod200ApplicationJSONObject;
         return this;
     }
     
+    public GetTimePeriodResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

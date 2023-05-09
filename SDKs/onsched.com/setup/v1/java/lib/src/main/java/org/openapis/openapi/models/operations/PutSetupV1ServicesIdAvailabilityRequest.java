@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1ServicesIdAvailabilityRequest {
@@ -12,6 +13,7 @@ public class PutSetupV1ServicesIdAvailabilityRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AvailabilityInputModel availabilityInputModel;
+
     public PutSetupV1ServicesIdAvailabilityRequest withAvailabilityInputModel(org.openapis.openapi.models.shared.AvailabilityInputModel availabilityInputModel) {
         this.availabilityInputModel = availabilityInputModel;
         return this;
@@ -22,9 +24,13 @@ public class PutSetupV1ServicesIdAvailabilityRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutSetupV1ServicesIdAvailabilityRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutSetupV1ServicesIdAvailabilityRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

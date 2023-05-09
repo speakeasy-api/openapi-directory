@@ -18,6 +18,7 @@ public class SearchListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public SearchListResponse withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class SearchListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventId")
     public String eventId;
+
     public SearchListResponse withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -40,6 +42,7 @@ public class SearchListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public SearchResult[] items;
+
     public SearchListResponse withItems(SearchResult[] items) {
         this.items = items;
         return this;
@@ -51,6 +54,7 @@ public class SearchListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SearchListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class SearchListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SearchListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -73,6 +78,7 @@ public class SearchListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageInfo")
     public PageInfo pageInfo;
+
     public SearchListResponse withPageInfo(PageInfo pageInfo) {
         this.pageInfo = pageInfo;
         return this;
@@ -84,6 +90,7 @@ public class SearchListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prevPageToken")
     public String prevPageToken;
+
     public SearchListResponse withPrevPageToken(String prevPageToken) {
         this.prevPageToken = prevPageToken;
         return this;
@@ -92,6 +99,7 @@ public class SearchListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public SearchListResponse withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -103,6 +111,7 @@ public class SearchListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenPagination")
     public java.util.Map<String, Object> tokenPagination;
+
     public SearchListResponse withTokenPagination(java.util.Map<String, Object> tokenPagination) {
         this.tokenPagination = tokenPagination;
         return this;
@@ -114,9 +123,11 @@ public class SearchListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visitorId")
     public String visitorId;
+
     public SearchListResponse withVisitorId(String visitorId) {
         this.visitorId = visitorId;
         return this;
     }
     
+    public SearchListResponse(){}
 }

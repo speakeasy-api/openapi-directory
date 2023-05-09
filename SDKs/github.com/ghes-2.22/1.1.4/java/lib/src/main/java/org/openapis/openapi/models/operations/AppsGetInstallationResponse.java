@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppsGetInstallationResponse {
     
     public String contentType;
+
     public AppsGetInstallationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppsGetInstallationResponse {
     
     
     public Integer statusCode;
+
     public AppsGetInstallationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppsGetInstallationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppsGetInstallationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppsGetInstallationResponse {
      */
     
     public AppsGetInstallation415ApplicationJSON appsGetInstallation415ApplicationJSONObject;
+
     public AppsGetInstallationResponse withAppsGetInstallation415ApplicationJSONObject(AppsGetInstallation415ApplicationJSON appsGetInstallation415ApplicationJSONObject) {
         this.appsGetInstallation415ApplicationJSONObject = appsGetInstallation415ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AppsGetInstallationResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public AppsGetInstallationResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -53,9 +59,14 @@ public class AppsGetInstallationResponse {
      */
     
     public org.openapis.openapi.models.shared.InstallationGhes2 installationGhes2;
+
     public AppsGetInstallationResponse withInstallationGhes2(org.openapis.openapi.models.shared.InstallationGhes2 installationGhes2) {
         this.installationGhes2 = installationGhes2;
         return this;
     }
     
+    public AppsGetInstallationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class TransferDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balanceAdjustment")
     public BalanceAdjustment balanceAdjustment;
+
     public TransferDetail withBalanceAdjustment(BalanceAdjustment balanceAdjustment) {
         this.balanceAdjustment = balanceAdjustment;
         return this;
@@ -29,6 +30,7 @@ public class TransferDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("charges")
     public Charge[] charges;
+
     public TransferDetail withCharges(Charge[] charges) {
         this.charges = charges;
         return this;
@@ -40,9 +42,11 @@ public class TransferDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalChargeNetAmount")
     public Amount totalChargeNetAmount;
+
     public TransferDetail withTotalChargeNetAmount(Amount totalChargeNetAmount) {
         this.totalChargeNetAmount = totalChargeNetAmount;
         return this;
     }
     
+    public TransferDetail(){}
 }

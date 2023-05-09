@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BotExportSpecification {
     @JsonProperty("botId")
     public String botId;
+
     public BotExportSpecification withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -19,9 +20,14 @@ public class BotExportSpecification {
     
     @JsonProperty("botVersion")
     public String botVersion;
+
     public BotExportSpecification withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
     }
     
+    public BotExportSpecification(@JsonProperty("botId") String botId, @JsonProperty("botVersion") String botVersion) {
+        this.botId = botId;
+        this.botVersion = botVersion;
+  }
 }

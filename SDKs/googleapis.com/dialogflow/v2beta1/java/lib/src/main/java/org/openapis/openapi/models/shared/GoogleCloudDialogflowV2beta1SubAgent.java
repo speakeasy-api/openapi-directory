@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1SubAgent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public String environment;
+
     public GoogleCloudDialogflowV2beta1SubAgent withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1SubAgent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public GoogleCloudDialogflowV2beta1SubAgent withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1SubAgent(){}
 }

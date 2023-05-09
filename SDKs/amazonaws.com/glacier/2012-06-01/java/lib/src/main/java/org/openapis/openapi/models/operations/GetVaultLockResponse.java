@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVaultLockResponse {
     
     public String contentType;
+
     public GetVaultLockResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetVaultLockResponse {
      */
     
     public org.openapis.openapi.models.shared.GetVaultLockOutput getVaultLockOutput;
+
     public GetVaultLockResponse withGetVaultLockOutput(org.openapis.openapi.models.shared.GetVaultLockOutput getVaultLockOutput) {
         this.getVaultLockOutput = getVaultLockOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetVaultLockResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetVaultLockResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class GetVaultLockResponse {
      */
     
     public Object missingParameterValueException;
+
     public GetVaultLockResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class GetVaultLockResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetVaultLockResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetVaultLockResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetVaultLockResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class GetVaultLockResponse {
     
     
     public Integer statusCode;
+
     public GetVaultLockResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetVaultLockResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVaultLockResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetVaultLockResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

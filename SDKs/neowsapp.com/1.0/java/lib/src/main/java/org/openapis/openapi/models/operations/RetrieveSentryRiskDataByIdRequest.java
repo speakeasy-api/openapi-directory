@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveSentryRiskDataByIdRequest {
@@ -12,9 +13,13 @@ public class RetrieveSentryRiskDataByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=asteroid_id")
     public String asteroidId;
+
     public RetrieveSentryRiskDataByIdRequest withAsteroidId(String asteroidId) {
         this.asteroidId = asteroidId;
         return this;
     }
     
+    public RetrieveSentryRiskDataByIdRequest(@JsonProperty("asteroid_id") String asteroidId) {
+        this.asteroidId = asteroidId;
+  }
 }

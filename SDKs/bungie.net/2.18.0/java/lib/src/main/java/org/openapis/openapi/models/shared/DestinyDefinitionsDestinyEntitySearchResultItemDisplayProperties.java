@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsDestinyEntitySearchResultItemDisplayProperties {
     
     public String description;
+
     public DestinyDefinitionsDestinyEntitySearchResultItemDisplayProperties withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DestinyDefinitionsDestinyEntitySearchResultItemDisplayProperties {
     
     
     public Boolean hasIcon;
+
     public DestinyDefinitionsDestinyEntitySearchResultItemDisplayProperties withHasIcon(Boolean hasIcon) {
         this.hasIcon = hasIcon;
         return this;
@@ -29,6 +31,7 @@ public class DestinyDefinitionsDestinyEntitySearchResultItemDisplayProperties {
      */
     
     public String highResIcon;
+
     public DestinyDefinitionsDestinyEntitySearchResultItemDisplayProperties withHighResIcon(String highResIcon) {
         this.highResIcon = highResIcon;
         return this;
@@ -41,6 +44,7 @@ public class DestinyDefinitionsDestinyEntitySearchResultItemDisplayProperties {
      */
     
     public String icon;
+
     public DestinyDefinitionsDestinyEntitySearchResultItemDisplayProperties withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -48,6 +52,7 @@ public class DestinyDefinitionsDestinyEntitySearchResultItemDisplayProperties {
     
     
     public DestinyDefinitionsCommonDestinyIconSequenceDefinition[] iconSequences;
+
     public DestinyDefinitionsDestinyEntitySearchResultItemDisplayProperties withIconSequences(DestinyDefinitionsCommonDestinyIconSequenceDefinition[] iconSequences) {
         this.iconSequences = iconSequences;
         return this;
@@ -55,9 +60,11 @@ public class DestinyDefinitionsDestinyEntitySearchResultItemDisplayProperties {
     
     
     public String name;
+
     public DestinyDefinitionsDestinyEntitySearchResultItemDisplayProperties withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DestinyDefinitionsDestinyEntitySearchResultItemDisplayProperties(){}
 }

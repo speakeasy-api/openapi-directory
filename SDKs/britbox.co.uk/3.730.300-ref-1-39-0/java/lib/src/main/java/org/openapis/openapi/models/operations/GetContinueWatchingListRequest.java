@@ -12,6 +12,7 @@ public class GetContinueWatchingListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetContinueWatchingListRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -42,6 +43,7 @@ public class GetContinueWatchingListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetContinueWatchingListRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -65,6 +67,7 @@ public class GetContinueWatchingListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=include")
     public GetContinueWatchingListIncludeEnum[] include;
+
     public GetContinueWatchingListRequest withInclude(GetContinueWatchingListIncludeEnum[] include) {
         this.include = include;
         return this;
@@ -85,6 +88,7 @@ public class GetContinueWatchingListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetContinueWatchingListRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -95,6 +99,7 @@ public class GetContinueWatchingListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_rating")
     public String maxRating;
+
     public GetContinueWatchingListRequest withMaxRating(String maxRating) {
         this.maxRating = maxRating;
         return this;
@@ -105,6 +110,7 @@ public class GetContinueWatchingListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetContinueWatchingListRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -115,6 +121,7 @@ public class GetContinueWatchingListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Integer pageSize;
+
     public GetContinueWatchingListRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -125,6 +132,7 @@ public class GetContinueWatchingListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetContinueWatchingListRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -156,6 +164,7 @@ public class GetContinueWatchingListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=show_item_type")
     public GetContinueWatchingListShowItemTypeEnum showItemType;
+
     public GetContinueWatchingListRequest withShowItemType(GetContinueWatchingListShowItemTypeEnum showItemType) {
         this.showItemType = showItemType;
         return this;
@@ -166,9 +175,11 @@ public class GetContinueWatchingListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public GetContinueWatchingListRequest withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public GetContinueWatchingListRequest(){}
 }

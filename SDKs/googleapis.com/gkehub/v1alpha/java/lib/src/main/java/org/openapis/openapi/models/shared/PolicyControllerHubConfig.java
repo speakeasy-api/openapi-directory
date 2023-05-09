@@ -18,6 +18,7 @@ public class PolicyControllerHubConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditIntervalSeconds")
     public String auditIntervalSeconds;
+
     public PolicyControllerHubConfig withAuditIntervalSeconds(String auditIntervalSeconds) {
         this.auditIntervalSeconds = auditIntervalSeconds;
         return this;
@@ -29,17 +30,19 @@ public class PolicyControllerHubConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraintViolationLimit")
     public String constraintViolationLimit;
+
     public PolicyControllerHubConfig withConstraintViolationLimit(String constraintViolationLimit) {
         this.constraintViolationLimit = constraintViolationLimit;
         return this;
     }
     
     /**
-     * Map of deployment configs to deployments (\u201cadmission\u201d, \u201caudit\u201d, \u201cmutation\u201d).
+     * Map of deployment configs to deployments ("admission", "audit", "mutation').
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentConfigs")
     public java.util.Map<String, PolicyControllerPolicyControllerDeploymentConfig> deploymentConfigs;
+
     public PolicyControllerHubConfig withDeploymentConfigs(java.util.Map<String, PolicyControllerPolicyControllerDeploymentConfig> deploymentConfigs) {
         this.deploymentConfigs = deploymentConfigs;
         return this;
@@ -51,6 +54,7 @@ public class PolicyControllerHubConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exemptableNamespaces")
     public String[] exemptableNamespaces;
+
     public PolicyControllerHubConfig withExemptableNamespaces(String[] exemptableNamespaces) {
         this.exemptableNamespaces = exemptableNamespaces;
         return this;
@@ -62,6 +66,7 @@ public class PolicyControllerHubConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installSpec")
     public PolicyControllerHubConfigInstallSpecEnum installSpec;
+
     public PolicyControllerHubConfig withInstallSpec(PolicyControllerHubConfigInstallSpecEnum installSpec) {
         this.installSpec = installSpec;
         return this;
@@ -73,6 +78,7 @@ public class PolicyControllerHubConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logDeniesEnabled")
     public Boolean logDeniesEnabled;
+
     public PolicyControllerHubConfig withLogDeniesEnabled(Boolean logDeniesEnabled) {
         this.logDeniesEnabled = logDeniesEnabled;
         return this;
@@ -84,6 +90,7 @@ public class PolicyControllerHubConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoring")
     public PolicyControllerMonitoringConfig monitoring;
+
     public PolicyControllerHubConfig withMonitoring(PolicyControllerMonitoringConfig monitoring) {
         this.monitoring = monitoring;
         return this;
@@ -95,6 +102,7 @@ public class PolicyControllerHubConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mutationEnabled")
     public Boolean mutationEnabled;
+
     public PolicyControllerHubConfig withMutationEnabled(Boolean mutationEnabled) {
         this.mutationEnabled = mutationEnabled;
         return this;
@@ -106,6 +114,7 @@ public class PolicyControllerHubConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyContent")
     public PolicyControllerPolicyContentSpec policyContent;
+
     public PolicyControllerHubConfig withPolicyContent(PolicyControllerPolicyContentSpec policyContent) {
         this.policyContent = policyContent;
         return this;
@@ -117,6 +126,7 @@ public class PolicyControllerHubConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referentialRulesEnabled")
     public Boolean referentialRulesEnabled;
+
     public PolicyControllerHubConfig withReferentialRulesEnabled(Boolean referentialRulesEnabled) {
         this.referentialRulesEnabled = referentialRulesEnabled;
         return this;
@@ -128,9 +138,11 @@ public class PolicyControllerHubConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateLibraryConfig")
     public PolicyControllerTemplateLibraryConfig templateLibraryConfig;
+
     public PolicyControllerHubConfig withTemplateLibraryConfig(PolicyControllerTemplateLibraryConfig templateLibraryConfig) {
         this.templateLibraryConfig = templateLibraryConfig;
         return this;
     }
     
+    public PolicyControllerHubConfig(){}
 }

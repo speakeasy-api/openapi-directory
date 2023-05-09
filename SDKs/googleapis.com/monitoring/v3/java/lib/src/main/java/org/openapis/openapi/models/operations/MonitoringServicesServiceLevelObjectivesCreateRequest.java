@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MonitoringServicesServiceLevelObjectivesCreateRequest {
@@ -12,6 +13,7 @@ public class MonitoringServicesServiceLevelObjectivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public MonitoringServicesServiceLevelObjectivesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class MonitoringServicesServiceLevelObjectivesCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ServiceLevelObjective serviceLevelObjective;
+
     public MonitoringServicesServiceLevelObjectivesCreateRequest withServiceLevelObjective(org.openapis.openapi.models.shared.ServiceLevelObjective serviceLevelObjective) {
         this.serviceLevelObjective = serviceLevelObjective;
         return this;
@@ -29,6 +32,7 @@ public class MonitoringServicesServiceLevelObjectivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public MonitoringServicesServiceLevelObjectivesCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class MonitoringServicesServiceLevelObjectivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public MonitoringServicesServiceLevelObjectivesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class MonitoringServicesServiceLevelObjectivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public MonitoringServicesServiceLevelObjectivesCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class MonitoringServicesServiceLevelObjectivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public MonitoringServicesServiceLevelObjectivesCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class MonitoringServicesServiceLevelObjectivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public MonitoringServicesServiceLevelObjectivesCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class MonitoringServicesServiceLevelObjectivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public MonitoringServicesServiceLevelObjectivesCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class MonitoringServicesServiceLevelObjectivesCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public MonitoringServicesServiceLevelObjectivesCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -99,6 +109,7 @@ public class MonitoringServicesServiceLevelObjectivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public MonitoringServicesServiceLevelObjectivesCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class MonitoringServicesServiceLevelObjectivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public MonitoringServicesServiceLevelObjectivesCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class MonitoringServicesServiceLevelObjectivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceLevelObjectiveId")
     public String serviceLevelObjectiveId;
+
     public MonitoringServicesServiceLevelObjectivesCreateRequest withServiceLevelObjectiveId(String serviceLevelObjectiveId) {
         this.serviceLevelObjectiveId = serviceLevelObjectiveId;
         return this;
@@ -129,6 +142,7 @@ public class MonitoringServicesServiceLevelObjectivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public MonitoringServicesServiceLevelObjectivesCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,13 @@ public class MonitoringServicesServiceLevelObjectivesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public MonitoringServicesServiceLevelObjectivesCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public MonitoringServicesServiceLevelObjectivesCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

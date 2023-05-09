@@ -12,6 +12,7 @@ public class RewardProgramActivationResourceRelationshipsRewardProgramData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RewardProgramActivationResourceRelationshipsRewardProgramData withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class RewardProgramActivationResourceRelationshipsRewardProgramData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public RewardProgramActivationResourceRelationshipsRewardProgramData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RewardProgramActivationResourceRelationshipsRewardProgramData(){}
 }

@@ -15,9 +15,11 @@ public class UpdateFileCacheResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileCache")
     public FileCache fileCache;
+
     public UpdateFileCacheResponse withFileCache(FileCache fileCache) {
         this.fileCache = fileCache;
         return this;
     }
     
+    public UpdateFileCacheResponse(){}
 }

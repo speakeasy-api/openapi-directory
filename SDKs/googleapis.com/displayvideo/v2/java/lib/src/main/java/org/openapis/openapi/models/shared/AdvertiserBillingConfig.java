@@ -18,9 +18,11 @@ public class AdvertiserBillingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingProfileId")
     public String billingProfileId;
+
     public AdvertiserBillingConfig withBillingProfileId(String billingProfileId) {
         this.billingProfileId = billingProfileId;
         return this;
     }
     
+    public AdvertiserBillingConfig(){}
 }

@@ -28,6 +28,7 @@ public class OrderReturnDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public OrderReturnDiscount withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -44,6 +45,7 @@ public class OrderReturnDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_money")
     public Money appliedMoney;
+
     public OrderReturnDiscount withAppliedMoney(Money appliedMoney) {
         this.appliedMoney = appliedMoney;
         return this;
@@ -55,6 +57,7 @@ public class OrderReturnDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_id")
     public String catalogObjectId;
+
     public OrderReturnDiscount withCatalogObjectId(String catalogObjectId) {
         this.catalogObjectId = catalogObjectId;
         return this;
@@ -66,6 +69,7 @@ public class OrderReturnDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_version")
     public Long catalogVersion;
+
     public OrderReturnDiscount withCatalogVersion(Long catalogVersion) {
         this.catalogVersion = catalogVersion;
         return this;
@@ -77,6 +81,7 @@ public class OrderReturnDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderReturnDiscount withName(String name) {
         this.name = name;
         return this;
@@ -91,6 +96,7 @@ public class OrderReturnDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public String percentage;
+
     public OrderReturnDiscount withPercentage(String percentage) {
         this.percentage = percentage;
         return this;
@@ -105,6 +111,7 @@ public class OrderReturnDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public OrderReturnDiscount withScope(String scope) {
         this.scope = scope;
         return this;
@@ -116,6 +123,7 @@ public class OrderReturnDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_discount_uid")
     public String sourceDiscountUid;
+
     public OrderReturnDiscount withSourceDiscountUid(String sourceDiscountUid) {
         this.sourceDiscountUid = sourceDiscountUid;
         return this;
@@ -130,6 +138,7 @@ public class OrderReturnDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public OrderReturnDiscount withType(String type) {
         this.type = type;
         return this;
@@ -141,9 +150,11 @@ public class OrderReturnDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OrderReturnDiscount withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OrderReturnDiscount(){}
 }

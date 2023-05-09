@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeRuleGroupsNamespaceResponse {
     @JsonProperty("ruleGroupsNamespace")
     public RuleGroupsNamespaceDescription ruleGroupsNamespace;
+
     public DescribeRuleGroupsNamespaceResponse withRuleGroupsNamespace(RuleGroupsNamespaceDescription ruleGroupsNamespace) {
         this.ruleGroupsNamespace = ruleGroupsNamespace;
         return this;
     }
     
+    public DescribeRuleGroupsNamespaceResponse(@JsonProperty("ruleGroupsNamespace") RuleGroupsNamespaceDescription ruleGroupsNamespace) {
+        this.ruleGroupsNamespace = ruleGroupsNamespace;
+  }
 }

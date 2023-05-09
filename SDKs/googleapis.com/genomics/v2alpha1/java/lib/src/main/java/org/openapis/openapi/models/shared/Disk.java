@@ -18,6 +18,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Disk withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeGb")
     public Integer sizeGb;
+
     public Disk withSizeGb(Integer sizeGb) {
         this.sizeGb = sizeGb;
         return this;
@@ -40,6 +42,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceImage")
     public String sourceImage;
+
     public Disk withSourceImage(String sourceImage) {
         this.sourceImage = sourceImage;
         return this;
@@ -51,9 +54,11 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Disk withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Disk(){}
 }

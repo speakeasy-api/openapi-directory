@@ -18,6 +18,7 @@ public class SSHKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SSHKey withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class SSHKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKey")
     public String publicKey;
+
     public SSHKey withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public SSHKey(){}
 }

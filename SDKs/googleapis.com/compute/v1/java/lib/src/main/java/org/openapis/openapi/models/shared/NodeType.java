@@ -18,6 +18,7 @@ public class NodeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuPlatform")
     public String cpuPlatform;
+
     public NodeType withCpuPlatform(String cpuPlatform) {
         this.cpuPlatform = cpuPlatform;
         return this;
@@ -29,6 +30,7 @@ public class NodeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public NodeType withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class NodeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public DeprecationStatus deprecated;
+
     public NodeType withDeprecated(DeprecationStatus deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -51,6 +54,7 @@ public class NodeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NodeType withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class NodeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestCpus")
     public Integer guestCpus;
+
     public NodeType withGuestCpus(Integer guestCpus) {
         this.guestCpus = guestCpus;
         return this;
@@ -73,6 +78,7 @@ public class NodeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NodeType withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class NodeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public NodeType withKind(String kind) {
         this.kind = kind;
         return this;
@@ -95,6 +102,7 @@ public class NodeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localSsdGb")
     public Integer localSsdGb;
+
     public NodeType withLocalSsdGb(Integer localSsdGb) {
         this.localSsdGb = localSsdGb;
         return this;
@@ -106,6 +114,7 @@ public class NodeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryMb")
     public Integer memoryMb;
+
     public NodeType withMemoryMb(Integer memoryMb) {
         this.memoryMb = memoryMb;
         return this;
@@ -117,6 +126,7 @@ public class NodeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NodeType withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +138,7 @@ public class NodeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public NodeType withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -139,9 +150,11 @@ public class NodeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public NodeType withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public NodeType(){}
 }

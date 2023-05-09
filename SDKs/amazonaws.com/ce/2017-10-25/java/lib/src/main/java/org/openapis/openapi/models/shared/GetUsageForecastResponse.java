@@ -15,6 +15,7 @@ public class GetUsageForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastResultsByTime")
     public ForecastResult[] forecastResultsByTime;
+
     public GetUsageForecastResponse withForecastResultsByTime(ForecastResult[] forecastResultsByTime) {
         this.forecastResultsByTime = forecastResultsByTime;
         return this;
@@ -23,9 +24,11 @@ public class GetUsageForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Total")
     public MetricValue total;
+
     public GetUsageForecastResponse withTotal(MetricValue total) {
         this.total = total;
         return this;
     }
     
+    public GetUsageForecastResponse(){}
 }

@@ -12,6 +12,7 @@ public class FileCommitCommitAuthor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public FileCommitCommitAuthor withDate(String date) {
         this.date = date;
         return this;
@@ -20,6 +21,7 @@ public class FileCommitCommitAuthor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public FileCommitCommitAuthor withEmail(String email) {
         this.email = email;
         return this;
@@ -28,9 +30,11 @@ public class FileCommitCommitAuthor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FileCommitCommitAuthor withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FileCommitCommitAuthor(){}
 }

@@ -15,9 +15,11 @@ public class CreatePredictorBacktestExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorBacktestExportJobArn")
     public String predictorBacktestExportJobArn;
+
     public CreatePredictorBacktestExportJobResponse withPredictorBacktestExportJobArn(String predictorBacktestExportJobArn) {
         this.predictorBacktestExportJobArn = predictorBacktestExportJobArn;
         return this;
     }
     
+    public CreatePredictorBacktestExportJobResponse(){}
 }

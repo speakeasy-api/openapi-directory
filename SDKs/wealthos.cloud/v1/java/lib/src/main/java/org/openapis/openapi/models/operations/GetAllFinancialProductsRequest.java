@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllFinancialProductsRequest {
@@ -12,6 +13,7 @@ public class GetAllFinancialProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=product_types")
     public String productTypes;
+
     public GetAllFinancialProductsRequest withProductTypes(String productTypes) {
         this.productTypes = productTypes;
         return this;
@@ -22,9 +24,13 @@ public class GetAllFinancialProductsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetAllFinancialProductsRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetAllFinancialProductsRequest(@JsonProperty("x-api-key") String xApiKey) {
+        this.xApiKey = xApiKey;
+  }
 }

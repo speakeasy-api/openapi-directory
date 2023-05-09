@@ -16,46 +16,38 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateClientAddressRequest;
 import org.openapis.openapi.models.operations.CreateClientAddressResponse;
 import org.openapis.openapi.models.shared.Address;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateClientAddressRequest req = new CreateClientAddressRequest() {{
-                accept = "application/json";
-                contentType = "application/json";
-                address = new Address() {{
-                    administrativeAreaLevel1 = "RJ";
+            CreateClientAddressRequest req = new CreateClientAddressRequest("application/json", "application/json", "70caf394-8534-447e-a0ca-1803c669c771") {{
+                address = new Address("RJ", "Brasil", "Locality", "Locality area", "20200-000", "51", "999") {{
                     countryCode = "BR";
-                    countryName = "Brasil";
-                    locality = "Locality";
-                    localityAreaLevel1 = "Locality area";
-                    postalCode = "20200-000";
-                    route = "51";
-                    streetNumber = "999";
-                }};
+                }};;
                 alternativeKey = "email";
-                profileId = "70caf394-8534-447e-a0ca-1803c669c771";
-            }}            
+            }};            
 
             CreateClientAddressResponse res = sdk.addresses.createClientAddress(req);
 
-            if (res.createClientAddress201ApplicationJSONObject.isPresent()) {
+            if (res.createClientAddress201ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -63,47 +55,47 @@ public class Application {
 ## Available Resources and Operations
 
 
-### addresses
+### [addresses](docs/addresses/README.md)
 
-* `createClientAddress` - Create client address
-* `deleteAddress` - Delete address
-* `getAddress` - Get address
-* `getAddressByVersion` - Get address by version
-* `getClientAddresses` - Get client addresses
-* `getUnmaskedAddress` - Get unmasked address
-* `getUnmaskedAddressByVersion` - Get unmasked address by version
-* `getUnmaskedClientAddresses` - Get unmasked client addresses
-* `updateClientAddress` - Update client address
+* [createClientAddress](docs/addresses/README.md#createclientaddress) - Create client address
+* [deleteAddress](docs/addresses/README.md#deleteaddress) - Delete address
+* [getAddress](docs/addresses/README.md#getaddress) - Get address
+* [getAddressByVersion](docs/addresses/README.md#getaddressbyversion) - Get address by version
+* [getClientAddresses](docs/addresses/README.md#getclientaddresses) - Get client addresses
+* [getUnmaskedAddress](docs/addresses/README.md#getunmaskedaddress) - Get unmasked address
+* [getUnmaskedAddressByVersion](docs/addresses/README.md#getunmaskedaddressbyversion) - Get unmasked address by version
+* [getUnmaskedClientAddresses](docs/addresses/README.md#getunmaskedclientaddresses) - Get unmasked client addresses
+* [updateClientAddress](docs/addresses/README.md#updateclientaddress) - Update client address
 
-### profiles
+### [profiles](docs/profiles/README.md)
 
-* `createClientProfile` - Create client profile
-* `deleteClientProfile` - Delete client profile
-* `getProfile` - Get profile
-* `getProfileByVersion` - Get profile by version
-* `getUnmaskedProfile` - Get unmasked profile
-* `getUnmaskedProfileByVersion` - Get unmasked profile by version
-* `updateClientProfile` - Updates client profile
+* [createClientProfile](docs/profiles/README.md#createclientprofile) - Create client profile
+* [deleteClientProfile](docs/profiles/README.md#deleteclientprofile) - Delete client profile
+* [getProfile](docs/profiles/README.md#getprofile) - Get profile
+* [getProfileByVersion](docs/profiles/README.md#getprofilebyversion) - Get profile by version
+* [getUnmaskedProfile](docs/profiles/README.md#getunmaskedprofile) - Get unmasked profile
+* [getUnmaskedProfileByVersion](docs/profiles/README.md#getunmaskedprofilebyversion) - Get unmasked profile by version
+* [updateClientProfile](docs/profiles/README.md#updateclientprofile) - Updates client profile
 
-### prospects
+### [prospects](docs/prospects/README.md)
 
-* `createProspect` - Create prospect
-* `deleteProspect` - Delete prospect
-* `getProspect` - Get prospect
-* `getUnmaskedProspect` - Get unmasked prospect
-* `updateProspect` - Update prospect
+* [createProspect](docs/prospects/README.md#createprospect) - Create prospect
+* [deleteProspect](docs/prospects/README.md#deleteprospect) - Delete prospect
+* [getProspect](docs/prospects/README.md#getprospect) - Get prospect
+* [getUnmaskedProspect](docs/prospects/README.md#getunmaskedprospect) - Get unmasked prospect
+* [updateProspect](docs/prospects/README.md#updateprospect) - Update prospect
 
-### purchaseInformation
+### [purchaseInformation](docs/purchaseinformation/README.md)
 
-* `createPurchaseInformation` - Create purchase information
-* `deletePurchaseInformation` - Delete purchase information
-* `getPurchaseInformation` - Get purchase information
-* `getUnmaskedPurchaseInformation` - Get unmasked purchase information
-* `updatePurchaseInformation` - Update purchase information
+* [createPurchaseInformation](docs/purchaseinformation/README.md#createpurchaseinformation) - Create purchase information
+* [deletePurchaseInformation](docs/purchaseinformation/README.md#deletepurchaseinformation) - Delete purchase information
+* [getPurchaseInformation](docs/purchaseinformation/README.md#getpurchaseinformation) - Get purchase information
+* [getUnmaskedPurchaseInformation](docs/purchaseinformation/README.md#getunmaskedpurchaseinformation) - Get unmasked purchase information
+* [updatePurchaseInformation](docs/purchaseinformation/README.md#updatepurchaseinformation) - Update purchase information
 
-### schemas
+### [schemas](docs/schemas/README.md)
 
-* `createOrUpdateProfileSchema` - Create or update profile schema
+* [createOrUpdateProfileSchema](docs/schemas/README.md#createorupdateprofileschema) - Create or update profile schema
 <!-- End SDK Available Operations -->
 
 ### Maturity

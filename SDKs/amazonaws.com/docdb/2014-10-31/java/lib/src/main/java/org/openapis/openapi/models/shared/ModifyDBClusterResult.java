@@ -15,9 +15,11 @@ public class ModifyDBClusterResult {
      */
     
     public DBCluster dbCluster;
+
     public ModifyDBClusterResult withDBCluster(DBCluster dbCluster) {
         this.dbCluster = dbCluster;
         return this;
     }
     
+    public ModifyDBClusterResult(){}
 }

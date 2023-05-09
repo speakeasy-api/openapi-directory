@@ -62,11 +62,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeoplePeopleBatchCreateContactsResponse res = new org.openapis.openapi.models.operations.PeoplePeopleBatchCreateContactsResponse() {{
+        org.openapis.openapi.models.operations.PeoplePeopleBatchCreateContactsResponse res = new org.openapis.openapi.models.operations.PeoplePeopleBatchCreateContactsResponse(contentType, httpRes.statusCode()) {{
             batchCreateContactsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeoplePeopleBatchDeleteContactsResponse res = new org.openapis.openapi.models.operations.PeoplePeopleBatchDeleteContactsResponse() {{
+        org.openapis.openapi.models.operations.PeoplePeopleBatchDeleteContactsResponse res = new org.openapis.openapi.models.operations.PeoplePeopleBatchDeleteContactsResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeoplePeopleBatchUpdateContactsResponse res = new org.openapis.openapi.models.operations.PeoplePeopleBatchUpdateContactsResponse() {{
+        org.openapis.openapi.models.operations.PeoplePeopleBatchUpdateContactsResponse res = new org.openapis.openapi.models.operations.PeoplePeopleBatchUpdateContactsResponse(contentType, httpRes.statusCode()) {{
             batchUpdateContactsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeoplePeopleConnectionsListResponse res = new org.openapis.openapi.models.operations.PeoplePeopleConnectionsListResponse() {{
+        org.openapis.openapi.models.operations.PeoplePeopleConnectionsListResponse res = new org.openapis.openapi.models.operations.PeoplePeopleConnectionsListResponse(contentType, httpRes.statusCode()) {{
             listConnectionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeoplePeopleCreateContactResponse res = new org.openapis.openapi.models.operations.PeoplePeopleCreateContactResponse() {{
+        org.openapis.openapi.models.operations.PeoplePeopleCreateContactResponse res = new org.openapis.openapi.models.operations.PeoplePeopleCreateContactResponse(contentType, httpRes.statusCode()) {{
             person = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeoplePeopleDeleteContactResponse res = new org.openapis.openapi.models.operations.PeoplePeopleDeleteContactResponse() {{
+        org.openapis.openapi.models.operations.PeoplePeopleDeleteContactResponse res = new org.openapis.openapi.models.operations.PeoplePeopleDeleteContactResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeoplePeopleDeleteContactPhotoResponse res = new org.openapis.openapi.models.operations.PeoplePeopleDeleteContactPhotoResponse() {{
+        org.openapis.openapi.models.operations.PeoplePeopleDeleteContactPhotoResponse res = new org.openapis.openapi.models.operations.PeoplePeopleDeleteContactPhotoResponse(contentType, httpRes.statusCode()) {{
             deleteContactPhotoResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeoplePeopleGetResponse res = new org.openapis.openapi.models.operations.PeoplePeopleGetResponse() {{
+        org.openapis.openapi.models.operations.PeoplePeopleGetResponse res = new org.openapis.openapi.models.operations.PeoplePeopleGetResponse(contentType, httpRes.statusCode()) {{
             person = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,11 +420,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeoplePeopleGetBatchGetResponse res = new org.openapis.openapi.models.operations.PeoplePeopleGetBatchGetResponse() {{
+        org.openapis.openapi.models.operations.PeoplePeopleGetBatchGetResponse res = new org.openapis.openapi.models.operations.PeoplePeopleGetBatchGetResponse(contentType, httpRes.statusCode()) {{
             getPeopleResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,11 +464,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeoplePeopleListDirectoryPeopleResponse res = new org.openapis.openapi.models.operations.PeoplePeopleListDirectoryPeopleResponse() {{
+        org.openapis.openapi.models.operations.PeoplePeopleListDirectoryPeopleResponse res = new org.openapis.openapi.models.operations.PeoplePeopleListDirectoryPeopleResponse(contentType, httpRes.statusCode()) {{
             listDirectoryPeopleResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -528,11 +508,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeoplePeopleSearchContactsResponse res = new org.openapis.openapi.models.operations.PeoplePeopleSearchContactsResponse() {{
+        org.openapis.openapi.models.operations.PeoplePeopleSearchContactsResponse res = new org.openapis.openapi.models.operations.PeoplePeopleSearchContactsResponse(contentType, httpRes.statusCode()) {{
             searchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -574,11 +552,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeoplePeopleSearchDirectoryPeopleResponse res = new org.openapis.openapi.models.operations.PeoplePeopleSearchDirectoryPeopleResponse() {{
+        org.openapis.openapi.models.operations.PeoplePeopleSearchDirectoryPeopleResponse res = new org.openapis.openapi.models.operations.PeoplePeopleSearchDirectoryPeopleResponse(contentType, httpRes.statusCode()) {{
             searchDirectoryPeopleResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -622,11 +598,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeoplePeopleUpdateContactResponse res = new org.openapis.openapi.models.operations.PeoplePeopleUpdateContactResponse() {{
+        org.openapis.openapi.models.operations.PeoplePeopleUpdateContactResponse res = new org.openapis.openapi.models.operations.PeoplePeopleUpdateContactResponse(contentType, httpRes.statusCode()) {{
             person = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -670,11 +644,9 @@ public class People {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PeoplePeopleUpdateContactPhotoResponse res = new org.openapis.openapi.models.operations.PeoplePeopleUpdateContactPhotoResponse() {{
+        org.openapis.openapi.models.operations.PeoplePeopleUpdateContactPhotoResponse res = new org.openapis.openapi.models.operations.PeoplePeopleUpdateContactPhotoResponse(contentType, httpRes.statusCode()) {{
             updateContactPhotoResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

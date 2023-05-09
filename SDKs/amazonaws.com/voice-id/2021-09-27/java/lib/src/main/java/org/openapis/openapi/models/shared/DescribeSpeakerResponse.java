@@ -15,9 +15,11 @@ public class DescribeSpeakerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Speaker")
     public Speaker speaker;
+
     public DescribeSpeakerResponse withSpeaker(Speaker speaker) {
         this.speaker = speaker;
         return this;
     }
     
+    public DescribeSpeakerResponse(){}
 }

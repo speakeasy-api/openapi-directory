@@ -15,6 +15,7 @@ public class ContinuousProjectCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public ContinuousProjectCache withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
@@ -23,9 +24,11 @@ public class ContinuousProjectCache {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translations")
     public java.util.Map<String, ContinuousProjectLanguageCache> translations;
+
     public ContinuousProjectCache withTranslations(java.util.Map<String, ContinuousProjectLanguageCache> translations) {
         this.translations = translations;
         return this;
     }
     
+    public ContinuousProjectCache(){}
 }

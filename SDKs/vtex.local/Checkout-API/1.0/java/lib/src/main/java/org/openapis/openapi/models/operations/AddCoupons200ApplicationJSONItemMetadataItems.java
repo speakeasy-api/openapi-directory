@@ -15,6 +15,7 @@ public class AddCoupons200ApplicationJSONItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailUrl")
     public String detailUrl;
+
     public AddCoupons200ApplicationJSONItemMetadataItems withDetailUrl(String detailUrl) {
         this.detailUrl = detailUrl;
         return this;
@@ -26,6 +27,7 @@ public class AddCoupons200ApplicationJSONItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ean")
     public String ean;
+
     public AddCoupons200ApplicationJSONItemMetadataItems withEan(String ean) {
         this.ean = ean;
         return this;
@@ -37,6 +39,7 @@ public class AddCoupons200ApplicationJSONItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AddCoupons200ApplicationJSONItemMetadataItems withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class AddCoupons200ApplicationJSONItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public AddCoupons200ApplicationJSONItemMetadataItems withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -59,6 +63,7 @@ public class AddCoupons200ApplicationJSONItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AddCoupons200ApplicationJSONItemMetadataItems withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +75,7 @@ public class AddCoupons200ApplicationJSONItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public AddCoupons200ApplicationJSONItemMetadataItems withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -81,6 +87,7 @@ public class AddCoupons200ApplicationJSONItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refId")
     public String refId;
+
     public AddCoupons200ApplicationJSONItemMetadataItems withRefId(String refId) {
         this.refId = refId;
         return this;
@@ -92,6 +99,7 @@ public class AddCoupons200ApplicationJSONItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller")
     public String seller;
+
     public AddCoupons200ApplicationJSONItemMetadataItems withSeller(String seller) {
         this.seller = seller;
         return this;
@@ -103,9 +111,11 @@ public class AddCoupons200ApplicationJSONItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skuName")
     public String skuName;
+
     public AddCoupons200ApplicationJSONItemMetadataItems withSkuName(String skuName) {
         this.skuName = skuName;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONItemMetadataItems(){}
 }

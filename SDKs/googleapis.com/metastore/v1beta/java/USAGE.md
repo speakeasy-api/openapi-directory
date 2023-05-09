@@ -3,14 +3,13 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateSecurity;
 import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateRequest;
 import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateResponse;
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.FederationInput;
-import org.openapis.openapi.models.shared.BackendMetastoreMetastoreTypeEnum;
 import org.openapis.openapi.models.shared.BackendMetastore;
+import org.openapis.openapi.models.shared.BackendMetastoreMetastoreTypeEnum;
+import org.openapis.openapi.models.shared.FederationInput;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -19,55 +18,56 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            MetastoreProjectsLocationsFederationsCreateRequest req = new MetastoreProjectsLocationsFederationsCreateRequest() {{
-                dollarXgafv = "2";
+            MetastoreProjectsLocationsFederationsCreateRequest req = new MetastoreProjectsLocationsFederationsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 federationInput = new FederationInput() {{
                     backendMetastores = new java.util.HashMap<String, org.openapis.openapi.models.shared.BackendMetastore>() {{
-                        put("distinctio", new BackendMetastore() {{
-                            metastoreType = "DATAPROC_METASTORE";
-                            name = "unde";
+                        put("quibusdam", new BackendMetastore() {{
+                            metastoreType = BackendMetastoreMetastoreTypeEnum.BIGQUERY;
+                            name = "Johnnie Stamm";
                         }});
-                        put("nulla", new BackendMetastore() {{
-                            metastoreType = "BIGQUERY";
-                            name = "illum";
+                        put("deserunt", new BackendMetastore() {{
+                            metastoreType = BackendMetastoreMetastoreTypeEnum.DATAPLEX;
+                            name = "Dr. Valerie Toy";
                         }});
-                        put("vel", new BackendMetastore() {{
-                            metastoreType = "BIGQUERY";
-                            name = "deserunt";
+                        put("suscipit", new BackendMetastore() {{
+                            metastoreType = BackendMetastoreMetastoreTypeEnum.DATAPLEX;
+                            name = "Irving Lehner";
                         }});
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("iure", "magnam");
-                        put("debitis", "ipsa");
+                        put("recusandae", "temporibus");
+                        put("ab", "quis");
                     }};
-                    name = "delectus";
-                    version = "tempora";
-                }};
-                accessToken = "suscipit";
-                alt = "media";
-                callback = "minus";
-                federationId = "placeat";
-                fields = "voluptatum";
-                key = "iusto";
-                oauthToken = "excepturi";
-                parent = "nisi";
+                    name = "Iris Aufderhar";
+                    version = "sapiente";
+                }};;
+                accessToken = "quo";
+                alt = AltEnum.JSON;
+                callback = "at";
+                federationId = "at";
+                fields = "maiores";
+                key = "molestiae";
+                oauthToken = "quod";
                 prettyPrint = false;
-                quotaUser = "recusandae";
-                requestId = "temporibus";
-                uploadType = "ab";
-                uploadProtocol = "quis";
-            }}            
+                quotaUser = "quod";
+                requestId = "esse";
+                uploadType = "totam";
+                uploadProtocol = "porro";
+            }};            
 
-            MetastoreProjectsLocationsFederationsCreateResponse res = sdk.projects.metastoreProjectsLocationsFederationsCreate(req, new MetastoreProjectsLocationsFederationsCreateSecurity() {{
+            MetastoreProjectsLocationsFederationsCreateResponse res = sdk.projects.metastoreProjectsLocationsFederationsCreate(req, new MetastoreProjectsLocationsFederationsCreateSecurity("dolorum", "dicta") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

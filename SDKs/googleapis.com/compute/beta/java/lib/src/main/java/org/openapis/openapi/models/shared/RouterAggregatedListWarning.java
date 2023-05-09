@@ -18,6 +18,7 @@ public class RouterAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public RouterAggregatedListWarningCodeEnum code;
+
     public RouterAggregatedListWarning withCode(RouterAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class RouterAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public RouterAggregatedListWarningData[] data;
+
     public RouterAggregatedListWarning withData(RouterAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class RouterAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public RouterAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public RouterAggregatedListWarning(){}
 }

@@ -18,6 +18,7 @@ public class TechnologyTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browsers")
     public Browser[] browsers;
+
     public TechnologyTargeting withBrowsers(Browser[] browsers) {
         this.browsers = browsers;
         return this;
@@ -29,6 +30,7 @@ public class TechnologyTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionTypes")
     public ConnectionType[] connectionTypes;
+
     public TechnologyTargeting withConnectionTypes(ConnectionType[] connectionTypes) {
         this.connectionTypes = connectionTypes;
         return this;
@@ -40,6 +42,7 @@ public class TechnologyTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileCarriers")
     public MobileCarrier[] mobileCarriers;
+
     public TechnologyTargeting withMobileCarriers(MobileCarrier[] mobileCarriers) {
         this.mobileCarriers = mobileCarriers;
         return this;
@@ -51,6 +54,7 @@ public class TechnologyTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystemVersions")
     public OperatingSystemVersion[] operatingSystemVersions;
+
     public TechnologyTargeting withOperatingSystemVersions(OperatingSystemVersion[] operatingSystemVersions) {
         this.operatingSystemVersions = operatingSystemVersions;
         return this;
@@ -62,6 +66,7 @@ public class TechnologyTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystems")
     public OperatingSystem[] operatingSystems;
+
     public TechnologyTargeting withOperatingSystems(OperatingSystem[] operatingSystems) {
         this.operatingSystems = operatingSystems;
         return this;
@@ -73,9 +78,11 @@ public class TechnologyTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformTypes")
     public PlatformType[] platformTypes;
+
     public TechnologyTargeting withPlatformTypes(PlatformType[] platformTypes) {
         this.platformTypes = platformTypes;
         return this;
     }
     
+    public TechnologyTargeting(){}
 }

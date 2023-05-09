@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnectionSchedule {
     @JsonProperty("timeUnit")
     public ConnectionScheduleTimeUnitEnum timeUnit;
+
     public ConnectionSchedule withTimeUnit(ConnectionScheduleTimeUnitEnum timeUnit) {
         this.timeUnit = timeUnit;
         return this;
@@ -19,9 +20,14 @@ public class ConnectionSchedule {
     
     @JsonProperty("units")
     public Long units;
+
     public ConnectionSchedule withUnits(Long units) {
         this.units = units;
         return this;
     }
     
+    public ConnectionSchedule(@JsonProperty("timeUnit") ConnectionScheduleTimeUnitEnum timeUnit, @JsonProperty("units") Long units) {
+        this.timeUnit = timeUnit;
+        this.units = units;
+  }
 }

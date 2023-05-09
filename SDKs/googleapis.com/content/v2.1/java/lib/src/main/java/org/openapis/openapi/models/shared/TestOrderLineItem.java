@@ -12,6 +12,7 @@ public class TestOrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public TestOrderLineItemProduct product;
+
     public TestOrderLineItem withProduct(TestOrderLineItemProduct product) {
         this.product = product;
         return this;
@@ -23,6 +24,7 @@ public class TestOrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityOrdered")
     public Long quantityOrdered;
+
     public TestOrderLineItem withQuantityOrdered(Long quantityOrdered) {
         this.quantityOrdered = quantityOrdered;
         return this;
@@ -31,6 +33,7 @@ public class TestOrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnInfo")
     public OrderLineItemReturnInfo returnInfo;
+
     public TestOrderLineItem withReturnInfo(OrderLineItemReturnInfo returnInfo) {
         this.returnInfo = returnInfo;
         return this;
@@ -39,9 +42,11 @@ public class TestOrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingDetails")
     public OrderLineItemShippingDetails shippingDetails;
+
     public TestOrderLineItem withShippingDetails(OrderLineItemShippingDetails shippingDetails) {
         this.shippingDetails = shippingDetails;
         return this;
     }
     
+    public TestOrderLineItem(){}
 }

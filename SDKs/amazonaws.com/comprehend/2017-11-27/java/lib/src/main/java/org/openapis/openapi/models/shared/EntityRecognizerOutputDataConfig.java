@@ -15,9 +15,11 @@ public class EntityRecognizerOutputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelStatsS3Prefix")
     public String flywheelStatsS3Prefix;
+
     public EntityRecognizerOutputDataConfig withFlywheelStatsS3Prefix(String flywheelStatsS3Prefix) {
         this.flywheelStatsS3Prefix = flywheelStatsS3Prefix;
         return this;
     }
     
+    public EntityRecognizerOutputDataConfig(){}
 }

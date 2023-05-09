@@ -18,6 +18,7 @@ public class GuestOsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public GuestConfigDetails config;
+
     public GuestOsDetails withConfig(GuestConfigDetails config) {
         this.config = config;
         return this;
@@ -29,9 +30,11 @@ public class GuestOsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtime")
     public GuestRuntimeDetails runtime;
+
     public GuestOsDetails withRuntime(GuestRuntimeDetails runtime) {
         this.runtime = runtime;
         return this;
     }
     
+    public GuestOsDetails(){}
 }

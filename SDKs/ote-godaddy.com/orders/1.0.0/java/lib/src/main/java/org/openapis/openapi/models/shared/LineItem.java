@@ -15,6 +15,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domains")
     public String[] domains;
+
     public LineItem withDomains(String[] domains) {
         this.domains = domains;
         return this;
@@ -25,6 +26,7 @@ public class LineItem {
      */
     @JsonProperty("label")
     public String label;
+
     public LineItem withLabel(String label) {
         this.label = label;
         return this;
@@ -33,6 +35,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public Double period;
+
     public LineItem withPeriod(Double period) {
         this.period = period;
         return this;
@@ -44,6 +47,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodUnit")
     public LineItemPeriodUnitEnum periodUnit;
+
     public LineItem withPeriodUnit(LineItemPeriodUnitEnum periodUnit) {
         this.periodUnit = periodUnit;
         return this;
@@ -55,6 +59,7 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pfid")
     public Long pfid;
+
     public LineItem withPfid(Long pfid) {
         this.pfid = pfid;
         return this;
@@ -62,6 +67,7 @@ public class LineItem {
     
     @JsonProperty("pricing")
     public LineItemPricing pricing;
+
     public LineItem withPricing(LineItemPricing pricing) {
         this.pricing = pricing;
         return this;
@@ -72,6 +78,7 @@ public class LineItem {
      */
     @JsonProperty("quantity")
     public Long quantity;
+
     public LineItem withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -80,9 +87,15 @@ public class LineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxCollector")
     public LineItemTaxCollector taxCollector;
+
     public LineItem withTaxCollector(LineItemTaxCollector taxCollector) {
         this.taxCollector = taxCollector;
         return this;
     }
     
+    public LineItem(@JsonProperty("label") String label, @JsonProperty("pricing") LineItemPricing pricing, @JsonProperty("quantity") Long quantity) {
+        this.label = label;
+        this.pricing = pricing;
+        this.quantity = quantity;
+  }
 }

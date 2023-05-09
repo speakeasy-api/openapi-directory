@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAppImageConfigRequest {
     @JsonProperty("AppImageConfigName")
     public String appImageConfigName;
+
     public DescribeAppImageConfigRequest withAppImageConfigName(String appImageConfigName) {
         this.appImageConfigName = appImageConfigName;
         return this;
     }
     
+    public DescribeAppImageConfigRequest(@JsonProperty("AppImageConfigName") String appImageConfigName) {
+        this.appImageConfigName = appImageConfigName;
+  }
 }

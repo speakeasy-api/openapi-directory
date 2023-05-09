@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePaths {
     
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsDestination destination;
+
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePaths withDestination(GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsDestination destination) {
         this.destination = destination;
         return this;
@@ -19,6 +20,7 @@ public class GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScop
     
     
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsSource source;
+
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePaths withSource(GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsSource source) {
         this.source = source;
         return this;
@@ -26,9 +28,11 @@ public class GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScop
     
     
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsThroughResources[] throughResources;
+
     public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePaths withThroughResources(GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsThroughResources[] throughResources) {
         this.throughResources = throughResources;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePaths(){}
 }

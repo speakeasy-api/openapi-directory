@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFirewallsIdActionsActionIdResponse {
@@ -12,6 +13,7 @@ public class GetFirewallsIdActionsActionIdResponse {
      */
     
     public GetFirewallsIdActionsActionIdActionResponse actionResponse;
+
     public GetFirewallsIdActionsActionIdResponse withActionResponse(GetFirewallsIdActionsActionIdActionResponse actionResponse) {
         this.actionResponse = actionResponse;
         return this;
@@ -19,6 +21,7 @@ public class GetFirewallsIdActionsActionIdResponse {
     
     
     public String contentType;
+
     public GetFirewallsIdActionsActionIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetFirewallsIdActionsActionIdResponse {
     
     
     public Integer statusCode;
+
     public GetFirewallsIdActionsActionIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetFirewallsIdActionsActionIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFirewallsIdActionsActionIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFirewallsIdActionsActionIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

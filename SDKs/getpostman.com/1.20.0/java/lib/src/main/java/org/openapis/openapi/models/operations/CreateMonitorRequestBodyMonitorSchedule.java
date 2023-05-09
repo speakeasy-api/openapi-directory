@@ -12,6 +12,7 @@ public class CreateMonitorRequestBodyMonitorSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cron")
     public String cron;
+
     public CreateMonitorRequestBodyMonitorSchedule withCron(String cron) {
         this.cron = cron;
         return this;
@@ -20,9 +21,11 @@ public class CreateMonitorRequestBodyMonitorSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public CreateMonitorRequestBodyMonitorSchedule withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public CreateMonitorRequestBodyMonitorSchedule(){}
 }

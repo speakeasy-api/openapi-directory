@@ -20,6 +20,7 @@ public class DescribeAgentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentArn")
     public String agentArn;
+
     public DescribeAgentResponse withAgentArn(String agentArn) {
         this.agentArn = agentArn;
         return this;
@@ -30,6 +31,7 @@ public class DescribeAgentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeAgentResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class DescribeAgentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointType")
     public EndpointTypeEnum endpointType;
+
     public DescribeAgentResponse withEndpointType(EndpointTypeEnum endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -48,6 +51,7 @@ public class DescribeAgentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastConnectionTime")
     public OffsetDateTime lastConnectionTime;
+
     public DescribeAgentResponse withLastConnectionTime(OffsetDateTime lastConnectionTime) {
         this.lastConnectionTime = lastConnectionTime;
         return this;
@@ -56,6 +60,7 @@ public class DescribeAgentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeAgentResponse withName(String name) {
         this.name = name;
         return this;
@@ -64,6 +69,7 @@ public class DescribeAgentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateLinkConfig")
     public PrivateLinkConfig privateLinkConfig;
+
     public DescribeAgentResponse withPrivateLinkConfig(PrivateLinkConfig privateLinkConfig) {
         this.privateLinkConfig = privateLinkConfig;
         return this;
@@ -72,9 +78,11 @@ public class DescribeAgentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AgentStatusEnum status;
+
     public DescribeAgentResponse withStatus(AgentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeAgentResponse(){}
 }

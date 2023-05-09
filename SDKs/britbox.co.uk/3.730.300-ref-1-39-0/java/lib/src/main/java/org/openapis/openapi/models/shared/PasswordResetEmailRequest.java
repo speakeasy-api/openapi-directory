@@ -15,9 +15,13 @@ public class PasswordResetEmailRequest {
      */
     @JsonProperty("email")
     public String email;
+
     public PasswordResetEmailRequest withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public PasswordResetEmailRequest(@JsonProperty("email") String email) {
+        this.email = email;
+  }
 }

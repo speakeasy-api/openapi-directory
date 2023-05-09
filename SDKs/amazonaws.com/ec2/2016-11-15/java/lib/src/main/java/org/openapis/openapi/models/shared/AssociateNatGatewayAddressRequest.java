@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AssociateNatGatewayAddressRequest {
     
     public String[] allocationIds;
+
     public AssociateNatGatewayAddressRequest withAllocationIds(String[] allocationIds) {
         this.allocationIds = allocationIds;
         return this;
@@ -16,6 +17,7 @@ public class AssociateNatGatewayAddressRequest {
     
     
     public Boolean dryRun;
+
     public AssociateNatGatewayAddressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class AssociateNatGatewayAddressRequest {
     
     
     public String natGatewayId;
+
     public AssociateNatGatewayAddressRequest withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -30,9 +33,14 @@ public class AssociateNatGatewayAddressRequest {
     
     
     public String[] privateIpAddresses;
+
     public AssociateNatGatewayAddressRequest withPrivateIpAddresses(String[] privateIpAddresses) {
         this.privateIpAddresses = privateIpAddresses;
         return this;
     }
     
+    public AssociateNatGatewayAddressRequest(@JsonProperty("AllocationIds") String[] allocationIds, @JsonProperty("NatGatewayId") String natGatewayId) {
+        this.allocationIds = allocationIds;
+        this.natGatewayId = natGatewayId;
+  }
 }

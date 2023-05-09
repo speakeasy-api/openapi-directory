@@ -20,6 +20,7 @@ public class UpdateRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public UpdateRobotApplicationResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class UpdateRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public Environment environment;
+
     public UpdateRobotApplicationResponse withEnvironment(Environment environment) {
         this.environment = environment;
         return this;
@@ -38,6 +40,7 @@ public class UpdateRobotApplicationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public UpdateRobotApplicationResponse withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -46,6 +49,7 @@ public class UpdateRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateRobotApplicationResponse withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class UpdateRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public UpdateRobotApplicationResponse withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -62,6 +67,7 @@ public class UpdateRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robotSoftwareSuite")
     public RobotSoftwareSuite robotSoftwareSuite;
+
     public UpdateRobotApplicationResponse withRobotSoftwareSuite(RobotSoftwareSuite robotSoftwareSuite) {
         this.robotSoftwareSuite = robotSoftwareSuite;
         return this;
@@ -70,6 +76,7 @@ public class UpdateRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public Source[] sources;
+
     public UpdateRobotApplicationResponse withSources(Source[] sources) {
         this.sources = sources;
         return this;
@@ -78,9 +85,11 @@ public class UpdateRobotApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public UpdateRobotApplicationResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public UpdateRobotApplicationResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissionsResponse {
     
     public String contentType;
+
     public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIam
     
     
     public Integer statusCode;
+
     public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIam
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIam
      */
     
     public org.openapis.openapi.models.shared.TestIamPermissionsResponse testIamPermissionsResponse;
+
     public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissionsResponse withTestIamPermissionsResponse(org.openapis.openapi.models.shared.TestIamPermissionsResponse testIamPermissionsResponse) {
         this.testIamPermissionsResponse = testIamPermissionsResponse;
         return this;
     }
     
+    public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class EventSubscriptionsResponseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public EventSubscriptionsResponseResultMeta meta;
+
     public EventSubscriptionsResponseResult withMeta(EventSubscriptionsResponseResultMeta meta) {
         this.meta = meta;
         return this;
@@ -20,9 +21,11 @@ public class EventSubscriptionsResponseResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public EventSubscriptionsResponseResultResult result;
+
     public EventSubscriptionsResponseResult withResult(EventSubscriptionsResponseResultResult result) {
         this.result = result;
         return this;
     }
     
+    public EventSubscriptionsResponseResult(){}
 }

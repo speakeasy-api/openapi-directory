@@ -15,6 +15,7 @@ public class PutFunctionEventInvokeConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationConfig")
     public PutFunctionEventInvokeConfigRequestBodyDestinationConfig destinationConfig;
+
     public PutFunctionEventInvokeConfigRequestBody withDestinationConfig(PutFunctionEventInvokeConfigRequestBodyDestinationConfig destinationConfig) {
         this.destinationConfig = destinationConfig;
         return this;
@@ -26,6 +27,7 @@ public class PutFunctionEventInvokeConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumEventAgeInSeconds")
     public Long maximumEventAgeInSeconds;
+
     public PutFunctionEventInvokeConfigRequestBody withMaximumEventAgeInSeconds(Long maximumEventAgeInSeconds) {
         this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
         return this;
@@ -37,9 +39,11 @@ public class PutFunctionEventInvokeConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumRetryAttempts")
     public Long maximumRetryAttempts;
+
     public PutFunctionEventInvokeConfigRequestBody withMaximumRetryAttempts(Long maximumRetryAttempts) {
         this.maximumRetryAttempts = maximumRetryAttempts;
         return this;
     }
     
+    public PutFunctionEventInvokeConfigRequestBody(){}
 }

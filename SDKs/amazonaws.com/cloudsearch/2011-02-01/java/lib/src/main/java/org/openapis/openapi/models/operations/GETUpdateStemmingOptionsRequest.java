@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateStemmingOptionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUpdateStemmingOptionsActionEnum action;
+
     public GETUpdateStemmingOptionsRequest withAction(GETUpdateStemmingOptionsActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETUpdateStemmingOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
     public String domainName;
+
     public GETUpdateStemmingOptionsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -23,6 +26,7 @@ public class GETUpdateStemmingOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Stems")
     public String stems;
+
     public GETUpdateStemmingOptionsRequest withStems(String stems) {
         this.stems = stems;
         return this;
@@ -30,6 +34,7 @@ public class GETUpdateStemmingOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUpdateStemmingOptionsVersionEnum version;
+
     public GETUpdateStemmingOptionsRequest withVersion(GETUpdateStemmingOptionsVersionEnum version) {
         this.version = version;
         return this;
@@ -37,6 +42,7 @@ public class GETUpdateStemmingOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUpdateStemmingOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -44,6 +50,7 @@ public class GETUpdateStemmingOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUpdateStemmingOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -51,6 +58,7 @@ public class GETUpdateStemmingOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUpdateStemmingOptionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -58,6 +66,7 @@ public class GETUpdateStemmingOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUpdateStemmingOptionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -65,6 +74,7 @@ public class GETUpdateStemmingOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUpdateStemmingOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -72,6 +82,7 @@ public class GETUpdateStemmingOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUpdateStemmingOptionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -79,9 +90,16 @@ public class GETUpdateStemmingOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUpdateStemmingOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUpdateStemmingOptionsRequest(@JsonProperty("Action") GETUpdateStemmingOptionsActionEnum action, @JsonProperty("DomainName") String domainName, @JsonProperty("Stems") String stems, @JsonProperty("Version") GETUpdateStemmingOptionsVersionEnum version) {
+        this.action = action;
+        this.domainName = domainName;
+        this.stems = stems;
+        this.version = version;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLaunchResponse {
@@ -12,6 +13,7 @@ public class CreateLaunchResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateLaunchResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateLaunchResponse {
      */
     
     public Object conflictException;
+
     public CreateLaunchResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateLaunchResponse {
     
     
     public String contentType;
+
     public CreateLaunchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateLaunchResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLaunchResponse createLaunchResponse;
+
     public CreateLaunchResponse withCreateLaunchResponse(org.openapis.openapi.models.shared.CreateLaunchResponse createLaunchResponse) {
         this.createLaunchResponse = createLaunchResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateLaunchResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateLaunchResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateLaunchResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateLaunchResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateLaunchResponse {
     
     
     public Integer statusCode;
+
     public CreateLaunchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateLaunchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLaunchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateLaunchResponse {
      */
     
     public Object validationException;
+
     public CreateLaunchResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateLaunchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

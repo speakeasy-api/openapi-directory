@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesAddDistributionGroupRequest {
@@ -12,6 +13,7 @@ public class ReleasesAddDistributionGroupRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReleasesAddDistributionGroupRequestBody requestBody;
+
     public ReleasesAddDistributionGroupRequest withRequestBody(ReleasesAddDistributionGroupRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class ReleasesAddDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ReleasesAddDistributionGroupRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,6 +35,7 @@ public class ReleasesAddDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ReleasesAddDistributionGroupRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -42,9 +46,16 @@ public class ReleasesAddDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public Long releaseId;
+
     public ReleasesAddDistributionGroupRequest withReleaseId(Long releaseId) {
         this.releaseId = releaseId;
         return this;
     }
     
+    public ReleasesAddDistributionGroupRequest(@JsonProperty("RequestBody") ReleasesAddDistributionGroupRequestBody requestBody, @JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("release_id") Long releaseId) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.releaseId = releaseId;
+  }
 }

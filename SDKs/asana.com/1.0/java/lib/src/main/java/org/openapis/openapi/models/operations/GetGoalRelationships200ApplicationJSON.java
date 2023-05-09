@@ -15,9 +15,11 @@ public class GetGoalRelationships200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.GoalRelationshipCompact[] data;
+
     public GetGoalRelationships200ApplicationJSON withData(org.openapis.openapi.models.shared.GoalRelationshipCompact[] data) {
         this.data = data;
         return this;
     }
     
+    public GetGoalRelationships200ApplicationJSON(){}
 }

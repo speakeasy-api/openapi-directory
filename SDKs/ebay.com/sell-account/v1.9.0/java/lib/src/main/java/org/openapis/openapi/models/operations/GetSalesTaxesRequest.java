@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSalesTaxesRequest {
@@ -12,9 +13,13 @@ public class GetSalesTaxesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_code")
     public String countryCode;
+
     public GetSalesTaxesRequest withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
     }
     
+    public GetSalesTaxesRequest(@JsonProperty("country_code") String countryCode) {
+        this.countryCode = countryCode;
+  }
 }

@@ -15,9 +15,11 @@ public class GetCardinalityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardinality")
     public Long cardinality;
+
     public GetCardinalityResponse withCardinality(Long cardinality) {
         this.cardinality = cardinality;
         return this;
     }
     
+    public GetCardinalityResponse(){}
 }

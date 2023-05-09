@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EvaluatePullRequestApprovalRulesResponse {
     
     public String contentType;
+
     public EvaluatePullRequestApprovalRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EvaluatePullRequestApprovalRulesResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public EvaluatePullRequestApprovalRulesResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -29,6 +32,7 @@ public class EvaluatePullRequestApprovalRulesResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public EvaluatePullRequestApprovalRulesResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -39,6 +43,7 @@ public class EvaluatePullRequestApprovalRulesResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public EvaluatePullRequestApprovalRulesResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -49,6 +54,7 @@ public class EvaluatePullRequestApprovalRulesResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public EvaluatePullRequestApprovalRulesResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class EvaluatePullRequestApprovalRulesResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public EvaluatePullRequestApprovalRulesResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -69,6 +76,7 @@ public class EvaluatePullRequestApprovalRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.EvaluatePullRequestApprovalRulesOutput evaluatePullRequestApprovalRulesOutput;
+
     public EvaluatePullRequestApprovalRulesResponse withEvaluatePullRequestApprovalRulesOutput(org.openapis.openapi.models.shared.EvaluatePullRequestApprovalRulesOutput evaluatePullRequestApprovalRulesOutput) {
         this.evaluatePullRequestApprovalRulesOutput = evaluatePullRequestApprovalRulesOutput;
         return this;
@@ -79,6 +87,7 @@ public class EvaluatePullRequestApprovalRulesResponse {
      */
     
     public Object invalidPullRequestIdException;
+
     public EvaluatePullRequestApprovalRulesResponse withInvalidPullRequestIdException(Object invalidPullRequestIdException) {
         this.invalidPullRequestIdException = invalidPullRequestIdException;
         return this;
@@ -89,6 +98,7 @@ public class EvaluatePullRequestApprovalRulesResponse {
      */
     
     public Object invalidRevisionIdException;
+
     public EvaluatePullRequestApprovalRulesResponse withInvalidRevisionIdException(Object invalidRevisionIdException) {
         this.invalidRevisionIdException = invalidRevisionIdException;
         return this;
@@ -99,6 +109,7 @@ public class EvaluatePullRequestApprovalRulesResponse {
      */
     
     public Object pullRequestDoesNotExistException;
+
     public EvaluatePullRequestApprovalRulesResponse withPullRequestDoesNotExistException(Object pullRequestDoesNotExistException) {
         this.pullRequestDoesNotExistException = pullRequestDoesNotExistException;
         return this;
@@ -109,6 +120,7 @@ public class EvaluatePullRequestApprovalRulesResponse {
      */
     
     public Object pullRequestIdRequiredException;
+
     public EvaluatePullRequestApprovalRulesResponse withPullRequestIdRequiredException(Object pullRequestIdRequiredException) {
         this.pullRequestIdRequiredException = pullRequestIdRequiredException;
         return this;
@@ -119,6 +131,7 @@ public class EvaluatePullRequestApprovalRulesResponse {
      */
     
     public Object revisionIdRequiredException;
+
     public EvaluatePullRequestApprovalRulesResponse withRevisionIdRequiredException(Object revisionIdRequiredException) {
         this.revisionIdRequiredException = revisionIdRequiredException;
         return this;
@@ -129,6 +142,7 @@ public class EvaluatePullRequestApprovalRulesResponse {
      */
     
     public Object revisionNotCurrentException;
+
     public EvaluatePullRequestApprovalRulesResponse withRevisionNotCurrentException(Object revisionNotCurrentException) {
         this.revisionNotCurrentException = revisionNotCurrentException;
         return this;
@@ -136,6 +150,7 @@ public class EvaluatePullRequestApprovalRulesResponse {
     
     
     public Integer statusCode;
+
     public EvaluatePullRequestApprovalRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,9 +158,14 @@ public class EvaluatePullRequestApprovalRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EvaluatePullRequestApprovalRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EvaluatePullRequestApprovalRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

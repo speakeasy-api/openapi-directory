@@ -15,6 +15,7 @@ public class CreateExplainabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSource")
     public DataSource dataSource;
+
     public CreateExplainabilityRequest withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -23,6 +24,7 @@ public class CreateExplainabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableVisualization")
     public Boolean enableVisualization;
+
     public CreateExplainabilityRequest withEnableVisualization(Boolean enableVisualization) {
         this.enableVisualization = enableVisualization;
         return this;
@@ -31,6 +33,7 @@ public class CreateExplainabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDateTime")
     public String endDateTime;
+
     public CreateExplainabilityRequest withEndDateTime(String endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -38,6 +41,7 @@ public class CreateExplainabilityRequest {
     
     @JsonProperty("ExplainabilityConfig")
     public ExplainabilityConfig explainabilityConfig;
+
     public CreateExplainabilityRequest withExplainabilityConfig(ExplainabilityConfig explainabilityConfig) {
         this.explainabilityConfig = explainabilityConfig;
         return this;
@@ -45,6 +49,7 @@ public class CreateExplainabilityRequest {
     
     @JsonProperty("ExplainabilityName")
     public String explainabilityName;
+
     public CreateExplainabilityRequest withExplainabilityName(String explainabilityName) {
         this.explainabilityName = explainabilityName;
         return this;
@@ -52,6 +57,7 @@ public class CreateExplainabilityRequest {
     
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public CreateExplainabilityRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -63,6 +69,7 @@ public class CreateExplainabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schema")
     public Schema schema;
+
     public CreateExplainabilityRequest withSchema(Schema schema) {
         this.schema = schema;
         return this;
@@ -71,6 +78,7 @@ public class CreateExplainabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDateTime")
     public String startDateTime;
+
     public CreateExplainabilityRequest withStartDateTime(String startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -79,9 +87,15 @@ public class CreateExplainabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateExplainabilityRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateExplainabilityRequest(@JsonProperty("ExplainabilityConfig") ExplainabilityConfig explainabilityConfig, @JsonProperty("ExplainabilityName") String explainabilityName, @JsonProperty("ResourceArn") String resourceArn) {
+        this.explainabilityConfig = explainabilityConfig;
+        this.explainabilityName = explainabilityName;
+        this.resourceArn = resourceArn;
+  }
 }

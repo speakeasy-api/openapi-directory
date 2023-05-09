@@ -18,6 +18,7 @@ public class Trace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public Trace withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -29,6 +30,7 @@ public class Trace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spans")
     public TraceSpan[] spans;
+
     public Trace withSpans(TraceSpan[] spans) {
         this.spans = spans;
         return this;
@@ -40,9 +42,11 @@ public class Trace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traceId")
     public String traceId;
+
     public Trace withTraceId(String traceId) {
         this.traceId = traceId;
         return this;
     }
     
+    public Trace(){}
 }

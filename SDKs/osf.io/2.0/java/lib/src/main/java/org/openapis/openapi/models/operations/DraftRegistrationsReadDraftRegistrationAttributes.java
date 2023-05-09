@@ -15,6 +15,7 @@ public class DraftRegistrationsReadDraftRegistrationAttributes {
      */
     
     public String category;
+
     public DraftRegistrationsReadDraftRegistrationAttributes withCategory(String category) {
         this.category = category;
         return this;
@@ -25,6 +26,7 @@ public class DraftRegistrationsReadDraftRegistrationAttributes {
      */
     
     public String[] currentUserPermissions;
+
     public DraftRegistrationsReadDraftRegistrationAttributes withCurrentUserPermissions(String[] currentUserPermissions) {
         this.currentUserPermissions = currentUserPermissions;
         return this;
@@ -35,6 +37,7 @@ public class DraftRegistrationsReadDraftRegistrationAttributes {
      */
     
     public OffsetDateTime datetimeInitiated;
+
     public DraftRegistrationsReadDraftRegistrationAttributes withDatetimeInitiated(OffsetDateTime datetimeInitiated) {
         this.datetimeInitiated = datetimeInitiated;
         return this;
@@ -45,6 +48,7 @@ public class DraftRegistrationsReadDraftRegistrationAttributes {
      */
     
     public OffsetDateTime datetimeUpdated;
+
     public DraftRegistrationsReadDraftRegistrationAttributes withDatetimeUpdated(OffsetDateTime datetimeUpdated) {
         this.datetimeUpdated = datetimeUpdated;
         return this;
@@ -55,6 +59,7 @@ public class DraftRegistrationsReadDraftRegistrationAttributes {
      */
     
     public String description;
+
     public DraftRegistrationsReadDraftRegistrationAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -65,6 +70,7 @@ public class DraftRegistrationsReadDraftRegistrationAttributes {
      */
     
     public Boolean hasProject;
+
     public DraftRegistrationsReadDraftRegistrationAttributes withHasProject(Boolean hasProject) {
         this.hasProject = hasProject;
         return this;
@@ -72,6 +78,7 @@ public class DraftRegistrationsReadDraftRegistrationAttributes {
     
     
     public DraftRegistrationsReadDraftRegistrationAttributesNodeLicense nodeLicense;
+
     public DraftRegistrationsReadDraftRegistrationAttributes withNodeLicense(DraftRegistrationsReadDraftRegistrationAttributesNodeLicense nodeLicense) {
         this.nodeLicense = nodeLicense;
         return this;
@@ -82,6 +89,7 @@ public class DraftRegistrationsReadDraftRegistrationAttributes {
      */
     
     public java.util.Map<String, Object> registrationMetadata;
+
     public DraftRegistrationsReadDraftRegistrationAttributes withRegistrationMetadata(java.util.Map<String, Object> registrationMetadata) {
         this.registrationMetadata = registrationMetadata;
         return this;
@@ -92,6 +100,7 @@ public class DraftRegistrationsReadDraftRegistrationAttributes {
      */
     
     public java.util.Map<String, Object> registrationResponses;
+
     public DraftRegistrationsReadDraftRegistrationAttributes withRegistrationResponses(java.util.Map<String, Object> registrationResponses) {
         this.registrationResponses = registrationResponses;
         return this;
@@ -102,6 +111,7 @@ public class DraftRegistrationsReadDraftRegistrationAttributes {
      */
     
     public String[] tags;
+
     public DraftRegistrationsReadDraftRegistrationAttributes withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -112,9 +122,11 @@ public class DraftRegistrationsReadDraftRegistrationAttributes {
      */
     
     public String title;
+
     public DraftRegistrationsReadDraftRegistrationAttributes withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public DraftRegistrationsReadDraftRegistrationAttributes(){}
 }

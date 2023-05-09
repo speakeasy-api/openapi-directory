@@ -18,6 +18,7 @@ public class CheckMigrationPermissionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onpremDomains")
     public OnPremDomainSIDDetails[] onpremDomains;
+
     public CheckMigrationPermissionResponse withOnpremDomains(OnPremDomainSIDDetails[] onpremDomains) {
         this.onpremDomains = onpremDomains;
         return this;
@@ -29,9 +30,11 @@ public class CheckMigrationPermissionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CheckMigrationPermissionResponseStateEnum state;
+
     public CheckMigrationPermissionResponse withState(CheckMigrationPermissionResponseStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CheckMigrationPermissionResponse(){}
 }

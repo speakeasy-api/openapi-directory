@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SignResponse {
     
     public String contentType;
+
     public SignResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SignResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public SignResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class SignResponse {
      */
     
     public Object disabledException;
+
     public SignResponse withDisabledException(Object disabledException) {
         this.disabledException = disabledException;
         return this;
@@ -39,6 +43,7 @@ public class SignResponse {
      */
     
     public Object invalidGrantTokenException;
+
     public SignResponse withInvalidGrantTokenException(Object invalidGrantTokenException) {
         this.invalidGrantTokenException = invalidGrantTokenException;
         return this;
@@ -49,6 +54,7 @@ public class SignResponse {
      */
     
     public Object invalidKeyUsageException;
+
     public SignResponse withInvalidKeyUsageException(Object invalidKeyUsageException) {
         this.invalidKeyUsageException = invalidKeyUsageException;
         return this;
@@ -59,6 +65,7 @@ public class SignResponse {
      */
     
     public Object kmsInternalException;
+
     public SignResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -69,6 +76,7 @@ public class SignResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public SignResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -79,6 +87,7 @@ public class SignResponse {
      */
     
     public Object keyUnavailableException;
+
     public SignResponse withKeyUnavailableException(Object keyUnavailableException) {
         this.keyUnavailableException = keyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class SignResponse {
      */
     
     public Object notFoundException;
+
     public SignResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -99,6 +109,7 @@ public class SignResponse {
      */
     
     public org.openapis.openapi.models.shared.SignResponse signResponse;
+
     public SignResponse withSignResponse(org.openapis.openapi.models.shared.SignResponse signResponse) {
         this.signResponse = signResponse;
         return this;
@@ -106,6 +117,7 @@ public class SignResponse {
     
     
     public Integer statusCode;
+
     public SignResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class SignResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SignResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SignResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GetCharger200ApplicationJSONInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public GetCharger200ApplicationJSONInformation withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -29,6 +30,7 @@ public class GetCharger200ApplicationJSONInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetCharger200ApplicationJSONInformation withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class GetCharger200ApplicationJSONInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GetCharger200ApplicationJSONInformation withModel(String model) {
         this.model = model;
         return this;
@@ -51,9 +54,11 @@ public class GetCharger200ApplicationJSONInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Long year;
+
     public GetCharger200ApplicationJSONInformation withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetCharger200ApplicationJSONInformation(){}
 }

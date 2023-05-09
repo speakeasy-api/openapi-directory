@@ -12,9 +12,13 @@ public class ListAccountIntegrationsRequestBody {
      */
     @JsonProperty("Uri")
     public String uri;
+
     public ListAccountIntegrationsRequestBody withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public ListAccountIntegrationsRequestBody(@JsonProperty("Uri") String uri) {
+        this.uri = uri;
+  }
 }

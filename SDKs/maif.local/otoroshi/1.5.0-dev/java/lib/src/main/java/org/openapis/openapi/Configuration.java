@@ -36,10 +36,11 @@ public class Configuration {
     /**
      * Get the full configuration of Otoroshi
      * Get the full configuration of Otoroshi
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GlobalConfigResponse globalConfig() throws Exception {
+    public org.openapis.openapi.models.operations.GlobalConfigResponse globalConfig(org.openapis.openapi.models.operations.GlobalConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/globalconfig");
         
@@ -48,16 +49,15 @@ public class Configuration {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GlobalConfigResponse res = new org.openapis.openapi.models.operations.GlobalConfigResponse() {{
+        org.openapis.openapi.models.operations.GlobalConfigResponse res = new org.openapis.openapi.models.operations.GlobalConfigResponse(contentType, httpRes.statusCode()) {{
             globalConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +98,9 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchGlobalConfigResponse res = new org.openapis.openapi.models.operations.PatchGlobalConfigResponse() {{
+        org.openapis.openapi.models.operations.PatchGlobalConfigResponse res = new org.openapis.openapi.models.operations.PatchGlobalConfigResponse(contentType, httpRes.statusCode()) {{
             globalConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -143,11 +141,9 @@ public class Configuration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutGlobalConfigResponse res = new org.openapis.openapi.models.operations.PutGlobalConfigResponse() {{
+        org.openapis.openapi.models.operations.PutGlobalConfigResponse res = new org.openapis.openapi.models.operations.PutGlobalConfigResponse(contentType, httpRes.statusCode()) {{
             globalConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

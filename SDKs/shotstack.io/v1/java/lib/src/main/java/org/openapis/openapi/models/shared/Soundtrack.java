@@ -22,6 +22,7 @@ public class Soundtrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effect")
     public SoundtrackEffectEnum effect;
+
     public Soundtrack withEffect(SoundtrackEffectEnum effect) {
         this.effect = effect;
         return this;
@@ -32,6 +33,7 @@ public class Soundtrack {
      */
     @JsonProperty("src")
     public String src;
+
     public Soundtrack withSrc(String src) {
         this.src = src;
         return this;
@@ -43,9 +45,13 @@ public class Soundtrack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volume")
     public Double volume;
+
     public Soundtrack withVolume(Double volume) {
         this.volume = volume;
         return this;
     }
     
+    public Soundtrack(@JsonProperty("src") String src) {
+        this.src = src;
+  }
 }

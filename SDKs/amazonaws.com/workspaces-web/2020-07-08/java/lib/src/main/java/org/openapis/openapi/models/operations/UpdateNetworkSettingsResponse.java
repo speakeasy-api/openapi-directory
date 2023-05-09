@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNetworkSettingsResponse {
@@ -12,6 +13,7 @@ public class UpdateNetworkSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateNetworkSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateNetworkSettingsResponse {
     
     
     public String contentType;
+
     public UpdateNetworkSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateNetworkSettingsResponse {
      */
     
     public Object internalServerException;
+
     public UpdateNetworkSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateNetworkSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateNetworkSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateNetworkSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateNetworkSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateNetworkSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNetworkSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateNetworkSettingsResponse {
      */
     
     public Object throttlingException;
+
     public UpdateNetworkSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateNetworkSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateNetworkSettingsResponse updateNetworkSettingsResponse;
+
     public UpdateNetworkSettingsResponse withUpdateNetworkSettingsResponse(org.openapis.openapi.models.shared.UpdateNetworkSettingsResponse updateNetworkSettingsResponse) {
         this.updateNetworkSettingsResponse = updateNetworkSettingsResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateNetworkSettingsResponse {
      */
     
     public Object validationException;
+
     public UpdateNetworkSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateNetworkSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

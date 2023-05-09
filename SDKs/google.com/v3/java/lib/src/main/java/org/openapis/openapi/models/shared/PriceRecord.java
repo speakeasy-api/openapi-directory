@@ -18,6 +18,7 @@ public class PriceRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basePrice")
     public Float basePrice;
+
     public PriceRecord withBasePrice(Float basePrice) {
         this.basePrice = basePrice;
         return this;
@@ -29,6 +30,7 @@ public class PriceRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public PriceRecord withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -40,6 +42,7 @@ public class PriceRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxesAndFees")
     public Float taxesAndFees;
+
     public PriceRecord withTaxesAndFees(Float taxesAndFees) {
         this.taxesAndFees = taxesAndFees;
         return this;
@@ -51,9 +54,11 @@ public class PriceRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public PriceRecord withTime(String time) {
         this.time = time;
         return this;
     }
     
+    public PriceRecord(){}
 }

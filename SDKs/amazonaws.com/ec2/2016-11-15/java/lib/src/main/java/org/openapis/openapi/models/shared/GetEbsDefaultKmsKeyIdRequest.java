@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class GetEbsDefaultKmsKeyIdRequest {
     
     public Boolean dryRun;
+
     public GetEbsDefaultKmsKeyIdRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public GetEbsDefaultKmsKeyIdRequest(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ValidationError {
     @JsonProperty("loc")
     public String[] loc;
+
     public ValidationError withLoc(String[] loc) {
         this.loc = loc;
         return this;
@@ -16,6 +17,7 @@ public class ValidationError {
     
     @JsonProperty("msg")
     public String msg;
+
     public ValidationError withMsg(String msg) {
         this.msg = msg;
         return this;
@@ -23,9 +25,15 @@ public class ValidationError {
     
     @JsonProperty("type")
     public String type;
+
     public ValidationError withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ValidationError(@JsonProperty("loc") String[] loc, @JsonProperty("msg") String msg, @JsonProperty("type") String type) {
+        this.loc = loc;
+        this.msg = msg;
+        this.type = type;
+  }
 }

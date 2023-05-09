@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConnectorsIdConnectorSourcesResponse {
     
     public String contentType;
+
     public GetConnectorsIdConnectorSourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetConnectorsIdConnectorSourcesResponse {
     
     
     public Integer statusCode;
+
     public GetConnectorsIdConnectorSourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetConnectorsIdConnectorSourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConnectorsIdConnectorSourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetConnectorsIdConnectorSourcesResponse {
      */
     
     public GetConnectorsIdConnectorSources200ApplicationJSON getConnectorsIdConnectorSources200ApplicationJSONObject;
+
     public GetConnectorsIdConnectorSourcesResponse withGetConnectorsIdConnectorSources200ApplicationJSONObject(GetConnectorsIdConnectorSources200ApplicationJSON getConnectorsIdConnectorSources200ApplicationJSONObject) {
         this.getConnectorsIdConnectorSources200ApplicationJSONObject = getConnectorsIdConnectorSources200ApplicationJSONObject;
         return this;
     }
     
+    public GetConnectorsIdConnectorSourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class AwsS3BucketObjectLockConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectLockEnabled")
     public String objectLockEnabled;
+
     public AwsS3BucketObjectLockConfiguration withObjectLockEnabled(String objectLockEnabled) {
         this.objectLockEnabled = objectLockEnabled;
         return this;
@@ -23,9 +24,11 @@ public class AwsS3BucketObjectLockConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rule")
     public AwsS3BucketObjectLockConfigurationRuleDetails rule;
+
     public AwsS3BucketObjectLockConfiguration withRule(AwsS3BucketObjectLockConfigurationRuleDetails rule) {
         this.rule = rule;
         return this;
     }
     
+    public AwsS3BucketObjectLockConfiguration(){}
 }

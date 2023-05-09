@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connector_uuid")
     public String connectorUuid;
+
     public GetConnectionsIdConnectionLogsRequest withConnectorUuid(String connectorUuid) {
         this.connectorUuid = connectorUuid;
         return this;
@@ -23,6 +25,7 @@ public class GetConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=error")
     public String error;
+
     public GetConnectionsIdConnectionLogsRequest withError(String error) {
         this.error = error;
         return this;
@@ -30,6 +33,7 @@ public class GetConnectionsIdConnectionLogsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public GetConnectionsIdConnectionLogsRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -37,6 +41,7 @@ public class GetConnectionsIdConnectionLogsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
     public Long idConnectionPathParameter;
+
     public GetConnectionsIdConnectionLogsRequest withIdConnectionPathParameter(Long idConnectionPathParameter) {
         this.idConnectionPathParameter = idConnectionPathParameter;
         return this;
@@ -47,6 +52,7 @@ public class GetConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_connection")
     public Long idConnectionQueryParameter;
+
     public GetConnectionsIdConnectionLogsRequest withIdConnectionQueryParameter(Long idConnectionQueryParameter) {
         this.idConnectionQueryParameter = idConnectionQueryParameter;
         return this;
@@ -57,6 +63,7 @@ public class GetConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_connector")
     public Long idConnector;
+
     public GetConnectionsIdConnectionLogsRequest withIdConnector(Long idConnector) {
         this.idConnector = idConnector;
         return this;
@@ -67,6 +74,7 @@ public class GetConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_max")
     public Long idMax;
+
     public GetConnectionsIdConnectionLogsRequest withIdMax(Long idMax) {
         this.idMax = idMax;
         return this;
@@ -77,6 +85,7 @@ public class GetConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_source")
     public Long idSource;
+
     public GetConnectionsIdConnectionLogsRequest withIdSource(Long idSource) {
         this.idSource = idSource;
         return this;
@@ -87,6 +96,7 @@ public class GetConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_user")
     public Long idUser;
+
     public GetConnectionsIdConnectionLogsRequest withIdUser(Long idUser) {
         this.idUser = idUser;
         return this;
@@ -97,6 +107,7 @@ public class GetConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetConnectionsIdConnectionLogsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -107,6 +118,7 @@ public class GetConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
     public LocalDate maxDate;
+
     public GetConnectionsIdConnectionLogsRequest withMaxDate(LocalDate maxDate) {
         this.maxDate = maxDate;
         return this;
@@ -117,6 +129,7 @@ public class GetConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
     public LocalDate minDate;
+
     public GetConnectionsIdConnectionLogsRequest withMinDate(LocalDate minDate) {
         this.minDate = minDate;
         return this;
@@ -127,6 +140,7 @@ public class GetConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetConnectionsIdConnectionLogsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -137,9 +151,13 @@ public class GetConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
     public String period;
+
     public GetConnectionsIdConnectionLogsRequest withPeriod(String period) {
         this.period = period;
         return this;
     }
     
+    public GetConnectionsIdConnectionLogsRequest(@JsonProperty("id_connectionPathParameter") Long idConnectionPathParameter) {
+        this.idConnectionPathParameter = idConnectionPathParameter;
+  }
 }

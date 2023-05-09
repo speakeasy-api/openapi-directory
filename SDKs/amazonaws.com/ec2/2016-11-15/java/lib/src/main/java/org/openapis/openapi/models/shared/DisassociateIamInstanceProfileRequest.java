@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisassociateIamInstanceProfileRequest {
     
     public String associationId;
+
     public DisassociateIamInstanceProfileRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
     }
     
+    public DisassociateIamInstanceProfileRequest(@JsonProperty("AssociationId") String associationId) {
+        this.associationId = associationId;
+  }
 }

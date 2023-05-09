@@ -12,9 +12,11 @@ public class NewPartnerStore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("store")
     public NewPartnerStoreStore store;
+
     public NewPartnerStore withStore(NewPartnerStoreStore store) {
         this.store = store;
         return this;
     }
     
+    public NewPartnerStore(){}
 }

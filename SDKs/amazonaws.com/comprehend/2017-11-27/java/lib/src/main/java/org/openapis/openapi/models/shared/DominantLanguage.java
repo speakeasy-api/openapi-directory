@@ -15,6 +15,7 @@ public class DominantLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public String languageCode;
+
     public DominantLanguage withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -23,9 +24,11 @@ public class DominantLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public DominantLanguage withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public DominantLanguage(){}
 }

@@ -55,12 +55,10 @@ public class StoryCollaborators {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdCollaboratorsGetResponse res = new org.openapis.openapi.models.operations.StoryIdCollaboratorsGetResponse() {{
+        org.openapis.openapi.models.operations.StoryIdCollaboratorsGetResponse res = new org.openapis.openapi.models.operations.StoryIdCollaboratorsGetResponse(contentType, httpRes.statusCode()) {{
             storyCollaborators = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,12 +105,10 @@ public class StoryCollaborators {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdCollaboratorsInactivePostResponse res = new org.openapis.openapi.models.operations.StoryIdCollaboratorsInactivePostResponse() {{
+        org.openapis.openapi.models.operations.StoryIdCollaboratorsInactivePostResponse res = new org.openapis.openapi.models.operations.StoryIdCollaboratorsInactivePostResponse(contentType, httpRes.statusCode()) {{
             storyCollaborator = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -161,12 +157,10 @@ public class StoryCollaborators {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdCollaboratorsPostResponse res = new org.openapis.openapi.models.operations.StoryIdCollaboratorsPostResponse() {{
+        org.openapis.openapi.models.operations.StoryIdCollaboratorsPostResponse res = new org.openapis.openapi.models.operations.StoryIdCollaboratorsPostResponse(contentType, httpRes.statusCode()) {{
             storyCollaborator = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -208,11 +202,9 @@ public class StoryCollaborators {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridDeleteResponse res = new org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridDeleteResponse() {{
+        org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridDeleteResponse res = new org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridDeleteResponse(contentType, httpRes.statusCode()) {{
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -249,12 +241,10 @@ public class StoryCollaborators {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridGetResponse res = new org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridGetResponse() {{
+        org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridGetResponse res = new org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridGetResponse(contentType, httpRes.statusCode()) {{
             storyCollaborator = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -301,12 +291,10 @@ public class StoryCollaborators {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPutResponse res = new org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPutResponse() {{
+        org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPutResponse res = new org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPutResponse(contentType, httpRes.statusCode()) {{
             storyCollaborator = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

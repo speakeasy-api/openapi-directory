@@ -18,6 +18,7 @@ public class ElementaryStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioStream")
     public AudioStream audioStream;
+
     public ElementaryStream withAudioStream(AudioStream audioStream) {
         this.audioStream = audioStream;
         return this;
@@ -29,6 +30,7 @@ public class ElementaryStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public ElementaryStream withKey(String key) {
         this.key = key;
         return this;
@@ -40,6 +42,7 @@ public class ElementaryStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStream")
     public TextStream textStream;
+
     public ElementaryStream withTextStream(TextStream textStream) {
         this.textStream = textStream;
         return this;
@@ -51,9 +54,11 @@ public class ElementaryStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoStream")
     public VideoStream videoStream;
+
     public ElementaryStream withVideoStream(VideoStream videoStream) {
         this.videoStream = videoStream;
         return this;
     }
     
+    public ElementaryStream(){}
 }

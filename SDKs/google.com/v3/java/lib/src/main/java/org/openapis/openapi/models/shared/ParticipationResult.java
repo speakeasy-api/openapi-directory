@@ -18,6 +18,7 @@ public class ParticipationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public Key key;
+
     public ParticipationResult withKey(Key key) {
         this.key = key;
         return this;
@@ -29,6 +30,7 @@ public class ParticipationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missedParticipationCount")
     public String missedParticipationCount;
+
     public ParticipationResult withMissedParticipationCount(String missedParticipationCount) {
         this.missedParticipationCount = missedParticipationCount;
         return this;
@@ -40,6 +42,7 @@ public class ParticipationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missedParticipationCountDetails")
     public MissedParticipationCountDetails missedParticipationCountDetails;
+
     public ParticipationResult withMissedParticipationCountDetails(MissedParticipationCountDetails missedParticipationCountDetails) {
         this.missedParticipationCountDetails = missedParticipationCountDetails;
         return this;
@@ -51,6 +54,7 @@ public class ParticipationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opportunityCount")
     public String opportunityCount;
+
     public ParticipationResult withOpportunityCount(String opportunityCount) {
         this.opportunityCount = opportunityCount;
         return this;
@@ -62,6 +66,7 @@ public class ParticipationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("participationCount")
     public String participationCount;
+
     public ParticipationResult withParticipationCount(String participationCount) {
         this.participationCount = participationCount;
         return this;
@@ -73,6 +78,7 @@ public class ParticipationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("participationPercent")
     public Double participationPercent;
+
     public ParticipationResult withParticipationPercent(Double participationPercent) {
         this.participationPercent = participationPercent;
         return this;
@@ -84,9 +90,11 @@ public class ParticipationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerHotelDisplayName")
     public String partnerHotelDisplayName;
+
     public ParticipationResult withPartnerHotelDisplayName(String partnerHotelDisplayName) {
         this.partnerHotelDisplayName = partnerHotelDisplayName;
         return this;
     }
     
+    public ParticipationResult(){}
 }

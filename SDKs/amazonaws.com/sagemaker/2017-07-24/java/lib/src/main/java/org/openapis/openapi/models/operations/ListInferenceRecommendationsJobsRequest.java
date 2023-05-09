@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListInferenceRecommendationsJobsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListInferenceRecommendationsJobsRequest listInferenceRecommendationsJobsRequest;
+
     public ListInferenceRecommendationsJobsRequest withListInferenceRecommendationsJobsRequest(org.openapis.openapi.models.shared.ListInferenceRecommendationsJobsRequest listInferenceRecommendationsJobsRequest) {
         this.listInferenceRecommendationsJobsRequest = listInferenceRecommendationsJobsRequest;
         return this;
@@ -19,6 +21,7 @@ public class ListInferenceRecommendationsJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public ListInferenceRecommendationsJobsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class ListInferenceRecommendationsJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListInferenceRecommendationsJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class ListInferenceRecommendationsJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListInferenceRecommendationsJobsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListInferenceRecommendationsJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListInferenceRecommendationsJobsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListInferenceRecommendationsJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListInferenceRecommendationsJobsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListInferenceRecommendationsJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListInferenceRecommendationsJobsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListInferenceRecommendationsJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListInferenceRecommendationsJobsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListInferenceRecommendationsJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListInferenceRecommendationsJobsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class ListInferenceRecommendationsJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListInferenceRecommendationsJobsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class ListInferenceRecommendationsJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListInferenceRecommendationsJobsXAmzTargetEnum xAmzTarget;
+
     public ListInferenceRecommendationsJobsRequest withXAmzTarget(ListInferenceRecommendationsJobsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ListInferenceRecommendationsJobsRequest(@JsonProperty("ListInferenceRecommendationsJobsRequest") org.openapis.openapi.models.shared.ListInferenceRecommendationsJobsRequest listInferenceRecommendationsJobsRequest, @JsonProperty("X-Amz-Target") ListInferenceRecommendationsJobsXAmzTargetEnum xAmzTarget) {
+        this.listInferenceRecommendationsJobsRequest = listInferenceRecommendationsJobsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

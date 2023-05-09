@@ -22,6 +22,7 @@ public class BillingRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("BillDate")
     public OffsetDateTime billDate;
+
     public BillingRecord withBillDate(OffsetDateTime billDate) {
         this.billDate = billDate;
         return this;
@@ -30,6 +31,7 @@ public class BillingRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public BillingRecord withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -38,6 +40,7 @@ public class BillingRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceId")
     public String invoiceId;
+
     public BillingRecord withInvoiceId(String invoiceId) {
         this.invoiceId = invoiceId;
         return this;
@@ -46,6 +49,7 @@ public class BillingRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operation")
     public OperationTypeEnum operation;
+
     public BillingRecord withOperation(OperationTypeEnum operation) {
         this.operation = operation;
         return this;
@@ -54,9 +58,11 @@ public class BillingRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Price")
     public Double price;
+
     public BillingRecord withPrice(Double price) {
         this.price = price;
         return this;
     }
     
+    public BillingRecord(){}
 }

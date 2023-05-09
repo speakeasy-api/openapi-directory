@@ -27,6 +27,7 @@ public class StoryResponseDates {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("due_at")
     public OffsetDateTime dueAt;
+
     public StoryResponseDates withDueAt(OffsetDateTime dueAt) {
         this.dueAt = dueAt;
         return this;
@@ -39,6 +40,7 @@ public class StoryResponseDates {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("due_on")
     public LocalDate dueOn;
+
     public StoryResponseDates withDueOn(LocalDate dueOn) {
         this.dueOn = dueOn;
         return this;
@@ -51,9 +53,11 @@ public class StoryResponseDates {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("start_on")
     public LocalDate startOn;
+
     public StoryResponseDates withStartOn(LocalDate startOn) {
         this.startOn = startOn;
         return this;
     }
     
+    public StoryResponseDates(){}
 }

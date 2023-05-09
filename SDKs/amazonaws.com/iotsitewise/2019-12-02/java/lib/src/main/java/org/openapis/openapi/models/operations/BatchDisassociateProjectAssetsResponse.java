@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDisassociateProjectAssetsResponse {
@@ -12,6 +13,7 @@ public class BatchDisassociateProjectAssetsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDisassociateProjectAssetsResponse batchDisassociateProjectAssetsResponse;
+
     public BatchDisassociateProjectAssetsResponse withBatchDisassociateProjectAssetsResponse(org.openapis.openapi.models.shared.BatchDisassociateProjectAssetsResponse batchDisassociateProjectAssetsResponse) {
         this.batchDisassociateProjectAssetsResponse = batchDisassociateProjectAssetsResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchDisassociateProjectAssetsResponse {
     
     
     public String contentType;
+
     public BatchDisassociateProjectAssetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchDisassociateProjectAssetsResponse {
      */
     
     public Object internalFailureException;
+
     public BatchDisassociateProjectAssetsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class BatchDisassociateProjectAssetsResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchDisassociateProjectAssetsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class BatchDisassociateProjectAssetsResponse {
     
     
     public Integer statusCode;
+
     public BatchDisassociateProjectAssetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchDisassociateProjectAssetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDisassociateProjectAssetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchDisassociateProjectAssetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchDisassociateProjectAssetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class BatchDisassociateProjectAssetsResponse {
      */
     
     public Object throttlingException;
+
     public BatchDisassociateProjectAssetsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public BatchDisassociateProjectAssetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

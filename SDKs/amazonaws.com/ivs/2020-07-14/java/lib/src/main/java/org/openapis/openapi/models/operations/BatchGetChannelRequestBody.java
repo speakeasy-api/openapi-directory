@@ -12,9 +12,13 @@ public class BatchGetChannelRequestBody {
      */
     @JsonProperty("arns")
     public String[] arns;
+
     public BatchGetChannelRequestBody withArns(String[] arns) {
         this.arns = arns;
         return this;
     }
     
+    public BatchGetChannelRequestBody(@JsonProperty("arns") String[] arns) {
+        this.arns = arns;
+  }
 }

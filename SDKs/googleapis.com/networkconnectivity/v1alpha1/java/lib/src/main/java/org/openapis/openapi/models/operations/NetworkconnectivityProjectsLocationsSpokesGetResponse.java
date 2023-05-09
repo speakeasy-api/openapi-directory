@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NetworkconnectivityProjectsLocationsSpokesGetResponse {
     
     public String contentType;
+
     public NetworkconnectivityProjectsLocationsSpokesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class NetworkconnectivityProjectsLocationsSpokesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Spoke spoke;
+
     public NetworkconnectivityProjectsLocationsSpokesGetResponse withSpoke(org.openapis.openapi.models.shared.Spoke spoke) {
         this.spoke = spoke;
         return this;
@@ -26,6 +29,7 @@ public class NetworkconnectivityProjectsLocationsSpokesGetResponse {
     
     
     public Integer statusCode;
+
     public NetworkconnectivityProjectsLocationsSpokesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class NetworkconnectivityProjectsLocationsSpokesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NetworkconnectivityProjectsLocationsSpokesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public NetworkconnectivityProjectsLocationsSpokesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

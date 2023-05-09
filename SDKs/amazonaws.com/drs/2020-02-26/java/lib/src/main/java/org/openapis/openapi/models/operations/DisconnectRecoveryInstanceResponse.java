@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisconnectRecoveryInstanceResponse {
@@ -12,6 +13,7 @@ public class DisconnectRecoveryInstanceResponse {
      */
     
     public Object accessDeniedException;
+
     public DisconnectRecoveryInstanceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisconnectRecoveryInstanceResponse {
      */
     
     public Object conflictException;
+
     public DisconnectRecoveryInstanceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisconnectRecoveryInstanceResponse {
     
     
     public String contentType;
+
     public DisconnectRecoveryInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisconnectRecoveryInstanceResponse {
      */
     
     public Object internalServerException;
+
     public DisconnectRecoveryInstanceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DisconnectRecoveryInstanceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisconnectRecoveryInstanceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DisconnectRecoveryInstanceResponse {
     
     
     public Integer statusCode;
+
     public DisconnectRecoveryInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisconnectRecoveryInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisconnectRecoveryInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DisconnectRecoveryInstanceResponse {
      */
     
     public Object throttlingException;
+
     public DisconnectRecoveryInstanceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DisconnectRecoveryInstanceResponse {
      */
     
     public Object uninitializedAccountException;
+
     public DisconnectRecoveryInstanceResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public DisconnectRecoveryInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

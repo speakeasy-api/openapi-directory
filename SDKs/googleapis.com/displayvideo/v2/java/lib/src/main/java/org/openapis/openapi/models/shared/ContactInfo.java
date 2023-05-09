@@ -18,6 +18,7 @@ public class ContactInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public ContactInfo withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -29,6 +30,7 @@ public class ContactInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashedEmails")
     public String[] hashedEmails;
+
     public ContactInfo withHashedEmails(String[] hashedEmails) {
         this.hashedEmails = hashedEmails;
         return this;
@@ -40,6 +42,7 @@ public class ContactInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashedFirstName")
     public String hashedFirstName;
+
     public ContactInfo withHashedFirstName(String hashedFirstName) {
         this.hashedFirstName = hashedFirstName;
         return this;
@@ -51,6 +54,7 @@ public class ContactInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashedLastName")
     public String hashedLastName;
+
     public ContactInfo withHashedLastName(String hashedLastName) {
         this.hashedLastName = hashedLastName;
         return this;
@@ -62,6 +66,7 @@ public class ContactInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashedPhoneNumbers")
     public String[] hashedPhoneNumbers;
+
     public ContactInfo withHashedPhoneNumbers(String[] hashedPhoneNumbers) {
         this.hashedPhoneNumbers = hashedPhoneNumbers;
         return this;
@@ -73,9 +78,11 @@ public class ContactInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zipCodes")
     public String[] zipCodes;
+
     public ContactInfo withZipCodes(String[] zipCodes) {
         this.zipCodes = zipCodes;
         return this;
     }
     
+    public ContactInfo(){}
 }

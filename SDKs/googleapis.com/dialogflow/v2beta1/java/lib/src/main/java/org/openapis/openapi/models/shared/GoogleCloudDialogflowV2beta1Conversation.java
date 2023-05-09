@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationProfile")
     public String conversationProfile;
+
     public GoogleCloudDialogflowV2beta1Conversation withConversationProfile(String conversationProfile) {
         this.conversationProfile = conversationProfile;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationStage")
     public GoogleCloudDialogflowV2beta1ConversationConversationStageEnum conversationStage;
+
     public GoogleCloudDialogflowV2beta1Conversation withConversationStage(GoogleCloudDialogflowV2beta1ConversationConversationStageEnum conversationStage) {
         this.conversationStage = conversationStage;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudDialogflowV2beta1Conversation withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleState")
     public GoogleCloudDialogflowV2beta1ConversationLifecycleStateEnum lifecycleState;
+
     public GoogleCloudDialogflowV2beta1Conversation withLifecycleState(GoogleCloudDialogflowV2beta1ConversationLifecycleStateEnum lifecycleState) {
         this.lifecycleState = lifecycleState;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2beta1Conversation withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2beta1Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public GoogleCloudDialogflowV2beta1ConversationPhoneNumber phoneNumber;
+
     public GoogleCloudDialogflowV2beta1Conversation withPhoneNumber(GoogleCloudDialogflowV2beta1ConversationPhoneNumber phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDialogflowV2beta1Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudDialogflowV2beta1Conversation withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1Conversation(){}
 }

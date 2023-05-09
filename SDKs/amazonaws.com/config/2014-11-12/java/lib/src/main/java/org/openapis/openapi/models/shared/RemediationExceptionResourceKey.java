@@ -15,6 +15,7 @@ public class RemediationExceptionResourceKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public RemediationExceptionResourceKey withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -23,9 +24,11 @@ public class RemediationExceptionResourceKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public RemediationExceptionResourceKey withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public RemediationExceptionResourceKey(){}
 }

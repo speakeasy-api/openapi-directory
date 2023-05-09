@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyVpcEndpointDNSOptions {
     @SpeakeasyMetadata("queryParam:name=DnsRecordIpType")
     public org.openapis.openapi.models.shared.DnsRecordIpTypeEnum dnsRecordIpType;
+
     public GETModifyVpcEndpointDNSOptions withDnsRecordIpType(org.openapis.openapi.models.shared.DnsRecordIpTypeEnum dnsRecordIpType) {
         this.dnsRecordIpType = dnsRecordIpType;
         return this;
@@ -19,9 +20,11 @@ public class GETModifyVpcEndpointDNSOptions {
     
     @SpeakeasyMetadata("queryParam:name=PrivateDnsOnlyForInboundResolverEndpoint")
     public Boolean privateDnsOnlyForInboundResolverEndpoint;
+
     public GETModifyVpcEndpointDNSOptions withPrivateDnsOnlyForInboundResolverEndpoint(Boolean privateDnsOnlyForInboundResolverEndpoint) {
         this.privateDnsOnlyForInboundResolverEndpoint = privateDnsOnlyForInboundResolverEndpoint;
         return this;
     }
     
+    public GETModifyVpcEndpointDNSOptions(){}
 }

@@ -22,6 +22,7 @@ public class DescribeTaskOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completedAt")
     public OffsetDateTime completedAt;
+
     public DescribeTaskOutput withCompletedAt(OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -32,6 +33,7 @@ public class DescribeTaskOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public DescribeTaskOutput withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -40,6 +42,7 @@ public class DescribeTaskOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DescribeTaskOutput withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +53,7 @@ public class DescribeTaskOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public DescribeTaskOutput withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -58,6 +62,7 @@ public class DescribeTaskOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public TaskStateEnum state;
+
     public DescribeTaskOutput withState(TaskStateEnum state) {
         this.state = state;
         return this;
@@ -66,6 +71,7 @@ public class DescribeTaskOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public DescribeTaskOutput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -74,6 +80,7 @@ public class DescribeTaskOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targets")
     public String[] targets;
+
     public DescribeTaskOutput withTargets(String[] targets) {
         this.targets = targets;
         return this;
@@ -82,6 +89,7 @@ public class DescribeTaskOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskArn")
     public String taskArn;
+
     public DescribeTaskOutput withTaskArn(String taskArn) {
         this.taskArn = taskArn;
         return this;
@@ -90,9 +98,11 @@ public class DescribeTaskOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public DescribeTaskOutput withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public DescribeTaskOutput(){}
 }

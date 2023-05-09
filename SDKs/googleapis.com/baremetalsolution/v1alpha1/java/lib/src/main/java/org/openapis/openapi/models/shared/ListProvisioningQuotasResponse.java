@@ -18,6 +18,7 @@ public class ListProvisioningQuotasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListProvisioningQuotasResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListProvisioningQuotasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningQuotas")
     public ProvisioningQuota[] provisioningQuotas;
+
     public ListProvisioningQuotasResponse withProvisioningQuotas(ProvisioningQuota[] provisioningQuotas) {
         this.provisioningQuotas = provisioningQuotas;
         return this;
     }
     
+    public ListProvisioningQuotasResponse(){}
 }

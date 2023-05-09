@@ -20,6 +20,7 @@ public class AssessmentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentReportsDestination")
     public AssessmentReportsDestination assessmentReportsDestination;
+
     public AssessmentMetadata withAssessmentReportsDestination(AssessmentReportsDestination assessmentReportsDestination) {
         this.assessmentReportsDestination = assessmentReportsDestination;
         return this;
@@ -28,6 +29,7 @@ public class AssessmentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceType")
     public String complianceType;
+
     public AssessmentMetadata withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -38,6 +40,7 @@ public class AssessmentMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public AssessmentMetadata withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -46,6 +49,7 @@ public class AssessmentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegations")
     public Delegation[] delegations;
+
     public AssessmentMetadata withDelegations(Delegation[] delegations) {
         this.delegations = delegations;
         return this;
@@ -54,6 +58,7 @@ public class AssessmentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AssessmentMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class AssessmentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssessmentMetadata withId(String id) {
         this.id = id;
         return this;
@@ -72,6 +78,7 @@ public class AssessmentMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public AssessmentMetadata withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -80,6 +87,7 @@ public class AssessmentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AssessmentMetadata withName(String name) {
         this.name = name;
         return this;
@@ -88,6 +96,7 @@ public class AssessmentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public Role[] roles;
+
     public AssessmentMetadata withRoles(Role[] roles) {
         this.roles = roles;
         return this;
@@ -96,6 +105,7 @@ public class AssessmentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public Scope scope;
+
     public AssessmentMetadata withScope(Scope scope) {
         this.scope = scope;
         return this;
@@ -104,9 +114,11 @@ public class AssessmentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AssessmentStatusEnum status;
+
     public AssessmentMetadata withStatus(AssessmentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AssessmentMetadata(){}
 }

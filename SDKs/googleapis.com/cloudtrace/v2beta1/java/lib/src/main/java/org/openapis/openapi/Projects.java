@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateResponse(contentType, httpRes.statusCode()) {{
             traceSink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksDeleteResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksDeleteResponse() {{
+        org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksDeleteResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksGetResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksGetResponse() {{
+        org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksGetResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksGetResponse(contentType, httpRes.statusCode()) {{
             traceSink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksListResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksListResponse() {{
+        org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksListResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksListResponse(contentType, httpRes.statusCode()) {{
             listTraceSinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksPatchResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksPatchResponse() {{
+        org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksPatchResponse res = new org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksPatchResponse(contentType, httpRes.statusCode()) {{
             traceSink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

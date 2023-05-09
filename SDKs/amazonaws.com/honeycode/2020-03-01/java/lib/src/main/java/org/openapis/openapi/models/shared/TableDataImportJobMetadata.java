@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class TableDataImportJobMetadata {
     @JsonProperty("dataSource")
     public ImportDataSource dataSource;
+
     public TableDataImportJobMetadata withDataSource(ImportDataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -24,6 +25,7 @@ public class TableDataImportJobMetadata {
     
     @JsonProperty("importOptions")
     public ImportOptions importOptions;
+
     public TableDataImportJobMetadata withImportOptions(ImportOptions importOptions) {
         this.importOptions = importOptions;
         return this;
@@ -33,6 +35,7 @@ public class TableDataImportJobMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("submitTime")
     public OffsetDateTime submitTime;
+
     public TableDataImportJobMetadata withSubmitTime(OffsetDateTime submitTime) {
         this.submitTime = submitTime;
         return this;
@@ -40,9 +43,16 @@ public class TableDataImportJobMetadata {
     
     @JsonProperty("submitter")
     public ImportJobSubmitter submitter;
+
     public TableDataImportJobMetadata withSubmitter(ImportJobSubmitter submitter) {
         this.submitter = submitter;
         return this;
     }
     
+    public TableDataImportJobMetadata(@JsonProperty("dataSource") ImportDataSource dataSource, @JsonProperty("importOptions") ImportOptions importOptions, @JsonProperty("submitTime") OffsetDateTime submitTime, @JsonProperty("submitter") ImportJobSubmitter submitter) {
+        this.dataSource = dataSource;
+        this.importOptions = importOptions;
+        this.submitTime = submitTime;
+        this.submitter = submitter;
+  }
 }

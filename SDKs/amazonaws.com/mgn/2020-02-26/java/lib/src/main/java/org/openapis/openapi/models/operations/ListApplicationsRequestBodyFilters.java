@@ -15,6 +15,7 @@ public class ListApplicationsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationIDs")
     public String[] applicationIDs;
+
     public ListApplicationsRequestBodyFilters withApplicationIDs(String[] applicationIDs) {
         this.applicationIDs = applicationIDs;
         return this;
@@ -23,6 +24,7 @@ public class ListApplicationsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isArchived")
     public Boolean isArchived;
+
     public ListApplicationsRequestBodyFilters withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -31,9 +33,11 @@ public class ListApplicationsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waveIDs")
     public String[] waveIDs;
+
     public ListApplicationsRequestBodyFilters withWaveIDs(String[] waveIDs) {
         this.waveIDs = waveIDs;
         return this;
     }
     
+    public ListApplicationsRequestBodyFilters(){}
 }

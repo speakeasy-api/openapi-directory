@@ -15,6 +15,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostPrimaryIpsCreatePrimaryIPResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostPrimaryIpsCreatePrimaryIPResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostPrimaryIpsCreatePrimaryIPResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostPrimaryIpsCreatePrimaryIPResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

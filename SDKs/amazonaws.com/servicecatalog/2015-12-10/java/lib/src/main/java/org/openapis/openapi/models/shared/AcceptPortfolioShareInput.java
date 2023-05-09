@@ -12,6 +12,7 @@ public class AcceptPortfolioShareInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public AcceptPortfolioShareInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class AcceptPortfolioShareInput {
     
     @JsonProperty("PortfolioId")
     public String portfolioId;
+
     public AcceptPortfolioShareInput withPortfolioId(String portfolioId) {
         this.portfolioId = portfolioId;
         return this;
@@ -27,9 +29,13 @@ public class AcceptPortfolioShareInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortfolioShareType")
     public PortfolioShareTypeEnum portfolioShareType;
+
     public AcceptPortfolioShareInput withPortfolioShareType(PortfolioShareTypeEnum portfolioShareType) {
         this.portfolioShareType = portfolioShareType;
         return this;
     }
     
+    public AcceptPortfolioShareInput(@JsonProperty("PortfolioId") String portfolioId) {
+        this.portfolioId = portfolioId;
+  }
 }

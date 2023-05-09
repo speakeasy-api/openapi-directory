@@ -15,6 +15,7 @@ public class ListRotationShiftsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRotationShiftsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRotationShiftsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RotationShifts")
     public RotationShift[] rotationShifts;
+
     public ListRotationShiftsResult withRotationShifts(RotationShift[] rotationShifts) {
         this.rotationShifts = rotationShifts;
         return this;
     }
     
+    public ListRotationShiftsResult(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSlotsResponse {
     
     public String contentType;
+
     public ListSlotsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSlotsResponse {
      */
     
     public Object internalServerException;
+
     public ListSlotsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListSlotsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSlotsResponse listSlotsResponse;
+
     public ListSlotsResponse withListSlotsResponse(org.openapis.openapi.models.shared.ListSlotsResponse listSlotsResponse) {
         this.listSlotsResponse = listSlotsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListSlotsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListSlotsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -46,6 +51,7 @@ public class ListSlotsResponse {
     
     
     public Integer statusCode;
+
     public ListSlotsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListSlotsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSlotsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListSlotsResponse {
      */
     
     public Object throttlingException;
+
     public ListSlotsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListSlotsResponse {
      */
     
     public Object validationException;
+
     public ListSlotsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSlotsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

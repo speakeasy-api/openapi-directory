@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrgpolicyProjectsConstraintsListResponse {
     
     public String contentType;
+
     public OrgpolicyProjectsConstraintsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OrgpolicyProjectsConstraintsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudOrgpolicyV2ListConstraintsResponse googleCloudOrgpolicyV2ListConstraintsResponse;
+
     public OrgpolicyProjectsConstraintsListResponse withGoogleCloudOrgpolicyV2ListConstraintsResponse(org.openapis.openapi.models.shared.GoogleCloudOrgpolicyV2ListConstraintsResponse googleCloudOrgpolicyV2ListConstraintsResponse) {
         this.googleCloudOrgpolicyV2ListConstraintsResponse = googleCloudOrgpolicyV2ListConstraintsResponse;
         return this;
@@ -26,6 +29,7 @@ public class OrgpolicyProjectsConstraintsListResponse {
     
     
     public Integer statusCode;
+
     public OrgpolicyProjectsConstraintsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class OrgpolicyProjectsConstraintsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrgpolicyProjectsConstraintsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OrgpolicyProjectsConstraintsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

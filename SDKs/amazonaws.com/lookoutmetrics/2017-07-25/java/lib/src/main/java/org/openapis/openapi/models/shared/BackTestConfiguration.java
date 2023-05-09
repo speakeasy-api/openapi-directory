@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BackTestConfiguration {
     @JsonProperty("RunBackTestMode")
     public Boolean runBackTestMode;
+
     public BackTestConfiguration withRunBackTestMode(Boolean runBackTestMode) {
         this.runBackTestMode = runBackTestMode;
         return this;
     }
     
+    public BackTestConfiguration(@JsonProperty("RunBackTestMode") Boolean runBackTestMode) {
+        this.runBackTestMode = runBackTestMode;
+  }
 }

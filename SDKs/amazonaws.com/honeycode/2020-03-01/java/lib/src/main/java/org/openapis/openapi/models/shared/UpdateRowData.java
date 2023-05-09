@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateRowData {
     @JsonProperty("cellsToUpdate")
     public java.util.Map<String, CellInput> cellsToUpdate;
+
     public UpdateRowData withCellsToUpdate(java.util.Map<String, CellInput> cellsToUpdate) {
         this.cellsToUpdate = cellsToUpdate;
         return this;
@@ -19,9 +20,14 @@ public class UpdateRowData {
     
     @JsonProperty("rowId")
     public String rowId;
+
     public UpdateRowData withRowId(String rowId) {
         this.rowId = rowId;
         return this;
     }
     
+    public UpdateRowData(@JsonProperty("cellsToUpdate") java.util.Map<String, CellInput> cellsToUpdate, @JsonProperty("rowId") String rowId) {
+        this.cellsToUpdate = cellsToUpdate;
+        this.rowId = rowId;
+  }
 }

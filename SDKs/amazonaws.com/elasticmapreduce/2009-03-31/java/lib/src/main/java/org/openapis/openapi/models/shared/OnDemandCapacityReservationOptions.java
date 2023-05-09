@@ -15,6 +15,7 @@ public class OnDemandCapacityReservationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityReservationPreference")
     public OnDemandCapacityReservationPreferenceEnum capacityReservationPreference;
+
     public OnDemandCapacityReservationOptions withCapacityReservationPreference(OnDemandCapacityReservationPreferenceEnum capacityReservationPreference) {
         this.capacityReservationPreference = capacityReservationPreference;
         return this;
@@ -23,6 +24,7 @@ public class OnDemandCapacityReservationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityReservationResourceGroupArn")
     public String capacityReservationResourceGroupArn;
+
     public OnDemandCapacityReservationOptions withCapacityReservationResourceGroupArn(String capacityReservationResourceGroupArn) {
         this.capacityReservationResourceGroupArn = capacityReservationResourceGroupArn;
         return this;
@@ -31,9 +33,11 @@ public class OnDemandCapacityReservationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageStrategy")
     public OnDemandCapacityReservationUsageStrategyEnum usageStrategy;
+
     public OnDemandCapacityReservationOptions withUsageStrategy(OnDemandCapacityReservationUsageStrategyEnum usageStrategy) {
         this.usageStrategy = usageStrategy;
         return this;
     }
     
+    public OnDemandCapacityReservationOptions(){}
 }

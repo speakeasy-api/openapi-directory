@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApplicationResponse {
@@ -12,6 +13,7 @@ public class GetApplicationResponse {
      */
     
     public Object applicationDoesNotExistException;
+
     public GetApplicationResponse withApplicationDoesNotExistException(Object applicationDoesNotExistException) {
         this.applicationDoesNotExistException = applicationDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class GetApplicationResponse {
      */
     
     public Object applicationNameRequiredException;
+
     public GetApplicationResponse withApplicationNameRequiredException(Object applicationNameRequiredException) {
         this.applicationNameRequiredException = applicationNameRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class GetApplicationResponse {
     
     
     public String contentType;
+
     public GetApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetApplicationOutput getApplicationOutput;
+
     public GetApplicationResponse withGetApplicationOutput(org.openapis.openapi.models.shared.GetApplicationOutput getApplicationOutput) {
         this.getApplicationOutput = getApplicationOutput;
         return this;
@@ -49,6 +54,7 @@ public class GetApplicationResponse {
      */
     
     public Object invalidApplicationNameException;
+
     public GetApplicationResponse withInvalidApplicationNameException(Object invalidApplicationNameException) {
         this.invalidApplicationNameException = invalidApplicationNameException;
         return this;
@@ -56,6 +62,7 @@ public class GetApplicationResponse {
     
     
     public Integer statusCode;
+
     public GetApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

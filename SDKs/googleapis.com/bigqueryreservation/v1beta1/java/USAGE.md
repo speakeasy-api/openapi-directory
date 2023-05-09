@@ -3,16 +3,15 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1;
-import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption2;
-import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity;
 import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest;
 import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateResponse;
+import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity;
+import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1;
+import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.CapacityCommitmentInput;
 import org.openapis.openapi.models.shared.CapacityCommitmentPlanEnum;
 import org.openapis.openapi.models.shared.CapacityCommitmentRenewalPlanEnum;
-import org.openapis.openapi.models.shared.CapacityCommitmentInput;
 import org.openapis.openapi.models.shared.Status;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -22,61 +21,67 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest req = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest() {{
-                dollarXgafv = "2";
+            BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest req = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 capacityCommitmentInput = new CapacityCommitmentInput() {{
                     failureStatus = new Status() {{
-                        code = 592845;
+                        code = 715190;
                         details = new java.util.HashMap<String, Object>[]{{
                             add(new java.util.HashMap<String, Object>() {{
-                                put("unde", "nulla");
-                                put("corrupti", "illum");
-                                put("vel", "error");
-                                put("deserunt", "suscipit");
+                                put("nulla", "corrupti");
+                                put("illum", "vel");
+                                put("error", "deserunt");
                             }}),
                             add(new java.util.HashMap<String, Object>() {{
-                                put("magnam", "debitis");
-                                put("ipsa", "delectus");
+                                put("iure", "magnam");
+                                put("debitis", "ipsa");
                             }}),
                             add(new java.util.HashMap<String, Object>() {{
-                                put("suscipit", "molestiae");
-                                put("minus", "placeat");
+                                put("tempora", "suscipit");
+                                put("molestiae", "minus");
+                                put("placeat", "voluptatum");
+                                put("iusto", "excepturi");
+                            }}),
+                            add(new java.util.HashMap<String, Object>() {{
+                                put("recusandae", "temporibus");
+                                put("ab", "quis");
                             }}),
                         }};
-                        message = "voluptatum";
-                    }};
+                        message = "veritatis";
+                    }};;
                     multiRegionAuxiliary = false;
-                    plan = "TRIAL";
-                    renewalPlan = "TRIAL";
-                    slotCount = "nisi";
-                }};
-                accessToken = "recusandae";
-                alt = "proto";
-                callback = "ab";
-                capacityCommitmentId = "quis";
+                    plan = CapacityCommitmentPlanEnum.MONTHLY;
+                    renewalPlan = CapacityCommitmentRenewalPlanEnum.COMMITMENT_PLAN_UNSPECIFIED;
+                    slotCount = "ipsam";
+                }};;
+                accessToken = "repellendus";
+                alt = AltEnum.PROTO;
+                callback = "quo";
+                capacityCommitmentId = "odit";
                 enforceSingleAdminProjectPerOrg = false;
-                fields = "veritatis";
-                key = "deserunt";
-                oauthToken = "perferendis";
-                parent = "ipsam";
+                fields = "at";
+                key = "at";
+                oauthToken = "maiores";
                 prettyPrint = false;
-                quotaUser = "repellendus";
-                uploadType = "sapiente";
-                uploadProtocol = "quo";
-            }}            
+                quotaUser = "molestiae";
+                uploadType = "quod";
+                uploadProtocol = "quod";
+            }};            
 
             BigqueryreservationProjectsLocationsCapacityCommitmentsCreateResponse res = sdk.projects.bigqueryreservationProjectsLocationsCapacityCommitmentsCreate(req, new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity() {{
-                option1 = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1() {{
+                option1 = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1("esse", "totam") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.capacityCommitment.isPresent()) {
+            if (res.capacityCommitment != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

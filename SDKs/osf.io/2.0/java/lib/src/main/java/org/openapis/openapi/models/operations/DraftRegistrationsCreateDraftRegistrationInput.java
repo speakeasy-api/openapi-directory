@@ -12,9 +12,13 @@ public class DraftRegistrationsCreateDraftRegistrationInput {
      */
     @JsonProperty("attributes")
     public DraftRegistrationsCreateDraftRegistrationAttributesInput attributes;
+
     public DraftRegistrationsCreateDraftRegistrationInput withAttributes(DraftRegistrationsCreateDraftRegistrationAttributesInput attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public DraftRegistrationsCreateDraftRegistrationInput(@JsonProperty("attributes") DraftRegistrationsCreateDraftRegistrationAttributesInput attributes) {
+        this.attributes = attributes;
+  }
 }

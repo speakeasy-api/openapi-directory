@@ -12,6 +12,7 @@ public class GetRelationalDatabaseParametersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetRelationalDatabaseParametersRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -19,9 +20,13 @@ public class GetRelationalDatabaseParametersRequest {
     
     @JsonProperty("relationalDatabaseName")
     public String relationalDatabaseName;
+
     public GetRelationalDatabaseParametersRequest withRelationalDatabaseName(String relationalDatabaseName) {
         this.relationalDatabaseName = relationalDatabaseName;
         return this;
     }
     
+    public GetRelationalDatabaseParametersRequest(@JsonProperty("relationalDatabaseName") String relationalDatabaseName) {
+        this.relationalDatabaseName = relationalDatabaseName;
+  }
 }

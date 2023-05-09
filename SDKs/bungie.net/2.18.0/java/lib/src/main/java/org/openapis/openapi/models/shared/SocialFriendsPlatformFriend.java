@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class SocialFriendsPlatformFriend {
     
     public String bungieGlobalDisplayName;
+
     public SocialFriendsPlatformFriend withBungieGlobalDisplayName(String bungieGlobalDisplayName) {
         this.bungieGlobalDisplayName = bungieGlobalDisplayName;
         return this;
@@ -16,6 +17,7 @@ public class SocialFriendsPlatformFriend {
     
     
     public Long bungieGlobalDisplayNameCode;
+
     public SocialFriendsPlatformFriend withBungieGlobalDisplayNameCode(Long bungieGlobalDisplayNameCode) {
         this.bungieGlobalDisplayNameCode = bungieGlobalDisplayNameCode;
         return this;
@@ -23,6 +25,7 @@ public class SocialFriendsPlatformFriend {
     
     
     public Long bungieNetMembershipId;
+
     public SocialFriendsPlatformFriend withBungieNetMembershipId(Long bungieNetMembershipId) {
         this.bungieNetMembershipId = bungieNetMembershipId;
         return this;
@@ -30,6 +33,7 @@ public class SocialFriendsPlatformFriend {
     
     
     public Long destinyMembershipId;
+
     public SocialFriendsPlatformFriend withDestinyMembershipId(Long destinyMembershipId) {
         this.destinyMembershipId = destinyMembershipId;
         return this;
@@ -37,6 +41,7 @@ public class SocialFriendsPlatformFriend {
     
     
     public SocialFriendsPlatformFriendDestinyMembershipTypeEnum destinyMembershipType;
+
     public SocialFriendsPlatformFriend withDestinyMembershipType(SocialFriendsPlatformFriendDestinyMembershipTypeEnum destinyMembershipType) {
         this.destinyMembershipType = destinyMembershipType;
         return this;
@@ -44,6 +49,7 @@ public class SocialFriendsPlatformFriend {
     
     
     public Integer friendPlatform;
+
     public SocialFriendsPlatformFriend withFriendPlatform(Integer friendPlatform) {
         this.friendPlatform = friendPlatform;
         return this;
@@ -51,9 +57,11 @@ public class SocialFriendsPlatformFriend {
     
     
     public String platformDisplayName;
+
     public SocialFriendsPlatformFriend withPlatformDisplayName(String platformDisplayName) {
         this.platformDisplayName = platformDisplayName;
         return this;
     }
     
+    public SocialFriendsPlatformFriend(){}
 }

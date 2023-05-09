@@ -4,11 +4,21 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrderApiCreateInvoiceResponse {
     
+    public byte[] body;
+
+    public OrderApiCreateInvoiceResponse withBody(byte[] body) {
+        this.body = body;
+        return this;
+    }
+    
+    
     public String contentType;
+
     public OrderApiCreateInvoiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -18,24 +28,16 @@ public class OrderApiCreateInvoiceResponse {
      * OK
      */
     
-    public java.util.Map<String, Object> orderApiCreateInvoice200ApplicationJSONObject;
-    public OrderApiCreateInvoiceResponse withOrderApiCreateInvoice200ApplicationJSONObject(java.util.Map<String, Object> orderApiCreateInvoice200ApplicationJSONObject) {
-        this.orderApiCreateInvoice200ApplicationJSONObject = orderApiCreateInvoice200ApplicationJSONObject;
-        return this;
-    }
-    
-    /**
-     * OK
-     */
-    
-    public java.util.Map<String, Object> orderApiCreateInvoice200TextJSONObject;
-    public OrderApiCreateInvoiceResponse withOrderApiCreateInvoice200TextJSONObject(java.util.Map<String, Object> orderApiCreateInvoice200TextJSONObject) {
-        this.orderApiCreateInvoice200TextJSONObject = orderApiCreateInvoice200TextJSONObject;
+    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice;
+
+    public OrderApiCreateInvoiceResponse withRechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice) {
+        this.rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice = rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiInvoice;
         return this;
     }
     
     
     public Integer statusCode;
+
     public OrderApiCreateInvoiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +45,14 @@ public class OrderApiCreateInvoiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrderApiCreateInvoiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OrderApiCreateInvoiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

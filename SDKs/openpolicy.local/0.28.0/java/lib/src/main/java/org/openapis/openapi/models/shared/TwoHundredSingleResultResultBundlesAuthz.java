@@ -18,9 +18,11 @@ public class TwoHundredSingleResultResultBundlesAuthz {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public TwoHundredSingleResultResultBundlesAuthz withService(String service) {
         this.service = service;
         return this;
     }
     
+    public TwoHundredSingleResultResultBundlesAuthz(){}
 }

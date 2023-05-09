@@ -12,6 +12,7 @@ public class TerminateWorkflowExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childPolicy")
     public ChildPolicyEnum childPolicy;
+
     public TerminateWorkflowExecutionInput withChildPolicy(ChildPolicyEnum childPolicy) {
         this.childPolicy = childPolicy;
         return this;
@@ -20,6 +21,7 @@ public class TerminateWorkflowExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public TerminateWorkflowExecutionInput withDetails(String details) {
         this.details = details;
         return this;
@@ -27,6 +29,7 @@ public class TerminateWorkflowExecutionInput {
     
     @JsonProperty("domain")
     public String domain;
+
     public TerminateWorkflowExecutionInput withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -35,6 +38,7 @@ public class TerminateWorkflowExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public TerminateWorkflowExecutionInput withReason(String reason) {
         this.reason = reason;
         return this;
@@ -43,6 +47,7 @@ public class TerminateWorkflowExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runId")
     public String runId;
+
     public TerminateWorkflowExecutionInput withRunId(String runId) {
         this.runId = runId;
         return this;
@@ -50,9 +55,14 @@ public class TerminateWorkflowExecutionInput {
     
     @JsonProperty("workflowId")
     public String workflowId;
+
     public TerminateWorkflowExecutionInput withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public TerminateWorkflowExecutionInput(@JsonProperty("domain") String domain, @JsonProperty("workflowId") String workflowId) {
+        this.domain = domain;
+        this.workflowId = workflowId;
+  }
 }

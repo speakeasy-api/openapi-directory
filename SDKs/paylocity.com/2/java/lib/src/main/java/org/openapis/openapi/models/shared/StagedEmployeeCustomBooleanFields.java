@@ -12,6 +12,7 @@ public class StagedEmployeeCustomBooleanFields {
      */
     @JsonProperty("category")
     public StagedEmployeeCustomBooleanFieldsCategoryEnum category;
+
     public StagedEmployeeCustomBooleanFields withCategory(StagedEmployeeCustomBooleanFieldsCategoryEnum category) {
         this.category = category;
         return this;
@@ -22,6 +23,7 @@ public class StagedEmployeeCustomBooleanFields {
      */
     @JsonProperty("label")
     public String label;
+
     public StagedEmployeeCustomBooleanFields withLabel(String label) {
         this.label = label;
         return this;
@@ -32,9 +34,15 @@ public class StagedEmployeeCustomBooleanFields {
      */
     @JsonProperty("value")
     public Boolean value;
+
     public StagedEmployeeCustomBooleanFields withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public StagedEmployeeCustomBooleanFields(@JsonProperty("category") StagedEmployeeCustomBooleanFieldsCategoryEnum category, @JsonProperty("label") String label, @JsonProperty("value") Boolean value) {
+        this.category = category;
+        this.label = label;
+        this.value = value;
+  }
 }

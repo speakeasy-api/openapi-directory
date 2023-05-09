@@ -15,9 +15,11 @@ public class UpdateRoutingControlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingControl")
     public RoutingControl routingControl;
+
     public UpdateRoutingControlResponse withRoutingControl(RoutingControl routingControl) {
         this.routingControl = routingControl;
         return this;
     }
     
+    public UpdateRoutingControlResponse(){}
 }

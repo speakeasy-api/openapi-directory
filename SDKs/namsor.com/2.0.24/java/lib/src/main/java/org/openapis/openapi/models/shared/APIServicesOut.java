@@ -18,9 +18,11 @@ public class APIServicesOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiServices")
     public APIServiceOut[] apiServices;
+
     public APIServicesOut withApiServices(APIServiceOut[] apiServices) {
         this.apiServices = apiServices;
         return this;
     }
     
+    public APIServicesOut(){}
 }

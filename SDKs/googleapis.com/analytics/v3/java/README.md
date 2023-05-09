@@ -16,14 +16,13 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AnalyticsDataGaGetSecurityOption1;
-import org.openapis.openapi.models.operations.AnalyticsDataGaGetSecurityOption2;
-import org.openapis.openapi.models.operations.AnalyticsDataGaGetSecurity;
 import org.openapis.openapi.models.operations.AnalyticsDataGaGetOutputEnum;
-import org.openapis.openapi.models.operations.AnalyticsDataGaGetSamplingLevelEnum;
 import org.openapis.openapi.models.operations.AnalyticsDataGaGetRequest;
 import org.openapis.openapi.models.operations.AnalyticsDataGaGetResponse;
+import org.openapis.openapi.models.operations.AnalyticsDataGaGetSamplingLevelEnum;
+import org.openapis.openapi.models.operations.AnalyticsDataGaGetSecurity;
+import org.openapis.openapi.models.operations.AnalyticsDataGaGetSecurityOption1;
+import org.openapis.openapi.models.operations.AnalyticsDataGaGetSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
@@ -32,42 +31,40 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AnalyticsDataGaGetRequest req = new AnalyticsDataGaGetRequest() {{
-                alt = "json";
-                dimensions = "corrupti";
-                endDate = "provident";
-                fields = "distinctio";
-                filters = "quibusdam";
-                ids = "unde";
+            AnalyticsDataGaGetRequest req = new AnalyticsDataGaGetRequest("corrupti", "provident", "distinctio", "quibusdam") {{
+                alt = AltEnum.JSON;
+                dimensions = "unde";
+                fields = "nulla";
+                filters = "corrupti";
                 includeEmptyRows = false;
-                key = "nulla";
-                maxResults = 544883;
-                metrics = "illum";
-                oauthToken = "vel";
-                output = "json";
+                key = "illum";
+                maxResults = 423655L;
+                oauthToken = "error";
+                output = AnalyticsDataGaGetOutputEnum.JSON;
                 prettyPrint = false;
-                quotaUser = "deserunt";
-                samplingLevel = "FASTER";
-                segment = "iure";
-                sort = "magnam";
-                startDate = "debitis";
-                startIndex = 56713;
+                quotaUser = "suscipit";
+                samplingLevel = AnalyticsDataGaGetSamplingLevelEnum.FASTER;
+                segment = "magnam";
+                sort = "debitis";
+                startIndex = 56713L;
                 userIp = "delectus";
-            }}            
+            }};            
 
             AnalyticsDataGaGetResponse res = sdk.data.analyticsDataGaGet(req, new AnalyticsDataGaGetSecurity() {{
-                option1 = new AnalyticsDataGaGetSecurityOption1() {{
+                option1 = new AnalyticsDataGaGetSecurityOption1("tempora", "suscipit") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.gaData.isPresent()) {
+            if (res.gaData != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -75,108 +72,108 @@ public class Application {
 ## Available Resources and Operations
 
 
-### data
+### [data](docs/data/README.md)
 
-* `analyticsDataGaGet` - Returns Analytics data for a view (profile).
-* `analyticsDataMcfGet` - Returns Analytics Multi-Channel Funnels data for a view (profile).
-* `analyticsDataRealtimeGet` - Returns real time data for a view (profile).
+* [analyticsDataGaGet](docs/data/README.md#analyticsdatagaget) - Returns Analytics data for a view (profile).
+* [analyticsDataMcfGet](docs/data/README.md#analyticsdatamcfget) - Returns Analytics Multi-Channel Funnels data for a view (profile).
+* [analyticsDataRealtimeGet](docs/data/README.md#analyticsdatarealtimeget) - Returns real time data for a view (profile).
 
-### management
+### [management](docs/management/README.md)
 
-* `analyticsManagementAccountSummariesList` - Lists account summaries (lightweight tree comprised of accounts/properties/profiles) to which the user has access.
-* `analyticsManagementAccountUserLinksDelete` - Removes a user from the given account.
-* `analyticsManagementAccountUserLinksInsert` - Adds a new user to the given account.
-* `analyticsManagementAccountUserLinksList` - Lists account-user links for a given account.
-* `analyticsManagementAccountUserLinksUpdate` - Updates permissions for an existing user on the given account.
-* `analyticsManagementAccountsList` - Lists all accounts to which the user has access.
-* `analyticsManagementClientIdHashClientId` - Hashes the given Client ID.
-* `analyticsManagementCustomDataSourcesList` - List custom data sources to which the user has access.
-* `analyticsManagementCustomDimensionsGet` - Get a custom dimension to which the user has access.
-* `analyticsManagementCustomDimensionsInsert` - Create a new custom dimension.
-* `analyticsManagementCustomDimensionsList` - Lists custom dimensions to which the user has access.
-* `analyticsManagementCustomDimensionsPatch` - Updates an existing custom dimension. This method supports patch semantics.
-* `analyticsManagementCustomDimensionsUpdate` - Updates an existing custom dimension.
-* `analyticsManagementCustomMetricsGet` - Get a custom metric to which the user has access.
-* `analyticsManagementCustomMetricsInsert` - Create a new custom metric.
-* `analyticsManagementCustomMetricsList` - Lists custom metrics to which the user has access.
-* `analyticsManagementCustomMetricsPatch` - Updates an existing custom metric. This method supports patch semantics.
-* `analyticsManagementCustomMetricsUpdate` - Updates an existing custom metric.
-* `analyticsManagementExperimentsDelete` - Delete an experiment.
-* `analyticsManagementExperimentsGet` - Returns an experiment to which the user has access.
-* `analyticsManagementExperimentsInsert` - Create a new experiment.
-* `analyticsManagementExperimentsList` - Lists experiments to which the user has access.
-* `analyticsManagementExperimentsPatch` - Update an existing experiment. This method supports patch semantics.
-* `analyticsManagementExperimentsUpdate` - Update an existing experiment.
-* `analyticsManagementFiltersDelete` - Delete a filter.
-* `analyticsManagementFiltersGet` - Returns filters to which the user has access.
-* `analyticsManagementFiltersInsert` - Create a new filter.
-* `analyticsManagementFiltersList` - Lists all filters for an account
-* `analyticsManagementFiltersPatch` - Updates an existing filter. This method supports patch semantics.
-* `analyticsManagementFiltersUpdate` - Updates an existing filter.
-* `analyticsManagementGoalsGet` - Gets a goal to which the user has access.
-* `analyticsManagementGoalsInsert` - Create a new goal.
-* `analyticsManagementGoalsList` - Lists goals to which the user has access.
-* `analyticsManagementGoalsPatch` - Updates an existing goal. This method supports patch semantics.
-* `analyticsManagementGoalsUpdate` - Updates an existing goal.
-* `analyticsManagementProfileFilterLinksDelete` - Delete a profile filter link.
-* `analyticsManagementProfileFilterLinksGet` - Returns a single profile filter link.
-* `analyticsManagementProfileFilterLinksInsert` - Create a new profile filter link.
-* `analyticsManagementProfileFilterLinksList` - Lists all profile filter links for a profile.
-* `analyticsManagementProfileFilterLinksPatch` - Update an existing profile filter link. This method supports patch semantics.
-* `analyticsManagementProfileFilterLinksUpdate` - Update an existing profile filter link.
-* `analyticsManagementProfileUserLinksDelete` - Removes a user from the given view (profile).
-* `analyticsManagementProfileUserLinksInsert` - Adds a new user to the given view (profile).
-* `analyticsManagementProfileUserLinksList` - Lists profile-user links for a given view (profile).
-* `analyticsManagementProfileUserLinksUpdate` - Updates permissions for an existing user on the given view (profile).
-* `analyticsManagementProfilesDelete` - Deletes a view (profile).
-* `analyticsManagementProfilesGet` - Gets a view (profile) to which the user has access.
-* `analyticsManagementProfilesInsert` - Create a new view (profile).
-* `analyticsManagementProfilesList` - Lists views (profiles) to which the user has access.
-* `analyticsManagementProfilesPatch` - Updates an existing view (profile). This method supports patch semantics.
-* `analyticsManagementProfilesUpdate` - Updates an existing view (profile).
-* `analyticsManagementRemarketingAudienceDelete` - Delete a remarketing audience.
-* `analyticsManagementRemarketingAudienceGet` - Gets a remarketing audience to which the user has access.
-* `analyticsManagementRemarketingAudienceInsert` - Creates a new remarketing audience.
-* `analyticsManagementRemarketingAudienceList` - Lists remarketing audiences to which the user has access.
-* `analyticsManagementRemarketingAudiencePatch` - Updates an existing remarketing audience. This method supports patch semantics.
-* `analyticsManagementRemarketingAudienceUpdate` - Updates an existing remarketing audience.
-* `analyticsManagementSegmentsList` - Lists segments to which the user has access.
-* `analyticsManagementUnsampledReportsDelete` - Deletes an unsampled report.
-* `analyticsManagementUnsampledReportsGet` - Returns a single unsampled report.
-* `analyticsManagementUnsampledReportsInsert` - Create a new unsampled report.
-* `analyticsManagementUnsampledReportsList` - Lists unsampled reports to which the user has access.
-* `analyticsManagementUploadsDeleteUploadData` - Delete data associated with a previous upload.
-* `analyticsManagementUploadsGet` - List uploads to which the user has access.
-* `analyticsManagementUploadsList` - List uploads to which the user has access.
-* `analyticsManagementUploadsUploadData` - Upload data for a custom data source.
-* `analyticsManagementWebPropertyAdWordsLinksDelete` - Deletes a web property-Google Ads link.
-* `analyticsManagementWebPropertyAdWordsLinksGet` - Returns a web property-Google Ads link to which the user has access.
-* `analyticsManagementWebPropertyAdWordsLinksInsert` - Creates a webProperty-Google Ads link.
-* `analyticsManagementWebPropertyAdWordsLinksList` - Lists webProperty-Google Ads links for a given web property.
-* `analyticsManagementWebPropertyAdWordsLinksPatch` - Updates an existing webProperty-Google Ads link. This method supports patch semantics.
-* `analyticsManagementWebPropertyAdWordsLinksUpdate` - Updates an existing webProperty-Google Ads link.
-* `analyticsManagementWebpropertiesGet` - Gets a web property to which the user has access.
-* `analyticsManagementWebpropertiesInsert` - Create a new property if the account has fewer than 20 properties. Web properties are visible in the Google Analytics interface only if they have at least one profile.
-* `analyticsManagementWebpropertiesList` - Lists web properties to which the user has access.
-* `analyticsManagementWebpropertiesPatch` - Updates an existing web property. This method supports patch semantics.
-* `analyticsManagementWebpropertiesUpdate` - Updates an existing web property.
-* `analyticsManagementWebpropertyUserLinksDelete` - Removes a user from the given web property.
-* `analyticsManagementWebpropertyUserLinksInsert` - Adds a new user to the given web property.
-* `analyticsManagementWebpropertyUserLinksList` - Lists webProperty-user links for a given web property.
-* `analyticsManagementWebpropertyUserLinksUpdate` - Updates permissions for an existing user on the given web property.
+* [analyticsManagementAccountSummariesList](docs/management/README.md#analyticsmanagementaccountsummarieslist) - Lists account summaries (lightweight tree comprised of accounts/properties/profiles) to which the user has access.
+* [analyticsManagementAccountUserLinksDelete](docs/management/README.md#analyticsmanagementaccountuserlinksdelete) - Removes a user from the given account.
+* [analyticsManagementAccountUserLinksInsert](docs/management/README.md#analyticsmanagementaccountuserlinksinsert) - Adds a new user to the given account.
+* [analyticsManagementAccountUserLinksList](docs/management/README.md#analyticsmanagementaccountuserlinkslist) - Lists account-user links for a given account.
+* [analyticsManagementAccountUserLinksUpdate](docs/management/README.md#analyticsmanagementaccountuserlinksupdate) - Updates permissions for an existing user on the given account.
+* [analyticsManagementAccountsList](docs/management/README.md#analyticsmanagementaccountslist) - Lists all accounts to which the user has access.
+* [analyticsManagementClientIdHashClientId](docs/management/README.md#analyticsmanagementclientidhashclientid) - Hashes the given Client ID.
+* [analyticsManagementCustomDataSourcesList](docs/management/README.md#analyticsmanagementcustomdatasourceslist) - List custom data sources to which the user has access.
+* [analyticsManagementCustomDimensionsGet](docs/management/README.md#analyticsmanagementcustomdimensionsget) - Get a custom dimension to which the user has access.
+* [analyticsManagementCustomDimensionsInsert](docs/management/README.md#analyticsmanagementcustomdimensionsinsert) - Create a new custom dimension.
+* [analyticsManagementCustomDimensionsList](docs/management/README.md#analyticsmanagementcustomdimensionslist) - Lists custom dimensions to which the user has access.
+* [analyticsManagementCustomDimensionsPatch](docs/management/README.md#analyticsmanagementcustomdimensionspatch) - Updates an existing custom dimension. This method supports patch semantics.
+* [analyticsManagementCustomDimensionsUpdate](docs/management/README.md#analyticsmanagementcustomdimensionsupdate) - Updates an existing custom dimension.
+* [analyticsManagementCustomMetricsGet](docs/management/README.md#analyticsmanagementcustommetricsget) - Get a custom metric to which the user has access.
+* [analyticsManagementCustomMetricsInsert](docs/management/README.md#analyticsmanagementcustommetricsinsert) - Create a new custom metric.
+* [analyticsManagementCustomMetricsList](docs/management/README.md#analyticsmanagementcustommetricslist) - Lists custom metrics to which the user has access.
+* [analyticsManagementCustomMetricsPatch](docs/management/README.md#analyticsmanagementcustommetricspatch) - Updates an existing custom metric. This method supports patch semantics.
+* [analyticsManagementCustomMetricsUpdate](docs/management/README.md#analyticsmanagementcustommetricsupdate) - Updates an existing custom metric.
+* [analyticsManagementExperimentsDelete](docs/management/README.md#analyticsmanagementexperimentsdelete) - Delete an experiment.
+* [analyticsManagementExperimentsGet](docs/management/README.md#analyticsmanagementexperimentsget) - Returns an experiment to which the user has access.
+* [analyticsManagementExperimentsInsert](docs/management/README.md#analyticsmanagementexperimentsinsert) - Create a new experiment.
+* [analyticsManagementExperimentsList](docs/management/README.md#analyticsmanagementexperimentslist) - Lists experiments to which the user has access.
+* [analyticsManagementExperimentsPatch](docs/management/README.md#analyticsmanagementexperimentspatch) - Update an existing experiment. This method supports patch semantics.
+* [analyticsManagementExperimentsUpdate](docs/management/README.md#analyticsmanagementexperimentsupdate) - Update an existing experiment.
+* [analyticsManagementFiltersDelete](docs/management/README.md#analyticsmanagementfiltersdelete) - Delete a filter.
+* [analyticsManagementFiltersGet](docs/management/README.md#analyticsmanagementfiltersget) - Returns filters to which the user has access.
+* [analyticsManagementFiltersInsert](docs/management/README.md#analyticsmanagementfiltersinsert) - Create a new filter.
+* [analyticsManagementFiltersList](docs/management/README.md#analyticsmanagementfilterslist) - Lists all filters for an account
+* [analyticsManagementFiltersPatch](docs/management/README.md#analyticsmanagementfilterspatch) - Updates an existing filter. This method supports patch semantics.
+* [analyticsManagementFiltersUpdate](docs/management/README.md#analyticsmanagementfiltersupdate) - Updates an existing filter.
+* [analyticsManagementGoalsGet](docs/management/README.md#analyticsmanagementgoalsget) - Gets a goal to which the user has access.
+* [analyticsManagementGoalsInsert](docs/management/README.md#analyticsmanagementgoalsinsert) - Create a new goal.
+* [analyticsManagementGoalsList](docs/management/README.md#analyticsmanagementgoalslist) - Lists goals to which the user has access.
+* [analyticsManagementGoalsPatch](docs/management/README.md#analyticsmanagementgoalspatch) - Updates an existing goal. This method supports patch semantics.
+* [analyticsManagementGoalsUpdate](docs/management/README.md#analyticsmanagementgoalsupdate) - Updates an existing goal.
+* [analyticsManagementProfileFilterLinksDelete](docs/management/README.md#analyticsmanagementprofilefilterlinksdelete) - Delete a profile filter link.
+* [analyticsManagementProfileFilterLinksGet](docs/management/README.md#analyticsmanagementprofilefilterlinksget) - Returns a single profile filter link.
+* [analyticsManagementProfileFilterLinksInsert](docs/management/README.md#analyticsmanagementprofilefilterlinksinsert) - Create a new profile filter link.
+* [analyticsManagementProfileFilterLinksList](docs/management/README.md#analyticsmanagementprofilefilterlinkslist) - Lists all profile filter links for a profile.
+* [analyticsManagementProfileFilterLinksPatch](docs/management/README.md#analyticsmanagementprofilefilterlinkspatch) - Update an existing profile filter link. This method supports patch semantics.
+* [analyticsManagementProfileFilterLinksUpdate](docs/management/README.md#analyticsmanagementprofilefilterlinksupdate) - Update an existing profile filter link.
+* [analyticsManagementProfileUserLinksDelete](docs/management/README.md#analyticsmanagementprofileuserlinksdelete) - Removes a user from the given view (profile).
+* [analyticsManagementProfileUserLinksInsert](docs/management/README.md#analyticsmanagementprofileuserlinksinsert) - Adds a new user to the given view (profile).
+* [analyticsManagementProfileUserLinksList](docs/management/README.md#analyticsmanagementprofileuserlinkslist) - Lists profile-user links for a given view (profile).
+* [analyticsManagementProfileUserLinksUpdate](docs/management/README.md#analyticsmanagementprofileuserlinksupdate) - Updates permissions for an existing user on the given view (profile).
+* [analyticsManagementProfilesDelete](docs/management/README.md#analyticsmanagementprofilesdelete) - Deletes a view (profile).
+* [analyticsManagementProfilesGet](docs/management/README.md#analyticsmanagementprofilesget) - Gets a view (profile) to which the user has access.
+* [analyticsManagementProfilesInsert](docs/management/README.md#analyticsmanagementprofilesinsert) - Create a new view (profile).
+* [analyticsManagementProfilesList](docs/management/README.md#analyticsmanagementprofileslist) - Lists views (profiles) to which the user has access.
+* [analyticsManagementProfilesPatch](docs/management/README.md#analyticsmanagementprofilespatch) - Updates an existing view (profile). This method supports patch semantics.
+* [analyticsManagementProfilesUpdate](docs/management/README.md#analyticsmanagementprofilesupdate) - Updates an existing view (profile).
+* [analyticsManagementRemarketingAudienceDelete](docs/management/README.md#analyticsmanagementremarketingaudiencedelete) - Delete a remarketing audience.
+* [analyticsManagementRemarketingAudienceGet](docs/management/README.md#analyticsmanagementremarketingaudienceget) - Gets a remarketing audience to which the user has access.
+* [analyticsManagementRemarketingAudienceInsert](docs/management/README.md#analyticsmanagementremarketingaudienceinsert) - Creates a new remarketing audience.
+* [analyticsManagementRemarketingAudienceList](docs/management/README.md#analyticsmanagementremarketingaudiencelist) - Lists remarketing audiences to which the user has access.
+* [analyticsManagementRemarketingAudiencePatch](docs/management/README.md#analyticsmanagementremarketingaudiencepatch) - Updates an existing remarketing audience. This method supports patch semantics.
+* [analyticsManagementRemarketingAudienceUpdate](docs/management/README.md#analyticsmanagementremarketingaudienceupdate) - Updates an existing remarketing audience.
+* [analyticsManagementSegmentsList](docs/management/README.md#analyticsmanagementsegmentslist) - Lists segments to which the user has access.
+* [analyticsManagementUnsampledReportsDelete](docs/management/README.md#analyticsmanagementunsampledreportsdelete) - Deletes an unsampled report.
+* [analyticsManagementUnsampledReportsGet](docs/management/README.md#analyticsmanagementunsampledreportsget) - Returns a single unsampled report.
+* [analyticsManagementUnsampledReportsInsert](docs/management/README.md#analyticsmanagementunsampledreportsinsert) - Create a new unsampled report.
+* [analyticsManagementUnsampledReportsList](docs/management/README.md#analyticsmanagementunsampledreportslist) - Lists unsampled reports to which the user has access.
+* [analyticsManagementUploadsDeleteUploadData](docs/management/README.md#analyticsmanagementuploadsdeleteuploaddata) - Delete data associated with a previous upload.
+* [analyticsManagementUploadsGet](docs/management/README.md#analyticsmanagementuploadsget) - List uploads to which the user has access.
+* [analyticsManagementUploadsList](docs/management/README.md#analyticsmanagementuploadslist) - List uploads to which the user has access.
+* [analyticsManagementUploadsUploadData](docs/management/README.md#analyticsmanagementuploadsuploaddata) - Upload data for a custom data source.
+* [analyticsManagementWebPropertyAdWordsLinksDelete](docs/management/README.md#analyticsmanagementwebpropertyadwordslinksdelete) - Deletes a web property-Google Ads link.
+* [analyticsManagementWebPropertyAdWordsLinksGet](docs/management/README.md#analyticsmanagementwebpropertyadwordslinksget) - Returns a web property-Google Ads link to which the user has access.
+* [analyticsManagementWebPropertyAdWordsLinksInsert](docs/management/README.md#analyticsmanagementwebpropertyadwordslinksinsert) - Creates a webProperty-Google Ads link.
+* [analyticsManagementWebPropertyAdWordsLinksList](docs/management/README.md#analyticsmanagementwebpropertyadwordslinkslist) - Lists webProperty-Google Ads links for a given web property.
+* [analyticsManagementWebPropertyAdWordsLinksPatch](docs/management/README.md#analyticsmanagementwebpropertyadwordslinkspatch) - Updates an existing webProperty-Google Ads link. This method supports patch semantics.
+* [analyticsManagementWebPropertyAdWordsLinksUpdate](docs/management/README.md#analyticsmanagementwebpropertyadwordslinksupdate) - Updates an existing webProperty-Google Ads link.
+* [analyticsManagementWebpropertiesGet](docs/management/README.md#analyticsmanagementwebpropertiesget) - Gets a web property to which the user has access.
+* [analyticsManagementWebpropertiesInsert](docs/management/README.md#analyticsmanagementwebpropertiesinsert) - Create a new property if the account has fewer than 20 properties. Web properties are visible in the Google Analytics interface only if they have at least one profile.
+* [analyticsManagementWebpropertiesList](docs/management/README.md#analyticsmanagementwebpropertieslist) - Lists web properties to which the user has access.
+* [analyticsManagementWebpropertiesPatch](docs/management/README.md#analyticsmanagementwebpropertiespatch) - Updates an existing web property. This method supports patch semantics.
+* [analyticsManagementWebpropertiesUpdate](docs/management/README.md#analyticsmanagementwebpropertiesupdate) - Updates an existing web property.
+* [analyticsManagementWebpropertyUserLinksDelete](docs/management/README.md#analyticsmanagementwebpropertyuserlinksdelete) - Removes a user from the given web property.
+* [analyticsManagementWebpropertyUserLinksInsert](docs/management/README.md#analyticsmanagementwebpropertyuserlinksinsert) - Adds a new user to the given web property.
+* [analyticsManagementWebpropertyUserLinksList](docs/management/README.md#analyticsmanagementwebpropertyuserlinkslist) - Lists webProperty-user links for a given web property.
+* [analyticsManagementWebpropertyUserLinksUpdate](docs/management/README.md#analyticsmanagementwebpropertyuserlinksupdate) - Updates permissions for an existing user on the given web property.
 
-### metadata
+### [metadata](docs/metadata/README.md)
 
-* `analyticsMetadataColumnsList` - Lists all columns for a report type
+* [analyticsMetadataColumnsList](docs/metadata/README.md#analyticsmetadatacolumnslist) - Lists all columns for a report type
 
-### provisioning
+### [provisioning](docs/provisioning/README.md)
 
-* `analyticsProvisioningCreateAccountTicket` - Creates an account ticket.
-* `analyticsProvisioningCreateAccountTree` - Provision account.
+* [analyticsProvisioningCreateAccountTicket](docs/provisioning/README.md#analyticsprovisioningcreateaccountticket) - Creates an account ticket.
+* [analyticsProvisioningCreateAccountTree](docs/provisioning/README.md#analyticsprovisioningcreateaccounttree) - Provision account.
 
-### userDeletion
+### [userDeletion](docs/userdeletion/README.md)
 
-* `analyticsUserDeletionUserDeletionRequestUpsert` - Insert or update a user deletion requests.
+* [analyticsUserDeletionUserDeletionRequestUpsert](docs/userdeletion/README.md#analyticsuserdeletionuserdeletionrequestupsert) - Insert or update a user deletion requests.
 <!-- End SDK Available Operations -->
 
 ### Maturity

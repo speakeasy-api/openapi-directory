@@ -67,10 +67,8 @@ public class FreightValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateUpdateFreightValuesResponse res = new org.openapis.openapi.models.operations.CreateUpdateFreightValuesResponse() {{
+        org.openapis.openapi.models.operations.CreateUpdateFreightValuesResponse res = new org.openapis.openapi.models.operations.CreateUpdateFreightValuesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class FreightValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FreightValuesResponse res = new org.openapis.openapi.models.operations.FreightValuesResponse() {{
+        org.openapis.openapi.models.operations.FreightValuesResponse res = new org.openapis.openapi.models.operations.FreightValuesResponse(contentType, httpRes.statusCode()) {{
             freightValues200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

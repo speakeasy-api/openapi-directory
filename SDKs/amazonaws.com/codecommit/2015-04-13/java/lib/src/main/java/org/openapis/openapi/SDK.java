@@ -221,6 +221,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -258,7 +263,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateApprovalRuleTemplateWithRepositoryResponse res = new org.openapis.openapi.models.operations.AssociateApprovalRuleTemplateWithRepositoryResponse() {{
+        org.openapis.openapi.models.operations.AssociateApprovalRuleTemplateWithRepositoryResponse res = new org.openapis.openapi.models.operations.AssociateApprovalRuleTemplateWithRepositoryResponse(contentType, httpRes.statusCode()) {{
             approvalRuleTemplateNameRequiredException = null;
             invalidApprovalRuleTemplateNameException = null;
             approvalRuleTemplateDoesNotExistException = null;
@@ -272,8 +277,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -400,7 +403,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchAssociateApprovalRuleTemplateWithRepositoriesResponse res = new org.openapis.openapi.models.operations.BatchAssociateApprovalRuleTemplateWithRepositoriesResponse() {{
+        org.openapis.openapi.models.operations.BatchAssociateApprovalRuleTemplateWithRepositoriesResponse res = new org.openapis.openapi.models.operations.BatchAssociateApprovalRuleTemplateWithRepositoriesResponse(contentType, httpRes.statusCode()) {{
             batchAssociateApprovalRuleTemplateWithRepositoriesOutput = null;
             approvalRuleTemplateNameRequiredException = null;
             invalidApprovalRuleTemplateNameException = null;
@@ -413,8 +416,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,7 +533,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchDescribeMergeConflictsResponse res = new org.openapis.openapi.models.operations.BatchDescribeMergeConflictsResponse() {{
+        org.openapis.openapi.models.operations.BatchDescribeMergeConflictsResponse res = new org.openapis.openapi.models.operations.BatchDescribeMergeConflictsResponse(contentType, httpRes.statusCode()) {{
             batchDescribeMergeConflictsOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -556,8 +557,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -752,7 +751,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchDisassociateApprovalRuleTemplateFromRepositoriesResponse res = new org.openapis.openapi.models.operations.BatchDisassociateApprovalRuleTemplateFromRepositoriesResponse() {{
+        org.openapis.openapi.models.operations.BatchDisassociateApprovalRuleTemplateFromRepositoriesResponse res = new org.openapis.openapi.models.operations.BatchDisassociateApprovalRuleTemplateFromRepositoriesResponse(contentType, httpRes.statusCode()) {{
             batchDisassociateApprovalRuleTemplateFromRepositoriesOutput = null;
             approvalRuleTemplateNameRequiredException = null;
             invalidApprovalRuleTemplateNameException = null;
@@ -765,8 +764,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -884,7 +881,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchGetCommitsResponse res = new org.openapis.openapi.models.operations.BatchGetCommitsResponse() {{
+        org.openapis.openapi.models.operations.BatchGetCommitsResponse res = new org.openapis.openapi.models.operations.BatchGetCommitsResponse(contentType, httpRes.statusCode()) {{
             batchGetCommitsOutput = null;
             commitIdsListRequiredException = null;
             commitIdsLimitExceededException = null;
@@ -897,8 +894,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1016,7 +1011,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchGetRepositoriesResponse res = new org.openapis.openapi.models.operations.BatchGetRepositoriesResponse() {{
+        org.openapis.openapi.models.operations.BatchGetRepositoriesResponse res = new org.openapis.openapi.models.operations.BatchGetRepositoriesResponse(contentType, httpRes.statusCode()) {{
             batchGetRepositoriesOutput = null;
             repositoryNamesRequiredException = null;
             maximumRepositoryNamesExceededException = null;
@@ -1027,8 +1022,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1132,7 +1125,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateApprovalRuleTemplateResponse res = new org.openapis.openapi.models.operations.CreateApprovalRuleTemplateResponse() {{
+        org.openapis.openapi.models.operations.CreateApprovalRuleTemplateResponse res = new org.openapis.openapi.models.operations.CreateApprovalRuleTemplateResponse(contentType, httpRes.statusCode()) {{
             createApprovalRuleTemplateOutput = null;
             approvalRuleTemplateNameRequiredException = null;
             invalidApprovalRuleTemplateNameException = null;
@@ -1142,8 +1135,6 @@ public class SDK {
             invalidApprovalRuleTemplateDescriptionException = null;
             numberOfRuleTemplatesExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1240,7 +1231,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateBranchResponse res = new org.openapis.openapi.models.operations.CreateBranchResponse() {{
+        org.openapis.openapi.models.operations.CreateBranchResponse res = new org.openapis.openapi.models.operations.CreateBranchResponse(contentType, httpRes.statusCode()) {{
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
             repositoryDoesNotExistException = null;
@@ -1256,8 +1247,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1398,7 +1387,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCommitResponse res = new org.openapis.openapi.models.operations.CreateCommitResponse() {{
+        org.openapis.openapi.models.operations.CreateCommitResponse res = new org.openapis.openapi.models.operations.CreateCommitResponse(contentType, httpRes.statusCode()) {{
             createCommitOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -1439,8 +1428,6 @@ public class SDK {
             directoryNameConflictsWithFileNameException = null;
             filePathConflictsWithSubmodulePathException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1754,7 +1741,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePullRequestResponse res = new org.openapis.openapi.models.operations.CreatePullRequestResponse() {{
+        org.openapis.openapi.models.operations.CreatePullRequestResponse res = new org.openapis.openapi.models.operations.CreatePullRequestResponse(contentType, httpRes.statusCode()) {{
             createPullRequestOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -1782,8 +1769,6 @@ public class SDK {
             maximumOpenPullRequestsExceededException = null;
             sourceAndDestinationAreSameException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2006,7 +1991,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePullRequestApprovalRuleResponse res = new org.openapis.openapi.models.operations.CreatePullRequestApprovalRuleResponse() {{
+        org.openapis.openapi.models.operations.CreatePullRequestApprovalRuleResponse res = new org.openapis.openapi.models.operations.CreatePullRequestApprovalRuleResponse(contentType, httpRes.statusCode()) {{
             createPullRequestApprovalRuleOutput = null;
             approvalRuleNameRequiredException = null;
             invalidApprovalRuleNameException = null;
@@ -2024,8 +2009,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2178,7 +2161,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRepositoryResponse res = new org.openapis.openapi.models.operations.CreateRepositoryResponse() {{
+        org.openapis.openapi.models.operations.CreateRepositoryResponse res = new org.openapis.openapi.models.operations.CreateRepositoryResponse(contentType, httpRes.statusCode()) {{
             createRepositoryOutput = null;
             repositoryNameExistsException = null;
             repositoryNameRequiredException = null;
@@ -2195,8 +2178,6 @@ public class SDK {
             invalidSystemTagUsageException = null;
             tagPolicyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2342,7 +2323,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateUnreferencedMergeCommitResponse res = new org.openapis.openapi.models.operations.CreateUnreferencedMergeCommitResponse() {{
+        org.openapis.openapi.models.operations.CreateUnreferencedMergeCommitResponse res = new org.openapis.openapi.models.operations.CreateUnreferencedMergeCommitResponse(contentType, httpRes.statusCode()) {{
             createUnreferencedMergeCommitOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -2381,8 +2362,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2682,14 +2661,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteApprovalRuleTemplateResponse res = new org.openapis.openapi.models.operations.DeleteApprovalRuleTemplateResponse() {{
+        org.openapis.openapi.models.operations.DeleteApprovalRuleTemplateResponse res = new org.openapis.openapi.models.operations.DeleteApprovalRuleTemplateResponse(contentType, httpRes.statusCode()) {{
             deleteApprovalRuleTemplateOutput = null;
             approvalRuleTemplateNameRequiredException = null;
             invalidApprovalRuleTemplateNameException = null;
             approvalRuleTemplateInUseException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2758,7 +2735,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteBranchResponse res = new org.openapis.openapi.models.operations.DeleteBranchResponse() {{
+        org.openapis.openapi.models.operations.DeleteBranchResponse res = new org.openapis.openapi.models.operations.DeleteBranchResponse(contentType, httpRes.statusCode()) {{
             deleteBranchOutput = null;
             repositoryNameRequiredException = null;
             repositoryDoesNotExistException = null;
@@ -2772,8 +2749,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2898,15 +2873,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCommentContentResponse res = new org.openapis.openapi.models.operations.DeleteCommentContentResponse() {{
+        org.openapis.openapi.models.operations.DeleteCommentContentResponse res = new org.openapis.openapi.models.operations.DeleteCommentContentResponse(contentType, httpRes.statusCode()) {{
             deleteCommentContentOutput = null;
             commentDoesNotExistException = null;
             commentIdRequiredException = null;
             invalidCommentIdException = null;
             commentDeletedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2982,7 +2955,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFileResponse res = new org.openapis.openapi.models.operations.DeleteFileResponse() {{
+        org.openapis.openapi.models.operations.DeleteFileResponse res = new org.openapis.openapi.models.operations.DeleteFileResponse(contentType, httpRes.statusCode()) {{
             deleteFileOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -3007,8 +2980,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3210,7 +3181,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePullRequestApprovalRuleResponse res = new org.openapis.openapi.models.operations.DeletePullRequestApprovalRuleResponse() {{
+        org.openapis.openapi.models.operations.DeletePullRequestApprovalRuleResponse res = new org.openapis.openapi.models.operations.DeletePullRequestApprovalRuleResponse(contentType, httpRes.statusCode()) {{
             deletePullRequestApprovalRuleOutput = null;
             pullRequestDoesNotExistException = null;
             invalidPullRequestIdException = null;
@@ -3225,8 +3196,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3358,7 +3327,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoryResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoryResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryResponse(contentType, httpRes.statusCode()) {{
             deleteRepositoryOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -3368,8 +3337,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3472,7 +3439,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeMergeConflictsResponse res = new org.openapis.openapi.models.operations.DescribeMergeConflictsResponse() {{
+        org.openapis.openapi.models.operations.DescribeMergeConflictsResponse res = new org.openapis.openapi.models.operations.DescribeMergeConflictsResponse(contentType, httpRes.statusCode()) {{
             describeMergeConflictsOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -3498,8 +3465,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3714,7 +3679,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribePullRequestEventsResponse res = new org.openapis.openapi.models.operations.DescribePullRequestEventsResponse() {{
+        org.openapis.openapi.models.operations.DescribePullRequestEventsResponse res = new org.openapis.openapi.models.operations.DescribePullRequestEventsResponse(contentType, httpRes.statusCode()) {{
             describePullRequestEventsOutput = null;
             pullRequestDoesNotExistException = null;
             invalidPullRequestIdException = null;
@@ -3730,8 +3695,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3870,7 +3833,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateApprovalRuleTemplateFromRepositoryResponse res = new org.openapis.openapi.models.operations.DisassociateApprovalRuleTemplateFromRepositoryResponse() {{
+        org.openapis.openapi.models.operations.DisassociateApprovalRuleTemplateFromRepositoryResponse res = new org.openapis.openapi.models.operations.DisassociateApprovalRuleTemplateFromRepositoryResponse(contentType, httpRes.statusCode()) {{
             approvalRuleTemplateNameRequiredException = null;
             invalidApprovalRuleTemplateNameException = null;
             approvalRuleTemplateDoesNotExistException = null;
@@ -3883,8 +3846,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4004,7 +3965,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EvaluatePullRequestApprovalRulesResponse res = new org.openapis.openapi.models.operations.EvaluatePullRequestApprovalRulesResponse() {{
+        org.openapis.openapi.models.operations.EvaluatePullRequestApprovalRulesResponse res = new org.openapis.openapi.models.operations.EvaluatePullRequestApprovalRulesResponse(contentType, httpRes.statusCode()) {{
             evaluatePullRequestApprovalRulesOutput = null;
             pullRequestDoesNotExistException = null;
             invalidPullRequestIdException = null;
@@ -4018,8 +3979,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4144,14 +4103,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApprovalRuleTemplateResponse res = new org.openapis.openapi.models.operations.GetApprovalRuleTemplateResponse() {{
+        org.openapis.openapi.models.operations.GetApprovalRuleTemplateResponse res = new org.openapis.openapi.models.operations.GetApprovalRuleTemplateResponse(contentType, httpRes.statusCode()) {{
             getApprovalRuleTemplateOutput = null;
             approvalRuleTemplateNameRequiredException = null;
             invalidApprovalRuleTemplateNameException = null;
             approvalRuleTemplateDoesNotExistException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4220,7 +4177,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBlobResponse res = new org.openapis.openapi.models.operations.GetBlobResponse() {{
+        org.openapis.openapi.models.operations.GetBlobResponse res = new org.openapis.openapi.models.operations.GetBlobResponse(contentType, httpRes.statusCode()) {{
             getBlobOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -4235,8 +4192,6 @@ public class SDK {
             encryptionKeyUnavailableException = null;
             fileTooLargeException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4368,7 +4323,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBranchResponse res = new org.openapis.openapi.models.operations.GetBranchResponse() {{
+        org.openapis.openapi.models.operations.GetBranchResponse res = new org.openapis.openapi.models.operations.GetBranchResponse(contentType, httpRes.statusCode()) {{
             getBranchOutput = null;
             repositoryNameRequiredException = null;
             repositoryDoesNotExistException = null;
@@ -4382,8 +4337,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4508,7 +4461,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommentResponse res = new org.openapis.openapi.models.operations.GetCommentResponse() {{
+        org.openapis.openapi.models.operations.GetCommentResponse res = new org.openapis.openapi.models.operations.GetCommentResponse(contentType, httpRes.statusCode()) {{
             getCommentOutput = null;
             commentDoesNotExistException = null;
             commentDeletedException = null;
@@ -4520,8 +4473,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4638,7 +4589,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommentReactionsResponse res = new org.openapis.openapi.models.operations.GetCommentReactionsResponse() {{
+        org.openapis.openapi.models.operations.GetCommentReactionsResponse res = new org.openapis.openapi.models.operations.GetCommentReactionsResponse(contentType, httpRes.statusCode()) {{
             getCommentReactionsOutput = null;
             commentDoesNotExistException = null;
             commentIdRequiredException = null;
@@ -4648,8 +4599,6 @@ public class SDK {
             invalidContinuationTokenException = null;
             commentDeletedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4752,7 +4701,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommentsForComparedCommitResponse res = new org.openapis.openapi.models.operations.GetCommentsForComparedCommitResponse() {{
+        org.openapis.openapi.models.operations.GetCommentsForComparedCommitResponse res = new org.openapis.openapi.models.operations.GetCommentsForComparedCommitResponse(contentType, httpRes.statusCode()) {{
             getCommentsForComparedCommitOutput = null;
             repositoryNameRequiredException = null;
             repositoryDoesNotExistException = null;
@@ -4768,8 +4717,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4914,7 +4861,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommentsForPullRequestResponse res = new org.openapis.openapi.models.operations.GetCommentsForPullRequestResponse() {{
+        org.openapis.openapi.models.operations.GetCommentsForPullRequestResponse res = new org.openapis.openapi.models.operations.GetCommentsForPullRequestResponse(contentType, httpRes.statusCode()) {{
             getCommentsForPullRequestOutput = null;
             pullRequestIdRequiredException = null;
             pullRequestDoesNotExistException = null;
@@ -4934,8 +4881,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5102,7 +5047,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommitResponse res = new org.openapis.openapi.models.operations.GetCommitResponse() {{
+        org.openapis.openapi.models.operations.GetCommitResponse res = new org.openapis.openapi.models.operations.GetCommitResponse(contentType, httpRes.statusCode()) {{
             getCommitOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -5116,8 +5061,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5248,7 +5191,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDifferencesResponse res = new org.openapis.openapi.models.operations.GetDifferencesResponse() {{
+        org.openapis.openapi.models.operations.GetDifferencesResponse res = new org.openapis.openapi.models.operations.GetDifferencesResponse(contentType, httpRes.statusCode()) {{
             getDifferencesOutput = null;
             repositoryNameRequiredException = null;
             repositoryDoesNotExistException = null;
@@ -5267,8 +5210,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5428,7 +5369,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFileResponse res = new org.openapis.openapi.models.operations.GetFileResponse() {{
+        org.openapis.openapi.models.operations.GetFileResponse res = new org.openapis.openapi.models.operations.GetFileResponse(contentType, httpRes.statusCode()) {{
             getFileOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -5445,8 +5386,6 @@ public class SDK {
             encryptionKeyUnavailableException = null;
             fileTooLargeException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5592,7 +5531,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFolderResponse res = new org.openapis.openapi.models.operations.GetFolderResponse() {{
+        org.openapis.openapi.models.operations.GetFolderResponse res = new org.openapis.openapi.models.operations.GetFolderResponse(contentType, httpRes.statusCode()) {{
             getFolderOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -5608,8 +5547,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5748,7 +5685,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMergeCommitResponse res = new org.openapis.openapi.models.operations.GetMergeCommitResponse() {{
+        org.openapis.openapi.models.operations.GetMergeCommitResponse res = new org.openapis.openapi.models.operations.GetMergeCommitResponse(contentType, httpRes.statusCode()) {{
             getMergeCommitOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -5764,8 +5701,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5910,7 +5845,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMergeConflictsResponse res = new org.openapis.openapi.models.operations.GetMergeConflictsResponse() {{
+        org.openapis.openapi.models.operations.GetMergeConflictsResponse res = new org.openapis.openapi.models.operations.GetMergeConflictsResponse(contentType, httpRes.statusCode()) {{
             getMergeConflictsOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -5935,8 +5870,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6138,7 +6071,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMergeOptionsResponse res = new org.openapis.openapi.models.operations.GetMergeOptionsResponse() {{
+        org.openapis.openapi.models.operations.GetMergeOptionsResponse res = new org.openapis.openapi.models.operations.GetMergeOptionsResponse(contentType, httpRes.statusCode()) {{
             getMergeOptionsOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -6157,8 +6090,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6318,7 +6249,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPullRequestResponse res = new org.openapis.openapi.models.operations.GetPullRequestResponse() {{
+        org.openapis.openapi.models.operations.GetPullRequestResponse res = new org.openapis.openapi.models.operations.GetPullRequestResponse(contentType, httpRes.statusCode()) {{
             getPullRequestOutput = null;
             pullRequestDoesNotExistException = null;
             invalidPullRequestIdException = null;
@@ -6329,8 +6260,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6434,7 +6363,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPullRequestApprovalStatesResponse res = new org.openapis.openapi.models.operations.GetPullRequestApprovalStatesResponse() {{
+        org.openapis.openapi.models.operations.GetPullRequestApprovalStatesResponse res = new org.openapis.openapi.models.operations.GetPullRequestApprovalStatesResponse(contentType, httpRes.statusCode()) {{
             getPullRequestApprovalStatesOutput = null;
             pullRequestDoesNotExistException = null;
             invalidPullRequestIdException = null;
@@ -6447,8 +6376,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6566,7 +6493,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPullRequestOverrideStateResponse res = new org.openapis.openapi.models.operations.GetPullRequestOverrideStateResponse() {{
+        org.openapis.openapi.models.operations.GetPullRequestOverrideStateResponse res = new org.openapis.openapi.models.operations.GetPullRequestOverrideStateResponse(contentType, httpRes.statusCode()) {{
             getPullRequestOverrideStateOutput = null;
             pullRequestDoesNotExistException = null;
             invalidPullRequestIdException = null;
@@ -6579,8 +6506,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6698,7 +6623,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoryResponse res = new org.openapis.openapi.models.operations.GetRepositoryResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoryResponse res = new org.openapis.openapi.models.operations.GetRepositoryResponse(contentType, httpRes.statusCode()) {{
             getRepositoryOutput = null;
             repositoryNameRequiredException = null;
             repositoryDoesNotExistException = null;
@@ -6709,8 +6634,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6814,7 +6737,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoryTriggersResponse res = new org.openapis.openapi.models.operations.GetRepositoryTriggersResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoryTriggersResponse res = new org.openapis.openapi.models.operations.GetRepositoryTriggersResponse(contentType, httpRes.statusCode()) {{
             getRepositoryTriggersOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -6825,8 +6748,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6936,13 +6857,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListApprovalRuleTemplatesResponse res = new org.openapis.openapi.models.operations.ListApprovalRuleTemplatesResponse() {{
+        org.openapis.openapi.models.operations.ListApprovalRuleTemplatesResponse res = new org.openapis.openapi.models.operations.ListApprovalRuleTemplatesResponse(contentType, httpRes.statusCode()) {{
             listApprovalRuleTemplatesOutput = null;
             invalidMaxResultsException = null;
             invalidContinuationTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7010,7 +6929,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAssociatedApprovalRuleTemplatesForRepositoryResponse res = new org.openapis.openapi.models.operations.ListAssociatedApprovalRuleTemplatesForRepositoryResponse() {{
+        org.openapis.openapi.models.operations.ListAssociatedApprovalRuleTemplatesForRepositoryResponse res = new org.openapis.openapi.models.operations.ListAssociatedApprovalRuleTemplatesForRepositoryResponse(contentType, httpRes.statusCode()) {{
             listAssociatedApprovalRuleTemplatesForRepositoryOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -7023,8 +6942,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7148,7 +7065,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListBranchesResponse res = new org.openapis.openapi.models.operations.ListBranchesResponse() {{
+        org.openapis.openapi.models.operations.ListBranchesResponse res = new org.openapis.openapi.models.operations.ListBranchesResponse(contentType, httpRes.statusCode()) {{
             listBranchesOutput = null;
             repositoryNameRequiredException = null;
             repositoryDoesNotExistException = null;
@@ -7160,8 +7077,6 @@ public class SDK {
             encryptionKeyUnavailableException = null;
             invalidContinuationTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7278,7 +7193,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPullRequestsResponse res = new org.openapis.openapi.models.operations.ListPullRequestsResponse() {{
+        org.openapis.openapi.models.operations.ListPullRequestsResponse res = new org.openapis.openapi.models.operations.ListPullRequestsResponse(contentType, httpRes.statusCode()) {{
             listPullRequestsOutput = null;
             invalidPullRequestStatusException = null;
             invalidAuthorArnException = null;
@@ -7294,8 +7209,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7440,14 +7353,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRepositoriesResponse res = new org.openapis.openapi.models.operations.ListRepositoriesResponse() {{
+        org.openapis.openapi.models.operations.ListRepositoriesResponse res = new org.openapis.openapi.models.operations.ListRepositoriesResponse(contentType, httpRes.statusCode()) {{
             listRepositoriesOutput = null;
             invalidSortByException = null;
             invalidOrderException = null;
             invalidContinuationTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7522,7 +7433,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRepositoriesForApprovalRuleTemplateResponse res = new org.openapis.openapi.models.operations.ListRepositoriesForApprovalRuleTemplateResponse() {{
+        org.openapis.openapi.models.operations.ListRepositoriesForApprovalRuleTemplateResponse res = new org.openapis.openapi.models.operations.ListRepositoriesForApprovalRuleTemplateResponse(contentType, httpRes.statusCode()) {{
             listRepositoriesForApprovalRuleTemplateOutput = null;
             approvalRuleTemplateNameRequiredException = null;
             invalidApprovalRuleTemplateNameException = null;
@@ -7535,8 +7446,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7654,15 +7563,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceOutput = null;
             repositoryDoesNotExistException = null;
             invalidRepositoryNameException = null;
             resourceArnRequiredException = null;
             invalidResourceArnException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7738,7 +7645,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MergeBranchesByFastForwardResponse res = new org.openapis.openapi.models.operations.MergeBranchesByFastForwardResponse() {{
+        org.openapis.openapi.models.operations.MergeBranchesByFastForwardResponse res = new org.openapis.openapi.models.operations.MergeBranchesByFastForwardResponse(contentType, httpRes.statusCode()) {{
             mergeBranchesByFastForwardOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -7760,8 +7667,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7942,7 +7847,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MergeBranchesBySquashResponse res = new org.openapis.openapi.models.operations.MergeBranchesBySquashResponse() {{
+        org.openapis.openapi.models.operations.MergeBranchesBySquashResponse res = new org.openapis.openapi.models.operations.MergeBranchesBySquashResponse(contentType, httpRes.statusCode()) {{
             mergeBranchesBySquashOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -7984,8 +7889,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8306,7 +8209,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MergeBranchesByThreeWayResponse res = new org.openapis.openapi.models.operations.MergeBranchesByThreeWayResponse() {{
+        org.openapis.openapi.models.operations.MergeBranchesByThreeWayResponse res = new org.openapis.openapi.models.operations.MergeBranchesByThreeWayResponse(contentType, httpRes.statusCode()) {{
             mergeBranchesByThreeWayOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -8348,8 +8251,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8670,7 +8571,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MergePullRequestByFastForwardResponse res = new org.openapis.openapi.models.operations.MergePullRequestByFastForwardResponse() {{
+        org.openapis.openapi.models.operations.MergePullRequestByFastForwardResponse res = new org.openapis.openapi.models.operations.MergePullRequestByFastForwardResponse(contentType, httpRes.statusCode()) {{
             mergePullRequestByFastForwardOutput = null;
             manualMergeRequiredException = null;
             pullRequestAlreadyClosedException = null;
@@ -8692,8 +8593,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8874,7 +8773,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MergePullRequestBySquashResponse res = new org.openapis.openapi.models.operations.MergePullRequestBySquashResponse() {{
+        org.openapis.openapi.models.operations.MergePullRequestBySquashResponse res = new org.openapis.openapi.models.operations.MergePullRequestBySquashResponse(contentType, httpRes.statusCode()) {{
             mergePullRequestBySquashOutput = null;
             pullRequestAlreadyClosedException = null;
             pullRequestDoesNotExistException = null;
@@ -8915,8 +8814,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9230,7 +9127,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MergePullRequestByThreeWayResponse res = new org.openapis.openapi.models.operations.MergePullRequestByThreeWayResponse() {{
+        org.openapis.openapi.models.operations.MergePullRequestByThreeWayResponse res = new org.openapis.openapi.models.operations.MergePullRequestByThreeWayResponse(contentType, httpRes.statusCode()) {{
             mergePullRequestByThreeWayOutput = null;
             pullRequestAlreadyClosedException = null;
             pullRequestDoesNotExistException = null;
@@ -9271,8 +9168,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9586,7 +9481,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OverridePullRequestApprovalRulesResponse res = new org.openapis.openapi.models.operations.OverridePullRequestApprovalRulesResponse() {{
+        org.openapis.openapi.models.operations.OverridePullRequestApprovalRulesResponse res = new org.openapis.openapi.models.operations.OverridePullRequestApprovalRulesResponse(contentType, httpRes.statusCode()) {{
             pullRequestDoesNotExistException = null;
             invalidPullRequestIdException = null;
             pullRequestIdRequiredException = null;
@@ -9603,8 +9498,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9752,7 +9645,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCommentForComparedCommitResponse res = new org.openapis.openapi.models.operations.PostCommentForComparedCommitResponse() {{
+        org.openapis.openapi.models.operations.PostCommentForComparedCommitResponse res = new org.openapis.openapi.models.operations.PostCommentForComparedCommitResponse(contentType, httpRes.statusCode()) {{
             postCommentForComparedCommitOutput = null;
             repositoryNameRequiredException = null;
             repositoryDoesNotExistException = null;
@@ -9778,8 +9671,6 @@ public class SDK {
             invalidPathException = null;
             pathDoesNotExistException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9988,7 +9879,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCommentForPullRequestResponse res = new org.openapis.openapi.models.operations.PostCommentForPullRequestResponse() {{
+        org.openapis.openapi.models.operations.PostCommentForPullRequestResponse res = new org.openapis.openapi.models.operations.PostCommentForPullRequestResponse(contentType, httpRes.statusCode()) {{
             postCommentForPullRequestOutput = null;
             pullRequestDoesNotExistException = null;
             invalidPullRequestIdException = null;
@@ -10018,8 +9909,6 @@ public class SDK {
             invalidPathException = null;
             pathDoesNotExistException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10256,7 +10145,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCommentReplyResponse res = new org.openapis.openapi.models.operations.PostCommentReplyResponse() {{
+        org.openapis.openapi.models.operations.PostCommentReplyResponse res = new org.openapis.openapi.models.operations.PostCommentReplyResponse(contentType, httpRes.statusCode()) {{
             postCommentReplyOutput = null;
             clientRequestTokenRequiredException = null;
             invalidClientRequestTokenException = null;
@@ -10267,8 +10156,6 @@ public class SDK {
             commentIdRequiredException = null;
             invalidCommentIdException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10372,7 +10259,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutCommentReactionResponse res = new org.openapis.openapi.models.operations.PutCommentReactionResponse() {{
+        org.openapis.openapi.models.operations.PutCommentReactionResponse res = new org.openapis.openapi.models.operations.PutCommentReactionResponse(contentType, httpRes.statusCode()) {{
             commentDoesNotExistException = null;
             commentIdRequiredException = null;
             invalidCommentIdException = null;
@@ -10381,8 +10268,6 @@ public class SDK {
             reactionLimitExceededException = null;
             commentDeletedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10474,7 +10359,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutFileResponse res = new org.openapis.openapi.models.operations.PutFileResponse() {{
+        org.openapis.openapi.models.operations.PutFileResponse res = new org.openapis.openapi.models.operations.PutFileResponse(contentType, httpRes.statusCode()) {{
             putFileOutput = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
@@ -10507,8 +10392,6 @@ public class SDK {
             directoryNameConflictsWithFileNameException = null;
             filePathConflictsWithSubmodulePathException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10766,7 +10649,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRepositoryTriggersResponse res = new org.openapis.openapi.models.operations.PutRepositoryTriggersResponse() {{
+        org.openapis.openapi.models.operations.PutRepositoryTriggersResponse res = new org.openapis.openapi.models.operations.PutRepositoryTriggersResponse(contentType, httpRes.statusCode()) {{
             putRepositoryTriggersOutput = null;
             repositoryDoesNotExistException = null;
             repositoryNameRequiredException = null;
@@ -10790,8 +10673,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -10986,7 +10867,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             repositoryDoesNotExistException = null;
             invalidRepositoryNameException = null;
             resourceArnRequiredException = null;
@@ -10997,8 +10878,6 @@ public class SDK {
             invalidSystemTagUsageException = null;
             tagPolicyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11104,7 +10983,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestRepositoryTriggersResponse res = new org.openapis.openapi.models.operations.TestRepositoryTriggersResponse() {{
+        org.openapis.openapi.models.operations.TestRepositoryTriggersResponse res = new org.openapis.openapi.models.operations.TestRepositoryTriggersResponse(contentType, httpRes.statusCode()) {{
             testRepositoryTriggersOutput = null;
             repositoryDoesNotExistException = null;
             repositoryNameRequiredException = null;
@@ -11128,8 +11007,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11324,7 +11201,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             repositoryDoesNotExistException = null;
             invalidRepositoryNameException = null;
             resourceArnRequiredException = null;
@@ -11335,8 +11212,6 @@ public class SDK {
             invalidSystemTagUsageException = null;
             tagPolicyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11442,7 +11317,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateApprovalRuleTemplateContentResponse res = new org.openapis.openapi.models.operations.UpdateApprovalRuleTemplateContentResponse() {{
+        org.openapis.openapi.models.operations.UpdateApprovalRuleTemplateContentResponse res = new org.openapis.openapi.models.operations.UpdateApprovalRuleTemplateContentResponse(contentType, httpRes.statusCode()) {{
             updateApprovalRuleTemplateContentOutput = null;
             invalidApprovalRuleTemplateNameException = null;
             approvalRuleTemplateNameRequiredException = null;
@@ -11451,8 +11326,6 @@ public class SDK {
             invalidRuleContentSha256Exception = null;
             approvalRuleTemplateContentRequiredException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11542,15 +11415,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateApprovalRuleTemplateDescriptionResponse res = new org.openapis.openapi.models.operations.UpdateApprovalRuleTemplateDescriptionResponse() {{
+        org.openapis.openapi.models.operations.UpdateApprovalRuleTemplateDescriptionResponse res = new org.openapis.openapi.models.operations.UpdateApprovalRuleTemplateDescriptionResponse(contentType, httpRes.statusCode()) {{
             updateApprovalRuleTemplateDescriptionOutput = null;
             invalidApprovalRuleTemplateNameException = null;
             approvalRuleTemplateNameRequiredException = null;
             approvalRuleTemplateDoesNotExistException = null;
             invalidApprovalRuleTemplateDescriptionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11626,15 +11497,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateApprovalRuleTemplateNameResponse res = new org.openapis.openapi.models.operations.UpdateApprovalRuleTemplateNameResponse() {{
+        org.openapis.openapi.models.operations.UpdateApprovalRuleTemplateNameResponse res = new org.openapis.openapi.models.operations.UpdateApprovalRuleTemplateNameResponse(contentType, httpRes.statusCode()) {{
             updateApprovalRuleTemplateNameOutput = null;
             invalidApprovalRuleTemplateNameException = null;
             approvalRuleTemplateNameRequiredException = null;
             approvalRuleTemplateDoesNotExistException = null;
             approvalRuleTemplateNameAlreadyExistsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11710,7 +11579,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCommentResponse res = new org.openapis.openapi.models.operations.UpdateCommentResponse() {{
+        org.openapis.openapi.models.operations.UpdateCommentResponse res = new org.openapis.openapi.models.operations.UpdateCommentResponse(contentType, httpRes.statusCode()) {{
             updateCommentOutput = null;
             commentContentRequiredException = null;
             commentContentSizeLimitExceededException = null;
@@ -11720,8 +11589,6 @@ public class SDK {
             commentNotCreatedByCallerException = null;
             commentDeletedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11818,7 +11685,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDefaultBranchResponse res = new org.openapis.openapi.models.operations.UpdateDefaultBranchResponse() {{
+        org.openapis.openapi.models.operations.UpdateDefaultBranchResponse res = new org.openapis.openapi.models.operations.UpdateDefaultBranchResponse(contentType, httpRes.statusCode()) {{
             repositoryNameRequiredException = null;
             repositoryDoesNotExistException = null;
             invalidRepositoryNameException = null;
@@ -11831,8 +11698,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -11952,7 +11817,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePullRequestApprovalRuleContentResponse res = new org.openapis.openapi.models.operations.UpdatePullRequestApprovalRuleContentResponse() {{
+        org.openapis.openapi.models.operations.UpdatePullRequestApprovalRuleContentResponse res = new org.openapis.openapi.models.operations.UpdatePullRequestApprovalRuleContentResponse(contentType, httpRes.statusCode()) {{
             updatePullRequestApprovalRuleContentOutput = null;
             pullRequestDoesNotExistException = null;
             invalidPullRequestIdException = null;
@@ -11971,8 +11836,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12132,7 +11995,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePullRequestApprovalStateResponse res = new org.openapis.openapi.models.operations.UpdatePullRequestApprovalStateResponse() {{
+        org.openapis.openapi.models.operations.UpdatePullRequestApprovalStateResponse res = new org.openapis.openapi.models.operations.UpdatePullRequestApprovalStateResponse(contentType, httpRes.statusCode()) {{
             pullRequestDoesNotExistException = null;
             invalidPullRequestIdException = null;
             pullRequestIdRequiredException = null;
@@ -12150,8 +12013,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12306,7 +12167,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePullRequestDescriptionResponse res = new org.openapis.openapi.models.operations.UpdatePullRequestDescriptionResponse() {{
+        org.openapis.openapi.models.operations.UpdatePullRequestDescriptionResponse res = new org.openapis.openapi.models.operations.UpdatePullRequestDescriptionResponse(contentType, httpRes.statusCode()) {{
             updatePullRequestDescriptionOutput = null;
             pullRequestDoesNotExistException = null;
             invalidPullRequestIdException = null;
@@ -12314,8 +12175,6 @@ public class SDK {
             invalidDescriptionException = null;
             pullRequestAlreadyClosedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12398,7 +12257,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePullRequestStatusResponse res = new org.openapis.openapi.models.operations.UpdatePullRequestStatusResponse() {{
+        org.openapis.openapi.models.operations.UpdatePullRequestStatusResponse res = new org.openapis.openapi.models.operations.UpdatePullRequestStatusResponse(contentType, httpRes.statusCode()) {{
             updatePullRequestStatusOutput = null;
             pullRequestDoesNotExistException = null;
             invalidPullRequestIdException = null;
@@ -12412,8 +12271,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12538,7 +12395,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePullRequestTitleResponse res = new org.openapis.openapi.models.operations.UpdatePullRequestTitleResponse() {{
+        org.openapis.openapi.models.operations.UpdatePullRequestTitleResponse res = new org.openapis.openapi.models.operations.UpdatePullRequestTitleResponse(contentType, httpRes.statusCode()) {{
             updatePullRequestTitleOutput = null;
             pullRequestDoesNotExistException = null;
             invalidPullRequestIdException = null;
@@ -12547,8 +12404,6 @@ public class SDK {
             invalidTitleException = null;
             pullRequestAlreadyClosedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12638,7 +12493,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRepositoryDescriptionResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryDescriptionResponse() {{
+        org.openapis.openapi.models.operations.UpdateRepositoryDescriptionResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryDescriptionResponse(contentType, httpRes.statusCode()) {{
             repositoryNameRequiredException = null;
             repositoryDoesNotExistException = null;
             invalidRepositoryNameException = null;
@@ -12649,8 +12504,6 @@ public class SDK {
             encryptionKeyNotFoundException = null;
             encryptionKeyUnavailableException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -12756,14 +12609,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRepositoryNameResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryNameResponse() {{
+        org.openapis.openapi.models.operations.UpdateRepositoryNameResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryNameResponse(contentType, httpRes.statusCode()) {{
             repositoryDoesNotExistException = null;
             repositoryNameExistsException = null;
             repositoryNameRequiredException = null;
             invalidRepositoryNameException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

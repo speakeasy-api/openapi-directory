@@ -18,6 +18,7 @@ public class ExternalProtectionLevelOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ekmConnectionKeyPath")
     public String ekmConnectionKeyPath;
+
     public ExternalProtectionLevelOptions withEkmConnectionKeyPath(String ekmConnectionKeyPath) {
         this.ekmConnectionKeyPath = ekmConnectionKeyPath;
         return this;
@@ -29,9 +30,11 @@ public class ExternalProtectionLevelOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalKeyUri")
     public String externalKeyUri;
+
     public ExternalProtectionLevelOptions withExternalKeyUri(String externalKeyUri) {
         this.externalKeyUri = externalKeyUri;
         return this;
     }
     
+    public ExternalProtectionLevelOptions(){}
 }

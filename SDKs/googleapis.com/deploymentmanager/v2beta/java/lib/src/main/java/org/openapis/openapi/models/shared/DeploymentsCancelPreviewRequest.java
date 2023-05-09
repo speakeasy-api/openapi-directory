@@ -15,9 +15,11 @@ public class DeploymentsCancelPreviewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public DeploymentsCancelPreviewRequest withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
     }
     
+    public DeploymentsCancelPreviewRequest(){}
 }

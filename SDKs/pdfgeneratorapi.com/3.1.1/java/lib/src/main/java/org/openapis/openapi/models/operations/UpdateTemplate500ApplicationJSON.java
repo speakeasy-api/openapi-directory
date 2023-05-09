@@ -18,6 +18,7 @@ public class UpdateTemplate500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public UpdateTemplate500ApplicationJSON withError(String error) {
         this.error = error;
         return this;
@@ -29,9 +30,11 @@ public class UpdateTemplate500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public UpdateTemplate500ApplicationJSON withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public UpdateTemplate500ApplicationJSON(){}
 }

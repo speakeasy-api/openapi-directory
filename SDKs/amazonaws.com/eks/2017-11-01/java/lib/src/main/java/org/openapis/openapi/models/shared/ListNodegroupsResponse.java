@@ -15,6 +15,7 @@ public class ListNodegroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListNodegroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListNodegroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodegroups")
     public String[] nodegroups;
+
     public ListNodegroupsResponse withNodegroups(String[] nodegroups) {
         this.nodegroups = nodegroups;
         return this;
     }
     
+    public ListNodegroupsResponse(){}
 }

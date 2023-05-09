@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * EntityInfo - &lt;p&gt;Contains details about the specified entity (user or role).&lt;/p&gt; &lt;p&gt;This data type is an element of the &lt;a&gt;EntityDetails&lt;/a&gt; object.&lt;/p&gt;
@@ -15,6 +15,7 @@ public class EntityInfo {
      */
     
     public String arn;
+
     public EntityInfo withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class EntityInfo {
     
     
     public String id;
+
     public EntityInfo withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +31,7 @@ public class EntityInfo {
     
     
     public String name;
+
     public EntityInfo withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class EntityInfo {
     
     
     public String path;
+
     public EntityInfo withPath(String path) {
         this.path = path;
         return this;
@@ -43,9 +47,16 @@ public class EntityInfo {
     
     
     public PolicyOwnerEntityTypeEnum type;
+
     public EntityInfo withType(PolicyOwnerEntityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public EntityInfo(@JsonProperty("Arn") String arn, @JsonProperty("Id") String id, @JsonProperty("Name") String name, @JsonProperty("Type") PolicyOwnerEntityTypeEnum type) {
+        this.arn = arn;
+        this.id = id;
+        this.name = name;
+        this.type = type;
+  }
 }

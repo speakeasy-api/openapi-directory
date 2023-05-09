@@ -14,6 +14,7 @@ public class AttemptSyncConfig {
      */
     @JsonProperty("destinationConfiguration")
     public Object destinationConfiguration;
+
     public AttemptSyncConfig withDestinationConfiguration(Object destinationConfiguration) {
         this.destinationConfiguration = destinationConfiguration;
         return this;
@@ -24,6 +25,7 @@ public class AttemptSyncConfig {
      */
     @JsonProperty("sourceConfiguration")
     public Object sourceConfiguration;
+
     public AttemptSyncConfig withSourceConfiguration(Object sourceConfiguration) {
         this.sourceConfiguration = sourceConfiguration;
         return this;
@@ -35,9 +37,14 @@ public class AttemptSyncConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ConnectionState state;
+
     public AttemptSyncConfig withState(ConnectionState state) {
         this.state = state;
         return this;
     }
     
+    public AttemptSyncConfig(@JsonProperty("destinationConfiguration") Object destinationConfiguration, @JsonProperty("sourceConfiguration") Object sourceConfiguration) {
+        this.destinationConfiguration = destinationConfiguration;
+        this.sourceConfiguration = sourceConfiguration;
+  }
 }

@@ -18,6 +18,7 @@ public class ShippingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingCost")
     public Amount shippingCost;
+
     public ShippingOption withShippingCost(Amount shippingCost) {
         this.shippingCost = shippingCost;
         return this;
@@ -29,9 +30,11 @@ public class ShippingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingCostType")
     public String shippingCostType;
+
     public ShippingOption withShippingCostType(String shippingCostType) {
         this.shippingCostType = shippingCostType;
         return this;
     }
     
+    public ShippingOption(){}
 }

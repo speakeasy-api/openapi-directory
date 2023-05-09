@@ -14,6 +14,7 @@ public class AddLayerVersionPermissionRequestBody {
      */
     @JsonProperty("Action")
     public String action;
+
     public AddLayerVersionPermissionRequestBody withAction(String action) {
         this.action = action;
         return this;
@@ -25,6 +26,7 @@ public class AddLayerVersionPermissionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public AddLayerVersionPermissionRequestBody withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -35,6 +37,7 @@ public class AddLayerVersionPermissionRequestBody {
      */
     @JsonProperty("Principal")
     public String principal;
+
     public AddLayerVersionPermissionRequestBody withPrincipal(String principal) {
         this.principal = principal;
         return this;
@@ -45,9 +48,15 @@ public class AddLayerVersionPermissionRequestBody {
      */
     @JsonProperty("StatementId")
     public String statementId;
+
     public AddLayerVersionPermissionRequestBody withStatementId(String statementId) {
         this.statementId = statementId;
         return this;
     }
     
+    public AddLayerVersionPermissionRequestBody(@JsonProperty("Action") String action, @JsonProperty("Principal") String principal, @JsonProperty("StatementId") String statementId) {
+        this.action = action;
+        this.principal = principal;
+        this.statementId = statementId;
+  }
 }

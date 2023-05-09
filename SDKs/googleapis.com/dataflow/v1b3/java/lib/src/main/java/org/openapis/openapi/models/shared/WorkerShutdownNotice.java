@@ -18,9 +18,11 @@ public class WorkerShutdownNotice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public WorkerShutdownNotice withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public WorkerShutdownNotice(){}
 }

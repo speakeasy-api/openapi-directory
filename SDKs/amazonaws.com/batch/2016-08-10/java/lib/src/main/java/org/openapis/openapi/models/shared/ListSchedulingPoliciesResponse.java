@@ -15,6 +15,7 @@ public class ListSchedulingPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSchedulingPoliciesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSchedulingPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingPolicies")
     public SchedulingPolicyListingDetail[] schedulingPolicies;
+
     public ListSchedulingPoliciesResponse withSchedulingPolicies(SchedulingPolicyListingDetail[] schedulingPolicies) {
         this.schedulingPolicies = schedulingPolicies;
         return this;
     }
     
+    public ListSchedulingPoliciesResponse(){}
 }

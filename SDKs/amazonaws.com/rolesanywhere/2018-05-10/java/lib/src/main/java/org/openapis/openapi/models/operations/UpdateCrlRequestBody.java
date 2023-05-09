@@ -15,6 +15,7 @@ public class UpdateCrlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crlData")
     public String crlData;
+
     public UpdateCrlRequestBody withCrlData(String crlData) {
         this.crlData = crlData;
         return this;
@@ -26,9 +27,11 @@ public class UpdateCrlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateCrlRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateCrlRequestBody(){}
 }

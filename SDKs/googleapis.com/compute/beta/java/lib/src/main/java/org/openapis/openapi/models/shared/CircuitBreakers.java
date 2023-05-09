@@ -18,6 +18,7 @@ public class CircuitBreakers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectTimeout")
     public Duration connectTimeout;
+
     public CircuitBreakers withConnectTimeout(Duration connectTimeout) {
         this.connectTimeout = connectTimeout;
         return this;
@@ -29,6 +30,7 @@ public class CircuitBreakers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxConnections")
     public Integer maxConnections;
+
     public CircuitBreakers withMaxConnections(Integer maxConnections) {
         this.maxConnections = maxConnections;
         return this;
@@ -40,6 +42,7 @@ public class CircuitBreakers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPendingRequests")
     public Integer maxPendingRequests;
+
     public CircuitBreakers withMaxPendingRequests(Integer maxPendingRequests) {
         this.maxPendingRequests = maxPendingRequests;
         return this;
@@ -51,6 +54,7 @@ public class CircuitBreakers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRequests")
     public Integer maxRequests;
+
     public CircuitBreakers withMaxRequests(Integer maxRequests) {
         this.maxRequests = maxRequests;
         return this;
@@ -62,6 +66,7 @@ public class CircuitBreakers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRequestsPerConnection")
     public Integer maxRequestsPerConnection;
+
     public CircuitBreakers withMaxRequestsPerConnection(Integer maxRequestsPerConnection) {
         this.maxRequestsPerConnection = maxRequestsPerConnection;
         return this;
@@ -73,9 +78,11 @@ public class CircuitBreakers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRetries")
     public Integer maxRetries;
+
     public CircuitBreakers withMaxRetries(Integer maxRetries) {
         this.maxRetries = maxRetries;
         return this;
     }
     
+    public CircuitBreakers(){}
 }

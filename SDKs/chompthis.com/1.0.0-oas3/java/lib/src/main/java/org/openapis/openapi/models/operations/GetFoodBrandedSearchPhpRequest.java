@@ -18,6 +18,7 @@ public class GetFoodBrandedSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allergen")
     public String allergen;
+
     public GetFoodBrandedSearchPhpRequest withAllergen(String allergen) {
         this.allergen = allergen;
         return this;
@@ -32,6 +33,7 @@ public class GetFoodBrandedSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brand")
     public String brand;
+
     public GetFoodBrandedSearchPhpRequest withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -46,6 +48,7 @@ public class GetFoodBrandedSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public String category;
+
     public GetFoodBrandedSearchPhpRequest withCategory(String category) {
         this.category = category;
         return this;
@@ -62,6 +65,7 @@ public class GetFoodBrandedSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GetFoodBrandedSearchPhpRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -75,6 +79,7 @@ public class GetFoodBrandedSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=diet")
     public GetFoodBrandedSearchPhpDietEnum diet;
+
     public GetFoodBrandedSearchPhpRequest withDiet(GetFoodBrandedSearchPhpDietEnum diet) {
         this.diet = diet;
         return this;
@@ -89,6 +94,7 @@ public class GetFoodBrandedSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ingredient")
     public String ingredient;
+
     public GetFoodBrandedSearchPhpRequest withIngredient(String ingredient) {
         this.ingredient = ingredient;
         return this;
@@ -105,6 +111,7 @@ public class GetFoodBrandedSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
     public String keyword;
+
     public GetFoodBrandedSearchPhpRequest withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -119,6 +126,7 @@ public class GetFoodBrandedSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public GetFoodBrandedSearchPhpLimitEnum limit;
+
     public GetFoodBrandedSearchPhpRequest withLimit(GetFoodBrandedSearchPhpLimitEnum limit) {
         this.limit = limit;
         return this;
@@ -133,6 +141,7 @@ public class GetFoodBrandedSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mineral")
     public String mineral;
+
     public GetFoodBrandedSearchPhpRequest withMineral(String mineral) {
         this.mineral = mineral;
         return this;
@@ -149,6 +158,7 @@ public class GetFoodBrandedSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nutrient")
     public String nutrient;
+
     public GetFoodBrandedSearchPhpRequest withNutrient(String nutrient) {
         this.nutrient = nutrient;
         return this;
@@ -163,6 +173,7 @@ public class GetFoodBrandedSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetFoodBrandedSearchPhpRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -177,6 +188,7 @@ public class GetFoodBrandedSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=palm_oil")
     public String palmOil;
+
     public GetFoodBrandedSearchPhpRequest withPalmOil(String palmOil) {
         this.palmOil = palmOil;
         return this;
@@ -193,6 +205,7 @@ public class GetFoodBrandedSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trace")
     public String trace;
+
     public GetFoodBrandedSearchPhpRequest withTrace(String trace) {
         this.trace = trace;
         return this;
@@ -207,9 +220,11 @@ public class GetFoodBrandedSearchPhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vitamin")
     public String vitamin;
+
     public GetFoodBrandedSearchPhpRequest withVitamin(String vitamin) {
         this.vitamin = vitamin;
         return this;
     }
     
+    public GetFoodBrandedSearchPhpRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDatasetGroupResponse {
     
     public String contentType;
+
     public CreateDatasetGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDatasetGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDatasetGroupResponse createDatasetGroupResponse;
+
     public CreateDatasetGroupResponse withCreateDatasetGroupResponse(org.openapis.openapi.models.shared.CreateDatasetGroupResponse createDatasetGroupResponse) {
         this.createDatasetGroupResponse = createDatasetGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateDatasetGroupResponse {
      */
     
     public Object invalidInputException;
+
     public CreateDatasetGroupResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDatasetGroupResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDatasetGroupResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class CreateDatasetGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateDatasetGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateDatasetGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDatasetGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateDatasetGroupResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateDatasetGroupResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -73,9 +81,14 @@ public class CreateDatasetGroupResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateDatasetGroupResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreateDatasetGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ExpectedAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Exists")
     public Boolean exists;
+
     public ExpectedAttributeValue withExists(Boolean exists) {
         this.exists = exists;
         return this;
@@ -23,9 +24,11 @@ public class ExpectedAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public AttributeValue value;
+
     public ExpectedAttributeValue withValue(AttributeValue value) {
         this.value = value;
         return this;
     }
     
+    public ExpectedAttributeValue(){}
 }

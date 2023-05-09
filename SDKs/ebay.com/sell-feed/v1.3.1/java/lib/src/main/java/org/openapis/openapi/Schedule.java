@@ -61,11 +61,9 @@ public class Schedule {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateScheduleResponse res = new org.openapis.openapi.models.operations.CreateScheduleResponse() {{
+        org.openapis.openapi.models.operations.CreateScheduleResponse res = new org.openapis.openapi.models.operations.CreateScheduleResponse(contentType, httpRes.statusCode()) {{
             createSchedule201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -105,10 +103,8 @@ public class Schedule {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteScheduleResponse res = new org.openapis.openapi.models.operations.DeleteScheduleResponse() {{
+        org.openapis.openapi.models.operations.DeleteScheduleResponse res = new org.openapis.openapi.models.operations.DeleteScheduleResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -139,11 +135,9 @@ public class Schedule {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLatestResultFileResponse res = new org.openapis.openapi.models.operations.GetLatestResultFileResponse() {{
+        org.openapis.openapi.models.operations.GetLatestResultFileResponse res = new org.openapis.openapi.models.operations.GetLatestResultFileResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +176,9 @@ public class Schedule {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScheduleResponse res = new org.openapis.openapi.models.operations.GetScheduleResponse() {{
+        org.openapis.openapi.models.operations.GetScheduleResponse res = new org.openapis.openapi.models.operations.GetScheduleResponse(contentType, httpRes.statusCode()) {{
             userScheduleResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -224,11 +216,9 @@ public class Schedule {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScheduleTemplateResponse res = new org.openapis.openapi.models.operations.GetScheduleTemplateResponse() {{
+        org.openapis.openapi.models.operations.GetScheduleTemplateResponse res = new org.openapis.openapi.models.operations.GetScheduleTemplateResponse(contentType, httpRes.statusCode()) {{
             scheduleTemplateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -272,11 +262,9 @@ public class Schedule {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScheduleTemplatesResponse res = new org.openapis.openapi.models.operations.GetScheduleTemplatesResponse() {{
+        org.openapis.openapi.models.operations.GetScheduleTemplatesResponse res = new org.openapis.openapi.models.operations.GetScheduleTemplatesResponse(contentType, httpRes.statusCode()) {{
             scheduleTemplateCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -320,11 +308,9 @@ public class Schedule {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesResponse res = new org.openapis.openapi.models.operations.GetSchedulesResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesResponse res = new org.openapis.openapi.models.operations.GetSchedulesResponse(contentType, httpRes.statusCode()) {{
             userScheduleCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -367,10 +353,8 @@ public class Schedule {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateScheduleResponse res = new org.openapis.openapi.models.operations.UpdateScheduleResponse() {{
+        org.openapis.openapi.models.operations.UpdateScheduleResponse res = new org.openapis.openapi.models.operations.UpdateScheduleResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 409 || httpRes.statusCode() == 500) {

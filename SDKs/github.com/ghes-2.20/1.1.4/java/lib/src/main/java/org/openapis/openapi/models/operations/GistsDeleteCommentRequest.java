@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GistsDeleteCommentRequest {
@@ -12,6 +13,7 @@ public class GistsDeleteCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
     public Long commentId;
+
     public GistsDeleteCommentRequest withCommentId(Long commentId) {
         this.commentId = commentId;
         return this;
@@ -22,9 +24,14 @@ public class GistsDeleteCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gist_id")
     public String gistId;
+
     public GistsDeleteCommentRequest withGistId(String gistId) {
         this.gistId = gistId;
         return this;
     }
     
+    public GistsDeleteCommentRequest(@JsonProperty("comment_id") Long commentId, @JsonProperty("gist_id") String gistId) {
+        this.commentId = commentId;
+        this.gistId = gistId;
+  }
 }

@@ -18,9 +18,11 @@ public class MysqlRdbms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mysqlDatabases")
     public MysqlDatabase[] mysqlDatabases;
+
     public MysqlRdbms withMysqlDatabases(MysqlDatabase[] mysqlDatabases) {
         this.mysqlDatabases = mysqlDatabases;
         return this;
     }
     
+    public MysqlRdbms(){}
 }

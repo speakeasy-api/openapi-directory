@@ -23,6 +23,7 @@ public class ActivityFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ActivityFeed withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -34,6 +35,7 @@ public class ActivityFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ActivityFeed withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +47,7 @@ public class ActivityFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Activity[] items;
+
     public ActivityFeed withItems(Activity[] items) {
         this.items = items;
         return this;
@@ -56,6 +59,7 @@ public class ActivityFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ActivityFeed withKind(String kind) {
         this.kind = kind;
         return this;
@@ -67,6 +71,7 @@ public class ActivityFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextLink")
     public String nextLink;
+
     public ActivityFeed withNextLink(String nextLink) {
         this.nextLink = nextLink;
         return this;
@@ -78,6 +83,7 @@ public class ActivityFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ActivityFeed withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -89,6 +95,7 @@ public class ActivityFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ActivityFeed withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -100,6 +107,7 @@ public class ActivityFeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ActivityFeed withTitle(String title) {
         this.title = title;
         return this;
@@ -113,9 +121,11 @@ public class ActivityFeed {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated")
     public OffsetDateTime updated;
+
     public ActivityFeed withUpdated(OffsetDateTime updated) {
         this.updated = updated;
         return this;
     }
     
+    public ActivityFeed(){}
 }

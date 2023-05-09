@@ -15,9 +15,11 @@ public class GetCatalogImportStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportStatus")
     public CatalogImportStatus importStatus;
+
     public GetCatalogImportStatusResponse withImportStatus(CatalogImportStatus importStatus) {
         this.importStatus = importStatus;
         return this;
     }
     
+    public GetCatalogImportStatusResponse(){}
 }

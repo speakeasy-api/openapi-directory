@@ -15,6 +15,7 @@ public class SimulationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compute")
     public Compute compute;
+
     public SimulationJobRequest withCompute(Compute compute) {
         this.compute = compute;
         return this;
@@ -23,6 +24,7 @@ public class SimulationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSources")
     public DataSourceConfig[] dataSources;
+
     public SimulationJobRequest withDataSources(DataSourceConfig[] dataSources) {
         this.dataSources = dataSources;
         return this;
@@ -31,6 +33,7 @@ public class SimulationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureBehavior")
     public FailureBehaviorEnum failureBehavior;
+
     public SimulationJobRequest withFailureBehavior(FailureBehaviorEnum failureBehavior) {
         this.failureBehavior = failureBehavior;
         return this;
@@ -39,6 +42,7 @@ public class SimulationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamRole")
     public String iamRole;
+
     public SimulationJobRequest withIamRole(String iamRole) {
         this.iamRole = iamRole;
         return this;
@@ -50,6 +54,7 @@ public class SimulationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfig")
     public LoggingConfig loggingConfig;
+
     public SimulationJobRequest withLoggingConfig(LoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
@@ -57,6 +62,7 @@ public class SimulationJobRequest {
     
     @JsonProperty("maxJobDurationInSeconds")
     public Long maxJobDurationInSeconds;
+
     public SimulationJobRequest withMaxJobDurationInSeconds(Long maxJobDurationInSeconds) {
         this.maxJobDurationInSeconds = maxJobDurationInSeconds;
         return this;
@@ -68,6 +74,7 @@ public class SimulationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputLocation")
     public OutputLocation outputLocation;
+
     public SimulationJobRequest withOutputLocation(OutputLocation outputLocation) {
         this.outputLocation = outputLocation;
         return this;
@@ -76,6 +83,7 @@ public class SimulationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robotApplications")
     public RobotApplicationConfig[] robotApplications;
+
     public SimulationJobRequest withRobotApplications(RobotApplicationConfig[] robotApplications) {
         this.robotApplications = robotApplications;
         return this;
@@ -84,6 +92,7 @@ public class SimulationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simulationApplications")
     public SimulationApplicationConfig[] simulationApplications;
+
     public SimulationJobRequest withSimulationApplications(SimulationApplicationConfig[] simulationApplications) {
         this.simulationApplications = simulationApplications;
         return this;
@@ -92,6 +101,7 @@ public class SimulationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public SimulationJobRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -100,6 +110,7 @@ public class SimulationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useDefaultApplications")
     public Boolean useDefaultApplications;
+
     public SimulationJobRequest withUseDefaultApplications(Boolean useDefaultApplications) {
         this.useDefaultApplications = useDefaultApplications;
         return this;
@@ -111,9 +122,13 @@ public class SimulationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfig")
     public VPCConfig vpcConfig;
+
     public SimulationJobRequest withVpcConfig(VPCConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public SimulationJobRequest(@JsonProperty("maxJobDurationInSeconds") Long maxJobDurationInSeconds) {
+        this.maxJobDurationInSeconds = maxJobDurationInSeconds;
+  }
 }

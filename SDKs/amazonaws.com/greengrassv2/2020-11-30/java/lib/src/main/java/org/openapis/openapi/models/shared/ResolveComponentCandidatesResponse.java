@@ -15,9 +15,11 @@ public class ResolveComponentCandidatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolvedComponentVersions")
     public ResolvedComponentVersion[] resolvedComponentVersions;
+
     public ResolveComponentCandidatesResponse withResolvedComponentVersions(ResolvedComponentVersion[] resolvedComponentVersions) {
         this.resolvedComponentVersions = resolvedComponentVersions;
         return this;
     }
     
+    public ResolveComponentCandidatesResponse(){}
 }

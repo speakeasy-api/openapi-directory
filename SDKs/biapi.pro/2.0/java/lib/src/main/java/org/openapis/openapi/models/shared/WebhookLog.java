@@ -19,6 +19,7 @@ public class WebhookLog {
      */
     @JsonProperty("id")
     public Long id;
+
     public WebhookLog withId(Long id) {
         this.id = id;
         return this;
@@ -30,6 +31,7 @@ public class WebhookLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_service")
     public Long idService;
+
     public WebhookLog withIdService(Long idService) {
         this.idService = idService;
         return this;
@@ -41,6 +43,7 @@ public class WebhookLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_user")
     public Long idUser;
+
     public WebhookLog withIdUser(Long idUser) {
         this.idUser = idUser;
         return this;
@@ -52,6 +55,7 @@ public class WebhookLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_webhook_data")
     public Long idWebhookData;
+
     public WebhookLog withIdWebhookData(Long idWebhookData) {
         this.idWebhookData = idWebhookData;
         return this;
@@ -65,6 +69,7 @@ public class WebhookLog {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("next_try")
     public OffsetDateTime nextTry;
+
     public WebhookLog withNextTry(OffsetDateTime nextTry) {
         this.nextTry = nextTry;
         return this;
@@ -76,6 +81,7 @@ public class WebhookLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_code")
     public Long responseCode;
+
     public WebhookLog withResponseCode(Long responseCode) {
         this.responseCode = responseCode;
         return this;
@@ -89,6 +95,7 @@ public class WebhookLog {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("response_date")
     public OffsetDateTime responseDate;
+
     public WebhookLog withResponseDate(OffsetDateTime responseDate) {
         this.responseDate = responseDate;
         return this;
@@ -101,9 +108,14 @@ public class WebhookLog {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public WebhookLog withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public WebhookLog(@JsonProperty("id") Long id, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.id = id;
+        this.timestamp = timestamp;
+  }
 }

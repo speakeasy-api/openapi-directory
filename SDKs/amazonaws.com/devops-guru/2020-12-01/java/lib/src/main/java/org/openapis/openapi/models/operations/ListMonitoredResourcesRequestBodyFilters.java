@@ -15,6 +15,7 @@ public class ListMonitoredResourcesRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourcePermission")
     public org.openapis.openapi.models.shared.ResourcePermissionEnum resourcePermission;
+
     public ListMonitoredResourcesRequestBodyFilters withResourcePermission(org.openapis.openapi.models.shared.ResourcePermissionEnum resourcePermission) {
         this.resourcePermission = resourcePermission;
         return this;
@@ -23,9 +24,11 @@ public class ListMonitoredResourcesRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypeFilters")
     public org.openapis.openapi.models.shared.ResourceTypeFilterEnum[] resourceTypeFilters;
+
     public ListMonitoredResourcesRequestBodyFilters withResourceTypeFilters(org.openapis.openapi.models.shared.ResourceTypeFilterEnum[] resourceTypeFilters) {
         this.resourceTypeFilters = resourceTypeFilters;
         return this;
     }
     
+    public ListMonitoredResourcesRequestBodyFilters(){}
 }

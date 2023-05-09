@@ -16,25 +16,21 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetreportstatusbyIDRequest;
 import org.openapis.openapi.models.operations.GetreportstatusbyIDResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetreportstatusbyIDRequest req = new GetreportstatusbyIDRequest() {{
-                accept = "corrupti";
-                contentType = "provident";
-                reportId = "distinctio";
-            }}            
+            GetreportstatusbyIDRequest req = new GetreportstatusbyIDRequest("distinctio", "quibusdam", "unde");            
 
             GetreportstatusbyIDResponse res = sdk.report.getreportstatusbyID(req);
 
@@ -44,6 +40,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -51,48 +49,48 @@ public class Application {
 ## Available Resources and Operations
 
 
-### report
+### [report](docs/report/README.md)
 
-* `getreportstatusbyID` - Get report status by ID
-* `requestreportbyStatus` - Retrieve Subscription report by Status
-* `requestreportbydate` - Retrieve Subscription report by date
-* `requestreportbyorderdate` - Retrieve Subscription report by order date
-* `requestreportbyschedule` - Retrieve Subscription report by schedule
-* `requestreportbyupdate` - Request report by update
+* [getreportstatusbyID](docs/report/README.md#getreportstatusbyid) - Get report status by ID
+* [requestreportbyStatus](docs/report/README.md#requestreportbystatus) - Retrieve Subscription report by Status
+* [requestreportbydate](docs/report/README.md#requestreportbydate) - Retrieve Subscription report by date
+* [requestreportbyorderdate](docs/report/README.md#requestreportbyorderdate) - Retrieve Subscription report by order date
+* [requestreportbyschedule](docs/report/README.md#requestreportbyschedule) - Retrieve Subscription report by schedule
+* [requestreportbyupdate](docs/report/README.md#requestreportbyupdate) - Request report by update
 
-### settings
+### [settings](docs/settings/README.md)
 
-* `editSettings` - Edit Subscriptions settings
-* `getSettings` - Get Subscriptions Settings
+* [editSettings](docs/settings/README.md#editsettings) - Edit Subscriptions settings
+* [getSettings](docs/settings/README.md#getsettings) - Get Subscriptions Settings
 
-### subscriptionGroup
+### [subscriptionGroup](docs/subscriptiongroup/README.md)
 
-* `additemsubscriptionGroupId` - Add Subscription item by groupId
-* `cancelSubscriptionbygroupId` - Cancel Subscription by groupId
-* `getAllsubscriptiongroup` - List All subscription groups
-* `getConfigsubscriptionsgroup` - List Subscription group's Configuration
-* `getConversationMessagebygroupId` - Get Conversation Message by groupId
-* `getNextpurchase` - Get Next purchase
-* `getSimulatebysubscriptionGroup` - Get Simulation by subscription-group
-* `getSubscriptionbygroupId` - Get Subscription by groupId
-* `getaddressesbygroupId` - Get addresses by groupId
-* `getfrequencyoptionsbygroupId` - Get frequency options by groupId
-* `getpaymentSystembygroupId` - Get payment System by groupId
-* `getsubscriptiongrouplist` - Get subscription group list
-* `getwillcreatebygroupId` - List 'Will create' by groupId
-* `insertAddressesbygroupId` - Insert Addresses by groupId
-* `retrysubscriptionbygroupId` - Retry subscription by groupId
-* `updateSubscriptionbygroupId` - Update Subscription by groupId
+* [additemsubscriptionGroupId](docs/subscriptiongroup/README.md#additemsubscriptiongroupid) - Add Subscription item by groupId
+* [cancelSubscriptionbygroupId](docs/subscriptiongroup/README.md#cancelsubscriptionbygroupid) - Cancel Subscription by groupId
+* [getAllsubscriptiongroup](docs/subscriptiongroup/README.md#getallsubscriptiongroup) - List All subscription groups
+* [getConfigsubscriptionsgroup](docs/subscriptiongroup/README.md#getconfigsubscriptionsgroup) - List Subscription group's Configuration
+* [getConversationMessagebygroupId](docs/subscriptiongroup/README.md#getconversationmessagebygroupid) - Get Conversation Message by groupId
+* [getNextpurchase](docs/subscriptiongroup/README.md#getnextpurchase) - Get Next purchase
+* [getSimulatebysubscriptionGroup](docs/subscriptiongroup/README.md#getsimulatebysubscriptiongroup) - Get Simulation by subscription-group
+* [getSubscriptionbygroupId](docs/subscriptiongroup/README.md#getsubscriptionbygroupid) - Get Subscription by groupId
+* [getaddressesbygroupId](docs/subscriptiongroup/README.md#getaddressesbygroupid) - Get addresses by groupId
+* [getfrequencyoptionsbygroupId](docs/subscriptiongroup/README.md#getfrequencyoptionsbygroupid) - Get frequency options by groupId
+* [getpaymentSystembygroupId](docs/subscriptiongroup/README.md#getpaymentsystembygroupid) - Get payment System by groupId
+* [getsubscriptiongrouplist](docs/subscriptiongroup/README.md#getsubscriptiongrouplist) - Get subscription group list
+* [getwillcreatebygroupId](docs/subscriptiongroup/README.md#getwillcreatebygroupid) - List 'Will create' by groupId
+* [insertAddressesbygroupId](docs/subscriptiongroup/README.md#insertaddressesbygroupid) - Insert Addresses by groupId
+* [retrysubscriptionbygroupId](docs/subscriptiongroup/README.md#retrysubscriptionbygroupid) - Retry subscription by groupId
+* [updateSubscriptionbygroupId](docs/subscriptiongroup/README.md#updatesubscriptionbygroupid) - Update Subscription by groupId
 
-### subscriptions
+### [subscriptions](docs/subscriptions/README.md)
 
-* `cancelSubscriptionsbySubscriptionId` - Cancel Subscriptions by SubscriptionId
-* `getSubscriptionList` - Get Subscription List
-* `getfrequencyoptionsbysubscriptionId` - Get frequency options by subscriptionId
-* `getsubscriptionbyId` - Retrieve subscription by ID
-* `getsubscriptionstocustomer` - Retrieve customer's subscriptions
-* `insertAddressesforSubscription` - Insert Addresses for Subscription
-* `updateSubscriptionsbySubscriptionId` - Update Subscriptions by SubscriptionId
+* [cancelSubscriptionsbySubscriptionId](docs/subscriptions/README.md#cancelsubscriptionsbysubscriptionid) - Cancel Subscriptions by SubscriptionId
+* [getSubscriptionList](docs/subscriptions/README.md#getsubscriptionlist) - Get Subscription List
+* [getfrequencyoptionsbysubscriptionId](docs/subscriptions/README.md#getfrequencyoptionsbysubscriptionid) - Get frequency options by subscriptionId
+* [getsubscriptionbyId](docs/subscriptions/README.md#getsubscriptionbyid) - Retrieve subscription by ID
+* [getsubscriptionstocustomer](docs/subscriptions/README.md#getsubscriptionstocustomer) - Retrieve customer's subscriptions
+* [insertAddressesforSubscription](docs/subscriptions/README.md#insertaddressesforsubscription) - Insert Addresses for Subscription
+* [updateSubscriptionsbySubscriptionId](docs/subscriptions/README.md#updatesubscriptionsbysubscriptionid) - Update Subscriptions by SubscriptionId
 <!-- End SDK Available Operations -->
 
 ### Maturity

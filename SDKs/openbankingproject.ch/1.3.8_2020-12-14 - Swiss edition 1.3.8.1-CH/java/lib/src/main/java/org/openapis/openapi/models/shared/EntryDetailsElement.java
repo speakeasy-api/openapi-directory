@@ -15,6 +15,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkId")
     public String checkId;
+
     public EntryDetailsElement withCheckId(String checkId) {
         this.checkId = checkId;
         return this;
@@ -30,6 +31,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorAccount")
     public AccountReference16CH creditorAccount;
+
     public EntryDetailsElement withCreditorAccount(AccountReference16CH creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -42,6 +44,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorAgent")
     public String creditorAgent;
+
     public EntryDetailsElement withCreditorAgent(String creditorAgent) {
         this.creditorAgent = creditorAgent;
         return this;
@@ -53,6 +56,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorId")
     public String creditorId;
+
     public EntryDetailsElement withCreditorId(String creditorId) {
         this.creditorId = creditorId;
         return this;
@@ -64,6 +68,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorName")
     public String creditorName;
+
     public EntryDetailsElement withCreditorName(String creditorName) {
         this.creditorName = creditorName;
         return this;
@@ -75,6 +80,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyExchange")
     public ReportExchangeRate[] currencyExchange;
+
     public EntryDetailsElement withCurrencyExchange(ReportExchangeRate[] currencyExchange) {
         this.currencyExchange = currencyExchange;
         return this;
@@ -90,6 +96,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debtorAccount")
     public AccountReference16CH debtorAccount;
+
     public EntryDetailsElement withDebtorAccount(AccountReference16CH debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -102,6 +109,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debtorAgent")
     public String debtorAgent;
+
     public EntryDetailsElement withDebtorAgent(String debtorAgent) {
         this.debtorAgent = debtorAgent;
         return this;
@@ -113,6 +121,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debtorName")
     public String debtorName;
+
     public EntryDetailsElement withDebtorName(String debtorName) {
         this.debtorName = debtorName;
         return this;
@@ -124,6 +133,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endToEndId")
     public String endToEndId;
+
     public EntryDetailsElement withEndToEndId(String endToEndId) {
         this.endToEndId = endToEndId;
         return this;
@@ -135,6 +145,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandateId")
     public String mandateId;
+
     public EntryDetailsElement withMandateId(String mandateId) {
         this.mandateId = mandateId;
         return this;
@@ -149,6 +160,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purposeCode")
     public PurposeCodeEnum purposeCode;
+
     public EntryDetailsElement withPurposeCode(PurposeCodeEnum purposeCode) {
         this.purposeCode = purposeCode;
         return this;
@@ -161,6 +173,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationStructured")
     public RemittanceInformationStructured remittanceInformationStructured;
+
     public EntryDetailsElement withRemittanceInformationStructured(RemittanceInformationStructured remittanceInformationStructured) {
         this.remittanceInformationStructured = remittanceInformationStructured;
         return this;
@@ -173,6 +186,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationStructuredArray")
     public RemittanceInformationStructured[] remittanceInformationStructuredArray;
+
     public EntryDetailsElement withRemittanceInformationStructuredArray(RemittanceInformationStructured[] remittanceInformationStructuredArray) {
         this.remittanceInformationStructuredArray = remittanceInformationStructuredArray;
         return this;
@@ -185,6 +199,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationUnstructured")
     public String remittanceInformationUnstructured;
+
     public EntryDetailsElement withRemittanceInformationUnstructured(String remittanceInformationUnstructured) {
         this.remittanceInformationUnstructured = remittanceInformationUnstructured;
         return this;
@@ -197,6 +212,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationUnstructuredArray")
     public String[] remittanceInformationUnstructuredArray;
+
     public EntryDetailsElement withRemittanceInformationUnstructuredArray(String[] remittanceInformationUnstructuredArray) {
         this.remittanceInformationUnstructuredArray = remittanceInformationUnstructuredArray;
         return this;
@@ -204,6 +220,7 @@ public class EntryDetailsElement {
     
     @JsonProperty("transactionAmount")
     public Amount transactionAmount;
+
     public EntryDetailsElement withTransactionAmount(Amount transactionAmount) {
         this.transactionAmount = transactionAmount;
         return this;
@@ -215,6 +232,7 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ultimateCreditor")
     public String ultimateCreditor;
+
     public EntryDetailsElement withUltimateCreditor(String ultimateCreditor) {
         this.ultimateCreditor = ultimateCreditor;
         return this;
@@ -226,9 +244,13 @@ public class EntryDetailsElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ultimateDebtor")
     public String ultimateDebtor;
+
     public EntryDetailsElement withUltimateDebtor(String ultimateDebtor) {
         this.ultimateDebtor = ultimateDebtor;
         return this;
     }
     
+    public EntryDetailsElement(@JsonProperty("transactionAmount") Amount transactionAmount) {
+        this.transactionAmount = transactionAmount;
+  }
 }

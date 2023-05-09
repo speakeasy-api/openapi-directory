@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class XPingRequest {
@@ -12,6 +13,7 @@ public class XPingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public XPingFormatEnum format;
+
     public XPingRequest withFormat(XPingFormatEnum format) {
         this.format = format;
         return this;
@@ -22,9 +24,14 @@ public class XPingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=seconds")
     public String seconds;
+
     public XPingRequest withSeconds(String seconds) {
         this.seconds = seconds;
         return this;
     }
     
+    public XPingRequest(@JsonProperty("format") XPingFormatEnum format, @JsonProperty("seconds") String seconds) {
+        this.format = format;
+        this.seconds = seconds;
+  }
 }

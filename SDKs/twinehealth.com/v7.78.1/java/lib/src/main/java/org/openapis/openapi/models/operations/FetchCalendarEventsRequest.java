@@ -13,6 +13,7 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[attendees]")
     public String filterAttendees;
+
     public FetchCalendarEventsRequest withFilterAttendees(String filterAttendees) {
         this.filterAttendees = filterAttendees;
         return this;
@@ -23,6 +24,7 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[completed]")
     public Boolean filterCompleted;
+
     public FetchCalendarEventsRequest withFilterCompleted(Boolean filterCompleted) {
         this.filterCompleted = filterCompleted;
         return this;
@@ -34,6 +36,7 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[completed_at]")
     public String filterCompletedAt;
+
     public FetchCalendarEventsRequest withFilterCompletedAt(String filterCompletedAt) {
         this.filterCompletedAt = filterCompletedAt;
         return this;
@@ -45,6 +48,7 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[created_at]")
     public String filterCreatedAt;
+
     public FetchCalendarEventsRequest withFilterCreatedAt(String filterCreatedAt) {
         this.filterCreatedAt = filterCreatedAt;
         return this;
@@ -56,6 +60,7 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[end_at]")
     public String filterEndAt;
+
     public FetchCalendarEventsRequest withFilterEndAt(String filterEndAt) {
         this.filterEndAt = filterEndAt;
         return this;
@@ -67,6 +72,7 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[groups]")
     public String filterGroups;
+
     public FetchCalendarEventsRequest withFilterGroups(String filterGroups) {
         this.filterGroups = filterGroups;
         return this;
@@ -78,6 +84,7 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[organization]")
     public String filterOrganization;
+
     public FetchCalendarEventsRequest withFilterOrganization(String filterOrganization) {
         this.filterOrganization = filterOrganization;
         return this;
@@ -89,6 +96,7 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[patient]")
     public String filterPatient;
+
     public FetchCalendarEventsRequest withFilterPatient(String filterPatient) {
         this.filterPatient = filterPatient;
         return this;
@@ -100,6 +108,7 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[start_at]")
     public String filterStartAt;
+
     public FetchCalendarEventsRequest withFilterStartAt(String filterStartAt) {
         this.filterStartAt = filterStartAt;
         return this;
@@ -110,6 +119,7 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[type]")
     public FetchCalendarEventsFilterTypeEnum filterType;
+
     public FetchCalendarEventsRequest withFilterType(FetchCalendarEventsFilterTypeEnum filterType) {
         this.filterType = filterType;
         return this;
@@ -121,6 +131,7 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[updated_at]")
     public String filterUpdatedAt;
+
     public FetchCalendarEventsRequest withFilterUpdatedAt(String filterUpdatedAt) {
         this.filterUpdatedAt = filterUpdatedAt;
         return this;
@@ -131,6 +142,7 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
     public FetchCalendarEventsIncludeEnum include;
+
     public FetchCalendarEventsRequest withInclude(FetchCalendarEventsIncludeEnum include) {
         this.include = include;
         return this;
@@ -141,6 +153,7 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[cursor]")
     public String pageCursor;
+
     public FetchCalendarEventsRequest withPageCursor(String pageCursor) {
         this.pageCursor = pageCursor;
         return this;
@@ -151,6 +164,7 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[limit]")
     public Long pageLimit;
+
     public FetchCalendarEventsRequest withPageLimit(Long pageLimit) {
         this.pageLimit = pageLimit;
         return this;
@@ -161,6 +175,7 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
     public Long pageNumber;
+
     public FetchCalendarEventsRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -171,9 +186,11 @@ public class FetchCalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public FetchCalendarEventsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public FetchCalendarEventsRequest(){}
 }

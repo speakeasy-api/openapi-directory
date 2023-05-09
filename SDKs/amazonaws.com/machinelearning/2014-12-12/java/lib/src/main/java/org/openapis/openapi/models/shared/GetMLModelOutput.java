@@ -20,6 +20,7 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeTime")
     public Long computeTime;
+
     public GetMLModelOutput withComputeTime(Long computeTime) {
         this.computeTime = computeTime;
         return this;
@@ -30,6 +31,7 @@ public class GetMLModelOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public GetMLModelOutput withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedByIamUser")
     public String createdByIamUser;
+
     public GetMLModelOutput withCreatedByIamUser(String createdByIamUser) {
         this.createdByIamUser = createdByIamUser;
         return this;
@@ -46,6 +49,7 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointInfo")
     public RealtimeEndpointInfo endpointInfo;
+
     public GetMLModelOutput withEndpointInfo(RealtimeEndpointInfo endpointInfo) {
         this.endpointInfo = endpointInfo;
         return this;
@@ -56,6 +60,7 @@ public class GetMLModelOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FinishedAt")
     public OffsetDateTime finishedAt;
+
     public GetMLModelOutput withFinishedAt(OffsetDateTime finishedAt) {
         this.finishedAt = finishedAt;
         return this;
@@ -64,6 +69,7 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataLocationS3")
     public String inputDataLocationS3;
+
     public GetMLModelOutput withInputDataLocationS3(String inputDataLocationS3) {
         this.inputDataLocationS3 = inputDataLocationS3;
         return this;
@@ -74,6 +80,7 @@ public class GetMLModelOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public GetMLModelOutput withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -82,6 +89,7 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogUri")
     public String logUri;
+
     public GetMLModelOutput withLogUri(String logUri) {
         this.logUri = logUri;
         return this;
@@ -90,6 +98,7 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public GetMLModelOutput withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
@@ -98,6 +107,7 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLModelType")
     public MLModelTypeEnum mlModelType;
+
     public GetMLModelOutput withMLModelType(MLModelTypeEnum mlModelType) {
         this.mlModelType = mlModelType;
         return this;
@@ -106,6 +116,7 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public GetMLModelOutput withMessage(String message) {
         this.message = message;
         return this;
@@ -114,6 +125,7 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetMLModelOutput withName(String name) {
         this.name = name;
         return this;
@@ -122,6 +134,7 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Recipe")
     public String recipe;
+
     public GetMLModelOutput withRecipe(String recipe) {
         this.recipe = recipe;
         return this;
@@ -130,6 +143,7 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schema")
     public String schema;
+
     public GetMLModelOutput withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -138,6 +152,7 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreThreshold")
     public Float scoreThreshold;
+
     public GetMLModelOutput withScoreThreshold(Float scoreThreshold) {
         this.scoreThreshold = scoreThreshold;
         return this;
@@ -148,6 +163,7 @@ public class GetMLModelOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ScoreThresholdLastUpdatedAt")
     public OffsetDateTime scoreThresholdLastUpdatedAt;
+
     public GetMLModelOutput withScoreThresholdLastUpdatedAt(OffsetDateTime scoreThresholdLastUpdatedAt) {
         this.scoreThresholdLastUpdatedAt = scoreThresholdLastUpdatedAt;
         return this;
@@ -159,6 +175,7 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeInBytes")
     public Long sizeInBytes;
+
     public GetMLModelOutput withSizeInBytes(Long sizeInBytes) {
         this.sizeInBytes = sizeInBytes;
         return this;
@@ -169,6 +186,7 @@ public class GetMLModelOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedAt")
     public OffsetDateTime startedAt;
+
     public GetMLModelOutput withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -177,6 +195,7 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EntityStatusEnum status;
+
     public GetMLModelOutput withStatus(EntityStatusEnum status) {
         this.status = status;
         return this;
@@ -185,6 +204,7 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingDataSourceId")
     public String trainingDataSourceId;
+
     public GetMLModelOutput withTrainingDataSourceId(String trainingDataSourceId) {
         this.trainingDataSourceId = trainingDataSourceId;
         return this;
@@ -193,9 +213,11 @@ public class GetMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingParameters")
     public java.util.Map<String, String> trainingParameters;
+
     public GetMLModelOutput withTrainingParameters(java.util.Map<String, String> trainingParameters) {
         this.trainingParameters = trainingParameters;
         return this;
     }
     
+    public GetMLModelOutput(){}
 }

@@ -12,6 +12,7 @@ public class MemberInitiator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invited")
     public MemberInitiatorInvited invited;
+
     public MemberInitiator withInvited(MemberInitiatorInvited invited) {
         this.invited = invited;
         return this;
@@ -20,9 +21,11 @@ public class MemberInitiator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("joined")
     public MemberInitiatorJoined joined;
+
     public MemberInitiator withJoined(MemberInitiatorJoined joined) {
         this.joined = joined;
         return this;
     }
     
+    public MemberInitiator(){}
 }

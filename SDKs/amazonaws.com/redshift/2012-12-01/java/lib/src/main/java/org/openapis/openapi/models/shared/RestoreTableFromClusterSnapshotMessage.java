@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RestoreTableFromClusterSnapshotMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RestoreTableFromClusterSnapshotMessage {
     
     public String clusterIdentifier;
+
     public RestoreTableFromClusterSnapshotMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class RestoreTableFromClusterSnapshotMessage {
     
     
     public Boolean enableCaseSensitiveIdentifier;
+
     public RestoreTableFromClusterSnapshotMessage withEnableCaseSensitiveIdentifier(Boolean enableCaseSensitiveIdentifier) {
         this.enableCaseSensitiveIdentifier = enableCaseSensitiveIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class RestoreTableFromClusterSnapshotMessage {
     
     
     public String newTableName;
+
     public RestoreTableFromClusterSnapshotMessage withNewTableName(String newTableName) {
         this.newTableName = newTableName;
         return this;
@@ -33,6 +36,7 @@ public class RestoreTableFromClusterSnapshotMessage {
     
     
     public String snapshotIdentifier;
+
     public RestoreTableFromClusterSnapshotMessage withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
@@ -40,6 +44,7 @@ public class RestoreTableFromClusterSnapshotMessage {
     
     
     public String sourceDatabaseName;
+
     public RestoreTableFromClusterSnapshotMessage withSourceDatabaseName(String sourceDatabaseName) {
         this.sourceDatabaseName = sourceDatabaseName;
         return this;
@@ -47,6 +52,7 @@ public class RestoreTableFromClusterSnapshotMessage {
     
     
     public String sourceSchemaName;
+
     public RestoreTableFromClusterSnapshotMessage withSourceSchemaName(String sourceSchemaName) {
         this.sourceSchemaName = sourceSchemaName;
         return this;
@@ -54,6 +60,7 @@ public class RestoreTableFromClusterSnapshotMessage {
     
     
     public String sourceTableName;
+
     public RestoreTableFromClusterSnapshotMessage withSourceTableName(String sourceTableName) {
         this.sourceTableName = sourceTableName;
         return this;
@@ -61,6 +68,7 @@ public class RestoreTableFromClusterSnapshotMessage {
     
     
     public String targetDatabaseName;
+
     public RestoreTableFromClusterSnapshotMessage withTargetDatabaseName(String targetDatabaseName) {
         this.targetDatabaseName = targetDatabaseName;
         return this;
@@ -68,9 +76,17 @@ public class RestoreTableFromClusterSnapshotMessage {
     
     
     public String targetSchemaName;
+
     public RestoreTableFromClusterSnapshotMessage withTargetSchemaName(String targetSchemaName) {
         this.targetSchemaName = targetSchemaName;
         return this;
     }
     
+    public RestoreTableFromClusterSnapshotMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("NewTableName") String newTableName, @JsonProperty("SnapshotIdentifier") String snapshotIdentifier, @JsonProperty("SourceDatabaseName") String sourceDatabaseName, @JsonProperty("SourceTableName") String sourceTableName) {
+        this.clusterIdentifier = clusterIdentifier;
+        this.newTableName = newTableName;
+        this.snapshotIdentifier = snapshotIdentifier;
+        this.sourceDatabaseName = sourceDatabaseName;
+        this.sourceTableName = sourceTableName;
+  }
 }

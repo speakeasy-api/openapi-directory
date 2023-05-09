@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdaterecurrenceRequest {
     @JsonProperty("deliveryDay")
     public Integer deliveryDay;
+
     public UpdaterecurrenceRequest withDeliveryDay(Integer deliveryDay) {
         this.deliveryDay = deliveryDay;
         return this;
@@ -16,6 +17,7 @@ public class UpdaterecurrenceRequest {
     
     @JsonProperty("deliveryWeekday")
     public String deliveryWeekday;
+
     public UpdaterecurrenceRequest withDeliveryWeekday(String deliveryWeekday) {
         this.deliveryWeekday = deliveryWeekday;
         return this;
@@ -23,6 +25,7 @@ public class UpdaterecurrenceRequest {
     
     @JsonProperty("email")
     public String email;
+
     public UpdaterecurrenceRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -30,6 +33,7 @@ public class UpdaterecurrenceRequest {
     
     @JsonProperty("items")
     public Item[] items;
+
     public UpdaterecurrenceRequest withItems(Item[] items) {
         this.items = items;
         return this;
@@ -37,9 +41,17 @@ public class UpdaterecurrenceRequest {
     
     @JsonProperty("paymentAccountId")
     public String paymentAccountId;
+
     public UpdaterecurrenceRequest withPaymentAccountId(String paymentAccountId) {
         this.paymentAccountId = paymentAccountId;
         return this;
     }
     
+    public UpdaterecurrenceRequest(@JsonProperty("deliveryDay") Integer deliveryDay, @JsonProperty("deliveryWeekday") String deliveryWeekday, @JsonProperty("email") String email, @JsonProperty("items") Item[] items, @JsonProperty("paymentAccountId") String paymentAccountId) {
+        this.deliveryDay = deliveryDay;
+        this.deliveryWeekday = deliveryWeekday;
+        this.email = email;
+        this.items = items;
+        this.paymentAccountId = paymentAccountId;
+  }
 }

@@ -12,6 +12,7 @@ public class GetAlarmsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmName")
     public String alarmName;
+
     public GetAlarmsRequest withAlarmName(String alarmName) {
         this.alarmName = alarmName;
         return this;
@@ -20,6 +21,7 @@ public class GetAlarmsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoredResourceName")
     public String monitoredResourceName;
+
     public GetAlarmsRequest withMonitoredResourceName(String monitoredResourceName) {
         this.monitoredResourceName = monitoredResourceName;
         return this;
@@ -28,9 +30,11 @@ public class GetAlarmsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetAlarmsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public GetAlarmsRequest(){}
 }

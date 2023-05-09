@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LicensesSFXResponse {
     
     public String contentType;
+
     public LicensesSFXResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class LicensesSFXResponse {
      */
     
     public org.openapis.openapi.models.shared.LicenseSFXResultDataList licenseSFXResultDataList;
+
     public LicensesSFXResponse withLicenseSFXResultDataList(org.openapis.openapi.models.shared.LicenseSFXResultDataList licenseSFXResultDataList) {
         this.licenseSFXResultDataList = licenseSFXResultDataList;
         return this;
@@ -26,6 +29,7 @@ public class LicensesSFXResponse {
     
     
     public Integer statusCode;
+
     public LicensesSFXResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class LicensesSFXResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LicensesSFXResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LicensesSFXResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

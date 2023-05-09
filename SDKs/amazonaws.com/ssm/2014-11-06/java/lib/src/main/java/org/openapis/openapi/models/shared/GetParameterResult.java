@@ -15,9 +15,11 @@ public class GetParameterResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameter")
     public Parameter parameter;
+
     public GetParameterResult withParameter(Parameter parameter) {
         this.parameter = parameter;
         return this;
     }
     
+    public GetParameterResult(){}
 }

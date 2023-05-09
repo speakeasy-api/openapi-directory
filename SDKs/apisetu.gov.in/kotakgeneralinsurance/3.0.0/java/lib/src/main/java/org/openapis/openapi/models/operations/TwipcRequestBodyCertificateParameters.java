@@ -12,6 +12,7 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyNo")
     public String policyNo;
+
     public TwipcRequestBodyCertificateParameters withPolicyNo(String policyNo) {
         this.policyNo = policyNo;
         return this;
@@ -22,6 +23,7 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("Val")
     public String val;
+
     public TwipcRequestBodyCertificateParameters withVal(String val) {
         this.val = val;
         return this;
@@ -32,9 +34,15 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("Verification")
     public String verification;
+
     public TwipcRequestBodyCertificateParameters withVerification(String verification) {
         this.verification = verification;
         return this;
     }
     
+    public TwipcRequestBodyCertificateParameters(@JsonProperty("PolicyNo") String policyNo, @JsonProperty("Val") String val, @JsonProperty("Verification") String verification) {
+        this.policyNo = policyNo;
+        this.val = val;
+        this.verification = verification;
+  }
 }

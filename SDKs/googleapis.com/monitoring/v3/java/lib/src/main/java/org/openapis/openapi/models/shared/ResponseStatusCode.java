@@ -18,6 +18,7 @@ public class ResponseStatusCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusClass")
     public ResponseStatusCodeStatusClassEnum statusClass;
+
     public ResponseStatusCode withStatusClass(ResponseStatusCodeStatusClassEnum statusClass) {
         this.statusClass = statusClass;
         return this;
@@ -29,9 +30,11 @@ public class ResponseStatusCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusValue")
     public Integer statusValue;
+
     public ResponseStatusCode withStatusValue(Integer statusValue) {
         this.statusValue = statusValue;
         return this;
     }
     
+    public ResponseStatusCode(){}
 }

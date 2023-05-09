@@ -51,11 +51,9 @@ public class Access {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessAddResponse res = new org.openapis.openapi.models.operations.AccessAddResponse() {{
+        org.openapis.openapi.models.operations.AccessAddResponse res = new org.openapis.openapi.models.operations.AccessAddResponse(contentType, httpRes.statusCode()) {{
             accessAdd200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,11 +90,9 @@ public class Access {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessDelResponse res = new org.openapis.openapi.models.operations.AccessDelResponse() {{
+        org.openapis.openapi.models.operations.AccessDelResponse res = new org.openapis.openapi.models.operations.AccessDelResponse(contentType, httpRes.statusCode()) {{
             accessDel200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,11 +128,9 @@ public class Access {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessGetAcldbResponse res = new org.openapis.openapi.models.operations.AccessGetAcldbResponse() {{
+        org.openapis.openapi.models.operations.AccessGetAcldbResponse res = new org.openapis.openapi.models.operations.AccessGetAcldbResponse(contentType, httpRes.statusCode()) {{
             accessGetAcldb200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -172,11 +166,9 @@ public class Access {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessGetAdmindirResponse res = new org.openapis.openapi.models.operations.AccessGetAdmindirResponse() {{
+        org.openapis.openapi.models.operations.AccessGetAdmindirResponse res = new org.openapis.openapi.models.operations.AccessGetAdmindirResponse(contentType, httpRes.statusCode()) {{
             accessGetAdmindir200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -212,11 +204,9 @@ public class Access {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessGetAdminuserResponse res = new org.openapis.openapi.models.operations.AccessGetAdminuserResponse() {{
+        org.openapis.openapi.models.operations.AccessGetAdminuserResponse res = new org.openapis.openapi.models.operations.AccessGetAdminuserResponse(contentType, httpRes.statusCode()) {{
             accessGetAdminuser200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +242,9 @@ public class Access {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessGetEnabledResponse res = new org.openapis.openapi.models.operations.AccessGetEnabledResponse() {{
+        org.openapis.openapi.models.operations.AccessGetEnabledResponse res = new org.openapis.openapi.models.operations.AccessGetEnabledResponse(contentType, httpRes.statusCode()) {{
             accessGetEnabled200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,11 +280,9 @@ public class Access {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessListResponse res = new org.openapis.openapi.models.operations.AccessListResponse() {{
+        org.openapis.openapi.models.operations.AccessListResponse res = new org.openapis.openapi.models.operations.AccessListResponse(contentType, httpRes.statusCode()) {{
             accessEntries = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,11 +320,9 @@ public class Access {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessLoadResponse res = new org.openapis.openapi.models.operations.AccessLoadResponse() {{
+        org.openapis.openapi.models.operations.AccessLoadResponse res = new org.openapis.openapi.models.operations.AccessLoadResponse(contentType, httpRes.statusCode()) {{
             accessLoad200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -376,11 +360,9 @@ public class Access {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessSaveResponse res = new org.openapis.openapi.models.operations.AccessSaveResponse() {{
+        org.openapis.openapi.models.operations.AccessSaveResponse res = new org.openapis.openapi.models.operations.AccessSaveResponse(contentType, httpRes.statusCode()) {{
             accessSave200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -418,11 +400,9 @@ public class Access {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessSetAcldbResponse res = new org.openapis.openapi.models.operations.AccessSetAcldbResponse() {{
+        org.openapis.openapi.models.operations.AccessSetAcldbResponse res = new org.openapis.openapi.models.operations.AccessSetAcldbResponse(contentType, httpRes.statusCode()) {{
             accessSetAcldb200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -459,11 +439,9 @@ public class Access {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessSetEnabledResponse res = new org.openapis.openapi.models.operations.AccessSetEnabledResponse() {{
+        org.openapis.openapi.models.operations.AccessSetEnabledResponse res = new org.openapis.openapi.models.operations.AccessSetEnabledResponse(contentType, httpRes.statusCode()) {{
             accessSetEnabled200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

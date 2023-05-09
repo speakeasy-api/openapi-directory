@@ -18,6 +18,7 @@ public class ActionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public ActionStatusStatusCodeEnum statusCode;
+
     public ActionStatus withStatusCode(ActionStatusStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -29,9 +30,11 @@ public class ActionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userFacingMessage")
     public String userFacingMessage;
+
     public ActionStatus withUserFacingMessage(String userFacingMessage) {
         this.userFacingMessage = userFacingMessage;
         return this;
     }
     
+    public ActionStatus(){}
 }

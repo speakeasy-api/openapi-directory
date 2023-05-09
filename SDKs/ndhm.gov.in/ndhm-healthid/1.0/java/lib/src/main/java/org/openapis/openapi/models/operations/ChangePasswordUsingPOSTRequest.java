@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangePasswordUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public ChangePasswordUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class ChangePasswordUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HealthFacilityChangedPasswordRequest healthFacilityChangedPasswordRequest;
+
     public ChangePasswordUsingPOSTRequest withHealthFacilityChangedPasswordRequest(org.openapis.openapi.models.shared.HealthFacilityChangedPasswordRequest healthFacilityChangedPasswordRequest) {
         this.healthFacilityChangedPasswordRequest = healthFacilityChangedPasswordRequest;
         return this;
     }
     
+    public ChangePasswordUsingPOSTRequest(@JsonProperty("HealthFacilityChangedPasswordRequest") org.openapis.openapi.models.shared.HealthFacilityChangedPasswordRequest healthFacilityChangedPasswordRequest) {
+        this.healthFacilityChangedPasswordRequest = healthFacilityChangedPasswordRequest;
+  }
 }

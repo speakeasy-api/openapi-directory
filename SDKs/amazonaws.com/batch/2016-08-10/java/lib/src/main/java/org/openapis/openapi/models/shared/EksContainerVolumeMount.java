@@ -15,6 +15,7 @@ public class EksContainerVolumeMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountPath")
     public String mountPath;
+
     public EksContainerVolumeMount withMountPath(String mountPath) {
         this.mountPath = mountPath;
         return this;
@@ -23,6 +24,7 @@ public class EksContainerVolumeMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EksContainerVolumeMount withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class EksContainerVolumeMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOnly")
     public Boolean readOnly;
+
     public EksContainerVolumeMount withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
     }
     
+    public EksContainerVolumeMount(){}
 }

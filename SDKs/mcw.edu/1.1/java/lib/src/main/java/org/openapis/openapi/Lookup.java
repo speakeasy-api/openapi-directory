@@ -48,11 +48,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETEnsemblGeneMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETEnsemblGeneMappingUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETEnsemblGeneMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETEnsemblGeneMappingUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -89,11 +87,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEnsemblGeneMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetEnsemblGeneMappingUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetEnsemblGeneMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetEnsemblGeneMappingUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -128,11 +124,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETEnsemblProteinMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETEnsemblProteinMappingUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETEnsemblProteinMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETEnsemblProteinMappingUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,11 +163,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEnsemblProteinMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetEnsemblProteinMappingUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetEnsemblProteinMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetEnsemblProteinMappingUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -208,11 +200,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETEnsemblTranscriptMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETEnsemblTranscriptMappingUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETEnsemblTranscriptMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETEnsemblTranscriptMappingUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +239,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEnsemblTranscriptMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetEnsemblTranscriptMappingUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetEnsemblTranscriptMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetEnsemblTranscriptMappingUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,11 +276,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGTEXMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETGTEXMappingUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGTEXMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETGTEXMappingUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -329,11 +315,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGTEXMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetGTEXMappingUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetGTEXMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetGTEXMappingUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -368,11 +352,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGenBankNucleotideMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenBankNucleotideMappingUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGenBankNucleotideMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenBankNucleotideMappingUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -409,11 +391,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenBankNucleotideMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetGenBankNucleotideMappingUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetGenBankNucleotideMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetGenBankNucleotideMappingUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -448,11 +428,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGenBankProteinMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenBankProteinMappingUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGenBankProteinMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenBankProteinMappingUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -489,11 +467,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenBankProteinMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetGenBankProteinMappingUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetGenBankProteinMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetGenBankProteinMappingUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -527,11 +503,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGeneTypesUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneTypesUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGeneTypesUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneTypesUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -566,11 +540,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETHGNCMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETHGNCMappingUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETHGNCMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETHGNCMappingUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -607,11 +579,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHGNCMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetHGNCMappingUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetHGNCMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetHGNCMappingUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -646,11 +616,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETMGIMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETMGIMappingUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETMGIMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETMGIMappingUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -687,11 +655,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMGIMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetMGIMappingUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetMGIMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetMGIMappingUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -726,11 +692,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETMapsUsingGETResponse res = new org.openapis.openapi.models.operations.GETMapsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETMapsUsingGETResponse res = new org.openapis.openapi.models.operations.GETMapsUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -765,11 +729,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETMapsUsingGET1Response res = new org.openapis.openapi.models.operations.GETMapsUsingGET1Response() {{
+        org.openapis.openapi.models.operations.GETMapsUsingGET1Response res = new org.openapis.openapi.models.operations.GETMapsUsingGET1Response(contentType, httpRes.statusCode()) {{
             getMapsUsingGET1200WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -804,11 +766,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETNCBIGeneMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETNCBIGeneMappingUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETNCBIGeneMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETNCBIGeneMappingUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -845,11 +805,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNCBIGeneMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetNCBIGeneMappingUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetNCBIGeneMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetNCBIGeneMappingUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -883,11 +841,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETSpeciesTypesUsingGETResponse res = new org.openapis.openapi.models.operations.GETSpeciesTypesUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETSpeciesTypesUsingGETResponse res = new org.openapis.openapi.models.operations.GETSpeciesTypesUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -922,11 +878,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETUniProtMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETUniProtMappingUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETUniProtMappingUsingGETResponse res = new org.openapis.openapi.models.operations.GETUniProtMappingUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -963,11 +917,9 @@ public class Lookup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUniProtMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetUniProtMappingUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetUniProtMappingUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetUniProtMappingUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

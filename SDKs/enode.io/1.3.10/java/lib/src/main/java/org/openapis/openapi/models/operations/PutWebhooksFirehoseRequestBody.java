@@ -15,6 +15,7 @@ public class PutWebhooksFirehoseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public PutWebhooksFirehoseRequestBody withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -26,9 +27,11 @@ public class PutWebhooksFirehoseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PutWebhooksFirehoseRequestBody withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PutWebhooksFirehoseRequestBody(){}
 }

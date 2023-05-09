@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -15,6 +16,7 @@ public class Law {
      */
     
     public String agency;
+
     public Law withAgency(String agency) {
         this.agency = agency;
         return this;
@@ -25,6 +27,7 @@ public class Law {
      */
     
     public OffsetDateTime amendedDate;
+
     public Law withAmendedDate(OffsetDateTime amendedDate) {
         this.amendedDate = amendedDate;
         return this;
@@ -35,6 +38,7 @@ public class Law {
      */
     
     public OffsetDateTime archivedDate;
+
     public Law withArchivedDate(OffsetDateTime archivedDate) {
         this.archivedDate = archivedDate;
         return this;
@@ -45,6 +49,7 @@ public class Law {
      */
     
     public Category[] categories;
+
     public Law withCategories(Category[] categories) {
         this.categories = categories;
         return this;
@@ -55,6 +60,7 @@ public class Law {
      */
     
     public Poc[] contacts;
+
     public Law withContacts(Poc[] contacts) {
         this.contacts = contacts;
         return this;
@@ -65,6 +71,7 @@ public class Law {
      */
     
     public OffsetDateTime enactedDate;
+
     public Law withEnactedDate(OffsetDateTime enactedDate) {
         this.enactedDate = enactedDate;
         return this;
@@ -75,6 +82,7 @@ public class Law {
      */
     
     public OffsetDateTime expiredDate;
+
     public Law withExpiredDate(OffsetDateTime expiredDate) {
         this.expiredDate = expiredDate;
         return this;
@@ -85,6 +93,7 @@ public class Law {
      */
     
     public Long id;
+
     public Law withId(Long id) {
         this.id = id;
         return this;
@@ -95,6 +104,7 @@ public class Law {
      */
     
     public Boolean isRecent;
+
     public Law withIsRecent(Boolean isRecent) {
         this.isRecent = isRecent;
         return this;
@@ -105,6 +115,7 @@ public class Law {
      */
     
     public String plaintext;
+
     public Law withPlaintext(String plaintext) {
         this.plaintext = plaintext;
         return this;
@@ -115,6 +126,7 @@ public class Law {
      */
     
     public String recentUpdateOrNew;
+
     public Law withRecentUpdateOrNew(String recentUpdateOrNew) {
         this.recentUpdateOrNew = recentUpdateOrNew;
         return this;
@@ -125,6 +137,7 @@ public class Law {
      */
     
     public LawReference[] references;
+
     public Law withReferences(LawReference[] references) {
         this.references = references;
         return this;
@@ -135,6 +148,7 @@ public class Law {
      */
     
     public OffsetDateTime repealedDate;
+
     public Law withRepealedDate(OffsetDateTime repealedDate) {
         this.repealedDate = repealedDate;
         return this;
@@ -145,6 +159,7 @@ public class Law {
      */
     
     public Long seqNum;
+
     public Law withSeqNum(Long seqNum) {
         this.seqNum = seqNum;
         return this;
@@ -155,6 +170,7 @@ public class Law {
      */
     
     public OffsetDateTime significantUpdateDate;
+
     public Law withSignificantUpdateDate(OffsetDateTime significantUpdateDate) {
         this.significantUpdateDate = significantUpdateDate;
         return this;
@@ -165,6 +181,7 @@ public class Law {
      */
     
     public String state;
+
     public Law withState(String state) {
         this.state = state;
         return this;
@@ -175,6 +192,7 @@ public class Law {
      */
     
     public String text;
+
     public Law withText(String text) {
         this.text = text;
         return this;
@@ -185,6 +203,7 @@ public class Law {
      */
     
     public String title;
+
     public Law withTitle(String title) {
         this.title = title;
         return this;
@@ -195,6 +214,7 @@ public class Law {
      */
     
     public LawTopics[] topics;
+
     public Law withTopics(LawTopics[] topics) {
         this.topics = topics;
         return this;
@@ -205,6 +225,7 @@ public class Law {
      */
     
     public String type;
+
     public Law withType(String type) {
         this.type = type;
         return this;
@@ -215,9 +236,22 @@ public class Law {
      */
     
     public LawType[] types;
+
     public Law withTypes(LawType[] types) {
         this.types = types;
         return this;
     }
     
+    public Law(@JsonProperty("categories") Category[] categories, @JsonProperty("id") Long id, @JsonProperty("plaintext") String plaintext, @JsonProperty("references") LawReference[] references, @JsonProperty("state") String state, @JsonProperty("text") String text, @JsonProperty("title") String title, @JsonProperty("topics") LawTopics[] topics, @JsonProperty("type") String type, @JsonProperty("types") LawType[] types) {
+        this.categories = categories;
+        this.id = id;
+        this.plaintext = plaintext;
+        this.references = references;
+        this.state = state;
+        this.text = text;
+        this.title = title;
+        this.topics = topics;
+        this.type = type;
+        this.types = types;
+  }
 }

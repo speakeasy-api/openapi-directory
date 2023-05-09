@@ -20,6 +20,7 @@ public class DescribeFleetMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationField")
     public String aggregationField;
+
     public DescribeFleetMetricResponse withAggregationField(String aggregationField) {
         this.aggregationField = aggregationField;
         return this;
@@ -28,6 +29,7 @@ public class DescribeFleetMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationType")
     public AggregationType aggregationType;
+
     public DescribeFleetMetricResponse withAggregationType(AggregationType aggregationType) {
         this.aggregationType = aggregationType;
         return this;
@@ -38,6 +40,7 @@ public class DescribeFleetMetricResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public DescribeFleetMetricResponse withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -46,6 +49,7 @@ public class DescribeFleetMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DescribeFleetMetricResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class DescribeFleetMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexName")
     public String indexName;
+
     public DescribeFleetMetricResponse withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -64,6 +69,7 @@ public class DescribeFleetMetricResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public DescribeFleetMetricResponse withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -72,6 +78,7 @@ public class DescribeFleetMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricArn")
     public String metricArn;
+
     public DescribeFleetMetricResponse withMetricArn(String metricArn) {
         this.metricArn = metricArn;
         return this;
@@ -80,6 +87,7 @@ public class DescribeFleetMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public String metricName;
+
     public DescribeFleetMetricResponse withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -88,6 +96,7 @@ public class DescribeFleetMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public Long period;
+
     public DescribeFleetMetricResponse withPeriod(Long period) {
         this.period = period;
         return this;
@@ -96,6 +105,7 @@ public class DescribeFleetMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryString")
     public String queryString;
+
     public DescribeFleetMetricResponse withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
@@ -104,6 +114,7 @@ public class DescribeFleetMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryVersion")
     public String queryVersion;
+
     public DescribeFleetMetricResponse withQueryVersion(String queryVersion) {
         this.queryVersion = queryVersion;
         return this;
@@ -112,6 +123,7 @@ public class DescribeFleetMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public FleetMetricUnitEnum unit;
+
     public DescribeFleetMetricResponse withUnit(FleetMetricUnitEnum unit) {
         this.unit = unit;
         return this;
@@ -120,9 +132,11 @@ public class DescribeFleetMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public DescribeFleetMetricResponse withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public DescribeFleetMetricResponse(){}
 }

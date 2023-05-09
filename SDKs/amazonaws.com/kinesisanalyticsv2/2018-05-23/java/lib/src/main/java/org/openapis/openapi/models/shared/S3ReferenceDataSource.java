@@ -15,6 +15,7 @@ public class S3ReferenceDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketARN")
     public String bucketARN;
+
     public S3ReferenceDataSource withBucketARN(String bucketARN) {
         this.bucketARN = bucketARN;
         return this;
@@ -23,9 +24,11 @@ public class S3ReferenceDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileKey")
     public String fileKey;
+
     public S3ReferenceDataSource withFileKey(String fileKey) {
         this.fileKey = fileKey;
         return this;
     }
     
+    public S3ReferenceDataSource(){}
 }

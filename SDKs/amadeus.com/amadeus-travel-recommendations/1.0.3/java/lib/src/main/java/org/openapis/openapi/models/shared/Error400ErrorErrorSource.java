@@ -15,6 +15,7 @@ public class Error400ErrorErrorSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("example")
     public String example;
+
     public Error400ErrorErrorSource withExample(String example) {
         this.example = example;
         return this;
@@ -26,6 +27,7 @@ public class Error400ErrorErrorSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public String parameter;
+
     public Error400ErrorErrorSource withParameter(String parameter) {
         this.parameter = parameter;
         return this;
@@ -37,9 +39,11 @@ public class Error400ErrorErrorSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointer")
     public String pointer;
+
     public Error400ErrorErrorSource withPointer(String pointer) {
         this.pointer = pointer;
         return this;
     }
     
+    public Error400ErrorErrorSource(){}
 }

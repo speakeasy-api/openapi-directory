@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse withContent(String content) {
         this.content = content;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse(){}
 }

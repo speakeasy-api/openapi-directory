@@ -14,6 +14,7 @@ public class QueryListOfUnsubscribedEmailAddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public QueryListOfUnsubscribedEmailAddressesRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -26,6 +27,7 @@ public class QueryListOfUnsubscribedEmailAddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public String endDate;
+
     public QueryListOfUnsubscribedEmailAddressesRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -38,6 +40,7 @@ public class QueryListOfUnsubscribedEmailAddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public QueryListOfUnsubscribedEmailAddressesRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -50,6 +53,7 @@ public class QueryListOfUnsubscribedEmailAddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public QueryListOfUnsubscribedEmailAddressesRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -62,6 +66,7 @@ public class QueryListOfUnsubscribedEmailAddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public QueryListOfUnsubscribedEmailAddressesRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -74,9 +79,11 @@ public class QueryListOfUnsubscribedEmailAddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public String startDate;
+
     public QueryListOfUnsubscribedEmailAddressesRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public QueryListOfUnsubscribedEmailAddressesRequest(){}
 }

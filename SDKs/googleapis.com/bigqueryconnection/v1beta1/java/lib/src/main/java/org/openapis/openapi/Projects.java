@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateResponse() {{
+        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateResponse(contentType, httpRes.statusCode()) {{
             connection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsDeleteResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsDeleteResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetResponse() {{
+        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetResponse(contentType, httpRes.statusCode()) {{
             connection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsListResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsListResponse() {{
+        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsListResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsListResponse(contentType, httpRes.statusCode()) {{
             listConnectionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialResponse() {{
+        org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialResponse res = new org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

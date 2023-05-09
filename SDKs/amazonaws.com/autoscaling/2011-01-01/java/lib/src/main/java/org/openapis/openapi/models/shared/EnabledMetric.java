@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class EnabledMetric {
     
     public String granularity;
+
     public EnabledMetric withGranularity(String granularity) {
         this.granularity = granularity;
         return this;
@@ -19,9 +20,11 @@ public class EnabledMetric {
     
     
     public String metric;
+
     public EnabledMetric withMetric(String metric) {
         this.metric = metric;
         return this;
     }
     
+    public EnabledMetric(){}
 }

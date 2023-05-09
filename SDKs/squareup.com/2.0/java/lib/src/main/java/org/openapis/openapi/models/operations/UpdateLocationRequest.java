@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateLocationRequest {
@@ -14,6 +15,7 @@ public class UpdateLocationRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateLocationRequest updateLocationRequest;
+
     public UpdateLocationRequest withUpdateLocationRequest(org.openapis.openapi.models.shared.UpdateLocationRequest updateLocationRequest) {
         this.updateLocationRequest = updateLocationRequest;
         return this;
@@ -24,9 +26,14 @@ public class UpdateLocationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
     public String locationId;
+
     public UpdateLocationRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public UpdateLocationRequest(@JsonProperty("UpdateLocationRequest") org.openapis.openapi.models.shared.UpdateLocationRequest updateLocationRequest, @JsonProperty("location_id") String locationId) {
+        this.updateLocationRequest = updateLocationRequest;
+        this.locationId = locationId;
+  }
 }

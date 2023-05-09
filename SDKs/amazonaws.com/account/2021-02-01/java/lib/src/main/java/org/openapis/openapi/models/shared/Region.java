@@ -15,6 +15,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionName")
     public String regionName;
+
     public Region withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -23,9 +24,11 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionOptStatus")
     public RegionOptStatusEnum regionOptStatus;
+
     public Region withRegionOptStatus(RegionOptStatusEnum regionOptStatus) {
         this.regionOptStatus = regionOptStatus;
         return this;
     }
     
+    public Region(){}
 }

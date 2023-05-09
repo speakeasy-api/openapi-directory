@@ -12,6 +12,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayScore")
     public Long awayScore;
+
     public ScoringPlay withAwayScore(Long awayScore) {
         this.awayScore = awayScore;
         return this;
@@ -20,6 +21,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeam")
     public String awayTeam;
+
     public ScoringPlay withAwayTeam(String awayTeam) {
         this.awayTeam = awayTeam;
         return this;
@@ -28,6 +30,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Date")
     public String date;
+
     public ScoringPlay withDate(String date) {
         this.date = date;
         return this;
@@ -36,6 +39,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameKey")
     public String gameKey;
+
     public ScoringPlay withGameKey(String gameKey) {
         this.gameKey = gameKey;
         return this;
@@ -44,6 +48,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeScore")
     public Long homeScore;
+
     public ScoringPlay withHomeScore(Long homeScore) {
         this.homeScore = homeScore;
         return this;
@@ -52,6 +57,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeam")
     public String homeTeam;
+
     public ScoringPlay withHomeTeam(String homeTeam) {
         this.homeTeam = homeTeam;
         return this;
@@ -60,6 +66,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayDescription")
     public String playDescription;
+
     public ScoringPlay withPlayDescription(String playDescription) {
         this.playDescription = playDescription;
         return this;
@@ -68,6 +75,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quarter")
     public String quarter;
+
     public ScoringPlay withQuarter(String quarter) {
         this.quarter = quarter;
         return this;
@@ -76,6 +84,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreID")
     public Long scoreID;
+
     public ScoringPlay withScoreID(Long scoreID) {
         this.scoreID = scoreID;
         return this;
@@ -84,6 +93,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoringPlayID")
     public Long scoringPlayID;
+
     public ScoringPlay withScoringPlayID(Long scoringPlayID) {
         this.scoringPlayID = scoringPlayID;
         return this;
@@ -92,6 +102,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public ScoringPlay withSeason(Long season) {
         this.season = season;
         return this;
@@ -100,6 +111,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public ScoringPlay withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -108,6 +120,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sequence")
     public Long sequence;
+
     public ScoringPlay withSequence(Long sequence) {
         this.sequence = sequence;
         return this;
@@ -116,6 +129,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public ScoringPlay withTeam(String team) {
         this.team = team;
         return this;
@@ -124,6 +138,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeRemaining")
     public String timeRemaining;
+
     public ScoringPlay withTimeRemaining(String timeRemaining) {
         this.timeRemaining = timeRemaining;
         return this;
@@ -132,9 +147,11 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Week")
     public Long week;
+
     public ScoringPlay withWeek(Long week) {
         this.week = week;
         return this;
     }
     
+    public ScoringPlay(){}
 }

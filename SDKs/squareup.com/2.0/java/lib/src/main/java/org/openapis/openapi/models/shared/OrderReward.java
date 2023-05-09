@@ -16,6 +16,7 @@ public class OrderReward {
      */
     @JsonProperty("id")
     public String id;
+
     public OrderReward withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,14 @@ public class OrderReward {
      */
     @JsonProperty("reward_tier_id")
     public String rewardTierId;
+
     public OrderReward withRewardTierId(String rewardTierId) {
         this.rewardTierId = rewardTierId;
         return this;
     }
     
+    public OrderReward(@JsonProperty("id") String id, @JsonProperty("reward_tier_id") String rewardTierId) {
+        this.id = id;
+        this.rewardTierId = rewardTierId;
+  }
 }

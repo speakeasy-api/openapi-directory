@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAccessPolicyResponse {
     
     public String contentType;
+
     public GetAccessPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAccessPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAccessPolicyResponse getAccessPolicyResponse;
+
     public GetAccessPolicyResponse withGetAccessPolicyResponse(org.openapis.openapi.models.shared.GetAccessPolicyResponse getAccessPolicyResponse) {
         this.getAccessPolicyResponse = getAccessPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAccessPolicyResponse {
      */
     
     public Object internalServerException;
+
     public GetAccessPolicyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class GetAccessPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetAccessPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetAccessPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAccessPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetAccessPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAccessPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class GetAccessPolicyResponse {
      */
     
     public Object validationException;
+
     public GetAccessPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAccessPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

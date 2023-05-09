@@ -15,6 +15,7 @@ public class PhoneNumberAssignment {
      */
     
     public Long id;
+
     public PhoneNumberAssignment withId(Long id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class PhoneNumberAssignment {
      */
     
     public String number;
+
     public PhoneNumberAssignment withNumber(String number) {
         this.number = number;
         return this;
@@ -32,9 +34,11 @@ public class PhoneNumberAssignment {
     
     
     public EmbeddedResource user;
+
     public PhoneNumberAssignment withUser(EmbeddedResource user) {
         this.user = user;
         return this;
     }
     
+    public PhoneNumberAssignment(){}
 }

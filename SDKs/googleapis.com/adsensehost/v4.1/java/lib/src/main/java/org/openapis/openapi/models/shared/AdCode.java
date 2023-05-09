@@ -18,6 +18,7 @@ public class AdCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adCode")
     public String adCode;
+
     public AdCode withAdCode(String adCode) {
         this.adCode = adCode;
         return this;
@@ -29,9 +30,11 @@ public class AdCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AdCode withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public AdCode(){}
 }

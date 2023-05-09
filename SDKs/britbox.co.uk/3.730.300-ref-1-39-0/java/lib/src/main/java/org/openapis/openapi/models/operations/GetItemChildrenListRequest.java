@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemChildrenListRequest {
@@ -12,6 +13,7 @@ public class GetItemChildrenListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetItemChildrenListRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -42,6 +44,7 @@ public class GetItemChildrenListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetItemChildrenListRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -52,6 +55,7 @@ public class GetItemChildrenListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetItemChildrenListRequest withId(String id) {
         this.id = id;
         return this;
@@ -72,6 +76,7 @@ public class GetItemChildrenListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetItemChildrenListRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -82,6 +87,7 @@ public class GetItemChildrenListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_rating")
     public String maxRating;
+
     public GetItemChildrenListRequest withMaxRating(String maxRating) {
         this.maxRating = maxRating;
         return this;
@@ -92,6 +98,7 @@ public class GetItemChildrenListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.ListOrderEnum order;
+
     public GetItemChildrenListRequest withOrder(org.openapis.openapi.models.shared.ListOrderEnum order) {
         this.order = order;
         return this;
@@ -102,6 +109,7 @@ public class GetItemChildrenListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetItemChildrenListRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -112,6 +120,7 @@ public class GetItemChildrenListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Integer pageSize;
+
     public GetItemChildrenListRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -122,6 +131,7 @@ public class GetItemChildrenListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetItemChildrenListRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -132,9 +142,13 @@ public class GetItemChildrenListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public GetItemChildrenListRequest withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public GetItemChildrenListRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

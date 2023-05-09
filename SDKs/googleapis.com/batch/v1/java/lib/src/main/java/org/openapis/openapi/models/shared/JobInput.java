@@ -18,6 +18,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allocationPolicy")
     public AllocationPolicy allocationPolicy;
+
     public JobInput withAllocationPolicy(AllocationPolicy allocationPolicy) {
         this.allocationPolicy = allocationPolicy;
         return this;
@@ -29,6 +30,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public JobInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logsPolicy")
     public LogsPolicy logsPolicy;
+
     public JobInput withLogsPolicy(LogsPolicy logsPolicy) {
         this.logsPolicy = logsPolicy;
         return this;
@@ -51,6 +54,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifications")
     public JobNotification[] notifications;
+
     public JobInput withNotifications(JobNotification[] notifications) {
         this.notifications = notifications;
         return this;
@@ -62,6 +66,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public String priority;
+
     public JobInput withPriority(String priority) {
         this.priority = priority;
         return this;
@@ -73,6 +78,7 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public JobStatus status;
+
     public JobInput withStatus(JobStatus status) {
         this.status = status;
         return this;
@@ -84,9 +90,11 @@ public class JobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskGroups")
     public TaskGroupInput[] taskGroups;
+
     public JobInput withTaskGroups(TaskGroupInput[] taskGroups) {
         this.taskGroups = taskGroups;
         return this;
     }
     
+    public JobInput(){}
 }

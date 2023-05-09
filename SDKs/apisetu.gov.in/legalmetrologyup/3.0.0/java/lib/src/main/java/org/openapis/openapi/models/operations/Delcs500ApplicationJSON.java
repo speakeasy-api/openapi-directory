@@ -15,6 +15,7 @@ public class Delcs500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Delcs500ApplicationJSONErrorEnum error;
+
     public Delcs500ApplicationJSON withError(Delcs500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Delcs500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Delcs500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Delcs500ApplicationJSON withErrorDescription(Delcs500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Delcs500ApplicationJSON(){}
 }

@@ -15,6 +15,7 @@ public class ErrorsGroupModelCounts200ApplicationJSONModels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCount")
     public Long errorCount;
+
     public ErrorsGroupModelCounts200ApplicationJSONModels withErrorCount(Long errorCount) {
         this.errorCount = errorCount;
         return this;
@@ -26,6 +27,7 @@ public class ErrorsGroupModelCounts200ApplicationJSONModels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelCode")
     public String modelCode;
+
     public ErrorsGroupModelCounts200ApplicationJSONModels withModelCode(String modelCode) {
         this.modelCode = modelCode;
         return this;
@@ -37,9 +39,11 @@ public class ErrorsGroupModelCounts200ApplicationJSONModels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelName")
     public String modelName;
+
     public ErrorsGroupModelCounts200ApplicationJSONModels withModelName(String modelName) {
         this.modelName = modelName;
         return this;
     }
     
+    public ErrorsGroupModelCounts200ApplicationJSONModels(){}
 }

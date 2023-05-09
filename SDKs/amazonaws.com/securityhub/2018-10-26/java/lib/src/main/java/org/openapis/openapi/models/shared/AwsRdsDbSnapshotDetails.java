@@ -15,6 +15,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllocatedStorage")
     public Long allocatedStorage;
+
     public AwsRdsDbSnapshotDetails withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -23,6 +24,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public AwsRdsDbSnapshotDetails withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -31,6 +33,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbInstanceIdentifier")
     public String dbInstanceIdentifier;
+
     public AwsRdsDbSnapshotDetails withDbInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -39,6 +42,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbSnapshotIdentifier")
     public String dbSnapshotIdentifier;
+
     public AwsRdsDbSnapshotDetails withDbSnapshotIdentifier(String dbSnapshotIdentifier) {
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
         return this;
@@ -47,6 +51,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbiResourceId")
     public String dbiResourceId;
+
     public AwsRdsDbSnapshotDetails withDbiResourceId(String dbiResourceId) {
         this.dbiResourceId = dbiResourceId;
         return this;
@@ -55,6 +60,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encrypted")
     public Boolean encrypted;
+
     public AwsRdsDbSnapshotDetails withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -63,6 +69,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Engine")
     public String engine;
+
     public AwsRdsDbSnapshotDetails withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -71,6 +78,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public String engineVersion;
+
     public AwsRdsDbSnapshotDetails withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -79,6 +87,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamDatabaseAuthenticationEnabled")
     public Boolean iamDatabaseAuthenticationEnabled;
+
     public AwsRdsDbSnapshotDetails withIamDatabaseAuthenticationEnabled(Boolean iamDatabaseAuthenticationEnabled) {
         this.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
         return this;
@@ -87,6 +96,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceCreateTime")
     public String instanceCreateTime;
+
     public AwsRdsDbSnapshotDetails withInstanceCreateTime(String instanceCreateTime) {
         this.instanceCreateTime = instanceCreateTime;
         return this;
@@ -95,6 +105,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Iops")
     public Long iops;
+
     public AwsRdsDbSnapshotDetails withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -103,6 +114,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public AwsRdsDbSnapshotDetails withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -111,6 +123,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseModel")
     public String licenseModel;
+
     public AwsRdsDbSnapshotDetails withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -119,6 +132,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterUsername")
     public String masterUsername;
+
     public AwsRdsDbSnapshotDetails withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -127,6 +141,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptionGroupName")
     public String optionGroupName;
+
     public AwsRdsDbSnapshotDetails withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -135,6 +150,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PercentProgress")
     public Long percentProgress;
+
     public AwsRdsDbSnapshotDetails withPercentProgress(Long percentProgress) {
         this.percentProgress = percentProgress;
         return this;
@@ -143,6 +159,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public AwsRdsDbSnapshotDetails withPort(Long port) {
         this.port = port;
         return this;
@@ -151,6 +168,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessorFeatures")
     public AwsRdsDbProcessorFeature[] processorFeatures;
+
     public AwsRdsDbSnapshotDetails withProcessorFeatures(AwsRdsDbProcessorFeature[] processorFeatures) {
         this.processorFeatures = processorFeatures;
         return this;
@@ -159,6 +177,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotCreateTime")
     public String snapshotCreateTime;
+
     public AwsRdsDbSnapshotDetails withSnapshotCreateTime(String snapshotCreateTime) {
         this.snapshotCreateTime = snapshotCreateTime;
         return this;
@@ -167,6 +186,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotType")
     public String snapshotType;
+
     public AwsRdsDbSnapshotDetails withSnapshotType(String snapshotType) {
         this.snapshotType = snapshotType;
         return this;
@@ -175,6 +195,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceDbSnapshotIdentifier")
     public String sourceDbSnapshotIdentifier;
+
     public AwsRdsDbSnapshotDetails withSourceDbSnapshotIdentifier(String sourceDbSnapshotIdentifier) {
         this.sourceDbSnapshotIdentifier = sourceDbSnapshotIdentifier;
         return this;
@@ -183,6 +204,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceRegion")
     public String sourceRegion;
+
     public AwsRdsDbSnapshotDetails withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
@@ -191,6 +213,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsRdsDbSnapshotDetails withStatus(String status) {
         this.status = status;
         return this;
@@ -199,6 +222,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageType")
     public String storageType;
+
     public AwsRdsDbSnapshotDetails withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
@@ -207,6 +231,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TdeCredentialArn")
     public String tdeCredentialArn;
+
     public AwsRdsDbSnapshotDetails withTdeCredentialArn(String tdeCredentialArn) {
         this.tdeCredentialArn = tdeCredentialArn;
         return this;
@@ -215,6 +240,7 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timezone")
     public String timezone;
+
     public AwsRdsDbSnapshotDetails withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -223,9 +249,11 @@ public class AwsRdsDbSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public AwsRdsDbSnapshotDetails withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AwsRdsDbSnapshotDetails(){}
 }

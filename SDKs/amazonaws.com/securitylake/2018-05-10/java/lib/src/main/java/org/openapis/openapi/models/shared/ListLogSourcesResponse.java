@@ -15,6 +15,7 @@ public class ListLogSourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListLogSourcesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListLogSourcesResponse {
     
     @JsonProperty("regionSourceTypesAccountsList")
     public java.util.Map<String, java.util.Map<String, String[]>>[] regionSourceTypesAccountsList;
+
     public ListLogSourcesResponse withRegionSourceTypesAccountsList(java.util.Map<String, java.util.Map<String, String[]>>[] regionSourceTypesAccountsList) {
         this.regionSourceTypesAccountsList = regionSourceTypesAccountsList;
         return this;
     }
     
+    public ListLogSourcesResponse(@JsonProperty("regionSourceTypesAccountsList") java.util.Map<String, java.util.Map<String, String[]>>[] regionSourceTypesAccountsList) {
+        this.regionSourceTypesAccountsList = regionSourceTypesAccountsList;
+  }
 }

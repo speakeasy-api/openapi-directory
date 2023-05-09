@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SortOptionsResponse {
     
     public String contentType;
+
     public SortOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SortOptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.SortOptionResponse sortOptionResponse;
+
     public SortOptionsResponse withSortOptionResponse(org.openapis.openapi.models.shared.SortOptionResponse sortOptionResponse) {
         this.sortOptionResponse = sortOptionResponse;
         return this;
@@ -26,6 +29,7 @@ public class SortOptionsResponse {
     
     
     public Integer statusCode;
+
     public SortOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SortOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SortOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SortOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

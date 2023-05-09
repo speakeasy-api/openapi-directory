@@ -59,16 +59,15 @@ public class Agreements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AcceptEUAResponse res = new org.openapis.openapi.models.operations.AcceptEUAResponse() {{
+        org.openapis.openapi.models.operations.AcceptEUAResponse res = new org.openapis.openapi.models.operations.AcceptEUAResponse(contentType, httpRes.statusCode()) {{
             endUserAgreement = null;
             acceptEUA400ApplicationJSONObject = null;
             acceptEUA401ApplicationJSONObject = null;
             acceptEUA403ApplicationJSONObject = null;
             acceptEUA404ApplicationJSONObject = null;
             acceptEUA405ApplicationJSONObject = null;
+            acceptEUA429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,12 +112,19 @@ public class Agreements {
                 res.acceptEUA405ApplicationJSONObject = out;
             }
         }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.acceptEUA429ApplicationJSONObject = out;
+            }
+        }
 
         return res;
     }
 
     /**
-     * Create an end user agreement
+     * API endpoints related to end-user agreements.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -143,14 +149,13 @@ public class Agreements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEUAV2Response res = new org.openapis.openapi.models.operations.CreateEUAV2Response() {{
+        org.openapis.openapi.models.operations.CreateEUAV2Response res = new org.openapis.openapi.models.operations.CreateEUAV2Response(contentType, httpRes.statusCode()) {{
             endUserAgreement = null;
             createEUAV2400ApplicationJSONObject = null;
             createEUAV2401ApplicationJSONObject = null;
             createEUAV2403ApplicationJSONObject = null;
+            createEUAV2429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -181,6 +186,13 @@ public class Agreements {
                 res.createEUAV2403ApplicationJSONObject = out;
             }
         }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.createEUAV2429ApplicationJSONObject = out;
+            }
+        }
 
         return res;
     }
@@ -206,14 +218,13 @@ public class Agreements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteEUAByIdV2Response res = new org.openapis.openapi.models.operations.DeleteEUAByIdV2Response() {{
+        org.openapis.openapi.models.operations.DeleteEUAByIdV2Response res = new org.openapis.openapi.models.operations.DeleteEUAByIdV2Response(contentType, httpRes.statusCode()) {{
             deleteEUAByIdV2400ApplicationJSONObject = null;
             deleteEUAByIdV2401ApplicationJSONObject = null;
             deleteEUAByIdV2403ApplicationJSONObject = null;
             deleteEUAByIdV2404ApplicationJSONObject = null;
+            deleteEUAByIdV2429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -244,6 +255,13 @@ public class Agreements {
                 res.deleteEUAByIdV2404ApplicationJSONObject = out;
             }
         }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.deleteEUAByIdV2429ApplicationJSONObject = out;
+            }
+        }
 
         return res;
     }
@@ -269,15 +287,14 @@ public class Agreements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveEUAByIdV2Response res = new org.openapis.openapi.models.operations.RetrieveEUAByIdV2Response() {{
+        org.openapis.openapi.models.operations.RetrieveEUAByIdV2Response res = new org.openapis.openapi.models.operations.RetrieveEUAByIdV2Response(contentType, httpRes.statusCode()) {{
             endUserAgreement = null;
             retrieveEUAByIdV2400ApplicationJSONObject = null;
             retrieveEUAByIdV2401ApplicationJSONObject = null;
             retrieveEUAByIdV2403ApplicationJSONObject = null;
             retrieveEUAByIdV2404ApplicationJSONObject = null;
+            retrieveEUAByIdV2429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -315,12 +332,19 @@ public class Agreements {
                 res.retrieveEUAByIdV2404ApplicationJSONObject = out;
             }
         }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveEUAByIdV2429ApplicationJSONObject = out;
+            }
+        }
 
         return res;
     }
 
     /**
-     * Retrieve all end user agreements belonging to the company
+     * API endpoints related to end-user agreements.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -346,14 +370,13 @@ public class Agreements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveAllEUAsForAnEndUserV2Response res = new org.openapis.openapi.models.operations.RetrieveAllEUAsForAnEndUserV2Response() {{
+        org.openapis.openapi.models.operations.RetrieveAllEUAsForAnEndUserV2Response res = new org.openapis.openapi.models.operations.RetrieveAllEUAsForAnEndUserV2Response(contentType, httpRes.statusCode()) {{
             paginatedEndUserAgreementList = null;
             retrieveAllEUAsForAnEndUserV2401ApplicationJSONObject = null;
             retrieveAllEUAsForAnEndUserV2403ApplicationJSONObject = null;
             retrieveAllEUAsForAnEndUserV2404ApplicationJSONObject = null;
+            retrieveAllEUAsForAnEndUserV2429ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -382,6 +405,13 @@ public class Agreements {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
                 res.retrieveAllEUAsForAnEndUserV2404ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAllEUAsForAnEndUserV2429ApplicationJSONObject = out;
             }
         }
 

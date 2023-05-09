@@ -18,9 +18,11 @@ public class DetectionsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detections")
     public DetectionsResource[][] detections;
+
     public DetectionsListResponse withDetections(DetectionsResource[][] detections) {
         this.detections = detections;
         return this;
     }
     
+    public DetectionsListResponse(){}
 }

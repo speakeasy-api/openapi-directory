@@ -17,6 +17,7 @@ public class CatalogQuerySortedAttribute {
      */
     @JsonProperty("attribute_name")
     public String attributeName;
+
     public CatalogQuerySortedAttribute withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -30,6 +31,7 @@ public class CatalogQuerySortedAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initial_attribute_value")
     public String initialAttributeValue;
+
     public CatalogQuerySortedAttribute withInitialAttributeValue(String initialAttributeValue) {
         this.initialAttributeValue = initialAttributeValue;
         return this;
@@ -41,9 +43,13 @@ public class CatalogQuerySortedAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort_order")
     public String sortOrder;
+
     public CatalogQuerySortedAttribute withSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public CatalogQuerySortedAttribute(@JsonProperty("attribute_name") String attributeName) {
+        this.attributeName = attributeName;
+  }
 }

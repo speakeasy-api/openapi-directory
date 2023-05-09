@@ -195,6 +195,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -232,7 +237,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AcceptGrantResponse res = new org.openapis.openapi.models.operations.AcceptGrantResponse() {{
+        org.openapis.openapi.models.operations.AcceptGrantResponse res = new org.openapis.openapi.models.operations.AcceptGrantResponse(contentType, httpRes.statusCode()) {{
             acceptGrantResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -242,8 +247,6 @@ public class SDK {
             resourceLimitExceededException = null;
             serverInternalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -340,7 +343,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckInLicenseResponse res = new org.openapis.openapi.models.operations.CheckInLicenseResponse() {{
+        org.openapis.openapi.models.operations.CheckInLicenseResponse res = new org.openapis.openapi.models.operations.CheckInLicenseResponse(contentType, httpRes.statusCode()) {{
             checkInLicenseResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -351,8 +354,6 @@ public class SDK {
             rateLimitExceededException = null;
             serverInternalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -456,7 +457,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckoutBorrowLicenseResponse res = new org.openapis.openapi.models.operations.CheckoutBorrowLicenseResponse() {{
+        org.openapis.openapi.models.operations.CheckoutBorrowLicenseResponse res = new org.openapis.openapi.models.operations.CheckoutBorrowLicenseResponse(contentType, httpRes.statusCode()) {{
             checkoutBorrowLicenseResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -470,8 +471,6 @@ public class SDK {
             rateLimitExceededException = null;
             serverInternalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -596,7 +595,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckoutLicenseResponse res = new org.openapis.openapi.models.operations.CheckoutLicenseResponse() {{
+        org.openapis.openapi.models.operations.CheckoutLicenseResponse res = new org.openapis.openapi.models.operations.CheckoutLicenseResponse(contentType, httpRes.statusCode()) {{
             checkoutLicenseResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -609,8 +608,6 @@ public class SDK {
             rateLimitExceededException = null;
             serverInternalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -695,7 +692,7 @@ public class SDK {
     }
 
     /**
-     * Creates a grant for the specified license. A grant shares the use of license entitlements with specific Amazon Web Services accounts.
+     * Creates a grant for the specified license. A grant shares the use of license entitlements with a specific Amazon Web Services account, an organization, or an organizational unit (OU). For more information, see &lt;a href="https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html"&gt;Granted licenses in License Manager&lt;/a&gt; in the &lt;i&gt;License Manager User Guide&lt;/i&gt;.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -728,7 +725,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGrantResponse res = new org.openapis.openapi.models.operations.CreateGrantResponse() {{
+        org.openapis.openapi.models.operations.CreateGrantResponse res = new org.openapis.openapi.models.operations.CreateGrantResponse(contentType, httpRes.statusCode()) {{
             createGrantResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -738,8 +735,6 @@ public class SDK {
             rateLimitExceededException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -803,7 +798,7 @@ public class SDK {
     }
 
     /**
-     * Creates a new version of the specified grant.
+     * Creates a new version of the specified grant. For more information, see &lt;a href="https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html"&gt;Granted licenses in License Manager&lt;/a&gt; in the &lt;i&gt;License Manager User Guide&lt;/i&gt;.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -836,7 +831,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGrantVersionResponse res = new org.openapis.openapi.models.operations.CreateGrantVersionResponse() {{
+        org.openapis.openapi.models.operations.CreateGrantVersionResponse res = new org.openapis.openapi.models.operations.CreateGrantVersionResponse(contentType, httpRes.statusCode()) {{
             createGrantVersionResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -846,8 +841,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -944,7 +937,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLicenseResponse res = new org.openapis.openapi.models.operations.CreateLicenseResponse() {{
+        org.openapis.openapi.models.operations.CreateLicenseResponse res = new org.openapis.openapi.models.operations.CreateLicenseResponse(contentType, httpRes.statusCode()) {{
             createLicenseResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -954,8 +947,6 @@ public class SDK {
             rateLimitExceededException = null;
             serverInternalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1052,7 +1043,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLicenseConfigurationResponse res = new org.openapis.openapi.models.operations.CreateLicenseConfigurationResponse() {{
+        org.openapis.openapi.models.operations.CreateLicenseConfigurationResponse res = new org.openapis.openapi.models.operations.CreateLicenseConfigurationResponse(contentType, httpRes.statusCode()) {{
             createLicenseConfigurationResponse = null;
             invalidParameterValueException = null;
             serverInternalException = null;
@@ -1061,8 +1052,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1152,7 +1141,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLicenseConversionTaskForResourceResponse res = new org.openapis.openapi.models.operations.CreateLicenseConversionTaskForResourceResponse() {{
+        org.openapis.openapi.models.operations.CreateLicenseConversionTaskForResourceResponse res = new org.openapis.openapi.models.operations.CreateLicenseConversionTaskForResourceResponse(contentType, httpRes.statusCode()) {{
             createLicenseConversionTaskForResourceResponse = null;
             invalidParameterValueException = null;
             validationException = null;
@@ -1161,8 +1150,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1252,7 +1239,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLicenseManagerReportGeneratorResponse res = new org.openapis.openapi.models.operations.CreateLicenseManagerReportGeneratorResponse() {{
+        org.openapis.openapi.models.operations.CreateLicenseManagerReportGeneratorResponse res = new org.openapis.openapi.models.operations.CreateLicenseManagerReportGeneratorResponse(contentType, httpRes.statusCode()) {{
             createLicenseManagerReportGeneratorResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -1263,8 +1250,6 @@ public class SDK {
             accessDeniedException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1368,7 +1353,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLicenseVersionResponse res = new org.openapis.openapi.models.operations.CreateLicenseVersionResponse() {{
+        org.openapis.openapi.models.operations.CreateLicenseVersionResponse res = new org.openapis.openapi.models.operations.CreateLicenseVersionResponse(contentType, httpRes.statusCode()) {{
             createLicenseVersionResponse = null;
             validationException = null;
             accessDeniedException = null;
@@ -1379,8 +1364,6 @@ public class SDK {
             authorizationException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1484,7 +1467,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTokenResponse res = new org.openapis.openapi.models.operations.CreateTokenResponse() {{
+        org.openapis.openapi.models.operations.CreateTokenResponse res = new org.openapis.openapi.models.operations.CreateTokenResponse(contentType, httpRes.statusCode()) {{
             createTokenResponse = null;
             validationException = null;
             authorizationException = null;
@@ -1495,8 +1478,6 @@ public class SDK {
             resourceNotFoundException = null;
             redirectException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1600,7 +1581,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGrantResponse res = new org.openapis.openapi.models.operations.DeleteGrantResponse() {{
+        org.openapis.openapi.models.operations.DeleteGrantResponse res = new org.openapis.openapi.models.operations.DeleteGrantResponse(contentType, httpRes.statusCode()) {{
             deleteGrantResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -1610,8 +1591,6 @@ public class SDK {
             resourceLimitExceededException = null;
             serverInternalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1708,7 +1687,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLicenseResponse res = new org.openapis.openapi.models.operations.DeleteLicenseResponse() {{
+        org.openapis.openapi.models.operations.DeleteLicenseResponse res = new org.openapis.openapi.models.operations.DeleteLicenseResponse(contentType, httpRes.statusCode()) {{
             deleteLicenseResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -1719,8 +1698,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1824,7 +1801,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLicenseConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteLicenseConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DeleteLicenseConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteLicenseConfigurationResponse(contentType, httpRes.statusCode()) {{
             deleteLicenseConfigurationResponse = null;
             invalidParameterValueException = null;
             serverInternalException = null;
@@ -1832,8 +1809,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1916,7 +1891,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLicenseManagerReportGeneratorResponse res = new org.openapis.openapi.models.operations.DeleteLicenseManagerReportGeneratorResponse() {{
+        org.openapis.openapi.models.operations.DeleteLicenseManagerReportGeneratorResponse res = new org.openapis.openapi.models.operations.DeleteLicenseManagerReportGeneratorResponse(contentType, httpRes.statusCode()) {{
             deleteLicenseManagerReportGeneratorResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -1927,8 +1902,6 @@ public class SDK {
             accessDeniedException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2032,7 +2005,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTokenResponse res = new org.openapis.openapi.models.operations.DeleteTokenResponse() {{
+        org.openapis.openapi.models.operations.DeleteTokenResponse res = new org.openapis.openapi.models.operations.DeleteTokenResponse(contentType, httpRes.statusCode()) {{
             deleteTokenResponse = null;
             validationException = null;
             authorizationException = null;
@@ -2042,8 +2015,6 @@ public class SDK {
             resourceNotFoundException = null;
             redirectException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2140,7 +2111,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExtendLicenseConsumptionResponse res = new org.openapis.openapi.models.operations.ExtendLicenseConsumptionResponse() {{
+        org.openapis.openapi.models.operations.ExtendLicenseConsumptionResponse res = new org.openapis.openapi.models.operations.ExtendLicenseConsumptionResponse(contentType, httpRes.statusCode()) {{
             extendLicenseConsumptionResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -2150,8 +2121,6 @@ public class SDK {
             serverInternalException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2248,7 +2217,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccessTokenResponse res = new org.openapis.openapi.models.operations.GetAccessTokenResponse() {{
+        org.openapis.openapi.models.operations.GetAccessTokenResponse res = new org.openapis.openapi.models.operations.GetAccessTokenResponse(contentType, httpRes.statusCode()) {{
             getAccessTokenResponse = null;
             validationException = null;
             authorizationException = null;
@@ -2256,8 +2225,6 @@ public class SDK {
             rateLimitExceededException = null;
             serverInternalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2340,7 +2307,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGrantResponse res = new org.openapis.openapi.models.operations.GetGrantResponse() {{
+        org.openapis.openapi.models.operations.GetGrantResponse res = new org.openapis.openapi.models.operations.GetGrantResponse(contentType, httpRes.statusCode()) {{
             getGrantResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -2350,8 +2317,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2448,7 +2413,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLicenseResponse res = new org.openapis.openapi.models.operations.GetLicenseResponse() {{
+        org.openapis.openapi.models.operations.GetLicenseResponse res = new org.openapis.openapi.models.operations.GetLicenseResponse(contentType, httpRes.statusCode()) {{
             getLicenseResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -2457,8 +2422,6 @@ public class SDK {
             rateLimitExceededException = null;
             serverInternalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2548,7 +2511,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLicenseConfigurationResponse res = new org.openapis.openapi.models.operations.GetLicenseConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GetLicenseConfigurationResponse res = new org.openapis.openapi.models.operations.GetLicenseConfigurationResponse(contentType, httpRes.statusCode()) {{
             getLicenseConfigurationResponse = null;
             invalidParameterValueException = null;
             serverInternalException = null;
@@ -2556,8 +2519,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2640,7 +2601,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLicenseConversionTaskResponse res = new org.openapis.openapi.models.operations.GetLicenseConversionTaskResponse() {{
+        org.openapis.openapi.models.operations.GetLicenseConversionTaskResponse res = new org.openapis.openapi.models.operations.GetLicenseConversionTaskResponse(contentType, httpRes.statusCode()) {{
             getLicenseConversionTaskResponse = null;
             invalidParameterValueException = null;
             serverInternalException = null;
@@ -2648,8 +2609,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2732,7 +2691,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLicenseManagerReportGeneratorResponse res = new org.openapis.openapi.models.operations.GetLicenseManagerReportGeneratorResponse() {{
+        org.openapis.openapi.models.operations.GetLicenseManagerReportGeneratorResponse res = new org.openapis.openapi.models.operations.GetLicenseManagerReportGeneratorResponse(contentType, httpRes.statusCode()) {{
             getLicenseManagerReportGeneratorResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -2743,8 +2702,6 @@ public class SDK {
             accessDeniedException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2848,7 +2805,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLicenseUsageResponse res = new org.openapis.openapi.models.operations.GetLicenseUsageResponse() {{
+        org.openapis.openapi.models.operations.GetLicenseUsageResponse res = new org.openapis.openapi.models.operations.GetLicenseUsageResponse(contentType, httpRes.statusCode()) {{
             getLicenseUsageResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -2857,8 +2814,6 @@ public class SDK {
             rateLimitExceededException = null;
             serverInternalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2948,15 +2903,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetServiceSettingsResponse res = new org.openapis.openapi.models.operations.GetServiceSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetServiceSettingsResponse res = new org.openapis.openapi.models.operations.GetServiceSettingsResponse(contentType, httpRes.statusCode()) {{
             getServiceSettingsResponse = null;
             serverInternalException = null;
             authorizationException = null;
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3032,7 +2985,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAssociationsForLicenseConfigurationResponse res = new org.openapis.openapi.models.operations.ListAssociationsForLicenseConfigurationResponse() {{
+        org.openapis.openapi.models.operations.ListAssociationsForLicenseConfigurationResponse res = new org.openapis.openapi.models.operations.ListAssociationsForLicenseConfigurationResponse(contentType, httpRes.statusCode()) {{
             listAssociationsForLicenseConfigurationResponse = null;
             invalidParameterValueException = null;
             filterLimitExceededException = null;
@@ -3041,8 +2994,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3132,7 +3083,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDistributedGrantsResponse res = new org.openapis.openapi.models.operations.ListDistributedGrantsResponse() {{
+        org.openapis.openapi.models.operations.ListDistributedGrantsResponse res = new org.openapis.openapi.models.operations.ListDistributedGrantsResponse(contentType, httpRes.statusCode()) {{
             listDistributedGrantsResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -3142,8 +3093,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3240,7 +3189,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFailuresForLicenseConfigurationOperationsResponse res = new org.openapis.openapi.models.operations.ListFailuresForLicenseConfigurationOperationsResponse() {{
+        org.openapis.openapi.models.operations.ListFailuresForLicenseConfigurationOperationsResponse res = new org.openapis.openapi.models.operations.ListFailuresForLicenseConfigurationOperationsResponse(contentType, httpRes.statusCode()) {{
             listFailuresForLicenseConfigurationOperationsResponse = null;
             invalidParameterValueException = null;
             serverInternalException = null;
@@ -3248,8 +3197,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3332,7 +3279,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLicenseConfigurationsResponse res = new org.openapis.openapi.models.operations.ListLicenseConfigurationsResponse() {{
+        org.openapis.openapi.models.operations.ListLicenseConfigurationsResponse res = new org.openapis.openapi.models.operations.ListLicenseConfigurationsResponse(contentType, httpRes.statusCode()) {{
             listLicenseConfigurationsResponse = null;
             invalidParameterValueException = null;
             serverInternalException = null;
@@ -3341,8 +3288,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3432,7 +3377,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLicenseConversionTasksResponse res = new org.openapis.openapi.models.operations.ListLicenseConversionTasksResponse() {{
+        org.openapis.openapi.models.operations.ListLicenseConversionTasksResponse res = new org.openapis.openapi.models.operations.ListLicenseConversionTasksResponse(contentType, httpRes.statusCode()) {{
             listLicenseConversionTasksResponse = null;
             invalidParameterValueException = null;
             serverInternalException = null;
@@ -3440,8 +3385,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3524,7 +3467,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLicenseManagerReportGeneratorsResponse res = new org.openapis.openapi.models.operations.ListLicenseManagerReportGeneratorsResponse() {{
+        org.openapis.openapi.models.operations.ListLicenseManagerReportGeneratorsResponse res = new org.openapis.openapi.models.operations.ListLicenseManagerReportGeneratorsResponse(contentType, httpRes.statusCode()) {{
             listLicenseManagerReportGeneratorsResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -3535,8 +3478,6 @@ public class SDK {
             accessDeniedException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3640,7 +3581,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLicenseSpecificationsForResourceResponse res = new org.openapis.openapi.models.operations.ListLicenseSpecificationsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListLicenseSpecificationsForResourceResponse res = new org.openapis.openapi.models.operations.ListLicenseSpecificationsForResourceResponse(contentType, httpRes.statusCode()) {{
             listLicenseSpecificationsForResourceResponse = null;
             invalidParameterValueException = null;
             serverInternalException = null;
@@ -3648,8 +3589,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3732,7 +3671,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLicenseVersionsResponse res = new org.openapis.openapi.models.operations.ListLicenseVersionsResponse() {{
+        org.openapis.openapi.models.operations.ListLicenseVersionsResponse res = new org.openapis.openapi.models.operations.ListLicenseVersionsResponse(contentType, httpRes.statusCode()) {{
             listLicenseVersionsResponse = null;
             invalidParameterValueException = null;
             authorizationException = null;
@@ -3740,8 +3679,6 @@ public class SDK {
             rateLimitExceededException = null;
             serverInternalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3824,7 +3761,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLicensesResponse res = new org.openapis.openapi.models.operations.ListLicensesResponse() {{
+        org.openapis.openapi.models.operations.ListLicensesResponse res = new org.openapis.openapi.models.operations.ListLicensesResponse(contentType, httpRes.statusCode()) {{
             listLicensesResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -3833,8 +3770,6 @@ public class SDK {
             rateLimitExceededException = null;
             serverInternalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3891,7 +3826,7 @@ public class SDK {
     }
 
     /**
-     * Lists grants that are received but not accepted.
+     * Lists grants that are received. Received grants are grants created while specifying the recipient as this Amazon Web Services account, your organization, or an organizational unit (OU) to which this member account belongs.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3924,7 +3859,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListReceivedGrantsResponse res = new org.openapis.openapi.models.operations.ListReceivedGrantsResponse() {{
+        org.openapis.openapi.models.operations.ListReceivedGrantsResponse res = new org.openapis.openapi.models.operations.ListReceivedGrantsResponse(contentType, httpRes.statusCode()) {{
             listReceivedGrantsResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -3934,8 +3869,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4032,7 +3965,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListReceivedGrantsForOrganizationResponse res = new org.openapis.openapi.models.operations.ListReceivedGrantsForOrganizationResponse() {{
+        org.openapis.openapi.models.operations.ListReceivedGrantsForOrganizationResponse res = new org.openapis.openapi.models.operations.ListReceivedGrantsForOrganizationResponse(contentType, httpRes.statusCode()) {{
             listReceivedGrantsForOrganizationResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -4042,8 +3975,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4140,7 +4071,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListReceivedLicensesResponse res = new org.openapis.openapi.models.operations.ListReceivedLicensesResponse() {{
+        org.openapis.openapi.models.operations.ListReceivedLicensesResponse res = new org.openapis.openapi.models.operations.ListReceivedLicensesResponse(contentType, httpRes.statusCode()) {{
             listReceivedLicensesResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -4150,8 +4081,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4248,7 +4177,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListReceivedLicensesForOrganizationResponse res = new org.openapis.openapi.models.operations.ListReceivedLicensesForOrganizationResponse() {{
+        org.openapis.openapi.models.operations.ListReceivedLicensesForOrganizationResponse res = new org.openapis.openapi.models.operations.ListReceivedLicensesForOrganizationResponse(contentType, httpRes.statusCode()) {{
             listReceivedLicensesForOrganizationResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -4258,8 +4187,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4356,7 +4283,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListResourceInventoryResponse res = new org.openapis.openapi.models.operations.ListResourceInventoryResponse() {{
+        org.openapis.openapi.models.operations.ListResourceInventoryResponse res = new org.openapis.openapi.models.operations.ListResourceInventoryResponse(contentType, httpRes.statusCode()) {{
             listResourceInventoryResponse = null;
             invalidParameterValueException = null;
             serverInternalException = null;
@@ -4366,8 +4293,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4464,7 +4389,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             invalidParameterValueException = null;
             serverInternalException = null;
@@ -4472,8 +4397,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4556,7 +4479,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTokensResponse res = new org.openapis.openapi.models.operations.ListTokensResponse() {{
+        org.openapis.openapi.models.operations.ListTokensResponse res = new org.openapis.openapi.models.operations.ListTokensResponse(contentType, httpRes.statusCode()) {{
             listTokensResponse = null;
             validationException = null;
             authorizationException = null;
@@ -4564,8 +4487,6 @@ public class SDK {
             rateLimitExceededException = null;
             serverInternalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4648,7 +4569,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListUsageForLicenseConfigurationResponse res = new org.openapis.openapi.models.operations.ListUsageForLicenseConfigurationResponse() {{
+        org.openapis.openapi.models.operations.ListUsageForLicenseConfigurationResponse res = new org.openapis.openapi.models.operations.ListUsageForLicenseConfigurationResponse(contentType, httpRes.statusCode()) {{
             listUsageForLicenseConfigurationResponse = null;
             invalidParameterValueException = null;
             filterLimitExceededException = null;
@@ -4657,8 +4578,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4748,7 +4667,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RejectGrantResponse res = new org.openapis.openapi.models.operations.RejectGrantResponse() {{
+        org.openapis.openapi.models.operations.RejectGrantResponse res = new org.openapis.openapi.models.operations.RejectGrantResponse(contentType, httpRes.statusCode()) {{
             rejectGrantResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -4758,8 +4677,6 @@ public class SDK {
             resourceLimitExceededException = null;
             serverInternalException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4856,7 +4773,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             invalidParameterValueException = null;
             serverInternalException = null;
@@ -4864,8 +4781,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4948,7 +4863,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             invalidParameterValueException = null;
             serverInternalException = null;
@@ -4956,8 +4871,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5040,7 +4953,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLicenseConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateLicenseConfigurationResponse() {{
+        org.openapis.openapi.models.operations.UpdateLicenseConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateLicenseConfigurationResponse(contentType, httpRes.statusCode()) {{
             updateLicenseConfigurationResponse = null;
             invalidParameterValueException = null;
             serverInternalException = null;
@@ -5049,8 +4962,6 @@ public class SDK {
             rateLimitExceededException = null;
             resourceLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5140,7 +5051,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLicenseManagerReportGeneratorResponse res = new org.openapis.openapi.models.operations.UpdateLicenseManagerReportGeneratorResponse() {{
+        org.openapis.openapi.models.operations.UpdateLicenseManagerReportGeneratorResponse res = new org.openapis.openapi.models.operations.UpdateLicenseManagerReportGeneratorResponse(contentType, httpRes.statusCode()) {{
             updateLicenseManagerReportGeneratorResponse = null;
             validationException = null;
             invalidParameterValueException = null;
@@ -5151,8 +5062,6 @@ public class SDK {
             resourceNotFoundException = null;
             resourceLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5256,7 +5165,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLicenseSpecificationsForResourceResponse res = new org.openapis.openapi.models.operations.UpdateLicenseSpecificationsForResourceResponse() {{
+        org.openapis.openapi.models.operations.UpdateLicenseSpecificationsForResourceResponse res = new org.openapis.openapi.models.operations.UpdateLicenseSpecificationsForResourceResponse(contentType, httpRes.statusCode()) {{
             updateLicenseSpecificationsForResourceResponse = null;
             invalidParameterValueException = null;
             invalidResourceStateException = null;
@@ -5266,8 +5175,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5364,7 +5271,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateServiceSettingsResponse res = new org.openapis.openapi.models.operations.UpdateServiceSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateServiceSettingsResponse res = new org.openapis.openapi.models.operations.UpdateServiceSettingsResponse(contentType, httpRes.statusCode()) {{
             updateServiceSettingsResponse = null;
             invalidParameterValueException = null;
             serverInternalException = null;
@@ -5372,8 +5279,6 @@ public class SDK {
             accessDeniedException = null;
             rateLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

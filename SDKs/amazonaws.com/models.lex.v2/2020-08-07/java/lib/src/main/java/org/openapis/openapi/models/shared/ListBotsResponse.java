@@ -15,6 +15,7 @@ public class ListBotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botSummaries")
     public BotSummary[] botSummaries;
+
     public ListBotsResponse withBotSummaries(BotSummary[] botSummaries) {
         this.botSummaries = botSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListBotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBotsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBotsResponse(){}
 }

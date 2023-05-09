@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFlowLogsRequest {
     
     public Boolean dryRun;
+
     public DescribeFlowLogsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeFlowLogsRequest {
     
     
     public FilterList[] filter;
+
     public DescribeFlowLogsRequest withFilter(FilterList[] filter) {
         this.filter = filter;
         return this;
@@ -23,6 +25,7 @@ public class DescribeFlowLogsRequest {
     
     
     public String[] flowLogIds;
+
     public DescribeFlowLogsRequest withFlowLogIds(String[] flowLogIds) {
         this.flowLogIds = flowLogIds;
         return this;
@@ -30,6 +33,7 @@ public class DescribeFlowLogsRequest {
     
     
     public Long maxResults;
+
     public DescribeFlowLogsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeFlowLogsRequest {
     
     
     public String nextToken;
+
     public DescribeFlowLogsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFlowLogsRequest(){}
 }

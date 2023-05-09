@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeChangeSetHooksOutput {
     
     public String changeSetId;
+
     public DescribeChangeSetHooksOutput withChangeSetId(String changeSetId) {
         this.changeSetId = changeSetId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeChangeSetHooksOutput {
     
     
     public String changeSetName;
+
     public DescribeChangeSetHooksOutput withChangeSetName(String changeSetName) {
         this.changeSetName = changeSetName;
         return this;
@@ -26,6 +28,7 @@ public class DescribeChangeSetHooksOutput {
     
     
     public ChangeSetHook[] hooks;
+
     public DescribeChangeSetHooksOutput withHooks(ChangeSetHook[] hooks) {
         this.hooks = hooks;
         return this;
@@ -33,6 +36,7 @@ public class DescribeChangeSetHooksOutput {
     
     
     public String nextToken;
+
     public DescribeChangeSetHooksOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -40,6 +44,7 @@ public class DescribeChangeSetHooksOutput {
     
     
     public String stackId;
+
     public DescribeChangeSetHooksOutput withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeChangeSetHooksOutput {
     
     
     public String stackName;
+
     public DescribeChangeSetHooksOutput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -54,9 +60,11 @@ public class DescribeChangeSetHooksOutput {
     
     
     public ChangeSetHooksStatusEnum status;
+
     public DescribeChangeSetHooksOutput withStatus(ChangeSetHooksStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeChangeSetHooksOutput(){}
 }

@@ -15,9 +15,11 @@ public class DataTotal {
      */
     
     public Long dollarField;
+
     public DataTotal withDollarField(Long dollarField) {
         this.dollarField = dollarField;
         return this;
     }
     
+    public DataTotal(){}
 }

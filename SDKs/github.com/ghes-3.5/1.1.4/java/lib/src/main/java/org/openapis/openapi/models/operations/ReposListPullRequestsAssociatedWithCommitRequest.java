@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListPullRequestsAssociatedWithCommitRequest {
@@ -12,6 +13,7 @@ public class ReposListPullRequestsAssociatedWithCommitRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit_sha")
     public String commitSha;
+
     public ReposListPullRequestsAssociatedWithCommitRequest withCommitSha(String commitSha) {
         this.commitSha = commitSha;
         return this;
@@ -22,6 +24,7 @@ public class ReposListPullRequestsAssociatedWithCommitRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposListPullRequestsAssociatedWithCommitRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,6 +35,7 @@ public class ReposListPullRequestsAssociatedWithCommitRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ReposListPullRequestsAssociatedWithCommitRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class ReposListPullRequestsAssociatedWithCommitRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ReposListPullRequestsAssociatedWithCommitRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,9 +57,15 @@ public class ReposListPullRequestsAssociatedWithCommitRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposListPullRequestsAssociatedWithCommitRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposListPullRequestsAssociatedWithCommitRequest(@JsonProperty("commit_sha") String commitSha, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.commitSha = commitSha;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

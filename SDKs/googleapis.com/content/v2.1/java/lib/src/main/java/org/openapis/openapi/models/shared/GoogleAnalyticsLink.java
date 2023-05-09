@@ -18,6 +18,7 @@ public class GoogleAnalyticsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributionSettings")
     public AttributionSettings attributionSettings;
+
     public GoogleAnalyticsLink withAttributionSettings(AttributionSettings attributionSettings) {
         this.attributionSettings = attributionSettings;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyId")
     public String propertyId;
+
     public GoogleAnalyticsLink withPropertyId(String propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyName")
     public String propertyName;
+
     public GoogleAnalyticsLink withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
     }
     
+    public GoogleAnalyticsLink(){}
 }

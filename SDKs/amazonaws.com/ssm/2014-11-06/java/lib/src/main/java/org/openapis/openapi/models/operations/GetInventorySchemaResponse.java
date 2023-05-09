@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInventorySchemaResponse {
     
     public String contentType;
+
     public GetInventorySchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetInventorySchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInventorySchemaResult getInventorySchemaResult;
+
     public GetInventorySchemaResponse withGetInventorySchemaResult(org.openapis.openapi.models.shared.GetInventorySchemaResult getInventorySchemaResult) {
         this.getInventorySchemaResult = getInventorySchemaResult;
         return this;
@@ -29,6 +32,7 @@ public class GetInventorySchemaResponse {
      */
     
     public Object internalServerError;
+
     public GetInventorySchemaResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class GetInventorySchemaResponse {
      */
     
     public Object invalidNextToken;
+
     public GetInventorySchemaResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -49,6 +54,7 @@ public class GetInventorySchemaResponse {
      */
     
     public Object invalidTypeNameException;
+
     public GetInventorySchemaResponse withInvalidTypeNameException(Object invalidTypeNameException) {
         this.invalidTypeNameException = invalidTypeNameException;
         return this;
@@ -56,6 +62,7 @@ public class GetInventorySchemaResponse {
     
     
     public Integer statusCode;
+
     public GetInventorySchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetInventorySchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInventorySchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetInventorySchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

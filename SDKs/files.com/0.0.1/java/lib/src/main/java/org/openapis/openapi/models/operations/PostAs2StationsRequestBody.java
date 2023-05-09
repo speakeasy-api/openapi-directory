@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAs2StationsRequestBody {
@@ -12,6 +13,7 @@ public class PostAs2StationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PostAs2StationsRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +21,7 @@ public class PostAs2StationsRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=private_key")
     public String privateKey;
+
     public PostAs2StationsRequestBody withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -26,6 +29,7 @@ public class PostAs2StationsRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=private_key_password")
     public String privateKeyPassword;
+
     public PostAs2StationsRequestBody withPrivateKeyPassword(String privateKeyPassword) {
         this.privateKeyPassword = privateKeyPassword;
         return this;
@@ -33,9 +37,15 @@ public class PostAs2StationsRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=public_certificate")
     public String publicCertificate;
+
     public PostAs2StationsRequestBody withPublicCertificate(String publicCertificate) {
         this.publicCertificate = publicCertificate;
         return this;
     }
     
+    public PostAs2StationsRequestBody(@JsonProperty("name") String name, @JsonProperty("private_key") String privateKey, @JsonProperty("public_certificate") String publicCertificate) {
+        this.name = name;
+        this.privateKey = privateKey;
+        this.publicCertificate = publicCertificate;
+  }
 }

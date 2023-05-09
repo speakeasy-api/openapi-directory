@@ -3,9 +3,8 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.SvgconvertFileToConvertFile;
 import org.openapis.openapi.models.operations.SvgconvertFileToConvert;
+import org.openapis.openapi.models.operations.SvgconvertFileToConvertFile;
 import org.openapis.openapi.models.operations.SvgconvertResponse;
 
 public class Application {
@@ -15,19 +14,18 @@ public class Application {
                 .build();
 
             SvgconvertFileToConvert req = new SvgconvertFileToConvert() {{
-                file = new SvgconvertFileToConvertFile() {{
-                    content = "corrupti".getBytes();
-                    file = "provident";
-                }};
-            }}            
+                file = new SvgconvertFileToConvertFile("corrupti".getBytes(), "provident");;
+            }};            
 
             SvgconvertResponse res = sdk.svgconvert(req);
 
-            if (res.fileUrl.isPresent()) {
+            if (res.fileUrl != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

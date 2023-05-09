@@ -15,6 +15,7 @@ public class EndpointSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Applicability")
     public String applicability;
+
     public EndpointSetting withApplicability(String applicability) {
         this.applicability = applicability;
         return this;
@@ -23,6 +24,7 @@ public class EndpointSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultValue")
     public String defaultValue;
+
     public EndpointSetting withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -31,6 +33,7 @@ public class EndpointSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnumValues")
     public String[] enumValues;
+
     public EndpointSetting withEnumValues(String[] enumValues) {
         this.enumValues = enumValues;
         return this;
@@ -39,6 +42,7 @@ public class EndpointSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntValueMax")
     public Long intValueMax;
+
     public EndpointSetting withIntValueMax(Long intValueMax) {
         this.intValueMax = intValueMax;
         return this;
@@ -47,6 +51,7 @@ public class EndpointSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntValueMin")
     public Long intValueMin;
+
     public EndpointSetting withIntValueMin(Long intValueMin) {
         this.intValueMin = intValueMin;
         return this;
@@ -55,6 +60,7 @@ public class EndpointSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public EndpointSetting withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class EndpointSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sensitive")
     public Boolean sensitive;
+
     public EndpointSetting withSensitive(Boolean sensitive) {
         this.sensitive = sensitive;
         return this;
@@ -71,6 +78,7 @@ public class EndpointSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public EndpointSettingTypeValueEnum type;
+
     public EndpointSetting withType(EndpointSettingTypeValueEnum type) {
         this.type = type;
         return this;
@@ -79,9 +87,11 @@ public class EndpointSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Units")
     public String units;
+
     public EndpointSetting withUnits(String units) {
         this.units = units;
         return this;
     }
     
+    public EndpointSetting(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CapacityReservationOptionsRequest {
     
     public FleetCapacityReservationUsageStrategyEnum usageStrategy;
+
     public CapacityReservationOptionsRequest withUsageStrategy(FleetCapacityReservationUsageStrategyEnum usageStrategy) {
         this.usageStrategy = usageStrategy;
         return this;
     }
     
+    public CapacityReservationOptionsRequest(){}
 }

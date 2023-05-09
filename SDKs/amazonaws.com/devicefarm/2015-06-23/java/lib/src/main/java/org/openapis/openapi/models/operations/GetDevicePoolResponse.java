@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDevicePoolResponse {
@@ -12,6 +13,7 @@ public class GetDevicePoolResponse {
      */
     
     public Object argumentException;
+
     public GetDevicePoolResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class GetDevicePoolResponse {
     
     
     public String contentType;
+
     public GetDevicePoolResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDevicePoolResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDevicePoolResult getDevicePoolResult;
+
     public GetDevicePoolResponse withGetDevicePoolResult(org.openapis.openapi.models.shared.GetDevicePoolResult getDevicePoolResult) {
         this.getDevicePoolResult = getDevicePoolResult;
         return this;
@@ -39,6 +43,7 @@ public class GetDevicePoolResponse {
      */
     
     public Object limitExceededException;
+
     public GetDevicePoolResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class GetDevicePoolResponse {
      */
     
     public Object notFoundException;
+
     public GetDevicePoolResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetDevicePoolResponse {
      */
     
     public Object serviceAccountException;
+
     public GetDevicePoolResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class GetDevicePoolResponse {
     
     
     public Integer statusCode;
+
     public GetDevicePoolResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetDevicePoolResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDevicePoolResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDevicePoolResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

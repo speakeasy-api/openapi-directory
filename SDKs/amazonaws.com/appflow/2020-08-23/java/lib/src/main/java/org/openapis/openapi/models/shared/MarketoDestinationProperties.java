@@ -18,6 +18,7 @@ public class MarketoDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorHandlingConfig")
     public ErrorHandlingConfig errorHandlingConfig;
+
     public MarketoDestinationProperties withErrorHandlingConfig(ErrorHandlingConfig errorHandlingConfig) {
         this.errorHandlingConfig = errorHandlingConfig;
         return this;
@@ -25,9 +26,13 @@ public class MarketoDestinationProperties {
     
     @JsonProperty("object")
     public String object;
+
     public MarketoDestinationProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public MarketoDestinationProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

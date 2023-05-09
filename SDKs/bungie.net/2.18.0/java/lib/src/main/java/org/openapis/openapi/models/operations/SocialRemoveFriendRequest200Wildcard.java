@@ -12,6 +12,7 @@ package org.openapis.openapi.models.operations;
 public class SocialRemoveFriendRequest200Wildcard {
     
     public String detailedErrorTrace;
+
     public SocialRemoveFriendRequest200Wildcard withDetailedErrorTrace(String detailedErrorTrace) {
         this.detailedErrorTrace = detailedErrorTrace;
         return this;
@@ -19,6 +20,7 @@ public class SocialRemoveFriendRequest200Wildcard {
     
     
     public Integer errorCode;
+
     public SocialRemoveFriendRequest200Wildcard withErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -26,6 +28,7 @@ public class SocialRemoveFriendRequest200Wildcard {
     
     
     public String errorStatus;
+
     public SocialRemoveFriendRequest200Wildcard withErrorStatus(String errorStatus) {
         this.errorStatus = errorStatus;
         return this;
@@ -33,6 +36,7 @@ public class SocialRemoveFriendRequest200Wildcard {
     
     
     public String message;
+
     public SocialRemoveFriendRequest200Wildcard withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +44,7 @@ public class SocialRemoveFriendRequest200Wildcard {
     
     
     public java.util.Map<String, String> messageData;
+
     public SocialRemoveFriendRequest200Wildcard withMessageData(java.util.Map<String, String> messageData) {
         this.messageData = messageData;
         return this;
@@ -47,6 +52,7 @@ public class SocialRemoveFriendRequest200Wildcard {
     
     
     public Boolean response;
+
     public SocialRemoveFriendRequest200Wildcard withResponse(Boolean response) {
         this.response = response;
         return this;
@@ -54,9 +60,11 @@ public class SocialRemoveFriendRequest200Wildcard {
     
     
     public Integer throttleSeconds;
+
     public SocialRemoveFriendRequest200Wildcard withThrottleSeconds(Integer throttleSeconds) {
         this.throttleSeconds = throttleSeconds;
         return this;
     }
     
+    public SocialRemoveFriendRequest200Wildcard(){}
 }

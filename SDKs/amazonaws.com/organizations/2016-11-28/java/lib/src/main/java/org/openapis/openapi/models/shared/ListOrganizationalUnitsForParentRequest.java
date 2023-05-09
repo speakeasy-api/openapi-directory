@@ -12,6 +12,7 @@ public class ListOrganizationalUnitsForParentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListOrganizationalUnitsForParentRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListOrganizationalUnitsForParentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListOrganizationalUnitsForParentRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListOrganizationalUnitsForParentRequest {
     
     @JsonProperty("ParentId")
     public String parentId;
+
     public ListOrganizationalUnitsForParentRequest withParentId(String parentId) {
         this.parentId = parentId;
         return this;
     }
     
+    public ListOrganizationalUnitsForParentRequest(@JsonProperty("ParentId") String parentId) {
+        this.parentId = parentId;
+  }
 }

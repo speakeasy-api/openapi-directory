@@ -15,6 +15,7 @@ public class DescribeKinesisStreamingDestinationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisDataStreamDestinations")
     public KinesisDataStreamDestination[] kinesisDataStreamDestinations;
+
     public DescribeKinesisStreamingDestinationOutput withKinesisDataStreamDestinations(KinesisDataStreamDestination[] kinesisDataStreamDestinations) {
         this.kinesisDataStreamDestinations = kinesisDataStreamDestinations;
         return this;
@@ -23,9 +24,11 @@ public class DescribeKinesisStreamingDestinationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public DescribeKinesisStreamingDestinationOutput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DescribeKinesisStreamingDestinationOutput(){}
 }

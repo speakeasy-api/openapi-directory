@@ -15,6 +15,7 @@ public class CreateConfigurationSetRequestBodyDeliveryOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SendingPoolName")
     public String sendingPoolName;
+
     public CreateConfigurationSetRequestBodyDeliveryOptions withSendingPoolName(String sendingPoolName) {
         this.sendingPoolName = sendingPoolName;
         return this;
@@ -23,9 +24,11 @@ public class CreateConfigurationSetRequestBodyDeliveryOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TlsPolicy")
     public org.openapis.openapi.models.shared.TlsPolicyEnum tlsPolicy;
+
     public CreateConfigurationSetRequestBodyDeliveryOptions withTlsPolicy(org.openapis.openapi.models.shared.TlsPolicyEnum tlsPolicy) {
         this.tlsPolicy = tlsPolicy;
         return this;
     }
     
+    public CreateConfigurationSetRequestBodyDeliveryOptions(){}
 }

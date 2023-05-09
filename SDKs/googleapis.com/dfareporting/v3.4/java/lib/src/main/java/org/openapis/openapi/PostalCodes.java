@@ -58,11 +58,9 @@ public class PostalCodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPostalCodesGetResponse res = new org.openapis.openapi.models.operations.DfareportingPostalCodesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPostalCodesGetResponse res = new org.openapis.openapi.models.operations.DfareportingPostalCodesGetResponse(contentType, httpRes.statusCode()) {{
             postalCode = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class PostalCodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPostalCodesListResponse res = new org.openapis.openapi.models.operations.DfareportingPostalCodesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPostalCodesListResponse res = new org.openapis.openapi.models.operations.DfareportingPostalCodesListResponse(contentType, httpRes.statusCode()) {{
             postalCodesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

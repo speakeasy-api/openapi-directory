@@ -15,6 +15,7 @@ public class SourceDiscoverSchemaRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breakingChange")
     public Boolean breakingChange;
+
     public SourceDiscoverSchemaRead withBreakingChange(Boolean breakingChange) {
         this.breakingChange = breakingChange;
         return this;
@@ -26,6 +27,7 @@ public class SourceDiscoverSchemaRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog")
     public AirbyteCatalog catalog;
+
     public SourceDiscoverSchemaRead withCatalog(AirbyteCatalog catalog) {
         this.catalog = catalog;
         return this;
@@ -37,6 +39,7 @@ public class SourceDiscoverSchemaRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogDiff")
     public CatalogDiff catalogDiff;
+
     public SourceDiscoverSchemaRead withCatalogDiff(CatalogDiff catalogDiff) {
         this.catalogDiff = catalogDiff;
         return this;
@@ -45,6 +48,7 @@ public class SourceDiscoverSchemaRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogId")
     public String catalogId;
+
     public SourceDiscoverSchemaRead withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -56,6 +60,7 @@ public class SourceDiscoverSchemaRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionStatus")
     public ConnectionStatusEnum connectionStatus;
+
     public SourceDiscoverSchemaRead withConnectionStatus(ConnectionStatusEnum connectionStatus) {
         this.connectionStatus = connectionStatus;
         return this;
@@ -63,9 +68,13 @@ public class SourceDiscoverSchemaRead {
     
     @JsonProperty("jobInfo")
     public SynchronousJobRead jobInfo;
+
     public SourceDiscoverSchemaRead withJobInfo(SynchronousJobRead jobInfo) {
         this.jobInfo = jobInfo;
         return this;
     }
     
+    public SourceDiscoverSchemaRead(@JsonProperty("jobInfo") SynchronousJobRead jobInfo) {
+        this.jobInfo = jobInfo;
+  }
 }

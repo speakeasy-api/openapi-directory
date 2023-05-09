@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetSingleCustomFieldValueRequest {
@@ -12,6 +13,7 @@ public class SetSingleCustomFieldValueRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public SetSingleCustomFieldValueRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class SetSingleCustomFieldValueRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public SetSingleCustomFieldValueRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SetSingleCustomFieldValueRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SetsinglecustomfieldvalueRequest setsinglecustomfieldvalueRequest;
+
     public SetSingleCustomFieldValueRequest withSetsinglecustomfieldvalueRequest(org.openapis.openapi.models.shared.SetsinglecustomfieldvalueRequest setsinglecustomfieldvalueRequest) {
         this.setsinglecustomfieldvalueRequest = setsinglecustomfieldvalueRequest;
         return this;
@@ -39,6 +43,7 @@ public class SetSingleCustomFieldValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appFieldName")
     public String appFieldName;
+
     public SetSingleCustomFieldValueRequest withAppFieldName(String appFieldName) {
         this.appFieldName = appFieldName;
         return this;
@@ -49,6 +54,7 @@ public class SetSingleCustomFieldValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public String appId;
+
     public SetSingleCustomFieldValueRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -59,9 +65,18 @@ public class SetSingleCustomFieldValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
     public String orderFormId;
+
     public SetSingleCustomFieldValueRequest withOrderFormId(String orderFormId) {
         this.orderFormId = orderFormId;
         return this;
     }
     
+    public SetSingleCustomFieldValueRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("SetsinglecustomfieldvalueRequest") org.openapis.openapi.models.shared.SetsinglecustomfieldvalueRequest setsinglecustomfieldvalueRequest, @JsonProperty("appFieldName") String appFieldName, @JsonProperty("appId") String appId, @JsonProperty("orderFormId") String orderFormId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.setsinglecustomfieldvalueRequest = setsinglecustomfieldvalueRequest;
+        this.appFieldName = appFieldName;
+        this.appId = appId;
+        this.orderFormId = orderFormId;
+  }
 }

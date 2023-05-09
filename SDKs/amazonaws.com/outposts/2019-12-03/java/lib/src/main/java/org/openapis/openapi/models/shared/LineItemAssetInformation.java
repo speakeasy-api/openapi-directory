@@ -15,6 +15,7 @@ public class LineItemAssetInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssetId")
     public String assetId;
+
     public LineItemAssetInformation withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -23,9 +24,11 @@ public class LineItemAssetInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MacAddressList")
     public String[] macAddressList;
+
     public LineItemAssetInformation withMacAddressList(String[] macAddressList) {
         this.macAddressList = macAddressList;
         return this;
     }
     
+    public LineItemAssetInformation(){}
 }

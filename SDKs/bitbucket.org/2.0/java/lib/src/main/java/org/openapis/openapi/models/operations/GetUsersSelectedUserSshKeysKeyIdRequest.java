@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersSelectedUserSshKeysKeyIdRequest {
@@ -12,6 +13,7 @@ public class GetUsersSelectedUserSshKeysKeyIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_id")
     public String keyId;
+
     public GetUsersSelectedUserSshKeysKeyIdRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -24,9 +26,14 @@ public class GetUsersSelectedUserSshKeysKeyIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
     public String selectedUser;
+
     public GetUsersSelectedUserSshKeysKeyIdRequest withSelectedUser(String selectedUser) {
         this.selectedUser = selectedUser;
         return this;
     }
     
+    public GetUsersSelectedUserSshKeysKeyIdRequest(@JsonProperty("key_id") String keyId, @JsonProperty("selected_user") String selectedUser) {
+        this.keyId = keyId;
+        this.selectedUser = selectedUser;
+  }
 }

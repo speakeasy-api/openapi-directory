@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTelnetConnectionLogonRequest {
@@ -12,6 +13,7 @@ public class ProtocolTelnetConnectionLogonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolTelnetConnectionLogonRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -19,6 +21,7 @@ public class ProtocolTelnetConnectionLogonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connectionID")
     public Integer connectionID;
+
     public ProtocolTelnetConnectionLogonRequest withConnectionID(Integer connectionID) {
         this.connectionID = connectionID;
         return this;
@@ -26,6 +29,7 @@ public class ProtocolTelnetConnectionLogonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=password")
     public String password;
+
     public ProtocolTelnetConnectionLogonRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -33,9 +37,16 @@ public class ProtocolTelnetConnectionLogonRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user")
     public String user;
+
     public ProtocolTelnetConnectionLogonRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public ProtocolTelnetConnectionLogonRequest(@JsonProperty("user") String user, @JsonProperty("password") String password, @JsonProperty("agentNum") Integer agentNum, @JsonProperty("connectionID") Integer connectionID) {
+        this.user = user;
+        this.password = password;
+        this.agentNum = agentNum;
+        this.connectionID = connectionID;
+  }
 }

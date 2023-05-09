@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions {
     @JsonProperty("teams")
     public Team[] teams;
+
     public ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions withTeams(Team[] teams) {
         this.teams = teams;
         return this;
@@ -16,6 +17,7 @@ public class ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions {
     
     @JsonProperty("teams_url")
     public String teamsUrl;
+
     public ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions withTeamsUrl(String teamsUrl) {
         this.teamsUrl = teamsUrl;
         return this;
@@ -23,6 +25,7 @@ public class ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions {
     
     @JsonProperty("url")
     public String url;
+
     public ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions withUrl(String url) {
         this.url = url;
         return this;
@@ -30,6 +33,7 @@ public class ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions {
     
     @JsonProperty("users")
     public SimpleUser[] users;
+
     public ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions withUsers(SimpleUser[] users) {
         this.users = users;
         return this;
@@ -37,9 +41,17 @@ public class ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions {
     
     @JsonProperty("users_url")
     public String usersUrl;
+
     public ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions withUsersUrl(String usersUrl) {
         this.usersUrl = usersUrl;
         return this;
     }
     
+    public ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions(@JsonProperty("teams") Team[] teams, @JsonProperty("teams_url") String teamsUrl, @JsonProperty("url") String url, @JsonProperty("users") SimpleUser[] users, @JsonProperty("users_url") String usersUrl) {
+        this.teams = teams;
+        this.teamsUrl = teamsUrl;
+        this.url = url;
+        this.users = users;
+        this.usersUrl = usersUrl;
+  }
 }

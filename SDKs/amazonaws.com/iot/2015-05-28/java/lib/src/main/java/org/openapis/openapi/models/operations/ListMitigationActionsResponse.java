@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMitigationActionsResponse {
     
     public String contentType;
+
     public ListMitigationActionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListMitigationActionsResponse {
      */
     
     public Object internalFailureException;
+
     public ListMitigationActionsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListMitigationActionsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListMitigationActionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListMitigationActionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMitigationActionsResponse listMitigationActionsResponse;
+
     public ListMitigationActionsResponse withListMitigationActionsResponse(org.openapis.openapi.models.shared.ListMitigationActionsResponse listMitigationActionsResponse) {
         this.listMitigationActionsResponse = listMitigationActionsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListMitigationActionsResponse {
     
     
     public Integer statusCode;
+
     public ListMitigationActionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListMitigationActionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMitigationActionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListMitigationActionsResponse {
      */
     
     public Object throttlingException;
+
     public ListMitigationActionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListMitigationActionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReactionRollup {
     @JsonProperty("+1")
     public Long plus1;
+
     public ReactionRollup withPlus1(Long plus1) {
         this.plus1 = plus1;
         return this;
@@ -16,6 +17,7 @@ public class ReactionRollup {
     
     @JsonProperty("-1")
     public Long minus1;
+
     public ReactionRollup withMinus1(Long minus1) {
         this.minus1 = minus1;
         return this;
@@ -23,6 +25,7 @@ public class ReactionRollup {
     
     @JsonProperty("confused")
     public Long confused;
+
     public ReactionRollup withConfused(Long confused) {
         this.confused = confused;
         return this;
@@ -30,6 +33,7 @@ public class ReactionRollup {
     
     @JsonProperty("eyes")
     public Long eyes;
+
     public ReactionRollup withEyes(Long eyes) {
         this.eyes = eyes;
         return this;
@@ -37,6 +41,7 @@ public class ReactionRollup {
     
     @JsonProperty("heart")
     public Long heart;
+
     public ReactionRollup withHeart(Long heart) {
         this.heart = heart;
         return this;
@@ -44,6 +49,7 @@ public class ReactionRollup {
     
     @JsonProperty("hooray")
     public Long hooray;
+
     public ReactionRollup withHooray(Long hooray) {
         this.hooray = hooray;
         return this;
@@ -51,6 +57,7 @@ public class ReactionRollup {
     
     @JsonProperty("laugh")
     public Long laugh;
+
     public ReactionRollup withLaugh(Long laugh) {
         this.laugh = laugh;
         return this;
@@ -58,6 +65,7 @@ public class ReactionRollup {
     
     @JsonProperty("rocket")
     public Long rocket;
+
     public ReactionRollup withRocket(Long rocket) {
         this.rocket = rocket;
         return this;
@@ -65,6 +73,7 @@ public class ReactionRollup {
     
     @JsonProperty("total_count")
     public Long totalCount;
+
     public ReactionRollup withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -72,9 +81,22 @@ public class ReactionRollup {
     
     @JsonProperty("url")
     public String url;
+
     public ReactionRollup withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ReactionRollup(@JsonProperty("+1") Long plus1, @JsonProperty("-1") Long minus1, @JsonProperty("confused") Long confused, @JsonProperty("eyes") Long eyes, @JsonProperty("heart") Long heart, @JsonProperty("hooray") Long hooray, @JsonProperty("laugh") Long laugh, @JsonProperty("rocket") Long rocket, @JsonProperty("total_count") Long totalCount, @JsonProperty("url") String url) {
+        this.plus1 = plus1;
+        this.minus1 = minus1;
+        this.confused = confused;
+        this.eyes = eyes;
+        this.heart = heart;
+        this.hooray = hooray;
+        this.laugh = laugh;
+        this.rocket = rocket;
+        this.totalCount = totalCount;
+        this.url = url;
+  }
 }

@@ -15,6 +15,7 @@ public class ListExportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public ListExportsRequestBody withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -26,6 +27,7 @@ public class ListExportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public ListExportsRequestBody withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -37,6 +39,7 @@ public class ListExportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.ExportFilter[] filters;
+
     public ListExportsRequestBody withFilters(org.openapis.openapi.models.shared.ExportFilter[] filters) {
         this.filters = filters;
         return this;
@@ -48,6 +51,7 @@ public class ListExportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public ListExportsRequestBody withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -59,6 +63,7 @@ public class ListExportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListExportsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -70,6 +75,7 @@ public class ListExportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListExportsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -81,9 +87,11 @@ public class ListExportsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public ListExportsRequestBodySortBy sortBy;
+
     public ListExportsRequestBody withSortBy(ListExportsRequestBodySortBy sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public ListExportsRequestBody(){}
 }

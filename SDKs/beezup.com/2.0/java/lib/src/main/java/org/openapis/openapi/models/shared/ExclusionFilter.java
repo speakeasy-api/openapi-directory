@@ -17,6 +17,7 @@ public class ExclusionFilter {
      */
     @JsonProperty("channelColumnId")
     public String channelColumnId;
+
     public ExclusionFilter withChannelColumnId(String channelColumnId) {
         this.channelColumnId = channelColumnId;
         return this;
@@ -27,6 +28,7 @@ public class ExclusionFilter {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ExclusionFilter withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -37,6 +39,7 @@ public class ExclusionFilter {
      */
     @JsonProperty("groupId")
     public String groupId;
+
     public ExclusionFilter withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -47,6 +50,7 @@ public class ExclusionFilter {
      */
     @JsonProperty("name")
     public String name;
+
     public ExclusionFilter withName(String name) {
         this.name = name;
         return this;
@@ -57,6 +61,7 @@ public class ExclusionFilter {
      */
     @JsonProperty("operatorName")
     public String operatorName;
+
     public ExclusionFilter withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
@@ -67,6 +72,7 @@ public class ExclusionFilter {
      */
     @JsonProperty("position")
     public Integer position;
+
     public ExclusionFilter withPosition(Integer position) {
         this.position = position;
         return this;
@@ -77,6 +83,7 @@ public class ExclusionFilter {
      */
     @JsonProperty("positionInGroup")
     public Integer positionInGroup;
+
     public ExclusionFilter withPositionInGroup(Integer positionInGroup) {
         this.positionInGroup = positionInGroup;
         return this;
@@ -88,9 +95,19 @@ public class ExclusionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ExclusionFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ExclusionFilter(@JsonProperty("channelColumnId") String channelColumnId, @JsonProperty("enabled") Boolean enabled, @JsonProperty("groupId") String groupId, @JsonProperty("name") String name, @JsonProperty("operatorName") String operatorName, @JsonProperty("position") Integer position, @JsonProperty("positionInGroup") Integer positionInGroup) {
+        this.channelColumnId = channelColumnId;
+        this.enabled = enabled;
+        this.groupId = groupId;
+        this.name = name;
+        this.operatorName = operatorName;
+        this.position = position;
+        this.positionInGroup = positionInGroup;
+  }
 }

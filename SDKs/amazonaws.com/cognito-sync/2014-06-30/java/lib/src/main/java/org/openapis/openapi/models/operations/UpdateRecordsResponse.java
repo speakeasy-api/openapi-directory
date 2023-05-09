@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRecordsResponse {
     
     public String contentType;
+
     public UpdateRecordsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateRecordsResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateRecordsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRecordsResponse {
      */
     
     public Object invalidLambdaFunctionOutputException;
+
     public UpdateRecordsResponse withInvalidLambdaFunctionOutputException(Object invalidLambdaFunctionOutputException) {
         this.invalidLambdaFunctionOutputException = invalidLambdaFunctionOutputException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRecordsResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateRecordsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateRecordsResponse {
      */
     
     public Object lambdaThrottledException;
+
     public UpdateRecordsResponse withLambdaThrottledException(Object lambdaThrottledException) {
         this.lambdaThrottledException = lambdaThrottledException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateRecordsResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateRecordsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateRecordsResponse {
      */
     
     public Object notAuthorizedException;
+
     public UpdateRecordsResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateRecordsResponse {
      */
     
     public Object resourceConflictException;
+
     public UpdateRecordsResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -86,6 +95,7 @@ public class UpdateRecordsResponse {
     
     
     public Integer statusCode;
+
     public UpdateRecordsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class UpdateRecordsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRecordsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class UpdateRecordsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateRecordsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class UpdateRecordsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateRecordsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -123,9 +136,14 @@ public class UpdateRecordsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRecordsResponse updateRecordsResponse;
+
     public UpdateRecordsResponse withUpdateRecordsResponse(org.openapis.openapi.models.shared.UpdateRecordsResponse updateRecordsResponse) {
         this.updateRecordsResponse = updateRecordsResponse;
         return this;
     }
     
+    public UpdateRecordsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

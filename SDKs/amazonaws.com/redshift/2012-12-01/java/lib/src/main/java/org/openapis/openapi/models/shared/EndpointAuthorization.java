@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class EndpointAuthorization {
     
     public Boolean allowedAllVPCs;
+
     public EndpointAuthorization withAllowedAllVPCs(Boolean allowedAllVPCs) {
         this.allowedAllVPCs = allowedAllVPCs;
         return this;
@@ -19,6 +20,7 @@ public class EndpointAuthorization {
     
     
     public String[] allowedVPCs;
+
     public EndpointAuthorization withAllowedVPCs(String[] allowedVPCs) {
         this.allowedVPCs = allowedVPCs;
         return this;
@@ -26,6 +28,7 @@ public class EndpointAuthorization {
     
     
     public OffsetDateTime authorizeTime;
+
     public EndpointAuthorization withAuthorizeTime(OffsetDateTime authorizeTime) {
         this.authorizeTime = authorizeTime;
         return this;
@@ -33,6 +36,7 @@ public class EndpointAuthorization {
     
     
     public String clusterIdentifier;
+
     public EndpointAuthorization withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -40,6 +44,7 @@ public class EndpointAuthorization {
     
     
     public String clusterStatus;
+
     public EndpointAuthorization withClusterStatus(String clusterStatus) {
         this.clusterStatus = clusterStatus;
         return this;
@@ -47,6 +52,7 @@ public class EndpointAuthorization {
     
     
     public Long endpointCount;
+
     public EndpointAuthorization withEndpointCount(Long endpointCount) {
         this.endpointCount = endpointCount;
         return this;
@@ -54,6 +60,7 @@ public class EndpointAuthorization {
     
     
     public String grantee;
+
     public EndpointAuthorization withGrantee(String grantee) {
         this.grantee = grantee;
         return this;
@@ -61,6 +68,7 @@ public class EndpointAuthorization {
     
     
     public String grantor;
+
     public EndpointAuthorization withGrantor(String grantor) {
         this.grantor = grantor;
         return this;
@@ -68,9 +76,11 @@ public class EndpointAuthorization {
     
     
     public AuthorizationStatusEnum status;
+
     public EndpointAuthorization withStatus(AuthorizationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public EndpointAuthorization(){}
 }

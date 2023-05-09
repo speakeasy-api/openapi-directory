@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDirectoryConfigResponse {
     
     public String contentType;
+
     public CreateDirectoryConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDirectoryConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDirectoryConfigResult createDirectoryConfigResult;
+
     public CreateDirectoryConfigResponse withCreateDirectoryConfigResult(org.openapis.openapi.models.shared.CreateDirectoryConfigResult createDirectoryConfigResult) {
         this.createDirectoryConfigResult = createDirectoryConfigResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateDirectoryConfigResponse {
      */
     
     public Object invalidAccountStatusException;
+
     public CreateDirectoryConfigResponse withInvalidAccountStatusException(Object invalidAccountStatusException) {
         this.invalidAccountStatusException = invalidAccountStatusException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDirectoryConfigResponse {
      */
     
     public Object invalidRoleException;
+
     public CreateDirectoryConfigResponse withInvalidRoleException(Object invalidRoleException) {
         this.invalidRoleException = invalidRoleException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDirectoryConfigResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDirectoryConfigResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDirectoryConfigResponse {
      */
     
     public Object operationNotPermittedException;
+
     public CreateDirectoryConfigResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDirectoryConfigResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateDirectoryConfigResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -79,6 +87,7 @@ public class CreateDirectoryConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateDirectoryConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class CreateDirectoryConfigResponse {
     
     
     public Integer statusCode;
+
     public CreateDirectoryConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class CreateDirectoryConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDirectoryConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDirectoryConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

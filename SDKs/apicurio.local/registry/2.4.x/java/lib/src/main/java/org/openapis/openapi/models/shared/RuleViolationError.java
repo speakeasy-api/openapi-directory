@@ -18,6 +18,7 @@ public class RuleViolationError {
      */
     @JsonProperty("causes")
     public RuleViolationCause[] causes;
+
     public RuleViolationError withCauses(RuleViolationCause[] causes) {
         this.causes = causes;
         return this;
@@ -29,6 +30,7 @@ public class RuleViolationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public RuleViolationError withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -40,6 +42,7 @@ public class RuleViolationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public Integer errorCode;
+
     public RuleViolationError withErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -51,6 +54,7 @@ public class RuleViolationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public RuleViolationError withMessage(String message) {
         this.message = message;
         return this;
@@ -62,9 +66,13 @@ public class RuleViolationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RuleViolationError withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RuleViolationError(@JsonProperty("causes") RuleViolationCause[] causes) {
+        this.causes = causes;
+  }
 }

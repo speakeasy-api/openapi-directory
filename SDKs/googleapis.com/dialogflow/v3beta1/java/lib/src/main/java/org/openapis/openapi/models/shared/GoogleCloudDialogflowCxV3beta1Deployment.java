@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudDialogflowCxV3beta1Deployment withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowVersion")
     public String flowVersion;
+
     public GoogleCloudDialogflowCxV3beta1Deployment withFlowVersion(String flowVersion) {
         this.flowVersion = flowVersion;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3beta1Deployment withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3beta1Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public GoogleCloudDialogflowCxV3beta1DeploymentResult result;
+
     public GoogleCloudDialogflowCxV3beta1Deployment withResult(GoogleCloudDialogflowCxV3beta1DeploymentResult result) {
         this.result = result;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3beta1Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudDialogflowCxV3beta1Deployment withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowCxV3beta1Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDialogflowCxV3beta1DeploymentStateEnum state;
+
     public GoogleCloudDialogflowCxV3beta1Deployment withState(GoogleCloudDialogflowCxV3beta1DeploymentStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1Deployment(){}
 }

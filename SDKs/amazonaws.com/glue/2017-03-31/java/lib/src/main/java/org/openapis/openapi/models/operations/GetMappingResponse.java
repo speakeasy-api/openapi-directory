@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMappingResponse {
     
     public String contentType;
+
     public GetMappingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMappingResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetMappingResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetMappingResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMappingResponse getMappingResponse;
+
     public GetMappingResponse withGetMappingResponse(org.openapis.openapi.models.shared.GetMappingResponse getMappingResponse) {
         this.getMappingResponse = getMappingResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetMappingResponse {
      */
     
     public Object internalServiceException;
+
     public GetMappingResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetMappingResponse {
      */
     
     public Object invalidInputException;
+
     public GetMappingResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetMappingResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetMappingResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetMappingResponse {
     
     
     public Integer statusCode;
+
     public GetMappingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetMappingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMappingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMappingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

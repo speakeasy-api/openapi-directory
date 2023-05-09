@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVerifiedAccessEndpointPolicyResult {
     
     public String policyDocument;
+
     public ModifyVerifiedAccessEndpointPolicyResult withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -19,9 +20,11 @@ public class ModifyVerifiedAccessEndpointPolicyResult {
     
     
     public Boolean policyEnabled;
+
     public ModifyVerifiedAccessEndpointPolicyResult withPolicyEnabled(Boolean policyEnabled) {
         this.policyEnabled = policyEnabled;
         return this;
     }
     
+    public ModifyVerifiedAccessEndpointPolicyResult(){}
 }

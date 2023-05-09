@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostTaxesJsonRequest {
@@ -12,6 +13,7 @@ public class PostTaxesJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TaxEdit taxEdit;
+
     public PostTaxesJsonRequest withTaxEdit(org.openapis.openapi.models.shared.TaxEdit taxEdit) {
         this.taxEdit = taxEdit;
         return this;
@@ -22,6 +24,7 @@ public class PostTaxesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostTaxesJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,9 +35,15 @@ public class PostTaxesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostTaxesJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostTaxesJsonRequest(@JsonProperty("TaxEdit") org.openapis.openapi.models.shared.TaxEdit taxEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login) {
+        this.taxEdit = taxEdit;
+        this.authtoken = authtoken;
+        this.login = login;
+  }
 }

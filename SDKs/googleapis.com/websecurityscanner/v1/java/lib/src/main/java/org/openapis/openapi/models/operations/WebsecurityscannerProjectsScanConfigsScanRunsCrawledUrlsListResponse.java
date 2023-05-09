@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse {
     
     public String contentType;
+
     public WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListRespons
      */
     
     public org.openapis.openapi.models.shared.ListCrawledUrlsResponse listCrawledUrlsResponse;
+
     public WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse withListCrawledUrlsResponse(org.openapis.openapi.models.shared.ListCrawledUrlsResponse listCrawledUrlsResponse) {
         this.listCrawledUrlsResponse = listCrawledUrlsResponse;
         return this;
@@ -26,6 +29,7 @@ public class WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListRespons
     
     
     public Integer statusCode;
+
     public WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

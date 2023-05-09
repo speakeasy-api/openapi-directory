@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMerchantsMerchantIdUsersResponse {
     
     public String contentType;
+
     public GetMerchantsMerchantIdUsersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMerchantsMerchantIdUsersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMerchantUsersResponse listMerchantUsersResponse;
+
     public GetMerchantsMerchantIdUsersResponse withListMerchantUsersResponse(org.openapis.openapi.models.shared.ListMerchantUsersResponse listMerchantUsersResponse) {
         this.listMerchantUsersResponse = listMerchantUsersResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetMerchantsMerchantIdUsersResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetMerchantsMerchantIdUsersResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class GetMerchantsMerchantIdUsersResponse {
     
     
     public Integer statusCode;
+
     public GetMerchantsMerchantIdUsersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetMerchantsMerchantIdUsersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMerchantsMerchantIdUsersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMerchantsMerchantIdUsersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

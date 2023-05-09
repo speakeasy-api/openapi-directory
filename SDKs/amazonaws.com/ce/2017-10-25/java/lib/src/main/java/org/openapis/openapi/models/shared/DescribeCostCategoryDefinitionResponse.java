@@ -18,9 +18,11 @@ public class DescribeCostCategoryDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CostCategory")
     public CostCategory costCategory;
+
     public DescribeCostCategoryDefinitionResponse withCostCategory(CostCategory costCategory) {
         this.costCategory = costCategory;
         return this;
     }
     
+    public DescribeCostCategoryDefinitionResponse(){}
 }

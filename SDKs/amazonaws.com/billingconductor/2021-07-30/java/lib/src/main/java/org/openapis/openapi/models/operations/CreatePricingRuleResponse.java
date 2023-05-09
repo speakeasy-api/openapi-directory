@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePricingRuleResponse {
@@ -12,6 +13,7 @@ public class CreatePricingRuleResponse {
      */
     
     public Object accessDeniedException;
+
     public CreatePricingRuleResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreatePricingRuleResponse {
      */
     
     public Object conflictException;
+
     public CreatePricingRuleResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreatePricingRuleResponse {
     
     
     public String contentType;
+
     public CreatePricingRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreatePricingRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePricingRuleOutput createPricingRuleOutput;
+
     public CreatePricingRuleResponse withCreatePricingRuleOutput(org.openapis.openapi.models.shared.CreatePricingRuleOutput createPricingRuleOutput) {
         this.createPricingRuleOutput = createPricingRuleOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreatePricingRuleResponse {
      */
     
     public Object internalServerException;
+
     public CreatePricingRuleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePricingRuleResponse {
      */
     
     public Object serviceLimitExceededException;
+
     public CreatePricingRuleResponse withServiceLimitExceededException(Object serviceLimitExceededException) {
         this.serviceLimitExceededException = serviceLimitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreatePricingRuleResponse {
     
     
     public Integer statusCode;
+
     public CreatePricingRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreatePricingRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePricingRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreatePricingRuleResponse {
      */
     
     public Object throttlingException;
+
     public CreatePricingRuleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreatePricingRuleResponse {
      */
     
     public Object validationException;
+
     public CreatePricingRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreatePricingRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

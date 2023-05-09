@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeRegionSslPoliciesListAvailableFeaturesResponse {
     
     public String contentType;
+
     public ComputeRegionSslPoliciesListAvailableFeaturesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionSslPoliciesListAvailableFeaturesResponse {
      */
     
     public org.openapis.openapi.models.shared.SslPoliciesListAvailableFeaturesResponse sslPoliciesListAvailableFeaturesResponse;
+
     public ComputeRegionSslPoliciesListAvailableFeaturesResponse withSslPoliciesListAvailableFeaturesResponse(org.openapis.openapi.models.shared.SslPoliciesListAvailableFeaturesResponse sslPoliciesListAvailableFeaturesResponse) {
         this.sslPoliciesListAvailableFeaturesResponse = sslPoliciesListAvailableFeaturesResponse;
         return this;
@@ -26,6 +29,7 @@ public class ComputeRegionSslPoliciesListAvailableFeaturesResponse {
     
     
     public Integer statusCode;
+
     public ComputeRegionSslPoliciesListAvailableFeaturesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeRegionSslPoliciesListAvailableFeaturesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeRegionSslPoliciesListAvailableFeaturesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeRegionSslPoliciesListAvailableFeaturesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

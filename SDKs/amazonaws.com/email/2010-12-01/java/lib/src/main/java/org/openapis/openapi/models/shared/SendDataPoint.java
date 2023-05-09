@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class SendDataPoint {
     
     public Long bounces;
+
     public SendDataPoint withBounces(Long bounces) {
         this.bounces = bounces;
         return this;
@@ -19,6 +20,7 @@ public class SendDataPoint {
     
     
     public Long complaints;
+
     public SendDataPoint withComplaints(Long complaints) {
         this.complaints = complaints;
         return this;
@@ -26,6 +28,7 @@ public class SendDataPoint {
     
     
     public Long deliveryAttempts;
+
     public SendDataPoint withDeliveryAttempts(Long deliveryAttempts) {
         this.deliveryAttempts = deliveryAttempts;
         return this;
@@ -33,6 +36,7 @@ public class SendDataPoint {
     
     
     public Long rejects;
+
     public SendDataPoint withRejects(Long rejects) {
         this.rejects = rejects;
         return this;
@@ -40,9 +44,11 @@ public class SendDataPoint {
     
     
     public OffsetDateTime timestamp;
+
     public SendDataPoint withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public SendDataPoint(){}
 }

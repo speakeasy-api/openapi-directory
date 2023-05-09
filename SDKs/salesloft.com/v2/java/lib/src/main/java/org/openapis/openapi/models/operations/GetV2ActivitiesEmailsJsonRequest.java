@@ -12,6 +12,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=action_id")
     public Long[] actionId;
+
     public GetV2ActivitiesEmailsJsonRequest withActionId(Long[] actionId) {
         this.actionId = actionId;
         return this;
@@ -22,6 +23,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bounced")
     public Boolean bounced;
+
     public GetV2ActivitiesEmailsJsonRequest withBounced(Boolean bounced) {
         this.bounced = bounced;
         return this;
@@ -32,6 +34,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=cadence_id")
     public Long[] cadenceId;
+
     public GetV2ActivitiesEmailsJsonRequest withCadenceId(Long[] cadenceId) {
         this.cadenceId = cadenceId;
         return this;
@@ -42,6 +45,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=crm_activity_id")
     public Long[] crmActivityId;
+
     public GetV2ActivitiesEmailsJsonRequest withCrmActivityId(Long[] crmActivityId) {
         this.crmActivityId = crmActivityId;
         return this;
@@ -52,6 +56,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=email_addresses")
     public String[] emailAddresses;
+
     public GetV2ActivitiesEmailsJsonRequest withEmailAddresses(String[] emailAddresses) {
         this.emailAddresses = emailAddresses;
         return this;
@@ -62,6 +67,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2ActivitiesEmailsJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -72,6 +78,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2ActivitiesEmailsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -82,6 +89,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2ActivitiesEmailsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -92,6 +100,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=one_off")
     public Boolean oneOff;
+
     public GetV2ActivitiesEmailsJsonRequest withOneOff(Boolean oneOff) {
         this.oneOff = oneOff;
         return this;
@@ -102,6 +111,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2ActivitiesEmailsJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -112,6 +122,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2ActivitiesEmailsJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -122,6 +133,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=person_id")
     public Long[] personId;
+
     public GetV2ActivitiesEmailsJsonRequest withPersonId(Long[] personId) {
         this.personId = personId;
         return this;
@@ -132,6 +144,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=personalization")
     public String[] personalization;
+
     public GetV2ActivitiesEmailsJsonRequest withPersonalization(String[] personalization) {
         this.personalization = personalization;
         return this;
@@ -142,6 +155,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=scoped_fields")
     public String[] scopedFields;
+
     public GetV2ActivitiesEmailsJsonRequest withScopedFields(String[] scopedFields) {
         this.scopedFields = scopedFields;
         return this;
@@ -156,6 +170,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sent_at")
     public String[] sentAt;
+
     public GetV2ActivitiesEmailsJsonRequest withSentAt(String[] sentAt) {
         this.sentAt = sentAt;
         return this;
@@ -166,6 +181,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2ActivitiesEmailsJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -176,6 +192,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2ActivitiesEmailsJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -186,6 +203,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=status")
     public String[] status;
+
     public GetV2ActivitiesEmailsJsonRequest withStatus(String[] status) {
         this.status = status;
         return this;
@@ -196,6 +214,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=step_id")
     public Long[] stepId;
+
     public GetV2ActivitiesEmailsJsonRequest withStepId(Long[] stepId) {
         this.stepId = stepId;
         return this;
@@ -210,6 +229,7 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=updated_at")
     public String[] updatedAt;
+
     public GetV2ActivitiesEmailsJsonRequest withUpdatedAt(String[] updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -220,9 +240,11 @@ public class GetV2ActivitiesEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_id")
     public Long[] userId;
+
     public GetV2ActivitiesEmailsJsonRequest withUserId(Long[] userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetV2ActivitiesEmailsJsonRequest(){}
 }

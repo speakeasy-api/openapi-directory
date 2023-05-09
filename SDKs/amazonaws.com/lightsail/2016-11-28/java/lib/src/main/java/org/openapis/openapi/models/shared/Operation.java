@@ -22,6 +22,7 @@ public class Operation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Operation withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public Operation withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -38,6 +40,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDetails")
     public String errorDetails;
+
     public Operation withErrorDetails(String errorDetails) {
         this.errorDetails = errorDetails;
         return this;
@@ -46,6 +49,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Operation withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTerminal")
     public Boolean isTerminal;
+
     public Operation withIsTerminal(Boolean isTerminal) {
         this.isTerminal = isTerminal;
         return this;
@@ -62,6 +67,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public ResourceLocation location;
+
     public Operation withLocation(ResourceLocation location) {
         this.location = location;
         return this;
@@ -70,6 +76,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationDetails")
     public String operationDetails;
+
     public Operation withOperationDetails(String operationDetails) {
         this.operationDetails = operationDetails;
         return this;
@@ -78,6 +85,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationType")
     public OperationTypeEnum operationType;
+
     public Operation withOperationType(OperationTypeEnum operationType) {
         this.operationType = operationType;
         return this;
@@ -86,6 +94,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public Operation withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -94,6 +103,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public Operation withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -102,6 +112,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public OperationStatusEnum status;
+
     public Operation withStatus(OperationStatusEnum status) {
         this.status = status;
         return this;
@@ -112,9 +123,11 @@ public class Operation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("statusChangedAt")
     public OffsetDateTime statusChangedAt;
+
     public Operation withStatusChangedAt(OffsetDateTime statusChangedAt) {
         this.statusChangedAt = statusChangedAt;
         return this;
     }
     
+    public Operation(){}
 }

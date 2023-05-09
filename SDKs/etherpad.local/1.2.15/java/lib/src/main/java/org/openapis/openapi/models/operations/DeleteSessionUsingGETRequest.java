@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DeleteSessionUsingGETRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sessionID")
     public String sessionID;
+
     public DeleteSessionUsingGETRequest withSessionID(String sessionID) {
         this.sessionID = sessionID;
         return this;
     }
     
+    public DeleteSessionUsingGETRequest(){}
 }

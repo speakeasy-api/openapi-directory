@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest {
@@ -12,6 +13,7 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1DefineNetworkRequest googleChromePolicyVersionsV1DefineNetworkRequest;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest withGoogleChromePolicyVersionsV1DefineNetworkRequest(org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1DefineNetworkRequest googleChromePolicyVersionsV1DefineNetworkRequest) {
         this.googleChromePolicyVersionsV1DefineNetworkRequest = googleChromePolicyVersionsV1DefineNetworkRequest;
         return this;
@@ -29,6 +32,7 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer")
     public String customer;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest withCustomer(String customer) {
         this.customer = customer;
         return this;
@@ -69,6 +76,7 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest(@JsonProperty("customer") String customer) {
+        this.customer = customer;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleFirebaseAppcheckV1ListServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleFirebaseAppcheckV1ListServicesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppcheckV1ListServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public GoogleFirebaseAppcheckV1Service[] services;
+
     public GoogleFirebaseAppcheckV1ListServicesResponse withServices(GoogleFirebaseAppcheckV1Service[] services) {
         this.services = services;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1ListServicesResponse(){}
 }

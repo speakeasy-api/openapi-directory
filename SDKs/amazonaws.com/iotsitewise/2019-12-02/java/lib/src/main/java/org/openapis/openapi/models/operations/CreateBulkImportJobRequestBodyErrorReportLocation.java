@@ -15,6 +15,7 @@ public class CreateBulkImportJobRequestBodyErrorReportLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public CreateBulkImportJobRequestBodyErrorReportLocation withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,9 +24,11 @@ public class CreateBulkImportJobRequestBodyErrorReportLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public CreateBulkImportJobRequestBodyErrorReportLocation withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public CreateBulkImportJobRequestBodyErrorReportLocation(){}
 }

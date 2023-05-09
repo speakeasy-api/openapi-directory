@@ -15,9 +15,11 @@ public class ExternalEmail {
      */
     
     public String messageId;
+
     public ExternalEmail withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
     
+    public ExternalEmail(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SymbolUploadsGetLocation404ApplicationJSON {
     @JsonProperty("message")
     public String message;
+
     public SymbolUploadsGetLocation404ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public SymbolUploadsGetLocation404ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

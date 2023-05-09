@@ -15,9 +15,11 @@ public class UpdateLaunchProfileMemberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member")
     public LaunchProfileMembership member;
+
     public UpdateLaunchProfileMemberResponse withMember(LaunchProfileMembership member) {
         this.member = member;
         return this;
     }
     
+    public UpdateLaunchProfileMemberResponse(){}
 }

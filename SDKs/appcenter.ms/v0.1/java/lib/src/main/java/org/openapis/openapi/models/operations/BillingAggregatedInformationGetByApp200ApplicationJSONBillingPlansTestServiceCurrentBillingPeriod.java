@@ -18,6 +18,7 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansT
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byAccount")
     public BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccount byAccount;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriod withByAccount(BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccount byAccount) {
         this.byAccount = byAccount;
         return this;
@@ -29,6 +30,7 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansT
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriod withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -40,9 +42,11 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansT
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriod withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriod(){}
 }

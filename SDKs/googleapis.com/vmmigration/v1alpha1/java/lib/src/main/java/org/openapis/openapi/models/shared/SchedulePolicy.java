@@ -18,6 +18,7 @@ public class SchedulePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleDuration")
     public String idleDuration;
+
     public SchedulePolicy withIdleDuration(String idleDuration) {
         this.idleDuration = idleDuration;
         return this;
@@ -29,9 +30,11 @@ public class SchedulePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipOsAdaptation")
     public Boolean skipOsAdaptation;
+
     public SchedulePolicy withSkipOsAdaptation(Boolean skipOsAdaptation) {
         this.skipOsAdaptation = skipOsAdaptation;
         return this;
     }
     
+    public SchedulePolicy(){}
 }

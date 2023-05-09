@@ -15,6 +15,7 @@ public class BknocRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public BknocRequestBodyCertificateParameters certificateParameters;
+
     public BknocRequestBody withCertificateParameters(BknocRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class BknocRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public BknocRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class BknocRequestBody {
      */
     @JsonProperty("format")
     public BknocRequestBodyFormatEnum format;
+
     public BknocRequestBody withFormat(BknocRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class BknocRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public BknocRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public BknocRequestBody(@JsonProperty("format") BknocRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

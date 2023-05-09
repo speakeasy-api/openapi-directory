@@ -15,6 +15,7 @@ public class FourHundredErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public FourHundredErrors withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class FourHundredErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public FourHundredErrorsLocation location;
+
     public FourHundredErrors withLocation(FourHundredErrorsLocation location) {
         this.location = location;
         return this;
@@ -37,9 +39,11 @@ public class FourHundredErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public FourHundredErrors withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public FourHundredErrors(){}
 }

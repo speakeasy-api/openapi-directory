@@ -15,6 +15,7 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public CreateApplicationRequestBodyArchitectureEnum architecture;
+
     public CreateApplicationRequestBody withArchitecture(CreateApplicationRequestBodyArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -26,6 +27,7 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoStartConfiguration")
     public CreateApplicationRequestBodyAutoStartConfiguration autoStartConfiguration;
+
     public CreateApplicationRequestBody withAutoStartConfiguration(CreateApplicationRequestBodyAutoStartConfiguration autoStartConfiguration) {
         this.autoStartConfiguration = autoStartConfiguration;
         return this;
@@ -37,6 +39,7 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoStopConfiguration")
     public CreateApplicationRequestBodyAutoStopConfiguration autoStopConfiguration;
+
     public CreateApplicationRequestBody withAutoStopConfiguration(CreateApplicationRequestBodyAutoStopConfiguration autoStopConfiguration) {
         this.autoStopConfiguration = autoStopConfiguration;
         return this;
@@ -47,6 +50,7 @@ public class CreateApplicationRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateApplicationRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -58,6 +62,7 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageConfiguration")
     public CreateApplicationRequestBodyImageConfiguration imageConfiguration;
+
     public CreateApplicationRequestBody withImageConfiguration(CreateApplicationRequestBodyImageConfiguration imageConfiguration) {
         this.imageConfiguration = imageConfiguration;
         return this;
@@ -69,6 +74,7 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialCapacity")
     public java.util.Map<String, org.openapis.openapi.models.shared.InitialCapacityConfig> initialCapacity;
+
     public CreateApplicationRequestBody withInitialCapacity(java.util.Map<String, org.openapis.openapi.models.shared.InitialCapacityConfig> initialCapacity) {
         this.initialCapacity = initialCapacity;
         return this;
@@ -80,6 +86,7 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumCapacity")
     public CreateApplicationRequestBodyMaximumCapacity maximumCapacity;
+
     public CreateApplicationRequestBody withMaximumCapacity(CreateApplicationRequestBodyMaximumCapacity maximumCapacity) {
         this.maximumCapacity = maximumCapacity;
         return this;
@@ -91,6 +98,7 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateApplicationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +110,7 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfiguration")
     public CreateApplicationRequestBodyNetworkConfiguration networkConfiguration;
+
     public CreateApplicationRequestBody withNetworkConfiguration(CreateApplicationRequestBodyNetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -112,6 +121,7 @@ public class CreateApplicationRequestBody {
      */
     @JsonProperty("releaseLabel")
     public String releaseLabel;
+
     public CreateApplicationRequestBody withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
@@ -123,6 +133,7 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateApplicationRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -133,6 +144,7 @@ public class CreateApplicationRequestBody {
      */
     @JsonProperty("type")
     public String type;
+
     public CreateApplicationRequestBody withType(String type) {
         this.type = type;
         return this;
@@ -144,9 +156,15 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerTypeSpecifications")
     public java.util.Map<String, org.openapis.openapi.models.shared.WorkerTypeSpecificationInput> workerTypeSpecifications;
+
     public CreateApplicationRequestBody withWorkerTypeSpecifications(java.util.Map<String, org.openapis.openapi.models.shared.WorkerTypeSpecificationInput> workerTypeSpecifications) {
         this.workerTypeSpecifications = workerTypeSpecifications;
         return this;
     }
     
+    public CreateApplicationRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("releaseLabel") String releaseLabel, @JsonProperty("type") String type) {
+        this.clientToken = clientToken;
+        this.releaseLabel = releaseLabel;
+        this.type = type;
+  }
 }

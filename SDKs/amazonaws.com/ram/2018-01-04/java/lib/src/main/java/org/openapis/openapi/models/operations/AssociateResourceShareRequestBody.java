@@ -10,22 +10,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AssociateResourceShareRequestBody {
     /**
-     * &lt;p&gt;Specifies a unique, case-sensitive identifier that you provide to ensure the idempotency of the request. This lets you safely retry the request without accidentally performing the same operation a second time. Passing the same value to a later call to an operation requires that you also pass the same value for all other parameters. We recommend that you use a &lt;a href="https://wikipedia.org/wiki/Universally_unique_identifier"&gt;UUID type of value.&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;If you don't provide this value, then Amazon Web Services generates a random one for you.&lt;/p&gt;
+     * &lt;p&gt;Specifies a unique, case-sensitive identifier that you provide to ensure the idempotency of the request. This lets you safely retry the request without accidentally performing the same operation a second time. Passing the same value to a later call to an operation requires that you also pass the same value for all other parameters. We recommend that you use a &lt;a href="https://wikipedia.org/wiki/Universally_unique_identifier"&gt;UUID type of value.&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;If you don't provide this value, then Amazon Web Services generates a random one for you.&lt;/p&gt; &lt;p&gt;If you retry the operation with the same &lt;code&gt;ClientToken&lt;/code&gt;, but with different parameters, the retry fails with an &lt;code&gt;IdempotentParameterMismatch&lt;/code&gt; error.&lt;/p&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public AssociateResourceShareRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
     /**
-     * &lt;p&gt;Specifies a list of principals to whom you want to the resource share. This can be &lt;code&gt;null&lt;/code&gt; if you want to add only resources.&lt;/p&gt; &lt;p&gt;What the principals can do with the resources in the share is determined by the RAM permissions that you associate with the resource share. See &lt;a&gt;AssociateResourceSharePermission&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;You can include the following values:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;An Amazon Web Services account ID, for example: &lt;code&gt;123456789012&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resoure Name (ARN)&lt;/a&gt; of an organization in Organizations, for example: &lt;code&gt;organizations::123456789012:organization/o-exampleorgid&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An ARN of an organizational unit (OU) in Organizations, for example: &lt;code&gt;organizations::123456789012:ou/o-exampleorgid/ou-examplerootid-exampleouid123&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An ARN of an IAM role, for example: &lt;code&gt;iam::123456789012:role/rolename&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An ARN of an IAM user, for example: &lt;code&gt;iam::123456789012user/username&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;note&gt; &lt;p&gt;Not all resource types can be shared with IAM roles and users. For more information, see &lt;a href="https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types"&gt;Sharing with IAM roles and users&lt;/a&gt; in the &lt;i&gt;Resource Access Manager User Guide&lt;/i&gt;.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Specifies a list of principals to whom you want to the resource share. This can be &lt;code&gt;null&lt;/code&gt; if you want to add only resources.&lt;/p&gt; &lt;p&gt;What the principals can do with the resources in the share is determined by the RAM permissions that you associate with the resource share. See &lt;a&gt;AssociateResourceSharePermission&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;You can include the following values:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;An Amazon Web Services account ID, for example: &lt;code&gt;123456789012&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Name (ARN)&lt;/a&gt; of an organization in Organizations, for example: &lt;code&gt;organizations::123456789012:organization/o-exampleorgid&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An ARN of an organizational unit (OU) in Organizations, for example: &lt;code&gt;organizations::123456789012:ou/o-exampleorgid/ou-examplerootid-exampleouid123&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An ARN of an IAM role, for example: &lt;code&gt;iam::123456789012:role/rolename&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An ARN of an IAM user, for example: &lt;code&gt;iam::123456789012user/username&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;note&gt; &lt;p&gt;Not all resource types can be shared with IAM roles and users. For more information, see &lt;a href="https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types"&gt;Sharing with IAM roles and users&lt;/a&gt; in the &lt;i&gt;Resource Access Manager User Guide&lt;/i&gt;.&lt;/p&gt; &lt;/note&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principals")
     public String[] principals;
+
     public AssociateResourceShareRequestBody withPrincipals(String[] principals) {
         this.principals = principals;
         return this;
@@ -37,19 +39,24 @@ public class AssociateResourceShareRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArns")
     public String[] resourceArns;
+
     public AssociateResourceShareRequestBody withResourceArns(String[] resourceArns) {
         this.resourceArns = resourceArns;
         return this;
     }
     
     /**
-     * Specifies the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resoure Name (ARN)&lt;/a&gt; of the resource share that you want to add principals or resources to.
+     * Specifies the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Name (ARN)&lt;/a&gt; of the resource share that you want to add principals or resources to.
      */
     @JsonProperty("resourceShareArn")
     public String resourceShareArn;
+
     public AssociateResourceShareRequestBody withResourceShareArn(String resourceShareArn) {
         this.resourceShareArn = resourceShareArn;
         return this;
     }
     
+    public AssociateResourceShareRequestBody(@JsonProperty("resourceShareArn") String resourceShareArn) {
+        this.resourceShareArn = resourceShareArn;
+  }
 }

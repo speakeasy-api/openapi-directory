@@ -19,6 +19,7 @@ public class ListHubContentsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListHubContentsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListHubContentsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListHubContentsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -36,6 +38,7 @@ public class ListHubContentsRequest {
     
     @JsonProperty("HubContentType")
     public HubContentTypeEnum hubContentType;
+
     public ListHubContentsRequest withHubContentType(HubContentTypeEnum hubContentType) {
         this.hubContentType = hubContentType;
         return this;
@@ -43,6 +46,7 @@ public class ListHubContentsRequest {
     
     @JsonProperty("HubName")
     public String hubName;
+
     public ListHubContentsRequest withHubName(String hubName) {
         this.hubName = hubName;
         return this;
@@ -51,6 +55,7 @@ public class ListHubContentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListHubContentsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -59,6 +64,7 @@ public class ListHubContentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxSchemaVersion")
     public String maxSchemaVersion;
+
     public ListHubContentsRequest withMaxSchemaVersion(String maxSchemaVersion) {
         this.maxSchemaVersion = maxSchemaVersion;
         return this;
@@ -67,6 +73,7 @@ public class ListHubContentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListHubContentsRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -75,6 +82,7 @@ public class ListHubContentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListHubContentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -83,6 +91,7 @@ public class ListHubContentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public HubContentSortByEnum sortBy;
+
     public ListHubContentsRequest withSortBy(HubContentSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -91,9 +100,14 @@ public class ListHubContentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListHubContentsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListHubContentsRequest(@JsonProperty("HubContentType") HubContentTypeEnum hubContentType, @JsonProperty("HubName") String hubName) {
+        this.hubContentType = hubContentType;
+        this.hubName = hubName;
+  }
 }

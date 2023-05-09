@@ -15,6 +15,7 @@ public class AccessRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowPublicOverrides")
     public Boolean allowPublicOverrides;
+
     public AccessRules withAllowPublicOverrides(Boolean allowPublicOverrides) {
         this.allowPublicOverrides = allowPublicOverrides;
         return this;
@@ -23,9 +24,11 @@ public class AccessRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("getObject")
     public AccessTypeEnum getObject;
+
     public AccessRules withGetObject(AccessTypeEnum getObject) {
         this.getObject = getObject;
         return this;
     }
     
+    public AccessRules(){}
 }

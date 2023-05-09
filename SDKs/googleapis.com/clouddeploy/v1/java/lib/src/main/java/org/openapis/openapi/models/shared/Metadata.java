@@ -18,9 +18,11 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudRun")
     public CloudRunMetadata cloudRun;
+
     public Metadata withCloudRun(CloudRunMetadata cloudRun) {
         this.cloudRun = cloudRun;
         return this;
     }
     
+    public Metadata(){}
 }

@@ -18,6 +18,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedUserRoles")
     public AssignedUserRoleInput[] assignedUserRoles;
+
     public UserInput withAssignedUserRoles(AssignedUserRoleInput[] assignedUserRoles) {
         this.assignedUserRoles = assignedUserRoles;
         return this;
@@ -29,6 +30,7 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public UserInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,9 +42,11 @@ public class UserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserInput withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public UserInput(){}
 }

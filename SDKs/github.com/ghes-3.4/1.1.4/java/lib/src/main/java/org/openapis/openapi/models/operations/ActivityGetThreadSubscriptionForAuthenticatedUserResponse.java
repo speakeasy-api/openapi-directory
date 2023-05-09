@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActivityGetThreadSubscriptionForAuthenticatedUserResponse {
     
     public String contentType;
+
     public ActivityGetThreadSubscriptionForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActivityGetThreadSubscriptionForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public ActivityGetThreadSubscriptionForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActivityGetThreadSubscriptionForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActivityGetThreadSubscriptionForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ActivityGetThreadSubscriptionForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ActivityGetThreadSubscriptionForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ActivityGetThreadSubscriptionForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.ThreadSubscription threadSubscription;
+
     public ActivityGetThreadSubscriptionForAuthenticatedUserResponse withThreadSubscription(org.openapis.openapi.models.shared.ThreadSubscription threadSubscription) {
         this.threadSubscription = threadSubscription;
         return this;
     }
     
+    public ActivityGetThreadSubscriptionForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

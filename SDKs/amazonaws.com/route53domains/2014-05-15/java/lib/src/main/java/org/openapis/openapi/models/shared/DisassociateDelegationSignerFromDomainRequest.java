@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateDelegationSignerFromDomainRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public DisassociateDelegationSignerFromDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -16,9 +17,14 @@ public class DisassociateDelegationSignerFromDomainRequest {
     
     @JsonProperty("Id")
     public String id;
+
     public DisassociateDelegationSignerFromDomainRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DisassociateDelegationSignerFromDomainRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("Id") String id) {
+        this.domainName = domainName;
+        this.id = id;
+  }
 }

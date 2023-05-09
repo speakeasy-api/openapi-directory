@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDetectEntitiesResponse {
     @JsonProperty("ErrorList")
     public BatchItemError[] errorList;
+
     public BatchDetectEntitiesResponse withErrorList(BatchItemError[] errorList) {
         this.errorList = errorList;
         return this;
@@ -19,9 +20,14 @@ public class BatchDetectEntitiesResponse {
     
     @JsonProperty("ResultList")
     public BatchDetectEntitiesItemResult[] resultList;
+
     public BatchDetectEntitiesResponse withResultList(BatchDetectEntitiesItemResult[] resultList) {
         this.resultList = resultList;
         return this;
     }
     
+    public BatchDetectEntitiesResponse(@JsonProperty("ErrorList") BatchItemError[] errorList, @JsonProperty("ResultList") BatchDetectEntitiesItemResult[] resultList) {
+        this.errorList = errorList;
+        this.resultList = resultList;
+  }
 }

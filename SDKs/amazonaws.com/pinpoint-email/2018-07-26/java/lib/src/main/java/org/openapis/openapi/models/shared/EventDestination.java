@@ -15,6 +15,7 @@ public class EventDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchDestination")
     public CloudWatchDestination cloudWatchDestination;
+
     public EventDestination withCloudWatchDestination(CloudWatchDestination cloudWatchDestination) {
         this.cloudWatchDestination = cloudWatchDestination;
         return this;
@@ -23,6 +24,7 @@ public class EventDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public EventDestination withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -31,6 +33,7 @@ public class EventDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisFirehoseDestination")
     public KinesisFirehoseDestination kinesisFirehoseDestination;
+
     public EventDestination withKinesisFirehoseDestination(KinesisFirehoseDestination kinesisFirehoseDestination) {
         this.kinesisFirehoseDestination = kinesisFirehoseDestination;
         return this;
@@ -38,6 +41,7 @@ public class EventDestination {
     
     @JsonProperty("MatchingEventTypes")
     public EventTypeEnum[] matchingEventTypes;
+
     public EventDestination withMatchingEventTypes(EventTypeEnum[] matchingEventTypes) {
         this.matchingEventTypes = matchingEventTypes;
         return this;
@@ -45,6 +49,7 @@ public class EventDestination {
     
     @JsonProperty("Name")
     public String name;
+
     public EventDestination withName(String name) {
         this.name = name;
         return this;
@@ -53,6 +58,7 @@ public class EventDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PinpointDestination")
     public PinpointDestination pinpointDestination;
+
     public EventDestination withPinpointDestination(PinpointDestination pinpointDestination) {
         this.pinpointDestination = pinpointDestination;
         return this;
@@ -61,9 +67,14 @@ public class EventDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsDestination")
     public SnsDestination snsDestination;
+
     public EventDestination withSnsDestination(SnsDestination snsDestination) {
         this.snsDestination = snsDestination;
         return this;
     }
     
+    public EventDestination(@JsonProperty("MatchingEventTypes") EventTypeEnum[] matchingEventTypes, @JsonProperty("Name") String name) {
+        this.matchingEventTypes = matchingEventTypes;
+        this.name = name;
+  }
 }

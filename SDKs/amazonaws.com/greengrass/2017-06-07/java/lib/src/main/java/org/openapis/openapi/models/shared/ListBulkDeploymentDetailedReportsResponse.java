@@ -15,6 +15,7 @@ public class ListBulkDeploymentDetailedReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Deployments")
     public BulkDeploymentResult[] deployments;
+
     public ListBulkDeploymentDetailedReportsResponse withDeployments(BulkDeploymentResult[] deployments) {
         this.deployments = deployments;
         return this;
@@ -23,9 +24,11 @@ public class ListBulkDeploymentDetailedReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListBulkDeploymentDetailedReportsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBulkDeploymentDetailedReportsResponse(){}
 }

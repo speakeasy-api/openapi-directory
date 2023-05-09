@@ -12,6 +12,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentLength")
     public Double contentLength;
+
     public RunAMonitor200ApplicationJSONRunExecutionsRequestBody withContentLength(Double contentLength) {
         this.contentLength = contentLength;
         return this;
@@ -20,9 +21,11 @@ public class RunAMonitor200ApplicationJSONRunExecutionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public RunAMonitor200ApplicationJSONRunExecutionsRequestBody withMode(String mode) {
         this.mode = mode;
         return this;
     }
     
+    public RunAMonitor200ApplicationJSONRunExecutionsRequestBody(){}
 }

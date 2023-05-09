@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest {
@@ -12,6 +13,7 @@ public class GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=milestone_id")
     public Long milestoneId;
+
     public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest withMilestoneId(Long milestoneId) {
         this.milestoneId = milestoneId;
         return this;
@@ -24,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -36,9 +39,15 @@ public class GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest(@JsonProperty("milestone_id") Long milestoneId, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.milestoneId = milestoneId;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

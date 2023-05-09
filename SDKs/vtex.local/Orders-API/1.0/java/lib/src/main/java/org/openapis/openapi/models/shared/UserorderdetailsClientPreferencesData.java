@@ -15,6 +15,7 @@ public class UserorderdetailsClientPreferencesData {
      */
     @JsonProperty("locale")
     public String locale;
+
     public UserorderdetailsClientPreferencesData withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -25,9 +26,14 @@ public class UserorderdetailsClientPreferencesData {
      */
     @JsonProperty("optinNewsLetter")
     public Boolean optinNewsLetter;
+
     public UserorderdetailsClientPreferencesData withOptinNewsLetter(Boolean optinNewsLetter) {
         this.optinNewsLetter = optinNewsLetter;
         return this;
     }
     
+    public UserorderdetailsClientPreferencesData(@JsonProperty("locale") String locale, @JsonProperty("optinNewsLetter") Boolean optinNewsLetter) {
+        this.locale = locale;
+        this.optinNewsLetter = optinNewsLetter;
+  }
 }

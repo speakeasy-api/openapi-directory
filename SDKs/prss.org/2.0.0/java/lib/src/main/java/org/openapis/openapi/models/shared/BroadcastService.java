@@ -24,6 +24,7 @@ public class BroadcastService {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public BroadcastService withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -35,6 +36,7 @@ public class BroadcastService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BroadcastService withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +47,7 @@ public class BroadcastService {
      */
     @JsonProperty("id")
     public Long id;
+
     public BroadcastService withId(Long id) {
         this.id = id;
         return this;
@@ -57,6 +60,7 @@ public class BroadcastService {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public BroadcastService withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -67,9 +71,16 @@ public class BroadcastService {
      */
     @JsonProperty("name")
     public String name;
+
     public BroadcastService withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BroadcastService(@JsonProperty("createdDate") OffsetDateTime createdDate, @JsonProperty("id") Long id, @JsonProperty("lastModifiedDate") OffsetDateTime lastModifiedDate, @JsonProperty("name") String name) {
+        this.createdDate = createdDate;
+        this.id = id;
+        this.lastModifiedDate = lastModifiedDate;
+        this.name = name;
+  }
 }

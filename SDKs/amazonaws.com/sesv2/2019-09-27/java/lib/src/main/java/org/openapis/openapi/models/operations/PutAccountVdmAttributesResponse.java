@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAccountVdmAttributesResponse {
@@ -12,6 +13,7 @@ public class PutAccountVdmAttributesResponse {
      */
     
     public Object badRequestException;
+
     public PutAccountVdmAttributesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class PutAccountVdmAttributesResponse {
     
     
     public String contentType;
+
     public PutAccountVdmAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutAccountVdmAttributesResponse {
      */
     
     public java.util.Map<String, Object> putAccountVdmAttributesResponse;
+
     public PutAccountVdmAttributesResponse withPutAccountVdmAttributesResponse(java.util.Map<String, Object> putAccountVdmAttributesResponse) {
         this.putAccountVdmAttributesResponse = putAccountVdmAttributesResponse;
         return this;
@@ -36,6 +40,7 @@ public class PutAccountVdmAttributesResponse {
     
     
     public Integer statusCode;
+
     public PutAccountVdmAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class PutAccountVdmAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAccountVdmAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class PutAccountVdmAttributesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutAccountVdmAttributesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutAccountVdmAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

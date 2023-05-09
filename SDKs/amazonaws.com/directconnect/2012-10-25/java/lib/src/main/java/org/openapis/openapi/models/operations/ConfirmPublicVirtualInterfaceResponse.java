@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConfirmPublicVirtualInterfaceResponse {
@@ -12,6 +13,7 @@ public class ConfirmPublicVirtualInterfaceResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfirmPublicVirtualInterfaceResponse confirmPublicVirtualInterfaceResponse;
+
     public ConfirmPublicVirtualInterfaceResponse withConfirmPublicVirtualInterfaceResponse(org.openapis.openapi.models.shared.ConfirmPublicVirtualInterfaceResponse confirmPublicVirtualInterfaceResponse) {
         this.confirmPublicVirtualInterfaceResponse = confirmPublicVirtualInterfaceResponse;
         return this;
@@ -19,6 +21,7 @@ public class ConfirmPublicVirtualInterfaceResponse {
     
     
     public String contentType;
+
     public ConfirmPublicVirtualInterfaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ConfirmPublicVirtualInterfaceResponse {
      */
     
     public Object directConnectClientException;
+
     public ConfirmPublicVirtualInterfaceResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class ConfirmPublicVirtualInterfaceResponse {
      */
     
     public Object directConnectServerException;
+
     public ConfirmPublicVirtualInterfaceResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class ConfirmPublicVirtualInterfaceResponse {
     
     
     public Integer statusCode;
+
     public ConfirmPublicVirtualInterfaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ConfirmPublicVirtualInterfaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConfirmPublicVirtualInterfaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ConfirmPublicVirtualInterfaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

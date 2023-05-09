@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateVersionRequest {
@@ -12,6 +13,7 @@ public class UpdateVersionRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Version version;
+
     public UpdateVersionRequest withVersion(org.openapis.openapi.models.shared.Version version) {
         this.version = version;
         return this;
@@ -22,9 +24,14 @@ public class UpdateVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionId")
     public String versionId;
+
     public UpdateVersionRequest withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public UpdateVersionRequest(@JsonProperty("Version") org.openapis.openapi.models.shared.Version version, @JsonProperty("versionId") String versionId) {
+        this.version = version;
+        this.versionId = versionId;
+  }
 }

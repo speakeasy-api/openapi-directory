@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PayOrderRequest {
@@ -14,6 +15,7 @@ public class PayOrderRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PayOrderRequest payOrderRequest;
+
     public PayOrderRequest withPayOrderRequest(org.openapis.openapi.models.shared.PayOrderRequest payOrderRequest) {
         this.payOrderRequest = payOrderRequest;
         return this;
@@ -24,9 +26,14 @@ public class PayOrderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=order_id")
     public String orderId;
+
     public PayOrderRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     
+    public PayOrderRequest(@JsonProperty("PayOrderRequest") org.openapis.openapi.models.shared.PayOrderRequest payOrderRequest, @JsonProperty("order_id") String orderId) {
+        this.payOrderRequest = payOrderRequest;
+        this.orderId = orderId;
+  }
 }

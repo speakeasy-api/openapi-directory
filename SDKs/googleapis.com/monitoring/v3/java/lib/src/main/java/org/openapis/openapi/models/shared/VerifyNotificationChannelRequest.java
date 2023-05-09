@@ -18,9 +18,11 @@ public class VerifyNotificationChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public VerifyNotificationChannelRequest withCode(String code) {
         this.code = code;
         return this;
     }
     
+    public VerifyNotificationChannelRequest(){}
 }

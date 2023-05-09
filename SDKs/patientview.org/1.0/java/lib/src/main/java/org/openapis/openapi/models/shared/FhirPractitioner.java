@@ -17,6 +17,7 @@ public class FhirPractitioner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address1")
     public String address1;
+
     public FhirPractitioner withAddress1(String address1) {
         this.address1 = address1;
         return this;
@@ -25,6 +26,7 @@ public class FhirPractitioner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address2")
     public String address2;
+
     public FhirPractitioner withAddress2(String address2) {
         this.address2 = address2;
         return this;
@@ -33,6 +35,7 @@ public class FhirPractitioner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address3")
     public String address3;
+
     public FhirPractitioner withAddress3(String address3) {
         this.address3 = address3;
         return this;
@@ -41,6 +44,7 @@ public class FhirPractitioner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address4")
     public String address4;
+
     public FhirPractitioner withAddress4(String address4) {
         this.address4 = address4;
         return this;
@@ -49,6 +53,7 @@ public class FhirPractitioner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowInviteGp")
     public Boolean allowInviteGp;
+
     public FhirPractitioner withAllowInviteGp(Boolean allowInviteGp) {
         this.allowInviteGp = allowInviteGp;
         return this;
@@ -57,6 +62,7 @@ public class FhirPractitioner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     public FhirContact[] contacts;
+
     public FhirPractitioner withContacts(FhirContact[] contacts) {
         this.contacts = contacts;
         return this;
@@ -65,6 +71,7 @@ public class FhirPractitioner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public FhirPractitioner withGender(String gender) {
         this.gender = gender;
         return this;
@@ -73,6 +80,7 @@ public class FhirPractitioner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupCode")
     public String groupCode;
+
     public FhirPractitioner withGroupCode(String groupCode) {
         this.groupCode = groupCode;
         return this;
@@ -81,6 +89,7 @@ public class FhirPractitioner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public FhirPractitioner withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -91,6 +100,7 @@ public class FhirPractitioner {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("inviteDate")
     public OffsetDateTime inviteDate;
+
     public FhirPractitioner withInviteDate(OffsetDateTime inviteDate) {
         this.inviteDate = inviteDate;
         return this;
@@ -99,6 +109,7 @@ public class FhirPractitioner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FhirPractitioner withName(String name) {
         this.name = name;
         return this;
@@ -107,6 +118,7 @@ public class FhirPractitioner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postcode")
     public String postcode;
+
     public FhirPractitioner withPostcode(String postcode) {
         this.postcode = postcode;
         return this;
@@ -115,9 +127,11 @@ public class FhirPractitioner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public FhirPractitioner withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public FhirPractitioner(){}
 }

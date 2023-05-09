@@ -59,11 +59,9 @@ public class HealthChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeHealthChecksAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeHealthChecksAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksAggregatedListResponse(contentType, httpRes.statusCode()) {{
             healthChecksAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class HealthChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeHealthChecksDeleteResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeHealthChecksDeleteResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class HealthChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeHealthChecksGetResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeHealthChecksGetResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksGetResponse(contentType, httpRes.statusCode()) {{
             healthCheck = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class HealthChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeHealthChecksInsertResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeHealthChecksInsertResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class HealthChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeHealthChecksListResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksListResponse() {{
+        org.openapis.openapi.models.operations.ComputeHealthChecksListResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksListResponse(contentType, httpRes.statusCode()) {{
             healthCheckList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class HealthChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeHealthChecksPatchResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeHealthChecksPatchResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class HealthChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeHealthChecksTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeHealthChecksTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class HealthChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeHealthChecksUpdateResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksUpdateResponse() {{
+        org.openapis.openapi.models.operations.ComputeHealthChecksUpdateResponse res = new org.openapis.openapi.models.operations.ComputeHealthChecksUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

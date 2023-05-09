@@ -15,6 +15,7 @@ public class Playlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentDetails")
     public PlaylistContentDetails contentDetails;
+
     public Playlist withContentDetails(PlaylistContentDetails contentDetails) {
         this.contentDetails = contentDetails;
         return this;
@@ -26,6 +27,7 @@ public class Playlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Playlist withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -37,6 +39,7 @@ public class Playlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Playlist withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class Playlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Playlist withKind(String kind) {
         this.kind = kind;
         return this;
@@ -59,6 +63,7 @@ public class Playlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizations")
     public java.util.Map<String, PlaylistLocalization> localizations;
+
     public Playlist withLocalizations(java.util.Map<String, PlaylistLocalization> localizations) {
         this.localizations = localizations;
         return this;
@@ -67,6 +72,7 @@ public class Playlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("player")
     public PlaylistPlayer player;
+
     public Playlist withPlayer(PlaylistPlayer player) {
         this.player = player;
         return this;
@@ -78,6 +84,7 @@ public class Playlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public PlaylistSnippet snippet;
+
     public Playlist withSnippet(PlaylistSnippet snippet) {
         this.snippet = snippet;
         return this;
@@ -86,9 +93,11 @@ public class Playlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PlaylistStatus status;
+
     public Playlist withStatus(PlaylistStatus status) {
         this.status = status;
         return this;
     }
     
+    public Playlist(){}
 }

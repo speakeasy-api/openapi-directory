@@ -14,6 +14,7 @@ public class ListMembersRequestBody {
      */
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public ListMembersRequestBody withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
@@ -25,6 +26,7 @@ public class ListMembersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListMembersRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class ListMembersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMembersRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMembersRequestBody(@JsonProperty("GraphArn") String graphArn) {
+        this.graphArn = graphArn;
+  }
 }

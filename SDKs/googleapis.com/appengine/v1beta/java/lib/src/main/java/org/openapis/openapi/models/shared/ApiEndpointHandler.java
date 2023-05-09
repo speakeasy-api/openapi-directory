@@ -18,9 +18,11 @@ public class ApiEndpointHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptPath")
     public String scriptPath;
+
     public ApiEndpointHandler withScriptPath(String scriptPath) {
         this.scriptPath = scriptPath;
         return this;
     }
     
+    public ApiEndpointHandler(){}
 }

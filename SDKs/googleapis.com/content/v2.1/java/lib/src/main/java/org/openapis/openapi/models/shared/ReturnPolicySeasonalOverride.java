@@ -15,6 +15,7 @@ public class ReturnPolicySeasonalOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public ReturnPolicySeasonalOverride withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -26,6 +27,7 @@ public class ReturnPolicySeasonalOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReturnPolicySeasonalOverride withName(String name) {
         this.name = name;
         return this;
@@ -34,6 +36,7 @@ public class ReturnPolicySeasonalOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public ReturnPolicyPolicy policy;
+
     public ReturnPolicySeasonalOverride withPolicy(ReturnPolicyPolicy policy) {
         this.policy = policy;
         return this;
@@ -45,9 +48,11 @@ public class ReturnPolicySeasonalOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public ReturnPolicySeasonalOverride withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public ReturnPolicySeasonalOverride(){}
 }

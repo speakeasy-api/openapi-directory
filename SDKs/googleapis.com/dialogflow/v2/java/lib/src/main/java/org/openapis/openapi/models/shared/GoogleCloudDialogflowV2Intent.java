@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public GoogleCloudDialogflowV2Intent withAction(String action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultResponsePlatforms")
     public GoogleCloudDialogflowV2IntentDefaultResponsePlatformsEnum[] defaultResponsePlatforms;
+
     public GoogleCloudDialogflowV2Intent withDefaultResponsePlatforms(GoogleCloudDialogflowV2IntentDefaultResponsePlatformsEnum[] defaultResponsePlatforms) {
         this.defaultResponsePlatforms = defaultResponsePlatforms;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowV2Intent withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endInteraction")
     public Boolean endInteraction;
+
     public GoogleCloudDialogflowV2Intent withEndInteraction(Boolean endInteraction) {
         this.endInteraction = endInteraction;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public String[] events;
+
     public GoogleCloudDialogflowV2Intent withEvents(String[] events) {
         this.events = events;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followupIntentInfo")
     public GoogleCloudDialogflowV2IntentFollowupIntentInfo[] followupIntentInfo;
+
     public GoogleCloudDialogflowV2Intent withFollowupIntentInfo(GoogleCloudDialogflowV2IntentFollowupIntentInfo[] followupIntentInfo) {
         this.followupIntentInfo = followupIntentInfo;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputContextNames")
     public String[] inputContextNames;
+
     public GoogleCloudDialogflowV2Intent withInputContextNames(String[] inputContextNames) {
         this.inputContextNames = inputContextNames;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFallback")
     public Boolean isFallback;
+
     public GoogleCloudDialogflowV2Intent withIsFallback(Boolean isFallback) {
         this.isFallback = isFallback;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveAgentHandoff")
     public Boolean liveAgentHandoff;
+
     public GoogleCloudDialogflowV2Intent withLiveAgentHandoff(Boolean liveAgentHandoff) {
         this.liveAgentHandoff = liveAgentHandoff;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public GoogleCloudDialogflowV2IntentMessage[] messages;
+
     public GoogleCloudDialogflowV2Intent withMessages(GoogleCloudDialogflowV2IntentMessage[] messages) {
         this.messages = messages;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mlDisabled")
     public Boolean mlDisabled;
+
     public GoogleCloudDialogflowV2Intent withMlDisabled(Boolean mlDisabled) {
         this.mlDisabled = mlDisabled;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2Intent withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputContexts")
     public GoogleCloudDialogflowV2Context[] outputContexts;
+
     public GoogleCloudDialogflowV2Intent withOutputContexts(GoogleCloudDialogflowV2Context[] outputContexts) {
         this.outputContexts = outputContexts;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public GoogleCloudDialogflowV2IntentParameter[] parameters;
+
     public GoogleCloudDialogflowV2Intent withParameters(GoogleCloudDialogflowV2IntentParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentFollowupIntentName")
     public String parentFollowupIntentName;
+
     public GoogleCloudDialogflowV2Intent withParentFollowupIntentName(String parentFollowupIntentName) {
         this.parentFollowupIntentName = parentFollowupIntentName;
         return this;
@@ -183,6 +198,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public GoogleCloudDialogflowV2Intent withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -194,6 +210,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetContexts")
     public Boolean resetContexts;
+
     public GoogleCloudDialogflowV2Intent withResetContexts(Boolean resetContexts) {
         this.resetContexts = resetContexts;
         return this;
@@ -205,6 +222,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootFollowupIntentName")
     public String rootFollowupIntentName;
+
     public GoogleCloudDialogflowV2Intent withRootFollowupIntentName(String rootFollowupIntentName) {
         this.rootFollowupIntentName = rootFollowupIntentName;
         return this;
@@ -216,6 +234,7 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingPhrases")
     public GoogleCloudDialogflowV2IntentTrainingPhrase[] trainingPhrases;
+
     public GoogleCloudDialogflowV2Intent withTrainingPhrases(GoogleCloudDialogflowV2IntentTrainingPhrase[] trainingPhrases) {
         this.trainingPhrases = trainingPhrases;
         return this;
@@ -227,9 +246,11 @@ public class GoogleCloudDialogflowV2Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookState")
     public GoogleCloudDialogflowV2IntentWebhookStateEnum webhookState;
+
     public GoogleCloudDialogflowV2Intent withWebhookState(GoogleCloudDialogflowV2IntentWebhookStateEnum webhookState) {
         this.webhookState = webhookState;
         return this;
     }
     
+    public GoogleCloudDialogflowV2Intent(){}
 }

@@ -14,6 +14,7 @@ public class StartChangeSetRequestBody {
      */
     @JsonProperty("Catalog")
     public String catalog;
+
     public StartChangeSetRequestBody withCatalog(String catalog) {
         this.catalog = catalog;
         return this;
@@ -24,6 +25,7 @@ public class StartChangeSetRequestBody {
      */
     @JsonProperty("ChangeSet")
     public org.openapis.openapi.models.shared.Change[] changeSet;
+
     public StartChangeSetRequestBody withChangeSet(org.openapis.openapi.models.shared.Change[] changeSet) {
         this.changeSet = changeSet;
         return this;
@@ -35,6 +37,7 @@ public class StartChangeSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeSetName")
     public String changeSetName;
+
     public StartChangeSetRequestBody withChangeSetName(String changeSetName) {
         this.changeSetName = changeSetName;
         return this;
@@ -46,6 +49,7 @@ public class StartChangeSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeSetTags")
     public org.openapis.openapi.models.shared.Tag[] changeSetTags;
+
     public StartChangeSetRequestBody withChangeSetTags(org.openapis.openapi.models.shared.Tag[] changeSetTags) {
         this.changeSetTags = changeSetTags;
         return this;
@@ -57,9 +61,14 @@ public class StartChangeSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartChangeSetRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
     }
     
+    public StartChangeSetRequestBody(@JsonProperty("Catalog") String catalog, @JsonProperty("ChangeSet") org.openapis.openapi.models.shared.Change[] changeSet) {
+        this.catalog = catalog;
+        this.changeSet = changeSet;
+  }
 }

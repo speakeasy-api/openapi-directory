@@ -12,9 +12,11 @@ public class ApiCoreResponsesEntitiesResponseApiCoreDtoAccountingDomainWhitelist
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public ApiCoreDtoAccountingDomainWhitelistEntry[] entities;
+
     public ApiCoreResponsesEntitiesResponseApiCoreDtoAccountingDomainWhitelistEntry withEntities(ApiCoreDtoAccountingDomainWhitelistEntry[] entities) {
         this.entities = entities;
         return this;
     }
     
+    public ApiCoreResponsesEntitiesResponseApiCoreDtoAccountingDomainWhitelistEntry(){}
 }

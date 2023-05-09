@@ -20,6 +20,7 @@ public class AcceleratorEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public AcceleratorEvent withMessage(String message) {
         this.message = message;
         return this;
@@ -30,9 +31,11 @@ public class AcceleratorEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public AcceleratorEvent withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public AcceleratorEvent(){}
 }

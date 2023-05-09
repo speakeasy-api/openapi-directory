@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CopyImageRequest - Contains the parameters for CopyImage.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CopyImageRequest {
     
     public String clientToken;
+
     public CopyImageRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class CopyImageRequest {
     
     
     public Boolean copyImageTags;
+
     public CopyImageRequest withCopyImageTags(Boolean copyImageTags) {
         this.copyImageTags = copyImageTags;
         return this;
@@ -26,6 +28,7 @@ public class CopyImageRequest {
     
     
     public String description;
+
     public CopyImageRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class CopyImageRequest {
     
     
     public String destinationOutpostArn;
+
     public CopyImageRequest withDestinationOutpostArn(String destinationOutpostArn) {
         this.destinationOutpostArn = destinationOutpostArn;
         return this;
@@ -40,6 +44,7 @@ public class CopyImageRequest {
     
     
     public Boolean dryRun;
+
     public CopyImageRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -47,6 +52,7 @@ public class CopyImageRequest {
     
     
     public Boolean encrypted;
+
     public CopyImageRequest withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -54,6 +60,7 @@ public class CopyImageRequest {
     
     
     public String kmsKeyId;
+
     public CopyImageRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -61,6 +68,7 @@ public class CopyImageRequest {
     
     
     public String name;
+
     public CopyImageRequest withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +76,7 @@ public class CopyImageRequest {
     
     
     public String sourceImageId;
+
     public CopyImageRequest withSourceImageId(String sourceImageId) {
         this.sourceImageId = sourceImageId;
         return this;
@@ -75,9 +84,15 @@ public class CopyImageRequest {
     
     
     public String sourceRegion;
+
     public CopyImageRequest withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
     }
     
+    public CopyImageRequest(@JsonProperty("Name") String name, @JsonProperty("SourceImageId") String sourceImageId, @JsonProperty("SourceRegion") String sourceRegion) {
+        this.name = name;
+        this.sourceImageId = sourceImageId;
+        this.sourceRegion = sourceRegion;
+  }
 }

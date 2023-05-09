@@ -18,6 +18,7 @@ public class Snippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchRanges")
     public MatchRange[] matchRanges;
+
     public Snippet withMatchRanges(MatchRange[] matchRanges) {
         this.matchRanges = matchRanges;
         return this;
@@ -29,9 +30,11 @@ public class Snippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public String snippet;
+
     public Snippet withSnippet(String snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public Snippet(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UnregisterConnectorResponse {
@@ -12,6 +13,7 @@ public class UnregisterConnectorResponse {
      */
     
     public Object conflictException;
+
     public UnregisterConnectorResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UnregisterConnectorResponse {
     
     
     public String contentType;
+
     public UnregisterConnectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UnregisterConnectorResponse {
      */
     
     public Object internalServerException;
+
     public UnregisterConnectorResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UnregisterConnectorResponse {
     
     
     public Integer statusCode;
+
     public UnregisterConnectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UnregisterConnectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UnregisterConnectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UnregisterConnectorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UnregisterConnectorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class UnregisterConnectorResponse {
      */
     
     public java.util.Map<String, Object> unregisterConnectorResponse;
+
     public UnregisterConnectorResponse withUnregisterConnectorResponse(java.util.Map<String, Object> unregisterConnectorResponse) {
         this.unregisterConnectorResponse = unregisterConnectorResponse;
         return this;
     }
     
+    public UnregisterConnectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

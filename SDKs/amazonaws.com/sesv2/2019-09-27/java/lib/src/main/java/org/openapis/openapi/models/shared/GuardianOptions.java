@@ -15,9 +15,11 @@ public class GuardianOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptimizedSharedDelivery")
     public FeatureStatusEnum optimizedSharedDelivery;
+
     public GuardianOptions withOptimizedSharedDelivery(FeatureStatusEnum optimizedSharedDelivery) {
         this.optimizedSharedDelivery = optimizedSharedDelivery;
         return this;
     }
     
+    public GuardianOptions(){}
 }

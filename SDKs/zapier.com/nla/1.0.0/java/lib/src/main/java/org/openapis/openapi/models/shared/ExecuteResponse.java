@@ -17,8 +17,32 @@ public class ExecuteResponse {
      */
     @JsonProperty("action_used")
     public String actionUsed;
+
     public ExecuteResponse withActionUsed(String actionUsed) {
         this.actionUsed = actionUsed;
+        return this;
+    }
+    
+    /**
+     * The rest of the full results. Always returns an array of objects
+     */
+    @JsonProperty("additional_results")
+    public java.util.Map<String, Object>[] additionalResults;
+
+    public ExecuteResponse withAdditionalResults(java.util.Map<String, Object>[] additionalResults) {
+        this.additionalResults = additionalResults;
+        return this;
+    }
+    
+    /**
+     * A hint for the assistant on what to do next.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("assistant_hint")
+    public String assistantHint;
+
+    public ExecuteResponse withAssistantHint(String assistantHint) {
+        this.assistantHint = assistantHint;
         return this;
     }
     
@@ -28,6 +52,7 @@ public class ExecuteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public ExecuteResponse withError(String error) {
         this.error = error;
         return this;
@@ -38,6 +63,7 @@ public class ExecuteResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public ExecuteResponse withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +74,7 @@ public class ExecuteResponse {
      */
     @JsonProperty("input_params")
     public java.util.Map<String, Object> inputParams;
+
     public ExecuteResponse withInputParams(java.util.Map<String, Object> inputParams) {
         this.inputParams = inputParams;
         return this;
@@ -59,8 +86,21 @@ public class ExecuteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public java.util.Map<String, Object> result;
+
     public ExecuteResponse withResult(java.util.Map<String, Object> result) {
         this.result = result;
+        return this;
+    }
+    
+    /**
+     * Human readable labels for some of the keys in the result.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("result_field_labels")
+    public java.util.Map<String, Object> resultFieldLabels;
+
+    public ExecuteResponse withResultFieldLabels(java.util.Map<String, Object> resultFieldLabels) {
+        this.resultFieldLabels = resultFieldLabels;
         return this;
     }
     
@@ -69,6 +109,7 @@ public class ExecuteResponse {
      */
     @JsonProperty("review_url")
     public String reviewUrl;
+
     public ExecuteResponse withReviewUrl(String reviewUrl) {
         this.reviewUrl = reviewUrl;
         return this;
@@ -80,9 +121,17 @@ public class ExecuteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ExecuteResponseStatusEnum status;
+
     public ExecuteResponse withStatus(ExecuteResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ExecuteResponse(@JsonProperty("action_used") String actionUsed, @JsonProperty("additional_results") java.util.Map<String, Object>[] additionalResults, @JsonProperty("id") String id, @JsonProperty("input_params") java.util.Map<String, Object> inputParams, @JsonProperty("review_url") String reviewUrl) {
+        this.actionUsed = actionUsed;
+        this.additionalResults = additionalResults;
+        this.id = id;
+        this.inputParams = inputParams;
+        this.reviewUrl = reviewUrl;
+  }
 }

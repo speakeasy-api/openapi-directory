@@ -15,9 +15,11 @@ public class CreatePricingPlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public CreatePricingPlanOutput withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public CreatePricingPlanOutput(){}
 }

@@ -12,6 +12,7 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSett
      */
     @JsonProperty("dayOfWeek")
     public Long dayOfWeek;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDelivery withDayOfWeek(Long dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -22,9 +23,14 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSett
      */
     @JsonProperty("deliveryRanges")
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRanges[] deliveryRanges;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDelivery withDeliveryRanges(PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRanges[] deliveryRanges) {
         this.deliveryRanges = deliveryRanges;
         return this;
     }
     
+    public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDelivery(@JsonProperty("dayOfWeek") Long dayOfWeek, @JsonProperty("deliveryRanges") PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRanges[] deliveryRanges) {
+        this.dayOfWeek = dayOfWeek;
+        this.deliveryRanges = deliveryRanges;
+  }
 }

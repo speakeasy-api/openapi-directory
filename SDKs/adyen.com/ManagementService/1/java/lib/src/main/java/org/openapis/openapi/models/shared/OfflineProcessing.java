@@ -15,6 +15,7 @@ public class OfflineProcessing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chipFloorLimit")
     public Integer chipFloorLimit;
+
     public OfflineProcessing withChipFloorLimit(Integer chipFloorLimit) {
         this.chipFloorLimit = chipFloorLimit;
         return this;
@@ -26,9 +27,11 @@ public class OfflineProcessing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offlineSwipeLimits")
     public MinorUnitsMonetaryValue[] offlineSwipeLimits;
+
     public OfflineProcessing withOfflineSwipeLimits(MinorUnitsMonetaryValue[] offlineSwipeLimits) {
         this.offlineSwipeLimits = offlineSwipeLimits;
         return this;
     }
     
+    public OfflineProcessing(){}
 }

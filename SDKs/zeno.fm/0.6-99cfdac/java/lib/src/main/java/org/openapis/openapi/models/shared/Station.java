@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Station {
     
     public String city;
+
     public Station withCity(String city) {
         this.city = city;
         return this;
@@ -19,6 +20,7 @@ public class Station {
     
     
     public String country;
+
     public Station withCountry(String country) {
         this.country = country;
         return this;
@@ -26,6 +28,7 @@ public class Station {
     
     
     public String description;
+
     public Station withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class Station {
     
     
     public String genre;
+
     public Station withGenre(String genre) {
         this.genre = genre;
         return this;
@@ -40,6 +44,7 @@ public class Station {
     
     
     public String key;
+
     public Station withKey(String key) {
         this.key = key;
         return this;
@@ -47,6 +52,7 @@ public class Station {
     
     
     public String language;
+
     public Station withLanguage(String language) {
         this.language = language;
         return this;
@@ -54,6 +60,7 @@ public class Station {
     
     
     public String logo;
+
     public Station withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -61,6 +68,7 @@ public class Station {
     
     
     public String name;
+
     public Station withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +76,7 @@ public class Station {
     
     
     public String stream;
+
     public Station withStream(String stream) {
         this.stream = stream;
         return this;
@@ -75,9 +84,11 @@ public class Station {
     
     
     public String website;
+
     public Station withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public Station(){}
 }

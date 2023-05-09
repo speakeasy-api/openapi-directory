@@ -15,9 +15,11 @@ public class BatchDetachObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detachedObjectIdentifier")
     public String detachedObjectIdentifier;
+
     public BatchDetachObjectResponse withDetachedObjectIdentifier(String detachedObjectIdentifier) {
         this.detachedObjectIdentifier = detachedObjectIdentifier;
         return this;
     }
     
+    public BatchDetachObjectResponse(){}
 }

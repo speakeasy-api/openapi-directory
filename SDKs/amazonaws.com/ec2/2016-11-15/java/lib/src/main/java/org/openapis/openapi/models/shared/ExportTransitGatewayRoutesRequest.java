@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ExportTransitGatewayRoutesRequest {
     
     public Boolean dryRun;
+
     public ExportTransitGatewayRoutesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class ExportTransitGatewayRoutesRequest {
     
     
     public ExportTransitGatewayRoutesRequestFilters[] filters;
+
     public ExportTransitGatewayRoutesRequest withFilters(ExportTransitGatewayRoutesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class ExportTransitGatewayRoutesRequest {
     
     
     public String s3Bucket;
+
     public ExportTransitGatewayRoutesRequest withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -30,9 +33,14 @@ public class ExportTransitGatewayRoutesRequest {
     
     
     public String transitGatewayRouteTableId;
+
     public ExportTransitGatewayRoutesRequest withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
     }
     
+    public ExportTransitGatewayRoutesRequest(@JsonProperty("S3Bucket") String s3Bucket, @JsonProperty("TransitGatewayRouteTableId") String transitGatewayRouteTableId) {
+        this.s3Bucket = s3Bucket;
+        this.transitGatewayRouteTableId = transitGatewayRouteTableId;
+  }
 }

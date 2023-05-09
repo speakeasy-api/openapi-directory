@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EndpointRequest {
     @JsonProperty("containerName")
     public String containerName;
+
     public EndpointRequest withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -21,6 +22,7 @@ public class EndpointRequest {
     
     @JsonProperty("containerPort")
     public Long containerPort;
+
     public EndpointRequest withContainerPort(Long containerPort) {
         this.containerPort = containerPort;
         return this;
@@ -29,9 +31,14 @@ public class EndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheck")
     public ContainerServiceHealthCheckConfig healthCheck;
+
     public EndpointRequest withHealthCheck(ContainerServiceHealthCheckConfig healthCheck) {
         this.healthCheck = healthCheck;
         return this;
     }
     
+    public EndpointRequest(@JsonProperty("containerName") String containerName, @JsonProperty("containerPort") Long containerPort) {
+        this.containerName = containerName;
+        this.containerPort = containerPort;
+  }
 }

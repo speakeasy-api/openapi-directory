@@ -18,6 +18,7 @@ public class CancelOperationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CancelOperationRequest withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class CancelOperationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public CancelOperationRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -40,6 +42,7 @@ public class CancelOperationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public CancelOperationRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -51,9 +54,11 @@ public class CancelOperationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public CancelOperationRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public CancelOperationRequest(){}
 }

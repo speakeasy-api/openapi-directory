@@ -15,9 +15,11 @@ public class MetricWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tumbling")
     public TumblingWindow tumbling;
+
     public MetricWindow withTumbling(TumblingWindow tumbling) {
         this.tumbling = tumbling;
         return this;
     }
     
+    public MetricWindow(){}
 }

@@ -12,9 +12,13 @@ public class PostVolumesIdActionsResizeRequestBody {
      */
     @JsonProperty("size")
     public Double size;
+
     public PostVolumesIdActionsResizeRequestBody withSize(Double size) {
         this.size = size;
         return this;
     }
     
+    public PostVolumesIdActionsResizeRequestBody(@JsonProperty("size") Double size) {
+        this.size = size;
+  }
 }

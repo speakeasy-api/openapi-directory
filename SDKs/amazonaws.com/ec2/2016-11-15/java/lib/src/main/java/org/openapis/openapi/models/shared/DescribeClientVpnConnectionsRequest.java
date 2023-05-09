@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeClientVpnConnectionsRequest {
     
     public String clientVpnEndpointId;
+
     public DescribeClientVpnConnectionsRequest withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -16,6 +17,7 @@ public class DescribeClientVpnConnectionsRequest {
     
     
     public Boolean dryRun;
+
     public DescribeClientVpnConnectionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class DescribeClientVpnConnectionsRequest {
     
     
     public DescribeClientVpnConnectionsRequestFilters[] filters;
+
     public DescribeClientVpnConnectionsRequest withFilters(DescribeClientVpnConnectionsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeClientVpnConnectionsRequest {
     
     
     public Long maxResults;
+
     public DescribeClientVpnConnectionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,13 @@ public class DescribeClientVpnConnectionsRequest {
     
     
     public String nextToken;
+
     public DescribeClientVpnConnectionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeClientVpnConnectionsRequest(@JsonProperty("ClientVpnEndpointId") String clientVpnEndpointId) {
+        this.clientVpnEndpointId = clientVpnEndpointId;
+  }
 }

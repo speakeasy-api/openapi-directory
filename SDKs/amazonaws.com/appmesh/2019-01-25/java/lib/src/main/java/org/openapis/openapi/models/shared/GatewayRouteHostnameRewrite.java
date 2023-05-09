@@ -15,9 +15,11 @@ public class GatewayRouteHostnameRewrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultTargetHostname")
     public DefaultGatewayRouteRewriteEnum defaultTargetHostname;
+
     public GatewayRouteHostnameRewrite withDefaultTargetHostname(DefaultGatewayRouteRewriteEnum defaultTargetHostname) {
         this.defaultTargetHostname = defaultTargetHostname;
         return this;
     }
     
+    public GatewayRouteHostnameRewrite(){}
 }

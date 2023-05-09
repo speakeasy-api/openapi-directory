@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApiV1ScheduledStatusesIdResponse {
     
     public String contentType;
+
     public DeleteApiV1ScheduledStatusesIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApiV1ScheduledStatusesIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public DeleteApiV1ScheduledStatusesIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class DeleteApiV1ScheduledStatusesIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteApiV1ScheduledStatusesIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteApiV1ScheduledStatusesIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApiV1ScheduledStatusesIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteApiV1ScheduledStatusesIdResponse {
      */
     
     public java.util.Map<String, Object> deleteApiV1ScheduledStatusesId200ApplicationJSONObject;
+
     public DeleteApiV1ScheduledStatusesIdResponse withDeleteApiV1ScheduledStatusesId200ApplicationJSONObject(java.util.Map<String, Object> deleteApiV1ScheduledStatusesId200ApplicationJSONObject) {
         this.deleteApiV1ScheduledStatusesId200ApplicationJSONObject = deleteApiV1ScheduledStatusesId200ApplicationJSONObject;
         return this;
     }
     
+    public DeleteApiV1ScheduledStatusesIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

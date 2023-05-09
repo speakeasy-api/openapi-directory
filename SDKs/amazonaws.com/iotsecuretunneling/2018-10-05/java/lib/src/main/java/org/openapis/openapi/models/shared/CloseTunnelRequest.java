@@ -12,6 +12,7 @@ public class CloseTunnelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete")
     public Boolean delete;
+
     public CloseTunnelRequest withDelete(Boolean delete) {
         this.delete = delete;
         return this;
@@ -19,9 +20,13 @@ public class CloseTunnelRequest {
     
     @JsonProperty("tunnelId")
     public String tunnelId;
+
     public CloseTunnelRequest withTunnelId(String tunnelId) {
         this.tunnelId = tunnelId;
         return this;
     }
     
+    public CloseTunnelRequest(@JsonProperty("tunnelId") String tunnelId) {
+        this.tunnelId = tunnelId;
+  }
 }

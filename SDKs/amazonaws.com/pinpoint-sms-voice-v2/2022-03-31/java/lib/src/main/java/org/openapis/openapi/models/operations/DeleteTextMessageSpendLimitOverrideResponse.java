@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTextMessageSpendLimitOverrideResponse {
@@ -12,6 +13,7 @@ public class DeleteTextMessageSpendLimitOverrideResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteTextMessageSpendLimitOverrideResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTextMessageSpendLimitOverrideResponse {
     
     
     public String contentType;
+
     public DeleteTextMessageSpendLimitOverrideResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTextMessageSpendLimitOverrideResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteTextMessageSpendLimitOverrideResult deleteTextMessageSpendLimitOverrideResult;
+
     public DeleteTextMessageSpendLimitOverrideResponse withDeleteTextMessageSpendLimitOverrideResult(org.openapis.openapi.models.shared.DeleteTextMessageSpendLimitOverrideResult deleteTextMessageSpendLimitOverrideResult) {
         this.deleteTextMessageSpendLimitOverrideResult = deleteTextMessageSpendLimitOverrideResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTextMessageSpendLimitOverrideResponse {
      */
     
     public Object internalServerException;
+
     public DeleteTextMessageSpendLimitOverrideResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteTextMessageSpendLimitOverrideResponse {
     
     
     public Integer statusCode;
+
     public DeleteTextMessageSpendLimitOverrideResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteTextMessageSpendLimitOverrideResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTextMessageSpendLimitOverrideResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteTextMessageSpendLimitOverrideResponse {
      */
     
     public Object throttlingException;
+
     public DeleteTextMessageSpendLimitOverrideResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteTextMessageSpendLimitOverrideResponse {
      */
     
     public Object validationException;
+
     public DeleteTextMessageSpendLimitOverrideResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteTextMessageSpendLimitOverrideResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

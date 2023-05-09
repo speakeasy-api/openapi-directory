@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TerminateTargetInstancesResponse {
@@ -12,6 +13,7 @@ public class TerminateTargetInstancesResponse {
      */
     
     public Object conflictException;
+
     public TerminateTargetInstancesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class TerminateTargetInstancesResponse {
     
     
     public String contentType;
+
     public TerminateTargetInstancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class TerminateTargetInstancesResponse {
     
     
     public Integer statusCode;
+
     public TerminateTargetInstancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class TerminateTargetInstancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TerminateTargetInstancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class TerminateTargetInstancesResponse {
      */
     
     public org.openapis.openapi.models.shared.TerminateTargetInstancesResponse terminateTargetInstancesResponse;
+
     public TerminateTargetInstancesResponse withTerminateTargetInstancesResponse(org.openapis.openapi.models.shared.TerminateTargetInstancesResponse terminateTargetInstancesResponse) {
         this.terminateTargetInstancesResponse = terminateTargetInstancesResponse;
         return this;
@@ -53,6 +59,7 @@ public class TerminateTargetInstancesResponse {
      */
     
     public Object uninitializedAccountException;
+
     public TerminateTargetInstancesResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -63,9 +70,14 @@ public class TerminateTargetInstancesResponse {
      */
     
     public Object validationException;
+
     public TerminateTargetInstancesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public TerminateTargetInstancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

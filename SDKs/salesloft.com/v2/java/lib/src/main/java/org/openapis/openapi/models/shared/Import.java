@@ -15,6 +15,7 @@ public class Import {
      */
     
     public OffsetDateTime createdAt;
+
     public Import withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -25,6 +26,7 @@ public class Import {
      */
     
     public Long currentPeopleCount;
+
     public Import withCurrentPeopleCount(Long currentPeopleCount) {
         this.currentPeopleCount = currentPeopleCount;
         return this;
@@ -35,6 +37,7 @@ public class Import {
      */
     
     public Long id;
+
     public Import withId(Long id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class Import {
      */
     
     public Long importedPeopleCount;
+
     public Import withImportedPeopleCount(Long importedPeopleCount) {
         this.importedPeopleCount = importedPeopleCount;
         return this;
@@ -55,6 +59,7 @@ public class Import {
      */
     
     public String name;
+
     public Import withName(String name) {
         this.name = name;
         return this;
@@ -65,9 +70,11 @@ public class Import {
      */
     
     public OffsetDateTime updatedAt;
+
     public Import withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Import(){}
 }

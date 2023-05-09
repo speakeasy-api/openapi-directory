@@ -18,6 +18,7 @@ public class RenewalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RenewalSettings withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class RenewalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewalType")
     public String renewalType;
+
     public RenewalSettings withRenewalType(String renewalType) {
         this.renewalType = renewalType;
         return this;
     }
     
+    public RenewalSettings(){}
 }

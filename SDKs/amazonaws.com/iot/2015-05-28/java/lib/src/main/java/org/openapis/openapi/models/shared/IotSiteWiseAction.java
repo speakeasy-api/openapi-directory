@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IotSiteWiseAction {
     @JsonProperty("putAssetPropertyValueEntries")
     public PutAssetPropertyValueEntry[] putAssetPropertyValueEntries;
+
     public IotSiteWiseAction withPutAssetPropertyValueEntries(PutAssetPropertyValueEntry[] putAssetPropertyValueEntries) {
         this.putAssetPropertyValueEntries = putAssetPropertyValueEntries;
         return this;
@@ -19,9 +20,14 @@ public class IotSiteWiseAction {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public IotSiteWiseAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public IotSiteWiseAction(@JsonProperty("putAssetPropertyValueEntries") PutAssetPropertyValueEntry[] putAssetPropertyValueEntries, @JsonProperty("roleArn") String roleArn) {
+        this.putAssetPropertyValueEntries = putAssetPropertyValueEntries;
+        this.roleArn = roleArn;
+  }
 }

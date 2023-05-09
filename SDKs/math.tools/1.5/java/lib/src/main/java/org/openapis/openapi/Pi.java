@@ -58,10 +58,8 @@ public class Pi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersPiResponse res = new org.openapis.openapi.models.operations.GetNumbersPiResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersPiResponse res = new org.openapis.openapi.models.operations.GetNumbersPiResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {

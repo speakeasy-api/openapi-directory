@@ -57,11 +57,9 @@ public class CityNameSimilarityKey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetcitymatchResponse res = new org.openapis.openapi.models.operations.GetcitymatchResponse() {{
+        org.openapis.openapi.models.operations.GetcitymatchResponse res = new org.openapis.openapi.models.operations.GetcitymatchResponse(contentType, httpRes.statusCode()) {{
             getcitymatch200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

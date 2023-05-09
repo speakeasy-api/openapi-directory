@@ -15,6 +15,7 @@ public class NetworkFirewallInternetTrafficNotInspectedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActualFirewallSubnetRoutes")
     public Route[] actualFirewallSubnetRoutes;
+
     public NetworkFirewallInternetTrafficNotInspectedViolation withActualFirewallSubnetRoutes(Route[] actualFirewallSubnetRoutes) {
         this.actualFirewallSubnetRoutes = actualFirewallSubnetRoutes;
         return this;
@@ -23,6 +24,7 @@ public class NetworkFirewallInternetTrafficNotInspectedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActualInternetGatewayRoutes")
     public Route[] actualInternetGatewayRoutes;
+
     public NetworkFirewallInternetTrafficNotInspectedViolation withActualInternetGatewayRoutes(Route[] actualInternetGatewayRoutes) {
         this.actualInternetGatewayRoutes = actualInternetGatewayRoutes;
         return this;
@@ -31,6 +33,7 @@ public class NetworkFirewallInternetTrafficNotInspectedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentFirewallSubnetRouteTable")
     public String currentFirewallSubnetRouteTable;
+
     public NetworkFirewallInternetTrafficNotInspectedViolation withCurrentFirewallSubnetRouteTable(String currentFirewallSubnetRouteTable) {
         this.currentFirewallSubnetRouteTable = currentFirewallSubnetRouteTable;
         return this;
@@ -39,6 +42,7 @@ public class NetworkFirewallInternetTrafficNotInspectedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentInternetGatewayRouteTable")
     public String currentInternetGatewayRouteTable;
+
     public NetworkFirewallInternetTrafficNotInspectedViolation withCurrentInternetGatewayRouteTable(String currentInternetGatewayRouteTable) {
         this.currentInternetGatewayRouteTable = currentInternetGatewayRouteTable;
         return this;
@@ -47,6 +51,7 @@ public class NetworkFirewallInternetTrafficNotInspectedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpectedFirewallEndpoint")
     public String expectedFirewallEndpoint;
+
     public NetworkFirewallInternetTrafficNotInspectedViolation withExpectedFirewallEndpoint(String expectedFirewallEndpoint) {
         this.expectedFirewallEndpoint = expectedFirewallEndpoint;
         return this;
@@ -55,6 +60,7 @@ public class NetworkFirewallInternetTrafficNotInspectedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpectedFirewallSubnetRoutes")
     public ExpectedRoute[] expectedFirewallSubnetRoutes;
+
     public NetworkFirewallInternetTrafficNotInspectedViolation withExpectedFirewallSubnetRoutes(ExpectedRoute[] expectedFirewallSubnetRoutes) {
         this.expectedFirewallSubnetRoutes = expectedFirewallSubnetRoutes;
         return this;
@@ -63,6 +69,7 @@ public class NetworkFirewallInternetTrafficNotInspectedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpectedInternetGatewayRoutes")
     public ExpectedRoute[] expectedInternetGatewayRoutes;
+
     public NetworkFirewallInternetTrafficNotInspectedViolation withExpectedInternetGatewayRoutes(ExpectedRoute[] expectedInternetGatewayRoutes) {
         this.expectedInternetGatewayRoutes = expectedInternetGatewayRoutes;
         return this;
@@ -71,6 +78,7 @@ public class NetworkFirewallInternetTrafficNotInspectedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallSubnetId")
     public String firewallSubnetId;
+
     public NetworkFirewallInternetTrafficNotInspectedViolation withFirewallSubnetId(String firewallSubnetId) {
         this.firewallSubnetId = firewallSubnetId;
         return this;
@@ -79,6 +87,7 @@ public class NetworkFirewallInternetTrafficNotInspectedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InternetGatewayId")
     public String internetGatewayId;
+
     public NetworkFirewallInternetTrafficNotInspectedViolation withInternetGatewayId(String internetGatewayId) {
         this.internetGatewayId = internetGatewayId;
         return this;
@@ -87,6 +96,7 @@ public class NetworkFirewallInternetTrafficNotInspectedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsRouteTableUsedInDifferentAZ")
     public Boolean isRouteTableUsedInDifferentAZ;
+
     public NetworkFirewallInternetTrafficNotInspectedViolation withIsRouteTableUsedInDifferentAZ(Boolean isRouteTableUsedInDifferentAZ) {
         this.isRouteTableUsedInDifferentAZ = isRouteTableUsedInDifferentAZ;
         return this;
@@ -95,6 +105,7 @@ public class NetworkFirewallInternetTrafficNotInspectedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteTableId")
     public String routeTableId;
+
     public NetworkFirewallInternetTrafficNotInspectedViolation withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -103,6 +114,7 @@ public class NetworkFirewallInternetTrafficNotInspectedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetAvailabilityZone")
     public String subnetAvailabilityZone;
+
     public NetworkFirewallInternetTrafficNotInspectedViolation withSubnetAvailabilityZone(String subnetAvailabilityZone) {
         this.subnetAvailabilityZone = subnetAvailabilityZone;
         return this;
@@ -111,6 +123,7 @@ public class NetworkFirewallInternetTrafficNotInspectedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public NetworkFirewallInternetTrafficNotInspectedViolation withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -119,6 +132,7 @@ public class NetworkFirewallInternetTrafficNotInspectedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolatingRoutes")
     public Route[] violatingRoutes;
+
     public NetworkFirewallInternetTrafficNotInspectedViolation withViolatingRoutes(Route[] violatingRoutes) {
         this.violatingRoutes = violatingRoutes;
         return this;
@@ -127,9 +141,11 @@ public class NetworkFirewallInternetTrafficNotInspectedViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public NetworkFirewallInternetTrafficNotInspectedViolation withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public NetworkFirewallInternetTrafficNotInspectedViolation(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroiddeviceprovisioningPartnersDevicesMetadataResponse {
     
     public String contentType;
+
     public AndroiddeviceprovisioningPartnersDevicesMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AndroiddeviceprovisioningPartnersDevicesMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.DeviceMetadata deviceMetadata;
+
     public AndroiddeviceprovisioningPartnersDevicesMetadataResponse withDeviceMetadata(org.openapis.openapi.models.shared.DeviceMetadata deviceMetadata) {
         this.deviceMetadata = deviceMetadata;
         return this;
@@ -26,6 +29,7 @@ public class AndroiddeviceprovisioningPartnersDevicesMetadataResponse {
     
     
     public Integer statusCode;
+
     public AndroiddeviceprovisioningPartnersDevicesMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroiddeviceprovisioningPartnersDevicesMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroiddeviceprovisioningPartnersDevicesMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroiddeviceprovisioningPartnersDevicesMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

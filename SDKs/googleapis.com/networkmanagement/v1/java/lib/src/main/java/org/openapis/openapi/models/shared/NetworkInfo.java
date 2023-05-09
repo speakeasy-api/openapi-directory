@@ -18,6 +18,7 @@ public class NetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public NetworkInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class NetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchedIpRange")
     public String matchedIpRange;
+
     public NetworkInfo withMatchedIpRange(String matchedIpRange) {
         this.matchedIpRange = matchedIpRange;
         return this;
@@ -40,9 +42,11 @@ public class NetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public NetworkInfo withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public NetworkInfo(){}
 }

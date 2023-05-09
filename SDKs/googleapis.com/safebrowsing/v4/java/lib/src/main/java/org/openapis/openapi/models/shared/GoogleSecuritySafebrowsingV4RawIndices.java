@@ -18,9 +18,11 @@ public class GoogleSecuritySafebrowsingV4RawIndices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indices")
     public Integer[] indices;
+
     public GoogleSecuritySafebrowsingV4RawIndices withIndices(Integer[] indices) {
         this.indices = indices;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4RawIndices(){}
 }

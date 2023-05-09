@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReferencesCountriesByCountryCodeGetResponse {
     
     public String contentType;
+
     public ReferencesCountriesByCountryCodeGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReferencesCountriesByCountryCodeGetResponse {
     
     
     public java.util.Map<String, Object> referencesCountriesByCountryCodeGet200ApplicationJSONObject;
+
     public ReferencesCountriesByCountryCodeGetResponse withReferencesCountriesByCountryCodeGet200ApplicationJSONObject(java.util.Map<String, Object> referencesCountriesByCountryCodeGet200ApplicationJSONObject) {
         this.referencesCountriesByCountryCodeGet200ApplicationJSONObject = referencesCountriesByCountryCodeGet200ApplicationJSONObject;
         return this;
@@ -23,6 +26,7 @@ public class ReferencesCountriesByCountryCodeGetResponse {
     
     
     public Integer statusCode;
+
     public ReferencesCountriesByCountryCodeGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ReferencesCountriesByCountryCodeGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReferencesCountriesByCountryCodeGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ReferencesCountriesByCountryCodeGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ReportWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ReportWarning withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class ReportWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ReportWarningTypeEnum type;
+
     public ReportWarning withType(ReportWarningTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ReportWarning(){}
 }

@@ -15,6 +15,7 @@ public class HvcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public HvcerRequestBodyCertificateParameters certificateParameters;
+
     public HvcerRequestBody withCertificateParameters(HvcerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class HvcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public HvcerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class HvcerRequestBody {
      */
     @JsonProperty("format")
     public HvcerRequestBodyFormatEnum format;
+
     public HvcerRequestBody withFormat(HvcerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class HvcerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public HvcerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public HvcerRequestBody(@JsonProperty("format") HvcerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

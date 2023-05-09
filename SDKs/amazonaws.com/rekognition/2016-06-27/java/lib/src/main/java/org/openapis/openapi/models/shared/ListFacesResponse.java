@@ -15,6 +15,7 @@ public class ListFacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceModelVersion")
     public String faceModelVersion;
+
     public ListFacesResponse withFaceModelVersion(String faceModelVersion) {
         this.faceModelVersion = faceModelVersion;
         return this;
@@ -23,6 +24,7 @@ public class ListFacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Faces")
     public Face[] faces;
+
     public ListFacesResponse withFaces(Face[] faces) {
         this.faces = faces;
         return this;
@@ -31,9 +33,11 @@ public class ListFacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFacesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFacesResponse(){}
 }

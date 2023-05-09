@@ -12,6 +12,7 @@ public class NameRequestParam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public NameRequestParam withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -20,9 +21,11 @@ public class NameRequestParam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public Long time;
+
     public NameRequestParam withTime(Long time) {
         this.time = time;
         return this;
     }
     
+    public NameRequestParam(){}
 }

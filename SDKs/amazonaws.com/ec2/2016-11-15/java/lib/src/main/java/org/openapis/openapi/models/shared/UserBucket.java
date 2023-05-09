@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UserBucket {
     
     public String s3Bucket;
+
     public UserBucket withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -19,9 +20,11 @@ public class UserBucket {
     
     
     public String s3Key;
+
     public UserBucket withS3Key(String s3Key) {
         this.s3Key = s3Key;
         return this;
     }
     
+    public UserBucket(){}
 }

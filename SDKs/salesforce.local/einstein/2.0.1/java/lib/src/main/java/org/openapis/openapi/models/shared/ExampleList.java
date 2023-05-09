@@ -15,6 +15,7 @@ public class ExampleList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Example[] data;
+
     public ExampleList withData(Example[] data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class ExampleList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public ExampleList withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public ExampleList(){}
 }

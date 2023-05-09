@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReminderProfilesReadResponse {
     
     public String contentType;
+
     public ReminderProfilesReadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ReminderProfilesReadResponse {
      */
     
     public org.openapis.openapi.models.shared.ReminderProfile reminderProfile;
+
     public ReminderProfilesReadResponse withReminderProfile(org.openapis.openapi.models.shared.ReminderProfile reminderProfile) {
         this.reminderProfile = reminderProfile;
         return this;
@@ -26,6 +29,7 @@ public class ReminderProfilesReadResponse {
     
     
     public Integer statusCode;
+
     public ReminderProfilesReadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ReminderProfilesReadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReminderProfilesReadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ReminderProfilesReadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

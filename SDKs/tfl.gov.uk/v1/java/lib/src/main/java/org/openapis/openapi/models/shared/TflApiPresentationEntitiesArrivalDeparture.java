@@ -23,6 +23,7 @@ public class TflApiPresentationEntitiesArrivalDeparture {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public String cause;
+
     public TflApiPresentationEntitiesArrivalDeparture withCause(String cause) {
         this.cause = cause;
         return this;
@@ -34,6 +35,7 @@ public class TflApiPresentationEntitiesArrivalDeparture {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departureStatus")
     public TflApiPresentationEntitiesArrivalDepartureDepartureStatusEnum departureStatus;
+
     public TflApiPresentationEntitiesArrivalDeparture withDepartureStatus(TflApiPresentationEntitiesArrivalDepartureDepartureStatusEnum departureStatus) {
         this.departureStatus = departureStatus;
         return this;
@@ -45,6 +47,7 @@ public class TflApiPresentationEntitiesArrivalDeparture {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationName")
     public String destinationName;
+
     public TflApiPresentationEntitiesArrivalDeparture withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -56,6 +59,7 @@ public class TflApiPresentationEntitiesArrivalDeparture {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationNaptanId")
     public String destinationNaptanId;
+
     public TflApiPresentationEntitiesArrivalDeparture withDestinationNaptanId(String destinationNaptanId) {
         this.destinationNaptanId = destinationNaptanId;
         return this;
@@ -69,6 +73,7 @@ public class TflApiPresentationEntitiesArrivalDeparture {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("estimatedTimeOfArrival")
     public OffsetDateTime estimatedTimeOfArrival;
+
     public TflApiPresentationEntitiesArrivalDeparture withEstimatedTimeOfArrival(OffsetDateTime estimatedTimeOfArrival) {
         this.estimatedTimeOfArrival = estimatedTimeOfArrival;
         return this;
@@ -82,6 +87,7 @@ public class TflApiPresentationEntitiesArrivalDeparture {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("estimatedTimeOfDeparture")
     public OffsetDateTime estimatedTimeOfDeparture;
+
     public TflApiPresentationEntitiesArrivalDeparture withEstimatedTimeOfDeparture(OffsetDateTime estimatedTimeOfDeparture) {
         this.estimatedTimeOfDeparture = estimatedTimeOfDeparture;
         return this;
@@ -93,6 +99,7 @@ public class TflApiPresentationEntitiesArrivalDeparture {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minutesAndSecondsToArrival")
     public String minutesAndSecondsToArrival;
+
     public TflApiPresentationEntitiesArrivalDeparture withMinutesAndSecondsToArrival(String minutesAndSecondsToArrival) {
         this.minutesAndSecondsToArrival = minutesAndSecondsToArrival;
         return this;
@@ -104,6 +111,7 @@ public class TflApiPresentationEntitiesArrivalDeparture {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minutesAndSecondsToDeparture")
     public String minutesAndSecondsToDeparture;
+
     public TflApiPresentationEntitiesArrivalDeparture withMinutesAndSecondsToDeparture(String minutesAndSecondsToDeparture) {
         this.minutesAndSecondsToDeparture = minutesAndSecondsToDeparture;
         return this;
@@ -115,6 +123,7 @@ public class TflApiPresentationEntitiesArrivalDeparture {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naptanId")
     public String naptanId;
+
     public TflApiPresentationEntitiesArrivalDeparture withNaptanId(String naptanId) {
         this.naptanId = naptanId;
         return this;
@@ -126,6 +135,7 @@ public class TflApiPresentationEntitiesArrivalDeparture {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformName")
     public String platformName;
+
     public TflApiPresentationEntitiesArrivalDeparture withPlatformName(String platformName) {
         this.platformName = platformName;
         return this;
@@ -139,6 +149,7 @@ public class TflApiPresentationEntitiesArrivalDeparture {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduledTimeOfArrival")
     public OffsetDateTime scheduledTimeOfArrival;
+
     public TflApiPresentationEntitiesArrivalDeparture withScheduledTimeOfArrival(OffsetDateTime scheduledTimeOfArrival) {
         this.scheduledTimeOfArrival = scheduledTimeOfArrival;
         return this;
@@ -152,6 +163,7 @@ public class TflApiPresentationEntitiesArrivalDeparture {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduledTimeOfDeparture")
     public OffsetDateTime scheduledTimeOfDeparture;
+
     public TflApiPresentationEntitiesArrivalDeparture withScheduledTimeOfDeparture(OffsetDateTime scheduledTimeOfDeparture) {
         this.scheduledTimeOfDeparture = scheduledTimeOfDeparture;
         return this;
@@ -163,6 +175,7 @@ public class TflApiPresentationEntitiesArrivalDeparture {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stationName")
     public String stationName;
+
     public TflApiPresentationEntitiesArrivalDeparture withStationName(String stationName) {
         this.stationName = stationName;
         return this;
@@ -171,9 +184,11 @@ public class TflApiPresentationEntitiesArrivalDeparture {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timing")
     public TflApiPresentationEntitiesPredictionTiming timing;
+
     public TflApiPresentationEntitiesArrivalDeparture withTiming(TflApiPresentationEntitiesPredictionTiming timing) {
         this.timing = timing;
         return this;
     }
     
+    public TflApiPresentationEntitiesArrivalDeparture(){}
 }

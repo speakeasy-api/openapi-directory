@@ -12,6 +12,7 @@ public class GetNumbersPiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public Long from;
+
     public GetNumbersPiRequest withFrom(Long from) {
         this.from = from;
         return this;
@@ -22,9 +23,11 @@ public class GetNumbersPiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public Long to;
+
     public GetNumbersPiRequest withTo(Long to) {
         this.to = to;
         return this;
     }
     
+    public GetNumbersPiRequest(){}
 }

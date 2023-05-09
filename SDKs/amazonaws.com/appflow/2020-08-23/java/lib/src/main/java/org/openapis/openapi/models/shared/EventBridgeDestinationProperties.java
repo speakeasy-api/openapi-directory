@@ -18,6 +18,7 @@ public class EventBridgeDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorHandlingConfig")
     public ErrorHandlingConfig errorHandlingConfig;
+
     public EventBridgeDestinationProperties withErrorHandlingConfig(ErrorHandlingConfig errorHandlingConfig) {
         this.errorHandlingConfig = errorHandlingConfig;
         return this;
@@ -25,9 +26,13 @@ public class EventBridgeDestinationProperties {
     
     @JsonProperty("object")
     public String object;
+
     public EventBridgeDestinationProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public EventBridgeDestinationProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadImageRequest {
@@ -12,6 +13,7 @@ public class DownloadImageRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RedownloadImage redownloadImage;
+
     public DownloadImageRequest withRedownloadImage(org.openapis.openapi.models.shared.RedownloadImage redownloadImage) {
         this.redownloadImage = redownloadImage;
         return this;
@@ -22,9 +24,14 @@ public class DownloadImageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DownloadImageRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DownloadImageRequest(@JsonProperty("RedownloadImage") org.openapis.openapi.models.shared.RedownloadImage redownloadImage, @JsonProperty("id") String id) {
+        this.redownloadImage = redownloadImage;
+        this.id = id;
+  }
 }

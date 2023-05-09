@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsLinkExternalIdpGroupToTeamForOrgResponse {
     
     public String contentType;
+
     public TeamsLinkExternalIdpGroupToTeamForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsLinkExternalIdpGroupToTeamForOrgResponse {
     
     
     public Integer statusCode;
+
     public TeamsLinkExternalIdpGroupToTeamForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TeamsLinkExternalIdpGroupToTeamForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsLinkExternalIdpGroupToTeamForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class TeamsLinkExternalIdpGroupToTeamForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.ExternalGroup externalGroup;
+
     public TeamsLinkExternalIdpGroupToTeamForOrgResponse withExternalGroup(org.openapis.openapi.models.shared.ExternalGroup externalGroup) {
         this.externalGroup = externalGroup;
         return this;
     }
     
+    public TeamsLinkExternalIdpGroupToTeamForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

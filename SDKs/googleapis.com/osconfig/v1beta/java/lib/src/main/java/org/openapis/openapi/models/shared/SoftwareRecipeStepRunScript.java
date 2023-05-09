@@ -18,6 +18,7 @@ public class SoftwareRecipeStepRunScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedExitCodes")
     public Integer[] allowedExitCodes;
+
     public SoftwareRecipeStepRunScript withAllowedExitCodes(Integer[] allowedExitCodes) {
         this.allowedExitCodes = allowedExitCodes;
         return this;
@@ -29,6 +30,7 @@ public class SoftwareRecipeStepRunScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interpreter")
     public SoftwareRecipeStepRunScriptInterpreterEnum interpreter;
+
     public SoftwareRecipeStepRunScript withInterpreter(SoftwareRecipeStepRunScriptInterpreterEnum interpreter) {
         this.interpreter = interpreter;
         return this;
@@ -40,9 +42,11 @@ public class SoftwareRecipeStepRunScript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public SoftwareRecipeStepRunScript withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public SoftwareRecipeStepRunScript(){}
 }

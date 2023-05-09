@@ -12,9 +12,13 @@ public class RemoveUserFromAccountRequestBodyUsers {
      */
     @JsonProperty("identification")
     public RemoveUserFromAccountRequestBodyUsersIdentification identification;
+
     public RemoveUserFromAccountRequestBodyUsers withIdentification(RemoveUserFromAccountRequestBodyUsersIdentification identification) {
         this.identification = identification;
         return this;
     }
     
+    public RemoveUserFromAccountRequestBodyUsers(@JsonProperty("identification") RemoveUserFromAccountRequestBodyUsersIdentification identification) {
+        this.identification = identification;
+  }
 }

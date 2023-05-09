@@ -18,6 +18,7 @@ public class AudienceGroupAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedFirstAndThirdPartyAudienceGroup")
     public FirstAndThirdPartyAudienceGroup excludedFirstAndThirdPartyAudienceGroup;
+
     public AudienceGroupAssignedTargetingOptionDetails withExcludedFirstAndThirdPartyAudienceGroup(FirstAndThirdPartyAudienceGroup excludedFirstAndThirdPartyAudienceGroup) {
         this.excludedFirstAndThirdPartyAudienceGroup = excludedFirstAndThirdPartyAudienceGroup;
         return this;
@@ -29,6 +30,7 @@ public class AudienceGroupAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedGoogleAudienceGroup")
     public GoogleAudienceGroup excludedGoogleAudienceGroup;
+
     public AudienceGroupAssignedTargetingOptionDetails withExcludedGoogleAudienceGroup(GoogleAudienceGroup excludedGoogleAudienceGroup) {
         this.excludedGoogleAudienceGroup = excludedGoogleAudienceGroup;
         return this;
@@ -40,6 +42,7 @@ public class AudienceGroupAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedCombinedAudienceGroup")
     public CombinedAudienceGroup includedCombinedAudienceGroup;
+
     public AudienceGroupAssignedTargetingOptionDetails withIncludedCombinedAudienceGroup(CombinedAudienceGroup includedCombinedAudienceGroup) {
         this.includedCombinedAudienceGroup = includedCombinedAudienceGroup;
         return this;
@@ -51,17 +54,19 @@ public class AudienceGroupAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedCustomListGroup")
     public CustomListGroup includedCustomListGroup;
+
     public AudienceGroupAssignedTargetingOptionDetails withIncludedCustomListGroup(CustomListGroup includedCustomListGroup) {
         this.includedCustomListGroup = includedCustomListGroup;
         return this;
     }
     
     /**
-     * The first and third party audience ids and recencies of included first and third party audience groups. Each first and third party audience group contains first and third party audience ids only. The relation between each first and third party audience group is INTERSECTION, and the result is UNION'ed with other audience groups. Repeated groups with same settings will be ignored.
+     * The first and third party audience ids and recencies of included first and third party audience groups. Each first and third party audience group contains first and third party audience ids only. The relation between each first and third party audience group is INTERSECTION, and the result is UNION'ed with other audience groups. Repeated groups with same settings will be ignored. **Warning:** `ACTIVITY_BASED` and `FREQUENCY_CAP` audience types will be deprecated on **May 20, 2023**. After this date, these audiences will not be able to be added to resource targeting. Read our [feature deprecation announcement](/display-video/api/deprecations#features.first_and_third_party_audience_types) for more information.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedFirstAndThirdPartyAudienceGroups")
     public FirstAndThirdPartyAudienceGroup[] includedFirstAndThirdPartyAudienceGroups;
+
     public AudienceGroupAssignedTargetingOptionDetails withIncludedFirstAndThirdPartyAudienceGroups(FirstAndThirdPartyAudienceGroup[] includedFirstAndThirdPartyAudienceGroups) {
         this.includedFirstAndThirdPartyAudienceGroups = includedFirstAndThirdPartyAudienceGroups;
         return this;
@@ -73,9 +78,11 @@ public class AudienceGroupAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedGoogleAudienceGroup")
     public GoogleAudienceGroup includedGoogleAudienceGroup;
+
     public AudienceGroupAssignedTargetingOptionDetails withIncludedGoogleAudienceGroup(GoogleAudienceGroup includedGoogleAudienceGroup) {
         this.includedGoogleAudienceGroup = includedGoogleAudienceGroup;
         return this;
     }
     
+    public AudienceGroupAssignedTargetingOptionDetails(){}
 }

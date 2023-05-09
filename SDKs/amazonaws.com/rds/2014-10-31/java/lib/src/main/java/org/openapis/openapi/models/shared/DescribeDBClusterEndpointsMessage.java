@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBClusterEndpointsMessage {
     
     public String dbClusterEndpointIdentifier;
+
     public DescribeDBClusterEndpointsMessage withDBClusterEndpointIdentifier(String dbClusterEndpointIdentifier) {
         this.dbClusterEndpointIdentifier = dbClusterEndpointIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class DescribeDBClusterEndpointsMessage {
     
     
     public String dbClusterIdentifier;
+
     public DescribeDBClusterEndpointsMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -23,6 +25,7 @@ public class DescribeDBClusterEndpointsMessage {
     
     
     public FilterList[] filters;
+
     public DescribeDBClusterEndpointsMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeDBClusterEndpointsMessage {
     
     
     public String marker;
+
     public DescribeDBClusterEndpointsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -37,9 +41,11 @@ public class DescribeDBClusterEndpointsMessage {
     
     
     public Long maxRecords;
+
     public DescribeDBClusterEndpointsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeDBClusterEndpointsMessage(){}
 }

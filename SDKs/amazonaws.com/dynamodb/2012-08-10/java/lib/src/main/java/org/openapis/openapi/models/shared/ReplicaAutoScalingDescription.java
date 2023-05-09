@@ -15,6 +15,7 @@ public class ReplicaAutoScalingDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalSecondaryIndexes")
     public ReplicaGlobalSecondaryIndexAutoScalingDescription[] globalSecondaryIndexes;
+
     public ReplicaAutoScalingDescription withGlobalSecondaryIndexes(ReplicaGlobalSecondaryIndexAutoScalingDescription[] globalSecondaryIndexes) {
         this.globalSecondaryIndexes = globalSecondaryIndexes;
         return this;
@@ -23,6 +24,7 @@ public class ReplicaAutoScalingDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionName")
     public String regionName;
+
     public ReplicaAutoScalingDescription withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -34,6 +36,7 @@ public class ReplicaAutoScalingDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaProvisionedReadCapacityAutoScalingSettings")
     public AutoScalingSettingsDescription replicaProvisionedReadCapacityAutoScalingSettings;
+
     public ReplicaAutoScalingDescription withReplicaProvisionedReadCapacityAutoScalingSettings(AutoScalingSettingsDescription replicaProvisionedReadCapacityAutoScalingSettings) {
         this.replicaProvisionedReadCapacityAutoScalingSettings = replicaProvisionedReadCapacityAutoScalingSettings;
         return this;
@@ -45,6 +48,7 @@ public class ReplicaAutoScalingDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaProvisionedWriteCapacityAutoScalingSettings")
     public AutoScalingSettingsDescription replicaProvisionedWriteCapacityAutoScalingSettings;
+
     public ReplicaAutoScalingDescription withReplicaProvisionedWriteCapacityAutoScalingSettings(AutoScalingSettingsDescription replicaProvisionedWriteCapacityAutoScalingSettings) {
         this.replicaProvisionedWriteCapacityAutoScalingSettings = replicaProvisionedWriteCapacityAutoScalingSettings;
         return this;
@@ -53,9 +57,11 @@ public class ReplicaAutoScalingDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaStatus")
     public ReplicaStatusEnum replicaStatus;
+
     public ReplicaAutoScalingDescription withReplicaStatus(ReplicaStatusEnum replicaStatus) {
         this.replicaStatus = replicaStatus;
         return this;
     }
     
+    public ReplicaAutoScalingDescription(){}
 }

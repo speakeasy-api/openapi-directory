@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomPayload {
     @JsonProperty("value")
     public String value;
+
     public CustomPayload withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CustomPayload(@JsonProperty("value") String value) {
+        this.value = value;
+  }
 }

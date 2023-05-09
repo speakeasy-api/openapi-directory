@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectModerationLabelsResponse {
@@ -12,6 +13,7 @@ public class DetectModerationLabelsResponse {
      */
     
     public Object accessDeniedException;
+
     public DetectModerationLabelsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DetectModerationLabelsResponse {
     
     
     public String contentType;
+
     public DetectModerationLabelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DetectModerationLabelsResponse {
      */
     
     public org.openapis.openapi.models.shared.DetectModerationLabelsResponse detectModerationLabelsResponse;
+
     public DetectModerationLabelsResponse withDetectModerationLabelsResponse(org.openapis.openapi.models.shared.DetectModerationLabelsResponse detectModerationLabelsResponse) {
         this.detectModerationLabelsResponse = detectModerationLabelsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DetectModerationLabelsResponse {
      */
     
     public Object humanLoopQuotaExceededException;
+
     public DetectModerationLabelsResponse withHumanLoopQuotaExceededException(Object humanLoopQuotaExceededException) {
         this.humanLoopQuotaExceededException = humanLoopQuotaExceededException;
         return this;
@@ -49,6 +54,7 @@ public class DetectModerationLabelsResponse {
      */
     
     public Object imageTooLargeException;
+
     public DetectModerationLabelsResponse withImageTooLargeException(Object imageTooLargeException) {
         this.imageTooLargeException = imageTooLargeException;
         return this;
@@ -59,6 +65,7 @@ public class DetectModerationLabelsResponse {
      */
     
     public Object internalServerError;
+
     public DetectModerationLabelsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class DetectModerationLabelsResponse {
      */
     
     public Object invalidImageFormatException;
+
     public DetectModerationLabelsResponse withInvalidImageFormatException(Object invalidImageFormatException) {
         this.invalidImageFormatException = invalidImageFormatException;
         return this;
@@ -79,6 +87,7 @@ public class DetectModerationLabelsResponse {
      */
     
     public Object invalidParameterException;
+
     public DetectModerationLabelsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class DetectModerationLabelsResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public DetectModerationLabelsResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -99,6 +109,7 @@ public class DetectModerationLabelsResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public DetectModerationLabelsResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -106,6 +117,7 @@ public class DetectModerationLabelsResponse {
     
     
     public Integer statusCode;
+
     public DetectModerationLabelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class DetectModerationLabelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectModerationLabelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,9 +136,14 @@ public class DetectModerationLabelsResponse {
      */
     
     public Object throttlingException;
+
     public DetectModerationLabelsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DetectModerationLabelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

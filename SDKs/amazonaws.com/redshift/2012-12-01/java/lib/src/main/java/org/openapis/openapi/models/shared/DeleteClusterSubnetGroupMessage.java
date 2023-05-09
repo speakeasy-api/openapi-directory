@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteClusterSubnetGroupMessage - &lt;p/&gt;
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteClusterSubnetGroupMessage {
     
     public String clusterSubnetGroupName;
+
     public DeleteClusterSubnetGroupMessage withClusterSubnetGroupName(String clusterSubnetGroupName) {
         this.clusterSubnetGroupName = clusterSubnetGroupName;
         return this;
     }
     
+    public DeleteClusterSubnetGroupMessage(@JsonProperty("ClusterSubnetGroupName") String clusterSubnetGroupName) {
+        this.clusterSubnetGroupName = clusterSubnetGroupName;
+  }
 }

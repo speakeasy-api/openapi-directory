@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOwnershipInstallRequest {
@@ -12,6 +13,7 @@ public class PostOwnershipInstallRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appId")
     public String appId;
+
     public PostOwnershipInstallRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -22,6 +24,7 @@ public class PostOwnershipInstallRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
     public String customData;
+
     public PostOwnershipInstallRequest withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -32,6 +35,7 @@ public class PostOwnershipInstallRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
     public String model;
+
     public PostOwnershipInstallRequest withModel(String model) {
         this.model = model;
         return this;
@@ -42,6 +46,7 @@ public class PostOwnershipInstallRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modelId")
     public String modelId;
+
     public PostOwnershipInstallRequest withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -52,9 +57,14 @@ public class PostOwnershipInstallRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public String userId;
+
     public PostOwnershipInstallRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public PostOwnershipInstallRequest(@JsonProperty("appId") String appId, @JsonProperty("userId") String userId) {
+        this.appId = appId;
+        this.userId = userId;
+  }
 }

@@ -18,9 +18,11 @@ public class UploadAptArtifactMediaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public UploadAptArtifactMediaResponse withOperation(Operation operation) {
         this.operation = operation;
         return this;
     }
     
+    public UploadAptArtifactMediaResponse(){}
 }

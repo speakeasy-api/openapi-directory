@@ -15,6 +15,7 @@ public class UpdatePipeSourceSelfManagedKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchSize")
     public Long batchSize;
+
     public UpdatePipeSourceSelfManagedKafkaParameters withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -23,6 +24,7 @@ public class UpdatePipeSourceSelfManagedKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credentials")
     public SelfManagedKafkaAccessConfigurationCredentials credentials;
+
     public UpdatePipeSourceSelfManagedKafkaParameters withCredentials(SelfManagedKafkaAccessConfigurationCredentials credentials) {
         this.credentials = credentials;
         return this;
@@ -31,6 +33,7 @@ public class UpdatePipeSourceSelfManagedKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumBatchingWindowInSeconds")
     public Long maximumBatchingWindowInSeconds;
+
     public UpdatePipeSourceSelfManagedKafkaParameters withMaximumBatchingWindowInSeconds(Long maximumBatchingWindowInSeconds) {
         this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
         return this;
@@ -39,6 +42,7 @@ public class UpdatePipeSourceSelfManagedKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerRootCaCertificate")
     public String serverRootCaCertificate;
+
     public UpdatePipeSourceSelfManagedKafkaParameters withServerRootCaCertificate(String serverRootCaCertificate) {
         this.serverRootCaCertificate = serverRootCaCertificate;
         return this;
@@ -47,9 +51,11 @@ public class UpdatePipeSourceSelfManagedKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Vpc")
     public SelfManagedKafkaAccessConfigurationVpc vpc;
+
     public UpdatePipeSourceSelfManagedKafkaParameters withVpc(SelfManagedKafkaAccessConfigurationVpc vpc) {
         this.vpc = vpc;
         return this;
     }
     
+    public UpdatePipeSourceSelfManagedKafkaParameters(){}
 }

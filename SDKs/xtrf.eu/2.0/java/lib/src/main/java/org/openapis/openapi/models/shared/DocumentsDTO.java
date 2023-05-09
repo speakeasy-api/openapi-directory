@@ -12,9 +12,11 @@ public class DocumentsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectConfirmationStatus")
     public String projectConfirmationStatus;
+
     public DocumentsDTO withProjectConfirmationStatus(String projectConfirmationStatus) {
         this.projectConfirmationStatus = projectConfirmationStatus;
         return this;
     }
     
+    public DocumentsDTO(){}
 }

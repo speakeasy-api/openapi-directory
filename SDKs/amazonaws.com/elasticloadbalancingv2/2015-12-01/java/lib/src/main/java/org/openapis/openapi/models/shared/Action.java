@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Action - &lt;p&gt;Information about an action.&lt;/p&gt; &lt;p&gt;Each rule must include exactly one of the following types of actions: &lt;code&gt;forward&lt;/code&gt;, &lt;code&gt;fixed-response&lt;/code&gt;, or &lt;code&gt;redirect&lt;/code&gt;, and it must be the last action to be performed.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Action {
     
     public AuthenticateCognitoActionConfig authenticateCognitoConfig;
+
     public Action withAuthenticateCognitoConfig(AuthenticateCognitoActionConfig authenticateCognitoConfig) {
         this.authenticateCognitoConfig = authenticateCognitoConfig;
         return this;
@@ -19,6 +20,7 @@ public class Action {
     
     
     public AuthenticateOidcActionConfig authenticateOidcConfig;
+
     public Action withAuthenticateOidcConfig(AuthenticateOidcActionConfig authenticateOidcConfig) {
         this.authenticateOidcConfig = authenticateOidcConfig;
         return this;
@@ -26,6 +28,7 @@ public class Action {
     
     
     public FixedResponseActionConfig fixedResponseConfig;
+
     public Action withFixedResponseConfig(FixedResponseActionConfig fixedResponseConfig) {
         this.fixedResponseConfig = fixedResponseConfig;
         return this;
@@ -33,6 +36,7 @@ public class Action {
     
     
     public ForwardActionConfig forwardConfig;
+
     public Action withForwardConfig(ForwardActionConfig forwardConfig) {
         this.forwardConfig = forwardConfig;
         return this;
@@ -40,6 +44,7 @@ public class Action {
     
     
     public Long order;
+
     public Action withOrder(Long order) {
         this.order = order;
         return this;
@@ -47,6 +52,7 @@ public class Action {
     
     
     public RedirectActionConfig redirectConfig;
+
     public Action withRedirectConfig(RedirectActionConfig redirectConfig) {
         this.redirectConfig = redirectConfig;
         return this;
@@ -54,6 +60,7 @@ public class Action {
     
     
     public String targetGroupArn;
+
     public Action withTargetGroupArn(String targetGroupArn) {
         this.targetGroupArn = targetGroupArn;
         return this;
@@ -61,9 +68,13 @@ public class Action {
     
     
     public ActionTypeEnumEnum type;
+
     public Action withType(ActionTypeEnumEnum type) {
         this.type = type;
         return this;
     }
     
+    public Action(@JsonProperty("Type") ActionTypeEnumEnum type) {
+        this.type = type;
+  }
 }

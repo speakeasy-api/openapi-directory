@@ -58,11 +58,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1ServicesResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ServicesResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1ServicesResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ServicesResponse(contentType, httpRes.statusCode()) {{
             serviceListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1ServicesAllocationsIdResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ServicesAllocationsIdResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1ServicesAllocationsIdResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ServicesAllocationsIdResponse(contentType, httpRes.statusCode()) {{
             serviceAllocationViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,11 +134,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1ServicesIdResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ServicesIdResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1ServicesIdResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ServicesIdResponse(contentType, httpRes.statusCode()) {{
             serviceViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -184,11 +178,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1ServicesIdAllocationsResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ServicesIdAllocationsResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1ServicesIdAllocationsResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ServicesIdAllocationsResponse(contentType, httpRes.statusCode()) {{
             serviceAllocationListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -232,11 +224,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1ServicesIdResourcesResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ServicesIdResourcesResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1ServicesIdResourcesResponse res = new org.openapis.openapi.models.operations.GetConsumerV1ServicesIdResourcesResponse(contentType, httpRes.statusCode()) {{
             resourceListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

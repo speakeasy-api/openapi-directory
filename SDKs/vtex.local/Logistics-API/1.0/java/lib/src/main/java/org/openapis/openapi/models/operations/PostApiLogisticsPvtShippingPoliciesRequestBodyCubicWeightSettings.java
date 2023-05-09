@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostApiLogisticsPvtShippingPoliciesRequestBodyCubicWeightSettings {
     @JsonProperty("minimunAcceptableVolumetricWeight")
     public Double minimunAcceptableVolumetricWeight;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyCubicWeightSettings withMinimunAcceptableVolumetricWeight(Double minimunAcceptableVolumetricWeight) {
         this.minimunAcceptableVolumetricWeight = minimunAcceptableVolumetricWeight;
         return this;
@@ -22,9 +23,14 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyCubicWeightSettings {
      */
     @JsonProperty("volumetricFactor")
     public Double volumetricFactor;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyCubicWeightSettings withVolumetricFactor(Double volumetricFactor) {
         this.volumetricFactor = volumetricFactor;
         return this;
     }
     
+    public PostApiLogisticsPvtShippingPoliciesRequestBodyCubicWeightSettings(@JsonProperty("minimunAcceptableVolumetricWeight") Double minimunAcceptableVolumetricWeight, @JsonProperty("volumetricFactor") Double volumetricFactor) {
+        this.minimunAcceptableVolumetricWeight = minimunAcceptableVolumetricWeight;
+        this.volumetricFactor = volumetricFactor;
+  }
 }

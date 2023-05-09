@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReactionsListForCommitCommentResponse {
     
     public String contentType;
+
     public ReactionsListForCommitCommentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReactionsListForCommitCommentResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReactionsListForCommitCommentResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReactionsListForCommitCommentResponse {
     
     
     public Integer statusCode;
+
     public ReactionsListForCommitCommentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReactionsListForCommitCommentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReactionsListForCommitCommentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReactionsListForCommitCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReactionsListForCommitCommentResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class ReactionsListForCommitCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.Reaction[] reactions;
+
     public ReactionsListForCommitCommentResponse withReactions(org.openapis.openapi.models.shared.Reaction[] reactions) {
         this.reactions = reactions;
         return this;
@@ -60,9 +67,14 @@ public class ReactionsListForCommitCommentResponse {
      */
     
     public ReactionsListForCommitComment415ApplicationJSON reactionsListForCommitComment415ApplicationJSONObject;
+
     public ReactionsListForCommitCommentResponse withReactionsListForCommitComment415ApplicationJSONObject(ReactionsListForCommitComment415ApplicationJSON reactionsListForCommitComment415ApplicationJSONObject) {
         this.reactionsListForCommitComment415ApplicationJSONObject = reactionsListForCommitComment415ApplicationJSONObject;
         return this;
     }
     
+    public ReactionsListForCommitCommentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

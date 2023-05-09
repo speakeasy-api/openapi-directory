@@ -261,4 +261,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/FreeBusyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/FreeBusyRequestItem.java
 lib/src/main/java/org/openapis/openapi/models/shared/Setting.java
 lib/src/main/java/org/openapis/openapi/models/shared/Settings.java
+docs/sdk/README.md
+docs/acl/README.md
+docs/calendarlist/README.md
+docs/calendars/README.md
+docs/channels/README.md
+docs/colors/README.md
+docs/events/README.md
+docs/freebusy/README.md
+docs/settings/README.md
 USAGE.md

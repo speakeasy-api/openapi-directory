@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetEstimatedPriceRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
     public String amount;
+
     public GetEstimatedPriceRequest withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -16,6 +17,7 @@ public class GetEstimatedPriceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency_from")
     public String currencyFrom;
+
     public GetEstimatedPriceRequest withCurrencyFrom(String currencyFrom) {
         this.currencyFrom = currencyFrom;
         return this;
@@ -23,6 +25,7 @@ public class GetEstimatedPriceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency_to")
     public String currencyTo;
+
     public GetEstimatedPriceRequest withCurrencyTo(String currencyTo) {
         this.currencyTo = currencyTo;
         return this;
@@ -30,9 +33,11 @@ public class GetEstimatedPriceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetEstimatedPriceRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetEstimatedPriceRequest(){}
 }

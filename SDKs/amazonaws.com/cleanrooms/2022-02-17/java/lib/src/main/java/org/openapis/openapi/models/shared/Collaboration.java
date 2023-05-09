@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Collaboration {
     @JsonProperty("arn")
     public String arn;
+
     public Collaboration withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class Collaboration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public Collaboration withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -35,6 +37,7 @@ public class Collaboration {
     
     @JsonProperty("creatorAccountId")
     public String creatorAccountId;
+
     public Collaboration withCreatorAccountId(String creatorAccountId) {
         this.creatorAccountId = creatorAccountId;
         return this;
@@ -42,6 +45,7 @@ public class Collaboration {
     
     @JsonProperty("creatorDisplayName")
     public String creatorDisplayName;
+
     public Collaboration withCreatorDisplayName(String creatorDisplayName) {
         this.creatorDisplayName = creatorDisplayName;
         return this;
@@ -50,6 +54,7 @@ public class Collaboration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataEncryptionMetadata")
     public DataEncryptionMetadata dataEncryptionMetadata;
+
     public Collaboration withDataEncryptionMetadata(DataEncryptionMetadata dataEncryptionMetadata) {
         this.dataEncryptionMetadata = dataEncryptionMetadata;
         return this;
@@ -58,6 +63,7 @@ public class Collaboration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Collaboration withDescription(String description) {
         this.description = description;
         return this;
@@ -65,6 +71,7 @@ public class Collaboration {
     
     @JsonProperty("id")
     public String id;
+
     public Collaboration withId(String id) {
         this.id = id;
         return this;
@@ -72,6 +79,7 @@ public class Collaboration {
     
     @JsonProperty("memberStatus")
     public MemberStatusEnum memberStatus;
+
     public Collaboration withMemberStatus(MemberStatusEnum memberStatus) {
         this.memberStatus = memberStatus;
         return this;
@@ -80,6 +88,7 @@ public class Collaboration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipArn")
     public String membershipArn;
+
     public Collaboration withMembershipArn(String membershipArn) {
         this.membershipArn = membershipArn;
         return this;
@@ -88,6 +97,7 @@ public class Collaboration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipId")
     public String membershipId;
+
     public Collaboration withMembershipId(String membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -95,6 +105,7 @@ public class Collaboration {
     
     @JsonProperty("name")
     public String name;
+
     public Collaboration withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +113,7 @@ public class Collaboration {
     
     @JsonProperty("queryLogStatus")
     public CollaborationQueryLogStatusEnum queryLogStatus;
+
     public Collaboration withQueryLogStatus(CollaborationQueryLogStatusEnum queryLogStatus) {
         this.queryLogStatus = queryLogStatus;
         return this;
@@ -111,9 +123,21 @@ public class Collaboration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public Collaboration withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Collaboration(@JsonProperty("arn") String arn, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("creatorAccountId") String creatorAccountId, @JsonProperty("creatorDisplayName") String creatorDisplayName, @JsonProperty("id") String id, @JsonProperty("memberStatus") MemberStatusEnum memberStatus, @JsonProperty("name") String name, @JsonProperty("queryLogStatus") CollaborationQueryLogStatusEnum queryLogStatus, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.arn = arn;
+        this.createTime = createTime;
+        this.creatorAccountId = creatorAccountId;
+        this.creatorDisplayName = creatorDisplayName;
+        this.id = id;
+        this.memberStatus = memberStatus;
+        this.name = name;
+        this.queryLogStatus = queryLogStatus;
+        this.updateTime = updateTime;
+  }
 }

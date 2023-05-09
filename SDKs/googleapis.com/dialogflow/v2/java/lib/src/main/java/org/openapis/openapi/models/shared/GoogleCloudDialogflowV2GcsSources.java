@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2GcsSources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uris")
     public String[] uris;
+
     public GoogleCloudDialogflowV2GcsSources withUris(String[] uris) {
         this.uris = uris;
         return this;
     }
     
+    public GoogleCloudDialogflowV2GcsSources(){}
 }

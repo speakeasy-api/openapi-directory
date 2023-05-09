@@ -15,6 +15,7 @@ public class S3DeltaCatalogTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalOptions")
     public java.util.Map<String, String> additionalOptions;
+
     public S3DeltaCatalogTarget withAdditionalOptions(java.util.Map<String, String> additionalOptions) {
         this.additionalOptions = additionalOptions;
         return this;
@@ -22,6 +23,7 @@ public class S3DeltaCatalogTarget {
     
     @JsonProperty("Database")
     public String database;
+
     public S3DeltaCatalogTarget withDatabase(String database) {
         this.database = database;
         return this;
@@ -29,6 +31,7 @@ public class S3DeltaCatalogTarget {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public S3DeltaCatalogTarget withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -36,6 +39,7 @@ public class S3DeltaCatalogTarget {
     
     @JsonProperty("Name")
     public String name;
+
     public S3DeltaCatalogTarget withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class S3DeltaCatalogTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionKeys")
     public String[][] partitionKeys;
+
     public S3DeltaCatalogTarget withPartitionKeys(String[][] partitionKeys) {
         this.partitionKeys = partitionKeys;
         return this;
@@ -52,6 +57,7 @@ public class S3DeltaCatalogTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaChangePolicy")
     public CatalogSchemaChangePolicy schemaChangePolicy;
+
     public S3DeltaCatalogTarget withSchemaChangePolicy(CatalogSchemaChangePolicy schemaChangePolicy) {
         this.schemaChangePolicy = schemaChangePolicy;
         return this;
@@ -59,9 +65,16 @@ public class S3DeltaCatalogTarget {
     
     @JsonProperty("Table")
     public String table;
+
     public S3DeltaCatalogTarget withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public S3DeltaCatalogTarget(@JsonProperty("Database") String database, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.inputs = inputs;
+        this.name = name;
+        this.table = table;
+  }
 }

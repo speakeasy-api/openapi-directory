@@ -18,6 +18,7 @@ public class Onechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplic
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public Onechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplication1jsonSchemaInformation withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -29,6 +30,7 @@ public class Onechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplic
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Onechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplication1jsonSchemaInformation withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class Onechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplic
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public Onechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplication1jsonSchemaInformation withModel(String model) {
         this.model = model;
         return this;
@@ -51,9 +54,11 @@ public class Onechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplic
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Long year;
+
     public Onechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplication1jsonSchemaInformation withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public Onechargers1Percent7BchargerIdPercent7DGetResponses200ContentApplication1jsonSchemaInformation(){}
 }

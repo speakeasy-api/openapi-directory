@@ -15,6 +15,7 @@ public class PutUsersIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("always_show_base_currency")
     public Boolean alwaysShowBaseCurrency;
+
     public PutUsersIdRequestBody withAlwaysShowBaseCurrency(Boolean alwaysShowBaseCurrency) {
         this.alwaysShowBaseCurrency = alwaysShowBaseCurrency;
         return this;
@@ -26,6 +27,7 @@ public class PutUsersIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base_currency_code")
     public String baseCurrencyCode;
+
     public PutUsersIdRequestBody withBaseCurrencyCode(String baseCurrencyCode) {
         this.baseCurrencyCode = baseCurrencyCode;
         return this;
@@ -37,6 +39,7 @@ public class PutUsersIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beta_user")
     public Boolean betaUser;
+
     public PutUsersIdRequestBody withBetaUser(Boolean betaUser) {
         this.betaUser = betaUser;
         return this;
@@ -48,6 +51,7 @@ public class PutUsersIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public PutUsersIdRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -59,6 +63,7 @@ public class PutUsersIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PutUsersIdRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +75,7 @@ public class PutUsersIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_zone")
     public String timeZone;
+
     public PutUsersIdRequestBody withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -81,9 +87,11 @@ public class PutUsersIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("week_start_day")
     public Long weekStartDay;
+
     public PutUsersIdRequestBody withWeekStartDay(Long weekStartDay) {
         this.weekStartDay = weekStartDay;
         return this;
     }
     
+    public PutUsersIdRequestBody(){}
 }

@@ -18,6 +18,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationType")
     public DataSourceAuthorizationTypeEnum authorizationType;
+
     public DataSource withAuthorizationType(DataSourceAuthorizationTypeEnum authorizationType) {
         this.authorizationType = authorizationType;
         return this;
@@ -29,6 +30,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public DataSource withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -40,6 +42,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataRefreshType")
     public DataSourceDataRefreshTypeEnum dataRefreshType;
+
     public DataSource withDataRefreshType(DataSourceDataRefreshTypeEnum dataRefreshType) {
         this.dataRefreshType = dataRefreshType;
         return this;
@@ -51,6 +54,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceId")
     public String dataSourceId;
+
     public DataSource withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -62,6 +66,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultDataRefreshWindowDays")
     public Integer defaultDataRefreshWindowDays;
+
     public DataSource withDefaultDataRefreshWindowDays(Integer defaultDataRefreshWindowDays) {
         this.defaultDataRefreshWindowDays = defaultDataRefreshWindowDays;
         return this;
@@ -73,6 +78,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultSchedule")
     public String defaultSchedule;
+
     public DataSource withDefaultSchedule(String defaultSchedule) {
         this.defaultSchedule = defaultSchedule;
         return this;
@@ -84,6 +90,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DataSource withDescription(String description) {
         this.description = description;
         return this;
@@ -95,6 +102,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public DataSource withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -106,6 +114,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("helpUrl")
     public String helpUrl;
+
     public DataSource withHelpUrl(String helpUrl) {
         this.helpUrl = helpUrl;
         return this;
@@ -117,6 +126,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualRunsDisabled")
     public Boolean manualRunsDisabled;
+
     public DataSource withManualRunsDisabled(Boolean manualRunsDisabled) {
         this.manualRunsDisabled = manualRunsDisabled;
         return this;
@@ -128,6 +138,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumScheduleInterval")
     public String minimumScheduleInterval;
+
     public DataSource withMinimumScheduleInterval(String minimumScheduleInterval) {
         this.minimumScheduleInterval = minimumScheduleInterval;
         return this;
@@ -139,6 +150,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DataSource withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +162,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public DataSourceParameter[] parameters;
+
     public DataSource withParameters(DataSourceParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -161,6 +174,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public String[] scopes;
+
     public DataSource withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
@@ -172,6 +186,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportsCustomSchedule")
     public Boolean supportsCustomSchedule;
+
     public DataSource withSupportsCustomSchedule(Boolean supportsCustomSchedule) {
         this.supportsCustomSchedule = supportsCustomSchedule;
         return this;
@@ -183,6 +198,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportsMultipleTransfers")
     public Boolean supportsMultipleTransfers;
+
     public DataSource withSupportsMultipleTransfers(Boolean supportsMultipleTransfers) {
         this.supportsMultipleTransfers = supportsMultipleTransfers;
         return this;
@@ -194,6 +210,7 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferType")
     public DataSourceTransferTypeEnum transferType;
+
     public DataSource withTransferType(DataSourceTransferTypeEnum transferType) {
         this.transferType = transferType;
         return this;
@@ -205,9 +222,11 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateDeadlineSeconds")
     public Integer updateDeadlineSeconds;
+
     public DataSource withUpdateDeadlineSeconds(Integer updateDeadlineSeconds) {
         this.updateDeadlineSeconds = updateDeadlineSeconds;
         return this;
     }
     
+    public DataSource(){}
 }

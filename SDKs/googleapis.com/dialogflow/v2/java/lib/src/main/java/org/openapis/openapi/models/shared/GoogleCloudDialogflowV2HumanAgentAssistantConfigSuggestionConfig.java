@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureConfigs")
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig[] featureConfigs;
+
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig withFeatureConfigs(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig[] featureConfigs) {
         this.featureConfigs = featureConfigs;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupSuggestionResponses")
     public Boolean groupSuggestionResponses;
+
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig withGroupSuggestionResponses(Boolean groupSuggestionResponses) {
         this.groupSuggestionResponses = groupSuggestionResponses;
         return this;
     }
     
+    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig(){}
 }

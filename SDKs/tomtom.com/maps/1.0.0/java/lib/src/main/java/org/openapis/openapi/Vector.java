@@ -55,10 +55,8 @@ public class Vector {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMapVersionNumberTileLayerStyleZoomXYPbfResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberTileLayerStyleZoomXYPbfResponse() {{
+        org.openapis.openapi.models.operations.GetMapVersionNumberTileLayerStyleZoomXYPbfResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberTileLayerStyleZoomXYPbfResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 500 || httpRes.statusCode() == 503) {

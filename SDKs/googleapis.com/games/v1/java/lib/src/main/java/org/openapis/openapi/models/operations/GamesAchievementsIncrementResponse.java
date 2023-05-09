@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GamesAchievementsIncrementResponse {
@@ -12,6 +13,7 @@ public class GamesAchievementsIncrementResponse {
      */
     
     public org.openapis.openapi.models.shared.AchievementIncrementResponse achievementIncrementResponse;
+
     public GamesAchievementsIncrementResponse withAchievementIncrementResponse(org.openapis.openapi.models.shared.AchievementIncrementResponse achievementIncrementResponse) {
         this.achievementIncrementResponse = achievementIncrementResponse;
         return this;
@@ -19,6 +21,7 @@ public class GamesAchievementsIncrementResponse {
     
     
     public String contentType;
+
     public GamesAchievementsIncrementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GamesAchievementsIncrementResponse {
     
     
     public Integer statusCode;
+
     public GamesAchievementsIncrementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GamesAchievementsIncrementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GamesAchievementsIncrementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GamesAchievementsIncrementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

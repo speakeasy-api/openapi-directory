@@ -14,6 +14,7 @@ public class PutVerificationStateOnViolationRequestBody {
      */
     @JsonProperty("verificationState")
     public PutVerificationStateOnViolationRequestBodyVerificationStateEnum verificationState;
+
     public PutVerificationStateOnViolationRequestBody withVerificationState(PutVerificationStateOnViolationRequestBodyVerificationStateEnum verificationState) {
         this.verificationState = verificationState;
         return this;
@@ -25,9 +26,13 @@ public class PutVerificationStateOnViolationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationStateDescription")
     public String verificationStateDescription;
+
     public PutVerificationStateOnViolationRequestBody withVerificationStateDescription(String verificationStateDescription) {
         this.verificationStateDescription = verificationStateDescription;
         return this;
     }
     
+    public PutVerificationStateOnViolationRequestBody(@JsonProperty("verificationState") PutVerificationStateOnViolationRequestBodyVerificationStateEnum verificationState) {
+        this.verificationState = verificationState;
+  }
 }

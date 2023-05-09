@@ -12,9 +12,11 @@ public class DeregisterWebhookWithThirdPartyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookName")
     public String webhookName;
+
     public DeregisterWebhookWithThirdPartyInput withWebhookName(String webhookName) {
         this.webhookName = webhookName;
         return this;
     }
     
+    public DeregisterWebhookWithThirdPartyInput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCampaignStateBatchResponse {
@@ -12,6 +13,7 @@ public class GetCampaignStateBatchResponse {
      */
     
     public Object accessDeniedException;
+
     public GetCampaignStateBatchResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetCampaignStateBatchResponse {
     
     
     public String contentType;
+
     public GetCampaignStateBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCampaignStateBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCampaignStateBatchResponse getCampaignStateBatchResponse;
+
     public GetCampaignStateBatchResponse withGetCampaignStateBatchResponse(org.openapis.openapi.models.shared.GetCampaignStateBatchResponse getCampaignStateBatchResponse) {
         this.getCampaignStateBatchResponse = getCampaignStateBatchResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetCampaignStateBatchResponse {
      */
     
     public Object internalServerException;
+
     public GetCampaignStateBatchResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetCampaignStateBatchResponse {
     
     
     public Integer statusCode;
+
     public GetCampaignStateBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetCampaignStateBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCampaignStateBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetCampaignStateBatchResponse {
      */
     
     public Object throttlingException;
+
     public GetCampaignStateBatchResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetCampaignStateBatchResponse {
      */
     
     public Object validationException;
+
     public GetCampaignStateBatchResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetCampaignStateBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

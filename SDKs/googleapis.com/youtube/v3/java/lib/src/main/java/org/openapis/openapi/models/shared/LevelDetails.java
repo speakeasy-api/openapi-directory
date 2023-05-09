@@ -15,9 +15,11 @@ public class LevelDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public LevelDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public LevelDetails(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisconnectSourceServerResponse {
@@ -12,6 +13,7 @@ public class DisconnectSourceServerResponse {
      */
     
     public Object conflictException;
+
     public DisconnectSourceServerResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DisconnectSourceServerResponse {
     
     
     public String contentType;
+
     public DisconnectSourceServerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisconnectSourceServerResponse {
      */
     
     public Object internalServerException;
+
     public DisconnectSourceServerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DisconnectSourceServerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisconnectSourceServerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DisconnectSourceServerResponse {
      */
     
     public org.openapis.openapi.models.shared.SourceServer sourceServer;
+
     public DisconnectSourceServerResponse withSourceServer(org.openapis.openapi.models.shared.SourceServer sourceServer) {
         this.sourceServer = sourceServer;
         return this;
@@ -56,6 +62,7 @@ public class DisconnectSourceServerResponse {
     
     
     public Integer statusCode;
+
     public DisconnectSourceServerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisconnectSourceServerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisconnectSourceServerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DisconnectSourceServerResponse {
      */
     
     public Object throttlingException;
+
     public DisconnectSourceServerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DisconnectSourceServerResponse {
      */
     
     public Object uninitializedAccountException;
+
     public DisconnectSourceServerResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public DisconnectSourceServerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

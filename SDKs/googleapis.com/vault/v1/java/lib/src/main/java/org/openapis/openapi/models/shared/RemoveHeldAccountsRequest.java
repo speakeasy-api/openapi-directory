@@ -18,9 +18,11 @@ public class RemoveHeldAccountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIds")
     public String[] accountIds;
+
     public RemoveHeldAccountsRequest withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
     }
     
+    public RemoveHeldAccountsRequest(){}
 }

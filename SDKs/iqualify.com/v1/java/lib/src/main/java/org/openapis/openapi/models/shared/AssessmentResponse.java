@@ -20,6 +20,7 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public AssessmentResponse withContent(String content) {
         this.content = content;
         return this;
@@ -28,6 +29,7 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public Document[] documents;
+
     public AssessmentResponse withDocuments(Document[] documents) {
         this.documents = documents;
         return this;
@@ -38,6 +40,7 @@ public class AssessmentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dueDate")
     public OffsetDateTime dueDate;
+
     public AssessmentResponse withDueDate(OffsetDateTime dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -46,6 +49,7 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationMinutes")
     public Integer durationMinutes;
+
     public AssessmentResponse withDurationMinutes(Integer durationMinutes) {
         this.durationMinutes = durationMinutes;
         return this;
@@ -54,6 +58,7 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public AssessmentResponse withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -62,6 +67,7 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public AssessmentResponse withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -70,6 +76,7 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssessmentResponse withId(String id) {
         this.id = id;
         return this;
@@ -78,6 +85,7 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markNumber")
     public String markNumber;
+
     public AssessmentResponse withMarkNumber(String markNumber) {
         this.markNumber = markNumber;
         return this;
@@ -86,6 +94,7 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markType")
     public String markType;
+
     public AssessmentResponse withMarkType(String markType) {
         this.markType = markType;
         return this;
@@ -94,6 +103,7 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAttempts")
     public Integer maxAttempts;
+
     public AssessmentResponse withMaxAttempts(Integer maxAttempts) {
         this.maxAttempts = maxAttempts;
         return this;
@@ -104,6 +114,7 @@ public class AssessmentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("openDate")
     public OffsetDateTime openDate;
+
     public AssessmentResponse withOpenDate(OffsetDateTime openDate) {
         this.openDate = openDate;
         return this;
@@ -112,6 +123,7 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pid")
     public String pid;
+
     public AssessmentResponse withPid(String pid) {
         this.pid = pid;
         return this;
@@ -120,6 +132,7 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("points")
     public String points;
+
     public AssessmentResponse withPoints(String points) {
         this.points = points;
         return this;
@@ -128,6 +141,7 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("themes")
     public ThemeResponse[] themes;
+
     public AssessmentResponse withThemes(ThemeResponse[] themes) {
         this.themes = themes;
         return this;
@@ -136,6 +150,7 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public AssessmentResponse withTitle(String title) {
         this.title = title;
         return this;
@@ -144,6 +159,7 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalQuestions")
     public Integer totalQuestions;
+
     public AssessmentResponse withTotalQuestions(Integer totalQuestions) {
         this.totalQuestions = totalQuestions;
         return this;
@@ -152,6 +168,7 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalThemes")
     public Integer totalThemes;
+
     public AssessmentResponse withTotalThemes(Integer totalThemes) {
         this.totalThemes = totalThemes;
         return this;
@@ -160,9 +177,11 @@ public class AssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AssessmentResponse withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AssessmentResponse(){}
 }

@@ -15,6 +15,7 @@ public class ListSchemasOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSchemasOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListSchemasOutput {
     
     @JsonProperty("schemaSummaries")
     public SchemaSummary[] schemaSummaries;
+
     public ListSchemasOutput withSchemaSummaries(SchemaSummary[] schemaSummaries) {
         this.schemaSummaries = schemaSummaries;
         return this;
     }
     
+    public ListSchemasOutput(@JsonProperty("schemaSummaries") SchemaSummary[] schemaSummaries) {
+        this.schemaSummaries = schemaSummaries;
+  }
 }

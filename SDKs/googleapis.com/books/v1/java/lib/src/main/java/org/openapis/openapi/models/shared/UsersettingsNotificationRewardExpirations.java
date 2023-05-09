@@ -12,9 +12,11 @@ public class UsersettingsNotificationRewardExpirations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opted_state")
     public String optedState;
+
     public UsersettingsNotificationRewardExpirations withOptedState(String optedState) {
         this.optedState = optedState;
         return this;
     }
     
+    public UsersettingsNotificationRewardExpirations(){}
 }

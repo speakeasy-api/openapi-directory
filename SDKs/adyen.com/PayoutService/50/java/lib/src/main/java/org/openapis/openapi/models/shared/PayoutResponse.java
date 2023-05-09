@@ -18,6 +18,7 @@ public class PayoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalData")
     public Object additionalData;
+
     public PayoutResponse withAdditionalData(Object additionalData) {
         this.additionalData = additionalData;
         return this;
@@ -31,6 +32,7 @@ public class PayoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authCode")
     public String authCode;
+
     public PayoutResponse withAuthCode(String authCode) {
         this.authCode = authCode;
         return this;
@@ -39,6 +41,7 @@ public class PayoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dccAmount")
     public Amount dccAmount;
+
     public PayoutResponse withDccAmount(Amount dccAmount) {
         this.dccAmount = dccAmount;
         return this;
@@ -51,6 +54,7 @@ public class PayoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dccSignature")
     public String dccSignature;
+
     public PayoutResponse withDccSignature(String dccSignature) {
         this.dccSignature = dccSignature;
         return this;
@@ -59,6 +63,7 @@ public class PayoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fraudResult")
     public FraudResult fraudResult;
+
     public PayoutResponse withFraudResult(FraudResult fraudResult) {
         this.fraudResult = fraudResult;
         return this;
@@ -71,6 +76,7 @@ public class PayoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerUrl")
     public String issuerUrl;
+
     public PayoutResponse withIssuerUrl(String issuerUrl) {
         this.issuerUrl = issuerUrl;
         return this;
@@ -82,6 +88,7 @@ public class PayoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("md")
     public String md;
+
     public PayoutResponse withMd(String md) {
         this.md = md;
         return this;
@@ -95,6 +102,7 @@ public class PayoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paRequest")
     public String paRequest;
+
     public PayoutResponse withPaRequest(String paRequest) {
         this.paRequest = paRequest;
         return this;
@@ -106,6 +114,7 @@ public class PayoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public PayoutResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -119,6 +128,7 @@ public class PayoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refusalReason")
     public String refusalReason;
+
     public PayoutResponse withRefusalReason(String refusalReason) {
         this.refusalReason = refusalReason;
         return this;
@@ -145,9 +155,11 @@ public class PayoutResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public PayoutResponseResultCodeEnum resultCode;
+
     public PayoutResponse withResultCode(PayoutResponseResultCodeEnum resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public PayoutResponse(){}
 }

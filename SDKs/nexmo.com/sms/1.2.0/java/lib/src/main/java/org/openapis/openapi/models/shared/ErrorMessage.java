@@ -15,6 +15,7 @@ public class ErrorMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error-text")
     public String errorText;
+
     public ErrorMessage withErrorText(String errorText) {
         this.errorText = errorText;
         return this;
@@ -26,9 +27,11 @@ public class ErrorMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ErrorMessage withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ErrorMessage(){}
 }

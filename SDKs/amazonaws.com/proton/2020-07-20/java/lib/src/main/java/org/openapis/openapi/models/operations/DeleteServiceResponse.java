@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteServiceResponse {
@@ -12,6 +13,7 @@ public class DeleteServiceResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteServiceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteServiceResponse {
      */
     
     public Object conflictException;
+
     public DeleteServiceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteServiceResponse {
     
     
     public String contentType;
+
     public DeleteServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteServiceOutput deleteServiceOutput;
+
     public DeleteServiceResponse withDeleteServiceOutput(org.openapis.openapi.models.shared.DeleteServiceOutput deleteServiceOutput) {
         this.deleteServiceOutput = deleteServiceOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteServiceResponse {
      */
     
     public Object internalServerException;
+
     public DeleteServiceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteServiceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteServiceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteServiceResponse {
     
     
     public Integer statusCode;
+
     public DeleteServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteServiceResponse {
      */
     
     public Object throttlingException;
+
     public DeleteServiceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteServiceResponse {
      */
     
     public Object validationException;
+
     public DeleteServiceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

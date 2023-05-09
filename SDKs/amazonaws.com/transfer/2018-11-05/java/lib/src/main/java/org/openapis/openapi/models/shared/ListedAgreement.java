@@ -15,6 +15,7 @@ public class ListedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgreementId")
     public String agreementId;
+
     public ListedAgreement withAgreementId(String agreementId) {
         this.agreementId = agreementId;
         return this;
@@ -23,6 +24,7 @@ public class ListedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ListedAgreement withArn(String arn) {
         this.arn = arn;
         return this;
@@ -31,6 +33,7 @@ public class ListedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ListedAgreement withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class ListedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalProfileId")
     public String localProfileId;
+
     public ListedAgreement withLocalProfileId(String localProfileId) {
         this.localProfileId = localProfileId;
         return this;
@@ -47,6 +51,7 @@ public class ListedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartnerProfileId")
     public String partnerProfileId;
+
     public ListedAgreement withPartnerProfileId(String partnerProfileId) {
         this.partnerProfileId = partnerProfileId;
         return this;
@@ -55,6 +60,7 @@ public class ListedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerId")
     public String serverId;
+
     public ListedAgreement withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -63,9 +69,11 @@ public class ListedAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AgreementStatusTypeEnum status;
+
     public ListedAgreement withStatus(AgreementStatusTypeEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListedAgreement(){}
 }

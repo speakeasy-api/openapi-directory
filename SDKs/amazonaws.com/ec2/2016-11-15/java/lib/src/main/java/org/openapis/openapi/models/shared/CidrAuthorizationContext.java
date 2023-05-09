@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CidrAuthorizationContext - Provides authorization for Amazon to bring a specific IP address range to a specific Amazon Web Services account using bring your own IP addresses (BYOIP). For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#prepare-for-byoip"&gt;Configuring your BYOIP address range&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Compute Cloud User Guide&lt;/i&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CidrAuthorizationContext {
     
     public String message;
+
     public CidrAuthorizationContext withMessage(String message) {
         this.message = message;
         return this;
@@ -19,9 +20,14 @@ public class CidrAuthorizationContext {
     
     
     public String signature;
+
     public CidrAuthorizationContext withSignature(String signature) {
         this.signature = signature;
         return this;
     }
     
+    public CidrAuthorizationContext(@JsonProperty("Message") String message, @JsonProperty("Signature") String signature) {
+        this.message = message;
+        this.signature = signature;
+  }
 }

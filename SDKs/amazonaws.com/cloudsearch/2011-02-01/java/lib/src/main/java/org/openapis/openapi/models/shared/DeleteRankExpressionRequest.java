@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteRankExpressionRequest {
     /**
@@ -12,6 +12,7 @@ public class DeleteRankExpressionRequest {
      */
     
     public String domainName;
+
     public DeleteRankExpressionRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -19,9 +20,14 @@ public class DeleteRankExpressionRequest {
     
     
     public String rankName;
+
     public DeleteRankExpressionRequest withRankName(String rankName) {
         this.rankName = rankName;
         return this;
     }
     
+    public DeleteRankExpressionRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("RankName") String rankName) {
+        this.domainName = domainName;
+        this.rankName = rankName;
+  }
 }

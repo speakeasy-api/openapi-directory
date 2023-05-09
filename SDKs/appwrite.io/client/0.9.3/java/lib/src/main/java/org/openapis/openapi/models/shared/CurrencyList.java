@@ -15,6 +15,7 @@ public class CurrencyList {
      */
     @JsonProperty("currencies")
     public Currency[] currencies;
+
     public CurrencyList withCurrencies(Currency[] currencies) {
         this.currencies = currencies;
         return this;
@@ -25,9 +26,14 @@ public class CurrencyList {
      */
     @JsonProperty("sum")
     public Integer sum;
+
     public CurrencyList withSum(Integer sum) {
         this.sum = sum;
         return this;
     }
     
+    public CurrencyList(@JsonProperty("currencies") Currency[] currencies, @JsonProperty("sum") Integer sum) {
+        this.currencies = currencies;
+        this.sum = sum;
+  }
 }

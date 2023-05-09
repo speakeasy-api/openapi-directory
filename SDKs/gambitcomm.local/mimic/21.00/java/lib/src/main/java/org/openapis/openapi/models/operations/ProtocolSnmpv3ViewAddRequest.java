@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3ViewAddRequest {
@@ -12,6 +13,7 @@ public class ProtocolSnmpv3ViewAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolSnmpv3ViewAddRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,6 +24,7 @@ public class ProtocolSnmpv3ViewAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mask")
     public String mask;
+
     public ProtocolSnmpv3ViewAddRequest withMask(String mask) {
         this.mask = mask;
         return this;
@@ -32,6 +35,7 @@ public class ProtocolSnmpv3ViewAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subtree")
     public String subtree;
+
     public ProtocolSnmpv3ViewAddRequest withSubtree(String subtree) {
         this.subtree = subtree;
         return this;
@@ -42,6 +46,7 @@ public class ProtocolSnmpv3ViewAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewName")
     public String viewName;
+
     public ProtocolSnmpv3ViewAddRequest withViewName(String viewName) {
         this.viewName = viewName;
         return this;
@@ -52,9 +57,17 @@ public class ProtocolSnmpv3ViewAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewType")
     public String viewType;
+
     public ProtocolSnmpv3ViewAddRequest withViewType(String viewType) {
         this.viewType = viewType;
         return this;
     }
     
+    public ProtocolSnmpv3ViewAddRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("mask") String mask, @JsonProperty("subtree") String subtree, @JsonProperty("viewName") String viewName, @JsonProperty("viewType") String viewType) {
+        this.agentNum = agentNum;
+        this.mask = mask;
+        this.subtree = subtree;
+        this.viewName = viewName;
+        this.viewType = viewType;
+  }
 }

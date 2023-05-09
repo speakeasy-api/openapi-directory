@@ -15,6 +15,7 @@ public class AwsOpenSearchServiceDomainMasterUserOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterUserArn")
     public String masterUserArn;
+
     public AwsOpenSearchServiceDomainMasterUserOptionsDetails withMasterUserArn(String masterUserArn) {
         this.masterUserArn = masterUserArn;
         return this;
@@ -23,6 +24,7 @@ public class AwsOpenSearchServiceDomainMasterUserOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterUserName")
     public String masterUserName;
+
     public AwsOpenSearchServiceDomainMasterUserOptionsDetails withMasterUserName(String masterUserName) {
         this.masterUserName = masterUserName;
         return this;
@@ -31,9 +33,11 @@ public class AwsOpenSearchServiceDomainMasterUserOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterUserPassword")
     public String masterUserPassword;
+
     public AwsOpenSearchServiceDomainMasterUserOptionsDetails withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
     }
     
+    public AwsOpenSearchServiceDomainMasterUserOptionsDetails(){}
 }

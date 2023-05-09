@@ -15,6 +15,7 @@ public class ListAvailableResourceDimensionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricDimensions")
     public MetricDimensionGroups[] metricDimensions;
+
     public ListAvailableResourceDimensionsResponse withMetricDimensions(MetricDimensionGroups[] metricDimensions) {
         this.metricDimensions = metricDimensions;
         return this;
@@ -23,9 +24,11 @@ public class ListAvailableResourceDimensionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAvailableResourceDimensionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAvailableResourceDimensionsResponse(){}
 }

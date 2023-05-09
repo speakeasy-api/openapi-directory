@@ -12,6 +12,7 @@ public class DescribeMatchmakingConfigurationsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeMatchmakingConfigurationsInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,6 +21,7 @@ public class DescribeMatchmakingConfigurationsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Names")
     public String[] names;
+
     public DescribeMatchmakingConfigurationsInput withNames(String[] names) {
         this.names = names;
         return this;
@@ -28,6 +30,7 @@ public class DescribeMatchmakingConfigurationsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeMatchmakingConfigurationsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class DescribeMatchmakingConfigurationsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleSetName")
     public String ruleSetName;
+
     public DescribeMatchmakingConfigurationsInput withRuleSetName(String ruleSetName) {
         this.ruleSetName = ruleSetName;
         return this;
     }
     
+    public DescribeMatchmakingConfigurationsInput(){}
 }

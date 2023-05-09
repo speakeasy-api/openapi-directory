@@ -12,6 +12,7 @@ public class CreatePotRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custodian_account_reference")
     public String custodianAccountReference;
+
     public CreatePotRequestBodyInput withCustodianAccountReference(String custodianAccountReference) {
         this.custodianAccountReference = custodianAccountReference;
         return this;
@@ -20,6 +21,7 @@ public class CreatePotRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custodian_client_ref")
     public String custodianClientRef;
+
     public CreatePotRequestBodyInput withCustodianClientRef(String custodianClientRef) {
         this.custodianClientRef = custodianClientRef;
         return this;
@@ -28,6 +30,7 @@ public class CreatePotRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custodian_id")
     public String custodianId;
+
     public CreatePotRequestBodyInput withCustodianId(String custodianId) {
         this.custodianId = custodianId;
         return this;
@@ -35,6 +38,7 @@ public class CreatePotRequestBodyInput {
     
     @JsonProperty("financial_product_id")
     public String financialProductId;
+
     public CreatePotRequestBodyInput withFinancialProductId(String financialProductId) {
         this.financialProductId = financialProductId;
         return this;
@@ -42,6 +46,7 @@ public class CreatePotRequestBodyInput {
     
     @JsonProperty("investor_id")
     public String[] investorId;
+
     public CreatePotRequestBodyInput withInvestorId(String[] investorId) {
         this.investorId = investorId;
         return this;
@@ -50,6 +55,7 @@ public class CreatePotRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolio_template_id")
     public String portfolioTemplateId;
+
     public CreatePotRequestBodyInput withPortfolioTemplateId(String portfolioTemplateId) {
         this.portfolioTemplateId = portfolioTemplateId;
         return this;
@@ -61,6 +67,7 @@ public class CreatePotRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pot_currency")
     public CreatePotRequestBodyPotCurrencyEnum potCurrency;
+
     public CreatePotRequestBodyInput withPotCurrency(CreatePotRequestBodyPotCurrencyEnum potCurrency) {
         this.potCurrency = potCurrency;
         return this;
@@ -68,6 +75,7 @@ public class CreatePotRequestBodyInput {
     
     @JsonProperty("pot_name")
     public String potName;
+
     public CreatePotRequestBodyInput withPotName(String potName) {
         this.potName = potName;
         return this;
@@ -76,6 +84,7 @@ public class CreatePotRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regulator_advisor_id")
     public String regulatorAdvisorId;
+
     public CreatePotRequestBodyInput withRegulatorAdvisorId(String regulatorAdvisorId) {
         this.regulatorAdvisorId = regulatorAdvisorId;
         return this;
@@ -86,6 +95,7 @@ public class CreatePotRequestBodyInput {
      */
     @JsonProperty("request_id")
     public String requestId;
+
     public CreatePotRequestBodyInput withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -93,9 +103,17 @@ public class CreatePotRequestBodyInput {
     
     @JsonProperty("status")
     public CreatePotRequestBodyStatusEnum status;
+
     public CreatePotRequestBodyInput withStatus(CreatePotRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreatePotRequestBodyInput(@JsonProperty("financial_product_id") String financialProductId, @JsonProperty("investor_id") String[] investorId, @JsonProperty("pot_name") String potName, @JsonProperty("request_id") String requestId, @JsonProperty("status") CreatePotRequestBodyStatusEnum status) {
+        this.financialProductId = financialProductId;
+        this.investorId = investorId;
+        this.potName = potName;
+        this.requestId = requestId;
+        this.status = status;
+  }
 }

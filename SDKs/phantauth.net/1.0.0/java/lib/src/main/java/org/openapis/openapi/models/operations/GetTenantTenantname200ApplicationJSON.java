@@ -18,6 +18,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("@id")
     public String atId;
+
     public GetTenantTenantname200ApplicationJSON withAtId(String atId) {
         this.atId = atId;
         return this;
@@ -29,6 +30,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("about")
     public String about;
+
     public GetTenantTenantname200ApplicationJSON withAbout(String about) {
         this.about = about;
         return this;
@@ -40,6 +42,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribution")
     public String attribution;
+
     public GetTenantTenantname200ApplicationJSON withAttribution(String attribution) {
         this.attribution = attribution;
         return this;
@@ -55,6 +58,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("depot")
     public String depot;
+
     public GetTenantTenantname200ApplicationJSON withDepot(String depot) {
         this.depot = depot;
         return this;
@@ -66,6 +70,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("depots")
     public Object[] depots;
+
     public GetTenantTenantname200ApplicationJSON withDepots(Object[] depots) {
         this.depots = depots;
         return this;
@@ -77,6 +82,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public Boolean domain;
+
     public GetTenantTenantname200ApplicationJSON withDomain(Boolean domain) {
         this.domain = domain;
         return this;
@@ -88,6 +94,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("factories")
     public Object[] factories;
+
     public GetTenantTenantname200ApplicationJSON withFactories(Object[] factories) {
         this.factories = factories;
         return this;
@@ -100,6 +107,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("factory")
     public String factory;
+
     public GetTenantTenantname200ApplicationJSON withFactory(String factory) {
         this.factory = factory;
         return this;
@@ -111,6 +119,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("favicon")
     public String favicon;
+
     public GetTenantTenantname200ApplicationJSON withFavicon(String favicon) {
         this.favicon = favicon;
         return this;
@@ -122,6 +131,7 @@ public class GetTenantTenantname200ApplicationJSON {
      */
     @JsonProperty("issuer")
     public String issuer;
+
     public GetTenantTenantname200ApplicationJSON withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -133,6 +143,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public GetTenantTenantname200ApplicationJSON withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -144,6 +155,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetTenantTenantname200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -155,6 +167,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public GetTenantTenantname200ApplicationJSON withScript(String script) {
         this.script = script;
         return this;
@@ -167,6 +180,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheet")
     public String sheet;
+
     public GetTenantTenantname200ApplicationJSON withSheet(String sheet) {
         this.sheet = sheet;
         return this;
@@ -177,6 +191,7 @@ public class GetTenantTenantname200ApplicationJSON {
      */
     @JsonProperty("sub")
     public String sub;
+
     public GetTenantTenantname200ApplicationJSON withSub(String sub) {
         this.sub = sub;
         return this;
@@ -188,6 +203,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtenant")
     public Boolean subtenant;
+
     public GetTenantTenantname200ApplicationJSON withSubtenant(Boolean subtenant) {
         this.subtenant = subtenant;
         return this;
@@ -199,6 +215,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public GetTenantTenantname200ApplicationJSON withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -211,6 +228,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public GetTenantTenantname200ApplicationJSON withTemplate(String template) {
         this.template = template;
         return this;
@@ -223,6 +241,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("theme")
     public String theme;
+
     public GetTenantTenantname200ApplicationJSON withTheme(String theme) {
         this.theme = theme;
         return this;
@@ -231,6 +250,7 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userinfo")
     public String userinfo;
+
     public GetTenantTenantname200ApplicationJSON withUserinfo(String userinfo) {
         this.userinfo = userinfo;
         return this;
@@ -242,9 +262,14 @@ public class GetTenantTenantname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public GetTenantTenantname200ApplicationJSON withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public GetTenantTenantname200ApplicationJSON(@JsonProperty("issuer") String issuer, @JsonProperty("sub") String sub) {
+        this.issuer = issuer;
+        this.sub = sub;
+  }
 }

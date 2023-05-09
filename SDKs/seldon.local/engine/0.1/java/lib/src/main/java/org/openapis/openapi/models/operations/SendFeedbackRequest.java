@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendFeedbackRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Feedback feedback;
+
     public SendFeedbackRequest withFeedback(org.openapis.openapi.models.shared.Feedback feedback) {
         this.feedback = feedback;
         return this;
@@ -16,6 +18,7 @@ public class SendFeedbackRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
     public String deployment;
+
     public SendFeedbackRequest withDeployment(String deployment) {
         this.deployment = deployment;
         return this;
@@ -23,9 +26,15 @@ public class SendFeedbackRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
     public String namespace;
+
     public SendFeedbackRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public SendFeedbackRequest(@JsonProperty("Feedback") org.openapis.openapi.models.shared.Feedback feedback, @JsonProperty("deployment") String deployment, @JsonProperty("namespace") String namespace) {
+        this.feedback = feedback;
+        this.deployment = deployment;
+        this.namespace = namespace;
+  }
 }

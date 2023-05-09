@@ -12,9 +12,13 @@ public class PutAccountPreferencesRequestBody {
      */
     @JsonProperty("ResourceIdType")
     public PutAccountPreferencesRequestBodyResourceIdTypeEnum resourceIdType;
+
     public PutAccountPreferencesRequestBody withResourceIdType(PutAccountPreferencesRequestBodyResourceIdTypeEnum resourceIdType) {
         this.resourceIdType = resourceIdType;
         return this;
     }
     
+    public PutAccountPreferencesRequestBody(@JsonProperty("ResourceIdType") PutAccountPreferencesRequestBodyResourceIdTypeEnum resourceIdType) {
+        this.resourceIdType = resourceIdType;
+  }
 }

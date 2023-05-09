@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFilePaymentConsentsConsentIdResponse {
     
     public byte[] body;
+
     public GetFilePaymentConsentsConsentIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetFilePaymentConsentsConsentIdResponse {
     
     
     public String contentType;
+
     public GetFilePaymentConsentsConsentIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetFilePaymentConsentsConsentIdResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetFilePaymentConsentsConsentIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetFilePaymentConsentsConsentIdResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public GetFilePaymentConsentsConsentIdResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -43,6 +48,7 @@ public class GetFilePaymentConsentsConsentIdResponse {
      */
     
     public org.openapis.openapi.models.shared.OBWriteFileConsentResponse4 obWriteFileConsentResponse4;
+
     public GetFilePaymentConsentsConsentIdResponse withOBWriteFileConsentResponse4(org.openapis.openapi.models.shared.OBWriteFileConsentResponse4 obWriteFileConsentResponse4) {
         this.obWriteFileConsentResponse4 = obWriteFileConsentResponse4;
         return this;
@@ -50,6 +56,7 @@ public class GetFilePaymentConsentsConsentIdResponse {
     
     
     public Integer statusCode;
+
     public GetFilePaymentConsentsConsentIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class GetFilePaymentConsentsConsentIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFilePaymentConsentsConsentIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFilePaymentConsentsConsentIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

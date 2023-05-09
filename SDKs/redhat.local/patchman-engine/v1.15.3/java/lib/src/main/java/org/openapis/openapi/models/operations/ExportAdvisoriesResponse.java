@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportAdvisoriesResponse {
     
     public byte[] body;
+
     public ExportAdvisoriesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ExportAdvisoriesResponse {
     
     
     public String contentType;
+
     public ExportAdvisoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ExportAdvisoriesResponse {
     
     
     public Integer statusCode;
+
     public ExportAdvisoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ExportAdvisoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportAdvisoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ExportAdvisoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ControllersAdvisoryInlineItem[] controllersAdvisoryInlineItems;
+
     public ExportAdvisoriesResponse withControllersAdvisoryInlineItems(org.openapis.openapi.models.shared.ControllersAdvisoryInlineItem[] controllersAdvisoryInlineItems) {
         this.controllersAdvisoryInlineItems = controllersAdvisoryInlineItems;
         return this;
     }
     
+    public ExportAdvisoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

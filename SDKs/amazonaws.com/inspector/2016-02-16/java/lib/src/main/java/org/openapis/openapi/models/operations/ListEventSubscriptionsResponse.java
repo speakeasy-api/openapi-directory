@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEventSubscriptionsResponse {
@@ -12,6 +13,7 @@ public class ListEventSubscriptionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListEventSubscriptionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListEventSubscriptionsResponse {
     
     
     public String contentType;
+
     public ListEventSubscriptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListEventSubscriptionsResponse {
      */
     
     public Object internalException;
+
     public ListEventSubscriptionsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class ListEventSubscriptionsResponse {
      */
     
     public Object invalidInputException;
+
     public ListEventSubscriptionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListEventSubscriptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEventSubscriptionsResponse listEventSubscriptionsResponse;
+
     public ListEventSubscriptionsResponse withListEventSubscriptionsResponse(org.openapis.openapi.models.shared.ListEventSubscriptionsResponse listEventSubscriptionsResponse) {
         this.listEventSubscriptionsResponse = listEventSubscriptionsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListEventSubscriptionsResponse {
      */
     
     public Object noSuchEntityException;
+
     public ListEventSubscriptionsResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -66,6 +73,7 @@ public class ListEventSubscriptionsResponse {
     
     
     public Integer statusCode;
+
     public ListEventSubscriptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListEventSubscriptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEventSubscriptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListEventSubscriptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

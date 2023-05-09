@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetPrincipalTagAttributeMapInput {
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public SetPrincipalTagAttributeMapInput withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -18,6 +19,7 @@ public class SetPrincipalTagAttributeMapInput {
     
     @JsonProperty("IdentityProviderName")
     public String identityProviderName;
+
     public SetPrincipalTagAttributeMapInput withIdentityProviderName(String identityProviderName) {
         this.identityProviderName = identityProviderName;
         return this;
@@ -26,6 +28,7 @@ public class SetPrincipalTagAttributeMapInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalTags")
     public java.util.Map<String, String> principalTags;
+
     public SetPrincipalTagAttributeMapInput withPrincipalTags(java.util.Map<String, String> principalTags) {
         this.principalTags = principalTags;
         return this;
@@ -34,9 +37,14 @@ public class SetPrincipalTagAttributeMapInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseDefaults")
     public Boolean useDefaults;
+
     public SetPrincipalTagAttributeMapInput withUseDefaults(Boolean useDefaults) {
         this.useDefaults = useDefaults;
         return this;
     }
     
+    public SetPrincipalTagAttributeMapInput(@JsonProperty("IdentityPoolId") String identityPoolId, @JsonProperty("IdentityProviderName") String identityProviderName) {
+        this.identityPoolId = identityPoolId;
+        this.identityProviderName = identityProviderName;
+  }
 }

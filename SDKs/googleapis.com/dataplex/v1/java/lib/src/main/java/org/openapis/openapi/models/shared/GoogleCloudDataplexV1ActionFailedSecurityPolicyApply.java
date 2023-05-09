@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1ActionFailedSecurityPolicyApply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset")
     public String asset;
+
     public GoogleCloudDataplexV1ActionFailedSecurityPolicyApply withAsset(String asset) {
         this.asset = asset;
         return this;
     }
     
+    public GoogleCloudDataplexV1ActionFailedSecurityPolicyApply(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateApprovalRuleTemplateInput {
     @JsonProperty("approvalRuleTemplateContent")
     public String approvalRuleTemplateContent;
+
     public CreateApprovalRuleTemplateInput withApprovalRuleTemplateContent(String approvalRuleTemplateContent) {
         this.approvalRuleTemplateContent = approvalRuleTemplateContent;
         return this;
@@ -19,6 +20,7 @@ public class CreateApprovalRuleTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalRuleTemplateDescription")
     public String approvalRuleTemplateDescription;
+
     public CreateApprovalRuleTemplateInput withApprovalRuleTemplateDescription(String approvalRuleTemplateDescription) {
         this.approvalRuleTemplateDescription = approvalRuleTemplateDescription;
         return this;
@@ -26,9 +28,14 @@ public class CreateApprovalRuleTemplateInput {
     
     @JsonProperty("approvalRuleTemplateName")
     public String approvalRuleTemplateName;
+
     public CreateApprovalRuleTemplateInput withApprovalRuleTemplateName(String approvalRuleTemplateName) {
         this.approvalRuleTemplateName = approvalRuleTemplateName;
         return this;
     }
     
+    public CreateApprovalRuleTemplateInput(@JsonProperty("approvalRuleTemplateContent") String approvalRuleTemplateContent, @JsonProperty("approvalRuleTemplateName") String approvalRuleTemplateName) {
+        this.approvalRuleTemplateContent = approvalRuleTemplateContent;
+        this.approvalRuleTemplateName = approvalRuleTemplateName;
+  }
 }

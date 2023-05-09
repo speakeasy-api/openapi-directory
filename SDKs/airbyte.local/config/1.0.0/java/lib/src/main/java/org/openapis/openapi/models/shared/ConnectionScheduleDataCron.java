@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnectionScheduleDataCron {
     @JsonProperty("cronExpression")
     public String cronExpression;
+
     public ConnectionScheduleDataCron withCronExpression(String cronExpression) {
         this.cronExpression = cronExpression;
         return this;
@@ -16,9 +17,14 @@ public class ConnectionScheduleDataCron {
     
     @JsonProperty("cronTimeZone")
     public String cronTimeZone;
+
     public ConnectionScheduleDataCron withCronTimeZone(String cronTimeZone) {
         this.cronTimeZone = cronTimeZone;
         return this;
     }
     
+    public ConnectionScheduleDataCron(@JsonProperty("cronExpression") String cronExpression, @JsonProperty("cronTimeZone") String cronTimeZone) {
+        this.cronExpression = cronExpression;
+        this.cronTimeZone = cronTimeZone;
+  }
 }

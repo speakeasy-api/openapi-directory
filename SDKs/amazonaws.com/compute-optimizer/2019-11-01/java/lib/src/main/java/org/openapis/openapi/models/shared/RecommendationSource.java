@@ -15,6 +15,7 @@ public class RecommendationSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationSourceArn")
     public String recommendationSourceArn;
+
     public RecommendationSource withRecommendationSourceArn(String recommendationSourceArn) {
         this.recommendationSourceArn = recommendationSourceArn;
         return this;
@@ -23,9 +24,11 @@ public class RecommendationSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationSourceType")
     public RecommendationSourceTypeEnum recommendationSourceType;
+
     public RecommendationSource withRecommendationSourceType(RecommendationSourceTypeEnum recommendationSourceType) {
         this.recommendationSourceType = recommendationSourceType;
         return this;
     }
     
+    public RecommendationSource(){}
 }

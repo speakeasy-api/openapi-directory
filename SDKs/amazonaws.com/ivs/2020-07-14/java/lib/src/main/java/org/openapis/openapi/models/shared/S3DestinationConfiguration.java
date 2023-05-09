@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3DestinationConfiguration {
     @JsonProperty("bucketName")
     public String bucketName;
+
     public S3DestinationConfiguration withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
     }
     
+    public S3DestinationConfiguration(@JsonProperty("bucketName") String bucketName) {
+        this.bucketName = bucketName;
+  }
 }

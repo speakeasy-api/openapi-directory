@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidates")
     public GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate[] candidates;
+
     public GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel withCandidates(GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate[] candidates) {
         this.candidates = candidates;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultCandidate")
     public GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate defaultCandidate;
+
     public GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel withDefaultCandidate(GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate defaultCandidate) {
         this.defaultCandidate = defaultCandidate;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel(){}
 }

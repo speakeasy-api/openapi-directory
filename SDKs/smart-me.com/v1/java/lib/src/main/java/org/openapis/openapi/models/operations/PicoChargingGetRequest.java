@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PicoChargingGetRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PicoChargingGetRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PicoChargingGetRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

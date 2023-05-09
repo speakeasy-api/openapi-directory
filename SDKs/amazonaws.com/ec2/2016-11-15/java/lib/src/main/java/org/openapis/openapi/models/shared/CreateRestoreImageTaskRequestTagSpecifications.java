@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateRestoreImageTaskRequestTagSpecifications {
     
     public CreateRestoreImageTaskRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateRestoreImageTaskRequestTagSpecifications withResourceType(CreateRestoreImageTaskRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateRestoreImageTaskRequestTagSpecifications {
     
     
     public CreateRestoreImageTaskRequestTagSpecificationsTags[] tags;
+
     public CreateRestoreImageTaskRequestTagSpecifications withTags(CreateRestoreImageTaskRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRestoreImageTaskRequestTagSpecifications(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteVpcEndpointConnectionNotificationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteVpcEndpointConnectionNotificationsActionEnum action;
+
     public GETDeleteVpcEndpointConnectionNotificationsRequest withAction(GETDeleteVpcEndpointConnectionNotificationsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteVpcEndpointConnectionNotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConnectionNotificationId")
     public String[] connectionNotificationId;
+
     public GETDeleteVpcEndpointConnectionNotificationsRequest withConnectionNotificationId(String[] connectionNotificationId) {
         this.connectionNotificationId = connectionNotificationId;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteVpcEndpointConnectionNotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDeleteVpcEndpointConnectionNotificationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteVpcEndpointConnectionNotificationsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteVpcEndpointConnectionNotificationsVersionEnum version;
+
     public GETDeleteVpcEndpointConnectionNotificationsRequest withVersion(GETDeleteVpcEndpointConnectionNotificationsVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDeleteVpcEndpointConnectionNotificationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteVpcEndpointConnectionNotificationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeleteVpcEndpointConnectionNotificationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteVpcEndpointConnectionNotificationsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeleteVpcEndpointConnectionNotificationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteVpcEndpointConnectionNotificationsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeleteVpcEndpointConnectionNotificationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteVpcEndpointConnectionNotificationsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeleteVpcEndpointConnectionNotificationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteVpcEndpointConnectionNotificationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeleteVpcEndpointConnectionNotificationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteVpcEndpointConnectionNotificationsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDeleteVpcEndpointConnectionNotificationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteVpcEndpointConnectionNotificationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteVpcEndpointConnectionNotificationsRequest(@JsonProperty("Action") GETDeleteVpcEndpointConnectionNotificationsActionEnum action, @JsonProperty("ConnectionNotificationId") String[] connectionNotificationId, @JsonProperty("Version") GETDeleteVpcEndpointConnectionNotificationsVersionEnum version) {
+        this.action = action;
+        this.connectionNotificationId = connectionNotificationId;
+        this.version = version;
+  }
 }

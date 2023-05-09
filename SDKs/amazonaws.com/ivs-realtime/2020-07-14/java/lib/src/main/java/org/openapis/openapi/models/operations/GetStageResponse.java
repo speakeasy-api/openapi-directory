@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStageResponse {
@@ -12,6 +13,7 @@ public class GetStageResponse {
      */
     
     public Object accessDeniedException;
+
     public GetStageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetStageResponse {
     
     
     public String contentType;
+
     public GetStageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetStageResponse {
      */
     
     public org.openapis.openapi.models.shared.GetStageResponse getStageResponse;
+
     public GetStageResponse withGetStageResponse(org.openapis.openapi.models.shared.GetStageResponse getStageResponse) {
         this.getStageResponse = getStageResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetStageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetStageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetStageResponse {
     
     
     public Integer statusCode;
+
     public GetStageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetStageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetStageResponse {
      */
     
     public Object validationException;
+
     public GetStageResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetStageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

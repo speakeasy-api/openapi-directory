@@ -12,9 +12,11 @@ public class CurrenciesSupportedCurrenciesSummaryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public CurrenciesSupportedCurrenciesSummaryGETFormatEnum format;
+
     public CurrenciesSupportedCurrenciesSummaryGETRequest withFormat(CurrenciesSupportedCurrenciesSummaryGETFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public CurrenciesSupportedCurrenciesSummaryGETRequest(){}
 }

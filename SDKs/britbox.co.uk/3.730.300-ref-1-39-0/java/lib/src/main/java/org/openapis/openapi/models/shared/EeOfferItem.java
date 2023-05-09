@@ -12,9 +12,13 @@ public class EeOfferItem {
      */
     @JsonProperty("name")
     public String name;
+
     public EeOfferItem withName(String name) {
         this.name = name;
         return this;
     }
     
+    public EeOfferItem(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

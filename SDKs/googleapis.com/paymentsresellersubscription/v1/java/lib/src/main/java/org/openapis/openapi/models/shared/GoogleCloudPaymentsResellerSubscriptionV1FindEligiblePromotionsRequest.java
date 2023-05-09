@@ -15,6 +15,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequ
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -26,6 +27,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequ
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -37,9 +39,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequ
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest(){}
 }

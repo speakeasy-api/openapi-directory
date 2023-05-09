@@ -12,6 +12,7 @@ public class UpdatePrice200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public UpdatePrice200ApplicationJSONErrorsCategoryEnum category;
+
     public UpdatePrice200ApplicationJSONErrors withCategory(UpdatePrice200ApplicationJSONErrorsCategoryEnum category) {
         this.category = category;
         return this;
@@ -20,6 +21,7 @@ public class UpdatePrice200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("causes")
     public UpdatePrice200ApplicationJSONErrorsCauses[] causes;
+
     public UpdatePrice200ApplicationJSONErrors withCauses(UpdatePrice200ApplicationJSONErrorsCauses[] causes) {
         this.causes = causes;
         return this;
@@ -27,6 +29,7 @@ public class UpdatePrice200ApplicationJSONErrors {
     
     @JsonProperty("code")
     public String code;
+
     public UpdatePrice200ApplicationJSONErrors withCode(String code) {
         this.code = code;
         return this;
@@ -35,6 +38,7 @@ public class UpdatePrice200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("component")
     public String component;
+
     public UpdatePrice200ApplicationJSONErrors withComponent(String component) {
         this.component = component;
         return this;
@@ -43,6 +47,7 @@ public class UpdatePrice200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdatePrice200ApplicationJSONErrors withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +56,7 @@ public class UpdatePrice200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorIdentifiers")
     public java.util.Map<String, java.util.Map<String, Object>> errorIdentifiers;
+
     public UpdatePrice200ApplicationJSONErrors withErrorIdentifiers(java.util.Map<String, java.util.Map<String, Object>> errorIdentifiers) {
         this.errorIdentifiers = errorIdentifiers;
         return this;
@@ -59,6 +65,7 @@ public class UpdatePrice200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public UpdatePrice200ApplicationJSONErrors withField(String field) {
         this.field = field;
         return this;
@@ -67,6 +74,7 @@ public class UpdatePrice200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatewayErrorCategory")
     public UpdatePrice200ApplicationJSONErrorsGatewayErrorCategoryEnum gatewayErrorCategory;
+
     public UpdatePrice200ApplicationJSONErrors withGatewayErrorCategory(UpdatePrice200ApplicationJSONErrorsGatewayErrorCategoryEnum gatewayErrorCategory) {
         this.gatewayErrorCategory = gatewayErrorCategory;
         return this;
@@ -75,6 +83,7 @@ public class UpdatePrice200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public String info;
+
     public UpdatePrice200ApplicationJSONErrors withInfo(String info) {
         this.info = info;
         return this;
@@ -83,6 +92,7 @@ public class UpdatePrice200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public UpdatePrice200ApplicationJSONErrors withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -91,6 +101,7 @@ public class UpdatePrice200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public UpdatePrice200ApplicationJSONErrorsSeverityEnum severity;
+
     public UpdatePrice200ApplicationJSONErrors withSeverity(UpdatePrice200ApplicationJSONErrorsSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -99,9 +110,13 @@ public class UpdatePrice200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public UpdatePrice200ApplicationJSONErrors withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UpdatePrice200ApplicationJSONErrors(@JsonProperty("code") String code) {
+        this.code = code;
+  }
 }

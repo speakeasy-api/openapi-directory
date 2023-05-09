@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetLoadBalancersIdActionsActionsResponse {
     @JsonProperty("actions")
     public GetLoadBalancersIdActionsActionsResponseAction[] actions;
+
     public GetLoadBalancersIdActionsActionsResponse withActions(GetLoadBalancersIdActionsActionsResponseAction[] actions) {
         this.actions = actions;
         return this;
@@ -22,9 +23,13 @@ public class GetLoadBalancersIdActionsActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetLoadBalancersIdActionsActionsResponseMeta meta;
+
     public GetLoadBalancersIdActionsActionsResponse withMeta(GetLoadBalancersIdActionsActionsResponseMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetLoadBalancersIdActionsActionsResponse(@JsonProperty("actions") GetLoadBalancersIdActionsActionsResponseAction[] actions) {
+        this.actions = actions;
+  }
 }

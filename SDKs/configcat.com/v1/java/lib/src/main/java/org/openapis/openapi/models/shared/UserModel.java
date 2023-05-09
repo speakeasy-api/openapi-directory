@@ -12,6 +12,7 @@ public class UserModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserModel withEmail(String email) {
         this.email = email;
         return this;
@@ -20,6 +21,7 @@ public class UserModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullName")
     public String fullName;
+
     public UserModel withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -28,9 +30,11 @@ public class UserModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public UserModel withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public UserModel(){}
 }

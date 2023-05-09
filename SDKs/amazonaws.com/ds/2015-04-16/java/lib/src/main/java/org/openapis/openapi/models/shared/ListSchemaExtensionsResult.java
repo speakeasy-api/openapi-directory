@@ -15,6 +15,7 @@ public class ListSchemaExtensionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSchemaExtensionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSchemaExtensionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaExtensionsInfo")
     public SchemaExtensionInfo[] schemaExtensionsInfo;
+
     public ListSchemaExtensionsResult withSchemaExtensionsInfo(SchemaExtensionInfo[] schemaExtensionsInfo) {
         this.schemaExtensionsInfo = schemaExtensionsInfo;
         return this;
     }
     
+    public ListSchemaExtensionsResult(){}
 }

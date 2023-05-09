@@ -103,6 +103,7 @@ public class SDK {
     public Snapshots snapshots;
     public SslCertificates sslCertificates;
     public SslPolicies sslPolicies;
+    public StoragePools storagePools;
     public Subnetworks subnetworks;
     public TargetGrpcProxies targetGrpcProxies;
     public TargetHttpProxies targetHttpProxies;
@@ -206,6 +207,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.acceleratorTypes = new AcceleratorTypes(
@@ -956,6 +962,15 @@ public class SDK {
 		);
 		
 		this.sslPolicies = new SslPolicies(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.storagePools = new StoragePools(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,

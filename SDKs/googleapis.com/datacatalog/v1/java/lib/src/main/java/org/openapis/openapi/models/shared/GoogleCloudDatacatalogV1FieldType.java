@@ -12,6 +12,7 @@ public class GoogleCloudDatacatalogV1FieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enumType")
     public GoogleCloudDatacatalogV1FieldTypeEnumType enumType;
+
     public GoogleCloudDatacatalogV1FieldType withEnumType(GoogleCloudDatacatalogV1FieldTypeEnumType enumType) {
         this.enumType = enumType;
         return this;
@@ -23,9 +24,11 @@ public class GoogleCloudDatacatalogV1FieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primitiveType")
     public GoogleCloudDatacatalogV1FieldTypePrimitiveTypeEnum primitiveType;
+
     public GoogleCloudDatacatalogV1FieldType withPrimitiveType(GoogleCloudDatacatalogV1FieldTypePrimitiveTypeEnum primitiveType) {
         this.primitiveType = primitiveType;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1FieldType(){}
 }

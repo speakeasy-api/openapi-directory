@@ -18,6 +18,7 @@ public class ApigatewayApiInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ApigatewayApiInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class ApigatewayApiInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ApigatewayApiInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,9 +42,11 @@ public class ApigatewayApiInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedService")
     public String managedService;
+
     public ApigatewayApiInput withManagedService(String managedService) {
         this.managedService = managedService;
         return this;
     }
     
+    public ApigatewayApiInput(){}
 }

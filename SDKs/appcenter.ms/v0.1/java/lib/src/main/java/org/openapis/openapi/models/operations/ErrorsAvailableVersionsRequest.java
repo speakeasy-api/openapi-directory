@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class ErrorsAvailableVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$filter")
     public String dollarFilter;
+
     public ErrorsAvailableVersionsRequest withDollarFilter(String dollarFilter) {
         this.dollarFilter = dollarFilter;
         return this;
@@ -23,6 +25,7 @@ public class ErrorsAvailableVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$inlinecount")
     public ErrorsAvailableVersionsDollarInlinecountEnum dollarInlinecount;
+
     public ErrorsAvailableVersionsRequest withDollarInlinecount(ErrorsAvailableVersionsDollarInlinecountEnum dollarInlinecount) {
         this.dollarInlinecount = dollarInlinecount;
         return this;
@@ -33,6 +36,7 @@ public class ErrorsAvailableVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$skip")
     public Long dollarSkip;
+
     public ErrorsAvailableVersionsRequest withDollarSkip(Long dollarSkip) {
         this.dollarSkip = dollarSkip;
         return this;
@@ -43,6 +47,7 @@ public class ErrorsAvailableVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$top")
     public Long dollarTop;
+
     public ErrorsAvailableVersionsRequest withDollarTop(Long dollarTop) {
         this.dollarTop = dollarTop;
         return this;
@@ -53,6 +58,7 @@ public class ErrorsAvailableVersionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ErrorsAvailableVersionsRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -63,6 +69,7 @@ public class ErrorsAvailableVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public OffsetDateTime end;
+
     public ErrorsAvailableVersionsRequest withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -73,6 +80,7 @@ public class ErrorsAvailableVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=errorType")
     public ErrorsAvailableVersionsErrorTypeEnum errorType;
+
     public ErrorsAvailableVersionsRequest withErrorType(ErrorsAvailableVersionsErrorTypeEnum errorType) {
         this.errorType = errorType;
         return this;
@@ -83,6 +91,7 @@ public class ErrorsAvailableVersionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ErrorsAvailableVersionsRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -93,9 +102,15 @@ public class ErrorsAvailableVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public OffsetDateTime start;
+
     public ErrorsAvailableVersionsRequest withStart(OffsetDateTime start) {
         this.start = start;
         return this;
     }
     
+    public ErrorsAvailableVersionsRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("start") OffsetDateTime start) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.start = start;
+  }
 }

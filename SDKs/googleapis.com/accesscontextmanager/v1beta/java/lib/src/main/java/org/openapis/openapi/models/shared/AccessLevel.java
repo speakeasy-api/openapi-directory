@@ -18,6 +18,7 @@ public class AccessLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basic")
     public BasicLevel basic;
+
     public AccessLevel withBasic(BasicLevel basic) {
         this.basic = basic;
         return this;
@@ -29,6 +30,7 @@ public class AccessLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom")
     public CustomLevel custom;
+
     public AccessLevel withCustom(CustomLevel custom) {
         this.custom = custom;
         return this;
@@ -40,6 +42,7 @@ public class AccessLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AccessLevel withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class AccessLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccessLevel withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class AccessLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public AccessLevel withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public AccessLevel(){}
 }

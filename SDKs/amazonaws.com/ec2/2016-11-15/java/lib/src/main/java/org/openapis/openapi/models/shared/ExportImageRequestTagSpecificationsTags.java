@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ExportImageRequestTagSpecificationsTags {
     
     public String key;
+
     public ExportImageRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class ExportImageRequestTagSpecificationsTags {
     
     
     public String value;
+
     public ExportImageRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ExportImageRequestTagSpecificationsTags(){}
 }

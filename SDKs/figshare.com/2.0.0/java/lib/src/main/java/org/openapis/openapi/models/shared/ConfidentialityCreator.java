@@ -12,9 +12,13 @@ public class ConfidentialityCreator {
      */
     @JsonProperty("reason")
     public String reason;
+
     public ConfidentialityCreator withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public ConfidentialityCreator(@JsonProperty("reason") String reason) {
+        this.reason = reason;
+  }
 }

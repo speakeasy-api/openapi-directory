@@ -19,6 +19,7 @@ public class OwnerOpeningBalanceDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("entryDate")
     public OffsetDateTime entryDate;
+
     public OwnerOpeningBalanceDto withEntryDate(OffsetDateTime entryDate) {
         this.entryDate = entryDate;
         return this;
@@ -27,6 +28,7 @@ public class OwnerOpeningBalanceDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public OwnerOpeningBalanceDto withId(Long id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class OwnerOpeningBalanceDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isChanged")
     public Boolean isChanged;
+
     public OwnerOpeningBalanceDto withIsChanged(Boolean isChanged) {
         this.isChanged = isChanged;
         return this;
@@ -45,6 +48,7 @@ public class OwnerOpeningBalanceDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("procDate")
     public OffsetDateTime procDate;
+
     public OwnerOpeningBalanceDto withProcDate(OffsetDateTime procDate) {
         this.procDate = procDate;
         return this;
@@ -53,6 +57,7 @@ public class OwnerOpeningBalanceDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public OwnerOpeningBalanceDto withReference(String reference) {
         this.reference = reference;
         return this;
@@ -61,6 +66,7 @@ public class OwnerOpeningBalanceDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public OwnerOpeningBalanceDto withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -69,6 +75,7 @@ public class OwnerOpeningBalanceDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public OwnerOpeningBalanceDto withTotal(Double total) {
         this.total = total;
         return this;
@@ -77,6 +84,7 @@ public class OwnerOpeningBalanceDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalVAT")
     public Double totalVAT;
+
     public OwnerOpeningBalanceDto withTotalVAT(Double totalVAT) {
         this.totalVAT = totalVAT;
         return this;
@@ -85,6 +93,7 @@ public class OwnerOpeningBalanceDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unpaid")
     public Double unpaid;
+
     public OwnerOpeningBalanceDto withUnpaid(Double unpaid) {
         this.unpaid = unpaid;
         return this;
@@ -93,9 +102,11 @@ public class OwnerOpeningBalanceDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatEntries")
     public OwnerOpeningBalanceVatEntryDto[] vatEntries;
+
     public OwnerOpeningBalanceDto withVatEntries(OwnerOpeningBalanceVatEntryDto[] vatEntries) {
         this.vatEntries = vatEntries;
         return this;
     }
     
+    public OwnerOpeningBalanceDto(){}
 }

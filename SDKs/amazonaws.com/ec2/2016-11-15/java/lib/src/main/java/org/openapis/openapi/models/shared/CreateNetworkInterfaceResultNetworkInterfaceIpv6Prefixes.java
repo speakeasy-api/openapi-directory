@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInterfaceResultNetworkInterfaceIpv6Prefixes {
     
     public String ipv6Prefix;
+
     public CreateNetworkInterfaceResultNetworkInterfaceIpv6Prefixes withIpv6Prefix(String ipv6Prefix) {
         this.ipv6Prefix = ipv6Prefix;
         return this;
     }
     
+    public CreateNetworkInterfaceResultNetworkInterfaceIpv6Prefixes(){}
 }

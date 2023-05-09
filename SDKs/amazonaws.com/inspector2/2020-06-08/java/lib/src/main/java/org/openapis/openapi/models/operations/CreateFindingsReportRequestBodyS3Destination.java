@@ -15,6 +15,7 @@ public class CreateFindingsReportRequestBodyS3Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketName")
     public String bucketName;
+
     public CreateFindingsReportRequestBodyS3Destination withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -23,6 +24,7 @@ public class CreateFindingsReportRequestBodyS3Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPrefix")
     public String keyPrefix;
+
     public CreateFindingsReportRequestBodyS3Destination withKeyPrefix(String keyPrefix) {
         this.keyPrefix = keyPrefix;
         return this;
@@ -31,9 +33,11 @@ public class CreateFindingsReportRequestBodyS3Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public CreateFindingsReportRequestBodyS3Destination withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
     }
     
+    public CreateFindingsReportRequestBodyS3Destination(){}
 }

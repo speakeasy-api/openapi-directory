@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * LoggingConfig - Contains logging configuration information for an extension.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LoggingConfig {
     
     public String logGroupName;
+
     public LoggingConfig withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -19,9 +20,14 @@ public class LoggingConfig {
     
     
     public String logRoleArn;
+
     public LoggingConfig withLogRoleArn(String logRoleArn) {
         this.logRoleArn = logRoleArn;
         return this;
     }
     
+    public LoggingConfig(@JsonProperty("LogGroupName") String logGroupName, @JsonProperty("LogRoleArn") String logRoleArn) {
+        this.logGroupName = logGroupName;
+        this.logRoleArn = logRoleArn;
+  }
 }

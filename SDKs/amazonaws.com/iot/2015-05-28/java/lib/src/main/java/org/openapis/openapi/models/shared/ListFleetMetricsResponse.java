@@ -15,6 +15,7 @@ public class ListFleetMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleetMetrics")
     public FleetMetricNameAndArn[] fleetMetrics;
+
     public ListFleetMetricsResponse withFleetMetrics(FleetMetricNameAndArn[] fleetMetrics) {
         this.fleetMetrics = fleetMetrics;
         return this;
@@ -23,9 +24,11 @@ public class ListFleetMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFleetMetricsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFleetMetricsResponse(){}
 }

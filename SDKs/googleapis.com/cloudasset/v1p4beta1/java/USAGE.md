@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicySecurity;
 import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyRequest;
 import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyResponse;
+import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicySecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -16,12 +15,11 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CloudassetAnalyzeIamPolicyRequest req = new CloudassetAnalyzeIamPolicyRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
+            CloudassetAnalyzeIamPolicyRequest req = new CloudassetAnalyzeIamPolicyRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
                 analysisQueryAccessSelectorPermissions = new String[]{{
-                    add("unde"),
                     add("nulla"),
                     add("corrupti"),
                     add("illum"),
@@ -43,23 +41,24 @@ public class Application {
                 optionsExpandRoles = false;
                 optionsOutputGroupEdges = false;
                 optionsOutputResourceEdges = false;
-                parent = "suscipit";
                 prettyPrint = false;
-                quotaUser = "molestiae";
-                uploadType = "minus";
-                uploadProtocol = "placeat";
-            }}            
+                quotaUser = "suscipit";
+                uploadType = "molestiae";
+                uploadProtocol = "minus";
+            }};            
 
-            CloudassetAnalyzeIamPolicyResponse res = sdk.v1p4beta1.cloudassetAnalyzeIamPolicy(req, new CloudassetAnalyzeIamPolicySecurity() {{
+            CloudassetAnalyzeIamPolicyResponse res = sdk.v1p4beta1.cloudassetAnalyzeIamPolicy(req, new CloudassetAnalyzeIamPolicySecurity("placeat", "voluptatum") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.analyzeIamPolicyResponse.isPresent()) {
+            if (res.analyzeIamPolicyResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

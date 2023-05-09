@@ -15,6 +15,7 @@ public class Transaction {
      */
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public Transaction withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -25,6 +26,7 @@ public class Transaction {
      */
     @JsonProperty("merchantName")
     public String merchantName;
+
     public Transaction withMerchantName(String merchantName) {
         this.merchantName = merchantName;
         return this;
@@ -35,6 +37,7 @@ public class Transaction {
      */
     @JsonProperty("payments")
     public Payment[] payments;
+
     public Transaction withPayments(Payment[] payments) {
         this.payments = payments;
         return this;
@@ -45,9 +48,16 @@ public class Transaction {
      */
     @JsonProperty("transactionId")
     public String transactionId;
+
     public Transaction withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public Transaction(@JsonProperty("isActive") Boolean isActive, @JsonProperty("merchantName") String merchantName, @JsonProperty("payments") Payment[] payments, @JsonProperty("transactionId") String transactionId) {
+        this.isActive = isActive;
+        this.merchantName = merchantName;
+        this.payments = payments;
+        this.transactionId = transactionId;
+  }
 }

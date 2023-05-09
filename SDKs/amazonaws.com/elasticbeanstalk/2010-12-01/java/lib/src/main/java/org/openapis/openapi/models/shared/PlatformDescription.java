@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class PlatformDescription {
     
     public CustomAmi[] customAmiList;
+
     public PlatformDescription withCustomAmiList(CustomAmi[] customAmiList) {
         this.customAmiList = customAmiList;
         return this;
@@ -19,6 +20,7 @@ public class PlatformDescription {
     
     
     public OffsetDateTime dateCreated;
+
     public PlatformDescription withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -26,6 +28,7 @@ public class PlatformDescription {
     
     
     public OffsetDateTime dateUpdated;
+
     public PlatformDescription withDateUpdated(OffsetDateTime dateUpdated) {
         this.dateUpdated = dateUpdated;
         return this;
@@ -33,6 +36,7 @@ public class PlatformDescription {
     
     
     public String description;
+
     public PlatformDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +44,7 @@ public class PlatformDescription {
     
     
     public PlatformFramework[] frameworks;
+
     public PlatformDescription withFrameworks(PlatformFramework[] frameworks) {
         this.frameworks = frameworks;
         return this;
@@ -47,6 +52,7 @@ public class PlatformDescription {
     
     
     public String maintainer;
+
     public PlatformDescription withMaintainer(String maintainer) {
         this.maintainer = maintainer;
         return this;
@@ -54,6 +60,7 @@ public class PlatformDescription {
     
     
     public String operatingSystemName;
+
     public PlatformDescription withOperatingSystemName(String operatingSystemName) {
         this.operatingSystemName = operatingSystemName;
         return this;
@@ -61,6 +68,7 @@ public class PlatformDescription {
     
     
     public String operatingSystemVersion;
+
     public PlatformDescription withOperatingSystemVersion(String operatingSystemVersion) {
         this.operatingSystemVersion = operatingSystemVersion;
         return this;
@@ -68,6 +76,7 @@ public class PlatformDescription {
     
     
     public String platformArn;
+
     public PlatformDescription withPlatformArn(String platformArn) {
         this.platformArn = platformArn;
         return this;
@@ -75,6 +84,7 @@ public class PlatformDescription {
     
     
     public String platformBranchLifecycleState;
+
     public PlatformDescription withPlatformBranchLifecycleState(String platformBranchLifecycleState) {
         this.platformBranchLifecycleState = platformBranchLifecycleState;
         return this;
@@ -82,6 +92,7 @@ public class PlatformDescription {
     
     
     public String platformBranchName;
+
     public PlatformDescription withPlatformBranchName(String platformBranchName) {
         this.platformBranchName = platformBranchName;
         return this;
@@ -89,6 +100,7 @@ public class PlatformDescription {
     
     
     public String platformCategory;
+
     public PlatformDescription withPlatformCategory(String platformCategory) {
         this.platformCategory = platformCategory;
         return this;
@@ -96,6 +108,7 @@ public class PlatformDescription {
     
     
     public String platformLifecycleState;
+
     public PlatformDescription withPlatformLifecycleState(String platformLifecycleState) {
         this.platformLifecycleState = platformLifecycleState;
         return this;
@@ -103,6 +116,7 @@ public class PlatformDescription {
     
     
     public String platformName;
+
     public PlatformDescription withPlatformName(String platformName) {
         this.platformName = platformName;
         return this;
@@ -110,6 +124,7 @@ public class PlatformDescription {
     
     
     public String platformOwner;
+
     public PlatformDescription withPlatformOwner(String platformOwner) {
         this.platformOwner = platformOwner;
         return this;
@@ -117,6 +132,7 @@ public class PlatformDescription {
     
     
     public PlatformStatusEnum platformStatus;
+
     public PlatformDescription withPlatformStatus(PlatformStatusEnum platformStatus) {
         this.platformStatus = platformStatus;
         return this;
@@ -124,6 +140,7 @@ public class PlatformDescription {
     
     
     public String platformVersion;
+
     public PlatformDescription withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
@@ -131,6 +148,7 @@ public class PlatformDescription {
     
     
     public PlatformProgrammingLanguage[] programmingLanguages;
+
     public PlatformDescription withProgrammingLanguages(PlatformProgrammingLanguage[] programmingLanguages) {
         this.programmingLanguages = programmingLanguages;
         return this;
@@ -138,6 +156,7 @@ public class PlatformDescription {
     
     
     public String solutionStackName;
+
     public PlatformDescription withSolutionStackName(String solutionStackName) {
         this.solutionStackName = solutionStackName;
         return this;
@@ -145,6 +164,7 @@ public class PlatformDescription {
     
     
     public String[] supportedAddonList;
+
     public PlatformDescription withSupportedAddonList(String[] supportedAddonList) {
         this.supportedAddonList = supportedAddonList;
         return this;
@@ -152,9 +172,11 @@ public class PlatformDescription {
     
     
     public String[] supportedTierList;
+
     public PlatformDescription withSupportedTierList(String[] supportedTierList) {
         this.supportedTierList = supportedTierList;
         return this;
     }
     
+    public PlatformDescription(){}
 }

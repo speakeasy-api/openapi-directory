@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugActivitiesRequest {
@@ -12,6 +13,7 @@ public class GetWorkspaceSlugActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activity_type")
     public GetWorkspaceSlugActivitiesActivityTypeEnum activityType;
+
     public GetWorkspaceSlugActivitiesRequest withActivityType(GetWorkspaceSlugActivitiesActivityTypeEnum activityType) {
         this.activityType = activityType;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkspaceSlugActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=affiliation")
     public GetWorkspaceSlugActivitiesAffiliationEnum affiliation;
+
     public GetWorkspaceSlugActivitiesRequest withAffiliation(GetWorkspaceSlugActivitiesAffiliationEnum affiliation) {
         this.affiliation = affiliation;
         return this;
@@ -29,6 +32,7 @@ public class GetWorkspaceSlugActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cities[]")
     public String cities;
+
     public GetWorkspaceSlugActivitiesRequest withCities(String cities) {
         this.cities = cities;
         return this;
@@ -39,6 +43,7 @@ public class GetWorkspaceSlugActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company[]")
     public String company;
+
     public GetWorkspaceSlugActivitiesRequest withCompany(String company) {
         this.company = company;
         return this;
@@ -49,6 +54,7 @@ public class GetWorkspaceSlugActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countries[]")
     public String countries;
+
     public GetWorkspaceSlugActivitiesRequest withCountries(String countries) {
         this.countries = countries;
         return this;
@@ -56,6 +62,7 @@ public class GetWorkspaceSlugActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public GetWorkspaceSlugActivitiesDirectionEnum direction;
+
     public GetWorkspaceSlugActivitiesRequest withDirection(GetWorkspaceSlugActivitiesDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -66,6 +73,7 @@ public class GetWorkspaceSlugActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public String endDate;
+
     public GetWorkspaceSlugActivitiesRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -73,6 +81,7 @@ public class GetWorkspaceSlugActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=identity")
     public GetWorkspaceSlugActivitiesIdentityEnum identity;
+
     public GetWorkspaceSlugActivitiesRequest withIdentity(GetWorkspaceSlugActivitiesIdentityEnum identity) {
         this.identity = identity;
         return this;
@@ -80,6 +89,7 @@ public class GetWorkspaceSlugActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=items")
     public GetWorkspaceSlugActivitiesItemsEnum items;
+
     public GetWorkspaceSlugActivitiesRequest withItems(GetWorkspaceSlugActivitiesItemsEnum items) {
         this.items = items;
         return this;
@@ -90,6 +100,7 @@ public class GetWorkspaceSlugActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=member_tags")
     public String memberTags;
+
     public GetWorkspaceSlugActivitiesRequest withMemberTags(String memberTags) {
         this.memberTags = memberTags;
         return this;
@@ -100,6 +111,7 @@ public class GetWorkspaceSlugActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orbit")
     public String orbit;
+
     public GetWorkspaceSlugActivitiesRequest withOrbit(String orbit) {
         this.orbit = orbit;
         return this;
@@ -107,6 +119,7 @@ public class GetWorkspaceSlugActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetWorkspaceSlugActivitiesRequest withPage(String page) {
         this.page = page;
         return this;
@@ -117,6 +130,7 @@ public class GetWorkspaceSlugActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regions[]")
     public String regions;
+
     public GetWorkspaceSlugActivitiesRequest withRegions(String regions) {
         this.regions = regions;
         return this;
@@ -127,6 +141,7 @@ public class GetWorkspaceSlugActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relative")
     public String relative;
+
     public GetWorkspaceSlugActivitiesRequest withRelative(String relative) {
         this.relative = relative;
         return this;
@@ -134,6 +149,7 @@ public class GetWorkspaceSlugActivitiesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetWorkspaceSlugActivitiesSortEnum sort;
+
     public GetWorkspaceSlugActivitiesRequest withSort(GetWorkspaceSlugActivitiesSortEnum sort) {
         this.sort = sort;
         return this;
@@ -144,6 +160,7 @@ public class GetWorkspaceSlugActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public String startDate;
+
     public GetWorkspaceSlugActivitiesRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -154,6 +171,7 @@ public class GetWorkspaceSlugActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title[]")
     public String title;
+
     public GetWorkspaceSlugActivitiesRequest withTitle(String title) {
         this.title = title;
         return this;
@@ -161,9 +179,13 @@ public class GetWorkspaceSlugActivitiesRequest {
     
     /**
      * Deprecated in favor of the activity_type parameter.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    @Deprecated
     public String type;
+
+    @Deprecated
     public GetWorkspaceSlugActivitiesRequest withType(String type) {
         this.type = type;
         return this;
@@ -171,9 +193,13 @@ public class GetWorkspaceSlugActivitiesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
     public String workspaceSlug;
+
     public GetWorkspaceSlugActivitiesRequest withWorkspaceSlug(String workspaceSlug) {
         this.workspaceSlug = workspaceSlug;
         return this;
     }
     
+    public GetWorkspaceSlugActivitiesRequest(@JsonProperty("workspace_slug") String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
+  }
 }

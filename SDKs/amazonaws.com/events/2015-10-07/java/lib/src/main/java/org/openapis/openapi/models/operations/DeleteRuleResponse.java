@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRuleResponse {
@@ -12,6 +13,7 @@ public class DeleteRuleResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteRuleResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRuleResponse {
     
     
     public String contentType;
+
     public DeleteRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRuleResponse {
      */
     
     public Object internalException;
+
     public DeleteRuleResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRuleResponse {
      */
     
     public Object managedRuleException;
+
     public DeleteRuleResponse withManagedRuleException(Object managedRuleException) {
         this.managedRuleException = managedRuleException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteRuleResponse {
     
     
     public Integer statusCode;
+
     public DeleteRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Feature {
     @JsonProperty("arn")
     public String arn;
+
     public Feature withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class Feature {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTime")
     public OffsetDateTime createdTime;
+
     public Feature withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -36,6 +38,7 @@ public class Feature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultVariation")
     public String defaultVariation;
+
     public Feature withDefaultVariation(String defaultVariation) {
         this.defaultVariation = defaultVariation;
         return this;
@@ -44,6 +47,7 @@ public class Feature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Feature withDescription(String description) {
         this.description = description;
         return this;
@@ -52,6 +56,7 @@ public class Feature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityOverrides")
     public java.util.Map<String, String> entityOverrides;
+
     public Feature withEntityOverrides(java.util.Map<String, String> entityOverrides) {
         this.entityOverrides = entityOverrides;
         return this;
@@ -60,6 +65,7 @@ public class Feature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationRules")
     public EvaluationRule[] evaluationRules;
+
     public Feature withEvaluationRules(EvaluationRule[] evaluationRules) {
         this.evaluationRules = evaluationRules;
         return this;
@@ -67,6 +73,7 @@ public class Feature {
     
     @JsonProperty("evaluationStrategy")
     public FeatureEvaluationStrategyEnum evaluationStrategy;
+
     public Feature withEvaluationStrategy(FeatureEvaluationStrategyEnum evaluationStrategy) {
         this.evaluationStrategy = evaluationStrategy;
         return this;
@@ -76,6 +83,7 @@ public class Feature {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public Feature withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -83,6 +91,7 @@ public class Feature {
     
     @JsonProperty("name")
     public String name;
+
     public Feature withName(String name) {
         this.name = name;
         return this;
@@ -91,6 +100,7 @@ public class Feature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public Feature withProject(String project) {
         this.project = project;
         return this;
@@ -98,6 +108,7 @@ public class Feature {
     
     @JsonProperty("status")
     public FeatureStatusEnum status;
+
     public Feature withStatus(FeatureStatusEnum status) {
         this.status = status;
         return this;
@@ -106,6 +117,7 @@ public class Feature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Feature withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -113,6 +125,7 @@ public class Feature {
     
     @JsonProperty("valueType")
     public VariationValueTypeEnum valueType;
+
     public Feature withValueType(VariationValueTypeEnum valueType) {
         this.valueType = valueType;
         return this;
@@ -120,9 +133,20 @@ public class Feature {
     
     @JsonProperty("variations")
     public Variation[] variations;
+
     public Feature withVariations(Variation[] variations) {
         this.variations = variations;
         return this;
     }
     
+    public Feature(@JsonProperty("arn") String arn, @JsonProperty("createdTime") OffsetDateTime createdTime, @JsonProperty("evaluationStrategy") FeatureEvaluationStrategyEnum evaluationStrategy, @JsonProperty("lastUpdatedTime") OffsetDateTime lastUpdatedTime, @JsonProperty("name") String name, @JsonProperty("status") FeatureStatusEnum status, @JsonProperty("valueType") VariationValueTypeEnum valueType, @JsonProperty("variations") Variation[] variations) {
+        this.arn = arn;
+        this.createdTime = createdTime;
+        this.evaluationStrategy = evaluationStrategy;
+        this.lastUpdatedTime = lastUpdatedTime;
+        this.name = name;
+        this.status = status;
+        this.valueType = valueType;
+        this.variations = variations;
+  }
 }

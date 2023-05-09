@@ -12,6 +12,7 @@ public class GetDiscoveredResourceCountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public GetDiscoveredResourceCountsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,6 +21,7 @@ public class GetDiscoveredResourceCountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetDiscoveredResourceCountsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class GetDiscoveredResourceCountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceTypes")
     public String[] resourceTypes;
+
     public GetDiscoveredResourceCountsRequest withResourceTypes(String[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
     }
     
+    public GetDiscoveredResourceCountsRequest(){}
 }

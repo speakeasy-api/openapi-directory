@@ -15,9 +15,11 @@ public class DescribeProblemObservationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelatedObservations")
     public RelatedObservations relatedObservations;
+
     public DescribeProblemObservationsResponse withRelatedObservations(RelatedObservations relatedObservations) {
         this.relatedObservations = relatedObservations;
         return this;
     }
     
+    public DescribeProblemObservationsResponse(){}
 }

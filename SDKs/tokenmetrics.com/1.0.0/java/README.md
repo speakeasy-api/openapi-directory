@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CorrelationRequest;
 import org.openapis.openapi.models.operations.CorrelationResponse;
 
@@ -29,7 +28,7 @@ public class Application {
             CorrelationRequest req = new CorrelationRequest() {{
                 limit = "1000";
                 tokens = "3375, 3306";
-            }}            
+            }};            
 
             CorrelationResponse res = sdk.correlation(req);
 
@@ -39,28 +38,30 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `correlation` - Correlation
-* `indices` - Indices
-* `investorGrades` - Investor Grades
-* `marketIndicator` - Market Indicator
-* `price` - Price
-* `pricePrediction` - Price Prediction
-* `quantmetricsTier1` - Quantmetrics Tier 1
-* `quantmetricsTier2` - Quantmetrics Tier 2
-* `resistanceSupport` - Resistance & Support
-* `scenarioAnalysis` - Scenario Analysis
-* `sentiments` - Sentiments
-* `tokens` - Tokens
-* `traderGrades` - Trader Grades
-* `tradingIndicator` - Trading Indicator
+* [correlation](docs/sdk/README.md#correlation) - Correlation
+* [indices](docs/sdk/README.md#indices) - Indices
+* [investorGrades](docs/sdk/README.md#investorgrades) - Investor Grades
+* [marketIndicator](docs/sdk/README.md#marketindicator) - Market Indicator
+* [price](docs/sdk/README.md#price) - Price
+* [pricePrediction](docs/sdk/README.md#priceprediction) - Price Prediction
+* [quantmetricsTier1](docs/sdk/README.md#quantmetricstier1) - Quantmetrics Tier 1
+* [quantmetricsTier2](docs/sdk/README.md#quantmetricstier2) - Quantmetrics Tier 2
+* [resistanceSupport](docs/sdk/README.md#resistancesupport) - Resistance & Support
+* [scenarioAnalysis](docs/sdk/README.md#scenarioanalysis) - Scenario Analysis
+* [sentiments](docs/sdk/README.md#sentiments) - Sentiments
+* [tokens](docs/sdk/README.md#tokens) - Tokens
+* [traderGrades](docs/sdk/README.md#tradergrades) - Trader Grades
+* [tradingIndicator](docs/sdk/README.md#tradingindicator) - Trading Indicator
 <!-- End SDK Available Operations -->
 
 ### Maturity

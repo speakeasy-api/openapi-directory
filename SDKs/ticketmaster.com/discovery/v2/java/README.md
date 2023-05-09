@@ -16,13 +16,12 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.FindIncludeLicensedContentEnum;
 import org.openapis.openapi.models.operations.FindIncludeSpellcheckEnum;
 import org.openapis.openapi.models.operations.FindIncludeTestEnum;
-import org.openapis.openapi.models.operations.FindSourceEnum;
 import org.openapis.openapi.models.operations.FindRequest;
 import org.openapis.openapi.models.operations.FindResponse;
+import org.openapis.openapi.models.operations.FindSourceEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -41,50 +40,52 @@ public class Application {
                     add("corrupti"),
                     add("illum"),
                 }};
-                id = "vel";
-                includeLicensedContent = " no";
-                includeSpellcheck = " no";
-                includeTest = " no";
-                keyword = "iure";
-                locale = "magnam";
-                page = "debitis";
-                size = "ipsa";
-                sort = "delectus";
-                source = " universe";
-            }}            
+                id = "69a674e0-f467-4cc8-b96e-d151a05dfc2d";
+                includeLicensedContent = FindIncludeLicensedContentEnum.NO;
+                includeSpellcheck = FindIncludeSpellcheckEnum.NO;
+                includeTest = FindIncludeTestEnum.NO;
+                keyword = "quod";
+                locale = "quod";
+                page = "esse";
+                size = "totam";
+                sort = "porro";
+                source = FindSourceEnum.FRONTGATE;
+            }};            
 
             FindResponse res = sdk.find(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `find` - Attraction Search
-* `get` - Get Attraction Details
-* `getGenre` - Get Genre Details
-* `getImages` - Get Event Images
-* `getSegment` - Get Segment Details
-* `getSubgenre` - Get Sub-Genre Details
-* `getDiscoveryV2Classifications` - Classification Search
-* `getDiscoveryV2ClassificationsId` - Get Classification Details
-* `getDiscoveryV2Events` - Event Search
-* `getDiscoveryV2EventsId` - Get Event Details
-* `getDiscoveryV2Venues` - Venue Search
-* `getDiscoveryV2VenuesId` - Get Venue Details
+* [find](docs/sdk/README.md#find) - Attraction Search
+* [get](docs/sdk/README.md#get) - Get Attraction Details
+* [getGenre](docs/sdk/README.md#getgenre) - Get Genre Details
+* [getImages](docs/sdk/README.md#getimages) - Get Event Images
+* [getSegment](docs/sdk/README.md#getsegment) - Get Segment Details
+* [getSubgenre](docs/sdk/README.md#getsubgenre) - Get Sub-Genre Details
+* [getDiscoveryV2Classifications](docs/sdk/README.md#getdiscoveryv2classifications) - Classification Search
+* [getDiscoveryV2ClassificationsId](docs/sdk/README.md#getdiscoveryv2classificationsid) - Get Classification Details
+* [getDiscoveryV2Events](docs/sdk/README.md#getdiscoveryv2events) - Event Search
+* [getDiscoveryV2EventsId](docs/sdk/README.md#getdiscoveryv2eventsid) - Get Event Details
+* [getDiscoveryV2Venues](docs/sdk/README.md#getdiscoveryv2venues) - Venue Search
+* [getDiscoveryV2VenuesId](docs/sdk/README.md#getdiscoveryv2venuesid) - Get Venue Details
 
-### v2
+### [v2](docs/v2/README.md)
 
-* `getDiscoveryV2Suggest` - Find Suggest
+* [getDiscoveryV2Suggest](docs/v2/README.md#getdiscoveryv2suggest) - Find Suggest
 <!-- End SDK Available Operations -->
 
 ### Maturity

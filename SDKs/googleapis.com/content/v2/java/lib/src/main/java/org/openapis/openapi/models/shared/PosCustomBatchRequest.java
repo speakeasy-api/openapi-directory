@@ -15,9 +15,11 @@ public class PosCustomBatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public PosCustomBatchRequestEntry[] entries;
+
     public PosCustomBatchRequest withEntries(PosCustomBatchRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public PosCustomBatchRequest(){}
 }

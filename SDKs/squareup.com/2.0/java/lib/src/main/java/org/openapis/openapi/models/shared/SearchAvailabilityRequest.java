@@ -17,9 +17,13 @@ public class SearchAvailabilityRequest {
      */
     @JsonProperty("query")
     public SearchAvailabilityQuery query;
+
     public SearchAvailabilityRequest withQuery(SearchAvailabilityQuery query) {
         this.query = query;
         return this;
     }
     
+    public SearchAvailabilityRequest(@JsonProperty("query") SearchAvailabilityQuery query) {
+        this.query = query;
+  }
 }

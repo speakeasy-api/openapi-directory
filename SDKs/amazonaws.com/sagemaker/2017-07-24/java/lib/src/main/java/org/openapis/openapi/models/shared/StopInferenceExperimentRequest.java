@@ -12,6 +12,7 @@ public class StopInferenceExperimentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredModelVariants")
     public ModelVariantConfig[] desiredModelVariants;
+
     public StopInferenceExperimentRequest withDesiredModelVariants(ModelVariantConfig[] desiredModelVariants) {
         this.desiredModelVariants = desiredModelVariants;
         return this;
@@ -20,6 +21,7 @@ public class StopInferenceExperimentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredState")
     public InferenceExperimentStopDesiredStateEnum desiredState;
+
     public StopInferenceExperimentRequest withDesiredState(InferenceExperimentStopDesiredStateEnum desiredState) {
         this.desiredState = desiredState;
         return this;
@@ -27,6 +29,7 @@ public class StopInferenceExperimentRequest {
     
     @JsonProperty("ModelVariantActions")
     public java.util.Map<String, ModelVariantActionEnum> modelVariantActions;
+
     public StopInferenceExperimentRequest withModelVariantActions(java.util.Map<String, ModelVariantActionEnum> modelVariantActions) {
         this.modelVariantActions = modelVariantActions;
         return this;
@@ -34,6 +37,7 @@ public class StopInferenceExperimentRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public StopInferenceExperimentRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +46,14 @@ public class StopInferenceExperimentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public StopInferenceExperimentRequest withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public StopInferenceExperimentRequest(@JsonProperty("ModelVariantActions") java.util.Map<String, ModelVariantActionEnum> modelVariantActions, @JsonProperty("Name") String name) {
+        this.modelVariantActions = modelVariantActions;
+        this.name = name;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaDataStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidAppStreamData")
     public GoogleAnalyticsAdminV1alphaDataStreamAndroidAppStreamDataInput androidAppStreamData;
+
     public GoogleAnalyticsAdminV1alphaDataStreamInput withAndroidAppStreamData(GoogleAnalyticsAdminV1alphaDataStreamAndroidAppStreamDataInput androidAppStreamData) {
         this.androidAppStreamData = androidAppStreamData;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaDataStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1alphaDataStreamInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaDataStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosAppStreamData")
     public GoogleAnalyticsAdminV1alphaDataStreamIosAppStreamDataInput iosAppStreamData;
+
     public GoogleAnalyticsAdminV1alphaDataStreamInput withIosAppStreamData(GoogleAnalyticsAdminV1alphaDataStreamIosAppStreamDataInput iosAppStreamData) {
         this.iosAppStreamData = iosAppStreamData;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaDataStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleAnalyticsAdminV1alphaDataStreamTypeEnum type;
+
     public GoogleAnalyticsAdminV1alphaDataStreamInput withType(GoogleAnalyticsAdminV1alphaDataStreamTypeEnum type) {
         this.type = type;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAnalyticsAdminV1alphaDataStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webStreamData")
     public GoogleAnalyticsAdminV1alphaDataStreamWebStreamDataInput webStreamData;
+
     public GoogleAnalyticsAdminV1alphaDataStreamInput withWebStreamData(GoogleAnalyticsAdminV1alphaDataStreamWebStreamDataInput webStreamData) {
         this.webStreamData = webStreamData;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaDataStreamInput(){}
 }

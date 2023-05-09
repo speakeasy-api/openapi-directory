@@ -18,6 +18,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1ImageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stableImage")
     public String stableImage;
+
     public GoogleCloudBeyondcorpAppconnectorsV1ImageConfig withStableImage(String stableImage) {
         this.stableImage = stableImage;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudBeyondcorpAppconnectorsV1ImageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetImage")
     public String targetImage;
+
     public GoogleCloudBeyondcorpAppconnectorsV1ImageConfig withTargetImage(String targetImage) {
         this.targetImage = targetImage;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectorsV1ImageConfig(){}
 }

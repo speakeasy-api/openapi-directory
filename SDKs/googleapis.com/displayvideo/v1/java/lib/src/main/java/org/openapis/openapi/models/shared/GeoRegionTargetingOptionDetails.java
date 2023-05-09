@@ -18,6 +18,7 @@ public class GeoRegionTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GeoRegionTargetingOptionDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class GeoRegionTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoRegionType")
     public GeoRegionTargetingOptionDetailsGeoRegionTypeEnum geoRegionType;
+
     public GeoRegionTargetingOptionDetails withGeoRegionType(GeoRegionTargetingOptionDetailsGeoRegionTypeEnum geoRegionType) {
         this.geoRegionType = geoRegionType;
         return this;
     }
     
+    public GeoRegionTargetingOptionDetails(){}
 }

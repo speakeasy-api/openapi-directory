@@ -18,6 +18,7 @@ public class ProfileDetail {
      */
     @JsonProperty("bookmarked")
     public java.util.Map<String, OffsetDateTime> bookmarked;
+
     public ProfileDetail withBookmarked(java.util.Map<String, OffsetDateTime> bookmarked) {
         this.bookmarked = bookmarked;
         return this;
@@ -29,6 +30,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public ProfileDetail withColor(String color) {
         this.color = color;
         return this;
@@ -40,6 +42,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heroAutoplay")
     public Boolean heroAutoplay;
+
     public ProfileDetail withHeroAutoplay(Boolean heroAutoplay) {
         this.heroAutoplay = heroAutoplay;
         return this;
@@ -51,6 +54,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heroWithAudio")
     public Boolean heroWithAudio;
+
     public ProfileDetail withHeroWithAudio(Boolean heroWithAudio) {
         this.heroWithAudio = heroWithAudio;
         return this;
@@ -61,6 +65,7 @@ public class ProfileDetail {
      */
     @JsonProperty("id")
     public String id;
+
     public ProfileDetail withId(String id) {
         this.id = id;
         return this;
@@ -74,6 +79,7 @@ public class ProfileDetail {
      */
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public ProfileDetail withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -89,6 +95,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public ProfileDetail withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -102,6 +109,7 @@ public class ProfileDetail {
      */
     @JsonProperty("marketingEnabled")
     public Boolean marketingEnabled;
+
     public ProfileDetail withMarketingEnabled(Boolean marketingEnabled) {
         this.marketingEnabled = marketingEnabled;
         return this;
@@ -110,6 +118,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRatingContentFilter")
     public ClassificationSummary maxRatingContentFilter;
+
     public ProfileDetail withMaxRatingContentFilter(ClassificationSummary maxRatingContentFilter) {
         this.maxRatingContentFilter = maxRatingContentFilter;
         return this;
@@ -118,6 +127,7 @@ public class ProfileDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minRatingPlaybackGuard")
     public ClassificationSummary minRatingPlaybackGuard;
+
     public ProfileDetail withMinRatingPlaybackGuard(ClassificationSummary minRatingPlaybackGuard) {
         this.minRatingPlaybackGuard = minRatingPlaybackGuard;
         return this;
@@ -128,6 +138,7 @@ public class ProfileDetail {
      */
     @JsonProperty("name")
     public String name;
+
     public ProfileDetail withName(String name) {
         this.name = name;
         return this;
@@ -138,6 +149,7 @@ public class ProfileDetail {
      */
     @JsonProperty("pinEnabled")
     public Boolean pinEnabled;
+
     public ProfileDetail withPinEnabled(Boolean pinEnabled) {
         this.pinEnabled = pinEnabled;
         return this;
@@ -148,6 +160,7 @@ public class ProfileDetail {
      */
     @JsonProperty("purchaseEnabled")
     public Boolean purchaseEnabled;
+
     public ProfileDetail withPurchaseEnabled(Boolean purchaseEnabled) {
         this.purchaseEnabled = purchaseEnabled;
         return this;
@@ -158,6 +171,7 @@ public class ProfileDetail {
      */
     @JsonProperty("rated")
     public java.util.Map<String, Integer> rated;
+
     public ProfileDetail withRated(java.util.Map<String, Integer> rated) {
         this.rated = rated;
         return this;
@@ -168,6 +182,7 @@ public class ProfileDetail {
      */
     @JsonProperty("segments")
     public String[] segments;
+
     public ProfileDetail withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -178,9 +193,22 @@ public class ProfileDetail {
      */
     @JsonProperty("watched")
     public java.util.Map<String, Watched> watched;
+
     public ProfileDetail withWatched(java.util.Map<String, Watched> watched) {
         this.watched = watched;
         return this;
     }
     
+    public ProfileDetail(@JsonProperty("bookmarked") java.util.Map<String, OffsetDateTime> bookmarked, @JsonProperty("id") String id, @JsonProperty("isActive") Boolean isActive, @JsonProperty("marketingEnabled") Boolean marketingEnabled, @JsonProperty("name") String name, @JsonProperty("pinEnabled") Boolean pinEnabled, @JsonProperty("purchaseEnabled") Boolean purchaseEnabled, @JsonProperty("rated") java.util.Map<String, Integer> rated, @JsonProperty("segments") String[] segments, @JsonProperty("watched") java.util.Map<String, Watched> watched) {
+        this.bookmarked = bookmarked;
+        this.id = id;
+        this.isActive = isActive;
+        this.marketingEnabled = marketingEnabled;
+        this.name = name;
+        this.pinEnabled = pinEnabled;
+        this.purchaseEnabled = purchaseEnabled;
+        this.rated = rated;
+        this.segments = segments;
+        this.watched = watched;
+  }
 }

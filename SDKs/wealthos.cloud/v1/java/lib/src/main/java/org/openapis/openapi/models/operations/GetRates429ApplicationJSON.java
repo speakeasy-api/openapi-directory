@@ -18,6 +18,7 @@ public class GetRates429ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public GetRates429ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class GetRates429ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public GetRates429ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetRates429ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

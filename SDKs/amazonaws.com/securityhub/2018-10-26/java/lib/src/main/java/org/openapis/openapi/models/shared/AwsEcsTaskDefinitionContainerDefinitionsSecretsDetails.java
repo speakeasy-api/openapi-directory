@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsSecretsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsEcsTaskDefinitionContainerDefinitionsSecretsDetails withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsSecretsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValueFrom")
     public String valueFrom;
+
     public AwsEcsTaskDefinitionContainerDefinitionsSecretsDetails withValueFrom(String valueFrom) {
         this.valueFrom = valueFrom;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsSecretsDetails(){}
 }

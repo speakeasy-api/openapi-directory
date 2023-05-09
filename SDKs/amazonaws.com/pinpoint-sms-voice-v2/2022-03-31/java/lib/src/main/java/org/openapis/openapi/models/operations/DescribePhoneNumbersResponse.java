@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePhoneNumbersResponse {
@@ -12,6 +13,7 @@ public class DescribePhoneNumbersResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribePhoneNumbersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribePhoneNumbersResponse {
     
     
     public String contentType;
+
     public DescribePhoneNumbersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribePhoneNumbersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePhoneNumbersResult describePhoneNumbersResult;
+
     public DescribePhoneNumbersResponse withDescribePhoneNumbersResult(org.openapis.openapi.models.shared.DescribePhoneNumbersResult describePhoneNumbersResult) {
         this.describePhoneNumbersResult = describePhoneNumbersResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribePhoneNumbersResponse {
      */
     
     public Object internalServerException;
+
     public DescribePhoneNumbersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribePhoneNumbersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribePhoneNumbersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribePhoneNumbersResponse {
     
     
     public Integer statusCode;
+
     public DescribePhoneNumbersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribePhoneNumbersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePhoneNumbersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribePhoneNumbersResponse {
      */
     
     public Object throttlingException;
+
     public DescribePhoneNumbersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribePhoneNumbersResponse {
      */
     
     public Object validationException;
+
     public DescribePhoneNumbersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribePhoneNumbersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

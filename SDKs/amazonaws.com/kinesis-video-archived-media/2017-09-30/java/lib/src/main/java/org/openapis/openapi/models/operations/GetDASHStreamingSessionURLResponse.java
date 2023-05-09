@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDASHStreamingSessionURLResponse {
@@ -12,6 +13,7 @@ public class GetDASHStreamingSessionURLResponse {
      */
     
     public Object clientLimitExceededException;
+
     public GetDASHStreamingSessionURLResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class GetDASHStreamingSessionURLResponse {
     
     
     public String contentType;
+
     public GetDASHStreamingSessionURLResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDASHStreamingSessionURLResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDASHStreamingSessionURLOutput getDASHStreamingSessionURLOutput;
+
     public GetDASHStreamingSessionURLResponse withGetDASHStreamingSessionURLOutput(org.openapis.openapi.models.shared.GetDASHStreamingSessionURLOutput getDASHStreamingSessionURLOutput) {
         this.getDASHStreamingSessionURLOutput = getDASHStreamingSessionURLOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetDASHStreamingSessionURLResponse {
      */
     
     public Object invalidArgumentException;
+
     public GetDASHStreamingSessionURLResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class GetDASHStreamingSessionURLResponse {
      */
     
     public Object invalidCodecPrivateDataException;
+
     public GetDASHStreamingSessionURLResponse withInvalidCodecPrivateDataException(Object invalidCodecPrivateDataException) {
         this.invalidCodecPrivateDataException = invalidCodecPrivateDataException;
         return this;
@@ -59,6 +65,7 @@ public class GetDASHStreamingSessionURLResponse {
      */
     
     public Object missingCodecPrivateDataException;
+
     public GetDASHStreamingSessionURLResponse withMissingCodecPrivateDataException(Object missingCodecPrivateDataException) {
         this.missingCodecPrivateDataException = missingCodecPrivateDataException;
         return this;
@@ -69,6 +76,7 @@ public class GetDASHStreamingSessionURLResponse {
      */
     
     public Object noDataRetentionException;
+
     public GetDASHStreamingSessionURLResponse withNoDataRetentionException(Object noDataRetentionException) {
         this.noDataRetentionException = noDataRetentionException;
         return this;
@@ -79,6 +87,7 @@ public class GetDASHStreamingSessionURLResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetDASHStreamingSessionURLResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -89,6 +98,7 @@ public class GetDASHStreamingSessionURLResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetDASHStreamingSessionURLResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -96,6 +106,7 @@ public class GetDASHStreamingSessionURLResponse {
     
     
     public Integer statusCode;
+
     public GetDASHStreamingSessionURLResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class GetDASHStreamingSessionURLResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDASHStreamingSessionURLResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class GetDASHStreamingSessionURLResponse {
      */
     
     public Object unsupportedStreamMediaTypeException;
+
     public GetDASHStreamingSessionURLResponse withUnsupportedStreamMediaTypeException(Object unsupportedStreamMediaTypeException) {
         this.unsupportedStreamMediaTypeException = unsupportedStreamMediaTypeException;
         return this;
     }
     
+    public GetDASHStreamingSessionURLResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

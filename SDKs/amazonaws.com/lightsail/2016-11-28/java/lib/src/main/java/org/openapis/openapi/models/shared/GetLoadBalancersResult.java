@@ -15,6 +15,7 @@ public class GetLoadBalancersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancers")
     public LoadBalancer[] loadBalancers;
+
     public GetLoadBalancersResult withLoadBalancers(LoadBalancer[] loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
@@ -23,9 +24,11 @@ public class GetLoadBalancersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetLoadBalancersResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetLoadBalancersResult(){}
 }

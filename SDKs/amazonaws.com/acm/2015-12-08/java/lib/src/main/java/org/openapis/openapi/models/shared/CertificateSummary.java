@@ -20,6 +20,7 @@ public class CertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateArn")
     public String certificateArn;
+
     public CertificateSummary withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -30,6 +31,7 @@ public class CertificateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public CertificateSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class CertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public CertificateSummary withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -46,6 +49,7 @@ public class CertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Exported")
     public Boolean exported;
+
     public CertificateSummary withExported(Boolean exported) {
         this.exported = exported;
         return this;
@@ -54,6 +58,7 @@ public class CertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtendedKeyUsages")
     public ExtendedKeyUsageNameEnum[] extendedKeyUsages;
+
     public CertificateSummary withExtendedKeyUsages(ExtendedKeyUsageNameEnum[] extendedKeyUsages) {
         this.extendedKeyUsages = extendedKeyUsages;
         return this;
@@ -62,6 +67,7 @@ public class CertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasAdditionalSubjectAlternativeNames")
     public Boolean hasAdditionalSubjectAlternativeNames;
+
     public CertificateSummary withHasAdditionalSubjectAlternativeNames(Boolean hasAdditionalSubjectAlternativeNames) {
         this.hasAdditionalSubjectAlternativeNames = hasAdditionalSubjectAlternativeNames;
         return this;
@@ -72,6 +78,7 @@ public class CertificateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ImportedAt")
     public OffsetDateTime importedAt;
+
     public CertificateSummary withImportedAt(OffsetDateTime importedAt) {
         this.importedAt = importedAt;
         return this;
@@ -80,6 +87,7 @@ public class CertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InUse")
     public Boolean inUse;
+
     public CertificateSummary withInUse(Boolean inUse) {
         this.inUse = inUse;
         return this;
@@ -90,6 +98,7 @@ public class CertificateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("IssuedAt")
     public OffsetDateTime issuedAt;
+
     public CertificateSummary withIssuedAt(OffsetDateTime issuedAt) {
         this.issuedAt = issuedAt;
         return this;
@@ -98,6 +107,7 @@ public class CertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyAlgorithm")
     public KeyAlgorithmEnum keyAlgorithm;
+
     public CertificateSummary withKeyAlgorithm(KeyAlgorithmEnum keyAlgorithm) {
         this.keyAlgorithm = keyAlgorithm;
         return this;
@@ -106,6 +116,7 @@ public class CertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyUsages")
     public KeyUsageNameEnum[] keyUsages;
+
     public CertificateSummary withKeyUsages(KeyUsageNameEnum[] keyUsages) {
         this.keyUsages = keyUsages;
         return this;
@@ -116,6 +127,7 @@ public class CertificateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("NotAfter")
     public OffsetDateTime notAfter;
+
     public CertificateSummary withNotAfter(OffsetDateTime notAfter) {
         this.notAfter = notAfter;
         return this;
@@ -126,6 +138,7 @@ public class CertificateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("NotBefore")
     public OffsetDateTime notBefore;
+
     public CertificateSummary withNotBefore(OffsetDateTime notBefore) {
         this.notBefore = notBefore;
         return this;
@@ -134,6 +147,7 @@ public class CertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RenewalEligibility")
     public RenewalEligibilityEnum renewalEligibility;
+
     public CertificateSummary withRenewalEligibility(RenewalEligibilityEnum renewalEligibility) {
         this.renewalEligibility = renewalEligibility;
         return this;
@@ -144,6 +158,7 @@ public class CertificateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RevokedAt")
     public OffsetDateTime revokedAt;
+
     public CertificateSummary withRevokedAt(OffsetDateTime revokedAt) {
         this.revokedAt = revokedAt;
         return this;
@@ -152,6 +167,7 @@ public class CertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CertificateStatusEnum status;
+
     public CertificateSummary withStatus(CertificateStatusEnum status) {
         this.status = status;
         return this;
@@ -160,6 +176,7 @@ public class CertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubjectAlternativeNameSummaries")
     public String[] subjectAlternativeNameSummaries;
+
     public CertificateSummary withSubjectAlternativeNameSummaries(String[] subjectAlternativeNameSummaries) {
         this.subjectAlternativeNameSummaries = subjectAlternativeNameSummaries;
         return this;
@@ -168,9 +185,11 @@ public class CertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public CertificateTypeEnum type;
+
     public CertificateSummary withType(CertificateTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CertificateSummary(){}
 }

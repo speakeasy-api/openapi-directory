@@ -15,9 +15,11 @@ public class NewAttendancePeriodRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attendances")
     public NewAttendancePeriodRequestAttendances[] attendances;
+
     public NewAttendancePeriodRequest withAttendances(NewAttendancePeriodRequestAttendances[] attendances) {
         this.attendances = attendances;
         return this;
     }
     
+    public NewAttendancePeriodRequest(){}
 }

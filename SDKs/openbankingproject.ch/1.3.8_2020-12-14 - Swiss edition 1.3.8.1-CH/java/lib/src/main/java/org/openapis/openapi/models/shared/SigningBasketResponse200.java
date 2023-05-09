@@ -67,6 +67,7 @@ public class SigningBasketResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public LinksSigningBasket links;
+
     public SigningBasketResponse200 withLinks(LinksSigningBasket links) {
         this.links = links;
         return this;
@@ -78,6 +79,7 @@ public class SigningBasketResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consents")
     public String[] consents;
+
     public SigningBasketResponse200 withConsents(String[] consents) {
         this.consents = consents;
         return this;
@@ -89,6 +91,7 @@ public class SigningBasketResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payments")
     public String[] payments;
+
     public SigningBasketResponse200 withPayments(String[] payments) {
         this.payments = payments;
         return this;
@@ -111,9 +114,13 @@ public class SigningBasketResponse200 {
      */
     @JsonProperty("transactionStatus")
     public TransactionStatusSBSEnum transactionStatus;
+
     public SigningBasketResponse200 withTransactionStatus(TransactionStatusSBSEnum transactionStatus) {
         this.transactionStatus = transactionStatus;
         return this;
     }
     
+    public SigningBasketResponse200(@JsonProperty("transactionStatus") TransactionStatusSBSEnum transactionStatus) {
+        this.transactionStatus = transactionStatus;
+  }
 }

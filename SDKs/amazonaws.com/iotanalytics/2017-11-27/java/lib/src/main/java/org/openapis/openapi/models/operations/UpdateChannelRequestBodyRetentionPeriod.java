@@ -15,6 +15,7 @@ public class UpdateChannelRequestBodyRetentionPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfDays")
     public Long numberOfDays;
+
     public UpdateChannelRequestBodyRetentionPeriod withNumberOfDays(Long numberOfDays) {
         this.numberOfDays = numberOfDays;
         return this;
@@ -23,9 +24,11 @@ public class UpdateChannelRequestBodyRetentionPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unlimited")
     public Boolean unlimited;
+
     public UpdateChannelRequestBodyRetentionPeriod withUnlimited(Boolean unlimited) {
         this.unlimited = unlimited;
         return this;
     }
     
+    public UpdateChannelRequestBodyRetentionPeriod(){}
 }

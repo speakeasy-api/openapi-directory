@@ -15,6 +15,7 @@ public class DestinationSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionConfiguration")
     public Object connectionConfiguration;
+
     public DestinationSearch withConnectionConfiguration(Object connectionConfiguration) {
         this.connectionConfiguration = connectionConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class DestinationSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationDefinitionId")
     public String destinationDefinitionId;
+
     public DestinationSearch withDestinationDefinitionId(String destinationDefinitionId) {
         this.destinationDefinitionId = destinationDefinitionId;
         return this;
@@ -31,6 +33,7 @@ public class DestinationSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationId")
     public String destinationId;
+
     public DestinationSearch withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -39,6 +42,7 @@ public class DestinationSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationName")
     public String destinationName;
+
     public DestinationSearch withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -47,6 +51,7 @@ public class DestinationSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DestinationSearch withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +60,11 @@ public class DestinationSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public DestinationSearch withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public DestinationSearch(){}
 }

@@ -18,6 +18,7 @@ public class AddCoupons200ApplicationJSONRatesAndBenefitsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateAndBenefitsIdentifiers")
     public String[] rateAndBenefitsIdentifiers;
+
     public AddCoupons200ApplicationJSONRatesAndBenefitsData withRateAndBenefitsIdentifiers(String[] rateAndBenefitsIdentifiers) {
         this.rateAndBenefitsIdentifiers = rateAndBenefitsIdentifiers;
         return this;
@@ -29,9 +30,11 @@ public class AddCoupons200ApplicationJSONRatesAndBenefitsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teaser")
     public String[] teaser;
+
     public AddCoupons200ApplicationJSONRatesAndBenefitsData withTeaser(String[] teaser) {
         this.teaser = teaser;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONRatesAndBenefitsData(){}
 }

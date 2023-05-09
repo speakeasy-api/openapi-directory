@@ -15,6 +15,7 @@ public class ListLoggerDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Definitions")
     public DefinitionInformation[] definitions;
+
     public ListLoggerDefinitionsResponse withDefinitions(DefinitionInformation[] definitions) {
         this.definitions = definitions;
         return this;
@@ -23,9 +24,11 @@ public class ListLoggerDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLoggerDefinitionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLoggerDefinitionsResponse(){}
 }

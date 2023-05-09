@@ -19,6 +19,7 @@ public class NullableMilestone {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("closed_at")
     public OffsetDateTime closedAt;
+
     public NullableMilestone withClosedAt(OffsetDateTime closedAt) {
         this.closedAt = closedAt;
         return this;
@@ -26,6 +27,7 @@ public class NullableMilestone {
     
     @JsonProperty("closed_issues")
     public Long closedIssues;
+
     public NullableMilestone withClosedIssues(Long closedIssues) {
         this.closedIssues = closedIssues;
         return this;
@@ -35,6 +37,7 @@ public class NullableMilestone {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public NullableMilestone withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -45,6 +48,7 @@ public class NullableMilestone {
      */
     @JsonProperty("creator")
     public NullableSimpleUser creator;
+
     public NullableMilestone withCreator(NullableSimpleUser creator) {
         this.creator = creator;
         return this;
@@ -52,6 +56,7 @@ public class NullableMilestone {
     
     @JsonProperty("description")
     public String description;
+
     public NullableMilestone withDescription(String description) {
         this.description = description;
         return this;
@@ -61,6 +66,7 @@ public class NullableMilestone {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("due_on")
     public OffsetDateTime dueOn;
+
     public NullableMilestone withDueOn(OffsetDateTime dueOn) {
         this.dueOn = dueOn;
         return this;
@@ -68,6 +74,7 @@ public class NullableMilestone {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public NullableMilestone withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -75,6 +82,7 @@ public class NullableMilestone {
     
     @JsonProperty("id")
     public Long id;
+
     public NullableMilestone withId(Long id) {
         this.id = id;
         return this;
@@ -82,6 +90,7 @@ public class NullableMilestone {
     
     @JsonProperty("labels_url")
     public String labelsUrl;
+
     public NullableMilestone withLabelsUrl(String labelsUrl) {
         this.labelsUrl = labelsUrl;
         return this;
@@ -89,6 +98,7 @@ public class NullableMilestone {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public NullableMilestone withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -99,6 +109,7 @@ public class NullableMilestone {
      */
     @JsonProperty("number")
     public Long number;
+
     public NullableMilestone withNumber(Long number) {
         this.number = number;
         return this;
@@ -106,6 +117,7 @@ public class NullableMilestone {
     
     @JsonProperty("open_issues")
     public Long openIssues;
+
     public NullableMilestone withOpenIssues(Long openIssues) {
         this.openIssues = openIssues;
         return this;
@@ -116,6 +128,7 @@ public class NullableMilestone {
      */
     @JsonProperty("state")
     public NullableMilestoneStateEnum state;
+
     public NullableMilestone withState(NullableMilestoneStateEnum state) {
         this.state = state;
         return this;
@@ -126,6 +139,7 @@ public class NullableMilestone {
      */
     @JsonProperty("title")
     public String title;
+
     public NullableMilestone withTitle(String title) {
         this.title = title;
         return this;
@@ -135,6 +149,7 @@ public class NullableMilestone {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public NullableMilestone withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -142,9 +157,28 @@ public class NullableMilestone {
     
     @JsonProperty("url")
     public String url;
+
     public NullableMilestone withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public NullableMilestone(@JsonProperty("closed_at") OffsetDateTime closedAt, @JsonProperty("closed_issues") Long closedIssues, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("creator") NullableSimpleUser creator, @JsonProperty("description") String description, @JsonProperty("due_on") OffsetDateTime dueOn, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("labels_url") String labelsUrl, @JsonProperty("node_id") String nodeId, @JsonProperty("number") Long number, @JsonProperty("open_issues") Long openIssues, @JsonProperty("state") NullableMilestoneStateEnum state, @JsonProperty("title") String title, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.closedAt = closedAt;
+        this.closedIssues = closedIssues;
+        this.createdAt = createdAt;
+        this.creator = creator;
+        this.description = description;
+        this.dueOn = dueOn;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.labelsUrl = labelsUrl;
+        this.nodeId = nodeId;
+        this.number = number;
+        this.openIssues = openIssues;
+        this.state = state;
+        this.title = title;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

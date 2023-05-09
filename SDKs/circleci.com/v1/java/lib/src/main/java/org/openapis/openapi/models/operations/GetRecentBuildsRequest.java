@@ -13,6 +13,7 @@ public class GetRecentBuildsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetRecentBuildsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -24,9 +25,11 @@ public class GetRecentBuildsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetRecentBuildsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetRecentBuildsRequest(){}
 }

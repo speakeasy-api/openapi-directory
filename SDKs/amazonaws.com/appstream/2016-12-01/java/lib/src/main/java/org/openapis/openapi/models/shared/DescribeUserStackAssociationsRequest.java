@@ -12,6 +12,7 @@ public class DescribeUserStackAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthenticationType")
     public AuthenticationTypeEnum authenticationType;
+
     public DescribeUserStackAssociationsRequest withAuthenticationType(AuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -20,6 +21,7 @@ public class DescribeUserStackAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeUserStackAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeUserStackAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeUserStackAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class DescribeUserStackAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackName")
     public String stackName;
+
     public DescribeUserStackAssociationsRequest withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -44,9 +48,11 @@ public class DescribeUserStackAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public DescribeUserStackAssociationsRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public DescribeUserStackAssociationsRequest(){}
 }

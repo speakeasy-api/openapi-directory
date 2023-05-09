@@ -18,6 +18,7 @@ public class LicenseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseType")
     public LicenseLicenseTypeEnum licenseType;
+
     public LicenseInput withLicenseType(LicenseLicenseTypeEnum licenseType) {
         this.licenseType = licenseType;
         return this;
@@ -29,9 +30,11 @@ public class LicenseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleState")
     public LicenseLifecycleStateEnum lifecycleState;
+
     public LicenseInput withLifecycleState(LicenseLifecycleStateEnum lifecycleState) {
         this.lifecycleState = lifecycleState;
         return this;
     }
     
+    public LicenseInput(){}
 }

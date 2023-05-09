@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostRefundNotPaidOutTransfersResponse {
     
     public String contentType;
+
     public PostRefundNotPaidOutTransfersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostRefundNotPaidOutTransfersResponse {
      */
     
     public org.openapis.openapi.models.shared.RefundNotPaidOutTransfersResponse refundNotPaidOutTransfersResponse;
+
     public PostRefundNotPaidOutTransfersResponse withRefundNotPaidOutTransfersResponse(org.openapis.openapi.models.shared.RefundNotPaidOutTransfersResponse refundNotPaidOutTransfersResponse) {
         this.refundNotPaidOutTransfersResponse = refundNotPaidOutTransfersResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostRefundNotPaidOutTransfersResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostRefundNotPaidOutTransfersResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostRefundNotPaidOutTransfersResponse {
     
     
     public Integer statusCode;
+
     public PostRefundNotPaidOutTransfersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostRefundNotPaidOutTransfersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostRefundNotPaidOutTransfersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostRefundNotPaidOutTransfersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

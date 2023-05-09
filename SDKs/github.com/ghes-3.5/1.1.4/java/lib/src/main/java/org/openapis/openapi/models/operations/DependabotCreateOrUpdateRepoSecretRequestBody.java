@@ -15,6 +15,7 @@ public class DependabotCreateOrUpdateRepoSecretRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encrypted_value")
     public String encryptedValue;
+
     public DependabotCreateOrUpdateRepoSecretRequestBody withEncryptedValue(String encryptedValue) {
         this.encryptedValue = encryptedValue;
         return this;
@@ -26,9 +27,11 @@ public class DependabotCreateOrUpdateRepoSecretRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key_id")
     public String keyId;
+
     public DependabotCreateOrUpdateRepoSecretRequestBody withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public DependabotCreateOrUpdateRepoSecretRequestBody(){}
 }

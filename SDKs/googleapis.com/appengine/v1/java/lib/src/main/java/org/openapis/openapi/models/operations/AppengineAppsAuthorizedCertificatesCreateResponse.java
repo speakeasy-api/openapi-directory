@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppengineAppsAuthorizedCertificatesCreateResponse {
@@ -12,6 +13,7 @@ public class AppengineAppsAuthorizedCertificatesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.AuthorizedCertificate authorizedCertificate;
+
     public AppengineAppsAuthorizedCertificatesCreateResponse withAuthorizedCertificate(org.openapis.openapi.models.shared.AuthorizedCertificate authorizedCertificate) {
         this.authorizedCertificate = authorizedCertificate;
         return this;
@@ -19,6 +21,7 @@ public class AppengineAppsAuthorizedCertificatesCreateResponse {
     
     
     public String contentType;
+
     public AppengineAppsAuthorizedCertificatesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AppengineAppsAuthorizedCertificatesCreateResponse {
     
     
     public Integer statusCode;
+
     public AppengineAppsAuthorizedCertificatesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AppengineAppsAuthorizedCertificatesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppengineAppsAuthorizedCertificatesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AppengineAppsAuthorizedCertificatesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

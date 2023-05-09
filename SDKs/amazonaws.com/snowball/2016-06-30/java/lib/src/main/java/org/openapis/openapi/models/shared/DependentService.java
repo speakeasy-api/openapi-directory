@@ -15,6 +15,7 @@ public class DependentService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceName")
     public ServiceNameEnum serviceName;
+
     public DependentService withServiceName(ServiceNameEnum serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -23,9 +24,11 @@ public class DependentService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceVersion")
     public ServiceVersion serviceVersion;
+
     public DependentService withServiceVersion(ServiceVersion serviceVersion) {
         this.serviceVersion = serviceVersion;
         return this;
     }
     
+    public DependentService(){}
 }

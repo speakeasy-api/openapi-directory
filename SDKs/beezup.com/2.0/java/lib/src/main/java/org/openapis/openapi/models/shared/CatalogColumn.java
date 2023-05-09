@@ -17,6 +17,7 @@ public class CatalogColumn {
      */
     @JsonProperty("catalogColumnName")
     public String catalogColumnName;
+
     public CatalogColumn withCatalogColumnName(String catalogColumnName) {
         this.catalogColumnName = catalogColumnName;
         return this;
@@ -27,6 +28,7 @@ public class CatalogColumn {
      */
     @JsonProperty("configuration")
     public ColumnConfiguration configuration;
+
     public CatalogColumn withConfiguration(ColumnConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -38,6 +40,7 @@ public class CatalogColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicateProductValueConfiguration")
     public DuplicateProductValueConfiguration duplicateProductValueConfiguration;
+
     public CatalogColumn withDuplicateProductValueConfiguration(DuplicateProductValueConfiguration duplicateProductValueConfiguration) {
         this.duplicateProductValueConfiguration = duplicateProductValueConfiguration;
         return this;
@@ -48,6 +51,7 @@ public class CatalogColumn {
      */
     @JsonProperty("id")
     public String id;
+
     public CatalogColumn withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class CatalogColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignored")
     public Boolean ignored;
+
     public CatalogColumn withIgnored(Boolean ignored) {
         this.ignored = ignored;
         return this;
@@ -66,6 +71,7 @@ public class CatalogColumn {
     
     @JsonProperty("links")
     public CatalogColumnLinks links;
+
     public CatalogColumn withLinks(CatalogColumnLinks links) {
         this.links = links;
         return this;
@@ -76,9 +82,17 @@ public class CatalogColumn {
      */
     @JsonProperty("userColumName")
     public String userColumName;
+
     public CatalogColumn withUserColumName(String userColumName) {
         this.userColumName = userColumName;
         return this;
     }
     
+    public CatalogColumn(@JsonProperty("catalogColumnName") String catalogColumnName, @JsonProperty("configuration") ColumnConfiguration configuration, @JsonProperty("id") String id, @JsonProperty("links") CatalogColumnLinks links, @JsonProperty("userColumName") String userColumName) {
+        this.catalogColumnName = catalogColumnName;
+        this.configuration = configuration;
+        this.id = id;
+        this.links = links;
+        this.userColumName = userColumName;
+  }
 }

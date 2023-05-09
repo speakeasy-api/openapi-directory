@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AccessLog - Information about the &lt;code&gt;AccessLog&lt;/code&gt; attribute.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AccessLog {
     
     public Long emitInterval;
+
     public AccessLog withEmitInterval(Long emitInterval) {
         this.emitInterval = emitInterval;
         return this;
@@ -19,6 +20,7 @@ public class AccessLog {
     
     
     public Boolean enabled;
+
     public AccessLog withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -26,6 +28,7 @@ public class AccessLog {
     
     
     public String s3BucketName;
+
     public AccessLog withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -33,9 +36,13 @@ public class AccessLog {
     
     
     public String s3BucketPrefix;
+
     public AccessLog withS3BucketPrefix(String s3BucketPrefix) {
         this.s3BucketPrefix = s3BucketPrefix;
         return this;
     }
     
+    public AccessLog(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

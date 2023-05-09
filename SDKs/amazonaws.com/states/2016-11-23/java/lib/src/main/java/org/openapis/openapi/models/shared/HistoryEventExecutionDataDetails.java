@@ -15,9 +15,11 @@ public class HistoryEventExecutionDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("truncated")
     public Boolean truncated;
+
     public HistoryEventExecutionDataDetails withTruncated(Boolean truncated) {
         this.truncated = truncated;
         return this;
     }
     
+    public HistoryEventExecutionDataDetails(){}
 }

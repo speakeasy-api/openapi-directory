@@ -15,9 +15,11 @@ public class UpdateDeviceInstanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceInstance")
     public DeviceInstance deviceInstance;
+
     public UpdateDeviceInstanceResult withDeviceInstance(DeviceInstance deviceInstance) {
         this.deviceInstance = deviceInstance;
         return this;
     }
     
+    public UpdateDeviceInstanceResult(){}
 }

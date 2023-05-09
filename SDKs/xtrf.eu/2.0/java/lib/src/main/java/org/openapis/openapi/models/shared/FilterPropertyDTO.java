@@ -15,6 +15,7 @@ public class FilterPropertyDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FilterPropertyDTO withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class FilterPropertyDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public java.util.Map<String, Object> settings;
+
     public FilterPropertyDTO withSettings(java.util.Map<String, Object> settings) {
         this.settings = settings;
         return this;
@@ -31,6 +33,7 @@ public class FilterPropertyDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settingsPresent")
     public Boolean settingsPresent;
+
     public FilterPropertyDTO withSettingsPresent(Boolean settingsPresent) {
         this.settingsPresent = settingsPresent;
         return this;
@@ -39,9 +42,11 @@ public class FilterPropertyDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public FilterPropertyDTO withType(String type) {
         this.type = type;
         return this;
     }
     
+    public FilterPropertyDTO(){}
 }

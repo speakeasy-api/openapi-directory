@@ -15,6 +15,7 @@ public class AwsElasticsearchDomainEncryptionAtRestOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public AwsElasticsearchDomainEncryptionAtRestOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,9 +24,11 @@ public class AwsElasticsearchDomainEncryptionAtRestOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public AwsElasticsearchDomainEncryptionAtRestOptions withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public AwsElasticsearchDomainEncryptionAtRestOptions(){}
 }

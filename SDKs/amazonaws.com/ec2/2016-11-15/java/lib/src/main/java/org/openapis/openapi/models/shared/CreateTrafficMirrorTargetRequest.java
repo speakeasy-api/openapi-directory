@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTrafficMirrorTargetRequest {
     
     public String clientToken;
+
     public CreateTrafficMirrorTargetRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateTrafficMirrorTargetRequest {
     
     
     public String description;
+
     public CreateTrafficMirrorTargetRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateTrafficMirrorTargetRequest {
     
     
     public Boolean dryRun;
+
     public CreateTrafficMirrorTargetRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateTrafficMirrorTargetRequest {
     
     
     public String gatewayLoadBalancerEndpointId;
+
     public CreateTrafficMirrorTargetRequest withGatewayLoadBalancerEndpointId(String gatewayLoadBalancerEndpointId) {
         this.gatewayLoadBalancerEndpointId = gatewayLoadBalancerEndpointId;
         return this;
@@ -37,6 +41,7 @@ public class CreateTrafficMirrorTargetRequest {
     
     
     public String networkInterfaceId;
+
     public CreateTrafficMirrorTargetRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -44,6 +49,7 @@ public class CreateTrafficMirrorTargetRequest {
     
     
     public String networkLoadBalancerArn;
+
     public CreateTrafficMirrorTargetRequest withNetworkLoadBalancerArn(String networkLoadBalancerArn) {
         this.networkLoadBalancerArn = networkLoadBalancerArn;
         return this;
@@ -51,9 +57,11 @@ public class CreateTrafficMirrorTargetRequest {
     
     
     public CreateTrafficMirrorTargetRequestTagSpecifications[] tagSpecifications;
+
     public CreateTrafficMirrorTargetRequest withTagSpecifications(CreateTrafficMirrorTargetRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateTrafficMirrorTargetRequest(){}
 }

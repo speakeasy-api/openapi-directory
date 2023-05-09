@@ -53,11 +53,9 @@ public class Gifs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGifByIdResponse res = new org.openapis.openapi.models.operations.GetGifByIdResponse() {{
+        org.openapis.openapi.models.operations.GetGifByIdResponse res = new org.openapis.openapi.models.operations.GetGifByIdResponse(contentType, httpRes.statusCode()) {{
             getGifById200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class Gifs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGifsByIdResponse res = new org.openapis.openapi.models.operations.GetGifsByIdResponse() {{
+        org.openapis.openapi.models.operations.GetGifsByIdResponse res = new org.openapis.openapi.models.operations.GetGifsByIdResponse(contentType, httpRes.statusCode()) {{
             getGifsById200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Gifs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RandomGifResponse res = new org.openapis.openapi.models.operations.RandomGifResponse() {{
+        org.openapis.openapi.models.operations.RandomGifResponse res = new org.openapis.openapi.models.operations.RandomGifResponse(contentType, httpRes.statusCode()) {{
             randomGif200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Gifs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchGifsResponse res = new org.openapis.openapi.models.operations.SearchGifsResponse() {{
+        org.openapis.openapi.models.operations.SearchGifsResponse res = new org.openapis.openapi.models.operations.SearchGifsResponse(contentType, httpRes.statusCode()) {{
             searchGifs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class Gifs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TranslateGifResponse res = new org.openapis.openapi.models.operations.TranslateGifResponse() {{
+        org.openapis.openapi.models.operations.TranslateGifResponse res = new org.openapis.openapi.models.operations.TranslateGifResponse(contentType, httpRes.statusCode()) {{
             translateGif200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Gifs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TrendingGifsResponse res = new org.openapis.openapi.models.operations.TrendingGifsResponse() {{
+        org.openapis.openapi.models.operations.TrendingGifsResponse res = new org.openapis.openapi.models.operations.TrendingGifsResponse(contentType, httpRes.statusCode()) {{
             trendingGifs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

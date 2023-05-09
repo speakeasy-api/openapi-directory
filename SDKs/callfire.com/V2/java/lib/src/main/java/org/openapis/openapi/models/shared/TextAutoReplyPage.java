@@ -15,6 +15,7 @@ public class TextAutoReplyPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public TextAutoReply[] items;
+
     public TextAutoReplyPage withItems(TextAutoReply[] items) {
         this.items = items;
         return this;
@@ -26,6 +27,7 @@ public class TextAutoReplyPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public TextAutoReplyPage withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -37,6 +39,7 @@ public class TextAutoReplyPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public TextAutoReplyPage withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -48,9 +51,11 @@ public class TextAutoReplyPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public TextAutoReplyPage withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public TextAutoReplyPage(){}
 }

@@ -18,9 +18,11 @@ public class AddSlicerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slicer")
     public Slicer slicer;
+
     public AddSlicerResponse withSlicer(Slicer slicer) {
         this.slicer = slicer;
         return this;
     }
     
+    public AddSlicerResponse(){}
 }

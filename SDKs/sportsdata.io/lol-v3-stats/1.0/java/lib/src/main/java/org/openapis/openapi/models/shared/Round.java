@@ -12,6 +12,7 @@ public class Round {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentRound")
     public Boolean currentRound;
+
     public Round withCurrentRound(Boolean currentRound) {
         this.currentRound = currentRound;
         return this;
@@ -20,6 +21,7 @@ public class Round {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentWeek")
     public Long currentWeek;
+
     public Round withCurrentWeek(Long currentWeek) {
         this.currentWeek = currentWeek;
         return this;
@@ -28,6 +30,7 @@ public class Round {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public Round withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -36,6 +39,7 @@ public class Round {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Round withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class Round {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoundId")
     public Long roundId;
+
     public Round withRoundId(Long roundId) {
         this.roundId = roundId;
         return this;
@@ -52,6 +57,7 @@ public class Round {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public Round withSeason(Long season) {
         this.season = season;
         return this;
@@ -60,6 +66,7 @@ public class Round {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonId")
     public Long seasonId;
+
     public Round withSeasonId(Long seasonId) {
         this.seasonId = seasonId;
         return this;
@@ -68,6 +75,7 @@ public class Round {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public Round withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -76,6 +84,7 @@ public class Round {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public Round withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -84,9 +93,11 @@ public class Round {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Round withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Round(){}
 }

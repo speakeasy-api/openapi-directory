@@ -15,6 +15,7 @@ public class UpdateStageRequestBodyAccessLogSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationArn")
     public String destinationArn;
+
     public UpdateStageRequestBodyAccessLogSettings withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -23,9 +24,11 @@ public class UpdateStageRequestBodyAccessLogSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public UpdateStageRequestBodyAccessLogSettings withFormat(String format) {
         this.format = format;
         return this;
     }
     
+    public UpdateStageRequestBodyAccessLogSettings(){}
 }

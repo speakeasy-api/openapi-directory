@@ -15,6 +15,7 @@ public class CreateAssociationBatchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Failed")
     public FailedCreateAssociation[] failed;
+
     public CreateAssociationBatchResult withFailed(FailedCreateAssociation[] failed) {
         this.failed = failed;
         return this;
@@ -23,9 +24,11 @@ public class CreateAssociationBatchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Successful")
     public AssociationDescription[] successful;
+
     public CreateAssociationBatchResult withSuccessful(AssociationDescription[] successful) {
         this.successful = successful;
         return this;
     }
     
+    public CreateAssociationBatchResult(){}
 }

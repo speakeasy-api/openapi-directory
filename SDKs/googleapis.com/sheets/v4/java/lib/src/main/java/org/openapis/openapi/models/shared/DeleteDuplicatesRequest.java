@@ -18,6 +18,7 @@ public class DeleteDuplicatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonColumns")
     public DimensionRange[] comparisonColumns;
+
     public DeleteDuplicatesRequest withComparisonColumns(DimensionRange[] comparisonColumns) {
         this.comparisonColumns = comparisonColumns;
         return this;
@@ -29,9 +30,11 @@ public class DeleteDuplicatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GridRange range;
+
     public DeleteDuplicatesRequest withRange(GridRange range) {
         this.range = range;
         return this;
     }
     
+    public DeleteDuplicatesRequest(){}
 }

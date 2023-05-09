@@ -18,9 +18,11 @@ public class ThirdPartyOnlyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pixelOrderIdReportingEnabled")
     public Boolean pixelOrderIdReportingEnabled;
+
     public ThirdPartyOnlyConfig withPixelOrderIdReportingEnabled(Boolean pixelOrderIdReportingEnabled) {
         this.pixelOrderIdReportingEnabled = pixelOrderIdReportingEnabled;
         return this;
     }
     
+    public ThirdPartyOnlyConfig(){}
 }

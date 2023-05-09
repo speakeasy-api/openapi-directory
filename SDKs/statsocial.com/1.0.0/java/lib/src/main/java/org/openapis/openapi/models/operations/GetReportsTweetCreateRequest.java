@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReportsTweetCreateRequest {
@@ -12,6 +13,7 @@ public class GetReportsTweetCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public Long endDate;
+
     public GetReportsTweetCreateRequest withEndDate(Long endDate) {
         this.endDate = endDate;
         return this;
@@ -22,6 +24,7 @@ public class GetReportsTweetCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetReportsTweetCreateRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -32,6 +35,7 @@ public class GetReportsTweetCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_name")
     public String reportName;
+
     public GetReportsTweetCreateRequest withReportName(String reportName) {
         this.reportName = reportName;
         return this;
@@ -42,6 +46,7 @@ public class GetReportsTweetCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public Long startDate;
+
     public GetReportsTweetCreateRequest withStartDate(Long startDate) {
         this.startDate = startDate;
         return this;
@@ -52,9 +57,16 @@ public class GetReportsTweetCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=terms")
     public String terms;
+
     public GetReportsTweetCreateRequest withTerms(String terms) {
         this.terms = terms;
         return this;
     }
     
+    public GetReportsTweetCreateRequest(@JsonProperty("end_date") Long endDate, @JsonProperty("report_name") String reportName, @JsonProperty("start_date") Long startDate, @JsonProperty("terms") String terms) {
+        this.endDate = endDate;
+        this.reportName = reportName;
+        this.startDate = startDate;
+        this.terms = terms;
+  }
 }

@@ -15,6 +15,7 @@ public class BucketByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationMillis")
     public String durationMillis;
+
     public BucketByTime withDurationMillis(String durationMillis) {
         this.durationMillis = durationMillis;
         return this;
@@ -23,9 +24,11 @@ public class BucketByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public BucketByTimePeriod period;
+
     public BucketByTime withPeriod(BucketByTimePeriod period) {
         this.period = period;
         return this;
     }
     
+    public BucketByTime(){}
 }

@@ -15,6 +15,7 @@ public class CreateSchedulingPolicyRequestBodyFairsharePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeReservation")
     public Long computeReservation;
+
     public CreateSchedulingPolicyRequestBodyFairsharePolicy withComputeReservation(Long computeReservation) {
         this.computeReservation = computeReservation;
         return this;
@@ -23,6 +24,7 @@ public class CreateSchedulingPolicyRequestBodyFairsharePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareDecaySeconds")
     public Long shareDecaySeconds;
+
     public CreateSchedulingPolicyRequestBodyFairsharePolicy withShareDecaySeconds(Long shareDecaySeconds) {
         this.shareDecaySeconds = shareDecaySeconds;
         return this;
@@ -31,9 +33,11 @@ public class CreateSchedulingPolicyRequestBodyFairsharePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareDistribution")
     public org.openapis.openapi.models.shared.ShareAttributes[] shareDistribution;
+
     public CreateSchedulingPolicyRequestBodyFairsharePolicy withShareDistribution(org.openapis.openapi.models.shared.ShareAttributes[] shareDistribution) {
         this.shareDistribution = shareDistribution;
         return this;
     }
     
+    public CreateSchedulingPolicyRequestBodyFairsharePolicy(){}
 }

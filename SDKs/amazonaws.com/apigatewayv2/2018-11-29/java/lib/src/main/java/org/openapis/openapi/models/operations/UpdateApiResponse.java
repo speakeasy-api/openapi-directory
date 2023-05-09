@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApiResponse {
@@ -12,6 +13,7 @@ public class UpdateApiResponse {
      */
     
     public Object badRequestException;
+
     public UpdateApiResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateApiResponse {
      */
     
     public Object conflictException;
+
     public UpdateApiResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateApiResponse {
     
     
     public String contentType;
+
     public UpdateApiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateApiResponse {
      */
     
     public Object notFoundException;
+
     public UpdateApiResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateApiResponse {
     
     
     public Integer statusCode;
+
     public UpdateApiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateApiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateApiResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateApiResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateApiResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateApiResponse updateApiResponse;
+
     public UpdateApiResponse withUpdateApiResponse(org.openapis.openapi.models.shared.UpdateApiResponse updateApiResponse) {
         this.updateApiResponse = updateApiResponse;
         return this;
     }
     
+    public UpdateApiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

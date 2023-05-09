@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SaaSConfiguration {
     @JsonProperty("HostUrl")
     public String hostUrl;
+
     public SaaSConfiguration withHostUrl(String hostUrl) {
         this.hostUrl = hostUrl;
         return this;
@@ -19,9 +20,14 @@ public class SaaSConfiguration {
     
     @JsonProperty("OrganizationName")
     public String organizationName;
+
     public SaaSConfiguration withOrganizationName(String organizationName) {
         this.organizationName = organizationName;
         return this;
     }
     
+    public SaaSConfiguration(@JsonProperty("HostUrl") String hostUrl, @JsonProperty("OrganizationName") String organizationName) {
+        this.hostUrl = hostUrl;
+        this.organizationName = organizationName;
+  }
 }

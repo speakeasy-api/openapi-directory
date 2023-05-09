@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBannersFacetsRequest {
@@ -29,6 +30,7 @@ public class GetBannersFacetsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=facets")
     public String facets;
+
     public GetBannersFacetsRequest withFacets(String facets) {
         this.facets = facets;
         return this;
@@ -39,6 +41,7 @@ public class GetBannersFacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetBannersFacetsRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -49,9 +52,13 @@ public class GetBannersFacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetBannersFacetsRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GetBannersFacetsRequest(@JsonProperty("facets") String facets) {
+        this.facets = facets;
+  }
 }

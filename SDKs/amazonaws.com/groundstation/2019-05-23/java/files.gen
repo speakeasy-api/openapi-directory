@@ -145,6 +145,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/AntennaDownlinkConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/DataflowEndpointGroupIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/EndpointDetails.java
 lib/src/main/java/org/openapis/openapi/models/shared/SecurityDetails.java
+lib/src/main/java/org/openapis/openapi/models/shared/CapabilityHealthEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/CapabilityHealthReasonEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DataflowEndpoint.java
 lib/src/main/java/org/openapis/openapi/models/shared/EndpointStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SocketAddress.java
@@ -204,8 +206,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/SatelliteListItem.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForResourceResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RegisterAgentResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ComponentVersion.java
-lib/src/main/java/org/openapis/openapi/models/shared/ComponentTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateAgentStatusResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ComponentStatusData.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribePrincipalIdFormatResultPrincipalsStatuses {
     
     public OffsetDateTime deadline;
+
     public DescribePrincipalIdFormatResultPrincipalsStatuses withDeadline(OffsetDateTime deadline) {
         this.deadline = deadline;
         return this;
@@ -19,6 +20,7 @@ public class DescribePrincipalIdFormatResultPrincipalsStatuses {
     
     
     public String resource;
+
     public DescribePrincipalIdFormatResultPrincipalsStatuses withResource(String resource) {
         this.resource = resource;
         return this;
@@ -26,9 +28,11 @@ public class DescribePrincipalIdFormatResultPrincipalsStatuses {
     
     
     public Boolean useLongIds;
+
     public DescribePrincipalIdFormatResultPrincipalsStatuses withUseLongIds(Boolean useLongIds) {
         this.useLongIds = useLongIds;
         return this;
     }
     
+    public DescribePrincipalIdFormatResultPrincipalsStatuses(){}
 }

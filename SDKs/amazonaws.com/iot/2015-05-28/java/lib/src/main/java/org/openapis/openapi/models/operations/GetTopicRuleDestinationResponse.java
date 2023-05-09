@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTopicRuleDestinationResponse {
     
     public String contentType;
+
     public GetTopicRuleDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTopicRuleDestinationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTopicRuleDestinationResponse getTopicRuleDestinationResponse;
+
     public GetTopicRuleDestinationResponse withGetTopicRuleDestinationResponse(org.openapis.openapi.models.shared.GetTopicRuleDestinationResponse getTopicRuleDestinationResponse) {
         this.getTopicRuleDestinationResponse = getTopicRuleDestinationResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetTopicRuleDestinationResponse {
      */
     
     public Object internalException;
+
     public GetTopicRuleDestinationResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class GetTopicRuleDestinationResponse {
      */
     
     public Object invalidRequestException;
+
     public GetTopicRuleDestinationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetTopicRuleDestinationResponse {
     
     
     public Integer statusCode;
+
     public GetTopicRuleDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetTopicRuleDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTopicRuleDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetTopicRuleDestinationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetTopicRuleDestinationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class GetTopicRuleDestinationResponse {
      */
     
     public Object unauthorizedException;
+
     public GetTopicRuleDestinationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetTopicRuleDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

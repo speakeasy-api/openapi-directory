@@ -12,9 +12,13 @@ public class CancelQuantumTaskRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CancelQuantumTaskRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public CancelQuantumTaskRequestBody(@JsonProperty("clientToken") String clientToken) {
+        this.clientToken = clientToken;
+  }
 }

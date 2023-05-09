@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetClients200ApplicationJSON {
     @JsonProperty("clients")
     public org.openapis.openapi.models.shared.Client[] clients;
+
     public GetClients200ApplicationJSON withClients(org.openapis.openapi.models.shared.Client[] clients) {
         this.clients = clients;
         return this;
@@ -25,9 +26,13 @@ public class GetClients200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetClients200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetClients200ApplicationJSON(@JsonProperty("clients") org.openapis.openapi.models.shared.Client[] clients) {
+        this.clients = clients;
+  }
 }

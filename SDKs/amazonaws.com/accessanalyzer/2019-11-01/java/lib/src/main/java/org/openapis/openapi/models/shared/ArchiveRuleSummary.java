@@ -19,6 +19,7 @@ public class ArchiveRuleSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ArchiveRuleSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -26,6 +27,7 @@ public class ArchiveRuleSummary {
     
     @JsonProperty("filter")
     public java.util.Map<String, Criterion> filter;
+
     public ArchiveRuleSummary withFilter(java.util.Map<String, Criterion> filter) {
         this.filter = filter;
         return this;
@@ -33,6 +35,7 @@ public class ArchiveRuleSummary {
     
     @JsonProperty("ruleName")
     public String ruleName;
+
     public ArchiveRuleSummary withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -42,9 +45,16 @@ public class ArchiveRuleSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public ArchiveRuleSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ArchiveRuleSummary(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("filter") java.util.Map<String, Criterion> filter, @JsonProperty("ruleName") String ruleName, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.createdAt = createdAt;
+        this.filter = filter;
+        this.ruleName = ruleName;
+        this.updatedAt = updatedAt;
+  }
 }

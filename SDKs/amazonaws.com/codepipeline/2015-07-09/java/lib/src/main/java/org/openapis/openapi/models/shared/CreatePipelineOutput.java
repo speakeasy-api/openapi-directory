@@ -15,6 +15,7 @@ public class CreatePipelineOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipeline")
     public PipelineDeclaration pipeline;
+
     public CreatePipelineOutput withPipeline(PipelineDeclaration pipeline) {
         this.pipeline = pipeline;
         return this;
@@ -23,9 +24,11 @@ public class CreatePipelineOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreatePipelineOutput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePipelineOutput(){}
 }

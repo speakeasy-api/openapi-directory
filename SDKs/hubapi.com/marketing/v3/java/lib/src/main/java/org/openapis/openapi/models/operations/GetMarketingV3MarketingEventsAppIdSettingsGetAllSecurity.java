@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetMarketingV3MarketingEventsAppIdSettingsGetAllSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=hapikey")
     public String developerHapikey;
+
     public GetMarketingV3MarketingEventsAppIdSettingsGetAllSecurity withDeveloperHapikey(String developerHapikey) {
         this.developerHapikey = developerHapikey;
         return this;
@@ -16,9 +17,11 @@ public class GetMarketingV3MarketingEventsAppIdSettingsGetAllSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=hapikey")
     public String hapikey;
+
     public GetMarketingV3MarketingEventsAppIdSettingsGetAllSecurity withHapikey(String hapikey) {
         this.hapikey = hapikey;
         return this;
     }
     
+    public GetMarketingV3MarketingEventsAppIdSettingsGetAllSecurity(){}
 }

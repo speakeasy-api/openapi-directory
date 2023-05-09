@@ -18,6 +18,7 @@ public class BlueGreenInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blueInstanceGroupUrls")
     public String[] blueInstanceGroupUrls;
+
     public BlueGreenInfo withBlueInstanceGroupUrls(String[] blueInstanceGroupUrls) {
         this.blueInstanceGroupUrls = blueInstanceGroupUrls;
         return this;
@@ -29,6 +30,7 @@ public class BlueGreenInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bluePoolDeletionStartTime")
     public String bluePoolDeletionStartTime;
+
     public BlueGreenInfo withBluePoolDeletionStartTime(String bluePoolDeletionStartTime) {
         this.bluePoolDeletionStartTime = bluePoolDeletionStartTime;
         return this;
@@ -40,6 +42,7 @@ public class BlueGreenInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greenInstanceGroupUrls")
     public String[] greenInstanceGroupUrls;
+
     public BlueGreenInfo withGreenInstanceGroupUrls(String[] greenInstanceGroupUrls) {
         this.greenInstanceGroupUrls = greenInstanceGroupUrls;
         return this;
@@ -51,6 +54,7 @@ public class BlueGreenInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greenPoolVersion")
     public String greenPoolVersion;
+
     public BlueGreenInfo withGreenPoolVersion(String greenPoolVersion) {
         this.greenPoolVersion = greenPoolVersion;
         return this;
@@ -62,9 +66,11 @@ public class BlueGreenInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phase")
     public BlueGreenInfoPhaseEnum phase;
+
     public BlueGreenInfo withPhase(BlueGreenInfoPhaseEnum phase) {
         this.phase = phase;
         return this;
     }
     
+    public BlueGreenInfo(){}
 }

@@ -14,6 +14,7 @@ public class CreateGeofenceCollectionRequestBody {
      */
     @JsonProperty("CollectionName")
     public String collectionName;
+
     public CreateGeofenceCollectionRequestBody withCollectionName(String collectionName) {
         this.collectionName = collectionName;
         return this;
@@ -25,6 +26,7 @@ public class CreateGeofenceCollectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateGeofenceCollectionRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class CreateGeofenceCollectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CreateGeofenceCollectionRequestBody withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -47,6 +50,7 @@ public class CreateGeofenceCollectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public CreateGeofenceCollectionRequestBodyPricingPlanEnum pricingPlan;
+
     public CreateGeofenceCollectionRequestBody withPricingPlan(CreateGeofenceCollectionRequestBodyPricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -58,6 +62,7 @@ public class CreateGeofenceCollectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlanDataSource")
     public String pricingPlanDataSource;
+
     public CreateGeofenceCollectionRequestBody withPricingPlanDataSource(String pricingPlanDataSource) {
         this.pricingPlanDataSource = pricingPlanDataSource;
         return this;
@@ -69,9 +74,13 @@ public class CreateGeofenceCollectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateGeofenceCollectionRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateGeofenceCollectionRequestBody(@JsonProperty("CollectionName") String collectionName) {
+        this.collectionName = collectionName;
+  }
 }

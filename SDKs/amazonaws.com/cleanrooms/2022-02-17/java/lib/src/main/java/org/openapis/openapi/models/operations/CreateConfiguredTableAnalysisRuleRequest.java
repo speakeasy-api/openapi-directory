@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateConfiguredTableAnalysisRuleRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateConfiguredTableAnalysisRuleRequestBody requestBody;
+
     public CreateConfiguredTableAnalysisRuleRequest withRequestBody(CreateConfiguredTableAnalysisRuleRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class CreateConfiguredTableAnalysisRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CreateConfiguredTableAnalysisRuleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class CreateConfiguredTableAnalysisRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CreateConfiguredTableAnalysisRuleRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class CreateConfiguredTableAnalysisRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CreateConfiguredTableAnalysisRuleRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class CreateConfiguredTableAnalysisRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CreateConfiguredTableAnalysisRuleRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class CreateConfiguredTableAnalysisRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CreateConfiguredTableAnalysisRuleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class CreateConfiguredTableAnalysisRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CreateConfiguredTableAnalysisRuleRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class CreateConfiguredTableAnalysisRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CreateConfiguredTableAnalysisRuleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,9 +77,14 @@ public class CreateConfiguredTableAnalysisRuleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=configuredTableIdentifier")
     public String configuredTableIdentifier;
+
     public CreateConfiguredTableAnalysisRuleRequest withConfiguredTableIdentifier(String configuredTableIdentifier) {
         this.configuredTableIdentifier = configuredTableIdentifier;
         return this;
     }
     
+    public CreateConfiguredTableAnalysisRuleRequest(@JsonProperty("RequestBody") CreateConfiguredTableAnalysisRuleRequestBody requestBody, @JsonProperty("configuredTableIdentifier") String configuredTableIdentifier) {
+        this.requestBody = requestBody;
+        this.configuredTableIdentifier = configuredTableIdentifier;
+  }
 }

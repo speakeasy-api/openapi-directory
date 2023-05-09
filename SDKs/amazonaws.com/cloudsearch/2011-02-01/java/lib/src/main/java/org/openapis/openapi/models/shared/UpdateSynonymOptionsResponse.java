@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateSynonymOptionsResponse - A response message that contains the status of updated synonym options.
@@ -15,9 +15,13 @@ public class UpdateSynonymOptionsResponse {
      */
     
     public SynonymOptionsStatus synonyms;
+
     public UpdateSynonymOptionsResponse withSynonyms(SynonymOptionsStatus synonyms) {
         this.synonyms = synonyms;
         return this;
     }
     
+    public UpdateSynonymOptionsResponse(@JsonProperty("Synonyms") SynonymOptionsStatus synonyms) {
+        this.synonyms = synonyms;
+  }
 }

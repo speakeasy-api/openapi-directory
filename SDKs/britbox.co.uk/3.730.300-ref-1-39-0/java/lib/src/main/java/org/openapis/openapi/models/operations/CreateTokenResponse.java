@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTokenResponse {
     
     public String contentType;
+
     public CreateTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.EeCreateTokenResponse eeCreateTokenResponse;
+
     public CreateTokenResponse withEeCreateTokenResponse(org.openapis.openapi.models.shared.EeCreateTokenResponse eeCreateTokenResponse) {
         this.eeCreateTokenResponse = eeCreateTokenResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public CreateTokenResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class CreateTokenResponse {
     
     
     public Integer statusCode;
+
     public CreateTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

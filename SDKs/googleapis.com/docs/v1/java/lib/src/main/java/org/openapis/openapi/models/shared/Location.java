@@ -18,6 +18,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public Location withIndex(Integer index) {
         this.index = index;
         return this;
@@ -29,9 +30,11 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentId")
     public String segmentId;
+
     public Location withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
     }
     
+    public Location(){}
 }

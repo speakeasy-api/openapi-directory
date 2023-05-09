@@ -18,6 +18,7 @@ public class CreateOrUpdateCalculatorConfigurationRequestBodySkusGift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gifts")
     public Object[] gifts;
+
     public CreateOrUpdateCalculatorConfigurationRequestBodySkusGift withGifts(Object[] gifts) {
         this.gifts = gifts;
         return this;
@@ -29,9 +30,11 @@ public class CreateOrUpdateCalculatorConfigurationRequestBodySkusGift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantitySelectable")
     public Long quantitySelectable;
+
     public CreateOrUpdateCalculatorConfigurationRequestBodySkusGift withQuantitySelectable(Long quantitySelectable) {
         this.quantitySelectable = quantitySelectable;
         return this;
     }
     
+    public CreateOrUpdateCalculatorConfigurationRequestBodySkusGift(){}
 }

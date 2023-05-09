@@ -20,6 +20,7 @@ public class ByoipCidrEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ByoipCidrEvent withMessage(String message) {
         this.message = message;
         return this;
@@ -30,9 +31,11 @@ public class ByoipCidrEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public ByoipCidrEvent withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public ByoipCidrEvent(){}
 }

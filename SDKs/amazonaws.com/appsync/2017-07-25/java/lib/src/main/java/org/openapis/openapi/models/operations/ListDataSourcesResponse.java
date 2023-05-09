@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDataSourcesResponse {
@@ -12,6 +13,7 @@ public class ListDataSourcesResponse {
      */
     
     public Object badRequestException;
+
     public ListDataSourcesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListDataSourcesResponse {
     
     
     public String contentType;
+
     public ListDataSourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDataSourcesResponse {
      */
     
     public Object internalFailureException;
+
     public ListDataSourcesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ListDataSourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDataSourcesResponse listDataSourcesResponse;
+
     public ListDataSourcesResponse withListDataSourcesResponse(org.openapis.openapi.models.shared.ListDataSourcesResponse listDataSourcesResponse) {
         this.listDataSourcesResponse = listDataSourcesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListDataSourcesResponse {
      */
     
     public Object notFoundException;
+
     public ListDataSourcesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListDataSourcesResponse {
     
     
     public Integer statusCode;
+
     public ListDataSourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListDataSourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDataSourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListDataSourcesResponse {
      */
     
     public Object unauthorizedException;
+
     public ListDataSourcesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListDataSourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ListGuaranteedOrdersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guaranteedOrders")
     public GuaranteedOrder[] guaranteedOrders;
+
     public ListGuaranteedOrdersResponse withGuaranteedOrders(GuaranteedOrder[] guaranteedOrders) {
         this.guaranteedOrders = guaranteedOrders;
         return this;
@@ -29,9 +30,11 @@ public class ListGuaranteedOrdersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListGuaranteedOrdersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListGuaranteedOrdersResponse(){}
 }

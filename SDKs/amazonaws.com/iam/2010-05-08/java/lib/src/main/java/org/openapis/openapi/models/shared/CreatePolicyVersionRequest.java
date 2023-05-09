@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreatePolicyVersionRequest {
     
     public String policyArn;
+
     public CreatePolicyVersionRequest withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -16,6 +17,7 @@ public class CreatePolicyVersionRequest {
     
     
     public String policyDocument;
+
     public CreatePolicyVersionRequest withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -23,9 +25,14 @@ public class CreatePolicyVersionRequest {
     
     
     public Boolean setAsDefault;
+
     public CreatePolicyVersionRequest withSetAsDefault(Boolean setAsDefault) {
         this.setAsDefault = setAsDefault;
         return this;
     }
     
+    public CreatePolicyVersionRequest(@JsonProperty("PolicyArn") String policyArn, @JsonProperty("PolicyDocument") String policyDocument) {
+        this.policyArn = policyArn;
+        this.policyDocument = policyDocument;
+  }
 }

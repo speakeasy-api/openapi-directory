@@ -22,6 +22,7 @@ public class LookupEventsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public LookupEventsRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +31,7 @@ public class LookupEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventCategory")
     public EventCategoryEnum eventCategory;
+
     public LookupEventsRequest withEventCategory(EventCategoryEnum eventCategory) {
         this.eventCategory = eventCategory;
         return this;
@@ -38,6 +40,7 @@ public class LookupEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LookupAttributes")
     public LookupAttribute[] lookupAttributes;
+
     public LookupEventsRequest withLookupAttributes(LookupAttribute[] lookupAttributes) {
         this.lookupAttributes = lookupAttributes;
         return this;
@@ -46,6 +49,7 @@ public class LookupEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public LookupEventsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -54,6 +58,7 @@ public class LookupEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public LookupEventsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -64,9 +69,11 @@ public class LookupEventsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public LookupEventsRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public LookupEventsRequest(){}
 }

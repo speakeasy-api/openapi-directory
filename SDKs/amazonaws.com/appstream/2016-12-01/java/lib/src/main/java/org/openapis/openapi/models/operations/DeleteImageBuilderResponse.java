@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteImageBuilderResponse {
@@ -12,6 +13,7 @@ public class DeleteImageBuilderResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteImageBuilderResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteImageBuilderResponse {
     
     
     public String contentType;
+
     public DeleteImageBuilderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteImageBuilderResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteImageBuilderResult deleteImageBuilderResult;
+
     public DeleteImageBuilderResponse withDeleteImageBuilderResult(org.openapis.openapi.models.shared.DeleteImageBuilderResult deleteImageBuilderResult) {
         this.deleteImageBuilderResult = deleteImageBuilderResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteImageBuilderResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DeleteImageBuilderResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteImageBuilderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteImageBuilderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteImageBuilderResponse {
     
     
     public Integer statusCode;
+
     public DeleteImageBuilderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteImageBuilderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteImageBuilderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteImageBuilderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

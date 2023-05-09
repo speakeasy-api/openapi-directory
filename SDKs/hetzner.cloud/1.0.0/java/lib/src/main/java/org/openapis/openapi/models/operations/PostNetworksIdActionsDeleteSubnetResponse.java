@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostNetworksIdActionsDeleteSubnetResponse {
@@ -12,6 +13,7 @@ public class PostNetworksIdActionsDeleteSubnetResponse {
      */
     
     public PostNetworksIdActionsDeleteSubnetActionResponse actionResponse;
+
     public PostNetworksIdActionsDeleteSubnetResponse withActionResponse(PostNetworksIdActionsDeleteSubnetActionResponse actionResponse) {
         this.actionResponse = actionResponse;
         return this;
@@ -19,6 +21,7 @@ public class PostNetworksIdActionsDeleteSubnetResponse {
     
     
     public String contentType;
+
     public PostNetworksIdActionsDeleteSubnetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostNetworksIdActionsDeleteSubnetResponse {
     
     
     public Integer statusCode;
+
     public PostNetworksIdActionsDeleteSubnetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostNetworksIdActionsDeleteSubnetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostNetworksIdActionsDeleteSubnetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostNetworksIdActionsDeleteSubnetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

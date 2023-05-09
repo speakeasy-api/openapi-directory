@@ -18,6 +18,7 @@ public class DiagnosticsThread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crashed")
     public Boolean crashed;
+
     public DiagnosticsThread withCrashed(Boolean crashed) {
         this.crashed = crashed;
         return this;
@@ -29,6 +30,7 @@ public class DiagnosticsThread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exception")
     public DiagnosticsException exception;
+
     public DiagnosticsThread withException(DiagnosticsException exception) {
         this.exception = exception;
         return this;
@@ -39,6 +41,7 @@ public class DiagnosticsThread {
      */
     @JsonProperty("frames")
     public DiagnosticsThreadFrames[] frames;
+
     public DiagnosticsThread withFrames(DiagnosticsThreadFrames[] frames) {
         this.frames = frames;
         return this;
@@ -50,6 +53,7 @@ public class DiagnosticsThread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public DiagnosticsThreadPlatformEnum platform;
+
     public DiagnosticsThread withPlatform(DiagnosticsThreadPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -61,6 +65,7 @@ public class DiagnosticsThread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevant")
     public Boolean relevant;
+
     public DiagnosticsThread withRelevant(Boolean relevant) {
         this.relevant = relevant;
         return this;
@@ -71,9 +76,14 @@ public class DiagnosticsThread {
      */
     @JsonProperty("title")
     public String title;
+
     public DiagnosticsThread withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public DiagnosticsThread(@JsonProperty("frames") DiagnosticsThreadFrames[] frames, @JsonProperty("title") String title) {
+        this.frames = frames;
+        this.title = title;
+  }
 }

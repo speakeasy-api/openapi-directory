@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAdvancedTeamGameStatsResponse {
@@ -12,6 +13,7 @@ public class GetAdvancedTeamGameStatsResponse {
      */
     
     public org.openapis.openapi.models.shared.AdvancedGameStat[] advancedGameStats;
+
     public GetAdvancedTeamGameStatsResponse withAdvancedGameStats(org.openapis.openapi.models.shared.AdvancedGameStat[] advancedGameStats) {
         this.advancedGameStats = advancedGameStats;
         return this;
@@ -19,6 +21,7 @@ public class GetAdvancedTeamGameStatsResponse {
     
     
     public String contentType;
+
     public GetAdvancedTeamGameStatsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetAdvancedTeamGameStatsResponse {
     
     
     public Integer statusCode;
+
     public GetAdvancedTeamGameStatsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetAdvancedTeamGameStatsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAdvancedTeamGameStatsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAdvancedTeamGameStatsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

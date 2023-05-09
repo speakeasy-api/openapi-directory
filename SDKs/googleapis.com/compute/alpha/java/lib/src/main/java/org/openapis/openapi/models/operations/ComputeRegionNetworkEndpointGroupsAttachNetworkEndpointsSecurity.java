@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionNetworkEndpointGroupsAttachNetworkEndpointsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionNetworkEndpointGroupsAttachNetworkEndpointsSecurityOption1 option1;
+
     public ComputeRegionNetworkEndpointGroupsAttachNetworkEndpointsSecurity withOption1(ComputeRegionNetworkEndpointGroupsAttachNetworkEndpointsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeRegionNetworkEndpointGroupsAttachNetworkEndpointsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionNetworkEndpointGroupsAttachNetworkEndpointsSecurityOption2 option2;
+
     public ComputeRegionNetworkEndpointGroupsAttachNetworkEndpointsSecurity withOption2(ComputeRegionNetworkEndpointGroupsAttachNetworkEndpointsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeRegionNetworkEndpointGroupsAttachNetworkEndpointsSecurity(){}
 }

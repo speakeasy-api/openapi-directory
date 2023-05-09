@@ -15,6 +15,7 @@ public class MultiRegionKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public MultiRegionKey withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class MultiRegionKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public MultiRegionKey withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public MultiRegionKey(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostV01CancelScheduledPlayResponse {
@@ -12,6 +13,7 @@ public class PostV01CancelScheduledPlayResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelScheduledPlayResponse cancelScheduledPlayResponse;
+
     public PostV01CancelScheduledPlayResponse withCancelScheduledPlayResponse(org.openapis.openapi.models.shared.CancelScheduledPlayResponse cancelScheduledPlayResponse) {
         this.cancelScheduledPlayResponse = cancelScheduledPlayResponse;
         return this;
@@ -19,6 +21,7 @@ public class PostV01CancelScheduledPlayResponse {
     
     
     public String contentType;
+
     public PostV01CancelScheduledPlayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostV01CancelScheduledPlayResponse {
     
     
     public Integer statusCode;
+
     public PostV01CancelScheduledPlayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostV01CancelScheduledPlayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostV01CancelScheduledPlayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostV01CancelScheduledPlayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

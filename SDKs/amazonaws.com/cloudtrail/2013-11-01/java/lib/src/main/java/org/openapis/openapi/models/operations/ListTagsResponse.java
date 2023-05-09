@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTagsResponse {
@@ -12,6 +13,7 @@ public class ListTagsResponse {
      */
     
     public Object cloudTrailARNInvalidException;
+
     public ListTagsResponse withCloudTrailARNInvalidException(Object cloudTrailARNInvalidException) {
         this.cloudTrailARNInvalidException = cloudTrailARNInvalidException;
         return this;
@@ -19,6 +21,7 @@ public class ListTagsResponse {
     
     
     public String contentType;
+
     public ListTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTagsResponse {
      */
     
     public Object eventDataStoreNotFoundException;
+
     public ListTagsResponse withEventDataStoreNotFoundException(Object eventDataStoreNotFoundException) {
         this.eventDataStoreNotFoundException = eventDataStoreNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class ListTagsResponse {
      */
     
     public Object inactiveEventDataStoreException;
+
     public ListTagsResponse withInactiveEventDataStoreException(Object inactiveEventDataStoreException) {
         this.inactiveEventDataStoreException = inactiveEventDataStoreException;
         return this;
@@ -49,6 +54,7 @@ public class ListTagsResponse {
      */
     
     public Object invalidTokenException;
+
     public ListTagsResponse withInvalidTokenException(Object invalidTokenException) {
         this.invalidTokenException = invalidTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListTagsResponse {
      */
     
     public Object invalidTrailNameException;
+
     public ListTagsResponse withInvalidTrailNameException(Object invalidTrailNameException) {
         this.invalidTrailNameException = invalidTrailNameException;
         return this;
@@ -69,6 +76,7 @@ public class ListTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTagsResponse listTagsResponse;
+
     public ListTagsResponse withListTagsResponse(org.openapis.openapi.models.shared.ListTagsResponse listTagsResponse) {
         this.listTagsResponse = listTagsResponse;
         return this;
@@ -79,6 +87,7 @@ public class ListTagsResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public ListTagsResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -89,6 +98,7 @@ public class ListTagsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public ListTagsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -99,6 +109,7 @@ public class ListTagsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTagsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -106,6 +117,7 @@ public class ListTagsResponse {
     
     
     public Integer statusCode;
+
     public ListTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class ListTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class ListTagsResponse {
      */
     
     public Object resourceTypeNotSupportedException;
+
     public ListTagsResponse withResourceTypeNotSupportedException(Object resourceTypeNotSupportedException) {
         this.resourceTypeNotSupportedException = resourceTypeNotSupportedException;
         return this;
@@ -133,9 +147,14 @@ public class ListTagsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public ListTagsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public ListTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

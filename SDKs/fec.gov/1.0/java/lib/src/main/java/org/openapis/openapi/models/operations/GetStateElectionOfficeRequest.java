@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStateElectionOfficeRequest {
@@ -13,6 +14,7 @@ public class GetStateElectionOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetStateElectionOfficeRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -23,6 +25,7 @@ public class GetStateElectionOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetStateElectionOfficeRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -33,6 +36,7 @@ public class GetStateElectionOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetStateElectionOfficeRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -44,6 +48,7 @@ public class GetStateElectionOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetStateElectionOfficeRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -54,6 +59,7 @@ public class GetStateElectionOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetStateElectionOfficeRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -64,6 +70,7 @@ public class GetStateElectionOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetStateElectionOfficeRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -74,6 +81,7 @@ public class GetStateElectionOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetStateElectionOfficeRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
@@ -87,9 +95,14 @@ public class GetStateElectionOfficeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String state;
+
     public GetStateElectionOfficeRequest withState(String state) {
         this.state = state;
         return this;
     }
     
+    public GetStateElectionOfficeRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("state") String state) {
+        this.apiKey = apiKey;
+        this.state = state;
+  }
 }

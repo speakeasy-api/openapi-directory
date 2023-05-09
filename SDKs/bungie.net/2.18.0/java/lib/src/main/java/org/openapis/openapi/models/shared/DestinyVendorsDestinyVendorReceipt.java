@@ -15,6 +15,7 @@ public class DestinyVendorsDestinyVendorReceipt {
      */
     
     public DestinyDestinyItemQuantity[] currencyPaid;
+
     public DestinyVendorsDestinyVendorReceipt withCurrencyPaid(DestinyDestinyItemQuantity[] currencyPaid) {
         this.currencyPaid = currencyPaid;
         return this;
@@ -25,6 +26,7 @@ public class DestinyVendorsDestinyVendorReceipt {
      */
     
     public OffsetDateTime expiresOn;
+
     public DestinyVendorsDestinyVendorReceipt withExpiresOn(OffsetDateTime expiresOn) {
         this.expiresOn = expiresOn;
         return this;
@@ -35,6 +37,7 @@ public class DestinyVendorsDestinyVendorReceipt {
      */
     
     public DestinyVendorsDestinyVendorReceiptItemReceived itemReceived;
+
     public DestinyVendorsDestinyVendorReceipt withItemReceived(DestinyVendorsDestinyVendorReceiptItemReceived itemReceived) {
         this.itemReceived = itemReceived;
         return this;
@@ -45,6 +48,7 @@ public class DestinyVendorsDestinyVendorReceipt {
      */
     
     public Long licenseUnlockHash;
+
     public DestinyVendorsDestinyVendorReceipt withLicenseUnlockHash(Long licenseUnlockHash) {
         this.licenseUnlockHash = licenseUnlockHash;
         return this;
@@ -55,6 +59,7 @@ public class DestinyVendorsDestinyVendorReceipt {
      */
     
     public Long purchasedByCharacterId;
+
     public DestinyVendorsDestinyVendorReceipt withPurchasedByCharacterId(Long purchasedByCharacterId) {
         this.purchasedByCharacterId = purchasedByCharacterId;
         return this;
@@ -65,6 +70,7 @@ public class DestinyVendorsDestinyVendorReceipt {
      */
     
     public Integer refundPolicy;
+
     public DestinyVendorsDestinyVendorReceipt withRefundPolicy(Integer refundPolicy) {
         this.refundPolicy = refundPolicy;
         return this;
@@ -75,6 +81,7 @@ public class DestinyVendorsDestinyVendorReceipt {
      */
     
     public Integer sequenceNumber;
+
     public DestinyVendorsDestinyVendorReceipt withSequenceNumber(Integer sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
@@ -85,9 +92,11 @@ public class DestinyVendorsDestinyVendorReceipt {
      */
     
     public Long timeToExpiration;
+
     public DestinyVendorsDestinyVendorReceipt withTimeToExpiration(Long timeToExpiration) {
         this.timeToExpiration = timeToExpiration;
         return this;
     }
     
+    public DestinyVendorsDestinyVendorReceipt(){}
 }

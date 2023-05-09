@@ -18,6 +18,7 @@ public class CorrectionCorrection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correction")
     public Boolean correction;
+
     public CorrectionCorrection withCorrection(Boolean correction) {
         this.correction = correction;
         return this;
@@ -29,6 +30,7 @@ public class CorrectionCorrection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highlighted")
     public String highlighted;
+
     public CorrectionCorrection withHighlighted(String highlighted) {
         this.highlighted = highlighted;
         return this;
@@ -40,6 +42,7 @@ public class CorrectionCorrection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("misspelled")
     public Boolean misspelled;
+
     public CorrectionCorrection withMisspelled(Boolean misspelled) {
         this.misspelled = misspelled;
         return this;
@@ -51,9 +54,11 @@ public class CorrectionCorrection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public CorrectionCorrection withText(String text) {
         this.text = text;
         return this;
     }
     
+    public CorrectionCorrection(){}
 }

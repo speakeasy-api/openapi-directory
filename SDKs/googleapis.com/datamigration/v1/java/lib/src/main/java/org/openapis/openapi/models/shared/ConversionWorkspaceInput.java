@@ -18,6 +18,7 @@ public class ConversionWorkspaceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public DatabaseEngineInfo destination;
+
     public ConversionWorkspaceInput withDestination(DatabaseEngineInfo destination) {
         this.destination = destination;
         return this;
@@ -29,6 +30,7 @@ public class ConversionWorkspaceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ConversionWorkspaceInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class ConversionWorkspaceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("globalSettings")
     public java.util.Map<String, String> globalSettings;
+
     public ConversionWorkspaceInput withGlobalSettings(java.util.Map<String, String> globalSettings) {
         this.globalSettings = globalSettings;
         return this;
@@ -51,6 +54,7 @@ public class ConversionWorkspaceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConversionWorkspaceInput withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class ConversionWorkspaceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public DatabaseEngineInfo source;
+
     public ConversionWorkspaceInput withSource(DatabaseEngineInfo source) {
         this.source = source;
         return this;
     }
     
+    public ConversionWorkspaceInput(){}
 }

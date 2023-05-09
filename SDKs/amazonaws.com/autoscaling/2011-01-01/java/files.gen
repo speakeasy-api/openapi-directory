@@ -693,4 +693,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/RefreshStrategyEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TerminateInstanceInAutoScalingGroupType.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateAutoScalingGroupType.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

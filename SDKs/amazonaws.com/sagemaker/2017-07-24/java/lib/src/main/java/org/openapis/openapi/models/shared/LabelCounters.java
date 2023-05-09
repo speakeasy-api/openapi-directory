@@ -15,6 +15,7 @@ public class LabelCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedNonRetryableError")
     public Long failedNonRetryableError;
+
     public LabelCounters withFailedNonRetryableError(Long failedNonRetryableError) {
         this.failedNonRetryableError = failedNonRetryableError;
         return this;
@@ -23,6 +24,7 @@ public class LabelCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLabeled")
     public Long humanLabeled;
+
     public LabelCounters withHumanLabeled(Long humanLabeled) {
         this.humanLabeled = humanLabeled;
         return this;
@@ -31,6 +33,7 @@ public class LabelCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MachineLabeled")
     public Long machineLabeled;
+
     public LabelCounters withMachineLabeled(Long machineLabeled) {
         this.machineLabeled = machineLabeled;
         return this;
@@ -39,6 +42,7 @@ public class LabelCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalLabeled")
     public Long totalLabeled;
+
     public LabelCounters withTotalLabeled(Long totalLabeled) {
         this.totalLabeled = totalLabeled;
         return this;
@@ -47,9 +51,11 @@ public class LabelCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unlabeled")
     public Long unlabeled;
+
     public LabelCounters withUnlabeled(Long unlabeled) {
         this.unlabeled = unlabeled;
         return this;
     }
     
+    public LabelCounters(){}
 }

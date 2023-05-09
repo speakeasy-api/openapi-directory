@@ -15,6 +15,7 @@ public class DeleteAppVersionResourceRequestBodyLogicalResourceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksSourceName")
     public String eksSourceName;
+
     public DeleteAppVersionResourceRequestBodyLogicalResourceId withEksSourceName(String eksSourceName) {
         this.eksSourceName = eksSourceName;
         return this;
@@ -23,6 +24,7 @@ public class DeleteAppVersionResourceRequestBodyLogicalResourceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public DeleteAppVersionResourceRequestBodyLogicalResourceId withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -31,6 +33,7 @@ public class DeleteAppVersionResourceRequestBodyLogicalResourceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicalStackName")
     public String logicalStackName;
+
     public DeleteAppVersionResourceRequestBodyLogicalResourceId withLogicalStackName(String logicalStackName) {
         this.logicalStackName = logicalStackName;
         return this;
@@ -39,6 +42,7 @@ public class DeleteAppVersionResourceRequestBodyLogicalResourceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroupName")
     public String resourceGroupName;
+
     public DeleteAppVersionResourceRequestBodyLogicalResourceId withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
@@ -47,9 +51,11 @@ public class DeleteAppVersionResourceRequestBodyLogicalResourceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terraformSourceName")
     public String terraformSourceName;
+
     public DeleteAppVersionResourceRequestBodyLogicalResourceId withTerraformSourceName(String terraformSourceName) {
         this.terraformSourceName = terraformSourceName;
         return this;
     }
     
+    public DeleteAppVersionResourceRequestBodyLogicalResourceId(){}
 }

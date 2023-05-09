@@ -12,9 +12,13 @@ public class PriceChangeRequest {
      */
     @JsonProperty("price")
     public Integer price;
+
     public PriceChangeRequest withPrice(Integer price) {
         this.price = price;
         return this;
     }
     
+    public PriceChangeRequest(@JsonProperty("price") Integer price) {
+        this.price = price;
+  }
 }

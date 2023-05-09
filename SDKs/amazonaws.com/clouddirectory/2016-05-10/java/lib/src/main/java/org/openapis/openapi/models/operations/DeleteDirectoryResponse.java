@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDirectoryResponse {
@@ -12,6 +13,7 @@ public class DeleteDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public DeleteDirectoryResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDirectoryResponse {
     
     
     public String contentType;
+
     public DeleteDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDirectoryResponse deleteDirectoryResponse;
+
     public DeleteDirectoryResponse withDeleteDirectoryResponse(org.openapis.openapi.models.shared.DeleteDirectoryResponse deleteDirectoryResponse) {
         this.deleteDirectoryResponse = deleteDirectoryResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.DirectoryDeletedException directoryDeletedException;
+
     public DeleteDirectoryResponse withDirectoryDeletedException(org.openapis.openapi.models.shared.DirectoryDeletedException directoryDeletedException) {
         this.directoryDeletedException = directoryDeletedException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.DirectoryNotDisabledException directoryNotDisabledException;
+
     public DeleteDirectoryResponse withDirectoryNotDisabledException(org.openapis.openapi.models.shared.DirectoryNotDisabledException directoryNotDisabledException) {
         this.directoryNotDisabledException = directoryNotDisabledException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public DeleteDirectoryResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public DeleteDirectoryResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public DeleteDirectoryResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class DeleteDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public DeleteDirectoryResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class DeleteDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public DeleteDirectoryResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -106,6 +117,7 @@ public class DeleteDirectoryResponse {
     
     
     public Integer statusCode;
+
     public DeleteDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class DeleteDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,9 +136,14 @@ public class DeleteDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public DeleteDirectoryResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDetectSentimentResponse {
@@ -12,6 +13,7 @@ public class BatchDetectSentimentResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDetectSentimentResponse batchDetectSentimentResponse;
+
     public BatchDetectSentimentResponse withBatchDetectSentimentResponse(org.openapis.openapi.models.shared.BatchDetectSentimentResponse batchDetectSentimentResponse) {
         this.batchDetectSentimentResponse = batchDetectSentimentResponse;
         return this;
@@ -22,6 +24,7 @@ public class BatchDetectSentimentResponse {
      */
     
     public Object batchSizeLimitExceededException;
+
     public BatchDetectSentimentResponse withBatchSizeLimitExceededException(Object batchSizeLimitExceededException) {
         this.batchSizeLimitExceededException = batchSizeLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class BatchDetectSentimentResponse {
     
     
     public String contentType;
+
     public BatchDetectSentimentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchDetectSentimentResponse {
      */
     
     public Object internalServerException;
+
     public BatchDetectSentimentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BatchDetectSentimentResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchDetectSentimentResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class BatchDetectSentimentResponse {
     
     
     public Integer statusCode;
+
     public BatchDetectSentimentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchDetectSentimentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDetectSentimentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class BatchDetectSentimentResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public BatchDetectSentimentResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -83,9 +92,14 @@ public class BatchDetectSentimentResponse {
      */
     
     public Object unsupportedLanguageException;
+
     public BatchDetectSentimentResponse withUnsupportedLanguageException(Object unsupportedLanguageException) {
         this.unsupportedLanguageException = unsupportedLanguageException;
         return this;
     }
     
+    public BatchDetectSentimentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

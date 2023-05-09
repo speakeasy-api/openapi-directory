@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteV2WebhookSubscriptionsIdRequest {
@@ -12,9 +13,13 @@ public class DeleteV2WebhookSubscriptionsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public DeleteV2WebhookSubscriptionsIdRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public DeleteV2WebhookSubscriptionsIdRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

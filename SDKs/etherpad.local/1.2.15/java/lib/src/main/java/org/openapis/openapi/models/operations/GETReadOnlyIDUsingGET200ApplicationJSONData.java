@@ -12,9 +12,11 @@ public class GETReadOnlyIDUsingGET200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOnlyID")
     public String readOnlyID;
+
     public GETReadOnlyIDUsingGET200ApplicationJSONData withReadOnlyID(String readOnlyID) {
         this.readOnlyID = readOnlyID;
         return this;
     }
     
+    public GETReadOnlyIDUsingGET200ApplicationJSONData(){}
 }

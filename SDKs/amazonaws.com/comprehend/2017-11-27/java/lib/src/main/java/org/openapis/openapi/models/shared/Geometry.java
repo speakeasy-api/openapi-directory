@@ -15,6 +15,7 @@ public class Geometry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundingBox")
     public BoundingBox boundingBox;
+
     public Geometry withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -23,9 +24,11 @@ public class Geometry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Polygon")
     public Point[] polygon;
+
     public Geometry withPolygon(Point[] polygon) {
         this.polygon = polygon;
         return this;
     }
     
+    public Geometry(){}
 }

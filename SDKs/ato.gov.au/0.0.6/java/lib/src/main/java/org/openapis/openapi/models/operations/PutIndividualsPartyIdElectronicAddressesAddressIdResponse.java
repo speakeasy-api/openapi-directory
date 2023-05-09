@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutIndividualsPartyIdElectronicAddressesAddressIdResponse {
     
     public String contentType;
+
     public PutIndividualsPartyIdElectronicAddressesAddressIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutIndividualsPartyIdElectronicAddressesAddressIdResponse {
     
     
     public Integer statusCode;
+
     public PutIndividualsPartyIdElectronicAddressesAddressIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PutIndividualsPartyIdElectronicAddressesAddressIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutIndividualsPartyIdElectronicAddressesAddressIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PutIndividualsPartyIdElectronicAddressesAddressIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ElectronicAddress electronicAddress;
+
     public PutIndividualsPartyIdElectronicAddressesAddressIdResponse withElectronicAddress(org.openapis.openapi.models.shared.ElectronicAddress electronicAddress) {
         this.electronicAddress = electronicAddress;
         return this;
@@ -43,6 +48,7 @@ public class PutIndividualsPartyIdElectronicAddressesAddressIdResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArgument invalidArgument;
+
     public PutIndividualsPartyIdElectronicAddressesAddressIdResponse withInvalidArgument(org.openapis.openapi.models.shared.InvalidArgument invalidArgument) {
         this.invalidArgument = invalidArgument;
         return this;
@@ -53,6 +59,7 @@ public class PutIndividualsPartyIdElectronicAddressesAddressIdResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public PutIndividualsPartyIdElectronicAddressesAddressIdResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -63,9 +70,14 @@ public class PutIndividualsPartyIdElectronicAddressesAddressIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public PutIndividualsPartyIdElectronicAddressesAddressIdResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public PutIndividualsPartyIdElectronicAddressesAddressIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

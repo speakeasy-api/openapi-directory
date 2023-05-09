@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SalesCreditNotesProcessBatchResponse {
     
     public String contentType;
+
     public SalesCreditNotesProcessBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SalesCreditNotesProcessBatchResponse {
      */
     
     public java.util.Map<String, Object> salesCreditNotesProcessBatch200ApplicationJSONObject;
+
     public SalesCreditNotesProcessBatchResponse withSalesCreditNotesProcessBatch200ApplicationJSONObject(java.util.Map<String, Object> salesCreditNotesProcessBatch200ApplicationJSONObject) {
         this.salesCreditNotesProcessBatch200ApplicationJSONObject = salesCreditNotesProcessBatch200ApplicationJSONObject;
         return this;
@@ -26,6 +29,7 @@ public class SalesCreditNotesProcessBatchResponse {
     
     
     public Integer statusCode;
+
     public SalesCreditNotesProcessBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SalesCreditNotesProcessBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SalesCreditNotesProcessBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SalesCreditNotesProcessBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

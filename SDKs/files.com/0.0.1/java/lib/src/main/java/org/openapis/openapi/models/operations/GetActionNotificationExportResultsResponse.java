@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetActionNotificationExportResultsResponse {
@@ -12,6 +13,7 @@ public class GetActionNotificationExportResultsResponse {
      */
     
     public org.openapis.openapi.models.shared.ActionNotificationExportResultEntity[] actionNotificationExportResultEntities;
+
     public GetActionNotificationExportResultsResponse withActionNotificationExportResultEntities(org.openapis.openapi.models.shared.ActionNotificationExportResultEntity[] actionNotificationExportResultEntities) {
         this.actionNotificationExportResultEntities = actionNotificationExportResultEntities;
         return this;
@@ -19,6 +21,7 @@ public class GetActionNotificationExportResultsResponse {
     
     
     public String contentType;
+
     public GetActionNotificationExportResultsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetActionNotificationExportResultsResponse {
     
     
     public Integer statusCode;
+
     public GetActionNotificationExportResultsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetActionNotificationExportResultsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetActionNotificationExportResultsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetActionNotificationExportResultsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

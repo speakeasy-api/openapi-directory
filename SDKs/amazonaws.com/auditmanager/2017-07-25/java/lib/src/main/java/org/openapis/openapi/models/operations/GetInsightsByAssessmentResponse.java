@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInsightsByAssessmentResponse {
@@ -12,6 +13,7 @@ public class GetInsightsByAssessmentResponse {
      */
     
     public Object accessDeniedException;
+
     public GetInsightsByAssessmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetInsightsByAssessmentResponse {
     
     
     public String contentType;
+
     public GetInsightsByAssessmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetInsightsByAssessmentResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInsightsByAssessmentResponse getInsightsByAssessmentResponse;
+
     public GetInsightsByAssessmentResponse withGetInsightsByAssessmentResponse(org.openapis.openapi.models.shared.GetInsightsByAssessmentResponse getInsightsByAssessmentResponse) {
         this.getInsightsByAssessmentResponse = getInsightsByAssessmentResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetInsightsByAssessmentResponse {
      */
     
     public Object internalServerException;
+
     public GetInsightsByAssessmentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetInsightsByAssessmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetInsightsByAssessmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetInsightsByAssessmentResponse {
     
     
     public Integer statusCode;
+
     public GetInsightsByAssessmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetInsightsByAssessmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInsightsByAssessmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetInsightsByAssessmentResponse {
      */
     
     public Object validationException;
+
     public GetInsightsByAssessmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetInsightsByAssessmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

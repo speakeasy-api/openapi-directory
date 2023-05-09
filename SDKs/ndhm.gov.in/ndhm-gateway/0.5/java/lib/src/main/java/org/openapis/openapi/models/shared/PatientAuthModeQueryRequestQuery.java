@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientAuthModeQueryRequestQuery {
     @JsonProperty("id")
     public String id;
+
     public PatientAuthModeQueryRequestQuery withId(String id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class PatientAuthModeQueryRequestQuery {
      */
     @JsonProperty("purpose")
     public PatientAuthPurposeEnum purpose;
+
     public PatientAuthModeQueryRequestQuery withPurpose(PatientAuthPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
@@ -26,9 +28,15 @@ public class PatientAuthModeQueryRequestQuery {
     
     @JsonProperty("requester")
     public PatientAuthModeQueryRequestQueryRequester requester;
+
     public PatientAuthModeQueryRequestQuery withRequester(PatientAuthModeQueryRequestQueryRequester requester) {
         this.requester = requester;
         return this;
     }
     
+    public PatientAuthModeQueryRequestQuery(@JsonProperty("id") String id, @JsonProperty("purpose") PatientAuthPurposeEnum purpose, @JsonProperty("requester") PatientAuthModeQueryRequestQueryRequester requester) {
+        this.id = id;
+        this.purpose = purpose;
+        this.requester = requester;
+  }
 }

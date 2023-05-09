@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccessControlConfigurationSummary {
     @JsonProperty("Id")
     public String id;
+
     public AccessControlConfigurationSummary withId(String id) {
         this.id = id;
         return this;
     }
     
+    public AccessControlConfigurationSummary(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

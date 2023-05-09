@@ -15,9 +15,11 @@ public class ManagedScalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeLimits")
     public ComputeLimits computeLimits;
+
     public ManagedScalingPolicy withComputeLimits(ComputeLimits computeLimits) {
         this.computeLimits = computeLimits;
         return this;
     }
     
+    public ManagedScalingPolicy(){}
 }

@@ -59,10 +59,8 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryDomainsDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryDomainsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DirectoryDomainsDeleteResponse res = new org.openapis.openapi.models.operations.DirectoryDomainsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryDomainsGetResponse res = new org.openapis.openapi.models.operations.DirectoryDomainsGetResponse() {{
+        org.openapis.openapi.models.operations.DirectoryDomainsGetResponse res = new org.openapis.openapi.models.operations.DirectoryDomainsGetResponse(contentType, httpRes.statusCode()) {{
             domains = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryDomainsInsertResponse res = new org.openapis.openapi.models.operations.DirectoryDomainsInsertResponse() {{
+        org.openapis.openapi.models.operations.DirectoryDomainsInsertResponse res = new org.openapis.openapi.models.operations.DirectoryDomainsInsertResponse(contentType, httpRes.statusCode()) {{
             domains = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DirectoryDomainsListResponse res = new org.openapis.openapi.models.operations.DirectoryDomainsListResponse() {{
+        org.openapis.openapi.models.operations.DirectoryDomainsListResponse res = new org.openapis.openapi.models.operations.DirectoryDomainsListResponse(contentType, httpRes.statusCode()) {{
             domains2 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

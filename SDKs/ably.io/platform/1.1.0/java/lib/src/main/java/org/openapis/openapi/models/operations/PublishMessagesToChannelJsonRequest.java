@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishMessagesToChannelJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.MessageInput messageInput;
+
     public PublishMessagesToChannelJsonRequest withMessageInput(org.openapis.openapi.models.shared.MessageInput messageInput) {
         this.messageInput = messageInput;
         return this;
@@ -19,6 +21,7 @@ public class PublishMessagesToChannelJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public PublishMessagesToChannelJsonRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -29,6 +32,7 @@ public class PublishMessagesToChannelJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
     public String channelId;
+
     public PublishMessagesToChannelJsonRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -39,9 +43,13 @@ public class PublishMessagesToChannelJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public PublishMessagesToChannelJsonRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public PublishMessagesToChannelJsonRequest(@JsonProperty("channel_id") String channelId) {
+        this.channelId = channelId;
+  }
 }

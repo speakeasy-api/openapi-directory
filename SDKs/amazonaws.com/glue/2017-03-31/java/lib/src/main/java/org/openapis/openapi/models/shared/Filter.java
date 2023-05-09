@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Filter {
     @JsonProperty("Filters")
     public FilterExpression[] filters;
+
     public Filter withFilters(FilterExpression[] filters) {
         this.filters = filters;
         return this;
@@ -19,6 +20,7 @@ public class Filter {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public Filter withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -26,6 +28,7 @@ public class Filter {
     
     @JsonProperty("LogicalOperator")
     public FilterLogicalOperatorEnum logicalOperator;
+
     public Filter withLogicalOperator(FilterLogicalOperatorEnum logicalOperator) {
         this.logicalOperator = logicalOperator;
         return this;
@@ -33,9 +36,16 @@ public class Filter {
     
     @JsonProperty("Name")
     public String name;
+
     public Filter withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Filter(@JsonProperty("Filters") FilterExpression[] filters, @JsonProperty("Inputs") String[] inputs, @JsonProperty("LogicalOperator") FilterLogicalOperatorEnum logicalOperator, @JsonProperty("Name") String name) {
+        this.filters = filters;
+        this.inputs = inputs;
+        this.logicalOperator = logicalOperator;
+        this.name = name;
+  }
 }

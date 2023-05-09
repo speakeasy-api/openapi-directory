@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeletePublicIpv4PoolResult {
     
     public Boolean returnValue;
+
     public DeletePublicIpv4PoolResult withReturnValue(Boolean returnValue) {
         this.returnValue = returnValue;
         return this;
     }
     
+    public DeletePublicIpv4PoolResult(){}
 }

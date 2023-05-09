@@ -16,41 +16,41 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.MergeTemplateRequest;
 import org.openapis.openapi.models.operations.MergeTemplateResponse;
-import org.openapis.openapi.models.shared.OutputEnum;
-import org.openapis.openapi.models.shared.FormatEnum;
 import org.openapis.openapi.models.shared.Data;
+import org.openapis.openapi.models.shared.FormatEnum;
+import org.openapis.openapi.models.shared.OutputEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     jsonWebTokenAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
-            MergeTemplateRequest req = new MergeTemplateRequest() {{
-                data = new Data() {{
-                    id = 12312;
-                    name = "Sample Data";
-                }};
-                format = "pdf";
+            MergeTemplateRequest req = new MergeTemplateRequest(                new Data() {{
+                                id = 12312L;
+                                name = "Sample Data";
+                            }};, 19375L) {{
+                format = FormatEnum.PDF;
                 name = "My document";
-                output = "base64";
-                templateId = 19375;
-            }}            
+                output = OutputEnum.BASE64;
+            }};            
 
             MergeTemplateResponse res = sdk.documents.mergeTemplate(req);
 
-            if (res.mergeTemplate200ApplicationJSONObject.isPresent()) {
+            if (res.mergeTemplate200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -58,25 +58,25 @@ public class Application {
 ## Available Resources and Operations
 
 
-### documents
+### [documents](docs/documents/README.md)
 
-* `mergeTemplate` - Generate document
-* `mergeTemplates` - Generate document (multiple templates)
+* [mergeTemplate](docs/documents/README.md#mergetemplate) - Generate document
+* [mergeTemplates](docs/documents/README.md#mergetemplates) - Generate document (multiple templates)
 
-### templates
+### [templates](docs/templates/README.md)
 
-* `copyTemplate` - Copy template
-* `createTemplate` - Create template
-* `deleteTemplate` - Delete template
-* `getEditorUrl` - Open editor
-* `getTemplate` - Get template
-* `getTemplates` - Get templates
-* `updateTemplate` - Update template
+* [copyTemplate](docs/templates/README.md#copytemplate) - Copy template
+* [createTemplate](docs/templates/README.md#createtemplate) - Create template
+* [deleteTemplate](docs/templates/README.md#deletetemplate) - Delete template
+* [getEditorUrl](docs/templates/README.md#geteditorurl) - Open editor
+* [getTemplate](docs/templates/README.md#gettemplate) - Get template
+* [getTemplates](docs/templates/README.md#gettemplates) - Get templates
+* [updateTemplate](docs/templates/README.md#updatetemplate) - Update template
 
-### workspaces
+### [workspaces](docs/workspaces/README.md)
 
-* `deleteWorkspace` - Delete workspace
-* `getWorkspace` - Get workspace
+* [deleteWorkspace](docs/workspaces/README.md#deleteworkspace) - Delete workspace
+* [getWorkspace](docs/workspaces/README.md#getworkspace) - Get workspace
 <!-- End SDK Available Operations -->
 
 ### Maturity

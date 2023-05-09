@@ -318,6 +318,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/TargetedSentimentEntityType
 lib/src/main/java/org/openapis/openapi/models/shared/MentionSentiment.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchDetectTargetedSentimentRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClassifyDocumentResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/WarningsListItem.java
+lib/src/main/java/org/openapis/openapi/models/shared/PageBasedWarningCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentLabel.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorsListItem.java
 lib/src/main/java/org/openapis/openapi/models/shared/PageBasedErrorCodeEnum.java
@@ -355,6 +357,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/VpcConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentClassifierOutputDataConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentClassifierModeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentClassifierInputDataConfig.java
+lib/src/main/java/org/openapis/openapi/models/shared/DocumentClassifierDocuments.java
+lib/src/main/java/org/openapis/openapi/models/shared/DocumentClassifierDocumentTypeFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentClassifierDataFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AugmentedManifestsListItem.java
 lib/src/main/java/org/openapis/openapi/models/shared/SplitEnum.java
@@ -571,4 +575,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateFlywheelResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateFlywheelRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateDataSecurityConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

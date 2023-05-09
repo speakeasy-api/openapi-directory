@@ -15,9 +15,11 @@ public class CreateTagOptionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagOptionDetail")
     public TagOptionDetail tagOptionDetail;
+
     public CreateTagOptionOutput withTagOptionDetail(TagOptionDetail tagOptionDetail) {
         this.tagOptionDetail = tagOptionDetail;
         return this;
     }
     
+    public CreateTagOptionOutput(){}
 }

@@ -13,6 +13,7 @@ public class ShipmentGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAtMax")
     public OffsetDateTime createdAtMax;
+
     public ShipmentGetListRequest withCreatedAtMax(OffsetDateTime createdAtMax) {
         this.createdAtMax = createdAtMax;
         return this;
@@ -23,6 +24,7 @@ public class ShipmentGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAtMin")
     public OffsetDateTime createdAtMin;
+
     public ShipmentGetListRequest withCreatedAtMin(OffsetDateTime createdAtMin) {
         this.createdAtMin = createdAtMin;
         return this;
@@ -33,6 +35,7 @@ public class ShipmentGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minimumShipmentId")
     public Long minimumShipmentId;
+
     public ShipmentGetListRequest withMinimumShipmentId(Long minimumShipmentId) {
         this.minimumShipmentId = minimumShipmentId;
         return this;
@@ -43,6 +46,7 @@ public class ShipmentGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderId")
     public Long orderId;
+
     public ShipmentGetListRequest withOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
@@ -53,6 +57,7 @@ public class ShipmentGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public ShipmentGetListRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -63,6 +68,7 @@ public class ShipmentGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public ShipmentGetListRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -73,9 +79,11 @@ public class ShipmentGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shippingProviderId")
     public Long shippingProviderId;
+
     public ShipmentGetListRequest withShippingProviderId(Long shippingProviderId) {
         this.shippingProviderId = shippingProviderId;
         return this;
     }
     
+    public ShipmentGetListRequest(){}
 }

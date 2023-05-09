@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContactUserVO {
     @JsonProperty("role_id")
     public Long roleId;
+
     public ContactUserVO withRoleId(Long roleId) {
         this.roleId = roleId;
         return this;
@@ -19,9 +20,14 @@ public class ContactUserVO {
     
     @JsonProperty("user_id")
     public Long userId;
+
     public ContactUserVO withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public ContactUserVO(@JsonProperty("role_id") Long roleId, @JsonProperty("user_id") Long userId) {
+        this.roleId = roleId;
+        this.userId = userId;
+  }
 }

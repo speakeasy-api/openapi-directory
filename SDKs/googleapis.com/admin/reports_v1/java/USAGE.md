@@ -3,11 +3,10 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.ReportsActivitiesListSecurity;
 import org.openapis.openapi.models.operations.ReportsActivitiesListApplicationNameEnum;
 import org.openapis.openapi.models.operations.ReportsActivitiesListRequest;
 import org.openapis.openapi.models.operations.ReportsActivitiesListResponse;
+import org.openapis.openapi.models.operations.ReportsActivitiesListSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -17,42 +16,42 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ReportsActivitiesListRequest req = new ReportsActivitiesListRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                actorIpAddress = "distinctio";
-                alt = "proto";
-                applicationName = "mobile";
-                callback = "nulla";
-                customerId = "corrupti";
-                endTime = "illum";
-                eventName = "vel";
-                fields = "error";
-                filters = "deserunt";
-                groupIdFilter = "suscipit";
-                key = "iure";
-                maxResults = 297534;
-                oauthToken = "debitis";
-                orgUnitID = "ipsa";
-                pageToken = "delectus";
+            ReportsActivitiesListRequest req = new ReportsActivitiesListRequest(ReportsActivitiesListApplicationNameEnum.MEET, "provident") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "quibusdam";
+                actorIpAddress = "unde";
+                alt = AltEnum.PROTO;
+                callback = "corrupti";
+                customerId = "illum";
+                endTime = "vel";
+                eventName = "error";
+                fields = "deserunt";
+                filters = "suscipit";
+                groupIdFilter = "iure";
+                key = "magnam";
+                maxResults = 891773L;
+                oauthToken = "ipsa";
+                orgUnitID = "delectus";
+                pageToken = "tempora";
                 prettyPrint = false;
-                quotaUser = "tempora";
-                startTime = "suscipit";
-                uploadType = "molestiae";
-                uploadProtocol = "minus";
-                userKey = "placeat";
-            }}            
+                quotaUser = "suscipit";
+                startTime = "molestiae";
+                uploadType = "minus";
+                uploadProtocol = "placeat";
+            }};            
 
-            ReportsActivitiesListResponse res = sdk.activities.reportsActivitiesList(req, new ReportsActivitiesListSecurity() {{
+            ReportsActivitiesListResponse res = sdk.activities.reportsActivitiesList(req, new ReportsActivitiesListSecurity("voluptatum", "iusto") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.activities.isPresent()) {
+            if (res.activities != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

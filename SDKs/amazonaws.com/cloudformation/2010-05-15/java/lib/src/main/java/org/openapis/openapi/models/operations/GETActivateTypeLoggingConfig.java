@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -12,6 +13,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETActivateTypeLoggingConfig {
     @SpeakeasyMetadata("queryParam:name=LogGroupName")
     public String logGroupName;
+
     public GETActivateTypeLoggingConfig withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -19,9 +21,14 @@ public class GETActivateTypeLoggingConfig {
     
     @SpeakeasyMetadata("queryParam:name=LogRoleArn")
     public String logRoleArn;
+
     public GETActivateTypeLoggingConfig withLogRoleArn(String logRoleArn) {
         this.logRoleArn = logRoleArn;
         return this;
     }
     
+    public GETActivateTypeLoggingConfig(@JsonProperty("LogGroupName") String logGroupName, @JsonProperty("LogRoleArn") String logRoleArn) {
+        this.logGroupName = logGroupName;
+        this.logRoleArn = logRoleArn;
+  }
 }

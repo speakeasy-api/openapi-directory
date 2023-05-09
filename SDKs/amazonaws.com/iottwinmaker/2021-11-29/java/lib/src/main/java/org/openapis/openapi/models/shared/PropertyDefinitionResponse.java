@@ -15,6 +15,7 @@ public class PropertyDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public java.util.Map<String, String> configuration;
+
     public PropertyDefinitionResponse withConfiguration(java.util.Map<String, String> configuration) {
         this.configuration = configuration;
         return this;
@@ -22,6 +23,7 @@ public class PropertyDefinitionResponse {
     
     @JsonProperty("dataType")
     public DataType dataType;
+
     public PropertyDefinitionResponse withDataType(DataType dataType) {
         this.dataType = dataType;
         return this;
@@ -30,6 +32,7 @@ public class PropertyDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public DataValue defaultValue;
+
     public PropertyDefinitionResponse withDefaultValue(DataValue defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -38,6 +41,7 @@ public class PropertyDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PropertyDefinitionResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -45,6 +49,7 @@ public class PropertyDefinitionResponse {
     
     @JsonProperty("isExternalId")
     public Boolean isExternalId;
+
     public PropertyDefinitionResponse withIsExternalId(Boolean isExternalId) {
         this.isExternalId = isExternalId;
         return this;
@@ -52,6 +57,7 @@ public class PropertyDefinitionResponse {
     
     @JsonProperty("isFinal")
     public Boolean isFinal;
+
     public PropertyDefinitionResponse withIsFinal(Boolean isFinal) {
         this.isFinal = isFinal;
         return this;
@@ -59,6 +65,7 @@ public class PropertyDefinitionResponse {
     
     @JsonProperty("isImported")
     public Boolean isImported;
+
     public PropertyDefinitionResponse withIsImported(Boolean isImported) {
         this.isImported = isImported;
         return this;
@@ -66,6 +73,7 @@ public class PropertyDefinitionResponse {
     
     @JsonProperty("isInherited")
     public Boolean isInherited;
+
     public PropertyDefinitionResponse withIsInherited(Boolean isInherited) {
         this.isInherited = isInherited;
         return this;
@@ -73,6 +81,7 @@ public class PropertyDefinitionResponse {
     
     @JsonProperty("isRequiredInEntity")
     public Boolean isRequiredInEntity;
+
     public PropertyDefinitionResponse withIsRequiredInEntity(Boolean isRequiredInEntity) {
         this.isRequiredInEntity = isRequiredInEntity;
         return this;
@@ -80,6 +89,7 @@ public class PropertyDefinitionResponse {
     
     @JsonProperty("isStoredExternally")
     public Boolean isStoredExternally;
+
     public PropertyDefinitionResponse withIsStoredExternally(Boolean isStoredExternally) {
         this.isStoredExternally = isStoredExternally;
         return this;
@@ -87,9 +97,20 @@ public class PropertyDefinitionResponse {
     
     @JsonProperty("isTimeSeries")
     public Boolean isTimeSeries;
+
     public PropertyDefinitionResponse withIsTimeSeries(Boolean isTimeSeries) {
         this.isTimeSeries = isTimeSeries;
         return this;
     }
     
+    public PropertyDefinitionResponse(@JsonProperty("dataType") DataType dataType, @JsonProperty("isExternalId") Boolean isExternalId, @JsonProperty("isFinal") Boolean isFinal, @JsonProperty("isImported") Boolean isImported, @JsonProperty("isInherited") Boolean isInherited, @JsonProperty("isRequiredInEntity") Boolean isRequiredInEntity, @JsonProperty("isStoredExternally") Boolean isStoredExternally, @JsonProperty("isTimeSeries") Boolean isTimeSeries) {
+        this.dataType = dataType;
+        this.isExternalId = isExternalId;
+        this.isFinal = isFinal;
+        this.isImported = isImported;
+        this.isInherited = isInherited;
+        this.isRequiredInEntity = isRequiredInEntity;
+        this.isStoredExternally = isStoredExternally;
+        this.isTimeSeries = isTimeSeries;
+  }
 }

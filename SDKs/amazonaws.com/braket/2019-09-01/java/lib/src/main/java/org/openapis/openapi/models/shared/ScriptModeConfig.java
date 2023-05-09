@@ -15,6 +15,7 @@ public class ScriptModeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compressionType")
     public CompressionTypeEnum compressionType;
+
     public ScriptModeConfig withCompressionType(CompressionTypeEnum compressionType) {
         this.compressionType = compressionType;
         return this;
@@ -22,6 +23,7 @@ public class ScriptModeConfig {
     
     @JsonProperty("entryPoint")
     public String entryPoint;
+
     public ScriptModeConfig withEntryPoint(String entryPoint) {
         this.entryPoint = entryPoint;
         return this;
@@ -29,9 +31,14 @@ public class ScriptModeConfig {
     
     @JsonProperty("s3Uri")
     public String s3Uri;
+
     public ScriptModeConfig withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public ScriptModeConfig(@JsonProperty("entryPoint") String entryPoint, @JsonProperty("s3Uri") String s3Uri) {
+        this.entryPoint = entryPoint;
+        this.s3Uri = s3Uri;
+  }
 }

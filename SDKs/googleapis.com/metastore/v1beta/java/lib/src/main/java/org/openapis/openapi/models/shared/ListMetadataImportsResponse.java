@@ -18,6 +18,7 @@ public class ListMetadataImportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataImports")
     public MetadataImport[] metadataImports;
+
     public ListMetadataImportsResponse withMetadataImports(MetadataImport[] metadataImports) {
         this.metadataImports = metadataImports;
         return this;
@@ -29,6 +30,7 @@ public class ListMetadataImportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListMetadataImportsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListMetadataImportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListMetadataImportsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListMetadataImportsResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutTlskeyRefreshResponse {
@@ -12,6 +13,7 @@ public class PutTlskeyRefreshResponse {
      */
     
     public org.openapis.openapi.models.shared.CertificateRefresh certificateRefresh;
+
     public PutTlskeyRefreshResponse withCertificateRefresh(org.openapis.openapi.models.shared.CertificateRefresh certificateRefresh) {
         this.certificateRefresh = certificateRefresh;
         return this;
@@ -19,6 +21,7 @@ public class PutTlskeyRefreshResponse {
     
     
     public String contentType;
+
     public PutTlskeyRefreshResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PutTlskeyRefreshResponse {
     
     
     public Integer statusCode;
+
     public PutTlskeyRefreshResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PutTlskeyRefreshResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutTlskeyRefreshResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutTlskeyRefreshResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

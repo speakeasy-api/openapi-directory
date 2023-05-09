@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProjectUsernameProjectCheckoutKeyFingerprintResponse {
     
     public String contentType;
+
     public GetProjectUsernameProjectCheckoutKeyFingerprintResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetProjectUsernameProjectCheckoutKeyFingerprintResponse {
      */
     
     public org.openapis.openapi.models.shared.Key key;
+
     public GetProjectUsernameProjectCheckoutKeyFingerprintResponse withKey(org.openapis.openapi.models.shared.Key key) {
         this.key = key;
         return this;
@@ -26,6 +29,7 @@ public class GetProjectUsernameProjectCheckoutKeyFingerprintResponse {
     
     
     public Integer statusCode;
+
     public GetProjectUsernameProjectCheckoutKeyFingerprintResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetProjectUsernameProjectCheckoutKeyFingerprintResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProjectUsernameProjectCheckoutKeyFingerprintResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetProjectUsernameProjectCheckoutKeyFingerprintResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class FilteredBidCreativeRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidCount")
     public MetricValue bidCount;
+
     public FilteredBidCreativeRow withBidCount(MetricValue bidCount) {
         this.bidCount = bidCount;
         return this;
@@ -29,6 +30,7 @@ public class FilteredBidCreativeRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeId")
     public String creativeId;
+
     public FilteredBidCreativeRow withCreativeId(String creativeId) {
         this.creativeId = creativeId;
         return this;
@@ -40,9 +42,11 @@ public class FilteredBidCreativeRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowDimensions")
     public RowDimensions rowDimensions;
+
     public FilteredBidCreativeRow withRowDimensions(RowDimensions rowDimensions) {
         this.rowDimensions = rowDimensions;
         return this;
     }
     
+    public FilteredBidCreativeRow(){}
 }

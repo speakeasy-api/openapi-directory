@@ -18,6 +18,7 @@ public class UsableSubnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCidrRange")
     public String ipCidrRange;
+
     public UsableSubnetwork withIpCidrRange(String ipCidrRange) {
         this.ipCidrRange = ipCidrRange;
         return this;
@@ -29,6 +30,7 @@ public class UsableSubnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public UsableSubnetwork withNetwork(String network) {
         this.network = network;
         return this;
@@ -40,6 +42,7 @@ public class UsableSubnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryIpRanges")
     public UsableSubnetworkSecondaryRange[] secondaryIpRanges;
+
     public UsableSubnetwork withSecondaryIpRanges(UsableSubnetworkSecondaryRange[] secondaryIpRanges) {
         this.secondaryIpRanges = secondaryIpRanges;
         return this;
@@ -51,6 +54,7 @@ public class UsableSubnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public UsableSubnetwork withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -62,9 +66,11 @@ public class UsableSubnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public UsableSubnetwork withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
     }
     
+    public UsableSubnetwork(){}
 }

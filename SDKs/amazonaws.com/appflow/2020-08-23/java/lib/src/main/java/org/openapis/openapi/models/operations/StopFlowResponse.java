@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopFlowResponse {
@@ -12,6 +13,7 @@ public class StopFlowResponse {
      */
     
     public Object conflictException;
+
     public StopFlowResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StopFlowResponse {
     
     
     public String contentType;
+
     public StopFlowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopFlowResponse {
      */
     
     public Object internalServerException;
+
     public StopFlowResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StopFlowResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopFlowResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopFlowResponse {
     
     
     public Integer statusCode;
+
     public StopFlowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopFlowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopFlowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopFlowResponse {
      */
     
     public org.openapis.openapi.models.shared.StopFlowResponse stopFlowResponse;
+
     public StopFlowResponse withStopFlowResponse(org.openapis.openapi.models.shared.StopFlowResponse stopFlowResponse) {
         this.stopFlowResponse = stopFlowResponse;
         return this;
@@ -73,9 +81,14 @@ public class StopFlowResponse {
      */
     
     public Object unsupportedOperationException;
+
     public StopFlowResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public StopFlowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -52,12 +52,10 @@ public class Views {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SessionsIdViewsGetResponse res = new org.openapis.openapi.models.operations.SessionsIdViewsGetResponse() {{
+        org.openapis.openapi.models.operations.SessionsIdViewsGetResponse res = new org.openapis.openapi.models.operations.SessionsIdViewsGetResponse(contentType, httpRes.statusCode()) {{
             views = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,12 +102,10 @@ public class Views {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SessionsIdViewsPostResponse res = new org.openapis.openapi.models.operations.SessionsIdViewsPostResponse() {{
+        org.openapis.openapi.models.operations.SessionsIdViewsPostResponse res = new org.openapis.openapi.models.operations.SessionsIdViewsPostResponse(contentType, httpRes.statusCode()) {{
             view = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Views {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ViewsIdDeleteResponse res = new org.openapis.openapi.models.operations.ViewsIdDeleteResponse() {{
+        org.openapis.openapi.models.operations.ViewsIdDeleteResponse res = new org.openapis.openapi.models.operations.ViewsIdDeleteResponse(contentType, httpRes.statusCode()) {{
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -192,12 +186,10 @@ public class Views {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ViewsIdGetResponse res = new org.openapis.openapi.models.operations.ViewsIdGetResponse() {{
+        org.openapis.openapi.models.operations.ViewsIdGetResponse res = new org.openapis.openapi.models.operations.ViewsIdGetResponse(contentType, httpRes.statusCode()) {{
             view = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

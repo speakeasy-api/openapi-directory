@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCodeReviewsResponse {
@@ -12,6 +13,7 @@ public class ListCodeReviewsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListCodeReviewsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListCodeReviewsResponse {
     
     
     public String contentType;
+
     public ListCodeReviewsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCodeReviewsResponse {
      */
     
     public Object internalServerException;
+
     public ListCodeReviewsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListCodeReviewsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCodeReviewsResponse listCodeReviewsResponse;
+
     public ListCodeReviewsResponse withListCodeReviewsResponse(org.openapis.openapi.models.shared.ListCodeReviewsResponse listCodeReviewsResponse) {
         this.listCodeReviewsResponse = listCodeReviewsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListCodeReviewsResponse {
     
     
     public Integer statusCode;
+
     public ListCodeReviewsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListCodeReviewsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCodeReviewsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListCodeReviewsResponse {
      */
     
     public Object throttlingException;
+
     public ListCodeReviewsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListCodeReviewsResponse {
      */
     
     public Object validationException;
+
     public ListCodeReviewsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListCodeReviewsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

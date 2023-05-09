@@ -15,6 +15,7 @@ public class GetTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppId")
     public String appId;
+
     public GetTokenResponse withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -23,6 +24,7 @@ public class GetTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChallengeCode")
     public String challengeCode;
+
     public GetTokenResponse withChallengeCode(String challengeCode) {
         this.challengeCode = challengeCode;
         return this;
@@ -31,6 +33,7 @@ public class GetTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionId")
     public String sessionId;
+
     public GetTokenResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -39,9 +42,11 @@ public class GetTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ttl")
     public String ttl;
+
     public GetTokenResponse withTtl(String ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public GetTokenResponse(){}
 }

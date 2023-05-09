@@ -15,6 +15,7 @@ public class GetTriggersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetTriggersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetTriggersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Triggers")
     public Trigger[] triggers;
+
     public GetTriggersResponse withTriggers(Trigger[] triggers) {
         this.triggers = triggers;
         return this;
     }
     
+    public GetTriggersResponse(){}
 }

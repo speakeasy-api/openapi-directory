@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContinueWatchingListResponse {
     
     public String contentType;
+
     public GetContinueWatchingListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetContinueWatchingListResponse {
      */
     
     public org.openapis.openapi.models.shared.ItemList itemList;
+
     public GetContinueWatchingListResponse withItemList(org.openapis.openapi.models.shared.ItemList itemList) {
         this.itemList = itemList;
         return this;
@@ -29,6 +32,7 @@ public class GetContinueWatchingListResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetContinueWatchingListResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetContinueWatchingListResponse {
     
     
     public Integer statusCode;
+
     public GetContinueWatchingListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetContinueWatchingListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContinueWatchingListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetContinueWatchingListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

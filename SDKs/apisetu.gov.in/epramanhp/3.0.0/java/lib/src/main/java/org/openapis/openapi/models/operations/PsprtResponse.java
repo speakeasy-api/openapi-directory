@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PsprtResponse {
     
     public String contentType;
+
     public PsprtResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PsprtResponse {
     
     
     public Integer statusCode;
+
     public PsprtResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PsprtResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PsprtResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PsprtResponse {
      */
     
     public Psprt400ApplicationJSON psprt400ApplicationJSONObject;
+
     public PsprtResponse withPsprt400ApplicationJSONObject(Psprt400ApplicationJSON psprt400ApplicationJSONObject) {
         this.psprt400ApplicationJSONObject = psprt400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PsprtResponse {
      */
     
     public Psprt401ApplicationJSON psprt401ApplicationJSONObject;
+
     public PsprtResponse withPsprt401ApplicationJSONObject(Psprt401ApplicationJSON psprt401ApplicationJSONObject) {
         this.psprt401ApplicationJSONObject = psprt401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PsprtResponse {
      */
     
     public Psprt404ApplicationJSON psprt404ApplicationJSONObject;
+
     public PsprtResponse withPsprt404ApplicationJSONObject(Psprt404ApplicationJSON psprt404ApplicationJSONObject) {
         this.psprt404ApplicationJSONObject = psprt404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class PsprtResponse {
      */
     
     public Psprt500ApplicationJSON psprt500ApplicationJSONObject;
+
     public PsprtResponse withPsprt500ApplicationJSONObject(Psprt500ApplicationJSON psprt500ApplicationJSONObject) {
         this.psprt500ApplicationJSONObject = psprt500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class PsprtResponse {
      */
     
     public Psprt502ApplicationJSON psprt502ApplicationJSONObject;
+
     public PsprtResponse withPsprt502ApplicationJSONObject(Psprt502ApplicationJSON psprt502ApplicationJSONObject) {
         this.psprt502ApplicationJSONObject = psprt502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class PsprtResponse {
      */
     
     public Psprt503ApplicationJSON psprt503ApplicationJSONObject;
+
     public PsprtResponse withPsprt503ApplicationJSONObject(Psprt503ApplicationJSON psprt503ApplicationJSONObject) {
         this.psprt503ApplicationJSONObject = psprt503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class PsprtResponse {
      */
     
     public Psprt504ApplicationJSON psprt504ApplicationJSONObject;
+
     public PsprtResponse withPsprt504ApplicationJSONObject(Psprt504ApplicationJSON psprt504ApplicationJSONObject) {
         this.psprt504ApplicationJSONObject = psprt504ApplicationJSONObject;
         return this;
     }
     
+    public PsprtResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class OpenFileDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public String command;
+
     public OpenFileDetails withCommand(String command) {
         this.command = command;
         return this;
@@ -29,6 +30,7 @@ public class OpenFileDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePath")
     public String filePath;
+
     public OpenFileDetails withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -40,6 +42,7 @@ public class OpenFileDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileType")
     public String fileType;
+
     public OpenFileDetails withFileType(String fileType) {
         this.fileType = fileType;
         return this;
@@ -51,9 +54,11 @@ public class OpenFileDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public OpenFileDetails withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public OpenFileDetails(){}
 }

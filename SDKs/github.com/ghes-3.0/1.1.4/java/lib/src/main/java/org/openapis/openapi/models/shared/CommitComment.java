@@ -22,6 +22,7 @@ public class CommitComment {
      */
     @JsonProperty("author_association")
     public AuthorAssociationEnum authorAssociation;
+
     public CommitComment withAuthorAssociation(AuthorAssociationEnum authorAssociation) {
         this.authorAssociation = authorAssociation;
         return this;
@@ -29,6 +30,7 @@ public class CommitComment {
     
     @JsonProperty("body")
     public String body;
+
     public CommitComment withBody(String body) {
         this.body = body;
         return this;
@@ -36,6 +38,7 @@ public class CommitComment {
     
     @JsonProperty("commit_id")
     public String commitId;
+
     public CommitComment withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -45,6 +48,7 @@ public class CommitComment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public CommitComment withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -52,6 +56,7 @@ public class CommitComment {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public CommitComment withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -59,6 +64,7 @@ public class CommitComment {
     
     @JsonProperty("id")
     public Long id;
+
     public CommitComment withId(Long id) {
         this.id = id;
         return this;
@@ -66,6 +72,7 @@ public class CommitComment {
     
     @JsonProperty("line")
     public Long line;
+
     public CommitComment withLine(Long line) {
         this.line = line;
         return this;
@@ -73,6 +80,7 @@ public class CommitComment {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public CommitComment withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -80,6 +88,7 @@ public class CommitComment {
     
     @JsonProperty("path")
     public String path;
+
     public CommitComment withPath(String path) {
         this.path = path;
         return this;
@@ -87,6 +96,7 @@ public class CommitComment {
     
     @JsonProperty("position")
     public Long position;
+
     public CommitComment withPosition(Long position) {
         this.position = position;
         return this;
@@ -95,6 +105,7 @@ public class CommitComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactions")
     public ReactionRollup reactions;
+
     public CommitComment withReactions(ReactionRollup reactions) {
         this.reactions = reactions;
         return this;
@@ -104,6 +115,7 @@ public class CommitComment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public CommitComment withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -111,6 +123,7 @@ public class CommitComment {
     
     @JsonProperty("url")
     public String url;
+
     public CommitComment withUrl(String url) {
         this.url = url;
         return this;
@@ -121,9 +134,25 @@ public class CommitComment {
      */
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public CommitComment withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public CommitComment(@JsonProperty("author_association") AuthorAssociationEnum authorAssociation, @JsonProperty("body") String body, @JsonProperty("commit_id") String commitId, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("line") Long line, @JsonProperty("node_id") String nodeId, @JsonProperty("path") String path, @JsonProperty("position") Long position, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url, @JsonProperty("user") NullableSimpleUser user) {
+        this.authorAssociation = authorAssociation;
+        this.body = body;
+        this.commitId = commitId;
+        this.createdAt = createdAt;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.line = line;
+        this.nodeId = nodeId;
+        this.path = path;
+        this.position = position;
+        this.updatedAt = updatedAt;
+        this.url = url;
+        this.user = user;
+  }
 }

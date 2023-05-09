@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListFunctionUrlConfigsResponse {
     @JsonProperty("FunctionUrlConfigs")
     public FunctionUrlConfig[] functionUrlConfigs;
+
     public ListFunctionUrlConfigsResponse withFunctionUrlConfigs(FunctionUrlConfig[] functionUrlConfigs) {
         this.functionUrlConfigs = functionUrlConfigs;
         return this;
@@ -22,9 +23,13 @@ public class ListFunctionUrlConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListFunctionUrlConfigsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListFunctionUrlConfigsResponse(@JsonProperty("FunctionUrlConfigs") FunctionUrlConfig[] functionUrlConfigs) {
+        this.functionUrlConfigs = functionUrlConfigs;
+  }
 }

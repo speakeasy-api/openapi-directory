@@ -18,6 +18,7 @@ public class BulkUpdateLineItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Status[] errors;
+
     public BulkUpdateLineItemsResponse withErrors(Status[] errors) {
         this.errors = errors;
         return this;
@@ -29,6 +30,7 @@ public class BulkUpdateLineItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedLineItemIds")
     public String[] failedLineItemIds;
+
     public BulkUpdateLineItemsResponse withFailedLineItemIds(String[] failedLineItemIds) {
         this.failedLineItemIds = failedLineItemIds;
         return this;
@@ -40,6 +42,7 @@ public class BulkUpdateLineItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skippedLineItemIds")
     public String[] skippedLineItemIds;
+
     public BulkUpdateLineItemsResponse withSkippedLineItemIds(String[] skippedLineItemIds) {
         this.skippedLineItemIds = skippedLineItemIds;
         return this;
@@ -51,9 +54,11 @@ public class BulkUpdateLineItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedLineItemIds")
     public String[] updatedLineItemIds;
+
     public BulkUpdateLineItemsResponse withUpdatedLineItemIds(String[] updatedLineItemIds) {
         this.updatedLineItemIds = updatedLineItemIds;
         return this;
     }
     
+    public BulkUpdateLineItemsResponse(){}
 }

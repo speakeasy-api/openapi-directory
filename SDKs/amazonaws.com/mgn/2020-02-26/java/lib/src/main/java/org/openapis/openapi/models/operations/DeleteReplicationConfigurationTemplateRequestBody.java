@@ -12,9 +12,13 @@ public class DeleteReplicationConfigurationTemplateRequestBody {
      */
     @JsonProperty("replicationConfigurationTemplateID")
     public String replicationConfigurationTemplateID;
+
     public DeleteReplicationConfigurationTemplateRequestBody withReplicationConfigurationTemplateID(String replicationConfigurationTemplateID) {
         this.replicationConfigurationTemplateID = replicationConfigurationTemplateID;
         return this;
     }
     
+    public DeleteReplicationConfigurationTemplateRequestBody(@JsonProperty("replicationConfigurationTemplateID") String replicationConfigurationTemplateID) {
+        this.replicationConfigurationTemplateID = replicationConfigurationTemplateID;
+  }
 }

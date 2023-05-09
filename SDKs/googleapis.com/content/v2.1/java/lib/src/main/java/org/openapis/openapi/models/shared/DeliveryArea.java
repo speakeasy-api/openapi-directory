@@ -18,6 +18,7 @@ public class DeliveryArea {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public DeliveryArea withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -29,6 +30,7 @@ public class DeliveryArea {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCodeRange")
     public DeliveryAreaPostalCodeRange postalCodeRange;
+
     public DeliveryArea withPostalCodeRange(DeliveryAreaPostalCodeRange postalCodeRange) {
         this.postalCodeRange = postalCodeRange;
         return this;
@@ -40,9 +42,11 @@ public class DeliveryArea {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public DeliveryArea withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public DeliveryArea(){}
 }

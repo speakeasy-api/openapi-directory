@@ -15,6 +15,7 @@ public class DiscoveredResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public DiscoveredResource withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class DiscoveredResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DiscoveredResource withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class DiscoveredResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public DiscoveredResource withType(String type) {
         this.type = type;
         return this;
@@ -39,9 +42,11 @@ public class DiscoveredResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("URI")
     public String uri;
+
     public DiscoveredResource withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public DiscoveredResource(){}
 }

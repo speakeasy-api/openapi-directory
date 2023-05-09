@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyGlobalClusterMessage {
     
     public Boolean allowMajorVersionUpgrade;
+
     public ModifyGlobalClusterMessage withAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
         this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
         return this;
@@ -16,6 +17,7 @@ public class ModifyGlobalClusterMessage {
     
     
     public Boolean deletionProtection;
+
     public ModifyGlobalClusterMessage withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -23,6 +25,7 @@ public class ModifyGlobalClusterMessage {
     
     
     public String engineVersion;
+
     public ModifyGlobalClusterMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -30,6 +33,7 @@ public class ModifyGlobalClusterMessage {
     
     
     public String globalClusterIdentifier;
+
     public ModifyGlobalClusterMessage withGlobalClusterIdentifier(String globalClusterIdentifier) {
         this.globalClusterIdentifier = globalClusterIdentifier;
         return this;
@@ -37,9 +41,11 @@ public class ModifyGlobalClusterMessage {
     
     
     public String newGlobalClusterIdentifier;
+
     public ModifyGlobalClusterMessage withNewGlobalClusterIdentifier(String newGlobalClusterIdentifier) {
         this.newGlobalClusterIdentifier = newGlobalClusterIdentifier;
         return this;
     }
     
+    public ModifyGlobalClusterMessage(){}
 }

@@ -12,9 +12,11 @@ public class GetActionPackageShowRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetActionPackageShowRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetActionPackageShowRequest(){}
 }

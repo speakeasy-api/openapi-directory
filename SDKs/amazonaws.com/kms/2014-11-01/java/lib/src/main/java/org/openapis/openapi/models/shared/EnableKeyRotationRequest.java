@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnableKeyRotationRequest {
     @JsonProperty("KeyId")
     public String keyId;
+
     public EnableKeyRotationRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public EnableKeyRotationRequest(@JsonProperty("KeyId") String keyId) {
+        this.keyId = keyId;
+  }
 }

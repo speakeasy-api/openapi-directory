@@ -15,6 +15,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentVersion")
     public String agentVersion;
+
     public Stack withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -23,6 +24,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Stack withArn(String arn) {
         this.arn = arn;
         return this;
@@ -31,6 +33,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public Stack withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -39,6 +42,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChefConfiguration")
     public ChefConfiguration chefConfiguration;
+
     public Stack withChefConfiguration(ChefConfiguration chefConfiguration) {
         this.chefConfiguration = chefConfiguration;
         return this;
@@ -47,6 +51,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationManager")
     public StackConfigurationManager configurationManager;
+
     public Stack withConfigurationManager(StackConfigurationManager configurationManager) {
         this.configurationManager = configurationManager;
         return this;
@@ -55,6 +60,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedAt")
     public String createdAt;
+
     public Stack withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -63,6 +69,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomCookbooksSource")
     public Source customCookbooksSource;
+
     public Stack withCustomCookbooksSource(Source customCookbooksSource) {
         this.customCookbooksSource = customCookbooksSource;
         return this;
@@ -71,6 +78,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomJson")
     public String customJson;
+
     public Stack withCustomJson(String customJson) {
         this.customJson = customJson;
         return this;
@@ -79,6 +87,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultAvailabilityZone")
     public String defaultAvailabilityZone;
+
     public Stack withDefaultAvailabilityZone(String defaultAvailabilityZone) {
         this.defaultAvailabilityZone = defaultAvailabilityZone;
         return this;
@@ -87,6 +96,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultInstanceProfileArn")
     public String defaultInstanceProfileArn;
+
     public Stack withDefaultInstanceProfileArn(String defaultInstanceProfileArn) {
         this.defaultInstanceProfileArn = defaultInstanceProfileArn;
         return this;
@@ -95,6 +105,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultOs")
     public String defaultOs;
+
     public Stack withDefaultOs(String defaultOs) {
         this.defaultOs = defaultOs;
         return this;
@@ -103,6 +114,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultRootDeviceType")
     public RootDeviceTypeEnum defaultRootDeviceType;
+
     public Stack withDefaultRootDeviceType(RootDeviceTypeEnum defaultRootDeviceType) {
         this.defaultRootDeviceType = defaultRootDeviceType;
         return this;
@@ -111,6 +123,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSshKeyName")
     public String defaultSshKeyName;
+
     public Stack withDefaultSshKeyName(String defaultSshKeyName) {
         this.defaultSshKeyName = defaultSshKeyName;
         return this;
@@ -119,6 +132,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSubnetId")
     public String defaultSubnetId;
+
     public Stack withDefaultSubnetId(String defaultSubnetId) {
         this.defaultSubnetId = defaultSubnetId;
         return this;
@@ -127,6 +141,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostnameTheme")
     public String hostnameTheme;
+
     public Stack withHostnameTheme(String hostnameTheme) {
         this.hostnameTheme = hostnameTheme;
         return this;
@@ -135,6 +150,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Stack withName(String name) {
         this.name = name;
         return this;
@@ -143,6 +159,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public Stack withRegion(String region) {
         this.region = region;
         return this;
@@ -151,6 +168,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRoleArn")
     public String serviceRoleArn;
+
     public Stack withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -159,6 +177,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public Stack withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -167,6 +186,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseCustomCookbooks")
     public Boolean useCustomCookbooks;
+
     public Stack withUseCustomCookbooks(Boolean useCustomCookbooks) {
         this.useCustomCookbooks = useCustomCookbooks;
         return this;
@@ -175,6 +195,7 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseOpsworksSecurityGroups")
     public Boolean useOpsworksSecurityGroups;
+
     public Stack withUseOpsworksSecurityGroups(Boolean useOpsworksSecurityGroups) {
         this.useOpsworksSecurityGroups = useOpsworksSecurityGroups;
         return this;
@@ -183,9 +204,11 @@ public class Stack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public Stack withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public Stack(){}
 }

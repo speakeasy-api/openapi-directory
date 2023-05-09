@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responses")
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse[] responses;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponse withResponses(GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse[] responses) {
         this.responses = responses;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedLabel")
     public GoogleAppsDriveLabelsV2Label updatedLabel;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponse withUpdatedLabel(GoogleAppsDriveLabelsV2Label updatedLabel) {
         this.updatedLabel = updatedLabel;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2DeltaUpdateLabelResponse(){}
 }

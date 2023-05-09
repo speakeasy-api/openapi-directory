@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClusterResponse {
@@ -12,6 +13,7 @@ public class GetClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public GetClusterResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -22,6 +24,7 @@ public class GetClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.Cluster cluster;
+
     public GetClusterResponse withCluster(org.openapis.openapi.models.shared.Cluster cluster) {
         this.cluster = cluster;
         return this;
@@ -29,6 +32,7 @@ public class GetClusterResponse {
     
     
     public String contentType;
+
     public GetClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class GetClusterResponse {
     
     
     public Integer statusCode;
+
     public GetClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

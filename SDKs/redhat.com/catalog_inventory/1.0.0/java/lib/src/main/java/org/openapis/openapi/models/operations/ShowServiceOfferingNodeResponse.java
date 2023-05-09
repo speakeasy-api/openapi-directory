@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ShowServiceOfferingNodeResponse {
     
     public String contentType;
+
     public ShowServiceOfferingNodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ShowServiceOfferingNodeResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorNotFound errorNotFound;
+
     public ShowServiceOfferingNodeResponse withErrorNotFound(org.openapis.openapi.models.shared.ErrorNotFound errorNotFound) {
         this.errorNotFound = errorNotFound;
         return this;
@@ -29,6 +32,7 @@ public class ShowServiceOfferingNodeResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceOfferingNode serviceOfferingNode;
+
     public ShowServiceOfferingNodeResponse withServiceOfferingNode(org.openapis.openapi.models.shared.ServiceOfferingNode serviceOfferingNode) {
         this.serviceOfferingNode = serviceOfferingNode;
         return this;
@@ -36,6 +40,7 @@ public class ShowServiceOfferingNodeResponse {
     
     
     public Integer statusCode;
+
     public ShowServiceOfferingNodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ShowServiceOfferingNodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ShowServiceOfferingNodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ShowServiceOfferingNodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

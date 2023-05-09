@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeletePredictorBacktestExportJobRequest {
     @JsonProperty("PredictorBacktestExportJobArn")
     public String predictorBacktestExportJobArn;
+
     public DeletePredictorBacktestExportJobRequest withPredictorBacktestExportJobArn(String predictorBacktestExportJobArn) {
         this.predictorBacktestExportJobArn = predictorBacktestExportJobArn;
         return this;
     }
     
+    public DeletePredictorBacktestExportJobRequest(@JsonProperty("PredictorBacktestExportJobArn") String predictorBacktestExportJobArn) {
+        this.predictorBacktestExportJobArn = predictorBacktestExportJobArn;
+  }
 }

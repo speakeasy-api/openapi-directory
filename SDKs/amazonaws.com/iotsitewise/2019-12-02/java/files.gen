@@ -424,4 +424,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateGatewayCapabilityConf
 lib/src/main/java/org/openapis/openapi/models/shared/UpdatePortalResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImageFile.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

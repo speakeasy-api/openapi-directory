@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAlarmsOutput {
     
     public CompositeAlarm[] compositeAlarms;
+
     public DescribeAlarmsOutput withCompositeAlarms(CompositeAlarm[] compositeAlarms) {
         this.compositeAlarms = compositeAlarms;
         return this;
@@ -19,6 +20,7 @@ public class DescribeAlarmsOutput {
     
     
     public MetricAlarm[] metricAlarms;
+
     public DescribeAlarmsOutput withMetricAlarms(MetricAlarm[] metricAlarms) {
         this.metricAlarms = metricAlarms;
         return this;
@@ -26,9 +28,11 @@ public class DescribeAlarmsOutput {
     
     
     public String nextToken;
+
     public DescribeAlarmsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAlarmsOutput(){}
 }

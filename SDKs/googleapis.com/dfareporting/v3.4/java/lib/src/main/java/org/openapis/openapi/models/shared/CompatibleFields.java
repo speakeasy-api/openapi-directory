@@ -18,6 +18,7 @@ public class CompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crossDimensionReachReportCompatibleFields")
     public CrossDimensionReachReportCompatibleFields crossDimensionReachReportCompatibleFields;
+
     public CompatibleFields withCrossDimensionReachReportCompatibleFields(CrossDimensionReachReportCompatibleFields crossDimensionReachReportCompatibleFields) {
         this.crossDimensionReachReportCompatibleFields = crossDimensionReachReportCompatibleFields;
         return this;
@@ -29,6 +30,7 @@ public class CompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floodlightReportCompatibleFields")
     public FloodlightReportCompatibleFields floodlightReportCompatibleFields;
+
     public CompatibleFields withFloodlightReportCompatibleFields(FloodlightReportCompatibleFields floodlightReportCompatibleFields) {
         this.floodlightReportCompatibleFields = floodlightReportCompatibleFields;
         return this;
@@ -40,6 +42,7 @@ public class CompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CompatibleFields withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class CompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathAttributionReportCompatibleFields")
     public PathReportCompatibleFields pathAttributionReportCompatibleFields;
+
     public CompatibleFields withPathAttributionReportCompatibleFields(PathReportCompatibleFields pathAttributionReportCompatibleFields) {
         this.pathAttributionReportCompatibleFields = pathAttributionReportCompatibleFields;
         return this;
@@ -62,6 +66,7 @@ public class CompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathReportCompatibleFields")
     public PathReportCompatibleFields pathReportCompatibleFields;
+
     public CompatibleFields withPathReportCompatibleFields(PathReportCompatibleFields pathReportCompatibleFields) {
         this.pathReportCompatibleFields = pathReportCompatibleFields;
         return this;
@@ -73,6 +78,7 @@ public class CompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathToConversionReportCompatibleFields")
     public PathToConversionReportCompatibleFields pathToConversionReportCompatibleFields;
+
     public CompatibleFields withPathToConversionReportCompatibleFields(PathToConversionReportCompatibleFields pathToConversionReportCompatibleFields) {
         this.pathToConversionReportCompatibleFields = pathToConversionReportCompatibleFields;
         return this;
@@ -84,6 +90,7 @@ public class CompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reachReportCompatibleFields")
     public ReachReportCompatibleFields reachReportCompatibleFields;
+
     public CompatibleFields withReachReportCompatibleFields(ReachReportCompatibleFields reachReportCompatibleFields) {
         this.reachReportCompatibleFields = reachReportCompatibleFields;
         return this;
@@ -95,9 +102,11 @@ public class CompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportCompatibleFields")
     public ReportCompatibleFields reportCompatibleFields;
+
     public CompatibleFields withReportCompatibleFields(ReportCompatibleFields reportCompatibleFields) {
         this.reportCompatibleFields = reportCompatibleFields;
         return this;
     }
     
+    public CompatibleFields(){}
 }

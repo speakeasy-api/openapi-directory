@@ -18,6 +18,7 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Commitment withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class Commitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmResourceBasedCud")
     public VmResourceBasedCud vmResourceBasedCud;
+
     public Commitment withVmResourceBasedCud(VmResourceBasedCud vmResourceBasedCud) {
         this.vmResourceBasedCud = vmResourceBasedCud;
         return this;
     }
     
+    public Commitment(){}
 }

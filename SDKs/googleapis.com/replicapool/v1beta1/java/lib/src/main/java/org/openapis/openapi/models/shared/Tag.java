@@ -18,6 +18,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerPrint")
     public String fingerPrint;
+
     public Tag withFingerPrint(String fingerPrint) {
         this.fingerPrint = fingerPrint;
         return this;
@@ -29,9 +30,11 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public String[] items;
+
     public Tag withItems(String[] items) {
         this.items = items;
         return this;
     }
     
+    public Tag(){}
 }

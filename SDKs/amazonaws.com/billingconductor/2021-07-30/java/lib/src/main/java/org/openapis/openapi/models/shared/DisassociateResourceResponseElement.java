@@ -15,6 +15,7 @@ public class DisassociateResourceResponseElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DisassociateResourceResponseElement withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class DisassociateResourceResponseElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public AssociateResourceError error;
+
     public DisassociateResourceResponseElement withError(AssociateResourceError error) {
         this.error = error;
         return this;
     }
     
+    public DisassociateResourceResponseElement(){}
 }

@@ -21,6 +21,7 @@ public class PageEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public java.util.Map<String, Object> customFields;
+
     public PageEntry withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -31,6 +32,7 @@ public class PageEntry {
      */
     @JsonProperty("id")
     public String id;
+
     public PageEntry withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +47,7 @@ public class PageEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public java.util.Map<String, String> images;
+
     public PageEntry withImages(java.util.Map<String, String> images) {
         this.images = images;
         return this;
@@ -53,6 +56,7 @@ public class PageEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public ItemSummary item;
+
     public PageEntry withItem(ItemSummary item) {
         this.item = item;
         return this;
@@ -64,6 +68,7 @@ public class PageEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list")
     public ItemList list;
+
     public PageEntry withList(ItemList list) {
         this.list = list;
         return this;
@@ -75,6 +80,7 @@ public class PageEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people")
     public Person[] people;
+
     public PageEntry withPeople(Person[] people) {
         this.people = people;
         return this;
@@ -85,6 +91,7 @@ public class PageEntry {
      */
     @JsonProperty("template")
     public String template;
+
     public PageEntry withTemplate(String template) {
         this.template = template;
         return this;
@@ -96,6 +103,7 @@ public class PageEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public PageEntry withText(String text) {
         this.text = text;
         return this;
@@ -106,6 +114,7 @@ public class PageEntry {
      */
     @JsonProperty("title")
     public String title;
+
     public PageEntry withTitle(String title) {
         this.title = title;
         return this;
@@ -116,9 +125,16 @@ public class PageEntry {
      */
     @JsonProperty("type")
     public PageEntryTypeEnum type;
+
     public PageEntry withType(PageEntryTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PageEntry(@JsonProperty("id") String id, @JsonProperty("template") String template, @JsonProperty("title") String title, @JsonProperty("type") PageEntryTypeEnum type) {
+        this.id = id;
+        this.template = template;
+        this.title = title;
+        this.type = type;
+  }
 }

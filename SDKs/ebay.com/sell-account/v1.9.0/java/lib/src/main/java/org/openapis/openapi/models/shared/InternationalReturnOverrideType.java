@@ -18,6 +18,7 @@ public class InternationalReturnOverrideType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnMethod")
     public String returnMethod;
+
     public InternationalReturnOverrideType withReturnMethod(String returnMethod) {
         this.returnMethod = returnMethod;
         return this;
@@ -29,6 +30,7 @@ public class InternationalReturnOverrideType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPeriod")
     public TimeDuration returnPeriod;
+
     public InternationalReturnOverrideType withReturnPeriod(TimeDuration returnPeriod) {
         this.returnPeriod = returnPeriod;
         return this;
@@ -40,6 +42,7 @@ public class InternationalReturnOverrideType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnShippingCostPayer")
     public String returnShippingCostPayer;
+
     public InternationalReturnOverrideType withReturnShippingCostPayer(String returnShippingCostPayer) {
         this.returnShippingCostPayer = returnShippingCostPayer;
         return this;
@@ -51,9 +54,11 @@ public class InternationalReturnOverrideType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnsAccepted")
     public Boolean returnsAccepted;
+
     public InternationalReturnOverrideType withReturnsAccepted(Boolean returnsAccepted) {
         this.returnsAccepted = returnsAccepted;
         return this;
     }
     
+    public InternationalReturnOverrideType(){}
 }

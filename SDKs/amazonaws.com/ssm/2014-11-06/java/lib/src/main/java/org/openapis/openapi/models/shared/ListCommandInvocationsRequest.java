@@ -12,6 +12,7 @@ public class ListCommandInvocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommandId")
     public String commandId;
+
     public ListCommandInvocationsRequest withCommandId(String commandId) {
         this.commandId = commandId;
         return this;
@@ -20,6 +21,7 @@ public class ListCommandInvocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Details")
     public Boolean details;
+
     public ListCommandInvocationsRequest withDetails(Boolean details) {
         this.details = details;
         return this;
@@ -28,6 +30,7 @@ public class ListCommandInvocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public CommandFilter[] filters;
+
     public ListCommandInvocationsRequest withFilters(CommandFilter[] filters) {
         this.filters = filters;
         return this;
@@ -36,6 +39,7 @@ public class ListCommandInvocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public ListCommandInvocationsRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -44,6 +48,7 @@ public class ListCommandInvocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCommandInvocationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -52,9 +57,11 @@ public class ListCommandInvocationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCommandInvocationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCommandInvocationsRequest(){}
 }

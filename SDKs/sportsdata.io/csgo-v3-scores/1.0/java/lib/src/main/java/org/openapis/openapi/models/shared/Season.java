@@ -12,6 +12,7 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompetitionId")
     public Long competitionId;
+
     public Season withCompetitionId(Long competitionId) {
         this.competitionId = competitionId;
         return this;
@@ -20,6 +21,7 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompetitionName")
     public String competitionName;
+
     public Season withCompetitionName(String competitionName) {
         this.competitionName = competitionName;
         return this;
@@ -28,6 +30,7 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentSeason")
     public Boolean currentSeason;
+
     public Season withCurrentSeason(Boolean currentSeason) {
         this.currentSeason = currentSeason;
         return this;
@@ -36,6 +39,7 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public Season withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -44,6 +48,7 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Season withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rounds")
     public Round[] rounds;
+
     public Season withRounds(Round[] rounds) {
         this.rounds = rounds;
         return this;
@@ -60,6 +66,7 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public Season withSeason(Long season) {
         this.season = season;
         return this;
@@ -68,6 +75,7 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonId")
     public Long seasonId;
+
     public Season withSeasonId(Long seasonId) {
         this.seasonId = seasonId;
         return this;
@@ -76,9 +84,11 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public Season withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public Season(){}
 }

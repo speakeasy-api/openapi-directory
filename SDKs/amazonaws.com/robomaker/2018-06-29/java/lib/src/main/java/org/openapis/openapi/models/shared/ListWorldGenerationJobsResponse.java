@@ -15,6 +15,7 @@ public class ListWorldGenerationJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListWorldGenerationJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListWorldGenerationJobsResponse {
     
     @JsonProperty("worldGenerationJobSummaries")
     public WorldGenerationJobSummary[] worldGenerationJobSummaries;
+
     public ListWorldGenerationJobsResponse withWorldGenerationJobSummaries(WorldGenerationJobSummary[] worldGenerationJobSummaries) {
         this.worldGenerationJobSummaries = worldGenerationJobSummaries;
         return this;
     }
     
+    public ListWorldGenerationJobsResponse(@JsonProperty("worldGenerationJobSummaries") WorldGenerationJobSummary[] worldGenerationJobSummaries) {
+        this.worldGenerationJobSummaries = worldGenerationJobSummaries;
+  }
 }

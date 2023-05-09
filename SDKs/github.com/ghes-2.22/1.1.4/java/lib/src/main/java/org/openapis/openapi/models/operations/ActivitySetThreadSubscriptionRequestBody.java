@@ -15,9 +15,11 @@ public class ActivitySetThreadSubscriptionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignored")
     public Boolean ignored;
+
     public ActivitySetThreadSubscriptionRequestBody withIgnored(Boolean ignored) {
         this.ignored = ignored;
         return this;
     }
     
+    public ActivitySetThreadSubscriptionRequestBody(){}
 }

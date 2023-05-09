@@ -15,9 +15,11 @@ public class KeywordList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Keyword[] items;
+
     public KeywordList withItems(Keyword[] items) {
         this.items = items;
         return this;
     }
     
+    public KeywordList(){}
 }

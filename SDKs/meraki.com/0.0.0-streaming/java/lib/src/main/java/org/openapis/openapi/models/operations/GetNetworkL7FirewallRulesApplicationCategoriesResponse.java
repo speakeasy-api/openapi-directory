@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkL7FirewallRulesApplicationCategoriesResponse {
     
     public String contentType;
+
     public GetNetworkL7FirewallRulesApplicationCategoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkL7FirewallRulesApplicationCategoriesResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkL7FirewallRulesApplicationCategoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkL7FirewallRulesApplicationCategoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkL7FirewallRulesApplicationCategoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetNetworkL7FirewallRulesApplicationCategoriesResponse {
      */
     
     public java.util.Map<String, Object> getNetworkL7FirewallRulesApplicationCategories200ApplicationJSONObject;
+
     public GetNetworkL7FirewallRulesApplicationCategoriesResponse withGetNetworkL7FirewallRulesApplicationCategories200ApplicationJSONObject(java.util.Map<String, Object> getNetworkL7FirewallRulesApplicationCategories200ApplicationJSONObject) {
         this.getNetworkL7FirewallRulesApplicationCategories200ApplicationJSONObject = getNetworkL7FirewallRulesApplicationCategories200ApplicationJSONObject;
         return this;
     }
     
+    public GetNetworkL7FirewallRulesApplicationCategoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

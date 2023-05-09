@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiLogisticsPvtShippingPoliciesRequest {
@@ -12,6 +13,7 @@ public class GetApiLogisticsPvtShippingPoliciesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetApiLogisticsPvtShippingPoliciesRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetApiLogisticsPvtShippingPoliciesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetApiLogisticsPvtShippingPoliciesRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetApiLogisticsPvtShippingPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetApiLogisticsPvtShippingPoliciesRequest withPage(String page) {
         this.page = page;
         return this;
@@ -42,9 +46,16 @@ public class GetApiLogisticsPvtShippingPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
     public String perPage;
+
     public GetApiLogisticsPvtShippingPoliciesRequest withPerPage(String perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetApiLogisticsPvtShippingPoliciesRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("page") String page, @JsonProperty("perPage") String perPage) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.page = page;
+        this.perPage = perPage;
+  }
 }

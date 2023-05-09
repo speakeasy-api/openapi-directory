@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadVideosRequest {
@@ -12,6 +13,7 @@ public class DownloadVideosRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RedownloadVideo redownloadVideo;
+
     public DownloadVideosRequest withRedownloadVideo(org.openapis.openapi.models.shared.RedownloadVideo redownloadVideo) {
         this.redownloadVideo = redownloadVideo;
         return this;
@@ -22,9 +24,14 @@ public class DownloadVideosRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DownloadVideosRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DownloadVideosRequest(@JsonProperty("RedownloadVideo") org.openapis.openapi.models.shared.RedownloadVideo redownloadVideo, @JsonProperty("id") String id) {
+        this.redownloadVideo = redownloadVideo;
+        this.id = id;
+  }
 }

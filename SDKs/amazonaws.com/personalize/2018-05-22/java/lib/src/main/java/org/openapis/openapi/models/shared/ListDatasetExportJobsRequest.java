@@ -12,6 +12,7 @@ public class ListDatasetExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetArn")
     public String datasetArn;
+
     public ListDatasetExportJobsRequest withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
@@ -20,6 +21,7 @@ public class ListDatasetExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListDatasetExportJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListDatasetExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDatasetExportJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDatasetExportJobsRequest(){}
 }

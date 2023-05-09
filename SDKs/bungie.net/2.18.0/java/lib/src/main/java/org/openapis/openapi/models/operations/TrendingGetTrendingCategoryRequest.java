@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrendingGetTrendingCategoryRequest {
@@ -12,6 +13,7 @@ public class TrendingGetTrendingCategoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=categoryId")
     public String categoryId;
+
     public TrendingGetTrendingCategoryRequest withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -22,9 +24,14 @@ public class TrendingGetTrendingCategoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pageNumber")
     public Integer pageNumber;
+
     public TrendingGetTrendingCategoryRequest withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
     
+    public TrendingGetTrendingCategoryRequest(@JsonProperty("categoryId") String categoryId, @JsonProperty("pageNumber") Integer pageNumber) {
+        this.categoryId = categoryId;
+        this.pageNumber = pageNumber;
+  }
 }

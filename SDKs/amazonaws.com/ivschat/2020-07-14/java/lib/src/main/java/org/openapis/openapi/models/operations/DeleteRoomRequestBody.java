@@ -12,9 +12,13 @@ public class DeleteRoomRequestBody {
      */
     @JsonProperty("identifier")
     public String identifier;
+
     public DeleteRoomRequestBody withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
     
+    public DeleteRoomRequestBody(@JsonProperty("identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

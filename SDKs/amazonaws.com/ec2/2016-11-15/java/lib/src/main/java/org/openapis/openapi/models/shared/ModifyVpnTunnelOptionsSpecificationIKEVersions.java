@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyVpnTunnelOptionsSpecificationIKEVersions {
     
     public String value;
+
     public ModifyVpnTunnelOptionsSpecificationIKEVersions withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ModifyVpnTunnelOptionsSpecificationIKEVersions(){}
 }

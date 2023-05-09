@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AccountGetPermissionsResponse {
     
     public org.openapis.openapi.models.shared.ApiCoreResponsesEntitiesResponseApiCoreDtoGrantsGrant apiCoreResponsesEntitiesResponseApiCoreDtoGrantsGrant;
+
     public AccountGetPermissionsResponse withApiCoreResponsesEntitiesResponseApiCoreDtoGrantsGrant(org.openapis.openapi.models.shared.ApiCoreResponsesEntitiesResponseApiCoreDtoGrantsGrant apiCoreResponsesEntitiesResponseApiCoreDtoGrantsGrant) {
         this.apiCoreResponsesEntitiesResponseApiCoreDtoGrantsGrant = apiCoreResponsesEntitiesResponseApiCoreDtoGrantsGrant;
         return this;
@@ -16,6 +18,7 @@ public class AccountGetPermissionsResponse {
     
     
     public String contentType;
+
     public AccountGetPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class AccountGetPermissionsResponse {
     
     
     public Integer statusCode;
+
     public AccountGetPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class AccountGetPermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AccountGetPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AccountGetPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

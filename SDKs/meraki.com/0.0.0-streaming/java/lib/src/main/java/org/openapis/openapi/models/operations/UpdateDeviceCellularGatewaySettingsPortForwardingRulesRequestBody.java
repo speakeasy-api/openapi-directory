@@ -15,9 +15,11 @@ public class UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRules[] rules;
+
     public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBody withRules(UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBodyRules[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBody(){}
 }

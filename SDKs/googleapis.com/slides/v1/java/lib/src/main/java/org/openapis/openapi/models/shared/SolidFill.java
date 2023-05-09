@@ -18,6 +18,7 @@ public class SolidFill {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alpha")
     public Float alpha;
+
     public SolidFill withAlpha(Float alpha) {
         this.alpha = alpha;
         return this;
@@ -29,9 +30,11 @@ public class SolidFill {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public OpaqueColor color;
+
     public SolidFill withColor(OpaqueColor color) {
         this.color = color;
         return this;
     }
     
+    public SolidFill(){}
 }

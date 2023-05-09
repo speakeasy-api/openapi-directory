@@ -18,9 +18,11 @@ public class AccountImageImprovementsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowAutomaticImageImprovements")
     public Boolean allowAutomaticImageImprovements;
+
     public AccountImageImprovementsSettings withAllowAutomaticImageImprovements(Boolean allowAutomaticImageImprovements) {
         this.allowAutomaticImageImprovements = allowAutomaticImageImprovements;
         return this;
     }
     
+    public AccountImageImprovementsSettings(){}
 }

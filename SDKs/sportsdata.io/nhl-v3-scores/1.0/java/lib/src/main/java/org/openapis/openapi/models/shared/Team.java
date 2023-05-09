@@ -12,6 +12,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Active")
     public Boolean active;
+
     public Team withActive(Boolean active) {
         this.active = active;
         return this;
@@ -20,6 +21,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public Team withCity(String city) {
         this.city = city;
         return this;
@@ -28,6 +30,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Conference")
     public String conference;
+
     public Team withConference(String conference) {
         this.conference = conference;
         return this;
@@ -36,6 +39,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Division")
     public String division;
+
     public Team withDivision(String division) {
         this.division = division;
         return this;
@@ -44,6 +48,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTeamID")
     public Long globalTeamID;
+
     public Team withGlobalTeamID(Long globalTeamID) {
         this.globalTeamID = globalTeamID;
         return this;
@@ -52,6 +57,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public Team withKey(String key) {
         this.key = key;
         return this;
@@ -60,6 +66,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Team withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +75,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryColor")
     public String primaryColor;
+
     public Team withPrimaryColor(String primaryColor) {
         this.primaryColor = primaryColor;
         return this;
@@ -76,6 +84,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuaternaryColor")
     public String quaternaryColor;
+
     public Team withQuaternaryColor(String quaternaryColor) {
         this.quaternaryColor = quaternaryColor;
         return this;
@@ -84,6 +93,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryColor")
     public String secondaryColor;
+
     public Team withSecondaryColor(String secondaryColor) {
         this.secondaryColor = secondaryColor;
         return this;
@@ -92,6 +102,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StadiumID")
     public Long stadiumID;
+
     public Team withStadiumID(Long stadiumID) {
         this.stadiumID = stadiumID;
         return this;
@@ -100,6 +111,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public Team withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
@@ -108,6 +120,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TertiaryColor")
     public String tertiaryColor;
+
     public Team withTertiaryColor(String tertiaryColor) {
         this.tertiaryColor = tertiaryColor;
         return this;
@@ -116,6 +129,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WikipediaLogoUrl")
     public String wikipediaLogoUrl;
+
     public Team withWikipediaLogoUrl(String wikipediaLogoUrl) {
         this.wikipediaLogoUrl = wikipediaLogoUrl;
         return this;
@@ -124,9 +138,11 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WikipediaWordMarkUrl")
     public String wikipediaWordMarkUrl;
+
     public Team withWikipediaWordMarkUrl(String wikipediaWordMarkUrl) {
         this.wikipediaWordMarkUrl = wikipediaWordMarkUrl;
         return this;
     }
     
+    public Team(){}
 }

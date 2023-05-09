@@ -15,6 +15,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public Patient withAddress(String address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_accident_insurance")
     public PatientAutoAccidentInsurance autoAccidentInsurance;
+
     public Patient withAutoAccidentInsurance(PatientAutoAccidentInsurance autoAccidentInsurance) {
         this.autoAccidentInsurance = autoAccidentInsurance;
         return this;
@@ -31,6 +33,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cell_phone")
     public String cellPhone;
+
     public Patient withCellPhone(String cellPhone) {
         this.cellPhone = cellPhone;
         return this;
@@ -42,6 +45,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chart_id")
     public String chartId;
+
     public Patient withChartId(String chartId) {
         this.chartId = chartId;
         return this;
@@ -50,6 +54,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public Patient withCity(String city) {
         this.city = city;
         return this;
@@ -58,6 +63,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copay")
     public String copay;
+
     public Patient withCopay(String copay) {
         this.copay = copay;
         return this;
@@ -66,6 +72,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_demographics")
     public PatientCustomPatientFieldValue[] customDemographics;
+
     public Patient withCustomDemographics(PatientCustomPatientFieldValue[] customDemographics) {
         this.customDemographics = customDemographics;
         return this;
@@ -74,6 +81,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_of_birth")
     public String dateOfBirth;
+
     public Patient withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -85,6 +93,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_of_first_appointment")
     public String dateOfFirstAppointment;
+
     public Patient withDateOfFirstAppointment(String dateOfFirstAppointment) {
         this.dateOfFirstAppointment = dateOfFirstAppointment;
         return this;
@@ -96,6 +105,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_of_last_appointment")
     public String dateOfLastAppointment;
+
     public Patient withDateOfLastAppointment(String dateOfLastAppointment) {
         this.dateOfLastAppointment = dateOfLastAppointment;
         return this;
@@ -107,6 +117,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_pharmacy")
     public String defaultPharmacy;
+
     public Patient withDefaultPharmacy(String defaultPharmacy) {
         this.defaultPharmacy = defaultPharmacy;
         return this;
@@ -118,6 +129,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disable_sms_messages")
     public Boolean disableSmsMessages;
+
     public Patient withDisableSmsMessages(Boolean disableSmsMessages) {
         this.disableSmsMessages = disableSmsMessages;
         return this;
@@ -125,6 +137,7 @@ public class Patient {
     
     @JsonProperty("doctor")
     public Long doctor;
+
     public Patient withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -133,6 +146,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Patient withEmail(String email) {
         this.email = email;
         return this;
@@ -141,6 +155,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emergency_contact_name")
     public String emergencyContactName;
+
     public Patient withEmergencyContactName(String emergencyContactName) {
         this.emergencyContactName = emergencyContactName;
         return this;
@@ -149,6 +164,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emergency_contact_phone")
     public String emergencyContactPhone;
+
     public Patient withEmergencyContactPhone(String emergencyContactPhone) {
         this.emergencyContactPhone = emergencyContactPhone;
         return this;
@@ -157,6 +173,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emergency_contact_relation")
     public String emergencyContactRelation;
+
     public Patient withEmergencyContactRelation(String emergencyContactRelation) {
         this.emergencyContactRelation = emergencyContactRelation;
         return this;
@@ -165,6 +182,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employer")
     public String employer;
+
     public Patient withEmployer(String employer) {
         this.employer = employer;
         return this;
@@ -173,6 +191,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employer_address")
     public String employerAddress;
+
     public Patient withEmployerAddress(String employerAddress) {
         this.employerAddress = employerAddress;
         return this;
@@ -181,6 +200,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employer_city")
     public String employerCity;
+
     public Patient withEmployerCity(String employerCity) {
         this.employerCity = employerCity;
         return this;
@@ -192,6 +212,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employer_state")
     public String employerState;
+
     public Patient withEmployerState(String employerState) {
         this.employerState = employerState;
         return this;
@@ -200,6 +221,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employer_zip_code")
     public String employerZipCode;
+
     public Patient withEmployerZipCode(String employerZipCode) {
         this.employerZipCode = employerZipCode;
         return this;
@@ -211,6 +233,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ethnicity")
     public PatientEthnicityEnum ethnicity;
+
     public Patient withEthnicity(PatientEthnicityEnum ethnicity) {
         this.ethnicity = ethnicity;
         return this;
@@ -219,6 +242,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public Patient withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -229,6 +253,7 @@ public class Patient {
      */
     @JsonProperty("gender")
     public PatientGenderEnum gender;
+
     public Patient withGender(PatientGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -237,6 +262,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("home_phone")
     public String homePhone;
+
     public Patient withHomePhone(String homePhone) {
         this.homePhone = homePhone;
         return this;
@@ -245,6 +271,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Patient withId(Long id) {
         this.id = id;
         return this;
@@ -253,6 +280,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public Patient withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -261,6 +289,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middle_name")
     public String middleName;
+
     public Patient withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -272,6 +301,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nick_name")
     public String nickName;
+
     public Patient withNickName(String nickName) {
         this.nickName = nickName;
         return this;
@@ -280,6 +310,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("office_phone")
     public String officePhone;
+
     public Patient withOfficePhone(String officePhone) {
         this.officePhone = officePhone;
         return this;
@@ -291,6 +322,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offices")
     public Long[] offices;
+
     public Patient withOffices(Long[] offices) {
         this.offices = offices;
         return this;
@@ -302,6 +334,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient_flags")
     public PatientPatientFlagType[] patientFlags;
+
     public Patient withPatientFlags(PatientPatientFlagType[] patientFlags) {
         this.patientFlags = patientFlags;
         return this;
@@ -313,6 +346,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient_flags_attached")
     public PatientPatientFlag[] patientFlagsAttached;
+
     public Patient withPatientFlagsAttached(PatientPatientFlag[] patientFlagsAttached) {
         this.patientFlagsAttached = patientFlagsAttached;
         return this;
@@ -324,6 +358,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient_payment_profile")
     public PatientPatientPaymentProfileEnum patientPaymentProfile;
+
     public Patient withPatientPaymentProfile(PatientPatientPaymentProfileEnum patientPaymentProfile) {
         this.patientPaymentProfile = patientPaymentProfile;
         return this;
@@ -332,6 +367,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient_photo")
     public String patientPhoto;
+
     public Patient withPatientPhoto(String patientPhoto) {
         this.patientPhoto = patientPhoto;
         return this;
@@ -343,6 +379,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient_photo_date")
     public String patientPhotoDate;
+
     public Patient withPatientPhotoDate(String patientPhotoDate) {
         this.patientPhotoDate = patientPhotoDate;
         return this;
@@ -354,6 +391,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient_status")
     public PatientPatientStatusEnum patientStatus;
+
     public Patient withPatientStatus(PatientPatientStatusEnum patientStatus) {
         this.patientStatus = patientStatus;
         return this;
@@ -365,6 +403,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferred_language")
     public PatientPreferredLanguageEnum preferredLanguage;
+
     public Patient withPreferredLanguage(PatientPreferredLanguageEnum preferredLanguage) {
         this.preferredLanguage = preferredLanguage;
         return this;
@@ -376,6 +415,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_care_physician")
     public String primaryCarePhysician;
+
     public Patient withPrimaryCarePhysician(String primaryCarePhysician) {
         this.primaryCarePhysician = primaryCarePhysician;
         return this;
@@ -387,6 +427,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_insurance")
     public PatientPrimaryInsurance primaryInsurance;
+
     public Patient withPrimaryInsurance(PatientPrimaryInsurance primaryInsurance) {
         this.primaryInsurance = primaryInsurance;
         return this;
@@ -398,6 +439,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("race")
     public PatientRaceEnum race;
+
     public Patient withRace(PatientRaceEnum race) {
         this.race = race;
         return this;
@@ -406,6 +448,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referring_doctor")
     public PatientPatient referringDoctor;
+
     public Patient withReferringDoctor(PatientPatient referringDoctor) {
         this.referringDoctor = referringDoctor;
         return this;
@@ -417,6 +460,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referring_source")
     public String referringSource;
+
     public Patient withReferringSource(String referringSource) {
         this.referringSource = referringSource;
         return this;
@@ -425,6 +469,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responsible_party_email")
     public String responsiblePartyEmail;
+
     public Patient withResponsiblePartyEmail(String responsiblePartyEmail) {
         this.responsiblePartyEmail = responsiblePartyEmail;
         return this;
@@ -433,6 +478,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responsible_party_name")
     public String responsiblePartyName;
+
     public Patient withResponsiblePartyName(String responsiblePartyName) {
         this.responsiblePartyName = responsiblePartyName;
         return this;
@@ -441,6 +487,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responsible_party_phone")
     public String responsiblePartyPhone;
+
     public Patient withResponsiblePartyPhone(String responsiblePartyPhone) {
         this.responsiblePartyPhone = responsiblePartyPhone;
         return this;
@@ -449,6 +496,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responsible_party_relation")
     public String responsiblePartyRelation;
+
     public Patient withResponsiblePartyRelation(String responsiblePartyRelation) {
         this.responsiblePartyRelation = responsiblePartyRelation;
         return this;
@@ -460,6 +508,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondary_insurance")
     public PatientSecondaryInsurance secondaryInsurance;
+
     public Patient withSecondaryInsurance(PatientSecondaryInsurance secondaryInsurance) {
         this.secondaryInsurance = secondaryInsurance;
         return this;
@@ -468,6 +517,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("social_security_number")
     public String socialSecurityNumber;
+
     public Patient withSocialSecurityNumber(String socialSecurityNumber) {
         this.socialSecurityNumber = socialSecurityNumber;
         return this;
@@ -479,6 +529,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public Patient withState(String state) {
         this.state = state;
         return this;
@@ -490,6 +541,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tertiary_insurance")
     public PatientTertiaryInsurance tertiaryInsurance;
+
     public Patient withTertiaryInsurance(PatientTertiaryInsurance tertiaryInsurance) {
         this.tertiaryInsurance = tertiaryInsurance;
         return this;
@@ -498,6 +550,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Patient withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -506,6 +559,7 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_insurance")
     public PatientWorkerCompInsurance workersCompInsurance;
+
     public Patient withWorkersCompInsurance(PatientWorkerCompInsurance workersCompInsurance) {
         this.workersCompInsurance = workersCompInsurance;
         return this;
@@ -514,9 +568,14 @@ public class Patient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zip_code")
     public String zipCode;
+
     public Patient withZipCode(String zipCode) {
         this.zipCode = zipCode;
         return this;
     }
     
+    public Patient(@JsonProperty("doctor") Long doctor, @JsonProperty("gender") PatientGenderEnum gender) {
+        this.doctor = doctor;
+        this.gender = gender;
+  }
 }

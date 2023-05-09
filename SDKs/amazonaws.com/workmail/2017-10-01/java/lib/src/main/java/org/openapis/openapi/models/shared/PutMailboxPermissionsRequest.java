@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutMailboxPermissionsRequest {
     @JsonProperty("EntityId")
     public String entityId;
+
     public PutMailboxPermissionsRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -16,6 +17,7 @@ public class PutMailboxPermissionsRequest {
     
     @JsonProperty("GranteeId")
     public String granteeId;
+
     public PutMailboxPermissionsRequest withGranteeId(String granteeId) {
         this.granteeId = granteeId;
         return this;
@@ -23,6 +25,7 @@ public class PutMailboxPermissionsRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public PutMailboxPermissionsRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -30,9 +33,16 @@ public class PutMailboxPermissionsRequest {
     
     @JsonProperty("PermissionValues")
     public PermissionTypeEnum[] permissionValues;
+
     public PutMailboxPermissionsRequest withPermissionValues(PermissionTypeEnum[] permissionValues) {
         this.permissionValues = permissionValues;
         return this;
     }
     
+    public PutMailboxPermissionsRequest(@JsonProperty("EntityId") String entityId, @JsonProperty("GranteeId") String granteeId, @JsonProperty("OrganizationId") String organizationId, @JsonProperty("PermissionValues") PermissionTypeEnum[] permissionValues) {
+        this.entityId = entityId;
+        this.granteeId = granteeId;
+        this.organizationId = organizationId;
+        this.permissionValues = permissionValues;
+  }
 }

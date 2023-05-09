@@ -22,6 +22,7 @@ public class ActivityMarkNotificationsAsReadRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_read_at")
     public OffsetDateTime lastReadAt;
+
     public ActivityMarkNotificationsAsReadRequestBody withLastReadAt(OffsetDateTime lastReadAt) {
         this.lastReadAt = lastReadAt;
         return this;
@@ -33,9 +34,11 @@ public class ActivityMarkNotificationsAsReadRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("read")
     public Boolean read;
+
     public ActivityMarkNotificationsAsReadRequestBody withRead(Boolean read) {
         this.read = read;
         return this;
     }
     
+    public ActivityMarkNotificationsAsReadRequestBody(){}
 }

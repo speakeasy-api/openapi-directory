@@ -20,6 +20,7 @@ public class Eula {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public Eula withContent(String content) {
         this.content = content;
         return this;
@@ -30,6 +31,7 @@ public class Eula {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Eula withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class Eula {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eulaId")
     public String eulaId;
+
     public Eula withEulaId(String eulaId) {
         this.eulaId = eulaId;
         return this;
@@ -46,6 +49,7 @@ public class Eula {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Eula withName(String name) {
         this.name = name;
         return this;
@@ -56,9 +60,11 @@ public class Eula {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Eula withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Eula(){}
 }

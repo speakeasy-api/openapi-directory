@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDeviceEc2InstancesResponse {
@@ -12,6 +13,7 @@ public class DescribeDeviceEc2InstancesResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeDeviceEc2InstancesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDeviceEc2InstancesResponse {
     
     
     public String contentType;
+
     public DescribeDeviceEc2InstancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDeviceEc2InstancesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDeviceEc2Output describeDeviceEc2Output;
+
     public DescribeDeviceEc2InstancesResponse withDescribeDeviceEc2Output(org.openapis.openapi.models.shared.DescribeDeviceEc2Output describeDeviceEc2Output) {
         this.describeDeviceEc2Output = describeDeviceEc2Output;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDeviceEc2InstancesResponse {
      */
     
     public Object internalServerException;
+
     public DescribeDeviceEc2InstancesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDeviceEc2InstancesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDeviceEc2InstancesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeDeviceEc2InstancesResponse {
     
     
     public Integer statusCode;
+
     public DescribeDeviceEc2InstancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeDeviceEc2InstancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDeviceEc2InstancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeDeviceEc2InstancesResponse {
      */
     
     public Object throttlingException;
+
     public DescribeDeviceEc2InstancesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeDeviceEc2InstancesResponse {
      */
     
     public Object validationException;
+
     public DescribeDeviceEc2InstancesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeDeviceEc2InstancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

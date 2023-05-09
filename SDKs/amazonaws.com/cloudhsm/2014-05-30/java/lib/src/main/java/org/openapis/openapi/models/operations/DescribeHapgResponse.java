@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeHapgResponse {
@@ -12,6 +13,7 @@ public class DescribeHapgResponse {
      */
     
     public Object cloudHsmInternalException;
+
     public DescribeHapgResponse withCloudHsmInternalException(Object cloudHsmInternalException) {
         this.cloudHsmInternalException = cloudHsmInternalException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeHapgResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public DescribeHapgResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeHapgResponse {
     
     
     public String contentType;
+
     public DescribeHapgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeHapgResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeHapgResponse describeHapgResponse;
+
     public DescribeHapgResponse withDescribeHapgResponse(org.openapis.openapi.models.shared.DescribeHapgResponse describeHapgResponse) {
         this.describeHapgResponse = describeHapgResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribeHapgResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeHapgResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeHapgResponse {
     
     
     public Integer statusCode;
+
     public DescribeHapgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeHapgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeHapgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeHapgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

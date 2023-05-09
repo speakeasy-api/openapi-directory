@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetInterfaceRequest {
@@ -12,6 +13,7 @@ public class SetInterfaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Long agentNum;
+
     public SetInterfaceRequest withAgentNum(Long agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class SetInterfaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=interface")
     public String interface_;
+
     public SetInterfaceRequest withInterface(String interface_) {
         this.interface_ = interface_;
         return this;
     }
     
+    public SetInterfaceRequest(@JsonProperty("agentNum") Long agentNum, @JsonProperty("interface") String interface_) {
+        this.agentNum = agentNum;
+        this.interface_ = interface_;
+  }
 }

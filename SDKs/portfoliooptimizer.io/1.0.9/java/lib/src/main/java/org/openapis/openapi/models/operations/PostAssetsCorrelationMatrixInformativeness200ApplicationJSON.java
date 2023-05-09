@@ -15,9 +15,13 @@ public class PostAssetsCorrelationMatrixInformativeness200ApplicationJSON {
      */
     @JsonProperty("assetsCorrelationMatrixInformativeness")
     public Double assetsCorrelationMatrixInformativeness;
+
     public PostAssetsCorrelationMatrixInformativeness200ApplicationJSON withAssetsCorrelationMatrixInformativeness(Double assetsCorrelationMatrixInformativeness) {
         this.assetsCorrelationMatrixInformativeness = assetsCorrelationMatrixInformativeness;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixInformativeness200ApplicationJSON(@JsonProperty("assetsCorrelationMatrixInformativeness") Double assetsCorrelationMatrixInformativeness) {
+        this.assetsCorrelationMatrixInformativeness = assetsCorrelationMatrixInformativeness;
+  }
 }

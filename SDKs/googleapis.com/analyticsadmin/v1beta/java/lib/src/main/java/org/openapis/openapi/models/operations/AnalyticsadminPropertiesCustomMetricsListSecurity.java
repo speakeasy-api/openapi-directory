@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AnalyticsadminPropertiesCustomMetricsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsadminPropertiesCustomMetricsListSecurityOption1 option1;
+
     public AnalyticsadminPropertiesCustomMetricsListSecurity withOption1(AnalyticsadminPropertiesCustomMetricsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class AnalyticsadminPropertiesCustomMetricsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsadminPropertiesCustomMetricsListSecurityOption2 option2;
+
     public AnalyticsadminPropertiesCustomMetricsListSecurity withOption2(AnalyticsadminPropertiesCustomMetricsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public AnalyticsadminPropertiesCustomMetricsListSecurity(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateEnergyCostRequest {
@@ -12,6 +13,7 @@ public class UpdateEnergyCostRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GroupConfiguration groupConfiguration;
+
     public UpdateEnergyCostRequest withGroupConfiguration(org.openapis.openapi.models.shared.GroupConfiguration groupConfiguration) {
         this.groupConfiguration = groupConfiguration;
         return this;
@@ -22,9 +24,13 @@ public class UpdateEnergyCostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public UpdateEnergyCostRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public UpdateEnergyCostRequest(@JsonProperty("groupId") String groupId) {
+        this.groupId = groupId;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OutputContext {
     @JsonProperty("name")
     public String name;
+
     public OutputContext withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class OutputContext {
     
     @JsonProperty("timeToLiveInSeconds")
     public Long timeToLiveInSeconds;
+
     public OutputContext withTimeToLiveInSeconds(Long timeToLiveInSeconds) {
         this.timeToLiveInSeconds = timeToLiveInSeconds;
         return this;
@@ -26,9 +28,15 @@ public class OutputContext {
     
     @JsonProperty("turnsToLive")
     public Long turnsToLive;
+
     public OutputContext withTurnsToLive(Long turnsToLive) {
         this.turnsToLive = turnsToLive;
         return this;
     }
     
+    public OutputContext(@JsonProperty("name") String name, @JsonProperty("timeToLiveInSeconds") Long timeToLiveInSeconds, @JsonProperty("turnsToLive") Long turnsToLive) {
+        this.name = name;
+        this.timeToLiveInSeconds = timeToLiveInSeconds;
+        this.turnsToLive = turnsToLive;
+  }
 }

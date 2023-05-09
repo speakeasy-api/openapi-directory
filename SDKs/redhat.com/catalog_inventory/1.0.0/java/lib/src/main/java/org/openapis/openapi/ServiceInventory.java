@@ -60,11 +60,9 @@ public class ServiceInventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListServiceInventoriesResponse res = new org.openapis.openapi.models.operations.ListServiceInventoriesResponse() {{
+        org.openapis.openapi.models.operations.ListServiceInventoriesResponse res = new org.openapis.openapi.models.operations.ListServiceInventoriesResponse(contentType, httpRes.statusCode()) {{
             serviceInventoriesCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,12 +104,10 @@ public class ServiceInventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListServiceInventoryTagsResponse res = new org.openapis.openapi.models.operations.ListServiceInventoryTagsResponse() {{
+        org.openapis.openapi.models.operations.ListServiceInventoryTagsResponse res = new org.openapis.openapi.models.operations.ListServiceInventoryTagsResponse(contentType, httpRes.statusCode()) {{
             tagsCollection = null;
             errorNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,12 +150,10 @@ public class ServiceInventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShowServiceInventoryResponse res = new org.openapis.openapi.models.operations.ShowServiceInventoryResponse() {{
+        org.openapis.openapi.models.operations.ShowServiceInventoryResponse res = new org.openapis.openapi.models.operations.ShowServiceInventoryResponse(contentType, httpRes.statusCode()) {{
             serviceInventory = null;
             errorNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -207,11 +201,9 @@ public class ServiceInventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagServiceInventoryResponse res = new org.openapis.openapi.models.operations.TagServiceInventoryResponse() {{
+        org.openapis.openapi.models.operations.TagServiceInventoryResponse res = new org.openapis.openapi.models.operations.TagServiceInventoryResponse(contentType, httpRes.statusCode()) {{
             tags = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -254,10 +246,8 @@ public class ServiceInventory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagServiceInventoryResponse res = new org.openapis.openapi.models.operations.UntagServiceInventoryResponse() {{
+        org.openapis.openapi.models.operations.UntagServiceInventoryResponse res = new org.openapis.openapi.models.operations.UntagServiceInventoryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

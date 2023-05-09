@@ -15,6 +15,7 @@ public class PutCategoriesIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colour")
     public String colour;
+
     public PutCategoriesIdRequestBody withColour(String colour) {
         this.colour = colour;
         return this;
@@ -26,6 +27,7 @@ public class PutCategoriesIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_bill")
     public Boolean isBill;
+
     public PutCategoriesIdRequestBody withIsBill(Boolean isBill) {
         this.isBill = isBill;
         return this;
@@ -37,6 +39,7 @@ public class PutCategoriesIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_transfer")
     public Boolean isTransfer;
+
     public PutCategoriesIdRequestBody withIsTransfer(Boolean isTransfer) {
         this.isTransfer = isTransfer;
         return this;
@@ -48,6 +51,7 @@ public class PutCategoriesIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     public Long parentId;
+
     public PutCategoriesIdRequestBody withParentId(Long parentId) {
         this.parentId = parentId;
         return this;
@@ -59,6 +63,7 @@ public class PutCategoriesIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_behaviour")
     public PutCategoriesIdRequestBodyRefundBehaviourEnum refundBehaviour;
+
     public PutCategoriesIdRequestBody withRefundBehaviour(PutCategoriesIdRequestBodyRefundBehaviourEnum refundBehaviour) {
         this.refundBehaviour = refundBehaviour;
         return this;
@@ -70,6 +75,7 @@ public class PutCategoriesIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roll_up")
     public Boolean rollUp;
+
     public PutCategoriesIdRequestBody withRollUp(Boolean rollUp) {
         this.rollUp = rollUp;
         return this;
@@ -81,9 +87,11 @@ public class PutCategoriesIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PutCategoriesIdRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PutCategoriesIdRequestBody(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAppVersionAppComponentResponse {
@@ -12,6 +13,7 @@ public class CreateAppVersionAppComponentResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAppVersionAppComponentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateAppVersionAppComponentResponse {
      */
     
     public Object conflictException;
+
     public CreateAppVersionAppComponentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateAppVersionAppComponentResponse {
     
     
     public String contentType;
+
     public CreateAppVersionAppComponentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateAppVersionAppComponentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAppVersionAppComponentResponse createAppVersionAppComponentResponse;
+
     public CreateAppVersionAppComponentResponse withCreateAppVersionAppComponentResponse(org.openapis.openapi.models.shared.CreateAppVersionAppComponentResponse createAppVersionAppComponentResponse) {
         this.createAppVersionAppComponentResponse = createAppVersionAppComponentResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateAppVersionAppComponentResponse {
      */
     
     public Object internalServerException;
+
     public CreateAppVersionAppComponentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateAppVersionAppComponentResponse {
     
     
     public Integer statusCode;
+
     public CreateAppVersionAppComponentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateAppVersionAppComponentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAppVersionAppComponentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateAppVersionAppComponentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAppVersionAppComponentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class CreateAppVersionAppComponentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateAppVersionAppComponentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateAppVersionAppComponentResponse {
      */
     
     public Object throttlingException;
+
     public CreateAppVersionAppComponentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateAppVersionAppComponentResponse {
      */
     
     public Object validationException;
+
     public CreateAppVersionAppComponentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAppVersionAppComponentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

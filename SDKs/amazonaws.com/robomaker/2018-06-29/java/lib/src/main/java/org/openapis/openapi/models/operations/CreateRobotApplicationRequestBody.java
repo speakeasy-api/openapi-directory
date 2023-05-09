@@ -15,6 +15,7 @@ public class CreateRobotApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public CreateRobotApplicationRequestBodyEnvironment environment;
+
     public CreateRobotApplicationRequestBody withEnvironment(CreateRobotApplicationRequestBodyEnvironment environment) {
         this.environment = environment;
         return this;
@@ -25,6 +26,7 @@ public class CreateRobotApplicationRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateRobotApplicationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +37,7 @@ public class CreateRobotApplicationRequestBody {
      */
     @JsonProperty("robotSoftwareSuite")
     public CreateRobotApplicationRequestBodyRobotSoftwareSuite robotSoftwareSuite;
+
     public CreateRobotApplicationRequestBody withRobotSoftwareSuite(CreateRobotApplicationRequestBodyRobotSoftwareSuite robotSoftwareSuite) {
         this.robotSoftwareSuite = robotSoftwareSuite;
         return this;
@@ -46,6 +49,7 @@ public class CreateRobotApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public org.openapis.openapi.models.shared.SourceConfig[] sources;
+
     public CreateRobotApplicationRequestBody withSources(org.openapis.openapi.models.shared.SourceConfig[] sources) {
         this.sources = sources;
         return this;
@@ -57,9 +61,14 @@ public class CreateRobotApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateRobotApplicationRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRobotApplicationRequestBody(@JsonProperty("name") String name, @JsonProperty("robotSoftwareSuite") CreateRobotApplicationRequestBodyRobotSoftwareSuite robotSoftwareSuite) {
+        this.name = name;
+        this.robotSoftwareSuite = robotSoftwareSuite;
+  }
 }

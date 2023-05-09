@@ -17,6 +17,7 @@ public class BookingPricingmatrix200ApplicationJSONDataAgeBandPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandId")
     public Long bandId;
+
     public BookingPricingmatrix200ApplicationJSONDataAgeBandPrices withBandId(Long bandId) {
         this.bandId = bandId;
         return this;
@@ -30,6 +31,7 @@ public class BookingPricingmatrix200ApplicationJSONDataAgeBandPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumCountRequired")
     public Long maximumCountRequired;
+
     public BookingPricingmatrix200ApplicationJSONDataAgeBandPrices withMaximumCountRequired(Long maximumCountRequired) {
         this.maximumCountRequired = maximumCountRequired;
         return this;
@@ -43,6 +45,7 @@ public class BookingPricingmatrix200ApplicationJSONDataAgeBandPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumCountRequired")
     public Long minimumCountRequired;
+
     public BookingPricingmatrix200ApplicationJSONDataAgeBandPrices withMinimumCountRequired(Long minimumCountRequired) {
         this.minimumCountRequired = minimumCountRequired;
         return this;
@@ -54,6 +57,7 @@ public class BookingPricingmatrix200ApplicationJSONDataAgeBandPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prices")
     public BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices[] prices;
+
     public BookingPricingmatrix200ApplicationJSONDataAgeBandPrices withPrices(BookingPricingmatrix200ApplicationJSONDataAgeBandPricesPrices[] prices) {
         this.prices = prices;
         return this;
@@ -65,9 +69,11 @@ public class BookingPricingmatrix200ApplicationJSONDataAgeBandPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public BookingPricingmatrix200ApplicationJSONDataAgeBandPrices withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public BookingPricingmatrix200ApplicationJSONDataAgeBandPrices(){}
 }

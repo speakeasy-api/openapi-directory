@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleChromeManagementV1TelemetryDeviceInfo - Information about a device associated with telemetry data.
+ * GoogleChromeManagementV1TelemetryDeviceInfo - Information about a device associated with telemetry data. * Granular Permission needed: TELEMETRY_API_DEVICE
  */
 public class GoogleChromeManagementV1TelemetryDeviceInfo {
     /**
@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1TelemetryDeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public GoogleChromeManagementV1TelemetryDeviceInfo withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromeManagementV1TelemetryDeviceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitId")
     public String orgUnitId;
+
     public GoogleChromeManagementV1TelemetryDeviceInfo withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
     }
     
+    public GoogleChromeManagementV1TelemetryDeviceInfo(){}
 }

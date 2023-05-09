@@ -18,6 +18,7 @@ public class GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationPeriod")
     public GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshnessAggregationPeriodEnum aggregationPeriod;
+
     public GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshness withAggregationPeriod(GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshnessAggregationPeriodEnum aggregationPeriod) {
         this.aggregationPeriod = aggregationPeriod;
         return this;
@@ -29,9 +30,11 @@ public class GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestEndTime")
     public GoogleTypeDateTime latestEndTime;
+
     public GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshness withLatestEndTime(GoogleTypeDateTime latestEndTime) {
         this.latestEndTime = latestEndTime;
         return this;
     }
     
+    public GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshness(){}
 }

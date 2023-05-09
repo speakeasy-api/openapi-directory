@@ -18,6 +18,7 @@ public class SearchCaseClassificationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseClassifications")
     public CaseClassification[] caseClassifications;
+
     public SearchCaseClassificationsResponse withCaseClassifications(CaseClassification[] caseClassifications) {
         this.caseClassifications = caseClassifications;
         return this;
@@ -29,9 +30,11 @@ public class SearchCaseClassificationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SearchCaseClassificationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public SearchCaseClassificationsResponse(){}
 }

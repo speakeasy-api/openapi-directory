@@ -12,6 +12,7 @@ public class UserorderdetailsTaxDataTaxInfoCollection {
      */
     @JsonProperty("itemIndex")
     public Long itemIndex;
+
     public UserorderdetailsTaxDataTaxInfoCollection withItemIndex(Long itemIndex) {
         this.itemIndex = itemIndex;
         return this;
@@ -22,6 +23,7 @@ public class UserorderdetailsTaxDataTaxInfoCollection {
      */
     @JsonProperty("priceTags")
     public UserorderdetailsTaxDataTaxInfoCollectionPriceTags[] priceTags;
+
     public UserorderdetailsTaxDataTaxInfoCollection withPriceTags(UserorderdetailsTaxDataTaxInfoCollectionPriceTags[] priceTags) {
         this.priceTags = priceTags;
         return this;
@@ -32,9 +34,15 @@ public class UserorderdetailsTaxDataTaxInfoCollection {
      */
     @JsonProperty("sku")
     public String sku;
+
     public UserorderdetailsTaxDataTaxInfoCollection withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public UserorderdetailsTaxDataTaxInfoCollection(@JsonProperty("itemIndex") Long itemIndex, @JsonProperty("priceTags") UserorderdetailsTaxDataTaxInfoCollectionPriceTags[] priceTags, @JsonProperty("sku") String sku) {
+        this.itemIndex = itemIndex;
+        this.priceTags = priceTags;
+        this.sku = sku;
+  }
 }

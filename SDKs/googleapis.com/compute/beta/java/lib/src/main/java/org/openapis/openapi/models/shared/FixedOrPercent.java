@@ -18,6 +18,7 @@ public class FixedOrPercent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculated")
     public Integer calculated;
+
     public FixedOrPercent withCalculated(Integer calculated) {
         this.calculated = calculated;
         return this;
@@ -29,6 +30,7 @@ public class FixedOrPercent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixed")
     public Integer fixed;
+
     public FixedOrPercent withFixed(Integer fixed) {
         this.fixed = fixed;
         return this;
@@ -40,9 +42,11 @@ public class FixedOrPercent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percent")
     public Integer percent;
+
     public FixedOrPercent withPercent(Integer percent) {
         this.percent = percent;
         return this;
     }
     
+    public FixedOrPercent(){}
 }

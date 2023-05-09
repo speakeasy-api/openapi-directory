@@ -15,6 +15,7 @@ public class Filters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extendedKeyUsage")
     public ExtendedKeyUsageNameEnum[] extendedKeyUsage;
+
     public Filters withExtendedKeyUsage(ExtendedKeyUsageNameEnum[] extendedKeyUsage) {
         this.extendedKeyUsage = extendedKeyUsage;
         return this;
@@ -23,6 +24,7 @@ public class Filters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyTypes")
     public KeyAlgorithmEnum[] keyTypes;
+
     public Filters withKeyTypes(KeyAlgorithmEnum[] keyTypes) {
         this.keyTypes = keyTypes;
         return this;
@@ -31,9 +33,11 @@ public class Filters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyUsage")
     public KeyUsageNameEnum[] keyUsage;
+
     public Filters withKeyUsage(KeyUsageNameEnum[] keyUsage) {
         this.keyUsage = keyUsage;
         return this;
     }
     
+    public Filters(){}
 }

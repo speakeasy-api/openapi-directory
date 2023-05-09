@@ -19,6 +19,7 @@ public class GetReportDefinitionResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public GetReportDefinitionResult withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -26,6 +27,7 @@ public class GetReportDefinitionResult {
     
     @JsonProperty("destinationS3Location")
     public S3Location destinationS3Location;
+
     public GetReportDefinitionResult withDestinationS3Location(S3Location destinationS3Location) {
         this.destinationS3Location = destinationS3Location;
         return this;
@@ -33,6 +35,7 @@ public class GetReportDefinitionResult {
     
     @JsonProperty("format")
     public FormatEnum format;
+
     public GetReportDefinitionResult withFormat(FormatEnum format) {
         this.format = format;
         return this;
@@ -42,6 +45,7 @@ public class GetReportDefinitionResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public GetReportDefinitionResult withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -49,6 +53,7 @@ public class GetReportDefinitionResult {
     
     @JsonProperty("reportDescription")
     public String reportDescription;
+
     public GetReportDefinitionResult withReportDescription(String reportDescription) {
         this.reportDescription = reportDescription;
         return this;
@@ -56,6 +61,7 @@ public class GetReportDefinitionResult {
     
     @JsonProperty("reportFrequency")
     public ReportFrequencyEnum reportFrequency;
+
     public GetReportDefinitionResult withReportFrequency(ReportFrequencyEnum reportFrequency) {
         this.reportFrequency = reportFrequency;
         return this;
@@ -63,9 +69,19 @@ public class GetReportDefinitionResult {
     
     @JsonProperty("reportId")
     public String reportId;
+
     public GetReportDefinitionResult withReportId(String reportId) {
         this.reportId = reportId;
         return this;
     }
     
+    public GetReportDefinitionResult(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("destinationS3Location") S3Location destinationS3Location, @JsonProperty("format") FormatEnum format, @JsonProperty("lastUpdated") OffsetDateTime lastUpdated, @JsonProperty("reportDescription") String reportDescription, @JsonProperty("reportFrequency") ReportFrequencyEnum reportFrequency, @JsonProperty("reportId") String reportId) {
+        this.createdAt = createdAt;
+        this.destinationS3Location = destinationS3Location;
+        this.format = format;
+        this.lastUpdated = lastUpdated;
+        this.reportDescription = reportDescription;
+        this.reportFrequency = reportFrequency;
+        this.reportId = reportId;
+  }
 }

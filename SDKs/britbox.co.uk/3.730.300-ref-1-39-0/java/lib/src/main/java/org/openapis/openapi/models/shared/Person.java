@@ -12,6 +12,7 @@ public class Person {
      */
     @JsonProperty("name")
     public String name;
+
     public Person withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,14 @@ public class Person {
      */
     @JsonProperty("path")
     public String path;
+
     public Person withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public Person(@JsonProperty("name") String name, @JsonProperty("path") String path) {
+        this.name = name;
+        this.path = path;
+  }
 }

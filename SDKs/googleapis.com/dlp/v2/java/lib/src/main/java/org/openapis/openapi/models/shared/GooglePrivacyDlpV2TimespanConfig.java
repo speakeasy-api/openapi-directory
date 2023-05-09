@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2TimespanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAutoPopulationOfTimespanConfig")
     public Boolean enableAutoPopulationOfTimespanConfig;
+
     public GooglePrivacyDlpV2TimespanConfig withEnableAutoPopulationOfTimespanConfig(Boolean enableAutoPopulationOfTimespanConfig) {
         this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2TimespanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GooglePrivacyDlpV2TimespanConfig withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2TimespanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GooglePrivacyDlpV2TimespanConfig withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -51,9 +54,11 @@ public class GooglePrivacyDlpV2TimespanConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestampField")
     public GooglePrivacyDlpV2FieldId timestampField;
+
     public GooglePrivacyDlpV2TimespanConfig withTimestampField(GooglePrivacyDlpV2FieldId timestampField) {
         this.timestampField = timestampField;
         return this;
     }
     
+    public GooglePrivacyDlpV2TimespanConfig(){}
 }

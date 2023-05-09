@@ -20,6 +20,7 @@ public class GeneratedCodeJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GeneratedCodeJobDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +31,7 @@ public class GeneratedCodeJobDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationTime")
     public OffsetDateTime expirationTime;
+
     public GeneratedCodeJobDetails withExpirationTime(OffsetDateTime expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -38,6 +40,7 @@ public class GeneratedCodeJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeneratedCodeJobId")
     public String generatedCodeJobId;
+
     public GeneratedCodeJobDetails withGeneratedCodeJobId(String generatedCodeJobId) {
         this.generatedCodeJobId = generatedCodeJobId;
         return this;
@@ -46,6 +49,7 @@ public class GeneratedCodeJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Url")
     public String s3Url;
+
     public GeneratedCodeJobDetails withS3Url(String s3Url) {
         this.s3Url = s3Url;
         return this;
@@ -54,9 +58,11 @@ public class GeneratedCodeJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public GeneratedCodeJobStateEnum status;
+
     public GeneratedCodeJobDetails withStatus(GeneratedCodeJobStateEnum status) {
         this.status = status;
         return this;
     }
     
+    public GeneratedCodeJobDetails(){}
 }

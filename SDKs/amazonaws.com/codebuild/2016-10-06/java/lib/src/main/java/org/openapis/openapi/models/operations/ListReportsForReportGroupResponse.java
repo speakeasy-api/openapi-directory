@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListReportsForReportGroupResponse {
     
     public String contentType;
+
     public ListReportsForReportGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListReportsForReportGroupResponse {
      */
     
     public Object invalidInputException;
+
     public ListReportsForReportGroupResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class ListReportsForReportGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.ListReportsForReportGroupOutput listReportsForReportGroupOutput;
+
     public ListReportsForReportGroupResponse withListReportsForReportGroupOutput(org.openapis.openapi.models.shared.ListReportsForReportGroupOutput listReportsForReportGroupOutput) {
         this.listReportsForReportGroupOutput = listReportsForReportGroupOutput;
         return this;
@@ -36,6 +40,7 @@ public class ListReportsForReportGroupResponse {
     
     
     public Integer statusCode;
+
     public ListReportsForReportGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListReportsForReportGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListReportsForReportGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListReportsForReportGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListReportsForReportGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListReportsForReportGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

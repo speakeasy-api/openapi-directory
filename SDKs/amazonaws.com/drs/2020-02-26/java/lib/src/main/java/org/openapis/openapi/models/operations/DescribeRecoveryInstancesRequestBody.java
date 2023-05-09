@@ -15,6 +15,7 @@ public class DescribeRecoveryInstancesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public DescribeRecoveryInstancesRequestBodyFilters filters;
+
     public DescribeRecoveryInstancesRequestBody withFilters(DescribeRecoveryInstancesRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class DescribeRecoveryInstancesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeRecoveryInstancesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class DescribeRecoveryInstancesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeRecoveryInstancesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeRecoveryInstancesRequestBody(){}
 }

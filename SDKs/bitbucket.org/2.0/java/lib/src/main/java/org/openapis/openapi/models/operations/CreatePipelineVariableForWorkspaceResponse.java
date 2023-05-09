@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePipelineVariableForWorkspaceResponse {
     
     public String contentType;
+
     public CreatePipelineVariableForWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreatePipelineVariableForWorkspaceResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreatePipelineVariableForWorkspaceResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class CreatePipelineVariableForWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public CreatePipelineVariableForWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class CreatePipelineVariableForWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePipelineVariableForWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class CreatePipelineVariableForWorkspaceResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public CreatePipelineVariableForWorkspaceResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -50,9 +56,14 @@ public class CreatePipelineVariableForWorkspaceResponse {
      */
     
     public java.util.Map<String, Object> pipelineVariable;
+
     public CreatePipelineVariableForWorkspaceResponse withPipelineVariable(java.util.Map<String, Object> pipelineVariable) {
         this.pipelineVariable = pipelineVariable;
         return this;
     }
     
+    public CreatePipelineVariableForWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class DeleteResolverQueryLogConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverQueryLogConfig")
     public ResolverQueryLogConfig resolverQueryLogConfig;
+
     public DeleteResolverQueryLogConfigResponse withResolverQueryLogConfig(ResolverQueryLogConfig resolverQueryLogConfig) {
         this.resolverQueryLogConfig = resolverQueryLogConfig;
         return this;
     }
     
+    public DeleteResolverQueryLogConfigResponse(){}
 }

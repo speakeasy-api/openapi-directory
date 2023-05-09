@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetmeasureRequest {
@@ -14,6 +15,7 @@ public class GetmeasureRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_begin")
     public Integer dateBegin;
+
     public GetmeasureRequest withDateBegin(Integer dateBegin) {
         this.dateBegin = dateBegin;
         return this;
@@ -26,6 +28,7 @@ public class GetmeasureRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_end")
     public String dateEnd;
+
     public GetmeasureRequest withDateEnd(String dateEnd) {
         this.dateEnd = dateEnd;
         return this;
@@ -36,6 +39,7 @@ public class GetmeasureRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
     public String deviceId;
+
     public GetmeasureRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -46,6 +50,7 @@ public class GetmeasureRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetmeasureRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -56,6 +61,7 @@ public class GetmeasureRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=module_id")
     public String moduleId;
+
     public GetmeasureRequest withModuleId(String moduleId) {
         this.moduleId = moduleId;
         return this;
@@ -91,6 +97,7 @@ public class GetmeasureRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=optimize")
     public Boolean optimize;
+
     public GetmeasureRequest withOptimize(Boolean optimize) {
         this.optimize = optimize;
         return this;
@@ -104,6 +111,7 @@ public class GetmeasureRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=real_time")
     public Boolean realTime;
+
     public GetmeasureRequest withRealTime(Boolean realTime) {
         this.realTime = realTime;
         return this;
@@ -123,6 +131,7 @@ public class GetmeasureRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scale")
     public GetmeasureScaleEnum scale;
+
     public GetmeasureRequest withScale(GetmeasureScaleEnum scale) {
         this.scale = scale;
         return this;
@@ -145,9 +154,15 @@ public class GetmeasureRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=type")
     public GetmeasureTypeEnum[] type;
+
     public GetmeasureRequest withType(GetmeasureTypeEnum[] type) {
         this.type = type;
         return this;
     }
     
+    public GetmeasureRequest(@JsonProperty("device_id") String deviceId, @JsonProperty("scale") GetmeasureScaleEnum scale, @JsonProperty("type") GetmeasureTypeEnum[] type) {
+        this.deviceId = deviceId;
+        this.scale = scale;
+        this.type = type;
+  }
 }

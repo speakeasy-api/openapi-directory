@@ -59,11 +59,9 @@ public class PublicAdvertisedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesDeleteResponse res = new org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesDeleteResponse res = new org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class PublicAdvertisedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesGetResponse res = new org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesGetResponse res = new org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesGetResponse(contentType, httpRes.statusCode()) {{
             publicAdvertisedPrefix = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class PublicAdvertisedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesInsertResponse res = new org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesInsertResponse res = new org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class PublicAdvertisedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesListResponse res = new org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesListResponse() {{
+        org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesListResponse res = new org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesListResponse(contentType, httpRes.statusCode()) {{
             publicAdvertisedPrefixList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class PublicAdvertisedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesPatchResponse res = new org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesPatchResponse res = new org.openapis.openapi.models.operations.ComputePublicAdvertisedPrefixesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

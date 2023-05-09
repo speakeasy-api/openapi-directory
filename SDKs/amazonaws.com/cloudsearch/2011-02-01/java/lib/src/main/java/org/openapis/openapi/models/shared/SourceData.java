@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SourceData - The source attribute name and an optional default value to use if a document doesn't have an attribute of that name.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SourceData {
     
     public String defaultValue;
+
     public SourceData withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -19,9 +20,13 @@ public class SourceData {
     
     
     public String sourceName;
+
     public SourceData withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
     }
     
+    public SourceData(@JsonProperty("SourceName") String sourceName) {
+        this.sourceName = sourceName;
+  }
 }

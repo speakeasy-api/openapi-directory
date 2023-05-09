@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AssumedRoleUser - The identifiers for the temporary security credentials that the operation returns.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssumedRoleUser {
     
     public String arn;
+
     public AssumedRoleUser withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,14 @@ public class AssumedRoleUser {
     
     
     public String assumedRoleId;
+
     public AssumedRoleUser withAssumedRoleId(String assumedRoleId) {
         this.assumedRoleId = assumedRoleId;
         return this;
     }
     
+    public AssumedRoleUser(@JsonProperty("Arn") String arn, @JsonProperty("AssumedRoleId") String assumedRoleId) {
+        this.arn = arn;
+        this.assumedRoleId = assumedRoleId;
+  }
 }

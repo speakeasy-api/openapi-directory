@@ -12,6 +12,7 @@ public class TetmsRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public TetmsRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class TetmsRequestBodyCertificateParameters {
      */
     @JsonProperty("rollno")
     public String rollno;
+
     public TetmsRequestBodyCertificateParameters withRollno(String rollno) {
         this.rollno = rollno;
         return this;
@@ -32,9 +34,15 @@ public class TetmsRequestBodyCertificateParameters {
      */
     @JsonProperty("year_month")
     public String yearMonth;
+
     public TetmsRequestBodyCertificateParameters withYearMonth(String yearMonth) {
         this.yearMonth = yearMonth;
         return this;
     }
     
+    public TetmsRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("rollno") String rollno, @JsonProperty("year_month") String yearMonth) {
+        this.fullName = fullName;
+        this.rollno = rollno;
+        this.yearMonth = yearMonth;
+  }
 }

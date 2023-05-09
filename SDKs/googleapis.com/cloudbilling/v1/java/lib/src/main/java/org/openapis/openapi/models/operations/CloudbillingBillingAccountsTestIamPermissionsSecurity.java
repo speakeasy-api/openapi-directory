@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudbillingBillingAccountsTestIamPermissionsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudbillingBillingAccountsTestIamPermissionsSecurityOption1 option1;
+
     public CloudbillingBillingAccountsTestIamPermissionsSecurity withOption1(CloudbillingBillingAccountsTestIamPermissionsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class CloudbillingBillingAccountsTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudbillingBillingAccountsTestIamPermissionsSecurityOption2 option2;
+
     public CloudbillingBillingAccountsTestIamPermissionsSecurity withOption2(CloudbillingBillingAccountsTestIamPermissionsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class CloudbillingBillingAccountsTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudbillingBillingAccountsTestIamPermissionsSecurityOption3 option3;
+
     public CloudbillingBillingAccountsTestIamPermissionsSecurity withOption3(CloudbillingBillingAccountsTestIamPermissionsSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public CloudbillingBillingAccountsTestIamPermissionsSecurity(){}
 }

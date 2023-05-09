@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeImageScanFindingsResponse {
     
     public String contentType;
+
     public DescribeImageScanFindingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeImageScanFindingsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeImageScanFindingsResponse describeImageScanFindingsResponse;
+
     public DescribeImageScanFindingsResponse withDescribeImageScanFindingsResponse(org.openapis.openapi.models.shared.DescribeImageScanFindingsResponse describeImageScanFindingsResponse) {
         this.describeImageScanFindingsResponse = describeImageScanFindingsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeImageScanFindingsResponse {
      */
     
     public Object imageNotFoundException;
+
     public DescribeImageScanFindingsResponse withImageNotFoundException(Object imageNotFoundException) {
         this.imageNotFoundException = imageNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeImageScanFindingsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeImageScanFindingsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeImageScanFindingsResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public DescribeImageScanFindingsResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeImageScanFindingsResponse {
      */
     
     public Object scanNotFoundException;
+
     public DescribeImageScanFindingsResponse withScanNotFoundException(Object scanNotFoundException) {
         this.scanNotFoundException = scanNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeImageScanFindingsResponse {
      */
     
     public Object serverException;
+
     public DescribeImageScanFindingsResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeImageScanFindingsResponse {
     
     
     public Integer statusCode;
+
     public DescribeImageScanFindingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeImageScanFindingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeImageScanFindingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DescribeImageScanFindingsResponse {
      */
     
     public Object validationException;
+
     public DescribeImageScanFindingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeImageScanFindingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ListPermissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListPermissionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPermissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public ResourceSharePermissionSummary[] permissions;
+
     public ListPermissionsResponse withPermissions(ResourceSharePermissionSummary[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public ListPermissionsResponse(){}
 }

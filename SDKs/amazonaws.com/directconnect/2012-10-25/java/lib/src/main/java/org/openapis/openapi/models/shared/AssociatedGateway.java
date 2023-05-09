@@ -15,6 +15,7 @@ public class AssociatedGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssociatedGateway withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class AssociatedGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerAccount")
     public String ownerAccount;
+
     public AssociatedGateway withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -31,6 +33,7 @@ public class AssociatedGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public AssociatedGateway withRegion(String region) {
         this.region = region;
         return this;
@@ -39,9 +42,11 @@ public class AssociatedGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GatewayTypeEnum type;
+
     public AssociatedGateway withType(GatewayTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AssociatedGateway(){}
 }

@@ -12,6 +12,7 @@ public class SortByClause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public SortByClause withField(String field) {
         this.field = field;
         return this;
@@ -20,9 +21,11 @@ public class SortByClause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public SortByClauseOrderEnum order;
+
     public SortByClause withOrder(SortByClauseOrderEnum order) {
         this.order = order;
         return this;
     }
     
+    public SortByClause(){}
 }

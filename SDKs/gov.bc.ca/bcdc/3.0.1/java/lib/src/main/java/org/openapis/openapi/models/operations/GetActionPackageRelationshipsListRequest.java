@@ -12,6 +12,7 @@ public class GetActionPackageRelationshipsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetActionPackageRelationshipsListRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class GetActionPackageRelationshipsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id2")
     public String id2;
+
     public GetActionPackageRelationshipsListRequest withId2(String id2) {
         this.id2 = id2;
         return this;
@@ -32,9 +34,11 @@ public class GetActionPackageRelationshipsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rel")
     public String rel;
+
     public GetActionPackageRelationshipsListRequest withRel(String rel) {
         this.rel = rel;
         return this;
     }
     
+    public GetActionPackageRelationshipsListRequest(){}
 }

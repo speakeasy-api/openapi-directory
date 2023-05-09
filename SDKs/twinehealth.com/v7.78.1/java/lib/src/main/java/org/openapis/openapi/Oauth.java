@@ -81,12 +81,10 @@ public class Oauth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTokenResponse res = new org.openapis.openapi.models.operations.CreateTokenResponse() {{
+        org.openapis.openapi.models.operations.CreateTokenResponse res = new org.openapis.openapi.models.operations.CreateTokenResponse(contentType, httpRes.statusCode()) {{
             createTokenResponse = null;
             createOrUpdateErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -130,12 +128,10 @@ public class Oauth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchTokenGroupsResponse res = new org.openapis.openapi.models.operations.FetchTokenGroupsResponse() {{
+        org.openapis.openapi.models.operations.FetchTokenGroupsResponse res = new org.openapis.openapi.models.operations.FetchTokenGroupsResponse(contentType, httpRes.statusCode()) {{
             fetchGroupsResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,12 +173,10 @@ public class Oauth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchTokenOrganizationResponse res = new org.openapis.openapi.models.operations.FetchTokenOrganizationResponse() {{
+        org.openapis.openapi.models.operations.FetchTokenOrganizationResponse res = new org.openapis.openapi.models.operations.FetchTokenOrganizationResponse(contentType, httpRes.statusCode()) {{
             fetchOrganizationResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

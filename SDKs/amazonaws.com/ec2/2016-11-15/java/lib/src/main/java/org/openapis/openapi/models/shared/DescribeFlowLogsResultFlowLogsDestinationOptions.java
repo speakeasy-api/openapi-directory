@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFlowLogsResultFlowLogsDestinationOptions {
     
     public DescribeFlowLogsResultFlowLogsDestinationOptionsFileFormatEnum fileFormat;
+
     public DescribeFlowLogsResultFlowLogsDestinationOptions withFileFormat(DescribeFlowLogsResultFlowLogsDestinationOptionsFileFormatEnum fileFormat) {
         this.fileFormat = fileFormat;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFlowLogsResultFlowLogsDestinationOptions {
     
     
     public Boolean hiveCompatiblePartitions;
+
     public DescribeFlowLogsResultFlowLogsDestinationOptions withHiveCompatiblePartitions(Boolean hiveCompatiblePartitions) {
         this.hiveCompatiblePartitions = hiveCompatiblePartitions;
         return this;
@@ -26,9 +28,11 @@ public class DescribeFlowLogsResultFlowLogsDestinationOptions {
     
     
     public Boolean perHourPartition;
+
     public DescribeFlowLogsResultFlowLogsDestinationOptions withPerHourPartition(Boolean perHourPartition) {
         this.perHourPartition = perHourPartition;
         return this;
     }
     
+    public DescribeFlowLogsResultFlowLogsDestinationOptions(){}
 }

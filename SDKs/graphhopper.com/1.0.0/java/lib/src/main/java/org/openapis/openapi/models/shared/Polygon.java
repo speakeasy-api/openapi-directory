@@ -12,6 +12,7 @@ public class Polygon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coordinates")
     public Double[][][] coordinates;
+
     public Polygon withCoordinates(Double[][][] coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -20,9 +21,11 @@ public class Polygon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Polygon withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Polygon(){}
 }

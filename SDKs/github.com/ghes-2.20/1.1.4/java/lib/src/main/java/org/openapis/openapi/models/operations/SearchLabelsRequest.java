@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchLabelsRequest {
@@ -12,6 +13,7 @@ public class SearchLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.OrderEnum order;
+
     public SearchLabelsRequest withOrder(org.openapis.openapi.models.shared.OrderEnum order) {
         this.order = order;
         return this;
@@ -22,6 +24,7 @@ public class SearchLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SearchLabelsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class SearchLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SearchLabelsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,6 +46,7 @@ public class SearchLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public SearchLabelsRequest withQ(String q) {
         this.q = q;
         return this;
@@ -52,6 +57,7 @@ public class SearchLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=repository_id")
     public Long repositoryId;
+
     public SearchLabelsRequest withRepositoryId(Long repositoryId) {
         this.repositoryId = repositoryId;
         return this;
@@ -62,9 +68,14 @@ public class SearchLabelsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public SearchLabelsSortEnum sort;
+
     public SearchLabelsRequest withSort(SearchLabelsSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public SearchLabelsRequest(@JsonProperty("q") String q, @JsonProperty("repository_id") Long repositoryId) {
+        this.q = q;
+        this.repositoryId = repositoryId;
+  }
 }

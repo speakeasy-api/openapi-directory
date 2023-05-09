@@ -15,6 +15,7 @@ public class CognitoUserPoolConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appIdClientRegex")
     public String appIdClientRegex;
+
     public CognitoUserPoolConfig withAppIdClientRegex(String appIdClientRegex) {
         this.appIdClientRegex = appIdClientRegex;
         return this;
@@ -22,6 +23,7 @@ public class CognitoUserPoolConfig {
     
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public CognitoUserPoolConfig withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -29,9 +31,14 @@ public class CognitoUserPoolConfig {
     
     @JsonProperty("userPoolId")
     public String userPoolId;
+
     public CognitoUserPoolConfig withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public CognitoUserPoolConfig(@JsonProperty("awsRegion") String awsRegion, @JsonProperty("userPoolId") String userPoolId) {
+        this.awsRegion = awsRegion;
+        this.userPoolId = userPoolId;
+  }
 }

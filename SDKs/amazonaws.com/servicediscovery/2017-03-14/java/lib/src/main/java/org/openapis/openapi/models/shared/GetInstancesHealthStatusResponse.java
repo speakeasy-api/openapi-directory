@@ -15,6 +15,7 @@ public class GetInstancesHealthStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetInstancesHealthStatusResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetInstancesHealthStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public java.util.Map<String, HealthStatusEnum> status;
+
     public GetInstancesHealthStatusResponse withStatus(java.util.Map<String, HealthStatusEnum> status) {
         this.status = status;
         return this;
     }
     
+    public GetInstancesHealthStatusResponse(){}
 }

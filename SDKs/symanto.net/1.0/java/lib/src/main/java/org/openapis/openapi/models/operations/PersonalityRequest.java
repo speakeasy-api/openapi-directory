@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PersonalityRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Post[] requestBody;
+
     public PersonalityRequest withRequestBody(org.openapis.openapi.models.shared.Post[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +17,11 @@ public class PersonalityRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
     public Boolean all;
+
     public PersonalityRequest withAll(Boolean all) {
         this.all = all;
         return this;
     }
     
+    public PersonalityRequest(){}
 }

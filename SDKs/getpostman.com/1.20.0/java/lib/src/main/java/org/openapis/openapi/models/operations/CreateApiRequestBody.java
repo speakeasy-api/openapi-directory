@@ -12,9 +12,11 @@ public class CreateApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api")
     public CreateApiRequestBodyApi api;
+
     public CreateApiRequestBody withApi(CreateApiRequestBodyApi api) {
         this.api = api;
         return this;
     }
     
+    public CreateApiRequestBody(){}
 }

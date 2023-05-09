@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateTrafficMirrorSessionRequest {
     
     public String clientToken;
+
     public CreateTrafficMirrorSessionRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateTrafficMirrorSessionRequest {
     
     
     public String description;
+
     public CreateTrafficMirrorSessionRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateTrafficMirrorSessionRequest {
     
     
     public Boolean dryRun;
+
     public CreateTrafficMirrorSessionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateTrafficMirrorSessionRequest {
     
     
     public String networkInterfaceId;
+
     public CreateTrafficMirrorSessionRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -37,6 +41,7 @@ public class CreateTrafficMirrorSessionRequest {
     
     
     public Long packetLength;
+
     public CreateTrafficMirrorSessionRequest withPacketLength(Long packetLength) {
         this.packetLength = packetLength;
         return this;
@@ -44,6 +49,7 @@ public class CreateTrafficMirrorSessionRequest {
     
     
     public Long sessionNumber;
+
     public CreateTrafficMirrorSessionRequest withSessionNumber(Long sessionNumber) {
         this.sessionNumber = sessionNumber;
         return this;
@@ -51,6 +57,7 @@ public class CreateTrafficMirrorSessionRequest {
     
     
     public CreateTrafficMirrorSessionRequestTagSpecifications[] tagSpecifications;
+
     public CreateTrafficMirrorSessionRequest withTagSpecifications(CreateTrafficMirrorSessionRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -58,6 +65,7 @@ public class CreateTrafficMirrorSessionRequest {
     
     
     public String trafficMirrorFilterId;
+
     public CreateTrafficMirrorSessionRequest withTrafficMirrorFilterId(String trafficMirrorFilterId) {
         this.trafficMirrorFilterId = trafficMirrorFilterId;
         return this;
@@ -65,6 +73,7 @@ public class CreateTrafficMirrorSessionRequest {
     
     
     public String trafficMirrorTargetId;
+
     public CreateTrafficMirrorSessionRequest withTrafficMirrorTargetId(String trafficMirrorTargetId) {
         this.trafficMirrorTargetId = trafficMirrorTargetId;
         return this;
@@ -72,9 +81,16 @@ public class CreateTrafficMirrorSessionRequest {
     
     
     public Long virtualNetworkId;
+
     public CreateTrafficMirrorSessionRequest withVirtualNetworkId(Long virtualNetworkId) {
         this.virtualNetworkId = virtualNetworkId;
         return this;
     }
     
+    public CreateTrafficMirrorSessionRequest(@JsonProperty("NetworkInterfaceId") String networkInterfaceId, @JsonProperty("SessionNumber") Long sessionNumber, @JsonProperty("TrafficMirrorFilterId") String trafficMirrorFilterId, @JsonProperty("TrafficMirrorTargetId") String trafficMirrorTargetId) {
+        this.networkInterfaceId = networkInterfaceId;
+        this.sessionNumber = sessionNumber;
+        this.trafficMirrorFilterId = trafficMirrorFilterId;
+        this.trafficMirrorTargetId = trafficMirrorTargetId;
+  }
 }

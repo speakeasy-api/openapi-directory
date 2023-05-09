@@ -15,6 +15,7 @@ public class ListSessionsOfGroupUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public ListSessionsOfGroupUsingGET200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class ListSessionsOfGroupUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ListSessionsOfGroupUsingGET200ApplicationJSONData data;
+
     public ListSessionsOfGroupUsingGET200ApplicationJSON withData(ListSessionsOfGroupUsingGET200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class ListSessionsOfGroupUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ListSessionsOfGroupUsingGET200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ListSessionsOfGroupUsingGET200ApplicationJSON(){}
 }

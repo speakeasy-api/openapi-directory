@@ -12,9 +12,11 @@ public class PadUsersCountUsingGET200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("padUsersCount")
     public Long padUsersCount;
+
     public PadUsersCountUsingGET200ApplicationJSONData withPadUsersCount(Long padUsersCount) {
         this.padUsersCount = padUsersCount;
         return this;
     }
     
+    public PadUsersCountUsingGET200ApplicationJSONData(){}
 }

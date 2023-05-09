@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteThingResponse {
     
     public String contentType;
+
     public DeleteThingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteThingResponse {
      */
     
     public java.util.Map<String, Object> deleteThingResponse;
+
     public DeleteThingResponse withDeleteThingResponse(java.util.Map<String, Object> deleteThingResponse) {
         this.deleteThingResponse = deleteThingResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteThingResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteThingResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteThingResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteThingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteThingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteThingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteThingResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteThingResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteThingResponse {
     
     
     public Integer statusCode;
+
     public DeleteThingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteThingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteThingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteThingResponse {
      */
     
     public Object throttlingException;
+
     public DeleteThingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteThingResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteThingResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteThingResponse {
      */
     
     public Object versionConflictException;
+
     public DeleteThingResponse withVersionConflictException(Object versionConflictException) {
         this.versionConflictException = versionConflictException;
         return this;
     }
     
+    public DeleteThingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

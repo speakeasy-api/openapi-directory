@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartKeyPhrasesDetectionJobResponse {
     
     public String contentType;
+
     public StartKeyPhrasesDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartKeyPhrasesDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public StartKeyPhrasesDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartKeyPhrasesDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StartKeyPhrasesDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,8 +43,20 @@ public class StartKeyPhrasesDetectionJobResponse {
      */
     
     public Object kmsKeyValidationException;
+
     public StartKeyPhrasesDetectionJobResponse withKmsKeyValidationException(Object kmsKeyValidationException) {
         this.kmsKeyValidationException = kmsKeyValidationException;
+        return this;
+    }
+    
+    /**
+     * ResourceInUseException
+     */
+    
+    public Object resourceInUseException;
+
+    public StartKeyPhrasesDetectionJobResponse withResourceInUseException(Object resourceInUseException) {
+        this.resourceInUseException = resourceInUseException;
         return this;
     }
     
@@ -49,6 +65,7 @@ public class StartKeyPhrasesDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartKeyPhrasesDetectionJobResponse startKeyPhrasesDetectionJobResponse;
+
     public StartKeyPhrasesDetectionJobResponse withStartKeyPhrasesDetectionJobResponse(org.openapis.openapi.models.shared.StartKeyPhrasesDetectionJobResponse startKeyPhrasesDetectionJobResponse) {
         this.startKeyPhrasesDetectionJobResponse = startKeyPhrasesDetectionJobResponse;
         return this;
@@ -56,6 +73,7 @@ public class StartKeyPhrasesDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public StartKeyPhrasesDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +81,7 @@ public class StartKeyPhrasesDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartKeyPhrasesDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +92,7 @@ public class StartKeyPhrasesDetectionJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StartKeyPhrasesDetectionJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +103,14 @@ public class StartKeyPhrasesDetectionJobResponse {
      */
     
     public Object tooManyTagsException;
+
     public StartKeyPhrasesDetectionJobResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public StartKeyPhrasesDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

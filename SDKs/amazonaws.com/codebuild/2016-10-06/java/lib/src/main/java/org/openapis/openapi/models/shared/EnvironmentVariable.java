@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnvironmentVariable {
     @JsonProperty("name")
     public String name;
+
     public EnvironmentVariable withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class EnvironmentVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public EnvironmentVariableTypeEnum type;
+
     public EnvironmentVariable withType(EnvironmentVariableTypeEnum type) {
         this.type = type;
         return this;
@@ -29,9 +31,14 @@ public class EnvironmentVariable {
     
     @JsonProperty("value")
     public String value;
+
     public EnvironmentVariable withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public EnvironmentVariable(@JsonProperty("name") String name, @JsonProperty("value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

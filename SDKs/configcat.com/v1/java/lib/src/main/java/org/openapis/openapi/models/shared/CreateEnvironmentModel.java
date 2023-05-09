@@ -12,6 +12,7 @@ public class CreateEnvironmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public CreateEnvironmentModel withColor(String color) {
         this.color = color;
         return this;
@@ -20,6 +21,7 @@ public class CreateEnvironmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateEnvironmentModel withDescription(String description) {
         this.description = description;
         return this;
@@ -27,9 +29,13 @@ public class CreateEnvironmentModel {
     
     @JsonProperty("name")
     public String name;
+
     public CreateEnvironmentModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateEnvironmentModel(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

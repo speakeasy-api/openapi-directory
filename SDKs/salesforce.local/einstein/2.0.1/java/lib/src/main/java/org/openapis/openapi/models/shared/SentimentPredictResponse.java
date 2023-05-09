@@ -15,6 +15,7 @@ public class SentimentPredictResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public SentimentPredictResponse withObject(String object) {
         this.object = object;
         return this;
@@ -23,6 +24,7 @@ public class SentimentPredictResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilities")
     public LabelResult[] probabilities;
+
     public SentimentPredictResponse withProbabilities(LabelResult[] probabilities) {
         this.probabilities = probabilities;
         return this;
@@ -34,9 +36,11 @@ public class SentimentPredictResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleId")
     public String sampleId;
+
     public SentimentPredictResponse withSampleId(String sampleId) {
         this.sampleId = sampleId;
         return this;
     }
     
+    public SentimentPredictResponse(){}
 }

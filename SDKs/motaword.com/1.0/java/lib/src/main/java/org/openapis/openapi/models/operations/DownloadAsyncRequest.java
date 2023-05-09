@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadAsyncRequest {
@@ -12,9 +13,13 @@ public class DownloadAsyncRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async_request_key")
     public String asyncRequestKey;
+
     public DownloadAsyncRequest withAsyncRequestKey(String asyncRequestKey) {
         this.asyncRequestKey = asyncRequestKey;
         return this;
     }
     
+    public DownloadAsyncRequest(@JsonProperty("async_request_key") String asyncRequestKey) {
+        this.asyncRequestKey = asyncRequestKey;
+  }
 }

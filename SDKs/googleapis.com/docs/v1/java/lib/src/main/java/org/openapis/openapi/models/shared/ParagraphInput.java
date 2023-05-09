@@ -18,6 +18,7 @@ public class ParagraphInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bullet")
     public Bullet bullet;
+
     public ParagraphInput withBullet(Bullet bullet) {
         this.bullet = bullet;
         return this;
@@ -29,6 +30,7 @@ public class ParagraphInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elements")
     public ParagraphElementInput[] elements;
+
     public ParagraphInput withElements(ParagraphElementInput[] elements) {
         this.elements = elements;
         return this;
@@ -40,6 +42,7 @@ public class ParagraphInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paragraphStyle")
     public ParagraphStyle paragraphStyle;
+
     public ParagraphInput withParagraphStyle(ParagraphStyle paragraphStyle) {
         this.paragraphStyle = paragraphStyle;
         return this;
@@ -51,6 +54,7 @@ public class ParagraphInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positionedObjectIds")
     public String[] positionedObjectIds;
+
     public ParagraphInput withPositionedObjectIds(String[] positionedObjectIds) {
         this.positionedObjectIds = positionedObjectIds;
         return this;
@@ -62,6 +66,7 @@ public class ParagraphInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedBulletChanges")
     public java.util.Map<String, SuggestedBullet> suggestedBulletChanges;
+
     public ParagraphInput withSuggestedBulletChanges(java.util.Map<String, SuggestedBullet> suggestedBulletChanges) {
         this.suggestedBulletChanges = suggestedBulletChanges;
         return this;
@@ -73,6 +78,7 @@ public class ParagraphInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedParagraphStyleChanges")
     public java.util.Map<String, SuggestedParagraphStyle> suggestedParagraphStyleChanges;
+
     public ParagraphInput withSuggestedParagraphStyleChanges(java.util.Map<String, SuggestedParagraphStyle> suggestedParagraphStyleChanges) {
         this.suggestedParagraphStyleChanges = suggestedParagraphStyleChanges;
         return this;
@@ -84,9 +90,11 @@ public class ParagraphInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedPositionedObjectIds")
     public java.util.Map<String, ObjectReferences> suggestedPositionedObjectIds;
+
     public ParagraphInput withSuggestedPositionedObjectIds(java.util.Map<String, ObjectReferences> suggestedPositionedObjectIds) {
         this.suggestedPositionedObjectIds = suggestedPositionedObjectIds;
         return this;
     }
     
+    public ParagraphInput(){}
 }

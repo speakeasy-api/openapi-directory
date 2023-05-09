@@ -12,6 +12,7 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property_and_casualty_agency_claim_number")
     public String propertyAndCasualtyAgencyClaimNumber;
+
     public PatientWorkerCompInsurance withPropertyAndCasualtyAgencyClaimNumber(String propertyAndCasualtyAgencyClaimNumber) {
         this.propertyAndCasualtyAgencyClaimNumber = propertyAndCasualtyAgencyClaimNumber;
         return this;
@@ -20,6 +21,7 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_carrier_code")
     public String workersCompCarrierCode;
+
     public PatientWorkerCompInsurance withWorkersCompCarrierCode(String workersCompCarrierCode) {
         this.workersCompCarrierCode = workersCompCarrierCode;
         return this;
@@ -28,6 +30,7 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_case_number")
     public String workersCompCaseNumber;
+
     public PatientWorkerCompInsurance withWorkersCompCaseNumber(String workersCompCaseNumber) {
         this.workersCompCaseNumber = workersCompCaseNumber;
         return this;
@@ -36,6 +39,7 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_company")
     public String workersCompCompany;
+
     public PatientWorkerCompInsurance withWorkersCompCompany(String workersCompCompany) {
         this.workersCompCompany = workersCompCompany;
         return this;
@@ -44,6 +48,7 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_date_of_accident")
     public String workersCompDateOfAccident;
+
     public PatientWorkerCompInsurance withWorkersCompDateOfAccident(String workersCompDateOfAccident) {
         this.workersCompDateOfAccident = workersCompDateOfAccident;
         return this;
@@ -52,6 +57,7 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_group_name")
     public String workersCompGroupName;
+
     public PatientWorkerCompInsurance withWorkersCompGroupName(String workersCompGroupName) {
         this.workersCompGroupName = workersCompGroupName;
         return this;
@@ -60,6 +66,7 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_group_number")
     public String workersCompGroupNumber;
+
     public PatientWorkerCompInsurance withWorkersCompGroupNumber(String workersCompGroupNumber) {
         this.workersCompGroupNumber = workersCompGroupNumber;
         return this;
@@ -68,6 +75,7 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_notes")
     public String workersCompNotes;
+
     public PatientWorkerCompInsurance withWorkersCompNotes(String workersCompNotes) {
         this.workersCompNotes = workersCompNotes;
         return this;
@@ -76,6 +84,7 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_payer_address")
     public String workersCompPayerAddress;
+
     public PatientWorkerCompInsurance withWorkersCompPayerAddress(String workersCompPayerAddress) {
         this.workersCompPayerAddress = workersCompPayerAddress;
         return this;
@@ -84,6 +93,7 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_payer_city")
     public String workersCompPayerCity;
+
     public PatientWorkerCompInsurance withWorkersCompPayerCity(String workersCompPayerCity) {
         this.workersCompPayerCity = workersCompPayerCity;
         return this;
@@ -92,6 +102,7 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_payer_id")
     public String workersCompPayerId;
+
     public PatientWorkerCompInsurance withWorkersCompPayerId(String workersCompPayerId) {
         this.workersCompPayerId = workersCompPayerId;
         return this;
@@ -100,6 +111,7 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_payer_state")
     public PatientWorkerCompInsuranceWorkersCompPayerStateEnum workersCompPayerState;
+
     public PatientWorkerCompInsurance withWorkersCompPayerState(PatientWorkerCompInsuranceWorkersCompPayerStateEnum workersCompPayerState) {
         this.workersCompPayerState = workersCompPayerState;
         return this;
@@ -108,6 +120,7 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_payer_zip")
     public String workersCompPayerZip;
+
     public PatientWorkerCompInsurance withWorkersCompPayerZip(String workersCompPayerZip) {
         this.workersCompPayerZip = workersCompPayerZip;
         return this;
@@ -116,6 +129,7 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_state_of_occurrence")
     public PatientWorkerCompInsuranceWorkersCompStateOfOccurrenceEnum workersCompStateOfOccurrence;
+
     public PatientWorkerCompInsurance withWorkersCompStateOfOccurrence(PatientWorkerCompInsuranceWorkersCompStateOfOccurrenceEnum workersCompStateOfOccurrence) {
         this.workersCompStateOfOccurrence = workersCompStateOfOccurrence;
         return this;
@@ -124,6 +138,7 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_wcb")
     public String workersCompWcb;
+
     public PatientWorkerCompInsurance withWorkersCompWcb(String workersCompWcb) {
         this.workersCompWcb = workersCompWcb;
         return this;
@@ -132,9 +147,11 @@ public class PatientWorkerCompInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workers_comp_wcb_rating_code")
     public String workersCompWcbRatingCode;
+
     public PatientWorkerCompInsurance withWorkersCompWcbRatingCode(String workersCompWcbRatingCode) {
         this.workersCompWcbRatingCode = workersCompWcbRatingCode;
         return this;
     }
     
+    public PatientWorkerCompInsurance(){}
 }

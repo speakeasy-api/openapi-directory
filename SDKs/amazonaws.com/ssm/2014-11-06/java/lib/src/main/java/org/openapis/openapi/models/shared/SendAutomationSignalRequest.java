@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendAutomationSignalRequest {
     @JsonProperty("AutomationExecutionId")
     public String automationExecutionId;
+
     public SendAutomationSignalRequest withAutomationExecutionId(String automationExecutionId) {
         this.automationExecutionId = automationExecutionId;
         return this;
@@ -19,6 +20,7 @@ public class SendAutomationSignalRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Payload")
     public java.util.Map<String, String[]> payload;
+
     public SendAutomationSignalRequest withPayload(java.util.Map<String, String[]> payload) {
         this.payload = payload;
         return this;
@@ -26,9 +28,14 @@ public class SendAutomationSignalRequest {
     
     @JsonProperty("SignalType")
     public SignalTypeEnum signalType;
+
     public SendAutomationSignalRequest withSignalType(SignalTypeEnum signalType) {
         this.signalType = signalType;
         return this;
     }
     
+    public SendAutomationSignalRequest(@JsonProperty("AutomationExecutionId") String automationExecutionId, @JsonProperty("SignalType") SignalTypeEnum signalType) {
+        this.automationExecutionId = automationExecutionId;
+        this.signalType = signalType;
+  }
 }

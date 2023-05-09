@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AspByPolyUsV1AirspacePolygonQueryPostResponse {
@@ -12,6 +13,7 @@ public class AspByPolyUsV1AirspacePolygonQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.AirspacePolyResponse airspacePolyResponse;
+
     public AspByPolyUsV1AirspacePolygonQueryPostResponse withAirspacePolyResponse(org.openapis.openapi.models.shared.AirspacePolyResponse airspacePolyResponse) {
         this.airspacePolyResponse = airspacePolyResponse;
         return this;
@@ -19,6 +21,7 @@ public class AspByPolyUsV1AirspacePolygonQueryPostResponse {
     
     
     public String contentType;
+
     public AspByPolyUsV1AirspacePolygonQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AspByPolyUsV1AirspacePolygonQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public AspByPolyUsV1AirspacePolygonQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -36,6 +40,7 @@ public class AspByPolyUsV1AirspacePolygonQueryPostResponse {
     
     
     public Integer statusCode;
+
     public AspByPolyUsV1AirspacePolygonQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AspByPolyUsV1AirspacePolygonQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AspByPolyUsV1AirspacePolygonQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AspByPolyUsV1AirspacePolygonQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

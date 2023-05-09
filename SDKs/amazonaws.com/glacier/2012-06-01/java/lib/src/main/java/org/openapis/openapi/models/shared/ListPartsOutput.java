@@ -15,6 +15,7 @@ public class ListPartsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArchiveDescription")
     public String archiveDescription;
+
     public ListPartsOutput withArchiveDescription(String archiveDescription) {
         this.archiveDescription = archiveDescription;
         return this;
@@ -23,6 +24,7 @@ public class ListPartsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public ListPartsOutput withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -31,6 +33,7 @@ public class ListPartsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListPartsOutput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -39,6 +42,7 @@ public class ListPartsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultipartUploadId")
     public String multipartUploadId;
+
     public ListPartsOutput withMultipartUploadId(String multipartUploadId) {
         this.multipartUploadId = multipartUploadId;
         return this;
@@ -47,6 +51,7 @@ public class ListPartsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartSizeInBytes")
     public Long partSizeInBytes;
+
     public ListPartsOutput withPartSizeInBytes(Long partSizeInBytes) {
         this.partSizeInBytes = partSizeInBytes;
         return this;
@@ -55,6 +60,7 @@ public class ListPartsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parts")
     public PartListElement[] parts;
+
     public ListPartsOutput withParts(PartListElement[] parts) {
         this.parts = parts;
         return this;
@@ -63,9 +69,11 @@ public class ListPartsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VaultARN")
     public String vaultARN;
+
     public ListPartsOutput withVaultARN(String vaultARN) {
         this.vaultARN = vaultARN;
         return this;
     }
     
+    public ListPartsOutput(){}
 }

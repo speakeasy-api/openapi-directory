@@ -12,6 +12,7 @@ public class CompareFacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QualityFilter")
     public QualityFilterEnum qualityFilter;
+
     public CompareFacesRequest withQualityFilter(QualityFilterEnum qualityFilter) {
         this.qualityFilter = qualityFilter;
         return this;
@@ -20,6 +21,7 @@ public class CompareFacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SimilarityThreshold")
     public Float similarityThreshold;
+
     public CompareFacesRequest withSimilarityThreshold(Float similarityThreshold) {
         this.similarityThreshold = similarityThreshold;
         return this;
@@ -27,6 +29,7 @@ public class CompareFacesRequest {
     
     @JsonProperty("SourceImage")
     public Image sourceImage;
+
     public CompareFacesRequest withSourceImage(Image sourceImage) {
         this.sourceImage = sourceImage;
         return this;
@@ -34,9 +37,14 @@ public class CompareFacesRequest {
     
     @JsonProperty("TargetImage")
     public Image targetImage;
+
     public CompareFacesRequest withTargetImage(Image targetImage) {
         this.targetImage = targetImage;
         return this;
     }
     
+    public CompareFacesRequest(@JsonProperty("SourceImage") Image sourceImage, @JsonProperty("TargetImage") Image targetImage) {
+        this.sourceImage = sourceImage;
+        this.targetImage = targetImage;
+  }
 }

@@ -12,6 +12,7 @@ public class GetBlogPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fallback")
     public Boolean fallback;
+
     public GetBlogPostsRequest withFallback(Boolean fallback) {
         this.fallback = fallback;
         return this;
@@ -22,6 +23,7 @@ public class GetBlogPostsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetBlogPostsRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -29,6 +31,7 @@ public class GetBlogPostsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetBlogPostsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -36,9 +39,11 @@ public class GetBlogPostsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetBlogPostsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetBlogPostsRequest(){}
 }

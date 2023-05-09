@@ -15,6 +15,7 @@ public class ServiceNameAndResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRegionScope")
     public ResourceRegionScopeEnum resourceRegionScope;
+
     public ServiceNameAndResourceType withResourceRegionScope(ResourceRegionScopeEnum resourceRegionScope) {
         this.resourceRegionScope = resourceRegionScope;
         return this;
@@ -23,6 +24,7 @@ public class ServiceNameAndResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public ServiceNameAndResourceType withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -31,9 +33,11 @@ public class ServiceNameAndResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public ServiceNameAndResourceType withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public ServiceNameAndResourceType(){}
 }

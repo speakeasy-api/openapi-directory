@@ -18,6 +18,7 @@ public class SslConfigTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalVariables")
     public ConfigVariableTemplate[] additionalVariables;
+
     public SslConfigTemplate withAdditionalVariables(ConfigVariableTemplate[] additionalVariables) {
         this.additionalVariables = additionalVariables;
         return this;
@@ -29,6 +30,7 @@ public class SslConfigTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientCertType")
     public SslConfigTemplateClientCertTypeEnum[] clientCertType;
+
     public SslConfigTemplate withClientCertType(SslConfigTemplateClientCertTypeEnum[] clientCertType) {
         this.clientCertType = clientCertType;
         return this;
@@ -40,6 +42,7 @@ public class SslConfigTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTlsMandatory")
     public Boolean isTlsMandatory;
+
     public SslConfigTemplate withIsTlsMandatory(Boolean isTlsMandatory) {
         this.isTlsMandatory = isTlsMandatory;
         return this;
@@ -51,6 +54,7 @@ public class SslConfigTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverCertType")
     public SslConfigTemplateServerCertTypeEnum[] serverCertType;
+
     public SslConfigTemplate withServerCertType(SslConfigTemplateServerCertTypeEnum[] serverCertType) {
         this.serverCertType = serverCertType;
         return this;
@@ -62,9 +66,11 @@ public class SslConfigTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslType")
     public SslConfigTemplateSslTypeEnum sslType;
+
     public SslConfigTemplate withSslType(SslConfigTemplateSslTypeEnum sslType) {
         this.sslType = sslType;
         return this;
     }
     
+    public SslConfigTemplate(){}
 }

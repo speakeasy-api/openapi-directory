@@ -15,6 +15,7 @@ public class InvalidRequestContentException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public InvalidRequestContentException withType(String type) {
         this.type = type;
         return this;
@@ -23,9 +24,11 @@ public class InvalidRequestContentException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InvalidRequestContentException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InvalidRequestContentException(){}
 }

@@ -15,6 +15,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paper_items")
     public PaperItemPO[] paperItems;
+
     public EstimateItemPO withPaperItems(PaperItemPO[] paperItems) {
         this.paperItems = paperItems;
         return this;
@@ -26,6 +27,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_1_price")
     public Object quantity1Price;
+
     public EstimateItemPO withQuantity1Price(Object quantity1Price) {
         this.quantity1Price = quantity1Price;
         return this;
@@ -37,6 +39,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_1_shipping")
     public Object quantity1Shipping;
+
     public EstimateItemPO withQuantity1Shipping(Object quantity1Shipping) {
         this.quantity1Shipping = quantity1Shipping;
         return this;
@@ -48,6 +51,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_1_tax")
     public Object quantity1Tax;
+
     public EstimateItemPO withQuantity1Tax(Object quantity1Tax) {
         this.quantity1Tax = quantity1Tax;
         return this;
@@ -59,6 +63,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_2_price")
     public Object quantity2Price;
+
     public EstimateItemPO withQuantity2Price(Object quantity2Price) {
         this.quantity2Price = quantity2Price;
         return this;
@@ -70,6 +75,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_2_shipping")
     public Object quantity2Shipping;
+
     public EstimateItemPO withQuantity2Shipping(Object quantity2Shipping) {
         this.quantity2Shipping = quantity2Shipping;
         return this;
@@ -81,6 +87,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_2_tax")
     public Object quantity2Tax;
+
     public EstimateItemPO withQuantity2Tax(Object quantity2Tax) {
         this.quantity2Tax = quantity2Tax;
         return this;
@@ -92,6 +99,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_3_price")
     public Object quantity3Price;
+
     public EstimateItemPO withQuantity3Price(Object quantity3Price) {
         this.quantity3Price = quantity3Price;
         return this;
@@ -103,6 +111,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_3_shipping")
     public Object quantity3Shipping;
+
     public EstimateItemPO withQuantity3Shipping(Object quantity3Shipping) {
         this.quantity3Shipping = quantity3Shipping;
         return this;
@@ -114,6 +123,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_3_tax")
     public Object quantity3Tax;
+
     public EstimateItemPO withQuantity3Tax(Object quantity3Tax) {
         this.quantity3Tax = quantity3Tax;
         return this;
@@ -125,6 +135,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_4_price")
     public Object quantity4Price;
+
     public EstimateItemPO withQuantity4Price(Object quantity4Price) {
         this.quantity4Price = quantity4Price;
         return this;
@@ -136,6 +147,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_4_shipping")
     public Object quantity4Shipping;
+
     public EstimateItemPO withQuantity4Shipping(Object quantity4Shipping) {
         this.quantity4Shipping = quantity4Shipping;
         return this;
@@ -147,6 +159,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_4_tax")
     public Object quantity4Tax;
+
     public EstimateItemPO withQuantity4Tax(Object quantity4Tax) {
         this.quantity4Tax = quantity4Tax;
         return this;
@@ -158,6 +171,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_5_price")
     public Object quantity5Price;
+
     public EstimateItemPO withQuantity5Price(Object quantity5Price) {
         this.quantity5Price = quantity5Price;
         return this;
@@ -169,6 +183,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_5_shipping")
     public Object quantity5Shipping;
+
     public EstimateItemPO withQuantity5Shipping(Object quantity5Shipping) {
         this.quantity5Shipping = quantity5Shipping;
         return this;
@@ -180,6 +195,7 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_5_tax")
     public Object quantity5Tax;
+
     public EstimateItemPO withQuantity5Tax(Object quantity5Tax) {
         this.quantity5Tax = quantity5Tax;
         return this;
@@ -188,9 +204,11 @@ public class EstimateItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfe_item_id")
     public Long rfeItemId;
+
     public EstimateItemPO withRfeItemId(Long rfeItemId) {
         this.rfeItemId = rfeItemId;
         return this;
     }
     
+    public EstimateItemPO(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBatchPredictionInput {
     @JsonProperty("BatchPredictionId")
     public String batchPredictionId;
+
     public GetBatchPredictionInput withBatchPredictionId(String batchPredictionId) {
         this.batchPredictionId = batchPredictionId;
         return this;
     }
     
+    public GetBatchPredictionInput(@JsonProperty("BatchPredictionId") String batchPredictionId) {
+        this.batchPredictionId = batchPredictionId;
+  }
 }

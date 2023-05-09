@@ -15,6 +15,7 @@ public class LabelingJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalActiveLearningModelArn")
     public String finalActiveLearningModelArn;
+
     public LabelingJobOutput withFinalActiveLearningModelArn(String finalActiveLearningModelArn) {
         this.finalActiveLearningModelArn = finalActiveLearningModelArn;
         return this;
@@ -22,9 +23,13 @@ public class LabelingJobOutput {
     
     @JsonProperty("OutputDatasetS3Uri")
     public String outputDatasetS3Uri;
+
     public LabelingJobOutput withOutputDatasetS3Uri(String outputDatasetS3Uri) {
         this.outputDatasetS3Uri = outputDatasetS3Uri;
         return this;
     }
     
+    public LabelingJobOutput(@JsonProperty("OutputDatasetS3Uri") String outputDatasetS3Uri) {
+        this.outputDatasetS3Uri = outputDatasetS3Uri;
+  }
 }

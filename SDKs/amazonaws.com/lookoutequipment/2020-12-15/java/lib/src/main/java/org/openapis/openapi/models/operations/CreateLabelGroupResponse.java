@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLabelGroupResponse {
@@ -12,6 +13,7 @@ public class CreateLabelGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateLabelGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateLabelGroupResponse {
      */
     
     public Object conflictException;
+
     public CreateLabelGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateLabelGroupResponse {
     
     
     public String contentType;
+
     public CreateLabelGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateLabelGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLabelGroupResponse createLabelGroupResponse;
+
     public CreateLabelGroupResponse withCreateLabelGroupResponse(org.openapis.openapi.models.shared.CreateLabelGroupResponse createLabelGroupResponse) {
         this.createLabelGroupResponse = createLabelGroupResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateLabelGroupResponse {
      */
     
     public Object internalServerException;
+
     public CreateLabelGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateLabelGroupResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateLabelGroupResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateLabelGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateLabelGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateLabelGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLabelGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateLabelGroupResponse {
      */
     
     public Object throttlingException;
+
     public CreateLabelGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateLabelGroupResponse {
      */
     
     public Object validationException;
+
     public CreateLabelGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateLabelGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

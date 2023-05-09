@@ -19,6 +19,7 @@ public class UserRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admin")
     public Boolean admin;
+
     public UserRecord withAdmin(Boolean admin) {
         this.admin = admin;
         return this;
@@ -30,6 +31,7 @@ public class UserRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserRecord withEmail(String email) {
         this.email = email;
         return this;
@@ -41,6 +43,7 @@ public class UserRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public UserRecord withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +55,7 @@ public class UserRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserRecord withName(String name) {
         this.name = name;
         return this;
@@ -63,9 +67,11 @@ public class UserRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("read_only")
     public Boolean readOnly;
+
     public UserRecord withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
     }
     
+    public UserRecord(){}
 }

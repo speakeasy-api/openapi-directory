@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AccessibilityResponse {
     
     public String contentType;
+
     public AccessibilityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AccessibilityResponse {
     
     
     public org.openapis.openapi.models.shared.Getcurrentvalues getcurrentvalues;
+
     public AccessibilityResponse withGetcurrentvalues(org.openapis.openapi.models.shared.Getcurrentvalues getcurrentvalues) {
         this.getcurrentvalues = getcurrentvalues;
         return this;
@@ -23,6 +26,7 @@ public class AccessibilityResponse {
     
     
     public Integer statusCode;
+
     public AccessibilityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class AccessibilityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AccessibilityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AccessibilityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

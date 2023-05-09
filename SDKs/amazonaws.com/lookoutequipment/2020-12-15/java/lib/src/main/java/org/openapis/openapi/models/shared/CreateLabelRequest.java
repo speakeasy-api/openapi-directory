@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CreateLabelRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateLabelRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateLabelRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public CreateLabelRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -33,6 +35,7 @@ public class CreateLabelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Equipment")
     public String equipment;
+
     public CreateLabelRequest withEquipment(String equipment) {
         this.equipment = equipment;
         return this;
@@ -41,6 +44,7 @@ public class CreateLabelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaultCode")
     public String faultCode;
+
     public CreateLabelRequest withFaultCode(String faultCode) {
         this.faultCode = faultCode;
         return this;
@@ -48,6 +52,7 @@ public class CreateLabelRequest {
     
     @JsonProperty("LabelGroupName")
     public String labelGroupName;
+
     public CreateLabelRequest withLabelGroupName(String labelGroupName) {
         this.labelGroupName = labelGroupName;
         return this;
@@ -56,6 +61,7 @@ public class CreateLabelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public CreateLabelRequest withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -63,6 +69,7 @@ public class CreateLabelRequest {
     
     @JsonProperty("Rating")
     public LabelRatingEnum rating;
+
     public CreateLabelRequest withRating(LabelRatingEnum rating) {
         this.rating = rating;
         return this;
@@ -72,9 +79,17 @@ public class CreateLabelRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public CreateLabelRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public CreateLabelRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("LabelGroupName") String labelGroupName, @JsonProperty("Rating") LabelRatingEnum rating, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.clientToken = clientToken;
+        this.endTime = endTime;
+        this.labelGroupName = labelGroupName;
+        this.rating = rating;
+        this.startTime = startTime;
+  }
 }

@@ -22,6 +22,7 @@ public class ResourceInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModified")
     public OffsetDateTime lastModified;
+
     public ResourceInfo withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -30,6 +31,7 @@ public class ResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public ResourceInfo withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -38,9 +40,20 @@ public class ResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public ResourceInfo withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("WithFederation")
+    public Boolean withFederation;
+
+    public ResourceInfo withWithFederation(Boolean withFederation) {
+        this.withFederation = withFederation;
+        return this;
+    }
+    
+    public ResourceInfo(){}
 }

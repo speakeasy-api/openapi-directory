@@ -15,6 +15,7 @@ public class CreateAssessmentFrameworkControlSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controls")
     public CreateAssessmentFrameworkControl[] controls;
+
     public CreateAssessmentFrameworkControlSet withControls(CreateAssessmentFrameworkControl[] controls) {
         this.controls = controls;
         return this;
@@ -22,9 +23,13 @@ public class CreateAssessmentFrameworkControlSet {
     
     @JsonProperty("name")
     public String name;
+
     public CreateAssessmentFrameworkControlSet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateAssessmentFrameworkControlSet(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

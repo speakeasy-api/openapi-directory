@@ -12,6 +12,7 @@ public class EntityReceiptDisbursementTotalsPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public EntityReceiptDisbursementTotalsPage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class EntityReceiptDisbursementTotalsPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public EntityReceiptDisbursementTotals[] results;
+
     public EntityReceiptDisbursementTotalsPage withResults(EntityReceiptDisbursementTotals[] results) {
         this.results = results;
         return this;
     }
     
+    public EntityReceiptDisbursementTotalsPage(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RejectEnvironmentAccountConnectionOutput {
     @JsonProperty("environmentAccountConnection")
     public EnvironmentAccountConnection environmentAccountConnection;
+
     public RejectEnvironmentAccountConnectionOutput withEnvironmentAccountConnection(EnvironmentAccountConnection environmentAccountConnection) {
         this.environmentAccountConnection = environmentAccountConnection;
         return this;
     }
     
+    public RejectEnvironmentAccountConnectionOutput(@JsonProperty("environmentAccountConnection") EnvironmentAccountConnection environmentAccountConnection) {
+        this.environmentAccountConnection = environmentAccountConnection;
+  }
 }

@@ -84,4 +84,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StatisticSet.java
 lib/src/main/java/org/openapis/openapi/models/shared/Dimension.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateEnvironmentOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

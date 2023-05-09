@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSnapshotAttributeResultCreateVolumePermissions {
     
     public DescribeSnapshotAttributeResultCreateVolumePermissionsGroupEnum group;
+
     public DescribeSnapshotAttributeResultCreateVolumePermissions withGroup(DescribeSnapshotAttributeResultCreateVolumePermissionsGroupEnum group) {
         this.group = group;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSnapshotAttributeResultCreateVolumePermissions {
     
     
     public String userId;
+
     public DescribeSnapshotAttributeResultCreateVolumePermissions withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public DescribeSnapshotAttributeResultCreateVolumePermissions(){}
 }

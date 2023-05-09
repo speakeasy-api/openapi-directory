@@ -22,6 +22,7 @@ public class FilterValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all")
     public String[] all;
+
     public FilterValue withAll(String[] all) {
         this.all = all;
         return this;
@@ -34,6 +35,7 @@ public class FilterValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("any")
     public String[] any;
+
     public FilterValue withAny(String[] any) {
         this.any = any;
         return this;
@@ -45,9 +47,11 @@ public class FilterValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("none")
     public String[] none;
+
     public FilterValue withNone(String[] none) {
         this.none = none;
         return this;
     }
     
+    public FilterValue(){}
 }

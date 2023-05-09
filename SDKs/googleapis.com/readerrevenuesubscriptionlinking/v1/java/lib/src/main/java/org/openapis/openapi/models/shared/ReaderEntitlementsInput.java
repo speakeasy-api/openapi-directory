@@ -18,9 +18,11 @@ public class ReaderEntitlementsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entitlements")
     public Entitlement[] entitlements;
+
     public ReaderEntitlementsInput withEntitlements(Entitlement[] entitlements) {
         this.entitlements = entitlements;
         return this;
     }
     
+    public ReaderEntitlementsInput(){}
 }

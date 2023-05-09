@@ -15,9 +15,11 @@ public class AttemptNormalizationStatusReadList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attemptNormalizationStatuses")
     public AttemptNormalizationStatusRead[] attemptNormalizationStatuses;
+
     public AttemptNormalizationStatusReadList withAttemptNormalizationStatuses(AttemptNormalizationStatusRead[] attemptNormalizationStatuses) {
         this.attemptNormalizationStatuses = attemptNormalizationStatuses;
         return this;
     }
     
+    public AttemptNormalizationStatusReadList(){}
 }

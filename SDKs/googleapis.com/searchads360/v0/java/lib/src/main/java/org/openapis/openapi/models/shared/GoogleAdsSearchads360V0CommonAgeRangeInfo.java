@@ -18,9 +18,11 @@ public class GoogleAdsSearchads360V0CommonAgeRangeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleAdsSearchads360V0CommonAgeRangeInfoTypeEnum type;
+
     public GoogleAdsSearchads360V0CommonAgeRangeInfo withType(GoogleAdsSearchads360V0CommonAgeRangeInfoTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonAgeRangeInfo(){}
 }

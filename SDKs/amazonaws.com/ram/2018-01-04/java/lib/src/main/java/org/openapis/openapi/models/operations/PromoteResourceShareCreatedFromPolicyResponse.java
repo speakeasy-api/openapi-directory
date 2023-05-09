@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PromoteResourceShareCreatedFromPolicyResponse {
     
     public String contentType;
+
     public PromoteResourceShareCreatedFromPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,8 +21,20 @@ public class PromoteResourceShareCreatedFromPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public PromoteResourceShareCreatedFromPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
+        return this;
+    }
+    
+    /**
+     * InvalidStateTransitionException
+     */
+    
+    public Object invalidStateTransitionException;
+
+    public PromoteResourceShareCreatedFromPolicyResponse withInvalidStateTransitionException(Object invalidStateTransitionException) {
+        this.invalidStateTransitionException = invalidStateTransitionException;
         return this;
     }
     
@@ -29,6 +43,7 @@ public class PromoteResourceShareCreatedFromPolicyResponse {
      */
     
     public Object malformedArnException;
+
     public PromoteResourceShareCreatedFromPolicyResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -39,6 +54,7 @@ public class PromoteResourceShareCreatedFromPolicyResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public PromoteResourceShareCreatedFromPolicyResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -49,6 +65,7 @@ public class PromoteResourceShareCreatedFromPolicyResponse {
      */
     
     public Object operationNotPermittedException;
+
     public PromoteResourceShareCreatedFromPolicyResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -59,6 +76,7 @@ public class PromoteResourceShareCreatedFromPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PromoteResourceShareCreatedFromPolicyResponse promoteResourceShareCreatedFromPolicyResponse;
+
     public PromoteResourceShareCreatedFromPolicyResponse withPromoteResourceShareCreatedFromPolicyResponse(org.openapis.openapi.models.shared.PromoteResourceShareCreatedFromPolicyResponse promoteResourceShareCreatedFromPolicyResponse) {
         this.promoteResourceShareCreatedFromPolicyResponse = promoteResourceShareCreatedFromPolicyResponse;
         return this;
@@ -66,6 +84,7 @@ public class PromoteResourceShareCreatedFromPolicyResponse {
     
     
     public Integer statusCode;
+
     public PromoteResourceShareCreatedFromPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +92,7 @@ public class PromoteResourceShareCreatedFromPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PromoteResourceShareCreatedFromPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +103,7 @@ public class PromoteResourceShareCreatedFromPolicyResponse {
      */
     
     public Object resourceShareLimitExceededException;
+
     public PromoteResourceShareCreatedFromPolicyResponse withResourceShareLimitExceededException(Object resourceShareLimitExceededException) {
         this.resourceShareLimitExceededException = resourceShareLimitExceededException;
         return this;
@@ -93,6 +114,7 @@ public class PromoteResourceShareCreatedFromPolicyResponse {
      */
     
     public Object serverInternalException;
+
     public PromoteResourceShareCreatedFromPolicyResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -103,6 +125,7 @@ public class PromoteResourceShareCreatedFromPolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public PromoteResourceShareCreatedFromPolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +136,25 @@ public class PromoteResourceShareCreatedFromPolicyResponse {
      */
     
     public Object unknownResourceException;
+
     public PromoteResourceShareCreatedFromPolicyResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    /**
+     * UnmatchedPolicyPermissionException
+     */
+    
+    public Object unmatchedPolicyPermissionException;
+
+    public PromoteResourceShareCreatedFromPolicyResponse withUnmatchedPolicyPermissionException(Object unmatchedPolicyPermissionException) {
+        this.unmatchedPolicyPermissionException = unmatchedPolicyPermissionException;
+        return this;
+    }
+    
+    public PromoteResourceShareCreatedFromPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

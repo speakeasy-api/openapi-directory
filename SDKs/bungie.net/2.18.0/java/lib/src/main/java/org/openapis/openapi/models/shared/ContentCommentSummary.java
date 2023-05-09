@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ContentCommentSummary {
     
     public Integer commentCount;
+
     public ContentCommentSummary withCommentCount(Integer commentCount) {
         this.commentCount = commentCount;
         return this;
@@ -16,9 +17,11 @@ public class ContentCommentSummary {
     
     
     public Long topicId;
+
     public ContentCommentSummary withTopicId(Long topicId) {
         this.topicId = topicId;
         return this;
     }
     
+    public ContentCommentSummary(){}
 }

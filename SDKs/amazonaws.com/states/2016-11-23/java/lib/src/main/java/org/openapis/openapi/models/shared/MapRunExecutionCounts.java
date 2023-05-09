@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MapRunExecutionCounts {
     @JsonProperty("aborted")
     public Long aborted;
+
     public MapRunExecutionCounts withAborted(Long aborted) {
         this.aborted = aborted;
         return this;
@@ -19,6 +20,7 @@ public class MapRunExecutionCounts {
     
     @JsonProperty("failed")
     public Long failed;
+
     public MapRunExecutionCounts withFailed(Long failed) {
         this.failed = failed;
         return this;
@@ -26,6 +28,7 @@ public class MapRunExecutionCounts {
     
     @JsonProperty("pending")
     public Long pending;
+
     public MapRunExecutionCounts withPending(Long pending) {
         this.pending = pending;
         return this;
@@ -33,6 +36,7 @@ public class MapRunExecutionCounts {
     
     @JsonProperty("resultsWritten")
     public Long resultsWritten;
+
     public MapRunExecutionCounts withResultsWritten(Long resultsWritten) {
         this.resultsWritten = resultsWritten;
         return this;
@@ -40,6 +44,7 @@ public class MapRunExecutionCounts {
     
     @JsonProperty("running")
     public Long running;
+
     public MapRunExecutionCounts withRunning(Long running) {
         this.running = running;
         return this;
@@ -47,6 +52,7 @@ public class MapRunExecutionCounts {
     
     @JsonProperty("succeeded")
     public Long succeeded;
+
     public MapRunExecutionCounts withSucceeded(Long succeeded) {
         this.succeeded = succeeded;
         return this;
@@ -54,6 +60,7 @@ public class MapRunExecutionCounts {
     
     @JsonProperty("timedOut")
     public Long timedOut;
+
     public MapRunExecutionCounts withTimedOut(Long timedOut) {
         this.timedOut = timedOut;
         return this;
@@ -61,9 +68,20 @@ public class MapRunExecutionCounts {
     
     @JsonProperty("total")
     public Long total;
+
     public MapRunExecutionCounts withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public MapRunExecutionCounts(@JsonProperty("aborted") Long aborted, @JsonProperty("failed") Long failed, @JsonProperty("pending") Long pending, @JsonProperty("resultsWritten") Long resultsWritten, @JsonProperty("running") Long running, @JsonProperty("succeeded") Long succeeded, @JsonProperty("timedOut") Long timedOut, @JsonProperty("total") Long total) {
+        this.aborted = aborted;
+        this.failed = failed;
+        this.pending = pending;
+        this.resultsWritten = resultsWritten;
+        this.running = running;
+        this.succeeded = succeeded;
+        this.timedOut = timedOut;
+        this.total = total;
+  }
 }

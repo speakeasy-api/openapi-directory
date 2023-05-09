@@ -15,9 +15,11 @@ public class ProvisionProductOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordDetail")
     public RecordDetail recordDetail;
+
     public ProvisionProductOutput withRecordDetail(RecordDetail recordDetail) {
         this.recordDetail = recordDetail;
         return this;
     }
     
+    public ProvisionProductOutput(){}
 }

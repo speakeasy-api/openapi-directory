@@ -15,6 +15,7 @@ public class ListContactsRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilteredStatus")
     public org.openapis.openapi.models.shared.SubscriptionStatusEnum filteredStatus;
+
     public ListContactsRequestBodyFilter withFilteredStatus(org.openapis.openapi.models.shared.SubscriptionStatusEnum filteredStatus) {
         this.filteredStatus = filteredStatus;
         return this;
@@ -23,9 +24,11 @@ public class ListContactsRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopicFilter")
     public org.openapis.openapi.models.shared.TopicFilter topicFilter;
+
     public ListContactsRequestBodyFilter withTopicFilter(org.openapis.openapi.models.shared.TopicFilter topicFilter) {
         this.topicFilter = topicFilter;
         return this;
     }
     
+    public ListContactsRequestBodyFilter(){}
 }

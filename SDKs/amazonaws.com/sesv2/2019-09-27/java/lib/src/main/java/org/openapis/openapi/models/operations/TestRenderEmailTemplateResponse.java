@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestRenderEmailTemplateResponse {
@@ -12,6 +13,7 @@ public class TestRenderEmailTemplateResponse {
      */
     
     public Object badRequestException;
+
     public TestRenderEmailTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class TestRenderEmailTemplateResponse {
     
     
     public String contentType;
+
     public TestRenderEmailTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class TestRenderEmailTemplateResponse {
      */
     
     public Object notFoundException;
+
     public TestRenderEmailTemplateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -36,6 +40,7 @@ public class TestRenderEmailTemplateResponse {
     
     
     public Integer statusCode;
+
     public TestRenderEmailTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class TestRenderEmailTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestRenderEmailTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class TestRenderEmailTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.TestRenderEmailTemplateResponse testRenderEmailTemplateResponse;
+
     public TestRenderEmailTemplateResponse withTestRenderEmailTemplateResponse(org.openapis.openapi.models.shared.TestRenderEmailTemplateResponse testRenderEmailTemplateResponse) {
         this.testRenderEmailTemplateResponse = testRenderEmailTemplateResponse;
         return this;
@@ -63,9 +70,14 @@ public class TestRenderEmailTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public TestRenderEmailTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public TestRenderEmailTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

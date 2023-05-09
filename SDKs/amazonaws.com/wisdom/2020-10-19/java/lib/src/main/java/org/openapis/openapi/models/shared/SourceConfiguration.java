@@ -15,9 +15,11 @@ public class SourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appIntegrations")
     public AppIntegrationsConfiguration appIntegrations;
+
     public SourceConfiguration withAppIntegrations(AppIntegrationsConfiguration appIntegrations) {
         this.appIntegrations = appIntegrations;
         return this;
     }
     
+    public SourceConfiguration(){}
 }

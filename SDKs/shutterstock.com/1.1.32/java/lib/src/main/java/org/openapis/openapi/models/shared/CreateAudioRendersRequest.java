@@ -15,9 +15,13 @@ public class CreateAudioRendersRequest {
      */
     @JsonProperty("audio_renders")
     public CreateAudioRender[] audioRenders;
+
     public CreateAudioRendersRequest withAudioRenders(CreateAudioRender[] audioRenders) {
         this.audioRenders = audioRenders;
         return this;
     }
     
+    public CreateAudioRendersRequest(@JsonProperty("audio_renders") CreateAudioRender[] audioRenders) {
+        this.audioRenders = audioRenders;
+  }
 }

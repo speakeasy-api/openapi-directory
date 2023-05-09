@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=emailAddress")
     public String emailAddress;
+
     public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
     }
     
+    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest(@JsonProperty("emailAddress") String emailAddress) {
+        this.emailAddress = emailAddress;
+  }
 }

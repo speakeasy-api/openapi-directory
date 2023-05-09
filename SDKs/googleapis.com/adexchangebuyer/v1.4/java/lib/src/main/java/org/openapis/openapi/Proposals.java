@@ -59,11 +59,9 @@ public class Proposals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerProposalsGetResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProposalsGetResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerProposalsGetResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProposalsGetResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Proposals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerProposalsInsertResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProposalsInsertResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerProposalsInsertResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProposalsInsertResponse(contentType, httpRes.statusCode()) {{
             createOrdersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Proposals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerProposalsPatchResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProposalsPatchResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerProposalsPatchResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProposalsPatchResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class Proposals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerProposalsSearchResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProposalsSearchResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerProposalsSearchResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProposalsSearchResponse(contentType, httpRes.statusCode()) {{
             getOrdersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,10 +239,8 @@ public class Proposals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerProposalsSetupcompleteResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProposalsSetupcompleteResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerProposalsSetupcompleteResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProposalsSetupcompleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class Proposals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerProposalsUpdateResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProposalsUpdateResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerProposalsUpdateResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerProposalsUpdateResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

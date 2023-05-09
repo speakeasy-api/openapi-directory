@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableDirectoryResponse {
@@ -12,6 +13,7 @@ public class DisableDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public DisableDirectoryResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DisableDirectoryResponse {
     
     
     public String contentType;
+
     public DisableDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisableDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.DirectoryDeletedException directoryDeletedException;
+
     public DisableDirectoryResponse withDirectoryDeletedException(org.openapis.openapi.models.shared.DirectoryDeletedException directoryDeletedException) {
         this.directoryDeletedException = directoryDeletedException;
         return this;
@@ -39,6 +43,7 @@ public class DisableDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.DisableDirectoryResponse disableDirectoryResponse;
+
     public DisableDirectoryResponse withDisableDirectoryResponse(org.openapis.openapi.models.shared.DisableDirectoryResponse disableDirectoryResponse) {
         this.disableDirectoryResponse = disableDirectoryResponse;
         return this;
@@ -49,6 +54,7 @@ public class DisableDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public DisableDirectoryResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DisableDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public DisableDirectoryResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class DisableDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public DisableDirectoryResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class DisableDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public DisableDirectoryResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DisableDirectoryResponse {
     
     
     public Integer statusCode;
+
     public DisableDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DisableDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class DisableDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public DisableDirectoryResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class DisableDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public DisableDirectoryResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisableDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

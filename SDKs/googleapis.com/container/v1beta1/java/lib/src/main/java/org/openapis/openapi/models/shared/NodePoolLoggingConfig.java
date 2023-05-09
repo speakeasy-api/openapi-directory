@@ -18,9 +18,11 @@ public class NodePoolLoggingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variantConfig")
     public LoggingVariantConfig variantConfig;
+
     public NodePoolLoggingConfig withVariantConfig(LoggingVariantConfig variantConfig) {
         this.variantConfig = variantConfig;
         return this;
     }
     
+    public NodePoolLoggingConfig(){}
 }

@@ -20,6 +20,7 @@ public class DeploymentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public DeploymentJob withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class DeploymentJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public DeploymentJob withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class DeploymentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentApplicationConfigs")
     public DeploymentApplicationConfig[] deploymentApplicationConfigs;
+
     public DeploymentJob withDeploymentApplicationConfigs(DeploymentApplicationConfig[] deploymentApplicationConfigs) {
         this.deploymentApplicationConfigs = deploymentApplicationConfigs;
         return this;
@@ -46,6 +49,7 @@ public class DeploymentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentConfig")
     public DeploymentConfig deploymentConfig;
+
     public DeploymentJob withDeploymentConfig(DeploymentConfig deploymentConfig) {
         this.deploymentConfig = deploymentConfig;
         return this;
@@ -54,6 +58,7 @@ public class DeploymentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public DeploymentJobErrorCodeEnum failureCode;
+
     public DeploymentJob withFailureCode(DeploymentJobErrorCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -62,6 +67,7 @@ public class DeploymentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public DeploymentJob withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -70,6 +76,7 @@ public class DeploymentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleet")
     public String fleet;
+
     public DeploymentJob withFleet(String fleet) {
         this.fleet = fleet;
         return this;
@@ -78,9 +85,11 @@ public class DeploymentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DeploymentStatusEnum status;
+
     public DeploymentJob withStatus(DeploymentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DeploymentJob(){}
 }

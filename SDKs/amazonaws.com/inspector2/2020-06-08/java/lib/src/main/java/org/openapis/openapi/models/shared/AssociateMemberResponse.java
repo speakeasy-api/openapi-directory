@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateMemberResponse {
     @JsonProperty("accountId")
     public String accountId;
+
     public AssociateMemberResponse withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public AssociateMemberResponse(@JsonProperty("accountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

@@ -15,6 +15,7 @@ public class NodesCitationReadStyledCitation {
      */
     
     public NodesCitationReadStyledCitationAttributes attributes;
+
     public NodesCitationReadStyledCitation withAttributes(NodesCitationReadStyledCitationAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class NodesCitationReadStyledCitation {
      */
     
     public String id;
+
     public NodesCitationReadStyledCitation withId(String id) {
         this.id = id;
         return this;
@@ -35,9 +37,11 @@ public class NodesCitationReadStyledCitation {
      */
     
     public String type;
+
     public NodesCitationReadStyledCitation withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesCitationReadStyledCitation(){}
 }

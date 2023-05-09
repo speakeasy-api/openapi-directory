@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class LoadBalancer {
     
     public String name;
+
     public LoadBalancer withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LoadBalancer(){}
 }

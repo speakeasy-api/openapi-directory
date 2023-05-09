@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RightsizingRecommendationConfiguration {
     @JsonProperty("BenefitsConsidered")
     public Boolean benefitsConsidered;
+
     public RightsizingRecommendationConfiguration withBenefitsConsidered(Boolean benefitsConsidered) {
         this.benefitsConsidered = benefitsConsidered;
         return this;
@@ -19,9 +20,14 @@ public class RightsizingRecommendationConfiguration {
     
     @JsonProperty("RecommendationTarget")
     public RecommendationTargetEnum recommendationTarget;
+
     public RightsizingRecommendationConfiguration withRecommendationTarget(RecommendationTargetEnum recommendationTarget) {
         this.recommendationTarget = recommendationTarget;
         return this;
     }
     
+    public RightsizingRecommendationConfiguration(@JsonProperty("BenefitsConsidered") Boolean benefitsConsidered, @JsonProperty("RecommendationTarget") RecommendationTargetEnum recommendationTarget) {
+        this.benefitsConsidered = benefitsConsidered;
+        this.recommendationTarget = recommendationTarget;
+  }
 }

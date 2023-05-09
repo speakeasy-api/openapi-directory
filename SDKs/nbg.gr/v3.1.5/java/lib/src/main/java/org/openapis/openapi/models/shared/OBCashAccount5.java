@@ -14,6 +14,7 @@ public class OBCashAccount5 {
      */
     @JsonProperty("Identification")
     public String identification;
+
     public OBCashAccount5 withIdentification(String identification) {
         this.identification = identification;
         return this;
@@ -26,6 +27,7 @@ public class OBCashAccount5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OBCashAccount5 withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class OBCashAccount5 {
      */
     @JsonProperty("SchemeName")
     public String schemeName;
+
     public OBCashAccount5 withSchemeName(String schemeName) {
         this.schemeName = schemeName;
         return this;
@@ -48,9 +51,14 @@ public class OBCashAccount5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryIdentification")
     public String secondaryIdentification;
+
     public OBCashAccount5 withSecondaryIdentification(String secondaryIdentification) {
         this.secondaryIdentification = secondaryIdentification;
         return this;
     }
     
+    public OBCashAccount5(@JsonProperty("Identification") String identification, @JsonProperty("SchemeName") String schemeName) {
+        this.identification = identification;
+        this.schemeName = schemeName;
+  }
 }

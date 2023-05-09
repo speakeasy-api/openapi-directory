@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EmailValidationResponse {
     
     public String contentType;
+
     public EmailValidationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EmailValidationResponse {
     
     
     public Integer statusCode;
+
     public EmailValidationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EmailValidationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EmailValidationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class EmailValidationResponse {
      */
     
     public EmailValidation200ApplicationJSON emailValidation200ApplicationJSONObject;
+
     public EmailValidationResponse withEmailValidation200ApplicationJSONObject(EmailValidation200ApplicationJSON emailValidation200ApplicationJSONObject) {
         this.emailValidation200ApplicationJSONObject = emailValidation200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class EmailValidationResponse {
      */
     
     public EmailValidation400ApplicationJSON emailValidation400ApplicationJSONObject;
+
     public EmailValidationResponse withEmailValidation400ApplicationJSONObject(EmailValidation400ApplicationJSON emailValidation400ApplicationJSONObject) {
         this.emailValidation400ApplicationJSONObject = emailValidation400ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class EmailValidationResponse {
      */
     
     public EmailValidation500ApplicationJSON emailValidation500ApplicationJSONObject;
+
     public EmailValidationResponse withEmailValidation500ApplicationJSONObject(EmailValidation500ApplicationJSON emailValidation500ApplicationJSONObject) {
         this.emailValidation500ApplicationJSONObject = emailValidation500ApplicationJSONObject;
         return this;
     }
     
+    public EmailValidationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class DomainMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DomainMapping withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class DomainMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DomainMapping withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class DomainMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRecords")
     public ResourceRecord[] resourceRecords;
+
     public DomainMapping withResourceRecords(ResourceRecord[] resourceRecords) {
         this.resourceRecords = resourceRecords;
         return this;
@@ -51,9 +54,11 @@ public class DomainMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslSettings")
     public SslSettings sslSettings;
+
     public DomainMapping withSslSettings(SslSettings sslSettings) {
         this.sslSettings = sslSettings;
         return this;
     }
     
+    public DomainMapping(){}
 }

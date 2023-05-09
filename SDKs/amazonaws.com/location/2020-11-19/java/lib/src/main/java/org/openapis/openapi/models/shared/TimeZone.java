@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimeZone {
     @JsonProperty("Name")
     public String name;
+
     public TimeZone withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,13 @@ public class TimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Offset")
     public Long offset;
+
     public TimeZone withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public TimeZone(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

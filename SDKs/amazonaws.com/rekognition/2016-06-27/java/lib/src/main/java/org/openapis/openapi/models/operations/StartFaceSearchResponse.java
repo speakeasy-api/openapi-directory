@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartFaceSearchResponse {
@@ -12,6 +13,7 @@ public class StartFaceSearchResponse {
      */
     
     public Object accessDeniedException;
+
     public StartFaceSearchResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartFaceSearchResponse {
     
     
     public String contentType;
+
     public StartFaceSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartFaceSearchResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public StartFaceSearchResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class StartFaceSearchResponse {
      */
     
     public Object internalServerError;
+
     public StartFaceSearchResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class StartFaceSearchResponse {
      */
     
     public Object invalidParameterException;
+
     public StartFaceSearchResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class StartFaceSearchResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public StartFaceSearchResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -69,6 +76,7 @@ public class StartFaceSearchResponse {
      */
     
     public Object limitExceededException;
+
     public StartFaceSearchResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class StartFaceSearchResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public StartFaceSearchResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -89,6 +98,7 @@ public class StartFaceSearchResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartFaceSearchResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class StartFaceSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.StartFaceSearchResponse startFaceSearchResponse;
+
     public StartFaceSearchResponse withStartFaceSearchResponse(org.openapis.openapi.models.shared.StartFaceSearchResponse startFaceSearchResponse) {
         this.startFaceSearchResponse = startFaceSearchResponse;
         return this;
@@ -106,6 +117,7 @@ public class StartFaceSearchResponse {
     
     
     public Integer statusCode;
+
     public StartFaceSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class StartFaceSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartFaceSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class StartFaceSearchResponse {
      */
     
     public Object throttlingException;
+
     public StartFaceSearchResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -133,9 +147,14 @@ public class StartFaceSearchResponse {
      */
     
     public Object videoTooLargeException;
+
     public StartFaceSearchResponse withVideoTooLargeException(Object videoTooLargeException) {
         this.videoTooLargeException = videoTooLargeException;
         return this;
     }
     
+    public StartFaceSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class Cell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CellReference")
     public String cellReference;
+
     public Cell withCellReference(String cellReference) {
         this.cellReference = cellReference;
         return this;
@@ -23,6 +24,7 @@ public class Cell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Column")
     public Long column;
+
     public Cell withColumn(Long column) {
         this.column = column;
         return this;
@@ -31,6 +33,7 @@ public class Cell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnName")
     public String columnName;
+
     public Cell withColumnName(String columnName) {
         this.columnName = columnName;
         return this;
@@ -39,9 +42,11 @@ public class Cell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Row")
     public Long row;
+
     public Cell withRow(Long row) {
         this.row = row;
         return this;
     }
     
+    public Cell(){}
 }

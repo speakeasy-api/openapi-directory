@@ -55,10 +55,8 @@ public class MovieCast {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MovieCastSearchReadResponse res = new org.openapis.openapi.models.operations.MovieCastSearchReadResponse() {{
+        org.openapis.openapi.models.operations.MovieCastSearchReadResponse res = new org.openapis.openapi.models.operations.MovieCastSearchReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,10 +97,8 @@ public class MovieCast {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MovieCastSearchallReadResponse res = new org.openapis.openapi.models.operations.MovieCastSearchallReadResponse() {{
+        org.openapis.openapi.models.operations.MovieCastSearchallReadResponse res = new org.openapis.openapi.models.operations.MovieCastSearchallReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

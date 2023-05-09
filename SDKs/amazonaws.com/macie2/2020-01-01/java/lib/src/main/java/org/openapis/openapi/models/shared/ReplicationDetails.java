@@ -15,6 +15,7 @@ public class ReplicationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicated")
     public Boolean replicated;
+
     public ReplicationDetails withReplicated(Boolean replicated) {
         this.replicated = replicated;
         return this;
@@ -23,6 +24,7 @@ public class ReplicationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicatedExternally")
     public Boolean replicatedExternally;
+
     public ReplicationDetails withReplicatedExternally(Boolean replicatedExternally) {
         this.replicatedExternally = replicatedExternally;
         return this;
@@ -31,9 +33,11 @@ public class ReplicationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationAccounts")
     public String[] replicationAccounts;
+
     public ReplicationDetails withReplicationAccounts(String[] replicationAccounts) {
         this.replicationAccounts = replicationAccounts;
         return this;
     }
     
+    public ReplicationDetails(){}
 }

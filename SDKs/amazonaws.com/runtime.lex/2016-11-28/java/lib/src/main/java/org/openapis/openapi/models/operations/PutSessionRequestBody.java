@@ -15,6 +15,7 @@ public class PutSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeContexts")
     public org.openapis.openapi.models.shared.ActiveContext[] activeContexts;
+
     public PutSessionRequestBody withActiveContexts(org.openapis.openapi.models.shared.ActiveContext[] activeContexts) {
         this.activeContexts = activeContexts;
         return this;
@@ -26,6 +27,7 @@ public class PutSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialogAction")
     public PutSessionRequestBodyDialogAction dialogAction;
+
     public PutSessionRequestBody withDialogAction(PutSessionRequestBodyDialogAction dialogAction) {
         this.dialogAction = dialogAction;
         return this;
@@ -37,6 +39,7 @@ public class PutSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentIntentSummaryView")
     public org.openapis.openapi.models.shared.IntentSummary[] recentIntentSummaryView;
+
     public PutSessionRequestBody withRecentIntentSummaryView(org.openapis.openapi.models.shared.IntentSummary[] recentIntentSummaryView) {
         this.recentIntentSummaryView = recentIntentSummaryView;
         return this;
@@ -48,9 +51,11 @@ public class PutSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionAttributes")
     public java.util.Map<String, String> sessionAttributes;
+
     public PutSessionRequestBody withSessionAttributes(java.util.Map<String, String> sessionAttributes) {
         this.sessionAttributes = sessionAttributes;
         return this;
     }
     
+    public PutSessionRequestBody(){}
 }

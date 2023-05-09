@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDoNotContactsBySourceRequest {
@@ -12,9 +13,13 @@ public class DeleteDoNotContactsBySourceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=source")
     public String source;
+
     public DeleteDoNotContactsBySourceRequest withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public DeleteDoNotContactsBySourceRequest(@JsonProperty("source") String source) {
+        this.source = source;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TfrByPolyUsV1RestrictionsPolygonQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NOTAMsByPolygon notaMsByPolygon;
+
     public TfrByPolyUsV1RestrictionsPolygonQueryPostRequest withNOTAMsByPolygon(org.openapis.openapi.models.shared.NOTAMsByPolygon notaMsByPolygon) {
         this.notaMsByPolygon = notaMsByPolygon;
         return this;
@@ -16,9 +18,13 @@ public class TfrByPolyUsV1RestrictionsPolygonQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public TfrByPolyUsV1RestrictionsPolygonQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public TfrByPolyUsV1RestrictionsPolygonQueryPostRequest(@JsonProperty("NOTAMsByPolygon") org.openapis.openapi.models.shared.NOTAMsByPolygon notaMsByPolygon) {
+        this.notaMsByPolygon = notaMsByPolygon;
+  }
 }

@@ -18,9 +18,11 @@ public class SubscriptionPatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public SubscriptionPatchRequest withActive(Boolean active) {
         this.active = active;
         return this;
     }
     
+    public SubscriptionPatchRequest(){}
 }

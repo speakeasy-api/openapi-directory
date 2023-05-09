@@ -15,6 +15,7 @@ public class DnssecSigningAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Algorithm")
     public Long algorithm;
+
     public DnssecSigningAttributes withAlgorithm(Long algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -23,6 +24,7 @@ public class DnssecSigningAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Flags")
     public Long flags;
+
     public DnssecSigningAttributes withFlags(Long flags) {
         this.flags = flags;
         return this;
@@ -31,9 +33,11 @@ public class DnssecSigningAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicKey")
     public String publicKey;
+
     public DnssecSigningAttributes withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public DnssecSigningAttributes(){}
 }

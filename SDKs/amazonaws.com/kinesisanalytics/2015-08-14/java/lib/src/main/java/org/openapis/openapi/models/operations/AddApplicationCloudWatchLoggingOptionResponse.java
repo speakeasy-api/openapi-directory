@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddApplicationCloudWatchLoggingOptionResponse {
@@ -12,6 +13,7 @@ public class AddApplicationCloudWatchLoggingOptionResponse {
      */
     
     public java.util.Map<String, Object> addApplicationCloudWatchLoggingOptionResponse;
+
     public AddApplicationCloudWatchLoggingOptionResponse withAddApplicationCloudWatchLoggingOptionResponse(java.util.Map<String, Object> addApplicationCloudWatchLoggingOptionResponse) {
         this.addApplicationCloudWatchLoggingOptionResponse = addApplicationCloudWatchLoggingOptionResponse;
         return this;
@@ -22,6 +24,7 @@ public class AddApplicationCloudWatchLoggingOptionResponse {
      */
     
     public Object concurrentModificationException;
+
     public AddApplicationCloudWatchLoggingOptionResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class AddApplicationCloudWatchLoggingOptionResponse {
     
     
     public String contentType;
+
     public AddApplicationCloudWatchLoggingOptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AddApplicationCloudWatchLoggingOptionResponse {
      */
     
     public Object invalidArgumentException;
+
     public AddApplicationCloudWatchLoggingOptionResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class AddApplicationCloudWatchLoggingOptionResponse {
      */
     
     public Object resourceInUseException;
+
     public AddApplicationCloudWatchLoggingOptionResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class AddApplicationCloudWatchLoggingOptionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddApplicationCloudWatchLoggingOptionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AddApplicationCloudWatchLoggingOptionResponse {
     
     
     public Integer statusCode;
+
     public AddApplicationCloudWatchLoggingOptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AddApplicationCloudWatchLoggingOptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddApplicationCloudWatchLoggingOptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class AddApplicationCloudWatchLoggingOptionResponse {
      */
     
     public Object unsupportedOperationException;
+
     public AddApplicationCloudWatchLoggingOptionResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public AddApplicationCloudWatchLoggingOptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

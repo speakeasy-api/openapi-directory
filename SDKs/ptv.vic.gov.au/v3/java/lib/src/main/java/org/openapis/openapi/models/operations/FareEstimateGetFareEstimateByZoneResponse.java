@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FareEstimateGetFareEstimateByZoneResponse {
     
     public byte[] body;
+
     public FareEstimateGetFareEstimateByZoneResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class FareEstimateGetFareEstimateByZoneResponse {
     
     
     public String contentType;
+
     public FareEstimateGetFareEstimateByZoneResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class FareEstimateGetFareEstimateByZoneResponse {
     
     
     public Integer statusCode;
+
     public FareEstimateGetFareEstimateByZoneResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class FareEstimateGetFareEstimateByZoneResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FareEstimateGetFareEstimateByZoneResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class FareEstimateGetFareEstimateByZoneResponse {
      */
     
     public org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse;
+
     public FareEstimateGetFareEstimateByZoneResponse withV3ErrorResponse(org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse) {
         this.v3ErrorResponse = v3ErrorResponse;
         return this;
@@ -50,9 +56,14 @@ public class FareEstimateGetFareEstimateByZoneResponse {
      */
     
     public Object v3FareEstimateResponse;
+
     public FareEstimateGetFareEstimateByZoneResponse withV3FareEstimateResponse(Object v3FareEstimateResponse) {
         this.v3FareEstimateResponse = v3FareEstimateResponse;
         return this;
     }
     
+    public FareEstimateGetFareEstimateByZoneResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

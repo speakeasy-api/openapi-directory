@@ -15,6 +15,7 @@ public class ThreeDSAvailabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binDetails")
     public BinDetail binDetails;
+
     public ThreeDSAvailabilityResponse withBinDetails(BinDetail binDetails) {
         this.binDetails = binDetails;
         return this;
@@ -26,6 +27,7 @@ public class ThreeDSAvailabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dsPublicKeys")
     public DSPublicKeyDetail[] dsPublicKeys;
+
     public ThreeDSAvailabilityResponse withDsPublicKeys(DSPublicKeyDetail[] dsPublicKeys) {
         this.dsPublicKeys = dsPublicKeys;
         return this;
@@ -37,6 +39,7 @@ public class ThreeDSAvailabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threeDS1Supported")
     public Boolean threeDs1Supported;
+
     public ThreeDSAvailabilityResponse withThreeDs1Supported(Boolean threeDs1Supported) {
         this.threeDs1Supported = threeDs1Supported;
         return this;
@@ -48,6 +51,7 @@ public class ThreeDSAvailabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threeDS2CardRangeDetails")
     public ThreeDs2CardRangeDetail[] threeDs2CardRangeDetails;
+
     public ThreeDSAvailabilityResponse withThreeDs2CardRangeDetails(ThreeDs2CardRangeDetail[] threeDs2CardRangeDetails) {
         this.threeDs2CardRangeDetails = threeDs2CardRangeDetails;
         return this;
@@ -59,9 +63,11 @@ public class ThreeDSAvailabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threeDS2supported")
     public Boolean threeDs2supported;
+
     public ThreeDSAvailabilityResponse withThreeDs2supported(Boolean threeDs2supported) {
         this.threeDs2supported = threeDs2supported;
         return this;
     }
     
+    public ThreeDSAvailabilityResponse(){}
 }

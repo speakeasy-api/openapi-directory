@@ -18,9 +18,11 @@ public class ManagedInstanceLastAttemptErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ManagedInstanceLastAttemptErrorsErrors[] errors;
+
     public ManagedInstanceLastAttemptErrors withErrors(ManagedInstanceLastAttemptErrorsErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public ManagedInstanceLastAttemptErrors(){}
 }

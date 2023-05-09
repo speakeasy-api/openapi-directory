@@ -15,6 +15,7 @@ public class CapabilitySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountPerIndustry")
     public java.util.Map<String, Amount> amountPerIndustry;
+
     public CapabilitySettings withAmountPerIndustry(java.util.Map<String, Amount> amountPerIndustry) {
         this.amountPerIndustry = amountPerIndustry;
         return this;
@@ -26,6 +27,7 @@ public class CapabilitySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizedCardUsers")
     public Boolean authorizedCardUsers;
+
     public CapabilitySettings withAuthorizedCardUsers(Boolean authorizedCardUsers) {
         this.authorizedCardUsers = authorizedCardUsers;
         return this;
@@ -37,6 +39,7 @@ public class CapabilitySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fundingSource")
     public CapabilitySettingsFundingSourceEnum[] fundingSource;
+
     public CapabilitySettings withFundingSource(CapabilitySettingsFundingSourceEnum[] fundingSource) {
         this.fundingSource = fundingSource;
         return this;
@@ -48,6 +51,7 @@ public class CapabilitySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public CapabilitySettingsIntervalEnum interval;
+
     public CapabilitySettings withInterval(CapabilitySettingsIntervalEnum interval) {
         this.interval = interval;
         return this;
@@ -56,9 +60,11 @@ public class CapabilitySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAmount")
     public Amount maxAmount;
+
     public CapabilitySettings withMaxAmount(Amount maxAmount) {
         this.maxAmount = maxAmount;
         return this;
     }
     
+    public CapabilitySettings(){}
 }

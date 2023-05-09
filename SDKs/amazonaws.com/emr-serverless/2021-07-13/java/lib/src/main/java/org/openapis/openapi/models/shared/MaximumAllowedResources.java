@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MaximumAllowedResources {
     @JsonProperty("cpu")
     public String cpu;
+
     public MaximumAllowedResources withCpu(String cpu) {
         this.cpu = cpu;
         return this;
@@ -22,6 +23,7 @@ public class MaximumAllowedResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disk")
     public String disk;
+
     public MaximumAllowedResources withDisk(String disk) {
         this.disk = disk;
         return this;
@@ -29,9 +31,14 @@ public class MaximumAllowedResources {
     
     @JsonProperty("memory")
     public String memory;
+
     public MaximumAllowedResources withMemory(String memory) {
         this.memory = memory;
         return this;
     }
     
+    public MaximumAllowedResources(@JsonProperty("cpu") String cpu, @JsonProperty("memory") String memory) {
+        this.cpu = cpu;
+        this.memory = memory;
+  }
 }

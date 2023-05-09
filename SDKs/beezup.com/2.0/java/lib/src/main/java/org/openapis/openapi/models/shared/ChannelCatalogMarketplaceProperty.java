@@ -18,6 +18,7 @@ public class ChannelCatalogMarketplaceProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ChannelCatalogMarketplaceProperty withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class ChannelCatalogMarketplaceProperty {
     
     @JsonProperty("discriminatorType")
     public ChannelCatalogMarketplacePropertyDiscriminatorTypeEnum discriminatorType;
+
     public ChannelCatalogMarketplaceProperty withDiscriminatorType(ChannelCatalogMarketplacePropertyDiscriminatorTypeEnum discriminatorType) {
         this.discriminatorType = discriminatorType;
         return this;
@@ -33,6 +35,7 @@ public class ChannelCatalogMarketplaceProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public BeezUPCommonInfoSummaries info;
+
     public ChannelCatalogMarketplaceProperty withInfo(BeezUPCommonInfoSummaries info) {
         this.info = info;
         return this;
@@ -44,6 +47,7 @@ public class ChannelCatalogMarketplaceProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lovLink")
     public BeezUPCommonLOVLink3 lovLink;
+
     public ChannelCatalogMarketplaceProperty withLovLink(BeezUPCommonLOVLink3 lovLink) {
         this.lovLink = lovLink;
         return this;
@@ -55,6 +59,7 @@ public class ChannelCatalogMarketplaceProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lovRequired")
     public Boolean lovRequired;
+
     public ChannelCatalogMarketplaceProperty withLovRequired(Boolean lovRequired) {
         this.lovRequired = lovRequired;
         return this;
@@ -66,6 +71,7 @@ public class ChannelCatalogMarketplaceProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxItems")
     public Integer maxItems;
+
     public ChannelCatalogMarketplaceProperty withMaxItems(Integer maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -77,6 +83,7 @@ public class ChannelCatalogMarketplaceProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxLength")
     public Integer maxLength;
+
     public ChannelCatalogMarketplaceProperty withMaxLength(Integer maxLength) {
         this.maxLength = maxLength;
         return this;
@@ -88,6 +95,7 @@ public class ChannelCatalogMarketplaceProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minItems")
     public Integer minItems;
+
     public ChannelCatalogMarketplaceProperty withMinItems(Integer minItems) {
         this.minItems = minItems;
         return this;
@@ -99,6 +107,7 @@ public class ChannelCatalogMarketplaceProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minLength")
     public Integer minLength;
+
     public ChannelCatalogMarketplaceProperty withMinLength(Integer minLength) {
         this.minLength = minLength;
         return this;
@@ -109,6 +118,7 @@ public class ChannelCatalogMarketplaceProperty {
      */
     @JsonProperty("name")
     public String name;
+
     public ChannelCatalogMarketplaceProperty withName(String name) {
         this.name = name;
         return this;
@@ -120,6 +130,7 @@ public class ChannelCatalogMarketplaceProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerIdRequired")
     public Long offerIdRequired;
+
     public ChannelCatalogMarketplaceProperty withOfferIdRequired(Long offerIdRequired) {
         this.offerIdRequired = offerIdRequired;
         return this;
@@ -131,6 +142,7 @@ public class ChannelCatalogMarketplaceProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pattern")
     public String pattern;
+
     public ChannelCatalogMarketplaceProperty withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -141,6 +153,7 @@ public class ChannelCatalogMarketplaceProperty {
      */
     @JsonProperty("position")
     public Long position;
+
     public ChannelCatalogMarketplaceProperty withPosition(Long position) {
         this.position = position;
         return this;
@@ -151,6 +164,7 @@ public class ChannelCatalogMarketplaceProperty {
      */
     @JsonProperty("readOnly")
     public Boolean readOnly;
+
     public ChannelCatalogMarketplaceProperty withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -161,6 +175,7 @@ public class ChannelCatalogMarketplaceProperty {
      */
     @JsonProperty("required")
     public Boolean required;
+
     public ChannelCatalogMarketplaceProperty withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -171,6 +186,7 @@ public class ChannelCatalogMarketplaceProperty {
      */
     @JsonProperty("type")
     public TypeEnum type;
+
     public ChannelCatalogMarketplaceProperty withType(TypeEnum type) {
         this.type = type;
         return this;
@@ -181,9 +197,19 @@ public class ChannelCatalogMarketplaceProperty {
      */
     @JsonProperty("visible")
     public Boolean visible;
+
     public ChannelCatalogMarketplaceProperty withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public ChannelCatalogMarketplaceProperty(@JsonProperty("discriminatorType") ChannelCatalogMarketplacePropertyDiscriminatorTypeEnum discriminatorType, @JsonProperty("name") String name, @JsonProperty("position") Long position, @JsonProperty("readOnly") Boolean readOnly, @JsonProperty("required") Boolean required, @JsonProperty("type") TypeEnum type, @JsonProperty("visible") Boolean visible) {
+        this.discriminatorType = discriminatorType;
+        this.name = name;
+        this.position = position;
+        this.readOnly = readOnly;
+        this.required = required;
+        this.type = type;
+        this.visible = visible;
+  }
 }

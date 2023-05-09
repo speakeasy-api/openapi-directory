@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DefineAnalysisSchemeRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;DefineAnalysisScheme&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to update and the analysis scheme configuration.
@@ -15,6 +15,7 @@ public class DefineAnalysisSchemeRequest {
      */
     
     public AnalysisScheme analysisScheme;
+
     public DefineAnalysisSchemeRequest withAnalysisScheme(AnalysisScheme analysisScheme) {
         this.analysisScheme = analysisScheme;
         return this;
@@ -25,9 +26,14 @@ public class DefineAnalysisSchemeRequest {
      */
     
     public String domainName;
+
     public DefineAnalysisSchemeRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public DefineAnalysisSchemeRequest(@JsonProperty("AnalysisScheme") AnalysisScheme analysisScheme, @JsonProperty("DomainName") String domainName) {
+        this.analysisScheme = analysisScheme;
+        this.domainName = domainName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetEurekaInfoResponse {
     
     public String contentType;
+
     public SetEurekaInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SetEurekaInfoResponse {
     
     
     public String setEurekaInfo200TextPlainObject;
+
     public SetEurekaInfoResponse withSetEurekaInfo200TextPlainObject(String setEurekaInfo200TextPlainObject) {
         this.setEurekaInfo200TextPlainObject = setEurekaInfo200TextPlainObject;
         return this;
@@ -23,6 +26,7 @@ public class SetEurekaInfoResponse {
     
     
     public Integer statusCode;
+
     public SetEurekaInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class SetEurekaInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetEurekaInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SetEurekaInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

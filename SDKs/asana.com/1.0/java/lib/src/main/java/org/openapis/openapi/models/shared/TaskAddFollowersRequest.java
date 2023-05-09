@@ -12,9 +12,13 @@ public class TaskAddFollowersRequest {
      */
     @JsonProperty("followers")
     public String[] followers;
+
     public TaskAddFollowersRequest withFollowers(String[] followers) {
         this.followers = followers;
         return this;
     }
     
+    public TaskAddFollowersRequest(@JsonProperty("followers") String[] followers) {
+        this.followers = followers;
+  }
 }

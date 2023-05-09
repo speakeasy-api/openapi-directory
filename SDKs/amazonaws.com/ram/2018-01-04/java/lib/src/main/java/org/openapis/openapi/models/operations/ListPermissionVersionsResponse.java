@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPermissionVersionsResponse {
     
     public String contentType;
+
     public ListPermissionVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPermissionVersionsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListPermissionVersionsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListPermissionVersionsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListPermissionVersionsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListPermissionVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPermissionVersionsResponse listPermissionVersionsResponse;
+
     public ListPermissionVersionsResponse withListPermissionVersionsResponse(org.openapis.openapi.models.shared.ListPermissionVersionsResponse listPermissionVersionsResponse) {
         this.listPermissionVersionsResponse = listPermissionVersionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListPermissionVersionsResponse {
      */
     
     public Object malformedArnException;
+
     public ListPermissionVersionsResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -59,6 +65,7 @@ public class ListPermissionVersionsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public ListPermissionVersionsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -69,6 +76,7 @@ public class ListPermissionVersionsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListPermissionVersionsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ListPermissionVersionsResponse {
     
     
     public Integer statusCode;
+
     public ListPermissionVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListPermissionVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPermissionVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListPermissionVersionsResponse {
      */
     
     public Object serverInternalException;
+
     public ListPermissionVersionsResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -103,9 +114,14 @@ public class ListPermissionVersionsResponse {
      */
     
     public Object unknownResourceException;
+
     public ListPermissionVersionsResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public ListPermissionVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

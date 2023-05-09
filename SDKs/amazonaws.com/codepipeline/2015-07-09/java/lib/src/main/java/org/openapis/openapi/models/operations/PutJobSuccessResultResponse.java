@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutJobSuccessResultResponse {
     
     public String contentType;
+
     public PutJobSuccessResultResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutJobSuccessResultResponse {
      */
     
     public Object invalidJobStateException;
+
     public PutJobSuccessResultResponse withInvalidJobStateException(Object invalidJobStateException) {
         this.invalidJobStateException = invalidJobStateException;
         return this;
@@ -29,6 +32,7 @@ public class PutJobSuccessResultResponse {
      */
     
     public Object jobNotFoundException;
+
     public PutJobSuccessResultResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class PutJobSuccessResultResponse {
      */
     
     public Object outputVariablesSizeExceededException;
+
     public PutJobSuccessResultResponse withOutputVariablesSizeExceededException(Object outputVariablesSizeExceededException) {
         this.outputVariablesSizeExceededException = outputVariablesSizeExceededException;
         return this;
@@ -46,6 +51,7 @@ public class PutJobSuccessResultResponse {
     
     
     public Integer statusCode;
+
     public PutJobSuccessResultResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutJobSuccessResultResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutJobSuccessResultResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutJobSuccessResultResponse {
      */
     
     public Object validationException;
+
     public PutJobSuccessResultResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutJobSuccessResultResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

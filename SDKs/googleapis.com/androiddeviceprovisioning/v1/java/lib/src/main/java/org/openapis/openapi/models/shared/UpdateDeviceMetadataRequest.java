@@ -18,9 +18,11 @@ public class UpdateDeviceMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceMetadata")
     public DeviceMetadata deviceMetadata;
+
     public UpdateDeviceMetadataRequest withDeviceMetadata(DeviceMetadata deviceMetadata) {
         this.deviceMetadata = deviceMetadata;
         return this;
     }
     
+    public UpdateDeviceMetadataRequest(){}
 }

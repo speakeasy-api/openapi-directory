@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeDeliveryStreamOutput {
     @JsonProperty("DeliveryStreamDescription")
     public DeliveryStreamDescription deliveryStreamDescription;
+
     public DescribeDeliveryStreamOutput withDeliveryStreamDescription(DeliveryStreamDescription deliveryStreamDescription) {
         this.deliveryStreamDescription = deliveryStreamDescription;
         return this;
     }
     
+    public DescribeDeliveryStreamOutput(@JsonProperty("DeliveryStreamDescription") DeliveryStreamDescription deliveryStreamDescription) {
+        this.deliveryStreamDescription = deliveryStreamDescription;
+  }
 }

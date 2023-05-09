@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateInferenceRecommendationsJobRequest {
     @JsonProperty("InputConfig")
     public RecommendationJobInputConfig inputConfig;
+
     public CreateInferenceRecommendationsJobRequest withInputConfig(RecommendationJobInputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -19,6 +20,7 @@ public class CreateInferenceRecommendationsJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobDescription")
     public String jobDescription;
+
     public CreateInferenceRecommendationsJobRequest withJobDescription(String jobDescription) {
         this.jobDescription = jobDescription;
         return this;
@@ -26,6 +28,7 @@ public class CreateInferenceRecommendationsJobRequest {
     
     @JsonProperty("JobName")
     public String jobName;
+
     public CreateInferenceRecommendationsJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -33,6 +36,7 @@ public class CreateInferenceRecommendationsJobRequest {
     
     @JsonProperty("JobType")
     public RecommendationJobTypeEnum jobType;
+
     public CreateInferenceRecommendationsJobRequest withJobType(RecommendationJobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -41,6 +45,7 @@ public class CreateInferenceRecommendationsJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputConfig")
     public RecommendationJobOutputConfig outputConfig;
+
     public CreateInferenceRecommendationsJobRequest withOutputConfig(RecommendationJobOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -48,6 +53,7 @@ public class CreateInferenceRecommendationsJobRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateInferenceRecommendationsJobRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -56,6 +62,7 @@ public class CreateInferenceRecommendationsJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppingConditions")
     public RecommendationJobStoppingConditions stoppingConditions;
+
     public CreateInferenceRecommendationsJobRequest withStoppingConditions(RecommendationJobStoppingConditions stoppingConditions) {
         this.stoppingConditions = stoppingConditions;
         return this;
@@ -64,9 +71,16 @@ public class CreateInferenceRecommendationsJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateInferenceRecommendationsJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateInferenceRecommendationsJobRequest(@JsonProperty("InputConfig") RecommendationJobInputConfig inputConfig, @JsonProperty("JobName") String jobName, @JsonProperty("JobType") RecommendationJobTypeEnum jobType, @JsonProperty("RoleArn") String roleArn) {
+        this.inputConfig = inputConfig;
+        this.jobName = jobName;
+        this.jobType = jobType;
+        this.roleArn = roleArn;
+  }
 }

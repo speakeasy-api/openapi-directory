@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Key")
     public String apiKeyAuth;
+
     public PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdSecurity withApiKeyAuth(String apiKeyAuth) {
         this.apiKeyAuth = apiKeyAuth;
         return this;
@@ -16,9 +17,11 @@ public class PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdSecurit
     
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
     public org.openapis.openapi.models.shared.SchemeBasicAuth basicAuth;
+
     public PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdSecurity withBasicAuth(org.openapis.openapi.models.shared.SchemeBasicAuth basicAuth) {
         this.basicAuth = basicAuth;
         return this;
     }
     
+    public PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdSecurity(){}
 }

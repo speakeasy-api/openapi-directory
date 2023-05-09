@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSuperfundResponse {
     
     public String contentType;
+
     public GetSuperfundResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSuperfundResponse {
     
     
     public Integer statusCode;
+
     public GetSuperfundResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetSuperfundResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSuperfundResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetSuperfundResponse {
      */
     
     public org.openapis.openapi.models.shared.SuperFunds superFunds;
+
     public GetSuperfundResponse withSuperFunds(org.openapis.openapi.models.shared.SuperFunds superFunds) {
         this.superFunds = superFunds;
         return this;
     }
     
+    public GetSuperfundResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

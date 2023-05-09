@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointGetTaxiRanksByIdsRequest {
@@ -12,9 +13,13 @@ public class StopPointGetTaxiRanksByIdsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stopPointId")
     public String stopPointId;
+
     public StopPointGetTaxiRanksByIdsRequest withStopPointId(String stopPointId) {
         this.stopPointId = stopPointId;
         return this;
     }
     
+    public StopPointGetTaxiRanksByIdsRequest(@JsonProperty("stopPointId") String stopPointId) {
+        this.stopPointId = stopPointId;
+  }
 }

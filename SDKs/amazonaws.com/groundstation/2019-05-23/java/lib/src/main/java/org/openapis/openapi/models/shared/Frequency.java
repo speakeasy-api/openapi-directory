@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Frequency {
     @JsonProperty("units")
     public FrequencyUnitsEnum units;
+
     public Frequency withUnits(FrequencyUnitsEnum units) {
         this.units = units;
         return this;
@@ -19,9 +20,14 @@ public class Frequency {
     
     @JsonProperty("value")
     public Double value;
+
     public Frequency withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public Frequency(@JsonProperty("units") FrequencyUnitsEnum units, @JsonProperty("value") Double value) {
+        this.units = units;
+        this.value = value;
+  }
 }

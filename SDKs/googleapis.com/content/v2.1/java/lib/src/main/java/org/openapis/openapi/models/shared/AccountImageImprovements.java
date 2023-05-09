@@ -18,6 +18,7 @@ public class AccountImageImprovements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountImageImprovementsSettings")
     public AccountImageImprovementsSettings accountImageImprovementsSettings;
+
     public AccountImageImprovements withAccountImageImprovementsSettings(AccountImageImprovementsSettings accountImageImprovementsSettings) {
         this.accountImageImprovementsSettings = accountImageImprovementsSettings;
         return this;
@@ -29,9 +30,11 @@ public class AccountImageImprovements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveAllowAutomaticImageImprovements")
     public Boolean effectiveAllowAutomaticImageImprovements;
+
     public AccountImageImprovements withEffectiveAllowAutomaticImageImprovements(Boolean effectiveAllowAutomaticImageImprovements) {
         this.effectiveAllowAutomaticImageImprovements = effectiveAllowAutomaticImageImprovements;
         return this;
     }
     
+    public AccountImageImprovements(){}
 }

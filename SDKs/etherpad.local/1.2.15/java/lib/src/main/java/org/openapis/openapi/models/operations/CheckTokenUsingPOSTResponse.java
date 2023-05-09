@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CheckTokenUsingPOSTResponse {
     
     public String contentType;
+
     public CheckTokenUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CheckTokenUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public CheckTokenUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CheckTokenUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CheckTokenUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CheckTokenUsingPOSTResponse {
      */
     
     public CheckTokenUsingPOST200ApplicationJSON checkTokenUsingPOST200ApplicationJSONObject;
+
     public CheckTokenUsingPOSTResponse withCheckTokenUsingPOST200ApplicationJSONObject(CheckTokenUsingPOST200ApplicationJSON checkTokenUsingPOST200ApplicationJSONObject) {
         this.checkTokenUsingPOST200ApplicationJSONObject = checkTokenUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CheckTokenUsingPOSTResponse {
      */
     
     public CheckTokenUsingPOST400ApplicationJSON checkTokenUsingPOST400ApplicationJSONObject;
+
     public CheckTokenUsingPOSTResponse withCheckTokenUsingPOST400ApplicationJSONObject(CheckTokenUsingPOST400ApplicationJSON checkTokenUsingPOST400ApplicationJSONObject) {
         this.checkTokenUsingPOST400ApplicationJSONObject = checkTokenUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CheckTokenUsingPOSTResponse {
      */
     
     public CheckTokenUsingPOST401ApplicationJSON checkTokenUsingPOST401ApplicationJSONObject;
+
     public CheckTokenUsingPOSTResponse withCheckTokenUsingPOST401ApplicationJSONObject(CheckTokenUsingPOST401ApplicationJSON checkTokenUsingPOST401ApplicationJSONObject) {
         this.checkTokenUsingPOST401ApplicationJSONObject = checkTokenUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CheckTokenUsingPOSTResponse {
      */
     
     public CheckTokenUsingPOST500ApplicationJSON checkTokenUsingPOST500ApplicationJSONObject;
+
     public CheckTokenUsingPOSTResponse withCheckTokenUsingPOST500ApplicationJSONObject(CheckTokenUsingPOST500ApplicationJSON checkTokenUsingPOST500ApplicationJSONObject) {
         this.checkTokenUsingPOST500ApplicationJSONObject = checkTokenUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public CheckTokenUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

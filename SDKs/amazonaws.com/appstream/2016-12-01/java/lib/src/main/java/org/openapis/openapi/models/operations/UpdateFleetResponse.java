@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFleetResponse {
@@ -12,6 +13,7 @@ public class UpdateFleetResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateFleetResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFleetResponse {
     
     
     public String contentType;
+
     public UpdateFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFleetResponse {
      */
     
     public Object incompatibleImageException;
+
     public UpdateFleetResponse withIncompatibleImageException(Object incompatibleImageException) {
         this.incompatibleImageException = incompatibleImageException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFleetResponse {
      */
     
     public Object invalidAccountStatusException;
+
     public UpdateFleetResponse withInvalidAccountStatusException(Object invalidAccountStatusException) {
         this.invalidAccountStatusException = invalidAccountStatusException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFleetResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public UpdateFleetResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateFleetResponse {
      */
     
     public Object invalidRoleException;
+
     public UpdateFleetResponse withInvalidRoleException(Object invalidRoleException) {
         this.invalidRoleException = invalidRoleException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateFleetResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateFleetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateFleetResponse {
      */
     
     public Object operationNotPermittedException;
+
     public UpdateFleetResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -89,6 +98,7 @@ public class UpdateFleetResponse {
      */
     
     public Object resourceNotAvailableException;
+
     public UpdateFleetResponse withResourceNotAvailableException(Object resourceNotAvailableException) {
         this.resourceNotAvailableException = resourceNotAvailableException;
         return this;
@@ -99,6 +109,7 @@ public class UpdateFleetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFleetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -106,6 +117,7 @@ public class UpdateFleetResponse {
     
     
     public Integer statusCode;
+
     public UpdateFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class UpdateFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class UpdateFleetResponse {
      */
     
     public Object requestLimitExceededException;
+
     public UpdateFleetResponse withRequestLimitExceededException(Object requestLimitExceededException) {
         this.requestLimitExceededException = requestLimitExceededException;
         return this;
@@ -133,6 +147,7 @@ public class UpdateFleetResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateFleetResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -143,9 +158,14 @@ public class UpdateFleetResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFleetResult updateFleetResult;
+
     public UpdateFleetResponse withUpdateFleetResult(org.openapis.openapi.models.shared.UpdateFleetResult updateFleetResult) {
         this.updateFleetResult = updateFleetResult;
         return this;
     }
     
+    public UpdateFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

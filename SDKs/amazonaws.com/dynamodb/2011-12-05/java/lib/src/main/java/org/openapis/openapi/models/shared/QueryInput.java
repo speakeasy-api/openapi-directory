@@ -15,6 +15,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributesToGet")
     public String[] attributesToGet;
+
     public QueryInput withAttributesToGet(String[] attributesToGet) {
         this.attributesToGet = attributesToGet;
         return this;
@@ -26,6 +27,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsistentRead")
     public Boolean consistentRead;
+
     public QueryInput withConsistentRead(Boolean consistentRead) {
         this.consistentRead = consistentRead;
         return this;
@@ -34,6 +36,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Boolean count;
+
     public QueryInput withCount(Boolean count) {
         this.count = count;
         return this;
@@ -42,6 +45,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveStartKey")
     public Key exclusiveStartKey;
+
     public QueryInput withExclusiveStartKey(Key exclusiveStartKey) {
         this.exclusiveStartKey = exclusiveStartKey;
         return this;
@@ -49,6 +53,7 @@ public class QueryInput {
     
     @JsonProperty("HashKeyValue")
     public AttributeValue hashKeyValue;
+
     public QueryInput withHashKeyValue(AttributeValue hashKeyValue) {
         this.hashKeyValue = hashKeyValue;
         return this;
@@ -57,6 +62,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public QueryInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -65,6 +71,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RangeKeyCondition")
     public Condition rangeKeyCondition;
+
     public QueryInput withRangeKeyCondition(Condition rangeKeyCondition) {
         this.rangeKeyCondition = rangeKeyCondition;
         return this;
@@ -73,6 +80,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScanIndexForward")
     public Boolean scanIndexForward;
+
     public QueryInput withScanIndexForward(Boolean scanIndexForward) {
         this.scanIndexForward = scanIndexForward;
         return this;
@@ -80,9 +88,14 @@ public class QueryInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public QueryInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public QueryInput(@JsonProperty("HashKeyValue") AttributeValue hashKeyValue, @JsonProperty("TableName") String tableName) {
+        this.hashKeyValue = hashKeyValue;
+        this.tableName = tableName;
+  }
 }

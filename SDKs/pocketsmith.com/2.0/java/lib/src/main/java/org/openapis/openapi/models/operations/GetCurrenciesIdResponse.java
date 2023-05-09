@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCurrenciesIdResponse {
     
     public String contentType;
+
     public GetCurrenciesIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCurrenciesIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Currency currency;
+
     public GetCurrenciesIdResponse withCurrency(org.openapis.openapi.models.shared.Currency currency) {
         this.currency = currency;
         return this;
@@ -29,6 +32,7 @@ public class GetCurrenciesIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetCurrenciesIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetCurrenciesIdResponse {
     
     
     public Integer statusCode;
+
     public GetCurrenciesIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCurrenciesIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCurrenciesIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCurrenciesIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class AnalyzeOrgPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraint")
     public AnalyzerOrgPolicyConstraint constraint;
+
     public AnalyzeOrgPoliciesResponse withConstraint(AnalyzerOrgPolicyConstraint constraint) {
         this.constraint = constraint;
         return this;
@@ -29,6 +30,7 @@ public class AnalyzeOrgPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public AnalyzeOrgPoliciesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class AnalyzeOrgPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgPolicyResults")
     public OrgPolicyResult[] orgPolicyResults;
+
     public AnalyzeOrgPoliciesResponse withOrgPolicyResults(OrgPolicyResult[] orgPolicyResults) {
         this.orgPolicyResults = orgPolicyResults;
         return this;
     }
     
+    public AnalyzeOrgPoliciesResponse(){}
 }

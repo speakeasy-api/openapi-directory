@@ -18,6 +18,7 @@ public class InterconnectAttachmentPartnerMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interconnectName")
     public String interconnectName;
+
     public InterconnectAttachmentPartnerMetadata withInterconnectName(String interconnectName) {
         this.interconnectName = interconnectName;
         return this;
@@ -29,6 +30,7 @@ public class InterconnectAttachmentPartnerMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerName")
     public String partnerName;
+
     public InterconnectAttachmentPartnerMetadata withPartnerName(String partnerName) {
         this.partnerName = partnerName;
         return this;
@@ -40,9 +42,11 @@ public class InterconnectAttachmentPartnerMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portalUrl")
     public String portalUrl;
+
     public InterconnectAttachmentPartnerMetadata withPortalUrl(String portalUrl) {
         this.portalUrl = portalUrl;
         return this;
     }
     
+    public InterconnectAttachmentPartnerMetadata(){}
 }

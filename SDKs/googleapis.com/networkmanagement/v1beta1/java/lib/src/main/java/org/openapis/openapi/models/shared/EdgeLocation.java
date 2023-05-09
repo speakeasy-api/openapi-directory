@@ -18,9 +18,11 @@ public class EdgeLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metropolitanArea")
     public String metropolitanArea;
+
     public EdgeLocation withMetropolitanArea(String metropolitanArea) {
         this.metropolitanArea = metropolitanArea;
         return this;
     }
     
+    public EdgeLocation(){}
 }

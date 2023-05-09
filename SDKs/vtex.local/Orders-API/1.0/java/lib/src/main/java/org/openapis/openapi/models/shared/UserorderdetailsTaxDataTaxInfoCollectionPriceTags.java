@@ -12,6 +12,7 @@ public class UserorderdetailsTaxDataTaxInfoCollectionPriceTags {
      */
     @JsonProperty("isPercentual")
     public Boolean isPercentual;
+
     public UserorderdetailsTaxDataTaxInfoCollectionPriceTags withIsPercentual(Boolean isPercentual) {
         this.isPercentual = isPercentual;
         return this;
@@ -22,6 +23,7 @@ public class UserorderdetailsTaxDataTaxInfoCollectionPriceTags {
      */
     @JsonProperty("name")
     public String name;
+
     public UserorderdetailsTaxDataTaxInfoCollectionPriceTags withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,15 @@ public class UserorderdetailsTaxDataTaxInfoCollectionPriceTags {
      */
     @JsonProperty("rawValue")
     public String rawValue;
+
     public UserorderdetailsTaxDataTaxInfoCollectionPriceTags withRawValue(String rawValue) {
         this.rawValue = rawValue;
         return this;
     }
     
+    public UserorderdetailsTaxDataTaxInfoCollectionPriceTags(@JsonProperty("isPercentual") Boolean isPercentual, @JsonProperty("name") String name, @JsonProperty("rawValue") String rawValue) {
+        this.isPercentual = isPercentual;
+        this.name = name;
+        this.rawValue = rawValue;
+  }
 }

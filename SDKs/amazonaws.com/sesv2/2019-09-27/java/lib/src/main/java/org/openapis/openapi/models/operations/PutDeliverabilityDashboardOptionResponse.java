@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutDeliverabilityDashboardOptionResponse {
@@ -12,6 +13,7 @@ public class PutDeliverabilityDashboardOptionResponse {
      */
     
     public Object alreadyExistsException;
+
     public PutDeliverabilityDashboardOptionResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class PutDeliverabilityDashboardOptionResponse {
      */
     
     public Object badRequestException;
+
     public PutDeliverabilityDashboardOptionResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class PutDeliverabilityDashboardOptionResponse {
     
     
     public String contentType;
+
     public PutDeliverabilityDashboardOptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutDeliverabilityDashboardOptionResponse {
      */
     
     public Object limitExceededException;
+
     public PutDeliverabilityDashboardOptionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class PutDeliverabilityDashboardOptionResponse {
      */
     
     public Object notFoundException;
+
     public PutDeliverabilityDashboardOptionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PutDeliverabilityDashboardOptionResponse {
      */
     
     public java.util.Map<String, Object> putDeliverabilityDashboardOptionResponse;
+
     public PutDeliverabilityDashboardOptionResponse withPutDeliverabilityDashboardOptionResponse(java.util.Map<String, Object> putDeliverabilityDashboardOptionResponse) {
         this.putDeliverabilityDashboardOptionResponse = putDeliverabilityDashboardOptionResponse;
         return this;
@@ -66,6 +73,7 @@ public class PutDeliverabilityDashboardOptionResponse {
     
     
     public Integer statusCode;
+
     public PutDeliverabilityDashboardOptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutDeliverabilityDashboardOptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutDeliverabilityDashboardOptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class PutDeliverabilityDashboardOptionResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutDeliverabilityDashboardOptionResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutDeliverabilityDashboardOptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

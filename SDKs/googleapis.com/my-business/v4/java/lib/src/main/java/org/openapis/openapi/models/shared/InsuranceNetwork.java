@@ -18,6 +18,7 @@ public class InsuranceNetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkId")
     public String networkId;
+
     public InsuranceNetwork withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -29,6 +30,7 @@ public class InsuranceNetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkNames")
     public java.util.Map<String, String> networkNames;
+
     public InsuranceNetwork withNetworkNames(java.util.Map<String, String> networkNames) {
         this.networkNames = networkNames;
         return this;
@@ -40,6 +42,7 @@ public class InsuranceNetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payerNames")
     public java.util.Map<String, String> payerNames;
+
     public InsuranceNetwork withPayerNames(java.util.Map<String, String> payerNames) {
         this.payerNames = payerNames;
         return this;
@@ -51,9 +54,11 @@ public class InsuranceNetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public InsuranceNetworkStateEnum state;
+
     public InsuranceNetwork withState(InsuranceNetworkStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public InsuranceNetwork(){}
 }

@@ -15,6 +15,7 @@ public class SubmitJobRequestBodyNodeOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePropertyOverrides")
     public org.openapis.openapi.models.shared.NodePropertyOverride[] nodePropertyOverrides;
+
     public SubmitJobRequestBodyNodeOverrides withNodePropertyOverrides(org.openapis.openapi.models.shared.NodePropertyOverride[] nodePropertyOverrides) {
         this.nodePropertyOverrides = nodePropertyOverrides;
         return this;
@@ -23,9 +24,11 @@ public class SubmitJobRequestBodyNodeOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numNodes")
     public Long numNodes;
+
     public SubmitJobRequestBodyNodeOverrides withNumNodes(Long numNodes) {
         this.numNodes = numNodes;
         return this;
     }
     
+    public SubmitJobRequestBodyNodeOverrides(){}
 }

@@ -15,6 +15,7 @@ public class Precinct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("administrationRegionId")
     public String administrationRegionId;
+
     public Precinct withAdministrationRegionId(String administrationRegionId) {
         this.administrationRegionId = administrationRegionId;
         return this;
@@ -26,6 +27,7 @@ public class Precinct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contestId")
     public String[] contestId;
+
     public Precinct withContestId(String[] contestId) {
         this.contestId = contestId;
         return this;
@@ -37,6 +39,7 @@ public class Precinct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetId")
     public String datasetId;
+
     public Precinct withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -48,6 +51,7 @@ public class Precinct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earlyVoteSiteId")
     public String[] earlyVoteSiteId;
+
     public Precinct withEarlyVoteSiteId(String[] earlyVoteSiteId) {
         this.earlyVoteSiteId = earlyVoteSiteId;
         return this;
@@ -59,6 +63,7 @@ public class Precinct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electoralDistrictId")
     public String[] electoralDistrictId;
+
     public Precinct withElectoralDistrictId(String[] electoralDistrictId) {
         this.electoralDistrictId = electoralDistrictId;
         return this;
@@ -70,6 +75,7 @@ public class Precinct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Precinct withId(String id) {
         this.id = id;
         return this;
@@ -81,6 +87,7 @@ public class Precinct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mailOnly")
     public Boolean mailOnly;
+
     public Precinct withMailOnly(Boolean mailOnly) {
         this.mailOnly = mailOnly;
         return this;
@@ -92,6 +99,7 @@ public class Precinct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Precinct withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +111,7 @@ public class Precinct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public Precinct withNumber(String number) {
         this.number = number;
         return this;
@@ -114,6 +123,7 @@ public class Precinct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ocdId")
     public String[] ocdId;
+
     public Precinct withOcdId(String[] ocdId) {
         this.ocdId = ocdId;
         return this;
@@ -125,6 +135,7 @@ public class Precinct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pollingLocationId")
     public String[] pollingLocationId;
+
     public Precinct withPollingLocationId(String[] pollingLocationId) {
         this.pollingLocationId = pollingLocationId;
         return this;
@@ -136,6 +147,7 @@ public class Precinct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spatialBoundaryId")
     public String[] spatialBoundaryId;
+
     public Precinct withSpatialBoundaryId(String[] spatialBoundaryId) {
         this.spatialBoundaryId = spatialBoundaryId;
         return this;
@@ -147,6 +159,7 @@ public class Precinct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splitName")
     public String splitName;
+
     public Precinct withSplitName(String splitName) {
         this.splitName = splitName;
         return this;
@@ -158,9 +171,11 @@ public class Precinct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ward")
     public String ward;
+
     public Precinct withWard(String ward) {
         this.ward = ward;
         return this;
     }
     
+    public Precinct(){}
 }

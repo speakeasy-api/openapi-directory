@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CreateApiRequestBodyApi;
-import org.openapis.openapi.models.operations.CreateApiRequestBody;
 import org.openapis.openapi.models.operations.CreateApiRequest;
+import org.openapis.openapi.models.operations.CreateApiRequestBody;
+import org.openapis.openapi.models.operations.CreateApiRequestBodyApi;
 import org.openapis.openapi.models.operations.CreateApiResponse;
 
 public class Application {
@@ -34,19 +33,21 @@ public class Application {
                         description = "This is description.";
                         name = "Sync Service API";
                         summary = "This is supposed to be a short summary.";
-                    }};
-                }};
+                    }};;
+                }};;
                 workspace = "{{workspaceId}}";
-            }}            
+            }};            
 
             CreateApiResponse res = sdk.api.createApi(req);
 
-            if (res.createApi200ApplicationJSONObject.isPresent()) {
+            if (res.createApi200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -54,116 +55,116 @@ public class Application {
 ## Available Resources and Operations
 
 
-### api
+### [api](docs/api/README.md)
 
-* `createApi` - Create API
-* `createApiVersion` - Create API Version
-* `createCollectionFromSchema` - Create collection from schema
-* `createRelations` - Create relations
-* `createSchema` - Create Schema
-* `deleteAnApi` - Delete an API
-* `deleteAnApiVersion` - Delete an API Version
-* `getAllApIs` - Get all APIs
-* `getAllApiVersions` - Get All API Versions
-* `getAnApiVersion` - Get an API Version
-* `getContractTestRelations` - Get contract test relations
-* `getDocumentationRelations` - Get  documentation relations
-* `getEnvironmentRelations` - Get environment relations
-* `getIntegrationTestRelations` - Get integration test relations
-* `getLinkedRelations` - Get linked relations
-* `getMonitorRelations` - Get monitor relations
-* `getSchema` - Get Schema
-* `getTestSuiteRelations` - Get test suite relations
-* `singleApi` - Single API
-* `syncRelationsWithSchema` - Sync relations with schema
-* `updateAnApi` - Update an API
-* `updateAnApiVersion` - Update an API Version
-* `updateSchema` - Update Schema
+* [createApi](docs/api/README.md#createapi) - Create API
+* [createApiVersion](docs/api/README.md#createapiversion) - Create API Version
+* [createCollectionFromSchema](docs/api/README.md#createcollectionfromschema) - Create collection from schema
+* [createRelations](docs/api/README.md#createrelations) - Create relations
+* [createSchema](docs/api/README.md#createschema) - Create Schema
+* [deleteAnApi](docs/api/README.md#deleteanapi) - Delete an API
+* [deleteAnApiVersion](docs/api/README.md#deleteanapiversion) - Delete an API Version
+* [getAllApIs](docs/api/README.md#getallapis) - Get all APIs
+* [getAllApiVersions](docs/api/README.md#getallapiversions) - Get All API Versions
+* [getAnApiVersion](docs/api/README.md#getanapiversion) - Get an API Version
+* [getContractTestRelations](docs/api/README.md#getcontracttestrelations) - Get contract test relations
+* [getDocumentationRelations](docs/api/README.md#getdocumentationrelations) - Get  documentation relations
+* [getEnvironmentRelations](docs/api/README.md#getenvironmentrelations) - Get environment relations
+* [getIntegrationTestRelations](docs/api/README.md#getintegrationtestrelations) - Get integration test relations
+* [getLinkedRelations](docs/api/README.md#getlinkedrelations) - Get linked relations
+* [getMonitorRelations](docs/api/README.md#getmonitorrelations) - Get monitor relations
+* [getSchema](docs/api/README.md#getschema) - Get Schema
+* [getTestSuiteRelations](docs/api/README.md#gettestsuiterelations) - Get test suite relations
+* [singleApi](docs/api/README.md#singleapi) - Single API
+* [syncRelationsWithSchema](docs/api/README.md#syncrelationswithschema) - Sync relations with schema
+* [updateAnApi](docs/api/README.md#updateanapi) - Update an API
+* [updateAnApiVersion](docs/api/README.md#updateanapiversion) - Update an API Version
+* [updateSchema](docs/api/README.md#updateschema) - Update Schema
 
-### apiVersion
+### [apiVersion](docs/apiversion/README.md)
 
-* `createApiVersion` - Create API Version
-* `deleteAnApiVersion` - Delete an API Version
-* `getAllApiVersions` - Get All API Versions
-* `getAnApiVersion` - Get an API Version
-* `updateAnApiVersion` - Update an API Version
+* [createApiVersion](docs/apiversion/README.md#createapiversion) - Create API Version
+* [deleteAnApiVersion](docs/apiversion/README.md#deleteanapiversion) - Delete an API Version
+* [getAllApiVersions](docs/apiversion/README.md#getallapiversions) - Get All API Versions
+* [getAnApiVersion](docs/apiversion/README.md#getanapiversion) - Get an API Version
+* [updateAnApiVersion](docs/apiversion/README.md#updateanapiversion) - Update an API Version
 
-### collections
+### [collections](docs/collections/README.md)
 
-* `allCollections` - All Collections
-* `createAFork` - Create a Fork
-* `createCollection` - Create Collection
-* `deleteCollection` - Delete Collection
-* `mergeAFork` - Merge a Fork
-* `singleCollection` - Single Collection 
-* `updateCollection` - Update Collection
+* [allCollections](docs/collections/README.md#allcollections) - All Collections
+* [createAFork](docs/collections/README.md#createafork) - Create a Fork
+* [createCollection](docs/collections/README.md#createcollection) - Create Collection
+* [deleteCollection](docs/collections/README.md#deletecollection) - Delete Collection
+* [mergeAFork](docs/collections/README.md#mergeafork) - Merge a Fork
+* [singleCollection](docs/collections/README.md#singlecollection) - Single Collection 
+* [updateCollection](docs/collections/README.md#updatecollection) - Update Collection
 
-### environments
+### [environments](docs/environments/README.md)
 
-* `allEnvironments` - All Environments
-* `createEnvironment` - Create Environment
-* `deleteEnvironment` - Delete Environment
-* `singleEnvironment` - Single Environment
-* `updateEnvironment` - Update Environment
+* [allEnvironments](docs/environments/README.md#allenvironments) - All Environments
+* [createEnvironment](docs/environments/README.md#createenvironment) - Create Environment
+* [deleteEnvironment](docs/environments/README.md#deleteenvironment) - Delete Environment
+* [singleEnvironment](docs/environments/README.md#singleenvironment) - Single Environment
+* [updateEnvironment](docs/environments/README.md#updateenvironment) - Update Environment
 
-### import_
+### [import_](docs/import/README.md)
 
-* `importExportedData` - Import exported data
-* `importExternalApiSpecification` - Import external API specification
+* [importExportedData](docs/import/README.md#importexporteddata) - Import exported data
+* [importExternalApiSpecification](docs/import/README.md#importexternalapispecification) - Import external API specification
 
-### mocks
+### [mocks](docs/mocks/README.md)
 
-* `allMocks` - All Mocks
-* `createMock` - Create Mock
-* `deleteMock` - Delete Mock
-* `publishMock` - Publish Mock
-* `singleMock` - Single Mock
-* `unpublishMock` - Unpublish Mock
-* `updateMock` - Update Mock
+* [allMocks](docs/mocks/README.md#allmocks) - All Mocks
+* [createMock](docs/mocks/README.md#createmock) - Create Mock
+* [deleteMock](docs/mocks/README.md#deletemock) - Delete Mock
+* [publishMock](docs/mocks/README.md#publishmock) - Publish Mock
+* [singleMock](docs/mocks/README.md#singlemock) - Single Mock
+* [unpublishMock](docs/mocks/README.md#unpublishmock) - Unpublish Mock
+* [updateMock](docs/mocks/README.md#updatemock) - Update Mock
 
-### monitors
+### [monitors](docs/monitors/README.md)
 
-* `allMonitors` - All Monitors
-* `createMonitor` - Create Monitor
-* `deleteMonitor` - Delete Monitor
-* `runAMonitor` - Run a Monitor
-* `singleMonitor` - Single Monitor
-* `updateMonitor` - Update Monitor
+* [allMonitors](docs/monitors/README.md#allmonitors) - All Monitors
+* [createMonitor](docs/monitors/README.md#createmonitor) - Create Monitor
+* [deleteMonitor](docs/monitors/README.md#deletemonitor) - Delete Monitor
+* [runAMonitor](docs/monitors/README.md#runamonitor) - Run a Monitor
+* [singleMonitor](docs/monitors/README.md#singlemonitor) - Single Monitor
+* [updateMonitor](docs/monitors/README.md#updatemonitor) - Update Monitor
 
-### relations
+### [relations](docs/relations/README.md)
 
-* `createRelations` - Create relations
-* `getContractTestRelations` - Get contract test relations
-* `getDocumentationRelations` - Get  documentation relations
-* `getEnvironmentRelations` - Get environment relations
-* `getIntegrationTestRelations` - Get integration test relations
-* `getLinkedRelations` - Get linked relations
-* `getMonitorRelations` - Get monitor relations
-* `getTestSuiteRelations` - Get test suite relations
-* `syncRelationsWithSchema` - Sync relations with schema
+* [createRelations](docs/relations/README.md#createrelations) - Create relations
+* [getContractTestRelations](docs/relations/README.md#getcontracttestrelations) - Get contract test relations
+* [getDocumentationRelations](docs/relations/README.md#getdocumentationrelations) - Get  documentation relations
+* [getEnvironmentRelations](docs/relations/README.md#getenvironmentrelations) - Get environment relations
+* [getIntegrationTestRelations](docs/relations/README.md#getintegrationtestrelations) - Get integration test relations
+* [getLinkedRelations](docs/relations/README.md#getlinkedrelations) - Get linked relations
+* [getMonitorRelations](docs/relations/README.md#getmonitorrelations) - Get monitor relations
+* [getTestSuiteRelations](docs/relations/README.md#gettestsuiterelations) - Get test suite relations
+* [syncRelationsWithSchema](docs/relations/README.md#syncrelationswithschema) - Sync relations with schema
 
-### schema
+### [schema](docs/schema/README.md)
 
-* `createCollectionFromSchema` - Create collection from schema
-* `createSchema` - Create Schema
-* `getSchema` - Get Schema
-* `updateSchema` - Update Schema
+* [createCollectionFromSchema](docs/schema/README.md#createcollectionfromschema) - Create collection from schema
+* [createSchema](docs/schema/README.md#createschema) - Create Schema
+* [getSchema](docs/schema/README.md#getschema) - Get Schema
+* [updateSchema](docs/schema/README.md#updateschema) - Update Schema
 
-### user
+### [user](docs/user/README.md)
 
-* `apiKeyOwner` - API Key Owner
+* [apiKeyOwner](docs/user/README.md#apikeyowner) - API Key Owner
 
-### webhooks
+### [webhooks](docs/webhooks/README.md)
 
-* `createWebhook` - Create Webhook
+* [createWebhook](docs/webhooks/README.md#createwebhook) - Create Webhook
 
-### workspaces
+### [workspaces](docs/workspaces/README.md)
 
-* `allWorkspaces` - All workspaces
-* `createWorkspace` - Create Workspace
-* `deleteWorkspace` - Delete Workspace
-* `singleWorkspace` - Single workspace
-* `updateWorkspace` - Update Workspace
+* [allWorkspaces](docs/workspaces/README.md#allworkspaces) - All workspaces
+* [createWorkspace](docs/workspaces/README.md#createworkspace) - Create Workspace
+* [deleteWorkspace](docs/workspaces/README.md#deleteworkspace) - Delete Workspace
+* [singleWorkspace](docs/workspaces/README.md#singleworkspace) - Single workspace
+* [updateWorkspace](docs/workspaces/README.md#updateworkspace) - Update Workspace
 <!-- End SDK Available Operations -->
 
 ### Maturity

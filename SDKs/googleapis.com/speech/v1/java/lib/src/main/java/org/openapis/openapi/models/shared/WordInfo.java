@@ -18,6 +18,7 @@ public class WordInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public WordInfo withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -29,6 +30,7 @@ public class WordInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public WordInfo withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +42,7 @@ public class WordInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speakerLabel")
     public String speakerLabel;
+
     public WordInfo withSpeakerLabel(String speakerLabel) {
         this.speakerLabel = speakerLabel;
         return this;
@@ -51,6 +54,7 @@ public class WordInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speakerTag")
     public Integer speakerTag;
+
     public WordInfo withSpeakerTag(Integer speakerTag) {
         this.speakerTag = speakerTag;
         return this;
@@ -62,6 +66,7 @@ public class WordInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public WordInfo withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -73,9 +78,11 @@ public class WordInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("word")
     public String word;
+
     public WordInfo withWord(String word) {
         this.word = word;
         return this;
     }
     
+    public WordInfo(){}
 }

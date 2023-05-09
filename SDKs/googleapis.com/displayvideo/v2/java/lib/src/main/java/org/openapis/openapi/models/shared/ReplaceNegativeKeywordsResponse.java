@@ -18,9 +18,11 @@ public class ReplaceNegativeKeywordsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negativeKeywords")
     public NegativeKeyword[] negativeKeywords;
+
     public ReplaceNegativeKeywordsResponse withNegativeKeywords(NegativeKeyword[] negativeKeywords) {
         this.negativeKeywords = negativeKeywords;
         return this;
     }
     
+    public ReplaceNegativeKeywordsResponse(){}
 }

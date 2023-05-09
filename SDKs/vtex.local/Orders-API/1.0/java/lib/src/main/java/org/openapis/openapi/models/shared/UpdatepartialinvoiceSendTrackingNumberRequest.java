@@ -12,6 +12,7 @@ public class UpdatepartialinvoiceSendTrackingNumberRequest {
      */
     @JsonProperty("courier")
     public String courier;
+
     public UpdatepartialinvoiceSendTrackingNumberRequest withCourier(String courier) {
         this.courier = courier;
         return this;
@@ -22,6 +23,7 @@ public class UpdatepartialinvoiceSendTrackingNumberRequest {
      */
     @JsonProperty("dispatchedDate")
     public String dispatchedDate;
+
     public UpdatepartialinvoiceSendTrackingNumberRequest withDispatchedDate(String dispatchedDate) {
         this.dispatchedDate = dispatchedDate;
         return this;
@@ -32,6 +34,7 @@ public class UpdatepartialinvoiceSendTrackingNumberRequest {
      */
     @JsonProperty("trackingNumber")
     public String trackingNumber;
+
     public UpdatepartialinvoiceSendTrackingNumberRequest withTrackingNumber(String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
@@ -42,9 +45,16 @@ public class UpdatepartialinvoiceSendTrackingNumberRequest {
      */
     @JsonProperty("trackingUrl")
     public String trackingUrl;
+
     public UpdatepartialinvoiceSendTrackingNumberRequest withTrackingUrl(String trackingUrl) {
         this.trackingUrl = trackingUrl;
         return this;
     }
     
+    public UpdatepartialinvoiceSendTrackingNumberRequest(@JsonProperty("courier") String courier, @JsonProperty("dispatchedDate") String dispatchedDate, @JsonProperty("trackingNumber") String trackingNumber, @JsonProperty("trackingUrl") String trackingUrl) {
+        this.courier = courier;
+        this.dispatchedDate = dispatchedDate;
+        this.trackingNumber = trackingNumber;
+        this.trackingUrl = trackingUrl;
+  }
 }

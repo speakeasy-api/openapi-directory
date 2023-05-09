@@ -15,6 +15,7 @@ public class RoleDetail {
      */
     
     public String arn;
+
     public RoleDetail withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class RoleDetail {
     
     
     public String assumeRolePolicyDocument;
+
     public RoleDetail withAssumeRolePolicyDocument(String assumeRolePolicyDocument) {
         this.assumeRolePolicyDocument = assumeRolePolicyDocument;
         return this;
@@ -29,6 +31,7 @@ public class RoleDetail {
     
     
     public AttachedPolicy[] attachedManagedPolicies;
+
     public RoleDetail withAttachedManagedPolicies(AttachedPolicy[] attachedManagedPolicies) {
         this.attachedManagedPolicies = attachedManagedPolicies;
         return this;
@@ -36,6 +39,7 @@ public class RoleDetail {
     
     
     public OffsetDateTime createDate;
+
     public RoleDetail withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -43,6 +47,7 @@ public class RoleDetail {
     
     
     public InstanceProfile[] instanceProfileList;
+
     public RoleDetail withInstanceProfileList(InstanceProfile[] instanceProfileList) {
         this.instanceProfileList = instanceProfileList;
         return this;
@@ -50,6 +55,7 @@ public class RoleDetail {
     
     
     public String path;
+
     public RoleDetail withPath(String path) {
         this.path = path;
         return this;
@@ -57,6 +63,7 @@ public class RoleDetail {
     
     
     public AttachedPermissionsBoundary permissionsBoundary;
+
     public RoleDetail withPermissionsBoundary(AttachedPermissionsBoundary permissionsBoundary) {
         this.permissionsBoundary = permissionsBoundary;
         return this;
@@ -64,6 +71,7 @@ public class RoleDetail {
     
     
     public String roleId;
+
     public RoleDetail withRoleId(String roleId) {
         this.roleId = roleId;
         return this;
@@ -71,6 +79,7 @@ public class RoleDetail {
     
     
     public RoleLastUsed roleLastUsed;
+
     public RoleDetail withRoleLastUsed(RoleLastUsed roleLastUsed) {
         this.roleLastUsed = roleLastUsed;
         return this;
@@ -78,6 +87,7 @@ public class RoleDetail {
     
     
     public String roleName;
+
     public RoleDetail withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -85,6 +95,7 @@ public class RoleDetail {
     
     
     public PolicyDetail[] rolePolicyList;
+
     public RoleDetail withRolePolicyList(PolicyDetail[] rolePolicyList) {
         this.rolePolicyList = rolePolicyList;
         return this;
@@ -92,9 +103,11 @@ public class RoleDetail {
     
     
     public Tag[] tags;
+
     public RoleDetail withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public RoleDetail(){}
 }

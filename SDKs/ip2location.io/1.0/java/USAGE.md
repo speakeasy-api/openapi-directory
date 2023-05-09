@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetFormatEnum;
 import org.openapis.openapi.models.operations.GetLangEnum;
 import org.openapis.openapi.models.operations.GetRequest;
@@ -15,12 +14,10 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetRequest req = new GetRequest() {{
-                format = "xml";
-                ip = "8.8.8.8";
-                key = "provident";
-                lang = "pt";
-            }}            
+            GetRequest req = new GetRequest("8.8.8.8", "corrupti") {{
+                format = GetFormatEnum.XML;
+                lang = GetLangEnum.PT;
+            }};            
 
             GetResponse res = sdk.get(req);
 
@@ -30,5 +27,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

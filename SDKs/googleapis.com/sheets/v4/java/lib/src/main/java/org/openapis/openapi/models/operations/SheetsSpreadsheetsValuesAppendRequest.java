@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SheetsSpreadsheetsValuesAppendRequest {
@@ -12,6 +13,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public SheetsSpreadsheetsValuesAppendRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ValueRange valueRange;
+
     public SheetsSpreadsheetsValuesAppendRequest withValueRange(org.openapis.openapi.models.shared.ValueRange valueRange) {
         this.valueRange = valueRange;
         return this;
@@ -29,6 +32,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public SheetsSpreadsheetsValuesAppendRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public SheetsSpreadsheetsValuesAppendRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public SheetsSpreadsheetsValuesAppendRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public SheetsSpreadsheetsValuesAppendRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeValuesInResponse")
     public Boolean includeValuesInResponse;
+
     public SheetsSpreadsheetsValuesAppendRequest withIncludeValuesInResponse(Boolean includeValuesInResponse) {
         this.includeValuesInResponse = includeValuesInResponse;
         return this;
@@ -79,6 +87,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=insertDataOption")
     public SheetsSpreadsheetsValuesAppendInsertDataOptionEnum insertDataOption;
+
     public SheetsSpreadsheetsValuesAppendRequest withInsertDataOption(SheetsSpreadsheetsValuesAppendInsertDataOptionEnum insertDataOption) {
         this.insertDataOption = insertDataOption;
         return this;
@@ -89,6 +98,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public SheetsSpreadsheetsValuesAppendRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public SheetsSpreadsheetsValuesAppendRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public SheetsSpreadsheetsValuesAppendRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public SheetsSpreadsheetsValuesAppendRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=range")
     public String range;
+
     public SheetsSpreadsheetsValuesAppendRequest withRange(String range) {
         this.range = range;
         return this;
@@ -139,6 +153,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=responseDateTimeRenderOption")
     public SheetsSpreadsheetsValuesAppendResponseDateTimeRenderOptionEnum responseDateTimeRenderOption;
+
     public SheetsSpreadsheetsValuesAppendRequest withResponseDateTimeRenderOption(SheetsSpreadsheetsValuesAppendResponseDateTimeRenderOptionEnum responseDateTimeRenderOption) {
         this.responseDateTimeRenderOption = responseDateTimeRenderOption;
         return this;
@@ -149,6 +164,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=responseValueRenderOption")
     public SheetsSpreadsheetsValuesAppendResponseValueRenderOptionEnum responseValueRenderOption;
+
     public SheetsSpreadsheetsValuesAppendRequest withResponseValueRenderOption(SheetsSpreadsheetsValuesAppendResponseValueRenderOptionEnum responseValueRenderOption) {
         this.responseValueRenderOption = responseValueRenderOption;
         return this;
@@ -159,6 +175,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spreadsheetId")
     public String spreadsheetId;
+
     public SheetsSpreadsheetsValuesAppendRequest withSpreadsheetId(String spreadsheetId) {
         this.spreadsheetId = spreadsheetId;
         return this;
@@ -169,6 +186,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public SheetsSpreadsheetsValuesAppendRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -179,6 +197,7 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public SheetsSpreadsheetsValuesAppendRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -189,9 +208,14 @@ public class SheetsSpreadsheetsValuesAppendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=valueInputOption")
     public SheetsSpreadsheetsValuesAppendValueInputOptionEnum valueInputOption;
+
     public SheetsSpreadsheetsValuesAppendRequest withValueInputOption(SheetsSpreadsheetsValuesAppendValueInputOptionEnum valueInputOption) {
         this.valueInputOption = valueInputOption;
         return this;
     }
     
+    public SheetsSpreadsheetsValuesAppendRequest(@JsonProperty("range") String range, @JsonProperty("spreadsheetId") String spreadsheetId) {
+        this.range = range;
+        this.spreadsheetId = spreadsheetId;
+  }
 }

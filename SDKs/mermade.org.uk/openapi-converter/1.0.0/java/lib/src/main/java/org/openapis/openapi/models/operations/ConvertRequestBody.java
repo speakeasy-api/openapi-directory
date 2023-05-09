@@ -12,6 +12,7 @@ public class ConvertRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=filename")
     public String filename;
+
     public ConvertRequestBody withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -22,6 +23,7 @@ public class ConvertRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=source")
     public String source;
+
     public ConvertRequestBody withSource(String source) {
         this.source = source;
         return this;
@@ -29,9 +31,11 @@ public class ConvertRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=validate")
     public ConvertRequestBodyValidateEnum validate;
+
     public ConvertRequestBody withValidate(ConvertRequestBodyValidateEnum validate) {
         this.validate = validate;
         return this;
     }
     
+    public ConvertRequestBody(){}
 }

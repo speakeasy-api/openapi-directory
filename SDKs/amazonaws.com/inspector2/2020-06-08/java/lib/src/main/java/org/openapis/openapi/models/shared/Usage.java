@@ -15,6 +15,7 @@ public class Usage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public CurrencyEnum currency;
+
     public Usage withCurrency(CurrencyEnum currency) {
         this.currency = currency;
         return this;
@@ -23,6 +24,7 @@ public class Usage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedMonthlyCost")
     public Double estimatedMonthlyCost;
+
     public Usage withEstimatedMonthlyCost(Double estimatedMonthlyCost) {
         this.estimatedMonthlyCost = estimatedMonthlyCost;
         return this;
@@ -31,6 +33,7 @@ public class Usage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public Usage withTotal(Double total) {
         this.total = total;
         return this;
@@ -39,9 +42,11 @@ public class Usage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UsageTypeEnum type;
+
     public Usage withType(UsageTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Usage(){}
 }

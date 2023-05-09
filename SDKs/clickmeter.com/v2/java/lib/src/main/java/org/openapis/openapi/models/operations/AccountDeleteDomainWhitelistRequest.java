@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountDeleteDomainWhitelistRequest {
@@ -12,9 +13,13 @@ public class AccountDeleteDomainWhitelistRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=whitelistId")
     public String whitelistId;
+
     public AccountDeleteDomainWhitelistRequest withWhitelistId(String whitelistId) {
         this.whitelistId = whitelistId;
         return this;
     }
     
+    public AccountDeleteDomainWhitelistRequest(@JsonProperty("whitelistId") String whitelistId) {
+        this.whitelistId = whitelistId;
+  }
 }

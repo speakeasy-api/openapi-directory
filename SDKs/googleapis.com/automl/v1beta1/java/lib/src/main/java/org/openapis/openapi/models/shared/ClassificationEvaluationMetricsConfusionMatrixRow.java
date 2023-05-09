@@ -18,9 +18,11 @@ public class ClassificationEvaluationMetricsConfusionMatrixRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exampleCount")
     public Integer[] exampleCount;
+
     public ClassificationEvaluationMetricsConfusionMatrixRow withExampleCount(Integer[] exampleCount) {
         this.exampleCount = exampleCount;
         return this;
     }
     
+    public ClassificationEvaluationMetricsConfusionMatrixRow(){}
 }

@@ -15,6 +15,7 @@ public class ListRegexMatchSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListRegexMatchSetsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -23,9 +24,11 @@ public class ListRegexMatchSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegexMatchSets")
     public RegexMatchSetSummary[] regexMatchSets;
+
     public ListRegexMatchSetsResponse withRegexMatchSets(RegexMatchSetSummary[] regexMatchSets) {
         this.regexMatchSets = regexMatchSets;
         return this;
     }
     
+    public ListRegexMatchSetsResponse(){}
 }

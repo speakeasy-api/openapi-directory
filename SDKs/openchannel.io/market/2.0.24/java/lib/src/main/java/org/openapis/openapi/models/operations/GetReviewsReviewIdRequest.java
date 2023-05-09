@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReviewsReviewIdRequest {
@@ -12,9 +13,13 @@ public class GetReviewsReviewIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reviewId")
     public String reviewId;
+
     public GetReviewsReviewIdRequest withReviewId(String reviewId) {
         this.reviewId = reviewId;
         return this;
     }
     
+    public GetReviewsReviewIdRequest(@JsonProperty("reviewId") String reviewId) {
+        this.reviewId = reviewId;
+  }
 }

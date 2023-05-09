@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchReadResponse {
@@ -12,6 +13,7 @@ public class BatchReadResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchReadResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchReadResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchReadResponse batchReadResponse;
+
     public BatchReadResponse withBatchReadResponse(org.openapis.openapi.models.shared.BatchReadResponse batchReadResponse) {
         this.batchReadResponse = batchReadResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchReadResponse {
     
     
     public String contentType;
+
     public BatchReadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchReadResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public BatchReadResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -49,6 +54,7 @@ public class BatchReadResponse {
      */
     
     public Object internalServiceException;
+
     public BatchReadResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class BatchReadResponse {
      */
     
     public Object invalidArnException;
+
     public BatchReadResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class BatchReadResponse {
      */
     
     public Object limitExceededException;
+
     public BatchReadResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class BatchReadResponse {
     
     
     public Integer statusCode;
+
     public BatchReadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class BatchReadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchReadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class BatchReadResponse {
      */
     
     public Object retryableConflictException;
+
     public BatchReadResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -103,9 +114,14 @@ public class BatchReadResponse {
      */
     
     public Object validationException;
+
     public BatchReadResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchReadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

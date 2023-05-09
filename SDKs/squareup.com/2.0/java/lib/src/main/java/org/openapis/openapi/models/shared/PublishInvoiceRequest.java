@@ -22,6 +22,7 @@ public class PublishInvoiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public PublishInvoiceRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -33,9 +34,13 @@ public class PublishInvoiceRequest {
      */
     @JsonProperty("version")
     public Long version;
+
     public PublishInvoiceRequest withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public PublishInvoiceRequest(@JsonProperty("version") Long version) {
+        this.version = version;
+  }
 }

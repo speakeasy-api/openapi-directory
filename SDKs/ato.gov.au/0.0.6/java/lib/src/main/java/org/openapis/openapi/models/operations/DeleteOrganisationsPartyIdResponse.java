@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteOrganisationsPartyIdResponse {
     
     public String contentType;
+
     public DeleteOrganisationsPartyIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteOrganisationsPartyIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteOrganisationsPartyIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteOrganisationsPartyIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteOrganisationsPartyIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeleteOrganisationsPartyIdResponse {
      */
     
     public org.openapis.openapi.models.shared.FailedPrecondition failedPrecondition;
+
     public DeleteOrganisationsPartyIdResponse withFailedPrecondition(org.openapis.openapi.models.shared.FailedPrecondition failedPrecondition) {
         this.failedPrecondition = failedPrecondition;
         return this;
@@ -43,6 +48,7 @@ public class DeleteOrganisationsPartyIdResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public DeleteOrganisationsPartyIdResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -53,9 +59,14 @@ public class DeleteOrganisationsPartyIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public DeleteOrganisationsPartyIdResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public DeleteOrganisationsPartyIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDatabasesInput {
     @JsonProperty("CatalogName")
     public String catalogName;
+
     public ListDatabasesInput withCatalogName(String catalogName) {
         this.catalogName = catalogName;
         return this;
@@ -19,6 +20,7 @@ public class ListDatabasesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDatabasesInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListDatabasesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDatabasesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDatabasesInput(@JsonProperty("CatalogName") String catalogName) {
+        this.catalogName = catalogName;
+  }
 }

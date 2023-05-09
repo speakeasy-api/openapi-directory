@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkSchedule {
     @JsonProperty("label")
     public String label;
+
     public WorkSchedule withLabel(String label) {
         this.label = label;
         return this;
@@ -16,9 +17,14 @@ public class WorkSchedule {
     
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public WorkSchedule withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public WorkSchedule(@JsonProperty("label") String label, @JsonProperty("value") java.util.Map<String, Object> value) {
+        this.label = label;
+        this.value = value;
+  }
 }

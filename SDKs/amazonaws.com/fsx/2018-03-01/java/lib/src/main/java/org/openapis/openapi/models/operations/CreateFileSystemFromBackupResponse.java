@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFileSystemFromBackupResponse {
@@ -12,6 +13,7 @@ public class CreateFileSystemFromBackupResponse {
      */
     
     public Object activeDirectoryError;
+
     public CreateFileSystemFromBackupResponse withActiveDirectoryError(Object activeDirectoryError) {
         this.activeDirectoryError = activeDirectoryError;
         return this;
@@ -22,6 +24,7 @@ public class CreateFileSystemFromBackupResponse {
      */
     
     public Object backupNotFound;
+
     public CreateFileSystemFromBackupResponse withBackupNotFound(Object backupNotFound) {
         this.backupNotFound = backupNotFound;
         return this;
@@ -32,6 +35,7 @@ public class CreateFileSystemFromBackupResponse {
      */
     
     public Object badRequest;
+
     public CreateFileSystemFromBackupResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -39,6 +43,7 @@ public class CreateFileSystemFromBackupResponse {
     
     
     public String contentType;
+
     public CreateFileSystemFromBackupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateFileSystemFromBackupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFileSystemFromBackupResponse createFileSystemFromBackupResponse;
+
     public CreateFileSystemFromBackupResponse withCreateFileSystemFromBackupResponse(org.openapis.openapi.models.shared.CreateFileSystemFromBackupResponse createFileSystemFromBackupResponse) {
         this.createFileSystemFromBackupResponse = createFileSystemFromBackupResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateFileSystemFromBackupResponse {
      */
     
     public Object incompatibleParameterError;
+
     public CreateFileSystemFromBackupResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -69,6 +76,7 @@ public class CreateFileSystemFromBackupResponse {
      */
     
     public Object internalServerError;
+
     public CreateFileSystemFromBackupResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -79,6 +87,7 @@ public class CreateFileSystemFromBackupResponse {
      */
     
     public Object invalidNetworkSettings;
+
     public CreateFileSystemFromBackupResponse withInvalidNetworkSettings(Object invalidNetworkSettings) {
         this.invalidNetworkSettings = invalidNetworkSettings;
         return this;
@@ -89,6 +98,7 @@ public class CreateFileSystemFromBackupResponse {
      */
     
     public Object invalidPerUnitStorageThroughput;
+
     public CreateFileSystemFromBackupResponse withInvalidPerUnitStorageThroughput(Object invalidPerUnitStorageThroughput) {
         this.invalidPerUnitStorageThroughput = invalidPerUnitStorageThroughput;
         return this;
@@ -99,6 +109,7 @@ public class CreateFileSystemFromBackupResponse {
      */
     
     public Object missingFileSystemConfiguration;
+
     public CreateFileSystemFromBackupResponse withMissingFileSystemConfiguration(Object missingFileSystemConfiguration) {
         this.missingFileSystemConfiguration = missingFileSystemConfiguration;
         return this;
@@ -109,6 +120,7 @@ public class CreateFileSystemFromBackupResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public CreateFileSystemFromBackupResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
@@ -116,6 +128,7 @@ public class CreateFileSystemFromBackupResponse {
     
     
     public Integer statusCode;
+
     public CreateFileSystemFromBackupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,9 +136,14 @@ public class CreateFileSystemFromBackupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFileSystemFromBackupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateFileSystemFromBackupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

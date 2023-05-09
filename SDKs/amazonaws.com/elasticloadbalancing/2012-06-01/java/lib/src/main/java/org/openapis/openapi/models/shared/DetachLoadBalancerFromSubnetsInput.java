@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DetachLoadBalancerFromSubnetsInput - Contains the parameters for DetachLoadBalancerFromSubnets.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DetachLoadBalancerFromSubnetsInput {
     
     public String loadBalancerName;
+
     public DetachLoadBalancerFromSubnetsInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -19,9 +20,14 @@ public class DetachLoadBalancerFromSubnetsInput {
     
     
     public String[] subnets;
+
     public DetachLoadBalancerFromSubnetsInput withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public DetachLoadBalancerFromSubnetsInput(@JsonProperty("LoadBalancerName") String loadBalancerName, @JsonProperty("Subnets") String[] subnets) {
+        this.loadBalancerName = loadBalancerName;
+        this.subnets = subnets;
+  }
 }

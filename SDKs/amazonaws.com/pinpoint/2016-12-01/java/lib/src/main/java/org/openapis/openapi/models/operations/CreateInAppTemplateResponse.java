@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateInAppTemplateResponse {
@@ -12,6 +13,7 @@ public class CreateInAppTemplateResponse {
      */
     
     public Object badRequestException;
+
     public CreateInAppTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateInAppTemplateResponse {
     
     
     public String contentType;
+
     public CreateInAppTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateInAppTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateInAppTemplateResponse createInAppTemplateResponse;
+
     public CreateInAppTemplateResponse withCreateInAppTemplateResponse(org.openapis.openapi.models.shared.CreateInAppTemplateResponse createInAppTemplateResponse) {
         this.createInAppTemplateResponse = createInAppTemplateResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateInAppTemplateResponse {
      */
     
     public Object forbiddenException;
+
     public CreateInAppTemplateResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class CreateInAppTemplateResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateInAppTemplateResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class CreateInAppTemplateResponse {
      */
     
     public Object methodNotAllowedException;
+
     public CreateInAppTemplateResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -66,6 +73,7 @@ public class CreateInAppTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateInAppTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateInAppTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateInAppTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateInAppTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateInAppTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateInAppTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudbillingBillingAccountsEstimateCostScenarioRequest {
@@ -12,6 +13,7 @@ public class CloudbillingBillingAccountsEstimateCostScenarioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudbillingBillingAccountsEstimateCostScenarioRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class CloudbillingBillingAccountsEstimateCostScenarioRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EstimateCostScenarioForBillingAccountRequest estimateCostScenarioForBillingAccountRequest;
+
     public CloudbillingBillingAccountsEstimateCostScenarioRequest withEstimateCostScenarioForBillingAccountRequest(org.openapis.openapi.models.shared.EstimateCostScenarioForBillingAccountRequest estimateCostScenarioForBillingAccountRequest) {
         this.estimateCostScenarioForBillingAccountRequest = estimateCostScenarioForBillingAccountRequest;
         return this;
@@ -29,6 +32,7 @@ public class CloudbillingBillingAccountsEstimateCostScenarioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudbillingBillingAccountsEstimateCostScenarioRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,16 +43,18 @@ public class CloudbillingBillingAccountsEstimateCostScenarioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudbillingBillingAccountsEstimateCostScenarioRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
     }
     
     /**
-     * Resource name of the billing account for the cost estimate. The resource name has the form `billingAccounts/{billing_acount_id}`. For example, `billingAccounts/012345-567890-ABCDEF` is the resource name for billing account `012345-567890-ABCDEF`. Must be specified.
+     * Resource name of the billing account for the cost estimate. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF` is the resource name for billing account `012345-567890-ABCDEF`. Must be specified.
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=billingAccount")
     public String billingAccount;
+
     public CloudbillingBillingAccountsEstimateCostScenarioRequest withBillingAccount(String billingAccount) {
         this.billingAccount = billingAccount;
         return this;
@@ -59,6 +65,7 @@ public class CloudbillingBillingAccountsEstimateCostScenarioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudbillingBillingAccountsEstimateCostScenarioRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class CloudbillingBillingAccountsEstimateCostScenarioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudbillingBillingAccountsEstimateCostScenarioRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class CloudbillingBillingAccountsEstimateCostScenarioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudbillingBillingAccountsEstimateCostScenarioRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class CloudbillingBillingAccountsEstimateCostScenarioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudbillingBillingAccountsEstimateCostScenarioRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class CloudbillingBillingAccountsEstimateCostScenarioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudbillingBillingAccountsEstimateCostScenarioRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class CloudbillingBillingAccountsEstimateCostScenarioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudbillingBillingAccountsEstimateCostScenarioRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class CloudbillingBillingAccountsEstimateCostScenarioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudbillingBillingAccountsEstimateCostScenarioRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class CloudbillingBillingAccountsEstimateCostScenarioRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudbillingBillingAccountsEstimateCostScenarioRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudbillingBillingAccountsEstimateCostScenarioRequest(@JsonProperty("billingAccount") String billingAccount) {
+        this.billingAccount = billingAccount;
+  }
 }

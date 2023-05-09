@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteGeoMatchSetResponse {
     
     public String contentType;
+
     public DeleteGeoMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteGeoMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteGeoMatchSetResponse deleteGeoMatchSetResponse;
+
     public DeleteGeoMatchSetResponse withDeleteGeoMatchSetResponse(org.openapis.openapi.models.shared.DeleteGeoMatchSetResponse deleteGeoMatchSetResponse) {
         this.deleteGeoMatchSetResponse = deleteGeoMatchSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class DeleteGeoMatchSetResponse {
     
     
     public Integer statusCode;
+
     public DeleteGeoMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteGeoMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteGeoMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DeleteGeoMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public DeleteGeoMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class DeleteGeoMatchSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public DeleteGeoMatchSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class DeleteGeoMatchSetResponse {
      */
     
     public Object wafNonEmptyEntityException;
+
     public DeleteGeoMatchSetResponse withWAFNonEmptyEntityException(Object wafNonEmptyEntityException) {
         this.wafNonEmptyEntityException = wafNonEmptyEntityException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteGeoMatchSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public DeleteGeoMatchSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteGeoMatchSetResponse {
      */
     
     public Object wafReferencedItemException;
+
     public DeleteGeoMatchSetResponse withWAFReferencedItemException(Object wafReferencedItemException) {
         this.wafReferencedItemException = wafReferencedItemException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteGeoMatchSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public DeleteGeoMatchSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public DeleteGeoMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

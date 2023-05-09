@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class IntOptions {
     
     public Long defaultValue;
+
     public IntOptions withDefaultValue(Long defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -19,6 +20,7 @@ public class IntOptions {
     
     
     public Boolean facetEnabled;
+
     public IntOptions withFacetEnabled(Boolean facetEnabled) {
         this.facetEnabled = facetEnabled;
         return this;
@@ -26,6 +28,7 @@ public class IntOptions {
     
     
     public Boolean returnEnabled;
+
     public IntOptions withReturnEnabled(Boolean returnEnabled) {
         this.returnEnabled = returnEnabled;
         return this;
@@ -33,6 +36,7 @@ public class IntOptions {
     
     
     public Boolean searchEnabled;
+
     public IntOptions withSearchEnabled(Boolean searchEnabled) {
         this.searchEnabled = searchEnabled;
         return this;
@@ -40,6 +44,7 @@ public class IntOptions {
     
     
     public Boolean sortEnabled;
+
     public IntOptions withSortEnabled(Boolean sortEnabled) {
         this.sortEnabled = sortEnabled;
         return this;
@@ -47,9 +52,11 @@ public class IntOptions {
     
     
     public String sourceField;
+
     public IntOptions withSourceField(String sourceField) {
         this.sourceField = sourceField;
         return this;
     }
     
+    public IntOptions(){}
 }

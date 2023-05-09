@@ -15,6 +15,7 @@ public class ErrorsGroupOperatingSystemCounts200ApplicationJSONOperatingSystems 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCount")
     public Long errorCount;
+
     public ErrorsGroupOperatingSystemCounts200ApplicationJSONOperatingSystems withErrorCount(Long errorCount) {
         this.errorCount = errorCount;
         return this;
@@ -26,9 +27,11 @@ public class ErrorsGroupOperatingSystemCounts200ApplicationJSONOperatingSystems 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystemName")
     public String operatingSystemName;
+
     public ErrorsGroupOperatingSystemCounts200ApplicationJSONOperatingSystems withOperatingSystemName(String operatingSystemName) {
         this.operatingSystemName = operatingSystemName;
         return this;
     }
     
+    public ErrorsGroupOperatingSystemCounts200ApplicationJSONOperatingSystems(){}
 }

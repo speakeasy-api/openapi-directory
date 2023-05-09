@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateSecurityGroupRequestTagSpecifications {
     
     public CreateSecurityGroupRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateSecurityGroupRequestTagSpecifications withResourceType(CreateSecurityGroupRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateSecurityGroupRequestTagSpecifications {
     
     
     public CreateSecurityGroupRequestTagSpecificationsTags[] tags;
+
     public CreateSecurityGroupRequestTagSpecifications withTags(CreateSecurityGroupRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSecurityGroupRequestTagSpecifications(){}
 }

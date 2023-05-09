@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CertificateCancelDeletionResponse {
@@ -12,6 +13,7 @@ public class CertificateCancelDeletionResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public CertificateCancelDeletionResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class CertificateCancelDeletionResponse {
     
     
     public String contentType;
+
     public CertificateCancelDeletionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CertificateCancelDeletionResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CertificateCancelDeletionResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class CertificateCancelDeletionResponse {
     
     
     public Integer statusCode;
+
     public CertificateCancelDeletionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class CertificateCancelDeletionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CertificateCancelDeletionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CertificateCancelDeletionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class BundleResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public BundleResourceRelationshipsActions actions;
+
     public BundleResourceRelationships withActions(BundleResourceRelationshipsActions actions) {
         this.actions = actions;
         return this;
@@ -20,9 +21,11 @@ public class BundleResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public BundleResourceRelationshipsPlan plan;
+
     public BundleResourceRelationships withPlan(BundleResourceRelationshipsPlan plan) {
         this.plan = plan;
         return this;
     }
     
+    public BundleResourceRelationships(){}
 }

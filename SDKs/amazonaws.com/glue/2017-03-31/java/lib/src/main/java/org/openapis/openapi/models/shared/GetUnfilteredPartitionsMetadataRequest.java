@@ -12,6 +12,7 @@ public class GetUnfilteredPartitionsMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuditContext")
     public AuditContext auditContext;
+
     public GetUnfilteredPartitionsMetadataRequest withAuditContext(AuditContext auditContext) {
         this.auditContext = auditContext;
         return this;
@@ -19,6 +20,7 @@ public class GetUnfilteredPartitionsMetadataRequest {
     
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetUnfilteredPartitionsMetadataRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -26,6 +28,7 @@ public class GetUnfilteredPartitionsMetadataRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetUnfilteredPartitionsMetadataRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -34,6 +37,7 @@ public class GetUnfilteredPartitionsMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expression")
     public String expression;
+
     public GetUnfilteredPartitionsMetadataRequest withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -42,6 +46,7 @@ public class GetUnfilteredPartitionsMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetUnfilteredPartitionsMetadataRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -50,6 +55,7 @@ public class GetUnfilteredPartitionsMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetUnfilteredPartitionsMetadataRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -58,6 +64,7 @@ public class GetUnfilteredPartitionsMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Segment")
     public Segment segment;
+
     public GetUnfilteredPartitionsMetadataRequest withSegment(Segment segment) {
         this.segment = segment;
         return this;
@@ -65,6 +72,7 @@ public class GetUnfilteredPartitionsMetadataRequest {
     
     @JsonProperty("SupportedPermissionTypes")
     public PermissionTypeEnum[] supportedPermissionTypes;
+
     public GetUnfilteredPartitionsMetadataRequest withSupportedPermissionTypes(PermissionTypeEnum[] supportedPermissionTypes) {
         this.supportedPermissionTypes = supportedPermissionTypes;
         return this;
@@ -72,9 +80,16 @@ public class GetUnfilteredPartitionsMetadataRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public GetUnfilteredPartitionsMetadataRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public GetUnfilteredPartitionsMetadataRequest(@JsonProperty("CatalogId") String catalogId, @JsonProperty("DatabaseName") String databaseName, @JsonProperty("SupportedPermissionTypes") PermissionTypeEnum[] supportedPermissionTypes, @JsonProperty("TableName") String tableName) {
+        this.catalogId = catalogId;
+        this.databaseName = databaseName;
+        this.supportedPermissionTypes = supportedPermissionTypes;
+        this.tableName = tableName;
+  }
 }

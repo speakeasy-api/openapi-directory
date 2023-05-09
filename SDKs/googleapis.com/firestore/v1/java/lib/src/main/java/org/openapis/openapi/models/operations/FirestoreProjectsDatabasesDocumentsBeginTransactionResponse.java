@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirestoreProjectsDatabasesDocumentsBeginTransactionResponse {
@@ -12,6 +13,7 @@ public class FirestoreProjectsDatabasesDocumentsBeginTransactionResponse {
      */
     
     public org.openapis.openapi.models.shared.BeginTransactionResponse beginTransactionResponse;
+
     public FirestoreProjectsDatabasesDocumentsBeginTransactionResponse withBeginTransactionResponse(org.openapis.openapi.models.shared.BeginTransactionResponse beginTransactionResponse) {
         this.beginTransactionResponse = beginTransactionResponse;
         return this;
@@ -19,6 +21,7 @@ public class FirestoreProjectsDatabasesDocumentsBeginTransactionResponse {
     
     
     public String contentType;
+
     public FirestoreProjectsDatabasesDocumentsBeginTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class FirestoreProjectsDatabasesDocumentsBeginTransactionResponse {
     
     
     public Integer statusCode;
+
     public FirestoreProjectsDatabasesDocumentsBeginTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirestoreProjectsDatabasesDocumentsBeginTransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirestoreProjectsDatabasesDocumentsBeginTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirestoreProjectsDatabasesDocumentsBeginTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

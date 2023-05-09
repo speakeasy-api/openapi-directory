@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSmsChannelResponse {
@@ -12,6 +13,7 @@ public class UpdateSmsChannelResponse {
      */
     
     public Object badRequestException;
+
     public UpdateSmsChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSmsChannelResponse {
     
     
     public String contentType;
+
     public UpdateSmsChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSmsChannelResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateSmsChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSmsChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateSmsChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSmsChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateSmsChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateSmsChannelResponse {
      */
     
     public Object notFoundException;
+
     public UpdateSmsChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateSmsChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public UpdateSmsChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateSmsChannelResponse {
     
     
     public Integer statusCode;
+
     public UpdateSmsChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateSmsChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSmsChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateSmsChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateSmsChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateSmsChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSmsChannelResponse updateSmsChannelResponse;
+
     public UpdateSmsChannelResponse withUpdateSmsChannelResponse(org.openapis.openapi.models.shared.UpdateSmsChannelResponse updateSmsChannelResponse) {
         this.updateSmsChannelResponse = updateSmsChannelResponse;
         return this;
     }
     
+    public UpdateSmsChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

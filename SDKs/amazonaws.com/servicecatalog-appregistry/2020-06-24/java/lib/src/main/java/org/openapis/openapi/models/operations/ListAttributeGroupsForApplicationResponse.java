@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAttributeGroupsForApplicationResponse {
     
     public String contentType;
+
     public ListAttributeGroupsForApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAttributeGroupsForApplicationResponse {
      */
     
     public Object internalServerException;
+
     public ListAttributeGroupsForApplicationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListAttributeGroupsForApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAttributeGroupsForApplicationResponse listAttributeGroupsForApplicationResponse;
+
     public ListAttributeGroupsForApplicationResponse withListAttributeGroupsForApplicationResponse(org.openapis.openapi.models.shared.ListAttributeGroupsForApplicationResponse listAttributeGroupsForApplicationResponse) {
         this.listAttributeGroupsForApplicationResponse = listAttributeGroupsForApplicationResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListAttributeGroupsForApplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAttributeGroupsForApplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListAttributeGroupsForApplicationResponse {
     
     
     public Integer statusCode;
+
     public ListAttributeGroupsForApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAttributeGroupsForApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAttributeGroupsForApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListAttributeGroupsForApplicationResponse {
      */
     
     public Object validationException;
+
     public ListAttributeGroupsForApplicationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAttributeGroupsForApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

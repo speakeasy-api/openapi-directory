@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SqlInstancesStopReplicaSecurity {
     @SpeakeasyMetadata("security:option=true")
     public SqlInstancesStopReplicaSecurityOption1 option1;
+
     public SqlInstancesStopReplicaSecurity withOption1(SqlInstancesStopReplicaSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class SqlInstancesStopReplicaSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SqlInstancesStopReplicaSecurityOption2 option2;
+
     public SqlInstancesStopReplicaSecurity withOption2(SqlInstancesStopReplicaSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public SqlInstancesStopReplicaSecurity(){}
 }

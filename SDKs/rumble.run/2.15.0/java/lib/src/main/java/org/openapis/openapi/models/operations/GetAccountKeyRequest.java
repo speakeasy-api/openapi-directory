@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountKeyRequest {
@@ -12,9 +13,13 @@ public class GetAccountKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_id")
     public String keyId;
+
     public GetAccountKeyRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public GetAccountKeyRequest(@JsonProperty("key_id") String keyId) {
+        this.keyId = keyId;
+  }
 }

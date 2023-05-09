@@ -17,6 +17,7 @@ public class RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContai
     @JsonProperty("IsHtml")
     @SpeakeasyMetadata("form:name=IsHtml")
     public Boolean isHtml;
+
     public RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer withIsHtml(Boolean isHtml) {
         this.isHtml = isHtml;
         return this;
@@ -29,6 +30,7 @@ public class RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContai
     @JsonProperty("Language")
     @SpeakeasyMetadata("form:name=Language")
     public String language;
+
     public RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer withLanguage(String language) {
         this.language = language;
         return this;
@@ -41,6 +43,7 @@ public class RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContai
     @JsonProperty("TextToParse")
     @SpeakeasyMetadata("form:name=TextToParse")
     public String textToParse;
+
     public RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer withTextToParse(String textToParse) {
         this.textToParse = textToParse;
         return this;
@@ -53,9 +56,11 @@ public class RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContai
     @JsonProperty("Trim")
     @SpeakeasyMetadata("form:name=Trim")
     public Boolean trim;
+
     public RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer withTrim(Boolean trim) {
         this.trim = trim;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer(){}
 }

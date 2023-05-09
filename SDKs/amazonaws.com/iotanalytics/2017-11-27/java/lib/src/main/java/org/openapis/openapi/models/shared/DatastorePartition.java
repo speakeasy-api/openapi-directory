@@ -15,6 +15,7 @@ public class DatastorePartition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributePartition")
     public Partition attributePartition;
+
     public DatastorePartition withAttributePartition(Partition attributePartition) {
         this.attributePartition = attributePartition;
         return this;
@@ -23,9 +24,11 @@ public class DatastorePartition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestampPartition")
     public TimestampPartition timestampPartition;
+
     public DatastorePartition withTimestampPartition(TimestampPartition timestampPartition) {
         this.timestampPartition = timestampPartition;
         return this;
     }
     
+    public DatastorePartition(){}
 }

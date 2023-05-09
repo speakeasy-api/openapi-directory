@@ -18,6 +18,7 @@ public class DiaryAppointmentTypeModelResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Integer count;
+
     public DiaryAppointmentTypeModelResults withCount(Integer count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class DiaryAppointmentTypeModelResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public DiaryAppointmentTypeModel[] data;
+
     public DiaryAppointmentTypeModelResults withData(DiaryAppointmentTypeModel[] data) {
         this.data = data;
         return this;
     }
     
+    public DiaryAppointmentTypeModelResults(){}
 }

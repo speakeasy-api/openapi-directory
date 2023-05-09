@@ -15,6 +15,7 @@ public class SecurityPolicyRuleRateLimitOptionsThreshold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public SecurityPolicyRuleRateLimitOptionsThreshold withCount(Integer count) {
         this.count = count;
         return this;
@@ -26,9 +27,11 @@ public class SecurityPolicyRuleRateLimitOptionsThreshold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervalSec")
     public Integer intervalSec;
+
     public SecurityPolicyRuleRateLimitOptionsThreshold withIntervalSec(Integer intervalSec) {
         this.intervalSec = intervalSec;
         return this;
     }
     
+    public SecurityPolicyRuleRateLimitOptionsThreshold(){}
 }

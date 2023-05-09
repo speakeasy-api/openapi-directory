@@ -12,6 +12,7 @@ public class GetTransactionInfoResponseVinScriptSig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asm")
     public String asm;
+
     public GetTransactionInfoResponseVinScriptSig withAsm(String asm) {
         this.asm = asm;
         return this;
@@ -20,9 +21,11 @@ public class GetTransactionInfoResponseVinScriptSig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hex")
     public String hex;
+
     public GetTransactionInfoResponseVinScriptSig withHex(String hex) {
         this.hex = hex;
         return this;
     }
     
+    public GetTransactionInfoResponseVinScriptSig(){}
 }

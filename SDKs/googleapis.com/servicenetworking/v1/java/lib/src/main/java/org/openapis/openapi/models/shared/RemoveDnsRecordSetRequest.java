@@ -18,6 +18,7 @@ public class RemoveDnsRecordSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerNetwork")
     public String consumerNetwork;
+
     public RemoveDnsRecordSetRequest withConsumerNetwork(String consumerNetwork) {
         this.consumerNetwork = consumerNetwork;
         return this;
@@ -29,6 +30,7 @@ public class RemoveDnsRecordSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsRecordSet")
     public DnsRecordSet dnsRecordSet;
+
     public RemoveDnsRecordSetRequest withDnsRecordSet(DnsRecordSet dnsRecordSet) {
         this.dnsRecordSet = dnsRecordSet;
         return this;
@@ -40,9 +42,11 @@ public class RemoveDnsRecordSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public RemoveDnsRecordSetRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public RemoveDnsRecordSetRequest(){}
 }

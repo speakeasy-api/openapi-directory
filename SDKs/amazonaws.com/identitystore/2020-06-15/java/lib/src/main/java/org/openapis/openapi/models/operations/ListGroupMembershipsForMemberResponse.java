@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGroupMembershipsForMemberResponse {
@@ -12,6 +13,7 @@ public class ListGroupMembershipsForMemberResponse {
      */
     
     public Object accessDeniedException;
+
     public ListGroupMembershipsForMemberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListGroupMembershipsForMemberResponse {
     
     
     public String contentType;
+
     public ListGroupMembershipsForMemberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListGroupMembershipsForMemberResponse {
      */
     
     public Object internalServerException;
+
     public ListGroupMembershipsForMemberResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListGroupMembershipsForMemberResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGroupMembershipsForMemberResponse listGroupMembershipsForMemberResponse;
+
     public ListGroupMembershipsForMemberResponse withListGroupMembershipsForMemberResponse(org.openapis.openapi.models.shared.ListGroupMembershipsForMemberResponse listGroupMembershipsForMemberResponse) {
         this.listGroupMembershipsForMemberResponse = listGroupMembershipsForMemberResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListGroupMembershipsForMemberResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListGroupMembershipsForMemberResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListGroupMembershipsForMemberResponse {
     
     
     public Integer statusCode;
+
     public ListGroupMembershipsForMemberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListGroupMembershipsForMemberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGroupMembershipsForMemberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListGroupMembershipsForMemberResponse {
      */
     
     public Object throttlingException;
+
     public ListGroupMembershipsForMemberResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListGroupMembershipsForMemberResponse {
      */
     
     public Object validationException;
+
     public ListGroupMembershipsForMemberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListGroupMembershipsForMemberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

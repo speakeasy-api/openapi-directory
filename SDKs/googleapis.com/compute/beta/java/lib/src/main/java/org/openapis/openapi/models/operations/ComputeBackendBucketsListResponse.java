@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeBackendBucketsListResponse {
@@ -12,6 +13,7 @@ public class ComputeBackendBucketsListResponse {
      */
     
     public org.openapis.openapi.models.shared.BackendBucketList backendBucketList;
+
     public ComputeBackendBucketsListResponse withBackendBucketList(org.openapis.openapi.models.shared.BackendBucketList backendBucketList) {
         this.backendBucketList = backendBucketList;
         return this;
@@ -19,6 +21,7 @@ public class ComputeBackendBucketsListResponse {
     
     
     public String contentType;
+
     public ComputeBackendBucketsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ComputeBackendBucketsListResponse {
     
     
     public Integer statusCode;
+
     public ComputeBackendBucketsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeBackendBucketsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeBackendBucketsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeBackendBucketsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

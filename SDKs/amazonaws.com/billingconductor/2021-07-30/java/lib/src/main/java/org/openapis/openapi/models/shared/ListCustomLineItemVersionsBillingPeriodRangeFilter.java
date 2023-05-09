@@ -15,6 +15,7 @@ public class ListCustomLineItemVersionsBillingPeriodRangeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndBillingPeriod")
     public String endBillingPeriod;
+
     public ListCustomLineItemVersionsBillingPeriodRangeFilter withEndBillingPeriod(String endBillingPeriod) {
         this.endBillingPeriod = endBillingPeriod;
         return this;
@@ -23,9 +24,11 @@ public class ListCustomLineItemVersionsBillingPeriodRangeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartBillingPeriod")
     public String startBillingPeriod;
+
     public ListCustomLineItemVersionsBillingPeriodRangeFilter withStartBillingPeriod(String startBillingPeriod) {
         this.startBillingPeriod = startBillingPeriod;
         return this;
     }
     
+    public ListCustomLineItemVersionsBillingPeriodRangeFilter(){}
 }

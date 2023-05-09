@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCheckDetailsSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Truora-API-Key")
     public String apiKey;
+
     public ListCheckDetailsSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public ListCheckDetailsSecurity(@JsonProperty("api-key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

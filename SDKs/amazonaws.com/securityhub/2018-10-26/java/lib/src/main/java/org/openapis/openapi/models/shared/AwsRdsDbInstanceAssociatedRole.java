@@ -15,6 +15,7 @@ public class AwsRdsDbInstanceAssociatedRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureName")
     public String featureName;
+
     public AwsRdsDbInstanceAssociatedRole withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
@@ -23,6 +24,7 @@ public class AwsRdsDbInstanceAssociatedRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public AwsRdsDbInstanceAssociatedRole withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -31,9 +33,11 @@ public class AwsRdsDbInstanceAssociatedRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsRdsDbInstanceAssociatedRole withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsRdsDbInstanceAssociatedRole(){}
 }

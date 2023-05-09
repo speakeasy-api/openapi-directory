@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2ListLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public GoogleAppsDriveLabelsV2Label[] labels;
+
     public GoogleAppsDriveLabelsV2ListLabelsResponse withLabels(GoogleAppsDriveLabelsV2Label[] labels) {
         this.labels = labels;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2ListLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAppsDriveLabelsV2ListLabelsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2ListLabelsResponse(){}
 }

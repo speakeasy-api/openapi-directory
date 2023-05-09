@@ -21,6 +21,7 @@ public class DescribeDeviceFleetResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeDeviceFleetResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class DescribeDeviceFleetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeDeviceFleetResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class DescribeDeviceFleetResponse {
     
     @JsonProperty("DeviceFleetArn")
     public String deviceFleetArn;
+
     public DescribeDeviceFleetResponse withDeviceFleetArn(String deviceFleetArn) {
         this.deviceFleetArn = deviceFleetArn;
         return this;
@@ -43,6 +46,7 @@ public class DescribeDeviceFleetResponse {
     
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public DescribeDeviceFleetResponse withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -51,6 +55,7 @@ public class DescribeDeviceFleetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IotRoleAlias")
     public String iotRoleAlias;
+
     public DescribeDeviceFleetResponse withIotRoleAlias(String iotRoleAlias) {
         this.iotRoleAlias = iotRoleAlias;
         return this;
@@ -60,6 +65,7 @@ public class DescribeDeviceFleetResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeDeviceFleetResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -67,6 +73,7 @@ public class DescribeDeviceFleetResponse {
     
     @JsonProperty("OutputConfig")
     public EdgeOutputConfig outputConfig;
+
     public DescribeDeviceFleetResponse withOutputConfig(EdgeOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -75,9 +82,17 @@ public class DescribeDeviceFleetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeDeviceFleetResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public DescribeDeviceFleetResponse(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("DeviceFleetArn") String deviceFleetArn, @JsonProperty("DeviceFleetName") String deviceFleetName, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("OutputConfig") EdgeOutputConfig outputConfig) {
+        this.creationTime = creationTime;
+        this.deviceFleetArn = deviceFleetArn;
+        this.deviceFleetName = deviceFleetName;
+        this.lastModifiedTime = lastModifiedTime;
+        this.outputConfig = outputConfig;
+  }
 }

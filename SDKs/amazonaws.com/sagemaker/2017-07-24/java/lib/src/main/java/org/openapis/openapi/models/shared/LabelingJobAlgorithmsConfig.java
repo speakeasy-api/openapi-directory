@@ -15,6 +15,7 @@ public class LabelingJobAlgorithmsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InitialActiveLearningModelArn")
     public String initialActiveLearningModelArn;
+
     public LabelingJobAlgorithmsConfig withInitialActiveLearningModelArn(String initialActiveLearningModelArn) {
         this.initialActiveLearningModelArn = initialActiveLearningModelArn;
         return this;
@@ -22,6 +23,7 @@ public class LabelingJobAlgorithmsConfig {
     
     @JsonProperty("LabelingJobAlgorithmSpecificationArn")
     public String labelingJobAlgorithmSpecificationArn;
+
     public LabelingJobAlgorithmsConfig withLabelingJobAlgorithmSpecificationArn(String labelingJobAlgorithmSpecificationArn) {
         this.labelingJobAlgorithmSpecificationArn = labelingJobAlgorithmSpecificationArn;
         return this;
@@ -30,9 +32,13 @@ public class LabelingJobAlgorithmsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelingJobResourceConfig")
     public LabelingJobResourceConfig labelingJobResourceConfig;
+
     public LabelingJobAlgorithmsConfig withLabelingJobResourceConfig(LabelingJobResourceConfig labelingJobResourceConfig) {
         this.labelingJobResourceConfig = labelingJobResourceConfig;
         return this;
     }
     
+    public LabelingJobAlgorithmsConfig(@JsonProperty("LabelingJobAlgorithmSpecificationArn") String labelingJobAlgorithmSpecificationArn) {
+        this.labelingJobAlgorithmSpecificationArn = labelingJobAlgorithmSpecificationArn;
+  }
 }

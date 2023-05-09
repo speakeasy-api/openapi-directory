@@ -15,6 +15,7 @@ public class ReportGroupTrendStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average")
     public String average;
+
     public ReportGroupTrendStats withAverage(String average) {
         this.average = average;
         return this;
@@ -23,6 +24,7 @@ public class ReportGroupTrendStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public String max;
+
     public ReportGroupTrendStats withMax(String max) {
         this.max = max;
         return this;
@@ -31,9 +33,11 @@ public class ReportGroupTrendStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
     public String min;
+
     public ReportGroupTrendStats withMin(String min) {
         this.min = min;
         return this;
     }
     
+    public ReportGroupTrendStats(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListEnvironmentAccountConnectionsOutput {
     @JsonProperty("environmentAccountConnections")
     public EnvironmentAccountConnectionSummary[] environmentAccountConnections;
+
     public ListEnvironmentAccountConnectionsOutput withEnvironmentAccountConnections(EnvironmentAccountConnectionSummary[] environmentAccountConnections) {
         this.environmentAccountConnections = environmentAccountConnections;
         return this;
@@ -22,9 +23,13 @@ public class ListEnvironmentAccountConnectionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEnvironmentAccountConnectionsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEnvironmentAccountConnectionsOutput(@JsonProperty("environmentAccountConnections") EnvironmentAccountConnectionSummary[] environmentAccountConnections) {
+        this.environmentAccountConnections = environmentAccountConnections;
+  }
 }

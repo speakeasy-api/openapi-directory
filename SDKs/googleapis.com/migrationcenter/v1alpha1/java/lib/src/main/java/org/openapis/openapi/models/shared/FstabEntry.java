@@ -18,6 +18,7 @@ public class FstabEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public String file;
+
     public FstabEntry withFile(String file) {
         this.file = file;
         return this;
@@ -29,6 +30,7 @@ public class FstabEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freq")
     public Integer freq;
+
     public FstabEntry withFreq(Integer freq) {
         this.freq = freq;
         return this;
@@ -40,6 +42,7 @@ public class FstabEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mntops")
     public String mntops;
+
     public FstabEntry withMntops(String mntops) {
         this.mntops = mntops;
         return this;
@@ -51,6 +54,7 @@ public class FstabEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passno")
     public Integer passno;
+
     public FstabEntry withPassno(Integer passno) {
         this.passno = passno;
         return this;
@@ -62,6 +66,7 @@ public class FstabEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public String spec;
+
     public FstabEntry withSpec(String spec) {
         this.spec = spec;
         return this;
@@ -73,9 +78,11 @@ public class FstabEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vfstype")
     public String vfstype;
+
     public FstabEntry withVfstype(String vfstype) {
         this.vfstype = vfstype;
         return this;
     }
     
+    public FstabEntry(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EksContainerEnvironmentVariable {
     @JsonProperty("name")
     public String name;
+
     public EksContainerEnvironmentVariable withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,13 @@ public class EksContainerEnvironmentVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public EksContainerEnvironmentVariable withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public EksContainerEnvironmentVariable(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

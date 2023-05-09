@@ -18,6 +18,7 @@ public class PullRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnImmediately")
     public Boolean returnImmediately;
+
     public PullRequest withReturnImmediately(Boolean returnImmediately) {
         this.returnImmediately = returnImmediately;
         return this;
@@ -29,9 +30,11 @@ public class PullRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public String subscription;
+
     public PullRequest withSubscription(String subscription) {
         this.subscription = subscription;
         return this;
     }
     
+    public PullRequest(){}
 }

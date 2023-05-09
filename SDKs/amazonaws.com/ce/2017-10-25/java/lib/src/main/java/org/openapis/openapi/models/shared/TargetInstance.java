@@ -15,6 +15,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrencyCode")
     public String currencyCode;
+
     public TargetInstance withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -23,6 +24,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultTargetInstance")
     public Boolean defaultTargetInstance;
+
     public TargetInstance withDefaultTargetInstance(Boolean defaultTargetInstance) {
         this.defaultTargetInstance = defaultTargetInstance;
         return this;
@@ -31,6 +33,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedMonthlyCost")
     public String estimatedMonthlyCost;
+
     public TargetInstance withEstimatedMonthlyCost(String estimatedMonthlyCost) {
         this.estimatedMonthlyCost = estimatedMonthlyCost;
         return this;
@@ -39,6 +42,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedMonthlySavings")
     public String estimatedMonthlySavings;
+
     public TargetInstance withEstimatedMonthlySavings(String estimatedMonthlySavings) {
         this.estimatedMonthlySavings = estimatedMonthlySavings;
         return this;
@@ -47,6 +51,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpectedResourceUtilization")
     public ResourceUtilization expectedResourceUtilization;
+
     public TargetInstance withExpectedResourceUtilization(ResourceUtilization expectedResourceUtilization) {
         this.expectedResourceUtilization = expectedResourceUtilization;
         return this;
@@ -55,6 +60,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlatformDifferences")
     public PlatformDifferenceEnum[] platformDifferences;
+
     public TargetInstance withPlatformDifferences(PlatformDifferenceEnum[] platformDifferences) {
         this.platformDifferences = platformDifferences;
         return this;
@@ -63,9 +69,11 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceDetails")
     public ResourceDetails resourceDetails;
+
     public TargetInstance withResourceDetails(ResourceDetails resourceDetails) {
         this.resourceDetails = resourceDetails;
         return this;
     }
     
+    public TargetInstance(){}
 }

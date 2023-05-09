@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRecommendationTemplatesResponse {
@@ -12,6 +13,7 @@ public class ListRecommendationTemplatesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRecommendationTemplatesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListRecommendationTemplatesResponse {
     
     
     public String contentType;
+
     public ListRecommendationTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRecommendationTemplatesResponse {
      */
     
     public Object internalServerException;
+
     public ListRecommendationTemplatesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListRecommendationTemplatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRecommendationTemplatesResponse listRecommendationTemplatesResponse;
+
     public ListRecommendationTemplatesResponse withListRecommendationTemplatesResponse(org.openapis.openapi.models.shared.ListRecommendationTemplatesResponse listRecommendationTemplatesResponse) {
         this.listRecommendationTemplatesResponse = listRecommendationTemplatesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListRecommendationTemplatesResponse {
     
     
     public Integer statusCode;
+
     public ListRecommendationTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListRecommendationTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRecommendationTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListRecommendationTemplatesResponse {
      */
     
     public Object throttlingException;
+
     public ListRecommendationTemplatesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListRecommendationTemplatesResponse {
      */
     
     public Object validationException;
+
     public ListRecommendationTemplatesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListRecommendationTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

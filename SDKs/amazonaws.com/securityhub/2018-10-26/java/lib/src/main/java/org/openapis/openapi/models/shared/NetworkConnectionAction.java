@@ -15,6 +15,7 @@ public class NetworkConnectionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blocked")
     public Boolean blocked;
+
     public NetworkConnectionAction withBlocked(Boolean blocked) {
         this.blocked = blocked;
         return this;
@@ -23,6 +24,7 @@ public class NetworkConnectionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionDirection")
     public String connectionDirection;
+
     public NetworkConnectionAction withConnectionDirection(String connectionDirection) {
         this.connectionDirection = connectionDirection;
         return this;
@@ -31,6 +33,7 @@ public class NetworkConnectionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalPortDetails")
     public ActionLocalPortDetails localPortDetails;
+
     public NetworkConnectionAction withLocalPortDetails(ActionLocalPortDetails localPortDetails) {
         this.localPortDetails = localPortDetails;
         return this;
@@ -39,6 +42,7 @@ public class NetworkConnectionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public String protocol;
+
     public NetworkConnectionAction withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -47,6 +51,7 @@ public class NetworkConnectionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoteIpDetails")
     public ActionRemoteIpDetails remoteIpDetails;
+
     public NetworkConnectionAction withRemoteIpDetails(ActionRemoteIpDetails remoteIpDetails) {
         this.remoteIpDetails = remoteIpDetails;
         return this;
@@ -55,9 +60,11 @@ public class NetworkConnectionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemotePortDetails")
     public ActionRemotePortDetails remotePortDetails;
+
     public NetworkConnectionAction withRemotePortDetails(ActionRemotePortDetails remotePortDetails) {
         this.remotePortDetails = remotePortDetails;
         return this;
     }
     
+    public NetworkConnectionAction(){}
 }

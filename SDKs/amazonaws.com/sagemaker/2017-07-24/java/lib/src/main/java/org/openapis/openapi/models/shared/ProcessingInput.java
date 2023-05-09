@@ -15,6 +15,7 @@ public class ProcessingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppManaged")
     public Boolean appManaged;
+
     public ProcessingInput withAppManaged(Boolean appManaged) {
         this.appManaged = appManaged;
         return this;
@@ -23,6 +24,7 @@ public class ProcessingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetDefinition")
     public DatasetDefinition datasetDefinition;
+
     public ProcessingInput withDatasetDefinition(DatasetDefinition datasetDefinition) {
         this.datasetDefinition = datasetDefinition;
         return this;
@@ -30,6 +32,7 @@ public class ProcessingInput {
     
     @JsonProperty("InputName")
     public String inputName;
+
     public ProcessingInput withInputName(String inputName) {
         this.inputName = inputName;
         return this;
@@ -38,9 +41,13 @@ public class ProcessingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Input")
     public ProcessingS3Input s3Input;
+
     public ProcessingInput withS3Input(ProcessingS3Input s3Input) {
         this.s3Input = s3Input;
         return this;
     }
     
+    public ProcessingInput(@JsonProperty("InputName") String inputName) {
+        this.inputName = inputName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestApiKeyRequestBody {
@@ -12,6 +13,7 @@ public class RequestApiKeyRequestBody {
      */
     @SpeakeasyMetadata("form:name=apiKey_l1")
     public String apiKeyL1;
+
     public RequestApiKeyRequestBody withApiKeyL1(String apiKeyL1) {
         this.apiKeyL1 = apiKeyL1;
         return this;
@@ -22,6 +24,7 @@ public class RequestApiKeyRequestBody {
      */
     @SpeakeasyMetadata("form:name=apiKey_l2")
     public String apiKeyL2;
+
     public RequestApiKeyRequestBody withApiKeyL2(String apiKeyL2) {
         this.apiKeyL2 = apiKeyL2;
         return this;
@@ -32,6 +35,7 @@ public class RequestApiKeyRequestBody {
      */
     @SpeakeasyMetadata("form:name=email")
     public String email;
+
     public RequestApiKeyRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -42,6 +46,7 @@ public class RequestApiKeyRequestBody {
      */
     @SpeakeasyMetadata("form:name=password")
     public Integer password;
+
     public RequestApiKeyRequestBody withPassword(Integer password) {
         this.password = password;
         return this;
@@ -52,6 +57,7 @@ public class RequestApiKeyRequestBody {
      */
     @SpeakeasyMetadata("form:name=userFirstName")
     public String userFirstName;
+
     public RequestApiKeyRequestBody withUserFirstName(String userFirstName) {
         this.userFirstName = userFirstName;
         return this;
@@ -62,9 +68,17 @@ public class RequestApiKeyRequestBody {
      */
     @SpeakeasyMetadata("form:name=userLastName")
     public String userLastName;
+
     public RequestApiKeyRequestBody withUserLastName(String userLastName) {
         this.userLastName = userLastName;
         return this;
     }
     
+    public RequestApiKeyRequestBody(@JsonProperty("userFirstName") String userFirstName, @JsonProperty("password") Integer password, @JsonProperty("apiKey_l1") String apiKeyL1, @JsonProperty("apiKey_l2") String apiKeyL2, @JsonProperty("email") String email) {
+        this.userFirstName = userFirstName;
+        this.password = password;
+        this.apiKeyL1 = apiKeyL1;
+        this.apiKeyL2 = apiKeyL2;
+        this.email = email;
+  }
 }

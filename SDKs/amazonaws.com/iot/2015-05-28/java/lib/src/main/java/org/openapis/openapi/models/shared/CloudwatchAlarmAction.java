@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CloudwatchAlarmAction {
     @JsonProperty("alarmName")
     public String alarmName;
+
     public CloudwatchAlarmAction withAlarmName(String alarmName) {
         this.alarmName = alarmName;
         return this;
@@ -19,6 +20,7 @@ public class CloudwatchAlarmAction {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CloudwatchAlarmAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -26,6 +28,7 @@ public class CloudwatchAlarmAction {
     
     @JsonProperty("stateReason")
     public String stateReason;
+
     public CloudwatchAlarmAction withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -33,9 +36,16 @@ public class CloudwatchAlarmAction {
     
     @JsonProperty("stateValue")
     public String stateValue;
+
     public CloudwatchAlarmAction withStateValue(String stateValue) {
         this.stateValue = stateValue;
         return this;
     }
     
+    public CloudwatchAlarmAction(@JsonProperty("alarmName") String alarmName, @JsonProperty("roleArn") String roleArn, @JsonProperty("stateReason") String stateReason, @JsonProperty("stateValue") String stateValue) {
+        this.alarmName = alarmName;
+        this.roleArn = roleArn;
+        this.stateReason = stateReason;
+        this.stateValue = stateValue;
+  }
 }

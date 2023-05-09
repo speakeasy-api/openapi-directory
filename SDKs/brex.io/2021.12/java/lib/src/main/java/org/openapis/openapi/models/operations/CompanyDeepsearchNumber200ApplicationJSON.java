@@ -12,6 +12,7 @@ public class CompanyDeepsearchNumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String[] address;
+
     public CompanyDeepsearchNumber200ApplicationJSON withAddress(String[] address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class CompanyDeepsearchNumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public CompanyDeepsearchNumber200ApplicationJSON withCountry(String country) {
         this.country = country;
         return this;
@@ -28,6 +30,7 @@ public class CompanyDeepsearchNumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateOfIncorporation")
     public String dateOfIncorporation;
+
     public CompanyDeepsearchNumber200ApplicationJSON withDateOfIncorporation(String dateOfIncorporation) {
         this.dateOfIncorporation = dateOfIncorporation;
         return this;
@@ -36,6 +39,7 @@ public class CompanyDeepsearchNumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraData")
     public java.util.Map<String, Object> extraData;
+
     public CompanyDeepsearchNumber200ApplicationJSON withExtraData(java.util.Map<String, Object> extraData) {
         this.extraData = extraData;
         return this;
@@ -44,6 +48,7 @@ public class CompanyDeepsearchNumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedAddress")
     public String[] formattedAddress;
+
     public CompanyDeepsearchNumber200ApplicationJSON withFormattedAddress(String[] formattedAddress) {
         this.formattedAddress = formattedAddress;
         return this;
@@ -52,6 +57,7 @@ public class CompanyDeepsearchNumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CompanyDeepsearchNumber200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -60,6 +66,7 @@ public class CompanyDeepsearchNumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalForm")
     public String legalForm;
+
     public CompanyDeepsearchNumber200ApplicationJSON withLegalForm(String legalForm) {
         this.legalForm = legalForm;
         return this;
@@ -68,6 +75,7 @@ public class CompanyDeepsearchNumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managingDirectors")
     public String[] managingDirectors;
+
     public CompanyDeepsearchNumber200ApplicationJSON withManagingDirectors(String[] managingDirectors) {
         this.managingDirectors = managingDirectors;
         return this;
@@ -76,6 +84,7 @@ public class CompanyDeepsearchNumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CompanyDeepsearchNumber200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +93,7 @@ public class CompanyDeepsearchNumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationNumber")
     public String registrationNumber;
+
     public CompanyDeepsearchNumber200ApplicationJSON withRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
         return this;
@@ -92,6 +102,7 @@ public class CompanyDeepsearchNumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestTime")
     public Long requestTime;
+
     public CompanyDeepsearchNumber200ApplicationJSON withRequestTime(Long requestTime) {
         this.requestTime = requestTime;
         return this;
@@ -100,6 +111,7 @@ public class CompanyDeepsearchNumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretaries")
     public String[] secretaries;
+
     public CompanyDeepsearchNumber200ApplicationJSON withSecretaries(String[] secretaries) {
         this.secretaries = secretaries;
         return this;
@@ -108,6 +120,7 @@ public class CompanyDeepsearchNumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sicNaceCodes")
     public String[] sicNaceCodes;
+
     public CompanyDeepsearchNumber200ApplicationJSON withSicNaceCodes(String[] sicNaceCodes) {
         this.sicNaceCodes = sicNaceCodes;
         return this;
@@ -116,9 +129,11 @@ public class CompanyDeepsearchNumber200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CompanyDeepsearchNumber200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public CompanyDeepsearchNumber200ApplicationJSON(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteCodeRepositoryInput {
     @JsonProperty("CodeRepositoryName")
     public String codeRepositoryName;
+
     public DeleteCodeRepositoryInput withCodeRepositoryName(String codeRepositoryName) {
         this.codeRepositoryName = codeRepositoryName;
         return this;
     }
     
+    public DeleteCodeRepositoryInput(@JsonProperty("CodeRepositoryName") String codeRepositoryName) {
+        this.codeRepositoryName = codeRepositoryName;
+  }
 }

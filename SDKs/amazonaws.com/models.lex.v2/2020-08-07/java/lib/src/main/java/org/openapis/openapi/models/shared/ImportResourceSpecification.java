@@ -15,6 +15,7 @@ public class ImportResourceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botImportSpecification")
     public BotImportSpecification botImportSpecification;
+
     public ImportResourceSpecification withBotImportSpecification(BotImportSpecification botImportSpecification) {
         this.botImportSpecification = botImportSpecification;
         return this;
@@ -23,6 +24,7 @@ public class ImportResourceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botLocaleImportSpecification")
     public BotLocaleImportSpecification botLocaleImportSpecification;
+
     public ImportResourceSpecification withBotLocaleImportSpecification(BotLocaleImportSpecification botLocaleImportSpecification) {
         this.botLocaleImportSpecification = botLocaleImportSpecification;
         return this;
@@ -34,9 +36,11 @@ public class ImportResourceSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customVocabularyImportSpecification")
     public CustomVocabularyImportSpecification customVocabularyImportSpecification;
+
     public ImportResourceSpecification withCustomVocabularyImportSpecification(CustomVocabularyImportSpecification customVocabularyImportSpecification) {
         this.customVocabularyImportSpecification = customVocabularyImportSpecification;
         return this;
     }
     
+    public ImportResourceSpecification(){}
 }

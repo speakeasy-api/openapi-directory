@@ -14,6 +14,7 @@ public class CreateTrustStoreRequestBody {
      */
     @JsonProperty("certificateList")
     public String[] certificateList;
+
     public CreateTrustStoreRequestBody withCertificateList(String[] certificateList) {
         this.certificateList = certificateList;
         return this;
@@ -25,6 +26,7 @@ public class CreateTrustStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateTrustStoreRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -36,9 +38,13 @@ public class CreateTrustStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateTrustStoreRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateTrustStoreRequestBody(@JsonProperty("certificateList") String[] certificateList) {
+        this.certificateList = certificateList;
+  }
 }

@@ -12,6 +12,7 @@ public class GetActionPackageAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetActionPackageAutocompleteRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class GetActionPackageAutocompleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetActionPackageAutocompleteRequest withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public GetActionPackageAutocompleteRequest(){}
 }

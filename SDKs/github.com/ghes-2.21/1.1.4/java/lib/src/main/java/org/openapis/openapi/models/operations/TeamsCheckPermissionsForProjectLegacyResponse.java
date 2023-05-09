@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsCheckPermissionsForProjectLegacyResponse {
     
     public String contentType;
+
     public TeamsCheckPermissionsForProjectLegacyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsCheckPermissionsForProjectLegacyResponse {
     
     
     public Integer statusCode;
+
     public TeamsCheckPermissionsForProjectLegacyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TeamsCheckPermissionsForProjectLegacyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsCheckPermissionsForProjectLegacyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TeamsCheckPermissionsForProjectLegacyResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamProject teamProject;
+
     public TeamsCheckPermissionsForProjectLegacyResponse withTeamProject(org.openapis.openapi.models.shared.TeamProject teamProject) {
         this.teamProject = teamProject;
         return this;
@@ -43,9 +48,14 @@ public class TeamsCheckPermissionsForProjectLegacyResponse {
      */
     
     public TeamsCheckPermissionsForProjectLegacy415ApplicationJSON teamsCheckPermissionsForProjectLegacy415ApplicationJSONObject;
+
     public TeamsCheckPermissionsForProjectLegacyResponse withTeamsCheckPermissionsForProjectLegacy415ApplicationJSONObject(TeamsCheckPermissionsForProjectLegacy415ApplicationJSON teamsCheckPermissionsForProjectLegacy415ApplicationJSONObject) {
         this.teamsCheckPermissionsForProjectLegacy415ApplicationJSONObject = teamsCheckPermissionsForProjectLegacy415ApplicationJSONObject;
         return this;
     }
     
+    public TeamsCheckPermissionsForProjectLegacyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

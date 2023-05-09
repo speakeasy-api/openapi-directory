@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DgcerResponse {
     
     public String contentType;
+
     public DgcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DgcerResponse {
     
     
     public Integer statusCode;
+
     public DgcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DgcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DgcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DgcerResponse {
      */
     
     public Dgcer400ApplicationJSON dgcer400ApplicationJSONObject;
+
     public DgcerResponse withDgcer400ApplicationJSONObject(Dgcer400ApplicationJSON dgcer400ApplicationJSONObject) {
         this.dgcer400ApplicationJSONObject = dgcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DgcerResponse {
      */
     
     public Dgcer401ApplicationJSON dgcer401ApplicationJSONObject;
+
     public DgcerResponse withDgcer401ApplicationJSONObject(Dgcer401ApplicationJSON dgcer401ApplicationJSONObject) {
         this.dgcer401ApplicationJSONObject = dgcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class DgcerResponse {
      */
     
     public Dgcer404ApplicationJSON dgcer404ApplicationJSONObject;
+
     public DgcerResponse withDgcer404ApplicationJSONObject(Dgcer404ApplicationJSON dgcer404ApplicationJSONObject) {
         this.dgcer404ApplicationJSONObject = dgcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class DgcerResponse {
      */
     
     public Dgcer500ApplicationJSON dgcer500ApplicationJSONObject;
+
     public DgcerResponse withDgcer500ApplicationJSONObject(Dgcer500ApplicationJSON dgcer500ApplicationJSONObject) {
         this.dgcer500ApplicationJSONObject = dgcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class DgcerResponse {
      */
     
     public Dgcer502ApplicationJSON dgcer502ApplicationJSONObject;
+
     public DgcerResponse withDgcer502ApplicationJSONObject(Dgcer502ApplicationJSON dgcer502ApplicationJSONObject) {
         this.dgcer502ApplicationJSONObject = dgcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class DgcerResponse {
      */
     
     public Dgcer503ApplicationJSON dgcer503ApplicationJSONObject;
+
     public DgcerResponse withDgcer503ApplicationJSONObject(Dgcer503ApplicationJSON dgcer503ApplicationJSONObject) {
         this.dgcer503ApplicationJSONObject = dgcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class DgcerResponse {
      */
     
     public Dgcer504ApplicationJSON dgcer504ApplicationJSONObject;
+
     public DgcerResponse withDgcer504ApplicationJSONObject(Dgcer504ApplicationJSON dgcer504ApplicationJSONObject) {
         this.dgcer504ApplicationJSONObject = dgcer504ApplicationJSONObject;
         return this;
     }
     
+    public DgcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -26,6 +26,7 @@ public class Money {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Long amount;
+
     public Money withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -40,9 +41,11 @@ public class Money {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public Money withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
     
+    public Money(){}
 }

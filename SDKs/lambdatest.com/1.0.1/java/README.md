@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DevicesSecurity;
 import org.openapis.openapi.models.operations.DevicesRequest;
 import org.openapis.openapi.models.operations.DevicesResponse;
+import org.openapis.openapi.models.operations.DevicesSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,19 +28,21 @@ public class Application {
 
             DevicesRequest req = new DevicesRequest() {{
                 os = "corrupti";
-            }}            
+            }};            
 
-            DevicesResponse res = sdk.getDevices.devices(req, new DevicesSecurity() {{
+            DevicesResponse res = sdk.getDevices.devices(req, new DevicesSecurity("provident", "distinctio") {{
                 password = "YOUR_PASSWORD_HERE";
                 username = "YOUR_USERNAME_HERE";
             }});
 
-            if (res.osDevices.isPresent()) {
+            if (res.osDevices != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -49,41 +50,41 @@ public class Application {
 ## Available Resources and Operations
 
 
-### getDevices
+### [getDevices](docs/getdevices/README.md)
 
-* `devices` - Fetch all available device combinations.
+* [devices](docs/getdevices/README.md#devices) - Fetch all available device combinations.
 
-### getLocations
+### [getLocations](docs/getlocations/README.md)
 
-* `locations` - Fetch Locations
+* [locations](docs/getlocations/README.md#locations) - Fetch Locations
 
-### getOSBrowsers
+### [getOSBrowsers](docs/getosbrowsers/README.md)
 
-* `osBrowsers` - Fetch all available os-browser combinations.
+* [osBrowsers](docs/getosbrowsers/README.md#osbrowsers) - Fetch all available os-browser combinations.
 
-### getProfiles
+### [getProfiles](docs/getprofiles/README.md)
 
-* `profiles` - Fetch login profiles
+* [profiles](docs/getprofiles/README.md#profiles) - Fetch login profiles
 
-### getResolutions
+### [getResolutions](docs/getresolutions/README.md)
 
-* `resolutions` - Fetch all available resolution on different OS
+* [resolutions](docs/getresolutions/README.md#resolutions) - Fetch all available resolution on different OS
 
-### getScreenshots
+### [getScreenshots](docs/getscreenshots/README.md)
 
-* `screenshots` - Fetch specified screenshot details
+* [screenshots](docs/getscreenshots/README.md#screenshots) - Fetch specified screenshot details
 
-### getZippedScreenshots
+### [getZippedScreenshots](docs/getzippedscreenshots/README.md)
 
-* `zippedScreenshots` - Fetch Zipped Screenshots
+* [zippedScreenshots](docs/getzippedscreenshots/README.md#zippedscreenshots) - Fetch Zipped Screenshots
 
-### startScreenshotTest
+### [startScreenshotTest](docs/startscreenshottest/README.md)
 
-* `startScreenshotTest` - Start Screenshot Test
+* [startScreenshotTest](docs/startscreenshottest/README.md#startscreenshottest) - Start Screenshot Test
 
-### stopScreenshotTest
+### [stopScreenshotTest](docs/stopscreenshottest/README.md)
 
-* `stopScreenshotsTest` - Stop specified screenshot test
+* [stopScreenshotsTest](docs/stopscreenshottest/README.md#stopscreenshotstest) - Stop specified screenshot test
 <!-- End SDK Available Operations -->
 
 ### Maturity

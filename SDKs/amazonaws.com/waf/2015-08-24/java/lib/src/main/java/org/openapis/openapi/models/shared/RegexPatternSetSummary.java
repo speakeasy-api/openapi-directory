@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegexPatternSetSummary {
     @JsonProperty("Name")
     public String name;
+
     public RegexPatternSetSummary withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class RegexPatternSetSummary {
     
     @JsonProperty("RegexPatternSetId")
     public String regexPatternSetId;
+
     public RegexPatternSetSummary withRegexPatternSetId(String regexPatternSetId) {
         this.regexPatternSetId = regexPatternSetId;
         return this;
     }
     
+    public RegexPatternSetSummary(@JsonProperty("Name") String name, @JsonProperty("RegexPatternSetId") String regexPatternSetId) {
+        this.name = name;
+        this.regexPatternSetId = regexPatternSetId;
+  }
 }

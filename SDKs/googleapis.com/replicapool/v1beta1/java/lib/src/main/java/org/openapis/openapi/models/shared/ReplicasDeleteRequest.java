@@ -15,9 +15,11 @@ public class ReplicasDeleteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abandonInstance")
     public Boolean abandonInstance;
+
     public ReplicasDeleteRequest withAbandonInstance(Boolean abandonInstance) {
         this.abandonInstance = abandonInstance;
         return this;
     }
     
+    public ReplicasDeleteRequest(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstanceFleetModifyConfig {
     @JsonProperty("InstanceFleetId")
     public String instanceFleetId;
+
     public InstanceFleetModifyConfig withInstanceFleetId(String instanceFleetId) {
         this.instanceFleetId = instanceFleetId;
         return this;
@@ -22,6 +23,7 @@ public class InstanceFleetModifyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResizeSpecifications")
     public InstanceFleetResizingSpecifications resizeSpecifications;
+
     public InstanceFleetModifyConfig withResizeSpecifications(InstanceFleetResizingSpecifications resizeSpecifications) {
         this.resizeSpecifications = resizeSpecifications;
         return this;
@@ -30,6 +32,7 @@ public class InstanceFleetModifyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetOnDemandCapacity")
     public Long targetOnDemandCapacity;
+
     public InstanceFleetModifyConfig withTargetOnDemandCapacity(Long targetOnDemandCapacity) {
         this.targetOnDemandCapacity = targetOnDemandCapacity;
         return this;
@@ -38,9 +41,13 @@ public class InstanceFleetModifyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetSpotCapacity")
     public Long targetSpotCapacity;
+
     public InstanceFleetModifyConfig withTargetSpotCapacity(Long targetSpotCapacity) {
         this.targetSpotCapacity = targetSpotCapacity;
         return this;
     }
     
+    public InstanceFleetModifyConfig(@JsonProperty("InstanceFleetId") String instanceFleetId) {
+        this.instanceFleetId = instanceFleetId;
+  }
 }

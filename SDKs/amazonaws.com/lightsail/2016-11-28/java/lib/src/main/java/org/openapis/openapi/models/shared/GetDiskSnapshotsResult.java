@@ -15,6 +15,7 @@ public class GetDiskSnapshotsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSnapshots")
     public DiskSnapshot[] diskSnapshots;
+
     public GetDiskSnapshotsResult withDiskSnapshots(DiskSnapshot[] diskSnapshots) {
         this.diskSnapshots = diskSnapshots;
         return this;
@@ -23,9 +24,11 @@ public class GetDiskSnapshotsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetDiskSnapshotsResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetDiskSnapshotsResult(){}
 }

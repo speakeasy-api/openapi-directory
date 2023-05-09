@@ -18,6 +18,7 @@ public class VolumeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public VolumeConfig withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class VolumeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public VolumeConfig withLocation(String location) {
         this.location = location;
         return this;
@@ -40,6 +42,7 @@ public class VolumeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lunRanges")
     public LunRange[] lunRanges;
+
     public VolumeConfig withLunRanges(LunRange[] lunRanges) {
         this.lunRanges = lunRanges;
         return this;
@@ -51,6 +54,7 @@ public class VolumeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineIds")
     public String[] machineIds;
+
     public VolumeConfig withMachineIds(String[] machineIds) {
         this.machineIds = machineIds;
         return this;
@@ -62,6 +66,7 @@ public class VolumeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nfsExports")
     public NfsExport[] nfsExports;
+
     public VolumeConfig withNfsExports(NfsExport[] nfsExports) {
         this.nfsExports = nfsExports;
         return this;
@@ -73,6 +78,7 @@ public class VolumeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public VolumeConfigProtocolEnum protocol;
+
     public VolumeConfig withProtocol(VolumeConfigProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -84,6 +90,7 @@ public class VolumeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeGb")
     public Integer sizeGb;
+
     public VolumeConfig withSizeGb(Integer sizeGb) {
         this.sizeGb = sizeGb;
         return this;
@@ -95,6 +102,7 @@ public class VolumeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotsEnabled")
     public Boolean snapshotsEnabled;
+
     public VolumeConfig withSnapshotsEnabled(Boolean snapshotsEnabled) {
         this.snapshotsEnabled = snapshotsEnabled;
         return this;
@@ -106,6 +114,7 @@ public class VolumeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public VolumeConfigTypeEnum type;
+
     public VolumeConfig withType(VolumeConfigTypeEnum type) {
         this.type = type;
         return this;
@@ -117,9 +126,11 @@ public class VolumeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userNote")
     public String userNote;
+
     public VolumeConfig withUserNote(String userNote) {
         this.userNote = userNote;
         return this;
     }
     
+    public VolumeConfig(){}
 }

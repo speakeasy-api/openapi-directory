@@ -16,6 +16,7 @@ public class AvsAddress {
      */
     @JsonProperty("streetAddress")
     public String streetAddress;
+
     public AvsAddress withStreetAddress(String streetAddress) {
         this.streetAddress = streetAddress;
         return this;
@@ -29,9 +30,13 @@ public class AvsAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zip")
     public String zip;
+
     public AvsAddress withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public AvsAddress(@JsonProperty("streetAddress") String streetAddress) {
+        this.streetAddress = streetAddress;
+  }
 }

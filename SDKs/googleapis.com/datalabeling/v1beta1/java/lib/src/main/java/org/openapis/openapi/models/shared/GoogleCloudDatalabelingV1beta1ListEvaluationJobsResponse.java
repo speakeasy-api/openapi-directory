@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1ListEvaluationJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationJobs")
     public GoogleCloudDatalabelingV1beta1EvaluationJob[] evaluationJobs;
+
     public GoogleCloudDatalabelingV1beta1ListEvaluationJobsResponse withEvaluationJobs(GoogleCloudDatalabelingV1beta1EvaluationJob[] evaluationJobs) {
         this.evaluationJobs = evaluationJobs;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1ListEvaluationJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatalabelingV1beta1ListEvaluationJobsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ListEvaluationJobsResponse(){}
 }

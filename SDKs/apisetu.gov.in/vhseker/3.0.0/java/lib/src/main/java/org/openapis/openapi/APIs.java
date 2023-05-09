@@ -55,7 +55,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VochseResponse res = new org.openapis.openapi.models.operations.VochseResponse() {{
+        org.openapis.openapi.models.operations.VochseResponse res = new org.openapis.openapi.models.operations.VochseResponse(contentType, httpRes.statusCode()) {{
             vochse400ApplicationJSONObject = null;
             vochse401ApplicationJSONObject = null;
             vochse404ApplicationJSONObject = null;
@@ -64,8 +64,6 @@ public class APIs {
             vochse503ApplicationJSONObject = null;
             vochse504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

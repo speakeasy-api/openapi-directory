@@ -53,11 +53,9 @@ public class Policies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPoliciesPolicyIdResponse res = new org.openapis.openapi.models.operations.GetPoliciesPolicyIdResponse() {{
+        org.openapis.openapi.models.operations.GetPoliciesPolicyIdResponse res = new org.openapis.openapi.models.operations.GetPoliciesPolicyIdResponse(contentType, httpRes.statusCode()) {{
             getPoliciesPolicyId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class Policies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPoliciesResponse res = new org.openapis.openapi.models.operations.PostPoliciesResponse() {{
+        org.openapis.openapi.models.operations.PostPoliciesResponse res = new org.openapis.openapi.models.operations.PostPoliciesResponse(contentType, httpRes.statusCode()) {{
             postPolicies200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

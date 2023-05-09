@@ -15,9 +15,11 @@ public class UpdateGameRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateGameRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public UpdateGameRequestBody(){}
 }

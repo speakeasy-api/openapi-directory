@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpv6PoolsResultIpv6PoolsPoolCidrBlocks {
     
     public String cidr;
+
     public DescribeIpv6PoolsResultIpv6PoolsPoolCidrBlocks withCidr(String cidr) {
         this.cidr = cidr;
         return this;
     }
     
+    public DescribeIpv6PoolsResultIpv6PoolsPoolCidrBlocks(){}
 }

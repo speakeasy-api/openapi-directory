@@ -15,6 +15,7 @@ public class IntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public IntentConfirmationSetting withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class IntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeHook")
     public DialogCodeHookInvocationSetting codeHook;
+
     public IntentConfirmationSetting withCodeHook(DialogCodeHookInvocationSetting codeHook) {
         this.codeHook = codeHook;
         return this;
@@ -31,6 +33,7 @@ public class IntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmationConditional")
     public ConditionalSpecification confirmationConditional;
+
     public IntentConfirmationSetting withConfirmationConditional(ConditionalSpecification confirmationConditional) {
         this.confirmationConditional = confirmationConditional;
         return this;
@@ -39,6 +42,7 @@ public class IntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmationNextStep")
     public DialogState confirmationNextStep;
+
     public IntentConfirmationSetting withConfirmationNextStep(DialogState confirmationNextStep) {
         this.confirmationNextStep = confirmationNextStep;
         return this;
@@ -50,6 +54,7 @@ public class IntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmationResponse")
     public ResponseSpecification confirmationResponse;
+
     public IntentConfirmationSetting withConfirmationResponse(ResponseSpecification confirmationResponse) {
         this.confirmationResponse = confirmationResponse;
         return this;
@@ -58,6 +63,7 @@ public class IntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("declinationConditional")
     public ConditionalSpecification declinationConditional;
+
     public IntentConfirmationSetting withDeclinationConditional(ConditionalSpecification declinationConditional) {
         this.declinationConditional = declinationConditional;
         return this;
@@ -66,6 +72,7 @@ public class IntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("declinationNextStep")
     public DialogState declinationNextStep;
+
     public IntentConfirmationSetting withDeclinationNextStep(DialogState declinationNextStep) {
         this.declinationNextStep = declinationNextStep;
         return this;
@@ -74,6 +81,7 @@ public class IntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("declinationResponse")
     public ResponseSpecification declinationResponse;
+
     public IntentConfirmationSetting withDeclinationResponse(ResponseSpecification declinationResponse) {
         this.declinationResponse = declinationResponse;
         return this;
@@ -82,6 +90,7 @@ public class IntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elicitationCodeHook")
     public ElicitationCodeHookInvocationSetting elicitationCodeHook;
+
     public IntentConfirmationSetting withElicitationCodeHook(ElicitationCodeHookInvocationSetting elicitationCodeHook) {
         this.elicitationCodeHook = elicitationCodeHook;
         return this;
@@ -93,6 +102,7 @@ public class IntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureConditional")
     public ConditionalSpecification failureConditional;
+
     public IntentConfirmationSetting withFailureConditional(ConditionalSpecification failureConditional) {
         this.failureConditional = failureConditional;
         return this;
@@ -101,6 +111,7 @@ public class IntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureNextStep")
     public DialogState failureNextStep;
+
     public IntentConfirmationSetting withFailureNextStep(DialogState failureNextStep) {
         this.failureNextStep = failureNextStep;
         return this;
@@ -112,6 +123,7 @@ public class IntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureResponse")
     public ResponseSpecification failureResponse;
+
     public IntentConfirmationSetting withFailureResponse(ResponseSpecification failureResponse) {
         this.failureResponse = failureResponse;
         return this;
@@ -119,9 +131,13 @@ public class IntentConfirmationSetting {
     
     @JsonProperty("promptSpecification")
     public PromptSpecification promptSpecification;
+
     public IntentConfirmationSetting withPromptSpecification(PromptSpecification promptSpecification) {
         this.promptSpecification = promptSpecification;
         return this;
     }
     
+    public IntentConfirmationSetting(@JsonProperty("promptSpecification") PromptSpecification promptSpecification) {
+        this.promptSpecification = promptSpecification;
+  }
 }

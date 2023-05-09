@@ -12,6 +12,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Birdies")
     public Double birdies;
+
     public PlayerTournament withBirdies(Double birdies) {
         this.birdies = birdies;
         return this;
@@ -20,6 +21,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BogeyFreeRounds")
     public Double bogeyFreeRounds;
+
     public PlayerTournament withBogeyFreeRounds(Double bogeyFreeRounds) {
         this.bogeyFreeRounds = bogeyFreeRounds;
         return this;
@@ -28,6 +30,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bogeys")
     public Double bogeys;
+
     public PlayerTournament withBogeys(Double bogeys) {
         this.bogeys = bogeys;
         return this;
@@ -36,6 +39,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BounceBackCount")
     public Double bounceBackCount;
+
     public PlayerTournament withBounceBackCount(Double bounceBackCount) {
         this.bounceBackCount = bounceBackCount;
         return this;
@@ -44,6 +48,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsecutiveBirdieOrBetterCount")
     public Double consecutiveBirdieOrBetterCount;
+
     public PlayerTournament withConsecutiveBirdieOrBetterCount(Double consecutiveBirdieOrBetterCount) {
         this.consecutiveBirdieOrBetterCount = consecutiveBirdieOrBetterCount;
         return this;
@@ -52,6 +57,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public PlayerTournament withCountry(String country) {
         this.country = country;
         return this;
@@ -60,6 +66,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DoubleBogeys")
     public Double doubleBogeys;
+
     public PlayerTournament withDoubleBogeys(Double doubleBogeys) {
         this.doubleBogeys = doubleBogeys;
         return this;
@@ -68,6 +75,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DoubleEagles")
     public Double doubleEagles;
+
     public PlayerTournament withDoubleEagles(Double doubleEagles) {
         this.doubleEagles = doubleEagles;
         return this;
@@ -76,6 +84,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsSalary")
     public Long draftKingsSalary;
+
     public PlayerTournament withDraftKingsSalary(Long draftKingsSalary) {
         this.draftKingsSalary = draftKingsSalary;
         return this;
@@ -84,6 +93,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Eagles")
     public Double eagles;
+
     public PlayerTournament withEagles(Double eagles) {
         this.eagles = eagles;
         return this;
@@ -92,6 +102,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Earnings")
     public Double earnings;
+
     public PlayerTournament withEarnings(Double earnings) {
         this.earnings = earnings;
         return this;
@@ -100,6 +111,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelSalary")
     public Long fanDuelSalary;
+
     public PlayerTournament withFanDuelSalary(Long fanDuelSalary) {
         this.fanDuelSalary = fanDuelSalary;
         return this;
@@ -108,6 +120,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftSalary")
     public Long fantasyDraftSalary;
+
     public PlayerTournament withFantasyDraftSalary(Long fantasyDraftSalary) {
         this.fantasyDraftSalary = fantasyDraftSalary;
         return this;
@@ -116,6 +129,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public PlayerTournament withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -124,6 +138,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsDraftKings")
     public Double fantasyPointsDraftKings;
+
     public PlayerTournament withFantasyPointsDraftKings(Double fantasyPointsDraftKings) {
         this.fantasyPointsDraftKings = fantasyPointsDraftKings;
         return this;
@@ -132,6 +147,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFanDuel")
     public Double fantasyPointsFanDuel;
+
     public PlayerTournament withFantasyPointsFanDuel(Double fantasyPointsFanDuel) {
         this.fantasyPointsFanDuel = fantasyPointsFanDuel;
         return this;
@@ -140,6 +156,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFantasyDraft")
     public Double fantasyPointsFantasyDraft;
+
     public PlayerTournament withFantasyPointsFantasyDraft(Double fantasyPointsFantasyDraft) {
         this.fantasyPointsFantasyDraft = fantasyPointsFantasyDraft;
         return this;
@@ -148,6 +165,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsYahoo")
     public Double fantasyPointsYahoo;
+
     public PlayerTournament withFantasyPointsYahoo(Double fantasyPointsYahoo) {
         this.fantasyPointsYahoo = fantasyPointsYahoo;
         return this;
@@ -156,6 +174,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FedExPoints")
     public Long fedExPoints;
+
     public PlayerTournament withFedExPoints(Long fedExPoints) {
         this.fedExPoints = fedExPoints;
         return this;
@@ -164,6 +183,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HoleInOnes")
     public Double holeInOnes;
+
     public PlayerTournament withHoleInOnes(Double holeInOnes) {
         this.holeInOnes = holeInOnes;
         return this;
@@ -172,6 +192,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsAlternate")
     public Boolean isAlternate;
+
     public PlayerTournament withIsAlternate(Boolean isAlternate) {
         this.isAlternate = isAlternate;
         return this;
@@ -180,6 +201,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsWithdrawn")
     public Boolean isWithdrawn;
+
     public PlayerTournament withIsWithdrawn(Boolean isWithdrawn) {
         this.isWithdrawn = isWithdrawn;
         return this;
@@ -188,6 +210,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MadeCut")
     public Double madeCut;
+
     public PlayerTournament withMadeCut(Double madeCut) {
         this.madeCut = madeCut;
         return this;
@@ -196,6 +219,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MadeCutDidNotFinish")
     public Boolean madeCutDidNotFinish;
+
     public PlayerTournament withMadeCutDidNotFinish(Boolean madeCutDidNotFinish) {
         this.madeCutDidNotFinish = madeCutDidNotFinish;
         return this;
@@ -204,6 +228,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerTournament withName(String name) {
         this.name = name;
         return this;
@@ -212,6 +237,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OddsToWin")
     public Double oddsToWin;
+
     public PlayerTournament withOddsToWin(Double oddsToWin) {
         this.oddsToWin = oddsToWin;
         return this;
@@ -220,6 +246,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OddsToWinDescription")
     public String oddsToWinDescription;
+
     public PlayerTournament withOddsToWinDescription(String oddsToWinDescription) {
         this.oddsToWinDescription = oddsToWinDescription;
         return this;
@@ -228,6 +255,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pars")
     public Double pars;
+
     public PlayerTournament withPars(Double pars) {
         this.pars = pars;
         return this;
@@ -236,6 +264,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerTournament withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -244,6 +273,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerTournamentID")
     public Long playerTournamentID;
+
     public PlayerTournament withPlayerTournamentID(Long playerTournamentID) {
         this.playerTournamentID = playerTournamentID;
         return this;
@@ -252,6 +282,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rank")
     public Long rank;
+
     public PlayerTournament withRank(Long rank) {
         this.rank = rank;
         return this;
@@ -260,6 +291,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rounds")
     public PlayerRound[] rounds;
+
     public PlayerTournament withRounds(PlayerRound[] rounds) {
         this.rounds = rounds;
         return this;
@@ -268,6 +300,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoundsUnderSeventy")
     public Double roundsUnderSeventy;
+
     public PlayerTournament withRoundsUnderSeventy(Double roundsUnderSeventy) {
         this.roundsUnderSeventy = roundsUnderSeventy;
         return this;
@@ -276,6 +309,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoundsWithFiveOrMoreBirdiesOrBetter")
     public Double roundsWithFiveOrMoreBirdiesOrBetter;
+
     public PlayerTournament withRoundsWithFiveOrMoreBirdiesOrBetter(Double roundsWithFiveOrMoreBirdiesOrBetter) {
         this.roundsWithFiveOrMoreBirdiesOrBetter = roundsWithFiveOrMoreBirdiesOrBetter;
         return this;
@@ -284,6 +318,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreaksOfFiveBirdiesOrBetter")
     public Double streaksOfFiveBirdiesOrBetter;
+
     public PlayerTournament withStreaksOfFiveBirdiesOrBetter(Double streaksOfFiveBirdiesOrBetter) {
         this.streaksOfFiveBirdiesOrBetter = streaksOfFiveBirdiesOrBetter;
         return this;
@@ -292,6 +327,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreaksOfFourBirdiesOrBetter")
     public Double streaksOfFourBirdiesOrBetter;
+
     public PlayerTournament withStreaksOfFourBirdiesOrBetter(Double streaksOfFourBirdiesOrBetter) {
         this.streaksOfFourBirdiesOrBetter = streaksOfFourBirdiesOrBetter;
         return this;
@@ -300,6 +336,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreaksOfSixBirdiesOrBetter")
     public Double streaksOfSixBirdiesOrBetter;
+
     public PlayerTournament withStreaksOfSixBirdiesOrBetter(Double streaksOfSixBirdiesOrBetter) {
         this.streaksOfSixBirdiesOrBetter = streaksOfSixBirdiesOrBetter;
         return this;
@@ -308,6 +345,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreaksOfThreeBirdiesOrBetter")
     public Double streaksOfThreeBirdiesOrBetter;
+
     public PlayerTournament withStreaksOfThreeBirdiesOrBetter(Double streaksOfThreeBirdiesOrBetter) {
         this.streaksOfThreeBirdiesOrBetter = streaksOfThreeBirdiesOrBetter;
         return this;
@@ -316,6 +354,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeeTime")
     public String teeTime;
+
     public PlayerTournament withTeeTime(String teeTime) {
         this.teeTime = teeTime;
         return this;
@@ -324,6 +363,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalScore")
     public Double totalScore;
+
     public PlayerTournament withTotalScore(Double totalScore) {
         this.totalScore = totalScore;
         return this;
@@ -332,6 +372,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalStrokes")
     public Double totalStrokes;
+
     public PlayerTournament withTotalStrokes(Double totalStrokes) {
         this.totalStrokes = totalStrokes;
         return this;
@@ -340,6 +381,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalThrough")
     public Long totalThrough;
+
     public PlayerTournament withTotalThrough(Long totalThrough) {
         this.totalThrough = totalThrough;
         return this;
@@ -348,6 +390,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TournamentID")
     public Long tournamentID;
+
     public PlayerTournament withTournamentID(Long tournamentID) {
         this.tournamentID = tournamentID;
         return this;
@@ -356,6 +399,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TournamentStatus")
     public String tournamentStatus;
+
     public PlayerTournament withTournamentStatus(String tournamentStatus) {
         this.tournamentStatus = tournamentStatus;
         return this;
@@ -364,6 +408,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TripleBogeys")
     public Double tripleBogeys;
+
     public PlayerTournament withTripleBogeys(Double tripleBogeys) {
         this.tripleBogeys = tripleBogeys;
         return this;
@@ -372,6 +417,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Win")
     public Double win;
+
     public PlayerTournament withWin(Double win) {
         this.win = win;
         return this;
@@ -380,6 +426,7 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorseThanDoubleBogey")
     public Double worseThanDoubleBogey;
+
     public PlayerTournament withWorseThanDoubleBogey(Double worseThanDoubleBogey) {
         this.worseThanDoubleBogey = worseThanDoubleBogey;
         return this;
@@ -388,9 +435,11 @@ public class PlayerTournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorseThanTripleBogey")
     public Double worseThanTripleBogey;
+
     public PlayerTournament withWorseThanTripleBogey(Double worseThanTripleBogey) {
         this.worseThanTripleBogey = worseThanTripleBogey;
         return this;
     }
     
+    public PlayerTournament(){}
 }

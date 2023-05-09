@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartFHIRImportJobResponse {
@@ -12,6 +13,7 @@ public class StartFHIRImportJobResponse {
      */
     
     public Object accessDeniedException;
+
     public StartFHIRImportJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartFHIRImportJobResponse {
     
     
     public String contentType;
+
     public StartFHIRImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartFHIRImportJobResponse {
      */
     
     public Object internalServerException;
+
     public StartFHIRImportJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartFHIRImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartFHIRImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartFHIRImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartFHIRImportJobResponse startFHIRImportJobResponse;
+
     public StartFHIRImportJobResponse withStartFHIRImportJobResponse(org.openapis.openapi.models.shared.StartFHIRImportJobResponse startFHIRImportJobResponse) {
         this.startFHIRImportJobResponse = startFHIRImportJobResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartFHIRImportJobResponse {
     
     
     public Integer statusCode;
+
     public StartFHIRImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartFHIRImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartFHIRImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StartFHIRImportJobResponse {
      */
     
     public Object throttlingException;
+
     public StartFHIRImportJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class StartFHIRImportJobResponse {
      */
     
     public Object validationException;
+
     public StartFHIRImportJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartFHIRImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

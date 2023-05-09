@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnableImageDeprecationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETEnableImageDeprecationActionEnum action;
+
     public GETEnableImageDeprecationRequest withAction(GETEnableImageDeprecationActionEnum action) {
         this.action = action;
         return this;
@@ -20,6 +22,7 @@ public class GETEnableImageDeprecationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeprecateAt")
     public OffsetDateTime deprecateAt;
+
     public GETEnableImageDeprecationRequest withDeprecateAt(OffsetDateTime deprecateAt) {
         this.deprecateAt = deprecateAt;
         return this;
@@ -30,6 +33,7 @@ public class GETEnableImageDeprecationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETEnableImageDeprecationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -40,6 +44,7 @@ public class GETEnableImageDeprecationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ImageId")
     public String imageId;
+
     public GETEnableImageDeprecationRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -47,6 +52,7 @@ public class GETEnableImageDeprecationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETEnableImageDeprecationVersionEnum version;
+
     public GETEnableImageDeprecationRequest withVersion(GETEnableImageDeprecationVersionEnum version) {
         this.version = version;
         return this;
@@ -54,6 +60,7 @@ public class GETEnableImageDeprecationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETEnableImageDeprecationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -61,6 +68,7 @@ public class GETEnableImageDeprecationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETEnableImageDeprecationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -68,6 +76,7 @@ public class GETEnableImageDeprecationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETEnableImageDeprecationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -75,6 +84,7 @@ public class GETEnableImageDeprecationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETEnableImageDeprecationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -82,6 +92,7 @@ public class GETEnableImageDeprecationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETEnableImageDeprecationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -89,6 +100,7 @@ public class GETEnableImageDeprecationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETEnableImageDeprecationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -96,9 +108,16 @@ public class GETEnableImageDeprecationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETEnableImageDeprecationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETEnableImageDeprecationRequest(@JsonProperty("Action") GETEnableImageDeprecationActionEnum action, @JsonProperty("DeprecateAt") OffsetDateTime deprecateAt, @JsonProperty("ImageId") String imageId, @JsonProperty("Version") GETEnableImageDeprecationVersionEnum version) {
+        this.action = action;
+        this.deprecateAt = deprecateAt;
+        this.imageId = imageId;
+        this.version = version;
+  }
 }

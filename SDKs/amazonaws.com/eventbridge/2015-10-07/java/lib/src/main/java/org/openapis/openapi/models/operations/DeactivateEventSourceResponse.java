@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeactivateEventSourceResponse {
@@ -12,6 +13,7 @@ public class DeactivateEventSourceResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeactivateEventSourceResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeactivateEventSourceResponse {
     
     
     public String contentType;
+
     public DeactivateEventSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeactivateEventSourceResponse {
      */
     
     public Object internalException;
+
     public DeactivateEventSourceResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DeactivateEventSourceResponse {
      */
     
     public Object invalidStateException;
+
     public DeactivateEventSourceResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class DeactivateEventSourceResponse {
      */
     
     public Object operationDisabledException;
+
     public DeactivateEventSourceResponse withOperationDisabledException(Object operationDisabledException) {
         this.operationDisabledException = operationDisabledException;
         return this;
@@ -59,6 +65,7 @@ public class DeactivateEventSourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeactivateEventSourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeactivateEventSourceResponse {
     
     
     public Integer statusCode;
+
     public DeactivateEventSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeactivateEventSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeactivateEventSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeactivateEventSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

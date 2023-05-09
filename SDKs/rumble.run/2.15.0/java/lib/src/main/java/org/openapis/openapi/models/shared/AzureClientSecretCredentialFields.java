@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AzureClientSecretCredentialFields {
     @JsonProperty("client_id")
     public String clientId;
+
     public AzureClientSecretCredentialFields withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -18,6 +19,7 @@ public class AzureClientSecretCredentialFields {
     
     @JsonProperty("client_secret")
     public String clientSecret;
+
     public AzureClientSecretCredentialFields withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -26,6 +28,7 @@ public class AzureClientSecretCredentialFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multi_subscription")
     public String multiSubscription;
+
     public AzureClientSecretCredentialFields withMultiSubscription(String multiSubscription) {
         this.multiSubscription = multiSubscription;
         return this;
@@ -34,6 +37,7 @@ public class AzureClientSecretCredentialFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription_id")
     public String subscriptionId;
+
     public AzureClientSecretCredentialFields withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -41,9 +45,15 @@ public class AzureClientSecretCredentialFields {
     
     @JsonProperty("tenant_id")
     public String tenantId;
+
     public AzureClientSecretCredentialFields withTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
     }
     
+    public AzureClientSecretCredentialFields(@JsonProperty("client_id") String clientId, @JsonProperty("client_secret") String clientSecret, @JsonProperty("tenant_id") String tenantId) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.tenantId = tenantId;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceAttributeRequestUserData {
     
     public String value;
+
     public ModifyInstanceAttributeRequestUserData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ModifyInstanceAttributeRequestUserData(){}
 }

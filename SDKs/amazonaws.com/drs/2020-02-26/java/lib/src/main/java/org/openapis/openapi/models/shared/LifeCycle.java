@@ -15,6 +15,7 @@ public class LifeCycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addedToServiceDateTime")
     public String addedToServiceDateTime;
+
     public LifeCycle withAddedToServiceDateTime(String addedToServiceDateTime) {
         this.addedToServiceDateTime = addedToServiceDateTime;
         return this;
@@ -23,6 +24,7 @@ public class LifeCycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elapsedReplicationDuration")
     public String elapsedReplicationDuration;
+
     public LifeCycle withElapsedReplicationDuration(String elapsedReplicationDuration) {
         this.elapsedReplicationDuration = elapsedReplicationDuration;
         return this;
@@ -31,6 +33,7 @@ public class LifeCycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstByteDateTime")
     public String firstByteDateTime;
+
     public LifeCycle withFirstByteDateTime(String firstByteDateTime) {
         this.firstByteDateTime = firstByteDateTime;
         return this;
@@ -39,6 +42,7 @@ public class LifeCycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastLaunch")
     public LifeCycleLastLaunch lastLaunch;
+
     public LifeCycle withLastLaunch(LifeCycleLastLaunch lastLaunch) {
         this.lastLaunch = lastLaunch;
         return this;
@@ -47,9 +51,11 @@ public class LifeCycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastSeenByServiceDateTime")
     public String lastSeenByServiceDateTime;
+
     public LifeCycle withLastSeenByServiceDateTime(String lastSeenByServiceDateTime) {
         this.lastSeenByServiceDateTime = lastSeenByServiceDateTime;
         return this;
     }
     
+    public LifeCycle(){}
 }

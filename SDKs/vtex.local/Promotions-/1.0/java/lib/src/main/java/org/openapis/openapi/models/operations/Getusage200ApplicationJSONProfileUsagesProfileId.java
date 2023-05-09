@@ -18,9 +18,11 @@ public class Getusage200ApplicationJSONProfileUsagesProfileId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderUsage")
     public Getusage200ApplicationJSONProfileUsagesProfileIdOrderUsage[] orderUsage;
+
     public Getusage200ApplicationJSONProfileUsagesProfileId withOrderUsage(Getusage200ApplicationJSONProfileUsagesProfileIdOrderUsage[] orderUsage) {
         this.orderUsage = orderUsage;
         return this;
     }
     
+    public Getusage200ApplicationJSONProfileUsagesProfileId(){}
 }

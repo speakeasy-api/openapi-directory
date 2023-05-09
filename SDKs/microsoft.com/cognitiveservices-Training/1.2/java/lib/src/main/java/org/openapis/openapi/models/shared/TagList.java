@@ -15,6 +15,7 @@ public class TagList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public TagList withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -23,6 +24,7 @@ public class TagList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalTaggedImages")
     public Integer totalTaggedImages;
+
     public TagList withTotalTaggedImages(Integer totalTaggedImages) {
         this.totalTaggedImages = totalTaggedImages;
         return this;
@@ -31,9 +33,11 @@ public class TagList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalUntaggedImages")
     public Integer totalUntaggedImages;
+
     public TagList withTotalUntaggedImages(Integer totalUntaggedImages) {
         this.totalUntaggedImages = totalUntaggedImages;
         return this;
     }
     
+    public TagList(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartChangeRequestExecutionResponse {
@@ -12,6 +13,7 @@ public class StartChangeRequestExecutionResponse {
      */
     
     public Object automationDefinitionNotApprovedException;
+
     public StartChangeRequestExecutionResponse withAutomationDefinitionNotApprovedException(Object automationDefinitionNotApprovedException) {
         this.automationDefinitionNotApprovedException = automationDefinitionNotApprovedException;
         return this;
@@ -22,6 +24,7 @@ public class StartChangeRequestExecutionResponse {
      */
     
     public Object automationDefinitionNotFoundException;
+
     public StartChangeRequestExecutionResponse withAutomationDefinitionNotFoundException(Object automationDefinitionNotFoundException) {
         this.automationDefinitionNotFoundException = automationDefinitionNotFoundException;
         return this;
@@ -32,6 +35,7 @@ public class StartChangeRequestExecutionResponse {
      */
     
     public Object automationDefinitionVersionNotFoundException;
+
     public StartChangeRequestExecutionResponse withAutomationDefinitionVersionNotFoundException(Object automationDefinitionVersionNotFoundException) {
         this.automationDefinitionVersionNotFoundException = automationDefinitionVersionNotFoundException;
         return this;
@@ -42,6 +46,7 @@ public class StartChangeRequestExecutionResponse {
      */
     
     public Object automationExecutionLimitExceededException;
+
     public StartChangeRequestExecutionResponse withAutomationExecutionLimitExceededException(Object automationExecutionLimitExceededException) {
         this.automationExecutionLimitExceededException = automationExecutionLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StartChangeRequestExecutionResponse {
     
     
     public String contentType;
+
     public StartChangeRequestExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class StartChangeRequestExecutionResponse {
      */
     
     public Object idempotentParameterMismatch;
+
     public StartChangeRequestExecutionResponse withIdempotentParameterMismatch(Object idempotentParameterMismatch) {
         this.idempotentParameterMismatch = idempotentParameterMismatch;
         return this;
@@ -69,6 +76,7 @@ public class StartChangeRequestExecutionResponse {
      */
     
     public Object internalServerError;
+
     public StartChangeRequestExecutionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -79,6 +87,7 @@ public class StartChangeRequestExecutionResponse {
      */
     
     public Object invalidAutomationExecutionParametersException;
+
     public StartChangeRequestExecutionResponse withInvalidAutomationExecutionParametersException(Object invalidAutomationExecutionParametersException) {
         this.invalidAutomationExecutionParametersException = invalidAutomationExecutionParametersException;
         return this;
@@ -89,6 +98,7 @@ public class StartChangeRequestExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartChangeRequestExecutionResult startChangeRequestExecutionResult;
+
     public StartChangeRequestExecutionResponse withStartChangeRequestExecutionResult(org.openapis.openapi.models.shared.StartChangeRequestExecutionResult startChangeRequestExecutionResult) {
         this.startChangeRequestExecutionResult = startChangeRequestExecutionResult;
         return this;
@@ -96,6 +106,7 @@ public class StartChangeRequestExecutionResponse {
     
     
     public Integer statusCode;
+
     public StartChangeRequestExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class StartChangeRequestExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartChangeRequestExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartChangeRequestExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

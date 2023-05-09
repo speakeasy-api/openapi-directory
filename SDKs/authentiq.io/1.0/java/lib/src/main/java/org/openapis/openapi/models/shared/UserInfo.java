@@ -18,6 +18,7 @@ public class UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public UserInfo withAddress(Address address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aq:location")
     public UserInfoAqLocation aqLocation;
+
     public UserInfo withAqLocation(UserInfoAqLocation aqLocation) {
         this.aqLocation = aqLocation;
         return this;
@@ -37,6 +39,7 @@ public class UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserInfo withEmail(String email) {
         this.email = email;
         return this;
@@ -45,6 +48,7 @@ public class UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_verified")
     public Boolean emailVerified;
+
     public UserInfo withEmailVerified(Boolean emailVerified) {
         this.emailVerified = emailVerified;
         return this;
@@ -53,6 +57,7 @@ public class UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family_name")
     public String familyName;
+
     public UserInfo withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -61,6 +66,7 @@ public class UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("given_name")
     public String givenName;
+
     public UserInfo withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -69,6 +75,7 @@ public class UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserInfo withName(String name) {
         this.name = name;
         return this;
@@ -77,6 +84,7 @@ public class UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public UserInfo withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -85,6 +93,7 @@ public class UserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number_verified")
     public Boolean phoneNumberVerified;
+
     public UserInfo withPhoneNumberVerified(Boolean phoneNumberVerified) {
         this.phoneNumberVerified = phoneNumberVerified;
         return this;
@@ -92,9 +101,13 @@ public class UserInfo {
     
     @JsonProperty("sub")
     public String sub;
+
     public UserInfo withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public UserInfo(@JsonProperty("sub") String sub) {
+        this.sub = sub;
+  }
 }

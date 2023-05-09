@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDirectDebitsForMandateUuidRequest {
@@ -12,9 +13,13 @@ public class GetDirectDebitsForMandateUuidRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mandateUuid")
     public String mandateUuid;
+
     public GetDirectDebitsForMandateUuidRequest withMandateUuid(String mandateUuid) {
         this.mandateUuid = mandateUuid;
         return this;
     }
     
+    public GetDirectDebitsForMandateUuidRequest(@JsonProperty("mandateUuid") String mandateUuid) {
+        this.mandateUuid = mandateUuid;
+  }
 }

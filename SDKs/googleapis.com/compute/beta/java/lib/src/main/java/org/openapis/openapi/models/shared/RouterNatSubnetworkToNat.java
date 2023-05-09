@@ -18,6 +18,7 @@ public class RouterNatSubnetworkToNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RouterNatSubnetworkToNat withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class RouterNatSubnetworkToNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryIpRangeNames")
     public String[] secondaryIpRangeNames;
+
     public RouterNatSubnetworkToNat withSecondaryIpRangeNames(String[] secondaryIpRangeNames) {
         this.secondaryIpRangeNames = secondaryIpRangeNames;
         return this;
@@ -40,9 +42,11 @@ public class RouterNatSubnetworkToNat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceIpRangesToNat")
     public RouterNatSubnetworkToNatSourceIpRangesToNatEnum[] sourceIpRangesToNat;
+
     public RouterNatSubnetworkToNat withSourceIpRangesToNat(RouterNatSubnetworkToNatSourceIpRangesToNatEnum[] sourceIpRangesToNat) {
         this.sourceIpRangesToNat = sourceIpRangesToNat;
         return this;
     }
     
+    public RouterNatSubnetworkToNat(){}
 }

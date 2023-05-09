@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestGetAllTestRunsForSeriesRequest {
@@ -12,6 +13,7 @@ public class TestGetAllTestRunsForSeriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public TestGetAllTestRunsForSeriesRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class TestGetAllTestRunsForSeriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public TestGetAllTestRunsForSeriesRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -32,9 +35,15 @@ public class TestGetAllTestRunsForSeriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=test_series_slug")
     public String testSeriesSlug;
+
     public TestGetAllTestRunsForSeriesRequest withTestSeriesSlug(String testSeriesSlug) {
         this.testSeriesSlug = testSeriesSlug;
         return this;
     }
     
+    public TestGetAllTestRunsForSeriesRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("test_series_slug") String testSeriesSlug) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.testSeriesSlug = testSeriesSlug;
+  }
 }

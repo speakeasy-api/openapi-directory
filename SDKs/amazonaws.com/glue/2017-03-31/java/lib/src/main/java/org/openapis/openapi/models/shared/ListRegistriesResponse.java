@@ -15,6 +15,7 @@ public class ListRegistriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRegistriesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRegistriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Registries")
     public RegistryListItem[] registries;
+
     public ListRegistriesResponse withRegistries(RegistryListItem[] registries) {
         this.registries = registries;
         return this;
     }
     
+    public ListRegistriesResponse(){}
 }

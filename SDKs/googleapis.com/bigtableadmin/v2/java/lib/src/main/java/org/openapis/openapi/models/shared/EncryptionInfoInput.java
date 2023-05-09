@@ -18,9 +18,11 @@ public class EncryptionInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionStatus")
     public Status encryptionStatus;
+
     public EncryptionInfoInput withEncryptionStatus(Status encryptionStatus) {
         this.encryptionStatus = encryptionStatus;
         return this;
     }
     
+    public EncryptionInfoInput(){}
 }

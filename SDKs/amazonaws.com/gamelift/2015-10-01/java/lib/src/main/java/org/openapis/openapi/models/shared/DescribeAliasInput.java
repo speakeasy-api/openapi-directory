@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAliasInput {
     @JsonProperty("AliasId")
     public String aliasId;
+
     public DescribeAliasInput withAliasId(String aliasId) {
         this.aliasId = aliasId;
         return this;
     }
     
+    public DescribeAliasInput(@JsonProperty("AliasId") String aliasId) {
+        this.aliasId = aliasId;
+  }
 }

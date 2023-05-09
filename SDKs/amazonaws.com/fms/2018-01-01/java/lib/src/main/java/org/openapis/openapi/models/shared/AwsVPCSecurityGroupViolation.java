@@ -15,6 +15,7 @@ public class AwsVPCSecurityGroupViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartialMatches")
     public PartialMatch[] partialMatches;
+
     public AwsVPCSecurityGroupViolation withPartialMatches(PartialMatch[] partialMatches) {
         this.partialMatches = partialMatches;
         return this;
@@ -23,6 +24,7 @@ public class AwsVPCSecurityGroupViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PossibleSecurityGroupRemediationActions")
     public SecurityGroupRemediationAction[] possibleSecurityGroupRemediationActions;
+
     public AwsVPCSecurityGroupViolation withPossibleSecurityGroupRemediationActions(SecurityGroupRemediationAction[] possibleSecurityGroupRemediationActions) {
         this.possibleSecurityGroupRemediationActions = possibleSecurityGroupRemediationActions;
         return this;
@@ -31,6 +33,7 @@ public class AwsVPCSecurityGroupViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationTarget")
     public String violationTarget;
+
     public AwsVPCSecurityGroupViolation withViolationTarget(String violationTarget) {
         this.violationTarget = violationTarget;
         return this;
@@ -39,9 +42,11 @@ public class AwsVPCSecurityGroupViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationTargetDescription")
     public String violationTargetDescription;
+
     public AwsVPCSecurityGroupViolation withViolationTargetDescription(String violationTargetDescription) {
         this.violationTargetDescription = violationTargetDescription;
         return this;
     }
     
+    public AwsVPCSecurityGroupViolation(){}
 }

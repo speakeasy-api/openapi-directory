@@ -18,6 +18,7 @@ public class GlueRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostName")
     public String hostName;
+
     public GlueRecord withHostName(String hostName) {
         this.hostName = hostName;
         return this;
@@ -29,6 +30,7 @@ public class GlueRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv4Addresses")
     public String[] ipv4Addresses;
+
     public GlueRecord withIpv4Addresses(String[] ipv4Addresses) {
         this.ipv4Addresses = ipv4Addresses;
         return this;
@@ -40,9 +42,11 @@ public class GlueRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6Addresses")
     public String[] ipv6Addresses;
+
     public GlueRecord withIpv6Addresses(String[] ipv6Addresses) {
         this.ipv6Addresses = ipv6Addresses;
         return this;
     }
     
+    public GlueRecord(){}
 }

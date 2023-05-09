@@ -15,6 +15,7 @@ public class DnssecKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Algorithm")
     public Long algorithm;
+
     public DnssecKey withAlgorithm(Long algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -23,6 +24,7 @@ public class DnssecKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Digest")
     public String digest;
+
     public DnssecKey withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -31,6 +33,7 @@ public class DnssecKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DigestType")
     public Long digestType;
+
     public DnssecKey withDigestType(Long digestType) {
         this.digestType = digestType;
         return this;
@@ -39,6 +42,7 @@ public class DnssecKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Flags")
     public Long flags;
+
     public DnssecKey withFlags(Long flags) {
         this.flags = flags;
         return this;
@@ -47,6 +51,7 @@ public class DnssecKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public DnssecKey withId(String id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class DnssecKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyTag")
     public Long keyTag;
+
     public DnssecKey withKeyTag(Long keyTag) {
         this.keyTag = keyTag;
         return this;
@@ -63,9 +69,11 @@ public class DnssecKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicKey")
     public String publicKey;
+
     public DnssecKey withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public DnssecKey(){}
 }

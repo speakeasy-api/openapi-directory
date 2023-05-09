@@ -23,6 +23,7 @@ public class OBWriteInternationalResponse5DataExchangeRateInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContractIdentification")
     public String contractIdentification;
+
     public OBWriteInternationalResponse5DataExchangeRateInformation withContractIdentification(String contractIdentification) {
         this.contractIdentification = contractIdentification;
         return this;
@@ -33,6 +34,7 @@ public class OBWriteInternationalResponse5DataExchangeRateInformation {
      */
     @JsonProperty("ExchangeRate")
     public Double exchangeRate;
+
     public OBWriteInternationalResponse5DataExchangeRateInformation withExchangeRate(Double exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -48,6 +50,7 @@ public class OBWriteInternationalResponse5DataExchangeRateInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDateTime")
     public OffsetDateTime expirationDateTime;
+
     public OBWriteInternationalResponse5DataExchangeRateInformation withExpirationDateTime(OffsetDateTime expirationDateTime) {
         this.expirationDateTime = expirationDateTime;
         return this;
@@ -58,6 +61,7 @@ public class OBWriteInternationalResponse5DataExchangeRateInformation {
      */
     @JsonProperty("RateType")
     public OBWriteInternationalResponse5DataExchangeRateInformationRateTypeEnum rateType;
+
     public OBWriteInternationalResponse5DataExchangeRateInformation withRateType(OBWriteInternationalResponse5DataExchangeRateInformationRateTypeEnum rateType) {
         this.rateType = rateType;
         return this;
@@ -68,9 +72,15 @@ public class OBWriteInternationalResponse5DataExchangeRateInformation {
      */
     @JsonProperty("UnitCurrency")
     public String unitCurrency;
+
     public OBWriteInternationalResponse5DataExchangeRateInformation withUnitCurrency(String unitCurrency) {
         this.unitCurrency = unitCurrency;
         return this;
     }
     
+    public OBWriteInternationalResponse5DataExchangeRateInformation(@JsonProperty("ExchangeRate") Double exchangeRate, @JsonProperty("RateType") OBWriteInternationalResponse5DataExchangeRateInformationRateTypeEnum rateType, @JsonProperty("UnitCurrency") String unitCurrency) {
+        this.exchangeRate = exchangeRate;
+        this.rateType = rateType;
+        this.unitCurrency = unitCurrency;
+  }
 }

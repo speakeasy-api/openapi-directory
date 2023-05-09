@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstancesResultReservationsInstancesPlacement {
     
     public String affinity;
+
     public DescribeInstancesResultReservationsInstancesPlacement withAffinity(String affinity) {
         this.affinity = affinity;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstancesResultReservationsInstancesPlacement {
     
     
     public String availabilityZone;
+
     public DescribeInstancesResultReservationsInstancesPlacement withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstancesResultReservationsInstancesPlacement {
     
     
     public String groupId;
+
     public DescribeInstancesResultReservationsInstancesPlacement withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeInstancesResultReservationsInstancesPlacement {
     
     
     public String groupName;
+
     public DescribeInstancesResultReservationsInstancesPlacement withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -40,6 +44,7 @@ public class DescribeInstancesResultReservationsInstancesPlacement {
     
     
     public String hostId;
+
     public DescribeInstancesResultReservationsInstancesPlacement withHostId(String hostId) {
         this.hostId = hostId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeInstancesResultReservationsInstancesPlacement {
     
     
     public String hostResourceGroupArn;
+
     public DescribeInstancesResultReservationsInstancesPlacement withHostResourceGroupArn(String hostResourceGroupArn) {
         this.hostResourceGroupArn = hostResourceGroupArn;
         return this;
@@ -54,6 +60,7 @@ public class DescribeInstancesResultReservationsInstancesPlacement {
     
     
     public Long partitionNumber;
+
     public DescribeInstancesResultReservationsInstancesPlacement withPartitionNumber(Long partitionNumber) {
         this.partitionNumber = partitionNumber;
         return this;
@@ -61,6 +68,7 @@ public class DescribeInstancesResultReservationsInstancesPlacement {
     
     
     public String spreadDomain;
+
     public DescribeInstancesResultReservationsInstancesPlacement withSpreadDomain(String spreadDomain) {
         this.spreadDomain = spreadDomain;
         return this;
@@ -68,9 +76,11 @@ public class DescribeInstancesResultReservationsInstancesPlacement {
     
     
     public DescribeInstancesResultReservationsInstancesPlacementTenancyEnum tenancy;
+
     public DescribeInstancesResultReservationsInstancesPlacement withTenancy(DescribeInstancesResultReservationsInstancesPlacementTenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
     }
     
+    public DescribeInstancesResultReservationsInstancesPlacement(){}
 }

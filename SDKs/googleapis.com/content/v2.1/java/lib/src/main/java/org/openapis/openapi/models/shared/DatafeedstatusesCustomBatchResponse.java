@@ -18,6 +18,7 @@ public class DatafeedstatusesCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public DatafeedstatusesCustomBatchResponseEntry[] entries;
+
     public DatafeedstatusesCustomBatchResponse withEntries(DatafeedstatusesCustomBatchResponseEntry[] entries) {
         this.entries = entries;
         return this;
@@ -29,9 +30,11 @@ public class DatafeedstatusesCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DatafeedstatusesCustomBatchResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public DatafeedstatusesCustomBatchResponse(){}
 }

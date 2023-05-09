@@ -12,6 +12,7 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudsearchQuerySourcesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudsearchQuerySourcesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudsearchQuerySourcesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudsearchQuerySourcesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudsearchQuerySourcesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +67,7 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudsearchQuerySourcesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +78,7 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudsearchQuerySourcesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +89,7 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public CloudsearchQuerySourcesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -92,6 +100,7 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudsearchQuerySourcesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +111,7 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudsearchQuerySourcesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +122,7 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestOptions.debugOptions.enableDebugging")
     public Boolean requestOptionsDebugOptionsEnableDebugging;
+
     public CloudsearchQuerySourcesListRequest withRequestOptionsDebugOptionsEnableDebugging(Boolean requestOptionsDebugOptionsEnableDebugging) {
         this.requestOptionsDebugOptionsEnableDebugging = requestOptionsDebugOptionsEnableDebugging;
         return this;
@@ -122,6 +133,7 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestOptions.languageCode")
     public String requestOptionsLanguageCode;
+
     public CloudsearchQuerySourcesListRequest withRequestOptionsLanguageCode(String requestOptionsLanguageCode) {
         this.requestOptionsLanguageCode = requestOptionsLanguageCode;
         return this;
@@ -132,6 +144,7 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestOptions.searchApplicationId")
     public String requestOptionsSearchApplicationId;
+
     public CloudsearchQuerySourcesListRequest withRequestOptionsSearchApplicationId(String requestOptionsSearchApplicationId) {
         this.requestOptionsSearchApplicationId = requestOptionsSearchApplicationId;
         return this;
@@ -142,6 +155,7 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestOptions.timeZone")
     public String requestOptionsTimeZone;
+
     public CloudsearchQuerySourcesListRequest withRequestOptionsTimeZone(String requestOptionsTimeZone) {
         this.requestOptionsTimeZone = requestOptionsTimeZone;
         return this;
@@ -152,6 +166,7 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudsearchQuerySourcesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,9 +177,11 @@ public class CloudsearchQuerySourcesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudsearchQuerySourcesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudsearchQuerySourcesListRequest(){}
 }

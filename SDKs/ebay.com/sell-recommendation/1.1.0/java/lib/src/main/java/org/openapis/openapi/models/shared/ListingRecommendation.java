@@ -18,6 +18,7 @@ public class ListingRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listingId")
     public String listingId;
+
     public ListingRecommendation withListingId(String listingId) {
         this.listingId = listingId;
         return this;
@@ -29,9 +30,11 @@ public class ListingRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketing")
     public MarketingRecommendation marketing;
+
     public ListingRecommendation withMarketing(MarketingRecommendation marketing) {
         this.marketing = marketing;
         return this;
     }
     
+    public ListingRecommendation(){}
 }

@@ -13,14 +13,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class MailOptions {
     /**
+     * Specifies whether the results should include encrypted content, unencrypted content, or both. Defaults to including both.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientSideEncryptedOption")
+    public MailOptionsClientSideEncryptedOptionEnum clientSideEncryptedOption;
+
+    public MailOptions withClientSideEncryptedOption(MailOptionsClientSideEncryptedOptionEnum clientSideEncryptedOption) {
+        this.clientSideEncryptedOption = clientSideEncryptedOption;
+        return this;
+    }
+    
+    /**
      * Set to **true** to exclude drafts.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeDrafts")
     public Boolean excludeDrafts;
+
     public MailOptions withExcludeDrafts(Boolean excludeDrafts) {
         this.excludeDrafts = excludeDrafts;
         return this;
     }
     
+    public MailOptions(){}
 }

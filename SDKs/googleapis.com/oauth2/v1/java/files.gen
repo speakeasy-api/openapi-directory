@@ -47,4 +47,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/Oauth2TokeninfoResponse
 lib/src/main/java/org/openapis/openapi/models/shared/Userinfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Tokeninfo.java
+docs/sdk/README.md
+docs/userinfo/README.md
 USAGE.md

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssociateNatGatewayAddressResultNatGatewayAddresses {
     
     public String allocationId;
+
     public AssociateNatGatewayAddressResultNatGatewayAddresses withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -19,6 +20,7 @@ public class AssociateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String associationId;
+
     public AssociateNatGatewayAddressResultNatGatewayAddresses withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -26,6 +28,7 @@ public class AssociateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String failureMessage;
+
     public AssociateNatGatewayAddressResultNatGatewayAddresses withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -33,6 +36,7 @@ public class AssociateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public Boolean isPrimary;
+
     public AssociateNatGatewayAddressResultNatGatewayAddresses withIsPrimary(Boolean isPrimary) {
         this.isPrimary = isPrimary;
         return this;
@@ -40,6 +44,7 @@ public class AssociateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String networkInterfaceId;
+
     public AssociateNatGatewayAddressResultNatGatewayAddresses withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -47,6 +52,7 @@ public class AssociateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String privateIp;
+
     public AssociateNatGatewayAddressResultNatGatewayAddresses withPrivateIp(String privateIp) {
         this.privateIp = privateIp;
         return this;
@@ -54,6 +60,7 @@ public class AssociateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String publicIp;
+
     public AssociateNatGatewayAddressResultNatGatewayAddresses withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -61,9 +68,11 @@ public class AssociateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public AssociateNatGatewayAddressResultNatGatewayAddressesStatusEnum status;
+
     public AssociateNatGatewayAddressResultNatGatewayAddresses withStatus(AssociateNatGatewayAddressResultNatGatewayAddressesStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AssociateNatGatewayAddressResultNatGatewayAddresses(){}
 }

@@ -15,6 +15,7 @@ public class ListResourceDataSyncResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourceDataSyncResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListResourceDataSyncResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceDataSyncItems")
     public ResourceDataSyncItem[] resourceDataSyncItems;
+
     public ListResourceDataSyncResult withResourceDataSyncItems(ResourceDataSyncItem[] resourceDataSyncItems) {
         this.resourceDataSyncItems = resourceDataSyncItems;
         return this;
     }
     
+    public ListResourceDataSyncResult(){}
 }

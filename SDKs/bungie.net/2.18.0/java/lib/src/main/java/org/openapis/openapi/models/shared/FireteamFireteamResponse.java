@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class FireteamFireteamResponse {
     
     public FireteamFireteamMember[] alternates;
+
     public FireteamFireteamResponse withAlternates(FireteamFireteamMember[] alternates) {
         this.alternates = alternates;
         return this;
@@ -16,6 +17,7 @@ public class FireteamFireteamResponse {
     
     
     public FireteamFireteamMember[] members;
+
     public FireteamFireteamResponse withMembers(FireteamFireteamMember[] members) {
         this.members = members;
         return this;
@@ -23,9 +25,11 @@ public class FireteamFireteamResponse {
     
     
     public FireteamFireteamSummary summary;
+
     public FireteamFireteamResponse withSummary(FireteamFireteamSummary summary) {
         this.summary = summary;
         return this;
     }
     
+    public FireteamFireteamResponse(){}
 }

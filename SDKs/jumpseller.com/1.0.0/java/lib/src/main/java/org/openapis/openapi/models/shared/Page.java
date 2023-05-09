@@ -15,9 +15,11 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public PageFields page;
+
     public Page withPage(PageFields page) {
         this.page = page;
         return this;
     }
     
+    public Page(){}
 }

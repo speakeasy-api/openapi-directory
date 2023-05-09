@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LinkWithType {
     @JsonProperty("href")
     public String href;
+
     public LinkWithType withHref(String href) {
         this.href = href;
         return this;
@@ -19,9 +20,14 @@ public class LinkWithType {
     
     @JsonProperty("type")
     public String type;
+
     public LinkWithType withType(String type) {
         this.type = type;
         return this;
     }
     
+    public LinkWithType(@JsonProperty("href") String href, @JsonProperty("type") String type) {
+        this.href = href;
+        this.type = type;
+  }
 }

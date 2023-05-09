@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApiV1PushSubscriptionResponse {
     
     public String contentType;
+
     public DeleteApiV1PushSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteApiV1PushSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public DeleteApiV1PushSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteApiV1PushSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApiV1PushSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DeleteApiV1PushSubscriptionResponse {
      */
     
     public java.util.Map<String, Object> deleteApiV1PushSubscription200ApplicationJSONObject;
+
     public DeleteApiV1PushSubscriptionResponse withDeleteApiV1PushSubscription200ApplicationJSONObject(java.util.Map<String, Object> deleteApiV1PushSubscription200ApplicationJSONObject) {
         this.deleteApiV1PushSubscription200ApplicationJSONObject = deleteApiV1PushSubscription200ApplicationJSONObject;
         return this;
     }
     
+    public DeleteApiV1PushSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

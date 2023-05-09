@@ -12,6 +12,7 @@ public class MissDistance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("astronomical")
     public String astronomical;
+
     public MissDistance withAstronomical(String astronomical) {
         this.astronomical = astronomical;
         return this;
@@ -20,6 +21,7 @@ public class MissDistance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kilometers")
     public String kilometers;
+
     public MissDistance withKilometers(String kilometers) {
         this.kilometers = kilometers;
         return this;
@@ -28,6 +30,7 @@ public class MissDistance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lunar")
     public String lunar;
+
     public MissDistance withLunar(String lunar) {
         this.lunar = lunar;
         return this;
@@ -36,9 +39,11 @@ public class MissDistance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("miles")
     public String miles;
+
     public MissDistance withMiles(String miles) {
         this.miles = miles;
         return this;
     }
     
+    public MissDistance(){}
 }

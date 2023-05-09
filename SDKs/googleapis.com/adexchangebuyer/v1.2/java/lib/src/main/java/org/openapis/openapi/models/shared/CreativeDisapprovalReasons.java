@@ -15,6 +15,7 @@ public class CreativeDisapprovalReasons {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String[] details;
+
     public CreativeDisapprovalReasons withDetails(String[] details) {
         this.details = details;
         return this;
@@ -26,9 +27,11 @@ public class CreativeDisapprovalReasons {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public CreativeDisapprovalReasons withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public CreativeDisapprovalReasons(){}
 }

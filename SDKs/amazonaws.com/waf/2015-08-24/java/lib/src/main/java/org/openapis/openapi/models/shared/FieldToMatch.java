@@ -15,6 +15,7 @@ public class FieldToMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public String data;
+
     public FieldToMatch withData(String data) {
         this.data = data;
         return this;
@@ -22,9 +23,13 @@ public class FieldToMatch {
     
     @JsonProperty("Type")
     public MatchFieldTypeEnum type;
+
     public FieldToMatch withType(MatchFieldTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public FieldToMatch(@JsonProperty("Type") MatchFieldTypeEnum type) {
+        this.type = type;
+  }
 }

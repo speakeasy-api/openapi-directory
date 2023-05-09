@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestIpamResourceTag {
     
     public String key;
+
     public RequestIpamResourceTag withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class RequestIpamResourceTag {
     
     
     public String value;
+
     public RequestIpamResourceTag withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public RequestIpamResourceTag(){}
 }

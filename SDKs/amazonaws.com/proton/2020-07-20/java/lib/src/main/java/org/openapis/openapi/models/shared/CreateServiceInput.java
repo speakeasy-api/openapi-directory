@@ -12,6 +12,7 @@ public class CreateServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchName")
     public String branchName;
+
     public CreateServiceInput withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -20,6 +21,7 @@ public class CreateServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateServiceInput withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateServiceInput {
     
     @JsonProperty("name")
     public String name;
+
     public CreateServiceInput withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +38,7 @@ public class CreateServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryConnectionArn")
     public String repositoryConnectionArn;
+
     public CreateServiceInput withRepositoryConnectionArn(String repositoryConnectionArn) {
         this.repositoryConnectionArn = repositoryConnectionArn;
         return this;
@@ -43,6 +47,7 @@ public class CreateServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryId")
     public String repositoryId;
+
     public CreateServiceInput withRepositoryId(String repositoryId) {
         this.repositoryId = repositoryId;
         return this;
@@ -50,6 +55,7 @@ public class CreateServiceInput {
     
     @JsonProperty("spec")
     public String spec;
+
     public CreateServiceInput withSpec(String spec) {
         this.spec = spec;
         return this;
@@ -58,6 +64,7 @@ public class CreateServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateServiceInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -65,6 +72,7 @@ public class CreateServiceInput {
     
     @JsonProperty("templateMajorVersion")
     public String templateMajorVersion;
+
     public CreateServiceInput withTemplateMajorVersion(String templateMajorVersion) {
         this.templateMajorVersion = templateMajorVersion;
         return this;
@@ -73,6 +81,7 @@ public class CreateServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateMinorVersion")
     public String templateMinorVersion;
+
     public CreateServiceInput withTemplateMinorVersion(String templateMinorVersion) {
         this.templateMinorVersion = templateMinorVersion;
         return this;
@@ -80,9 +89,16 @@ public class CreateServiceInput {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public CreateServiceInput withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public CreateServiceInput(@JsonProperty("name") String name, @JsonProperty("spec") String spec, @JsonProperty("templateMajorVersion") String templateMajorVersion, @JsonProperty("templateName") String templateName) {
+        this.name = name;
+        this.spec = spec;
+        this.templateMajorVersion = templateMajorVersion;
+        this.templateName = templateName;
+  }
 }

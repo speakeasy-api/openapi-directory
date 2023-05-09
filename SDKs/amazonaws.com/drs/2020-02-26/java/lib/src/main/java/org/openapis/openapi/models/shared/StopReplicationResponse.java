@@ -15,9 +15,11 @@ public class StopReplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceServer")
     public SourceServer sourceServer;
+
     public StopReplicationResponse withSourceServer(SourceServer sourceServer) {
         this.sourceServer = sourceServer;
         return this;
     }
     
+    public StopReplicationResponse(){}
 }

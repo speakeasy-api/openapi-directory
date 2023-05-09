@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JobInfoLightRead {
     @JsonProperty("job")
     public JobRead job;
+
     public JobInfoLightRead withJob(JobRead job) {
         this.job = job;
         return this;
     }
     
+    public JobInfoLightRead(@JsonProperty("job") JobRead job) {
+        this.job = job;
+  }
 }

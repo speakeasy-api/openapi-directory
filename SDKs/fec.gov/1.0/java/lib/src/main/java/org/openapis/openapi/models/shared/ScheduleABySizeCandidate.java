@@ -12,6 +12,7 @@ public class ScheduleABySizeCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     public String candidateId;
+
     public ScheduleABySizeCandidate withCandidateId(String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -20,6 +21,7 @@ public class ScheduleABySizeCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public ScheduleABySizeCandidate withCount(Integer count) {
         this.count = count;
         return this;
@@ -28,6 +30,7 @@ public class ScheduleABySizeCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycle")
     public Integer cycle;
+
     public ScheduleABySizeCandidate withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -36,6 +39,7 @@ public class ScheduleABySizeCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Integer size;
+
     public ScheduleABySizeCandidate withSize(Integer size) {
         this.size = size;
         return this;
@@ -44,9 +48,11 @@ public class ScheduleABySizeCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public ScheduleABySizeCandidate withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public ScheduleABySizeCandidate(){}
 }

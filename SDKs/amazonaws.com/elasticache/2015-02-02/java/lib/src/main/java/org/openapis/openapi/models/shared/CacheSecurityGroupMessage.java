@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CacheSecurityGroupMessage {
     
     public CacheSecurityGroups[] cacheSecurityGroups;
+
     public CacheSecurityGroupMessage withCacheSecurityGroups(CacheSecurityGroups[] cacheSecurityGroups) {
         this.cacheSecurityGroups = cacheSecurityGroups;
         return this;
@@ -19,9 +20,11 @@ public class CacheSecurityGroupMessage {
     
     
     public String marker;
+
     public CacheSecurityGroupMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public CacheSecurityGroupMessage(){}
 }

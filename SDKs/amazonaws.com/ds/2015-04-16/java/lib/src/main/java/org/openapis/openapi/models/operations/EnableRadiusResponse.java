@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableRadiusResponse {
@@ -12,6 +13,7 @@ public class EnableRadiusResponse {
      */
     
     public Object clientException;
+
     public EnableRadiusResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class EnableRadiusResponse {
     
     
     public String contentType;
+
     public EnableRadiusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class EnableRadiusResponse {
      */
     
     public java.util.Map<String, Object> enableRadiusResult;
+
     public EnableRadiusResponse withEnableRadiusResult(java.util.Map<String, Object> enableRadiusResult) {
         this.enableRadiusResult = enableRadiusResult;
         return this;
@@ -39,6 +43,7 @@ public class EnableRadiusResponse {
      */
     
     public Object entityAlreadyExistsException;
+
     public EnableRadiusResponse withEntityAlreadyExistsException(Object entityAlreadyExistsException) {
         this.entityAlreadyExistsException = entityAlreadyExistsException;
         return this;
@@ -49,6 +54,7 @@ public class EnableRadiusResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public EnableRadiusResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class EnableRadiusResponse {
      */
     
     public Object invalidParameterException;
+
     public EnableRadiusResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class EnableRadiusResponse {
      */
     
     public Object serviceException;
+
     public EnableRadiusResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class EnableRadiusResponse {
     
     
     public Integer statusCode;
+
     public EnableRadiusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class EnableRadiusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableRadiusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EnableRadiusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

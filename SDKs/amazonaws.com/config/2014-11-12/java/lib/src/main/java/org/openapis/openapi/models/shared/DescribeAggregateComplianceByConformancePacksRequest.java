@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAggregateComplianceByConformancePacksRequest {
     @JsonProperty("ConfigurationAggregatorName")
     public String configurationAggregatorName;
+
     public DescribeAggregateComplianceByConformancePacksRequest withConfigurationAggregatorName(String configurationAggregatorName) {
         this.configurationAggregatorName = configurationAggregatorName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeAggregateComplianceByConformancePacksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public AggregateConformancePackComplianceFilters filters;
+
     public DescribeAggregateComplianceByConformancePacksRequest withFilters(AggregateConformancePackComplianceFilters filters) {
         this.filters = filters;
         return this;
@@ -27,6 +29,7 @@ public class DescribeAggregateComplianceByConformancePacksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeAggregateComplianceByConformancePacksRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -35,9 +38,13 @@ public class DescribeAggregateComplianceByConformancePacksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAggregateComplianceByConformancePacksRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAggregateComplianceByConformancePacksRequest(@JsonProperty("ConfigurationAggregatorName") String configurationAggregatorName) {
+        this.configurationAggregatorName = configurationAggregatorName;
+  }
 }

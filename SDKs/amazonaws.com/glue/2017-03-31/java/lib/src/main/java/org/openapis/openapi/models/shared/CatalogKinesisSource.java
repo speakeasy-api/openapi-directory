@@ -15,6 +15,7 @@ public class CatalogKinesisSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataPreviewOptions")
     public StreamingDataPreviewOptions dataPreviewOptions;
+
     public CatalogKinesisSource withDataPreviewOptions(StreamingDataPreviewOptions dataPreviewOptions) {
         this.dataPreviewOptions = dataPreviewOptions;
         return this;
@@ -22,6 +23,7 @@ public class CatalogKinesisSource {
     
     @JsonProperty("Database")
     public String database;
+
     public CatalogKinesisSource withDatabase(String database) {
         this.database = database;
         return this;
@@ -30,6 +32,7 @@ public class CatalogKinesisSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetectSchema")
     public Boolean detectSchema;
+
     public CatalogKinesisSource withDetectSchema(Boolean detectSchema) {
         this.detectSchema = detectSchema;
         return this;
@@ -37,6 +40,7 @@ public class CatalogKinesisSource {
     
     @JsonProperty("Name")
     public String name;
+
     public CatalogKinesisSource withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +49,7 @@ public class CatalogKinesisSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamingOptions")
     public KinesisStreamingSourceOptions streamingOptions;
+
     public CatalogKinesisSource withStreamingOptions(KinesisStreamingSourceOptions streamingOptions) {
         this.streamingOptions = streamingOptions;
         return this;
@@ -52,6 +57,7 @@ public class CatalogKinesisSource {
     
     @JsonProperty("Table")
     public String table;
+
     public CatalogKinesisSource withTable(String table) {
         this.table = table;
         return this;
@@ -60,9 +66,15 @@ public class CatalogKinesisSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowSize")
     public Long windowSize;
+
     public CatalogKinesisSource withWindowSize(Long windowSize) {
         this.windowSize = windowSize;
         return this;
     }
     
+    public CatalogKinesisSource(@JsonProperty("Database") String database, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.name = name;
+        this.table = table;
+  }
 }

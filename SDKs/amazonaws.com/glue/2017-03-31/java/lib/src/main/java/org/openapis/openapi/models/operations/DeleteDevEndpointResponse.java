@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDevEndpointResponse {
     
     public String contentType;
+
     public DeleteDevEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDevEndpointResponse {
      */
     
     public java.util.Map<String, Object> deleteDevEndpointResponse;
+
     public DeleteDevEndpointResponse withDeleteDevEndpointResponse(java.util.Map<String, Object> deleteDevEndpointResponse) {
         this.deleteDevEndpointResponse = deleteDevEndpointResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDevEndpointResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteDevEndpointResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDevEndpointResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteDevEndpointResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDevEndpointResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteDevEndpointResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDevEndpointResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteDevEndpointResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteDevEndpointResponse {
     
     
     public Integer statusCode;
+
     public DeleteDevEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteDevEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDevEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteDevEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

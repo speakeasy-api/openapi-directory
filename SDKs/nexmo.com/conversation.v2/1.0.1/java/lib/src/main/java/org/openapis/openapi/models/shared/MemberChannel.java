@@ -15,9 +15,11 @@ public class MemberChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public MemberChannelTypeEnum type;
+
     public MemberChannel withType(MemberChannelTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public MemberChannel(){}
 }

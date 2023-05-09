@@ -18,6 +18,7 @@ public class Notifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Notification[] items;
+
     public Notifications withItems(Notification[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class Notifications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Notifications withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Notifications(){}
 }

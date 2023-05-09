@@ -18,6 +18,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputParameters")
     public InputParameter[] inputParameters;
+
     public Action withInputParameters(InputParameter[] inputParameters) {
         this.inputParameters = inputParameters;
         return this;
@@ -29,6 +30,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Action withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultMetadata")
     public ResultMetadata[] resultMetadata;
+
     public Action withResultMetadata(ResultMetadata[] resultMetadata) {
         this.resultMetadata = resultMetadata;
         return this;
     }
     
+    public Action(){}
 }

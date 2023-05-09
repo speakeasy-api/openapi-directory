@@ -18,9 +18,11 @@ public class DistributionGroupsResendSharedInviteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_emails")
     public String[] userEmails;
+
     public DistributionGroupsResendSharedInviteRequestBody withUserEmails(String[] userEmails) {
         this.userEmails = userEmails;
         return this;
     }
     
+    public DistributionGroupsResendSharedInviteRequestBody(){}
 }

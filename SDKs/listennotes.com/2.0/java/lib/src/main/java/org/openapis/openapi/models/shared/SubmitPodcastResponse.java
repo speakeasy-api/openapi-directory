@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubmitPodcastResponse {
     @JsonProperty("podcast")
     public PodcastMinimum podcast;
+
     public SubmitPodcastResponse withPodcast(PodcastMinimum podcast) {
         this.podcast = podcast;
         return this;
@@ -22,9 +23,14 @@ public class SubmitPodcastResponse {
      */
     @JsonProperty("status")
     public SubmitPodcastResponseStatusEnum status;
+
     public SubmitPodcastResponse withStatus(SubmitPodcastResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public SubmitPodcastResponse(@JsonProperty("podcast") PodcastMinimum podcast, @JsonProperty("status") SubmitPodcastResponseStatusEnum status) {
+        this.podcast = podcast;
+        this.status = status;
+  }
 }

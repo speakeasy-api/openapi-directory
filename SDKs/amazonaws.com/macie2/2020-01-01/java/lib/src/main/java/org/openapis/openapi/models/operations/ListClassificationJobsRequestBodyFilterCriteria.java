@@ -15,6 +15,7 @@ public class ListClassificationJobsRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludes")
     public org.openapis.openapi.models.shared.ListJobsFilterTerm[] excludes;
+
     public ListClassificationJobsRequestBodyFilterCriteria withExcludes(org.openapis.openapi.models.shared.ListJobsFilterTerm[] excludes) {
         this.excludes = excludes;
         return this;
@@ -23,9 +24,11 @@ public class ListClassificationJobsRequestBodyFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includes")
     public org.openapis.openapi.models.shared.ListJobsFilterTerm[] includes;
+
     public ListClassificationJobsRequestBodyFilterCriteria withIncludes(org.openapis.openapi.models.shared.ListJobsFilterTerm[] includes) {
         this.includes = includes;
         return this;
     }
     
+    public ListClassificationJobsRequestBodyFilterCriteria(){}
 }

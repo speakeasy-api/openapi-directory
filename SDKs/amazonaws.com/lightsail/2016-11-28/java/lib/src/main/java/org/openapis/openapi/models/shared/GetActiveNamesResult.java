@@ -15,6 +15,7 @@ public class GetActiveNamesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeNames")
     public String[] activeNames;
+
     public GetActiveNamesResult withActiveNames(String[] activeNames) {
         this.activeNames = activeNames;
         return this;
@@ -23,9 +24,11 @@ public class GetActiveNamesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetActiveNamesResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetActiveNamesResult(){}
 }

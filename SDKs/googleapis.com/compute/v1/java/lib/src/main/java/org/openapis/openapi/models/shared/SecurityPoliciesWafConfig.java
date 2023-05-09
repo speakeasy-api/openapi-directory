@@ -12,9 +12,11 @@ public class SecurityPoliciesWafConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wafRules")
     public PreconfiguredWafSet wafRules;
+
     public SecurityPoliciesWafConfig withWafRules(PreconfiguredWafSet wafRules) {
         this.wafRules = wafRules;
         return this;
     }
     
+    public SecurityPoliciesWafConfig(){}
 }

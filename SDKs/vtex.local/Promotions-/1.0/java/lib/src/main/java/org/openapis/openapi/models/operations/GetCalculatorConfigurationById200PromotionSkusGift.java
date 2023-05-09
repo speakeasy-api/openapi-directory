@@ -15,6 +15,7 @@ public class GetCalculatorConfigurationById200PromotionSkusGift {
      */
     
     public Long gifts;
+
     public GetCalculatorConfigurationById200PromotionSkusGift withGifts(Long gifts) {
         this.gifts = gifts;
         return this;
@@ -25,9 +26,11 @@ public class GetCalculatorConfigurationById200PromotionSkusGift {
      */
     
     public Long quantitySelectable;
+
     public GetCalculatorConfigurationById200PromotionSkusGift withQuantitySelectable(Long quantitySelectable) {
         this.quantitySelectable = quantitySelectable;
         return this;
     }
     
+    public GetCalculatorConfigurationById200PromotionSkusGift(){}
 }

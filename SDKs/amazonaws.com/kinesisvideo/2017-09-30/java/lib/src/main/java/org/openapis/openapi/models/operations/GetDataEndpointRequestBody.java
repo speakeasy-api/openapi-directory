@@ -14,6 +14,7 @@ public class GetDataEndpointRequestBody {
      */
     @JsonProperty("APIName")
     public GetDataEndpointRequestBodyAPINameEnum apiName;
+
     public GetDataEndpointRequestBody withAPIName(GetDataEndpointRequestBodyAPINameEnum apiName) {
         this.apiName = apiName;
         return this;
@@ -25,6 +26,7 @@ public class GetDataEndpointRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public GetDataEndpointRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -36,9 +38,13 @@ public class GetDataEndpointRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public GetDataEndpointRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public GetDataEndpointRequestBody(@JsonProperty("APIName") GetDataEndpointRequestBodyAPINameEnum apiName) {
+        this.apiName = apiName;
+  }
 }

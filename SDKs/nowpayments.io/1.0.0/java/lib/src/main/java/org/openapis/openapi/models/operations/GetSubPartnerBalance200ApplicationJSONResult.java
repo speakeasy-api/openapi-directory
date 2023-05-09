@@ -12,6 +12,7 @@ public class GetSubPartnerBalance200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balances")
     public GetSubPartnerBalance200ApplicationJSONResultBalances balances;
+
     public GetSubPartnerBalance200ApplicationJSONResult withBalances(GetSubPartnerBalance200ApplicationJSONResultBalances balances) {
         this.balances = balances;
         return this;
@@ -20,9 +21,11 @@ public class GetSubPartnerBalance200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subPartnerId")
     public String subPartnerId;
+
     public GetSubPartnerBalance200ApplicationJSONResult withSubPartnerId(String subPartnerId) {
         this.subPartnerId = subPartnerId;
         return this;
     }
     
+    public GetSubPartnerBalance200ApplicationJSONResult(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayMediaOnQueueRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public PlayMediaOnQueueRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -16,6 +18,7 @@ public class PlayMediaOnQueueRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PlayMediaRequest playMediaRequest;
+
     public PlayMediaOnQueueRequest withPlayMediaRequest(org.openapis.openapi.models.shared.PlayMediaRequest playMediaRequest) {
         this.playMediaRequest = playMediaRequest;
         return this;
@@ -23,6 +26,7 @@ public class PlayMediaOnQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=User-Agent")
     public String userAgent;
+
     public PlayMediaOnQueueRequest withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
@@ -30,6 +34,7 @@ public class PlayMediaOnQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-retry-count")
     public Double xApplecloudextensionRetryCount;
+
     public PlayMediaOnQueueRequest withXApplecloudextensionRetryCount(Double xApplecloudextensionRetryCount) {
         this.xApplecloudextensionRetryCount = xApplecloudextensionRetryCount;
         return this;
@@ -37,9 +42,15 @@ public class PlayMediaOnQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-session-id")
     public String xApplecloudextensionSessionId;
+
     public PlayMediaOnQueueRequest withXApplecloudextensionSessionId(String xApplecloudextensionSessionId) {
         this.xApplecloudextensionSessionId = xApplecloudextensionSessionId;
         return this;
     }
     
+    public PlayMediaOnQueueRequest(@JsonProperty("Accept-Language") String acceptLanguage, @JsonProperty("User-Agent") String userAgent, @JsonProperty("x-applecloudextension-session-id") String xApplecloudextensionSessionId) {
+        this.acceptLanguage = acceptLanguage;
+        this.userAgent = userAgent;
+        this.xApplecloudextensionSessionId = xApplecloudextensionSessionId;
+  }
 }

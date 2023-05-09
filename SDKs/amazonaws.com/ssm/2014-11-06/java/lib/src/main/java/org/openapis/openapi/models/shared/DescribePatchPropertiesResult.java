@@ -15,6 +15,7 @@ public class DescribePatchPropertiesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribePatchPropertiesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribePatchPropertiesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public java.util.Map<String, String>[] properties;
+
     public DescribePatchPropertiesResult withProperties(java.util.Map<String, String>[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public DescribePatchPropertiesResult(){}
 }

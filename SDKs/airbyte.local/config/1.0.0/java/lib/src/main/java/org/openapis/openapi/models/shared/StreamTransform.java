@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StreamTransform {
     @JsonProperty("streamDescriptor")
     public StreamDescriptor streamDescriptor;
+
     public StreamTransform withStreamDescriptor(StreamDescriptor streamDescriptor) {
         this.streamDescriptor = streamDescriptor;
         return this;
@@ -18,6 +19,7 @@ public class StreamTransform {
     
     @JsonProperty("transformType")
     public StreamTransformTransformTypeEnum transformType;
+
     public StreamTransform withTransformType(StreamTransformTransformTypeEnum transformType) {
         this.transformType = transformType;
         return this;
@@ -29,9 +31,14 @@ public class StreamTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateStream")
     public FieldTransform[] updateStream;
+
     public StreamTransform withUpdateStream(FieldTransform[] updateStream) {
         this.updateStream = updateStream;
         return this;
     }
     
+    public StreamTransform(@JsonProperty("streamDescriptor") StreamDescriptor streamDescriptor, @JsonProperty("transformType") StreamTransformTransformTypeEnum transformType) {
+        this.streamDescriptor = streamDescriptor;
+        this.transformType = transformType;
+  }
 }

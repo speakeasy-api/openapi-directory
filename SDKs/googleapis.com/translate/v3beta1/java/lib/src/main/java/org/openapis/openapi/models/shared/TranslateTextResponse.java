@@ -18,6 +18,7 @@ public class TranslateTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glossaryTranslations")
     public Translation[] glossaryTranslations;
+
     public TranslateTextResponse withGlossaryTranslations(Translation[] glossaryTranslations) {
         this.glossaryTranslations = glossaryTranslations;
         return this;
@@ -29,9 +30,11 @@ public class TranslateTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translations")
     public Translation[] translations;
+
     public TranslateTextResponse withTranslations(Translation[] translations) {
         this.translations = translations;
         return this;
     }
     
+    public TranslateTextResponse(){}
 }

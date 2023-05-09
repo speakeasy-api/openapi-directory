@@ -12,6 +12,7 @@ public class PostSearchVersionNumberGeometryFilterExtRequestBodyPoiListPosition 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Float lat;
+
     public PostSearchVersionNumberGeometryFilterExtRequestBodyPoiListPosition withLat(Float lat) {
         this.lat = lat;
         return this;
@@ -20,9 +21,11 @@ public class PostSearchVersionNumberGeometryFilterExtRequestBodyPoiListPosition 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lon")
     public Float lon;
+
     public PostSearchVersionNumberGeometryFilterExtRequestBodyPoiListPosition withLon(Float lon) {
         this.lon = lon;
         return this;
     }
     
+    public PostSearchVersionNumberGeometryFilterExtRequestBodyPoiListPosition(){}
 }

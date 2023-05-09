@@ -12,6 +12,7 @@ public class Reference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public Reference withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -20,9 +21,11 @@ public class Reference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public Reference withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
     }
     
+    public Reference(){}
 }

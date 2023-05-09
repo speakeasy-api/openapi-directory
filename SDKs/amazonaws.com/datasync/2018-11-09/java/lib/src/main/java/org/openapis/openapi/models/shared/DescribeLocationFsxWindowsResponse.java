@@ -22,6 +22,7 @@ public class DescribeLocationFsxWindowsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeLocationFsxWindowsResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeLocationFsxWindowsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public DescribeLocationFsxWindowsResponse withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -38,6 +40,7 @@ public class DescribeLocationFsxWindowsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public DescribeLocationFsxWindowsResponse withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
@@ -46,6 +49,7 @@ public class DescribeLocationFsxWindowsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationUri")
     public String locationUri;
+
     public DescribeLocationFsxWindowsResponse withLocationUri(String locationUri) {
         this.locationUri = locationUri;
         return this;
@@ -54,6 +58,7 @@ public class DescribeLocationFsxWindowsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupArns")
     public String[] securityGroupArns;
+
     public DescribeLocationFsxWindowsResponse withSecurityGroupArns(String[] securityGroupArns) {
         this.securityGroupArns = securityGroupArns;
         return this;
@@ -62,9 +67,11 @@ public class DescribeLocationFsxWindowsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("User")
     public String user;
+
     public DescribeLocationFsxWindowsResponse withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public DescribeLocationFsxWindowsResponse(){}
 }

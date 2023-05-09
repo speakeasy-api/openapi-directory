@@ -15,9 +15,11 @@ public class VendorPriceProfileDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorPriceProfileId")
     public Long vendorPriceProfileId;
+
     public VendorPriceProfileDTO withVendorPriceProfileId(Long vendorPriceProfileId) {
         this.vendorPriceProfileId = vendorPriceProfileId;
         return this;
     }
     
+    public VendorPriceProfileDTO(){}
 }

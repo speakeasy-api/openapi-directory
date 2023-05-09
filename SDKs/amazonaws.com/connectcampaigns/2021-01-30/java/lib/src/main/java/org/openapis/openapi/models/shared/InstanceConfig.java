@@ -15,6 +15,7 @@ public class InstanceConfig {
      */
     @JsonProperty("connectInstanceId")
     public String connectInstanceId;
+
     public InstanceConfig withConnectInstanceId(String connectInstanceId) {
         this.connectInstanceId = connectInstanceId;
         return this;
@@ -25,6 +26,7 @@ public class InstanceConfig {
      */
     @JsonProperty("encryptionConfig")
     public EncryptionConfig encryptionConfig;
+
     public InstanceConfig withEncryptionConfig(EncryptionConfig encryptionConfig) {
         this.encryptionConfig = encryptionConfig;
         return this;
@@ -35,9 +37,15 @@ public class InstanceConfig {
      */
     @JsonProperty("serviceLinkedRoleArn")
     public String serviceLinkedRoleArn;
+
     public InstanceConfig withServiceLinkedRoleArn(String serviceLinkedRoleArn) {
         this.serviceLinkedRoleArn = serviceLinkedRoleArn;
         return this;
     }
     
+    public InstanceConfig(@JsonProperty("connectInstanceId") String connectInstanceId, @JsonProperty("encryptionConfig") EncryptionConfig encryptionConfig, @JsonProperty("serviceLinkedRoleArn") String serviceLinkedRoleArn) {
+        this.connectInstanceId = connectInstanceId;
+        this.encryptionConfig = encryptionConfig;
+        this.serviceLinkedRoleArn = serviceLinkedRoleArn;
+  }
 }

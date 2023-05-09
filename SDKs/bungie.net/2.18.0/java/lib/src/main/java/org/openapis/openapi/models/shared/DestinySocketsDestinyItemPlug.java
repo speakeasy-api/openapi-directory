@@ -12,6 +12,7 @@ public class DestinySocketsDestinyItemPlug {
      */
     
     public Boolean canInsert;
+
     public DestinySocketsDestinyItemPlug withCanInsert(Boolean canInsert) {
         this.canInsert = canInsert;
         return this;
@@ -23,6 +24,7 @@ public class DestinySocketsDestinyItemPlug {
      */
     
     public Integer[] enableFailIndexes;
+
     public DestinySocketsDestinyItemPlug withEnableFailIndexes(Integer[] enableFailIndexes) {
         this.enableFailIndexes = enableFailIndexes;
         return this;
@@ -33,6 +35,7 @@ public class DestinySocketsDestinyItemPlug {
      */
     
     public Boolean enabled;
+
     public DestinySocketsDestinyItemPlug withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -44,6 +47,7 @@ public class DestinySocketsDestinyItemPlug {
      */
     
     public Integer[] insertFailIndexes;
+
     public DestinySocketsDestinyItemPlug withInsertFailIndexes(Integer[] insertFailIndexes) {
         this.insertFailIndexes = insertFailIndexes;
         return this;
@@ -54,6 +58,7 @@ public class DestinySocketsDestinyItemPlug {
      */
     
     public Long plugItemHash;
+
     public DestinySocketsDestinyItemPlug withPlugItemHash(Long plugItemHash) {
         this.plugItemHash = plugItemHash;
         return this;
@@ -64,9 +69,11 @@ public class DestinySocketsDestinyItemPlug {
      */
     
     public DestinyQuestsDestinyObjectiveProgress[] plugObjectives;
+
     public DestinySocketsDestinyItemPlug withPlugObjectives(DestinyQuestsDestinyObjectiveProgress[] plugObjectives) {
         this.plugObjectives = plugObjectives;
         return this;
     }
     
+    public DestinySocketsDestinyItemPlug(){}
 }

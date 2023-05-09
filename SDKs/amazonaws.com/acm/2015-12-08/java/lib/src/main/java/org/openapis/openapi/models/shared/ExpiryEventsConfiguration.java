@@ -15,9 +15,11 @@ public class ExpiryEventsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DaysBeforeExpiry")
     public Long daysBeforeExpiry;
+
     public ExpiryEventsConfiguration withDaysBeforeExpiry(Long daysBeforeExpiry) {
         this.daysBeforeExpiry = daysBeforeExpiry;
         return this;
     }
     
+    public ExpiryEventsConfiguration(){}
 }

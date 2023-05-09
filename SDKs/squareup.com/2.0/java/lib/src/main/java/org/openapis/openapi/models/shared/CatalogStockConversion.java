@@ -21,6 +21,7 @@ public class CatalogStockConversion {
      */
     @JsonProperty("nonstockable_quantity")
     public String nonstockableQuantity;
+
     public CatalogStockConversion withNonstockableQuantity(String nonstockableQuantity) {
         this.nonstockableQuantity = nonstockableQuantity;
         return this;
@@ -35,6 +36,7 @@ public class CatalogStockConversion {
      */
     @JsonProperty("stockable_item_variation_id")
     public String stockableItemVariationId;
+
     public CatalogStockConversion withStockableItemVariationId(String stockableItemVariationId) {
         this.stockableItemVariationId = stockableItemVariationId;
         return this;
@@ -48,9 +50,15 @@ public class CatalogStockConversion {
      */
     @JsonProperty("stockable_quantity")
     public String stockableQuantity;
+
     public CatalogStockConversion withStockableQuantity(String stockableQuantity) {
         this.stockableQuantity = stockableQuantity;
         return this;
     }
     
+    public CatalogStockConversion(@JsonProperty("nonstockable_quantity") String nonstockableQuantity, @JsonProperty("stockable_item_variation_id") String stockableItemVariationId, @JsonProperty("stockable_quantity") String stockableQuantity) {
+        this.nonstockableQuantity = nonstockableQuantity;
+        this.stockableItemVariationId = stockableItemVariationId;
+        this.stockableQuantity = stockableQuantity;
+  }
 }

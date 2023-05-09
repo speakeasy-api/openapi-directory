@@ -59,11 +59,9 @@ public class MachineImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeMachineImagesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeMachineImagesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeMachineImagesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeMachineImagesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class MachineImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeMachineImagesGetResponse res = new org.openapis.openapi.models.operations.ComputeMachineImagesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeMachineImagesGetResponse res = new org.openapis.openapi.models.operations.ComputeMachineImagesGetResponse(contentType, httpRes.statusCode()) {{
             machineImage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class MachineImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeMachineImagesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeMachineImagesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeMachineImagesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeMachineImagesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class MachineImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeMachineImagesInsertResponse res = new org.openapis.openapi.models.operations.ComputeMachineImagesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeMachineImagesInsertResponse res = new org.openapis.openapi.models.operations.ComputeMachineImagesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class MachineImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeMachineImagesListResponse res = new org.openapis.openapi.models.operations.ComputeMachineImagesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeMachineImagesListResponse res = new org.openapis.openapi.models.operations.ComputeMachineImagesListResponse(contentType, httpRes.statusCode()) {{
             machineImageList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class MachineImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeMachineImagesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeMachineImagesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeMachineImagesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeMachineImagesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class MachineImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeMachineImagesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeMachineImagesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeMachineImagesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeMachineImagesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

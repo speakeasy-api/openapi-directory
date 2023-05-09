@@ -16,6 +16,7 @@ public class CatalogSubscriptionPlan {
      */
     @JsonProperty("name")
     public String name;
+
     public CatalogSubscriptionPlan withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,14 @@ public class CatalogSubscriptionPlan {
      */
     @JsonProperty("phases")
     public SubscriptionPhase[] phases;
+
     public CatalogSubscriptionPlan withPhases(SubscriptionPhase[] phases) {
         this.phases = phases;
         return this;
     }
     
+    public CatalogSubscriptionPlan(@JsonProperty("name") String name, @JsonProperty("phases") SubscriptionPhase[] phases) {
+        this.name = name;
+        this.phases = phases;
+  }
 }

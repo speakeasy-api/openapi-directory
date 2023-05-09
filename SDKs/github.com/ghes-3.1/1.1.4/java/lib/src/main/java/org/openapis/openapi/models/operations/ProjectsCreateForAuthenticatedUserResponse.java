@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProjectsCreateForAuthenticatedUserResponse {
     
     public String contentType;
+
     public ProjectsCreateForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProjectsCreateForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public ProjectsCreateForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProjectsCreateForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProjectsCreateForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ProjectsCreateForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ProjectsCreateForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ProjectsCreateForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.Project project;
+
     public ProjectsCreateForAuthenticatedUserResponse withProject(org.openapis.openapi.models.shared.Project project) {
         this.project = project;
         return this;
@@ -53,6 +59,7 @@ public class ProjectsCreateForAuthenticatedUserResponse {
      */
     
     public ProjectsCreateForAuthenticatedUser415ApplicationJSON projectsCreateForAuthenticatedUser415ApplicationJSONObject;
+
     public ProjectsCreateForAuthenticatedUserResponse withProjectsCreateForAuthenticatedUser415ApplicationJSONObject(ProjectsCreateForAuthenticatedUser415ApplicationJSON projectsCreateForAuthenticatedUser415ApplicationJSONObject) {
         this.projectsCreateForAuthenticatedUser415ApplicationJSONObject = projectsCreateForAuthenticatedUser415ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class ProjectsCreateForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple;
+
     public ProjectsCreateForAuthenticatedUserResponse withValidationErrorSimple(org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple) {
         this.validationErrorSimple = validationErrorSimple;
         return this;
     }
     
+    public ProjectsCreateForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

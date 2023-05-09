@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReshardingConfigurationList {
     
     public String nodeGroupId;
+
     public ReshardingConfigurationList withNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
         return this;
@@ -19,9 +20,11 @@ public class ReshardingConfigurationList {
     
     
     public String[] preferredAvailabilityZones;
+
     public ReshardingConfigurationList withPreferredAvailabilityZones(String[] preferredAvailabilityZones) {
         this.preferredAvailabilityZones = preferredAvailabilityZones;
         return this;
     }
     
+    public ReshardingConfigurationList(){}
 }

@@ -18,6 +18,7 @@ public class EventTagOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public EventTagOverride withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,9 +30,11 @@ public class EventTagOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public EventTagOverride withId(String id) {
         this.id = id;
         return this;
     }
     
+    public EventTagOverride(){}
 }

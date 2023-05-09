@@ -15,6 +15,7 @@ public class S3AccessPointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessPointPolicy")
     public String accessPointPolicy;
+
     public S3AccessPointConfiguration withAccessPointPolicy(String accessPointPolicy) {
         this.accessPointPolicy = accessPointPolicy;
         return this;
@@ -23,6 +24,7 @@ public class S3AccessPointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkOrigin")
     public NetworkOriginConfiguration networkOrigin;
+
     public S3AccessPointConfiguration withNetworkOrigin(NetworkOriginConfiguration networkOrigin) {
         this.networkOrigin = networkOrigin;
         return this;
@@ -31,9 +33,11 @@ public class S3AccessPointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicAccessBlock")
     public S3PublicAccessBlockConfiguration publicAccessBlock;
+
     public S3AccessPointConfiguration withPublicAccessBlock(S3PublicAccessBlockConfiguration publicAccessBlock) {
         this.publicAccessBlock = publicAccessBlock;
         return this;
     }
     
+    public S3AccessPointConfiguration(){}
 }

@@ -59,9 +59,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetMessagesIdRelatedRec
 lib/src/main/java/org/openapis/openapi/models/operations/PostMessagesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostMessagesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostMessagesResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetProfileSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetProfileResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteWebhooksIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteWebhooksIdResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetWebhooksSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWebhooksResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWebhooksIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWebhooksIdResponse.java
@@ -104,4 +106,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/WebhookEntryInvokeOptionEnu
 lib/src/main/java/org/openapis/openapi/models/shared/WebhookEntryTriggerScopeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/WebhookEntry.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/attachments/README.md
+docs/blockednumbers/README.md
+docs/credits/README.md
+docs/message/README.md
+docs/profile/README.md
+docs/webhooks/README.md
 USAGE.md

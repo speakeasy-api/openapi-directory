@@ -15,6 +15,7 @@ public class CurationComment {
      */
     @JsonProperty("account_id")
     public Long accountId;
+
     public CurationComment withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class CurationComment {
      */
     @JsonProperty("id")
     public Long id;
+
     public CurationComment withId(Long id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class CurationComment {
      */
     @JsonProperty("text")
     public String text;
+
     public CurationComment withText(String text) {
         this.text = text;
         return this;
@@ -45,9 +48,16 @@ public class CurationComment {
      */
     @JsonProperty("type")
     public CurationCommentTypeEnum type;
+
     public CurationComment withType(CurationCommentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CurationComment(@JsonProperty("account_id") Long accountId, @JsonProperty("id") Long id, @JsonProperty("text") String text, @JsonProperty("type") CurationCommentTypeEnum type) {
+        this.accountId = accountId;
+        this.id = id;
+        this.text = text;
+        this.type = type;
+  }
 }

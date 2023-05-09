@@ -18,6 +18,7 @@ public class ArimaFittingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aic")
     public Double aic;
+
     public ArimaFittingMetrics withAic(Double aic) {
         this.aic = aic;
         return this;
@@ -29,6 +30,7 @@ public class ArimaFittingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logLikelihood")
     public Double logLikelihood;
+
     public ArimaFittingMetrics withLogLikelihood(Double logLikelihood) {
         this.logLikelihood = logLikelihood;
         return this;
@@ -40,9 +42,11 @@ public class ArimaFittingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variance")
     public Double variance;
+
     public ArimaFittingMetrics withVariance(Double variance) {
         this.variance = variance;
         return this;
     }
     
+    public ArimaFittingMetrics(){}
 }

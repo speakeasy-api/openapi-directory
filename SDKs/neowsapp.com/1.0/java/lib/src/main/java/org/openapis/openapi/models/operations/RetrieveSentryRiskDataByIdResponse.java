@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrieveSentryRiskDataByIdResponse {
     
     public String contentType;
+
     public RetrieveSentryRiskDataByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetrieveSentryRiskDataByIdResponse {
      */
     
     public org.openapis.openapi.models.shared.SentryImpactRiskObject sentryImpactRiskObject;
+
     public RetrieveSentryRiskDataByIdResponse withSentryImpactRiskObject(org.openapis.openapi.models.shared.SentryImpactRiskObject sentryImpactRiskObject) {
         this.sentryImpactRiskObject = sentryImpactRiskObject;
         return this;
@@ -26,6 +29,7 @@ public class RetrieveSentryRiskDataByIdResponse {
     
     
     public Integer statusCode;
+
     public RetrieveSentryRiskDataByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RetrieveSentryRiskDataByIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrieveSentryRiskDataByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RetrieveSentryRiskDataByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

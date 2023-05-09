@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFormResponse {
     
     public String contentType;
+
     public UpdateFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFormResponse {
      */
     
     public Object internalServerException;
+
     public UpdateFormResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFormResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateFormResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateFormResponse {
     
     
     public Integer statusCode;
+
     public UpdateFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateFormResponse {
      */
     
     public Object resourceConflictException;
+
     public UpdateFormResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateFormResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFormResponse updateFormResponse;
+
     public UpdateFormResponse withUpdateFormResponse(org.openapis.openapi.models.shared.UpdateFormResponse updateFormResponse) {
         this.updateFormResponse = updateFormResponse;
         return this;
     }
     
+    public UpdateFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

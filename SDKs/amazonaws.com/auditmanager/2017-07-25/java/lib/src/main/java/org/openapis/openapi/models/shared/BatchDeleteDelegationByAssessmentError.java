@@ -15,6 +15,7 @@ public class BatchDeleteDelegationByAssessmentError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegationId")
     public String delegationId;
+
     public BatchDeleteDelegationByAssessmentError withDelegationId(String delegationId) {
         this.delegationId = delegationId;
         return this;
@@ -23,6 +24,7 @@ public class BatchDeleteDelegationByAssessmentError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public BatchDeleteDelegationByAssessmentError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -31,9 +33,11 @@ public class BatchDeleteDelegationByAssessmentError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public BatchDeleteDelegationByAssessmentError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public BatchDeleteDelegationByAssessmentError(){}
 }

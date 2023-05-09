@@ -12,6 +12,7 @@ public class ReserveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargestation")
     public String chargestation;
+
     public ReserveRequestBody withChargestation(String chargestation) {
         this.chargestation = chargestation;
         return this;
@@ -20,6 +21,7 @@ public class ReserveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connector")
     public String connector;
+
     public ReserveRequestBody withConnector(String connector) {
         this.connector = connector;
         return this;
@@ -28,6 +30,7 @@ public class ReserveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("driver")
     public String driver;
+
     public ReserveRequestBody withDriver(String driver) {
         this.driver = driver;
         return this;
@@ -36,6 +39,7 @@ public class ReserveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public ReserveRequestBody withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -44,9 +48,11 @@ public class ReserveRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public ReserveRequestBody withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public ReserveRequestBody(){}
 }

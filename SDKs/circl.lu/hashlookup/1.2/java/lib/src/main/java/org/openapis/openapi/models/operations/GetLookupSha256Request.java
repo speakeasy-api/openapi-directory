@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLookupSha256Request {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha256")
     public String sha256;
+
     public GetLookupSha256Request withSha256(String sha256) {
         this.sha256 = sha256;
         return this;
     }
     
+    public GetLookupSha256Request(@JsonProperty("sha256") String sha256) {
+        this.sha256 = sha256;
+  }
 }

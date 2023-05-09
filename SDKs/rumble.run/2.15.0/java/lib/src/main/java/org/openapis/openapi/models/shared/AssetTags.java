@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssetTags {
     @JsonProperty("tags")
     public String tags;
+
     public AssetTags withTags(String tags) {
         this.tags = tags;
         return this;
     }
     
+    public AssetTags(@JsonProperty("tags") String tags) {
+        this.tags = tags;
+  }
 }

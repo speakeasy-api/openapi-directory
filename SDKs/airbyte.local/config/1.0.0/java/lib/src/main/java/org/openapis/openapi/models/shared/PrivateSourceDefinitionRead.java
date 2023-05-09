@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PrivateSourceDefinitionRead {
     @JsonProperty("granted")
     public Boolean granted;
+
     public PrivateSourceDefinitionRead withGranted(Boolean granted) {
         this.granted = granted;
         return this;
@@ -19,9 +20,14 @@ public class PrivateSourceDefinitionRead {
     
     @JsonProperty("sourceDefinition")
     public SourceDefinitionRead sourceDefinition;
+
     public PrivateSourceDefinitionRead withSourceDefinition(SourceDefinitionRead sourceDefinition) {
         this.sourceDefinition = sourceDefinition;
         return this;
     }
     
+    public PrivateSourceDefinitionRead(@JsonProperty("granted") Boolean granted, @JsonProperty("sourceDefinition") SourceDefinitionRead sourceDefinition) {
+        this.granted = granted;
+        this.sourceDefinition = sourceDefinition;
+  }
 }

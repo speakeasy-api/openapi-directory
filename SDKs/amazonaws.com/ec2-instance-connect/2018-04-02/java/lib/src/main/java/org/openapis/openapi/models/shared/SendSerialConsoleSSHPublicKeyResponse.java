@@ -15,6 +15,7 @@ public class SendSerialConsoleSSHPublicKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestId")
     public String requestId;
+
     public SendSerialConsoleSSHPublicKeyResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -23,9 +24,11 @@ public class SendSerialConsoleSSHPublicKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Success")
     public Boolean success;
+
     public SendSerialConsoleSSHPublicKeyResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public SendSerialConsoleSSHPublicKeyResponse(){}
 }

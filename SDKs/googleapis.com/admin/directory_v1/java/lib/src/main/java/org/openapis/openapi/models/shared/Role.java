@@ -18,6 +18,7 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Role withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSuperAdminRole")
     public Boolean isSuperAdminRole;
+
     public Role withIsSuperAdminRole(Boolean isSuperAdminRole) {
         this.isSuperAdminRole = isSuperAdminRole;
         return this;
@@ -40,6 +42,7 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSystemRole")
     public Boolean isSystemRole;
+
     public Role withIsSystemRole(Boolean isSystemRole) {
         this.isSystemRole = isSystemRole;
         return this;
@@ -51,6 +54,7 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Role withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleDescription")
     public String roleDescription;
+
     public Role withRoleDescription(String roleDescription) {
         this.roleDescription = roleDescription;
         return this;
@@ -73,6 +78,7 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleId")
     public String roleId;
+
     public Role withRoleId(String roleId) {
         this.roleId = roleId;
         return this;
@@ -84,6 +90,7 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleName")
     public String roleName;
+
     public Role withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -95,9 +102,11 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolePrivileges")
     public RoleRolePrivileges[] rolePrivileges;
+
     public Role withRolePrivileges(RoleRolePrivileges[] rolePrivileges) {
         this.rolePrivileges = rolePrivileges;
         return this;
     }
     
+    public Role(){}
 }

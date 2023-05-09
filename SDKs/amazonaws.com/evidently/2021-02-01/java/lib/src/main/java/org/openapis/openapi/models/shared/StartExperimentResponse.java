@@ -22,9 +22,11 @@ public class StartExperimentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedTime")
     public OffsetDateTime startedTime;
+
     public StartExperimentResponse withStartedTime(OffsetDateTime startedTime) {
         this.startedTime = startedTime;
         return this;
     }
     
+    public StartExperimentResponse(){}
 }

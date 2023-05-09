@@ -38,4 +38,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GETHackathonsComingForm
 lib/src/main/java/org/openapis/openapi/models/operations/GETSwaggerDocFormatResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETSwaggerDocNameFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETSwaggerDocNameFormatResponse.java
+docs/sdk/README.md
+docs/hackathons/README.md
+docs/swaggerdoc/README.md
 USAGE.md

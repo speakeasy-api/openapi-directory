@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateKeyResponse {
@@ -12,6 +13,7 @@ public class CreateKeyResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateKeyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateKeyResponse {
      */
     
     public Object conflictException;
+
     public CreateKeyResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateKeyResponse {
     
     
     public String contentType;
+
     public CreateKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateKeyResponse createKeyResponse;
+
     public CreateKeyResponse withCreateKeyResponse(org.openapis.openapi.models.shared.CreateKeyResponse createKeyResponse) {
         this.createKeyResponse = createKeyResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateKeyResponse {
      */
     
     public Object internalServerException;
+
     public CreateKeyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateKeyResponse {
     
     
     public Integer statusCode;
+
     public CreateKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateKeyResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateKeyResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateKeyResponse {
      */
     
     public Object throttlingException;
+
     public CreateKeyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateKeyResponse {
      */
     
     public Object validationException;
+
     public CreateKeyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

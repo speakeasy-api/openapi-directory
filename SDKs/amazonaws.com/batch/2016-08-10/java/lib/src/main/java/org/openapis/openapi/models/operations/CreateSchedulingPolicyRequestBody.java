@@ -15,6 +15,7 @@ public class CreateSchedulingPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fairsharePolicy")
     public CreateSchedulingPolicyRequestBodyFairsharePolicy fairsharePolicy;
+
     public CreateSchedulingPolicyRequestBody withFairsharePolicy(CreateSchedulingPolicyRequestBodyFairsharePolicy fairsharePolicy) {
         this.fairsharePolicy = fairsharePolicy;
         return this;
@@ -25,6 +26,7 @@ public class CreateSchedulingPolicyRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateSchedulingPolicyRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +38,13 @@ public class CreateSchedulingPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateSchedulingPolicyRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSchedulingPolicyRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

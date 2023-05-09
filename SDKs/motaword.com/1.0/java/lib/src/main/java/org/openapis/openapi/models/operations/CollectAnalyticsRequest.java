@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectAnalyticsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AnalyticsCollection analyticsCollection;
+
     public CollectAnalyticsRequest withAnalyticsCollection(org.openapis.openapi.models.shared.AnalyticsCollection analyticsCollection) {
         this.analyticsCollection = analyticsCollection;
         return this;
@@ -19,9 +21,13 @@ public class CollectAnalyticsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public CollectAnalyticsRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public CollectAnalyticsRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

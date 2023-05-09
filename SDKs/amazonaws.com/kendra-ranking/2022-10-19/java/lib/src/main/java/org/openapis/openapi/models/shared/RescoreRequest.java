@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RescoreRequest {
     @JsonProperty("Documents")
     public Document[] documents;
+
     public RescoreRequest withDocuments(Document[] documents) {
         this.documents = documents;
         return this;
@@ -16,6 +17,7 @@ public class RescoreRequest {
     
     @JsonProperty("RescoreExecutionPlanId")
     public String rescoreExecutionPlanId;
+
     public RescoreRequest withRescoreExecutionPlanId(String rescoreExecutionPlanId) {
         this.rescoreExecutionPlanId = rescoreExecutionPlanId;
         return this;
@@ -23,9 +25,15 @@ public class RescoreRequest {
     
     @JsonProperty("SearchQuery")
     public String searchQuery;
+
     public RescoreRequest withSearchQuery(String searchQuery) {
         this.searchQuery = searchQuery;
         return this;
     }
     
+    public RescoreRequest(@JsonProperty("Documents") Document[] documents, @JsonProperty("RescoreExecutionPlanId") String rescoreExecutionPlanId, @JsonProperty("SearchQuery") String searchQuery) {
+        this.documents = documents;
+        this.rescoreExecutionPlanId = rescoreExecutionPlanId;
+        this.searchQuery = searchQuery;
+  }
 }

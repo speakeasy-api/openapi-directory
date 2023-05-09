@@ -15,6 +15,7 @@ public class CreateContainerRecipeRequestBodyTargetRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public CreateContainerRecipeRequestBodyTargetRepository withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -23,9 +24,11 @@ public class CreateContainerRecipeRequestBodyTargetRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public org.openapis.openapi.models.shared.ContainerRepositoryServiceEnum service;
+
     public CreateContainerRecipeRequestBodyTargetRepository withService(org.openapis.openapi.models.shared.ContainerRepositoryServiceEnum service) {
         this.service = service;
         return this;
     }
     
+    public CreateContainerRecipeRequestBodyTargetRepository(){}
 }

@@ -18,6 +18,7 @@ public class ScheduleTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedType")
     public String feedType;
+
     public ScheduleTemplateResponse withFeedType(String feedType) {
         this.feedType = feedType;
         return this;
@@ -29,6 +30,7 @@ public class ScheduleTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public String frequency;
+
     public ScheduleTemplateResponse withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -40,6 +42,7 @@ public class ScheduleTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ScheduleTemplateResponse withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class ScheduleTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleTemplateId")
     public String scheduleTemplateId;
+
     public ScheduleTemplateResponse withScheduleTemplateId(String scheduleTemplateId) {
         this.scheduleTemplateId = scheduleTemplateId;
         return this;
@@ -62,6 +66,7 @@ public class ScheduleTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ScheduleTemplateResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -73,9 +78,11 @@ public class ScheduleTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedConfigurations")
     public SupportedConfiguration[] supportedConfigurations;
+
     public ScheduleTemplateResponse withSupportedConfigurations(SupportedConfiguration[] supportedConfigurations) {
         this.supportedConfigurations = supportedConfigurations;
         return this;
     }
     
+    public ScheduleTemplateResponse(){}
 }

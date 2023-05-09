@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UnsubscribeFromEventResponse {
@@ -12,6 +13,7 @@ public class UnsubscribeFromEventResponse {
      */
     
     public Object accessDeniedException;
+
     public UnsubscribeFromEventResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UnsubscribeFromEventResponse {
     
     
     public String contentType;
+
     public UnsubscribeFromEventResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UnsubscribeFromEventResponse {
      */
     
     public Object internalException;
+
     public UnsubscribeFromEventResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class UnsubscribeFromEventResponse {
      */
     
     public Object invalidInputException;
+
     public UnsubscribeFromEventResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class UnsubscribeFromEventResponse {
      */
     
     public Object noSuchEntityException;
+
     public UnsubscribeFromEventResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -59,6 +65,7 @@ public class UnsubscribeFromEventResponse {
      */
     
     public Object serviceTemporarilyUnavailableException;
+
     public UnsubscribeFromEventResponse withServiceTemporarilyUnavailableException(Object serviceTemporarilyUnavailableException) {
         this.serviceTemporarilyUnavailableException = serviceTemporarilyUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class UnsubscribeFromEventResponse {
     
     
     public Integer statusCode;
+
     public UnsubscribeFromEventResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class UnsubscribeFromEventResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UnsubscribeFromEventResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UnsubscribeFromEventResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

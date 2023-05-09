@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCreateOrUpdateFileContentsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReposCreateOrUpdateFileContentsRequestBody requestBody;
+
     public ReposCreateOrUpdateFileContentsRequest withRequestBody(ReposCreateOrUpdateFileContentsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ReposCreateOrUpdateFileContentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposCreateOrUpdateFileContentsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -29,6 +32,7 @@ public class ReposCreateOrUpdateFileContentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public ReposCreateOrUpdateFileContentsRequest withPath(String path) {
         this.path = path;
         return this;
@@ -39,9 +43,16 @@ public class ReposCreateOrUpdateFileContentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposCreateOrUpdateFileContentsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposCreateOrUpdateFileContentsRequest(@JsonProperty("RequestBody") ReposCreateOrUpdateFileContentsRequestBody requestBody, @JsonProperty("owner") String owner, @JsonProperty("path") String path, @JsonProperty("repo") String repo) {
+        this.requestBody = requestBody;
+        this.owner = owner;
+        this.path = path;
+        this.repo = repo;
+  }
 }

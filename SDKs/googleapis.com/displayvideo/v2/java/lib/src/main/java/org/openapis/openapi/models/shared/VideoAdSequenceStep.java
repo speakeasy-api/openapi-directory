@@ -18,6 +18,7 @@ public class VideoAdSequenceStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adGroupId")
     public String adGroupId;
+
     public VideoAdSequenceStep withAdGroupId(String adGroupId) {
         this.adGroupId = adGroupId;
         return this;
@@ -29,6 +30,7 @@ public class VideoAdSequenceStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interactionType")
     public VideoAdSequenceStepInteractionTypeEnum interactionType;
+
     public VideoAdSequenceStep withInteractionType(VideoAdSequenceStepInteractionTypeEnum interactionType) {
         this.interactionType = interactionType;
         return this;
@@ -40,6 +42,7 @@ public class VideoAdSequenceStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousStepId")
     public String previousStepId;
+
     public VideoAdSequenceStep withPreviousStepId(String previousStepId) {
         this.previousStepId = previousStepId;
         return this;
@@ -51,9 +54,11 @@ public class VideoAdSequenceStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepId")
     public String stepId;
+
     public VideoAdSequenceStep withStepId(String stepId) {
         this.stepId = stepId;
         return this;
     }
     
+    public VideoAdSequenceStep(){}
 }

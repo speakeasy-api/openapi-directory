@@ -15,6 +15,7 @@ public class IdentityProviderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public IdentityProviderDetails withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -23,6 +24,7 @@ public class IdentityProviderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Function")
     public String function;
+
     public IdentityProviderDetails withFunction(String function) {
         this.function = function;
         return this;
@@ -31,6 +33,7 @@ public class IdentityProviderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvocationRole")
     public String invocationRole;
+
     public IdentityProviderDetails withInvocationRole(String invocationRole) {
         this.invocationRole = invocationRole;
         return this;
@@ -39,9 +42,11 @@ public class IdentityProviderDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public IdentityProviderDetails withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public IdentityProviderDetails(){}
 }

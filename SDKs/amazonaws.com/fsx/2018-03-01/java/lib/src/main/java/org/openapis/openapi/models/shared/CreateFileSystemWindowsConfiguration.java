@@ -15,6 +15,7 @@ public class CreateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveDirectoryId")
     public String activeDirectoryId;
+
     public CreateFileSystemWindowsConfiguration withActiveDirectoryId(String activeDirectoryId) {
         this.activeDirectoryId = activeDirectoryId;
         return this;
@@ -23,6 +24,7 @@ public class CreateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aliases")
     public String[] aliases;
+
     public CreateFileSystemWindowsConfiguration withAliases(String[] aliases) {
         this.aliases = aliases;
         return this;
@@ -31,6 +33,7 @@ public class CreateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuditLogConfiguration")
     public WindowsAuditLogCreateConfiguration auditLogConfiguration;
+
     public CreateFileSystemWindowsConfiguration withAuditLogConfiguration(WindowsAuditLogCreateConfiguration auditLogConfiguration) {
         this.auditLogConfiguration = auditLogConfiguration;
         return this;
@@ -39,6 +42,7 @@ public class CreateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomaticBackupRetentionDays")
     public Long automaticBackupRetentionDays;
+
     public CreateFileSystemWindowsConfiguration withAutomaticBackupRetentionDays(Long automaticBackupRetentionDays) {
         this.automaticBackupRetentionDays = automaticBackupRetentionDays;
         return this;
@@ -47,6 +51,7 @@ public class CreateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTagsToBackups")
     public Boolean copyTagsToBackups;
+
     public CreateFileSystemWindowsConfiguration withCopyTagsToBackups(Boolean copyTagsToBackups) {
         this.copyTagsToBackups = copyTagsToBackups;
         return this;
@@ -55,6 +60,7 @@ public class CreateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DailyAutomaticBackupStartTime")
     public String dailyAutomaticBackupStartTime;
+
     public CreateFileSystemWindowsConfiguration withDailyAutomaticBackupStartTime(String dailyAutomaticBackupStartTime) {
         this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
         return this;
@@ -63,6 +69,7 @@ public class CreateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentType")
     public WindowsDeploymentTypeEnum deploymentType;
+
     public CreateFileSystemWindowsConfiguration withDeploymentType(WindowsDeploymentTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
@@ -71,6 +78,7 @@ public class CreateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredSubnetId")
     public String preferredSubnetId;
+
     public CreateFileSystemWindowsConfiguration withPreferredSubnetId(String preferredSubnetId) {
         this.preferredSubnetId = preferredSubnetId;
         return this;
@@ -82,6 +90,7 @@ public class CreateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelfManagedActiveDirectoryConfiguration")
     public SelfManagedActiveDirectoryConfiguration selfManagedActiveDirectoryConfiguration;
+
     public CreateFileSystemWindowsConfiguration withSelfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfiguration selfManagedActiveDirectoryConfiguration) {
         this.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
         return this;
@@ -89,6 +98,7 @@ public class CreateFileSystemWindowsConfiguration {
     
     @JsonProperty("ThroughputCapacity")
     public Long throughputCapacity;
+
     public CreateFileSystemWindowsConfiguration withThroughputCapacity(Long throughputCapacity) {
         this.throughputCapacity = throughputCapacity;
         return this;
@@ -97,9 +107,13 @@ public class CreateFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeeklyMaintenanceStartTime")
     public String weeklyMaintenanceStartTime;
+
     public CreateFileSystemWindowsConfiguration withWeeklyMaintenanceStartTime(String weeklyMaintenanceStartTime) {
         this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
         return this;
     }
     
+    public CreateFileSystemWindowsConfiguration(@JsonProperty("ThroughputCapacity") Long throughputCapacity) {
+        this.throughputCapacity = throughputCapacity;
+  }
 }

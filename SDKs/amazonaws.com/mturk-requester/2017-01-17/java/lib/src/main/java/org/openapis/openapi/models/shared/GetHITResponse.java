@@ -15,9 +15,11 @@ public class GetHITResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HIT")
     public Hit hit;
+
     public GetHITResponse withHit(Hit hit) {
         this.hit = hit;
         return this;
     }
     
+    public GetHITResponse(){}
 }

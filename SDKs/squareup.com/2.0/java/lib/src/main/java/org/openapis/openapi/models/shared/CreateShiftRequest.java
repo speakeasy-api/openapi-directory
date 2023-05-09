@@ -18,6 +18,7 @@ public class CreateShiftRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateShiftRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -30,9 +31,13 @@ public class CreateShiftRequest {
      */
     @JsonProperty("shift")
     public Shift shift;
+
     public CreateShiftRequest withShift(Shift shift) {
         this.shift = shift;
         return this;
     }
     
+    public CreateShiftRequest(@JsonProperty("shift") Shift shift) {
+        this.shift = shift;
+  }
 }

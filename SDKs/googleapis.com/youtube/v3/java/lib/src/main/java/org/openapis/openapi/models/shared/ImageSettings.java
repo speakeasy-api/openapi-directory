@@ -15,6 +15,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundImageUrl")
     public LocalizedProperty backgroundImageUrl;
+
     public ImageSettings withBackgroundImageUrl(LocalizedProperty backgroundImageUrl) {
         this.backgroundImageUrl = backgroundImageUrl;
         return this;
@@ -26,6 +27,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannerExternalUrl")
     public String bannerExternalUrl;
+
     public ImageSettings withBannerExternalUrl(String bannerExternalUrl) {
         this.bannerExternalUrl = bannerExternalUrl;
         return this;
@@ -37,6 +39,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannerImageUrl")
     public String bannerImageUrl;
+
     public ImageSettings withBannerImageUrl(String bannerImageUrl) {
         this.bannerImageUrl = bannerImageUrl;
         return this;
@@ -48,6 +51,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannerMobileExtraHdImageUrl")
     public String bannerMobileExtraHdImageUrl;
+
     public ImageSettings withBannerMobileExtraHdImageUrl(String bannerMobileExtraHdImageUrl) {
         this.bannerMobileExtraHdImageUrl = bannerMobileExtraHdImageUrl;
         return this;
@@ -59,6 +63,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannerMobileHdImageUrl")
     public String bannerMobileHdImageUrl;
+
     public ImageSettings withBannerMobileHdImageUrl(String bannerMobileHdImageUrl) {
         this.bannerMobileHdImageUrl = bannerMobileHdImageUrl;
         return this;
@@ -70,6 +75,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannerMobileImageUrl")
     public String bannerMobileImageUrl;
+
     public ImageSettings withBannerMobileImageUrl(String bannerMobileImageUrl) {
         this.bannerMobileImageUrl = bannerMobileImageUrl;
         return this;
@@ -81,6 +87,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannerMobileLowImageUrl")
     public String bannerMobileLowImageUrl;
+
     public ImageSettings withBannerMobileLowImageUrl(String bannerMobileLowImageUrl) {
         this.bannerMobileLowImageUrl = bannerMobileLowImageUrl;
         return this;
@@ -92,6 +99,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannerMobileMediumHdImageUrl")
     public String bannerMobileMediumHdImageUrl;
+
     public ImageSettings withBannerMobileMediumHdImageUrl(String bannerMobileMediumHdImageUrl) {
         this.bannerMobileMediumHdImageUrl = bannerMobileMediumHdImageUrl;
         return this;
@@ -103,6 +111,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannerTabletExtraHdImageUrl")
     public String bannerTabletExtraHdImageUrl;
+
     public ImageSettings withBannerTabletExtraHdImageUrl(String bannerTabletExtraHdImageUrl) {
         this.bannerTabletExtraHdImageUrl = bannerTabletExtraHdImageUrl;
         return this;
@@ -114,6 +123,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannerTabletHdImageUrl")
     public String bannerTabletHdImageUrl;
+
     public ImageSettings withBannerTabletHdImageUrl(String bannerTabletHdImageUrl) {
         this.bannerTabletHdImageUrl = bannerTabletHdImageUrl;
         return this;
@@ -125,6 +135,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannerTabletImageUrl")
     public String bannerTabletImageUrl;
+
     public ImageSettings withBannerTabletImageUrl(String bannerTabletImageUrl) {
         this.bannerTabletImageUrl = bannerTabletImageUrl;
         return this;
@@ -136,6 +147,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannerTabletLowImageUrl")
     public String bannerTabletLowImageUrl;
+
     public ImageSettings withBannerTabletLowImageUrl(String bannerTabletLowImageUrl) {
         this.bannerTabletLowImageUrl = bannerTabletLowImageUrl;
         return this;
@@ -147,6 +159,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannerTvHighImageUrl")
     public String bannerTvHighImageUrl;
+
     public ImageSettings withBannerTvHighImageUrl(String bannerTvHighImageUrl) {
         this.bannerTvHighImageUrl = bannerTvHighImageUrl;
         return this;
@@ -158,6 +171,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannerTvImageUrl")
     public String bannerTvImageUrl;
+
     public ImageSettings withBannerTvImageUrl(String bannerTvImageUrl) {
         this.bannerTvImageUrl = bannerTvImageUrl;
         return this;
@@ -169,6 +183,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannerTvLowImageUrl")
     public String bannerTvLowImageUrl;
+
     public ImageSettings withBannerTvLowImageUrl(String bannerTvLowImageUrl) {
         this.bannerTvLowImageUrl = bannerTvLowImageUrl;
         return this;
@@ -180,6 +195,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannerTvMediumImageUrl")
     public String bannerTvMediumImageUrl;
+
     public ImageSettings withBannerTvMediumImageUrl(String bannerTvMediumImageUrl) {
         this.bannerTvMediumImageUrl = bannerTvMediumImageUrl;
         return this;
@@ -188,6 +204,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("largeBrandedBannerImageImapScript")
     public LocalizedProperty largeBrandedBannerImageImapScript;
+
     public ImageSettings withLargeBrandedBannerImageImapScript(LocalizedProperty largeBrandedBannerImageImapScript) {
         this.largeBrandedBannerImageImapScript = largeBrandedBannerImageImapScript;
         return this;
@@ -196,6 +213,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("largeBrandedBannerImageUrl")
     public LocalizedProperty largeBrandedBannerImageUrl;
+
     public ImageSettings withLargeBrandedBannerImageUrl(LocalizedProperty largeBrandedBannerImageUrl) {
         this.largeBrandedBannerImageUrl = largeBrandedBannerImageUrl;
         return this;
@@ -204,6 +222,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smallBrandedBannerImageImapScript")
     public LocalizedProperty smallBrandedBannerImageImapScript;
+
     public ImageSettings withSmallBrandedBannerImageImapScript(LocalizedProperty smallBrandedBannerImageImapScript) {
         this.smallBrandedBannerImageImapScript = smallBrandedBannerImageImapScript;
         return this;
@@ -212,6 +231,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smallBrandedBannerImageUrl")
     public LocalizedProperty smallBrandedBannerImageUrl;
+
     public ImageSettings withSmallBrandedBannerImageUrl(LocalizedProperty smallBrandedBannerImageUrl) {
         this.smallBrandedBannerImageUrl = smallBrandedBannerImageUrl;
         return this;
@@ -223,6 +243,7 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingImageUrl")
     public String trackingImageUrl;
+
     public ImageSettings withTrackingImageUrl(String trackingImageUrl) {
         this.trackingImageUrl = trackingImageUrl;
         return this;
@@ -231,9 +252,11 @@ public class ImageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("watchIconImageUrl")
     public String watchIconImageUrl;
+
     public ImageSettings withWatchIconImageUrl(String watchIconImageUrl) {
         this.watchIconImageUrl = watchIconImageUrl;
         return this;
     }
     
+    public ImageSettings(){}
 }

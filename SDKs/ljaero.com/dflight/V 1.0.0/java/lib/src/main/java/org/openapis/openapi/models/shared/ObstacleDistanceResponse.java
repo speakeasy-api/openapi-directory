@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ObstacleDistanceResponse {
     @JsonProperty("found")
     public java.util.Map<String, Object> found;
+
     public ObstacleDistanceResponse withFound(java.util.Map<String, Object> found) {
         this.found = found;
         return this;
     }
     
+    public ObstacleDistanceResponse(@JsonProperty("found") java.util.Map<String, Object> found) {
+        this.found = found;
+  }
 }

@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesSearchMatch withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Double lat;
+
     public TflApiPresentationEntitiesSearchMatch withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lon")
     public Double lon;
+
     public TflApiPresentationEntitiesSearchMatch withLon(Double lon) {
         this.lon = lon;
         return this;
@@ -36,6 +39,7 @@ public class TflApiPresentationEntitiesSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TflApiPresentationEntitiesSearchMatch withName(String name) {
         this.name = name;
         return this;
@@ -44,9 +48,11 @@ public class TflApiPresentationEntitiesSearchMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public TflApiPresentationEntitiesSearchMatch withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TflApiPresentationEntitiesSearchMatch(){}
 }

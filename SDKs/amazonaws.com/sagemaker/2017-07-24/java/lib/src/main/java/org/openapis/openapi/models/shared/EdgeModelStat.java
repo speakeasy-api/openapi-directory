@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EdgeModelStat {
     @JsonProperty("ActiveDeviceCount")
     public Long activeDeviceCount;
+
     public EdgeModelStat withActiveDeviceCount(Long activeDeviceCount) {
         this.activeDeviceCount = activeDeviceCount;
         return this;
@@ -19,6 +20,7 @@ public class EdgeModelStat {
     
     @JsonProperty("ConnectedDeviceCount")
     public Long connectedDeviceCount;
+
     public EdgeModelStat withConnectedDeviceCount(Long connectedDeviceCount) {
         this.connectedDeviceCount = connectedDeviceCount;
         return this;
@@ -26,6 +28,7 @@ public class EdgeModelStat {
     
     @JsonProperty("ModelName")
     public String modelName;
+
     public EdgeModelStat withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -33,6 +36,7 @@ public class EdgeModelStat {
     
     @JsonProperty("ModelVersion")
     public String modelVersion;
+
     public EdgeModelStat withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
@@ -40,6 +44,7 @@ public class EdgeModelStat {
     
     @JsonProperty("OfflineDeviceCount")
     public Long offlineDeviceCount;
+
     public EdgeModelStat withOfflineDeviceCount(Long offlineDeviceCount) {
         this.offlineDeviceCount = offlineDeviceCount;
         return this;
@@ -47,9 +52,18 @@ public class EdgeModelStat {
     
     @JsonProperty("SamplingDeviceCount")
     public Long samplingDeviceCount;
+
     public EdgeModelStat withSamplingDeviceCount(Long samplingDeviceCount) {
         this.samplingDeviceCount = samplingDeviceCount;
         return this;
     }
     
+    public EdgeModelStat(@JsonProperty("ActiveDeviceCount") Long activeDeviceCount, @JsonProperty("ConnectedDeviceCount") Long connectedDeviceCount, @JsonProperty("ModelName") String modelName, @JsonProperty("ModelVersion") String modelVersion, @JsonProperty("OfflineDeviceCount") Long offlineDeviceCount, @JsonProperty("SamplingDeviceCount") Long samplingDeviceCount) {
+        this.activeDeviceCount = activeDeviceCount;
+        this.connectedDeviceCount = connectedDeviceCount;
+        this.modelName = modelName;
+        this.modelVersion = modelVersion;
+        this.offlineDeviceCount = offlineDeviceCount;
+        this.samplingDeviceCount = samplingDeviceCount;
+  }
 }

@@ -17,6 +17,7 @@ public class ClientStringTranslation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public ClientStringTranslation withContent(String content) {
         this.content = content;
         return this;
@@ -30,6 +31,7 @@ public class ClientStringTranslation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_changed")
     public OffsetDateTime lastChanged;
+
     public ClientStringTranslation withLastChanged(OffsetDateTime lastChanged) {
         this.lastChanged = lastChanged;
         return this;
@@ -38,6 +40,7 @@ public class ClientStringTranslation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public ClientStringTranslation withResource(String resource) {
         this.resource = resource;
         return this;
@@ -46,6 +49,7 @@ public class ClientStringTranslation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_id")
     public String resourceId;
+
     public ClientStringTranslation withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -54,6 +58,7 @@ public class ClientStringTranslation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ClientStringTranslationStateEnum state;
+
     public ClientStringTranslation withState(ClientStringTranslationStateEnum state) {
         this.state = state;
         return this;
@@ -62,9 +67,11 @@ public class ClientStringTranslation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_language")
     public String targetLanguage;
+
     public ClientStringTranslation withTargetLanguage(String targetLanguage) {
         this.targetLanguage = targetLanguage;
         return this;
     }
     
+    public ClientStringTranslation(){}
 }

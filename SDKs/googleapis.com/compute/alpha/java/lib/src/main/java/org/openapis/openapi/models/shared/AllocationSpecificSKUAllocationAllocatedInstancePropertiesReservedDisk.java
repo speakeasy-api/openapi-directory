@@ -15,6 +15,7 @@ public class AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedD
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public String diskSizeGb;
+
     public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk withDiskSizeGb(String diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -26,9 +27,11 @@ public class AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedD
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interface")
     public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterfaceEnum interface_;
+
     public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk withInterface(AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterfaceEnum interface_) {
         this.interface_ = interface_;
         return this;
     }
     
+    public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk(){}
 }

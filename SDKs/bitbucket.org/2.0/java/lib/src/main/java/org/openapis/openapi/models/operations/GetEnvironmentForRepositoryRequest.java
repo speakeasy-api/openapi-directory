@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEnvironmentForRepositoryRequest {
@@ -12,6 +13,7 @@ public class GetEnvironmentForRepositoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_uuid")
     public String environmentUuid;
+
     public GetEnvironmentForRepositoryRequest withEnvironmentUuid(String environmentUuid) {
         this.environmentUuid = environmentUuid;
         return this;
@@ -22,6 +24,7 @@ public class GetEnvironmentForRepositoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetEnvironmentForRepositoryRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -32,9 +35,15 @@ public class GetEnvironmentForRepositoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetEnvironmentForRepositoryRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetEnvironmentForRepositoryRequest(@JsonProperty("environment_uuid") String environmentUuid, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.environmentUuid = environmentUuid;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

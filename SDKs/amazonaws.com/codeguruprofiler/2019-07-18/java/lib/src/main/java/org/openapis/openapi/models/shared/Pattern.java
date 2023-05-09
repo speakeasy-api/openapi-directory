@@ -15,6 +15,7 @@ public class Pattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countersToAggregate")
     public String[] countersToAggregate;
+
     public Pattern withCountersToAggregate(String[] countersToAggregate) {
         this.countersToAggregate = countersToAggregate;
         return this;
@@ -23,6 +24,7 @@ public class Pattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Pattern withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class Pattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Pattern withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class Pattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Pattern withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class Pattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolutionSteps")
     public String resolutionSteps;
+
     public Pattern withResolutionSteps(String resolutionSteps) {
         this.resolutionSteps = resolutionSteps;
         return this;
@@ -55,6 +60,7 @@ public class Pattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetFrames")
     public String[][] targetFrames;
+
     public Pattern withTargetFrames(String[][] targetFrames) {
         this.targetFrames = targetFrames;
         return this;
@@ -63,9 +69,11 @@ public class Pattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thresholdPercent")
     public Double thresholdPercent;
+
     public Pattern withThresholdPercent(Double thresholdPercent) {
         this.thresholdPercent = thresholdPercent;
         return this;
     }
     
+    public Pattern(){}
 }

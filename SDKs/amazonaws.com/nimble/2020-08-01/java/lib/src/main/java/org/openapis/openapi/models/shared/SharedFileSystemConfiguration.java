@@ -15,6 +15,7 @@ public class SharedFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public SharedFileSystemConfiguration withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -23,6 +24,7 @@ public class SharedFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileSystemId")
     public String fileSystemId;
+
     public SharedFileSystemConfiguration withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -31,6 +33,7 @@ public class SharedFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linuxMountPoint")
     public String linuxMountPoint;
+
     public SharedFileSystemConfiguration withLinuxMountPoint(String linuxMountPoint) {
         this.linuxMountPoint = linuxMountPoint;
         return this;
@@ -39,6 +42,7 @@ public class SharedFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareName")
     public String shareName;
+
     public SharedFileSystemConfiguration withShareName(String shareName) {
         this.shareName = shareName;
         return this;
@@ -47,9 +51,11 @@ public class SharedFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowsMountDrive")
     public String windowsMountDrive;
+
     public SharedFileSystemConfiguration withWindowsMountDrive(String windowsMountDrive) {
         this.windowsMountDrive = windowsMountDrive;
         return this;
     }
     
+    public SharedFileSystemConfiguration(){}
 }

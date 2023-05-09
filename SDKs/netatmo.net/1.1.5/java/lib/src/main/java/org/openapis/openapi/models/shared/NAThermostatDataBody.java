@@ -12,6 +12,7 @@ public class NAThermostatDataBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public NAPlug[] devices;
+
     public NAThermostatDataBody withDevices(NAPlug[] devices) {
         this.devices = devices;
         return this;
@@ -20,9 +21,11 @@ public class NAThermostatDataBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public NAUser user;
+
     public NAThermostatDataBody withUser(NAUser user) {
         this.user = user;
         return this;
     }
     
+    public NAThermostatDataBody(){}
 }

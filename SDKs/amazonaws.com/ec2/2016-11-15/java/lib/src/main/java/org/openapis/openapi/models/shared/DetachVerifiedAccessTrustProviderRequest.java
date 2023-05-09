@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DetachVerifiedAccessTrustProviderRequest {
     
     public String clientToken;
+
     public DetachVerifiedAccessTrustProviderRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class DetachVerifiedAccessTrustProviderRequest {
     
     
     public Boolean dryRun;
+
     public DetachVerifiedAccessTrustProviderRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class DetachVerifiedAccessTrustProviderRequest {
     
     
     public String verifiedAccessInstanceId;
+
     public DetachVerifiedAccessTrustProviderRequest withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
@@ -30,9 +33,14 @@ public class DetachVerifiedAccessTrustProviderRequest {
     
     
     public String verifiedAccessTrustProviderId;
+
     public DetachVerifiedAccessTrustProviderRequest withVerifiedAccessTrustProviderId(String verifiedAccessTrustProviderId) {
         this.verifiedAccessTrustProviderId = verifiedAccessTrustProviderId;
         return this;
     }
     
+    public DetachVerifiedAccessTrustProviderRequest(@JsonProperty("VerifiedAccessInstanceId") String verifiedAccessInstanceId, @JsonProperty("VerifiedAccessTrustProviderId") String verifiedAccessTrustProviderId) {
+        this.verifiedAccessInstanceId = verifiedAccessInstanceId;
+        this.verifiedAccessTrustProviderId = verifiedAccessTrustProviderId;
+  }
 }

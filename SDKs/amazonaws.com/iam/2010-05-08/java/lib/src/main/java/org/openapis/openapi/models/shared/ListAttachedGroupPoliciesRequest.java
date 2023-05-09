@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListAttachedGroupPoliciesRequest {
     
     public String groupName;
+
     public ListAttachedGroupPoliciesRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -16,6 +17,7 @@ public class ListAttachedGroupPoliciesRequest {
     
     
     public String marker;
+
     public ListAttachedGroupPoliciesRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +25,7 @@ public class ListAttachedGroupPoliciesRequest {
     
     
     public Long maxItems;
+
     public ListAttachedGroupPoliciesRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -30,9 +33,13 @@ public class ListAttachedGroupPoliciesRequest {
     
     
     public String pathPrefix;
+
     public ListAttachedGroupPoliciesRequest withPathPrefix(String pathPrefix) {
         this.pathPrefix = pathPrefix;
         return this;
     }
     
+    public ListAttachedGroupPoliciesRequest(@JsonProperty("GroupName") String groupName) {
+        this.groupName = groupName;
+  }
 }

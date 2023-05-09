@@ -22,6 +22,7 @@ public class CreateWorkerConfigurationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public CreateWorkerConfigurationResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class CreateWorkerConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestRevision")
     public WorkerConfigurationRevisionSummary latestRevision;
+
     public CreateWorkerConfigurationResponse withLatestRevision(WorkerConfigurationRevisionSummary latestRevision) {
         this.latestRevision = latestRevision;
         return this;
@@ -38,6 +40,7 @@ public class CreateWorkerConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateWorkerConfigurationResponse withName(String name) {
         this.name = name;
         return this;
@@ -46,9 +49,11 @@ public class CreateWorkerConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerConfigurationArn")
     public String workerConfigurationArn;
+
     public CreateWorkerConfigurationResponse withWorkerConfigurationArn(String workerConfigurationArn) {
         this.workerConfigurationArn = workerConfigurationArn;
         return this;
     }
     
+    public CreateWorkerConfigurationResponse(){}
 }

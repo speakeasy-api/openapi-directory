@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody requestBody;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest withRequestBody(OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequ
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
     public String clientId;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -26,9 +29,15 @@ public class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequ
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fingerprint")
     public String fingerprint;
+
     public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
     }
     
+    public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest(@JsonProperty("RequestBody") OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody requestBody, @JsonProperty("client_id") String clientId, @JsonProperty("fingerprint") String fingerprint) {
+        this.requestBody = requestBody;
+        this.clientId = clientId;
+        this.fingerprint = fingerprint;
+  }
 }

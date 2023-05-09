@@ -71,6 +71,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateFunctionRequest.j
 lib/src/main/java/org/openapis/openapi/models/operations/CreateFunctionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateFunctionUrlConfigRequestBodyAuthTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateFunctionUrlConfigRequestBodyCors.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateFunctionUrlConfigRequestBodyInvokeModeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateFunctionUrlConfigRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateFunctionUrlConfigRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateFunctionUrlConfigResponse.java
@@ -135,6 +136,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/InvokeResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/InvokeAsyncRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/InvokeAsyncRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/InvokeAsyncResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/InvokeWithResponseStreamRequestBody.java
+lib/src/main/java/org/openapis/openapi/models/operations/InvokeWithResponseStreamXAmzInvocationTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/InvokeWithResponseStreamXAmzLogTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/InvokeWithResponseStreamRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/InvokeWithResponseStreamResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAliasesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAliasesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCodeSigningConfigsRequest.java
@@ -234,6 +240,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateFunctionEventInvo
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateFunctionEventInvokeConfigResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateFunctionUrlConfigRequestBodyAuthTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateFunctionUrlConfigRequestBodyCors.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateFunctionUrlConfigRequestBodyInvokeModeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateFunctionUrlConfigRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateFunctionUrlConfigRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateFunctionUrlConfigResponse.java
@@ -288,6 +295,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/EnvironmentError.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeadLetterConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/ArchitectureEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateFunctionUrlConfigResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/InvokeModeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Cors.java
 lib/src/main/java/org/openapis/openapi/models/shared/FunctionUrlAuthTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetAccountSettingsResponse.java
@@ -311,6 +319,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetRuntimeManagementConfigR
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateRuntimeOnEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/InvocationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/InvokeAsyncResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/InvokeWithResponseStreamResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/InvokeWithResponseStreamResponseEvent.java
+lib/src/main/java/org/openapis/openapi/models/shared/InvokeResponseStreamUpdate.java
+lib/src/main/java/org/openapis/openapi/models/shared/InvokeWithResponseStreamCompleteEvent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListAliasesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListCodeSigningConfigsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListEventSourceMappingsResponse.java
@@ -334,4 +346,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/PutRuntimeManagementConfigR
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateCodeSigningConfigResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateFunctionUrlConfigResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

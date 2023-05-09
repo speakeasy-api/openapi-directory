@@ -15,6 +15,7 @@ public class ListAppsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Apps")
     public AppDetails[] apps;
+
     public ListAppsResponse withApps(AppDetails[] apps) {
         this.apps = apps;
         return this;
@@ -23,9 +24,11 @@ public class ListAppsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAppsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAppsResponse(){}
 }

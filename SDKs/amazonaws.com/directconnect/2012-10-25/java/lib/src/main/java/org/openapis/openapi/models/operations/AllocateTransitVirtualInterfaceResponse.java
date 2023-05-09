@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AllocateTransitVirtualInterfaceResponse {
@@ -12,6 +13,7 @@ public class AllocateTransitVirtualInterfaceResponse {
      */
     
     public org.openapis.openapi.models.shared.AllocateTransitVirtualInterfaceResult allocateTransitVirtualInterfaceResult;
+
     public AllocateTransitVirtualInterfaceResponse withAllocateTransitVirtualInterfaceResult(org.openapis.openapi.models.shared.AllocateTransitVirtualInterfaceResult allocateTransitVirtualInterfaceResult) {
         this.allocateTransitVirtualInterfaceResult = allocateTransitVirtualInterfaceResult;
         return this;
@@ -19,6 +21,7 @@ public class AllocateTransitVirtualInterfaceResponse {
     
     
     public String contentType;
+
     public AllocateTransitVirtualInterfaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AllocateTransitVirtualInterfaceResponse {
      */
     
     public Object directConnectClientException;
+
     public AllocateTransitVirtualInterfaceResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class AllocateTransitVirtualInterfaceResponse {
      */
     
     public Object directConnectServerException;
+
     public AllocateTransitVirtualInterfaceResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -49,6 +54,7 @@ public class AllocateTransitVirtualInterfaceResponse {
      */
     
     public Object duplicateTagKeysException;
+
     public AllocateTransitVirtualInterfaceResponse withDuplicateTagKeysException(Object duplicateTagKeysException) {
         this.duplicateTagKeysException = duplicateTagKeysException;
         return this;
@@ -56,6 +62,7 @@ public class AllocateTransitVirtualInterfaceResponse {
     
     
     public Integer statusCode;
+
     public AllocateTransitVirtualInterfaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AllocateTransitVirtualInterfaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AllocateTransitVirtualInterfaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class AllocateTransitVirtualInterfaceResponse {
      */
     
     public Object tooManyTagsException;
+
     public AllocateTransitVirtualInterfaceResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public AllocateTransitVirtualInterfaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

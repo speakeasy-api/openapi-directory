@@ -64,14 +64,12 @@ public class Transfers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveBalanceTransfersResponse res = new org.openapis.openapi.models.operations.RetrieveBalanceTransfersResponse() {{
+        org.openapis.openapi.models.operations.RetrieveBalanceTransfersResponse res = new org.openapis.openapi.models.operations.RetrieveBalanceTransfersResponse(contentType, httpRes.statusCode()) {{
             listBalanceTransfersResponse = null;
             retrieveBalanceTransfers401ApplicationJSONObject = null;
             unprovisionedErrorResponse = null;
             retrieveBalanceTransfers404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,14 +134,12 @@ public class Transfers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveCreditTransfersResponse res = new org.openapis.openapi.models.operations.RetrieveCreditTransfersResponse() {{
+        org.openapis.openapi.models.operations.RetrieveCreditTransfersResponse res = new org.openapis.openapi.models.operations.RetrieveCreditTransfersResponse(contentType, httpRes.statusCode()) {{
             listCreditTransfersResponse = null;
             retrieveCreditTransfers401ApplicationJSONObject = null;
             unprovisionedErrorResponse = null;
             retrieveCreditTransfers404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -207,15 +203,13 @@ public class Transfers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransferBalanceResponse res = new org.openapis.openapi.models.operations.TransferBalanceResponse() {{
+        org.openapis.openapi.models.operations.TransferBalanceResponse res = new org.openapis.openapi.models.operations.TransferBalanceResponse(contentType, httpRes.statusCode()) {{
             transferBalanceResponse = null;
             transferBalance401ApplicationJSONObject = null;
             unprovisionedErrorResponse = null;
             transferBalance404ApplicationJSONObject = null;
             transferBalance422ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -286,15 +280,13 @@ public class Transfers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransferCreditResponse res = new org.openapis.openapi.models.operations.TransferCreditResponse() {{
+        org.openapis.openapi.models.operations.TransferCreditResponse res = new org.openapis.openapi.models.operations.TransferCreditResponse(contentType, httpRes.statusCode()) {{
             transferCreditResponse = null;
             transferCredit401ApplicationJSONObject = null;
             unprovisionedErrorResponse = null;
             transferCredit404ApplicationJSONObject = null;
             transferCredit422ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -365,7 +357,7 @@ public class Transfers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransferNumberResponse res = new org.openapis.openapi.models.operations.TransferNumberResponse() {{
+        org.openapis.openapi.models.operations.TransferNumberResponse res = new org.openapis.openapi.models.operations.TransferNumberResponse(contentType, httpRes.statusCode()) {{
             transferNumberResponse = null;
             transferNumber401ApplicationJSONObject = null;
             transferNumber403ApplicationJSONOneOf = null;
@@ -373,8 +365,6 @@ public class Transfers {
             transferNumber409ApplicationJSONObject = null;
             transferNumber422ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

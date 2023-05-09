@@ -15,9 +15,11 @@ public class StopReplicationToReplicaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public StopReplicationToReplicaResponse withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public StopReplicationToReplicaResponse(){}
 }

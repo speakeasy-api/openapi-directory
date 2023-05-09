@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ShadowModeConfig {
     @JsonProperty("ShadowModelVariants")
     public ShadowModelVariantConfig[] shadowModelVariants;
+
     public ShadowModeConfig withShadowModelVariants(ShadowModelVariantConfig[] shadowModelVariants) {
         this.shadowModelVariants = shadowModelVariants;
         return this;
@@ -19,9 +20,14 @@ public class ShadowModeConfig {
     
     @JsonProperty("SourceModelVariantName")
     public String sourceModelVariantName;
+
     public ShadowModeConfig withSourceModelVariantName(String sourceModelVariantName) {
         this.sourceModelVariantName = sourceModelVariantName;
         return this;
     }
     
+    public ShadowModeConfig(@JsonProperty("ShadowModelVariants") ShadowModelVariantConfig[] shadowModelVariants, @JsonProperty("SourceModelVariantName") String sourceModelVariantName) {
+        this.shadowModelVariants = shadowModelVariants;
+        this.sourceModelVariantName = sourceModelVariantName;
+  }
 }

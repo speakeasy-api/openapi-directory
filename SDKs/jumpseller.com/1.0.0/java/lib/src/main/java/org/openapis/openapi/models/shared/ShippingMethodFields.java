@@ -15,6 +15,7 @@ public class ShippingMethodFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callback_url")
     public String callbackUrl;
+
     public ShippingMethodFields withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -26,6 +27,7 @@ public class ShippingMethodFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public ShippingMethodFields withCity(String city) {
         this.city = city;
         return this;
@@ -37,6 +39,7 @@ public class ShippingMethodFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fetch_services_url")
     public String fetchServicesUrl;
+
     public ShippingMethodFields withFetchServicesUrl(String fetchServicesUrl) {
         this.fetchServicesUrl = fetchServicesUrl;
         return this;
@@ -48,6 +51,7 @@ public class ShippingMethodFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public ShippingMethodFields withId(Integer id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class ShippingMethodFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ShippingMethodFields withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +75,7 @@ public class ShippingMethodFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal")
     public String postal;
+
     public ShippingMethodFields withPostal(String postal) {
         this.postal = postal;
         return this;
@@ -78,6 +84,7 @@ public class ShippingMethodFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public ShippingService[] services;
+
     public ShippingMethodFields withServices(ShippingService[] services) {
         this.services = services;
         return this;
@@ -89,6 +96,7 @@ public class ShippingMethodFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ShippingMethodFields withState(String state) {
         this.state = state;
         return this;
@@ -100,9 +108,11 @@ public class ShippingMethodFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ShippingMethodFieldsTypeEnum type;
+
     public ShippingMethodFields withType(ShippingMethodFieldsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ShippingMethodFields(){}
 }

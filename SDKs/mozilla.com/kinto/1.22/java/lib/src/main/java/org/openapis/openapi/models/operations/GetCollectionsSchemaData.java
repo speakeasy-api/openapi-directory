@@ -12,6 +12,7 @@ public class GetCollectionsSchemaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cache_expires")
     public Long cacheExpires;
+
     public GetCollectionsSchemaData withCacheExpires(Long cacheExpires) {
         this.cacheExpires = cacheExpires;
         return this;
@@ -20,9 +21,11 @@ public class GetCollectionsSchemaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public java.util.Map<String, Object> schema;
+
     public GetCollectionsSchemaData withSchema(java.util.Map<String, Object> schema) {
         this.schema = schema;
         return this;
     }
     
+    public GetCollectionsSchemaData(){}
 }

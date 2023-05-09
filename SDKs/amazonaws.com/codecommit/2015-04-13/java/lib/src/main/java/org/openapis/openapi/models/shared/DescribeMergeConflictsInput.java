@@ -12,6 +12,7 @@ public class DescribeMergeConflictsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictDetailLevel")
     public ConflictDetailLevelTypeEnumEnum conflictDetailLevel;
+
     public DescribeMergeConflictsInput withConflictDetailLevel(ConflictDetailLevelTypeEnumEnum conflictDetailLevel) {
         this.conflictDetailLevel = conflictDetailLevel;
         return this;
@@ -20,6 +21,7 @@ public class DescribeMergeConflictsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictResolutionStrategy")
     public ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy;
+
     public DescribeMergeConflictsInput withConflictResolutionStrategy(ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy) {
         this.conflictResolutionStrategy = conflictResolutionStrategy;
         return this;
@@ -27,6 +29,7 @@ public class DescribeMergeConflictsInput {
     
     @JsonProperty("destinationCommitSpecifier")
     public String destinationCommitSpecifier;
+
     public DescribeMergeConflictsInput withDestinationCommitSpecifier(String destinationCommitSpecifier) {
         this.destinationCommitSpecifier = destinationCommitSpecifier;
         return this;
@@ -34,6 +37,7 @@ public class DescribeMergeConflictsInput {
     
     @JsonProperty("filePath")
     public String filePath;
+
     public DescribeMergeConflictsInput withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -42,6 +46,7 @@ public class DescribeMergeConflictsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxMergeHunks")
     public Long maxMergeHunks;
+
     public DescribeMergeConflictsInput withMaxMergeHunks(Long maxMergeHunks) {
         this.maxMergeHunks = maxMergeHunks;
         return this;
@@ -49,6 +54,7 @@ public class DescribeMergeConflictsInput {
     
     @JsonProperty("mergeOption")
     public MergeOptionTypeEnumEnum mergeOption;
+
     public DescribeMergeConflictsInput withMergeOption(MergeOptionTypeEnumEnum mergeOption) {
         this.mergeOption = mergeOption;
         return this;
@@ -57,6 +63,7 @@ public class DescribeMergeConflictsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeMergeConflictsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -64,6 +71,7 @@ public class DescribeMergeConflictsInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public DescribeMergeConflictsInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -71,9 +79,17 @@ public class DescribeMergeConflictsInput {
     
     @JsonProperty("sourceCommitSpecifier")
     public String sourceCommitSpecifier;
+
     public DescribeMergeConflictsInput withSourceCommitSpecifier(String sourceCommitSpecifier) {
         this.sourceCommitSpecifier = sourceCommitSpecifier;
         return this;
     }
     
+    public DescribeMergeConflictsInput(@JsonProperty("destinationCommitSpecifier") String destinationCommitSpecifier, @JsonProperty("filePath") String filePath, @JsonProperty("mergeOption") MergeOptionTypeEnumEnum mergeOption, @JsonProperty("repositoryName") String repositoryName, @JsonProperty("sourceCommitSpecifier") String sourceCommitSpecifier) {
+        this.destinationCommitSpecifier = destinationCommitSpecifier;
+        this.filePath = filePath;
+        this.mergeOption = mergeOption;
+        this.repositoryName = repositoryName;
+        this.sourceCommitSpecifier = sourceCommitSpecifier;
+  }
 }

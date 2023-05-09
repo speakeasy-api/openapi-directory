@@ -18,6 +18,7 @@ public class GoogleCloudVideointelligenceV1p3beta1VideoContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explicitContentDetectionConfig")
     public GoogleCloudVideointelligenceV1p3beta1ExplicitContentDetectionConfig explicitContentDetectionConfig;
+
     public GoogleCloudVideointelligenceV1p3beta1VideoContext withExplicitContentDetectionConfig(GoogleCloudVideointelligenceV1p3beta1ExplicitContentDetectionConfig explicitContentDetectionConfig) {
         this.explicitContentDetectionConfig = explicitContentDetectionConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVideointelligenceV1p3beta1VideoContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("faceDetectionConfig")
     public GoogleCloudVideointelligenceV1p3beta1FaceDetectionConfig faceDetectionConfig;
+
     public GoogleCloudVideointelligenceV1p3beta1VideoContext withFaceDetectionConfig(GoogleCloudVideointelligenceV1p3beta1FaceDetectionConfig faceDetectionConfig) {
         this.faceDetectionConfig = faceDetectionConfig;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudVideointelligenceV1p3beta1VideoContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelDetectionConfig")
     public GoogleCloudVideointelligenceV1p3beta1LabelDetectionConfig labelDetectionConfig;
+
     public GoogleCloudVideointelligenceV1p3beta1VideoContext withLabelDetectionConfig(GoogleCloudVideointelligenceV1p3beta1LabelDetectionConfig labelDetectionConfig) {
         this.labelDetectionConfig = labelDetectionConfig;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudVideointelligenceV1p3beta1VideoContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectTrackingConfig")
     public GoogleCloudVideointelligenceV1p3beta1ObjectTrackingConfig objectTrackingConfig;
+
     public GoogleCloudVideointelligenceV1p3beta1VideoContext withObjectTrackingConfig(GoogleCloudVideointelligenceV1p3beta1ObjectTrackingConfig objectTrackingConfig) {
         this.objectTrackingConfig = objectTrackingConfig;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudVideointelligenceV1p3beta1VideoContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personDetectionConfig")
     public GoogleCloudVideointelligenceV1p3beta1PersonDetectionConfig personDetectionConfig;
+
     public GoogleCloudVideointelligenceV1p3beta1VideoContext withPersonDetectionConfig(GoogleCloudVideointelligenceV1p3beta1PersonDetectionConfig personDetectionConfig) {
         this.personDetectionConfig = personDetectionConfig;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudVideointelligenceV1p3beta1VideoContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segments")
     public GoogleCloudVideointelligenceV1p3beta1VideoSegment[] segments;
+
     public GoogleCloudVideointelligenceV1p3beta1VideoContext withSegments(GoogleCloudVideointelligenceV1p3beta1VideoSegment[] segments) {
         this.segments = segments;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudVideointelligenceV1p3beta1VideoContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shotChangeDetectionConfig")
     public GoogleCloudVideointelligenceV1p3beta1ShotChangeDetectionConfig shotChangeDetectionConfig;
+
     public GoogleCloudVideointelligenceV1p3beta1VideoContext withShotChangeDetectionConfig(GoogleCloudVideointelligenceV1p3beta1ShotChangeDetectionConfig shotChangeDetectionConfig) {
         this.shotChangeDetectionConfig = shotChangeDetectionConfig;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudVideointelligenceV1p3beta1VideoContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speechTranscriptionConfig")
     public GoogleCloudVideointelligenceV1p3beta1SpeechTranscriptionConfig speechTranscriptionConfig;
+
     public GoogleCloudVideointelligenceV1p3beta1VideoContext withSpeechTranscriptionConfig(GoogleCloudVideointelligenceV1p3beta1SpeechTranscriptionConfig speechTranscriptionConfig) {
         this.speechTranscriptionConfig = speechTranscriptionConfig;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudVideointelligenceV1p3beta1VideoContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textDetectionConfig")
     public GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig textDetectionConfig;
+
     public GoogleCloudVideointelligenceV1p3beta1VideoContext withTextDetectionConfig(GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig textDetectionConfig) {
         this.textDetectionConfig = textDetectionConfig;
         return this;
     }
     
+    public GoogleCloudVideointelligenceV1p3beta1VideoContext(){}
 }

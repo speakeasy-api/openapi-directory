@@ -15,6 +15,7 @@ public class ResolveCustomerResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerAWSAccountId")
     public String customerAWSAccountId;
+
     public ResolveCustomerResult withCustomerAWSAccountId(String customerAWSAccountId) {
         this.customerAWSAccountId = customerAWSAccountId;
         return this;
@@ -23,6 +24,7 @@ public class ResolveCustomerResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerIdentifier")
     public String customerIdentifier;
+
     public ResolveCustomerResult withCustomerIdentifier(String customerIdentifier) {
         this.customerIdentifier = customerIdentifier;
         return this;
@@ -31,9 +33,11 @@ public class ResolveCustomerResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductCode")
     public String productCode;
+
     public ResolveCustomerResult withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
     }
     
+    public ResolveCustomerResult(){}
 }

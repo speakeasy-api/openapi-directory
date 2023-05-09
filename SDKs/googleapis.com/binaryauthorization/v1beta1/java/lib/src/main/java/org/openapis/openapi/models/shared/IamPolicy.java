@@ -18,6 +18,7 @@ public class IamPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindings")
     public Binding[] bindings;
+
     public IamPolicy withBindings(Binding[] bindings) {
         this.bindings = bindings;
         return this;
@@ -29,6 +30,7 @@ public class IamPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public IamPolicy withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,9 +42,11 @@ public class IamPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Integer version;
+
     public IamPolicy withVersion(Integer version) {
         this.version = version;
         return this;
     }
     
+    public IamPolicy(){}
 }

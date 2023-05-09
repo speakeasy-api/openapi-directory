@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppleMappingDeleteResponse {
     
     public String contentType;
+
     public AppleMappingDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppleMappingDeleteResponse {
     
     
     public Integer statusCode;
+
     public AppleMappingDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppleMappingDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppleMappingDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class AppleMappingDeleteResponse {
      */
     
     public AppleMappingDeleteDefaultApplicationJSON appleMappingDeleteDefaultApplicationJSONObject;
+
     public AppleMappingDeleteResponse withAppleMappingDeleteDefaultApplicationJSONObject(AppleMappingDeleteDefaultApplicationJSON appleMappingDeleteDefaultApplicationJSONObject) {
         this.appleMappingDeleteDefaultApplicationJSONObject = appleMappingDeleteDefaultApplicationJSONObject;
         return this;
     }
     
+    public AppleMappingDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

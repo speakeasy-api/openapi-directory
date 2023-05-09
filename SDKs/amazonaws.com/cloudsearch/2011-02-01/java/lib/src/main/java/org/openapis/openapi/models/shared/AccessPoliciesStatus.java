@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AccessPoliciesStatus - A &lt;code&gt;PolicyDocument&lt;/code&gt; that specifies access policies for the search domain's services, and the current status of those policies.
@@ -15,6 +15,7 @@ public class AccessPoliciesStatus {
      */
     
     public String options;
+
     public AccessPoliciesStatus withOptions(String options) {
         this.options = options;
         return this;
@@ -25,9 +26,14 @@ public class AccessPoliciesStatus {
      */
     
     public OptionStatus status;
+
     public AccessPoliciesStatus withStatus(OptionStatus status) {
         this.status = status;
         return this;
     }
     
+    public AccessPoliciesStatus(@JsonProperty("Options") String options, @JsonProperty("Status") OptionStatus status) {
+        this.options = options;
+        this.status = status;
+  }
 }

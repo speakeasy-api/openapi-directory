@@ -3,27 +3,26 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessSecurity;
 import org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessRequest;
 import org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessResponse;
+import org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2BatchProcessDocumentsRequest;
-import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2ProcessDocumentRequest;
-import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2TableExtractionParams;
-import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2TableBoundHint;
-import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2BoundingPoly;
-import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2Vertex;
-import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2NormalizedVertex;
-import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2OutputConfig;
-import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2GcsDestination;
-import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2OcrParams;
-import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2InputConfig;
-import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2GcsSource;
-import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2FormExtractionParams;
-import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint;
-import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2EntityExtractionParams;
 import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2AutoMlParams;
+import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2BatchProcessDocumentsRequest;
+import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2BoundingPoly;
+import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2EntityExtractionParams;
+import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2FormExtractionParams;
+import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2GcsDestination;
+import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2GcsSource;
+import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2InputConfig;
+import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint;
+import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2NormalizedVertex;
+import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2OcrParams;
+import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2OutputConfig;
+import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2ProcessDocumentRequest;
+import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2TableBoundHint;
+import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2TableExtractionParams;
+import org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2Vertex;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -32,401 +31,547 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DocumentaiProjectsLocationsDocumentsBatchProcessRequest req = new DocumentaiProjectsLocationsDocumentsBatchProcessRequest() {{
-                dollarXgafv = "2";
+            DocumentaiProjectsLocationsDocumentsBatchProcessRequest req = new DocumentaiProjectsLocationsDocumentsBatchProcessRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 googleCloudDocumentaiV1beta2BatchProcessDocumentsRequest = new GoogleCloudDocumentaiV1beta2BatchProcessDocumentsRequest() {{
                     requests = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2ProcessDocumentRequest[]{{
                         add(new GoogleCloudDocumentaiV1beta2ProcessDocumentRequest() {{
                             automlParams = new GoogleCloudDocumentaiV1beta2AutoMlParams() {{
-                                model = "distinctio";
+                                model = "quibusdam";
                             }};
-                            documentType = "quibusdam";
+                            documentType = "unde";
                             entityExtractionParams = new GoogleCloudDocumentaiV1beta2EntityExtractionParams() {{
                                 enabled = false;
-                                modelVersion = "unde";
+                                modelVersion = "nulla";
                             }};
                             formExtractionParams = new GoogleCloudDocumentaiV1beta2FormExtractionParams() {{
                                 enabled = false;
                                 keyValuePairHints = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint[]{{
                                     add(new GoogleCloudDocumentaiV1beta2KeyValuePairHint() {{
-                                        key = "corrupti";
+                                        key = "illum";
                                         valueTypes = new String[]{{
-                                            add("vel"),
                                             add("error"),
                                             add("deserunt"),
-                                            add("suscipit"),
                                         }};
                                     }}),
                                     add(new GoogleCloudDocumentaiV1beta2KeyValuePairHint() {{
-                                        key = "iure";
+                                        key = "suscipit";
                                         valueTypes = new String[]{{
+                                            add("magnam"),
                                             add("debitis"),
-                                            add("ipsa"),
                                         }};
                                     }}),
                                     add(new GoogleCloudDocumentaiV1beta2KeyValuePairHint() {{
-                                        key = "delectus";
+                                        key = "ipsa";
                                         valueTypes = new String[]{{
+                                            add("tempora"),
                                             add("suscipit"),
                                             add("molestiae"),
-                                        }};
-                                    }}),
-                                    add(new GoogleCloudDocumentaiV1beta2KeyValuePairHint() {{
-                                        key = "minus";
-                                        valueTypes = new String[]{{
-                                            add("voluptatum"),
-                                            add("iusto"),
-                                            add("excepturi"),
-                                            add("nisi"),
+                                            add("minus"),
                                         }};
                                     }}),
                                 }};
-                                modelVersion = "recusandae";
+                                modelVersion = "placeat";
                             }};
                             inputConfig = new GoogleCloudDocumentaiV1beta2InputConfig() {{
-                                contents = "temporibus";
+                                contents = "voluptatum";
                                 gcsSource = new GoogleCloudDocumentaiV1beta2GcsSource() {{
-                                    uri = "http://gloomy-blanket.name";
+                                    uri = "http://nice-gorilla.org";
                                 }};
-                                mimeType = "perferendis";
+                                mimeType = "temporibus";
                             }};
                             ocrParams = new GoogleCloudDocumentaiV1beta2OcrParams() {{
                                 languageHints = new String[]{{
-                                    add("repellendus"),
-                                    add("sapiente"),
+                                    add("quis"),
                                 }};
                             }};
                             outputConfig = new GoogleCloudDocumentaiV1beta2OutputConfig() {{
                                 gcsDestination = new GoogleCloudDocumentaiV1beta2GcsDestination() {{
-                                    uri = "https://constant-sundae.org";
+                                    uri = "http://previous-algorithm.info";
                                 }};
-                                pagesPerShard = 978619;
+                                pagesPerShard = 832620;
                             }};
-                            parent = "molestiae";
+                            parent = "sapiente";
                             tableExtractionParams = new GoogleCloudDocumentaiV1beta2TableExtractionParams() {{
                                 enabled = false;
                                 headerHints = new String[]{{
-                                    add("quod"),
-                                    add("esse"),
-                                    add("totam"),
-                                    add("porro"),
+                                    add("odit"),
+                                    add("at"),
+                                    add("at"),
+                                    add("maiores"),
                                 }};
-                                modelVersion = "dolorum";
+                                modelVersion = "molestiae";
                                 tableBoundHints = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2TableBoundHint[]{{
                                     add(new GoogleCloudDocumentaiV1beta2TableBoundHint() {{
                                         boundingBox = new GoogleCloudDocumentaiV1beta2BoundingPoly() {{
                                             normalizedVertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2NormalizedVertex[]{{
+                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
+                                                    x = 4614.79;
+                                                    y = 5204.78;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
+                                                    x = 7805.29;
+                                                    y = 6788.8;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
+                                                    x = 1182.74;
+                                                    y = 7206.33;
+                                                }}),
                                                 add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
                                                     x = 6399.21;
                                                     y = 5820.2;
                                                 }}),
+                                            }};
+                                            vertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2Vertex[]{{
+                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
+                                                    x = 537373;
+                                                    y = 944669;
+                                                }}),
+                                            }};
+                                        }};
+                                        pageNumber = 758616;
+                                    }}),
+                                    add(new GoogleCloudDocumentaiV1beta2TableBoundHint() {{
+                                        boundingBox = new GoogleCloudDocumentaiV1beta2BoundingPoly() {{
+                                            normalizedVertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2NormalizedVertex[]{{
                                                 add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
-                                                    x = 1433.53;
-                                                    y = 5373.73;
+                                                    x = 1059.07;
+                                                    y = 4146.62;
                                                 }}),
                                                 add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
-                                                    x = 9446.69;
-                                                    y = 7586.16;
+                                                    x = 4736;
+                                                    y = 2645.55;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
+                                                    x = 1863.32;
+                                                    y = 7742.34;
                                                 }}),
                                             }};
                                             vertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2Vertex[]{{
                                                 add(new GoogleCloudDocumentaiV1beta2Vertex() {{
-                                                    x = 105907;
-                                                    y = 414662;
+                                                    x = 456150;
+                                                    y = 216550;
                                                 }}),
                                                 add(new GoogleCloudDocumentaiV1beta2Vertex() {{
-                                                    x = 473600;
-                                                    y = 264555;
+                                                    x = 568434;
+                                                    y = 135218;
                                                 }}),
                                                 add(new GoogleCloudDocumentaiV1beta2Vertex() {{
-                                                    x = 186332;
-                                                    y = 774234;
+                                                    x = 18789;
+                                                    y = 324141;
                                                 }}),
                                             }};
                                         }};
-                                        pageNumber = 736918;
+                                        pageNumber = 617636;
+                                    }}),
+                                    add(new GoogleCloudDocumentaiV1beta2TableBoundHint() {{
+                                        boundingBox = new GoogleCloudDocumentaiV1beta2BoundingPoly() {{
+                                            normalizedVertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2NormalizedVertex[]{{
+                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
+                                                    x = 6120.96;
+                                                    y = 2223.21;
+                                                }}),
+                                            }};
+                                            vertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2Vertex[]{{
+                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
+                                                    x = 386489;
+                                                    y = 943749;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
+                                                    x = 902599;
+                                                    y = 681820;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
+                                                    x = 449950;
+                                                    y = 359508;
+                                                }}),
+                                            }};
+                                        }};
+                                        pageNumber = 613064;
+                                    }}),
+                                    add(new GoogleCloudDocumentaiV1beta2TableBoundHint() {{
+                                        boundingBox = new GoogleCloudDocumentaiV1beta2BoundingPoly() {{
+                                            normalizedVertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2NormalizedVertex[]{{
+                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
+                                                    x = 9023.49;
+                                                    y = 6976.31;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
+                                                    x = 992.8;
+                                                    y = 602.25;
+                                                }}),
+                                            }};
+                                            vertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2Vertex[]{{
+                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
+                                                    x = 666767;
+                                                    y = 653140;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
+                                                    x = 670638;
+                                                    y = 170909;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
+                                                    x = 210382;
+                                                    y = 358152;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
+                                                    x = 128926;
+                                                    y = 750686;
+                                                }}),
+                                            }};
+                                        }};
+                                        pageNumber = 315428;
                                     }}),
                                 }};
                             }};
                         }}),
                         add(new GoogleCloudDocumentaiV1beta2ProcessDocumentRequest() {{
                             automlParams = new GoogleCloudDocumentaiV1beta2AutoMlParams() {{
-                                model = "esse";
+                                model = "omnis";
                             }};
-                            documentType = "ipsum";
+                            documentType = "nemo";
                             entityExtractionParams = new GoogleCloudDocumentaiV1beta2EntityExtractionParams() {{
                                 enabled = false;
-                                modelVersion = "excepturi";
+                                modelVersion = "minima";
                             }};
                             formExtractionParams = new GoogleCloudDocumentaiV1beta2FormExtractionParams() {{
                                 enabled = false;
                                 keyValuePairHints = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint[]{{
                                     add(new GoogleCloudDocumentaiV1beta2KeyValuePairHint() {{
-                                        key = "perferendis";
+                                        key = "accusantium";
                                         valueTypes = new String[]{{
-                                            add("natus"),
-                                            add("sed"),
+                                            add("culpa"),
+                                            add("doloribus"),
+                                        }};
+                                    }}),
+                                    add(new GoogleCloudDocumentaiV1beta2KeyValuePairHint() {{
+                                        key = "sapiente";
+                                        valueTypes = new String[]{{
+                                            add("mollitia"),
+                                        }};
+                                    }}),
+                                    add(new GoogleCloudDocumentaiV1beta2KeyValuePairHint() {{
+                                        key = "dolorem";
+                                        valueTypes = new String[]{{
+                                            add("consequuntur"),
+                                            add("repellat"),
+                                            add("mollitia"),
                                         }};
                                     }}),
                                 }};
-                                modelVersion = "iste";
+                                modelVersion = "occaecati";
                             }};
                             inputConfig = new GoogleCloudDocumentaiV1beta2InputConfig() {{
-                                contents = "dolor";
+                                contents = "numquam";
                                 gcsSource = new GoogleCloudDocumentaiV1beta2GcsSource() {{
-                                    uri = "https://hoarse-upper.org";
+                                    uri = "http://kind-ironclad.biz";
                                 }};
-                                mimeType = "fuga";
+                                mimeType = "error";
                             }};
                             ocrParams = new GoogleCloudDocumentaiV1beta2OcrParams() {{
                                 languageHints = new String[]{{
-                                    add("corporis"),
-                                    add("iste"),
+                                    add("quis"),
                                 }};
                             }};
                             outputConfig = new GoogleCloudDocumentaiV1beta2OutputConfig() {{
                                 gcsDestination = new GoogleCloudDocumentaiV1beta2GcsDestination() {{
-                                    uri = "http://unsteady-progress.com";
+                                    uri = "http://quixotic-physics.biz";
                                 }};
-                                pagesPerShard = 60225;
+                                pagesPerShard = 138183;
                             }};
-                            parent = "reiciendis";
+                            parent = "quo";
                             tableExtractionParams = new GoogleCloudDocumentaiV1beta2TableExtractionParams() {{
                                 enabled = false;
                                 headerHints = new String[]{{
-                                    add("mollitia"),
-                                    add("laborum"),
-                                    add("dolores"),
+                                    add("tenetur"),
                                 }};
-                                modelVersion = "dolorem";
+                                modelVersion = "ipsam";
                                 tableBoundHints = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2TableBoundHint[]{{
                                     add(new GoogleCloudDocumentaiV1beta2TableBoundHint() {{
                                         boundingBox = new GoogleCloudDocumentaiV1beta2BoundingPoly() {{
                                             normalizedVertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2NormalizedVertex[]{{
                                                 add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
-                                                    x = 7506.86;
-                                                    y = 3154.28;
+                                                    x = 135.71;
+                                                    y = 971.01;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
+                                                    x = 6228.46;
+                                                    y = 8379.45;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
+                                                    x = 6736.6;
+                                                    y = 960.98;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
+                                                    x = 9719.45;
+                                                    y = 9764.6;
                                                 }}),
                                             }};
                                             vertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2Vertex[]{{
                                                 add(new GoogleCloudDocumentaiV1beta2Vertex() {{
-                                                    x = 363711;
-                                                    y = 325047;
+                                                    x = 468651;
+                                                    y = 509624;
                                                 }}),
                                                 add(new GoogleCloudDocumentaiV1beta2Vertex() {{
-                                                    x = 570197;
-                                                    y = 38425;
+                                                    x = 976762;
+                                                    y = 55714;
                                                 }}),
                                                 add(new GoogleCloudDocumentaiV1beta2Vertex() {{
-                                                    x = 438601;
-                                                    y = 634274;
+                                                    x = 604846;
+                                                    y = 451159;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
+                                                    x = 739264;
+                                                    y = 19987;
                                                 }}),
                                             }};
                                         }};
-                                        pageNumber = 988374;
+                                        pageNumber = 39187;
                                     }}),
                                     add(new GoogleCloudDocumentaiV1beta2TableBoundHint() {{
                                         boundingBox = new GoogleCloudDocumentaiV1beta2BoundingPoly() {{
                                             normalizedVertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2NormalizedVertex[]{{
                                                 add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
-                                                    x = 1020.44;
-                                                    y = 6527.9;
+                                                    x = 2828.07;
+                                                    y = 9795.87;
                                                 }}),
                                                 add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
-                                                    x = 2088.76;
-                                                    y = 6350.59;
-                                                }}),
-                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
-                                                    x = 1613.09;
-                                                    y = 9953;
-                                                }}),
-                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
-                                                    x = 6531.08;
-                                                    y = 5818.5;
+                                                    x = 1201.96;
+                                                    y = 3594.44;
                                                 }}),
                                             }};
                                             vertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2Vertex[]{{
                                                 add(new GoogleCloudDocumentaiV1beta2Vertex() {{
-                                                    x = 414369;
-                                                    y = 466311;
+                                                    x = 480894;
+                                                    y = 118727;
                                                 }}),
                                                 add(new GoogleCloudDocumentaiV1beta2Vertex() {{
-                                                    x = 474697;
-                                                    y = 244425;
+                                                    x = 688661;
+                                                    y = 317983;
                                                 }}),
                                             }};
                                         }};
-                                        pageNumber = 623510;
+                                        pageNumber = 880476;
+                                    }}),
+                                    add(new GoogleCloudDocumentaiV1beta2TableBoundHint() {{
+                                        boundingBox = new GoogleCloudDocumentaiV1beta2BoundingPoly() {{
+                                            normalizedVertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2NormalizedVertex[]{{
+                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
+                                                    x = 9182.36;
+                                                    y = 641.47;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
+                                                    x = 2168.22;
+                                                    y = 6924.72;
+                                                }}),
+                                            }};
+                                            vertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2Vertex[]{{
+                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
+                                                    x = 566602;
+                                                    y = 865103;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
+                                                    x = 265389;
+                                                    y = 508969;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
+                                                    x = 523248;
+                                                    y = 916723;
+                                                }}),
+                                            }};
+                                        }};
+                                        pageNumber = 93940;
                                     }}),
                                 }};
                             }};
                         }}),
                         add(new GoogleCloudDocumentaiV1beta2ProcessDocumentRequest() {{
                             automlParams = new GoogleCloudDocumentaiV1beta2AutoMlParams() {{
-                                model = "quia";
+                                model = "repudiandae";
                             }};
-                            documentType = "quis";
+                            documentType = "sint";
                             entityExtractionParams = new GoogleCloudDocumentaiV1beta2EntityExtractionParams() {{
                                 enabled = false;
-                                modelVersion = "vitae";
+                                modelVersion = "veritatis";
                             }};
                             formExtractionParams = new GoogleCloudDocumentaiV1beta2FormExtractionParams() {{
                                 enabled = false;
                                 keyValuePairHints = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2KeyValuePairHint[]{{
                                     add(new GoogleCloudDocumentaiV1beta2KeyValuePairHint() {{
-                                        key = "animi";
+                                        key = "incidunt";
                                         valueTypes = new String[]{{
-                                            add("odit"),
-                                            add("quo"),
+                                            add("consequatur"),
+                                            add("est"),
                                         }};
                                     }}),
                                     add(new GoogleCloudDocumentaiV1beta2KeyValuePairHint() {{
-                                        key = "sequi";
+                                        key = "quibusdam";
                                         valueTypes = new String[]{{
-                                            add("ipsam"),
-                                            add("id"),
-                                            add("possimus"),
-                                            add("aut"),
+                                            add("deserunt"),
                                         }};
                                     }}),
                                     add(new GoogleCloudDocumentaiV1beta2KeyValuePairHint() {{
-                                        key = "quasi";
+                                        key = "distinctio";
                                         valueTypes = new String[]{{
-                                            add("temporibus"),
-                                            add("laborum"),
-                                            add("quasi"),
+                                            add("labore"),
+                                            add("modi"),
+                                            add("qui"),
+                                            add("aliquid"),
+                                        }};
+                                    }}),
+                                    add(new GoogleCloudDocumentaiV1beta2KeyValuePairHint() {{
+                                        key = "cupiditate";
+                                        valueTypes = new String[]{{
+                                            add("perferendis"),
+                                            add("magni"),
+                                            add("assumenda"),
                                         }};
                                     }}),
                                 }};
-                                modelVersion = "reiciendis";
+                                modelVersion = "ipsam";
                             }};
                             inputConfig = new GoogleCloudDocumentaiV1beta2InputConfig() {{
-                                contents = "voluptatibus";
+                                contents = "alias";
                                 gcsSource = new GoogleCloudDocumentaiV1beta2GcsSource() {{
-                                    uri = "https://klutzy-level.org";
+                                    uri = "http://rapid-moat.biz";
                                 }};
-                                mimeType = "ipsa";
+                                mimeType = "facilis";
                             }};
                             ocrParams = new GoogleCloudDocumentaiV1beta2OcrParams() {{
                                 languageHints = new String[]{{
-                                    add("voluptate"),
-                                    add("cum"),
-                                    add("perferendis"),
+                                    add("labore"),
+                                    add("delectus"),
+                                    add("eum"),
                                 }};
                             }};
                             outputConfig = new GoogleCloudDocumentaiV1beta2OutputConfig() {{
                                 gcsDestination = new GoogleCloudDocumentaiV1beta2GcsDestination() {{
-                                    uri = "http://insubstantial-dramaturge.org";
+                                    uri = "http://simplistic-mop.info";
                                 }};
-                                pagesPerShard = 120196;
+                                pagesPerShard = 592042;
                             }};
-                            parent = "corporis";
+                            parent = "necessitatibus";
                             tableExtractionParams = new GoogleCloudDocumentaiV1beta2TableExtractionParams() {{
                                 enabled = false;
                                 headerHints = new String[]{{
-                                    add("iusto"),
-                                    add("dicta"),
+                                    add("officia"),
+                                    add("dolor"),
+                                    add("debitis"),
                                 }};
-                                modelVersion = "harum";
+                                modelVersion = "a";
                                 tableBoundHints = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2TableBoundHint[]{{
                                     add(new GoogleCloudDocumentaiV1beta2TableBoundHint() {{
                                         boundingBox = new GoogleCloudDocumentaiV1beta2BoundingPoly() {{
                                             normalizedVertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2NormalizedVertex[]{{
                                                 add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
-                                                    x = 4142.63;
-                                                    y = 9182.36;
+                                                    x = 4491.98;
+                                                    y = 8464.09;
                                                 }}),
                                                 add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
-                                                    x = 641.47;
-                                                    y = 2168.22;
-                                                }}),
-                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
-                                                    x = 6924.72;
-                                                    y = 5651.89;
-                                                }}),
-                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
-                                                    x = 5666.02;
-                                                    y = 8651.03;
+                                                    x = 9785.71;
+                                                    y = 6994.79;
                                                 }}),
                                             }};
                                             vertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2Vertex[]{{
                                                 add(new GoogleCloudDocumentaiV1beta2Vertex() {{
-                                                    x = 508969;
-                                                    y = 523248;
-                                                }}),
-                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
-                                                    x = 916723;
-                                                    y = 93940;
+                                                    x = 297437;
+                                                    y = 767024;
                                                 }}),
                                             }};
                                         }};
-                                        pageNumber = 921158;
+                                        pageNumber = 813798;
                                     }}),
                                     add(new GoogleCloudDocumentaiV1beta2TableBoundHint() {{
                                         boundingBox = new GoogleCloudDocumentaiV1beta2BoundingPoly() {{
                                             normalizedVertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2NormalizedVertex[]{{
                                                 add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
-                                                    x = 831.12;
-                                                    y = 9292.97;
+                                                    x = 3965.06;
+                                                    y = 6754.39;
                                                 }}),
                                                 add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
-                                                    x = 2777.18;
-                                                    y = 3185.69;
-                                                }}),
-                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
-                                                    x = 93.56;
-                                                    y = 6674.11;
+                                                    x = 8811.04;
+                                                    y = 2497.96;
                                                 }}),
                                             }};
                                             vertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2Vertex[]{{
                                                 add(new GoogleCloudDocumentaiV1beta2Vertex() {{
-                                                    x = 131797;
-                                                    y = 647174;
+                                                    x = 313218;
+                                                    y = 881736;
                                                 }}),
                                                 add(new GoogleCloudDocumentaiV1beta2Vertex() {{
-                                                    x = 716327;
-                                                    y = 841386;
+                                                    x = 965417;
+                                                    y = 692532;
                                                 }}),
                                                 add(new GoogleCloudDocumentaiV1beta2Vertex() {{
-                                                    x = 289406;
-                                                    y = 264730;
-                                                }}),
-                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
-                                                    x = 183191;
-                                                    y = 397821;
+                                                    x = 588465;
+                                                    y = 725255;
                                                 }}),
                                             }};
                                         }};
-                                        pageNumber = 586513;
+                                        pageNumber = 659669;
+                                    }}),
+                                    add(new GoogleCloudDocumentaiV1beta2TableBoundHint() {{
+                                        boundingBox = new GoogleCloudDocumentaiV1beta2BoundingPoly() {{
+                                            normalizedVertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2NormalizedVertex[]{{
+                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
+                                                    x = 5332.06;
+                                                    y = 9560.84;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
+                                                    x = 2305.33;
+                                                    y = 6439.9;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2NormalizedVertex() {{
+                                                    x = 3948.69;
+                                                    y = 4238.55;
+                                                }}),
+                                            }};
+                                            vertices = new org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1beta2Vertex[]{{
+                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
+                                                    x = 606393;
+                                                    y = 474867;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
+                                                    x = 19193;
+                                                    y = 470132;
+                                                }}),
+                                                add(new GoogleCloudDocumentaiV1beta2Vertex() {{
+                                                    x = 301575;
+                                                    y = 716075;
+                                                }}),
+                                            }};
+                                        }};
+                                        pageNumber = 660174;
                                     }}),
                                 }};
                             }};
                         }}),
                     }};
-                }};
-                accessToken = "quos";
-                alt = "json";
-                callback = "magni";
-                fields = "assumenda";
-                key = "ipsam";
-                oauthToken = "alias";
-                parent = "fugit";
+                }};;
+                accessToken = "labore";
+                alt = AltEnum.JSON;
+                callback = "suscipit";
+                fields = "natus";
+                key = "nobis";
+                oauthToken = "eum";
                 prettyPrint = false;
-                quotaUser = "dolorum";
-                uploadType = "excepturi";
-                uploadProtocol = "tempora";
-            }}            
+                quotaUser = "vero";
+                uploadType = "aspernatur";
+                uploadProtocol = "architecto";
+            }};            
 
-            DocumentaiProjectsLocationsDocumentsBatchProcessResponse res = sdk.projects.documentaiProjectsLocationsDocumentsBatchProcess(req, new DocumentaiProjectsLocationsDocumentsBatchProcessSecurity() {{
+            DocumentaiProjectsLocationsDocumentsBatchProcessResponse res = sdk.projects.documentaiProjectsLocationsDocumentsBatchProcess(req, new DocumentaiProjectsLocationsDocumentsBatchProcessSecurity("magnam", "et") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleLongrunningOperation.isPresent()) {
+            if (res.googleLongrunningOperation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

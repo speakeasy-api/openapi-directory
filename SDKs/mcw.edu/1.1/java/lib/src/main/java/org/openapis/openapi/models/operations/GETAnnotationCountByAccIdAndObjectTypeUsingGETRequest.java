@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId")
     public String accId;
+
     public GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest withAccId(String accId) {
         this.accId = accId;
         return this;
@@ -22,6 +24,7 @@ public class GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=includeChildren")
     public Boolean includeChildren;
+
     public GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest withIncludeChildren(Boolean includeChildren) {
         this.includeChildren = includeChildren;
         return this;
@@ -32,6 +35,7 @@ public class GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectType")
     public Integer objectType;
+
     public GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest withObjectType(Integer objectType) {
         this.objectType = objectType;
         return this;
@@ -42,9 +46,16 @@ public class GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
     public Integer speciesTypeKey;
+
     public GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
         this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     
+    public GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest(@JsonProperty("accId") String accId, @JsonProperty("includeChildren") Boolean includeChildren, @JsonProperty("objectType") Integer objectType, @JsonProperty("speciesTypeKey") Integer speciesTypeKey) {
+        this.accId = accId;
+        this.includeChildren = includeChildren;
+        this.objectType = objectType;
+        this.speciesTypeKey = speciesTypeKey;
+  }
 }

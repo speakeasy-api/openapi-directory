@@ -15,6 +15,7 @@ public class LocerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public LocerRequestBodyCertificateParameters certificateParameters;
+
     public LocerRequestBody withCertificateParameters(LocerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class LocerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public LocerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class LocerRequestBody {
      */
     @JsonProperty("format")
     public LocerRequestBodyFormatEnum format;
+
     public LocerRequestBody withFormat(LocerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class LocerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public LocerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public LocerRequestBody(@JsonProperty("format") LocerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

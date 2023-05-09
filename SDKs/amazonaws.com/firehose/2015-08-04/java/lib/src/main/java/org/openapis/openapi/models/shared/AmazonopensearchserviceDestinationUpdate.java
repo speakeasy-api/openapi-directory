@@ -15,6 +15,7 @@ public class AmazonopensearchserviceDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BufferingHints")
     public AmazonopensearchserviceBufferingHints bufferingHints;
+
     public AmazonopensearchserviceDestinationUpdate withBufferingHints(AmazonopensearchserviceBufferingHints bufferingHints) {
         this.bufferingHints = bufferingHints;
         return this;
@@ -26,6 +27,7 @@ public class AmazonopensearchserviceDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptions")
     public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+
     public AmazonopensearchserviceDestinationUpdate withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         return this;
@@ -34,6 +36,7 @@ public class AmazonopensearchserviceDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterEndpoint")
     public String clusterEndpoint;
+
     public AmazonopensearchserviceDestinationUpdate withClusterEndpoint(String clusterEndpoint) {
         this.clusterEndpoint = clusterEndpoint;
         return this;
@@ -42,6 +45,7 @@ public class AmazonopensearchserviceDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainARN")
     public String domainARN;
+
     public AmazonopensearchserviceDestinationUpdate withDomainARN(String domainARN) {
         this.domainARN = domainARN;
         return this;
@@ -50,6 +54,7 @@ public class AmazonopensearchserviceDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public AmazonopensearchserviceDestinationUpdate withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -58,6 +63,7 @@ public class AmazonopensearchserviceDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexRotationPeriod")
     public AmazonopensearchserviceIndexRotationPeriodEnum indexRotationPeriod;
+
     public AmazonopensearchserviceDestinationUpdate withIndexRotationPeriod(AmazonopensearchserviceIndexRotationPeriodEnum indexRotationPeriod) {
         this.indexRotationPeriod = indexRotationPeriod;
         return this;
@@ -69,6 +75,7 @@ public class AmazonopensearchserviceDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingConfiguration")
     public ProcessingConfiguration processingConfiguration;
+
     public AmazonopensearchserviceDestinationUpdate withProcessingConfiguration(ProcessingConfiguration processingConfiguration) {
         this.processingConfiguration = processingConfiguration;
         return this;
@@ -77,6 +84,7 @@ public class AmazonopensearchserviceDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryOptions")
     public AmazonopensearchserviceRetryOptions retryOptions;
+
     public AmazonopensearchserviceDestinationUpdate withRetryOptions(AmazonopensearchserviceRetryOptions retryOptions) {
         this.retryOptions = retryOptions;
         return this;
@@ -85,6 +93,7 @@ public class AmazonopensearchserviceDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public AmazonopensearchserviceDestinationUpdate withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -96,6 +105,7 @@ public class AmazonopensearchserviceDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Update")
     public S3DestinationUpdate s3Update;
+
     public AmazonopensearchserviceDestinationUpdate withS3Update(S3DestinationUpdate s3Update) {
         this.s3Update = s3Update;
         return this;
@@ -104,9 +114,11 @@ public class AmazonopensearchserviceDestinationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeName")
     public String typeName;
+
     public AmazonopensearchserviceDestinationUpdate withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public AmazonopensearchserviceDestinationUpdate(){}
 }

@@ -15,9 +15,11 @@ public class StartBuildOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build")
     public Build build;
+
     public StartBuildOutput withBuild(Build build) {
         this.build = build;
         return this;
     }
     
+    public StartBuildOutput(){}
 }

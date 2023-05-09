@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDomainContactPrivacyResponse {
     
     public String contentType;
+
     public UpdateDomainContactPrivacyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDomainContactPrivacyResponse {
      */
     
     public Object duplicateRequest;
+
     public UpdateDomainContactPrivacyResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDomainContactPrivacyResponse {
      */
     
     public Object invalidInput;
+
     public UpdateDomainContactPrivacyResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDomainContactPrivacyResponse {
      */
     
     public Object operationLimitExceeded;
+
     public UpdateDomainContactPrivacyResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDomainContactPrivacyResponse {
     
     
     public Integer statusCode;
+
     public UpdateDomainContactPrivacyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDomainContactPrivacyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDomainContactPrivacyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDomainContactPrivacyResponse {
      */
     
     public Object tldRulesViolation;
+
     public UpdateDomainContactPrivacyResponse withTLDRulesViolation(Object tldRulesViolation) {
         this.tldRulesViolation = tldRulesViolation;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDomainContactPrivacyResponse {
      */
     
     public Object unsupportedTLD;
+
     public UpdateDomainContactPrivacyResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDomainContactPrivacyResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDomainContactPrivacyResponse updateDomainContactPrivacyResponse;
+
     public UpdateDomainContactPrivacyResponse withUpdateDomainContactPrivacyResponse(org.openapis.openapi.models.shared.UpdateDomainContactPrivacyResponse updateDomainContactPrivacyResponse) {
         this.updateDomainContactPrivacyResponse = updateDomainContactPrivacyResponse;
         return this;
     }
     
+    public UpdateDomainContactPrivacyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAllelesForTaxonUsingGETRequest {
@@ -12,9 +13,13 @@ public class GETAllelesForTaxonUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxonId")
     public String taxonId;
+
     public GETAllelesForTaxonUsingGETRequest withTaxonId(String taxonId) {
         this.taxonId = taxonId;
         return this;
     }
     
+    public GETAllelesForTaxonUsingGETRequest(@JsonProperty("taxonId") String taxonId) {
+        this.taxonId = taxonId;
+  }
 }

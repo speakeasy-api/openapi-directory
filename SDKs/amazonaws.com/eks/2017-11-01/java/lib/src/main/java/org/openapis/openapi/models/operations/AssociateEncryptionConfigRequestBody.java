@@ -15,6 +15,7 @@ public class AssociateEncryptionConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public AssociateEncryptionConfigRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,9 +26,13 @@ public class AssociateEncryptionConfigRequestBody {
      */
     @JsonProperty("encryptionConfig")
     public org.openapis.openapi.models.shared.EncryptionConfig[] encryptionConfig;
+
     public AssociateEncryptionConfigRequestBody withEncryptionConfig(org.openapis.openapi.models.shared.EncryptionConfig[] encryptionConfig) {
         this.encryptionConfig = encryptionConfig;
         return this;
     }
     
+    public AssociateEncryptionConfigRequestBody(@JsonProperty("encryptionConfig") org.openapis.openapi.models.shared.EncryptionConfig[] encryptionConfig) {
+        this.encryptionConfig = encryptionConfig;
+  }
 }

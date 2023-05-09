@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRatePlansForHotelRequest {
@@ -12,6 +13,7 @@ public class ListRatePlansForHotelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public String end;
+
     public ListRatePlansForHotelRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -22,6 +24,7 @@ public class ListRatePlansForHotelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hotelId")
     public String hotelId;
+
     public ListRatePlansForHotelRequest withHotelId(String hotelId) {
         this.hotelId = hotelId;
         return this;
@@ -32,6 +35,7 @@ public class ListRatePlansForHotelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Double offset;
+
     public ListRatePlansForHotelRequest withOffset(Double offset) {
         this.offset = offset;
         return this;
@@ -42,6 +46,7 @@ public class ListRatePlansForHotelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roomId")
     public String roomId;
+
     public ListRatePlansForHotelRequest withRoomId(String roomId) {
         this.roomId = roomId;
         return this;
@@ -52,6 +57,7 @@ public class ListRatePlansForHotelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Double size;
+
     public ListRatePlansForHotelRequest withSize(Double size) {
         this.size = size;
         return this;
@@ -62,6 +68,7 @@ public class ListRatePlansForHotelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public ListRatePlansForHotelRequest withStart(String start) {
         this.start = start;
         return this;
@@ -72,9 +79,13 @@ public class ListRatePlansForHotelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=updatedAt")
     public java.util.Map<String, Object> updatedAt;
+
     public ListRatePlansForHotelRequest withUpdatedAt(java.util.Map<String, Object> updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ListRatePlansForHotelRequest(@JsonProperty("hotelId") String hotelId) {
+        this.hotelId = hotelId;
+  }
 }

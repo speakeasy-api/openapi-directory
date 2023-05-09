@@ -15,6 +15,7 @@ public class DatasetTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagKey")
     public String tagKey;
+
     public DatasetTags withTagKey(String tagKey) {
         this.tagKey = tagKey;
         return this;
@@ -26,9 +27,11 @@ public class DatasetTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagValue")
     public String tagValue;
+
     public DatasetTags withTagValue(String tagValue) {
         this.tagValue = tagValue;
         return this;
     }
     
+    public DatasetTags(){}
 }

@@ -338,4 +338,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateReportGroupInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWebhookOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWebhookInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

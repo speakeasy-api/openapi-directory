@@ -81,4 +81,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDatapipelinesV1S
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDatapipelinesV1SDKVersion.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDatapipelinesV1ListPipelinesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDatapipelinesV1RunPipelineResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

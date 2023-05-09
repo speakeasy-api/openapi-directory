@@ -232,4 +232,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateAppResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateAppRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateReplicationJobRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

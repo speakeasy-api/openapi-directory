@@ -59,11 +59,9 @@ public class FutureReservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeFutureReservationsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeFutureReservationsAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeFutureReservationsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeFutureReservationsAggregatedListResponse(contentType, httpRes.statusCode()) {{
             futureReservationsAggregatedListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class FutureReservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeFutureReservationsCancelResponse res = new org.openapis.openapi.models.operations.ComputeFutureReservationsCancelResponse() {{
+        org.openapis.openapi.models.operations.ComputeFutureReservationsCancelResponse res = new org.openapis.openapi.models.operations.ComputeFutureReservationsCancelResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class FutureReservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeFutureReservationsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeFutureReservationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeFutureReservationsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeFutureReservationsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class FutureReservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeFutureReservationsGetResponse res = new org.openapis.openapi.models.operations.ComputeFutureReservationsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeFutureReservationsGetResponse res = new org.openapis.openapi.models.operations.ComputeFutureReservationsGetResponse(contentType, httpRes.statusCode()) {{
             futureReservation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class FutureReservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeFutureReservationsInsertResponse res = new org.openapis.openapi.models.operations.ComputeFutureReservationsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeFutureReservationsInsertResponse res = new org.openapis.openapi.models.operations.ComputeFutureReservationsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class FutureReservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeFutureReservationsListResponse res = new org.openapis.openapi.models.operations.ComputeFutureReservationsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeFutureReservationsListResponse res = new org.openapis.openapi.models.operations.ComputeFutureReservationsListResponse(contentType, httpRes.statusCode()) {{
             futureReservationsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class FutureReservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeFutureReservationsUpdateResponse res = new org.openapis.openapi.models.operations.ComputeFutureReservationsUpdateResponse() {{
+        org.openapis.openapi.models.operations.ComputeFutureReservationsUpdateResponse res = new org.openapis.openapi.models.operations.ComputeFutureReservationsUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

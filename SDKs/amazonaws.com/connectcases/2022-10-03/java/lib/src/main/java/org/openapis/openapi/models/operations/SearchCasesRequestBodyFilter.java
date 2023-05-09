@@ -15,6 +15,7 @@ public class SearchCasesRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("andAll")
     public org.openapis.openapi.models.shared.CaseFilter[] andAll;
+
     public SearchCasesRequestBodyFilter withAndAll(org.openapis.openapi.models.shared.CaseFilter[] andAll) {
         this.andAll = andAll;
         return this;
@@ -23,6 +24,7 @@ public class SearchCasesRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public org.openapis.openapi.models.shared.FieldFilter field;
+
     public SearchCasesRequestBodyFilter withField(org.openapis.openapi.models.shared.FieldFilter field) {
         this.field = field;
         return this;
@@ -34,9 +36,11 @@ public class SearchCasesRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("not")
     public org.openapis.openapi.models.shared.CaseFilter not;
+
     public SearchCasesRequestBodyFilter withNot(org.openapis.openapi.models.shared.CaseFilter not) {
         this.not = not;
         return this;
     }
     
+    public SearchCasesRequestBodyFilter(){}
 }

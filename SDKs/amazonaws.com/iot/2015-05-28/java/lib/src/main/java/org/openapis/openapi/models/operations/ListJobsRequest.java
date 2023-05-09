@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ListJobsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListJobsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +17,7 @@ public class ListJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListJobsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +25,7 @@ public class ListJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListJobsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +33,7 @@ public class ListJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListJobsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +41,7 @@ public class ListJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListJobsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +49,7 @@ public class ListJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListJobsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +57,7 @@ public class ListJobsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListJobsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +68,7 @@ public class ListJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -71,6 +79,7 @@ public class ListJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=namespaceId")
     public String namespaceId;
+
     public ListJobsRequest withNamespaceId(String namespaceId) {
         this.namespaceId = namespaceId;
         return this;
@@ -81,6 +90,7 @@ public class ListJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -91,6 +101,7 @@ public class ListJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public ListJobsStatusEnum status;
+
     public ListJobsRequest withStatus(ListJobsStatusEnum status) {
         this.status = status;
         return this;
@@ -101,6 +112,7 @@ public class ListJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=targetSelection")
     public ListJobsTargetSelectionEnum targetSelection;
+
     public ListJobsRequest withTargetSelection(ListJobsTargetSelectionEnum targetSelection) {
         this.targetSelection = targetSelection;
         return this;
@@ -111,6 +123,7 @@ public class ListJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thingGroupId")
     public String thingGroupId;
+
     public ListJobsRequest withThingGroupId(String thingGroupId) {
         this.thingGroupId = thingGroupId;
         return this;
@@ -121,9 +134,11 @@ public class ListJobsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thingGroupName")
     public String thingGroupName;
+
     public ListJobsRequest withThingGroupName(String thingGroupName) {
         this.thingGroupName = thingGroupName;
         return this;
     }
     
+    public ListJobsRequest(){}
 }

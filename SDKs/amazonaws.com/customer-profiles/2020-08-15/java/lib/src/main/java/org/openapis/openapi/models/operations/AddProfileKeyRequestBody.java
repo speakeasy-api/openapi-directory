@@ -12,6 +12,7 @@ public class AddProfileKeyRequestBody {
      */
     @JsonProperty("KeyName")
     public String keyName;
+
     public AddProfileKeyRequestBody withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -22,6 +23,7 @@ public class AddProfileKeyRequestBody {
      */
     @JsonProperty("ProfileId")
     public String profileId;
+
     public AddProfileKeyRequestBody withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -32,9 +34,15 @@ public class AddProfileKeyRequestBody {
      */
     @JsonProperty("Values")
     public String[] values;
+
     public AddProfileKeyRequestBody withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public AddProfileKeyRequestBody(@JsonProperty("KeyName") String keyName, @JsonProperty("ProfileId") String profileId, @JsonProperty("Values") String[] values) {
+        this.keyName = keyName;
+        this.profileId = profileId;
+        this.values = values;
+  }
 }

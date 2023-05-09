@@ -15,6 +15,7 @@ public class S3Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionName")
     public String connectionName;
+
     public S3Target withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -23,6 +24,7 @@ public class S3Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DlqEventQueueArn")
     public String dlqEventQueueArn;
+
     public S3Target withDlqEventQueueArn(String dlqEventQueueArn) {
         this.dlqEventQueueArn = dlqEventQueueArn;
         return this;
@@ -31,6 +33,7 @@ public class S3Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventQueueArn")
     public String eventQueueArn;
+
     public S3Target withEventQueueArn(String eventQueueArn) {
         this.eventQueueArn = eventQueueArn;
         return this;
@@ -39,6 +42,7 @@ public class S3Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Exclusions")
     public String[] exclusions;
+
     public S3Target withExclusions(String[] exclusions) {
         this.exclusions = exclusions;
         return this;
@@ -47,6 +51,7 @@ public class S3Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public S3Target withPath(String path) {
         this.path = path;
         return this;
@@ -55,9 +60,11 @@ public class S3Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SampleSize")
     public Long sampleSize;
+
     public S3Target withSampleSize(Long sampleSize) {
         this.sampleSize = sampleSize;
         return this;
     }
     
+    public S3Target(){}
 }

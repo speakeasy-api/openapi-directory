@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class PolicyDescriptorType {
     
     public String arn;
+
     public PolicyDescriptorType withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public PolicyDescriptorType(){}
 }

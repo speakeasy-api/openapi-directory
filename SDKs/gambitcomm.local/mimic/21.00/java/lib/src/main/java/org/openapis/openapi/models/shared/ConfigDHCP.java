@@ -15,6 +15,7 @@ public class ConfigDHCP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("add_options")
     public String addOptions;
+
     public ConfigDHCP withAddOptions(String addOptions) {
         this.addOptions = addOptions;
         return this;
@@ -23,6 +24,7 @@ public class ConfigDHCP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classid")
     public String classid;
+
     public ConfigDHCP withClassid(String classid) {
         this.classid = classid;
         return this;
@@ -31,6 +33,7 @@ public class ConfigDHCP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hwaddr")
     public String hwaddr;
+
     public ConfigDHCP withHwaddr(String hwaddr) {
         this.hwaddr = hwaddr;
         return this;
@@ -39,9 +42,11 @@ public class ConfigDHCP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public ConfigDHCP withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public ConfigDHCP(){}
 }

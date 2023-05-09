@@ -15,9 +15,11 @@ public class Subsetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public SubsettingPolicyEnum policy;
+
     public Subsetting withPolicy(SubsettingPolicyEnum policy) {
         this.policy = policy;
         return this;
     }
     
+    public Subsetting(){}
 }

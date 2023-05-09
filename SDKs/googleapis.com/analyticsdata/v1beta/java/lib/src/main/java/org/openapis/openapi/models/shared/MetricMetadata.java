@@ -18,6 +18,7 @@ public class MetricMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiName")
     public String apiName;
+
     public MetricMetadata withApiName(String apiName) {
         this.apiName = apiName;
         return this;
@@ -29,6 +30,7 @@ public class MetricMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockedReasons")
     public MetricMetadataBlockedReasonsEnum[] blockedReasons;
+
     public MetricMetadata withBlockedReasons(MetricMetadataBlockedReasonsEnum[] blockedReasons) {
         this.blockedReasons = blockedReasons;
         return this;
@@ -40,6 +42,7 @@ public class MetricMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public MetricMetadata withCategory(String category) {
         this.category = category;
         return this;
@@ -51,6 +54,7 @@ public class MetricMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDefinition")
     public Boolean customDefinition;
+
     public MetricMetadata withCustomDefinition(Boolean customDefinition) {
         this.customDefinition = customDefinition;
         return this;
@@ -62,6 +66,7 @@ public class MetricMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecatedApiNames")
     public String[] deprecatedApiNames;
+
     public MetricMetadata withDeprecatedApiNames(String[] deprecatedApiNames) {
         this.deprecatedApiNames = deprecatedApiNames;
         return this;
@@ -73,6 +78,7 @@ public class MetricMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MetricMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -84,6 +90,7 @@ public class MetricMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public MetricMetadata withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -95,6 +102,7 @@ public class MetricMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public MetricMetadataTypeEnum type;
+
     public MetricMetadata withType(MetricMetadataTypeEnum type) {
         this.type = type;
         return this;
@@ -106,9 +114,11 @@ public class MetricMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uiName")
     public String uiName;
+
     public MetricMetadata withUiName(String uiName) {
         this.uiName = uiName;
         return this;
     }
     
+    public MetricMetadata(){}
 }

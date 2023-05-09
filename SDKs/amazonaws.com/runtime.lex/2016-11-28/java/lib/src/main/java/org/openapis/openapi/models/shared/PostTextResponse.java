@@ -15,6 +15,7 @@ public class PostTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeContexts")
     public ActiveContext[] activeContexts;
+
     public PostTextResponse withActiveContexts(ActiveContext[] activeContexts) {
         this.activeContexts = activeContexts;
         return this;
@@ -23,6 +24,7 @@ public class PostTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternativeIntents")
     public PredictedIntent[] alternativeIntents;
+
     public PostTextResponse withAlternativeIntents(PredictedIntent[] alternativeIntents) {
         this.alternativeIntents = alternativeIntents;
         return this;
@@ -31,6 +33,7 @@ public class PostTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public PostTextResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -39,6 +42,7 @@ public class PostTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialogState")
     public DialogStateEnum dialogState;
+
     public PostTextResponse withDialogState(DialogStateEnum dialogState) {
         this.dialogState = dialogState;
         return this;
@@ -47,6 +51,7 @@ public class PostTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentName")
     public String intentName;
+
     public PostTextResponse withIntentName(String intentName) {
         this.intentName = intentName;
         return this;
@@ -55,6 +60,7 @@ public class PostTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PostTextResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -63,6 +69,7 @@ public class PostTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageFormat")
     public MessageFormatTypeEnum messageFormat;
+
     public PostTextResponse withMessageFormat(MessageFormatTypeEnum messageFormat) {
         this.messageFormat = messageFormat;
         return this;
@@ -71,6 +78,7 @@ public class PostTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nluIntentConfidence")
     public IntentConfidence nluIntentConfidence;
+
     public PostTextResponse withNluIntentConfidence(IntentConfidence nluIntentConfidence) {
         this.nluIntentConfidence = nluIntentConfidence;
         return this;
@@ -79,6 +87,7 @@ public class PostTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseCard")
     public ResponseCard responseCard;
+
     public PostTextResponse withResponseCard(ResponseCard responseCard) {
         this.responseCard = responseCard;
         return this;
@@ -87,6 +96,7 @@ public class PostTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentimentResponse")
     public SentimentResponse sentimentResponse;
+
     public PostTextResponse withSentimentResponse(SentimentResponse sentimentResponse) {
         this.sentimentResponse = sentimentResponse;
         return this;
@@ -95,6 +105,7 @@ public class PostTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionAttributes")
     public java.util.Map<String, String> sessionAttributes;
+
     public PostTextResponse withSessionAttributes(java.util.Map<String, String> sessionAttributes) {
         this.sessionAttributes = sessionAttributes;
         return this;
@@ -103,6 +114,7 @@ public class PostTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionId")
     public String sessionId;
+
     public PostTextResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -111,6 +123,7 @@ public class PostTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotToElicit")
     public String slotToElicit;
+
     public PostTextResponse withSlotToElicit(String slotToElicit) {
         this.slotToElicit = slotToElicit;
         return this;
@@ -119,9 +132,11 @@ public class PostTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slots")
     public java.util.Map<String, String> slots;
+
     public PostTextResponse withSlots(java.util.Map<String, String> slots) {
         this.slots = slots;
         return this;
     }
     
+    public PostTextResponse(){}
 }

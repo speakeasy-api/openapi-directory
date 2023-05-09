@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateIntentResponse {
@@ -12,6 +13,7 @@ public class CreateIntentResponse {
      */
     
     public Object conflictException;
+
     public CreateIntentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateIntentResponse {
     
     
     public String contentType;
+
     public CreateIntentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateIntentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateIntentResponse createIntentResponse;
+
     public CreateIntentResponse withCreateIntentResponse(org.openapis.openapi.models.shared.CreateIntentResponse createIntentResponse) {
         this.createIntentResponse = createIntentResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateIntentResponse {
      */
     
     public Object internalServerException;
+
     public CreateIntentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateIntentResponse {
      */
     
     public Object preconditionFailedException;
+
     public CreateIntentResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -59,6 +65,7 @@ public class CreateIntentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateIntentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateIntentResponse {
     
     
     public Integer statusCode;
+
     public CreateIntentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateIntentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateIntentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateIntentResponse {
      */
     
     public Object throttlingException;
+
     public CreateIntentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateIntentResponse {
      */
     
     public Object validationException;
+
     public CreateIntentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateIntentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

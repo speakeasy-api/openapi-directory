@@ -15,6 +15,7 @@ public class LicenseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("days_until_expiration")
     public Long daysUntilExpiration;
+
     public LicenseInfo withDaysUntilExpiration(Long daysUntilExpiration) {
         this.daysUntilExpiration = daysUntilExpiration;
         return this;
@@ -23,6 +24,7 @@ public class LicenseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expire_at")
     public String expireAt;
+
     public LicenseInfo withExpireAt(String expireAt) {
         this.expireAt = expireAt;
         return this;
@@ -31,6 +33,7 @@ public class LicenseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LicenseInfo withKind(String kind) {
         this.kind = kind;
         return this;
@@ -39,6 +42,7 @@ public class LicenseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seats")
     public Object seats;
+
     public LicenseInfo withSeats(Object seats) {
         this.seats = seats;
         return this;
@@ -47,6 +51,7 @@ public class LicenseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seats_available")
     public Object seatsAvailable;
+
     public LicenseInfo withSeatsAvailable(Object seatsAvailable) {
         this.seatsAvailable = seatsAvailable;
         return this;
@@ -55,9 +60,11 @@ public class LicenseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seats_used")
     public Long seatsUsed;
+
     public LicenseInfo withSeatsUsed(Long seatsUsed) {
         this.seatsUsed = seatsUsed;
         return this;
     }
     
+    public LicenseInfo(){}
 }

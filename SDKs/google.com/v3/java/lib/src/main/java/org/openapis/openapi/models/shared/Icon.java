@@ -18,6 +18,7 @@ public class Icon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disapprovalReasons")
     public IconDisapprovalReasonsEnum[] disapprovalReasons;
+
     public Icon withDisapprovalReasons(IconDisapprovalReasonsEnum[] disapprovalReasons) {
         this.disapprovalReasons = disapprovalReasons;
         return this;
@@ -29,6 +30,7 @@ public class Icon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconUri")
     public String iconUri;
+
     public Icon withIconUri(String iconUri) {
         this.iconUri = iconUri;
         return this;
@@ -40,6 +42,7 @@ public class Icon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageData")
     public String imageData;
+
     public Icon withImageData(String imageData) {
         this.imageData = imageData;
         return this;
@@ -51,6 +54,7 @@ public class Icon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Icon withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class Icon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public Icon withReference(String reference) {
         this.reference = reference;
         return this;
@@ -73,9 +78,11 @@ public class Icon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public IconStateEnum state;
+
     public Icon withState(IconStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Icon(){}
 }

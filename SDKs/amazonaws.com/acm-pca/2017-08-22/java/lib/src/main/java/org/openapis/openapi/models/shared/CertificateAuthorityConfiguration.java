@@ -15,6 +15,7 @@ public class CertificateAuthorityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CsrExtensions")
     public CsrExtensions csrExtensions;
+
     public CertificateAuthorityConfiguration withCsrExtensions(CsrExtensions csrExtensions) {
         this.csrExtensions = csrExtensions;
         return this;
@@ -22,6 +23,7 @@ public class CertificateAuthorityConfiguration {
     
     @JsonProperty("KeyAlgorithm")
     public KeyAlgorithmEnum keyAlgorithm;
+
     public CertificateAuthorityConfiguration withKeyAlgorithm(KeyAlgorithmEnum keyAlgorithm) {
         this.keyAlgorithm = keyAlgorithm;
         return this;
@@ -29,6 +31,7 @@ public class CertificateAuthorityConfiguration {
     
     @JsonProperty("SigningAlgorithm")
     public SigningAlgorithmEnum signingAlgorithm;
+
     public CertificateAuthorityConfiguration withSigningAlgorithm(SigningAlgorithmEnum signingAlgorithm) {
         this.signingAlgorithm = signingAlgorithm;
         return this;
@@ -36,9 +39,15 @@ public class CertificateAuthorityConfiguration {
     
     @JsonProperty("Subject")
     public Asn1Subject subject;
+
     public CertificateAuthorityConfiguration withSubject(Asn1Subject subject) {
         this.subject = subject;
         return this;
     }
     
+    public CertificateAuthorityConfiguration(@JsonProperty("KeyAlgorithm") KeyAlgorithmEnum keyAlgorithm, @JsonProperty("SigningAlgorithm") SigningAlgorithmEnum signingAlgorithm, @JsonProperty("Subject") Asn1Subject subject) {
+        this.keyAlgorithm = keyAlgorithm;
+        this.signingAlgorithm = signingAlgorithm;
+        this.subject = subject;
+  }
 }

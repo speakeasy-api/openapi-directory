@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AllocateIpamPoolCidrResult {
     
     public AllocateIpamPoolCidrResultIpamPoolAllocation ipamPoolAllocation;
+
     public AllocateIpamPoolCidrResult withIpamPoolAllocation(AllocateIpamPoolCidrResultIpamPoolAllocation ipamPoolAllocation) {
         this.ipamPoolAllocation = ipamPoolAllocation;
         return this;
     }
     
+    public AllocateIpamPoolCidrResult(){}
 }

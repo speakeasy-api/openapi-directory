@@ -12,6 +12,7 @@ public class CreateClassificationResponseSelectedExamples {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public Long document;
+
     public CreateClassificationResponseSelectedExamples withDocument(Long document) {
         this.document = document;
         return this;
@@ -20,6 +21,7 @@ public class CreateClassificationResponseSelectedExamples {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CreateClassificationResponseSelectedExamples withLabel(String label) {
         this.label = label;
         return this;
@@ -28,9 +30,11 @@ public class CreateClassificationResponseSelectedExamples {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public CreateClassificationResponseSelectedExamples withText(String text) {
         this.text = text;
         return this;
     }
     
+    public CreateClassificationResponseSelectedExamples(){}
 }

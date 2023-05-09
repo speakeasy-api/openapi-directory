@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppengineAppsDomainMappingsPatchRequest {
@@ -12,6 +13,7 @@ public class AppengineAppsDomainMappingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AppengineAppsDomainMappingsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class AppengineAppsDomainMappingsPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DomainMapping domainMapping;
+
     public AppengineAppsDomainMappingsPatchRequest withDomainMapping(org.openapis.openapi.models.shared.DomainMapping domainMapping) {
         this.domainMapping = domainMapping;
         return this;
@@ -29,6 +32,7 @@ public class AppengineAppsDomainMappingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AppengineAppsDomainMappingsPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class AppengineAppsDomainMappingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AppengineAppsDomainMappingsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class AppengineAppsDomainMappingsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appsId")
     public String appsId;
+
     public AppengineAppsDomainMappingsPatchRequest withAppsId(String appsId) {
         this.appsId = appsId;
         return this;
@@ -59,6 +65,7 @@ public class AppengineAppsDomainMappingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AppengineAppsDomainMappingsPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class AppengineAppsDomainMappingsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainMappingsId")
     public String domainMappingsId;
+
     public AppengineAppsDomainMappingsPatchRequest withDomainMappingsId(String domainMappingsId) {
         this.domainMappingsId = domainMappingsId;
         return this;
@@ -79,6 +87,7 @@ public class AppengineAppsDomainMappingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AppengineAppsDomainMappingsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -89,6 +98,7 @@ public class AppengineAppsDomainMappingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AppengineAppsDomainMappingsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class AppengineAppsDomainMappingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=noManagedCertificate")
     public Boolean noManagedCertificate;
+
     public AppengineAppsDomainMappingsPatchRequest withNoManagedCertificate(Boolean noManagedCertificate) {
         this.noManagedCertificate = noManagedCertificate;
         return this;
@@ -109,6 +120,7 @@ public class AppengineAppsDomainMappingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AppengineAppsDomainMappingsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -119,6 +131,7 @@ public class AppengineAppsDomainMappingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AppengineAppsDomainMappingsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -129,6 +142,7 @@ public class AppengineAppsDomainMappingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AppengineAppsDomainMappingsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class AppengineAppsDomainMappingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public AppengineAppsDomainMappingsPatchRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -149,6 +164,7 @@ public class AppengineAppsDomainMappingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AppengineAppsDomainMappingsPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -159,9 +175,14 @@ public class AppengineAppsDomainMappingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AppengineAppsDomainMappingsPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AppengineAppsDomainMappingsPatchRequest(@JsonProperty("appsId") String appsId, @JsonProperty("domainMappingsId") String domainMappingsId) {
+        this.appsId = appsId;
+        this.domainMappingsId = domainMappingsId;
+  }
 }

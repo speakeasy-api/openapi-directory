@@ -56,10 +56,8 @@ public class Notes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugNotesResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugNotesResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugNotesResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugNotesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,10 +90,8 @@ public class Notes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWorkspaceSlugMembersMemberSlugNotesResponse res = new org.openapis.openapi.models.operations.PostWorkspaceSlugMembersMemberSlugNotesResponse() {{
+        org.openapis.openapi.models.operations.PostWorkspaceSlugMembersMemberSlugNotesResponse res = new org.openapis.openapi.models.operations.PostWorkspaceSlugMembersMemberSlugNotesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 403) {
@@ -128,10 +124,8 @@ public class Notes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutWorkspaceSlugMembersMemberSlugNotesIdResponse res = new org.openapis.openapi.models.operations.PutWorkspaceSlugMembersMemberSlugNotesIdResponse() {{
+        org.openapis.openapi.models.operations.PutWorkspaceSlugMembersMemberSlugNotesIdResponse res = new org.openapis.openapi.models.operations.PutWorkspaceSlugMembersMemberSlugNotesIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

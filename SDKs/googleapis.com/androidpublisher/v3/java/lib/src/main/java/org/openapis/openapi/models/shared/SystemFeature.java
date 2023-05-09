@@ -18,9 +18,11 @@ public class SystemFeature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SystemFeature withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SystemFeature(){}
 }

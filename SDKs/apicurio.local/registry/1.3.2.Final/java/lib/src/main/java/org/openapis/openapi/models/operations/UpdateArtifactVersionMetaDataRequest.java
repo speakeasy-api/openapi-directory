@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateArtifactVersionMetaDataRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EditableMetaData editableMetaData;
+
     public UpdateArtifactVersionMetaDataRequest withEditableMetaData(org.openapis.openapi.models.shared.EditableMetaData editableMetaData) {
         this.editableMetaData = editableMetaData;
         return this;
@@ -19,6 +21,7 @@ public class UpdateArtifactVersionMetaDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
     public String artifactId;
+
     public UpdateArtifactVersionMetaDataRequest withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -29,9 +32,15 @@ public class UpdateArtifactVersionMetaDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public Long version;
+
     public UpdateArtifactVersionMetaDataRequest withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public UpdateArtifactVersionMetaDataRequest(@JsonProperty("EditableMetaData") org.openapis.openapi.models.shared.EditableMetaData editableMetaData, @JsonProperty("artifactId") String artifactId, @JsonProperty("version") Long version) {
+        this.editableMetaData = editableMetaData;
+        this.artifactId = artifactId;
+        this.version = version;
+  }
 }

@@ -60,11 +60,9 @@ public class ActionNotificationExportResults {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetActionNotificationExportResultsResponse res = new org.openapis.openapi.models.operations.GetActionNotificationExportResultsResponse() {{
+        org.openapis.openapi.models.operations.GetActionNotificationExportResultsResponse res = new org.openapis.openapi.models.operations.GetActionNotificationExportResultsResponse(contentType, httpRes.statusCode()) {{
             actionNotificationExportResultEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

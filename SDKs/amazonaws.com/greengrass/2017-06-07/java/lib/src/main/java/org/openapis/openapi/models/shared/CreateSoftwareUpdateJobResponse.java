@@ -15,6 +15,7 @@ public class CreateSoftwareUpdateJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IotJobArn")
     public String iotJobArn;
+
     public CreateSoftwareUpdateJobResponse withIotJobArn(String iotJobArn) {
         this.iotJobArn = iotJobArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateSoftwareUpdateJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IotJobId")
     public String iotJobId;
+
     public CreateSoftwareUpdateJobResponse withIotJobId(String iotJobId) {
         this.iotJobId = iotJobId;
         return this;
@@ -31,9 +33,11 @@ public class CreateSoftwareUpdateJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlatformSoftwareVersion")
     public String platformSoftwareVersion;
+
     public CreateSoftwareUpdateJobResponse withPlatformSoftwareVersion(String platformSoftwareVersion) {
         this.platformSoftwareVersion = platformSoftwareVersion;
         return this;
     }
     
+    public CreateSoftwareUpdateJobResponse(){}
 }

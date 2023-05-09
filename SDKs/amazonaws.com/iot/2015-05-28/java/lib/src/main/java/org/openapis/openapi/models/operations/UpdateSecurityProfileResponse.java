@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSecurityProfileResponse {
     
     public String contentType;
+
     public UpdateSecurityProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSecurityProfileResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateSecurityProfileResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSecurityProfileResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateSecurityProfileResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSecurityProfileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateSecurityProfileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateSecurityProfileResponse {
     
     
     public Integer statusCode;
+
     public UpdateSecurityProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateSecurityProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSecurityProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSecurityProfileResponse {
      */
     
     public Object throttlingException;
+
     public UpdateSecurityProfileResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSecurityProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSecurityProfileResponse updateSecurityProfileResponse;
+
     public UpdateSecurityProfileResponse withUpdateSecurityProfileResponse(org.openapis.openapi.models.shared.UpdateSecurityProfileResponse updateSecurityProfileResponse) {
         this.updateSecurityProfileResponse = updateSecurityProfileResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateSecurityProfileResponse {
      */
     
     public Object versionConflictException;
+
     public UpdateSecurityProfileResponse withVersionConflictException(Object versionConflictException) {
         this.versionConflictException = versionConflictException;
         return this;
     }
     
+    public UpdateSecurityProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

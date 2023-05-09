@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContainerImage {
     @JsonProperty("uri")
     public String uri;
+
     public ContainerImage withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public ContainerImage(@JsonProperty("uri") String uri) {
+        this.uri = uri;
+  }
 }

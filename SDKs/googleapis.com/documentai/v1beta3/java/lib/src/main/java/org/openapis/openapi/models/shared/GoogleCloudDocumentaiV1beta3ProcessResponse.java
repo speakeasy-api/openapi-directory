@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDocumentaiV1beta3ProcessResponse - Response message for the process document method.
+ * GoogleCloudDocumentaiV1beta3ProcessResponse - Response message for the ProcessDocument method.
  */
 public class GoogleCloudDocumentaiV1beta3ProcessResponse {
     /**
@@ -18,17 +18,19 @@ public class GoogleCloudDocumentaiV1beta3ProcessResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public GoogleCloudDocumentaiV1beta3Document document;
+
     public GoogleCloudDocumentaiV1beta3ProcessResponse withDocument(GoogleCloudDocumentaiV1beta3Document document) {
         this.document = document;
         return this;
     }
     
     /**
-     * The name of the operation triggered by the processed document. If the human review process is not triggered, this field will be empty. It has the same response type and metadata as the long running operation returned by ReviewDocument method.
+     * The name of the operation triggered by the processed document. If the human review process isn't triggered, this field is empty. It has the same response type and metadata as the long-running operation returned by ReviewDocument.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humanReviewOperation")
     public String humanReviewOperation;
+
     public GoogleCloudDocumentaiV1beta3ProcessResponse withHumanReviewOperation(String humanReviewOperation) {
         this.humanReviewOperation = humanReviewOperation;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1beta3ProcessResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humanReviewStatus")
     public GoogleCloudDocumentaiV1beta3HumanReviewStatus humanReviewStatus;
+
     public GoogleCloudDocumentaiV1beta3ProcessResponse withHumanReviewStatus(GoogleCloudDocumentaiV1beta3HumanReviewStatus humanReviewStatus) {
         this.humanReviewStatus = humanReviewStatus;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3ProcessResponse(){}
 }

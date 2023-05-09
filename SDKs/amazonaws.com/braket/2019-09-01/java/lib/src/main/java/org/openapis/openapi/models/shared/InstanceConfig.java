@@ -15,6 +15,7 @@ public class InstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceCount")
     public Long instanceCount;
+
     public InstanceConfig withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -22,6 +23,7 @@ public class InstanceConfig {
     
     @JsonProperty("instanceType")
     public InstanceTypeEnum instanceType;
+
     public InstanceConfig withInstanceType(InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -29,9 +31,14 @@ public class InstanceConfig {
     
     @JsonProperty("volumeSizeInGb")
     public Long volumeSizeInGb;
+
     public InstanceConfig withVolumeSizeInGb(Long volumeSizeInGb) {
         this.volumeSizeInGb = volumeSizeInGb;
         return this;
     }
     
+    public InstanceConfig(@JsonProperty("instanceType") InstanceTypeEnum instanceType, @JsonProperty("volumeSizeInGb") Long volumeSizeInGb) {
+        this.instanceType = instanceType;
+        this.volumeSizeInGb = volumeSizeInGb;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutProductsIdJsonRequest {
@@ -12,6 +13,7 @@ public class PutProductsIdJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ProductEdit productEdit;
+
     public PutProductsIdJsonRequest withProductEdit(org.openapis.openapi.models.shared.ProductEdit productEdit) {
         this.productEdit = productEdit;
         return this;
@@ -22,6 +24,7 @@ public class PutProductsIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PutProductsIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PutProductsIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutProductsIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class PutProductsIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public PutProductsIdJsonRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -52,9 +57,16 @@ public class PutProductsIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PutProductsIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PutProductsIdJsonRequest(@JsonProperty("ProductEdit") org.openapis.openapi.models.shared.ProductEdit productEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.productEdit = productEdit;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

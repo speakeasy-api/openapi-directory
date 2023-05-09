@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMaintenanceWindowTargetResponse {
     
     public String contentType;
+
     public UpdateMaintenanceWindowTargetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateMaintenanceWindowTargetResponse {
      */
     
     public Object doesNotExistException;
+
     public UpdateMaintenanceWindowTargetResponse withDoesNotExistException(Object doesNotExistException) {
         this.doesNotExistException = doesNotExistException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMaintenanceWindowTargetResponse {
      */
     
     public Object internalServerError;
+
     public UpdateMaintenanceWindowTargetResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -36,6 +40,7 @@ public class UpdateMaintenanceWindowTargetResponse {
     
     
     public Integer statusCode;
+
     public UpdateMaintenanceWindowTargetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateMaintenanceWindowTargetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMaintenanceWindowTargetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateMaintenanceWindowTargetResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateMaintenanceWindowTargetResult updateMaintenanceWindowTargetResult;
+
     public UpdateMaintenanceWindowTargetResponse withUpdateMaintenanceWindowTargetResult(org.openapis.openapi.models.shared.UpdateMaintenanceWindowTargetResult updateMaintenanceWindowTargetResult) {
         this.updateMaintenanceWindowTargetResult = updateMaintenanceWindowTargetResult;
         return this;
     }
     
+    public UpdateMaintenanceWindowTargetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

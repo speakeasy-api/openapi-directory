@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VisionImagesAnnotateResponse {
     
     public String contentType;
+
     public VisionImagesAnnotateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class VisionImagesAnnotateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1BatchAnnotateImagesResponse googleCloudVisionV1p1beta1BatchAnnotateImagesResponse;
+
     public VisionImagesAnnotateResponse withGoogleCloudVisionV1p1beta1BatchAnnotateImagesResponse(org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1BatchAnnotateImagesResponse googleCloudVisionV1p1beta1BatchAnnotateImagesResponse) {
         this.googleCloudVisionV1p1beta1BatchAnnotateImagesResponse = googleCloudVisionV1p1beta1BatchAnnotateImagesResponse;
         return this;
@@ -26,6 +29,7 @@ public class VisionImagesAnnotateResponse {
     
     
     public Integer statusCode;
+
     public VisionImagesAnnotateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class VisionImagesAnnotateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VisionImagesAnnotateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VisionImagesAnnotateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

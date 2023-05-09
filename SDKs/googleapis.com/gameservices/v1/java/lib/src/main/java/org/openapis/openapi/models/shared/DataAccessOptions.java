@@ -15,9 +15,11 @@ public class DataAccessOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logMode")
     public DataAccessOptionsLogModeEnum logMode;
+
     public DataAccessOptions withLogMode(DataAccessOptionsLogModeEnum logMode) {
         this.logMode = logMode;
         return this;
     }
     
+    public DataAccessOptions(){}
 }

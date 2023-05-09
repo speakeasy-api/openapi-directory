@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpsolverDestinationProperties {
     @JsonProperty("bucketName")
     public String bucketName;
+
     public UpsolverDestinationProperties withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -22,6 +23,7 @@ public class UpsolverDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketPrefix")
     public String bucketPrefix;
+
     public UpsolverDestinationProperties withBucketPrefix(String bucketPrefix) {
         this.bucketPrefix = bucketPrefix;
         return this;
@@ -29,9 +31,14 @@ public class UpsolverDestinationProperties {
     
     @JsonProperty("s3OutputFormatConfig")
     public UpsolverS3OutputFormatConfig s3OutputFormatConfig;
+
     public UpsolverDestinationProperties withS3OutputFormatConfig(UpsolverS3OutputFormatConfig s3OutputFormatConfig) {
         this.s3OutputFormatConfig = s3OutputFormatConfig;
         return this;
     }
     
+    public UpsolverDestinationProperties(@JsonProperty("bucketName") String bucketName, @JsonProperty("s3OutputFormatConfig") UpsolverS3OutputFormatConfig s3OutputFormatConfig) {
+        this.bucketName = bucketName;
+        this.s3OutputFormatConfig = s3OutputFormatConfig;
+  }
 }

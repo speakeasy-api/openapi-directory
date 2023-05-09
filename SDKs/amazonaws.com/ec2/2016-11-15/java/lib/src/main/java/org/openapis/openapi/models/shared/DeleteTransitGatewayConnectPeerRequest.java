@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteTransitGatewayConnectPeerRequest {
     
     public Boolean dryRun;
+
     public DeleteTransitGatewayConnectPeerRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DeleteTransitGatewayConnectPeerRequest {
     
     
     public String transitGatewayConnectPeerId;
+
     public DeleteTransitGatewayConnectPeerRequest withTransitGatewayConnectPeerId(String transitGatewayConnectPeerId) {
         this.transitGatewayConnectPeerId = transitGatewayConnectPeerId;
         return this;
     }
     
+    public DeleteTransitGatewayConnectPeerRequest(@JsonProperty("TransitGatewayConnectPeerId") String transitGatewayConnectPeerId) {
+        this.transitGatewayConnectPeerId = transitGatewayConnectPeerId;
+  }
 }

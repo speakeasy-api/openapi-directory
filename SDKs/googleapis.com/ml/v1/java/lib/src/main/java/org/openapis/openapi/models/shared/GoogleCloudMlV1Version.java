@@ -18,6 +18,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorConfig")
     public GoogleCloudMlV1AcceleratorConfig acceleratorConfig;
+
     public GoogleCloudMlV1Version withAcceleratorConfig(GoogleCloudMlV1AcceleratorConfig acceleratorConfig) {
         this.acceleratorConfig = acceleratorConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScaling")
     public GoogleCloudMlV1AutoScaling autoScaling;
+
     public GoogleCloudMlV1Version withAutoScaling(GoogleCloudMlV1AutoScaling autoScaling) {
         this.autoScaling = autoScaling;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("container")
     public GoogleCloudMlV1ContainerSpec container;
+
     public GoogleCloudMlV1Version withContainer(GoogleCloudMlV1ContainerSpec container) {
         this.container = container;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudMlV1Version withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentUri")
     public String deploymentUri;
+
     public GoogleCloudMlV1Version withDeploymentUri(String deploymentUri) {
         this.deploymentUri = deploymentUri;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudMlV1Version withDescription(String description) {
         this.description = description;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public GoogleCloudMlV1Version withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudMlV1Version withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explanationConfig")
     public GoogleCloudMlV1ExplanationConfig explanationConfig;
+
     public GoogleCloudMlV1Version withExplanationConfig(GoogleCloudMlV1ExplanationConfig explanationConfig) {
         this.explanationConfig = explanationConfig;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("framework")
     public GoogleCloudMlV1VersionFrameworkEnum framework;
+
     public GoogleCloudMlV1Version withFramework(GoogleCloudMlV1VersionFrameworkEnum framework) {
         this.framework = framework;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefault")
     public Boolean isDefault;
+
     public GoogleCloudMlV1Version withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudMlV1Version withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastMigrationModelId")
     public String lastMigrationModelId;
+
     public GoogleCloudMlV1Version withLastMigrationModelId(String lastMigrationModelId) {
         this.lastMigrationModelId = lastMigrationModelId;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastMigrationTime")
     public String lastMigrationTime;
+
     public GoogleCloudMlV1Version withLastMigrationTime(String lastMigrationTime) {
         this.lastMigrationTime = lastMigrationTime;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUseTime")
     public String lastUseTime;
+
     public GoogleCloudMlV1Version withLastUseTime(String lastUseTime) {
         this.lastUseTime = lastUseTime;
         return this;
@@ -183,6 +198,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public GoogleCloudMlV1Version withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -194,6 +210,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualScaling")
     public GoogleCloudMlV1ManualScaling manualScaling;
+
     public GoogleCloudMlV1Version withManualScaling(GoogleCloudMlV1ManualScaling manualScaling) {
         this.manualScaling = manualScaling;
         return this;
@@ -205,6 +222,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudMlV1Version withName(String name) {
         this.name = name;
         return this;
@@ -216,6 +234,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageUris")
     public String[] packageUris;
+
     public GoogleCloudMlV1Version withPackageUris(String[] packageUris) {
         this.packageUris = packageUris;
         return this;
@@ -227,6 +246,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictionClass")
     public String predictionClass;
+
     public GoogleCloudMlV1Version withPredictionClass(String predictionClass) {
         this.predictionClass = predictionClass;
         return this;
@@ -238,6 +258,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pythonVersion")
     public String pythonVersion;
+
     public GoogleCloudMlV1Version withPythonVersion(String pythonVersion) {
         this.pythonVersion = pythonVersion;
         return this;
@@ -249,6 +270,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestLoggingConfig")
     public GoogleCloudMlV1RequestLoggingConfig requestLoggingConfig;
+
     public GoogleCloudMlV1Version withRequestLoggingConfig(GoogleCloudMlV1RequestLoggingConfig requestLoggingConfig) {
         this.requestLoggingConfig = requestLoggingConfig;
         return this;
@@ -260,6 +282,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routes")
     public GoogleCloudMlV1RouteMap routes;
+
     public GoogleCloudMlV1Version withRoutes(GoogleCloudMlV1RouteMap routes) {
         this.routes = routes;
         return this;
@@ -271,6 +294,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeVersion")
     public String runtimeVersion;
+
     public GoogleCloudMlV1Version withRuntimeVersion(String runtimeVersion) {
         this.runtimeVersion = runtimeVersion;
         return this;
@@ -282,6 +306,7 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public GoogleCloudMlV1Version withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -293,9 +318,11 @@ public class GoogleCloudMlV1Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudMlV1VersionStateEnum state;
+
     public GoogleCloudMlV1Version withState(GoogleCloudMlV1VersionStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleCloudMlV1Version(){}
 }

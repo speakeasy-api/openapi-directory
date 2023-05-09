@@ -15,6 +15,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AfterConnectScript")
     public String afterConnectScript;
+
     public PostgreSQLSettings withAfterConnectScript(String afterConnectScript) {
         this.afterConnectScript = afterConnectScript;
         return this;
@@ -23,6 +24,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CaptureDdls")
     public Boolean captureDdls;
+
     public PostgreSQLSettings withCaptureDdls(Boolean captureDdls) {
         this.captureDdls = captureDdls;
         return this;
@@ -31,6 +33,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public PostgreSQLSettings withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -39,6 +42,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DdlArtifactsSchema")
     public String ddlArtifactsSchema;
+
     public PostgreSQLSettings withDdlArtifactsSchema(String ddlArtifactsSchema) {
         this.ddlArtifactsSchema = ddlArtifactsSchema;
         return this;
@@ -47,6 +51,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecuteTimeout")
     public Long executeTimeout;
+
     public PostgreSQLSettings withExecuteTimeout(Long executeTimeout) {
         this.executeTimeout = executeTimeout;
         return this;
@@ -55,6 +60,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailTasksOnLobTruncation")
     public Boolean failTasksOnLobTruncation;
+
     public PostgreSQLSettings withFailTasksOnLobTruncation(Boolean failTasksOnLobTruncation) {
         this.failTasksOnLobTruncation = failTasksOnLobTruncation;
         return this;
@@ -63,6 +69,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeartbeatEnable")
     public Boolean heartbeatEnable;
+
     public PostgreSQLSettings withHeartbeatEnable(Boolean heartbeatEnable) {
         this.heartbeatEnable = heartbeatEnable;
         return this;
@@ -71,6 +78,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeartbeatFrequency")
     public Long heartbeatFrequency;
+
     public PostgreSQLSettings withHeartbeatFrequency(Long heartbeatFrequency) {
         this.heartbeatFrequency = heartbeatFrequency;
         return this;
@@ -79,6 +87,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeartbeatSchema")
     public String heartbeatSchema;
+
     public PostgreSQLSettings withHeartbeatSchema(String heartbeatSchema) {
         this.heartbeatSchema = heartbeatSchema;
         return this;
@@ -87,6 +96,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MapBooleanAsBoolean")
     public Boolean mapBooleanAsBoolean;
+
     public PostgreSQLSettings withMapBooleanAsBoolean(Boolean mapBooleanAsBoolean) {
         this.mapBooleanAsBoolean = mapBooleanAsBoolean;
         return this;
@@ -95,6 +105,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxFileSize")
     public Long maxFileSize;
+
     public PostgreSQLSettings withMaxFileSize(Long maxFileSize) {
         this.maxFileSize = maxFileSize;
         return this;
@@ -103,6 +114,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public PostgreSQLSettings withPassword(String password) {
         this.password = password;
         return this;
@@ -111,6 +123,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PluginName")
     public PluginNameValueEnum pluginName;
+
     public PostgreSQLSettings withPluginName(PluginNameValueEnum pluginName) {
         this.pluginName = pluginName;
         return this;
@@ -119,6 +132,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public PostgreSQLSettings withPort(Long port) {
         this.port = port;
         return this;
@@ -127,6 +141,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretsManagerAccessRoleArn")
     public String secretsManagerAccessRoleArn;
+
     public PostgreSQLSettings withSecretsManagerAccessRoleArn(String secretsManagerAccessRoleArn) {
         this.secretsManagerAccessRoleArn = secretsManagerAccessRoleArn;
         return this;
@@ -135,6 +150,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretsManagerSecretId")
     public String secretsManagerSecretId;
+
     public PostgreSQLSettings withSecretsManagerSecretId(String secretsManagerSecretId) {
         this.secretsManagerSecretId = secretsManagerSecretId;
         return this;
@@ -143,6 +159,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerName")
     public String serverName;
+
     public PostgreSQLSettings withServerName(String serverName) {
         this.serverName = serverName;
         return this;
@@ -151,6 +168,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlotName")
     public String slotName;
+
     public PostgreSQLSettings withSlotName(String slotName) {
         this.slotName = slotName;
         return this;
@@ -159,6 +177,7 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrimSpaceInChar")
     public Boolean trimSpaceInChar;
+
     public PostgreSQLSettings withTrimSpaceInChar(Boolean trimSpaceInChar) {
         this.trimSpaceInChar = trimSpaceInChar;
         return this;
@@ -167,9 +186,11 @@ public class PostgreSQLSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public PostgreSQLSettings withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public PostgreSQLSettings(){}
 }

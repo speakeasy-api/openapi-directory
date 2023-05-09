@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebhooksFetchAllRequest {
@@ -12,9 +13,13 @@ public class WebhooksFetchAllRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public WebhooksFetchAllRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public WebhooksFetchAllRequest(@JsonProperty("accountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

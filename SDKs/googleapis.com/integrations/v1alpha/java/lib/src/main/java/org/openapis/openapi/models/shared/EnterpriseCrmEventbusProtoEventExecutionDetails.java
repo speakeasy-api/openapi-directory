@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventAttemptStats")
     public EnterpriseCrmEventbusProtoEventExecutionDetailsEventAttemptStats[] eventAttemptStats;
+
     public EnterpriseCrmEventbusProtoEventExecutionDetails withEventAttemptStats(EnterpriseCrmEventbusProtoEventExecutionDetailsEventAttemptStats[] eventAttemptStats) {
         this.eventAttemptStats = eventAttemptStats;
         return this;
@@ -23,6 +24,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventExecutionSnapshot")
     public EnterpriseCrmEventbusProtoEventExecutionSnapshot[] eventExecutionSnapshot;
+
     public EnterpriseCrmEventbusProtoEventExecutionDetails withEventExecutionSnapshot(EnterpriseCrmEventbusProtoEventExecutionSnapshot[] eventExecutionSnapshot) {
         this.eventExecutionSnapshot = eventExecutionSnapshot;
         return this;
@@ -31,6 +33,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventExecutionState")
     public EnterpriseCrmEventbusProtoEventExecutionDetailsEventExecutionStateEnum eventExecutionState;
+
     public EnterpriseCrmEventbusProtoEventExecutionDetails withEventExecutionState(EnterpriseCrmEventbusProtoEventExecutionDetailsEventExecutionStateEnum eventExecutionState) {
         this.eventExecutionState = eventExecutionState;
         return this;
@@ -42,6 +45,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventRetriesFromBeginningCount")
     public Integer eventRetriesFromBeginningCount;
+
     public EnterpriseCrmEventbusProtoEventExecutionDetails withEventRetriesFromBeginningCount(Integer eventRetriesFromBeginningCount) {
         this.eventRetriesFromBeginningCount = eventRetriesFromBeginningCount;
         return this;
@@ -53,6 +57,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logFilePath")
     public String logFilePath;
+
     public EnterpriseCrmEventbusProtoEventExecutionDetails withLogFilePath(String logFilePath) {
         this.logFilePath = logFilePath;
         return this;
@@ -64,6 +69,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkAddress")
     public String networkAddress;
+
     public EnterpriseCrmEventbusProtoEventExecutionDetails withNetworkAddress(String networkAddress) {
         this.networkAddress = networkAddress;
         return this;
@@ -75,6 +81,7 @@ public class EnterpriseCrmEventbusProtoEventExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextExecutionTime")
     public String nextExecutionTime;
+
     public EnterpriseCrmEventbusProtoEventExecutionDetails withNextExecutionTime(String nextExecutionTime) {
         this.nextExecutionTime = nextExecutionTime;
         return this;
@@ -86,9 +93,11 @@ public class EnterpriseCrmEventbusProtoEventExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ryeLockUnheldCount")
     public Integer ryeLockUnheldCount;
+
     public EnterpriseCrmEventbusProtoEventExecutionDetails withRyeLockUnheldCount(Integer ryeLockUnheldCount) {
         this.ryeLockUnheldCount = ryeLockUnheldCount;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoEventExecutionDetails(){}
 }

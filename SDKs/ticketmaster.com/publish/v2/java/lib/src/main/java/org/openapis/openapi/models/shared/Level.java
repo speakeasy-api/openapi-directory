@@ -15,6 +15,7 @@ public class Level {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Level withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class Level {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public java.util.Map<String, String> names;
+
     public Level withNames(java.util.Map<String, String> names) {
         this.names = names;
         return this;
     }
     
+    public Level(){}
 }

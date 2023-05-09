@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailResponse {
     
     public String contentType;
+
     public DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailResponse {
     
     
     public Integer statusCode;
+
     public DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

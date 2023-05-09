@@ -20,6 +20,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public Certificate withBody(String body) {
         this.body = body;
         return this;
@@ -28,6 +29,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuer")
     public String issuer;
+
     public Certificate withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -38,6 +40,7 @@ public class Certificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("notValidAfter")
     public OffsetDateTime notValidAfter;
+
     public Certificate withNotValidAfter(OffsetDateTime notValidAfter) {
         this.notValidAfter = notValidAfter;
         return this;
@@ -48,6 +51,7 @@ public class Certificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("notValidBefore")
     public OffsetDateTime notValidBefore;
+
     public Certificate withNotValidBefore(OffsetDateTime notValidBefore) {
         this.notValidBefore = notValidBefore;
         return this;
@@ -56,6 +60,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public Certificate withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -64,9 +69,11 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbprint")
     public String thumbprint;
+
     public Certificate withThumbprint(String thumbprint) {
         this.thumbprint = thumbprint;
         return this;
     }
     
+    public Certificate(){}
 }

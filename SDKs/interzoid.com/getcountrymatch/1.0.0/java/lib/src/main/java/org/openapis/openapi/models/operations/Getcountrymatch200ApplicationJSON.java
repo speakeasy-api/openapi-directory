@@ -15,6 +15,7 @@ public class Getcountrymatch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Getcountrymatch200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class Getcountrymatch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credits")
     public String credits;
+
     public Getcountrymatch200ApplicationJSON withCredits(String credits) {
         this.credits = credits;
         return this;
@@ -31,9 +33,11 @@ public class Getcountrymatch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Simkey")
     public String simkey;
+
     public Getcountrymatch200ApplicationJSON withSimkey(String simkey) {
         this.simkey = simkey;
         return this;
     }
     
+    public Getcountrymatch200ApplicationJSON(){}
 }

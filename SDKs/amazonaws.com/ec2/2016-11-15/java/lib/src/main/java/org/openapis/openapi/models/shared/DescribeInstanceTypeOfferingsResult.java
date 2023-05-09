@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypeOfferingsResult {
     
     public DescribeInstanceTypeOfferingsResultInstanceTypeOfferings[] instanceTypeOfferings;
+
     public DescribeInstanceTypeOfferingsResult withInstanceTypeOfferings(DescribeInstanceTypeOfferingsResultInstanceTypeOfferings[] instanceTypeOfferings) {
         this.instanceTypeOfferings = instanceTypeOfferings;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceTypeOfferingsResult {
     
     
     public String nextToken;
+
     public DescribeInstanceTypeOfferingsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstanceTypeOfferingsResult(){}
 }

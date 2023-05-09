@@ -20,6 +20,7 @@ public class IntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public IntentSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class IntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputContexts")
     public InputContext[] inputContexts;
+
     public IntentSummary withInputContexts(InputContext[] inputContexts) {
         this.inputContexts = inputContexts;
         return this;
@@ -36,6 +38,7 @@ public class IntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentId")
     public String intentId;
+
     public IntentSummary withIntentId(String intentId) {
         this.intentId = intentId;
         return this;
@@ -44,6 +47,7 @@ public class IntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentName")
     public String intentName;
+
     public IntentSummary withIntentName(String intentName) {
         this.intentName = intentName;
         return this;
@@ -54,6 +58,7 @@ public class IntentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public IntentSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -62,6 +67,7 @@ public class IntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputContexts")
     public OutputContext[] outputContexts;
+
     public IntentSummary withOutputContexts(OutputContext[] outputContexts) {
         this.outputContexts = outputContexts;
         return this;
@@ -70,9 +76,11 @@ public class IntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentIntentSignature")
     public String parentIntentSignature;
+
     public IntentSummary withParentIntentSignature(String parentIntentSignature) {
         this.parentIntentSignature = parentIntentSignature;
         return this;
     }
     
+    public IntentSummary(){}
 }

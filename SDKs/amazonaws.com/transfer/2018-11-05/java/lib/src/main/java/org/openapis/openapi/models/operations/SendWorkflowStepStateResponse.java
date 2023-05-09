@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendWorkflowStepStateResponse {
@@ -12,6 +13,7 @@ public class SendWorkflowStepStateResponse {
      */
     
     public Object accessDeniedException;
+
     public SendWorkflowStepStateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SendWorkflowStepStateResponse {
     
     
     public String contentType;
+
     public SendWorkflowStepStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SendWorkflowStepStateResponse {
      */
     
     public Object internalServiceError;
+
     public SendWorkflowStepStateResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class SendWorkflowStepStateResponse {
      */
     
     public Object invalidRequestException;
+
     public SendWorkflowStepStateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class SendWorkflowStepStateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SendWorkflowStepStateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class SendWorkflowStepStateResponse {
      */
     
     public java.util.Map<String, Object> sendWorkflowStepStateResponse;
+
     public SendWorkflowStepStateResponse withSendWorkflowStepStateResponse(java.util.Map<String, Object> sendWorkflowStepStateResponse) {
         this.sendWorkflowStepStateResponse = sendWorkflowStepStateResponse;
         return this;
@@ -66,6 +73,7 @@ public class SendWorkflowStepStateResponse {
     
     
     public Integer statusCode;
+
     public SendWorkflowStepStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class SendWorkflowStepStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendWorkflowStepStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class SendWorkflowStepStateResponse {
      */
     
     public Object serviceUnavailableException;
+
     public SendWorkflowStepStateResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class SendWorkflowStepStateResponse {
      */
     
     public Object throttlingException;
+
     public SendWorkflowStepStateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public SendWorkflowStepStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

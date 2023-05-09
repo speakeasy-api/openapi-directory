@@ -12,6 +12,7 @@ public class Category {
      */
     @JsonProperty("id")
     public Long id;
+
     public Category withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class Category {
      */
     @JsonProperty("parent_id")
     public Long parentId;
+
     public Category withParentId(Long parentId) {
         this.parentId = parentId;
         return this;
@@ -32,6 +34,7 @@ public class Category {
      */
     @JsonProperty("path")
     public String path;
+
     public Category withPath(String path) {
         this.path = path;
         return this;
@@ -42,6 +45,7 @@ public class Category {
      */
     @JsonProperty("source_id")
     public String sourceId;
+
     public Category withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -52,6 +56,7 @@ public class Category {
      */
     @JsonProperty("taxonomy_id")
     public Long taxonomyId;
+
     public Category withTaxonomyId(Long taxonomyId) {
         this.taxonomyId = taxonomyId;
         return this;
@@ -62,9 +67,18 @@ public class Category {
      */
     @JsonProperty("title")
     public String title;
+
     public Category withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Category(@JsonProperty("id") Long id, @JsonProperty("parent_id") Long parentId, @JsonProperty("path") String path, @JsonProperty("source_id") String sourceId, @JsonProperty("taxonomy_id") Long taxonomyId, @JsonProperty("title") String title) {
+        this.id = id;
+        this.parentId = parentId;
+        this.path = path;
+        this.sourceId = sourceId;
+        this.taxonomyId = taxonomyId;
+        this.title = title;
+  }
 }

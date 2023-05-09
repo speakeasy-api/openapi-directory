@@ -273,4 +273,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/SignInBehaviorRedirectCondi
 lib/src/main/java/org/openapis/openapi/models/shared/SignInBehavior.java
 lib/src/main/java/org/openapis/openapi/models/shared/SamlSsoInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListInboundSsoAssignmentsResponse.java
+docs/sdk/README.md
+docs/customers/README.md
+docs/devices/README.md
+docs/groups/README.md
+docs/inboundsamlssoprofiles/README.md
+docs/inboundssoassignments/README.md
 USAGE.md

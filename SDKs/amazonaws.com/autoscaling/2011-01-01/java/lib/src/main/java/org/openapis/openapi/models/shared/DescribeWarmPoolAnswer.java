@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeWarmPoolAnswer {
     
     public Instance[] instances;
+
     public DescribeWarmPoolAnswer withInstances(Instance[] instances) {
         this.instances = instances;
         return this;
@@ -19,6 +20,7 @@ public class DescribeWarmPoolAnswer {
     
     
     public String nextToken;
+
     public DescribeWarmPoolAnswer withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +28,11 @@ public class DescribeWarmPoolAnswer {
     
     
     public WarmPoolConfiguration warmPoolConfiguration;
+
     public DescribeWarmPoolAnswer withWarmPoolConfiguration(WarmPoolConfiguration warmPoolConfiguration) {
         this.warmPoolConfiguration = warmPoolConfiguration;
         return this;
     }
     
+    public DescribeWarmPoolAnswer(){}
 }

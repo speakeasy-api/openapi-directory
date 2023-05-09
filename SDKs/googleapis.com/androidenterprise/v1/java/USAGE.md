@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AndroidenterpriseDevicesForceReportUploadSecurity;
 import org.openapis.openapi.models.operations.AndroidenterpriseDevicesForceReportUploadRequest;
 import org.openapis.openapi.models.operations.AndroidenterpriseDevicesForceReportUploadResponse;
+import org.openapis.openapi.models.operations.AndroidenterpriseDevicesForceReportUploadSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -16,24 +15,21 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AndroidenterpriseDevicesForceReportUploadRequest req = new AndroidenterpriseDevicesForceReportUploadRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                deviceId = "unde";
-                enterpriseId = "nulla";
-                fields = "corrupti";
-                key = "illum";
-                oauthToken = "vel";
+            AndroidenterpriseDevicesForceReportUploadRequest req = new AndroidenterpriseDevicesForceReportUploadRequest("corrupti", "provident", "distinctio") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "unde";
+                alt = AltEnum.PROTO;
+                callback = "corrupti";
+                fields = "illum";
+                key = "vel";
+                oauthToken = "error";
                 prettyPrint = false;
-                quotaUser = "error";
-                uploadType = "deserunt";
-                uploadProtocol = "suscipit";
-                userId = "iure";
-            }}            
+                quotaUser = "deserunt";
+                uploadType = "suscipit";
+                uploadProtocol = "iure";
+            }};            
 
-            AndroidenterpriseDevicesForceReportUploadResponse res = sdk.devices.androidenterpriseDevicesForceReportUpload(req, new AndroidenterpriseDevicesForceReportUploadSecurity() {{
+            AndroidenterpriseDevicesForceReportUploadResponse res = sdk.devices.androidenterpriseDevicesForceReportUpload(req, new AndroidenterpriseDevicesForceReportUploadSecurity("magnam", "debitis") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
@@ -44,5 +40,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

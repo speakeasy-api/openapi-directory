@@ -15,9 +15,11 @@ public class DescribeClusterOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cluster")
     public Cluster cluster;
+
     public DescribeClusterOutput withCluster(Cluster cluster) {
         this.cluster = cluster;
         return this;
     }
     
+    public DescribeClusterOutput(){}
 }

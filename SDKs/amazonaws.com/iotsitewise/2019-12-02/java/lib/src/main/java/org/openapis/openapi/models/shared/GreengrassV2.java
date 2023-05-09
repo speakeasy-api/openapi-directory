@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GreengrassV2 {
     @JsonProperty("coreDeviceThingName")
     public String coreDeviceThingName;
+
     public GreengrassV2 withCoreDeviceThingName(String coreDeviceThingName) {
         this.coreDeviceThingName = coreDeviceThingName;
         return this;
     }
     
+    public GreengrassV2(@JsonProperty("coreDeviceThingName") String coreDeviceThingName) {
+        this.coreDeviceThingName = coreDeviceThingName;
+  }
 }

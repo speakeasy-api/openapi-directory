@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDatalakeResponse {
     @JsonProperty("configurations")
     public java.util.Map<String, LakeConfigurationResponse> configurations;
+
     public GetDatalakeResponse withConfigurations(java.util.Map<String, LakeConfigurationResponse> configurations) {
         this.configurations = configurations;
         return this;
     }
     
+    public GetDatalakeResponse(@JsonProperty("configurations") java.util.Map<String, LakeConfigurationResponse> configurations) {
+        this.configurations = configurations;
+  }
 }

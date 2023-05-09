@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1betaDataStreamWebStreamDataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultUri")
     public String defaultUri;
+
     public GoogleAnalyticsAdminV1betaDataStreamWebStreamDataInput withDefaultUri(String defaultUri) {
         this.defaultUri = defaultUri;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaDataStreamWebStreamDataInput(){}
 }

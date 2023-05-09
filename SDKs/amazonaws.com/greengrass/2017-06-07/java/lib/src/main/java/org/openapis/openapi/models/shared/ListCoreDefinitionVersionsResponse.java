@@ -15,6 +15,7 @@ public class ListCoreDefinitionVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCoreDefinitionVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListCoreDefinitionVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Versions")
     public VersionInformation[] versions;
+
     public ListCoreDefinitionVersionsResponse withVersions(VersionInformation[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public ListCoreDefinitionVersionsResponse(){}
 }

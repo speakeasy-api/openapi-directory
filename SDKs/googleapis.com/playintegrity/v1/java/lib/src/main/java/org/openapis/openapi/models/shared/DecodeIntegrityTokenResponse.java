@@ -18,9 +18,11 @@ public class DecodeIntegrityTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenPayloadExternal")
     public TokenPayloadExternal tokenPayloadExternal;
+
     public DecodeIntegrityTokenResponse withTokenPayloadExternal(TokenPayloadExternal tokenPayloadExternal) {
         this.tokenPayloadExternal = tokenPayloadExternal;
         return this;
     }
     
+    public DecodeIntegrityTokenResponse(){}
 }

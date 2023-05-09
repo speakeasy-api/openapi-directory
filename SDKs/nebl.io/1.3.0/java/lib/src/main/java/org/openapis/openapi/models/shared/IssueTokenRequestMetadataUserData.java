@@ -15,9 +15,11 @@ public class IssueTokenRequestMetadataUserData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public IssueTokenRequestMetadataUserDataMeta[] meta;
+
     public IssueTokenRequestMetadataUserData withMeta(IssueTokenRequestMetadataUserDataMeta[] meta) {
         this.meta = meta;
         return this;
     }
     
+    public IssueTokenRequestMetadataUserData(){}
 }

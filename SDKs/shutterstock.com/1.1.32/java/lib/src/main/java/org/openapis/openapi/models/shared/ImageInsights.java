@@ -15,9 +15,11 @@ public class ImageInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public ImageInsights withLabels(String[] labels) {
         this.labels = labels;
         return this;
     }
     
+    public ImageInsights(){}
 }

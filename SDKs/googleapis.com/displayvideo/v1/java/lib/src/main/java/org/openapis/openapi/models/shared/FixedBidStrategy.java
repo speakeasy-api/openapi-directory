@@ -18,9 +18,11 @@ public class FixedBidStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidAmountMicros")
     public String bidAmountMicros;
+
     public FixedBidStrategy withBidAmountMicros(String bidAmountMicros) {
         this.bidAmountMicros = bidAmountMicros;
         return this;
     }
     
+    public FixedBidStrategy(){}
 }

@@ -150,6 +150,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -182,14 +187,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteObjectResponse res = new org.openapis.openapi.models.operations.DeleteObjectResponse() {{
+        org.openapis.openapi.models.operations.DeleteObjectResponse res = new org.openapis.openapi.models.operations.DeleteObjectResponse(contentType, httpRes.statusCode()) {{
             deleteObjectResponse = null;
             containerNotFoundException = null;
             objectNotFoundException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,14 +256,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeObjectResponse res = new org.openapis.openapi.models.operations.DescribeObjectResponse() {{
+        org.openapis.openapi.models.operations.DescribeObjectResponse res = new org.openapis.openapi.models.operations.DescribeObjectResponse(contentType, httpRes.statusCode()) {{
             describeObjectResponse = null;
             containerNotFoundException = null;
             objectNotFoundException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -324,15 +325,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetObjectResponse res = new org.openapis.openapi.models.operations.GetObjectResponse() {{
+        org.openapis.openapi.models.operations.GetObjectResponse res = new org.openapis.openapi.models.operations.GetObjectResponse(contentType, httpRes.statusCode()) {{
             getObjectResponse = null;
             containerNotFoundException = null;
             objectNotFoundException = null;
             requestedRangeNotSatisfiableException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -409,13 +408,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListItemsResponse res = new org.openapis.openapi.models.operations.ListItemsResponse() {{
+        org.openapis.openapi.models.operations.ListItemsResponse res = new org.openapis.openapi.models.operations.ListItemsResponse(contentType, httpRes.statusCode()) {{
             listItemsResponse = null;
             containerNotFoundException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -477,13 +474,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutObjectResponse res = new org.openapis.openapi.models.operations.PutObjectResponse() {{
+        org.openapis.openapi.models.operations.PutObjectResponse res = new org.openapis.openapi.models.operations.PutObjectResponse(contentType, httpRes.statusCode()) {{
             putObjectResponse = null;
             containerNotFoundException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

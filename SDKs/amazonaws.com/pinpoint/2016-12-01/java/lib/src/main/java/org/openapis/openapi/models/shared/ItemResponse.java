@@ -15,6 +15,7 @@ public class ItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointItemResponse")
     public EndpointItemResponse endpointItemResponse;
+
     public ItemResponse withEndpointItemResponse(EndpointItemResponse endpointItemResponse) {
         this.endpointItemResponse = endpointItemResponse;
         return this;
@@ -23,9 +24,11 @@ public class ItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventsItemResponse")
     public java.util.Map<String, EventItemResponse> eventsItemResponse;
+
     public ItemResponse withEventsItemResponse(java.util.Map<String, EventItemResponse> eventsItemResponse) {
         this.eventsItemResponse = eventsItemResponse;
         return this;
     }
     
+    public ItemResponse(){}
 }

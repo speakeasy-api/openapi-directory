@@ -15,6 +15,7 @@ public class UpdateBillingGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public UpdateBillingGroupOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class UpdateBillingGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateBillingGroupOutput withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class UpdateBillingGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedTime")
     public Long lastModifiedTime;
+
     public UpdateBillingGroupOutput withLastModifiedTime(Long lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -39,6 +42,7 @@ public class UpdateBillingGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateBillingGroupOutput withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class UpdateBillingGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlanArn")
     public String pricingPlanArn;
+
     public UpdateBillingGroupOutput withPricingPlanArn(String pricingPlanArn) {
         this.pricingPlanArn = pricingPlanArn;
         return this;
@@ -55,6 +60,7 @@ public class UpdateBillingGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryAccountId")
     public String primaryAccountId;
+
     public UpdateBillingGroupOutput withPrimaryAccountId(String primaryAccountId) {
         this.primaryAccountId = primaryAccountId;
         return this;
@@ -63,6 +69,7 @@ public class UpdateBillingGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Long size;
+
     public UpdateBillingGroupOutput withSize(Long size) {
         this.size = size;
         return this;
@@ -71,6 +78,7 @@ public class UpdateBillingGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public BillingGroupStatusEnum status;
+
     public UpdateBillingGroupOutput withStatus(BillingGroupStatusEnum status) {
         this.status = status;
         return this;
@@ -79,9 +87,11 @@ public class UpdateBillingGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusReason")
     public String statusReason;
+
     public UpdateBillingGroupOutput withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public UpdateBillingGroupOutput(){}
 }

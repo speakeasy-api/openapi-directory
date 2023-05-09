@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InputConfiguration {
     @JsonProperty("Id")
     public String id;
+
     public InputConfiguration withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class InputConfiguration {
     
     @JsonProperty("InputStartingPositionConfiguration")
     public InputStartingPositionConfiguration inputStartingPositionConfiguration;
+
     public InputConfiguration withInputStartingPositionConfiguration(InputStartingPositionConfiguration inputStartingPositionConfiguration) {
         this.inputStartingPositionConfiguration = inputStartingPositionConfiguration;
         return this;
     }
     
+    public InputConfiguration(@JsonProperty("Id") String id, @JsonProperty("InputStartingPositionConfiguration") InputStartingPositionConfiguration inputStartingPositionConfiguration) {
+        this.id = id;
+        this.inputStartingPositionConfiguration = inputStartingPositionConfiguration;
+  }
 }

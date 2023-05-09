@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MeterValuesGetResponse {
     
     public byte[] body;
+
     public MeterValuesGetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class MeterValuesGetResponse {
     
     
     public String contentType;
+
     public MeterValuesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class MeterValuesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.DeviceInPast deviceInPast;
+
     public MeterValuesGetResponse withDeviceInPast(org.openapis.openapi.models.shared.DeviceInPast deviceInPast) {
         this.deviceInPast = deviceInPast;
         return this;
@@ -33,6 +37,7 @@ public class MeterValuesGetResponse {
     
     
     public Integer statusCode;
+
     public MeterValuesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class MeterValuesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MeterValuesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MeterValuesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

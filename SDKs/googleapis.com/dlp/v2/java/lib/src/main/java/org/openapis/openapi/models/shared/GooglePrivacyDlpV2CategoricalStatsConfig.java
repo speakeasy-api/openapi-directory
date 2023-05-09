@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2CategoricalStatsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public GooglePrivacyDlpV2FieldId field;
+
     public GooglePrivacyDlpV2CategoricalStatsConfig withField(GooglePrivacyDlpV2FieldId field) {
         this.field = field;
         return this;
     }
     
+    public GooglePrivacyDlpV2CategoricalStatsConfig(){}
 }

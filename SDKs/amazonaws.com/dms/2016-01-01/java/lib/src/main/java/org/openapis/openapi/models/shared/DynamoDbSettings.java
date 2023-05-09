@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DynamoDbSettings {
     @JsonProperty("ServiceAccessRoleArn")
     public String serviceAccessRoleArn;
+
     public DynamoDbSettings withServiceAccessRoleArn(String serviceAccessRoleArn) {
         this.serviceAccessRoleArn = serviceAccessRoleArn;
         return this;
     }
     
+    public DynamoDbSettings(@JsonProperty("ServiceAccessRoleArn") String serviceAccessRoleArn) {
+        this.serviceAccessRoleArn = serviceAccessRoleArn;
+  }
 }

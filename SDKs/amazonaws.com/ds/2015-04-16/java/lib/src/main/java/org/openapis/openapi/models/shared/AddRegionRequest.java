@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddRegionRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public AddRegionRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -16,6 +17,7 @@ public class AddRegionRequest {
     
     @JsonProperty("RegionName")
     public String regionName;
+
     public AddRegionRequest withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -26,9 +28,15 @@ public class AddRegionRequest {
      */
     @JsonProperty("VPCSettings")
     public DirectoryVpcSettings vpcSettings;
+
     public AddRegionRequest withVPCSettings(DirectoryVpcSettings vpcSettings) {
         this.vpcSettings = vpcSettings;
         return this;
     }
     
+    public AddRegionRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("RegionName") String regionName, @JsonProperty("VPCSettings") DirectoryVpcSettings vpcSettings) {
+        this.directoryId = directoryId;
+        this.regionName = regionName;
+        this.vpcSettings = vpcSettings;
+  }
 }

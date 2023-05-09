@@ -18,6 +18,7 @@ public class RoboStartingIntent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launcherActivity")
     public java.util.Map<String, Object> launcherActivity;
+
     public RoboStartingIntent withLauncherActivity(java.util.Map<String, Object> launcherActivity) {
         this.launcherActivity = launcherActivity;
         return this;
@@ -29,6 +30,7 @@ public class RoboStartingIntent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startActivity")
     public StartActivityIntent startActivity;
+
     public RoboStartingIntent withStartActivity(StartActivityIntent startActivity) {
         this.startActivity = startActivity;
         return this;
@@ -40,9 +42,11 @@ public class RoboStartingIntent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public String timeout;
+
     public RoboStartingIntent withTimeout(String timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public RoboStartingIntent(){}
 }

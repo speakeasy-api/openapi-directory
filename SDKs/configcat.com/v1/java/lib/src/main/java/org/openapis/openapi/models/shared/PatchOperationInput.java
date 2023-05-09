@@ -12,6 +12,7 @@ public class PatchOperationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public JsonPointerInput from;
+
     public PatchOperationInput withFrom(JsonPointerInput from) {
         this.from = from;
         return this;
@@ -20,6 +21,7 @@ public class PatchOperationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public OperationTypeEnum op;
+
     public PatchOperationInput withOp(OperationTypeEnum op) {
         this.op = op;
         return this;
@@ -28,6 +30,7 @@ public class PatchOperationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public JsonPointerInput path;
+
     public PatchOperationInput withPath(JsonPointerInput path) {
         this.path = path;
         return this;
@@ -36,9 +39,11 @@ public class PatchOperationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public JsonNode value;
+
     public PatchOperationInput withValue(JsonNode value) {
         this.value = value;
         return this;
     }
     
+    public PatchOperationInput(){}
 }

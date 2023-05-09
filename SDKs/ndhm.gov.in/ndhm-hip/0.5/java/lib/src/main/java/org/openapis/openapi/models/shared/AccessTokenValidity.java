@@ -19,6 +19,7 @@ public class AccessTokenValidity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiry")
     public OffsetDateTime expiry;
+
     public AccessTokenValidity withExpiry(OffsetDateTime expiry) {
         this.expiry = expiry;
         return this;
@@ -29,6 +30,7 @@ public class AccessTokenValidity {
      */
     @JsonProperty("limit")
     public Long limit;
+
     public AccessTokenValidity withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -39,6 +41,7 @@ public class AccessTokenValidity {
      */
     @JsonProperty("purpose")
     public PatientAuthPurposeEnum purpose;
+
     public AccessTokenValidity withPurpose(PatientAuthPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
@@ -49,9 +52,16 @@ public class AccessTokenValidity {
      */
     @JsonProperty("requester")
     public PatientAuthRequester requester;
+
     public AccessTokenValidity withRequester(PatientAuthRequester requester) {
         this.requester = requester;
         return this;
     }
     
+    public AccessTokenValidity(@JsonProperty("expiry") OffsetDateTime expiry, @JsonProperty("limit") Long limit, @JsonProperty("purpose") PatientAuthPurposeEnum purpose, @JsonProperty("requester") PatientAuthRequester requester) {
+        this.expiry = expiry;
+        this.limit = limit;
+        this.purpose = purpose;
+        this.requester = requester;
+  }
 }

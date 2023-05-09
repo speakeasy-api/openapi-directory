@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRoomResponse {
@@ -12,6 +13,7 @@ public class GetRoomResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRoomResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetRoomResponse {
     
     
     public String contentType;
+
     public GetRoomResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRoomResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRoomResponse getRoomResponse;
+
     public GetRoomResponse withGetRoomResponse(org.openapis.openapi.models.shared.GetRoomResponse getRoomResponse) {
         this.getRoomResponse = getRoomResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetRoomResponse {
     
     
     public Integer statusCode;
+
     public GetRoomResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetRoomResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRoomResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetRoomResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetRoomResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class GetRoomResponse {
      */
     
     public Object validationException;
+
     public GetRoomResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetRoomResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

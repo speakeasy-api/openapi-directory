@@ -12,9 +12,13 @@ public class PostAssetsVarianceRequestBody3Assets {
      */
     @JsonProperty("assetVolatility")
     public Double assetVolatility;
+
     public PostAssetsVarianceRequestBody3Assets withAssetVolatility(Double assetVolatility) {
         this.assetVolatility = assetVolatility;
         return this;
     }
     
+    public PostAssetsVarianceRequestBody3Assets(@JsonProperty("assetVolatility") Double assetVolatility) {
+        this.assetVolatility = assetVolatility;
+  }
 }

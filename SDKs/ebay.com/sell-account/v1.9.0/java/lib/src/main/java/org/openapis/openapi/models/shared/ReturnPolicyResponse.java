@@ -18,6 +18,7 @@ public class ReturnPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public ReturnPolicyResponse withHref(String href) {
         this.href = href;
         return this;
@@ -29,6 +30,7 @@ public class ReturnPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public ReturnPolicyResponse withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -40,6 +42,7 @@ public class ReturnPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public ReturnPolicyResponse withNext(String next) {
         this.next = next;
         return this;
@@ -51,6 +54,7 @@ public class ReturnPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public ReturnPolicyResponse withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -62,6 +66,7 @@ public class ReturnPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prev")
     public String prev;
+
     public ReturnPolicyResponse withPrev(String prev) {
         this.prev = prev;
         return this;
@@ -73,6 +78,7 @@ public class ReturnPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPolicies")
     public ReturnPolicy[] returnPolicies;
+
     public ReturnPolicyResponse withReturnPolicies(ReturnPolicy[] returnPolicies) {
         this.returnPolicies = returnPolicies;
         return this;
@@ -84,9 +90,11 @@ public class ReturnPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Integer total;
+
     public ReturnPolicyResponse withTotal(Integer total) {
         this.total = total;
         return this;
     }
     
+    public ReturnPolicyResponse(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteCostCategoryDefinitionRequest {
     @JsonProperty("CostCategoryArn")
     public String costCategoryArn;
+
     public DeleteCostCategoryDefinitionRequest withCostCategoryArn(String costCategoryArn) {
         this.costCategoryArn = costCategoryArn;
         return this;
     }
     
+    public DeleteCostCategoryDefinitionRequest(@JsonProperty("CostCategoryArn") String costCategoryArn) {
+        this.costCategoryArn = costCategoryArn;
+  }
 }

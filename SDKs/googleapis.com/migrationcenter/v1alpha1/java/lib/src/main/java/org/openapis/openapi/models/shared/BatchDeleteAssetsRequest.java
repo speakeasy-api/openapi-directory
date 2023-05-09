@@ -18,6 +18,7 @@ public class BatchDeleteAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowMissing")
     public Boolean allowMissing;
+
     public BatchDeleteAssetsRequest withAllowMissing(Boolean allowMissing) {
         this.allowMissing = allowMissing;
         return this;
@@ -29,9 +30,11 @@ public class BatchDeleteAssetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public String[] names;
+
     public BatchDeleteAssetsRequest withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public BatchDeleteAssetsRequest(){}
 }

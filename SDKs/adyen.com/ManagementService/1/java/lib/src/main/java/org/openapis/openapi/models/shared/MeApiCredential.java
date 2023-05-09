@@ -15,6 +15,7 @@ public class MeApiCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public ApiCredentialLinks links;
+
     public MeApiCredential withLinks(ApiCredentialLinks links) {
         this.links = links;
         return this;
@@ -25,6 +26,7 @@ public class MeApiCredential {
      */
     @JsonProperty("active")
     public Boolean active;
+
     public MeApiCredential withActive(Boolean active) {
         this.active = active;
         return this;
@@ -38,6 +40,7 @@ public class MeApiCredential {
      */
     @JsonProperty("allowedIpAddresses")
     public String[] allowedIpAddresses;
+
     public MeApiCredential withAllowedIpAddresses(String[] allowedIpAddresses) {
         this.allowedIpAddresses = allowedIpAddresses;
         return this;
@@ -49,6 +52,7 @@ public class MeApiCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedOrigins")
     public AllowedOrigin[] allowedOrigins;
+
     public MeApiCredential withAllowedOrigins(AllowedOrigin[] allowedOrigins) {
         this.allowedOrigins = allowedOrigins;
         return this;
@@ -61,6 +65,7 @@ public class MeApiCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedMerchantAccounts")
     public String[] associatedMerchantAccounts;
+
     public MeApiCredential withAssociatedMerchantAccounts(String[] associatedMerchantAccounts) {
         this.associatedMerchantAccounts = associatedMerchantAccounts;
         return this;
@@ -71,6 +76,7 @@ public class MeApiCredential {
      */
     @JsonProperty("clientKey")
     public String clientKey;
+
     public MeApiCredential withClientKey(String clientKey) {
         this.clientKey = clientKey;
         return this;
@@ -82,6 +88,7 @@ public class MeApiCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyName")
     public String companyName;
+
     public MeApiCredential withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -93,6 +100,7 @@ public class MeApiCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MeApiCredential withDescription(String description) {
         this.description = description;
         return this;
@@ -103,6 +111,7 @@ public class MeApiCredential {
      */
     @JsonProperty("id")
     public String id;
+
     public MeApiCredential withId(String id) {
         this.id = id;
         return this;
@@ -113,6 +122,7 @@ public class MeApiCredential {
      */
     @JsonProperty("roles")
     public String[] roles;
+
     public MeApiCredential withRoles(String[] roles) {
         this.roles = roles;
         return this;
@@ -123,9 +133,18 @@ public class MeApiCredential {
      */
     @JsonProperty("username")
     public String username;
+
     public MeApiCredential withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public MeApiCredential(@JsonProperty("active") Boolean active, @JsonProperty("allowedIpAddresses") String[] allowedIpAddresses, @JsonProperty("clientKey") String clientKey, @JsonProperty("id") String id, @JsonProperty("roles") String[] roles, @JsonProperty("username") String username) {
+        this.active = active;
+        this.allowedIpAddresses = allowedIpAddresses;
+        this.clientKey = clientKey;
+        this.id = id;
+        this.roles = roles;
+        this.username = username;
+  }
 }

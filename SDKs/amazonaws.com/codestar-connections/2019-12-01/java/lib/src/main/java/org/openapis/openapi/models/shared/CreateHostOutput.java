@@ -15,6 +15,7 @@ public class CreateHostOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostArn")
     public String hostArn;
+
     public CreateHostOutput withHostArn(String hostArn) {
         this.hostArn = hostArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateHostOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateHostOutput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateHostOutput(){}
 }

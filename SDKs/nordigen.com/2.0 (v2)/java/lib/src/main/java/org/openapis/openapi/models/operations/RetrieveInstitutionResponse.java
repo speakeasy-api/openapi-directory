@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrieveInstitutionResponse {
     
     public String contentType;
+
     public RetrieveInstitutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -18,14 +20,16 @@ public class RetrieveInstitutionResponse {
      * Retrieve institution by id
      */
     
-    public org.openapis.openapi.models.shared.Integration integration;
-    public RetrieveInstitutionResponse withIntegration(org.openapis.openapi.models.shared.Integration integration) {
-        this.integration = integration;
+    public org.openapis.openapi.models.shared.IntegrationRetrieve integrationRetrieve;
+
+    public RetrieveInstitutionResponse withIntegrationRetrieve(org.openapis.openapi.models.shared.IntegrationRetrieve integrationRetrieve) {
+        this.integrationRetrieve = integrationRetrieve;
         return this;
     }
     
     
     public Integer statusCode;
+
     public RetrieveInstitutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RetrieveInstitutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrieveInstitutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class RetrieveInstitutionResponse {
      */
     
     public java.util.Map<String, Object> retrieveInstitution401ApplicationJSONObject;
+
     public RetrieveInstitutionResponse withRetrieveInstitution401ApplicationJSONObject(java.util.Map<String, Object> retrieveInstitution401ApplicationJSONObject) {
         this.retrieveInstitution401ApplicationJSONObject = retrieveInstitution401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RetrieveInstitutionResponse {
      */
     
     public java.util.Map<String, Object> retrieveInstitution403ApplicationJSONObject;
+
     public RetrieveInstitutionResponse withRetrieveInstitution403ApplicationJSONObject(java.util.Map<String, Object> retrieveInstitution403ApplicationJSONObject) {
         this.retrieveInstitution403ApplicationJSONObject = retrieveInstitution403ApplicationJSONObject;
         return this;
@@ -63,9 +70,25 @@ public class RetrieveInstitutionResponse {
      */
     
     public java.util.Map<String, Object> retrieveInstitution404ApplicationJSONObject;
+
     public RetrieveInstitutionResponse withRetrieveInstitution404ApplicationJSONObject(java.util.Map<String, Object> retrieveInstitution404ApplicationJSONObject) {
         this.retrieveInstitution404ApplicationJSONObject = retrieveInstitution404ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Nordigen rate limit exceeded
+     */
+    
+    public java.util.Map<String, Object> retrieveInstitution429ApplicationJSONObject;
+
+    public RetrieveInstitutionResponse withRetrieveInstitution429ApplicationJSONObject(java.util.Map<String, Object> retrieveInstitution429ApplicationJSONObject) {
+        this.retrieveInstitution429ApplicationJSONObject = retrieveInstitution429ApplicationJSONObject;
+        return this;
+    }
+    
+    public RetrieveInstitutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

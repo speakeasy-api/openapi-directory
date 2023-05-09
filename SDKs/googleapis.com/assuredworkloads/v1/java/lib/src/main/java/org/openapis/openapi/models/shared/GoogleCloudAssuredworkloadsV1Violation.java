@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudAssuredworkloadsV1Violation - Workload monitoring Violation. Next Id: 22
+ * GoogleCloudAssuredworkloadsV1Violation - Workload monitoring Violation. Next Id: 27
  */
 public class GoogleCloudAssuredworkloadsV1Violation {
     /**
@@ -18,17 +18,19 @@ public class GoogleCloudAssuredworkloadsV1Violation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acknowledged")
     public Boolean acknowledged;
+
     public GoogleCloudAssuredworkloadsV1Violation withAcknowledged(Boolean acknowledged) {
         this.acknowledged = acknowledged;
         return this;
     }
     
     /**
-     * Optional. Timestamp when this violation was acknowledged last. This will be absent when acknowledged field is marked as false.
+     * Optional. Timestamp when this violation was acknowledged first. Check exception_contexts to find the last time the violation was acknowledged when there are more than one violations. This field will be absent when acknowledged field is marked as false.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acknowledgementTime")
     public String acknowledgementTime;
+
     public GoogleCloudAssuredworkloadsV1Violation withAcknowledgementTime(String acknowledgementTime) {
         this.acknowledgementTime = acknowledgementTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudAssuredworkloadsV1Violation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditLogLink")
     public String auditLogLink;
+
     public GoogleCloudAssuredworkloadsV1Violation withAuditLogLink(String auditLogLink) {
         this.auditLogLink = auditLogLink;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudAssuredworkloadsV1Violation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beginTime")
     public String beginTime;
+
     public GoogleCloudAssuredworkloadsV1Violation withBeginTime(String beginTime) {
         this.beginTime = beginTime;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudAssuredworkloadsV1Violation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public GoogleCloudAssuredworkloadsV1Violation withCategory(String category) {
         this.category = category;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudAssuredworkloadsV1Violation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudAssuredworkloadsV1Violation withDescription(String description) {
         this.description = description;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudAssuredworkloadsV1Violation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionAuditLogLink")
     public String exceptionAuditLogLink;
+
     public GoogleCloudAssuredworkloadsV1Violation withExceptionAuditLogLink(String exceptionAuditLogLink) {
         this.exceptionAuditLogLink = exceptionAuditLogLink;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudAssuredworkloadsV1Violation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudAssuredworkloadsV1Violation withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudAssuredworkloadsV1Violation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonCompliantOrgPolicy")
     public String nonCompliantOrgPolicy;
+
     public GoogleCloudAssuredworkloadsV1Violation withNonCompliantOrgPolicy(String nonCompliantOrgPolicy) {
         this.nonCompliantOrgPolicy = nonCompliantOrgPolicy;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudAssuredworkloadsV1Violation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgPolicyConstraint")
     public String orgPolicyConstraint;
+
     public GoogleCloudAssuredworkloadsV1Violation withOrgPolicyConstraint(String orgPolicyConstraint) {
         this.orgPolicyConstraint = orgPolicyConstraint;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudAssuredworkloadsV1Violation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remediation")
     public GoogleCloudAssuredworkloadsV1ViolationRemediation remediation;
+
     public GoogleCloudAssuredworkloadsV1Violation withRemediation(GoogleCloudAssuredworkloadsV1ViolationRemediation remediation) {
         this.remediation = remediation;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudAssuredworkloadsV1Violation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolveTime")
     public String resolveTime;
+
     public GoogleCloudAssuredworkloadsV1Violation withResolveTime(String resolveTime) {
         this.resolveTime = resolveTime;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudAssuredworkloadsV1Violation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudAssuredworkloadsV1ViolationStateEnum state;
+
     public GoogleCloudAssuredworkloadsV1Violation withState(GoogleCloudAssuredworkloadsV1ViolationStateEnum state) {
         this.state = state;
         return this;
@@ -161,9 +174,11 @@ public class GoogleCloudAssuredworkloadsV1Violation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudAssuredworkloadsV1Violation withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudAssuredworkloadsV1Violation(){}
 }

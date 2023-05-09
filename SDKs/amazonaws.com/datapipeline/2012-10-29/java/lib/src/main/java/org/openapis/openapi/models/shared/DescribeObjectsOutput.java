@@ -15,6 +15,7 @@ public class DescribeObjectsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMoreResults")
     public Boolean hasMoreResults;
+
     public DescribeObjectsOutput withHasMoreResults(Boolean hasMoreResults) {
         this.hasMoreResults = hasMoreResults;
         return this;
@@ -23,6 +24,7 @@ public class DescribeObjectsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marker")
     public String marker;
+
     public DescribeObjectsOutput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,9 +32,13 @@ public class DescribeObjectsOutput {
     
     @JsonProperty("pipelineObjects")
     public PipelineObject[] pipelineObjects;
+
     public DescribeObjectsOutput withPipelineObjects(PipelineObject[] pipelineObjects) {
         this.pipelineObjects = pipelineObjects;
         return this;
     }
     
+    public DescribeObjectsOutput(@JsonProperty("pipelineObjects") PipelineObject[] pipelineObjects) {
+        this.pipelineObjects = pipelineObjects;
+  }
 }

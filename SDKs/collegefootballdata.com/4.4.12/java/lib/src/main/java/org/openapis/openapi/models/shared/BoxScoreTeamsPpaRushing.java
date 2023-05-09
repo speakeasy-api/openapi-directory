@@ -12,6 +12,7 @@ public class BoxScoreTeamsPpaRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quarter1")
     public Double quarter1;
+
     public BoxScoreTeamsPpaRushing withQuarter1(Double quarter1) {
         this.quarter1 = quarter1;
         return this;
@@ -20,6 +21,7 @@ public class BoxScoreTeamsPpaRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quarter2")
     public Double quarter2;
+
     public BoxScoreTeamsPpaRushing withQuarter2(Double quarter2) {
         this.quarter2 = quarter2;
         return this;
@@ -28,6 +30,7 @@ public class BoxScoreTeamsPpaRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quarter3")
     public Double quarter3;
+
     public BoxScoreTeamsPpaRushing withQuarter3(Double quarter3) {
         this.quarter3 = quarter3;
         return this;
@@ -36,6 +39,7 @@ public class BoxScoreTeamsPpaRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quarter4")
     public Double quarter4;
+
     public BoxScoreTeamsPpaRushing withQuarter4(Double quarter4) {
         this.quarter4 = quarter4;
         return this;
@@ -44,9 +48,11 @@ public class BoxScoreTeamsPpaRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public BoxScoreTeamsPpaRushing withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public BoxScoreTeamsPpaRushing(){}
 }

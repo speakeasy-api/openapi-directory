@@ -12,6 +12,7 @@ public class PrivateProjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public PrivateProjectsListRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class PrivateProjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public PrivateProjectsListRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -32,6 +34,7 @@ public class PrivateProjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public PrivateProjectsListOrderEnum order;
+
     public PrivateProjectsListRequest withOrder(PrivateProjectsListOrderEnum order) {
         this.order = order;
         return this;
@@ -39,6 +42,7 @@ public class PrivateProjectsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_direction")
     public PrivateProjectsListOrderDirectionEnum orderDirection;
+
     public PrivateProjectsListRequest withOrderDirection(PrivateProjectsListOrderDirectionEnum orderDirection) {
         this.orderDirection = orderDirection;
         return this;
@@ -49,6 +53,7 @@ public class PrivateProjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public PrivateProjectsListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -59,6 +64,7 @@ public class PrivateProjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public PrivateProjectsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -69,6 +75,7 @@ public class PrivateProjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roles")
     public String roles;
+
     public PrivateProjectsListRequest withRoles(String roles) {
         this.roles = roles;
         return this;
@@ -79,9 +86,11 @@ public class PrivateProjectsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storage")
     public PrivateProjectsListStorageEnum storage;
+
     public PrivateProjectsListRequest withStorage(PrivateProjectsListStorageEnum storage) {
         this.storage = storage;
         return this;
     }
     
+    public PrivateProjectsListRequest(){}
 }

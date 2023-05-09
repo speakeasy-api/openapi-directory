@@ -15,6 +15,7 @@ public class GSuitePrincipal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gsuiteDomain")
     public Boolean gsuiteDomain;
+
     public GSuitePrincipal withGsuiteDomain(Boolean gsuiteDomain) {
         this.gsuiteDomain = gsuiteDomain;
         return this;
@@ -26,6 +27,7 @@ public class GSuitePrincipal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gsuiteGroupEmail")
     public String gsuiteGroupEmail;
+
     public GSuitePrincipal withGsuiteGroupEmail(String gsuiteGroupEmail) {
         this.gsuiteGroupEmail = gsuiteGroupEmail;
         return this;
@@ -37,9 +39,11 @@ public class GSuitePrincipal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gsuiteUserEmail")
     public String gsuiteUserEmail;
+
     public GSuitePrincipal withGsuiteUserEmail(String gsuiteUserEmail) {
         this.gsuiteUserEmail = gsuiteUserEmail;
         return this;
     }
     
+    public GSuitePrincipal(){}
 }

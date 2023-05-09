@@ -15,6 +15,7 @@ public class OperationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public OperationSummary withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class OperationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public OperationStatusEnum status;
+
     public OperationSummary withStatus(OperationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public OperationSummary(){}
 }

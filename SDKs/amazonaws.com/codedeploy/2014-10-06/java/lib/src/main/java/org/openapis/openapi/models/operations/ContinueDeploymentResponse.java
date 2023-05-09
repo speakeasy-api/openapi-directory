@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContinueDeploymentResponse {
     
     public String contentType;
+
     public ContinueDeploymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContinueDeploymentResponse {
      */
     
     public Object deploymentAlreadyCompletedException;
+
     public ContinueDeploymentResponse withDeploymentAlreadyCompletedException(Object deploymentAlreadyCompletedException) {
         this.deploymentAlreadyCompletedException = deploymentAlreadyCompletedException;
         return this;
@@ -29,6 +32,7 @@ public class ContinueDeploymentResponse {
      */
     
     public Object deploymentDoesNotExistException;
+
     public ContinueDeploymentResponse withDeploymentDoesNotExistException(Object deploymentDoesNotExistException) {
         this.deploymentDoesNotExistException = deploymentDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class ContinueDeploymentResponse {
      */
     
     public Object deploymentIdRequiredException;
+
     public ContinueDeploymentResponse withDeploymentIdRequiredException(Object deploymentIdRequiredException) {
         this.deploymentIdRequiredException = deploymentIdRequiredException;
         return this;
@@ -49,6 +54,7 @@ public class ContinueDeploymentResponse {
      */
     
     public Object deploymentIsNotInReadyStateException;
+
     public ContinueDeploymentResponse withDeploymentIsNotInReadyStateException(Object deploymentIsNotInReadyStateException) {
         this.deploymentIsNotInReadyStateException = deploymentIsNotInReadyStateException;
         return this;
@@ -59,6 +65,7 @@ public class ContinueDeploymentResponse {
      */
     
     public Object invalidDeploymentIdException;
+
     public ContinueDeploymentResponse withInvalidDeploymentIdException(Object invalidDeploymentIdException) {
         this.invalidDeploymentIdException = invalidDeploymentIdException;
         return this;
@@ -69,6 +76,7 @@ public class ContinueDeploymentResponse {
      */
     
     public Object invalidDeploymentStatusException;
+
     public ContinueDeploymentResponse withInvalidDeploymentStatusException(Object invalidDeploymentStatusException) {
         this.invalidDeploymentStatusException = invalidDeploymentStatusException;
         return this;
@@ -79,6 +87,7 @@ public class ContinueDeploymentResponse {
      */
     
     public Object invalidDeploymentWaitTypeException;
+
     public ContinueDeploymentResponse withInvalidDeploymentWaitTypeException(Object invalidDeploymentWaitTypeException) {
         this.invalidDeploymentWaitTypeException = invalidDeploymentWaitTypeException;
         return this;
@@ -86,6 +95,7 @@ public class ContinueDeploymentResponse {
     
     
     public Integer statusCode;
+
     public ContinueDeploymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ContinueDeploymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContinueDeploymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class ContinueDeploymentResponse {
      */
     
     public Object unsupportedActionForDeploymentTypeException;
+
     public ContinueDeploymentResponse withUnsupportedActionForDeploymentTypeException(Object unsupportedActionForDeploymentTypeException) {
         this.unsupportedActionForDeploymentTypeException = unsupportedActionForDeploymentTypeException;
         return this;
     }
     
+    public ContinueDeploymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

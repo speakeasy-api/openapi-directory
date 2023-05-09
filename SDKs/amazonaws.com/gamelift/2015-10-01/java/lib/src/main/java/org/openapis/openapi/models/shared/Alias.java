@@ -20,6 +20,7 @@ public class Alias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AliasArn")
     public String aliasArn;
+
     public Alias withAliasArn(String aliasArn) {
         this.aliasArn = aliasArn;
         return this;
@@ -28,6 +29,7 @@ public class Alias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AliasId")
     public String aliasId;
+
     public Alias withAliasId(String aliasId) {
         this.aliasId = aliasId;
         return this;
@@ -38,6 +40,7 @@ public class Alias {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Alias withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -46,6 +49,7 @@ public class Alias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Alias withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +60,7 @@ public class Alias {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public Alias withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -64,6 +69,7 @@ public class Alias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Alias withName(String name) {
         this.name = name;
         return this;
@@ -72,9 +78,11 @@ public class Alias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingStrategy")
     public RoutingStrategy routingStrategy;
+
     public Alias withRoutingStrategy(RoutingStrategy routingStrategy) {
         this.routingStrategy = routingStrategy;
         return this;
     }
     
+    public Alias(){}
 }

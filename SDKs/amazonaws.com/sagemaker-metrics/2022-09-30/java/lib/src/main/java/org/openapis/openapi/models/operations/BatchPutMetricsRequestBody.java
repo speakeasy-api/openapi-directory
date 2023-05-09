@@ -12,6 +12,7 @@ public class BatchPutMetricsRequestBody {
      */
     @JsonProperty("MetricData")
     public org.openapis.openapi.models.shared.RawMetricData[] metricData;
+
     public BatchPutMetricsRequestBody withMetricData(org.openapis.openapi.models.shared.RawMetricData[] metricData) {
         this.metricData = metricData;
         return this;
@@ -22,9 +23,14 @@ public class BatchPutMetricsRequestBody {
      */
     @JsonProperty("TrialComponentName")
     public String trialComponentName;
+
     public BatchPutMetricsRequestBody withTrialComponentName(String trialComponentName) {
         this.trialComponentName = trialComponentName;
         return this;
     }
     
+    public BatchPutMetricsRequestBody(@JsonProperty("MetricData") org.openapis.openapi.models.shared.RawMetricData[] metricData, @JsonProperty("TrialComponentName") String trialComponentName) {
+        this.metricData = metricData;
+        this.trialComponentName = trialComponentName;
+  }
 }

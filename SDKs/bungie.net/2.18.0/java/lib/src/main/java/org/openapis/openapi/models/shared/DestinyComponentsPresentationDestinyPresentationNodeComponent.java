@@ -12,6 +12,7 @@ public class DestinyComponentsPresentationDestinyPresentationNodeComponent {
      */
     
     public Integer completionValue;
+
     public DestinyComponentsPresentationDestinyPresentationNodeComponent withCompletionValue(Integer completionValue) {
         this.completionValue = completionValue;
         return this;
@@ -22,6 +23,7 @@ public class DestinyComponentsPresentationDestinyPresentationNodeComponent {
      */
     
     public DestinyComponentsPresentationDestinyPresentationNodeComponentObjective objective;
+
     public DestinyComponentsPresentationDestinyPresentationNodeComponent withObjective(DestinyComponentsPresentationDestinyPresentationNodeComponentObjective objective) {
         this.objective = objective;
         return this;
@@ -32,6 +34,7 @@ public class DestinyComponentsPresentationDestinyPresentationNodeComponent {
      */
     
     public Integer progressValue;
+
     public DestinyComponentsPresentationDestinyPresentationNodeComponent withProgressValue(Integer progressValue) {
         this.progressValue = progressValue;
         return this;
@@ -42,6 +45,7 @@ public class DestinyComponentsPresentationDestinyPresentationNodeComponent {
      */
     
     public Integer recordCategoryScore;
+
     public DestinyComponentsPresentationDestinyPresentationNodeComponent withRecordCategoryScore(Integer recordCategoryScore) {
         this.recordCategoryScore = recordCategoryScore;
         return this;
@@ -49,9 +53,11 @@ public class DestinyComponentsPresentationDestinyPresentationNodeComponent {
     
     
     public Integer state;
+
     public DestinyComponentsPresentationDestinyPresentationNodeComponent withState(Integer state) {
         this.state = state;
         return this;
     }
     
+    public DestinyComponentsPresentationDestinyPresentationNodeComponent(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAccessTokenResponse {
@@ -12,6 +13,7 @@ public class CreateAccessTokenResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAccessTokenResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateAccessTokenResponse {
      */
     
     public Object conflictException;
+
     public CreateAccessTokenResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateAccessTokenResponse {
     
     
     public String contentType;
+
     public CreateAccessTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateAccessTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAccessTokenResponse createAccessTokenResponse;
+
     public CreateAccessTokenResponse withCreateAccessTokenResponse(org.openapis.openapi.models.shared.CreateAccessTokenResponse createAccessTokenResponse) {
         this.createAccessTokenResponse = createAccessTokenResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateAccessTokenResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAccessTokenResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAccessTokenResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateAccessTokenResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateAccessTokenResponse {
     
     
     public Integer statusCode;
+
     public CreateAccessTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateAccessTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAccessTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateAccessTokenResponse {
      */
     
     public Object throttlingException;
+
     public CreateAccessTokenResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateAccessTokenResponse {
      */
     
     public Object validationException;
+
     public CreateAccessTokenResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAccessTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

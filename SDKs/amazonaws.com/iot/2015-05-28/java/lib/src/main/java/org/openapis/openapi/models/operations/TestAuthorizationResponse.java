@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestAuthorizationResponse {
     
     public String contentType;
+
     public TestAuthorizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TestAuthorizationResponse {
      */
     
     public Object internalFailureException;
+
     public TestAuthorizationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class TestAuthorizationResponse {
      */
     
     public Object invalidRequestException;
+
     public TestAuthorizationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class TestAuthorizationResponse {
      */
     
     public Object limitExceededException;
+
     public TestAuthorizationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class TestAuthorizationResponse {
     
     
     public Integer statusCode;
+
     public TestAuthorizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class TestAuthorizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestAuthorizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class TestAuthorizationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public TestAuthorizationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class TestAuthorizationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public TestAuthorizationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class TestAuthorizationResponse {
      */
     
     public org.openapis.openapi.models.shared.TestAuthorizationResponse testAuthorizationResponse;
+
     public TestAuthorizationResponse withTestAuthorizationResponse(org.openapis.openapi.models.shared.TestAuthorizationResponse testAuthorizationResponse) {
         this.testAuthorizationResponse = testAuthorizationResponse;
         return this;
@@ -93,6 +103,7 @@ public class TestAuthorizationResponse {
      */
     
     public Object throttlingException;
+
     public TestAuthorizationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class TestAuthorizationResponse {
      */
     
     public Object unauthorizedException;
+
     public TestAuthorizationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public TestAuthorizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

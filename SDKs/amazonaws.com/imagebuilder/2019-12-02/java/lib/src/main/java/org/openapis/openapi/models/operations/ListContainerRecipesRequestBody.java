@@ -15,28 +15,31 @@ public class ListContainerRecipesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.Filter[] filters;
+
     public ListContainerRecipesRequestBody withFilters(org.openapis.openapi.models.shared.Filter[] filters) {
         this.filters = filters;
         return this;
     }
     
     /**
-     * The maximum number of results to return in the list.
+     * The maximum items to return in a request.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListContainerRecipesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     
     /**
-     * Provides a token for pagination, which determines where to begin the next set of results when the current set reaches the maximum for one request.
+     * A token to specify where to start paginating. This is the NextToken from a previously truncated response.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListContainerRecipesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,9 +51,11 @@ public class ListContainerRecipesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public ListContainerRecipesRequestBodyOwnerEnum owner;
+
     public ListContainerRecipesRequestBody withOwner(ListContainerRecipesRequestBodyOwnerEnum owner) {
         this.owner = owner;
         return this;
     }
     
+    public ListContainerRecipesRequestBody(){}
 }

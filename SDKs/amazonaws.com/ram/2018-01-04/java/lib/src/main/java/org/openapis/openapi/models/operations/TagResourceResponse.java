@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagResourceResponse {
     
     public String contentType;
+
     public TagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TagResourceResponse {
      */
     
     public Object invalidParameterException;
+
     public TagResourceResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class TagResourceResponse {
      */
     
     public Object malformedArnException;
+
     public TagResourceResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -36,6 +40,7 @@ public class TagResourceResponse {
     
     
     public Integer statusCode;
+
     public TagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class TagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class TagResourceResponse {
      */
     
     public Object resourceArnNotFoundException;
+
     public TagResourceResponse withResourceArnNotFoundException(Object resourceArnNotFoundException) {
         this.resourceArnNotFoundException = resourceArnNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class TagResourceResponse {
      */
     
     public Object serverInternalException;
+
     public TagResourceResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -73,6 +81,7 @@ public class TagResourceResponse {
      */
     
     public Object serviceUnavailableException;
+
     public TagResourceResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class TagResourceResponse {
      */
     
     public Object tagLimitExceededException;
+
     public TagResourceResponse withTagLimitExceededException(Object tagLimitExceededException) {
         this.tagLimitExceededException = tagLimitExceededException;
         return this;
@@ -93,6 +103,7 @@ public class TagResourceResponse {
      */
     
     public Object tagPolicyViolationException;
+
     public TagResourceResponse withTagPolicyViolationException(Object tagPolicyViolationException) {
         this.tagPolicyViolationException = tagPolicyViolationException;
         return this;
@@ -103,6 +114,7 @@ public class TagResourceResponse {
      */
     
     public java.util.Map<String, Object> tagResourceResponse;
+
     public TagResourceResponse withTagResourceResponse(java.util.Map<String, Object> tagResourceResponse) {
         this.tagResourceResponse = tagResourceResponse;
         return this;
@@ -113,9 +125,14 @@ public class TagResourceResponse {
      */
     
     public Object unknownResourceException;
+
     public TagResourceResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public TagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

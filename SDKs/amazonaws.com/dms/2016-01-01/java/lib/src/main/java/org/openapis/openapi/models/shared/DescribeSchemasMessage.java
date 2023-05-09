@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeSchemasMessage {
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public DescribeSchemasMessage withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
@@ -22,6 +23,7 @@ public class DescribeSchemasMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeSchemasMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,9 +32,13 @@ public class DescribeSchemasMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRecords")
     public Long maxRecords;
+
     public DescribeSchemasMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeSchemasMessage(@JsonProperty("EndpointArn") String endpointArn) {
+        this.endpointArn = endpointArn;
+  }
 }

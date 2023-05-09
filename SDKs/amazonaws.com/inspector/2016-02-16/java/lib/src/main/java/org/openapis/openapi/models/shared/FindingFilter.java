@@ -15,6 +15,7 @@ public class FindingFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentIds")
     public String[] agentIds;
+
     public FindingFilter withAgentIds(String[] agentIds) {
         this.agentIds = agentIds;
         return this;
@@ -23,6 +24,7 @@ public class FindingFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Attribute[] attributes;
+
     public FindingFilter withAttributes(Attribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -31,6 +33,7 @@ public class FindingFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScalingGroups")
     public String[] autoScalingGroups;
+
     public FindingFilter withAutoScalingGroups(String[] autoScalingGroups) {
         this.autoScalingGroups = autoScalingGroups;
         return this;
@@ -39,6 +42,7 @@ public class FindingFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimeRange")
     public TimestampRange creationTimeRange;
+
     public FindingFilter withCreationTimeRange(TimestampRange creationTimeRange) {
         this.creationTimeRange = creationTimeRange;
         return this;
@@ -47,6 +51,7 @@ public class FindingFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleNames")
     public String[] ruleNames;
+
     public FindingFilter withRuleNames(String[] ruleNames) {
         this.ruleNames = ruleNames;
         return this;
@@ -55,6 +60,7 @@ public class FindingFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesPackageArns")
     public String[] rulesPackageArns;
+
     public FindingFilter withRulesPackageArns(String[] rulesPackageArns) {
         this.rulesPackageArns = rulesPackageArns;
         return this;
@@ -63,6 +69,7 @@ public class FindingFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severities")
     public SeverityEnum[] severities;
+
     public FindingFilter withSeverities(SeverityEnum[] severities) {
         this.severities = severities;
         return this;
@@ -71,9 +78,11 @@ public class FindingFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAttributes")
     public Attribute[] userAttributes;
+
     public FindingFilter withUserAttributes(Attribute[] userAttributes) {
         this.userAttributes = userAttributes;
         return this;
     }
     
+    public FindingFilter(){}
 }

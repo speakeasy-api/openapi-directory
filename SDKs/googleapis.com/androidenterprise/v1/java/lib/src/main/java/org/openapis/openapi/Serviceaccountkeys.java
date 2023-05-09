@@ -59,10 +59,8 @@ public class Serviceaccountkeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysDeleteResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysDeleteResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Serviceaccountkeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysInsertResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysInsertResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysInsertResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysInsertResponse(contentType, httpRes.statusCode()) {{
             serviceAccountKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Serviceaccountkeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysListResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysListResponse(contentType, httpRes.statusCode()) {{
             serviceAccountKeysListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

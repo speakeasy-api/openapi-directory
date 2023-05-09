@@ -18,6 +18,7 @@ public class MetadataRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataValues")
     public Value[] metadataValues;
+
     public MetadataRecord withMetadataValues(Value[] metadataValues) {
         this.metadataValues = metadataValues;
         return this;
@@ -29,9 +30,11 @@ public class MetadataRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Value value;
+
     public MetadataRecord withValue(Value value) {
         this.value = value;
         return this;
     }
     
+    public MetadataRecord(){}
 }

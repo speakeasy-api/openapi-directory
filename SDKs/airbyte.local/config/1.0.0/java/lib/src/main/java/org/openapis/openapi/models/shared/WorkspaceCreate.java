@@ -12,6 +12,7 @@ public class WorkspaceCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("anonymousDataCollection")
     public Boolean anonymousDataCollection;
+
     public WorkspaceCreate withAnonymousDataCollection(Boolean anonymousDataCollection) {
         this.anonymousDataCollection = anonymousDataCollection;
         return this;
@@ -20,6 +21,7 @@ public class WorkspaceCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultGeography")
     public GeographyEnum defaultGeography;
+
     public WorkspaceCreate withDefaultGeography(GeographyEnum defaultGeography) {
         this.defaultGeography = defaultGeography;
         return this;
@@ -28,6 +30,7 @@ public class WorkspaceCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displaySetupWizard")
     public Boolean displaySetupWizard;
+
     public WorkspaceCreate withDisplaySetupWizard(Boolean displaySetupWizard) {
         this.displaySetupWizard = displaySetupWizard;
         return this;
@@ -36,6 +39,7 @@ public class WorkspaceCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public WorkspaceCreate withEmail(String email) {
         this.email = email;
         return this;
@@ -43,6 +47,7 @@ public class WorkspaceCreate {
     
     @JsonProperty("name")
     public String name;
+
     public WorkspaceCreate withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +56,7 @@ public class WorkspaceCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("news")
     public Boolean news;
+
     public WorkspaceCreate withNews(Boolean news) {
         this.news = news;
         return this;
@@ -59,6 +65,7 @@ public class WorkspaceCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifications")
     public Notification[] notifications;
+
     public WorkspaceCreate withNotifications(Notification[] notifications) {
         this.notifications = notifications;
         return this;
@@ -67,6 +74,7 @@ public class WorkspaceCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityUpdates")
     public Boolean securityUpdates;
+
     public WorkspaceCreate withSecurityUpdates(Boolean securityUpdates) {
         this.securityUpdates = securityUpdates;
         return this;
@@ -75,9 +83,13 @@ public class WorkspaceCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookConfigs")
     public WebhookConfigWrite[] webhookConfigs;
+
     public WorkspaceCreate withWebhookConfigs(WebhookConfigWrite[] webhookConfigs) {
         this.webhookConfigs = webhookConfigs;
         return this;
     }
     
+    public WorkspaceCreate(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

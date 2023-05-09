@@ -15,6 +15,7 @@ public class QuietTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("End")
     public String end;
+
     public QuietTime withEnd(String end) {
         this.end = end;
         return this;
@@ -23,9 +24,11 @@ public class QuietTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Start")
     public String start;
+
     public QuietTime withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public QuietTime(){}
 }

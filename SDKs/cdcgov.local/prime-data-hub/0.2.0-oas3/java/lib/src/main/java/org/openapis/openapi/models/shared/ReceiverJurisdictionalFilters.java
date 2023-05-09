@@ -18,6 +18,7 @@ public class ReceiverJurisdictionalFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doesNotMatch")
     public Boolean doesNotMatch;
+
     public ReceiverJurisdictionalFilters withDoesNotMatch(Boolean doesNotMatch) {
         this.doesNotMatch = doesNotMatch;
         return this;
@@ -29,6 +30,7 @@ public class ReceiverJurisdictionalFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchFields")
     public ReceiverJurisdictionalFiltersMatchFieldsEnum matchFields;
+
     public ReceiverJurisdictionalFilters withMatchFields(ReceiverJurisdictionalFiltersMatchFieldsEnum matchFields) {
         this.matchFields = matchFields;
         return this;
@@ -40,9 +42,11 @@ public class ReceiverJurisdictionalFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchValues")
     public String[] matchValues;
+
     public ReceiverJurisdictionalFilters withMatchValues(String[] matchValues) {
         this.matchValues = matchValues;
         return this;
     }
     
+    public ReceiverJurisdictionalFilters(){}
 }

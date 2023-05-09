@@ -15,6 +15,7 @@ public class JobScheduleFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailySchedule")
     public java.util.Map<String, Object> dailySchedule;
+
     public JobScheduleFrequency withDailySchedule(java.util.Map<String, Object> dailySchedule) {
         this.dailySchedule = dailySchedule;
         return this;
@@ -23,6 +24,7 @@ public class JobScheduleFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monthlySchedule")
     public MonthlySchedule monthlySchedule;
+
     public JobScheduleFrequency withMonthlySchedule(MonthlySchedule monthlySchedule) {
         this.monthlySchedule = monthlySchedule;
         return this;
@@ -31,9 +33,11 @@ public class JobScheduleFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weeklySchedule")
     public WeeklySchedule weeklySchedule;
+
     public JobScheduleFrequency withWeeklySchedule(WeeklySchedule weeklySchedule) {
         this.weeklySchedule = weeklySchedule;
         return this;
     }
     
+    public JobScheduleFrequency(){}
 }

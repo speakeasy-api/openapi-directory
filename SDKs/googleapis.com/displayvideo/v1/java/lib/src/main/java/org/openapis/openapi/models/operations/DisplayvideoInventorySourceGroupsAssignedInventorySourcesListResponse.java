@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesListResponse {
     
     public String contentType;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesListRespon
      */
     
     public org.openapis.openapi.models.shared.ListAssignedInventorySourcesResponse listAssignedInventorySourcesResponse;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesListResponse withListAssignedInventorySourcesResponse(org.openapis.openapi.models.shared.ListAssignedInventorySourcesResponse listAssignedInventorySourcesResponse) {
         this.listAssignedInventorySourcesResponse = listAssignedInventorySourcesResponse;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesListRespon
     
     
     public Integer statusCode;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesListRespon
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoInventorySourceGroupsAssignedInventorySourcesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

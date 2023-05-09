@@ -15,6 +15,7 @@ public class SearchQuantumTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchQuantumTasksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class SearchQuantumTasksResponse {
     
     @JsonProperty("quantumTasks")
     public QuantumTaskSummary[] quantumTasks;
+
     public SearchQuantumTasksResponse withQuantumTasks(QuantumTaskSummary[] quantumTasks) {
         this.quantumTasks = quantumTasks;
         return this;
     }
     
+    public SearchQuantumTasksResponse(@JsonProperty("quantumTasks") QuantumTaskSummary[] quantumTasks) {
+        this.quantumTasks = quantumTasks;
+  }
 }

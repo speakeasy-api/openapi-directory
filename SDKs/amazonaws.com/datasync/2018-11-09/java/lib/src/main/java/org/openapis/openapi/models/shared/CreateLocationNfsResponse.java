@@ -15,9 +15,11 @@ public class CreateLocationNfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public CreateLocationNfsResponse withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
     }
     
+    public CreateLocationNfsResponse(){}
 }

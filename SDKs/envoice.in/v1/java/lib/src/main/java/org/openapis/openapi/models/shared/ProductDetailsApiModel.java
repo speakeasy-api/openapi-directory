@@ -15,6 +15,7 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public ProductDetailsApiModel withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -26,6 +27,7 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AfterPaymentDescription")
     public String afterPaymentDescription;
+
     public ProductDetailsApiModel withAfterPaymentDescription(String afterPaymentDescription) {
         this.afterPaymentDescription = afterPaymentDescription;
         return this;
@@ -38,6 +40,7 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ButtonCallToAction")
     public String buttonCallToAction;
+
     public ProductDetailsApiModel withButtonCallToAction(String buttonCallToAction) {
         this.buttonCallToAction = buttonCallToAction;
         return this;
@@ -46,6 +49,7 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Currency")
     public CurrencyDetailsApiModel currency;
+
     public ProductDetailsApiModel withCurrency(CurrencyDetailsApiModel currency) {
         this.currency = currency;
         return this;
@@ -57,6 +61,7 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrencyId")
     public Integer currencyId;
+
     public ProductDetailsApiModel withCurrencyId(Integer currencyId) {
         this.currencyId = currencyId;
         return this;
@@ -68,6 +73,7 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ProductDetailsApiModel withDescription(String description) {
         this.description = description;
         return this;
@@ -79,6 +85,7 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public ProductDetailsApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -90,6 +97,7 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsFeatured")
     public Boolean isFeatured;
+
     public ProductDetailsApiModel withIsFeatured(Boolean isFeatured) {
         this.isFeatured = isFeatured;
         return this;
@@ -101,6 +109,7 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ProductDetailsApiModel withName(String name) {
         this.name = name;
         return this;
@@ -112,6 +121,7 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingAmount")
     public Double shippingAmount;
+
     public ProductDetailsApiModel withShippingAmount(Double shippingAmount) {
         this.shippingAmount = shippingAmount;
         return this;
@@ -123,6 +133,7 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingDescription")
     public String shippingDescription;
+
     public ProductDetailsApiModel withShippingDescription(String shippingDescription) {
         this.shippingDescription = shippingDescription;
         return this;
@@ -134,6 +145,7 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ProductDetailsApiModelStatusEnum status;
+
     public ProductDetailsApiModel withStatus(ProductDetailsApiModelStatusEnum status) {
         this.status = status;
         return this;
@@ -145,6 +157,7 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubTotalAmount")
     public Double subTotalAmount;
+
     public ProductDetailsApiModel withSubTotalAmount(Double subTotalAmount) {
         this.subTotalAmount = subTotalAmount;
         return this;
@@ -156,6 +169,7 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalAmount")
     public Double totalAmount;
+
     public ProductDetailsApiModel withTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -167,6 +181,7 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalWithShipping")
     public Double totalWithShipping;
+
     public ProductDetailsApiModel withTotalWithShipping(Double totalWithShipping) {
         this.totalWithShipping = totalWithShipping;
         return this;
@@ -178,9 +193,11 @@ public class ProductDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatHappensNextDescription")
     public String whatHappensNextDescription;
+
     public ProductDetailsApiModel withWhatHappensNextDescription(String whatHappensNextDescription) {
         this.whatHappensNextDescription = whatHappensNextDescription;
         return this;
     }
     
+    public ProductDetailsApiModel(){}
 }

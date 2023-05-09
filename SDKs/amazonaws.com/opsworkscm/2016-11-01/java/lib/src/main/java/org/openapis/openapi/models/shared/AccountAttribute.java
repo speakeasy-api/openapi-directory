@@ -15,6 +15,7 @@ public class AccountAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Maximum")
     public Long maximum;
+
     public AccountAttribute withMaximum(Long maximum) {
         this.maximum = maximum;
         return this;
@@ -23,6 +24,7 @@ public class AccountAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AccountAttribute withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class AccountAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Used")
     public Long used;
+
     public AccountAttribute withUsed(Long used) {
         this.used = used;
         return this;
     }
     
+    public AccountAttribute(){}
 }

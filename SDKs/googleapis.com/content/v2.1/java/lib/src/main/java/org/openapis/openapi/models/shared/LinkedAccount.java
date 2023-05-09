@@ -15,6 +15,7 @@ public class LinkedAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedAccountId")
     public String linkedAccountId;
+
     public LinkedAccount withLinkedAccountId(String linkedAccountId) {
         this.linkedAccountId = linkedAccountId;
         return this;
@@ -26,9 +27,11 @@ public class LinkedAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public LinkService[] services;
+
     public LinkedAccount withServices(LinkService[] services) {
         this.services = services;
         return this;
     }
     
+    public LinkedAccount(){}
 }

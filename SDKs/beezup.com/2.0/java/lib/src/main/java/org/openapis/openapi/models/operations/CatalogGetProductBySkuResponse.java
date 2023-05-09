@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CatalogGetProductBySkuResponse {
@@ -12,6 +13,7 @@ public class CatalogGetProductBySkuResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public CatalogGetProductBySkuResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class CatalogGetProductBySkuResponse {
     
     
     public String contentType;
+
     public CatalogGetProductBySkuResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CatalogGetProductBySkuResponse {
     
     
     public Integer statusCode;
+
     public CatalogGetProductBySkuResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CatalogGetProductBySkuResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CatalogGetProductBySkuResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class CatalogGetProductBySkuResponse {
      */
     
     public org.openapis.openapi.models.shared.Product product;
+
     public CatalogGetProductBySkuResponse withProduct(org.openapis.openapi.models.shared.Product product) {
         this.product = product;
         return this;
     }
     
+    public CatalogGetProductBySkuResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

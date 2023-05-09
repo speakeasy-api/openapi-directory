@@ -12,9 +12,13 @@ public class FinalizeCutoverRequestBody {
      */
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public FinalizeCutoverRequestBody withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
     }
     
+    public FinalizeCutoverRequestBody(@JsonProperty("sourceServerID") String sourceServerID) {
+        this.sourceServerID = sourceServerID;
+  }
 }

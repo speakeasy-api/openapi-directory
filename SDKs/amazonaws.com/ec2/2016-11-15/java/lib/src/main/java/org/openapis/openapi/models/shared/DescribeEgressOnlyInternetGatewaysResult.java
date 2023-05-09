@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeEgressOnlyInternetGatewaysResult {
     
     public DescribeEgressOnlyInternetGatewaysResultEgressOnlyInternetGateways[] egressOnlyInternetGateways;
+
     public DescribeEgressOnlyInternetGatewaysResult withEgressOnlyInternetGateways(DescribeEgressOnlyInternetGatewaysResultEgressOnlyInternetGateways[] egressOnlyInternetGateways) {
         this.egressOnlyInternetGateways = egressOnlyInternetGateways;
         return this;
@@ -19,9 +20,11 @@ public class DescribeEgressOnlyInternetGatewaysResult {
     
     
     public String nextToken;
+
     public DescribeEgressOnlyInternetGatewaysResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeEgressOnlyInternetGatewaysResult(){}
 }

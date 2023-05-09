@@ -15,6 +15,7 @@ public class DeleteAppInputSourceRequestBodyEksSourceClusterNamespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksClusterArn")
     public String eksClusterArn;
+
     public DeleteAppInputSourceRequestBodyEksSourceClusterNamespace withEksClusterArn(String eksClusterArn) {
         this.eksClusterArn = eksClusterArn;
         return this;
@@ -23,9 +24,11 @@ public class DeleteAppInputSourceRequestBodyEksSourceClusterNamespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public DeleteAppInputSourceRequestBodyEksSourceClusterNamespace withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public DeleteAppInputSourceRequestBodyEksSourceClusterNamespace(){}
 }

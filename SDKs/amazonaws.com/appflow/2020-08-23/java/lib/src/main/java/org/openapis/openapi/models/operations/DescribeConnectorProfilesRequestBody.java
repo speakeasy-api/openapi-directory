@@ -15,6 +15,7 @@ public class DescribeConnectorProfilesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorLabel")
     public String connectorLabel;
+
     public DescribeConnectorProfilesRequestBody withConnectorLabel(String connectorLabel) {
         this.connectorLabel = connectorLabel;
         return this;
@@ -26,6 +27,7 @@ public class DescribeConnectorProfilesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProfileNames")
     public String[] connectorProfileNames;
+
     public DescribeConnectorProfilesRequestBody withConnectorProfileNames(String[] connectorProfileNames) {
         this.connectorProfileNames = connectorProfileNames;
         return this;
@@ -37,6 +39,7 @@ public class DescribeConnectorProfilesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorType")
     public DescribeConnectorProfilesRequestBodyConnectorTypeEnum connectorType;
+
     public DescribeConnectorProfilesRequestBody withConnectorType(DescribeConnectorProfilesRequestBodyConnectorTypeEnum connectorType) {
         this.connectorType = connectorType;
         return this;
@@ -48,6 +51,7 @@ public class DescribeConnectorProfilesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeConnectorProfilesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -59,9 +63,11 @@ public class DescribeConnectorProfilesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeConnectorProfilesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeConnectorProfilesRequestBody(){}
 }

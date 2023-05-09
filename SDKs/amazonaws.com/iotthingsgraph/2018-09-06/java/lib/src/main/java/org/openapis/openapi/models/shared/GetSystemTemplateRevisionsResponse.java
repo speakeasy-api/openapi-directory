@@ -15,6 +15,7 @@ public class GetSystemTemplateRevisionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetSystemTemplateRevisionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetSystemTemplateRevisionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summaries")
     public SystemTemplateSummary[] summaries;
+
     public GetSystemTemplateRevisionsResponse withSummaries(SystemTemplateSummary[] summaries) {
         this.summaries = summaries;
         return this;
     }
     
+    public GetSystemTemplateRevisionsResponse(){}
 }

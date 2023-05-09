@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CopySnapshotToExistingGameUsingPOST1Request {
@@ -12,6 +13,7 @@ public class CopySnapshotToExistingGameUsingPOST1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public CopySnapshotToExistingGameUsingPOST1Request withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class CopySnapshotToExistingGameUsingPOST1Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeBinaries")
     public Boolean includeBinaries;
+
     public CopySnapshotToExistingGameUsingPOST1Request withIncludeBinaries(Boolean includeBinaries) {
         this.includeBinaries = includeBinaries;
         return this;
@@ -32,6 +35,7 @@ public class CopySnapshotToExistingGameUsingPOST1Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeCollaborators")
     public Boolean includeCollaborators;
+
     public CopySnapshotToExistingGameUsingPOST1Request withIncludeCollaborators(Boolean includeCollaborators) {
         this.includeCollaborators = includeCollaborators;
         return this;
@@ -42,6 +46,7 @@ public class CopySnapshotToExistingGameUsingPOST1Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeGameConfig")
     public Boolean includeGameConfig;
+
     public CopySnapshotToExistingGameUsingPOST1Request withIncludeGameConfig(Boolean includeGameConfig) {
         this.includeGameConfig = includeGameConfig;
         return this;
@@ -52,6 +57,7 @@ public class CopySnapshotToExistingGameUsingPOST1Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeMetadata")
     public Boolean includeMetadata;
+
     public CopySnapshotToExistingGameUsingPOST1Request withIncludeMetadata(Boolean includeMetadata) {
         this.includeMetadata = includeMetadata;
         return this;
@@ -62,6 +68,7 @@ public class CopySnapshotToExistingGameUsingPOST1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=snapshotId")
     public String snapshotId;
+
     public CopySnapshotToExistingGameUsingPOST1Request withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -72,9 +79,15 @@ public class CopySnapshotToExistingGameUsingPOST1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetApiKey")
     public String targetApiKey;
+
     public CopySnapshotToExistingGameUsingPOST1Request withTargetApiKey(String targetApiKey) {
         this.targetApiKey = targetApiKey;
         return this;
     }
     
+    public CopySnapshotToExistingGameUsingPOST1Request(@JsonProperty("apiKey") String apiKey, @JsonProperty("snapshotId") String snapshotId, @JsonProperty("targetApiKey") String targetApiKey) {
+        this.apiKey = apiKey;
+        this.snapshotId = snapshotId;
+        this.targetApiKey = targetApiKey;
+  }
 }

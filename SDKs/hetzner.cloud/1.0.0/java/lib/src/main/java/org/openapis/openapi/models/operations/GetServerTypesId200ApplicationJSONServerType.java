@@ -8,10 +8,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetServerTypesId200ApplicationJSONServerType {
     /**
+     * Type of cpu architecture
+     */
+    @JsonProperty("architecture")
+    public GetServerTypesId200ApplicationJSONServerTypeArchitectureEnum architecture;
+
+    public GetServerTypesId200ApplicationJSONServerType withArchitecture(GetServerTypesId200ApplicationJSONServerTypeArchitectureEnum architecture) {
+        this.architecture = architecture;
+        return this;
+    }
+    
+    /**
      * Number of cpu cores a Server of this type will have
      */
     @JsonProperty("cores")
     public Double cores;
+
     public GetServerTypesId200ApplicationJSONServerType withCores(Double cores) {
         this.cores = cores;
         return this;
@@ -22,6 +34,7 @@ public class GetServerTypesId200ApplicationJSONServerType {
      */
     @JsonProperty("cpu_type")
     public GetServerTypesId200ApplicationJSONServerTypeCpuTypeEnum cpuType;
+
     public GetServerTypesId200ApplicationJSONServerType withCpuType(GetServerTypesId200ApplicationJSONServerTypeCpuTypeEnum cpuType) {
         this.cpuType = cpuType;
         return this;
@@ -32,6 +45,7 @@ public class GetServerTypesId200ApplicationJSONServerType {
      */
     @JsonProperty("deprecated")
     public Boolean deprecated;
+
     public GetServerTypesId200ApplicationJSONServerType withDeprecated(Boolean deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -42,6 +56,7 @@ public class GetServerTypesId200ApplicationJSONServerType {
      */
     @JsonProperty("description")
     public String description;
+
     public GetServerTypesId200ApplicationJSONServerType withDescription(String description) {
         this.description = description;
         return this;
@@ -52,6 +67,7 @@ public class GetServerTypesId200ApplicationJSONServerType {
      */
     @JsonProperty("disk")
     public Double disk;
+
     public GetServerTypesId200ApplicationJSONServerType withDisk(Double disk) {
         this.disk = disk;
         return this;
@@ -62,6 +78,7 @@ public class GetServerTypesId200ApplicationJSONServerType {
      */
     @JsonProperty("id")
     public Double id;
+
     public GetServerTypesId200ApplicationJSONServerType withId(Double id) {
         this.id = id;
         return this;
@@ -72,6 +89,7 @@ public class GetServerTypesId200ApplicationJSONServerType {
      */
     @JsonProperty("memory")
     public Double memory;
+
     public GetServerTypesId200ApplicationJSONServerType withMemory(Double memory) {
         this.memory = memory;
         return this;
@@ -82,6 +100,7 @@ public class GetServerTypesId200ApplicationJSONServerType {
      */
     @JsonProperty("name")
     public String name;
+
     public GetServerTypesId200ApplicationJSONServerType withName(String name) {
         this.name = name;
         return this;
@@ -92,6 +111,7 @@ public class GetServerTypesId200ApplicationJSONServerType {
      */
     @JsonProperty("prices")
     public GetServerTypesId200ApplicationJSONServerTypePrices[] prices;
+
     public GetServerTypesId200ApplicationJSONServerType withPrices(GetServerTypesId200ApplicationJSONServerTypePrices[] prices) {
         this.prices = prices;
         return this;
@@ -102,9 +122,23 @@ public class GetServerTypesId200ApplicationJSONServerType {
      */
     @JsonProperty("storage_type")
     public GetServerTypesId200ApplicationJSONServerTypeStorageTypeEnum storageType;
+
     public GetServerTypesId200ApplicationJSONServerType withStorageType(GetServerTypesId200ApplicationJSONServerTypeStorageTypeEnum storageType) {
         this.storageType = storageType;
         return this;
     }
     
+    public GetServerTypesId200ApplicationJSONServerType(@JsonProperty("architecture") GetServerTypesId200ApplicationJSONServerTypeArchitectureEnum architecture, @JsonProperty("cores") Double cores, @JsonProperty("cpu_type") GetServerTypesId200ApplicationJSONServerTypeCpuTypeEnum cpuType, @JsonProperty("deprecated") Boolean deprecated, @JsonProperty("description") String description, @JsonProperty("disk") Double disk, @JsonProperty("id") Double id, @JsonProperty("memory") Double memory, @JsonProperty("name") String name, @JsonProperty("prices") GetServerTypesId200ApplicationJSONServerTypePrices[] prices, @JsonProperty("storage_type") GetServerTypesId200ApplicationJSONServerTypeStorageTypeEnum storageType) {
+        this.architecture = architecture;
+        this.cores = cores;
+        this.cpuType = cpuType;
+        this.deprecated = deprecated;
+        this.description = description;
+        this.disk = disk;
+        this.id = id;
+        this.memory = memory;
+        this.name = name;
+        this.prices = prices;
+        this.storageType = storageType;
+  }
 }

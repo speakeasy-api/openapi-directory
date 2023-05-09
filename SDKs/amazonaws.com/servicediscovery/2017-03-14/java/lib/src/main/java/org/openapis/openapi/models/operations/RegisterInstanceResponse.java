@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterInstanceResponse {
     
     public String contentType;
+
     public RegisterInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterInstanceResponse {
      */
     
     public Object duplicateRequest;
+
     public RegisterInstanceResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -29,6 +32,7 @@ public class RegisterInstanceResponse {
      */
     
     public Object invalidInput;
+
     public RegisterInstanceResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class RegisterInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterInstanceResponse registerInstanceResponse;
+
     public RegisterInstanceResponse withRegisterInstanceResponse(org.openapis.openapi.models.shared.RegisterInstanceResponse registerInstanceResponse) {
         this.registerInstanceResponse = registerInstanceResponse;
         return this;
@@ -49,6 +54,7 @@ public class RegisterInstanceResponse {
      */
     
     public Object serviceNotFound;
+
     public RegisterInstanceResponse withServiceNotFound(Object serviceNotFound) {
         this.serviceNotFound = serviceNotFound;
         return this;
@@ -56,6 +62,7 @@ public class RegisterInstanceResponse {
     
     
     public Integer statusCode;
+
     public RegisterInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RegisterInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class RegisterInstanceResponse {
      */
     
     public Object resourceInUse;
+
     public RegisterInstanceResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -83,9 +92,14 @@ public class RegisterInstanceResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public RegisterInstanceResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
     }
     
+    public RegisterInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

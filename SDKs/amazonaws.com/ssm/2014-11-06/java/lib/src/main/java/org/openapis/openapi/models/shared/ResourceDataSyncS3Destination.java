@@ -15,6 +15,7 @@ public class ResourceDataSyncS3Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AWSKMSKeyARN")
     public String awskmsKeyARN;
+
     public ResourceDataSyncS3Destination withAWSKMSKeyARN(String awskmsKeyARN) {
         this.awskmsKeyARN = awskmsKeyARN;
         return this;
@@ -22,6 +23,7 @@ public class ResourceDataSyncS3Destination {
     
     @JsonProperty("BucketName")
     public String bucketName;
+
     public ResourceDataSyncS3Destination withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -30,6 +32,7 @@ public class ResourceDataSyncS3Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationDataSharing")
     public ResourceDataSyncDestinationDataSharing destinationDataSharing;
+
     public ResourceDataSyncS3Destination withDestinationDataSharing(ResourceDataSyncDestinationDataSharing destinationDataSharing) {
         this.destinationDataSharing = destinationDataSharing;
         return this;
@@ -38,6 +41,7 @@ public class ResourceDataSyncS3Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prefix")
     public String prefix;
+
     public ResourceDataSyncS3Destination withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -45,6 +49,7 @@ public class ResourceDataSyncS3Destination {
     
     @JsonProperty("Region")
     public String region;
+
     public ResourceDataSyncS3Destination withRegion(String region) {
         this.region = region;
         return this;
@@ -52,9 +57,15 @@ public class ResourceDataSyncS3Destination {
     
     @JsonProperty("SyncFormat")
     public ResourceDataSyncS3FormatEnum syncFormat;
+
     public ResourceDataSyncS3Destination withSyncFormat(ResourceDataSyncS3FormatEnum syncFormat) {
         this.syncFormat = syncFormat;
         return this;
     }
     
+    public ResourceDataSyncS3Destination(@JsonProperty("BucketName") String bucketName, @JsonProperty("Region") String region, @JsonProperty("SyncFormat") ResourceDataSyncS3FormatEnum syncFormat) {
+        this.bucketName = bucketName;
+        this.region = region;
+        this.syncFormat = syncFormat;
+  }
 }

@@ -15,6 +15,7 @@ public class FileSystemConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultGid")
     public Long defaultGid;
+
     public FileSystemConfig withDefaultGid(Long defaultGid) {
         this.defaultGid = defaultGid;
         return this;
@@ -23,6 +24,7 @@ public class FileSystemConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultUid")
     public Long defaultUid;
+
     public FileSystemConfig withDefaultUid(Long defaultUid) {
         this.defaultUid = defaultUid;
         return this;
@@ -31,9 +33,11 @@ public class FileSystemConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountPath")
     public String mountPath;
+
     public FileSystemConfig withMountPath(String mountPath) {
         this.mountPath = mountPath;
         return this;
     }
     
+    public FileSystemConfig(){}
 }

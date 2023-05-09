@@ -18,9 +18,11 @@ public class RemoveMatterPermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public RemoveMatterPermissionsRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public RemoveMatterPermissionsRequest(){}
 }

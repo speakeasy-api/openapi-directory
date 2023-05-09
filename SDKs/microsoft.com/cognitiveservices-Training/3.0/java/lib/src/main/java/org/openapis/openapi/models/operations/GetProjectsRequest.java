@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectsRequest {
@@ -12,9 +13,13 @@ public class GetProjectsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public GetProjectsRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
     }
     
+    public GetProjectsRequest(@JsonProperty("Training-Key") String trainingKey) {
+        this.trainingKey = trainingKey;
+  }
 }

@@ -15,6 +15,7 @@ public class ReposUpdateBranchProtectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_deletions")
     public Boolean allowDeletions;
+
     public ReposUpdateBranchProtectionRequestBody withAllowDeletions(Boolean allowDeletions) {
         this.allowDeletions = allowDeletions;
         return this;
@@ -26,6 +27,7 @@ public class ReposUpdateBranchProtectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_force_pushes")
     public Boolean allowForcePushes;
+
     public ReposUpdateBranchProtectionRequestBody withAllowForcePushes(Boolean allowForcePushes) {
         this.allowForcePushes = allowForcePushes;
         return this;
@@ -37,6 +39,7 @@ public class ReposUpdateBranchProtectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("block_creations")
     public Boolean blockCreations;
+
     public ReposUpdateBranchProtectionRequestBody withBlockCreations(Boolean blockCreations) {
         this.blockCreations = blockCreations;
         return this;
@@ -47,6 +50,7 @@ public class ReposUpdateBranchProtectionRequestBody {
      */
     @JsonProperty("enforce_admins")
     public Boolean enforceAdmins;
+
     public ReposUpdateBranchProtectionRequestBody withEnforceAdmins(Boolean enforceAdmins) {
         this.enforceAdmins = enforceAdmins;
         return this;
@@ -58,6 +62,7 @@ public class ReposUpdateBranchProtectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required_conversation_resolution")
     public Boolean requiredConversationResolution;
+
     public ReposUpdateBranchProtectionRequestBody withRequiredConversationResolution(Boolean requiredConversationResolution) {
         this.requiredConversationResolution = requiredConversationResolution;
         return this;
@@ -69,6 +74,7 @@ public class ReposUpdateBranchProtectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required_linear_history")
     public Boolean requiredLinearHistory;
+
     public ReposUpdateBranchProtectionRequestBody withRequiredLinearHistory(Boolean requiredLinearHistory) {
         this.requiredLinearHistory = requiredLinearHistory;
         return this;
@@ -79,6 +85,7 @@ public class ReposUpdateBranchProtectionRequestBody {
      */
     @JsonProperty("required_pull_request_reviews")
     public ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews requiredPullRequestReviews;
+
     public ReposUpdateBranchProtectionRequestBody withRequiredPullRequestReviews(ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews requiredPullRequestReviews) {
         this.requiredPullRequestReviews = requiredPullRequestReviews;
         return this;
@@ -89,6 +96,7 @@ public class ReposUpdateBranchProtectionRequestBody {
      */
     @JsonProperty("required_status_checks")
     public ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks requiredStatusChecks;
+
     public ReposUpdateBranchProtectionRequestBody withRequiredStatusChecks(ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks requiredStatusChecks) {
         this.requiredStatusChecks = requiredStatusChecks;
         return this;
@@ -99,9 +107,16 @@ public class ReposUpdateBranchProtectionRequestBody {
      */
     @JsonProperty("restrictions")
     public ReposUpdateBranchProtectionRequestBodyRestrictions restrictions;
+
     public ReposUpdateBranchProtectionRequestBody withRestrictions(ReposUpdateBranchProtectionRequestBodyRestrictions restrictions) {
         this.restrictions = restrictions;
         return this;
     }
     
+    public ReposUpdateBranchProtectionRequestBody(@JsonProperty("enforce_admins") Boolean enforceAdmins, @JsonProperty("required_pull_request_reviews") ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviews requiredPullRequestReviews, @JsonProperty("required_status_checks") ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks requiredStatusChecks, @JsonProperty("restrictions") ReposUpdateBranchProtectionRequestBodyRestrictions restrictions) {
+        this.enforceAdmins = enforceAdmins;
+        this.requiredPullRequestReviews = requiredPullRequestReviews;
+        this.requiredStatusChecks = requiredStatusChecks;
+        this.restrictions = restrictions;
+  }
 }

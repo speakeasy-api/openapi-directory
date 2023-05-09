@@ -15,6 +15,7 @@ public class ShareDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareErrors")
     public ShareError[] shareErrors;
+
     public ShareDetails withShareErrors(ShareError[] shareErrors) {
         this.shareErrors = shareErrors;
         return this;
@@ -23,9 +24,11 @@ public class ShareDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuccessfulShares")
     public String[] successfulShares;
+
     public ShareDetails withSuccessfulShares(String[] successfulShares) {
         this.successfulShares = successfulShares;
         return this;
     }
     
+    public ShareDetails(){}
 }

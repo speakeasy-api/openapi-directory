@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddTagsToOnPremisesInstancesResponse {
     
     public String contentType;
+
     public AddTagsToOnPremisesInstancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AddTagsToOnPremisesInstancesResponse {
      */
     
     public Object instanceLimitExceededException;
+
     public AddTagsToOnPremisesInstancesResponse withInstanceLimitExceededException(Object instanceLimitExceededException) {
         this.instanceLimitExceededException = instanceLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class AddTagsToOnPremisesInstancesResponse {
      */
     
     public Object instanceNameRequiredException;
+
     public AddTagsToOnPremisesInstancesResponse withInstanceNameRequiredException(Object instanceNameRequiredException) {
         this.instanceNameRequiredException = instanceNameRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class AddTagsToOnPremisesInstancesResponse {
      */
     
     public Object instanceNotRegisteredException;
+
     public AddTagsToOnPremisesInstancesResponse withInstanceNotRegisteredException(Object instanceNotRegisteredException) {
         this.instanceNotRegisteredException = instanceNotRegisteredException;
         return this;
@@ -49,6 +54,7 @@ public class AddTagsToOnPremisesInstancesResponse {
      */
     
     public Object invalidInstanceNameException;
+
     public AddTagsToOnPremisesInstancesResponse withInvalidInstanceNameException(Object invalidInstanceNameException) {
         this.invalidInstanceNameException = invalidInstanceNameException;
         return this;
@@ -59,6 +65,7 @@ public class AddTagsToOnPremisesInstancesResponse {
      */
     
     public Object invalidTagException;
+
     public AddTagsToOnPremisesInstancesResponse withInvalidTagException(Object invalidTagException) {
         this.invalidTagException = invalidTagException;
         return this;
@@ -66,6 +73,7 @@ public class AddTagsToOnPremisesInstancesResponse {
     
     
     public Integer statusCode;
+
     public AddTagsToOnPremisesInstancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AddTagsToOnPremisesInstancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddTagsToOnPremisesInstancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AddTagsToOnPremisesInstancesResponse {
      */
     
     public Object tagLimitExceededException;
+
     public AddTagsToOnPremisesInstancesResponse withTagLimitExceededException(Object tagLimitExceededException) {
         this.tagLimitExceededException = tagLimitExceededException;
         return this;
@@ -93,9 +103,14 @@ public class AddTagsToOnPremisesInstancesResponse {
      */
     
     public Object tagRequiredException;
+
     public AddTagsToOnPremisesInstancesResponse withTagRequiredException(Object tagRequiredException) {
         this.tagRequiredException = tagRequiredException;
         return this;
     }
     
+    public AddTagsToOnPremisesInstancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

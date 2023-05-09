@@ -15,9 +15,11 @@ public class DescribeFlywheelIterationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelIterationProperties")
     public FlywheelIterationProperties flywheelIterationProperties;
+
     public DescribeFlywheelIterationResponse withFlywheelIterationProperties(FlywheelIterationProperties flywheelIterationProperties) {
         this.flywheelIterationProperties = flywheelIterationProperties;
         return this;
     }
     
+    public DescribeFlywheelIterationResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOrganizationAdminAccountsResponse {
     
     public String contentType;
+
     public ListOrganizationAdminAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListOrganizationAdminAccountsResponse {
      */
     
     public Object internalException;
+
     public ListOrganizationAdminAccountsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class ListOrganizationAdminAccountsResponse {
      */
     
     public Object invalidAccessException;
+
     public ListOrganizationAdminAccountsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -39,6 +43,7 @@ public class ListOrganizationAdminAccountsResponse {
      */
     
     public Object invalidInputException;
+
     public ListOrganizationAdminAccountsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListOrganizationAdminAccountsResponse {
      */
     
     public Object limitExceededException;
+
     public ListOrganizationAdminAccountsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class ListOrganizationAdminAccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListOrganizationAdminAccountsResponse listOrganizationAdminAccountsResponse;
+
     public ListOrganizationAdminAccountsResponse withListOrganizationAdminAccountsResponse(org.openapis.openapi.models.shared.ListOrganizationAdminAccountsResponse listOrganizationAdminAccountsResponse) {
         this.listOrganizationAdminAccountsResponse = listOrganizationAdminAccountsResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListOrganizationAdminAccountsResponse {
     
     
     public Integer statusCode;
+
     public ListOrganizationAdminAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListOrganizationAdminAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOrganizationAdminAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListOrganizationAdminAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

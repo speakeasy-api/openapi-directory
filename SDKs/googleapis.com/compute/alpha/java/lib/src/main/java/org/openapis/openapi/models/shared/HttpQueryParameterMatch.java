@@ -18,6 +18,7 @@ public class HttpQueryParameterMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exactMatch")
     public String exactMatch;
+
     public HttpQueryParameterMatch withExactMatch(String exactMatch) {
         this.exactMatch = exactMatch;
         return this;
@@ -29,6 +30,7 @@ public class HttpQueryParameterMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public HttpQueryParameterMatch withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class HttpQueryParameterMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presentMatch")
     public Boolean presentMatch;
+
     public HttpQueryParameterMatch withPresentMatch(Boolean presentMatch) {
         this.presentMatch = presentMatch;
         return this;
@@ -51,9 +54,11 @@ public class HttpQueryParameterMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regexMatch")
     public String regexMatch;
+
     public HttpQueryParameterMatch withRegexMatch(String regexMatch) {
         this.regexMatch = regexMatch;
         return this;
     }
     
+    public HttpQueryParameterMatch(){}
 }

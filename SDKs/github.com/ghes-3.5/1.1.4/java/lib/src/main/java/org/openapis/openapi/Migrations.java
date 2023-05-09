@@ -59,11 +59,9 @@ public class Migrations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationsDeleteArchiveForOrgResponse res = new org.openapis.openapi.models.operations.MigrationsDeleteArchiveForOrgResponse() {{
+        org.openapis.openapi.models.operations.MigrationsDeleteArchiveForOrgResponse res = new org.openapis.openapi.models.operations.MigrationsDeleteArchiveForOrgResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -101,11 +99,9 @@ public class Migrations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationsDownloadArchiveForOrgResponse res = new org.openapis.openapi.models.operations.MigrationsDownloadArchiveForOrgResponse() {{
+        org.openapis.openapi.models.operations.MigrationsDownloadArchiveForOrgResponse res = new org.openapis.openapi.models.operations.MigrationsDownloadArchiveForOrgResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 302) {
@@ -163,11 +159,9 @@ public class Migrations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationsGetArchiveForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.MigrationsGetArchiveForAuthenticatedUserResponse() {{
+        org.openapis.openapi.models.operations.MigrationsGetArchiveForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.MigrationsGetArchiveForAuthenticatedUserResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 302 || httpRes.statusCode() == 304) {
@@ -218,12 +212,10 @@ public class Migrations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationsGetStatusForOrgResponse res = new org.openapis.openapi.models.operations.MigrationsGetStatusForOrgResponse() {{
+        org.openapis.openapi.models.operations.MigrationsGetStatusForOrgResponse res = new org.openapis.openapi.models.operations.MigrationsGetStatusForOrgResponse(contentType, httpRes.statusCode()) {{
             migration = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -272,12 +264,10 @@ public class Migrations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationsListForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.MigrationsListForAuthenticatedUserResponse() {{
+        org.openapis.openapi.models.operations.MigrationsListForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.MigrationsListForAuthenticatedUserResponse(contentType, httpRes.statusCode()) {{
             migrations = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -332,11 +322,9 @@ public class Migrations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationsListForOrgResponse res = new org.openapis.openapi.models.operations.MigrationsListForOrgResponse() {{
+        org.openapis.openapi.models.operations.MigrationsListForOrgResponse res = new org.openapis.openapi.models.operations.MigrationsListForOrgResponse(contentType, httpRes.statusCode()) {{
             migrations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -380,12 +368,10 @@ public class Migrations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationsListReposForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.MigrationsListReposForAuthenticatedUserResponse() {{
+        org.openapis.openapi.models.operations.MigrationsListReposForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.MigrationsListReposForAuthenticatedUserResponse(contentType, httpRes.statusCode()) {{
             minimalRepositories = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,12 +422,10 @@ public class Migrations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationsListReposForOrgResponse res = new org.openapis.openapi.models.operations.MigrationsListReposForOrgResponse() {{
+        org.openapis.openapi.models.operations.MigrationsListReposForOrgResponse res = new org.openapis.openapi.models.operations.MigrationsListReposForOrgResponse(contentType, httpRes.statusCode()) {{
             minimalRepositories = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -491,13 +475,11 @@ public class Migrations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationsStartForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.MigrationsStartForAuthenticatedUserResponse() {{
+        org.openapis.openapi.models.operations.MigrationsStartForAuthenticatedUserResponse res = new org.openapis.openapi.models.operations.MigrationsStartForAuthenticatedUserResponse(contentType, httpRes.statusCode()) {{
             migration = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -554,13 +536,11 @@ public class Migrations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationsStartForOrgResponse res = new org.openapis.openapi.models.operations.MigrationsStartForOrgResponse() {{
+        org.openapis.openapi.models.operations.MigrationsStartForOrgResponse res = new org.openapis.openapi.models.operations.MigrationsStartForOrgResponse(contentType, httpRes.statusCode()) {{
             migration = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -610,11 +590,9 @@ public class Migrations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrationsUnlockRepoForOrgResponse res = new org.openapis.openapi.models.operations.MigrationsUnlockRepoForOrgResponse() {{
+        org.openapis.openapi.models.operations.MigrationsUnlockRepoForOrgResponse res = new org.openapis.openapi.models.operations.MigrationsUnlockRepoForOrgResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

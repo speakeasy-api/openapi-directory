@@ -15,9 +15,11 @@ public class UpdateSecurityConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityConfigDetail")
     public SecurityConfigDetail securityConfigDetail;
+
     public UpdateSecurityConfigResponse withSecurityConfigDetail(SecurityConfigDetail securityConfigDetail) {
         this.securityConfigDetail = securityConfigDetail;
         return this;
     }
     
+    public UpdateSecurityConfigResponse(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateComponentTypeResponse {
     @JsonProperty("arn")
     public String arn;
+
     public UpdateComponentTypeResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class UpdateComponentTypeResponse {
     
     @JsonProperty("componentTypeId")
     public String componentTypeId;
+
     public UpdateComponentTypeResponse withComponentTypeId(String componentTypeId) {
         this.componentTypeId = componentTypeId;
         return this;
@@ -26,6 +28,7 @@ public class UpdateComponentTypeResponse {
     
     @JsonProperty("state")
     public StateEnum state;
+
     public UpdateComponentTypeResponse withState(StateEnum state) {
         this.state = state;
         return this;
@@ -33,9 +36,16 @@ public class UpdateComponentTypeResponse {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public UpdateComponentTypeResponse withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public UpdateComponentTypeResponse(@JsonProperty("arn") String arn, @JsonProperty("componentTypeId") String componentTypeId, @JsonProperty("state") StateEnum state, @JsonProperty("workspaceId") String workspaceId) {
+        this.arn = arn;
+        this.componentTypeId = componentTypeId;
+        this.state = state;
+        this.workspaceId = workspaceId;
+  }
 }

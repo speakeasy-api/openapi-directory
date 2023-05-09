@@ -18,9 +18,11 @@ public class GoogleAppsDriveLabelsV2WriteControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredRevisionId")
     public String requiredRevisionId;
+
     public GoogleAppsDriveLabelsV2WriteControl withRequiredRevisionId(String requiredRevisionId) {
         this.requiredRevisionId = requiredRevisionId;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2WriteControl(){}
 }

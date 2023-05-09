@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEBSVolumeRecommendationsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetEBSVolumeRecommendationsRequest getEBSVolumeRecommendationsRequest;
+
     public GetEBSVolumeRecommendationsRequest withGetEBSVolumeRecommendationsRequest(org.openapis.openapi.models.shared.GetEBSVolumeRecommendationsRequest getEBSVolumeRecommendationsRequest) {
         this.getEBSVolumeRecommendationsRequest = getEBSVolumeRecommendationsRequest;
         return this;
@@ -16,6 +18,7 @@ public class GetEBSVolumeRecommendationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetEBSVolumeRecommendationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class GetEBSVolumeRecommendationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetEBSVolumeRecommendationsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class GetEBSVolumeRecommendationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetEBSVolumeRecommendationsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class GetEBSVolumeRecommendationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetEBSVolumeRecommendationsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class GetEBSVolumeRecommendationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetEBSVolumeRecommendationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class GetEBSVolumeRecommendationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetEBSVolumeRecommendationsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class GetEBSVolumeRecommendationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetEBSVolumeRecommendationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class GetEBSVolumeRecommendationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetEBSVolumeRecommendationsXAmzTargetEnum xAmzTarget;
+
     public GetEBSVolumeRecommendationsRequest withXAmzTarget(GetEBSVolumeRecommendationsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public GetEBSVolumeRecommendationsRequest(@JsonProperty("GetEBSVolumeRecommendationsRequest") org.openapis.openapi.models.shared.GetEBSVolumeRecommendationsRequest getEBSVolumeRecommendationsRequest, @JsonProperty("X-Amz-Target") GetEBSVolumeRecommendationsXAmzTargetEnum xAmzTarget) {
+        this.getEBSVolumeRecommendationsRequest = getEBSVolumeRecommendationsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

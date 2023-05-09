@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WebHookManagementDeleteAllResponse {
     
     public String contentType;
+
     public WebHookManagementDeleteAllResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class WebHookManagementDeleteAllResponse {
     
     
     public Integer statusCode;
+
     public WebHookManagementDeleteAllResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class WebHookManagementDeleteAllResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WebHookManagementDeleteAllResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class WebHookManagementDeleteAllResponse {
      */
     
     public java.util.Map<String, Object> webHookManagementDeleteAll200ApplicationJSONObject;
+
     public WebHookManagementDeleteAllResponse withWebHookManagementDeleteAll200ApplicationJSONObject(java.util.Map<String, Object> webHookManagementDeleteAll200ApplicationJSONObject) {
         this.webHookManagementDeleteAll200ApplicationJSONObject = webHookManagementDeleteAll200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class WebHookManagementDeleteAllResponse {
      */
     
     public java.util.Map<String, Object> webHookManagementDeleteAll200TextJSONObject;
+
     public WebHookManagementDeleteAllResponse withWebHookManagementDeleteAll200TextJSONObject(java.util.Map<String, Object> webHookManagementDeleteAll200TextJSONObject) {
         this.webHookManagementDeleteAll200TextJSONObject = webHookManagementDeleteAll200TextJSONObject;
         return this;
     }
     
+    public WebHookManagementDeleteAllResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

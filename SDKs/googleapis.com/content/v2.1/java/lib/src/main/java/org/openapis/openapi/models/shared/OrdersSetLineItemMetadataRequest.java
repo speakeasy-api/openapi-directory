@@ -12,6 +12,7 @@ public class OrdersSetLineItemMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public OrderMerchantProvidedAnnotation[] annotations;
+
     public OrdersSetLineItemMetadataRequest withAnnotations(OrderMerchantProvidedAnnotation[] annotations) {
         this.annotations = annotations;
         return this;
@@ -23,6 +24,7 @@ public class OrdersSetLineItemMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemId")
     public String lineItemId;
+
     public OrdersSetLineItemMetadataRequest withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -34,6 +36,7 @@ public class OrdersSetLineItemMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public OrdersSetLineItemMetadataRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -45,9 +48,11 @@ public class OrdersSetLineItemMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public OrdersSetLineItemMetadataRequest withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public OrdersSetLineItemMetadataRequest(){}
 }

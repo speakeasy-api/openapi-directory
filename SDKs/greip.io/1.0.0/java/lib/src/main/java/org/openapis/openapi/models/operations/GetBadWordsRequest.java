@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBadWordsRequest {
@@ -12,6 +13,7 @@ public class GetBadWordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public String format;
+
     public GetBadWordsRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -22,6 +24,7 @@ public class GetBadWordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GetBadWordsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -32,6 +35,7 @@ public class GetBadWordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=listBadWords")
     public String listBadWords;
+
     public GetBadWordsRequest withListBadWords(String listBadWords) {
         this.listBadWords = listBadWords;
         return this;
@@ -42,6 +46,7 @@ public class GetBadWordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scoreOnly")
     public String scoreOnly;
+
     public GetBadWordsRequest withScoreOnly(String scoreOnly) {
         this.scoreOnly = scoreOnly;
         return this;
@@ -52,9 +57,14 @@ public class GetBadWordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public GetBadWordsRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GetBadWordsRequest(@JsonProperty("key") String key, @JsonProperty("text") String text) {
+        this.key = key;
+        this.text = text;
+  }
 }

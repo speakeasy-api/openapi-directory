@@ -61,11 +61,9 @@ public class InboundSamlSsoProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesCreateResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesCreateResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class InboundSamlSsoProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class InboundSamlSsoProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse(contentType, httpRes.statusCode()) {{
             listIdpCredentialsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class InboundSamlSsoProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesListResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesListResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesListResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesListResponse(contentType, httpRes.statusCode()) {{
             listInboundSamlSsoProfilesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

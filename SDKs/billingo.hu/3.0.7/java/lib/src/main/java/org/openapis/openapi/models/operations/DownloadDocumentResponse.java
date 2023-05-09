@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DownloadDocumentResponse {
@@ -12,6 +13,7 @@ public class DownloadDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.ClientError clientError;
+
     public DownloadDocumentResponse withClientError(org.openapis.openapi.models.shared.ClientError clientError) {
         this.clientError = clientError;
         return this;
@@ -22,6 +24,7 @@ public class DownloadDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse;
+
     public DownloadDocumentResponse withClientErrorResponse(org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse) {
         this.clientErrorResponse = clientErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class DownloadDocumentResponse {
     
     
     public String contentType;
+
     public DownloadDocumentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DownloadDocumentResponse {
      */
     
     public byte[] downloadDocument200ApplicationPdfBinaryString;
+
     public DownloadDocumentResponse withDownloadDocument200ApplicationPdfBinaryString(byte[] downloadDocument200ApplicationPdfBinaryString) {
         this.downloadDocument200ApplicationPdfBinaryString = downloadDocument200ApplicationPdfBinaryString;
         return this;
@@ -46,6 +51,7 @@ public class DownloadDocumentResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public DownloadDocumentResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -53,6 +59,7 @@ public class DownloadDocumentResponse {
     
     
     public Integer statusCode;
+
     public DownloadDocumentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,6 +67,7 @@ public class DownloadDocumentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DownloadDocumentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -70,6 +78,7 @@ public class DownloadDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse;
+
     public DownloadDocumentResponse withServerErrorResponse(org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse) {
         this.serverErrorResponse = serverErrorResponse;
         return this;
@@ -80,9 +89,14 @@ public class DownloadDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse;
+
     public DownloadDocumentResponse withValidationErrorResponse(org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse) {
         this.validationErrorResponse = validationErrorResponse;
         return this;
     }
     
+    public DownloadDocumentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -22,6 +22,7 @@ public class GetVariantImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completionTime")
     public OffsetDateTime completionTime;
+
     public GetVariantImportResponse withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -31,6 +32,7 @@ public class GetVariantImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetVariantImportResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class GetVariantImportResponse {
     
     @JsonProperty("destinationName")
     public String destinationName;
+
     public GetVariantImportResponse withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -45,6 +48,7 @@ public class GetVariantImportResponse {
     
     @JsonProperty("id")
     public String id;
+
     public GetVariantImportResponse withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class GetVariantImportResponse {
     
     @JsonProperty("items")
     public VariantImportItemDetail[] items;
+
     public GetVariantImportResponse withItems(VariantImportItemDetail[] items) {
         this.items = items;
         return this;
@@ -59,6 +64,7 @@ public class GetVariantImportResponse {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public GetVariantImportResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -66,6 +72,7 @@ public class GetVariantImportResponse {
     
     @JsonProperty("runLeftNormalization")
     public Boolean runLeftNormalization;
+
     public GetVariantImportResponse withRunLeftNormalization(Boolean runLeftNormalization) {
         this.runLeftNormalization = runLeftNormalization;
         return this;
@@ -73,6 +80,7 @@ public class GetVariantImportResponse {
     
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public GetVariantImportResponse withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
@@ -80,6 +88,7 @@ public class GetVariantImportResponse {
     
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public GetVariantImportResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -89,9 +98,21 @@ public class GetVariantImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public GetVariantImportResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GetVariantImportResponse(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("destinationName") String destinationName, @JsonProperty("id") String id, @JsonProperty("items") VariantImportItemDetail[] items, @JsonProperty("roleArn") String roleArn, @JsonProperty("runLeftNormalization") Boolean runLeftNormalization, @JsonProperty("status") JobStatusEnum status, @JsonProperty("statusMessage") String statusMessage, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.creationTime = creationTime;
+        this.destinationName = destinationName;
+        this.id = id;
+        this.items = items;
+        this.roleArn = roleArn;
+        this.runLeftNormalization = runLeftNormalization;
+        this.status = status;
+        this.statusMessage = statusMessage;
+        this.updateTime = updateTime;
+  }
 }

@@ -12,6 +12,7 @@ public class PutLaunchProfileMembersRequestBody {
      */
     @JsonProperty("identityStoreId")
     public String identityStoreId;
+
     public PutLaunchProfileMembersRequestBody withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
@@ -22,9 +23,14 @@ public class PutLaunchProfileMembersRequestBody {
      */
     @JsonProperty("members")
     public org.openapis.openapi.models.shared.NewLaunchProfileMember[] members;
+
     public PutLaunchProfileMembersRequestBody withMembers(org.openapis.openapi.models.shared.NewLaunchProfileMember[] members) {
         this.members = members;
         return this;
     }
     
+    public PutLaunchProfileMembersRequestBody(@JsonProperty("identityStoreId") String identityStoreId, @JsonProperty("members") org.openapis.openapi.models.shared.NewLaunchProfileMember[] members) {
+        this.identityStoreId = identityStoreId;
+        this.members = members;
+  }
 }

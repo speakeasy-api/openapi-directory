@@ -51,12 +51,10 @@ public class Alerting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BugTrackerGetRepoIssueFromCrashResponse res = new org.openapis.openapi.models.operations.BugTrackerGetRepoIssueFromCrashResponse() {{
+        org.openapis.openapi.models.operations.BugTrackerGetRepoIssueFromCrashResponse res = new org.openapis.openapi.models.operations.BugTrackerGetRepoIssueFromCrashResponse(contentType, httpRes.statusCode()) {{
             bugTrackerGetRepoIssueFromCrash200ApplicationJSONObject = null;
             bugTrackerGetRepoIssueFromCrashDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class Alerting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BugtrackerGetSettingsResponse res = new org.openapis.openapi.models.operations.BugtrackerGetSettingsResponse() {{
+        org.openapis.openapi.models.operations.BugtrackerGetSettingsResponse res = new org.openapis.openapi.models.operations.BugtrackerGetSettingsResponse(contentType, httpRes.statusCode()) {{
             bugtrackerGetSettings200ApplicationJSONObject = null;
             bugtrackerGetSettingsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,12 +143,10 @@ public class Alerting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NotificationsGetAppEmailSettingsResponse res = new org.openapis.openapi.models.operations.NotificationsGetAppEmailSettingsResponse() {{
+        org.openapis.openapi.models.operations.NotificationsGetAppEmailSettingsResponse res = new org.openapis.openapi.models.operations.NotificationsGetAppEmailSettingsResponse(contentType, httpRes.statusCode()) {{
             notificationsGetAppEmailSettings200ApplicationJSONObject = null;
             notificationsGetAppEmailSettingsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,10 +169,11 @@ public class Alerting {
 
     /**
      * Get Default email notification settings for the user
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.NotificationsGetUserEmailSettingsResponse notificationsGetUserEmailSettings() throws Exception {
+    public org.openapis.openapi.models.operations.NotificationsGetUserEmailSettingsResponse notificationsGetUserEmailSettings(org.openapis.openapi.models.operations.NotificationsGetUserEmailSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/user/notifications/emailSettings");
         
@@ -187,17 +182,16 @@ public class Alerting {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NotificationsGetUserEmailSettingsResponse res = new org.openapis.openapi.models.operations.NotificationsGetUserEmailSettingsResponse() {{
+        org.openapis.openapi.models.operations.NotificationsGetUserEmailSettingsResponse res = new org.openapis.openapi.models.operations.NotificationsGetUserEmailSettingsResponse(contentType, httpRes.statusCode()) {{
             notificationsGetUserEmailSettings200ApplicationJSONObject = null;
             notificationsGetUserEmailSettingsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,12 +234,10 @@ public class Alerting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebhooksListResponse res = new org.openapis.openapi.models.operations.WebhooksListResponse() {{
+        org.openapis.openapi.models.operations.WebhooksListResponse res = new org.openapis.openapi.models.operations.WebhooksListResponse(contentType, httpRes.statusCode()) {{
             webhooksList200ApplicationJSONObject = null;
             webhooksListDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

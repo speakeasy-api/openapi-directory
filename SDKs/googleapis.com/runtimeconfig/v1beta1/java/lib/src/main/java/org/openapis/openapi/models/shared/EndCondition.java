@@ -18,9 +18,11 @@ public class EndCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardinality")
     public Cardinality cardinality;
+
     public EndCondition withCardinality(Cardinality cardinality) {
         this.cardinality = cardinality;
         return this;
     }
     
+    public EndCondition(){}
 }

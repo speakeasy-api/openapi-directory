@@ -15,9 +15,11 @@ public class LibraryImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrls")
     public String[] imageUrls;
+
     public LibraryImagesResponse withImageUrls(String[] imageUrls) {
         this.imageUrls = imageUrls;
         return this;
     }
     
+    public LibraryImagesResponse(){}
 }

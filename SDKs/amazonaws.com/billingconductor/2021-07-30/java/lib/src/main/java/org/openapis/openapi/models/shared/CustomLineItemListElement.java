@@ -15,6 +15,7 @@ public class CustomLineItemListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public CustomLineItemListElement withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CustomLineItemListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationSize")
     public Long associationSize;
+
     public CustomLineItemListElement withAssociationSize(Long associationSize) {
         this.associationSize = associationSize;
         return this;
@@ -31,6 +33,7 @@ public class CustomLineItemListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingGroupArn")
     public String billingGroupArn;
+
     public CustomLineItemListElement withBillingGroupArn(String billingGroupArn) {
         this.billingGroupArn = billingGroupArn;
         return this;
@@ -39,6 +42,7 @@ public class CustomLineItemListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChargeDetails")
     public ListCustomLineItemChargeDetails chargeDetails;
+
     public CustomLineItemListElement withChargeDetails(ListCustomLineItemChargeDetails chargeDetails) {
         this.chargeDetails = chargeDetails;
         return this;
@@ -47,6 +51,7 @@ public class CustomLineItemListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTime")
     public Long creationTime;
+
     public CustomLineItemListElement withCreationTime(Long creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -55,6 +60,7 @@ public class CustomLineItemListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrencyCode")
     public CurrencyCodeEnum currencyCode;
+
     public CustomLineItemListElement withCurrencyCode(CurrencyCodeEnum currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -63,6 +69,7 @@ public class CustomLineItemListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CustomLineItemListElement withDescription(String description) {
         this.description = description;
         return this;
@@ -71,6 +78,7 @@ public class CustomLineItemListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedTime")
     public Long lastModifiedTime;
+
     public CustomLineItemListElement withLastModifiedTime(Long lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -79,6 +87,7 @@ public class CustomLineItemListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CustomLineItemListElement withName(String name) {
         this.name = name;
         return this;
@@ -87,9 +96,11 @@ public class CustomLineItemListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductCode")
     public String productCode;
+
     public CustomLineItemListElement withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
     }
     
+    public CustomLineItemListElement(){}
 }

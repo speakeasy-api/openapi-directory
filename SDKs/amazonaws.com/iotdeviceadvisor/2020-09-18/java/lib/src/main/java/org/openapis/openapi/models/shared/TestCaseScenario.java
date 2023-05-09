@@ -15,6 +15,7 @@ public class TestCaseScenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failure")
     public String failure;
+
     public TestCaseScenario withFailure(String failure) {
         this.failure = failure;
         return this;
@@ -23,6 +24,7 @@ public class TestCaseScenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TestCaseScenarioStatusEnum status;
+
     public TestCaseScenario withStatus(TestCaseScenarioStatusEnum status) {
         this.status = status;
         return this;
@@ -31,6 +33,7 @@ public class TestCaseScenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemMessage")
     public String systemMessage;
+
     public TestCaseScenario withSystemMessage(String systemMessage) {
         this.systemMessage = systemMessage;
         return this;
@@ -39,6 +42,7 @@ public class TestCaseScenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testCaseScenarioId")
     public String testCaseScenarioId;
+
     public TestCaseScenario withTestCaseScenarioId(String testCaseScenarioId) {
         this.testCaseScenarioId = testCaseScenarioId;
         return this;
@@ -47,9 +51,11 @@ public class TestCaseScenario {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testCaseScenarioType")
     public TestCaseScenarioTypeEnum testCaseScenarioType;
+
     public TestCaseScenario withTestCaseScenarioType(TestCaseScenarioTypeEnum testCaseScenarioType) {
         this.testCaseScenarioType = testCaseScenarioType;
         return this;
     }
     
+    public TestCaseScenario(){}
 }

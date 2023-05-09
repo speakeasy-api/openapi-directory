@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateMonitoringAlertRequest {
     @JsonProperty("DatapointsToAlert")
     public Long datapointsToAlert;
+
     public UpdateMonitoringAlertRequest withDatapointsToAlert(Long datapointsToAlert) {
         this.datapointsToAlert = datapointsToAlert;
         return this;
@@ -16,6 +17,7 @@ public class UpdateMonitoringAlertRequest {
     
     @JsonProperty("EvaluationPeriod")
     public Long evaluationPeriod;
+
     public UpdateMonitoringAlertRequest withEvaluationPeriod(Long evaluationPeriod) {
         this.evaluationPeriod = evaluationPeriod;
         return this;
@@ -23,6 +25,7 @@ public class UpdateMonitoringAlertRequest {
     
     @JsonProperty("MonitoringAlertName")
     public String monitoringAlertName;
+
     public UpdateMonitoringAlertRequest withMonitoringAlertName(String monitoringAlertName) {
         this.monitoringAlertName = monitoringAlertName;
         return this;
@@ -30,9 +33,16 @@ public class UpdateMonitoringAlertRequest {
     
     @JsonProperty("MonitoringScheduleName")
     public String monitoringScheduleName;
+
     public UpdateMonitoringAlertRequest withMonitoringScheduleName(String monitoringScheduleName) {
         this.monitoringScheduleName = monitoringScheduleName;
         return this;
     }
     
+    public UpdateMonitoringAlertRequest(@JsonProperty("DatapointsToAlert") Long datapointsToAlert, @JsonProperty("EvaluationPeriod") Long evaluationPeriod, @JsonProperty("MonitoringAlertName") String monitoringAlertName, @JsonProperty("MonitoringScheduleName") String monitoringScheduleName) {
+        this.datapointsToAlert = datapointsToAlert;
+        this.evaluationPeriod = evaluationPeriod;
+        this.monitoringAlertName = monitoringAlertName;
+        this.monitoringScheduleName = monitoringScheduleName;
+  }
 }

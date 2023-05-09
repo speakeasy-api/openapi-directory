@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class SubnetOutpost {
     
     public String subnetOutpostArn;
+
     public SubnetOutpost withSubnetOutpostArn(String subnetOutpostArn) {
         this.subnetOutpostArn = subnetOutpostArn;
         return this;
     }
     
+    public SubnetOutpost(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSetupV1LocationsIdAppointmentremindersResponse {
@@ -12,6 +13,7 @@ public class GetSetupV1LocationsIdAppointmentremindersResponse {
      */
     
     public org.openapis.openapi.models.shared.AppointmentReminderViewModel appointmentReminderViewModel;
+
     public GetSetupV1LocationsIdAppointmentremindersResponse withAppointmentReminderViewModel(org.openapis.openapi.models.shared.AppointmentReminderViewModel appointmentReminderViewModel) {
         this.appointmentReminderViewModel = appointmentReminderViewModel;
         return this;
@@ -19,6 +21,7 @@ public class GetSetupV1LocationsIdAppointmentremindersResponse {
     
     
     public String contentType;
+
     public GetSetupV1LocationsIdAppointmentremindersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetSetupV1LocationsIdAppointmentremindersResponse {
     
     
     public Integer statusCode;
+
     public GetSetupV1LocationsIdAppointmentremindersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSetupV1LocationsIdAppointmentremindersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSetupV1LocationsIdAppointmentremindersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSetupV1LocationsIdAppointmentremindersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleDomainsDnsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dsState")
     public GoogleDomainsDnsDsStateEnum dsState;
+
     public GoogleDomainsDnsInput withDsState(GoogleDomainsDnsDsStateEnum dsState) {
         this.dsState = dsState;
         return this;
     }
     
+    public GoogleDomainsDnsInput(){}
 }

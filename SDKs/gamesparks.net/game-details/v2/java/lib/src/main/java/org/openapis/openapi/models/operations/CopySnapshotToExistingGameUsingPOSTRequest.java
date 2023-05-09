@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CopySnapshotToExistingGameUsingPOSTRequest {
@@ -12,6 +13,7 @@ public class CopySnapshotToExistingGameUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public CopySnapshotToExistingGameUsingPOSTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class CopySnapshotToExistingGameUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=snapshotId")
     public String snapshotId;
+
     public CopySnapshotToExistingGameUsingPOSTRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -32,9 +35,15 @@ public class CopySnapshotToExistingGameUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetApiKey")
     public String targetApiKey;
+
     public CopySnapshotToExistingGameUsingPOSTRequest withTargetApiKey(String targetApiKey) {
         this.targetApiKey = targetApiKey;
         return this;
     }
     
+    public CopySnapshotToExistingGameUsingPOSTRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("snapshotId") String snapshotId, @JsonProperty("targetApiKey") String targetApiKey) {
+        this.apiKey = apiKey;
+        this.snapshotId = snapshotId;
+        this.targetApiKey = targetApiKey;
+  }
 }

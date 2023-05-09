@@ -21,6 +21,7 @@ public class DescribeModelCardExportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DescribeModelCardExportJobResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class DescribeModelCardExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportArtifacts")
     public ModelCardExportArtifacts exportArtifacts;
+
     public DescribeModelCardExportJobResponse withExportArtifacts(ModelCardExportArtifacts exportArtifacts) {
         this.exportArtifacts = exportArtifacts;
         return this;
@@ -37,6 +39,7 @@ public class DescribeModelCardExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeModelCardExportJobResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -46,6 +49,7 @@ public class DescribeModelCardExportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public DescribeModelCardExportJobResponse withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -53,6 +57,7 @@ public class DescribeModelCardExportJobResponse {
     
     @JsonProperty("ModelCardExportJobArn")
     public String modelCardExportJobArn;
+
     public DescribeModelCardExportJobResponse withModelCardExportJobArn(String modelCardExportJobArn) {
         this.modelCardExportJobArn = modelCardExportJobArn;
         return this;
@@ -60,6 +65,7 @@ public class DescribeModelCardExportJobResponse {
     
     @JsonProperty("ModelCardExportJobName")
     public String modelCardExportJobName;
+
     public DescribeModelCardExportJobResponse withModelCardExportJobName(String modelCardExportJobName) {
         this.modelCardExportJobName = modelCardExportJobName;
         return this;
@@ -67,6 +73,7 @@ public class DescribeModelCardExportJobResponse {
     
     @JsonProperty("ModelCardName")
     public String modelCardName;
+
     public DescribeModelCardExportJobResponse withModelCardName(String modelCardName) {
         this.modelCardName = modelCardName;
         return this;
@@ -74,6 +81,7 @@ public class DescribeModelCardExportJobResponse {
     
     @JsonProperty("ModelCardVersion")
     public Long modelCardVersion;
+
     public DescribeModelCardExportJobResponse withModelCardVersion(Long modelCardVersion) {
         this.modelCardVersion = modelCardVersion;
         return this;
@@ -81,6 +89,7 @@ public class DescribeModelCardExportJobResponse {
     
     @JsonProperty("OutputConfig")
     public ModelCardExportOutputConfig outputConfig;
+
     public DescribeModelCardExportJobResponse withOutputConfig(ModelCardExportOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -88,9 +97,20 @@ public class DescribeModelCardExportJobResponse {
     
     @JsonProperty("Status")
     public ModelCardExportJobStatusEnum status;
+
     public DescribeModelCardExportJobResponse withStatus(ModelCardExportJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeModelCardExportJobResponse(@JsonProperty("CreatedAt") OffsetDateTime createdAt, @JsonProperty("LastModifiedAt") OffsetDateTime lastModifiedAt, @JsonProperty("ModelCardExportJobArn") String modelCardExportJobArn, @JsonProperty("ModelCardExportJobName") String modelCardExportJobName, @JsonProperty("ModelCardName") String modelCardName, @JsonProperty("ModelCardVersion") Long modelCardVersion, @JsonProperty("OutputConfig") ModelCardExportOutputConfig outputConfig, @JsonProperty("Status") ModelCardExportJobStatusEnum status) {
+        this.createdAt = createdAt;
+        this.lastModifiedAt = lastModifiedAt;
+        this.modelCardExportJobArn = modelCardExportJobArn;
+        this.modelCardExportJobName = modelCardExportJobName;
+        this.modelCardName = modelCardName;
+        this.modelCardVersion = modelCardVersion;
+        this.outputConfig = outputConfig;
+        this.status = status;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AttachTrafficSourcesType {
     
     public String autoScalingGroupName;
+
     public AttachTrafficSourcesType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,9 +17,14 @@ public class AttachTrafficSourcesType {
     
     
     public TrafficSourceIdentifier[] trafficSources;
+
     public AttachTrafficSourcesType withTrafficSources(TrafficSourceIdentifier[] trafficSources) {
         this.trafficSources = trafficSources;
         return this;
     }
     
+    public AttachTrafficSourcesType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("TrafficSources") TrafficSourceIdentifier[] trafficSources) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.trafficSources = trafficSources;
+  }
 }

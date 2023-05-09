@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DBClusterBacktrackList {
     
     public String backtrackIdentifier;
+
     public DBClusterBacktrackList withBacktrackIdentifier(String backtrackIdentifier) {
         this.backtrackIdentifier = backtrackIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class DBClusterBacktrackList {
     
     
     public OffsetDateTime backtrackRequestCreationTime;
+
     public DBClusterBacktrackList withBacktrackRequestCreationTime(OffsetDateTime backtrackRequestCreationTime) {
         this.backtrackRequestCreationTime = backtrackRequestCreationTime;
         return this;
@@ -26,6 +28,7 @@ public class DBClusterBacktrackList {
     
     
     public OffsetDateTime backtrackTo;
+
     public DBClusterBacktrackList withBacktrackTo(OffsetDateTime backtrackTo) {
         this.backtrackTo = backtrackTo;
         return this;
@@ -33,6 +36,7 @@ public class DBClusterBacktrackList {
     
     
     public OffsetDateTime backtrackedFrom;
+
     public DBClusterBacktrackList withBacktrackedFrom(OffsetDateTime backtrackedFrom) {
         this.backtrackedFrom = backtrackedFrom;
         return this;
@@ -40,6 +44,7 @@ public class DBClusterBacktrackList {
     
     
     public String dbClusterIdentifier;
+
     public DBClusterBacktrackList withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -47,9 +52,11 @@ public class DBClusterBacktrackList {
     
     
     public String status;
+
     public DBClusterBacktrackList withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DBClusterBacktrackList(){}
 }

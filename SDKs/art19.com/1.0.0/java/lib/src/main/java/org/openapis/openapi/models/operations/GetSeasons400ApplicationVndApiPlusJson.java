@@ -25,9 +25,11 @@ public class GetSeasons400ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public GetSeasons400ApplicationVndApiPlusJsonErrors[] errors;
+
     public GetSeasons400ApplicationVndApiPlusJson withErrors(GetSeasons400ApplicationVndApiPlusJsonErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetSeasons400ApplicationVndApiPlusJson(){}
 }

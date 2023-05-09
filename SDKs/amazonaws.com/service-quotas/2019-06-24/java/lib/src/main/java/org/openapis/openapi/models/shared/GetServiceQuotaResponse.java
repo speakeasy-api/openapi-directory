@@ -15,9 +15,11 @@ public class GetServiceQuotaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quota")
     public ServiceQuota quota;
+
     public GetServiceQuotaResponse withQuota(ServiceQuota quota) {
         this.quota = quota;
         return this;
     }
     
+    public GetServiceQuotaResponse(){}
 }

@@ -15,6 +15,7 @@ public class AssociateIdentityProviderConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public AssociateIdentityProviderConfigResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -26,9 +27,11 @@ public class AssociateIdentityProviderConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public Update update;
+
     public AssociateIdentityProviderConfigResponse withUpdate(Update update) {
         this.update = update;
         return this;
     }
     
+    public AssociateIdentityProviderConfigResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConformancePackComplianceSummaryResponse {
     
     public String contentType;
+
     public GetConformancePackComplianceSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetConformancePackComplianceSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetConformancePackComplianceSummaryResponse getConformancePackComplianceSummaryResponse;
+
     public GetConformancePackComplianceSummaryResponse withGetConformancePackComplianceSummaryResponse(org.openapis.openapi.models.shared.GetConformancePackComplianceSummaryResponse getConformancePackComplianceSummaryResponse) {
         this.getConformancePackComplianceSummaryResponse = getConformancePackComplianceSummaryResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetConformancePackComplianceSummaryResponse {
      */
     
     public Object invalidLimitException;
+
     public GetConformancePackComplianceSummaryResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -39,6 +43,7 @@ public class GetConformancePackComplianceSummaryResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetConformancePackComplianceSummaryResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class GetConformancePackComplianceSummaryResponse {
      */
     
     public Object noSuchConformancePackException;
+
     public GetConformancePackComplianceSummaryResponse withNoSuchConformancePackException(Object noSuchConformancePackException) {
         this.noSuchConformancePackException = noSuchConformancePackException;
         return this;
@@ -56,6 +62,7 @@ public class GetConformancePackComplianceSummaryResponse {
     
     
     public Integer statusCode;
+
     public GetConformancePackComplianceSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetConformancePackComplianceSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConformancePackComplianceSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetConformancePackComplianceSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

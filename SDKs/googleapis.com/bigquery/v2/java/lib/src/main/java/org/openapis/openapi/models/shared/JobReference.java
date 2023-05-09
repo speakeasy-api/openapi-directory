@@ -15,6 +15,7 @@ public class JobReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public JobReference withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -26,6 +27,7 @@ public class JobReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public JobReference withLocation(String location) {
         this.location = location;
         return this;
@@ -37,9 +39,11 @@ public class JobReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public JobReference withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public JobReference(){}
 }

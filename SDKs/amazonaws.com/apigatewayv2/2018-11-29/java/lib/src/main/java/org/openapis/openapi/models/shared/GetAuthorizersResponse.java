@@ -15,6 +15,7 @@ public class GetAuthorizersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public Authorizer[] items;
+
     public GetAuthorizersResponse withItems(Authorizer[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class GetAuthorizersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetAuthorizersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetAuthorizersResponse(){}
 }

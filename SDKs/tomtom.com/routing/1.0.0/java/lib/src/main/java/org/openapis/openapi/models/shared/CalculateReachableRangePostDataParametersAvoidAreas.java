@@ -12,9 +12,11 @@ public class CalculateReachableRangePostDataParametersAvoidAreas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rectangles")
     public CalculateReachableRangePostDataParametersAvoidAreasRectangles[] rectangles;
+
     public CalculateReachableRangePostDataParametersAvoidAreas withRectangles(CalculateReachableRangePostDataParametersAvoidAreasRectangles[] rectangles) {
         this.rectangles = rectangles;
         return this;
     }
     
+    public CalculateReachableRangePostDataParametersAvoidAreas(){}
 }

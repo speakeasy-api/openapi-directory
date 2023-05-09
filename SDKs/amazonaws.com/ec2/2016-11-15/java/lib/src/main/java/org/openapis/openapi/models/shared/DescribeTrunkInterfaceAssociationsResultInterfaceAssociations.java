@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTrunkInterfaceAssociationsResultInterfaceAssociations {
     
     public String associationId;
+
     public DescribeTrunkInterfaceAssociationsResultInterfaceAssociations withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeTrunkInterfaceAssociationsResultInterfaceAssociations {
     
     
     public String branchInterfaceId;
+
     public DescribeTrunkInterfaceAssociationsResultInterfaceAssociations withBranchInterfaceId(String branchInterfaceId) {
         this.branchInterfaceId = branchInterfaceId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeTrunkInterfaceAssociationsResultInterfaceAssociations {
     
     
     public Long greKey;
+
     public DescribeTrunkInterfaceAssociationsResultInterfaceAssociations withGreKey(Long greKey) {
         this.greKey = greKey;
         return this;
@@ -33,6 +36,7 @@ public class DescribeTrunkInterfaceAssociationsResultInterfaceAssociations {
     
     
     public DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsInterfaceProtocolEnum interfaceProtocol;
+
     public DescribeTrunkInterfaceAssociationsResultInterfaceAssociations withInterfaceProtocol(DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsInterfaceProtocolEnum interfaceProtocol) {
         this.interfaceProtocol = interfaceProtocol;
         return this;
@@ -40,6 +44,7 @@ public class DescribeTrunkInterfaceAssociationsResultInterfaceAssociations {
     
     
     public DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsTags[] tags;
+
     public DescribeTrunkInterfaceAssociationsResultInterfaceAssociations withTags(DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsTags[] tags) {
         this.tags = tags;
         return this;
@@ -47,6 +52,7 @@ public class DescribeTrunkInterfaceAssociationsResultInterfaceAssociations {
     
     
     public String trunkInterfaceId;
+
     public DescribeTrunkInterfaceAssociationsResultInterfaceAssociations withTrunkInterfaceId(String trunkInterfaceId) {
         this.trunkInterfaceId = trunkInterfaceId;
         return this;
@@ -54,9 +60,11 @@ public class DescribeTrunkInterfaceAssociationsResultInterfaceAssociations {
     
     
     public Long vlanId;
+
     public DescribeTrunkInterfaceAssociationsResultInterfaceAssociations withVlanId(Long vlanId) {
         this.vlanId = vlanId;
         return this;
     }
     
+    public DescribeTrunkInterfaceAssociationsResultInterfaceAssociations(){}
 }

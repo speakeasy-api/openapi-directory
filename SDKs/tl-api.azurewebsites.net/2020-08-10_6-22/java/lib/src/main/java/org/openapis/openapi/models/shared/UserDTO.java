@@ -21,6 +21,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public UserDTO withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -33,6 +34,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalEntityNumber")
     public String externalEntityNumber;
+
     public UserDTO withExternalEntityNumber(String externalEntityNumber) {
         this.externalEntityNumber = externalEntityNumber;
         return this;
@@ -45,6 +47,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guardian")
     public Integer guardian;
+
     public UserDTO withGuardian(Integer guardian) {
         this.guardian = guardian;
         return this;
@@ -57,6 +60,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gymNumber")
     public String gymNumber;
+
     public UserDTO withGymNumber(String gymNumber) {
         this.gymNumber = gymNumber;
         return this;
@@ -69,6 +73,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("introduceBy")
     public Integer introduceBy;
+
     public UserDTO withIntroduceBy(Integer introduceBy) {
         this.introduceBy = introduceBy;
         return this;
@@ -81,6 +86,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserDTO withName(String name) {
         this.name = name;
         return this;
@@ -93,6 +99,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public UserDTO withNumber(String number) {
         this.number = number;
         return this;
@@ -105,6 +112,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeId")
     public Integer typeId;
+
     public UserDTO withTypeId(Integer typeId) {
         this.typeId = typeId;
         return this;
@@ -117,9 +125,11 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public Integer userId;
+
     public UserDTO withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public UserDTO(){}
 }

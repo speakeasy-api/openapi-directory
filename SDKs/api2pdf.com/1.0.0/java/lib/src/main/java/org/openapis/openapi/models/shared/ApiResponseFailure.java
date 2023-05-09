@@ -18,6 +18,7 @@ public class ApiResponseFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ApiResponseFailure withReason(String reason) {
         this.reason = reason;
         return this;
@@ -29,9 +30,11 @@ public class ApiResponseFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public ApiResponseFailure withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ApiResponseFailure(){}
 }

@@ -18,6 +18,7 @@ public class NonCompliantFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayCommand")
     public String displayCommand;
+
     public NonCompliantFile withDisplayCommand(String displayCommand) {
         this.displayCommand = displayCommand;
         return this;
@@ -29,6 +30,7 @@ public class NonCompliantFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public NonCompliantFile withPath(String path) {
         this.path = path;
         return this;
@@ -40,9 +42,11 @@ public class NonCompliantFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public NonCompliantFile withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public NonCompliantFile(){}
 }

@@ -15,6 +15,7 @@ public class PutRecordBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public PutRecordBatchResponseEntry withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class PutRecordBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public PutRecordBatchResponseEntry withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class PutRecordBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordId")
     public String recordId;
+
     public PutRecordBatchResponseEntry withRecordId(String recordId) {
         this.recordId = recordId;
         return this;
     }
     
+    public PutRecordBatchResponseEntry(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProjectHomeUserFieldsListResponse {
     
     public byte[] body;
+
     public GetProjectHomeUserFieldsListResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetProjectHomeUserFieldsListResponse {
     
     
     public String contentType;
+
     public GetProjectHomeUserFieldsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetProjectHomeUserFieldsListResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetProjectHomeUserFieldsListResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -36,6 +40,7 @@ public class GetProjectHomeUserFieldsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ProjectHomeUserFieldsListVO projectHomeUserFieldsListVO;
+
     public GetProjectHomeUserFieldsListResponse withProjectHomeUserFieldsListVO(org.openapis.openapi.models.shared.ProjectHomeUserFieldsListVO projectHomeUserFieldsListVO) {
         this.projectHomeUserFieldsListVO = projectHomeUserFieldsListVO;
         return this;
@@ -43,6 +48,7 @@ public class GetProjectHomeUserFieldsListResponse {
     
     
     public Integer statusCode;
+
     public GetProjectHomeUserFieldsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetProjectHomeUserFieldsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProjectHomeUserFieldsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetProjectHomeUserFieldsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

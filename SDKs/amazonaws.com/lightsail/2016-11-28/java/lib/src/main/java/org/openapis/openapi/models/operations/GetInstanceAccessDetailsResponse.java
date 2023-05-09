@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInstanceAccessDetailsResponse {
@@ -12,6 +13,7 @@ public class GetInstanceAccessDetailsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetInstanceAccessDetailsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetInstanceAccessDetailsResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetInstanceAccessDetailsResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetInstanceAccessDetailsResponse {
     
     
     public String contentType;
+
     public GetInstanceAccessDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetInstanceAccessDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInstanceAccessDetailsResult getInstanceAccessDetailsResult;
+
     public GetInstanceAccessDetailsResponse withGetInstanceAccessDetailsResult(org.openapis.openapi.models.shared.GetInstanceAccessDetailsResult getInstanceAccessDetailsResult) {
         this.getInstanceAccessDetailsResult = getInstanceAccessDetailsResult;
         return this;
@@ -49,6 +54,7 @@ public class GetInstanceAccessDetailsResponse {
      */
     
     public Object invalidInputException;
+
     public GetInstanceAccessDetailsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetInstanceAccessDetailsResponse {
      */
     
     public Object notFoundException;
+
     public GetInstanceAccessDetailsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetInstanceAccessDetailsResponse {
      */
     
     public Object operationFailureException;
+
     public GetInstanceAccessDetailsResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetInstanceAccessDetailsResponse {
      */
     
     public Object serviceException;
+
     public GetInstanceAccessDetailsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetInstanceAccessDetailsResponse {
     
     
     public Integer statusCode;
+
     public GetInstanceAccessDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetInstanceAccessDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInstanceAccessDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetInstanceAccessDetailsResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetInstanceAccessDetailsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetInstanceAccessDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1TextMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDatalabelingV1beta1TextMetadata withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1TextMetadata(){}
 }

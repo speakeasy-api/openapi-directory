@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateActionResponse {
     @JsonProperty("data")
     public ActionResource data;
+
     public CreateActionResponse withData(ActionResource data) {
         this.data = data;
         return this;
@@ -22,9 +23,13 @@ public class CreateActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public CreateOrUpdateMetaResponse meta;
+
     public CreateActionResponse withMeta(CreateOrUpdateMetaResponse meta) {
         this.meta = meta;
         return this;
     }
     
+    public CreateActionResponse(@JsonProperty("data") ActionResource data) {
+        this.data = data;
+  }
 }

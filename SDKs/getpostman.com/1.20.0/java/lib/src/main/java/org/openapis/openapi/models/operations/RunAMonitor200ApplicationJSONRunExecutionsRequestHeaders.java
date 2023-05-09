@@ -12,6 +12,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsRequestHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accept")
     public String accept;
+
     public RunAMonitor200ApplicationJSONRunExecutionsRequestHeaders withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -20,6 +21,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsRequestHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accept-encoding")
     public String acceptEncoding;
+
     public RunAMonitor200ApplicationJSONRunExecutionsRequestHeaders withAcceptEncoding(String acceptEncoding) {
         this.acceptEncoding = acceptEncoding;
         return this;
@@ -28,6 +30,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsRequestHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content-length")
     public Double contentLength;
+
     public RunAMonitor200ApplicationJSONRunExecutionsRequestHeaders withContentLength(Double contentLength) {
         this.contentLength = contentLength;
         return this;
@@ -36,9 +39,11 @@ public class RunAMonitor200ApplicationJSONRunExecutionsRequestHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content-type")
     public String contentType;
+
     public RunAMonitor200ApplicationJSONRunExecutionsRequestHeaders withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    public RunAMonitor200ApplicationJSONRunExecutionsRequestHeaders(){}
 }

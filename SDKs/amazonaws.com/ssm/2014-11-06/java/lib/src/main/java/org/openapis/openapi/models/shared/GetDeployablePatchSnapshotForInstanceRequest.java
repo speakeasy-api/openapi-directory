@@ -12,6 +12,7 @@ public class GetDeployablePatchSnapshotForInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineOverride")
     public BaselineOverride baselineOverride;
+
     public GetDeployablePatchSnapshotForInstanceRequest withBaselineOverride(BaselineOverride baselineOverride) {
         this.baselineOverride = baselineOverride;
         return this;
@@ -19,6 +20,7 @@ public class GetDeployablePatchSnapshotForInstanceRequest {
     
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public GetDeployablePatchSnapshotForInstanceRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -26,9 +28,14 @@ public class GetDeployablePatchSnapshotForInstanceRequest {
     
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public GetDeployablePatchSnapshotForInstanceRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public GetDeployablePatchSnapshotForInstanceRequest(@JsonProperty("InstanceId") String instanceId, @JsonProperty("SnapshotId") String snapshotId) {
+        this.instanceId = instanceId;
+        this.snapshotId = snapshotId;
+  }
 }

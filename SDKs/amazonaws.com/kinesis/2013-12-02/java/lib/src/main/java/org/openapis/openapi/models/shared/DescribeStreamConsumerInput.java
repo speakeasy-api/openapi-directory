@@ -12,6 +12,7 @@ public class DescribeStreamConsumerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumerARN")
     public String consumerARN;
+
     public DescribeStreamConsumerInput withConsumerARN(String consumerARN) {
         this.consumerARN = consumerARN;
         return this;
@@ -20,6 +21,7 @@ public class DescribeStreamConsumerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumerName")
     public String consumerName;
+
     public DescribeStreamConsumerInput withConsumerName(String consumerName) {
         this.consumerName = consumerName;
         return this;
@@ -28,9 +30,11 @@ public class DescribeStreamConsumerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public DescribeStreamConsumerInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
     }
     
+    public DescribeStreamConsumerInput(){}
 }

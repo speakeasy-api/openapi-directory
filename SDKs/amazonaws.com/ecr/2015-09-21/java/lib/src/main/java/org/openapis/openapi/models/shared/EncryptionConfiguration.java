@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EncryptionConfiguration {
     @JsonProperty("encryptionType")
     public EncryptionTypeEnum encryptionType;
+
     public EncryptionConfiguration withEncryptionType(EncryptionTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -22,9 +23,13 @@ public class EncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKey")
     public String kmsKey;
+
     public EncryptionConfiguration withKmsKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
     }
     
+    public EncryptionConfiguration(@JsonProperty("encryptionType") EncryptionTypeEnum encryptionType) {
+        this.encryptionType = encryptionType;
+  }
 }

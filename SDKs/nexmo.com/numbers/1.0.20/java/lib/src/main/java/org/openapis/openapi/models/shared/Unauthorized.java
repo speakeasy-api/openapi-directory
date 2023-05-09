@@ -18,6 +18,7 @@ public class Unauthorized {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error-code")
     public String errorCode;
+
     public Unauthorized withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -29,9 +30,11 @@ public class Unauthorized {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error-code-label")
     public String errorCodeLabel;
+
     public Unauthorized withErrorCodeLabel(String errorCodeLabel) {
         this.errorCodeLabel = errorCodeLabel;
         return this;
     }
     
+    public Unauthorized(){}
 }

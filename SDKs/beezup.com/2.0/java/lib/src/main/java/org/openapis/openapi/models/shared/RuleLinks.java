@@ -15,6 +15,7 @@ public class RuleLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete")
     public LinksDeleteRuleLink delete;
+
     public RuleLinks withDelete(LinksDeleteRuleLink delete) {
         this.delete = delete;
         return this;
@@ -23,6 +24,7 @@ public class RuleLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disable")
     public LinksDisableRuleLink disable;
+
     public RuleLinks withDisable(LinksDisableRuleLink disable) {
         this.disable = disable;
         return this;
@@ -31,6 +33,7 @@ public class RuleLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable")
     public LinksEnableRuleLink enable;
+
     public RuleLinks withEnable(LinksEnableRuleLink enable) {
         this.enable = enable;
         return this;
@@ -39,6 +42,7 @@ public class RuleLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("movedown")
     public LinksMoveDownRuleLink movedown;
+
     public RuleLinks withMovedown(LinksMoveDownRuleLink movedown) {
         this.movedown = movedown;
         return this;
@@ -47,6 +51,7 @@ public class RuleLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moveup")
     public LinksMoveUpRuleLink moveup;
+
     public RuleLinks withMoveup(LinksMoveUpRuleLink moveup) {
         this.moveup = moveup;
         return this;
@@ -55,6 +60,7 @@ public class RuleLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportFilter")
     public LinksGetReportFilterLink reportFilter;
+
     public RuleLinks withReportFilter(LinksGetReportFilterLink reportFilter) {
         this.reportFilter = reportFilter;
         return this;
@@ -63,6 +69,7 @@ public class RuleLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("run")
     public LinksRunRuleLink run;
+
     public RuleLinks withRun(LinksRunRuleLink run) {
         this.run = run;
         return this;
@@ -70,6 +77,7 @@ public class RuleLinks {
     
     @JsonProperty("self")
     public LinksGetRuleLink self;
+
     public RuleLinks withSelf(LinksGetRuleLink self) {
         this.self = self;
         return this;
@@ -78,9 +86,13 @@ public class RuleLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public LinksUpdateRuleLink update;
+
     public RuleLinks withUpdate(LinksUpdateRuleLink update) {
         this.update = update;
         return this;
     }
     
+    public RuleLinks(@JsonProperty("self") LinksGetRuleLink self) {
+        this.self = self;
+  }
 }

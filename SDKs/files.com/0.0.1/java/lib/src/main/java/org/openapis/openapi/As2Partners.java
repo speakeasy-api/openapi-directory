@@ -55,10 +55,8 @@ public class As2Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAs2PartnersIdResponse res = new org.openapis.openapi.models.operations.DeleteAs2PartnersIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteAs2PartnersIdResponse res = new org.openapis.openapi.models.operations.DeleteAs2PartnersIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -94,11 +92,9 @@ public class As2Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAs2PartnersResponse res = new org.openapis.openapi.models.operations.GetAs2PartnersResponse() {{
+        org.openapis.openapi.models.operations.GetAs2PartnersResponse res = new org.openapis.openapi.models.operations.GetAs2PartnersResponse(contentType, httpRes.statusCode()) {{
             as2PartnerEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class As2Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAs2PartnersIdResponse res = new org.openapis.openapi.models.operations.GetAs2PartnersIdResponse() {{
+        org.openapis.openapi.models.operations.GetAs2PartnersIdResponse res = new org.openapis.openapi.models.operations.GetAs2PartnersIdResponse(contentType, httpRes.statusCode()) {{
             as2PartnerEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +172,9 @@ public class As2Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchAs2PartnersIdResponse res = new org.openapis.openapi.models.operations.PatchAs2PartnersIdResponse() {{
+        org.openapis.openapi.models.operations.PatchAs2PartnersIdResponse res = new org.openapis.openapi.models.operations.PatchAs2PartnersIdResponse(contentType, httpRes.statusCode()) {{
             as2PartnerEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -224,11 +216,9 @@ public class As2Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAs2PartnersResponse res = new org.openapis.openapi.models.operations.PostAs2PartnersResponse() {{
+        org.openapis.openapi.models.operations.PostAs2PartnersResponse res = new org.openapis.openapi.models.operations.PostAs2PartnersResponse(contentType, httpRes.statusCode()) {{
             as2PartnerEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

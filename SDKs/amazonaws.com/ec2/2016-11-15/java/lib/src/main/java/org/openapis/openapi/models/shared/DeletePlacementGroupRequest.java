@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeletePlacementGroupRequest {
     
     public Boolean dryRun;
+
     public DeletePlacementGroupRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DeletePlacementGroupRequest {
     
     
     public String groupName;
+
     public DeletePlacementGroupRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public DeletePlacementGroupRequest(@JsonProperty("GroupName") String groupName) {
+        this.groupName = groupName;
+  }
 }

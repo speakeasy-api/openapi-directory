@@ -15,9 +15,11 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2ResourceDetails")
     public Ec2ResourceDetails ec2ResourceDetails;
+
     public ResourceDetails withEc2ResourceDetails(Ec2ResourceDetails ec2ResourceDetails) {
         this.ec2ResourceDetails = ec2ResourceDetails;
         return this;
     }
     
+    public ResourceDetails(){}
 }

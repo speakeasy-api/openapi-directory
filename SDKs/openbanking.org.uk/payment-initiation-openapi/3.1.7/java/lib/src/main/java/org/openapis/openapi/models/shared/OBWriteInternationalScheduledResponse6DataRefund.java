@@ -14,6 +14,7 @@ public class OBWriteInternationalScheduledResponse6DataRefund {
      */
     @JsonProperty("Account")
     public OBWriteInternationalScheduledResponse6DataRefundAccount account;
+
     public OBWriteInternationalScheduledResponse6DataRefund withAccount(OBWriteInternationalScheduledResponse6DataRefundAccount account) {
         this.account = account;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteInternationalScheduledResponse6DataRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Agent")
     public OBWriteInternationalScheduledResponse6DataRefundAgent agent;
+
     public OBWriteInternationalScheduledResponse6DataRefund withAgent(OBWriteInternationalScheduledResponse6DataRefundAgent agent) {
         this.agent = agent;
         return this;
@@ -36,9 +38,13 @@ public class OBWriteInternationalScheduledResponse6DataRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Creditor")
     public OBWriteInternationalScheduledResponse6DataRefundCreditor creditor;
+
     public OBWriteInternationalScheduledResponse6DataRefund withCreditor(OBWriteInternationalScheduledResponse6DataRefundCreditor creditor) {
         this.creditor = creditor;
         return this;
     }
     
+    public OBWriteInternationalScheduledResponse6DataRefund(@JsonProperty("Account") OBWriteInternationalScheduledResponse6DataRefundAccount account) {
+        this.account = account;
+  }
 }

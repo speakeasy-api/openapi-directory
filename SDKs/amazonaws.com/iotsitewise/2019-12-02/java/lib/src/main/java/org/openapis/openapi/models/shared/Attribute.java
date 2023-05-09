@@ -15,9 +15,11 @@ public class Attribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public String defaultValue;
+
     public Attribute withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
     }
     
+    public Attribute(){}
 }

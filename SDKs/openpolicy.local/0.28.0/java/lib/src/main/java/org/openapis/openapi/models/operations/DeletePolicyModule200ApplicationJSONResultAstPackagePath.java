@@ -15,6 +15,7 @@ public class DeletePolicyModule200ApplicationJSONResultAstPackagePath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DeletePolicyModule200ApplicationJSONResultAstPackagePathTypeEnum type;
+
     public DeletePolicyModule200ApplicationJSONResultAstPackagePath withType(DeletePolicyModule200ApplicationJSONResultAstPackagePathTypeEnum type) {
         this.type = type;
         return this;
@@ -26,9 +27,11 @@ public class DeletePolicyModule200ApplicationJSONResultAstPackagePath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public DeletePolicyModule200ApplicationJSONResultAstPackagePath withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DeletePolicyModule200ApplicationJSONResultAstPackagePath(){}
 }

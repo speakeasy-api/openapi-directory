@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CancelBundleTaskResult {
     
     public CancelBundleTaskResultBundleTask bundleTask;
+
     public CancelBundleTaskResult withBundleTask(CancelBundleTaskResultBundleTask bundleTask) {
         this.bundleTask = bundleTask;
         return this;
     }
     
+    public CancelBundleTaskResult(){}
 }

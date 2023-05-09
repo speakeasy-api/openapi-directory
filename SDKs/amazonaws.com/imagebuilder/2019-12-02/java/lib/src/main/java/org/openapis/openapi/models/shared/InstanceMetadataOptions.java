@@ -15,6 +15,7 @@ public class InstanceMetadataOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpPutResponseHopLimit")
     public Long httpPutResponseHopLimit;
+
     public InstanceMetadataOptions withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         return this;
@@ -23,9 +24,11 @@ public class InstanceMetadataOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpTokens")
     public String httpTokens;
+
     public InstanceMetadataOptions withHttpTokens(String httpTokens) {
         this.httpTokens = httpTokens;
         return this;
     }
     
+    public InstanceMetadataOptions(){}
 }

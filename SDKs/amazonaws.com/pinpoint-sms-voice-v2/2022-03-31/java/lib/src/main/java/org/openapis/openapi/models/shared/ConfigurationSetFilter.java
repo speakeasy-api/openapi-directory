@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConfigurationSetFilter {
     @JsonProperty("Name")
     public ConfigurationSetFilterNameEnum name;
+
     public ConfigurationSetFilter withName(ConfigurationSetFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class ConfigurationSetFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public ConfigurationSetFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ConfigurationSetFilter(@JsonProperty("Name") ConfigurationSetFilterNameEnum name, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

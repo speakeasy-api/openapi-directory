@@ -15,6 +15,7 @@ public class UserIdentityRoot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public UserIdentityRoot withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class UserIdentityRoot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public UserIdentityRoot withArn(String arn) {
         this.arn = arn;
         return this;
@@ -31,9 +33,11 @@ public class UserIdentityRoot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalId")
     public String principalId;
+
     public UserIdentityRoot withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
     }
     
+    public UserIdentityRoot(){}
 }

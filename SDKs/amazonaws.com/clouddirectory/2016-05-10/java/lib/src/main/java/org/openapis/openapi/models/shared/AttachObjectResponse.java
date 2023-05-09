@@ -15,9 +15,11 @@ public class AttachObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachedObjectIdentifier")
     public String attachedObjectIdentifier;
+
     public AttachObjectResponse withAttachedObjectIdentifier(String attachedObjectIdentifier) {
         this.attachedObjectIdentifier = attachedObjectIdentifier;
         return this;
     }
     
+    public AttachObjectResponse(){}
 }

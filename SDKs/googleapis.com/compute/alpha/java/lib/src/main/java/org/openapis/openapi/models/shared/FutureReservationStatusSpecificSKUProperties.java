@@ -18,9 +18,11 @@ public class FutureReservationStatusSpecificSKUProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceInstanceTemplateId")
     public String sourceInstanceTemplateId;
+
     public FutureReservationStatusSpecificSKUProperties withSourceInstanceTemplateId(String sourceInstanceTemplateId) {
         this.sourceInstanceTemplateId = sourceInstanceTemplateId;
         return this;
     }
     
+    public FutureReservationStatusSpecificSKUProperties(){}
 }

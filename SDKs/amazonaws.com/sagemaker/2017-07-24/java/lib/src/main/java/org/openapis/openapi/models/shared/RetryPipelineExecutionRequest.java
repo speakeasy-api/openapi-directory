@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RetryPipelineExecutionRequest {
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public RetryPipelineExecutionRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class RetryPipelineExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelismConfiguration")
     public ParallelismConfiguration parallelismConfiguration;
+
     public RetryPipelineExecutionRequest withParallelismConfiguration(ParallelismConfiguration parallelismConfiguration) {
         this.parallelismConfiguration = parallelismConfiguration;
         return this;
@@ -26,9 +28,14 @@ public class RetryPipelineExecutionRequest {
     
     @JsonProperty("PipelineExecutionArn")
     public String pipelineExecutionArn;
+
     public RetryPipelineExecutionRequest withPipelineExecutionArn(String pipelineExecutionArn) {
         this.pipelineExecutionArn = pipelineExecutionArn;
         return this;
     }
     
+    public RetryPipelineExecutionRequest(@JsonProperty("ClientRequestToken") String clientRequestToken, @JsonProperty("PipelineExecutionArn") String pipelineExecutionArn) {
+        this.clientRequestToken = clientRequestToken;
+        this.pipelineExecutionArn = pipelineExecutionArn;
+  }
 }

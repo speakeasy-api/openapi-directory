@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSubscriptionResponse {
     
     public String contentType;
+
     public UpdateSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSubscriptionResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateSubscriptionResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSubscriptionResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateSubscriptionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSubscriptionResponse {
      */
     
     public Object lockedSubscriptionException;
+
     public UpdateSubscriptionResponse withLockedSubscriptionException(Object lockedSubscriptionException) {
         this.lockedSubscriptionException = lockedSubscriptionException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSubscriptionResponse {
      */
     
     public Object optimisticLockException;
+
     public UpdateSubscriptionResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateSubscriptionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateSubscriptionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public UpdateSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateSubscriptionResponse {
      */
     
     public java.util.Map<String, Object> updateSubscriptionResponse;
+
     public UpdateSubscriptionResponse withUpdateSubscriptionResponse(java.util.Map<String, Object> updateSubscriptionResponse) {
         this.updateSubscriptionResponse = updateSubscriptionResponse;
         return this;
     }
     
+    public UpdateSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

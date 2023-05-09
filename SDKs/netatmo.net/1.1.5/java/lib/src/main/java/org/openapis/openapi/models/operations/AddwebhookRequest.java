@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddwebhookRequest {
@@ -12,6 +13,7 @@ public class AddwebhookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_type")
     public String appType;
+
     public AddwebhookRequest withAppType(String appType) {
         this.appType = appType;
         return this;
@@ -22,9 +24,14 @@ public class AddwebhookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public AddwebhookRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AddwebhookRequest(@JsonProperty("app_type") String appType, @JsonProperty("url") String url) {
+        this.appType = appType;
+        this.url = url;
+  }
 }

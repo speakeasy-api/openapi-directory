@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ViewSystemsAdvisoriesSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-rh-identity")
     public String rhIdentity;
+
     public ViewSystemsAdvisoriesSecurity withRhIdentity(String rhIdentity) {
         this.rhIdentity = rhIdentity;
         return this;
     }
     
+    public ViewSystemsAdvisoriesSecurity(@JsonProperty("RhIdentity") String rhIdentity) {
+        this.rhIdentity = rhIdentity;
+  }
 }

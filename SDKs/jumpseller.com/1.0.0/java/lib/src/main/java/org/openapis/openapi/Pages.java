@@ -57,12 +57,10 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePagesIdJsonResponse res = new org.openapis.openapi.models.operations.DeletePagesIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeletePagesIdJsonResponse res = new org.openapis.openapi.models.operations.DeletePagesIdJsonResponse(contentType, httpRes.statusCode()) {{
             deletePagesIdJSON200ApplicationJSONString = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPagesJsonResponse res = new org.openapis.openapi.models.operations.GetPagesJsonResponse() {{
+        org.openapis.openapi.models.operations.GetPagesJsonResponse res = new org.openapis.openapi.models.operations.GetPagesJsonResponse(contentType, httpRes.statusCode()) {{
             pages = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPagesCountJsonResponse res = new org.openapis.openapi.models.operations.GetPagesCountJsonResponse() {{
+        org.openapis.openapi.models.operations.GetPagesCountJsonResponse res = new org.openapis.openapi.models.operations.GetPagesCountJsonResponse(contentType, httpRes.statusCode()) {{
             count = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,12 +190,10 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPagesIdJsonResponse res = new org.openapis.openapi.models.operations.GetPagesIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetPagesIdJsonResponse res = new org.openapis.openapi.models.operations.GetPagesIdJsonResponse(contentType, httpRes.statusCode()) {{
             page = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,11 +245,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPagesJsonResponse res = new org.openapis.openapi.models.operations.PostPagesJsonResponse() {{
+        org.openapis.openapi.models.operations.PostPagesJsonResponse res = new org.openapis.openapi.models.operations.PostPagesJsonResponse(contentType, httpRes.statusCode()) {{
             page = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,12 +292,10 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutPagesIdJsonResponse res = new org.openapis.openapi.models.operations.PutPagesIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutPagesIdJsonResponse res = new org.openapis.openapi.models.operations.PutPagesIdJsonResponse(contentType, httpRes.statusCode()) {{
             page = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class AwsElbLoadBalancerConnectionDraining {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public AwsElbLoadBalancerConnectionDraining withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,9 +24,11 @@ public class AwsElbLoadBalancerConnectionDraining {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeout")
     public Long timeout;
+
     public AwsElbLoadBalancerConnectionDraining withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public AwsElbLoadBalancerConnectionDraining(){}
 }

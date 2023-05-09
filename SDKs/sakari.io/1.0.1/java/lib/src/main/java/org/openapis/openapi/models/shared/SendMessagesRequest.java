@@ -12,6 +12,7 @@ public class SendMessagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     public ContactRequest[] contacts;
+
     public SendMessagesRequest withContacts(ContactRequest[] contacts) {
         this.contacts = contacts;
         return this;
@@ -20,6 +21,7 @@ public class SendMessagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationStrategy")
     public String conversationStrategy;
+
     public SendMessagesRequest withConversationStrategy(String conversationStrategy) {
         this.conversationStrategy = conversationStrategy;
         return this;
@@ -31,6 +33,7 @@ public class SendMessagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversations")
     public String[] conversations;
+
     public SendMessagesRequest withConversations(String[] conversations) {
         this.conversations = conversations;
         return this;
@@ -39,6 +42,7 @@ public class SendMessagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public SendMessagesRequestFilters filters;
+
     public SendMessagesRequest withFilters(SendMessagesRequestFilters filters) {
         this.filters = filters;
         return this;
@@ -50,6 +54,7 @@ public class SendMessagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     public SendMessagesRequestMedia[] media;
+
     public SendMessagesRequest withMedia(SendMessagesRequestMedia[] media) {
         this.media = media;
         return this;
@@ -58,6 +63,7 @@ public class SendMessagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumberFilter")
     public SendMessagesRequestPhoneNumberFilter phoneNumberFilter;
+
     public SendMessagesRequest withPhoneNumberFilter(SendMessagesRequestPhoneNumberFilter phoneNumberFilter) {
         this.phoneNumberFilter = phoneNumberFilter;
         return this;
@@ -66,6 +72,7 @@ public class SendMessagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public SendMessagesRequest withTemplate(String template) {
         this.template = template;
         return this;
@@ -74,9 +81,11 @@ public class SendMessagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SendMessagesRequestTypeEnum type;
+
     public SendMessagesRequest withType(SendMessagesRequestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SendMessagesRequest(){}
 }

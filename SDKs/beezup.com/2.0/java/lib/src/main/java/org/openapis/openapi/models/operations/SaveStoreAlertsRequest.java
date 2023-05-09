@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveStoreAlertsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, org.openapis.openapi.models.shared.SaveStoreAlertRequest> requestBody;
+
     public SaveStoreAlertsRequest withRequestBody(java.util.Map<String, org.openapis.openapi.models.shared.SaveStoreAlertRequest> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class SaveStoreAlertsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public SaveStoreAlertsRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public SaveStoreAlertsRequest(@JsonProperty("RequestBody") java.util.Map<String, org.openapis.openapi.models.shared.SaveStoreAlertRequest> requestBody, @JsonProperty("storeId") String storeId) {
+        this.requestBody = requestBody;
+        this.storeId = storeId;
+  }
 }

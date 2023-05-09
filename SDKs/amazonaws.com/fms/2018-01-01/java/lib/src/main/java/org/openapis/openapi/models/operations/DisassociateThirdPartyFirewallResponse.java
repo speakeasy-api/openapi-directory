@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateThirdPartyFirewallResponse {
     
     public String contentType;
+
     public DisassociateThirdPartyFirewallResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateThirdPartyFirewallResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateThirdPartyFirewallResponse disassociateThirdPartyFirewallResponse;
+
     public DisassociateThirdPartyFirewallResponse withDisassociateThirdPartyFirewallResponse(org.openapis.openapi.models.shared.DisassociateThirdPartyFirewallResponse disassociateThirdPartyFirewallResponse) {
         this.disassociateThirdPartyFirewallResponse = disassociateThirdPartyFirewallResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateThirdPartyFirewallResponse {
      */
     
     public Object internalErrorException;
+
     public DisassociateThirdPartyFirewallResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateThirdPartyFirewallResponse {
      */
     
     public Object invalidInputException;
+
     public DisassociateThirdPartyFirewallResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateThirdPartyFirewallResponse {
      */
     
     public Object invalidOperationException;
+
     public DisassociateThirdPartyFirewallResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateThirdPartyFirewallResponse {
     
     
     public Integer statusCode;
+
     public DisassociateThirdPartyFirewallResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateThirdPartyFirewallResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateThirdPartyFirewallResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DisassociateThirdPartyFirewallResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateThirdPartyFirewallResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DisassociateThirdPartyFirewallResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

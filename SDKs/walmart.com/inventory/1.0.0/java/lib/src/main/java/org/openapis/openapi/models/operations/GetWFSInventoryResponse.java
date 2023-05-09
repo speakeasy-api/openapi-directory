@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWFSInventoryResponse {
     
     public String contentType;
+
     public GetWFSInventoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetWFSInventoryResponse {
     
     
     public Integer statusCode;
+
     public GetWFSInventoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetWFSInventoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWFSInventoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetWFSInventoryResponse {
      */
     
     public GetWFSInventory200ApplicationJSON getWFSInventory200ApplicationJSONObject;
+
     public GetWFSInventoryResponse withGetWFSInventory200ApplicationJSONObject(GetWFSInventory200ApplicationJSON getWFSInventory200ApplicationJSONObject) {
         this.getWFSInventory200ApplicationJSONObject = getWFSInventory200ApplicationJSONObject;
         return this;
     }
     
+    public GetWFSInventoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

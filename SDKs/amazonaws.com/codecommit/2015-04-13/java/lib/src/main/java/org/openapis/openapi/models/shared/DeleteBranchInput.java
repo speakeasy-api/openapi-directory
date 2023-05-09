@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteBranchInput {
     @JsonProperty("branchName")
     public String branchName;
+
     public DeleteBranchInput withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -19,9 +20,14 @@ public class DeleteBranchInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public DeleteBranchInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public DeleteBranchInput(@JsonProperty("branchName") String branchName, @JsonProperty("repositoryName") String repositoryName) {
+        this.branchName = branchName;
+        this.repositoryName = repositoryName;
+  }
 }

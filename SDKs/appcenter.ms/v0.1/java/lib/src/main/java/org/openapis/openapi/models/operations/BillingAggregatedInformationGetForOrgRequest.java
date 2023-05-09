@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BillingAggregatedInformationGetForOrgRequest {
@@ -12,6 +13,7 @@ public class BillingAggregatedInformationGetForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orgName")
     public String orgName;
+
     public BillingAggregatedInformationGetForOrgRequest withOrgName(String orgName) {
         this.orgName = orgName;
         return this;
@@ -22,6 +24,7 @@ public class BillingAggregatedInformationGetForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
     public BillingAggregatedInformationGetForOrgPeriodEnum period;
+
     public BillingAggregatedInformationGetForOrgRequest withPeriod(BillingAggregatedInformationGetForOrgPeriodEnum period) {
         this.period = period;
         return this;
@@ -32,6 +35,7 @@ public class BillingAggregatedInformationGetForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
     public BillingAggregatedInformationGetForOrgServiceEnum service;
+
     public BillingAggregatedInformationGetForOrgRequest withService(BillingAggregatedInformationGetForOrgServiceEnum service) {
         this.service = service;
         return this;
@@ -42,9 +46,13 @@ public class BillingAggregatedInformationGetForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showOriginalPlans")
     public Boolean showOriginalPlans;
+
     public BillingAggregatedInformationGetForOrgRequest withShowOriginalPlans(Boolean showOriginalPlans) {
         this.showOriginalPlans = showOriginalPlans;
         return this;
     }
     
+    public BillingAggregatedInformationGetForOrgRequest(@JsonProperty("orgName") String orgName) {
+        this.orgName = orgName;
+  }
 }

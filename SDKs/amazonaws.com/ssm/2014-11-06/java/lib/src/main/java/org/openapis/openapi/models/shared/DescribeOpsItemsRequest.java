@@ -12,6 +12,7 @@ public class DescribeOpsItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeOpsItemsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class DescribeOpsItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeOpsItemsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class DescribeOpsItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemFilters")
     public OpsItemFilter[] opsItemFilters;
+
     public DescribeOpsItemsRequest withOpsItemFilters(OpsItemFilter[] opsItemFilters) {
         this.opsItemFilters = opsItemFilters;
         return this;
     }
     
+    public DescribeOpsItemsRequest(){}
 }

@@ -15,9 +15,11 @@ public class UpdateWebhookRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.WebhookUpdateRequest data;
+
     public UpdateWebhookRequestBody withData(org.openapis.openapi.models.shared.WebhookUpdateRequest data) {
         this.data = data;
         return this;
     }
     
+    public UpdateWebhookRequestBody(){}
 }

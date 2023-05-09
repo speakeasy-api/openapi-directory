@@ -15,6 +15,7 @@ public class ListAnomalyGroupSummariesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyGroupStatistics")
     public AnomalyGroupStatistics anomalyGroupStatistics;
+
     public ListAnomalyGroupSummariesResponse withAnomalyGroupStatistics(AnomalyGroupStatistics anomalyGroupStatistics) {
         this.anomalyGroupStatistics = anomalyGroupStatistics;
         return this;
@@ -23,6 +24,7 @@ public class ListAnomalyGroupSummariesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyGroupSummaryList")
     public AnomalyGroupSummary[] anomalyGroupSummaryList;
+
     public ListAnomalyGroupSummariesResponse withAnomalyGroupSummaryList(AnomalyGroupSummary[] anomalyGroupSummaryList) {
         this.anomalyGroupSummaryList = anomalyGroupSummaryList;
         return this;
@@ -31,9 +33,11 @@ public class ListAnomalyGroupSummariesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAnomalyGroupSummariesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAnomalyGroupSummariesResponse(){}
 }

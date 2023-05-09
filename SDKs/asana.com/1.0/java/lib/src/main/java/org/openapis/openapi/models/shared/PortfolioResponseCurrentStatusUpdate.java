@@ -18,6 +18,7 @@ public class PortfolioResponseCurrentStatusUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public PortfolioResponseCurrentStatusUpdate withGid(String gid) {
         this.gid = gid;
         return this;
@@ -30,6 +31,7 @@ public class PortfolioResponseCurrentStatusUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum resourceSubtype;
+
     public PortfolioResponseCurrentStatusUpdate withResourceSubtype(PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -41,6 +43,7 @@ public class PortfolioResponseCurrentStatusUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public PortfolioResponseCurrentStatusUpdate withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -52,9 +55,11 @@ public class PortfolioResponseCurrentStatusUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PortfolioResponseCurrentStatusUpdate withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PortfolioResponseCurrentStatusUpdate(){}
 }

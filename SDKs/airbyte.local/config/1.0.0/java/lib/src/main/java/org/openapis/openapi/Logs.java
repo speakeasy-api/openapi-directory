@@ -55,18 +55,16 @@ public class Logs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLogsResponse res = new org.openapis.openapi.models.operations.GetLogsResponse() {{
+        org.openapis.openapi.models.operations.GetLogsResponse res = new org.openapis.openapi.models.operations.GetLogsResponse(contentType, httpRes.statusCode()) {{
             getLogs200TextPlainBinaryString = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "text/plain")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                byte[] out = httpRes.body();
                 res.getLogs200TextPlainBinaryString = out;
             }
         }

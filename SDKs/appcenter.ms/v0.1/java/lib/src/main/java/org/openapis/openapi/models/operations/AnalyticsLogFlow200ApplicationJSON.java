@@ -23,6 +23,7 @@ public class AnalyticsLogFlow200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceeded_max_limit")
     public Boolean exceededMaxLimit;
+
     public AnalyticsLogFlow200ApplicationJSON withExceededMaxLimit(Boolean exceededMaxLimit) {
         this.exceededMaxLimit = exceededMaxLimit;
         return this;
@@ -36,6 +37,7 @@ public class AnalyticsLogFlow200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_received_log_timestamp")
     public OffsetDateTime lastReceivedLogTimestamp;
+
     public AnalyticsLogFlow200ApplicationJSON withLastReceivedLogTimestamp(OffsetDateTime lastReceivedLogTimestamp) {
         this.lastReceivedLogTimestamp = lastReceivedLogTimestamp;
         return this;
@@ -46,9 +48,13 @@ public class AnalyticsLogFlow200ApplicationJSON {
      */
     @JsonProperty("logs")
     public AnalyticsLogFlow200ApplicationJSONLogs[] logs;
+
     public AnalyticsLogFlow200ApplicationJSON withLogs(AnalyticsLogFlow200ApplicationJSONLogs[] logs) {
         this.logs = logs;
         return this;
     }
     
+    public AnalyticsLogFlow200ApplicationJSON(@JsonProperty("logs") AnalyticsLogFlow200ApplicationJSONLogs[] logs) {
+        this.logs = logs;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateForecastExportJobResponse {
     
     public String contentType;
+
     public CreateForecastExportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateForecastExportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateForecastExportJobResponse createForecastExportJobResponse;
+
     public CreateForecastExportJobResponse withCreateForecastExportJobResponse(org.openapis.openapi.models.shared.CreateForecastExportJobResponse createForecastExportJobResponse) {
         this.createForecastExportJobResponse = createForecastExportJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateForecastExportJobResponse {
      */
     
     public Object invalidInputException;
+
     public CreateForecastExportJobResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateForecastExportJobResponse {
      */
     
     public Object limitExceededException;
+
     public CreateForecastExportJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateForecastExportJobResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateForecastExportJobResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class CreateForecastExportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateForecastExportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateForecastExportJobResponse {
     
     
     public Integer statusCode;
+
     public CreateForecastExportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateForecastExportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateForecastExportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateForecastExportJobResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateForecastExportJobResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
     }
     
+    public CreateForecastExportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

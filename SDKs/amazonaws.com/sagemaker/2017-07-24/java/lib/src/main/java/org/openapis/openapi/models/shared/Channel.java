@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Channel {
     @JsonProperty("ChannelName")
     public String channelName;
+
     public Channel withChannelName(String channelName) {
         this.channelName = channelName;
         return this;
@@ -22,6 +23,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompressionType")
     public CompressionTypeEnum compressionType;
+
     public Channel withCompressionType(CompressionTypeEnum compressionType) {
         this.compressionType = compressionType;
         return this;
@@ -30,6 +32,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentType")
     public String contentType;
+
     public Channel withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -37,6 +40,7 @@ public class Channel {
     
     @JsonProperty("DataSource")
     public DataSource dataSource;
+
     public Channel withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -45,6 +49,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputMode")
     public TrainingInputModeEnum inputMode;
+
     public Channel withInputMode(TrainingInputModeEnum inputMode) {
         this.inputMode = inputMode;
         return this;
@@ -53,6 +58,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordWrapperType")
     public RecordWrapperEnum recordWrapperType;
+
     public Channel withRecordWrapperType(RecordWrapperEnum recordWrapperType) {
         this.recordWrapperType = recordWrapperType;
         return this;
@@ -61,9 +67,14 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShuffleConfig")
     public ShuffleConfig shuffleConfig;
+
     public Channel withShuffleConfig(ShuffleConfig shuffleConfig) {
         this.shuffleConfig = shuffleConfig;
         return this;
     }
     
+    public Channel(@JsonProperty("ChannelName") String channelName, @JsonProperty("DataSource") DataSource dataSource) {
+        this.channelName = channelName;
+        this.dataSource = dataSource;
+  }
 }

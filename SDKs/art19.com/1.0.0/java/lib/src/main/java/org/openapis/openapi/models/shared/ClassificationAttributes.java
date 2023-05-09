@@ -19,6 +19,7 @@ public class ClassificationAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public ClassificationAttributes withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class ClassificationAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public ClassificationAttributes withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -43,6 +45,7 @@ public class ClassificationAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public ClassificationAttributes withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -56,6 +59,7 @@ public class ClassificationAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     public String parentId;
+
     public ClassificationAttributes withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -69,6 +73,7 @@ public class ClassificationAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tree_path")
     public String[] treePath;
+
     public ClassificationAttributes withTreePath(String[] treePath) {
         this.treePath = treePath;
         return this;
@@ -82,6 +87,7 @@ public class ClassificationAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ClassificationAttributesTypeEnum type;
+
     public ClassificationAttributes withType(ClassificationAttributesTypeEnum type) {
         this.type = type;
         return this;
@@ -92,6 +98,7 @@ public class ClassificationAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public ClassificationAttributes withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -104,6 +111,7 @@ public class ClassificationAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ClassificationAttributes withValue(String value) {
         this.value = value;
         return this;
@@ -117,9 +125,11 @@ public class ClassificationAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value_path")
     public String valuePath;
+
     public ClassificationAttributes withValuePath(String valuePath) {
         this.valuePath = valuePath;
         return this;
     }
     
+    public ClassificationAttributes(){}
 }

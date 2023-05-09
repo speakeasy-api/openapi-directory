@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class XksProxyAuthenticationCredentialType {
     @JsonProperty("AccessKeyId")
     public String accessKeyId;
+
     public XksProxyAuthenticationCredentialType withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -19,9 +20,14 @@ public class XksProxyAuthenticationCredentialType {
     
     @JsonProperty("RawSecretAccessKey")
     public String rawSecretAccessKey;
+
     public XksProxyAuthenticationCredentialType withRawSecretAccessKey(String rawSecretAccessKey) {
         this.rawSecretAccessKey = rawSecretAccessKey;
         return this;
     }
     
+    public XksProxyAuthenticationCredentialType(@JsonProperty("AccessKeyId") String accessKeyId, @JsonProperty("RawSecretAccessKey") String rawSecretAccessKey) {
+        this.accessKeyId = accessKeyId;
+        this.rawSecretAccessKey = rawSecretAccessKey;
+  }
 }

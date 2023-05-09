@@ -18,6 +18,7 @@ public class BackendBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketName")
     public String bucketName;
+
     public BackendBucket withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -29,6 +30,7 @@ public class BackendBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cdnPolicy")
     public BackendBucketCdnPolicy cdnPolicy;
+
     public BackendBucket withCdnPolicy(BackendBucketCdnPolicy cdnPolicy) {
         this.cdnPolicy = cdnPolicy;
         return this;
@@ -40,6 +42,7 @@ public class BackendBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compressionMode")
     public BackendBucketCompressionModeEnum compressionMode;
+
     public BackendBucket withCompressionMode(BackendBucketCompressionModeEnum compressionMode) {
         this.compressionMode = compressionMode;
         return this;
@@ -51,6 +54,7 @@ public class BackendBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public BackendBucket withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -62,6 +66,7 @@ public class BackendBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customResponseHeaders")
     public String[] customResponseHeaders;
+
     public BackendBucket withCustomResponseHeaders(String[] customResponseHeaders) {
         this.customResponseHeaders = customResponseHeaders;
         return this;
@@ -73,6 +78,7 @@ public class BackendBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BackendBucket withDescription(String description) {
         this.description = description;
         return this;
@@ -84,6 +90,7 @@ public class BackendBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("edgeSecurityPolicy")
     public String edgeSecurityPolicy;
+
     public BackendBucket withEdgeSecurityPolicy(String edgeSecurityPolicy) {
         this.edgeSecurityPolicy = edgeSecurityPolicy;
         return this;
@@ -95,6 +102,7 @@ public class BackendBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableCdn")
     public Boolean enableCdn;
+
     public BackendBucket withEnableCdn(Boolean enableCdn) {
         this.enableCdn = enableCdn;
         return this;
@@ -106,6 +114,7 @@ public class BackendBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BackendBucket withId(String id) {
         this.id = id;
         return this;
@@ -117,6 +126,7 @@ public class BackendBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BackendBucket withKind(String kind) {
         this.kind = kind;
         return this;
@@ -128,6 +138,7 @@ public class BackendBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BackendBucket withName(String name) {
         this.name = name;
         return this;
@@ -139,9 +150,11 @@ public class BackendBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public BackendBucket withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public BackendBucket(){}
 }

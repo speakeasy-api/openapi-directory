@@ -15,6 +15,7 @@ public class ResultSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultSetMetadata")
     public ResultSetMetadata resultSetMetadata;
+
     public ResultSet withResultSetMetadata(ResultSetMetadata resultSetMetadata) {
         this.resultSetMetadata = resultSetMetadata;
         return this;
@@ -23,9 +24,11 @@ public class ResultSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rows")
     public Row[] rows;
+
     public ResultSet withRows(Row[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public ResultSet(){}
 }

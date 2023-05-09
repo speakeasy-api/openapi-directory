@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFundsConfirmationConsentsConsentIdResponse {
     
     public String contentType;
+
     public DeleteFundsConfirmationConsentsConsentIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteFundsConfirmationConsentsConsentIdResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public DeleteFundsConfirmationConsentsConsentIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -26,6 +29,7 @@ public class DeleteFundsConfirmationConsentsConsentIdResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public DeleteFundsConfirmationConsentsConsentIdResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -33,6 +37,7 @@ public class DeleteFundsConfirmationConsentsConsentIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteFundsConfirmationConsentsConsentIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class DeleteFundsConfirmationConsentsConsentIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFundsConfirmationConsentsConsentIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteFundsConfirmationConsentsConsentIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

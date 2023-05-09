@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDirectConnectGatewayAssociationResponse {
     
     public String contentType;
+
     public UpdateDirectConnectGatewayAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDirectConnectGatewayAssociationResponse {
      */
     
     public Object directConnectClientException;
+
     public UpdateDirectConnectGatewayAssociationResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDirectConnectGatewayAssociationResponse {
      */
     
     public Object directConnectServerException;
+
     public UpdateDirectConnectGatewayAssociationResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateDirectConnectGatewayAssociationResponse {
     
     
     public Integer statusCode;
+
     public UpdateDirectConnectGatewayAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateDirectConnectGatewayAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDirectConnectGatewayAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateDirectConnectGatewayAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDirectConnectGatewayAssociationResult updateDirectConnectGatewayAssociationResult;
+
     public UpdateDirectConnectGatewayAssociationResponse withUpdateDirectConnectGatewayAssociationResult(org.openapis.openapi.models.shared.UpdateDirectConnectGatewayAssociationResult updateDirectConnectGatewayAssociationResult) {
         this.updateDirectConnectGatewayAssociationResult = updateDirectConnectGatewayAssociationResult;
         return this;
     }
     
+    public UpdateDirectConnectGatewayAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

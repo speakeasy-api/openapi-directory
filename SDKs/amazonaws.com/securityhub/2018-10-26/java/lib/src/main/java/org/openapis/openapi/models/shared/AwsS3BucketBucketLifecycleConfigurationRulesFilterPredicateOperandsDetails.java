@@ -15,6 +15,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperands
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prefix")
     public String prefix;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperandsDetails withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -23,6 +24,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperands
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tag")
     public AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperandsTagDetails tag;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperandsDetails withTag(AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperandsTagDetails tag) {
         this.tag = tag;
         return this;
@@ -31,9 +33,11 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperands
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperandsDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperandsDetails(){}
 }

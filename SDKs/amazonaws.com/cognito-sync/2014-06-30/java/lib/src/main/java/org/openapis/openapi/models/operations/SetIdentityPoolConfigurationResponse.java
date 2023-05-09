@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetIdentityPoolConfigurationResponse {
@@ -12,6 +13,7 @@ public class SetIdentityPoolConfigurationResponse {
      */
     
     public Object concurrentModificationException;
+
     public SetIdentityPoolConfigurationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class SetIdentityPoolConfigurationResponse {
     
     
     public String contentType;
+
     public SetIdentityPoolConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SetIdentityPoolConfigurationResponse {
      */
     
     public Object internalErrorException;
+
     public SetIdentityPoolConfigurationResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class SetIdentityPoolConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public SetIdentityPoolConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class SetIdentityPoolConfigurationResponse {
      */
     
     public Object notAuthorizedException;
+
     public SetIdentityPoolConfigurationResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class SetIdentityPoolConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SetIdentityPoolConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class SetIdentityPoolConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.SetIdentityPoolConfigurationResponse setIdentityPoolConfigurationResponse;
+
     public SetIdentityPoolConfigurationResponse withSetIdentityPoolConfigurationResponse(org.openapis.openapi.models.shared.SetIdentityPoolConfigurationResponse setIdentityPoolConfigurationResponse) {
         this.setIdentityPoolConfigurationResponse = setIdentityPoolConfigurationResponse;
         return this;
@@ -76,6 +84,7 @@ public class SetIdentityPoolConfigurationResponse {
     
     
     public Integer statusCode;
+
     public SetIdentityPoolConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class SetIdentityPoolConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetIdentityPoolConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class SetIdentityPoolConfigurationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public SetIdentityPoolConfigurationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public SetIdentityPoolConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

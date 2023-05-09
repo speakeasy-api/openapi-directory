@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ClarifyTextConfig {
     @JsonProperty("Granularity")
     public ClarifyTextGranularityEnum granularity;
+
     public ClarifyTextConfig withGranularity(ClarifyTextGranularityEnum granularity) {
         this.granularity = granularity;
         return this;
@@ -19,9 +20,14 @@ public class ClarifyTextConfig {
     
     @JsonProperty("Language")
     public ClarifyTextLanguageEnum language;
+
     public ClarifyTextConfig withLanguage(ClarifyTextLanguageEnum language) {
         this.language = language;
         return this;
     }
     
+    public ClarifyTextConfig(@JsonProperty("Granularity") ClarifyTextGranularityEnum granularity, @JsonProperty("Language") ClarifyTextLanguageEnum language) {
+        this.granularity = granularity;
+        this.language = language;
+  }
 }

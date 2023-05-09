@@ -18,6 +18,7 @@ public class MatchingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commuteInfo")
     public CommuteInfo commuteInfo;
+
     public MatchingJob withCommuteInfo(CommuteInfo commuteInfo) {
         this.commuteInfo = commuteInfo;
         return this;
@@ -29,6 +30,7 @@ public class MatchingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public Job job;
+
     public MatchingJob withJob(Job job) {
         this.job = job;
         return this;
@@ -40,6 +42,7 @@ public class MatchingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobSummary")
     public String jobSummary;
+
     public MatchingJob withJobSummary(String jobSummary) {
         this.jobSummary = jobSummary;
         return this;
@@ -51,6 +54,7 @@ public class MatchingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTitleSnippet")
     public String jobTitleSnippet;
+
     public MatchingJob withJobTitleSnippet(String jobTitleSnippet) {
         this.jobTitleSnippet = jobTitleSnippet;
         return this;
@@ -62,9 +66,11 @@ public class MatchingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchTextSnippet")
     public String searchTextSnippet;
+
     public MatchingJob withSearchTextSnippet(String searchTextSnippet) {
         this.searchTextSnippet = searchTextSnippet;
         return this;
     }
     
+    public MatchingJob(){}
 }

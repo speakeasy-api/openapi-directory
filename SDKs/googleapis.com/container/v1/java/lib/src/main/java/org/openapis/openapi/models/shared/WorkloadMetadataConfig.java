@@ -18,9 +18,11 @@ public class WorkloadMetadataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public WorkloadMetadataConfigModeEnum mode;
+
     public WorkloadMetadataConfig withMode(WorkloadMetadataConfigModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public WorkloadMetadataConfig(){}
 }

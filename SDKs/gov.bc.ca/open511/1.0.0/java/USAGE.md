@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetAreasFormatEnum;
 import org.openapis.openapi.models.operations.GetAreasRequest;
 import org.openapis.openapi.models.operations.GetAreasResponse;
@@ -15,8 +14,8 @@ public class Application {
                 .build();
 
             GetAreasRequest req = new GetAreasRequest() {{
-                format = "xml";
-            }}            
+                format = GetAreasFormatEnum.XML;
+            }};            
 
             GetAreasResponse res = sdk.resources.getAreas(req);
 
@@ -26,5 +25,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -18,6 +18,7 @@ public class BranchModelResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Integer count;
+
     public BranchModelResults withCount(Integer count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class BranchModelResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public BranchModel[] data;
+
     public BranchModelResults withData(BranchModel[] data) {
         this.data = data;
         return this;
     }
     
+    public BranchModelResults(){}
 }

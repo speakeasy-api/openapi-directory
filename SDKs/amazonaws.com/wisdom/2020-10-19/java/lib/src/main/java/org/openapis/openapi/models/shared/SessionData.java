@@ -15,6 +15,7 @@ public class SessionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SessionData withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class SessionData {
     
     @JsonProperty("name")
     public String name;
+
     public SessionData withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +31,7 @@ public class SessionData {
     
     @JsonProperty("sessionArn")
     public String sessionArn;
+
     public SessionData withSessionArn(String sessionArn) {
         this.sessionArn = sessionArn;
         return this;
@@ -36,6 +39,7 @@ public class SessionData {
     
     @JsonProperty("sessionId")
     public String sessionId;
+
     public SessionData withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -44,9 +48,15 @@ public class SessionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public SessionData withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public SessionData(@JsonProperty("name") String name, @JsonProperty("sessionArn") String sessionArn, @JsonProperty("sessionId") String sessionId) {
+        this.name = name;
+        this.sessionArn = sessionArn;
+        this.sessionId = sessionId;
+  }
 }

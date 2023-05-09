@@ -18,6 +18,7 @@ public class PostNamespacesDeleteImagesResponseErrorErrinfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_call_docker_id")
     public String apiCallDockerId;
+
     public PostNamespacesDeleteImagesResponseErrorErrinfo withApiCallDockerId(String apiCallDockerId) {
         this.apiCallDockerId = apiCallDockerId;
         return this;
@@ -29,6 +30,7 @@ public class PostNamespacesDeleteImagesResponseErrorErrinfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_call_name")
     public String apiCallName;
+
     public PostNamespacesDeleteImagesResponseErrorErrinfo withApiCallName(String apiCallName) {
         this.apiCallName = apiCallName;
         return this;
@@ -40,6 +42,7 @@ public class PostNamespacesDeleteImagesResponseErrorErrinfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_call_start")
     public String apiCallStart;
+
     public PostNamespacesDeleteImagesResponseErrorErrinfo withApiCallStart(String apiCallStart) {
         this.apiCallStart = apiCallStart;
         return this;
@@ -51,6 +54,7 @@ public class PostNamespacesDeleteImagesResponseErrorErrinfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_call_txnid")
     public String apiCallTxnid;
+
     public PostNamespacesDeleteImagesResponseErrorErrinfo withApiCallTxnid(String apiCallTxnid) {
         this.apiCallTxnid = apiCallTxnid;
         return this;
@@ -59,6 +63,7 @@ public class PostNamespacesDeleteImagesResponseErrorErrinfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public PostNamespacesDeleteImagesResponseErrorErrinfoDetails details;
+
     public PostNamespacesDeleteImagesResponseErrorErrinfo withDetails(PostNamespacesDeleteImagesResponseErrorErrinfoDetails details) {
         this.details = details;
         return this;
@@ -70,9 +75,11 @@ public class PostNamespacesDeleteImagesResponseErrorErrinfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PostNamespacesDeleteImagesResponseErrorErrinfo withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PostNamespacesDeleteImagesResponseErrorErrinfo(){}
 }

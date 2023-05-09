@@ -15,9 +15,11 @@ public class CreateCollection200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public CreateCollection200ApplicationJSONCollection collection;
+
     public CreateCollection200ApplicationJSON withCollection(CreateCollection200ApplicationJSONCollection collection) {
         this.collection = collection;
         return this;
     }
     
+    public CreateCollection200ApplicationJSON(){}
 }

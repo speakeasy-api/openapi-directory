@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * VCpuCountRangeRequest - The minimum and maximum number of vCPUs.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class VCpuCountRangeRequest {
     
     public Long max;
+
     public VCpuCountRangeRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,13 @@ public class VCpuCountRangeRequest {
     
     
     public Long min;
+
     public VCpuCountRangeRequest withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public VCpuCountRangeRequest(@JsonProperty("Min") Long min) {
+        this.min = min;
+  }
 }

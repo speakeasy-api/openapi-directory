@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsGenericLogFlowResponse {
@@ -12,6 +13,7 @@ public class AnalyticsGenericLogFlowResponse {
      */
     
     public AnalyticsGenericLogFlow200ApplicationJSON analyticsGenericLogFlow200ApplicationJSONObject;
+
     public AnalyticsGenericLogFlowResponse withAnalyticsGenericLogFlow200ApplicationJSONObject(AnalyticsGenericLogFlow200ApplicationJSON analyticsGenericLogFlow200ApplicationJSONObject) {
         this.analyticsGenericLogFlow200ApplicationJSONObject = analyticsGenericLogFlow200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsGenericLogFlowResponse {
      */
     
     public AnalyticsGenericLogFlowDefaultApplicationJSON analyticsGenericLogFlowDefaultApplicationJSONObject;
+
     public AnalyticsGenericLogFlowResponse withAnalyticsGenericLogFlowDefaultApplicationJSONObject(AnalyticsGenericLogFlowDefaultApplicationJSON analyticsGenericLogFlowDefaultApplicationJSONObject) {
         this.analyticsGenericLogFlowDefaultApplicationJSONObject = analyticsGenericLogFlowDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsGenericLogFlowResponse {
     
     
     public String contentType;
+
     public AnalyticsGenericLogFlowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class AnalyticsGenericLogFlowResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsGenericLogFlowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AnalyticsGenericLogFlowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsGenericLogFlowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsGenericLogFlowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

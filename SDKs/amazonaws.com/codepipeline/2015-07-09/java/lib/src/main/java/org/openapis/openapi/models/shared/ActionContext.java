@@ -15,6 +15,7 @@ public class ActionContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionExecutionId")
     public String actionExecutionId;
+
     public ActionContext withActionExecutionId(String actionExecutionId) {
         this.actionExecutionId = actionExecutionId;
         return this;
@@ -23,9 +24,11 @@ public class ActionContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ActionContext withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ActionContext(){}
 }

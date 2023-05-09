@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AccessTokenPutFormResponse {
@@ -12,6 +13,7 @@ public class AccessTokenPutFormResponse {
      */
     
     public String accessTokenPutForm200ApplicationJSONString;
+
     public AccessTokenPutFormResponse withAccessTokenPutForm200ApplicationJSONString(String accessTokenPutForm200ApplicationJSONString) {
         this.accessTokenPutForm200ApplicationJSONString = accessTokenPutForm200ApplicationJSONString;
         return this;
@@ -22,6 +24,7 @@ public class AccessTokenPutFormResponse {
      */
     
     public String accessTokenPutForm200ApplicationXMLString;
+
     public AccessTokenPutFormResponse withAccessTokenPutForm200ApplicationXMLString(String accessTokenPutForm200ApplicationXMLString) {
         this.accessTokenPutForm200ApplicationXMLString = accessTokenPutForm200ApplicationXMLString;
         return this;
@@ -32,6 +35,7 @@ public class AccessTokenPutFormResponse {
      */
     
     public String accessTokenPutForm200TextJSONString;
+
     public AccessTokenPutFormResponse withAccessTokenPutForm200TextJSONString(String accessTokenPutForm200TextJSONString) {
         this.accessTokenPutForm200TextJSONString = accessTokenPutForm200TextJSONString;
         return this;
@@ -42,6 +46,7 @@ public class AccessTokenPutFormResponse {
      */
     
     public String accessTokenPutForm200TextXMLString;
+
     public AccessTokenPutFormResponse withAccessTokenPutForm200TextXMLString(String accessTokenPutForm200TextXMLString) {
         this.accessTokenPutForm200TextXMLString = accessTokenPutForm200TextXMLString;
         return this;
@@ -49,6 +54,7 @@ public class AccessTokenPutFormResponse {
     
     
     public String contentType;
+
     public AccessTokenPutFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -56,6 +62,7 @@ public class AccessTokenPutFormResponse {
     
     
     public Integer statusCode;
+
     public AccessTokenPutFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class AccessTokenPutFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AccessTokenPutFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AccessTokenPutFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

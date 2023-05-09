@@ -18,9 +18,11 @@ public class GoogleSecuritySafebrowsingV4FindThreatMatchesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matches")
     public GoogleSecuritySafebrowsingV4ThreatMatch[] matches;
+
     public GoogleSecuritySafebrowsingV4FindThreatMatchesResponse withMatches(GoogleSecuritySafebrowsingV4ThreatMatch[] matches) {
         this.matches = matches;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4FindThreatMatchesResponse(){}
 }

@@ -12,6 +12,7 @@ public class CreatePortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public CreatePortfolioInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class CreatePortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreatePortfolioInput withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreatePortfolioInput {
     
     @JsonProperty("DisplayName")
     public String displayName;
+
     public CreatePortfolioInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -34,6 +37,7 @@ public class CreatePortfolioInput {
     
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CreatePortfolioInput withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -41,6 +45,7 @@ public class CreatePortfolioInput {
     
     @JsonProperty("ProviderName")
     public String providerName;
+
     public CreatePortfolioInput withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
@@ -49,9 +54,15 @@ public class CreatePortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreatePortfolioInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePortfolioInput(@JsonProperty("DisplayName") String displayName, @JsonProperty("IdempotencyToken") String idempotencyToken, @JsonProperty("ProviderName") String providerName) {
+        this.displayName = displayName;
+        this.idempotencyToken = idempotencyToken;
+        this.providerName = providerName;
+  }
 }

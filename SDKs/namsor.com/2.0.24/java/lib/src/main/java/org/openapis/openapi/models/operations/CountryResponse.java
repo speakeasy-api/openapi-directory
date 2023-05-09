@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CountryResponse {
     
     public String contentType;
+
     public CountryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CountryResponse {
      */
     
     public org.openapis.openapi.models.shared.PersonalNameGeoOut personalNameGeoOut;
+
     public CountryResponse withPersonalNameGeoOut(org.openapis.openapi.models.shared.PersonalNameGeoOut personalNameGeoOut) {
         this.personalNameGeoOut = personalNameGeoOut;
         return this;
@@ -26,6 +29,7 @@ public class CountryResponse {
     
     
     public Integer statusCode;
+
     public CountryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CountryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CountryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CountryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

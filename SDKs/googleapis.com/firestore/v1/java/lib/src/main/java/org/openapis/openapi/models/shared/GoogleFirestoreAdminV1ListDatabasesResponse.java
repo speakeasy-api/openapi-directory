@@ -18,9 +18,11 @@ public class GoogleFirestoreAdminV1ListDatabasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databases")
     public GoogleFirestoreAdminV1Database[] databases;
+
     public GoogleFirestoreAdminV1ListDatabasesResponse withDatabases(GoogleFirestoreAdminV1Database[] databases) {
         this.databases = databases;
         return this;
     }
     
+    public GoogleFirestoreAdminV1ListDatabasesResponse(){}
 }

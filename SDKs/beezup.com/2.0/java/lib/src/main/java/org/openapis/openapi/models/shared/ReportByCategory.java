@@ -14,6 +14,7 @@ public class ReportByCategory {
      */
     @JsonProperty("allProductCount")
     public Long allProductCount;
+
     public ReportByCategory withAllProductCount(Long allProductCount) {
         this.allProductCount = allProductCount;
         return this;
@@ -24,6 +25,7 @@ public class ReportByCategory {
      */
     @JsonProperty("catalogCategoryId")
     public String catalogCategoryId;
+
     public ReportByCategory withCatalogCategoryId(String catalogCategoryId) {
         this.catalogCategoryId = catalogCategoryId;
         return this;
@@ -35,6 +37,7 @@ public class ReportByCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogCategoryPath")
     public String[] catalogCategoryPath;
+
     public ReportByCategory withCatalogCategoryPath(String[] catalogCategoryPath) {
         this.catalogCategoryPath = catalogCategoryPath;
         return this;
@@ -45,6 +48,7 @@ public class ReportByCategory {
      */
     @JsonProperty("catalogProductCount")
     public Long catalogProductCount;
+
     public ReportByCategory withCatalogProductCount(Long catalogProductCount) {
         this.catalogProductCount = catalogProductCount;
         return this;
@@ -55,6 +59,7 @@ public class ReportByCategory {
      */
     @JsonProperty("clickCount")
     public Long clickCount;
+
     public ReportByCategory withClickCount(Long clickCount) {
         this.clickCount = clickCount;
         return this;
@@ -65,6 +70,7 @@ public class ReportByCategory {
      */
     @JsonProperty("cost")
     public Double cost;
+
     public ReportByCategory withCost(Double cost) {
         this.cost = cost;
         return this;
@@ -75,6 +81,7 @@ public class ReportByCategory {
      */
     @JsonProperty("enabledProductCount")
     public Long enabledProductCount;
+
     public ReportByCategory withEnabledProductCount(Long enabledProductCount) {
         this.enabledProductCount = enabledProductCount;
         return this;
@@ -82,6 +89,7 @@ public class ReportByCategory {
     
     @JsonProperty("links")
     public ReportByCategoryLinks links;
+
     public ReportByCategory withLinks(ReportByCategoryLinks links) {
         this.links = links;
         return this;
@@ -93,6 +101,7 @@ public class ReportByCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("margin")
     public Double margin;
+
     public ReportByCategory withMargin(Double margin) {
         this.margin = margin;
         return this;
@@ -103,6 +112,7 @@ public class ReportByCategory {
      */
     @JsonProperty("orderCount")
     public Long orderCount;
+
     public ReportByCategory withOrderCount(Long orderCount) {
         this.orderCount = orderCount;
         return this;
@@ -113,6 +123,7 @@ public class ReportByCategory {
      */
     @JsonProperty("performanceIndicator")
     public Double performanceIndicator;
+
     public ReportByCategory withPerformanceIndicator(Double performanceIndicator) {
         this.performanceIndicator = performanceIndicator;
         return this;
@@ -124,6 +135,7 @@ public class ReportByCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roi")
     public Double roi;
+
     public ReportByCategory withRoi(Double roi) {
         this.roi = roi;
         return this;
@@ -134,6 +146,7 @@ public class ReportByCategory {
      */
     @JsonProperty("soldProductCount")
     public Long soldProductCount;
+
     public ReportByCategory withSoldProductCount(Long soldProductCount) {
         this.soldProductCount = soldProductCount;
         return this;
@@ -144,9 +157,23 @@ public class ReportByCategory {
      */
     @JsonProperty("totalSales")
     public Double totalSales;
+
     public ReportByCategory withTotalSales(Double totalSales) {
         this.totalSales = totalSales;
         return this;
     }
     
+    public ReportByCategory(@JsonProperty("allProductCount") Long allProductCount, @JsonProperty("catalogCategoryId") String catalogCategoryId, @JsonProperty("catalogProductCount") Long catalogProductCount, @JsonProperty("clickCount") Long clickCount, @JsonProperty("cost") Double cost, @JsonProperty("enabledProductCount") Long enabledProductCount, @JsonProperty("links") ReportByCategoryLinks links, @JsonProperty("orderCount") Long orderCount, @JsonProperty("performanceIndicator") Double performanceIndicator, @JsonProperty("soldProductCount") Long soldProductCount, @JsonProperty("totalSales") Double totalSales) {
+        this.allProductCount = allProductCount;
+        this.catalogCategoryId = catalogCategoryId;
+        this.catalogProductCount = catalogProductCount;
+        this.clickCount = clickCount;
+        this.cost = cost;
+        this.enabledProductCount = enabledProductCount;
+        this.links = links;
+        this.orderCount = orderCount;
+        this.performanceIndicator = performanceIndicator;
+        this.soldProductCount = soldProductCount;
+        this.totalSales = totalSales;
+  }
 }

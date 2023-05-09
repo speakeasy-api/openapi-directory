@@ -18,6 +18,7 @@ public class SpaceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SpaceDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class SpaceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guidelines")
     public String guidelines;
+
     public SpaceDetails withGuidelines(String guidelines) {
         this.guidelines = guidelines;
         return this;
     }
     
+    public SpaceDetails(){}
 }

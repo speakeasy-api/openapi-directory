@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup {
     /**
-     * A list of phase match rules that are included in this group.
+     * A list of phrase match rules that are included in this group.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phraseMatchRules")
     public GoogleCloudContactcenterinsightsV1PhraseMatchRule[] phraseMatchRules;
+
     public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup withPhraseMatchRules(GoogleCloudContactcenterinsightsV1PhraseMatchRule[] phraseMatchRules) {
         this.phraseMatchRules = phraseMatchRules;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupTypeEnum type;
+
     public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup withType(GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup(){}
 }

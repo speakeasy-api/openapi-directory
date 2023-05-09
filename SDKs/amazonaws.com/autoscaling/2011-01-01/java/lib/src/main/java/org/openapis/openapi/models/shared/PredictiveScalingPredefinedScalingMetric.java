@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PredictiveScalingPredefinedScalingMetric - &lt;p&gt;Describes a scaling metric for a predictive scaling policy.&lt;/p&gt; &lt;p&gt;When returned in the output of &lt;code&gt;DescribePolicies&lt;/code&gt;, it indicates that a predictive scaling policy uses individually specified load and scaling metrics instead of a metric pair.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PredictiveScalingPredefinedScalingMetric {
     
     public PredefinedScalingMetricTypeEnum predefinedMetricType;
+
     public PredictiveScalingPredefinedScalingMetric withPredefinedMetricType(PredefinedScalingMetricTypeEnum predefinedMetricType) {
         this.predefinedMetricType = predefinedMetricType;
         return this;
@@ -19,9 +20,13 @@ public class PredictiveScalingPredefinedScalingMetric {
     
     
     public String resourceLabel;
+
     public PredictiveScalingPredefinedScalingMetric withResourceLabel(String resourceLabel) {
         this.resourceLabel = resourceLabel;
         return this;
     }
     
+    public PredictiveScalingPredefinedScalingMetric(@JsonProperty("PredefinedMetricType") PredefinedScalingMetricTypeEnum predefinedMetricType) {
+        this.predefinedMetricType = predefinedMetricType;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDirectoryResponse {
@@ -12,6 +13,7 @@ public class DeleteDirectoryResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteDirectoryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDirectoryResponse {
     
     
     public String contentType;
+
     public DeleteDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDirectoryResponse deleteDirectoryResponse;
+
     public DeleteDirectoryResponse withDeleteDirectoryResponse(org.openapis.openapi.models.shared.DeleteDirectoryResponse deleteDirectoryResponse) {
         this.deleteDirectoryResponse = deleteDirectoryResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDirectoryResponse {
      */
     
     public Object directoryDeletedException;
+
     public DeleteDirectoryResponse withDirectoryDeletedException(Object directoryDeletedException) {
         this.directoryDeletedException = directoryDeletedException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDirectoryResponse {
      */
     
     public Object directoryNotDisabledException;
+
     public DeleteDirectoryResponse withDirectoryNotDisabledException(Object directoryNotDisabledException) {
         this.directoryNotDisabledException = directoryNotDisabledException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDirectoryResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteDirectoryResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteDirectoryResponse {
      */
     
     public Object invalidArnException;
+
     public DeleteDirectoryResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteDirectoryResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteDirectoryResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class DeleteDirectoryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteDirectoryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class DeleteDirectoryResponse {
      */
     
     public Object retryableConflictException;
+
     public DeleteDirectoryResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -106,6 +117,7 @@ public class DeleteDirectoryResponse {
     
     
     public Integer statusCode;
+
     public DeleteDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class DeleteDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,9 +136,14 @@ public class DeleteDirectoryResponse {
      */
     
     public Object validationException;
+
     public DeleteDirectoryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

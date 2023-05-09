@@ -15,9 +15,11 @@ public class UpdateSlotTypeRequestBodyCompositeSlotTypeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subSlots")
     public org.openapis.openapi.models.shared.SubSlotTypeComposition[] subSlots;
+
     public UpdateSlotTypeRequestBodyCompositeSlotTypeSetting withSubSlots(org.openapis.openapi.models.shared.SubSlotTypeComposition[] subSlots) {
         this.subSlots = subSlots;
         return this;
     }
     
+    public UpdateSlotTypeRequestBodyCompositeSlotTypeSetting(){}
 }

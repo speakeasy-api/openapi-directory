@@ -18,6 +18,7 @@ public class TemplateDefinitionNewLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emptyLabels")
     public Long emptyLabels;
+
     public TemplateDefinitionNewLayout withEmptyLabels(Long emptyLabels) {
         this.emptyLabels = emptyLabels;
         return this;
@@ -29,6 +30,7 @@ public class TemplateDefinitionNewLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public TemplateDefinitionNewLayoutFormatEnum format;
+
     public TemplateDefinitionNewLayout withFormat(TemplateDefinitionNewLayoutFormatEnum format) {
         this.format = format;
         return this;
@@ -40,6 +42,7 @@ public class TemplateDefinitionNewLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Double height;
+
     public TemplateDefinitionNewLayout withHeight(Double height) {
         this.height = height;
         return this;
@@ -51,6 +54,7 @@ public class TemplateDefinitionNewLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("margins")
     public TemplateDefinitionNewLayoutMargins margins;
+
     public TemplateDefinitionNewLayout withMargins(TemplateDefinitionNewLayoutMargins margins) {
         this.margins = margins;
         return this;
@@ -62,6 +66,7 @@ public class TemplateDefinitionNewLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientation")
     public TemplateDefinitionNewLayoutOrientationEnum orientation;
+
     public TemplateDefinitionNewLayout withOrientation(TemplateDefinitionNewLayoutOrientationEnum orientation) {
         this.orientation = orientation;
         return this;
@@ -73,6 +78,7 @@ public class TemplateDefinitionNewLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeatLayout")
     public TemplateDefinitionNewLayoutRepeatLayout repeatLayout;
+
     public TemplateDefinitionNewLayout withRepeatLayout(TemplateDefinitionNewLayoutRepeatLayout repeatLayout) {
         this.repeatLayout = repeatLayout;
         return this;
@@ -84,6 +90,7 @@ public class TemplateDefinitionNewLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rotaion")
     public TemplateDefinitionNewLayoutRotaionEnum rotaion;
+
     public TemplateDefinitionNewLayout withRotaion(TemplateDefinitionNewLayoutRotaionEnum rotaion) {
         this.rotaion = rotaion;
         return this;
@@ -95,6 +102,7 @@ public class TemplateDefinitionNewLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public TemplateDefinitionNewLayoutUnitEnum unit;
+
     public TemplateDefinitionNewLayout withUnit(TemplateDefinitionNewLayoutUnitEnum unit) {
         this.unit = unit;
         return this;
@@ -106,9 +114,11 @@ public class TemplateDefinitionNewLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Double width;
+
     public TemplateDefinitionNewLayout withWidth(Double width) {
         this.width = width;
         return this;
     }
     
+    public TemplateDefinitionNewLayout(){}
 }

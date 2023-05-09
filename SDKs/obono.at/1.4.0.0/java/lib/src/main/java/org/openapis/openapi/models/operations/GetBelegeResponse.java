@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBelegeResponse {
@@ -12,6 +13,7 @@ public class GetBelegeResponse {
      */
     
     public org.openapis.openapi.models.shared.Belege belege;
+
     public GetBelegeResponse withBelege(org.openapis.openapi.models.shared.Belege belege) {
         this.belege = belege;
         return this;
@@ -19,6 +21,7 @@ public class GetBelegeResponse {
     
     
     public String contentType;
+
     public GetBelegeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetBelegeResponse {
     
     
     public Integer statusCode;
+
     public GetBelegeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetBelegeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBelegeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBelegeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

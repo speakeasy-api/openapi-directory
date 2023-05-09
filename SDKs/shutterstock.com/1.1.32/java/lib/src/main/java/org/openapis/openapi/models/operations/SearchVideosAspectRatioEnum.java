@@ -10,8 +10,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * SearchVideosAspectRatioEnum - Show videos with the specified aspect ratio
  */
 public enum SearchVideosAspectRatioEnum {
-    FOUR3("4_3"),
-    SIXTEEN9("16_9"),
+    ZERO("0"),
     NONSTANDARD("nonstandard");
 
     @JsonValue

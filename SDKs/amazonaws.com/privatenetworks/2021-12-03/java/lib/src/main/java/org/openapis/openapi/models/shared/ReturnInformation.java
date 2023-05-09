@@ -15,6 +15,7 @@ public class ReturnInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replacementOrderArn")
     public String replacementOrderArn;
+
     public ReturnInformation withReplacementOrderArn(String replacementOrderArn) {
         this.replacementOrderArn = replacementOrderArn;
         return this;
@@ -23,6 +24,7 @@ public class ReturnInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnReason")
     public String returnReason;
+
     public ReturnInformation withReturnReason(String returnReason) {
         this.returnReason = returnReason;
         return this;
@@ -31,6 +33,7 @@ public class ReturnInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingAddress")
     public Address shippingAddress;
+
     public ReturnInformation withShippingAddress(Address shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -39,9 +42,11 @@ public class ReturnInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingLabel")
     public String shippingLabel;
+
     public ReturnInformation withShippingLabel(String shippingLabel) {
         this.shippingLabel = shippingLabel;
         return this;
     }
     
+    public ReturnInformation(){}
 }

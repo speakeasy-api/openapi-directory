@@ -15,9 +15,11 @@ public class CreateNamedQueryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NamedQueryId")
     public String namedQueryId;
+
     public CreateNamedQueryOutput withNamedQueryId(String namedQueryId) {
         this.namedQueryId = namedQueryId;
         return this;
     }
     
+    public CreateNamedQueryOutput(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RegistrationsContributorsListContributor {
     /**
@@ -12,6 +12,7 @@ public class RegistrationsContributorsListContributor {
      */
     
     public RegistrationsContributorsListContributorAttributes attributes;
+
     public RegistrationsContributorsListContributor withAttributes(RegistrationsContributorsListContributorAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class RegistrationsContributorsListContributor {
      */
     
     public String id;
+
     public RegistrationsContributorsListContributor withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class RegistrationsContributorsListContributor {
      */
     
     public RegistrationsContributorsListContributorLinks links;
+
     public RegistrationsContributorsListContributor withLinks(RegistrationsContributorsListContributorLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class RegistrationsContributorsListContributor {
      */
     
     public RegistrationsContributorsListContributorRelationships relationships;
+
     public RegistrationsContributorsListContributor withRelationships(RegistrationsContributorsListContributorRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,14 @@ public class RegistrationsContributorsListContributor {
      */
     
     public String type;
+
     public RegistrationsContributorsListContributor withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RegistrationsContributorsListContributor(@JsonProperty("relationships") RegistrationsContributorsListContributorRelationships relationships, @JsonProperty("type") String type) {
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

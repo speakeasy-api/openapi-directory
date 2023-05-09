@@ -18,6 +18,7 @@ public class UpdateVideoPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateVideoPropertiesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class UpdateVideoPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public UpdateVideoPropertiesRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -40,9 +42,11 @@ public class UpdateVideoPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoProperties")
     public VideoProperties videoProperties;
+
     public UpdateVideoPropertiesRequest withVideoProperties(VideoProperties videoProperties) {
         this.videoProperties = videoProperties;
         return this;
     }
     
+    public UpdateVideoPropertiesRequest(){}
 }

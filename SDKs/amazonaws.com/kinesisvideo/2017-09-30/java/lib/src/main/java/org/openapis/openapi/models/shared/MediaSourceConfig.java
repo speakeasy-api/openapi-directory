@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MediaSourceConfig {
     @JsonProperty("MediaUriSecretArn")
     public String mediaUriSecretArn;
+
     public MediaSourceConfig withMediaUriSecretArn(String mediaUriSecretArn) {
         this.mediaUriSecretArn = mediaUriSecretArn;
         return this;
@@ -19,9 +20,14 @@ public class MediaSourceConfig {
     
     @JsonProperty("MediaUriType")
     public MediaUriTypeEnum mediaUriType;
+
     public MediaSourceConfig withMediaUriType(MediaUriTypeEnum mediaUriType) {
         this.mediaUriType = mediaUriType;
         return this;
     }
     
+    public MediaSourceConfig(@JsonProperty("MediaUriSecretArn") String mediaUriSecretArn, @JsonProperty("MediaUriType") MediaUriTypeEnum mediaUriType) {
+        this.mediaUriSecretArn = mediaUriSecretArn;
+        this.mediaUriType = mediaUriType;
+  }
 }

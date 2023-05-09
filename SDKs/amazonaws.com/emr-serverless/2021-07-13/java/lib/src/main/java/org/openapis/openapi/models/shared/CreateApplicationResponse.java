@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateApplicationResponse {
     @JsonProperty("applicationId")
     public String applicationId;
+
     public CreateApplicationResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -21,6 +22,7 @@ public class CreateApplicationResponse {
     
     @JsonProperty("arn")
     public String arn;
+
     public CreateApplicationResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -29,9 +31,14 @@ public class CreateApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateApplicationResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateApplicationResponse(@JsonProperty("applicationId") String applicationId, @JsonProperty("arn") String arn) {
+        this.applicationId = applicationId;
+        this.arn = arn;
+  }
 }

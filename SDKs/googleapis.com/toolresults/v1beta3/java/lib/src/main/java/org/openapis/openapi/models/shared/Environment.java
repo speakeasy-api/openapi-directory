@@ -18,6 +18,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completionTime")
     public Timestamp completionTime;
+
     public Environment withCompletionTime(Timestamp completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -29,6 +30,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public Timestamp creationTime;
+
     public Environment withCreationTime(Timestamp creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -40,6 +42,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionValue")
     public EnvironmentDimensionValueEntry[] dimensionValue;
+
     public Environment withDimensionValue(EnvironmentDimensionValueEntry[] dimensionValue) {
         this.dimensionValue = dimensionValue;
         return this;
@@ -51,6 +54,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Environment withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentId")
     public String environmentId;
+
     public Environment withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -73,6 +78,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentResult")
     public MergedResult environmentResult;
+
     public Environment withEnvironmentResult(MergedResult environmentResult) {
         this.environmentResult = environmentResult;
         return this;
@@ -84,6 +90,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionId")
     public String executionId;
+
     public Environment withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -95,6 +102,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("historyId")
     public String historyId;
+
     public Environment withHistoryId(String historyId) {
         this.historyId = historyId;
         return this;
@@ -106,6 +114,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public Environment withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -117,6 +126,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultsStorage")
     public ResultsStorage resultsStorage;
+
     public Environment withResultsStorage(ResultsStorage resultsStorage) {
         this.resultsStorage = resultsStorage;
         return this;
@@ -128,9 +138,11 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shardSummaries")
     public ShardSummary[] shardSummaries;
+
     public Environment withShardSummaries(ShardSummary[] shardSummaries) {
         this.shardSummaries = shardSummaries;
         return this;
     }
     
+    public Environment(){}
 }

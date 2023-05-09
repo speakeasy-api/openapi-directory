@@ -18,6 +18,7 @@ public class GoogleCloudDatapipelinesV1LaunchTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsPath")
     public String gcsPath;
+
     public GoogleCloudDatapipelinesV1LaunchTemplateRequest withGcsPath(String gcsPath) {
         this.gcsPath = gcsPath;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatapipelinesV1LaunchTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchParameters")
     public GoogleCloudDatapipelinesV1LaunchTemplateParameters launchParameters;
+
     public GoogleCloudDatapipelinesV1LaunchTemplateRequest withLaunchParameters(GoogleCloudDatapipelinesV1LaunchTemplateParameters launchParameters) {
         this.launchParameters = launchParameters;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatapipelinesV1LaunchTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GoogleCloudDatapipelinesV1LaunchTemplateRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatapipelinesV1LaunchTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public GoogleCloudDatapipelinesV1LaunchTemplateRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDatapipelinesV1LaunchTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public GoogleCloudDatapipelinesV1LaunchTemplateRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public GoogleCloudDatapipelinesV1LaunchTemplateRequest(){}
 }

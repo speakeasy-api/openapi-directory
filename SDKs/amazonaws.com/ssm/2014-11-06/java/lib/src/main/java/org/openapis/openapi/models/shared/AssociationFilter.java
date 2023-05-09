@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociationFilter {
     @JsonProperty("key")
     public AssociationFilterKeyEnum key;
+
     public AssociationFilter withKey(AssociationFilterKeyEnum key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class AssociationFilter {
     
     @JsonProperty("value")
     public String value;
+
     public AssociationFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AssociationFilter(@JsonProperty("key") AssociationFilterKeyEnum key, @JsonProperty("value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

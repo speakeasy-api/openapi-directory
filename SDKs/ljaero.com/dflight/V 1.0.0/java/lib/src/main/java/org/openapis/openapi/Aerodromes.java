@@ -80,12 +80,10 @@ public class Aerodromes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AerodromesByDistanceUsV1AerodromesDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.AerodromesByDistanceUsV1AerodromesDistanceQueryPostResponse() {{
+        org.openapis.openapi.models.operations.AerodromesByDistanceUsV1AerodromesDistanceQueryPostResponse res = new org.openapis.openapi.models.operations.AerodromesByDistanceUsV1AerodromesDistanceQueryPostResponse(contentType, httpRes.statusCode()) {{
             aerodromeDistanceResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,12 +143,10 @@ public class Aerodromes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse res = new org.openapis.openapi.models.operations.AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse() {{
+        org.openapis.openapi.models.operations.AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse res = new org.openapis.openapi.models.operations.AerodromesByPolyUsV1AerodromesPolygonQueryPostResponse(contentType, httpRes.statusCode()) {{
             aerodromePolyResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,12 +206,10 @@ public class Aerodromes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AerodromesByRouteUsV1AerodromesRouteQueryPostResponse res = new org.openapis.openapi.models.operations.AerodromesByRouteUsV1AerodromesRouteQueryPostResponse() {{
+        org.openapis.openapi.models.operations.AerodromesByRouteUsV1AerodromesRouteQueryPostResponse res = new org.openapis.openapi.models.operations.AerodromesByRouteUsV1AerodromesRouteQueryPostResponse(contentType, httpRes.statusCode()) {{
             aerodromeRouteResponse = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

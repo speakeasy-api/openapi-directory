@@ -15,6 +15,7 @@ public class TemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public TemplateSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class TemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TemplateSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class TemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TemplateSummary withId(String id) {
         this.id = id;
         return this;
@@ -39,9 +42,11 @@ public class TemplateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TemplateSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TemplateSummary(){}
 }

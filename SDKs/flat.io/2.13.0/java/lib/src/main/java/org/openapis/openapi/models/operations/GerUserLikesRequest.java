@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GerUserLikesRequest {
@@ -12,6 +13,7 @@ public class GerUserLikesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public Boolean ids;
+
     public GerUserLikesRequest withIds(Boolean ids) {
         this.ids = ids;
         return this;
@@ -23,9 +25,13 @@ public class GerUserLikesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user")
     public String user;
+
     public GerUserLikesRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public GerUserLikesRequest(@JsonProperty("user") String user) {
+        this.user = user;
+  }
 }

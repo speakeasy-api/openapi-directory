@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAdminAccountResponse {
     
     public String contentType;
+
     public GetAdminAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAdminAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAdminAccountResponse getAdminAccountResponse;
+
     public GetAdminAccountResponse withGetAdminAccountResponse(org.openapis.openapi.models.shared.GetAdminAccountResponse getAdminAccountResponse) {
         this.getAdminAccountResponse = getAdminAccountResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAdminAccountResponse {
      */
     
     public Object internalErrorException;
+
     public GetAdminAccountResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetAdminAccountResponse {
      */
     
     public Object invalidOperationException;
+
     public GetAdminAccountResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -46,6 +51,7 @@ public class GetAdminAccountResponse {
     
     
     public Integer statusCode;
+
     public GetAdminAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetAdminAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAdminAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetAdminAccountResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAdminAccountResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetAdminAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

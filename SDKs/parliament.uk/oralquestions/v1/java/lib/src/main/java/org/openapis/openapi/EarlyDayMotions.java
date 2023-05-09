@@ -51,14 +51,12 @@ public class EarlyDayMotions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PublishedEarlyDayMotionGetResponse res = new org.openapis.openapi.models.operations.PublishedEarlyDayMotionGetResponse() {{
+        org.openapis.openapi.models.operations.PublishedEarlyDayMotionGetResponse res = new org.openapis.openapi.models.operations.PublishedEarlyDayMotionGetResponse(contentType, httpRes.statusCode()) {{
             apiResponseListPublishedWrittenQuestion = null;
             apiResponseListPublishedWrittenQuestion = null;
             apiResponseObject = null;
             apiResponseObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,7 +114,7 @@ public class EarlyDayMotions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEarlyDayMotionsListResponse res = new org.openapis.openapi.models.operations.GetEarlyDayMotionsListResponse() {{
+        org.openapis.openapi.models.operations.GetEarlyDayMotionsListResponse res = new org.openapis.openapi.models.operations.GetEarlyDayMotionsListResponse(contentType, httpRes.statusCode()) {{
             apiResponseListPublishedWrittenQuestion = null;
             apiResponseListPublishedWrittenQuestion = null;
             body = null;
@@ -126,8 +124,6 @@ public class EarlyDayMotions {
             apiResponseObject = null;
             apiResponseObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

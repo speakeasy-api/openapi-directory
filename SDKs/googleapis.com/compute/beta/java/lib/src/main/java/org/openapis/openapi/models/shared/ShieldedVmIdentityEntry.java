@@ -18,6 +18,7 @@ public class ShieldedVmIdentityEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ekCert")
     public String ekCert;
+
     public ShieldedVmIdentityEntry withEkCert(String ekCert) {
         this.ekCert = ekCert;
         return this;
@@ -29,9 +30,11 @@ public class ShieldedVmIdentityEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ekPub")
     public String ekPub;
+
     public ShieldedVmIdentityEntry withEkPub(String ekPub) {
         this.ekPub = ekPub;
         return this;
     }
     
+    public ShieldedVmIdentityEntry(){}
 }

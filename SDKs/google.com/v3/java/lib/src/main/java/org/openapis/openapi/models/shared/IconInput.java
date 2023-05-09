@@ -18,6 +18,7 @@ public class IconInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageData")
     public String imageData;
+
     public IconInput withImageData(String imageData) {
         this.imageData = imageData;
         return this;
@@ -29,9 +30,11 @@ public class IconInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public IconInput withReference(String reference) {
         this.reference = reference;
         return this;
     }
     
+    public IconInput(){}
 }

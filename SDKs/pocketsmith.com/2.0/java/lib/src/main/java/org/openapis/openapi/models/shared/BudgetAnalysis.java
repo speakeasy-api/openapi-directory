@@ -15,6 +15,7 @@ public class BudgetAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average_actual_amount")
     public Double averageActualAmount;
+
     public BudgetAnalysis withAverageActualAmount(Double averageActualAmount) {
         this.averageActualAmount = averageActualAmount;
         return this;
@@ -26,6 +27,7 @@ public class BudgetAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average_forecast_amount")
     public Double averageForecastAmount;
+
     public BudgetAnalysis withAverageForecastAmount(Double averageForecastAmount) {
         this.averageForecastAmount = averageForecastAmount;
         return this;
@@ -37,6 +39,7 @@ public class BudgetAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_code")
     public String currencyCode;
+
     public BudgetAnalysis withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -48,6 +51,7 @@ public class BudgetAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_date")
     public String endDate;
+
     public BudgetAnalysis withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -59,6 +63,7 @@ public class BudgetAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periods")
     public Period[] periods;
+
     public BudgetAnalysis withPeriods(Period[] periods) {
         this.periods = periods;
         return this;
@@ -70,6 +75,7 @@ public class BudgetAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_date")
     public String startDate;
+
     public BudgetAnalysis withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -81,6 +87,7 @@ public class BudgetAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_actual_amount")
     public Double totalActualAmount;
+
     public BudgetAnalysis withTotalActualAmount(Double totalActualAmount) {
         this.totalActualAmount = totalActualAmount;
         return this;
@@ -92,6 +99,7 @@ public class BudgetAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_forecast_amount")
     public Double totalForecastAmount;
+
     public BudgetAnalysis withTotalForecastAmount(Double totalForecastAmount) {
         this.totalForecastAmount = totalForecastAmount;
         return this;
@@ -103,6 +111,7 @@ public class BudgetAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_over_by")
     public Double totalOverBy;
+
     public BudgetAnalysis withTotalOverBy(Double totalOverBy) {
         this.totalOverBy = totalOverBy;
         return this;
@@ -114,9 +123,11 @@ public class BudgetAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_under_by")
     public Double totalUnderBy;
+
     public BudgetAnalysis withTotalUnderBy(Double totalUnderBy) {
         this.totalUnderBy = totalUnderBy;
         return this;
     }
     
+    public BudgetAnalysis(){}
 }

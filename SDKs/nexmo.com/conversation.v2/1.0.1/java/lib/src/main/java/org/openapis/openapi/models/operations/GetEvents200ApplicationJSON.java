@@ -15,6 +15,7 @@ public class GetEvents200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public GetEvents200ApplicationJSONEmbedded embedded;
+
     public GetEvents200ApplicationJSON withEmbedded(GetEvents200ApplicationJSONEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -23,6 +24,7 @@ public class GetEvents200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public GetEvents200ApplicationJSONLinks links;
+
     public GetEvents200ApplicationJSON withLinks(GetEvents200ApplicationJSONLinks links) {
         this.links = links;
         return this;
@@ -34,9 +36,11 @@ public class GetEvents200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_size")
     public Long pageSize;
+
     public GetEvents200ApplicationJSON withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetEvents200ApplicationJSON(){}
 }

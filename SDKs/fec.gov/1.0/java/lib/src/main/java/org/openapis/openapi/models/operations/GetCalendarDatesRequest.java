@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -14,6 +15,7 @@ public class GetCalendarDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetCalendarDatesRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -28,6 +30,7 @@ public class GetCalendarDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=calendar_category_id")
     public Integer[] calendarCategoryId;
+
     public GetCalendarDatesRequest withCalendarCategoryId(Integer[] calendarCategoryId) {
         this.calendarCategoryId = calendarCategoryId;
         return this;
@@ -38,6 +41,7 @@ public class GetCalendarDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String[] description;
+
     public GetCalendarDatesRequest withDescription(String[] description) {
         this.description = description;
         return this;
@@ -48,6 +52,7 @@ public class GetCalendarDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event_id")
     public Integer eventId;
+
     public GetCalendarDatesRequest withEventId(Integer eventId) {
         this.eventId = eventId;
         return this;
@@ -59,6 +64,7 @@ public class GetCalendarDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_end_date")
     public LocalDate maxEndDate;
+
     public GetCalendarDatesRequest withMaxEndDate(LocalDate maxEndDate) {
         this.maxEndDate = maxEndDate;
         return this;
@@ -70,6 +76,7 @@ public class GetCalendarDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_start_date")
     public LocalDate maxStartDate;
+
     public GetCalendarDatesRequest withMaxStartDate(LocalDate maxStartDate) {
         this.maxStartDate = maxStartDate;
         return this;
@@ -81,6 +88,7 @@ public class GetCalendarDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_end_date")
     public LocalDate minEndDate;
+
     public GetCalendarDatesRequest withMinEndDate(LocalDate minEndDate) {
         this.minEndDate = minEndDate;
         return this;
@@ -92,6 +100,7 @@ public class GetCalendarDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_start_date")
     public LocalDate minStartDate;
+
     public GetCalendarDatesRequest withMinStartDate(LocalDate minStartDate) {
         this.minStartDate = minStartDate;
         return this;
@@ -102,6 +111,7 @@ public class GetCalendarDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetCalendarDatesRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -112,6 +122,7 @@ public class GetCalendarDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetCalendarDatesRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -123,6 +134,7 @@ public class GetCalendarDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetCalendarDatesRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -133,6 +145,7 @@ public class GetCalendarDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetCalendarDatesRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -143,6 +156,7 @@ public class GetCalendarDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetCalendarDatesRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -153,6 +167,7 @@ public class GetCalendarDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetCalendarDatesRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
@@ -163,9 +178,13 @@ public class GetCalendarDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=summary")
     public String[] summary;
+
     public GetCalendarDatesRequest withSummary(String[] summary) {
         this.summary = summary;
         return this;
     }
     
+    public GetCalendarDatesRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

@@ -15,6 +15,7 @@ public class AwsAutoScalingAutoScalingGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZones")
     public AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetails[] availabilityZones;
+
     public AwsAutoScalingAutoScalingGroupDetails withAvailabilityZones(AwsAutoScalingAutoScalingGroupAvailabilityZonesListDetails[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -23,6 +24,7 @@ public class AwsAutoScalingAutoScalingGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityRebalance")
     public Boolean capacityRebalance;
+
     public AwsAutoScalingAutoScalingGroupDetails withCapacityRebalance(Boolean capacityRebalance) {
         this.capacityRebalance = capacityRebalance;
         return this;
@@ -31,6 +33,7 @@ public class AwsAutoScalingAutoScalingGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedTime")
     public String createdTime;
+
     public AwsAutoScalingAutoScalingGroupDetails withCreatedTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -39,6 +42,7 @@ public class AwsAutoScalingAutoScalingGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheckGracePeriod")
     public Long healthCheckGracePeriod;
+
     public AwsAutoScalingAutoScalingGroupDetails withHealthCheckGracePeriod(Long healthCheckGracePeriod) {
         this.healthCheckGracePeriod = healthCheckGracePeriod;
         return this;
@@ -47,6 +51,7 @@ public class AwsAutoScalingAutoScalingGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheckType")
     public String healthCheckType;
+
     public AwsAutoScalingAutoScalingGroupDetails withHealthCheckType(String healthCheckType) {
         this.healthCheckType = healthCheckType;
         return this;
@@ -55,6 +60,7 @@ public class AwsAutoScalingAutoScalingGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchConfigurationName")
     public String launchConfigurationName;
+
     public AwsAutoScalingAutoScalingGroupDetails withLaunchConfigurationName(String launchConfigurationName) {
         this.launchConfigurationName = launchConfigurationName;
         return this;
@@ -63,6 +69,7 @@ public class AwsAutoScalingAutoScalingGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchTemplate")
     public AwsAutoScalingAutoScalingGroupLaunchTemplateLaunchTemplateSpecification launchTemplate;
+
     public AwsAutoScalingAutoScalingGroupDetails withLaunchTemplate(AwsAutoScalingAutoScalingGroupLaunchTemplateLaunchTemplateSpecification launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -71,6 +78,7 @@ public class AwsAutoScalingAutoScalingGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoadBalancerNames")
     public String[] loadBalancerNames;
+
     public AwsAutoScalingAutoScalingGroupDetails withLoadBalancerNames(String[] loadBalancerNames) {
         this.loadBalancerNames = loadBalancerNames;
         return this;
@@ -79,9 +87,11 @@ public class AwsAutoScalingAutoScalingGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MixedInstancesPolicy")
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyDetails mixedInstancesPolicy;
+
     public AwsAutoScalingAutoScalingGroupDetails withMixedInstancesPolicy(AwsAutoScalingAutoScalingGroupMixedInstancesPolicyDetails mixedInstancesPolicy) {
         this.mixedInstancesPolicy = mixedInstancesPolicy;
         return this;
     }
     
+    public AwsAutoScalingAutoScalingGroupDetails(){}
 }

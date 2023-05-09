@@ -15,9 +15,11 @@ public class StartNotebookExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookExecutionId")
     public String notebookExecutionId;
+
     public StartNotebookExecutionOutput withNotebookExecutionId(String notebookExecutionId) {
         this.notebookExecutionId = notebookExecutionId;
         return this;
     }
     
+    public StartNotebookExecutionOutput(){}
 }

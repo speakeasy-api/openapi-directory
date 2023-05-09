@@ -17,6 +17,7 @@ public class SpotInsertionInput {
      */
     @JsonProperty("broadcastServiceId")
     public Long broadcastServiceId;
+
     public SpotInsertionInput withBroadcastServiceId(Long broadcastServiceId) {
         this.broadcastServiceId = broadcastServiceId;
         return this;
@@ -27,6 +28,7 @@ public class SpotInsertionInput {
      */
     @JsonProperty("cue")
     public String cue;
+
     public SpotInsertionInput withCue(String cue) {
         this.cue = cue;
         return this;
@@ -37,6 +39,7 @@ public class SpotInsertionInput {
      */
     @JsonProperty("duration")
     public Integer duration;
+
     public SpotInsertionInput withDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -48,6 +51,7 @@ public class SpotInsertionInput {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public SpotInsertionInput withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -58,6 +62,7 @@ public class SpotInsertionInput {
      */
     @JsonProperty("programId")
     public Long programId;
+
     public SpotInsertionInput withProgramId(Long programId) {
         this.programId = programId;
         return this;
@@ -68,6 +73,7 @@ public class SpotInsertionInput {
      */
     @JsonProperty("spots")
     public Long[] spots;
+
     public SpotInsertionInput withSpots(Long[] spots) {
         this.spots = spots;
         return this;
@@ -79,9 +85,19 @@ public class SpotInsertionInput {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public SpotInsertionInput withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public SpotInsertionInput(@JsonProperty("broadcastServiceId") Long broadcastServiceId, @JsonProperty("cue") String cue, @JsonProperty("duration") Integer duration, @JsonProperty("endDate") LocalDate endDate, @JsonProperty("programId") Long programId, @JsonProperty("spots") Long[] spots, @JsonProperty("startDate") LocalDate startDate) {
+        this.broadcastServiceId = broadcastServiceId;
+        this.cue = cue;
+        this.duration = duration;
+        this.endDate = endDate;
+        this.programId = programId;
+        this.spots = spots;
+        this.startDate = startDate;
+  }
 }

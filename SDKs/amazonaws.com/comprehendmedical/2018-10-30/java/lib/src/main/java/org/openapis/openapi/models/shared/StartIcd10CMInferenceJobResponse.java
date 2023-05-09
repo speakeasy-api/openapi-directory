@@ -15,9 +15,11 @@ public class StartIcd10CMInferenceJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StartIcd10CMInferenceJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public StartIcd10CMInferenceJobResponse(){}
 }

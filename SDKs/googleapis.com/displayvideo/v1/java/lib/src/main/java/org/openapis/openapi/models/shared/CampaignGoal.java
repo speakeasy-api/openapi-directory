@@ -18,6 +18,7 @@ public class CampaignGoal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignGoalType")
     public CampaignGoalCampaignGoalTypeEnum campaignGoalType;
+
     public CampaignGoal withCampaignGoalType(CampaignGoalCampaignGoalTypeEnum campaignGoalType) {
         this.campaignGoalType = campaignGoalType;
         return this;
@@ -29,9 +30,11 @@ public class CampaignGoal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceGoal")
     public PerformanceGoal performanceGoal;
+
     public CampaignGoal withPerformanceGoal(PerformanceGoal performanceGoal) {
         this.performanceGoal = performanceGoal;
         return this;
     }
     
+    public CampaignGoal(){}
 }

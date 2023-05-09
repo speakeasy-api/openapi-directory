@@ -18,6 +18,7 @@ public class FloodlightReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilters")
     public Dimension[] dimensionFilters;
+
     public FloodlightReportCompatibleFields withDimensionFilters(Dimension[] dimensionFilters) {
         this.dimensionFilters = dimensionFilters;
         return this;
@@ -29,6 +30,7 @@ public class FloodlightReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public Dimension[] dimensions;
+
     public FloodlightReportCompatibleFields withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -40,6 +42,7 @@ public class FloodlightReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public FloodlightReportCompatibleFields withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class FloodlightReportCompatibleFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public Metric[] metrics;
+
     public FloodlightReportCompatibleFields withMetrics(Metric[] metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public FloodlightReportCompatibleFields(){}
 }

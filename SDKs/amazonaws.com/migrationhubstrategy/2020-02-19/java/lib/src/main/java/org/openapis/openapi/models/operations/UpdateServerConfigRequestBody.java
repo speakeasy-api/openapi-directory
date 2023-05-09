@@ -14,6 +14,7 @@ public class UpdateServerConfigRequestBody {
      */
     @JsonProperty("serverId")
     public String serverId;
+
     public UpdateServerConfigRequestBody withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -25,9 +26,13 @@ public class UpdateServerConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strategyOption")
     public UpdateServerConfigRequestBodyStrategyOption strategyOption;
+
     public UpdateServerConfigRequestBody withStrategyOption(UpdateServerConfigRequestBodyStrategyOption strategyOption) {
         this.strategyOption = strategyOption;
         return this;
     }
     
+    public UpdateServerConfigRequestBody(@JsonProperty("serverId") String serverId) {
+        this.serverId = serverId;
+  }
 }

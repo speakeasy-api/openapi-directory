@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SnowflakeConnectorProfileCredentials {
     @JsonProperty("password")
     public String password;
+
     public SnowflakeConnectorProfileCredentials withPassword(String password) {
         this.password = password;
         return this;
@@ -19,9 +20,14 @@ public class SnowflakeConnectorProfileCredentials {
     
     @JsonProperty("username")
     public String username;
+
     public SnowflakeConnectorProfileCredentials withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public SnowflakeConnectorProfileCredentials(@JsonProperty("username") String username, @JsonProperty("password") String password) {
+        this.username = username;
+        this.password = password;
+  }
 }

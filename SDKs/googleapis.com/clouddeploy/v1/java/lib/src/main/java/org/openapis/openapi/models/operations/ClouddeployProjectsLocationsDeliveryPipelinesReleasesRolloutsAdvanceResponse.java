@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceResponse {
@@ -12,6 +13,7 @@ public class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanc
      */
     
     public java.util.Map<String, Object> advanceRolloutResponse;
+
     public ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceResponse withAdvanceRolloutResponse(java.util.Map<String, Object> advanceRolloutResponse) {
         this.advanceRolloutResponse = advanceRolloutResponse;
         return this;
@@ -19,6 +21,7 @@ public class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanc
     
     
     public String contentType;
+
     public ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanc
     
     
     public Integer statusCode;
+
     public ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanc
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

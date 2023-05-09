@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DailyFantasyPlayersResponse {
     
     public String contentType;
+
     public DailyFantasyPlayersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DailyFantasyPlayersResponse {
     
     
     public org.openapis.openapi.models.shared.DailyFantasyPlayer[] dailyFantasyPlayers;
+
     public DailyFantasyPlayersResponse withDailyFantasyPlayers(org.openapis.openapi.models.shared.DailyFantasyPlayer[] dailyFantasyPlayers) {
         this.dailyFantasyPlayers = dailyFantasyPlayers;
         return this;
@@ -23,6 +26,7 @@ public class DailyFantasyPlayersResponse {
     
     
     public Integer statusCode;
+
     public DailyFantasyPlayersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class DailyFantasyPlayersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DailyFantasyPlayersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DailyFantasyPlayersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

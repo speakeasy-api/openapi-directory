@@ -15,9 +15,11 @@ public class SslPolicyReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslPolicy")
     public String sslPolicy;
+
     public SslPolicyReference withSslPolicy(String sslPolicy) {
         this.sslPolicy = sslPolicy;
         return this;
     }
     
+    public SslPolicyReference(){}
 }

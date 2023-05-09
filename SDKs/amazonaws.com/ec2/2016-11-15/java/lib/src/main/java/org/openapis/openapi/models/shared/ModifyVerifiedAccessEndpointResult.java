@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyVerifiedAccessEndpointResult {
     
     public ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint verifiedAccessEndpoint;
+
     public ModifyVerifiedAccessEndpointResult withVerifiedAccessEndpoint(ModifyVerifiedAccessEndpointResultVerifiedAccessEndpoint verifiedAccessEndpoint) {
         this.verifiedAccessEndpoint = verifiedAccessEndpoint;
         return this;
     }
     
+    public ModifyVerifiedAccessEndpointResult(){}
 }

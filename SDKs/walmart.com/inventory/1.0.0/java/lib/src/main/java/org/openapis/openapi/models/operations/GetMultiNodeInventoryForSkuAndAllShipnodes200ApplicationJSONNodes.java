@@ -15,6 +15,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availToSellQty")
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQty availToSellQty;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodes withAvailToSellQty(GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQty availToSellQty) {
         this.availToSellQty = availToSellQty;
         return this;
@@ -23,6 +24,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors[] errors;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodes withErrors(GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors[] errors) {
         this.errors = errors;
         return this;
@@ -34,6 +36,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputQty")
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQty inputQty;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodes withInputQty(GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQty inputQty) {
         this.inputQty = inputQty;
         return this;
@@ -45,6 +48,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedQty")
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQty reservedQty;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodes withReservedQty(GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQty reservedQty) {
         this.reservedQty = reservedQty;
         return this;
@@ -56,9 +60,11 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipNode")
     public String shipNode;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodes withShipNode(String shipNode) {
         this.shipNode = shipNode;
         return this;
     }
     
+    public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodes(){}
 }

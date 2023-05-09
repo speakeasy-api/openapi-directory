@@ -12,9 +12,13 @@ public class CreateDatalakeAutoEnableRequestBody {
      */
     @JsonProperty("configurationForNewAccounts")
     public org.openapis.openapi.models.shared.AutoEnableNewRegionConfiguration[] configurationForNewAccounts;
+
     public CreateDatalakeAutoEnableRequestBody withConfigurationForNewAccounts(org.openapis.openapi.models.shared.AutoEnableNewRegionConfiguration[] configurationForNewAccounts) {
         this.configurationForNewAccounts = configurationForNewAccounts;
         return this;
     }
     
+    public CreateDatalakeAutoEnableRequestBody(@JsonProperty("configurationForNewAccounts") org.openapis.openapi.models.shared.AutoEnableNewRegionConfiguration[] configurationForNewAccounts) {
+        this.configurationForNewAccounts = configurationForNewAccounts;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMetricAttributionsResponse {
     
     public String contentType;
+
     public ListMetricAttributionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListMetricAttributionsResponse {
      */
     
     public Object invalidInputException;
+
     public ListMetricAttributionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class ListMetricAttributionsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListMetricAttributionsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListMetricAttributionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMetricAttributionsResponse listMetricAttributionsResponse;
+
     public ListMetricAttributionsResponse withListMetricAttributionsResponse(org.openapis.openapi.models.shared.ListMetricAttributionsResponse listMetricAttributionsResponse) {
         this.listMetricAttributionsResponse = listMetricAttributionsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListMetricAttributionsResponse {
     
     
     public Integer statusCode;
+
     public ListMetricAttributionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListMetricAttributionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMetricAttributionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListMetricAttributionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

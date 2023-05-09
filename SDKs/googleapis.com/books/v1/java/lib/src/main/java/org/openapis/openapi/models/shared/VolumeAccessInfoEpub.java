@@ -18,6 +18,7 @@ public class VolumeAccessInfoEpub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acsTokenLink")
     public String acsTokenLink;
+
     public VolumeAccessInfoEpub withAcsTokenLink(String acsTokenLink) {
         this.acsTokenLink = acsTokenLink;
         return this;
@@ -29,6 +30,7 @@ public class VolumeAccessInfoEpub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadLink")
     public String downloadLink;
+
     public VolumeAccessInfoEpub withDownloadLink(String downloadLink) {
         this.downloadLink = downloadLink;
         return this;
@@ -40,9 +42,11 @@ public class VolumeAccessInfoEpub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAvailable")
     public Boolean isAvailable;
+
     public VolumeAccessInfoEpub withIsAvailable(Boolean isAvailable) {
         this.isAvailable = isAvailable;
         return this;
     }
     
+    public VolumeAccessInfoEpub(){}
 }

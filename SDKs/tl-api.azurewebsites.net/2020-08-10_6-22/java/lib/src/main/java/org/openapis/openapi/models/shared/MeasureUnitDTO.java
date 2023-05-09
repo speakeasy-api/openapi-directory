@@ -18,6 +18,7 @@ public class MeasureUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public MeasureUnitDTO withId(Integer id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class MeasureUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MeasureUnitDTO withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class MeasureUnitDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public MeasureUnitDTO withType(String type) {
         this.type = type;
         return this;
     }
     
+    public MeasureUnitDTO(){}
 }

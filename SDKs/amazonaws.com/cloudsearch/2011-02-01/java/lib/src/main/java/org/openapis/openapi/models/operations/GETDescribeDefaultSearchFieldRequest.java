@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeDefaultSearchFieldRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeDefaultSearchFieldActionEnum action;
+
     public GETDescribeDefaultSearchFieldRequest withAction(GETDescribeDefaultSearchFieldActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETDescribeDefaultSearchFieldRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
     public String domainName;
+
     public GETDescribeDefaultSearchFieldRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -23,6 +26,7 @@ public class GETDescribeDefaultSearchFieldRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeDefaultSearchFieldVersionEnum version;
+
     public GETDescribeDefaultSearchFieldRequest withVersion(GETDescribeDefaultSearchFieldVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class GETDescribeDefaultSearchFieldRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeDefaultSearchFieldRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class GETDescribeDefaultSearchFieldRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeDefaultSearchFieldRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class GETDescribeDefaultSearchFieldRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeDefaultSearchFieldRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class GETDescribeDefaultSearchFieldRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeDefaultSearchFieldRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class GETDescribeDefaultSearchFieldRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeDefaultSearchFieldRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class GETDescribeDefaultSearchFieldRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeDefaultSearchFieldRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,15 @@ public class GETDescribeDefaultSearchFieldRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeDefaultSearchFieldRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeDefaultSearchFieldRequest(@JsonProperty("Action") GETDescribeDefaultSearchFieldActionEnum action, @JsonProperty("DomainName") String domainName, @JsonProperty("Version") GETDescribeDefaultSearchFieldVersionEnum version) {
+        this.action = action;
+        this.domainName = domainName;
+        this.version = version;
+  }
 }

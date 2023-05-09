@@ -18,6 +18,7 @@ public class RunMobileFriendlyTestRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestScreenshot")
     public Boolean requestScreenshot;
+
     public RunMobileFriendlyTestRequest withRequestScreenshot(Boolean requestScreenshot) {
         this.requestScreenshot = requestScreenshot;
         return this;
@@ -29,9 +30,11 @@ public class RunMobileFriendlyTestRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public RunMobileFriendlyTestRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public RunMobileFriendlyTestRequest(){}
 }

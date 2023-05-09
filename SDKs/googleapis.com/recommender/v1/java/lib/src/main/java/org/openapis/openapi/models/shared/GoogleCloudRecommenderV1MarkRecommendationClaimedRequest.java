@@ -18,6 +18,7 @@ public class GoogleCloudRecommenderV1MarkRecommendationClaimedRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudRecommenderV1MarkRecommendationClaimedRequest withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecommenderV1MarkRecommendationClaimedRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateMetadata")
     public java.util.Map<String, String> stateMetadata;
+
     public GoogleCloudRecommenderV1MarkRecommendationClaimedRequest withStateMetadata(java.util.Map<String, String> stateMetadata) {
         this.stateMetadata = stateMetadata;
         return this;
     }
     
+    public GoogleCloudRecommenderV1MarkRecommendationClaimedRequest(){}
 }

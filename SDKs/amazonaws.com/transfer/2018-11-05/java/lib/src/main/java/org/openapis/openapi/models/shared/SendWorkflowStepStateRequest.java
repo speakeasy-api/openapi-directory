@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendWorkflowStepStateRequest {
     @JsonProperty("ExecutionId")
     public String executionId;
+
     public SendWorkflowStepStateRequest withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -16,6 +17,7 @@ public class SendWorkflowStepStateRequest {
     
     @JsonProperty("Status")
     public CustomStepStatusEnum status;
+
     public SendWorkflowStepStateRequest withStatus(CustomStepStatusEnum status) {
         this.status = status;
         return this;
@@ -23,6 +25,7 @@ public class SendWorkflowStepStateRequest {
     
     @JsonProperty("Token")
     public String token;
+
     public SendWorkflowStepStateRequest withToken(String token) {
         this.token = token;
         return this;
@@ -30,9 +33,16 @@ public class SendWorkflowStepStateRequest {
     
     @JsonProperty("WorkflowId")
     public String workflowId;
+
     public SendWorkflowStepStateRequest withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public SendWorkflowStepStateRequest(@JsonProperty("ExecutionId") String executionId, @JsonProperty("Status") CustomStepStatusEnum status, @JsonProperty("Token") String token, @JsonProperty("WorkflowId") String workflowId) {
+        this.executionId = executionId;
+        this.status = status;
+        this.token = token;
+        this.workflowId = workflowId;
+  }
 }

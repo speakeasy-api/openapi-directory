@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetSAMLProviderRequest {
     
     public String samlProviderArn;
+
     public GetSAMLProviderRequest withSAMLProviderArn(String samlProviderArn) {
         this.samlProviderArn = samlProviderArn;
         return this;
     }
     
+    public GetSAMLProviderRequest(@JsonProperty("SAMLProviderArn") String samlProviderArn) {
+        this.samlProviderArn = samlProviderArn;
+  }
 }

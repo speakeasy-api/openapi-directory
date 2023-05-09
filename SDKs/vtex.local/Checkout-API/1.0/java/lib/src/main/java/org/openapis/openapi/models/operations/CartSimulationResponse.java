@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CartSimulationResponse {
@@ -12,6 +13,7 @@ public class CartSimulationResponse {
      */
     
     public CartSimulation200ApplicationJSON cartSimulation200ApplicationJSONObject;
+
     public CartSimulationResponse withCartSimulation200ApplicationJSONObject(CartSimulation200ApplicationJSON cartSimulation200ApplicationJSONObject) {
         this.cartSimulation200ApplicationJSONObject = cartSimulation200ApplicationJSONObject;
         return this;
@@ -19,6 +21,7 @@ public class CartSimulationResponse {
     
     
     public String contentType;
+
     public CartSimulationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CartSimulationResponse {
     
     
     public Integer statusCode;
+
     public CartSimulationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CartSimulationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CartSimulationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CartSimulationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

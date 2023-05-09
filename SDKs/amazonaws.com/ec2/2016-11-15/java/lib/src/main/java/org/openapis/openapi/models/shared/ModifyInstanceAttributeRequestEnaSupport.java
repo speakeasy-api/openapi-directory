@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceAttributeRequestEnaSupport {
     
     public Boolean value;
+
     public ModifyInstanceAttributeRequestEnaSupport withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public ModifyInstanceAttributeRequestEnaSupport(){}
 }

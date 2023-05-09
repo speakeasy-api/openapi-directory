@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateProtectionGroupResponse {
     
     public String contentType;
+
     public CreateProtectionGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateProtectionGroupResponse {
      */
     
     public java.util.Map<String, Object> createProtectionGroupResponse;
+
     public CreateProtectionGroupResponse withCreateProtectionGroupResponse(java.util.Map<String, Object> createProtectionGroupResponse) {
         this.createProtectionGroupResponse = createProtectionGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateProtectionGroupResponse {
      */
     
     public Object internalErrorException;
+
     public CreateProtectionGroupResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class CreateProtectionGroupResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateProtectionGroupResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateProtectionGroupResponse {
      */
     
     public Object limitsExceededException;
+
     public CreateProtectionGroupResponse withLimitsExceededException(Object limitsExceededException) {
         this.limitsExceededException = limitsExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateProtectionGroupResponse {
      */
     
     public Object optimisticLockException;
+
     public CreateProtectionGroupResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -66,6 +73,7 @@ public class CreateProtectionGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateProtectionGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateProtectionGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateProtectionGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateProtectionGroupResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateProtectionGroupResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -93,9 +103,14 @@ public class CreateProtectionGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateProtectionGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateProtectionGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

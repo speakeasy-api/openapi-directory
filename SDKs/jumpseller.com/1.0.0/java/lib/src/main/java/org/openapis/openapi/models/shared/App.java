@@ -15,9 +15,11 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apps")
     public AppFields[] apps;
+
     public App withApps(AppFields[] apps) {
         this.apps = apps;
         return this;
     }
     
+    public App(){}
 }

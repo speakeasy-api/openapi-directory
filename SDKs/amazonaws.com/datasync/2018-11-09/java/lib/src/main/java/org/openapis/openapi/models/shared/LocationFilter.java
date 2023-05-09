@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LocationFilter {
     @JsonProperty("Name")
     public LocationFilterNameEnum name;
+
     public LocationFilter withName(LocationFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class LocationFilter {
     
     @JsonProperty("Operator")
     public OperatorEnum operator;
+
     public LocationFilter withOperator(OperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -26,9 +28,15 @@ public class LocationFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public LocationFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public LocationFilter(@JsonProperty("Name") LocationFilterNameEnum name, @JsonProperty("Operator") OperatorEnum operator, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.operator = operator;
+        this.values = values;
+  }
 }

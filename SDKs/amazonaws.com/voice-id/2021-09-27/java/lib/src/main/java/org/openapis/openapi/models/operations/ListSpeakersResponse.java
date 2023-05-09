@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSpeakersResponse {
@@ -12,6 +13,7 @@ public class ListSpeakersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSpeakersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListSpeakersResponse {
     
     
     public String contentType;
+
     public ListSpeakersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSpeakersResponse {
      */
     
     public Object internalServerException;
+
     public ListSpeakersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListSpeakersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSpeakersResponse listSpeakersResponse;
+
     public ListSpeakersResponse withListSpeakersResponse(org.openapis.openapi.models.shared.ListSpeakersResponse listSpeakersResponse) {
         this.listSpeakersResponse = listSpeakersResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListSpeakersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSpeakersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListSpeakersResponse {
     
     
     public Integer statusCode;
+
     public ListSpeakersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListSpeakersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSpeakersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListSpeakersResponse {
      */
     
     public Object throttlingException;
+
     public ListSpeakersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListSpeakersResponse {
      */
     
     public Object validationException;
+
     public ListSpeakersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSpeakersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetTransitGatewayPolicyTableAssociationsRequest {
     
     public Boolean dryRun;
+
     public GetTransitGatewayPolicyTableAssociationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetTransitGatewayPolicyTableAssociationsRequest {
     
     
     public GetTransitGatewayPolicyTableAssociationsRequestFilters[] filters;
+
     public GetTransitGatewayPolicyTableAssociationsRequest withFilters(GetTransitGatewayPolicyTableAssociationsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class GetTransitGatewayPolicyTableAssociationsRequest {
     
     
     public Long maxResults;
+
     public GetTransitGatewayPolicyTableAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class GetTransitGatewayPolicyTableAssociationsRequest {
     
     
     public String nextToken;
+
     public GetTransitGatewayPolicyTableAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,13 @@ public class GetTransitGatewayPolicyTableAssociationsRequest {
     
     
     public String transitGatewayPolicyTableId;
+
     public GetTransitGatewayPolicyTableAssociationsRequest withTransitGatewayPolicyTableId(String transitGatewayPolicyTableId) {
         this.transitGatewayPolicyTableId = transitGatewayPolicyTableId;
         return this;
     }
     
+    public GetTransitGatewayPolicyTableAssociationsRequest(@JsonProperty("TransitGatewayPolicyTableId") String transitGatewayPolicyTableId) {
+        this.transitGatewayPolicyTableId = transitGatewayPolicyTableId;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RewardProgramResourceRelationshipsGroupData {
     @JsonProperty("id")
     public String id;
+
     public RewardProgramResourceRelationshipsGroupData withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class RewardProgramResourceRelationshipsGroupData {
     
     @JsonProperty("type")
     public String type;
+
     public RewardProgramResourceRelationshipsGroupData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RewardProgramResourceRelationshipsGroupData(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

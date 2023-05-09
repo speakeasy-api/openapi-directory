@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DBInstance {
     
     public Boolean autoMinorVersionUpgrade;
+
     public DBInstance withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -19,6 +20,7 @@ public class DBInstance {
     
     
     public String availabilityZone;
+
     public DBInstance withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class DBInstance {
     
     
     public Long backupRetentionPeriod;
+
     public DBInstance withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -33,6 +36,7 @@ public class DBInstance {
     
     
     public String caCertificateIdentifier;
+
     public DBInstance withCACertificateIdentifier(String caCertificateIdentifier) {
         this.caCertificateIdentifier = caCertificateIdentifier;
         return this;
@@ -40,6 +44,7 @@ public class DBInstance {
     
     
     public Boolean copyTagsToSnapshot;
+
     public DBInstance withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -47,6 +52,7 @@ public class DBInstance {
     
     
     public String dbClusterIdentifier;
+
     public DBInstance withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -54,6 +60,7 @@ public class DBInstance {
     
     
     public String dbInstanceArn;
+
     public DBInstance withDBInstanceArn(String dbInstanceArn) {
         this.dbInstanceArn = dbInstanceArn;
         return this;
@@ -61,6 +68,7 @@ public class DBInstance {
     
     
     public String dbInstanceClass;
+
     public DBInstance withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -68,6 +76,7 @@ public class DBInstance {
     
     
     public String dbInstanceIdentifier;
+
     public DBInstance withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -75,6 +84,7 @@ public class DBInstance {
     
     
     public String dbInstanceStatus;
+
     public DBInstance withDBInstanceStatus(String dbInstanceStatus) {
         this.dbInstanceStatus = dbInstanceStatus;
         return this;
@@ -82,6 +92,7 @@ public class DBInstance {
     
     
     public DBSubnetGroup dbSubnetGroup;
+
     public DBInstance withDBSubnetGroup(DBSubnetGroup dbSubnetGroup) {
         this.dbSubnetGroup = dbSubnetGroup;
         return this;
@@ -89,6 +100,7 @@ public class DBInstance {
     
     
     public String dbiResourceId;
+
     public DBInstance withDbiResourceId(String dbiResourceId) {
         this.dbiResourceId = dbiResourceId;
         return this;
@@ -96,6 +108,7 @@ public class DBInstance {
     
     
     public String[] enabledCloudwatchLogsExports;
+
     public DBInstance withEnabledCloudwatchLogsExports(String[] enabledCloudwatchLogsExports) {
         this.enabledCloudwatchLogsExports = enabledCloudwatchLogsExports;
         return this;
@@ -103,6 +116,7 @@ public class DBInstance {
     
     
     public Endpoint endpoint;
+
     public DBInstance withEndpoint(Endpoint endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -110,6 +124,7 @@ public class DBInstance {
     
     
     public String engine;
+
     public DBInstance withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -117,6 +132,7 @@ public class DBInstance {
     
     
     public String engineVersion;
+
     public DBInstance withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -124,6 +140,7 @@ public class DBInstance {
     
     
     public OffsetDateTime instanceCreateTime;
+
     public DBInstance withInstanceCreateTime(OffsetDateTime instanceCreateTime) {
         this.instanceCreateTime = instanceCreateTime;
         return this;
@@ -131,6 +148,7 @@ public class DBInstance {
     
     
     public String kmsKeyId;
+
     public DBInstance withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -138,6 +156,7 @@ public class DBInstance {
     
     
     public OffsetDateTime latestRestorableTime;
+
     public DBInstance withLatestRestorableTime(OffsetDateTime latestRestorableTime) {
         this.latestRestorableTime = latestRestorableTime;
         return this;
@@ -145,6 +164,7 @@ public class DBInstance {
     
     
     public PendingModifiedValues pendingModifiedValues;
+
     public DBInstance withPendingModifiedValues(PendingModifiedValues pendingModifiedValues) {
         this.pendingModifiedValues = pendingModifiedValues;
         return this;
@@ -152,6 +172,7 @@ public class DBInstance {
     
     
     public String preferredBackupWindow;
+
     public DBInstance withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -159,6 +180,7 @@ public class DBInstance {
     
     
     public String preferredMaintenanceWindow;
+
     public DBInstance withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -166,6 +188,7 @@ public class DBInstance {
     
     
     public Long promotionTier;
+
     public DBInstance withPromotionTier(Long promotionTier) {
         this.promotionTier = promotionTier;
         return this;
@@ -173,6 +196,7 @@ public class DBInstance {
     
     
     public Boolean publiclyAccessible;
+
     public DBInstance withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -180,6 +204,7 @@ public class DBInstance {
     
     
     public DBInstanceStatusInfoList[] statusInfos;
+
     public DBInstance withStatusInfos(DBInstanceStatusInfoList[] statusInfos) {
         this.statusInfos = statusInfos;
         return this;
@@ -187,6 +212,7 @@ public class DBInstance {
     
     
     public Boolean storageEncrypted;
+
     public DBInstance withStorageEncrypted(Boolean storageEncrypted) {
         this.storageEncrypted = storageEncrypted;
         return this;
@@ -194,9 +220,11 @@ public class DBInstance {
     
     
     public VpcSecurityGroupMembershipList[] vpcSecurityGroups;
+
     public DBInstance withVpcSecurityGroups(VpcSecurityGroupMembershipList[] vpcSecurityGroups) {
         this.vpcSecurityGroups = vpcSecurityGroups;
         return this;
     }
     
+    public DBInstance(){}
 }

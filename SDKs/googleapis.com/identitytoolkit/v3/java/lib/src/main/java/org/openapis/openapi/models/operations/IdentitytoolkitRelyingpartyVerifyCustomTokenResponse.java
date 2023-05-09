@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitRelyingpartyVerifyCustomTokenResponse {
     
     public String contentType;
+
     public IdentitytoolkitRelyingpartyVerifyCustomTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IdentitytoolkitRelyingpartyVerifyCustomTokenResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitRelyingpartyVerifyCustomTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class IdentitytoolkitRelyingpartyVerifyCustomTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitRelyingpartyVerifyCustomTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitRelyingpartyVerifyCustomTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.VerifyCustomTokenResponse verifyCustomTokenResponse;
+
     public IdentitytoolkitRelyingpartyVerifyCustomTokenResponse withVerifyCustomTokenResponse(org.openapis.openapi.models.shared.VerifyCustomTokenResponse verifyCustomTokenResponse) {
         this.verifyCustomTokenResponse = verifyCustomTokenResponse;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyVerifyCustomTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

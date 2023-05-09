@@ -22,6 +22,7 @@ public class Crawl {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletedOn")
     public OffsetDateTime completedOn;
+
     public Crawl withCompletedOn(OffsetDateTime completedOn) {
         this.completedOn = completedOn;
         return this;
@@ -30,6 +31,7 @@ public class Crawl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public Crawl withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -38,6 +40,7 @@ public class Crawl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogGroup")
     public String logGroup;
+
     public Crawl withLogGroup(String logGroup) {
         this.logGroup = logGroup;
         return this;
@@ -46,6 +49,7 @@ public class Crawl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogStream")
     public String logStream;
+
     public Crawl withLogStream(String logStream) {
         this.logStream = logStream;
         return this;
@@ -56,6 +60,7 @@ public class Crawl {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedOn")
     public OffsetDateTime startedOn;
+
     public Crawl withStartedOn(OffsetDateTime startedOn) {
         this.startedOn = startedOn;
         return this;
@@ -64,9 +69,11 @@ public class Crawl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public CrawlStateEnum state;
+
     public Crawl withState(CrawlStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Crawl(){}
 }

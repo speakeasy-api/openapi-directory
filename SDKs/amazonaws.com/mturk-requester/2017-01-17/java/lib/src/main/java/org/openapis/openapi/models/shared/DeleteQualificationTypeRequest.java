@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteQualificationTypeRequest {
     @JsonProperty("QualificationTypeId")
     public String qualificationTypeId;
+
     public DeleteQualificationTypeRequest withQualificationTypeId(String qualificationTypeId) {
         this.qualificationTypeId = qualificationTypeId;
         return this;
     }
     
+    public DeleteQualificationTypeRequest(@JsonProperty("QualificationTypeId") String qualificationTypeId) {
+        this.qualificationTypeId = qualificationTypeId;
+  }
 }

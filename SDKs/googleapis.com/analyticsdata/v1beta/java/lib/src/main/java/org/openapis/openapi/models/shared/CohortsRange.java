@@ -18,6 +18,7 @@ public class CohortsRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endOffset")
     public Integer endOffset;
+
     public CohortsRange withEndOffset(Integer endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -29,6 +30,7 @@ public class CohortsRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("granularity")
     public CohortsRangeGranularityEnum granularity;
+
     public CohortsRange withGranularity(CohortsRangeGranularityEnum granularity) {
         this.granularity = granularity;
         return this;
@@ -40,9 +42,11 @@ public class CohortsRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startOffset")
     public Integer startOffset;
+
     public CohortsRange withStartOffset(Integer startOffset) {
         this.startOffset = startOffset;
         return this;
     }
     
+    public CohortsRange(){}
 }

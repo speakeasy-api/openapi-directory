@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaSuspensionAudit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolveTime")
     public String resolveTime;
+
     public GoogleCloudIntegrationsV1alphaSuspensionAudit withResolveTime(String resolveTime) {
         this.resolveTime = resolveTime;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaSuspensionAudit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolver")
     public String resolver;
+
     public GoogleCloudIntegrationsV1alphaSuspensionAudit withResolver(String resolver) {
         this.resolver = resolver;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaSuspensionAudit(){}
 }

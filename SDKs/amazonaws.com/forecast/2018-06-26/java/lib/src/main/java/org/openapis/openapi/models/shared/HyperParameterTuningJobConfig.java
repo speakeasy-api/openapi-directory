@@ -15,9 +15,11 @@ public class HyperParameterTuningJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterRanges")
     public ParameterRanges parameterRanges;
+
     public HyperParameterTuningJobConfig withParameterRanges(ParameterRanges parameterRanges) {
         this.parameterRanges = parameterRanges;
         return this;
     }
     
+    public HyperParameterTuningJobConfig(){}
 }

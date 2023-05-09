@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SynonymOptionsStatus - The synonym options configured for this search domain and the current status of those options.
@@ -15,6 +15,7 @@ public class SynonymOptionsStatus {
      */
     
     public String options;
+
     public SynonymOptionsStatus withOptions(String options) {
         this.options = options;
         return this;
@@ -25,9 +26,14 @@ public class SynonymOptionsStatus {
      */
     
     public OptionStatus status;
+
     public SynonymOptionsStatus withStatus(OptionStatus status) {
         this.status = status;
         return this;
     }
     
+    public SynonymOptionsStatus(@JsonProperty("Options") String options, @JsonProperty("Status") OptionStatus status) {
+        this.options = options;
+        this.status = status;
+  }
 }

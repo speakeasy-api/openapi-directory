@@ -15,9 +15,11 @@ public class VideoArticleUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VideoArticleUser withName(String name) {
         this.name = name;
         return this;
     }
     
+    public VideoArticleUser(){}
 }

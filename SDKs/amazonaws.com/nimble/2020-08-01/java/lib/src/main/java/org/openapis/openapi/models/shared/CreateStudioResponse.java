@@ -15,9 +15,11 @@ public class CreateStudioResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studio")
     public Studio studio;
+
     public CreateStudioResponse withStudio(Studio studio) {
         this.studio = studio;
         return this;
     }
     
+    public CreateStudioResponse(){}
 }

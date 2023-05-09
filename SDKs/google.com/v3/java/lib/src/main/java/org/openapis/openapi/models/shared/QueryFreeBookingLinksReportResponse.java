@@ -18,6 +18,7 @@ public class QueryFreeBookingLinksReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public QueryFreeBookingLinksReportResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class QueryFreeBookingLinksReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public FreeBookingLinksResult[] results;
+
     public QueryFreeBookingLinksReportResponse withResults(FreeBookingLinksResult[] results) {
         this.results = results;
         return this;
     }
     
+    public QueryFreeBookingLinksReportResponse(){}
 }

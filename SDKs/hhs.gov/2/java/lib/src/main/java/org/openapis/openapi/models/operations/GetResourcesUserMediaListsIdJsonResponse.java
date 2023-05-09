@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourcesUserMediaListsIdJsonResponse {
     
     public String contentType;
+
     public GetResourcesUserMediaListsIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResourcesUserMediaListsIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.MediaItemWrapped[] mediaItemWrappeds;
+
     public GetResourcesUserMediaListsIdJsonResponse withMediaItemWrappeds(org.openapis.openapi.models.shared.MediaItemWrapped[] mediaItemWrappeds) {
         this.mediaItemWrappeds = mediaItemWrappeds;
         return this;
@@ -26,6 +29,7 @@ public class GetResourcesUserMediaListsIdJsonResponse {
     
     
     public Integer statusCode;
+
     public GetResourcesUserMediaListsIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetResourcesUserMediaListsIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourcesUserMediaListsIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetResourcesUserMediaListsIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

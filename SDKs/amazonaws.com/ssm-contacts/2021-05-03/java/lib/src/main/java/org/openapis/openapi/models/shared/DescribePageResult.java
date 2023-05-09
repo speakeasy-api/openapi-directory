@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribePageResult {
     @JsonProperty("ContactArn")
     public String contactArn;
+
     public DescribePageResult withContactArn(String contactArn) {
         this.contactArn = contactArn;
         return this;
@@ -26,6 +27,7 @@ public class DescribePageResult {
     
     @JsonProperty("Content")
     public String content;
+
     public DescribePageResult withContent(String content) {
         this.content = content;
         return this;
@@ -36,6 +38,7 @@ public class DescribePageResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeliveryTime")
     public OffsetDateTime deliveryTime;
+
     public DescribePageResult withDeliveryTime(OffsetDateTime deliveryTime) {
         this.deliveryTime = deliveryTime;
         return this;
@@ -43,6 +46,7 @@ public class DescribePageResult {
     
     @JsonProperty("EngagementArn")
     public String engagementArn;
+
     public DescribePageResult withEngagementArn(String engagementArn) {
         this.engagementArn = engagementArn;
         return this;
@@ -51,6 +55,7 @@ public class DescribePageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncidentId")
     public String incidentId;
+
     public DescribePageResult withIncidentId(String incidentId) {
         this.incidentId = incidentId;
         return this;
@@ -58,6 +63,7 @@ public class DescribePageResult {
     
     @JsonProperty("PageArn")
     public String pageArn;
+
     public DescribePageResult withPageArn(String pageArn) {
         this.pageArn = pageArn;
         return this;
@@ -66,6 +72,7 @@ public class DescribePageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicContent")
     public String publicContent;
+
     public DescribePageResult withPublicContent(String publicContent) {
         this.publicContent = publicContent;
         return this;
@@ -74,6 +81,7 @@ public class DescribePageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicSubject")
     public String publicSubject;
+
     public DescribePageResult withPublicSubject(String publicSubject) {
         this.publicSubject = publicSubject;
         return this;
@@ -84,6 +92,7 @@ public class DescribePageResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReadTime")
     public OffsetDateTime readTime;
+
     public DescribePageResult withReadTime(OffsetDateTime readTime) {
         this.readTime = readTime;
         return this;
@@ -91,6 +100,7 @@ public class DescribePageResult {
     
     @JsonProperty("Sender")
     public String sender;
+
     public DescribePageResult withSender(String sender) {
         this.sender = sender;
         return this;
@@ -101,6 +111,7 @@ public class DescribePageResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SentTime")
     public OffsetDateTime sentTime;
+
     public DescribePageResult withSentTime(OffsetDateTime sentTime) {
         this.sentTime = sentTime;
         return this;
@@ -108,9 +119,18 @@ public class DescribePageResult {
     
     @JsonProperty("Subject")
     public String subject;
+
     public DescribePageResult withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public DescribePageResult(@JsonProperty("ContactArn") String contactArn, @JsonProperty("Content") String content, @JsonProperty("EngagementArn") String engagementArn, @JsonProperty("PageArn") String pageArn, @JsonProperty("Sender") String sender, @JsonProperty("Subject") String subject) {
+        this.contactArn = contactArn;
+        this.content = content;
+        this.engagementArn = engagementArn;
+        this.pageArn = pageArn;
+        this.sender = sender;
+        this.subject = subject;
+  }
 }

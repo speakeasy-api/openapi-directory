@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateAccountsResponse {
@@ -12,6 +13,7 @@ public class DisassociateAccountsResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateAccountsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisassociateAccountsResponse {
      */
     
     public Object conflictException;
+
     public DisassociateAccountsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateAccountsResponse {
     
     
     public String contentType;
+
     public DisassociateAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateAccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateAccountsOutput disassociateAccountsOutput;
+
     public DisassociateAccountsResponse withDisassociateAccountsOutput(org.openapis.openapi.models.shared.DisassociateAccountsOutput disassociateAccountsOutput) {
         this.disassociateAccountsOutput = disassociateAccountsOutput;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateAccountsResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateAccountsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateAccountsResponse {
     
     
     public Integer statusCode;
+
     public DisassociateAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateAccountsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateAccountsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateAccountsResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateAccountsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DisassociateAccountsResponse {
      */
     
     public Object validationException;
+
     public DisassociateAccountsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

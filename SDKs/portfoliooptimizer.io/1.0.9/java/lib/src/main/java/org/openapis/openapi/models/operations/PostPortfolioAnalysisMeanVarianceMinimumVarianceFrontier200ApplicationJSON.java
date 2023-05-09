@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSON {
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONPortfolios[] portfolios;
+
     public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSON withPortfolios(PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONPortfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSON(@JsonProperty("portfolios") PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier200ApplicationJSONPortfolios[] portfolios) {
+        this.portfolios = portfolios;
+  }
 }

@@ -63,7 +63,7 @@ public class Atm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAtmsResponse res = new org.openapis.openapi.models.operations.GetAtmsResponse() {{
+        org.openapis.openapi.models.operations.GetAtmsResponse res = new org.openapis.openapi.models.operations.GetAtmsResponse(contentType, httpRes.statusCode()) {{
             getAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonObject = null;
             fourHundredErrorObject = null;
             fourHundredAndEightErrorObject = null;
@@ -72,8 +72,6 @@ public class Atm {
             fiveHundredAndThreeErrorObject = null;
             errorObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,11 +169,9 @@ public class Atm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HeadAtmsResponse res = new org.openapis.openapi.models.operations.HeadAtmsResponse() {{
+        org.openapis.openapi.models.operations.HeadAtmsResponse res = new org.openapis.openapi.models.operations.HeadAtmsResponse(contentType, httpRes.statusCode()) {{
             noResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

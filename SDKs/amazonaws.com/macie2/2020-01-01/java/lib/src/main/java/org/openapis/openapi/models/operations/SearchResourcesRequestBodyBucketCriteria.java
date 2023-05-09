@@ -15,6 +15,7 @@ public class SearchResourcesRequestBodyBucketCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludes")
     public org.openapis.openapi.models.shared.SearchResourcesCriteriaBlock excludes;
+
     public SearchResourcesRequestBodyBucketCriteria withExcludes(org.openapis.openapi.models.shared.SearchResourcesCriteriaBlock excludes) {
         this.excludes = excludes;
         return this;
@@ -23,9 +24,11 @@ public class SearchResourcesRequestBodyBucketCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includes")
     public org.openapis.openapi.models.shared.SearchResourcesCriteriaBlock includes;
+
     public SearchResourcesRequestBodyBucketCriteria withIncludes(org.openapis.openapi.models.shared.SearchResourcesCriteriaBlock includes) {
         this.includes = includes;
         return this;
     }
     
+    public SearchResourcesRequestBodyBucketCriteria(){}
 }

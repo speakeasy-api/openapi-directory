@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MetricPolicy {
     @JsonProperty("ContainerLevelMetrics")
     public ContainerLevelMetricsEnum containerLevelMetrics;
+
     public MetricPolicy withContainerLevelMetrics(ContainerLevelMetricsEnum containerLevelMetrics) {
         this.containerLevelMetrics = containerLevelMetrics;
         return this;
@@ -22,9 +23,13 @@ public class MetricPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricPolicyRules")
     public MetricPolicyRule[] metricPolicyRules;
+
     public MetricPolicy withMetricPolicyRules(MetricPolicyRule[] metricPolicyRules) {
         this.metricPolicyRules = metricPolicyRules;
         return this;
     }
     
+    public MetricPolicy(@JsonProperty("ContainerLevelMetrics") ContainerLevelMetricsEnum containerLevelMetrics) {
+        this.containerLevelMetrics = containerLevelMetrics;
+  }
 }

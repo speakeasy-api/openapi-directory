@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ScheduleRunResponse {
@@ -12,6 +13,7 @@ public class ScheduleRunResponse {
      */
     
     public Object argumentException;
+
     public ScheduleRunResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class ScheduleRunResponse {
     
     
     public String contentType;
+
     public ScheduleRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ScheduleRunResponse {
      */
     
     public Object idempotencyException;
+
     public ScheduleRunResponse withIdempotencyException(Object idempotencyException) {
         this.idempotencyException = idempotencyException;
         return this;
@@ -39,6 +43,7 @@ public class ScheduleRunResponse {
      */
     
     public Object limitExceededException;
+
     public ScheduleRunResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ScheduleRunResponse {
      */
     
     public Object notFoundException;
+
     public ScheduleRunResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ScheduleRunResponse {
      */
     
     public org.openapis.openapi.models.shared.ScheduleRunResult scheduleRunResult;
+
     public ScheduleRunResponse withScheduleRunResult(org.openapis.openapi.models.shared.ScheduleRunResult scheduleRunResult) {
         this.scheduleRunResult = scheduleRunResult;
         return this;
@@ -69,6 +76,7 @@ public class ScheduleRunResponse {
      */
     
     public Object serviceAccountException;
+
     public ScheduleRunResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -76,6 +84,7 @@ public class ScheduleRunResponse {
     
     
     public Integer statusCode;
+
     public ScheduleRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ScheduleRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ScheduleRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ScheduleRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

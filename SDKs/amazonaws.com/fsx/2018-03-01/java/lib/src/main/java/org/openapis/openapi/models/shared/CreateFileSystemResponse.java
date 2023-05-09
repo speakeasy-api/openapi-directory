@@ -15,9 +15,11 @@ public class CreateFileSystemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystem")
     public FileSystem fileSystem;
+
     public CreateFileSystemResponse withFileSystem(FileSystem fileSystem) {
         this.fileSystem = fileSystem;
         return this;
     }
     
+    public CreateFileSystemResponse(){}
 }

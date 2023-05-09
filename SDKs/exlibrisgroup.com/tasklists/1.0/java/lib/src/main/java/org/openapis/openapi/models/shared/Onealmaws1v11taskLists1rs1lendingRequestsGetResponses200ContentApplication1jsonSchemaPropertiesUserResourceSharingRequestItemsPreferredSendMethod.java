@@ -15,6 +15,7 @@ public class Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desc")
     public String desc;
+
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsPreferredSendMethod withDesc(String desc) {
         this.desc = desc;
         return this;
@@ -23,9 +24,11 @@ public class Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsPreferredSendMethod withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsPreferredSendMethod(){}
 }

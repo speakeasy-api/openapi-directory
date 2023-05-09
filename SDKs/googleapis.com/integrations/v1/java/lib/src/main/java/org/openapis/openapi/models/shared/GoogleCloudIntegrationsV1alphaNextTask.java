@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaNextTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public GoogleCloudIntegrationsV1alphaNextTask withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaNextTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudIntegrationsV1alphaNextTask withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaNextTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudIntegrationsV1alphaNextTask withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaNextTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskConfigId")
     public String taskConfigId;
+
     public GoogleCloudIntegrationsV1alphaNextTask withTaskConfigId(String taskConfigId) {
         this.taskConfigId = taskConfigId;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudIntegrationsV1alphaNextTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public GoogleCloudIntegrationsV1alphaNextTask withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaNextTask(){}
 }

@@ -12,9 +12,11 @@ public class Credentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("district_username")
     public String districtUsername;
+
     public Credentials withDistrictUsername(String districtUsername) {
         this.districtUsername = districtUsername;
         return this;
     }
     
+    public Credentials(){}
 }

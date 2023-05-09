@@ -18,9 +18,11 @@ public class Namespaces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaces")
     public String[] namespaces;
+
     public Namespaces withNamespaces(String[] namespaces) {
         this.namespaces = namespaces;
         return this;
     }
     
+    public Namespaces(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsResponse {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
      */
     
     public org.openapis.openapi.models.shared.BulkListAdGroupAssignedTargetingOptionsResponse bulkListAdGroupAssignedTargetingOptionsResponse;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsResponse withBulkListAdGroupAssignedTargetingOptionsResponse(org.openapis.openapi.models.shared.BulkListAdGroupAssignedTargetingOptionsResponse bulkListAdGroupAssignedTargetingOptionsResponse) {
         this.bulkListAdGroupAssignedTargetingOptionsResponse = bulkListAdGroupAssignedTargetingOptionsResponse;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
     
     
     public String contentType;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTarget
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

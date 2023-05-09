@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEarthObservationJobResponse {
@@ -12,6 +13,7 @@ public class DeleteEarthObservationJobResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteEarthObservationJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteEarthObservationJobResponse {
      */
     
     public Object conflictException;
+
     public DeleteEarthObservationJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEarthObservationJobResponse {
     
     
     public String contentType;
+
     public DeleteEarthObservationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEarthObservationJobResponse {
      */
     
     public java.util.Map<String, Object> deleteEarthObservationJobOutput;
+
     public DeleteEarthObservationJobResponse withDeleteEarthObservationJobOutput(java.util.Map<String, Object> deleteEarthObservationJobOutput) {
         this.deleteEarthObservationJobOutput = deleteEarthObservationJobOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteEarthObservationJobResponse {
      */
     
     public Object internalServerException;
+
     public DeleteEarthObservationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteEarthObservationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteEarthObservationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteEarthObservationJobResponse {
     
     
     public Integer statusCode;
+
     public DeleteEarthObservationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteEarthObservationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEarthObservationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteEarthObservationJobResponse {
      */
     
     public Object throttlingException;
+
     public DeleteEarthObservationJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteEarthObservationJobResponse {
      */
     
     public Object validationException;
+
     public DeleteEarthObservationJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteEarthObservationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

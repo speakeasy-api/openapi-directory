@@ -12,9 +12,13 @@ public class GetBackendStorageRequestBody {
      */
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GetBackendStorageRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public GetBackendStorageRequestBody(@JsonProperty("resourceName") String resourceName) {
+        this.resourceName = resourceName;
+  }
 }

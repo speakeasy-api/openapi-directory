@@ -12,6 +12,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArgsEscaped")
     public Boolean argsEscaped;
+
     public ContainerConfig withArgsEscaped(Boolean argsEscaped) {
         this.argsEscaped = argsEscaped;
         return this;
@@ -23,6 +24,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachStderr")
     public String attachStderr;
+
     public ContainerConfig withAttachStderr(String attachStderr) {
         this.attachStderr = attachStderr;
         return this;
@@ -34,6 +36,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachStdin")
     public String attachStdin;
+
     public ContainerConfig withAttachStdin(String attachStdin) {
         this.attachStdin = attachStdin;
         return this;
@@ -45,6 +48,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachStdout")
     public String attachStdout;
+
     public ContainerConfig withAttachStdout(String attachStdout) {
         this.attachStdout = attachStdout;
         return this;
@@ -57,6 +61,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cmd")
     public String[] cmd;
+
     public ContainerConfig withCmd(String[] cmd) {
         this.cmd = cmd;
         return this;
@@ -68,6 +73,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domainname")
     public String domainname;
+
     public ContainerConfig withDomainname(String domainname) {
         this.domainname = domainname;
         return this;
@@ -79,6 +85,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Env")
     public String[] env;
+
     public ContainerConfig withEnv(String[] env) {
         this.env = env;
         return this;
@@ -90,6 +97,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExposedPorts")
     public String[] exposedPorts;
+
     public ContainerConfig withExposedPorts(String[] exposedPorts) {
         this.exposedPorts = exposedPorts;
         return this;
@@ -101,6 +109,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hostname")
     public String hostname;
+
     public ContainerConfig withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -112,6 +121,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Image")
     public String image;
+
     public ContainerConfig withImage(String image) {
         this.image = image;
         return this;
@@ -123,6 +133,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageArchitecture")
     public String imageArchitecture;
+
     public ContainerConfig withImageArchitecture(String imageArchitecture) {
         this.imageArchitecture = imageArchitecture;
         return this;
@@ -134,6 +145,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Labels")
     public String[] labels;
+
     public ContainerConfig withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -145,6 +157,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Memory")
     public Integer memory;
+
     public ContainerConfig withMemory(Integer memory) {
         this.memory = memory;
         return this;
@@ -156,6 +169,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemorySwap")
     public String memorySwap;
+
     public ContainerConfig withMemorySwap(String memorySwap) {
         this.memorySwap = memorySwap;
         return this;
@@ -167,6 +181,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenStdin")
     public String openStdin;
+
     public ContainerConfig withOpenStdin(String openStdin) {
         this.openStdin = openStdin;
         return this;
@@ -178,6 +193,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortSpecs")
     public String portSpecs;
+
     public ContainerConfig withPortSpecs(String portSpecs) {
         this.portSpecs = portSpecs;
         return this;
@@ -189,6 +205,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StdinOnce")
     public String stdinOnce;
+
     public ContainerConfig withStdinOnce(String stdinOnce) {
         this.stdinOnce = stdinOnce;
         return this;
@@ -200,6 +217,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tty")
     public String tty;
+
     public ContainerConfig withTty(String tty) {
         this.tty = tty;
         return this;
@@ -211,6 +229,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("User")
     public String user;
+
     public ContainerConfig withUser(String user) {
         this.user = user;
         return this;
@@ -222,6 +241,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VCPU")
     public Integer vcpu;
+
     public ContainerConfig withVcpu(Integer vcpu) {
         this.vcpu = vcpu;
         return this;
@@ -233,6 +253,7 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumesFrom")
     public String volumesFrom;
+
     public ContainerConfig withVolumesFrom(String volumesFrom) {
         this.volumesFrom = volumesFrom;
         return this;
@@ -244,9 +265,11 @@ public class ContainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkingDir")
     public String workingDir;
+
     public ContainerConfig withWorkingDir(String workingDir) {
         this.workingDir = workingDir;
         return this;
     }
     
+    public ContainerConfig(){}
 }

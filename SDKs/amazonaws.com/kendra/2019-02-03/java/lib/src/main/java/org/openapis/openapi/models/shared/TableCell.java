@@ -15,6 +15,7 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Header")
     public Boolean header;
+
     public TableCell withHeader(Boolean header) {
         this.header = header;
         return this;
@@ -23,6 +24,7 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Highlighted")
     public Boolean highlighted;
+
     public TableCell withHighlighted(Boolean highlighted) {
         this.highlighted = highlighted;
         return this;
@@ -31,6 +33,7 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopAnswer")
     public Boolean topAnswer;
+
     public TableCell withTopAnswer(Boolean topAnswer) {
         this.topAnswer = topAnswer;
         return this;
@@ -39,9 +42,11 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public TableCell withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public TableCell(){}
 }

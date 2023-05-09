@@ -15,6 +15,7 @@ public class SnowflakeDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketPrefix")
     public String bucketPrefix;
+
     public SnowflakeDestinationProperties withBucketPrefix(String bucketPrefix) {
         this.bucketPrefix = bucketPrefix;
         return this;
@@ -23,6 +24,7 @@ public class SnowflakeDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorHandlingConfig")
     public ErrorHandlingConfig errorHandlingConfig;
+
     public SnowflakeDestinationProperties withErrorHandlingConfig(ErrorHandlingConfig errorHandlingConfig) {
         this.errorHandlingConfig = errorHandlingConfig;
         return this;
@@ -30,6 +32,7 @@ public class SnowflakeDestinationProperties {
     
     @JsonProperty("intermediateBucketName")
     public String intermediateBucketName;
+
     public SnowflakeDestinationProperties withIntermediateBucketName(String intermediateBucketName) {
         this.intermediateBucketName = intermediateBucketName;
         return this;
@@ -37,9 +40,14 @@ public class SnowflakeDestinationProperties {
     
     @JsonProperty("object")
     public String object;
+
     public SnowflakeDestinationProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public SnowflakeDestinationProperties(@JsonProperty("intermediateBucketName") String intermediateBucketName, @JsonProperty("object") String object) {
+        this.intermediateBucketName = intermediateBucketName;
+        this.object = object;
+  }
 }

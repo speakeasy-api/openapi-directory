@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationUplinksLossAndLatencyRequest {
@@ -12,6 +13,7 @@ public class GetOrganizationUplinksLossAndLatencyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
     public String ip;
+
     public GetOrganizationUplinksLossAndLatencyRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -19,6 +21,7 @@ public class GetOrganizationUplinksLossAndLatencyRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public String organizationId;
+
     public GetOrganizationUplinksLossAndLatencyRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -29,6 +32,7 @@ public class GetOrganizationUplinksLossAndLatencyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
     public String t0;
+
     public GetOrganizationUplinksLossAndLatencyRequest withT0(String t0) {
         this.t0 = t0;
         return this;
@@ -39,6 +43,7 @@ public class GetOrganizationUplinksLossAndLatencyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
     public String t1;
+
     public GetOrganizationUplinksLossAndLatencyRequest withT1(String t1) {
         this.t1 = t1;
         return this;
@@ -49,6 +54,7 @@ public class GetOrganizationUplinksLossAndLatencyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
     public Float timespan;
+
     public GetOrganizationUplinksLossAndLatencyRequest withTimespan(Float timespan) {
         this.timespan = timespan;
         return this;
@@ -59,9 +65,13 @@ public class GetOrganizationUplinksLossAndLatencyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uplink")
     public GetOrganizationUplinksLossAndLatencyUplinkEnum uplink;
+
     public GetOrganizationUplinksLossAndLatencyRequest withUplink(GetOrganizationUplinksLossAndLatencyUplinkEnum uplink) {
         this.uplink = uplink;
         return this;
     }
     
+    public GetOrganizationUplinksLossAndLatencyRequest(@JsonProperty("organizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

@@ -15,6 +15,7 @@ public class BulkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public BulkAddress withCity(String city) {
         this.city = city;
         return this;
@@ -26,6 +27,7 @@ public class BulkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     public String company;
+
     public BulkAddress withCompany(String company) {
         this.company = company;
         return this;
@@ -36,6 +38,7 @@ public class BulkAddress {
      */
     @JsonProperty("country")
     public String country;
+
     public BulkAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -47,6 +50,7 @@ public class BulkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public BulkAddress withEmail(String email) {
         this.email = email;
         return this;
@@ -58,6 +62,7 @@ public class BulkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("houseNumberOrName")
     public String houseNumberOrName;
+
     public BulkAddress withHouseNumberOrName(String houseNumberOrName) {
         this.houseNumberOrName = houseNumberOrName;
         return this;
@@ -69,6 +74,7 @@ public class BulkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile")
     public String mobile;
+
     public BulkAddress withMobile(String mobile) {
         this.mobile = mobile;
         return this;
@@ -86,6 +92,7 @@ public class BulkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public BulkAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -99,6 +106,7 @@ public class BulkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateOrProvince")
     public String stateOrProvince;
+
     public BulkAddress withStateOrProvince(String stateOrProvince) {
         this.stateOrProvince = stateOrProvince;
         return this;
@@ -110,9 +118,13 @@ public class BulkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street")
     public String street;
+
     public BulkAddress withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public BulkAddress(@JsonProperty("country") String country) {
+        this.country = country;
+  }
 }

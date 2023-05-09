@@ -15,9 +15,11 @@ public class Embedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applications")
     public Application[] applications;
+
     public Embedded withApplications(Application[] applications) {
         this.applications = applications;
         return this;
     }
     
+    public Embedded(){}
 }

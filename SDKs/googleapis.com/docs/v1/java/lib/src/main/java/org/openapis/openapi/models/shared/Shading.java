@@ -18,9 +18,11 @@ public class Shading {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundColor")
     public OptionalColor backgroundColor;
+
     public Shading withBackgroundColor(OptionalColor backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
     }
     
+    public Shading(){}
 }

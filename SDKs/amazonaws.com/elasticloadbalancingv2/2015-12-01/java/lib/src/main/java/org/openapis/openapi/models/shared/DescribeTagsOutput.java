@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeTagsOutput {
     
     public TagDescription[] tagDescriptions;
+
     public DescribeTagsOutput withTagDescriptions(TagDescription[] tagDescriptions) {
         this.tagDescriptions = tagDescriptions;
         return this;
     }
     
+    public DescribeTagsOutput(){}
 }

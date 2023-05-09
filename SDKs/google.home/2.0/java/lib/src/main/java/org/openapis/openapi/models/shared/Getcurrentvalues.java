@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Getcurrentvalues {
     @JsonProperty("endpoint_enabled")
     public Boolean endpointEnabled;
+
     public Getcurrentvalues withEndpointEnabled(Boolean endpointEnabled) {
         this.endpointEnabled = endpointEnabled;
         return this;
@@ -16,9 +17,14 @@ public class Getcurrentvalues {
     
     @JsonProperty("hotword_enabled")
     public Boolean hotwordEnabled;
+
     public Getcurrentvalues withHotwordEnabled(Boolean hotwordEnabled) {
         this.hotwordEnabled = hotwordEnabled;
         return this;
     }
     
+    public Getcurrentvalues(@JsonProperty("endpoint_enabled") Boolean endpointEnabled, @JsonProperty("hotword_enabled") Boolean hotwordEnabled) {
+        this.endpointEnabled = endpointEnabled;
+        this.hotwordEnabled = hotwordEnabled;
+  }
 }

@@ -18,9 +18,11 @@ public class AdvancedMachineFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threadsPerCore")
     public String threadsPerCore;
+
     public AdvancedMachineFeatures withThreadsPerCore(String threadsPerCore) {
         this.threadsPerCore = threadsPerCore;
         return this;
     }
     
+    public AdvancedMachineFeatures(){}
 }

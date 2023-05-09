@@ -15,9 +15,11 @@ public class CreateOTAUpdateRequestBodyAwsJobAbortConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abortCriteriaList")
     public org.openapis.openapi.models.shared.AwsJobAbortCriteria[] abortCriteriaList;
+
     public CreateOTAUpdateRequestBodyAwsJobAbortConfig withAbortCriteriaList(org.openapis.openapi.models.shared.AwsJobAbortCriteria[] abortCriteriaList) {
         this.abortCriteriaList = abortCriteriaList;
         return this;
     }
     
+    public CreateOTAUpdateRequestBodyAwsJobAbortConfig(){}
 }

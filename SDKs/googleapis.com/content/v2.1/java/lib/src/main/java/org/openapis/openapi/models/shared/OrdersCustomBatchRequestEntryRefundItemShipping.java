@@ -12,6 +12,7 @@ public class OrdersCustomBatchRequestEntryRefundItemShipping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Price amount;
+
     public OrdersCustomBatchRequestEntryRefundItemShipping withAmount(Price amount) {
         this.amount = amount;
         return this;
@@ -23,9 +24,11 @@ public class OrdersCustomBatchRequestEntryRefundItemShipping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullRefund")
     public Boolean fullRefund;
+
     public OrdersCustomBatchRequestEntryRefundItemShipping withFullRefund(Boolean fullRefund) {
         this.fullRefund = fullRefund;
         return this;
     }
     
+    public OrdersCustomBatchRequestEntryRefundItemShipping(){}
 }

@@ -15,6 +15,7 @@ public class DeleteRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryArn")
     public String registryArn;
+
     public DeleteRegistryResponse withRegistryArn(String registryArn) {
         this.registryArn = registryArn;
         return this;
@@ -23,6 +24,7 @@ public class DeleteRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryName")
     public String registryName;
+
     public DeleteRegistryResponse withRegistryName(String registryName) {
         this.registryName = registryName;
         return this;
@@ -31,9 +33,11 @@ public class DeleteRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public RegistryStatusEnum status;
+
     public DeleteRegistryResponse withStatus(RegistryStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DeleteRegistryResponse(){}
 }

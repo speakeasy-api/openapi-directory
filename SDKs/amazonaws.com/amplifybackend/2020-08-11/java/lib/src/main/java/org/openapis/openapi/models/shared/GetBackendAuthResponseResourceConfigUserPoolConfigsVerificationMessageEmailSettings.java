@@ -15,6 +15,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMess
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailMessage")
     public String emailMessage;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageEmailSettings withEmailMessage(String emailMessage) {
         this.emailMessage = emailMessage;
         return this;
@@ -23,9 +24,11 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMess
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailSubject")
     public String emailSubject;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageEmailSettings withEmailSubject(String emailSubject) {
         this.emailSubject = emailSubject;
         return this;
     }
     
+    public GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessageEmailSettings(){}
 }

@@ -15,6 +15,7 @@ public class UpdateFirewallDeleteProtectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteProtection")
     public Boolean deleteProtection;
+
     public UpdateFirewallDeleteProtectionResponse withDeleteProtection(Boolean deleteProtection) {
         this.deleteProtection = deleteProtection;
         return this;
@@ -23,6 +24,7 @@ public class UpdateFirewallDeleteProtectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallArn")
     public String firewallArn;
+
     public UpdateFirewallDeleteProtectionResponse withFirewallArn(String firewallArn) {
         this.firewallArn = firewallArn;
         return this;
@@ -31,6 +33,7 @@ public class UpdateFirewallDeleteProtectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallName")
     public String firewallName;
+
     public UpdateFirewallDeleteProtectionResponse withFirewallName(String firewallName) {
         this.firewallName = firewallName;
         return this;
@@ -39,9 +42,11 @@ public class UpdateFirewallDeleteProtectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateToken")
     public String updateToken;
+
     public UpdateFirewallDeleteProtectionResponse withUpdateToken(String updateToken) {
         this.updateToken = updateToken;
         return this;
     }
     
+    public UpdateFirewallDeleteProtectionResponse(){}
 }

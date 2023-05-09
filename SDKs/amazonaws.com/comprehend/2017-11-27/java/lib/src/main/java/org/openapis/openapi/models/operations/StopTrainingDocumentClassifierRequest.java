@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopTrainingDocumentClassifierRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.StopTrainingDocumentClassifierRequest stopTrainingDocumentClassifierRequest;
+
     public StopTrainingDocumentClassifierRequest withStopTrainingDocumentClassifierRequest(org.openapis.openapi.models.shared.StopTrainingDocumentClassifierRequest stopTrainingDocumentClassifierRequest) {
         this.stopTrainingDocumentClassifierRequest = stopTrainingDocumentClassifierRequest;
         return this;
@@ -16,6 +18,7 @@ public class StopTrainingDocumentClassifierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public StopTrainingDocumentClassifierRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class StopTrainingDocumentClassifierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public StopTrainingDocumentClassifierRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class StopTrainingDocumentClassifierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public StopTrainingDocumentClassifierRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class StopTrainingDocumentClassifierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public StopTrainingDocumentClassifierRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class StopTrainingDocumentClassifierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public StopTrainingDocumentClassifierRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class StopTrainingDocumentClassifierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public StopTrainingDocumentClassifierRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class StopTrainingDocumentClassifierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public StopTrainingDocumentClassifierRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class StopTrainingDocumentClassifierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public StopTrainingDocumentClassifierXAmzTargetEnum xAmzTarget;
+
     public StopTrainingDocumentClassifierRequest withXAmzTarget(StopTrainingDocumentClassifierXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public StopTrainingDocumentClassifierRequest(@JsonProperty("StopTrainingDocumentClassifierRequest") org.openapis.openapi.models.shared.StopTrainingDocumentClassifierRequest stopTrainingDocumentClassifierRequest, @JsonProperty("X-Amz-Target") StopTrainingDocumentClassifierXAmzTargetEnum xAmzTarget) {
+        this.stopTrainingDocumentClassifierRequest = stopTrainingDocumentClassifierRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

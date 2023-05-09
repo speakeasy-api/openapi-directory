@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyVerifiedAccessEndpointLoadBalancerOptions {
     @SpeakeasyMetadata("queryParam:name=Port")
     public Long port;
+
     public GETModifyVerifiedAccessEndpointLoadBalancerOptions withPort(Long port) {
         this.port = port;
         return this;
@@ -19,6 +20,7 @@ public class GETModifyVerifiedAccessEndpointLoadBalancerOptions {
     
     @SpeakeasyMetadata("queryParam:name=Protocol")
     public org.openapis.openapi.models.shared.VerifiedAccessEndpointProtocolEnum protocol;
+
     public GETModifyVerifiedAccessEndpointLoadBalancerOptions withProtocol(org.openapis.openapi.models.shared.VerifiedAccessEndpointProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -26,9 +28,11 @@ public class GETModifyVerifiedAccessEndpointLoadBalancerOptions {
     
     @SpeakeasyMetadata("queryParam:name=SubnetIds")
     public String[] subnetIds;
+
     public GETModifyVerifiedAccessEndpointLoadBalancerOptions withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public GETModifyVerifiedAccessEndpointLoadBalancerOptions(){}
 }

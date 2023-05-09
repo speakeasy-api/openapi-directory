@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRebalanceDetailsRequest {
@@ -12,6 +13,7 @@ public class GetRebalanceDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rebalance_request_id")
     public String rebalanceRequestId;
+
     public GetRebalanceDetailsRequest withRebalanceRequestId(String rebalanceRequestId) {
         this.rebalanceRequestId = rebalanceRequestId;
         return this;
@@ -22,9 +24,14 @@ public class GetRebalanceDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetRebalanceDetailsRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetRebalanceDetailsRequest(@JsonProperty("rebalance_request_id") String rebalanceRequestId, @JsonProperty("x-api-key") String xApiKey) {
+        this.rebalanceRequestId = rebalanceRequestId;
+        this.xApiKey = xApiKey;
+  }
 }

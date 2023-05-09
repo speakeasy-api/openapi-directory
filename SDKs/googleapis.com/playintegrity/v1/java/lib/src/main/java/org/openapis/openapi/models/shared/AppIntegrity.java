@@ -18,6 +18,7 @@ public class AppIntegrity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appRecognitionVerdict")
     public AppIntegrityAppRecognitionVerdictEnum appRecognitionVerdict;
+
     public AppIntegrity withAppRecognitionVerdict(AppIntegrityAppRecognitionVerdictEnum appRecognitionVerdict) {
         this.appRecognitionVerdict = appRecognitionVerdict;
         return this;
@@ -29,6 +30,7 @@ public class AppIntegrity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateSha256Digest")
     public String[] certificateSha256Digest;
+
     public AppIntegrity withCertificateSha256Digest(String[] certificateSha256Digest) {
         this.certificateSha256Digest = certificateSha256Digest;
         return this;
@@ -40,6 +42,7 @@ public class AppIntegrity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public AppIntegrity withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -51,9 +54,11 @@ public class AppIntegrity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionCode")
     public String versionCode;
+
     public AppIntegrity withVersionCode(String versionCode) {
         this.versionCode = versionCode;
         return this;
     }
     
+    public AppIntegrity(){}
 }

@@ -13,22 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GceRegionalPersistentDisk {
     /**
-     * Type of the disk to use.
+     * Type of the disk to use. Defaults to pd-standard.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskType")
     public String diskType;
+
     public GceRegionalPersistentDisk withDiskType(String diskType) {
         this.diskType = diskType;
         return this;
     }
     
     /**
-     * Type of file system that the disk should be formatted with. The workstation image must support this file system type. Must be empty if source_snapshot is set.
+     * Type of file system that the disk should be formatted with. The workstation image must support this file system type. Must be empty if source_snapshot is set. Defaults to ext4.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fsType")
     public String fsType;
+
     public GceRegionalPersistentDisk withFsType(String fsType) {
         this.fsType = fsType;
         return this;
@@ -40,17 +42,19 @@ public class GceRegionalPersistentDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reclaimPolicy")
     public GceRegionalPersistentDiskReclaimPolicyEnum reclaimPolicy;
+
     public GceRegionalPersistentDisk withReclaimPolicy(GceRegionalPersistentDiskReclaimPolicyEnum reclaimPolicy) {
         this.reclaimPolicy = reclaimPolicy;
         return this;
     }
     
     /**
-     * Size of the disk in GB. Must be empty if source_snapshot is set.
+     * Size of the disk in GB. Must be empty if source_snapshot is set. Defaults to 200.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeGb")
     public Integer sizeGb;
+
     public GceRegionalPersistentDisk withSizeGb(Integer sizeGb) {
         this.sizeGb = sizeGb;
         return this;
@@ -62,9 +66,11 @@ public class GceRegionalPersistentDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSnapshot")
     public String sourceSnapshot;
+
     public GceRegionalPersistentDisk withSourceSnapshot(String sourceSnapshot) {
         this.sourceSnapshot = sourceSnapshot;
         return this;
     }
     
+    public GceRegionalPersistentDisk(){}
 }

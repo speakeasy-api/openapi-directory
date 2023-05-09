@@ -12,6 +12,7 @@ public class ImageFileCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String contents;
+
     public ImageFileCreateEntry withContents(String contents) {
         this.contents = contents;
         return this;
@@ -20,6 +21,7 @@ public class ImageFileCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ImageFileCreateEntry withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class ImageFileCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public Region[] regions;
+
     public ImageFileCreateEntry withRegions(Region[] regions) {
         this.regions = regions;
         return this;
@@ -36,9 +39,11 @@ public class ImageFileCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagIds")
     public String[] tagIds;
+
     public ImageFileCreateEntry withTagIds(String[] tagIds) {
         this.tagIds = tagIds;
         return this;
     }
     
+    public ImageFileCreateEntry(){}
 }

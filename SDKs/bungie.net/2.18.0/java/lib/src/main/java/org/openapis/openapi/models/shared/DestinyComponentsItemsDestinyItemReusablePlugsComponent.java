@@ -16,9 +16,11 @@ public class DestinyComponentsItemsDestinyItemReusablePlugsComponent {
      */
     
     public java.util.Map<String, DestinySocketsDestinyItemPlugBase[]> plugs;
+
     public DestinyComponentsItemsDestinyItemReusablePlugsComponent withPlugs(java.util.Map<String, DestinySocketsDestinyItemPlugBase[]> plugs) {
         this.plugs = plugs;
         return this;
     }
     
+    public DestinyComponentsItemsDestinyItemReusablePlugsComponent(){}
 }

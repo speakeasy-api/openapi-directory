@@ -15,6 +15,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Device withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public DeviceAvailabilityEnum availability;
+
     public Device withAvailability(DeviceAvailabilityEnum availability) {
         this.availability = availability;
         return this;
@@ -31,6 +33,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier")
     public String carrier;
+
     public Device withCarrier(String carrier) {
         this.carrier = carrier;
         return this;
@@ -39,6 +42,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public Cpu cpu;
+
     public Device withCpu(Cpu cpu) {
         this.cpu = cpu;
         return this;
@@ -47,6 +51,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleetName")
     public String fleetName;
+
     public Device withFleetName(String fleetName) {
         this.fleetName = fleetName;
         return this;
@@ -55,6 +60,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleetType")
     public String fleetType;
+
     public Device withFleetType(String fleetType) {
         this.fleetType = fleetType;
         return this;
@@ -63,6 +69,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formFactor")
     public DeviceFormFactorEnum formFactor;
+
     public Device withFormFactor(DeviceFormFactorEnum formFactor) {
         this.formFactor = formFactor;
         return this;
@@ -71,6 +78,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heapSize")
     public Long heapSize;
+
     public Device withHeapSize(Long heapSize) {
         this.heapSize = heapSize;
         return this;
@@ -79,6 +87,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public Device withImage(String image) {
         this.image = image;
         return this;
@@ -87,6 +96,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public DeviceInstance[] instances;
+
     public Device withInstances(DeviceInstance[] instances) {
         this.instances = instances;
         return this;
@@ -95,6 +105,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer")
     public String manufacturer;
+
     public Device withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -103,6 +114,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public Long memory;
+
     public Device withMemory(Long memory) {
         this.memory = memory;
         return this;
@@ -111,6 +123,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public Device withModel(String model) {
         this.model = model;
         return this;
@@ -119,6 +132,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelId")
     public String modelId;
+
     public Device withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -127,6 +141,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Device withName(String name) {
         this.name = name;
         return this;
@@ -135,6 +150,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     public String os;
+
     public Device withOs(String os) {
         this.os = os;
         return this;
@@ -143,6 +159,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public DevicePlatformEnum platform;
+
     public Device withPlatform(DevicePlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -151,6 +168,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radio")
     public String radio;
+
     public Device withRadio(String radio) {
         this.radio = radio;
         return this;
@@ -159,6 +177,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteAccessEnabled")
     public Boolean remoteAccessEnabled;
+
     public Device withRemoteAccessEnabled(Boolean remoteAccessEnabled) {
         this.remoteAccessEnabled = remoteAccessEnabled;
         return this;
@@ -167,6 +186,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteDebugEnabled")
     public Boolean remoteDebugEnabled;
+
     public Device withRemoteDebugEnabled(Boolean remoteDebugEnabled) {
         this.remoteDebugEnabled = remoteDebugEnabled;
         return this;
@@ -175,9 +195,11 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolution")
     public Resolution resolution;
+
     public Device withResolution(Resolution resolution) {
         this.resolution = resolution;
         return this;
     }
     
+    public Device(){}
 }

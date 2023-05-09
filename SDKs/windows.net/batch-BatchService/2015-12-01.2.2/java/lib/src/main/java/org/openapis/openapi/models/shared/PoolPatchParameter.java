@@ -18,6 +18,7 @@ public class PoolPatchParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationPackageReferences")
     public ApplicationPackageReference[] applicationPackageReferences;
+
     public PoolPatchParameter withApplicationPackageReferences(ApplicationPackageReference[] applicationPackageReferences) {
         this.applicationPackageReferences = applicationPackageReferences;
         return this;
@@ -29,6 +30,7 @@ public class PoolPatchParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateReferences")
     public CertificateReference[] certificateReferences;
+
     public PoolPatchParameter withCertificateReferences(CertificateReference[] certificateReferences) {
         this.certificateReferences = certificateReferences;
         return this;
@@ -40,6 +42,7 @@ public class PoolPatchParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public MetadataItem[] metadata;
+
     public PoolPatchParameter withMetadata(MetadataItem[] metadata) {
         this.metadata = metadata;
         return this;
@@ -51,9 +54,11 @@ public class PoolPatchParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTask")
     public StartTask startTask;
+
     public PoolPatchParameter withStartTask(StartTask startTask) {
         this.startTask = startTask;
         return this;
     }
     
+    public PoolPatchParameter(){}
 }

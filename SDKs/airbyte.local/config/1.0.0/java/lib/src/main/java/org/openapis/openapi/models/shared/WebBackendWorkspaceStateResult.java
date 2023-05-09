@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebBackendWorkspaceStateResult {
     @JsonProperty("hasConnections")
     public Boolean hasConnections;
+
     public WebBackendWorkspaceStateResult withHasConnections(Boolean hasConnections) {
         this.hasConnections = hasConnections;
         return this;
@@ -19,6 +20,7 @@ public class WebBackendWorkspaceStateResult {
     
     @JsonProperty("hasDestinations")
     public Boolean hasDestinations;
+
     public WebBackendWorkspaceStateResult withHasDestinations(Boolean hasDestinations) {
         this.hasDestinations = hasDestinations;
         return this;
@@ -26,9 +28,15 @@ public class WebBackendWorkspaceStateResult {
     
     @JsonProperty("hasSources")
     public Boolean hasSources;
+
     public WebBackendWorkspaceStateResult withHasSources(Boolean hasSources) {
         this.hasSources = hasSources;
         return this;
     }
     
+    public WebBackendWorkspaceStateResult(@JsonProperty("hasConnections") Boolean hasConnections, @JsonProperty("hasDestinations") Boolean hasDestinations, @JsonProperty("hasSources") Boolean hasSources) {
+        this.hasConnections = hasConnections;
+        this.hasDestinations = hasDestinations;
+        this.hasSources = hasSources;
+  }
 }

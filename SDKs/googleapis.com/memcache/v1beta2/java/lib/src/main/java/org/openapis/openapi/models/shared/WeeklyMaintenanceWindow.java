@@ -18,6 +18,7 @@ public class WeeklyMaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day")
     public WeeklyMaintenanceWindowDayEnum day;
+
     public WeeklyMaintenanceWindow withDay(WeeklyMaintenanceWindowDayEnum day) {
         this.day = day;
         return this;
@@ -29,6 +30,7 @@ public class WeeklyMaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public WeeklyMaintenanceWindow withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -40,9 +42,11 @@ public class WeeklyMaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public TimeOfDay startTime;
+
     public WeeklyMaintenanceWindow withStartTime(TimeOfDay startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public WeeklyMaintenanceWindow(){}
 }

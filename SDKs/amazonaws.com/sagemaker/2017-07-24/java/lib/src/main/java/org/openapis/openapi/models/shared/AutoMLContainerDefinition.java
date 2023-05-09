@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AutoMLContainerDefinition - A list of container definitions that describe the different containers that make up an AutoML candidate. For more information, see &lt;code&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"&gt; ContainerDefinition&lt;/a&gt; &lt;/code&gt;.
+ * AutoMLContainerDefinition - A list of container definitions that describe the different containers that make up an AutoML candidate. For more information, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"&gt; ContainerDefinition&lt;/a&gt;.
  */
 public class AutoMLContainerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public AutoMLContainerDefinition withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
@@ -22,6 +23,7 @@ public class AutoMLContainerDefinition {
     
     @JsonProperty("Image")
     public String image;
+
     public AutoMLContainerDefinition withImage(String image) {
         this.image = image;
         return this;
@@ -29,9 +31,14 @@ public class AutoMLContainerDefinition {
     
     @JsonProperty("ModelDataUrl")
     public String modelDataUrl;
+
     public AutoMLContainerDefinition withModelDataUrl(String modelDataUrl) {
         this.modelDataUrl = modelDataUrl;
         return this;
     }
     
+    public AutoMLContainerDefinition(@JsonProperty("Image") String image, @JsonProperty("ModelDataUrl") String modelDataUrl) {
+        this.image = image;
+        this.modelDataUrl = modelDataUrl;
+  }
 }

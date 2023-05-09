@@ -12,9 +12,11 @@ public class UpdateSubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoRenew")
     public AutoRenewEnum autoRenew;
+
     public UpdateSubscriptionRequest withAutoRenew(AutoRenewEnum autoRenew) {
         this.autoRenew = autoRenew;
         return this;
     }
     
+    public UpdateSubscriptionRequest(){}
 }

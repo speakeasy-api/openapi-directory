@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteFpgaImageRequest {
     
     public Boolean dryRun;
+
     public DeleteFpgaImageRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DeleteFpgaImageRequest {
     
     
     public String fpgaImageId;
+
     public DeleteFpgaImageRequest withFpgaImageId(String fpgaImageId) {
         this.fpgaImageId = fpgaImageId;
         return this;
     }
     
+    public DeleteFpgaImageRequest(@JsonProperty("FpgaImageId") String fpgaImageId) {
+        this.fpgaImageId = fpgaImageId;
+  }
 }

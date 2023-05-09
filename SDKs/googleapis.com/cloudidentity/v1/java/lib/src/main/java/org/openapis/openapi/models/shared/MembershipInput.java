@@ -18,6 +18,7 @@ public class MembershipInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredMemberKey")
     public EntityKey preferredMemberKey;
+
     public MembershipInput withPreferredMemberKey(EntityKey preferredMemberKey) {
         this.preferredMemberKey = preferredMemberKey;
         return this;
@@ -29,9 +30,11 @@ public class MembershipInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public MembershipRoleInput[] roles;
+
     public MembershipInput withRoles(MembershipRoleInput[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public MembershipInput(){}
 }

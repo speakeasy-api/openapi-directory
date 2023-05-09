@@ -15,6 +15,7 @@ public class StartCostEstimationRequestBodyResourceCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudFormation")
     public org.openapis.openapi.models.shared.CloudFormationCostEstimationResourceCollectionFilter cloudFormation;
+
     public StartCostEstimationRequestBodyResourceCollection withCloudFormation(org.openapis.openapi.models.shared.CloudFormationCostEstimationResourceCollectionFilter cloudFormation) {
         this.cloudFormation = cloudFormation;
         return this;
@@ -23,9 +24,11 @@ public class StartCostEstimationRequestBodyResourceCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.TagCostEstimationResourceCollectionFilter[] tags;
+
     public StartCostEstimationRequestBodyResourceCollection withTags(org.openapis.openapi.models.shared.TagCostEstimationResourceCollectionFilter[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartCostEstimationRequestBodyResourceCollection(){}
 }

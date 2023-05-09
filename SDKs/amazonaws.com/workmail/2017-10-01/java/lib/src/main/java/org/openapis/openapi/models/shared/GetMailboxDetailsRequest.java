@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetMailboxDetailsRequest {
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public GetMailboxDetailsRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -16,9 +17,14 @@ public class GetMailboxDetailsRequest {
     
     @JsonProperty("UserId")
     public String userId;
+
     public GetMailboxDetailsRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetMailboxDetailsRequest(@JsonProperty("OrganizationId") String organizationId, @JsonProperty("UserId") String userId) {
+        this.organizationId = organizationId;
+        this.userId = userId;
+  }
 }

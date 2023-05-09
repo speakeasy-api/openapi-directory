@@ -15,6 +15,7 @@ public class SMSMfaSettingsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public SMSMfaSettingsType withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,9 +24,11 @@ public class SMSMfaSettingsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredMfa")
     public Boolean preferredMfa;
+
     public SMSMfaSettingsType withPreferredMfa(Boolean preferredMfa) {
         this.preferredMfa = preferredMfa;
         return this;
     }
     
+    public SMSMfaSettingsType(){}
 }

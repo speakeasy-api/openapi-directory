@@ -18,6 +18,7 @@ public class PoolListPoolUsageMetricsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("odata.nextLink")
     public String odataNextLink;
+
     public PoolListPoolUsageMetricsResult withOdataNextLink(String odataNextLink) {
         this.odataNextLink = odataNextLink;
         return this;
@@ -29,9 +30,11 @@ public class PoolListPoolUsageMetricsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public PoolUsageMetrics[] value;
+
     public PoolListPoolUsageMetricsResult withValue(PoolUsageMetrics[] value) {
         this.value = value;
         return this;
     }
     
+    public PoolListPoolUsageMetricsResult(){}
 }

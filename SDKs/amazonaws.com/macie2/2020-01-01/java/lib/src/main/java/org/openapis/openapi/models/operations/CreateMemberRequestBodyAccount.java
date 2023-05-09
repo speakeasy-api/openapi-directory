@@ -15,6 +15,7 @@ public class CreateMemberRequestBodyAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public CreateMemberRequestBodyAccount withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,9 +24,11 @@ public class CreateMemberRequestBodyAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public CreateMemberRequestBodyAccount withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public CreateMemberRequestBodyAccount(){}
 }

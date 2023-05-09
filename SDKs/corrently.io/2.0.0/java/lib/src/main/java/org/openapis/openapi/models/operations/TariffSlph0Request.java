@@ -12,9 +12,11 @@ public class TariffSlph0Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zipcode")
     public String zipcode;
+
     public TariffSlph0Request withZipcode(String zipcode) {
         this.zipcode = zipcode;
         return this;
     }
     
+    public TariffSlph0Request(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class AutoScalingGroup {
     
     public String autoScalingGroupARN;
+
     public AutoScalingGroup withAutoScalingGroupARN(String autoScalingGroupARN) {
         this.autoScalingGroupARN = autoScalingGroupARN;
         return this;
@@ -19,6 +21,7 @@ public class AutoScalingGroup {
     
     
     public String autoScalingGroupName;
+
     public AutoScalingGroup withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -26,6 +29,7 @@ public class AutoScalingGroup {
     
     
     public String[] availabilityZones;
+
     public AutoScalingGroup withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -33,6 +37,7 @@ public class AutoScalingGroup {
     
     
     public Boolean capacityRebalance;
+
     public AutoScalingGroup withCapacityRebalance(Boolean capacityRebalance) {
         this.capacityRebalance = capacityRebalance;
         return this;
@@ -40,6 +45,7 @@ public class AutoScalingGroup {
     
     
     public String context;
+
     public AutoScalingGroup withContext(String context) {
         this.context = context;
         return this;
@@ -47,6 +53,7 @@ public class AutoScalingGroup {
     
     
     public OffsetDateTime createdTime;
+
     public AutoScalingGroup withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -54,6 +61,7 @@ public class AutoScalingGroup {
     
     
     public Long defaultCooldown;
+
     public AutoScalingGroup withDefaultCooldown(Long defaultCooldown) {
         this.defaultCooldown = defaultCooldown;
         return this;
@@ -61,6 +69,7 @@ public class AutoScalingGroup {
     
     
     public Long defaultInstanceWarmup;
+
     public AutoScalingGroup withDefaultInstanceWarmup(Long defaultInstanceWarmup) {
         this.defaultInstanceWarmup = defaultInstanceWarmup;
         return this;
@@ -68,6 +77,7 @@ public class AutoScalingGroup {
     
     
     public Long desiredCapacity;
+
     public AutoScalingGroup withDesiredCapacity(Long desiredCapacity) {
         this.desiredCapacity = desiredCapacity;
         return this;
@@ -75,6 +85,7 @@ public class AutoScalingGroup {
     
     
     public String desiredCapacityType;
+
     public AutoScalingGroup withDesiredCapacityType(String desiredCapacityType) {
         this.desiredCapacityType = desiredCapacityType;
         return this;
@@ -82,6 +93,7 @@ public class AutoScalingGroup {
     
     
     public EnabledMetric[] enabledMetrics;
+
     public AutoScalingGroup withEnabledMetrics(EnabledMetric[] enabledMetrics) {
         this.enabledMetrics = enabledMetrics;
         return this;
@@ -89,6 +101,7 @@ public class AutoScalingGroup {
     
     
     public Long healthCheckGracePeriod;
+
     public AutoScalingGroup withHealthCheckGracePeriod(Long healthCheckGracePeriod) {
         this.healthCheckGracePeriod = healthCheckGracePeriod;
         return this;
@@ -96,6 +109,7 @@ public class AutoScalingGroup {
     
     
     public String healthCheckType;
+
     public AutoScalingGroup withHealthCheckType(String healthCheckType) {
         this.healthCheckType = healthCheckType;
         return this;
@@ -103,6 +117,7 @@ public class AutoScalingGroup {
     
     
     public Instance[] instances;
+
     public AutoScalingGroup withInstances(Instance[] instances) {
         this.instances = instances;
         return this;
@@ -110,6 +125,7 @@ public class AutoScalingGroup {
     
     
     public String launchConfigurationName;
+
     public AutoScalingGroup withLaunchConfigurationName(String launchConfigurationName) {
         this.launchConfigurationName = launchConfigurationName;
         return this;
@@ -117,6 +133,7 @@ public class AutoScalingGroup {
     
     
     public LaunchTemplateSpecification launchTemplate;
+
     public AutoScalingGroup withLaunchTemplate(LaunchTemplateSpecification launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -124,6 +141,7 @@ public class AutoScalingGroup {
     
     
     public String[] loadBalancerNames;
+
     public AutoScalingGroup withLoadBalancerNames(String[] loadBalancerNames) {
         this.loadBalancerNames = loadBalancerNames;
         return this;
@@ -131,6 +149,7 @@ public class AutoScalingGroup {
     
     
     public Long maxInstanceLifetime;
+
     public AutoScalingGroup withMaxInstanceLifetime(Long maxInstanceLifetime) {
         this.maxInstanceLifetime = maxInstanceLifetime;
         return this;
@@ -138,6 +157,7 @@ public class AutoScalingGroup {
     
     
     public Long maxSize;
+
     public AutoScalingGroup withMaxSize(Long maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -145,6 +165,7 @@ public class AutoScalingGroup {
     
     
     public Long minSize;
+
     public AutoScalingGroup withMinSize(Long minSize) {
         this.minSize = minSize;
         return this;
@@ -152,6 +173,7 @@ public class AutoScalingGroup {
     
     
     public MixedInstancesPolicy mixedInstancesPolicy;
+
     public AutoScalingGroup withMixedInstancesPolicy(MixedInstancesPolicy mixedInstancesPolicy) {
         this.mixedInstancesPolicy = mixedInstancesPolicy;
         return this;
@@ -159,6 +181,7 @@ public class AutoScalingGroup {
     
     
     public Boolean newInstancesProtectedFromScaleIn;
+
     public AutoScalingGroup withNewInstancesProtectedFromScaleIn(Boolean newInstancesProtectedFromScaleIn) {
         this.newInstancesProtectedFromScaleIn = newInstancesProtectedFromScaleIn;
         return this;
@@ -166,6 +189,7 @@ public class AutoScalingGroup {
     
     
     public String placementGroup;
+
     public AutoScalingGroup withPlacementGroup(String placementGroup) {
         this.placementGroup = placementGroup;
         return this;
@@ -173,6 +197,7 @@ public class AutoScalingGroup {
     
     
     public Long predictedCapacity;
+
     public AutoScalingGroup withPredictedCapacity(Long predictedCapacity) {
         this.predictedCapacity = predictedCapacity;
         return this;
@@ -180,6 +205,7 @@ public class AutoScalingGroup {
     
     
     public String serviceLinkedRoleARN;
+
     public AutoScalingGroup withServiceLinkedRoleARN(String serviceLinkedRoleARN) {
         this.serviceLinkedRoleARN = serviceLinkedRoleARN;
         return this;
@@ -187,6 +213,7 @@ public class AutoScalingGroup {
     
     
     public String status;
+
     public AutoScalingGroup withStatus(String status) {
         this.status = status;
         return this;
@@ -194,6 +221,7 @@ public class AutoScalingGroup {
     
     
     public SuspendedProcess[] suspendedProcesses;
+
     public AutoScalingGroup withSuspendedProcesses(SuspendedProcess[] suspendedProcesses) {
         this.suspendedProcesses = suspendedProcesses;
         return this;
@@ -201,6 +229,7 @@ public class AutoScalingGroup {
     
     
     public TagDescription[] tags;
+
     public AutoScalingGroup withTags(TagDescription[] tags) {
         this.tags = tags;
         return this;
@@ -208,6 +237,7 @@ public class AutoScalingGroup {
     
     
     public String[] targetGroupARNs;
+
     public AutoScalingGroup withTargetGroupARNs(String[] targetGroupARNs) {
         this.targetGroupARNs = targetGroupARNs;
         return this;
@@ -215,6 +245,7 @@ public class AutoScalingGroup {
     
     
     public String[] terminationPolicies;
+
     public AutoScalingGroup withTerminationPolicies(String[] terminationPolicies) {
         this.terminationPolicies = terminationPolicies;
         return this;
@@ -222,6 +253,7 @@ public class AutoScalingGroup {
     
     
     public TrafficSourceIdentifier[] trafficSources;
+
     public AutoScalingGroup withTrafficSources(TrafficSourceIdentifier[] trafficSources) {
         this.trafficSources = trafficSources;
         return this;
@@ -229,6 +261,7 @@ public class AutoScalingGroup {
     
     
     public String vpcZoneIdentifier;
+
     public AutoScalingGroup withVPCZoneIdentifier(String vpcZoneIdentifier) {
         this.vpcZoneIdentifier = vpcZoneIdentifier;
         return this;
@@ -236,6 +269,7 @@ public class AutoScalingGroup {
     
     
     public WarmPoolConfiguration warmPoolConfiguration;
+
     public AutoScalingGroup withWarmPoolConfiguration(WarmPoolConfiguration warmPoolConfiguration) {
         this.warmPoolConfiguration = warmPoolConfiguration;
         return this;
@@ -243,9 +277,20 @@ public class AutoScalingGroup {
     
     
     public Long warmPoolSize;
+
     public AutoScalingGroup withWarmPoolSize(Long warmPoolSize) {
         this.warmPoolSize = warmPoolSize;
         return this;
     }
     
+    public AutoScalingGroup(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("AvailabilityZones") String[] availabilityZones, @JsonProperty("CreatedTime") OffsetDateTime createdTime, @JsonProperty("DefaultCooldown") Long defaultCooldown, @JsonProperty("DesiredCapacity") Long desiredCapacity, @JsonProperty("HealthCheckType") String healthCheckType, @JsonProperty("MaxSize") Long maxSize, @JsonProperty("MinSize") Long minSize) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.availabilityZones = availabilityZones;
+        this.createdTime = createdTime;
+        this.defaultCooldown = defaultCooldown;
+        this.desiredCapacity = desiredCapacity;
+        this.healthCheckType = healthCheckType;
+        this.maxSize = maxSize;
+        this.minSize = minSize;
+  }
 }

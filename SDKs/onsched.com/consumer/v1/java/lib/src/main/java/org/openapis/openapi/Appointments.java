@@ -54,11 +54,9 @@ public class Appointments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteConsumerV1AppointmentsIdResponse res = new org.openapis.openapi.models.operations.DeleteConsumerV1AppointmentsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteConsumerV1AppointmentsIdResponse res = new org.openapis.openapi.models.operations.DeleteConsumerV1AppointmentsIdResponse(contentType, httpRes.statusCode()) {{
             appointmentViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Appointments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1AppointmentsResponse res = new org.openapis.openapi.models.operations.GetConsumerV1AppointmentsResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1AppointmentsResponse res = new org.openapis.openapi.models.operations.GetConsumerV1AppointmentsResponse(contentType, httpRes.statusCode()) {{
             appointmentListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,11 +142,9 @@ public class Appointments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1AppointmentsBookingfieldsResponse res = new org.openapis.openapi.models.operations.GetConsumerV1AppointmentsBookingfieldsResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1AppointmentsBookingfieldsResponse res = new org.openapis.openapi.models.operations.GetConsumerV1AppointmentsBookingfieldsResponse(contentType, httpRes.statusCode()) {{
             bookingFieldListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -192,11 +186,9 @@ public class Appointments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1AppointmentsCustomfieldsResponse res = new org.openapis.openapi.models.operations.GetConsumerV1AppointmentsCustomfieldsResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1AppointmentsCustomfieldsResponse res = new org.openapis.openapi.models.operations.GetConsumerV1AppointmentsCustomfieldsResponse(contentType, httpRes.statusCode()) {{
             customFieldDefinitionListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -232,11 +224,9 @@ public class Appointments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1AppointmentsIdResponse res = new org.openapis.openapi.models.operations.GetConsumerV1AppointmentsIdResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1AppointmentsIdResponse res = new org.openapis.openapi.models.operations.GetConsumerV1AppointmentsIdResponse(contentType, httpRes.statusCode()) {{
             appointmentViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -299,11 +289,9 @@ public class Appointments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConsumerV1AppointmentsResponse res = new org.openapis.openapi.models.operations.PostConsumerV1AppointmentsResponse() {{
+        org.openapis.openapi.models.operations.PostConsumerV1AppointmentsResponse res = new org.openapis.openapi.models.operations.PostConsumerV1AppointmentsResponse(contentType, httpRes.statusCode()) {{
             appointmentInitialViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Appointments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdBookResponse res = new org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdBookResponse() {{
+        org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdBookResponse res = new org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdBookResponse(contentType, httpRes.statusCode()) {{
             appointmentViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -382,11 +368,9 @@ public class Appointments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdCancelResponse res = new org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdCancelResponse() {{
+        org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdCancelResponse res = new org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdCancelResponse(contentType, httpRes.statusCode()) {{
             appointmentViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -429,10 +413,8 @@ public class Appointments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdConfirmResponse res = new org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdConfirmResponse() {{
+        org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdConfirmResponse res = new org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdConfirmResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -466,10 +448,8 @@ public class Appointments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdNoshowResponse res = new org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdNoshowResponse() {{
+        org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdNoshowResponse res = new org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdNoshowResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -508,11 +488,9 @@ public class Appointments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdRescheduleResponse res = new org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdRescheduleResponse() {{
+        org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdRescheduleResponse res = new org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdRescheduleResponse(contentType, httpRes.statusCode()) {{
             appointmentViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -563,10 +541,8 @@ public class Appointments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdReserveResponse res = new org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdReserveResponse() {{
+        org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdReserveResponse res = new org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdReserveResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

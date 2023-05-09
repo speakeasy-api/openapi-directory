@@ -15,9 +15,11 @@ public class BatchAttachTypedLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypedLinkSpecifier")
     public TypedLinkSpecifier typedLinkSpecifier;
+
     public BatchAttachTypedLinkResponse withTypedLinkSpecifier(TypedLinkSpecifier typedLinkSpecifier) {
         this.typedLinkSpecifier = typedLinkSpecifier;
         return this;
     }
     
+    public BatchAttachTypedLinkResponse(){}
 }

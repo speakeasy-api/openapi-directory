@@ -52,4 +52,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/HumanLoopSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartHumanLoopResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ContentClassifierEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

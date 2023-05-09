@@ -18,9 +18,11 @@ public class DeobfuscationFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symbolType")
     public DeobfuscationFileSymbolTypeEnum symbolType;
+
     public DeobfuscationFile withSymbolType(DeobfuscationFileSymbolTypeEnum symbolType) {
         this.symbolType = symbolType;
         return this;
     }
     
+    public DeobfuscationFile(){}
 }

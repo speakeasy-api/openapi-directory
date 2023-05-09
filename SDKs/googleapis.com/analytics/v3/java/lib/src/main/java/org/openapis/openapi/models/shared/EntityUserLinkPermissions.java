@@ -18,6 +18,7 @@ public class EntityUserLinkPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effective")
     public String[] effective;
+
     public EntityUserLinkPermissions withEffective(String[] effective) {
         this.effective = effective;
         return this;
@@ -29,9 +30,11 @@ public class EntityUserLinkPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("local")
     public String[] local;
+
     public EntityUserLinkPermissions withLocal(String[] local) {
         this.local = local;
         return this;
     }
     
+    public EntityUserLinkPermissions(){}
 }

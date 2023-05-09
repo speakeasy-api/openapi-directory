@@ -12,6 +12,7 @@ public class FileUpload200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotaConsumed")
     public FileUpload200ApplicationJSONResponseQuotaConsumed quotaConsumed;
+
     public FileUpload200ApplicationJSONResponse withQuotaConsumed(FileUpload200ApplicationJSONResponseQuotaConsumed quotaConsumed) {
         this.quotaConsumed = quotaConsumed;
         return this;
@@ -20,9 +21,11 @@ public class FileUpload200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public java.util.Map<String, Object> status;
+
     public FileUpload200ApplicationJSONResponse withStatus(java.util.Map<String, Object> status) {
         this.status = status;
         return this;
     }
     
+    public FileUpload200ApplicationJSONResponse(){}
 }

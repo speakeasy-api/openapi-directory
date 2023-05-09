@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelPipelineReprocessingResponse {
@@ -12,6 +13,7 @@ public class CancelPipelineReprocessingResponse {
      */
     
     public java.util.Map<String, Object> cancelPipelineReprocessingResponse;
+
     public CancelPipelineReprocessingResponse withCancelPipelineReprocessingResponse(java.util.Map<String, Object> cancelPipelineReprocessingResponse) {
         this.cancelPipelineReprocessingResponse = cancelPipelineReprocessingResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelPipelineReprocessingResponse {
     
     
     public String contentType;
+
     public CancelPipelineReprocessingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelPipelineReprocessingResponse {
      */
     
     public Object internalFailureException;
+
     public CancelPipelineReprocessingResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CancelPipelineReprocessingResponse {
      */
     
     public Object invalidRequestException;
+
     public CancelPipelineReprocessingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CancelPipelineReprocessingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelPipelineReprocessingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CancelPipelineReprocessingResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CancelPipelineReprocessingResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class CancelPipelineReprocessingResponse {
     
     
     public Integer statusCode;
+
     public CancelPipelineReprocessingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CancelPipelineReprocessingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelPipelineReprocessingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CancelPipelineReprocessingResponse {
      */
     
     public Object throttlingException;
+
     public CancelPipelineReprocessingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CancelPipelineReprocessingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

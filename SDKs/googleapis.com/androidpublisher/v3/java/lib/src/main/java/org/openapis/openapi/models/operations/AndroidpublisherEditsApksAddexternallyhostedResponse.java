@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidpublisherEditsApksAddexternallyhostedResponse {
@@ -12,6 +13,7 @@ public class AndroidpublisherEditsApksAddexternallyhostedResponse {
      */
     
     public org.openapis.openapi.models.shared.ApksAddExternallyHostedResponse apksAddExternallyHostedResponse;
+
     public AndroidpublisherEditsApksAddexternallyhostedResponse withApksAddExternallyHostedResponse(org.openapis.openapi.models.shared.ApksAddExternallyHostedResponse apksAddExternallyHostedResponse) {
         this.apksAddExternallyHostedResponse = apksAddExternallyHostedResponse;
         return this;
@@ -19,6 +21,7 @@ public class AndroidpublisherEditsApksAddexternallyhostedResponse {
     
     
     public String contentType;
+
     public AndroidpublisherEditsApksAddexternallyhostedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AndroidpublisherEditsApksAddexternallyhostedResponse {
     
     
     public Integer statusCode;
+
     public AndroidpublisherEditsApksAddexternallyhostedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroidpublisherEditsApksAddexternallyhostedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidpublisherEditsApksAddexternallyhostedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroidpublisherEditsApksAddexternallyhostedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appRestrictionsSchema")
     public AppRestrictionsSchema appRestrictionsSchema;
+
     public Product withAppRestrictionsSchema(AppRestrictionsSchema appRestrictionsSchema) {
         this.appRestrictionsSchema = appRestrictionsSchema;
         return this;
@@ -29,6 +30,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appTracks")
     public TrackInfo[] appTracks;
+
     public Product withAppTracks(TrackInfo[] appTracks) {
         this.appTracks = appTracks;
         return this;
@@ -40,6 +42,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appVersion")
     public AppVersion[] appVersion;
+
     public Product withAppVersion(AppVersion[] appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -51,6 +54,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorName")
     public String authorName;
+
     public Product withAuthorName(String authorName) {
         this.authorName = authorName;
         return this;
@@ -62,6 +66,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableCountries")
     public String[] availableCountries;
+
     public Product withAvailableCountries(String[] availableCountries) {
         this.availableCountries = availableCountries;
         return this;
@@ -73,6 +78,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableTracks")
     public ProductAvailableTracksEnum[] availableTracks;
+
     public Product withAvailableTracks(ProductAvailableTracksEnum[] availableTracks) {
         this.availableTracks = availableTracks;
         return this;
@@ -84,6 +90,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public Product withCategory(String category) {
         this.category = category;
         return this;
@@ -95,6 +102,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentRating")
     public ProductContentRatingEnum contentRating;
+
     public Product withContentRating(ProductContentRatingEnum contentRating) {
         this.contentRating = contentRating;
         return this;
@@ -106,6 +114,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Product withDescription(String description) {
         this.description = description;
         return this;
@@ -117,6 +126,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailsUrl")
     public String detailsUrl;
+
     public Product withDetailsUrl(String detailsUrl) {
         this.detailsUrl = detailsUrl;
         return this;
@@ -128,6 +138,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionChannel")
     public ProductDistributionChannelEnum distributionChannel;
+
     public Product withDistributionChannel(ProductDistributionChannelEnum distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
@@ -139,6 +150,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public ProductFeaturesEnum[] features;
+
     public Product withFeatures(ProductFeaturesEnum[] features) {
         this.features = features;
         return this;
@@ -150,6 +162,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconUrl")
     public String iconUrl;
+
     public Product withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -161,6 +174,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdatedTimestampMillis")
     public String lastUpdatedTimestampMillis;
+
     public Product withLastUpdatedTimestampMillis(String lastUpdatedTimestampMillis) {
         this.lastUpdatedTimestampMillis = lastUpdatedTimestampMillis;
         return this;
@@ -172,6 +186,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minAndroidSdkVersion")
     public Integer minAndroidSDKVersion;
+
     public Product withMinAndroidSDKVersion(Integer minAndroidSDKVersion) {
         this.minAndroidSDKVersion = minAndroidSDKVersion;
         return this;
@@ -183,6 +198,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public ProductPermission[] permissions;
+
     public Product withPermissions(ProductPermission[] permissions) {
         this.permissions = permissions;
         return this;
@@ -194,6 +210,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public Product withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -205,6 +222,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productPricing")
     public ProductProductPricingEnum productPricing;
+
     public Product withProductPricing(ProductProductPricingEnum productPricing) {
         this.productPricing = productPricing;
         return this;
@@ -216,6 +234,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentChanges")
     public String recentChanges;
+
     public Product withRecentChanges(String recentChanges) {
         this.recentChanges = recentChanges;
         return this;
@@ -227,6 +246,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiresContainerApp")
     public Boolean requiresContainerApp;
+
     public Product withRequiresContainerApp(Boolean requiresContainerApp) {
         this.requiresContainerApp = requiresContainerApp;
         return this;
@@ -238,6 +258,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenshotUrls")
     public String[] screenshotUrls;
+
     public Product withScreenshotUrls(String[] screenshotUrls) {
         this.screenshotUrls = screenshotUrls;
         return this;
@@ -246,6 +267,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signingCertificate")
     public ProductSigningCertificate signingCertificate;
+
     public Product withSigningCertificate(ProductSigningCertificate signingCertificate) {
         this.signingCertificate = signingCertificate;
         return this;
@@ -257,6 +279,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smallIconUrl")
     public String smallIconUrl;
+
     public Product withSmallIconUrl(String smallIconUrl) {
         this.smallIconUrl = smallIconUrl;
         return this;
@@ -268,6 +291,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Product withTitle(String title) {
         this.title = title;
         return this;
@@ -279,9 +303,11 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workDetailsUrl")
     public String workDetailsUrl;
+
     public Product withWorkDetailsUrl(String workDetailsUrl) {
         this.workDetailsUrl = workDetailsUrl;
         return this;
     }
     
+    public Product(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPortfolioMembershipsForPortfolioResponse {
     
     public String contentType;
+
     public GetPortfolioMembershipsForPortfolioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPortfolioMembershipsForPortfolioResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetPortfolioMembershipsForPortfolioResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetPortfolioMembershipsForPortfolioResponse {
     
     
     public Integer statusCode;
+
     public GetPortfolioMembershipsForPortfolioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetPortfolioMembershipsForPortfolioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPortfolioMembershipsForPortfolioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetPortfolioMembershipsForPortfolioResponse {
      */
     
     public GetPortfolioMembershipsForPortfolio200ApplicationJSON getPortfolioMembershipsForPortfolio200ApplicationJSONObject;
+
     public GetPortfolioMembershipsForPortfolioResponse withGetPortfolioMembershipsForPortfolio200ApplicationJSONObject(GetPortfolioMembershipsForPortfolio200ApplicationJSON getPortfolioMembershipsForPortfolio200ApplicationJSONObject) {
         this.getPortfolioMembershipsForPortfolio200ApplicationJSONObject = getPortfolioMembershipsForPortfolio200ApplicationJSONObject;
         return this;
     }
     
+    public GetPortfolioMembershipsForPortfolioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

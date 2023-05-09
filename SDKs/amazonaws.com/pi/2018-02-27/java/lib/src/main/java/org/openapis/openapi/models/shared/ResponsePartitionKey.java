@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResponsePartitionKey {
     @JsonProperty("Dimensions")
     public java.util.Map<String, String> dimensions;
+
     public ResponsePartitionKey withDimensions(java.util.Map<String, String> dimensions) {
         this.dimensions = dimensions;
         return this;
     }
     
+    public ResponsePartitionKey(@JsonProperty("Dimensions") java.util.Map<String, String> dimensions) {
+        this.dimensions = dimensions;
+  }
 }

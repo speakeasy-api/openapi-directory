@@ -15,9 +15,11 @@ public class Concurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservedConcurrentExecutions")
     public Long reservedConcurrentExecutions;
+
     public Concurrency withReservedConcurrentExecutions(Long reservedConcurrentExecutions) {
         this.reservedConcurrentExecutions = reservedConcurrentExecutions;
         return this;
     }
     
+    public Concurrency(){}
 }

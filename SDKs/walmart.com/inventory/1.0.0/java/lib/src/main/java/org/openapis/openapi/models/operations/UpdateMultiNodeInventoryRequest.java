@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMultiNodeInventoryRequest {
@@ -12,6 +13,7 @@ public class UpdateMultiNodeInventoryRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateMultiNodeInventoryRequestBody requestBody;
+
     public UpdateMultiNodeInventoryRequest withRequestBody(UpdateMultiNodeInventoryRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class UpdateMultiNodeInventoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE")
     public String wmConsumerChannelType;
+
     public UpdateMultiNodeInventoryRequest withWmConsumerChannelType(String wmConsumerChannelType) {
         this.wmConsumerChannelType = wmConsumerChannelType;
         return this;
@@ -32,6 +35,7 @@ public class UpdateMultiNodeInventoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_QOS.CORRELATION_ID")
     public String wmQosCorrelationId;
+
     public UpdateMultiNodeInventoryRequest withWmQosCorrelationId(String wmQosCorrelationId) {
         this.wmQosCorrelationId = wmQosCorrelationId;
         return this;
@@ -42,6 +46,7 @@ public class UpdateMultiNodeInventoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN")
     public String wmSecAccessToken;
+
     public UpdateMultiNodeInventoryRequest withWmSecAccessToken(String wmSecAccessToken) {
         this.wmSecAccessToken = wmSecAccessToken;
         return this;
@@ -52,19 +57,28 @@ public class UpdateMultiNodeInventoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SVC.NAME")
     public String wmSvcName;
+
     public UpdateMultiNodeInventoryRequest withWmSvcName(String wmSvcName) {
         this.wmSvcName = wmSvcName;
         return this;
     }
     
     /**
-     * An arbitrary alphanumeric unique ID, specified by the seller, which identifies each item. This will be used by the seller in the XSD file to refer to each item. Special characters in the sku needing encoding are: ':', '/', '?', '#', '[', ']', '@', '!', '$', '&amp;', "'", '(', ')', '*', '+', ',', ';', '=', \u2018 \u2019 as well as '%' itself if it's a part of sku. Make sure to encode space with %20. Other characters don't need to be encoded.
+     * An arbitrary alphanumeric unique ID, specified by the seller, which identifies each item. This will be used by the seller in the XSD file to refer to each item. Special characters in the sku needing encoding are: ':', '/', '?', '#', '[', ']', '@', '!', '$', '&amp;', "'", '(', ')', '*', '+', ',', ';', '=', ‘ ’ as well as '%' itself if it's a part of sku. Make sure to encode space with %20. Other characters don't need to be encoded.
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sku")
     public String sku;
+
     public UpdateMultiNodeInventoryRequest withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public UpdateMultiNodeInventoryRequest(@JsonProperty("RequestBody") UpdateMultiNodeInventoryRequestBody requestBody, @JsonProperty("WM_QOS.CORRELATION_ID") String wmQosCorrelationId, @JsonProperty("WM_SEC.ACCESS_TOKEN") String wmSecAccessToken, @JsonProperty("WM_SVC.NAME") String wmSvcName, @JsonProperty("sku") String sku) {
+        this.requestBody = requestBody;
+        this.wmQosCorrelationId = wmQosCorrelationId;
+        this.wmSecAccessToken = wmSecAccessToken;
+        this.wmSvcName = wmSvcName;
+        this.sku = sku;
+  }
 }

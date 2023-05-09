@@ -15,6 +15,7 @@ public class ThirdPartyJobData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionConfiguration")
     public ActionConfiguration actionConfiguration;
+
     public ThirdPartyJobData withActionConfiguration(ActionConfiguration actionConfiguration) {
         this.actionConfiguration = actionConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class ThirdPartyJobData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionTypeId")
     public ActionTypeId actionTypeId;
+
     public ThirdPartyJobData withActionTypeId(ActionTypeId actionTypeId) {
         this.actionTypeId = actionTypeId;
         return this;
@@ -31,6 +33,7 @@ public class ThirdPartyJobData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactCredentials")
     public AWSSessionCredentials artifactCredentials;
+
     public ThirdPartyJobData withArtifactCredentials(AWSSessionCredentials artifactCredentials) {
         this.artifactCredentials = artifactCredentials;
         return this;
@@ -39,6 +42,7 @@ public class ThirdPartyJobData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continuationToken")
     public String continuationToken;
+
     public ThirdPartyJobData withContinuationToken(String continuationToken) {
         this.continuationToken = continuationToken;
         return this;
@@ -47,6 +51,7 @@ public class ThirdPartyJobData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public EncryptionKey encryptionKey;
+
     public ThirdPartyJobData withEncryptionKey(EncryptionKey encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -55,6 +60,7 @@ public class ThirdPartyJobData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputArtifacts")
     public Artifact[] inputArtifacts;
+
     public ThirdPartyJobData withInputArtifacts(Artifact[] inputArtifacts) {
         this.inputArtifacts = inputArtifacts;
         return this;
@@ -63,6 +69,7 @@ public class ThirdPartyJobData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputArtifacts")
     public Artifact[] outputArtifacts;
+
     public ThirdPartyJobData withOutputArtifacts(Artifact[] outputArtifacts) {
         this.outputArtifacts = outputArtifacts;
         return this;
@@ -71,9 +78,11 @@ public class ThirdPartyJobData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineContext")
     public PipelineContext pipelineContext;
+
     public ThirdPartyJobData withPipelineContext(PipelineContext pipelineContext) {
         this.pipelineContext = pipelineContext;
         return this;
     }
     
+    public ThirdPartyJobData(){}
 }

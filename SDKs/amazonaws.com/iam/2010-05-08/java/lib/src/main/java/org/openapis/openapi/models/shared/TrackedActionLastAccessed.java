@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class TrackedActionLastAccessed {
     
     public String actionName;
+
     public TrackedActionLastAccessed withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -22,6 +23,7 @@ public class TrackedActionLastAccessed {
      */
     
     public String lastAccessedEntity;
+
     public TrackedActionLastAccessed withLastAccessedEntity(String lastAccessedEntity) {
         this.lastAccessedEntity = lastAccessedEntity;
         return this;
@@ -29,6 +31,7 @@ public class TrackedActionLastAccessed {
     
     
     public String lastAccessedRegion;
+
     public TrackedActionLastAccessed withLastAccessedRegion(String lastAccessedRegion) {
         this.lastAccessedRegion = lastAccessedRegion;
         return this;
@@ -36,9 +39,11 @@ public class TrackedActionLastAccessed {
     
     
     public OffsetDateTime lastAccessedTime;
+
     public TrackedActionLastAccessed withLastAccessedTime(OffsetDateTime lastAccessedTime) {
         this.lastAccessedTime = lastAccessedTime;
         return this;
     }
     
+    public TrackedActionLastAccessed(){}
 }

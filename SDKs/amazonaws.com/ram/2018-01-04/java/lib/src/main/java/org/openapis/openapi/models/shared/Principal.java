@@ -22,6 +22,7 @@ public class Principal {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public Principal withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external")
     public Boolean external;
+
     public Principal withExternal(Boolean external) {
         this.external = external;
         return this;
@@ -38,6 +40,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Principal withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class Principal {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public Principal withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -56,9 +60,11 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareArn")
     public String resourceShareArn;
+
     public Principal withResourceShareArn(String resourceShareArn) {
         this.resourceShareArn = resourceShareArn;
         return this;
     }
     
+    public Principal(){}
 }

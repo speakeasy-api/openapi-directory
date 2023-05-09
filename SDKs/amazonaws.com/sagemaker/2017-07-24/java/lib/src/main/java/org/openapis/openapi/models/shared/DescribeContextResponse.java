@@ -20,6 +20,7 @@ public class DescribeContextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContextArn")
     public String contextArn;
+
     public DescribeContextResponse withContextArn(String contextArn) {
         this.contextArn = contextArn;
         return this;
@@ -28,6 +29,7 @@ public class DescribeContextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContextName")
     public String contextName;
+
     public DescribeContextResponse withContextName(String contextName) {
         this.contextName = contextName;
         return this;
@@ -36,6 +38,7 @@ public class DescribeContextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContextType")
     public String contextType;
+
     public DescribeContextResponse withContextType(String contextType) {
         this.contextType = contextType;
         return this;
@@ -47,6 +50,7 @@ public class DescribeContextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public DescribeContextResponse withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -57,6 +61,7 @@ public class DescribeContextResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeContextResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -65,6 +70,7 @@ public class DescribeContextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeContextResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -76,6 +82,7 @@ public class DescribeContextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public DescribeContextResponse withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -86,6 +93,7 @@ public class DescribeContextResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeContextResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -94,6 +102,7 @@ public class DescribeContextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineageGroupArn")
     public String lineageGroupArn;
+
     public DescribeContextResponse withLineageGroupArn(String lineageGroupArn) {
         this.lineageGroupArn = lineageGroupArn;
         return this;
@@ -102,6 +111,7 @@ public class DescribeContextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public java.util.Map<String, String> properties;
+
     public DescribeContextResponse withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -110,9 +120,11 @@ public class DescribeContextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public ContextSource source;
+
     public DescribeContextResponse withSource(ContextSource source) {
         this.source = source;
         return this;
     }
     
+    public DescribeContextResponse(){}
 }

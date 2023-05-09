@@ -12,6 +12,7 @@ public class SyndicateMarshaller {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public SyndicateMarshaller withContent(String content) {
         this.content = content;
         return this;
@@ -20,6 +21,7 @@ public class SyndicateMarshaller {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SyndicateMarshaller withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class SyndicateMarshaller {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public SyndicateMarshaller withId(Long id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class SyndicateMarshaller {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaType")
     public String mediaType;
+
     public SyndicateMarshaller withMediaType(String mediaType) {
         this.mediaType = mediaType;
         return this;
@@ -44,6 +48,7 @@ public class SyndicateMarshaller {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SyndicateMarshaller withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +57,11 @@ public class SyndicateMarshaller {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceUrl")
     public String sourceUrl;
+
     public SyndicateMarshaller withSourceUrl(String sourceUrl) {
         this.sourceUrl = sourceUrl;
         return this;
     }
     
+    public SyndicateMarshaller(){}
 }

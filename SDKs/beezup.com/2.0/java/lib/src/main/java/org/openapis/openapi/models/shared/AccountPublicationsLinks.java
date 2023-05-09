@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccountPublicationsLinks {
     @JsonProperty("self")
     public LinksGetPublicationsLink self;
+
     public AccountPublicationsLinks withSelf(LinksGetPublicationsLink self) {
         this.self = self;
         return this;
     }
     
+    public AccountPublicationsLinks(@JsonProperty("self") LinksGetPublicationsLink self) {
+        this.self = self;
+  }
 }

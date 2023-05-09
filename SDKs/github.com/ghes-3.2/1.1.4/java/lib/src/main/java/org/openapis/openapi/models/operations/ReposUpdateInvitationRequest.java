@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposUpdateInvitationRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReposUpdateInvitationRequestBody requestBody;
+
     public ReposUpdateInvitationRequest withRequestBody(ReposUpdateInvitationRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ReposUpdateInvitationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invitation_id")
     public Long invitationId;
+
     public ReposUpdateInvitationRequest withInvitationId(Long invitationId) {
         this.invitationId = invitationId;
         return this;
@@ -29,6 +32,7 @@ public class ReposUpdateInvitationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposUpdateInvitationRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -39,9 +43,15 @@ public class ReposUpdateInvitationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposUpdateInvitationRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposUpdateInvitationRequest(@JsonProperty("invitation_id") Long invitationId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.invitationId = invitationId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

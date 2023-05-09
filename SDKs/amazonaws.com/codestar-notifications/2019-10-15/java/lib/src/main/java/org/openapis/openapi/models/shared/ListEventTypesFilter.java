@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListEventTypesFilter {
     @JsonProperty("Name")
     public ListEventTypesFilterNameEnum name;
+
     public ListEventTypesFilter withName(ListEventTypesFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class ListEventTypesFilter {
     
     @JsonProperty("Value")
     public String value;
+
     public ListEventTypesFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ListEventTypesFilter(@JsonProperty("Name") ListEventTypesFilterNameEnum name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

@@ -15,6 +15,7 @@ public class GetDraftRegistrationsDraftIdInstitutionsInstitutionRelationships {
      */
     
     public String nodes;
+
     public GetDraftRegistrationsDraftIdInstitutionsInstitutionRelationships withNodes(String nodes) {
         this.nodes = nodes;
         return this;
@@ -25,6 +26,7 @@ public class GetDraftRegistrationsDraftIdInstitutionsInstitutionRelationships {
      */
     
     public String registrations;
+
     public GetDraftRegistrationsDraftIdInstitutionsInstitutionRelationships withRegistrations(String registrations) {
         this.registrations = registrations;
         return this;
@@ -35,9 +37,11 @@ public class GetDraftRegistrationsDraftIdInstitutionsInstitutionRelationships {
      */
     
     public String users;
+
     public GetDraftRegistrationsDraftIdInstitutionsInstitutionRelationships withUsers(String users) {
         this.users = users;
         return this;
     }
     
+    public GetDraftRegistrationsDraftIdInstitutionsInstitutionRelationships(){}
 }

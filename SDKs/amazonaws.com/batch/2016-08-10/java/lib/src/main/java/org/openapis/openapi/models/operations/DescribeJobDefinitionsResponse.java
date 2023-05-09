@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeJobDefinitionsResponse {
@@ -12,6 +13,7 @@ public class DescribeJobDefinitionsResponse {
      */
     
     public Object clientException;
+
     public DescribeJobDefinitionsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeJobDefinitionsResponse {
     
     
     public String contentType;
+
     public DescribeJobDefinitionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeJobDefinitionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeJobDefinitionsResponse describeJobDefinitionsResponse;
+
     public DescribeJobDefinitionsResponse withDescribeJobDefinitionsResponse(org.openapis.openapi.models.shared.DescribeJobDefinitionsResponse describeJobDefinitionsResponse) {
         this.describeJobDefinitionsResponse = describeJobDefinitionsResponse;
         return this;
@@ -36,6 +40,7 @@ public class DescribeJobDefinitionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeJobDefinitionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeJobDefinitionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeJobDefinitionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeJobDefinitionsResponse {
      */
     
     public Object serverException;
+
     public DescribeJobDefinitionsResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public DescribeJobDefinitionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

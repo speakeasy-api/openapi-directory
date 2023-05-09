@@ -15,9 +15,11 @@ public class MergePullRequestByFastForwardOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pullRequest")
     public PullRequest pullRequest;
+
     public MergePullRequestByFastForwardOutput withPullRequest(PullRequest pullRequest) {
         this.pullRequest = pullRequest;
         return this;
     }
     
+    public MergePullRequestByFastForwardOutput(){}
 }

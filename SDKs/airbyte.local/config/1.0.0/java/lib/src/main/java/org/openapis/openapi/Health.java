@@ -51,11 +51,9 @@ public class Health {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHealthCheckResponse res = new org.openapis.openapi.models.operations.GetHealthCheckResponse() {{
+        org.openapis.openapi.models.operations.GetHealthCheckResponse res = new org.openapis.openapi.models.operations.GetHealthCheckResponse(contentType, httpRes.statusCode()) {{
             healthCheckRead = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

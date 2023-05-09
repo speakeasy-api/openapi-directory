@@ -15,6 +15,7 @@ public class CreateAssistantRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateAssistantRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateAssistantRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAssistantRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class CreateAssistantRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateAssistantRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +50,7 @@ public class CreateAssistantRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverSideEncryptionConfiguration")
     public CreateAssistantRequestBodyServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
+
     public CreateAssistantRequestBody withServerSideEncryptionConfiguration(CreateAssistantRequestBodyServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
         this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
         return this;
@@ -58,6 +62,7 @@ public class CreateAssistantRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateAssistantRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -68,9 +73,14 @@ public class CreateAssistantRequestBody {
      */
     @JsonProperty("type")
     public CreateAssistantRequestBodyTypeEnum type;
+
     public CreateAssistantRequestBody withType(CreateAssistantRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateAssistantRequestBody(@JsonProperty("name") String name, @JsonProperty("type") CreateAssistantRequestBodyTypeEnum type) {
+        this.name = name;
+        this.type = type;
+  }
 }

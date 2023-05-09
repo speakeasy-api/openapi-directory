@@ -15,9 +15,11 @@ public class SlackMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthScopes")
     public String[] oAuthScopes;
+
     public SlackMetadata withOAuthScopes(String[] oAuthScopes) {
         this.oAuthScopes = oAuthScopes;
         return this;
     }
     
+    public SlackMetadata(){}
 }

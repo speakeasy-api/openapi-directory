@@ -18,6 +18,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Employee withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Employee withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public Employee withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -51,6 +54,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Employee withId(String id) {
         this.id = id;
         return this;
@@ -64,6 +68,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_owner")
     public Boolean isOwner;
+
     public Employee withIsOwner(Boolean isOwner) {
         this.isOwner = isOwner;
         return this;
@@ -75,6 +80,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public Employee withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -86,6 +92,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_ids")
     public String[] locationIds;
+
     public Employee withLocationIds(String[] locationIds) {
         this.locationIds = locationIds;
         return this;
@@ -97,6 +104,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public Employee withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -108,6 +116,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Employee withStatus(String status) {
         this.status = status;
         return this;
@@ -119,9 +128,11 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Employee withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Employee(){}
 }

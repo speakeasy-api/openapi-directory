@@ -18,9 +18,11 @@ public class RegistryCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKeyCertificate")
     public PublicKeyCertificate publicKeyCertificate;
+
     public RegistryCredential withPublicKeyCertificate(PublicKeyCertificate publicKeyCertificate) {
         this.publicKeyCertificate = publicKeyCertificate;
         return this;
     }
     
+    public RegistryCredential(){}
 }

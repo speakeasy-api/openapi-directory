@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioUri")
     public String audioUri;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioInput withAudioUri(String audioUri) {
         this.audioUri = audioUri;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioInput(){}
 }

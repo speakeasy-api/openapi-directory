@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateGameSessionQueueResponse {
     
     public String contentType;
+
     public UpdateGameSessionQueueResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateGameSessionQueueResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateGameSessionQueueResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateGameSessionQueueResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateGameSessionQueueResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateGameSessionQueueResponse {
      */
     
     public Object notFoundException;
+
     public UpdateGameSessionQueueResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateGameSessionQueueResponse {
     
     
     public Integer statusCode;
+
     public UpdateGameSessionQueueResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateGameSessionQueueResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateGameSessionQueueResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateGameSessionQueueResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateGameSessionQueueResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateGameSessionQueueResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateGameSessionQueueOutput updateGameSessionQueueOutput;
+
     public UpdateGameSessionQueueResponse withUpdateGameSessionQueueOutput(org.openapis.openapi.models.shared.UpdateGameSessionQueueOutput updateGameSessionQueueOutput) {
         this.updateGameSessionQueueOutput = updateGameSessionQueueOutput;
         return this;
     }
     
+    public UpdateGameSessionQueueResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PropertyLatestValue {
     @JsonProperty("propertyReference")
     public EntityPropertyReference propertyReference;
+
     public PropertyLatestValue withPropertyReference(EntityPropertyReference propertyReference) {
         this.propertyReference = propertyReference;
         return this;
@@ -22,9 +23,13 @@ public class PropertyLatestValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyValue")
     public DataValue propertyValue;
+
     public PropertyLatestValue withPropertyValue(DataValue propertyValue) {
         this.propertyValue = propertyValue;
         return this;
     }
     
+    public PropertyLatestValue(@JsonProperty("propertyReference") EntityPropertyReference propertyReference) {
+        this.propertyReference = propertyReference;
+  }
 }

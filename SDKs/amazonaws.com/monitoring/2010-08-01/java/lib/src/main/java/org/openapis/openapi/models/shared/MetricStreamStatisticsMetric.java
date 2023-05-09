@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * MetricStreamStatisticsMetric - This object contains the information for one metric that is to be streamed with additional statistics.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MetricStreamStatisticsMetric {
     
     public String metricName;
+
     public MetricStreamStatisticsMetric withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -19,9 +20,14 @@ public class MetricStreamStatisticsMetric {
     
     
     public String namespace;
+
     public MetricStreamStatisticsMetric withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public MetricStreamStatisticsMetric(@JsonProperty("MetricName") String metricName, @JsonProperty("Namespace") String namespace) {
+        this.metricName = metricName;
+        this.namespace = namespace;
+  }
 }

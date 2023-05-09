@@ -22,6 +22,7 @@ public class DescribeLocationFsxLustreResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeLocationFsxLustreResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeLocationFsxLustreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public DescribeLocationFsxLustreResponse withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
@@ -38,6 +40,7 @@ public class DescribeLocationFsxLustreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationUri")
     public String locationUri;
+
     public DescribeLocationFsxLustreResponse withLocationUri(String locationUri) {
         this.locationUri = locationUri;
         return this;
@@ -46,9 +49,11 @@ public class DescribeLocationFsxLustreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupArns")
     public String[] securityGroupArns;
+
     public DescribeLocationFsxLustreResponse withSecurityGroupArns(String[] securityGroupArns) {
         this.securityGroupArns = securityGroupArns;
         return this;
     }
     
+    public DescribeLocationFsxLustreResponse(){}
 }

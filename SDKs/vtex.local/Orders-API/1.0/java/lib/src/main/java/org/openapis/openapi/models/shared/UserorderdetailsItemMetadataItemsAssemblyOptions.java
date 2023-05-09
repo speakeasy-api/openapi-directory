@@ -12,6 +12,7 @@ public class UserorderdetailsItemMetadataItemsAssemblyOptions {
      */
     @JsonProperty("Composition")
     public java.util.Map<String, Object> composition;
+
     public UserorderdetailsItemMetadataItemsAssemblyOptions withComposition(java.util.Map<String, Object> composition) {
         this.composition = composition;
         return this;
@@ -22,6 +23,7 @@ public class UserorderdetailsItemMetadataItemsAssemblyOptions {
      */
     @JsonProperty("Id")
     public String id;
+
     public UserorderdetailsItemMetadataItemsAssemblyOptions withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class UserorderdetailsItemMetadataItemsAssemblyOptions {
      */
     @JsonProperty("InputValues")
     public java.util.Map<String, Object> inputValues;
+
     public UserorderdetailsItemMetadataItemsAssemblyOptions withInputValues(java.util.Map<String, Object> inputValues) {
         this.inputValues = inputValues;
         return this;
@@ -42,6 +45,7 @@ public class UserorderdetailsItemMetadataItemsAssemblyOptions {
      */
     @JsonProperty("Name")
     public String name;
+
     public UserorderdetailsItemMetadataItemsAssemblyOptions withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +56,17 @@ public class UserorderdetailsItemMetadataItemsAssemblyOptions {
      */
     @JsonProperty("Required")
     public Boolean required;
+
     public UserorderdetailsItemMetadataItemsAssemblyOptions withRequired(Boolean required) {
         this.required = required;
         return this;
     }
     
+    public UserorderdetailsItemMetadataItemsAssemblyOptions(@JsonProperty("Composition") java.util.Map<String, Object> composition, @JsonProperty("Id") String id, @JsonProperty("InputValues") java.util.Map<String, Object> inputValues, @JsonProperty("Name") String name, @JsonProperty("Required") Boolean required) {
+        this.composition = composition;
+        this.id = id;
+        this.inputValues = inputValues;
+        this.name = name;
+        this.required = required;
+  }
 }

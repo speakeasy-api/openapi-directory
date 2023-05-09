@@ -55,12 +55,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCreateTestCardRangesResponse res = new org.openapis.openapi.models.operations.PostCreateTestCardRangesResponse() {{
+        org.openapis.openapi.models.operations.PostCreateTestCardRangesResponse res = new org.openapis.openapi.models.operations.PostCreateTestCardRangesResponse(contentType, httpRes.statusCode()) {{
             createTestCardRangesResult = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

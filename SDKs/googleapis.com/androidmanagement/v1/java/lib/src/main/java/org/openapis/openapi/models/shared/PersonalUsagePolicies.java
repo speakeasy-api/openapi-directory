@@ -18,6 +18,7 @@ public class PersonalUsagePolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountTypesWithManagementDisabled")
     public String[] accountTypesWithManagementDisabled;
+
     public PersonalUsagePolicies withAccountTypesWithManagementDisabled(String[] accountTypesWithManagementDisabled) {
         this.accountTypesWithManagementDisabled = accountTypesWithManagementDisabled;
         return this;
@@ -29,6 +30,7 @@ public class PersonalUsagePolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cameraDisabled")
     public Boolean cameraDisabled;
+
     public PersonalUsagePolicies withCameraDisabled(Boolean cameraDisabled) {
         this.cameraDisabled = cameraDisabled;
         return this;
@@ -40,6 +42,7 @@ public class PersonalUsagePolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDaysWithWorkOff")
     public Integer maxDaysWithWorkOff;
+
     public PersonalUsagePolicies withMaxDaysWithWorkOff(Integer maxDaysWithWorkOff) {
         this.maxDaysWithWorkOff = maxDaysWithWorkOff;
         return this;
@@ -51,6 +54,7 @@ public class PersonalUsagePolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalApplications")
     public PersonalApplicationPolicy[] personalApplications;
+
     public PersonalUsagePolicies withPersonalApplications(PersonalApplicationPolicy[] personalApplications) {
         this.personalApplications = personalApplications;
         return this;
@@ -62,6 +66,7 @@ public class PersonalUsagePolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalPlayStoreMode")
     public PersonalUsagePoliciesPersonalPlayStoreModeEnum personalPlayStoreMode;
+
     public PersonalUsagePolicies withPersonalPlayStoreMode(PersonalUsagePoliciesPersonalPlayStoreModeEnum personalPlayStoreMode) {
         this.personalPlayStoreMode = personalPlayStoreMode;
         return this;
@@ -73,9 +78,11 @@ public class PersonalUsagePolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenCaptureDisabled")
     public Boolean screenCaptureDisabled;
+
     public PersonalUsagePolicies withScreenCaptureDisabled(Boolean screenCaptureDisabled) {
         this.screenCaptureDisabled = screenCaptureDisabled;
         return this;
     }
     
+    public PersonalUsagePolicies(){}
 }

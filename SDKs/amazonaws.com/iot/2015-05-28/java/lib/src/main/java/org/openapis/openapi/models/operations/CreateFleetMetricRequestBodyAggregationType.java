@@ -15,6 +15,7 @@ public class CreateFleetMetricRequestBodyAggregationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public org.openapis.openapi.models.shared.AggregationTypeNameEnum name;
+
     public CreateFleetMetricRequestBodyAggregationType withName(org.openapis.openapi.models.shared.AggregationTypeNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class CreateFleetMetricRequestBodyAggregationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public CreateFleetMetricRequestBodyAggregationType withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public CreateFleetMetricRequestBodyAggregationType(){}
 }

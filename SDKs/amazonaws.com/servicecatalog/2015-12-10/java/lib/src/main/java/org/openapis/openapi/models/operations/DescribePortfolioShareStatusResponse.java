@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePortfolioShareStatusResponse {
     
     public String contentType;
+
     public DescribePortfolioShareStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribePortfolioShareStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePortfolioShareStatusOutput describePortfolioShareStatusOutput;
+
     public DescribePortfolioShareStatusResponse withDescribePortfolioShareStatusOutput(org.openapis.openapi.models.shared.DescribePortfolioShareStatusOutput describePortfolioShareStatusOutput) {
         this.describePortfolioShareStatusOutput = describePortfolioShareStatusOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribePortfolioShareStatusResponse {
      */
     
     public Object invalidParametersException;
+
     public DescribePortfolioShareStatusResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class DescribePortfolioShareStatusResponse {
      */
     
     public Object operationNotSupportedException;
+
     public DescribePortfolioShareStatusResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -49,6 +54,7 @@ public class DescribePortfolioShareStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribePortfolioShareStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribePortfolioShareStatusResponse {
     
     
     public Integer statusCode;
+
     public DescribePortfolioShareStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribePortfolioShareStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePortfolioShareStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribePortfolioShareStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

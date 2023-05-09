@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEnvironmentTemplateVersionResponse {
@@ -12,6 +13,7 @@ public class UpdateEnvironmentTemplateVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateEnvironmentTemplateVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateEnvironmentTemplateVersionResponse {
      */
     
     public Object conflictException;
+
     public UpdateEnvironmentTemplateVersionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEnvironmentTemplateVersionResponse {
     
     
     public String contentType;
+
     public UpdateEnvironmentTemplateVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateEnvironmentTemplateVersionResponse {
      */
     
     public Object internalServerException;
+
     public UpdateEnvironmentTemplateVersionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateEnvironmentTemplateVersionResponse {
     
     
     public Integer statusCode;
+
     public UpdateEnvironmentTemplateVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateEnvironmentTemplateVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEnvironmentTemplateVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateEnvironmentTemplateVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateEnvironmentTemplateVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateEnvironmentTemplateVersionResponse {
      */
     
     public Object throttlingException;
+
     public UpdateEnvironmentTemplateVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateEnvironmentTemplateVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateEnvironmentTemplateVersionOutput updateEnvironmentTemplateVersionOutput;
+
     public UpdateEnvironmentTemplateVersionResponse withUpdateEnvironmentTemplateVersionOutput(org.openapis.openapi.models.shared.UpdateEnvironmentTemplateVersionOutput updateEnvironmentTemplateVersionOutput) {
         this.updateEnvironmentTemplateVersionOutput = updateEnvironmentTemplateVersionOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateEnvironmentTemplateVersionResponse {
      */
     
     public Object validationException;
+
     public UpdateEnvironmentTemplateVersionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateEnvironmentTemplateVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

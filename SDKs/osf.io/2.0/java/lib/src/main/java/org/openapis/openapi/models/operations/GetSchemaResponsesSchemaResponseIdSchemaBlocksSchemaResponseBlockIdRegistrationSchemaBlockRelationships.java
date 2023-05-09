@@ -15,9 +15,11 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     
     public String schema;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockRelationships withSchema(String schema) {
         this.schema = schema;
         return this;
     }
     
+    public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockRelationships(){}
 }

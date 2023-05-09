@@ -15,6 +15,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courierId")
     public String courierId;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds withCourierId(String courierId) {
         this.courierId = courierId;
         return this;
@@ -26,6 +27,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courierName")
     public String courierName;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds withCourierName(String courierName) {
         this.courierName = courierName;
         return this;
@@ -37,6 +39,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockId")
     public String dockId;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -48,6 +51,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -59,9 +63,11 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouseId")
     public String warehouseId;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds withWarehouseId(String warehouseId) {
         this.warehouseId = warehouseId;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds(){}
 }

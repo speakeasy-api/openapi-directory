@@ -12,6 +12,7 @@ public class UpdateFirewallPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateFirewallPolicyRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class UpdateFirewallPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public UpdateFirewallPolicyRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -28,6 +30,7 @@ public class UpdateFirewallPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public UpdateFirewallPolicyRequest withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -35,6 +38,7 @@ public class UpdateFirewallPolicyRequest {
     
     @JsonProperty("FirewallPolicy")
     public FirewallPolicy firewallPolicy;
+
     public UpdateFirewallPolicyRequest withFirewallPolicy(FirewallPolicy firewallPolicy) {
         this.firewallPolicy = firewallPolicy;
         return this;
@@ -43,6 +47,7 @@ public class UpdateFirewallPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallPolicyArn")
     public String firewallPolicyArn;
+
     public UpdateFirewallPolicyRequest withFirewallPolicyArn(String firewallPolicyArn) {
         this.firewallPolicyArn = firewallPolicyArn;
         return this;
@@ -51,6 +56,7 @@ public class UpdateFirewallPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallPolicyName")
     public String firewallPolicyName;
+
     public UpdateFirewallPolicyRequest withFirewallPolicyName(String firewallPolicyName) {
         this.firewallPolicyName = firewallPolicyName;
         return this;
@@ -58,9 +64,14 @@ public class UpdateFirewallPolicyRequest {
     
     @JsonProperty("UpdateToken")
     public String updateToken;
+
     public UpdateFirewallPolicyRequest withUpdateToken(String updateToken) {
         this.updateToken = updateToken;
         return this;
     }
     
+    public UpdateFirewallPolicyRequest(@JsonProperty("FirewallPolicy") FirewallPolicy firewallPolicy, @JsonProperty("UpdateToken") String updateToken) {
+        this.firewallPolicy = firewallPolicy;
+        this.updateToken = updateToken;
+  }
 }

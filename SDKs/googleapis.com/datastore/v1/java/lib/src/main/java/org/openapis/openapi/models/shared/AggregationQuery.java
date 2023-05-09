@@ -18,6 +18,7 @@ public class AggregationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregations")
     public Aggregation[] aggregations;
+
     public AggregationQuery withAggregations(Aggregation[] aggregations) {
         this.aggregations = aggregations;
         return this;
@@ -29,9 +30,11 @@ public class AggregationQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nestedQuery")
     public Query nestedQuery;
+
     public AggregationQuery withNestedQuery(Query nestedQuery) {
         this.nestedQuery = nestedQuery;
         return this;
     }
     
+    public AggregationQuery(){}
 }

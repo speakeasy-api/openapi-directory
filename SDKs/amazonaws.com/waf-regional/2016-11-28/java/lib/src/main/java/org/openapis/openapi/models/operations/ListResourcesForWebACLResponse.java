@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourcesForWebACLResponse {
     
     public String contentType;
+
     public ListResourcesForWebACLResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResourcesForWebACLResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourcesForWebACLResponse listResourcesForWebACLResponse;
+
     public ListResourcesForWebACLResponse withListResourcesForWebACLResponse(org.openapis.openapi.models.shared.ListResourcesForWebACLResponse listResourcesForWebACLResponse) {
         this.listResourcesForWebACLResponse = listResourcesForWebACLResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListResourcesForWebACLResponse {
     
     
     public Integer statusCode;
+
     public ListResourcesForWebACLResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListResourcesForWebACLResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourcesForWebACLResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ListResourcesForWebACLResponse {
      */
     
     public Object wafInternalErrorException;
+
     public ListResourcesForWebACLResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class ListResourcesForWebACLResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public ListResourcesForWebACLResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class ListResourcesForWebACLResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public ListResourcesForWebACLResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -73,9 +81,14 @@ public class ListResourcesForWebACLResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public ListResourcesForWebACLResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public ListResourcesForWebACLResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

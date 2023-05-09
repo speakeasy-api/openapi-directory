@@ -15,6 +15,7 @@ public class NAWelcomeWebhookResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public NAWelcomeWebhookResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -23,9 +24,11 @@ public class NAWelcomeWebhookResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_exec")
     public Double timeExec;
+
     public NAWelcomeWebhookResponse withTimeExec(Double timeExec) {
         this.timeExec = timeExec;
         return this;
     }
     
+    public NAWelcomeWebhookResponse(){}
 }

@@ -15,9 +15,11 @@ public class UserStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Capacity")
     public String capacity;
+
     public UserStorage withCapacity(String capacity) {
         this.capacity = capacity;
         return this;
     }
     
+    public UserStorage(){}
 }

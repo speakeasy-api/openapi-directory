@@ -154,6 +154,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -186,13 +191,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLexiconResponse res = new org.openapis.openapi.models.operations.DeleteLexiconResponse() {{
+        org.openapis.openapi.models.operations.DeleteLexiconResponse res = new org.openapis.openapi.models.operations.DeleteLexiconResponse(contentType, httpRes.statusCode()) {{
             deleteLexiconOutput = null;
             lexiconNotFoundException = null;
             serviceFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -255,13 +258,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeVoicesResponse res = new org.openapis.openapi.models.operations.DescribeVoicesResponse() {{
+        org.openapis.openapi.models.operations.DescribeVoicesResponse res = new org.openapis.openapi.models.operations.DescribeVoicesResponse(contentType, httpRes.statusCode()) {{
             describeVoicesOutput = null;
             invalidNextTokenException = null;
             serviceFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -318,13 +319,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLexiconResponse res = new org.openapis.openapi.models.operations.GetLexiconResponse() {{
+        org.openapis.openapi.models.operations.GetLexiconResponse res = new org.openapis.openapi.models.operations.GetLexiconResponse(contentType, httpRes.statusCode()) {{
             getLexiconOutput = null;
             lexiconNotFoundException = null;
             serviceFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -381,14 +380,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSpeechSynthesisTaskResponse res = new org.openapis.openapi.models.operations.GetSpeechSynthesisTaskResponse() {{
+        org.openapis.openapi.models.operations.GetSpeechSynthesisTaskResponse res = new org.openapis.openapi.models.operations.GetSpeechSynthesisTaskResponse(contentType, httpRes.statusCode()) {{
             getSpeechSynthesisTaskOutput = null;
             invalidTaskIdException = null;
             serviceFailureException = null;
             synthesisTaskNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -458,13 +455,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLexiconsResponse res = new org.openapis.openapi.models.operations.ListLexiconsResponse() {{
+        org.openapis.openapi.models.operations.ListLexiconsResponse res = new org.openapis.openapi.models.operations.ListLexiconsResponse(contentType, httpRes.statusCode()) {{
             listLexiconsOutput = null;
             invalidNextTokenException = null;
             serviceFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -527,13 +522,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSpeechSynthesisTasksResponse res = new org.openapis.openapi.models.operations.ListSpeechSynthesisTasksResponse() {{
+        org.openapis.openapi.models.operations.ListSpeechSynthesisTasksResponse res = new org.openapis.openapi.models.operations.ListSpeechSynthesisTasksResponse(contentType, httpRes.statusCode()) {{
             listSpeechSynthesisTasksOutput = null;
             invalidNextTokenException = null;
             serviceFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -595,7 +588,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutLexiconResponse res = new org.openapis.openapi.models.operations.PutLexiconResponse() {{
+        org.openapis.openapi.models.operations.PutLexiconResponse res = new org.openapis.openapi.models.operations.PutLexiconResponse(contentType, httpRes.statusCode()) {{
             putLexiconOutput = null;
             invalidLexiconException = null;
             unsupportedPlsAlphabetException = null;
@@ -605,8 +598,6 @@ public class SDK {
             maxLexiconsNumberExceededException = null;
             serviceFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -703,7 +694,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartSpeechSynthesisTaskResponse res = new org.openapis.openapi.models.operations.StartSpeechSynthesisTaskResponse() {{
+        org.openapis.openapi.models.operations.StartSpeechSynthesisTaskResponse res = new org.openapis.openapi.models.operations.StartSpeechSynthesisTaskResponse(contentType, httpRes.statusCode()) {{
             startSpeechSynthesisTaskOutput = null;
             textLengthExceededException = null;
             invalidS3BucketException = null;
@@ -718,8 +709,6 @@ public class SDK {
             ssmlMarksNotSupportedForTextTypeException = null;
             languageNotSupportedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -851,7 +840,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SynthesizeSpeechResponse res = new org.openapis.openapi.models.operations.SynthesizeSpeechResponse() {{
+        org.openapis.openapi.models.operations.SynthesizeSpeechResponse res = new org.openapis.openapi.models.operations.SynthesizeSpeechResponse(contentType, httpRes.statusCode()) {{
             synthesizeSpeechOutput = null;
             textLengthExceededException = null;
             invalidSampleRateException = null;
@@ -863,8 +852,6 @@ public class SDK {
             languageNotSupportedException = null;
             engineNotSupportedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

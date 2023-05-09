@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Document {
     @JsonProperty("contentReference")
     public ContentReference contentReference;
+
     public Document withContentReference(ContentReference contentReference) {
         this.contentReference = contentReference;
         return this;
@@ -22,6 +23,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excerpt")
     public DocumentText excerpt;
+
     public Document withExcerpt(DocumentText excerpt) {
         this.excerpt = excerpt;
         return this;
@@ -30,9 +32,13 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public DocumentText title;
+
     public Document withTitle(DocumentText title) {
         this.title = title;
         return this;
     }
     
+    public Document(@JsonProperty("contentReference") ContentReference contentReference) {
+        this.contentReference = contentReference;
+  }
 }

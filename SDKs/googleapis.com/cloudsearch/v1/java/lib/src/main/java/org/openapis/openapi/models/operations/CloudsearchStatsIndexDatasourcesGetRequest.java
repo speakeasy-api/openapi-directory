@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudsearchStatsIndexDatasourcesGetRequest {
@@ -12,6 +13,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate.day")
     public Long fromDateDay;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withFromDateDay(Long fromDateDay) {
         this.fromDateDay = fromDateDay;
         return this;
@@ -72,6 +79,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate.month")
     public Long fromDateMonth;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withFromDateMonth(Long fromDateMonth) {
         this.fromDateMonth = fromDateMonth;
         return this;
@@ -82,6 +90,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate.year")
     public Long fromDateYear;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withFromDateYear(Long fromDateYear) {
         this.fromDateYear = fromDateYear;
         return this;
@@ -92,6 +101,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -102,6 +112,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withName(String name) {
         this.name = name;
         return this;
@@ -112,6 +123,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +134,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate.day")
     public Long toDateDay;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withToDateDay(Long toDateDay) {
         this.toDateDay = toDateDay;
         return this;
@@ -152,6 +167,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate.month")
     public Long toDateMonth;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withToDateMonth(Long toDateMonth) {
         this.toDateMonth = toDateMonth;
         return this;
@@ -162,6 +178,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate.year")
     public Long toDateYear;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withToDateYear(Long toDateYear) {
         this.toDateYear = toDateYear;
         return this;
@@ -172,6 +189,7 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -182,9 +200,13 @@ public class CloudsearchStatsIndexDatasourcesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudsearchStatsIndexDatasourcesGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudsearchStatsIndexDatasourcesGetRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

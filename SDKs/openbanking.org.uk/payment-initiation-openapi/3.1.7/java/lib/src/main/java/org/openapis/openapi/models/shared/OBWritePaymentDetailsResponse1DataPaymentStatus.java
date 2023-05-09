@@ -22,6 +22,7 @@ public class OBWritePaymentDetailsResponse1DataPaymentStatus {
      */
     @JsonProperty("PaymentTransactionId")
     public String paymentTransactionId;
+
     public OBWritePaymentDetailsResponse1DataPaymentStatus withPaymentTransactionId(String paymentTransactionId) {
         this.paymentTransactionId = paymentTransactionId;
         return this;
@@ -32,6 +33,7 @@ public class OBWritePaymentDetailsResponse1DataPaymentStatus {
      */
     @JsonProperty("Status")
     public OBWritePaymentDetailsResponse1DataPaymentStatusStatusEnum status;
+
     public OBWritePaymentDetailsResponse1DataPaymentStatus withStatus(OBWritePaymentDetailsResponse1DataPaymentStatusStatusEnum status) {
         this.status = status;
         return this;
@@ -43,6 +45,7 @@ public class OBWritePaymentDetailsResponse1DataPaymentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetail")
     public OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetail statusDetail;
+
     public OBWritePaymentDetailsResponse1DataPaymentStatus withStatusDetail(OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetail statusDetail) {
         this.statusDetail = statusDetail;
         return this;
@@ -57,9 +60,15 @@ public class OBWritePaymentDetailsResponse1DataPaymentStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StatusUpdateDateTime")
     public OffsetDateTime statusUpdateDateTime;
+
     public OBWritePaymentDetailsResponse1DataPaymentStatus withStatusUpdateDateTime(OffsetDateTime statusUpdateDateTime) {
         this.statusUpdateDateTime = statusUpdateDateTime;
         return this;
     }
     
+    public OBWritePaymentDetailsResponse1DataPaymentStatus(@JsonProperty("PaymentTransactionId") String paymentTransactionId, @JsonProperty("Status") OBWritePaymentDetailsResponse1DataPaymentStatusStatusEnum status, @JsonProperty("StatusUpdateDateTime") OffsetDateTime statusUpdateDateTime) {
+        this.paymentTransactionId = paymentTransactionId;
+        this.status = status;
+        this.statusUpdateDateTime = statusUpdateDateTime;
+  }
 }

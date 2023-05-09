@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersGetPrefsRequest {
@@ -12,9 +13,13 @@ public class UsersGetPrefsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public UsersGetPrefsRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public UsersGetPrefsRequest(@JsonProperty("userId") String userId) {
+        this.userId = userId;
+  }
 }

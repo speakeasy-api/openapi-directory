@@ -45,10 +45,8 @@ public class ClientInitialAccess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRealmClientsInitialAccessIdResponse res = new org.openapis.openapi.models.operations.DeleteRealmClientsInitialAccessIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteRealmClientsInitialAccessIdResponse res = new org.openapis.openapi.models.operations.DeleteRealmClientsInitialAccessIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -72,11 +70,9 @@ public class ClientInitialAccess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmClientsInitialAccessResponse res = new org.openapis.openapi.models.operations.GetRealmClientsInitialAccessResponse() {{
+        org.openapis.openapi.models.operations.GetRealmClientsInitialAccessResponse res = new org.openapis.openapi.models.operations.GetRealmClientsInitialAccessResponse(contentType, httpRes.statusCode()) {{
             clientInitialAccessPresentations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -116,11 +112,9 @@ public class ClientInitialAccess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmClientsInitialAccessResponse res = new org.openapis.openapi.models.operations.PostRealmClientsInitialAccessResponse() {{
+        org.openapis.openapi.models.operations.PostRealmClientsInitialAccessResponse res = new org.openapis.openapi.models.operations.PostRealmClientsInitialAccessResponse(contentType, httpRes.statusCode()) {{
             clientInitialAccessPresentation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {

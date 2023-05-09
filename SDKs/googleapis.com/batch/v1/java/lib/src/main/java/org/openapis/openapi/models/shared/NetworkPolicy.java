@@ -18,9 +18,11 @@ public class NetworkPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInterfaces")
     public NetworkInterface[] networkInterfaces;
+
     public NetworkPolicy withNetworkInterfaces(NetworkInterface[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
     }
     
+    public NetworkPolicy(){}
 }

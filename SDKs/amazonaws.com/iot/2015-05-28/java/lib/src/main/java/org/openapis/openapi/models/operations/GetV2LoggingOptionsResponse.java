@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV2LoggingOptionsResponse {
     
     public String contentType;
+
     public GetV2LoggingOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetV2LoggingOptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetV2LoggingOptionsResponse getV2LoggingOptionsResponse;
+
     public GetV2LoggingOptionsResponse withGetV2LoggingOptionsResponse(org.openapis.openapi.models.shared.GetV2LoggingOptionsResponse getV2LoggingOptionsResponse) {
         this.getV2LoggingOptionsResponse = getV2LoggingOptionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetV2LoggingOptionsResponse {
      */
     
     public Object internalException;
+
     public GetV2LoggingOptionsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class GetV2LoggingOptionsResponse {
      */
     
     public Object notConfiguredException;
+
     public GetV2LoggingOptionsResponse withNotConfiguredException(Object notConfiguredException) {
         this.notConfiguredException = notConfiguredException;
         return this;
@@ -46,6 +51,7 @@ public class GetV2LoggingOptionsResponse {
     
     
     public Integer statusCode;
+
     public GetV2LoggingOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetV2LoggingOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV2LoggingOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetV2LoggingOptionsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetV2LoggingOptionsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public GetV2LoggingOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

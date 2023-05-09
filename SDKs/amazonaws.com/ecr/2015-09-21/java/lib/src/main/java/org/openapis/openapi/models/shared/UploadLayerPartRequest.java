@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UploadLayerPartRequest {
     @JsonProperty("layerPartBlob")
     public String layerPartBlob;
+
     public UploadLayerPartRequest withLayerPartBlob(String layerPartBlob) {
         this.layerPartBlob = layerPartBlob;
         return this;
@@ -18,6 +19,7 @@ public class UploadLayerPartRequest {
     
     @JsonProperty("partFirstByte")
     public Long partFirstByte;
+
     public UploadLayerPartRequest withPartFirstByte(Long partFirstByte) {
         this.partFirstByte = partFirstByte;
         return this;
@@ -25,6 +27,7 @@ public class UploadLayerPartRequest {
     
     @JsonProperty("partLastByte")
     public Long partLastByte;
+
     public UploadLayerPartRequest withPartLastByte(Long partLastByte) {
         this.partLastByte = partLastByte;
         return this;
@@ -33,6 +36,7 @@ public class UploadLayerPartRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public UploadLayerPartRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -40,6 +44,7 @@ public class UploadLayerPartRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public UploadLayerPartRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -47,9 +52,17 @@ public class UploadLayerPartRequest {
     
     @JsonProperty("uploadId")
     public String uploadId;
+
     public UploadLayerPartRequest withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
     
+    public UploadLayerPartRequest(@JsonProperty("layerPartBlob") String layerPartBlob, @JsonProperty("partFirstByte") Long partFirstByte, @JsonProperty("partLastByte") Long partLastByte, @JsonProperty("repositoryName") String repositoryName, @JsonProperty("uploadId") String uploadId) {
+        this.layerPartBlob = layerPartBlob;
+        this.partFirstByte = partFirstByte;
+        this.partLastByte = partLastByte;
+        this.repositoryName = repositoryName;
+        this.uploadId = uploadId;
+  }
 }

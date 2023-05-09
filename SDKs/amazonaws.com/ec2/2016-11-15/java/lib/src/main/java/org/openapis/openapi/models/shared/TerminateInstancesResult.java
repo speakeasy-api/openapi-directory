@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class TerminateInstancesResult {
     
     public TerminateInstancesResultTerminatingInstances[] terminatingInstances;
+
     public TerminateInstancesResult withTerminatingInstances(TerminateInstancesResultTerminatingInstances[] terminatingInstances) {
         this.terminatingInstances = terminatingInstances;
         return this;
     }
     
+    public TerminateInstancesResult(){}
 }

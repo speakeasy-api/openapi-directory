@@ -15,6 +15,7 @@ public class TitleAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public AggregationResourceTypeEnum resourceType;
+
     public TitleAggregation withResourceType(AggregationResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -23,6 +24,7 @@ public class TitleAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public TitleSortByEnum sortBy;
+
     public TitleAggregation withSortBy(TitleSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -31,6 +33,7 @@ public class TitleAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderEnum sortOrder;
+
     public TitleAggregation withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -39,6 +42,7 @@ public class TitleAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("titles")
     public StringFilter[] titles;
+
     public TitleAggregation withTitles(StringFilter[] titles) {
         this.titles = titles;
         return this;
@@ -47,9 +51,11 @@ public class TitleAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vulnerabilityIds")
     public StringFilter[] vulnerabilityIds;
+
     public TitleAggregation withVulnerabilityIds(StringFilter[] vulnerabilityIds) {
         this.vulnerabilityIds = vulnerabilityIds;
         return this;
     }
     
+    public TitleAggregation(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListJobExecutionsForJobResponse {
     
     public String contentType;
+
     public ListJobExecutionsForJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListJobExecutionsForJobResponse {
      */
     
     public Object invalidRequestException;
+
     public ListJobExecutionsForJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -29,6 +32,7 @@ public class ListJobExecutionsForJobResponse {
      */
     
     public org.openapis.openapi.models.shared.ListJobExecutionsForJobResponse listJobExecutionsForJobResponse;
+
     public ListJobExecutionsForJobResponse withListJobExecutionsForJobResponse(org.openapis.openapi.models.shared.ListJobExecutionsForJobResponse listJobExecutionsForJobResponse) {
         this.listJobExecutionsForJobResponse = listJobExecutionsForJobResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListJobExecutionsForJobResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListJobExecutionsForJobResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -46,6 +51,7 @@ public class ListJobExecutionsForJobResponse {
     
     
     public Integer statusCode;
+
     public ListJobExecutionsForJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListJobExecutionsForJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListJobExecutionsForJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListJobExecutionsForJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListJobExecutionsForJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListJobExecutionsForJobResponse {
      */
     
     public Object throttlingException;
+
     public ListJobExecutionsForJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListJobExecutionsForJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

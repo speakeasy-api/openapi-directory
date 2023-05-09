@@ -15,9 +15,11 @@ public class DescribeRemediationConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemediationConfigurations")
     public RemediationConfiguration[] remediationConfigurations;
+
     public DescribeRemediationConfigurationsResponse withRemediationConfigurations(RemediationConfiguration[] remediationConfigurations) {
         this.remediationConfigurations = remediationConfigurations;
         return this;
     }
     
+    public DescribeRemediationConfigurationsResponse(){}
 }

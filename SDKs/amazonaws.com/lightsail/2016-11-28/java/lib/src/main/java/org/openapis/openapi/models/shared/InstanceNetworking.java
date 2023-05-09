@@ -15,6 +15,7 @@ public class InstanceNetworking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monthlyTransfer")
     public MonthlyTransfer monthlyTransfer;
+
     public InstanceNetworking withMonthlyTransfer(MonthlyTransfer monthlyTransfer) {
         this.monthlyTransfer = monthlyTransfer;
         return this;
@@ -23,9 +24,11 @@ public class InstanceNetworking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ports")
     public InstancePortInfo[] ports;
+
     public InstanceNetworking withPorts(InstancePortInfo[] ports) {
         this.ports = ports;
         return this;
     }
     
+    public InstanceNetworking(){}
 }

@@ -15,6 +15,7 @@ public class PricingConfigurationTradePolicyConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumMarkup")
     public Long minimumMarkup;
+
     public PricingConfigurationTradePolicyConfigs withMinimumMarkup(Long minimumMarkup) {
         this.minimumMarkup = minimumMarkup;
         return this;
@@ -26,6 +27,7 @@ public class PricingConfigurationTradePolicyConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesShouldAffectListPrice")
     public Boolean rulesShouldAffectListPrice;
+
     public PricingConfigurationTradePolicyConfigs withRulesShouldAffectListPrice(Boolean rulesShouldAffectListPrice) {
         this.rulesShouldAffectListPrice = rulesShouldAffectListPrice;
         return this;
@@ -37,9 +39,11 @@ public class PricingConfigurationTradePolicyConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tradePolicyId")
     public String tradePolicyId;
+
     public PricingConfigurationTradePolicyConfigs withTradePolicyId(String tradePolicyId) {
         this.tradePolicyId = tradePolicyId;
         return this;
     }
     
+    public PricingConfigurationTradePolicyConfigs(){}
 }

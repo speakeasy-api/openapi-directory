@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InlineArchiveRule {
     @JsonProperty("filter")
     public java.util.Map<String, Criterion> filter;
+
     public InlineArchiveRule withFilter(java.util.Map<String, Criterion> filter) {
         this.filter = filter;
         return this;
@@ -19,9 +20,14 @@ public class InlineArchiveRule {
     
     @JsonProperty("ruleName")
     public String ruleName;
+
     public InlineArchiveRule withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
     }
     
+    public InlineArchiveRule(@JsonProperty("filter") java.util.Map<String, Criterion> filter, @JsonProperty("ruleName") String ruleName) {
+        this.filter = filter;
+        this.ruleName = ruleName;
+  }
 }

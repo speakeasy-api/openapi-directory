@@ -18,6 +18,7 @@ public class FeatureSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultConfig")
     public MembershipSpec defaultConfig;
+
     public FeatureSpec withDefaultConfig(MembershipSpec defaultConfig) {
         this.defaultConfig = defaultConfig;
         return this;
@@ -29,9 +30,11 @@ public class FeatureSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionGoogleCa")
     public FeatureSpecProvisionGoogleCaEnum provisionGoogleCa;
+
     public FeatureSpec withProvisionGoogleCa(FeatureSpecProvisionGoogleCaEnum provisionGoogleCa) {
         this.provisionGoogleCa = provisionGoogleCa;
         return this;
     }
     
+    public FeatureSpec(){}
 }

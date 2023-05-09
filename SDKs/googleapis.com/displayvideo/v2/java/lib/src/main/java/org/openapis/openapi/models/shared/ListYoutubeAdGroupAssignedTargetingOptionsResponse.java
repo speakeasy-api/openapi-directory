@@ -18,6 +18,7 @@ public class ListYoutubeAdGroupAssignedTargetingOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedTargetingOptions")
     public AssignedTargetingOption[] assignedTargetingOptions;
+
     public ListYoutubeAdGroupAssignedTargetingOptionsResponse withAssignedTargetingOptions(AssignedTargetingOption[] assignedTargetingOptions) {
         this.assignedTargetingOptions = assignedTargetingOptions;
         return this;
@@ -29,9 +30,11 @@ public class ListYoutubeAdGroupAssignedTargetingOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListYoutubeAdGroupAssignedTargetingOptionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListYoutubeAdGroupAssignedTargetingOptionsResponse(){}
 }

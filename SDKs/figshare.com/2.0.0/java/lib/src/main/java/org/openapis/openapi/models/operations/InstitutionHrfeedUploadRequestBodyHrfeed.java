@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InstitutionHrfeedUploadRequestBodyHrfeed {
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public InstitutionHrfeedUploadRequestBodyHrfeed withContent(byte[] content) {
         this.content = content;
         return this;
@@ -16,9 +18,14 @@ public class InstitutionHrfeedUploadRequestBodyHrfeed {
     
     @SpeakeasyMetadata("multipartForm:name=hrfeed")
     public String hrfeed;
+
     public InstitutionHrfeedUploadRequestBodyHrfeed withHrfeed(String hrfeed) {
         this.hrfeed = hrfeed;
         return this;
     }
     
+    public InstitutionHrfeedUploadRequestBodyHrfeed(@JsonProperty("content") byte[] content, @JsonProperty("hrfeed") String hrfeed) {
+        this.content = content;
+        this.hrfeed = hrfeed;
+  }
 }

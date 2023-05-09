@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2CloudStorageRegexFileSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketName")
     public String bucketName;
+
     public GooglePrivacyDlpV2CloudStorageRegexFileSet withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2CloudStorageRegexFileSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeRegex")
     public String[] excludeRegex;
+
     public GooglePrivacyDlpV2CloudStorageRegexFileSet withExcludeRegex(String[] excludeRegex) {
         this.excludeRegex = excludeRegex;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2CloudStorageRegexFileSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeRegex")
     public String[] includeRegex;
+
     public GooglePrivacyDlpV2CloudStorageRegexFileSet withIncludeRegex(String[] includeRegex) {
         this.includeRegex = includeRegex;
         return this;
     }
     
+    public GooglePrivacyDlpV2CloudStorageRegexFileSet(){}
 }

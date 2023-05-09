@@ -12,9 +12,13 @@ public class PostAssetsCorrelationMatrixRandomRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostAssetsCorrelationMatrixRandomRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixRandomRequestBody(@JsonProperty("assets") Long assets) {
+        this.assets = assets;
+  }
 }

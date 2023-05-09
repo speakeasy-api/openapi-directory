@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSearchSuggestionsRequest {
     @JsonProperty("Resource")
     public ResourceTypeEnum resource;
+
     public GetSearchSuggestionsRequest withResource(ResourceTypeEnum resource) {
         this.resource = resource;
         return this;
@@ -19,9 +20,13 @@ public class GetSearchSuggestionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuggestionQuery")
     public SuggestionQuery suggestionQuery;
+
     public GetSearchSuggestionsRequest withSuggestionQuery(SuggestionQuery suggestionQuery) {
         this.suggestionQuery = suggestionQuery;
         return this;
     }
     
+    public GetSearchSuggestionsRequest(@JsonProperty("Resource") ResourceTypeEnum resource) {
+        this.resource = resource;
+  }
 }

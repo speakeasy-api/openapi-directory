@@ -15,9 +15,11 @@ public class UnclaimDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public UnclaimDeviceResponse withState(String state) {
         this.state = state;
         return this;
     }
     
+    public UnclaimDeviceResponse(){}
 }

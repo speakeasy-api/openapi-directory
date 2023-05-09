@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClusterVersionsMessage {
     
     public ClusterVersionList[] clusterVersions;
+
     public ClusterVersionsMessage withClusterVersions(ClusterVersionList[] clusterVersions) {
         this.clusterVersions = clusterVersions;
         return this;
@@ -19,9 +20,11 @@ public class ClusterVersionsMessage {
     
     
     public String marker;
+
     public ClusterVersionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ClusterVersionsMessage(){}
 }

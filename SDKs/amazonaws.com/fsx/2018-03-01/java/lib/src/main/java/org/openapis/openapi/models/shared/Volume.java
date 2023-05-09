@@ -20,6 +20,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdministrativeActions")
     public AdministrativeAction[] administrativeActions;
+
     public Volume withAdministrativeActions(AdministrativeAction[] administrativeActions) {
         this.administrativeActions = administrativeActions;
         return this;
@@ -33,6 +34,7 @@ public class Volume {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Volume withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -44,6 +46,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public Volume withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -52,6 +55,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public VolumeLifecycleEnum lifecycle;
+
     public Volume withLifecycle(VolumeLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -60,6 +64,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifecycleTransitionReason")
     public LifecycleTransitionReason lifecycleTransitionReason;
+
     public Volume withLifecycleTransitionReason(LifecycleTransitionReason lifecycleTransitionReason) {
         this.lifecycleTransitionReason = lifecycleTransitionReason;
         return this;
@@ -68,6 +73,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Volume withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +85,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OntapConfiguration")
     public OntapVolumeConfiguration ontapConfiguration;
+
     public Volume withOntapConfiguration(OntapVolumeConfiguration ontapConfiguration) {
         this.ontapConfiguration = ontapConfiguration;
         return this;
@@ -87,6 +94,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenZFSConfiguration")
     public OpenZFSVolumeConfiguration openZFSConfiguration;
+
     public Volume withOpenZFSConfiguration(OpenZFSVolumeConfiguration openZFSConfiguration) {
         this.openZFSConfiguration = openZFSConfiguration;
         return this;
@@ -98,6 +106,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public Volume withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -109,6 +118,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public Volume withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -117,6 +127,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeId")
     public String volumeId;
+
     public Volume withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
@@ -125,9 +136,11 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeType")
     public VolumeTypeEnum volumeType;
+
     public Volume withVolumeType(VolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public Volume(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutMetadataResponse {
@@ -12,6 +13,7 @@ public class PutMetadataResponse {
      */
     
     public Object accessDeniedException;
+
     public PutMetadataResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutMetadataResponse {
      */
     
     public Object channelNotBroadcasting;
+
     public PutMetadataResponse withChannelNotBroadcasting(Object channelNotBroadcasting) {
         this.channelNotBroadcasting = channelNotBroadcasting;
         return this;
@@ -29,6 +32,7 @@ public class PutMetadataResponse {
     
     
     public String contentType;
+
     public PutMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutMetadataResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutMetadataResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class PutMetadataResponse {
     
     
     public Integer statusCode;
+
     public PutMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class PutMetadataResponse {
      */
     
     public Object throttlingException;
+
     public PutMetadataResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class PutMetadataResponse {
      */
     
     public Object validationException;
+
     public PutMetadataResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

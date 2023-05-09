@@ -15,9 +15,11 @@ public class BusinessDayConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessDays")
     public String[] businessDays;
+
     public BusinessDayConfig withBusinessDays(String[] businessDays) {
         this.businessDays = businessDays;
         return this;
     }
     
+    public BusinessDayConfig(){}
 }

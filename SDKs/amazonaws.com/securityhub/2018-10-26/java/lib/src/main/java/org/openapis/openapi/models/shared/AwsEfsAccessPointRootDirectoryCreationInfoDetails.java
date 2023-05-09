@@ -15,6 +15,7 @@ public class AwsEfsAccessPointRootDirectoryCreationInfoDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerGid")
     public String ownerGid;
+
     public AwsEfsAccessPointRootDirectoryCreationInfoDetails withOwnerGid(String ownerGid) {
         this.ownerGid = ownerGid;
         return this;
@@ -23,6 +24,7 @@ public class AwsEfsAccessPointRootDirectoryCreationInfoDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerUid")
     public String ownerUid;
+
     public AwsEfsAccessPointRootDirectoryCreationInfoDetails withOwnerUid(String ownerUid) {
         this.ownerUid = ownerUid;
         return this;
@@ -31,9 +33,11 @@ public class AwsEfsAccessPointRootDirectoryCreationInfoDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permissions")
     public String permissions;
+
     public AwsEfsAccessPointRootDirectoryCreationInfoDetails withPermissions(String permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public AwsEfsAccessPointRootDirectoryCreationInfoDetails(){}
 }

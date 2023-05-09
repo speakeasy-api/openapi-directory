@@ -15,6 +15,7 @@ public class Term {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceText")
     public String sourceText;
+
     public Term withSourceText(String sourceText) {
         this.sourceText = sourceText;
         return this;
@@ -23,9 +24,11 @@ public class Term {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetText")
     public String targetText;
+
     public Term withTargetText(String targetText) {
         this.targetText = targetText;
         return this;
     }
     
+    public Term(){}
 }

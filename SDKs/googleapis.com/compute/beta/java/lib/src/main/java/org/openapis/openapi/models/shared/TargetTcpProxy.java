@@ -18,6 +18,7 @@ public class TargetTcpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public TargetTcpProxy withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class TargetTcpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TargetTcpProxy withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class TargetTcpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TargetTcpProxy withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class TargetTcpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TargetTcpProxy withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class TargetTcpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TargetTcpProxy withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class TargetTcpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyBind")
     public Boolean proxyBind;
+
     public TargetTcpProxy withProxyBind(Boolean proxyBind) {
         this.proxyBind = proxyBind;
         return this;
@@ -84,6 +90,7 @@ public class TargetTcpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyHeader")
     public TargetTcpProxyProxyHeaderEnum proxyHeader;
+
     public TargetTcpProxy withProxyHeader(TargetTcpProxyProxyHeaderEnum proxyHeader) {
         this.proxyHeader = proxyHeader;
         return this;
@@ -95,6 +102,7 @@ public class TargetTcpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public TargetTcpProxy withRegion(String region) {
         this.region = region;
         return this;
@@ -106,6 +114,7 @@ public class TargetTcpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public TargetTcpProxy withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -117,9 +126,11 @@ public class TargetTcpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public TargetTcpProxy withService(String service) {
         this.service = service;
         return this;
     }
     
+    public TargetTcpProxy(){}
 }

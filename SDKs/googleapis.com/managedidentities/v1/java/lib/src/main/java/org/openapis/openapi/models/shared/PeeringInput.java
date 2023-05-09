@@ -18,6 +18,7 @@ public class PeeringInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizedNetwork")
     public String authorizedNetwork;
+
     public PeeringInput withAuthorizedNetwork(String authorizedNetwork) {
         this.authorizedNetwork = authorizedNetwork;
         return this;
@@ -29,6 +30,7 @@ public class PeeringInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainResource")
     public String domainResource;
+
     public PeeringInput withDomainResource(String domainResource) {
         this.domainResource = domainResource;
         return this;
@@ -40,9 +42,11 @@ public class PeeringInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PeeringInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public PeeringInput(){}
 }

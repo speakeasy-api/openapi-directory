@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DisableSerialConsoleAccessRequest {
     
     public Boolean dryRun;
+
     public DisableSerialConsoleAccessRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public DisableSerialConsoleAccessRequest(){}
 }

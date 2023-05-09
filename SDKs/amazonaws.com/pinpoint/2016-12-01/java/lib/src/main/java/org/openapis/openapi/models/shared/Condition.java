@@ -15,6 +15,7 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Conditions")
     public SimpleCondition[] conditions;
+
     public Condition withConditions(SimpleCondition[] conditions) {
         this.conditions = conditions;
         return this;
@@ -23,9 +24,11 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operator")
     public OperatorEnum operator;
+
     public Condition withOperator(OperatorEnum operator) {
         this.operator = operator;
         return this;
     }
     
+    public Condition(){}
 }

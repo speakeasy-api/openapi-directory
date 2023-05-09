@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetcompanymatchRequest;
 import org.openapis.openapi.models.operations.GetcompanymatchResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetcompanymatchRequest req = new GetcompanymatchRequest() {{
-                company = "Medhurst - Rau";
-                license = "quibusdam";
-            }}            
+            GetcompanymatchRequest req = new GetcompanymatchRequest("corrupti", "provident");            
 
             GetcompanymatchResponse res = sdk.companyNameSimilarityKey.getcompanymatch(req);
 
-            if (res.getcompanymatch200ApplicationJSONObject.isPresent()) {
+            if (res.getcompanymatch200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,9 +44,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### companyNameSimilarityKey
+### [companyNameSimilarityKey](docs/companynamesimilaritykey/README.md)
 
-* `getcompanymatch` - Gets a similarity key for matching purposes for company name data
+* [getcompanymatch](docs/companynamesimilaritykey/README.md#getcompanymatch) - Gets a similarity key for matching purposes for company name data
 <!-- End SDK Available Operations -->
 
 ### Maturity

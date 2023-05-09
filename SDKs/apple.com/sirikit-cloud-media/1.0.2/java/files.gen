@@ -94,4 +94,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/UserActivity.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateActivityResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateActivityRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueueActivityReportEventEnum.java
+docs/sdk/README.md
+docs/config/README.md
+docs/intent/README.md
+docs/queues/README.md
 USAGE.md

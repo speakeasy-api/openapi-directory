@@ -18,6 +18,7 @@ public class ApiSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public ApiSpec withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class ApiSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String contents;
+
     public ApiSpec withContents(String contents) {
         this.contents = contents;
         return this;
@@ -40,6 +42,7 @@ public class ApiSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public ApiSpec withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class ApiSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ApiSpec withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class ApiSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public ApiSpec withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -73,6 +78,7 @@ public class ApiSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash")
     public String hash;
+
     public ApiSpec withHash(String hash) {
         this.hash = hash;
         return this;
@@ -84,6 +90,7 @@ public class ApiSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ApiSpec withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -95,6 +102,7 @@ public class ApiSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public ApiSpec withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -106,6 +114,7 @@ public class ApiSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApiSpec withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class ApiSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionCreateTime")
     public String revisionCreateTime;
+
     public ApiSpec withRevisionCreateTime(String revisionCreateTime) {
         this.revisionCreateTime = revisionCreateTime;
         return this;
@@ -128,6 +138,7 @@ public class ApiSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public ApiSpec withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -139,6 +150,7 @@ public class ApiSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionUpdateTime")
     public String revisionUpdateTime;
+
     public ApiSpec withRevisionUpdateTime(String revisionUpdateTime) {
         this.revisionUpdateTime = revisionUpdateTime;
         return this;
@@ -150,6 +162,7 @@ public class ApiSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeBytes")
     public Integer sizeBytes;
+
     public ApiSpec withSizeBytes(Integer sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
@@ -161,9 +174,11 @@ public class ApiSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceUri")
     public String sourceUri;
+
     public ApiSpec withSourceUri(String sourceUri) {
         this.sourceUri = sourceUri;
         return this;
     }
     
+    public ApiSpec(){}
 }

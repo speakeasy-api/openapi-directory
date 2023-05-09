@@ -15,6 +15,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public Notification withBody(String body) {
         this.body = body;
         return this;
@@ -26,6 +27,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crmExperimentIds")
     public String[] crmExperimentIds;
+
     public Notification withCrmExperimentIds(String[] crmExperimentIds) {
         this.crmExperimentIds = crmExperimentIds;
         return this;
@@ -34,6 +36,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doc_id")
     public String docId;
+
     public Notification withDocId(String docId) {
         this.docId = docId;
         return this;
@@ -42,6 +45,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doc_type")
     public String docType;
+
     public Notification withDocType(String docType) {
         this.docType = docType;
         return this;
@@ -50,6 +54,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dont_show_notification")
     public Boolean dontShowNotification;
+
     public Notification withDontShowNotification(Boolean dontShowNotification) {
         this.dontShowNotification = dontShowNotification;
         return this;
@@ -58,6 +63,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconUrl")
     public String iconUrl;
+
     public Notification withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -66,6 +72,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_document_mature")
     public Boolean isDocumentMature;
+
     public Notification withIsDocumentMature(Boolean isDocumentMature) {
         this.isDocumentMature = isDocumentMature;
         return this;
@@ -77,6 +84,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Notification withKind(String kind) {
         this.kind = kind;
         return this;
@@ -85,6 +93,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationGroup")
     public String notificationGroup;
+
     public Notification withNotificationGroup(String notificationGroup) {
         this.notificationGroup = notificationGroup;
         return this;
@@ -93,6 +102,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notification_type")
     public String notificationType;
+
     public Notification withNotificationType(String notificationType) {
         this.notificationType = notificationType;
         return this;
@@ -101,6 +111,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pcampaign_id")
     public String pcampaignId;
+
     public Notification withPcampaignId(String pcampaignId) {
         this.pcampaignId = pcampaignId;
         return this;
@@ -109,6 +120,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public Notification withReason(String reason) {
         this.reason = reason;
         return this;
@@ -117,6 +129,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_notification_settings_action")
     public Boolean showNotificationSettingsAction;
+
     public Notification withShowNotificationSettingsAction(Boolean showNotificationSettingsAction) {
         this.showNotificationSettingsAction = showNotificationSettingsAction;
         return this;
@@ -125,6 +138,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetUrl")
     public String targetUrl;
+
     public Notification withTargetUrl(String targetUrl) {
         this.targetUrl = targetUrl;
         return this;
@@ -133,6 +147,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeToExpireMs")
     public String timeToExpireMs;
+
     public Notification withTimeToExpireMs(String timeToExpireMs) {
         this.timeToExpireMs = timeToExpireMs;
         return this;
@@ -141,9 +156,11 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Notification withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Notification(){}
 }

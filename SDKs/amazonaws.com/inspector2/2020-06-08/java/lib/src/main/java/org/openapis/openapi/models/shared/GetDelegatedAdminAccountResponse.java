@@ -15,9 +15,11 @@ public class GetDelegatedAdminAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegatedAdmin")
     public DelegatedAdmin delegatedAdmin;
+
     public GetDelegatedAdminAccountResponse withDelegatedAdmin(DelegatedAdmin delegatedAdmin) {
         this.delegatedAdmin = delegatedAdmin;
         return this;
     }
     
+    public GetDelegatedAdminAccountResponse(){}
 }

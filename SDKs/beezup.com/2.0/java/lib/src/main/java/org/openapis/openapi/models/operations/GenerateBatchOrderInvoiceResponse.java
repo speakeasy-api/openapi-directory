@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateBatchOrderInvoiceResponse {
@@ -12,6 +13,7 @@ public class GenerateBatchOrderInvoiceResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GenerateBatchOrderInvoiceResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GenerateBatchOrderInvoiceResponse {
     
     
     public String contentType;
+
     public GenerateBatchOrderInvoiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GenerateBatchOrderInvoiceResponse {
     
     
     public Integer statusCode;
+
     public GenerateBatchOrderInvoiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GenerateBatchOrderInvoiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateBatchOrderInvoiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -46,6 +51,7 @@ public class GenerateBatchOrderInvoiceResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage;
+
     public GenerateBatchOrderInvoiceResponse withErrorResponseMessage(org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage) {
         this.errorResponseMessage = errorResponseMessage;
         return this;
@@ -56,6 +62,7 @@ public class GenerateBatchOrderInvoiceResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateBatchOrderInvoiceErrorResponseItem[] generateBatchOrderInvoiceErrorResponseItems;
+
     public GenerateBatchOrderInvoiceResponse withGenerateBatchOrderInvoiceErrorResponseItems(org.openapis.openapi.models.shared.GenerateBatchOrderInvoiceErrorResponseItem[] generateBatchOrderInvoiceErrorResponseItems) {
         this.generateBatchOrderInvoiceErrorResponseItems = generateBatchOrderInvoiceErrorResponseItems;
         return this;
@@ -66,9 +73,14 @@ public class GenerateBatchOrderInvoiceResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateOrderInvoiceResponse[] generateBatchOrderInvoiceResponse;
+
     public GenerateBatchOrderInvoiceResponse withGenerateBatchOrderInvoiceResponse(org.openapis.openapi.models.shared.GenerateOrderInvoiceResponse[] generateBatchOrderInvoiceResponse) {
         this.generateBatchOrderInvoiceResponse = generateBatchOrderInvoiceResponse;
         return this;
     }
     
+    public GenerateBatchOrderInvoiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

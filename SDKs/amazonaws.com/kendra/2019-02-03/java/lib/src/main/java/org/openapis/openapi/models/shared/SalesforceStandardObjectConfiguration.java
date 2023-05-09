@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SalesforceStandardObjectConfiguration {
     @JsonProperty("DocumentDataFieldName")
     public String documentDataFieldName;
+
     public SalesforceStandardObjectConfiguration withDocumentDataFieldName(String documentDataFieldName) {
         this.documentDataFieldName = documentDataFieldName;
         return this;
@@ -22,6 +23,7 @@ public class SalesforceStandardObjectConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentTitleFieldName")
     public String documentTitleFieldName;
+
     public SalesforceStandardObjectConfiguration withDocumentTitleFieldName(String documentTitleFieldName) {
         this.documentTitleFieldName = documentTitleFieldName;
         return this;
@@ -30,6 +32,7 @@ public class SalesforceStandardObjectConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldMappings")
     public DataSourceToIndexFieldMapping[] fieldMappings;
+
     public SalesforceStandardObjectConfiguration withFieldMappings(DataSourceToIndexFieldMapping[] fieldMappings) {
         this.fieldMappings = fieldMappings;
         return this;
@@ -37,9 +40,14 @@ public class SalesforceStandardObjectConfiguration {
     
     @JsonProperty("Name")
     public SalesforceStandardObjectNameEnum name;
+
     public SalesforceStandardObjectConfiguration withName(SalesforceStandardObjectNameEnum name) {
         this.name = name;
         return this;
     }
     
+    public SalesforceStandardObjectConfiguration(@JsonProperty("DocumentDataFieldName") String documentDataFieldName, @JsonProperty("Name") SalesforceStandardObjectNameEnum name) {
+        this.documentDataFieldName = documentDataFieldName;
+        this.name = name;
+  }
 }

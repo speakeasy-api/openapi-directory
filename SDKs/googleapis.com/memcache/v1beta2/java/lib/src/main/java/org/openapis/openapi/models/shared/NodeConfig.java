@@ -18,6 +18,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuCount")
     public Integer cpuCount;
+
     public NodeConfig withCpuCount(Integer cpuCount) {
         this.cpuCount = cpuCount;
         return this;
@@ -29,9 +30,11 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memorySizeMb")
     public Integer memorySizeMb;
+
     public NodeConfig withMemorySizeMb(Integer memorySizeMb) {
         this.memorySizeMb = memorySizeMb;
         return this;
     }
     
+    public NodeConfig(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCampaignDateRangeKpiResponse {
@@ -12,6 +13,7 @@ public class GetCampaignDateRangeKpiResponse {
      */
     
     public Object badRequestException;
+
     public GetCampaignDateRangeKpiResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetCampaignDateRangeKpiResponse {
     
     
     public String contentType;
+
     public GetCampaignDateRangeKpiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCampaignDateRangeKpiResponse {
      */
     
     public Object forbiddenException;
+
     public GetCampaignDateRangeKpiResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetCampaignDateRangeKpiResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCampaignDateRangeKpiResponse getCampaignDateRangeKpiResponse;
+
     public GetCampaignDateRangeKpiResponse withGetCampaignDateRangeKpiResponse(org.openapis.openapi.models.shared.GetCampaignDateRangeKpiResponse getCampaignDateRangeKpiResponse) {
         this.getCampaignDateRangeKpiResponse = getCampaignDateRangeKpiResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetCampaignDateRangeKpiResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetCampaignDateRangeKpiResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetCampaignDateRangeKpiResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetCampaignDateRangeKpiResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetCampaignDateRangeKpiResponse {
      */
     
     public Object notFoundException;
+
     public GetCampaignDateRangeKpiResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetCampaignDateRangeKpiResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetCampaignDateRangeKpiResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetCampaignDateRangeKpiResponse {
     
     
     public Integer statusCode;
+
     public GetCampaignDateRangeKpiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetCampaignDateRangeKpiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCampaignDateRangeKpiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetCampaignDateRangeKpiResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetCampaignDateRangeKpiResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetCampaignDateRangeKpiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

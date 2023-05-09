@@ -15,6 +15,7 @@ public class GetDraftRegistrationsDraftIdInstitutionsInstitutionAttributes {
      */
     
     public String authUrl;
+
     public GetDraftRegistrationsDraftIdInstitutionsInstitutionAttributes withAuthUrl(String authUrl) {
         this.authUrl = authUrl;
         return this;
@@ -25,6 +26,7 @@ public class GetDraftRegistrationsDraftIdInstitutionsInstitutionAttributes {
      */
     
     public String description;
+
     public GetDraftRegistrationsDraftIdInstitutionsInstitutionAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class GetDraftRegistrationsDraftIdInstitutionsInstitutionAttributes {
      */
     
     public String logoPath;
+
     public GetDraftRegistrationsDraftIdInstitutionsInstitutionAttributes withLogoPath(String logoPath) {
         this.logoPath = logoPath;
         return this;
@@ -45,9 +48,11 @@ public class GetDraftRegistrationsDraftIdInstitutionsInstitutionAttributes {
      */
     
     public String name;
+
     public GetDraftRegistrationsDraftIdInstitutionsInstitutionAttributes withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetDraftRegistrationsDraftIdInstitutionsInstitutionAttributes(){}
 }

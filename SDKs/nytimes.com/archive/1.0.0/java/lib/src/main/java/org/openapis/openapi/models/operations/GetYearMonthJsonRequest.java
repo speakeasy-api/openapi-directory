@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetYearMonthJsonRequest {
@@ -12,6 +13,7 @@ public class GetYearMonthJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=month")
     public Integer month;
+
     public GetYearMonthJsonRequest withMonth(Integer month) {
         this.month = month;
         return this;
@@ -22,9 +24,14 @@ public class GetYearMonthJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
     public Integer year;
+
     public GetYearMonthJsonRequest withYear(Integer year) {
         this.year = year;
         return this;
     }
     
+    public GetYearMonthJsonRequest(@JsonProperty("month") Integer month, @JsonProperty("year") Integer year) {
+        this.month = month;
+        this.year = year;
+  }
 }

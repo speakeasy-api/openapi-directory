@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public String property;
+
     public GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest withProperty(String property) {
         this.property = property;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagId")
     public String tagId;
+
     public GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest withTagId(String tagId) {
         this.tagId = tagId;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest(){}
 }

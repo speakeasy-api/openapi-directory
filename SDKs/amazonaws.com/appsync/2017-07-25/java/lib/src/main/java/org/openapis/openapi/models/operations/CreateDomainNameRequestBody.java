@@ -14,6 +14,7 @@ public class CreateDomainNameRequestBody {
      */
     @JsonProperty("certificateArn")
     public String certificateArn;
+
     public CreateDomainNameRequestBody withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -25,6 +26,7 @@ public class CreateDomainNameRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateDomainNameRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -35,9 +37,14 @@ public class CreateDomainNameRequestBody {
      */
     @JsonProperty("domainName")
     public String domainName;
+
     public CreateDomainNameRequestBody withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public CreateDomainNameRequestBody(@JsonProperty("certificateArn") String certificateArn, @JsonProperty("domainName") String domainName) {
+        this.certificateArn = certificateArn;
+        this.domainName = domainName;
+  }
 }

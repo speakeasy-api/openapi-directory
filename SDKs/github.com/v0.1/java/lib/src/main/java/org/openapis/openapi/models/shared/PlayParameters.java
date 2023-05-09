@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class PlayParameters {
      */
     @SpeakeasyMetadata("form:name=CallUUID")
     public String callUUID;
+
     public PlayParameters withCallUUID(String callUUID) {
         this.callUUID = callUUID;
         return this;
@@ -25,6 +27,7 @@ public class PlayParameters {
      */
     @SpeakeasyMetadata("form:name=Legs")
     public PlayParametersLegsEnum legs;
+
     public PlayParameters withLegs(PlayParametersLegsEnum legs) {
         this.legs = legs;
         return this;
@@ -35,6 +38,7 @@ public class PlayParameters {
      */
     @SpeakeasyMetadata("form:name=Length")
     public Long length;
+
     public PlayParameters withLength(Long length) {
         this.length = length;
         return this;
@@ -45,6 +49,7 @@ public class PlayParameters {
      */
     @SpeakeasyMetadata("form:name=Loop")
     public Boolean loop;
+
     public PlayParameters withLoop(Boolean loop) {
         this.loop = loop;
         return this;
@@ -55,6 +60,7 @@ public class PlayParameters {
      */
     @SpeakeasyMetadata("form:name=Mix")
     public Boolean mix;
+
     public PlayParameters withMix(Boolean mix) {
         this.mix = mix;
         return this;
@@ -65,9 +71,14 @@ public class PlayParameters {
      */
     @SpeakeasyMetadata("form:name=Sounds")
     public String sounds;
+
     public PlayParameters withSounds(String sounds) {
         this.sounds = sounds;
         return this;
     }
     
+    public PlayParameters(@JsonProperty("CallUUID") String callUUID, @JsonProperty("Sounds") String sounds) {
+        this.callUUID = callUUID;
+        this.sounds = sounds;
+  }
 }

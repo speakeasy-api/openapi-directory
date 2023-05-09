@@ -15,6 +15,7 @@ public class EdgePresetDeploymentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Artifact")
     public String artifact;
+
     public EdgePresetDeploymentOutput withArtifact(String artifact) {
         this.artifact = artifact;
         return this;
@@ -23,6 +24,7 @@ public class EdgePresetDeploymentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EdgePresetDeploymentStatusEnum status;
+
     public EdgePresetDeploymentOutput withStatus(EdgePresetDeploymentStatusEnum status) {
         this.status = status;
         return this;
@@ -31,6 +33,7 @@ public class EdgePresetDeploymentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public EdgePresetDeploymentOutput withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -38,9 +41,13 @@ public class EdgePresetDeploymentOutput {
     
     @JsonProperty("Type")
     public EdgePresetDeploymentTypeEnum type;
+
     public EdgePresetDeploymentOutput withType(EdgePresetDeploymentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public EdgePresetDeploymentOutput(@JsonProperty("Type") EdgePresetDeploymentTypeEnum type) {
+        this.type = type;
+  }
 }

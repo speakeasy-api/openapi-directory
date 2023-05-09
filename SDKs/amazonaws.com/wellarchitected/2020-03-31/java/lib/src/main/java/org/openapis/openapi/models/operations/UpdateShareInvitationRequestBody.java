@@ -12,9 +12,13 @@ public class UpdateShareInvitationRequestBody {
      */
     @JsonProperty("ShareInvitationAction")
     public UpdateShareInvitationRequestBodyShareInvitationActionEnum shareInvitationAction;
+
     public UpdateShareInvitationRequestBody withShareInvitationAction(UpdateShareInvitationRequestBodyShareInvitationActionEnum shareInvitationAction) {
         this.shareInvitationAction = shareInvitationAction;
         return this;
     }
     
+    public UpdateShareInvitationRequestBody(@JsonProperty("ShareInvitationAction") UpdateShareInvitationRequestBodyShareInvitationActionEnum shareInvitationAction) {
+        this.shareInvitationAction = shareInvitationAction;
+  }
 }

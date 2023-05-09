@@ -15,6 +15,7 @@ public class BusinessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doingBusinessAs")
     public String doingBusinessAs;
+
     public BusinessDetails withDoingBusinessAs(String doingBusinessAs) {
         this.doingBusinessAs = doingBusinessAs;
         return this;
@@ -26,6 +27,7 @@ public class BusinessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalBusinessName")
     public String legalBusinessName;
+
     public BusinessDetails withLegalBusinessName(String legalBusinessName) {
         this.legalBusinessName = legalBusinessName;
         return this;
@@ -37,6 +39,7 @@ public class BusinessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listedUltimateParentCompany")
     public UltimateParentCompany[] listedUltimateParentCompany;
+
     public BusinessDetails withListedUltimateParentCompany(UltimateParentCompany[] listedUltimateParentCompany) {
         this.listedUltimateParentCompany = listedUltimateParentCompany;
         return this;
@@ -48,6 +51,7 @@ public class BusinessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationNumber")
     public String registrationNumber;
+
     public BusinessDetails withRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
         return this;
@@ -59,6 +63,7 @@ public class BusinessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareholders")
     public ShareholderContact[] shareholders;
+
     public BusinessDetails withShareholders(ShareholderContact[] shareholders) {
         this.shareholders = shareholders;
         return this;
@@ -71,6 +76,7 @@ public class BusinessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatories")
     public SignatoryContact[] signatories;
+
     public BusinessDetails withSignatories(SignatoryContact[] signatories) {
         this.signatories = signatories;
         return this;
@@ -82,6 +88,7 @@ public class BusinessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stockExchange")
     public String stockExchange;
+
     public BusinessDetails withStockExchange(String stockExchange) {
         this.stockExchange = stockExchange;
         return this;
@@ -93,6 +100,7 @@ public class BusinessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stockNumber")
     public String stockNumber;
+
     public BusinessDetails withStockNumber(String stockNumber) {
         this.stockNumber = stockNumber;
         return this;
@@ -104,6 +112,7 @@ public class BusinessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stockTicker")
     public String stockTicker;
+
     public BusinessDetails withStockTicker(String stockTicker) {
         this.stockTicker = stockTicker;
         return this;
@@ -115,9 +124,11 @@ public class BusinessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxId")
     public String taxId;
+
     public BusinessDetails withTaxId(String taxId) {
         this.taxId = taxId;
         return this;
     }
     
+    public BusinessDetails(){}
 }

@@ -18,6 +18,7 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msg")
     public String msg;
+
     public ErrorResponse withMsg(String msg) {
         this.msg = msg;
         return this;
@@ -29,9 +30,11 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Double status;
+
     public ErrorResponse withStatus(Double status) {
         this.status = status;
         return this;
     }
     
+    public ErrorResponse(){}
 }

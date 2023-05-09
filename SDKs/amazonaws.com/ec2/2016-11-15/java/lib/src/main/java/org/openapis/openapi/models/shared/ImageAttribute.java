@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImageAttribute {
     
     public ImageAttributeBlockDeviceMappings[] blockDeviceMappings;
+
     public ImageAttribute withBlockDeviceMappings(ImageAttributeBlockDeviceMappings[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -19,6 +20,7 @@ public class ImageAttribute {
     
     
     public ImageAttributeBootMode bootMode;
+
     public ImageAttribute withBootMode(ImageAttributeBootMode bootMode) {
         this.bootMode = bootMode;
         return this;
@@ -26,6 +28,7 @@ public class ImageAttribute {
     
     
     public ImageAttributeDescription description;
+
     public ImageAttribute withDescription(ImageAttributeDescription description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class ImageAttribute {
     
     
     public String imageId;
+
     public ImageAttribute withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -40,6 +44,7 @@ public class ImageAttribute {
     
     
     public ImageAttributeImdsSupport imdsSupport;
+
     public ImageAttribute withImdsSupport(ImageAttributeImdsSupport imdsSupport) {
         this.imdsSupport = imdsSupport;
         return this;
@@ -47,6 +52,7 @@ public class ImageAttribute {
     
     
     public ImageAttributeKernelId kernelId;
+
     public ImageAttribute withKernelId(ImageAttributeKernelId kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -54,6 +60,7 @@ public class ImageAttribute {
     
     
     public ImageAttributeLastLaunchedTime lastLaunchedTime;
+
     public ImageAttribute withLastLaunchedTime(ImageAttributeLastLaunchedTime lastLaunchedTime) {
         this.lastLaunchedTime = lastLaunchedTime;
         return this;
@@ -61,6 +68,7 @@ public class ImageAttribute {
     
     
     public ImageAttributeLaunchPermissions[] launchPermissions;
+
     public ImageAttribute withLaunchPermissions(ImageAttributeLaunchPermissions[] launchPermissions) {
         this.launchPermissions = launchPermissions;
         return this;
@@ -68,6 +76,7 @@ public class ImageAttribute {
     
     
     public ImageAttributeProductCodes[] productCodes;
+
     public ImageAttribute withProductCodes(ImageAttributeProductCodes[] productCodes) {
         this.productCodes = productCodes;
         return this;
@@ -75,6 +84,7 @@ public class ImageAttribute {
     
     
     public ImageAttributeRamdiskId ramdiskId;
+
     public ImageAttribute withRamdiskId(ImageAttributeRamdiskId ramdiskId) {
         this.ramdiskId = ramdiskId;
         return this;
@@ -82,6 +92,7 @@ public class ImageAttribute {
     
     
     public ImageAttributeSriovNetSupport sriovNetSupport;
+
     public ImageAttribute withSriovNetSupport(ImageAttributeSriovNetSupport sriovNetSupport) {
         this.sriovNetSupport = sriovNetSupport;
         return this;
@@ -89,6 +100,7 @@ public class ImageAttribute {
     
     
     public ImageAttributeTpmSupport tpmSupport;
+
     public ImageAttribute withTpmSupport(ImageAttributeTpmSupport tpmSupport) {
         this.tpmSupport = tpmSupport;
         return this;
@@ -96,9 +108,11 @@ public class ImageAttribute {
     
     
     public ImageAttributeUefiData uefiData;
+
     public ImageAttribute withUefiData(ImageAttributeUefiData uefiData) {
         this.uefiData = uefiData;
         return this;
     }
     
+    public ImageAttribute(){}
 }

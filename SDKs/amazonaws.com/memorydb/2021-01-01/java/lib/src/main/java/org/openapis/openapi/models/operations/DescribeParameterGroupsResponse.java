@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeParameterGroupsResponse {
     
     public String contentType;
+
     public DescribeParameterGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeParameterGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeParameterGroupsResponse describeParameterGroupsResponse;
+
     public DescribeParameterGroupsResponse withDescribeParameterGroupsResponse(org.openapis.openapi.models.shared.DescribeParameterGroupsResponse describeParameterGroupsResponse) {
         this.describeParameterGroupsResponse = describeParameterGroupsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeParameterGroupsResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public DescribeParameterGroupsResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeParameterGroupsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeParameterGroupsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeParameterGroupsResponse {
      */
     
     public Object parameterGroupNotFoundFault;
+
     public DescribeParameterGroupsResponse withParameterGroupNotFoundFault(Object parameterGroupNotFoundFault) {
         this.parameterGroupNotFoundFault = parameterGroupNotFoundFault;
         return this;
@@ -56,6 +62,7 @@ public class DescribeParameterGroupsResponse {
     
     
     public Integer statusCode;
+
     public DescribeParameterGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeParameterGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeParameterGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeParameterGroupsResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public DescribeParameterGroupsResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
     }
     
+    public DescribeParameterGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

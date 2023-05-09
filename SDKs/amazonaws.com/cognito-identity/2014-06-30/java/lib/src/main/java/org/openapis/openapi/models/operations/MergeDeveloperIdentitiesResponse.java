@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MergeDeveloperIdentitiesResponse {
     
     public String contentType;
+
     public MergeDeveloperIdentitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MergeDeveloperIdentitiesResponse {
      */
     
     public Object internalErrorException;
+
     public MergeDeveloperIdentitiesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class MergeDeveloperIdentitiesResponse {
      */
     
     public Object invalidParameterException;
+
     public MergeDeveloperIdentitiesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class MergeDeveloperIdentitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.MergeDeveloperIdentitiesResponse mergeDeveloperIdentitiesResponse;
+
     public MergeDeveloperIdentitiesResponse withMergeDeveloperIdentitiesResponse(org.openapis.openapi.models.shared.MergeDeveloperIdentitiesResponse mergeDeveloperIdentitiesResponse) {
         this.mergeDeveloperIdentitiesResponse = mergeDeveloperIdentitiesResponse;
         return this;
@@ -49,6 +54,7 @@ public class MergeDeveloperIdentitiesResponse {
      */
     
     public Object notAuthorizedException;
+
     public MergeDeveloperIdentitiesResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class MergeDeveloperIdentitiesResponse {
     
     
     public Integer statusCode;
+
     public MergeDeveloperIdentitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class MergeDeveloperIdentitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MergeDeveloperIdentitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class MergeDeveloperIdentitiesResponse {
      */
     
     public Object resourceConflictException;
+
     public MergeDeveloperIdentitiesResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -83,6 +92,7 @@ public class MergeDeveloperIdentitiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public MergeDeveloperIdentitiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class MergeDeveloperIdentitiesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public MergeDeveloperIdentitiesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public MergeDeveloperIdentitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

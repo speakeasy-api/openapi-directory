@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRegistriesResponse {
     
     public String contentType;
+
     public DescribeRegistriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRegistriesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRegistriesResponse describeRegistriesResponse;
+
     public DescribeRegistriesResponse withDescribeRegistriesResponse(org.openapis.openapi.models.shared.DescribeRegistriesResponse describeRegistriesResponse) {
         this.describeRegistriesResponse = describeRegistriesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRegistriesResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeRegistriesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRegistriesResponse {
      */
     
     public Object serverException;
+
     public DescribeRegistriesResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeRegistriesResponse {
     
     
     public Integer statusCode;
+
     public DescribeRegistriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeRegistriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRegistriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeRegistriesResponse {
      */
     
     public Object unsupportedCommandException;
+
     public DescribeRegistriesResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
     }
     
+    public DescribeRegistriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

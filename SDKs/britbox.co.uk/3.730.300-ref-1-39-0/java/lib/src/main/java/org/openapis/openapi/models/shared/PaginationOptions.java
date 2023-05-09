@@ -18,6 +18,7 @@ public class PaginationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed")
     public Boolean completed;
+
     public PaginationOptions withCompleted(Boolean completed) {
         this.completed = completed;
         return this;
@@ -29,6 +30,7 @@ public class PaginationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemType")
     public PaginationOptionsItemTypeEnum itemType;
+
     public PaginationOptions withItemType(PaginationOptionsItemTypeEnum itemType) {
         this.itemType = itemType;
         return this;
@@ -40,6 +42,7 @@ public class PaginationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRating")
     public String maxRating;
+
     public PaginationOptions withMaxRating(String maxRating) {
         this.maxRating = maxRating;
         return this;
@@ -51,6 +54,7 @@ public class PaginationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public PaginationOptionsOrderEnum order;
+
     public PaginationOptions withOrder(PaginationOptionsOrderEnum order) {
         this.order = order;
         return this;
@@ -62,6 +66,7 @@ public class PaginationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public PaginationOptionsOrderByEnum orderBy;
+
     public PaginationOptions withOrderBy(PaginationOptionsOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -73,9 +78,11 @@ public class PaginationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public PaginationOptions withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public PaginationOptions(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CompletionReport {
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public CompletionReport withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -22,6 +23,7 @@ public class CompletionReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public ReportFormatEnum format;
+
     public CompletionReport withFormat(ReportFormatEnum format) {
         this.format = format;
         return this;
@@ -30,6 +32,7 @@ public class CompletionReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public CompletionReport withPath(String path) {
         this.path = path;
         return this;
@@ -38,9 +41,13 @@ public class CompletionReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Scope")
     public ReportScopeEnum scope;
+
     public CompletionReport withScope(ReportScopeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public CompletionReport(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

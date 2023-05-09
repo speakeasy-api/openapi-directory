@@ -18,6 +18,7 @@ public class FolderData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElectricityCounterValue")
     public Double electricityCounterValue;
+
     public FolderData withElectricityCounterValue(Double electricityCounterValue) {
         this.electricityCounterValue = electricityCounterValue;
         return this;
@@ -29,6 +30,7 @@ public class FolderData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElectricityPower")
     public Double electricityPower;
+
     public FolderData withElectricityPower(Double electricityPower) {
         this.electricityPower = electricityPower;
         return this;
@@ -40,6 +42,7 @@ public class FolderData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GasCounterValue")
     public Double gasCounterValue;
+
     public FolderData withGasCounterValue(Double gasCounterValue) {
         this.gasCounterValue = gasCounterValue;
         return this;
@@ -51,6 +54,7 @@ public class FolderData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GasFlowRate")
     public Double gasFlowRate;
+
     public FolderData withGasFlowRate(Double gasFlowRate) {
         this.gasFlowRate = gasFlowRate;
         return this;
@@ -62,6 +66,7 @@ public class FolderData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeatCounterValue")
     public Double heatCounterValue;
+
     public FolderData withHeatCounterValue(Double heatCounterValue) {
         this.heatCounterValue = heatCounterValue;
         return this;
@@ -73,6 +78,7 @@ public class FolderData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeatPower")
     public Double heatPower;
+
     public FolderData withHeatPower(Double heatPower) {
         this.heatPower = heatPower;
         return this;
@@ -84,6 +90,7 @@ public class FolderData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WaterCounterValue")
     public Double waterCounterValue;
+
     public FolderData withWaterCounterValue(Double waterCounterValue) {
         this.waterCounterValue = waterCounterValue;
         return this;
@@ -95,9 +102,11 @@ public class FolderData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WaterFlowRate")
     public Double waterFlowRate;
+
     public FolderData withWaterFlowRate(Double waterFlowRate) {
         this.waterFlowRate = waterFlowRate;
         return this;
     }
     
+    public FolderData(){}
 }

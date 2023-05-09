@@ -18,6 +18,7 @@ public class NewDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public String diskSizeGb;
+
     public NewDiskInitializeParams withDiskSizeGb(String diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -29,6 +30,7 @@ public class NewDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskType")
     public String diskType;
+
     public NewDiskInitializeParams withDiskType(String diskType) {
         this.diskType = diskType;
         return this;
@@ -41,9 +43,11 @@ public class NewDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceImage")
     public String sourceImage;
+
     public NewDiskInitializeParams withSourceImage(String sourceImage) {
         this.sourceImage = sourceImage;
         return this;
     }
     
+    public NewDiskInitializeParams(){}
 }

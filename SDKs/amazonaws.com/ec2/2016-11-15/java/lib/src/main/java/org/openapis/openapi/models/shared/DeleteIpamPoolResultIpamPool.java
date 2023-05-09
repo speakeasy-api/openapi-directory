@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteIpamPoolResultIpamPool {
     
     public DeleteIpamPoolResultIpamPoolAddressFamilyEnum addressFamily;
+
     public DeleteIpamPoolResultIpamPool withAddressFamily(DeleteIpamPoolResultIpamPoolAddressFamilyEnum addressFamily) {
         this.addressFamily = addressFamily;
         return this;
@@ -19,6 +20,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public Long allocationDefaultNetmaskLength;
+
     public DeleteIpamPoolResultIpamPool withAllocationDefaultNetmaskLength(Long allocationDefaultNetmaskLength) {
         this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
         return this;
@@ -26,6 +28,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public Long allocationMaxNetmaskLength;
+
     public DeleteIpamPoolResultIpamPool withAllocationMaxNetmaskLength(Long allocationMaxNetmaskLength) {
         this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
         return this;
@@ -33,6 +36,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public Long allocationMinNetmaskLength;
+
     public DeleteIpamPoolResultIpamPool withAllocationMinNetmaskLength(Long allocationMinNetmaskLength) {
         this.allocationMinNetmaskLength = allocationMinNetmaskLength;
         return this;
@@ -40,6 +44,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public DeleteIpamPoolResultIpamPoolAllocationResourceTags[] allocationResourceTags;
+
     public DeleteIpamPoolResultIpamPool withAllocationResourceTags(DeleteIpamPoolResultIpamPoolAllocationResourceTags[] allocationResourceTags) {
         this.allocationResourceTags = allocationResourceTags;
         return this;
@@ -47,6 +52,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public Boolean autoImport;
+
     public DeleteIpamPoolResultIpamPool withAutoImport(Boolean autoImport) {
         this.autoImport = autoImport;
         return this;
@@ -54,6 +60,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public DeleteIpamPoolResultIpamPoolAwsServiceEnum awsService;
+
     public DeleteIpamPoolResultIpamPool withAwsService(DeleteIpamPoolResultIpamPoolAwsServiceEnum awsService) {
         this.awsService = awsService;
         return this;
@@ -61,6 +68,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public String description;
+
     public DeleteIpamPoolResultIpamPool withDescription(String description) {
         this.description = description;
         return this;
@@ -68,6 +76,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public String ipamArn;
+
     public DeleteIpamPoolResultIpamPool withIpamArn(String ipamArn) {
         this.ipamArn = ipamArn;
         return this;
@@ -75,6 +84,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public String ipamPoolArn;
+
     public DeleteIpamPoolResultIpamPool withIpamPoolArn(String ipamPoolArn) {
         this.ipamPoolArn = ipamPoolArn;
         return this;
@@ -82,6 +92,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public String ipamPoolId;
+
     public DeleteIpamPoolResultIpamPool withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
@@ -89,6 +100,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public String ipamRegion;
+
     public DeleteIpamPoolResultIpamPool withIpamRegion(String ipamRegion) {
         this.ipamRegion = ipamRegion;
         return this;
@@ -96,6 +108,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public String ipamScopeArn;
+
     public DeleteIpamPoolResultIpamPool withIpamScopeArn(String ipamScopeArn) {
         this.ipamScopeArn = ipamScopeArn;
         return this;
@@ -103,6 +116,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public DeleteIpamPoolResultIpamPoolIpamScopeTypeEnum ipamScopeType;
+
     public DeleteIpamPoolResultIpamPool withIpamScopeType(DeleteIpamPoolResultIpamPoolIpamScopeTypeEnum ipamScopeType) {
         this.ipamScopeType = ipamScopeType;
         return this;
@@ -110,6 +124,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public String locale;
+
     public DeleteIpamPoolResultIpamPool withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -117,6 +132,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public String ownerId;
+
     public DeleteIpamPoolResultIpamPool withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -124,6 +140,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public Long poolDepth;
+
     public DeleteIpamPoolResultIpamPool withPoolDepth(Long poolDepth) {
         this.poolDepth = poolDepth;
         return this;
@@ -131,6 +148,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public DeleteIpamPoolResultIpamPoolPublicIpSourceEnum publicIpSource;
+
     public DeleteIpamPoolResultIpamPool withPublicIpSource(DeleteIpamPoolResultIpamPoolPublicIpSourceEnum publicIpSource) {
         this.publicIpSource = publicIpSource;
         return this;
@@ -138,6 +156,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public Boolean publiclyAdvertisable;
+
     public DeleteIpamPoolResultIpamPool withPubliclyAdvertisable(Boolean publiclyAdvertisable) {
         this.publiclyAdvertisable = publiclyAdvertisable;
         return this;
@@ -145,6 +164,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public String sourceIpamPoolId;
+
     public DeleteIpamPoolResultIpamPool withSourceIpamPoolId(String sourceIpamPoolId) {
         this.sourceIpamPoolId = sourceIpamPoolId;
         return this;
@@ -152,6 +172,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public DeleteIpamPoolResultIpamPoolStateEnum state;
+
     public DeleteIpamPoolResultIpamPool withState(DeleteIpamPoolResultIpamPoolStateEnum state) {
         this.state = state;
         return this;
@@ -159,6 +180,7 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public String stateMessage;
+
     public DeleteIpamPoolResultIpamPool withStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
         return this;
@@ -166,9 +188,11 @@ public class DeleteIpamPoolResultIpamPool {
     
     
     public DeleteIpamPoolResultIpamPoolTags[] tags;
+
     public DeleteIpamPoolResultIpamPool withTags(DeleteIpamPoolResultIpamPoolTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DeleteIpamPoolResultIpamPool(){}
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeVpnConnectionsResultVpnConnectionsVgwTelemetry {
     
     public Long acceptedRouteCount;
+
     public DescribeVpnConnectionsResultVpnConnectionsVgwTelemetry withAcceptedRouteCount(Long acceptedRouteCount) {
         this.acceptedRouteCount = acceptedRouteCount;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVpnConnectionsResultVpnConnectionsVgwTelemetry {
     
     
     public String certificateArn;
+
     public DescribeVpnConnectionsResultVpnConnectionsVgwTelemetry withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVpnConnectionsResultVpnConnectionsVgwTelemetry {
     
     
     public OffsetDateTime lastStatusChange;
+
     public DescribeVpnConnectionsResultVpnConnectionsVgwTelemetry withLastStatusChange(OffsetDateTime lastStatusChange) {
         this.lastStatusChange = lastStatusChange;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVpnConnectionsResultVpnConnectionsVgwTelemetry {
     
     
     public String outsideIpAddress;
+
     public DescribeVpnConnectionsResultVpnConnectionsVgwTelemetry withOutsideIpAddress(String outsideIpAddress) {
         this.outsideIpAddress = outsideIpAddress;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVpnConnectionsResultVpnConnectionsVgwTelemetry {
     
     
     public DescribeVpnConnectionsResultVpnConnectionsVgwTelemetryStatusEnum status;
+
     public DescribeVpnConnectionsResultVpnConnectionsVgwTelemetry withStatus(DescribeVpnConnectionsResultVpnConnectionsVgwTelemetryStatusEnum status) {
         this.status = status;
         return this;
@@ -47,9 +52,11 @@ public class DescribeVpnConnectionsResultVpnConnectionsVgwTelemetry {
     
     
     public String statusMessage;
+
     public DescribeVpnConnectionsResultVpnConnectionsVgwTelemetry withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public DescribeVpnConnectionsResultVpnConnectionsVgwTelemetry(){}
 }

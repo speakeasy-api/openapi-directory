@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostIndividualsPartyIdLicensesResponse {
     
     public String contentType;
+
     public PostIndividualsPartyIdLicensesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostIndividualsPartyIdLicensesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostIndividualsPartyIdLicensesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PostIndividualsPartyIdLicensesResponse {
     
     
     public Integer statusCode;
+
     public PostIndividualsPartyIdLicensesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PostIndividualsPartyIdLicensesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostIndividualsPartyIdLicensesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PostIndividualsPartyIdLicensesResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArgument invalidArgument;
+
     public PostIndividualsPartyIdLicensesResponse withInvalidArgument(org.openapis.openapi.models.shared.InvalidArgument invalidArgument) {
         this.invalidArgument = invalidArgument;
         return this;
@@ -50,6 +56,7 @@ public class PostIndividualsPartyIdLicensesResponse {
      */
     
     public org.openapis.openapi.models.shared.License license;
+
     public PostIndividualsPartyIdLicensesResponse withLicense(org.openapis.openapi.models.shared.License license) {
         this.license = license;
         return this;
@@ -60,9 +67,14 @@ public class PostIndividualsPartyIdLicensesResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public PostIndividualsPartyIdLicensesResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public PostIndividualsPartyIdLicensesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

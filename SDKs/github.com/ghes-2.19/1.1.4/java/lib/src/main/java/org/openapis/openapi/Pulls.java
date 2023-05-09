@@ -58,10 +58,8 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsCheckIfMergedResponse res = new org.openapis.openapi.models.operations.PullsCheckIfMergedResponse() {{
+        org.openapis.openapi.models.operations.PullsCheckIfMergedResponse res = new org.openapis.openapi.models.operations.PullsCheckIfMergedResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -97,13 +95,11 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsCreateResponse res = new org.openapis.openapi.models.operations.PullsCreateResponse() {{
+        org.openapis.openapi.models.operations.PullsCreateResponse res = new org.openapis.openapi.models.operations.PullsCreateResponse(contentType, httpRes.statusCode()) {{
             pullRequest = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -162,12 +158,10 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsCreateReplyForReviewCommentResponse res = new org.openapis.openapi.models.operations.PullsCreateReplyForReviewCommentResponse() {{
+        org.openapis.openapi.models.operations.PullsCreateReplyForReviewCommentResponse res = new org.openapis.openapi.models.operations.PullsCreateReplyForReviewCommentResponse(contentType, httpRes.statusCode()) {{
             pullRequestReviewComment = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -220,13 +214,11 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsCreateReviewResponse res = new org.openapis.openapi.models.operations.PullsCreateReviewResponse() {{
+        org.openapis.openapi.models.operations.PullsCreateReviewResponse res = new org.openapis.openapi.models.operations.PullsCreateReviewResponse(contentType, httpRes.statusCode()) {{
             pullRequestReview = null;
             basicError = null;
             validationErrorSimple = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,11 +277,9 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsCreateReviewCommentAlternativeResponse res = new org.openapis.openapi.models.operations.PullsCreateReviewCommentAlternativeResponse() {{
+        org.openapis.openapi.models.operations.PullsCreateReviewCommentAlternativeResponse res = new org.openapis.openapi.models.operations.PullsCreateReviewCommentAlternativeResponse(contentType, httpRes.statusCode()) {{
             legacyReviewComment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -326,13 +316,11 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsDeletePendingReviewResponse res = new org.openapis.openapi.models.operations.PullsDeletePendingReviewResponse() {{
+        org.openapis.openapi.models.operations.PullsDeletePendingReviewResponse res = new org.openapis.openapi.models.operations.PullsDeletePendingReviewResponse(contentType, httpRes.statusCode()) {{
             pullRequestReview = null;
             basicError = null;
             validationErrorSimple = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -382,11 +370,9 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsDeleteReviewCommentResponse res = new org.openapis.openapi.models.operations.PullsDeleteReviewCommentResponse() {{
+        org.openapis.openapi.models.operations.PullsDeleteReviewCommentResponse res = new org.openapis.openapi.models.operations.PullsDeleteReviewCommentResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -429,13 +415,11 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsDismissReviewResponse res = new org.openapis.openapi.models.operations.PullsDismissReviewResponse() {{
+        org.openapis.openapi.models.operations.PullsDismissReviewResponse res = new org.openapis.openapi.models.operations.PullsDismissReviewResponse(contentType, httpRes.statusCode()) {{
             pullRequestReview = null;
             basicError = null;
             validationErrorSimple = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -499,12 +483,10 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsGetResponse res = new org.openapis.openapi.models.operations.PullsGetResponse() {{
+        org.openapis.openapi.models.operations.PullsGetResponse res = new org.openapis.openapi.models.operations.PullsGetResponse(contentType, httpRes.statusCode()) {{
             pullRequest = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -548,12 +530,10 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsGetReviewResponse res = new org.openapis.openapi.models.operations.PullsGetReviewResponse() {{
+        org.openapis.openapi.models.operations.PullsGetReviewResponse res = new org.openapis.openapi.models.operations.PullsGetReviewResponse(contentType, httpRes.statusCode()) {{
             pullRequestReview = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -596,12 +576,10 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsGetReviewCommentResponse res = new org.openapis.openapi.models.operations.PullsGetReviewCommentResponse() {{
+        org.openapis.openapi.models.operations.PullsGetReviewCommentResponse res = new org.openapis.openapi.models.operations.PullsGetReviewCommentResponse(contentType, httpRes.statusCode()) {{
             pullRequestReviewComment = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -650,12 +628,10 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsListResponse res = new org.openapis.openapi.models.operations.PullsListResponse() {{
+        org.openapis.openapi.models.operations.PullsListResponse res = new org.openapis.openapi.models.operations.PullsListResponse(contentType, httpRes.statusCode()) {{
             pullRequestSimples = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -708,12 +684,10 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsListCommentsForReviewResponse res = new org.openapis.openapi.models.operations.PullsListCommentsForReviewResponse() {{
+        org.openapis.openapi.models.operations.PullsListCommentsForReviewResponse res = new org.openapis.openapi.models.operations.PullsListCommentsForReviewResponse(contentType, httpRes.statusCode()) {{
             reviewComments = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -764,11 +738,9 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsListCommitsResponse res = new org.openapis.openapi.models.operations.PullsListCommitsResponse() {{
+        org.openapis.openapi.models.operations.PullsListCommitsResponse res = new org.openapis.openapi.models.operations.PullsListCommitsResponse(contentType, httpRes.statusCode()) {{
             commits = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -812,13 +784,11 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsListFilesResponse res = new org.openapis.openapi.models.operations.PullsListFilesResponse() {{
+        org.openapis.openapi.models.operations.PullsListFilesResponse res = new org.openapis.openapi.models.operations.PullsListFilesResponse(contentType, httpRes.statusCode()) {{
             diffEntries = null;
             validationError = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -875,11 +845,9 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsListRequestedReviewersResponse res = new org.openapis.openapi.models.operations.PullsListRequestedReviewersResponse() {{
+        org.openapis.openapi.models.operations.PullsListRequestedReviewersResponse res = new org.openapis.openapi.models.operations.PullsListRequestedReviewersResponse(contentType, httpRes.statusCode()) {{
             pullRequestReviewRequest = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -923,11 +891,9 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsListReviewCommentsResponse res = new org.openapis.openapi.models.operations.PullsListReviewCommentsResponse() {{
+        org.openapis.openapi.models.operations.PullsListReviewCommentsResponse res = new org.openapis.openapi.models.operations.PullsListReviewCommentsResponse(contentType, httpRes.statusCode()) {{
             pullRequestReviewComments = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -971,11 +937,9 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsListReviewCommentsForRepoResponse res = new org.openapis.openapi.models.operations.PullsListReviewCommentsForRepoResponse() {{
+        org.openapis.openapi.models.operations.PullsListReviewCommentsForRepoResponse res = new org.openapis.openapi.models.operations.PullsListReviewCommentsForRepoResponse(contentType, httpRes.statusCode()) {{
             pullRequestReviewComments = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1019,11 +983,9 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsListReviewsResponse res = new org.openapis.openapi.models.operations.PullsListReviewsResponse() {{
+        org.openapis.openapi.models.operations.PullsListReviewsResponse res = new org.openapis.openapi.models.operations.PullsListReviewsResponse(contentType, httpRes.statusCode()) {{
             pullRequestReviews = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1062,15 +1024,13 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsMergeResponse res = new org.openapis.openapi.models.operations.PullsMergeResponse() {{
+        org.openapis.openapi.models.operations.PullsMergeResponse res = new org.openapis.openapi.models.operations.PullsMergeResponse(contentType, httpRes.statusCode()) {{
             pullRequestMergeResult = null;
             basicError = null;
             pullsMerge405ApplicationJSONObject = null;
             pullsMerge409ApplicationJSONObject = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1138,12 +1098,10 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsRemoveRequestedReviewersResponse res = new org.openapis.openapi.models.operations.PullsRemoveRequestedReviewersResponse() {{
+        org.openapis.openapi.models.operations.PullsRemoveRequestedReviewersResponse res = new org.openapis.openapi.models.operations.PullsRemoveRequestedReviewersResponse(contentType, httpRes.statusCode()) {{
             pullRequestSimple = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1187,12 +1145,10 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsRequestReviewersResponse res = new org.openapis.openapi.models.operations.PullsRequestReviewersResponse() {{
+        org.openapis.openapi.models.operations.PullsRequestReviewersResponse res = new org.openapis.openapi.models.operations.PullsRequestReviewersResponse(contentType, httpRes.statusCode()) {{
             pullRequestSimple = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1241,13 +1197,11 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsSubmitReviewResponse res = new org.openapis.openapi.models.operations.PullsSubmitReviewResponse() {{
+        org.openapis.openapi.models.operations.PullsSubmitReviewResponse res = new org.openapis.openapi.models.operations.PullsSubmitReviewResponse(contentType, httpRes.statusCode()) {{
             pullRequestReview = null;
             basicError = null;
             validationErrorSimple = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1299,13 +1253,11 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsUpdateResponse res = new org.openapis.openapi.models.operations.PullsUpdateResponse() {{
+        org.openapis.openapi.models.operations.PullsUpdateResponse res = new org.openapis.openapi.models.operations.PullsUpdateResponse(contentType, httpRes.statusCode()) {{
             pullRequest = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1357,14 +1309,12 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsUpdateBranchResponse res = new org.openapis.openapi.models.operations.PullsUpdateBranchResponse() {{
+        org.openapis.openapi.models.operations.PullsUpdateBranchResponse res = new org.openapis.openapi.models.operations.PullsUpdateBranchResponse(contentType, httpRes.statusCode()) {{
             pullsUpdateBranch202ApplicationJSONObject = null;
             basicError = null;
             pullsUpdateBranch415ApplicationJSONObject = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1426,12 +1376,10 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsUpdateReviewResponse res = new org.openapis.openapi.models.operations.PullsUpdateReviewResponse() {{
+        org.openapis.openapi.models.operations.PullsUpdateReviewResponse res = new org.openapis.openapi.models.operations.PullsUpdateReviewResponse(contentType, httpRes.statusCode()) {{
             pullRequestReview = null;
             validationErrorSimple = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1479,11 +1427,9 @@ public class Pulls {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PullsUpdateReviewCommentResponse res = new org.openapis.openapi.models.operations.PullsUpdateReviewCommentResponse() {{
+        org.openapis.openapi.models.operations.PullsUpdateReviewCommentResponse res = new org.openapis.openapi.models.operations.PullsUpdateReviewCommentResponse(contentType, httpRes.statusCode()) {{
             pullRequestReviewComment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

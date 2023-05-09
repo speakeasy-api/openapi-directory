@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateVpcPeeringConnectionInput {
     @JsonProperty("FleetId")
     public String fleetId;
+
     public CreateVpcPeeringConnectionInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -16,6 +17,7 @@ public class CreateVpcPeeringConnectionInput {
     
     @JsonProperty("PeerVpcAwsAccountId")
     public String peerVpcAwsAccountId;
+
     public CreateVpcPeeringConnectionInput withPeerVpcAwsAccountId(String peerVpcAwsAccountId) {
         this.peerVpcAwsAccountId = peerVpcAwsAccountId;
         return this;
@@ -23,9 +25,15 @@ public class CreateVpcPeeringConnectionInput {
     
     @JsonProperty("PeerVpcId")
     public String peerVpcId;
+
     public CreateVpcPeeringConnectionInput withPeerVpcId(String peerVpcId) {
         this.peerVpcId = peerVpcId;
         return this;
     }
     
+    public CreateVpcPeeringConnectionInput(@JsonProperty("FleetId") String fleetId, @JsonProperty("PeerVpcAwsAccountId") String peerVpcAwsAccountId, @JsonProperty("PeerVpcId") String peerVpcId) {
+        this.fleetId = fleetId;
+        this.peerVpcAwsAccountId = peerVpcAwsAccountId;
+        this.peerVpcId = peerVpcId;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAlgorithmsOutput {
     @JsonProperty("AlgorithmSummaryList")
     public AlgorithmSummary[] algorithmSummaryList;
+
     public ListAlgorithmsOutput withAlgorithmSummaryList(AlgorithmSummary[] algorithmSummaryList) {
         this.algorithmSummaryList = algorithmSummaryList;
         return this;
@@ -22,9 +23,13 @@ public class ListAlgorithmsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAlgorithmsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAlgorithmsOutput(@JsonProperty("AlgorithmSummaryList") AlgorithmSummary[] algorithmSummaryList) {
+        this.algorithmSummaryList = algorithmSummaryList;
+  }
 }

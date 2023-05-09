@@ -15,6 +15,7 @@ public class GRPCHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpcServiceName")
     public String grpcServiceName;
+
     public GRPCHealthCheck withGrpcServiceName(String grpcServiceName) {
         this.grpcServiceName = grpcServiceName;
         return this;
@@ -26,6 +27,7 @@ public class GRPCHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public GRPCHealthCheck withPort(Integer port) {
         this.port = port;
         return this;
@@ -37,6 +39,7 @@ public class GRPCHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portName")
     public String portName;
+
     public GRPCHealthCheck withPortName(String portName) {
         this.portName = portName;
         return this;
@@ -48,9 +51,11 @@ public class GRPCHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portSpecification")
     public GRPCHealthCheckPortSpecificationEnum portSpecification;
+
     public GRPCHealthCheck withPortSpecification(GRPCHealthCheckPortSpecificationEnum portSpecification) {
         this.portSpecification = portSpecification;
         return this;
     }
     
+    public GRPCHealthCheck(){}
 }

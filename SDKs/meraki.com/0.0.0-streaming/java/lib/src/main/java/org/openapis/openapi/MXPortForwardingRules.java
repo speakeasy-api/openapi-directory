@@ -53,11 +53,9 @@ public class MXPortForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkPortForwardingRulesResponse res = new org.openapis.openapi.models.operations.GetNetworkPortForwardingRulesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkPortForwardingRulesResponse res = new org.openapis.openapi.models.operations.GetNetworkPortForwardingRulesResponse(contentType, httpRes.statusCode()) {{
             getNetworkPortForwardingRules200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class MXPortForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkPortForwardingRulesResponse res = new org.openapis.openapi.models.operations.UpdateNetworkPortForwardingRulesResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkPortForwardingRulesResponse res = new org.openapis.openapi.models.operations.UpdateNetworkPortForwardingRulesResponse(contentType, httpRes.statusCode()) {{
             updateNetworkPortForwardingRules200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

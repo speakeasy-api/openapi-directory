@@ -12,6 +12,7 @@ public class StartJobRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllocatedCapacity")
     public Long allocatedCapacity;
+
     public StartJobRunRequest withAllocatedCapacity(Long allocatedCapacity) {
         this.allocatedCapacity = allocatedCapacity;
         return this;
@@ -20,6 +21,7 @@ public class StartJobRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arguments")
     public java.util.Map<String, String> arguments;
+
     public StartJobRunRequest withArguments(java.util.Map<String, String> arguments) {
         this.arguments = arguments;
         return this;
@@ -28,6 +30,7 @@ public class StartJobRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionClass")
     public ExecutionClassEnum executionClass;
+
     public StartJobRunRequest withExecutionClass(ExecutionClassEnum executionClass) {
         this.executionClass = executionClass;
         return this;
@@ -35,6 +38,7 @@ public class StartJobRunRequest {
     
     @JsonProperty("JobName")
     public String jobName;
+
     public StartJobRunRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -43,6 +47,7 @@ public class StartJobRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobRunId")
     public String jobRunId;
+
     public StartJobRunRequest withJobRunId(String jobRunId) {
         this.jobRunId = jobRunId;
         return this;
@@ -51,6 +56,7 @@ public class StartJobRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCapacity")
     public Double maxCapacity;
+
     public StartJobRunRequest withMaxCapacity(Double maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -59,6 +65,7 @@ public class StartJobRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationProperty")
     public NotificationProperty notificationProperty;
+
     public StartJobRunRequest withNotificationProperty(NotificationProperty notificationProperty) {
         this.notificationProperty = notificationProperty;
         return this;
@@ -67,6 +74,7 @@ public class StartJobRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfWorkers")
     public Long numberOfWorkers;
+
     public StartJobRunRequest withNumberOfWorkers(Long numberOfWorkers) {
         this.numberOfWorkers = numberOfWorkers;
         return this;
@@ -75,6 +83,7 @@ public class StartJobRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfiguration")
     public String securityConfiguration;
+
     public StartJobRunRequest withSecurityConfiguration(String securityConfiguration) {
         this.securityConfiguration = securityConfiguration;
         return this;
@@ -83,6 +92,7 @@ public class StartJobRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeout")
     public Long timeout;
+
     public StartJobRunRequest withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
@@ -91,9 +101,13 @@ public class StartJobRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerType")
     public WorkerTypeEnum workerType;
+
     public StartJobRunRequest withWorkerType(WorkerTypeEnum workerType) {
         this.workerType = workerType;
         return this;
     }
     
+    public StartJobRunRequest(@JsonProperty("JobName") String jobName) {
+        this.jobName = jobName;
+  }
 }

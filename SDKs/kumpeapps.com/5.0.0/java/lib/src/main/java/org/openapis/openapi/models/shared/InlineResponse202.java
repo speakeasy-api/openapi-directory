@@ -15,9 +15,11 @@ public class InlineResponse202 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public InlineResponse202 withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public InlineResponse202(){}
 }

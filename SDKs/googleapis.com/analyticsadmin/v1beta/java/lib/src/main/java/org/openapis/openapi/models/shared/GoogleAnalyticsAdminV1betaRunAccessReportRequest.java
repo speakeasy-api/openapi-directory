@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaRunAccessReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRanges")
     public GoogleAnalyticsAdminV1betaAccessDateRange[] dateRanges;
+
     public GoogleAnalyticsAdminV1betaRunAccessReportRequest withDateRanges(GoogleAnalyticsAdminV1betaAccessDateRange[] dateRanges) {
         this.dateRanges = dateRanges;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1betaRunAccessReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilter")
     public GoogleAnalyticsAdminV1betaAccessFilterExpression dimensionFilter;
+
     public GoogleAnalyticsAdminV1betaRunAccessReportRequest withDimensionFilter(GoogleAnalyticsAdminV1betaAccessFilterExpression dimensionFilter) {
         this.dimensionFilter = dimensionFilter;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1betaRunAccessReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public GoogleAnalyticsAdminV1betaAccessDimension[] dimensions;
+
     public GoogleAnalyticsAdminV1betaRunAccessReportRequest withDimensions(GoogleAnalyticsAdminV1betaAccessDimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1betaRunAccessReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public String limit;
+
     public GoogleAnalyticsAdminV1betaRunAccessReportRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1betaRunAccessReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricFilter")
     public GoogleAnalyticsAdminV1betaAccessFilterExpression metricFilter;
+
     public GoogleAnalyticsAdminV1betaRunAccessReportRequest withMetricFilter(GoogleAnalyticsAdminV1betaAccessFilterExpression metricFilter) {
         this.metricFilter = metricFilter;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAnalyticsAdminV1betaRunAccessReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public GoogleAnalyticsAdminV1betaAccessMetric[] metrics;
+
     public GoogleAnalyticsAdminV1betaRunAccessReportRequest withMetrics(GoogleAnalyticsAdminV1betaAccessMetric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAnalyticsAdminV1betaRunAccessReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public String offset;
+
     public GoogleAnalyticsAdminV1betaRunAccessReportRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -95,6 +102,7 @@ public class GoogleAnalyticsAdminV1betaRunAccessReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBys")
     public GoogleAnalyticsAdminV1betaAccessOrderBy[] orderBys;
+
     public GoogleAnalyticsAdminV1betaRunAccessReportRequest withOrderBys(GoogleAnalyticsAdminV1betaAccessOrderBy[] orderBys) {
         this.orderBys = orderBys;
         return this;
@@ -106,6 +114,7 @@ public class GoogleAnalyticsAdminV1betaRunAccessReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnEntityQuota")
     public Boolean returnEntityQuota;
+
     public GoogleAnalyticsAdminV1betaRunAccessReportRequest withReturnEntityQuota(Boolean returnEntityQuota) {
         this.returnEntityQuota = returnEntityQuota;
         return this;
@@ -117,9 +126,11 @@ public class GoogleAnalyticsAdminV1betaRunAccessReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public GoogleAnalyticsAdminV1betaRunAccessReportRequest withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaRunAccessReportRequest(){}
 }

@@ -15,6 +15,7 @@ public class MeetingsCapabilityWebhooksRoomChanged {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public MeetingsCapabilityWebhooksRoomChanged withAddress(String address) {
         this.address = address;
         return this;
@@ -23,9 +24,11 @@ public class MeetingsCapabilityWebhooksRoomChanged {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http_method")
     public MeetingsCapabilityWebhooksRoomChangedHttpMethodEnum httpMethod;
+
     public MeetingsCapabilityWebhooksRoomChanged withHttpMethod(MeetingsCapabilityWebhooksRoomChangedHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
     }
     
+    public MeetingsCapabilityWebhooksRoomChanged(){}
 }

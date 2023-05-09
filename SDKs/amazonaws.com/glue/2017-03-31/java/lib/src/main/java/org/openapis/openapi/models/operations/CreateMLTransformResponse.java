@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMLTransformResponse {
@@ -12,6 +13,7 @@ public class CreateMLTransformResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateMLTransformResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateMLTransformResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateMLTransformResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -29,6 +32,7 @@ public class CreateMLTransformResponse {
     
     
     public String contentType;
+
     public CreateMLTransformResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateMLTransformResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMLTransformResponse createMLTransformResponse;
+
     public CreateMLTransformResponse withCreateMLTransformResponse(org.openapis.openapi.models.shared.CreateMLTransformResponse createMLTransformResponse) {
         this.createMLTransformResponse = createMLTransformResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateMLTransformResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateMLTransformResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -59,6 +65,7 @@ public class CreateMLTransformResponse {
      */
     
     public Object internalServiceException;
+
     public CreateMLTransformResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class CreateMLTransformResponse {
      */
     
     public Object invalidInputException;
+
     public CreateMLTransformResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class CreateMLTransformResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateMLTransformResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -89,6 +98,7 @@ public class CreateMLTransformResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateMLTransformResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -96,6 +106,7 @@ public class CreateMLTransformResponse {
     
     
     public Integer statusCode;
+
     public CreateMLTransformResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class CreateMLTransformResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMLTransformResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateMLTransformResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

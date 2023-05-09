@@ -17,6 +17,7 @@ public class ReleasesAddTestersRequestBody {
      */
     @JsonProperty("email")
     public String email;
+
     public ReleasesAddTestersRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -28,6 +29,7 @@ public class ReleasesAddTestersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandatory_update")
     public Boolean mandatoryUpdate;
+
     public ReleasesAddTestersRequestBody withMandatoryUpdate(Boolean mandatoryUpdate) {
         this.mandatoryUpdate = mandatoryUpdate;
         return this;
@@ -39,9 +41,13 @@ public class ReleasesAddTestersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notify_testers")
     public Boolean notifyTesters;
+
     public ReleasesAddTestersRequestBody withNotifyTesters(Boolean notifyTesters) {
         this.notifyTesters = notifyTesters;
         return this;
     }
     
+    public ReleasesAddTestersRequestBody(@JsonProperty("email") String email) {
+        this.email = email;
+  }
 }

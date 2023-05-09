@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDetectorModelResponse {
     
     public String contentType;
+
     public UpdateDetectorModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDetectorModelResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateDetectorModelResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDetectorModelResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateDetectorModelResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDetectorModelResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateDetectorModelResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDetectorModelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDetectorModelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateDetectorModelResponse {
     
     
     public Integer statusCode;
+
     public UpdateDetectorModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDetectorModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDetectorModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDetectorModelResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateDetectorModelResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateDetectorModelResponse {
      */
     
     public Object throttlingException;
+
     public UpdateDetectorModelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateDetectorModelResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDetectorModelResponse updateDetectorModelResponse;
+
     public UpdateDetectorModelResponse withUpdateDetectorModelResponse(org.openapis.openapi.models.shared.UpdateDetectorModelResponse updateDetectorModelResponse) {
         this.updateDetectorModelResponse = updateDetectorModelResponse;
         return this;
     }
     
+    public UpdateDetectorModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

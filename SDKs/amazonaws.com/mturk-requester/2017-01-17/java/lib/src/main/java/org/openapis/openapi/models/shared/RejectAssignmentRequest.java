@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RejectAssignmentRequest {
     @JsonProperty("AssignmentId")
     public String assignmentId;
+
     public RejectAssignmentRequest withAssignmentId(String assignmentId) {
         this.assignmentId = assignmentId;
         return this;
@@ -16,9 +17,14 @@ public class RejectAssignmentRequest {
     
     @JsonProperty("RequesterFeedback")
     public String requesterFeedback;
+
     public RejectAssignmentRequest withRequesterFeedback(String requesterFeedback) {
         this.requesterFeedback = requesterFeedback;
         return this;
     }
     
+    public RejectAssignmentRequest(@JsonProperty("AssignmentId") String assignmentId, @JsonProperty("RequesterFeedback") String requesterFeedback) {
+        this.assignmentId = assignmentId;
+        this.requesterFeedback = requesterFeedback;
+  }
 }

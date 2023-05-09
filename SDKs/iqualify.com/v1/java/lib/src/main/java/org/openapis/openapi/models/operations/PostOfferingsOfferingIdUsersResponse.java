@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostOfferingsOfferingIdUsersResponse {
     
     public String contentType;
+
     public PostOfferingsOfferingIdUsersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostOfferingsOfferingIdUsersResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PostOfferingsOfferingIdUsersResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class PostOfferingsOfferingIdUsersResponse {
      */
     
     public org.openapis.openapi.models.shared.OfferingUserAddResponse[] offeringUserAddResponses;
+
     public PostOfferingsOfferingIdUsersResponse withOfferingUserAddResponses(org.openapis.openapi.models.shared.OfferingUserAddResponse[] offeringUserAddResponses) {
         this.offeringUserAddResponses = offeringUserAddResponses;
         return this;
@@ -36,6 +40,7 @@ public class PostOfferingsOfferingIdUsersResponse {
     
     
     public Integer statusCode;
+
     public PostOfferingsOfferingIdUsersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class PostOfferingsOfferingIdUsersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostOfferingsOfferingIdUsersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class PostOfferingsOfferingIdUsersResponse {
      */
     
     public Object[] postOfferingsOfferingIdUsers207ApplicationJSONOneoves;
+
     public PostOfferingsOfferingIdUsersResponse withPostOfferingsOfferingIdUsers207ApplicationJSONOneoves(Object[] postOfferingsOfferingIdUsers207ApplicationJSONOneoves) {
         this.postOfferingsOfferingIdUsers207ApplicationJSONOneoves = postOfferingsOfferingIdUsers207ApplicationJSONOneoves;
         return this;
     }
     
+    public PostOfferingsOfferingIdUsersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

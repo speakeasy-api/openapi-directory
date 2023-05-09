@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateVpcIngressConnectionRequest {
     @JsonProperty("IngressVpcConfiguration")
     public IngressVpcConfiguration ingressVpcConfiguration;
+
     public CreateVpcIngressConnectionRequest withIngressVpcConfiguration(IngressVpcConfiguration ingressVpcConfiguration) {
         this.ingressVpcConfiguration = ingressVpcConfiguration;
         return this;
@@ -18,6 +19,7 @@ public class CreateVpcIngressConnectionRequest {
     
     @JsonProperty("ServiceArn")
     public String serviceArn;
+
     public CreateVpcIngressConnectionRequest withServiceArn(String serviceArn) {
         this.serviceArn = serviceArn;
         return this;
@@ -26,6 +28,7 @@ public class CreateVpcIngressConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateVpcIngressConnectionRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -33,9 +36,15 @@ public class CreateVpcIngressConnectionRequest {
     
     @JsonProperty("VpcIngressConnectionName")
     public String vpcIngressConnectionName;
+
     public CreateVpcIngressConnectionRequest withVpcIngressConnectionName(String vpcIngressConnectionName) {
         this.vpcIngressConnectionName = vpcIngressConnectionName;
         return this;
     }
     
+    public CreateVpcIngressConnectionRequest(@JsonProperty("IngressVpcConfiguration") IngressVpcConfiguration ingressVpcConfiguration, @JsonProperty("ServiceArn") String serviceArn, @JsonProperty("VpcIngressConnectionName") String vpcIngressConnectionName) {
+        this.ingressVpcConfiguration = ingressVpcConfiguration;
+        this.serviceArn = serviceArn;
+        this.vpcIngressConnectionName = vpcIngressConnectionName;
+  }
 }

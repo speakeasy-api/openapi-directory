@@ -12,6 +12,7 @@ public class ScheduleAByEmployerPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public ScheduleAByEmployerPage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class ScheduleAByEmployerPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ScheduleAByEmployer[] results;
+
     public ScheduleAByEmployerPage withResults(ScheduleAByEmployer[] results) {
         this.results = results;
         return this;
     }
     
+    public ScheduleAByEmployerPage(){}
 }

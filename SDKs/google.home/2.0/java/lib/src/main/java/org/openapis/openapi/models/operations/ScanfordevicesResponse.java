@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ScanfordevicesResponse {
     
     public String contentType;
+
     public ScanfordevicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ScanfordevicesResponse {
     
     
     public String scanfordevices200TextPlainObject;
+
     public ScanfordevicesResponse withScanfordevices200TextPlainObject(String scanfordevices200TextPlainObject) {
         this.scanfordevices200TextPlainObject = scanfordevices200TextPlainObject;
         return this;
@@ -23,6 +26,7 @@ public class ScanfordevicesResponse {
     
     
     public Integer statusCode;
+
     public ScanfordevicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ScanfordevicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ScanfordevicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ScanfordevicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

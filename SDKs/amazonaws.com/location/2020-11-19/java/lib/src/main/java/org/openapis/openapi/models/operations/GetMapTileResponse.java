@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMapTileResponse {
@@ -12,6 +13,7 @@ public class GetMapTileResponse {
      */
     
     public Object accessDeniedException;
+
     public GetMapTileResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetMapTileResponse {
     
     
     public String contentType;
+
     public GetMapTileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetMapTileResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMapTileResponse getMapTileResponse;
+
     public GetMapTileResponse withGetMapTileResponse(org.openapis.openapi.models.shared.GetMapTileResponse getMapTileResponse) {
         this.getMapTileResponse = getMapTileResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetMapTileResponse {
      */
     
     public Object internalServerException;
+
     public GetMapTileResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetMapTileResponse {
     
     
     public Integer statusCode;
+
     public GetMapTileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetMapTileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMapTileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetMapTileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetMapTileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetMapTileResponse {
      */
     
     public Object throttlingException;
+
     public GetMapTileResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetMapTileResponse {
      */
     
     public Object validationException;
+
     public GetMapTileResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetMapTileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReplaceRootVolumeTasksRequestFilters {
     
     public String name;
+
     public DescribeReplaceRootVolumeTasksRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeReplaceRootVolumeTasksRequestFilters {
     
     
     public String[] values;
+
     public DescribeReplaceRootVolumeTasksRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeReplaceRootVolumeTasksRequestFilters(){}
 }

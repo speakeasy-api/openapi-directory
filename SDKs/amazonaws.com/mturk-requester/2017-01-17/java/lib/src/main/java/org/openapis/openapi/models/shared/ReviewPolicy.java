@@ -15,6 +15,7 @@ public class ReviewPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public PolicyParameter[] parameters;
+
     public ReviewPolicy withParameters(PolicyParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -22,9 +23,13 @@ public class ReviewPolicy {
     
     @JsonProperty("PolicyName")
     public String policyName;
+
     public ReviewPolicy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public ReviewPolicy(@JsonProperty("PolicyName") String policyName) {
+        this.policyName = policyName;
+  }
 }

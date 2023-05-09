@@ -169,6 +169,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -206,15 +211,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeEntitiesDetectionV2JobResponse res = new org.openapis.openapi.models.operations.DescribeEntitiesDetectionV2JobResponse() {{
+        org.openapis.openapi.models.operations.DescribeEntitiesDetectionV2JobResponse res = new org.openapis.openapi.models.operations.DescribeEntitiesDetectionV2JobResponse(contentType, httpRes.statusCode()) {{
             describeEntitiesDetectionV2JobResponse = null;
             invalidRequestException = null;
             tooManyRequestsException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,15 +293,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeIcd10CMInferenceJobResponse res = new org.openapis.openapi.models.operations.DescribeIcd10CMInferenceJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeIcd10CMInferenceJobResponse res = new org.openapis.openapi.models.operations.DescribeIcd10CMInferenceJobResponse(contentType, httpRes.statusCode()) {{
             describeIcd10CMInferenceJobResponse = null;
             invalidRequestException = null;
             tooManyRequestsException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -374,15 +375,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribePHIDetectionJobResponse res = new org.openapis.openapi.models.operations.DescribePHIDetectionJobResponse() {{
+        org.openapis.openapi.models.operations.DescribePHIDetectionJobResponse res = new org.openapis.openapi.models.operations.DescribePHIDetectionJobResponse(contentType, httpRes.statusCode()) {{
             describePHIDetectionJobResponse = null;
             invalidRequestException = null;
             tooManyRequestsException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -458,15 +457,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeRxNormInferenceJobResponse res = new org.openapis.openapi.models.operations.DescribeRxNormInferenceJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeRxNormInferenceJobResponse res = new org.openapis.openapi.models.operations.DescribeRxNormInferenceJobResponse(contentType, httpRes.statusCode()) {{
             describeRxNormInferenceJobResponse = null;
             invalidRequestException = null;
             tooManyRequestsException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -542,15 +539,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeSNOMEDCTInferenceJobResponse res = new org.openapis.openapi.models.operations.DescribeSNOMEDCTInferenceJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeSNOMEDCTInferenceJobResponse res = new org.openapis.openapi.models.operations.DescribeSNOMEDCTInferenceJobResponse(contentType, httpRes.statusCode()) {{
             describeSNOMEDCTInferenceJobResponse = null;
             invalidRequestException = null;
             tooManyRequestsException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -597,7 +592,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DetectEntitiesResponse detectEntities(org.openapis.openapi.models.operations.DetectEntitiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=ComprehendMedical_20181030.DetectEntities");
@@ -626,7 +623,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DetectEntitiesResponse res = new org.openapis.openapi.models.operations.DetectEntitiesResponse() {{
+        org.openapis.openapi.models.operations.DetectEntitiesResponse res = new org.openapis.openapi.models.operations.DetectEntitiesResponse(contentType, httpRes.statusCode()) {{
             detectEntitiesResponse = null;
             internalServerException = null;
             serviceUnavailableException = null;
@@ -635,8 +632,6 @@ public class SDK {
             invalidEncodingException = null;
             textSizeLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -726,7 +721,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DetectEntitiesV2Response res = new org.openapis.openapi.models.operations.DetectEntitiesV2Response() {{
+        org.openapis.openapi.models.operations.DetectEntitiesV2Response res = new org.openapis.openapi.models.operations.DetectEntitiesV2Response(contentType, httpRes.statusCode()) {{
             detectEntitiesV2Response = null;
             internalServerException = null;
             serviceUnavailableException = null;
@@ -735,8 +730,6 @@ public class SDK {
             invalidEncodingException = null;
             textSizeLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -826,7 +819,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DetectPHIResponse res = new org.openapis.openapi.models.operations.DetectPHIResponse() {{
+        org.openapis.openapi.models.operations.DetectPHIResponse res = new org.openapis.openapi.models.operations.DetectPHIResponse(contentType, httpRes.statusCode()) {{
             detectPHIResponse = null;
             internalServerException = null;
             serviceUnavailableException = null;
@@ -835,8 +828,6 @@ public class SDK {
             invalidEncodingException = null;
             textSizeLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -926,7 +917,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InferIcd10CMResponse res = new org.openapis.openapi.models.operations.InferIcd10CMResponse() {{
+        org.openapis.openapi.models.operations.InferIcd10CMResponse res = new org.openapis.openapi.models.operations.InferIcd10CMResponse(contentType, httpRes.statusCode()) {{
             inferIcd10CMResponse = null;
             internalServerException = null;
             serviceUnavailableException = null;
@@ -935,8 +926,6 @@ public class SDK {
             invalidEncodingException = null;
             textSizeLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1026,7 +1015,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InferRxNormResponse res = new org.openapis.openapi.models.operations.InferRxNormResponse() {{
+        org.openapis.openapi.models.operations.InferRxNormResponse res = new org.openapis.openapi.models.operations.InferRxNormResponse(contentType, httpRes.statusCode()) {{
             inferRxNormResponse = null;
             internalServerException = null;
             serviceUnavailableException = null;
@@ -1035,8 +1024,6 @@ public class SDK {
             invalidEncodingException = null;
             textSizeLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1126,7 +1113,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InferSNOMEDCTResponse res = new org.openapis.openapi.models.operations.InferSNOMEDCTResponse() {{
+        org.openapis.openapi.models.operations.InferSNOMEDCTResponse res = new org.openapis.openapi.models.operations.InferSNOMEDCTResponse(contentType, httpRes.statusCode()) {{
             inferSNOMEDCTResponse = null;
             internalServerException = null;
             serviceUnavailableException = null;
@@ -1135,8 +1122,6 @@ public class SDK {
             invalidEncodingException = null;
             textSizeLimitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1226,15 +1211,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListEntitiesDetectionV2JobsResponse res = new org.openapis.openapi.models.operations.ListEntitiesDetectionV2JobsResponse() {{
+        org.openapis.openapi.models.operations.ListEntitiesDetectionV2JobsResponse res = new org.openapis.openapi.models.operations.ListEntitiesDetectionV2JobsResponse(contentType, httpRes.statusCode()) {{
             listEntitiesDetectionV2JobsResponse = null;
             invalidRequestException = null;
             validationException = null;
             tooManyRequestsException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1310,15 +1293,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListIcd10CMInferenceJobsResponse res = new org.openapis.openapi.models.operations.ListIcd10CMInferenceJobsResponse() {{
+        org.openapis.openapi.models.operations.ListIcd10CMInferenceJobsResponse res = new org.openapis.openapi.models.operations.ListIcd10CMInferenceJobsResponse(contentType, httpRes.statusCode()) {{
             listIcd10CMInferenceJobsResponse = null;
             invalidRequestException = null;
             validationException = null;
             tooManyRequestsException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1394,15 +1375,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPHIDetectionJobsResponse res = new org.openapis.openapi.models.operations.ListPHIDetectionJobsResponse() {{
+        org.openapis.openapi.models.operations.ListPHIDetectionJobsResponse res = new org.openapis.openapi.models.operations.ListPHIDetectionJobsResponse(contentType, httpRes.statusCode()) {{
             listPHIDetectionJobsResponse = null;
             invalidRequestException = null;
             validationException = null;
             tooManyRequestsException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1478,15 +1457,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRxNormInferenceJobsResponse res = new org.openapis.openapi.models.operations.ListRxNormInferenceJobsResponse() {{
+        org.openapis.openapi.models.operations.ListRxNormInferenceJobsResponse res = new org.openapis.openapi.models.operations.ListRxNormInferenceJobsResponse(contentType, httpRes.statusCode()) {{
             listRxNormInferenceJobsResponse = null;
             invalidRequestException = null;
             validationException = null;
             tooManyRequestsException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1562,15 +1539,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSNOMEDCTInferenceJobsResponse res = new org.openapis.openapi.models.operations.ListSNOMEDCTInferenceJobsResponse() {{
+        org.openapis.openapi.models.operations.ListSNOMEDCTInferenceJobsResponse res = new org.openapis.openapi.models.operations.ListSNOMEDCTInferenceJobsResponse(contentType, httpRes.statusCode()) {{
             listSNOMEDCTInferenceJobsResponse = null;
             invalidRequestException = null;
             validationException = null;
             tooManyRequestsException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1646,15 +1621,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartEntitiesDetectionV2JobResponse res = new org.openapis.openapi.models.operations.StartEntitiesDetectionV2JobResponse() {{
+        org.openapis.openapi.models.operations.StartEntitiesDetectionV2JobResponse res = new org.openapis.openapi.models.operations.StartEntitiesDetectionV2JobResponse(contentType, httpRes.statusCode()) {{
             startEntitiesDetectionV2JobResponse = null;
             invalidRequestException = null;
             tooManyRequestsException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1730,15 +1703,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartIcd10CMInferenceJobResponse res = new org.openapis.openapi.models.operations.StartIcd10CMInferenceJobResponse() {{
+        org.openapis.openapi.models.operations.StartIcd10CMInferenceJobResponse res = new org.openapis.openapi.models.operations.StartIcd10CMInferenceJobResponse(contentType, httpRes.statusCode()) {{
             startIcd10CMInferenceJobResponse = null;
             invalidRequestException = null;
             tooManyRequestsException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1814,15 +1785,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartPHIDetectionJobResponse res = new org.openapis.openapi.models.operations.StartPHIDetectionJobResponse() {{
+        org.openapis.openapi.models.operations.StartPHIDetectionJobResponse res = new org.openapis.openapi.models.operations.StartPHIDetectionJobResponse(contentType, httpRes.statusCode()) {{
             startPHIDetectionJobResponse = null;
             invalidRequestException = null;
             tooManyRequestsException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1898,15 +1867,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartRxNormInferenceJobResponse res = new org.openapis.openapi.models.operations.StartRxNormInferenceJobResponse() {{
+        org.openapis.openapi.models.operations.StartRxNormInferenceJobResponse res = new org.openapis.openapi.models.operations.StartRxNormInferenceJobResponse(contentType, httpRes.statusCode()) {{
             startRxNormInferenceJobResponse = null;
             invalidRequestException = null;
             tooManyRequestsException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1982,15 +1949,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartSNOMEDCTInferenceJobResponse res = new org.openapis.openapi.models.operations.StartSNOMEDCTInferenceJobResponse() {{
+        org.openapis.openapi.models.operations.StartSNOMEDCTInferenceJobResponse res = new org.openapis.openapi.models.operations.StartSNOMEDCTInferenceJobResponse(contentType, httpRes.statusCode()) {{
             startSNOMEDCTInferenceJobResponse = null;
             invalidRequestException = null;
             tooManyRequestsException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2066,14 +2031,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopEntitiesDetectionV2JobResponse res = new org.openapis.openapi.models.operations.StopEntitiesDetectionV2JobResponse() {{
+        org.openapis.openapi.models.operations.StopEntitiesDetectionV2JobResponse res = new org.openapis.openapi.models.operations.StopEntitiesDetectionV2JobResponse(contentType, httpRes.statusCode()) {{
             stopEntitiesDetectionV2JobResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2142,14 +2105,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopIcd10CMInferenceJobResponse res = new org.openapis.openapi.models.operations.StopIcd10CMInferenceJobResponse() {{
+        org.openapis.openapi.models.operations.StopIcd10CMInferenceJobResponse res = new org.openapis.openapi.models.operations.StopIcd10CMInferenceJobResponse(contentType, httpRes.statusCode()) {{
             stopIcd10CMInferenceJobResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2218,14 +2179,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPHIDetectionJobResponse res = new org.openapis.openapi.models.operations.StopPHIDetectionJobResponse() {{
+        org.openapis.openapi.models.operations.StopPHIDetectionJobResponse res = new org.openapis.openapi.models.operations.StopPHIDetectionJobResponse(contentType, httpRes.statusCode()) {{
             stopPHIDetectionJobResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2294,14 +2253,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopRxNormInferenceJobResponse res = new org.openapis.openapi.models.operations.StopRxNormInferenceJobResponse() {{
+        org.openapis.openapi.models.operations.StopRxNormInferenceJobResponse res = new org.openapis.openapi.models.operations.StopRxNormInferenceJobResponse(contentType, httpRes.statusCode()) {{
             stopRxNormInferenceJobResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2370,15 +2327,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopSNOMEDCTInferenceJobResponse res = new org.openapis.openapi.models.operations.StopSNOMEDCTInferenceJobResponse() {{
+        org.openapis.openapi.models.operations.StopSNOMEDCTInferenceJobResponse res = new org.openapis.openapi.models.operations.StopSNOMEDCTInferenceJobResponse(contentType, httpRes.statusCode()) {{
             stopSNOMEDCTInferenceJobResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
             tooManyRequestsException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOfferingsOfferingIdUsersMarkerEmailMarksRequest {
@@ -12,6 +13,7 @@ public class PostOfferingsOfferingIdUsersMarkerEmailMarksRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String[] requestBody;
+
     public PostOfferingsOfferingIdUsersMarkerEmailMarksRequest withRequestBody(String[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class PostOfferingsOfferingIdUsersMarkerEmailMarksRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=markerEmail")
     public String markerEmail;
+
     public PostOfferingsOfferingIdUsersMarkerEmailMarksRequest withMarkerEmail(String markerEmail) {
         this.markerEmail = markerEmail;
         return this;
@@ -32,9 +35,15 @@ public class PostOfferingsOfferingIdUsersMarkerEmailMarksRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public PostOfferingsOfferingIdUsersMarkerEmailMarksRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public PostOfferingsOfferingIdUsersMarkerEmailMarksRequest(@JsonProperty("RequestBody") String[] requestBody, @JsonProperty("markerEmail") String markerEmail, @JsonProperty("offeringId") String offeringId) {
+        this.requestBody = requestBody;
+        this.markerEmail = markerEmail;
+        this.offeringId = offeringId;
+  }
 }

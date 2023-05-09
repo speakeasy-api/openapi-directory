@@ -15,6 +15,7 @@ public class ListLineageGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineageGroupSummaries")
     public LineageGroupSummary[] lineageGroupSummaries;
+
     public ListLineageGroupsResponse withLineageGroupSummaries(LineageGroupSummary[] lineageGroupSummaries) {
         this.lineageGroupSummaries = lineageGroupSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListLineageGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLineageGroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLineageGroupsResponse(){}
 }

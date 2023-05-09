@@ -18,6 +18,7 @@ public class GetPageAngleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Angle")
     public Double angle;
+
     public GetPageAngleResult withAngle(Double angle) {
         this.angle = angle;
         return this;
@@ -29,9 +30,11 @@ public class GetPageAngleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Successful")
     public Boolean successful;
+
     public GetPageAngleResult withSuccessful(Boolean successful) {
         this.successful = successful;
         return this;
     }
     
+    public GetPageAngleResult(){}
 }

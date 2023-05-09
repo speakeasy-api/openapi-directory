@@ -18,6 +18,7 @@ public class DestinyResponsesDestinyCollectibleNodeDetailResponse {
      */
     
     public DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItemComponents collectibleItemComponents;
+
     public DestinyResponsesDestinyCollectibleNodeDetailResponse withCollectibleItemComponents(DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibleItemComponents collectibleItemComponents) {
         this.collectibleItemComponents = collectibleItemComponents;
         return this;
@@ -28,9 +29,11 @@ public class DestinyResponsesDestinyCollectibleNodeDetailResponse {
      */
     
     public DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibles collectibles;
+
     public DestinyResponsesDestinyCollectibleNodeDetailResponse withCollectibles(DestinyResponsesDestinyCollectibleNodeDetailResponseCollectibles collectibles) {
         this.collectibles = collectibles;
         return this;
     }
     
+    public DestinyResponsesDestinyCollectibleNodeDetailResponse(){}
 }

@@ -18,6 +18,7 @@ public class OrdersCreateTestReturnResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OrdersCreateTestReturnResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class OrdersCreateTestReturnResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnId")
     public String returnId;
+
     public OrdersCreateTestReturnResponse withReturnId(String returnId) {
         this.returnId = returnId;
         return this;
     }
     
+    public OrdersCreateTestReturnResponse(){}
 }

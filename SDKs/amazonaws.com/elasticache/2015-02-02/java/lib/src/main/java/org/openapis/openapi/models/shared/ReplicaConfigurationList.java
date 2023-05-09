@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ReplicaConfigurationList - Node group (shard) configuration options when adding or removing replicas. Each node group (shard) configuration has the following members: NodeGroupId, NewReplicaCount, and PreferredAvailabilityZones. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReplicaConfigurationList {
     
     public Long newReplicaCount;
+
     public ReplicaConfigurationList withNewReplicaCount(Long newReplicaCount) {
         this.newReplicaCount = newReplicaCount;
         return this;
@@ -19,6 +20,7 @@ public class ReplicaConfigurationList {
     
     
     public String nodeGroupId;
+
     public ReplicaConfigurationList withNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
         return this;
@@ -26,6 +28,7 @@ public class ReplicaConfigurationList {
     
     
     public String[] preferredAvailabilityZones;
+
     public ReplicaConfigurationList withPreferredAvailabilityZones(String[] preferredAvailabilityZones) {
         this.preferredAvailabilityZones = preferredAvailabilityZones;
         return this;
@@ -33,9 +36,14 @@ public class ReplicaConfigurationList {
     
     
     public String[] preferredOutpostArns;
+
     public ReplicaConfigurationList withPreferredOutpostArns(String[] preferredOutpostArns) {
         this.preferredOutpostArns = preferredOutpostArns;
         return this;
     }
     
+    public ReplicaConfigurationList(@JsonProperty("NewReplicaCount") Long newReplicaCount, @JsonProperty("NodeGroupId") String nodeGroupId) {
+        this.newReplicaCount = newReplicaCount;
+        this.nodeGroupId = nodeGroupId;
+  }
 }

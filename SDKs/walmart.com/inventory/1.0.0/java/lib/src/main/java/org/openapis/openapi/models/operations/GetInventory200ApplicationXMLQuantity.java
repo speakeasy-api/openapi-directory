@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetInventory200ApplicationXMLQuantity - Quantity that has been ordered by the customers but not yet shipped
@@ -15,6 +15,7 @@ public class GetInventory200ApplicationXMLQuantity {
      */
     
     public Double amount;
+
     public GetInventory200ApplicationXMLQuantity withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -25,9 +26,14 @@ public class GetInventory200ApplicationXMLQuantity {
      */
     
     public GetInventory200ApplicationXMLQuantityUnitEnum unit;
+
     public GetInventory200ApplicationXMLQuantity withUnit(GetInventory200ApplicationXMLQuantityUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public GetInventory200ApplicationXMLQuantity(@JsonProperty("amount") Double amount, @JsonProperty("unit") GetInventory200ApplicationXMLQuantityUnitEnum unit) {
+        this.amount = amount;
+        this.unit = unit;
+  }
 }

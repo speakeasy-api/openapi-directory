@@ -15,9 +15,11 @@ public class LiasettingsCustomBatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public LiasettingsCustomBatchRequestEntry[] entries;
+
     public LiasettingsCustomBatchRequest withEntries(LiasettingsCustomBatchRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public LiasettingsCustomBatchRequest(){}
 }

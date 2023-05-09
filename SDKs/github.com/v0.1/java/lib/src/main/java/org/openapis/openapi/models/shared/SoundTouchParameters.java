@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class SoundTouchParameters {
      */
     @SpeakeasyMetadata("form:name=AudioDirection")
     public SoundTouchParametersAudioDirectionEnum audioDirection;
+
     public SoundTouchParameters withAudioDirection(SoundTouchParametersAudioDirectionEnum audioDirection) {
         this.audioDirection = audioDirection;
         return this;
@@ -25,6 +27,7 @@ public class SoundTouchParameters {
      */
     @SpeakeasyMetadata("form:name=CallUUID")
     public String callUUID;
+
     public SoundTouchParameters withCallUUID(String callUUID) {
         this.callUUID = callUUID;
         return this;
@@ -35,6 +38,7 @@ public class SoundTouchParameters {
      */
     @SpeakeasyMetadata("form:name=Pitch")
     public Float pitch;
+
     public SoundTouchParameters withPitch(Float pitch) {
         this.pitch = pitch;
         return this;
@@ -45,6 +49,7 @@ public class SoundTouchParameters {
      */
     @SpeakeasyMetadata("form:name=PitchOctaves")
     public Float pitchOctaves;
+
     public SoundTouchParameters withPitchOctaves(Float pitchOctaves) {
         this.pitchOctaves = pitchOctaves;
         return this;
@@ -55,6 +60,7 @@ public class SoundTouchParameters {
      */
     @SpeakeasyMetadata("form:name=PitchSemiTones")
     public Float pitchSemiTones;
+
     public SoundTouchParameters withPitchSemiTones(Float pitchSemiTones) {
         this.pitchSemiTones = pitchSemiTones;
         return this;
@@ -65,6 +71,7 @@ public class SoundTouchParameters {
      */
     @SpeakeasyMetadata("form:name=Rate")
     public Float rate;
+
     public SoundTouchParameters withRate(Float rate) {
         this.rate = rate;
         return this;
@@ -75,9 +82,13 @@ public class SoundTouchParameters {
      */
     @SpeakeasyMetadata("form:name=Tempo")
     public Float tempo;
+
     public SoundTouchParameters withTempo(Float tempo) {
         this.tempo = tempo;
         return this;
     }
     
+    public SoundTouchParameters(@JsonProperty("CallUUID") String callUUID) {
+        this.callUUID = callUUID;
+  }
 }

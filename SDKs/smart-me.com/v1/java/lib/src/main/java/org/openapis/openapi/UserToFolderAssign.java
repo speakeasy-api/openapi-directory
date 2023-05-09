@@ -53,10 +53,8 @@ public class UserToFolderAssign {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserToFolderAssignDeleteResponse res = new org.openapis.openapi.models.operations.UserToFolderAssignDeleteResponse() {{
+        org.openapis.openapi.models.operations.UserToFolderAssignDeleteResponse res = new org.openapis.openapi.models.operations.UserToFolderAssignDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -91,10 +89,8 @@ public class UserToFolderAssign {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserToFolderAssignPostResponse res = new org.openapis.openapi.models.operations.UserToFolderAssignPostResponse() {{
+        org.openapis.openapi.models.operations.UserToFolderAssignPostResponse res = new org.openapis.openapi.models.operations.UserToFolderAssignPostResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

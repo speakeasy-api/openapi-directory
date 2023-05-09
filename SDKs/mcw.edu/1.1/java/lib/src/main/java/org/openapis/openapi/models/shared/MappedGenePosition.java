@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class MappedGenePosition {
     
     public String chromosome;
+
     public MappedGenePosition withChromosome(String chromosome) {
         this.chromosome = chromosome;
         return this;
@@ -16,6 +17,7 @@ public class MappedGenePosition {
     
     
     public Integer mapKey;
+
     public MappedGenePosition withMapKey(Integer mapKey) {
         this.mapKey = mapKey;
         return this;
@@ -23,6 +25,7 @@ public class MappedGenePosition {
     
     
     public Integer rgdId;
+
     public MappedGenePosition withRgdId(Integer rgdId) {
         this.rgdId = rgdId;
         return this;
@@ -30,6 +33,7 @@ public class MappedGenePosition {
     
     
     public Long start;
+
     public MappedGenePosition withStart(Long start) {
         this.start = start;
         return this;
@@ -37,6 +41,7 @@ public class MappedGenePosition {
     
     
     public Long stop;
+
     public MappedGenePosition withStop(Long stop) {
         this.stop = stop;
         return this;
@@ -44,6 +49,7 @@ public class MappedGenePosition {
     
     
     public String strand;
+
     public MappedGenePosition withStrand(String strand) {
         this.strand = strand;
         return this;
@@ -51,9 +57,11 @@ public class MappedGenePosition {
     
     
     public String symbol;
+
     public MappedGenePosition withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
     }
     
+    public MappedGenePosition(){}
 }

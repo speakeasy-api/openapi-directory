@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SearchFacesByImageRequest {
     @JsonProperty("CollectionId")
     public String collectionId;
+
     public SearchFacesByImageRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -19,6 +20,7 @@ public class SearchFacesByImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceMatchThreshold")
     public Float faceMatchThreshold;
+
     public SearchFacesByImageRequest withFaceMatchThreshold(Float faceMatchThreshold) {
         this.faceMatchThreshold = faceMatchThreshold;
         return this;
@@ -26,6 +28,7 @@ public class SearchFacesByImageRequest {
     
     @JsonProperty("Image")
     public Image image;
+
     public SearchFacesByImageRequest withImage(Image image) {
         this.image = image;
         return this;
@@ -34,6 +37,7 @@ public class SearchFacesByImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxFaces")
     public Long maxFaces;
+
     public SearchFacesByImageRequest withMaxFaces(Long maxFaces) {
         this.maxFaces = maxFaces;
         return this;
@@ -42,9 +46,14 @@ public class SearchFacesByImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QualityFilter")
     public QualityFilterEnum qualityFilter;
+
     public SearchFacesByImageRequest withQualityFilter(QualityFilterEnum qualityFilter) {
         this.qualityFilter = qualityFilter;
         return this;
     }
     
+    public SearchFacesByImageRequest(@JsonProperty("CollectionId") String collectionId, @JsonProperty("Image") Image image) {
+        this.collectionId = collectionId;
+        this.image = image;
+  }
 }

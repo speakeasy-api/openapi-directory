@@ -18,6 +18,7 @@ public class DataIssueDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataIssueSeverity")
     public DataIssueDetailDataIssueSeverityEnum dataIssueSeverity;
+
     public DataIssueDetail withDataIssueSeverity(DataIssueDetailDataIssueSeverityEnum dataIssueSeverity) {
         this.dataIssueSeverity = dataIssueSeverity;
         return this;
@@ -29,6 +30,7 @@ public class DataIssueDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataIssueType")
     public DataIssueDetailDataIssueTypeEnum dataIssueType;
+
     public DataIssueDetail withDataIssueType(DataIssueDetailDataIssueTypeEnum dataIssueType) {
         this.dataIssueType = dataIssueType;
         return this;
@@ -40,9 +42,11 @@ public class DataIssueDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSelfResolving")
     public Boolean isSelfResolving;
+
     public DataIssueDetail withIsSelfResolving(Boolean isSelfResolving) {
         this.isSelfResolving = isSelfResolving;
         return this;
     }
     
+    public DataIssueDetail(){}
 }

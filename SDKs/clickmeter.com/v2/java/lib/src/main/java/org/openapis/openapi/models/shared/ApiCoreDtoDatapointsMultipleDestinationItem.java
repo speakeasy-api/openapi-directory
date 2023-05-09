@@ -12,9 +12,11 @@ public class ApiCoreDtoDatapointsMultipleDestinationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ApiCoreDtoDatapointsMultipleDestinationItem withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ApiCoreDtoDatapointsMultipleDestinationItem(){}
 }

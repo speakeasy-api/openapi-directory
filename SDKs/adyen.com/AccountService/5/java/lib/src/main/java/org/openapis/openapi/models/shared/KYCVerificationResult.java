@@ -12,6 +12,7 @@ public class KYCVerificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolder")
     public KYCCheckResult accountHolder;
+
     public KYCVerificationResult withAccountHolder(KYCCheckResult accountHolder) {
         this.accountHolder = accountHolder;
         return this;
@@ -23,6 +24,7 @@ public class KYCVerificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccounts")
     public KYCBankAccountCheckResult[] bankAccounts;
+
     public KYCVerificationResult withBankAccounts(KYCBankAccountCheckResult[] bankAccounts) {
         this.bankAccounts = bankAccounts;
         return this;
@@ -34,6 +36,7 @@ public class KYCVerificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cards")
     public KYCCardCheckResult[] cards;
+
     public KYCVerificationResult withCards(KYCCardCheckResult[] cards) {
         this.cards = cards;
         return this;
@@ -45,6 +48,7 @@ public class KYCVerificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareholders")
     public KYCShareholderCheckResult[] shareholders;
+
     public KYCVerificationResult withShareholders(KYCShareholderCheckResult[] shareholders) {
         this.shareholders = shareholders;
         return this;
@@ -56,9 +60,11 @@ public class KYCVerificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatories")
     public KYCSignatoryCheckResult[] signatories;
+
     public KYCVerificationResult withSignatories(KYCSignatoryCheckResult[] signatories) {
         this.signatories = signatories;
         return this;
     }
     
+    public KYCVerificationResult(){}
 }

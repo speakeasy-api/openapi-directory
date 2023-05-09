@@ -12,6 +12,7 @@ public class ScanDefinitionAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criticity")
     public ScanDefinitionAssetsCriticityEnum criticity;
+
     public ScanDefinitionAssets withCriticity(ScanDefinitionAssetsCriticityEnum criticity) {
         this.criticity = criticity;
         return this;
@@ -20,6 +21,7 @@ public class ScanDefinitionAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datatype")
     public ScanDefinitionAssetsDatatypeEnum datatype;
+
     public ScanDefinitionAssets withDatatype(ScanDefinitionAssetsDatatypeEnum datatype) {
         this.datatype = datatype;
         return this;
@@ -28,6 +30,7 @@ public class ScanDefinitionAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ScanDefinitionAssets withId(String id) {
         this.id = id;
         return this;
@@ -36,9 +39,11 @@ public class ScanDefinitionAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ScanDefinitionAssets withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ScanDefinitionAssets(){}
 }

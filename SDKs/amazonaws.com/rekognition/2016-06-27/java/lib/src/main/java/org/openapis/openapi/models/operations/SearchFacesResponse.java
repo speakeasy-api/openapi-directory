@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchFacesResponse {
@@ -12,6 +13,7 @@ public class SearchFacesResponse {
      */
     
     public Object accessDeniedException;
+
     public SearchFacesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SearchFacesResponse {
     
     
     public String contentType;
+
     public SearchFacesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SearchFacesResponse {
      */
     
     public Object internalServerError;
+
     public SearchFacesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class SearchFacesResponse {
      */
     
     public Object invalidParameterException;
+
     public SearchFacesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class SearchFacesResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public SearchFacesResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -59,6 +65,7 @@ public class SearchFacesResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchFacesResponse searchFacesResponse;
+
     public SearchFacesResponse withSearchFacesResponse(org.openapis.openapi.models.shared.SearchFacesResponse searchFacesResponse) {
         this.searchFacesResponse = searchFacesResponse;
         return this;
@@ -66,6 +73,7 @@ public class SearchFacesResponse {
     
     
     public Integer statusCode;
+
     public SearchFacesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class SearchFacesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchFacesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class SearchFacesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SearchFacesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class SearchFacesResponse {
      */
     
     public Object throttlingException;
+
     public SearchFacesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public SearchFacesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ListAssociatedStacksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Names")
     public String[] names;
+
     public ListAssociatedStacksResult withNames(String[] names) {
         this.names = names;
         return this;
@@ -23,9 +24,11 @@ public class ListAssociatedStacksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAssociatedStacksResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssociatedStacksResult(){}
 }

@@ -59,11 +59,9 @@ public class ServiceInstance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListServiceInstancesResponse res = new org.openapis.openapi.models.operations.ListServiceInstancesResponse() {{
+        org.openapis.openapi.models.operations.ListServiceInstancesResponse res = new org.openapis.openapi.models.operations.ListServiceInstancesResponse(contentType, httpRes.statusCode()) {{
             serviceInstancesCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class ServiceInstance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShowServiceInstanceResponse res = new org.openapis.openapi.models.operations.ShowServiceInstanceResponse() {{
+        org.openapis.openapi.models.operations.ShowServiceInstanceResponse res = new org.openapis.openapi.models.operations.ShowServiceInstanceResponse(contentType, httpRes.statusCode()) {{
             serviceInstance = null;
             errorNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

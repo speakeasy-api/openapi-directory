@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RevokeCertificateResponse {
@@ -12,6 +13,7 @@ public class RevokeCertificateResponse {
      */
     
     public Object concurrentModificationException;
+
     public RevokeCertificateResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class RevokeCertificateResponse {
     
     
     public String contentType;
+
     public RevokeCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RevokeCertificateResponse {
      */
     
     public Object invalidArnException;
+
     public RevokeCertificateResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class RevokeCertificateResponse {
      */
     
     public Object invalidRequestException;
+
     public RevokeCertificateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class RevokeCertificateResponse {
      */
     
     public Object invalidStateException;
+
     public RevokeCertificateResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -59,6 +65,7 @@ public class RevokeCertificateResponse {
      */
     
     public Object limitExceededException;
+
     public RevokeCertificateResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class RevokeCertificateResponse {
      */
     
     public Object requestAlreadyProcessedException;
+
     public RevokeCertificateResponse withRequestAlreadyProcessedException(Object requestAlreadyProcessedException) {
         this.requestAlreadyProcessedException = requestAlreadyProcessedException;
         return this;
@@ -79,6 +87,7 @@ public class RevokeCertificateResponse {
      */
     
     public Object requestFailedException;
+
     public RevokeCertificateResponse withRequestFailedException(Object requestFailedException) {
         this.requestFailedException = requestFailedException;
         return this;
@@ -89,6 +98,7 @@ public class RevokeCertificateResponse {
      */
     
     public Object requestInProgressException;
+
     public RevokeCertificateResponse withRequestInProgressException(Object requestInProgressException) {
         this.requestInProgressException = requestInProgressException;
         return this;
@@ -99,6 +109,7 @@ public class RevokeCertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RevokeCertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -106,6 +117,7 @@ public class RevokeCertificateResponse {
     
     
     public Integer statusCode;
+
     public RevokeCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class RevokeCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RevokeCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RevokeCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

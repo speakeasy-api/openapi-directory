@@ -15,9 +15,11 @@ public class ConfluencePageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageFieldMappings")
     public ConfluencePageToIndexFieldMapping[] pageFieldMappings;
+
     public ConfluencePageConfiguration withPageFieldMappings(ConfluencePageToIndexFieldMapping[] pageFieldMappings) {
         this.pageFieldMappings = pageFieldMappings;
         return this;
     }
     
+    public ConfluencePageConfiguration(){}
 }

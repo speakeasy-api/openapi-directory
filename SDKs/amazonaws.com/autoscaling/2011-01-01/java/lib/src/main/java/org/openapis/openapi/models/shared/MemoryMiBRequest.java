@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * MemoryMiBRequest - Specifies the minimum and maximum for the &lt;code&gt;MemoryMiB&lt;/code&gt; object when you specify &lt;a&gt;InstanceRequirements&lt;/a&gt; for an Auto Scaling group.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MemoryMiBRequest {
     
     public Long max;
+
     public MemoryMiBRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,13 @@ public class MemoryMiBRequest {
     
     
     public Long min;
+
     public MemoryMiBRequest withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public MemoryMiBRequest(@JsonProperty("Min") Long min) {
+        this.min = min;
+  }
 }

@@ -17,6 +17,7 @@ public class DevicesRegisterUserForDevice200ApplicationJSON {
      */
     @JsonProperty("device_name")
     public String deviceName;
+
     public DevicesRegisterUserForDevice200ApplicationJSON withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -28,6 +29,7 @@ public class DevicesRegisterUserForDevice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("full_device_name")
     public String fullDeviceName;
+
     public DevicesRegisterUserForDevice200ApplicationJSON withFullDeviceName(String fullDeviceName) {
         this.fullDeviceName = fullDeviceName;
         return this;
@@ -39,6 +41,7 @@ public class DevicesRegisterUserForDevice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imei")
     public String imei;
+
     public DevicesRegisterUserForDevice200ApplicationJSON withImei(String imei) {
         this.imei = imei;
         return this;
@@ -49,6 +52,7 @@ public class DevicesRegisterUserForDevice200ApplicationJSON {
      */
     @JsonProperty("model")
     public String model;
+
     public DevicesRegisterUserForDevice200ApplicationJSON withModel(String model) {
         this.model = model;
         return this;
@@ -59,6 +63,7 @@ public class DevicesRegisterUserForDevice200ApplicationJSON {
      */
     @JsonProperty("os_build")
     public String osBuild;
+
     public DevicesRegisterUserForDevice200ApplicationJSON withOsBuild(String osBuild) {
         this.osBuild = osBuild;
         return this;
@@ -69,6 +74,7 @@ public class DevicesRegisterUserForDevice200ApplicationJSON {
      */
     @JsonProperty("os_version")
     public String osVersion;
+
     public DevicesRegisterUserForDevice200ApplicationJSON withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -80,6 +86,7 @@ public class DevicesRegisterUserForDevice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner_id")
     public String ownerId;
+
     public DevicesRegisterUserForDevice200ApplicationJSON withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -91,6 +98,7 @@ public class DevicesRegisterUserForDevice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registered_at")
     public String registeredAt;
+
     public DevicesRegisterUserForDevice200ApplicationJSON withRegisteredAt(String registeredAt) {
         this.registeredAt = registeredAt;
         return this;
@@ -102,6 +110,7 @@ public class DevicesRegisterUserForDevice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serial")
     public String serial;
+
     public DevicesRegisterUserForDevice200ApplicationJSON withSerial(String serial) {
         this.serial = serial;
         return this;
@@ -112,6 +121,7 @@ public class DevicesRegisterUserForDevice200ApplicationJSON {
      */
     @JsonProperty("status")
     public String status;
+
     public DevicesRegisterUserForDevice200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
@@ -122,9 +132,18 @@ public class DevicesRegisterUserForDevice200ApplicationJSON {
      */
     @JsonProperty("udid")
     public String udid;
+
     public DevicesRegisterUserForDevice200ApplicationJSON withUdid(String udid) {
         this.udid = udid;
         return this;
     }
     
+    public DevicesRegisterUserForDevice200ApplicationJSON(@JsonProperty("device_name") String deviceName, @JsonProperty("model") String model, @JsonProperty("os_build") String osBuild, @JsonProperty("os_version") String osVersion, @JsonProperty("status") String status, @JsonProperty("udid") String udid) {
+        this.deviceName = deviceName;
+        this.model = model;
+        this.osBuild = osBuild;
+        this.osVersion = osVersion;
+        this.status = status;
+        this.udid = udid;
+  }
 }

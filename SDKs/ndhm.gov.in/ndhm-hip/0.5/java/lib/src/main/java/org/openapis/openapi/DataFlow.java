@@ -96,12 +96,10 @@ public class DataFlow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestJsonResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestJsonResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -173,12 +171,10 @@ public class DataFlow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestRawResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestRawResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

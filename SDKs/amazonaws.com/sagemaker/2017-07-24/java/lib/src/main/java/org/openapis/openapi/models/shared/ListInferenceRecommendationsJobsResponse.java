@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListInferenceRecommendationsJobsResponse {
     @JsonProperty("InferenceRecommendationsJobs")
     public InferenceRecommendationsJob[] inferenceRecommendationsJobs;
+
     public ListInferenceRecommendationsJobsResponse withInferenceRecommendationsJobs(InferenceRecommendationsJob[] inferenceRecommendationsJobs) {
         this.inferenceRecommendationsJobs = inferenceRecommendationsJobs;
         return this;
@@ -22,9 +23,13 @@ public class ListInferenceRecommendationsJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListInferenceRecommendationsJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListInferenceRecommendationsJobsResponse(@JsonProperty("InferenceRecommendationsJobs") InferenceRecommendationsJob[] inferenceRecommendationsJobs) {
+        this.inferenceRecommendationsJobs = inferenceRecommendationsJobs;
+  }
 }

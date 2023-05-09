@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeRegionHealthCheckServicesGetResponse {
     
     public String contentType;
+
     public ComputeRegionHealthCheckServicesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionHealthCheckServicesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HealthCheckService healthCheckService;
+
     public ComputeRegionHealthCheckServicesGetResponse withHealthCheckService(org.openapis.openapi.models.shared.HealthCheckService healthCheckService) {
         this.healthCheckService = healthCheckService;
         return this;
@@ -26,6 +29,7 @@ public class ComputeRegionHealthCheckServicesGetResponse {
     
     
     public Integer statusCode;
+
     public ComputeRegionHealthCheckServicesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeRegionHealthCheckServicesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeRegionHealthCheckServicesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeRegionHealthCheckServicesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

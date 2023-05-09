@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBEngineVersionsMessage {
     
     public String dbParameterGroupFamily;
+
     public DescribeDBEngineVersionsMessage withDBParameterGroupFamily(String dbParameterGroupFamily) {
         this.dbParameterGroupFamily = dbParameterGroupFamily;
         return this;
@@ -16,6 +17,7 @@ public class DescribeDBEngineVersionsMessage {
     
     
     public Boolean defaultOnly;
+
     public DescribeDBEngineVersionsMessage withDefaultOnly(Boolean defaultOnly) {
         this.defaultOnly = defaultOnly;
         return this;
@@ -23,6 +25,7 @@ public class DescribeDBEngineVersionsMessage {
     
     
     public String engine;
+
     public DescribeDBEngineVersionsMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -30,6 +33,7 @@ public class DescribeDBEngineVersionsMessage {
     
     
     public String engineVersion;
+
     public DescribeDBEngineVersionsMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -37,6 +41,7 @@ public class DescribeDBEngineVersionsMessage {
     
     
     public FilterList[] filters;
+
     public DescribeDBEngineVersionsMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -44,6 +49,7 @@ public class DescribeDBEngineVersionsMessage {
     
     
     public Boolean includeAll;
+
     public DescribeDBEngineVersionsMessage withIncludeAll(Boolean includeAll) {
         this.includeAll = includeAll;
         return this;
@@ -51,6 +57,7 @@ public class DescribeDBEngineVersionsMessage {
     
     
     public Boolean listSupportedCharacterSets;
+
     public DescribeDBEngineVersionsMessage withListSupportedCharacterSets(Boolean listSupportedCharacterSets) {
         this.listSupportedCharacterSets = listSupportedCharacterSets;
         return this;
@@ -58,6 +65,7 @@ public class DescribeDBEngineVersionsMessage {
     
     
     public Boolean listSupportedTimezones;
+
     public DescribeDBEngineVersionsMessage withListSupportedTimezones(Boolean listSupportedTimezones) {
         this.listSupportedTimezones = listSupportedTimezones;
         return this;
@@ -65,6 +73,7 @@ public class DescribeDBEngineVersionsMessage {
     
     
     public String marker;
+
     public DescribeDBEngineVersionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -72,9 +81,11 @@ public class DescribeDBEngineVersionsMessage {
     
     
     public Long maxRecords;
+
     public DescribeDBEngineVersionsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeDBEngineVersionsMessage(){}
 }

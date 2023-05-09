@@ -18,6 +18,7 @@ public class MatchRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Integer end;
+
     public MatchRange withEnd(Integer end) {
         this.end = end;
         return this;
@@ -29,9 +30,11 @@ public class MatchRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Integer start;
+
     public MatchRange withStart(Integer start) {
         this.start = start;
         return this;
     }
     
+    public MatchRange(){}
 }

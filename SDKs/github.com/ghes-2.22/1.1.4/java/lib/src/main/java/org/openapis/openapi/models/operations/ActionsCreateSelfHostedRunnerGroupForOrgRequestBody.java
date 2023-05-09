@@ -14,6 +14,7 @@ public class ActionsCreateSelfHostedRunnerGroupForOrgRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public ActionsCreateSelfHostedRunnerGroupForOrgRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -25,6 +26,7 @@ public class ActionsCreateSelfHostedRunnerGroupForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runners")
     public Long[] runners;
+
     public ActionsCreateSelfHostedRunnerGroupForOrgRequestBody withRunners(Long[] runners) {
         this.runners = runners;
         return this;
@@ -36,6 +38,7 @@ public class ActionsCreateSelfHostedRunnerGroupForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected_repository_ids")
     public Long[] selectedRepositoryIds;
+
     public ActionsCreateSelfHostedRunnerGroupForOrgRequestBody withSelectedRepositoryIds(Long[] selectedRepositoryIds) {
         this.selectedRepositoryIds = selectedRepositoryIds;
         return this;
@@ -47,9 +50,13 @@ public class ActionsCreateSelfHostedRunnerGroupForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public ActionsCreateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum visibility;
+
     public ActionsCreateSelfHostedRunnerGroupForOrgRequestBody withVisibility(ActionsCreateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public ActionsCreateSelfHostedRunnerGroupForOrgRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

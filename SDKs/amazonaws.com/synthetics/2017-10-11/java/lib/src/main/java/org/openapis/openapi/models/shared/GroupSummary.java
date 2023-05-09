@@ -15,6 +15,7 @@ public class GroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public GroupSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class GroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public GroupSummary withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class GroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GroupSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GroupSummary(){}
 }

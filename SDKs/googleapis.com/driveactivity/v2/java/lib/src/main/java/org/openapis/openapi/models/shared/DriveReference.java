@@ -18,6 +18,7 @@ public class DriveReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DriveReference withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class DriveReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public DriveReference withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public DriveReference(){}
 }

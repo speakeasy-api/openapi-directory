@@ -18,6 +18,7 @@ public class ManifestsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manifests")
     public Manifest[] manifests;
+
     public ManifestsListResponse withManifests(Manifest[] manifests) {
         this.manifests = manifests;
         return this;
@@ -29,9 +30,11 @@ public class ManifestsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ManifestsListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ManifestsListResponse(){}
 }

@@ -56,12 +56,10 @@ public class AddShortlink {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddShortlinkResponse res = new org.openapis.openapi.models.operations.AddShortlinkResponse() {{
+        org.openapis.openapi.models.operations.AddShortlinkResponse res = new org.openapis.openapi.models.operations.AddShortlinkResponse(contentType, httpRes.statusCode()) {{
             shortlinkResponse = null;
             erreur = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

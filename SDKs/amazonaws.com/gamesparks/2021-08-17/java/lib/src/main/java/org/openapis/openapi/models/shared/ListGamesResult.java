@@ -15,6 +15,7 @@ public class ListGamesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Games")
     public GameSummary[] games;
+
     public ListGamesResult withGames(GameSummary[] games) {
         this.games = games;
         return this;
@@ -23,9 +24,11 @@ public class ListGamesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListGamesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListGamesResult(){}
 }

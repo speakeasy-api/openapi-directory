@@ -15,9 +15,11 @@ public class CreateCollectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createCollectionDetail")
     public CreateCollectionDetail createCollectionDetail;
+
     public CreateCollectionResponse withCreateCollectionDetail(CreateCollectionDetail createCollectionDetail) {
         this.createCollectionDetail = createCollectionDetail;
         return this;
     }
     
+    public CreateCollectionResponse(){}
 }

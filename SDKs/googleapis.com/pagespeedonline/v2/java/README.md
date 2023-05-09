@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PagespeedonlinePagespeedapiRunpagespeedStrategyEnum;
 import org.openapis.openapi.models.operations.PagespeedonlinePagespeedapiRunpagespeedRequest;
 import org.openapis.openapi.models.operations.PagespeedonlinePagespeedapiRunpagespeedResponse;
+import org.openapis.openapi.models.operations.PagespeedonlinePagespeedapiRunpagespeedStrategyEnum;
 import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
@@ -28,35 +27,35 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PagespeedonlinePagespeedapiRunpagespeedRequest req = new PagespeedonlinePagespeedapiRunpagespeedRequest() {{
-                alt = "json";
-                fields = "corrupti";
+            PagespeedonlinePagespeedapiRunpagespeedRequest req = new PagespeedonlinePagespeedapiRunpagespeedRequest("corrupti") {{
+                alt = AltEnum.JSON;
+                fields = "provident";
                 filterThirdPartyResources = false;
-                key = "provident";
-                locale = "distinctio";
-                oauthToken = "quibusdam";
+                key = "distinctio";
+                locale = "quibusdam";
+                oauthToken = "unde";
                 prettyPrint = false;
-                quotaUser = "unde";
+                quotaUser = "nulla";
                 rule = new String[]{{
-                    add("corrupti"),
                     add("illum"),
                     add("vel"),
                     add("error"),
                 }};
                 screenshot = false;
-                strategy = "mobile";
-                url = "suscipit";
-                userIp = "iure";
-            }}            
+                strategy = PagespeedonlinePagespeedapiRunpagespeedStrategyEnum.MOBILE;
+                userIp = "suscipit";
+            }};            
 
             PagespeedonlinePagespeedapiRunpagespeedResponse res = sdk.pagespeedapi.pagespeedonlinePagespeedapiRunpagespeed(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -64,9 +63,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### pagespeedapi
+### [pagespeedapi](docs/pagespeedapi/README.md)
 
-* `pagespeedonlinePagespeedapiRunpagespeed` - Runs PageSpeed analysis on the page at the specified URL, and returns PageSpeed scores, a list of suggestions to make that page faster, and other information.
+* [pagespeedonlinePagespeedapiRunpagespeed](docs/pagespeedapi/README.md#pagespeedonlinepagespeedapirunpagespeed) - Runs PageSpeed analysis on the page at the specified URL, and returns PageSpeed scores, a list of suggestions to make that page faster, and other information.
 <!-- End SDK Available Operations -->
 
 ### Maturity

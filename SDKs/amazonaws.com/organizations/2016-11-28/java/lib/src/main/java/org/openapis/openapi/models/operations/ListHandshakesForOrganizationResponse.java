@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListHandshakesForOrganizationResponse {
@@ -12,6 +13,7 @@ public class ListHandshakesForOrganizationResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public ListHandshakesForOrganizationResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class ListHandshakesForOrganizationResponse {
      */
     
     public Object accessDeniedException;
+
     public ListHandshakesForOrganizationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class ListHandshakesForOrganizationResponse {
      */
     
     public Object concurrentModificationException;
+
     public ListHandshakesForOrganizationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class ListHandshakesForOrganizationResponse {
     
     
     public String contentType;
+
     public ListHandshakesForOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class ListHandshakesForOrganizationResponse {
      */
     
     public Object invalidInputException;
+
     public ListHandshakesForOrganizationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class ListHandshakesForOrganizationResponse {
      */
     
     public org.openapis.openapi.models.shared.ListHandshakesForOrganizationResponse listHandshakesForOrganizationResponse;
+
     public ListHandshakesForOrganizationResponse withListHandshakesForOrganizationResponse(org.openapis.openapi.models.shared.ListHandshakesForOrganizationResponse listHandshakesForOrganizationResponse) {
         this.listHandshakesForOrganizationResponse = listHandshakesForOrganizationResponse;
         return this;
@@ -69,6 +76,7 @@ public class ListHandshakesForOrganizationResponse {
      */
     
     public Object serviceException;
+
     public ListHandshakesForOrganizationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class ListHandshakesForOrganizationResponse {
     
     
     public Integer statusCode;
+
     public ListHandshakesForOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListHandshakesForOrganizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListHandshakesForOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ListHandshakesForOrganizationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListHandshakesForOrganizationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListHandshakesForOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

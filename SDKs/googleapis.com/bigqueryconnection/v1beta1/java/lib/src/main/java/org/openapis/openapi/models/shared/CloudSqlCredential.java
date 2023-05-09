@@ -18,6 +18,7 @@ public class CloudSqlCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public CloudSqlCredential withPassword(String password) {
         this.password = password;
         return this;
@@ -29,9 +30,11 @@ public class CloudSqlCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public CloudSqlCredential withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public CloudSqlCredential(){}
 }

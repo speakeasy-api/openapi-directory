@@ -15,9 +15,11 @@ public class DetectMetricSetConfigRequestBodyAutoDetectionMetricSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3SourceConfig")
     public org.openapis.openapi.models.shared.AutoDetectionS3SourceConfig s3SourceConfig;
+
     public DetectMetricSetConfigRequestBodyAutoDetectionMetricSource withS3SourceConfig(org.openapis.openapi.models.shared.AutoDetectionS3SourceConfig s3SourceConfig) {
         this.s3SourceConfig = s3SourceConfig;
         return this;
     }
     
+    public DetectMetricSetConfigRequestBodyAutoDetectionMetricSource(){}
 }

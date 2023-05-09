@@ -12,6 +12,7 @@ public class InAppProductListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InAppProductListing withDescription(String description) {
         this.description = description;
         return this;
@@ -20,9 +21,11 @@ public class InAppProductListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public InAppProductListing withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public InAppProductListing(){}
 }

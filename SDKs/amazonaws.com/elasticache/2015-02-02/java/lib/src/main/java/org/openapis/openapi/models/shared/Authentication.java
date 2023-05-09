@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Authentication {
     
     public Long passwordCount;
+
     public Authentication withPasswordCount(Long passwordCount) {
         this.passwordCount = passwordCount;
         return this;
@@ -19,9 +20,11 @@ public class Authentication {
     
     
     public AuthenticationTypeEnum type;
+
     public Authentication withType(AuthenticationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Authentication(){}
 }

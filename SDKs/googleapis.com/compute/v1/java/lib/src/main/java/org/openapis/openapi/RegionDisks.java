@@ -61,11 +61,9 @@ public class RegionDisks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionDisksAddResourcePoliciesResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksAddResourcePoliciesResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionDisksAddResourcePoliciesResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksAddResourcePoliciesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class RegionDisks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionDisksCreateSnapshotResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksCreateSnapshotResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionDisksCreateSnapshotResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksCreateSnapshotResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class RegionDisks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionDisksDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionDisksDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class RegionDisks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionDisksGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionDisksGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksGetResponse(contentType, httpRes.statusCode()) {{
             disk = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class RegionDisks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionDisksGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionDisksGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class RegionDisks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionDisksInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionDisksInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class RegionDisks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionDisksListResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionDisksListResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksListResponse(contentType, httpRes.statusCode()) {{
             diskList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class RegionDisks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionDisksRemoveResourcePoliciesResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksRemoveResourcePoliciesResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionDisksRemoveResourcePoliciesResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksRemoveResourcePoliciesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -437,11 +421,9 @@ public class RegionDisks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionDisksResizeResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksResizeResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionDisksResizeResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksResizeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,11 +467,9 @@ public class RegionDisks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionDisksSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionDisksSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -533,11 +513,9 @@ public class RegionDisks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionDisksSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksSetLabelsResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionDisksSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksSetLabelsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -581,11 +559,9 @@ public class RegionDisks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionDisksTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionDisksTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -629,11 +605,9 @@ public class RegionDisks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionDisksUpdateResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksUpdateResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionDisksUpdateResponse res = new org.openapis.openapi.models.operations.ComputeRegionDisksUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

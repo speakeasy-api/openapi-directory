@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDisassociateResourcesFromCustomLineItemResponse {
@@ -12,6 +13,7 @@ public class BatchDisassociateResourcesFromCustomLineItemResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchDisassociateResourcesFromCustomLineItemResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchDisassociateResourcesFromCustomLineItemResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDisassociateResourcesFromCustomLineItemOutput batchDisassociateResourcesFromCustomLineItemOutput;
+
     public BatchDisassociateResourcesFromCustomLineItemResponse withBatchDisassociateResourcesFromCustomLineItemOutput(org.openapis.openapi.models.shared.BatchDisassociateResourcesFromCustomLineItemOutput batchDisassociateResourcesFromCustomLineItemOutput) {
         this.batchDisassociateResourcesFromCustomLineItemOutput = batchDisassociateResourcesFromCustomLineItemOutput;
         return this;
@@ -32,6 +35,7 @@ public class BatchDisassociateResourcesFromCustomLineItemResponse {
      */
     
     public Object conflictException;
+
     public BatchDisassociateResourcesFromCustomLineItemResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class BatchDisassociateResourcesFromCustomLineItemResponse {
     
     
     public String contentType;
+
     public BatchDisassociateResourcesFromCustomLineItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class BatchDisassociateResourcesFromCustomLineItemResponse {
      */
     
     public Object internalServerException;
+
     public BatchDisassociateResourcesFromCustomLineItemResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class BatchDisassociateResourcesFromCustomLineItemResponse {
     
     
     public Integer statusCode;
+
     public BatchDisassociateResourcesFromCustomLineItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchDisassociateResourcesFromCustomLineItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDisassociateResourcesFromCustomLineItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class BatchDisassociateResourcesFromCustomLineItemResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchDisassociateResourcesFromCustomLineItemResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class BatchDisassociateResourcesFromCustomLineItemResponse {
      */
     
     public Object throttlingException;
+
     public BatchDisassociateResourcesFromCustomLineItemResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class BatchDisassociateResourcesFromCustomLineItemResponse {
      */
     
     public Object validationException;
+
     public BatchDisassociateResourcesFromCustomLineItemResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchDisassociateResourcesFromCustomLineItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

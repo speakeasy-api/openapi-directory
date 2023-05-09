@@ -18,6 +18,7 @@ public class GetNamespaceRepositoryImagesTagsResponseResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_current")
     public Boolean isCurrent;
+
     public GetNamespaceRepositoryImagesTagsResponseResults withIsCurrent(Boolean isCurrent) {
         this.isCurrent = isCurrent;
         return this;
@@ -29,9 +30,11 @@ public class GetNamespaceRepositoryImagesTagsResponseResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public GetNamespaceRepositoryImagesTagsResponseResults withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public GetNamespaceRepositoryImagesTagsResponseResults(){}
 }

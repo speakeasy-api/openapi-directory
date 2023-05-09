@@ -15,9 +15,11 @@ public class IndexItemOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowUnknownGsuitePrincipals")
     public Boolean allowUnknownGsuitePrincipals;
+
     public IndexItemOptions withAllowUnknownGsuitePrincipals(Boolean allowUnknownGsuitePrincipals) {
         this.allowUnknownGsuitePrincipals = allowUnknownGsuitePrincipals;
         return this;
     }
     
+    public IndexItemOptions(){}
 }

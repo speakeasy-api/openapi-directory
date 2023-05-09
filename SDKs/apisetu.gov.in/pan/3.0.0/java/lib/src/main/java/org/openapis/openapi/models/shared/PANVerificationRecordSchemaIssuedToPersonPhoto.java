@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PANVerificationRecordSchemaIssuedToPersonPhoto {
     
     public String format;
+
     public PANVerificationRecordSchemaIssuedToPersonPhoto withFormat(String format) {
         this.format = format;
         return this;
     }
     
+    public PANVerificationRecordSchemaIssuedToPersonPhoto(@JsonProperty("format") String format) {
+        this.format = format;
+  }
 }

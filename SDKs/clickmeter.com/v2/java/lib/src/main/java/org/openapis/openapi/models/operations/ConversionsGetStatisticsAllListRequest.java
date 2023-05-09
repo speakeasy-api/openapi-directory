@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsGetStatisticsAllListRequest {
@@ -12,6 +13,7 @@ public class ConversionsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
     public String fromDay;
+
     public ConversionsGetStatisticsAllListRequest withFromDay(String fromDay) {
         this.fromDay = fromDay;
         return this;
@@ -22,6 +24,7 @@ public class ConversionsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupBy")
     public ConversionsGetStatisticsAllListGroupByEnum groupBy;
+
     public ConversionsGetStatisticsAllListRequest withGroupBy(ConversionsGetStatisticsAllListGroupByEnum groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -32,6 +35,7 @@ public class ConversionsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public ConversionsGetStatisticsAllListStatusEnum status;
+
     public ConversionsGetStatisticsAllListRequest withStatus(ConversionsGetStatisticsAllListStatusEnum status) {
         this.status = status;
         return this;
@@ -42,6 +46,7 @@ public class ConversionsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
     public ConversionsGetStatisticsAllListTimeFrameEnum timeFrame;
+
     public ConversionsGetStatisticsAllListRequest withTimeFrame(ConversionsGetStatisticsAllListTimeFrameEnum timeFrame) {
         this.timeFrame = timeFrame;
         return this;
@@ -52,9 +57,13 @@ public class ConversionsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
     public String toDay;
+
     public ConversionsGetStatisticsAllListRequest withToDay(String toDay) {
         this.toDay = toDay;
         return this;
     }
     
+    public ConversionsGetStatisticsAllListRequest(@JsonProperty("timeFrame") ConversionsGetStatisticsAllListTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+  }
 }

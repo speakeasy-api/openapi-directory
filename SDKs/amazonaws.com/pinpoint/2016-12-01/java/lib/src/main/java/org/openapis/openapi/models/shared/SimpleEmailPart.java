@@ -15,6 +15,7 @@ public class SimpleEmailPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Charset")
     public String charset;
+
     public SimpleEmailPart withCharset(String charset) {
         this.charset = charset;
         return this;
@@ -23,9 +24,11 @@ public class SimpleEmailPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public String data;
+
     public SimpleEmailPart withData(String data) {
         this.data = data;
         return this;
     }
     
+    public SimpleEmailPart(){}
 }

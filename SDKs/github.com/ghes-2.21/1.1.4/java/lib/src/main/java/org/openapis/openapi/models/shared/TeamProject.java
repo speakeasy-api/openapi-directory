@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TeamProject {
     @JsonProperty("body")
     public String body;
+
     public TeamProject withBody(String body) {
         this.body = body;
         return this;
@@ -21,6 +22,7 @@ public class TeamProject {
     
     @JsonProperty("columns_url")
     public String columnsUrl;
+
     public TeamProject withColumnsUrl(String columnsUrl) {
         this.columnsUrl = columnsUrl;
         return this;
@@ -28,6 +30,7 @@ public class TeamProject {
     
     @JsonProperty("created_at")
     public String createdAt;
+
     public TeamProject withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +41,7 @@ public class TeamProject {
      */
     @JsonProperty("creator")
     public SimpleUser creator;
+
     public TeamProject withCreator(SimpleUser creator) {
         this.creator = creator;
         return this;
@@ -45,6 +49,7 @@ public class TeamProject {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public TeamProject withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -52,6 +57,7 @@ public class TeamProject {
     
     @JsonProperty("id")
     public Long id;
+
     public TeamProject withId(Long id) {
         this.id = id;
         return this;
@@ -59,6 +65,7 @@ public class TeamProject {
     
     @JsonProperty("name")
     public String name;
+
     public TeamProject withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +73,7 @@ public class TeamProject {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public TeamProject withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -73,6 +81,7 @@ public class TeamProject {
     
     @JsonProperty("number")
     public Long number;
+
     public TeamProject withNumber(Long number) {
         this.number = number;
         return this;
@@ -84,6 +93,7 @@ public class TeamProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_permission")
     public String organizationPermission;
+
     public TeamProject withOrganizationPermission(String organizationPermission) {
         this.organizationPermission = organizationPermission;
         return this;
@@ -91,6 +101,7 @@ public class TeamProject {
     
     @JsonProperty("owner_url")
     public String ownerUrl;
+
     public TeamProject withOwnerUrl(String ownerUrl) {
         this.ownerUrl = ownerUrl;
         return this;
@@ -98,6 +109,7 @@ public class TeamProject {
     
     @JsonProperty("permissions")
     public TeamProjectPermissions permissions;
+
     public TeamProject withPermissions(TeamProjectPermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -109,6 +121,7 @@ public class TeamProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private")
     public Boolean private_;
+
     public TeamProject withPrivate(Boolean private_) {
         this.private_ = private_;
         return this;
@@ -116,6 +129,7 @@ public class TeamProject {
     
     @JsonProperty("state")
     public String state;
+
     public TeamProject withState(String state) {
         this.state = state;
         return this;
@@ -123,6 +137,7 @@ public class TeamProject {
     
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public TeamProject withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -130,9 +145,26 @@ public class TeamProject {
     
     @JsonProperty("url")
     public String url;
+
     public TeamProject withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TeamProject(@JsonProperty("body") String body, @JsonProperty("columns_url") String columnsUrl, @JsonProperty("created_at") String createdAt, @JsonProperty("creator") SimpleUser creator, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("number") Long number, @JsonProperty("owner_url") String ownerUrl, @JsonProperty("permissions") TeamProjectPermissions permissions, @JsonProperty("state") String state, @JsonProperty("updated_at") String updatedAt, @JsonProperty("url") String url) {
+        this.body = body;
+        this.columnsUrl = columnsUrl;
+        this.createdAt = createdAt;
+        this.creator = creator;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.number = number;
+        this.ownerUrl = ownerUrl;
+        this.permissions = permissions;
+        this.state = state;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

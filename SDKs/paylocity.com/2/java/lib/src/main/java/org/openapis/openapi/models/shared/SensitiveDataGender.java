@@ -18,6 +18,7 @@ public class SensitiveDataGender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayPronouns")
     public Boolean displayPronouns;
+
     public SensitiveDataGender withDisplayPronouns(Boolean displayPronouns) {
         this.displayPronouns = displayPronouns;
         return this;
@@ -29,6 +30,7 @@ public class SensitiveDataGender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genderIdentityDescription")
     public String genderIdentityDescription;
+
     public SensitiveDataGender withGenderIdentityDescription(String genderIdentityDescription) {
         this.genderIdentityDescription = genderIdentityDescription;
         return this;
@@ -40,6 +42,7 @@ public class SensitiveDataGender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifyAsLegalGender")
     public String identifyAsLegalGender;
+
     public SensitiveDataGender withIdentifyAsLegalGender(String identifyAsLegalGender) {
         this.identifyAsLegalGender = identifyAsLegalGender;
         return this;
@@ -51,6 +54,7 @@ public class SensitiveDataGender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalGender")
     public String legalGender;
+
     public SensitiveDataGender withLegalGender(String legalGender) {
         this.legalGender = legalGender;
         return this;
@@ -62,6 +66,7 @@ public class SensitiveDataGender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pronouns")
     public String pronouns;
+
     public SensitiveDataGender withPronouns(String pronouns) {
         this.pronouns = pronouns;
         return this;
@@ -73,9 +78,11 @@ public class SensitiveDataGender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sexualOrientation")
     public String sexualOrientation;
+
     public SensitiveDataGender withSexualOrientation(String sexualOrientation) {
         this.sexualOrientation = sexualOrientation;
         return this;
     }
     
+    public SensitiveDataGender(){}
 }

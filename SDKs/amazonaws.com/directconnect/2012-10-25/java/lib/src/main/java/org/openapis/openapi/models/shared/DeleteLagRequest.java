@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteLagRequest {
     @JsonProperty("lagId")
     public String lagId;
+
     public DeleteLagRequest withLagId(String lagId) {
         this.lagId = lagId;
         return this;
     }
     
+    public DeleteLagRequest(@JsonProperty("lagId") String lagId) {
+        this.lagId = lagId;
+  }
 }

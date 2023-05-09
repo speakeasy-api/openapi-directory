@@ -15,6 +15,7 @@ public class VerificationMessageTemplateType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultEmailOption")
     public DefaultEmailOptionTypeEnum defaultEmailOption;
+
     public VerificationMessageTemplateType withDefaultEmailOption(DefaultEmailOptionTypeEnum defaultEmailOption) {
         this.defaultEmailOption = defaultEmailOption;
         return this;
@@ -23,6 +24,7 @@ public class VerificationMessageTemplateType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailMessage")
     public String emailMessage;
+
     public VerificationMessageTemplateType withEmailMessage(String emailMessage) {
         this.emailMessage = emailMessage;
         return this;
@@ -31,6 +33,7 @@ public class VerificationMessageTemplateType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailMessageByLink")
     public String emailMessageByLink;
+
     public VerificationMessageTemplateType withEmailMessageByLink(String emailMessageByLink) {
         this.emailMessageByLink = emailMessageByLink;
         return this;
@@ -39,6 +42,7 @@ public class VerificationMessageTemplateType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailSubject")
     public String emailSubject;
+
     public VerificationMessageTemplateType withEmailSubject(String emailSubject) {
         this.emailSubject = emailSubject;
         return this;
@@ -47,6 +51,7 @@ public class VerificationMessageTemplateType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailSubjectByLink")
     public String emailSubjectByLink;
+
     public VerificationMessageTemplateType withEmailSubjectByLink(String emailSubjectByLink) {
         this.emailSubjectByLink = emailSubjectByLink;
         return this;
@@ -55,9 +60,11 @@ public class VerificationMessageTemplateType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmsMessage")
     public String smsMessage;
+
     public VerificationMessageTemplateType withSmsMessage(String smsMessage) {
         this.smsMessage = smsMessage;
         return this;
     }
     
+    public VerificationMessageTemplateType(){}
 }

@@ -15,6 +15,7 @@ public class DeviceMinutes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metered")
     public Double metered;
+
     public DeviceMinutes withMetered(Double metered) {
         this.metered = metered;
         return this;
@@ -23,6 +24,7 @@ public class DeviceMinutes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public DeviceMinutes withTotal(Double total) {
         this.total = total;
         return this;
@@ -31,9 +33,11 @@ public class DeviceMinutes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unmetered")
     public Double unmetered;
+
     public DeviceMinutes withUnmetered(Double unmetered) {
         this.unmetered = unmetered;
         return this;
     }
     
+    public DeviceMinutes(){}
 }

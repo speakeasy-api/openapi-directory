@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class KecerResponse {
     
     public String contentType;
+
     public KecerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class KecerResponse {
     
     
     public Integer statusCode;
+
     public KecerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class KecerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public KecerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class KecerResponse {
      */
     
     public Kecer400ApplicationJSON kecer400ApplicationJSONObject;
+
     public KecerResponse withKecer400ApplicationJSONObject(Kecer400ApplicationJSON kecer400ApplicationJSONObject) {
         this.kecer400ApplicationJSONObject = kecer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class KecerResponse {
      */
     
     public Kecer401ApplicationJSON kecer401ApplicationJSONObject;
+
     public KecerResponse withKecer401ApplicationJSONObject(Kecer401ApplicationJSON kecer401ApplicationJSONObject) {
         this.kecer401ApplicationJSONObject = kecer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class KecerResponse {
      */
     
     public Kecer404ApplicationJSON kecer404ApplicationJSONObject;
+
     public KecerResponse withKecer404ApplicationJSONObject(Kecer404ApplicationJSON kecer404ApplicationJSONObject) {
         this.kecer404ApplicationJSONObject = kecer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class KecerResponse {
      */
     
     public Kecer500ApplicationJSON kecer500ApplicationJSONObject;
+
     public KecerResponse withKecer500ApplicationJSONObject(Kecer500ApplicationJSON kecer500ApplicationJSONObject) {
         this.kecer500ApplicationJSONObject = kecer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class KecerResponse {
      */
     
     public Kecer502ApplicationJSON kecer502ApplicationJSONObject;
+
     public KecerResponse withKecer502ApplicationJSONObject(Kecer502ApplicationJSON kecer502ApplicationJSONObject) {
         this.kecer502ApplicationJSONObject = kecer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class KecerResponse {
      */
     
     public Kecer503ApplicationJSON kecer503ApplicationJSONObject;
+
     public KecerResponse withKecer503ApplicationJSONObject(Kecer503ApplicationJSON kecer503ApplicationJSONObject) {
         this.kecer503ApplicationJSONObject = kecer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class KecerResponse {
      */
     
     public Kecer504ApplicationJSON kecer504ApplicationJSONObject;
+
     public KecerResponse withKecer504ApplicationJSONObject(Kecer504ApplicationJSON kecer504ApplicationJSONObject) {
         this.kecer504ApplicationJSONObject = kecer504ApplicationJSONObject;
         return this;
     }
     
+    public KecerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

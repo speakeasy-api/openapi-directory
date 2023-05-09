@@ -12,6 +12,7 @@ public class NADate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sec")
     public Integer sec;
+
     public NADate withSec(Integer sec) {
         this.sec = sec;
         return this;
@@ -20,9 +21,11 @@ public class NADate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usec")
     public Integer usec;
+
     public NADate withUsec(Integer usec) {
         this.usec = usec;
         return this;
     }
     
+    public NADate(){}
 }

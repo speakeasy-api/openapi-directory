@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityListOrgEventsForAuthenticatedUserRequest {
@@ -12,6 +13,7 @@ public class ActivityListOrgEventsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ActivityListOrgEventsForAuthenticatedUserRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -22,6 +24,7 @@ public class ActivityListOrgEventsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActivityListOrgEventsForAuthenticatedUserRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class ActivityListOrgEventsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActivityListOrgEventsForAuthenticatedUserRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +46,14 @@ public class ActivityListOrgEventsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public ActivityListOrgEventsForAuthenticatedUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ActivityListOrgEventsForAuthenticatedUserRequest(@JsonProperty("org") String org, @JsonProperty("username") String username) {
+        this.org = org;
+        this.username = username;
+  }
 }

@@ -15,6 +15,7 @@ public class VariantFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public VariantFields withId(Integer id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class VariantFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public ImageFields image;
+
     public VariantFields withImage(ImageFields image) {
         this.image = image;
         return this;
@@ -31,6 +33,7 @@ public class VariantFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public ProductOptionVariantEdit[] options;
+
     public VariantFields withOptions(ProductOptionVariantEdit[] options) {
         this.options = options;
         return this;
@@ -42,6 +45,7 @@ public class VariantFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Float price;
+
     public VariantFields withPrice(Float price) {
         this.price = price;
         return this;
@@ -53,6 +57,7 @@ public class VariantFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public VariantFields withSku(String sku) {
         this.sku = sku;
         return this;
@@ -64,6 +69,7 @@ public class VariantFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stock")
     public Integer stock;
+
     public VariantFields withStock(Integer stock) {
         this.stock = stock;
         return this;
@@ -75,9 +81,11 @@ public class VariantFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stock_unlimited")
     public Boolean stockUnlimited;
+
     public VariantFields withStockUnlimited(Boolean stockUnlimited) {
         this.stockUnlimited = stockUnlimited;
         return this;
     }
     
+    public VariantFields(){}
 }

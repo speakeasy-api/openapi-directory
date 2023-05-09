@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class SuppressedDestinationSummary {
     @JsonProperty("EmailAddress")
     public String emailAddress;
+
     public SuppressedDestinationSummary withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -26,6 +27,7 @@ public class SuppressedDestinationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public SuppressedDestinationSummary withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -33,9 +35,15 @@ public class SuppressedDestinationSummary {
     
     @JsonProperty("Reason")
     public SuppressionListReasonEnum reason;
+
     public SuppressedDestinationSummary withReason(SuppressionListReasonEnum reason) {
         this.reason = reason;
         return this;
     }
     
+    public SuppressedDestinationSummary(@JsonProperty("EmailAddress") String emailAddress, @JsonProperty("LastUpdateTime") OffsetDateTime lastUpdateTime, @JsonProperty("Reason") SuppressionListReasonEnum reason) {
+        this.emailAddress = emailAddress;
+        this.lastUpdateTime = lastUpdateTime;
+        this.reason = reason;
+  }
 }

@@ -72,7 +72,7 @@ public class FinancialProducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllFinancialProductsResponse res = new org.openapis.openapi.models.operations.GetAllFinancialProductsResponse() {{
+        org.openapis.openapi.models.operations.GetAllFinancialProductsResponse res = new org.openapis.openapi.models.operations.GetAllFinancialProductsResponse(contentType, httpRes.statusCode()) {{
             getAllFinancialProducts200ApplicationJSONObject = null;
             getAllFinancialProducts400ApplicationJSONObject = null;
             getAllFinancialProducts401ApplicationJSONObject = null;
@@ -81,8 +81,6 @@ public class FinancialProducts {
             getAllFinancialProducts429ApplicationJSONObject = null;
             getAllFinancialProducts500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

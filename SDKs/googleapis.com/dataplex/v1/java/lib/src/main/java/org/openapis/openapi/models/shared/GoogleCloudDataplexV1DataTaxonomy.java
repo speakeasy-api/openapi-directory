@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeCount")
     public Integer attributeCount;
+
     public GoogleCloudDataplexV1DataTaxonomy withAttributeCount(Integer attributeCount) {
         this.attributeCount = attributeCount;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1DataTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDataplexV1DataTaxonomy withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1DataTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1DataTaxonomy withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1DataTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1DataTaxonomy withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1DataTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudDataplexV1DataTaxonomy withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1DataTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1DataTaxonomy withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDataplexV1DataTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1DataTaxonomy withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDataplexV1DataTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GoogleCloudDataplexV1DataTaxonomy withUid(String uid) {
         this.uid = uid;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudDataplexV1DataTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDataplexV1DataTaxonomy withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataTaxonomy(){}
 }

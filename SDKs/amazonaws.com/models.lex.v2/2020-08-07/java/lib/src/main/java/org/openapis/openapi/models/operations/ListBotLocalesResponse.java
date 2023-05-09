@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBotLocalesResponse {
     
     public String contentType;
+
     public ListBotLocalesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListBotLocalesResponse {
      */
     
     public Object internalServerException;
+
     public ListBotLocalesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListBotLocalesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBotLocalesResponse listBotLocalesResponse;
+
     public ListBotLocalesResponse withListBotLocalesResponse(org.openapis.openapi.models.shared.ListBotLocalesResponse listBotLocalesResponse) {
         this.listBotLocalesResponse = listBotLocalesResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListBotLocalesResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListBotLocalesResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -46,6 +51,7 @@ public class ListBotLocalesResponse {
     
     
     public Integer statusCode;
+
     public ListBotLocalesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListBotLocalesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBotLocalesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListBotLocalesResponse {
      */
     
     public Object throttlingException;
+
     public ListBotLocalesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListBotLocalesResponse {
      */
     
     public Object validationException;
+
     public ListBotLocalesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListBotLocalesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListStepsResponse {
     
     public String contentType;
+
     public ListStepsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListStepsResponse {
      */
     
     public Object internalServerException;
+
     public ListStepsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListStepsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListStepsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListStepsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListStepsOutput listStepsOutput;
+
     public ListStepsResponse withListStepsOutput(org.openapis.openapi.models.shared.ListStepsOutput listStepsOutput) {
         this.listStepsOutput = listStepsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListStepsResponse {
     
     
     public Integer statusCode;
+
     public ListStepsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListStepsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListStepsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListStepsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

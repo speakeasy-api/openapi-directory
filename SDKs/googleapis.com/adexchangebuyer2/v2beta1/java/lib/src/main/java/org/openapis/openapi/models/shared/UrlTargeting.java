@@ -18,6 +18,7 @@ public class UrlTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedUrls")
     public String[] excludedUrls;
+
     public UrlTargeting withExcludedUrls(String[] excludedUrls) {
         this.excludedUrls = excludedUrls;
         return this;
@@ -29,9 +30,11 @@ public class UrlTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetedUrls")
     public String[] targetedUrls;
+
     public UrlTargeting withTargetedUrls(String[] targetedUrls) {
         this.targetedUrls = targetedUrls;
         return this;
     }
     
+    public UrlTargeting(){}
 }

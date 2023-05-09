@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaDoubleParameterArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValues")
     public Double[] doubleValues;
+
     public GoogleCloudIntegrationsV1alphaDoubleParameterArray withDoubleValues(Double[] doubleValues) {
         this.doubleValues = doubleValues;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaDoubleParameterArray(){}
 }

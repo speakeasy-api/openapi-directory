@@ -93,10 +93,8 @@ public class Messaging {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUpcomingScheduledCampaignsAndCanvasesResponse res = new org.openapis.openapi.models.operations.GetUpcomingScheduledCampaignsAndCanvasesResponse() {{
+        org.openapis.openapi.models.operations.GetUpcomingScheduledCampaignsAndCanvasesResponse res = new org.openapis.openapi.models.operations.GetUpcomingScheduledCampaignsAndCanvasesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,10 +148,8 @@ public class Messaging {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ScheduleApiTriggeredCanvasesResponse res = new org.openapis.openapi.models.operations.ScheduleApiTriggeredCanvasesResponse() {{
+        org.openapis.openapi.models.operations.ScheduleApiTriggeredCanvasesResponse res = new org.openapis.openapi.models.operations.ScheduleApiTriggeredCanvasesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

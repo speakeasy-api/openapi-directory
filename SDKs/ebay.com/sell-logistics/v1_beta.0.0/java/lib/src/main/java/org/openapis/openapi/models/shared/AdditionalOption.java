@@ -18,6 +18,7 @@ public class AdditionalOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalCost")
     public Amount additionalCost;
+
     public AdditionalOption withAdditionalCost(Amount additionalCost) {
         this.additionalCost = additionalCost;
         return this;
@@ -29,9 +30,11 @@ public class AdditionalOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optionType")
     public String optionType;
+
     public AdditionalOption withOptionType(String optionType) {
         this.optionType = optionType;
         return this;
     }
     
+    public AdditionalOption(){}
 }

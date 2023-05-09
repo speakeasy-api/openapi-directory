@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateServiceResponse {
     
     public String contentType;
+
     public CreateServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateServiceResponse createServiceResponse;
+
     public CreateServiceResponse withCreateServiceResponse(org.openapis.openapi.models.shared.CreateServiceResponse createServiceResponse) {
         this.createServiceResponse = createServiceResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateServiceResponse {
      */
     
     public Object invalidInput;
+
     public CreateServiceResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class CreateServiceResponse {
      */
     
     public Object namespaceNotFound;
+
     public CreateServiceResponse withNamespaceNotFound(Object namespaceNotFound) {
         this.namespaceNotFound = namespaceNotFound;
         return this;
@@ -46,6 +51,7 @@ public class CreateServiceResponse {
     
     
     public Integer statusCode;
+
     public CreateServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateServiceResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateServiceResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -73,6 +81,7 @@ public class CreateServiceResponse {
      */
     
     public Object serviceAlreadyExists;
+
     public CreateServiceResponse withServiceAlreadyExists(Object serviceAlreadyExists) {
         this.serviceAlreadyExists = serviceAlreadyExists;
         return this;
@@ -83,9 +92,14 @@ public class CreateServiceResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateServiceResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreateServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

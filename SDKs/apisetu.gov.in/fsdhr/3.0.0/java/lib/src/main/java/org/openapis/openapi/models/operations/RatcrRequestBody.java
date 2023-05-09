@@ -15,6 +15,7 @@ public class RatcrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public RatcrRequestBodyCertificateParameters certificateParameters;
+
     public RatcrRequestBody withCertificateParameters(RatcrRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class RatcrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public RatcrRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class RatcrRequestBody {
      */
     @JsonProperty("format")
     public RatcrRequestBodyFormatEnum format;
+
     public RatcrRequestBody withFormat(RatcrRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class RatcrRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public RatcrRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public RatcrRequestBody(@JsonProperty("format") RatcrRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

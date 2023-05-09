@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FirestoreProjectsDatabasesDocumentsRunAggregationQuerySecurity {
     @SpeakeasyMetadata("security:option=true")
     public FirestoreProjectsDatabasesDocumentsRunAggregationQuerySecurityOption1 option1;
+
     public FirestoreProjectsDatabasesDocumentsRunAggregationQuerySecurity withOption1(FirestoreProjectsDatabasesDocumentsRunAggregationQuerySecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class FirestoreProjectsDatabasesDocumentsRunAggregationQuerySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirestoreProjectsDatabasesDocumentsRunAggregationQuerySecurityOption2 option2;
+
     public FirestoreProjectsDatabasesDocumentsRunAggregationQuerySecurity withOption2(FirestoreProjectsDatabasesDocumentsRunAggregationQuerySecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public FirestoreProjectsDatabasesDocumentsRunAggregationQuerySecurity(){}
 }

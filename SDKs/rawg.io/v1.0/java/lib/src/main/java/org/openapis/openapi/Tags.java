@@ -56,11 +56,9 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagsListResponse res = new org.openapis.openapi.models.operations.TagsListResponse() {{
+        org.openapis.openapi.models.operations.TagsListResponse res = new org.openapis.openapi.models.operations.TagsListResponse(contentType, httpRes.statusCode()) {{
             tagsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagsReadResponse res = new org.openapis.openapi.models.operations.TagsReadResponse() {{
+        org.openapis.openapi.models.operations.TagsReadResponse res = new org.openapis.openapi.models.operations.TagsReadResponse(contentType, httpRes.statusCode()) {{
             tagSingle = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

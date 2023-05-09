@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateConnectionAliasRequest {
     @JsonProperty("AliasId")
     public String aliasId;
+
     public AssociateConnectionAliasRequest withAliasId(String aliasId) {
         this.aliasId = aliasId;
         return this;
@@ -16,9 +17,14 @@ public class AssociateConnectionAliasRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public AssociateConnectionAliasRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public AssociateConnectionAliasRequest(@JsonProperty("AliasId") String aliasId, @JsonProperty("ResourceId") String resourceId) {
+        this.aliasId = aliasId;
+        this.resourceId = resourceId;
+  }
 }

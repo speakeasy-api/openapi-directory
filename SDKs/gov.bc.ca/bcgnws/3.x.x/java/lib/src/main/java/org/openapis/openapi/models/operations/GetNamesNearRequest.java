@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamesNearRequest {
@@ -12,6 +13,7 @@ public class GetNamesNearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distance")
     public String distance;
+
     public GetNamesNearRequest withDistance(String distance) {
         this.distance = distance;
         return this;
@@ -22,6 +24,7 @@ public class GetNamesNearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetNamesNearEmbedEnum embed;
+
     public GetNamesNearRequest withEmbed(GetNamesNearEmbedEnum embed) {
         this.embed = embed;
         return this;
@@ -32,6 +35,7 @@ public class GetNamesNearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureCategory")
     public String featureCategory;
+
     public GetNamesNearRequest withFeatureCategory(String featureCategory) {
         this.featureCategory = featureCategory;
         return this;
@@ -42,6 +46,7 @@ public class GetNamesNearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureClass")
     public String featureClass;
+
     public GetNamesNearRequest withFeatureClass(String featureClass) {
         this.featureClass = featureClass;
         return this;
@@ -52,6 +57,7 @@ public class GetNamesNearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featurePoint")
     public String featurePoint;
+
     public GetNamesNearRequest withFeaturePoint(String featurePoint) {
         this.featurePoint = featurePoint;
         return this;
@@ -62,6 +68,7 @@ public class GetNamesNearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureType")
     public String featureType;
+
     public GetNamesNearRequest withFeatureType(String featureType) {
         this.featureType = featureType;
         return this;
@@ -72,6 +79,7 @@ public class GetNamesNearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=itemsPerPage")
     public Long itemsPerPage;
+
     public GetNamesNearRequest withItemsPerPage(Long itemsPerPage) {
         this.itemsPerPage = itemsPerPage;
         return this;
@@ -82,6 +90,7 @@ public class GetNamesNearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
     public GetNamesNearOutputFormatEnum outputFormat;
+
     public GetNamesNearRequest withOutputFormat(GetNamesNearOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -92,6 +101,7 @@ public class GetNamesNearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetNamesNearOutputSrsEnum outputSRS;
+
     public GetNamesNearRequest withOutputSRS(GetNamesNearOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -102,6 +112,7 @@ public class GetNamesNearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputStyle")
     public GetNamesNearOutputStyleEnum outputStyle;
+
     public GetNamesNearRequest withOutputStyle(GetNamesNearOutputStyleEnum outputStyle) {
         this.outputStyle = outputStyle;
         return this;
@@ -112,6 +123,7 @@ public class GetNamesNearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public GetNamesNearSortByEnum sortBy;
+
     public GetNamesNearRequest withSortBy(GetNamesNearSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -122,9 +134,15 @@ public class GetNamesNearRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Long startIndex;
+
     public GetNamesNearRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
     }
     
+    public GetNamesNearRequest(@JsonProperty("distance") String distance, @JsonProperty("featurePoint") String featurePoint, @JsonProperty("outputFormat") GetNamesNearOutputFormatEnum outputFormat) {
+        this.distance = distance;
+        this.featurePoint = featurePoint;
+        this.outputFormat = outputFormat;
+  }
 }

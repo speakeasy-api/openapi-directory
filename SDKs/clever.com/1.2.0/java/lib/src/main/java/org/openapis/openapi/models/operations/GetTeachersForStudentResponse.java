@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeachersForStudentResponse {
     
     public String contentType;
+
     public GetTeachersForStudentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTeachersForStudentResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetTeachersForStudentResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -26,6 +29,7 @@ public class GetTeachersForStudentResponse {
     
     
     public Integer statusCode;
+
     public GetTeachersForStudentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetTeachersForStudentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeachersForStudentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetTeachersForStudentResponse {
      */
     
     public org.openapis.openapi.models.shared.TeachersResponse teachersResponse;
+
     public GetTeachersForStudentResponse withTeachersResponse(org.openapis.openapi.models.shared.TeachersResponse teachersResponse) {
         this.teachersResponse = teachersResponse;
         return this;
     }
     
+    public GetTeachersForStudentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

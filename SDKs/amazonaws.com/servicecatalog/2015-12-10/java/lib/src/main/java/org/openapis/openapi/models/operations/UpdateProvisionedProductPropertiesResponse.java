@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateProvisionedProductPropertiesResponse {
     
     public String contentType;
+
     public UpdateProvisionedProductPropertiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateProvisionedProductPropertiesResponse {
      */
     
     public Object invalidParametersException;
+
     public UpdateProvisionedProductPropertiesResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateProvisionedProductPropertiesResponse {
      */
     
     public Object invalidStateException;
+
     public UpdateProvisionedProductPropertiesResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateProvisionedProductPropertiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateProvisionedProductPropertiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateProvisionedProductPropertiesResponse {
     
     
     public Integer statusCode;
+
     public UpdateProvisionedProductPropertiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateProvisionedProductPropertiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateProvisionedProductPropertiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateProvisionedProductPropertiesResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateProvisionedProductPropertiesOutput updateProvisionedProductPropertiesOutput;
+
     public UpdateProvisionedProductPropertiesResponse withUpdateProvisionedProductPropertiesOutput(org.openapis.openapi.models.shared.UpdateProvisionedProductPropertiesOutput updateProvisionedProductPropertiesOutput) {
         this.updateProvisionedProductPropertiesOutput = updateProvisionedProductPropertiesOutput;
         return this;
     }
     
+    public UpdateProvisionedProductPropertiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

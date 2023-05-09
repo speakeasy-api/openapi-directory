@@ -16,6 +16,7 @@ public class PostCheckCode401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PostCheckCode401ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -24,9 +25,11 @@ public class PostCheckCode401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public PostCheckCode401ApplicationJSON withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public PostCheckCode401ApplicationJSON(){}
 }

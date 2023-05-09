@@ -15,6 +15,7 @@ public class OBRisk1DeliveryAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressLine")
     public String[] addressLine;
+
     public OBRisk1DeliveryAddress withAddressLine(String[] addressLine) {
         this.addressLine = addressLine;
         return this;
@@ -26,6 +27,7 @@ public class OBRisk1DeliveryAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BuildingNumber")
     public String buildingNumber;
+
     public OBRisk1DeliveryAddress withBuildingNumber(String buildingNumber) {
         this.buildingNumber = buildingNumber;
         return this;
@@ -36,6 +38,7 @@ public class OBRisk1DeliveryAddress {
      */
     @JsonProperty("Country")
     public String country;
+
     public OBRisk1DeliveryAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -47,6 +50,7 @@ public class OBRisk1DeliveryAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountrySubDivision")
     public String countrySubDivision;
+
     public OBRisk1DeliveryAddress withCountrySubDivision(String countrySubDivision) {
         this.countrySubDivision = countrySubDivision;
         return this;
@@ -58,6 +62,7 @@ public class OBRisk1DeliveryAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostCode")
     public String postCode;
+
     public OBRisk1DeliveryAddress withPostCode(String postCode) {
         this.postCode = postCode;
         return this;
@@ -69,6 +74,7 @@ public class OBRisk1DeliveryAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreetName")
     public String streetName;
+
     public OBRisk1DeliveryAddress withStreetName(String streetName) {
         this.streetName = streetName;
         return this;
@@ -79,9 +85,14 @@ public class OBRisk1DeliveryAddress {
      */
     @JsonProperty("TownName")
     public String townName;
+
     public OBRisk1DeliveryAddress withTownName(String townName) {
         this.townName = townName;
         return this;
     }
     
+    public OBRisk1DeliveryAddress(@JsonProperty("Country") String country, @JsonProperty("TownName") String townName) {
+        this.country = country;
+        this.townName = townName;
+  }
 }

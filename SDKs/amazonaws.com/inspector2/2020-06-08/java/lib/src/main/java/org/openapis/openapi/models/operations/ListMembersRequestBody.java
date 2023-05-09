@@ -15,6 +15,7 @@ public class ListMembersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListMembersRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListMembersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListMembersRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +39,11 @@ public class ListMembersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlyAssociated")
     public Boolean onlyAssociated;
+
     public ListMembersRequestBody withOnlyAssociated(Boolean onlyAssociated) {
         this.onlyAssociated = onlyAssociated;
         return this;
     }
     
+    public ListMembersRequestBody(){}
 }

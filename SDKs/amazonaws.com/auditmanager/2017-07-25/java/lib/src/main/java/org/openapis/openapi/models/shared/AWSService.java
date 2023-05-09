@@ -15,9 +15,11 @@ public class AWSService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public AWSService withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public AWSService(){}
 }

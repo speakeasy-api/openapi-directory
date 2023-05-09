@@ -18,6 +18,7 @@ public class AwsSourceDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessKeyCreds")
     public AccessKeyCredentials accessKeyCreds;
+
     public AwsSourceDetailsInput withAccessKeyCreds(AccessKeyCredentials accessKeyCreds) {
         this.accessKeyCreds = accessKeyCreds;
         return this;
@@ -29,6 +30,7 @@ public class AwsSourceDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public AwsSourceDetailsInput withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -40,6 +42,7 @@ public class AwsSourceDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public AwsSourceDetailsInput withError(Status error) {
         this.error = error;
         return this;
@@ -51,6 +54,7 @@ public class AwsSourceDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventorySecurityGroupNames")
     public String[] inventorySecurityGroupNames;
+
     public AwsSourceDetailsInput withInventorySecurityGroupNames(String[] inventorySecurityGroupNames) {
         this.inventorySecurityGroupNames = inventorySecurityGroupNames;
         return this;
@@ -62,6 +66,7 @@ public class AwsSourceDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventoryTagList")
     public Tag[] inventoryTagList;
+
     public AwsSourceDetailsInput withInventoryTagList(Tag[] inventoryTagList) {
         this.inventoryTagList = inventoryTagList;
         return this;
@@ -73,9 +78,11 @@ public class AwsSourceDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migrationResourcesUserTags")
     public java.util.Map<String, String> migrationResourcesUserTags;
+
     public AwsSourceDetailsInput withMigrationResourcesUserTags(java.util.Map<String, String> migrationResourcesUserTags) {
         this.migrationResourcesUserTags = migrationResourcesUserTags;
         return this;
     }
     
+    public AwsSourceDetailsInput(){}
 }

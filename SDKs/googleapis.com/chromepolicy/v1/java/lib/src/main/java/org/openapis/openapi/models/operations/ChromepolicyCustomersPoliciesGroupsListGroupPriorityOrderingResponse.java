@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingResponse {
     
     public String contentType;
+
     public ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingRespons
      */
     
     public org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse googleChromePolicyVersionsV1ListGroupPriorityOrderingResponse;
+
     public ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingResponse withGoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse(org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse googleChromePolicyVersionsV1ListGroupPriorityOrderingResponse) {
         this.googleChromePolicyVersionsV1ListGroupPriorityOrderingResponse = googleChromePolicyVersionsV1ListGroupPriorityOrderingResponse;
         return this;
@@ -26,6 +29,7 @@ public class ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingRespons
     
     
     public Integer statusCode;
+
     public ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.operations;
 public class GetSpins200ApplicationXML {
     
     public GetSpins200ApplicationXMLLinks links;
+
     public GetSpins200ApplicationXML withLinks(GetSpins200ApplicationXMLLinks links) {
         this.links = links;
         return this;
@@ -19,6 +20,7 @@ public class GetSpins200ApplicationXML {
     
     
     public org.openapis.openapi.models.shared.Pagination meta;
+
     public GetSpins200ApplicationXML withMeta(org.openapis.openapi.models.shared.Pagination meta) {
         this.meta = meta;
         return this;
@@ -26,9 +28,11 @@ public class GetSpins200ApplicationXML {
     
     
     public org.openapis.openapi.models.shared.Spin[] items;
+
     public GetSpins200ApplicationXML withItems(org.openapis.openapi.models.shared.Spin[] items) {
         this.items = items;
         return this;
     }
     
+    public GetSpins200ApplicationXML(){}
 }

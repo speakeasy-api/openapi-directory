@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesJourneyPlannerFare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeLevel")
     public String chargeLevel;
+
     public TflApiPresentationEntitiesJourneyPlannerFare withChargeLevel(String chargeLevel) {
         this.chargeLevel = chargeLevel;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesJourneyPlannerFare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeProfileName")
     public String chargeProfileName;
+
     public TflApiPresentationEntitiesJourneyPlannerFare withChargeProfileName(String chargeProfileName) {
         this.chargeProfileName = chargeProfileName;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesJourneyPlannerFare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost")
     public Integer cost;
+
     public TflApiPresentationEntitiesJourneyPlannerFare withCost(Integer cost) {
         this.cost = cost;
         return this;
@@ -36,6 +39,7 @@ public class TflApiPresentationEntitiesJourneyPlannerFare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highZone")
     public Integer highZone;
+
     public TflApiPresentationEntitiesJourneyPlannerFare withHighZone(Integer highZone) {
         this.highZone = highZone;
         return this;
@@ -44,6 +48,7 @@ public class TflApiPresentationEntitiesJourneyPlannerFare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isHopperFare")
     public Boolean isHopperFare;
+
     public TflApiPresentationEntitiesJourneyPlannerFare withIsHopperFare(Boolean isHopperFare) {
         this.isHopperFare = isHopperFare;
         return this;
@@ -52,6 +57,7 @@ public class TflApiPresentationEntitiesJourneyPlannerFare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowZone")
     public Integer lowZone;
+
     public TflApiPresentationEntitiesJourneyPlannerFare withLowZone(Integer lowZone) {
         this.lowZone = lowZone;
         return this;
@@ -60,6 +66,7 @@ public class TflApiPresentationEntitiesJourneyPlannerFare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offPeak")
     public Integer offPeak;
+
     public TflApiPresentationEntitiesJourneyPlannerFare withOffPeak(Integer offPeak) {
         this.offPeak = offPeak;
         return this;
@@ -68,6 +75,7 @@ public class TflApiPresentationEntitiesJourneyPlannerFare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peak")
     public Integer peak;
+
     public TflApiPresentationEntitiesJourneyPlannerFare withPeak(Integer peak) {
         this.peak = peak;
         return this;
@@ -76,9 +84,11 @@ public class TflApiPresentationEntitiesJourneyPlannerFare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taps")
     public TflApiPresentationEntitiesJourneyPlannerFareTap[] taps;
+
     public TflApiPresentationEntitiesJourneyPlannerFare withTaps(TflApiPresentationEntitiesJourneyPlannerFareTap[] taps) {
         this.taps = taps;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerFare(){}
 }

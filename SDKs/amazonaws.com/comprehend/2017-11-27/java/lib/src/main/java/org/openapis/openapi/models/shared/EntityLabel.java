@@ -15,6 +15,7 @@ public class EntityLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public PiiEntityTypeEnum name;
+
     public EntityLabel withName(PiiEntityTypeEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class EntityLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public EntityLabel withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public EntityLabel(){}
 }

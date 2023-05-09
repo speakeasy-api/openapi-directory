@@ -15,9 +15,11 @@ public class DescribeFleetLocationCapacityOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetCapacity")
     public FleetCapacity fleetCapacity;
+
     public DescribeFleetLocationCapacityOutput withFleetCapacity(FleetCapacity fleetCapacity) {
         this.fleetCapacity = fleetCapacity;
         return this;
     }
     
+    public DescribeFleetLocationCapacityOutput(){}
 }

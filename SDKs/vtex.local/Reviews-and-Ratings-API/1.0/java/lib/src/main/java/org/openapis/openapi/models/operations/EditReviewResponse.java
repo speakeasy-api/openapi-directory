@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EditReviewResponse {
     
     public String contentType;
+
     public EditReviewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EditReviewResponse {
      */
     
     public EditReview200ApplicationJSON editReview200ApplicationJSONObject;
+
     public EditReviewResponse withEditReview200ApplicationJSONObject(EditReview200ApplicationJSON editReview200ApplicationJSONObject) {
         this.editReview200ApplicationJSONObject = editReview200ApplicationJSONObject;
         return this;
@@ -26,6 +29,7 @@ public class EditReviewResponse {
     
     
     public Integer statusCode;
+
     public EditReviewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class EditReviewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EditReviewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EditReviewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

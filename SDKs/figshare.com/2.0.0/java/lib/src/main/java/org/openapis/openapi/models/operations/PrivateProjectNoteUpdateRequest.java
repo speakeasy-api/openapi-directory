@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectNoteUpdateRequest {
@@ -12,6 +13,7 @@ public class PrivateProjectNoteUpdateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ProjectNoteCreate projectNoteCreate;
+
     public PrivateProjectNoteUpdateRequest withProjectNoteCreate(org.openapis.openapi.models.shared.ProjectNoteCreate projectNoteCreate) {
         this.projectNoteCreate = projectNoteCreate;
         return this;
@@ -22,6 +24,7 @@ public class PrivateProjectNoteUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=note_id")
     public Long noteId;
+
     public PrivateProjectNoteUpdateRequest withNoteId(Long noteId) {
         this.noteId = noteId;
         return this;
@@ -32,9 +35,15 @@ public class PrivateProjectNoteUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public Long projectId;
+
     public PrivateProjectNoteUpdateRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public PrivateProjectNoteUpdateRequest(@JsonProperty("ProjectNoteCreate") org.openapis.openapi.models.shared.ProjectNoteCreate projectNoteCreate, @JsonProperty("note_id") Long noteId, @JsonProperty("project_id") Long projectId) {
+        this.projectNoteCreate = projectNoteCreate;
+        this.noteId = noteId;
+        this.projectId = projectId;
+  }
 }

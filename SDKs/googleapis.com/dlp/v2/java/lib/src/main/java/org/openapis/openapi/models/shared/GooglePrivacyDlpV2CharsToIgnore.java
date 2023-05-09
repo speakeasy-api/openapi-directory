@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2CharsToIgnore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("charactersToSkip")
     public String charactersToSkip;
+
     public GooglePrivacyDlpV2CharsToIgnore withCharactersToSkip(String charactersToSkip) {
         this.charactersToSkip = charactersToSkip;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2CharsToIgnore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonCharactersToIgnore")
     public GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum commonCharactersToIgnore;
+
     public GooglePrivacyDlpV2CharsToIgnore withCommonCharactersToIgnore(GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum commonCharactersToIgnore) {
         this.commonCharactersToIgnore = commonCharactersToIgnore;
         return this;
     }
     
+    public GooglePrivacyDlpV2CharsToIgnore(){}
 }

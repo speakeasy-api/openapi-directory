@@ -15,9 +15,11 @@ public class DeleteAnApi200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api")
     public DeleteAnApi200ApplicationJSONApi api;
+
     public DeleteAnApi200ApplicationJSON withApi(DeleteAnApi200ApplicationJSONApi api) {
         this.api = api;
         return this;
     }
     
+    public DeleteAnApi200ApplicationJSON(){}
 }

@@ -15,6 +15,7 @@ public class Socer400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Socer400ApplicationJSONErrorEnum error;
+
     public Socer400ApplicationJSON withError(Socer400ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Socer400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Socer400ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Socer400ApplicationJSON withErrorDescription(Socer400ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Socer400ApplicationJSON(){}
 }

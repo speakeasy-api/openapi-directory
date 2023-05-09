@@ -12,6 +12,7 @@ public class ListPullRequestsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorArn")
     public String authorArn;
+
     public ListPullRequestsInput withAuthorArn(String authorArn) {
         this.authorArn = authorArn;
         return this;
@@ -20,6 +21,7 @@ public class ListPullRequestsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListPullRequestsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListPullRequestsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListPullRequestsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListPullRequestsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pullRequestStatus")
     public PullRequestStatusEnumEnum pullRequestStatus;
+
     public ListPullRequestsInput withPullRequestStatus(PullRequestStatusEnumEnum pullRequestStatus) {
         this.pullRequestStatus = pullRequestStatus;
         return this;
@@ -43,9 +47,13 @@ public class ListPullRequestsInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public ListPullRequestsInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public ListPullRequestsInput(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

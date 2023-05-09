@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateScriptResponse {
     
     public String contentType;
+
     public CreateScriptResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateScriptResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateScriptResponse createScriptResponse;
+
     public CreateScriptResponse withCreateScriptResponse(org.openapis.openapi.models.shared.CreateScriptResponse createScriptResponse) {
         this.createScriptResponse = createScriptResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateScriptResponse {
      */
     
     public Object internalServiceException;
+
     public CreateScriptResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class CreateScriptResponse {
      */
     
     public Object invalidInputException;
+
     public CreateScriptResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class CreateScriptResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateScriptResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class CreateScriptResponse {
     
     
     public Integer statusCode;
+
     public CreateScriptResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateScriptResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateScriptResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateScriptResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

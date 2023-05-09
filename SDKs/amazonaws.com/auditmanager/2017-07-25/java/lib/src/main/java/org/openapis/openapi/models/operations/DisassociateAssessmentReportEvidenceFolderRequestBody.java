@@ -12,9 +12,13 @@ public class DisassociateAssessmentReportEvidenceFolderRequestBody {
      */
     @JsonProperty("evidenceFolderId")
     public String evidenceFolderId;
+
     public DisassociateAssessmentReportEvidenceFolderRequestBody withEvidenceFolderId(String evidenceFolderId) {
         this.evidenceFolderId = evidenceFolderId;
         return this;
     }
     
+    public DisassociateAssessmentReportEvidenceFolderRequestBody(@JsonProperty("evidenceFolderId") String evidenceFolderId) {
+        this.evidenceFolderId = evidenceFolderId;
+  }
 }

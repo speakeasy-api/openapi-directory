@@ -31,6 +31,7 @@ public class CronSweepSchedule {
      */
     @JsonProperty("cronExpression")
     public String cronExpression;
+
     public CronSweepSchedule withCronExpression(String cronExpression) {
         this.cronExpression = cronExpression;
         return this;
@@ -54,9 +55,13 @@ public class CronSweepSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CronSweepScheduleTypeEnum type;
+
     public CronSweepSchedule withType(CronSweepScheduleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CronSweepSchedule(@JsonProperty("cronExpression") String cronExpression) {
+        this.cronExpression = cronExpression;
+  }
 }

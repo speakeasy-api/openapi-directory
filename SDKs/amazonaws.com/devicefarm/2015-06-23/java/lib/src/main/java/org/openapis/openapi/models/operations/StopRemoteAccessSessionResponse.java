@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopRemoteAccessSessionResponse {
@@ -12,6 +13,7 @@ public class StopRemoteAccessSessionResponse {
      */
     
     public Object argumentException;
+
     public StopRemoteAccessSessionResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class StopRemoteAccessSessionResponse {
     
     
     public String contentType;
+
     public StopRemoteAccessSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopRemoteAccessSessionResponse {
      */
     
     public Object limitExceededException;
+
     public StopRemoteAccessSessionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class StopRemoteAccessSessionResponse {
      */
     
     public Object notFoundException;
+
     public StopRemoteAccessSessionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopRemoteAccessSessionResponse {
     
     
     public Integer statusCode;
+
     public StopRemoteAccessSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopRemoteAccessSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopRemoteAccessSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopRemoteAccessSessionResponse {
      */
     
     public Object serviceAccountException;
+
     public StopRemoteAccessSessionResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -73,9 +81,14 @@ public class StopRemoteAccessSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.StopRemoteAccessSessionResult stopRemoteAccessSessionResult;
+
     public StopRemoteAccessSessionResponse withStopRemoteAccessSessionResult(org.openapis.openapi.models.shared.StopRemoteAccessSessionResult stopRemoteAccessSessionResult) {
         this.stopRemoteAccessSessionResult = stopRemoteAccessSessionResult;
         return this;
     }
     
+    public StopRemoteAccessSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

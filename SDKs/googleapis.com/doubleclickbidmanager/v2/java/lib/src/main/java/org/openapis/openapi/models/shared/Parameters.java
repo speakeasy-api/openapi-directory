@@ -18,6 +18,7 @@ public class Parameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public FilterPair[] filters;
+
     public Parameters withFilters(FilterPair[] filters) {
         this.filters = filters;
         return this;
@@ -29,6 +30,7 @@ public class Parameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupBys")
     public String[] groupBys;
+
     public Parameters withGroupBys(String[] groupBys) {
         this.groupBys = groupBys;
         return this;
@@ -40,6 +42,7 @@ public class Parameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public String[] metrics;
+
     public Parameters withMetrics(String[] metrics) {
         this.metrics = metrics;
         return this;
@@ -51,6 +54,7 @@ public class Parameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Options options;
+
     public Parameters withOptions(Options options) {
         this.options = options;
         return this;
@@ -62,9 +66,11 @@ public class Parameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ParametersTypeEnum type;
+
     public Parameters withType(ParametersTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Parameters(){}
 }

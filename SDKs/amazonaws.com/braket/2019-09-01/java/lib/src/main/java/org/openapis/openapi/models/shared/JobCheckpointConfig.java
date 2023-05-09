@@ -15,6 +15,7 @@ public class JobCheckpointConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localPath")
     public String localPath;
+
     public JobCheckpointConfig withLocalPath(String localPath) {
         this.localPath = localPath;
         return this;
@@ -22,9 +23,13 @@ public class JobCheckpointConfig {
     
     @JsonProperty("s3Uri")
     public String s3Uri;
+
     public JobCheckpointConfig withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public JobCheckpointConfig(@JsonProperty("s3Uri") String s3Uri) {
+        this.s3Uri = s3Uri;
+  }
 }

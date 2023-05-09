@@ -18,9 +18,11 @@ public class MergeTableCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRange")
     public TableRange tableRange;
+
     public MergeTableCellsRequest withTableRange(TableRange tableRange) {
         this.tableRange = tableRange;
         return this;
     }
     
+    public MergeTableCellsRequest(){}
 }

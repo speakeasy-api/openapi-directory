@@ -12,6 +12,7 @@ public class PutAppLaunchConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public PutAppLaunchConfigurationRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -20,6 +21,7 @@ public class PutAppLaunchConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoLaunch")
     public Boolean autoLaunch;
+
     public PutAppLaunchConfigurationRequest withAutoLaunch(Boolean autoLaunch) {
         this.autoLaunch = autoLaunch;
         return this;
@@ -28,6 +30,7 @@ public class PutAppLaunchConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleName")
     public String roleName;
+
     public PutAppLaunchConfigurationRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -36,9 +39,11 @@ public class PutAppLaunchConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverGroupLaunchConfigurations")
     public ServerGroupLaunchConfiguration[] serverGroupLaunchConfigurations;
+
     public PutAppLaunchConfigurationRequest withServerGroupLaunchConfigurations(ServerGroupLaunchConfiguration[] serverGroupLaunchConfigurations) {
         this.serverGroupLaunchConfigurations = serverGroupLaunchConfigurations;
         return this;
     }
     
+    public PutAppLaunchConfigurationRequest(){}
 }

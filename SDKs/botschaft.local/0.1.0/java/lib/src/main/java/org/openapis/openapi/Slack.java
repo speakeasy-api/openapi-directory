@@ -65,12 +65,10 @@ public class Slack {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SlackGetSlackGetResponse res = new org.openapis.openapi.models.operations.SlackGetSlackGetResponse() {{
+        org.openapis.openapi.models.operations.SlackGetSlackGetResponse res = new org.openapis.openapi.models.operations.SlackGetSlackGetResponse(contentType, httpRes.statusCode()) {{
             slackGetSlackGet200ApplicationJSONAny = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,12 +122,10 @@ public class Slack {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SlackPostSlackPostResponse res = new org.openapis.openapi.models.operations.SlackPostSlackPostResponse() {{
+        org.openapis.openapi.models.operations.SlackPostSlackPostResponse res = new org.openapis.openapi.models.operations.SlackPostSlackPostResponse(contentType, httpRes.statusCode()) {{
             slackPostSlackPost200ApplicationJSONAny = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

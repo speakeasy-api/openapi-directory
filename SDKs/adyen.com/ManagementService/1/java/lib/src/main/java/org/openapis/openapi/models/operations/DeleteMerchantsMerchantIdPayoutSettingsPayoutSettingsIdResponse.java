@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse {
     
     public String contentType;
+
     public DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -26,6 +29,7 @@ public class DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

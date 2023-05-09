@@ -15,6 +15,7 @@ public class Apk {
      */
     
     public ApkBinary binary;
+
     public Apk withBinary(ApkBinary binary) {
         this.binary = binary;
         return this;
@@ -25,9 +26,11 @@ public class Apk {
      */
     
     public Integer versionCode;
+
     public Apk withVersionCode(Integer versionCode) {
         this.versionCode = versionCode;
         return this;
     }
     
+    public Apk(){}
 }

@@ -18,6 +18,7 @@ public class TextOperationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recognitionResult")
     public TextRecognitionResult recognitionResult;
+
     public TextOperationResult withRecognitionResult(TextRecognitionResult recognitionResult) {
         this.recognitionResult = recognitionResult;
         return this;
@@ -29,9 +30,11 @@ public class TextOperationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public OperationStatusEnum status;
+
     public TextOperationResult withStatus(OperationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public TextOperationResult(){}
 }

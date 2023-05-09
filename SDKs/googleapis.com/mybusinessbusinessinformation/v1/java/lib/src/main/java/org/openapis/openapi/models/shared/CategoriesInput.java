@@ -18,6 +18,7 @@ public class CategoriesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalCategories")
     public CategoryInput[] additionalCategories;
+
     public CategoriesInput withAdditionalCategories(CategoryInput[] additionalCategories) {
         this.additionalCategories = additionalCategories;
         return this;
@@ -29,9 +30,11 @@ public class CategoriesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryCategory")
     public CategoryInput primaryCategory;
+
     public CategoriesInput withPrimaryCategory(CategoryInput primaryCategory) {
         this.primaryCategory = primaryCategory;
         return this;
     }
     
+    public CategoriesInput(){}
 }

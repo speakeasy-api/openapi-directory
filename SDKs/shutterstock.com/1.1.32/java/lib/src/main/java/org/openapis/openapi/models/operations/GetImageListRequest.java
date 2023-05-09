@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImageListRequest {
@@ -12,6 +13,7 @@ public class GetImageListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String[] id;
+
     public GetImageListRequest withId(String[] id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetImageListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
     public String searchId;
+
     public GetImageListRequest withSearchId(String searchId) {
         this.searchId = searchId;
         return this;
@@ -32,9 +35,13 @@ public class GetImageListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public GetImageListViewEnum view;
+
     public GetImageListRequest withView(GetImageListViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public GetImageListRequest(@JsonProperty("id") String[] id) {
+        this.id = id;
+  }
 }

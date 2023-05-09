@@ -22,9 +22,11 @@ public class GetEntitlementsHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetEntitlementsHistoryRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetEntitlementsHistoryRequest(){}
 }

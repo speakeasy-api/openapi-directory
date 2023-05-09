@@ -15,6 +15,7 @@ public class GeneratedPolicyResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generatedPolicies")
     public GeneratedPolicy[] generatedPolicies;
+
     public GeneratedPolicyResult withGeneratedPolicies(GeneratedPolicy[] generatedPolicies) {
         this.generatedPolicies = generatedPolicies;
         return this;
@@ -25,9 +26,13 @@ public class GeneratedPolicyResult {
      */
     @JsonProperty("properties")
     public Object properties;
+
     public GeneratedPolicyResult withProperties(Object properties) {
         this.properties = properties;
         return this;
     }
     
+    public GeneratedPolicyResult(@JsonProperty("properties") Object properties) {
+        this.properties = properties;
+  }
 }

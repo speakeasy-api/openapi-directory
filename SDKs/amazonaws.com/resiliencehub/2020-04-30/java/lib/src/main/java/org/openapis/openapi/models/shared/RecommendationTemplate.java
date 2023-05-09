@@ -20,6 +20,7 @@ public class RecommendationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appArn")
     public String appArn;
+
     public RecommendationTemplate withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -27,6 +28,7 @@ public class RecommendationTemplate {
     
     @JsonProperty("assessmentArn")
     public String assessmentArn;
+
     public RecommendationTemplate withAssessmentArn(String assessmentArn) {
         this.assessmentArn = assessmentArn;
         return this;
@@ -37,6 +39,7 @@ public class RecommendationTemplate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public RecommendationTemplate withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -44,6 +47,7 @@ public class RecommendationTemplate {
     
     @JsonProperty("format")
     public TemplateFormatEnum format;
+
     public RecommendationTemplate withFormat(TemplateFormatEnum format) {
         this.format = format;
         return this;
@@ -52,6 +56,7 @@ public class RecommendationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public RecommendationTemplate withMessage(String message) {
         this.message = message;
         return this;
@@ -59,6 +64,7 @@ public class RecommendationTemplate {
     
     @JsonProperty("name")
     public String name;
+
     public RecommendationTemplate withName(String name) {
         this.name = name;
         return this;
@@ -67,6 +73,7 @@ public class RecommendationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("needsReplacements")
     public Boolean needsReplacements;
+
     public RecommendationTemplate withNeedsReplacements(Boolean needsReplacements) {
         this.needsReplacements = needsReplacements;
         return this;
@@ -75,6 +82,7 @@ public class RecommendationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationIds")
     public String[] recommendationIds;
+
     public RecommendationTemplate withRecommendationIds(String[] recommendationIds) {
         this.recommendationIds = recommendationIds;
         return this;
@@ -82,6 +90,7 @@ public class RecommendationTemplate {
     
     @JsonProperty("recommendationTemplateArn")
     public String recommendationTemplateArn;
+
     public RecommendationTemplate withRecommendationTemplateArn(String recommendationTemplateArn) {
         this.recommendationTemplateArn = recommendationTemplateArn;
         return this;
@@ -89,6 +98,7 @@ public class RecommendationTemplate {
     
     @JsonProperty("recommendationTypes")
     public RenderRecommendationTypeEnum[] recommendationTypes;
+
     public RecommendationTemplate withRecommendationTypes(RenderRecommendationTypeEnum[] recommendationTypes) {
         this.recommendationTypes = recommendationTypes;
         return this;
@@ -99,6 +109,7 @@ public class RecommendationTemplate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public RecommendationTemplate withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -106,6 +117,7 @@ public class RecommendationTemplate {
     
     @JsonProperty("status")
     public RecommendationTemplateStatusEnum status;
+
     public RecommendationTemplate withStatus(RecommendationTemplateStatusEnum status) {
         this.status = status;
         return this;
@@ -114,6 +126,7 @@ public class RecommendationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public RecommendationTemplate withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -122,9 +135,18 @@ public class RecommendationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templatesLocation")
     public S3Location templatesLocation;
+
     public RecommendationTemplate withTemplatesLocation(S3Location templatesLocation) {
         this.templatesLocation = templatesLocation;
         return this;
     }
     
+    public RecommendationTemplate(@JsonProperty("assessmentArn") String assessmentArn, @JsonProperty("format") TemplateFormatEnum format, @JsonProperty("name") String name, @JsonProperty("recommendationTemplateArn") String recommendationTemplateArn, @JsonProperty("recommendationTypes") RenderRecommendationTypeEnum[] recommendationTypes, @JsonProperty("status") RecommendationTemplateStatusEnum status) {
+        this.assessmentArn = assessmentArn;
+        this.format = format;
+        this.name = name;
+        this.recommendationTemplateArn = recommendationTemplateArn;
+        this.recommendationTypes = recommendationTypes;
+        this.status = status;
+  }
 }

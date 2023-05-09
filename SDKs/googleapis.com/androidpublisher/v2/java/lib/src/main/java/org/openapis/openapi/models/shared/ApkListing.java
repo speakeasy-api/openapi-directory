@@ -18,6 +18,7 @@ public class ApkListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public ApkListing withLanguage(String language) {
         this.language = language;
         return this;
@@ -29,9 +30,11 @@ public class ApkListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentChanges")
     public String recentChanges;
+
     public ApkListing withRecentChanges(String recentChanges) {
         this.recentChanges = recentChanges;
         return this;
     }
     
+    public ApkListing(){}
 }

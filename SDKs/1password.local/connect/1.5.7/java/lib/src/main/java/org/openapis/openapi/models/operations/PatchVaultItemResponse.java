@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatchVaultItemResponse {
     
     public String contentType;
+
     public PatchVaultItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PatchVaultItemResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public PatchVaultItemResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class PatchVaultItemResponse {
      */
     
     public org.openapis.openapi.models.shared.FullItem fullItem;
+
     public PatchVaultItemResponse withFullItem(org.openapis.openapi.models.shared.FullItem fullItem) {
         this.fullItem = fullItem;
         return this;
@@ -36,6 +40,7 @@ public class PatchVaultItemResponse {
     
     
     public Integer statusCode;
+
     public PatchVaultItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PatchVaultItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatchVaultItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PatchVaultItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

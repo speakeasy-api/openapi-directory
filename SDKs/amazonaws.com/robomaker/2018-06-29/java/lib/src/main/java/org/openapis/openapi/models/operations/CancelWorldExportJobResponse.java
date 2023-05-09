@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelWorldExportJobResponse {
@@ -12,6 +13,7 @@ public class CancelWorldExportJobResponse {
      */
     
     public java.util.Map<String, Object> cancelWorldExportJobResponse;
+
     public CancelWorldExportJobResponse withCancelWorldExportJobResponse(java.util.Map<String, Object> cancelWorldExportJobResponse) {
         this.cancelWorldExportJobResponse = cancelWorldExportJobResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelWorldExportJobResponse {
     
     
     public String contentType;
+
     public CancelWorldExportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelWorldExportJobResponse {
      */
     
     public Object internalServerException;
+
     public CancelWorldExportJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CancelWorldExportJobResponse {
      */
     
     public Object invalidParameterException;
+
     public CancelWorldExportJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CancelWorldExportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelWorldExportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CancelWorldExportJobResponse {
     
     
     public Integer statusCode;
+
     public CancelWorldExportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CancelWorldExportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelWorldExportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CancelWorldExportJobResponse {
      */
     
     public Object throttlingException;
+
     public CancelWorldExportJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CancelWorldExportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

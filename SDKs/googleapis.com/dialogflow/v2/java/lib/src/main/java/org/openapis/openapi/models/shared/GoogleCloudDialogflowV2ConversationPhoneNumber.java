@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2ConversationPhoneNumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public GoogleCloudDialogflowV2ConversationPhoneNumber withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ConversationPhoneNumber(){}
 }

@@ -12,6 +12,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Activated")
     public Long activated;
+
     public PlayerSeasonProjection withActivated(Long activated) {
         this.activated = activated;
         return this;
@@ -20,6 +21,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistedTackles")
     public Double assistedTackles;
+
     public PlayerSeasonProjection withAssistedTackles(Double assistedTackles) {
         this.assistedTackles = assistedTackles;
         return this;
@@ -28,6 +30,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuctionValue")
     public Double auctionValue;
+
     public PlayerSeasonProjection withAuctionValue(Double auctionValue) {
         this.auctionValue = auctionValue;
         return this;
@@ -36,6 +39,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuctionValuePPR")
     public Double auctionValuePPR;
+
     public PlayerSeasonProjection withAuctionValuePPR(Double auctionValuePPR) {
         this.auctionValuePPR = auctionValuePPR;
         return this;
@@ -44,6 +48,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDraftPosition")
     public Double averageDraftPosition;
+
     public PlayerSeasonProjection withAverageDraftPosition(Double averageDraftPosition) {
         this.averageDraftPosition = averageDraftPosition;
         return this;
@@ -52,6 +57,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDraftPosition2QB")
     public Double averageDraftPosition2QB;
+
     public PlayerSeasonProjection withAverageDraftPosition2QB(Double averageDraftPosition2QB) {
         this.averageDraftPosition2QB = averageDraftPosition2QB;
         return this;
@@ -60,6 +66,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDraftPositionDynasty")
     public Double averageDraftPositionDynasty;
+
     public PlayerSeasonProjection withAverageDraftPositionDynasty(Double averageDraftPositionDynasty) {
         this.averageDraftPositionDynasty = averageDraftPositionDynasty;
         return this;
@@ -68,6 +75,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDraftPositionPPR")
     public Double averageDraftPositionPPR;
+
     public PlayerSeasonProjection withAverageDraftPositionPPR(Double averageDraftPositionPPR) {
         this.averageDraftPositionPPR = averageDraftPositionPPR;
         return this;
@@ -76,6 +84,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDraftPositionRookie")
     public Double averageDraftPositionRookie;
+
     public PlayerSeasonProjection withAverageDraftPositionRookie(Double averageDraftPositionRookie) {
         this.averageDraftPositionRookie = averageDraftPositionRookie;
         return this;
@@ -84,6 +93,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKickReturnTouchdowns")
     public Double blockedKickReturnTouchdowns;
+
     public PlayerSeasonProjection withBlockedKickReturnTouchdowns(Double blockedKickReturnTouchdowns) {
         this.blockedKickReturnTouchdowns = blockedKickReturnTouchdowns;
         return this;
@@ -92,6 +102,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKickReturnYards")
     public Double blockedKickReturnYards;
+
     public PlayerSeasonProjection withBlockedKickReturnYards(Double blockedKickReturnYards) {
         this.blockedKickReturnYards = blockedKickReturnYards;
         return this;
@@ -100,6 +111,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKicks")
     public Double blockedKicks;
+
     public PlayerSeasonProjection withBlockedKicks(Double blockedKicks) {
         this.blockedKicks = blockedKicks;
         return this;
@@ -108,6 +120,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefensiveSnapsPlayed")
     public Long defensiveSnapsPlayed;
+
     public PlayerSeasonProjection withDefensiveSnapsPlayed(Long defensiveSnapsPlayed) {
         this.defensiveSnapsPlayed = defensiveSnapsPlayed;
         return this;
@@ -116,6 +129,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefensiveTeamSnaps")
     public Long defensiveTeamSnaps;
+
     public PlayerSeasonProjection withDefensiveTeamSnaps(Long defensiveTeamSnaps) {
         this.defensiveTeamSnaps = defensiveTeamSnaps;
         return this;
@@ -124,6 +138,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefensiveTouchdowns")
     public Double defensiveTouchdowns;
+
     public PlayerSeasonProjection withDefensiveTouchdowns(Double defensiveTouchdowns) {
         this.defensiveTouchdowns = defensiveTouchdowns;
         return this;
@@ -132,6 +147,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointsAttempted")
     public Double extraPointsAttempted;
+
     public PlayerSeasonProjection withExtraPointsAttempted(Double extraPointsAttempted) {
         this.extraPointsAttempted = extraPointsAttempted;
         return this;
@@ -140,6 +156,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointsHadBlocked")
     public Double extraPointsHadBlocked;
+
     public PlayerSeasonProjection withExtraPointsHadBlocked(Double extraPointsHadBlocked) {
         this.extraPointsHadBlocked = extraPointsHadBlocked;
         return this;
@@ -148,6 +165,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointsMade")
     public Double extraPointsMade;
+
     public PlayerSeasonProjection withExtraPointsMade(Double extraPointsMade) {
         this.extraPointsMade = extraPointsMade;
         return this;
@@ -156,6 +174,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public PlayerSeasonProjection withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -164,6 +183,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsDraftKings")
     public Double fantasyPointsDraftKings;
+
     public PlayerSeasonProjection withFantasyPointsDraftKings(Double fantasyPointsDraftKings) {
         this.fantasyPointsDraftKings = fantasyPointsDraftKings;
         return this;
@@ -172,6 +192,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFanDuel")
     public Double fantasyPointsFanDuel;
+
     public PlayerSeasonProjection withFantasyPointsFanDuel(Double fantasyPointsFanDuel) {
         this.fantasyPointsFanDuel = fantasyPointsFanDuel;
         return this;
@@ -180,6 +201,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFantasyDraft")
     public Double fantasyPointsFantasyDraft;
+
     public PlayerSeasonProjection withFantasyPointsFantasyDraft(Double fantasyPointsFantasyDraft) {
         this.fantasyPointsFantasyDraft = fantasyPointsFantasyDraft;
         return this;
@@ -188,6 +210,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsPPR")
     public Double fantasyPointsPPR;
+
     public PlayerSeasonProjection withFantasyPointsPPR(Double fantasyPointsPPR) {
         this.fantasyPointsPPR = fantasyPointsPPR;
         return this;
@@ -196,6 +219,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsYahoo")
     public Double fantasyPointsYahoo;
+
     public PlayerSeasonProjection withFantasyPointsYahoo(Double fantasyPointsYahoo) {
         this.fantasyPointsYahoo = fantasyPointsYahoo;
         return this;
@@ -204,6 +228,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPosition")
     public String fantasyPosition;
+
     public PlayerSeasonProjection withFantasyPosition(String fantasyPosition) {
         this.fantasyPosition = fantasyPosition;
         return this;
@@ -212,6 +237,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalPercentage")
     public Double fieldGoalPercentage;
+
     public PlayerSeasonProjection withFieldGoalPercentage(Double fieldGoalPercentage) {
         this.fieldGoalPercentage = fieldGoalPercentage;
         return this;
@@ -220,6 +246,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalReturnTouchdowns")
     public Double fieldGoalReturnTouchdowns;
+
     public PlayerSeasonProjection withFieldGoalReturnTouchdowns(Double fieldGoalReturnTouchdowns) {
         this.fieldGoalReturnTouchdowns = fieldGoalReturnTouchdowns;
         return this;
@@ -228,6 +255,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalReturnYards")
     public Double fieldGoalReturnYards;
+
     public PlayerSeasonProjection withFieldGoalReturnYards(Double fieldGoalReturnYards) {
         this.fieldGoalReturnYards = fieldGoalReturnYards;
         return this;
@@ -236,6 +264,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsAttempted")
     public Double fieldGoalsAttempted;
+
     public PlayerSeasonProjection withFieldGoalsAttempted(Double fieldGoalsAttempted) {
         this.fieldGoalsAttempted = fieldGoalsAttempted;
         return this;
@@ -244,6 +273,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsHadBlocked")
     public Double fieldGoalsHadBlocked;
+
     public PlayerSeasonProjection withFieldGoalsHadBlocked(Double fieldGoalsHadBlocked) {
         this.fieldGoalsHadBlocked = fieldGoalsHadBlocked;
         return this;
@@ -252,6 +282,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsLongestMade")
     public Double fieldGoalsLongestMade;
+
     public PlayerSeasonProjection withFieldGoalsLongestMade(Double fieldGoalsLongestMade) {
         this.fieldGoalsLongestMade = fieldGoalsLongestMade;
         return this;
@@ -260,6 +291,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade")
     public Double fieldGoalsMade;
+
     public PlayerSeasonProjection withFieldGoalsMade(Double fieldGoalsMade) {
         this.fieldGoalsMade = fieldGoalsMade;
         return this;
@@ -268,6 +300,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade0to19")
     public Double fieldGoalsMade0to19;
+
     public PlayerSeasonProjection withFieldGoalsMade0to19(Double fieldGoalsMade0to19) {
         this.fieldGoalsMade0to19 = fieldGoalsMade0to19;
         return this;
@@ -276,6 +309,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade20to29")
     public Double fieldGoalsMade20to29;
+
     public PlayerSeasonProjection withFieldGoalsMade20to29(Double fieldGoalsMade20to29) {
         this.fieldGoalsMade20to29 = fieldGoalsMade20to29;
         return this;
@@ -284,6 +318,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade30to39")
     public Double fieldGoalsMade30to39;
+
     public PlayerSeasonProjection withFieldGoalsMade30to39(Double fieldGoalsMade30to39) {
         this.fieldGoalsMade30to39 = fieldGoalsMade30to39;
         return this;
@@ -292,6 +327,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade40to49")
     public Double fieldGoalsMade40to49;
+
     public PlayerSeasonProjection withFieldGoalsMade40to49(Double fieldGoalsMade40to49) {
         this.fieldGoalsMade40to49 = fieldGoalsMade40to49;
         return this;
@@ -300,6 +336,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade50Plus")
     public Double fieldGoalsMade50Plus;
+
     public PlayerSeasonProjection withFieldGoalsMade50Plus(Double fieldGoalsMade50Plus) {
         this.fieldGoalsMade50Plus = fieldGoalsMade50Plus;
         return this;
@@ -308,6 +345,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumbleReturnTouchdowns")
     public Double fumbleReturnTouchdowns;
+
     public PlayerSeasonProjection withFumbleReturnTouchdowns(Double fumbleReturnTouchdowns) {
         this.fumbleReturnTouchdowns = fumbleReturnTouchdowns;
         return this;
@@ -316,6 +354,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumbleReturnYards")
     public Double fumbleReturnYards;
+
     public PlayerSeasonProjection withFumbleReturnYards(Double fumbleReturnYards) {
         this.fumbleReturnYards = fumbleReturnYards;
         return this;
@@ -324,6 +363,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fumbles")
     public Double fumbles;
+
     public PlayerSeasonProjection withFumbles(Double fumbles) {
         this.fumbles = fumbles;
         return this;
@@ -332,6 +372,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesForced")
     public Double fumblesForced;
+
     public PlayerSeasonProjection withFumblesForced(Double fumblesForced) {
         this.fumblesForced = fumblesForced;
         return this;
@@ -340,6 +381,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesLost")
     public Double fumblesLost;
+
     public PlayerSeasonProjection withFumblesLost(Double fumblesLost) {
         this.fumblesLost = fumblesLost;
         return this;
@@ -348,6 +390,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesOutOfBounds")
     public Double fumblesOutOfBounds;
+
     public PlayerSeasonProjection withFumblesOutOfBounds(Double fumblesOutOfBounds) {
         this.fumblesOutOfBounds = fumblesOutOfBounds;
         return this;
@@ -356,6 +399,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesOwnRecoveries")
     public Double fumblesOwnRecoveries;
+
     public PlayerSeasonProjection withFumblesOwnRecoveries(Double fumblesOwnRecoveries) {
         this.fumblesOwnRecoveries = fumblesOwnRecoveries;
         return this;
@@ -364,6 +408,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesRecovered")
     public Double fumblesRecovered;
+
     public PlayerSeasonProjection withFumblesRecovered(Double fumblesRecovered) {
         this.fumblesRecovered = fumblesRecovered;
         return this;
@@ -372,6 +417,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTeamID")
     public Long globalTeamID;
+
     public PlayerSeasonProjection withGlobalTeamID(Long globalTeamID) {
         this.globalTeamID = globalTeamID;
         return this;
@@ -380,6 +426,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Humidity")
     public Long humidity;
+
     public PlayerSeasonProjection withHumidity(Long humidity) {
         this.humidity = humidity;
         return this;
@@ -388,6 +435,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterceptionReturnTouchdowns")
     public Double interceptionReturnTouchdowns;
+
     public PlayerSeasonProjection withInterceptionReturnTouchdowns(Double interceptionReturnTouchdowns) {
         this.interceptionReturnTouchdowns = interceptionReturnTouchdowns;
         return this;
@@ -396,6 +444,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterceptionReturnYards")
     public Double interceptionReturnYards;
+
     public PlayerSeasonProjection withInterceptionReturnYards(Double interceptionReturnYards) {
         this.interceptionReturnYards = interceptionReturnYards;
         return this;
@@ -404,6 +453,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interceptions")
     public Double interceptions;
+
     public PlayerSeasonProjection withInterceptions(Double interceptions) {
         this.interceptions = interceptions;
         return this;
@@ -412,6 +462,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnFairCatches")
     public Double kickReturnFairCatches;
+
     public PlayerSeasonProjection withKickReturnFairCatches(Double kickReturnFairCatches) {
         this.kickReturnFairCatches = kickReturnFairCatches;
         return this;
@@ -420,6 +471,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnLong")
     public Double kickReturnLong;
+
     public PlayerSeasonProjection withKickReturnLong(Double kickReturnLong) {
         this.kickReturnLong = kickReturnLong;
         return this;
@@ -428,6 +480,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnTouchdowns")
     public Double kickReturnTouchdowns;
+
     public PlayerSeasonProjection withKickReturnTouchdowns(Double kickReturnTouchdowns) {
         this.kickReturnTouchdowns = kickReturnTouchdowns;
         return this;
@@ -436,6 +489,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnYards")
     public Double kickReturnYards;
+
     public PlayerSeasonProjection withKickReturnYards(Double kickReturnYards) {
         this.kickReturnYards = kickReturnYards;
         return this;
@@ -444,6 +498,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnYardsPerAttempt")
     public Double kickReturnYardsPerAttempt;
+
     public PlayerSeasonProjection withKickReturnYardsPerAttempt(Double kickReturnYardsPerAttempt) {
         this.kickReturnYardsPerAttempt = kickReturnYardsPerAttempt;
         return this;
@@ -452,6 +507,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturns")
     public Double kickReturns;
+
     public PlayerSeasonProjection withKickReturns(Double kickReturns) {
         this.kickReturns = kickReturns;
         return this;
@@ -460,6 +516,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MiscAssistedTackles")
     public Double miscAssistedTackles;
+
     public PlayerSeasonProjection withMiscAssistedTackles(Double miscAssistedTackles) {
         this.miscAssistedTackles = miscAssistedTackles;
         return this;
@@ -468,6 +525,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MiscFumblesForced")
     public Double miscFumblesForced;
+
     public PlayerSeasonProjection withMiscFumblesForced(Double miscFumblesForced) {
         this.miscFumblesForced = miscFumblesForced;
         return this;
@@ -476,6 +534,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MiscFumblesRecovered")
     public Double miscFumblesRecovered;
+
     public PlayerSeasonProjection withMiscFumblesRecovered(Double miscFumblesRecovered) {
         this.miscFumblesRecovered = miscFumblesRecovered;
         return this;
@@ -484,6 +543,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MiscSoloTackles")
     public Double miscSoloTackles;
+
     public PlayerSeasonProjection withMiscSoloTackles(Double miscSoloTackles) {
         this.miscSoloTackles = miscSoloTackles;
         return this;
@@ -492,6 +552,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerSeasonProjection withName(String name) {
         this.name = name;
         return this;
@@ -500,6 +561,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public PlayerSeasonProjection withNumber(Long number) {
         this.number = number;
         return this;
@@ -508,6 +570,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OffensiveFumbleRecoveryTouchdowns")
     public Long offensiveFumbleRecoveryTouchdowns;
+
     public PlayerSeasonProjection withOffensiveFumbleRecoveryTouchdowns(Long offensiveFumbleRecoveryTouchdowns) {
         this.offensiveFumbleRecoveryTouchdowns = offensiveFumbleRecoveryTouchdowns;
         return this;
@@ -516,6 +579,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OffensiveSnapsPlayed")
     public Long offensiveSnapsPlayed;
+
     public PlayerSeasonProjection withOffensiveSnapsPlayed(Long offensiveSnapsPlayed) {
         this.offensiveSnapsPlayed = offensiveSnapsPlayed;
         return this;
@@ -524,6 +588,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OffensiveTeamSnaps")
     public Long offensiveTeamSnaps;
+
     public PlayerSeasonProjection withOffensiveTeamSnaps(Long offensiveTeamSnaps) {
         this.offensiveTeamSnaps = offensiveTeamSnaps;
         return this;
@@ -532,6 +597,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OffensiveTouchdowns")
     public Double offensiveTouchdowns;
+
     public PlayerSeasonProjection withOffensiveTouchdowns(Double offensiveTouchdowns) {
         this.offensiveTouchdowns = offensiveTouchdowns;
         return this;
@@ -540,6 +606,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassesDefended")
     public Double passesDefended;
+
     public PlayerSeasonProjection withPassesDefended(Double passesDefended) {
         this.passesDefended = passesDefended;
         return this;
@@ -548,6 +615,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingAttempts")
     public Double passingAttempts;
+
     public PlayerSeasonProjection withPassingAttempts(Double passingAttempts) {
         this.passingAttempts = passingAttempts;
         return this;
@@ -556,6 +624,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingCompletionPercentage")
     public Double passingCompletionPercentage;
+
     public PlayerSeasonProjection withPassingCompletionPercentage(Double passingCompletionPercentage) {
         this.passingCompletionPercentage = passingCompletionPercentage;
         return this;
@@ -564,6 +633,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingCompletions")
     public Double passingCompletions;
+
     public PlayerSeasonProjection withPassingCompletions(Double passingCompletions) {
         this.passingCompletions = passingCompletions;
         return this;
@@ -572,6 +642,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingInterceptions")
     public Double passingInterceptions;
+
     public PlayerSeasonProjection withPassingInterceptions(Double passingInterceptions) {
         this.passingInterceptions = passingInterceptions;
         return this;
@@ -580,6 +651,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingLong")
     public Double passingLong;
+
     public PlayerSeasonProjection withPassingLong(Double passingLong) {
         this.passingLong = passingLong;
         return this;
@@ -588,6 +660,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingRating")
     public Double passingRating;
+
     public PlayerSeasonProjection withPassingRating(Double passingRating) {
         this.passingRating = passingRating;
         return this;
@@ -596,6 +669,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingSackYards")
     public Double passingSackYards;
+
     public PlayerSeasonProjection withPassingSackYards(Double passingSackYards) {
         this.passingSackYards = passingSackYards;
         return this;
@@ -604,6 +678,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingSacks")
     public Double passingSacks;
+
     public PlayerSeasonProjection withPassingSacks(Double passingSacks) {
         this.passingSacks = passingSacks;
         return this;
@@ -612,6 +687,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingTouchdowns")
     public Double passingTouchdowns;
+
     public PlayerSeasonProjection withPassingTouchdowns(Double passingTouchdowns) {
         this.passingTouchdowns = passingTouchdowns;
         return this;
@@ -620,6 +696,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingYards")
     public Double passingYards;
+
     public PlayerSeasonProjection withPassingYards(Double passingYards) {
         this.passingYards = passingYards;
         return this;
@@ -628,6 +705,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingYardsPerAttempt")
     public Double passingYardsPerAttempt;
+
     public PlayerSeasonProjection withPassingYardsPerAttempt(Double passingYardsPerAttempt) {
         this.passingYardsPerAttempt = passingYardsPerAttempt;
         return this;
@@ -636,6 +714,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassingYardsPerCompletion")
     public Double passingYardsPerCompletion;
+
     public PlayerSeasonProjection withPassingYardsPerCompletion(Double passingYardsPerCompletion) {
         this.passingYardsPerCompletion = passingYardsPerCompletion;
         return this;
@@ -644,6 +723,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Played")
     public Long played;
+
     public PlayerSeasonProjection withPlayed(Long played) {
         this.played = played;
         return this;
@@ -652,6 +732,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerSeasonProjection withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -660,6 +741,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerSeasonID")
     public Long playerSeasonID;
+
     public PlayerSeasonProjection withPlayerSeasonID(Long playerSeasonID) {
         this.playerSeasonID = playerSeasonID;
         return this;
@@ -668,6 +750,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public PlayerSeasonProjection withPosition(String position) {
         this.position = position;
         return this;
@@ -676,6 +759,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionCategory")
     public String positionCategory;
+
     public PlayerSeasonProjection withPositionCategory(String positionCategory) {
         this.positionCategory = positionCategory;
         return this;
@@ -684,6 +768,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntAverage")
     public Double puntAverage;
+
     public PlayerSeasonProjection withPuntAverage(Double puntAverage) {
         this.puntAverage = puntAverage;
         return this;
@@ -692,6 +777,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntInside20")
     public Double puntInside20;
+
     public PlayerSeasonProjection withPuntInside20(Double puntInside20) {
         this.puntInside20 = puntInside20;
         return this;
@@ -700,6 +786,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntLong")
     public Double puntLong;
+
     public PlayerSeasonProjection withPuntLong(Double puntLong) {
         this.puntLong = puntLong;
         return this;
@@ -708,6 +795,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntNetAverage")
     public Double puntNetAverage;
+
     public PlayerSeasonProjection withPuntNetAverage(Double puntNetAverage) {
         this.puntNetAverage = puntNetAverage;
         return this;
@@ -716,6 +804,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntNetYards")
     public Double puntNetYards;
+
     public PlayerSeasonProjection withPuntNetYards(Double puntNetYards) {
         this.puntNetYards = puntNetYards;
         return this;
@@ -724,6 +813,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnFairCatches")
     public Double puntReturnFairCatches;
+
     public PlayerSeasonProjection withPuntReturnFairCatches(Double puntReturnFairCatches) {
         this.puntReturnFairCatches = puntReturnFairCatches;
         return this;
@@ -732,6 +822,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnLong")
     public Double puntReturnLong;
+
     public PlayerSeasonProjection withPuntReturnLong(Double puntReturnLong) {
         this.puntReturnLong = puntReturnLong;
         return this;
@@ -740,6 +831,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnTouchdowns")
     public Double puntReturnTouchdowns;
+
     public PlayerSeasonProjection withPuntReturnTouchdowns(Double puntReturnTouchdowns) {
         this.puntReturnTouchdowns = puntReturnTouchdowns;
         return this;
@@ -748,6 +840,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnYards")
     public Double puntReturnYards;
+
     public PlayerSeasonProjection withPuntReturnYards(Double puntReturnYards) {
         this.puntReturnYards = puntReturnYards;
         return this;
@@ -756,6 +849,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnYardsPerAttempt")
     public Double puntReturnYardsPerAttempt;
+
     public PlayerSeasonProjection withPuntReturnYardsPerAttempt(Double puntReturnYardsPerAttempt) {
         this.puntReturnYardsPerAttempt = puntReturnYardsPerAttempt;
         return this;
@@ -764,6 +858,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturns")
     public Double puntReturns;
+
     public PlayerSeasonProjection withPuntReturns(Double puntReturns) {
         this.puntReturns = puntReturns;
         return this;
@@ -772,6 +867,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntTouchbacks")
     public Double puntTouchbacks;
+
     public PlayerSeasonProjection withPuntTouchbacks(Double puntTouchbacks) {
         this.puntTouchbacks = puntTouchbacks;
         return this;
@@ -780,6 +876,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntYards")
     public Double puntYards;
+
     public PlayerSeasonProjection withPuntYards(Double puntYards) {
         this.puntYards = puntYards;
         return this;
@@ -788,6 +885,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Punts")
     public Double punts;
+
     public PlayerSeasonProjection withPunts(Double punts) {
         this.punts = punts;
         return this;
@@ -796,6 +894,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntsHadBlocked")
     public Double puntsHadBlocked;
+
     public PlayerSeasonProjection withPuntsHadBlocked(Double puntsHadBlocked) {
         this.puntsHadBlocked = puntsHadBlocked;
         return this;
@@ -804,6 +903,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuarterbackHits")
     public Double quarterbackHits;
+
     public PlayerSeasonProjection withQuarterbackHits(Double quarterbackHits) {
         this.quarterbackHits = quarterbackHits;
         return this;
@@ -812,6 +912,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivingLong")
     public Double receivingLong;
+
     public PlayerSeasonProjection withReceivingLong(Double receivingLong) {
         this.receivingLong = receivingLong;
         return this;
@@ -820,6 +921,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivingTargets")
     public Double receivingTargets;
+
     public PlayerSeasonProjection withReceivingTargets(Double receivingTargets) {
         this.receivingTargets = receivingTargets;
         return this;
@@ -828,6 +930,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivingTouchdowns")
     public Double receivingTouchdowns;
+
     public PlayerSeasonProjection withReceivingTouchdowns(Double receivingTouchdowns) {
         this.receivingTouchdowns = receivingTouchdowns;
         return this;
@@ -836,6 +939,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivingYards")
     public Double receivingYards;
+
     public PlayerSeasonProjection withReceivingYards(Double receivingYards) {
         this.receivingYards = receivingYards;
         return this;
@@ -844,6 +948,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivingYardsPerReception")
     public Double receivingYardsPerReception;
+
     public PlayerSeasonProjection withReceivingYardsPerReception(Double receivingYardsPerReception) {
         this.receivingYardsPerReception = receivingYardsPerReception;
         return this;
@@ -852,6 +957,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivingYardsPerTarget")
     public Double receivingYardsPerTarget;
+
     public PlayerSeasonProjection withReceivingYardsPerTarget(Double receivingYardsPerTarget) {
         this.receivingYardsPerTarget = receivingYardsPerTarget;
         return this;
@@ -860,6 +966,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceptionPercentage")
     public Double receptionPercentage;
+
     public PlayerSeasonProjection withReceptionPercentage(Double receptionPercentage) {
         this.receptionPercentage = receptionPercentage;
         return this;
@@ -868,6 +975,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Receptions")
     public Double receptions;
+
     public PlayerSeasonProjection withReceptions(Double receptions) {
         this.receptions = receptions;
         return this;
@@ -876,6 +984,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingAttempts")
     public Double rushingAttempts;
+
     public PlayerSeasonProjection withRushingAttempts(Double rushingAttempts) {
         this.rushingAttempts = rushingAttempts;
         return this;
@@ -884,6 +993,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingLong")
     public Double rushingLong;
+
     public PlayerSeasonProjection withRushingLong(Double rushingLong) {
         this.rushingLong = rushingLong;
         return this;
@@ -892,6 +1002,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingTouchdowns")
     public Double rushingTouchdowns;
+
     public PlayerSeasonProjection withRushingTouchdowns(Double rushingTouchdowns) {
         this.rushingTouchdowns = rushingTouchdowns;
         return this;
@@ -900,6 +1011,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingYards")
     public Double rushingYards;
+
     public PlayerSeasonProjection withRushingYards(Double rushingYards) {
         this.rushingYards = rushingYards;
         return this;
@@ -908,6 +1020,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingYardsPerAttempt")
     public Double rushingYardsPerAttempt;
+
     public PlayerSeasonProjection withRushingYardsPerAttempt(Double rushingYardsPerAttempt) {
         this.rushingYardsPerAttempt = rushingYardsPerAttempt;
         return this;
@@ -916,6 +1029,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SackYards")
     public Double sackYards;
+
     public PlayerSeasonProjection withSackYards(Double sackYards) {
         this.sackYards = sackYards;
         return this;
@@ -924,6 +1038,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sacks")
     public Double sacks;
+
     public PlayerSeasonProjection withSacks(Double sacks) {
         this.sacks = sacks;
         return this;
@@ -932,6 +1047,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Safeties")
     public Double safeties;
+
     public PlayerSeasonProjection withSafeties(Double safeties) {
         this.safeties = safeties;
         return this;
@@ -940,6 +1056,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SafetiesAllowed")
     public Double safetiesAllowed;
+
     public PlayerSeasonProjection withSafetiesAllowed(Double safetiesAllowed) {
         this.safetiesAllowed = safetiesAllowed;
         return this;
@@ -948,6 +1065,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoringDetails")
     public ScoringDetail[] scoringDetails;
+
     public PlayerSeasonProjection withScoringDetails(ScoringDetail[] scoringDetails) {
         this.scoringDetails = scoringDetails;
         return this;
@@ -956,6 +1074,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public PlayerSeasonProjection withSeason(Long season) {
         this.season = season;
         return this;
@@ -964,6 +1083,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public PlayerSeasonProjection withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -972,6 +1092,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public PlayerSeasonProjection withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -980,6 +1101,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoloTackles")
     public Double soloTackles;
+
     public PlayerSeasonProjection withSoloTackles(Double soloTackles) {
         this.soloTackles = soloTackles;
         return this;
@@ -988,6 +1110,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpecialTeamsAssistedTackles")
     public Double specialTeamsAssistedTackles;
+
     public PlayerSeasonProjection withSpecialTeamsAssistedTackles(Double specialTeamsAssistedTackles) {
         this.specialTeamsAssistedTackles = specialTeamsAssistedTackles;
         return this;
@@ -996,6 +1119,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpecialTeamsFumblesForced")
     public Double specialTeamsFumblesForced;
+
     public PlayerSeasonProjection withSpecialTeamsFumblesForced(Double specialTeamsFumblesForced) {
         this.specialTeamsFumblesForced = specialTeamsFumblesForced;
         return this;
@@ -1004,6 +1128,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpecialTeamsFumblesRecovered")
     public Double specialTeamsFumblesRecovered;
+
     public PlayerSeasonProjection withSpecialTeamsFumblesRecovered(Double specialTeamsFumblesRecovered) {
         this.specialTeamsFumblesRecovered = specialTeamsFumblesRecovered;
         return this;
@@ -1012,6 +1137,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpecialTeamsSnapsPlayed")
     public Long specialTeamsSnapsPlayed;
+
     public PlayerSeasonProjection withSpecialTeamsSnapsPlayed(Long specialTeamsSnapsPlayed) {
         this.specialTeamsSnapsPlayed = specialTeamsSnapsPlayed;
         return this;
@@ -1020,6 +1146,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpecialTeamsSoloTackles")
     public Double specialTeamsSoloTackles;
+
     public PlayerSeasonProjection withSpecialTeamsSoloTackles(Double specialTeamsSoloTackles) {
         this.specialTeamsSoloTackles = specialTeamsSoloTackles;
         return this;
@@ -1028,6 +1155,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpecialTeamsTeamSnaps")
     public Long specialTeamsTeamSnaps;
+
     public PlayerSeasonProjection withSpecialTeamsTeamSnaps(Long specialTeamsTeamSnaps) {
         this.specialTeamsTeamSnaps = specialTeamsTeamSnaps;
         return this;
@@ -1036,6 +1164,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpecialTeamsTouchdowns")
     public Double specialTeamsTouchdowns;
+
     public PlayerSeasonProjection withSpecialTeamsTouchdowns(Double specialTeamsTouchdowns) {
         this.specialTeamsTouchdowns = specialTeamsTouchdowns;
         return this;
@@ -1044,6 +1173,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Started")
     public Long started;
+
     public PlayerSeasonProjection withStarted(Long started) {
         this.started = started;
         return this;
@@ -1052,6 +1182,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tackles")
     public Double tackles;
+
     public PlayerSeasonProjection withTackles(Double tackles) {
         this.tackles = tackles;
         return this;
@@ -1060,6 +1191,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TacklesForLoss")
     public Double tacklesForLoss;
+
     public PlayerSeasonProjection withTacklesForLoss(Double tacklesForLoss) {
         this.tacklesForLoss = tacklesForLoss;
         return this;
@@ -1068,6 +1200,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public PlayerSeasonProjection withTeam(String team) {
         this.team = team;
         return this;
@@ -1076,6 +1209,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public PlayerSeasonProjection withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
@@ -1084,6 +1218,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Temperature")
     public Long temperature;
+
     public PlayerSeasonProjection withTemperature(Long temperature) {
         this.temperature = temperature;
         return this;
@@ -1092,6 +1227,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Touchdowns")
     public Double touchdowns;
+
     public PlayerSeasonProjection withTouchdowns(Double touchdowns) {
         this.touchdowns = touchdowns;
         return this;
@@ -1100,6 +1236,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointConversionPasses")
     public Double twoPointConversionPasses;
+
     public PlayerSeasonProjection withTwoPointConversionPasses(Double twoPointConversionPasses) {
         this.twoPointConversionPasses = twoPointConversionPasses;
         return this;
@@ -1108,6 +1245,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointConversionReceptions")
     public Double twoPointConversionReceptions;
+
     public PlayerSeasonProjection withTwoPointConversionReceptions(Double twoPointConversionReceptions) {
         this.twoPointConversionReceptions = twoPointConversionReceptions;
         return this;
@@ -1116,6 +1254,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointConversionReturns")
     public Double twoPointConversionReturns;
+
     public PlayerSeasonProjection withTwoPointConversionReturns(Double twoPointConversionReturns) {
         this.twoPointConversionReturns = twoPointConversionReturns;
         return this;
@@ -1124,6 +1263,7 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointConversionRuns")
     public Double twoPointConversionRuns;
+
     public PlayerSeasonProjection withTwoPointConversionRuns(Double twoPointConversionRuns) {
         this.twoPointConversionRuns = twoPointConversionRuns;
         return this;
@@ -1132,9 +1272,11 @@ public class PlayerSeasonProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindSpeed")
     public Long windSpeed;
+
     public PlayerSeasonProjection withWindSpeed(Long windSpeed) {
         this.windSpeed = windSpeed;
         return this;
     }
     
+    public PlayerSeasonProjection(){}
 }

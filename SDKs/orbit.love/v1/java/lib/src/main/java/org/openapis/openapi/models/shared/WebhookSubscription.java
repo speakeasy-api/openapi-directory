@@ -12,6 +12,7 @@ public class WebhookSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activity_tags")
     public String[] activityTags;
+
     public WebhookSubscription withActivityTags(String[] activityTags) {
         this.activityTags = activityTags;
         return this;
@@ -20,6 +21,7 @@ public class WebhookSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activity_types")
     public String[] activityTypes;
+
     public WebhookSubscription withActivityTypes(String[] activityTypes) {
         this.activityTypes = activityTypes;
         return this;
@@ -27,6 +29,7 @@ public class WebhookSubscription {
     
     @JsonProperty("event_type")
     public String eventType;
+
     public WebhookSubscription withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -35,6 +38,7 @@ public class WebhookSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_tags")
     public String[] memberTags;
+
     public WebhookSubscription withMemberTags(String[] memberTags) {
         this.memberTags = memberTags;
         return this;
@@ -42,6 +46,7 @@ public class WebhookSubscription {
     
     @JsonProperty("name")
     public String name;
+
     public WebhookSubscription withName(String name) {
         this.name = name;
         return this;
@@ -50,6 +55,7 @@ public class WebhookSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public WebhookSubscription withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -57,9 +63,15 @@ public class WebhookSubscription {
     
     @JsonProperty("url")
     public String url;
+
     public WebhookSubscription withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public WebhookSubscription(@JsonProperty("event_type") String eventType, @JsonProperty("name") String name, @JsonProperty("url") String url) {
+        this.eventType = eventType;
+        this.name = name;
+        this.url = url;
+  }
 }

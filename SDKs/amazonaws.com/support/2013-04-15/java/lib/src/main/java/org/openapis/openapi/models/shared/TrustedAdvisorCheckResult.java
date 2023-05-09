@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrustedAdvisorCheckResult {
     @JsonProperty("categorySpecificSummary")
     public TrustedAdvisorCategorySpecificSummary categorySpecificSummary;
+
     public TrustedAdvisorCheckResult withCategorySpecificSummary(TrustedAdvisorCategorySpecificSummary categorySpecificSummary) {
         this.categorySpecificSummary = categorySpecificSummary;
         return this;
@@ -19,6 +20,7 @@ public class TrustedAdvisorCheckResult {
     
     @JsonProperty("checkId")
     public String checkId;
+
     public TrustedAdvisorCheckResult withCheckId(String checkId) {
         this.checkId = checkId;
         return this;
@@ -26,6 +28,7 @@ public class TrustedAdvisorCheckResult {
     
     @JsonProperty("flaggedResources")
     public TrustedAdvisorResourceDetail[] flaggedResources;
+
     public TrustedAdvisorCheckResult withFlaggedResources(TrustedAdvisorResourceDetail[] flaggedResources) {
         this.flaggedResources = flaggedResources;
         return this;
@@ -36,6 +39,7 @@ public class TrustedAdvisorCheckResult {
      */
     @JsonProperty("resourcesSummary")
     public TrustedAdvisorResourcesSummary resourcesSummary;
+
     public TrustedAdvisorCheckResult withResourcesSummary(TrustedAdvisorResourcesSummary resourcesSummary) {
         this.resourcesSummary = resourcesSummary;
         return this;
@@ -43,6 +47,7 @@ public class TrustedAdvisorCheckResult {
     
     @JsonProperty("status")
     public String status;
+
     public TrustedAdvisorCheckResult withStatus(String status) {
         this.status = status;
         return this;
@@ -50,9 +55,18 @@ public class TrustedAdvisorCheckResult {
     
     @JsonProperty("timestamp")
     public String timestamp;
+
     public TrustedAdvisorCheckResult withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public TrustedAdvisorCheckResult(@JsonProperty("categorySpecificSummary") TrustedAdvisorCategorySpecificSummary categorySpecificSummary, @JsonProperty("checkId") String checkId, @JsonProperty("flaggedResources") TrustedAdvisorResourceDetail[] flaggedResources, @JsonProperty("resourcesSummary") TrustedAdvisorResourcesSummary resourcesSummary, @JsonProperty("status") String status, @JsonProperty("timestamp") String timestamp) {
+        this.categorySpecificSummary = categorySpecificSummary;
+        this.checkId = checkId;
+        this.flaggedResources = flaggedResources;
+        this.resourcesSummary = resourcesSummary;
+        this.status = status;
+        this.timestamp = timestamp;
+  }
 }

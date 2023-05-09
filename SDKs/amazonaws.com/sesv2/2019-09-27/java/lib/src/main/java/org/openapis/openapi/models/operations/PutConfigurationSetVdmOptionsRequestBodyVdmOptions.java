@@ -15,6 +15,7 @@ public class PutConfigurationSetVdmOptionsRequestBodyVdmOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DashboardOptions")
     public org.openapis.openapi.models.shared.DashboardOptions dashboardOptions;
+
     public PutConfigurationSetVdmOptionsRequestBodyVdmOptions withDashboardOptions(org.openapis.openapi.models.shared.DashboardOptions dashboardOptions) {
         this.dashboardOptions = dashboardOptions;
         return this;
@@ -23,9 +24,11 @@ public class PutConfigurationSetVdmOptionsRequestBodyVdmOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GuardianOptions")
     public org.openapis.openapi.models.shared.GuardianOptions guardianOptions;
+
     public PutConfigurationSetVdmOptionsRequestBodyVdmOptions withGuardianOptions(org.openapis.openapi.models.shared.GuardianOptions guardianOptions) {
         this.guardianOptions = guardianOptions;
         return this;
     }
     
+    public PutConfigurationSetVdmOptionsRequestBodyVdmOptions(){}
 }

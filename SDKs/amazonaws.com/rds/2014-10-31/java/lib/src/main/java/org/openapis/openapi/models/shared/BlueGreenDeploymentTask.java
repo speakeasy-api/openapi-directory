@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class BlueGreenDeploymentTask {
     
     public String name;
+
     public BlueGreenDeploymentTask withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class BlueGreenDeploymentTask {
     
     
     public String status;
+
     public BlueGreenDeploymentTask withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public BlueGreenDeploymentTask(){}
 }

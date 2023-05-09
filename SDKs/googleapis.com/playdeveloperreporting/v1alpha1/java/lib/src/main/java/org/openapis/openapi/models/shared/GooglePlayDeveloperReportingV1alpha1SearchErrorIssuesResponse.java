@@ -18,6 +18,7 @@ public class GooglePlayDeveloperReportingV1alpha1SearchErrorIssuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorIssues")
     public GooglePlayDeveloperReportingV1alpha1ErrorIssue[] errorIssues;
+
     public GooglePlayDeveloperReportingV1alpha1SearchErrorIssuesResponse withErrorIssues(GooglePlayDeveloperReportingV1alpha1ErrorIssue[] errorIssues) {
         this.errorIssues = errorIssues;
         return this;
@@ -29,9 +30,11 @@ public class GooglePlayDeveloperReportingV1alpha1SearchErrorIssuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GooglePlayDeveloperReportingV1alpha1SearchErrorIssuesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GooglePlayDeveloperReportingV1alpha1SearchErrorIssuesResponse(){}
 }

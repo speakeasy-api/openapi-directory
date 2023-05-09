@@ -15,6 +15,7 @@ public class SignalExternalWorkflowExecutionInitiatedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public String control;
+
     public SignalExternalWorkflowExecutionInitiatedEventAttributes withControl(String control) {
         this.control = control;
         return this;
@@ -22,6 +23,7 @@ public class SignalExternalWorkflowExecutionInitiatedEventAttributes {
     
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public SignalExternalWorkflowExecutionInitiatedEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
@@ -30,6 +32,7 @@ public class SignalExternalWorkflowExecutionInitiatedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public SignalExternalWorkflowExecutionInitiatedEventAttributes withInput(String input) {
         this.input = input;
         return this;
@@ -38,6 +41,7 @@ public class SignalExternalWorkflowExecutionInitiatedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runId")
     public String runId;
+
     public SignalExternalWorkflowExecutionInitiatedEventAttributes withRunId(String runId) {
         this.runId = runId;
         return this;
@@ -45,6 +49,7 @@ public class SignalExternalWorkflowExecutionInitiatedEventAttributes {
     
     @JsonProperty("signalName")
     public String signalName;
+
     public SignalExternalWorkflowExecutionInitiatedEventAttributes withSignalName(String signalName) {
         this.signalName = signalName;
         return this;
@@ -52,9 +57,15 @@ public class SignalExternalWorkflowExecutionInitiatedEventAttributes {
     
     @JsonProperty("workflowId")
     public String workflowId;
+
     public SignalExternalWorkflowExecutionInitiatedEventAttributes withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public SignalExternalWorkflowExecutionInitiatedEventAttributes(@JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId, @JsonProperty("signalName") String signalName, @JsonProperty("workflowId") String workflowId) {
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+        this.signalName = signalName;
+        this.workflowId = workflowId;
+  }
 }

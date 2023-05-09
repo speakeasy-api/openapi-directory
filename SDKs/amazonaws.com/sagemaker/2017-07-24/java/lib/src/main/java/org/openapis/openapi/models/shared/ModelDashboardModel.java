@@ -15,6 +15,7 @@ public class ModelDashboardModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoints")
     public ModelDashboardEndpoint[] endpoints;
+
     public ModelDashboardModel withEndpoints(ModelDashboardEndpoint[] endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -26,6 +27,7 @@ public class ModelDashboardModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastBatchTransformJob")
     public TransformJob lastBatchTransformJob;
+
     public ModelDashboardModel withLastBatchTransformJob(TransformJob lastBatchTransformJob) {
         this.lastBatchTransformJob = lastBatchTransformJob;
         return this;
@@ -34,6 +36,7 @@ public class ModelDashboardModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Model")
     public Model model;
+
     public ModelDashboardModel withModel(Model model) {
         this.model = model;
         return this;
@@ -42,6 +45,7 @@ public class ModelDashboardModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelCard")
     public ModelDashboardModelCard modelCard;
+
     public ModelDashboardModel withModelCard(ModelDashboardModelCard modelCard) {
         this.modelCard = modelCard;
         return this;
@@ -50,9 +54,11 @@ public class ModelDashboardModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringSchedules")
     public ModelDashboardMonitoringSchedule[] monitoringSchedules;
+
     public ModelDashboardModel withMonitoringSchedules(ModelDashboardMonitoringSchedule[] monitoringSchedules) {
         this.monitoringSchedules = monitoringSchedules;
         return this;
     }
     
+    public ModelDashboardModel(){}
 }

@@ -15,6 +15,7 @@ public class NetworkFirewallUnexpectedGatewayRoutesViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayId")
     public String gatewayId;
+
     public NetworkFirewallUnexpectedGatewayRoutesViolation withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -23,6 +24,7 @@ public class NetworkFirewallUnexpectedGatewayRoutesViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteTableId")
     public String routeTableId;
+
     public NetworkFirewallUnexpectedGatewayRoutesViolation withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -31,6 +33,7 @@ public class NetworkFirewallUnexpectedGatewayRoutesViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolatingRoutes")
     public Route[] violatingRoutes;
+
     public NetworkFirewallUnexpectedGatewayRoutesViolation withViolatingRoutes(Route[] violatingRoutes) {
         this.violatingRoutes = violatingRoutes;
         return this;
@@ -39,9 +42,11 @@ public class NetworkFirewallUnexpectedGatewayRoutesViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public NetworkFirewallUnexpectedGatewayRoutesViolation withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public NetworkFirewallUnexpectedGatewayRoutesViolation(){}
 }

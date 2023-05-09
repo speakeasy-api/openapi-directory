@@ -18,6 +18,7 @@ public class OrdersGetTestOrderTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OrdersGetTestOrderTemplateResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -26,9 +27,11 @@ public class OrdersGetTestOrderTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public TestOrder template;
+
     public OrdersGetTestOrderTemplateResponse withTemplate(TestOrder template) {
         this.template = template;
         return this;
     }
     
+    public OrdersGetTestOrderTemplateResponse(){}
 }

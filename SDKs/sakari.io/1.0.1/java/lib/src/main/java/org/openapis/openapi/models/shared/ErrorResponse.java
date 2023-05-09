@@ -15,6 +15,7 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ErrorResponseError error;
+
     public ErrorResponse withError(ErrorResponseError error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public ErrorResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ErrorResponse(){}
 }

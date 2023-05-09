@@ -16,6 +16,7 @@ import java.time.LocalDate;
 public class BookedRate {
     @JsonProperty("cancellationPolicies")
     public CancellationPolicy[] cancellationPolicies;
+
     public BookedRate withCancellationPolicies(CancellationPolicy[] cancellationPolicies) {
         this.cancellationPolicies = cancellationPolicies;
         return this;
@@ -23,6 +24,7 @@ public class BookedRate {
     
     @JsonProperty("components")
     public RateComponent[] components;
+
     public BookedRate withComponents(RateComponent[] components) {
         this.components = components;
         return this;
@@ -31,6 +33,7 @@ public class BookedRate {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("end")
     public LocalDate end;
+
     public BookedRate withEnd(LocalDate end) {
         this.end = end;
         return this;
@@ -41,6 +44,7 @@ public class BookedRate {
      */
     @JsonProperty("hotelAgreement")
     public HotelAgreementStub hotelAgreement;
+
     public BookedRate withHotelAgreement(HotelAgreementStub hotelAgreement) {
         this.hotelAgreement = hotelAgreement;
         return this;
@@ -49,6 +53,7 @@ public class BookedRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxOccupancy")
     public Double maxOccupancy;
+
     public BookedRate withMaxOccupancy(Double maxOccupancy) {
         this.maxOccupancy = maxOccupancy;
         return this;
@@ -59,6 +64,7 @@ public class BookedRate {
      */
     @JsonProperty("retailRate")
     public BookedRateRetailRate retailRate;
+
     public BookedRate withRetailRate(BookedRateRetailRate retailRate) {
         this.retailRate = retailRate;
         return this;
@@ -69,6 +75,7 @@ public class BookedRate {
      */
     @JsonProperty("sellerCommissionPercentage")
     public Float sellerCommissionPercentage;
+
     public BookedRate withSellerCommissionPercentage(Float sellerCommissionPercentage) {
         this.sellerCommissionPercentage = sellerCommissionPercentage;
         return this;
@@ -77,9 +84,19 @@ public class BookedRate {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("start")
     public LocalDate start;
+
     public BookedRate withStart(LocalDate start) {
         this.start = start;
         return this;
     }
     
+    public BookedRate(@JsonProperty("cancellationPolicies") CancellationPolicy[] cancellationPolicies, @JsonProperty("components") RateComponent[] components, @JsonProperty("end") LocalDate end, @JsonProperty("hotelAgreement") HotelAgreementStub hotelAgreement, @JsonProperty("retailRate") BookedRateRetailRate retailRate, @JsonProperty("sellerCommissionPercentage") Float sellerCommissionPercentage, @JsonProperty("start") LocalDate start) {
+        this.cancellationPolicies = cancellationPolicies;
+        this.components = components;
+        this.end = end;
+        this.hotelAgreement = hotelAgreement;
+        this.retailRate = retailRate;
+        this.sellerCommissionPercentage = sellerCommissionPercentage;
+        this.start = start;
+  }
 }

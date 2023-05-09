@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsListJobsForWorkflowRunResponse {
     
     public String contentType;
+
     public ActionsListJobsForWorkflowRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsListJobsForWorkflowRunResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ActionsListJobsForWorkflowRunResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ActionsListJobsForWorkflowRunResponse {
     
     
     public Integer statusCode;
+
     public ActionsListJobsForWorkflowRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ActionsListJobsForWorkflowRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsListJobsForWorkflowRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ActionsListJobsForWorkflowRunResponse {
      */
     
     public ActionsListJobsForWorkflowRun200ApplicationJSON actionsListJobsForWorkflowRun200ApplicationJSONObject;
+
     public ActionsListJobsForWorkflowRunResponse withActionsListJobsForWorkflowRun200ApplicationJSONObject(ActionsListJobsForWorkflowRun200ApplicationJSON actionsListJobsForWorkflowRun200ApplicationJSONObject) {
         this.actionsListJobsForWorkflowRun200ApplicationJSONObject = actionsListJobsForWorkflowRun200ApplicationJSONObject;
         return this;
     }
     
+    public ActionsListJobsForWorkflowRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

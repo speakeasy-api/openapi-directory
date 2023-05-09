@@ -45,4 +45,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Amount.java
 lib/src/main/java/org/openapis/openapi/models/shared/TimeDuration.java
 lib/src/main/java/org/openapis/openapi/models/shared/User.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateOffersRequest.java
+docs/sdk/README.md
+docs/offer/README.md
 USAGE.md

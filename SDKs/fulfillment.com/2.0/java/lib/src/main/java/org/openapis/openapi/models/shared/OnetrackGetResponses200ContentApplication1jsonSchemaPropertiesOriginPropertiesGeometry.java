@@ -13,6 +13,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry {
     @JsonProperty("coordinates")
     public Object coordinates;
+
     public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry withCoordinates(Object coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -23,9 +24,14 @@ public class OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigi
      */
     @JsonProperty("type")
     public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum type;
+
     public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry withType(OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry(@JsonProperty("coordinates") Object coordinates, @JsonProperty("type") OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum type) {
+        this.coordinates = coordinates;
+        this.type = type;
+  }
 }

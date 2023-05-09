@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateTrialComponentResponse {
     
     public String contentType;
+
     public DisassociateTrialComponentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateTrialComponentResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateTrialComponentResponse disassociateTrialComponentResponse;
+
     public DisassociateTrialComponentResponse withDisassociateTrialComponentResponse(org.openapis.openapi.models.shared.DisassociateTrialComponentResponse disassociateTrialComponentResponse) {
         this.disassociateTrialComponentResponse = disassociateTrialComponentResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateTrialComponentResponse {
      */
     
     public Object resourceNotFound;
+
     public DisassociateTrialComponentResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class DisassociateTrialComponentResponse {
     
     
     public Integer statusCode;
+
     public DisassociateTrialComponentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DisassociateTrialComponentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateTrialComponentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateTrialComponentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

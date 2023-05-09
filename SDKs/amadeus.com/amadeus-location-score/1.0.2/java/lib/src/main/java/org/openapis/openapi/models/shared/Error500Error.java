@@ -18,6 +18,7 @@ public class Error500Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public Error500Error withCode(Long code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class Error500Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error500Error withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -37,6 +39,7 @@ public class Error500Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Error500ErrorErrorSource source;
+
     public Error500Error withSource(Error500ErrorErrorSource source) {
         this.source = source;
         return this;
@@ -48,6 +51,7 @@ public class Error500Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public Error500Error withStatus(Long status) {
         this.status = status;
         return this;
@@ -59,9 +63,11 @@ public class Error500Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error500Error withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Error500Error(){}
 }

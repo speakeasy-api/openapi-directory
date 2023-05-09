@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWorldTemplateResponse {
     
     public String contentType;
+
     public UpdateWorldTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateWorldTemplateResponse {
      */
     
     public Object internalServerException;
+
     public UpdateWorldTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateWorldTemplateResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateWorldTemplateResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateWorldTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateWorldTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateWorldTemplateResponse {
     
     
     public Integer statusCode;
+
     public UpdateWorldTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateWorldTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWorldTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateWorldTemplateResponse {
      */
     
     public Object throttlingException;
+
     public UpdateWorldTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateWorldTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateWorldTemplateResponse updateWorldTemplateResponse;
+
     public UpdateWorldTemplateResponse withUpdateWorldTemplateResponse(org.openapis.openapi.models.shared.UpdateWorldTemplateResponse updateWorldTemplateResponse) {
         this.updateWorldTemplateResponse = updateWorldTemplateResponse;
         return this;
     }
     
+    public UpdateWorldTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

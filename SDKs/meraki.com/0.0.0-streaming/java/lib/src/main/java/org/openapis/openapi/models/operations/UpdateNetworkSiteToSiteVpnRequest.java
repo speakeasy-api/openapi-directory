@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSiteToSiteVpnRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateNetworkSiteToSiteVpnRequestBody requestBody;
+
     public UpdateNetworkSiteToSiteVpnRequest withRequestBody(UpdateNetworkSiteToSiteVpnRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,14 @@ public class UpdateNetworkSiteToSiteVpnRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public UpdateNetworkSiteToSiteVpnRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
     }
     
+    public UpdateNetworkSiteToSiteVpnRequest(@JsonProperty("RequestBody") UpdateNetworkSiteToSiteVpnRequestBody requestBody, @JsonProperty("networkId") String networkId) {
+        this.requestBody = requestBody;
+        this.networkId = networkId;
+  }
 }

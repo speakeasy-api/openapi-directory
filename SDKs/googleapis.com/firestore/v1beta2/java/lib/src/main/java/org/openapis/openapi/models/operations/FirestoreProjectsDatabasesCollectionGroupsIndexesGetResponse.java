@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse {
     
     public String contentType;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleFirestoreAdminV1beta2Index googleFirestoreAdminV1beta2Index;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse withGoogleFirestoreAdminV1beta2Index(org.openapis.openapi.models.shared.GoogleFirestoreAdminV1beta2Index googleFirestoreAdminV1beta2Index) {
         this.googleFirestoreAdminV1beta2Index = googleFirestoreAdminV1beta2Index;
         return this;
@@ -26,6 +29,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse {
     
     
     public Integer statusCode;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

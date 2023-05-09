@@ -18,6 +18,7 @@ public class EgressControlConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backends")
     public String backends;
+
     public EgressControlConfig withBackends(String backends) {
         this.backends = backends;
         return this;
@@ -29,9 +30,11 @@ public class EgressControlConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extractionRules")
     public ExtractionRules extractionRules;
+
     public EgressControlConfig withExtractionRules(ExtractionRules extractionRules) {
         this.extractionRules = extractionRules;
         return this;
     }
     
+    public EgressControlConfig(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GitCreateTreeResponse {
     
     public String contentType;
+
     public GitCreateTreeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GitCreateTreeResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GitCreateTreeResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GitCreateTreeResponse {
     
     
     public Integer statusCode;
+
     public GitCreateTreeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GitCreateTreeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GitCreateTreeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GitCreateTreeResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public GitCreateTreeResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class GitCreateTreeResponse {
      */
     
     public org.openapis.openapi.models.shared.GitTree gitTree;
+
     public GitCreateTreeResponse withGitTree(org.openapis.openapi.models.shared.GitTree gitTree) {
         this.gitTree = gitTree;
         return this;
@@ -60,9 +67,14 @@ public class GitCreateTreeResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public GitCreateTreeResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public GitCreateTreeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

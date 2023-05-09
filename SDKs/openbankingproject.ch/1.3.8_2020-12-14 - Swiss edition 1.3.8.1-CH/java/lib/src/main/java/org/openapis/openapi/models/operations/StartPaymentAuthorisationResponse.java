@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartPaymentAuthorisationResponse {
     
     public String contentType;
+
     public StartPaymentAuthorisationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartPaymentAuthorisationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400NGPIS error400NGPIS;
+
     public StartPaymentAuthorisationResponse withError400NGPIS(org.openapis.openapi.models.shared.Error400NGPIS error400NGPIS) {
         this.error400NGPIS = error400NGPIS;
         return this;
@@ -29,6 +32,7 @@ public class StartPaymentAuthorisationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400PIS error400PIS;
+
     public StartPaymentAuthorisationResponse withError400PIS(org.openapis.openapi.models.shared.Error400PIS error400PIS) {
         this.error400PIS = error400PIS;
         return this;
@@ -39,6 +43,7 @@ public class StartPaymentAuthorisationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401NGPIS error401NGPIS;
+
     public StartPaymentAuthorisationResponse withError401NGPIS(org.openapis.openapi.models.shared.Error401NGPIS error401NGPIS) {
         this.error401NGPIS = error401NGPIS;
         return this;
@@ -49,6 +54,7 @@ public class StartPaymentAuthorisationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401PIS error401PIS;
+
     public StartPaymentAuthorisationResponse withError401PIS(org.openapis.openapi.models.shared.Error401PIS error401PIS) {
         this.error401PIS = error401PIS;
         return this;
@@ -59,6 +65,7 @@ public class StartPaymentAuthorisationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403NGPIS error403NGPIS;
+
     public StartPaymentAuthorisationResponse withError403NGPIS(org.openapis.openapi.models.shared.Error403NGPIS error403NGPIS) {
         this.error403NGPIS = error403NGPIS;
         return this;
@@ -69,6 +76,7 @@ public class StartPaymentAuthorisationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403PIS error403PIS;
+
     public StartPaymentAuthorisationResponse withError403PIS(org.openapis.openapi.models.shared.Error403PIS error403PIS) {
         this.error403PIS = error403PIS;
         return this;
@@ -79,6 +87,7 @@ public class StartPaymentAuthorisationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404NGPIS error404NGPIS;
+
     public StartPaymentAuthorisationResponse withError404NGPIS(org.openapis.openapi.models.shared.Error404NGPIS error404NGPIS) {
         this.error404NGPIS = error404NGPIS;
         return this;
@@ -89,6 +98,7 @@ public class StartPaymentAuthorisationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404PIS error404PIS;
+
     public StartPaymentAuthorisationResponse withError404PIS(org.openapis.openapi.models.shared.Error404PIS error404PIS) {
         this.error404PIS = error404PIS;
         return this;
@@ -99,6 +109,7 @@ public class StartPaymentAuthorisationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405NGPIS error405NGPIS;
+
     public StartPaymentAuthorisationResponse withError405NGPIS(org.openapis.openapi.models.shared.Error405NGPIS error405NGPIS) {
         this.error405NGPIS = error405NGPIS;
         return this;
@@ -109,6 +120,7 @@ public class StartPaymentAuthorisationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405PIS error405PIS;
+
     public StartPaymentAuthorisationResponse withError405PIS(org.openapis.openapi.models.shared.Error405PIS error405PIS) {
         this.error405PIS = error405PIS;
         return this;
@@ -119,6 +131,7 @@ public class StartPaymentAuthorisationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409NGPIS error409NGPIS;
+
     public StartPaymentAuthorisationResponse withError409NGPIS(org.openapis.openapi.models.shared.Error409NGPIS error409NGPIS) {
         this.error409NGPIS = error409NGPIS;
         return this;
@@ -129,6 +142,7 @@ public class StartPaymentAuthorisationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409PIS error409PIS;
+
     public StartPaymentAuthorisationResponse withError409PIS(org.openapis.openapi.models.shared.Error409PIS error409PIS) {
         this.error409PIS = error409PIS;
         return this;
@@ -136,6 +150,7 @@ public class StartPaymentAuthorisationResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public StartPaymentAuthorisationResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -143,6 +158,7 @@ public class StartPaymentAuthorisationResponse {
     
     
     public Integer statusCode;
+
     public StartPaymentAuthorisationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -150,6 +166,7 @@ public class StartPaymentAuthorisationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartPaymentAuthorisationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -160,9 +177,14 @@ public class StartPaymentAuthorisationResponse {
      */
     
     public org.openapis.openapi.models.shared.StartScaprocessResponse startScaprocessResponse;
+
     public StartPaymentAuthorisationResponse withStartScaprocessResponse(org.openapis.openapi.models.shared.StartScaprocessResponse startScaprocessResponse) {
         this.startScaprocessResponse = startScaprocessResponse;
         return this;
     }
     
+    public StartPaymentAuthorisationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

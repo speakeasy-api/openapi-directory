@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostWebhooksRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostWebhooksRequestBody requestBody;
+
     public PostWebhooksRequest withRequestBody(PostWebhooksRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +17,11 @@ public class PostWebhooksRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PostWebhooksRequest withExpand(String expand) {
         this.expand = expand;
         return this;
     }
     
+    public PostWebhooksRequest(){}
 }

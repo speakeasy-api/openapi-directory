@@ -12,6 +12,7 @@ public class OpeningBalances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeductionLines")
     public DeductionLine[] deductionLines;
+
     public OpeningBalances withDeductionLines(DeductionLine[] deductionLines) {
         this.deductionLines = deductionLines;
         return this;
@@ -20,6 +21,7 @@ public class OpeningBalances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EarningsLines")
     public EarningsLine[] earningsLines;
+
     public OpeningBalances withEarningsLines(EarningsLine[] earningsLines) {
         this.earningsLines = earningsLines;
         return this;
@@ -28,6 +30,7 @@ public class OpeningBalances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeaveLines")
     public LeaveLine[] leaveLines;
+
     public OpeningBalances withLeaveLines(LeaveLine[] leaveLines) {
         this.leaveLines = leaveLines;
         return this;
@@ -39,6 +42,7 @@ public class OpeningBalances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpeningBalanceDate")
     public String openingBalanceDate;
+
     public OpeningBalances withOpeningBalanceDate(String openingBalanceDate) {
         this.openingBalanceDate = openingBalanceDate;
         return this;
@@ -47,6 +51,7 @@ public class OpeningBalances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReimbursementLines")
     public ReimbursementLine[] reimbursementLines;
+
     public OpeningBalances withReimbursementLines(ReimbursementLine[] reimbursementLines) {
         this.reimbursementLines = reimbursementLines;
         return this;
@@ -55,6 +60,7 @@ public class OpeningBalances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuperLines")
     public SuperLine[] superLines;
+
     public OpeningBalances withSuperLines(SuperLine[] superLines) {
         this.superLines = superLines;
         return this;
@@ -66,9 +72,11 @@ public class OpeningBalances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tax")
     public String tax;
+
     public OpeningBalances withTax(String tax) {
         this.tax = tax;
         return this;
     }
     
+    public OpeningBalances(){}
 }

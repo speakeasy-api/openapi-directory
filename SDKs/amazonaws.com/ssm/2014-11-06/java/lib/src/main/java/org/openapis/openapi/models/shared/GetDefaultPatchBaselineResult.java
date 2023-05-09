@@ -15,6 +15,7 @@ public class GetDefaultPatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineId")
     public String baselineId;
+
     public GetDefaultPatchBaselineResult withBaselineId(String baselineId) {
         this.baselineId = baselineId;
         return this;
@@ -23,9 +24,11 @@ public class GetDefaultPatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystem")
     public OperatingSystemEnum operatingSystem;
+
     public GetDefaultPatchBaselineResult withOperatingSystem(OperatingSystemEnum operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
     }
     
+    public GetDefaultPatchBaselineResult(){}
 }

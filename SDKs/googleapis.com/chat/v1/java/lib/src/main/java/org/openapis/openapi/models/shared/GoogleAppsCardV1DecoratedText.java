@@ -18,17 +18,19 @@ public class GoogleAppsCardV1DecoratedText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bottomLabel")
     public String bottomLabel;
+
     public GoogleAppsCardV1DecoratedText withBottomLabel(String bottomLabel) {
         this.bottomLabel = bottomLabel;
         return this;
     }
     
     /**
-     * A text, icon, or text + icon button that users can click. To make an image a clickable button, specify an Image (not an ImageComponent) and set an `onClick` action. Currently supported in Chat apps (including [dialogs] (https://developers.google.com/chat/how-tos/dialogs) and [card messages] (https://developers.google.com/chat/api/guides/message-formats/cards)) and Google Workspace Add-ons.
+     * A text, icon, or text + icon button that users can click. To make an image a clickable button, specify an Image (not an ImageComponent) and set an `onClick` action.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("button")
     public GoogleAppsCardV1Button button;
+
     public GoogleAppsCardV1DecoratedText withButton(GoogleAppsCardV1Button button) {
         this.button = button;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCardV1DecoratedText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endIcon")
     public GoogleAppsCardV1Icon endIcon;
+
     public GoogleAppsCardV1DecoratedText withEndIcon(GoogleAppsCardV1Icon endIcon) {
         this.endIcon = endIcon;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsCardV1DecoratedText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public GoogleAppsCardV1Icon icon;
+
     public GoogleAppsCardV1DecoratedText withIcon(GoogleAppsCardV1Icon icon) {
         this.icon = icon;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsCardV1DecoratedText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onClick")
     public GoogleAppsCardV1OnClick onClick;
+
     public GoogleAppsCardV1DecoratedText withOnClick(GoogleAppsCardV1OnClick onClick) {
         this.onClick = onClick;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAppsCardV1DecoratedText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startIcon")
     public GoogleAppsCardV1Icon startIcon;
+
     public GoogleAppsCardV1DecoratedText withStartIcon(GoogleAppsCardV1Icon startIcon) {
         this.startIcon = startIcon;
         return this;
@@ -84,17 +90,19 @@ public class GoogleAppsCardV1DecoratedText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("switchControl")
     public GoogleAppsCardV1SwitchControl switchControl;
+
     public GoogleAppsCardV1DecoratedText withSwitchControl(GoogleAppsCardV1SwitchControl switchControl) {
         this.switchControl = switchControl;
         return this;
     }
     
     /**
-     * Required. The primary text. Supports simple formatting. See Text formatting for formatting details.
+     * Required. The primary text. Supports simple formatting. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleAppsCardV1DecoratedText withText(String text) {
         this.text = text;
         return this;
@@ -106,6 +114,7 @@ public class GoogleAppsCardV1DecoratedText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topLabel")
     public String topLabel;
+
     public GoogleAppsCardV1DecoratedText withTopLabel(String topLabel) {
         this.topLabel = topLabel;
         return this;
@@ -117,9 +126,11 @@ public class GoogleAppsCardV1DecoratedText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wrapText")
     public Boolean wrapText;
+
     public GoogleAppsCardV1DecoratedText withWrapText(Boolean wrapText) {
         this.wrapText = wrapText;
         return this;
     }
     
+    public GoogleAppsCardV1DecoratedText(){}
 }

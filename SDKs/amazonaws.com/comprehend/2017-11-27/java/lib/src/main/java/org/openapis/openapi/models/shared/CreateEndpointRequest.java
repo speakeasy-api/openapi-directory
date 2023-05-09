@@ -12,6 +12,7 @@ public class CreateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateEndpointRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public CreateEndpointRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -27,6 +29,7 @@ public class CreateEndpointRequest {
     
     @JsonProperty("DesiredInferenceUnits")
     public Long desiredInferenceUnits;
+
     public CreateEndpointRequest withDesiredInferenceUnits(Long desiredInferenceUnits) {
         this.desiredInferenceUnits = desiredInferenceUnits;
         return this;
@@ -34,6 +37,7 @@ public class CreateEndpointRequest {
     
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public CreateEndpointRequest withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -42,6 +46,7 @@ public class CreateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelArn")
     public String flywheelArn;
+
     public CreateEndpointRequest withFlywheelArn(String flywheelArn) {
         this.flywheelArn = flywheelArn;
         return this;
@@ -50,6 +55,7 @@ public class CreateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelArn")
     public String modelArn;
+
     public CreateEndpointRequest withModelArn(String modelArn) {
         this.modelArn = modelArn;
         return this;
@@ -58,9 +64,14 @@ public class CreateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateEndpointRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEndpointRequest(@JsonProperty("DesiredInferenceUnits") Long desiredInferenceUnits, @JsonProperty("EndpointName") String endpointName) {
+        this.desiredInferenceUnits = desiredInferenceUnits;
+        this.endpointName = endpointName;
+  }
 }

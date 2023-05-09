@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProtocolProxyGetTraceResponse {
@@ -12,6 +13,7 @@ public class ProtocolProxyGetTraceResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfigPROXY configPROXY;
+
     public ProtocolProxyGetTraceResponse withConfigPROXY(org.openapis.openapi.models.shared.ConfigPROXY configPROXY) {
         this.configPROXY = configPROXY;
         return this;
@@ -19,6 +21,7 @@ public class ProtocolProxyGetTraceResponse {
     
     
     public String contentType;
+
     public ProtocolProxyGetTraceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ProtocolProxyGetTraceResponse {
     
     
     public Integer statusCode;
+
     public ProtocolProxyGetTraceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ProtocolProxyGetTraceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProtocolProxyGetTraceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProtocolProxyGetTraceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

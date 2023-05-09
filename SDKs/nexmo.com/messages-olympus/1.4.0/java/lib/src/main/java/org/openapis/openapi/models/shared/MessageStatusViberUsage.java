@@ -15,6 +15,7 @@ public class MessageStatusViberUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public MessageStatusViberUsageCurrencyEnum currency;
+
     public MessageStatusViberUsage withCurrency(MessageStatusViberUsageCurrencyEnum currency) {
         this.currency = currency;
         return this;
@@ -26,9 +27,11 @@ public class MessageStatusViberUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public String price;
+
     public MessageStatusViberUsage withPrice(String price) {
         this.price = price;
         return this;
     }
     
+    public MessageStatusViberUsage(){}
 }

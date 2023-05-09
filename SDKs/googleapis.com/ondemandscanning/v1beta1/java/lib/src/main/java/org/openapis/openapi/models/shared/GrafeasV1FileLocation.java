@@ -18,9 +18,11 @@ public class GrafeasV1FileLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePath")
     public String filePath;
+
     public GrafeasV1FileLocation withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
     }
     
+    public GrafeasV1FileLocation(){}
 }

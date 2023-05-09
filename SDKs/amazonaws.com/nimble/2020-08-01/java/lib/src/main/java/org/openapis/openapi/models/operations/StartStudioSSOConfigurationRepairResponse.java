@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartStudioSSOConfigurationRepairResponse {
@@ -12,6 +13,7 @@ public class StartStudioSSOConfigurationRepairResponse {
      */
     
     public Object accessDeniedException;
+
     public StartStudioSSOConfigurationRepairResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartStudioSSOConfigurationRepairResponse {
      */
     
     public Object conflictException;
+
     public StartStudioSSOConfigurationRepairResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartStudioSSOConfigurationRepairResponse {
     
     
     public String contentType;
+
     public StartStudioSSOConfigurationRepairResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartStudioSSOConfigurationRepairResponse {
      */
     
     public Object internalServerErrorException;
+
     public StartStudioSSOConfigurationRepairResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class StartStudioSSOConfigurationRepairResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartStudioSSOConfigurationRepairResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartStudioSSOConfigurationRepairResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartStudioSSOConfigurationRepairResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -69,6 +76,7 @@ public class StartStudioSSOConfigurationRepairResponse {
      */
     
     public org.openapis.openapi.models.shared.StartStudioSSOConfigurationRepairResponse startStudioSSOConfigurationRepairResponse;
+
     public StartStudioSSOConfigurationRepairResponse withStartStudioSSOConfigurationRepairResponse(org.openapis.openapi.models.shared.StartStudioSSOConfigurationRepairResponse startStudioSSOConfigurationRepairResponse) {
         this.startStudioSSOConfigurationRepairResponse = startStudioSSOConfigurationRepairResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartStudioSSOConfigurationRepairResponse {
     
     
     public Integer statusCode;
+
     public StartStudioSSOConfigurationRepairResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartStudioSSOConfigurationRepairResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartStudioSSOConfigurationRepairResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StartStudioSSOConfigurationRepairResponse {
      */
     
     public Object throttlingException;
+
     public StartStudioSSOConfigurationRepairResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class StartStudioSSOConfigurationRepairResponse {
      */
     
     public Object validationException;
+
     public StartStudioSSOConfigurationRepairResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartStudioSSOConfigurationRepairResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1SegmentationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpecSet")
     public String annotationSpecSet;
+
     public GoogleCloudDatalabelingV1beta1SegmentationConfig withAnnotationSpecSet(String annotationSpecSet) {
         this.annotationSpecSet = annotationSpecSet;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1SegmentationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructionMessage")
     public String instructionMessage;
+
     public GoogleCloudDatalabelingV1beta1SegmentationConfig withInstructionMessage(String instructionMessage) {
         this.instructionMessage = instructionMessage;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1SegmentationConfig(){}
 }

@@ -257,4 +257,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ContainerAccess.java
 lib/src/main/java/org/openapis/openapi/models/shared/AccountAccessPermissionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AccountAccess.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListAccountUsersResponse.java
+docs/sdk/README.md
+docs/accounts/README.md
 USAGE.md

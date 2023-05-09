@@ -13,6 +13,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyResponsesDestinyVendorResponseItemComponents {
     
     public DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent instances;
+
     public DestinyResponsesDestinyVendorResponseItemComponents withInstances(DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent instances) {
         this.instances = instances;
         return this;
@@ -20,6 +21,7 @@ public class DestinyResponsesDestinyVendorResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent objectives;
+
     public DestinyResponsesDestinyVendorResponseItemComponents withObjectives(DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent objectives) {
         this.objectives = objectives;
         return this;
@@ -27,6 +29,7 @@ public class DestinyResponsesDestinyVendorResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemPerksComponent perks;
+
     public DestinyResponsesDestinyVendorResponseItemComponents withPerks(DictionaryComponentResponseOfint32AndDestinyItemPerksComponent perks) {
         this.perks = perks;
         return this;
@@ -34,6 +37,7 @@ public class DestinyResponsesDestinyVendorResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemPlugObjectivesComponent plugObjectives;
+
     public DestinyResponsesDestinyVendorResponseItemComponents withPlugObjectives(DictionaryComponentResponseOfint32AndDestinyItemPlugObjectivesComponent plugObjectives) {
         this.plugObjectives = plugObjectives;
         return this;
@@ -41,6 +45,7 @@ public class DestinyResponsesDestinyVendorResponseItemComponents {
     
     
     public DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent plugStates;
+
     public DestinyResponsesDestinyVendorResponseItemComponents withPlugStates(DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent plugStates) {
         this.plugStates = plugStates;
         return this;
@@ -48,6 +53,7 @@ public class DestinyResponsesDestinyVendorResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemRenderComponent renderData;
+
     public DestinyResponsesDestinyVendorResponseItemComponents withRenderData(DictionaryComponentResponseOfint32AndDestinyItemRenderComponent renderData) {
         this.renderData = renderData;
         return this;
@@ -55,6 +61,7 @@ public class DestinyResponsesDestinyVendorResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemReusablePlugsComponent reusablePlugs;
+
     public DestinyResponsesDestinyVendorResponseItemComponents withReusablePlugs(DictionaryComponentResponseOfint32AndDestinyItemReusablePlugsComponent reusablePlugs) {
         this.reusablePlugs = reusablePlugs;
         return this;
@@ -62,6 +69,7 @@ public class DestinyResponsesDestinyVendorResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent sockets;
+
     public DestinyResponsesDestinyVendorResponseItemComponents withSockets(DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent sockets) {
         this.sockets = sockets;
         return this;
@@ -69,6 +77,7 @@ public class DestinyResponsesDestinyVendorResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemStatsComponent stats;
+
     public DestinyResponsesDestinyVendorResponseItemComponents withStats(DictionaryComponentResponseOfint32AndDestinyItemStatsComponent stats) {
         this.stats = stats;
         return this;
@@ -76,9 +85,11 @@ public class DestinyResponsesDestinyVendorResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent talentGrids;
+
     public DestinyResponsesDestinyVendorResponseItemComponents withTalentGrids(DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent talentGrids) {
         this.talentGrids = talentGrids;
         return this;
     }
     
+    public DestinyResponsesDestinyVendorResponseItemComponents(){}
 }

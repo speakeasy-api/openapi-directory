@@ -15,6 +15,7 @@ public class Artwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlbumArtFormat")
     public String albumArtFormat;
+
     public Artwork withAlbumArtFormat(String albumArtFormat) {
         this.albumArtFormat = albumArtFormat;
         return this;
@@ -23,6 +24,7 @@ public class Artwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encryption")
     public Encryption encryption;
+
     public Artwork withEncryption(Encryption encryption) {
         this.encryption = encryption;
         return this;
@@ -31,6 +33,7 @@ public class Artwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputKey")
     public String inputKey;
+
     public Artwork withInputKey(String inputKey) {
         this.inputKey = inputKey;
         return this;
@@ -39,6 +42,7 @@ public class Artwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxHeight")
     public String maxHeight;
+
     public Artwork withMaxHeight(String maxHeight) {
         this.maxHeight = maxHeight;
         return this;
@@ -47,6 +51,7 @@ public class Artwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxWidth")
     public String maxWidth;
+
     public Artwork withMaxWidth(String maxWidth) {
         this.maxWidth = maxWidth;
         return this;
@@ -55,6 +60,7 @@ public class Artwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaddingPolicy")
     public String paddingPolicy;
+
     public Artwork withPaddingPolicy(String paddingPolicy) {
         this.paddingPolicy = paddingPolicy;
         return this;
@@ -63,9 +69,11 @@ public class Artwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizingPolicy")
     public String sizingPolicy;
+
     public Artwork withSizingPolicy(String sizingPolicy) {
         this.sizingPolicy = sizingPolicy;
         return this;
     }
     
+    public Artwork(){}
 }

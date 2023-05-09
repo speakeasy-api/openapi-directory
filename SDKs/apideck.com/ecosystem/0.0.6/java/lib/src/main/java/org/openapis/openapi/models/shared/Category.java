@@ -17,6 +17,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public Category withCount(Long count) {
         this.count = count;
         return this;
@@ -27,6 +28,7 @@ public class Category {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Category withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Category withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Category withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +55,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listing_description_text_template")
     public String listingDescriptionTextTemplate;
+
     public Category withListingDescriptionTextTemplate(String listingDescriptionTextTemplate) {
         this.listingDescriptionTextTemplate = listingDescriptionTextTemplate;
         return this;
@@ -59,6 +64,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listing_features_text_template")
     public String listingFeaturesTextTemplate;
+
     public Category withListingFeaturesTextTemplate(String listingFeaturesTextTemplate) {
         this.listingFeaturesTextTemplate = listingFeaturesTextTemplate;
         return this;
@@ -67,6 +73,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listing_pricing_text_template")
     public String listingPricingTextTemplate;
+
     public Category withListingPricingTextTemplate(String listingPricingTextTemplate) {
         this.listingPricingTextTemplate = listingPricingTextTemplate;
         return this;
@@ -75,6 +82,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public Logo logo;
+
     public Category withLogo(Logo logo) {
         this.logo = logo;
         return this;
@@ -82,6 +90,7 @@ public class Category {
     
     @JsonProperty("name")
     public String name;
+
     public Category withName(String name) {
         this.name = name;
         return this;
@@ -89,6 +98,7 @@ public class Category {
     
     @JsonProperty("slug")
     public String slug;
+
     public Category withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -97,6 +107,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translations")
     public Translation[] translations;
+
     public Category withTranslations(Translation[] translations) {
         this.translations = translations;
         return this;
@@ -107,9 +118,14 @@ public class Category {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Category withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Category(@JsonProperty("name") String name, @JsonProperty("slug") String slug) {
+        this.name = name;
+        this.slug = slug;
+  }
 }

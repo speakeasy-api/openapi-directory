@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2RecordCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expressions")
     public GooglePrivacyDlpV2Expressions expressions;
+
     public GooglePrivacyDlpV2RecordCondition withExpressions(GooglePrivacyDlpV2Expressions expressions) {
         this.expressions = expressions;
         return this;
     }
     
+    public GooglePrivacyDlpV2RecordCondition(){}
 }

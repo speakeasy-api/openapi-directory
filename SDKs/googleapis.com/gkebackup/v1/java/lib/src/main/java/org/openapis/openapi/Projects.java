@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsCreateResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsCreateResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsCreateResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsListResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsListResponse(contentType, httpRes.statusCode()) {{
             listBackupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsVolumeBackupsListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsVolumeBackupsListResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsVolumeBackupsListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsVolumeBackupsListResponse(contentType, httpRes.statusCode()) {{
             listVolumeBackupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansCreateResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansCreateResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansCreateResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansListResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansListResponse(contentType, httpRes.statusCode()) {{
             listBackupPlansResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsDeleteOperationsResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsDeleteOperationsResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsDeleteOperationsResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsDeleteOperationsResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -340,11 +328,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -434,11 +418,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,11 +464,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansCreateResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansCreateResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansCreateResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -528,11 +508,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansListResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansListResponse(contentType, httpRes.statusCode()) {{
             listRestorePlansResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -576,11 +554,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresCreateResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresCreateResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresCreateResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -622,11 +598,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresDeleteResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresDeleteResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresDeleteResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresDeleteResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -668,11 +642,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresListResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresListResponse(contentType, httpRes.statusCode()) {{
             listRestoresResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -716,11 +688,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresPatchResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresPatchResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresPatchResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresPatchResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -762,11 +732,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetResponse(contentType, httpRes.statusCode()) {{
             volumeRestore = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -808,11 +776,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamPolicyResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamPolicyResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -854,11 +820,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListResponse(contentType, httpRes.statusCode()) {{
             listVolumeRestoresResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -902,11 +866,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresSetIamPolicyResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresSetIamPolicyResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -950,11 +912,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

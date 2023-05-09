@@ -15,6 +15,7 @@ public class ListPricingPlansOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingPeriod")
     public String billingPeriod;
+
     public ListPricingPlansOutput withBillingPeriod(String billingPeriod) {
         this.billingPeriod = billingPeriod;
         return this;
@@ -23,6 +24,7 @@ public class ListPricingPlansOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPricingPlansOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class ListPricingPlansOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlans")
     public PricingPlanListElement[] pricingPlans;
+
     public ListPricingPlansOutput withPricingPlans(PricingPlanListElement[] pricingPlans) {
         this.pricingPlans = pricingPlans;
         return this;
     }
     
+    public ListPricingPlansOutput(){}
 }

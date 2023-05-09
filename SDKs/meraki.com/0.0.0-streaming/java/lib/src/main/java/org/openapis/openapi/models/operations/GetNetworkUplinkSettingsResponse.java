@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkUplinkSettingsResponse {
     
     public String contentType;
+
     public GetNetworkUplinkSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkUplinkSettingsResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkUplinkSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkUplinkSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkUplinkSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetNetworkUplinkSettingsResponse {
      */
     
     public java.util.Map<String, Object> getNetworkUplinkSettings200ApplicationJSONObject;
+
     public GetNetworkUplinkSettingsResponse withGetNetworkUplinkSettings200ApplicationJSONObject(java.util.Map<String, Object> getNetworkUplinkSettings200ApplicationJSONObject) {
         this.getNetworkUplinkSettings200ApplicationJSONObject = getNetworkUplinkSettings200ApplicationJSONObject;
         return this;
     }
     
+    public GetNetworkUplinkSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

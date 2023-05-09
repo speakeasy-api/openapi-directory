@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class PurchaseReservedInstancesOfferingRequest {
     
     public Boolean dryRun;
+
     public PurchaseReservedInstancesOfferingRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +21,7 @@ public class PurchaseReservedInstancesOfferingRequest {
     
     
     public Long instanceCount;
+
     public PurchaseReservedInstancesOfferingRequest withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -26,6 +29,7 @@ public class PurchaseReservedInstancesOfferingRequest {
     
     
     public PurchaseReservedInstancesOfferingRequestLimitPrice limitPrice;
+
     public PurchaseReservedInstancesOfferingRequest withLimitPrice(PurchaseReservedInstancesOfferingRequestLimitPrice limitPrice) {
         this.limitPrice = limitPrice;
         return this;
@@ -33,6 +37,7 @@ public class PurchaseReservedInstancesOfferingRequest {
     
     
     public OffsetDateTime purchaseTime;
+
     public PurchaseReservedInstancesOfferingRequest withPurchaseTime(OffsetDateTime purchaseTime) {
         this.purchaseTime = purchaseTime;
         return this;
@@ -40,9 +45,14 @@ public class PurchaseReservedInstancesOfferingRequest {
     
     
     public String reservedInstancesOfferingId;
+
     public PurchaseReservedInstancesOfferingRequest withReservedInstancesOfferingId(String reservedInstancesOfferingId) {
         this.reservedInstancesOfferingId = reservedInstancesOfferingId;
         return this;
     }
     
+    public PurchaseReservedInstancesOfferingRequest(@JsonProperty("InstanceCount") Long instanceCount, @JsonProperty("ReservedInstancesOfferingId") String reservedInstancesOfferingId) {
+        this.instanceCount = instanceCount;
+        this.reservedInstancesOfferingId = reservedInstancesOfferingId;
+  }
 }

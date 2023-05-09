@@ -18,6 +18,7 @@ public class VideoClassificationAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classificationAnnotation")
     public ClassificationAnnotation classificationAnnotation;
+
     public VideoClassificationAnnotation withClassificationAnnotation(ClassificationAnnotation classificationAnnotation) {
         this.classificationAnnotation = classificationAnnotation;
         return this;
@@ -29,6 +30,7 @@ public class VideoClassificationAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSegment")
     public TimeSegment timeSegment;
+
     public VideoClassificationAnnotation withTimeSegment(TimeSegment timeSegment) {
         this.timeSegment = timeSegment;
         return this;
@@ -40,9 +42,11 @@ public class VideoClassificationAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public VideoClassificationAnnotation withType(String type) {
         this.type = type;
         return this;
     }
     
+    public VideoClassificationAnnotation(){}
 }

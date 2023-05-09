@@ -15,6 +15,7 @@ public class PortfolioShareDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Accepted")
     public Boolean accepted;
+
     public PortfolioShareDetail withAccepted(Boolean accepted) {
         this.accepted = accepted;
         return this;
@@ -23,6 +24,7 @@ public class PortfolioShareDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalId")
     public String principalId;
+
     public PortfolioShareDetail withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -31,6 +33,7 @@ public class PortfolioShareDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharePrincipals")
     public Boolean sharePrincipals;
+
     public PortfolioShareDetail withSharePrincipals(Boolean sharePrincipals) {
         this.sharePrincipals = sharePrincipals;
         return this;
@@ -39,6 +42,7 @@ public class PortfolioShareDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareTagOptions")
     public Boolean shareTagOptions;
+
     public PortfolioShareDetail withShareTagOptions(Boolean shareTagOptions) {
         this.shareTagOptions = shareTagOptions;
         return this;
@@ -47,9 +51,11 @@ public class PortfolioShareDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public DescribePortfolioShareTypeEnum type;
+
     public PortfolioShareDetail withType(DescribePortfolioShareTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PortfolioShareDetail(){}
 }

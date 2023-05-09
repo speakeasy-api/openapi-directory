@@ -20,6 +20,7 @@ public class AuthorizerDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizerArn")
     public String authorizerArn;
+
     public AuthorizerDescription withAuthorizerArn(String authorizerArn) {
         this.authorizerArn = authorizerArn;
         return this;
@@ -28,6 +29,7 @@ public class AuthorizerDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizerFunctionArn")
     public String authorizerFunctionArn;
+
     public AuthorizerDescription withAuthorizerFunctionArn(String authorizerFunctionArn) {
         this.authorizerFunctionArn = authorizerFunctionArn;
         return this;
@@ -36,6 +38,7 @@ public class AuthorizerDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizerName")
     public String authorizerName;
+
     public AuthorizerDescription withAuthorizerName(String authorizerName) {
         this.authorizerName = authorizerName;
         return this;
@@ -46,6 +49,7 @@ public class AuthorizerDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public AuthorizerDescription withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -54,6 +58,7 @@ public class AuthorizerDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableCachingForHttp")
     public Boolean enableCachingForHttp;
+
     public AuthorizerDescription withEnableCachingForHttp(Boolean enableCachingForHttp) {
         this.enableCachingForHttp = enableCachingForHttp;
         return this;
@@ -64,6 +69,7 @@ public class AuthorizerDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public AuthorizerDescription withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -72,6 +78,7 @@ public class AuthorizerDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signingDisabled")
     public Boolean signingDisabled;
+
     public AuthorizerDescription withSigningDisabled(Boolean signingDisabled) {
         this.signingDisabled = signingDisabled;
         return this;
@@ -80,6 +87,7 @@ public class AuthorizerDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AuthorizerStatusEnum status;
+
     public AuthorizerDescription withStatus(AuthorizerStatusEnum status) {
         this.status = status;
         return this;
@@ -88,6 +96,7 @@ public class AuthorizerDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenKeyName")
     public String tokenKeyName;
+
     public AuthorizerDescription withTokenKeyName(String tokenKeyName) {
         this.tokenKeyName = tokenKeyName;
         return this;
@@ -96,9 +105,11 @@ public class AuthorizerDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenSigningPublicKeys")
     public java.util.Map<String, String> tokenSigningPublicKeys;
+
     public AuthorizerDescription withTokenSigningPublicKeys(java.util.Map<String, String> tokenSigningPublicKeys) {
         this.tokenSigningPublicKeys = tokenSigningPublicKeys;
         return this;
     }
     
+    public AuthorizerDescription(){}
 }

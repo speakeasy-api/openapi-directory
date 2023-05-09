@@ -18,6 +18,7 @@ public class Pacing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailyMaxImpressions")
     public String dailyMaxImpressions;
+
     public Pacing withDailyMaxImpressions(String dailyMaxImpressions) {
         this.dailyMaxImpressions = dailyMaxImpressions;
         return this;
@@ -29,6 +30,7 @@ public class Pacing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailyMaxMicros")
     public String dailyMaxMicros;
+
     public Pacing withDailyMaxMicros(String dailyMaxMicros) {
         this.dailyMaxMicros = dailyMaxMicros;
         return this;
@@ -40,6 +42,7 @@ public class Pacing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pacingPeriod")
     public PacingPacingPeriodEnum pacingPeriod;
+
     public Pacing withPacingPeriod(PacingPacingPeriodEnum pacingPeriod) {
         this.pacingPeriod = pacingPeriod;
         return this;
@@ -51,9 +54,11 @@ public class Pacing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pacingType")
     public PacingPacingTypeEnum pacingType;
+
     public Pacing withPacingType(PacingPacingTypeEnum pacingType) {
         this.pacingType = pacingType;
         return this;
     }
     
+    public Pacing(){}
 }

@@ -14,6 +14,7 @@ public class PostPortfolioConstructionRandomRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioConstructionRandomRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -22,6 +23,7 @@ public class PostPortfolioConstructionRandomRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PostPortfolioConstructionRandomRequestBodyConstraints constraints;
+
     public PostPortfolioConstructionRandomRequestBody withConstraints(PostPortfolioConstructionRandomRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -33,9 +35,13 @@ public class PostPortfolioConstructionRandomRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolios")
     public Long portfolios;
+
     public PostPortfolioConstructionRandomRequestBody withPortfolios(Long portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioConstructionRandomRequestBody(@JsonProperty("assets") Long assets) {
+        this.assets = assets;
+  }
 }

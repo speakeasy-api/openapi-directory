@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateXssMatchSetRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public CreateXssMatchSetRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -19,9 +20,14 @@ public class CreateXssMatchSetRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateXssMatchSetRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateXssMatchSetRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("Name") String name) {
+        this.changeToken = changeToken;
+        this.name = name;
+  }
 }

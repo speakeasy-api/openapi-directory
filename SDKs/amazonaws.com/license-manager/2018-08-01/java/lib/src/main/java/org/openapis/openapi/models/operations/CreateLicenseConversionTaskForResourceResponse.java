@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLicenseConversionTaskForResourceResponse {
@@ -12,6 +13,7 @@ public class CreateLicenseConversionTaskForResourceResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateLicenseConversionTaskForResourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateLicenseConversionTaskForResourceResponse {
      */
     
     public Object authorizationException;
+
     public CreateLicenseConversionTaskForResourceResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class CreateLicenseConversionTaskForResourceResponse {
     
     
     public String contentType;
+
     public CreateLicenseConversionTaskForResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateLicenseConversionTaskForResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLicenseConversionTaskForResourceResponse createLicenseConversionTaskForResourceResponse;
+
     public CreateLicenseConversionTaskForResourceResponse withCreateLicenseConversionTaskForResourceResponse(org.openapis.openapi.models.shared.CreateLicenseConversionTaskForResourceResponse createLicenseConversionTaskForResourceResponse) {
         this.createLicenseConversionTaskForResourceResponse = createLicenseConversionTaskForResourceResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateLicenseConversionTaskForResourceResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CreateLicenseConversionTaskForResourceResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class CreateLicenseConversionTaskForResourceResponse {
      */
     
     public Object rateLimitExceededException;
+
     public CreateLicenseConversionTaskForResourceResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateLicenseConversionTaskForResourceResponse {
      */
     
     public Object serverInternalException;
+
     public CreateLicenseConversionTaskForResourceResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -76,6 +84,7 @@ public class CreateLicenseConversionTaskForResourceResponse {
     
     
     public Integer statusCode;
+
     public CreateLicenseConversionTaskForResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateLicenseConversionTaskForResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLicenseConversionTaskForResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateLicenseConversionTaskForResourceResponse {
      */
     
     public Object validationException;
+
     public CreateLicenseConversionTaskForResourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateLicenseConversionTaskForResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

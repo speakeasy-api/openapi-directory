@@ -12,6 +12,7 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType {
      */
     @JsonProperty("deprecated")
     public String deprecated;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType withDeprecated(String deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -22,6 +23,7 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType {
      */
     @JsonProperty("description")
     public String description;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +34,7 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType {
      */
     @JsonProperty("id")
     public Double id;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType withId(Double id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType {
      */
     @JsonProperty("max_assigned_certificates")
     public Double maxAssignedCertificates;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType withMaxAssignedCertificates(Double maxAssignedCertificates) {
         this.maxAssignedCertificates = maxAssignedCertificates;
         return this;
@@ -52,6 +56,7 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType {
      */
     @JsonProperty("max_connections")
     public Double maxConnections;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType withMaxConnections(Double maxConnections) {
         this.maxConnections = maxConnections;
         return this;
@@ -62,6 +67,7 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType {
      */
     @JsonProperty("max_services")
     public Double maxServices;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType withMaxServices(Double maxServices) {
         this.maxServices = maxServices;
         return this;
@@ -72,6 +78,7 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType {
      */
     @JsonProperty("max_targets")
     public Double maxTargets;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType withMaxTargets(Double maxTargets) {
         this.maxTargets = maxTargets;
         return this;
@@ -82,6 +89,7 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType {
      */
     @JsonProperty("name")
     public String name;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType withName(String name) {
         this.name = name;
         return this;
@@ -92,9 +100,21 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType {
      */
     @JsonProperty("prices")
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePrices[] prices;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType withPrices(GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePrices[] prices) {
         this.prices = prices;
         return this;
     }
     
+    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerType(@JsonProperty("deprecated") String deprecated, @JsonProperty("description") String description, @JsonProperty("id") Double id, @JsonProperty("max_assigned_certificates") Double maxAssignedCertificates, @JsonProperty("max_connections") Double maxConnections, @JsonProperty("max_services") Double maxServices, @JsonProperty("max_targets") Double maxTargets, @JsonProperty("name") String name, @JsonProperty("prices") GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTypePrices[] prices) {
+        this.deprecated = deprecated;
+        this.description = description;
+        this.id = id;
+        this.maxAssignedCertificates = maxAssignedCertificates;
+        this.maxConnections = maxConnections;
+        this.maxServices = maxServices;
+        this.maxTargets = maxTargets;
+        this.name = name;
+        this.prices = prices;
+  }
 }

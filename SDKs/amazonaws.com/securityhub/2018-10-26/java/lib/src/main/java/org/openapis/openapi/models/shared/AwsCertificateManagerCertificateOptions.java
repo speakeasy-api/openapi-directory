@@ -15,9 +15,11 @@ public class AwsCertificateManagerCertificateOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateTransparencyLoggingPreference")
     public String certificateTransparencyLoggingPreference;
+
     public AwsCertificateManagerCertificateOptions withCertificateTransparencyLoggingPreference(String certificateTransparencyLoggingPreference) {
         this.certificateTransparencyLoggingPreference = certificateTransparencyLoggingPreference;
         return this;
     }
     
+    public AwsCertificateManagerCertificateOptions(){}
 }

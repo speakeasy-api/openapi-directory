@@ -18,9 +18,11 @@ public class GuestInstalledApplicationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public GuestInstalledApplication[] entries;
+
     public GuestInstalledApplicationList withEntries(GuestInstalledApplication[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public GuestInstalledApplicationList(){}
 }

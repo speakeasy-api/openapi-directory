@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAssessmentResponse {
@@ -12,6 +13,7 @@ public class DeleteAssessmentResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAssessmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAssessmentResponse {
     
     
     public String contentType;
+
     public DeleteAssessmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAssessmentResponse {
      */
     
     public java.util.Map<String, Object> deleteAssessmentResponse;
+
     public DeleteAssessmentResponse withDeleteAssessmentResponse(java.util.Map<String, Object> deleteAssessmentResponse) {
         this.deleteAssessmentResponse = deleteAssessmentResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAssessmentResponse {
      */
     
     public Object internalServerException;
+
     public DeleteAssessmentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAssessmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAssessmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteAssessmentResponse {
     
     
     public Integer statusCode;
+
     public DeleteAssessmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteAssessmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAssessmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteAssessmentResponse {
      */
     
     public Object validationException;
+
     public DeleteAssessmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteAssessmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

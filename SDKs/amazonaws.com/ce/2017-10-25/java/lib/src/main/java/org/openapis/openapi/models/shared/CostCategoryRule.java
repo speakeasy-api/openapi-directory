@@ -15,6 +15,7 @@ public class CostCategoryRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InheritedValue")
     public CostCategoryInheritedValueDimension inheritedValue;
+
     public CostCategoryRule withInheritedValue(CostCategoryInheritedValueDimension inheritedValue) {
         this.inheritedValue = inheritedValue;
         return this;
@@ -23,6 +24,7 @@ public class CostCategoryRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rule")
     public Expression rule;
+
     public CostCategoryRule withRule(Expression rule) {
         this.rule = rule;
         return this;
@@ -31,6 +33,7 @@ public class CostCategoryRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public CostCategoryRuleTypeEnum type;
+
     public CostCategoryRule withType(CostCategoryRuleTypeEnum type) {
         this.type = type;
         return this;
@@ -42,9 +45,11 @@ public class CostCategoryRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public CostCategoryRule withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CostCategoryRule(){}
 }

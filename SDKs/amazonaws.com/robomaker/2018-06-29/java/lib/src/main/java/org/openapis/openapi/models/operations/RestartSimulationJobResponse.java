@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RestartSimulationJobResponse {
     
     public String contentType;
+
     public RestartSimulationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RestartSimulationJobResponse {
      */
     
     public Object internalServerException;
+
     public RestartSimulationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class RestartSimulationJobResponse {
      */
     
     public Object invalidParameterException;
+
     public RestartSimulationJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class RestartSimulationJobResponse {
      */
     
     public Object limitExceededException;
+
     public RestartSimulationJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class RestartSimulationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RestartSimulationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class RestartSimulationJobResponse {
      */
     
     public java.util.Map<String, Object> restartSimulationJobResponse;
+
     public RestartSimulationJobResponse withRestartSimulationJobResponse(java.util.Map<String, Object> restartSimulationJobResponse) {
         this.restartSimulationJobResponse = restartSimulationJobResponse;
         return this;
@@ -66,6 +73,7 @@ public class RestartSimulationJobResponse {
     
     
     public Integer statusCode;
+
     public RestartSimulationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class RestartSimulationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RestartSimulationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class RestartSimulationJobResponse {
      */
     
     public Object throttlingException;
+
     public RestartSimulationJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public RestartSimulationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

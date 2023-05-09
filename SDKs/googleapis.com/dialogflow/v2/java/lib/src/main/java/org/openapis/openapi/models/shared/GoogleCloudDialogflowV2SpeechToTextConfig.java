@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2SpeechToTextConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GoogleCloudDialogflowV2SpeechToTextConfig withModel(String model) {
         this.model = model;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2SpeechToTextConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speechModelVariant")
     public GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariantEnum speechModelVariant;
+
     public GoogleCloudDialogflowV2SpeechToTextConfig withSpeechModelVariant(GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariantEnum speechModelVariant) {
         this.speechModelVariant = speechModelVariant;
         return this;
     }
     
+    public GoogleCloudDialogflowV2SpeechToTextConfig(){}
 }

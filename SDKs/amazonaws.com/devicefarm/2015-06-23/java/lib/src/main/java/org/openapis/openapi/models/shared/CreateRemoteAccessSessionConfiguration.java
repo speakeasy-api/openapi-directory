@@ -15,6 +15,7 @@ public class CreateRemoteAccessSessionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingMethod")
     public BillingMethodEnum billingMethod;
+
     public CreateRemoteAccessSessionConfiguration withBillingMethod(BillingMethodEnum billingMethod) {
         this.billingMethod = billingMethod;
         return this;
@@ -23,9 +24,11 @@ public class CreateRemoteAccessSessionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpceConfigurationArns")
     public String[] vpceConfigurationArns;
+
     public CreateRemoteAccessSessionConfiguration withVpceConfigurationArns(String[] vpceConfigurationArns) {
         this.vpceConfigurationArns = vpceConfigurationArns;
         return this;
     }
     
+    public CreateRemoteAccessSessionConfiguration(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConsentArtifactSchemaConsentPurpose {
     @JsonProperty("description")
     public String description;
+
     public ConsentArtifactSchemaConsentPurpose withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public ConsentArtifactSchemaConsentPurpose(@JsonProperty("description") String description) {
+        this.description = description;
+  }
 }

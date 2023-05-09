@@ -18,6 +18,7 @@ public class ResourceRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limits")
     public java.util.Map<String, String> limits;
+
     public ResourceRequirements withLimits(java.util.Map<String, String> limits) {
         this.limits = limits;
         return this;
@@ -29,9 +30,11 @@ public class ResourceRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public java.util.Map<String, String> requests;
+
     public ResourceRequirements withRequests(java.util.Map<String, String> requests) {
         this.requests = requests;
         return this;
     }
     
+    public ResourceRequirements(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateProjectInput {
     @JsonProperty("artifacts")
     public ProjectArtifacts artifacts;
+
     public CreateProjectInput withArtifacts(ProjectArtifacts artifacts) {
         this.artifacts = artifacts;
         return this;
@@ -19,6 +20,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("badgeEnabled")
     public Boolean badgeEnabled;
+
     public CreateProjectInput withBadgeEnabled(Boolean badgeEnabled) {
         this.badgeEnabled = badgeEnabled;
         return this;
@@ -27,6 +29,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildBatchConfig")
     public ProjectBuildBatchConfig buildBatchConfig;
+
     public CreateProjectInput withBuildBatchConfig(ProjectBuildBatchConfig buildBatchConfig) {
         this.buildBatchConfig = buildBatchConfig;
         return this;
@@ -35,6 +38,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cache")
     public ProjectCache cache;
+
     public CreateProjectInput withCache(ProjectCache cache) {
         this.cache = cache;
         return this;
@@ -43,6 +47,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrentBuildLimit")
     public Long concurrentBuildLimit;
+
     public CreateProjectInput withConcurrentBuildLimit(Long concurrentBuildLimit) {
         this.concurrentBuildLimit = concurrentBuildLimit;
         return this;
@@ -51,6 +56,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateProjectInput withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +65,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public String encryptionKey;
+
     public CreateProjectInput withEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -66,6 +73,7 @@ public class CreateProjectInput {
     
     @JsonProperty("environment")
     public ProjectEnvironment environment;
+
     public CreateProjectInput withEnvironment(ProjectEnvironment environment) {
         this.environment = environment;
         return this;
@@ -74,6 +82,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileSystemLocations")
     public ProjectFileSystemLocation[] fileSystemLocations;
+
     public CreateProjectInput withFileSystemLocations(ProjectFileSystemLocation[] fileSystemLocations) {
         this.fileSystemLocations = fileSystemLocations;
         return this;
@@ -82,6 +91,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logsConfig")
     public LogsConfig logsConfig;
+
     public CreateProjectInput withLogsConfig(LogsConfig logsConfig) {
         this.logsConfig = logsConfig;
         return this;
@@ -89,6 +99,7 @@ public class CreateProjectInput {
     
     @JsonProperty("name")
     public String name;
+
     public CreateProjectInput withName(String name) {
         this.name = name;
         return this;
@@ -97,6 +108,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queuedTimeoutInMinutes")
     public Long queuedTimeoutInMinutes;
+
     public CreateProjectInput withQueuedTimeoutInMinutes(Long queuedTimeoutInMinutes) {
         this.queuedTimeoutInMinutes = queuedTimeoutInMinutes;
         return this;
@@ -105,6 +117,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryArtifacts")
     public ProjectArtifacts[] secondaryArtifacts;
+
     public CreateProjectInput withSecondaryArtifacts(ProjectArtifacts[] secondaryArtifacts) {
         this.secondaryArtifacts = secondaryArtifacts;
         return this;
@@ -113,6 +126,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondarySourceVersions")
     public ProjectSourceVersion[] secondarySourceVersions;
+
     public CreateProjectInput withSecondarySourceVersions(ProjectSourceVersion[] secondarySourceVersions) {
         this.secondarySourceVersions = secondarySourceVersions;
         return this;
@@ -121,6 +135,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondarySources")
     public ProjectSource[] secondarySources;
+
     public CreateProjectInput withSecondarySources(ProjectSource[] secondarySources) {
         this.secondarySources = secondarySources;
         return this;
@@ -128,6 +143,7 @@ public class CreateProjectInput {
     
     @JsonProperty("serviceRole")
     public String serviceRole;
+
     public CreateProjectInput withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -135,6 +151,7 @@ public class CreateProjectInput {
     
     @JsonProperty("source")
     public ProjectSource source;
+
     public CreateProjectInput withSource(ProjectSource source) {
         this.source = source;
         return this;
@@ -143,6 +160,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceVersion")
     public String sourceVersion;
+
     public CreateProjectInput withSourceVersion(String sourceVersion) {
         this.sourceVersion = sourceVersion;
         return this;
@@ -151,6 +169,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateProjectInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -159,6 +178,7 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutInMinutes")
     public Long timeoutInMinutes;
+
     public CreateProjectInput withTimeoutInMinutes(Long timeoutInMinutes) {
         this.timeoutInMinutes = timeoutInMinutes;
         return this;
@@ -167,9 +187,17 @@ public class CreateProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfig")
     public VpcConfig vpcConfig;
+
     public CreateProjectInput withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public CreateProjectInput(@JsonProperty("artifacts") ProjectArtifacts artifacts, @JsonProperty("environment") ProjectEnvironment environment, @JsonProperty("name") String name, @JsonProperty("serviceRole") String serviceRole, @JsonProperty("source") ProjectSource source) {
+        this.artifacts = artifacts;
+        this.environment = environment;
+        this.name = name;
+        this.serviceRole = serviceRole;
+        this.source = source;
+  }
 }

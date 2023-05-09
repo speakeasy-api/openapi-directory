@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public GoogleAnalyticsAdminV1alphaAccount account;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withAccount(GoogleAnalyticsAdminV1alphaAccount account) {
         this.account = account;
         return this;
@@ -29,8 +30,21 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributionSettings")
     public GoogleAnalyticsAdminV1alphaAttributionSettings attributionSettings;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withAttributionSettings(GoogleAnalyticsAdminV1alphaAttributionSettings attributionSettings) {
         this.attributionSettings = attributionSettings;
+        return this;
+    }
+    
+    /**
+     * A resource message representing a GA4 Audience.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("audience")
+    public GoogleAnalyticsAdminV1alphaAudience audience;
+
+    public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withAudience(GoogleAnalyticsAdminV1alphaAudience audience) {
+        this.audience = audience;
         return this;
     }
     
@@ -40,8 +54,21 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigqueryLink")
     public GoogleAnalyticsAdminV1alphaBigQueryLink bigqueryLink;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withBigqueryLink(GoogleAnalyticsAdminV1alphaBigQueryLink bigqueryLink) {
         this.bigqueryLink = bigqueryLink;
+        return this;
+    }
+    
+    /**
+     * A resource message representing a Channel Group.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("channelGroup")
+    public GoogleAnalyticsAdminV1alphaChannelGroup channelGroup;
+
+    public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withChannelGroup(GoogleAnalyticsAdminV1alphaChannelGroup channelGroup) {
+        this.channelGroup = channelGroup;
         return this;
     }
     
@@ -51,6 +78,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionEvent")
     public GoogleAnalyticsAdminV1alphaConversionEvent conversionEvent;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withConversionEvent(GoogleAnalyticsAdminV1alphaConversionEvent conversionEvent) {
         this.conversionEvent = conversionEvent;
         return this;
@@ -62,6 +90,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDimension")
     public GoogleAnalyticsAdminV1alphaCustomDimension customDimension;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withCustomDimension(GoogleAnalyticsAdminV1alphaCustomDimension customDimension) {
         this.customDimension = customDimension;
         return this;
@@ -73,6 +102,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customMetric")
     public GoogleAnalyticsAdminV1alphaCustomMetric customMetric;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withCustomMetric(GoogleAnalyticsAdminV1alphaCustomMetric customMetric) {
         this.customMetric = customMetric;
         return this;
@@ -84,6 +114,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataRetentionSettings")
     public GoogleAnalyticsAdminV1alphaDataRetentionSettings dataRetentionSettings;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withDataRetentionSettings(GoogleAnalyticsAdminV1alphaDataRetentionSettings dataRetentionSettings) {
         this.dataRetentionSettings = dataRetentionSettings;
         return this;
@@ -95,6 +126,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataStream")
     public GoogleAnalyticsAdminV1alphaDataStream dataStream;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withDataStream(GoogleAnalyticsAdminV1alphaDataStream dataStream) {
         this.dataStream = dataStream;
         return this;
@@ -106,6 +138,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayVideo360AdvertiserLink")
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink displayVideo360AdvertiserLink;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withDisplayVideo360AdvertiserLink(GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink displayVideo360AdvertiserLink) {
         this.displayVideo360AdvertiserLink = displayVideo360AdvertiserLink;
         return this;
@@ -117,6 +150,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayVideo360AdvertiserLinkProposal")
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withDisplayVideo360AdvertiserLinkProposal(GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal displayVideo360AdvertiserLinkProposal) {
         this.displayVideo360AdvertiserLinkProposal = displayVideo360AdvertiserLinkProposal;
         return this;
@@ -128,8 +162,21 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedMeasurementSettings")
     public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings enhancedMeasurementSettings;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withEnhancedMeasurementSettings(GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings enhancedMeasurementSettings) {
         this.enhancedMeasurementSettings = enhancedMeasurementSettings;
+        return this;
+    }
+    
+    /**
+     * An Event Create Rule defines conditions that will trigger the creation of an entirely new event based upon matched criteria of a source event. Additional mutations of the parameters from the source event can be defined. Unlike Event Edit rules, Event Creation Rules have no defined order. They will all be run independently. Event Edit and Event Create rules can't be used to modify an event created from an Event Create rule.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("eventCreateRule")
+    public GoogleAnalyticsAdminV1alphaEventCreateRule eventCreateRule;
+
+    public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withEventCreateRule(GoogleAnalyticsAdminV1alphaEventCreateRule eventCreateRule) {
+        this.eventCreateRule = eventCreateRule;
         return this;
     }
     
@@ -139,6 +186,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expandedDataSet")
     public GoogleAnalyticsAdminV1alphaExpandedDataSet expandedDataSet;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withExpandedDataSet(GoogleAnalyticsAdminV1alphaExpandedDataSet expandedDataSet) {
         this.expandedDataSet = expandedDataSet;
         return this;
@@ -150,6 +198,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firebaseLink")
     public GoogleAnalyticsAdminV1alphaFirebaseLink firebaseLink;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withFirebaseLink(GoogleAnalyticsAdminV1alphaFirebaseLink firebaseLink) {
         this.firebaseLink = firebaseLink;
         return this;
@@ -161,6 +210,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAdsLink")
     public GoogleAnalyticsAdminV1alphaGoogleAdsLink googleAdsLink;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withGoogleAdsLink(GoogleAnalyticsAdminV1alphaGoogleAdsLink googleAdsLink) {
         this.googleAdsLink = googleAdsLink;
         return this;
@@ -172,6 +222,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleSignalsSettings")
     public GoogleAnalyticsAdminV1alphaGoogleSignalsSettings googleSignalsSettings;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withGoogleSignalsSettings(GoogleAnalyticsAdminV1alphaGoogleSignalsSettings googleSignalsSettings) {
         this.googleSignalsSettings = googleSignalsSettings;
         return this;
@@ -183,6 +234,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurementProtocolSecret")
     public GoogleAnalyticsAdminV1alphaMeasurementProtocolSecret measurementProtocolSecret;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withMeasurementProtocolSecret(GoogleAnalyticsAdminV1alphaMeasurementProtocolSecret measurementProtocolSecret) {
         this.measurementProtocolSecret = measurementProtocolSecret;
         return this;
@@ -194,6 +246,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public GoogleAnalyticsAdminV1alphaProperty property;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withProperty(GoogleAnalyticsAdminV1alphaProperty property) {
         this.property = property;
         return this;
@@ -205,9 +258,11 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchAds360Link")
     public GoogleAnalyticsAdminV1alphaSearchAds360Link searchAds360Link;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource withSearchAds360Link(GoogleAnalyticsAdminV1alphaSearchAds360Link searchAds360Link) {
         this.searchAds360Link = searchAds360Link;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource(){}
 }

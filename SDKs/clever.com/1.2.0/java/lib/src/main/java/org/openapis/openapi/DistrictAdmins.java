@@ -51,12 +51,10 @@ public class DistrictAdmins {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistrictAdminResponse res = new org.openapis.openapi.models.operations.GetDistrictAdminResponse() {{
+        org.openapis.openapi.models.operations.GetDistrictAdminResponse res = new org.openapis.openapi.models.operations.GetDistrictAdminResponse(contentType, httpRes.statusCode()) {{
             districtAdminResponse = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class DistrictAdmins {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistrictAdminsResponse res = new org.openapis.openapi.models.operations.GetDistrictAdminsResponse() {{
+        org.openapis.openapi.models.operations.GetDistrictAdminsResponse res = new org.openapis.openapi.models.operations.GetDistrictAdminsResponse(contentType, httpRes.statusCode()) {{
             districtAdminsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

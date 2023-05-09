@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RegistrationsWikisListWikiRelationships - URLs to other entities or entity collections that have a relationship to the wiki.
@@ -15,6 +15,7 @@ public class RegistrationsWikisListWikiRelationships {
      */
     
     public String comments;
+
     public RegistrationsWikisListWikiRelationships withComments(String comments) {
         this.comments = comments;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsWikisListWikiRelationships {
      */
     
     public String node;
+
     public RegistrationsWikisListWikiRelationships withNode(String node) {
         this.node = node;
         return this;
@@ -35,9 +37,15 @@ public class RegistrationsWikisListWikiRelationships {
      */
     
     public String user;
+
     public RegistrationsWikisListWikiRelationships withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public RegistrationsWikisListWikiRelationships(@JsonProperty("comments") String comments, @JsonProperty("node") String node, @JsonProperty("user") String user) {
+        this.comments = comments;
+        this.node = node;
+        this.user = user;
+  }
 }

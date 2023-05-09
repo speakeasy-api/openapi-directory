@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAllowedNodeTypeUpdatesResponse {
@@ -12,6 +13,7 @@ public class ListAllowedNodeTypeUpdatesResponse {
      */
     
     public Object clusterNotFoundFault;
+
     public ListAllowedNodeTypeUpdatesResponse withClusterNotFoundFault(Object clusterNotFoundFault) {
         this.clusterNotFoundFault = clusterNotFoundFault;
         return this;
@@ -19,6 +21,7 @@ public class ListAllowedNodeTypeUpdatesResponse {
     
     
     public String contentType;
+
     public ListAllowedNodeTypeUpdatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAllowedNodeTypeUpdatesResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public ListAllowedNodeTypeUpdatesResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -39,6 +43,7 @@ public class ListAllowedNodeTypeUpdatesResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListAllowedNodeTypeUpdatesResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class ListAllowedNodeTypeUpdatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAllowedNodeTypeUpdatesResponse listAllowedNodeTypeUpdatesResponse;
+
     public ListAllowedNodeTypeUpdatesResponse withListAllowedNodeTypeUpdatesResponse(org.openapis.openapi.models.shared.ListAllowedNodeTypeUpdatesResponse listAllowedNodeTypeUpdatesResponse) {
         this.listAllowedNodeTypeUpdatesResponse = listAllowedNodeTypeUpdatesResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListAllowedNodeTypeUpdatesResponse {
     
     
     public Integer statusCode;
+
     public ListAllowedNodeTypeUpdatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListAllowedNodeTypeUpdatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAllowedNodeTypeUpdatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListAllowedNodeTypeUpdatesResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public ListAllowedNodeTypeUpdatesResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
     }
     
+    public ListAllowedNodeTypeUpdatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

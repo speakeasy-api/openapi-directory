@@ -12,6 +12,7 @@ public class BusinessHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fri")
     public BusinessHourViewModel fri;
+
     public BusinessHoursViewModel withFri(BusinessHourViewModel fri) {
         this.fri = fri;
         return this;
@@ -20,6 +21,7 @@ public class BusinessHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mon")
     public BusinessHourViewModel mon;
+
     public BusinessHoursViewModel withMon(BusinessHourViewModel mon) {
         this.mon = mon;
         return this;
@@ -28,6 +30,7 @@ public class BusinessHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sat")
     public BusinessHourViewModel sat;
+
     public BusinessHoursViewModel withSat(BusinessHourViewModel sat) {
         this.sat = sat;
         return this;
@@ -36,6 +39,7 @@ public class BusinessHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sun")
     public BusinessHourViewModel sun;
+
     public BusinessHoursViewModel withSun(BusinessHourViewModel sun) {
         this.sun = sun;
         return this;
@@ -44,6 +48,7 @@ public class BusinessHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thu")
     public BusinessHourViewModel thu;
+
     public BusinessHoursViewModel withThu(BusinessHourViewModel thu) {
         this.thu = thu;
         return this;
@@ -52,6 +57,7 @@ public class BusinessHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tue")
     public BusinessHourViewModel tue;
+
     public BusinessHoursViewModel withTue(BusinessHourViewModel tue) {
         this.tue = tue;
         return this;
@@ -60,9 +66,11 @@ public class BusinessHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wed")
     public BusinessHourViewModel wed;
+
     public BusinessHoursViewModel withWed(BusinessHourViewModel wed) {
         this.wed = wed;
         return this;
     }
     
+    public BusinessHoursViewModel(){}
 }

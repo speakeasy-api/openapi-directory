@@ -16,9 +16,11 @@ public class LegacyTrackingChannelCatalogListLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public LinksGetLegacyTrackingChannelCatalogsLink self;
+
     public LegacyTrackingChannelCatalogListLinks withSelf(LinksGetLegacyTrackingChannelCatalogsLink self) {
         this.self = self;
         return this;
     }
     
+    public LegacyTrackingChannelCatalogListLinks(){}
 }

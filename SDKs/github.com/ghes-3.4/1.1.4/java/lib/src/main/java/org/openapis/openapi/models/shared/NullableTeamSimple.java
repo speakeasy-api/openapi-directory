@@ -17,6 +17,7 @@ public class NullableTeamSimple {
      */
     @JsonProperty("description")
     public String description;
+
     public NullableTeamSimple withDescription(String description) {
         this.description = description;
         return this;
@@ -24,6 +25,7 @@ public class NullableTeamSimple {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public NullableTeamSimple withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -34,6 +36,7 @@ public class NullableTeamSimple {
      */
     @JsonProperty("id")
     public Long id;
+
     public NullableTeamSimple withId(Long id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class NullableTeamSimple {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_dn")
     public String ldapDn;
+
     public NullableTeamSimple withLdapDn(String ldapDn) {
         this.ldapDn = ldapDn;
         return this;
@@ -52,6 +56,7 @@ public class NullableTeamSimple {
     
     @JsonProperty("members_url")
     public String membersUrl;
+
     public NullableTeamSimple withMembersUrl(String membersUrl) {
         this.membersUrl = membersUrl;
         return this;
@@ -62,6 +67,7 @@ public class NullableTeamSimple {
      */
     @JsonProperty("name")
     public String name;
+
     public NullableTeamSimple withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +75,7 @@ public class NullableTeamSimple {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public NullableTeamSimple withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -79,6 +86,7 @@ public class NullableTeamSimple {
      */
     @JsonProperty("permission")
     public String permission;
+
     public NullableTeamSimple withPermission(String permission) {
         this.permission = permission;
         return this;
@@ -90,6 +98,7 @@ public class NullableTeamSimple {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy")
     public String privacy;
+
     public NullableTeamSimple withPrivacy(String privacy) {
         this.privacy = privacy;
         return this;
@@ -97,6 +106,7 @@ public class NullableTeamSimple {
     
     @JsonProperty("repositories_url")
     public String repositoriesUrl;
+
     public NullableTeamSimple withRepositoriesUrl(String repositoriesUrl) {
         this.repositoriesUrl = repositoriesUrl;
         return this;
@@ -104,6 +114,7 @@ public class NullableTeamSimple {
     
     @JsonProperty("slug")
     public String slug;
+
     public NullableTeamSimple withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -114,9 +125,22 @@ public class NullableTeamSimple {
      */
     @JsonProperty("url")
     public String url;
+
     public NullableTeamSimple withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public NullableTeamSimple(@JsonProperty("description") String description, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("members_url") String membersUrl, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("permission") String permission, @JsonProperty("repositories_url") String repositoriesUrl, @JsonProperty("slug") String slug, @JsonProperty("url") String url) {
+        this.description = description;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.membersUrl = membersUrl;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.permission = permission;
+        this.repositoriesUrl = repositoriesUrl;
+        this.slug = slug;
+        this.url = url;
+  }
 }

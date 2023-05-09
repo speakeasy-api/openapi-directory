@@ -18,6 +18,7 @@ public class StructuredQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endAt")
     public Cursor endAt;
+
     public StructuredQuery withEndAt(Cursor endAt) {
         this.endAt = endAt;
         return this;
@@ -29,6 +30,7 @@ public class StructuredQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public CollectionSelector[] from;
+
     public StructuredQuery withFrom(CollectionSelector[] from) {
         this.from = from;
         return this;
@@ -40,6 +42,7 @@ public class StructuredQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public StructuredQuery withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -51,6 +54,7 @@ public class StructuredQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public StructuredQuery withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -62,6 +66,7 @@ public class StructuredQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public Order[] orderBy;
+
     public StructuredQuery withOrderBy(Order[] orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -73,6 +78,7 @@ public class StructuredQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("select")
     public Projection select;
+
     public StructuredQuery withSelect(Projection select) {
         this.select = select;
         return this;
@@ -84,6 +90,7 @@ public class StructuredQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startAt")
     public Cursor startAt;
+
     public StructuredQuery withStartAt(Cursor startAt) {
         this.startAt = startAt;
         return this;
@@ -95,9 +102,11 @@ public class StructuredQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("where")
     public Filter where;
+
     public StructuredQuery withWhere(Filter where) {
         this.where = where;
         return this;
     }
     
+    public StructuredQuery(){}
 }

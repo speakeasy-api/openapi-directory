@@ -19,6 +19,7 @@ public class OBReadDataConsentResponse1 {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBReadDataConsentResponse1 withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -31,6 +32,7 @@ public class OBReadDataConsentResponse1 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public OBReadDataConsentResponse1 withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -44,6 +46,7 @@ public class OBReadDataConsentResponse1 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDateTime")
     public OffsetDateTime expirationDateTime;
+
     public OBReadDataConsentResponse1 withExpirationDateTime(OffsetDateTime expirationDateTime) {
         this.expirationDateTime = expirationDateTime;
         return this;
@@ -54,6 +57,7 @@ public class OBReadDataConsentResponse1 {
      */
     @JsonProperty("Permissions")
     public OBExternalPermissions1CodeEnum[] permissions;
+
     public OBReadDataConsentResponse1 withPermissions(OBExternalPermissions1CodeEnum[] permissions) {
         this.permissions = permissions;
         return this;
@@ -64,6 +68,7 @@ public class OBReadDataConsentResponse1 {
      */
     @JsonProperty("Status")
     public OBExternalRequestStatus1CodeEnum status;
+
     public OBReadDataConsentResponse1 withStatus(OBExternalRequestStatus1CodeEnum status) {
         this.status = status;
         return this;
@@ -76,6 +81,7 @@ public class OBReadDataConsentResponse1 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StatusUpdateDateTime")
     public OffsetDateTime statusUpdateDateTime;
+
     public OBReadDataConsentResponse1 withStatusUpdateDateTime(OffsetDateTime statusUpdateDateTime) {
         this.statusUpdateDateTime = statusUpdateDateTime;
         return this;
@@ -89,6 +95,7 @@ public class OBReadDataConsentResponse1 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TransactionFromDateTime")
     public OffsetDateTime transactionFromDateTime;
+
     public OBReadDataConsentResponse1 withTransactionFromDateTime(OffsetDateTime transactionFromDateTime) {
         this.transactionFromDateTime = transactionFromDateTime;
         return this;
@@ -102,9 +109,17 @@ public class OBReadDataConsentResponse1 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TransactionToDateTime")
     public OffsetDateTime transactionToDateTime;
+
     public OBReadDataConsentResponse1 withTransactionToDateTime(OffsetDateTime transactionToDateTime) {
         this.transactionToDateTime = transactionToDateTime;
         return this;
     }
     
+    public OBReadDataConsentResponse1(@JsonProperty("ConsentId") String consentId, @JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("Permissions") OBExternalPermissions1CodeEnum[] permissions, @JsonProperty("Status") OBExternalRequestStatus1CodeEnum status, @JsonProperty("StatusUpdateDateTime") OffsetDateTime statusUpdateDateTime) {
+        this.consentId = consentId;
+        this.creationDateTime = creationDateTime;
+        this.permissions = permissions;
+        this.status = status;
+        this.statusUpdateDateTime = statusUpdateDateTime;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeNodeGetResponse {
@@ -12,6 +13,7 @@ public class ComputeNodeGetResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public ComputeNodeGetResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class ComputeNodeGetResponse {
     
     
     public org.openapis.openapi.models.shared.ComputeNode computeNode;
+
     public ComputeNodeGetResponse withComputeNode(org.openapis.openapi.models.shared.ComputeNode computeNode) {
         this.computeNode = computeNode;
         return this;
@@ -26,6 +29,7 @@ public class ComputeNodeGetResponse {
     
     
     public String contentType;
+
     public ComputeNodeGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class ComputeNodeGetResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ComputeNodeGetResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -40,6 +45,7 @@ public class ComputeNodeGetResponse {
     
     
     public Integer statusCode;
+
     public ComputeNodeGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class ComputeNodeGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeNodeGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeNodeGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GetRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemList")
     public PredictedItem[] itemList;
+
     public GetRecommendationsResponse withItemList(PredictedItem[] itemList) {
         this.itemList = itemList;
         return this;
@@ -23,9 +24,11 @@ public class GetRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationId")
     public String recommendationId;
+
     public GetRecommendationsResponse withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
     }
     
+    public GetRecommendationsResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RedeemLoyaltyRewardRequest {
@@ -14,6 +15,7 @@ public class RedeemLoyaltyRewardRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RedeemLoyaltyRewardRequest redeemLoyaltyRewardRequest;
+
     public RedeemLoyaltyRewardRequest withRedeemLoyaltyRewardRequest(org.openapis.openapi.models.shared.RedeemLoyaltyRewardRequest redeemLoyaltyRewardRequest) {
         this.redeemLoyaltyRewardRequest = redeemLoyaltyRewardRequest;
         return this;
@@ -24,9 +26,14 @@ public class RedeemLoyaltyRewardRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reward_id")
     public String rewardId;
+
     public RedeemLoyaltyRewardRequest withRewardId(String rewardId) {
         this.rewardId = rewardId;
         return this;
     }
     
+    public RedeemLoyaltyRewardRequest(@JsonProperty("RedeemLoyaltyRewardRequest") org.openapis.openapi.models.shared.RedeemLoyaltyRewardRequest redeemLoyaltyRewardRequest, @JsonProperty("reward_id") String rewardId) {
+        this.redeemLoyaltyRewardRequest = redeemLoyaltyRewardRequest;
+        this.rewardId = rewardId;
+  }
 }

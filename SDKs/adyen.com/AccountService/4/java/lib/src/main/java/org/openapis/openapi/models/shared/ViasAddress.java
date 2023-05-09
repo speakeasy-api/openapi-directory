@@ -15,6 +15,7 @@ public class ViasAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public ViasAddress withCity(String city) {
         this.city = city;
         return this;
@@ -26,6 +27,7 @@ public class ViasAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ViasAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -37,6 +39,7 @@ public class ViasAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("houseNumberOrName")
     public String houseNumberOrName;
+
     public ViasAddress withHouseNumberOrName(String houseNumberOrName) {
         this.houseNumberOrName = houseNumberOrName;
         return this;
@@ -54,6 +57,7 @@ public class ViasAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public ViasAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -72,6 +76,7 @@ public class ViasAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateOrProvince")
     public String stateOrProvince;
+
     public ViasAddress withStateOrProvince(String stateOrProvince) {
         this.stateOrProvince = stateOrProvince;
         return this;
@@ -83,9 +88,11 @@ public class ViasAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street")
     public String street;
+
     public ViasAddress withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public ViasAddress(){}
 }

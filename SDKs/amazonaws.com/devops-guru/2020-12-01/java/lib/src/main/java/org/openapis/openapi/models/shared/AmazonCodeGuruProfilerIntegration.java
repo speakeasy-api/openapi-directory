@@ -15,9 +15,11 @@ public class AmazonCodeGuruProfilerIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EventSourceOptInStatusEnum status;
+
     public AmazonCodeGuruProfilerIntegration withStatus(EventSourceOptInStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AmazonCodeGuruProfilerIntegration(){}
 }

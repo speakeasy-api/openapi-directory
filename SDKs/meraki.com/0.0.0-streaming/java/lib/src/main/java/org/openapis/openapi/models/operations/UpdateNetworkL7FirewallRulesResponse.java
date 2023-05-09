@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNetworkL7FirewallRulesResponse {
     
     public String contentType;
+
     public UpdateNetworkL7FirewallRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateNetworkL7FirewallRulesResponse {
     
     
     public Integer statusCode;
+
     public UpdateNetworkL7FirewallRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateNetworkL7FirewallRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNetworkL7FirewallRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class UpdateNetworkL7FirewallRulesResponse {
      */
     
     public java.util.Map<String, Object> updateNetworkL7FirewallRules200ApplicationJSONObject;
+
     public UpdateNetworkL7FirewallRulesResponse withUpdateNetworkL7FirewallRules200ApplicationJSONObject(java.util.Map<String, Object> updateNetworkL7FirewallRules200ApplicationJSONObject) {
         this.updateNetworkL7FirewallRules200ApplicationJSONObject = updateNetworkL7FirewallRules200ApplicationJSONObject;
         return this;
     }
     
+    public UpdateNetworkL7FirewallRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

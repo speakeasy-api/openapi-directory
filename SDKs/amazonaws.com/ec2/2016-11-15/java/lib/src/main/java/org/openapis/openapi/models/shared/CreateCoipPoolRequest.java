@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateCoipPoolRequest {
     
     public Boolean dryRun;
+
     public CreateCoipPoolRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateCoipPoolRequest {
     
     
     public String localGatewayRouteTableId;
+
     public CreateCoipPoolRequest withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -23,9 +25,13 @@ public class CreateCoipPoolRequest {
     
     
     public CreateCoipPoolRequestTagSpecifications[] tagSpecifications;
+
     public CreateCoipPoolRequest withTagSpecifications(CreateCoipPoolRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateCoipPoolRequest(@JsonProperty("LocalGatewayRouteTableId") String localGatewayRouteTableId) {
+        this.localGatewayRouteTableId = localGatewayRouteTableId;
+  }
 }

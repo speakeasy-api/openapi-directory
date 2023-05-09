@@ -12,9 +12,11 @@ public class GetNumbersIsTriangleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public Long number;
+
     public GetNumbersIsTriangleRequest withNumber(Long number) {
         this.number = number;
         return this;
     }
     
+    public GetNumbersIsTriangleRequest(){}
 }

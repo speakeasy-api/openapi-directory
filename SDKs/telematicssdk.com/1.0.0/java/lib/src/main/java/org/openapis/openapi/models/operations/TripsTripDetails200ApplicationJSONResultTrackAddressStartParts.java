@@ -12,6 +12,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackAddressStartParts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public TripsTripDetails200ApplicationJSONResultTrackAddressStartParts withCity(String city) {
         this.city = city;
         return this;
@@ -20,6 +21,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackAddressStartParts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountryCode")
     public String countryCode;
+
     public TripsTripDetails200ApplicationJSONResultTrackAddressStartParts withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -28,6 +30,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackAddressStartParts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("District")
     public String district;
+
     public TripsTripDetails200ApplicationJSONResultTrackAddressStartParts withDistrict(String district) {
         this.district = district;
         return this;
@@ -36,6 +39,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackAddressStartParts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("House")
     public String house;
+
     public TripsTripDetails200ApplicationJSONResultTrackAddressStartParts withHouse(String house) {
         this.house = house;
         return this;
@@ -44,6 +48,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackAddressStartParts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostalCode")
     public String postalCode;
+
     public TripsTripDetails200ApplicationJSONResultTrackAddressStartParts withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -52,9 +57,11 @@ public class TripsTripDetails200ApplicationJSONResultTrackAddressStartParts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Street")
     public String street;
+
     public TripsTripDetails200ApplicationJSONResultTrackAddressStartParts withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public TripsTripDetails200ApplicationJSONResultTrackAddressStartParts(){}
 }

@@ -18,6 +18,7 @@ public class SecurityMarks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canonicalName")
     public String canonicalName;
+
     public SecurityMarks withCanonicalName(String canonicalName) {
         this.canonicalName = canonicalName;
         return this;
@@ -29,6 +30,7 @@ public class SecurityMarks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marks")
     public java.util.Map<String, String> marks;
+
     public SecurityMarks withMarks(java.util.Map<String, String> marks) {
         this.marks = marks;
         return this;
@@ -40,9 +42,11 @@ public class SecurityMarks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SecurityMarks withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SecurityMarks(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateIdentityProviderResponse {
@@ -12,6 +13,7 @@ public class CreateIdentityProviderResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateIdentityProviderResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateIdentityProviderResponse {
      */
     
     public Object conflictException;
+
     public CreateIdentityProviderResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateIdentityProviderResponse {
     
     
     public String contentType;
+
     public CreateIdentityProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateIdentityProviderResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateIdentityProviderResponse createIdentityProviderResponse;
+
     public CreateIdentityProviderResponse withCreateIdentityProviderResponse(org.openapis.openapi.models.shared.CreateIdentityProviderResponse createIdentityProviderResponse) {
         this.createIdentityProviderResponse = createIdentityProviderResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateIdentityProviderResponse {
      */
     
     public Object internalServerException;
+
     public CreateIdentityProviderResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateIdentityProviderResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateIdentityProviderResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateIdentityProviderResponse {
     
     
     public Integer statusCode;
+
     public CreateIdentityProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateIdentityProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateIdentityProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateIdentityProviderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateIdentityProviderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class CreateIdentityProviderResponse {
      */
     
     public Object throttlingException;
+
     public CreateIdentityProviderResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateIdentityProviderResponse {
      */
     
     public Object validationException;
+
     public CreateIdentityProviderResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateIdentityProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

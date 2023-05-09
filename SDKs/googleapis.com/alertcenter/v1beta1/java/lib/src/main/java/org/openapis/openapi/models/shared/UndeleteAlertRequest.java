@@ -18,9 +18,11 @@ public class UndeleteAlertRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public UndeleteAlertRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public UndeleteAlertRequest(){}
 }

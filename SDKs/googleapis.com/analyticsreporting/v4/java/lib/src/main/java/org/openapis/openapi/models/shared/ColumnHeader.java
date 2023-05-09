@@ -18,6 +18,7 @@ public class ColumnHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public String[] dimensions;
+
     public ColumnHeader withDimensions(String[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -29,9 +30,11 @@ public class ColumnHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricHeader")
     public MetricHeader metricHeader;
+
     public ColumnHeader withMetricHeader(MetricHeader metricHeader) {
         this.metricHeader = metricHeader;
         return this;
     }
     
+    public ColumnHeader(){}
 }

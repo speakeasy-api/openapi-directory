@@ -15,6 +15,7 @@ public class PullRequestTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationCommit")
     public String destinationCommit;
+
     public PullRequestTarget withDestinationCommit(String destinationCommit) {
         this.destinationCommit = destinationCommit;
         return this;
@@ -23,6 +24,7 @@ public class PullRequestTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationReference")
     public String destinationReference;
+
     public PullRequestTarget withDestinationReference(String destinationReference) {
         this.destinationReference = destinationReference;
         return this;
@@ -31,6 +33,7 @@ public class PullRequestTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeBase")
     public String mergeBase;
+
     public PullRequestTarget withMergeBase(String mergeBase) {
         this.mergeBase = mergeBase;
         return this;
@@ -39,6 +42,7 @@ public class PullRequestTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeMetadata")
     public MergeMetadata mergeMetadata;
+
     public PullRequestTarget withMergeMetadata(MergeMetadata mergeMetadata) {
         this.mergeMetadata = mergeMetadata;
         return this;
@@ -47,6 +51,7 @@ public class PullRequestTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public PullRequestTarget withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -55,6 +60,7 @@ public class PullRequestTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceCommit")
     public String sourceCommit;
+
     public PullRequestTarget withSourceCommit(String sourceCommit) {
         this.sourceCommit = sourceCommit;
         return this;
@@ -63,9 +69,11 @@ public class PullRequestTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceReference")
     public String sourceReference;
+
     public PullRequestTarget withSourceReference(String sourceReference) {
         this.sourceReference = sourceReference;
         return this;
     }
     
+    public PullRequestTarget(){}
 }

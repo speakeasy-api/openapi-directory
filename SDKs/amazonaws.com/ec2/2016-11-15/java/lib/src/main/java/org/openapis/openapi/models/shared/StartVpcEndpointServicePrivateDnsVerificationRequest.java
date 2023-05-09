@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StartVpcEndpointServicePrivateDnsVerificationRequest {
     
     public Boolean dryRun;
+
     public StartVpcEndpointServicePrivateDnsVerificationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class StartVpcEndpointServicePrivateDnsVerificationRequest {
     
     
     public String serviceId;
+
     public StartVpcEndpointServicePrivateDnsVerificationRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public StartVpcEndpointServicePrivateDnsVerificationRequest(@JsonProperty("ServiceId") String serviceId) {
+        this.serviceId = serviceId;
+  }
 }

@@ -129,6 +129,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -153,11 +158,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfsSlatesByDateResponse res = new org.openapis.openapi.models.operations.DfsSlatesByDateResponse() {{
+        org.openapis.openapi.models.operations.DfsSlatesByDateResponse res = new org.openapis.openapi.models.operations.DfsSlatesByDateResponse(contentType, httpRes.statusCode()) {{
             dfsSlates = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +196,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InjuredPlayersResponse res = new org.openapis.openapi.models.operations.InjuredPlayersResponse() {{
+        org.openapis.openapi.models.operations.InjuredPlayersResponse res = new org.openapis.openapi.models.operations.InjuredPlayersResponse(contentType, httpRes.statusCode()) {{
             players = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -232,11 +233,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesResponse res = new org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesResponse() {{
+        org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesResponse res = new org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesResponse(contentType, httpRes.statusCode()) {{
             playerGameProjections = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -271,11 +270,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesResponse res = new org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesResponse() {{
+        org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesResponse res = new org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesResponse(contentType, httpRes.statusCode()) {{
             playerGameProjection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -311,11 +308,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartingGoaltendersByDateResponse res = new org.openapis.openapi.models.operations.StartingGoaltendersByDateResponse() {{
+        org.openapis.openapi.models.operations.StartingGoaltendersByDateResponse res = new org.openapis.openapi.models.operations.StartingGoaltendersByDateResponse(contentType, httpRes.statusCode()) {{
             startingGoaltenders = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

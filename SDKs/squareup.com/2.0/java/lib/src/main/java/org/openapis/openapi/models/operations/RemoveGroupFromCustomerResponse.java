@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveGroupFromCustomerResponse {
     
     public String contentType;
+
     public RemoveGroupFromCustomerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemoveGroupFromCustomerResponse {
      */
     
     public org.openapis.openapi.models.shared.RemoveGroupFromCustomerResponse removeGroupFromCustomerResponse;
+
     public RemoveGroupFromCustomerResponse withRemoveGroupFromCustomerResponse(org.openapis.openapi.models.shared.RemoveGroupFromCustomerResponse removeGroupFromCustomerResponse) {
         this.removeGroupFromCustomerResponse = removeGroupFromCustomerResponse;
         return this;
@@ -26,6 +29,7 @@ public class RemoveGroupFromCustomerResponse {
     
     
     public Integer statusCode;
+
     public RemoveGroupFromCustomerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RemoveGroupFromCustomerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveGroupFromCustomerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemoveGroupFromCustomerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

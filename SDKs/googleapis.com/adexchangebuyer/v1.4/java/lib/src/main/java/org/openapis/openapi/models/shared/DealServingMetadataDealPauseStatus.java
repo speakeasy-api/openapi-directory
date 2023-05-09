@@ -15,6 +15,7 @@ public class DealServingMetadataDealPauseStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyerPauseReason")
     public String buyerPauseReason;
+
     public DealServingMetadataDealPauseStatus withBuyerPauseReason(String buyerPauseReason) {
         this.buyerPauseReason = buyerPauseReason;
         return this;
@@ -26,6 +27,7 @@ public class DealServingMetadataDealPauseStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstPausedBy")
     public String firstPausedBy;
+
     public DealServingMetadataDealPauseStatus withFirstPausedBy(String firstPausedBy) {
         this.firstPausedBy = firstPausedBy;
         return this;
@@ -34,6 +36,7 @@ public class DealServingMetadataDealPauseStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasBuyerPaused")
     public Boolean hasBuyerPaused;
+
     public DealServingMetadataDealPauseStatus withHasBuyerPaused(Boolean hasBuyerPaused) {
         this.hasBuyerPaused = hasBuyerPaused;
         return this;
@@ -42,6 +45,7 @@ public class DealServingMetadataDealPauseStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasSellerPaused")
     public Boolean hasSellerPaused;
+
     public DealServingMetadataDealPauseStatus withHasSellerPaused(Boolean hasSellerPaused) {
         this.hasSellerPaused = hasSellerPaused;
         return this;
@@ -50,9 +54,11 @@ public class DealServingMetadataDealPauseStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerPauseReason")
     public String sellerPauseReason;
+
     public DealServingMetadataDealPauseStatus withSellerPauseReason(String sellerPauseReason) {
         this.sellerPauseReason = sellerPauseReason;
         return this;
     }
     
+    public DealServingMetadataDealPauseStatus(){}
 }

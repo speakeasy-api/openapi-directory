@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataSubjectRightExportRequestDefaultApplicationJSONError {
     @JsonProperty("code")
     public DataSubjectRightExportRequestDefaultApplicationJSONErrorCodeEnum code;
+
     public DataSubjectRightExportRequestDefaultApplicationJSONError withCode(DataSubjectRightExportRequestDefaultApplicationJSONErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -16,9 +17,14 @@ public class DataSubjectRightExportRequestDefaultApplicationJSONError {
     
     @JsonProperty("message")
     public String message;
+
     public DataSubjectRightExportRequestDefaultApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DataSubjectRightExportRequestDefaultApplicationJSONError(@JsonProperty("code") DataSubjectRightExportRequestDefaultApplicationJSONErrorCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

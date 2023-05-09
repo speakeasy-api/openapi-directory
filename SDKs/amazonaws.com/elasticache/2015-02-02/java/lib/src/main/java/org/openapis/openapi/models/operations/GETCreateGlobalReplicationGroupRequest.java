@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateGlobalReplicationGroupRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCreateGlobalReplicationGroupActionEnum action;
+
     public GETCreateGlobalReplicationGroupRequest withAction(GETCreateGlobalReplicationGroupActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETCreateGlobalReplicationGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalReplicationGroupDescription")
     public String globalReplicationGroupDescription;
+
     public GETCreateGlobalReplicationGroupRequest withGlobalReplicationGroupDescription(String globalReplicationGroupDescription) {
         this.globalReplicationGroupDescription = globalReplicationGroupDescription;
         return this;
@@ -29,6 +32,7 @@ public class GETCreateGlobalReplicationGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalReplicationGroupIdSuffix")
     public String globalReplicationGroupIdSuffix;
+
     public GETCreateGlobalReplicationGroupRequest withGlobalReplicationGroupIdSuffix(String globalReplicationGroupIdSuffix) {
         this.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
         return this;
@@ -39,6 +43,7 @@ public class GETCreateGlobalReplicationGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrimaryReplicationGroupId")
     public String primaryReplicationGroupId;
+
     public GETCreateGlobalReplicationGroupRequest withPrimaryReplicationGroupId(String primaryReplicationGroupId) {
         this.primaryReplicationGroupId = primaryReplicationGroupId;
         return this;
@@ -46,6 +51,7 @@ public class GETCreateGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCreateGlobalReplicationGroupVersionEnum version;
+
     public GETCreateGlobalReplicationGroupRequest withVersion(GETCreateGlobalReplicationGroupVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETCreateGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCreateGlobalReplicationGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETCreateGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCreateGlobalReplicationGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETCreateGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCreateGlobalReplicationGroupRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETCreateGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCreateGlobalReplicationGroupRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETCreateGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCreateGlobalReplicationGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETCreateGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCreateGlobalReplicationGroupRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETCreateGlobalReplicationGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCreateGlobalReplicationGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCreateGlobalReplicationGroupRequest(@JsonProperty("Action") GETCreateGlobalReplicationGroupActionEnum action, @JsonProperty("GlobalReplicationGroupIdSuffix") String globalReplicationGroupIdSuffix, @JsonProperty("PrimaryReplicationGroupId") String primaryReplicationGroupId, @JsonProperty("Version") GETCreateGlobalReplicationGroupVersionEnum version) {
+        this.action = action;
+        this.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
+        this.primaryReplicationGroupId = primaryReplicationGroupId;
+        this.version = version;
+  }
 }

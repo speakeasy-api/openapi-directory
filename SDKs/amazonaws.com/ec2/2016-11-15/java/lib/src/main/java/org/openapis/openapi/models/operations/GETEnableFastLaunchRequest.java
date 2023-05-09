@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnableFastLaunchRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETEnableFastLaunchActionEnum action;
+
     public GETEnableFastLaunchRequest withAction(GETEnableFastLaunchActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETEnableFastLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETEnableFastLaunchRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETEnableFastLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ImageId")
     public String imageId;
+
     public GETEnableFastLaunchRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -39,6 +43,7 @@ public class GETEnableFastLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LaunchTemplate")
     public GETEnableFastLaunchLaunchTemplate launchTemplate;
+
     public GETEnableFastLaunchRequest withLaunchTemplate(GETEnableFastLaunchLaunchTemplate launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -49,6 +54,7 @@ public class GETEnableFastLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxParallelLaunches")
     public Long maxParallelLaunches;
+
     public GETEnableFastLaunchRequest withMaxParallelLaunches(Long maxParallelLaunches) {
         this.maxParallelLaunches = maxParallelLaunches;
         return this;
@@ -59,6 +65,7 @@ public class GETEnableFastLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceType")
     public String resourceType;
+
     public GETEnableFastLaunchRequest withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -69,6 +76,7 @@ public class GETEnableFastLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotConfiguration")
     public GETEnableFastLaunchSnapshotConfiguration snapshotConfiguration;
+
     public GETEnableFastLaunchRequest withSnapshotConfiguration(GETEnableFastLaunchSnapshotConfiguration snapshotConfiguration) {
         this.snapshotConfiguration = snapshotConfiguration;
         return this;
@@ -76,6 +84,7 @@ public class GETEnableFastLaunchRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETEnableFastLaunchVersionEnum version;
+
     public GETEnableFastLaunchRequest withVersion(GETEnableFastLaunchVersionEnum version) {
         this.version = version;
         return this;
@@ -83,6 +92,7 @@ public class GETEnableFastLaunchRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETEnableFastLaunchRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -90,6 +100,7 @@ public class GETEnableFastLaunchRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETEnableFastLaunchRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -97,6 +108,7 @@ public class GETEnableFastLaunchRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETEnableFastLaunchRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -104,6 +116,7 @@ public class GETEnableFastLaunchRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETEnableFastLaunchRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -111,6 +124,7 @@ public class GETEnableFastLaunchRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETEnableFastLaunchRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -118,6 +132,7 @@ public class GETEnableFastLaunchRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETEnableFastLaunchRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -125,9 +140,15 @@ public class GETEnableFastLaunchRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETEnableFastLaunchRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETEnableFastLaunchRequest(@JsonProperty("Action") GETEnableFastLaunchActionEnum action, @JsonProperty("ImageId") String imageId, @JsonProperty("Version") GETEnableFastLaunchVersionEnum version) {
+        this.action = action;
+        this.imageId = imageId;
+        this.version = version;
+  }
 }

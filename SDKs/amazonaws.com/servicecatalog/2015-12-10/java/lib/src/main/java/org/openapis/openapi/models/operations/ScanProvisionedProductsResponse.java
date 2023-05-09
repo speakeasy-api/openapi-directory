@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ScanProvisionedProductsResponse {
     
     public String contentType;
+
     public ScanProvisionedProductsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ScanProvisionedProductsResponse {
      */
     
     public Object invalidParametersException;
+
     public ScanProvisionedProductsResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class ScanProvisionedProductsResponse {
      */
     
     public org.openapis.openapi.models.shared.ScanProvisionedProductsOutput scanProvisionedProductsOutput;
+
     public ScanProvisionedProductsResponse withScanProvisionedProductsOutput(org.openapis.openapi.models.shared.ScanProvisionedProductsOutput scanProvisionedProductsOutput) {
         this.scanProvisionedProductsOutput = scanProvisionedProductsOutput;
         return this;
@@ -36,6 +40,7 @@ public class ScanProvisionedProductsResponse {
     
     
     public Integer statusCode;
+
     public ScanProvisionedProductsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ScanProvisionedProductsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ScanProvisionedProductsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ScanProvisionedProductsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLendingAnalysisSummaryResponse {
@@ -12,6 +13,7 @@ public class GetLendingAnalysisSummaryResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLendingAnalysisSummaryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetLendingAnalysisSummaryResponse {
     
     
     public String contentType;
+
     public GetLendingAnalysisSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetLendingAnalysisSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLendingAnalysisSummaryResponse getLendingAnalysisSummaryResponse;
+
     public GetLendingAnalysisSummaryResponse withGetLendingAnalysisSummaryResponse(org.openapis.openapi.models.shared.GetLendingAnalysisSummaryResponse getLendingAnalysisSummaryResponse) {
         this.getLendingAnalysisSummaryResponse = getLendingAnalysisSummaryResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetLendingAnalysisSummaryResponse {
      */
     
     public Object internalServerError;
+
     public GetLendingAnalysisSummaryResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetLendingAnalysisSummaryResponse {
      */
     
     public Object invalidJobIdException;
+
     public GetLendingAnalysisSummaryResponse withInvalidJobIdException(Object invalidJobIdException) {
         this.invalidJobIdException = invalidJobIdException;
         return this;
@@ -59,6 +65,7 @@ public class GetLendingAnalysisSummaryResponse {
      */
     
     public Object invalidKMSKeyException;
+
     public GetLendingAnalysisSummaryResponse withInvalidKMSKeyException(Object invalidKMSKeyException) {
         this.invalidKMSKeyException = invalidKMSKeyException;
         return this;
@@ -69,6 +76,7 @@ public class GetLendingAnalysisSummaryResponse {
      */
     
     public Object invalidParameterException;
+
     public GetLendingAnalysisSummaryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class GetLendingAnalysisSummaryResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public GetLendingAnalysisSummaryResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -89,6 +98,7 @@ public class GetLendingAnalysisSummaryResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetLendingAnalysisSummaryResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -96,6 +106,7 @@ public class GetLendingAnalysisSummaryResponse {
     
     
     public Integer statusCode;
+
     public GetLendingAnalysisSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class GetLendingAnalysisSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLendingAnalysisSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class GetLendingAnalysisSummaryResponse {
      */
     
     public Object throttlingException;
+
     public GetLendingAnalysisSummaryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetLendingAnalysisSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

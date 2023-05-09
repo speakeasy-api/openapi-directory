@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateResponse(contentType, httpRes.statusCode()) {{
             api = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse(contentType, httpRes.statusCode()) {{
             apiDeployment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsListResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsListResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsListResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsListResponse(contentType, httpRes.statusCode()) {{
             listApiDeploymentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisListResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisListResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisListResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisListResponse(contentType, httpRes.statusCode()) {{
             listApisResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsCreateResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsCreateResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsCreateResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsCreateResponse(contentType, httpRes.statusCode()) {{
             apiVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsListResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsListResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsListResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsListResponse(contentType, httpRes.statusCode()) {{
             listApiVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreateResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreateResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreateResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreateResponse(contentType, httpRes.statusCode()) {{
             apiSpec = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionResponse(contentType, httpRes.statusCode()) {{
             apiSpec = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,11 +420,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListResponse(contentType, httpRes.statusCode()) {{
             listApiSpecsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,11 +464,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsResponse(contentType, httpRes.statusCode()) {{
             listApiSpecRevisionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -530,11 +510,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchResponse(contentType, httpRes.statusCode()) {{
             apiSpec = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackResponse(contentType, httpRes.statusCode()) {{
             apiSpec = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionResponse(contentType, httpRes.statusCode()) {{
             apiSpec = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,11 +648,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsCreateResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsCreateResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsCreateResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsCreateResponse(contentType, httpRes.statusCode()) {{
             artifact = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -720,11 +692,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsGetContentsResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsGetContentsResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsGetContentsResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsGetContentsResponse(contentType, httpRes.statusCode()) {{
             httpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -766,11 +736,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsListResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsListResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsListResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsListResponse(contentType, httpRes.statusCode()) {{
             listArtifactsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -814,11 +782,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse(contentType, httpRes.statusCode()) {{
             artifact = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -862,11 +828,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsInstancesCreateResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsInstancesCreateResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsInstancesCreateResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsInstancesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -908,11 +872,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -956,11 +918,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1002,11 +962,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1048,11 +1006,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1094,11 +1050,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1140,11 +1094,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1188,11 +1140,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1236,11 +1186,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

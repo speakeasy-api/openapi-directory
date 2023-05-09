@@ -21,6 +21,7 @@ public class OrganizationActionsSecret {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public OrganizationActionsSecret withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +32,7 @@ public class OrganizationActionsSecret {
      */
     @JsonProperty("name")
     public String name;
+
     public OrganizationActionsSecret withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +41,7 @@ public class OrganizationActionsSecret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected_repositories_url")
     public String selectedRepositoriesUrl;
+
     public OrganizationActionsSecret withSelectedRepositoriesUrl(String selectedRepositoriesUrl) {
         this.selectedRepositoriesUrl = selectedRepositoriesUrl;
         return this;
@@ -48,6 +51,7 @@ public class OrganizationActionsSecret {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public OrganizationActionsSecret withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -58,9 +62,16 @@ public class OrganizationActionsSecret {
      */
     @JsonProperty("visibility")
     public OrganizationActionsSecretVisibilityEnum visibility;
+
     public OrganizationActionsSecret withVisibility(OrganizationActionsSecretVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public OrganizationActionsSecret(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("name") String name, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("visibility") OrganizationActionsSecretVisibilityEnum visibility) {
+        this.createdAt = createdAt;
+        this.name = name;
+        this.updatedAt = updatedAt;
+        this.visibility = visibility;
+  }
 }

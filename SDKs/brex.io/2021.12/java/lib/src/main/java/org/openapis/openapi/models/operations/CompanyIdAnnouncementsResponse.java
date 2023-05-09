@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompanyIdAnnouncementsResponse {
@@ -12,6 +13,7 @@ public class CompanyIdAnnouncementsResponse {
      */
     
     public CompanyIdAnnouncements200ApplicationJSON[] companyIdAnnouncements200ApplicationJSONObjects;
+
     public CompanyIdAnnouncementsResponse withCompanyIdAnnouncements200ApplicationJSONObjects(CompanyIdAnnouncements200ApplicationJSON[] companyIdAnnouncements200ApplicationJSONObjects) {
         this.companyIdAnnouncements200ApplicationJSONObjects = companyIdAnnouncements200ApplicationJSONObjects;
         return this;
@@ -22,6 +24,7 @@ public class CompanyIdAnnouncementsResponse {
      */
     
     public CompanyIdAnnouncementsDefaultApplicationJSON companyIdAnnouncementsDefaultApplicationJSONObject;
+
     public CompanyIdAnnouncementsResponse withCompanyIdAnnouncementsDefaultApplicationJSONObject(CompanyIdAnnouncementsDefaultApplicationJSON companyIdAnnouncementsDefaultApplicationJSONObject) {
         this.companyIdAnnouncementsDefaultApplicationJSONObject = companyIdAnnouncementsDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class CompanyIdAnnouncementsResponse {
     
     
     public String contentType;
+
     public CompanyIdAnnouncementsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class CompanyIdAnnouncementsResponse {
     
     
     public Integer statusCode;
+
     public CompanyIdAnnouncementsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CompanyIdAnnouncementsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompanyIdAnnouncementsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CompanyIdAnnouncementsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

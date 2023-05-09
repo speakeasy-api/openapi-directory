@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingCustomEventsBatchinsertResponse {
     
     public String contentType;
+
     public DfareportingCustomEventsBatchinsertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DfareportingCustomEventsBatchinsertResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomEventsBatchInsertResponse customEventsBatchInsertResponse;
+
     public DfareportingCustomEventsBatchinsertResponse withCustomEventsBatchInsertResponse(org.openapis.openapi.models.shared.CustomEventsBatchInsertResponse customEventsBatchInsertResponse) {
         this.customEventsBatchInsertResponse = customEventsBatchInsertResponse;
         return this;
@@ -26,6 +29,7 @@ public class DfareportingCustomEventsBatchinsertResponse {
     
     
     public Integer statusCode;
+
     public DfareportingCustomEventsBatchinsertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingCustomEventsBatchinsertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingCustomEventsBatchinsertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DfareportingCustomEventsBatchinsertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

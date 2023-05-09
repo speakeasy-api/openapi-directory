@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTemplateResponse {
     
     public String contentType;
+
     public GetTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTemplateResponse {
     
     
     public Integer statusCode;
+
     public GetTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetTemplateResponse {
      */
     
     public GetTemplate200ApplicationJSON getTemplate200ApplicationJSONObject;
+
     public GetTemplateResponse withGetTemplate200ApplicationJSONObject(GetTemplate200ApplicationJSON getTemplate200ApplicationJSONObject) {
         this.getTemplate200ApplicationJSONObject = getTemplate200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetTemplateResponse {
      */
     
     public GetTemplate401ApplicationJSON getTemplate401ApplicationJSONObject;
+
     public GetTemplateResponse withGetTemplate401ApplicationJSONObject(GetTemplate401ApplicationJSON getTemplate401ApplicationJSONObject) {
         this.getTemplate401ApplicationJSONObject = getTemplate401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetTemplateResponse {
      */
     
     public GetTemplate403ApplicationJSON getTemplate403ApplicationJSONObject;
+
     public GetTemplateResponse withGetTemplate403ApplicationJSONObject(GetTemplate403ApplicationJSON getTemplate403ApplicationJSONObject) {
         this.getTemplate403ApplicationJSONObject = getTemplate403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetTemplateResponse {
      */
     
     public GetTemplate404ApplicationJSON getTemplate404ApplicationJSONObject;
+
     public GetTemplateResponse withGetTemplate404ApplicationJSONObject(GetTemplate404ApplicationJSON getTemplate404ApplicationJSONObject) {
         this.getTemplate404ApplicationJSONObject = getTemplate404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetTemplateResponse {
      */
     
     public GetTemplate422ApplicationJSON getTemplate422ApplicationJSONObject;
+
     public GetTemplateResponse withGetTemplate422ApplicationJSONObject(GetTemplate422ApplicationJSON getTemplate422ApplicationJSONObject) {
         this.getTemplate422ApplicationJSONObject = getTemplate422ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class GetTemplateResponse {
      */
     
     public GetTemplate500ApplicationJSON getTemplate500ApplicationJSONObject;
+
     public GetTemplateResponse withGetTemplate500ApplicationJSONObject(GetTemplate500ApplicationJSON getTemplate500ApplicationJSONObject) {
         this.getTemplate500ApplicationJSONObject = getTemplate500ApplicationJSONObject;
         return this;
     }
     
+    public GetTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

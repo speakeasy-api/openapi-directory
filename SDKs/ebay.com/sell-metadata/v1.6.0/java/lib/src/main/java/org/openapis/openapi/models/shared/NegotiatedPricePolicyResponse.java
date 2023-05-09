@@ -18,6 +18,7 @@ public class NegotiatedPricePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negotiatedPricePolicies")
     public NegotiatedPricePolicy[] negotiatedPricePolicies;
+
     public NegotiatedPricePolicyResponse withNegotiatedPricePolicies(NegotiatedPricePolicy[] negotiatedPricePolicies) {
         this.negotiatedPricePolicies = negotiatedPricePolicies;
         return this;
@@ -29,9 +30,11 @@ public class NegotiatedPricePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public Error[] warnings;
+
     public NegotiatedPricePolicyResponse withWarnings(Error[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public NegotiatedPricePolicyResponse(){}
 }

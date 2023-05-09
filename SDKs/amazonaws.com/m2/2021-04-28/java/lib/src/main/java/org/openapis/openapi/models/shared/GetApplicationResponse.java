@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetApplicationResponse {
     @JsonProperty("applicationArn")
     public String applicationArn;
+
     public GetApplicationResponse withApplicationArn(String applicationArn) {
         this.applicationArn = applicationArn;
         return this;
@@ -26,6 +27,7 @@ public class GetApplicationResponse {
     
     @JsonProperty("applicationId")
     public String applicationId;
+
     public GetApplicationResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -35,6 +37,7 @@ public class GetApplicationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetApplicationResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -43,6 +46,7 @@ public class GetApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployedVersion")
     public DeployedVersionSummary deployedVersion;
+
     public GetApplicationResponse withDeployedVersion(DeployedVersionSummary deployedVersion) {
         this.deployedVersion = deployedVersion;
         return this;
@@ -51,6 +55,7 @@ public class GetApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetApplicationResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -58,6 +63,7 @@ public class GetApplicationResponse {
     
     @JsonProperty("engineType")
     public EngineTypeEnum engineType;
+
     public GetApplicationResponse withEngineType(EngineTypeEnum engineType) {
         this.engineType = engineType;
         return this;
@@ -66,6 +72,7 @@ public class GetApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentId")
     public String environmentId;
+
     public GetApplicationResponse withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -74,6 +81,7 @@ public class GetApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public GetApplicationResponse withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -84,6 +92,7 @@ public class GetApplicationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStartTime")
     public OffsetDateTime lastStartTime;
+
     public GetApplicationResponse withLastStartTime(OffsetDateTime lastStartTime) {
         this.lastStartTime = lastStartTime;
         return this;
@@ -91,6 +100,7 @@ public class GetApplicationResponse {
     
     @JsonProperty("latestVersion")
     public ApplicationVersionSummary latestVersion;
+
     public GetApplicationResponse withLatestVersion(ApplicationVersionSummary latestVersion) {
         this.latestVersion = latestVersion;
         return this;
@@ -99,6 +109,7 @@ public class GetApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listenerArns")
     public String[] listenerArns;
+
     public GetApplicationResponse withListenerArns(String[] listenerArns) {
         this.listenerArns = listenerArns;
         return this;
@@ -107,6 +118,7 @@ public class GetApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listenerPorts")
     public Long[] listenerPorts;
+
     public GetApplicationResponse withListenerPorts(Long[] listenerPorts) {
         this.listenerPorts = listenerPorts;
         return this;
@@ -115,6 +127,7 @@ public class GetApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancerDnsName")
     public String loadBalancerDnsName;
+
     public GetApplicationResponse withLoadBalancerDnsName(String loadBalancerDnsName) {
         this.loadBalancerDnsName = loadBalancerDnsName;
         return this;
@@ -123,6 +136,7 @@ public class GetApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroups")
     public LogGroupSummary[] logGroups;
+
     public GetApplicationResponse withLogGroups(LogGroupSummary[] logGroups) {
         this.logGroups = logGroups;
         return this;
@@ -130,6 +144,7 @@ public class GetApplicationResponse {
     
     @JsonProperty("name")
     public String name;
+
     public GetApplicationResponse withName(String name) {
         this.name = name;
         return this;
@@ -137,6 +152,7 @@ public class GetApplicationResponse {
     
     @JsonProperty("status")
     public ApplicationLifecycleEnum status;
+
     public GetApplicationResponse withStatus(ApplicationLifecycleEnum status) {
         this.status = status;
         return this;
@@ -145,6 +161,7 @@ public class GetApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public GetApplicationResponse withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -153,6 +170,7 @@ public class GetApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetApplicationResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -161,9 +179,19 @@ public class GetApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetGroupArns")
     public String[] targetGroupArns;
+
     public GetApplicationResponse withTargetGroupArns(String[] targetGroupArns) {
         this.targetGroupArns = targetGroupArns;
         return this;
     }
     
+    public GetApplicationResponse(@JsonProperty("applicationArn") String applicationArn, @JsonProperty("applicationId") String applicationId, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("engineType") EngineTypeEnum engineType, @JsonProperty("latestVersion") ApplicationVersionSummary latestVersion, @JsonProperty("name") String name, @JsonProperty("status") ApplicationLifecycleEnum status) {
+        this.applicationArn = applicationArn;
+        this.applicationId = applicationId;
+        this.creationTime = creationTime;
+        this.engineType = engineType;
+        this.latestVersion = latestVersion;
+        this.name = name;
+        this.status = status;
+  }
 }

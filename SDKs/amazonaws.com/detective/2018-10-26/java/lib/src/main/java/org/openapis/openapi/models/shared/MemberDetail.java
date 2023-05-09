@@ -20,6 +20,7 @@ public class MemberDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public MemberDetail withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +29,7 @@ public class MemberDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdministratorId")
     public String administratorId;
+
     public MemberDetail withAdministratorId(String administratorId) {
         this.administratorId = administratorId;
         return this;
@@ -36,6 +38,7 @@ public class MemberDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasourcePackageIngestStates")
     public java.util.Map<String, DatasourcePackageIngestStateEnum> datasourcePackageIngestStates;
+
     public MemberDetail withDatasourcePackageIngestStates(java.util.Map<String, DatasourcePackageIngestStateEnum> datasourcePackageIngestStates) {
         this.datasourcePackageIngestStates = datasourcePackageIngestStates;
         return this;
@@ -44,6 +47,7 @@ public class MemberDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisabledReason")
     public MemberDisabledReasonEnum disabledReason;
+
     public MemberDetail withDisabledReason(MemberDisabledReasonEnum disabledReason) {
         this.disabledReason = disabledReason;
         return this;
@@ -52,6 +56,7 @@ public class MemberDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailAddress")
     public String emailAddress;
+
     public MemberDetail withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -60,6 +65,7 @@ public class MemberDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public MemberDetail withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
@@ -68,6 +74,7 @@ public class MemberDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvitationType")
     public InvitationTypeEnum invitationType;
+
     public MemberDetail withInvitationType(InvitationTypeEnum invitationType) {
         this.invitationType = invitationType;
         return this;
@@ -78,6 +85,7 @@ public class MemberDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("InvitedTime")
     public OffsetDateTime invitedTime;
+
     public MemberDetail withInvitedTime(OffsetDateTime invitedTime) {
         this.invitedTime = invitedTime;
         return this;
@@ -86,6 +94,7 @@ public class MemberDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterId")
     public String masterId;
+
     public MemberDetail withMasterId(String masterId) {
         this.masterId = masterId;
         return this;
@@ -94,6 +103,7 @@ public class MemberDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PercentOfGraphUtilization")
     public Double percentOfGraphUtilization;
+
     public MemberDetail withPercentOfGraphUtilization(Double percentOfGraphUtilization) {
         this.percentOfGraphUtilization = percentOfGraphUtilization;
         return this;
@@ -104,6 +114,7 @@ public class MemberDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("PercentOfGraphUtilizationUpdatedTime")
     public OffsetDateTime percentOfGraphUtilizationUpdatedTime;
+
     public MemberDetail withPercentOfGraphUtilizationUpdatedTime(OffsetDateTime percentOfGraphUtilizationUpdatedTime) {
         this.percentOfGraphUtilizationUpdatedTime = percentOfGraphUtilizationUpdatedTime;
         return this;
@@ -112,6 +123,7 @@ public class MemberDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public MemberStatusEnum status;
+
     public MemberDetail withStatus(MemberStatusEnum status) {
         this.status = status;
         return this;
@@ -122,6 +134,7 @@ public class MemberDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedTime")
     public OffsetDateTime updatedTime;
+
     public MemberDetail withUpdatedTime(OffsetDateTime updatedTime) {
         this.updatedTime = updatedTime;
         return this;
@@ -130,6 +143,7 @@ public class MemberDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeUsageByDatasourcePackage")
     public java.util.Map<String, DatasourcePackageUsageInfo> volumeUsageByDatasourcePackage;
+
     public MemberDetail withVolumeUsageByDatasourcePackage(java.util.Map<String, DatasourcePackageUsageInfo> volumeUsageByDatasourcePackage) {
         this.volumeUsageByDatasourcePackage = volumeUsageByDatasourcePackage;
         return this;
@@ -138,6 +152,7 @@ public class MemberDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeUsageInBytes")
     public Long volumeUsageInBytes;
+
     public MemberDetail withVolumeUsageInBytes(Long volumeUsageInBytes) {
         this.volumeUsageInBytes = volumeUsageInBytes;
         return this;
@@ -148,9 +163,11 @@ public class MemberDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("VolumeUsageUpdatedTime")
     public OffsetDateTime volumeUsageUpdatedTime;
+
     public MemberDetail withVolumeUsageUpdatedTime(OffsetDateTime volumeUsageUpdatedTime) {
         this.volumeUsageUpdatedTime = volumeUsageUpdatedTime;
         return this;
     }
     
+    public MemberDetail(){}
 }

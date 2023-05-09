@@ -15,6 +15,7 @@ public class Traveler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedAdultId")
     public String associatedAdultId;
+
     public Traveler withAssociatedAdultId(String associatedAdultId) {
         this.associatedAdultId = associatedAdultId;
         return this;
@@ -22,6 +23,7 @@ public class Traveler {
     
     @JsonProperty("id")
     public String id;
+
     public Traveler withId(String id) {
         this.id = id;
         return this;
@@ -34,9 +36,14 @@ public class Traveler {
      */
     @JsonProperty("travelerType")
     public TravelerTypeEnum travelerType;
+
     public Traveler withTravelerType(TravelerTypeEnum travelerType) {
         this.travelerType = travelerType;
         return this;
     }
     
+    public Traveler(@JsonProperty("id") String id, @JsonProperty("travelerType") TravelerTypeEnum travelerType) {
+        this.id = id;
+        this.travelerType = travelerType;
+  }
 }

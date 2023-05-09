@@ -12,6 +12,7 @@ public class DescribeProjectVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeProjectVersionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class DescribeProjectVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeProjectVersionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,6 +29,7 @@ public class DescribeProjectVersionsRequest {
     
     @JsonProperty("ProjectArn")
     public String projectArn;
+
     public DescribeProjectVersionsRequest withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -35,9 +38,13 @@ public class DescribeProjectVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionNames")
     public String[] versionNames;
+
     public DescribeProjectVersionsRequest withVersionNames(String[] versionNames) {
         this.versionNames = versionNames;
         return this;
     }
     
+    public DescribeProjectVersionsRequest(@JsonProperty("ProjectArn") String projectArn) {
+        this.projectArn = projectArn;
+  }
 }

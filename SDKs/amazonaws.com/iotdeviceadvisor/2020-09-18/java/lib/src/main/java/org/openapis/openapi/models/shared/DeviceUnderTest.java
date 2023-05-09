@@ -15,6 +15,7 @@ public class DeviceUnderTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateArn")
     public String certificateArn;
+
     public DeviceUnderTest withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -23,9 +24,11 @@ public class DeviceUnderTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingArn")
     public String thingArn;
+
     public DeviceUnderTest withThingArn(String thingArn) {
         this.thingArn = thingArn;
         return this;
     }
     
+    public DeviceUnderTest(){}
 }

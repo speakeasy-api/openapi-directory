@@ -15,6 +15,7 @@ public class ReturnAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public ReturnAddressAddress address;
+
     public ReturnAddress withAddress(ReturnAddressAddress address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class ReturnAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ReturnAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -37,6 +39,7 @@ public class ReturnAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ReturnAddress withKind(String kind) {
         this.kind = kind;
         return this;
@@ -48,6 +51,7 @@ public class ReturnAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ReturnAddress withLabel(String label) {
         this.label = label;
         return this;
@@ -59,6 +63,7 @@ public class ReturnAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public ReturnAddress withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -70,9 +75,11 @@ public class ReturnAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnAddressId")
     public String returnAddressId;
+
     public ReturnAddress withReturnAddressId(String returnAddressId) {
         this.returnAddressId = returnAddressId;
         return this;
     }
     
+    public ReturnAddress(){}
 }

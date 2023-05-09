@@ -18,6 +18,7 @@ public class Interaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interactionTime")
     public String interactionTime;
+
     public Interaction withInteractionTime(String interactionTime) {
         this.interactionTime = interactionTime;
         return this;
@@ -29,6 +30,7 @@ public class Interaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principal")
     public Principal principal;
+
     public Interaction withPrincipal(Principal principal) {
         this.principal = principal;
         return this;
@@ -37,9 +39,11 @@ public class Interaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public InteractionTypeEnum type;
+
     public Interaction withType(InteractionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Interaction(){}
 }

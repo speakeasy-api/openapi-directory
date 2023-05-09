@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssociateRouteTableResult {
     
     public String associationId;
+
     public AssociateRouteTableResult withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -19,9 +20,11 @@ public class AssociateRouteTableResult {
     
     
     public AssociateRouteTableResultAssociationState associationState;
+
     public AssociateRouteTableResult withAssociationState(AssociateRouteTableResultAssociationState associationState) {
         this.associationState = associationState;
         return this;
     }
     
+    public AssociateRouteTableResult(){}
 }

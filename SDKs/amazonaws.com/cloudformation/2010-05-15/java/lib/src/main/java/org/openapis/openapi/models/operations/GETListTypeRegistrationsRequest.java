@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListTypeRegistrationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETListTypeRegistrationsActionEnum action;
+
     public GETListTypeRegistrationsRequest withAction(GETListTypeRegistrationsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETListTypeRegistrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public Long maxResults;
+
     public GETListTypeRegistrationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class GETListTypeRegistrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GETListTypeRegistrationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -39,6 +43,7 @@ public class GETListTypeRegistrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RegistrationStatusFilter")
     public GETListTypeRegistrationsRegistrationStatusFilterEnum registrationStatusFilter;
+
     public GETListTypeRegistrationsRequest withRegistrationStatusFilter(GETListTypeRegistrationsRegistrationStatusFilterEnum registrationStatusFilter) {
         this.registrationStatusFilter = registrationStatusFilter;
         return this;
@@ -49,6 +54,7 @@ public class GETListTypeRegistrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
     public GETListTypeRegistrationsTypeEnum type;
+
     public GETListTypeRegistrationsRequest withType(GETListTypeRegistrationsTypeEnum type) {
         this.type = type;
         return this;
@@ -59,6 +65,7 @@ public class GETListTypeRegistrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeArn")
     public String typeArn;
+
     public GETListTypeRegistrationsRequest withTypeArn(String typeArn) {
         this.typeArn = typeArn;
         return this;
@@ -69,6 +76,7 @@ public class GETListTypeRegistrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeName")
     public String typeName;
+
     public GETListTypeRegistrationsRequest withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -76,6 +84,7 @@ public class GETListTypeRegistrationsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETListTypeRegistrationsVersionEnum version;
+
     public GETListTypeRegistrationsRequest withVersion(GETListTypeRegistrationsVersionEnum version) {
         this.version = version;
         return this;
@@ -83,6 +92,7 @@ public class GETListTypeRegistrationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETListTypeRegistrationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -90,6 +100,7 @@ public class GETListTypeRegistrationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETListTypeRegistrationsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -97,6 +108,7 @@ public class GETListTypeRegistrationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETListTypeRegistrationsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -104,6 +116,7 @@ public class GETListTypeRegistrationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETListTypeRegistrationsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -111,6 +124,7 @@ public class GETListTypeRegistrationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETListTypeRegistrationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -118,6 +132,7 @@ public class GETListTypeRegistrationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETListTypeRegistrationsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -125,9 +140,14 @@ public class GETListTypeRegistrationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETListTypeRegistrationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETListTypeRegistrationsRequest(@JsonProperty("Action") GETListTypeRegistrationsActionEnum action, @JsonProperty("Version") GETListTypeRegistrationsVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

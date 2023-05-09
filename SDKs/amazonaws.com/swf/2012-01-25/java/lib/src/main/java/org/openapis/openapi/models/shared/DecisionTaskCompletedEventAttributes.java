@@ -15,6 +15,7 @@ public class DecisionTaskCompletedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionContext")
     public String executionContext;
+
     public DecisionTaskCompletedEventAttributes withExecutionContext(String executionContext) {
         this.executionContext = executionContext;
         return this;
@@ -22,6 +23,7 @@ public class DecisionTaskCompletedEventAttributes {
     
     @JsonProperty("scheduledEventId")
     public Long scheduledEventId;
+
     public DecisionTaskCompletedEventAttributes withScheduledEventId(Long scheduledEventId) {
         this.scheduledEventId = scheduledEventId;
         return this;
@@ -29,9 +31,14 @@ public class DecisionTaskCompletedEventAttributes {
     
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public DecisionTaskCompletedEventAttributes withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
     }
     
+    public DecisionTaskCompletedEventAttributes(@JsonProperty("scheduledEventId") Long scheduledEventId, @JsonProperty("startedEventId") Long startedEventId) {
+        this.scheduledEventId = scheduledEventId;
+        this.startedEventId = startedEventId;
+  }
 }

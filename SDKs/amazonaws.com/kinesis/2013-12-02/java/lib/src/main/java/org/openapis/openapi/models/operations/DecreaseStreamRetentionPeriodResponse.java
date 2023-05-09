@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DecreaseStreamRetentionPeriodResponse {
@@ -12,6 +13,7 @@ public class DecreaseStreamRetentionPeriodResponse {
      */
     
     public Object accessDeniedException;
+
     public DecreaseStreamRetentionPeriodResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DecreaseStreamRetentionPeriodResponse {
     
     
     public String contentType;
+
     public DecreaseStreamRetentionPeriodResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DecreaseStreamRetentionPeriodResponse {
      */
     
     public Object invalidArgumentException;
+
     public DecreaseStreamRetentionPeriodResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class DecreaseStreamRetentionPeriodResponse {
      */
     
     public Object limitExceededException;
+
     public DecreaseStreamRetentionPeriodResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class DecreaseStreamRetentionPeriodResponse {
      */
     
     public Object resourceInUseException;
+
     public DecreaseStreamRetentionPeriodResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class DecreaseStreamRetentionPeriodResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DecreaseStreamRetentionPeriodResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DecreaseStreamRetentionPeriodResponse {
     
     
     public Integer statusCode;
+
     public DecreaseStreamRetentionPeriodResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DecreaseStreamRetentionPeriodResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DecreaseStreamRetentionPeriodResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DecreaseStreamRetentionPeriodResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

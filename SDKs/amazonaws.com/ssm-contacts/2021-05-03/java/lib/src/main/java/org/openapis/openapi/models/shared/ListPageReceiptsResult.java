@@ -15,6 +15,7 @@ public class ListPageReceiptsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPageReceiptsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPageReceiptsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Receipts")
     public Receipt[] receipts;
+
     public ListPageReceiptsResult withReceipts(Receipt[] receipts) {
         this.receipts = receipts;
         return this;
     }
     
+    public ListPageReceiptsResult(){}
 }

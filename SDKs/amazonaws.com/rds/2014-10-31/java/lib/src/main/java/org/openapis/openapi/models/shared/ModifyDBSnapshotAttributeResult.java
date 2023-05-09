@@ -15,9 +15,11 @@ public class ModifyDBSnapshotAttributeResult {
      */
     
     public DBSnapshotAttributesResult dbSnapshotAttributesResult;
+
     public ModifyDBSnapshotAttributeResult withDBSnapshotAttributesResult(DBSnapshotAttributesResult dbSnapshotAttributesResult) {
         this.dbSnapshotAttributesResult = dbSnapshotAttributesResult;
         return this;
     }
     
+    public ModifyDBSnapshotAttributeResult(){}
 }

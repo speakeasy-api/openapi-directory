@@ -18,9 +18,11 @@ public class DocumentMask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldPaths")
     public String[] fieldPaths;
+
     public DocumentMask withFieldPaths(String[] fieldPaths) {
         this.fieldPaths = fieldPaths;
         return this;
     }
     
+    public DocumentMask(){}
 }

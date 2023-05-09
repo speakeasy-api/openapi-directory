@@ -12,9 +12,11 @@ public class PutCoursesContentIdMetadataLevelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public String level;
+
     public PutCoursesContentIdMetadataLevelRequestBody withLevel(String level) {
         this.level = level;
         return this;
     }
     
+    public PutCoursesContentIdMetadataLevelRequestBody(){}
 }

@@ -18,6 +18,7 @@ public class RepricingRuleEffectiveTimeFixedTimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public RepricingRuleEffectiveTimeFixedTimePeriod withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,9 +30,11 @@ public class RepricingRuleEffectiveTimeFixedTimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public RepricingRuleEffectiveTimeFixedTimePeriod withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public RepricingRuleEffectiveTimeFixedTimePeriod(){}
 }

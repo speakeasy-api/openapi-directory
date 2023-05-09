@@ -15,6 +15,7 @@ public class HttpEndpointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public HttpEndpointDescription withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class HttpEndpointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public HttpEndpointDescription withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public HttpEndpointDescription(){}
 }

@@ -14,6 +14,7 @@ public class StartDetectMitigationActionsTaskRequestBody {
      */
     @JsonProperty("actions")
     public String[] actions;
+
     public StartDetectMitigationActionsTaskRequestBody withActions(String[] actions) {
         this.actions = actions;
         return this;
@@ -24,6 +25,7 @@ public class StartDetectMitigationActionsTaskRequestBody {
      */
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public StartDetectMitigationActionsTaskRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -35,6 +37,7 @@ public class StartDetectMitigationActionsTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeOnlyActiveViolations")
     public Boolean includeOnlyActiveViolations;
+
     public StartDetectMitigationActionsTaskRequestBody withIncludeOnlyActiveViolations(Boolean includeOnlyActiveViolations) {
         this.includeOnlyActiveViolations = includeOnlyActiveViolations;
         return this;
@@ -46,6 +49,7 @@ public class StartDetectMitigationActionsTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeSuppressedAlerts")
     public Boolean includeSuppressedAlerts;
+
     public StartDetectMitigationActionsTaskRequestBody withIncludeSuppressedAlerts(Boolean includeSuppressedAlerts) {
         this.includeSuppressedAlerts = includeSuppressedAlerts;
         return this;
@@ -56,6 +60,7 @@ public class StartDetectMitigationActionsTaskRequestBody {
      */
     @JsonProperty("target")
     public StartDetectMitigationActionsTaskRequestBodyTarget target;
+
     public StartDetectMitigationActionsTaskRequestBody withTarget(StartDetectMitigationActionsTaskRequestBodyTarget target) {
         this.target = target;
         return this;
@@ -67,9 +72,15 @@ public class StartDetectMitigationActionsTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("violationEventOccurrenceRange")
     public StartDetectMitigationActionsTaskRequestBodyViolationEventOccurrenceRange violationEventOccurrenceRange;
+
     public StartDetectMitigationActionsTaskRequestBody withViolationEventOccurrenceRange(StartDetectMitigationActionsTaskRequestBodyViolationEventOccurrenceRange violationEventOccurrenceRange) {
         this.violationEventOccurrenceRange = violationEventOccurrenceRange;
         return this;
     }
     
+    public StartDetectMitigationActionsTaskRequestBody(@JsonProperty("actions") String[] actions, @JsonProperty("clientRequestToken") String clientRequestToken, @JsonProperty("target") StartDetectMitigationActionsTaskRequestBodyTarget target) {
+        this.actions = actions;
+        this.clientRequestToken = clientRequestToken;
+        this.target = target;
+  }
 }

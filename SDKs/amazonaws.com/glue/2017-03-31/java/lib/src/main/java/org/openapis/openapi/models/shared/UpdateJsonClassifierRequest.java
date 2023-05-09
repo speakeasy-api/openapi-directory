@@ -15,6 +15,7 @@ public class UpdateJsonClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JsonPath")
     public String jsonPath;
+
     public UpdateJsonClassifierRequest withJsonPath(String jsonPath) {
         this.jsonPath = jsonPath;
         return this;
@@ -22,9 +23,13 @@ public class UpdateJsonClassifierRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateJsonClassifierRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateJsonClassifierRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

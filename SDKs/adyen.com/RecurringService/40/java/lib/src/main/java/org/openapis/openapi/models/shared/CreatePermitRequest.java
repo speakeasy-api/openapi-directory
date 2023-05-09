@@ -12,6 +12,7 @@ public class CreatePermitRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public CreatePermitRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -22,6 +23,7 @@ public class CreatePermitRequest {
      */
     @JsonProperty("permits")
     public Permit[] permits;
+
     public CreatePermitRequest withPermits(Permit[] permits) {
         this.permits = permits;
         return this;
@@ -32,6 +34,7 @@ public class CreatePermitRequest {
      */
     @JsonProperty("recurringDetailReference")
     public String recurringDetailReference;
+
     public CreatePermitRequest withRecurringDetailReference(String recurringDetailReference) {
         this.recurringDetailReference = recurringDetailReference;
         return this;
@@ -42,9 +45,16 @@ public class CreatePermitRequest {
      */
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public CreatePermitRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
     }
     
+    public CreatePermitRequest(@JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("permits") Permit[] permits, @JsonProperty("recurringDetailReference") String recurringDetailReference, @JsonProperty("shopperReference") String shopperReference) {
+        this.merchantAccount = merchantAccount;
+        this.permits = permits;
+        this.recurringDetailReference = recurringDetailReference;
+        this.shopperReference = shopperReference;
+  }
 }

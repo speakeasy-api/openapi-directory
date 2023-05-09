@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateRecommenderRequest {
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public CreateRecommenderRequest withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -18,6 +19,7 @@ public class CreateRecommenderRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateRecommenderRequest withName(String name) {
         this.name = name;
         return this;
@@ -25,6 +27,7 @@ public class CreateRecommenderRequest {
     
     @JsonProperty("recipeArn")
     public String recipeArn;
+
     public CreateRecommenderRequest withRecipeArn(String recipeArn) {
         this.recipeArn = recipeArn;
         return this;
@@ -33,6 +36,7 @@ public class CreateRecommenderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommenderConfig")
     public RecommenderConfig recommenderConfig;
+
     public CreateRecommenderRequest withRecommenderConfig(RecommenderConfig recommenderConfig) {
         this.recommenderConfig = recommenderConfig;
         return this;
@@ -41,9 +45,15 @@ public class CreateRecommenderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateRecommenderRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRecommenderRequest(@JsonProperty("datasetGroupArn") String datasetGroupArn, @JsonProperty("name") String name, @JsonProperty("recipeArn") String recipeArn) {
+        this.datasetGroupArn = datasetGroupArn;
+        this.name = name;
+        this.recipeArn = recipeArn;
+  }
 }

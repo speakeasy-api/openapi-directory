@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateProvisioningTemplateResponse {
     
     public String contentType;
+
     public CreateProvisioningTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateProvisioningTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateProvisioningTemplateResponse createProvisioningTemplateResponse;
+
     public CreateProvisioningTemplateResponse withCreateProvisioningTemplateResponse(org.openapis.openapi.models.shared.CreateProvisioningTemplateResponse createProvisioningTemplateResponse) {
         this.createProvisioningTemplateResponse = createProvisioningTemplateResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateProvisioningTemplateResponse {
      */
     
     public Object internalFailureException;
+
     public CreateProvisioningTemplateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateProvisioningTemplateResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateProvisioningTemplateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateProvisioningTemplateResponse {
      */
     
     public Object limitExceededException;
+
     public CreateProvisioningTemplateResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateProvisioningTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateProvisioningTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateProvisioningTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateProvisioningTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateProvisioningTemplateResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateProvisioningTemplateResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,6 +92,7 @@ public class CreateProvisioningTemplateResponse {
      */
     
     public Object throttlingException;
+
     public CreateProvisioningTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateProvisioningTemplateResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateProvisioningTemplateResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateProvisioningTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

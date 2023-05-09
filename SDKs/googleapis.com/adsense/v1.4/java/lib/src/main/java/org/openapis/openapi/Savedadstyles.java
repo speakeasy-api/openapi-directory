@@ -58,11 +58,9 @@ public class Savedadstyles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseSavedadstylesGetResponse res = new org.openapis.openapi.models.operations.AdsenseSavedadstylesGetResponse() {{
+        org.openapis.openapi.models.operations.AdsenseSavedadstylesGetResponse res = new org.openapis.openapi.models.operations.AdsenseSavedadstylesGetResponse(contentType, httpRes.statusCode()) {{
             savedAdStyle = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Savedadstyles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseSavedadstylesListResponse res = new org.openapis.openapi.models.operations.AdsenseSavedadstylesListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseSavedadstylesListResponse res = new org.openapis.openapi.models.operations.AdsenseSavedadstylesListResponse(contentType, httpRes.statusCode()) {{
             savedAdStyles = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

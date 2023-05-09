@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPartitionResponse {
     
     public String contentType;
+
     public GetPartitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,8 +21,31 @@ public class GetPartitionResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetPartitionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
+        return this;
+    }
+    
+    /**
+     * FederationSourceException
+     */
+    
+    public Object federationSourceException;
+
+    public GetPartitionResponse withFederationSourceException(Object federationSourceException) {
+        this.federationSourceException = federationSourceException;
+        return this;
+    }
+    
+    /**
+     * FederationSourceRetryableException
+     */
+    
+    public Object federationSourceRetryableException;
+
+    public GetPartitionResponse withFederationSourceRetryableException(Object federationSourceRetryableException) {
+        this.federationSourceRetryableException = federationSourceRetryableException;
         return this;
     }
     
@@ -29,6 +54,7 @@ public class GetPartitionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPartitionResponse getPartitionResponse;
+
     public GetPartitionResponse withGetPartitionResponse(org.openapis.openapi.models.shared.GetPartitionResponse getPartitionResponse) {
         this.getPartitionResponse = getPartitionResponse;
         return this;
@@ -39,6 +65,7 @@ public class GetPartitionResponse {
      */
     
     public Object glueEncryptionException;
+
     public GetPartitionResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +76,7 @@ public class GetPartitionResponse {
      */
     
     public Object internalServiceException;
+
     public GetPartitionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +87,7 @@ public class GetPartitionResponse {
      */
     
     public Object invalidInputException;
+
     public GetPartitionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +98,7 @@ public class GetPartitionResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetPartitionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +106,7 @@ public class GetPartitionResponse {
     
     
     public Integer statusCode;
+
     public GetPartitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +114,14 @@ public class GetPartitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPartitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPartitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

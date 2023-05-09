@@ -19,6 +19,7 @@ public class GetCreditsId200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.Credit data;
+
     public GetCreditsId200ApplicationVndApiPlusJson withData(org.openapis.openapi.models.shared.Credit data) {
         this.data = data;
         return this;
@@ -30,9 +31,11 @@ public class GetCreditsId200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public org.openapis.openapi.models.shared.ResourceLink links;
+
     public GetCreditsId200ApplicationVndApiPlusJson withLinks(org.openapis.openapi.models.shared.ResourceLink links) {
         this.links = links;
         return this;
     }
     
+    public GetCreditsId200ApplicationVndApiPlusJson(){}
 }

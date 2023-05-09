@@ -12,6 +12,7 @@ public class GaDataDataTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cols")
     public GaDataDataTableCols[] cols;
+
     public GaDataDataTable withCols(GaDataDataTableCols[] cols) {
         this.cols = cols;
         return this;
@@ -20,9 +21,11 @@ public class GaDataDataTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public GaDataDataTableRows[] rows;
+
     public GaDataDataTable withRows(GaDataDataTableRows[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public GaDataDataTable(){}
 }

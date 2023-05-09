@@ -15,6 +15,7 @@ public class BatchGetCollectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionDetails")
     public CollectionDetail[] collectionDetails;
+
     public BatchGetCollectionResponse withCollectionDetails(CollectionDetail[] collectionDetails) {
         this.collectionDetails = collectionDetails;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetCollectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionErrorDetails")
     public CollectionErrorDetail[] collectionErrorDetails;
+
     public BatchGetCollectionResponse withCollectionErrorDetails(CollectionErrorDetail[] collectionErrorDetails) {
         this.collectionErrorDetails = collectionErrorDetails;
         return this;
     }
     
+    public BatchGetCollectionResponse(){}
 }

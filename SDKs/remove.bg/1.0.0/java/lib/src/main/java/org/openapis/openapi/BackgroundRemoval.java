@@ -67,13 +67,11 @@ public class BackgroundRemoval {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRemovebgFormResponse res = new org.openapis.openapi.models.operations.PostRemovebgFormResponse() {{
+        org.openapis.openapi.models.operations.PostRemovebgFormResponse res = new org.openapis.openapi.models.operations.PostRemovebgFormResponse(contentType, httpRes.statusCode()) {{
             removeBgJsonResponse = null;
             postRemovebgForm200ImageWildcardBinaryString = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -134,13 +132,11 @@ public class BackgroundRemoval {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRemovebgJsonResponse res = new org.openapis.openapi.models.operations.PostRemovebgJsonResponse() {{
+        org.openapis.openapi.models.operations.PostRemovebgJsonResponse res = new org.openapis.openapi.models.operations.PostRemovebgJsonResponse(contentType, httpRes.statusCode()) {{
             removeBgJsonResponse = null;
             postRemovebgJson200ImageWildcardBinaryString = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,13 +197,11 @@ public class BackgroundRemoval {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRemovebgMultipartResponse res = new org.openapis.openapi.models.operations.PostRemovebgMultipartResponse() {{
+        org.openapis.openapi.models.operations.PostRemovebgMultipartResponse res = new org.openapis.openapi.models.operations.PostRemovebgMultipartResponse(contentType, httpRes.statusCode()) {{
             removeBgJsonResponse = null;
             postRemovebgMultipart200ImageWildcardBinaryString = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

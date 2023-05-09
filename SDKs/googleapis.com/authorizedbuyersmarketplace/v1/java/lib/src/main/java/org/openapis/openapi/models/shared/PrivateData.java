@@ -18,9 +18,11 @@ public class PrivateData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceId")
     public String referenceId;
+
     public PrivateData withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
     }
     
+    public PrivateData(){}
 }

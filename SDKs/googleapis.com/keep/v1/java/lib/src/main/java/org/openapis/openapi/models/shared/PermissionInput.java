@@ -18,6 +18,7 @@ public class PermissionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public PermissionInput withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +30,7 @@ public class PermissionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family")
     public java.util.Map<String, Object> family;
+
     public PermissionInput withFamily(java.util.Map<String, Object> family) {
         this.family = family;
         return this;
@@ -40,6 +42,7 @@ public class PermissionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public Group group;
+
     public PermissionInput withGroup(Group group) {
         this.group = group;
         return this;
@@ -51,6 +54,7 @@ public class PermissionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public PermissionRoleEnum role;
+
     public PermissionInput withRole(PermissionRoleEnum role) {
         this.role = role;
         return this;
@@ -62,9 +66,11 @@ public class PermissionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public User user;
+
     public PermissionInput withUser(User user) {
         this.user = user;
         return this;
     }
     
+    public PermissionInput(){}
 }

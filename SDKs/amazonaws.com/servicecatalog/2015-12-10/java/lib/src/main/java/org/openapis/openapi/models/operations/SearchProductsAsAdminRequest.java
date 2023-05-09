@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchProductsAsAdminRequest {
@@ -12,6 +13,7 @@ public class SearchProductsAsAdminRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
     public String pageSize;
+
     public SearchProductsAsAdminRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -22,6 +24,7 @@ public class SearchProductsAsAdminRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
     public String pageToken;
+
     public SearchProductsAsAdminRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -29,6 +32,7 @@ public class SearchProductsAsAdminRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SearchProductsAsAdminInput searchProductsAsAdminInput;
+
     public SearchProductsAsAdminRequest withSearchProductsAsAdminInput(org.openapis.openapi.models.shared.SearchProductsAsAdminInput searchProductsAsAdminInput) {
         this.searchProductsAsAdminInput = searchProductsAsAdminInput;
         return this;
@@ -36,6 +40,7 @@ public class SearchProductsAsAdminRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public SearchProductsAsAdminRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class SearchProductsAsAdminRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public SearchProductsAsAdminRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class SearchProductsAsAdminRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public SearchProductsAsAdminRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class SearchProductsAsAdminRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public SearchProductsAsAdminRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class SearchProductsAsAdminRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public SearchProductsAsAdminRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class SearchProductsAsAdminRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public SearchProductsAsAdminRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class SearchProductsAsAdminRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public SearchProductsAsAdminRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class SearchProductsAsAdminRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public SearchProductsAsAdminXAmzTargetEnum xAmzTarget;
+
     public SearchProductsAsAdminRequest withXAmzTarget(SearchProductsAsAdminXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public SearchProductsAsAdminRequest(@JsonProperty("SearchProductsAsAdminInput") org.openapis.openapi.models.shared.SearchProductsAsAdminInput searchProductsAsAdminInput, @JsonProperty("X-Amz-Target") SearchProductsAsAdminXAmzTargetEnum xAmzTarget) {
+        this.searchProductsAsAdminInput = searchProductsAsAdminInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

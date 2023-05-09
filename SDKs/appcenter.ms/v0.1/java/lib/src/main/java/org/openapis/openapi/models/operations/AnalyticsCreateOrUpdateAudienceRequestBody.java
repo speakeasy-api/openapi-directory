@@ -18,6 +18,7 @@ public class AnalyticsCreateOrUpdateAudienceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_properties")
     public java.util.Map<String, AnalyticsCreateOrUpdateAudienceRequestBodyCustomPropertiesEnum> customProperties;
+
     public AnalyticsCreateOrUpdateAudienceRequestBody withCustomProperties(java.util.Map<String, AnalyticsCreateOrUpdateAudienceRequestBodyCustomPropertiesEnum> customProperties) {
         this.customProperties = customProperties;
         return this;
@@ -28,6 +29,7 @@ public class AnalyticsCreateOrUpdateAudienceRequestBody {
      */
     @JsonProperty("definition")
     public String definition;
+
     public AnalyticsCreateOrUpdateAudienceRequestBody withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -39,6 +41,7 @@ public class AnalyticsCreateOrUpdateAudienceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AnalyticsCreateOrUpdateAudienceRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -47,9 +50,13 @@ public class AnalyticsCreateOrUpdateAudienceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AnalyticsCreateOrUpdateAudienceRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public AnalyticsCreateOrUpdateAudienceRequestBody(@JsonProperty("definition") String definition) {
+        this.definition = definition;
+  }
 }

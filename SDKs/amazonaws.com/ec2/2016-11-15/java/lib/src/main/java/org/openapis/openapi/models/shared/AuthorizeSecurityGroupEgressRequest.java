@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AuthorizeSecurityGroupEgressRequest {
     
     public String cidrIp;
+
     public AuthorizeSecurityGroupEgressRequest withCidrIp(String cidrIp) {
         this.cidrIp = cidrIp;
         return this;
@@ -16,6 +17,7 @@ public class AuthorizeSecurityGroupEgressRequest {
     
     
     public Boolean dryRun;
+
     public AuthorizeSecurityGroupEgressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class AuthorizeSecurityGroupEgressRequest {
     
     
     public Long fromPort;
+
     public AuthorizeSecurityGroupEgressRequest withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -30,6 +33,7 @@ public class AuthorizeSecurityGroupEgressRequest {
     
     
     public String groupId;
+
     public AuthorizeSecurityGroupEgressRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -37,6 +41,7 @@ public class AuthorizeSecurityGroupEgressRequest {
     
     
     public AuthorizeSecurityGroupEgressRequestIpPermissions[] ipPermissions;
+
     public AuthorizeSecurityGroupEgressRequest withIpPermissions(AuthorizeSecurityGroupEgressRequestIpPermissions[] ipPermissions) {
         this.ipPermissions = ipPermissions;
         return this;
@@ -44,6 +49,7 @@ public class AuthorizeSecurityGroupEgressRequest {
     
     
     public String ipProtocol;
+
     public AuthorizeSecurityGroupEgressRequest withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -51,6 +57,7 @@ public class AuthorizeSecurityGroupEgressRequest {
     
     
     public String sourceSecurityGroupName;
+
     public AuthorizeSecurityGroupEgressRequest withSourceSecurityGroupName(String sourceSecurityGroupName) {
         this.sourceSecurityGroupName = sourceSecurityGroupName;
         return this;
@@ -58,6 +65,7 @@ public class AuthorizeSecurityGroupEgressRequest {
     
     
     public String sourceSecurityGroupOwnerId;
+
     public AuthorizeSecurityGroupEgressRequest withSourceSecurityGroupOwnerId(String sourceSecurityGroupOwnerId) {
         this.sourceSecurityGroupOwnerId = sourceSecurityGroupOwnerId;
         return this;
@@ -65,6 +73,7 @@ public class AuthorizeSecurityGroupEgressRequest {
     
     
     public AuthorizeSecurityGroupEgressRequestTagSpecifications[] tagSpecifications;
+
     public AuthorizeSecurityGroupEgressRequest withTagSpecifications(AuthorizeSecurityGroupEgressRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -72,9 +81,13 @@ public class AuthorizeSecurityGroupEgressRequest {
     
     
     public Long toPort;
+
     public AuthorizeSecurityGroupEgressRequest withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public AuthorizeSecurityGroupEgressRequest(@JsonProperty("GroupId") String groupId) {
+        this.groupId = groupId;
+  }
 }

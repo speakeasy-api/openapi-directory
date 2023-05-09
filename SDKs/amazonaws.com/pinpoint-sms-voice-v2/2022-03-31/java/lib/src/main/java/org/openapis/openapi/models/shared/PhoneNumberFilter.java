@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PhoneNumberFilter {
     @JsonProperty("Name")
     public PhoneNumberFilterNameEnum name;
+
     public PhoneNumberFilter withName(PhoneNumberFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class PhoneNumberFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public PhoneNumberFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public PhoneNumberFilter(@JsonProperty("Name") PhoneNumberFilterNameEnum name, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

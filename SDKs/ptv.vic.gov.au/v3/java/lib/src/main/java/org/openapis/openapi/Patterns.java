@@ -56,7 +56,7 @@ public class Patterns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatternsGetPatternByRunResponse res = new org.openapis.openapi.models.operations.PatternsGetPatternByRunResponse() {{
+        org.openapis.openapi.models.operations.PatternsGetPatternByRunResponse res = new org.openapis.openapi.models.operations.PatternsGetPatternByRunResponse(contentType, httpRes.statusCode()) {{
             v3StoppingPattern = null;
             v3StoppingPattern = null;
             body = null;
@@ -64,8 +64,6 @@ public class Patterns {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FetchFaxResponse {
     
     public String contentType;
+
     public FetchFaxResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class FetchFaxResponse {
     
     
     public Integer statusCode;
+
     public FetchFaxResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class FetchFaxResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FetchFaxResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class FetchFaxResponse {
      */
     
     public org.openapis.openapi.models.shared.FaxV1Fax faxV1Fax;
+
     public FetchFaxResponse withFaxV1Fax(org.openapis.openapi.models.shared.FaxV1Fax faxV1Fax) {
         this.faxV1Fax = faxV1Fax;
         return this;
     }
     
+    public FetchFaxResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

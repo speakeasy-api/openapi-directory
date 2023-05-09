@@ -15,9 +15,11 @@ public class ContainsPiiEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Labels")
     public EntityLabel[] labels;
+
     public ContainsPiiEntitiesResponse withLabels(EntityLabel[] labels) {
         this.labels = labels;
         return this;
     }
     
+    public ContainsPiiEntitiesResponse(){}
 }

@@ -15,6 +15,7 @@ public class AppPkgNotification {
      */
     @JsonProperty("_links")
     public AppPkgNotificationLinks links;
+
     public AppPkgNotification withLinks(AppPkgNotificationLinks links) {
         this.links = links;
         return this;
@@ -25,6 +26,7 @@ public class AppPkgNotification {
      */
     @JsonProperty("appDId")
     public String appDId;
+
     public AppPkgNotification withAppDId(String appDId) {
         this.appDId = appDId;
         return this;
@@ -35,6 +37,7 @@ public class AppPkgNotification {
      */
     @JsonProperty("appPkgId")
     public String appPkgId;
+
     public AppPkgNotification withAppPkgId(String appPkgId) {
         this.appPkgId = appPkgId;
         return this;
@@ -45,6 +48,7 @@ public class AppPkgNotification {
      */
     @JsonProperty("id")
     public String id;
+
     public AppPkgNotification withId(String id) {
         this.id = id;
         return this;
@@ -55,6 +59,7 @@ public class AppPkgNotification {
      */
     @JsonProperty("notificationType")
     public AppPkgNotificationTypeEnum notificationType;
+
     public AppPkgNotification withNotificationType(AppPkgNotificationTypeEnum notificationType) {
         this.notificationType = notificationType;
         return this;
@@ -62,6 +67,7 @@ public class AppPkgNotification {
     
     @JsonProperty("operationalState")
     public AppPkgNotificationOperationalStateEnum operationalState;
+
     public AppPkgNotification withOperationalState(AppPkgNotificationOperationalStateEnum operationalState) {
         this.operationalState = operationalState;
         return this;
@@ -72,6 +78,7 @@ public class AppPkgNotification {
      */
     @JsonProperty("subscriptionId")
     public String subscriptionId;
+
     public AppPkgNotification withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -79,9 +86,20 @@ public class AppPkgNotification {
     
     @JsonProperty("timeStamp")
     public TimeStamp timeStamp;
+
     public AppPkgNotification withTimeStamp(TimeStamp timeStamp) {
         this.timeStamp = timeStamp;
         return this;
     }
     
+    public AppPkgNotification(@JsonProperty("_links") AppPkgNotificationLinks links, @JsonProperty("appDId") String appDId, @JsonProperty("appPkgId") String appPkgId, @JsonProperty("id") String id, @JsonProperty("notificationType") AppPkgNotificationTypeEnum notificationType, @JsonProperty("operationalState") AppPkgNotificationOperationalStateEnum operationalState, @JsonProperty("subscriptionId") String subscriptionId, @JsonProperty("timeStamp") TimeStamp timeStamp) {
+        this.links = links;
+        this.appDId = appDId;
+        this.appPkgId = appPkgId;
+        this.id = id;
+        this.notificationType = notificationType;
+        this.operationalState = operationalState;
+        this.subscriptionId = subscriptionId;
+        this.timeStamp = timeStamp;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateApplicationsResponse {
@@ -12,6 +13,7 @@ public class AssociateApplicationsResponse {
      */
     
     public java.util.Map<String, Object> associateApplicationsResponse;
+
     public AssociateApplicationsResponse withAssociateApplicationsResponse(java.util.Map<String, Object> associateApplicationsResponse) {
         this.associateApplicationsResponse = associateApplicationsResponse;
         return this;
@@ -22,6 +24,7 @@ public class AssociateApplicationsResponse {
      */
     
     public Object conflictException;
+
     public AssociateApplicationsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateApplicationsResponse {
     
     
     public String contentType;
+
     public AssociateApplicationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateApplicationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateApplicationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateApplicationsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public AssociateApplicationsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateApplicationsResponse {
     
     
     public Integer statusCode;
+
     public AssociateApplicationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateApplicationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateApplicationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class AssociateApplicationsResponse {
      */
     
     public Object uninitializedAccountException;
+
     public AssociateApplicationsResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public AssociateApplicationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestCreateDeviceSetOfOwnerRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public TestCreateDeviceSetOfOwnerDeviceSetUpdateInformation requestBody;
+
     public TestCreateDeviceSetOfOwnerRequest withRequestBody(TestCreateDeviceSetOfOwnerDeviceSetUpdateInformation requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class TestCreateDeviceSetOfOwnerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public TestCreateDeviceSetOfOwnerRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -29,9 +32,15 @@ public class TestCreateDeviceSetOfOwnerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public TestCreateDeviceSetOfOwnerRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public TestCreateDeviceSetOfOwnerRequest(@JsonProperty("RequestBody") TestCreateDeviceSetOfOwnerDeviceSetUpdateInformation requestBody, @JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.ownerName = ownerName;
+  }
 }

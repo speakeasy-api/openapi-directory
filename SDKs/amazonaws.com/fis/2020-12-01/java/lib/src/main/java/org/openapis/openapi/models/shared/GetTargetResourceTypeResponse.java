@@ -15,9 +15,11 @@ public class GetTargetResourceTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetResourceType")
     public TargetResourceType targetResourceType;
+
     public GetTargetResourceTypeResponse withTargetResourceType(TargetResourceType targetResourceType) {
         this.targetResourceType = targetResourceType;
         return this;
     }
     
+    public GetTargetResourceTypeResponse(){}
 }

@@ -55,11 +55,9 @@ public class HistoryExports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHistoryExportsIdResponse res = new org.openapis.openapi.models.operations.GetHistoryExportsIdResponse() {{
+        org.openapis.openapi.models.operations.GetHistoryExportsIdResponse res = new org.openapis.openapi.models.operations.GetHistoryExportsIdResponse(contentType, httpRes.statusCode()) {{
             historyExportEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class HistoryExports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostHistoryExportsResponse res = new org.openapis.openapi.models.operations.PostHistoryExportsResponse() {{
+        org.openapis.openapi.models.operations.PostHistoryExportsResponse res = new org.openapis.openapi.models.operations.PostHistoryExportsResponse(contentType, httpRes.statusCode()) {{
             historyExportEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

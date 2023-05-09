@@ -20,6 +20,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public Action action;
+
     public Alert withAction(Action action) {
         this.action = action;
         return this;
@@ -28,6 +29,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertArn")
     public String alertArn;
+
     public Alert withAlertArn(String alertArn) {
         this.alertArn = alertArn;
         return this;
@@ -36,6 +38,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertDescription")
     public String alertDescription;
+
     public Alert withAlertDescription(String alertDescription) {
         this.alertDescription = alertDescription;
         return this;
@@ -44,6 +47,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertFilters")
     public AlertFilters alertFilters;
+
     public Alert withAlertFilters(AlertFilters alertFilters) {
         this.alertFilters = alertFilters;
         return this;
@@ -52,6 +56,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertName")
     public String alertName;
+
     public Alert withAlertName(String alertName) {
         this.alertName = alertName;
         return this;
@@ -60,6 +65,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertSensitivityThreshold")
     public Long alertSensitivityThreshold;
+
     public Alert withAlertSensitivityThreshold(Long alertSensitivityThreshold) {
         this.alertSensitivityThreshold = alertSensitivityThreshold;
         return this;
@@ -68,6 +74,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertStatus")
     public AlertStatusEnum alertStatus;
+
     public Alert withAlertStatus(AlertStatusEnum alertStatus) {
         this.alertStatus = alertStatus;
         return this;
@@ -76,6 +83,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertType")
     public AlertTypeEnum alertType;
+
     public Alert withAlertType(AlertTypeEnum alertType) {
         this.alertType = alertType;
         return this;
@@ -84,6 +92,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public Alert withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -94,6 +103,7 @@ public class Alert {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Alert withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -104,9 +114,11 @@ public class Alert {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public Alert withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
     }
     
+    public Alert(){}
 }

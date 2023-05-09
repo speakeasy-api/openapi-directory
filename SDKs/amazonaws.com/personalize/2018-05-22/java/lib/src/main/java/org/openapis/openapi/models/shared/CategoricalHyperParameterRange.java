@@ -15,6 +15,7 @@ public class CategoricalHyperParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CategoricalHyperParameterRange withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class CategoricalHyperParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public CategoricalHyperParameterRange withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public CategoricalHyperParameterRange(){}
 }

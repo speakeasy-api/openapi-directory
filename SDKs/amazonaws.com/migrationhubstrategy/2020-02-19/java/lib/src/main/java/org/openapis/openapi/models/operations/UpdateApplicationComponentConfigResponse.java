@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApplicationComponentConfigResponse {
     
     public String contentType;
+
     public UpdateApplicationComponentConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateApplicationComponentConfigResponse {
      */
     
     public Object internalServerException;
+
     public UpdateApplicationComponentConfigResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateApplicationComponentConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateApplicationComponentConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateApplicationComponentConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApplicationComponentConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateApplicationComponentConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateApplicationComponentConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateApplicationComponentConfigResponse {
      */
     
     public Object throttlingException;
+
     public UpdateApplicationComponentConfigResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateApplicationComponentConfigResponse {
      */
     
     public java.util.Map<String, Object> updateApplicationComponentConfigResponse;
+
     public UpdateApplicationComponentConfigResponse withUpdateApplicationComponentConfigResponse(java.util.Map<String, Object> updateApplicationComponentConfigResponse) {
         this.updateApplicationComponentConfigResponse = updateApplicationComponentConfigResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateApplicationComponentConfigResponse {
      */
     
     public Object validationException;
+
     public UpdateApplicationComponentConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateApplicationComponentConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

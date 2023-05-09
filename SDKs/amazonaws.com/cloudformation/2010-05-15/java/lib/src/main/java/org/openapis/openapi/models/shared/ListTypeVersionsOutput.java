@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListTypeVersionsOutput {
     
     public String nextToken;
+
     public ListTypeVersionsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class ListTypeVersionsOutput {
     
     
     public TypeVersionSummary[] typeVersionSummaries;
+
     public ListTypeVersionsOutput withTypeVersionSummaries(TypeVersionSummary[] typeVersionSummaries) {
         this.typeVersionSummaries = typeVersionSummaries;
         return this;
     }
     
+    public ListTypeVersionsOutput(){}
 }

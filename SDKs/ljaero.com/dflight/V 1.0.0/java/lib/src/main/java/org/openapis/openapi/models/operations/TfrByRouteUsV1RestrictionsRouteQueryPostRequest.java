@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TfrByRouteUsV1RestrictionsRouteQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NOTAMsByRoute notaMsByRoute;
+
     public TfrByRouteUsV1RestrictionsRouteQueryPostRequest withNOTAMsByRoute(org.openapis.openapi.models.shared.NOTAMsByRoute notaMsByRoute) {
         this.notaMsByRoute = notaMsByRoute;
         return this;
@@ -16,9 +18,13 @@ public class TfrByRouteUsV1RestrictionsRouteQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public TfrByRouteUsV1RestrictionsRouteQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public TfrByRouteUsV1RestrictionsRouteQueryPostRequest(@JsonProperty("NOTAMsByRoute") org.openapis.openapi.models.shared.NOTAMsByRoute notaMsByRoute) {
+        this.notaMsByRoute = notaMsByRoute;
+  }
 }

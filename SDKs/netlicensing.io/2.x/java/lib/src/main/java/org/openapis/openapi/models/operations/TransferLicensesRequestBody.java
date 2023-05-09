@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransferLicensesRequestBody {
@@ -12,9 +13,13 @@ public class TransferLicensesRequestBody {
      */
     @SpeakeasyMetadata("form:name=sourceLicenseeNumber")
     public String sourceLicenseeNumber;
+
     public TransferLicensesRequestBody withSourceLicenseeNumber(String sourceLicenseeNumber) {
         this.sourceLicenseeNumber = sourceLicenseeNumber;
         return this;
     }
     
+    public TransferLicensesRequestBody(@JsonProperty("sourceLicenseeNumber") String sourceLicenseeNumber) {
+        this.sourceLicenseeNumber = sourceLicenseeNumber;
+  }
 }

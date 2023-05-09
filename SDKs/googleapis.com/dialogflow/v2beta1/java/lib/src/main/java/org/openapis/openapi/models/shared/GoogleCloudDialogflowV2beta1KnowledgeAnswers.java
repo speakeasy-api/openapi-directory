@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1KnowledgeAnswers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answers")
     public GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer[] answers;
+
     public GoogleCloudDialogflowV2beta1KnowledgeAnswers withAnswers(GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer[] answers) {
         this.answers = answers;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1KnowledgeAnswers(){}
 }

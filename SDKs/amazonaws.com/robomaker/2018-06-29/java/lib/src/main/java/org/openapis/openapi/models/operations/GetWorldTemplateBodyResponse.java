@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorldTemplateBodyResponse {
     
     public String contentType;
+
     public GetWorldTemplateBodyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetWorldTemplateBodyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetWorldTemplateBodyResponse getWorldTemplateBodyResponse;
+
     public GetWorldTemplateBodyResponse withGetWorldTemplateBodyResponse(org.openapis.openapi.models.shared.GetWorldTemplateBodyResponse getWorldTemplateBodyResponse) {
         this.getWorldTemplateBodyResponse = getWorldTemplateBodyResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetWorldTemplateBodyResponse {
      */
     
     public Object internalServerException;
+
     public GetWorldTemplateBodyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetWorldTemplateBodyResponse {
      */
     
     public Object invalidParameterException;
+
     public GetWorldTemplateBodyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class GetWorldTemplateBodyResponse {
     
     
     public Integer statusCode;
+
     public GetWorldTemplateBodyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetWorldTemplateBodyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorldTemplateBodyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetWorldTemplateBodyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetWorldTemplateBodyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetWorldTemplateBodyResponse {
      */
     
     public Object throttlingException;
+
     public GetWorldTemplateBodyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetWorldTemplateBodyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

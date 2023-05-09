@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FirebaserulesProjectsRulesetsDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public FirebaserulesProjectsRulesetsDeleteSecurityOption1 option1;
+
     public FirebaserulesProjectsRulesetsDeleteSecurity withOption1(FirebaserulesProjectsRulesetsDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class FirebaserulesProjectsRulesetsDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirebaserulesProjectsRulesetsDeleteSecurityOption2 option2;
+
     public FirebaserulesProjectsRulesetsDeleteSecurity withOption2(FirebaserulesProjectsRulesetsDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public FirebaserulesProjectsRulesetsDeleteSecurity(){}
 }

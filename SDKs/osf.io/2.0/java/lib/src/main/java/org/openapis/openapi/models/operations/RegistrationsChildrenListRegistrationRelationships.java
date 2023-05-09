@@ -15,6 +15,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String affiliatedInstitutions;
+
     public RegistrationsChildrenListRegistrationRelationships withAffiliatedInstitutions(String affiliatedInstitutions) {
         this.affiliatedInstitutions = affiliatedInstitutions;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String children;
+
     public RegistrationsChildrenListRegistrationRelationships withChildren(String children) {
         this.children = children;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String citation;
+
     public RegistrationsChildrenListRegistrationRelationships withCitation(String citation) {
         this.citation = citation;
         return this;
@@ -45,6 +48,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String comments;
+
     public RegistrationsChildrenListRegistrationRelationships withComments(String comments) {
         this.comments = comments;
         return this;
@@ -55,6 +59,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String contributors;
+
     public RegistrationsChildrenListRegistrationRelationships withContributors(String contributors) {
         this.contributors = contributors;
         return this;
@@ -65,6 +70,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String files;
+
     public RegistrationsChildrenListRegistrationRelationships withFiles(String files) {
         this.files = files;
         return this;
@@ -75,6 +81,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String forks;
+
     public RegistrationsChildrenListRegistrationRelationships withForks(String forks) {
         this.forks = forks;
         return this;
@@ -85,6 +92,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String identifiers;
+
     public RegistrationsChildrenListRegistrationRelationships withIdentifiers(String identifiers) {
         this.identifiers = identifiers;
         return this;
@@ -95,6 +103,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String linkedNodes;
+
     public RegistrationsChildrenListRegistrationRelationships withLinkedNodes(String linkedNodes) {
         this.linkedNodes = linkedNodes;
         return this;
@@ -105,6 +114,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String logs;
+
     public RegistrationsChildrenListRegistrationRelationships withLogs(String logs) {
         this.logs = logs;
         return this;
@@ -115,6 +125,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String nodeLinks;
+
     public RegistrationsChildrenListRegistrationRelationships withNodeLinks(String nodeLinks) {
         this.nodeLinks = nodeLinks;
         return this;
@@ -125,6 +136,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String parent;
+
     public RegistrationsChildrenListRegistrationRelationships withParent(String parent) {
         this.parent = parent;
         return this;
@@ -135,6 +147,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String registeredBy;
+
     public RegistrationsChildrenListRegistrationRelationships withRegisteredBy(String registeredBy) {
         this.registeredBy = registeredBy;
         return this;
@@ -145,6 +158,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String registeredFrom;
+
     public RegistrationsChildrenListRegistrationRelationships withRegisteredFrom(String registeredFrom) {
         this.registeredFrom = registeredFrom;
         return this;
@@ -155,6 +169,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String registrationSchema;
+
     public RegistrationsChildrenListRegistrationRelationships withRegistrationSchema(String registrationSchema) {
         this.registrationSchema = registrationSchema;
         return this;
@@ -165,6 +180,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String root;
+
     public RegistrationsChildrenListRegistrationRelationships withRoot(String root) {
         this.root = root;
         return this;
@@ -175,6 +191,7 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String viewOnlyLinks;
+
     public RegistrationsChildrenListRegistrationRelationships withViewOnlyLinks(String viewOnlyLinks) {
         this.viewOnlyLinks = viewOnlyLinks;
         return this;
@@ -185,9 +202,11 @@ public class RegistrationsChildrenListRegistrationRelationships {
      */
     
     public String wikis;
+
     public RegistrationsChildrenListRegistrationRelationships withWikis(String wikis) {
         this.wikis = wikis;
         return this;
     }
     
+    public RegistrationsChildrenListRegistrationRelationships(){}
 }

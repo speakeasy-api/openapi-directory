@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCqActionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authorizableId")
     public String authorizableId;
+
     public PostCqActionsRequest withAuthorizableId(String authorizableId) {
         this.authorizableId = authorizableId;
         return this;
@@ -16,9 +18,14 @@ public class PostCqActionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changelog")
     public String changelog;
+
     public PostCqActionsRequest withChangelog(String changelog) {
         this.changelog = changelog;
         return this;
     }
     
+    public PostCqActionsRequest(@JsonProperty("authorizableId") String authorizableId, @JsonProperty("changelog") String changelog) {
+        this.authorizableId = authorizableId;
+        this.changelog = changelog;
+  }
 }

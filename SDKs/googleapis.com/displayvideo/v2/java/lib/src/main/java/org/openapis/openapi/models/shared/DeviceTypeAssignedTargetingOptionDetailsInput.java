@@ -18,9 +18,11 @@ public class DeviceTypeAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceType")
     public DeviceTypeAssignedTargetingOptionDetailsDeviceTypeEnum deviceType;
+
     public DeviceTypeAssignedTargetingOptionDetailsInput withDeviceType(DeviceTypeAssignedTargetingOptionDetailsDeviceTypeEnum deviceType) {
         this.deviceType = deviceType;
         return this;
     }
     
+    public DeviceTypeAssignedTargetingOptionDetailsInput(){}
 }

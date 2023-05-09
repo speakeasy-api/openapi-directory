@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1AssetDiscoverySpecCsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delimiter")
     public String delimiter;
+
     public GoogleCloudDataplexV1AssetDiscoverySpecCsvOptions withDelimiter(String delimiter) {
         this.delimiter = delimiter;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1AssetDiscoverySpecCsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableTypeInference")
     public Boolean disableTypeInference;
+
     public GoogleCloudDataplexV1AssetDiscoverySpecCsvOptions withDisableTypeInference(Boolean disableTypeInference) {
         this.disableTypeInference = disableTypeInference;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1AssetDiscoverySpecCsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding")
     public String encoding;
+
     public GoogleCloudDataplexV1AssetDiscoverySpecCsvOptions withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDataplexV1AssetDiscoverySpecCsvOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerRows")
     public Integer headerRows;
+
     public GoogleCloudDataplexV1AssetDiscoverySpecCsvOptions withHeaderRows(Integer headerRows) {
         this.headerRows = headerRows;
         return this;
     }
     
+    public GoogleCloudDataplexV1AssetDiscoverySpecCsvOptions(){}
 }

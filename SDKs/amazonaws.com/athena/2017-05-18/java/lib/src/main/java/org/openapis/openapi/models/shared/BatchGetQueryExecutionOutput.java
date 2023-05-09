@@ -15,6 +15,7 @@ public class BatchGetQueryExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryExecutions")
     public QueryExecution[] queryExecutions;
+
     public BatchGetQueryExecutionOutput withQueryExecutions(QueryExecution[] queryExecutions) {
         this.queryExecutions = queryExecutions;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetQueryExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedQueryExecutionIds")
     public UnprocessedQueryExecutionId[] unprocessedQueryExecutionIds;
+
     public BatchGetQueryExecutionOutput withUnprocessedQueryExecutionIds(UnprocessedQueryExecutionId[] unprocessedQueryExecutionIds) {
         this.unprocessedQueryExecutionIds = unprocessedQueryExecutionIds;
         return this;
     }
     
+    public BatchGetQueryExecutionOutput(){}
 }

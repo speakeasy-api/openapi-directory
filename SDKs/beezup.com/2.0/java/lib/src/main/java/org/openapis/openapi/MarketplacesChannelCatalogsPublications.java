@@ -59,12 +59,10 @@ public class MarketplacesChannelCatalogsPublications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPublicationsResponse res = new org.openapis.openapi.models.operations.GetPublicationsResponse() {{
+        org.openapis.openapi.models.operations.GetPublicationsResponse res = new org.openapis.openapi.models.operations.GetPublicationsResponse(contentType, httpRes.statusCode()) {{
             accountPublications = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,11 +114,9 @@ public class MarketplacesChannelCatalogsPublications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PublishCatalogToMarketplaceResponse res = new org.openapis.openapi.models.operations.PublishCatalogToMarketplaceResponse() {{
+        org.openapis.openapi.models.operations.PublishCatalogToMarketplaceResponse res = new org.openapis.openapi.models.operations.PublishCatalogToMarketplaceResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202 || httpRes.statusCode() == 404) {

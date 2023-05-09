@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DiffEntry {
     @JsonProperty("additions")
     public Long additions;
+
     public DiffEntry withAdditions(Long additions) {
         this.additions = additions;
         return this;
@@ -21,6 +22,7 @@ public class DiffEntry {
     
     @JsonProperty("blob_url")
     public String blobUrl;
+
     public DiffEntry withBlobUrl(String blobUrl) {
         this.blobUrl = blobUrl;
         return this;
@@ -28,6 +30,7 @@ public class DiffEntry {
     
     @JsonProperty("changes")
     public Long changes;
+
     public DiffEntry withChanges(Long changes) {
         this.changes = changes;
         return this;
@@ -35,6 +38,7 @@ public class DiffEntry {
     
     @JsonProperty("contents_url")
     public String contentsUrl;
+
     public DiffEntry withContentsUrl(String contentsUrl) {
         this.contentsUrl = contentsUrl;
         return this;
@@ -42,6 +46,7 @@ public class DiffEntry {
     
     @JsonProperty("deletions")
     public Long deletions;
+
     public DiffEntry withDeletions(Long deletions) {
         this.deletions = deletions;
         return this;
@@ -49,6 +54,7 @@ public class DiffEntry {
     
     @JsonProperty("filename")
     public String filename;
+
     public DiffEntry withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -57,6 +63,7 @@ public class DiffEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patch")
     public String patch;
+
     public DiffEntry withPatch(String patch) {
         this.patch = patch;
         return this;
@@ -65,6 +72,7 @@ public class DiffEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous_filename")
     public String previousFilename;
+
     public DiffEntry withPreviousFilename(String previousFilename) {
         this.previousFilename = previousFilename;
         return this;
@@ -72,6 +80,7 @@ public class DiffEntry {
     
     @JsonProperty("raw_url")
     public String rawUrl;
+
     public DiffEntry withRawUrl(String rawUrl) {
         this.rawUrl = rawUrl;
         return this;
@@ -79,6 +88,7 @@ public class DiffEntry {
     
     @JsonProperty("sha")
     public String sha;
+
     public DiffEntry withSha(String sha) {
         this.sha = sha;
         return this;
@@ -86,9 +96,21 @@ public class DiffEntry {
     
     @JsonProperty("status")
     public DiffEntryStatusEnum status;
+
     public DiffEntry withStatus(DiffEntryStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DiffEntry(@JsonProperty("additions") Long additions, @JsonProperty("blob_url") String blobUrl, @JsonProperty("changes") Long changes, @JsonProperty("contents_url") String contentsUrl, @JsonProperty("deletions") Long deletions, @JsonProperty("filename") String filename, @JsonProperty("raw_url") String rawUrl, @JsonProperty("sha") String sha, @JsonProperty("status") DiffEntryStatusEnum status) {
+        this.additions = additions;
+        this.blobUrl = blobUrl;
+        this.changes = changes;
+        this.contentsUrl = contentsUrl;
+        this.deletions = deletions;
+        this.filename = filename;
+        this.rawUrl = rawUrl;
+        this.sha = sha;
+        this.status = status;
+  }
 }

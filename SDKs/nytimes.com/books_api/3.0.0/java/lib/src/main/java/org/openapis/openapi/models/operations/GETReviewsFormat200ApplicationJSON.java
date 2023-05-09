@@ -12,6 +12,7 @@ public class GETReviewsFormat200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public GETReviewsFormat200ApplicationJSON withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -20,6 +21,7 @@ public class GETReviewsFormat200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_results")
     public Long numResults;
+
     public GETReviewsFormat200ApplicationJSON withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -28,6 +30,7 @@ public class GETReviewsFormat200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GETReviewsFormat200ApplicationJSONResults[] results;
+
     public GETReviewsFormat200ApplicationJSON withResults(GETReviewsFormat200ApplicationJSONResults[] results) {
         this.results = results;
         return this;
@@ -36,9 +39,11 @@ public class GETReviewsFormat200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GETReviewsFormat200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GETReviewsFormat200ApplicationJSON(){}
 }

@@ -18,6 +18,7 @@ public class DatabaseType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engine")
     public DatabaseTypeEngineEnum engine;
+
     public DatabaseType withEngine(DatabaseTypeEngineEnum engine) {
         this.engine = engine;
         return this;
@@ -29,9 +30,11 @@ public class DatabaseType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public DatabaseTypeProviderEnum provider;
+
     public DatabaseType withProvider(DatabaseTypeProviderEnum provider) {
         this.provider = provider;
         return this;
     }
     
+    public DatabaseType(){}
 }

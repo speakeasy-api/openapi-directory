@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudDialogflowCxV3Deployment withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowVersion")
     public String flowVersion;
+
     public GoogleCloudDialogflowCxV3Deployment withFlowVersion(String flowVersion) {
         this.flowVersion = flowVersion;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3Deployment withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public GoogleCloudDialogflowCxV3DeploymentResult result;
+
     public GoogleCloudDialogflowCxV3Deployment withResult(GoogleCloudDialogflowCxV3DeploymentResult result) {
         this.result = result;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudDialogflowCxV3Deployment withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowCxV3Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDialogflowCxV3DeploymentStateEnum state;
+
     public GoogleCloudDialogflowCxV3Deployment withState(GoogleCloudDialogflowCxV3DeploymentStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3Deployment(){}
 }

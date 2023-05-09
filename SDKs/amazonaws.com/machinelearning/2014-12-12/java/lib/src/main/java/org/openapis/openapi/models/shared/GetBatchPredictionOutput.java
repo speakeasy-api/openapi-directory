@@ -20,6 +20,7 @@ public class GetBatchPredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchPredictionDataSourceId")
     public String batchPredictionDataSourceId;
+
     public GetBatchPredictionOutput withBatchPredictionDataSourceId(String batchPredictionDataSourceId) {
         this.batchPredictionDataSourceId = batchPredictionDataSourceId;
         return this;
@@ -28,6 +29,7 @@ public class GetBatchPredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchPredictionId")
     public String batchPredictionId;
+
     public GetBatchPredictionOutput withBatchPredictionId(String batchPredictionId) {
         this.batchPredictionId = batchPredictionId;
         return this;
@@ -36,6 +38,7 @@ public class GetBatchPredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeTime")
     public Long computeTime;
+
     public GetBatchPredictionOutput withComputeTime(Long computeTime) {
         this.computeTime = computeTime;
         return this;
@@ -46,6 +49,7 @@ public class GetBatchPredictionOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public GetBatchPredictionOutput withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -54,6 +58,7 @@ public class GetBatchPredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedByIamUser")
     public String createdByIamUser;
+
     public GetBatchPredictionOutput withCreatedByIamUser(String createdByIamUser) {
         this.createdByIamUser = createdByIamUser;
         return this;
@@ -64,6 +69,7 @@ public class GetBatchPredictionOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FinishedAt")
     public OffsetDateTime finishedAt;
+
     public GetBatchPredictionOutput withFinishedAt(OffsetDateTime finishedAt) {
         this.finishedAt = finishedAt;
         return this;
@@ -72,6 +78,7 @@ public class GetBatchPredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataLocationS3")
     public String inputDataLocationS3;
+
     public GetBatchPredictionOutput withInputDataLocationS3(String inputDataLocationS3) {
         this.inputDataLocationS3 = inputDataLocationS3;
         return this;
@@ -80,6 +87,7 @@ public class GetBatchPredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvalidRecordCount")
     public Long invalidRecordCount;
+
     public GetBatchPredictionOutput withInvalidRecordCount(Long invalidRecordCount) {
         this.invalidRecordCount = invalidRecordCount;
         return this;
@@ -90,6 +98,7 @@ public class GetBatchPredictionOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public GetBatchPredictionOutput withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -98,6 +107,7 @@ public class GetBatchPredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogUri")
     public String logUri;
+
     public GetBatchPredictionOutput withLogUri(String logUri) {
         this.logUri = logUri;
         return this;
@@ -106,6 +116,7 @@ public class GetBatchPredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public GetBatchPredictionOutput withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
@@ -114,6 +125,7 @@ public class GetBatchPredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public GetBatchPredictionOutput withMessage(String message) {
         this.message = message;
         return this;
@@ -122,6 +134,7 @@ public class GetBatchPredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetBatchPredictionOutput withName(String name) {
         this.name = name;
         return this;
@@ -130,6 +143,7 @@ public class GetBatchPredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputUri")
     public String outputUri;
+
     public GetBatchPredictionOutput withOutputUri(String outputUri) {
         this.outputUri = outputUri;
         return this;
@@ -140,6 +154,7 @@ public class GetBatchPredictionOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedAt")
     public OffsetDateTime startedAt;
+
     public GetBatchPredictionOutput withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -148,6 +163,7 @@ public class GetBatchPredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EntityStatusEnum status;
+
     public GetBatchPredictionOutput withStatus(EntityStatusEnum status) {
         this.status = status;
         return this;
@@ -156,9 +172,11 @@ public class GetBatchPredictionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalRecordCount")
     public Long totalRecordCount;
+
     public GetBatchPredictionOutput withTotalRecordCount(Long totalRecordCount) {
         this.totalRecordCount = totalRecordCount;
         return this;
     }
     
+    public GetBatchPredictionOutput(){}
 }

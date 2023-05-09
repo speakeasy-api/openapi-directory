@@ -15,9 +15,11 @@ public class TransferCertificateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferMessage")
     public String transferMessage;
+
     public TransferCertificateRequestBody withTransferMessage(String transferMessage) {
         this.transferMessage = transferMessage;
         return this;
     }
     
+    public TransferCertificateRequestBody(){}
 }

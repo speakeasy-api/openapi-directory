@@ -19,9 +19,11 @@ public class OrderSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderSource withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OrderSource(){}
 }

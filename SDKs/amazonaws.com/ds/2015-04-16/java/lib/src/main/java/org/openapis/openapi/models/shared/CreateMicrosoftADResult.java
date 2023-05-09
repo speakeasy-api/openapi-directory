@@ -15,9 +15,11 @@ public class CreateMicrosoftADResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public CreateMicrosoftADResult withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     
+    public CreateMicrosoftADResult(){}
 }

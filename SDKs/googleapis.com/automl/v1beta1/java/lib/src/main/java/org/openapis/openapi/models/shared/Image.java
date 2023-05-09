@@ -18,6 +18,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageBytes")
     public String imageBytes;
+
     public Image withImageBytes(String imageBytes) {
         this.imageBytes = imageBytes;
         return this;
@@ -29,6 +30,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfig")
     public InputConfig inputConfig;
+
     public Image withInputConfig(InputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -40,9 +42,11 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailUri")
     public String thumbnailUri;
+
     public Image withThumbnailUri(String thumbnailUri) {
         this.thumbnailUri = thumbnailUri;
         return this;
     }
     
+    public Image(){}
 }

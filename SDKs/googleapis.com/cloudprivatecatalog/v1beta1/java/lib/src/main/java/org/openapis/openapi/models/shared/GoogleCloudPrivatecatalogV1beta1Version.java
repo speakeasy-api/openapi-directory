@@ -18,6 +18,7 @@ public class GoogleCloudPrivatecatalogV1beta1Version {
      */
     
     public java.util.Map<String, Object> asset;
+
     public GoogleCloudPrivatecatalogV1beta1Version withAsset(java.util.Map<String, Object> asset) {
         this.asset = asset;
         return this;
@@ -28,6 +29,7 @@ public class GoogleCloudPrivatecatalogV1beta1Version {
      */
     
     public String createTime;
+
     public GoogleCloudPrivatecatalogV1beta1Version withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -39,6 +41,7 @@ public class GoogleCloudPrivatecatalogV1beta1Version {
      */
     
     public String description;
+
     public GoogleCloudPrivatecatalogV1beta1Version withDescription(String description) {
         this.description = description;
         return this;
@@ -52,6 +55,7 @@ public class GoogleCloudPrivatecatalogV1beta1Version {
      */
     
     public String name;
+
     public GoogleCloudPrivatecatalogV1beta1Version withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudPrivatecatalogV1beta1Version {
      */
     
     public String updateTime;
+
     public GoogleCloudPrivatecatalogV1beta1Version withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudPrivatecatalogV1beta1Version(){}
 }

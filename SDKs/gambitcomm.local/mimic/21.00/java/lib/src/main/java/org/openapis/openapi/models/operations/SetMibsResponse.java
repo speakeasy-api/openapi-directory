@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetMibsResponse {
     
     public String contentType;
+
     public SetMibsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SetMibsResponse {
     
     
     public Integer statusCode;
+
     public SetMibsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SetMibsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetMibsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class SetMibsResponse {
      */
     
     public String setMibs200ApplicationJSONString;
+
     public SetMibsResponse withSetMibs200ApplicationJSONString(String setMibs200ApplicationJSONString) {
         this.setMibs200ApplicationJSONString = setMibs200ApplicationJSONString;
         return this;
     }
     
+    public SetMibsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

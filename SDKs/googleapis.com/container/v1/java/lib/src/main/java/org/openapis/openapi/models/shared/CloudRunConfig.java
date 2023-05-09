@@ -18,6 +18,7 @@ public class CloudRunConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public CloudRunConfig withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -29,9 +30,11 @@ public class CloudRunConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancerType")
     public CloudRunConfigLoadBalancerTypeEnum loadBalancerType;
+
     public CloudRunConfig withLoadBalancerType(CloudRunConfigLoadBalancerTypeEnum loadBalancerType) {
         this.loadBalancerType = loadBalancerType;
         return this;
     }
     
+    public CloudRunConfig(){}
 }

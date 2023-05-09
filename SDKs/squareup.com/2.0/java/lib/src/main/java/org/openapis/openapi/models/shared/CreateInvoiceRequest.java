@@ -22,6 +22,7 @@ public class CreateInvoiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateInvoiceRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -33,9 +34,13 @@ public class CreateInvoiceRequest {
      */
     @JsonProperty("invoice")
     public Invoice invoice;
+
     public CreateInvoiceRequest withInvoice(Invoice invoice) {
         this.invoice = invoice;
         return this;
     }
     
+    public CreateInvoiceRequest(@JsonProperty("invoice") Invoice invoice) {
+        this.invoice = invoice;
+  }
 }

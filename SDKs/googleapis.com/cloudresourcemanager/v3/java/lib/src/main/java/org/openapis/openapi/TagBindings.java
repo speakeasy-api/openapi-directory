@@ -61,11 +61,9 @@ public class TagBindings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerTagBindingsCreateResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagBindingsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagBindingsCreateResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagBindingsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class TagBindings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudresourcemanagerTagBindingsListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagBindingsListResponse() {{
+        org.openapis.openapi.models.operations.CloudresourcemanagerTagBindingsListResponse res = new org.openapis.openapi.models.operations.CloudresourcemanagerTagBindingsListResponse(contentType, httpRes.statusCode()) {{
             listTagBindingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

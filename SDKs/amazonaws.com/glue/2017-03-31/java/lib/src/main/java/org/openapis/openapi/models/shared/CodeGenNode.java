@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CodeGenNode {
     @JsonProperty("Args")
     public CodeGenNodeArg[] args;
+
     public CodeGenNode withArgs(CodeGenNodeArg[] args) {
         this.args = args;
         return this;
@@ -21,6 +22,7 @@ public class CodeGenNode {
     
     @JsonProperty("Id")
     public String id;
+
     public CodeGenNode withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +31,7 @@ public class CodeGenNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineNumber")
     public Long lineNumber;
+
     public CodeGenNode withLineNumber(Long lineNumber) {
         this.lineNumber = lineNumber;
         return this;
@@ -36,9 +39,15 @@ public class CodeGenNode {
     
     @JsonProperty("NodeType")
     public String nodeType;
+
     public CodeGenNode withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
     }
     
+    public CodeGenNode(@JsonProperty("Args") CodeGenNodeArg[] args, @JsonProperty("Id") String id, @JsonProperty("NodeType") String nodeType) {
+        this.args = args;
+        this.id = id;
+        this.nodeType = nodeType;
+  }
 }

@@ -12,9 +12,11 @@ public class GetCallResponseLinksSelf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public GetCallResponseLinksSelf withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public GetCallResponseLinksSelf(){}
 }

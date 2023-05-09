@@ -15,6 +15,7 @@ public class PageModifyFieldsImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PageModifyFieldsImage withId(Long id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class PageModifyFieldsImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PageModifyFieldsImage withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PageModifyFieldsImage(){}
 }

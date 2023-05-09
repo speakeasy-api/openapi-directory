@@ -15,9 +15,11 @@ public class ExportTableToPointInTimeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportDescription")
     public ExportDescription exportDescription;
+
     public ExportTableToPointInTimeOutput withExportDescription(ExportDescription exportDescription) {
         this.exportDescription = exportDescription;
         return this;
     }
     
+    public ExportTableToPointInTimeOutput(){}
 }

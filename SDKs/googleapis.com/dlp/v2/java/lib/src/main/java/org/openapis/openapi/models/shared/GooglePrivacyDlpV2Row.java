@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public GooglePrivacyDlpV2Value[] values;
+
     public GooglePrivacyDlpV2Row withValues(GooglePrivacyDlpV2Value[] values) {
         this.values = values;
         return this;
     }
     
+    public GooglePrivacyDlpV2Row(){}
 }

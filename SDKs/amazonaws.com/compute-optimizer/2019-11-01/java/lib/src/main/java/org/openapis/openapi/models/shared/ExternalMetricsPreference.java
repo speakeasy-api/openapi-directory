@@ -15,9 +15,11 @@ public class ExternalMetricsPreference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public ExternalMetricsSourceEnum source;
+
     public ExternalMetricsPreference withSource(ExternalMetricsSourceEnum source) {
         this.source = source;
         return this;
     }
     
+    public ExternalMetricsPreference(){}
 }

@@ -54,11 +54,9 @@ public class Queues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AckMessageResponse res = new org.openapis.openapi.models.operations.AckMessageResponse() {{
+        org.openapis.openapi.models.operations.AckMessageResponse res = new org.openapis.openapi.models.operations.AckMessageResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,11 +91,9 @@ public class Queues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateQueueResponse res = new org.openapis.openapi.models.operations.CreateQueueResponse() {{
+        org.openapis.openapi.models.operations.CreateQueueResponse res = new org.openapis.openapi.models.operations.CreateQueueResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class Queues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteQueueResponse res = new org.openapis.openapi.models.operations.DeleteQueueResponse() {{
+        org.openapis.openapi.models.operations.DeleteQueueResponse res = new org.openapis.openapi.models.operations.DeleteQueueResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +172,9 @@ public class Queues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetListOfQueuesResponse res = new org.openapis.openapi.models.operations.GetListOfQueuesResponse() {{
+        org.openapis.openapi.models.operations.GetListOfQueuesResponse res = new org.openapis.openapi.models.operations.GetListOfQueuesResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -216,11 +208,9 @@ public class Queues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMessageDataResponse res = new org.openapis.openapi.models.operations.GetMessageDataResponse() {{
+        org.openapis.openapi.models.operations.GetMessageDataResponse res = new org.openapis.openapi.models.operations.GetMessageDataResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,11 +251,9 @@ public class Queues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNextMessagesResponse res = new org.openapis.openapi.models.operations.GetNextMessagesResponse() {{
+        org.openapis.openapi.models.operations.GetNextMessagesResponse res = new org.openapis.openapi.models.operations.GetNextMessagesResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -301,11 +289,9 @@ public class Queues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetQueueConfigResponse res = new org.openapis.openapi.models.operations.GetQueueConfigResponse() {{
+        org.openapis.openapi.models.operations.GetQueueConfigResponse res = new org.openapis.openapi.models.operations.GetQueueConfigResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -352,11 +338,9 @@ public class Queues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendMessageBinaryResponse res = new org.openapis.openapi.models.operations.SendMessageBinaryResponse() {{
+        org.openapis.openapi.models.operations.SendMessageBinaryResponse res = new org.openapis.openapi.models.operations.SendMessageBinaryResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +374,9 @@ public class Queues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateQueueConfigResponse res = new org.openapis.openapi.models.operations.UpdateQueueConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateQueueConfigResponse res = new org.openapis.openapi.models.operations.UpdateQueueConfigResponse(contentType, httpRes.statusCode()) {{
             apiResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

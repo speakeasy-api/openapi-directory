@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostUploadRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Upload upload;
+
     public PostUploadRequest withUpload(org.openapis.openapi.models.shared.Upload upload) {
         this.upload = upload;
         return this;
@@ -19,9 +20,11 @@ public class PostUploadRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Recipient-Email")
     public String xRecipientEmail;
+
     public PostUploadRequest withXRecipientEmail(String xRecipientEmail) {
         this.xRecipientEmail = xRecipientEmail;
         return this;
     }
     
+    public PostUploadRequest(){}
 }

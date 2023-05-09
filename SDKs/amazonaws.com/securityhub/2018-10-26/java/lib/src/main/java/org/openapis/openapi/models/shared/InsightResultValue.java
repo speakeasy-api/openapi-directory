@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InsightResultValue {
     @JsonProperty("Count")
     public Long count;
+
     public InsightResultValue withCount(Long count) {
         this.count = count;
         return this;
@@ -19,9 +20,14 @@ public class InsightResultValue {
     
     @JsonProperty("GroupByAttributeValue")
     public String groupByAttributeValue;
+
     public InsightResultValue withGroupByAttributeValue(String groupByAttributeValue) {
         this.groupByAttributeValue = groupByAttributeValue;
         return this;
     }
     
+    public InsightResultValue(@JsonProperty("Count") Long count, @JsonProperty("GroupByAttributeValue") String groupByAttributeValue) {
+        this.count = count;
+        this.groupByAttributeValue = groupByAttributeValue;
+  }
 }

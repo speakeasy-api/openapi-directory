@@ -60,11 +60,9 @@ public class Task {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTasksResponse res = new org.openapis.openapi.models.operations.ListTasksResponse() {{
+        org.openapis.openapi.models.operations.ListTasksResponse res = new org.openapis.openapi.models.operations.ListTasksResponse(contentType, httpRes.statusCode()) {{
             tasksCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,12 +98,10 @@ public class Task {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShowTaskResponse res = new org.openapis.openapi.models.operations.ShowTaskResponse() {{
+        org.openapis.openapi.models.operations.ShowTaskResponse res = new org.openapis.openapi.models.operations.ShowTaskResponse(contentType, httpRes.statusCode()) {{
             task = null;
             errorNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Task {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTaskResponse res = new org.openapis.openapi.models.operations.UpdateTaskResponse() {{
+        org.openapis.openapi.models.operations.UpdateTaskResponse res = new org.openapis.openapi.models.operations.UpdateTaskResponse(contentType, httpRes.statusCode()) {{
             errorNotFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400) {

@@ -70,4 +70,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/StoredValueBalanceMergeRequ
 lib/src/main/java/org/openapis/openapi/models/shared/StoredValueVoidResponseResultCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/StoredValueVoidResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StoredValueVoidRequest.java
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

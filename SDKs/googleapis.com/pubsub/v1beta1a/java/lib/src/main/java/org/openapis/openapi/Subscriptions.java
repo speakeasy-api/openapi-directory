@@ -62,11 +62,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeResponse() {{
+        org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PubsubSubscriptionsCreateResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsCreateResponse() {{
+        org.openapis.openapi.models.operations.PubsubSubscriptionsCreateResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsCreateResponse(contentType, httpRes.statusCode()) {{
             subscription = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PubsubSubscriptionsDeleteResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.PubsubSubscriptionsDeleteResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PubsubSubscriptionsGetResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsGetResponse() {{
+        org.openapis.openapi.models.operations.PubsubSubscriptionsGetResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsGetResponse(contentType, httpRes.statusCode()) {{
             subscription = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PubsubSubscriptionsListResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsListResponse() {{
+        org.openapis.openapi.models.operations.PubsubSubscriptionsListResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsListResponse(contentType, httpRes.statusCode()) {{
             listSubscriptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PubsubSubscriptionsModifyAckDeadlineResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsModifyAckDeadlineResponse() {{
+        org.openapis.openapi.models.operations.PubsubSubscriptionsModifyAckDeadlineResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsModifyAckDeadlineResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PubsubSubscriptionsModifyPushConfigResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsModifyPushConfigResponse() {{
+        org.openapis.openapi.models.operations.PubsubSubscriptionsModifyPushConfigResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsModifyPushConfigResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PubsubSubscriptionsPullResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsPullResponse() {{
+        org.openapis.openapi.models.operations.PubsubSubscriptionsPullResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsPullResponse(contentType, httpRes.statusCode()) {{
             pullResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +424,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PubsubSubscriptionsPullBatchResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsPullBatchResponse() {{
+        org.openapis.openapi.models.operations.PubsubSubscriptionsPullBatchResponse res = new org.openapis.openapi.models.operations.PubsubSubscriptionsPullBatchResponse(contentType, httpRes.statusCode()) {{
             pullBatchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

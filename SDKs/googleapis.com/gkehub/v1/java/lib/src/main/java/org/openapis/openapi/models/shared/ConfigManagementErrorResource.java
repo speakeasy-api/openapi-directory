@@ -18,6 +18,7 @@ public class ConfigManagementErrorResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGvk")
     public ConfigManagementGroupVersionKind resourceGvk;
+
     public ConfigManagementErrorResource withResourceGvk(ConfigManagementGroupVersionKind resourceGvk) {
         this.resourceGvk = resourceGvk;
         return this;
@@ -29,6 +30,7 @@ public class ConfigManagementErrorResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public ConfigManagementErrorResource withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -40,6 +42,7 @@ public class ConfigManagementErrorResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceNamespace")
     public String resourceNamespace;
+
     public ConfigManagementErrorResource withResourceNamespace(String resourceNamespace) {
         this.resourceNamespace = resourceNamespace;
         return this;
@@ -51,9 +54,11 @@ public class ConfigManagementErrorResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourcePath")
     public String sourcePath;
+
     public ConfigManagementErrorResource withSourcePath(String sourcePath) {
         this.sourcePath = sourcePath;
         return this;
     }
     
+    public ConfigManagementErrorResource(){}
 }

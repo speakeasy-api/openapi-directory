@@ -18,6 +18,7 @@ public class Seriesmembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Seriesmembership withKind(String kind) {
         this.kind = kind;
         return this;
@@ -26,6 +27,7 @@ public class Seriesmembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member")
     public Volume[] member;
+
     public Seriesmembership withMember(Volume[] member) {
         this.member = member;
         return this;
@@ -34,9 +36,11 @@ public class Seriesmembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public Seriesmembership withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public Seriesmembership(){}
 }

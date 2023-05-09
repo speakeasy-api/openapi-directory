@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetServerTypes200ApplicationJSON {
     @JsonProperty("server_types")
     public GetServerTypes200ApplicationJSONServerTypes[] serverTypes;
+
     public GetServerTypes200ApplicationJSON withServerTypes(GetServerTypes200ApplicationJSONServerTypes[] serverTypes) {
         this.serverTypes = serverTypes;
         return this;
     }
     
+    public GetServerTypes200ApplicationJSON(@JsonProperty("server_types") GetServerTypes200ApplicationJSONServerTypes[] serverTypes) {
+        this.serverTypes = serverTypes;
+  }
 }

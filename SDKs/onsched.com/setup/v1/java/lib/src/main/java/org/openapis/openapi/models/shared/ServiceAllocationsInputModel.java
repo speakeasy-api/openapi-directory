@@ -12,9 +12,11 @@ public class ServiceAllocationsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAllocations")
     public ServiceAllocationInputModel[] serviceAllocations;
+
     public ServiceAllocationsInputModel withServiceAllocations(ServiceAllocationInputModel[] serviceAllocations) {
         this.serviceAllocations = serviceAllocations;
         return this;
     }
     
+    public ServiceAllocationsInputModel(){}
 }

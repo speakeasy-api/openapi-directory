@@ -12,6 +12,7 @@ public class ActionMetricValidationsMinimum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public ActionMetricValidationsMinimum withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -20,9 +21,11 @@ public class ActionMetricValidationsMinimum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public ActionMetricValidationsMinimum withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public ActionMetricValidationsMinimum(){}
 }

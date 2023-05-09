@@ -12,6 +12,7 @@ public class TripsTripDetails200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public Double code;
+
     public TripsTripDetails200ApplicationJSONResult withCode(Double code) {
         this.code = code;
         return this;
@@ -20,9 +21,11 @@ public class TripsTripDetails200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Track")
     public TripsTripDetails200ApplicationJSONResultTrack track;
+
     public TripsTripDetails200ApplicationJSONResult withTrack(TripsTripDetails200ApplicationJSONResultTrack track) {
         this.track = track;
         return this;
     }
     
+    public TripsTripDetails200ApplicationJSONResult(){}
 }

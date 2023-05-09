@@ -12,6 +12,7 @@ public class DescribePullRequestEventsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actorArn")
     public String actorArn;
+
     public DescribePullRequestEventsInput withActorArn(String actorArn) {
         this.actorArn = actorArn;
         return this;
@@ -20,6 +21,7 @@ public class DescribePullRequestEventsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribePullRequestEventsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribePullRequestEventsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribePullRequestEventsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class DescribePullRequestEventsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pullRequestEventType")
     public PullRequestEventTypeEnum pullRequestEventType;
+
     public DescribePullRequestEventsInput withPullRequestEventType(PullRequestEventTypeEnum pullRequestEventType) {
         this.pullRequestEventType = pullRequestEventType;
         return this;
@@ -43,9 +47,13 @@ public class DescribePullRequestEventsInput {
     
     @JsonProperty("pullRequestId")
     public String pullRequestId;
+
     public DescribePullRequestEventsInput withPullRequestId(String pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
     }
     
+    public DescribePullRequestEventsInput(@JsonProperty("pullRequestId") String pullRequestId) {
+        this.pullRequestId = pullRequestId;
+  }
 }

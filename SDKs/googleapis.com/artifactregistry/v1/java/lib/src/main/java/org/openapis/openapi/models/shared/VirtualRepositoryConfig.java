@@ -18,9 +18,11 @@ public class VirtualRepositoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upstreamPolicies")
     public UpstreamPolicy[] upstreamPolicies;
+
     public VirtualRepositoryConfig withUpstreamPolicies(UpstreamPolicy[] upstreamPolicies) {
         this.upstreamPolicies = upstreamPolicies;
         return this;
     }
     
+    public VirtualRepositoryConfig(){}
 }

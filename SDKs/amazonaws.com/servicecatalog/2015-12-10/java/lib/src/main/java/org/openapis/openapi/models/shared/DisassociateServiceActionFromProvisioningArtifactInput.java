@@ -12,6 +12,7 @@ public class DisassociateServiceActionFromProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DisassociateServiceActionFromProvisioningArtifactInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class DisassociateServiceActionFromProvisioningArtifactInput {
     
     @JsonProperty("ProductId")
     public String productId;
+
     public DisassociateServiceActionFromProvisioningArtifactInput withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -26,6 +28,7 @@ public class DisassociateServiceActionFromProvisioningArtifactInput {
     
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public DisassociateServiceActionFromProvisioningArtifactInput withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
@@ -33,9 +36,15 @@ public class DisassociateServiceActionFromProvisioningArtifactInput {
     
     @JsonProperty("ServiceActionId")
     public String serviceActionId;
+
     public DisassociateServiceActionFromProvisioningArtifactInput withServiceActionId(String serviceActionId) {
         this.serviceActionId = serviceActionId;
         return this;
     }
     
+    public DisassociateServiceActionFromProvisioningArtifactInput(@JsonProperty("ProductId") String productId, @JsonProperty("ProvisioningArtifactId") String provisioningArtifactId, @JsonProperty("ServiceActionId") String serviceActionId) {
+        this.productId = productId;
+        this.provisioningArtifactId = provisioningArtifactId;
+        this.serviceActionId = serviceActionId;
+  }
 }

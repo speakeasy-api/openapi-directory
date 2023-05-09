@@ -18,6 +18,7 @@ public class UpdateLinePropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateLinePropertiesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class UpdateLinePropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineProperties")
     public LineProperties lineProperties;
+
     public UpdateLinePropertiesRequest withLineProperties(LineProperties lineProperties) {
         this.lineProperties = lineProperties;
         return this;
@@ -40,9 +42,11 @@ public class UpdateLinePropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public UpdateLinePropertiesRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public UpdateLinePropertiesRequest(){}
 }

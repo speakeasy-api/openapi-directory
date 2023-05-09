@@ -18,6 +18,7 @@ public class ItvUpdatePaymentStrongRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethodFromToken")
     public String paymentMethodFromToken;
+
     public ItvUpdatePaymentStrongRequest withPaymentMethodFromToken(String paymentMethodFromToken) {
         this.paymentMethodFromToken = paymentMethodFromToken;
         return this;
@@ -29,6 +30,7 @@ public class ItvUpdatePaymentStrongRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethodId")
     public String paymentMethodId;
+
     public ItvUpdatePaymentStrongRequest withPaymentMethodId(String paymentMethodId) {
         this.paymentMethodId = paymentMethodId;
         return this;
@@ -39,9 +41,13 @@ public class ItvUpdatePaymentStrongRequest {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ItvUpdatePaymentStrongRequest withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
     }
     
+    public ItvUpdatePaymentStrongRequest(@JsonProperty("profileToken") String profileToken) {
+        this.profileToken = profileToken;
+  }
 }

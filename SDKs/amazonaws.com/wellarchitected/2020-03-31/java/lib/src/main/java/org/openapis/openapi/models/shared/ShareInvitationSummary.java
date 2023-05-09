@@ -15,6 +15,7 @@ public class ShareInvitationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensArn")
     public String lensArn;
+
     public ShareInvitationSummary withLensArn(String lensArn) {
         this.lensArn = lensArn;
         return this;
@@ -26,6 +27,7 @@ public class ShareInvitationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensName")
     public String lensName;
+
     public ShareInvitationSummary withLensName(String lensName) {
         this.lensName = lensName;
         return this;
@@ -37,6 +39,7 @@ public class ShareInvitationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionType")
     public PermissionTypeEnum permissionType;
+
     public ShareInvitationSummary withPermissionType(PermissionTypeEnum permissionType) {
         this.permissionType = permissionType;
         return this;
@@ -45,6 +48,7 @@ public class ShareInvitationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareInvitationId")
     public String shareInvitationId;
+
     public ShareInvitationSummary withShareInvitationId(String shareInvitationId) {
         this.shareInvitationId = shareInvitationId;
         return this;
@@ -53,6 +57,7 @@ public class ShareInvitationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareResourceType")
     public ShareResourceTypeEnum shareResourceType;
+
     public ShareInvitationSummary withShareResourceType(ShareResourceTypeEnum shareResourceType) {
         this.shareResourceType = shareResourceType;
         return this;
@@ -64,6 +69,7 @@ public class ShareInvitationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedBy")
     public String sharedBy;
+
     public ShareInvitationSummary withSharedBy(String sharedBy) {
         this.sharedBy = sharedBy;
         return this;
@@ -75,6 +81,7 @@ public class ShareInvitationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedWith")
     public String sharedWith;
+
     public ShareInvitationSummary withSharedWith(String sharedWith) {
         this.sharedWith = sharedWith;
         return this;
@@ -86,6 +93,7 @@ public class ShareInvitationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadId")
     public String workloadId;
+
     public ShareInvitationSummary withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
@@ -97,9 +105,11 @@ public class ShareInvitationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadName")
     public String workloadName;
+
     public ShareInvitationSummary withWorkloadName(String workloadName) {
         this.workloadName = workloadName;
         return this;
     }
     
+    public ShareInvitationSummary(){}
 }

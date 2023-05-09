@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCompaniesCompanyIdWebhooksWebhookIdResponse {
     
     public String contentType;
+
     public DeleteCompaniesCompanyIdWebhooksWebhookIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCompaniesCompanyIdWebhooksWebhookIdResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public DeleteCompaniesCompanyIdWebhooksWebhookIdResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -26,6 +29,7 @@ public class DeleteCompaniesCompanyIdWebhooksWebhookIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteCompaniesCompanyIdWebhooksWebhookIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteCompaniesCompanyIdWebhooksWebhookIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCompaniesCompanyIdWebhooksWebhookIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteCompaniesCompanyIdWebhooksWebhookIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

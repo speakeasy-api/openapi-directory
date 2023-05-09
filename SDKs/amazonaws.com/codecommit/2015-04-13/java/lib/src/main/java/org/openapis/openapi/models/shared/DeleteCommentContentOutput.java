@@ -15,9 +15,11 @@ public class DeleteCommentContentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public Comment comment;
+
     public DeleteCommentContentOutput withComment(Comment comment) {
         this.comment = comment;
         return this;
     }
     
+    public DeleteCommentContentOutput(){}
 }

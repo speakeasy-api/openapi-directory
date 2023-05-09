@@ -15,6 +15,7 @@ public class TestGdprExportPipelineTest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_upload_id")
     public String appUploadId;
+
     public TestGdprExportPipelineTest200ApplicationJSON withAppUploadId(String appUploadId) {
         this.appUploadId = appUploadId;
         return this;
@@ -23,9 +24,11 @@ public class TestGdprExportPipelineTest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("test_parameters")
     public java.util.Map<String, Object> testParameters;
+
     public TestGdprExportPipelineTest200ApplicationJSON withTestParameters(java.util.Map<String, Object> testParameters) {
         this.testParameters = testParameters;
         return this;
     }
     
+    public TestGdprExportPipelineTest200ApplicationJSON(){}
 }

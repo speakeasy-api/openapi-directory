@@ -18,6 +18,7 @@ public class PolicyControllerOnClusterState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public PolicyControllerOnClusterState withDetails(String details) {
         this.details = details;
         return this;
@@ -29,9 +30,11 @@ public class PolicyControllerOnClusterState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public PolicyControllerOnClusterStateStateEnum state;
+
     public PolicyControllerOnClusterState withState(PolicyControllerOnClusterStateStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public PolicyControllerOnClusterState(){}
 }

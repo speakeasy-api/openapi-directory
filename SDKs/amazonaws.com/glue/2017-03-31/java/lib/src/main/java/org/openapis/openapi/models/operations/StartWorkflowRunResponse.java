@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartWorkflowRunResponse {
@@ -12,6 +13,7 @@ public class StartWorkflowRunResponse {
      */
     
     public Object concurrentRunsExceededException;
+
     public StartWorkflowRunResponse withConcurrentRunsExceededException(Object concurrentRunsExceededException) {
         this.concurrentRunsExceededException = concurrentRunsExceededException;
         return this;
@@ -19,6 +21,7 @@ public class StartWorkflowRunResponse {
     
     
     public String contentType;
+
     public StartWorkflowRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartWorkflowRunResponse {
      */
     
     public Object entityNotFoundException;
+
     public StartWorkflowRunResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class StartWorkflowRunResponse {
      */
     
     public Object internalServiceException;
+
     public StartWorkflowRunResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class StartWorkflowRunResponse {
      */
     
     public Object invalidInputException;
+
     public StartWorkflowRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class StartWorkflowRunResponse {
      */
     
     public Object operationTimeoutException;
+
     public StartWorkflowRunResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class StartWorkflowRunResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public StartWorkflowRunResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class StartWorkflowRunResponse {
      */
     
     public org.openapis.openapi.models.shared.StartWorkflowRunResponse startWorkflowRunResponse;
+
     public StartWorkflowRunResponse withStartWorkflowRunResponse(org.openapis.openapi.models.shared.StartWorkflowRunResponse startWorkflowRunResponse) {
         this.startWorkflowRunResponse = startWorkflowRunResponse;
         return this;
@@ -86,6 +95,7 @@ public class StartWorkflowRunResponse {
     
     
     public Integer statusCode;
+
     public StartWorkflowRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class StartWorkflowRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartWorkflowRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartWorkflowRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

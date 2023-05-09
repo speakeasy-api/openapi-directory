@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdp withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idpId")
     public String idpId;
+
     public GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdp withIdpId(String idpId) {
         this.idpId = idpId;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2DefaultSupportedIdp(){}
 }

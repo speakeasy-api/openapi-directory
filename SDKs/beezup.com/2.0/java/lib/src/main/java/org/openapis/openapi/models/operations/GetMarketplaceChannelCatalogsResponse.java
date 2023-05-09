@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMarketplaceChannelCatalogsResponse {
     
     public String contentType;
+
     public GetMarketplaceChannelCatalogsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetMarketplaceChannelCatalogsResponse {
     
     
     public Integer statusCode;
+
     public GetMarketplaceChannelCatalogsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetMarketplaceChannelCatalogsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMarketplaceChannelCatalogsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetMarketplaceChannelCatalogsResponse {
      */
     
     public org.openapis.openapi.models.shared.MarketplaceChannelCatalogList marketplaceChannelCatalogList;
+
     public GetMarketplaceChannelCatalogsResponse withMarketplaceChannelCatalogList(org.openapis.openapi.models.shared.MarketplaceChannelCatalogList marketplaceChannelCatalogList) {
         this.marketplaceChannelCatalogList = marketplaceChannelCatalogList;
         return this;
     }
     
+    public GetMarketplaceChannelCatalogsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

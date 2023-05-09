@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPodcastRecommendationsResponse {
     @JsonProperty("recommendations")
     public PodcastSimple[] recommendations;
+
     public GetPodcastRecommendationsResponse withRecommendations(PodcastSimple[] recommendations) {
         this.recommendations = recommendations;
         return this;
     }
     
+    public GetPodcastRecommendationsResponse(@JsonProperty("recommendations") PodcastSimple[] recommendations) {
+        this.recommendations = recommendations;
+  }
 }

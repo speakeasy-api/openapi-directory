@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RevokeTokenSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
     public String oauth2ClientSecret;
+
     public RevokeTokenSecurity withOauth2ClientSecret(String oauth2ClientSecret) {
         this.oauth2ClientSecret = oauth2ClientSecret;
         return this;
     }
     
+    public RevokeTokenSecurity(@JsonProperty("oauth2ClientSecret") String oauth2ClientSecret) {
+        this.oauth2ClientSecret = oauth2ClientSecret;
+  }
 }

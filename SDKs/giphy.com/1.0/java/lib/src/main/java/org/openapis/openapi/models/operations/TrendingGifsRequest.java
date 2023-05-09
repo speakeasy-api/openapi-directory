@@ -12,6 +12,7 @@ public class TrendingGifsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public TrendingGifsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class TrendingGifsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public TrendingGifsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -32,9 +34,11 @@ public class TrendingGifsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rating")
     public String rating;
+
     public TrendingGifsRequest withRating(String rating) {
         this.rating = rating;
         return this;
     }
     
+    public TrendingGifsRequest(){}
 }

@@ -15,6 +15,7 @@ public class AwsEc2VpnConnectionVgwTelemetryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptedRouteCount")
     public Long acceptedRouteCount;
+
     public AwsEc2VpnConnectionVgwTelemetryDetails withAcceptedRouteCount(Long acceptedRouteCount) {
         this.acceptedRouteCount = acceptedRouteCount;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2VpnConnectionVgwTelemetryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateArn")
     public String certificateArn;
+
     public AwsEc2VpnConnectionVgwTelemetryDetails withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2VpnConnectionVgwTelemetryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastStatusChange")
     public String lastStatusChange;
+
     public AwsEc2VpnConnectionVgwTelemetryDetails withLastStatusChange(String lastStatusChange) {
         this.lastStatusChange = lastStatusChange;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2VpnConnectionVgwTelemetryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutsideIpAddress")
     public String outsideIpAddress;
+
     public AwsEc2VpnConnectionVgwTelemetryDetails withOutsideIpAddress(String outsideIpAddress) {
         this.outsideIpAddress = outsideIpAddress;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2VpnConnectionVgwTelemetryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsEc2VpnConnectionVgwTelemetryDetails withStatus(String status) {
         this.status = status;
         return this;
@@ -55,9 +60,11 @@ public class AwsEc2VpnConnectionVgwTelemetryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public AwsEc2VpnConnectionVgwTelemetryDetails withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public AwsEc2VpnConnectionVgwTelemetryDetails(){}
 }

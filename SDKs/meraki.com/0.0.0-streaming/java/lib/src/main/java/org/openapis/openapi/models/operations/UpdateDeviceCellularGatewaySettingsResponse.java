@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDeviceCellularGatewaySettingsResponse {
     
     public String contentType;
+
     public UpdateDeviceCellularGatewaySettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateDeviceCellularGatewaySettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateDeviceCellularGatewaySettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateDeviceCellularGatewaySettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDeviceCellularGatewaySettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class UpdateDeviceCellularGatewaySettingsResponse {
      */
     
     public java.util.Map<String, Object> updateDeviceCellularGatewaySettings200ApplicationJSONObject;
+
     public UpdateDeviceCellularGatewaySettingsResponse withUpdateDeviceCellularGatewaySettings200ApplicationJSONObject(java.util.Map<String, Object> updateDeviceCellularGatewaySettings200ApplicationJSONObject) {
         this.updateDeviceCellularGatewaySettings200ApplicationJSONObject = updateDeviceCellularGatewaySettings200ApplicationJSONObject;
         return this;
     }
     
+    public UpdateDeviceCellularGatewaySettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

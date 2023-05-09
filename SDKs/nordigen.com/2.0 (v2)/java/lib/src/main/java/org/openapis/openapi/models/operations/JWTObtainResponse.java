@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class JWTObtainResponse {
     
     public String contentType;
+
     public JWTObtainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class JWTObtainResponse {
      */
     
     public java.util.Map<String, Object> jwtObtain401ApplicationJSONObject;
+
     public JWTObtainResponse withJWTObtain401ApplicationJSONObject(java.util.Map<String, Object> jwtObtain401ApplicationJSONObject) {
         this.jwtObtain401ApplicationJSONObject = jwtObtain401ApplicationJSONObject;
         return this;
@@ -29,8 +32,20 @@ public class JWTObtainResponse {
      */
     
     public java.util.Map<String, Object> jwtObtain403ApplicationJSONObject;
+
     public JWTObtainResponse withJWTObtain403ApplicationJSONObject(java.util.Map<String, Object> jwtObtain403ApplicationJSONObject) {
         this.jwtObtain403ApplicationJSONObject = jwtObtain403ApplicationJSONObject;
+        return this;
+    }
+    
+    /**
+     * Nordigen rate limit exceeded
+     */
+    
+    public java.util.Map<String, Object> jwtObtain429ApplicationJSONObject;
+
+    public JWTObtainResponse withJWTObtain429ApplicationJSONObject(java.util.Map<String, Object> jwtObtain429ApplicationJSONObject) {
+        this.jwtObtain429ApplicationJSONObject = jwtObtain429ApplicationJSONObject;
         return this;
     }
     
@@ -39,6 +54,7 @@ public class JWTObtainResponse {
      */
     
     public org.openapis.openapi.models.shared.SpectacularJWTObtain spectacularJWTObtain;
+
     public JWTObtainResponse withSpectacularJWTObtain(org.openapis.openapi.models.shared.SpectacularJWTObtain spectacularJWTObtain) {
         this.spectacularJWTObtain = spectacularJWTObtain;
         return this;
@@ -46,6 +62,7 @@ public class JWTObtainResponse {
     
     
     public Integer statusCode;
+
     public JWTObtainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +70,14 @@ public class JWTObtainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public JWTObtainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public JWTObtainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

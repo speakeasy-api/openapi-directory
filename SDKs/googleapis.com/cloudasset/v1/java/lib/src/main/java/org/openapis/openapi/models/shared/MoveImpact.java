@@ -18,9 +18,11 @@ public class MoveImpact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public MoveImpact withDetail(String detail) {
         this.detail = detail;
         return this;
     }
     
+    public MoveImpact(){}
 }

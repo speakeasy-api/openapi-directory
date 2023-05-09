@@ -15,6 +15,7 @@ public class StoresList200ApplicationJSONIntuneDetailsTargetAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public StoresList200ApplicationJSONIntuneDetailsTargetAudience withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class StoresList200ApplicationJSONIntuneDetailsTargetAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StoresList200ApplicationJSONIntuneDetailsTargetAudience withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StoresList200ApplicationJSONIntuneDetailsTargetAudience(){}
 }

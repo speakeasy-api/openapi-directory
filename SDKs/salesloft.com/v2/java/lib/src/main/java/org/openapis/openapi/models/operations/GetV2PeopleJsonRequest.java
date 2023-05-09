@@ -12,6 +12,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_query")
     public String query;
+
     public GetV2PeopleJsonRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -22,6 +23,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=account_id")
     public Long[] accountId;
+
     public GetV2PeopleJsonRequest withAccountId(Long[] accountId) {
         this.accountId = accountId;
         return this;
@@ -32,6 +34,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bounced")
     public Boolean bounced;
+
     public GetV2PeopleJsonRequest withBounced(Boolean bounced) {
         this.bounced = bounced;
         return this;
@@ -42,6 +45,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=cadence_id")
     public Long[] cadenceId;
+
     public GetV2PeopleJsonRequest withCadenceId(Long[] cadenceId) {
         this.cadenceId = cadenceId;
         return this;
@@ -52,6 +56,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=can_call")
     public Boolean canCall;
+
     public GetV2PeopleJsonRequest withCanCall(Boolean canCall) {
         this.canCall = canCall;
         return this;
@@ -62,6 +67,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=can_email")
     public Boolean canEmail;
+
     public GetV2PeopleJsonRequest withCanEmail(Boolean canEmail) {
         this.canEmail = canEmail;
         return this;
@@ -72,6 +78,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=can_text")
     public Boolean canText;
+
     public GetV2PeopleJsonRequest withCanText(Boolean canText) {
         this.canText = canText;
         return this;
@@ -82,6 +89,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=city")
     public String[] city;
+
     public GetV2PeopleJsonRequest withCity(String[] city) {
         this.city = city;
         return this;
@@ -92,6 +100,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=country")
     public String[] country;
+
     public GetV2PeopleJsonRequest withCountry(String[] country) {
         this.country = country;
         return this;
@@ -106,6 +115,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at")
     public java.util.Map<String, Object> createdAt;
+
     public GetV2PeopleJsonRequest withCreatedAt(java.util.Map<String, Object> createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -116,6 +126,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=crm_id")
     public String[] crmId;
+
     public GetV2PeopleJsonRequest withCrmId(String[] crmId) {
         this.crmId = crmId;
         return this;
@@ -126,6 +137,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=custom_fields")
     public java.util.Map<String, Object> customFields;
+
     public GetV2PeopleJsonRequest withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -136,6 +148,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=do_not_contact")
     public Boolean doNotContact;
+
     public GetV2PeopleJsonRequest withDoNotContact(Boolean doNotContact) {
         this.doNotContact = doNotContact;
         return this;
@@ -146,6 +159,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=email_addresses")
     public String[] emailAddresses;
+
     public GetV2PeopleJsonRequest withEmailAddresses(String[] emailAddresses) {
         this.emailAddresses = emailAddresses;
         return this;
@@ -156,6 +170,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=eu_resident")
     public Boolean euResident;
+
     public GetV2PeopleJsonRequest withEuResident(Boolean euResident) {
         this.euResident = euResident;
         return this;
@@ -166,6 +181,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2PeopleJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -176,6 +192,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=import_id")
     public Long[] importId;
+
     public GetV2PeopleJsonRequest withImportId(Long[] importId) {
         this.importId = importId;
         return this;
@@ -186,6 +203,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2PeopleJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -196,6 +214,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=job_seniority")
     public String[] jobSeniority;
+
     public GetV2PeopleJsonRequest withJobSeniority(String[] jobSeniority) {
         this.jobSeniority = jobSeniority;
         return this;
@@ -210,6 +229,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_contacted")
     public java.util.Map<String, Object> lastContacted;
+
     public GetV2PeopleJsonRequest withLastContacted(java.util.Map<String, Object> lastContacted) {
         this.lastContacted = lastContacted;
         return this;
@@ -220,6 +240,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2PeopleJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -230,6 +251,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=locales")
     public String[] locales;
+
     public GetV2PeopleJsonRequest withLocales(String[] locales) {
         this.locales = locales;
         return this;
@@ -240,6 +262,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=new")
     public Boolean new_;
+
     public GetV2PeopleJsonRequest withNew(Boolean new_) {
         this.new_ = new_;
         return this;
@@ -250,6 +273,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=owned_by_guid")
     public String[] ownedByGuid;
+
     public GetV2PeopleJsonRequest withOwnedByGuid(String[] ownedByGuid) {
         this.ownedByGuid = ownedByGuid;
         return this;
@@ -260,6 +284,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=owner_crm_id")
     public String[] ownerCrmId;
+
     public GetV2PeopleJsonRequest withOwnerCrmId(String[] ownerCrmId) {
         this.ownerCrmId = ownerCrmId;
         return this;
@@ -270,6 +295,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=owner_id")
     public Long[] ownerId;
+
     public GetV2PeopleJsonRequest withOwnerId(Long[] ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -280,6 +306,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=owner_is_active")
     public Boolean ownerIsActive;
+
     public GetV2PeopleJsonRequest withOwnerIsActive(Boolean ownerIsActive) {
         this.ownerIsActive = ownerIsActive;
         return this;
@@ -290,6 +317,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2PeopleJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -300,6 +328,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2PeopleJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -310,6 +339,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=person_stage_id")
     public Long[] personStageId;
+
     public GetV2PeopleJsonRequest withPersonStageId(Long[] personStageId) {
         this.personStageId = personStageId;
         return this;
@@ -320,6 +350,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phone_number")
     public Boolean phoneNumber;
+
     public GetV2PeopleJsonRequest withPhoneNumber(Boolean phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -330,6 +361,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=replied")
     public Boolean replied;
+
     public GetV2PeopleJsonRequest withReplied(Boolean replied) {
         this.replied = replied;
         return this;
@@ -340,6 +372,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2PeopleJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -350,6 +383,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2PeopleJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -360,6 +394,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=starred_by_guid")
     public String[] starredByGuid;
+
     public GetV2PeopleJsonRequest withStarredByGuid(String[] starredByGuid) {
         this.starredByGuid = starredByGuid;
         return this;
@@ -370,6 +405,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=state")
     public String[] state;
+
     public GetV2PeopleJsonRequest withState(String[] state) {
         this.state = state;
         return this;
@@ -380,6 +416,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=success")
     public Boolean success;
+
     public GetV2PeopleJsonRequest withSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -390,6 +427,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tag_id")
     public Long[] tagId;
+
     public GetV2PeopleJsonRequest withTagId(Long[] tagId) {
         this.tagId = tagId;
         return this;
@@ -400,6 +438,7 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=title")
     public String[] title;
+
     public GetV2PeopleJsonRequest withTitle(String[] title) {
         this.title = title;
         return this;
@@ -414,9 +453,11 @@ public class GetV2PeopleJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=updated_at")
     public String[] updatedAt;
+
     public GetV2PeopleJsonRequest withUpdatedAt(String[] updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetV2PeopleJsonRequest(){}
 }

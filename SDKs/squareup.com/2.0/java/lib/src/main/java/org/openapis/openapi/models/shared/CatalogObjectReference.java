@@ -20,6 +20,7 @@ public class CatalogObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_version")
     public Long catalogVersion;
+
     public CatalogObjectReference withCatalogVersion(Long catalogVersion) {
         this.catalogVersion = catalogVersion;
         return this;
@@ -31,9 +32,11 @@ public class CatalogObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object_id")
     public String objectId;
+
     public CatalogObjectReference withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public CatalogObjectReference(){}
 }

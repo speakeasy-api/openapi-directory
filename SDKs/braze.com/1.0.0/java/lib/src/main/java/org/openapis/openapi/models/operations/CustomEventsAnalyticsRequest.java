@@ -14,6 +14,7 @@ public class CustomEventsAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_id")
     public String appId;
+
     public CustomEventsAnalyticsRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -26,6 +27,7 @@ public class CustomEventsAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
     public String endingAt;
+
     public CustomEventsAnalyticsRequest withEndingAt(String endingAt) {
         this.endingAt = endingAt;
         return this;
@@ -38,6 +40,7 @@ public class CustomEventsAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event")
     public String event;
+
     public CustomEventsAnalyticsRequest withEvent(String event) {
         this.event = event;
         return this;
@@ -50,6 +53,7 @@ public class CustomEventsAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
     public String length;
+
     public CustomEventsAnalyticsRequest withLength(String length) {
         this.length = length;
         return this;
@@ -62,6 +66,7 @@ public class CustomEventsAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segment_id")
     public String segmentId;
+
     public CustomEventsAnalyticsRequest withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -74,9 +79,11 @@ public class CustomEventsAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
     public String unit;
+
     public CustomEventsAnalyticsRequest withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public CustomEventsAnalyticsRequest(){}
 }

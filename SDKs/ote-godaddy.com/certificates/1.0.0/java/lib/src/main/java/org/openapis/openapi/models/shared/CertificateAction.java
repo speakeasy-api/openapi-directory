@@ -12,6 +12,7 @@ public class CertificateAction {
      */
     @JsonProperty("createdAt")
     public String createdAt;
+
     public CertificateAction withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -19,9 +20,14 @@ public class CertificateAction {
     
     @JsonProperty("type")
     public CertificateActionTypeEnum type;
+
     public CertificateAction withType(CertificateActionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CertificateAction(@JsonProperty("createdAt") String createdAt, @JsonProperty("type") CertificateActionTypeEnum type) {
+        this.createdAt = createdAt;
+        this.type = type;
+  }
 }

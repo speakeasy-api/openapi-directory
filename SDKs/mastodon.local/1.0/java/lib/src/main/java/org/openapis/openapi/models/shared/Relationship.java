@@ -16,6 +16,7 @@ public class Relationship {
      */
     @JsonProperty("blocked_by")
     public Boolean blockedBy;
+
     public Relationship withBlockedBy(Boolean blockedBy) {
         this.blockedBy = blockedBy;
         return this;
@@ -26,6 +27,7 @@ public class Relationship {
      */
     @JsonProperty("blocking")
     public Boolean blocking;
+
     public Relationship withBlocking(Boolean blocking) {
         this.blocking = blocking;
         return this;
@@ -36,6 +38,7 @@ public class Relationship {
      */
     @JsonProperty("domain_blocking")
     public Boolean domainBlocking;
+
     public Relationship withDomainBlocking(Boolean domainBlocking) {
         this.domainBlocking = domainBlocking;
         return this;
@@ -46,6 +49,7 @@ public class Relationship {
      */
     @JsonProperty("endorsed")
     public Boolean endorsed;
+
     public Relationship withEndorsed(Boolean endorsed) {
         this.endorsed = endorsed;
         return this;
@@ -56,6 +60,7 @@ public class Relationship {
      */
     @JsonProperty("followed_by")
     public Boolean followedBy;
+
     public Relationship withFollowedBy(Boolean followedBy) {
         this.followedBy = followedBy;
         return this;
@@ -66,6 +71,7 @@ public class Relationship {
      */
     @JsonProperty("following")
     public Boolean following;
+
     public Relationship withFollowing(Boolean following) {
         this.following = following;
         return this;
@@ -76,6 +82,7 @@ public class Relationship {
      */
     @JsonProperty("id")
     public String id;
+
     public Relationship withId(String id) {
         this.id = id;
         return this;
@@ -86,6 +93,7 @@ public class Relationship {
      */
     @JsonProperty("muting")
     public Boolean muting;
+
     public Relationship withMuting(Boolean muting) {
         this.muting = muting;
         return this;
@@ -96,6 +104,7 @@ public class Relationship {
      */
     @JsonProperty("muting_notifications")
     public Boolean mutingNotifications;
+
     public Relationship withMutingNotifications(Boolean mutingNotifications) {
         this.mutingNotifications = mutingNotifications;
         return this;
@@ -106,6 +115,7 @@ public class Relationship {
      */
     @JsonProperty("note")
     public String note;
+
     public Relationship withNote(String note) {
         this.note = note;
         return this;
@@ -116,6 +126,7 @@ public class Relationship {
      */
     @JsonProperty("notifying")
     public Boolean notifying;
+
     public Relationship withNotifying(Boolean notifying) {
         this.notifying = notifying;
         return this;
@@ -126,6 +137,7 @@ public class Relationship {
      */
     @JsonProperty("requested")
     public Boolean requested;
+
     public Relationship withRequested(Boolean requested) {
         this.requested = requested;
         return this;
@@ -136,9 +148,25 @@ public class Relationship {
      */
     @JsonProperty("showing_reblogs")
     public Boolean showingReblogs;
+
     public Relationship withShowingReblogs(Boolean showingReblogs) {
         this.showingReblogs = showingReblogs;
         return this;
     }
     
+    public Relationship(@JsonProperty("blocked_by") Boolean blockedBy, @JsonProperty("blocking") Boolean blocking, @JsonProperty("domain_blocking") Boolean domainBlocking, @JsonProperty("endorsed") Boolean endorsed, @JsonProperty("followed_by") Boolean followedBy, @JsonProperty("following") Boolean following, @JsonProperty("id") String id, @JsonProperty("muting") Boolean muting, @JsonProperty("muting_notifications") Boolean mutingNotifications, @JsonProperty("note") String note, @JsonProperty("notifying") Boolean notifying, @JsonProperty("requested") Boolean requested, @JsonProperty("showing_reblogs") Boolean showingReblogs) {
+        this.blockedBy = blockedBy;
+        this.blocking = blocking;
+        this.domainBlocking = domainBlocking;
+        this.endorsed = endorsed;
+        this.followedBy = followedBy;
+        this.following = following;
+        this.id = id;
+        this.muting = muting;
+        this.mutingNotifications = mutingNotifications;
+        this.note = note;
+        this.notifying = notifying;
+        this.requested = requested;
+        this.showingReblogs = showingReblogs;
+  }
 }

@@ -18,6 +18,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canonicalName")
     public String canonicalName;
+
     public Source withCanonicalName(String canonicalName) {
         this.canonicalName = canonicalName;
         return this;
@@ -29,6 +30,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Source withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Source withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,9 +54,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Source withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Source(){}
 }

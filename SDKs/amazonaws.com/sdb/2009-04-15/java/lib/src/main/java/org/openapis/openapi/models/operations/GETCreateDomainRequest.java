@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateDomainRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
     public String awsAccessKeyId;
+
     public GETCreateDomainRequest withAWSAccessKeyId(String awsAccessKeyId) {
         this.awsAccessKeyId = awsAccessKeyId;
         return this;
@@ -16,6 +18,7 @@ public class GETCreateDomainRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCreateDomainActionEnum action;
+
     public GETCreateDomainRequest withAction(GETCreateDomainActionEnum action) {
         this.action = action;
         return this;
@@ -26,6 +29,7 @@ public class GETCreateDomainRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
     public String domainName;
+
     public GETCreateDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -33,6 +37,7 @@ public class GETCreateDomainRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
     public String signature;
+
     public GETCreateDomainRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -40,6 +45,7 @@ public class GETCreateDomainRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
     public String signatureMethod;
+
     public GETCreateDomainRequest withSignatureMethod(String signatureMethod) {
         this.signatureMethod = signatureMethod;
         return this;
@@ -47,6 +53,7 @@ public class GETCreateDomainRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
     public String signatureVersion;
+
     public GETCreateDomainRequest withSignatureVersion(String signatureVersion) {
         this.signatureVersion = signatureVersion;
         return this;
@@ -54,6 +61,7 @@ public class GETCreateDomainRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
     public String timestamp;
+
     public GETCreateDomainRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -61,9 +69,20 @@ public class GETCreateDomainRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCreateDomainVersionEnum version;
+
     public GETCreateDomainRequest withVersion(GETCreateDomainVersionEnum version) {
         this.version = version;
         return this;
     }
     
+    public GETCreateDomainRequest(@JsonProperty("AWSAccessKeyId") String awsAccessKeyId, @JsonProperty("Action") GETCreateDomainActionEnum action, @JsonProperty("DomainName") String domainName, @JsonProperty("Signature") String signature, @JsonProperty("SignatureMethod") String signatureMethod, @JsonProperty("SignatureVersion") String signatureVersion, @JsonProperty("Timestamp") String timestamp, @JsonProperty("Version") GETCreateDomainVersionEnum version) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        this.action = action;
+        this.domainName = domainName;
+        this.signature = signature;
+        this.signatureMethod = signatureMethod;
+        this.signatureVersion = signatureVersion;
+        this.timestamp = timestamp;
+        this.version = version;
+  }
 }

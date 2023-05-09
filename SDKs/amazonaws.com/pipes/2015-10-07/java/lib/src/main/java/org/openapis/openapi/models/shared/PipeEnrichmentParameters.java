@@ -15,6 +15,7 @@ public class PipeEnrichmentParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpParameters")
     public PipeEnrichmentHttpParameters httpParameters;
+
     public PipeEnrichmentParameters withHttpParameters(PipeEnrichmentHttpParameters httpParameters) {
         this.httpParameters = httpParameters;
         return this;
@@ -23,9 +24,11 @@ public class PipeEnrichmentParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputTemplate")
     public String inputTemplate;
+
     public PipeEnrichmentParameters withInputTemplate(String inputTemplate) {
         this.inputTemplate = inputTemplate;
         return this;
     }
     
+    public PipeEnrichmentParameters(){}
 }

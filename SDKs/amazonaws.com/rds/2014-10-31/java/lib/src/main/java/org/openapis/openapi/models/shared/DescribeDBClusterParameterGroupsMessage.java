@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBClusterParameterGroupsMessage {
     
     public String dbClusterParameterGroupName;
+
     public DescribeDBClusterParameterGroupsMessage withDBClusterParameterGroupName(String dbClusterParameterGroupName) {
         this.dbClusterParameterGroupName = dbClusterParameterGroupName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeDBClusterParameterGroupsMessage {
     
     
     public FilterList[] filters;
+
     public DescribeDBClusterParameterGroupsMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +28,7 @@ public class DescribeDBClusterParameterGroupsMessage {
     
     
     public String marker;
+
     public DescribeDBClusterParameterGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -33,9 +36,11 @@ public class DescribeDBClusterParameterGroupsMessage {
     
     
     public Long maxRecords;
+
     public DescribeDBClusterParameterGroupsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeDBClusterParameterGroupsMessage(){}
 }

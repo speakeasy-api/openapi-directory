@@ -15,6 +15,7 @@ public class ClassificationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public ClassificationStatus withCode(String code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class ClassificationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public ClassificationStatus withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public ClassificationStatus(){}
 }

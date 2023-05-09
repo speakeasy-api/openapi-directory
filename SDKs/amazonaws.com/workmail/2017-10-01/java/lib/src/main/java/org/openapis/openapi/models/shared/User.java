@@ -22,6 +22,7 @@ public class User {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DisabledDate")
     public OffsetDateTime disabledDate;
+
     public User withDisabledDate(OffsetDateTime disabledDate) {
         this.disabledDate = disabledDate;
         return this;
@@ -30,6 +31,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public User withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -38,6 +40,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public User withEmail(String email) {
         this.email = email;
         return this;
@@ -48,6 +51,7 @@ public class User {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EnabledDate")
     public OffsetDateTime enabledDate;
+
     public User withEnabledDate(OffsetDateTime enabledDate) {
         this.enabledDate = enabledDate;
         return this;
@@ -56,6 +60,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public User withId(String id) {
         this.id = id;
         return this;
@@ -64,6 +69,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public User withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public EntityStateEnum state;
+
     public User withState(EntityStateEnum state) {
         this.state = state;
         return this;
@@ -80,9 +87,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserRole")
     public UserRoleEnum userRole;
+
     public User withUserRole(UserRoleEnum userRole) {
         this.userRole = userRole;
         return this;
     }
     
+    public User(){}
 }

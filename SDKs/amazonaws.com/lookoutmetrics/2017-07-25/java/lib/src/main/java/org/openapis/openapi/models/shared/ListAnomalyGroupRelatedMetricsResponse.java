@@ -15,6 +15,7 @@ public class ListAnomalyGroupRelatedMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterMetricImpactList")
     public InterMetricImpactDetails[] interMetricImpactList;
+
     public ListAnomalyGroupRelatedMetricsResponse withInterMetricImpactList(InterMetricImpactDetails[] interMetricImpactList) {
         this.interMetricImpactList = interMetricImpactList;
         return this;
@@ -23,9 +24,11 @@ public class ListAnomalyGroupRelatedMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAnomalyGroupRelatedMetricsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAnomalyGroupRelatedMetricsResponse(){}
 }

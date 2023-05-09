@@ -15,9 +15,11 @@ public class UpdateBotAliasRequestBodySentimentAnalysisSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectSentiment")
     public Boolean detectSentiment;
+
     public UpdateBotAliasRequestBodySentimentAnalysisSettings withDetectSentiment(Boolean detectSentiment) {
         this.detectSentiment = detectSentiment;
         return this;
     }
     
+    public UpdateBotAliasRequestBodySentimentAnalysisSettings(){}
 }

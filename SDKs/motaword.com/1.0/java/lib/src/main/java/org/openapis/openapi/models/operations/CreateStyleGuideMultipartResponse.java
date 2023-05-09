@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStyleGuideMultipartResponse {
     
     public String contentType;
+
     public CreateStyleGuideMultipartResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateStyleGuideMultipartResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public CreateStyleGuideMultipartResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class CreateStyleGuideMultipartResponse {
     
     
     public Integer statusCode;
+
     public CreateStyleGuideMultipartResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateStyleGuideMultipartResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStyleGuideMultipartResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class CreateStyleGuideMultipartResponse {
      */
     
     public org.openapis.openapi.models.shared.StyleGuideList styleGuideList;
+
     public CreateStyleGuideMultipartResponse withStyleGuideList(org.openapis.openapi.models.shared.StyleGuideList styleGuideList) {
         this.styleGuideList = styleGuideList;
         return this;
     }
     
+    public CreateStyleGuideMultipartResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

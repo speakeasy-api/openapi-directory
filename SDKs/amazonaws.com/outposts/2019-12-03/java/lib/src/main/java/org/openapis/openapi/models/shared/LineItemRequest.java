@@ -15,6 +15,7 @@ public class LineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogItemId")
     public String catalogItemId;
+
     public LineItemRequest withCatalogItemId(String catalogItemId) {
         this.catalogItemId = catalogItemId;
         return this;
@@ -23,9 +24,11 @@ public class LineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quantity")
     public Long quantity;
+
     public LineItemRequest withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public LineItemRequest(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Settings {
     @JsonProperty("SecurityGroupId")
     public String securityGroupId;
+
     public Settings withSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
@@ -19,9 +20,14 @@ public class Settings {
     
     @JsonProperty("Subnets")
     public String[] subnets;
+
     public Settings withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public Settings(@JsonProperty("SecurityGroupId") String securityGroupId, @JsonProperty("Subnets") String[] subnets) {
+        this.securityGroupId = securityGroupId;
+        this.subnets = subnets;
+  }
 }

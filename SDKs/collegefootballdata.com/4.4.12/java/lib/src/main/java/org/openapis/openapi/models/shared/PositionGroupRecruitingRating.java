@@ -12,6 +12,7 @@ public class PositionGroupRecruitingRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageRating")
     public Double averageRating;
+
     public PositionGroupRecruitingRating withAverageRating(Double averageRating) {
         this.averageRating = averageRating;
         return this;
@@ -20,6 +21,7 @@ public class PositionGroupRecruitingRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageStars")
     public Double averageStars;
+
     public PositionGroupRecruitingRating withAverageStars(Double averageStars) {
         this.averageStars = averageStars;
         return this;
@@ -28,6 +30,7 @@ public class PositionGroupRecruitingRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commits")
     public Double commits;
+
     public PositionGroupRecruitingRating withCommits(Double commits) {
         this.commits = commits;
         return this;
@@ -36,6 +39,7 @@ public class PositionGroupRecruitingRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
     public String conference;
+
     public PositionGroupRecruitingRating withConference(String conference) {
         this.conference = conference;
         return this;
@@ -44,6 +48,7 @@ public class PositionGroupRecruitingRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positionGroup")
     public String positionGroup;
+
     public PositionGroupRecruitingRating withPositionGroup(String positionGroup) {
         this.positionGroup = positionGroup;
         return this;
@@ -52,6 +57,7 @@ public class PositionGroupRecruitingRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public PositionGroupRecruitingRating withTeam(String team) {
         this.team = team;
         return this;
@@ -60,9 +66,11 @@ public class PositionGroupRecruitingRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalRating")
     public Double totalRating;
+
     public PositionGroupRecruitingRating withTotalRating(Double totalRating) {
         this.totalRating = totalRating;
         return this;
     }
     
+    public PositionGroupRecruitingRating(){}
 }

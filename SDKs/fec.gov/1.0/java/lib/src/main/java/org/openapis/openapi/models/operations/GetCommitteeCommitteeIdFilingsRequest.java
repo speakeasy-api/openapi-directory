@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -22,6 +23,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amendment_indicator")
     public GetCommitteeCommitteeIdFilingsAmendmentIndicatorEnum[] amendmentIndicator;
+
     public GetCommitteeCommitteeIdFilingsRequest withAmendmentIndicator(GetCommitteeCommitteeIdFilingsAmendmentIndicatorEnum[] amendmentIndicator) {
         this.amendmentIndicator = amendmentIndicator;
         return this;
@@ -33,6 +35,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetCommitteeCommitteeIdFilingsRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -45,6 +48,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beginning_image_number")
     public String[] beginningImageNumber;
+
     public GetCommitteeCommitteeIdFilingsRequest withBeginningImageNumber(String[] beginningImageNumber) {
         this.beginningImageNumber = beginningImageNumber;
         return this;
@@ -56,6 +60,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=committee_id")
     public String committeeId;
+
     public GetCommitteeCommitteeIdFilingsRequest withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -83,6 +88,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_type")
     public String committeeType;
+
     public GetCommitteeCommitteeIdFilingsRequest withCommitteeType(String committeeType) {
         this.committeeType = committeeType;
         return this;
@@ -96,6 +102,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
     public Integer[] cycle;
+
     public GetCommitteeCommitteeIdFilingsRequest withCycle(Integer[] cycle) {
         this.cycle = cycle;
         return this;
@@ -106,6 +113,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=district")
     public String[] district;
+
     public GetCommitteeCommitteeIdFilingsRequest withDistrict(String[] district) {
         this.district = district;
         return this;
@@ -141,6 +149,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=document_type")
     public String[] documentType;
+
     public GetCommitteeCommitteeIdFilingsRequest withDocumentType(String[] documentType) {
         this.documentType = documentType;
         return this;
@@ -151,6 +160,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file_number")
     public Integer[] fileNumber;
+
     public GetCommitteeCommitteeIdFilingsRequest withFileNumber(Integer[] fileNumber) {
         this.fileNumber = fileNumber;
         return this;
@@ -161,6 +171,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filer_type")
     public GetCommitteeCommitteeIdFilingsFilerTypeEnum filerType;
+
     public GetCommitteeCommitteeIdFilingsRequest withFilerType(GetCommitteeCommitteeIdFilingsFilerTypeEnum filerType) {
         this.filerType = filerType;
         return this;
@@ -176,6 +187,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=form_category")
     public String[] formCategory;
+
     public GetCommitteeCommitteeIdFilingsRequest withFormCategory(String[] formCategory) {
         this.formCategory = formCategory;
         return this;
@@ -203,6 +215,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=form_type")
     public String[] formType;
+
     public GetCommitteeCommitteeIdFilingsRequest withFormType(String[] formType) {
         this.formType = formType;
         return this;
@@ -214,6 +227,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_amended")
     public Boolean isAmended;
+
     public GetCommitteeCommitteeIdFilingsRequest withIsAmended(Boolean isAmended) {
         this.isAmended = isAmended;
         return this;
@@ -225,6 +239,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_receipt_date")
     public LocalDate maxReceiptDate;
+
     public GetCommitteeCommitteeIdFilingsRequest withMaxReceiptDate(LocalDate maxReceiptDate) {
         this.maxReceiptDate = maxReceiptDate;
         return this;
@@ -236,6 +251,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_receipt_date")
     public LocalDate minReceiptDate;
+
     public GetCommitteeCommitteeIdFilingsRequest withMinReceiptDate(LocalDate minReceiptDate) {
         this.minReceiptDate = minReceiptDate;
         return this;
@@ -247,6 +263,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=most_recent")
     public Boolean mostRecent;
+
     public GetCommitteeCommitteeIdFilingsRequest withMostRecent(Boolean mostRecent) {
         this.mostRecent = mostRecent;
         return this;
@@ -257,6 +274,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public GetCommitteeCommitteeIdFilingsOfficeEnum[] office;
+
     public GetCommitteeCommitteeIdFilingsRequest withOffice(GetCommitteeCommitteeIdFilingsOfficeEnum[] office) {
         this.office = office;
         return this;
@@ -267,6 +285,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetCommitteeCommitteeIdFilingsRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -277,6 +296,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=party")
     public String[] party;
+
     public GetCommitteeCommitteeIdFilingsRequest withParty(String[] party) {
         this.party = party;
         return this;
@@ -287,6 +307,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetCommitteeCommitteeIdFilingsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -298,6 +319,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=primary_general_indicator")
     public String[] primaryGeneralIndicator;
+
     public GetCommitteeCommitteeIdFilingsRequest withPrimaryGeneralIndicator(String[] primaryGeneralIndicator) {
         this.primaryGeneralIndicator = primaryGeneralIndicator;
         return this;
@@ -309,6 +331,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q_filer")
     public String[] qFiler;
+
     public GetCommitteeCommitteeIdFilingsRequest withQFiler(String[] qFiler) {
         this.qFiler = qFiler;
         return this;
@@ -369,6 +392,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_type")
     public String[] reportType;
+
     public GetCommitteeCommitteeIdFilingsRequest withReportType(String[] reportType) {
         this.reportType = reportType;
         return this;
@@ -383,6 +407,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_year")
     public Integer[] reportYear;
+
     public GetCommitteeCommitteeIdFilingsRequest withReportYear(Integer[] reportYear) {
         this.reportYear = reportYear;
         return this;
@@ -403,6 +428,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request_type")
     public String[] requestType;
+
     public GetCommitteeCommitteeIdFilingsRequest withRequestType(String[] requestType) {
         this.requestType = requestType;
         return this;
@@ -414,6 +440,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String[] sort;
+
     public GetCommitteeCommitteeIdFilingsRequest withSort(String[] sort) {
         this.sort = sort;
         return this;
@@ -424,6 +451,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetCommitteeCommitteeIdFilingsRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -434,6 +462,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetCommitteeCommitteeIdFilingsRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -444,6 +473,7 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetCommitteeCommitteeIdFilingsRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
@@ -454,9 +484,14 @@ public class GetCommitteeCommitteeIdFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String[] state;
+
     public GetCommitteeCommitteeIdFilingsRequest withState(String[] state) {
         this.state = state;
         return this;
     }
     
+    public GetCommitteeCommitteeIdFilingsRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("committee_id") String committeeId) {
+        this.apiKey = apiKey;
+        this.committeeId = committeeId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProtectedQueriesResponse {
@@ -12,6 +13,7 @@ public class ListProtectedQueriesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListProtectedQueriesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListProtectedQueriesResponse {
     
     
     public String contentType;
+
     public ListProtectedQueriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListProtectedQueriesResponse {
      */
     
     public Object internalServerException;
+
     public ListProtectedQueriesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListProtectedQueriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProtectedQueriesOutput listProtectedQueriesOutput;
+
     public ListProtectedQueriesResponse withListProtectedQueriesOutput(org.openapis.openapi.models.shared.ListProtectedQueriesOutput listProtectedQueriesOutput) {
         this.listProtectedQueriesOutput = listProtectedQueriesOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListProtectedQueriesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListProtectedQueriesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListProtectedQueriesResponse {
     
     
     public Integer statusCode;
+
     public ListProtectedQueriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListProtectedQueriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProtectedQueriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListProtectedQueriesResponse {
      */
     
     public Object throttlingException;
+
     public ListProtectedQueriesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListProtectedQueriesResponse {
      */
     
     public Object validationException;
+
     public ListProtectedQueriesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListProtectedQueriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

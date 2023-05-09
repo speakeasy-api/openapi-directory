@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SlidesPresentationsPagesGetThumbnailSecurity {
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsPagesGetThumbnailSecurityOption1 option1;
+
     public SlidesPresentationsPagesGetThumbnailSecurity withOption1(SlidesPresentationsPagesGetThumbnailSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class SlidesPresentationsPagesGetThumbnailSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsPagesGetThumbnailSecurityOption2 option2;
+
     public SlidesPresentationsPagesGetThumbnailSecurity withOption2(SlidesPresentationsPagesGetThumbnailSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class SlidesPresentationsPagesGetThumbnailSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsPagesGetThumbnailSecurityOption3 option3;
+
     public SlidesPresentationsPagesGetThumbnailSecurity withOption3(SlidesPresentationsPagesGetThumbnailSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class SlidesPresentationsPagesGetThumbnailSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsPagesGetThumbnailSecurityOption4 option4;
+
     public SlidesPresentationsPagesGetThumbnailSecurity withOption4(SlidesPresentationsPagesGetThumbnailSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,9 +41,11 @@ public class SlidesPresentationsPagesGetThumbnailSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsPagesGetThumbnailSecurityOption5 option5;
+
     public SlidesPresentationsPagesGetThumbnailSecurity withOption5(SlidesPresentationsPagesGetThumbnailSecurityOption5 option5) {
         this.option5 = option5;
         return this;
     }
     
+    public SlidesPresentationsPagesGetThumbnailSecurity(){}
 }

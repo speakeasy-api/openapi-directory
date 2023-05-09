@@ -12,6 +12,7 @@ public class CreateEnvironmentTemplateVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateEnvironmentTemplateVersionInput withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateEnvironmentTemplateVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateEnvironmentTemplateVersionInput withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class CreateEnvironmentTemplateVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("majorVersion")
     public String majorVersion;
+
     public CreateEnvironmentTemplateVersionInput withMajorVersion(String majorVersion) {
         this.majorVersion = majorVersion;
         return this;
@@ -35,6 +38,7 @@ public class CreateEnvironmentTemplateVersionInput {
     
     @JsonProperty("source")
     public TemplateVersionSourceInput source;
+
     public CreateEnvironmentTemplateVersionInput withSource(TemplateVersionSourceInput source) {
         this.source = source;
         return this;
@@ -43,6 +47,7 @@ public class CreateEnvironmentTemplateVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateEnvironmentTemplateVersionInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -50,9 +55,14 @@ public class CreateEnvironmentTemplateVersionInput {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public CreateEnvironmentTemplateVersionInput withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public CreateEnvironmentTemplateVersionInput(@JsonProperty("source") TemplateVersionSourceInput source, @JsonProperty("templateName") String templateName) {
+        this.source = source;
+        this.templateName = templateName;
+  }
 }

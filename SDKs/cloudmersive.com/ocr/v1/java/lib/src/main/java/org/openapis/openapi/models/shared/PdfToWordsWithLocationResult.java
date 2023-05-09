@@ -18,6 +18,7 @@ public class PdfToWordsWithLocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OcrPages")
     public OcrPageResultWithWordsWithLocation[] ocrPages;
+
     public PdfToWordsWithLocationResult withOcrPages(OcrPageResultWithWordsWithLocation[] ocrPages) {
         this.ocrPages = ocrPages;
         return this;
@@ -29,9 +30,11 @@ public class PdfToWordsWithLocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Successful")
     public Boolean successful;
+
     public PdfToWordsWithLocationResult withSuccessful(Boolean successful) {
         this.successful = successful;
         return this;
     }
     
+    public PdfToWordsWithLocationResult(){}
 }

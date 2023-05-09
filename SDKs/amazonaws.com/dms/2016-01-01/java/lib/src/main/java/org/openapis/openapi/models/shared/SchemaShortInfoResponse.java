@@ -15,6 +15,7 @@ public class SchemaShortInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseId")
     public String databaseId;
+
     public SchemaShortInfoResponse withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -23,6 +24,7 @@ public class SchemaShortInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseIpAddress")
     public String databaseIpAddress;
+
     public SchemaShortInfoResponse withDatabaseIpAddress(String databaseIpAddress) {
         this.databaseIpAddress = databaseIpAddress;
         return this;
@@ -31,6 +33,7 @@ public class SchemaShortInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public SchemaShortInfoResponse withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -39,6 +42,7 @@ public class SchemaShortInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaId")
     public String schemaId;
+
     public SchemaShortInfoResponse withSchemaId(String schemaId) {
         this.schemaId = schemaId;
         return this;
@@ -47,9 +51,11 @@ public class SchemaShortInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaName")
     public String schemaName;
+
     public SchemaShortInfoResponse withSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
     }
     
+    public SchemaShortInfoResponse(){}
 }

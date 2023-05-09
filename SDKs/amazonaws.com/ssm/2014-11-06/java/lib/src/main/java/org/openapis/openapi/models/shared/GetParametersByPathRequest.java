@@ -12,6 +12,7 @@ public class GetParametersByPathRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetParametersByPathRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class GetParametersByPathRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetParametersByPathRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class GetParametersByPathRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterFilters")
     public ParameterStringFilter[] parameterFilters;
+
     public GetParametersByPathRequest withParameterFilters(ParameterStringFilter[] parameterFilters) {
         this.parameterFilters = parameterFilters;
         return this;
@@ -35,6 +38,7 @@ public class GetParametersByPathRequest {
     
     @JsonProperty("Path")
     public String path;
+
     public GetParametersByPathRequest withPath(String path) {
         this.path = path;
         return this;
@@ -43,6 +47,7 @@ public class GetParametersByPathRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Recursive")
     public Boolean recursive;
+
     public GetParametersByPathRequest withRecursive(Boolean recursive) {
         this.recursive = recursive;
         return this;
@@ -51,9 +56,13 @@ public class GetParametersByPathRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WithDecryption")
     public Boolean withDecryption;
+
     public GetParametersByPathRequest withWithDecryption(Boolean withDecryption) {
         this.withDecryption = withDecryption;
         return this;
     }
     
+    public GetParametersByPathRequest(@JsonProperty("Path") String path) {
+        this.path = path;
+  }
 }

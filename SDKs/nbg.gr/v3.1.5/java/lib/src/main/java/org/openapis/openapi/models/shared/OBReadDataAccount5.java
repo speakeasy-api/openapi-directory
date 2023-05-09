@@ -15,9 +15,11 @@ public class OBReadDataAccount5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Account")
     public OBAccount6[] account;
+
     public OBReadDataAccount5 withAccount(OBAccount6[] account) {
         this.account = account;
         return this;
     }
     
+    public OBReadDataAccount5(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderChangeReportingV3Request {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public Integer accountId;
+
     public GetOrderChangeReportingV3Request withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +21,7 @@ public class GetOrderChangeReportingV3Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderId")
     public String beezUPOrderId;
+
     public GetOrderChangeReportingV3Request withBeezUPOrderId(String beezUPOrderId) {
         this.beezUPOrderId = beezUPOrderId;
         return this;
@@ -29,6 +32,7 @@ public class GetOrderChangeReportingV3Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public GetOrderChangeReportingV3Request withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
@@ -39,9 +43,16 @@ public class GetOrderChangeReportingV3Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderChangeExecutionUUID")
     public String orderChangeExecutionUUID;
+
     public GetOrderChangeReportingV3Request withOrderChangeExecutionUUID(String orderChangeExecutionUUID) {
         this.orderChangeExecutionUUID = orderChangeExecutionUUID;
         return this;
     }
     
+    public GetOrderChangeReportingV3Request(@JsonProperty("accountId") Integer accountId, @JsonProperty("beezUPOrderId") String beezUPOrderId, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode, @JsonProperty("orderChangeExecutionUUID") String orderChangeExecutionUUID) {
+        this.accountId = accountId;
+        this.beezUPOrderId = beezUPOrderId;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        this.orderChangeExecutionUUID = orderChangeExecutionUUID;
+  }
 }

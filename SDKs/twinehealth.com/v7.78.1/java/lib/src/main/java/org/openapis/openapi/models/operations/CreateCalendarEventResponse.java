@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCalendarEventResponse {
     
     public String contentType;
+
     public CreateCalendarEventResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateCalendarEventResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCalendarEventResponse createCalendarEventResponse;
+
     public CreateCalendarEventResponse withCreateCalendarEventResponse(org.openapis.openapi.models.shared.CreateCalendarEventResponse createCalendarEventResponse) {
         this.createCalendarEventResponse = createCalendarEventResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateCalendarEventResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateOrUpdateErrorResponse createOrUpdateErrorResponse;
+
     public CreateCalendarEventResponse withCreateOrUpdateErrorResponse(org.openapis.openapi.models.shared.CreateOrUpdateErrorResponse createOrUpdateErrorResponse) {
         this.createOrUpdateErrorResponse = createOrUpdateErrorResponse;
         return this;
@@ -36,6 +40,7 @@ public class CreateCalendarEventResponse {
     
     
     public Integer statusCode;
+
     public CreateCalendarEventResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateCalendarEventResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCalendarEventResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateCalendarEventResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

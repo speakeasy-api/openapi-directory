@@ -18,9 +18,11 @@ public class CopySheetToAnotherSpreadsheetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationSpreadsheetId")
     public String destinationSpreadsheetId;
+
     public CopySheetToAnotherSpreadsheetRequest withDestinationSpreadsheetId(String destinationSpreadsheetId) {
         this.destinationSpreadsheetId = destinationSpreadsheetId;
         return this;
     }
     
+    public CopySheetToAnotherSpreadsheetRequest(){}
 }

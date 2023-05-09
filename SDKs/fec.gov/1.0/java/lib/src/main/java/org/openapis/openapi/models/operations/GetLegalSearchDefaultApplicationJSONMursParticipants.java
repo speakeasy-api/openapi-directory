@@ -12,6 +12,7 @@ public class GetLegalSearchDefaultApplicationJSONMursParticipants {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("citations")
     public java.util.Map<String, Object> citations;
+
     public GetLegalSearchDefaultApplicationJSONMursParticipants withCitations(java.util.Map<String, Object> citations) {
         this.citations = citations;
         return this;
@@ -20,6 +21,7 @@ public class GetLegalSearchDefaultApplicationJSONMursParticipants {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetLegalSearchDefaultApplicationJSONMursParticipants withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class GetLegalSearchDefaultApplicationJSONMursParticipants {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public GetLegalSearchDefaultApplicationJSONMursParticipants withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSONMursParticipants(){}
 }

@@ -18,6 +18,7 @@ public class SearchRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipPrefixLength")
     public Integer ipPrefixLength;
+
     public SearchRangeRequest withIpPrefixLength(Integer ipPrefixLength) {
         this.ipPrefixLength = ipPrefixLength;
         return this;
@@ -29,9 +30,11 @@ public class SearchRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public SearchRangeRequest withNetwork(String network) {
         this.network = network;
         return this;
     }
     
+    public SearchRangeRequest(){}
 }

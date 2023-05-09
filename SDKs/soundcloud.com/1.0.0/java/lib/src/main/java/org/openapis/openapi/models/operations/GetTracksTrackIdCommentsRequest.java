@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTracksTrackIdCommentsRequest {
@@ -12,6 +13,7 @@ public class GetTracksTrackIdCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetTracksTrackIdCommentsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,6 +24,7 @@ public class GetTracksTrackIdCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
     public Boolean linkedPartitioning;
+
     public GetTracksTrackIdCommentsRequest withLinkedPartitioning(Boolean linkedPartitioning) {
         this.linkedPartitioning = linkedPartitioning;
         return this;
@@ -29,9 +32,13 @@ public class GetTracksTrackIdCommentsRequest {
     
     /**
      * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    @Deprecated
     public Long offset;
+
+    @Deprecated
     public GetTracksTrackIdCommentsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -42,9 +49,13 @@ public class GetTracksTrackIdCommentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track_id")
     public Long trackId;
+
     public GetTracksTrackIdCommentsRequest withTrackId(Long trackId) {
         this.trackId = trackId;
         return this;
     }
     
+    public GetTracksTrackIdCommentsRequest(@JsonProperty("track_id") Long trackId) {
+        this.trackId = trackId;
+  }
 }

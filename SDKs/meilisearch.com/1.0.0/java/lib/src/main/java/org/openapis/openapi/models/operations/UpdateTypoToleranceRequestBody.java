@@ -12,6 +12,7 @@ public class UpdateTypoToleranceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableOnAttributes")
     public String[] disableOnAttributes;
+
     public UpdateTypoToleranceRequestBody withDisableOnAttributes(String[] disableOnAttributes) {
         this.disableOnAttributes = disableOnAttributes;
         return this;
@@ -20,6 +21,7 @@ public class UpdateTypoToleranceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableOnWords")
     public String[] disableOnWords;
+
     public UpdateTypoToleranceRequestBody withDisableOnWords(String[] disableOnWords) {
         this.disableOnWords = disableOnWords;
         return this;
@@ -28,9 +30,11 @@ public class UpdateTypoToleranceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minWordSizeForTypos")
     public UpdateTypoToleranceRequestBodyMinWordSizeForTypos minWordSizeForTypos;
+
     public UpdateTypoToleranceRequestBody withMinWordSizeForTypos(UpdateTypoToleranceRequestBodyMinWordSizeForTypos minWordSizeForTypos) {
         this.minWordSizeForTypos = minWordSizeForTypos;
         return this;
     }
     
+    public UpdateTypoToleranceRequestBody(){}
 }

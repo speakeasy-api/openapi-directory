@@ -139,4 +139,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/TeamSeason.java
 lib/src/main/java/org/openapis/openapi/models/shared/OpponentSeason.java
 lib/src/main/java/org/openapis/openapi/models/shared/Team.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

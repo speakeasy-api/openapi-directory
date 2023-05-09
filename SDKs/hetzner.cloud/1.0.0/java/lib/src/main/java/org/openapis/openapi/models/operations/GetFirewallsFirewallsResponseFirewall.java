@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFirewallsFirewallsResponseFirewall {
     @JsonProperty("applied_to")
     public GetFirewallsFirewallsResponseFirewallAppliedTo[] appliedTo;
+
     public GetFirewallsFirewallsResponseFirewall withAppliedTo(GetFirewallsFirewallsResponseFirewallAppliedTo[] appliedTo) {
         this.appliedTo = appliedTo;
         return this;
@@ -21,6 +22,7 @@ public class GetFirewallsFirewallsResponseFirewall {
      */
     @JsonProperty("created")
     public String created;
+
     public GetFirewallsFirewallsResponseFirewall withCreated(String created) {
         this.created = created;
         return this;
@@ -31,6 +33,7 @@ public class GetFirewallsFirewallsResponseFirewall {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetFirewallsFirewallsResponseFirewall withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class GetFirewallsFirewallsResponseFirewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GetFirewallsFirewallsResponseFirewall withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -52,6 +56,7 @@ public class GetFirewallsFirewallsResponseFirewall {
      */
     @JsonProperty("name")
     public String name;
+
     public GetFirewallsFirewallsResponseFirewall withName(String name) {
         this.name = name;
         return this;
@@ -59,9 +64,17 @@ public class GetFirewallsFirewallsResponseFirewall {
     
     @JsonProperty("rules")
     public GetFirewallsFirewallsResponseFirewallRule[] rules;
+
     public GetFirewallsFirewallsResponseFirewall withRules(GetFirewallsFirewallsResponseFirewallRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public GetFirewallsFirewallsResponseFirewall(@JsonProperty("applied_to") GetFirewallsFirewallsResponseFirewallAppliedTo[] appliedTo, @JsonProperty("created") String created, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("rules") GetFirewallsFirewallsResponseFirewallRule[] rules) {
+        this.appliedTo = appliedTo;
+        this.created = created;
+        this.id = id;
+        this.name = name;
+        this.rules = rules;
+  }
 }

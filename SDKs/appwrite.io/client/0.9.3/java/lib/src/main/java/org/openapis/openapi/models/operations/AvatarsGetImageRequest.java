@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AvatarsGetImageRequest {
@@ -12,6 +13,7 @@ public class AvatarsGetImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
     public Integer height;
+
     public AvatarsGetImageRequest withHeight(Integer height) {
         this.height = height;
         return this;
@@ -22,6 +24,7 @@ public class AvatarsGetImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public AvatarsGetImageRequest withUrl(String url) {
         this.url = url;
         return this;
@@ -32,9 +35,13 @@ public class AvatarsGetImageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
     public Integer width;
+
     public AvatarsGetImageRequest withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public AvatarsGetImageRequest(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

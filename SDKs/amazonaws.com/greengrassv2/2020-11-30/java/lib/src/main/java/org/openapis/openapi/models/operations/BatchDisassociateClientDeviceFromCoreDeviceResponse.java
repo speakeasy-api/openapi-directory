@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDisassociateClientDeviceFromCoreDeviceResponse {
@@ -12,6 +13,7 @@ public class BatchDisassociateClientDeviceFromCoreDeviceResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchDisassociateClientDeviceFromCoreDeviceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchDisassociateClientDeviceFromCoreDeviceResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDisassociateClientDeviceFromCoreDeviceResponse batchDisassociateClientDeviceFromCoreDeviceResponse;
+
     public BatchDisassociateClientDeviceFromCoreDeviceResponse withBatchDisassociateClientDeviceFromCoreDeviceResponse(org.openapis.openapi.models.shared.BatchDisassociateClientDeviceFromCoreDeviceResponse batchDisassociateClientDeviceFromCoreDeviceResponse) {
         this.batchDisassociateClientDeviceFromCoreDeviceResponse = batchDisassociateClientDeviceFromCoreDeviceResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchDisassociateClientDeviceFromCoreDeviceResponse {
     
     
     public String contentType;
+
     public BatchDisassociateClientDeviceFromCoreDeviceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchDisassociateClientDeviceFromCoreDeviceResponse {
      */
     
     public Object internalServerException;
+
     public BatchDisassociateClientDeviceFromCoreDeviceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BatchDisassociateClientDeviceFromCoreDeviceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchDisassociateClientDeviceFromCoreDeviceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class BatchDisassociateClientDeviceFromCoreDeviceResponse {
     
     
     public Integer statusCode;
+
     public BatchDisassociateClientDeviceFromCoreDeviceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchDisassociateClientDeviceFromCoreDeviceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDisassociateClientDeviceFromCoreDeviceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class BatchDisassociateClientDeviceFromCoreDeviceResponse {
      */
     
     public Object throttlingException;
+
     public BatchDisassociateClientDeviceFromCoreDeviceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class BatchDisassociateClientDeviceFromCoreDeviceResponse {
      */
     
     public Object validationException;
+
     public BatchDisassociateClientDeviceFromCoreDeviceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchDisassociateClientDeviceFromCoreDeviceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

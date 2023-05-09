@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComptageResponse {
@@ -12,6 +13,7 @@ public class ComptageResponse {
      */
     
     public org.openapis.openapi.models.shared.ComptageReponse comptageReponse;
+
     public ComptageResponse withComptageReponse(org.openapis.openapi.models.shared.ComptageReponse comptageReponse) {
         this.comptageReponse = comptageReponse;
         return this;
@@ -19,6 +21,7 @@ public class ComptageResponse {
     
     
     public String contentType;
+
     public ComptageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ComptageResponse {
      */
     
     public org.openapis.openapi.models.shared.Erreur erreur;
+
     public ComptageResponse withErreur(org.openapis.openapi.models.shared.Erreur erreur) {
         this.erreur = erreur;
         return this;
@@ -36,6 +40,7 @@ public class ComptageResponse {
     
     
     public Integer statusCode;
+
     public ComptageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ComptageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComptageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComptageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

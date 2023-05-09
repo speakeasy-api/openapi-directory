@@ -12,6 +12,7 @@ public class CustomArticleField {
      */
     @JsonProperty("is_mandatory")
     public Boolean isMandatory;
+
     public CustomArticleField withIsMandatory(Boolean isMandatory) {
         this.isMandatory = isMandatory;
         return this;
@@ -22,6 +23,7 @@ public class CustomArticleField {
      */
     @JsonProperty("name")
     public String name;
+
     public CustomArticleField withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,15 @@ public class CustomArticleField {
      */
     @JsonProperty("value")
     public String value;
+
     public CustomArticleField withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CustomArticleField(@JsonProperty("is_mandatory") Boolean isMandatory, @JsonProperty("name") String name, @JsonProperty("value") String value) {
+        this.isMandatory = isMandatory;
+        this.name = name;
+        this.value = value;
+  }
 }

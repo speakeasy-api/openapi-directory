@@ -15,6 +15,7 @@ public class FlightOfferItineraries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public FlightOfferItineraries withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -22,9 +23,13 @@ public class FlightOfferItineraries {
     
     @JsonProperty("segments")
     public Segment[] segments;
+
     public FlightOfferItineraries withSegments(Segment[] segments) {
         this.segments = segments;
         return this;
     }
     
+    public FlightOfferItineraries(@JsonProperty("segments") Segment[] segments) {
+        this.segments = segments;
+  }
 }

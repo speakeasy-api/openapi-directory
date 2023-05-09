@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05HealthInformationHipOnRequestJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05HealthInformationHipOnRequestJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05HealthInformationHipOnRequestJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05HealthInformationHipOnRequestJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HIPHealthInformationRequestAcknowledgement hipHealthInformationRequestAcknowledgement;
+
     public PostV05HealthInformationHipOnRequestJsonRequest withHIPHealthInformationRequestAcknowledgement(org.openapis.openapi.models.shared.HIPHealthInformationRequestAcknowledgement hipHealthInformationRequestAcknowledgement) {
         this.hipHealthInformationRequestAcknowledgement = hipHealthInformationRequestAcknowledgement;
         return this;
@@ -29,9 +32,15 @@ public class PostV05HealthInformationHipOnRequestJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
     public String xCmId;
+
     public PostV05HealthInformationHipOnRequestJsonRequest withXCmId(String xCmId) {
         this.xCmId = xCmId;
         return this;
     }
     
+    public PostV05HealthInformationHipOnRequestJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("HIPHealthInformationRequestAcknowledgement") org.openapis.openapi.models.shared.HIPHealthInformationRequestAcknowledgement hipHealthInformationRequestAcknowledgement, @JsonProperty("X-CM-ID") String xCmId) {
+        this.authorization = authorization;
+        this.hipHealthInformationRequestAcknowledgement = hipHealthInformationRequestAcknowledgement;
+        this.xCmId = xCmId;
+  }
 }

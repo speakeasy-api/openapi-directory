@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PutLifecycleHookType {
     
     public String autoScalingGroupName;
+
     public PutLifecycleHookType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class PutLifecycleHookType {
     
     
     public String defaultResult;
+
     public PutLifecycleHookType withDefaultResult(String defaultResult) {
         this.defaultResult = defaultResult;
         return this;
@@ -23,6 +25,7 @@ public class PutLifecycleHookType {
     
     
     public Long heartbeatTimeout;
+
     public PutLifecycleHookType withHeartbeatTimeout(Long heartbeatTimeout) {
         this.heartbeatTimeout = heartbeatTimeout;
         return this;
@@ -30,6 +33,7 @@ public class PutLifecycleHookType {
     
     
     public String lifecycleHookName;
+
     public PutLifecycleHookType withLifecycleHookName(String lifecycleHookName) {
         this.lifecycleHookName = lifecycleHookName;
         return this;
@@ -37,6 +41,7 @@ public class PutLifecycleHookType {
     
     
     public String lifecycleTransition;
+
     public PutLifecycleHookType withLifecycleTransition(String lifecycleTransition) {
         this.lifecycleTransition = lifecycleTransition;
         return this;
@@ -44,6 +49,7 @@ public class PutLifecycleHookType {
     
     
     public String notificationMetadata;
+
     public PutLifecycleHookType withNotificationMetadata(String notificationMetadata) {
         this.notificationMetadata = notificationMetadata;
         return this;
@@ -51,6 +57,7 @@ public class PutLifecycleHookType {
     
     
     public String notificationTargetARN;
+
     public PutLifecycleHookType withNotificationTargetARN(String notificationTargetARN) {
         this.notificationTargetARN = notificationTargetARN;
         return this;
@@ -58,9 +65,14 @@ public class PutLifecycleHookType {
     
     
     public String roleARN;
+
     public PutLifecycleHookType withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
     }
     
+    public PutLifecycleHookType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("LifecycleHookName") String lifecycleHookName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.lifecycleHookName = lifecycleHookName;
+  }
 }

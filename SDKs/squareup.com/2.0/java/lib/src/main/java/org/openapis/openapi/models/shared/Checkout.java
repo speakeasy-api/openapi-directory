@@ -20,6 +20,7 @@ public class Checkout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_recipients")
     public AdditionalRecipient[] additionalRecipients;
+
     public Checkout withAdditionalRecipients(AdditionalRecipient[] additionalRecipients) {
         this.additionalRecipients = additionalRecipients;
         return this;
@@ -35,6 +36,7 @@ public class Checkout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ask_for_shipping_address")
     public Boolean askForShippingAddress;
+
     public Checkout withAskForShippingAddress(Boolean askForShippingAddress) {
         this.askForShippingAddress = askForShippingAddress;
         return this;
@@ -47,6 +49,7 @@ public class Checkout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkout_page_url")
     public String checkoutPageUrl;
+
     public Checkout withCheckoutPageUrl(String checkoutPageUrl) {
         this.checkoutPageUrl = checkoutPageUrl;
         return this;
@@ -58,6 +61,7 @@ public class Checkout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Checkout withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -69,6 +73,7 @@ public class Checkout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Checkout withId(String id) {
         this.id = id;
         return this;
@@ -86,6 +91,7 @@ public class Checkout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_support_email")
     public String merchantSupportEmail;
+
     public Checkout withMerchantSupportEmail(String merchantSupportEmail) {
         this.merchantSupportEmail = merchantSupportEmail;
         return this;
@@ -102,6 +108,7 @@ public class Checkout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Order order;
+
     public Checkout withOrder(Order order) {
         this.order = order;
         return this;
@@ -116,6 +123,7 @@ public class Checkout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pre_populate_buyer_email")
     public String prePopulateBuyerEmail;
+
     public Checkout withPrePopulateBuyerEmail(String prePopulateBuyerEmail) {
         this.prePopulateBuyerEmail = prePopulateBuyerEmail;
         return this;
@@ -154,6 +162,7 @@ public class Checkout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pre_populate_shipping_address")
     public Address prePopulateShippingAddress;
+
     public Checkout withPrePopulateShippingAddress(Address prePopulateShippingAddress) {
         this.prePopulateShippingAddress = prePopulateShippingAddress;
         return this;
@@ -176,9 +185,11 @@ public class Checkout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirect_url")
     public String redirectUrl;
+
     public Checkout withRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
         return this;
     }
     
+    public Checkout(){}
 }

@@ -12,6 +12,7 @@ public class GroupsV2GroupMemberApplication {
      */
     
     public UserUserInfoCard bungieNetUserInfo;
+
     public GroupsV2GroupMemberApplication withBungieNetUserInfo(UserUserInfoCard bungieNetUserInfo) {
         this.bungieNetUserInfo = bungieNetUserInfo;
         return this;
@@ -19,6 +20,7 @@ public class GroupsV2GroupMemberApplication {
     
     
     public OffsetDateTime creationDate;
+
     public GroupsV2GroupMemberApplication withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -26,6 +28,7 @@ public class GroupsV2GroupMemberApplication {
     
     
     public GroupsV2GroupUserInfoCard destinyUserInfo;
+
     public GroupsV2GroupMemberApplication withDestinyUserInfo(GroupsV2GroupUserInfoCard destinyUserInfo) {
         this.destinyUserInfo = destinyUserInfo;
         return this;
@@ -33,6 +36,7 @@ public class GroupsV2GroupMemberApplication {
     
     
     public Long groupId;
+
     public GroupsV2GroupMemberApplication withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -40,6 +44,7 @@ public class GroupsV2GroupMemberApplication {
     
     
     public String requestMessage;
+
     public GroupsV2GroupMemberApplication withRequestMessage(String requestMessage) {
         this.requestMessage = requestMessage;
         return this;
@@ -47,6 +52,7 @@ public class GroupsV2GroupMemberApplication {
     
     
     public OffsetDateTime resolveDate;
+
     public GroupsV2GroupMemberApplication withResolveDate(OffsetDateTime resolveDate) {
         this.resolveDate = resolveDate;
         return this;
@@ -54,6 +60,7 @@ public class GroupsV2GroupMemberApplication {
     
     
     public String resolveMessage;
+
     public GroupsV2GroupMemberApplication withResolveMessage(String resolveMessage) {
         this.resolveMessage = resolveMessage;
         return this;
@@ -61,6 +68,7 @@ public class GroupsV2GroupMemberApplication {
     
     
     public Integer resolveState;
+
     public GroupsV2GroupMemberApplication withResolveState(Integer resolveState) {
         this.resolveState = resolveState;
         return this;
@@ -68,9 +76,11 @@ public class GroupsV2GroupMemberApplication {
     
     
     public Long resolvedByMembershipId;
+
     public GroupsV2GroupMemberApplication withResolvedByMembershipId(Long resolvedByMembershipId) {
         this.resolvedByMembershipId = resolvedByMembershipId;
         return this;
     }
     
+    public GroupsV2GroupMemberApplication(){}
 }

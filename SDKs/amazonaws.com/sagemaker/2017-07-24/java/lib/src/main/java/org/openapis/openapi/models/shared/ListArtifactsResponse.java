@@ -15,6 +15,7 @@ public class ListArtifactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactSummaries")
     public ArtifactSummary[] artifactSummaries;
+
     public ListArtifactsResponse withArtifactSummaries(ArtifactSummary[] artifactSummaries) {
         this.artifactSummaries = artifactSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListArtifactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListArtifactsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListArtifactsResponse(){}
 }

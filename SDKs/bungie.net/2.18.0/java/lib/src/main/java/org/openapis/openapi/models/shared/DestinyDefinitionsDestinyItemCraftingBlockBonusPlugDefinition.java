@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsDestinyItemCraftingBlockBonusPlugDefinition {
     
     public Long plugItemHash;
+
     public DestinyDefinitionsDestinyItemCraftingBlockBonusPlugDefinition withPlugItemHash(Long plugItemHash) {
         this.plugItemHash = plugItemHash;
         return this;
@@ -16,9 +17,11 @@ public class DestinyDefinitionsDestinyItemCraftingBlockBonusPlugDefinition {
     
     
     public Long socketTypeHash;
+
     public DestinyDefinitionsDestinyItemCraftingBlockBonusPlugDefinition withSocketTypeHash(Long socketTypeHash) {
         this.socketTypeHash = socketTypeHash;
         return this;
     }
     
+    public DestinyDefinitionsDestinyItemCraftingBlockBonusPlugDefinition(){}
 }

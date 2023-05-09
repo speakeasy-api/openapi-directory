@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReadmeGetV2SourcesReadmeSlugGetRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
     public String slug;
+
     public ReadmeGetV2SourcesReadmeSlugGetRequest withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public ReadmeGetV2SourcesReadmeSlugGetRequest(@JsonProperty("slug") String slug) {
+        this.slug = slug;
+  }
 }

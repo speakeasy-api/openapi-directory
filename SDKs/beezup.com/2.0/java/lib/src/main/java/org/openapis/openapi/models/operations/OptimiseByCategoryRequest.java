@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptimiseByCategoryRequest {
@@ -12,6 +13,7 @@ public class OptimiseByCategoryRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String[] requestBody;
+
     public OptimiseByCategoryRequest withRequestBody(String[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class OptimiseByCategoryRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=actionName")
     public org.openapis.openapi.models.shared.OptimisationActionNameGeneralParametersEnum actionName;
+
     public OptimiseByCategoryRequest withActionName(org.openapis.openapi.models.shared.OptimisationActionNameGeneralParametersEnum actionName) {
         this.actionName = actionName;
         return this;
@@ -29,6 +32,7 @@ public class OptimiseByCategoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=catalogCategoryId")
     public String catalogCategoryId;
+
     public OptimiseByCategoryRequest withCatalogCategoryId(String catalogCategoryId) {
         this.catalogCategoryId = catalogCategoryId;
         return this;
@@ -39,9 +43,15 @@ public class OptimiseByCategoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public OptimiseByCategoryRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public OptimiseByCategoryRequest(@JsonProperty("actionName") org.openapis.openapi.models.shared.OptimisationActionNameGeneralParametersEnum actionName, @JsonProperty("catalogCategoryId") String catalogCategoryId, @JsonProperty("storeId") String storeId) {
+        this.actionName = actionName;
+        this.catalogCategoryId = catalogCategoryId;
+        this.storeId = storeId;
+  }
 }

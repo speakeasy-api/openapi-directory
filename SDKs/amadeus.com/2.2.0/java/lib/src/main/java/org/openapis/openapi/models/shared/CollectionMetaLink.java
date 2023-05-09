@@ -12,6 +12,7 @@ public class CollectionMetaLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public CollectionMetaLink withCount(Long count) {
         this.count = count;
         return this;
@@ -20,9 +21,11 @@ public class CollectionMetaLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CollectionMetaLinkCollectionLinks links;
+
     public CollectionMetaLink withLinks(CollectionMetaLinkCollectionLinks links) {
         this.links = links;
         return this;
     }
     
+    public CollectionMetaLink(){}
 }

@@ -15,9 +15,11 @@ public class GetAuthorizationTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationData")
     public AuthorizationData[] authorizationData;
+
     public GetAuthorizationTokenResponse withAuthorizationData(AuthorizationData[] authorizationData) {
         this.authorizationData = authorizationData;
         return this;
     }
     
+    public GetAuthorizationTokenResponse(){}
 }

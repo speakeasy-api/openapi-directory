@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTriggerResponse {
@@ -12,6 +13,7 @@ public class DeleteTriggerResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteTriggerResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTriggerResponse {
     
     
     public String contentType;
+
     public DeleteTriggerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTriggerResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteTriggerResponse deleteTriggerResponse;
+
     public DeleteTriggerResponse withDeleteTriggerResponse(org.openapis.openapi.models.shared.DeleteTriggerResponse deleteTriggerResponse) {
         this.deleteTriggerResponse = deleteTriggerResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTriggerResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteTriggerResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTriggerResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteTriggerResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteTriggerResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteTriggerResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteTriggerResponse {
     
     
     public Integer statusCode;
+
     public DeleteTriggerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteTriggerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTriggerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteTriggerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

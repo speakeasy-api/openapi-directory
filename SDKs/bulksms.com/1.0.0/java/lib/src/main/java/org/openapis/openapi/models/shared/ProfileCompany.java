@@ -12,6 +12,7 @@ public class ProfileCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProfileCompany withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class ProfileCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxReference")
     public String taxReference;
+
     public ProfileCompany withTaxReference(String taxReference) {
         this.taxReference = taxReference;
         return this;
     }
     
+    public ProfileCompany(){}
 }

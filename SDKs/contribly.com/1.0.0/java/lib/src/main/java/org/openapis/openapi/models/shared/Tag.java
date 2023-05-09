@@ -18,6 +18,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colour")
     public String colour;
+
     public Tag withColour(String colour) {
         this.colour = colour;
         return this;
@@ -25,6 +26,7 @@ public class Tag {
     
     @JsonProperty("id")
     public String id;
+
     public Tag withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class Tag {
     
     @JsonProperty("name")
     public String name;
+
     public Tag withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +43,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagSet")
     public TagSet tagSet;
+
     public Tag withTagSet(TagSet tagSet) {
         this.tagSet = tagSet;
         return this;
@@ -48,9 +52,14 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlWords")
     public String urlWords;
+
     public Tag withUrlWords(String urlWords) {
         this.urlWords = urlWords;
         return this;
     }
     
+    public Tag(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

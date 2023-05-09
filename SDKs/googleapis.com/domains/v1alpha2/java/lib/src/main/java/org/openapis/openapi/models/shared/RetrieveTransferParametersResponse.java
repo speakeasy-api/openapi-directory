@@ -18,9 +18,11 @@ public class RetrieveTransferParametersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferParameters")
     public TransferParameters transferParameters;
+
     public RetrieveTransferParametersResponse withTransferParameters(TransferParameters transferParameters) {
         this.transferParameters = transferParameters;
         return this;
     }
     
+    public RetrieveTransferParametersResponse(){}
 }

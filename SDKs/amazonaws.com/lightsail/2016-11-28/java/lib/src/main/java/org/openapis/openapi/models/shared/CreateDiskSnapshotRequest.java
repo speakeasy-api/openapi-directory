@@ -12,6 +12,7 @@ public class CreateDiskSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskName")
     public String diskName;
+
     public CreateDiskSnapshotRequest withDiskName(String diskName) {
         this.diskName = diskName;
         return this;
@@ -19,6 +20,7 @@ public class CreateDiskSnapshotRequest {
     
     @JsonProperty("diskSnapshotName")
     public String diskSnapshotName;
+
     public CreateDiskSnapshotRequest withDiskSnapshotName(String diskSnapshotName) {
         this.diskSnapshotName = diskSnapshotName;
         return this;
@@ -27,6 +29,7 @@ public class CreateDiskSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceName")
     public String instanceName;
+
     public CreateDiskSnapshotRequest withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -35,9 +38,13 @@ public class CreateDiskSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateDiskSnapshotRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDiskSnapshotRequest(@JsonProperty("diskSnapshotName") String diskSnapshotName) {
+        this.diskSnapshotName = diskSnapshotName;
+  }
 }

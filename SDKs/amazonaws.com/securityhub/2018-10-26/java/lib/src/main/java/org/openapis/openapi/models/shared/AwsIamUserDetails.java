@@ -15,6 +15,7 @@ public class AwsIamUserDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachedManagedPolicies")
     public AwsIamAttachedManagedPolicy[] attachedManagedPolicies;
+
     public AwsIamUserDetails withAttachedManagedPolicies(AwsIamAttachedManagedPolicy[] attachedManagedPolicies) {
         this.attachedManagedPolicies = attachedManagedPolicies;
         return this;
@@ -23,6 +24,7 @@ public class AwsIamUserDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateDate")
     public String createDate;
+
     public AwsIamUserDetails withCreateDate(String createDate) {
         this.createDate = createDate;
         return this;
@@ -31,6 +33,7 @@ public class AwsIamUserDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupList")
     public String[] groupList;
+
     public AwsIamUserDetails withGroupList(String[] groupList) {
         this.groupList = groupList;
         return this;
@@ -39,6 +42,7 @@ public class AwsIamUserDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public AwsIamUserDetails withPath(String path) {
         this.path = path;
         return this;
@@ -47,6 +51,7 @@ public class AwsIamUserDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionsBoundary")
     public AwsIamPermissionsBoundary permissionsBoundary;
+
     public AwsIamUserDetails withPermissionsBoundary(AwsIamPermissionsBoundary permissionsBoundary) {
         this.permissionsBoundary = permissionsBoundary;
         return this;
@@ -55,6 +60,7 @@ public class AwsIamUserDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public String userId;
+
     public AwsIamUserDetails withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -63,6 +69,7 @@ public class AwsIamUserDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public AwsIamUserDetails withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -71,9 +78,11 @@ public class AwsIamUserDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserPolicyList")
     public AwsIamUserPolicy[] userPolicyList;
+
     public AwsIamUserDetails withUserPolicyList(AwsIamUserPolicy[] userPolicyList) {
         this.userPolicyList = userPolicyList;
         return this;
     }
     
+    public AwsIamUserDetails(){}
 }

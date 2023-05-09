@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AbortEnvironmentUpdateMessage {
     
     public String environmentId;
+
     public AbortEnvironmentUpdateMessage withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -19,9 +20,11 @@ public class AbortEnvironmentUpdateMessage {
     
     
     public String environmentName;
+
     public AbortEnvironmentUpdateMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
     }
     
+    public AbortEnvironmentUpdateMessage(){}
 }

@@ -24,6 +24,7 @@ public class Environment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Environment withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +36,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployment_branch_policy")
     public DeploymentBranchPolicySettings deploymentBranchPolicy;
+
     public Environment withDeploymentBranchPolicy(DeploymentBranchPolicySettings deploymentBranchPolicy) {
         this.deploymentBranchPolicy = deploymentBranchPolicy;
         return this;
@@ -42,6 +44,7 @@ public class Environment {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public Environment withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -52,6 +55,7 @@ public class Environment {
      */
     @JsonProperty("id")
     public Long id;
+
     public Environment withId(Long id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class Environment {
      */
     @JsonProperty("name")
     public String name;
+
     public Environment withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +74,7 @@ public class Environment {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Environment withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -77,6 +83,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protection_rules")
     public Object[] protectionRules;
+
     public Environment withProtectionRules(Object[] protectionRules) {
         this.protectionRules = protectionRules;
         return this;
@@ -89,6 +96,7 @@ public class Environment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Environment withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -96,9 +104,19 @@ public class Environment {
     
     @JsonProperty("url")
     public String url;
+
     public Environment withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Environment(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.createdAt = createdAt;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

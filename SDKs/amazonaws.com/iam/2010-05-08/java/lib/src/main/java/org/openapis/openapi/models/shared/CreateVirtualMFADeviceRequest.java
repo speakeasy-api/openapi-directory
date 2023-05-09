@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateVirtualMFADeviceRequest {
     
     public String path;
+
     public CreateVirtualMFADeviceRequest withPath(String path) {
         this.path = path;
         return this;
@@ -16,6 +17,7 @@ public class CreateVirtualMFADeviceRequest {
     
     
     public Tag[] tags;
+
     public CreateVirtualMFADeviceRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -23,9 +25,13 @@ public class CreateVirtualMFADeviceRequest {
     
     
     public String virtualMFADeviceName;
+
     public CreateVirtualMFADeviceRequest withVirtualMFADeviceName(String virtualMFADeviceName) {
         this.virtualMFADeviceName = virtualMFADeviceName;
         return this;
     }
     
+    public CreateVirtualMFADeviceRequest(@JsonProperty("VirtualMFADeviceName") String virtualMFADeviceName) {
+        this.virtualMFADeviceName = virtualMFADeviceName;
+  }
 }

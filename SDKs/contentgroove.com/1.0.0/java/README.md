@@ -16,10 +16,11 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DeleteApiV1ClipsIdSecurity;
-import org.openapis.openapi.models.operations.DeleteApiV1ClipsIdRequest;
-import org.openapis.openapi.models.operations.DeleteApiV1ClipsIdResponse;
+import org.openapis.openapi.models.operations.CreateClipRequestBody;
+import org.openapis.openapi.models.operations.CreateClipRequestBodyData;
+import org.openapis.openapi.models.operations.CreateClipRequestBodyDataAttributes;
+import org.openapis.openapi.models.operations.CreateClipResponse;
+import org.openapis.openapi.models.operations.CreateClipSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,43 +28,43 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteApiV1ClipsIdRequest req = new DeleteApiV1ClipsIdRequest() {{
-                id = "corrupti";
-            }}            
+            CreateClipRequestBody req = new CreateClipRequestBody(                new CreateClipRequestBodyData(                new CreateClipRequestBodyDataAttributes(12.3, "9b9a2e82-5b47-4f59-831d-4c239824b983", "Example New Clip", 10.1);););            
 
-            DeleteApiV1ClipsIdResponse res = sdk.deleteApiV1ClipsId(req, new DeleteApiV1ClipsIdSecurity() {{
+            CreateClipResponse res = sdk.createClip(req, new CreateClipSecurity("corrupti") {{
                 bearerHeader = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.statusCode == 200) {
+            if (res.clipResponseObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `deleteApiV1ClipsId` - delete clip
-* `deleteApiV1MediasId` - delete media
-* `deleteApiV1WebhookSubscriptionsId` - delete webhook subscription
-* `getApiV1Clips` - list clips
-* `getApiV1ClipsId` - show clip
-* `getApiV1DirectUploads` - prepare presigned upload url
-* `getApiV1Medias` - list medias
-* `getApiV1MediasId` - show media
-* `getApiV1WebhookSubscriptions` - list webhook subscriptions
-* `getApiV1WebhookSubscriptionsId` - show webhook subscription
-* `postApiV1Clips` - create clip
-* `postApiV1Medias` - create media
-* `postApiV1WebhookSubscriptions` - create webhook subscription
-* `putApiV1ClipsId` - update clip
-* `putApiV1MediasId` - update media
+* [createClip](docs/sdk/README.md#createclip) - create clip
+* [createMedia](docs/sdk/README.md#createmedia) - create media
+* [createWebhookSubscription](docs/sdk/README.md#createwebhooksubscription) - create webhook subscription
+* [deleteClipById](docs/sdk/README.md#deleteclipbyid) - delete clip
+* [deleteMediaById](docs/sdk/README.md#deletemediabyid) - delete media
+* [deleteWebhookSubscriptionById](docs/sdk/README.md#deletewebhooksubscriptionbyid) - delete webhook subscription
+* [getClipById](docs/sdk/README.md#getclipbyid) - show clip
+* [getClips](docs/sdk/README.md#getclips) - list clips
+* [getMediaById](docs/sdk/README.md#getmediabyid) - show media
+* [getMedias](docs/sdk/README.md#getmedias) - list medias
+* [getUploadUrl](docs/sdk/README.md#getuploadurl) - prepare presigned upload url
+* [getWebhookSubscriptionById](docs/sdk/README.md#getwebhooksubscriptionbyid) - show webhook subscription
+* [getWebhookSubscriptions](docs/sdk/README.md#getwebhooksubscriptions) - list webhook subscriptions
+* [updateClipById](docs/sdk/README.md#updateclipbyid) - update clip
+* [updateMediaById](docs/sdk/README.md#updatemediabyid) - update media
 <!-- End SDK Available Operations -->
 
 ### Maturity

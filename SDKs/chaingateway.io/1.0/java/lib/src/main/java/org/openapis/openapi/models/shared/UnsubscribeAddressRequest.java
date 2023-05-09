@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UnsubscribeAddressRequest {
     @JsonProperty("contractaddress")
     public String contractaddress;
+
     public UnsubscribeAddressRequest withContractaddress(String contractaddress) {
         this.contractaddress = contractaddress;
         return this;
@@ -16,6 +17,7 @@ public class UnsubscribeAddressRequest {
     
     @JsonProperty("ethereumaddress")
     public String ethereumaddress;
+
     public UnsubscribeAddressRequest withEthereumaddress(String ethereumaddress) {
         this.ethereumaddress = ethereumaddress;
         return this;
@@ -23,9 +25,15 @@ public class UnsubscribeAddressRequest {
     
     @JsonProperty("url")
     public String url;
+
     public UnsubscribeAddressRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UnsubscribeAddressRequest(@JsonProperty("contractaddress") String contractaddress, @JsonProperty("ethereumaddress") String ethereumaddress, @JsonProperty("url") String url) {
+        this.contractaddress = contractaddress;
+        this.ethereumaddress = ethereumaddress;
+        this.url = url;
+  }
 }

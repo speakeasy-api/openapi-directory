@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AnalyticsManagementGoalsGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsManagementGoalsGetSecurityOption1 option1;
+
     public AnalyticsManagementGoalsGetSecurity withOption1(AnalyticsManagementGoalsGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class AnalyticsManagementGoalsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsManagementGoalsGetSecurityOption2 option2;
+
     public AnalyticsManagementGoalsGetSecurity withOption2(AnalyticsManagementGoalsGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public AnalyticsManagementGoalsGetSecurity(){}
 }

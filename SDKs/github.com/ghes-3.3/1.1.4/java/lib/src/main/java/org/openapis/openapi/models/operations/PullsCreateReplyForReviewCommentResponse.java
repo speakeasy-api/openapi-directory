@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PullsCreateReplyForReviewCommentResponse {
     
     public String contentType;
+
     public PullsCreateReplyForReviewCommentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PullsCreateReplyForReviewCommentResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PullsCreateReplyForReviewCommentResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PullsCreateReplyForReviewCommentResponse {
     
     
     public Integer statusCode;
+
     public PullsCreateReplyForReviewCommentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PullsCreateReplyForReviewCommentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PullsCreateReplyForReviewCommentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PullsCreateReplyForReviewCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public PullsCreateReplyForReviewCommentResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class PullsCreateReplyForReviewCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.PullRequestReviewComment pullRequestReviewComment;
+
     public PullsCreateReplyForReviewCommentResponse withPullRequestReviewComment(org.openapis.openapi.models.shared.PullRequestReviewComment pullRequestReviewComment) {
         this.pullRequestReviewComment = pullRequestReviewComment;
         return this;
     }
     
+    public PullsCreateReplyForReviewCommentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

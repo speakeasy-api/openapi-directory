@@ -15,9 +15,11 @@ public class EnabledControlSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlIdentifier")
     public String controlIdentifier;
+
     public EnabledControlSummary withControlIdentifier(String controlIdentifier) {
         this.controlIdentifier = controlIdentifier;
         return this;
     }
     
+    public EnabledControlSummary(){}
 }

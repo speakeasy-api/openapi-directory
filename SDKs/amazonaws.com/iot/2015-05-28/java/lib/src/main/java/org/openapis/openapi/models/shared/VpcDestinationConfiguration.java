@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VpcDestinationConfiguration {
     @JsonProperty("roleArn")
     public String roleArn;
+
     public VpcDestinationConfiguration withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -22,6 +23,7 @@ public class VpcDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroups")
     public String[] securityGroups;
+
     public VpcDestinationConfiguration withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -29,6 +31,7 @@ public class VpcDestinationConfiguration {
     
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public VpcDestinationConfiguration withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -36,9 +39,15 @@ public class VpcDestinationConfiguration {
     
     @JsonProperty("vpcId")
     public String vpcId;
+
     public VpcDestinationConfiguration withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public VpcDestinationConfiguration(@JsonProperty("roleArn") String roleArn, @JsonProperty("subnetIds") String[] subnetIds, @JsonProperty("vpcId") String vpcId) {
+        this.roleArn = roleArn;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
+  }
 }

@@ -15,6 +15,7 @@ public class GetWorkflowRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetWorkflowRunsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetWorkflowRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Runs")
     public WorkflowRun[] runs;
+
     public GetWorkflowRunsResponse withRuns(WorkflowRun[] runs) {
         this.runs = runs;
         return this;
     }
     
+    public GetWorkflowRunsResponse(){}
 }

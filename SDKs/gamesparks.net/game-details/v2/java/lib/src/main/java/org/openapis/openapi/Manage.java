@@ -54,12 +54,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOSTResponse res = new org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOSTResponse res = new org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             manageResult = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,12 +105,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateQueryUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateQueryUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CreateQueryUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateQueryUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             manageQuery = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,12 +156,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateScreenUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateScreenUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CreateScreenUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateScreenUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             manageScreen = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -213,12 +207,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSnapshotUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateSnapshotUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CreateSnapshotUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateSnapshotUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             manageSnapshot = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -266,12 +258,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSnippetUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateSnippetUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CreateSnippetUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateSnippetUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             manageSnippet = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -314,12 +304,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DELETEQueryUsingDELETEResponse res = new org.openapis.openapi.models.operations.DELETEQueryUsingDELETEResponse() {{
+        org.openapis.openapi.models.operations.DELETEQueryUsingDELETEResponse res = new org.openapis.openapi.models.operations.DELETEQueryUsingDELETEResponse(contentType, httpRes.statusCode()) {{
             manageResult = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -362,12 +350,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DELETEScreenUsingDELETEResponse res = new org.openapis.openapi.models.operations.DELETEScreenUsingDELETEResponse() {{
+        org.openapis.openapi.models.operations.DELETEScreenUsingDELETEResponse res = new org.openapis.openapi.models.operations.DELETEScreenUsingDELETEResponse(contentType, httpRes.statusCode()) {{
             manageResult = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -410,12 +396,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DELETESnapshotUsingDELETEResponse res = new org.openapis.openapi.models.operations.DELETESnapshotUsingDELETEResponse() {{
+        org.openapis.openapi.models.operations.DELETESnapshotUsingDELETEResponse res = new org.openapis.openapi.models.operations.DELETESnapshotUsingDELETEResponse(contentType, httpRes.statusCode()) {{
             manageResult = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -458,12 +442,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DELETESnippetUsingDELETEResponse res = new org.openapis.openapi.models.operations.DELETESnippetUsingDELETEResponse() {{
+        org.openapis.openapi.models.operations.DELETESnippetUsingDELETEResponse res = new org.openapis.openapi.models.operations.DELETESnippetUsingDELETEResponse(contentType, httpRes.statusCode()) {{
             manageResult = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -506,12 +488,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETQueryUsingGETResponse res = new org.openapis.openapi.models.operations.GETQueryUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETQueryUsingGETResponse res = new org.openapis.openapi.models.operations.GETQueryUsingGETResponse(contentType, httpRes.statusCode()) {{
             manageQuery = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -554,12 +534,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETScreenUsingGETResponse res = new org.openapis.openapi.models.operations.GETScreenUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETScreenUsingGETResponse res = new org.openapis.openapi.models.operations.GETScreenUsingGETResponse(contentType, httpRes.statusCode()) {{
             manageScreen = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -602,12 +580,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETSnippetUsingGETResponse res = new org.openapis.openapi.models.operations.GETSnippetUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETSnippetUsingGETResponse res = new org.openapis.openapi.models.operations.GETSnippetUsingGETResponse(contentType, httpRes.statusCode()) {{
             manageSnippet = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -650,12 +626,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListExecutableScreensUsingGETResponse res = new org.openapis.openapi.models.operations.ListExecutableScreensUsingGETResponse() {{
+        org.openapis.openapi.models.operations.ListExecutableScreensUsingGETResponse res = new org.openapis.openapi.models.operations.ListExecutableScreensUsingGETResponse(contentType, httpRes.statusCode()) {{
             manageItemSummaries = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -698,12 +672,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListQueriesUsingGETResponse res = new org.openapis.openapi.models.operations.ListQueriesUsingGETResponse() {{
+        org.openapis.openapi.models.operations.ListQueriesUsingGETResponse res = new org.openapis.openapi.models.operations.ListQueriesUsingGETResponse(contentType, httpRes.statusCode()) {{
             manageItemSummaries = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -746,12 +718,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListScreensUsingGETResponse res = new org.openapis.openapi.models.operations.ListScreensUsingGETResponse() {{
+        org.openapis.openapi.models.operations.ListScreensUsingGETResponse res = new org.openapis.openapi.models.operations.ListScreensUsingGETResponse(contentType, httpRes.statusCode()) {{
             manageItemSummaries = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -794,12 +764,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSnapshotsUsingGETResponse res = new org.openapis.openapi.models.operations.ListSnapshotsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.ListSnapshotsUsingGETResponse res = new org.openapis.openapi.models.operations.ListSnapshotsUsingGETResponse(contentType, httpRes.statusCode()) {{
             manageSnapshots = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -842,12 +810,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSnippetsUsingGETResponse res = new org.openapis.openapi.models.operations.ListSnippetsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.ListSnippetsUsingGETResponse res = new org.openapis.openapi.models.operations.ListSnippetsUsingGETResponse(contentType, httpRes.statusCode()) {{
             manageItemSummaries = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -890,12 +856,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PublishSnapshotUsingPOSTResponse res = new org.openapis.openapi.models.operations.PublishSnapshotUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.PublishSnapshotUsingPOSTResponse res = new org.openapis.openapi.models.operations.PublishSnapshotUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             manageResult = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -938,12 +902,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RevertSnapshotUsingPOSTResponse res = new org.openapis.openapi.models.operations.RevertSnapshotUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.RevertSnapshotUsingPOSTResponse res = new org.openapis.openapi.models.operations.RevertSnapshotUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             manageResult = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -991,12 +953,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateQueryUsingPUTResponse res = new org.openapis.openapi.models.operations.UpdateQueryUsingPUTResponse() {{
+        org.openapis.openapi.models.operations.UpdateQueryUsingPUTResponse res = new org.openapis.openapi.models.operations.UpdateQueryUsingPUTResponse(contentType, httpRes.statusCode()) {{
             manageQuery = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1044,12 +1004,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateScreenUsingPUTResponse res = new org.openapis.openapi.models.operations.UpdateScreenUsingPUTResponse() {{
+        org.openapis.openapi.models.operations.UpdateScreenUsingPUTResponse res = new org.openapis.openapi.models.operations.UpdateScreenUsingPUTResponse(contentType, httpRes.statusCode()) {{
             manageScreen = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1097,12 +1055,10 @@ public class Manage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSnippetUsingPUTResponse res = new org.openapis.openapi.models.operations.UpdateSnippetUsingPUTResponse() {{
+        org.openapis.openapi.models.operations.UpdateSnippetUsingPUTResponse res = new org.openapis.openapi.models.operations.UpdateSnippetUsingPUTResponse(contentType, httpRes.statusCode()) {{
             manageSnippet = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

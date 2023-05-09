@@ -18,6 +18,7 @@ public class NewPermissionsEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvedPermissions")
     public String[] approvedPermissions;
+
     public NewPermissionsEvent withApprovedPermissions(String[] approvedPermissions) {
         this.approvedPermissions = approvedPermissions;
         return this;
@@ -29,6 +30,7 @@ public class NewPermissionsEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public NewPermissionsEvent withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -40,9 +42,11 @@ public class NewPermissionsEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedPermissions")
     public String[] requestedPermissions;
+
     public NewPermissionsEvent withRequestedPermissions(String[] requestedPermissions) {
         this.requestedPermissions = requestedPermissions;
         return this;
     }
     
+    public NewPermissionsEvent(){}
 }

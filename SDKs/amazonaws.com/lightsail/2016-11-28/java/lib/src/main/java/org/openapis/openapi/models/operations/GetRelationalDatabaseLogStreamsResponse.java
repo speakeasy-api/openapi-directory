@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRelationalDatabaseLogStreamsResponse {
@@ -12,6 +13,7 @@ public class GetRelationalDatabaseLogStreamsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRelationalDatabaseLogStreamsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetRelationalDatabaseLogStreamsResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetRelationalDatabaseLogStreamsResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetRelationalDatabaseLogStreamsResponse {
     
     
     public String contentType;
+
     public GetRelationalDatabaseLogStreamsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetRelationalDatabaseLogStreamsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRelationalDatabaseLogStreamsResult getRelationalDatabaseLogStreamsResult;
+
     public GetRelationalDatabaseLogStreamsResponse withGetRelationalDatabaseLogStreamsResult(org.openapis.openapi.models.shared.GetRelationalDatabaseLogStreamsResult getRelationalDatabaseLogStreamsResult) {
         this.getRelationalDatabaseLogStreamsResult = getRelationalDatabaseLogStreamsResult;
         return this;
@@ -49,6 +54,7 @@ public class GetRelationalDatabaseLogStreamsResponse {
      */
     
     public Object invalidInputException;
+
     public GetRelationalDatabaseLogStreamsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetRelationalDatabaseLogStreamsResponse {
      */
     
     public Object notFoundException;
+
     public GetRelationalDatabaseLogStreamsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetRelationalDatabaseLogStreamsResponse {
      */
     
     public Object operationFailureException;
+
     public GetRelationalDatabaseLogStreamsResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetRelationalDatabaseLogStreamsResponse {
      */
     
     public Object serviceException;
+
     public GetRelationalDatabaseLogStreamsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetRelationalDatabaseLogStreamsResponse {
     
     
     public Integer statusCode;
+
     public GetRelationalDatabaseLogStreamsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetRelationalDatabaseLogStreamsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRelationalDatabaseLogStreamsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetRelationalDatabaseLogStreamsResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetRelationalDatabaseLogStreamsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetRelationalDatabaseLogStreamsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class RuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Capacity")
     public Long capacity;
+
     public RuleGroupResponse withCapacity(Long capacity) {
         this.capacity = capacity;
         return this;
@@ -28,6 +29,7 @@ public class RuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedCapacity")
     public Long consumedCapacity;
+
     public RuleGroupResponse withConsumedCapacity(Long consumedCapacity) {
         this.consumedCapacity = consumedCapacity;
         return this;
@@ -36,6 +38,7 @@ public class RuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public RuleGroupResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class RuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public RuleGroupResponse withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -54,6 +58,7 @@ public class RuleGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public RuleGroupResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -62,6 +67,7 @@ public class RuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfAssociations")
     public Long numberOfAssociations;
+
     public RuleGroupResponse withNumberOfAssociations(Long numberOfAssociations) {
         this.numberOfAssociations = numberOfAssociations;
         return this;
@@ -69,6 +75,7 @@ public class RuleGroupResponse {
     
     @JsonProperty("RuleGroupArn")
     public String ruleGroupArn;
+
     public RuleGroupResponse withRuleGroupArn(String ruleGroupArn) {
         this.ruleGroupArn = ruleGroupArn;
         return this;
@@ -76,6 +83,7 @@ public class RuleGroupResponse {
     
     @JsonProperty("RuleGroupId")
     public String ruleGroupId;
+
     public RuleGroupResponse withRuleGroupId(String ruleGroupId) {
         this.ruleGroupId = ruleGroupId;
         return this;
@@ -83,6 +91,7 @@ public class RuleGroupResponse {
     
     @JsonProperty("RuleGroupName")
     public String ruleGroupName;
+
     public RuleGroupResponse withRuleGroupName(String ruleGroupName) {
         this.ruleGroupName = ruleGroupName;
         return this;
@@ -91,6 +100,7 @@ public class RuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleGroupStatus")
     public ResourceStatusEnum ruleGroupStatus;
+
     public RuleGroupResponse withRuleGroupStatus(ResourceStatusEnum ruleGroupStatus) {
         this.ruleGroupStatus = ruleGroupStatus;
         return this;
@@ -99,6 +109,7 @@ public class RuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopic")
     public String snsTopic;
+
     public RuleGroupResponse withSnsTopic(String snsTopic) {
         this.snsTopic = snsTopic;
         return this;
@@ -107,6 +118,7 @@ public class RuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceMetadata")
     public SourceMetadata sourceMetadata;
+
     public RuleGroupResponse withSourceMetadata(SourceMetadata sourceMetadata) {
         this.sourceMetadata = sourceMetadata;
         return this;
@@ -115,6 +127,7 @@ public class RuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public RuleGroupResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -123,9 +136,15 @@ public class RuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public RuleGroupTypeEnum type;
+
     public RuleGroupResponse withType(RuleGroupTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RuleGroupResponse(@JsonProperty("RuleGroupArn") String ruleGroupArn, @JsonProperty("RuleGroupId") String ruleGroupId, @JsonProperty("RuleGroupName") String ruleGroupName) {
+        this.ruleGroupArn = ruleGroupArn;
+        this.ruleGroupId = ruleGroupId;
+        this.ruleGroupName = ruleGroupName;
+  }
 }

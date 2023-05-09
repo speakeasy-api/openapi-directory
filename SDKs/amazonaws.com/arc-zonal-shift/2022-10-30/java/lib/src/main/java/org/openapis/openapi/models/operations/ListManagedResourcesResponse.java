@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListManagedResourcesResponse {
@@ -12,6 +13,7 @@ public class ListManagedResourcesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListManagedResourcesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListManagedResourcesResponse {
     
     
     public String contentType;
+
     public ListManagedResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListManagedResourcesResponse {
      */
     
     public Object internalServerException;
+
     public ListManagedResourcesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListManagedResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListManagedResourcesResponse listManagedResourcesResponse;
+
     public ListManagedResourcesResponse withListManagedResourcesResponse(org.openapis.openapi.models.shared.ListManagedResourcesResponse listManagedResourcesResponse) {
         this.listManagedResourcesResponse = listManagedResourcesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListManagedResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListManagedResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListManagedResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListManagedResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListManagedResourcesResponse {
      */
     
     public Object throttlingException;
+
     public ListManagedResourcesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListManagedResourcesResponse {
      */
     
     public Object validationException;
+
     public ListManagedResourcesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListManagedResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class UpdateContainerInstancesStateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public UpdateContainerInstancesStateRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -19,6 +20,7 @@ public class UpdateContainerInstancesStateRequest {
     
     @JsonProperty("containerInstances")
     public String[] containerInstances;
+
     public UpdateContainerInstancesStateRequest withContainerInstances(String[] containerInstances) {
         this.containerInstances = containerInstances;
         return this;
@@ -26,9 +28,14 @@ public class UpdateContainerInstancesStateRequest {
     
     @JsonProperty("status")
     public ContainerInstanceStatusEnum status;
+
     public UpdateContainerInstancesStateRequest withStatus(ContainerInstanceStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateContainerInstancesStateRequest(@JsonProperty("containerInstances") String[] containerInstances, @JsonProperty("status") ContainerInstanceStatusEnum status) {
+        this.containerInstances = containerInstances;
+        this.status = status;
+  }
 }

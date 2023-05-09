@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LoadBalancerTargetGroupState {
     
     public String loadBalancerTargetGroupARN;
+
     public LoadBalancerTargetGroupState withLoadBalancerTargetGroupARN(String loadBalancerTargetGroupARN) {
         this.loadBalancerTargetGroupARN = loadBalancerTargetGroupARN;
         return this;
@@ -19,9 +20,11 @@ public class LoadBalancerTargetGroupState {
     
     
     public String state;
+
     public LoadBalancerTargetGroupState withState(String state) {
         this.state = state;
         return this;
     }
     
+    public LoadBalancerTargetGroupState(){}
 }

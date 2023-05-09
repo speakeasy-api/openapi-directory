@@ -18,9 +18,11 @@ public class IdentitytoolkitRelyingpartySendVerificationCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionInfo")
     public String sessionInfo;
+
     public IdentitytoolkitRelyingpartySendVerificationCodeResponse withSessionInfo(String sessionInfo) {
         this.sessionInfo = sessionInfo;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartySendVerificationCodeResponse(){}
 }

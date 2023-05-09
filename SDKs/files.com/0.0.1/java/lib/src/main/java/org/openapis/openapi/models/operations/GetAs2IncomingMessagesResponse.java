@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAs2IncomingMessagesResponse {
@@ -12,6 +13,7 @@ public class GetAs2IncomingMessagesResponse {
      */
     
     public org.openapis.openapi.models.shared.As2IncomingMessageEntity[] as2IncomingMessageEntities;
+
     public GetAs2IncomingMessagesResponse withAs2IncomingMessageEntities(org.openapis.openapi.models.shared.As2IncomingMessageEntity[] as2IncomingMessageEntities) {
         this.as2IncomingMessageEntities = as2IncomingMessageEntities;
         return this;
@@ -19,6 +21,7 @@ public class GetAs2IncomingMessagesResponse {
     
     
     public String contentType;
+
     public GetAs2IncomingMessagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetAs2IncomingMessagesResponse {
     
     
     public Integer statusCode;
+
     public GetAs2IncomingMessagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetAs2IncomingMessagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAs2IncomingMessagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAs2IncomingMessagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

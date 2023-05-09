@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyDBProxyTargetGroupRequest {
     
     public ConnectionPoolConfiguration connectionPoolConfig;
+
     public ModifyDBProxyTargetGroupRequest withConnectionPoolConfig(ConnectionPoolConfiguration connectionPoolConfig) {
         this.connectionPoolConfig = connectionPoolConfig;
         return this;
@@ -16,6 +17,7 @@ public class ModifyDBProxyTargetGroupRequest {
     
     
     public String dbProxyName;
+
     public ModifyDBProxyTargetGroupRequest withDBProxyName(String dbProxyName) {
         this.dbProxyName = dbProxyName;
         return this;
@@ -23,6 +25,7 @@ public class ModifyDBProxyTargetGroupRequest {
     
     
     public String newName;
+
     public ModifyDBProxyTargetGroupRequest withNewName(String newName) {
         this.newName = newName;
         return this;
@@ -30,9 +33,14 @@ public class ModifyDBProxyTargetGroupRequest {
     
     
     public String targetGroupName;
+
     public ModifyDBProxyTargetGroupRequest withTargetGroupName(String targetGroupName) {
         this.targetGroupName = targetGroupName;
         return this;
     }
     
+    public ModifyDBProxyTargetGroupRequest(@JsonProperty("DBProxyName") String dbProxyName, @JsonProperty("TargetGroupName") String targetGroupName) {
+        this.dbProxyName = dbProxyName;
+        this.targetGroupName = targetGroupName;
+  }
 }

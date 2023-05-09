@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddIpRoutesResponse {
@@ -12,6 +13,7 @@ public class AddIpRoutesResponse {
      */
     
     public java.util.Map<String, Object> addIpRoutesResult;
+
     public AddIpRoutesResponse withAddIpRoutesResult(java.util.Map<String, Object> addIpRoutesResult) {
         this.addIpRoutesResult = addIpRoutesResult;
         return this;
@@ -22,6 +24,7 @@ public class AddIpRoutesResponse {
      */
     
     public Object clientException;
+
     public AddIpRoutesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class AddIpRoutesResponse {
     
     
     public String contentType;
+
     public AddIpRoutesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AddIpRoutesResponse {
      */
     
     public Object directoryUnavailableException;
+
     public AddIpRoutesResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -49,6 +54,7 @@ public class AddIpRoutesResponse {
      */
     
     public Object entityAlreadyExistsException;
+
     public AddIpRoutesResponse withEntityAlreadyExistsException(Object entityAlreadyExistsException) {
         this.entityAlreadyExistsException = entityAlreadyExistsException;
         return this;
@@ -59,6 +65,7 @@ public class AddIpRoutesResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public AddIpRoutesResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -69,6 +76,7 @@ public class AddIpRoutesResponse {
      */
     
     public Object invalidParameterException;
+
     public AddIpRoutesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class AddIpRoutesResponse {
      */
     
     public Object ipRouteLimitExceededException;
+
     public AddIpRoutesResponse withIpRouteLimitExceededException(Object ipRouteLimitExceededException) {
         this.ipRouteLimitExceededException = ipRouteLimitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class AddIpRoutesResponse {
      */
     
     public Object serviceException;
+
     public AddIpRoutesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -96,6 +106,7 @@ public class AddIpRoutesResponse {
     
     
     public Integer statusCode;
+
     public AddIpRoutesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class AddIpRoutesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddIpRoutesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddIpRoutesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -24,6 +24,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Field withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +36,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Field withValue(String value) {
         this.value = value;
         return this;
@@ -48,9 +50,11 @@ public class Field {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("verified_at")
     public OffsetDateTime verifiedAt;
+
     public Field withVerifiedAt(OffsetDateTime verifiedAt) {
         this.verifiedAt = verifiedAt;
         return this;
     }
     
+    public Field(){}
 }

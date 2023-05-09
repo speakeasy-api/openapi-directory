@@ -18,6 +18,7 @@ public class NotificationSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notification")
     public Notification[] notification;
+
     public NotificationSet withNotification(Notification[] notification) {
         this.notification = notification;
         return this;
@@ -29,9 +30,11 @@ public class NotificationSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationSetId")
     public String notificationSetId;
+
     public NotificationSet withNotificationSetId(String notificationSetId) {
         this.notificationSetId = notificationSetId;
         return this;
     }
     
+    public NotificationSet(){}
 }

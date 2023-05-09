@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteACLResponse {
@@ -12,6 +13,7 @@ public class DeleteACLResponse {
      */
     
     public Object aclNotFoundFault;
+
     public DeleteACLResponse withACLNotFoundFault(Object aclNotFoundFault) {
         this.aclNotFoundFault = aclNotFoundFault;
         return this;
@@ -19,6 +21,7 @@ public class DeleteACLResponse {
     
     
     public String contentType;
+
     public DeleteACLResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteACLResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteACLResponse deleteACLResponse;
+
     public DeleteACLResponse withDeleteACLResponse(org.openapis.openapi.models.shared.DeleteACLResponse deleteACLResponse) {
         this.deleteACLResponse = deleteACLResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteACLResponse {
      */
     
     public Object invalidACLStateFault;
+
     public DeleteACLResponse withInvalidACLStateFault(Object invalidACLStateFault) {
         this.invalidACLStateFault = invalidACLStateFault;
         return this;
@@ -49,6 +54,7 @@ public class DeleteACLResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteACLResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteACLResponse {
     
     
     public Integer statusCode;
+
     public DeleteACLResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteACLResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteACLResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteACLResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeploymentForRepositoryRequest {
@@ -12,6 +13,7 @@ public class GetDeploymentForRepositoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_uuid")
     public String deploymentUuid;
+
     public GetDeploymentForRepositoryRequest withDeploymentUuid(String deploymentUuid) {
         this.deploymentUuid = deploymentUuid;
         return this;
@@ -22,6 +24,7 @@ public class GetDeploymentForRepositoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetDeploymentForRepositoryRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -32,9 +35,15 @@ public class GetDeploymentForRepositoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetDeploymentForRepositoryRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetDeploymentForRepositoryRequest(@JsonProperty("deployment_uuid") String deploymentUuid, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.deploymentUuid = deploymentUuid;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

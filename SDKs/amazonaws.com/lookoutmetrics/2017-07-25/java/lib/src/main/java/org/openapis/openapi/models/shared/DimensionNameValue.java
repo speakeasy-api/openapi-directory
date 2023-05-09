@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DimensionNameValue {
     @JsonProperty("DimensionName")
     public String dimensionName;
+
     public DimensionNameValue withDimensionName(String dimensionName) {
         this.dimensionName = dimensionName;
         return this;
@@ -19,9 +20,14 @@ public class DimensionNameValue {
     
     @JsonProperty("DimensionValue")
     public String dimensionValue;
+
     public DimensionNameValue withDimensionValue(String dimensionValue) {
         this.dimensionValue = dimensionValue;
         return this;
     }
     
+    public DimensionNameValue(@JsonProperty("DimensionName") String dimensionName, @JsonProperty("DimensionValue") String dimensionValue) {
+        this.dimensionName = dimensionName;
+        this.dimensionValue = dimensionValue;
+  }
 }

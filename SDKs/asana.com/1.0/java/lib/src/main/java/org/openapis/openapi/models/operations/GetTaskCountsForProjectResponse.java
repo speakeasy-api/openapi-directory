@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTaskCountsForProjectResponse {
     
     public String contentType;
+
     public GetTaskCountsForProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTaskCountsForProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetTaskCountsForProjectResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetTaskCountsForProjectResponse {
     
     
     public Integer statusCode;
+
     public GetTaskCountsForProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetTaskCountsForProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTaskCountsForProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetTaskCountsForProjectResponse {
      */
     
     public GetTaskCountsForProject200ApplicationJSON getTaskCountsForProject200ApplicationJSONObject;
+
     public GetTaskCountsForProjectResponse withGetTaskCountsForProject200ApplicationJSONObject(GetTaskCountsForProject200ApplicationJSON getTaskCountsForProject200ApplicationJSONObject) {
         this.getTaskCountsForProject200ApplicationJSONObject = getTaskCountsForProject200ApplicationJSONObject;
         return this;
     }
     
+    public GetTaskCountsForProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

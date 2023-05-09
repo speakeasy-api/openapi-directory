@@ -15,6 +15,7 @@ public class TaskLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TaskLinks withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class TaskLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public TaskLinks withLink(String link) {
         this.link = link;
         return this;
@@ -37,9 +39,11 @@ public class TaskLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TaskLinks withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TaskLinks(){}
 }

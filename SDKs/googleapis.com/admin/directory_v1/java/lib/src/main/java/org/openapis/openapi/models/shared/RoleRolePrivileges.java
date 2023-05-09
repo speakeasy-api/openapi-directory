@@ -15,6 +15,7 @@ public class RoleRolePrivileges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privilegeName")
     public String privilegeName;
+
     public RoleRolePrivileges withPrivilegeName(String privilegeName) {
         this.privilegeName = privilegeName;
         return this;
@@ -26,9 +27,11 @@ public class RoleRolePrivileges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public String serviceId;
+
     public RoleRolePrivileges withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public RoleRolePrivileges(){}
 }

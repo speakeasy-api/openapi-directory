@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMLModelResponse {
     
     public String contentType;
+
     public UpdateMLModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateMLModelResponse {
      */
     
     public Object internalServerException;
+
     public UpdateMLModelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMLModelResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateMLModelResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateMLModelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateMLModelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateMLModelResponse {
     
     
     public Integer statusCode;
+
     public UpdateMLModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateMLModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMLModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateMLModelResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateMLModelOutput updateMLModelOutput;
+
     public UpdateMLModelResponse withUpdateMLModelOutput(org.openapis.openapi.models.shared.UpdateMLModelOutput updateMLModelOutput) {
         this.updateMLModelOutput = updateMLModelOutput;
         return this;
     }
     
+    public UpdateMLModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

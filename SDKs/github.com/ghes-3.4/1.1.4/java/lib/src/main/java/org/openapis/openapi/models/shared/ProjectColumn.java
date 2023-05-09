@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ProjectColumn {
     @JsonProperty("cards_url")
     public String cardsUrl;
+
     public ProjectColumn withCardsUrl(String cardsUrl) {
         this.cardsUrl = cardsUrl;
         return this;
@@ -26,6 +27,7 @@ public class ProjectColumn {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public ProjectColumn withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -36,6 +38,7 @@ public class ProjectColumn {
      */
     @JsonProperty("id")
     public Long id;
+
     public ProjectColumn withId(Long id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class ProjectColumn {
      */
     @JsonProperty("name")
     public String name;
+
     public ProjectColumn withName(String name) {
         this.name = name;
         return this;
@@ -53,6 +57,7 @@ public class ProjectColumn {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public ProjectColumn withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -60,6 +65,7 @@ public class ProjectColumn {
     
     @JsonProperty("project_url")
     public String projectUrl;
+
     public ProjectColumn withProjectUrl(String projectUrl) {
         this.projectUrl = projectUrl;
         return this;
@@ -69,6 +75,7 @@ public class ProjectColumn {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public ProjectColumn withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -76,9 +83,20 @@ public class ProjectColumn {
     
     @JsonProperty("url")
     public String url;
+
     public ProjectColumn withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ProjectColumn(@JsonProperty("cards_url") String cardsUrl, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("project_url") String projectUrl, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.cardsUrl = cardsUrl;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.projectUrl = projectUrl;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

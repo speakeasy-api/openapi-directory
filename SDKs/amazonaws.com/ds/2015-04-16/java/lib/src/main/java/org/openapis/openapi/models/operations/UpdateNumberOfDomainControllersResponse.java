@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNumberOfDomainControllersResponse {
@@ -12,6 +13,7 @@ public class UpdateNumberOfDomainControllersResponse {
      */
     
     public Object clientException;
+
     public UpdateNumberOfDomainControllersResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateNumberOfDomainControllersResponse {
     
     
     public String contentType;
+
     public UpdateNumberOfDomainControllersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateNumberOfDomainControllersResponse {
      */
     
     public Object directoryUnavailableException;
+
     public UpdateNumberOfDomainControllersResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateNumberOfDomainControllersResponse {
      */
     
     public Object domainControllerLimitExceededException;
+
     public UpdateNumberOfDomainControllersResponse withDomainControllerLimitExceededException(Object domainControllerLimitExceededException) {
         this.domainControllerLimitExceededException = domainControllerLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateNumberOfDomainControllersResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public UpdateNumberOfDomainControllersResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateNumberOfDomainControllersResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateNumberOfDomainControllersResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateNumberOfDomainControllersResponse {
     
     
     public Integer statusCode;
+
     public UpdateNumberOfDomainControllersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateNumberOfDomainControllersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNumberOfDomainControllersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateNumberOfDomainControllersResponse {
      */
     
     public Object serviceException;
+
     public UpdateNumberOfDomainControllersResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateNumberOfDomainControllersResponse {
      */
     
     public Object unsupportedOperationException;
+
     public UpdateNumberOfDomainControllersResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateNumberOfDomainControllersResponse {
      */
     
     public java.util.Map<String, Object> updateNumberOfDomainControllersResult;
+
     public UpdateNumberOfDomainControllersResponse withUpdateNumberOfDomainControllersResult(java.util.Map<String, Object> updateNumberOfDomainControllersResult) {
         this.updateNumberOfDomainControllersResult = updateNumberOfDomainControllersResult;
         return this;
     }
     
+    public UpdateNumberOfDomainControllersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

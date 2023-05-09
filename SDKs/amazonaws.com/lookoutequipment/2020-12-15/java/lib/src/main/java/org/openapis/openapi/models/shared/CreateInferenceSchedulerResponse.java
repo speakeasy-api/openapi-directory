@@ -15,6 +15,7 @@ public class CreateInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSchedulerArn")
     public String inferenceSchedulerArn;
+
     public CreateInferenceSchedulerResponse withInferenceSchedulerArn(String inferenceSchedulerArn) {
         this.inferenceSchedulerArn = inferenceSchedulerArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSchedulerName")
     public String inferenceSchedulerName;
+
     public CreateInferenceSchedulerResponse withInferenceSchedulerName(String inferenceSchedulerName) {
         this.inferenceSchedulerName = inferenceSchedulerName;
         return this;
@@ -31,9 +33,11 @@ public class CreateInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public InferenceSchedulerStatusEnum status;
+
     public CreateInferenceSchedulerResponse withStatus(InferenceSchedulerStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateInferenceSchedulerResponse(){}
 }

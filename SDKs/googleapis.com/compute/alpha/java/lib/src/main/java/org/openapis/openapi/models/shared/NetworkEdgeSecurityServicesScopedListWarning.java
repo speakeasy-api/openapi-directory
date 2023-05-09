@@ -18,6 +18,7 @@ public class NetworkEdgeSecurityServicesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public NetworkEdgeSecurityServicesScopedListWarningCodeEnum code;
+
     public NetworkEdgeSecurityServicesScopedListWarning withCode(NetworkEdgeSecurityServicesScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class NetworkEdgeSecurityServicesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public NetworkEdgeSecurityServicesScopedListWarningData[] data;
+
     public NetworkEdgeSecurityServicesScopedListWarning withData(NetworkEdgeSecurityServicesScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class NetworkEdgeSecurityServicesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NetworkEdgeSecurityServicesScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public NetworkEdgeSecurityServicesScopedListWarning(){}
 }

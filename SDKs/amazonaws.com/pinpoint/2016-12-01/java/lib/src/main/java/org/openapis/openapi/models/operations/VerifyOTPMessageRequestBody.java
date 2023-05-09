@@ -12,9 +12,13 @@ public class VerifyOTPMessageRequestBody {
      */
     @JsonProperty("VerifyOTPMessageRequestParameters")
     public VerifyOTPMessageRequestBodyVerifyOTPMessageRequestParameters verifyOTPMessageRequestParameters;
+
     public VerifyOTPMessageRequestBody withVerifyOTPMessageRequestParameters(VerifyOTPMessageRequestBodyVerifyOTPMessageRequestParameters verifyOTPMessageRequestParameters) {
         this.verifyOTPMessageRequestParameters = verifyOTPMessageRequestParameters;
         return this;
     }
     
+    public VerifyOTPMessageRequestBody(@JsonProperty("VerifyOTPMessageRequestParameters") VerifyOTPMessageRequestBodyVerifyOTPMessageRequestParameters verifyOTPMessageRequestParameters) {
+        this.verifyOTPMessageRequestParameters = verifyOTPMessageRequestParameters;
+  }
 }

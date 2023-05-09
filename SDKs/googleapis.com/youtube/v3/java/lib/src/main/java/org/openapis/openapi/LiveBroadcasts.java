@@ -59,11 +59,9 @@ public class LiveBroadcasts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeLiveBroadcastsBindResponse res = new org.openapis.openapi.models.operations.YoutubeLiveBroadcastsBindResponse() {{
+        org.openapis.openapi.models.operations.YoutubeLiveBroadcastsBindResponse res = new org.openapis.openapi.models.operations.YoutubeLiveBroadcastsBindResponse(contentType, httpRes.statusCode()) {{
             liveBroadcast = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,10 +103,8 @@ public class LiveBroadcasts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeLiveBroadcastsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeLiveBroadcastsDeleteResponse() {{
+        org.openapis.openapi.models.operations.YoutubeLiveBroadcastsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeLiveBroadcastsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class LiveBroadcasts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertResponse() {{
+        org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertResponse(contentType, httpRes.statusCode()) {{
             liveBroadcast = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,11 +189,9 @@ public class LiveBroadcasts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertCuepointResponse res = new org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertCuepointResponse() {{
+        org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertCuepointResponse res = new org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertCuepointResponse(contentType, httpRes.statusCode()) {{
             cuepoint = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class LiveBroadcasts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeLiveBroadcastsListResponse res = new org.openapis.openapi.models.operations.YoutubeLiveBroadcastsListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeLiveBroadcastsListResponse res = new org.openapis.openapi.models.operations.YoutubeLiveBroadcastsListResponse(contentType, httpRes.statusCode()) {{
             liveBroadcastListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -287,11 +277,9 @@ public class LiveBroadcasts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeLiveBroadcastsTransitionResponse res = new org.openapis.openapi.models.operations.YoutubeLiveBroadcastsTransitionResponse() {{
+        org.openapis.openapi.models.operations.YoutubeLiveBroadcastsTransitionResponse res = new org.openapis.openapi.models.operations.YoutubeLiveBroadcastsTransitionResponse(contentType, httpRes.statusCode()) {{
             liveBroadcast = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -335,11 +323,9 @@ public class LiveBroadcasts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeLiveBroadcastsUpdateResponse res = new org.openapis.openapi.models.operations.YoutubeLiveBroadcastsUpdateResponse() {{
+        org.openapis.openapi.models.operations.YoutubeLiveBroadcastsUpdateResponse res = new org.openapis.openapi.models.operations.YoutubeLiveBroadcastsUpdateResponse(contentType, httpRes.statusCode()) {{
             liveBroadcast = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

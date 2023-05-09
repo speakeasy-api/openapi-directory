@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticleResourceRequest {
@@ -12,6 +13,7 @@ public class PrivateArticleResourceRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Resource resource;
+
     public PrivateArticleResourceRequest withResource(org.openapis.openapi.models.shared.Resource resource) {
         this.resource = resource;
         return this;
@@ -22,9 +24,14 @@ public class PrivateArticleResourceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
     public Long articleId;
+
     public PrivateArticleResourceRequest withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
     }
     
+    public PrivateArticleResourceRequest(@JsonProperty("Resource") org.openapis.openapi.models.shared.Resource resource, @JsonProperty("article_id") Long articleId) {
+        this.resource = resource;
+        this.articleId = articleId;
+  }
 }

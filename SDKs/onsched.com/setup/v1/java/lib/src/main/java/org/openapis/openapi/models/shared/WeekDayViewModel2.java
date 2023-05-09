@@ -12,6 +12,7 @@ public class WeekDayViewModel2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayEndTime")
     public String displayEndTime;
+
     public WeekDayViewModel2 withDisplayEndTime(String displayEndTime) {
         this.displayEndTime = displayEndTime;
         return this;
@@ -20,6 +21,7 @@ public class WeekDayViewModel2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayStartTime")
     public String displayStartTime;
+
     public WeekDayViewModel2 withDisplayStartTime(String displayStartTime) {
         this.displayStartTime = displayStartTime;
         return this;
@@ -28,6 +30,7 @@ public class WeekDayViewModel2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public Integer endTime;
+
     public WeekDayViewModel2 withEndTime(Integer endTime) {
         this.endTime = endTime;
         return this;
@@ -36,9 +39,11 @@ public class WeekDayViewModel2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public Integer startTime;
+
     public WeekDayViewModel2 withStartTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public WeekDayViewModel2(){}
 }

@@ -15,6 +15,7 @@ public class CreateDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentId")
     public String deploymentId;
+
     public CreateDeploymentRequestBody withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -25,6 +26,7 @@ public class CreateDeploymentRequestBody {
      */
     @JsonProperty("DeploymentType")
     public CreateDeploymentRequestBodyDeploymentTypeEnum deploymentType;
+
     public CreateDeploymentRequestBody withDeploymentType(CreateDeploymentRequestBodyDeploymentTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
@@ -36,9 +38,13 @@ public class CreateDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupVersionId")
     public String groupVersionId;
+
     public CreateDeploymentRequestBody withGroupVersionId(String groupVersionId) {
         this.groupVersionId = groupVersionId;
         return this;
     }
     
+    public CreateDeploymentRequestBody(@JsonProperty("DeploymentType") CreateDeploymentRequestBodyDeploymentTypeEnum deploymentType) {
+        this.deploymentType = deploymentType;
+  }
 }

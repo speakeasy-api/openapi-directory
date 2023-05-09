@@ -18,9 +18,11 @@ public class GetOrderDealsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deals")
     public MarketplaceDeal[] deals;
+
     public GetOrderDealsResponse withDeals(MarketplaceDeal[] deals) {
         this.deals = deals;
         return this;
     }
     
+    public GetOrderDealsResponse(){}
 }

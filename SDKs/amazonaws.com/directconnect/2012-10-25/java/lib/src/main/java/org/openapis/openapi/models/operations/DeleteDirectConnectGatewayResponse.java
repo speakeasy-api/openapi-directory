@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDirectConnectGatewayResponse {
     
     public String contentType;
+
     public DeleteDirectConnectGatewayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDirectConnectGatewayResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDirectConnectGatewayResult deleteDirectConnectGatewayResult;
+
     public DeleteDirectConnectGatewayResponse withDeleteDirectConnectGatewayResult(org.openapis.openapi.models.shared.DeleteDirectConnectGatewayResult deleteDirectConnectGatewayResult) {
         this.deleteDirectConnectGatewayResult = deleteDirectConnectGatewayResult;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDirectConnectGatewayResponse {
      */
     
     public Object directConnectClientException;
+
     public DeleteDirectConnectGatewayResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDirectConnectGatewayResponse {
      */
     
     public Object directConnectServerException;
+
     public DeleteDirectConnectGatewayResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteDirectConnectGatewayResponse {
     
     
     public Integer statusCode;
+
     public DeleteDirectConnectGatewayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteDirectConnectGatewayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDirectConnectGatewayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteDirectConnectGatewayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

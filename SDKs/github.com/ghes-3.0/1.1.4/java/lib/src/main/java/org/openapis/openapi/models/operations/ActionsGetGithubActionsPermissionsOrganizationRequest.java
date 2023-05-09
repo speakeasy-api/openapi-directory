@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetGithubActionsPermissionsOrganizationRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ActionsGetGithubActionsPermissionsOrganizationRequest withOrg(String org) {
         this.org = org;
         return this;
     }
     
+    public ActionsGetGithubActionsPermissionsOrganizationRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

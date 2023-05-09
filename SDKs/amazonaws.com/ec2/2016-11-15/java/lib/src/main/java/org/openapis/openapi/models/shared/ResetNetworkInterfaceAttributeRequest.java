@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ResetNetworkInterfaceAttributeRequest - Contains the parameters for ResetNetworkInterfaceAttribute.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ResetNetworkInterfaceAttributeRequest {
     
     public Boolean dryRun;
+
     public ResetNetworkInterfaceAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class ResetNetworkInterfaceAttributeRequest {
     
     
     public String networkInterfaceId;
+
     public ResetNetworkInterfaceAttributeRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -26,9 +28,13 @@ public class ResetNetworkInterfaceAttributeRequest {
     
     
     public String sourceDestCheck;
+
     public ResetNetworkInterfaceAttributeRequest withSourceDestCheck(String sourceDestCheck) {
         this.sourceDestCheck = sourceDestCheck;
         return this;
     }
     
+    public ResetNetworkInterfaceAttributeRequest(@JsonProperty("NetworkInterfaceId") String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+  }
 }

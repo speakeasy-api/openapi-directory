@@ -12,6 +12,7 @@ public class GetWorkflowRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeGraph")
     public Boolean includeGraph;
+
     public GetWorkflowRunsRequest withIncludeGraph(Boolean includeGraph) {
         this.includeGraph = includeGraph;
         return this;
@@ -20,6 +21,7 @@ public class GetWorkflowRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetWorkflowRunsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class GetWorkflowRunsRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public GetWorkflowRunsRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +38,13 @@ public class GetWorkflowRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetWorkflowRunsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetWorkflowRunsRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

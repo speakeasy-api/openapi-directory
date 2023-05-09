@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ResourceAccessSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owners")
     public String[] owners;
+
     public GoogleCloudDataplexV1ResourceAccessSpec withOwners(String[] owners) {
         this.owners = owners;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1ResourceAccessSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readers")
     public String[] readers;
+
     public GoogleCloudDataplexV1ResourceAccessSpec withReaders(String[] readers) {
         this.readers = readers;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1ResourceAccessSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writers")
     public String[] writers;
+
     public GoogleCloudDataplexV1ResourceAccessSpec withWriters(String[] writers) {
         this.writers = writers;
         return this;
     }
     
+    public GoogleCloudDataplexV1ResourceAccessSpec(){}
 }

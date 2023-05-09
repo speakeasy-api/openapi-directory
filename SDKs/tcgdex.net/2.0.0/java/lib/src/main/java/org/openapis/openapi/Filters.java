@@ -46,11 +46,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCategoriesResponse res = new org.openapis.openapi.models.operations.GetCategoriesResponse() {{
+        org.openapis.openapi.models.operations.GetCategoriesResponse res = new org.openapis.openapi.models.operations.GetCategoriesResponse(contentType, httpRes.statusCode()) {{
             getCategories200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -78,11 +76,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCategoriesCategoryResponse res = new org.openapis.openapi.models.operations.GetCategoriesCategoryResponse() {{
+        org.openapis.openapi.models.operations.GetCategoriesCategoryResponse res = new org.openapis.openapi.models.operations.GetCategoriesCategoryResponse(contentType, httpRes.statusCode()) {{
             stringEndpoint = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -112,11 +108,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDexIdsResponse res = new org.openapis.openapi.models.operations.GetDexIdsResponse() {{
+        org.openapis.openapi.models.operations.GetDexIdsResponse res = new org.openapis.openapi.models.operations.GetDexIdsResponse(contentType, httpRes.statusCode()) {{
             getDexIds200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +138,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDexIdsDexIdResponse res = new org.openapis.openapi.models.operations.GetDexIdsDexIdResponse() {{
+        org.openapis.openapi.models.operations.GetDexIdsDexIdResponse res = new org.openapis.openapi.models.operations.GetDexIdsDexIdResponse(contentType, httpRes.statusCode()) {{
             cardResumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +170,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEnergyTypesResponse res = new org.openapis.openapi.models.operations.GetEnergyTypesResponse() {{
+        org.openapis.openapi.models.operations.GetEnergyTypesResponse res = new org.openapis.openapi.models.operations.GetEnergyTypesResponse(contentType, httpRes.statusCode()) {{
             getEnergyTypes200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,11 +200,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEnergyTypesEnergyTypeResponse res = new org.openapis.openapi.models.operations.GetEnergyTypesEnergyTypeResponse() {{
+        org.openapis.openapi.models.operations.GetEnergyTypesEnergyTypeResponse res = new org.openapis.openapi.models.operations.GetEnergyTypesEnergyTypeResponse(contentType, httpRes.statusCode()) {{
             cardResumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -244,11 +232,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHpResponse res = new org.openapis.openapi.models.operations.GetHpResponse() {{
+        org.openapis.openapi.models.operations.GetHpResponse res = new org.openapis.openapi.models.operations.GetHpResponse(contentType, httpRes.statusCode()) {{
             getHp200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -276,11 +262,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHpHpResponse res = new org.openapis.openapi.models.operations.GetHpHpResponse() {{
+        org.openapis.openapi.models.operations.GetHpHpResponse res = new org.openapis.openapi.models.operations.GetHpHpResponse(contentType, httpRes.statusCode()) {{
             stringEndpoint = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -310,11 +294,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIllustratorsResponse res = new org.openapis.openapi.models.operations.GetIllustratorsResponse() {{
+        org.openapis.openapi.models.operations.GetIllustratorsResponse res = new org.openapis.openapi.models.operations.GetIllustratorsResponse(contentType, httpRes.statusCode()) {{
             getIllustrators200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +324,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIllustratorsIllustratorResponse res = new org.openapis.openapi.models.operations.GetIllustratorsIllustratorResponse() {{
+        org.openapis.openapi.models.operations.GetIllustratorsIllustratorResponse res = new org.openapis.openapi.models.operations.GetIllustratorsIllustratorResponse(contentType, httpRes.statusCode()) {{
             stringEndpoint = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -376,11 +356,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRaritiesResponse res = new org.openapis.openapi.models.operations.GetRaritiesResponse() {{
+        org.openapis.openapi.models.operations.GetRaritiesResponse res = new org.openapis.openapi.models.operations.GetRaritiesResponse(contentType, httpRes.statusCode()) {{
             getRarities200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -408,11 +386,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRaritiesRarityResponse res = new org.openapis.openapi.models.operations.GetRaritiesRarityResponse() {{
+        org.openapis.openapi.models.operations.GetRaritiesRarityResponse res = new org.openapis.openapi.models.operations.GetRaritiesRarityResponse(contentType, httpRes.statusCode()) {{
             stringEndpoint = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -442,11 +418,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRegulationMarksResponse res = new org.openapis.openapi.models.operations.GetRegulationMarksResponse() {{
+        org.openapis.openapi.models.operations.GetRegulationMarksResponse res = new org.openapis.openapi.models.operations.GetRegulationMarksResponse(contentType, httpRes.statusCode()) {{
             getRegulationMarks200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -474,11 +448,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRegulationMarksRegulationMarkResponse res = new org.openapis.openapi.models.operations.GetRegulationMarksRegulationMarkResponse() {{
+        org.openapis.openapi.models.operations.GetRegulationMarksRegulationMarkResponse res = new org.openapis.openapi.models.operations.GetRegulationMarksRegulationMarkResponse(contentType, httpRes.statusCode()) {{
             cardResumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -508,11 +480,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRetreatsResponse res = new org.openapis.openapi.models.operations.GetRetreatsResponse() {{
+        org.openapis.openapi.models.operations.GetRetreatsResponse res = new org.openapis.openapi.models.operations.GetRetreatsResponse(contentType, httpRes.statusCode()) {{
             getRetreats200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -540,11 +510,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRetreatsRetreatResponse res = new org.openapis.openapi.models.operations.GetRetreatsRetreatResponse() {{
+        org.openapis.openapi.models.operations.GetRetreatsRetreatResponse res = new org.openapis.openapi.models.operations.GetRetreatsRetreatResponse(contentType, httpRes.statusCode()) {{
             stringEndpoint = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -574,11 +542,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSeriesResponse res = new org.openapis.openapi.models.operations.GetSeriesResponse() {{
+        org.openapis.openapi.models.operations.GetSeriesResponse res = new org.openapis.openapi.models.operations.GetSeriesResponse(contentType, httpRes.statusCode()) {{
             serieResumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -606,11 +572,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSeriesSerieResponse res = new org.openapis.openapi.models.operations.GetSeriesSerieResponse() {{
+        org.openapis.openapi.models.operations.GetSeriesSerieResponse res = new org.openapis.openapi.models.operations.GetSeriesSerieResponse(contentType, httpRes.statusCode()) {{
             serie = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -640,11 +604,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetsResponse res = new org.openapis.openapi.models.operations.GetSetsResponse() {{
+        org.openapis.openapi.models.operations.GetSetsResponse res = new org.openapis.openapi.models.operations.GetSetsResponse(contentType, httpRes.statusCode()) {{
             setResumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,11 +634,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetsSetResponse res = new org.openapis.openapi.models.operations.GetSetsSetResponse() {{
+        org.openapis.openapi.models.operations.GetSetsSetResponse res = new org.openapis.openapi.models.operations.GetSetsSetResponse(contentType, httpRes.statusCode()) {{
             set = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -706,11 +666,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStagesResponse res = new org.openapis.openapi.models.operations.GetStagesResponse() {{
+        org.openapis.openapi.models.operations.GetStagesResponse res = new org.openapis.openapi.models.operations.GetStagesResponse(contentType, httpRes.statusCode()) {{
             getStages200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -738,11 +696,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStagesStageResponse res = new org.openapis.openapi.models.operations.GetStagesStageResponse() {{
+        org.openapis.openapi.models.operations.GetStagesStageResponse res = new org.openapis.openapi.models.operations.GetStagesStageResponse(contentType, httpRes.statusCode()) {{
             cardResumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -772,11 +728,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSuffixesResponse res = new org.openapis.openapi.models.operations.GetSuffixesResponse() {{
+        org.openapis.openapi.models.operations.GetSuffixesResponse res = new org.openapis.openapi.models.operations.GetSuffixesResponse(contentType, httpRes.statusCode()) {{
             getSuffixes200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -804,11 +758,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSuffixesSuffixResponse res = new org.openapis.openapi.models.operations.GetSuffixesSuffixResponse() {{
+        org.openapis.openapi.models.operations.GetSuffixesSuffixResponse res = new org.openapis.openapi.models.operations.GetSuffixesSuffixResponse(contentType, httpRes.statusCode()) {{
             cardResumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -838,11 +790,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrainerTypesResponse res = new org.openapis.openapi.models.operations.GetTrainerTypesResponse() {{
+        org.openapis.openapi.models.operations.GetTrainerTypesResponse res = new org.openapis.openapi.models.operations.GetTrainerTypesResponse(contentType, httpRes.statusCode()) {{
             getTrainerTypes200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -870,11 +820,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrainerTypesTrainerTypeResponse res = new org.openapis.openapi.models.operations.GetTrainerTypesTrainerTypeResponse() {{
+        org.openapis.openapi.models.operations.GetTrainerTypesTrainerTypeResponse res = new org.openapis.openapi.models.operations.GetTrainerTypesTrainerTypeResponse(contentType, httpRes.statusCode()) {{
             cardResumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -904,11 +852,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTypesResponse res = new org.openapis.openapi.models.operations.GetTypesResponse() {{
+        org.openapis.openapi.models.operations.GetTypesResponse res = new org.openapis.openapi.models.operations.GetTypesResponse(contentType, httpRes.statusCode()) {{
             getTypes200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -936,11 +882,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTypesTypeResponse res = new org.openapis.openapi.models.operations.GetTypesTypeResponse() {{
+        org.openapis.openapi.models.operations.GetTypesTypeResponse res = new org.openapis.openapi.models.operations.GetTypesTypeResponse(contentType, httpRes.statusCode()) {{
             cardResumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -970,11 +914,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVariantsResponse res = new org.openapis.openapi.models.operations.GetVariantsResponse() {{
+        org.openapis.openapi.models.operations.GetVariantsResponse res = new org.openapis.openapi.models.operations.GetVariantsResponse(contentType, httpRes.statusCode()) {{
             getVariants200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1002,11 +944,9 @@ public class Filters {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVariantsVariantResponse res = new org.openapis.openapi.models.operations.GetVariantsVariantResponse() {{
+        org.openapis.openapi.models.operations.GetVariantsVariantResponse res = new org.openapis.openapi.models.operations.GetVariantsVariantResponse(contentType, httpRes.statusCode()) {{
             cardResumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

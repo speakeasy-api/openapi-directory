@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeBackupInput {
     @JsonProperty("BackupArn")
     public String backupArn;
+
     public DescribeBackupInput withBackupArn(String backupArn) {
         this.backupArn = backupArn;
         return this;
     }
     
+    public DescribeBackupInput(@JsonProperty("BackupArn") String backupArn) {
+        this.backupArn = backupArn;
+  }
 }

@@ -18,6 +18,7 @@ public class AccountLabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public AccountLabelInput withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class AccountLabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AccountLabelInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,9 +42,11 @@ public class AccountLabelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccountLabelInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AccountLabelInput(){}
 }

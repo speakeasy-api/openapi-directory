@@ -15,9 +15,11 @@ public class DescribeEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointAddress")
     public String endpointAddress;
+
     public DescribeEndpointResponse withEndpointAddress(String endpointAddress) {
         this.endpointAddress = endpointAddress;
         return this;
     }
     
+    public DescribeEndpointResponse(){}
 }

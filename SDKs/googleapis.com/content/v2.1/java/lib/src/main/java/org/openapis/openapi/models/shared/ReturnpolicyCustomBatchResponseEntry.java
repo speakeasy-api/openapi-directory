@@ -15,6 +15,7 @@ public class ReturnpolicyCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchId")
     public Long batchId;
+
     public ReturnpolicyCustomBatchResponseEntry withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -26,6 +27,7 @@ public class ReturnpolicyCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Errors errors;
+
     public ReturnpolicyCustomBatchResponseEntry withErrors(Errors errors) {
         this.errors = errors;
         return this;
@@ -37,6 +39,7 @@ public class ReturnpolicyCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ReturnpolicyCustomBatchResponseEntry withKind(String kind) {
         this.kind = kind;
         return this;
@@ -48,9 +51,11 @@ public class ReturnpolicyCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPolicy")
     public ReturnPolicy returnPolicy;
+
     public ReturnpolicyCustomBatchResponseEntry withReturnPolicy(ReturnPolicy returnPolicy) {
         this.returnPolicy = returnPolicy;
         return this;
     }
     
+    public ReturnpolicyCustomBatchResponseEntry(){}
 }

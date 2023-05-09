@@ -15,9 +15,11 @@ public class SendRemindersResponseDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfSentEmails")
     public Integer numberOfSentEmails;
+
     public SendRemindersResponseDTO withNumberOfSentEmails(Integer numberOfSentEmails) {
         this.numberOfSentEmails = numberOfSentEmails;
         return this;
     }
     
+    public SendRemindersResponseDTO(){}
 }

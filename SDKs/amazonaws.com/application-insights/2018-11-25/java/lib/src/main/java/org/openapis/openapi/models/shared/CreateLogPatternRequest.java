@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLogPatternRequest {
     @JsonProperty("Pattern")
     public String pattern;
+
     public CreateLogPatternRequest withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -16,6 +17,7 @@ public class CreateLogPatternRequest {
     
     @JsonProperty("PatternName")
     public String patternName;
+
     public CreateLogPatternRequest withPatternName(String patternName) {
         this.patternName = patternName;
         return this;
@@ -23,6 +25,7 @@ public class CreateLogPatternRequest {
     
     @JsonProperty("PatternSetName")
     public String patternSetName;
+
     public CreateLogPatternRequest withPatternSetName(String patternSetName) {
         this.patternSetName = patternSetName;
         return this;
@@ -30,6 +33,7 @@ public class CreateLogPatternRequest {
     
     @JsonProperty("Rank")
     public Long rank;
+
     public CreateLogPatternRequest withRank(Long rank) {
         this.rank = rank;
         return this;
@@ -37,9 +41,17 @@ public class CreateLogPatternRequest {
     
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public CreateLogPatternRequest withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
     }
     
+    public CreateLogPatternRequest(@JsonProperty("Pattern") String pattern, @JsonProperty("PatternName") String patternName, @JsonProperty("PatternSetName") String patternSetName, @JsonProperty("Rank") Long rank, @JsonProperty("ResourceGroupName") String resourceGroupName) {
+        this.pattern = pattern;
+        this.patternName = patternName;
+        this.patternSetName = patternSetName;
+        this.rank = rank;
+        this.resourceGroupName = resourceGroupName;
+  }
 }

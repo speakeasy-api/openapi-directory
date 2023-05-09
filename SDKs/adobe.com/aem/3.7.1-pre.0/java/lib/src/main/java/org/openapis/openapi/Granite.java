@@ -52,11 +52,9 @@ public class Granite {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SslSetupResponse res = new org.openapis.openapi.models.operations.SslSetupResponse() {{
+        org.openapis.openapi.models.operations.SslSetupResponse res = new org.openapis.openapi.models.operations.SslSetupResponse(contentType, httpRes.statusCode()) {{
             sslSetupDefaultTextPlainString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

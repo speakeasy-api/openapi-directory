@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateUserProfileResponse {
     
     public String contentType;
+
     public UpdateUserProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateUserProfileResponse {
     
     
     public Integer statusCode;
+
     public UpdateUserProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateUserProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateUserProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateUserProfileResponse {
      */
     
     public Object resourceInUse;
+
     public UpdateUserProfileResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateUserProfileResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public UpdateUserProfileResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -53,6 +59,7 @@ public class UpdateUserProfileResponse {
      */
     
     public Object resourceNotFound;
+
     public UpdateUserProfileResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -63,9 +70,14 @@ public class UpdateUserProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateUserProfileResponse updateUserProfileResponse;
+
     public UpdateUserProfileResponse withUpdateUserProfileResponse(org.openapis.openapi.models.shared.UpdateUserProfileResponse updateUserProfileResponse) {
         this.updateUserProfileResponse = updateUserProfileResponse;
         return this;
     }
     
+    public UpdateUserProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

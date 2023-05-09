@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAssociationResponse {
@@ -12,6 +13,7 @@ public class DeleteAssociationResponse {
      */
     
     public Object associationDoesNotExist;
+
     public DeleteAssociationResponse withAssociationDoesNotExist(Object associationDoesNotExist) {
         this.associationDoesNotExist = associationDoesNotExist;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAssociationResponse {
     
     
     public String contentType;
+
     public DeleteAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAssociationResponse {
      */
     
     public java.util.Map<String, Object> deleteAssociationResult;
+
     public DeleteAssociationResponse withDeleteAssociationResult(java.util.Map<String, Object> deleteAssociationResult) {
         this.deleteAssociationResult = deleteAssociationResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAssociationResponse {
      */
     
     public Object internalServerError;
+
     public DeleteAssociationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAssociationResponse {
      */
     
     public Object invalidDocument;
+
     public DeleteAssociationResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -59,6 +65,7 @@ public class DeleteAssociationResponse {
      */
     
     public Object invalidInstanceId;
+
     public DeleteAssociationResponse withInvalidInstanceId(Object invalidInstanceId) {
         this.invalidInstanceId = invalidInstanceId;
         return this;
@@ -66,6 +73,7 @@ public class DeleteAssociationResponse {
     
     
     public Integer statusCode;
+
     public DeleteAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteAssociationResponse {
      */
     
     public Object tooManyUpdates;
+
     public DeleteAssociationResponse withTooManyUpdates(Object tooManyUpdates) {
         this.tooManyUpdates = tooManyUpdates;
         return this;
     }
     
+    public DeleteAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

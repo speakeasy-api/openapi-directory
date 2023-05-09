@@ -12,6 +12,7 @@ public class UpdateMultiNodeInventory200ApplicationJSONNodesErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCategoryEnum category;
+
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrors withCategory(UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCategoryEnum category) {
         this.category = category;
         return this;
@@ -20,6 +21,7 @@ public class UpdateMultiNodeInventory200ApplicationJSONNodesErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("causes")
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCauses[] causes;
+
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrors withCauses(UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCauses[] causes) {
         this.causes = causes;
         return this;
@@ -27,6 +29,7 @@ public class UpdateMultiNodeInventory200ApplicationJSONNodesErrors {
     
     @JsonProperty("code")
     public String code;
+
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrors withCode(String code) {
         this.code = code;
         return this;
@@ -35,6 +38,7 @@ public class UpdateMultiNodeInventory200ApplicationJSONNodesErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrors withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +47,7 @@ public class UpdateMultiNodeInventory200ApplicationJSONNodesErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorIdentifiers")
     public java.util.Map<String, java.util.Map<String, Object>> errorIdentifiers;
+
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrors withErrorIdentifiers(java.util.Map<String, java.util.Map<String, Object>> errorIdentifiers) {
         this.errorIdentifiers = errorIdentifiers;
         return this;
@@ -51,6 +56,7 @@ public class UpdateMultiNodeInventory200ApplicationJSONNodesErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrors withField(String field) {
         this.field = field;
         return this;
@@ -59,6 +65,7 @@ public class UpdateMultiNodeInventory200ApplicationJSONNodesErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public String info;
+
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrors withInfo(String info) {
         this.info = info;
         return this;
@@ -67,9 +74,13 @@ public class UpdateMultiNodeInventory200ApplicationJSONNodesErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrorsSeverityEnum severity;
+
     public UpdateMultiNodeInventory200ApplicationJSONNodesErrors withSeverity(UpdateMultiNodeInventory200ApplicationJSONNodesErrorsSeverityEnum severity) {
         this.severity = severity;
         return this;
     }
     
+    public UpdateMultiNodeInventory200ApplicationJSONNodesErrors(@JsonProperty("code") String code) {
+        this.code = code;
+  }
 }

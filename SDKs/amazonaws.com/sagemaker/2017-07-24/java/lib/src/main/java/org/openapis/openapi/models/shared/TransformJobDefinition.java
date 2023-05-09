@@ -15,6 +15,7 @@ public class TransformJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchStrategy")
     public BatchStrategyEnum batchStrategy;
+
     public TransformJobDefinition withBatchStrategy(BatchStrategyEnum batchStrategy) {
         this.batchStrategy = batchStrategy;
         return this;
@@ -23,6 +24,7 @@ public class TransformJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public TransformJobDefinition withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
@@ -31,6 +33,7 @@ public class TransformJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrentTransforms")
     public Long maxConcurrentTransforms;
+
     public TransformJobDefinition withMaxConcurrentTransforms(Long maxConcurrentTransforms) {
         this.maxConcurrentTransforms = maxConcurrentTransforms;
         return this;
@@ -39,6 +42,7 @@ public class TransformJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxPayloadInMB")
     public Long maxPayloadInMB;
+
     public TransformJobDefinition withMaxPayloadInMB(Long maxPayloadInMB) {
         this.maxPayloadInMB = maxPayloadInMB;
         return this;
@@ -46,6 +50,7 @@ public class TransformJobDefinition {
     
     @JsonProperty("TransformInput")
     public TransformInput transformInput;
+
     public TransformJobDefinition withTransformInput(TransformInput transformInput) {
         this.transformInput = transformInput;
         return this;
@@ -53,6 +58,7 @@ public class TransformJobDefinition {
     
     @JsonProperty("TransformOutput")
     public TransformOutput transformOutput;
+
     public TransformJobDefinition withTransformOutput(TransformOutput transformOutput) {
         this.transformOutput = transformOutput;
         return this;
@@ -60,9 +66,15 @@ public class TransformJobDefinition {
     
     @JsonProperty("TransformResources")
     public TransformResources transformResources;
+
     public TransformJobDefinition withTransformResources(TransformResources transformResources) {
         this.transformResources = transformResources;
         return this;
     }
     
+    public TransformJobDefinition(@JsonProperty("TransformInput") TransformInput transformInput, @JsonProperty("TransformOutput") TransformOutput transformOutput, @JsonProperty("TransformResources") TransformResources transformResources) {
+        this.transformInput = transformInput;
+        this.transformOutput = transformOutput;
+        this.transformResources = transformResources;
+  }
 }

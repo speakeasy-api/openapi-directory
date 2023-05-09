@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SearchTransitGatewayRoutesRequest {
     
     public Boolean dryRun;
+
     public SearchTransitGatewayRoutesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class SearchTransitGatewayRoutesRequest {
     
     
     public SearchTransitGatewayRoutesRequestFilters[] filters;
+
     public SearchTransitGatewayRoutesRequest withFilters(SearchTransitGatewayRoutesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class SearchTransitGatewayRoutesRequest {
     
     
     public Long maxResults;
+
     public SearchTransitGatewayRoutesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,9 +33,14 @@ public class SearchTransitGatewayRoutesRequest {
     
     
     public String transitGatewayRouteTableId;
+
     public SearchTransitGatewayRoutesRequest withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
     }
     
+    public SearchTransitGatewayRoutesRequest(@JsonProperty("Filters") SearchTransitGatewayRoutesRequestFilters[] filters, @JsonProperty("TransitGatewayRouteTableId") String transitGatewayRouteTableId) {
+        this.filters = filters;
+        this.transitGatewayRouteTableId = transitGatewayRouteTableId;
+  }
 }

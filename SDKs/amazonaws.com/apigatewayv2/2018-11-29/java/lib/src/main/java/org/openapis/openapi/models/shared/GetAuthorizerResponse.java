@@ -15,6 +15,7 @@ public class GetAuthorizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizerCredentialsArn")
     public String authorizerCredentialsArn;
+
     public GetAuthorizerResponse withAuthorizerCredentialsArn(String authorizerCredentialsArn) {
         this.authorizerCredentialsArn = authorizerCredentialsArn;
         return this;
@@ -23,6 +24,7 @@ public class GetAuthorizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizerId")
     public String authorizerId;
+
     public GetAuthorizerResponse withAuthorizerId(String authorizerId) {
         this.authorizerId = authorizerId;
         return this;
@@ -31,6 +33,7 @@ public class GetAuthorizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizerPayloadFormatVersion")
     public String authorizerPayloadFormatVersion;
+
     public GetAuthorizerResponse withAuthorizerPayloadFormatVersion(String authorizerPayloadFormatVersion) {
         this.authorizerPayloadFormatVersion = authorizerPayloadFormatVersion;
         return this;
@@ -39,6 +42,7 @@ public class GetAuthorizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizerResultTtlInSeconds")
     public Long authorizerResultTtlInSeconds;
+
     public GetAuthorizerResponse withAuthorizerResultTtlInSeconds(Long authorizerResultTtlInSeconds) {
         this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
         return this;
@@ -47,6 +51,7 @@ public class GetAuthorizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizerType")
     public GetAuthorizerResponseAuthorizerTypeEnum authorizerType;
+
     public GetAuthorizerResponse withAuthorizerType(GetAuthorizerResponseAuthorizerTypeEnum authorizerType) {
         this.authorizerType = authorizerType;
         return this;
@@ -55,6 +60,7 @@ public class GetAuthorizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizerUri")
     public String authorizerUri;
+
     public GetAuthorizerResponse withAuthorizerUri(String authorizerUri) {
         this.authorizerUri = authorizerUri;
         return this;
@@ -63,6 +69,7 @@ public class GetAuthorizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableSimpleResponses")
     public Boolean enableSimpleResponses;
+
     public GetAuthorizerResponse withEnableSimpleResponses(Boolean enableSimpleResponses) {
         this.enableSimpleResponses = enableSimpleResponses;
         return this;
@@ -71,6 +78,7 @@ public class GetAuthorizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentitySource")
     public String[] identitySource;
+
     public GetAuthorizerResponse withIdentitySource(String[] identitySource) {
         this.identitySource = identitySource;
         return this;
@@ -79,6 +87,7 @@ public class GetAuthorizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityValidationExpression")
     public String identityValidationExpression;
+
     public GetAuthorizerResponse withIdentityValidationExpression(String identityValidationExpression) {
         this.identityValidationExpression = identityValidationExpression;
         return this;
@@ -87,6 +96,7 @@ public class GetAuthorizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JwtConfiguration")
     public GetAuthorizerResponseJwtConfiguration jwtConfiguration;
+
     public GetAuthorizerResponse withJwtConfiguration(GetAuthorizerResponseJwtConfiguration jwtConfiguration) {
         this.jwtConfiguration = jwtConfiguration;
         return this;
@@ -95,9 +105,11 @@ public class GetAuthorizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetAuthorizerResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetAuthorizerResponse(){}
 }

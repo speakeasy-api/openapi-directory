@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaAccessFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("betweenFilter")
     public GoogleAnalyticsAdminV1betaAccessBetweenFilter betweenFilter;
+
     public GoogleAnalyticsAdminV1betaAccessFilter withBetweenFilter(GoogleAnalyticsAdminV1betaAccessBetweenFilter betweenFilter) {
         this.betweenFilter = betweenFilter;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1betaAccessFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public GoogleAnalyticsAdminV1betaAccessFilter withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1betaAccessFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inListFilter")
     public GoogleAnalyticsAdminV1betaAccessInListFilter inListFilter;
+
     public GoogleAnalyticsAdminV1betaAccessFilter withInListFilter(GoogleAnalyticsAdminV1betaAccessInListFilter inListFilter) {
         this.inListFilter = inListFilter;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1betaAccessFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numericFilter")
     public GoogleAnalyticsAdminV1betaAccessNumericFilter numericFilter;
+
     public GoogleAnalyticsAdminV1betaAccessFilter withNumericFilter(GoogleAnalyticsAdminV1betaAccessNumericFilter numericFilter) {
         this.numericFilter = numericFilter;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAnalyticsAdminV1betaAccessFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringFilter")
     public GoogleAnalyticsAdminV1betaAccessStringFilter stringFilter;
+
     public GoogleAnalyticsAdminV1betaAccessFilter withStringFilter(GoogleAnalyticsAdminV1betaAccessStringFilter stringFilter) {
         this.stringFilter = stringFilter;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaAccessFilter(){}
 }

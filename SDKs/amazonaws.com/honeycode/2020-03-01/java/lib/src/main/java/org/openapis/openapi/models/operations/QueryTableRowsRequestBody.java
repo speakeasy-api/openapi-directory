@@ -14,6 +14,7 @@ public class QueryTableRowsRequestBody {
      */
     @JsonProperty("filterFormula")
     public QueryTableRowsRequestBodyFilterFormula filterFormula;
+
     public QueryTableRowsRequestBody withFilterFormula(QueryTableRowsRequestBodyFilterFormula filterFormula) {
         this.filterFormula = filterFormula;
         return this;
@@ -25,6 +26,7 @@ public class QueryTableRowsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public QueryTableRowsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class QueryTableRowsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public QueryTableRowsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public QueryTableRowsRequestBody(@JsonProperty("filterFormula") QueryTableRowsRequestBodyFilterFormula filterFormula) {
+        this.filterFormula = filterFormula;
+  }
 }

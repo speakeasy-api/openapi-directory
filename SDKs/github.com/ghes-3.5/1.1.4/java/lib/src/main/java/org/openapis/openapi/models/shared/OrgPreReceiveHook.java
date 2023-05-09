@@ -15,6 +15,7 @@ public class OrgPreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_downstream_configuration")
     public Boolean allowDownstreamConfiguration;
+
     public OrgPreReceiveHook withAllowDownstreamConfiguration(Boolean allowDownstreamConfiguration) {
         this.allowDownstreamConfiguration = allowDownstreamConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class OrgPreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration_url")
     public String configurationUrl;
+
     public OrgPreReceiveHook withConfigurationUrl(String configurationUrl) {
         this.configurationUrl = configurationUrl;
         return this;
@@ -31,6 +33,7 @@ public class OrgPreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforcement")
     public String enforcement;
+
     public OrgPreReceiveHook withEnforcement(String enforcement) {
         this.enforcement = enforcement;
         return this;
@@ -39,6 +42,7 @@ public class OrgPreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public OrgPreReceiveHook withId(Long id) {
         this.id = id;
         return this;
@@ -47,9 +51,11 @@ public class OrgPreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrgPreReceiveHook withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OrgPreReceiveHook(){}
 }

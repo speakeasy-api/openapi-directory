@@ -12,6 +12,7 @@ public class ScimResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ScimResourceType withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class ScimResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public ScimResourceType withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -28,6 +30,7 @@ public class ScimResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ScimResourceType withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class ScimResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ScimResourceType withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class ScimResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public ScimResourceType withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -52,9 +57,11 @@ public class ScimResourceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemas")
     public String[] schemas;
+
     public ScimResourceType withSchemas(String[] schemas) {
         this.schemas = schemas;
         return this;
     }
     
+    public ScimResourceType(){}
 }

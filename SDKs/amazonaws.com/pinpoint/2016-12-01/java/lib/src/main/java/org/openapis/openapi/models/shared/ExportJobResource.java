@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExportJobResource {
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public ExportJobResource withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -21,6 +22,7 @@ public class ExportJobResource {
     
     @JsonProperty("S3UrlPrefix")
     public String s3UrlPrefix;
+
     public ExportJobResource withS3UrlPrefix(String s3UrlPrefix) {
         this.s3UrlPrefix = s3UrlPrefix;
         return this;
@@ -29,6 +31,7 @@ public class ExportJobResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentId")
     public String segmentId;
+
     public ExportJobResource withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -37,9 +40,14 @@ public class ExportJobResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentVersion")
     public Long segmentVersion;
+
     public ExportJobResource withSegmentVersion(Long segmentVersion) {
         this.segmentVersion = segmentVersion;
         return this;
     }
     
+    public ExportJobResource(@JsonProperty("RoleArn") String roleArn, @JsonProperty("S3UrlPrefix") String s3UrlPrefix) {
+        this.roleArn = roleArn;
+        this.s3UrlPrefix = s3UrlPrefix;
+  }
 }

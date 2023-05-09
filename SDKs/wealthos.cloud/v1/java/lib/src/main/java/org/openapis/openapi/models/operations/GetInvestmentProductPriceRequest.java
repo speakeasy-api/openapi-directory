@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInvestmentProductPriceRequest {
@@ -12,6 +13,7 @@ public class GetInvestmentProductPriceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category_id")
     public GetInvestmentProductPriceCategoryIDEnum categoryId;
+
     public GetInvestmentProductPriceRequest withCategoryId(GetInvestmentProductPriceCategoryIDEnum categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -22,6 +24,7 @@ public class GetInvestmentProductPriceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=investment_product_id")
     public String investmentProductId;
+
     public GetInvestmentProductPriceRequest withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -32,9 +35,15 @@ public class GetInvestmentProductPriceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetInvestmentProductPriceRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetInvestmentProductPriceRequest(@JsonProperty("category_id") GetInvestmentProductPriceCategoryIDEnum categoryId, @JsonProperty("investment_product_id") String investmentProductId, @JsonProperty("x-api-key") String xApiKey) {
+        this.categoryId = categoryId;
+        this.investmentProductId = investmentProductId;
+        this.xApiKey = xApiKey;
+  }
 }

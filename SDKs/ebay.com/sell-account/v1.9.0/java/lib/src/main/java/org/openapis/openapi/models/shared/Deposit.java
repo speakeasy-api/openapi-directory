@@ -18,6 +18,7 @@ public class Deposit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Amount amount;
+
     public Deposit withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -29,6 +30,7 @@ public class Deposit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dueIn")
     public TimeDuration dueIn;
+
     public Deposit withDueIn(TimeDuration dueIn) {
         this.dueIn = dueIn;
         return this;
@@ -40,9 +42,11 @@ public class Deposit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethods")
     public PaymentMethod[] paymentMethods;
+
     public Deposit withPaymentMethods(PaymentMethod[] paymentMethods) {
         this.paymentMethods = paymentMethods;
         return this;
     }
     
+    public Deposit(){}
 }

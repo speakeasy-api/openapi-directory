@@ -15,6 +15,7 @@ public class MatchingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMerging")
     public AutoMerging autoMerging;
+
     public MatchingResponse withAutoMerging(AutoMerging autoMerging) {
         this.autoMerging = autoMerging;
         return this;
@@ -23,6 +24,7 @@ public class MatchingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public MatchingResponse withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -31,6 +33,7 @@ public class MatchingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportingConfig")
     public ExportingConfig exportingConfig;
+
     public MatchingResponse withExportingConfig(ExportingConfig exportingConfig) {
         this.exportingConfig = exportingConfig;
         return this;
@@ -39,9 +42,11 @@ public class MatchingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobSchedule")
     public JobSchedule jobSchedule;
+
     public MatchingResponse withJobSchedule(JobSchedule jobSchedule) {
         this.jobSchedule = jobSchedule;
         return this;
     }
     
+    public MatchingResponse(){}
 }

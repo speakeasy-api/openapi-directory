@@ -22,6 +22,7 @@ public class RecommendationReportDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completionTime")
     public OffsetDateTime completionTime;
+
     public RecommendationReportDetails withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -30,6 +31,7 @@ public class RecommendationReportDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Bucket")
     public String s3Bucket;
+
     public RecommendationReportDetails withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -38,6 +40,7 @@ public class RecommendationReportDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Keys")
     public String[] s3Keys;
+
     public RecommendationReportDetails withS3Keys(String[] s3Keys) {
         this.s3Keys = s3Keys;
         return this;
@@ -48,6 +51,7 @@ public class RecommendationReportDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public RecommendationReportDetails withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -56,6 +60,7 @@ public class RecommendationReportDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RecommendationReportStatusEnum status;
+
     public RecommendationReportDetails withStatus(RecommendationReportStatusEnum status) {
         this.status = status;
         return this;
@@ -64,9 +69,11 @@ public class RecommendationReportDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public RecommendationReportDetails withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public RecommendationReportDetails(){}
 }

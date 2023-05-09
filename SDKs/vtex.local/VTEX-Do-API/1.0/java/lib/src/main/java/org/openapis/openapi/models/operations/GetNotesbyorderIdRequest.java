@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNotesbyorderIdRequest {
@@ -12,6 +13,7 @@ public class GetNotesbyorderIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetNotesbyorderIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetNotesbyorderIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetNotesbyorderIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetNotesbyorderIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetNotesbyorderIdRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class GetNotesbyorderIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
     public Long perPage;
+
     public GetNotesbyorderIdRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,6 +57,7 @@ public class GetNotesbyorderIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
     public String reason;
+
     public GetNotesbyorderIdRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -62,9 +68,15 @@ public class GetNotesbyorderIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target.id")
     public String targetId;
+
     public GetNotesbyorderIdRequest withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
     }
     
+    public GetNotesbyorderIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("target.id") String targetId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.targetId = targetId;
+  }
 }

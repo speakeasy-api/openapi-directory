@@ -18,6 +18,7 @@ public class StandardSqlField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StandardSqlField withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class StandardSqlField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public StandardSqlDataType type;
+
     public StandardSqlField withType(StandardSqlDataType type) {
         this.type = type;
         return this;
     }
     
+    public StandardSqlField(){}
 }

@@ -15,6 +15,7 @@ public class IdpMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public IdpMetadata withUrl(String url) {
         this.url = url;
         return this;
@@ -23,9 +24,11 @@ public class IdpMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xml")
     public String xml;
+
     public IdpMetadata withXml(String xml) {
         this.xml = xml;
         return this;
     }
     
+    public IdpMetadata(){}
 }

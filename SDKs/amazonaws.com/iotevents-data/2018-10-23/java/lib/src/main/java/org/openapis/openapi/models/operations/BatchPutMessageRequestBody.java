@@ -12,9 +12,13 @@ public class BatchPutMessageRequestBody {
      */
     @JsonProperty("messages")
     public org.openapis.openapi.models.shared.Message[] messages;
+
     public BatchPutMessageRequestBody withMessages(org.openapis.openapi.models.shared.Message[] messages) {
         this.messages = messages;
         return this;
     }
     
+    public BatchPutMessageRequestBody(@JsonProperty("messages") org.openapis.openapi.models.shared.Message[] messages) {
+        this.messages = messages;
+  }
 }

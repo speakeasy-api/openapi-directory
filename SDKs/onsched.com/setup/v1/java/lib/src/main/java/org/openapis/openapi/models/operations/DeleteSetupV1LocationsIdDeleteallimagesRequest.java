@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSetupV1LocationsIdDeleteallimagesRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DeleteSetupV1LocationsIdDeleteallimagesRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +18,13 @@ public class DeleteSetupV1LocationsIdDeleteallimagesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uppercase")
     public Boolean uppercase;
+
     public DeleteSetupV1LocationsIdDeleteallimagesRequest withUppercase(Boolean uppercase) {
         this.uppercase = uppercase;
         return this;
     }
     
+    public DeleteSetupV1LocationsIdDeleteallimagesRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

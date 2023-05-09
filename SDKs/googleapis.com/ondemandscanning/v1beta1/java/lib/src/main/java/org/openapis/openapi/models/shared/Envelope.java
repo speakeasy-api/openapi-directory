@@ -15,6 +15,7 @@ public class Envelope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public Envelope withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -23,6 +24,7 @@ public class Envelope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payloadType")
     public String payloadType;
+
     public Envelope withPayloadType(String payloadType) {
         this.payloadType = payloadType;
         return this;
@@ -31,9 +33,11 @@ public class Envelope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatures")
     public EnvelopeSignature[] signatures;
+
     public Envelope withSignatures(EnvelopeSignature[] signatures) {
         this.signatures = signatures;
         return this;
     }
     
+    public Envelope(){}
 }

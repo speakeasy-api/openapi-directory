@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDomainsResponse {
     @JsonProperty("domains")
     public DomainSummary[] domains;
+
     public ListDomainsResponse withDomains(DomainSummary[] domains) {
         this.domains = domains;
         return this;
@@ -22,9 +23,13 @@ public class ListDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDomainsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDomainsResponse(@JsonProperty("domains") DomainSummary[] domains) {
+        this.domains = domains;
+  }
 }

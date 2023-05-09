@@ -14,6 +14,7 @@ public class CreateCustomPluginRequestBody {
      */
     @JsonProperty("contentType")
     public CreateCustomPluginRequestBodyContentTypeEnum contentType;
+
     public CreateCustomPluginRequestBody withContentType(CreateCustomPluginRequestBodyContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -25,6 +26,7 @@ public class CreateCustomPluginRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateCustomPluginRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class CreateCustomPluginRequestBody {
      */
     @JsonProperty("location")
     public CreateCustomPluginRequestBodyLocation location;
+
     public CreateCustomPluginRequestBody withLocation(CreateCustomPluginRequestBodyLocation location) {
         this.location = location;
         return this;
@@ -45,9 +48,15 @@ public class CreateCustomPluginRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateCustomPluginRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateCustomPluginRequestBody(@JsonProperty("contentType") CreateCustomPluginRequestBodyContentTypeEnum contentType, @JsonProperty("location") CreateCustomPluginRequestBodyLocation location, @JsonProperty("name") String name) {
+        this.contentType = contentType;
+        this.location = location;
+        this.name = name;
+  }
 }

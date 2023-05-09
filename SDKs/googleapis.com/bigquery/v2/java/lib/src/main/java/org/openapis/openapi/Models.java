@@ -59,10 +59,8 @@ public class Models {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryModelsDeleteResponse res = new org.openapis.openapi.models.operations.BigqueryModelsDeleteResponse() {{
+        org.openapis.openapi.models.operations.BigqueryModelsDeleteResponse res = new org.openapis.openapi.models.operations.BigqueryModelsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Models {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryModelsGetResponse res = new org.openapis.openapi.models.operations.BigqueryModelsGetResponse() {{
+        org.openapis.openapi.models.operations.BigqueryModelsGetResponse res = new org.openapis.openapi.models.operations.BigqueryModelsGetResponse(contentType, httpRes.statusCode()) {{
             model = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,11 +141,9 @@ public class Models {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryModelsListResponse res = new org.openapis.openapi.models.operations.BigqueryModelsListResponse() {{
+        org.openapis.openapi.models.operations.BigqueryModelsListResponse res = new org.openapis.openapi.models.operations.BigqueryModelsListResponse(contentType, httpRes.statusCode()) {{
             listModelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Models {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryModelsPatchResponse res = new org.openapis.openapi.models.operations.BigqueryModelsPatchResponse() {{
+        org.openapis.openapi.models.operations.BigqueryModelsPatchResponse res = new org.openapis.openapi.models.operations.BigqueryModelsPatchResponse(contentType, httpRes.statusCode()) {{
             model = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class GetEnabledStandardsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetEnabledStandardsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetEnabledStandardsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardsSubscriptions")
     public StandardsSubscription[] standardsSubscriptions;
+
     public GetEnabledStandardsResponse withStandardsSubscriptions(StandardsSubscription[] standardsSubscriptions) {
         this.standardsSubscriptions = standardsSubscriptions;
         return this;
     }
     
+    public GetEnabledStandardsResponse(){}
 }

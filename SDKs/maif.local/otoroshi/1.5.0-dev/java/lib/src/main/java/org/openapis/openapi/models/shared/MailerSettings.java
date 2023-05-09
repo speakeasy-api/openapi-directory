@@ -17,6 +17,7 @@ public class MailerSettings {
      */
     @JsonProperty("apiKey")
     public String apiKey;
+
     public MailerSettings withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -28,6 +29,7 @@ public class MailerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKeyPrivate")
     public String apiKeyPrivate;
+
     public MailerSettings withApiKeyPrivate(String apiKeyPrivate) {
         this.apiKeyPrivate = apiKeyPrivate;
         return this;
@@ -39,6 +41,7 @@ public class MailerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKeyPublic")
     public String apiKeyPublic;
+
     public MailerSettings withApiKeyPublic(String apiKeyPublic) {
         this.apiKeyPublic = apiKeyPublic;
         return this;
@@ -49,6 +52,7 @@ public class MailerSettings {
      */
     @JsonProperty("domain")
     public String domain;
+
     public MailerSettings withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -60,6 +64,7 @@ public class MailerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eu")
     public Boolean eu;
+
     public MailerSettings withEu(Boolean eu) {
         this.eu = eu;
         return this;
@@ -71,6 +76,7 @@ public class MailerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public java.util.Map<String, String> header;
+
     public MailerSettings withHeader(java.util.Map<String, String> header) {
         this.header = header;
         return this;
@@ -82,6 +88,7 @@ public class MailerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public MailerSettings withType(String type) {
         this.type = type;
         return this;
@@ -93,9 +100,14 @@ public class MailerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public MailerSettings withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public MailerSettings(@JsonProperty("apiKey") String apiKey, @JsonProperty("domain") String domain) {
+        this.apiKey = apiKey;
+        this.domain = domain;
+  }
 }

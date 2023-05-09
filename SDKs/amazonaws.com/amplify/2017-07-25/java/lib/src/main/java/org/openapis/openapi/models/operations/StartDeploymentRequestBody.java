@@ -15,6 +15,7 @@ public class StartDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public StartDeploymentRequestBody withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -26,9 +27,11 @@ public class StartDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceUrl")
     public String sourceUrl;
+
     public StartDeploymentRequestBody withSourceUrl(String sourceUrl) {
         this.sourceUrl = sourceUrl;
         return this;
     }
     
+    public StartDeploymentRequestBody(){}
 }

@@ -18,6 +18,7 @@ public class Airport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AirportCode")
     public String airportCode;
+
     public Airport withAirportCode(String airportCode) {
         this.airportCode = airportCode;
         return this;
@@ -29,6 +30,7 @@ public class Airport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CityCode")
     public String cityCode;
+
     public Airport withCityCode(String cityCode) {
         this.cityCode = cityCode;
         return this;
@@ -40,6 +42,7 @@ public class Airport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountryCode")
     public String countryCode;
+
     public Airport withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -51,6 +54,7 @@ public class Airport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationType")
     public String locationType;
+
     public Airport withLocationType(String locationType) {
         this.locationType = locationType;
         return this;
@@ -62,6 +66,7 @@ public class Airport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Names")
     public AirportNames names;
+
     public Airport withNames(AirportNames names) {
         this.names = names;
         return this;
@@ -73,6 +78,7 @@ public class Airport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public AirportPosition position;
+
     public Airport withPosition(AirportPosition position) {
         this.position = position;
         return this;
@@ -84,6 +90,7 @@ public class Airport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeZoneId")
     public String timeZoneId;
+
     public Airport withTimeZoneId(String timeZoneId) {
         this.timeZoneId = timeZoneId;
         return this;
@@ -95,9 +102,11 @@ public class Airport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UtcOffset")
     public Float utcOffset;
+
     public Airport withUtcOffset(Float utcOffset) {
         this.utcOffset = utcOffset;
         return this;
     }
     
+    public Airport(){}
 }

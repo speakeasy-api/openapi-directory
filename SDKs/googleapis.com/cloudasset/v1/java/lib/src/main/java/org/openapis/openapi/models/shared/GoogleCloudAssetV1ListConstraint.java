@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1ListConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportsIn")
     public Boolean supportsIn;
+
     public GoogleCloudAssetV1ListConstraint withSupportsIn(Boolean supportsIn) {
         this.supportsIn = supportsIn;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAssetV1ListConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportsUnder")
     public Boolean supportsUnder;
+
     public GoogleCloudAssetV1ListConstraint withSupportsUnder(Boolean supportsUnder) {
         this.supportsUnder = supportsUnder;
         return this;
     }
     
+    public GoogleCloudAssetV1ListConstraint(){}
 }

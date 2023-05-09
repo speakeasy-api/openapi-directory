@@ -15,6 +15,7 @@ public class ChoiceContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayText")
     public String displayText;
+
     public ChoiceContent withDisplayText(String displayText) {
         this.displayText = displayText;
         return this;
@@ -23,9 +24,11 @@ public class ChoiceContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public ChoiceContent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ChoiceContent(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedInstancesResultReservedInstancesRecurringCharges {
     
     public Double amount;
+
     public DescribeReservedInstancesResultReservedInstancesRecurringCharges withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -19,9 +20,11 @@ public class DescribeReservedInstancesResultReservedInstancesRecurringCharges {
     
     
     public DescribeReservedInstancesResultReservedInstancesRecurringChargesFrequencyEnum frequency;
+
     public DescribeReservedInstancesResultReservedInstancesRecurringCharges withFrequency(DescribeReservedInstancesResultReservedInstancesRecurringChargesFrequencyEnum frequency) {
         this.frequency = frequency;
         return this;
     }
     
+    public DescribeReservedInstancesResultReservedInstancesRecurringCharges(){}
 }

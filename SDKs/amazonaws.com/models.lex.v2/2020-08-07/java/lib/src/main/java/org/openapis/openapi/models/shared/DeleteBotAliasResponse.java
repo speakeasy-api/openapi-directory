@@ -15,6 +15,7 @@ public class DeleteBotAliasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botAliasId")
     public String botAliasId;
+
     public DeleteBotAliasResponse withBotAliasId(String botAliasId) {
         this.botAliasId = botAliasId;
         return this;
@@ -23,6 +24,7 @@ public class DeleteBotAliasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botAliasStatus")
     public BotAliasStatusEnum botAliasStatus;
+
     public DeleteBotAliasResponse withBotAliasStatus(BotAliasStatusEnum botAliasStatus) {
         this.botAliasStatus = botAliasStatus;
         return this;
@@ -31,9 +33,11 @@ public class DeleteBotAliasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public DeleteBotAliasResponse withBotId(String botId) {
         this.botId = botId;
         return this;
     }
     
+    public DeleteBotAliasResponse(){}
 }

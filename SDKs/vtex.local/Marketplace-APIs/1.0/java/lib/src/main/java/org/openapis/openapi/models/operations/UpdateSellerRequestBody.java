@@ -12,6 +12,7 @@ public class UpdateSellerRequestBody {
      */
     @JsonProperty("operation")
     public String operation;
+
     public UpdateSellerRequestBody withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -22,6 +23,7 @@ public class UpdateSellerRequestBody {
      */
     @JsonProperty("path")
     public String path;
+
     public UpdateSellerRequestBody withPath(String path) {
         this.path = path;
         return this;
@@ -32,9 +34,15 @@ public class UpdateSellerRequestBody {
      */
     @JsonProperty("value")
     public Boolean value;
+
     public UpdateSellerRequestBody withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public UpdateSellerRequestBody(@JsonProperty("operation") String operation, @JsonProperty("path") String path, @JsonProperty("value") Boolean value) {
+        this.operation = operation;
+        this.path = path;
+        this.value = value;
+  }
 }

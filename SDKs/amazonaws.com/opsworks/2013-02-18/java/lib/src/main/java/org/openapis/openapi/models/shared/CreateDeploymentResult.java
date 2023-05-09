@@ -15,9 +15,11 @@ public class CreateDeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentId")
     public String deploymentId;
+
     public CreateDeploymentResult withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
     }
     
+    public CreateDeploymentResult(){}
 }

@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DisableEbsEncryptionByDefaultRequest {
     
     public Boolean dryRun;
+
     public DisableEbsEncryptionByDefaultRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public DisableEbsEncryptionByDefaultRequest(){}
 }

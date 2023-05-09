@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendEmailResponse {
@@ -12,6 +13,7 @@ public class SendEmailResponse {
      */
     
     public Object accountSuspendedException;
+
     public SendEmailResponse withAccountSuspendedException(Object accountSuspendedException) {
         this.accountSuspendedException = accountSuspendedException;
         return this;
@@ -22,6 +24,7 @@ public class SendEmailResponse {
      */
     
     public Object badRequestException;
+
     public SendEmailResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class SendEmailResponse {
     
     
     public String contentType;
+
     public SendEmailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class SendEmailResponse {
      */
     
     public Object limitExceededException;
+
     public SendEmailResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class SendEmailResponse {
      */
     
     public Object mailFromDomainNotVerifiedException;
+
     public SendEmailResponse withMailFromDomainNotVerifiedException(Object mailFromDomainNotVerifiedException) {
         this.mailFromDomainNotVerifiedException = mailFromDomainNotVerifiedException;
         return this;
@@ -59,6 +65,7 @@ public class SendEmailResponse {
      */
     
     public Object messageRejected;
+
     public SendEmailResponse withMessageRejected(Object messageRejected) {
         this.messageRejected = messageRejected;
         return this;
@@ -69,6 +76,7 @@ public class SendEmailResponse {
      */
     
     public Object notFoundException;
+
     public SendEmailResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class SendEmailResponse {
      */
     
     public org.openapis.openapi.models.shared.SendEmailResponse sendEmailResponse;
+
     public SendEmailResponse withSendEmailResponse(org.openapis.openapi.models.shared.SendEmailResponse sendEmailResponse) {
         this.sendEmailResponse = sendEmailResponse;
         return this;
@@ -86,6 +95,7 @@ public class SendEmailResponse {
     
     
     public Integer statusCode;
+
     public SendEmailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class SendEmailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendEmailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class SendEmailResponse {
      */
     
     public Object sendingPausedException;
+
     public SendEmailResponse withSendingPausedException(Object sendingPausedException) {
         this.sendingPausedException = sendingPausedException;
         return this;
@@ -113,9 +125,14 @@ public class SendEmailResponse {
      */
     
     public Object tooManyRequestsException;
+
     public SendEmailResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public SendEmailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

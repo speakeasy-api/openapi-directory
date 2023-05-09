@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SasportalPoliciesGetResponse {
     
     public String contentType;
+
     public SasportalPoliciesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SasportalPoliciesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.SasPortalPolicy sasPortalPolicy;
+
     public SasportalPoliciesGetResponse withSasPortalPolicy(org.openapis.openapi.models.shared.SasPortalPolicy sasPortalPolicy) {
         this.sasPortalPolicy = sasPortalPolicy;
         return this;
@@ -26,6 +29,7 @@ public class SasportalPoliciesGetResponse {
     
     
     public Integer statusCode;
+
     public SasportalPoliciesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SasportalPoliciesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SasportalPoliciesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SasportalPoliciesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

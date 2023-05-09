@@ -15,6 +15,7 @@ public class ListBonusPaymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BonusPayments")
     public BonusPayment[] bonusPayments;
+
     public ListBonusPaymentsResponse withBonusPayments(BonusPayment[] bonusPayments) {
         this.bonusPayments = bonusPayments;
         return this;
@@ -26,6 +27,7 @@ public class ListBonusPaymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListBonusPaymentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -34,9 +36,11 @@ public class ListBonusPaymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumResults")
     public Long numResults;
+
     public ListBonusPaymentsResponse withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
     }
     
+    public ListBonusPaymentsResponse(){}
 }

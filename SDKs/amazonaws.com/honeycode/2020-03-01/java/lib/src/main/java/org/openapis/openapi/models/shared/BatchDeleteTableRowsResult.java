@@ -15,6 +15,7 @@ public class BatchDeleteTableRowsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedBatchItems")
     public FailedBatchItem[] failedBatchItems;
+
     public BatchDeleteTableRowsResult withFailedBatchItems(FailedBatchItem[] failedBatchItems) {
         this.failedBatchItems = failedBatchItems;
         return this;
@@ -22,9 +23,13 @@ public class BatchDeleteTableRowsResult {
     
     @JsonProperty("workbookCursor")
     public Long workbookCursor;
+
     public BatchDeleteTableRowsResult withWorkbookCursor(Long workbookCursor) {
         this.workbookCursor = workbookCursor;
         return this;
     }
     
+    public BatchDeleteTableRowsResult(@JsonProperty("workbookCursor") Long workbookCursor) {
+        this.workbookCursor = workbookCursor;
+  }
 }

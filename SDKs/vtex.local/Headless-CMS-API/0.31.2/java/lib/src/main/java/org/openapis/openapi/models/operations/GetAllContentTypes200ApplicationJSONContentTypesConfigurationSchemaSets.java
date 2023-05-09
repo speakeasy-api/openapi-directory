@@ -18,6 +18,7 @@ public class GetAllContentTypes200ApplicationJSONContentTypesConfigurationSchema
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurations")
     public java.util.Map<String, Object>[] configurations;
+
     public GetAllContentTypes200ApplicationJSONContentTypesConfigurationSchemaSets withConfigurations(java.util.Map<String, Object>[] configurations) {
         this.configurations = configurations;
         return this;
@@ -29,9 +30,11 @@ public class GetAllContentTypes200ApplicationJSONContentTypesConfigurationSchema
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetAllContentTypes200ApplicationJSONContentTypesConfigurationSchemaSets withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetAllContentTypes200ApplicationJSONContentTypesConfigurationSchemaSets(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutWorkflowRunPropertiesResponse {
@@ -12,6 +13,7 @@ public class PutWorkflowRunPropertiesResponse {
      */
     
     public Object alreadyExistsException;
+
     public PutWorkflowRunPropertiesResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class PutWorkflowRunPropertiesResponse {
      */
     
     public Object concurrentModificationException;
+
     public PutWorkflowRunPropertiesResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class PutWorkflowRunPropertiesResponse {
     
     
     public String contentType;
+
     public PutWorkflowRunPropertiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutWorkflowRunPropertiesResponse {
      */
     
     public Object entityNotFoundException;
+
     public PutWorkflowRunPropertiesResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class PutWorkflowRunPropertiesResponse {
      */
     
     public Object internalServiceException;
+
     public PutWorkflowRunPropertiesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class PutWorkflowRunPropertiesResponse {
      */
     
     public Object invalidInputException;
+
     public PutWorkflowRunPropertiesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class PutWorkflowRunPropertiesResponse {
      */
     
     public Object operationTimeoutException;
+
     public PutWorkflowRunPropertiesResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -79,6 +87,7 @@ public class PutWorkflowRunPropertiesResponse {
      */
     
     public java.util.Map<String, Object> putWorkflowRunPropertiesResponse;
+
     public PutWorkflowRunPropertiesResponse withPutWorkflowRunPropertiesResponse(java.util.Map<String, Object> putWorkflowRunPropertiesResponse) {
         this.putWorkflowRunPropertiesResponse = putWorkflowRunPropertiesResponse;
         return this;
@@ -89,6 +98,7 @@ public class PutWorkflowRunPropertiesResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public PutWorkflowRunPropertiesResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -96,6 +106,7 @@ public class PutWorkflowRunPropertiesResponse {
     
     
     public Integer statusCode;
+
     public PutWorkflowRunPropertiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class PutWorkflowRunPropertiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutWorkflowRunPropertiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutWorkflowRunPropertiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkflowTypeFilter {
     @JsonProperty("name")
     public String name;
+
     public WorkflowTypeFilter withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,13 @@ public class WorkflowTypeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public WorkflowTypeFilter withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public WorkflowTypeFilter(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

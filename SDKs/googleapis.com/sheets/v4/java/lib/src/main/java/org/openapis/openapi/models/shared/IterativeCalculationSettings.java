@@ -18,6 +18,7 @@ public class IterativeCalculationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("convergenceThreshold")
     public Double convergenceThreshold;
+
     public IterativeCalculationSettings withConvergenceThreshold(Double convergenceThreshold) {
         this.convergenceThreshold = convergenceThreshold;
         return this;
@@ -29,9 +30,11 @@ public class IterativeCalculationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxIterations")
     public Integer maxIterations;
+
     public IterativeCalculationSettings withMaxIterations(Integer maxIterations) {
         this.maxIterations = maxIterations;
         return this;
     }
     
+    public IterativeCalculationSettings(){}
 }

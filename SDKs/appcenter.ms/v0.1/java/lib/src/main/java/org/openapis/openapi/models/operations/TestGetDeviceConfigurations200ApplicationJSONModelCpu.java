@@ -15,6 +15,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelCpu {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("core")
     public String core;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelCpu withCore(String core) {
         this.core = core;
         return this;
@@ -23,6 +24,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelCpu {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public String frequency;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelCpu withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -31,9 +33,11 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelCpu {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelCpu withText(String text) {
         this.text = text;
         return this;
     }
     
+    public TestGetDeviceConfigurations200ApplicationJSONModelCpu(){}
 }

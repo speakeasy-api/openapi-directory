@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FileSystemDataSource {
     @JsonProperty("DirectoryPath")
     public String directoryPath;
+
     public FileSystemDataSource withDirectoryPath(String directoryPath) {
         this.directoryPath = directoryPath;
         return this;
@@ -19,6 +20,7 @@ public class FileSystemDataSource {
     
     @JsonProperty("FileSystemAccessMode")
     public FileSystemAccessModeEnum fileSystemAccessMode;
+
     public FileSystemDataSource withFileSystemAccessMode(FileSystemAccessModeEnum fileSystemAccessMode) {
         this.fileSystemAccessMode = fileSystemAccessMode;
         return this;
@@ -26,6 +28,7 @@ public class FileSystemDataSource {
     
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public FileSystemDataSource withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -33,9 +36,16 @@ public class FileSystemDataSource {
     
     @JsonProperty("FileSystemType")
     public FileSystemTypeEnum fileSystemType;
+
     public FileSystemDataSource withFileSystemType(FileSystemTypeEnum fileSystemType) {
         this.fileSystemType = fileSystemType;
         return this;
     }
     
+    public FileSystemDataSource(@JsonProperty("DirectoryPath") String directoryPath, @JsonProperty("FileSystemAccessMode") FileSystemAccessModeEnum fileSystemAccessMode, @JsonProperty("FileSystemId") String fileSystemId, @JsonProperty("FileSystemType") FileSystemTypeEnum fileSystemType) {
+        this.directoryPath = directoryPath;
+        this.fileSystemAccessMode = fileSystemAccessMode;
+        this.fileSystemId = fileSystemId;
+        this.fileSystemType = fileSystemType;
+  }
 }

@@ -18,6 +18,7 @@ public class QueuedResourceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedData")
     public QueuedResourceStatusFailedData failedData;
+
     public QueuedResourceStatus withFailedData(QueuedResourceStatusFailedData failedData) {
         this.failedData = failedData;
         return this;
@@ -29,6 +30,7 @@ public class QueuedResourceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningOperations")
     public String[] provisioningOperations;
+
     public QueuedResourceStatus withProvisioningOperations(String[] provisioningOperations) {
         this.provisioningOperations = provisioningOperations;
         return this;
@@ -40,9 +42,11 @@ public class QueuedResourceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queuingPolicy")
     public QueuingPolicy queuingPolicy;
+
     public QueuedResourceStatus withQueuingPolicy(QueuingPolicy queuingPolicy) {
         this.queuingPolicy = queuingPolicy;
         return this;
     }
     
+    public QueuedResourceStatus(){}
 }

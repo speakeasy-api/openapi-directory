@@ -17,6 +17,7 @@ public class CompositeModelProperty {
      */
     @JsonProperty("assetProperty")
     public Property assetProperty;
+
     public CompositeModelProperty withAssetProperty(Property assetProperty) {
         this.assetProperty = assetProperty;
         return this;
@@ -25,6 +26,7 @@ public class CompositeModelProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CompositeModelProperty withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class CompositeModelProperty {
     
     @JsonProperty("name")
     public String name;
+
     public CompositeModelProperty withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,15 @@ public class CompositeModelProperty {
     
     @JsonProperty("type")
     public String type;
+
     public CompositeModelProperty withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CompositeModelProperty(@JsonProperty("assetProperty") Property assetProperty, @JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.assetProperty = assetProperty;
+        this.name = name;
+        this.type = type;
+  }
 }

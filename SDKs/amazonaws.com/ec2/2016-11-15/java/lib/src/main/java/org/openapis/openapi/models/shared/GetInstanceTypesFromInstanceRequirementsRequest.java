@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetInstanceTypesFromInstanceRequirementsRequest {
     
     public GetInstanceTypesFromInstanceRequirementsRequestArchitectureTypesEnum[] architectureTypes;
+
     public GetInstanceTypesFromInstanceRequirementsRequest withArchitectureTypes(GetInstanceTypesFromInstanceRequirementsRequestArchitectureTypesEnum[] architectureTypes) {
         this.architectureTypes = architectureTypes;
         return this;
@@ -16,6 +17,7 @@ public class GetInstanceTypesFromInstanceRequirementsRequest {
     
     
     public Boolean dryRun;
+
     public GetInstanceTypesFromInstanceRequirementsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class GetInstanceTypesFromInstanceRequirementsRequest {
     
     
     public InstanceRequirementsRequest instanceRequirements;
+
     public GetInstanceTypesFromInstanceRequirementsRequest withInstanceRequirements(InstanceRequirementsRequest instanceRequirements) {
         this.instanceRequirements = instanceRequirements;
         return this;
@@ -30,6 +33,7 @@ public class GetInstanceTypesFromInstanceRequirementsRequest {
     
     
     public Long maxResults;
+
     public GetInstanceTypesFromInstanceRequirementsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +41,7 @@ public class GetInstanceTypesFromInstanceRequirementsRequest {
     
     
     public String nextToken;
+
     public GetInstanceTypesFromInstanceRequirementsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +49,15 @@ public class GetInstanceTypesFromInstanceRequirementsRequest {
     
     
     public GetInstanceTypesFromInstanceRequirementsRequestVirtualizationTypesEnum[] virtualizationTypes;
+
     public GetInstanceTypesFromInstanceRequirementsRequest withVirtualizationTypes(GetInstanceTypesFromInstanceRequirementsRequestVirtualizationTypesEnum[] virtualizationTypes) {
         this.virtualizationTypes = virtualizationTypes;
         return this;
     }
     
+    public GetInstanceTypesFromInstanceRequirementsRequest(@JsonProperty("ArchitectureTypes") GetInstanceTypesFromInstanceRequirementsRequestArchitectureTypesEnum[] architectureTypes, @JsonProperty("InstanceRequirements") InstanceRequirementsRequest instanceRequirements, @JsonProperty("VirtualizationTypes") GetInstanceTypesFromInstanceRequirementsRequestVirtualizationTypesEnum[] virtualizationTypes) {
+        this.architectureTypes = architectureTypes;
+        this.instanceRequirements = instanceRequirements;
+        this.virtualizationTypes = virtualizationTypes;
+  }
 }

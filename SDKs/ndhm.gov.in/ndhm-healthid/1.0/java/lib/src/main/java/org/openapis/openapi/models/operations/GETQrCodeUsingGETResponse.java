@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETQrCodeUsingGETResponse {
     
     public String contentType;
+
     public GETQrCodeUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GETQrCodeUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETQrCodeUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GETQrCodeUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETQrCodeUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GETQrCodeUsingGETResponse {
      */
     
     public String getQrCodeUsingGET200ImagePngByteString;
+
     public GETQrCodeUsingGETResponse withGETQrCodeUsingGET200ImagePngByteString(String getQrCodeUsingGET200ImagePngByteString) {
         this.getQrCodeUsingGET200ImagePngByteString = getQrCodeUsingGET200ImagePngByteString;
         return this;
@@ -43,9 +48,14 @@ public class GETQrCodeUsingGETResponse {
      */
     
     public String getQrCodeUsingGET200WildcardByteString;
+
     public GETQrCodeUsingGETResponse withGETQrCodeUsingGET200WildcardByteString(String getQrCodeUsingGET200WildcardByteString) {
         this.getQrCodeUsingGET200WildcardByteString = getQrCodeUsingGET200WildcardByteString;
         return this;
     }
     
+    public GETQrCodeUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

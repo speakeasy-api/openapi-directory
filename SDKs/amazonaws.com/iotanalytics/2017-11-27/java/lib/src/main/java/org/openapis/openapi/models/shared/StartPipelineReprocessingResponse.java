@@ -15,9 +15,11 @@ public class StartPipelineReprocessingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reprocessingId")
     public String reprocessingId;
+
     public StartPipelineReprocessingResponse withReprocessingId(String reprocessingId) {
         this.reprocessingId = reprocessingId;
         return this;
     }
     
+    public StartPipelineReprocessingResponse(){}
 }

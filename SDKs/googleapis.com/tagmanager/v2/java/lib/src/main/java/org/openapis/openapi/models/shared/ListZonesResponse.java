@@ -18,6 +18,7 @@ public class ListZonesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListZonesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListZonesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public Zone[] zone;
+
     public ListZonesResponse withZone(Zone[] zone) {
         this.zone = zone;
         return this;
     }
     
+    public ListZonesResponse(){}
 }

@@ -18,17 +18,19 @@ public class FeatureInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleetDefaultMemberConfig")
     public CommonFleetDefaultMemberConfigSpecInput fleetDefaultMemberConfig;
+
     public FeatureInput withFleetDefaultMemberConfig(CommonFleetDefaultMemberConfigSpecInput fleetDefaultMemberConfig) {
         this.fleetDefaultMemberConfig = fleetDefaultMemberConfig;
         return this;
     }
     
     /**
-     * GCP labels for this Feature.
+     * Labels for this Feature.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public FeatureInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class FeatureInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipSpecs")
     public java.util.Map<String, MembershipFeatureSpecInput> membershipSpecs;
+
     public FeatureInput withMembershipSpecs(java.util.Map<String, MembershipFeatureSpecInput> membershipSpecs) {
         this.membershipSpecs = membershipSpecs;
         return this;
@@ -51,6 +54,7 @@ public class FeatureInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceState")
     public FeatureResourceState resourceState;
+
     public FeatureInput withResourceState(FeatureResourceState resourceState) {
         this.resourceState = resourceState;
         return this;
@@ -62,6 +66,7 @@ public class FeatureInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopeSpecs")
     public java.util.Map<String, java.util.Map<String, Object>> scopeSpecs;
+
     public FeatureInput withScopeSpecs(java.util.Map<String, java.util.Map<String, Object>> scopeSpecs) {
         this.scopeSpecs = scopeSpecs;
         return this;
@@ -73,6 +78,7 @@ public class FeatureInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public CommonFeatureSpec spec;
+
     public FeatureInput withSpec(CommonFeatureSpec spec) {
         this.spec = spec;
         return this;
@@ -84,9 +90,11 @@ public class FeatureInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CommonFeatureState state;
+
     public FeatureInput withState(CommonFeatureState state) {
         this.state = state;
         return this;
     }
     
+    public FeatureInput(){}
 }

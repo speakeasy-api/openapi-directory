@@ -15,6 +15,7 @@ public class ProductsApproveRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalUrlInfo")
     public ApprovalUrlInfo approvalUrlInfo;
+
     public ProductsApproveRequest withApprovalUrlInfo(ApprovalUrlInfo approvalUrlInfo) {
         this.approvalUrlInfo = approvalUrlInfo;
         return this;
@@ -26,9 +27,11 @@ public class ProductsApproveRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvedPermissions")
     public ProductsApproveRequestApprovedPermissionsEnum approvedPermissions;
+
     public ProductsApproveRequest withApprovedPermissions(ProductsApproveRequestApprovedPermissionsEnum approvedPermissions) {
         this.approvedPermissions = approvedPermissions;
         return this;
     }
     
+    public ProductsApproveRequest(){}
 }

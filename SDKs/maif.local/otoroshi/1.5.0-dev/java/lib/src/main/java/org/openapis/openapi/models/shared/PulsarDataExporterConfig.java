@@ -15,6 +15,7 @@ public class PulsarDataExporterConfig {
      */
     @JsonProperty("namespace")
     public String namespace;
+
     public PulsarDataExporterConfig withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -25,6 +26,7 @@ public class PulsarDataExporterConfig {
      */
     @JsonProperty("tenant")
     public String tenant;
+
     public PulsarDataExporterConfig withTenant(String tenant) {
         this.tenant = tenant;
         return this;
@@ -35,6 +37,7 @@ public class PulsarDataExporterConfig {
      */
     @JsonProperty("topic")
     public String topic;
+
     public PulsarDataExporterConfig withTopic(String topic) {
         this.topic = topic;
         return this;
@@ -45,9 +48,16 @@ public class PulsarDataExporterConfig {
      */
     @JsonProperty("uri")
     public String[] uri;
+
     public PulsarDataExporterConfig withUri(String[] uri) {
         this.uri = uri;
         return this;
     }
     
+    public PulsarDataExporterConfig(@JsonProperty("namespace") String namespace, @JsonProperty("tenant") String tenant, @JsonProperty("topic") String topic, @JsonProperty("uri") String[] uri) {
+        this.namespace = namespace;
+        this.tenant = tenant;
+        this.topic = topic;
+        this.uri = uri;
+  }
 }

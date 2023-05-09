@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBSnapshotAttributesResult {
     
     public DBSnapshotAttributeList[] dbSnapshotAttributes;
+
     public DBSnapshotAttributesResult withDBSnapshotAttributes(DBSnapshotAttributeList[] dbSnapshotAttributes) {
         this.dbSnapshotAttributes = dbSnapshotAttributes;
         return this;
@@ -19,9 +20,11 @@ public class DBSnapshotAttributesResult {
     
     
     public String dbSnapshotIdentifier;
+
     public DBSnapshotAttributesResult withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
         return this;
     }
     
+    public DBSnapshotAttributesResult(){}
 }

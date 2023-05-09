@@ -59,11 +59,9 @@ public class PriceAssociation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVCustomPricesRulesPriceAssociationIdResponse res = new org.openapis.openapi.models.operations.DeleteVCustomPricesRulesPriceAssociationIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteVCustomPricesRulesPriceAssociationIdResponse res = new org.openapis.openapi.models.operations.DeleteVCustomPricesRulesPriceAssociationIdResponse(contentType, httpRes.statusCode()) {{
             deleteVCustomPricesRulesPriceAssociationId200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class PriceAssociation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVCustomPricesRulesPriceAssociationIdResponse res = new org.openapis.openapi.models.operations.GetVCustomPricesRulesPriceAssociationIdResponse() {{
+        org.openapis.openapi.models.operations.GetVCustomPricesRulesPriceAssociationIdResponse res = new org.openapis.openapi.models.operations.GetVCustomPricesRulesPriceAssociationIdResponse(contentType, httpRes.statusCode()) {{
             getVCustomPricesRulesPriceAssociationId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class PriceAssociation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostVCustomPricesRulesResponse res = new org.openapis.openapi.models.operations.PostVCustomPricesRulesResponse() {{
+        org.openapis.openapi.models.operations.PostVCustomPricesRulesResponse res = new org.openapis.openapi.models.operations.PostVCustomPricesRulesResponse(contentType, httpRes.statusCode()) {{
             postVCustomPricesRules200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,11 +197,9 @@ public class PriceAssociation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutVCustomPricesRulesPriceAssociationIdResponse res = new org.openapis.openapi.models.operations.PutVCustomPricesRulesPriceAssociationIdResponse() {{
+        org.openapis.openapi.models.operations.PutVCustomPricesRulesPriceAssociationIdResponse res = new org.openapis.openapi.models.operations.PutVCustomPricesRulesPriceAssociationIdResponse(contentType, httpRes.statusCode()) {{
             putVCustomPricesRulesPriceAssociationId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

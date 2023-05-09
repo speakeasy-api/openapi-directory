@@ -18,6 +18,7 @@ public class SQLIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public SQLIntegration withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class SQLIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SQLIntegration withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class SQLIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlInstance")
     public String sqlInstance;
+
     public SQLIntegration withSqlInstance(String sqlInstance) {
         this.sqlInstance = sqlInstance;
         return this;
@@ -51,6 +54,7 @@ public class SQLIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public SQLIntegrationStateEnum state;
+
     public SQLIntegration withState(SQLIntegrationStateEnum state) {
         this.state = state;
         return this;
@@ -62,9 +66,11 @@ public class SQLIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public SQLIntegration withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public SQLIntegration(){}
 }

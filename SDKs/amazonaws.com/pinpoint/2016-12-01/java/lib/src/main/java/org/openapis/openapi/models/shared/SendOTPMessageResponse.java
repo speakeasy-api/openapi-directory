@@ -15,9 +15,13 @@ public class SendOTPMessageResponse {
      */
     @JsonProperty("MessageResponse")
     public MessageResponse messageResponse;
+
     public SendOTPMessageResponse withMessageResponse(MessageResponse messageResponse) {
         this.messageResponse = messageResponse;
         return this;
     }
     
+    public SendOTPMessageResponse(@JsonProperty("MessageResponse") MessageResponse messageResponse) {
+        this.messageResponse = messageResponse;
+  }
 }

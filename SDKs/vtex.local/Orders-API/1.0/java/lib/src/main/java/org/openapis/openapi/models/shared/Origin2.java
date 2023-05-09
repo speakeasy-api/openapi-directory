@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Origin2 {
     @JsonProperty("Account")
     public String account;
+
     public Origin2 withAccount(String account) {
         this.account = account;
         return this;
@@ -16,9 +17,14 @@ public class Origin2 {
     
     @JsonProperty("Key")
     public String key;
+
     public Origin2 withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public Origin2(@JsonProperty("Account") String account, @JsonProperty("Key") String key) {
+        this.account = account;
+        this.key = key;
+  }
 }

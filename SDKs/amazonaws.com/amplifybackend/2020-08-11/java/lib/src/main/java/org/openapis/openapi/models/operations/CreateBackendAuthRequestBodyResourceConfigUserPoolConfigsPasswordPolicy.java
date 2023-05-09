@@ -15,6 +15,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsPasswordPo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalConstraints")
     public org.openapis.openapi.models.shared.AdditionalConstraintsElementEnum[] additionalConstraints;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsPasswordPolicy withAdditionalConstraints(org.openapis.openapi.models.shared.AdditionalConstraintsElementEnum[] additionalConstraints) {
         this.additionalConstraints = additionalConstraints;
         return this;
@@ -22,9 +23,13 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsPasswordPo
     
     @JsonProperty("MinimumLength")
     public Double minimumLength;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsPasswordPolicy withMinimumLength(Double minimumLength) {
         this.minimumLength = minimumLength;
         return this;
     }
     
+    public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsPasswordPolicy(@JsonProperty("MinimumLength") Double minimumLength) {
+        this.minimumLength = minimumLength;
+  }
 }

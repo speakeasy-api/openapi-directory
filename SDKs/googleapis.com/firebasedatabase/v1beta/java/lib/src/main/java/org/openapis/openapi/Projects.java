@@ -61,11 +61,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateResponse res = new org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateResponse() {{
+        org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateResponse res = new org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateResponse(contentType, httpRes.statusCode()) {{
             databaseInstance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDeleteResponse res = new org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDeleteResponse() {{
+        org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDeleteResponse res = new org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDeleteResponse(contentType, httpRes.statusCode()) {{
             databaseInstance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDisableResponse res = new org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDisableResponse() {{
+        org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDisableResponse res = new org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDisableResponse(contentType, httpRes.statusCode()) {{
             databaseInstance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesGetResponse res = new org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesGetResponse() {{
+        org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesGetResponse res = new org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesGetResponse(contentType, httpRes.statusCode()) {{
             databaseInstance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesListResponse res = new org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesListResponse() {{
+        org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesListResponse res = new org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesListResponse(contentType, httpRes.statusCode()) {{
             listDatabaseInstancesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesReenableResponse res = new org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesReenableResponse() {{
+        org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesReenableResponse res = new org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesReenableResponse(contentType, httpRes.statusCode()) {{
             databaseInstance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +331,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesUndeleteResponse res = new org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesUndeleteResponse() {{
+        org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesUndeleteResponse res = new org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesUndeleteResponse(contentType, httpRes.statusCode()) {{
             databaseInstance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

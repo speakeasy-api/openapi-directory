@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05LinksLinkOnAddContextsJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05LinksLinkOnAddContextsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05LinksLinkOnAddContextsJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05LinksLinkOnAddContextsJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatientCareContextLinkResponse patientCareContextLinkResponse;
+
     public PostV05LinksLinkOnAddContextsJsonRequest withPatientCareContextLinkResponse(org.openapis.openapi.models.shared.PatientCareContextLinkResponse patientCareContextLinkResponse) {
         this.patientCareContextLinkResponse = patientCareContextLinkResponse;
         return this;
@@ -29,9 +32,15 @@ public class PostV05LinksLinkOnAddContextsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
     public String xHipId;
+
     public PostV05LinksLinkOnAddContextsJsonRequest withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
     }
     
+    public PostV05LinksLinkOnAddContextsJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("PatientCareContextLinkResponse") org.openapis.openapi.models.shared.PatientCareContextLinkResponse patientCareContextLinkResponse, @JsonProperty("X-HIP-ID") String xHipId) {
+        this.authorization = authorization;
+        this.patientCareContextLinkResponse = patientCareContextLinkResponse;
+        this.xHipId = xHipId;
+  }
 }

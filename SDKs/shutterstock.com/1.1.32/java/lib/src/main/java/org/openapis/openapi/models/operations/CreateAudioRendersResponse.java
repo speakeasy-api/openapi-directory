@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAudioRendersResponse {
@@ -12,6 +13,7 @@ public class CreateAudioRendersResponse {
      */
     
     public org.openapis.openapi.models.shared.AudioRendersListResults audioRendersListResults;
+
     public CreateAudioRendersResponse withAudioRendersListResults(org.openapis.openapi.models.shared.AudioRendersListResults audioRendersListResults) {
         this.audioRendersListResults = audioRendersListResults;
         return this;
@@ -19,6 +21,7 @@ public class CreateAudioRendersResponse {
     
     
     public String contentType;
+
     public CreateAudioRendersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CreateAudioRendersResponse {
     
     
     public Integer statusCode;
+
     public CreateAudioRendersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CreateAudioRendersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAudioRendersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateAudioRendersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

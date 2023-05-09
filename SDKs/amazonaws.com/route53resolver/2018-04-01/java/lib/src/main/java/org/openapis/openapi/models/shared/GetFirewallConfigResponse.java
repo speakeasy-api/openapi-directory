@@ -15,9 +15,11 @@ public class GetFirewallConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallConfig")
     public FirewallConfig firewallConfig;
+
     public GetFirewallConfigResponse withFirewallConfig(FirewallConfig firewallConfig) {
         this.firewallConfig = firewallConfig;
         return this;
     }
     
+    public GetFirewallConfigResponse(){}
 }

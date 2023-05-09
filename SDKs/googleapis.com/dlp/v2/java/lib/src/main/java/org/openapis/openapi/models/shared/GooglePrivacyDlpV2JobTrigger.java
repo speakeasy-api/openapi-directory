@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2JobTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GooglePrivacyDlpV2JobTrigger withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2JobTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GooglePrivacyDlpV2JobTrigger withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2JobTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GooglePrivacyDlpV2JobTrigger withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GooglePrivacyDlpV2JobTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public GooglePrivacyDlpV2Error[] errors;
+
     public GooglePrivacyDlpV2JobTrigger withErrors(GooglePrivacyDlpV2Error[] errors) {
         this.errors = errors;
         return this;
@@ -62,6 +66,7 @@ public class GooglePrivacyDlpV2JobTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inspectJob")
     public GooglePrivacyDlpV2InspectJobConfig inspectJob;
+
     public GooglePrivacyDlpV2JobTrigger withInspectJob(GooglePrivacyDlpV2InspectJobConfig inspectJob) {
         this.inspectJob = inspectJob;
         return this;
@@ -73,6 +78,7 @@ public class GooglePrivacyDlpV2JobTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastRunTime")
     public String lastRunTime;
+
     public GooglePrivacyDlpV2JobTrigger withLastRunTime(String lastRunTime) {
         this.lastRunTime = lastRunTime;
         return this;
@@ -84,6 +90,7 @@ public class GooglePrivacyDlpV2JobTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GooglePrivacyDlpV2JobTrigger withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class GooglePrivacyDlpV2JobTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GooglePrivacyDlpV2JobTriggerStatusEnum status;
+
     public GooglePrivacyDlpV2JobTrigger withStatus(GooglePrivacyDlpV2JobTriggerStatusEnum status) {
         this.status = status;
         return this;
@@ -106,6 +114,7 @@ public class GooglePrivacyDlpV2JobTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggers")
     public GooglePrivacyDlpV2Trigger[] triggers;
+
     public GooglePrivacyDlpV2JobTrigger withTriggers(GooglePrivacyDlpV2Trigger[] triggers) {
         this.triggers = triggers;
         return this;
@@ -117,9 +126,11 @@ public class GooglePrivacyDlpV2JobTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GooglePrivacyDlpV2JobTrigger withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GooglePrivacyDlpV2JobTrigger(){}
 }

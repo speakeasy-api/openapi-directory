@@ -14,6 +14,7 @@ public class PutRecordRequestBody {
      */
     @JsonProperty("Record")
     public org.openapis.openapi.models.shared.FeatureValue[] record;
+
     public PutRecordRequestBody withRecord(org.openapis.openapi.models.shared.FeatureValue[] record) {
         this.record = record;
         return this;
@@ -25,9 +26,13 @@ public class PutRecordRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetStores")
     public org.openapis.openapi.models.shared.TargetStoreEnum[] targetStores;
+
     public PutRecordRequestBody withTargetStores(org.openapis.openapi.models.shared.TargetStoreEnum[] targetStores) {
         this.targetStores = targetStores;
         return this;
     }
     
+    public PutRecordRequestBody(@JsonProperty("Record") org.openapis.openapi.models.shared.FeatureValue[] record) {
+        this.record = record;
+  }
 }

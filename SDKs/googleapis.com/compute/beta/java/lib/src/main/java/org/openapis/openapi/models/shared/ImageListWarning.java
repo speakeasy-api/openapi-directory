@@ -18,6 +18,7 @@ public class ImageListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ImageListWarningCodeEnum code;
+
     public ImageListWarning withCode(ImageListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ImageListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ImageListWarningData[] data;
+
     public ImageListWarning withData(ImageListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class ImageListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ImageListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ImageListWarning(){}
 }

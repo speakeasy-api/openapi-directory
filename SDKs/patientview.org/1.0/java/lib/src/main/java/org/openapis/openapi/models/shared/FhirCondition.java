@@ -17,6 +17,7 @@ public class FhirCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asserter")
     public String asserter;
+
     public FhirCondition withAsserter(String asserter) {
         this.asserter = asserter;
         return this;
@@ -25,6 +26,7 @@ public class FhirCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public FhirCondition withCategory(String category) {
         this.category = category;
         return this;
@@ -33,6 +35,7 @@ public class FhirCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public FhirCondition withCode(String code) {
         this.code = code;
         return this;
@@ -43,6 +46,7 @@ public class FhirCondition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public FhirCondition withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -51,6 +55,7 @@ public class FhirCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FhirCondition withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +64,7 @@ public class FhirCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullDescription")
     public String fullDescription;
+
     public FhirCondition withFullDescription(String fullDescription) {
         this.fullDescription = fullDescription;
         return this;
@@ -67,6 +73,7 @@ public class FhirCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public Group group;
+
     public FhirCondition withGroup(Group group) {
         this.group = group;
         return this;
@@ -75,6 +82,7 @@ public class FhirCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public FhirCondition withId(Long id) {
         this.id = id;
         return this;
@@ -83,6 +91,7 @@ public class FhirCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public FhirCondition withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -91,6 +100,7 @@ public class FhirCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public Link[] links;
+
     public FhirCondition withLinks(Link[] links) {
         this.links = links;
         return this;
@@ -99,6 +109,7 @@ public class FhirCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public FhirCondition withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -107,6 +118,7 @@ public class FhirCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public String severity;
+
     public FhirCondition withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -115,9 +127,11 @@ public class FhirCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public FhirCondition withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public FhirCondition(){}
 }

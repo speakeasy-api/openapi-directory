@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ImplantableDevicesListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ImplantableDevicesListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -16,6 +17,7 @@ public class ImplantableDevicesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public ImplantableDevicesListRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -23,6 +25,7 @@ public class ImplantableDevicesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mu_date")
     public String muDate;
+
     public ImplantableDevicesListRequest withMuDate(String muDate) {
         this.muDate = muDate;
         return this;
@@ -30,6 +33,7 @@ public class ImplantableDevicesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mu_date_range")
     public String muDateRange;
+
     public ImplantableDevicesListRequest withMuDateRange(String muDateRange) {
         this.muDateRange = muDateRange;
         return this;
@@ -37,6 +41,7 @@ public class ImplantableDevicesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public ImplantableDevicesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -44,9 +49,11 @@ public class ImplantableDevicesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public ImplantableDevicesListRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
     }
     
+    public ImplantableDevicesListRequest(){}
 }

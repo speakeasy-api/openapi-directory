@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectMembershipsForProjectRequest {
@@ -13,6 +14,7 @@ public class GetProjectMembershipsForProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetProjectMembershipsForProjectRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -25,6 +27,7 @@ public class GetProjectMembershipsForProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetProjectMembershipsForProjectRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -37,6 +40,7 @@ public class GetProjectMembershipsForProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetProjectMembershipsForProjectRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -48,6 +52,7 @@ public class GetProjectMembershipsForProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetProjectMembershipsForProjectRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -58,6 +63,7 @@ public class GetProjectMembershipsForProjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_gid")
     public String projectGid;
+
     public GetProjectMembershipsForProjectRequest withProjectGid(String projectGid) {
         this.projectGid = projectGid;
         return this;
@@ -68,9 +74,13 @@ public class GetProjectMembershipsForProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
     public String user;
+
     public GetProjectMembershipsForProjectRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public GetProjectMembershipsForProjectRequest(@JsonProperty("project_gid") String projectGid) {
+        this.projectGid = projectGid;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VirtualGatewayTlsValidationContextFileTrust {
     @JsonProperty("certificateChain")
     public String certificateChain;
+
     public VirtualGatewayTlsValidationContextFileTrust withCertificateChain(String certificateChain) {
         this.certificateChain = certificateChain;
         return this;
     }
     
+    public VirtualGatewayTlsValidationContextFileTrust(@JsonProperty("certificateChain") String certificateChain) {
+        this.certificateChain = certificateChain;
+  }
 }

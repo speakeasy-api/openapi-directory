@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StateExitedEventDetails {
     @JsonProperty("name")
     public String name;
+
     public StateExitedEventDetails withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class StateExitedEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("output")
     public String output;
+
     public StateExitedEventDetails withOutput(String output) {
         this.output = output;
         return this;
@@ -30,9 +32,13 @@ public class StateExitedEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputDetails")
     public HistoryEventExecutionDataDetails outputDetails;
+
     public StateExitedEventDetails withOutputDetails(HistoryEventExecutionDataDetails outputDetails) {
         this.outputDetails = outputDetails;
         return this;
     }
     
+    public StateExitedEventDetails(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

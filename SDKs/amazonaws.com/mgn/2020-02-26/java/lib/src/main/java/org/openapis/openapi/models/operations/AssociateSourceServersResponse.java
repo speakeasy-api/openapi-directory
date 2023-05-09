@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateSourceServersResponse {
@@ -12,6 +13,7 @@ public class AssociateSourceServersResponse {
      */
     
     public java.util.Map<String, Object> associateSourceServersResponse;
+
     public AssociateSourceServersResponse withAssociateSourceServersResponse(java.util.Map<String, Object> associateSourceServersResponse) {
         this.associateSourceServersResponse = associateSourceServersResponse;
         return this;
@@ -22,6 +24,7 @@ public class AssociateSourceServersResponse {
      */
     
     public Object conflictException;
+
     public AssociateSourceServersResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateSourceServersResponse {
     
     
     public String contentType;
+
     public AssociateSourceServersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateSourceServersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateSourceServersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateSourceServersResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public AssociateSourceServersResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateSourceServersResponse {
     
     
     public Integer statusCode;
+
     public AssociateSourceServersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateSourceServersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateSourceServersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class AssociateSourceServersResponse {
      */
     
     public Object uninitializedAccountException;
+
     public AssociateSourceServersResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public AssociateSourceServersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

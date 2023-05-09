@@ -12,6 +12,7 @@ public class ListConversations200ApplicationJSONEmbeddedConversations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public ListConversations200ApplicationJSONEmbeddedConversationsLinks links;
+
     public ListConversations200ApplicationJSONEmbeddedConversations withLinks(ListConversations200ApplicationJSONEmbeddedConversationsLinks links) {
         this.links = links;
         return this;
@@ -22,6 +23,7 @@ public class ListConversations200ApplicationJSONEmbeddedConversations {
      */
     @JsonProperty("name")
     public String name;
+
     public ListConversations200ApplicationJSONEmbeddedConversations withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,14 @@ public class ListConversations200ApplicationJSONEmbeddedConversations {
      */
     @JsonProperty("uuid")
     public String uuid;
+
     public ListConversations200ApplicationJSONEmbeddedConversations withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public ListConversations200ApplicationJSONEmbeddedConversations(@JsonProperty("name") String name, @JsonProperty("uuid") String uuid) {
+        this.name = name;
+        this.uuid = uuid;
+  }
 }

@@ -18,6 +18,7 @@ public class Watch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Watch withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Watch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorType")
     public WatchErrorTypeEnum errorType;
+
     public Watch withErrorType(WatchErrorTypeEnum errorType) {
         this.errorType = errorType;
         return this;
@@ -40,6 +42,7 @@ public class Watch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public WatchEventTypeEnum eventType;
+
     public Watch withEventType(WatchEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -51,6 +54,7 @@ public class Watch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public Watch withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -62,6 +66,7 @@ public class Watch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Watch withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class Watch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public WatchStateEnum state;
+
     public Watch withState(WatchStateEnum state) {
         this.state = state;
         return this;
@@ -84,9 +90,11 @@ public class Watch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public WatchTarget target;
+
     public Watch withTarget(WatchTarget target) {
         this.target = target;
         return this;
     }
     
+    public Watch(){}
 }

@@ -15,6 +15,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsApiGatewayRestApi")
     public AwsApiGatewayRestApiDetails awsApiGatewayRestApi;
+
     public ResourceDetails withAwsApiGatewayRestApi(AwsApiGatewayRestApiDetails awsApiGatewayRestApi) {
         this.awsApiGatewayRestApi = awsApiGatewayRestApi;
         return this;
@@ -23,6 +24,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsApiGatewayStage")
     public AwsApiGatewayStageDetails awsApiGatewayStage;
+
     public ResourceDetails withAwsApiGatewayStage(AwsApiGatewayStageDetails awsApiGatewayStage) {
         this.awsApiGatewayStage = awsApiGatewayStage;
         return this;
@@ -31,6 +33,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsApiGatewayV2Api")
     public AwsApiGatewayV2ApiDetails awsApiGatewayV2Api;
+
     public ResourceDetails withAwsApiGatewayV2Api(AwsApiGatewayV2ApiDetails awsApiGatewayV2Api) {
         this.awsApiGatewayV2Api = awsApiGatewayV2Api;
         return this;
@@ -39,6 +42,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsApiGatewayV2Stage")
     public AwsApiGatewayV2StageDetails awsApiGatewayV2Stage;
+
     public ResourceDetails withAwsApiGatewayV2Stage(AwsApiGatewayV2StageDetails awsApiGatewayV2Stage) {
         this.awsApiGatewayV2Stage = awsApiGatewayV2Stage;
         return this;
@@ -47,6 +51,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsAutoScalingAutoScalingGroup")
     public AwsAutoScalingAutoScalingGroupDetails awsAutoScalingAutoScalingGroup;
+
     public ResourceDetails withAwsAutoScalingAutoScalingGroup(AwsAutoScalingAutoScalingGroupDetails awsAutoScalingAutoScalingGroup) {
         this.awsAutoScalingAutoScalingGroup = awsAutoScalingAutoScalingGroup;
         return this;
@@ -55,6 +60,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsAutoScalingLaunchConfiguration")
     public AwsAutoScalingLaunchConfigurationDetails awsAutoScalingLaunchConfiguration;
+
     public ResourceDetails withAwsAutoScalingLaunchConfiguration(AwsAutoScalingLaunchConfigurationDetails awsAutoScalingLaunchConfiguration) {
         this.awsAutoScalingLaunchConfiguration = awsAutoScalingLaunchConfiguration;
         return this;
@@ -63,6 +69,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsBackupBackupPlan")
     public AwsBackupBackupPlanDetails awsBackupBackupPlan;
+
     public ResourceDetails withAwsBackupBackupPlan(AwsBackupBackupPlanDetails awsBackupBackupPlan) {
         this.awsBackupBackupPlan = awsBackupBackupPlan;
         return this;
@@ -71,6 +78,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsBackupBackupVault")
     public AwsBackupBackupVaultDetails awsBackupBackupVault;
+
     public ResourceDetails withAwsBackupBackupVault(AwsBackupBackupVaultDetails awsBackupBackupVault) {
         this.awsBackupBackupVault = awsBackupBackupVault;
         return this;
@@ -79,6 +87,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsBackupRecoveryPoint")
     public AwsBackupRecoveryPointDetails awsBackupRecoveryPoint;
+
     public ResourceDetails withAwsBackupRecoveryPoint(AwsBackupRecoveryPointDetails awsBackupRecoveryPoint) {
         this.awsBackupRecoveryPoint = awsBackupRecoveryPoint;
         return this;
@@ -87,6 +96,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsCertificateManagerCertificate")
     public AwsCertificateManagerCertificateDetails awsCertificateManagerCertificate;
+
     public ResourceDetails withAwsCertificateManagerCertificate(AwsCertificateManagerCertificateDetails awsCertificateManagerCertificate) {
         this.awsCertificateManagerCertificate = awsCertificateManagerCertificate;
         return this;
@@ -95,6 +105,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsCloudFormationStack")
     public AwsCloudFormationStackDetails awsCloudFormationStack;
+
     public ResourceDetails withAwsCloudFormationStack(AwsCloudFormationStackDetails awsCloudFormationStack) {
         this.awsCloudFormationStack = awsCloudFormationStack;
         return this;
@@ -103,6 +114,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsCloudFrontDistribution")
     public AwsCloudFrontDistributionDetails awsCloudFrontDistribution;
+
     public ResourceDetails withAwsCloudFrontDistribution(AwsCloudFrontDistributionDetails awsCloudFrontDistribution) {
         this.awsCloudFrontDistribution = awsCloudFrontDistribution;
         return this;
@@ -111,6 +123,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsCloudTrailTrail")
     public AwsCloudTrailTrailDetails awsCloudTrailTrail;
+
     public ResourceDetails withAwsCloudTrailTrail(AwsCloudTrailTrailDetails awsCloudTrailTrail) {
         this.awsCloudTrailTrail = awsCloudTrailTrail;
         return this;
@@ -119,6 +132,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsCloudWatchAlarm")
     public AwsCloudWatchAlarmDetails awsCloudWatchAlarm;
+
     public ResourceDetails withAwsCloudWatchAlarm(AwsCloudWatchAlarmDetails awsCloudWatchAlarm) {
         this.awsCloudWatchAlarm = awsCloudWatchAlarm;
         return this;
@@ -127,6 +141,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsCodeBuildProject")
     public AwsCodeBuildProjectDetails awsCodeBuildProject;
+
     public ResourceDetails withAwsCodeBuildProject(AwsCodeBuildProjectDetails awsCodeBuildProject) {
         this.awsCodeBuildProject = awsCodeBuildProject;
         return this;
@@ -135,6 +150,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsDynamoDbTable")
     public AwsDynamoDbTableDetails awsDynamoDbTable;
+
     public ResourceDetails withAwsDynamoDbTable(AwsDynamoDbTableDetails awsDynamoDbTable) {
         this.awsDynamoDbTable = awsDynamoDbTable;
         return this;
@@ -143,6 +159,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2Eip")
     public AwsEc2EipDetails awsEc2Eip;
+
     public ResourceDetails withAwsEc2Eip(AwsEc2EipDetails awsEc2Eip) {
         this.awsEc2Eip = awsEc2Eip;
         return this;
@@ -151,6 +168,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2Instance")
     public AwsEc2InstanceDetails awsEc2Instance;
+
     public ResourceDetails withAwsEc2Instance(AwsEc2InstanceDetails awsEc2Instance) {
         this.awsEc2Instance = awsEc2Instance;
         return this;
@@ -162,6 +180,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2LaunchTemplate")
     public AwsEc2LaunchTemplateDetails awsEc2LaunchTemplate;
+
     public ResourceDetails withAwsEc2LaunchTemplate(AwsEc2LaunchTemplateDetails awsEc2LaunchTemplate) {
         this.awsEc2LaunchTemplate = awsEc2LaunchTemplate;
         return this;
@@ -170,6 +189,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2NetworkAcl")
     public AwsEc2NetworkAclDetails awsEc2NetworkAcl;
+
     public ResourceDetails withAwsEc2NetworkAcl(AwsEc2NetworkAclDetails awsEc2NetworkAcl) {
         this.awsEc2NetworkAcl = awsEc2NetworkAcl;
         return this;
@@ -178,6 +198,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2NetworkInterface")
     public AwsEc2NetworkInterfaceDetails awsEc2NetworkInterface;
+
     public ResourceDetails withAwsEc2NetworkInterface(AwsEc2NetworkInterfaceDetails awsEc2NetworkInterface) {
         this.awsEc2NetworkInterface = awsEc2NetworkInterface;
         return this;
@@ -186,6 +207,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2RouteTable")
     public AwsEc2RouteTableDetails awsEc2RouteTable;
+
     public ResourceDetails withAwsEc2RouteTable(AwsEc2RouteTableDetails awsEc2RouteTable) {
         this.awsEc2RouteTable = awsEc2RouteTable;
         return this;
@@ -194,6 +216,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2SecurityGroup")
     public AwsEc2SecurityGroupDetails awsEc2SecurityGroup;
+
     public ResourceDetails withAwsEc2SecurityGroup(AwsEc2SecurityGroupDetails awsEc2SecurityGroup) {
         this.awsEc2SecurityGroup = awsEc2SecurityGroup;
         return this;
@@ -202,6 +225,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2Subnet")
     public AwsEc2SubnetDetails awsEc2Subnet;
+
     public ResourceDetails withAwsEc2Subnet(AwsEc2SubnetDetails awsEc2Subnet) {
         this.awsEc2Subnet = awsEc2Subnet;
         return this;
@@ -210,6 +234,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2TransitGateway")
     public AwsEc2TransitGatewayDetails awsEc2TransitGateway;
+
     public ResourceDetails withAwsEc2TransitGateway(AwsEc2TransitGatewayDetails awsEc2TransitGateway) {
         this.awsEc2TransitGateway = awsEc2TransitGateway;
         return this;
@@ -218,6 +243,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2Volume")
     public AwsEc2VolumeDetails awsEc2Volume;
+
     public ResourceDetails withAwsEc2Volume(AwsEc2VolumeDetails awsEc2Volume) {
         this.awsEc2Volume = awsEc2Volume;
         return this;
@@ -226,6 +252,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2Vpc")
     public AwsEc2VpcDetails awsEc2Vpc;
+
     public ResourceDetails withAwsEc2Vpc(AwsEc2VpcDetails awsEc2Vpc) {
         this.awsEc2Vpc = awsEc2Vpc;
         return this;
@@ -234,6 +261,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2VpcEndpointService")
     public AwsEc2VpcEndpointServiceDetails awsEc2VpcEndpointService;
+
     public ResourceDetails withAwsEc2VpcEndpointService(AwsEc2VpcEndpointServiceDetails awsEc2VpcEndpointService) {
         this.awsEc2VpcEndpointService = awsEc2VpcEndpointService;
         return this;
@@ -242,6 +270,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2VpcPeeringConnection")
     public AwsEc2VpcPeeringConnectionDetails awsEc2VpcPeeringConnection;
+
     public ResourceDetails withAwsEc2VpcPeeringConnection(AwsEc2VpcPeeringConnectionDetails awsEc2VpcPeeringConnection) {
         this.awsEc2VpcPeeringConnection = awsEc2VpcPeeringConnection;
         return this;
@@ -250,6 +279,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2VpnConnection")
     public AwsEc2VpnConnectionDetails awsEc2VpnConnection;
+
     public ResourceDetails withAwsEc2VpnConnection(AwsEc2VpnConnectionDetails awsEc2VpnConnection) {
         this.awsEc2VpnConnection = awsEc2VpnConnection;
         return this;
@@ -258,6 +288,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEcrContainerImage")
     public AwsEcrContainerImageDetails awsEcrContainerImage;
+
     public ResourceDetails withAwsEcrContainerImage(AwsEcrContainerImageDetails awsEcrContainerImage) {
         this.awsEcrContainerImage = awsEcrContainerImage;
         return this;
@@ -266,6 +297,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEcrRepository")
     public AwsEcrRepositoryDetails awsEcrRepository;
+
     public ResourceDetails withAwsEcrRepository(AwsEcrRepositoryDetails awsEcrRepository) {
         this.awsEcrRepository = awsEcrRepository;
         return this;
@@ -274,6 +306,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEcsCluster")
     public AwsEcsClusterDetails awsEcsCluster;
+
     public ResourceDetails withAwsEcsCluster(AwsEcsClusterDetails awsEcsCluster) {
         this.awsEcsCluster = awsEcsCluster;
         return this;
@@ -282,6 +315,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEcsContainer")
     public AwsEcsContainerDetails awsEcsContainer;
+
     public ResourceDetails withAwsEcsContainer(AwsEcsContainerDetails awsEcsContainer) {
         this.awsEcsContainer = awsEcsContainer;
         return this;
@@ -290,6 +324,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEcsService")
     public AwsEcsServiceDetails awsEcsService;
+
     public ResourceDetails withAwsEcsService(AwsEcsServiceDetails awsEcsService) {
         this.awsEcsService = awsEcsService;
         return this;
@@ -298,6 +333,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEcsTask")
     public AwsEcsTaskDetails awsEcsTask;
+
     public ResourceDetails withAwsEcsTask(AwsEcsTaskDetails awsEcsTask) {
         this.awsEcsTask = awsEcsTask;
         return this;
@@ -306,6 +342,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEcsTaskDefinition")
     public AwsEcsTaskDefinitionDetails awsEcsTaskDefinition;
+
     public ResourceDetails withAwsEcsTaskDefinition(AwsEcsTaskDefinitionDetails awsEcsTaskDefinition) {
         this.awsEcsTaskDefinition = awsEcsTaskDefinition;
         return this;
@@ -314,6 +351,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEfsAccessPoint")
     public AwsEfsAccessPointDetails awsEfsAccessPoint;
+
     public ResourceDetails withAwsEfsAccessPoint(AwsEfsAccessPointDetails awsEfsAccessPoint) {
         this.awsEfsAccessPoint = awsEfsAccessPoint;
         return this;
@@ -322,6 +360,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEksCluster")
     public AwsEksClusterDetails awsEksCluster;
+
     public ResourceDetails withAwsEksCluster(AwsEksClusterDetails awsEksCluster) {
         this.awsEksCluster = awsEksCluster;
         return this;
@@ -330,6 +369,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsElasticBeanstalkEnvironment")
     public AwsElasticBeanstalkEnvironmentDetails awsElasticBeanstalkEnvironment;
+
     public ResourceDetails withAwsElasticBeanstalkEnvironment(AwsElasticBeanstalkEnvironmentDetails awsElasticBeanstalkEnvironment) {
         this.awsElasticBeanstalkEnvironment = awsElasticBeanstalkEnvironment;
         return this;
@@ -338,6 +378,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsElasticsearchDomain")
     public AwsElasticsearchDomainDetails awsElasticsearchDomain;
+
     public ResourceDetails withAwsElasticsearchDomain(AwsElasticsearchDomainDetails awsElasticsearchDomain) {
         this.awsElasticsearchDomain = awsElasticsearchDomain;
         return this;
@@ -346,6 +387,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsElbLoadBalancer")
     public AwsElbLoadBalancerDetails awsElbLoadBalancer;
+
     public ResourceDetails withAwsElbLoadBalancer(AwsElbLoadBalancerDetails awsElbLoadBalancer) {
         this.awsElbLoadBalancer = awsElbLoadBalancer;
         return this;
@@ -354,6 +396,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsElbv2LoadBalancer")
     public AwsElbv2LoadBalancerDetails awsElbv2LoadBalancer;
+
     public ResourceDetails withAwsElbv2LoadBalancer(AwsElbv2LoadBalancerDetails awsElbv2LoadBalancer) {
         this.awsElbv2LoadBalancer = awsElbv2LoadBalancer;
         return this;
@@ -362,6 +405,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsIamAccessKey")
     public AwsIamAccessKeyDetails awsIamAccessKey;
+
     public ResourceDetails withAwsIamAccessKey(AwsIamAccessKeyDetails awsIamAccessKey) {
         this.awsIamAccessKey = awsIamAccessKey;
         return this;
@@ -370,6 +414,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsIamGroup")
     public AwsIamGroupDetails awsIamGroup;
+
     public ResourceDetails withAwsIamGroup(AwsIamGroupDetails awsIamGroup) {
         this.awsIamGroup = awsIamGroup;
         return this;
@@ -378,6 +423,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsIamPolicy")
     public AwsIamPolicyDetails awsIamPolicy;
+
     public ResourceDetails withAwsIamPolicy(AwsIamPolicyDetails awsIamPolicy) {
         this.awsIamPolicy = awsIamPolicy;
         return this;
@@ -386,6 +432,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsIamRole")
     public AwsIamRoleDetails awsIamRole;
+
     public ResourceDetails withAwsIamRole(AwsIamRoleDetails awsIamRole) {
         this.awsIamRole = awsIamRole;
         return this;
@@ -394,6 +441,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsIamUser")
     public AwsIamUserDetails awsIamUser;
+
     public ResourceDetails withAwsIamUser(AwsIamUserDetails awsIamUser) {
         this.awsIamUser = awsIamUser;
         return this;
@@ -402,6 +450,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsKinesisStream")
     public AwsKinesisStreamDetails awsKinesisStream;
+
     public ResourceDetails withAwsKinesisStream(AwsKinesisStreamDetails awsKinesisStream) {
         this.awsKinesisStream = awsKinesisStream;
         return this;
@@ -410,6 +459,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsKmsKey")
     public AwsKmsKeyDetails awsKmsKey;
+
     public ResourceDetails withAwsKmsKey(AwsKmsKeyDetails awsKmsKey) {
         this.awsKmsKey = awsKmsKey;
         return this;
@@ -418,6 +468,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsLambdaFunction")
     public AwsLambdaFunctionDetails awsLambdaFunction;
+
     public ResourceDetails withAwsLambdaFunction(AwsLambdaFunctionDetails awsLambdaFunction) {
         this.awsLambdaFunction = awsLambdaFunction;
         return this;
@@ -426,6 +477,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsLambdaLayerVersion")
     public AwsLambdaLayerVersionDetails awsLambdaLayerVersion;
+
     public ResourceDetails withAwsLambdaLayerVersion(AwsLambdaLayerVersionDetails awsLambdaLayerVersion) {
         this.awsLambdaLayerVersion = awsLambdaLayerVersion;
         return this;
@@ -434,6 +486,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsNetworkFirewallFirewall")
     public AwsNetworkFirewallFirewallDetails awsNetworkFirewallFirewall;
+
     public ResourceDetails withAwsNetworkFirewallFirewall(AwsNetworkFirewallFirewallDetails awsNetworkFirewallFirewall) {
         this.awsNetworkFirewallFirewall = awsNetworkFirewallFirewall;
         return this;
@@ -442,6 +495,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsNetworkFirewallFirewallPolicy")
     public AwsNetworkFirewallFirewallPolicyDetails awsNetworkFirewallFirewallPolicy;
+
     public ResourceDetails withAwsNetworkFirewallFirewallPolicy(AwsNetworkFirewallFirewallPolicyDetails awsNetworkFirewallFirewallPolicy) {
         this.awsNetworkFirewallFirewallPolicy = awsNetworkFirewallFirewallPolicy;
         return this;
@@ -450,6 +504,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsNetworkFirewallRuleGroup")
     public AwsNetworkFirewallRuleGroupDetails awsNetworkFirewallRuleGroup;
+
     public ResourceDetails withAwsNetworkFirewallRuleGroup(AwsNetworkFirewallRuleGroupDetails awsNetworkFirewallRuleGroup) {
         this.awsNetworkFirewallRuleGroup = awsNetworkFirewallRuleGroup;
         return this;
@@ -458,6 +513,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsOpenSearchServiceDomain")
     public AwsOpenSearchServiceDomainDetails awsOpenSearchServiceDomain;
+
     public ResourceDetails withAwsOpenSearchServiceDomain(AwsOpenSearchServiceDomainDetails awsOpenSearchServiceDomain) {
         this.awsOpenSearchServiceDomain = awsOpenSearchServiceDomain;
         return this;
@@ -466,6 +522,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRdsDbCluster")
     public AwsRdsDbClusterDetails awsRdsDbCluster;
+
     public ResourceDetails withAwsRdsDbCluster(AwsRdsDbClusterDetails awsRdsDbCluster) {
         this.awsRdsDbCluster = awsRdsDbCluster;
         return this;
@@ -474,6 +531,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRdsDbClusterSnapshot")
     public AwsRdsDbClusterSnapshotDetails awsRdsDbClusterSnapshot;
+
     public ResourceDetails withAwsRdsDbClusterSnapshot(AwsRdsDbClusterSnapshotDetails awsRdsDbClusterSnapshot) {
         this.awsRdsDbClusterSnapshot = awsRdsDbClusterSnapshot;
         return this;
@@ -482,6 +540,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRdsDbInstance")
     public AwsRdsDbInstanceDetails awsRdsDbInstance;
+
     public ResourceDetails withAwsRdsDbInstance(AwsRdsDbInstanceDetails awsRdsDbInstance) {
         this.awsRdsDbInstance = awsRdsDbInstance;
         return this;
@@ -490,6 +549,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRdsDbSecurityGroup")
     public AwsRdsDbSecurityGroupDetails awsRdsDbSecurityGroup;
+
     public ResourceDetails withAwsRdsDbSecurityGroup(AwsRdsDbSecurityGroupDetails awsRdsDbSecurityGroup) {
         this.awsRdsDbSecurityGroup = awsRdsDbSecurityGroup;
         return this;
@@ -498,6 +558,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRdsDbSnapshot")
     public AwsRdsDbSnapshotDetails awsRdsDbSnapshot;
+
     public ResourceDetails withAwsRdsDbSnapshot(AwsRdsDbSnapshotDetails awsRdsDbSnapshot) {
         this.awsRdsDbSnapshot = awsRdsDbSnapshot;
         return this;
@@ -506,6 +567,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRdsEventSubscription")
     public AwsRdsEventSubscriptionDetails awsRdsEventSubscription;
+
     public ResourceDetails withAwsRdsEventSubscription(AwsRdsEventSubscriptionDetails awsRdsEventSubscription) {
         this.awsRdsEventSubscription = awsRdsEventSubscription;
         return this;
@@ -514,6 +576,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRedshiftCluster")
     public AwsRedshiftClusterDetails awsRedshiftCluster;
+
     public ResourceDetails withAwsRedshiftCluster(AwsRedshiftClusterDetails awsRedshiftCluster) {
         this.awsRedshiftCluster = awsRedshiftCluster;
         return this;
@@ -522,6 +585,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsS3AccountPublicAccessBlock")
     public AwsS3AccountPublicAccessBlockDetails awsS3AccountPublicAccessBlock;
+
     public ResourceDetails withAwsS3AccountPublicAccessBlock(AwsS3AccountPublicAccessBlockDetails awsS3AccountPublicAccessBlock) {
         this.awsS3AccountPublicAccessBlock = awsS3AccountPublicAccessBlock;
         return this;
@@ -530,6 +594,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsS3Bucket")
     public AwsS3BucketDetails awsS3Bucket;
+
     public ResourceDetails withAwsS3Bucket(AwsS3BucketDetails awsS3Bucket) {
         this.awsS3Bucket = awsS3Bucket;
         return this;
@@ -538,6 +603,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsS3Object")
     public AwsS3ObjectDetails awsS3Object;
+
     public ResourceDetails withAwsS3Object(AwsS3ObjectDetails awsS3Object) {
         this.awsS3Object = awsS3Object;
         return this;
@@ -549,6 +615,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsSageMakerNotebookInstance")
     public AwsSageMakerNotebookInstanceDetails awsSageMakerNotebookInstance;
+
     public ResourceDetails withAwsSageMakerNotebookInstance(AwsSageMakerNotebookInstanceDetails awsSageMakerNotebookInstance) {
         this.awsSageMakerNotebookInstance = awsSageMakerNotebookInstance;
         return this;
@@ -557,6 +624,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsSecretsManagerSecret")
     public AwsSecretsManagerSecretDetails awsSecretsManagerSecret;
+
     public ResourceDetails withAwsSecretsManagerSecret(AwsSecretsManagerSecretDetails awsSecretsManagerSecret) {
         this.awsSecretsManagerSecret = awsSecretsManagerSecret;
         return this;
@@ -565,6 +633,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsSnsTopic")
     public AwsSnsTopicDetails awsSnsTopic;
+
     public ResourceDetails withAwsSnsTopic(AwsSnsTopicDetails awsSnsTopic) {
         this.awsSnsTopic = awsSnsTopic;
         return this;
@@ -573,6 +642,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsSqsQueue")
     public AwsSqsQueueDetails awsSqsQueue;
+
     public ResourceDetails withAwsSqsQueue(AwsSqsQueueDetails awsSqsQueue) {
         this.awsSqsQueue = awsSqsQueue;
         return this;
@@ -581,6 +651,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsSsmPatchCompliance")
     public AwsSsmPatchComplianceDetails awsSsmPatchCompliance;
+
     public ResourceDetails withAwsSsmPatchCompliance(AwsSsmPatchComplianceDetails awsSsmPatchCompliance) {
         this.awsSsmPatchCompliance = awsSsmPatchCompliance;
         return this;
@@ -589,6 +660,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsWafRateBasedRule")
     public AwsWafRateBasedRuleDetails awsWafRateBasedRule;
+
     public ResourceDetails withAwsWafRateBasedRule(AwsWafRateBasedRuleDetails awsWafRateBasedRule) {
         this.awsWafRateBasedRule = awsWafRateBasedRule;
         return this;
@@ -597,6 +669,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsWafRegionalRateBasedRule")
     public AwsWafRegionalRateBasedRuleDetails awsWafRegionalRateBasedRule;
+
     public ResourceDetails withAwsWafRegionalRateBasedRule(AwsWafRegionalRateBasedRuleDetails awsWafRegionalRateBasedRule) {
         this.awsWafRegionalRateBasedRule = awsWafRegionalRateBasedRule;
         return this;
@@ -605,6 +678,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsWafRegionalRule")
     public AwsWafRegionalRuleDetails awsWafRegionalRule;
+
     public ResourceDetails withAwsWafRegionalRule(AwsWafRegionalRuleDetails awsWafRegionalRule) {
         this.awsWafRegionalRule = awsWafRegionalRule;
         return this;
@@ -613,6 +687,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsWafRegionalRuleGroup")
     public AwsWafRegionalRuleGroupDetails awsWafRegionalRuleGroup;
+
     public ResourceDetails withAwsWafRegionalRuleGroup(AwsWafRegionalRuleGroupDetails awsWafRegionalRuleGroup) {
         this.awsWafRegionalRuleGroup = awsWafRegionalRuleGroup;
         return this;
@@ -621,6 +696,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsWafRegionalWebAcl")
     public AwsWafRegionalWebAclDetails awsWafRegionalWebAcl;
+
     public ResourceDetails withAwsWafRegionalWebAcl(AwsWafRegionalWebAclDetails awsWafRegionalWebAcl) {
         this.awsWafRegionalWebAcl = awsWafRegionalWebAcl;
         return this;
@@ -629,6 +705,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsWafRule")
     public AwsWafRuleDetails awsWafRule;
+
     public ResourceDetails withAwsWafRule(AwsWafRuleDetails awsWafRule) {
         this.awsWafRule = awsWafRule;
         return this;
@@ -637,6 +714,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsWafRuleGroup")
     public AwsWafRuleGroupDetails awsWafRuleGroup;
+
     public ResourceDetails withAwsWafRuleGroup(AwsWafRuleGroupDetails awsWafRuleGroup) {
         this.awsWafRuleGroup = awsWafRuleGroup;
         return this;
@@ -645,6 +723,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsWafWebAcl")
     public AwsWafWebAclDetails awsWafWebAcl;
+
     public ResourceDetails withAwsWafWebAcl(AwsWafWebAclDetails awsWafWebAcl) {
         this.awsWafWebAcl = awsWafWebAcl;
         return this;
@@ -656,6 +735,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsWafv2RuleGroup")
     public AwsWafv2RuleGroupDetails awsWafv2RuleGroup;
+
     public ResourceDetails withAwsWafv2RuleGroup(AwsWafv2RuleGroupDetails awsWafv2RuleGroup) {
         this.awsWafv2RuleGroup = awsWafv2RuleGroup;
         return this;
@@ -667,6 +747,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsWafv2WebAcl")
     public AwsWafv2WebAclDetails awsWafv2WebAcl;
+
     public ResourceDetails withAwsWafv2WebAcl(AwsWafv2WebAclDetails awsWafv2WebAcl) {
         this.awsWafv2WebAcl = awsWafv2WebAcl;
         return this;
@@ -675,6 +756,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsXrayEncryptionConfig")
     public AwsXrayEncryptionConfigDetails awsXrayEncryptionConfig;
+
     public ResourceDetails withAwsXrayEncryptionConfig(AwsXrayEncryptionConfigDetails awsXrayEncryptionConfig) {
         this.awsXrayEncryptionConfig = awsXrayEncryptionConfig;
         return this;
@@ -683,6 +765,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Container")
     public ContainerDetails container;
+
     public ResourceDetails withContainer(ContainerDetails container) {
         this.container = container;
         return this;
@@ -691,9 +774,11 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Other")
     public java.util.Map<String, String> other;
+
     public ResourceDetails withOther(java.util.Map<String, String> other) {
         this.other = other;
         return this;
     }
     
+    public ResourceDetails(){}
 }

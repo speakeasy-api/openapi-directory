@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2SearchDestinyPlayerByBungieNameRequest {
@@ -12,9 +13,13 @@ public class Destiny2SearchDestinyPlayerByBungieNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public Destiny2SearchDestinyPlayerByBungieNameRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
     }
     
+    public Destiny2SearchDestinyPlayerByBungieNameRequest(@JsonProperty("membershipType") Integer membershipType) {
+        this.membershipType = membershipType;
+  }
 }

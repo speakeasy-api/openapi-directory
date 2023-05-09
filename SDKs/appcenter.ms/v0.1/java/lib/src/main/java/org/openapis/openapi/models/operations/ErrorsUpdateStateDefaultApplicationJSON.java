@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ErrorsUpdateStateDefaultApplicationJSON {
     @JsonProperty("error")
     public ErrorsUpdateStateDefaultApplicationJSONError error;
+
     public ErrorsUpdateStateDefaultApplicationJSON withError(ErrorsUpdateStateDefaultApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public ErrorsUpdateStateDefaultApplicationJSON(@JsonProperty("error") ErrorsUpdateStateDefaultApplicationJSONError error) {
+        this.error = error;
+  }
 }

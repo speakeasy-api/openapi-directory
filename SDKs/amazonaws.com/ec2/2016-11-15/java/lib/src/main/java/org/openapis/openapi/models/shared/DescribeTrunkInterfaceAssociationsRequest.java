@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTrunkInterfaceAssociationsRequest {
     
     public String[] associationIds;
+
     public DescribeTrunkInterfaceAssociationsRequest withAssociationIds(String[] associationIds) {
         this.associationIds = associationIds;
         return this;
@@ -16,6 +17,7 @@ public class DescribeTrunkInterfaceAssociationsRequest {
     
     
     public Boolean dryRun;
+
     public DescribeTrunkInterfaceAssociationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class DescribeTrunkInterfaceAssociationsRequest {
     
     
     public DescribeTrunkInterfaceAssociationsRequestFilters[] filters;
+
     public DescribeTrunkInterfaceAssociationsRequest withFilters(DescribeTrunkInterfaceAssociationsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeTrunkInterfaceAssociationsRequest {
     
     
     public Long maxResults;
+
     public DescribeTrunkInterfaceAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeTrunkInterfaceAssociationsRequest {
     
     
     public String nextToken;
+
     public DescribeTrunkInterfaceAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeTrunkInterfaceAssociationsRequest(){}
 }

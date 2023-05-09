@@ -22,6 +22,7 @@ public class DatasetExportJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public DatasetExportJob withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class DatasetExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetArn")
     public String datasetArn;
+
     public DatasetExportJob withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
@@ -38,6 +40,7 @@ public class DatasetExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetExportJobArn")
     public String datasetExportJobArn;
+
     public DatasetExportJob withDatasetExportJobArn(String datasetExportJobArn) {
         this.datasetExportJobArn = datasetExportJobArn;
         return this;
@@ -46,6 +49,7 @@ public class DatasetExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public DatasetExportJob withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -54,6 +58,7 @@ public class DatasetExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingestionMode")
     public IngestionModeEnum ingestionMode;
+
     public DatasetExportJob withIngestionMode(IngestionModeEnum ingestionMode) {
         this.ingestionMode = ingestionMode;
         return this;
@@ -62,6 +67,7 @@ public class DatasetExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobName")
     public String jobName;
+
     public DatasetExportJob withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -70,6 +76,7 @@ public class DatasetExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobOutput")
     public DatasetExportJobOutput jobOutput;
+
     public DatasetExportJob withJobOutput(DatasetExportJobOutput jobOutput) {
         this.jobOutput = jobOutput;
         return this;
@@ -80,6 +87,7 @@ public class DatasetExportJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public DatasetExportJob withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -88,6 +96,7 @@ public class DatasetExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DatasetExportJob withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -96,9 +105,11 @@ public class DatasetExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public DatasetExportJob withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DatasetExportJob(){}
 }

@@ -12,6 +12,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approveDate")
     public String approveDate;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withApproveDate(String approveDate) {
         this.approveDate = approveDate;
         return this;
@@ -20,6 +21,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentBody")
     public String commentBody;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withCommentBody(String commentBody) {
         this.commentBody = commentBody;
         return this;
@@ -28,6 +30,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentID")
     public Long commentID;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withCommentID(Long commentID) {
         this.commentID = commentID;
         return this;
@@ -36,6 +39,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentSequence")
     public Long commentSequence;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withCommentSequence(Long commentSequence) {
         this.commentSequence = commentSequence;
         return this;
@@ -44,6 +48,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentTitle")
     public String commentTitle;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withCommentTitle(String commentTitle) {
         this.commentTitle = commentTitle;
         return this;
@@ -52,6 +57,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentType")
     public String commentType;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withCommentType(String commentType) {
         this.commentType = commentType;
         return this;
@@ -60,6 +66,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createDate")
     public String createDate;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withCreateDate(String createDate) {
         this.createDate = createDate;
         return this;
@@ -68,6 +75,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("depth")
     public Long depth;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withDepth(Long depth) {
         this.depth = depth;
         return this;
@@ -76,6 +84,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("editorsSelection")
     public Boolean editorsSelection;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withEditorsSelection(Boolean editorsSelection) {
         this.editorsSelection = editorsSelection;
         return this;
@@ -84,6 +93,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentID")
     public Object parentID;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withParentID(Object parentID) {
         this.parentID = parentID;
         return this;
@@ -92,6 +102,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentUserDisplayName")
     public Object parentUserDisplayName;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withParentUserDisplayName(Object parentUserDisplayName) {
         this.parentUserDisplayName = parentUserDisplayName;
         return this;
@@ -100,6 +111,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permID")
     public String permID;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withPermID(String permID) {
         this.permID = permID;
         return this;
@@ -108,6 +120,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("picURL")
     public String picURL;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withPicURL(String picURL) {
         this.picURL = picURL;
         return this;
@@ -116,6 +129,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendations")
     public Long recommendations;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withRecommendations(Long recommendations) {
         this.recommendations = recommendations;
         return this;
@@ -124,6 +138,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedFlag")
     public Object recommendedFlag;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withRecommendedFlag(Object recommendedFlag) {
         this.recommendedFlag = recommendedFlag;
         return this;
@@ -132,6 +147,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replies")
     public Object[] replies;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withReplies(Object[] replies) {
         this.replies = replies;
         return this;
@@ -140,6 +156,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replyCount")
     public Long replyCount;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withReplyCount(Long replyCount) {
         this.replyCount = replyCount;
         return this;
@@ -148,6 +165,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportAbuseFlag")
     public Object reportAbuseFlag;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withReportAbuseFlag(Object reportAbuseFlag) {
         this.reportAbuseFlag = reportAbuseFlag;
         return this;
@@ -156,6 +174,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharing")
     public Long sharing;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withSharing(Long sharing) {
         this.sharing = sharing;
         return this;
@@ -164,6 +183,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withStatus(String status) {
         this.status = status;
         return this;
@@ -172,6 +192,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timespeople")
     public Long timespeople;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withTimespeople(Long timespeople) {
         this.timespeople = timespeople;
         return this;
@@ -180,6 +201,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trusted")
     public Long trusted;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withTrusted(Long trusted) {
         this.trusted = trusted;
         return this;
@@ -188,6 +210,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateDate")
     public String updateDate;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withUpdateDate(String updateDate) {
         this.updateDate = updateDate;
         return this;
@@ -196,6 +219,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userDisplayName")
     public String userDisplayName;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withUserDisplayName(String userDisplayName) {
         this.userDisplayName = userDisplayName;
         return this;
@@ -204,6 +228,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userID")
     public Long userID;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withUserID(Long userID) {
         this.userID = userID;
         return this;
@@ -212,6 +237,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userLocation")
     public String userLocation;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withUserLocation(String userLocation) {
         this.userLocation = userLocation;
         return this;
@@ -220,6 +246,7 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userTitle")
     public Object userTitle;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withUserTitle(Object userTitle) {
         this.userTitle = userTitle;
         return this;
@@ -228,9 +255,11 @@ public class GETUserContentUrlJSON200ApplicationJSONResultsComments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userURL")
     public Object userURL;
+
     public GETUserContentUrlJSON200ApplicationJSONResultsComments withUserURL(Object userURL) {
         this.userURL = userURL;
         return this;
     }
     
+    public GETUserContentUrlJSON200ApplicationJSONResultsComments(){}
 }

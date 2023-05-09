@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAppliedSchemaArnsResponse {
@@ -12,6 +13,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAppliedSchemaArnsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAppliedSchemaArnsResponse {
     
     
     public String contentType;
+
     public ListAppliedSchemaArnsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public Object internalServiceException;
+
     public ListAppliedSchemaArnsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public Object invalidArnException;
+
     public ListAppliedSchemaArnsResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListAppliedSchemaArnsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public Object limitExceededException;
+
     public ListAppliedSchemaArnsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAppliedSchemaArnsResponse listAppliedSchemaArnsResponse;
+
     public ListAppliedSchemaArnsResponse withListAppliedSchemaArnsResponse(org.openapis.openapi.models.shared.ListAppliedSchemaArnsResponse listAppliedSchemaArnsResponse) {
         this.listAppliedSchemaArnsResponse = listAppliedSchemaArnsResponse;
         return this;
@@ -76,6 +84,7 @@ public class ListAppliedSchemaArnsResponse {
     
     
     public Integer statusCode;
+
     public ListAppliedSchemaArnsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListAppliedSchemaArnsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAppliedSchemaArnsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAppliedSchemaArnsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public Object retryableConflictException;
+
     public ListAppliedSchemaArnsResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class ListAppliedSchemaArnsResponse {
      */
     
     public Object validationException;
+
     public ListAppliedSchemaArnsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAppliedSchemaArnsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

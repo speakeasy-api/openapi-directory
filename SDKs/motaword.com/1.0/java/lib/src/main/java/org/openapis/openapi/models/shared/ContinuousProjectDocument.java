@@ -15,6 +15,7 @@ public class ContinuousProjectDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billed_word_count")
     public Long billedWordCount;
+
     public ContinuousProjectDocument withBilledWordCount(Long billedWordCount) {
         this.billedWordCount = billedWordCount;
         return this;
@@ -23,6 +24,7 @@ public class ContinuousProjectDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ContinuousProjectDocument withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class ContinuousProjectDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public DocumentLinks links;
+
     public ContinuousProjectDocument withLinks(DocumentLinks links) {
         this.links = links;
         return this;
@@ -39,6 +42,7 @@ public class ContinuousProjectDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContinuousProjectDocument withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class ContinuousProjectDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("post_edit_enabled")
     public Boolean postEditEnabled;
+
     public ContinuousProjectDocument withPostEditEnabled(Boolean postEditEnabled) {
         this.postEditEnabled = postEditEnabled;
         return this;
@@ -55,6 +60,7 @@ public class ContinuousProjectDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     public String projectId;
+
     public ContinuousProjectDocument withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -63,6 +69,7 @@ public class ContinuousProjectDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_language")
     public String sourceLanguage;
+
     public ContinuousProjectDocument withSourceLanguage(String sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
         return this;
@@ -71,6 +78,7 @@ public class ContinuousProjectDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_languages")
     public String[] targetLanguages;
+
     public ContinuousProjectDocument withTargetLanguages(String[] targetLanguages) {
         this.targetLanguages = targetLanguages;
         return this;
@@ -79,9 +87,11 @@ public class ContinuousProjectDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("word_count")
     public Long wordCount;
+
     public ContinuousProjectDocument withWordCount(Long wordCount) {
         this.wordCount = wordCount;
         return this;
     }
     
+    public ContinuousProjectDocument(){}
 }

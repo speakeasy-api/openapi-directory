@@ -18,6 +18,7 @@ public class ListIdpCredentialsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idpCredentials")
     public IdpCredential[] idpCredentials;
+
     public ListIdpCredentialsResponse withIdpCredentials(IdpCredential[] idpCredentials) {
         this.idpCredentials = idpCredentials;
         return this;
@@ -29,9 +30,11 @@ public class ListIdpCredentialsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListIdpCredentialsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListIdpCredentialsResponse(){}
 }

@@ -18,6 +18,7 @@ public class ComponentTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ComponentTransform withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class ComponentTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalTransform")
     public String originalTransform;
+
     public ComponentTransform withOriginalTransform(String originalTransform) {
         this.originalTransform = originalTransform;
         return this;
@@ -40,9 +42,11 @@ public class ComponentTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public ComponentTransform withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ComponentTransform(){}
 }

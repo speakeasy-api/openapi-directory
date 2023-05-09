@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2CustomFieldsJsonRequestBody {
@@ -12,6 +13,7 @@ public class PostV2CustomFieldsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=field_type")
     public String fieldType;
+
     public PostV2CustomFieldsJsonRequestBody withFieldType(String fieldType) {
         this.fieldType = fieldType;
         return this;
@@ -22,9 +24,13 @@ public class PostV2CustomFieldsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public PostV2CustomFieldsJsonRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PostV2CustomFieldsJsonRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -18,6 +18,7 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicAlgorithm")
     public BasicAutoscalingAlgorithm basicAlgorithm;
+
     public AutoscalingPolicy withBasicAlgorithm(BasicAutoscalingAlgorithm basicAlgorithm) {
         this.basicAlgorithm = basicAlgorithm;
         return this;
@@ -29,6 +30,7 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AutoscalingPolicy withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public AutoscalingPolicy withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AutoscalingPolicy withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryWorkerConfig")
     public InstanceGroupAutoscalingPolicyConfig secondaryWorkerConfig;
+
     public AutoscalingPolicy withSecondaryWorkerConfig(InstanceGroupAutoscalingPolicyConfig secondaryWorkerConfig) {
         this.secondaryWorkerConfig = secondaryWorkerConfig;
         return this;
@@ -73,9 +78,11 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerConfig")
     public InstanceGroupAutoscalingPolicyConfig workerConfig;
+
     public AutoscalingPolicy withWorkerConfig(InstanceGroupAutoscalingPolicyConfig workerConfig) {
         this.workerConfig = workerConfig;
         return this;
     }
     
+    public AutoscalingPolicy(){}
 }

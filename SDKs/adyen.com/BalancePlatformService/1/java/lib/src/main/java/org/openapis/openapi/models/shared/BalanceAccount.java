@@ -17,6 +17,7 @@ public class BalanceAccount {
      */
     @JsonProperty("accountHolderId")
     public String accountHolderId;
+
     public BalanceAccount withAccountHolderId(String accountHolderId) {
         this.accountHolderId = accountHolderId;
         return this;
@@ -28,6 +29,7 @@ public class BalanceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balances")
     public Balance[] balances;
+
     public BalanceAccount withBalances(Balance[] balances) {
         this.balances = balances;
         return this;
@@ -40,6 +42,7 @@ public class BalanceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultCurrencyCode")
     public String defaultCurrencyCode;
+
     public BalanceAccount withDefaultCurrencyCode(String defaultCurrencyCode) {
         this.defaultCurrencyCode = defaultCurrencyCode;
         return this;
@@ -51,6 +54,7 @@ public class BalanceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BalanceAccount withDescription(String description) {
         this.description = description;
         return this;
@@ -61,6 +65,7 @@ public class BalanceAccount {
      */
     @JsonProperty("id")
     public String id;
+
     public BalanceAccount withId(String id) {
         this.id = id;
         return this;
@@ -72,6 +77,7 @@ public class BalanceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentInstruments")
     public PaymentInstrumentReference[] paymentInstruments;
+
     public BalanceAccount withPaymentInstruments(PaymentInstrumentReference[] paymentInstruments) {
         this.paymentInstruments = paymentInstruments;
         return this;
@@ -83,6 +89,7 @@ public class BalanceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public BalanceAccount withReference(String reference) {
         this.reference = reference;
         return this;
@@ -95,6 +102,7 @@ public class BalanceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public BalanceAccountStatusEnum status;
+
     public BalanceAccount withStatus(BalanceAccountStatusEnum status) {
         this.status = status;
         return this;
@@ -108,6 +116,7 @@ public class BalanceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sweepConfigurations")
     public java.util.Map<String, SweepConfiguration> sweepConfigurations;
+
     public BalanceAccount withSweepConfigurations(java.util.Map<String, SweepConfiguration> sweepConfigurations) {
         this.sweepConfigurations = sweepConfigurations;
         return this;
@@ -120,9 +129,14 @@ public class BalanceAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public BalanceAccount withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public BalanceAccount(@JsonProperty("accountHolderId") String accountHolderId, @JsonProperty("id") String id) {
+        this.accountHolderId = accountHolderId;
+        this.id = id;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsSecurityOption1 option1;
+
     public BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsSecurity withOption1(BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsSec
     
     @SpeakeasyMetadata("security:option=true")
     public BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsSecurityOption2 option2;
+
     public BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsSecurity withOption2(BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsSecurity(){}
 }

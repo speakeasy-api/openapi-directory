@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductNotifierCreateRequest {
@@ -12,6 +13,7 @@ public class ProductNotifierCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
     public String orderId;
+
     public ProductNotifierCreateRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -22,6 +24,7 @@ public class ProductNotifierCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String type;
+
     public ProductNotifierCreateRequest withType(String type) {
         this.type = type;
         return this;
@@ -32,9 +35,15 @@ public class ProductNotifierCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uri")
     public String uri;
+
     public ProductNotifierCreateRequest withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public ProductNotifierCreateRequest(@JsonProperty("orderId") String orderId, @JsonProperty("type") String type, @JsonProperty("uri") String uri) {
+        this.orderId = orderId;
+        this.type = type;
+        this.uri = uri;
+  }
 }

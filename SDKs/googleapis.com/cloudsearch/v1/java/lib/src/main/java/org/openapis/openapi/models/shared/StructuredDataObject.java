@@ -18,9 +18,11 @@ public class StructuredDataObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public NamedProperty[] properties;
+
     public StructuredDataObject withProperties(NamedProperty[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public StructuredDataObject(){}
 }

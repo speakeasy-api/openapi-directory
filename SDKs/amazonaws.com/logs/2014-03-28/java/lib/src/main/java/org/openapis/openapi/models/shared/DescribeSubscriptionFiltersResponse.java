@@ -18,6 +18,7 @@ public class DescribeSubscriptionFiltersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeSubscriptionFiltersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +27,11 @@ public class DescribeSubscriptionFiltersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionFilters")
     public SubscriptionFilter[] subscriptionFilters;
+
     public DescribeSubscriptionFiltersResponse withSubscriptionFilters(SubscriptionFilter[] subscriptionFilters) {
         this.subscriptionFilters = subscriptionFilters;
         return this;
     }
     
+    public DescribeSubscriptionFiltersResponse(){}
 }

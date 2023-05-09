@@ -12,6 +12,7 @@ public class GetLinkedRelations200ApplicationJSONRelations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contracttest")
     public GetLinkedRelations200ApplicationJSONRelationsContracttest contracttest;
+
     public GetLinkedRelations200ApplicationJSONRelations withContracttest(GetLinkedRelations200ApplicationJSONRelationsContracttest contracttest) {
         this.contracttest = contracttest;
         return this;
@@ -20,6 +21,7 @@ public class GetLinkedRelations200ApplicationJSONRelations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationtest")
     public GetLinkedRelations200ApplicationJSONRelationsIntegrationtest integrationtest;
+
     public GetLinkedRelations200ApplicationJSONRelations withIntegrationtest(GetLinkedRelations200ApplicationJSONRelationsIntegrationtest integrationtest) {
         this.integrationtest = integrationtest;
         return this;
@@ -28,9 +30,11 @@ public class GetLinkedRelations200ApplicationJSONRelations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mock")
     public GetLinkedRelations200ApplicationJSONRelationsMock mock;
+
     public GetLinkedRelations200ApplicationJSONRelations withMock(GetLinkedRelations200ApplicationJSONRelationsMock mock) {
         this.mock = mock;
         return this;
     }
     
+    public GetLinkedRelations200ApplicationJSONRelations(){}
 }

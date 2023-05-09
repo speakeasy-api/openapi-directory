@@ -15,6 +15,7 @@ public class AddApplicationInputProcessingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationARN")
     public String applicationARN;
+
     public AddApplicationInputProcessingConfigurationResponse withApplicationARN(String applicationARN) {
         this.applicationARN = applicationARN;
         return this;
@@ -23,6 +24,7 @@ public class AddApplicationInputProcessingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationVersionId")
     public Long applicationVersionId;
+
     public AddApplicationInputProcessingConfigurationResponse withApplicationVersionId(Long applicationVersionId) {
         this.applicationVersionId = applicationVersionId;
         return this;
@@ -31,6 +33,7 @@ public class AddApplicationInputProcessingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputId")
     public String inputId;
+
     public AddApplicationInputProcessingConfigurationResponse withInputId(String inputId) {
         this.inputId = inputId;
         return this;
@@ -39,9 +42,11 @@ public class AddApplicationInputProcessingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputProcessingConfigurationDescription")
     public InputProcessingConfigurationDescription inputProcessingConfigurationDescription;
+
     public AddApplicationInputProcessingConfigurationResponse withInputProcessingConfigurationDescription(InputProcessingConfigurationDescription inputProcessingConfigurationDescription) {
         this.inputProcessingConfigurationDescription = inputProcessingConfigurationDescription;
         return this;
     }
     
+    public AddApplicationInputProcessingConfigurationResponse(){}
 }

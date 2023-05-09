@@ -12,6 +12,7 @@ public class BatchDeletePartitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public BatchDeletePartitionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class BatchDeletePartitionRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public BatchDeletePartitionRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class BatchDeletePartitionRequest {
     
     @JsonProperty("PartitionsToDelete")
     public PartitionValueList[] partitionsToDelete;
+
     public BatchDeletePartitionRequest withPartitionsToDelete(PartitionValueList[] partitionsToDelete) {
         this.partitionsToDelete = partitionsToDelete;
         return this;
@@ -33,9 +36,15 @@ public class BatchDeletePartitionRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public BatchDeletePartitionRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public BatchDeletePartitionRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("PartitionsToDelete") PartitionValueList[] partitionsToDelete, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.partitionsToDelete = partitionsToDelete;
+        this.tableName = tableName;
+  }
 }

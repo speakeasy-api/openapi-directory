@@ -12,6 +12,7 @@ public class CommunicationCostByCandidatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public CommunicationCostByCandidatePage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class CommunicationCostByCandidatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public CommunicationCostByCandidate[] results;
+
     public CommunicationCostByCandidatePage withResults(CommunicationCostByCandidate[] results) {
         this.results = results;
         return this;
     }
     
+    public CommunicationCostByCandidatePage(){}
 }

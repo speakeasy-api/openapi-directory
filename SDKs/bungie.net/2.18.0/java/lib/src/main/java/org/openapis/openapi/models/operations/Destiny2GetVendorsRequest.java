@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetVendorsRequest {
@@ -12,6 +13,7 @@ public class Destiny2GetVendorsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
     public Long characterId;
+
     public Destiny2GetVendorsRequest withCharacterId(Long characterId) {
         this.characterId = characterId;
         return this;
@@ -22,6 +24,7 @@ public class Destiny2GetVendorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=components")
     public Integer[] components;
+
     public Destiny2GetVendorsRequest withComponents(Integer[] components) {
         this.components = components;
         return this;
@@ -32,6 +35,7 @@ public class Destiny2GetVendorsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
     public Long destinyMembershipId;
+
     public Destiny2GetVendorsRequest withDestinyMembershipId(Long destinyMembershipId) {
         this.destinyMembershipId = destinyMembershipId;
         return this;
@@ -42,6 +46,7 @@ public class Destiny2GetVendorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public Integer filter;
+
     public Destiny2GetVendorsRequest withFilter(Integer filter) {
         this.filter = filter;
         return this;
@@ -52,9 +57,15 @@ public class Destiny2GetVendorsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public Destiny2GetVendorsRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
     }
     
+    public Destiny2GetVendorsRequest(@JsonProperty("characterId") Long characterId, @JsonProperty("destinyMembershipId") Long destinyMembershipId, @JsonProperty("membershipType") Integer membershipType) {
+        this.characterId = characterId;
+        this.destinyMembershipId = destinyMembershipId;
+        this.membershipType = membershipType;
+  }
 }

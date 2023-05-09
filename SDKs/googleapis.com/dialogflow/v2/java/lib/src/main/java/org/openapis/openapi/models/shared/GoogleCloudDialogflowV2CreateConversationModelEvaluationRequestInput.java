@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2CreateConversationModelEvaluationRequestInpu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationModelEvaluation")
     public GoogleCloudDialogflowV2ConversationModelEvaluationInput conversationModelEvaluation;
+
     public GoogleCloudDialogflowV2CreateConversationModelEvaluationRequestInput withConversationModelEvaluation(GoogleCloudDialogflowV2ConversationModelEvaluationInput conversationModelEvaluation) {
         this.conversationModelEvaluation = conversationModelEvaluation;
         return this;
     }
     
+    public GoogleCloudDialogflowV2CreateConversationModelEvaluationRequestInput(){}
 }

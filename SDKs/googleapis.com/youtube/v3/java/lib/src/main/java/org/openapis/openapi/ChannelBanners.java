@@ -61,11 +61,9 @@ public class ChannelBanners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeChannelBannersInsertResponse res = new org.openapis.openapi.models.operations.YoutubeChannelBannersInsertResponse() {{
+        org.openapis.openapi.models.operations.YoutubeChannelBannersInsertResponse res = new org.openapis.openapi.models.operations.YoutubeChannelBannersInsertResponse(contentType, httpRes.statusCode()) {{
             channelBannerResource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

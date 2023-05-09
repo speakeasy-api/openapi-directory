@@ -18,6 +18,7 @@ public class FreshnessOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freshnessDuration")
     public String freshnessDuration;
+
     public FreshnessOptions withFreshnessDuration(String freshnessDuration) {
         this.freshnessDuration = freshnessDuration;
         return this;
@@ -29,9 +30,11 @@ public class FreshnessOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freshnessProperty")
     public String freshnessProperty;
+
     public FreshnessOptions withFreshnessProperty(String freshnessProperty) {
         this.freshnessProperty = freshnessProperty;
         return this;
     }
     
+    public FreshnessOptions(){}
 }

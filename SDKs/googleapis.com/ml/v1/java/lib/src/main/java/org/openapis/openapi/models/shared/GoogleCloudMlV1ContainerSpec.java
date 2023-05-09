@@ -18,6 +18,7 @@ public class GoogleCloudMlV1ContainerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public String[] args;
+
     public GoogleCloudMlV1ContainerSpec withArgs(String[] args) {
         this.args = args;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1ContainerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public String[] command;
+
     public GoogleCloudMlV1ContainerSpec withCommand(String[] command) {
         this.command = command;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1ContainerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("env")
     public GoogleCloudMlV1EnvVar[] env;
+
     public GoogleCloudMlV1ContainerSpec withEnv(GoogleCloudMlV1EnvVar[] env) {
         this.env = env;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudMlV1ContainerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public GoogleCloudMlV1ContainerSpec withImage(String image) {
         this.image = image;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudMlV1ContainerSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ports")
     public GoogleCloudMlV1ContainerPort[] ports;
+
     public GoogleCloudMlV1ContainerSpec withPorts(GoogleCloudMlV1ContainerPort[] ports) {
         this.ports = ports;
         return this;
     }
     
+    public GoogleCloudMlV1ContainerSpec(){}
 }

@@ -56,4 +56,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/WorkerPool.java
 lib/src/main/java/org/openapis/openapi/models/shared/WorkerConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/Network.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListWorkerPoolsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

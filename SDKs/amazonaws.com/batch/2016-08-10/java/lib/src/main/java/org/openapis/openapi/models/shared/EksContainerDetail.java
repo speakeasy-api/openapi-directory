@@ -15,6 +15,7 @@ public class EksContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public String[] args;
+
     public EksContainerDetail withArgs(String[] args) {
         this.args = args;
         return this;
@@ -23,6 +24,7 @@ public class EksContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public String[] command;
+
     public EksContainerDetail withCommand(String[] command) {
         this.command = command;
         return this;
@@ -31,6 +33,7 @@ public class EksContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("env")
     public EksContainerEnvironmentVariable[] env;
+
     public EksContainerDetail withEnv(EksContainerEnvironmentVariable[] env) {
         this.env = env;
         return this;
@@ -39,6 +42,7 @@ public class EksContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCode")
     public Long exitCode;
+
     public EksContainerDetail withExitCode(Long exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -47,6 +51,7 @@ public class EksContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public EksContainerDetail withImage(String image) {
         this.image = image;
         return this;
@@ -55,6 +60,7 @@ public class EksContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imagePullPolicy")
     public String imagePullPolicy;
+
     public EksContainerDetail withImagePullPolicy(String imagePullPolicy) {
         this.imagePullPolicy = imagePullPolicy;
         return this;
@@ -63,6 +69,7 @@ public class EksContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EksContainerDetail withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class EksContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public EksContainerDetail withReason(String reason) {
         this.reason = reason;
         return this;
@@ -79,6 +87,7 @@ public class EksContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public EksContainerResourceRequirements resources;
+
     public EksContainerDetail withResources(EksContainerResourceRequirements resources) {
         this.resources = resources;
         return this;
@@ -87,6 +96,7 @@ public class EksContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityContext")
     public EksContainerSecurityContext securityContext;
+
     public EksContainerDetail withSecurityContext(EksContainerSecurityContext securityContext) {
         this.securityContext = securityContext;
         return this;
@@ -95,9 +105,11 @@ public class EksContainerDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeMounts")
     public EksContainerVolumeMount[] volumeMounts;
+
     public EksContainerDetail withVolumeMounts(EksContainerVolumeMount[] volumeMounts) {
         this.volumeMounts = volumeMounts;
         return this;
     }
     
+    public EksContainerDetail(){}
 }

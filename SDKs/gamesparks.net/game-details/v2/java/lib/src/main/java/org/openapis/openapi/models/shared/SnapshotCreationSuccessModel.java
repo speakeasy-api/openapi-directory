@@ -15,9 +15,11 @@ public class SnapshotCreationSuccessModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetGameApiKey")
     public String targetGameApiKey;
+
     public SnapshotCreationSuccessModel withTargetGameApiKey(String targetGameApiKey) {
         this.targetGameApiKey = targetGameApiKey;
         return this;
     }
     
+    public SnapshotCreationSuccessModel(){}
 }

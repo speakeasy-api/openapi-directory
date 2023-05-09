@@ -64,12 +64,10 @@ public class Similarity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityByContentResponse res = new org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityByContentResponse() {{
+        org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityByContentResponse res = new org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityByContentResponse(contentType, httpRes.statusCode()) {{
             apiResponseSimilarity = null;
             srcSearchlyApiV1ControllersSimilarityByContentDefaultApplicationTextString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -123,12 +121,10 @@ public class Similarity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityBySongResponse res = new org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityBySongResponse() {{
+        org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityBySongResponse res = new org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityBySongResponse(contentType, httpRes.statusCode()) {{
             apiResponseSimilarity = null;
             srcSearchlyApiV1ControllersSimilarityBySongDefaultApplicationTextString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

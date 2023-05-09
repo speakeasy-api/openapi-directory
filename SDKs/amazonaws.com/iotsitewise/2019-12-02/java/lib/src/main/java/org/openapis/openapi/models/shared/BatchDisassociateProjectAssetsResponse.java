@@ -15,9 +15,11 @@ public class BatchDisassociateProjectAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public AssetErrorDetails[] errors;
+
     public BatchDisassociateProjectAssetsResponse withErrors(AssetErrorDetails[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchDisassociateProjectAssetsResponse(){}
 }

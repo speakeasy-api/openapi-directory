@@ -15,6 +15,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crm_uid")
     public String crmUid;
+
     public Organization withCrmUid(String crmUid) {
         this.crmUid = crmUid;
         return this;
@@ -25,6 +26,7 @@ public class Organization {
      */
     @JsonProperty("crm_url")
     public String crmUrl;
+
     public Organization withCrmUrl(String crmUrl) {
         this.crmUrl = crmUrl;
         return this;
@@ -36,6 +38,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deal_closed_date")
     public String dealClosedDate;
+
     public Organization withDealClosedDate(String dealClosedDate) {
         this.dealClosedDate = dealClosedDate;
         return this;
@@ -46,6 +49,7 @@ public class Organization {
      */
     @JsonProperty("lifecycle_stage")
     public String lifecycleStage;
+
     public Organization withLifecycleStage(String lifecycleStage) {
         this.lifecycleStage = lifecycleStage;
         return this;
@@ -57,6 +61,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner_email")
     public String ownerEmail;
+
     public Organization withOwnerEmail(String ownerEmail) {
         this.ownerEmail = ownerEmail;
         return this;
@@ -68,6 +73,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner_name")
     public String ownerName;
+
     public Organization withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -79,6 +85,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_plan")
     public String pricePlan;
+
     public Organization withPricePlan(String pricePlan) {
         this.pricePlan = pricePlan;
         return this;
@@ -89,9 +96,15 @@ public class Organization {
      */
     @JsonProperty("source")
     public String source;
+
     public Organization withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public Organization(@JsonProperty("crm_url") String crmUrl, @JsonProperty("lifecycle_stage") String lifecycleStage, @JsonProperty("source") String source) {
+        this.crmUrl = crmUrl;
+        this.lifecycleStage = lifecycleStage;
+        this.source = source;
+  }
 }

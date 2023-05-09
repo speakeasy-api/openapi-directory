@@ -18,9 +18,11 @@ public class SasPortalTestPermissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public String[] permissions;
+
     public SasPortalTestPermissionsResponse withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public SasPortalTestPermissionsResponse(){}
 }

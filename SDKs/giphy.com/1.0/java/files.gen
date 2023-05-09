@@ -69,4 +69,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/User.java
 lib/src/main/java/org/openapis/openapi/models/shared/Image.java
 lib/src/main/java/org/openapis/openapi/models/shared/Pagination.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/gifs/README.md
+docs/stickers/README.md
 USAGE.md

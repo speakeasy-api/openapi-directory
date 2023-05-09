@@ -15,6 +15,7 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mappings")
     public PostAdminMappingsFindByMetadata200ApplicationJSONMappings[] mappings;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSON withMappings(PostAdminMappingsFindByMetadata200ApplicationJSONMappings[] mappings) {
         this.mappings = mappings;
         return this;
@@ -23,9 +24,11 @@ public class PostAdminMappingsFindByMetadata200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PostAdminMappingsFindByMetadata200ApplicationJSONMeta meta;
+
     public PostAdminMappingsFindByMetadata200ApplicationJSON withMeta(PostAdminMappingsFindByMetadata200ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public PostAdminMappingsFindByMetadata200ApplicationJSON(){}
 }

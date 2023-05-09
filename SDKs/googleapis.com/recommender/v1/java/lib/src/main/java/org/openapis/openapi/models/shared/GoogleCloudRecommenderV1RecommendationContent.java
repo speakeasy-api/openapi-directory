@@ -18,6 +18,7 @@ public class GoogleCloudRecommenderV1RecommendationContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationGroups")
     public GoogleCloudRecommenderV1OperationGroup[] operationGroups;
+
     public GoogleCloudRecommenderV1RecommendationContent withOperationGroups(GoogleCloudRecommenderV1OperationGroup[] operationGroups) {
         this.operationGroups = operationGroups;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecommenderV1RecommendationContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overview")
     public java.util.Map<String, Object> overview;
+
     public GoogleCloudRecommenderV1RecommendationContent withOverview(java.util.Map<String, Object> overview) {
         this.overview = overview;
         return this;
     }
     
+    public GoogleCloudRecommenderV1RecommendationContent(){}
 }

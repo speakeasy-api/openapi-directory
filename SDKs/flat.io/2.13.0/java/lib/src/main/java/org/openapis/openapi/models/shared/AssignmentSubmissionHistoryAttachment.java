@@ -15,6 +15,7 @@ public class AssignmentSubmissionHistoryAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public String revision;
+
     public AssignmentSubmissionHistoryAttachment withRevision(String revision) {
         this.revision = revision;
         return this;
@@ -26,9 +27,11 @@ public class AssignmentSubmissionHistoryAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public String score;
+
     public AssignmentSubmissionHistoryAttachment withScore(String score) {
         this.score = score;
         return this;
     }
     
+    public AssignmentSubmissionHistoryAttachment(){}
 }

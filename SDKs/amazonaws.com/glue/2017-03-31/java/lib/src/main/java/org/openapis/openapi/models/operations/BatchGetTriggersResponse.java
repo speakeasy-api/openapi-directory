@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetTriggersResponse {
@@ -12,6 +13,7 @@ public class BatchGetTriggersResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetTriggersResponse batchGetTriggersResponse;
+
     public BatchGetTriggersResponse withBatchGetTriggersResponse(org.openapis.openapi.models.shared.BatchGetTriggersResponse batchGetTriggersResponse) {
         this.batchGetTriggersResponse = batchGetTriggersResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetTriggersResponse {
     
     
     public String contentType;
+
     public BatchGetTriggersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetTriggersResponse {
      */
     
     public Object internalServiceException;
+
     public BatchGetTriggersResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetTriggersResponse {
      */
     
     public Object invalidInputException;
+
     public BatchGetTriggersResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetTriggersResponse {
      */
     
     public Object operationTimeoutException;
+
     public BatchGetTriggersResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class BatchGetTriggersResponse {
     
     
     public Integer statusCode;
+
     public BatchGetTriggersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class BatchGetTriggersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetTriggersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetTriggersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

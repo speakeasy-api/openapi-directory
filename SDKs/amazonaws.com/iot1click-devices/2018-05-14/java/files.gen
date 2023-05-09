@@ -76,4 +76,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/DeviceDescription.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForResourceResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UnclaimDeviceResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

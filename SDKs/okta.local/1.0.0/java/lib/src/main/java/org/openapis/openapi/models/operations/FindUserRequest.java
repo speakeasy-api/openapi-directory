@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FindUserRequest {
     @SpeakeasyMetadata("request:mediaType=application/octet-stream")
     public byte[] requestBody;
+
     public FindUserRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +17,11 @@ public class FindUserRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public FindUserRequest withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public FindUserRequest(){}
 }

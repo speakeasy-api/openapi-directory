@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnliWithoutApplicationnkApplicationRequest {
@@ -12,6 +13,7 @@ public class UnliWithoutApplicationnkApplicationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application_id")
     public String applicationId;
+
     public UnliWithoutApplicationnkApplicationRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -22,6 +24,7 @@ public class UnliWithoutApplicationnkApplicationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_id")
     public String externalId;
+
     public UnliWithoutApplicationnkApplicationRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -32,9 +35,15 @@ public class UnliWithoutApplicationnkApplicationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
     public UnliWithoutApplicationnkApplicationProviderEnum provider;
+
     public UnliWithoutApplicationnkApplicationRequest withProvider(UnliWithoutApplicationnkApplicationProviderEnum provider) {
         this.provider = provider;
         return this;
     }
     
+    public UnliWithoutApplicationnkApplicationRequest(@JsonProperty("application_id") String applicationId, @JsonProperty("external_id") String externalId, @JsonProperty("provider") UnliWithoutApplicationnkApplicationProviderEnum provider) {
+        this.applicationId = applicationId;
+        this.externalId = externalId;
+        this.provider = provider;
+  }
 }

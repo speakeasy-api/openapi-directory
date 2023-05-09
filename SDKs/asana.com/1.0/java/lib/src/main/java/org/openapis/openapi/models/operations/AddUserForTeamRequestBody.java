@@ -18,9 +18,11 @@ public class AddUserForTeamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TeamAddUserRequest data;
+
     public AddUserForTeamRequestBody withData(org.openapis.openapi.models.shared.TeamAddUserRequest data) {
         this.data = data;
         return this;
     }
     
+    public AddUserForTeamRequestBody(){}
 }

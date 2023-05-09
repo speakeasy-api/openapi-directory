@@ -18,6 +18,7 @@ public class DistributionGroupsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public DistributionGroupsCreateRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -28,9 +29,13 @@ public class DistributionGroupsCreateRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public DistributionGroupsCreateRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DistributionGroupsCreateRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

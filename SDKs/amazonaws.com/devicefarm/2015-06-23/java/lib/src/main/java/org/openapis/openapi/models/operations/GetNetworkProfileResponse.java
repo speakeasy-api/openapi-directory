@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkProfileResponse {
@@ -12,6 +13,7 @@ public class GetNetworkProfileResponse {
      */
     
     public Object argumentException;
+
     public GetNetworkProfileResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class GetNetworkProfileResponse {
     
     
     public String contentType;
+
     public GetNetworkProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetNetworkProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.GetNetworkProfileResult getNetworkProfileResult;
+
     public GetNetworkProfileResponse withGetNetworkProfileResult(org.openapis.openapi.models.shared.GetNetworkProfileResult getNetworkProfileResult) {
         this.getNetworkProfileResult = getNetworkProfileResult;
         return this;
@@ -39,6 +43,7 @@ public class GetNetworkProfileResponse {
      */
     
     public Object limitExceededException;
+
     public GetNetworkProfileResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class GetNetworkProfileResponse {
      */
     
     public Object notFoundException;
+
     public GetNetworkProfileResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetNetworkProfileResponse {
      */
     
     public Object serviceAccountException;
+
     public GetNetworkProfileResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class GetNetworkProfileResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetNetworkProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetNetworkProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

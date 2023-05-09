@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrivateArticleCreateResponse {
     
     public String contentType;
+
     public PrivateArticleCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PrivateArticleCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorMessage errorMessage;
+
     public PrivateArticleCreateResponse withErrorMessage(org.openapis.openapi.models.shared.ErrorMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -29,6 +32,7 @@ public class PrivateArticleCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.LocationWarnings locationWarnings;
+
     public PrivateArticleCreateResponse withLocationWarnings(org.openapis.openapi.models.shared.LocationWarnings locationWarnings) {
         this.locationWarnings = locationWarnings;
         return this;
@@ -36,6 +40,7 @@ public class PrivateArticleCreateResponse {
     
     
     public Integer statusCode;
+
     public PrivateArticleCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PrivateArticleCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrivateArticleCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PrivateArticleCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

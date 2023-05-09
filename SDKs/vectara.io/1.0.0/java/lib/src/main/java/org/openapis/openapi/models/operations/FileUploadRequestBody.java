@@ -12,6 +12,7 @@ public class FileUploadRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=doc_metadata")
     public String docMetadata;
+
     public FileUploadRequestBody withDocMetadata(String docMetadata) {
         this.docMetadata = docMetadata;
         return this;
@@ -22,9 +23,11 @@ public class FileUploadRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public FileUploadRequestBodyFile file;
+
     public FileUploadRequestBody withFile(FileUploadRequestBodyFile file) {
         this.file = file;
         return this;
     }
     
+    public FileUploadRequestBody(){}
 }

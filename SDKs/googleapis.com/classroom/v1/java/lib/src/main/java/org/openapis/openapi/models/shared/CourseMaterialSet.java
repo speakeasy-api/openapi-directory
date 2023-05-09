@@ -18,6 +18,7 @@ public class CourseMaterialSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("materials")
     public CourseMaterial[] materials;
+
     public CourseMaterialSet withMaterials(CourseMaterial[] materials) {
         this.materials = materials;
         return this;
@@ -29,9 +30,11 @@ public class CourseMaterialSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public CourseMaterialSet withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CourseMaterialSet(){}
 }

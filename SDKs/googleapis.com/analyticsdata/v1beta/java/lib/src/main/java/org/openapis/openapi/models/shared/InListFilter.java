@@ -18,6 +18,7 @@ public class InListFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseSensitive")
     public Boolean caseSensitive;
+
     public InListFilter withCaseSensitive(Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
         return this;
@@ -29,9 +30,11 @@ public class InListFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public InListFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public InListFilter(){}
 }

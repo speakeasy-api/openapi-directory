@@ -18,6 +18,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterConditions")
     public StatusCondition[] clusterConditions;
+
     public Operation withClusterConditions(StatusCondition[] clusterConditions) {
         this.clusterConditions = clusterConditions;
         return this;
@@ -29,6 +30,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Operation withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -40,6 +42,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public Operation withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -51,6 +54,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public Operation withError(Status error) {
         this.error = error;
         return this;
@@ -62,6 +66,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Operation withLocation(String location) {
         this.location = location;
         return this;
@@ -73,6 +78,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Operation withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodepoolConditions")
     public StatusCondition[] nodepoolConditions;
+
     public Operation withNodepoolConditions(StatusCondition[] nodepoolConditions) {
         this.nodepoolConditions = nodepoolConditions;
         return this;
@@ -95,6 +102,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationType")
     public OperationOperationTypeEnum operationType;
+
     public Operation withOperationType(OperationOperationTypeEnum operationType) {
         this.operationType = operationType;
         return this;
@@ -106,17 +114,19 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     public OperationProgress progress;
+
     public Operation withProgress(OperationProgress progress) {
         this.progress = progress;
         return this;
     }
     
     /**
-     * Server-defined URL for the resource.
+     * Server-defined URI for the operation. Example: `https://container.googleapis.com/v1alpha1/projects/123/locations/us-central1/operations/operation-123`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Operation withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -128,6 +138,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public Operation withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -139,6 +150,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public OperationStatusEnum status;
+
     public Operation withStatus(OperationStatusEnum status) {
         this.status = status;
         return this;
@@ -150,17 +162,19 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public Operation withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
     /**
-     * Server-defined URL for the target of the operation.
+     * Server-defined URI for the target of the operation. The format of this is a URI to the resource being modified (such as a cluster, node pool, or node). For node pool repairs, there may be multiple nodes being repaired, but only one will be the target. Examples: - `https://container.googleapis.com/v1beta1/projects/123/locations/us-central1/clusters/my-cluster` - `https://container.googleapis.com/v1beta1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np` - `https://container.googleapis.com/v1beta1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLink")
     public String targetLink;
+
     public Operation withTargetLink(String targetLink) {
         this.targetLink = targetLink;
         return this;
@@ -172,9 +186,11 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public Operation withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public Operation(){}
 }

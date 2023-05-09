@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetVisibleToAllUsersInput {
     @JsonProperty("JobFlowIds")
     public String[] jobFlowIds;
+
     public SetVisibleToAllUsersInput withJobFlowIds(String[] jobFlowIds) {
         this.jobFlowIds = jobFlowIds;
         return this;
@@ -19,9 +20,14 @@ public class SetVisibleToAllUsersInput {
     
     @JsonProperty("VisibleToAllUsers")
     public Boolean visibleToAllUsers;
+
     public SetVisibleToAllUsersInput withVisibleToAllUsers(Boolean visibleToAllUsers) {
         this.visibleToAllUsers = visibleToAllUsers;
         return this;
     }
     
+    public SetVisibleToAllUsersInput(@JsonProperty("JobFlowIds") String[] jobFlowIds, @JsonProperty("VisibleToAllUsers") Boolean visibleToAllUsers) {
+        this.jobFlowIds = jobFlowIds;
+        this.visibleToAllUsers = visibleToAllUsers;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MapMapGetRequest {
@@ -16,6 +17,7 @@ public class MapMapGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datetime")
     public String datetime;
+
     public MapMapGetRequest withDatetime(String datetime) {
         this.datetime = datetime;
         return this;
@@ -26,6 +28,7 @@ public class MapMapGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public MapMapGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -37,6 +40,7 @@ public class MapMapGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_lat")
     public String maxLat;
+
     public MapMapGetRequest withMaxLat(String maxLat) {
         this.maxLat = maxLat;
         return this;
@@ -48,6 +52,7 @@ public class MapMapGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_lon")
     public String maxLon;
+
     public MapMapGetRequest withMaxLon(String maxLon) {
         this.maxLon = maxLon;
         return this;
@@ -59,6 +64,7 @@ public class MapMapGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_lat")
     public String minLat;
+
     public MapMapGetRequest withMinLat(String minLat) {
         this.minLat = minLat;
         return this;
@@ -70,6 +76,7 @@ public class MapMapGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_lon")
     public String minLon;
+
     public MapMapGetRequest withMinLon(String minLon) {
         this.minLon = minLon;
         return this;
@@ -80,6 +87,7 @@ public class MapMapGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tile_x")
     public Long tileX;
+
     public MapMapGetRequest withTileX(Long tileX) {
         this.tileX = tileX;
         return this;
@@ -90,6 +98,7 @@ public class MapMapGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tile_y")
     public Long tileY;
+
     public MapMapGetRequest withTileY(Long tileY) {
         this.tileY = tileY;
         return this;
@@ -100,6 +109,7 @@ public class MapMapGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tile_zoom")
     public Long tileZoom;
+
     public MapMapGetRequest withTileZoom(Long tileZoom) {
         this.tileZoom = tileZoom;
         return this;
@@ -128,9 +138,14 @@ public class MapMapGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=variable")
     public String variable;
+
     public MapMapGetRequest withVariable(String variable) {
         this.variable = variable;
         return this;
     }
     
+    public MapMapGetRequest(@JsonProperty("datetime") String datetime, @JsonProperty("variable") String variable) {
+        this.datetime = datetime;
+        this.variable = variable;
+  }
 }

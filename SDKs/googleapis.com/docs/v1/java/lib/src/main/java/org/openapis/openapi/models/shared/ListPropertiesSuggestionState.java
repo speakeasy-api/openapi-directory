@@ -18,9 +18,11 @@ public class ListPropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nestingLevelsSuggestionStates")
     public NestingLevelSuggestionState[] nestingLevelsSuggestionStates;
+
     public ListPropertiesSuggestionState withNestingLevelsSuggestionStates(NestingLevelSuggestionState[] nestingLevelsSuggestionStates) {
         this.nestingLevelsSuggestionStates = nestingLevelsSuggestionStates;
         return this;
     }
     
+    public ListPropertiesSuggestionState(){}
 }

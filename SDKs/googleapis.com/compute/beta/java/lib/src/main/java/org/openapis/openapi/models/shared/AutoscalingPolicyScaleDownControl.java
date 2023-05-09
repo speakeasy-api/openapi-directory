@@ -18,6 +18,7 @@ public class AutoscalingPolicyScaleDownControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxScaledDownReplicas")
     public FixedOrPercent maxScaledDownReplicas;
+
     public AutoscalingPolicyScaleDownControl withMaxScaledDownReplicas(FixedOrPercent maxScaledDownReplicas) {
         this.maxScaledDownReplicas = maxScaledDownReplicas;
         return this;
@@ -29,9 +30,11 @@ public class AutoscalingPolicyScaleDownControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeWindowSec")
     public Integer timeWindowSec;
+
     public AutoscalingPolicyScaleDownControl withTimeWindowSec(Integer timeWindowSec) {
         this.timeWindowSec = timeWindowSec;
         return this;
     }
     
+    public AutoscalingPolicyScaleDownControl(){}
 }

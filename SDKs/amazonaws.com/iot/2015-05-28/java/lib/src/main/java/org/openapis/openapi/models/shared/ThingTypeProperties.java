@@ -15,6 +15,7 @@ public class ThingTypeProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchableAttributes")
     public String[] searchableAttributes;
+
     public ThingTypeProperties withSearchableAttributes(String[] searchableAttributes) {
         this.searchableAttributes = searchableAttributes;
         return this;
@@ -23,9 +24,11 @@ public class ThingTypeProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingTypeDescription")
     public String thingTypeDescription;
+
     public ThingTypeProperties withThingTypeDescription(String thingTypeDescription) {
         this.thingTypeDescription = thingTypeDescription;
         return this;
     }
     
+    public ThingTypeProperties(){}
 }

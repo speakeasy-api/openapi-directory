@@ -12,9 +12,13 @@ public class GetLinkRequestBody {
      */
     @JsonProperty("Identifier")
     public String identifier;
+
     public GetLinkRequestBody withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
     
+    public GetLinkRequestBody(@JsonProperty("Identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

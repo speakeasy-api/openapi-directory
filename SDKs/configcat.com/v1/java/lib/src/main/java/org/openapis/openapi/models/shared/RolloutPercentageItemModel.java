@@ -14,6 +14,7 @@ public class RolloutPercentageItemModel {
      */
     @JsonProperty("percentage")
     public Long percentage;
+
     public RolloutPercentageItemModel withPercentage(Long percentage) {
         this.percentage = percentage;
         return this;
@@ -25,9 +26,13 @@ public class RolloutPercentageItemModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public RolloutPercentageItemModel withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public RolloutPercentageItemModel(@JsonProperty("percentage") Long percentage) {
+        this.percentage = percentage;
+  }
 }

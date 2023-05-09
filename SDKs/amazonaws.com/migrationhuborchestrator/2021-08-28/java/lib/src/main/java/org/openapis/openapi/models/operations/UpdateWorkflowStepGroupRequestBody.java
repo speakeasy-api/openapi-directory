@@ -15,6 +15,7 @@ public class UpdateWorkflowStepGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateWorkflowStepGroupRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateWorkflowStepGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateWorkflowStepGroupRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class UpdateWorkflowStepGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String[] next;
+
     public UpdateWorkflowStepGroupRequestBody withNext(String[] next) {
         this.next = next;
         return this;
@@ -48,9 +51,11 @@ public class UpdateWorkflowStepGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String[] previous;
+
     public UpdateWorkflowStepGroupRequestBody withPrevious(String[] previous) {
         this.previous = previous;
         return this;
     }
     
+    public UpdateWorkflowStepGroupRequestBody(){}
 }

@@ -15,6 +15,7 @@ public class KmsKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsAliasArn")
     public String kmsAliasArn;
+
     public KmsKey withKmsAliasArn(String kmsAliasArn) {
         this.kmsAliasArn = kmsAliasArn;
         return this;
@@ -23,9 +24,11 @@ public class KmsKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public KmsKey withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
     }
     
+    public KmsKey(){}
 }

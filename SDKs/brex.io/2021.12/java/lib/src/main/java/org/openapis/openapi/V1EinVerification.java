@@ -62,12 +62,10 @@ public class V1EinVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EinVerificationBasicResponse res = new org.openapis.openapi.models.operations.EinVerificationBasicResponse() {{
+        org.openapis.openapi.models.operations.EinVerificationBasicResponse res = new org.openapis.openapi.models.operations.EinVerificationBasicResponse(contentType, httpRes.statusCode()) {{
             einVerificationBasic200ApplicationJSONObject = null;
             einVerificationBasicDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,12 +115,10 @@ public class V1EinVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EinVerificationComprehensiveResponse res = new org.openapis.openapi.models.operations.EinVerificationComprehensiveResponse() {{
+        org.openapis.openapi.models.operations.EinVerificationComprehensiveResponse res = new org.openapis.openapi.models.operations.EinVerificationComprehensiveResponse(contentType, httpRes.statusCode()) {{
             einVerificationComprehensive200ApplicationJSONObject = null;
             einVerificationComprehensiveDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -172,12 +168,10 @@ public class V1EinVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EinVerificationLookupResponse res = new org.openapis.openapi.models.operations.EinVerificationLookupResponse() {{
+        org.openapis.openapi.models.operations.EinVerificationLookupResponse res = new org.openapis.openapi.models.operations.EinVerificationLookupResponse(contentType, httpRes.statusCode()) {{
             einVerificationLookup200ApplicationJSONObject = null;
             einVerificationLookupDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

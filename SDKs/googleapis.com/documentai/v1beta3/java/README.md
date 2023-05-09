@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesSecurity;
 import org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesRequest;
 import org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesResponse;
+import org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,32 +28,33 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DocumentaiProjectsLocationsFetchProcessorTypesRequest req = new DocumentaiProjectsLocationsFetchProcessorTypesRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                oauthToken = "corrupti";
-                parent = "illum";
+            DocumentaiProjectsLocationsFetchProcessorTypesRequest req = new DocumentaiProjectsLocationsFetchProcessorTypesRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
                 prettyPrint = false;
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
-            DocumentaiProjectsLocationsFetchProcessorTypesResponse res = sdk.projects.documentaiProjectsLocationsFetchProcessorTypes(req, new DocumentaiProjectsLocationsFetchProcessorTypesSecurity() {{
+            DocumentaiProjectsLocationsFetchProcessorTypesResponse res = sdk.projects.documentaiProjectsLocationsFetchProcessorTypes(req, new DocumentaiProjectsLocationsFetchProcessorTypesSecurity("suscipit", "iure") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleCloudDocumentaiV1beta3FetchProcessorTypesResponse.isPresent()) {
+            if (res.googleCloudDocumentaiV1beta3FetchProcessorTypesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -62,29 +62,29 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `documentaiProjectsLocationsFetchProcessorTypes` - Fetches processor types. Note that we do not use ListProcessorTypes here because it is not paginated.
-* `documentaiProjectsLocationsList` - Lists information about the supported locations for this service.
-* `documentaiProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `documentaiProjectsLocationsProcessorTypesGet` - Gets a processor type detail.
-* `documentaiProjectsLocationsProcessorTypesList` - Lists the processor types that exist.
-* `documentaiProjectsLocationsProcessorsCreate` - Creates a processor from the type processor that the user chose. The processor will be at "ENABLED" state by default after its creation.
-* `documentaiProjectsLocationsProcessorsDisable` - Disables a processor
-* `documentaiProjectsLocationsProcessorsEnable` - Enables a processor
-* `documentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocument` - Send a document for Human Review. The input document should be processed by the specified processor.
-* `documentaiProjectsLocationsProcessorsList` - Lists all processors which belong to this project.
-* `documentaiProjectsLocationsProcessorsProcessorVersionsBatchProcess` - LRO endpoint to batch process many documents. The output is written to Cloud Storage as JSON in the [Document] format.
-* `documentaiProjectsLocationsProcessorsProcessorVersionsDelete` - Deletes the processor version, all artifacts under the processor version will be deleted.
-* `documentaiProjectsLocationsProcessorsProcessorVersionsDeploy` - Deploys the processor version.
-* `documentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersion` - Evaluates a ProcessorVersion against annotated documents, producing an Evaluation.
-* `documentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsList` - Retrieves a set of evaluations for a given processor version.
-* `documentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersion` - Imports a processor version from source processor version.
-* `documentaiProjectsLocationsProcessorsProcessorVersionsList` - Lists all versions of a processor.
-* `documentaiProjectsLocationsProcessorsProcessorVersionsProcess` - Processes a single document.
-* `documentaiProjectsLocationsProcessorsProcessorVersionsTrain` - Trains a new processor version. Operation metadata is returned as cloud_documentai_core.TrainProcessorVersionMetadata.
-* `documentaiProjectsLocationsProcessorsProcessorVersionsUndeploy` - Undeploys the processor version.
-* `documentaiProjectsLocationsProcessorsSetDefaultProcessorVersion` - Set the default (active) version of a Processor that will be used in ProcessDocument and BatchProcessDocuments.
+* [documentaiProjectsLocationsFetchProcessorTypes](docs/projects/README.md#documentaiprojectslocationsfetchprocessortypes) - Fetches processor types. Note that we don't use ListProcessorTypes here, because it isn't paginated.
+* [documentaiProjectsLocationsList](docs/projects/README.md#documentaiprojectslocationslist) - Lists information about the supported locations for this service.
+* [documentaiProjectsLocationsOperationsCancel](docs/projects/README.md#documentaiprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [documentaiProjectsLocationsProcessorTypesGet](docs/projects/README.md#documentaiprojectslocationsprocessortypesget) - Gets a processor type detail.
+* [documentaiProjectsLocationsProcessorTypesList](docs/projects/README.md#documentaiprojectslocationsprocessortypeslist) - Lists the processor types that exist.
+* [documentaiProjectsLocationsProcessorsCreate](docs/projects/README.md#documentaiprojectslocationsprocessorscreate) - Creates a processor from the ProcessorType provided. The processor will be at `ENABLED` state by default after its creation.
+* [documentaiProjectsLocationsProcessorsDisable](docs/projects/README.md#documentaiprojectslocationsprocessorsdisable) - Disables a processor
+* [documentaiProjectsLocationsProcessorsEnable](docs/projects/README.md#documentaiprojectslocationsprocessorsenable) - Enables a processor
+* [documentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocument](docs/projects/README.md#documentaiprojectslocationsprocessorshumanreviewconfigreviewdocument) - Send a document for Human Review. The input document should be processed by the specified processor.
+* [documentaiProjectsLocationsProcessorsList](docs/projects/README.md#documentaiprojectslocationsprocessorslist) - Lists all processors which belong to this project.
+* [documentaiProjectsLocationsProcessorsProcessorVersionsBatchProcess](docs/projects/README.md#documentaiprojectslocationsprocessorsprocessorversionsbatchprocess) - LRO endpoint to batch process many documents. The output is written to Cloud Storage as JSON in the [Document] format.
+* [documentaiProjectsLocationsProcessorsProcessorVersionsDelete](docs/projects/README.md#documentaiprojectslocationsprocessorsprocessorversionsdelete) - Deletes the processor version, all artifacts under the processor version will be deleted.
+* [documentaiProjectsLocationsProcessorsProcessorVersionsDeploy](docs/projects/README.md#documentaiprojectslocationsprocessorsprocessorversionsdeploy) - Deploys the processor version.
+* [documentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersion](docs/projects/README.md#documentaiprojectslocationsprocessorsprocessorversionsevaluateprocessorversion) - Evaluates a ProcessorVersion against annotated documents, producing an Evaluation.
+* [documentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsList](docs/projects/README.md#documentaiprojectslocationsprocessorsprocessorversionsevaluationslist) - Retrieves a set of evaluations for a given processor version.
+* [documentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersion](docs/projects/README.md#documentaiprojectslocationsprocessorsprocessorversionsimportprocessorversion) - Imports a processor version from source processor version.
+* [documentaiProjectsLocationsProcessorsProcessorVersionsList](docs/projects/README.md#documentaiprojectslocationsprocessorsprocessorversionslist) - Lists all versions of a processor.
+* [documentaiProjectsLocationsProcessorsProcessorVersionsProcess](docs/projects/README.md#documentaiprojectslocationsprocessorsprocessorversionsprocess) - Processes a single document.
+* [documentaiProjectsLocationsProcessorsProcessorVersionsTrain](docs/projects/README.md#documentaiprojectslocationsprocessorsprocessorversionstrain) - Trains a new processor version. Operation metadata is returned as TrainProcessorVersionMetadata.
+* [documentaiProjectsLocationsProcessorsProcessorVersionsUndeploy](docs/projects/README.md#documentaiprojectslocationsprocessorsprocessorversionsundeploy) - Undeploys the processor version.
+* [documentaiProjectsLocationsProcessorsSetDefaultProcessorVersion](docs/projects/README.md#documentaiprojectslocationsprocessorssetdefaultprocessorversion) - Set the default (active) version of a Processor that will be used in ProcessDocument and BatchProcessDocuments.
 <!-- End SDK Available Operations -->
 
 ### Maturity

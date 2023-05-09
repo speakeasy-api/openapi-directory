@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutResolverQueryLogConfigPolicyResponse {
@@ -12,6 +13,7 @@ public class PutResolverQueryLogConfigPolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public PutResolverQueryLogConfigPolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class PutResolverQueryLogConfigPolicyResponse {
     
     
     public String contentType;
+
     public PutResolverQueryLogConfigPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutResolverQueryLogConfigPolicyResponse {
      */
     
     public Object internalServiceErrorException;
+
     public PutResolverQueryLogConfigPolicyResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class PutResolverQueryLogConfigPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public PutResolverQueryLogConfigPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class PutResolverQueryLogConfigPolicyResponse {
      */
     
     public Object invalidPolicyDocument;
+
     public PutResolverQueryLogConfigPolicyResponse withInvalidPolicyDocument(Object invalidPolicyDocument) {
         this.invalidPolicyDocument = invalidPolicyDocument;
         return this;
@@ -59,6 +65,7 @@ public class PutResolverQueryLogConfigPolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public PutResolverQueryLogConfigPolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class PutResolverQueryLogConfigPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutResolverQueryLogConfigPolicyResponse putResolverQueryLogConfigPolicyResponse;
+
     public PutResolverQueryLogConfigPolicyResponse withPutResolverQueryLogConfigPolicyResponse(org.openapis.openapi.models.shared.PutResolverQueryLogConfigPolicyResponse putResolverQueryLogConfigPolicyResponse) {
         this.putResolverQueryLogConfigPolicyResponse = putResolverQueryLogConfigPolicyResponse;
         return this;
@@ -76,6 +84,7 @@ public class PutResolverQueryLogConfigPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutResolverQueryLogConfigPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class PutResolverQueryLogConfigPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutResolverQueryLogConfigPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class PutResolverQueryLogConfigPolicyResponse {
      */
     
     public Object unknownResourceException;
+
     public PutResolverQueryLogConfigPolicyResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public PutResolverQueryLogConfigPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

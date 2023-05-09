@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ShareProfileResult {
     @JsonProperty("acknowledgement")
     public ShareProfileAcknowledgement acknowledgement;
+
     public ShareProfileResult withAcknowledgement(ShareProfileAcknowledgement acknowledgement) {
         this.acknowledgement = acknowledgement;
         return this;
@@ -24,6 +25,7 @@ public class ShareProfileResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public ShareProfileResult withError(Error error) {
         this.error = error;
         return this;
@@ -34,6 +36,7 @@ public class ShareProfileResult {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public ShareProfileResult withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -41,6 +44,7 @@ public class ShareProfileResult {
     
     @JsonProperty("resp")
     public RequestReference resp;
+
     public ShareProfileResult withResp(RequestReference resp) {
         this.resp = resp;
         return this;
@@ -53,9 +57,16 @@ public class ShareProfileResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public ShareProfileResult withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public ShareProfileResult(@JsonProperty("acknowledgement") ShareProfileAcknowledgement acknowledgement, @JsonProperty("requestId") String requestId, @JsonProperty("resp") RequestReference resp, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.acknowledgement = acknowledgement;
+        this.requestId = requestId;
+        this.resp = resp;
+        this.timestamp = timestamp;
+  }
 }

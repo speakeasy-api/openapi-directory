@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopFleetResponse {
@@ -12,6 +13,7 @@ public class StopFleetResponse {
      */
     
     public Object concurrentModificationException;
+
     public StopFleetResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class StopFleetResponse {
     
     
     public String contentType;
+
     public StopFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class StopFleetResponse {
     
     
     public Integer statusCode;
+
     public StopFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class StopFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class StopFleetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopFleetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,9 +59,14 @@ public class StopFleetResponse {
      */
     
     public java.util.Map<String, Object> stopFleetResult;
+
     public StopFleetResponse withStopFleetResult(java.util.Map<String, Object> stopFleetResult) {
         this.stopFleetResult = stopFleetResult;
         return this;
     }
     
+    public StopFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

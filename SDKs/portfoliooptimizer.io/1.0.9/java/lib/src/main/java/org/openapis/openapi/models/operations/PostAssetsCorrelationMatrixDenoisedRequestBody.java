@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAssetsCorrelationMatrixDenoisedRequestBody {
     @JsonProperty("assets")
     public Long assets;
+
     public PostAssetsCorrelationMatrixDenoisedRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -21,6 +22,7 @@ public class PostAssetsCorrelationMatrixDenoisedRequestBody {
      */
     @JsonProperty("assetsCorrelationMatrix")
     public Double[][] assetsCorrelationMatrix;
+
     public PostAssetsCorrelationMatrixDenoisedRequestBody withAssetsCorrelationMatrix(Double[][] assetsCorrelationMatrix) {
         this.assetsCorrelationMatrix = assetsCorrelationMatrix;
         return this;
@@ -31,6 +33,7 @@ public class PostAssetsCorrelationMatrixDenoisedRequestBody {
      */
     @JsonProperty("assetsCorrelationMatrixAspectRatio")
     public Double assetsCorrelationMatrixAspectRatio;
+
     public PostAssetsCorrelationMatrixDenoisedRequestBody withAssetsCorrelationMatrixAspectRatio(Double assetsCorrelationMatrixAspectRatio) {
         this.assetsCorrelationMatrixAspectRatio = assetsCorrelationMatrixAspectRatio;
         return this;
@@ -42,9 +45,15 @@ public class PostAssetsCorrelationMatrixDenoisedRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("denoisingMethod")
     public PostAssetsCorrelationMatrixDenoisedRequestBodyDenoisingMethodEnum denoisingMethod;
+
     public PostAssetsCorrelationMatrixDenoisedRequestBody withDenoisingMethod(PostAssetsCorrelationMatrixDenoisedRequestBodyDenoisingMethodEnum denoisingMethod) {
         this.denoisingMethod = denoisingMethod;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixDenoisedRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCorrelationMatrix") Double[][] assetsCorrelationMatrix, @JsonProperty("assetsCorrelationMatrixAspectRatio") Double assetsCorrelationMatrixAspectRatio) {
+        this.assets = assets;
+        this.assetsCorrelationMatrix = assetsCorrelationMatrix;
+        this.assetsCorrelationMatrixAspectRatio = assetsCorrelationMatrixAspectRatio;
+  }
 }

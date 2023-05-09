@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderInvoiceDesignSettingsPreviewRequest {
@@ -12,6 +13,7 @@ public class GetOrderInvoiceDesignSettingsPreviewRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Encoding")
     public String acceptEncoding;
+
     public GetOrderInvoiceDesignSettingsPreviewRequest withAcceptEncoding(String acceptEncoding) {
         this.acceptEncoding = acceptEncoding;
         return this;
@@ -19,9 +21,14 @@ public class GetOrderInvoiceDesignSettingsPreviewRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OrderInvoiceDesignSettings orderInvoiceDesignSettings;
+
     public GetOrderInvoiceDesignSettingsPreviewRequest withOrderInvoiceDesignSettings(org.openapis.openapi.models.shared.OrderInvoiceDesignSettings orderInvoiceDesignSettings) {
         this.orderInvoiceDesignSettings = orderInvoiceDesignSettings;
         return this;
     }
     
+    public GetOrderInvoiceDesignSettingsPreviewRequest(@JsonProperty("Accept-Encoding") String acceptEncoding, @JsonProperty("orderInvoiceDesignSettings") org.openapis.openapi.models.shared.OrderInvoiceDesignSettings orderInvoiceDesignSettings) {
+        this.acceptEncoding = acceptEncoding;
+        this.orderInvoiceDesignSettings = orderInvoiceDesignSettings;
+  }
 }

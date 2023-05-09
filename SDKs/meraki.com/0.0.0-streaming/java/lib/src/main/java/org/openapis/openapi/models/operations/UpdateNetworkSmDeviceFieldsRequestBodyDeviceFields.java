@@ -18,6 +18,7 @@ public class UpdateNetworkSmDeviceFieldsRequestBodyDeviceFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateNetworkSmDeviceFieldsRequestBodyDeviceFields withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class UpdateNetworkSmDeviceFieldsRequestBodyDeviceFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public UpdateNetworkSmDeviceFieldsRequestBodyDeviceFields withNotes(String notes) {
         this.notes = notes;
         return this;
     }
     
+    public UpdateNetworkSmDeviceFieldsRequestBodyDeviceFields(){}
 }

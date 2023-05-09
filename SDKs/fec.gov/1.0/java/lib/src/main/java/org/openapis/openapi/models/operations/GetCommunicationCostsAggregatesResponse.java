@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCommunicationCostsAggregatesResponse {
     
     public org.openapis.openapi.models.shared.CommunicationCostByCandidatePage communicationCostByCandidatePage;
+
     public GetCommunicationCostsAggregatesResponse withCommunicationCostByCandidatePage(org.openapis.openapi.models.shared.CommunicationCostByCandidatePage communicationCostByCandidatePage) {
         this.communicationCostByCandidatePage = communicationCostByCandidatePage;
         return this;
@@ -16,6 +18,7 @@ public class GetCommunicationCostsAggregatesResponse {
     
     
     public String contentType;
+
     public GetCommunicationCostsAggregatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetCommunicationCostsAggregatesResponse {
     
     
     public Integer statusCode;
+
     public GetCommunicationCostsAggregatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetCommunicationCostsAggregatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCommunicationCostsAggregatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCommunicationCostsAggregatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

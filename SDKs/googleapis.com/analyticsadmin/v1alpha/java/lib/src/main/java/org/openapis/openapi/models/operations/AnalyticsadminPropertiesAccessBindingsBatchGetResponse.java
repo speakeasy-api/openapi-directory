@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminPropertiesAccessBindingsBatchGetResponse {
     
     public String contentType;
+
     public AnalyticsadminPropertiesAccessBindingsBatchGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesAccessBindingsBatchGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaBatchGetAccessBindingsResponse googleAnalyticsAdminV1alphaBatchGetAccessBindingsResponse;
+
     public AnalyticsadminPropertiesAccessBindingsBatchGetResponse withGoogleAnalyticsAdminV1alphaBatchGetAccessBindingsResponse(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaBatchGetAccessBindingsResponse googleAnalyticsAdminV1alphaBatchGetAccessBindingsResponse) {
         this.googleAnalyticsAdminV1alphaBatchGetAccessBindingsResponse = googleAnalyticsAdminV1alphaBatchGetAccessBindingsResponse;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminPropertiesAccessBindingsBatchGetResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsadminPropertiesAccessBindingsBatchGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminPropertiesAccessBindingsBatchGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminPropertiesAccessBindingsBatchGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminPropertiesAccessBindingsBatchGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

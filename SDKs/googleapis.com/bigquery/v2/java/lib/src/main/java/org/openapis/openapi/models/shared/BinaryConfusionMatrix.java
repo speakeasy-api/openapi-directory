@@ -18,6 +18,7 @@ public class BinaryConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accuracy")
     public Double accuracy;
+
     public BinaryConfusionMatrix withAccuracy(Double accuracy) {
         this.accuracy = accuracy;
         return this;
@@ -29,6 +30,7 @@ public class BinaryConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("f1Score")
     public Double f1Score;
+
     public BinaryConfusionMatrix withF1Score(Double f1Score) {
         this.f1Score = f1Score;
         return this;
@@ -40,6 +42,7 @@ public class BinaryConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("falseNegatives")
     public String falseNegatives;
+
     public BinaryConfusionMatrix withFalseNegatives(String falseNegatives) {
         this.falseNegatives = falseNegatives;
         return this;
@@ -51,6 +54,7 @@ public class BinaryConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("falsePositives")
     public String falsePositives;
+
     public BinaryConfusionMatrix withFalsePositives(String falsePositives) {
         this.falsePositives = falsePositives;
         return this;
@@ -62,6 +66,7 @@ public class BinaryConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positiveClassThreshold")
     public Double positiveClassThreshold;
+
     public BinaryConfusionMatrix withPositiveClassThreshold(Double positiveClassThreshold) {
         this.positiveClassThreshold = positiveClassThreshold;
         return this;
@@ -73,6 +78,7 @@ public class BinaryConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Double precision;
+
     public BinaryConfusionMatrix withPrecision(Double precision) {
         this.precision = precision;
         return this;
@@ -84,6 +90,7 @@ public class BinaryConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recall")
     public Double recall;
+
     public BinaryConfusionMatrix withRecall(Double recall) {
         this.recall = recall;
         return this;
@@ -95,6 +102,7 @@ public class BinaryConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trueNegatives")
     public String trueNegatives;
+
     public BinaryConfusionMatrix withTrueNegatives(String trueNegatives) {
         this.trueNegatives = trueNegatives;
         return this;
@@ -106,9 +114,11 @@ public class BinaryConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("truePositives")
     public String truePositives;
+
     public BinaryConfusionMatrix withTruePositives(String truePositives) {
         this.truePositives = truePositives;
         return this;
     }
     
+    public BinaryConfusionMatrix(){}
 }

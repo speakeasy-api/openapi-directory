@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdexchangebuyerPerformanceReportListRequest {
@@ -12,6 +13,7 @@ public class AdexchangebuyerPerformanceReportListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountId")
     public String accountId;
+
     public AdexchangebuyerPerformanceReportListRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class AdexchangebuyerPerformanceReportListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdexchangebuyerPerformanceReportListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +35,7 @@ public class AdexchangebuyerPerformanceReportListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDateTime")
     public String endDateTime;
+
     public AdexchangebuyerPerformanceReportListRequest withEndDateTime(String endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -42,6 +46,7 @@ public class AdexchangebuyerPerformanceReportListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdexchangebuyerPerformanceReportListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +57,7 @@ public class AdexchangebuyerPerformanceReportListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdexchangebuyerPerformanceReportListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +68,7 @@ public class AdexchangebuyerPerformanceReportListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public AdexchangebuyerPerformanceReportListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -72,6 +79,7 @@ public class AdexchangebuyerPerformanceReportListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdexchangebuyerPerformanceReportListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class AdexchangebuyerPerformanceReportListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public AdexchangebuyerPerformanceReportListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -92,6 +101,7 @@ public class AdexchangebuyerPerformanceReportListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdexchangebuyerPerformanceReportListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class AdexchangebuyerPerformanceReportListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdexchangebuyerPerformanceReportListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class AdexchangebuyerPerformanceReportListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDateTime")
     public String startDateTime;
+
     public AdexchangebuyerPerformanceReportListRequest withStartDateTime(String startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -122,9 +134,15 @@ public class AdexchangebuyerPerformanceReportListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdexchangebuyerPerformanceReportListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdexchangebuyerPerformanceReportListRequest(@JsonProperty("accountId") String accountId, @JsonProperty("endDateTime") String endDateTime, @JsonProperty("startDateTime") String startDateTime) {
+        this.accountId = accountId;
+        this.endDateTime = endDateTime;
+        this.startDateTime = startDateTime;
+  }
 }

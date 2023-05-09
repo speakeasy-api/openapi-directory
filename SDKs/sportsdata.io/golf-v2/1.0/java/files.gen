@@ -90,4 +90,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Player.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlayerSeason.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlayerTournamentProjection.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class DriveFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternateLink")
     public String alternateLink;
+
     public DriveFile withAlternateLink(String alternateLink) {
         this.alternateLink = alternateLink;
         return this;
@@ -29,6 +30,7 @@ public class DriveFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DriveFile withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class DriveFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailUrl")
     public String thumbnailUrl;
+
     public DriveFile withThumbnailUrl(String thumbnailUrl) {
         this.thumbnailUrl = thumbnailUrl;
         return this;
@@ -51,9 +54,11 @@ public class DriveFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public DriveFile withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public DriveFile(){}
 }

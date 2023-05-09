@@ -15,9 +15,11 @@ public class PostAssetsAnalysisAbsorptionRatioRequestBodyAssetsCovarianceMatrixE
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eigenvectorsRetained")
     public Long eigenvectorsRetained;
+
     public PostAssetsAnalysisAbsorptionRatioRequestBodyAssetsCovarianceMatrixEigenvectors withEigenvectorsRetained(Long eigenvectorsRetained) {
         this.eigenvectorsRetained = eigenvectorsRetained;
         return this;
     }
     
+    public PostAssetsAnalysisAbsorptionRatioRequestBodyAssetsCovarianceMatrixEigenvectors(){}
 }

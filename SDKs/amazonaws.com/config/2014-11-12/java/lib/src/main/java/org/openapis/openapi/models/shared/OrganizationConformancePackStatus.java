@@ -20,6 +20,7 @@ public class OrganizationConformancePackStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public OrganizationConformancePackStatus withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,6 +29,7 @@ public class OrganizationConformancePackStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public OrganizationConformancePackStatus withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -38,6 +40,7 @@ public class OrganizationConformancePackStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public OrganizationConformancePackStatus withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -45,6 +48,7 @@ public class OrganizationConformancePackStatus {
     
     @JsonProperty("OrganizationConformancePackName")
     public String organizationConformancePackName;
+
     public OrganizationConformancePackStatus withOrganizationConformancePackName(String organizationConformancePackName) {
         this.organizationConformancePackName = organizationConformancePackName;
         return this;
@@ -52,9 +56,14 @@ public class OrganizationConformancePackStatus {
     
     @JsonProperty("Status")
     public OrganizationResourceStatusEnum status;
+
     public OrganizationConformancePackStatus withStatus(OrganizationResourceStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public OrganizationConformancePackStatus(@JsonProperty("OrganizationConformancePackName") String organizationConformancePackName, @JsonProperty("Status") OrganizationResourceStatusEnum status) {
+        this.organizationConformancePackName = organizationConformancePackName;
+        this.status = status;
+  }
 }

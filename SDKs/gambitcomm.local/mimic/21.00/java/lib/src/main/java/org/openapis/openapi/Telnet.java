@@ -52,11 +52,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetConnectionLogonResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetConnectionLogonResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetConnectionLogonResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetConnectionLogonResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetConnectionLogon200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetConnectionRequestResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetConnectionRequestResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetConnectionRequestResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetConnectionRequestResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetConnectionRequest200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetConnectionSignalResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetConnectionSignalResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetConnectionSignalResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetConnectionSignalResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetConnectionSignal200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +172,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetGetArgsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetGetArgsResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetGetArgs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -220,11 +212,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetGetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetGetConfigResponse(contentType, httpRes.statusCode()) {{
             configTELNET = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -262,11 +252,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetGetStatisticsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetGetStatisticsResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetGetStatistics200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -303,11 +291,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetGetStatsHdrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetGetStatsHdrResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetGetStatsHdr200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,11 +331,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetGetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetGetTraceResponse(contentType, httpRes.statusCode()) {{
             configTELNET = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +371,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetIpaliasDisableResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetIpaliasDisableResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetIpaliasDisableResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetIpaliasDisableResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetIpaliasDisable200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -428,11 +410,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetIpaliasEnableResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetIpaliasEnableResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetIpaliasEnableResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetIpaliasEnableResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetIpaliasEnable200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -469,11 +449,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetIpaliasIsenabledResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetIpaliasIsenabledResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetIpaliasIsenabledResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetIpaliasIsenabledResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetIpaliasIsenabled200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -510,11 +488,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetIpaliasListResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetIpaliasListResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetIpaliasListResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetIpaliasListResponse(contentType, httpRes.statusCode()) {{
             ipAliases = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -552,11 +528,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetServerGetConnectionsResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetServerGetConnectionsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetServerGetConnectionsResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetServerGetConnectionsResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetServerGetConnections200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -594,11 +568,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetServerGetKeymapResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetServerGetKeymapResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetServerGetKeymapResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetServerGetKeymapResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetServerGetKeymap200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -636,11 +608,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetServerGetRulesdbResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetServerGetRulesdbResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetServerGetRulesdbResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetServerGetRulesdbResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetServerGetRulesdb200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -678,11 +648,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetServerGetStateResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetServerGetStateResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetServerGetStateResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetServerGetStateResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetServerGetState200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -720,11 +688,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetServerGetUserdbResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetServerGetUserdbResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetServerGetUserdbResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetServerGetUserdbResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetServerGetUserdb200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -762,11 +728,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetServerGetUsersResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetServerGetUsersResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetServerGetUsersResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetServerGetUsersResponse(contentType, httpRes.statusCode()) {{
             telnetUsers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -804,11 +768,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetSetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetSetConfigResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetSetConfig200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -845,11 +807,9 @@ public class Telnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolTelnetSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetSetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolTelnetSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolTelnetSetTraceResponse(contentType, httpRes.statusCode()) {{
             protocolTelnetSetTrace200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

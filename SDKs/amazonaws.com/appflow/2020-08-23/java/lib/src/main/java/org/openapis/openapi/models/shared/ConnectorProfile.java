@@ -20,6 +20,7 @@ public class ConnectorProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionMode")
     public ConnectionModeEnum connectionMode;
+
     public ConnectorProfile withConnectionMode(ConnectionModeEnum connectionMode) {
         this.connectionMode = connectionMode;
         return this;
@@ -28,6 +29,7 @@ public class ConnectorProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorLabel")
     public String connectorLabel;
+
     public ConnectorProfile withConnectorLabel(String connectorLabel) {
         this.connectorLabel = connectorLabel;
         return this;
@@ -36,6 +38,7 @@ public class ConnectorProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProfileArn")
     public String connectorProfileArn;
+
     public ConnectorProfile withConnectorProfileArn(String connectorProfileArn) {
         this.connectorProfileArn = connectorProfileArn;
         return this;
@@ -44,6 +47,7 @@ public class ConnectorProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProfileName")
     public String connectorProfileName;
+
     public ConnectorProfile withConnectorProfileName(String connectorProfileName) {
         this.connectorProfileName = connectorProfileName;
         return this;
@@ -52,6 +56,7 @@ public class ConnectorProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProfileProperties")
     public ConnectorProfileProperties connectorProfileProperties;
+
     public ConnectorProfile withConnectorProfileProperties(ConnectorProfileProperties connectorProfileProperties) {
         this.connectorProfileProperties = connectorProfileProperties;
         return this;
@@ -60,6 +65,7 @@ public class ConnectorProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorType")
     public ConnectorTypeEnum connectorType;
+
     public ConnectorProfile withConnectorType(ConnectorTypeEnum connectorType) {
         this.connectorType = connectorType;
         return this;
@@ -70,6 +76,7 @@ public class ConnectorProfile {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ConnectorProfile withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -78,6 +85,7 @@ public class ConnectorProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentialsArn")
     public String credentialsArn;
+
     public ConnectorProfile withCredentialsArn(String credentialsArn) {
         this.credentialsArn = credentialsArn;
         return this;
@@ -88,6 +96,7 @@ public class ConnectorProfile {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public ConnectorProfile withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -96,9 +105,11 @@ public class ConnectorProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateConnectionProvisioningState")
     public PrivateConnectionProvisioningState privateConnectionProvisioningState;
+
     public ConnectorProfile withPrivateConnectionProvisioningState(PrivateConnectionProvisioningState privateConnectionProvisioningState) {
         this.privateConnectionProvisioningState = privateConnectionProvisioningState;
         return this;
     }
     
+    public ConnectorProfile(){}
 }

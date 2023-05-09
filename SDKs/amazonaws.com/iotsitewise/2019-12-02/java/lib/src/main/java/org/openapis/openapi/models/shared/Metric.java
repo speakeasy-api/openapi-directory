@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Metric {
     @JsonProperty("expression")
     public String expression;
+
     public Metric withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -22,6 +23,7 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processingConfig")
     public MetricProcessingConfig processingConfig;
+
     public Metric withProcessingConfig(MetricProcessingConfig processingConfig) {
         this.processingConfig = processingConfig;
         return this;
@@ -29,6 +31,7 @@ public class Metric {
     
     @JsonProperty("variables")
     public ExpressionVariable[] variables;
+
     public Metric withVariables(ExpressionVariable[] variables) {
         this.variables = variables;
         return this;
@@ -36,9 +39,15 @@ public class Metric {
     
     @JsonProperty("window")
     public MetricWindow window;
+
     public Metric withWindow(MetricWindow window) {
         this.window = window;
         return this;
     }
     
+    public Metric(@JsonProperty("expression") String expression, @JsonProperty("variables") ExpressionVariable[] variables, @JsonProperty("window") MetricWindow window) {
+        this.expression = expression;
+        this.variables = variables;
+        this.window = window;
+  }
 }

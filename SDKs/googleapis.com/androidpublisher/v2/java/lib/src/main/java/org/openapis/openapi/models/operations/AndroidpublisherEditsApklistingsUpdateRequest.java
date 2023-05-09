@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherEditsApklistingsUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApkListing apkListing;
+
     public AndroidpublisherEditsApklistingsUpdateRequest withApkListing(org.openapis.openapi.models.shared.ApkListing apkListing) {
         this.apkListing = apkListing;
         return this;
@@ -19,6 +21,7 @@ public class AndroidpublisherEditsApklistingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherEditsApklistingsUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class AndroidpublisherEditsApklistingsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apkVersionCode")
     public Long apkVersionCode;
+
     public AndroidpublisherEditsApklistingsUpdateRequest withApkVersionCode(Long apkVersionCode) {
         this.apkVersionCode = apkVersionCode;
         return this;
@@ -39,6 +43,7 @@ public class AndroidpublisherEditsApklistingsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=editId")
     public String editId;
+
     public AndroidpublisherEditsApklistingsUpdateRequest withEditId(String editId) {
         this.editId = editId;
         return this;
@@ -49,6 +54,7 @@ public class AndroidpublisherEditsApklistingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherEditsApklistingsUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -59,6 +65,7 @@ public class AndroidpublisherEditsApklistingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherEditsApklistingsUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -69,6 +76,7 @@ public class AndroidpublisherEditsApklistingsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=language")
     public String language;
+
     public AndroidpublisherEditsApklistingsUpdateRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -79,6 +87,7 @@ public class AndroidpublisherEditsApklistingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherEditsApklistingsUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class AndroidpublisherEditsApklistingsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherEditsApklistingsUpdateRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -99,6 +109,7 @@ public class AndroidpublisherEditsApklistingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherEditsApklistingsUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class AndroidpublisherEditsApklistingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherEditsApklistingsUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,9 +131,16 @@ public class AndroidpublisherEditsApklistingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AndroidpublisherEditsApklistingsUpdateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AndroidpublisherEditsApklistingsUpdateRequest(@JsonProperty("apkVersionCode") Long apkVersionCode, @JsonProperty("editId") String editId, @JsonProperty("language") String language, @JsonProperty("packageName") String packageName) {
+        this.apkVersionCode = apkVersionCode;
+        this.editId = editId;
+        this.language = language;
+        this.packageName = packageName;
+  }
 }

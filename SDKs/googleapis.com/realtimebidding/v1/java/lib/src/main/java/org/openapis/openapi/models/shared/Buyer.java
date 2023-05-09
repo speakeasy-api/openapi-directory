@@ -18,6 +18,7 @@ public class Buyer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeCreativeCount")
     public String activeCreativeCount;
+
     public Buyer withActiveCreativeCount(String activeCreativeCount) {
         this.activeCreativeCount = activeCreativeCount;
         return this;
@@ -29,6 +30,7 @@ public class Buyer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidder")
     public String bidder;
+
     public Buyer withBidder(String bidder) {
         this.bidder = bidder;
         return this;
@@ -40,6 +42,7 @@ public class Buyer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingIds")
     public String[] billingIds;
+
     public Buyer withBillingIds(String[] billingIds) {
         this.billingIds = billingIds;
         return this;
@@ -51,6 +54,7 @@ public class Buyer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Buyer withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class Buyer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumActiveCreativeCount")
     public String maximumActiveCreativeCount;
+
     public Buyer withMaximumActiveCreativeCount(String maximumActiveCreativeCount) {
         this.maximumActiveCreativeCount = maximumActiveCreativeCount;
         return this;
@@ -73,9 +78,11 @@ public class Buyer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Buyer withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Buyer(){}
 }

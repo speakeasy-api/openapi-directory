@@ -18,28 +18,31 @@ public class EffectiveTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inherited")
     public Boolean inherited;
+
     public EffectiveTag withInherited(Boolean inherited) {
         this.inherited = inherited;
         return this;
     }
     
     /**
-     * The namespaced_name of the TagKey. Now only supported in the format of `{organization_id}/{tag_key_short_name}`. Other formats will be supported when we add non-org parented tags.
+     * The namespaced name of the TagKey. Can be in the form `{organization_id}/{tag_key_short_name}` or `{project_id}/{tag_key_short_name}` or `{project_number}/{tag_key_short_name}`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespacedTagKey")
     public String namespacedTagKey;
+
     public EffectiveTag withNamespacedTagKey(String namespacedTagKey) {
         this.namespacedTagKey = namespacedTagKey;
         return this;
     }
     
     /**
-     * Namespaced name of the TagValue. Now only supported in the format `{organization_id}/{tag_key_short_name}/{tag_value_short_name}`. Other formats will be supported when we add non-org parented tags.
+     * The namespaced name of the TagValue. Can be in the form `{organization_id}/{tag_key_short_name}/{tag_value_short_name}` or `{project_id}/{tag_key_short_name}/{tag_value_short_name}` or `{project_number}/{tag_key_short_name}/{tag_value_short_name}`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespacedTagValue")
     public String namespacedTagValue;
+
     public EffectiveTag withNamespacedTagValue(String namespacedTagValue) {
         this.namespacedTagValue = namespacedTagValue;
         return this;
@@ -51,6 +54,7 @@ public class EffectiveTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagKey")
     public String tagKey;
+
     public EffectiveTag withTagKey(String tagKey) {
         this.tagKey = tagKey;
         return this;
@@ -62,6 +66,7 @@ public class EffectiveTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagKeyParentName")
     public String tagKeyParentName;
+
     public EffectiveTag withTagKeyParentName(String tagKeyParentName) {
         this.tagKeyParentName = tagKeyParentName;
         return this;
@@ -73,9 +78,11 @@ public class EffectiveTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagValue")
     public String tagValue;
+
     public EffectiveTag withTagValue(String tagValue) {
         this.tagValue = tagValue;
         return this;
     }
     
+    public EffectiveTag(){}
 }

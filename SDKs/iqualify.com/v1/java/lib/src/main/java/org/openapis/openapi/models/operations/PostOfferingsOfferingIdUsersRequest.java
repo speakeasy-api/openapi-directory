@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOfferingsOfferingIdUsersRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OfferingUser[] requestBody;
+
     public PostOfferingsOfferingIdUsersRequest withRequestBody(org.openapis.openapi.models.shared.OfferingUser[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class PostOfferingsOfferingIdUsersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public PostOfferingsOfferingIdUsersRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public PostOfferingsOfferingIdUsersRequest(@JsonProperty("RequestBody") org.openapis.openapi.models.shared.OfferingUser[] requestBody, @JsonProperty("offeringId") String offeringId) {
+        this.requestBody = requestBody;
+        this.offeringId = offeringId;
+  }
 }

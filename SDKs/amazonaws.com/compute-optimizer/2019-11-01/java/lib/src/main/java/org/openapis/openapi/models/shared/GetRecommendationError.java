@@ -15,6 +15,7 @@ public class GetRecommendationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public GetRecommendationError withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class GetRecommendationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public GetRecommendationError withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -31,9 +33,11 @@ public class GetRecommendationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetRecommendationError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetRecommendationError(){}
 }

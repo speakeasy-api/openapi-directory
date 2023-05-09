@@ -38,4 +38,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Vehicle.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Errors.java
 lib/src/main/java/org/openapis/openapi/models/shared/VehicleRequest.java
+docs/sdk/README.md
+docs/vehicle/README.md
 USAGE.md

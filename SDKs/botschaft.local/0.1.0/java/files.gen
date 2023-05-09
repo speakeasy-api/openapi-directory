@@ -60,4 +60,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/SlackMessageRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/SnsMessageRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TwilioMessageRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Config.java
+docs/sdk/README.md
+docs/discord/README.md
+docs/slack/README.md
+docs/sns/README.md
+docs/twilio/README.md
 USAGE.md

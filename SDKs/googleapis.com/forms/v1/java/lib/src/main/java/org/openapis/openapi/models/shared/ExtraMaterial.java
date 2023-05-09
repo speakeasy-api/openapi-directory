@@ -18,6 +18,7 @@ public class ExtraMaterial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public TextLink link;
+
     public ExtraMaterial withLink(TextLink link) {
         this.link = link;
         return this;
@@ -29,9 +30,11 @@ public class ExtraMaterial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video")
     public VideoLink video;
+
     public ExtraMaterial withVideo(VideoLink video) {
         this.video = video;
         return this;
     }
     
+    public ExtraMaterial(){}
 }

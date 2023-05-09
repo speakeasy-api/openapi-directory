@@ -18,6 +18,7 @@ public class Getcampaignaudiences200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beginDateUtc")
     public String beginDateUtc;
+
     public Getcampaignaudiences200ApplicationJSON withBeginDateUtc(String beginDateUtc) {
         this.beginDateUtc = beginDateUtc;
         return this;
@@ -29,6 +30,7 @@ public class Getcampaignaudiences200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDateUtc")
     public String endDateUtc;
+
     public Getcampaignaudiences200ApplicationJSON withEndDateUtc(String endDateUtc) {
         this.endDateUtc = endDateUtc;
         return this;
@@ -40,6 +42,7 @@ public class Getcampaignaudiences200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Getcampaignaudiences200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Getcampaignaudiences200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public Getcampaignaudiences200ApplicationJSON withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -62,6 +66,7 @@ public class Getcampaignaudiences200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAndOperator")
     public Boolean isAndOperator;
+
     public Getcampaignaudiences200ApplicationJSON withIsAndOperator(Boolean isAndOperator) {
         this.isAndOperator = isAndOperator;
         return this;
@@ -73,6 +78,7 @@ public class Getcampaignaudiences200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isArchived")
     public Boolean isArchived;
+
     public Getcampaignaudiences200ApplicationJSON withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -84,6 +90,7 @@ public class Getcampaignaudiences200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModified")
     public Getcampaignaudiences200ApplicationJSONLastModified lastModified;
+
     public Getcampaignaudiences200ApplicationJSON withLastModified(Getcampaignaudiences200ApplicationJSONLastModified lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -95,6 +102,7 @@ public class Getcampaignaudiences200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Getcampaignaudiences200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -106,9 +114,11 @@ public class Getcampaignaudiences200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetConfigurations")
     public Getcampaignaudiences200ApplicationJSONTargetConfigurations[] targetConfigurations;
+
     public Getcampaignaudiences200ApplicationJSON withTargetConfigurations(Getcampaignaudiences200ApplicationJSONTargetConfigurations[] targetConfigurations) {
         this.targetConfigurations = targetConfigurations;
         return this;
     }
     
+    public Getcampaignaudiences200ApplicationJSON(){}
 }

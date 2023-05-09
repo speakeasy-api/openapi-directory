@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Consolidation {
     @JsonProperty("MatchingAttributesList")
     public String[][] matchingAttributesList;
+
     public Consolidation withMatchingAttributesList(String[][] matchingAttributesList) {
         this.matchingAttributesList = matchingAttributesList;
         return this;
     }
     
+    public Consolidation(@JsonProperty("MatchingAttributesList") String[][] matchingAttributesList) {
+        this.matchingAttributesList = matchingAttributesList;
+  }
 }

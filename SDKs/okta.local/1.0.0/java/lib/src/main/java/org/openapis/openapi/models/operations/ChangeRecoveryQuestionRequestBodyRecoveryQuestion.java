@@ -12,6 +12,7 @@ public class ChangeRecoveryQuestionRequestBodyRecoveryQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answer")
     public String answer;
+
     public ChangeRecoveryQuestionRequestBodyRecoveryQuestion withAnswer(String answer) {
         this.answer = answer;
         return this;
@@ -20,9 +21,11 @@ public class ChangeRecoveryQuestionRequestBodyRecoveryQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("question")
     public String question;
+
     public ChangeRecoveryQuestionRequestBodyRecoveryQuestion withQuestion(String question) {
         this.question = question;
         return this;
     }
     
+    public ChangeRecoveryQuestionRequestBodyRecoveryQuestion(){}
 }

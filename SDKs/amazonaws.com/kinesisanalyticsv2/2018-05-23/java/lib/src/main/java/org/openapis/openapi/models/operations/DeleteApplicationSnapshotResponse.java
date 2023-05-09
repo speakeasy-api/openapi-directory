@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApplicationSnapshotResponse {
@@ -12,6 +13,7 @@ public class DeleteApplicationSnapshotResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteApplicationSnapshotResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApplicationSnapshotResponse {
     
     
     public String contentType;
+
     public DeleteApplicationSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteApplicationSnapshotResponse {
      */
     
     public java.util.Map<String, Object> deleteApplicationSnapshotResponse;
+
     public DeleteApplicationSnapshotResponse withDeleteApplicationSnapshotResponse(java.util.Map<String, Object> deleteApplicationSnapshotResponse) {
         this.deleteApplicationSnapshotResponse = deleteApplicationSnapshotResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteApplicationSnapshotResponse {
      */
     
     public Object invalidArgumentException;
+
     public DeleteApplicationSnapshotResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteApplicationSnapshotResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteApplicationSnapshotResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteApplicationSnapshotResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteApplicationSnapshotResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteApplicationSnapshotResponse {
     
     
     public Integer statusCode;
+
     public DeleteApplicationSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteApplicationSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApplicationSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteApplicationSnapshotResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteApplicationSnapshotResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteApplicationSnapshotResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DeleteApplicationSnapshotResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DeleteApplicationSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

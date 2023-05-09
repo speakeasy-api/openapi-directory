@@ -18,6 +18,7 @@ public class ListRowAccessPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListRowAccessPoliciesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListRowAccessPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowAccessPolicies")
     public RowAccessPolicy[] rowAccessPolicies;
+
     public ListRowAccessPoliciesResponse withRowAccessPolicies(RowAccessPolicy[] rowAccessPolicies) {
         this.rowAccessPolicies = rowAccessPolicies;
         return this;
     }
     
+    public ListRowAccessPoliciesResponse(){}
 }

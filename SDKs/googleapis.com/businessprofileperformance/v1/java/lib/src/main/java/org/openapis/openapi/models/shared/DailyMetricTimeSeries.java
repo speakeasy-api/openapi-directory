@@ -18,6 +18,7 @@ public class DailyMetricTimeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailyMetric")
     public DailyMetricTimeSeriesDailyMetricEnum dailyMetric;
+
     public DailyMetricTimeSeries withDailyMetric(DailyMetricTimeSeriesDailyMetricEnum dailyMetric) {
         this.dailyMetric = dailyMetric;
         return this;
@@ -29,6 +30,7 @@ public class DailyMetricTimeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailySubEntityType")
     public DailySubEntityType dailySubEntityType;
+
     public DailyMetricTimeSeries withDailySubEntityType(DailySubEntityType dailySubEntityType) {
         this.dailySubEntityType = dailySubEntityType;
         return this;
@@ -40,9 +42,11 @@ public class DailyMetricTimeSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeries")
     public TimeSeries timeSeries;
+
     public DailyMetricTimeSeries withTimeSeries(TimeSeries timeSeries) {
         this.timeSeries = timeSeries;
         return this;
     }
     
+    public DailyMetricTimeSeries(){}
 }

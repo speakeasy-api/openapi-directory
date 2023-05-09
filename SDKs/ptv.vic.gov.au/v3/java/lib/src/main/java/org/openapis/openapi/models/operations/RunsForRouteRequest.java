@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class RunsForRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_utc")
     public OffsetDateTime dateUtc;
+
     public RunsForRouteRequest withDateUtc(OffsetDateTime dateUtc) {
         this.dateUtc = dateUtc;
         return this;
@@ -23,6 +25,7 @@ public class RunsForRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public RunsForRouteRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -33,6 +36,7 @@ public class RunsForRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public RunsForRouteExpandEnum[] expand;
+
     public RunsForRouteRequest withExpand(RunsForRouteExpandEnum[] expand) {
         this.expand = expand;
         return this;
@@ -43,6 +47,7 @@ public class RunsForRouteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_id")
     public Integer routeId;
+
     public RunsForRouteRequest withRouteId(Integer routeId) {
         this.routeId = routeId;
         return this;
@@ -53,6 +58,7 @@ public class RunsForRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public RunsForRouteRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -63,9 +69,13 @@ public class RunsForRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public RunsForRouteRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public RunsForRouteRequest(@JsonProperty("route_id") Integer routeId) {
+        this.routeId = routeId;
+  }
 }

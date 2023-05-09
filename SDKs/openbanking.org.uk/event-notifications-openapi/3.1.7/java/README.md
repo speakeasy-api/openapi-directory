@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateEventNotificationRequest;
 import org.openapis.openapi.models.operations.CreateEventNotificationResponse;
 
@@ -26,11 +25,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateEventNotificationRequest req = new CreateEventNotificationRequest() {{
-                requestBody = "corrupti";
-                xFapiFinancialId = "provident";
+            CreateEventNotificationRequest req = new CreateEventNotificationRequest("corrupti", "provident") {{
                 xFapiInteractionId = "distinctio";
-            }}            
+            }};            
 
             CreateEventNotificationResponse res = sdk.eventNotification.createEventNotification(req);
 
@@ -40,6 +37,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -47,9 +46,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### eventNotification
+### [eventNotification](docs/eventnotification/README.md)
 
-* `createEventNotification` - Send an event notification
+* [createEventNotification](docs/eventnotification/README.md#createeventnotification) - Send an event notification
 <!-- End SDK Available Operations -->
 
 ### Maturity

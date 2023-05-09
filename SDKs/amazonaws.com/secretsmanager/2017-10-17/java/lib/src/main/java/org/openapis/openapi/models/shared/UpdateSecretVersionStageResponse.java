@@ -15,6 +15,7 @@ public class UpdateSecretVersionStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public UpdateSecretVersionStageResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class UpdateSecretVersionStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateSecretVersionStageResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateSecretVersionStageResponse(){}
 }

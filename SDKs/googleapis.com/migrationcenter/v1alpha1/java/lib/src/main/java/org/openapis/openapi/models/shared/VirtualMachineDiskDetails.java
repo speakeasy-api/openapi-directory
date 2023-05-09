@@ -18,6 +18,7 @@ public class VirtualMachineDiskDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public DiskEntryList disks;
+
     public VirtualMachineDiskDetails withDisks(DiskEntryList disks) {
         this.disks = disks;
         return this;
@@ -29,6 +30,7 @@ public class VirtualMachineDiskDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hddTotalCapacityBytes")
     public String hddTotalCapacityBytes;
+
     public VirtualMachineDiskDetails withHddTotalCapacityBytes(String hddTotalCapacityBytes) {
         this.hddTotalCapacityBytes = hddTotalCapacityBytes;
         return this;
@@ -40,6 +42,7 @@ public class VirtualMachineDiskDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hddTotalFreeBytes")
     public String hddTotalFreeBytes;
+
     public VirtualMachineDiskDetails withHddTotalFreeBytes(String hddTotalFreeBytes) {
         this.hddTotalFreeBytes = hddTotalFreeBytes;
         return this;
@@ -51,9 +54,11 @@ public class VirtualMachineDiskDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lsblkJson")
     public String lsblkJson;
+
     public VirtualMachineDiskDetails withLsblkJson(String lsblkJson) {
         this.lsblkJson = lsblkJson;
         return this;
     }
     
+    public VirtualMachineDiskDetails(){}
 }

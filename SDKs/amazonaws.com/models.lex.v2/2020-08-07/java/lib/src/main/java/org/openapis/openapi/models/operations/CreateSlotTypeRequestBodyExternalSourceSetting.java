@@ -15,9 +15,11 @@ public class CreateSlotTypeRequestBodyExternalSourceSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grammarSlotTypeSetting")
     public org.openapis.openapi.models.shared.GrammarSlotTypeSetting grammarSlotTypeSetting;
+
     public CreateSlotTypeRequestBodyExternalSourceSetting withGrammarSlotTypeSetting(org.openapis.openapi.models.shared.GrammarSlotTypeSetting grammarSlotTypeSetting) {
         this.grammarSlotTypeSetting = grammarSlotTypeSetting;
         return this;
     }
     
+    public CreateSlotTypeRequestBodyExternalSourceSetting(){}
 }

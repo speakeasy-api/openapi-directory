@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteThingShadowResponse {
     
     public String contentType;
+
     public DeleteThingShadowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteThingShadowResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteThingShadowResponse deleteThingShadowResponse;
+
     public DeleteThingShadowResponse withDeleteThingShadowResponse(org.openapis.openapi.models.shared.DeleteThingShadowResponse deleteThingShadowResponse) {
         this.deleteThingShadowResponse = deleteThingShadowResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteThingShadowResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteThingShadowResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteThingShadowResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteThingShadowResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteThingShadowResponse {
      */
     
     public Object methodNotAllowedException;
+
     public DeleteThingShadowResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteThingShadowResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteThingShadowResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteThingShadowResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteThingShadowResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteThingShadowResponse {
     
     
     public Integer statusCode;
+
     public DeleteThingShadowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteThingShadowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteThingShadowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteThingShadowResponse {
      */
     
     public Object throttlingException;
+
     public DeleteThingShadowResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,6 +114,7 @@ public class DeleteThingShadowResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteThingShadowResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -113,9 +125,14 @@ public class DeleteThingShadowResponse {
      */
     
     public Object unsupportedDocumentEncodingException;
+
     public DeleteThingShadowResponse withUnsupportedDocumentEncodingException(Object unsupportedDocumentEncodingException) {
         this.unsupportedDocumentEncodingException = unsupportedDocumentEncodingException;
         return this;
     }
     
+    public DeleteThingShadowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

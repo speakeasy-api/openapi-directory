@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUrlsExportResponse {
     
     public String contentType;
+
     public CreateUrlsExportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateUrlsExportResponse {
      */
     
     public org.openapis.openapi.models.shared.CsvExportStatus csvExportStatus;
+
     public CreateUrlsExportResponse withCsvExportStatus(org.openapis.openapi.models.shared.CsvExportStatus csvExportStatus) {
         this.csvExportStatus = csvExportStatus;
         return this;
@@ -29,6 +32,7 @@ public class CreateUrlsExportResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultPayload defaultPayload;
+
     public CreateUrlsExportResponse withDefaultPayload(org.openapis.openapi.models.shared.DefaultPayload defaultPayload) {
         this.defaultPayload = defaultPayload;
         return this;
@@ -36,6 +40,7 @@ public class CreateUrlsExportResponse {
     
     
     public Integer statusCode;
+
     public CreateUrlsExportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateUrlsExportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUrlsExportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateUrlsExportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class GetTileOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BinaryFile")
     public String binaryFile;
+
     public GetTileOutput withBinaryFile(String binaryFile) {
         this.binaryFile = binaryFile;
         return this;
     }
     
+    public GetTileOutput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDashboardResponse {
     
     public String contentType;
+
     public DeleteDashboardResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDashboardResponse {
      */
     
     public java.util.Map<String, Object> deleteDashboardResponse;
+
     public DeleteDashboardResponse withDeleteDashboardResponse(java.util.Map<String, Object> deleteDashboardResponse) {
         this.deleteDashboardResponse = deleteDashboardResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDashboardResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteDashboardResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDashboardResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteDashboardResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteDashboardResponse {
     
     
     public Integer statusCode;
+
     public DeleteDashboardResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteDashboardResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDashboardResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteDashboardResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteDashboardResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteDashboardResponse {
      */
     
     public Object throttlingException;
+
     public DeleteDashboardResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteDashboardResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

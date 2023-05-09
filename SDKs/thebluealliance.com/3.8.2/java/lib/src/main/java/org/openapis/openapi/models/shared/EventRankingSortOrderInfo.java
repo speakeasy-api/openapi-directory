@@ -12,6 +12,7 @@ public class EventRankingSortOrderInfo {
      */
     @JsonProperty("name")
     public String name;
+
     public EventRankingSortOrderInfo withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,14 @@ public class EventRankingSortOrderInfo {
      */
     @JsonProperty("precision")
     public Long precision;
+
     public EventRankingSortOrderInfo withPrecision(Long precision) {
         this.precision = precision;
         return this;
     }
     
+    public EventRankingSortOrderInfo(@JsonProperty("name") String name, @JsonProperty("precision") Long precision) {
+        this.name = name;
+        this.precision = precision;
+  }
 }

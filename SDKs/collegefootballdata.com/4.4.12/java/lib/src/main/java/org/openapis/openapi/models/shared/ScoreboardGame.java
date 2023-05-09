@@ -12,6 +12,7 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awayTeam")
     public ScoreboardGameAwayTeam awayTeam;
+
     public ScoreboardGame withAwayTeam(ScoreboardGameAwayTeam awayTeam) {
         this.awayTeam = awayTeam;
         return this;
@@ -20,6 +21,7 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("betting")
     public ScoreboardGameBetting betting;
+
     public ScoreboardGame withBetting(ScoreboardGameBetting betting) {
         this.betting = betting;
         return this;
@@ -28,6 +30,7 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clock")
     public String clock;
+
     public ScoreboardGame withClock(String clock) {
         this.clock = clock;
         return this;
@@ -36,6 +39,7 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conferenceGame")
     public Boolean conferenceGame;
+
     public ScoreboardGame withConferenceGame(Boolean conferenceGame) {
         this.conferenceGame = conferenceGame;
         return this;
@@ -44,6 +48,7 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeTeam")
     public ScoreboardGameHomeTeam homeTeam;
+
     public ScoreboardGame withHomeTeam(ScoreboardGameHomeTeam homeTeam) {
         this.homeTeam = homeTeam;
         return this;
@@ -52,6 +57,7 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ScoreboardGame withId(Long id) {
         this.id = id;
         return this;
@@ -60,6 +66,7 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("neutralSite")
     public Boolean neutralSite;
+
     public ScoreboardGame withNeutralSite(Boolean neutralSite) {
         this.neutralSite = neutralSite;
         return this;
@@ -68,6 +75,7 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public Long period;
+
     public ScoreboardGame withPeriod(Long period) {
         this.period = period;
         return this;
@@ -76,6 +84,7 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("possession")
     public String possession;
+
     public ScoreboardGame withPossession(String possession) {
         this.possession = possession;
         return this;
@@ -84,6 +93,7 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("situation")
     public String situation;
+
     public ScoreboardGame withSituation(String situation) {
         this.situation = situation;
         return this;
@@ -92,6 +102,7 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public ScoreboardGame withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -100,6 +111,7 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeTBD")
     public Boolean startTimeTBD;
+
     public ScoreboardGame withStartTimeTBD(Boolean startTimeTBD) {
         this.startTimeTBD = startTimeTBD;
         return this;
@@ -108,6 +120,7 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ScoreboardGame withStatus(String status) {
         this.status = status;
         return this;
@@ -116,6 +129,7 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tv")
     public String tv;
+
     public ScoreboardGame withTv(String tv) {
         this.tv = tv;
         return this;
@@ -124,6 +138,7 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("venue")
     public ScoreboardGameVenue venue;
+
     public ScoreboardGame withVenue(ScoreboardGameVenue venue) {
         this.venue = venue;
         return this;
@@ -132,9 +147,11 @@ public class ScoreboardGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weather")
     public ScoreboardGameWeather weather;
+
     public ScoreboardGame withWeather(ScoreboardGameWeather weather) {
         this.weather = weather;
         return this;
     }
     
+    public ScoreboardGame(){}
 }

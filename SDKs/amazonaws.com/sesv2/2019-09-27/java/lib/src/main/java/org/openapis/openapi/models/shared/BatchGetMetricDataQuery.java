@@ -20,6 +20,7 @@ public class BatchGetMetricDataQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public java.util.Map<String, String> dimensions;
+
     public BatchGetMetricDataQuery withDimensions(java.util.Map<String, String> dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -29,6 +30,7 @@ public class BatchGetMetricDataQuery {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndDate")
     public OffsetDateTime endDate;
+
     public BatchGetMetricDataQuery withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -36,6 +38,7 @@ public class BatchGetMetricDataQuery {
     
     @JsonProperty("Id")
     public String id;
+
     public BatchGetMetricDataQuery withId(String id) {
         this.id = id;
         return this;
@@ -43,6 +46,7 @@ public class BatchGetMetricDataQuery {
     
     @JsonProperty("Metric")
     public MetricEnum metric;
+
     public BatchGetMetricDataQuery withMetric(MetricEnum metric) {
         this.metric = metric;
         return this;
@@ -50,6 +54,7 @@ public class BatchGetMetricDataQuery {
     
     @JsonProperty("Namespace")
     public MetricNamespaceEnum namespace;
+
     public BatchGetMetricDataQuery withNamespace(MetricNamespaceEnum namespace) {
         this.namespace = namespace;
         return this;
@@ -59,9 +64,17 @@ public class BatchGetMetricDataQuery {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartDate")
     public OffsetDateTime startDate;
+
     public BatchGetMetricDataQuery withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public BatchGetMetricDataQuery(@JsonProperty("EndDate") OffsetDateTime endDate, @JsonProperty("Id") String id, @JsonProperty("Metric") MetricEnum metric, @JsonProperty("Namespace") MetricNamespaceEnum namespace, @JsonProperty("StartDate") OffsetDateTime startDate) {
+        this.endDate = endDate;
+        this.id = id;
+        this.metric = metric;
+        this.namespace = namespace;
+        this.startDate = startDate;
+  }
 }

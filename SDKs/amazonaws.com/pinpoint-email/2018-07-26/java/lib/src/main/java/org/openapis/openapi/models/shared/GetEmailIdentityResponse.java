@@ -15,6 +15,7 @@ public class GetEmailIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DkimAttributes")
     public DkimAttributes dkimAttributes;
+
     public GetEmailIdentityResponse withDkimAttributes(DkimAttributes dkimAttributes) {
         this.dkimAttributes = dkimAttributes;
         return this;
@@ -23,6 +24,7 @@ public class GetEmailIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeedbackForwardingStatus")
     public Boolean feedbackForwardingStatus;
+
     public GetEmailIdentityResponse withFeedbackForwardingStatus(Boolean feedbackForwardingStatus) {
         this.feedbackForwardingStatus = feedbackForwardingStatus;
         return this;
@@ -31,6 +33,7 @@ public class GetEmailIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityType")
     public IdentityTypeEnum identityType;
+
     public GetEmailIdentityResponse withIdentityType(IdentityTypeEnum identityType) {
         this.identityType = identityType;
         return this;
@@ -39,6 +42,7 @@ public class GetEmailIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MailFromAttributes")
     public MailFromAttributes mailFromAttributes;
+
     public GetEmailIdentityResponse withMailFromAttributes(MailFromAttributes mailFromAttributes) {
         this.mailFromAttributes = mailFromAttributes;
         return this;
@@ -47,6 +51,7 @@ public class GetEmailIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public GetEmailIdentityResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -55,9 +60,11 @@ public class GetEmailIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VerifiedForSendingStatus")
     public Boolean verifiedForSendingStatus;
+
     public GetEmailIdentityResponse withVerifiedForSendingStatus(Boolean verifiedForSendingStatus) {
         this.verifiedForSendingStatus = verifiedForSendingStatus;
         return this;
     }
     
+    public GetEmailIdentityResponse(){}
 }

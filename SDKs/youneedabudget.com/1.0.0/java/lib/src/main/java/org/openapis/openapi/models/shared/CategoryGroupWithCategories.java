@@ -12,6 +12,7 @@ public class CategoryGroupWithCategories {
      */
     @JsonProperty("categories")
     public Category[] categories;
+
     public CategoryGroupWithCategories withCategories(Category[] categories) {
         this.categories = categories;
         return this;
@@ -22,6 +23,7 @@ public class CategoryGroupWithCategories {
      */
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public CategoryGroupWithCategories withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -32,6 +34,7 @@ public class CategoryGroupWithCategories {
      */
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public CategoryGroupWithCategories withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -39,6 +42,7 @@ public class CategoryGroupWithCategories {
     
     @JsonProperty("id")
     public String id;
+
     public CategoryGroupWithCategories withId(String id) {
         this.id = id;
         return this;
@@ -46,9 +50,17 @@ public class CategoryGroupWithCategories {
     
     @JsonProperty("name")
     public String name;
+
     public CategoryGroupWithCategories withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CategoryGroupWithCategories(@JsonProperty("categories") Category[] categories, @JsonProperty("deleted") Boolean deleted, @JsonProperty("hidden") Boolean hidden, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.categories = categories;
+        this.deleted = deleted;
+        this.hidden = hidden;
+        this.id = id;
+        this.name = name;
+  }
 }

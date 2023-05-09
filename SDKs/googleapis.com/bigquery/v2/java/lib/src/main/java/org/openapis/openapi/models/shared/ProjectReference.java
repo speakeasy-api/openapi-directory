@@ -15,9 +15,11 @@ public class ProjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public ProjectReference withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public ProjectReference(){}
 }

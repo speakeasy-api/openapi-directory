@@ -15,6 +15,7 @@ public class ClassificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalOccurrences")
     public Boolean additionalOccurrences;
+
     public ClassificationResult withAdditionalOccurrences(Boolean additionalOccurrences) {
         this.additionalOccurrences = additionalOccurrences;
         return this;
@@ -23,6 +24,7 @@ public class ClassificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomDataIdentifiers")
     public CustomDataIdentifiersResult customDataIdentifiers;
+
     public ClassificationResult withCustomDataIdentifiers(CustomDataIdentifiersResult customDataIdentifiers) {
         this.customDataIdentifiers = customDataIdentifiers;
         return this;
@@ -31,6 +33,7 @@ public class ClassificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MimeType")
     public String mimeType;
+
     public ClassificationResult withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -39,6 +42,7 @@ public class ClassificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SensitiveData")
     public SensitiveDataResult[] sensitiveData;
+
     public ClassificationResult withSensitiveData(SensitiveDataResult[] sensitiveData) {
         this.sensitiveData = sensitiveData;
         return this;
@@ -47,6 +51,7 @@ public class ClassificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeClassified")
     public Long sizeClassified;
+
     public ClassificationResult withSizeClassified(Long sizeClassified) {
         this.sizeClassified = sizeClassified;
         return this;
@@ -55,9 +60,11 @@ public class ClassificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ClassificationStatus status;
+
     public ClassificationResult withStatus(ClassificationStatus status) {
         this.status = status;
         return this;
     }
     
+    public ClassificationResult(){}
 }

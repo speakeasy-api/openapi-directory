@@ -15,6 +15,7 @@ public class GetAllAccounts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public org.openapis.openapi.models.shared.GetAllAccountResponse[] embedded;
+
     public GetAllAccounts200ApplicationJSON withEmbedded(org.openapis.openapi.models.shared.GetAllAccountResponse[] embedded) {
         this.embedded = embedded;
         return this;
@@ -23,6 +24,7 @@ public class GetAllAccounts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public GetAllAccounts200ApplicationJSONLinks links;
+
     public GetAllAccounts200ApplicationJSON withLinks(GetAllAccounts200ApplicationJSONLinks links) {
         this.links = links;
         return this;
@@ -31,6 +33,7 @@ public class GetAllAccounts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_number")
     public Long pageNumber;
+
     public GetAllAccounts200ApplicationJSON withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -39,9 +42,11 @@ public class GetAllAccounts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_size")
     public Long pageSize;
+
     public GetAllAccounts200ApplicationJSON withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetAllAccounts200ApplicationJSON(){}
 }

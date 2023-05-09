@@ -17,8 +17,9 @@ public class RecognitionConfigInput {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adaptation")
-    public SpeechAdaptation adaptation;
-    public RecognitionConfigInput withAdaptation(SpeechAdaptation adaptation) {
+    public SpeechAdaptationInput adaptation;
+
+    public RecognitionConfigInput withAdaptation(SpeechAdaptationInput adaptation) {
         this.adaptation = adaptation;
         return this;
     }
@@ -29,6 +30,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternativeLanguageCodes")
     public String[] alternativeLanguageCodes;
+
     public RecognitionConfigInput withAlternativeLanguageCodes(String[] alternativeLanguageCodes) {
         this.alternativeLanguageCodes = alternativeLanguageCodes;
         return this;
@@ -40,6 +42,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioChannelCount")
     public Integer audioChannelCount;
+
     public RecognitionConfigInput withAudioChannelCount(Integer audioChannelCount) {
         this.audioChannelCount = audioChannelCount;
         return this;
@@ -51,6 +54,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diarizationConfig")
     public SpeakerDiarizationConfigInput diarizationConfig;
+
     public RecognitionConfigInput withDiarizationConfig(SpeakerDiarizationConfigInput diarizationConfig) {
         this.diarizationConfig = diarizationConfig;
         return this;
@@ -62,6 +66,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAutomaticPunctuation")
     public Boolean enableAutomaticPunctuation;
+
     public RecognitionConfigInput withEnableAutomaticPunctuation(Boolean enableAutomaticPunctuation) {
         this.enableAutomaticPunctuation = enableAutomaticPunctuation;
         return this;
@@ -73,6 +78,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSeparateRecognitionPerChannel")
     public Boolean enableSeparateRecognitionPerChannel;
+
     public RecognitionConfigInput withEnableSeparateRecognitionPerChannel(Boolean enableSeparateRecognitionPerChannel) {
         this.enableSeparateRecognitionPerChannel = enableSeparateRecognitionPerChannel;
         return this;
@@ -84,6 +90,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSpokenEmojis")
     public Boolean enableSpokenEmojis;
+
     public RecognitionConfigInput withEnableSpokenEmojis(Boolean enableSpokenEmojis) {
         this.enableSpokenEmojis = enableSpokenEmojis;
         return this;
@@ -95,6 +102,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSpokenPunctuation")
     public Boolean enableSpokenPunctuation;
+
     public RecognitionConfigInput withEnableSpokenPunctuation(Boolean enableSpokenPunctuation) {
         this.enableSpokenPunctuation = enableSpokenPunctuation;
         return this;
@@ -106,6 +114,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableWordConfidence")
     public Boolean enableWordConfidence;
+
     public RecognitionConfigInput withEnableWordConfidence(Boolean enableWordConfidence) {
         this.enableWordConfidence = enableWordConfidence;
         return this;
@@ -117,6 +126,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableWordTimeOffsets")
     public Boolean enableWordTimeOffsets;
+
     public RecognitionConfigInput withEnableWordTimeOffsets(Boolean enableWordTimeOffsets) {
         this.enableWordTimeOffsets = enableWordTimeOffsets;
         return this;
@@ -128,6 +138,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding")
     public RecognitionConfigEncodingEnum encoding;
+
     public RecognitionConfigInput withEncoding(RecognitionConfigEncodingEnum encoding) {
         this.encoding = encoding;
         return this;
@@ -139,6 +150,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public RecognitionConfigInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -150,6 +162,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAlternatives")
     public Integer maxAlternatives;
+
     public RecognitionConfigInput withMaxAlternatives(Integer maxAlternatives) {
         this.maxAlternatives = maxAlternatives;
         return this;
@@ -161,6 +174,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public RecognitionMetadata metadata;
+
     public RecognitionConfigInput withMetadata(RecognitionMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -172,6 +186,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public RecognitionConfigInput withModel(String model) {
         this.model = model;
         return this;
@@ -183,6 +198,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profanityFilter")
     public Boolean profanityFilter;
+
     public RecognitionConfigInput withProfanityFilter(Boolean profanityFilter) {
         this.profanityFilter = profanityFilter;
         return this;
@@ -194,6 +210,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleRateHertz")
     public Integer sampleRateHertz;
+
     public RecognitionConfigInput withSampleRateHertz(Integer sampleRateHertz) {
         this.sampleRateHertz = sampleRateHertz;
         return this;
@@ -205,6 +222,7 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speechContexts")
     public SpeechContext[] speechContexts;
+
     public RecognitionConfigInput withSpeechContexts(SpeechContext[] speechContexts) {
         this.speechContexts = speechContexts;
         return this;
@@ -216,9 +234,11 @@ public class RecognitionConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useEnhanced")
     public Boolean useEnhanced;
+
     public RecognitionConfigInput withUseEnhanced(Boolean useEnhanced) {
         this.useEnhanced = useEnhanced;
         return this;
     }
     
+    public RecognitionConfigInput(){}
 }

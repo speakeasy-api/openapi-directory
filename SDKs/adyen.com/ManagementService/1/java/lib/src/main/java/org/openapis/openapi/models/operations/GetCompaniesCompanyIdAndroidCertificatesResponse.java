@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCompaniesCompanyIdAndroidCertificatesResponse {
@@ -12,6 +13,7 @@ public class GetCompaniesCompanyIdAndroidCertificatesResponse {
      */
     
     public org.openapis.openapi.models.shared.AndroidCertificatesResponse androidCertificatesResponse;
+
     public GetCompaniesCompanyIdAndroidCertificatesResponse withAndroidCertificatesResponse(org.openapis.openapi.models.shared.AndroidCertificatesResponse androidCertificatesResponse) {
         this.androidCertificatesResponse = androidCertificatesResponse;
         return this;
@@ -19,6 +21,7 @@ public class GetCompaniesCompanyIdAndroidCertificatesResponse {
     
     
     public String contentType;
+
     public GetCompaniesCompanyIdAndroidCertificatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCompaniesCompanyIdAndroidCertificatesResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetCompaniesCompanyIdAndroidCertificatesResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class GetCompaniesCompanyIdAndroidCertificatesResponse {
     
     
     public Integer statusCode;
+
     public GetCompaniesCompanyIdAndroidCertificatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCompaniesCompanyIdAndroidCertificatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCompaniesCompanyIdAndroidCertificatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCompaniesCompanyIdAndroidCertificatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

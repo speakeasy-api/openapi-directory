@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAssessmentReportResponse {
     @JsonProperty("status")
     public ReportStatusEnum status;
+
     public GetAssessmentReportResponse withStatus(ReportStatusEnum status) {
         this.status = status;
         return this;
@@ -22,9 +23,13 @@ public class GetAssessmentReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GetAssessmentReportResponse withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GetAssessmentReportResponse(@JsonProperty("status") ReportStatusEnum status) {
+        this.status = status;
+  }
 }

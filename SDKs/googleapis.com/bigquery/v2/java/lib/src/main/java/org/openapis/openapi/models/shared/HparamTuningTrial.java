@@ -18,6 +18,7 @@ public class HparamTuningTrial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTimeMs")
     public String endTimeMs;
+
     public HparamTuningTrial withEndTimeMs(String endTimeMs) {
         this.endTimeMs = endTimeMs;
         return this;
@@ -29,6 +30,7 @@ public class HparamTuningTrial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public HparamTuningTrial withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -40,6 +42,7 @@ public class HparamTuningTrial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evalLoss")
     public Double evalLoss;
+
     public HparamTuningTrial withEvalLoss(Double evalLoss) {
         this.evalLoss = evalLoss;
         return this;
@@ -51,6 +54,7 @@ public class HparamTuningTrial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationMetrics")
     public EvaluationMetrics evaluationMetrics;
+
     public HparamTuningTrial withEvaluationMetrics(EvaluationMetrics evaluationMetrics) {
         this.evaluationMetrics = evaluationMetrics;
         return this;
@@ -62,6 +66,7 @@ public class HparamTuningTrial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hparamTuningEvaluationMetrics")
     public EvaluationMetrics hparamTuningEvaluationMetrics;
+
     public HparamTuningTrial withHparamTuningEvaluationMetrics(EvaluationMetrics hparamTuningEvaluationMetrics) {
         this.hparamTuningEvaluationMetrics = hparamTuningEvaluationMetrics;
         return this;
@@ -73,6 +78,7 @@ public class HparamTuningTrial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hparams")
     public TrainingOptions hparams;
+
     public HparamTuningTrial withHparams(TrainingOptions hparams) {
         this.hparams = hparams;
         return this;
@@ -84,6 +90,7 @@ public class HparamTuningTrial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeMs")
     public String startTimeMs;
+
     public HparamTuningTrial withStartTimeMs(String startTimeMs) {
         this.startTimeMs = startTimeMs;
         return this;
@@ -95,6 +102,7 @@ public class HparamTuningTrial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public HparamTuningTrialStatusEnum status;
+
     public HparamTuningTrial withStatus(HparamTuningTrialStatusEnum status) {
         this.status = status;
         return this;
@@ -106,6 +114,7 @@ public class HparamTuningTrial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingLoss")
     public Double trainingLoss;
+
     public HparamTuningTrial withTrainingLoss(Double trainingLoss) {
         this.trainingLoss = trainingLoss;
         return this;
@@ -117,9 +126,11 @@ public class HparamTuningTrial {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trialId")
     public String trialId;
+
     public HparamTuningTrial withTrialId(String trialId) {
         this.trialId = trialId;
         return this;
     }
     
+    public HparamTuningTrial(){}
 }

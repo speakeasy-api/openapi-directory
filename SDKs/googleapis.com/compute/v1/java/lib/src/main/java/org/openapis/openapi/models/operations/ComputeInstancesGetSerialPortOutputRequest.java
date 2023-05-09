@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeInstancesGetSerialPortOutputRequest {
@@ -12,6 +13,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeInstancesGetSerialPortOutputRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeInstancesGetSerialPortOutputRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeInstancesGetSerialPortOutputRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeInstancesGetSerialPortOutputRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeInstancesGetSerialPortOutputRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instance")
     public String instance;
+
     public ComputeInstancesGetSerialPortOutputRequest withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -72,6 +79,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeInstancesGetSerialPortOutputRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeInstancesGetSerialPortOutputRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=port")
     public Long port;
+
     public ComputeInstancesGetSerialPortOutputRequest withPort(Long port) {
         this.port = port;
         return this;
@@ -102,6 +112,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeInstancesGetSerialPortOutputRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeInstancesGetSerialPortOutputRequest withProject(String project) {
         this.project = project;
         return this;
@@ -122,6 +134,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeInstancesGetSerialPortOutputRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public ComputeInstancesGetSerialPortOutputRequest withStart(String start) {
         this.start = start;
         return this;
@@ -142,6 +156,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeInstancesGetSerialPortOutputRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,6 +167,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeInstancesGetSerialPortOutputRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -162,6 +178,7 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeInstancesGetSerialPortOutputRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -172,9 +189,15 @@ public class ComputeInstancesGetSerialPortOutputRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
     public String zone;
+
     public ComputeInstancesGetSerialPortOutputRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ComputeInstancesGetSerialPortOutputRequest(@JsonProperty("instance") String instance, @JsonProperty("project") String project, @JsonProperty("zone") String zone) {
+        this.instance = instance;
+        this.project = project;
+        this.zone = zone;
+  }
 }

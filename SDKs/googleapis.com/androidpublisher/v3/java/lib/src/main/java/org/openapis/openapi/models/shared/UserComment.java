@@ -18,6 +18,7 @@ public class UserComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidOsVersion")
     public Integer androidOsVersion;
+
     public UserComment withAndroidOsVersion(Integer androidOsVersion) {
         this.androidOsVersion = androidOsVersion;
         return this;
@@ -29,6 +30,7 @@ public class UserComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appVersionCode")
     public Integer appVersionCode;
+
     public UserComment withAppVersionCode(Integer appVersionCode) {
         this.appVersionCode = appVersionCode;
         return this;
@@ -40,6 +42,7 @@ public class UserComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appVersionName")
     public String appVersionName;
+
     public UserComment withAppVersionName(String appVersionName) {
         this.appVersionName = appVersionName;
         return this;
@@ -51,6 +54,7 @@ public class UserComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public String device;
+
     public UserComment withDevice(String device) {
         this.device = device;
         return this;
@@ -62,6 +66,7 @@ public class UserComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceMetadata")
     public DeviceMetadata deviceMetadata;
+
     public UserComment withDeviceMetadata(DeviceMetadata deviceMetadata) {
         this.deviceMetadata = deviceMetadata;
         return this;
@@ -73,6 +78,7 @@ public class UserComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModified")
     public Timestamp lastModified;
+
     public UserComment withLastModified(Timestamp lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -84,6 +90,7 @@ public class UserComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalText")
     public String originalText;
+
     public UserComment withOriginalText(String originalText) {
         this.originalText = originalText;
         return this;
@@ -95,6 +102,7 @@ public class UserComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewerLanguage")
     public String reviewerLanguage;
+
     public UserComment withReviewerLanguage(String reviewerLanguage) {
         this.reviewerLanguage = reviewerLanguage;
         return this;
@@ -106,6 +114,7 @@ public class UserComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starRating")
     public Integer starRating;
+
     public UserComment withStarRating(Integer starRating) {
         this.starRating = starRating;
         return this;
@@ -117,6 +126,7 @@ public class UserComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public UserComment withText(String text) {
         this.text = text;
         return this;
@@ -128,6 +138,7 @@ public class UserComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbsDownCount")
     public Integer thumbsDownCount;
+
     public UserComment withThumbsDownCount(Integer thumbsDownCount) {
         this.thumbsDownCount = thumbsDownCount;
         return this;
@@ -139,9 +150,11 @@ public class UserComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbsUpCount")
     public Integer thumbsUpCount;
+
     public UserComment withThumbsUpCount(Integer thumbsUpCount) {
         this.thumbsUpCount = thumbsUpCount;
         return this;
     }
     
+    public UserComment(){}
 }

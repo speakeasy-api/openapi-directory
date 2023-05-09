@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRiddleRequest {
@@ -12,9 +13,13 @@ public class DeleteRiddleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public DeleteRiddleRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteRiddleRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRotationOverrideResponse {
@@ -12,6 +13,7 @@ public class CreateRotationOverrideResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateRotationOverrideResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateRotationOverrideResponse {
     
     
     public String contentType;
+
     public CreateRotationOverrideResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateRotationOverrideResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRotationOverrideResult createRotationOverrideResult;
+
     public CreateRotationOverrideResponse withCreateRotationOverrideResult(org.openapis.openapi.models.shared.CreateRotationOverrideResult createRotationOverrideResult) {
         this.createRotationOverrideResult = createRotationOverrideResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateRotationOverrideResponse {
      */
     
     public Object internalServerException;
+
     public CreateRotationOverrideResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class CreateRotationOverrideResponse {
     
     
     public Integer statusCode;
+
     public CreateRotationOverrideResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateRotationOverrideResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRotationOverrideResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateRotationOverrideResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateRotationOverrideResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class CreateRotationOverrideResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateRotationOverrideResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateRotationOverrideResponse {
      */
     
     public Object throttlingException;
+
     public CreateRotationOverrideResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateRotationOverrideResponse {
      */
     
     public Object validationException;
+
     public CreateRotationOverrideResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateRotationOverrideResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

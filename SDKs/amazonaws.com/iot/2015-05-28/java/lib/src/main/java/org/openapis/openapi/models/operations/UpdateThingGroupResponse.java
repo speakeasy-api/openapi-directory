@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateThingGroupResponse {
     
     public String contentType;
+
     public UpdateThingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateThingGroupResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateThingGroupResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateThingGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateThingGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateThingGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateThingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateThingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateThingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateThingGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateThingGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateThingGroupResponse {
      */
     
     public Object throttlingException;
+
     public UpdateThingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateThingGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateThingGroupResponse updateThingGroupResponse;
+
     public UpdateThingGroupResponse withUpdateThingGroupResponse(org.openapis.openapi.models.shared.UpdateThingGroupResponse updateThingGroupResponse) {
         this.updateThingGroupResponse = updateThingGroupResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateThingGroupResponse {
      */
     
     public Object versionConflictException;
+
     public UpdateThingGroupResponse withVersionConflictException(Object versionConflictException) {
         this.versionConflictException = versionConflictException;
         return this;
     }
     
+    public UpdateThingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

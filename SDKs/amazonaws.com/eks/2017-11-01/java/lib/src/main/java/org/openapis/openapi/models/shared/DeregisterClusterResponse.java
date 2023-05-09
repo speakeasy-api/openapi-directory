@@ -18,9 +18,11 @@ public class DeregisterClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public Cluster cluster;
+
     public DeregisterClusterResponse withCluster(Cluster cluster) {
         this.cluster = cluster;
         return this;
     }
     
+    public DeregisterClusterResponse(){}
 }

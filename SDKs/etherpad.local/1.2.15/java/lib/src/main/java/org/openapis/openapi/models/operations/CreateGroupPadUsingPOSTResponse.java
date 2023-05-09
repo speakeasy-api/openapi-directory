@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGroupPadUsingPOSTResponse {
     
     public String contentType;
+
     public CreateGroupPadUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateGroupPadUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public CreateGroupPadUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateGroupPadUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGroupPadUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateGroupPadUsingPOSTResponse {
      */
     
     public CreateGroupPadUsingPOST200ApplicationJSON createGroupPadUsingPOST200ApplicationJSONObject;
+
     public CreateGroupPadUsingPOSTResponse withCreateGroupPadUsingPOST200ApplicationJSONObject(CreateGroupPadUsingPOST200ApplicationJSON createGroupPadUsingPOST200ApplicationJSONObject) {
         this.createGroupPadUsingPOST200ApplicationJSONObject = createGroupPadUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreateGroupPadUsingPOSTResponse {
      */
     
     public CreateGroupPadUsingPOST400ApplicationJSON createGroupPadUsingPOST400ApplicationJSONObject;
+
     public CreateGroupPadUsingPOSTResponse withCreateGroupPadUsingPOST400ApplicationJSONObject(CreateGroupPadUsingPOST400ApplicationJSON createGroupPadUsingPOST400ApplicationJSONObject) {
         this.createGroupPadUsingPOST400ApplicationJSONObject = createGroupPadUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateGroupPadUsingPOSTResponse {
      */
     
     public CreateGroupPadUsingPOST401ApplicationJSON createGroupPadUsingPOST401ApplicationJSONObject;
+
     public CreateGroupPadUsingPOSTResponse withCreateGroupPadUsingPOST401ApplicationJSONObject(CreateGroupPadUsingPOST401ApplicationJSON createGroupPadUsingPOST401ApplicationJSONObject) {
         this.createGroupPadUsingPOST401ApplicationJSONObject = createGroupPadUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreateGroupPadUsingPOSTResponse {
      */
     
     public CreateGroupPadUsingPOST500ApplicationJSON createGroupPadUsingPOST500ApplicationJSONObject;
+
     public CreateGroupPadUsingPOSTResponse withCreateGroupPadUsingPOST500ApplicationJSONObject(CreateGroupPadUsingPOST500ApplicationJSON createGroupPadUsingPOST500ApplicationJSONObject) {
         this.createGroupPadUsingPOST500ApplicationJSONObject = createGroupPadUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public CreateGroupPadUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

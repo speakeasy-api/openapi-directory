@@ -15,6 +15,7 @@ public class ListPermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public ListPermissionsRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -26,6 +27,7 @@ public class ListPermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeRelated")
     public String includeRelated;
+
     public ListPermissionsRequestBody withIncludeRelated(String includeRelated) {
         this.includeRelated = includeRelated;
         return this;
@@ -37,6 +39,7 @@ public class ListPermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPermissionsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -48,6 +51,7 @@ public class ListPermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPermissionsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -59,6 +63,7 @@ public class ListPermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Principal")
     public ListPermissionsRequestBodyPrincipal principal;
+
     public ListPermissionsRequestBody withPrincipal(ListPermissionsRequestBodyPrincipal principal) {
         this.principal = principal;
         return this;
@@ -70,6 +75,7 @@ public class ListPermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resource")
     public ListPermissionsRequestBodyResource resource;
+
     public ListPermissionsRequestBody withResource(ListPermissionsRequestBodyResource resource) {
         this.resource = resource;
         return this;
@@ -81,9 +87,11 @@ public class ListPermissionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ListPermissionsRequestBodyResourceTypeEnum resourceType;
+
     public ListPermissionsRequestBody withResourceType(ListPermissionsRequestBodyResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ListPermissionsRequestBody(){}
 }

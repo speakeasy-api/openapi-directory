@@ -46,4 +46,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Comparison.java
 lib/src/main/java/org/openapis/openapi/models/shared/Element.java
 lib/src/main/java/org/openapis/openapi/models/shared/FullComparisonTestBase.java
 lib/src/main/java/org/openapis/openapi/models/shared/FullComparisonTest.java
+docs/sdk/README.md
 USAGE.md

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTagsResponse {
@@ -12,6 +13,7 @@ public class CreateTagsResponse {
      */
     
     public Object authorizationErrorException;
+
     public CreateTagsResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class CreateTagsResponse {
     
     
     public String contentType;
+
     public CreateTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateTagsResponse {
      */
     
     public java.util.Map<String, Object> createTagsResponse;
+
     public CreateTagsResponse withCreateTagsResponse(java.util.Map<String, Object> createTagsResponse) {
         this.createTagsResponse = createTagsResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateTagsResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public CreateTagsResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class CreateTagsResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateTagsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateTagsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CreateTagsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -66,6 +73,7 @@ public class CreateTagsResponse {
     
     
     public Integer statusCode;
+
     public CreateTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateTagsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateTagsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class CreateTagsResponse {
      */
     
     public Object serverInternalErrorException;
+
     public CreateTagsResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
     }
     
+    public CreateTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

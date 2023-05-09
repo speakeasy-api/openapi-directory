@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IsMemberInGroupsResponse {
     @JsonProperty("Results")
     public GroupMembershipExistenceResult[] results;
+
     public IsMemberInGroupsResponse withResults(GroupMembershipExistenceResult[] results) {
         this.results = results;
         return this;
     }
     
+    public IsMemberInGroupsResponse(@JsonProperty("Results") GroupMembershipExistenceResult[] results) {
+        this.results = results;
+  }
 }

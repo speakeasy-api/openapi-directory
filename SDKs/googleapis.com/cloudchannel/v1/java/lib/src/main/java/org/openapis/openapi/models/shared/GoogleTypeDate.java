@@ -18,6 +18,7 @@ public class GoogleTypeDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day")
     public Integer day;
+
     public GoogleTypeDate withDay(Integer day) {
         this.day = day;
         return this;
@@ -29,6 +30,7 @@ public class GoogleTypeDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("month")
     public Integer month;
+
     public GoogleTypeDate withMonth(Integer month) {
         this.month = month;
         return this;
@@ -40,9 +42,11 @@ public class GoogleTypeDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Integer year;
+
     public GoogleTypeDate withYear(Integer year) {
         this.year = year;
         return this;
     }
     
+    public GoogleTypeDate(){}
 }

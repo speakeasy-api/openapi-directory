@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CancelSpotFleetRequestsResponseUnsuccessfulFleetRequests {
     
     public CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsError error;
+
     public CancelSpotFleetRequestsResponseUnsuccessfulFleetRequests withError(CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsError error) {
         this.error = error;
         return this;
@@ -19,9 +20,11 @@ public class CancelSpotFleetRequestsResponseUnsuccessfulFleetRequests {
     
     
     public String spotFleetRequestId;
+
     public CancelSpotFleetRequestsResponseUnsuccessfulFleetRequests withSpotFleetRequestId(String spotFleetRequestId) {
         this.spotFleetRequestId = spotFleetRequestId;
         return this;
     }
     
+    public CancelSpotFleetRequestsResponseUnsuccessfulFleetRequests(){}
 }

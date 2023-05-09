@@ -12,6 +12,7 @@ public class ListMonitoringAlertsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListMonitoringAlertsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -19,6 +20,7 @@ public class ListMonitoringAlertsRequest {
     
     @JsonProperty("MonitoringScheduleName")
     public String monitoringScheduleName;
+
     public ListMonitoringAlertsRequest withMonitoringScheduleName(String monitoringScheduleName) {
         this.monitoringScheduleName = monitoringScheduleName;
         return this;
@@ -27,9 +29,13 @@ public class ListMonitoringAlertsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMonitoringAlertsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMonitoringAlertsRequest(@JsonProperty("MonitoringScheduleName") String monitoringScheduleName) {
+        this.monitoringScheduleName = monitoringScheduleName;
+  }
 }

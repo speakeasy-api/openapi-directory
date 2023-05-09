@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiChangeStatusFormRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.ChangeOrderStatusApiModel changeOrderStatusApiModel;
+
     public OrderApiChangeStatusFormRequest withChangeOrderStatusApiModel(org.openapis.openapi.models.shared.ChangeOrderStatusApiModel changeOrderStatusApiModel) {
         this.changeOrderStatusApiModel = changeOrderStatusApiModel;
         return this;
@@ -16,6 +18,7 @@ public class OrderApiChangeStatusFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public OrderApiChangeStatusFormRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class OrderApiChangeStatusFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public OrderApiChangeStatusFormRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public OrderApiChangeStatusFormRequest(@JsonProperty("ChangeOrderStatusApiModel") org.openapis.openapi.models.shared.ChangeOrderStatusApiModel changeOrderStatusApiModel, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.changeOrderStatusApiModel = changeOrderStatusApiModel;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

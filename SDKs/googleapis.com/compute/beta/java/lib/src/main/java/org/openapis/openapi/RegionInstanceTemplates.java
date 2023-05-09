@@ -59,11 +59,9 @@ public class RegionInstanceTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class RegionInstanceTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesGetResponse(contentType, httpRes.statusCode()) {{
             instanceTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class RegionInstanceTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class RegionInstanceTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesListResponse(contentType, httpRes.statusCode()) {{
             instanceTemplateList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

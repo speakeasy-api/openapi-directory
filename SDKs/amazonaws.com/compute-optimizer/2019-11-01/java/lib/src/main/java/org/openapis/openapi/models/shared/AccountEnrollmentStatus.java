@@ -20,6 +20,7 @@ public class AccountEnrollmentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public AccountEnrollmentStatus withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -30,6 +31,7 @@ public class AccountEnrollmentStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTimestamp")
     public OffsetDateTime lastUpdatedTimestamp;
+
     public AccountEnrollmentStatus withLastUpdatedTimestamp(OffsetDateTime lastUpdatedTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
@@ -38,6 +40,7 @@ public class AccountEnrollmentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StatusEnum status;
+
     public AccountEnrollmentStatus withStatus(StatusEnum status) {
         this.status = status;
         return this;
@@ -46,9 +49,11 @@ public class AccountEnrollmentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public AccountEnrollmentStatus withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public AccountEnrollmentStatus(){}
 }

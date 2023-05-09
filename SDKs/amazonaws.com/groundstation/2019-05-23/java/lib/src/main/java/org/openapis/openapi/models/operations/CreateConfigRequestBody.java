@@ -14,6 +14,7 @@ public class CreateConfigRequestBody {
      */
     @JsonProperty("configData")
     public CreateConfigRequestBodyConfigData configData;
+
     public CreateConfigRequestBody withConfigData(CreateConfigRequestBodyConfigData configData) {
         this.configData = configData;
         return this;
@@ -24,6 +25,7 @@ public class CreateConfigRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateConfigRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,14 @@ public class CreateConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateConfigRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateConfigRequestBody(@JsonProperty("configData") CreateConfigRequestBodyConfigData configData, @JsonProperty("name") String name) {
+        this.configData = configData;
+        this.name = name;
+  }
 }

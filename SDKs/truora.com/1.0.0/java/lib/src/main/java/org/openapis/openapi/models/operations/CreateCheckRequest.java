@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCheckRequest {
@@ -12,6 +13,7 @@ public class CreateCheckRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.CreateCheckInput createCheckInput;
+
     public CreateCheckRequest withCreateCheckInput(org.openapis.openapi.models.shared.CreateCheckInput createCheckInput) {
         this.createCheckInput = createCheckInput;
         return this;
@@ -22,9 +24,13 @@ public class CreateCheckRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Truora-Priority")
     public CreateCheckTruoraPriorityEnum truoraPriority;
+
     public CreateCheckRequest withTruoraPriority(CreateCheckTruoraPriorityEnum truoraPriority) {
         this.truoraPriority = truoraPriority;
         return this;
     }
     
+    public CreateCheckRequest(@JsonProperty("CreateCheckInput") org.openapis.openapi.models.shared.CreateCheckInput createCheckInput) {
+        this.createCheckInput = createCheckInput;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateRoleAliasRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentialDurationSeconds")
     public Long credentialDurationSeconds;
+
     public CreateRoleAliasRequestBody withCredentialDurationSeconds(Long credentialDurationSeconds) {
         this.credentialDurationSeconds = credentialDurationSeconds;
         return this;
@@ -25,6 +26,7 @@ public class CreateRoleAliasRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateRoleAliasRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -36,9 +38,13 @@ public class CreateRoleAliasRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateRoleAliasRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRoleAliasRequestBody(@JsonProperty("roleArn") String roleArn) {
+        this.roleArn = roleArn;
+  }
 }

@@ -18,6 +18,7 @@ public class Video {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Video withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class Video {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public VideoSourceEnum source;
+
     public Video withSource(VideoSourceEnum source) {
         this.source = source;
         return this;
@@ -40,6 +42,7 @@ public class Video {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Video withUrl(String url) {
         this.url = url;
         return this;
@@ -51,9 +54,11 @@ public class Video {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoProperties")
     public VideoProperties videoProperties;
+
     public Video withVideoProperties(VideoProperties videoProperties) {
         this.videoProperties = videoProperties;
         return this;
     }
     
+    public Video(){}
 }

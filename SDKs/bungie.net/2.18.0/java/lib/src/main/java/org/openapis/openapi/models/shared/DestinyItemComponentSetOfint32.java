@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyItemComponentSetOfint32 {
     
     public DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent instances;
+
     public DestinyItemComponentSetOfint32 withInstances(DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent instances) {
         this.instances = instances;
         return this;
@@ -16,6 +17,7 @@ public class DestinyItemComponentSetOfint32 {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent objectives;
+
     public DestinyItemComponentSetOfint32 withObjectives(DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent objectives) {
         this.objectives = objectives;
         return this;
@@ -23,6 +25,7 @@ public class DestinyItemComponentSetOfint32 {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemPerksComponent perks;
+
     public DestinyItemComponentSetOfint32 withPerks(DictionaryComponentResponseOfint32AndDestinyItemPerksComponent perks) {
         this.perks = perks;
         return this;
@@ -30,6 +33,7 @@ public class DestinyItemComponentSetOfint32 {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemPlugObjectivesComponent plugObjectives;
+
     public DestinyItemComponentSetOfint32 withPlugObjectives(DictionaryComponentResponseOfint32AndDestinyItemPlugObjectivesComponent plugObjectives) {
         this.plugObjectives = plugObjectives;
         return this;
@@ -37,6 +41,7 @@ public class DestinyItemComponentSetOfint32 {
     
     
     public DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent plugStates;
+
     public DestinyItemComponentSetOfint32 withPlugStates(DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent plugStates) {
         this.plugStates = plugStates;
         return this;
@@ -44,6 +49,7 @@ public class DestinyItemComponentSetOfint32 {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemRenderComponent renderData;
+
     public DestinyItemComponentSetOfint32 withRenderData(DictionaryComponentResponseOfint32AndDestinyItemRenderComponent renderData) {
         this.renderData = renderData;
         return this;
@@ -51,6 +57,7 @@ public class DestinyItemComponentSetOfint32 {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemReusablePlugsComponent reusablePlugs;
+
     public DestinyItemComponentSetOfint32 withReusablePlugs(DictionaryComponentResponseOfint32AndDestinyItemReusablePlugsComponent reusablePlugs) {
         this.reusablePlugs = reusablePlugs;
         return this;
@@ -58,6 +65,7 @@ public class DestinyItemComponentSetOfint32 {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent sockets;
+
     public DestinyItemComponentSetOfint32 withSockets(DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent sockets) {
         this.sockets = sockets;
         return this;
@@ -65,6 +73,7 @@ public class DestinyItemComponentSetOfint32 {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemStatsComponent stats;
+
     public DestinyItemComponentSetOfint32 withStats(DictionaryComponentResponseOfint32AndDestinyItemStatsComponent stats) {
         this.stats = stats;
         return this;
@@ -72,9 +81,11 @@ public class DestinyItemComponentSetOfint32 {
     
     
     public DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent talentGrids;
+
     public DestinyItemComponentSetOfint32 withTalentGrids(DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent talentGrids) {
         this.talentGrids = talentGrids;
         return this;
     }
     
+    public DestinyItemComponentSetOfint32(){}
 }

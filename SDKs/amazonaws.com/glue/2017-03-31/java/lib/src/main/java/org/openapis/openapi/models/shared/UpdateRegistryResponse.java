@@ -15,6 +15,7 @@ public class UpdateRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryArn")
     public String registryArn;
+
     public UpdateRegistryResponse withRegistryArn(String registryArn) {
         this.registryArn = registryArn;
         return this;
@@ -23,9 +24,11 @@ public class UpdateRegistryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryName")
     public String registryName;
+
     public UpdateRegistryResponse withRegistryName(String registryName) {
         this.registryName = registryName;
         return this;
     }
     
+    public UpdateRegistryResponse(){}
 }

@@ -18,6 +18,7 @@ public class ExportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checksum")
     public String checksum;
+
     public ExportStatus withChecksum(String checksum) {
         this.checksum = checksum;
         return this;
@@ -29,6 +30,7 @@ public class ExportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public ExportStatus withError(String error) {
         this.error = error;
         return this;
@@ -40,6 +42,7 @@ public class ExportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public ExportStatus withSize(Long size) {
         this.size = size;
         return this;
@@ -56,6 +59,7 @@ public class ExportStatus {
      */
     @JsonProperty("status")
     public ExportStatusStatusEnum status;
+
     public ExportStatus withStatus(ExportStatusStatusEnum status) {
         this.status = status;
         return this;
@@ -76,9 +80,13 @@ public class ExportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xNextToken")
     public String xNextToken;
+
     public ExportStatus withXNextToken(String xNextToken) {
         this.xNextToken = xNextToken;
         return this;
     }
     
+    public ExportStatus(@JsonProperty("status") ExportStatusStatusEnum status) {
+        this.status = status;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRunGroupResponse {
@@ -12,6 +13,7 @@ public class CreateRunGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateRunGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateRunGroupResponse {
      */
     
     public Object conflictException;
+
     public CreateRunGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateRunGroupResponse {
     
     
     public String contentType;
+
     public CreateRunGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateRunGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRunGroupResponse createRunGroupResponse;
+
     public CreateRunGroupResponse withCreateRunGroupResponse(org.openapis.openapi.models.shared.CreateRunGroupResponse createRunGroupResponse) {
         this.createRunGroupResponse = createRunGroupResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateRunGroupResponse {
      */
     
     public Object internalServerException;
+
     public CreateRunGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateRunGroupResponse {
      */
     
     public Object requestTimeoutException;
+
     public CreateRunGroupResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class CreateRunGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateRunGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateRunGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateRunGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateRunGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRunGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateRunGroupResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateRunGroupResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -103,6 +114,7 @@ public class CreateRunGroupResponse {
      */
     
     public Object throttlingException;
+
     public CreateRunGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class CreateRunGroupResponse {
      */
     
     public Object validationException;
+
     public CreateRunGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateRunGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

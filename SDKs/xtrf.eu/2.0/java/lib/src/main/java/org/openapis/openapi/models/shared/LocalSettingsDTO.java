@@ -15,6 +15,7 @@ public class LocalSettingsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxLinesInRow")
     public Integer maxLinesInRow;
+
     public LocalSettingsDTO withMaxLinesInRow(Integer maxLinesInRow) {
         this.maxLinesInRow = maxLinesInRow;
         return this;
@@ -23,9 +24,11 @@ public class LocalSettingsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRows")
     public Integer maxRows;
+
     public LocalSettingsDTO withMaxRows(Integer maxRows) {
         this.maxRows = maxRows;
         return this;
     }
     
+    public LocalSettingsDTO(){}
 }

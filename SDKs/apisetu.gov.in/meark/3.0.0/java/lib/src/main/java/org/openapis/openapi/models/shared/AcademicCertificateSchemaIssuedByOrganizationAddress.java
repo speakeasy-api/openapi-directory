@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AcademicCertificateSchemaIssuedByOrganizationAddress {
     
     public String country;
+
     public AcademicCertificateSchemaIssuedByOrganizationAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -16,6 +17,7 @@ public class AcademicCertificateSchemaIssuedByOrganizationAddress {
     
     
     public String district;
+
     public AcademicCertificateSchemaIssuedByOrganizationAddress withDistrict(String district) {
         this.district = district;
         return this;
@@ -23,6 +25,7 @@ public class AcademicCertificateSchemaIssuedByOrganizationAddress {
     
     
     public String house;
+
     public AcademicCertificateSchemaIssuedByOrganizationAddress withHouse(String house) {
         this.house = house;
         return this;
@@ -30,6 +33,7 @@ public class AcademicCertificateSchemaIssuedByOrganizationAddress {
     
     
     public String landmark;
+
     public AcademicCertificateSchemaIssuedByOrganizationAddress withLandmark(String landmark) {
         this.landmark = landmark;
         return this;
@@ -37,6 +41,7 @@ public class AcademicCertificateSchemaIssuedByOrganizationAddress {
     
     
     public String line1;
+
     public AcademicCertificateSchemaIssuedByOrganizationAddress withLine1(String line1) {
         this.line1 = line1;
         return this;
@@ -44,6 +49,7 @@ public class AcademicCertificateSchemaIssuedByOrganizationAddress {
     
     
     public String line2;
+
     public AcademicCertificateSchemaIssuedByOrganizationAddress withLine2(String line2) {
         this.line2 = line2;
         return this;
@@ -51,6 +57,7 @@ public class AcademicCertificateSchemaIssuedByOrganizationAddress {
     
     
     public String locality;
+
     public AcademicCertificateSchemaIssuedByOrganizationAddress withLocality(String locality) {
         this.locality = locality;
         return this;
@@ -58,6 +65,7 @@ public class AcademicCertificateSchemaIssuedByOrganizationAddress {
     
     
     public String pin;
+
     public AcademicCertificateSchemaIssuedByOrganizationAddress withPin(String pin) {
         this.pin = pin;
         return this;
@@ -65,6 +73,7 @@ public class AcademicCertificateSchemaIssuedByOrganizationAddress {
     
     
     public String state;
+
     public AcademicCertificateSchemaIssuedByOrganizationAddress withState(String state) {
         this.state = state;
         return this;
@@ -72,6 +81,7 @@ public class AcademicCertificateSchemaIssuedByOrganizationAddress {
     
     
     public String type;
+
     public AcademicCertificateSchemaIssuedByOrganizationAddress withType(String type) {
         this.type = type;
         return this;
@@ -79,9 +89,23 @@ public class AcademicCertificateSchemaIssuedByOrganizationAddress {
     
     
     public String vtc;
+
     public AcademicCertificateSchemaIssuedByOrganizationAddress withVtc(String vtc) {
         this.vtc = vtc;
         return this;
     }
     
+    public AcademicCertificateSchemaIssuedByOrganizationAddress(@JsonProperty("country") String country, @JsonProperty("district") String district, @JsonProperty("house") String house, @JsonProperty("landmark") String landmark, @JsonProperty("line1") String line1, @JsonProperty("line2") String line2, @JsonProperty("locality") String locality, @JsonProperty("pin") String pin, @JsonProperty("state") String state, @JsonProperty("type") String type, @JsonProperty("vtc") String vtc) {
+        this.country = country;
+        this.district = district;
+        this.house = house;
+        this.landmark = landmark;
+        this.line1 = line1;
+        this.line2 = line2;
+        this.locality = locality;
+        this.pin = pin;
+        this.state = state;
+        this.type = type;
+        this.vtc = vtc;
+  }
 }

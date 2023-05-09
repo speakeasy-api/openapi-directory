@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStagesResponse {
@@ -12,6 +13,7 @@ public class GetStagesResponse {
      */
     
     public Object badRequestException;
+
     public GetStagesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetStagesResponse {
     
     
     public String contentType;
+
     public GetStagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetStagesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetStagesResponse getStagesResponse;
+
     public GetStagesResponse withGetStagesResponse(org.openapis.openapi.models.shared.GetStagesResponse getStagesResponse) {
         this.getStagesResponse = getStagesResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetStagesResponse {
      */
     
     public Object notFoundException;
+
     public GetStagesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetStagesResponse {
     
     
     public Integer statusCode;
+
     public GetStagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetStagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetStagesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetStagesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetStagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

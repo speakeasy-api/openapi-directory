@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsListCommentsForReviewRequest {
@@ -12,6 +13,7 @@ public class PullsListCommentsForReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public PullsListCommentsForReviewRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class PullsListCommentsForReviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public PullsListCommentsForReviewRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class PullsListCommentsForReviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public PullsListCommentsForReviewRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,6 +46,7 @@ public class PullsListCommentsForReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
     public Long pullNumber;
+
     public PullsListCommentsForReviewRequest withPullNumber(Long pullNumber) {
         this.pullNumber = pullNumber;
         return this;
@@ -52,6 +57,7 @@ public class PullsListCommentsForReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public PullsListCommentsForReviewRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -62,9 +68,16 @@ public class PullsListCommentsForReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=review_id")
     public Long reviewId;
+
     public PullsListCommentsForReviewRequest withReviewId(Long reviewId) {
         this.reviewId = reviewId;
         return this;
     }
     
+    public PullsListCommentsForReviewRequest(@JsonProperty("owner") String owner, @JsonProperty("pull_number") Long pullNumber, @JsonProperty("repo") String repo, @JsonProperty("review_id") Long reviewId) {
+        this.owner = owner;
+        this.pullNumber = pullNumber;
+        this.repo = repo;
+        this.reviewId = reviewId;
+  }
 }

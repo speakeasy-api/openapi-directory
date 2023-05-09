@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEvaluationResponse {
     
     public String contentType;
+
     public CreateEvaluationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateEvaluationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEvaluationOutput createEvaluationOutput;
+
     public CreateEvaluationResponse withCreateEvaluationOutput(org.openapis.openapi.models.shared.CreateEvaluationOutput createEvaluationOutput) {
         this.createEvaluationOutput = createEvaluationOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateEvaluationResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateEvaluationResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class CreateEvaluationResponse {
      */
     
     public Object internalServerException;
+
     public CreateEvaluationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateEvaluationResponse {
      */
     
     public Object invalidInputException;
+
     public CreateEvaluationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -56,6 +62,7 @@ public class CreateEvaluationResponse {
     
     
     public Integer statusCode;
+
     public CreateEvaluationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateEvaluationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEvaluationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateEvaluationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

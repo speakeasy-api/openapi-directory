@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaskTemplatesUpdateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_group")
     public Long assigneeGroup;
+
     public TaskTemplatesUpdateRequest withAssigneeGroup(Long assigneeGroup) {
         this.assigneeGroup = assigneeGroup;
         return this;
@@ -16,6 +18,7 @@ public class TaskTemplatesUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_user")
     public Long assigneeUser;
+
     public TaskTemplatesUpdateRequest withAssigneeUser(Long assigneeUser) {
         this.assigneeUser = assigneeUser;
         return this;
@@ -23,6 +26,7 @@ public class TaskTemplatesUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public Long category;
+
     public TaskTemplatesUpdateRequest withCategory(Long category) {
         this.category = category;
         return this;
@@ -30,6 +34,7 @@ public class TaskTemplatesUpdateRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public TaskTemplatesUpdateRequest withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +42,7 @@ public class TaskTemplatesUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public TaskTemplatesUpdateRequest withSince(String since) {
         this.since = since;
         return this;
@@ -44,9 +50,13 @@ public class TaskTemplatesUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public Long status;
+
     public TaskTemplatesUpdateRequest withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public TaskTemplatesUpdateRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

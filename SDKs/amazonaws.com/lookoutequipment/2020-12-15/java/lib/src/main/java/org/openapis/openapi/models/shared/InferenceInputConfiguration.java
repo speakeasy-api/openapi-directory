@@ -15,6 +15,7 @@ public class InferenceInputConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceInputNameConfiguration")
     public InferenceInputNameConfiguration inferenceInputNameConfiguration;
+
     public InferenceInputConfiguration withInferenceInputNameConfiguration(InferenceInputNameConfiguration inferenceInputNameConfiguration) {
         this.inferenceInputNameConfiguration = inferenceInputNameConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class InferenceInputConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputTimeZoneOffset")
     public String inputTimeZoneOffset;
+
     public InferenceInputConfiguration withInputTimeZoneOffset(String inputTimeZoneOffset) {
         this.inputTimeZoneOffset = inputTimeZoneOffset;
         return this;
@@ -31,9 +33,11 @@ public class InferenceInputConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3InputConfiguration")
     public InferenceS3InputConfiguration s3InputConfiguration;
+
     public InferenceInputConfiguration withS3InputConfiguration(InferenceS3InputConfiguration s3InputConfiguration) {
         this.s3InputConfiguration = s3InputConfiguration;
         return this;
     }
     
+    public InferenceInputConfiguration(){}
 }

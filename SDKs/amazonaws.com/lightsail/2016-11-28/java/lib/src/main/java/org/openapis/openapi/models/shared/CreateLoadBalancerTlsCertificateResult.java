@@ -15,9 +15,11 @@ public class CreateLoadBalancerTlsCertificateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public CreateLoadBalancerTlsCertificateResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public CreateLoadBalancerTlsCertificateResult(){}
 }

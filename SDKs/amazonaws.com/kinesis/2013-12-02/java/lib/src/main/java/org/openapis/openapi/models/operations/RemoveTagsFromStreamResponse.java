@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveTagsFromStreamResponse {
@@ -12,6 +13,7 @@ public class RemoveTagsFromStreamResponse {
      */
     
     public Object accessDeniedException;
+
     public RemoveTagsFromStreamResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class RemoveTagsFromStreamResponse {
     
     
     public String contentType;
+
     public RemoveTagsFromStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RemoveTagsFromStreamResponse {
      */
     
     public Object invalidArgumentException;
+
     public RemoveTagsFromStreamResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class RemoveTagsFromStreamResponse {
      */
     
     public Object limitExceededException;
+
     public RemoveTagsFromStreamResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveTagsFromStreamResponse {
      */
     
     public Object resourceInUseException;
+
     public RemoveTagsFromStreamResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class RemoveTagsFromStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RemoveTagsFromStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class RemoveTagsFromStreamResponse {
     
     
     public Integer statusCode;
+
     public RemoveTagsFromStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class RemoveTagsFromStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveTagsFromStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemoveTagsFromStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

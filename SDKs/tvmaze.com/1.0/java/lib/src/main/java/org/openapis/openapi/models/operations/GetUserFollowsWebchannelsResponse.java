@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUserFollowsWebchannelsResponse {
     
     public String contentType;
+
     public GetUserFollowsWebchannelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetUserFollowsWebchannelsResponse {
     
     
     public Integer statusCode;
+
     public GetUserFollowsWebchannelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetUserFollowsWebchannelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUserFollowsWebchannelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetUserFollowsWebchannelsResponse {
      */
     
     public org.openapis.openapi.models.shared.WebchannelFollow[] webchannelFollows;
+
     public GetUserFollowsWebchannelsResponse withWebchannelFollows(org.openapis.openapi.models.shared.WebchannelFollow[] webchannelFollows) {
         this.webchannelFollows = webchannelFollows;
         return this;
     }
     
+    public GetUserFollowsWebchannelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

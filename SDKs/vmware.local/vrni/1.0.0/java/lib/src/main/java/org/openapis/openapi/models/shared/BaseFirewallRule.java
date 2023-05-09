@@ -15,6 +15,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public FirewallActionEnum action;
+
     public BaseFirewallRule withAction(FirewallActionEnum action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_any")
     public Boolean destinationAny;
+
     public BaseFirewallRule withDestinationAny(Boolean destinationAny) {
         this.destinationAny = destinationAny;
         return this;
@@ -31,6 +33,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_inversion")
     public Boolean destinationInversion;
+
     public BaseFirewallRule withDestinationInversion(Boolean destinationInversion) {
         this.destinationInversion = destinationInversion;
         return this;
@@ -39,6 +42,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public Reference[] destinations;
+
     public BaseFirewallRule withDestinations(Reference[] destinations) {
         this.destinations = destinations;
         return this;
@@ -47,6 +51,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public BaseFirewallRule withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -55,6 +60,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public BaseFirewallRule withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -63,6 +69,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public BaseFirewallRule withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -71,6 +78,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BaseFirewallRule withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +87,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port_ranges")
     public PortRange[] portRanges;
+
     public BaseFirewallRule withPortRanges(PortRange[] portRanges) {
         this.portRanges = portRanges;
         return this;
@@ -87,6 +96,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule_id")
     public String ruleId;
+
     public BaseFirewallRule withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
@@ -95,6 +105,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section_id")
     public String sectionId;
+
     public BaseFirewallRule withSectionId(String sectionId) {
         this.sectionId = sectionId;
         return this;
@@ -103,6 +114,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section_name")
     public String sectionName;
+
     public BaseFirewallRule withSectionName(String sectionName) {
         this.sectionName = sectionName;
         return this;
@@ -111,6 +123,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequence_number")
     public Long sequenceNumber;
+
     public BaseFirewallRule withSequenceNumber(Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
@@ -119,6 +132,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_any")
     public Boolean serviceAny;
+
     public BaseFirewallRule withServiceAny(Boolean serviceAny) {
         this.serviceAny = serviceAny;
         return this;
@@ -127,6 +141,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public Reference[] services;
+
     public BaseFirewallRule withServices(Reference[] services) {
         this.services = services;
         return this;
@@ -135,6 +150,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_any")
     public Boolean sourceAny;
+
     public BaseFirewallRule withSourceAny(Boolean sourceAny) {
         this.sourceAny = sourceAny;
         return this;
@@ -143,6 +159,7 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_inversion")
     public Boolean sourceInversion;
+
     public BaseFirewallRule withSourceInversion(Boolean sourceInversion) {
         this.sourceInversion = sourceInversion;
         return this;
@@ -151,9 +168,11 @@ public class BaseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public Reference[] sources;
+
     public BaseFirewallRule withSources(Reference[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public BaseFirewallRule(){}
 }

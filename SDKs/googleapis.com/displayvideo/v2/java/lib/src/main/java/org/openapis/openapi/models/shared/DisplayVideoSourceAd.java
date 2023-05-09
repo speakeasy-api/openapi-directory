@@ -18,9 +18,11 @@ public class DisplayVideoSourceAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeId")
     public String creativeId;
+
     public DisplayVideoSourceAd withCreativeId(String creativeId) {
         this.creativeId = creativeId;
         return this;
     }
     
+    public DisplayVideoSourceAd(){}
 }

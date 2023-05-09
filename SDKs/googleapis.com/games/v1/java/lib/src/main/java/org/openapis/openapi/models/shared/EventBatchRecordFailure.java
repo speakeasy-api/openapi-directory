@@ -18,6 +18,7 @@ public class EventBatchRecordFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCause")
     public EventBatchRecordFailureFailureCauseEnum failureCause;
+
     public EventBatchRecordFailure withFailureCause(EventBatchRecordFailureFailureCauseEnum failureCause) {
         this.failureCause = failureCause;
         return this;
@@ -29,6 +30,7 @@ public class EventBatchRecordFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public EventBatchRecordFailure withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class EventBatchRecordFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public EventPeriodRange range;
+
     public EventBatchRecordFailure withRange(EventPeriodRange range) {
         this.range = range;
         return this;
     }
     
+    public EventBatchRecordFailure(){}
 }

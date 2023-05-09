@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Ownership - OK
@@ -15,6 +15,7 @@ public class Ownership {
      */
     
     public String appId;
+
     public Ownership withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -25,6 +26,7 @@ public class Ownership {
      */
     
     public java.util.Map<String, Object> customData;
+
     public Ownership withCustomData(java.util.Map<String, Object> customData) {
         this.customData = customData;
         return this;
@@ -35,6 +37,7 @@ public class Ownership {
      */
     
     public Long date;
+
     public Ownership withDate(Long date) {
         this.date = date;
         return this;
@@ -45,6 +48,7 @@ public class Ownership {
      */
     
     public String developerId;
+
     public Ownership withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -55,6 +59,7 @@ public class Ownership {
      */
     
     public Long expires;
+
     public Ownership withExpires(Long expires) {
         this.expires = expires;
         return this;
@@ -65,6 +70,7 @@ public class Ownership {
      */
     
     public Model model;
+
     public Ownership withModel(Model model) {
         this.model = model;
         return this;
@@ -75,6 +81,7 @@ public class Ownership {
      */
     
     public String ownershipId;
+
     public Ownership withOwnershipId(String ownershipId) {
         this.ownershipId = ownershipId;
         return this;
@@ -85,6 +92,7 @@ public class Ownership {
      */
     
     public OwnershipOwnershipStatusEnum ownershipStatus;
+
     public Ownership withOwnershipStatus(OwnershipOwnershipStatusEnum ownershipStatus) {
         this.ownershipStatus = ownershipStatus;
         return this;
@@ -95,6 +103,7 @@ public class Ownership {
      */
     
     public OwnershipOwnershipTypeEnum ownershipType;
+
     public Ownership withOwnershipType(OwnershipOwnershipTypeEnum ownershipType) {
         this.ownershipType = ownershipType;
         return this;
@@ -105,6 +114,7 @@ public class Ownership {
      */
     
     public Long uninstallDate;
+
     public Ownership withUninstallDate(Long uninstallDate) {
         this.uninstallDate = uninstallDate;
         return this;
@@ -115,9 +125,20 @@ public class Ownership {
      */
     
     public String userId;
+
     public Ownership withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public Ownership(@JsonProperty("appId") String appId, @JsonProperty("date") Long date, @JsonProperty("developerId") String developerId, @JsonProperty("model") Model model, @JsonProperty("ownershipId") String ownershipId, @JsonProperty("ownershipStatus") OwnershipOwnershipStatusEnum ownershipStatus, @JsonProperty("ownershipType") OwnershipOwnershipTypeEnum ownershipType, @JsonProperty("userId") String userId) {
+        this.appId = appId;
+        this.date = date;
+        this.developerId = developerId;
+        this.model = model;
+        this.ownershipId = ownershipId;
+        this.ownershipStatus = ownershipStatus;
+        this.ownershipType = ownershipType;
+        this.userId = userId;
+  }
 }

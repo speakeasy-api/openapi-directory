@@ -18,6 +18,7 @@ public class NumericFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public NumericFilterOperationEnum operation;
+
     public NumericFilter withOperation(NumericFilterOperationEnum operation) {
         this.operation = operation;
         return this;
@@ -29,9 +30,11 @@ public class NumericFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public NumericValue value;
+
     public NumericFilter withValue(NumericValue value) {
         this.value = value;
         return this;
     }
     
+    public NumericFilter(){}
 }

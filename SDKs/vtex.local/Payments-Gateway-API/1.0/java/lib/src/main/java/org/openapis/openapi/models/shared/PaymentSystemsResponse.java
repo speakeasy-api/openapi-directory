@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PaymentSystemsResponse {
     @JsonProperty("affiliationId")
     public String affiliationId;
+
     public PaymentSystemsResponse withAffiliationId(String affiliationId) {
         this.affiliationId = affiliationId;
         return this;
@@ -16,6 +17,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("allowCommercialCondition")
     public Boolean allowCommercialCondition;
+
     public PaymentSystemsResponse withAllowCommercialCondition(Boolean allowCommercialCondition) {
         this.allowCommercialCondition = allowCommercialCondition;
         return this;
@@ -23,6 +25,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("allowCommercialPolicy")
     public Boolean allowCommercialPolicy;
+
     public PaymentSystemsResponse withAllowCommercialPolicy(Boolean allowCommercialPolicy) {
         this.allowCommercialPolicy = allowCommercialPolicy;
         return this;
@@ -30,6 +33,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("allowCountry")
     public Boolean allowCountry;
+
     public PaymentSystemsResponse withAllowCountry(Boolean allowCountry) {
         this.allowCountry = allowCountry;
         return this;
@@ -37,6 +41,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("allowInstallments")
     public Boolean allowInstallments;
+
     public PaymentSystemsResponse withAllowInstallments(Boolean allowInstallments) {
         this.allowInstallments = allowInstallments;
         return this;
@@ -44,6 +49,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("allowIssuer")
     public Boolean allowIssuer;
+
     public PaymentSystemsResponse withAllowIssuer(Boolean allowIssuer) {
         this.allowIssuer = allowIssuer;
         return this;
@@ -51,6 +57,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("allowMultiple")
     public Boolean allowMultiple;
+
     public PaymentSystemsResponse withAllowMultiple(Boolean allowMultiple) {
         this.allowMultiple = allowMultiple;
         return this;
@@ -58,6 +65,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("allowNotification")
     public Boolean allowNotification;
+
     public PaymentSystemsResponse withAllowNotification(Boolean allowNotification) {
         this.allowNotification = allowNotification;
         return this;
@@ -65,6 +73,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("allowPeriod")
     public Boolean allowPeriod;
+
     public PaymentSystemsResponse withAllowPeriod(Boolean allowPeriod) {
         this.allowPeriod = allowPeriod;
         return this;
@@ -72,6 +81,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("antifraudConnectorImplementation")
     public String antifraudConnectorImplementation;
+
     public PaymentSystemsResponse withAntifraudConnectorImplementation(String antifraudConnectorImplementation) {
         this.antifraudConnectorImplementation = antifraudConnectorImplementation;
         return this;
@@ -79,6 +89,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("connectorId")
     public Integer connectorId;
+
     public PaymentSystemsResponse withConnectorId(Integer connectorId) {
         this.connectorId = connectorId;
         return this;
@@ -86,6 +97,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("connectorImplementation")
     public String connectorImplementation;
+
     public PaymentSystemsResponse withConnectorImplementation(String connectorImplementation) {
         this.connectorImplementation = connectorImplementation;
         return this;
@@ -93,6 +105,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("description")
     public String description;
+
     public PaymentSystemsResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -100,6 +113,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("dueDate")
     public String dueDate;
+
     public PaymentSystemsResponse withDueDate(String dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -107,6 +121,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("fields")
     public String fields;
+
     public PaymentSystemsResponse withFields(String fields) {
         this.fields = fields;
         return this;
@@ -114,6 +129,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("groupName")
     public String groupName;
+
     public PaymentSystemsResponse withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -121,6 +137,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("id")
     public Integer id;
+
     public PaymentSystemsResponse withId(Integer id) {
         this.id = id;
         return this;
@@ -128,6 +145,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("implementation")
     public String implementation;
+
     public PaymentSystemsResponse withImplementation(String implementation) {
         this.implementation = implementation;
         return this;
@@ -135,6 +153,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("isAvailable")
     public Boolean isAvailable;
+
     public PaymentSystemsResponse withIsAvailable(Boolean isAvailable) {
         this.isAvailable = isAvailable;
         return this;
@@ -142,6 +161,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("isCustom")
     public Boolean isCustom;
+
     public PaymentSystemsResponse withIsCustom(Boolean isCustom) {
         this.isCustom = isCustom;
         return this;
@@ -149,6 +169,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("isSelfAuthorized")
     public Boolean isSelfAuthorized;
+
     public PaymentSystemsResponse withIsSelfAuthorized(Boolean isSelfAuthorized) {
         this.isSelfAuthorized = isSelfAuthorized;
         return this;
@@ -156,6 +177,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("name")
     public String name;
+
     public PaymentSystemsResponse withName(String name) {
         this.name = name;
         return this;
@@ -163,6 +185,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("requiresDocument")
     public Boolean requiresDocument;
+
     public PaymentSystemsResponse withRequiresDocument(Boolean requiresDocument) {
         this.requiresDocument = requiresDocument;
         return this;
@@ -170,6 +193,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("requiresPhone")
     public Boolean requiresPhone;
+
     public PaymentSystemsResponse withRequiresPhone(Boolean requiresPhone) {
         this.requiresPhone = requiresPhone;
         return this;
@@ -177,6 +201,7 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("rules")
     public Rule[] rules;
+
     public PaymentSystemsResponse withRules(Rule[] rules) {
         this.rules = rules;
         return this;
@@ -184,9 +209,38 @@ public class PaymentSystemsResponse {
     
     @JsonProperty("validator")
     public Validator validator;
+
     public PaymentSystemsResponse withValidator(Validator validator) {
         this.validator = validator;
         return this;
     }
     
+    public PaymentSystemsResponse(@JsonProperty("affiliationId") String affiliationId, @JsonProperty("allowCommercialCondition") Boolean allowCommercialCondition, @JsonProperty("allowCommercialPolicy") Boolean allowCommercialPolicy, @JsonProperty("allowCountry") Boolean allowCountry, @JsonProperty("allowInstallments") Boolean allowInstallments, @JsonProperty("allowIssuer") Boolean allowIssuer, @JsonProperty("allowMultiple") Boolean allowMultiple, @JsonProperty("allowNotification") Boolean allowNotification, @JsonProperty("allowPeriod") Boolean allowPeriod, @JsonProperty("antifraudConnectorImplementation") String antifraudConnectorImplementation, @JsonProperty("connectorId") Integer connectorId, @JsonProperty("connectorImplementation") String connectorImplementation, @JsonProperty("description") String description, @JsonProperty("dueDate") String dueDate, @JsonProperty("fields") String fields, @JsonProperty("groupName") String groupName, @JsonProperty("id") Integer id, @JsonProperty("implementation") String implementation, @JsonProperty("isAvailable") Boolean isAvailable, @JsonProperty("isCustom") Boolean isCustom, @JsonProperty("isSelfAuthorized") Boolean isSelfAuthorized, @JsonProperty("name") String name, @JsonProperty("requiresDocument") Boolean requiresDocument, @JsonProperty("requiresPhone") Boolean requiresPhone, @JsonProperty("rules") Rule[] rules, @JsonProperty("validator") Validator validator) {
+        this.affiliationId = affiliationId;
+        this.allowCommercialCondition = allowCommercialCondition;
+        this.allowCommercialPolicy = allowCommercialPolicy;
+        this.allowCountry = allowCountry;
+        this.allowInstallments = allowInstallments;
+        this.allowIssuer = allowIssuer;
+        this.allowMultiple = allowMultiple;
+        this.allowNotification = allowNotification;
+        this.allowPeriod = allowPeriod;
+        this.antifraudConnectorImplementation = antifraudConnectorImplementation;
+        this.connectorId = connectorId;
+        this.connectorImplementation = connectorImplementation;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.fields = fields;
+        this.groupName = groupName;
+        this.id = id;
+        this.implementation = implementation;
+        this.isAvailable = isAvailable;
+        this.isCustom = isCustom;
+        this.isSelfAuthorized = isSelfAuthorized;
+        this.name = name;
+        this.requiresDocument = requiresDocument;
+        this.requiresPhone = requiresPhone;
+        this.rules = rules;
+        this.validator = validator;
+  }
 }

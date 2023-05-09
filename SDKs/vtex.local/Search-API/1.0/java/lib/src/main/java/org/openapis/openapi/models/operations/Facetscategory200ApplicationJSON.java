@@ -15,6 +15,7 @@ public class Facetscategory200ApplicationJSON {
      */
     @JsonProperty("Brands")
     public Facetscategory200ApplicationJSONBrands[] brands;
+
     public Facetscategory200ApplicationJSON withBrands(Facetscategory200ApplicationJSONBrands[] brands) {
         this.brands = brands;
         return this;
@@ -25,6 +26,7 @@ public class Facetscategory200ApplicationJSON {
      */
     @JsonProperty("CategoriesTrees")
     public Facetscategory200ApplicationJSONCategoriesTrees[] categoriesTrees;
+
     public Facetscategory200ApplicationJSON withCategoriesTrees(Facetscategory200ApplicationJSONCategoriesTrees[] categoriesTrees) {
         this.categoriesTrees = categoriesTrees;
         return this;
@@ -35,6 +37,7 @@ public class Facetscategory200ApplicationJSON {
      */
     @JsonProperty("Departments")
     public Facetscategory200ApplicationJSONDepartments[] departments;
+
     public Facetscategory200ApplicationJSON withDepartments(Facetscategory200ApplicationJSONDepartments[] departments) {
         this.departments = departments;
         return this;
@@ -45,6 +48,7 @@ public class Facetscategory200ApplicationJSON {
      */
     @JsonProperty("PriceRanges")
     public Object[] priceRanges;
+
     public Facetscategory200ApplicationJSON withPriceRanges(Object[] priceRanges) {
         this.priceRanges = priceRanges;
         return this;
@@ -55,6 +59,7 @@ public class Facetscategory200ApplicationJSON {
      */
     @JsonProperty("SpecificationFilters")
     public java.util.Map<String, Object> specificationFilters;
+
     public Facetscategory200ApplicationJSON withSpecificationFilters(java.util.Map<String, Object> specificationFilters) {
         this.specificationFilters = specificationFilters;
         return this;
@@ -65,9 +70,18 @@ public class Facetscategory200ApplicationJSON {
      */
     @JsonProperty("Summary")
     public Facetscategory200ApplicationJSONSummary summary;
+
     public Facetscategory200ApplicationJSON withSummary(Facetscategory200ApplicationJSONSummary summary) {
         this.summary = summary;
         return this;
     }
     
+    public Facetscategory200ApplicationJSON(@JsonProperty("Brands") Facetscategory200ApplicationJSONBrands[] brands, @JsonProperty("CategoriesTrees") Facetscategory200ApplicationJSONCategoriesTrees[] categoriesTrees, @JsonProperty("Departments") Facetscategory200ApplicationJSONDepartments[] departments, @JsonProperty("PriceRanges") Object[] priceRanges, @JsonProperty("SpecificationFilters") java.util.Map<String, Object> specificationFilters, @JsonProperty("Summary") Facetscategory200ApplicationJSONSummary summary) {
+        this.brands = brands;
+        this.categoriesTrees = categoriesTrees;
+        this.departments = departments;
+        this.priceRanges = priceRanges;
+        this.specificationFilters = specificationFilters;
+        this.summary = summary;
+  }
 }

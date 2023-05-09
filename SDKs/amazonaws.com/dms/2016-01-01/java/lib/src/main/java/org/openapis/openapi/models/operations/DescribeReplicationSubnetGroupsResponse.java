@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeReplicationSubnetGroupsResponse {
     
     public String contentType;
+
     public DescribeReplicationSubnetGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeReplicationSubnetGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeReplicationSubnetGroupsResponse describeReplicationSubnetGroupsResponse;
+
     public DescribeReplicationSubnetGroupsResponse withDescribeReplicationSubnetGroupsResponse(org.openapis.openapi.models.shared.DescribeReplicationSubnetGroupsResponse describeReplicationSubnetGroupsResponse) {
         this.describeReplicationSubnetGroupsResponse = describeReplicationSubnetGroupsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeReplicationSubnetGroupsResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public DescribeReplicationSubnetGroupsResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -36,6 +40,7 @@ public class DescribeReplicationSubnetGroupsResponse {
     
     
     public Integer statusCode;
+
     public DescribeReplicationSubnetGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeReplicationSubnetGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeReplicationSubnetGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeReplicationSubnetGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

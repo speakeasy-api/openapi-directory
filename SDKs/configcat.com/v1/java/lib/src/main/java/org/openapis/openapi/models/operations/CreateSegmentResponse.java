@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSegmentResponse {
     
     public String contentType;
+
     public CreateSegmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSegmentResponse {
      */
     
     public org.openapis.openapi.models.shared.SegmentModel segmentModel;
+
     public CreateSegmentResponse withSegmentModel(org.openapis.openapi.models.shared.SegmentModel segmentModel) {
         this.segmentModel = segmentModel;
         return this;
@@ -29,6 +32,7 @@ public class CreateSegmentResponse {
      */
     
     public org.openapis.openapi.models.shared.SegmentModelHaljson segmentModelHaljson;
+
     public CreateSegmentResponse withSegmentModelHaljson(org.openapis.openapi.models.shared.SegmentModelHaljson segmentModelHaljson) {
         this.segmentModelHaljson = segmentModelHaljson;
         return this;
@@ -36,6 +40,7 @@ public class CreateSegmentResponse {
     
     
     public Integer statusCode;
+
     public CreateSegmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateSegmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSegmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateSegmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

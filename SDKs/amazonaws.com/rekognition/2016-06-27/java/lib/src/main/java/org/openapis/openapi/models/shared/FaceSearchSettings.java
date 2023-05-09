@@ -15,6 +15,7 @@ public class FaceSearchSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectionId")
     public String collectionId;
+
     public FaceSearchSettings withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -23,9 +24,11 @@ public class FaceSearchSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceMatchThreshold")
     public Float faceMatchThreshold;
+
     public FaceSearchSettings withFaceMatchThreshold(Float faceMatchThreshold) {
         this.faceMatchThreshold = faceMatchThreshold;
         return this;
     }
     
+    public FaceSearchSettings(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataSubjectRightCancelExportRequestRequest {
@@ -12,9 +13,13 @@ public class DataSubjectRightCancelExportRequestRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
     public String token;
+
     public DataSubjectRightCancelExportRequestRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public DataSubjectRightCancelExportRequestRequest(@JsonProperty("token") String token) {
+        this.token = token;
+  }
 }

@@ -15,6 +15,7 @@ public class AddApplicationOutputResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationARN")
     public String applicationARN;
+
     public AddApplicationOutputResponse withApplicationARN(String applicationARN) {
         this.applicationARN = applicationARN;
         return this;
@@ -23,6 +24,7 @@ public class AddApplicationOutputResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationVersionId")
     public Long applicationVersionId;
+
     public AddApplicationOutputResponse withApplicationVersionId(Long applicationVersionId) {
         this.applicationVersionId = applicationVersionId;
         return this;
@@ -31,9 +33,11 @@ public class AddApplicationOutputResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputDescriptions")
     public OutputDescription[] outputDescriptions;
+
     public AddApplicationOutputResponse withOutputDescriptions(OutputDescription[] outputDescriptions) {
         this.outputDescriptions = outputDescriptions;
         return this;
     }
     
+    public AddApplicationOutputResponse(){}
 }

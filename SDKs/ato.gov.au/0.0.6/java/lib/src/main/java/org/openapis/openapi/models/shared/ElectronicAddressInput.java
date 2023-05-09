@@ -18,6 +18,7 @@ public class ElectronicAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("areaCode")
     public String areaCode;
+
     public ElectronicAddressInput withAreaCode(String areaCode) {
         this.areaCode = areaCode;
         return this;
@@ -29,6 +30,7 @@ public class ElectronicAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryPrefix")
     public String countryPrefix;
+
     public ElectronicAddressInput withCountryPrefix(String countryPrefix) {
         this.countryPrefix = countryPrefix;
         return this;
@@ -40,6 +42,7 @@ public class ElectronicAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electronicAddressType")
     public ElectronicAddressElectronicAddressTypeEnum electronicAddressType;
+
     public ElectronicAddressInput withElectronicAddressType(ElectronicAddressElectronicAddressTypeEnum electronicAddressType) {
         this.electronicAddressType = electronicAddressType;
         return this;
@@ -51,6 +54,7 @@ public class ElectronicAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ElectronicAddressInput withEmail(String email) {
         this.email = email;
         return this;
@@ -62,6 +66,7 @@ public class ElectronicAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extension")
     public String extension;
+
     public ElectronicAddressInput withExtension(String extension) {
         this.extension = extension;
         return this;
@@ -73,6 +78,7 @@ public class ElectronicAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public ElectronicAddressInput withNumber(String number) {
         this.number = number;
         return this;
@@ -84,9 +90,11 @@ public class ElectronicAddressInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ElectronicAddressInput withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ElectronicAddressInput(){}
 }

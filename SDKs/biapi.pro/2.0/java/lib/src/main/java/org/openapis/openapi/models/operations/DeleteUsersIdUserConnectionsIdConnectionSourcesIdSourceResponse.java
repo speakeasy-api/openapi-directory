@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse {
@@ -12,6 +13,7 @@ public class DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.ConnectionSource connectionSource;
+
     public DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse withConnectionSource(org.openapis.openapi.models.shared.ConnectionSource connectionSource) {
         this.connectionSource = connectionSource;
         return this;
@@ -19,6 +21,7 @@ public class DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse {
     
     
     public String contentType;
+
     public DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse {
     
     
     public Integer statusCode;
+
     public DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

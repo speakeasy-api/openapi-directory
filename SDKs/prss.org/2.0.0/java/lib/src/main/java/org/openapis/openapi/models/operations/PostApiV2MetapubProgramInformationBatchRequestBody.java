@@ -17,6 +17,7 @@ public class PostApiV2MetapubProgramInformationBatchRequestBody {
      */
     @JsonProperty("format")
     public PostApiV2MetapubProgramInformationBatchRequestBodyFormatEnum format;
+
     public PostApiV2MetapubProgramInformationBatchRequestBody withFormat(PostApiV2MetapubProgramInformationBatchRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -28,6 +29,7 @@ public class PostApiV2MetapubProgramInformationBatchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PostApiV2MetapubProgramInformationBatchRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +41,7 @@ public class PostApiV2MetapubProgramInformationBatchRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("program")
     public PostApiV2MetapubProgramInformationBatchRequestBodyProgram program;
+
     public PostApiV2MetapubProgramInformationBatchRequestBody withProgram(PostApiV2MetapubProgramInformationBatchRequestBodyProgram program) {
         this.program = program;
         return this;
@@ -49,9 +52,14 @@ public class PostApiV2MetapubProgramInformationBatchRequestBody {
      */
     @JsonProperty("uri")
     public String uri;
+
     public PostApiV2MetapubProgramInformationBatchRequestBody withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public PostApiV2MetapubProgramInformationBatchRequestBody(@JsonProperty("format") PostApiV2MetapubProgramInformationBatchRequestBodyFormatEnum format, @JsonProperty("uri") String uri) {
+        this.format = format;
+        this.uri = uri;
+  }
 }

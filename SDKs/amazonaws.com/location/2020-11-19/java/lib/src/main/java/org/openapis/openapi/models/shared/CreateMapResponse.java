@@ -19,6 +19,7 @@ public class CreateMapResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public CreateMapResponse withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -26,6 +27,7 @@ public class CreateMapResponse {
     
     @JsonProperty("MapArn")
     public String mapArn;
+
     public CreateMapResponse withMapArn(String mapArn) {
         this.mapArn = mapArn;
         return this;
@@ -33,9 +35,15 @@ public class CreateMapResponse {
     
     @JsonProperty("MapName")
     public String mapName;
+
     public CreateMapResponse withMapName(String mapName) {
         this.mapName = mapName;
         return this;
     }
     
+    public CreateMapResponse(@JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("MapArn") String mapArn, @JsonProperty("MapName") String mapName) {
+        this.createTime = createTime;
+        this.mapArn = mapArn;
+        this.mapName = mapName;
+  }
 }

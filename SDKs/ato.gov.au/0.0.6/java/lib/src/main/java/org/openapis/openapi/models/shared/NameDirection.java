@@ -18,6 +18,7 @@ public class NameDirection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NameDirection withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class NameDirection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NameDirection withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class NameDirection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NameDirection withName(String name) {
         this.name = name;
         return this;
     }
     
+    public NameDirection(){}
 }

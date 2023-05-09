@@ -15,6 +15,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActivityStreamStatus")
     public String activityStreamStatus;
+
     public AwsRdsDbClusterDetails withActivityStreamStatus(String activityStreamStatus) {
         this.activityStreamStatus = activityStreamStatus;
         return this;
@@ -23,6 +24,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllocatedStorage")
     public Long allocatedStorage;
+
     public AwsRdsDbClusterDetails withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -31,6 +33,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociatedRoles")
     public AwsRdsDbClusterAssociatedRole[] associatedRoles;
+
     public AwsRdsDbClusterDetails withAssociatedRoles(AwsRdsDbClusterAssociatedRole[] associatedRoles) {
         this.associatedRoles = associatedRoles;
         return this;
@@ -39,6 +42,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZones")
     public String[] availabilityZones;
+
     public AwsRdsDbClusterDetails withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -47,6 +51,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupRetentionPeriod")
     public Long backupRetentionPeriod;
+
     public AwsRdsDbClusterDetails withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -55,6 +60,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterCreateTime")
     public String clusterCreateTime;
+
     public AwsRdsDbClusterDetails withClusterCreateTime(String clusterCreateTime) {
         this.clusterCreateTime = clusterCreateTime;
         return this;
@@ -63,6 +69,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTagsToSnapshot")
     public Boolean copyTagsToSnapshot;
+
     public AwsRdsDbClusterDetails withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -71,6 +78,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrossAccountClone")
     public Boolean crossAccountClone;
+
     public AwsRdsDbClusterDetails withCrossAccountClone(Boolean crossAccountClone) {
         this.crossAccountClone = crossAccountClone;
         return this;
@@ -79,6 +87,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomEndpoints")
     public String[] customEndpoints;
+
     public AwsRdsDbClusterDetails withCustomEndpoints(String[] customEndpoints) {
         this.customEndpoints = customEndpoints;
         return this;
@@ -87,6 +96,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public AwsRdsDbClusterDetails withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -95,6 +105,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbClusterIdentifier")
     public String dbClusterIdentifier;
+
     public AwsRdsDbClusterDetails withDbClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -103,6 +114,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbClusterMembers")
     public AwsRdsDbClusterMember[] dbClusterMembers;
+
     public AwsRdsDbClusterDetails withDbClusterMembers(AwsRdsDbClusterMember[] dbClusterMembers) {
         this.dbClusterMembers = dbClusterMembers;
         return this;
@@ -111,6 +123,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbClusterOptionGroupMemberships")
     public AwsRdsDbClusterOptionGroupMembership[] dbClusterOptionGroupMemberships;
+
     public AwsRdsDbClusterDetails withDbClusterOptionGroupMemberships(AwsRdsDbClusterOptionGroupMembership[] dbClusterOptionGroupMemberships) {
         this.dbClusterOptionGroupMemberships = dbClusterOptionGroupMemberships;
         return this;
@@ -119,6 +132,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbClusterParameterGroup")
     public String dbClusterParameterGroup;
+
     public AwsRdsDbClusterDetails withDbClusterParameterGroup(String dbClusterParameterGroup) {
         this.dbClusterParameterGroup = dbClusterParameterGroup;
         return this;
@@ -127,6 +141,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbClusterResourceId")
     public String dbClusterResourceId;
+
     public AwsRdsDbClusterDetails withDbClusterResourceId(String dbClusterResourceId) {
         this.dbClusterResourceId = dbClusterResourceId;
         return this;
@@ -135,6 +150,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbSubnetGroup")
     public String dbSubnetGroup;
+
     public AwsRdsDbClusterDetails withDbSubnetGroup(String dbSubnetGroup) {
         this.dbSubnetGroup = dbSubnetGroup;
         return this;
@@ -143,6 +159,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionProtection")
     public Boolean deletionProtection;
+
     public AwsRdsDbClusterDetails withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -151,6 +168,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainMemberships")
     public AwsRdsDbDomainMembership[] domainMemberships;
+
     public AwsRdsDbClusterDetails withDomainMemberships(AwsRdsDbDomainMembership[] domainMemberships) {
         this.domainMemberships = domainMemberships;
         return this;
@@ -159,6 +177,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnabledCloudWatchLogsExports")
     public String[] enabledCloudWatchLogsExports;
+
     public AwsRdsDbClusterDetails withEnabledCloudWatchLogsExports(String[] enabledCloudWatchLogsExports) {
         this.enabledCloudWatchLogsExports = enabledCloudWatchLogsExports;
         return this;
@@ -167,6 +186,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoint")
     public String endpoint;
+
     public AwsRdsDbClusterDetails withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -175,6 +195,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Engine")
     public String engine;
+
     public AwsRdsDbClusterDetails withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -183,6 +204,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineMode")
     public String engineMode;
+
     public AwsRdsDbClusterDetails withEngineMode(String engineMode) {
         this.engineMode = engineMode;
         return this;
@@ -191,6 +213,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public String engineVersion;
+
     public AwsRdsDbClusterDetails withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -199,6 +222,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostedZoneId")
     public String hostedZoneId;
+
     public AwsRdsDbClusterDetails withHostedZoneId(String hostedZoneId) {
         this.hostedZoneId = hostedZoneId;
         return this;
@@ -207,6 +231,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpEndpointEnabled")
     public Boolean httpEndpointEnabled;
+
     public AwsRdsDbClusterDetails withHttpEndpointEnabled(Boolean httpEndpointEnabled) {
         this.httpEndpointEnabled = httpEndpointEnabled;
         return this;
@@ -215,6 +240,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamDatabaseAuthenticationEnabled")
     public Boolean iamDatabaseAuthenticationEnabled;
+
     public AwsRdsDbClusterDetails withIamDatabaseAuthenticationEnabled(Boolean iamDatabaseAuthenticationEnabled) {
         this.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
         return this;
@@ -223,6 +249,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public AwsRdsDbClusterDetails withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -231,6 +258,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterUsername")
     public String masterUsername;
+
     public AwsRdsDbClusterDetails withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -239,6 +267,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiAz")
     public Boolean multiAz;
+
     public AwsRdsDbClusterDetails withMultiAz(Boolean multiAz) {
         this.multiAz = multiAz;
         return this;
@@ -247,6 +276,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public AwsRdsDbClusterDetails withPort(Long port) {
         this.port = port;
         return this;
@@ -255,6 +285,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredBackupWindow")
     public String preferredBackupWindow;
+
     public AwsRdsDbClusterDetails withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -263,6 +294,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public AwsRdsDbClusterDetails withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -271,6 +303,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadReplicaIdentifiers")
     public String[] readReplicaIdentifiers;
+
     public AwsRdsDbClusterDetails withReadReplicaIdentifiers(String[] readReplicaIdentifiers) {
         this.readReplicaIdentifiers = readReplicaIdentifiers;
         return this;
@@ -279,6 +312,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReaderEndpoint")
     public String readerEndpoint;
+
     public AwsRdsDbClusterDetails withReaderEndpoint(String readerEndpoint) {
         this.readerEndpoint = readerEndpoint;
         return this;
@@ -287,6 +321,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsRdsDbClusterDetails withStatus(String status) {
         this.status = status;
         return this;
@@ -295,6 +330,7 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageEncrypted")
     public Boolean storageEncrypted;
+
     public AwsRdsDbClusterDetails withStorageEncrypted(Boolean storageEncrypted) {
         this.storageEncrypted = storageEncrypted;
         return this;
@@ -303,9 +339,11 @@ public class AwsRdsDbClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcSecurityGroups")
     public AwsRdsDbInstanceVpcSecurityGroup[] vpcSecurityGroups;
+
     public AwsRdsDbClusterDetails withVpcSecurityGroups(AwsRdsDbInstanceVpcSecurityGroup[] vpcSecurityGroups) {
         this.vpcSecurityGroups = vpcSecurityGroups;
         return this;
     }
     
+    public AwsRdsDbClusterDetails(){}
 }

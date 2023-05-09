@@ -60,11 +60,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse res = new org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse() {{
+        org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse res = new org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse(contentType, httpRes.statusCode()) {{
             placeActionLink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksDeleteResponse res = new org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksDeleteResponse() {{
+        org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksDeleteResponse res = new org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksGetResponse res = new org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksGetResponse() {{
+        org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksGetResponse res = new org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksGetResponse(contentType, httpRes.statusCode()) {{
             placeActionLink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -192,11 +186,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksListResponse res = new org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksListResponse() {{
+        org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksListResponse res = new org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksListResponse(contentType, httpRes.statusCode()) {{
             listPlaceActionLinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -238,11 +230,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksPatchResponse res = new org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksPatchResponse() {{
+        org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksPatchResponse res = new org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksPatchResponse(contentType, httpRes.statusCode()) {{
             placeActionLink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

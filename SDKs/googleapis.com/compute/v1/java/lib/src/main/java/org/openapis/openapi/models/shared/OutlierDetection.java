@@ -18,6 +18,7 @@ public class OutlierDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseEjectionTime")
     public Duration baseEjectionTime;
+
     public OutlierDetection withBaseEjectionTime(Duration baseEjectionTime) {
         this.baseEjectionTime = baseEjectionTime;
         return this;
@@ -29,6 +30,7 @@ public class OutlierDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consecutiveErrors")
     public Integer consecutiveErrors;
+
     public OutlierDetection withConsecutiveErrors(Integer consecutiveErrors) {
         this.consecutiveErrors = consecutiveErrors;
         return this;
@@ -40,6 +42,7 @@ public class OutlierDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consecutiveGatewayFailure")
     public Integer consecutiveGatewayFailure;
+
     public OutlierDetection withConsecutiveGatewayFailure(Integer consecutiveGatewayFailure) {
         this.consecutiveGatewayFailure = consecutiveGatewayFailure;
         return this;
@@ -51,6 +54,7 @@ public class OutlierDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforcingConsecutiveErrors")
     public Integer enforcingConsecutiveErrors;
+
     public OutlierDetection withEnforcingConsecutiveErrors(Integer enforcingConsecutiveErrors) {
         this.enforcingConsecutiveErrors = enforcingConsecutiveErrors;
         return this;
@@ -62,6 +66,7 @@ public class OutlierDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforcingConsecutiveGatewayFailure")
     public Integer enforcingConsecutiveGatewayFailure;
+
     public OutlierDetection withEnforcingConsecutiveGatewayFailure(Integer enforcingConsecutiveGatewayFailure) {
         this.enforcingConsecutiveGatewayFailure = enforcingConsecutiveGatewayFailure;
         return this;
@@ -73,6 +78,7 @@ public class OutlierDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforcingSuccessRate")
     public Integer enforcingSuccessRate;
+
     public OutlierDetection withEnforcingSuccessRate(Integer enforcingSuccessRate) {
         this.enforcingSuccessRate = enforcingSuccessRate;
         return this;
@@ -84,6 +90,7 @@ public class OutlierDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public Duration interval;
+
     public OutlierDetection withInterval(Duration interval) {
         this.interval = interval;
         return this;
@@ -95,6 +102,7 @@ public class OutlierDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxEjectionPercent")
     public Integer maxEjectionPercent;
+
     public OutlierDetection withMaxEjectionPercent(Integer maxEjectionPercent) {
         this.maxEjectionPercent = maxEjectionPercent;
         return this;
@@ -106,6 +114,7 @@ public class OutlierDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successRateMinimumHosts")
     public Integer successRateMinimumHosts;
+
     public OutlierDetection withSuccessRateMinimumHosts(Integer successRateMinimumHosts) {
         this.successRateMinimumHosts = successRateMinimumHosts;
         return this;
@@ -117,6 +126,7 @@ public class OutlierDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successRateRequestVolume")
     public Integer successRateRequestVolume;
+
     public OutlierDetection withSuccessRateRequestVolume(Integer successRateRequestVolume) {
         this.successRateRequestVolume = successRateRequestVolume;
         return this;
@@ -128,9 +138,11 @@ public class OutlierDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successRateStdevFactor")
     public Integer successRateStdevFactor;
+
     public OutlierDetection withSuccessRateStdevFactor(Integer successRateStdevFactor) {
         this.successRateStdevFactor = successRateStdevFactor;
         return this;
     }
     
+    public OutlierDetection(){}
 }

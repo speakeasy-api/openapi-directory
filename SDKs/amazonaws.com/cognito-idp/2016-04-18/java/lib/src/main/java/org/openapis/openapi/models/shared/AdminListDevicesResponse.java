@@ -15,6 +15,7 @@ public class AdminListDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Devices")
     public DeviceType[] devices;
+
     public AdminListDevicesResponse withDevices(DeviceType[] devices) {
         this.devices = devices;
         return this;
@@ -23,9 +24,11 @@ public class AdminListDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public AdminListDevicesResponse withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
     }
     
+    public AdminListDevicesResponse(){}
 }

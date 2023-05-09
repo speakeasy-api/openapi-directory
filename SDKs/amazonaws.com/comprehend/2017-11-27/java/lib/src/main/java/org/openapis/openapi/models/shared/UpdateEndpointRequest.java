@@ -12,6 +12,7 @@ public class UpdateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredDataAccessRoleArn")
     public String desiredDataAccessRoleArn;
+
     public UpdateEndpointRequest withDesiredDataAccessRoleArn(String desiredDataAccessRoleArn) {
         this.desiredDataAccessRoleArn = desiredDataAccessRoleArn;
         return this;
@@ -20,6 +21,7 @@ public class UpdateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredInferenceUnits")
     public Long desiredInferenceUnits;
+
     public UpdateEndpointRequest withDesiredInferenceUnits(Long desiredInferenceUnits) {
         this.desiredInferenceUnits = desiredInferenceUnits;
         return this;
@@ -28,6 +30,7 @@ public class UpdateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredModelArn")
     public String desiredModelArn;
+
     public UpdateEndpointRequest withDesiredModelArn(String desiredModelArn) {
         this.desiredModelArn = desiredModelArn;
         return this;
@@ -35,6 +38,7 @@ public class UpdateEndpointRequest {
     
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public UpdateEndpointRequest withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
@@ -43,9 +47,13 @@ public class UpdateEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelArn")
     public String flywheelArn;
+
     public UpdateEndpointRequest withFlywheelArn(String flywheelArn) {
         this.flywheelArn = flywheelArn;
         return this;
     }
     
+    public UpdateEndpointRequest(@JsonProperty("EndpointArn") String endpointArn) {
+        this.endpointArn = endpointArn;
+  }
 }

@@ -12,6 +12,7 @@ public class AppointmentTemplateOpenSlot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public String end;
+
     public AppointmentTemplateOpenSlot withEnd(String end) {
         this.end = end;
         return this;
@@ -20,9 +21,11 @@ public class AppointmentTemplateOpenSlot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public String start;
+
     public AppointmentTemplateOpenSlot withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public AppointmentTemplateOpenSlot(){}
 }

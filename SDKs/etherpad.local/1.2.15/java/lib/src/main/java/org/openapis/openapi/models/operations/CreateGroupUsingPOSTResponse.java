@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGroupUsingPOSTResponse {
     
     public String contentType;
+
     public CreateGroupUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateGroupUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public CreateGroupUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateGroupUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGroupUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateGroupUsingPOSTResponse {
      */
     
     public CreateGroupUsingPOST200ApplicationJSON createGroupUsingPOST200ApplicationJSONObject;
+
     public CreateGroupUsingPOSTResponse withCreateGroupUsingPOST200ApplicationJSONObject(CreateGroupUsingPOST200ApplicationJSON createGroupUsingPOST200ApplicationJSONObject) {
         this.createGroupUsingPOST200ApplicationJSONObject = createGroupUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreateGroupUsingPOSTResponse {
      */
     
     public CreateGroupUsingPOST400ApplicationJSON createGroupUsingPOST400ApplicationJSONObject;
+
     public CreateGroupUsingPOSTResponse withCreateGroupUsingPOST400ApplicationJSONObject(CreateGroupUsingPOST400ApplicationJSON createGroupUsingPOST400ApplicationJSONObject) {
         this.createGroupUsingPOST400ApplicationJSONObject = createGroupUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateGroupUsingPOSTResponse {
      */
     
     public CreateGroupUsingPOST401ApplicationJSON createGroupUsingPOST401ApplicationJSONObject;
+
     public CreateGroupUsingPOSTResponse withCreateGroupUsingPOST401ApplicationJSONObject(CreateGroupUsingPOST401ApplicationJSON createGroupUsingPOST401ApplicationJSONObject) {
         this.createGroupUsingPOST401ApplicationJSONObject = createGroupUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreateGroupUsingPOSTResponse {
      */
     
     public CreateGroupUsingPOST500ApplicationJSON createGroupUsingPOST500ApplicationJSONObject;
+
     public CreateGroupUsingPOSTResponse withCreateGroupUsingPOST500ApplicationJSONObject(CreateGroupUsingPOST500ApplicationJSON createGroupUsingPOST500ApplicationJSONObject) {
         this.createGroupUsingPOST500ApplicationJSONObject = createGroupUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public CreateGroupUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

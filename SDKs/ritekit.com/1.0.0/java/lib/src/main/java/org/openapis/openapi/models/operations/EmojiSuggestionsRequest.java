@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EmojiSuggestionsRequest {
@@ -12,9 +13,13 @@ public class EmojiSuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public EmojiSuggestionsRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public EmojiSuggestionsRequest(@JsonProperty("text") String text) {
+        this.text = text;
+  }
 }

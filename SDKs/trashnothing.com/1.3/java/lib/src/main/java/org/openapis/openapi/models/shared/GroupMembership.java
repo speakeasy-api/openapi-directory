@@ -27,6 +27,7 @@ public class GroupMembership {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public GroupMembership withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -38,6 +39,7 @@ public class GroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("questionnaire")
     public GroupMembershipQuestionnaire questionnaire;
+
     public GroupMembership withQuestionnaire(GroupMembershipQuestionnaire questionnaire) {
         this.questionnaire = questionnaire;
         return this;
@@ -50,9 +52,11 @@ public class GroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GroupMembership withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GroupMembership(){}
 }

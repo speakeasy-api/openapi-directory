@@ -15,6 +15,7 @@ public class ListServicesResponse {
      */
     @JsonProperty("api")
     public String api;
+
     public ListServicesResponse withApi(String api) {
         this.api = api;
         return this;
@@ -25,6 +26,7 @@ public class ListServicesResponse {
      */
     @JsonProperty("method")
     public String method;
+
     public ListServicesResponse withMethod(String method) {
         this.method = method;
         return this;
@@ -32,6 +34,7 @@ public class ListServicesResponse {
     
     @JsonProperty("response")
     public ServiceDescription[] response;
+
     public ListServicesResponse withResponse(ServiceDescription[] response) {
         this.response = response;
         return this;
@@ -39,9 +42,16 @@ public class ListServicesResponse {
     
     @JsonProperty("status")
     public ListServicesResponseStatusEnum status;
+
     public ListServicesResponse withStatus(ListServicesResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListServicesResponse(@JsonProperty("api") String api, @JsonProperty("method") String method, @JsonProperty("response") ServiceDescription[] response, @JsonProperty("status") ListServicesResponseStatusEnum status) {
+        this.api = api;
+        this.method = method;
+        this.response = response;
+        this.status = status;
+  }
 }

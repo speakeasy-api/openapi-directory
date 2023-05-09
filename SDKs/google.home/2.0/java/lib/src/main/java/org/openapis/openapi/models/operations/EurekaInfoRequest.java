@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EurekaInfoRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nonce")
     public Integer nonce;
+
     public EurekaInfoRequest withNonce(Integer nonce) {
         this.nonce = nonce;
         return this;
@@ -16,6 +18,7 @@ public class EurekaInfoRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=options")
     public String options;
+
     public EurekaInfoRequest withOptions(String options) {
         this.options = options;
         return this;
@@ -23,9 +26,15 @@ public class EurekaInfoRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=params")
     public String params;
+
     public EurekaInfoRequest withParams(String params) {
         this.params = params;
         return this;
     }
     
+    public EurekaInfoRequest(@JsonProperty("nonce") Integer nonce, @JsonProperty("options") String options, @JsonProperty("params") String params) {
+        this.nonce = nonce;
+        this.options = options;
+        this.params = params;
+  }
 }

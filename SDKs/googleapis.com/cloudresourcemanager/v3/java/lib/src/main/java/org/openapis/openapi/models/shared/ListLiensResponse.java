@@ -18,6 +18,7 @@ public class ListLiensResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liens")
     public Lien[] liens;
+
     public ListLiensResponse withLiens(Lien[] liens) {
         this.liens = liens;
         return this;
@@ -29,9 +30,11 @@ public class ListLiensResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListLiensResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListLiensResponse(){}
 }

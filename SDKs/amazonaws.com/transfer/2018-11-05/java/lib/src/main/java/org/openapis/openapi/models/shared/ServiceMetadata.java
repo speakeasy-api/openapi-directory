@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ServiceMetadata {
     @JsonProperty("UserDetails")
     public UserDetails userDetails;
+
     public ServiceMetadata withUserDetails(UserDetails userDetails) {
         this.userDetails = userDetails;
         return this;
     }
     
+    public ServiceMetadata(@JsonProperty("UserDetails") UserDetails userDetails) {
+        this.userDetails = userDetails;
+  }
 }

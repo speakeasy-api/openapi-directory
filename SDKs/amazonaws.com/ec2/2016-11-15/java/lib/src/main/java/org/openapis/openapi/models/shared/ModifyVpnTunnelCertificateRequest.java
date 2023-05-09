@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVpnTunnelCertificateRequest {
     
     public Boolean dryRun;
+
     public ModifyVpnTunnelCertificateRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVpnTunnelCertificateRequest {
     
     
     public String vpnConnectionId;
+
     public ModifyVpnTunnelCertificateRequest withVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
@@ -23,9 +25,14 @@ public class ModifyVpnTunnelCertificateRequest {
     
     
     public String vpnTunnelOutsideIpAddress;
+
     public ModifyVpnTunnelCertificateRequest withVpnTunnelOutsideIpAddress(String vpnTunnelOutsideIpAddress) {
         this.vpnTunnelOutsideIpAddress = vpnTunnelOutsideIpAddress;
         return this;
     }
     
+    public ModifyVpnTunnelCertificateRequest(@JsonProperty("VpnConnectionId") String vpnConnectionId, @JsonProperty("VpnTunnelOutsideIpAddress") String vpnTunnelOutsideIpAddress) {
+        this.vpnConnectionId = vpnConnectionId;
+        this.vpnTunnelOutsideIpAddress = vpnTunnelOutsideIpAddress;
+  }
 }

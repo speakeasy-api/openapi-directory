@@ -15,9 +15,11 @@ public class KafkaClusterEncryptionInTransitDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionType")
     public KafkaClusterEncryptionInTransitTypeEnum encryptionType;
+
     public KafkaClusterEncryptionInTransitDescription withEncryptionType(KafkaClusterEncryptionInTransitTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
     }
     
+    public KafkaClusterEncryptionInTransitDescription(){}
 }

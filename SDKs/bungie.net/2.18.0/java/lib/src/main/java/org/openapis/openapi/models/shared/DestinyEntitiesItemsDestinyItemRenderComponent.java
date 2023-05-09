@@ -17,6 +17,7 @@ public class DestinyEntitiesItemsDestinyItemRenderComponent {
      */
     
     public java.util.Map<String, Integer> artRegions;
+
     public DestinyEntitiesItemsDestinyItemRenderComponent withArtRegions(java.util.Map<String, Integer> artRegions) {
         this.artRegions = artRegions;
         return this;
@@ -27,9 +28,11 @@ public class DestinyEntitiesItemsDestinyItemRenderComponent {
      */
     
     public Boolean useCustomDyes;
+
     public DestinyEntitiesItemsDestinyItemRenderComponent withUseCustomDyes(Boolean useCustomDyes) {
         this.useCustomDyes = useCustomDyes;
         return this;
     }
     
+    public DestinyEntitiesItemsDestinyItemRenderComponent(){}
 }

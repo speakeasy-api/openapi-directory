@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTokenResponse {
     @JsonProperty("data")
     public TokenResource data;
+
     public CreateTokenResponse withData(TokenResource data) {
         this.data = data;
         return this;
@@ -22,6 +23,7 @@ public class CreateTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("included")
     public GroupResource[] included;
+
     public CreateTokenResponse withIncluded(GroupResource[] included) {
         this.included = included;
         return this;
@@ -30,9 +32,13 @@ public class CreateTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public CreateOrUpdateMetaResponse meta;
+
     public CreateTokenResponse withMeta(CreateOrUpdateMetaResponse meta) {
         this.meta = meta;
         return this;
     }
     
+    public CreateTokenResponse(@JsonProperty("data") TokenResource data) {
+        this.data = data;
+  }
 }

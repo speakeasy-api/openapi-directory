@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPutRolePermissionsBoundaryRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETPutRolePermissionsBoundaryActionEnum action;
+
     public GETPutRolePermissionsBoundaryRequest withAction(GETPutRolePermissionsBoundaryActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETPutRolePermissionsBoundaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PermissionsBoundary")
     public String permissionsBoundary;
+
     public GETPutRolePermissionsBoundaryRequest withPermissionsBoundary(String permissionsBoundary) {
         this.permissionsBoundary = permissionsBoundary;
         return this;
@@ -29,6 +32,7 @@ public class GETPutRolePermissionsBoundaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleName")
     public String roleName;
+
     public GETPutRolePermissionsBoundaryRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -36,6 +40,7 @@ public class GETPutRolePermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETPutRolePermissionsBoundaryVersionEnum version;
+
     public GETPutRolePermissionsBoundaryRequest withVersion(GETPutRolePermissionsBoundaryVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETPutRolePermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETPutRolePermissionsBoundaryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETPutRolePermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETPutRolePermissionsBoundaryRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETPutRolePermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETPutRolePermissionsBoundaryRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETPutRolePermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETPutRolePermissionsBoundaryRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETPutRolePermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETPutRolePermissionsBoundaryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETPutRolePermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETPutRolePermissionsBoundaryRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETPutRolePermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETPutRolePermissionsBoundaryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETPutRolePermissionsBoundaryRequest(@JsonProperty("Action") GETPutRolePermissionsBoundaryActionEnum action, @JsonProperty("PermissionsBoundary") String permissionsBoundary, @JsonProperty("RoleName") String roleName, @JsonProperty("Version") GETPutRolePermissionsBoundaryVersionEnum version) {
+        this.action = action;
+        this.permissionsBoundary = permissionsBoundary;
+        this.roleName = roleName;
+        this.version = version;
+  }
 }

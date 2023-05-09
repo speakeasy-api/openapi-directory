@@ -21,9 +21,11 @@ public class ConferenceSolutionKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ConferenceSolutionKey withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ConferenceSolutionKey(){}
 }

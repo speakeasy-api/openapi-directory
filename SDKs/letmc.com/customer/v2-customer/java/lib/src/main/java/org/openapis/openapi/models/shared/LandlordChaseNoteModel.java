@@ -25,6 +25,7 @@ public class LandlordChaseNoteModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Date")
     public OffsetDateTime date;
+
     public LandlordChaseNoteModel withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -36,6 +37,7 @@ public class LandlordChaseNoteModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Note")
     public String note;
+
     public LandlordChaseNoteModel withNote(String note) {
         this.note = note;
         return this;
@@ -47,6 +49,7 @@ public class LandlordChaseNoteModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoteType")
     public String noteType;
+
     public LandlordChaseNoteModel withNoteType(String noteType) {
         this.noteType = noteType;
         return this;
@@ -58,9 +61,11 @@ public class LandlordChaseNoteModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TenantID")
     public String tenantID;
+
     public LandlordChaseNoteModel withTenantID(String tenantID) {
         this.tenantID = tenantID;
         return this;
     }
     
+    public LandlordChaseNoteModel(){}
 }

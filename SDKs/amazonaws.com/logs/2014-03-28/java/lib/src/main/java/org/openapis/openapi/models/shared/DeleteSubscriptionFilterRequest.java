@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteSubscriptionFilterRequest {
     @JsonProperty("filterName")
     public String filterName;
+
     public DeleteSubscriptionFilterRequest withFilterName(String filterName) {
         this.filterName = filterName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteSubscriptionFilterRequest {
     
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public DeleteSubscriptionFilterRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
     }
     
+    public DeleteSubscriptionFilterRequest(@JsonProperty("filterName") String filterName, @JsonProperty("logGroupName") String logGroupName) {
+        this.filterName = filterName;
+        this.logGroupName = logGroupName;
+  }
 }

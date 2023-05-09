@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateGlossaryMultipartRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public org.openapis.openapi.models.shared.GlossaryUploadRequest1 glossaryUploadRequest1;
+
     public CreateGlossaryMultipartRequest withGlossaryUploadRequest1(org.openapis.openapi.models.shared.GlossaryUploadRequest1 glossaryUploadRequest1) {
         this.glossaryUploadRequest1 = glossaryUploadRequest1;
         return this;
@@ -19,9 +21,13 @@ public class CreateGlossaryMultipartRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public CreateGlossaryMultipartRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public CreateGlossaryMultipartRequest(@JsonProperty("projectId") Long projectId) {
+        this.projectId = projectId;
+  }
 }

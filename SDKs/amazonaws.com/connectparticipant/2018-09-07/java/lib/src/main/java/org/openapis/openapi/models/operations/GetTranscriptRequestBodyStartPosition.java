@@ -15,6 +15,7 @@ public class GetTranscriptRequestBodyStartPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AbsoluteTime")
     public String absoluteTime;
+
     public GetTranscriptRequestBodyStartPosition withAbsoluteTime(String absoluteTime) {
         this.absoluteTime = absoluteTime;
         return this;
@@ -23,6 +24,7 @@ public class GetTranscriptRequestBodyStartPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public GetTranscriptRequestBodyStartPosition withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class GetTranscriptRequestBodyStartPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MostRecent")
     public Long mostRecent;
+
     public GetTranscriptRequestBodyStartPosition withMostRecent(Long mostRecent) {
         this.mostRecent = mostRecent;
         return this;
     }
     
+    public GetTranscriptRequestBodyStartPosition(){}
 }

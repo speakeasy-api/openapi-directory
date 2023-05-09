@@ -54,11 +54,9 @@ public class Feature {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFeatureResponse res = new org.openapis.openapi.models.operations.GetFeatureResponse() {{
+        org.openapis.openapi.models.operations.GetFeatureResponse res = new org.openapis.openapi.models.operations.GetFeatureResponse(contentType, httpRes.statusCode()) {{
             getFeature200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -75,10 +73,11 @@ public class Feature {
     /**
      * Feature Type Collection
      * Return a collection of Feature Types.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListFeatureTypesResponse listFeatureTypes() throws Exception {
+    public org.openapis.openapi.models.operations.ListFeatureTypesResponse listFeatureTypes(org.openapis.openapi.models.operations.ListFeatureTypesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/feature-type");
         
@@ -87,16 +86,15 @@ public class Feature {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFeatureTypesResponse res = new org.openapis.openapi.models.operations.ListFeatureTypesResponse() {{
+        org.openapis.openapi.models.operations.ListFeatureTypesResponse res = new org.openapis.openapi.models.operations.ListFeatureTypesResponse(contentType, httpRes.statusCode()) {{
             listFeatureTypes200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +137,9 @@ public class Feature {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFeaturesResponse res = new org.openapis.openapi.models.operations.ListFeaturesResponse() {{
+        org.openapis.openapi.models.operations.ListFeaturesResponse res = new org.openapis.openapi.models.operations.ListFeaturesResponse(contentType, httpRes.statusCode()) {{
             listFeatures200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

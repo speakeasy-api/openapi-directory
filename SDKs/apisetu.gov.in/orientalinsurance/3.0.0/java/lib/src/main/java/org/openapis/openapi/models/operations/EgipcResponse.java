@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EgipcResponse {
     
     public String contentType;
+
     public EgipcResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EgipcResponse {
     
     
     public Integer statusCode;
+
     public EgipcResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EgipcResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EgipcResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class EgipcResponse {
      */
     
     public Egipc400ApplicationJSON egipc400ApplicationJSONObject;
+
     public EgipcResponse withEgipc400ApplicationJSONObject(Egipc400ApplicationJSON egipc400ApplicationJSONObject) {
         this.egipc400ApplicationJSONObject = egipc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class EgipcResponse {
      */
     
     public Egipc401ApplicationJSON egipc401ApplicationJSONObject;
+
     public EgipcResponse withEgipc401ApplicationJSONObject(Egipc401ApplicationJSON egipc401ApplicationJSONObject) {
         this.egipc401ApplicationJSONObject = egipc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class EgipcResponse {
      */
     
     public Egipc404ApplicationJSON egipc404ApplicationJSONObject;
+
     public EgipcResponse withEgipc404ApplicationJSONObject(Egipc404ApplicationJSON egipc404ApplicationJSONObject) {
         this.egipc404ApplicationJSONObject = egipc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class EgipcResponse {
      */
     
     public Egipc500ApplicationJSON egipc500ApplicationJSONObject;
+
     public EgipcResponse withEgipc500ApplicationJSONObject(Egipc500ApplicationJSON egipc500ApplicationJSONObject) {
         this.egipc500ApplicationJSONObject = egipc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class EgipcResponse {
      */
     
     public Egipc502ApplicationJSON egipc502ApplicationJSONObject;
+
     public EgipcResponse withEgipc502ApplicationJSONObject(Egipc502ApplicationJSON egipc502ApplicationJSONObject) {
         this.egipc502ApplicationJSONObject = egipc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class EgipcResponse {
      */
     
     public Egipc503ApplicationJSON egipc503ApplicationJSONObject;
+
     public EgipcResponse withEgipc503ApplicationJSONObject(Egipc503ApplicationJSON egipc503ApplicationJSONObject) {
         this.egipc503ApplicationJSONObject = egipc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class EgipcResponse {
      */
     
     public Egipc504ApplicationJSON egipc504ApplicationJSONObject;
+
     public EgipcResponse withEgipc504ApplicationJSONObject(Egipc504ApplicationJSON egipc504ApplicationJSONObject) {
         this.egipc504ApplicationJSONObject = egipc504ApplicationJSONObject;
         return this;
     }
     
+    public EgipcResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

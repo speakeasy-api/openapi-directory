@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobsProjectsTenantsCompleteQueryRequest {
@@ -12,6 +13,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public JobsProjectsTenantsCompleteQueryRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public JobsProjectsTenantsCompleteQueryRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public JobsProjectsTenantsCompleteQueryRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public JobsProjectsTenantsCompleteQueryRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company")
     public String company;
+
     public JobsProjectsTenantsCompleteQueryRequest withCompany(String company) {
         this.company = company;
         return this;
@@ -62,6 +68,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public JobsProjectsTenantsCompleteQueryRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public JobsProjectsTenantsCompleteQueryRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=languageCodes")
     public String[] languageCodes;
+
     public JobsProjectsTenantsCompleteQueryRequest withLanguageCodes(String[] languageCodes) {
         this.languageCodes = languageCodes;
         return this;
@@ -92,6 +101,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public JobsProjectsTenantsCompleteQueryRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public JobsProjectsTenantsCompleteQueryRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -112,6 +123,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public JobsProjectsTenantsCompleteQueryRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public JobsProjectsTenantsCompleteQueryRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -132,6 +145,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public JobsProjectsTenantsCompleteQueryRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
     public JobsProjectsTenantsCompleteQueryScopeEnum scope;
+
     public JobsProjectsTenantsCompleteQueryRequest withScope(JobsProjectsTenantsCompleteQueryScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -152,6 +167,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenant")
     public String tenant;
+
     public JobsProjectsTenantsCompleteQueryRequest withTenant(String tenant) {
         this.tenant = tenant;
         return this;
@@ -162,6 +178,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public JobsProjectsTenantsCompleteQueryTypeEnum type;
+
     public JobsProjectsTenantsCompleteQueryRequest withType(JobsProjectsTenantsCompleteQueryTypeEnum type) {
         this.type = type;
         return this;
@@ -172,6 +189,7 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public JobsProjectsTenantsCompleteQueryRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -182,9 +200,13 @@ public class JobsProjectsTenantsCompleteQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public JobsProjectsTenantsCompleteQueryRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public JobsProjectsTenantsCompleteQueryRequest(@JsonProperty("tenant") String tenant) {
+        this.tenant = tenant;
+  }
 }

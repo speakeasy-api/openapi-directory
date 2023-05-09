@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPricingPlansAssociatedWithPricingRuleResponse {
@@ -12,6 +13,7 @@ public class ListPricingPlansAssociatedWithPricingRuleResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPricingPlansAssociatedWithPricingRuleResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPricingPlansAssociatedWithPricingRuleResponse {
     
     
     public String contentType;
+
     public ListPricingPlansAssociatedWithPricingRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPricingPlansAssociatedWithPricingRuleResponse {
      */
     
     public Object internalServerException;
+
     public ListPricingPlansAssociatedWithPricingRuleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListPricingPlansAssociatedWithPricingRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPricingPlansAssociatedWithPricingRuleOutput listPricingPlansAssociatedWithPricingRuleOutput;
+
     public ListPricingPlansAssociatedWithPricingRuleResponse withListPricingPlansAssociatedWithPricingRuleOutput(org.openapis.openapi.models.shared.ListPricingPlansAssociatedWithPricingRuleOutput listPricingPlansAssociatedWithPricingRuleOutput) {
         this.listPricingPlansAssociatedWithPricingRuleOutput = listPricingPlansAssociatedWithPricingRuleOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListPricingPlansAssociatedWithPricingRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPricingPlansAssociatedWithPricingRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListPricingPlansAssociatedWithPricingRuleResponse {
     
     
     public Integer statusCode;
+
     public ListPricingPlansAssociatedWithPricingRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListPricingPlansAssociatedWithPricingRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPricingPlansAssociatedWithPricingRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListPricingPlansAssociatedWithPricingRuleResponse {
      */
     
     public Object throttlingException;
+
     public ListPricingPlansAssociatedWithPricingRuleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListPricingPlansAssociatedWithPricingRuleResponse {
      */
     
     public Object validationException;
+
     public ListPricingPlansAssociatedWithPricingRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPricingPlansAssociatedWithPricingRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

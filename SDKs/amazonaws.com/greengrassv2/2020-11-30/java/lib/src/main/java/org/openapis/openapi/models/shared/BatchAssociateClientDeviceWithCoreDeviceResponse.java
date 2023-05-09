@@ -15,9 +15,11 @@ public class BatchAssociateClientDeviceWithCoreDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorEntries")
     public AssociateClientDeviceWithCoreDeviceErrorEntry[] errorEntries;
+
     public BatchAssociateClientDeviceWithCoreDeviceResponse withErrorEntries(AssociateClientDeviceWithCoreDeviceErrorEntry[] errorEntries) {
         this.errorEntries = errorEntries;
         return this;
     }
     
+    public BatchAssociateClientDeviceWithCoreDeviceResponse(){}
 }

@@ -18,6 +18,7 @@ public class PrismaCpeCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prismaClientCode")
     public String prismaClientCode;
+
     public PrismaCpeCode withPrismaClientCode(String prismaClientCode) {
         this.prismaClientCode = prismaClientCode;
         return this;
@@ -29,6 +30,7 @@ public class PrismaCpeCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prismaEstimateCode")
     public String prismaEstimateCode;
+
     public PrismaCpeCode withPrismaEstimateCode(String prismaEstimateCode) {
         this.prismaEstimateCode = prismaEstimateCode;
         return this;
@@ -40,9 +42,11 @@ public class PrismaCpeCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prismaProductCode")
     public String prismaProductCode;
+
     public PrismaCpeCode withPrismaProductCode(String prismaProductCode) {
         this.prismaProductCode = prismaProductCode;
         return this;
     }
     
+    public PrismaCpeCode(){}
 }

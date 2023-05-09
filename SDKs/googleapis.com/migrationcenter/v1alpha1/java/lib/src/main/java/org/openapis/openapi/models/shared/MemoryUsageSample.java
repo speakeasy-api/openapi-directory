@@ -18,9 +18,11 @@ public class MemoryUsageSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utilizedPercentage")
     public Float utilizedPercentage;
+
     public MemoryUsageSample withUtilizedPercentage(Float utilizedPercentage) {
         this.utilizedPercentage = utilizedPercentage;
         return this;
     }
     
+    public MemoryUsageSample(){}
 }

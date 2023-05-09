@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Contact {
     @JsonProperty("Alias")
     public String alias;
+
     public Contact withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -21,6 +22,7 @@ public class Contact {
     
     @JsonProperty("ContactArn")
     public String contactArn;
+
     public Contact withContactArn(String contactArn) {
         this.contactArn = contactArn;
         return this;
@@ -29,6 +31,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public Contact withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -36,9 +39,15 @@ public class Contact {
     
     @JsonProperty("Type")
     public ContactTypeEnum type;
+
     public Contact withType(ContactTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Contact(@JsonProperty("Alias") String alias, @JsonProperty("ContactArn") String contactArn, @JsonProperty("Type") ContactTypeEnum type) {
+        this.alias = alias;
+        this.contactArn = contactArn;
+        this.type = type;
+  }
 }

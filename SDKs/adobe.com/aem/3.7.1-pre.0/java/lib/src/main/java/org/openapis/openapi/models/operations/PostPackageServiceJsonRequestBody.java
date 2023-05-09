@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostPackageServiceJsonRequestBody {
     @SpeakeasyMetadata("multipartForm:file")
     public PostPackageServiceJsonRequestBodyPackage package_;
+
     public PostPackageServiceJsonRequestBody withPackage(PostPackageServiceJsonRequestBodyPackage package_) {
         this.package_ = package_;
         return this;
     }
     
+    public PostPackageServiceJsonRequestBody(){}
 }

@@ -60,11 +60,9 @@ public class Feed {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveNEOFeedTodayResponse res = new org.openapis.openapi.models.operations.RetrieveNEOFeedTodayResponse() {{
+        org.openapis.openapi.models.operations.RetrieveNEOFeedTodayResponse res = new org.openapis.openapi.models.operations.RetrieveNEOFeedTodayResponse(contentType, httpRes.statusCode()) {{
             nearEarthObjectList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Feed {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveNearEarthObjectFeedResponse res = new org.openapis.openapi.models.operations.RetrieveNearEarthObjectFeedResponse() {{
+        org.openapis.openapi.models.operations.RetrieveNearEarthObjectFeedResponse res = new org.openapis.openapi.models.operations.RetrieveNearEarthObjectFeedResponse(contentType, httpRes.statusCode()) {{
             nearEarthObjectList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

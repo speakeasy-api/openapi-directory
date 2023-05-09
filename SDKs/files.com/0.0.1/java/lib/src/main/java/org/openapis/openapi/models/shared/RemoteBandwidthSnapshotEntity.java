@@ -23,6 +23,7 @@ public class RemoteBandwidthSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public RemoteBandwidthSnapshotEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -36,6 +37,7 @@ public class RemoteBandwidthSnapshotEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("logged_at")
     public OffsetDateTime loggedAt;
+
     public RemoteBandwidthSnapshotEntity withLoggedAt(OffsetDateTime loggedAt) {
         this.loggedAt = loggedAt;
         return this;
@@ -47,6 +49,7 @@ public class RemoteBandwidthSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remote_server_id")
     public Integer remoteServerId;
+
     public RemoteBandwidthSnapshotEntity withRemoteServerId(Integer remoteServerId) {
         this.remoteServerId = remoteServerId;
         return this;
@@ -58,6 +61,7 @@ public class RemoteBandwidthSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sync_bytes_received")
     public Double syncBytesReceived;
+
     public RemoteBandwidthSnapshotEntity withSyncBytesReceived(Double syncBytesReceived) {
         this.syncBytesReceived = syncBytesReceived;
         return this;
@@ -69,9 +73,11 @@ public class RemoteBandwidthSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sync_bytes_sent")
     public Double syncBytesSent;
+
     public RemoteBandwidthSnapshotEntity withSyncBytesSent(Double syncBytesSent) {
         this.syncBytesSent = syncBytesSent;
         return this;
     }
     
+    public RemoteBandwidthSnapshotEntity(){}
 }

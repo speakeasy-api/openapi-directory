@@ -12,6 +12,7 @@ public class ListSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public Long maxResults;
+
     public ListSchedulesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -22,6 +23,7 @@ public class ListSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NamePrefix")
     public String namePrefix;
+
     public ListSchedulesRequest withNamePrefix(String namePrefix) {
         this.namePrefix = namePrefix;
         return this;
@@ -32,6 +34,7 @@ public class ListSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListSchedulesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -42,6 +45,7 @@ public class ListSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ScheduleGroup")
     public String scheduleGroup;
+
     public ListSchedulesRequest withScheduleGroup(String scheduleGroup) {
         this.scheduleGroup = scheduleGroup;
         return this;
@@ -52,6 +56,7 @@ public class ListSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=State")
     public ListSchedulesStateEnum state;
+
     public ListSchedulesRequest withState(ListSchedulesStateEnum state) {
         this.state = state;
         return this;
@@ -59,6 +64,7 @@ public class ListSchedulesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListSchedulesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -66,6 +72,7 @@ public class ListSchedulesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListSchedulesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -73,6 +80,7 @@ public class ListSchedulesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListSchedulesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -80,6 +88,7 @@ public class ListSchedulesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListSchedulesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -87,6 +96,7 @@ public class ListSchedulesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListSchedulesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -94,6 +104,7 @@ public class ListSchedulesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListSchedulesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -101,9 +112,11 @@ public class ListSchedulesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListSchedulesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public ListSchedulesRequest(){}
 }

@@ -15,6 +15,7 @@ public class UploadKfpArtifactRequest {
      */
     
     public String description;
+
     public UploadKfpArtifactRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -25,9 +26,11 @@ public class UploadKfpArtifactRequest {
      */
     
     public String[] tags;
+
     public UploadKfpArtifactRequest withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public UploadKfpArtifactRequest(){}
 }

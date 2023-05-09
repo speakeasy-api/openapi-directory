@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class TaskStatusesListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public TaskStatusesListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -16,6 +17,7 @@ public class TaskStatusesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public TaskStatusesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -23,9 +25,11 @@ public class TaskStatusesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public TaskStatusesListRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public TaskStatusesListRequest(){}
 }

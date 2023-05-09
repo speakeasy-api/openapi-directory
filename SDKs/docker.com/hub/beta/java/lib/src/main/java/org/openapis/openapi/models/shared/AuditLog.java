@@ -20,6 +20,7 @@ public class AuditLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public String account;
+
     public AuditLog withAccount(String account) {
         this.account = account;
         return this;
@@ -28,6 +29,7 @@ public class AuditLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public AuditLog withAction(String action) {
         this.action = action;
         return this;
@@ -36,6 +38,7 @@ public class AuditLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action_description")
     public String actionDescription;
+
     public AuditLog withActionDescription(String actionDescription) {
         this.actionDescription = actionDescription;
         return this;
@@ -44,6 +47,7 @@ public class AuditLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actor")
     public String actor;
+
     public AuditLog withActor(String actor) {
         this.actor = actor;
         return this;
@@ -52,6 +56,7 @@ public class AuditLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, String> data;
+
     public AuditLog withData(java.util.Map<String, String> data) {
         this.data = data;
         return this;
@@ -60,6 +65,7 @@ public class AuditLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AuditLog withName(String name) {
         this.name = name;
         return this;
@@ -70,9 +76,11 @@ public class AuditLog {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public AuditLog withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public AuditLog(){}
 }

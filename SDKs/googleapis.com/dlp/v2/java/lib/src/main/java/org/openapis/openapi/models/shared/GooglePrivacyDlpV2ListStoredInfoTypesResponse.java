@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2ListStoredInfoTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GooglePrivacyDlpV2ListStoredInfoTypesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2ListStoredInfoTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storedInfoTypes")
     public GooglePrivacyDlpV2StoredInfoType[] storedInfoTypes;
+
     public GooglePrivacyDlpV2ListStoredInfoTypesResponse withStoredInfoTypes(GooglePrivacyDlpV2StoredInfoType[] storedInfoTypes) {
         this.storedInfoTypes = storedInfoTypes;
         return this;
     }
     
+    public GooglePrivacyDlpV2ListStoredInfoTypesResponse(){}
 }

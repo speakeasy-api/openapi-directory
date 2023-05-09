@@ -15,9 +15,11 @@ public class ImageEdit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public ImageEditFields image;
+
     public ImageEdit withImage(ImageEditFields image) {
         this.image = image;
         return this;
     }
     
+    public ImageEdit(){}
 }

@@ -18,6 +18,7 @@ public class Documentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public Documentation withContent(String content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class Documentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public Documentation withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public Documentation(){}
 }

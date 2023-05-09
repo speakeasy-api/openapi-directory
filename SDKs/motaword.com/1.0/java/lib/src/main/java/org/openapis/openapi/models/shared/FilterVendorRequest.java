@@ -12,6 +12,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clients")
     public Long[] clients;
+
     public FilterVendorRequest withClients(Long[] clients) {
         this.clients = clients;
         return this;
@@ -20,6 +21,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("communication_channel")
     public String[] communicationChannel;
+
     public FilterVendorRequest withCommunicationChannel(String[] communicationChannel) {
         this.communicationChannel = communicationChannel;
         return this;
@@ -28,6 +30,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporate_ids_for_auth")
     public Long[] corporateIdsForAuth;
+
     public FilterVendorRequest withCorporateIdsForAuth(Long[] corporateIdsForAuth) {
         this.corporateIdsForAuth = corporateIdsForAuth;
         return this;
@@ -36,6 +39,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporates")
     public Long[] corporates;
+
     public FilterVendorRequest withCorporates(Long[] corporates) {
         this.corporates = corporates;
         return this;
@@ -44,6 +48,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String[] country;
+
     public FilterVendorRequest withCountry(String[] country) {
         this.country = country;
         return this;
@@ -52,6 +57,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public FilterVendorRequest withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -60,6 +66,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_services")
     public String[] currentServices;
+
     public FilterVendorRequest withCurrentServices(String[] currentServices) {
         this.currentServices = currentServices;
         return this;
@@ -68,6 +75,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daily_proofreading_capacity")
     public Long dailyProofreadingCapacity;
+
     public FilterVendorRequest withDailyProofreadingCapacity(Long dailyProofreadingCapacity) {
         this.dailyProofreadingCapacity = dailyProofreadingCapacity;
         return this;
@@ -76,6 +84,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daily_translation_capacity")
     public Long dailyTranslationCapacity;
+
     public FilterVendorRequest withDailyTranslationCapacity(Long dailyTranslationCapacity) {
         this.dailyTranslationCapacity = dailyTranslationCapacity;
         return this;
@@ -84,6 +93,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_languages")
     public Long[] destinationLanguages;
+
     public FilterVendorRequest withDestinationLanguages(Long[] destinationLanguages) {
         this.destinationLanguages = destinationLanguages;
         return this;
@@ -92,6 +102,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dtp_software")
     public String[] dtpSoftware;
+
     public FilterVendorRequest withDtpSoftware(String[] dtpSoftware) {
         this.dtpSoftware = dtpSoftware;
         return this;
@@ -100,6 +111,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public String emailAddress;
+
     public FilterVendorRequest withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -108,6 +120,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experience")
     public String[] experience;
+
     public FilterVendorRequest withExperience(String[] experience) {
         this.experience = experience;
         return this;
@@ -116,6 +129,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public FilterVendorRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -124,6 +138,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long[] id;
+
     public FilterVendorRequest withId(Long[] id) {
         this.id = id;
         return this;
@@ -132,6 +147,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_certified_translator")
     public Boolean isCertifiedTranslator;
+
     public FilterVendorRequest withIsCertifiedTranslator(Boolean isCertifiedTranslator) {
         this.isCertifiedTranslator = isCertifiedTranslator;
         return this;
@@ -140,6 +156,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_sworn_translator")
     public Boolean isSwornTranslator;
+
     public FilterVendorRequest withIsSwornTranslator(Boolean isSwornTranslator) {
         this.isSwornTranslator = isSwornTranslator;
         return this;
@@ -148,6 +165,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_pairs")
     public Long[][] languagePairs;
+
     public FilterVendorRequest withLanguagePairs(Long[][] languagePairs) {
         this.languagePairs = languagePairs;
         return this;
@@ -156,6 +174,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public FilterVendorRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -164,6 +183,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_online")
     public String lastOnline;
+
     public FilterVendorRequest withLastOnline(String lastOnline) {
         this.lastOnline = lastOnline;
         return this;
@@ -172,6 +192,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_worked")
     public String lastWorked;
+
     public FilterVendorRequest withLastWorked(String lastWorked) {
         this.lastWorked = lastWorked;
         return this;
@@ -180,6 +201,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoq")
     public Long memoq;
+
     public FilterVendorRequest withMemoq(Long memoq) {
         this.memoq = memoq;
         return this;
@@ -188,6 +210,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memsource")
     public Long memsource;
+
     public FilterVendorRequest withMemsource(Long memsource) {
         this.memsource = memsource;
         return this;
@@ -196,6 +219,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min_tqs")
     public Double minTqs;
+
     public FilterVendorRequest withMinTqs(Double minTqs) {
         this.minTqs = minTqs;
         return this;
@@ -204,6 +228,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("omegat")
     public Long omegat;
+
     public FilterVendorRequest withOmegat(Long omegat) {
         this.omegat = omegat;
         return this;
@@ -212,6 +237,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_count")
     public Long projectCount;
+
     public FilterVendorRequest withProjectCount(Long projectCount) {
         this.projectCount = projectCount;
         return this;
@@ -220,6 +246,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proofreader_experience")
     public Long proofreaderExperience;
+
     public FilterVendorRequest withProofreaderExperience(Long proofreaderExperience) {
         this.proofreaderExperience = proofreaderExperience;
         return this;
@@ -228,6 +255,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provides_creative_writing_service")
     public Boolean providesCreativeWritingService;
+
     public FilterVendorRequest withProvidesCreativeWritingService(Boolean providesCreativeWritingService) {
         this.providesCreativeWritingService = providesCreativeWritingService;
         return this;
@@ -236,6 +264,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provides_postedit_service")
     public Boolean providesPosteditService;
+
     public FilterVendorRequest withProvidesPosteditService(Boolean providesPosteditService) {
         this.providesPosteditService = providesPosteditService;
         return this;
@@ -244,6 +273,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_file_subjects")
     public String[] quoteFileSubjects;
+
     public FilterVendorRequest withQuoteFileSubjects(String[] quoteFileSubjects) {
         this.quoteFileSubjects = quoteFileSubjects;
         return this;
@@ -252,6 +282,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public FilterVendorRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -260,6 +291,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdl_trados")
     public Long sdlTrados;
+
     public FilterVendorRequest withSdlTrados(Long sdlTrados) {
         this.sdlTrados = sdlTrados;
         return this;
@@ -268,6 +300,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search")
     public String search;
+
     public FilterVendorRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -276,6 +309,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skype_id")
     public String skypeId;
+
     public FilterVendorRequest withSkypeId(String skypeId) {
         this.skypeId = skypeId;
         return this;
@@ -284,6 +318,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smartcat")
     public Long smartcat;
+
     public FilterVendorRequest withSmartcat(Long smartcat) {
         this.smartcat = smartcat;
         return this;
@@ -292,6 +327,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smartling")
     public Long smartling;
+
     public FilterVendorRequest withSmartling(Long smartling) {
         this.smartling = smartling;
         return this;
@@ -300,6 +336,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_languages")
     public Long[] sourceLanguages;
+
     public FilterVendorRequest withSourceLanguages(Long[] sourceLanguages) {
         this.sourceLanguages = sourceLanguages;
         return this;
@@ -308,6 +345,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specialization")
     public String[] specialization;
+
     public FilterVendorRequest withSpecialization(String[] specialization) {
         this.specialization = specialization;
         return this;
@@ -316,6 +354,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String[] status;
+
     public FilterVendorRequest withStatus(String[] status) {
         this.status = status;
         return this;
@@ -324,6 +363,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle_edit")
     public Long subtitleEdit;
+
     public FilterVendorRequest withSubtitleEdit(Long subtitleEdit) {
         this.subtitleEdit = subtitleEdit;
         return this;
@@ -332,6 +372,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle_workshop")
     public Long subtitleWorkshop;
+
     public FilterVendorRequest withSubtitleWorkshop(Long subtitleWorkshop) {
         this.subtitleWorkshop = subtitleWorkshop;
         return this;
@@ -340,6 +381,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translator_association")
     public String translatorAssociation;
+
     public FilterVendorRequest withTranslatorAssociation(String translatorAssociation) {
         this.translatorAssociation = translatorAssociation;
         return this;
@@ -348,6 +390,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transsuite_2000")
     public Long transsuite2000;
+
     public FilterVendorRequest withTranssuite2000(Long transsuite2000) {
         this.transsuite2000 = transsuite2000;
         return this;
@@ -356,6 +399,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_working_timezone")
     public String[] userWorkingTimezone;
+
     public FilterVendorRequest withUserWorkingTimezone(String[] userWorkingTimezone) {
         this.userWorkingTimezone = userWorkingTimezone;
         return this;
@@ -364,6 +408,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_profile_lsp")
     public String vendorProfileLsp;
+
     public FilterVendorRequest withVendorProfileLsp(String vendorProfileLsp) {
         this.vendorProfileLsp = vendorProfileLsp;
         return this;
@@ -372,6 +417,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_tags")
     public String[] vendorTags;
+
     public FilterVendorRequest withVendorTags(String[] vendorTags) {
         this.vendorTags = vendorTags;
         return this;
@@ -380,6 +426,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_type")
     public String[] vendorType;
+
     public FilterVendorRequest withVendorType(String[] vendorType) {
         this.vendorType = vendorType;
         return this;
@@ -388,6 +435,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_working_timezone")
     public String[] vendorWorkingTimezone;
+
     public FilterVendorRequest withVendorWorkingTimezone(String[] vendorWorkingTimezone) {
         this.vendorWorkingTimezone = vendorWorkingTimezone;
         return this;
@@ -396,6 +444,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("word_count")
     public Long wordCount;
+
     public FilterVendorRequest withWordCount(Long wordCount) {
         this.wordCount = wordCount;
         return this;
@@ -404,6 +453,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wordbee")
     public Long wordbee;
+
     public FilterVendorRequest withWordbee(Long wordbee) {
         this.wordbee = wordbee;
         return this;
@@ -412,6 +462,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wordfast")
     public Long wordfast;
+
     public FilterVendorRequest withWordfast(Long wordfast) {
         this.wordfast = wordfast;
         return this;
@@ -420,6 +471,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("work_type")
     public String workType;
+
     public FilterVendorRequest withWorkType(String workType) {
         this.workType = workType;
         return this;
@@ -428,6 +480,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("work_with")
     public String workWith;
+
     public FilterVendorRequest withWorkWith(String workWith) {
         this.workWith = workWith;
         return this;
@@ -436,6 +489,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("working_as")
     public String[] workingAs;
+
     public FilterVendorRequest withWorkingAs(String[] workingAs) {
         this.workingAs = workingAs;
         return this;
@@ -444,6 +498,7 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xbench")
     public Long xbench;
+
     public FilterVendorRequest withXbench(Long xbench) {
         this.xbench = xbench;
         return this;
@@ -452,9 +507,11 @@ public class FilterVendorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xtm")
     public Long xtm;
+
     public FilterVendorRequest withXtm(Long xtm) {
         this.xtm = xtm;
         return this;
     }
     
+    public FilterVendorRequest(){}
 }

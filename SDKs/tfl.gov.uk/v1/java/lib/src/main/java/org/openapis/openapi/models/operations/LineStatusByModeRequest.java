@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineStatusByModeRequest {
@@ -12,6 +13,7 @@ public class LineStatusByModeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=detail")
     public Boolean detail;
+
     public LineStatusByModeRequest withDetail(Boolean detail) {
         this.detail = detail;
         return this;
@@ -22,6 +24,7 @@ public class LineStatusByModeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modes")
     public String[] modes;
+
     public LineStatusByModeRequest withModes(String[] modes) {
         this.modes = modes;
         return this;
@@ -32,9 +35,13 @@ public class LineStatusByModeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=severityLevel")
     public String severityLevel;
+
     public LineStatusByModeRequest withSeverityLevel(String severityLevel) {
         this.severityLevel = severityLevel;
         return this;
     }
     
+    public LineStatusByModeRequest(@JsonProperty("modes") String[] modes) {
+        this.modes = modes;
+  }
 }

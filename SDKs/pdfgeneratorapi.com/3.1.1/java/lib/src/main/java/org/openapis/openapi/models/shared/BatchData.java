@@ -12,6 +12,7 @@ public class BatchData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Data data;
+
     public BatchData withData(Data data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class BatchData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public Long template;
+
     public BatchData withTemplate(Long template) {
         this.template = template;
         return this;
     }
     
+    public BatchData(){}
 }

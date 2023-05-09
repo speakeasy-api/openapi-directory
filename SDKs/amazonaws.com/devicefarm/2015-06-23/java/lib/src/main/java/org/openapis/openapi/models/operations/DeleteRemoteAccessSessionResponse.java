@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRemoteAccessSessionResponse {
@@ -12,6 +13,7 @@ public class DeleteRemoteAccessSessionResponse {
      */
     
     public Object argumentException;
+
     public DeleteRemoteAccessSessionResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRemoteAccessSessionResponse {
     
     
     public String contentType;
+
     public DeleteRemoteAccessSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRemoteAccessSessionResponse {
      */
     
     public java.util.Map<String, Object> deleteRemoteAccessSessionResult;
+
     public DeleteRemoteAccessSessionResponse withDeleteRemoteAccessSessionResult(java.util.Map<String, Object> deleteRemoteAccessSessionResult) {
         this.deleteRemoteAccessSessionResult = deleteRemoteAccessSessionResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRemoteAccessSessionResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteRemoteAccessSessionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRemoteAccessSessionResponse {
      */
     
     public Object notFoundException;
+
     public DeleteRemoteAccessSessionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteRemoteAccessSessionResponse {
      */
     
     public Object serviceAccountException;
+
     public DeleteRemoteAccessSessionResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteRemoteAccessSessionResponse {
     
     
     public Integer statusCode;
+
     public DeleteRemoteAccessSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteRemoteAccessSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRemoteAccessSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteRemoteAccessSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class DescribeDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentVersion")
     public String agentVersion;
+
     public DescribeDeviceResponse withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -28,6 +29,7 @@ public class DescribeDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeDeviceResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class DescribeDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceArn")
     public String deviceArn;
+
     public DescribeDeviceResponse withDeviceArn(String deviceArn) {
         this.deviceArn = deviceArn;
         return this;
@@ -43,6 +46,7 @@ public class DescribeDeviceResponse {
     
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public DescribeDeviceResponse withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -50,6 +54,7 @@ public class DescribeDeviceResponse {
     
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public DescribeDeviceResponse withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -58,6 +63,7 @@ public class DescribeDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IotThingName")
     public String iotThingName;
+
     public DescribeDeviceResponse withIotThingName(String iotThingName) {
         this.iotThingName = iotThingName;
         return this;
@@ -68,6 +74,7 @@ public class DescribeDeviceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestHeartbeat")
     public OffsetDateTime latestHeartbeat;
+
     public DescribeDeviceResponse withLatestHeartbeat(OffsetDateTime latestHeartbeat) {
         this.latestHeartbeat = latestHeartbeat;
         return this;
@@ -76,6 +83,7 @@ public class DescribeDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxModels")
     public Long maxModels;
+
     public DescribeDeviceResponse withMaxModels(Long maxModels) {
         this.maxModels = maxModels;
         return this;
@@ -84,6 +92,7 @@ public class DescribeDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Models")
     public EdgeModel[] models;
+
     public DescribeDeviceResponse withModels(EdgeModel[] models) {
         this.models = models;
         return this;
@@ -92,6 +101,7 @@ public class DescribeDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeDeviceResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -101,9 +111,15 @@ public class DescribeDeviceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RegistrationTime")
     public OffsetDateTime registrationTime;
+
     public DescribeDeviceResponse withRegistrationTime(OffsetDateTime registrationTime) {
         this.registrationTime = registrationTime;
         return this;
     }
     
+    public DescribeDeviceResponse(@JsonProperty("DeviceFleetName") String deviceFleetName, @JsonProperty("DeviceName") String deviceName, @JsonProperty("RegistrationTime") OffsetDateTime registrationTime) {
+        this.deviceFleetName = deviceFleetName;
+        this.deviceName = deviceName;
+        this.registrationTime = registrationTime;
+  }
 }

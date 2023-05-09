@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLayersResponse {
     
     public String contentType;
+
     public ListLayersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListLayersResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListLayersResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class ListLayersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLayersResponse listLayersResponse;
+
     public ListLayersResponse withListLayersResponse(org.openapis.openapi.models.shared.ListLayersResponse listLayersResponse) {
         this.listLayersResponse = listLayersResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListLayersResponse {
      */
     
     public Object serviceException;
+
     public ListLayersResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -46,6 +51,7 @@ public class ListLayersResponse {
     
     
     public Integer statusCode;
+
     public ListLayersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListLayersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLayersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListLayersResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListLayersResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListLayersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

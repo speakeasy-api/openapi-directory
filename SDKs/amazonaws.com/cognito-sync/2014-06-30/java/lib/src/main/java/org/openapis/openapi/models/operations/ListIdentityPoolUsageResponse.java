@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListIdentityPoolUsageResponse {
     
     public String contentType;
+
     public ListIdentityPoolUsageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListIdentityPoolUsageResponse {
      */
     
     public Object internalErrorException;
+
     public ListIdentityPoolUsageResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListIdentityPoolUsageResponse {
      */
     
     public Object invalidParameterException;
+
     public ListIdentityPoolUsageResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListIdentityPoolUsageResponse {
      */
     
     public org.openapis.openapi.models.shared.ListIdentityPoolUsageResponse listIdentityPoolUsageResponse;
+
     public ListIdentityPoolUsageResponse withListIdentityPoolUsageResponse(org.openapis.openapi.models.shared.ListIdentityPoolUsageResponse listIdentityPoolUsageResponse) {
         this.listIdentityPoolUsageResponse = listIdentityPoolUsageResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListIdentityPoolUsageResponse {
      */
     
     public Object notAuthorizedException;
+
     public ListIdentityPoolUsageResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class ListIdentityPoolUsageResponse {
     
     
     public Integer statusCode;
+
     public ListIdentityPoolUsageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListIdentityPoolUsageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListIdentityPoolUsageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListIdentityPoolUsageResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListIdentityPoolUsageResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListIdentityPoolUsageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

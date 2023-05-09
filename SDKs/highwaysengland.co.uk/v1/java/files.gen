@@ -65,4 +65,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/SiteTypeResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SiteType.java
 lib/src/main/java/org/openapis/openapi/models/shared/SiteResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SiteResult.java
+docs/sdk/README.md
+docs/areas/README.md
+docs/quality/README.md
+docs/reports/README.md
+docs/sitetypes/README.md
+docs/sites/README.md
 USAGE.md

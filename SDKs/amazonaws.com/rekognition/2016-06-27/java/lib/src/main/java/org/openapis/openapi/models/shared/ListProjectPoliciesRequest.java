@@ -12,6 +12,7 @@ public class ListProjectPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListProjectPoliciesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListProjectPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListProjectPoliciesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListProjectPoliciesRequest {
     
     @JsonProperty("ProjectArn")
     public String projectArn;
+
     public ListProjectPoliciesRequest withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
     }
     
+    public ListProjectPoliciesRequest(@JsonProperty("ProjectArn") String projectArn) {
+        this.projectArn = projectArn;
+  }
 }

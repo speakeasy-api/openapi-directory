@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelPermission")
     public GoogleAppsDriveLabelsV2LabelPermission labelPermission;
+
     public GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest withLabelPermission(GoogleAppsDriveLabelsV2LabelPermission labelPermission) {
         this.labelPermission = labelPermission;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAdminAccess")
     public Boolean useAdminAccess;
+
     public GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest withUseAdminAccess(Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2UpdateLabelPermissionRequest(){}
 }

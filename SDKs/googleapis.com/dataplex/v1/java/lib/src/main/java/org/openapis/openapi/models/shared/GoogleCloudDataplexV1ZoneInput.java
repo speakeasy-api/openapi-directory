@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ZoneInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetStatus")
     public GoogleCloudDataplexV1AssetStatus assetStatus;
+
     public GoogleCloudDataplexV1ZoneInput withAssetStatus(GoogleCloudDataplexV1AssetStatus assetStatus) {
         this.assetStatus = assetStatus;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1ZoneInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1ZoneInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1ZoneInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discoverySpec")
     public GoogleCloudDataplexV1ZoneDiscoverySpec discoverySpec;
+
     public GoogleCloudDataplexV1ZoneInput withDiscoverySpec(GoogleCloudDataplexV1ZoneDiscoverySpec discoverySpec) {
         this.discoverySpec = discoverySpec;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1ZoneInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1ZoneInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1ZoneInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1ZoneInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1ZoneInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceSpec")
     public GoogleCloudDataplexV1ZoneResourceSpec resourceSpec;
+
     public GoogleCloudDataplexV1ZoneInput withResourceSpec(GoogleCloudDataplexV1ZoneResourceSpec resourceSpec) {
         this.resourceSpec = resourceSpec;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDataplexV1ZoneInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDataplexV1ZoneTypeEnum type;
+
     public GoogleCloudDataplexV1ZoneInput withType(GoogleCloudDataplexV1ZoneTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDataplexV1ZoneInput(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public GoogleCloudPaymentsResellerSubscriptionV1Amount amount;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput withAmount(GoogleCloudPaymentsResellerSubscriptionV1Amount amount) {
         this.amount = amount;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemPromotionSpecs")
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput[] lineItemPromotionSpecs;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput withLineItemPromotionSpecs(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput[] lineItemPromotionSpecs) {
         this.lineItemPromotionSpecs = lineItemPromotionSpecs;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneTimeRecurrenceDetails")
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails oneTimeRecurrenceDetails;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput withOneTimeRecurrenceDetails(GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails oneTimeRecurrenceDetails) {
         this.oneTimeRecurrenceDetails = oneTimeRecurrenceDetails;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public String product;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput withProduct(String product) {
         this.product = product;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productPayload")
     public GoogleCloudPaymentsResellerSubscriptionV1ProductPayload productPayload;
+
     public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput withProductPayload(GoogleCloudPaymentsResellerSubscriptionV1ProductPayload productPayload) {
         this.productPayload = productPayload;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemInput(){}
 }

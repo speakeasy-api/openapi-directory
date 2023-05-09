@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RejectDomainTransferFromAnotherAwsAccountRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public RejectDomainTransferFromAnotherAwsAccountRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public RejectDomainTransferFromAnotherAwsAccountRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

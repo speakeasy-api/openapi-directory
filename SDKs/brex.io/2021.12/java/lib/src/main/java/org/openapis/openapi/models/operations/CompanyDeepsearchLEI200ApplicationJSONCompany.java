@@ -12,6 +12,7 @@ public class CompanyDeepsearchLEI200ApplicationJSONCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String[] address;
+
     public CompanyDeepsearchLEI200ApplicationJSONCompany withAddress(String[] address) {
         this.address = address;
         return this;
@@ -19,6 +20,7 @@ public class CompanyDeepsearchLEI200ApplicationJSONCompany {
     
     @JsonProperty("country")
     public String country;
+
     public CompanyDeepsearchLEI200ApplicationJSONCompany withCountry(String country) {
         this.country = country;
         return this;
@@ -27,6 +29,7 @@ public class CompanyDeepsearchLEI200ApplicationJSONCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateOfIncorporation")
     public String dateOfIncorporation;
+
     public CompanyDeepsearchLEI200ApplicationJSONCompany withDateOfIncorporation(String dateOfIncorporation) {
         this.dateOfIncorporation = dateOfIncorporation;
         return this;
@@ -35,6 +38,7 @@ public class CompanyDeepsearchLEI200ApplicationJSONCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraData")
     public java.util.Map<String, Object> extraData;
+
     public CompanyDeepsearchLEI200ApplicationJSONCompany withExtraData(java.util.Map<String, Object> extraData) {
         this.extraData = extraData;
         return this;
@@ -43,6 +47,7 @@ public class CompanyDeepsearchLEI200ApplicationJSONCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedAddress")
     public String[] formattedAddress;
+
     public CompanyDeepsearchLEI200ApplicationJSONCompany withFormattedAddress(String[] formattedAddress) {
         this.formattedAddress = formattedAddress;
         return this;
@@ -50,6 +55,7 @@ public class CompanyDeepsearchLEI200ApplicationJSONCompany {
     
     @JsonProperty("id")
     public String id;
+
     public CompanyDeepsearchLEI200ApplicationJSONCompany withId(String id) {
         this.id = id;
         return this;
@@ -58,6 +64,7 @@ public class CompanyDeepsearchLEI200ApplicationJSONCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalForm")
     public String legalForm;
+
     public CompanyDeepsearchLEI200ApplicationJSONCompany withLegalForm(String legalForm) {
         this.legalForm = legalForm;
         return this;
@@ -66,6 +73,7 @@ public class CompanyDeepsearchLEI200ApplicationJSONCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managingDirectors")
     public String[] managingDirectors;
+
     public CompanyDeepsearchLEI200ApplicationJSONCompany withManagingDirectors(String[] managingDirectors) {
         this.managingDirectors = managingDirectors;
         return this;
@@ -73,6 +81,7 @@ public class CompanyDeepsearchLEI200ApplicationJSONCompany {
     
     @JsonProperty("name")
     public String name;
+
     public CompanyDeepsearchLEI200ApplicationJSONCompany withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +89,7 @@ public class CompanyDeepsearchLEI200ApplicationJSONCompany {
     
     @JsonProperty("registrationNumber")
     public String registrationNumber;
+
     public CompanyDeepsearchLEI200ApplicationJSONCompany withRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
         return this;
@@ -88,6 +98,7 @@ public class CompanyDeepsearchLEI200ApplicationJSONCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestTime")
     public Long requestTime;
+
     public CompanyDeepsearchLEI200ApplicationJSONCompany withRequestTime(Long requestTime) {
         this.requestTime = requestTime;
         return this;
@@ -96,6 +107,7 @@ public class CompanyDeepsearchLEI200ApplicationJSONCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretaries")
     public String[] secretaries;
+
     public CompanyDeepsearchLEI200ApplicationJSONCompany withSecretaries(String[] secretaries) {
         this.secretaries = secretaries;
         return this;
@@ -104,6 +116,7 @@ public class CompanyDeepsearchLEI200ApplicationJSONCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sicNaceCodes")
     public String[] sicNaceCodes;
+
     public CompanyDeepsearchLEI200ApplicationJSONCompany withSicNaceCodes(String[] sicNaceCodes) {
         this.sicNaceCodes = sicNaceCodes;
         return this;
@@ -112,9 +125,16 @@ public class CompanyDeepsearchLEI200ApplicationJSONCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CompanyDeepsearchLEI200ApplicationJSONCompany withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public CompanyDeepsearchLEI200ApplicationJSONCompany(@JsonProperty("country") String country, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("registrationNumber") String registrationNumber) {
+        this.country = country;
+        this.id = id;
+        this.name = name;
+        this.registrationNumber = registrationNumber;
+  }
 }

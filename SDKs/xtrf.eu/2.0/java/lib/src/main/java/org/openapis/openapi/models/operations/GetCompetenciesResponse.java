@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCompetenciesResponse {
@@ -12,6 +13,7 @@ public class GetCompetenciesResponse {
      */
     
     public org.openapis.openapi.models.shared.CompetenciesDTO competenciesDTO;
+
     public GetCompetenciesResponse withCompetenciesDTO(org.openapis.openapi.models.shared.CompetenciesDTO competenciesDTO) {
         this.competenciesDTO = competenciesDTO;
         return this;
@@ -19,6 +21,7 @@ public class GetCompetenciesResponse {
     
     
     public String contentType;
+
     public GetCompetenciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetCompetenciesResponse {
     
     
     public Integer statusCode;
+
     public GetCompetenciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetCompetenciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCompetenciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCompetenciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

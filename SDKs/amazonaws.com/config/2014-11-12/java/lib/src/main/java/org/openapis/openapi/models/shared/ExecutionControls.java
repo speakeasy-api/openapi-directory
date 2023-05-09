@@ -15,9 +15,11 @@ public class ExecutionControls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SsmControls")
     public SsmControls ssmControls;
+
     public ExecutionControls withSsmControls(SsmControls ssmControls) {
         this.ssmControls = ssmControls;
         return this;
     }
     
+    public ExecutionControls(){}
 }

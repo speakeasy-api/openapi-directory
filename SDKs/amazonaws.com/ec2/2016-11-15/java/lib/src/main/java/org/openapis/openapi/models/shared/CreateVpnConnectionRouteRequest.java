@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateVpnConnectionRouteRequest - Contains the parameters for CreateVpnConnectionRoute.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpnConnectionRouteRequest {
     
     public String destinationCidrBlock;
+
     public CreateVpnConnectionRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -19,9 +20,14 @@ public class CreateVpnConnectionRouteRequest {
     
     
     public String vpnConnectionId;
+
     public CreateVpnConnectionRouteRequest withVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
     }
     
+    public CreateVpnConnectionRouteRequest(@JsonProperty("DestinationCidrBlock") String destinationCidrBlock, @JsonProperty("VpnConnectionId") String vpnConnectionId) {
+        this.destinationCidrBlock = destinationCidrBlock;
+        this.vpnConnectionId = vpnConnectionId;
+  }
 }

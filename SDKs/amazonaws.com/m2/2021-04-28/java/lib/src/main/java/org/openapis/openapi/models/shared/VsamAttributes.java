@@ -15,6 +15,7 @@ public class VsamAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternateKeys")
     public AlternateKey[] alternateKeys;
+
     public VsamAttributes withAlternateKeys(AlternateKey[] alternateKeys) {
         this.alternateKeys = alternateKeys;
         return this;
@@ -23,6 +24,7 @@ public class VsamAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compressed")
     public Boolean compressed;
+
     public VsamAttributes withCompressed(Boolean compressed) {
         this.compressed = compressed;
         return this;
@@ -31,6 +33,7 @@ public class VsamAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding")
     public String encoding;
+
     public VsamAttributes withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
@@ -38,6 +41,7 @@ public class VsamAttributes {
     
     @JsonProperty("format")
     public String format;
+
     public VsamAttributes withFormat(String format) {
         this.format = format;
         return this;
@@ -46,9 +50,13 @@ public class VsamAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryKey")
     public PrimaryKey primaryKey;
+
     public VsamAttributes withPrimaryKey(PrimaryKey primaryKey) {
         this.primaryKey = primaryKey;
         return this;
     }
     
+    public VsamAttributes(@JsonProperty("format") String format) {
+        this.format = format;
+  }
 }

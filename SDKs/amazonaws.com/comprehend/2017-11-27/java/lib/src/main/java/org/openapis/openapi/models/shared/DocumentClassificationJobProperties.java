@@ -20,6 +20,7 @@ public class DocumentClassificationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public DocumentClassificationJobProperties withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -28,6 +29,7 @@ public class DocumentClassificationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentClassifierArn")
     public String documentClassifierArn;
+
     public DocumentClassificationJobProperties withDocumentClassifierArn(String documentClassifierArn) {
         this.documentClassifierArn = documentClassifierArn;
         return this;
@@ -38,6 +40,7 @@ public class DocumentClassificationJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public DocumentClassificationJobProperties withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -46,6 +49,7 @@ public class DocumentClassificationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelArn")
     public String flywheelArn;
+
     public DocumentClassificationJobProperties withFlywheelArn(String flywheelArn) {
         this.flywheelArn = flywheelArn;
         return this;
@@ -54,6 +58,7 @@ public class DocumentClassificationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public DocumentClassificationJobProperties withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -62,6 +67,7 @@ public class DocumentClassificationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobArn")
     public String jobArn;
+
     public DocumentClassificationJobProperties withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -70,6 +76,7 @@ public class DocumentClassificationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public DocumentClassificationJobProperties withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -78,6 +85,7 @@ public class DocumentClassificationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public DocumentClassificationJobProperties withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -86,6 +94,7 @@ public class DocumentClassificationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public DocumentClassificationJobProperties withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -94,6 +103,7 @@ public class DocumentClassificationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DocumentClassificationJobProperties withMessage(String message) {
         this.message = message;
         return this;
@@ -102,6 +112,7 @@ public class DocumentClassificationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public DocumentClassificationJobProperties withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -112,6 +123,7 @@ public class DocumentClassificationJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTime")
     public OffsetDateTime submitTime;
+
     public DocumentClassificationJobProperties withSubmitTime(OffsetDateTime submitTime) {
         this.submitTime = submitTime;
         return this;
@@ -120,6 +132,7 @@ public class DocumentClassificationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public DocumentClassificationJobProperties withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
@@ -128,9 +141,11 @@ public class DocumentClassificationJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public DocumentClassificationJobProperties withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public DocumentClassificationJobProperties(){}
 }

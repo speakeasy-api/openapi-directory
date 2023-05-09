@@ -18,6 +18,7 @@ public class FirewallPoliciesListAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associations")
     public FirewallPolicyAssociation[] associations;
+
     public FirewallPoliciesListAssociationsResponse withAssociations(FirewallPolicyAssociation[] associations) {
         this.associations = associations;
         return this;
@@ -29,9 +30,11 @@ public class FirewallPoliciesListAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public FirewallPoliciesListAssociationsResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public FirewallPoliciesListAssociationsResponse(){}
 }

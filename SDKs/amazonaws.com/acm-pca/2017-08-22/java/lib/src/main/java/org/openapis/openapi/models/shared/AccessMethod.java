@@ -15,6 +15,7 @@ public class AccessMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessMethodType")
     public AccessMethodTypeEnum accessMethodType;
+
     public AccessMethod withAccessMethodType(AccessMethodTypeEnum accessMethodType) {
         this.accessMethodType = accessMethodType;
         return this;
@@ -23,9 +24,11 @@ public class AccessMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomObjectIdentifier")
     public String customObjectIdentifier;
+
     public AccessMethod withCustomObjectIdentifier(String customObjectIdentifier) {
         this.customObjectIdentifier = customObjectIdentifier;
         return this;
     }
     
+    public AccessMethod(){}
 }

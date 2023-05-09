@@ -15,6 +15,7 @@ public class DescribeKeywordsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keywords")
     public KeywordInformation[] keywords;
+
     public DescribeKeywordsResult withKeywords(KeywordInformation[] keywords) {
         this.keywords = keywords;
         return this;
@@ -23,6 +24,7 @@ public class DescribeKeywordsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeKeywordsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,6 +33,7 @@ public class DescribeKeywordsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginationIdentity")
     public String originationIdentity;
+
     public DescribeKeywordsResult withOriginationIdentity(String originationIdentity) {
         this.originationIdentity = originationIdentity;
         return this;
@@ -39,9 +42,11 @@ public class DescribeKeywordsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginationIdentityArn")
     public String originationIdentityArn;
+
     public DescribeKeywordsResult withOriginationIdentityArn(String originationIdentityArn) {
         this.originationIdentityArn = originationIdentityArn;
         return this;
     }
     
+    public DescribeKeywordsResult(){}
 }

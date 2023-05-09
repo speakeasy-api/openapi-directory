@@ -15,6 +15,7 @@ public class WorkspaceRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("anonymousDataCollection")
     public Boolean anonymousDataCollection;
+
     public WorkspaceRead withAnonymousDataCollection(Boolean anonymousDataCollection) {
         this.anonymousDataCollection = anonymousDataCollection;
         return this;
@@ -22,6 +23,7 @@ public class WorkspaceRead {
     
     @JsonProperty("customerId")
     public String customerId;
+
     public WorkspaceRead withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -30,6 +32,7 @@ public class WorkspaceRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultGeography")
     public GeographyEnum defaultGeography;
+
     public WorkspaceRead withDefaultGeography(GeographyEnum defaultGeography) {
         this.defaultGeography = defaultGeography;
         return this;
@@ -38,6 +41,7 @@ public class WorkspaceRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displaySetupWizard")
     public Boolean displaySetupWizard;
+
     public WorkspaceRead withDisplaySetupWizard(Boolean displaySetupWizard) {
         this.displaySetupWizard = displaySetupWizard;
         return this;
@@ -46,6 +50,7 @@ public class WorkspaceRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public WorkspaceRead withEmail(String email) {
         this.email = email;
         return this;
@@ -54,6 +59,7 @@ public class WorkspaceRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedbackDone")
     public Boolean feedbackDone;
+
     public WorkspaceRead withFeedbackDone(Boolean feedbackDone) {
         this.feedbackDone = feedbackDone;
         return this;
@@ -62,6 +68,7 @@ public class WorkspaceRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstCompletedSync")
     public Boolean firstCompletedSync;
+
     public WorkspaceRead withFirstCompletedSync(Boolean firstCompletedSync) {
         this.firstCompletedSync = firstCompletedSync;
         return this;
@@ -69,6 +76,7 @@ public class WorkspaceRead {
     
     @JsonProperty("initialSetupComplete")
     public Boolean initialSetupComplete;
+
     public WorkspaceRead withInitialSetupComplete(Boolean initialSetupComplete) {
         this.initialSetupComplete = initialSetupComplete;
         return this;
@@ -76,6 +84,7 @@ public class WorkspaceRead {
     
     @JsonProperty("name")
     public String name;
+
     public WorkspaceRead withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +93,7 @@ public class WorkspaceRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("news")
     public Boolean news;
+
     public WorkspaceRead withNews(Boolean news) {
         this.news = news;
         return this;
@@ -92,6 +102,7 @@ public class WorkspaceRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifications")
     public Notification[] notifications;
+
     public WorkspaceRead withNotifications(Notification[] notifications) {
         this.notifications = notifications;
         return this;
@@ -100,6 +111,7 @@ public class WorkspaceRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityUpdates")
     public Boolean securityUpdates;
+
     public WorkspaceRead withSecurityUpdates(Boolean securityUpdates) {
         this.securityUpdates = securityUpdates;
         return this;
@@ -107,6 +119,7 @@ public class WorkspaceRead {
     
     @JsonProperty("slug")
     public String slug;
+
     public WorkspaceRead withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -115,6 +128,7 @@ public class WorkspaceRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookConfigs")
     public WebhookConfigRead[] webhookConfigs;
+
     public WorkspaceRead withWebhookConfigs(WebhookConfigRead[] webhookConfigs) {
         this.webhookConfigs = webhookConfigs;
         return this;
@@ -122,9 +136,17 @@ public class WorkspaceRead {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public WorkspaceRead withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public WorkspaceRead(@JsonProperty("customerId") String customerId, @JsonProperty("initialSetupComplete") Boolean initialSetupComplete, @JsonProperty("name") String name, @JsonProperty("slug") String slug, @JsonProperty("workspaceId") String workspaceId) {
+        this.customerId = customerId;
+        this.initialSetupComplete = initialSetupComplete;
+        this.name = name;
+        this.slug = slug;
+        this.workspaceId = workspaceId;
+  }
 }

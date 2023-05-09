@@ -15,6 +15,7 @@ public class ResumeWorkflowRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeIds")
     public String[] nodeIds;
+
     public ResumeWorkflowRunResponse withNodeIds(String[] nodeIds) {
         this.nodeIds = nodeIds;
         return this;
@@ -23,9 +24,11 @@ public class ResumeWorkflowRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunId")
     public String runId;
+
     public ResumeWorkflowRunResponse withRunId(String runId) {
         this.runId = runId;
         return this;
     }
     
+    public ResumeWorkflowRunResponse(){}
 }

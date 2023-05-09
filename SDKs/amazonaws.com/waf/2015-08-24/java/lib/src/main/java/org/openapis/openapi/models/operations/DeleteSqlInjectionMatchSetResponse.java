@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSqlInjectionMatchSetResponse {
     
     public String contentType;
+
     public DeleteSqlInjectionMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSqlInjectionMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteSqlInjectionMatchSetResponse deleteSqlInjectionMatchSetResponse;
+
     public DeleteSqlInjectionMatchSetResponse withDeleteSqlInjectionMatchSetResponse(org.openapis.openapi.models.shared.DeleteSqlInjectionMatchSetResponse deleteSqlInjectionMatchSetResponse) {
         this.deleteSqlInjectionMatchSetResponse = deleteSqlInjectionMatchSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class DeleteSqlInjectionMatchSetResponse {
     
     
     public Integer statusCode;
+
     public DeleteSqlInjectionMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteSqlInjectionMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSqlInjectionMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DeleteSqlInjectionMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public DeleteSqlInjectionMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSqlInjectionMatchSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public DeleteSqlInjectionMatchSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class DeleteSqlInjectionMatchSetResponse {
      */
     
     public Object wafNonEmptyEntityException;
+
     public DeleteSqlInjectionMatchSetResponse withWAFNonEmptyEntityException(Object wafNonEmptyEntityException) {
         this.wafNonEmptyEntityException = wafNonEmptyEntityException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteSqlInjectionMatchSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public DeleteSqlInjectionMatchSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteSqlInjectionMatchSetResponse {
      */
     
     public Object wafReferencedItemException;
+
     public DeleteSqlInjectionMatchSetResponse withWAFReferencedItemException(Object wafReferencedItemException) {
         this.wafReferencedItemException = wafReferencedItemException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteSqlInjectionMatchSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public DeleteSqlInjectionMatchSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public DeleteSqlInjectionMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

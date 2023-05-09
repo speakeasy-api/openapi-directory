@@ -15,9 +15,11 @@ public class ParquetConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaDefinition")
     public SchemaDefinition schemaDefinition;
+
     public ParquetConfiguration withSchemaDefinition(SchemaDefinition schemaDefinition) {
         this.schemaDefinition = schemaDefinition;
         return this;
     }
     
+    public ParquetConfiguration(){}
 }

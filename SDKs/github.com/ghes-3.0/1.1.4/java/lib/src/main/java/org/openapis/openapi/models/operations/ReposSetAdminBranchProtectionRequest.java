@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposSetAdminBranchProtectionRequest {
@@ -12,6 +13,7 @@ public class ReposSetAdminBranchProtectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
     public String branch;
+
     public ReposSetAdminBranchProtectionRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -19,6 +21,7 @@ public class ReposSetAdminBranchProtectionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposSetAdminBranchProtectionRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -26,9 +29,15 @@ public class ReposSetAdminBranchProtectionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposSetAdminBranchProtectionRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposSetAdminBranchProtectionRequest(@JsonProperty("branch") String branch, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.branch = branch;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

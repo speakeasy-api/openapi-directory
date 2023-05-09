@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsCreateForReleaseRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReactionsCreateForReleaseRequestBody requestBody;
+
     public ReactionsCreateForReleaseRequest withRequestBody(ReactionsCreateForReleaseRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ReactionsCreateForReleaseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReactionsCreateForReleaseRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -29,6 +32,7 @@ public class ReactionsCreateForReleaseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public Long releaseId;
+
     public ReactionsCreateForReleaseRequest withReleaseId(Long releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -39,9 +43,16 @@ public class ReactionsCreateForReleaseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReactionsCreateForReleaseRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReactionsCreateForReleaseRequest(@JsonProperty("RequestBody") ReactionsCreateForReleaseRequestBody requestBody, @JsonProperty("owner") String owner, @JsonProperty("release_id") Long releaseId, @JsonProperty("repo") String repo) {
+        this.requestBody = requestBody;
+        this.owner = owner;
+        this.releaseId = releaseId;
+        this.repo = repo;
+  }
 }

@@ -15,6 +15,7 @@ public class RunConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationRestoreConfiguration")
     public ApplicationRestoreConfiguration applicationRestoreConfiguration;
+
     public RunConfiguration withApplicationRestoreConfiguration(ApplicationRestoreConfiguration applicationRestoreConfiguration) {
         this.applicationRestoreConfiguration = applicationRestoreConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class RunConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlinkRunConfiguration")
     public FlinkRunConfiguration flinkRunConfiguration;
+
     public RunConfiguration withFlinkRunConfiguration(FlinkRunConfiguration flinkRunConfiguration) {
         this.flinkRunConfiguration = flinkRunConfiguration;
         return this;
@@ -31,9 +33,11 @@ public class RunConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqlRunConfigurations")
     public SqlRunConfiguration[] sqlRunConfigurations;
+
     public RunConfiguration withSqlRunConfigurations(SqlRunConfiguration[] sqlRunConfigurations) {
         this.sqlRunConfigurations = sqlRunConfigurations;
         return this;
     }
     
+    public RunConfiguration(){}
 }

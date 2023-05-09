@@ -18,6 +18,7 @@ public class GoogleCloudDiscoveryengineV1betaSearchInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public GoogleCloudDiscoveryengineV1betaSearchInfo withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -29,20 +30,23 @@ public class GoogleCloudDiscoveryengineV1betaSearchInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public String orderBy;
+
     public GoogleCloudDiscoveryengineV1betaSearchInfo withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
     }
     
     /**
-     * The user's search query. See SearchRequest.query for definition. The value must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. At least one of search_query or page_categories is required for `search` events. Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+     * The user's search query. See SearchRequest.query for definition. The value must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. At least one of search_query or PageInfo.page_category is required for `search` events. Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchQuery")
     public String searchQuery;
+
     public GoogleCloudDiscoveryengineV1betaSearchInfo withSearchQuery(String searchQuery) {
         this.searchQuery = searchQuery;
         return this;
     }
     
+    public GoogleCloudDiscoveryengineV1betaSearchInfo(){}
 }

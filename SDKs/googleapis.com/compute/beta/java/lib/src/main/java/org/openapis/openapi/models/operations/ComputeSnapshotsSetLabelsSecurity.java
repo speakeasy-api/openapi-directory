@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeSnapshotsSetLabelsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeSnapshotsSetLabelsSecurityOption1 option1;
+
     public ComputeSnapshotsSetLabelsSecurity withOption1(ComputeSnapshotsSetLabelsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeSnapshotsSetLabelsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeSnapshotsSetLabelsSecurityOption2 option2;
+
     public ComputeSnapshotsSetLabelsSecurity withOption2(ComputeSnapshotsSetLabelsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeSnapshotsSetLabelsSecurity(){}
 }

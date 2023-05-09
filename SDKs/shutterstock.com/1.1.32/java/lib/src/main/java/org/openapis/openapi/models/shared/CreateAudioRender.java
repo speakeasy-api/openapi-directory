@@ -15,6 +15,7 @@ public class CreateAudioRender {
      */
     @JsonProperty("filename")
     public String filename;
+
     public CreateAudioRender withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -25,6 +26,7 @@ public class CreateAudioRender {
      */
     @JsonProperty("preset")
     public CreateAudioRenderPresetEnum preset;
+
     public CreateAudioRender withPreset(CreateAudioRenderPresetEnum preset) {
         this.preset = preset;
         return this;
@@ -35,9 +37,15 @@ public class CreateAudioRender {
      */
     @JsonProperty("timeline")
     public AudioRenderTimeline timeline;
+
     public CreateAudioRender withTimeline(AudioRenderTimeline timeline) {
         this.timeline = timeline;
         return this;
     }
     
+    public CreateAudioRender(@JsonProperty("filename") String filename, @JsonProperty("preset") CreateAudioRenderPresetEnum preset, @JsonProperty("timeline") AudioRenderTimeline timeline) {
+        this.filename = filename;
+        this.preset = preset;
+        this.timeline = timeline;
+  }
 }

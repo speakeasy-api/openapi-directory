@@ -12,6 +12,7 @@ public class GetQueryResultsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetQueryResultsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class GetQueryResultsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetQueryResultsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class GetQueryResultsInput {
     
     @JsonProperty("QueryExecutionId")
     public String queryExecutionId;
+
     public GetQueryResultsInput withQueryExecutionId(String queryExecutionId) {
         this.queryExecutionId = queryExecutionId;
         return this;
     }
     
+    public GetQueryResultsInput(@JsonProperty("QueryExecutionId") String queryExecutionId) {
+        this.queryExecutionId = queryExecutionId;
+  }
 }

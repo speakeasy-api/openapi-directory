@@ -18,6 +18,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -29,6 +30,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Integer status;
+
     public Error withStatus(Integer status) {
         this.status = status;
         return this;
@@ -40,9 +42,11 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Error(){}
 }

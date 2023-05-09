@@ -15,6 +15,7 @@ public class UpdateSchemaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugOptions")
     public DebugOptions debugOptions;
+
     public UpdateSchemaRequest withDebugOptions(DebugOptions debugOptions) {
         this.debugOptions = debugOptions;
         return this;
@@ -26,6 +27,7 @@ public class UpdateSchemaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public Schema schema;
+
     public UpdateSchemaRequest withSchema(Schema schema) {
         this.schema = schema;
         return this;
@@ -37,9 +39,11 @@ public class UpdateSchemaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public UpdateSchemaRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public UpdateSchemaRequest(){}
 }

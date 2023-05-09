@@ -12,6 +12,7 @@ public class DescribeImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arns")
     public String[] arns;
+
     public DescribeImagesRequest withArns(String[] arns) {
         this.arns = arns;
         return this;
@@ -20,6 +21,7 @@ public class DescribeImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeImagesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Names")
     public String[] names;
+
     public DescribeImagesRequest withNames(String[] names) {
         this.names = names;
         return this;
@@ -36,6 +39,7 @@ public class DescribeImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeImagesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +48,11 @@ public class DescribeImagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public VisibilityTypeEnum type;
+
     public DescribeImagesRequest withType(VisibilityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DescribeImagesRequest(){}
 }

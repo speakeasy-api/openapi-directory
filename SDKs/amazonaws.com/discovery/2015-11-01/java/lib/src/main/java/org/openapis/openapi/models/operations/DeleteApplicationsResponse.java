@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApplicationsResponse {
@@ -12,6 +13,7 @@ public class DeleteApplicationsResponse {
      */
     
     public Object authorizationErrorException;
+
     public DeleteApplicationsResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApplicationsResponse {
     
     
     public String contentType;
+
     public DeleteApplicationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteApplicationsResponse {
      */
     
     public java.util.Map<String, Object> deleteApplicationsResponse;
+
     public DeleteApplicationsResponse withDeleteApplicationsResponse(java.util.Map<String, Object> deleteApplicationsResponse) {
         this.deleteApplicationsResponse = deleteApplicationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteApplicationsResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public DeleteApplicationsResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteApplicationsResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteApplicationsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteApplicationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteApplicationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteApplicationsResponse {
      */
     
     public Object serverInternalErrorException;
+
     public DeleteApplicationsResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteApplicationsResponse {
     
     
     public Integer statusCode;
+
     public DeleteApplicationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteApplicationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApplicationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteApplicationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

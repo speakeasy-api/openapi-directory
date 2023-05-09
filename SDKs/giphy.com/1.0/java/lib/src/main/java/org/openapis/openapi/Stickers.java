@@ -59,11 +59,9 @@ public class Stickers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RandomStickerResponse res = new org.openapis.openapi.models.operations.RandomStickerResponse() {{
+        org.openapis.openapi.models.operations.RandomStickerResponse res = new org.openapis.openapi.models.operations.RandomStickerResponse(contentType, httpRes.statusCode()) {{
             randomSticker200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Stickers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchStickersResponse res = new org.openapis.openapi.models.operations.SearchStickersResponse() {{
+        org.openapis.openapi.models.operations.SearchStickersResponse res = new org.openapis.openapi.models.operations.SearchStickersResponse(contentType, httpRes.statusCode()) {{
             searchStickers200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class Stickers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TranslateStickerResponse res = new org.openapis.openapi.models.operations.TranslateStickerResponse() {{
+        org.openapis.openapi.models.operations.TranslateStickerResponse res = new org.openapis.openapi.models.operations.TranslateStickerResponse(contentType, httpRes.statusCode()) {{
             translateSticker200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -206,11 +200,9 @@ public class Stickers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TrendingStickersResponse res = new org.openapis.openapi.models.operations.TrendingStickersResponse() {{
+        org.openapis.openapi.models.operations.TrendingStickersResponse res = new org.openapis.openapi.models.operations.TrendingStickersResponse(contentType, httpRes.statusCode()) {{
             trendingStickers200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

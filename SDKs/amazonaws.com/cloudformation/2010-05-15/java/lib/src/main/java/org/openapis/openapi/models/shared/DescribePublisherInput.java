@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DescribePublisherInput {
     
     public String publisherId;
+
     public DescribePublisherInput withPublisherId(String publisherId) {
         this.publisherId = publisherId;
         return this;
     }
     
+    public DescribePublisherInput(){}
 }

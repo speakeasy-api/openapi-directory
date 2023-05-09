@@ -18,6 +18,7 @@ public class GoogleAppsCardV1GridItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleAppsCardV1GridItem withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCardV1GridItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public GoogleAppsCardV1ImageComponent image;
+
     public GoogleAppsCardV1GridItem withImage(GoogleAppsCardV1ImageComponent image) {
         this.image = image;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCardV1GridItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public GoogleAppsCardV1GridItemLayoutEnum layout;
+
     public GoogleAppsCardV1GridItem withLayout(GoogleAppsCardV1GridItemLayoutEnum layout) {
         this.layout = layout;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsCardV1GridItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle")
     public String subtitle;
+
     public GoogleAppsCardV1GridItem withSubtitle(String subtitle) {
         this.subtitle = subtitle;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAppsCardV1GridItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleAppsCardV1GridItem withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleAppsCardV1GridItem(){}
 }

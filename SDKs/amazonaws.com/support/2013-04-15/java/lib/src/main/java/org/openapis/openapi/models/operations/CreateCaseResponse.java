@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCaseResponse {
@@ -12,6 +13,7 @@ public class CreateCaseResponse {
      */
     
     public Object attachmentSetExpired;
+
     public CreateCaseResponse withAttachmentSetExpired(Object attachmentSetExpired) {
         this.attachmentSetExpired = attachmentSetExpired;
         return this;
@@ -22,6 +24,7 @@ public class CreateCaseResponse {
      */
     
     public Object attachmentSetIdNotFound;
+
     public CreateCaseResponse withAttachmentSetIdNotFound(Object attachmentSetIdNotFound) {
         this.attachmentSetIdNotFound = attachmentSetIdNotFound;
         return this;
@@ -32,6 +35,7 @@ public class CreateCaseResponse {
      */
     
     public Object caseCreationLimitExceeded;
+
     public CreateCaseResponse withCaseCreationLimitExceeded(Object caseCreationLimitExceeded) {
         this.caseCreationLimitExceeded = caseCreationLimitExceeded;
         return this;
@@ -39,6 +43,7 @@ public class CreateCaseResponse {
     
     
     public String contentType;
+
     public CreateCaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateCaseResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCaseResponse createCaseResponse;
+
     public CreateCaseResponse withCreateCaseResponse(org.openapis.openapi.models.shared.CreateCaseResponse createCaseResponse) {
         this.createCaseResponse = createCaseResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateCaseResponse {
      */
     
     public Object internalServerError;
+
     public CreateCaseResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -66,6 +73,7 @@ public class CreateCaseResponse {
     
     
     public Integer statusCode;
+
     public CreateCaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateCaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateCaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRightsizingRecommendationResponse {
     
     public String contentType;
+
     public GetRightsizingRecommendationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRightsizingRecommendationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRightsizingRecommendationResponse getRightsizingRecommendationResponse;
+
     public GetRightsizingRecommendationResponse withGetRightsizingRecommendationResponse(org.openapis.openapi.models.shared.GetRightsizingRecommendationResponse getRightsizingRecommendationResponse) {
         this.getRightsizingRecommendationResponse = getRightsizingRecommendationResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetRightsizingRecommendationResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetRightsizingRecommendationResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class GetRightsizingRecommendationResponse {
      */
     
     public Object limitExceededException;
+
     public GetRightsizingRecommendationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class GetRightsizingRecommendationResponse {
     
     
     public Integer statusCode;
+
     public GetRightsizingRecommendationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetRightsizingRecommendationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRightsizingRecommendationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRightsizingRecommendationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

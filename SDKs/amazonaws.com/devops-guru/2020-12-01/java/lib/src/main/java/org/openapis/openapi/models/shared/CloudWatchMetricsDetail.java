@@ -15,6 +15,7 @@ public class CloudWatchMetricsDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public CloudWatchMetricsDimension[] dimensions;
+
     public CloudWatchMetricsDetail withDimensions(CloudWatchMetricsDimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -23,6 +24,7 @@ public class CloudWatchMetricsDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricDataSummary")
     public CloudWatchMetricsDataSummary metricDataSummary;
+
     public CloudWatchMetricsDetail withMetricDataSummary(CloudWatchMetricsDataSummary metricDataSummary) {
         this.metricDataSummary = metricDataSummary;
         return this;
@@ -31,6 +33,7 @@ public class CloudWatchMetricsDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public CloudWatchMetricsDetail withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -39,6 +42,7 @@ public class CloudWatchMetricsDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Namespace")
     public String namespace;
+
     public CloudWatchMetricsDetail withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -47,6 +51,7 @@ public class CloudWatchMetricsDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Period")
     public Long period;
+
     public CloudWatchMetricsDetail withPeriod(Long period) {
         this.period = period;
         return this;
@@ -55,6 +60,7 @@ public class CloudWatchMetricsDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stat")
     public CloudWatchMetricsStatEnum stat;
+
     public CloudWatchMetricsDetail withStat(CloudWatchMetricsStatEnum stat) {
         this.stat = stat;
         return this;
@@ -63,9 +69,11 @@ public class CloudWatchMetricsDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public String unit;
+
     public CloudWatchMetricsDetail withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public CloudWatchMetricsDetail(){}
 }

@@ -18,6 +18,7 @@ public class ViolatingResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public ViolatingResource withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +30,11 @@ public class ViolatingResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceUrl")
     public String resourceUrl;
+
     public ViolatingResource withResourceUrl(String resourceUrl) {
         this.resourceUrl = resourceUrl;
         return this;
     }
     
+    public ViolatingResource(){}
 }

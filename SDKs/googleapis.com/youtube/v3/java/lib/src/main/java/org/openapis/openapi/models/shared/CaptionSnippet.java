@@ -23,6 +23,7 @@ public class CaptionSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioTrackType")
     public CaptionSnippetAudioTrackTypeEnum audioTrackType;
+
     public CaptionSnippet withAudioTrackType(CaptionSnippetAudioTrackTypeEnum audioTrackType) {
         this.audioTrackType = audioTrackType;
         return this;
@@ -34,6 +35,7 @@ public class CaptionSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public CaptionSnippetFailureReasonEnum failureReason;
+
     public CaptionSnippet withFailureReason(CaptionSnippetFailureReasonEnum failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -45,6 +47,7 @@ public class CaptionSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAutoSynced")
     public Boolean isAutoSynced;
+
     public CaptionSnippet withIsAutoSynced(Boolean isAutoSynced) {
         this.isAutoSynced = isAutoSynced;
         return this;
@@ -56,6 +59,7 @@ public class CaptionSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCC")
     public Boolean isCC;
+
     public CaptionSnippet withIsCC(Boolean isCC) {
         this.isCC = isCC;
         return this;
@@ -67,6 +71,7 @@ public class CaptionSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDraft")
     public Boolean isDraft;
+
     public CaptionSnippet withIsDraft(Boolean isDraft) {
         this.isDraft = isDraft;
         return this;
@@ -78,6 +83,7 @@ public class CaptionSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isEasyReader")
     public Boolean isEasyReader;
+
     public CaptionSnippet withIsEasyReader(Boolean isEasyReader) {
         this.isEasyReader = isEasyReader;
         return this;
@@ -89,6 +95,7 @@ public class CaptionSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isLarge")
     public Boolean isLarge;
+
     public CaptionSnippet withIsLarge(Boolean isLarge) {
         this.isLarge = isLarge;
         return this;
@@ -100,6 +107,7 @@ public class CaptionSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public CaptionSnippet withLanguage(String language) {
         this.language = language;
         return this;
@@ -113,6 +121,7 @@ public class CaptionSnippet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public CaptionSnippet withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -124,6 +133,7 @@ public class CaptionSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CaptionSnippet withName(String name) {
         this.name = name;
         return this;
@@ -135,6 +145,7 @@ public class CaptionSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CaptionSnippetStatusEnum status;
+
     public CaptionSnippet withStatus(CaptionSnippetStatusEnum status) {
         this.status = status;
         return this;
@@ -146,6 +157,7 @@ public class CaptionSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackKind")
     public CaptionSnippetTrackKindEnum trackKind;
+
     public CaptionSnippet withTrackKind(CaptionSnippetTrackKindEnum trackKind) {
         this.trackKind = trackKind;
         return this;
@@ -157,9 +169,11 @@ public class CaptionSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoId")
     public String videoId;
+
     public CaptionSnippet withVideoId(String videoId) {
         this.videoId = videoId;
         return this;
     }
     
+    public CaptionSnippet(){}
 }

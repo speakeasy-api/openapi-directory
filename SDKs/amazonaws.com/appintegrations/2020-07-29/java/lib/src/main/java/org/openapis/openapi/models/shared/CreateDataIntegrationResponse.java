@@ -15,6 +15,7 @@ public class CreateDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public CreateDataIntegrationResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CreateDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateDataIntegrationResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -31,6 +33,7 @@ public class CreateDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateDataIntegrationResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class CreateDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileConfiguration")
     public FileConfiguration fileConfiguration;
+
     public CreateDataIntegrationResponse withFileConfiguration(FileConfiguration fileConfiguration) {
         this.fileConfiguration = fileConfiguration;
         return this;
@@ -47,6 +51,7 @@ public class CreateDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public CreateDataIntegrationResponse withId(String id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class CreateDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKey")
     public String kmsKey;
+
     public CreateDataIntegrationResponse withKmsKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
@@ -63,6 +69,7 @@ public class CreateDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateDataIntegrationResponse withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class CreateDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectConfiguration")
     public java.util.Map<String, java.util.Map<String, String[]>> objectConfiguration;
+
     public CreateDataIntegrationResponse withObjectConfiguration(java.util.Map<String, java.util.Map<String, String[]>> objectConfiguration) {
         this.objectConfiguration = objectConfiguration;
         return this;
@@ -79,6 +87,7 @@ public class CreateDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleConfiguration")
     public ScheduleConfiguration scheduleConfiguration;
+
     public CreateDataIntegrationResponse withScheduleConfiguration(ScheduleConfiguration scheduleConfiguration) {
         this.scheduleConfiguration = scheduleConfiguration;
         return this;
@@ -87,6 +96,7 @@ public class CreateDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceURI")
     public String sourceURI;
+
     public CreateDataIntegrationResponse withSourceURI(String sourceURI) {
         this.sourceURI = sourceURI;
         return this;
@@ -95,9 +105,11 @@ public class CreateDataIntegrationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateDataIntegrationResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDataIntegrationResponse(){}
 }

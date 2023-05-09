@@ -15,6 +15,7 @@ public class AboutApiVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("majorNumber")
     public Long majorNumber;
+
     public AboutApiVersion withMajorNumber(Long majorNumber) {
         this.majorNumber = majorNumber;
         return this;
@@ -26,9 +27,11 @@ public class AboutApiVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minorNumber")
     public Long minorNumber;
+
     public AboutApiVersion withMinorNumber(Long minorNumber) {
         this.minorNumber = minorNumber;
         return this;
     }
     
+    public AboutApiVersion(){}
 }

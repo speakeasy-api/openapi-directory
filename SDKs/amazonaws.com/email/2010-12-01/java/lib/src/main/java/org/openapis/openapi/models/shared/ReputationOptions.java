@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ReputationOptions {
     
     public OffsetDateTime lastFreshStart;
+
     public ReputationOptions withLastFreshStart(OffsetDateTime lastFreshStart) {
         this.lastFreshStart = lastFreshStart;
         return this;
@@ -19,6 +20,7 @@ public class ReputationOptions {
     
     
     public Boolean reputationMetricsEnabled;
+
     public ReputationOptions withReputationMetricsEnabled(Boolean reputationMetricsEnabled) {
         this.reputationMetricsEnabled = reputationMetricsEnabled;
         return this;
@@ -26,9 +28,11 @@ public class ReputationOptions {
     
     
     public Boolean sendingEnabled;
+
     public ReputationOptions withSendingEnabled(Boolean sendingEnabled) {
         this.sendingEnabled = sendingEnabled;
         return this;
     }
     
+    public ReputationOptions(){}
 }

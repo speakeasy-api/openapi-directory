@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateBudgetRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public UpdateBudgetRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,9 +20,14 @@ public class UpdateBudgetRequest {
     
     @JsonProperty("NewBudget")
     public Budget newBudget;
+
     public UpdateBudgetRequest withNewBudget(Budget newBudget) {
         this.newBudget = newBudget;
         return this;
     }
     
+    public UpdateBudgetRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("NewBudget") Budget newBudget) {
+        this.accountId = accountId;
+        this.newBudget = newBudget;
+  }
 }

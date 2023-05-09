@@ -18,6 +18,7 @@ public class GoogleTypePostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressLines")
     public String[] addressLines;
+
     public GoogleTypePostalAddress withAddressLines(String[] addressLines) {
         this.addressLines = addressLines;
         return this;
@@ -29,6 +30,7 @@ public class GoogleTypePostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("administrativeArea")
     public String administrativeArea;
+
     public GoogleTypePostalAddress withAdministrativeArea(String administrativeArea) {
         this.administrativeArea = administrativeArea;
         return this;
@@ -40,6 +42,7 @@ public class GoogleTypePostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleTypePostalAddress withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -51,6 +54,7 @@ public class GoogleTypePostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locality")
     public String locality;
+
     public GoogleTypePostalAddress withLocality(String locality) {
         this.locality = locality;
         return this;
@@ -62,6 +66,7 @@ public class GoogleTypePostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public GoogleTypePostalAddress withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -73,6 +78,7 @@ public class GoogleTypePostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public GoogleTypePostalAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -84,6 +90,7 @@ public class GoogleTypePostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipients")
     public String[] recipients;
+
     public GoogleTypePostalAddress withRecipients(String[] recipients) {
         this.recipients = recipients;
         return this;
@@ -95,6 +102,7 @@ public class GoogleTypePostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public GoogleTypePostalAddress withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -106,6 +114,7 @@ public class GoogleTypePostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public Integer revision;
+
     public GoogleTypePostalAddress withRevision(Integer revision) {
         this.revision = revision;
         return this;
@@ -117,6 +126,7 @@ public class GoogleTypePostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortingCode")
     public String sortingCode;
+
     public GoogleTypePostalAddress withSortingCode(String sortingCode) {
         this.sortingCode = sortingCode;
         return this;
@@ -128,9 +138,11 @@ public class GoogleTypePostalAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sublocality")
     public String sublocality;
+
     public GoogleTypePostalAddress withSublocality(String sublocality) {
         this.sublocality = sublocality;
         return this;
     }
     
+    public GoogleTypePostalAddress(){}
 }

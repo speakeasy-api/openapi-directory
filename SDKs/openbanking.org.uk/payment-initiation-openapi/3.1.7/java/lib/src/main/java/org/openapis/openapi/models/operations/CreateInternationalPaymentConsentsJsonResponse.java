@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateInternationalPaymentConsentsJsonResponse {
     
     public byte[] body;
+
     public CreateInternationalPaymentConsentsJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CreateInternationalPaymentConsentsJsonResponse {
     
     
     public String contentType;
+
     public CreateInternationalPaymentConsentsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CreateInternationalPaymentConsentsJsonResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreateInternationalPaymentConsentsJsonResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class CreateInternationalPaymentConsentsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public CreateInternationalPaymentConsentsJsonResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -43,6 +48,7 @@ public class CreateInternationalPaymentConsentsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBWriteInternationalConsentResponse6 obWriteInternationalConsentResponse6;
+
     public CreateInternationalPaymentConsentsJsonResponse withOBWriteInternationalConsentResponse6(org.openapis.openapi.models.shared.OBWriteInternationalConsentResponse6 obWriteInternationalConsentResponse6) {
         this.obWriteInternationalConsentResponse6 = obWriteInternationalConsentResponse6;
         return this;
@@ -50,6 +56,7 @@ public class CreateInternationalPaymentConsentsJsonResponse {
     
     
     public Integer statusCode;
+
     public CreateInternationalPaymentConsentsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class CreateInternationalPaymentConsentsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateInternationalPaymentConsentsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateInternationalPaymentConsentsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

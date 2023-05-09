@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Detail {
     @JsonProperty("icon_list")
     public IconList[] iconList;
+
     public Detail withIconList(IconList[] iconList) {
         this.iconList = iconList;
         return this;
@@ -16,6 +17,7 @@ public class Detail {
     
     @JsonProperty("locale")
     public Locale locale;
+
     public Detail withLocale(Locale locale) {
         this.locale = locale;
         return this;
@@ -23,9 +25,15 @@ public class Detail {
     
     @JsonProperty("timezone")
     public Timezone timezone;
+
     public Detail withTimezone(Timezone timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public Detail(@JsonProperty("icon_list") IconList[] iconList, @JsonProperty("locale") Locale locale, @JsonProperty("timezone") Timezone timezone) {
+        this.iconList = iconList;
+        this.locale = locale;
+        this.timezone = timezone;
+  }
 }

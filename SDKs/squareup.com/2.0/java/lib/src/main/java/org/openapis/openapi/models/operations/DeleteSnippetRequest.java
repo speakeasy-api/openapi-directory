@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSnippetRequest {
@@ -12,9 +13,13 @@ public class DeleteSnippetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=site_id")
     public String siteId;
+
     public DeleteSnippetRequest withSiteId(String siteId) {
         this.siteId = siteId;
         return this;
     }
     
+    public DeleteSnippetRequest(@JsonProperty("site_id") String siteId) {
+        this.siteId = siteId;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeConversionTasksResult {
     
     public DescribeConversionTasksResultConversionTasks[] conversionTasks;
+
     public DescribeConversionTasksResult withConversionTasks(DescribeConversionTasksResultConversionTasks[] conversionTasks) {
         this.conversionTasks = conversionTasks;
         return this;
     }
     
+    public DescribeConversionTasksResult(){}
 }

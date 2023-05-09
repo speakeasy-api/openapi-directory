@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfa {
     @JsonProperty("MFAMode")
     public org.openapis.openapi.models.shared.MFAModeEnum mfaMode;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfa withMFAMode(org.openapis.openapi.models.shared.MFAModeEnum mfaMode) {
         this.mfaMode = mfaMode;
         return this;
@@ -22,9 +23,13 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfa {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfaSettings settings;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfa withSettings(CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfaSettings settings) {
         this.settings = settings;
         return this;
     }
     
+    public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfa(@JsonProperty("MFAMode") org.openapis.openapi.models.shared.MFAModeEnum mfaMode) {
+        this.mfaMode = mfaMode;
+  }
 }

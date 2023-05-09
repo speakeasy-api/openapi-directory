@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleasesGetLatestByUserResponse {
     
     public String contentType;
+
     public ReleasesGetLatestByUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReleasesGetLatestByUserResponse {
     
     
     public Integer statusCode;
+
     public ReleasesGetLatestByUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReleasesGetLatestByUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleasesGetLatestByUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReleasesGetLatestByUserResponse {
      */
     
     public ReleasesGetLatestByUser200ApplicationJSON releasesGetLatestByUser200ApplicationJSONObject;
+
     public ReleasesGetLatestByUserResponse withReleasesGetLatestByUser200ApplicationJSONObject(ReleasesGetLatestByUser200ApplicationJSON releasesGetLatestByUser200ApplicationJSONObject) {
         this.releasesGetLatestByUser200ApplicationJSONObject = releasesGetLatestByUser200ApplicationJSONObject;
         return this;
@@ -44,6 +49,7 @@ public class ReleasesGetLatestByUserResponse {
      */
     
     public ReleasesGetLatestByUser400ApplicationJSON releasesGetLatestByUser400ApplicationJSONObject;
+
     public ReleasesGetLatestByUserResponse withReleasesGetLatestByUser400ApplicationJSONObject(ReleasesGetLatestByUser400ApplicationJSON releasesGetLatestByUser400ApplicationJSONObject) {
         this.releasesGetLatestByUser400ApplicationJSONObject = releasesGetLatestByUser400ApplicationJSONObject;
         return this;
@@ -57,9 +63,14 @@ public class ReleasesGetLatestByUserResponse {
      */
     
     public ReleasesGetLatestByUser404ApplicationJSON releasesGetLatestByUser404ApplicationJSONObject;
+
     public ReleasesGetLatestByUserResponse withReleasesGetLatestByUser404ApplicationJSONObject(ReleasesGetLatestByUser404ApplicationJSON releasesGetLatestByUser404ApplicationJSONObject) {
         this.releasesGetLatestByUser404ApplicationJSONObject = releasesGetLatestByUser404ApplicationJSONObject;
         return this;
     }
     
+    public ReleasesGetLatestByUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

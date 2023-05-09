@@ -15,9 +15,11 @@ public class CreateRecordingConfigurationRequestBodyDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3")
     public org.openapis.openapi.models.shared.S3DestinationConfiguration s3;
+
     public CreateRecordingConfigurationRequestBodyDestinationConfiguration withS3(org.openapis.openapi.models.shared.S3DestinationConfiguration s3) {
         this.s3 = s3;
         return this;
     }
     
+    public CreateRecordingConfigurationRequestBodyDestinationConfiguration(){}
 }

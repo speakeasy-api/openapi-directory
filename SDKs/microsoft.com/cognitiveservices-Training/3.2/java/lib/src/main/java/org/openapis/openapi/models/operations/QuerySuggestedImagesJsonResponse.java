@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class QuerySuggestedImagesJsonResponse {
     
     public byte[] body;
+
     public QuerySuggestedImagesJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class QuerySuggestedImagesJsonResponse {
     
     
     public String contentType;
+
     public QuerySuggestedImagesJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class QuerySuggestedImagesJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomVisionError customVisionError;
+
     public QuerySuggestedImagesJsonResponse withCustomVisionError(org.openapis.openapi.models.shared.CustomVisionError customVisionError) {
         this.customVisionError = customVisionError;
         return this;
@@ -33,6 +37,7 @@ public class QuerySuggestedImagesJsonResponse {
     
     
     public Integer statusCode;
+
     public QuerySuggestedImagesJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class QuerySuggestedImagesJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public QuerySuggestedImagesJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class QuerySuggestedImagesJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.SuggestedTagAndRegionQuery suggestedTagAndRegionQuery;
+
     public QuerySuggestedImagesJsonResponse withSuggestedTagAndRegionQuery(org.openapis.openapi.models.shared.SuggestedTagAndRegionQuery suggestedTagAndRegionQuery) {
         this.suggestedTagAndRegionQuery = suggestedTagAndRegionQuery;
         return this;
     }
     
+    public QuerySuggestedImagesJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

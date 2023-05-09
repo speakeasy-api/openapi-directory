@@ -23,6 +23,7 @@ public class CatalogDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public CatalogDiscount withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -34,6 +35,7 @@ public class CatalogDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_type")
     public String discountType;
+
     public CatalogDiscount withDiscountType(String discountType) {
         this.discountType = discountType;
         return this;
@@ -45,6 +47,7 @@ public class CatalogDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_color")
     public String labelColor;
+
     public CatalogDiscount withLabelColor(String labelColor) {
         this.labelColor = labelColor;
         return this;
@@ -65,6 +68,7 @@ public class CatalogDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modify_tax_basis")
     public String modifyTaxBasis;
+
     public CatalogDiscount withModifyTaxBasis(String modifyTaxBasis) {
         this.modifyTaxBasis = modifyTaxBasis;
         return this;
@@ -76,6 +80,7 @@ public class CatalogDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CatalogDiscount withName(String name) {
         this.name = name;
         return this;
@@ -91,6 +96,7 @@ public class CatalogDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public String percentage;
+
     public CatalogDiscount withPercentage(String percentage) {
         this.percentage = percentage;
         return this;
@@ -103,9 +109,11 @@ public class CatalogDiscount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pin_required")
     public Boolean pinRequired;
+
     public CatalogDiscount withPinRequired(Boolean pinRequired) {
         this.pinRequired = pinRequired;
         return this;
     }
     
+    public CatalogDiscount(){}
 }

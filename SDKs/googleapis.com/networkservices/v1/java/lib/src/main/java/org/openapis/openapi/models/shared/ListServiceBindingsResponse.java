@@ -18,6 +18,7 @@ public class ListServiceBindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListServiceBindingsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListServiceBindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceBindings")
     public ServiceBinding[] serviceBindings;
+
     public ListServiceBindingsResponse withServiceBindings(ServiceBinding[] serviceBindings) {
         this.serviceBindings = serviceBindings;
         return this;
     }
     
+    public ListServiceBindingsResponse(){}
 }

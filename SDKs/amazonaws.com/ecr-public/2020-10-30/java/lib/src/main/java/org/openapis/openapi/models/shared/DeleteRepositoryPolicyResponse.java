@@ -15,6 +15,7 @@ public class DeleteRepositoryPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyText")
     public String policyText;
+
     public DeleteRepositoryPolicyResponse withPolicyText(String policyText) {
         this.policyText = policyText;
         return this;
@@ -23,6 +24,7 @@ public class DeleteRepositoryPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public DeleteRepositoryPolicyResponse withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -31,9 +33,11 @@ public class DeleteRepositoryPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public DeleteRepositoryPolicyResponse withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public DeleteRepositoryPolicyResponse(){}
 }

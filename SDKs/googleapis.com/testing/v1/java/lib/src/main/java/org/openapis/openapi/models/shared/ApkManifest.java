@@ -18,6 +18,7 @@ public class ApkManifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationLabel")
     public String applicationLabel;
+
     public ApkManifest withApplicationLabel(String applicationLabel) {
         this.applicationLabel = applicationLabel;
         return this;
@@ -26,6 +27,7 @@ public class ApkManifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentFilters")
     public IntentFilter[] intentFilters;
+
     public ApkManifest withIntentFilters(IntentFilter[] intentFilters) {
         this.intentFilters = intentFilters;
         return this;
@@ -37,6 +39,7 @@ public class ApkManifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSdkVersion")
     public Integer maxSDKVersion;
+
     public ApkManifest withMaxSDKVersion(Integer maxSDKVersion) {
         this.maxSDKVersion = maxSDKVersion;
         return this;
@@ -48,6 +51,7 @@ public class ApkManifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public Metadata[] metadata;
+
     public ApkManifest withMetadata(Metadata[] metadata) {
         this.metadata = metadata;
         return this;
@@ -59,6 +63,7 @@ public class ApkManifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minSdkVersion")
     public Integer minSDKVersion;
+
     public ApkManifest withMinSDKVersion(Integer minSDKVersion) {
         this.minSDKVersion = minSDKVersion;
         return this;
@@ -70,6 +75,7 @@ public class ApkManifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public ApkManifest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -81,6 +87,7 @@ public class ApkManifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSdkVersion")
     public Integer targetSDKVersion;
+
     public ApkManifest withTargetSDKVersion(Integer targetSDKVersion) {
         this.targetSDKVersion = targetSDKVersion;
         return this;
@@ -92,6 +99,7 @@ public class ApkManifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usesFeature")
     public UsesFeature[] usesFeature;
+
     public ApkManifest withUsesFeature(UsesFeature[] usesFeature) {
         this.usesFeature = usesFeature;
         return this;
@@ -103,6 +111,7 @@ public class ApkManifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usesPermission")
     public String[] usesPermission;
+
     public ApkManifest withUsesPermission(String[] usesPermission) {
         this.usesPermission = usesPermission;
         return this;
@@ -114,6 +123,7 @@ public class ApkManifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionCode")
     public String versionCode;
+
     public ApkManifest withVersionCode(String versionCode) {
         this.versionCode = versionCode;
         return this;
@@ -125,9 +135,11 @@ public class ApkManifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionName")
     public String versionName;
+
     public ApkManifest withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public ApkManifest(){}
 }

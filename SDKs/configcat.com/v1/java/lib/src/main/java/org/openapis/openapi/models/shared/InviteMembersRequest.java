@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InviteMembersRequest {
     @JsonProperty("emails")
     public String[] emails;
+
     public InviteMembersRequest withEmails(String[] emails) {
         this.emails = emails;
         return this;
@@ -16,9 +17,14 @@ public class InviteMembersRequest {
     
     @JsonProperty("permissionGroupId")
     public Long permissionGroupId;
+
     public InviteMembersRequest withPermissionGroupId(Long permissionGroupId) {
         this.permissionGroupId = permissionGroupId;
         return this;
     }
     
+    public InviteMembersRequest(@JsonProperty("emails") String[] emails, @JsonProperty("permissionGroupId") Long permissionGroupId) {
+        this.emails = emails;
+        this.permissionGroupId = permissionGroupId;
+  }
 }

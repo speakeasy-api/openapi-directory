@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MeGetMePlanResponse {
     
     public org.openapis.openapi.models.shared.ApiCoreDtoAccountingPlan apiCoreDtoAccountingPlan;
+
     public MeGetMePlanResponse withApiCoreDtoAccountingPlan(org.openapis.openapi.models.shared.ApiCoreDtoAccountingPlan apiCoreDtoAccountingPlan) {
         this.apiCoreDtoAccountingPlan = apiCoreDtoAccountingPlan;
         return this;
@@ -16,6 +18,7 @@ public class MeGetMePlanResponse {
     
     
     public byte[] body;
+
     public MeGetMePlanResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -23,6 +26,7 @@ public class MeGetMePlanResponse {
     
     
     public String contentType;
+
     public MeGetMePlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,6 +34,7 @@ public class MeGetMePlanResponse {
     
     
     public Integer statusCode;
+
     public MeGetMePlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class MeGetMePlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MeGetMePlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MeGetMePlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CripcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public CripcRequestBodyCertificateParameters certificateParameters;
+
     public CripcRequestBody withCertificateParameters(CripcRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class CripcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public CripcRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class CripcRequestBody {
      */
     @JsonProperty("format")
     public CripcRequestBodyFormatEnum format;
+
     public CripcRequestBody withFormat(CripcRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class CripcRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public CripcRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public CripcRequestBody(@JsonProperty("format") CripcRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

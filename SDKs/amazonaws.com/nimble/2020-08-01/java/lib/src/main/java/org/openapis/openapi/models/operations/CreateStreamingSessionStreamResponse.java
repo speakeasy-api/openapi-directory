@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStreamingSessionStreamResponse {
@@ -12,6 +13,7 @@ public class CreateStreamingSessionStreamResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateStreamingSessionStreamResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateStreamingSessionStreamResponse {
      */
     
     public Object conflictException;
+
     public CreateStreamingSessionStreamResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateStreamingSessionStreamResponse {
     
     
     public String contentType;
+
     public CreateStreamingSessionStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateStreamingSessionStreamResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateStreamingSessionStreamResponse createStreamingSessionStreamResponse;
+
     public CreateStreamingSessionStreamResponse withCreateStreamingSessionStreamResponse(org.openapis.openapi.models.shared.CreateStreamingSessionStreamResponse createStreamingSessionStreamResponse) {
         this.createStreamingSessionStreamResponse = createStreamingSessionStreamResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateStreamingSessionStreamResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateStreamingSessionStreamResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class CreateStreamingSessionStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateStreamingSessionStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateStreamingSessionStreamResponse {
     
     
     public Integer statusCode;
+
     public CreateStreamingSessionStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateStreamingSessionStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStreamingSessionStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateStreamingSessionStreamResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateStreamingSessionStreamResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateStreamingSessionStreamResponse {
      */
     
     public Object throttlingException;
+
     public CreateStreamingSessionStreamResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateStreamingSessionStreamResponse {
      */
     
     public Object validationException;
+
     public CreateStreamingSessionStreamResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateStreamingSessionStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -17,6 +17,7 @@ public class TflApiPresentationEntitiesJourneyPlannerFareTapDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("busRouteId")
     public String busRouteId;
+
     public TflApiPresentationEntitiesJourneyPlannerFareTapDetails withBusRouteId(String busRouteId) {
         this.busRouteId = busRouteId;
         return this;
@@ -25,6 +26,7 @@ public class TflApiPresentationEntitiesJourneyPlannerFareTapDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostDeviceType")
     public String hostDeviceType;
+
     public TflApiPresentationEntitiesJourneyPlannerFareTapDetails withHostDeviceType(String hostDeviceType) {
         this.hostDeviceType = hostDeviceType;
         return this;
@@ -33,6 +35,7 @@ public class TflApiPresentationEntitiesJourneyPlannerFareTapDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modeType")
     public String modeType;
+
     public TflApiPresentationEntitiesJourneyPlannerFareTapDetails withModeType(String modeType) {
         this.modeType = modeType;
         return this;
@@ -41,6 +44,7 @@ public class TflApiPresentationEntitiesJourneyPlannerFareTapDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nationalLocationCode")
     public Integer nationalLocationCode;
+
     public TflApiPresentationEntitiesJourneyPlannerFareTapDetails withNationalLocationCode(Integer nationalLocationCode) {
         this.nationalLocationCode = nationalLocationCode;
         return this;
@@ -51,6 +55,7 @@ public class TflApiPresentationEntitiesJourneyPlannerFareTapDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("tapTimestamp")
     public OffsetDateTime tapTimestamp;
+
     public TflApiPresentationEntitiesJourneyPlannerFareTapDetails withTapTimestamp(OffsetDateTime tapTimestamp) {
         this.tapTimestamp = tapTimestamp;
         return this;
@@ -59,9 +64,11 @@ public class TflApiPresentationEntitiesJourneyPlannerFareTapDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationType")
     public String validationType;
+
     public TflApiPresentationEntitiesJourneyPlannerFareTapDetails withValidationType(String validationType) {
         this.validationType = validationType;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerFareTapDetails(){}
 }

@@ -18,6 +18,7 @@ public class VmImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageFamily")
     public String imageFamily;
+
     public VmImage withImageFamily(String imageFamily) {
         this.imageFamily = imageFamily;
         return this;
@@ -29,6 +30,7 @@ public class VmImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageName")
     public String imageName;
+
     public VmImage withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -40,9 +42,11 @@ public class VmImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public VmImage withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public VmImage(){}
 }

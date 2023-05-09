@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminEnableUserResponse {
@@ -12,6 +13,7 @@ public class AdminEnableUserResponse {
      */
     
     public java.util.Map<String, Object> adminEnableUserResponse;
+
     public AdminEnableUserResponse withAdminEnableUserResponse(java.util.Map<String, Object> adminEnableUserResponse) {
         this.adminEnableUserResponse = adminEnableUserResponse;
         return this;
@@ -19,6 +21,7 @@ public class AdminEnableUserResponse {
     
     
     public String contentType;
+
     public AdminEnableUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AdminEnableUserResponse {
      */
     
     public Object internalErrorException;
+
     public AdminEnableUserResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AdminEnableUserResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminEnableUserResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AdminEnableUserResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminEnableUserResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class AdminEnableUserResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminEnableUserResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AdminEnableUserResponse {
     
     
     public Integer statusCode;
+
     public AdminEnableUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AdminEnableUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminEnableUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AdminEnableUserResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminEnableUserResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class AdminEnableUserResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminEnableUserResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public AdminEnableUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class RegeneratePreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public Href link;
+
     public RegeneratePreviewResponse withLink(Href link) {
         this.link = link;
         return this;
@@ -23,9 +24,11 @@ public class RegeneratePreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public RegeneratePreviewResponse withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public RegeneratePreviewResponse(){}
 }

@@ -15,6 +15,7 @@ public class DomainSuggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Availability")
     public String availability;
+
     public DomainSuggestion withAvailability(String availability) {
         this.availability = availability;
         return this;
@@ -23,9 +24,11 @@ public class DomainSuggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public DomainSuggestion withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public DomainSuggestion(){}
 }

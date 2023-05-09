@@ -18,6 +18,7 @@ public class StagedEmployeeWebTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("badgeNumber")
     public String badgeNumber;
+
     public StagedEmployeeWebTime withBadgeNumber(String badgeNumber) {
         this.badgeNumber = badgeNumber;
         return this;
@@ -29,6 +30,7 @@ public class StagedEmployeeWebTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeRate")
     public Double chargeRate;
+
     public StagedEmployeeWebTime withChargeRate(Double chargeRate) {
         this.chargeRate = chargeRate;
         return this;
@@ -40,9 +42,11 @@ public class StagedEmployeeWebTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTimeLaborEnabled")
     public Boolean isTimeLaborEnabled;
+
     public StagedEmployeeWebTime withIsTimeLaborEnabled(Boolean isTimeLaborEnabled) {
         this.isTimeLaborEnabled = isTimeLaborEnabled;
         return this;
     }
     
+    public StagedEmployeeWebTime(){}
 }

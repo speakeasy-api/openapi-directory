@@ -18,6 +18,7 @@ public class AttestationOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwts")
     public Jwt[] jwts;
+
     public AttestationOccurrence withJwts(Jwt[] jwts) {
         this.jwts = jwts;
         return this;
@@ -29,6 +30,7 @@ public class AttestationOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serializedPayload")
     public String serializedPayload;
+
     public AttestationOccurrence withSerializedPayload(String serializedPayload) {
         this.serializedPayload = serializedPayload;
         return this;
@@ -40,9 +42,11 @@ public class AttestationOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatures")
     public Signature[] signatures;
+
     public AttestationOccurrence withSignatures(Signature[] signatures) {
         this.signatures = signatures;
         return this;
     }
     
+    public AttestationOccurrence(){}
 }

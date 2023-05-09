@@ -15,6 +15,7 @@ public class PostAdminSettingsRequestBodyUniform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedDelay")
     public Double fixedDelay;
+
     public PostAdminSettingsRequestBodyUniform withFixedDelay(Double fixedDelay) {
         this.fixedDelay = fixedDelay;
         return this;
@@ -23,6 +24,7 @@ public class PostAdminSettingsRequestBodyUniform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lower")
     public Long lower;
+
     public PostAdminSettingsRequestBodyUniform withLower(Long lower) {
         this.lower = lower;
         return this;
@@ -31,6 +33,7 @@ public class PostAdminSettingsRequestBodyUniform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PostAdminSettingsRequestBodyUniformTypeEnum type;
+
     public PostAdminSettingsRequestBodyUniform withType(PostAdminSettingsRequestBodyUniformTypeEnum type) {
         this.type = type;
         return this;
@@ -39,9 +42,11 @@ public class PostAdminSettingsRequestBodyUniform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upper")
     public Long upper;
+
     public PostAdminSettingsRequestBodyUniform withUpper(Long upper) {
         this.upper = upper;
         return this;
     }
     
+    public PostAdminSettingsRequestBodyUniform(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddFileRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FileDTO fileDTO;
+
     public AddFileRequest withFileDTO(org.openapis.openapi.models.shared.FileDTO fileDTO) {
         this.fileDTO = fileDTO;
         return this;
@@ -19,9 +21,14 @@ public class AddFileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
     public String taskId;
+
     public AddFileRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public AddFileRequest(@JsonProperty("FileDTO") org.openapis.openapi.models.shared.FileDTO fileDTO, @JsonProperty("taskId") String taskId) {
+        this.fileDTO = fileDTO;
+        this.taskId = taskId;
+  }
 }

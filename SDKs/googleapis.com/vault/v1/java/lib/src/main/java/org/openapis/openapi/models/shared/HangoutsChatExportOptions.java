@@ -18,9 +18,11 @@ public class HangoutsChatExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportFormat")
     public HangoutsChatExportOptionsExportFormatEnum exportFormat;
+
     public HangoutsChatExportOptions withExportFormat(HangoutsChatExportOptionsExportFormatEnum exportFormat) {
         this.exportFormat = exportFormat;
         return this;
     }
     
+    public HangoutsChatExportOptions(){}
 }

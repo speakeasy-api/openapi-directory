@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CacheNodeList {
     
     public OffsetDateTime cacheNodeCreateTime;
+
     public CacheNodeList withCacheNodeCreateTime(OffsetDateTime cacheNodeCreateTime) {
         this.cacheNodeCreateTime = cacheNodeCreateTime;
         return this;
@@ -19,6 +20,7 @@ public class CacheNodeList {
     
     
     public String cacheNodeId;
+
     public CacheNodeList withCacheNodeId(String cacheNodeId) {
         this.cacheNodeId = cacheNodeId;
         return this;
@@ -26,6 +28,7 @@ public class CacheNodeList {
     
     
     public String cacheNodeStatus;
+
     public CacheNodeList withCacheNodeStatus(String cacheNodeStatus) {
         this.cacheNodeStatus = cacheNodeStatus;
         return this;
@@ -33,6 +36,7 @@ public class CacheNodeList {
     
     
     public String customerAvailabilityZone;
+
     public CacheNodeList withCustomerAvailabilityZone(String customerAvailabilityZone) {
         this.customerAvailabilityZone = customerAvailabilityZone;
         return this;
@@ -40,6 +44,7 @@ public class CacheNodeList {
     
     
     public String customerOutpostArn;
+
     public CacheNodeList withCustomerOutpostArn(String customerOutpostArn) {
         this.customerOutpostArn = customerOutpostArn;
         return this;
@@ -47,6 +52,7 @@ public class CacheNodeList {
     
     
     public Endpoint endpoint;
+
     public CacheNodeList withEndpoint(Endpoint endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -54,6 +60,7 @@ public class CacheNodeList {
     
     
     public String parameterGroupStatus;
+
     public CacheNodeList withParameterGroupStatus(String parameterGroupStatus) {
         this.parameterGroupStatus = parameterGroupStatus;
         return this;
@@ -61,9 +68,11 @@ public class CacheNodeList {
     
     
     public String sourceCacheNodeId;
+
     public CacheNodeList withSourceCacheNodeId(String sourceCacheNodeId) {
         this.sourceCacheNodeId = sourceCacheNodeId;
         return this;
     }
     
+    public CacheNodeList(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveUserForTeamRequest {
@@ -12,6 +13,7 @@ public class RemoveUserForTeamRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public RemoveUserForTeamRequestBody requestBody;
+
     public RemoveUserForTeamRequest withRequestBody(RemoveUserForTeamRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class RemoveUserForTeamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public RemoveUserForTeamRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class RemoveUserForTeamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public RemoveUserForTeamRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,9 +49,14 @@ public class RemoveUserForTeamRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_gid")
     public String teamGid;
+
     public RemoveUserForTeamRequest withTeamGid(String teamGid) {
         this.teamGid = teamGid;
         return this;
     }
     
+    public RemoveUserForTeamRequest(@JsonProperty("RequestBody") RemoveUserForTeamRequestBody requestBody, @JsonProperty("team_gid") String teamGid) {
+        this.requestBody = requestBody;
+        this.teamGid = teamGid;
+  }
 }

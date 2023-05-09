@@ -13,9 +13,13 @@ public class WebhookEventResourceRelationshipsTransactionLinks {
      */
     @JsonProperty("related")
     public String related;
+
     public WebhookEventResourceRelationshipsTransactionLinks withRelated(String related) {
         this.related = related;
         return this;
     }
     
+    public WebhookEventResourceRelationshipsTransactionLinks(@JsonProperty("related") String related) {
+        this.related = related;
+  }
 }

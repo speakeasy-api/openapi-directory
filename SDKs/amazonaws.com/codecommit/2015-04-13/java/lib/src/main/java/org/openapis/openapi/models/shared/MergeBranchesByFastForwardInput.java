@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MergeBranchesByFastForwardInput {
     @JsonProperty("destinationCommitSpecifier")
     public String destinationCommitSpecifier;
+
     public MergeBranchesByFastForwardInput withDestinationCommitSpecifier(String destinationCommitSpecifier) {
         this.destinationCommitSpecifier = destinationCommitSpecifier;
         return this;
@@ -18,6 +19,7 @@ public class MergeBranchesByFastForwardInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public MergeBranchesByFastForwardInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -25,6 +27,7 @@ public class MergeBranchesByFastForwardInput {
     
     @JsonProperty("sourceCommitSpecifier")
     public String sourceCommitSpecifier;
+
     public MergeBranchesByFastForwardInput withSourceCommitSpecifier(String sourceCommitSpecifier) {
         this.sourceCommitSpecifier = sourceCommitSpecifier;
         return this;
@@ -33,9 +36,15 @@ public class MergeBranchesByFastForwardInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetBranch")
     public String targetBranch;
+
     public MergeBranchesByFastForwardInput withTargetBranch(String targetBranch) {
         this.targetBranch = targetBranch;
         return this;
     }
     
+    public MergeBranchesByFastForwardInput(@JsonProperty("destinationCommitSpecifier") String destinationCommitSpecifier, @JsonProperty("repositoryName") String repositoryName, @JsonProperty("sourceCommitSpecifier") String sourceCommitSpecifier) {
+        this.destinationCommitSpecifier = destinationCommitSpecifier;
+        this.repositoryName = repositoryName;
+        this.sourceCommitSpecifier = sourceCommitSpecifier;
+  }
 }

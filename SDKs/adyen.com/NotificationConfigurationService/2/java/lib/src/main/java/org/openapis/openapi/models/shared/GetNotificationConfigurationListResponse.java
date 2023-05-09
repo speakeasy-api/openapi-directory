@@ -17,8 +17,9 @@ public class GetNotificationConfigurationListResponse {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurations")
-    public NotificationConfigurationDetails[] configurations;
-    public GetNotificationConfigurationListResponse withConfigurations(NotificationConfigurationDetails[] configurations) {
+    public NotificationConfigurationDetailsWrapper[] configurations;
+
+    public GetNotificationConfigurationListResponse withConfigurations(NotificationConfigurationDetailsWrapper[] configurations) {
         this.configurations = configurations;
         return this;
     }
@@ -29,6 +30,7 @@ public class GetNotificationConfigurationListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public GetNotificationConfigurationListResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -40,6 +42,7 @@ public class GetNotificationConfigurationListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public GetNotificationConfigurationListResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -53,9 +56,11 @@ public class GetNotificationConfigurationListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public GetNotificationConfigurationListResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
     }
     
+    public GetNotificationConfigurationListResponse(){}
 }

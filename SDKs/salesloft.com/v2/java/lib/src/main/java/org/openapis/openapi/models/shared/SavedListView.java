@@ -15,6 +15,7 @@ public class SavedListView {
      */
     
     public Long id;
+
     public SavedListView withId(Long id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class SavedListView {
      */
     
     public Boolean isDefault;
+
     public SavedListView withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -35,6 +37,7 @@ public class SavedListView {
      */
     
     public String name;
+
     public SavedListView withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class SavedListView {
      */
     
     public String view;
+
     public SavedListView withView(String view) {
         this.view = view;
         return this;
@@ -55,9 +59,11 @@ public class SavedListView {
      */
     
     public java.util.Map<String, Object> viewParams;
+
     public SavedListView withViewParams(java.util.Map<String, Object> viewParams) {
         this.viewParams = viewParams;
         return this;
     }
     
+    public SavedListView(){}
 }

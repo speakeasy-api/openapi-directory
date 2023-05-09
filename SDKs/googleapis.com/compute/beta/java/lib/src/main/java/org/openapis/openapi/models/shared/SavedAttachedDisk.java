@@ -18,6 +18,7 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoDelete")
     public Boolean autoDelete;
+
     public SavedAttachedDisk withAutoDelete(Boolean autoDelete) {
         this.autoDelete = autoDelete;
         return this;
@@ -29,6 +30,7 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boot")
     public Boolean boot;
+
     public SavedAttachedDisk withBoot(Boolean boot) {
         this.boot = boot;
         return this;
@@ -40,6 +42,7 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public SavedAttachedDisk withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -48,6 +51,7 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskEncryptionKey")
     public CustomerEncryptionKey diskEncryptionKey;
+
     public SavedAttachedDisk withDiskEncryptionKey(CustomerEncryptionKey diskEncryptionKey) {
         this.diskEncryptionKey = diskEncryptionKey;
         return this;
@@ -59,6 +63,7 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public String diskSizeGb;
+
     public SavedAttachedDisk withDiskSizeGb(String diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -70,6 +75,7 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskType")
     public String diskType;
+
     public SavedAttachedDisk withDiskType(String diskType) {
         this.diskType = diskType;
         return this;
@@ -81,6 +87,7 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestOsFeatures")
     public GuestOsFeature[] guestOsFeatures;
+
     public SavedAttachedDisk withGuestOsFeatures(GuestOsFeature[] guestOsFeatures) {
         this.guestOsFeatures = guestOsFeatures;
         return this;
@@ -92,6 +99,7 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public SavedAttachedDisk withIndex(Integer index) {
         this.index = index;
         return this;
@@ -103,6 +111,7 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interface")
     public SavedAttachedDiskInterfaceEnum interface_;
+
     public SavedAttachedDisk withInterface(SavedAttachedDiskInterfaceEnum interface_) {
         this.interface_ = interface_;
         return this;
@@ -114,6 +123,7 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SavedAttachedDisk withKind(String kind) {
         this.kind = kind;
         return this;
@@ -125,6 +135,7 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenses")
     public String[] licenses;
+
     public SavedAttachedDisk withLicenses(String[] licenses) {
         this.licenses = licenses;
         return this;
@@ -136,6 +147,7 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public SavedAttachedDiskModeEnum mode;
+
     public SavedAttachedDisk withMode(SavedAttachedDiskModeEnum mode) {
         this.mode = mode;
         return this;
@@ -147,6 +159,7 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public SavedAttachedDisk withSource(String source) {
         this.source = source;
         return this;
@@ -158,6 +171,7 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageBytes")
     public String storageBytes;
+
     public SavedAttachedDisk withStorageBytes(String storageBytes) {
         this.storageBytes = storageBytes;
         return this;
@@ -169,6 +183,7 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageBytesStatus")
     public SavedAttachedDiskStorageBytesStatusEnum storageBytesStatus;
+
     public SavedAttachedDisk withStorageBytesStatus(SavedAttachedDiskStorageBytesStatusEnum storageBytesStatus) {
         this.storageBytesStatus = storageBytesStatus;
         return this;
@@ -180,9 +195,11 @@ public class SavedAttachedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SavedAttachedDiskTypeEnum type;
+
     public SavedAttachedDisk withType(SavedAttachedDiskTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SavedAttachedDisk(){}
 }

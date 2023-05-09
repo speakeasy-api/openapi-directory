@@ -22,9 +22,11 @@ public class PutApiV1ScheduledStatusesIdRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduled_at")
     public OffsetDateTime scheduledAt;
+
     public PutApiV1ScheduledStatusesIdRequestBody withScheduledAt(OffsetDateTime scheduledAt) {
         this.scheduledAt = scheduledAt;
         return this;
     }
     
+    public PutApiV1ScheduledStatusesIdRequestBody(){}
 }

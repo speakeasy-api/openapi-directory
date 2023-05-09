@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLocationResponse {
     
     public String contentType;
+
     public DeleteLocationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteLocationResponse {
      */
     
     public java.util.Map<String, Object> deleteLocationOutput;
+
     public DeleteLocationResponse withDeleteLocationOutput(java.util.Map<String, Object> deleteLocationOutput) {
         this.deleteLocationOutput = deleteLocationOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLocationResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteLocationResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLocationResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteLocationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteLocationResponse {
      */
     
     public Object notFoundException;
+
     public DeleteLocationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteLocationResponse {
     
     
     public Integer statusCode;
+
     public DeleteLocationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteLocationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLocationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteLocationResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteLocationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteLocationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

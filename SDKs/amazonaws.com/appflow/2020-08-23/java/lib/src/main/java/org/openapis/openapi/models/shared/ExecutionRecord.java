@@ -22,6 +22,7 @@ public class ExecutionRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dataPullEndTime")
     public OffsetDateTime dataPullEndTime;
+
     public ExecutionRecord withDataPullEndTime(OffsetDateTime dataPullEndTime) {
         this.dataPullEndTime = dataPullEndTime;
         return this;
@@ -32,6 +33,7 @@ public class ExecutionRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dataPullStartTime")
     public OffsetDateTime dataPullStartTime;
+
     public ExecutionRecord withDataPullStartTime(OffsetDateTime dataPullStartTime) {
         this.dataPullStartTime = dataPullStartTime;
         return this;
@@ -40,6 +42,7 @@ public class ExecutionRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionId")
     public String executionId;
+
     public ExecutionRecord withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -48,6 +51,7 @@ public class ExecutionRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionResult")
     public ExecutionResult executionResult;
+
     public ExecutionRecord withExecutionResult(ExecutionResult executionResult) {
         this.executionResult = executionResult;
         return this;
@@ -56,6 +60,7 @@ public class ExecutionRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionStatus")
     public ExecutionStatusEnum executionStatus;
+
     public ExecutionRecord withExecutionStatus(ExecutionStatusEnum executionStatus) {
         this.executionStatus = executionStatus;
         return this;
@@ -66,6 +71,7 @@ public class ExecutionRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public ExecutionRecord withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -74,6 +80,7 @@ public class ExecutionRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataCatalogDetails")
     public MetadataCatalogDetail[] metadataCatalogDetails;
+
     public ExecutionRecord withMetadataCatalogDetails(MetadataCatalogDetail[] metadataCatalogDetails) {
         this.metadataCatalogDetails = metadataCatalogDetails;
         return this;
@@ -84,9 +91,11 @@ public class ExecutionRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedAt")
     public OffsetDateTime startedAt;
+
     public ExecutionRecord withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
     }
     
+    public ExecutionRecord(){}
 }

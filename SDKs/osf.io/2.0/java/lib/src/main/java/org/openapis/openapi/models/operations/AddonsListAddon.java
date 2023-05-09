@@ -12,6 +12,7 @@ public class AddonsListAddon {
      */
     
     public AddonsListAddonAttributes attributes;
+
     public AddonsListAddon withAttributes(AddonsListAddonAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class AddonsListAddon {
      */
     
     public String id;
+
     public AddonsListAddon withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +34,11 @@ public class AddonsListAddon {
      */
     
     public String type;
+
     public AddonsListAddon withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AddonsListAddon(){}
 }

@@ -15,6 +15,7 @@ public class ListTypedLinkFacetAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public TypedLinkAttributeDefinition[] attributes;
+
     public ListTypedLinkFacetAttributesResponse withAttributes(TypedLinkAttributeDefinition[] attributes) {
         this.attributes = attributes;
         return this;
@@ -23,9 +24,11 @@ public class ListTypedLinkFacetAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTypedLinkFacetAttributesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTypedLinkFacetAttributesResponse(){}
 }

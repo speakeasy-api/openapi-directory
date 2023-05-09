@@ -15,6 +15,7 @@ public class ListOTAUpdatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListOTAUpdatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListOTAUpdatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otaUpdates")
     public OTAUpdateSummary[] otaUpdates;
+
     public ListOTAUpdatesResponse withOtaUpdates(OTAUpdateSummary[] otaUpdates) {
         this.otaUpdates = otaUpdates;
         return this;
     }
     
+    public ListOTAUpdatesResponse(){}
 }

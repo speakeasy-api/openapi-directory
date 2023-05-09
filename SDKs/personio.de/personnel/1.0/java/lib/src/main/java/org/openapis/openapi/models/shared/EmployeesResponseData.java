@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EmployeesResponseData {
     @JsonProperty("attributes")
     public EmployeesResponseDataAttributes[] attributes;
+
     public EmployeesResponseData withAttributes(EmployeesResponseDataAttributes[] attributes) {
         this.attributes = attributes;
         return this;
@@ -16,9 +17,14 @@ public class EmployeesResponseData {
     
     @JsonProperty("type")
     public String type;
+
     public EmployeesResponseData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public EmployeesResponseData(@JsonProperty("attributes") EmployeesResponseDataAttributes[] attributes, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.type = type;
+  }
 }

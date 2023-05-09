@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetJobFiles1Request {
@@ -12,6 +13,7 @@ public class GetJobFiles1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public Long fileId;
+
     public GetJobFiles1Request withFileId(Long fileId) {
         this.fileId = fileId;
         return this;
@@ -22,9 +24,14 @@ public class GetJobFiles1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public GetJobFiles1Request withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public GetJobFiles1Request(@JsonProperty("fileId") Long fileId, @JsonProperty("jobId") String jobId) {
+        this.fileId = fileId;
+        this.jobId = jobId;
+  }
 }

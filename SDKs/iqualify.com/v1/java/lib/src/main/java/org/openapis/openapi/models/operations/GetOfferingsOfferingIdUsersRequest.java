@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOfferingsOfferingIdUsersRequest {
@@ -12,6 +13,7 @@ public class GetOfferingsOfferingIdUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facilitators")
     public GetOfferingsOfferingIdUsersFacilitatorsEnum facilitators;
+
     public GetOfferingsOfferingIdUsersRequest withFacilitators(GetOfferingsOfferingIdUsersFacilitatorsEnum facilitators) {
         this.facilitators = facilitators;
         return this;
@@ -22,6 +24,7 @@ public class GetOfferingsOfferingIdUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=learners")
     public GetOfferingsOfferingIdUsersLearnersEnum learners;
+
     public GetOfferingsOfferingIdUsersRequest withLearners(GetOfferingsOfferingIdUsersLearnersEnum learners) {
         this.learners = learners;
         return this;
@@ -32,6 +35,7 @@ public class GetOfferingsOfferingIdUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=markers")
     public GetOfferingsOfferingIdUsersMarkersEnum markers;
+
     public GetOfferingsOfferingIdUsersRequest withMarkers(GetOfferingsOfferingIdUsersMarkersEnum markers) {
         this.markers = markers;
         return this;
@@ -42,9 +46,13 @@ public class GetOfferingsOfferingIdUsersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public GetOfferingsOfferingIdUsersRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public GetOfferingsOfferingIdUsersRequest(@JsonProperty("offeringId") String offeringId) {
+        this.offeringId = offeringId;
+  }
 }

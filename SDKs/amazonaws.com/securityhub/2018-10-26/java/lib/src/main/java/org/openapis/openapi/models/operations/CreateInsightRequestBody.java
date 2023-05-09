@@ -12,6 +12,7 @@ public class CreateInsightRequestBody {
      */
     @JsonProperty("Filters")
     public CreateInsightRequestBodyFilters filters;
+
     public CreateInsightRequestBody withFilters(CreateInsightRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -22,6 +23,7 @@ public class CreateInsightRequestBody {
      */
     @JsonProperty("GroupByAttribute")
     public String groupByAttribute;
+
     public CreateInsightRequestBody withGroupByAttribute(String groupByAttribute) {
         this.groupByAttribute = groupByAttribute;
         return this;
@@ -32,9 +34,15 @@ public class CreateInsightRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateInsightRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateInsightRequestBody(@JsonProperty("Filters") CreateInsightRequestBodyFilters filters, @JsonProperty("GroupByAttribute") String groupByAttribute, @JsonProperty("Name") String name) {
+        this.filters = filters;
+        this.groupByAttribute = groupByAttribute;
+        this.name = name;
+  }
 }

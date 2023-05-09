@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsCreateWorkflowDispatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ActionsCreateWorkflowDispatchRequestBody requestBody;
+
     public ActionsCreateWorkflowDispatchRequest withRequestBody(ActionsCreateWorkflowDispatchRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ActionsCreateWorkflowDispatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsCreateWorkflowDispatchRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -29,6 +32,7 @@ public class ActionsCreateWorkflowDispatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsCreateWorkflowDispatchRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -39,9 +43,16 @@ public class ActionsCreateWorkflowDispatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workflow_id")
     public Object workflowId;
+
     public ActionsCreateWorkflowDispatchRequest withWorkflowId(Object workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public ActionsCreateWorkflowDispatchRequest(@JsonProperty("RequestBody") ActionsCreateWorkflowDispatchRequestBody requestBody, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("workflow_id") Object workflowId) {
+        this.requestBody = requestBody;
+        this.owner = owner;
+        this.repo = repo;
+        this.workflowId = workflowId;
+  }
 }

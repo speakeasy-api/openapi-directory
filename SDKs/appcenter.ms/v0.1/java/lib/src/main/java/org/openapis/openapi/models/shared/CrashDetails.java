@@ -23,6 +23,7 @@ public class CrashDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("app_start_timestamp")
     public OffsetDateTime appStartTimestamp;
+
     public CrashDetails withAppStartTimestamp(OffsetDateTime appStartTimestamp) {
         this.appStartTimestamp = appStartTimestamp;
         return this;
@@ -35,6 +36,7 @@ public class CrashDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_country")
     public String carrierCountry;
+
     public CrashDetails withCarrierCountry(String carrierCountry) {
         this.carrierCountry = carrierCountry;
         return this;
@@ -47,6 +49,7 @@ public class CrashDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_name")
     public String carrierName;
+
     public CrashDetails withCarrierName(String carrierName) {
         this.carrierName = carrierName;
         return this;
@@ -58,6 +61,7 @@ public class CrashDetails {
      */
     @JsonProperty("locale")
     public String locale;
+
     public CrashDetails withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -70,6 +74,7 @@ public class CrashDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os_build")
     public String osBuild;
+
     public CrashDetails withOsBuild(String osBuild) {
         this.osBuild = osBuild;
         return this;
@@ -81,6 +86,7 @@ public class CrashDetails {
      */
     @JsonProperty("rooted")
     public Boolean rooted;
+
     public CrashDetails withRooted(Boolean rooted) {
         this.rooted = rooted;
         return this;
@@ -92,9 +98,15 @@ public class CrashDetails {
      */
     @JsonProperty("screen_size")
     public String screenSize;
+
     public CrashDetails withScreenSize(String screenSize) {
         this.screenSize = screenSize;
         return this;
     }
     
+    public CrashDetails(@JsonProperty("locale") String locale, @JsonProperty("rooted") Boolean rooted, @JsonProperty("screen_size") String screenSize) {
+        this.locale = locale;
+        this.rooted = rooted;
+        this.screenSize = screenSize;
+  }
 }

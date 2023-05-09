@@ -15,9 +15,11 @@ public class DeleteGameServerGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerGroup")
     public GameServerGroup gameServerGroup;
+
     public DeleteGameServerGroupOutput withGameServerGroup(GameServerGroup gameServerGroup) {
         this.gameServerGroup = gameServerGroup;
         return this;
     }
     
+    public DeleteGameServerGroupOutput(){}
 }

@@ -15,6 +15,7 @@ public class DefaultSpaceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRole")
     public String executionRole;
+
     public DefaultSpaceSettings withExecutionRole(String executionRole) {
         this.executionRole = executionRole;
         return this;
@@ -26,6 +27,7 @@ public class DefaultSpaceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JupyterServerAppSettings")
     public JupyterServerAppSettings jupyterServerAppSettings;
+
     public DefaultSpaceSettings withJupyterServerAppSettings(JupyterServerAppSettings jupyterServerAppSettings) {
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         return this;
@@ -37,6 +39,7 @@ public class DefaultSpaceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KernelGatewayAppSettings")
     public KernelGatewayAppSettings kernelGatewayAppSettings;
+
     public DefaultSpaceSettings withKernelGatewayAppSettings(KernelGatewayAppSettings kernelGatewayAppSettings) {
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;
         return this;
@@ -45,9 +48,11 @@ public class DefaultSpaceSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroups")
     public String[] securityGroups;
+
     public DefaultSpaceSettings withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
     }
     
+    public DefaultSpaceSettings(){}
 }

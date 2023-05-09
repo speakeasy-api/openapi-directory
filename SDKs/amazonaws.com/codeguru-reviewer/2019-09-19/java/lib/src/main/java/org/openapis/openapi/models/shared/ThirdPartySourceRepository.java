@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ThirdPartySourceRepository {
     @JsonProperty("ConnectionArn")
     public String connectionArn;
+
     public ThirdPartySourceRepository withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
@@ -19,6 +20,7 @@ public class ThirdPartySourceRepository {
     
     @JsonProperty("Name")
     public String name;
+
     public ThirdPartySourceRepository withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class ThirdPartySourceRepository {
     
     @JsonProperty("Owner")
     public String owner;
+
     public ThirdPartySourceRepository withOwner(String owner) {
         this.owner = owner;
         return this;
     }
     
+    public ThirdPartySourceRepository(@JsonProperty("ConnectionArn") String connectionArn, @JsonProperty("Name") String name, @JsonProperty("Owner") String owner) {
+        this.connectionArn = connectionArn;
+        this.name = name;
+        this.owner = owner;
+  }
 }

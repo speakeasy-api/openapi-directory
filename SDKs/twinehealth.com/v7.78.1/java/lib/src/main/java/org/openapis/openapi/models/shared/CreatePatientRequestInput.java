@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePatientRequestInput {
     @JsonProperty("data")
     public PatientCreateResourceInput data;
+
     public CreatePatientRequestInput withData(PatientCreateResourceInput data) {
         this.data = data;
         return this;
@@ -19,9 +20,13 @@ public class CreatePatientRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public CreatePatientRequestMeta meta;
+
     public CreatePatientRequestInput withMeta(CreatePatientRequestMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public CreatePatientRequestInput(@JsonProperty("data") PatientCreateResourceInput data) {
+        this.data = data;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsResponse {
     
     public String contentType;
+
     public ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsResponse {
      */
     
     public org.openapis.openapi.models.shared.NetworkEndpointGroupsListNetworkEndpoints networkEndpointGroupsListNetworkEndpoints;
+
     public ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsResponse withNetworkEndpointGroupsListNetworkEndpoints(org.openapis.openapi.models.shared.NetworkEndpointGroupsListNetworkEndpoints networkEndpointGroupsListNetworkEndpoints) {
         this.networkEndpointGroupsListNetworkEndpoints = networkEndpointGroupsListNetworkEndpoints;
         return this;
@@ -26,6 +29,7 @@ public class ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsResponse {
     
     
     public Integer statusCode;
+
     public ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

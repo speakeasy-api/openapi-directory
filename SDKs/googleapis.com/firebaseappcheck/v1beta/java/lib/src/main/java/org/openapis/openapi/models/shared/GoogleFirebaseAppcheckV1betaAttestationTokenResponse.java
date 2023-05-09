@@ -18,6 +18,7 @@ public class GoogleFirebaseAppcheckV1betaAttestationTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attestationToken")
     public String attestationToken;
+
     public GoogleFirebaseAppcheckV1betaAttestationTokenResponse withAttestationToken(String attestationToken) {
         this.attestationToken = attestationToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppcheckV1betaAttestationTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public String ttl;
+
     public GoogleFirebaseAppcheckV1betaAttestationTokenResponse withTtl(String ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1betaAttestationTokenResponse(){}
 }

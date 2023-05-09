@@ -18,6 +18,7 @@ public class ConfigChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advices")
     public Advice[] advices;
+
     public ConfigChange withAdvices(Advice[] advices) {
         this.advices = advices;
         return this;
@@ -29,6 +30,7 @@ public class ConfigChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changeType")
     public ConfigChangeChangeTypeEnum changeType;
+
     public ConfigChange withChangeType(ConfigChangeChangeTypeEnum changeType) {
         this.changeType = changeType;
         return this;
@@ -40,6 +42,7 @@ public class ConfigChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("element")
     public String element;
+
     public ConfigChange withElement(String element) {
         this.element = element;
         return this;
@@ -51,6 +54,7 @@ public class ConfigChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newValue")
     public String newValue;
+
     public ConfigChange withNewValue(String newValue) {
         this.newValue = newValue;
         return this;
@@ -62,9 +66,11 @@ public class ConfigChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oldValue")
     public String oldValue;
+
     public ConfigChange withOldValue(String oldValue) {
         this.oldValue = oldValue;
         return this;
     }
     
+    public ConfigChange(){}
 }

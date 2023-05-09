@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateConfigurationResponse;
+
     public UpdateConfigurationResponse withUpdateConfigurationResponse(java.util.Map<String, Object> updateConfigurationResponse) {
         this.updateConfigurationResponse = updateConfigurationResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateConfigurationResponse {
      */
     
     public Object validationException;
+
     public UpdateConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

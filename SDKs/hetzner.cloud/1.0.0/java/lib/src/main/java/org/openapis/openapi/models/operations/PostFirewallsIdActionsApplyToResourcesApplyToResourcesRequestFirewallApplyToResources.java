@@ -15,6 +15,7 @@ public class PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_selector")
     public PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesLabelSelector labelSelector;
+
     public PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources withLabelSelector(PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesLabelSelector labelSelector) {
         this.labelSelector = labelSelector;
         return this;
@@ -26,6 +27,7 @@ public class PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesServer server;
+
     public PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources withServer(PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesServer server) {
         this.server = server;
         return this;
@@ -37,9 +39,11 @@ public class PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum type;
+
     public PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources withType(PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResources(){}
 }

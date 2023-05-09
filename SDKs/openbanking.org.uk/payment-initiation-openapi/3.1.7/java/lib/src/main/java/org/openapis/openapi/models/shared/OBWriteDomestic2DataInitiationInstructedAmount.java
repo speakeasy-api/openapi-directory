@@ -16,6 +16,7 @@ public class OBWriteDomestic2DataInitiationInstructedAmount {
      */
     @JsonProperty("Amount")
     public String amount;
+
     public OBWriteDomestic2DataInitiationInstructedAmount withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -26,9 +27,14 @@ public class OBWriteDomestic2DataInitiationInstructedAmount {
      */
     @JsonProperty("Currency")
     public String currency;
+
     public OBWriteDomestic2DataInitiationInstructedAmount withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
     
+    public OBWriteDomestic2DataInitiationInstructedAmount(@JsonProperty("Amount") String amount, @JsonProperty("Currency") String currency) {
+        this.amount = amount;
+        this.currency = currency;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SolutionStackDescription {
     
     public String[] permittedFileTypes;
+
     public SolutionStackDescription withPermittedFileTypes(String[] permittedFileTypes) {
         this.permittedFileTypes = permittedFileTypes;
         return this;
@@ -19,9 +20,11 @@ public class SolutionStackDescription {
     
     
     public String solutionStackName;
+
     public SolutionStackDescription withSolutionStackName(String solutionStackName) {
         this.solutionStackName = solutionStackName;
         return this;
     }
     
+    public SolutionStackDescription(){}
 }

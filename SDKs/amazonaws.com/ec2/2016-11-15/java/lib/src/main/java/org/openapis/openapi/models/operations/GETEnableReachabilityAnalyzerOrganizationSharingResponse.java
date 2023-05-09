@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETEnableReachabilityAnalyzerOrganizationSharingResponse {
     
     public byte[] body;
+
     public GETEnableReachabilityAnalyzerOrganizationSharingResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETEnableReachabilityAnalyzerOrganizationSharingResponse {
     
     
     public String contentType;
+
     public GETEnableReachabilityAnalyzerOrganizationSharingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETEnableReachabilityAnalyzerOrganizationSharingResponse {
     
     
     public Integer statusCode;
+
     public GETEnableReachabilityAnalyzerOrganizationSharingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETEnableReachabilityAnalyzerOrganizationSharingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETEnableReachabilityAnalyzerOrganizationSharingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETEnableReachabilityAnalyzerOrganizationSharingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

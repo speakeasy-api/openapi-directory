@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1LocationsIdHolidaysHolidayIdClosedRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=closed")
     public Boolean closed;
+
     public PutSetupV1LocationsIdHolidaysHolidayIdClosedRequest withClosed(Boolean closed) {
         this.closed = closed;
         return this;
@@ -16,6 +18,7 @@ public class PutSetupV1LocationsIdHolidaysHolidayIdClosedRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=holidayId")
     public String holidayId;
+
     public PutSetupV1LocationsIdHolidaysHolidayIdClosedRequest withHolidayId(String holidayId) {
         this.holidayId = holidayId;
         return this;
@@ -23,9 +26,15 @@ public class PutSetupV1LocationsIdHolidaysHolidayIdClosedRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutSetupV1LocationsIdHolidaysHolidayIdClosedRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutSetupV1LocationsIdHolidaysHolidayIdClosedRequest(@JsonProperty("closed") Boolean closed, @JsonProperty("holidayId") String holidayId, @JsonProperty("id") String id) {
+        this.closed = closed;
+        this.holidayId = holidayId;
+        this.id = id;
+  }
 }

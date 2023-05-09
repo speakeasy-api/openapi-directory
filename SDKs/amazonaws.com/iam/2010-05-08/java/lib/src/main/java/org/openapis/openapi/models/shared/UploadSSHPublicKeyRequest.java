@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UploadSSHPublicKeyRequest {
     
     public String sshPublicKeyBody;
+
     public UploadSSHPublicKeyRequest withSSHPublicKeyBody(String sshPublicKeyBody) {
         this.sshPublicKeyBody = sshPublicKeyBody;
         return this;
@@ -16,9 +17,14 @@ public class UploadSSHPublicKeyRequest {
     
     
     public String userName;
+
     public UploadSSHPublicKeyRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public UploadSSHPublicKeyRequest(@JsonProperty("SSHPublicKeyBody") String sshPublicKeyBody, @JsonProperty("UserName") String userName) {
+        this.sshPublicKeyBody = sshPublicKeyBody;
+        this.userName = userName;
+  }
 }

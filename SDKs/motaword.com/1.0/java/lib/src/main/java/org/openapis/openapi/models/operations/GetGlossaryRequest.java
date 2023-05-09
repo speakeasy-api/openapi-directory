@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGlossaryRequest {
@@ -12,6 +13,7 @@ public class GetGlossaryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=glossaryId")
     public Long glossaryId;
+
     public GetGlossaryRequest withGlossaryId(Long glossaryId) {
         this.glossaryId = glossaryId;
         return this;
@@ -22,9 +24,14 @@ public class GetGlossaryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public GetGlossaryRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GetGlossaryRequest(@JsonProperty("glossaryId") Long glossaryId, @JsonProperty("projectId") Long projectId) {
+        this.glossaryId = glossaryId;
+        this.projectId = projectId;
+  }
 }

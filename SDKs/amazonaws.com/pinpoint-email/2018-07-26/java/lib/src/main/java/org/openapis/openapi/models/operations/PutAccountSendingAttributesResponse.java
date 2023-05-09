@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAccountSendingAttributesResponse {
@@ -12,6 +13,7 @@ public class PutAccountSendingAttributesResponse {
      */
     
     public Object badRequestException;
+
     public PutAccountSendingAttributesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class PutAccountSendingAttributesResponse {
     
     
     public String contentType;
+
     public PutAccountSendingAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutAccountSendingAttributesResponse {
      */
     
     public java.util.Map<String, Object> putAccountSendingAttributesResponse;
+
     public PutAccountSendingAttributesResponse withPutAccountSendingAttributesResponse(java.util.Map<String, Object> putAccountSendingAttributesResponse) {
         this.putAccountSendingAttributesResponse = putAccountSendingAttributesResponse;
         return this;
@@ -36,6 +40,7 @@ public class PutAccountSendingAttributesResponse {
     
     
     public Integer statusCode;
+
     public PutAccountSendingAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class PutAccountSendingAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAccountSendingAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class PutAccountSendingAttributesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutAccountSendingAttributesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutAccountSendingAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

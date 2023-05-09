@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class RestoreSnapshotFromRecycleBinResult {
     
     public String description;
+
     public RestoreSnapshotFromRecycleBinResult withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class RestoreSnapshotFromRecycleBinResult {
     
     
     public Boolean encrypted;
+
     public RestoreSnapshotFromRecycleBinResult withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -26,6 +28,7 @@ public class RestoreSnapshotFromRecycleBinResult {
     
     
     public String outpostArn;
+
     public RestoreSnapshotFromRecycleBinResult withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -33,6 +36,7 @@ public class RestoreSnapshotFromRecycleBinResult {
     
     
     public String ownerId;
+
     public RestoreSnapshotFromRecycleBinResult withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -40,6 +44,7 @@ public class RestoreSnapshotFromRecycleBinResult {
     
     
     public String progress;
+
     public RestoreSnapshotFromRecycleBinResult withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -47,6 +52,7 @@ public class RestoreSnapshotFromRecycleBinResult {
     
     
     public String snapshotId;
+
     public RestoreSnapshotFromRecycleBinResult withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -54,6 +60,7 @@ public class RestoreSnapshotFromRecycleBinResult {
     
     
     public OffsetDateTime startTime;
+
     public RestoreSnapshotFromRecycleBinResult withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -61,6 +68,7 @@ public class RestoreSnapshotFromRecycleBinResult {
     
     
     public RestoreSnapshotFromRecycleBinResultStateEnum state;
+
     public RestoreSnapshotFromRecycleBinResult withState(RestoreSnapshotFromRecycleBinResultStateEnum state) {
         this.state = state;
         return this;
@@ -68,6 +76,7 @@ public class RestoreSnapshotFromRecycleBinResult {
     
     
     public String volumeId;
+
     public RestoreSnapshotFromRecycleBinResult withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
@@ -75,9 +84,11 @@ public class RestoreSnapshotFromRecycleBinResult {
     
     
     public Long volumeSize;
+
     public RestoreSnapshotFromRecycleBinResult withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
     }
     
+    public RestoreSnapshotFromRecycleBinResult(){}
 }

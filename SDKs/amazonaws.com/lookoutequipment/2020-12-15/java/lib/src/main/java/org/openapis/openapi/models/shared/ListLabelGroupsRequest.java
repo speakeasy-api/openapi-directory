@@ -12,6 +12,7 @@ public class ListLabelGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelGroupNameBeginsWith")
     public String labelGroupNameBeginsWith;
+
     public ListLabelGroupsRequest withLabelGroupNameBeginsWith(String labelGroupNameBeginsWith) {
         this.labelGroupNameBeginsWith = labelGroupNameBeginsWith;
         return this;
@@ -20,6 +21,7 @@ public class ListLabelGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListLabelGroupsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListLabelGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLabelGroupsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLabelGroupsRequest(){}
 }

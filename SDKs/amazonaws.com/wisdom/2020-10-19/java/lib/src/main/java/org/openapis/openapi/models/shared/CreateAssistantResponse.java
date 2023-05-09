@@ -15,9 +15,11 @@ public class CreateAssistantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assistant")
     public AssistantData assistant;
+
     public CreateAssistantResponse withAssistant(AssistantData assistant) {
         this.assistant = assistant;
         return this;
     }
     
+    public CreateAssistantResponse(){}
 }

@@ -18,9 +18,11 @@ public class SecurityContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runAsUser")
     public Integer runAsUser;
+
     public SecurityContext withRunAsUser(Integer runAsUser) {
         this.runAsUser = runAsUser;
         return this;
     }
     
+    public SecurityContext(){}
 }

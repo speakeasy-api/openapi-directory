@@ -18,9 +18,11 @@ public class ScheduleTransferRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runs")
     public TransferRun[] runs;
+
     public ScheduleTransferRunsResponse withRuns(TransferRun[] runs) {
         this.runs = runs;
         return this;
     }
     
+    public ScheduleTransferRunsResponse(){}
 }

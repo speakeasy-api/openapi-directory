@@ -16,7 +16,7 @@ import org.openapis.openapi.utils.SerializedBody;
  * &lt;!-- &lt;div class="warning" style='padding:0.1em; background-color:#FEEFB3; color:#9F6000;'&gt;
  *     &lt;span&gt;
  *         &lt;p style='margin-top:0.9em;margin-bottom:0.9em;margin-left:1em; text-align:left'&gt;
- *             &lt;b&gt;\u24d8&lt;/b&gt; This feature is currently in BETA mode
+ *             &lt;b&gt;ⓘ&lt;/b&gt; This feature is currently in BETA mode
  *         &lt;/p&gt;
  *     &lt;/span&gt;
  * &lt;/div&gt;
@@ -79,7 +79,7 @@ public class Fees {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFeeResponse res = new org.openapis.openapi.models.operations.CreateFeeResponse() {{
+        org.openapis.openapi.models.operations.CreateFeeResponse res = new org.openapis.openapi.models.operations.CreateFeeResponse(contentType, httpRes.statusCode()) {{
             rootTypeForFeeCreationResponse = null;
             createFee400ApplicationJSONObject = null;
             createFee401ApplicationJSONObject = null;
@@ -89,8 +89,6 @@ public class Fees {
             createFee429ApplicationJSONObject = null;
             createFee500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

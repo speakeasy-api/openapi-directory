@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDeletionProtectionResponse {
@@ -12,6 +13,7 @@ public class UpdateDeletionProtectionResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateDeletionProtectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDeletionProtectionResponse {
     
     
     public String contentType;
+
     public UpdateDeletionProtectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDeletionProtectionResponse {
      */
     
     public Object internalServerException;
+
     public UpdateDeletionProtectionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateDeletionProtectionResponse {
     
     
     public Integer statusCode;
+
     public UpdateDeletionProtectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateDeletionProtectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDeletionProtectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDeletionProtectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDeletionProtectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDeletionProtectionResponse {
      */
     
     public Object throttlingException;
+
     public UpdateDeletionProtectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDeletionProtectionResponse {
      */
     
     public java.util.Map<String, Object> updateDeletionProtectionOutput;
+
     public UpdateDeletionProtectionResponse withUpdateDeletionProtectionOutput(java.util.Map<String, Object> updateDeletionProtectionOutput) {
         this.updateDeletionProtectionOutput = updateDeletionProtectionOutput;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDeletionProtectionResponse {
      */
     
     public Object validationException;
+
     public UpdateDeletionProtectionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateDeletionProtectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

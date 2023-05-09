@@ -20,6 +20,7 @@ public class ConnectorConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activationCode")
     public String activationCode;
+
     public ConnectorConfigResponse withActivationCode(String activationCode) {
         this.activationCode = activationCode;
         return this;
@@ -30,6 +31,7 @@ public class ConnectorConfigResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("activationExpiry")
     public OffsetDateTime activationExpiry;
+
     public ConnectorConfigResponse withActivationExpiry(OffsetDateTime activationExpiry) {
         this.activationExpiry = activationExpiry;
         return this;
@@ -38,6 +40,7 @@ public class ConnectorConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activationId")
     public String activationId;
+
     public ConnectorConfigResponse withActivationId(String activationId) {
         this.activationId = activationId;
         return this;
@@ -46,6 +49,7 @@ public class ConnectorConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public String provider;
+
     public ConnectorConfigResponse withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -54,9 +58,11 @@ public class ConnectorConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public ConnectorConfigResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public ConnectorConfigResponse(){}
 }

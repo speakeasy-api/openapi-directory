@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDocumentPermissionResponse {
     
     public String contentType;
+
     public DescribeDocumentPermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDocumentPermissionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDocumentPermissionResponse describeDocumentPermissionResponse;
+
     public DescribeDocumentPermissionResponse withDescribeDocumentPermissionResponse(org.openapis.openapi.models.shared.DescribeDocumentPermissionResponse describeDocumentPermissionResponse) {
         this.describeDocumentPermissionResponse = describeDocumentPermissionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDocumentPermissionResponse {
      */
     
     public Object internalServerError;
+
     public DescribeDocumentPermissionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDocumentPermissionResponse {
      */
     
     public Object invalidDocument;
+
     public DescribeDocumentPermissionResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDocumentPermissionResponse {
      */
     
     public Object invalidDocumentOperation;
+
     public DescribeDocumentPermissionResponse withInvalidDocumentOperation(Object invalidDocumentOperation) {
         this.invalidDocumentOperation = invalidDocumentOperation;
         return this;
@@ -59,6 +65,7 @@ public class DescribeDocumentPermissionResponse {
      */
     
     public Object invalidNextToken;
+
     public DescribeDocumentPermissionResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -69,6 +76,7 @@ public class DescribeDocumentPermissionResponse {
      */
     
     public Object invalidPermissionType;
+
     public DescribeDocumentPermissionResponse withInvalidPermissionType(Object invalidPermissionType) {
         this.invalidPermissionType = invalidPermissionType;
         return this;
@@ -76,6 +84,7 @@ public class DescribeDocumentPermissionResponse {
     
     
     public Integer statusCode;
+
     public DescribeDocumentPermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeDocumentPermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDocumentPermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeDocumentPermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

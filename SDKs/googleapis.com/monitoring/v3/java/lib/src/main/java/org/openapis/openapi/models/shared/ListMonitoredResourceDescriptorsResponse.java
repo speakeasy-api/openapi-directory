@@ -18,6 +18,7 @@ public class ListMonitoredResourceDescriptorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListMonitoredResourceDescriptorsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListMonitoredResourceDescriptorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceDescriptors")
     public MonitoredResourceDescriptor[] resourceDescriptors;
+
     public ListMonitoredResourceDescriptorsResponse withResourceDescriptors(MonitoredResourceDescriptor[] resourceDescriptors) {
         this.resourceDescriptors = resourceDescriptors;
         return this;
     }
     
+    public ListMonitoredResourceDescriptorsResponse(){}
 }

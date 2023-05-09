@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SrcSearchlyApiV1ControllersSongSearchResponse {
@@ -12,6 +13,7 @@ public class SrcSearchlyApiV1ControllersSongSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.APIResponseSong apiResponseSong;
+
     public SrcSearchlyApiV1ControllersSongSearchResponse withAPIResponseSong(org.openapis.openapi.models.shared.APIResponseSong apiResponseSong) {
         this.apiResponseSong = apiResponseSong;
         return this;
@@ -19,6 +21,7 @@ public class SrcSearchlyApiV1ControllersSongSearchResponse {
     
     
     public String contentType;
+
     public SrcSearchlyApiV1ControllersSongSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SrcSearchlyApiV1ControllersSongSearchResponse {
     
     
     public Integer statusCode;
+
     public SrcSearchlyApiV1ControllersSongSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class SrcSearchlyApiV1ControllersSongSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SrcSearchlyApiV1ControllersSongSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class SrcSearchlyApiV1ControllersSongSearchResponse {
      */
     
     public String srcSearchlyApiV1ControllersSongSearchDefaultApplicationTextString;
+
     public SrcSearchlyApiV1ControllersSongSearchResponse withSrcSearchlyApiV1ControllersSongSearchDefaultApplicationTextString(String srcSearchlyApiV1ControllersSongSearchDefaultApplicationTextString) {
         this.srcSearchlyApiV1ControllersSongSearchDefaultApplicationTextString = srcSearchlyApiV1ControllersSongSearchDefaultApplicationTextString;
         return this;
     }
     
+    public SrcSearchlyApiV1ControllersSongSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

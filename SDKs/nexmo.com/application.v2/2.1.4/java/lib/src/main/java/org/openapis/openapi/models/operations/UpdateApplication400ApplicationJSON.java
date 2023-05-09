@@ -15,6 +15,7 @@ public class UpdateApplication400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public UpdateApplication400ApplicationJSON withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -26,6 +27,7 @@ public class UpdateApplication400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public UpdateApplication400ApplicationJSON withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -34,6 +36,7 @@ public class UpdateApplication400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalid_parameters")
     public UpdateApplication400ApplicationJSONInvalidParameters[] invalidParameters;
+
     public UpdateApplication400ApplicationJSON withInvalidParameters(UpdateApplication400ApplicationJSONInvalidParameters[] invalidParameters) {
         this.invalidParameters = invalidParameters;
         return this;
@@ -42,6 +45,7 @@ public class UpdateApplication400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public UpdateApplication400ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
@@ -50,9 +54,11 @@ public class UpdateApplication400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public UpdateApplication400ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UpdateApplication400ApplicationJSON(){}
 }

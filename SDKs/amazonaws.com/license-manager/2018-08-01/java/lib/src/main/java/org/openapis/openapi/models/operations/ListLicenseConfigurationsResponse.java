@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLicenseConfigurationsResponse {
@@ -12,6 +13,7 @@ public class ListLicenseConfigurationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListLicenseConfigurationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListLicenseConfigurationsResponse {
      */
     
     public Object authorizationException;
+
     public ListLicenseConfigurationsResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class ListLicenseConfigurationsResponse {
     
     
     public String contentType;
+
     public ListLicenseConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListLicenseConfigurationsResponse {
      */
     
     public Object filterLimitExceededException;
+
     public ListLicenseConfigurationsResponse withFilterLimitExceededException(Object filterLimitExceededException) {
         this.filterLimitExceededException = filterLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ListLicenseConfigurationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListLicenseConfigurationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class ListLicenseConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLicenseConfigurationsResponse listLicenseConfigurationsResponse;
+
     public ListLicenseConfigurationsResponse withListLicenseConfigurationsResponse(org.openapis.openapi.models.shared.ListLicenseConfigurationsResponse listLicenseConfigurationsResponse) {
         this.listLicenseConfigurationsResponse = listLicenseConfigurationsResponse;
         return this;
@@ -69,6 +76,7 @@ public class ListLicenseConfigurationsResponse {
      */
     
     public Object rateLimitExceededException;
+
     public ListLicenseConfigurationsResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListLicenseConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public ListLicenseConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListLicenseConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLicenseConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ListLicenseConfigurationsResponse {
      */
     
     public Object serverInternalException;
+
     public ListLicenseConfigurationsResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
     }
     
+    public ListLicenseConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

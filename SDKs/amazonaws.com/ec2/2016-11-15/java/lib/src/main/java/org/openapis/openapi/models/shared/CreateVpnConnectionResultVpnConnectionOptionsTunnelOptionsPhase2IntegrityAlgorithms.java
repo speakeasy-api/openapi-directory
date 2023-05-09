@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsPhase2IntegrityAlgorithms {
     
     public String value;
+
     public CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsPhase2IntegrityAlgorithms withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsPhase2IntegrityAlgorithms(){}
 }

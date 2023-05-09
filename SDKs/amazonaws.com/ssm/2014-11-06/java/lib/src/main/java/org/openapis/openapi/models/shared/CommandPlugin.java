@@ -20,6 +20,7 @@ public class CommandPlugin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CommandPlugin withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +29,7 @@ public class CommandPlugin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Output")
     public String output;
+
     public CommandPlugin withOutput(String output) {
         this.output = output;
         return this;
@@ -36,6 +38,7 @@ public class CommandPlugin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3BucketName")
     public String outputS3BucketName;
+
     public CommandPlugin withOutputS3BucketName(String outputS3BucketName) {
         this.outputS3BucketName = outputS3BucketName;
         return this;
@@ -44,6 +47,7 @@ public class CommandPlugin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3KeyPrefix")
     public String outputS3KeyPrefix;
+
     public CommandPlugin withOutputS3KeyPrefix(String outputS3KeyPrefix) {
         this.outputS3KeyPrefix = outputS3KeyPrefix;
         return this;
@@ -52,6 +56,7 @@ public class CommandPlugin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3Region")
     public String outputS3Region;
+
     public CommandPlugin withOutputS3Region(String outputS3Region) {
         this.outputS3Region = outputS3Region;
         return this;
@@ -60,6 +65,7 @@ public class CommandPlugin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResponseCode")
     public Long responseCode;
+
     public CommandPlugin withResponseCode(Long responseCode) {
         this.responseCode = responseCode;
         return this;
@@ -70,6 +76,7 @@ public class CommandPlugin {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ResponseFinishDateTime")
     public OffsetDateTime responseFinishDateTime;
+
     public CommandPlugin withResponseFinishDateTime(OffsetDateTime responseFinishDateTime) {
         this.responseFinishDateTime = responseFinishDateTime;
         return this;
@@ -80,6 +87,7 @@ public class CommandPlugin {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ResponseStartDateTime")
     public OffsetDateTime responseStartDateTime;
+
     public CommandPlugin withResponseStartDateTime(OffsetDateTime responseStartDateTime) {
         this.responseStartDateTime = responseStartDateTime;
         return this;
@@ -88,6 +96,7 @@ public class CommandPlugin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardErrorUrl")
     public String standardErrorUrl;
+
     public CommandPlugin withStandardErrorUrl(String standardErrorUrl) {
         this.standardErrorUrl = standardErrorUrl;
         return this;
@@ -96,6 +105,7 @@ public class CommandPlugin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardOutputUrl")
     public String standardOutputUrl;
+
     public CommandPlugin withStandardOutputUrl(String standardOutputUrl) {
         this.standardOutputUrl = standardOutputUrl;
         return this;
@@ -104,6 +114,7 @@ public class CommandPlugin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CommandPluginStatusEnum status;
+
     public CommandPlugin withStatus(CommandPluginStatusEnum status) {
         this.status = status;
         return this;
@@ -112,9 +123,11 @@ public class CommandPlugin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetails")
     public String statusDetails;
+
     public CommandPlugin withStatusDetails(String statusDetails) {
         this.statusDetails = statusDetails;
         return this;
     }
     
+    public CommandPlugin(){}
 }

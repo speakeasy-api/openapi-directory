@@ -12,9 +12,13 @@ public class RsbycRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public RsbycRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public RsbycRequestBodyCertificateParameters(@JsonProperty("UID") String uid) {
+        this.uid = uid;
+  }
 }

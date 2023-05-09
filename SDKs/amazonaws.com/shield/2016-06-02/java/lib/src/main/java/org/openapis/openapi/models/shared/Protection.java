@@ -15,6 +15,7 @@ public class Protection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationLayerAutomaticResponseConfiguration")
     public ApplicationLayerAutomaticResponseConfiguration applicationLayerAutomaticResponseConfiguration;
+
     public Protection withApplicationLayerAutomaticResponseConfiguration(ApplicationLayerAutomaticResponseConfiguration applicationLayerAutomaticResponseConfiguration) {
         this.applicationLayerAutomaticResponseConfiguration = applicationLayerAutomaticResponseConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class Protection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheckIds")
     public String[] healthCheckIds;
+
     public Protection withHealthCheckIds(String[] healthCheckIds) {
         this.healthCheckIds = healthCheckIds;
         return this;
@@ -31,6 +33,7 @@ public class Protection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Protection withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class Protection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Protection withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class Protection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProtectionArn")
     public String protectionArn;
+
     public Protection withProtectionArn(String protectionArn) {
         this.protectionArn = protectionArn;
         return this;
@@ -55,9 +60,11 @@ public class Protection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public Protection withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public Protection(){}
 }

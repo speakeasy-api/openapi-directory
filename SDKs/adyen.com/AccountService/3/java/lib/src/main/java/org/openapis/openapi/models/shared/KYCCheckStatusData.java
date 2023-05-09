@@ -15,6 +15,7 @@ public class KYCCheckStatusData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredFields")
     public String[] requiredFields;
+
     public KYCCheckStatusData withRequiredFields(String[] requiredFields) {
         this.requiredFields = requiredFields;
         return this;
@@ -27,6 +28,7 @@ public class KYCCheckStatusData {
      */
     @JsonProperty("status")
     public KYCCheckStatusDataStatusEnum status;
+
     public KYCCheckStatusData withStatus(KYCCheckStatusDataStatusEnum status) {
         this.status = status;
         return this;
@@ -35,6 +37,7 @@ public class KYCCheckStatusData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public KYCCheckSummary summary;
+
     public KYCCheckStatusData withSummary(KYCCheckSummary summary) {
         this.summary = summary;
         return this;
@@ -65,9 +68,14 @@ public class KYCCheckStatusData {
      */
     @JsonProperty("type")
     public KYCCheckStatusDataTypeEnum type;
+
     public KYCCheckStatusData withType(KYCCheckStatusDataTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public KYCCheckStatusData(@JsonProperty("status") KYCCheckStatusDataStatusEnum status, @JsonProperty("type") KYCCheckStatusDataTypeEnum type) {
+        this.status = status;
+        this.type = type;
+  }
 }

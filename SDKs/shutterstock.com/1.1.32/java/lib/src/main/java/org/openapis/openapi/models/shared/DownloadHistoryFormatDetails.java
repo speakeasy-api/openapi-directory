@@ -18,6 +18,7 @@ public class DownloadHistoryFormatDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
+
     public DownloadHistoryFormatDetails withFormat(String format) {
         this.format = format;
         return this;
@@ -29,9 +30,11 @@ public class DownloadHistoryFormatDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public DownloadHistoryFormatDetails withSize(String size) {
         this.size = size;
         return this;
     }
     
+    public DownloadHistoryFormatDetails(){}
 }

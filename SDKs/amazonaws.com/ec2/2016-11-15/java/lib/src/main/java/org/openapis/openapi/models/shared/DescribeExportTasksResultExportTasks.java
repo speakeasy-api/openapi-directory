@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeExportTasksResultExportTasks {
     
     public String description;
+
     public DescribeExportTasksResultExportTasks withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeExportTasksResultExportTasks {
     
     
     public String exportTaskId;
+
     public DescribeExportTasksResultExportTasks withExportTaskId(String exportTaskId) {
         this.exportTaskId = exportTaskId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeExportTasksResultExportTasks {
     
     
     public DescribeExportTasksResultExportTasksExportToS3Task exportToS3Task;
+
     public DescribeExportTasksResultExportTasks withExportToS3Task(DescribeExportTasksResultExportTasksExportToS3Task exportToS3Task) {
         this.exportToS3Task = exportToS3Task;
         return this;
@@ -33,6 +36,7 @@ public class DescribeExportTasksResultExportTasks {
     
     
     public DescribeExportTasksResultExportTasksInstanceExportDetails instanceExportDetails;
+
     public DescribeExportTasksResultExportTasks withInstanceExportDetails(DescribeExportTasksResultExportTasksInstanceExportDetails instanceExportDetails) {
         this.instanceExportDetails = instanceExportDetails;
         return this;
@@ -40,6 +44,7 @@ public class DescribeExportTasksResultExportTasks {
     
     
     public DescribeExportTasksResultExportTasksStateEnum state;
+
     public DescribeExportTasksResultExportTasks withState(DescribeExportTasksResultExportTasksStateEnum state) {
         this.state = state;
         return this;
@@ -47,6 +52,7 @@ public class DescribeExportTasksResultExportTasks {
     
     
     public String statusMessage;
+
     public DescribeExportTasksResultExportTasks withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -54,9 +60,11 @@ public class DescribeExportTasksResultExportTasks {
     
     
     public DescribeExportTasksResultExportTasksTags[] tags;
+
     public DescribeExportTasksResultExportTasks withTags(DescribeExportTasksResultExportTasksTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeExportTasksResultExportTasks(){}
 }

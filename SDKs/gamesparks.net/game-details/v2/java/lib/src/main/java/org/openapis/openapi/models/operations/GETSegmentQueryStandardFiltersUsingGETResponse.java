@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETSegmentQueryStandardFiltersUsingGETResponse {
     
     public String contentType;
+
     public GETSegmentQueryStandardFiltersUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GETSegmentQueryStandardFiltersUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public GETSegmentQueryStandardFiltersUsingGETResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -29,6 +32,7 @@ public class GETSegmentQueryStandardFiltersUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.SegmentQueryFilterListModel segmentQueryFilterListModel;
+
     public GETSegmentQueryStandardFiltersUsingGETResponse withSegmentQueryFilterListModel(org.openapis.openapi.models.shared.SegmentQueryFilterListModel segmentQueryFilterListModel) {
         this.segmentQueryFilterListModel = segmentQueryFilterListModel;
         return this;
@@ -36,6 +40,7 @@ public class GETSegmentQueryStandardFiltersUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETSegmentQueryStandardFiltersUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GETSegmentQueryStandardFiltersUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETSegmentQueryStandardFiltersUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETSegmentQueryStandardFiltersUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

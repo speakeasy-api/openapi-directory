@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Zebra {
     @JsonProperty("alliances")
     public ZebraAlliances alliances;
+
     public Zebra withAlliances(ZebraAlliances alliances) {
         this.alliances = alliances;
         return this;
@@ -22,6 +23,7 @@ public class Zebra {
      */
     @JsonProperty("key")
     public String key;
+
     public Zebra withKey(String key) {
         this.key = key;
         return this;
@@ -32,9 +34,15 @@ public class Zebra {
      */
     @JsonProperty("times")
     public Double[] times;
+
     public Zebra withTimes(Double[] times) {
         this.times = times;
         return this;
     }
     
+    public Zebra(@JsonProperty("alliances") ZebraAlliances alliances, @JsonProperty("key") String key, @JsonProperty("times") Double[] times) {
+        this.alliances = alliances;
+        this.key = key;
+        this.times = times;
+  }
 }

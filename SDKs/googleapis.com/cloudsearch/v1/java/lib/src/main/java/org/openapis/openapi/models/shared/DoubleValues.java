@@ -15,9 +15,11 @@ public class DoubleValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Double[] values;
+
     public DoubleValues withValues(Double[] values) {
         this.values = values;
         return this;
     }
     
+    public DoubleValues(){}
 }

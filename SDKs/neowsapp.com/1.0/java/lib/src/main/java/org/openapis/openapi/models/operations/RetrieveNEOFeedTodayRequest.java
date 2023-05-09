@@ -12,9 +12,11 @@ public class RetrieveNEOFeedTodayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=detailed")
     public Boolean detailed;
+
     public RetrieveNEOFeedTodayRequest withDetailed(Boolean detailed) {
         this.detailed = detailed;
         return this;
     }
     
+    public RetrieveNEOFeedTodayRequest(){}
 }

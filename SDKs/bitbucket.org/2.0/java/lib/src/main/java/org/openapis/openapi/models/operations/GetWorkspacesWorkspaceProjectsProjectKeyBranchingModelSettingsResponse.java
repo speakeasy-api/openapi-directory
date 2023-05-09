@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse {
     
     public String contentType;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRespo
     
     
     public Integer statusCode;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRespo
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRespo
      */
     
     public java.util.Map<String, Object> branchingModelSettings;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse withBranchingModelSettings(java.util.Map<String, Object> branchingModelSettings) {
         this.branchingModelSettings = branchingModelSettings;
         return this;
@@ -43,9 +48,14 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRespo
      */
     
     public java.util.Map<String, Object> error;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
     }
     
+    public GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

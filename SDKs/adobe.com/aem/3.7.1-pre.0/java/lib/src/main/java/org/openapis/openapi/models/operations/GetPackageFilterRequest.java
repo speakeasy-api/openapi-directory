@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPackageFilterRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group")
     public String group;
+
     public GetPackageFilterRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -16,6 +18,7 @@ public class GetPackageFilterRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public GetPackageFilterRequest withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +26,15 @@ public class GetPackageFilterRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public GetPackageFilterRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GetPackageFilterRequest(@JsonProperty("group") String group, @JsonProperty("name") String name, @JsonProperty("version") String version) {
+        this.group = group;
+        this.name = name;
+        this.version = version;
+  }
 }

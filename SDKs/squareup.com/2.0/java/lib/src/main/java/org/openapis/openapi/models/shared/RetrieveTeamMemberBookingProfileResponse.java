@@ -18,6 +18,7 @@ public class RetrieveTeamMemberBookingProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveTeamMemberBookingProfileResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -29,9 +30,11 @@ public class RetrieveTeamMemberBookingProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_member_booking_profile")
     public TeamMemberBookingProfile teamMemberBookingProfile;
+
     public RetrieveTeamMemberBookingProfileResponse withTeamMemberBookingProfile(TeamMemberBookingProfile teamMemberBookingProfile) {
         this.teamMemberBookingProfile = teamMemberBookingProfile;
         return this;
     }
     
+    public RetrieveTeamMemberBookingProfileResponse(){}
 }

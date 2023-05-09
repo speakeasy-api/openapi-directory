@@ -12,9 +12,11 @@ public class GetNumbersPrimeIsFibonacciPrimeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public Long number;
+
     public GetNumbersPrimeIsFibonacciPrimeRequest withNumber(Long number) {
         this.number = number;
         return this;
     }
     
+    public GetNumbersPrimeIsFibonacciPrimeRequest(){}
 }

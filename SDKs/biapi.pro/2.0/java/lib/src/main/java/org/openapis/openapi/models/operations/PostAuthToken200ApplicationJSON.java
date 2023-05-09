@@ -15,6 +15,7 @@ public class PostAuthToken200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_in")
     public Long expiresIn;
+
     public PostAuthToken200ApplicationJSON withExpiresIn(Long expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -25,6 +26,7 @@ public class PostAuthToken200ApplicationJSON {
      */
     @JsonProperty("scope")
     public String scope;
+
     public PostAuthToken200ApplicationJSON withScope(String scope) {
         this.scope = scope;
         return this;
@@ -35,9 +37,14 @@ public class PostAuthToken200ApplicationJSON {
      */
     @JsonProperty("token")
     public String token;
+
     public PostAuthToken200ApplicationJSON withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public PostAuthToken200ApplicationJSON(@JsonProperty("scope") String scope, @JsonProperty("token") String token) {
+        this.scope = scope;
+        this.token = token;
+  }
 }

@@ -18,9 +18,11 @@ public class EligibleItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listingId")
     public String listingId;
+
     public EligibleItem withListingId(String listingId) {
         this.listingId = listingId;
         return this;
     }
     
+    public EligibleItem(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteNetworkInsightsAccessScopeAnalysisResult {
     
     public String networkInsightsAccessScopeAnalysisId;
+
     public DeleteNetworkInsightsAccessScopeAnalysisResult withNetworkInsightsAccessScopeAnalysisId(String networkInsightsAccessScopeAnalysisId) {
         this.networkInsightsAccessScopeAnalysisId = networkInsightsAccessScopeAnalysisId;
         return this;
     }
     
+    public DeleteNetworkInsightsAccessScopeAnalysisResult(){}
 }

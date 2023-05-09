@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Response2 {
     @JsonProperty("items")
     public Item1[] items;
+
     public Response2 withItems(Item1[] items) {
         this.items = items;
         return this;
@@ -16,9 +17,14 @@ public class Response2 {
     
     @JsonProperty("paging")
     public Paging paging;
+
     public Response2 withPaging(Paging paging) {
         this.paging = paging;
         return this;
     }
     
+    public Response2(@JsonProperty("items") Item1[] items, @JsonProperty("paging") Paging paging) {
+        this.items = items;
+        this.paging = paging;
+  }
 }

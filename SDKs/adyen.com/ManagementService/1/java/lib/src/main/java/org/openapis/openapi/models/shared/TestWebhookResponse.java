@@ -18,9 +18,11 @@ public class TestWebhookResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public TestOutput[] data;
+
     public TestWebhookResponse withData(TestOutput[] data) {
         this.data = data;
         return this;
     }
     
+    public TestWebhookResponse(){}
 }

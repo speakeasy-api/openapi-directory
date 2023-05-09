@@ -15,6 +15,7 @@ public class EmailConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSet")
     public String configurationSet;
+
     public EmailConfigurationType withConfigurationSet(String configurationSet) {
         this.configurationSet = configurationSet;
         return this;
@@ -23,6 +24,7 @@ public class EmailConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailSendingAccount")
     public EmailSendingAccountTypeEnum emailSendingAccount;
+
     public EmailConfigurationType withEmailSendingAccount(EmailSendingAccountTypeEnum emailSendingAccount) {
         this.emailSendingAccount = emailSendingAccount;
         return this;
@@ -31,6 +33,7 @@ public class EmailConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("From")
     public String from;
+
     public EmailConfigurationType withFrom(String from) {
         this.from = from;
         return this;
@@ -39,6 +42,7 @@ public class EmailConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplyToEmailAddress")
     public String replyToEmailAddress;
+
     public EmailConfigurationType withReplyToEmailAddress(String replyToEmailAddress) {
         this.replyToEmailAddress = replyToEmailAddress;
         return this;
@@ -47,9 +51,11 @@ public class EmailConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceArn")
     public String sourceArn;
+
     public EmailConfigurationType withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
     }
     
+    public EmailConfigurationType(){}
 }

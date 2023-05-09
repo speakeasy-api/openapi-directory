@@ -12,9 +12,11 @@ public class PostSearchVersionNumberSearchAlongRouteQueryExtRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("route")
     public PostSearchVersionNumberSearchAlongRouteQueryExtRequestBodyRoute route;
+
     public PostSearchVersionNumberSearchAlongRouteQueryExtRequestBody withRoute(PostSearchVersionNumberSearchAlongRouteQueryExtRequestBodyRoute route) {
         this.route = route;
         return this;
     }
     
+    public PostSearchVersionNumberSearchAlongRouteQueryExtRequestBody(){}
 }

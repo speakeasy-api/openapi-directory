@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DirectoryVpcSettings {
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public DirectoryVpcSettings withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -19,9 +20,14 @@ public class DirectoryVpcSettings {
     
     @JsonProperty("VpcId")
     public String vpcId;
+
     public DirectoryVpcSettings withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DirectoryVpcSettings(@JsonProperty("SubnetIds") String[] subnetIds, @JsonProperty("VpcId") String vpcId) {
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
+  }
 }

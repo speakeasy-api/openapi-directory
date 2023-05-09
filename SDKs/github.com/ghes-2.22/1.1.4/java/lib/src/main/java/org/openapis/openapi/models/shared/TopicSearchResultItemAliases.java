@@ -12,9 +12,11 @@ public class TopicSearchResultItemAliases {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic_relation")
     public TopicSearchResultItemAliasesTopicRelation topicRelation;
+
     public TopicSearchResultItemAliases withTopicRelation(TopicSearchResultItemAliasesTopicRelation topicRelation) {
         this.topicRelation = topicRelation;
         return this;
     }
     
+    public TopicSearchResultItemAliases(){}
 }

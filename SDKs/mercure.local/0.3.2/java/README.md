@@ -16,9 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetWellKnownMercureRequest;
 import org.openapis.openapi.models.operations.GetWellKnownMercureResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,15 +29,14 @@ public class Application {
                 }})
                 .build();
 
-            GetWellKnownMercureRequest req = new GetWellKnownMercureRequest() {{
-                lastEventID = "corrupti";
-                lastEventIDQueryParameter = "provident";
-                topic = new String[]{{
-                    add("quibusdam"),
-                    add("unde"),
-                    add("nulla"),
-                }};
-            }}            
+            GetWellKnownMercureRequest req = new GetWellKnownMercureRequest(                new String[]{{
+                                add("provident"),
+                                add("distinctio"),
+                                add("quibusdam"),
+                            }}) {{
+                lastEventID = "unde";
+                lastEventIDQueryParameter = "nulla";
+            }};            
 
             GetWellKnownMercureResponse res = sdk.getWellKnownMercure(req);
 
@@ -47,19 +46,21 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getWellKnownMercure` - Subscribe to updates
-* `getWellKnownMercureSubscriptions` - Active subscriptions
-* `getWellKnownMercureSubscriptionsTopic` - Active subscriptions for the given topic
-* `getWellKnownMercureSubscriptionsTopicSubscriber` - Active subscription for the given topic and subscriber
-* `postWellKnownMercure` - Publish an update
+* [getWellKnownMercure](docs/sdk/README.md#getwellknownmercure) - Subscribe to updates
+* [getWellKnownMercureSubscriptions](docs/sdk/README.md#getwellknownmercuresubscriptions) - Active subscriptions
+* [getWellKnownMercureSubscriptionsTopic](docs/sdk/README.md#getwellknownmercuresubscriptionstopic) - Active subscriptions for the given topic
+* [getWellKnownMercureSubscriptionsTopicSubscriber](docs/sdk/README.md#getwellknownmercuresubscriptionstopicsubscriber) - Active subscription for the given topic and subscriber
+* [postWellKnownMercure](docs/sdk/README.md#postwellknownmercure) - Publish an update
 <!-- End SDK Available Operations -->
 
 ### Maturity

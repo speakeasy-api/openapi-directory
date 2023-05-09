@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ImportClientVpnClientCertificateRevocationListResult {
     
     public Boolean return_;
+
     public ImportClientVpnClientCertificateRevocationListResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
     }
     
+    public ImportClientVpnClientCertificateRevocationListResult(){}
 }

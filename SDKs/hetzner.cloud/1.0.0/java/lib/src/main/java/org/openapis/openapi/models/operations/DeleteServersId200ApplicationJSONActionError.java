@@ -15,6 +15,7 @@ public class DeleteServersId200ApplicationJSONActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public DeleteServersId200ApplicationJSONActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class DeleteServersId200ApplicationJSONActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public DeleteServersId200ApplicationJSONActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DeleteServersId200ApplicationJSONActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

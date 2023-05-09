@@ -18,6 +18,7 @@ public class Logging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerDestinations")
     public LoggingDestination[] consumerDestinations;
+
     public Logging withConsumerDestinations(LoggingDestination[] consumerDestinations) {
         this.consumerDestinations = consumerDestinations;
         return this;
@@ -29,9 +30,11 @@ public class Logging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerDestinations")
     public LoggingDestination[] producerDestinations;
+
     public Logging withProducerDestinations(LoggingDestination[] producerDestinations) {
         this.producerDestinations = producerDestinations;
         return this;
     }
     
+    public Logging(){}
 }

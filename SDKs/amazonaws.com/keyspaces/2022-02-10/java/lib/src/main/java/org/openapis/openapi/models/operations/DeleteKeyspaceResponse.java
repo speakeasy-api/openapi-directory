@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteKeyspaceResponse {
@@ -12,6 +13,7 @@ public class DeleteKeyspaceResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteKeyspaceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteKeyspaceResponse {
      */
     
     public Object conflictException;
+
     public DeleteKeyspaceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteKeyspaceResponse {
     
     
     public String contentType;
+
     public DeleteKeyspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteKeyspaceResponse {
      */
     
     public java.util.Map<String, Object> deleteKeyspaceResponse;
+
     public DeleteKeyspaceResponse withDeleteKeyspaceResponse(java.util.Map<String, Object> deleteKeyspaceResponse) {
         this.deleteKeyspaceResponse = deleteKeyspaceResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteKeyspaceResponse {
      */
     
     public Object internalServerException;
+
     public DeleteKeyspaceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteKeyspaceResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteKeyspaceResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteKeyspaceResponse {
     
     
     public Integer statusCode;
+
     public DeleteKeyspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteKeyspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteKeyspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteKeyspaceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteKeyspaceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteKeyspaceResponse {
      */
     
     public Object validationException;
+
     public DeleteKeyspaceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteKeyspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,16 +14,18 @@ public class GetTransactionsByAccountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
     public String accountId;
+
     public GetTransactionsByAccountRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
     /**
-     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.ynab.com/#oauth-default-budget).
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
     public String budgetId;
+
     public GetTransactionsByAccountRequest withBudgetId(String budgetId) {
         this.budgetId = budgetId;
         return this;
@@ -33,6 +36,7 @@ public class GetTransactionsByAccountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_knowledge_of_server")
     public Long lastKnowledgeOfServer;
+
     public GetTransactionsByAccountRequest withLastKnowledgeOfServer(Long lastKnowledgeOfServer) {
         this.lastKnowledgeOfServer = lastKnowledgeOfServer;
         return this;
@@ -43,6 +47,7 @@ public class GetTransactionsByAccountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_date")
     public LocalDate sinceDate;
+
     public GetTransactionsByAccountRequest withSinceDate(LocalDate sinceDate) {
         this.sinceDate = sinceDate;
         return this;
@@ -53,9 +58,14 @@ public class GetTransactionsByAccountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GetTransactionsByAccountTypeEnum type;
+
     public GetTransactionsByAccountRequest withType(GetTransactionsByAccountTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetTransactionsByAccountRequest(@JsonProperty("account_id") String accountId, @JsonProperty("budget_id") String budgetId) {
+        this.accountId = accountId;
+        this.budgetId = budgetId;
+  }
 }

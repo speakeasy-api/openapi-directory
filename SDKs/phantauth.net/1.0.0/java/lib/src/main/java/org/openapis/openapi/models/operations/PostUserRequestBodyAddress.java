@@ -18,6 +18,7 @@ public class PostUserRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public PostUserRequestBodyAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -29,6 +30,7 @@ public class PostUserRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatted")
     public String formatted;
+
     public PostUserRequestBodyAddress withFormatted(String formatted) {
         this.formatted = formatted;
         return this;
@@ -40,6 +42,7 @@ public class PostUserRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locality")
     public String locality;
+
     public PostUserRequestBodyAddress withLocality(String locality) {
         this.locality = locality;
         return this;
@@ -51,6 +54,7 @@ public class PostUserRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_code")
     public String postalCode;
+
     public PostUserRequestBodyAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -62,6 +66,7 @@ public class PostUserRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public PostUserRequestBodyAddress withRegion(String region) {
         this.region = region;
         return this;
@@ -73,9 +78,11 @@ public class PostUserRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street_address")
     public String streetAddress;
+
     public PostUserRequestBodyAddress withStreetAddress(String streetAddress) {
         this.streetAddress = streetAddress;
         return this;
     }
     
+    public PostUserRequestBodyAddress(){}
 }

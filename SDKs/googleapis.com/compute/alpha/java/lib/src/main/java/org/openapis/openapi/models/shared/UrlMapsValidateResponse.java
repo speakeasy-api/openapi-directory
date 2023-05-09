@@ -18,9 +18,11 @@ public class UrlMapsValidateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public UrlMapValidationResult result;
+
     public UrlMapsValidateResponse withResult(UrlMapValidationResult result) {
         this.result = result;
         return this;
     }
     
+    public UrlMapsValidateResponse(){}
 }

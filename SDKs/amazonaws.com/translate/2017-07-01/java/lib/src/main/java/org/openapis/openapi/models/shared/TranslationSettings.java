@@ -15,6 +15,7 @@ public class TranslationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Formality")
     public FormalityEnum formality;
+
     public TranslationSettings withFormality(FormalityEnum formality) {
         this.formality = formality;
         return this;
@@ -23,9 +24,11 @@ public class TranslationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Profanity")
     public ProfanityEnum profanity;
+
     public TranslationSettings withProfanity(ProfanityEnum profanity) {
         this.profanity = profanity;
         return this;
     }
     
+    public TranslationSettings(){}
 }

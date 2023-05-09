@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ValidateSecurityProfileBehaviorsResponse {
     
     public String contentType;
+
     public ValidateSecurityProfileBehaviorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ValidateSecurityProfileBehaviorsResponse {
      */
     
     public Object internalFailureException;
+
     public ValidateSecurityProfileBehaviorsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ValidateSecurityProfileBehaviorsResponse {
      */
     
     public Object invalidRequestException;
+
     public ValidateSecurityProfileBehaviorsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class ValidateSecurityProfileBehaviorsResponse {
     
     
     public Integer statusCode;
+
     public ValidateSecurityProfileBehaviorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ValidateSecurityProfileBehaviorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ValidateSecurityProfileBehaviorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ValidateSecurityProfileBehaviorsResponse {
      */
     
     public Object throttlingException;
+
     public ValidateSecurityProfileBehaviorsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class ValidateSecurityProfileBehaviorsResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidateSecurityProfileBehaviorsResponse validateSecurityProfileBehaviorsResponse;
+
     public ValidateSecurityProfileBehaviorsResponse withValidateSecurityProfileBehaviorsResponse(org.openapis.openapi.models.shared.ValidateSecurityProfileBehaviorsResponse validateSecurityProfileBehaviorsResponse) {
         this.validateSecurityProfileBehaviorsResponse = validateSecurityProfileBehaviorsResponse;
         return this;
     }
     
+    public ValidateSecurityProfileBehaviorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

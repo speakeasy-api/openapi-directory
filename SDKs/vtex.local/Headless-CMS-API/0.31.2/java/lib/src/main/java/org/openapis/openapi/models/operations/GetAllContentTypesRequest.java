@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllContentTypesRequest {
@@ -12,9 +13,13 @@ public class GetAllContentTypesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=builderId")
     public String builderId;
+
     public GetAllContentTypesRequest withBuilderId(String builderId) {
         this.builderId = builderId;
         return this;
     }
     
+    public GetAllContentTypesRequest(@JsonProperty("builderId") String builderId) {
+        this.builderId = builderId;
+  }
 }

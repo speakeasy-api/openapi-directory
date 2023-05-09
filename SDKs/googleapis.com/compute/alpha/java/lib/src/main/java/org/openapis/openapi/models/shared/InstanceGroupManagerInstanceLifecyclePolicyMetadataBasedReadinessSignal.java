@@ -15,9 +15,11 @@ public class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutSec")
     public Integer timeoutSec;
+
     public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignal withTimeoutSec(Integer timeoutSec) {
         this.timeoutSec = timeoutSec;
         return this;
     }
     
+    public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignal(){}
 }

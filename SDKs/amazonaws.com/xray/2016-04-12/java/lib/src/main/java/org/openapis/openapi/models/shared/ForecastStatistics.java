@@ -15,6 +15,7 @@ public class ForecastStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaultCountHigh")
     public Long faultCountHigh;
+
     public ForecastStatistics withFaultCountHigh(Long faultCountHigh) {
         this.faultCountHigh = faultCountHigh;
         return this;
@@ -23,9 +24,11 @@ public class ForecastStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaultCountLow")
     public Long faultCountLow;
+
     public ForecastStatistics withFaultCountLow(Long faultCountLow) {
         this.faultCountLow = faultCountLow;
         return this;
     }
     
+    public ForecastStatistics(){}
 }

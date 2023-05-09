@@ -15,6 +15,7 @@ public class PropertyPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public CustomFieldPersistVO[] customFields;
+
     public PropertyPersistVO withCustomFields(CustomFieldPersistVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -23,9 +24,11 @@ public class PropertyPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paper_id")
     public Long paperId;
+
     public PropertyPersistVO withPaperId(Long paperId) {
         this.paperId = paperId;
         return this;
     }
     
+    public PropertyPersistVO(){}
 }

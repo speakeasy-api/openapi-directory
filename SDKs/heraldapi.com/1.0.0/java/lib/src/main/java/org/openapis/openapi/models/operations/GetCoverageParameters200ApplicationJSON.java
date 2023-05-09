@@ -15,9 +15,11 @@ public class GetCoverageParameters200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverage_parameters")
     public org.openapis.openapi.models.shared.CoverageParameterV1[] coverageParameters;
+
     public GetCoverageParameters200ApplicationJSON withCoverageParameters(org.openapis.openapi.models.shared.CoverageParameterV1[] coverageParameters) {
         this.coverageParameters = coverageParameters;
         return this;
     }
     
+    public GetCoverageParameters200ApplicationJSON(){}
 }

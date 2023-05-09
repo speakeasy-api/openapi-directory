@@ -18,9 +18,11 @@ public class ResourceUpdateError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ResourceUpdateErrorErrors[] errors;
+
     public ResourceUpdateError withErrors(ResourceUpdateErrorErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public ResourceUpdateError(){}
 }

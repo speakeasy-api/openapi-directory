@@ -15,6 +15,7 @@ public class DescribeDocumentPermissionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public DescribeDocumentPermissionResponse withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -23,6 +24,7 @@ public class DescribeDocumentPermissionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountSharingInfoList")
     public AccountSharingInfo[] accountSharingInfoList;
+
     public DescribeDocumentPermissionResponse withAccountSharingInfoList(AccountSharingInfo[] accountSharingInfoList) {
         this.accountSharingInfoList = accountSharingInfoList;
         return this;
@@ -31,9 +33,11 @@ public class DescribeDocumentPermissionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeDocumentPermissionResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeDocumentPermissionResponse(){}
 }

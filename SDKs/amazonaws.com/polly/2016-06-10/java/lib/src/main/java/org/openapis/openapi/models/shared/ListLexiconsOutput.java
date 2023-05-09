@@ -15,6 +15,7 @@ public class ListLexiconsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lexicons")
     public LexiconDescription[] lexicons;
+
     public ListLexiconsOutput withLexicons(LexiconDescription[] lexicons) {
         this.lexicons = lexicons;
         return this;
@@ -23,9 +24,11 @@ public class ListLexiconsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLexiconsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLexiconsOutput(){}
 }

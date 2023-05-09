@@ -15,9 +15,11 @@ public class TunedHPOParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithmHyperParameters")
     public java.util.Map<String, String> algorithmHyperParameters;
+
     public TunedHPOParams withAlgorithmHyperParameters(java.util.Map<String, String> algorithmHyperParameters) {
         this.algorithmHyperParameters = algorithmHyperParameters;
         return this;
     }
     
+    public TunedHPOParams(){}
 }

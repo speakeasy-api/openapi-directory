@@ -18,6 +18,7 @@ public class ZoneStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next_page")
     public String nextPage;
+
     public ZoneStats withNextPage(String nextPage) {
         this.nextPage = nextPage;
         return this;
@@ -26,6 +27,7 @@ public class ZoneStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistics")
     public ZoneStatistics[] statistics;
+
     public ZoneStats withStatistics(ZoneStatistics[] statistics) {
         this.statistics = statistics;
         return this;
@@ -36,6 +38,7 @@ public class ZoneStats {
      */
     @JsonProperty("time")
     public String time;
+
     public ZoneStats withTime(String time) {
         this.time = time;
         return this;
@@ -47,9 +50,13 @@ public class ZoneStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public ZoneStats withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public ZoneStats(@JsonProperty("time") String time) {
+        this.time = time;
+  }
 }

@@ -15,6 +15,7 @@ public class AssetModelPropertySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetModelCompositeModelId")
     public String assetModelCompositeModelId;
+
     public AssetModelPropertySummary withAssetModelCompositeModelId(String assetModelCompositeModelId) {
         this.assetModelCompositeModelId = assetModelCompositeModelId;
         return this;
@@ -22,6 +23,7 @@ public class AssetModelPropertySummary {
     
     @JsonProperty("dataType")
     public PropertyDataTypeEnum dataType;
+
     public AssetModelPropertySummary withDataType(PropertyDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -30,6 +32,7 @@ public class AssetModelPropertySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataTypeSpec")
     public String dataTypeSpec;
+
     public AssetModelPropertySummary withDataTypeSpec(String dataTypeSpec) {
         this.dataTypeSpec = dataTypeSpec;
         return this;
@@ -38,6 +41,7 @@ public class AssetModelPropertySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssetModelPropertySummary withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +49,7 @@ public class AssetModelPropertySummary {
     
     @JsonProperty("name")
     public String name;
+
     public AssetModelPropertySummary withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class AssetModelPropertySummary {
      */
     @JsonProperty("type")
     public PropertyType type;
+
     public AssetModelPropertySummary withType(PropertyType type) {
         this.type = type;
         return this;
@@ -63,9 +69,15 @@ public class AssetModelPropertySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public AssetModelPropertySummary withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public AssetModelPropertySummary(@JsonProperty("dataType") PropertyDataTypeEnum dataType, @JsonProperty("name") String name, @JsonProperty("type") PropertyType type) {
+        this.dataType = dataType;
+        this.name = name;
+        this.type = type;
+  }
 }

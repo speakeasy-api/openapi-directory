@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LaunchTemplateOverrides {
     
     public InstanceRequirements instanceRequirements;
+
     public LaunchTemplateOverrides withInstanceRequirements(InstanceRequirements instanceRequirements) {
         this.instanceRequirements = instanceRequirements;
         return this;
@@ -19,6 +20,7 @@ public class LaunchTemplateOverrides {
     
     
     public String instanceType;
+
     public LaunchTemplateOverrides withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -26,6 +28,7 @@ public class LaunchTemplateOverrides {
     
     
     public LaunchTemplateSpecification launchTemplateSpecification;
+
     public LaunchTemplateOverrides withLaunchTemplateSpecification(LaunchTemplateSpecification launchTemplateSpecification) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         return this;
@@ -33,9 +36,11 @@ public class LaunchTemplateOverrides {
     
     
     public String weightedCapacity;
+
     public LaunchTemplateOverrides withWeightedCapacity(String weightedCapacity) {
         this.weightedCapacity = weightedCapacity;
         return this;
     }
     
+    public LaunchTemplateOverrides(){}
 }

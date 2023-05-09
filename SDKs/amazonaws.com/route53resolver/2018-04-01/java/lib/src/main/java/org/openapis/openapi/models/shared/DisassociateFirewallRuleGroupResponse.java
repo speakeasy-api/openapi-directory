@@ -15,9 +15,11 @@ public class DisassociateFirewallRuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallRuleGroupAssociation")
     public FirewallRuleGroupAssociation firewallRuleGroupAssociation;
+
     public DisassociateFirewallRuleGroupResponse withFirewallRuleGroupAssociation(FirewallRuleGroupAssociation firewallRuleGroupAssociation) {
         this.firewallRuleGroupAssociation = firewallRuleGroupAssociation;
         return this;
     }
     
+    public DisassociateFirewallRuleGroupResponse(){}
 }

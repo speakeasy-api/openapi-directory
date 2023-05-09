@@ -18,6 +18,7 @@ public class PivotHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pivotDimensionHeaders")
     public PivotDimensionHeader[] pivotDimensionHeaders;
+
     public PivotHeader withPivotDimensionHeaders(PivotDimensionHeader[] pivotDimensionHeaders) {
         this.pivotDimensionHeaders = pivotDimensionHeaders;
         return this;
@@ -29,9 +30,11 @@ public class PivotHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowCount")
     public Integer rowCount;
+
     public PivotHeader withRowCount(Integer rowCount) {
         this.rowCount = rowCount;
         return this;
     }
     
+    public PivotHeader(){}
 }

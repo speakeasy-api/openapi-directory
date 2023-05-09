@@ -20,6 +20,7 @@ public class CampaignSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignArn")
     public String campaignArn;
+
     public CampaignSummary withCampaignArn(String campaignArn) {
         this.campaignArn = campaignArn;
         return this;
@@ -30,6 +31,7 @@ public class CampaignSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public CampaignSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -38,6 +40,7 @@ public class CampaignSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public CampaignSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -48,6 +51,7 @@ public class CampaignSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public CampaignSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -56,6 +60,7 @@ public class CampaignSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CampaignSummary withName(String name) {
         this.name = name;
         return this;
@@ -64,9 +69,11 @@ public class CampaignSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CampaignSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public CampaignSummary(){}
 }

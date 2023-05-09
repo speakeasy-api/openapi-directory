@@ -68,10 +68,8 @@ public class Orders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddLogResponse res = new org.openapis.openapi.models.operations.AddLogResponse() {{
+        org.openapis.openapi.models.operations.AddLogResponse res = new org.openapis.openapi.models.operations.AddLogResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -88,7 +86,7 @@ public class Orders {
      * 
      * You should expect a response with the date when the notification was received, the orderId, and a receipt protocol code.
      * 
-     * Be aware that if the order status is already `Invoiced`, the order can only be canceled if\u2014before using this request\u2014you send a return invoice through the [Order Invoice Notification endpoint](https://developers.vtex.com/reference/invoice#invoicenotification).
+     * Be aware that if the order status is already `Invoiced`, the order can only be canceled if—before using this request—you send a return invoice through the [Order Invoice Notification endpoint](https://developers.vtex.com/reference/invoice#invoicenotification).
      * 
      * &gt; The `Cancel order` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).
      * @param request the request object containing all of the parameters for the API call
@@ -120,11 +118,9 @@ public class Orders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelOrderResponse res = new org.openapis.openapi.models.operations.CancelOrderResponse() {{
+        org.openapis.openapi.models.operations.CancelOrderResponse res = new org.openapis.openapi.models.operations.CancelOrderResponse(contentType, httpRes.statusCode()) {{
             cancelOrder200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,7 +142,7 @@ public class Orders {
      * 
      * &gt; The `View order` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc).
      * 
-     * &gt; \ud83d\udcd8 Onboarding guide 
+     * &gt; 📘 Onboarding guide 
      * &gt;
      * &gt; Check the new [Orders onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/orders-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Orders and is organized by focusing on the developer's journey.
      * 
@@ -341,7 +337,7 @@ public class Orders {
      *             "country": "BRA",
      *             "street": "Rua Pinto Teles",
      *             "number": "1",
-     *             "neighborhood": "Pra\u00e7a Seca",
+     *             "neighborhood": "Praça Seca",
      *             "complement": null,
      *             "reference": null,
      *             "geoCoordinates": [
@@ -418,7 +414,7 @@ public class Orders {
      *                 "street": "Rua Pinto Teles",
      *                 "number": "1",
      *                 "complement": null,
-     *                 "neighborhood": "Pra\u00e7a Seca",
+     *                 "neighborhood": "Praça Seca",
      *                 "postalCode": "21341-270",
      *                 "city": "Rio de Janeiro",
      *                 "state": "RJ",
@@ -592,11 +588,9 @@ public class Orders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderResponse res = new org.openapis.openapi.models.operations.GetOrderResponse() {{
+        org.openapis.openapi.models.operations.GetOrderResponse res = new org.openapis.openapi.models.operations.GetOrderResponse(contentType, httpRes.statusCode()) {{
             getOrder200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -622,7 +616,7 @@ public class Orders {
      * 
      * This endpoint returns only orders that already have been indexed, which takes approximately four minutes. Because of this, the data retrieved may present inconsistencies. To get live up-to-date information and [build order integrations](https://developers.vtex.com/vtex-rest-api/docs/erp-integration-set-up-order-integration) use the [orders Feed or hook](https://developers.vtex.com/docs/guides/orders-feed).
      * 
-     * &gt; \ud83d\udcd8 Onboarding guide 
+     * &gt; 📘 Onboarding guide 
      * &gt;
      * &gt; Check the new [Orders onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/orders-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Orders and is organized by focusing on the developer's journey.
      * 
@@ -660,11 +654,9 @@ public class Orders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListOrdersResponse res = new org.openapis.openapi.models.operations.ListOrdersResponse() {{
+        org.openapis.openapi.models.operations.ListOrdersResponse res = new org.openapis.openapi.models.operations.ListOrdersResponse(contentType, httpRes.statusCode()) {{
             listOrders = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -732,11 +724,9 @@ public class Orders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterChangeResponse res = new org.openapis.openapi.models.operations.RegisterChangeResponse() {{
+        org.openapis.openapi.models.operations.RegisterChangeResponse res = new org.openapis.openapi.models.operations.RegisterChangeResponse(contentType, httpRes.statusCode()) {{
             registerChange = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -784,12 +774,10 @@ public class Orders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartHandlingResponse res = new org.openapis.openapi.models.operations.StartHandlingResponse() {{
+        org.openapis.openapi.models.operations.StartHandlingResponse res = new org.openapis.openapi.models.operations.StartHandlingResponse(contentType, httpRes.statusCode()) {{
             startHandling401ApplicationJSONObject = null;
             startHandling409ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {

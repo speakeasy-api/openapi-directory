@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class History {
     @JsonProperty("events")
     public HistoryEvent[] events;
+
     public History withEvents(HistoryEvent[] events) {
         this.events = events;
         return this;
@@ -22,9 +23,13 @@ public class History {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public History withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public History(@JsonProperty("events") HistoryEvent[] events) {
+        this.events = events;
+  }
 }

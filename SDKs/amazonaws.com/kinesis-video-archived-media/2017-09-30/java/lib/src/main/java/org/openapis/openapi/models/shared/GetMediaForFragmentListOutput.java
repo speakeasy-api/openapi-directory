@@ -15,9 +15,11 @@ public class GetMediaForFragmentListOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Payload")
     public String payload;
+
     public GetMediaForFragmentListOutput withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public GetMediaForFragmentListOutput(){}
 }

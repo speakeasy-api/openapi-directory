@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOntologyTermsSharedAncestorRequest {
@@ -12,6 +13,7 @@ public class GetOntologyTermsSharedAncestorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
     public String object;
+
     public GetOntologyTermsSharedAncestorRequest withObject(String object) {
         this.object = object;
         return this;
@@ -22,9 +24,14 @@ public class GetOntologyTermsSharedAncestorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject")
     public String subject;
+
     public GetOntologyTermsSharedAncestorRequest withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public GetOntologyTermsSharedAncestorRequest(@JsonProperty("object") String object, @JsonProperty("subject") String subject) {
+        this.object = object;
+        this.subject = subject;
+  }
 }

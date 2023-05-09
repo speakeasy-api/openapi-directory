@@ -12,6 +12,7 @@ public class UpdateLinkRequestBody {
      */
     @JsonProperty("Identifier")
     public String identifier;
+
     public UpdateLinkRequestBody withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -22,9 +23,14 @@ public class UpdateLinkRequestBody {
      */
     @JsonProperty("ResourceTypes")
     public org.openapis.openapi.models.shared.ResourceTypeEnum[] resourceTypes;
+
     public UpdateLinkRequestBody withResourceTypes(org.openapis.openapi.models.shared.ResourceTypeEnum[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
     }
     
+    public UpdateLinkRequestBody(@JsonProperty("Identifier") String identifier, @JsonProperty("ResourceTypes") org.openapis.openapi.models.shared.ResourceTypeEnum[] resourceTypes) {
+        this.identifier = identifier;
+        this.resourceTypes = resourceTypes;
+  }
 }

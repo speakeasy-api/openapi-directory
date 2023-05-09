@@ -15,6 +15,7 @@ public class StateEnteredEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public StateEnteredEventDetails withInput(String input) {
         this.input = input;
         return this;
@@ -23,6 +24,7 @@ public class StateEnteredEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDetails")
     public HistoryEventExecutionDataDetails inputDetails;
+
     public StateEnteredEventDetails withInputDetails(HistoryEventExecutionDataDetails inputDetails) {
         this.inputDetails = inputDetails;
         return this;
@@ -30,9 +32,13 @@ public class StateEnteredEventDetails {
     
     @JsonProperty("name")
     public String name;
+
     public StateEnteredEventDetails withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StateEnteredEventDetails(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

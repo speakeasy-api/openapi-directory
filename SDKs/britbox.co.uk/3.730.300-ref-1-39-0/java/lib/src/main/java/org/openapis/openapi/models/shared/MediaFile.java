@@ -15,6 +15,7 @@ public class MediaFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channels")
     public Integer channels;
+
     public MediaFile withChannels(Integer channels) {
         this.channels = channels;
         return this;
@@ -25,6 +26,7 @@ public class MediaFile {
      */
     @JsonProperty("deliveryType")
     public MediaFileDeliveryTypeEnum deliveryType;
+
     public MediaFile withDeliveryType(MediaFileDeliveryTypeEnum deliveryType) {
         this.deliveryType = deliveryType;
         return this;
@@ -35,6 +37,7 @@ public class MediaFile {
      */
     @JsonProperty("drm")
     public String drm;
+
     public MediaFile withDrm(String drm) {
         this.drm = drm;
         return this;
@@ -45,6 +48,7 @@ public class MediaFile {
      */
     @JsonProperty("format")
     public String format;
+
     public MediaFile withFormat(String format) {
         this.format = format;
         return this;
@@ -55,6 +59,7 @@ public class MediaFile {
      */
     @JsonProperty("height")
     public Integer height;
+
     public MediaFile withHeight(Integer height) {
         this.height = height;
         return this;
@@ -65,6 +70,7 @@ public class MediaFile {
      */
     @JsonProperty("language")
     public String language;
+
     public MediaFile withLanguage(String language) {
         this.language = language;
         return this;
@@ -75,6 +81,7 @@ public class MediaFile {
      */
     @JsonProperty("name")
     public String name;
+
     public MediaFile withName(String name) {
         this.name = name;
         return this;
@@ -85,6 +92,7 @@ public class MediaFile {
      */
     @JsonProperty("resolution")
     public MediaFileResolutionEnum1 resolution;
+
     public MediaFile withResolution(MediaFileResolutionEnum1 resolution) {
         this.resolution = resolution;
         return this;
@@ -95,6 +103,7 @@ public class MediaFile {
      */
     @JsonProperty("url")
     public String url;
+
     public MediaFile withUrl(String url) {
         this.url = url;
         return this;
@@ -105,9 +114,21 @@ public class MediaFile {
      */
     @JsonProperty("width")
     public Integer width;
+
     public MediaFile withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public MediaFile(@JsonProperty("deliveryType") MediaFileDeliveryTypeEnum deliveryType, @JsonProperty("drm") String drm, @JsonProperty("format") String format, @JsonProperty("height") Integer height, @JsonProperty("language") String language, @JsonProperty("name") String name, @JsonProperty("resolution") MediaFileResolutionEnum1 resolution, @JsonProperty("url") String url, @JsonProperty("width") Integer width) {
+        this.deliveryType = deliveryType;
+        this.drm = drm;
+        this.format = format;
+        this.height = height;
+        this.language = language;
+        this.name = name;
+        this.resolution = resolution;
+        this.url = url;
+        this.width = width;
+  }
 }

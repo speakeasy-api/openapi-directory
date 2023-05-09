@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RenameCategoryRequest {
     @JsonProperty("name")
     public String name;
+
     public RenameCategoryRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RenameCategoryRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

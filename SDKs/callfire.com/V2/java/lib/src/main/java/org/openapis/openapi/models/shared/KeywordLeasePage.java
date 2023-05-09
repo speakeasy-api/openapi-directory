@@ -15,6 +15,7 @@ public class KeywordLeasePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public KeywordLease[] items;
+
     public KeywordLeasePage withItems(KeywordLease[] items) {
         this.items = items;
         return this;
@@ -26,6 +27,7 @@ public class KeywordLeasePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public KeywordLeasePage withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -37,6 +39,7 @@ public class KeywordLeasePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public KeywordLeasePage withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -48,9 +51,11 @@ public class KeywordLeasePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public KeywordLeasePage withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public KeywordLeasePage(){}
 }

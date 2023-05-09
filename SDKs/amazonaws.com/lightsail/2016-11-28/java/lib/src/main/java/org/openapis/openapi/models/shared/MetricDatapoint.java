@@ -20,6 +20,7 @@ public class MetricDatapoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average")
     public Double average;
+
     public MetricDatapoint withAverage(Double average) {
         this.average = average;
         return this;
@@ -28,6 +29,7 @@ public class MetricDatapoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximum")
     public Double maximum;
+
     public MetricDatapoint withMaximum(Double maximum) {
         this.maximum = maximum;
         return this;
@@ -36,6 +38,7 @@ public class MetricDatapoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum")
     public Double minimum;
+
     public MetricDatapoint withMinimum(Double minimum) {
         this.minimum = minimum;
         return this;
@@ -44,6 +47,7 @@ public class MetricDatapoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleCount")
     public Double sampleCount;
+
     public MetricDatapoint withSampleCount(Double sampleCount) {
         this.sampleCount = sampleCount;
         return this;
@@ -52,6 +56,7 @@ public class MetricDatapoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sum")
     public Double sum;
+
     public MetricDatapoint withSum(Double sum) {
         this.sum = sum;
         return this;
@@ -62,6 +67,7 @@ public class MetricDatapoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public MetricDatapoint withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -70,9 +76,11 @@ public class MetricDatapoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public MetricUnitEnum unit;
+
     public MetricDatapoint withUnit(MetricUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public MetricDatapoint(){}
 }

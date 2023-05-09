@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputePacketMirroringsDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputePacketMirroringsDeleteSecurityOption1 option1;
+
     public ComputePacketMirroringsDeleteSecurity withOption1(ComputePacketMirroringsDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputePacketMirroringsDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputePacketMirroringsDeleteSecurityOption2 option2;
+
     public ComputePacketMirroringsDeleteSecurity withOption2(ComputePacketMirroringsDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputePacketMirroringsDeleteSecurity(){}
 }

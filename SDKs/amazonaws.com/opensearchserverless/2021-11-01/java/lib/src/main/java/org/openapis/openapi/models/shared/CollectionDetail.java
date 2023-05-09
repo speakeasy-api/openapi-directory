@@ -15,6 +15,7 @@ public class CollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CollectionDetail withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionEndpoint")
     public String collectionEndpoint;
+
     public CollectionDetail withCollectionEndpoint(String collectionEndpoint) {
         this.collectionEndpoint = collectionEndpoint;
         return this;
@@ -31,6 +33,7 @@ public class CollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdDate")
     public Long createdDate;
+
     public CollectionDetail withCreatedDate(Long createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -39,6 +42,7 @@ public class CollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashboardEndpoint")
     public String dashboardEndpoint;
+
     public CollectionDetail withDashboardEndpoint(String dashboardEndpoint) {
         this.dashboardEndpoint = dashboardEndpoint;
         return this;
@@ -47,6 +51,7 @@ public class CollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CollectionDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -55,6 +60,7 @@ public class CollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CollectionDetail withId(String id) {
         this.id = id;
         return this;
@@ -63,6 +69,7 @@ public class CollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public CollectionDetail withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -71,6 +78,7 @@ public class CollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedDate")
     public Long lastModifiedDate;
+
     public CollectionDetail withLastModifiedDate(Long lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -79,6 +87,7 @@ public class CollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CollectionDetail withName(String name) {
         this.name = name;
         return this;
@@ -87,6 +96,7 @@ public class CollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CollectionStatusEnum status;
+
     public CollectionDetail withStatus(CollectionStatusEnum status) {
         this.status = status;
         return this;
@@ -95,9 +105,11 @@ public class CollectionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CollectionTypeEnum type;
+
     public CollectionDetail withType(CollectionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CollectionDetail(){}
 }

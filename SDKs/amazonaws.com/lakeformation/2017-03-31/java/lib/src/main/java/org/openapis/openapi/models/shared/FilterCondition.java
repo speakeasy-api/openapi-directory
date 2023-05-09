@@ -15,6 +15,7 @@ public class FilterCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComparisonOperator")
     public ComparisonOperatorEnum comparisonOperator;
+
     public FilterCondition withComparisonOperator(ComparisonOperatorEnum comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -23,6 +24,7 @@ public class FilterCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Field")
     public FieldNameStringEnum field;
+
     public FilterCondition withField(FieldNameStringEnum field) {
         this.field = field;
         return this;
@@ -31,9 +33,11 @@ public class FilterCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StringValueList")
     public String[] stringValueList;
+
     public FilterCondition withStringValueList(String[] stringValueList) {
         this.stringValueList = stringValueList;
         return this;
     }
     
+    public FilterCondition(){}
 }

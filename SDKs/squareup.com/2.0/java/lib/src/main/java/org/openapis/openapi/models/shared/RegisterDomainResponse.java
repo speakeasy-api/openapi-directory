@@ -21,6 +21,7 @@ public class RegisterDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RegisterDomainResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -34,9 +35,11 @@ public class RegisterDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public RegisterDomainResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public RegisterDomainResponse(){}
 }

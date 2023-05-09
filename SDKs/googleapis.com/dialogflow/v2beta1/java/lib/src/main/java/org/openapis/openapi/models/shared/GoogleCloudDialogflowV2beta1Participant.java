@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1Participant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentsMetadataFilters")
     public java.util.Map<String, String> documentsMetadataFilters;
+
     public GoogleCloudDialogflowV2beta1Participant withDocumentsMetadataFilters(java.util.Map<String, String> documentsMetadataFilters) {
         this.documentsMetadataFilters = documentsMetadataFilters;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1Participant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2beta1Participant withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1Participant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obfuscatedExternalUserId")
     public String obfuscatedExternalUserId;
+
     public GoogleCloudDialogflowV2beta1Participant withObfuscatedExternalUserId(String obfuscatedExternalUserId) {
         this.obfuscatedExternalUserId = obfuscatedExternalUserId;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2beta1Participant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public GoogleCloudDialogflowV2beta1ParticipantRoleEnum role;
+
     public GoogleCloudDialogflowV2beta1Participant withRole(GoogleCloudDialogflowV2beta1ParticipantRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1Participant(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDatabaseResponse {
@@ -12,6 +13,7 @@ public class UpdateDatabaseResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateDatabaseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDatabaseResponse {
     
     
     public String contentType;
+
     public UpdateDatabaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDatabaseResponse {
      */
     
     public Object internalServerException;
+
     public UpdateDatabaseResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDatabaseResponse {
      */
     
     public Object invalidEndpointException;
+
     public UpdateDatabaseResponse withInvalidEndpointException(Object invalidEndpointException) {
         this.invalidEndpointException = invalidEndpointException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDatabaseResponse {
     
     
     public Integer statusCode;
+
     public UpdateDatabaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDatabaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDatabaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDatabaseResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDatabaseResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDatabaseResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateDatabaseResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateDatabaseResponse {
      */
     
     public Object throttlingException;
+
     public UpdateDatabaseResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateDatabaseResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDatabaseResponse updateDatabaseResponse;
+
     public UpdateDatabaseResponse withUpdateDatabaseResponse(org.openapis.openapi.models.shared.UpdateDatabaseResponse updateDatabaseResponse) {
         this.updateDatabaseResponse = updateDatabaseResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateDatabaseResponse {
      */
     
     public Object validationException;
+
     public UpdateDatabaseResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateDatabaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

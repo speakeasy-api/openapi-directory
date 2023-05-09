@@ -18,6 +18,7 @@ public class FileUploadAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileId")
     public String fileId;
+
     public FileUploadAnswer withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -29,6 +30,7 @@ public class FileUploadAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public FileUploadAnswer withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -40,9 +42,11 @@ public class FileUploadAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public FileUploadAnswer withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public FileUploadAnswer(){}
 }

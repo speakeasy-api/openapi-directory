@@ -12,6 +12,7 @@ public class SystemPricelist200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost_per_unit")
     public String costPerUnit;
+
     public SystemPricelist200ApplicationJSON withCostPerUnit(String costPerUnit) {
         this.costPerUnit = costPerUnit;
         return this;
@@ -20,6 +21,7 @@ public class SystemPricelist200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public String max;
+
     public SystemPricelist200ApplicationJSON withMax(String max) {
         this.max = max;
         return this;
@@ -28,6 +30,7 @@ public class SystemPricelist200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric_id")
     public String metricId;
+
     public SystemPricelist200ApplicationJSON withMetricId(String metricId) {
         this.metricId = metricId;
         return this;
@@ -36,6 +39,7 @@ public class SystemPricelist200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
     public String min;
+
     public SystemPricelist200ApplicationJSON withMin(String min) {
         this.min = min;
         return this;
@@ -44,9 +48,11 @@ public class SystemPricelist200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public SystemPricelist200ApplicationJSON withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public SystemPricelist200ApplicationJSON(){}
 }

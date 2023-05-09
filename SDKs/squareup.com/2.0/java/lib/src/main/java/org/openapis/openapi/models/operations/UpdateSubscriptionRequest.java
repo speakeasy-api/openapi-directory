@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSubscriptionRequest {
@@ -14,6 +15,7 @@ public class UpdateSubscriptionRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateSubscriptionRequest updateSubscriptionRequest;
+
     public UpdateSubscriptionRequest withUpdateSubscriptionRequest(org.openapis.openapi.models.shared.UpdateSubscriptionRequest updateSubscriptionRequest) {
         this.updateSubscriptionRequest = updateSubscriptionRequest;
         return this;
@@ -24,9 +26,14 @@ public class UpdateSubscriptionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscription_id")
     public String subscriptionId;
+
     public UpdateSubscriptionRequest withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public UpdateSubscriptionRequest(@JsonProperty("UpdateSubscriptionRequest") org.openapis.openapi.models.shared.UpdateSubscriptionRequest updateSubscriptionRequest, @JsonProperty("subscription_id") String subscriptionId) {
+        this.updateSubscriptionRequest = updateSubscriptionRequest;
+        this.subscriptionId = subscriptionId;
+  }
 }

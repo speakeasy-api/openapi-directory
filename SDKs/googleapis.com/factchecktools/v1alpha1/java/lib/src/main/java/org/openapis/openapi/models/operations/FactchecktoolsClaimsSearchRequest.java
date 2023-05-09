@@ -12,6 +12,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public FactchecktoolsClaimsSearchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public FactchecktoolsClaimsSearchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public FactchecktoolsClaimsSearchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public FactchecktoolsClaimsSearchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FactchecktoolsClaimsSearchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +67,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public FactchecktoolsClaimsSearchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +78,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=languageCode")
     public String languageCode;
+
     public FactchecktoolsClaimsSearchRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -82,6 +89,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxAgeDays")
     public Long maxAgeDays;
+
     public FactchecktoolsClaimsSearchRequest withMaxAgeDays(Long maxAgeDays) {
         this.maxAgeDays = maxAgeDays;
         return this;
@@ -92,6 +100,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public FactchecktoolsClaimsSearchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +111,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public FactchecktoolsClaimsSearchRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -112,6 +122,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public FactchecktoolsClaimsSearchRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -122,6 +133,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public FactchecktoolsClaimsSearchRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -132,6 +144,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public FactchecktoolsClaimsSearchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +155,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public FactchecktoolsClaimsSearchRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -152,6 +166,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public FactchecktoolsClaimsSearchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +177,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reviewPublisherSiteFilter")
     public String reviewPublisherSiteFilter;
+
     public FactchecktoolsClaimsSearchRequest withReviewPublisherSiteFilter(String reviewPublisherSiteFilter) {
         this.reviewPublisherSiteFilter = reviewPublisherSiteFilter;
         return this;
@@ -172,6 +188,7 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public FactchecktoolsClaimsSearchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -182,9 +199,11 @@ public class FactchecktoolsClaimsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public FactchecktoolsClaimsSearchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public FactchecktoolsClaimsSearchRequest(){}
 }

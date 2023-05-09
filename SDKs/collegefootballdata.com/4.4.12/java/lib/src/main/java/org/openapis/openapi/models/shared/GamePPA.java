@@ -12,6 +12,7 @@ public class GamePPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
     public String conference;
+
     public GamePPA withConference(String conference) {
         this.conference = conference;
         return this;
@@ -20,6 +21,7 @@ public class GamePPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defense")
     public GamePPADefense defense;
+
     public GamePPA withDefense(GamePPADefense defense) {
         this.defense = defense;
         return this;
@@ -28,6 +30,7 @@ public class GamePPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gameId")
     public Long gameId;
+
     public GamePPA withGameId(Long gameId) {
         this.gameId = gameId;
         return this;
@@ -36,6 +39,7 @@ public class GamePPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offense")
     public GamePPAOffense offense;
+
     public GamePPA withOffense(GamePPAOffense offense) {
         this.offense = offense;
         return this;
@@ -44,6 +48,7 @@ public class GamePPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opponent")
     public String opponent;
+
     public GamePPA withOpponent(String opponent) {
         this.opponent = opponent;
         return this;
@@ -52,6 +57,7 @@ public class GamePPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("season")
     public Long season;
+
     public GamePPA withSeason(Long season) {
         this.season = season;
         return this;
@@ -60,6 +66,7 @@ public class GamePPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public GamePPA withTeam(String team) {
         this.team = team;
         return this;
@@ -68,9 +75,11 @@ public class GamePPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("week")
     public Long week;
+
     public GamePPA withWeek(Long week) {
         this.week = week;
         return this;
     }
     
+    public GamePPA(){}
 }

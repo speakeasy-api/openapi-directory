@@ -17,6 +17,7 @@ public class GetTablesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetTablesRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -24,6 +25,7 @@ public class GetTablesRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetTablesRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -32,6 +34,7 @@ public class GetTablesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expression")
     public String expression;
+
     public GetTablesRequest withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -40,6 +43,7 @@ public class GetTablesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetTablesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -48,6 +52,7 @@ public class GetTablesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetTablesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -58,6 +63,7 @@ public class GetTablesRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("QueryAsOfTime")
     public OffsetDateTime queryAsOfTime;
+
     public GetTablesRequest withQueryAsOfTime(OffsetDateTime queryAsOfTime) {
         this.queryAsOfTime = queryAsOfTime;
         return this;
@@ -66,9 +72,13 @@ public class GetTablesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public GetTablesRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public GetTablesRequest(@JsonProperty("DatabaseName") String databaseName) {
+        this.databaseName = databaseName;
+  }
 }

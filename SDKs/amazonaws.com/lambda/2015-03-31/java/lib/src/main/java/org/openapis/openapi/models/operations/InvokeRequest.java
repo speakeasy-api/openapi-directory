@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InvokeRequest {
@@ -12,6 +13,7 @@ public class InvokeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionName")
     public String functionName;
+
     public InvokeRequest withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -22,6 +24,7 @@ public class InvokeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Qualifier")
     public String qualifier;
+
     public InvokeRequest withQualifier(String qualifier) {
         this.qualifier = qualifier;
         return this;
@@ -29,6 +32,7 @@ public class InvokeRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public InvokeRequestBody requestBody;
+
     public InvokeRequest withRequestBody(InvokeRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -36,6 +40,7 @@ public class InvokeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public InvokeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -46,6 +51,7 @@ public class InvokeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Client-Context")
     public String xAmzClientContext;
+
     public InvokeRequest withXAmzClientContext(String xAmzClientContext) {
         this.xAmzClientContext = xAmzClientContext;
         return this;
@@ -53,6 +59,7 @@ public class InvokeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public InvokeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -60,6 +67,7 @@ public class InvokeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public InvokeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -67,6 +75,7 @@ public class InvokeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public InvokeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -77,6 +86,7 @@ public class InvokeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Invocation-Type")
     public InvokeXAmzInvocationTypeEnum xAmzInvocationType;
+
     public InvokeRequest withXAmzInvocationType(InvokeXAmzInvocationTypeEnum xAmzInvocationType) {
         this.xAmzInvocationType = xAmzInvocationType;
         return this;
@@ -87,6 +97,7 @@ public class InvokeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Log-Type")
     public InvokeXAmzLogTypeEnum xAmzLogType;
+
     public InvokeRequest withXAmzLogType(InvokeXAmzLogTypeEnum xAmzLogType) {
         this.xAmzLogType = xAmzLogType;
         return this;
@@ -94,6 +105,7 @@ public class InvokeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public InvokeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -101,6 +113,7 @@ public class InvokeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public InvokeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -108,9 +121,14 @@ public class InvokeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public InvokeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public InvokeRequest(@JsonProperty("FunctionName") String functionName, @JsonProperty("RequestBody") InvokeRequestBody requestBody) {
+        this.functionName = functionName;
+        this.requestBody = requestBody;
+  }
 }

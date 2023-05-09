@@ -15,9 +15,11 @@ public class DescribeTunnelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tunnel")
     public Tunnel tunnel;
+
     public DescribeTunnelResponse withTunnel(Tunnel tunnel) {
         this.tunnel = tunnel;
         return this;
     }
     
+    public DescribeTunnelResponse(){}
 }

@@ -18,6 +18,7 @@ public class MarketplaceChannelCatalogLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelationReasonCodeLOV")
     public BeezUPCommonLOVLink3 cancelationReasonCodeLOV;
+
     public MarketplaceChannelCatalogLovLinks withCancelationReasonCodeLOV(BeezUPCommonLOVLink3 cancelationReasonCodeLOV) {
         this.cancelationReasonCodeLOV = cancelationReasonCodeLOV;
         return this;
@@ -29,6 +30,7 @@ public class MarketplaceChannelCatalogLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierCodeLOV")
     public BeezUPCommonLOVLink3 carrierCodeLOV;
+
     public MarketplaceChannelCatalogLovLinks withCarrierCodeLOV(BeezUPCommonLOVLink3 carrierCodeLOV) {
         this.carrierCodeLOV = carrierCodeLOV;
         return this;
@@ -40,6 +42,7 @@ public class MarketplaceChannelCatalogLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceStorePropertyGroupLOV")
     public BeezUPCommonLOVLink3 marketplaceStorePropertyGroupLOV;
+
     public MarketplaceChannelCatalogLovLinks withMarketplaceStorePropertyGroupLOV(BeezUPCommonLOVLink3 marketplaceStorePropertyGroupLOV) {
         this.marketplaceStorePropertyGroupLOV = marketplaceStorePropertyGroupLOV;
         return this;
@@ -51,6 +54,7 @@ public class MarketplaceChannelCatalogLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceStorePropertyLOV")
     public BeezUPCommonLOVLink3 marketplaceStorePropertyLOV;
+
     public MarketplaceChannelCatalogLovLinks withMarketplaceStorePropertyLOV(BeezUPCommonLOVLink3 marketplaceStorePropertyLOV) {
         this.marketplaceStorePropertyLOV = marketplaceStorePropertyLOV;
         return this;
@@ -62,6 +66,7 @@ public class MarketplaceChannelCatalogLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refundReasonCodeLOV")
     public BeezUPCommonLOVLink3 refundReasonCodeLOV;
+
     public MarketplaceChannelCatalogLovLinks withRefundReasonCodeLOV(BeezUPCommonLOVLink3 refundReasonCodeLOV) {
         this.refundReasonCodeLOV = refundReasonCodeLOV;
         return this;
@@ -73,9 +78,11 @@ public class MarketplaceChannelCatalogLovLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingMethodLOV")
     public BeezUPCommonLOVLink3 shippingMethodLOV;
+
     public MarketplaceChannelCatalogLovLinks withShippingMethodLOV(BeezUPCommonLOVLink3 shippingMethodLOV) {
         this.shippingMethodLOV = shippingMethodLOV;
         return this;
     }
     
+    public MarketplaceChannelCatalogLovLinks(){}
 }

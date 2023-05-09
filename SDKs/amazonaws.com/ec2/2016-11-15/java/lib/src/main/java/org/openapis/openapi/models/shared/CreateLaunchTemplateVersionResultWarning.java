@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultWarning {
     
     public CreateLaunchTemplateVersionResultWarningErrors[] errors;
+
     public CreateLaunchTemplateVersionResultWarning withErrors(CreateLaunchTemplateVersionResultWarningErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultWarning(){}
 }

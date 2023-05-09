@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataCpuOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CoreCount")
     public Long coreCount;
+
     public AwsEc2LaunchTemplateDataCpuOptionsDetails withCoreCount(Long coreCount) {
         this.coreCount = coreCount;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2LaunchTemplateDataCpuOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThreadsPerCore")
     public Long threadsPerCore;
+
     public AwsEc2LaunchTemplateDataCpuOptionsDetails withThreadsPerCore(Long threadsPerCore) {
         this.threadsPerCore = threadsPerCore;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataCpuOptionsDetails(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindListingRecommendationsResponse {
     
     public String contentType;
+
     public FindListingRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FindListingRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.PagedListingRecommendationCollection pagedListingRecommendationCollection;
+
     public FindListingRecommendationsResponse withPagedListingRecommendationCollection(org.openapis.openapi.models.shared.PagedListingRecommendationCollection pagedListingRecommendationCollection) {
         this.pagedListingRecommendationCollection = pagedListingRecommendationCollection;
         return this;
@@ -26,6 +29,7 @@ public class FindListingRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public FindListingRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FindListingRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindListingRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FindListingRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

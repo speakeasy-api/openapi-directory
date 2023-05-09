@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInstancePortStatesResponse {
@@ -12,6 +13,7 @@ public class GetInstancePortStatesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetInstancePortStatesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetInstancePortStatesResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetInstancePortStatesResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetInstancePortStatesResponse {
     
     
     public String contentType;
+
     public GetInstancePortStatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetInstancePortStatesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInstancePortStatesResult getInstancePortStatesResult;
+
     public GetInstancePortStatesResponse withGetInstancePortStatesResult(org.openapis.openapi.models.shared.GetInstancePortStatesResult getInstancePortStatesResult) {
         this.getInstancePortStatesResult = getInstancePortStatesResult;
         return this;
@@ -49,6 +54,7 @@ public class GetInstancePortStatesResponse {
      */
     
     public Object invalidInputException;
+
     public GetInstancePortStatesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetInstancePortStatesResponse {
      */
     
     public Object notFoundException;
+
     public GetInstancePortStatesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetInstancePortStatesResponse {
      */
     
     public Object operationFailureException;
+
     public GetInstancePortStatesResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetInstancePortStatesResponse {
      */
     
     public Object serviceException;
+
     public GetInstancePortStatesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetInstancePortStatesResponse {
     
     
     public Integer statusCode;
+
     public GetInstancePortStatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetInstancePortStatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInstancePortStatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetInstancePortStatesResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetInstancePortStatesResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetInstancePortStatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

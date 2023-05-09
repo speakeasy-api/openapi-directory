@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportInstanceRequestLaunchSpecification {
     
     public String additionalInfo;
+
     public ImportInstanceRequestLaunchSpecification withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -19,6 +20,7 @@ public class ImportInstanceRequestLaunchSpecification {
     
     
     public ImportInstanceRequestLaunchSpecificationArchitectureEnum architecture;
+
     public ImportInstanceRequestLaunchSpecification withArchitecture(ImportInstanceRequestLaunchSpecificationArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -26,6 +28,7 @@ public class ImportInstanceRequestLaunchSpecification {
     
     
     public String[] groupIds;
+
     public ImportInstanceRequestLaunchSpecification withGroupIds(String[] groupIds) {
         this.groupIds = groupIds;
         return this;
@@ -33,6 +36,7 @@ public class ImportInstanceRequestLaunchSpecification {
     
     
     public String[] groupNames;
+
     public ImportInstanceRequestLaunchSpecification withGroupNames(String[] groupNames) {
         this.groupNames = groupNames;
         return this;
@@ -40,6 +44,7 @@ public class ImportInstanceRequestLaunchSpecification {
     
     
     public ImportInstanceRequestLaunchSpecificationInstanceInitiatedShutdownBehaviorEnum instanceInitiatedShutdownBehavior;
+
     public ImportInstanceRequestLaunchSpecification withInstanceInitiatedShutdownBehavior(ImportInstanceRequestLaunchSpecificationInstanceInitiatedShutdownBehaviorEnum instanceInitiatedShutdownBehavior) {
         this.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
         return this;
@@ -47,6 +52,7 @@ public class ImportInstanceRequestLaunchSpecification {
     
     
     public ImportInstanceRequestLaunchSpecificationInstanceTypeEnum instanceType;
+
     public ImportInstanceRequestLaunchSpecification withInstanceType(ImportInstanceRequestLaunchSpecificationInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -54,6 +60,7 @@ public class ImportInstanceRequestLaunchSpecification {
     
     
     public Boolean monitoring;
+
     public ImportInstanceRequestLaunchSpecification withMonitoring(Boolean monitoring) {
         this.monitoring = monitoring;
         return this;
@@ -61,6 +68,7 @@ public class ImportInstanceRequestLaunchSpecification {
     
     
     public ImportInstanceRequestLaunchSpecificationPlacement placement;
+
     public ImportInstanceRequestLaunchSpecification withPlacement(ImportInstanceRequestLaunchSpecificationPlacement placement) {
         this.placement = placement;
         return this;
@@ -68,6 +76,7 @@ public class ImportInstanceRequestLaunchSpecification {
     
     
     public String privateIpAddress;
+
     public ImportInstanceRequestLaunchSpecification withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -75,6 +84,7 @@ public class ImportInstanceRequestLaunchSpecification {
     
     
     public String subnetId;
+
     public ImportInstanceRequestLaunchSpecification withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -82,9 +92,11 @@ public class ImportInstanceRequestLaunchSpecification {
     
     
     public ImportInstanceRequestLaunchSpecificationUserData userData;
+
     public ImportInstanceRequestLaunchSpecification withUserData(ImportInstanceRequestLaunchSpecificationUserData userData) {
         this.userData = userData;
         return this;
     }
     
+    public ImportInstanceRequestLaunchSpecification(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListHyperParameterTuningJobsResponse {
     
     public String contentType;
+
     public ListHyperParameterTuningJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListHyperParameterTuningJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListHyperParameterTuningJobsResponse listHyperParameterTuningJobsResponse;
+
     public ListHyperParameterTuningJobsResponse withListHyperParameterTuningJobsResponse(org.openapis.openapi.models.shared.ListHyperParameterTuningJobsResponse listHyperParameterTuningJobsResponse) {
         this.listHyperParameterTuningJobsResponse = listHyperParameterTuningJobsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListHyperParameterTuningJobsResponse {
     
     
     public Integer statusCode;
+
     public ListHyperParameterTuningJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ListHyperParameterTuningJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListHyperParameterTuningJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListHyperParameterTuningJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

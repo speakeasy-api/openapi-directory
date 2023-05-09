@@ -8,7 +8,7 @@ import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
 /**
- * Las APIs regulatorias basadas en PSD2 proporcionan acceso a cierta informaci\u00f3n financiera como saldos de cuentas bancarias y transacciones. Sin embargo, hay otras fuentes de informaci\u00f3n patrimonial que no son accesibles por estas APIs. La API de Wealth Reader ampl\u00eda la informaci\u00f3n ofrecida por las APIs regulatorias proporcionando acceso en tiempo real a las fuentes patrimoniales adicionales en cualquier entidad del mundo. Existen otros dos documentos relacionados que te ayudar\u00e1n a integrar la API de Wealth Reader. Uno es la gu\u00eda de integraci\u00f3n del widget Javascript: https://docs-es.wealthreader.com/, y el  otro una colecci\u00f3n Postman basada en esta documentaci\u00f3n.
+ * Las APIs regulatorias basadas en PSD2 proporcionan acceso a cierta información financiera como saldos de cuentas bancarias y transacciones. Sin embargo, hay otras fuentes de información patrimonial que no son accesibles por estas APIs. La API de Wealth Reader amplía la información ofrecida por las APIs regulatorias proporcionando acceso en tiempo real a las fuentes patrimoniales adicionales en cualquier entidad del mundo. Existen otros dos documentos relacionados que te ayudarán a integrar la API de Wealth Reader. Uno es la guía de integración del widget Javascript: https://docs-es.wealthreader.com/, y el  otro una colección Postman basada en esta documentación.
  * https://docs-es.wealthreader.com/
  */
 public class SDK {
@@ -24,7 +24,7 @@ public class SDK {
 	};
   	
     /**
-     * M\u00e9todos utilizados para recuperar informaci\u00f3n de las entidades
+     * Métodos utilizados para recuperar información de las entidades
      */
     public EntityData entityData;	
 
@@ -115,6 +115,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.entityData = new EntityData(

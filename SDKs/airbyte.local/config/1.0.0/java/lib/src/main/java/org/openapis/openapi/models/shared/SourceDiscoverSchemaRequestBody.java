@@ -12,6 +12,7 @@ public class SourceDiscoverSchemaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionId")
     public String connectionId;
+
     public SourceDiscoverSchemaRequestBody withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -20,6 +21,7 @@ public class SourceDiscoverSchemaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disable_cache")
     public Boolean disableCache;
+
     public SourceDiscoverSchemaRequestBody withDisableCache(Boolean disableCache) {
         this.disableCache = disableCache;
         return this;
@@ -28,6 +30,7 @@ public class SourceDiscoverSchemaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifySchemaChange")
     public Boolean notifySchemaChange;
+
     public SourceDiscoverSchemaRequestBody withNotifySchemaChange(Boolean notifySchemaChange) {
         this.notifySchemaChange = notifySchemaChange;
         return this;
@@ -35,9 +38,13 @@ public class SourceDiscoverSchemaRequestBody {
     
     @JsonProperty("sourceId")
     public String sourceId;
+
     public SourceDiscoverSchemaRequestBody withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
     }
     
+    public SourceDiscoverSchemaRequestBody(@JsonProperty("sourceId") String sourceId) {
+        this.sourceId = sourceId;
+  }
 }

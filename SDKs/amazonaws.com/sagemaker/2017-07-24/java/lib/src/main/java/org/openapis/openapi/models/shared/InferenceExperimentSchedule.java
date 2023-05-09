@@ -22,6 +22,7 @@ public class InferenceExperimentSchedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public InferenceExperimentSchedule withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -32,9 +33,11 @@ public class InferenceExperimentSchedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public InferenceExperimentSchedule withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public InferenceExperimentSchedule(){}
 }

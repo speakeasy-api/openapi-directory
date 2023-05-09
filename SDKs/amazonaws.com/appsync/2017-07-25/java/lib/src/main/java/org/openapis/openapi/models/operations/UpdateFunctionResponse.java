@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFunctionResponse {
@@ -12,6 +13,7 @@ public class UpdateFunctionResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateFunctionResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFunctionResponse {
     
     
     public String contentType;
+
     public UpdateFunctionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFunctionResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateFunctionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFunctionResponse {
      */
     
     public Object notFoundException;
+
     public UpdateFunctionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateFunctionResponse {
     
     
     public Integer statusCode;
+
     public UpdateFunctionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateFunctionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFunctionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFunctionResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateFunctionResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateFunctionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFunctionResponse updateFunctionResponse;
+
     public UpdateFunctionResponse withUpdateFunctionResponse(org.openapis.openapi.models.shared.UpdateFunctionResponse updateFunctionResponse) {
         this.updateFunctionResponse = updateFunctionResponse;
         return this;
     }
     
+    public UpdateFunctionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

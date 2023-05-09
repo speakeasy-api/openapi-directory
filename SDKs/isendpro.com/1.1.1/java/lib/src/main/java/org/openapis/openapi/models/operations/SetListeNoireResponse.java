@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetListeNoireResponse {
     
     public String contentType;
+
     public SetListeNoireResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SetListeNoireResponse {
      */
     
     public org.openapis.openapi.models.shared.Erreur erreur;
+
     public SetListeNoireResponse withErreur(org.openapis.openapi.models.shared.Erreur erreur) {
         this.erreur = erreur;
         return this;
@@ -29,6 +32,7 @@ public class SetListeNoireResponse {
      */
     
     public org.openapis.openapi.models.shared.LISTENOIREReponse listenoireReponse;
+
     public SetListeNoireResponse withLISTENOIREReponse(org.openapis.openapi.models.shared.LISTENOIREReponse listenoireReponse) {
         this.listenoireReponse = listenoireReponse;
         return this;
@@ -36,6 +40,7 @@ public class SetListeNoireResponse {
     
     
     public Integer statusCode;
+
     public SetListeNoireResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class SetListeNoireResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetListeNoireResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SetListeNoireResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

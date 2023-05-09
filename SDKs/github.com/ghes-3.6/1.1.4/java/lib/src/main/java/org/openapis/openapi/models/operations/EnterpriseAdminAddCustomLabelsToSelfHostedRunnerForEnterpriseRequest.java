@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequestBody requestBody;
+
     public EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequest withRequestBody(EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -29,9 +32,15 @@ public class EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
     public Long runnerId;
+
     public EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequest withRunnerId(Long runnerId) {
         this.runnerId = runnerId;
         return this;
     }
     
+    public EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequest(@JsonProperty("RequestBody") EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequestBody requestBody, @JsonProperty("enterprise") String enterprise, @JsonProperty("runner_id") Long runnerId) {
+        this.requestBody = requestBody;
+        this.enterprise = enterprise;
+        this.runnerId = runnerId;
+  }
 }

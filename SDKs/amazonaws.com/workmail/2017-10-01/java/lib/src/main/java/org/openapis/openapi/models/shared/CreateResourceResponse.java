@@ -15,9 +15,11 @@ public class CreateResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public CreateResourceResponse withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public CreateResourceResponse(){}
 }

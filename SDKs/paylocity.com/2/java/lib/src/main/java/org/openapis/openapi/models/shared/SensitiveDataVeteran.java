@@ -18,6 +18,7 @@ public class SensitiveDataVeteran {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isVeteran")
     public String isVeteran;
+
     public SensitiveDataVeteran withIsVeteran(String isVeteran) {
         this.isVeteran = isVeteran;
         return this;
@@ -29,9 +30,11 @@ public class SensitiveDataVeteran {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("veteran")
     public String veteran;
+
     public SensitiveDataVeteran withVeteran(String veteran) {
         this.veteran = veteran;
         return this;
     }
     
+    public SensitiveDataVeteran(){}
 }

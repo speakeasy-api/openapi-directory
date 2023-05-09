@@ -20,6 +20,7 @@ public class ReplicationTaskIndividualAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndividualAssessmentName")
     public String individualAssessmentName;
+
     public ReplicationTaskIndividualAssessment withIndividualAssessmentName(String individualAssessmentName) {
         this.individualAssessmentName = individualAssessmentName;
         return this;
@@ -28,6 +29,7 @@ public class ReplicationTaskIndividualAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTaskAssessmentRunArn")
     public String replicationTaskAssessmentRunArn;
+
     public ReplicationTaskIndividualAssessment withReplicationTaskAssessmentRunArn(String replicationTaskAssessmentRunArn) {
         this.replicationTaskAssessmentRunArn = replicationTaskAssessmentRunArn;
         return this;
@@ -36,6 +38,7 @@ public class ReplicationTaskIndividualAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTaskIndividualAssessmentArn")
     public String replicationTaskIndividualAssessmentArn;
+
     public ReplicationTaskIndividualAssessment withReplicationTaskIndividualAssessmentArn(String replicationTaskIndividualAssessmentArn) {
         this.replicationTaskIndividualAssessmentArn = replicationTaskIndividualAssessmentArn;
         return this;
@@ -46,6 +49,7 @@ public class ReplicationTaskIndividualAssessment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReplicationTaskIndividualAssessmentStartDate")
     public OffsetDateTime replicationTaskIndividualAssessmentStartDate;
+
     public ReplicationTaskIndividualAssessment withReplicationTaskIndividualAssessmentStartDate(OffsetDateTime replicationTaskIndividualAssessmentStartDate) {
         this.replicationTaskIndividualAssessmentStartDate = replicationTaskIndividualAssessmentStartDate;
         return this;
@@ -54,9 +58,11 @@ public class ReplicationTaskIndividualAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public ReplicationTaskIndividualAssessment withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ReplicationTaskIndividualAssessment(){}
 }

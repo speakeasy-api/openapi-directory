@@ -18,6 +18,7 @@ public class NodeNetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createPodRange")
     public Boolean createPodRange;
+
     public NodeNetworkConfig withCreatePodRange(Boolean createPodRange) {
         this.createPodRange = createPodRange;
         return this;
@@ -29,6 +30,7 @@ public class NodeNetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablePrivateNodes")
     public Boolean enablePrivateNodes;
+
     public NodeNetworkConfig withEnablePrivateNodes(Boolean enablePrivateNodes) {
         this.enablePrivateNodes = enablePrivateNodes;
         return this;
@@ -40,8 +42,21 @@ public class NodeNetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkPerformanceConfig")
     public NetworkPerformanceConfig networkPerformanceConfig;
+
     public NodeNetworkConfig withNetworkPerformanceConfig(NetworkPerformanceConfig networkPerformanceConfig) {
         this.networkPerformanceConfig = networkPerformanceConfig;
+        return this;
+    }
+    
+    /**
+     * [PRIVATE FIELD] Config for pod CIDR size overprovisioning.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("podCidrOverprovisionConfig")
+    public PodCIDROverprovisionConfig podCidrOverprovisionConfig;
+
+    public NodeNetworkConfig withPodCidrOverprovisionConfig(PodCIDROverprovisionConfig podCidrOverprovisionConfig) {
+        this.podCidrOverprovisionConfig = podCidrOverprovisionConfig;
         return this;
     }
     
@@ -51,6 +66,7 @@ public class NodeNetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podIpv4CidrBlock")
     public String podIpv4CidrBlock;
+
     public NodeNetworkConfig withPodIpv4CidrBlock(String podIpv4CidrBlock) {
         this.podIpv4CidrBlock = podIpv4CidrBlock;
         return this;
@@ -62,9 +78,11 @@ public class NodeNetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podRange")
     public String podRange;
+
     public NodeNetworkConfig withPodRange(String podRange) {
         this.podRange = podRange;
         return this;
     }
     
+    public NodeNetworkConfig(){}
 }

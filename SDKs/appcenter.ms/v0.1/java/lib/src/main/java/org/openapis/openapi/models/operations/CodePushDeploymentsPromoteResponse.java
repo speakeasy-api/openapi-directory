@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodePushDeploymentsPromoteResponse {
     
     public String contentType;
+
     public CodePushDeploymentsPromoteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodePushDeploymentsPromoteResponse {
     
     
     public Integer statusCode;
+
     public CodePushDeploymentsPromoteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CodePushDeploymentsPromoteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodePushDeploymentsPromoteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CodePushDeploymentsPromoteResponse {
      */
     
     public CodePushDeploymentsPromote200ApplicationJSON codePushDeploymentsPromote200ApplicationJSONObject;
+
     public CodePushDeploymentsPromoteResponse withCodePushDeploymentsPromote200ApplicationJSONObject(CodePushDeploymentsPromote200ApplicationJSON codePushDeploymentsPromote200ApplicationJSONObject) {
         this.codePushDeploymentsPromote200ApplicationJSONObject = codePushDeploymentsPromote200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class CodePushDeploymentsPromoteResponse {
      */
     
     public CodePushDeploymentsPromoteDefaultApplicationJSON codePushDeploymentsPromoteDefaultApplicationJSONObject;
+
     public CodePushDeploymentsPromoteResponse withCodePushDeploymentsPromoteDefaultApplicationJSONObject(CodePushDeploymentsPromoteDefaultApplicationJSON codePushDeploymentsPromoteDefaultApplicationJSONObject) {
         this.codePushDeploymentsPromoteDefaultApplicationJSONObject = codePushDeploymentsPromoteDefaultApplicationJSONObject;
         return this;
     }
     
+    public CodePushDeploymentsPromoteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

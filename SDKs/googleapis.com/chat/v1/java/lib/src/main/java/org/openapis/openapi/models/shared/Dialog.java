@@ -18,9 +18,11 @@ public class Dialog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public GoogleAppsCardV1Card body;
+
     public Dialog withBody(GoogleAppsCardV1Card body) {
         this.body = body;
         return this;
     }
     
+    public Dialog(){}
 }

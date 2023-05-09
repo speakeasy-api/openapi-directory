@@ -18,6 +18,7 @@ public class MetricsValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public MetricsValue withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class MetricsValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public MetricsValue withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -40,9 +42,11 @@ public class MetricsValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public MetricsValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public MetricsValue(){}
 }

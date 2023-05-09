@@ -18,6 +18,7 @@ public class GuestAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public GuestAttributes withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class GuestAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryPath")
     public String queryPath;
+
     public GuestAttributes withQueryPath(String queryPath) {
         this.queryPath = queryPath;
         return this;
@@ -40,6 +42,7 @@ public class GuestAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryValue")
     public GuestAttributesValue queryValue;
+
     public GuestAttributes withQueryValue(GuestAttributesValue queryValue) {
         this.queryValue = queryValue;
         return this;
@@ -51,6 +54,7 @@ public class GuestAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public GuestAttributes withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -62,6 +66,7 @@ public class GuestAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variableKey")
     public String variableKey;
+
     public GuestAttributes withVariableKey(String variableKey) {
         this.variableKey = variableKey;
         return this;
@@ -73,9 +78,11 @@ public class GuestAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variableValue")
     public String variableValue;
+
     public GuestAttributes withVariableValue(String variableValue) {
         this.variableValue = variableValue;
         return this;
     }
     
+    public GuestAttributes(){}
 }

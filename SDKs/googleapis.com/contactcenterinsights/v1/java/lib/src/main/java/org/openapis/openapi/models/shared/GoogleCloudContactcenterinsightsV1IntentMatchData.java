@@ -18,9 +18,11 @@ public class GoogleCloudContactcenterinsightsV1IntentMatchData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentUniqueId")
     public String intentUniqueId;
+
     public GoogleCloudContactcenterinsightsV1IntentMatchData withIntentUniqueId(String intentUniqueId) {
         this.intentUniqueId = intentUniqueId;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1IntentMatchData(){}
 }

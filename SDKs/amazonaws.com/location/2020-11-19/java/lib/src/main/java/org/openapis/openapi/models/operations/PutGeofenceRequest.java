@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutGeofenceRequest {
@@ -12,6 +13,7 @@ public class PutGeofenceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CollectionName")
     public String collectionName;
+
     public PutGeofenceRequest withCollectionName(String collectionName) {
         this.collectionName = collectionName;
         return this;
@@ -22,6 +24,7 @@ public class PutGeofenceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=GeofenceId")
     public String geofenceId;
+
     public PutGeofenceRequest withGeofenceId(String geofenceId) {
         this.geofenceId = geofenceId;
         return this;
@@ -29,6 +32,7 @@ public class PutGeofenceRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PutGeofenceRequestBody requestBody;
+
     public PutGeofenceRequest withRequestBody(PutGeofenceRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -36,6 +40,7 @@ public class PutGeofenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public PutGeofenceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class PutGeofenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public PutGeofenceRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class PutGeofenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public PutGeofenceRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class PutGeofenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public PutGeofenceRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class PutGeofenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public PutGeofenceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class PutGeofenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public PutGeofenceRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,9 +88,15 @@ public class PutGeofenceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public PutGeofenceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public PutGeofenceRequest(@JsonProperty("CollectionName") String collectionName, @JsonProperty("GeofenceId") String geofenceId, @JsonProperty("RequestBody") PutGeofenceRequestBody requestBody) {
+        this.collectionName = collectionName;
+        this.geofenceId = geofenceId;
+        this.requestBody = requestBody;
+  }
 }

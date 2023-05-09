@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CreatePublicIpv4PoolRequest {
     
     public Boolean dryRun;
+
     public CreatePublicIpv4PoolRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,11 @@ public class CreatePublicIpv4PoolRequest {
     
     
     public CreatePublicIpv4PoolRequestTagSpecifications[] tagSpecifications;
+
     public CreatePublicIpv4PoolRequest withTagSpecifications(CreatePublicIpv4PoolRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreatePublicIpv4PoolRequest(){}
 }

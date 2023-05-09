@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetABatchOfConsumerTransactionClassificationResultsRequest;
 import org.openapis.openapi.models.operations.GetABatchOfConsumerTransactionClassificationResultsResponse;
 
@@ -26,18 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetABatchOfConsumerTransactionClassificationResultsRequest req = new GetABatchOfConsumerTransactionClassificationResultsRequest() {{
-                id = "247ee045-3d04-4b3c-872b-a9160b810f33";
-            }}            
+            GetABatchOfConsumerTransactionClassificationResultsRequest req = new GetABatchOfConsumerTransactionClassificationResultsRequest("247ee045-3d04-4b3c-872b-a9160b810f33");            
 
             GetABatchOfConsumerTransactionClassificationResultsResponse res = sdk.batch.getABatchOfConsumerTransactionClassificationResults(req);
 
-            if (res.getABatchOfConsumerTransactionClassificationResults200ApplicationJSONObject.isPresent()) {
+            if (res.getABatchOfConsumerTransactionClassificationResults200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -45,26 +44,26 @@ public class Application {
 ## Available Resources and Operations
 
 
-### batch
+### [batch](docs/batch/README.md)
 
-* `getABatchOfConsumerTransactionClassificationResults` - Get a batch of consumer transaction classification results.
+* [getABatchOfConsumerTransactionClassificationResults](docs/batch/README.md#getabatchofconsumertransactionclassificationresults) - Get a batch of consumer transaction classification results.
 
-### batch1
+### [batch1](docs/batch1/README.md)
 
-* `getABatchOfBusinessTransactionClassificationResults` - Get a batch of business transaction classification results.
+* [getABatchOfBusinessTransactionClassificationResults](docs/batch1/README.md#getabatchofbusinesstransactionclassificationresults) - Get a batch of business transaction classification results.
 
-### business
+### [business](docs/business/README.md)
 
-* `getABatchOfBusinessTransactionClassificationResults` - Get a batch of business transaction classification results.
+* [getABatchOfBusinessTransactionClassificationResults](docs/business/README.md#getabatchofbusinesstransactionclassificationresults) - Get a batch of business transaction classification results.
 
-### classifier
+### [classifier](docs/classifier/README.md)
 
-* `getABatchOfBusinessTransactionClassificationResults` - Get a batch of business transaction classification results.
-* `getABatchOfConsumerTransactionClassificationResults` - Get a batch of consumer transaction classification results.
+* [getABatchOfBusinessTransactionClassificationResults](docs/classifier/README.md#getabatchofbusinesstransactionclassificationresults) - Get a batch of business transaction classification results.
+* [getABatchOfConsumerTransactionClassificationResults](docs/classifier/README.md#getabatchofconsumertransactionclassificationresults) - Get a batch of consumer transaction classification results.
 
-### consumer
+### [consumer](docs/consumer/README.md)
 
-* `getABatchOfConsumerTransactionClassificationResults` - Get a batch of consumer transaction classification results.
+* [getABatchOfConsumerTransactionClassificationResults](docs/consumer/README.md#getabatchofconsumertransactionclassificationresults) - Get a batch of consumer transaction classification results.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRecommenderConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateRecommenderConfigurationResponse {
      */
     
     public Object badRequestException;
+
     public UpdateRecommenderConfigurationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateRecommenderConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateRecommenderConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRecommenderConfigurationResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateRecommenderConfigurationResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRecommenderConfigurationResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateRecommenderConfigurationResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateRecommenderConfigurationResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateRecommenderConfigurationResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateRecommenderConfigurationResponse {
      */
     
     public Object notFoundException;
+
     public UpdateRecommenderConfigurationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateRecommenderConfigurationResponse {
      */
     
     public Object payloadTooLargeException;
+
     public UpdateRecommenderConfigurationResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateRecommenderConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateRecommenderConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateRecommenderConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRecommenderConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateRecommenderConfigurationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateRecommenderConfigurationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateRecommenderConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRecommenderConfigurationResponse updateRecommenderConfigurationResponse;
+
     public UpdateRecommenderConfigurationResponse withUpdateRecommenderConfigurationResponse(org.openapis.openapi.models.shared.UpdateRecommenderConfigurationResponse updateRecommenderConfigurationResponse) {
         this.updateRecommenderConfigurationResponse = updateRecommenderConfigurationResponse;
         return this;
     }
     
+    public UpdateRecommenderConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

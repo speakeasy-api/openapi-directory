@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRightsResponse {
@@ -12,6 +13,7 @@ public class GetRightsResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetRightsResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetRightsResponse {
     
     
     public String contentType;
+
     public GetRightsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetRightsResponse {
     
     
     public Integer statusCode;
+
     public GetRightsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetRightsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRightsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetRightsResponse {
      */
     
     public org.openapis.openapi.models.shared.FunctionalityRightInfo[] functionalityRightInfos;
+
     public GetRightsResponse withFunctionalityRightInfos(org.openapis.openapi.models.shared.FunctionalityRightInfo[] functionalityRightInfos) {
         this.functionalityRightInfos = functionalityRightInfos;
         return this;
     }
     
+    public GetRightsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

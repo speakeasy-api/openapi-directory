@@ -14,6 +14,7 @@ public class DeleteResourcePolicyRequestBody {
      */
     @JsonProperty("PolicyName")
     public String policyName;
+
     public DeleteResourcePolicyRequestBody withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -25,9 +26,13 @@ public class DeleteResourcePolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyRevisionId")
     public String policyRevisionId;
+
     public DeleteResourcePolicyRequestBody withPolicyRevisionId(String policyRevisionId) {
         this.policyRevisionId = policyRevisionId;
         return this;
     }
     
+    public DeleteResourcePolicyRequestBody(@JsonProperty("PolicyName") String policyName) {
+        this.policyName = policyName;
+  }
 }

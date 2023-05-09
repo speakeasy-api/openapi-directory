@@ -12,6 +12,7 @@ public class DeletePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteAllPolicyResources")
     public Boolean deleteAllPolicyResources;
+
     public DeletePolicyRequest withDeleteAllPolicyResources(Boolean deleteAllPolicyResources) {
         this.deleteAllPolicyResources = deleteAllPolicyResources;
         return this;
@@ -19,9 +20,13 @@ public class DeletePolicyRequest {
     
     @JsonProperty("PolicyId")
     public String policyId;
+
     public DeletePolicyRequest withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
     }
     
+    public DeletePolicyRequest(@JsonProperty("PolicyId") String policyId) {
+        this.policyId = policyId;
+  }
 }

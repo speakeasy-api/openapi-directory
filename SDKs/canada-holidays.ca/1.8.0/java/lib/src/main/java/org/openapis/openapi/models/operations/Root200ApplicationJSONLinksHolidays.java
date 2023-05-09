@@ -15,9 +15,11 @@ public class Root200ApplicationJSONLinksHolidays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public Root200ApplicationJSONLinksHolidays withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public Root200ApplicationJSONLinksHolidays(){}
 }

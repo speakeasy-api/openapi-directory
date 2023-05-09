@@ -15,6 +15,7 @@ public class BeezUPCommonAdditionalProductFiltersValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorName")
     public String operatorName;
+
     public BeezUPCommonAdditionalProductFiltersValue withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
@@ -28,9 +29,11 @@ public class BeezUPCommonAdditionalProductFiltersValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public BeezUPCommonAdditionalProductFiltersValue withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public BeezUPCommonAdditionalProductFiltersValue(){}
 }

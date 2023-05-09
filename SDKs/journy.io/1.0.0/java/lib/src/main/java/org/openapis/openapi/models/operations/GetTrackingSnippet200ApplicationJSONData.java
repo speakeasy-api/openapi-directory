@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetTrackingSnippet200ApplicationJSONData {
     @JsonProperty("domain")
     public String domain;
+
     public GetTrackingSnippet200ApplicationJSONData withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -19,9 +20,14 @@ public class GetTrackingSnippet200ApplicationJSONData {
     
     @JsonProperty("snippet")
     public String snippet;
+
     public GetTrackingSnippet200ApplicationJSONData withSnippet(String snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public GetTrackingSnippet200ApplicationJSONData(@JsonProperty("domain") String domain, @JsonProperty("snippet") String snippet) {
+        this.domain = domain;
+        this.snippet = snippet;
+  }
 }

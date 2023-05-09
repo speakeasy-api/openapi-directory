@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleChromeManagementV1PeripheralsReport - Peripherals report.
+ * GoogleChromeManagementV1PeripheralsReport - Peripherals report. * Granular permission needed: TELEMETRY_API_PERIPHERALS_REPORT
  */
 public class GoogleChromeManagementV1PeripheralsReport {
     /**
@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1PeripheralsReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportTime")
     public String reportTime;
+
     public GoogleChromeManagementV1PeripheralsReport withReportTime(String reportTime) {
         this.reportTime = reportTime;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromeManagementV1PeripheralsReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usbPeripheralReport")
     public GoogleChromeManagementV1UsbPeripheralReport[] usbPeripheralReport;
+
     public GoogleChromeManagementV1PeripheralsReport withUsbPeripheralReport(GoogleChromeManagementV1UsbPeripheralReport[] usbPeripheralReport) {
         this.usbPeripheralReport = usbPeripheralReport;
         return this;
     }
     
+    public GoogleChromeManagementV1PeripheralsReport(){}
 }

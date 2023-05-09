@@ -59,11 +59,9 @@ public class VpnTunnels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeVpnTunnelsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeVpnTunnelsAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeVpnTunnelsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeVpnTunnelsAggregatedListResponse(contentType, httpRes.statusCode()) {{
             vpnTunnelAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class VpnTunnels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeVpnTunnelsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeVpnTunnelsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeVpnTunnelsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeVpnTunnelsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class VpnTunnels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeVpnTunnelsGetResponse res = new org.openapis.openapi.models.operations.ComputeVpnTunnelsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeVpnTunnelsGetResponse res = new org.openapis.openapi.models.operations.ComputeVpnTunnelsGetResponse(contentType, httpRes.statusCode()) {{
             vpnTunnel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class VpnTunnels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeVpnTunnelsInsertResponse res = new org.openapis.openapi.models.operations.ComputeVpnTunnelsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeVpnTunnelsInsertResponse res = new org.openapis.openapi.models.operations.ComputeVpnTunnelsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class VpnTunnels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeVpnTunnelsListResponse res = new org.openapis.openapi.models.operations.ComputeVpnTunnelsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeVpnTunnelsListResponse res = new org.openapis.openapi.models.operations.ComputeVpnTunnelsListResponse(contentType, httpRes.statusCode()) {{
             vpnTunnelList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class VpnTunnels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeVpnTunnelsSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeVpnTunnelsSetLabelsResponse() {{
+        org.openapis.openapi.models.operations.ComputeVpnTunnelsSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeVpnTunnelsSetLabelsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class VpnTunnels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeVpnTunnelsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeVpnTunnelsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeVpnTunnelsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeVpnTunnelsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

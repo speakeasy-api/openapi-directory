@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationTags {
     
     public String key;
+
     public AssociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class AssociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociatio
     
     
     public String value;
+
     public AssociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AssociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationTags(){}
 }

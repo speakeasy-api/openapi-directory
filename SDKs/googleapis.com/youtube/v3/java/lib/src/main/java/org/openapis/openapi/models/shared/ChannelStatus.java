@@ -18,6 +18,7 @@ public class ChannelStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isLinked")
     public Boolean isLinked;
+
     public ChannelStatus withIsLinked(Boolean isLinked) {
         this.isLinked = isLinked;
         return this;
@@ -29,6 +30,7 @@ public class ChannelStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longUploadsStatus")
     public ChannelStatusLongUploadsStatusEnum longUploadsStatus;
+
     public ChannelStatus withLongUploadsStatus(ChannelStatusLongUploadsStatusEnum longUploadsStatus) {
         this.longUploadsStatus = longUploadsStatus;
         return this;
@@ -37,6 +39,7 @@ public class ChannelStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("madeForKids")
     public Boolean madeForKids;
+
     public ChannelStatus withMadeForKids(Boolean madeForKids) {
         this.madeForKids = madeForKids;
         return this;
@@ -48,6 +51,7 @@ public class ChannelStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacyStatus")
     public ChannelStatusPrivacyStatusEnum privacyStatus;
+
     public ChannelStatus withPrivacyStatus(ChannelStatusPrivacyStatusEnum privacyStatus) {
         this.privacyStatus = privacyStatus;
         return this;
@@ -56,9 +60,11 @@ public class ChannelStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfDeclaredMadeForKids")
     public Boolean selfDeclaredMadeForKids;
+
     public ChannelStatus withSelfDeclaredMadeForKids(Boolean selfDeclaredMadeForKids) {
         this.selfDeclaredMadeForKids = selfDeclaredMadeForKids;
         return this;
     }
     
+    public ChannelStatus(){}
 }

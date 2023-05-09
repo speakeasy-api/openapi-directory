@@ -18,6 +18,7 @@ public class SpeechAdaptationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adaptationTimeout")
     public Boolean adaptationTimeout;
+
     public SpeechAdaptationInfo withAdaptationTimeout(Boolean adaptationTimeout) {
         this.adaptationTimeout = adaptationTimeout;
         return this;
@@ -29,9 +30,11 @@ public class SpeechAdaptationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutMessage")
     public String timeoutMessage;
+
     public SpeechAdaptationInfo withTimeoutMessage(String timeoutMessage) {
         this.timeoutMessage = timeoutMessage;
         return this;
     }
     
+    public SpeechAdaptationInfo(){}
 }

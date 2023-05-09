@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest {
@@ -12,6 +13,7 @@ public class OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetReques
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=airportCode")
     public String airportCode;
+
     public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withAirportCode(String airportCode) {
         this.airportCode = airportCode;
         return this;
@@ -32,6 +35,7 @@ public class OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fromDateTime")
     public String fromDateTime;
+
     public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withFromDateTime(String fromDateTime) {
         this.fromDateTime = fromDateTime;
         return this;
@@ -42,6 +46,7 @@ public class OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -52,9 +57,15 @@ public class OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest(@JsonProperty("Accept") String accept, @JsonProperty("airportCode") String airportCode, @JsonProperty("fromDateTime") String fromDateTime) {
+        this.accept = accept;
+        this.airportCode = airportCode;
+        this.fromDateTime = fromDateTime;
+  }
 }

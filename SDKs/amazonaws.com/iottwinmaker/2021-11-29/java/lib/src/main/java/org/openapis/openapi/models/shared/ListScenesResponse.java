@@ -15,6 +15,7 @@ public class ListScenesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListScenesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListScenesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sceneSummaries")
     public SceneSummary[] sceneSummaries;
+
     public ListScenesResponse withSceneSummaries(SceneSummary[] sceneSummaries) {
         this.sceneSummaries = sceneSummaries;
         return this;
     }
     
+    public ListScenesResponse(){}
 }

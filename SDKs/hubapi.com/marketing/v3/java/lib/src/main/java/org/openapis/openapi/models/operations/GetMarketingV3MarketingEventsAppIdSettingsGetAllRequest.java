@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMarketingV3MarketingEventsAppIdSettingsGetAllRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public GetMarketingV3MarketingEventsAppIdSettingsGetAllRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
     }
     
+    public GetMarketingV3MarketingEventsAppIdSettingsGetAllRequest(@JsonProperty("appId") Integer appId) {
+        this.appId = appId;
+  }
 }

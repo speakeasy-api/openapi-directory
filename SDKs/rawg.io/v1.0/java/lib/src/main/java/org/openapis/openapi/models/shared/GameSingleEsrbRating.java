@@ -12,6 +12,7 @@ public class GameSingleEsrbRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GameSingleEsrbRating withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class GameSingleEsrbRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public GameSingleEsrbRatingNameEnum name;
+
     public GameSingleEsrbRating withName(GameSingleEsrbRatingNameEnum name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class GameSingleEsrbRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public GameSingleEsrbRatingSlugEnum slug;
+
     public GameSingleEsrbRating withSlug(GameSingleEsrbRatingSlugEnum slug) {
         this.slug = slug;
         return this;
     }
     
+    public GameSingleEsrbRating(){}
 }

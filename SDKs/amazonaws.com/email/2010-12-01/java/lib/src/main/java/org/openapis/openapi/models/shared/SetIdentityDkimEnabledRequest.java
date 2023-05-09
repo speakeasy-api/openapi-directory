@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SetIdentityDkimEnabledRequest - Represents a request to enable or disable Amazon SES Easy DKIM signing for an identity. For more information about setting up Easy DKIM, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SetIdentityDkimEnabledRequest {
     
     public Boolean dkimEnabled;
+
     public SetIdentityDkimEnabledRequest withDkimEnabled(Boolean dkimEnabled) {
         this.dkimEnabled = dkimEnabled;
         return this;
@@ -19,9 +20,14 @@ public class SetIdentityDkimEnabledRequest {
     
     
     public String identity;
+
     public SetIdentityDkimEnabledRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
     }
     
+    public SetIdentityDkimEnabledRequest(@JsonProperty("DkimEnabled") Boolean dkimEnabled, @JsonProperty("Identity") String identity) {
+        this.dkimEnabled = dkimEnabled;
+        this.identity = identity;
+  }
 }

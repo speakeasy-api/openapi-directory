@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPostReviewRequest {
@@ -12,6 +13,7 @@ public class PostPostReviewRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostPostReviewRequestBody requestBody;
+
     public PostPostReviewRequest withRequestBody(PostPostReviewRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class PostPostReviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rating")
     public PostPostReviewRatingEnum rating;
+
     public PostPostReviewRequest withRating(PostPostReviewRatingEnum rating) {
         this.rating = rating;
         return this;
@@ -32,6 +35,7 @@ public class PostPostReviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_email")
     public String userEmail;
+
     public PostPostReviewRequest withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
@@ -42,9 +46,15 @@ public class PostPostReviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name")
     public String userName;
+
     public PostPostReviewRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public PostPostReviewRequest(@JsonProperty("RequestBody") PostPostReviewRequestBody requestBody, @JsonProperty("rating") PostPostReviewRatingEnum rating, @JsonProperty("user_email") String userEmail) {
+        this.requestBody = requestBody;
+        this.rating = rating;
+        this.userEmail = userEmail;
+  }
 }

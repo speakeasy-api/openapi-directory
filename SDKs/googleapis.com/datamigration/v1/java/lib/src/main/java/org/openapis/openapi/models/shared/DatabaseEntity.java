@@ -18,6 +18,7 @@ public class DatabaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseFunction")
     public FunctionEntity databaseFunction;
+
     public DatabaseEntity withDatabaseFunction(FunctionEntity databaseFunction) {
         this.databaseFunction = databaseFunction;
         return this;
@@ -29,6 +30,7 @@ public class DatabaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databasePackage")
     public PackageEntity databasePackage;
+
     public DatabaseEntity withDatabasePackage(PackageEntity databasePackage) {
         this.databasePackage = databasePackage;
         return this;
@@ -40,6 +42,7 @@ public class DatabaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityType")
     public DatabaseEntityEntityTypeEnum entityType;
+
     public DatabaseEntity withEntityType(DatabaseEntityEntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -51,6 +54,7 @@ public class DatabaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mappings")
     public EntityMapping[] mappings;
+
     public DatabaseEntity withMappings(EntityMapping[] mappings) {
         this.mappings = mappings;
         return this;
@@ -62,6 +66,7 @@ public class DatabaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentEntity")
     public String parentEntity;
+
     public DatabaseEntity withParentEntity(String parentEntity) {
         this.parentEntity = parentEntity;
         return this;
@@ -73,6 +78,7 @@ public class DatabaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public SchemaEntity schema;
+
     public DatabaseEntity withSchema(SchemaEntity schema) {
         this.schema = schema;
         return this;
@@ -84,6 +90,7 @@ public class DatabaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequence")
     public SequenceEntity sequence;
+
     public DatabaseEntity withSequence(SequenceEntity sequence) {
         this.sequence = sequence;
         return this;
@@ -95,6 +102,7 @@ public class DatabaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortName")
     public String shortName;
+
     public DatabaseEntity withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -106,6 +114,7 @@ public class DatabaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storedProcedure")
     public StoredProcedureEntity storedProcedure;
+
     public DatabaseEntity withStoredProcedure(StoredProcedureEntity storedProcedure) {
         this.storedProcedure = storedProcedure;
         return this;
@@ -117,6 +126,7 @@ public class DatabaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synonym")
     public SynonymEntity synonym;
+
     public DatabaseEntity withSynonym(SynonymEntity synonym) {
         this.synonym = synonym;
         return this;
@@ -128,6 +138,7 @@ public class DatabaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public TableEntity table;
+
     public DatabaseEntity withTable(TableEntity table) {
         this.table = table;
         return this;
@@ -139,6 +150,7 @@ public class DatabaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tree")
     public DatabaseEntityTreeEnum tree;
+
     public DatabaseEntity withTree(DatabaseEntityTreeEnum tree) {
         this.tree = tree;
         return this;
@@ -150,9 +162,11 @@ public class DatabaseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view")
     public ViewEntity view;
+
     public DatabaseEntity withView(ViewEntity view) {
         this.view = view;
         return this;
     }
     
+    public DatabaseEntity(){}
 }

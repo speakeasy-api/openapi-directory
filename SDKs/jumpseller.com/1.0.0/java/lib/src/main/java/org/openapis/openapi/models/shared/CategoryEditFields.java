@@ -15,6 +15,7 @@ public class CategoryEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CategoryEditFields withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class CategoryEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     public Integer parentId;
+
     public CategoryEditFields withParentId(Integer parentId) {
         this.parentId = parentId;
         return this;
     }
     
+    public CategoryEditFields(){}
 }

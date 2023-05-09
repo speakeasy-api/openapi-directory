@@ -15,6 +15,7 @@ public class AccountProcessingState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableReason")
     public String disableReason;
+
     public AccountProcessingState withDisableReason(String disableReason) {
         this.disableReason = disableReason;
         return this;
@@ -26,6 +27,7 @@ public class AccountProcessingState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public AccountProcessingState withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -34,6 +36,7 @@ public class AccountProcessingState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processedFrom")
     public Amount processedFrom;
+
     public AccountProcessingState withProcessedFrom(Amount processedFrom) {
         this.processedFrom = processedFrom;
         return this;
@@ -42,6 +45,7 @@ public class AccountProcessingState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processedTo")
     public Amount processedTo;
+
     public AccountProcessingState withProcessedTo(Amount processedTo) {
         this.processedTo = processedTo;
         return this;
@@ -53,9 +57,11 @@ public class AccountProcessingState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tierNumber")
     public Integer tierNumber;
+
     public AccountProcessingState withTierNumber(Integer tierNumber) {
         this.tierNumber = tierNumber;
         return this;
     }
     
+    public AccountProcessingState(){}
 }

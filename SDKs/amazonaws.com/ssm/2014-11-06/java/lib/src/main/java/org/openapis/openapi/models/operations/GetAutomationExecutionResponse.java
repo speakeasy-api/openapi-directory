@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAutomationExecutionResponse {
@@ -12,6 +13,7 @@ public class GetAutomationExecutionResponse {
      */
     
     public Object automationExecutionNotFoundException;
+
     public GetAutomationExecutionResponse withAutomationExecutionNotFoundException(Object automationExecutionNotFoundException) {
         this.automationExecutionNotFoundException = automationExecutionNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class GetAutomationExecutionResponse {
     
     
     public String contentType;
+
     public GetAutomationExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAutomationExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAutomationExecutionResult getAutomationExecutionResult;
+
     public GetAutomationExecutionResponse withGetAutomationExecutionResult(org.openapis.openapi.models.shared.GetAutomationExecutionResult getAutomationExecutionResult) {
         this.getAutomationExecutionResult = getAutomationExecutionResult;
         return this;
@@ -39,6 +43,7 @@ public class GetAutomationExecutionResponse {
      */
     
     public Object internalServerError;
+
     public GetAutomationExecutionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class GetAutomationExecutionResponse {
     
     
     public Integer statusCode;
+
     public GetAutomationExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetAutomationExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAutomationExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAutomationExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

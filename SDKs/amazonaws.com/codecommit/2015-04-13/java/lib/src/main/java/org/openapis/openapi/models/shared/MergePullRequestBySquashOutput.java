@@ -18,9 +18,11 @@ public class MergePullRequestBySquashOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pullRequest")
     public PullRequest pullRequest;
+
     public MergePullRequestBySquashOutput withPullRequest(PullRequest pullRequest) {
         this.pullRequest = pullRequest;
         return this;
     }
     
+    public MergePullRequestBySquashOutput(){}
 }

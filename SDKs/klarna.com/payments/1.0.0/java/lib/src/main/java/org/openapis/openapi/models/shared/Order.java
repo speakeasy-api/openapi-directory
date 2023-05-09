@@ -15,6 +15,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorized_payment_method")
     public AuthorizedPaymentMethod authorizedPaymentMethod;
+
     public Order withAuthorizedPaymentMethod(AuthorizedPaymentMethod authorizedPaymentMethod) {
         this.authorizedPaymentMethod = authorizedPaymentMethod;
         return this;
@@ -26,6 +27,7 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fraud_status")
     public String fraudStatus;
+
     public Order withFraudStatus(String fraudStatus) {
         this.fraudStatus = fraudStatus;
         return this;
@@ -36,6 +38,7 @@ public class Order {
      */
     @JsonProperty("order_id")
     public String orderId;
+
     public Order withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -47,9 +50,13 @@ public class Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirect_url")
     public String redirectUrl;
+
     public Order withRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
         return this;
     }
     
+    public Order(@JsonProperty("order_id") String orderId) {
+        this.orderId = orderId;
+  }
 }

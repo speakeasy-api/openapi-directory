@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFileContentSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oAuth2;
+
     public GetFileContentSecurity withOAuth2(String oAuth2) {
         this.oAuth2 = oAuth2;
         return this;
     }
     
+    public GetFileContentSecurity(@JsonProperty("OAuth2") String oAuth2) {
+        this.oAuth2 = oAuth2;
+  }
 }

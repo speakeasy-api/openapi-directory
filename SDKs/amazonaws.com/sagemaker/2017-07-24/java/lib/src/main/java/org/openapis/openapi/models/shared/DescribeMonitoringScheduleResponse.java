@@ -21,6 +21,7 @@ public class DescribeMonitoringScheduleResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeMonitoringScheduleResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class DescribeMonitoringScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public DescribeMonitoringScheduleResponse withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -37,6 +39,7 @@ public class DescribeMonitoringScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeMonitoringScheduleResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -46,6 +49,7 @@ public class DescribeMonitoringScheduleResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeMonitoringScheduleResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -54,6 +58,7 @@ public class DescribeMonitoringScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastMonitoringExecutionSummary")
     public MonitoringExecutionSummary lastMonitoringExecutionSummary;
+
     public DescribeMonitoringScheduleResponse withLastMonitoringExecutionSummary(MonitoringExecutionSummary lastMonitoringExecutionSummary) {
         this.lastMonitoringExecutionSummary = lastMonitoringExecutionSummary;
         return this;
@@ -61,6 +66,7 @@ public class DescribeMonitoringScheduleResponse {
     
     @JsonProperty("MonitoringScheduleArn")
     public String monitoringScheduleArn;
+
     public DescribeMonitoringScheduleResponse withMonitoringScheduleArn(String monitoringScheduleArn) {
         this.monitoringScheduleArn = monitoringScheduleArn;
         return this;
@@ -68,6 +74,7 @@ public class DescribeMonitoringScheduleResponse {
     
     @JsonProperty("MonitoringScheduleConfig")
     public MonitoringScheduleConfig monitoringScheduleConfig;
+
     public DescribeMonitoringScheduleResponse withMonitoringScheduleConfig(MonitoringScheduleConfig monitoringScheduleConfig) {
         this.monitoringScheduleConfig = monitoringScheduleConfig;
         return this;
@@ -75,6 +82,7 @@ public class DescribeMonitoringScheduleResponse {
     
     @JsonProperty("MonitoringScheduleName")
     public String monitoringScheduleName;
+
     public DescribeMonitoringScheduleResponse withMonitoringScheduleName(String monitoringScheduleName) {
         this.monitoringScheduleName = monitoringScheduleName;
         return this;
@@ -82,6 +90,7 @@ public class DescribeMonitoringScheduleResponse {
     
     @JsonProperty("MonitoringScheduleStatus")
     public ScheduleStatusEnum monitoringScheduleStatus;
+
     public DescribeMonitoringScheduleResponse withMonitoringScheduleStatus(ScheduleStatusEnum monitoringScheduleStatus) {
         this.monitoringScheduleStatus = monitoringScheduleStatus;
         return this;
@@ -90,9 +99,18 @@ public class DescribeMonitoringScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringType")
     public MonitoringTypeEnum monitoringType;
+
     public DescribeMonitoringScheduleResponse withMonitoringType(MonitoringTypeEnum monitoringType) {
         this.monitoringType = monitoringType;
         return this;
     }
     
+    public DescribeMonitoringScheduleResponse(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("MonitoringScheduleArn") String monitoringScheduleArn, @JsonProperty("MonitoringScheduleConfig") MonitoringScheduleConfig monitoringScheduleConfig, @JsonProperty("MonitoringScheduleName") String monitoringScheduleName, @JsonProperty("MonitoringScheduleStatus") ScheduleStatusEnum monitoringScheduleStatus) {
+        this.creationTime = creationTime;
+        this.lastModifiedTime = lastModifiedTime;
+        this.monitoringScheduleArn = monitoringScheduleArn;
+        this.monitoringScheduleConfig = monitoringScheduleConfig;
+        this.monitoringScheduleName = monitoringScheduleName;
+        this.monitoringScheduleStatus = monitoringScheduleStatus;
+  }
 }

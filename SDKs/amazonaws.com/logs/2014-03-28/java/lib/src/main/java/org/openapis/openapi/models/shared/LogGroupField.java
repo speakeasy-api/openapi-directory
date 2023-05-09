@@ -15,6 +15,7 @@ public class LogGroupField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LogGroupField withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class LogGroupField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percent")
     public Long percent;
+
     public LogGroupField withPercent(Long percent) {
         this.percent = percent;
         return this;
     }
     
+    public LogGroupField(){}
 }

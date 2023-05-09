@@ -15,9 +15,11 @@ public class CreateUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("User")
     public User user;
+
     public CreateUserResponse withUser(User user) {
         this.user = user;
         return this;
     }
     
+    public CreateUserResponse(){}
 }

@@ -15,6 +15,7 @@ public class TaxInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public TaxInformation withCountry(String country) {
         this.country = country;
         return this;
@@ -26,6 +27,7 @@ public class TaxInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public TaxInformation withNumber(String number) {
         this.number = number;
         return this;
@@ -37,9 +39,11 @@ public class TaxInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TaxInformation withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TaxInformation(){}
 }

@@ -15,6 +15,7 @@ public class ListLinksItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ListLinksItem withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ListLinksItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ListLinksItem withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class ListLinksItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Label")
     public String label;
+
     public ListLinksItem withLabel(String label) {
         this.label = label;
         return this;
@@ -39,6 +42,7 @@ public class ListLinksItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypes")
     public String[] resourceTypes;
+
     public ListLinksItem withResourceTypes(String[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
@@ -47,9 +51,11 @@ public class ListLinksItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SinkArn")
     public String sinkArn;
+
     public ListLinksItem withSinkArn(String sinkArn) {
         this.sinkArn = sinkArn;
         return this;
     }
     
+    public ListLinksItem(){}
 }

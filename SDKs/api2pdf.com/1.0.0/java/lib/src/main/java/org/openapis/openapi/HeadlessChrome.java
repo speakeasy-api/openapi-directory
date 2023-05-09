@@ -57,12 +57,10 @@ public class HeadlessChrome {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromeFromHtmlPostResponse res = new org.openapis.openapi.models.operations.ChromeFromHtmlPostResponse() {{
+        org.openapis.openapi.models.operations.ChromeFromHtmlPostResponse res = new org.openapis.openapi.models.operations.ChromeFromHtmlPostResponse(contentType, httpRes.statusCode()) {{
             apiResponseSuccess = null;
             apiResponseFailure = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,13 +114,11 @@ public class HeadlessChrome {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromeFromUrlGETResponse res = new org.openapis.openapi.models.operations.ChromeFromUrlGETResponse() {{
+        org.openapis.openapi.models.operations.ChromeFromUrlGETResponse res = new org.openapis.openapi.models.operations.ChromeFromUrlGETResponse(contentType, httpRes.statusCode()) {{
             apiResponseSuccess = null;
             chromeFromUrlGET200ApplicationPdfBinaryString = null;
             apiResponseFailure = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -173,12 +169,10 @@ public class HeadlessChrome {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromeFromUrlPostResponse res = new org.openapis.openapi.models.operations.ChromeFromUrlPostResponse() {{
+        org.openapis.openapi.models.operations.ChromeFromUrlPostResponse res = new org.openapis.openapi.models.operations.ChromeFromUrlPostResponse(contentType, httpRes.statusCode()) {{
             apiResponseSuccess = null;
             apiResponseFailure = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

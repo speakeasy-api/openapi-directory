@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompanyMonitorRegisterResponse {
@@ -12,6 +13,7 @@ public class CompanyMonitorRegisterResponse {
      */
     
     public CompanyMonitorRegister200ApplicationJSON companyMonitorRegister200ApplicationJSONObject;
+
     public CompanyMonitorRegisterResponse withCompanyMonitorRegister200ApplicationJSONObject(CompanyMonitorRegister200ApplicationJSON companyMonitorRegister200ApplicationJSONObject) {
         this.companyMonitorRegister200ApplicationJSONObject = companyMonitorRegister200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class CompanyMonitorRegisterResponse {
      */
     
     public CompanyMonitorRegisterDefaultApplicationJSON companyMonitorRegisterDefaultApplicationJSONObject;
+
     public CompanyMonitorRegisterResponse withCompanyMonitorRegisterDefaultApplicationJSONObject(CompanyMonitorRegisterDefaultApplicationJSON companyMonitorRegisterDefaultApplicationJSONObject) {
         this.companyMonitorRegisterDefaultApplicationJSONObject = companyMonitorRegisterDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class CompanyMonitorRegisterResponse {
     
     
     public String contentType;
+
     public CompanyMonitorRegisterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class CompanyMonitorRegisterResponse {
     
     
     public Integer statusCode;
+
     public CompanyMonitorRegisterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CompanyMonitorRegisterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompanyMonitorRegisterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CompanyMonitorRegisterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

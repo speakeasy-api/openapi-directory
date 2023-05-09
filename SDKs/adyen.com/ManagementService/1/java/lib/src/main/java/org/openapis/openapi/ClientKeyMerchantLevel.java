@@ -55,12 +55,10 @@ public class ClientKeyMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateClientKeyResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateClientKeyResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateClientKeyResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateClientKeyResponse(contentType, httpRes.statusCode()) {{
             generateClientKeyResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

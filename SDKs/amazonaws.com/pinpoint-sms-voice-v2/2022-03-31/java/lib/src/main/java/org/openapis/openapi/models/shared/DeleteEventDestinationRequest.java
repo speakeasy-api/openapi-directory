@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteEventDestinationRequest {
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public DeleteEventDestinationRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteEventDestinationRequest {
     
     @JsonProperty("EventDestinationName")
     public String eventDestinationName;
+
     public DeleteEventDestinationRequest withEventDestinationName(String eventDestinationName) {
         this.eventDestinationName = eventDestinationName;
         return this;
     }
     
+    public DeleteEventDestinationRequest(@JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("EventDestinationName") String eventDestinationName) {
+        this.configurationSetName = configurationSetName;
+        this.eventDestinationName = eventDestinationName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSuppressedDestinationResponse {
@@ -12,6 +13,7 @@ public class DeleteSuppressedDestinationResponse {
      */
     
     public Object badRequestException;
+
     public DeleteSuppressedDestinationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSuppressedDestinationResponse {
     
     
     public String contentType;
+
     public DeleteSuppressedDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSuppressedDestinationResponse {
      */
     
     public java.util.Map<String, Object> deleteSuppressedDestinationResponse;
+
     public DeleteSuppressedDestinationResponse withDeleteSuppressedDestinationResponse(java.util.Map<String, Object> deleteSuppressedDestinationResponse) {
         this.deleteSuppressedDestinationResponse = deleteSuppressedDestinationResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSuppressedDestinationResponse {
      */
     
     public Object notFoundException;
+
     public DeleteSuppressedDestinationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteSuppressedDestinationResponse {
     
     
     public Integer statusCode;
+
     public DeleteSuppressedDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSuppressedDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSuppressedDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteSuppressedDestinationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteSuppressedDestinationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteSuppressedDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

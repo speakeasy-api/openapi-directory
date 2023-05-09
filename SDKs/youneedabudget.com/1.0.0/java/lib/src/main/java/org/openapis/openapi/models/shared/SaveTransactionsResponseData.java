@@ -15,6 +15,7 @@ public class SaveTransactionsResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicate_import_ids")
     public String[] duplicateImportIds;
+
     public SaveTransactionsResponseData withDuplicateImportIds(String[] duplicateImportIds) {
         this.duplicateImportIds = duplicateImportIds;
         return this;
@@ -25,6 +26,7 @@ public class SaveTransactionsResponseData {
      */
     @JsonProperty("server_knowledge")
     public Long serverKnowledge;
+
     public SaveTransactionsResponseData withServerKnowledge(Long serverKnowledge) {
         this.serverKnowledge = serverKnowledge;
         return this;
@@ -33,6 +35,7 @@ public class SaveTransactionsResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public TransactionDetail transaction;
+
     public SaveTransactionsResponseData withTransaction(TransactionDetail transaction) {
         this.transaction = transaction;
         return this;
@@ -43,6 +46,7 @@ public class SaveTransactionsResponseData {
      */
     @JsonProperty("transaction_ids")
     public String[] transactionIds;
+
     public SaveTransactionsResponseData withTransactionIds(String[] transactionIds) {
         this.transactionIds = transactionIds;
         return this;
@@ -54,9 +58,14 @@ public class SaveTransactionsResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactions")
     public TransactionDetail[] transactions;
+
     public SaveTransactionsResponseData withTransactions(TransactionDetail[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public SaveTransactionsResponseData(@JsonProperty("server_knowledge") Long serverKnowledge, @JsonProperty("transaction_ids") String[] transactionIds) {
+        this.serverKnowledge = serverKnowledge;
+        this.transactionIds = transactionIds;
+  }
 }

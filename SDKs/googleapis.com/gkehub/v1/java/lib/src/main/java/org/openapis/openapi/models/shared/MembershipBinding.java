@@ -18,6 +18,7 @@ public class MembershipBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public MembershipBinding withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class MembershipBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTime")
     public String deleteTime;
+
     public MembershipBinding withDeleteTime(String deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -40,6 +42,7 @@ public class MembershipBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleet")
     public Boolean fleet;
+
     public MembershipBinding withFleet(Boolean fleet) {
         this.fleet = fleet;
         return this;
@@ -51,6 +54,7 @@ public class MembershipBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MembershipBinding withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class MembershipBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public MembershipBinding withScope(String scope) {
         this.scope = scope;
         return this;
@@ -73,6 +78,7 @@ public class MembershipBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public MembershipBindingLifecycleState state;
+
     public MembershipBinding withState(MembershipBindingLifecycleState state) {
         this.state = state;
         return this;
@@ -84,6 +90,7 @@ public class MembershipBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public MembershipBinding withUid(String uid) {
         this.uid = uid;
         return this;
@@ -95,9 +102,11 @@ public class MembershipBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public MembershipBinding withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public MembershipBinding(){}
 }

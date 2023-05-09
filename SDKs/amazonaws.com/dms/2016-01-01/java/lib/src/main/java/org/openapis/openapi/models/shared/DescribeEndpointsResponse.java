@@ -15,6 +15,7 @@ public class DescribeEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoints")
     public Endpoint[] endpoints;
+
     public DescribeEndpointsResponse withEndpoints(Endpoint[] endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -23,9 +24,11 @@ public class DescribeEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeEndpointsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DescribeEndpointsResponse(){}
 }

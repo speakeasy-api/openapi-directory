@@ -18,6 +18,7 @@ public class SasPortalListNodesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SasPortalListNodesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class SasPortalListNodesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodes")
     public SasPortalNode[] nodes;
+
     public SasPortalListNodesResponse withNodes(SasPortalNode[] nodes) {
         this.nodes = nodes;
         return this;
     }
     
+    public SasPortalListNodesResponse(){}
 }

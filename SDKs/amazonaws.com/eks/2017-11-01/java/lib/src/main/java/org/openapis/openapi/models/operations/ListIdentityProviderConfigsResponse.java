@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListIdentityProviderConfigsResponse {
@@ -12,6 +13,7 @@ public class ListIdentityProviderConfigsResponse {
      */
     
     public Object clientException;
+
     public ListIdentityProviderConfigsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class ListIdentityProviderConfigsResponse {
     
     
     public String contentType;
+
     public ListIdentityProviderConfigsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListIdentityProviderConfigsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListIdentityProviderConfigsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListIdentityProviderConfigsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListIdentityProviderConfigsResponse listIdentityProviderConfigsResponse;
+
     public ListIdentityProviderConfigsResponse withListIdentityProviderConfigsResponse(org.openapis.openapi.models.shared.ListIdentityProviderConfigsResponse listIdentityProviderConfigsResponse) {
         this.listIdentityProviderConfigsResponse = listIdentityProviderConfigsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListIdentityProviderConfigsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListIdentityProviderConfigsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListIdentityProviderConfigsResponse {
     
     
     public Integer statusCode;
+
     public ListIdentityProviderConfigsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListIdentityProviderConfigsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListIdentityProviderConfigsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListIdentityProviderConfigsResponse {
      */
     
     public Object serverException;
+
     public ListIdentityProviderConfigsResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -83,9 +92,14 @@ public class ListIdentityProviderConfigsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListIdentityProviderConfigsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ListIdentityProviderConfigsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

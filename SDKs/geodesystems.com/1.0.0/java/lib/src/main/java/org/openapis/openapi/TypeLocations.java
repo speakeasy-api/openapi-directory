@@ -57,10 +57,8 @@ public class TypeLocations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchLocationsResponse res = new org.openapis.openapi.models.operations.SearchLocationsResponse() {{
+        org.openapis.openapi.models.operations.SearchLocationsResponse res = new org.openapis.openapi.models.operations.SearchLocationsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

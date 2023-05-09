@@ -20,6 +20,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupArn")
     public String backupArn;
+
     public Backup withBackupArn(String backupArn) {
         this.backupArn = backupArn;
         return this;
@@ -28,6 +29,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupId")
     public String backupId;
+
     public Backup withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
@@ -36,6 +38,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupType")
     public BackupTypeEnum backupType;
+
     public Backup withBackupType(BackupTypeEnum backupType) {
         this.backupType = backupType;
         return this;
@@ -46,6 +49,7 @@ public class Backup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public Backup withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -54,6 +58,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Backup withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Engine")
     public String engine;
+
     public Backup withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -70,6 +76,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineModel")
     public String engineModel;
+
     public Backup withEngineModel(String engineModel) {
         this.engineModel = engineModel;
         return this;
@@ -78,6 +85,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public String engineVersion;
+
     public Backup withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -86,6 +94,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceProfileArn")
     public String instanceProfileArn;
+
     public Backup withInstanceProfileArn(String instanceProfileArn) {
         this.instanceProfileArn = instanceProfileArn;
         return this;
@@ -94,6 +103,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public Backup withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -102,6 +112,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyPair")
     public String keyPair;
+
     public Backup withKeyPair(String keyPair) {
         this.keyPair = keyPair;
         return this;
@@ -110,6 +121,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredBackupWindow")
     public String preferredBackupWindow;
+
     public Backup withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -118,6 +130,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public Backup withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -126,6 +139,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DataSize")
     public Long s3DataSize;
+
     public Backup withS3DataSize(Long s3DataSize) {
         this.s3DataSize = s3DataSize;
         return this;
@@ -134,6 +148,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DataUrl")
     public String s3DataUrl;
+
     public Backup withS3DataUrl(String s3DataUrl) {
         this.s3DataUrl = s3DataUrl;
         return this;
@@ -142,6 +157,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3LogUrl")
     public String s3LogUrl;
+
     public Backup withS3LogUrl(String s3LogUrl) {
         this.s3LogUrl = s3LogUrl;
         return this;
@@ -150,6 +166,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public Backup withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -158,6 +175,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerName")
     public String serverName;
+
     public Backup withServerName(String serverName) {
         this.serverName = serverName;
         return this;
@@ -166,6 +184,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRoleArn")
     public String serviceRoleArn;
+
     public Backup withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -174,6 +193,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public BackupStatusEnum status;
+
     public Backup withStatus(BackupStatusEnum status) {
         this.status = status;
         return this;
@@ -182,6 +202,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDescription")
     public String statusDescription;
+
     public Backup withStatusDescription(String statusDescription) {
         this.statusDescription = statusDescription;
         return this;
@@ -190,6 +211,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public Backup withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -198,6 +220,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ToolsVersion")
     public String toolsVersion;
+
     public Backup withToolsVersion(String toolsVersion) {
         this.toolsVersion = toolsVersion;
         return this;
@@ -206,9 +229,11 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserArn")
     public String userArn;
+
     public Backup withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public Backup(){}
 }

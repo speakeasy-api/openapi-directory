@@ -12,6 +12,7 @@ public class SiteTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("row_count")
     public Integer rowCount;
+
     public SiteTypeResponse withRowCount(Integer rowCount) {
         this.rowCount = rowCount;
         return this;
@@ -20,9 +21,11 @@ public class SiteTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sitetypes")
     public SiteType[] sitetypes;
+
     public SiteTypeResponse withSitetypes(SiteType[] sitetypes) {
         this.sitetypes = sitetypes;
         return this;
     }
     
+    public SiteTypeResponse(){}
 }

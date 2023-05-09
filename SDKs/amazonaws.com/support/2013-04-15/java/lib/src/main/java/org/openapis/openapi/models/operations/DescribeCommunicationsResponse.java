@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCommunicationsResponse {
@@ -12,6 +13,7 @@ public class DescribeCommunicationsResponse {
      */
     
     public Object caseIdNotFound;
+
     public DescribeCommunicationsResponse withCaseIdNotFound(Object caseIdNotFound) {
         this.caseIdNotFound = caseIdNotFound;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCommunicationsResponse {
     
     
     public String contentType;
+
     public DescribeCommunicationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCommunicationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCommunicationsResponse describeCommunicationsResponse;
+
     public DescribeCommunicationsResponse withDescribeCommunicationsResponse(org.openapis.openapi.models.shared.DescribeCommunicationsResponse describeCommunicationsResponse) {
         this.describeCommunicationsResponse = describeCommunicationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCommunicationsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeCommunicationsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class DescribeCommunicationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeCommunicationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeCommunicationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCommunicationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeCommunicationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

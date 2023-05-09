@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribePrefixListsResult {
     
     public String nextToken;
+
     public DescribePrefixListsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribePrefixListsResult {
     
     
     public DescribePrefixListsResultPrefixLists[] prefixLists;
+
     public DescribePrefixListsResult withPrefixLists(DescribePrefixListsResultPrefixLists[] prefixLists) {
         this.prefixLists = prefixLists;
         return this;
     }
     
+    public DescribePrefixListsResult(){}
 }

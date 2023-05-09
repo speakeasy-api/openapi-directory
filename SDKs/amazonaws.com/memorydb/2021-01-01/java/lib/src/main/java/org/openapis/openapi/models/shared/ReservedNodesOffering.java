@@ -15,6 +15,7 @@ public class ReservedNodesOffering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public Long duration;
+
     public ReservedNodesOffering withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -23,6 +24,7 @@ public class ReservedNodesOffering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FixedPrice")
     public Double fixedPrice;
+
     public ReservedNodesOffering withFixedPrice(Double fixedPrice) {
         this.fixedPrice = fixedPrice;
         return this;
@@ -31,6 +33,7 @@ public class ReservedNodesOffering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeType")
     public String nodeType;
+
     public ReservedNodesOffering withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -39,6 +42,7 @@ public class ReservedNodesOffering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OfferingType")
     public String offeringType;
+
     public ReservedNodesOffering withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -47,6 +51,7 @@ public class ReservedNodesOffering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecurringCharges")
     public RecurringCharge[] recurringCharges;
+
     public ReservedNodesOffering withRecurringCharges(RecurringCharge[] recurringCharges) {
         this.recurringCharges = recurringCharges;
         return this;
@@ -55,9 +60,11 @@ public class ReservedNodesOffering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservedNodesOfferingId")
     public String reservedNodesOfferingId;
+
     public ReservedNodesOffering withReservedNodesOfferingId(String reservedNodesOfferingId) {
         this.reservedNodesOfferingId = reservedNodesOfferingId;
         return this;
     }
     
+    public ReservedNodesOffering(){}
 }

@@ -61,11 +61,9 @@ public class Administrative {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoctorsListResponse res = new org.openapis.openapi.models.operations.DoctorsListResponse() {{
+        org.openapis.openapi.models.operations.DoctorsListResponse res = new org.openapis.openapi.models.operations.DoctorsListResponse(contentType, httpRes.statusCode()) {{
             doctorsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Administrative {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoctorsReadResponse res = new org.openapis.openapi.models.operations.DoctorsReadResponse() {{
+        org.openapis.openapi.models.operations.DoctorsReadResponse res = new org.openapis.openapi.models.operations.DoctorsReadResponse(contentType, httpRes.statusCode()) {{
             doctor = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class Administrative {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserGroupsListResponse res = new org.openapis.openapi.models.operations.UserGroupsListResponse() {{
+        org.openapis.openapi.models.operations.UserGroupsListResponse res = new org.openapis.openapi.models.operations.UserGroupsListResponse(contentType, httpRes.statusCode()) {{
             userGroupsList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,11 +199,9 @@ public class Administrative {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserGroupsReadResponse res = new org.openapis.openapi.models.operations.UserGroupsReadResponse() {{
+        org.openapis.openapi.models.operations.UserGroupsReadResponse res = new org.openapis.openapi.models.operations.UserGroupsReadResponse(contentType, httpRes.statusCode()) {{
             userProfilesGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,11 +245,9 @@ public class Administrative {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersListResponse res = new org.openapis.openapi.models.operations.UsersListResponse() {{
+        org.openapis.openapi.models.operations.UsersListResponse res = new org.openapis.openapi.models.operations.UsersListResponse(contentType, httpRes.statusCode()) {{
             usersList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -301,11 +291,9 @@ public class Administrative {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersReadResponse res = new org.openapis.openapi.models.operations.UsersReadResponse() {{
+        org.openapis.openapi.models.operations.UsersReadResponse res = new org.openapis.openapi.models.operations.UsersReadResponse(contentType, httpRes.statusCode()) {{
             userProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

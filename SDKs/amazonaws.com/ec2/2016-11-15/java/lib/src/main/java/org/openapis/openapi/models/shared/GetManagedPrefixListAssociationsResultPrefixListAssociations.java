@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetManagedPrefixListAssociationsResultPrefixListAssociations {
     
     public String resourceId;
+
     public GetManagedPrefixListAssociationsResultPrefixListAssociations withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -19,9 +20,11 @@ public class GetManagedPrefixListAssociationsResultPrefixListAssociations {
     
     
     public String resourceOwner;
+
     public GetManagedPrefixListAssociationsResultPrefixListAssociations withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
     }
     
+    public GetManagedPrefixListAssociationsResultPrefixListAssociations(){}
 }

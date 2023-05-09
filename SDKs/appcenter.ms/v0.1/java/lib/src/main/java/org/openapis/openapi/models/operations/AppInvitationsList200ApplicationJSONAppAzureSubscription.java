@@ -15,6 +15,7 @@ public class AppInvitationsList200ApplicationJSONAppAzureSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_billable")
     public Boolean isBillable;
+
     public AppInvitationsList200ApplicationJSONAppAzureSubscription withIsBillable(Boolean isBillable) {
         this.isBillable = isBillable;
         return this;
@@ -26,6 +27,7 @@ public class AppInvitationsList200ApplicationJSONAppAzureSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_billing")
     public Boolean isBilling;
+
     public AppInvitationsList200ApplicationJSONAppAzureSubscription withIsBilling(Boolean isBilling) {
         this.isBilling = isBilling;
         return this;
@@ -37,6 +39,7 @@ public class AppInvitationsList200ApplicationJSONAppAzureSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_microsoft_internal")
     public Boolean isMicrosoftInternal;
+
     public AppInvitationsList200ApplicationJSONAppAzureSubscription withIsMicrosoftInternal(Boolean isMicrosoftInternal) {
         this.isMicrosoftInternal = isMicrosoftInternal;
         return this;
@@ -47,6 +50,7 @@ public class AppInvitationsList200ApplicationJSONAppAzureSubscription {
      */
     @JsonProperty("subscription_id")
     public String subscriptionId;
+
     public AppInvitationsList200ApplicationJSONAppAzureSubscription withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -57,6 +61,7 @@ public class AppInvitationsList200ApplicationJSONAppAzureSubscription {
      */
     @JsonProperty("subscription_name")
     public String subscriptionName;
+
     public AppInvitationsList200ApplicationJSONAppAzureSubscription withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
@@ -67,9 +72,15 @@ public class AppInvitationsList200ApplicationJSONAppAzureSubscription {
      */
     @JsonProperty("tenant_id")
     public String tenantId;
+
     public AppInvitationsList200ApplicationJSONAppAzureSubscription withTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
     }
     
+    public AppInvitationsList200ApplicationJSONAppAzureSubscription(@JsonProperty("subscription_id") String subscriptionId, @JsonProperty("subscription_name") String subscriptionName, @JsonProperty("tenant_id") String tenantId) {
+        this.subscriptionId = subscriptionId;
+        this.subscriptionName = subscriptionName;
+        this.tenantId = tenantId;
+  }
 }

@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesStationInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesStationInterval withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesStationInterval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervals")
     public TflApiPresentationEntitiesInterval[] intervals;
+
     public TflApiPresentationEntitiesStationInterval withIntervals(TflApiPresentationEntitiesInterval[] intervals) {
         this.intervals = intervals;
         return this;
     }
     
+    public TflApiPresentationEntitiesStationInterval(){}
 }

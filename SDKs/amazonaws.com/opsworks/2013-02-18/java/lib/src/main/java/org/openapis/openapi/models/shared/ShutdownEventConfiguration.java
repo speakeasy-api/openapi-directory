@@ -15,6 +15,7 @@ public class ShutdownEventConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DelayUntilElbConnectionsDrained")
     public Boolean delayUntilElbConnectionsDrained;
+
     public ShutdownEventConfiguration withDelayUntilElbConnectionsDrained(Boolean delayUntilElbConnectionsDrained) {
         this.delayUntilElbConnectionsDrained = delayUntilElbConnectionsDrained;
         return this;
@@ -23,9 +24,11 @@ public class ShutdownEventConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionTimeout")
     public Long executionTimeout;
+
     public ShutdownEventConfiguration withExecutionTimeout(Long executionTimeout) {
         this.executionTimeout = executionTimeout;
         return this;
     }
     
+    public ShutdownEventConfiguration(){}
 }

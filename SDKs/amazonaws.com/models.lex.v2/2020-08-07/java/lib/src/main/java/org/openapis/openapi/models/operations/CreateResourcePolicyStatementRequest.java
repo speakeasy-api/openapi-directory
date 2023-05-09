@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateResourcePolicyStatementRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateResourcePolicyStatementRequestBody requestBody;
+
     public CreateResourcePolicyStatementRequest withRequestBody(CreateResourcePolicyStatementRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class CreateResourcePolicyStatementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CreateResourcePolicyStatementRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class CreateResourcePolicyStatementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CreateResourcePolicyStatementRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class CreateResourcePolicyStatementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CreateResourcePolicyStatementRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class CreateResourcePolicyStatementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CreateResourcePolicyStatementRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class CreateResourcePolicyStatementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CreateResourcePolicyStatementRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class CreateResourcePolicyStatementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CreateResourcePolicyStatementRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class CreateResourcePolicyStatementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CreateResourcePolicyStatementRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class CreateResourcePolicyStatementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expectedRevisionId")
     public String expectedRevisionId;
+
     public CreateResourcePolicyStatementRequest withExpectedRevisionId(String expectedRevisionId) {
         this.expectedRevisionId = expectedRevisionId;
         return this;
@@ -78,9 +88,14 @@ public class CreateResourcePolicyStatementRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resourceArn")
     public String resourceArn;
+
     public CreateResourcePolicyStatementRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public CreateResourcePolicyStatementRequest(@JsonProperty("RequestBody") CreateResourcePolicyStatementRequestBody requestBody, @JsonProperty("resourceArn") String resourceArn) {
+        this.requestBody = requestBody;
+        this.resourceArn = resourceArn;
+  }
 }

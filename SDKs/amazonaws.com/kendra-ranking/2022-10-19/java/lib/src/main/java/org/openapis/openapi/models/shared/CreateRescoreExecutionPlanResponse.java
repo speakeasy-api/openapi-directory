@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateRescoreExecutionPlanResponse {
     @JsonProperty("Arn")
     public String arn;
+
     public CreateRescoreExecutionPlanResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,14 @@ public class CreateRescoreExecutionPlanResponse {
     
     @JsonProperty("Id")
     public String id;
+
     public CreateRescoreExecutionPlanResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreateRescoreExecutionPlanResponse(@JsonProperty("Arn") String arn, @JsonProperty("Id") String id) {
+        this.arn = arn;
+        this.id = id;
+  }
 }

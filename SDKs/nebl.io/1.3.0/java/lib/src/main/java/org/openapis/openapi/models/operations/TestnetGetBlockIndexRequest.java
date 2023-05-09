@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetBlockIndexRequest {
@@ -12,9 +13,13 @@ public class TestnetGetBlockIndexRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=blockindex")
     public Double blockindex;
+
     public TestnetGetBlockIndexRequest withBlockindex(Double blockindex) {
         this.blockindex = blockindex;
         return this;
     }
     
+    public TestnetGetBlockIndexRequest(@JsonProperty("blockindex") Double blockindex) {
+        this.blockindex = blockindex;
+  }
 }

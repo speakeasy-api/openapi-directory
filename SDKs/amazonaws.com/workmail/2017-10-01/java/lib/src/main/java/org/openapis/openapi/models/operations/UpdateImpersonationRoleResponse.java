@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateImpersonationRoleResponse {
     
     public String contentType;
+
     public UpdateImpersonationRoleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateImpersonationRoleResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateImpersonationRoleResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateImpersonationRoleResponse {
      */
     
     public Object entityStateException;
+
     public UpdateImpersonationRoleResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateImpersonationRoleResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateImpersonationRoleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateImpersonationRoleResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateImpersonationRoleResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateImpersonationRoleResponse {
      */
     
     public Object organizationNotFoundException;
+
     public UpdateImpersonationRoleResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateImpersonationRoleResponse {
      */
     
     public Object organizationStateException;
+
     public UpdateImpersonationRoleResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateImpersonationRoleResponse {
     
     
     public Integer statusCode;
+
     public UpdateImpersonationRoleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateImpersonationRoleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateImpersonationRoleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateImpersonationRoleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateImpersonationRoleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateImpersonationRoleResponse {
      */
     
     public java.util.Map<String, Object> updateImpersonationRoleResponse;
+
     public UpdateImpersonationRoleResponse withUpdateImpersonationRoleResponse(java.util.Map<String, Object> updateImpersonationRoleResponse) {
         this.updateImpersonationRoleResponse = updateImpersonationRoleResponse;
         return this;
     }
     
+    public UpdateImpersonationRoleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

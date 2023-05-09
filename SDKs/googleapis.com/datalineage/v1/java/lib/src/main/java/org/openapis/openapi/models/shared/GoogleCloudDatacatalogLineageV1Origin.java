@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogLineageV1Origin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatacatalogLineageV1Origin withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogLineageV1Origin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceType")
     public GoogleCloudDatacatalogLineageV1OriginSourceTypeEnum sourceType;
+
     public GoogleCloudDatacatalogLineageV1Origin withSourceType(GoogleCloudDatacatalogLineageV1OriginSourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public GoogleCloudDatacatalogLineageV1Origin(){}
 }

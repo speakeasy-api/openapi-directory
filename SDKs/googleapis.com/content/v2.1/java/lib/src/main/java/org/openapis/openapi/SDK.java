@@ -44,6 +44,7 @@ public class SDK {
     public Promotions promotions;
     public Pubsubnotificationsettings pubsubnotificationsettings;
     public Quotas quotas;
+    public Recommendations recommendations;
     public Regionalinventory regionalinventory;
     public Regions regions;
     public Reports reports;
@@ -143,6 +144,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.accounts = new Accounts(
@@ -362,6 +368,15 @@ public class SDK {
 		);
 		
 		this.quotas = new Quotas(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.recommendations = new Recommendations(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,

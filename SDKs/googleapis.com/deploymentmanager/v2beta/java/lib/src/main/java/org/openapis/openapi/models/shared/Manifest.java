@@ -15,6 +15,7 @@ public class Manifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public ConfigFile config;
+
     public Manifest withConfig(ConfigFile config) {
         this.config = config;
         return this;
@@ -26,6 +27,7 @@ public class Manifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expandedConfig")
     public String expandedConfig;
+
     public Manifest withExpandedConfig(String expandedConfig) {
         this.expandedConfig = expandedConfig;
         return this;
@@ -34,6 +36,7 @@ public class Manifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Manifest withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class Manifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imports")
     public ImportFile[] imports;
+
     public Manifest withImports(ImportFile[] imports) {
         this.imports = imports;
         return this;
@@ -56,6 +60,7 @@ public class Manifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertTime")
     public String insertTime;
+
     public Manifest withInsertTime(String insertTime) {
         this.insertTime = insertTime;
         return this;
@@ -67,6 +72,7 @@ public class Manifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public String layout;
+
     public Manifest withLayout(String layout) {
         this.layout = layout;
         return this;
@@ -78,6 +84,7 @@ public class Manifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manifestSizeBytes")
     public String manifestSizeBytes;
+
     public Manifest withManifestSizeBytes(String manifestSizeBytes) {
         this.manifestSizeBytes = manifestSizeBytes;
         return this;
@@ -89,6 +96,7 @@ public class Manifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manifestSizeLimitBytes")
     public String manifestSizeLimitBytes;
+
     public Manifest withManifestSizeLimitBytes(String manifestSizeLimitBytes) {
         this.manifestSizeLimitBytes = manifestSizeLimitBytes;
         return this;
@@ -100,6 +108,7 @@ public class Manifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Manifest withName(String name) {
         this.name = name;
         return this;
@@ -111,9 +120,11 @@ public class Manifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Manifest withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public Manifest(){}
 }

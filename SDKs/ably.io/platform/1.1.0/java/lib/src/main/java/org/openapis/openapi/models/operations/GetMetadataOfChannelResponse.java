@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMetadataOfChannelResponse {
     
     public byte[] body;
+
     public GetMetadataOfChannelResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class GetMetadataOfChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.ChannelDetails channelDetails;
+
     public GetMetadataOfChannelResponse withChannelDetails(org.openapis.openapi.models.shared.ChannelDetails channelDetails) {
         this.channelDetails = channelDetails;
         return this;
@@ -26,6 +29,7 @@ public class GetMetadataOfChannelResponse {
     
     
     public String contentType;
+
     public GetMetadataOfChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class GetMetadataOfChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetMetadataOfChannelResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -43,6 +48,7 @@ public class GetMetadataOfChannelResponse {
     
     
     public Integer statusCode;
+
     public GetMetadataOfChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetMetadataOfChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMetadataOfChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMetadataOfChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

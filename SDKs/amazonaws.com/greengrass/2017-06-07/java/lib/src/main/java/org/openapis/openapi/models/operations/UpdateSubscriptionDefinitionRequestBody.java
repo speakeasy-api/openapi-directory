@@ -15,9 +15,11 @@ public class UpdateSubscriptionDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateSubscriptionDefinitionRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateSubscriptionDefinitionRequestBody(){}
 }

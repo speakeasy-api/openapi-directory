@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteModelCardRequest {
     @JsonProperty("ModelCardName")
     public String modelCardName;
+
     public DeleteModelCardRequest withModelCardName(String modelCardName) {
         this.modelCardName = modelCardName;
         return this;
     }
     
+    public DeleteModelCardRequest(@JsonProperty("ModelCardName") String modelCardName) {
+        this.modelCardName = modelCardName;
+  }
 }

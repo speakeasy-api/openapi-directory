@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse {
     
     public String contentType;
+
     public FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse googleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse;
+
     public FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse withGoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse(org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse googleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse) {
         this.googleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse = googleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse;
         return this;
@@ -26,6 +29,7 @@ public class FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse {
     
     
     public Integer statusCode;
+
     public FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

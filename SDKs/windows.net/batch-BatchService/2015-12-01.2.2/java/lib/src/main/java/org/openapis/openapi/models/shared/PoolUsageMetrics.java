@@ -20,6 +20,7 @@ public class PoolUsageMetrics {
      */
     @JsonProperty("dataEgressGiB")
     public Double dataEgressGiB;
+
     public PoolUsageMetrics withDataEgressGiB(Double dataEgressGiB) {
         this.dataEgressGiB = dataEgressGiB;
         return this;
@@ -30,6 +31,7 @@ public class PoolUsageMetrics {
      */
     @JsonProperty("dataIngressGiB")
     public Double dataIngressGiB;
+
     public PoolUsageMetrics withDataIngressGiB(Double dataIngressGiB) {
         this.dataIngressGiB = dataIngressGiB;
         return this;
@@ -42,6 +44,7 @@ public class PoolUsageMetrics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public PoolUsageMetrics withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -52,6 +55,7 @@ public class PoolUsageMetrics {
      */
     @JsonProperty("poolId")
     public String poolId;
+
     public PoolUsageMetrics withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -64,6 +68,7 @@ public class PoolUsageMetrics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public PoolUsageMetrics withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -74,6 +79,7 @@ public class PoolUsageMetrics {
      */
     @JsonProperty("totalCoreHours")
     public Double totalCoreHours;
+
     public PoolUsageMetrics withTotalCoreHours(Double totalCoreHours) {
         this.totalCoreHours = totalCoreHours;
         return this;
@@ -84,9 +90,19 @@ public class PoolUsageMetrics {
      */
     @JsonProperty("vmSize")
     public String vmSize;
+
     public PoolUsageMetrics withVmSize(String vmSize) {
         this.vmSize = vmSize;
         return this;
     }
     
+    public PoolUsageMetrics(@JsonProperty("dataEgressGiB") Double dataEgressGiB, @JsonProperty("dataIngressGiB") Double dataIngressGiB, @JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("poolId") String poolId, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("totalCoreHours") Double totalCoreHours, @JsonProperty("vmSize") String vmSize) {
+        this.dataEgressGiB = dataEgressGiB;
+        this.dataIngressGiB = dataIngressGiB;
+        this.endTime = endTime;
+        this.poolId = poolId;
+        this.startTime = startTime;
+        this.totalCoreHours = totalCoreHours;
+        this.vmSize = vmSize;
+  }
 }

@@ -23,6 +23,7 @@ public class JobAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annual_rate")
     public Money annualRate;
+
     public JobAssignment withAnnualRate(Money annualRate) {
         this.annualRate = annualRate;
         return this;
@@ -39,6 +40,7 @@ public class JobAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hourly_rate")
     public Money hourlyRate;
+
     public JobAssignment withHourlyRate(Money hourlyRate) {
         this.hourlyRate = hourlyRate;
         return this;
@@ -49,6 +51,7 @@ public class JobAssignment {
      */
     @JsonProperty("job_title")
     public String jobTitle;
+
     public JobAssignment withJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
         return this;
@@ -60,6 +63,7 @@ public class JobAssignment {
      */
     @JsonProperty("pay_type")
     public String payType;
+
     public JobAssignment withPayType(String payType) {
         this.payType = payType;
         return this;
@@ -71,9 +75,14 @@ public class JobAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weekly_hours")
     public Long weeklyHours;
+
     public JobAssignment withWeeklyHours(Long weeklyHours) {
         this.weeklyHours = weeklyHours;
         return this;
     }
     
+    public JobAssignment(@JsonProperty("job_title") String jobTitle, @JsonProperty("pay_type") String payType) {
+        this.jobTitle = jobTitle;
+        this.payType = payType;
+  }
 }

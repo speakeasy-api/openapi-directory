@@ -12,9 +12,11 @@ public class SegmentModelHaljsonEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public SegmentModelHaljsonEmbeddedProduct product;
+
     public SegmentModelHaljsonEmbedded withProduct(SegmentModelHaljsonEmbeddedProduct product) {
         this.product = product;
         return this;
     }
     
+    public SegmentModelHaljsonEmbedded(){}
 }

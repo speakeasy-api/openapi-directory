@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRuleResponse {
@@ -12,6 +13,7 @@ public class UpdateRuleResponse {
      */
     
     public Object conflictException;
+
     public UpdateRuleResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateRuleResponse {
     
     
     public String contentType;
+
     public UpdateRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRuleResponse {
      */
     
     public Object internalServerException;
+
     public UpdateRuleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateRuleResponse {
     
     
     public Integer statusCode;
+
     public UpdateRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRuleResponse updateRuleResponse;
+
     public UpdateRuleResponse withUpdateRuleResponse(org.openapis.openapi.models.shared.UpdateRuleResponse updateRuleResponse) {
         this.updateRuleResponse = updateRuleResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateRuleResponse {
      */
     
     public Object validationException;
+
     public UpdateRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

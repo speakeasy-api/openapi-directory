@@ -49,14 +49,12 @@ public class PicoLoadmanagementGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PicoLoadmanagementGroupGetResponse res = new org.openapis.openapi.models.operations.PicoLoadmanagementGroupGetResponse() {{
+        org.openapis.openapi.models.operations.PicoLoadmanagementGroupGetResponse res = new org.openapis.openapi.models.operations.PicoLoadmanagementGroupGetResponse(contentType, httpRes.statusCode()) {{
             picoLoadmanagementGroupDto = null;
             picoLoadmanagementGroupDto = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,14 +100,12 @@ public class PicoLoadmanagementGroup {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiPicoLoadmanagementgroupResponse res = new org.openapis.openapi.models.operations.GetApiPicoLoadmanagementgroupResponse() {{
+        org.openapis.openapi.models.operations.GetApiPicoLoadmanagementgroupResponse res = new org.openapis.openapi.models.operations.GetApiPicoLoadmanagementgroupResponse(contentType, httpRes.statusCode()) {{
             picoLoadmanagementGroupDtos = null;
             picoLoadmanagementGroupDtos = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

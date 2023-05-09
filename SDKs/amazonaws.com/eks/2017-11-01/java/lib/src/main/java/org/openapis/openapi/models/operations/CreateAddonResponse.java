@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAddonResponse {
@@ -12,6 +13,7 @@ public class CreateAddonResponse {
      */
     
     public Object clientException;
+
     public CreateAddonResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class CreateAddonResponse {
     
     
     public String contentType;
+
     public CreateAddonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateAddonResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAddonResponse createAddonResponse;
+
     public CreateAddonResponse withCreateAddonResponse(org.openapis.openapi.models.shared.CreateAddonResponse createAddonResponse) {
         this.createAddonResponse = createAddonResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateAddonResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateAddonResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAddonResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateAddonResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class CreateAddonResponse {
     
     
     public Integer statusCode;
+
     public CreateAddonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateAddonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAddonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateAddonResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateAddonResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -83,6 +92,7 @@ public class CreateAddonResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAddonResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class CreateAddonResponse {
      */
     
     public Object serverException;
+
     public CreateAddonResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public CreateAddonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

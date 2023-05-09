@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DBClusterList {
     
     public String activityStreamKinesisStreamName;
+
     public DBClusterList withActivityStreamKinesisStreamName(String activityStreamKinesisStreamName) {
         this.activityStreamKinesisStreamName = activityStreamKinesisStreamName;
         return this;
@@ -19,6 +20,7 @@ public class DBClusterList {
     
     
     public String activityStreamKmsKeyId;
+
     public DBClusterList withActivityStreamKmsKeyId(String activityStreamKmsKeyId) {
         this.activityStreamKmsKeyId = activityStreamKmsKeyId;
         return this;
@@ -26,6 +28,7 @@ public class DBClusterList {
     
     
     public ActivityStreamModeEnum activityStreamMode;
+
     public DBClusterList withActivityStreamMode(ActivityStreamModeEnum activityStreamMode) {
         this.activityStreamMode = activityStreamMode;
         return this;
@@ -33,6 +36,7 @@ public class DBClusterList {
     
     
     public ActivityStreamStatusEnum activityStreamStatus;
+
     public DBClusterList withActivityStreamStatus(ActivityStreamStatusEnum activityStreamStatus) {
         this.activityStreamStatus = activityStreamStatus;
         return this;
@@ -40,6 +44,7 @@ public class DBClusterList {
     
     
     public Long allocatedStorage;
+
     public DBClusterList withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -47,6 +52,7 @@ public class DBClusterList {
     
     
     public DBClusterRoles[] associatedRoles;
+
     public DBClusterList withAssociatedRoles(DBClusterRoles[] associatedRoles) {
         this.associatedRoles = associatedRoles;
         return this;
@@ -54,6 +60,7 @@ public class DBClusterList {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public DBClusterList withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -61,6 +68,7 @@ public class DBClusterList {
     
     
     public OffsetDateTime automaticRestartTime;
+
     public DBClusterList withAutomaticRestartTime(OffsetDateTime automaticRestartTime) {
         this.automaticRestartTime = automaticRestartTime;
         return this;
@@ -68,6 +76,7 @@ public class DBClusterList {
     
     
     public String[] availabilityZones;
+
     public DBClusterList withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -75,6 +84,7 @@ public class DBClusterList {
     
     
     public Long backtrackConsumedChangeRecords;
+
     public DBClusterList withBacktrackConsumedChangeRecords(Long backtrackConsumedChangeRecords) {
         this.backtrackConsumedChangeRecords = backtrackConsumedChangeRecords;
         return this;
@@ -82,6 +92,7 @@ public class DBClusterList {
     
     
     public Long backtrackWindow;
+
     public DBClusterList withBacktrackWindow(Long backtrackWindow) {
         this.backtrackWindow = backtrackWindow;
         return this;
@@ -89,6 +100,7 @@ public class DBClusterList {
     
     
     public Long backupRetentionPeriod;
+
     public DBClusterList withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -96,6 +108,7 @@ public class DBClusterList {
     
     
     public Long capacity;
+
     public DBClusterList withCapacity(Long capacity) {
         this.capacity = capacity;
         return this;
@@ -103,6 +116,7 @@ public class DBClusterList {
     
     
     public String characterSetName;
+
     public DBClusterList withCharacterSetName(String characterSetName) {
         this.characterSetName = characterSetName;
         return this;
@@ -110,6 +124,7 @@ public class DBClusterList {
     
     
     public String cloneGroupId;
+
     public DBClusterList withCloneGroupId(String cloneGroupId) {
         this.cloneGroupId = cloneGroupId;
         return this;
@@ -117,6 +132,7 @@ public class DBClusterList {
     
     
     public OffsetDateTime clusterCreateTime;
+
     public DBClusterList withClusterCreateTime(OffsetDateTime clusterCreateTime) {
         this.clusterCreateTime = clusterCreateTime;
         return this;
@@ -124,6 +140,7 @@ public class DBClusterList {
     
     
     public Boolean copyTagsToSnapshot;
+
     public DBClusterList withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -131,6 +148,7 @@ public class DBClusterList {
     
     
     public Boolean crossAccountClone;
+
     public DBClusterList withCrossAccountClone(Boolean crossAccountClone) {
         this.crossAccountClone = crossAccountClone;
         return this;
@@ -138,6 +156,7 @@ public class DBClusterList {
     
     
     public String[] customEndpoints;
+
     public DBClusterList withCustomEndpoints(String[] customEndpoints) {
         this.customEndpoints = customEndpoints;
         return this;
@@ -145,6 +164,7 @@ public class DBClusterList {
     
     
     public String dbClusterArn;
+
     public DBClusterList withDBClusterArn(String dbClusterArn) {
         this.dbClusterArn = dbClusterArn;
         return this;
@@ -152,6 +172,7 @@ public class DBClusterList {
     
     
     public String dbClusterIdentifier;
+
     public DBClusterList withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -159,6 +180,7 @@ public class DBClusterList {
     
     
     public String dbClusterInstanceClass;
+
     public DBClusterList withDBClusterInstanceClass(String dbClusterInstanceClass) {
         this.dbClusterInstanceClass = dbClusterInstanceClass;
         return this;
@@ -166,6 +188,7 @@ public class DBClusterList {
     
     
     public DBClusterMemberList[] dbClusterMembers;
+
     public DBClusterList withDBClusterMembers(DBClusterMemberList[] dbClusterMembers) {
         this.dbClusterMembers = dbClusterMembers;
         return this;
@@ -173,6 +196,7 @@ public class DBClusterList {
     
     
     public DBClusterOptionGroupMemberships[] dbClusterOptionGroupMemberships;
+
     public DBClusterList withDBClusterOptionGroupMemberships(DBClusterOptionGroupMemberships[] dbClusterOptionGroupMemberships) {
         this.dbClusterOptionGroupMemberships = dbClusterOptionGroupMemberships;
         return this;
@@ -180,6 +204,7 @@ public class DBClusterList {
     
     
     public String dbClusterParameterGroup;
+
     public DBClusterList withDBClusterParameterGroup(String dbClusterParameterGroup) {
         this.dbClusterParameterGroup = dbClusterParameterGroup;
         return this;
@@ -187,6 +212,7 @@ public class DBClusterList {
     
     
     public String dbSubnetGroup;
+
     public DBClusterList withDBSubnetGroup(String dbSubnetGroup) {
         this.dbSubnetGroup = dbSubnetGroup;
         return this;
@@ -194,6 +220,7 @@ public class DBClusterList {
     
     
     public String dbSystemId;
+
     public DBClusterList withDBSystemId(String dbSystemId) {
         this.dbSystemId = dbSystemId;
         return this;
@@ -201,6 +228,7 @@ public class DBClusterList {
     
     
     public String databaseName;
+
     public DBClusterList withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -208,6 +236,7 @@ public class DBClusterList {
     
     
     public String dbClusterResourceId;
+
     public DBClusterList withDbClusterResourceId(String dbClusterResourceId) {
         this.dbClusterResourceId = dbClusterResourceId;
         return this;
@@ -215,6 +244,7 @@ public class DBClusterList {
     
     
     public Boolean deletionProtection;
+
     public DBClusterList withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -222,6 +252,7 @@ public class DBClusterList {
     
     
     public DomainMembershipList[] domainMemberships;
+
     public DBClusterList withDomainMemberships(DomainMembershipList[] domainMemberships) {
         this.domainMemberships = domainMemberships;
         return this;
@@ -229,6 +260,7 @@ public class DBClusterList {
     
     
     public OffsetDateTime earliestBacktrackTime;
+
     public DBClusterList withEarliestBacktrackTime(OffsetDateTime earliestBacktrackTime) {
         this.earliestBacktrackTime = earliestBacktrackTime;
         return this;
@@ -236,6 +268,7 @@ public class DBClusterList {
     
     
     public OffsetDateTime earliestRestorableTime;
+
     public DBClusterList withEarliestRestorableTime(OffsetDateTime earliestRestorableTime) {
         this.earliestRestorableTime = earliestRestorableTime;
         return this;
@@ -243,6 +276,7 @@ public class DBClusterList {
     
     
     public String[] enabledCloudwatchLogsExports;
+
     public DBClusterList withEnabledCloudwatchLogsExports(String[] enabledCloudwatchLogsExports) {
         this.enabledCloudwatchLogsExports = enabledCloudwatchLogsExports;
         return this;
@@ -250,6 +284,7 @@ public class DBClusterList {
     
     
     public String endpoint;
+
     public DBClusterList withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -257,6 +292,7 @@ public class DBClusterList {
     
     
     public String engine;
+
     public DBClusterList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -264,6 +300,7 @@ public class DBClusterList {
     
     
     public String engineMode;
+
     public DBClusterList withEngineMode(String engineMode) {
         this.engineMode = engineMode;
         return this;
@@ -271,6 +308,7 @@ public class DBClusterList {
     
     
     public String engineVersion;
+
     public DBClusterList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -278,6 +316,7 @@ public class DBClusterList {
     
     
     public Boolean globalWriteForwardingRequested;
+
     public DBClusterList withGlobalWriteForwardingRequested(Boolean globalWriteForwardingRequested) {
         this.globalWriteForwardingRequested = globalWriteForwardingRequested;
         return this;
@@ -285,6 +324,7 @@ public class DBClusterList {
     
     
     public WriteForwardingStatusEnum globalWriteForwardingStatus;
+
     public DBClusterList withGlobalWriteForwardingStatus(WriteForwardingStatusEnum globalWriteForwardingStatus) {
         this.globalWriteForwardingStatus = globalWriteForwardingStatus;
         return this;
@@ -292,6 +332,7 @@ public class DBClusterList {
     
     
     public String hostedZoneId;
+
     public DBClusterList withHostedZoneId(String hostedZoneId) {
         this.hostedZoneId = hostedZoneId;
         return this;
@@ -299,6 +340,7 @@ public class DBClusterList {
     
     
     public Boolean httpEndpointEnabled;
+
     public DBClusterList withHttpEndpointEnabled(Boolean httpEndpointEnabled) {
         this.httpEndpointEnabled = httpEndpointEnabled;
         return this;
@@ -306,6 +348,7 @@ public class DBClusterList {
     
     
     public Boolean iamDatabaseAuthenticationEnabled;
+
     public DBClusterList withIAMDatabaseAuthenticationEnabled(Boolean iamDatabaseAuthenticationEnabled) {
         this.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
         return this;
@@ -313,6 +356,7 @@ public class DBClusterList {
     
     
     public Long iops;
+
     public DBClusterList withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -320,6 +364,7 @@ public class DBClusterList {
     
     
     public String kmsKeyId;
+
     public DBClusterList withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -327,6 +372,7 @@ public class DBClusterList {
     
     
     public OffsetDateTime latestRestorableTime;
+
     public DBClusterList withLatestRestorableTime(OffsetDateTime latestRestorableTime) {
         this.latestRestorableTime = latestRestorableTime;
         return this;
@@ -334,6 +380,7 @@ public class DBClusterList {
     
     
     public MasterUserSecret masterUserSecret;
+
     public DBClusterList withMasterUserSecret(MasterUserSecret masterUserSecret) {
         this.masterUserSecret = masterUserSecret;
         return this;
@@ -341,6 +388,7 @@ public class DBClusterList {
     
     
     public String masterUsername;
+
     public DBClusterList withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -348,6 +396,7 @@ public class DBClusterList {
     
     
     public Long monitoringInterval;
+
     public DBClusterList withMonitoringInterval(Long monitoringInterval) {
         this.monitoringInterval = monitoringInterval;
         return this;
@@ -355,6 +404,7 @@ public class DBClusterList {
     
     
     public String monitoringRoleArn;
+
     public DBClusterList withMonitoringRoleArn(String monitoringRoleArn) {
         this.monitoringRoleArn = monitoringRoleArn;
         return this;
@@ -362,6 +412,7 @@ public class DBClusterList {
     
     
     public Boolean multiAZ;
+
     public DBClusterList withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -369,6 +420,7 @@ public class DBClusterList {
     
     
     public String networkType;
+
     public DBClusterList withNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
@@ -376,6 +428,7 @@ public class DBClusterList {
     
     
     public ClusterPendingModifiedValues pendingModifiedValues;
+
     public DBClusterList withPendingModifiedValues(ClusterPendingModifiedValues pendingModifiedValues) {
         this.pendingModifiedValues = pendingModifiedValues;
         return this;
@@ -383,6 +436,7 @@ public class DBClusterList {
     
     
     public String percentProgress;
+
     public DBClusterList withPercentProgress(String percentProgress) {
         this.percentProgress = percentProgress;
         return this;
@@ -390,6 +444,7 @@ public class DBClusterList {
     
     
     public Boolean performanceInsightsEnabled;
+
     public DBClusterList withPerformanceInsightsEnabled(Boolean performanceInsightsEnabled) {
         this.performanceInsightsEnabled = performanceInsightsEnabled;
         return this;
@@ -397,6 +452,7 @@ public class DBClusterList {
     
     
     public String performanceInsightsKMSKeyId;
+
     public DBClusterList withPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
         this.performanceInsightsKMSKeyId = performanceInsightsKMSKeyId;
         return this;
@@ -404,6 +460,7 @@ public class DBClusterList {
     
     
     public Long performanceInsightsRetentionPeriod;
+
     public DBClusterList withPerformanceInsightsRetentionPeriod(Long performanceInsightsRetentionPeriod) {
         this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
         return this;
@@ -411,6 +468,7 @@ public class DBClusterList {
     
     
     public Long port;
+
     public DBClusterList withPort(Long port) {
         this.port = port;
         return this;
@@ -418,6 +476,7 @@ public class DBClusterList {
     
     
     public String preferredBackupWindow;
+
     public DBClusterList withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -425,6 +484,7 @@ public class DBClusterList {
     
     
     public String preferredMaintenanceWindow;
+
     public DBClusterList withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -432,6 +492,7 @@ public class DBClusterList {
     
     
     public Boolean publiclyAccessible;
+
     public DBClusterList withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -439,6 +500,7 @@ public class DBClusterList {
     
     
     public String[] readReplicaIdentifiers;
+
     public DBClusterList withReadReplicaIdentifiers(String[] readReplicaIdentifiers) {
         this.readReplicaIdentifiers = readReplicaIdentifiers;
         return this;
@@ -446,6 +508,7 @@ public class DBClusterList {
     
     
     public String readerEndpoint;
+
     public DBClusterList withReaderEndpoint(String readerEndpoint) {
         this.readerEndpoint = readerEndpoint;
         return this;
@@ -453,6 +516,7 @@ public class DBClusterList {
     
     
     public String replicationSourceIdentifier;
+
     public DBClusterList withReplicationSourceIdentifier(String replicationSourceIdentifier) {
         this.replicationSourceIdentifier = replicationSourceIdentifier;
         return this;
@@ -463,6 +527,7 @@ public class DBClusterList {
      */
     
     public ScalingConfigurationInfo scalingConfigurationInfo;
+
     public DBClusterList withScalingConfigurationInfo(ScalingConfigurationInfo scalingConfigurationInfo) {
         this.scalingConfigurationInfo = scalingConfigurationInfo;
         return this;
@@ -473,6 +538,7 @@ public class DBClusterList {
      */
     
     public ServerlessV2ScalingConfigurationInfo serverlessV2ScalingConfiguration;
+
     public DBClusterList withServerlessV2ScalingConfiguration(ServerlessV2ScalingConfigurationInfo serverlessV2ScalingConfiguration) {
         this.serverlessV2ScalingConfiguration = serverlessV2ScalingConfiguration;
         return this;
@@ -480,6 +546,7 @@ public class DBClusterList {
     
     
     public String status;
+
     public DBClusterList withStatus(String status) {
         this.status = status;
         return this;
@@ -487,6 +554,7 @@ public class DBClusterList {
     
     
     public Boolean storageEncrypted;
+
     public DBClusterList withStorageEncrypted(Boolean storageEncrypted) {
         this.storageEncrypted = storageEncrypted;
         return this;
@@ -494,6 +562,7 @@ public class DBClusterList {
     
     
     public String storageType;
+
     public DBClusterList withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
@@ -504,6 +573,7 @@ public class DBClusterList {
      */
     
     public TagList[] tagList;
+
     public DBClusterList withTagList(TagList[] tagList) {
         this.tagList = tagList;
         return this;
@@ -511,9 +581,11 @@ public class DBClusterList {
     
     
     public VpcSecurityGroupMembershipList[] vpcSecurityGroups;
+
     public DBClusterList withVpcSecurityGroups(VpcSecurityGroupMembershipList[] vpcSecurityGroups) {
         this.vpcSecurityGroups = vpcSecurityGroups;
         return this;
     }
     
+    public DBClusterList(){}
 }

@@ -15,6 +15,7 @@ public class MetricResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public MetricResult withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -23,9 +24,11 @@ public class MetricResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricValue")
     public Double metricValue;
+
     public MetricResult withMetricValue(Double metricValue) {
         this.metricValue = metricValue;
         return this;
     }
     
+    public MetricResult(){}
 }

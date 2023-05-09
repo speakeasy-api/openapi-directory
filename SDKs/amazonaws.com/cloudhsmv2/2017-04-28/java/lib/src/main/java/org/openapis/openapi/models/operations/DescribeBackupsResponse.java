@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBackupsResponse {
@@ -12,6 +13,7 @@ public class DescribeBackupsResponse {
      */
     
     public Object cloudHsmAccessDeniedException;
+
     public DescribeBackupsResponse withCloudHsmAccessDeniedException(Object cloudHsmAccessDeniedException) {
         this.cloudHsmAccessDeniedException = cloudHsmAccessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeBackupsResponse {
      */
     
     public Object cloudHsmInternalFailureException;
+
     public DescribeBackupsResponse withCloudHsmInternalFailureException(Object cloudHsmInternalFailureException) {
         this.cloudHsmInternalFailureException = cloudHsmInternalFailureException;
         return this;
@@ -32,6 +35,7 @@ public class DescribeBackupsResponse {
      */
     
     public Object cloudHsmInvalidRequestException;
+
     public DescribeBackupsResponse withCloudHsmInvalidRequestException(Object cloudHsmInvalidRequestException) {
         this.cloudHsmInvalidRequestException = cloudHsmInvalidRequestException;
         return this;
@@ -42,6 +46,7 @@ public class DescribeBackupsResponse {
      */
     
     public Object cloudHsmResourceNotFoundException;
+
     public DescribeBackupsResponse withCloudHsmResourceNotFoundException(Object cloudHsmResourceNotFoundException) {
         this.cloudHsmResourceNotFoundException = cloudHsmResourceNotFoundException;
         return this;
@@ -52,6 +57,7 @@ public class DescribeBackupsResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public DescribeBackupsResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -62,6 +68,7 @@ public class DescribeBackupsResponse {
      */
     
     public Object cloudHsmTagException;
+
     public DescribeBackupsResponse withCloudHsmTagException(Object cloudHsmTagException) {
         this.cloudHsmTagException = cloudHsmTagException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeBackupsResponse {
     
     
     public String contentType;
+
     public DescribeBackupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -79,6 +87,7 @@ public class DescribeBackupsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBackupsResponse describeBackupsResponse;
+
     public DescribeBackupsResponse withDescribeBackupsResponse(org.openapis.openapi.models.shared.DescribeBackupsResponse describeBackupsResponse) {
         this.describeBackupsResponse = describeBackupsResponse;
         return this;
@@ -86,6 +95,7 @@ public class DescribeBackupsResponse {
     
     
     public Integer statusCode;
+
     public DescribeBackupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class DescribeBackupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBackupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeBackupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

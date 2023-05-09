@@ -59,11 +59,9 @@ public class TargetingTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsGetResponse(contentType, httpRes.statusCode()) {{
             targetingOption = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class TargetingTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsListResponse(contentType, httpRes.statusCode()) {{
             listTargetingOptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class TargetingTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsSearchResponse res = new org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsSearchResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsSearchResponse res = new org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsSearchResponse(contentType, httpRes.statusCode()) {{
             searchTargetingOptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

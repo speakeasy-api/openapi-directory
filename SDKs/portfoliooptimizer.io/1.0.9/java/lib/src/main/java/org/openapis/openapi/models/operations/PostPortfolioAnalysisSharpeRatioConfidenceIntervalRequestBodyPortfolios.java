@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBodyPortfo
      */
     @JsonProperty("portfolioValues")
     public Double[] portfolioValues;
+
     public PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBodyPortfolios withPortfolioValues(Double[] portfolioValues) {
         this.portfolioValues = portfolioValues;
         return this;
     }
     
+    public PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBodyPortfolios(@JsonProperty("portfolioValues") Double[] portfolioValues) {
+        this.portfolioValues = portfolioValues;
+  }
 }

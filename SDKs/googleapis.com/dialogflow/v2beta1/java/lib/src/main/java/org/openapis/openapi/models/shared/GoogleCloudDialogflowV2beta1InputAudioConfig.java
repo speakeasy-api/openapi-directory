@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioEncoding")
     public GoogleCloudDialogflowV2beta1InputAudioConfigAudioEncodingEnum audioEncoding;
+
     public GoogleCloudDialogflowV2beta1InputAudioConfig withAudioEncoding(GoogleCloudDialogflowV2beta1InputAudioConfigAudioEncodingEnum audioEncoding) {
         this.audioEncoding = audioEncoding;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bargeInConfig")
     public GoogleCloudDialogflowV2beta1BargeInConfig bargeInConfig;
+
     public GoogleCloudDialogflowV2beta1InputAudioConfig withBargeInConfig(GoogleCloudDialogflowV2beta1BargeInConfig bargeInConfig) {
         this.bargeInConfig = bargeInConfig;
         return this;
@@ -40,8 +42,21 @@ public class GoogleCloudDialogflowV2beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableNoSpeechRecognizedEvent")
     public Boolean disableNoSpeechRecognizedEvent;
+
     public GoogleCloudDialogflowV2beta1InputAudioConfig withDisableNoSpeechRecognizedEvent(Boolean disableNoSpeechRecognizedEvent) {
         this.disableNoSpeechRecognizedEvent = disableNoSpeechRecognizedEvent;
+        return this;
+    }
+    
+    /**
+     * Enable automatic punctuation option at the speech backend.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("enableAutomaticPunctuation")
+    public Boolean enableAutomaticPunctuation;
+
+    public GoogleCloudDialogflowV2beta1InputAudioConfig withEnableAutomaticPunctuation(Boolean enableAutomaticPunctuation) {
+        this.enableAutomaticPunctuation = enableAutomaticPunctuation;
         return this;
     }
     
@@ -51,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableWordInfo")
     public Boolean enableWordInfo;
+
     public GoogleCloudDialogflowV2beta1InputAudioConfig withEnableWordInfo(Boolean enableWordInfo) {
         this.enableWordInfo = enableWordInfo;
         return this;
@@ -62,6 +78,7 @@ public class GoogleCloudDialogflowV2beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2beta1InputAudioConfig withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -73,6 +90,7 @@ public class GoogleCloudDialogflowV2beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GoogleCloudDialogflowV2beta1InputAudioConfig withModel(String model) {
         this.model = model;
         return this;
@@ -84,6 +102,7 @@ public class GoogleCloudDialogflowV2beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelVariant")
     public GoogleCloudDialogflowV2beta1InputAudioConfigModelVariantEnum modelVariant;
+
     public GoogleCloudDialogflowV2beta1InputAudioConfig withModelVariant(GoogleCloudDialogflowV2beta1InputAudioConfigModelVariantEnum modelVariant) {
         this.modelVariant = modelVariant;
         return this;
@@ -95,6 +114,7 @@ public class GoogleCloudDialogflowV2beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phraseHints")
     public String[] phraseHints;
+
     public GoogleCloudDialogflowV2beta1InputAudioConfig withPhraseHints(String[] phraseHints) {
         this.phraseHints = phraseHints;
         return this;
@@ -106,6 +126,7 @@ public class GoogleCloudDialogflowV2beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleRateHertz")
     public Integer sampleRateHertz;
+
     public GoogleCloudDialogflowV2beta1InputAudioConfig withSampleRateHertz(Integer sampleRateHertz) {
         this.sampleRateHertz = sampleRateHertz;
         return this;
@@ -117,6 +138,7 @@ public class GoogleCloudDialogflowV2beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("singleUtterance")
     public Boolean singleUtterance;
+
     public GoogleCloudDialogflowV2beta1InputAudioConfig withSingleUtterance(Boolean singleUtterance) {
         this.singleUtterance = singleUtterance;
         return this;
@@ -128,9 +150,11 @@ public class GoogleCloudDialogflowV2beta1InputAudioConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speechContexts")
     public GoogleCloudDialogflowV2beta1SpeechContext[] speechContexts;
+
     public GoogleCloudDialogflowV2beta1InputAudioConfig withSpeechContexts(GoogleCloudDialogflowV2beta1SpeechContext[] speechContexts) {
         this.speechContexts = speechContexts;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1InputAudioConfig(){}
 }

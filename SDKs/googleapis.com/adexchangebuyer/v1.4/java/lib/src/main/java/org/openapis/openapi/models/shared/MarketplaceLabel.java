@@ -15,6 +15,7 @@ public class MarketplaceLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public MarketplaceLabel withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -26,6 +27,7 @@ public class MarketplaceLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTimeMs")
     public String createTimeMs;
+
     public MarketplaceLabel withCreateTimeMs(String createTimeMs) {
         this.createTimeMs = createTimeMs;
         return this;
@@ -34,6 +36,7 @@ public class MarketplaceLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecatedMarketplaceDealParty")
     public MarketplaceDealParty deprecatedMarketplaceDealParty;
+
     public MarketplaceLabel withDeprecatedMarketplaceDealParty(MarketplaceDealParty deprecatedMarketplaceDealParty) {
         this.deprecatedMarketplaceDealParty = deprecatedMarketplaceDealParty;
         return this;
@@ -45,9 +48,11 @@ public class MarketplaceLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public MarketplaceLabel withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public MarketplaceLabel(){}
 }

@@ -18,6 +18,7 @@ public class LogMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public LogMatch withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -29,9 +30,11 @@ public class LogMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelExtractors")
     public java.util.Map<String, String> labelExtractors;
+
     public LogMatch withLabelExtractors(java.util.Map<String, String> labelExtractors) {
         this.labelExtractors = labelExtractors;
         return this;
     }
     
+    public LogMatch(){}
 }

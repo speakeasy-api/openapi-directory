@@ -18,6 +18,7 @@ public class Thread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Thread withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class Thread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threadKey")
     public String threadKey;
+
     public Thread withThreadKey(String threadKey) {
         this.threadKey = threadKey;
         return this;
     }
     
+    public Thread(){}
 }

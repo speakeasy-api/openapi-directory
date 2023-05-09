@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineResponse {
     
     public String contentType;
+
     public ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineRes
      */
     
     public org.openapis.openapi.models.shared.DomainJoinMachineResponse domainJoinMachineResponse;
+
     public ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineResponse withDomainJoinMachineResponse(org.openapis.openapi.models.shared.DomainJoinMachineResponse domainJoinMachineResponse) {
         this.domainJoinMachineResponse = domainJoinMachineResponse;
         return this;
@@ -26,6 +29,7 @@ public class ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineRes
     
     
     public Integer statusCode;
+
     public ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineRes
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=aws_access_key")
     public String awsAccessKey;
+
     public PostRemoteServersRequestBody withAwsAccessKey(String awsAccessKey) {
         this.awsAccessKey = awsAccessKey;
         return this;
@@ -22,6 +23,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=aws_secret_key")
     public String awsSecretKey;
+
     public PostRemoteServersRequestBody withAwsSecretKey(String awsSecretKey) {
         this.awsSecretKey = awsSecretKey;
         return this;
@@ -32,6 +34,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=azure_blob_storage_access_key")
     public String azureBlobStorageAccessKey;
+
     public PostRemoteServersRequestBody withAzureBlobStorageAccessKey(String azureBlobStorageAccessKey) {
         this.azureBlobStorageAccessKey = azureBlobStorageAccessKey;
         return this;
@@ -42,6 +45,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=azure_blob_storage_account")
     public String azureBlobStorageAccount;
+
     public PostRemoteServersRequestBody withAzureBlobStorageAccount(String azureBlobStorageAccount) {
         this.azureBlobStorageAccount = azureBlobStorageAccount;
         return this;
@@ -52,6 +56,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=azure_blob_storage_container")
     public String azureBlobStorageContainer;
+
     public PostRemoteServersRequestBody withAzureBlobStorageContainer(String azureBlobStorageContainer) {
         this.azureBlobStorageContainer = azureBlobStorageContainer;
         return this;
@@ -62,6 +67,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=azure_blob_storage_sas_token")
     public String azureBlobStorageSasToken;
+
     public PostRemoteServersRequestBody withAzureBlobStorageSasToken(String azureBlobStorageSasToken) {
         this.azureBlobStorageSasToken = azureBlobStorageSasToken;
         return this;
@@ -72,6 +78,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=azure_files_storage_access_key")
     public String azureFilesStorageAccessKey;
+
     public PostRemoteServersRequestBody withAzureFilesStorageAccessKey(String azureFilesStorageAccessKey) {
         this.azureFilesStorageAccessKey = azureFilesStorageAccessKey;
         return this;
@@ -82,6 +89,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=azure_files_storage_account")
     public String azureFilesStorageAccount;
+
     public PostRemoteServersRequestBody withAzureFilesStorageAccount(String azureFilesStorageAccount) {
         this.azureFilesStorageAccount = azureFilesStorageAccount;
         return this;
@@ -92,6 +100,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=azure_files_storage_sas_token")
     public String azureFilesStorageSasToken;
+
     public PostRemoteServersRequestBody withAzureFilesStorageSasToken(String azureFilesStorageSasToken) {
         this.azureFilesStorageSasToken = azureFilesStorageSasToken;
         return this;
@@ -102,6 +111,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=azure_files_storage_share_name")
     public String azureFilesStorageShareName;
+
     public PostRemoteServersRequestBody withAzureFilesStorageShareName(String azureFilesStorageShareName) {
         this.azureFilesStorageShareName = azureFilesStorageShareName;
         return this;
@@ -112,6 +122,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=backblaze_b2_application_key")
     public String backblazeB2ApplicationKey;
+
     public PostRemoteServersRequestBody withBackblazeB2ApplicationKey(String backblazeB2ApplicationKey) {
         this.backblazeB2ApplicationKey = backblazeB2ApplicationKey;
         return this;
@@ -122,6 +133,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=backblaze_b2_bucket")
     public String backblazeB2Bucket;
+
     public PostRemoteServersRequestBody withBackblazeB2Bucket(String backblazeB2Bucket) {
         this.backblazeB2Bucket = backblazeB2Bucket;
         return this;
@@ -132,6 +144,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=backblaze_b2_key_id")
     public String backblazeB2KeyId;
+
     public PostRemoteServersRequestBody withBackblazeB2KeyId(String backblazeB2KeyId) {
         this.backblazeB2KeyId = backblazeB2KeyId;
         return this;
@@ -142,6 +155,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=backblaze_b2_s3_endpoint")
     public String backblazeB2S3Endpoint;
+
     public PostRemoteServersRequestBody withBackblazeB2S3Endpoint(String backblazeB2S3Endpoint) {
         this.backblazeB2S3Endpoint = backblazeB2S3Endpoint;
         return this;
@@ -152,6 +166,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=enable_dedicated_ips")
     public Boolean enableDedicatedIps;
+
     public PostRemoteServersRequestBody withEnableDedicatedIps(Boolean enableDedicatedIps) {
         this.enableDedicatedIps = enableDedicatedIps;
         return this;
@@ -162,6 +177,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=filebase_access_key")
     public String filebaseAccessKey;
+
     public PostRemoteServersRequestBody withFilebaseAccessKey(String filebaseAccessKey) {
         this.filebaseAccessKey = filebaseAccessKey;
         return this;
@@ -172,6 +188,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=filebase_bucket")
     public String filebaseBucket;
+
     public PostRemoteServersRequestBody withFilebaseBucket(String filebaseBucket) {
         this.filebaseBucket = filebaseBucket;
         return this;
@@ -182,6 +199,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=filebase_secret_key")
     public String filebaseSecretKey;
+
     public PostRemoteServersRequestBody withFilebaseSecretKey(String filebaseSecretKey) {
         this.filebaseSecretKey = filebaseSecretKey;
         return this;
@@ -192,6 +210,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=files_agent_permission_set")
     public PostRemoteServersRequestBodyFilesAgentPermissionSetEnum filesAgentPermissionSet;
+
     public PostRemoteServersRequestBody withFilesAgentPermissionSet(PostRemoteServersRequestBodyFilesAgentPermissionSetEnum filesAgentPermissionSet) {
         this.filesAgentPermissionSet = filesAgentPermissionSet;
         return this;
@@ -202,6 +221,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=files_agent_root")
     public String filesAgentRoot;
+
     public PostRemoteServersRequestBody withFilesAgentRoot(String filesAgentRoot) {
         this.filesAgentRoot = filesAgentRoot;
         return this;
@@ -212,6 +232,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=google_cloud_storage_bucket")
     public String googleCloudStorageBucket;
+
     public PostRemoteServersRequestBody withGoogleCloudStorageBucket(String googleCloudStorageBucket) {
         this.googleCloudStorageBucket = googleCloudStorageBucket;
         return this;
@@ -222,6 +243,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=google_cloud_storage_credentials_json")
     public String googleCloudStorageCredentialsJson;
+
     public PostRemoteServersRequestBody withGoogleCloudStorageCredentialsJson(String googleCloudStorageCredentialsJson) {
         this.googleCloudStorageCredentialsJson = googleCloudStorageCredentialsJson;
         return this;
@@ -232,6 +254,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=google_cloud_storage_project_id")
     public String googleCloudStorageProjectId;
+
     public PostRemoteServersRequestBody withGoogleCloudStorageProjectId(String googleCloudStorageProjectId) {
         this.googleCloudStorageProjectId = googleCloudStorageProjectId;
         return this;
@@ -242,6 +265,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=hostname")
     public String hostname;
+
     public PostRemoteServersRequestBody withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -252,6 +276,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=max_connections")
     public Integer maxConnections;
+
     public PostRemoteServersRequestBody withMaxConnections(Integer maxConnections) {
         this.maxConnections = maxConnections;
         return this;
@@ -262,6 +287,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PostRemoteServersRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -272,6 +298,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=one_drive_account_type")
     public PostRemoteServersRequestBodyOneDriveAccountTypeEnum oneDriveAccountType;
+
     public PostRemoteServersRequestBody withOneDriveAccountType(PostRemoteServersRequestBodyOneDriveAccountTypeEnum oneDriveAccountType) {
         this.oneDriveAccountType = oneDriveAccountType;
         return this;
@@ -282,6 +309,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=password")
     public String password;
+
     public PostRemoteServersRequestBody withPassword(String password) {
         this.password = password;
         return this;
@@ -292,6 +320,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=pin_to_site_region")
     public Boolean pinToSiteRegion;
+
     public PostRemoteServersRequestBody withPinToSiteRegion(Boolean pinToSiteRegion) {
         this.pinToSiteRegion = pinToSiteRegion;
         return this;
@@ -302,6 +331,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=port")
     public Integer port;
+
     public PostRemoteServersRequestBody withPort(Integer port) {
         this.port = port;
         return this;
@@ -312,6 +342,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=private_key")
     public String privateKey;
+
     public PostRemoteServersRequestBody withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -322,6 +353,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=private_key_passphrase")
     public String privateKeyPassphrase;
+
     public PostRemoteServersRequestBody withPrivateKeyPassphrase(String privateKeyPassphrase) {
         this.privateKeyPassphrase = privateKeyPassphrase;
         return this;
@@ -332,6 +364,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=rackspace_api_key")
     public String rackspaceApiKey;
+
     public PostRemoteServersRequestBody withRackspaceApiKey(String rackspaceApiKey) {
         this.rackspaceApiKey = rackspaceApiKey;
         return this;
@@ -342,6 +375,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=rackspace_container")
     public String rackspaceContainer;
+
     public PostRemoteServersRequestBody withRackspaceContainer(String rackspaceContainer) {
         this.rackspaceContainer = rackspaceContainer;
         return this;
@@ -352,6 +386,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=rackspace_region")
     public String rackspaceRegion;
+
     public PostRemoteServersRequestBody withRackspaceRegion(String rackspaceRegion) {
         this.rackspaceRegion = rackspaceRegion;
         return this;
@@ -362,6 +397,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=rackspace_username")
     public String rackspaceUsername;
+
     public PostRemoteServersRequestBody withRackspaceUsername(String rackspaceUsername) {
         this.rackspaceUsername = rackspaceUsername;
         return this;
@@ -372,6 +408,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=reset_authentication")
     public Boolean resetAuthentication;
+
     public PostRemoteServersRequestBody withResetAuthentication(Boolean resetAuthentication) {
         this.resetAuthentication = resetAuthentication;
         return this;
@@ -382,6 +419,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=s3_bucket")
     public String s3Bucket;
+
     public PostRemoteServersRequestBody withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -392,6 +430,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=s3_compatible_access_key")
     public String s3CompatibleAccessKey;
+
     public PostRemoteServersRequestBody withS3CompatibleAccessKey(String s3CompatibleAccessKey) {
         this.s3CompatibleAccessKey = s3CompatibleAccessKey;
         return this;
@@ -402,6 +441,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=s3_compatible_bucket")
     public String s3CompatibleBucket;
+
     public PostRemoteServersRequestBody withS3CompatibleBucket(String s3CompatibleBucket) {
         this.s3CompatibleBucket = s3CompatibleBucket;
         return this;
@@ -412,6 +452,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=s3_compatible_endpoint")
     public String s3CompatibleEndpoint;
+
     public PostRemoteServersRequestBody withS3CompatibleEndpoint(String s3CompatibleEndpoint) {
         this.s3CompatibleEndpoint = s3CompatibleEndpoint;
         return this;
@@ -422,6 +463,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=s3_compatible_region")
     public String s3CompatibleRegion;
+
     public PostRemoteServersRequestBody withS3CompatibleRegion(String s3CompatibleRegion) {
         this.s3CompatibleRegion = s3CompatibleRegion;
         return this;
@@ -432,6 +474,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=s3_compatible_secret_key")
     public String s3CompatibleSecretKey;
+
     public PostRemoteServersRequestBody withS3CompatibleSecretKey(String s3CompatibleSecretKey) {
         this.s3CompatibleSecretKey = s3CompatibleSecretKey;
         return this;
@@ -442,6 +485,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=s3_region")
     public String s3Region;
+
     public PostRemoteServersRequestBody withS3Region(String s3Region) {
         this.s3Region = s3Region;
         return this;
@@ -452,6 +496,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=server_certificate")
     public PostRemoteServersRequestBodyServerCertificateEnum serverCertificate;
+
     public PostRemoteServersRequestBody withServerCertificate(PostRemoteServersRequestBodyServerCertificateEnum serverCertificate) {
         this.serverCertificate = serverCertificate;
         return this;
@@ -462,6 +507,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=server_host_key")
     public String serverHostKey;
+
     public PostRemoteServersRequestBody withServerHostKey(String serverHostKey) {
         this.serverHostKey = serverHostKey;
         return this;
@@ -472,6 +518,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=server_type")
     public PostRemoteServersRequestBodyServerTypeEnum serverType;
+
     public PostRemoteServersRequestBody withServerType(PostRemoteServersRequestBodyServerTypeEnum serverType) {
         this.serverType = serverType;
         return this;
@@ -482,6 +529,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=ssl")
     public PostRemoteServersRequestBodySslEnum ssl;
+
     public PostRemoteServersRequestBody withSsl(PostRemoteServersRequestBodySslEnum ssl) {
         this.ssl = ssl;
         return this;
@@ -492,6 +540,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=ssl_certificate")
     public String sslCertificate;
+
     public PostRemoteServersRequestBody withSslCertificate(String sslCertificate) {
         this.sslCertificate = sslCertificate;
         return this;
@@ -502,6 +551,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=username")
     public String username;
+
     public PostRemoteServersRequestBody withUsername(String username) {
         this.username = username;
         return this;
@@ -512,6 +562,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=wasabi_access_key")
     public String wasabiAccessKey;
+
     public PostRemoteServersRequestBody withWasabiAccessKey(String wasabiAccessKey) {
         this.wasabiAccessKey = wasabiAccessKey;
         return this;
@@ -522,6 +573,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=wasabi_bucket")
     public String wasabiBucket;
+
     public PostRemoteServersRequestBody withWasabiBucket(String wasabiBucket) {
         this.wasabiBucket = wasabiBucket;
         return this;
@@ -532,6 +584,7 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=wasabi_region")
     public String wasabiRegion;
+
     public PostRemoteServersRequestBody withWasabiRegion(String wasabiRegion) {
         this.wasabiRegion = wasabiRegion;
         return this;
@@ -542,9 +595,11 @@ public class PostRemoteServersRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=wasabi_secret_key")
     public String wasabiSecretKey;
+
     public PostRemoteServersRequestBody withWasabiSecretKey(String wasabiSecretKey) {
         this.wasabiSecretKey = wasabiSecretKey;
         return this;
     }
     
+    public PostRemoteServersRequestBody(){}
 }

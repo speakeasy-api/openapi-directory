@@ -15,6 +15,7 @@ public class AudioRenderTimelineSpanInstrumentGroupStatus {
      */
     @JsonProperty("beat")
     public Double beat;
+
     public AudioRenderTimelineSpanInstrumentGroupStatus withBeat(Double beat) {
         this.beat = beat;
         return this;
@@ -25,9 +26,14 @@ public class AudioRenderTimelineSpanInstrumentGroupStatus {
      */
     @JsonProperty("status")
     public AudioRenderTimelineSpanInstrumentGroupStatusStatusEnum status;
+
     public AudioRenderTimelineSpanInstrumentGroupStatus withStatus(AudioRenderTimelineSpanInstrumentGroupStatusStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AudioRenderTimelineSpanInstrumentGroupStatus(@JsonProperty("beat") Double beat, @JsonProperty("status") AudioRenderTimelineSpanInstrumentGroupStatusStatusEnum status) {
+        this.beat = beat;
+        this.status = status;
+  }
 }

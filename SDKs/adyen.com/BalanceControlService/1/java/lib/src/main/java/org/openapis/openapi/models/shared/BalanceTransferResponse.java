@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class BalanceTransferResponse {
     @JsonProperty("amount")
     public Amount amount;
+
     public BalanceTransferResponse withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -31,6 +32,7 @@ public class BalanceTransferResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public BalanceTransferResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -42,6 +44,7 @@ public class BalanceTransferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BalanceTransferResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -52,6 +55,7 @@ public class BalanceTransferResponse {
      */
     @JsonProperty("fromMerchant")
     public String fromMerchant;
+
     public BalanceTransferResponse withFromMerchant(String fromMerchant) {
         this.fromMerchant = fromMerchant;
         return this;
@@ -62,6 +66,7 @@ public class BalanceTransferResponse {
      */
     @JsonProperty("pspReference")
     public String pspReference;
+
     public BalanceTransferResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -74,6 +79,7 @@ public class BalanceTransferResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public BalanceTransferResponse withReference(String reference) {
         this.reference = reference;
         return this;
@@ -84,6 +90,7 @@ public class BalanceTransferResponse {
      */
     @JsonProperty("status")
     public BalanceTransferResponseStatusEnum status;
+
     public BalanceTransferResponse withStatus(BalanceTransferResponseStatusEnum status) {
         this.status = status;
         return this;
@@ -94,6 +101,7 @@ public class BalanceTransferResponse {
      */
     @JsonProperty("toMerchant")
     public String toMerchant;
+
     public BalanceTransferResponse withToMerchant(String toMerchant) {
         this.toMerchant = toMerchant;
         return this;
@@ -104,9 +112,19 @@ public class BalanceTransferResponse {
      */
     @JsonProperty("type")
     public BalanceTransferResponseTypeEnum type;
+
     public BalanceTransferResponse withType(BalanceTransferResponseTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public BalanceTransferResponse(@JsonProperty("amount") Amount amount, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("fromMerchant") String fromMerchant, @JsonProperty("pspReference") String pspReference, @JsonProperty("status") BalanceTransferResponseStatusEnum status, @JsonProperty("toMerchant") String toMerchant, @JsonProperty("type") BalanceTransferResponseTypeEnum type) {
+        this.amount = amount;
+        this.createdAt = createdAt;
+        this.fromMerchant = fromMerchant;
+        this.pspReference = pspReference;
+        this.status = status;
+        this.toMerchant = toMerchant;
+        this.type = type;
+  }
 }

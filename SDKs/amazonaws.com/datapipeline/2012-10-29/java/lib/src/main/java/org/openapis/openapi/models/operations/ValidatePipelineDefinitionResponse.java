@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ValidatePipelineDefinitionResponse {
     
     public String contentType;
+
     public ValidatePipelineDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ValidatePipelineDefinitionResponse {
      */
     
     public Object internalServiceError;
+
     public ValidatePipelineDefinitionResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ValidatePipelineDefinitionResponse {
      */
     
     public Object invalidRequestException;
+
     public ValidatePipelineDefinitionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ValidatePipelineDefinitionResponse {
      */
     
     public Object pipelineDeletedException;
+
     public ValidatePipelineDefinitionResponse withPipelineDeletedException(Object pipelineDeletedException) {
         this.pipelineDeletedException = pipelineDeletedException;
         return this;
@@ -49,6 +54,7 @@ public class ValidatePipelineDefinitionResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public ValidatePipelineDefinitionResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ValidatePipelineDefinitionResponse {
     
     
     public Integer statusCode;
+
     public ValidatePipelineDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ValidatePipelineDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ValidatePipelineDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ValidatePipelineDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidatePipelineDefinitionOutput validatePipelineDefinitionOutput;
+
     public ValidatePipelineDefinitionResponse withValidatePipelineDefinitionOutput(org.openapis.openapi.models.shared.ValidatePipelineDefinitionOutput validatePipelineDefinitionOutput) {
         this.validatePipelineDefinitionOutput = validatePipelineDefinitionOutput;
         return this;
     }
     
+    public ValidatePipelineDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

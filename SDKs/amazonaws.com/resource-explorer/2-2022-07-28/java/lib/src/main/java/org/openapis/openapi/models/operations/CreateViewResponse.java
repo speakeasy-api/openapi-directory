@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateViewResponse {
@@ -12,6 +13,7 @@ public class CreateViewResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateViewResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateViewResponse {
      */
     
     public Object conflictException;
+
     public CreateViewResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateViewResponse {
     
     
     public String contentType;
+
     public CreateViewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateViewResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateViewOutput createViewOutput;
+
     public CreateViewResponse withCreateViewOutput(org.openapis.openapi.models.shared.CreateViewOutput createViewOutput) {
         this.createViewOutput = createViewOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateViewResponse {
      */
     
     public Object internalServerException;
+
     public CreateViewResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateViewResponse {
     
     
     public Integer statusCode;
+
     public CreateViewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateViewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateViewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateViewResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateViewResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateViewResponse {
      */
     
     public Object throttlingException;
+
     public CreateViewResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class CreateViewResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateViewResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -103,9 +114,14 @@ public class CreateViewResponse {
      */
     
     public Object validationException;
+
     public CreateViewResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateViewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSlackChannelConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateSlackChannelConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateSlackChannelConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateSlackChannelConfigurationResponse {
      */
     
     public Object conflictException;
+
     public UpdateSlackChannelConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSlackChannelConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateSlackChannelConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSlackChannelConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateSlackChannelConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSlackChannelConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateSlackChannelConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateSlackChannelConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateSlackChannelConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSlackChannelConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSlackChannelConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSlackChannelConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSlackChannelConfigurationResult updateSlackChannelConfigurationResult;
+
     public UpdateSlackChannelConfigurationResponse withUpdateSlackChannelConfigurationResult(org.openapis.openapi.models.shared.UpdateSlackChannelConfigurationResult updateSlackChannelConfigurationResult) {
         this.updateSlackChannelConfigurationResult = updateSlackChannelConfigurationResult;
         return this;
@@ -83,9 +92,14 @@ public class UpdateSlackChannelConfigurationResponse {
      */
     
     public Object validationException;
+
     public UpdateSlackChannelConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateSlackChannelConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

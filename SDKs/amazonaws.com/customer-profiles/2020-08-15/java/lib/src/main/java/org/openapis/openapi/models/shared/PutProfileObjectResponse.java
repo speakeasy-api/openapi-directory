@@ -15,9 +15,11 @@ public class PutProfileObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfileObjectUniqueKey")
     public String profileObjectUniqueKey;
+
     public PutProfileObjectResponse withProfileObjectUniqueKey(String profileObjectUniqueKey) {
         this.profileObjectUniqueKey = profileObjectUniqueKey;
         return this;
     }
     
+    public PutProfileObjectResponse(){}
 }

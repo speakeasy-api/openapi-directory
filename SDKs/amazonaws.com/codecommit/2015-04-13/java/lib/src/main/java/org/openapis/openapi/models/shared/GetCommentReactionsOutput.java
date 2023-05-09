@@ -15,6 +15,7 @@ public class GetCommentReactionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetCommentReactionsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class GetCommentReactionsOutput {
     
     @JsonProperty("reactionsForComment")
     public ReactionForComment[] reactionsForComment;
+
     public GetCommentReactionsOutput withReactionsForComment(ReactionForComment[] reactionsForComment) {
         this.reactionsForComment = reactionsForComment;
         return this;
     }
     
+    public GetCommentReactionsOutput(@JsonProperty("reactionsForComment") ReactionForComment[] reactionsForComment) {
+        this.reactionsForComment = reactionsForComment;
+  }
 }

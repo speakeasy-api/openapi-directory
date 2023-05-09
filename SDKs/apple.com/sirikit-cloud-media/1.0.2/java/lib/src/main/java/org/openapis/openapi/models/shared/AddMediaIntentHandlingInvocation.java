@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddMediaIntentHandlingInvocation {
     @JsonProperty("method")
     public String method;
+
     public AddMediaIntentHandlingInvocation withMethod(String method) {
         this.method = method;
         return this;
@@ -18,6 +19,7 @@ public class AddMediaIntentHandlingInvocation {
     
     @JsonProperty("params")
     public java.util.Map<String, Object> params;
+
     public AddMediaIntentHandlingInvocation withParams(java.util.Map<String, Object> params) {
         this.params = params;
         return this;
@@ -26,9 +28,14 @@ public class AddMediaIntentHandlingInvocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("session")
     public Session session;
+
     public AddMediaIntentHandlingInvocation withSession(Session session) {
         this.session = session;
         return this;
     }
     
+    public AddMediaIntentHandlingInvocation(@JsonProperty("method") String method, @JsonProperty("params") java.util.Map<String, Object> params) {
+        this.method = method;
+        this.params = params;
+  }
 }

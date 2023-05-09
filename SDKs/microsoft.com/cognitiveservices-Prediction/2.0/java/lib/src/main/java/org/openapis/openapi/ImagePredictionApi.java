@@ -71,14 +71,12 @@ public class ImagePredictionApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PredictImageResponse res = new org.openapis.openapi.models.operations.PredictImageResponse() {{
+        org.openapis.openapi.models.operations.PredictImageResponse res = new org.openapis.openapi.models.operations.PredictImageResponse(contentType, httpRes.statusCode()) {{
             imagePrediction = null;
             imagePrediction = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,14 +142,12 @@ public class ImagePredictionApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PredictImageUrlWithNoStoreFormResponse res = new org.openapis.openapi.models.operations.PredictImageUrlWithNoStoreFormResponse() {{
+        org.openapis.openapi.models.operations.PredictImageUrlWithNoStoreFormResponse res = new org.openapis.openapi.models.operations.PredictImageUrlWithNoStoreFormResponse(contentType, httpRes.statusCode()) {{
             imagePrediction = null;
             imagePrediction = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -217,14 +213,12 @@ public class ImagePredictionApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PredictImageUrlWithNoStoreJsonResponse res = new org.openapis.openapi.models.operations.PredictImageUrlWithNoStoreJsonResponse() {{
+        org.openapis.openapi.models.operations.PredictImageUrlWithNoStoreJsonResponse res = new org.openapis.openapi.models.operations.PredictImageUrlWithNoStoreJsonResponse(contentType, httpRes.statusCode()) {{
             imagePrediction = null;
             imagePrediction = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,14 +284,12 @@ public class ImagePredictionApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PredictImageUrlWithNoStoreRawResponse res = new org.openapis.openapi.models.operations.PredictImageUrlWithNoStoreRawResponse() {{
+        org.openapis.openapi.models.operations.PredictImageUrlWithNoStoreRawResponse res = new org.openapis.openapi.models.operations.PredictImageUrlWithNoStoreRawResponse(contentType, httpRes.statusCode()) {{
             imagePrediction = null;
             imagePrediction = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -363,14 +355,12 @@ public class ImagePredictionApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PredictImageUrlFormResponse res = new org.openapis.openapi.models.operations.PredictImageUrlFormResponse() {{
+        org.openapis.openapi.models.operations.PredictImageUrlFormResponse res = new org.openapis.openapi.models.operations.PredictImageUrlFormResponse(contentType, httpRes.statusCode()) {{
             imagePrediction = null;
             imagePrediction = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,14 +426,12 @@ public class ImagePredictionApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PredictImageUrlJsonResponse res = new org.openapis.openapi.models.operations.PredictImageUrlJsonResponse() {{
+        org.openapis.openapi.models.operations.PredictImageUrlJsonResponse res = new org.openapis.openapi.models.operations.PredictImageUrlJsonResponse(contentType, httpRes.statusCode()) {{
             imagePrediction = null;
             imagePrediction = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -509,14 +497,12 @@ public class ImagePredictionApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PredictImageUrlRawResponse res = new org.openapis.openapi.models.operations.PredictImageUrlRawResponse() {{
+        org.openapis.openapi.models.operations.PredictImageUrlRawResponse res = new org.openapis.openapi.models.operations.PredictImageUrlRawResponse(contentType, httpRes.statusCode()) {{
             imagePrediction = null;
             imagePrediction = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -582,14 +568,12 @@ public class ImagePredictionApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PredictImageWithNoStoreResponse res = new org.openapis.openapi.models.operations.PredictImageWithNoStoreResponse() {{
+        org.openapis.openapi.models.operations.PredictImageWithNoStoreResponse res = new org.openapis.openapi.models.operations.PredictImageWithNoStoreResponse(contentType, httpRes.statusCode()) {{
             imagePrediction = null;
             imagePrediction = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

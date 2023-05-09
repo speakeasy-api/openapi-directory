@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1Sku {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingInfo")
     public GoogleCloudChannelV1MarketingInfo marketingInfo;
+
     public GoogleCloudChannelV1Sku withMarketingInfo(GoogleCloudChannelV1MarketingInfo marketingInfo) {
         this.marketingInfo = marketingInfo;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1Sku {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudChannelV1Sku withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudChannelV1Sku {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public GoogleCloudChannelV1Product product;
+
     public GoogleCloudChannelV1Sku withProduct(GoogleCloudChannelV1Product product) {
         this.product = product;
         return this;
     }
     
+    public GoogleCloudChannelV1Sku(){}
 }

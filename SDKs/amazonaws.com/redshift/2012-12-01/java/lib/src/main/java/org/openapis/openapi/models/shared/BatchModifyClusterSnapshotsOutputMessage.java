@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class BatchModifyClusterSnapshotsOutputMessage {
     
     public BatchSnapshotOperationErrors[] errors;
+
     public BatchModifyClusterSnapshotsOutputMessage withErrors(BatchSnapshotOperationErrors[] errors) {
         this.errors = errors;
         return this;
@@ -19,9 +20,11 @@ public class BatchModifyClusterSnapshotsOutputMessage {
     
     
     public String[] resources;
+
     public BatchModifyClusterSnapshotsOutputMessage withResources(String[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public BatchModifyClusterSnapshotsOutputMessage(){}
 }

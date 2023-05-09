@@ -15,6 +15,7 @@ public class RegisterRobotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleet")
     public String fleet;
+
     public RegisterRobotResponse withFleet(String fleet) {
         this.fleet = fleet;
         return this;
@@ -23,9 +24,11 @@ public class RegisterRobotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robot")
     public String robot;
+
     public RegisterRobotResponse withRobot(String robot) {
         this.robot = robot;
         return this;
     }
     
+    public RegisterRobotResponse(){}
 }

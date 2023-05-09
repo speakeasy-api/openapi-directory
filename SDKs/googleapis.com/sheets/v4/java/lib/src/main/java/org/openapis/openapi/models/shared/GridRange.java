@@ -18,6 +18,7 @@ public class GridRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endColumnIndex")
     public Integer endColumnIndex;
+
     public GridRange withEndColumnIndex(Integer endColumnIndex) {
         this.endColumnIndex = endColumnIndex;
         return this;
@@ -29,6 +30,7 @@ public class GridRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endRowIndex")
     public Integer endRowIndex;
+
     public GridRange withEndRowIndex(Integer endRowIndex) {
         this.endRowIndex = endRowIndex;
         return this;
@@ -40,6 +42,7 @@ public class GridRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetId")
     public Integer sheetId;
+
     public GridRange withSheetId(Integer sheetId) {
         this.sheetId = sheetId;
         return this;
@@ -51,6 +54,7 @@ public class GridRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startColumnIndex")
     public Integer startColumnIndex;
+
     public GridRange withStartColumnIndex(Integer startColumnIndex) {
         this.startColumnIndex = startColumnIndex;
         return this;
@@ -62,9 +66,11 @@ public class GridRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startRowIndex")
     public Integer startRowIndex;
+
     public GridRange withStartRowIndex(Integer startRowIndex) {
         this.startRowIndex = startRowIndex;
         return this;
     }
     
+    public GridRange(){}
 }

@@ -18,9 +18,11 @@ public class V1Beta1OverrideInlineSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrides")
     public V1Beta1QuotaOverride[] overrides;
+
     public V1Beta1OverrideInlineSource withOverrides(V1Beta1QuotaOverride[] overrides) {
         this.overrides = overrides;
         return this;
     }
     
+    public V1Beta1OverrideInlineSource(){}
 }

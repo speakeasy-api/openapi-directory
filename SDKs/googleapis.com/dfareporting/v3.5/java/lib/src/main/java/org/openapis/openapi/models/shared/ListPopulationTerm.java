@@ -18,6 +18,7 @@ public class ListPopulationTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contains")
     public Boolean contains;
+
     public ListPopulationTerm withContains(Boolean contains) {
         this.contains = contains;
         return this;
@@ -29,6 +30,7 @@ public class ListPopulationTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negation")
     public Boolean negation;
+
     public ListPopulationTerm withNegation(Boolean negation) {
         this.negation = negation;
         return this;
@@ -40,6 +42,7 @@ public class ListPopulationTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public ListPopulationTermOperatorEnum operator;
+
     public ListPopulationTerm withOperator(ListPopulationTermOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -51,6 +54,7 @@ public class ListPopulationTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remarketingListId")
     public String remarketingListId;
+
     public ListPopulationTerm withRemarketingListId(String remarketingListId) {
         this.remarketingListId = remarketingListId;
         return this;
@@ -62,6 +66,7 @@ public class ListPopulationTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ListPopulationTermTypeEnum type;
+
     public ListPopulationTerm withType(ListPopulationTermTypeEnum type) {
         this.type = type;
         return this;
@@ -73,6 +78,7 @@ public class ListPopulationTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ListPopulationTerm withValue(String value) {
         this.value = value;
         return this;
@@ -84,6 +90,7 @@ public class ListPopulationTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variableFriendlyName")
     public String variableFriendlyName;
+
     public ListPopulationTerm withVariableFriendlyName(String variableFriendlyName) {
         this.variableFriendlyName = variableFriendlyName;
         return this;
@@ -95,9 +102,11 @@ public class ListPopulationTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variableName")
     public String variableName;
+
     public ListPopulationTerm withVariableName(String variableName) {
         this.variableName = variableName;
         return this;
     }
     
+    public ListPopulationTerm(){}
 }

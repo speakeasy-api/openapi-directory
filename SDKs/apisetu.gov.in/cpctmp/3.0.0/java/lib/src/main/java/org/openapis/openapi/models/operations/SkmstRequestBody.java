@@ -15,6 +15,7 @@ public class SkmstRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public SkmstRequestBodyCertificateParameters certificateParameters;
+
     public SkmstRequestBody withCertificateParameters(SkmstRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class SkmstRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public SkmstRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class SkmstRequestBody {
      */
     @JsonProperty("format")
     public SkmstRequestBodyFormatEnum format;
+
     public SkmstRequestBody withFormat(SkmstRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class SkmstRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public SkmstRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public SkmstRequestBody(@JsonProperty("format") SkmstRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

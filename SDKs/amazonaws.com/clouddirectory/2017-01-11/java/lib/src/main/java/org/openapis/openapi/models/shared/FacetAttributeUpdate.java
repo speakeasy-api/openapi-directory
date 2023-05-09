@@ -15,6 +15,7 @@ public class FacetAttributeUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public UpdateActionTypeEnum action;
+
     public FacetAttributeUpdate withAction(UpdateActionTypeEnum action) {
         this.action = action;
         return this;
@@ -23,9 +24,11 @@ public class FacetAttributeUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attribute")
     public FacetAttribute attribute;
+
     public FacetAttributeUpdate withAttribute(FacetAttribute attribute) {
         this.attribute = attribute;
         return this;
     }
     
+    public FacetAttributeUpdate(){}
 }

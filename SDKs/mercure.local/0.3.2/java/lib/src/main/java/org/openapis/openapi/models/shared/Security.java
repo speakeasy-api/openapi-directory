@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class Security {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String bearer;
+
     public Security withBearer(String bearer) {
         this.bearer = bearer;
         return this;
@@ -16,9 +17,11 @@ public class Security {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=cookie,name=mercureAuthorization")
     public String cookie;
+
     public Security withCookie(String cookie) {
         this.cookie = cookie;
         return this;
     }
     
+    public Security(){}
 }

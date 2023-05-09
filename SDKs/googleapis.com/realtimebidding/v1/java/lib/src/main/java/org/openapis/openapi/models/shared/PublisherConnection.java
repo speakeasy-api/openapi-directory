@@ -18,6 +18,7 @@ public class PublisherConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biddingState")
     public PublisherConnectionBiddingStateEnum biddingState;
+
     public PublisherConnection withBiddingState(PublisherConnectionBiddingStateEnum biddingState) {
         this.biddingState = biddingState;
         return this;
@@ -29,6 +30,7 @@ public class PublisherConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public PublisherConnection withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class PublisherConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PublisherConnection withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class PublisherConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PublisherConnection withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class PublisherConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherPlatform")
     public PublisherConnectionPublisherPlatformEnum publisherPlatform;
+
     public PublisherConnection withPublisherPlatform(PublisherConnectionPublisherPlatformEnum publisherPlatform) {
         this.publisherPlatform = publisherPlatform;
         return this;
     }
     
+    public PublisherConnection(){}
 }

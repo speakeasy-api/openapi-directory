@@ -18,6 +18,7 @@ public class TrackingFloodlightActivityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floodlightActivityId")
     public String floodlightActivityId;
+
     public TrackingFloodlightActivityConfig withFloodlightActivityId(String floodlightActivityId) {
         this.floodlightActivityId = floodlightActivityId;
         return this;
@@ -29,6 +30,7 @@ public class TrackingFloodlightActivityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postClickLookbackWindowDays")
     public Integer postClickLookbackWindowDays;
+
     public TrackingFloodlightActivityConfig withPostClickLookbackWindowDays(Integer postClickLookbackWindowDays) {
         this.postClickLookbackWindowDays = postClickLookbackWindowDays;
         return this;
@@ -40,9 +42,11 @@ public class TrackingFloodlightActivityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postViewLookbackWindowDays")
     public Integer postViewLookbackWindowDays;
+
     public TrackingFloodlightActivityConfig withPostViewLookbackWindowDays(Integer postViewLookbackWindowDays) {
         this.postViewLookbackWindowDays = postViewLookbackWindowDays;
         return this;
     }
     
+    public TrackingFloodlightActivityConfig(){}
 }

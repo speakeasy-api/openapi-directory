@@ -20,6 +20,7 @@ public class ListClustersInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterStates")
     public ClusterStateEnum[] clusterStates;
+
     public ListClustersInput withClusterStates(ClusterStateEnum[] clusterStates) {
         this.clusterStates = clusterStates;
         return this;
@@ -30,6 +31,7 @@ public class ListClustersInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAfter")
     public OffsetDateTime createdAfter;
+
     public ListClustersInput withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -40,6 +42,7 @@ public class ListClustersInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedBefore")
     public OffsetDateTime createdBefore;
+
     public ListClustersInput withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -48,9 +51,11 @@ public class ListClustersInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListClustersInput withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListClustersInput(){}
 }

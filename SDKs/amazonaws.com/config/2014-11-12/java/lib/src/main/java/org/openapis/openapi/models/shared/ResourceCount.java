@@ -15,6 +15,7 @@ public class ResourceCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public ResourceCount withCount(Long count) {
         this.count = count;
         return this;
@@ -23,9 +24,11 @@ public class ResourceCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public ResourceCount withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ResourceCount(){}
 }

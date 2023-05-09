@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociatePersonasToEntitiesResponse {
@@ -12,6 +13,7 @@ public class AssociatePersonasToEntitiesResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociatePersonasToEntitiesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociatePersonasToEntitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociatePersonasToEntitiesResponse associatePersonasToEntitiesResponse;
+
     public AssociatePersonasToEntitiesResponse withAssociatePersonasToEntitiesResponse(org.openapis.openapi.models.shared.AssociatePersonasToEntitiesResponse associatePersonasToEntitiesResponse) {
         this.associatePersonasToEntitiesResponse = associatePersonasToEntitiesResponse;
         return this;
@@ -29,6 +32,7 @@ public class AssociatePersonasToEntitiesResponse {
     
     
     public String contentType;
+
     public AssociatePersonasToEntitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociatePersonasToEntitiesResponse {
      */
     
     public Object internalServerException;
+
     public AssociatePersonasToEntitiesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class AssociatePersonasToEntitiesResponse {
      */
     
     public Object resourceAlreadyExistException;
+
     public AssociatePersonasToEntitiesResponse withResourceAlreadyExistException(Object resourceAlreadyExistException) {
         this.resourceAlreadyExistException = resourceAlreadyExistException;
         return this;
@@ -59,6 +65,7 @@ public class AssociatePersonasToEntitiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociatePersonasToEntitiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AssociatePersonasToEntitiesResponse {
     
     
     public Integer statusCode;
+
     public AssociatePersonasToEntitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AssociatePersonasToEntitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociatePersonasToEntitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AssociatePersonasToEntitiesResponse {
      */
     
     public Object throttlingException;
+
     public AssociatePersonasToEntitiesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class AssociatePersonasToEntitiesResponse {
      */
     
     public Object validationException;
+
     public AssociatePersonasToEntitiesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociatePersonasToEntitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

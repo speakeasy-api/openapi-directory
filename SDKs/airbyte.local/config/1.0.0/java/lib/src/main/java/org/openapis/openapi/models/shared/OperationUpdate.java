@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OperationUpdate {
     @JsonProperty("name")
     public String name;
+
     public OperationUpdate withName(String name) {
         this.name = name;
         return this;
@@ -16,6 +17,7 @@ public class OperationUpdate {
     
     @JsonProperty("operationId")
     public String operationId;
+
     public OperationUpdate withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -23,9 +25,15 @@ public class OperationUpdate {
     
     @JsonProperty("operatorConfiguration")
     public OperatorConfiguration operatorConfiguration;
+
     public OperationUpdate withOperatorConfiguration(OperatorConfiguration operatorConfiguration) {
         this.operatorConfiguration = operatorConfiguration;
         return this;
     }
     
+    public OperationUpdate(@JsonProperty("name") String name, @JsonProperty("operationId") String operationId, @JsonProperty("operatorConfiguration") OperatorConfiguration operatorConfiguration) {
+        this.name = name;
+        this.operationId = operationId;
+        this.operatorConfiguration = operatorConfiguration;
+  }
 }

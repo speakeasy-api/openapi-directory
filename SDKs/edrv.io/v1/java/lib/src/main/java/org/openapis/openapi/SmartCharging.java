@@ -56,11 +56,9 @@ public class SmartCharging {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletechargingscheduleResponse res = new org.openapis.openapi.models.operations.DeletechargingscheduleResponse() {{
+        org.openapis.openapi.models.operations.DeletechargingscheduleResponse res = new org.openapis.openapi.models.operations.DeletechargingscheduleResponse(contentType, httpRes.statusCode()) {{
             deletechargingschedule201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -102,11 +100,9 @@ public class SmartCharging {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetchargingscheduleResponse res = new org.openapis.openapi.models.operations.SetchargingscheduleResponse() {{
+        org.openapis.openapi.models.operations.SetchargingscheduleResponse res = new org.openapis.openapi.models.operations.SetchargingscheduleResponse(contentType, httpRes.statusCode()) {{
             setchargingschedule201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

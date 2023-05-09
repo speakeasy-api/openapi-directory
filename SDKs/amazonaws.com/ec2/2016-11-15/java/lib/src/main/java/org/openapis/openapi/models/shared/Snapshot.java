@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class Snapshot {
     
     public String dataEncryptionKeyId;
+
     public Snapshot withDataEncryptionKeyId(String dataEncryptionKeyId) {
         this.dataEncryptionKeyId = dataEncryptionKeyId;
         return this;
@@ -19,6 +20,7 @@ public class Snapshot {
     
     
     public String description;
+
     public Snapshot withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class Snapshot {
     
     
     public Boolean encrypted;
+
     public Snapshot withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -33,6 +36,7 @@ public class Snapshot {
     
     
     public String kmsKeyId;
+
     public Snapshot withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -40,6 +44,7 @@ public class Snapshot {
     
     
     public String outpostArn;
+
     public Snapshot withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -47,6 +52,7 @@ public class Snapshot {
     
     
     public String ownerAlias;
+
     public Snapshot withOwnerAlias(String ownerAlias) {
         this.ownerAlias = ownerAlias;
         return this;
@@ -54,6 +60,7 @@ public class Snapshot {
     
     
     public String ownerId;
+
     public Snapshot withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -61,6 +68,7 @@ public class Snapshot {
     
     
     public String progress;
+
     public Snapshot withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -68,6 +76,7 @@ public class Snapshot {
     
     
     public OffsetDateTime restoreExpiryTime;
+
     public Snapshot withRestoreExpiryTime(OffsetDateTime restoreExpiryTime) {
         this.restoreExpiryTime = restoreExpiryTime;
         return this;
@@ -75,6 +84,7 @@ public class Snapshot {
     
     
     public String snapshotId;
+
     public Snapshot withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -82,6 +92,7 @@ public class Snapshot {
     
     
     public OffsetDateTime startTime;
+
     public Snapshot withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -89,6 +100,7 @@ public class Snapshot {
     
     
     public SnapshotStateEnum state;
+
     public Snapshot withState(SnapshotStateEnum state) {
         this.state = state;
         return this;
@@ -96,6 +108,7 @@ public class Snapshot {
     
     
     public String stateMessage;
+
     public Snapshot withStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
         return this;
@@ -103,6 +116,7 @@ public class Snapshot {
     
     
     public SnapshotStorageTierEnum storageTier;
+
     public Snapshot withStorageTier(SnapshotStorageTierEnum storageTier) {
         this.storageTier = storageTier;
         return this;
@@ -110,6 +124,7 @@ public class Snapshot {
     
     
     public SnapshotTags[] tags;
+
     public Snapshot withTags(SnapshotTags[] tags) {
         this.tags = tags;
         return this;
@@ -117,6 +132,7 @@ public class Snapshot {
     
     
     public String volumeId;
+
     public Snapshot withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
@@ -124,9 +140,11 @@ public class Snapshot {
     
     
     public Long volumeSize;
+
     public Snapshot withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
     }
     
+    public Snapshot(){}
 }

@@ -12,6 +12,7 @@ public class CreateOrganizationSamlRoleRequestBodyTags {
      */
     @JsonProperty("access")
     public String access;
+
     public CreateOrganizationSamlRoleRequestBodyTags withAccess(String access) {
         this.access = access;
         return this;
@@ -22,9 +23,14 @@ public class CreateOrganizationSamlRoleRequestBodyTags {
      */
     @JsonProperty("tag")
     public String tag;
+
     public CreateOrganizationSamlRoleRequestBodyTags withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public CreateOrganizationSamlRoleRequestBodyTags(@JsonProperty("access") String access, @JsonProperty("tag") String tag) {
+        this.access = access;
+        this.tag = tag;
+  }
 }

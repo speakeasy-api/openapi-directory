@@ -23,6 +23,7 @@ public class Worker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalFixedProperties")
     public String additionalFixedProperties;
+
     public Worker withAdditionalFixedProperties(String additionalFixedProperties) {
         this.additionalFixedProperties = additionalFixedProperties;
         return this;
@@ -34,6 +35,7 @@ public class Worker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalTransientProperties")
     public String additionalTransientProperties;
+
     public Worker withAdditionalTransientProperties(String additionalTransientProperties) {
         this.additionalTransientProperties = additionalTransientProperties;
         return this;
@@ -44,6 +46,7 @@ public class Worker {
      */
     @JsonProperty("arn")
     public String arn;
+
     public Worker withArn(String arn) {
         this.arn = arn;
         return this;
@@ -56,6 +59,7 @@ public class Worker {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Worker withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -66,6 +70,7 @@ public class Worker {
      */
     @JsonProperty("fleet")
     public String fleet;
+
     public Worker withFleet(String fleet) {
         this.fleet = fleet;
         return this;
@@ -76,6 +81,7 @@ public class Worker {
      */
     @JsonProperty("id")
     public String id;
+
     public Worker withId(String id) {
         this.id = id;
         return this;
@@ -86,6 +92,7 @@ public class Worker {
      */
     @JsonProperty("name")
     public String name;
+
     public Worker withName(String name) {
         this.name = name;
         return this;
@@ -97,6 +104,7 @@ public class Worker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientation")
     public Orientation orientation;
+
     public Worker withOrientation(Orientation orientation) {
         this.orientation = orientation;
         return this;
@@ -108,6 +116,7 @@ public class Worker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public PositionCoordinates position;
+
     public Worker withPosition(PositionCoordinates position) {
         this.position = position;
         return this;
@@ -118,6 +127,7 @@ public class Worker {
      */
     @JsonProperty("site")
     public String site;
+
     public Worker withSite(String site) {
         this.site = site;
         return this;
@@ -130,6 +140,7 @@ public class Worker {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Worker withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -141,9 +152,19 @@ public class Worker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorProperties")
     public VendorProperties vendorProperties;
+
     public Worker withVendorProperties(VendorProperties vendorProperties) {
         this.vendorProperties = vendorProperties;
         return this;
     }
     
+    public Worker(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("fleet") String fleet, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("site") String site, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.fleet = fleet;
+        this.id = id;
+        this.name = name;
+        this.site = site;
+        this.updatedAt = updatedAt;
+  }
 }

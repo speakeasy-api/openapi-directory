@@ -18,6 +18,7 @@ public class AcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorCount")
     public Integer acceleratorCount;
+
     public AcceleratorConfig withAcceleratorCount(Integer acceleratorCount) {
         this.acceleratorCount = acceleratorCount;
         return this;
@@ -29,9 +30,11 @@ public class AcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorType")
     public String acceleratorType;
+
     public AcceleratorConfig withAcceleratorType(String acceleratorType) {
         this.acceleratorType = acceleratorType;
         return this;
     }
     
+    public AcceleratorConfig(){}
 }

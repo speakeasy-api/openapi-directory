@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DnsConfigChange {
     @JsonProperty("DnsRecords")
     public DnsRecord[] dnsRecords;
+
     public DnsConfigChange withDnsRecords(DnsRecord[] dnsRecords) {
         this.dnsRecords = dnsRecords;
         return this;
     }
     
+    public DnsConfigChange(@JsonProperty("DnsRecords") DnsRecord[] dnsRecords) {
+        this.dnsRecords = dnsRecords;
+  }
 }

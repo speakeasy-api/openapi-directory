@@ -15,6 +15,7 @@ public class ProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentInstanceCount")
     public Long currentInstanceCount;
+
     public ProductionVariantSummary withCurrentInstanceCount(Long currentInstanceCount) {
         this.currentInstanceCount = currentInstanceCount;
         return this;
@@ -23,6 +24,7 @@ public class ProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentServerlessConfig")
     public ProductionVariantServerlessConfig currentServerlessConfig;
+
     public ProductionVariantSummary withCurrentServerlessConfig(ProductionVariantServerlessConfig currentServerlessConfig) {
         this.currentServerlessConfig = currentServerlessConfig;
         return this;
@@ -31,6 +33,7 @@ public class ProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentWeight")
     public Float currentWeight;
+
     public ProductionVariantSummary withCurrentWeight(Float currentWeight) {
         this.currentWeight = currentWeight;
         return this;
@@ -39,6 +42,7 @@ public class ProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeployedImages")
     public DeployedImage[] deployedImages;
+
     public ProductionVariantSummary withDeployedImages(DeployedImage[] deployedImages) {
         this.deployedImages = deployedImages;
         return this;
@@ -47,6 +51,7 @@ public class ProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredInstanceCount")
     public Long desiredInstanceCount;
+
     public ProductionVariantSummary withDesiredInstanceCount(Long desiredInstanceCount) {
         this.desiredInstanceCount = desiredInstanceCount;
         return this;
@@ -55,6 +60,7 @@ public class ProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredServerlessConfig")
     public ProductionVariantServerlessConfig desiredServerlessConfig;
+
     public ProductionVariantSummary withDesiredServerlessConfig(ProductionVariantServerlessConfig desiredServerlessConfig) {
         this.desiredServerlessConfig = desiredServerlessConfig;
         return this;
@@ -63,6 +69,7 @@ public class ProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredWeight")
     public Float desiredWeight;
+
     public ProductionVariantSummary withDesiredWeight(Float desiredWeight) {
         this.desiredWeight = desiredWeight;
         return this;
@@ -70,6 +77,7 @@ public class ProductionVariantSummary {
     
     @JsonProperty("VariantName")
     public String variantName;
+
     public ProductionVariantSummary withVariantName(String variantName) {
         this.variantName = variantName;
         return this;
@@ -78,9 +86,13 @@ public class ProductionVariantSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VariantStatus")
     public ProductionVariantStatus[] variantStatus;
+
     public ProductionVariantSummary withVariantStatus(ProductionVariantStatus[] variantStatus) {
         this.variantStatus = variantStatus;
         return this;
     }
     
+    public ProductionVariantSummary(@JsonProperty("VariantName") String variantName) {
+        this.variantName = variantName;
+  }
 }

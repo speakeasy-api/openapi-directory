@@ -18,7 +18,7 @@ public enum TransactionDetailDebtTransactionTypeEnum {
     BALANCED_ADJUSTMENT("balancedAdjustment"),
     CREDIT("credit"),
     CHARGE("charge"),
-    NULL_("null");
+    LESS_THAN_NIL_GREATER_THAN("<nil>");
 
     @JsonValue
     public final String value;

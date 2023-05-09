@@ -18,9 +18,11 @@ public class RequestReviewFreeListingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public RequestReviewFreeListingsRequest withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public RequestReviewFreeListingsRequest(){}
 }

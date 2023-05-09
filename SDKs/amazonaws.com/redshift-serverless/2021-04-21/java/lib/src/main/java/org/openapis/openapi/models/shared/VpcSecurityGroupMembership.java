@@ -15,6 +15,7 @@ public class VpcSecurityGroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public VpcSecurityGroupMembership withStatus(String status) {
         this.status = status;
         return this;
@@ -23,9 +24,11 @@ public class VpcSecurityGroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcSecurityGroupId")
     public String vpcSecurityGroupId;
+
     public VpcSecurityGroupMembership withVpcSecurityGroupId(String vpcSecurityGroupId) {
         this.vpcSecurityGroupId = vpcSecurityGroupId;
         return this;
     }
     
+    public VpcSecurityGroupMembership(){}
 }

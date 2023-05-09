@@ -18,9 +18,11 @@ public class GoogleIamV1GetIamPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public GoogleIamV1GetPolicyOptions options;
+
     public GoogleIamV1GetIamPolicyRequest withOptions(GoogleIamV1GetPolicyOptions options) {
         this.options = options;
         return this;
     }
     
+    public GoogleIamV1GetIamPolicyRequest(){}
 }

@@ -20,6 +20,7 @@ public class DescribeMetricSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public DescribeMetricSetResponse withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -30,6 +31,7 @@ public class DescribeMetricSetResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeMetricSetResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class DescribeMetricSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionFilterList")
     public MetricSetDimensionFilter[] dimensionFilterList;
+
     public DescribeMetricSetResponse withDimensionFilterList(MetricSetDimensionFilter[] dimensionFilterList) {
         this.dimensionFilterList = dimensionFilterList;
         return this;
@@ -46,6 +49,7 @@ public class DescribeMetricSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionList")
     public String[] dimensionList;
+
     public DescribeMetricSetResponse withDimensionList(String[] dimensionList) {
         this.dimensionList = dimensionList;
         return this;
@@ -56,6 +60,7 @@ public class DescribeMetricSetResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DescribeMetricSetResponse withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -64,6 +69,7 @@ public class DescribeMetricSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricList")
     public Metric[] metricList;
+
     public DescribeMetricSetResponse withMetricList(Metric[] metricList) {
         this.metricList = metricList;
         return this;
@@ -72,6 +78,7 @@ public class DescribeMetricSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetArn")
     public String metricSetArn;
+
     public DescribeMetricSetResponse withMetricSetArn(String metricSetArn) {
         this.metricSetArn = metricSetArn;
         return this;
@@ -80,6 +87,7 @@ public class DescribeMetricSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetDescription")
     public String metricSetDescription;
+
     public DescribeMetricSetResponse withMetricSetDescription(String metricSetDescription) {
         this.metricSetDescription = metricSetDescription;
         return this;
@@ -88,6 +96,7 @@ public class DescribeMetricSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetFrequency")
     public FrequencyEnum metricSetFrequency;
+
     public DescribeMetricSetResponse withMetricSetFrequency(FrequencyEnum metricSetFrequency) {
         this.metricSetFrequency = metricSetFrequency;
         return this;
@@ -96,6 +105,7 @@ public class DescribeMetricSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetName")
     public String metricSetName;
+
     public DescribeMetricSetResponse withMetricSetName(String metricSetName) {
         this.metricSetName = metricSetName;
         return this;
@@ -104,6 +114,7 @@ public class DescribeMetricSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSource")
     public MetricSource metricSource;
+
     public DescribeMetricSetResponse withMetricSource(MetricSource metricSource) {
         this.metricSource = metricSource;
         return this;
@@ -112,6 +123,7 @@ public class DescribeMetricSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Offset")
     public Long offset;
+
     public DescribeMetricSetResponse withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -120,6 +132,7 @@ public class DescribeMetricSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimestampColumn")
     public TimestampColumn timestampColumn;
+
     public DescribeMetricSetResponse withTimestampColumn(TimestampColumn timestampColumn) {
         this.timestampColumn = timestampColumn;
         return this;
@@ -128,9 +141,11 @@ public class DescribeMetricSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timezone")
     public String timezone;
+
     public DescribeMetricSetResponse withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public DescribeMetricSetResponse(){}
 }

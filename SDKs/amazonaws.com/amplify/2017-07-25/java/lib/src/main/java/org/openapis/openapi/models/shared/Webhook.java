@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Webhook {
     @JsonProperty("branchName")
     public String branchName;
+
     public Webhook withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -26,6 +27,7 @@ public class Webhook {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public Webhook withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -33,6 +35,7 @@ public class Webhook {
     
     @JsonProperty("description")
     public String description;
+
     public Webhook withDescription(String description) {
         this.description = description;
         return this;
@@ -42,6 +45,7 @@ public class Webhook {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public Webhook withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -49,6 +53,7 @@ public class Webhook {
     
     @JsonProperty("webhookArn")
     public String webhookArn;
+
     public Webhook withWebhookArn(String webhookArn) {
         this.webhookArn = webhookArn;
         return this;
@@ -56,6 +61,7 @@ public class Webhook {
     
     @JsonProperty("webhookId")
     public String webhookId;
+
     public Webhook withWebhookId(String webhookId) {
         this.webhookId = webhookId;
         return this;
@@ -63,9 +69,19 @@ public class Webhook {
     
     @JsonProperty("webhookUrl")
     public String webhookUrl;
+
     public Webhook withWebhookUrl(String webhookUrl) {
         this.webhookUrl = webhookUrl;
         return this;
     }
     
+    public Webhook(@JsonProperty("branchName") String branchName, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("description") String description, @JsonProperty("updateTime") OffsetDateTime updateTime, @JsonProperty("webhookArn") String webhookArn, @JsonProperty("webhookId") String webhookId, @JsonProperty("webhookUrl") String webhookUrl) {
+        this.branchName = branchName;
+        this.createTime = createTime;
+        this.description = description;
+        this.updateTime = updateTime;
+        this.webhookArn = webhookArn;
+        this.webhookId = webhookId;
+        this.webhookUrl = webhookUrl;
+  }
 }

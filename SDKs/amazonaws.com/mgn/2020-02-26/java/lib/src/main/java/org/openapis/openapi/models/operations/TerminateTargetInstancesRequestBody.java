@@ -14,6 +14,7 @@ public class TerminateTargetInstancesRequestBody {
      */
     @JsonProperty("sourceServerIDs")
     public String[] sourceServerIDs;
+
     public TerminateTargetInstancesRequestBody withSourceServerIDs(String[] sourceServerIDs) {
         this.sourceServerIDs = sourceServerIDs;
         return this;
@@ -25,9 +26,13 @@ public class TerminateTargetInstancesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public TerminateTargetInstancesRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public TerminateTargetInstancesRequestBody(@JsonProperty("sourceServerIDs") String[] sourceServerIDs) {
+        this.sourceServerIDs = sourceServerIDs;
+  }
 }

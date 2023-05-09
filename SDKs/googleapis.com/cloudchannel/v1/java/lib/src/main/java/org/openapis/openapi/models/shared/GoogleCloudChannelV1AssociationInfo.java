@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1AssociationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseEntitlement")
     public String baseEntitlement;
+
     public GoogleCloudChannelV1AssociationInfo withBaseEntitlement(String baseEntitlement) {
         this.baseEntitlement = baseEntitlement;
         return this;
     }
     
+    public GoogleCloudChannelV1AssociationInfo(){}
 }

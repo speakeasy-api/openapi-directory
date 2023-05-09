@@ -15,6 +15,7 @@ public class JwtTokenTypeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClaimRegex")
     public String claimRegex;
+
     public JwtTokenTypeConfiguration withClaimRegex(String claimRegex) {
         this.claimRegex = claimRegex;
         return this;
@@ -23,6 +24,7 @@ public class JwtTokenTypeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupAttributeField")
     public String groupAttributeField;
+
     public JwtTokenTypeConfiguration withGroupAttributeField(String groupAttributeField) {
         this.groupAttributeField = groupAttributeField;
         return this;
@@ -31,6 +33,7 @@ public class JwtTokenTypeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Issuer")
     public String issuer;
+
     public JwtTokenTypeConfiguration withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -38,6 +41,7 @@ public class JwtTokenTypeConfiguration {
     
     @JsonProperty("KeyLocation")
     public KeyLocationEnum keyLocation;
+
     public JwtTokenTypeConfiguration withKeyLocation(KeyLocationEnum keyLocation) {
         this.keyLocation = keyLocation;
         return this;
@@ -46,6 +50,7 @@ public class JwtTokenTypeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretManagerArn")
     public String secretManagerArn;
+
     public JwtTokenTypeConfiguration withSecretManagerArn(String secretManagerArn) {
         this.secretManagerArn = secretManagerArn;
         return this;
@@ -54,6 +59,7 @@ public class JwtTokenTypeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("URL")
     public String url;
+
     public JwtTokenTypeConfiguration withUrl(String url) {
         this.url = url;
         return this;
@@ -62,9 +68,13 @@ public class JwtTokenTypeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserNameAttributeField")
     public String userNameAttributeField;
+
     public JwtTokenTypeConfiguration withUserNameAttributeField(String userNameAttributeField) {
         this.userNameAttributeField = userNameAttributeField;
         return this;
     }
     
+    public JwtTokenTypeConfiguration(@JsonProperty("KeyLocation") KeyLocationEnum keyLocation) {
+        this.keyLocation = keyLocation;
+  }
 }

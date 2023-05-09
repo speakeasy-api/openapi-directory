@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimerFiredEventAttributes {
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public TimerFiredEventAttributes withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
@@ -19,9 +20,14 @@ public class TimerFiredEventAttributes {
     
     @JsonProperty("timerId")
     public String timerId;
+
     public TimerFiredEventAttributes withTimerId(String timerId) {
         this.timerId = timerId;
         return this;
     }
     
+    public TimerFiredEventAttributes(@JsonProperty("startedEventId") Long startedEventId, @JsonProperty("timerId") String timerId) {
+        this.startedEventId = startedEventId;
+        this.timerId = timerId;
+  }
 }

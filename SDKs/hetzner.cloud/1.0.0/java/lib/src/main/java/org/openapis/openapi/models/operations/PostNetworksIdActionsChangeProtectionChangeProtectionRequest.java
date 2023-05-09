@@ -15,9 +15,11 @@ public class PostNetworksIdActionsChangeProtectionChangeProtectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete")
     public Boolean delete;
+
     public PostNetworksIdActionsChangeProtectionChangeProtectionRequest withDelete(Boolean delete) {
         this.delete = delete;
         return this;
     }
     
+    public PostNetworksIdActionsChangeProtectionChangeProtectionRequest(){}
 }

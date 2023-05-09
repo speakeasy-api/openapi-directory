@@ -18,6 +18,7 @@ public class DimensionProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceColumnReference")
     public DataSourceColumnReference dataSourceColumnReference;
+
     public DimensionProperties withDataSourceColumnReference(DataSourceColumnReference dataSourceColumnReference) {
         this.dataSourceColumnReference = dataSourceColumnReference;
         return this;
@@ -29,6 +30,7 @@ public class DimensionProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerMetadata")
     public DeveloperMetadata[] developerMetadata;
+
     public DimensionProperties withDeveloperMetadata(DeveloperMetadata[] developerMetadata) {
         this.developerMetadata = developerMetadata;
         return this;
@@ -40,6 +42,7 @@ public class DimensionProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiddenByFilter")
     public Boolean hiddenByFilter;
+
     public DimensionProperties withHiddenByFilter(Boolean hiddenByFilter) {
         this.hiddenByFilter = hiddenByFilter;
         return this;
@@ -51,6 +54,7 @@ public class DimensionProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiddenByUser")
     public Boolean hiddenByUser;
+
     public DimensionProperties withHiddenByUser(Boolean hiddenByUser) {
         this.hiddenByUser = hiddenByUser;
         return this;
@@ -62,9 +66,11 @@ public class DimensionProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pixelSize")
     public Integer pixelSize;
+
     public DimensionProperties withPixelSize(Integer pixelSize) {
         this.pixelSize = pixelSize;
         return this;
     }
     
+    public DimensionProperties(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CivicinfoElectionsVoterInfoQueryRequest {
@@ -12,6 +13,7 @@ public class CivicinfoElectionsVoterInfoQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CivicinfoElectionsVoterInfoQueryRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class CivicinfoElectionsVoterInfoQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CivicinfoElectionsVoterInfoQueryRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class CivicinfoElectionsVoterInfoQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")
     public String address;
+
     public CivicinfoElectionsVoterInfoQueryRequest withAddress(String address) {
         this.address = address;
         return this;
@@ -42,6 +46,7 @@ public class CivicinfoElectionsVoterInfoQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CivicinfoElectionsVoterInfoQueryRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class CivicinfoElectionsVoterInfoQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CivicinfoElectionsVoterInfoQueryRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class CivicinfoElectionsVoterInfoQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=electionId")
     public String electionId;
+
     public CivicinfoElectionsVoterInfoQueryRequest withElectionId(String electionId) {
         this.electionId = electionId;
         return this;
@@ -72,6 +79,7 @@ public class CivicinfoElectionsVoterInfoQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CivicinfoElectionsVoterInfoQueryRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class CivicinfoElectionsVoterInfoQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CivicinfoElectionsVoterInfoQueryRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class CivicinfoElectionsVoterInfoQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CivicinfoElectionsVoterInfoQueryRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class CivicinfoElectionsVoterInfoQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=officialOnly")
     public Boolean officialOnly;
+
     public CivicinfoElectionsVoterInfoQueryRequest withOfficialOnly(Boolean officialOnly) {
         this.officialOnly = officialOnly;
         return this;
@@ -112,6 +123,7 @@ public class CivicinfoElectionsVoterInfoQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CivicinfoElectionsVoterInfoQueryRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class CivicinfoElectionsVoterInfoQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CivicinfoElectionsVoterInfoQueryRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class CivicinfoElectionsVoterInfoQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnAllAvailableData")
     public Boolean returnAllAvailableData;
+
     public CivicinfoElectionsVoterInfoQueryRequest withReturnAllAvailableData(Boolean returnAllAvailableData) {
         this.returnAllAvailableData = returnAllAvailableData;
         return this;
@@ -142,6 +156,7 @@ public class CivicinfoElectionsVoterInfoQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CivicinfoElectionsVoterInfoQueryRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +167,13 @@ public class CivicinfoElectionsVoterInfoQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CivicinfoElectionsVoterInfoQueryRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CivicinfoElectionsVoterInfoQueryRequest(@JsonProperty("address") String address) {
+        this.address = address;
+  }
 }

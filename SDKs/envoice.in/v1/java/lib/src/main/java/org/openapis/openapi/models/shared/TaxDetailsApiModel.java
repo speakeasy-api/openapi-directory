@@ -22,6 +22,7 @@ public class TaxDetailsApiModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedOn")
     public OffsetDateTime createdOn;
+
     public TaxDetailsApiModel withCreatedOn(OffsetDateTime createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -33,6 +34,7 @@ public class TaxDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public TaxDetailsApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -44,6 +46,7 @@ public class TaxDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public TaxDetailsApiModel withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +58,11 @@ public class TaxDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Percentage")
     public Double percentage;
+
     public TaxDetailsApiModel withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public TaxDetailsApiModel(){}
 }

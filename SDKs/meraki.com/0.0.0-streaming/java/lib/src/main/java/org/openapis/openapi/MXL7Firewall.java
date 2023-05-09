@@ -53,11 +53,9 @@ public class MXL7Firewall {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkL7FirewallRulesResponse res = new org.openapis.openapi.models.operations.GetNetworkL7FirewallRulesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkL7FirewallRulesResponse res = new org.openapis.openapi.models.operations.GetNetworkL7FirewallRulesResponse(contentType, httpRes.statusCode()) {{
             getNetworkL7FirewallRules200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,11 +93,9 @@ public class MXL7Firewall {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkL7FirewallRulesResponse res = new org.openapis.openapi.models.operations.UpdateNetworkL7FirewallRulesResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkL7FirewallRulesResponse res = new org.openapis.openapi.models.operations.UpdateNetworkL7FirewallRulesResponse(contentType, httpRes.statusCode()) {{
             updateNetworkL7FirewallRules200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

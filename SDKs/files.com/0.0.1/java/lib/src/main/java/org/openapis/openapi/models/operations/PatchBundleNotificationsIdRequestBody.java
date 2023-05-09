@@ -12,6 +12,7 @@ public class PatchBundleNotificationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=notify_on_registration")
     public Boolean notifyOnRegistration;
+
     public PatchBundleNotificationsIdRequestBody withNotifyOnRegistration(Boolean notifyOnRegistration) {
         this.notifyOnRegistration = notifyOnRegistration;
         return this;
@@ -22,9 +23,11 @@ public class PatchBundleNotificationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=notify_on_upload")
     public Boolean notifyOnUpload;
+
     public PatchBundleNotificationsIdRequestBody withNotifyOnUpload(Boolean notifyOnUpload) {
         this.notifyOnUpload = notifyOnUpload;
         return this;
     }
     
+    public PatchBundleNotificationsIdRequestBody(){}
 }

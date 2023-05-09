@@ -18,6 +18,7 @@ public class TopologyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computations")
     public ComputationTopology[] computations;
+
     public TopologyConfig withComputations(ComputationTopology[] computations) {
         this.computations = computations;
         return this;
@@ -29,6 +30,7 @@ public class TopologyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataDiskAssignments")
     public DataDiskAssignment[] dataDiskAssignments;
+
     public TopologyConfig withDataDiskAssignments(DataDiskAssignment[] dataDiskAssignments) {
         this.dataDiskAssignments = dataDiskAssignments;
         return this;
@@ -40,6 +42,7 @@ public class TopologyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardingKeyBits")
     public Integer forwardingKeyBits;
+
     public TopologyConfig withForwardingKeyBits(Integer forwardingKeyBits) {
         this.forwardingKeyBits = forwardingKeyBits;
         return this;
@@ -51,6 +54,7 @@ public class TopologyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistentStateVersion")
     public Integer persistentStateVersion;
+
     public TopologyConfig withPersistentStateVersion(Integer persistentStateVersion) {
         this.persistentStateVersion = persistentStateVersion;
         return this;
@@ -62,9 +66,11 @@ public class TopologyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userStageToComputationNameMap")
     public java.util.Map<String, String> userStageToComputationNameMap;
+
     public TopologyConfig withUserStageToComputationNameMap(java.util.Map<String, String> userStageToComputationNameMap) {
         this.userStageToComputationNameMap = userStageToComputationNameMap;
         return this;
     }
     
+    public TopologyConfig(){}
 }

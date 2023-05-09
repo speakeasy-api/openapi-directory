@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DetachVpnGatewayRequest - Contains the parameters for DetachVpnGateway.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DetachVpnGatewayRequest {
     
     public Boolean dryRun;
+
     public DetachVpnGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class DetachVpnGatewayRequest {
     
     
     public String vpcId;
+
     public DetachVpnGatewayRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -26,9 +28,14 @@ public class DetachVpnGatewayRequest {
     
     
     public String vpnGatewayId;
+
     public DetachVpnGatewayRequest withVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
     
+    public DetachVpnGatewayRequest(@JsonProperty("VpcId") String vpcId, @JsonProperty("VpnGatewayId") String vpnGatewayId) {
+        this.vpcId = vpcId;
+        this.vpnGatewayId = vpnGatewayId;
+  }
 }

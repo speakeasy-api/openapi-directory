@@ -15,6 +15,7 @@ public class GetAccountSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountLimit")
     public AccountLimit accountLimit;
+
     public GetAccountSettingsResponse withAccountLimit(AccountLimit accountLimit) {
         this.accountLimit = accountLimit;
         return this;
@@ -23,9 +24,11 @@ public class GetAccountSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountUsage")
     public AccountUsage accountUsage;
+
     public GetAccountSettingsResponse withAccountUsage(AccountUsage accountUsage) {
         this.accountUsage = accountUsage;
         return this;
     }
     
+    public GetAccountSettingsResponse(){}
 }

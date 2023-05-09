@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlaceGetByTypeRequest {
@@ -12,6 +13,7 @@ public class PlaceGetByTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activeOnly")
     public Boolean activeOnly;
+
     public PlaceGetByTypeRequest withActiveOnly(Boolean activeOnly) {
         this.activeOnly = activeOnly;
         return this;
@@ -23,9 +25,13 @@ public class PlaceGetByTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=types")
     public String[] types;
+
     public PlaceGetByTypeRequest withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public PlaceGetByTypeRequest(@JsonProperty("types") String[] types) {
+        this.types = types;
+  }
 }

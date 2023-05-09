@@ -18,6 +18,7 @@ public class Invitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courseId")
     public String courseId;
+
     public Invitation withCourseId(String courseId) {
         this.courseId = courseId;
         return this;
@@ -29,6 +30,7 @@ public class Invitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Invitation withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class Invitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public InvitationRoleEnum role;
+
     public Invitation withRole(InvitationRoleEnum role) {
         this.role = role;
         return this;
@@ -51,9 +54,11 @@ public class Invitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public Invitation withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public Invitation(){}
 }

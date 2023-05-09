@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppDIdPUTRequest {
     @SpeakeasyMetadata("request:mediaType=application/zip")
     public byte[] requestBody;
+
     public AppDIdPUTRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class AppDIdPUTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appDId")
     public String appDId;
+
     public AppDIdPUTRequest withAppDId(String appDId) {
         this.appDId = appDId;
         return this;
     }
     
+    public AppDIdPUTRequest(@JsonProperty("appDId") String appDId) {
+        this.appDId = appDId;
+  }
 }

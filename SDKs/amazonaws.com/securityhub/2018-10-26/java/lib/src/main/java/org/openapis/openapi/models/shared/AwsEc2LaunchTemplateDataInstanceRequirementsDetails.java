@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorCount")
     public AwsEc2LaunchTemplateDataInstanceRequirementsAcceleratorCountDetails acceleratorCount;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withAcceleratorCount(AwsEc2LaunchTemplateDataInstanceRequirementsAcceleratorCountDetails acceleratorCount) {
         this.acceleratorCount = acceleratorCount;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorManufacturers")
     public String[] acceleratorManufacturers;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withAcceleratorManufacturers(String[] acceleratorManufacturers) {
         this.acceleratorManufacturers = acceleratorManufacturers;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorNames")
     public String[] acceleratorNames;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withAcceleratorNames(String[] acceleratorNames) {
         this.acceleratorNames = acceleratorNames;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorTotalMemoryMiB")
     public AwsEc2LaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiBDetails acceleratorTotalMemoryMiB;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withAcceleratorTotalMemoryMiB(AwsEc2LaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiBDetails acceleratorTotalMemoryMiB) {
         this.acceleratorTotalMemoryMiB = acceleratorTotalMemoryMiB;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorTypes")
     public String[] acceleratorTypes;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withAcceleratorTypes(String[] acceleratorTypes) {
         this.acceleratorTypes = acceleratorTypes;
         return this;
@@ -55,6 +60,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BareMetal")
     public String bareMetal;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withBareMetal(String bareMetal) {
         this.bareMetal = bareMetal;
         return this;
@@ -63,6 +69,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineEbsBandwidthMbps")
     public AwsEc2LaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbpsDetails baselineEbsBandwidthMbps;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withBaselineEbsBandwidthMbps(AwsEc2LaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbpsDetails baselineEbsBandwidthMbps) {
         this.baselineEbsBandwidthMbps = baselineEbsBandwidthMbps;
         return this;
@@ -71,6 +78,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BurstablePerformance")
     public String burstablePerformance;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withBurstablePerformance(String burstablePerformance) {
         this.burstablePerformance = burstablePerformance;
         return this;
@@ -79,6 +87,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CpuManufacturers")
     public String[] cpuManufacturers;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withCpuManufacturers(String[] cpuManufacturers) {
         this.cpuManufacturers = cpuManufacturers;
         return this;
@@ -87,6 +96,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludedInstanceTypes")
     public String[] excludedInstanceTypes;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withExcludedInstanceTypes(String[] excludedInstanceTypes) {
         this.excludedInstanceTypes = excludedInstanceTypes;
         return this;
@@ -95,6 +105,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceGenerations")
     public String[] instanceGenerations;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withInstanceGenerations(String[] instanceGenerations) {
         this.instanceGenerations = instanceGenerations;
         return this;
@@ -103,6 +114,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalStorage")
     public String localStorage;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withLocalStorage(String localStorage) {
         this.localStorage = localStorage;
         return this;
@@ -111,6 +123,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalStorageTypes")
     public String[] localStorageTypes;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withLocalStorageTypes(String[] localStorageTypes) {
         this.localStorageTypes = localStorageTypes;
         return this;
@@ -119,6 +132,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemoryGiBPerVCpu")
     public AwsEc2LaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuDetails memoryGiBPerVCpu;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withMemoryGiBPerVCpu(AwsEc2LaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuDetails memoryGiBPerVCpu) {
         this.memoryGiBPerVCpu = memoryGiBPerVCpu;
         return this;
@@ -127,6 +141,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemoryMiB")
     public AwsEc2LaunchTemplateDataInstanceRequirementsMemoryMiBDetails memoryMiB;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withMemoryMiB(AwsEc2LaunchTemplateDataInstanceRequirementsMemoryMiBDetails memoryMiB) {
         this.memoryMiB = memoryMiB;
         return this;
@@ -135,6 +150,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkInterfaceCount")
     public AwsEc2LaunchTemplateDataInstanceRequirementsNetworkInterfaceCountDetails networkInterfaceCount;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withNetworkInterfaceCount(AwsEc2LaunchTemplateDataInstanceRequirementsNetworkInterfaceCountDetails networkInterfaceCount) {
         this.networkInterfaceCount = networkInterfaceCount;
         return this;
@@ -143,6 +159,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDemandMaxPricePercentageOverLowestPrice")
     public Long onDemandMaxPricePercentageOverLowestPrice;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withOnDemandMaxPricePercentageOverLowestPrice(Long onDemandMaxPricePercentageOverLowestPrice) {
         this.onDemandMaxPricePercentageOverLowestPrice = onDemandMaxPricePercentageOverLowestPrice;
         return this;
@@ -151,6 +168,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequireHibernateSupport")
     public Boolean requireHibernateSupport;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withRequireHibernateSupport(Boolean requireHibernateSupport) {
         this.requireHibernateSupport = requireHibernateSupport;
         return this;
@@ -159,6 +177,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpotMaxPricePercentageOverLowestPrice")
     public Long spotMaxPricePercentageOverLowestPrice;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withSpotMaxPricePercentageOverLowestPrice(Long spotMaxPricePercentageOverLowestPrice) {
         this.spotMaxPricePercentageOverLowestPrice = spotMaxPricePercentageOverLowestPrice;
         return this;
@@ -167,6 +186,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalLocalStorageGB")
     public AwsEc2LaunchTemplateDataInstanceRequirementsTotalLocalStorageGBDetails totalLocalStorageGB;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withTotalLocalStorageGB(AwsEc2LaunchTemplateDataInstanceRequirementsTotalLocalStorageGBDetails totalLocalStorageGB) {
         this.totalLocalStorageGB = totalLocalStorageGB;
         return this;
@@ -175,9 +195,11 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VCpuCount")
     public AwsEc2LaunchTemplateDataInstanceRequirementsVCpuCountDetails vCpuCount;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails withVCpuCount(AwsEc2LaunchTemplateDataInstanceRequirementsVCpuCountDetails vCpuCount) {
         this.vCpuCount = vCpuCount;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataInstanceRequirementsDetails(){}
 }

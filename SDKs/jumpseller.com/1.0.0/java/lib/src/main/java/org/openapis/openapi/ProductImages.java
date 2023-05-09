@@ -57,12 +57,10 @@ public class ProductImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteProductsIdImagesImageIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteProductsIdImagesImageIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteProductsIdImagesImageIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteProductsIdImagesImageIdJsonResponse(contentType, httpRes.statusCode()) {{
             deleteProductsIdImagesImageIdJSON200ApplicationJSONString = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,12 +106,10 @@ public class ProductImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProductsIdImagesJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdImagesJsonResponse() {{
+        org.openapis.openapi.models.operations.GetProductsIdImagesJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdImagesJsonResponse(contentType, httpRes.statusCode()) {{
             images = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,12 +156,10 @@ public class ProductImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProductsIdImagesCountJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdImagesCountJsonResponse() {{
+        org.openapis.openapi.models.operations.GetProductsIdImagesCountJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdImagesCountJsonResponse(contentType, httpRes.statusCode()) {{
             count = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -212,12 +206,10 @@ public class ProductImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProductsIdImagesImageIdJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdImagesImageIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetProductsIdImagesImageIdJsonResponse res = new org.openapis.openapi.models.operations.GetProductsIdImagesImageIdJsonResponse(contentType, httpRes.statusCode()) {{
             image = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -269,11 +261,9 @@ public class ProductImages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostProductsIdImagesJsonResponse res = new org.openapis.openapi.models.operations.PostProductsIdImagesJsonResponse() {{
+        org.openapis.openapi.models.operations.PostProductsIdImagesJsonResponse res = new org.openapis.openapi.models.operations.PostProductsIdImagesJsonResponse(contentType, httpRes.statusCode()) {{
             image = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

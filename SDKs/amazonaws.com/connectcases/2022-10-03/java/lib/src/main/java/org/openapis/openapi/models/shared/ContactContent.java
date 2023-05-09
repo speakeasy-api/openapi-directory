@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ContactContent {
     @JsonProperty("channel")
     public String channel;
+
     public ContactContent withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -26,6 +27,7 @@ public class ContactContent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("connectedToSystemTime")
     public OffsetDateTime connectedToSystemTime;
+
     public ContactContent withConnectedToSystemTime(OffsetDateTime connectedToSystemTime) {
         this.connectedToSystemTime = connectedToSystemTime;
         return this;
@@ -33,9 +35,15 @@ public class ContactContent {
     
     @JsonProperty("contactArn")
     public String contactArn;
+
     public ContactContent withContactArn(String contactArn) {
         this.contactArn = contactArn;
         return this;
     }
     
+    public ContactContent(@JsonProperty("channel") String channel, @JsonProperty("connectedToSystemTime") OffsetDateTime connectedToSystemTime, @JsonProperty("contactArn") String contactArn) {
+        this.channel = channel;
+        this.connectedToSystemTime = connectedToSystemTime;
+        this.contactArn = contactArn;
+  }
 }

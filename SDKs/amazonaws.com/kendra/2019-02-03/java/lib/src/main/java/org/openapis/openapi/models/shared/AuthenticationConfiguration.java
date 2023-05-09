@@ -15,9 +15,11 @@ public class AuthenticationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BasicAuthentication")
     public BasicAuthenticationConfiguration[] basicAuthentication;
+
     public AuthenticationConfiguration withBasicAuthentication(BasicAuthenticationConfiguration[] basicAuthentication) {
         this.basicAuthentication = basicAuthentication;
         return this;
     }
     
+    public AuthenticationConfiguration(){}
 }

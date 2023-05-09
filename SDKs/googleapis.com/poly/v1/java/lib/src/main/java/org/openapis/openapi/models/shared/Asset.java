@@ -18,6 +18,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorName")
     public String authorName;
+
     public Asset withAuthorName(String authorName) {
         this.authorName = authorName;
         return this;
@@ -29,6 +30,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Asset withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Asset withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Asset withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formats")
     public Format[] formats;
+
     public Asset withFormats(Format[] formats) {
         this.formats = formats;
         return this;
@@ -73,6 +78,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCurated")
     public Boolean isCurated;
+
     public Asset withIsCurated(Boolean isCurated) {
         this.isCurated = isCurated;
         return this;
@@ -84,6 +90,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public AssetLicenseEnum license;
+
     public Asset withLicense(AssetLicenseEnum license) {
         this.license = license;
         return this;
@@ -95,6 +102,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public String metadata;
+
     public Asset withMetadata(String metadata) {
         this.metadata = metadata;
         return this;
@@ -106,6 +114,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Asset withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presentationParams")
     public PresentationParams presentationParams;
+
     public Asset withPresentationParams(PresentationParams presentationParams) {
         this.presentationParams = presentationParams;
         return this;
@@ -128,6 +138,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remixInfo")
     public RemixInfo remixInfo;
+
     public Asset withRemixInfo(RemixInfo remixInfo) {
         this.remixInfo = remixInfo;
         return this;
@@ -139,6 +150,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail")
     public File thumbnail;
+
     public Asset withThumbnail(File thumbnail) {
         this.thumbnail = thumbnail;
         return this;
@@ -150,6 +162,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Asset withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -161,9 +174,11 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public AssetVisibilityEnum visibility;
+
     public Asset withVisibility(AssetVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public Asset(){}
 }

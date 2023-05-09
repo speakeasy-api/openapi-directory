@@ -52,10 +52,8 @@ public class VotedShows {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUserVotesShowsShowIdResponse res = new org.openapis.openapi.models.operations.DeleteUserVotesShowsShowIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteUserVotesShowsShowIdResponse res = new org.openapis.openapi.models.operations.DeleteUserVotesShowsShowIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -91,11 +89,9 @@ public class VotedShows {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserVotesShowsResponse res = new org.openapis.openapi.models.operations.GetUserVotesShowsResponse() {{
+        org.openapis.openapi.models.operations.GetUserVotesShowsResponse res = new org.openapis.openapi.models.operations.GetUserVotesShowsResponse(contentType, httpRes.statusCode()) {{
             showVotes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,11 +126,9 @@ public class VotedShows {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserVotesShowsShowIdResponse res = new org.openapis.openapi.models.operations.GetUserVotesShowsShowIdResponse() {{
+        org.openapis.openapi.models.operations.GetUserVotesShowsShowIdResponse res = new org.openapis.openapi.models.operations.GetUserVotesShowsShowIdResponse(contentType, httpRes.statusCode()) {{
             showVote = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,11 +168,9 @@ public class VotedShows {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutUserVotesShowsShowIdResponse res = new org.openapis.openapi.models.operations.PutUserVotesShowsShowIdResponse() {{
+        org.openapis.openapi.models.operations.PutUserVotesShowsShowIdResponse res = new org.openapis.openapi.models.operations.PutUserVotesShowsShowIdResponse(contentType, httpRes.statusCode()) {{
             showVote = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

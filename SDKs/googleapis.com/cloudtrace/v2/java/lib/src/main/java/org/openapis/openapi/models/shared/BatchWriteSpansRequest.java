@@ -18,9 +18,11 @@ public class BatchWriteSpansRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spans")
     public Span[] spans;
+
     public BatchWriteSpansRequest withSpans(Span[] spans) {
         this.spans = spans;
         return this;
     }
     
+    public BatchWriteSpansRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberGeocodeQueryExtRequest {
@@ -12,6 +13,7 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=btmRight")
     public String btmRight;
+
     public GetSearchVersionNumberGeocodeQueryExtRequest withBtmRight(String btmRight) {
         this.btmRight = btmRight;
         return this;
@@ -22,6 +24,7 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countrySet")
     public String countrySet;
+
     public GetSearchVersionNumberGeocodeQueryExtRequest withCountrySet(String countrySet) {
         this.countrySet = countrySet;
         return this;
@@ -32,6 +35,7 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
     public org.openapis.openapi.models.shared.ExtEnum ext;
+
     public GetSearchVersionNumberGeocodeQueryExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
         this.ext = ext;
         return this;
@@ -48,6 +52,7 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=extendedPostalCodesFor")
     public String extendedPostalCodesFor;
+
     public GetSearchVersionNumberGeocodeQueryExtRequest withExtendedPostalCodesFor(String extendedPostalCodesFor) {
         this.extendedPostalCodesFor = extendedPostalCodesFor;
         return this;
@@ -58,6 +63,7 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public GetSearchVersionNumberGeocodeQueryExtRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -69,6 +75,7 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
     public Float lat;
+
     public GetSearchVersionNumberGeocodeQueryExtRequest withLat(Float lat) {
         this.lat = lat;
         return this;
@@ -79,6 +86,7 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetSearchVersionNumberGeocodeQueryExtRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -90,6 +98,7 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
     public Float lon;
+
     public GetSearchVersionNumberGeocodeQueryExtRequest withLon(Float lon) {
         this.lon = lon;
         return this;
@@ -100,6 +109,7 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ofs")
     public Long ofs;
+
     public GetSearchVersionNumberGeocodeQueryExtRequest withOfs(Long ofs) {
         this.ofs = ofs;
         return this;
@@ -110,6 +120,7 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
     public String query;
+
     public GetSearchVersionNumberGeocodeQueryExtRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -120,6 +131,7 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public Long radius;
+
     public GetSearchVersionNumberGeocodeQueryExtRequest withRadius(Long radius) {
         this.radius = radius;
         return this;
@@ -127,9 +139,13 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
     
     /**
      * If the "storeResult" flag is set, the query will be interpreted as a stored geocode and will be billed according to the terms of use.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storeResult")
+    @Deprecated
     public Boolean storeResult;
+
+    @Deprecated
     public GetSearchVersionNumberGeocodeQueryExtRequest withStoreResult(Boolean storeResult) {
         this.storeResult = storeResult;
         return this;
@@ -140,6 +156,7 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topLeft")
     public String topLeft;
+
     public GetSearchVersionNumberGeocodeQueryExtRequest withTopLeft(String topLeft) {
         this.topLeft = topLeft;
         return this;
@@ -150,6 +167,7 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=typeahead")
     public Boolean typeahead;
+
     public GetSearchVersionNumberGeocodeQueryExtRequest withTypeahead(Boolean typeahead) {
         this.typeahead = typeahead;
         return this;
@@ -160,6 +178,7 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+
     public GetSearchVersionNumberGeocodeQueryExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
@@ -170,9 +189,15 @@ public class GetSearchVersionNumberGeocodeQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public org.openapis.openapi.models.shared.ViewEnum view;
+
     public GetSearchVersionNumberGeocodeQueryExtRequest withView(org.openapis.openapi.models.shared.ViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public GetSearchVersionNumberGeocodeQueryExtRequest(@JsonProperty("ext") org.openapis.openapi.models.shared.ExtEnum ext, @JsonProperty("query") String query, @JsonProperty("versionNumber") org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.ext = ext;
+        this.query = query;
+        this.versionNumber = versionNumber;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FetchFarmOrganizationByTypeAndIdResponse {
     
     public String contentType;
+
     public FetchFarmOrganizationByTypeAndIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FetchFarmOrganizationByTypeAndIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public FetchFarmOrganizationByTypeAndIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class FetchFarmOrganizationByTypeAndIdResponse {
      */
     
     public org.openapis.openapi.models.shared.FarmOrganization farmOrganization;
+
     public FetchFarmOrganizationByTypeAndIdResponse withFarmOrganization(org.openapis.openapi.models.shared.FarmOrganization farmOrganization) {
         this.farmOrganization = farmOrganization;
         return this;
@@ -36,6 +40,7 @@ public class FetchFarmOrganizationByTypeAndIdResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public FetchFarmOrganizationByTypeAndIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -43,6 +48,7 @@ public class FetchFarmOrganizationByTypeAndIdResponse {
     
     
     public Integer statusCode;
+
     public FetchFarmOrganizationByTypeAndIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class FetchFarmOrganizationByTypeAndIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FetchFarmOrganizationByTypeAndIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FetchFarmOrganizationByTypeAndIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

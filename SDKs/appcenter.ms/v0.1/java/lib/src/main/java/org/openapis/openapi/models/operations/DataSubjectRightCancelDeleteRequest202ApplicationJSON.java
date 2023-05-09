@@ -22,6 +22,7 @@ public class DataSubjectRightCancelDeleteRequest202ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public DataSubjectRightCancelDeleteRequest202ApplicationJSON withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -32,9 +33,14 @@ public class DataSubjectRightCancelDeleteRequest202ApplicationJSON {
      */
     @JsonProperty("token")
     public String token;
+
     public DataSubjectRightCancelDeleteRequest202ApplicationJSON withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public DataSubjectRightCancelDeleteRequest202ApplicationJSON(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("token") String token) {
+        this.createdAt = createdAt;
+        this.token = token;
+  }
 }

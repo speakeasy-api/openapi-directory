@@ -15,6 +15,7 @@ public class GrpcGatewayRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rewrite")
     public GrpcGatewayRouteRewrite rewrite;
+
     public GrpcGatewayRouteAction withRewrite(GrpcGatewayRouteRewrite rewrite) {
         this.rewrite = rewrite;
         return this;
@@ -22,9 +23,13 @@ public class GrpcGatewayRouteAction {
     
     @JsonProperty("target")
     public GatewayRouteTarget target;
+
     public GrpcGatewayRouteAction withTarget(GatewayRouteTarget target) {
         this.target = target;
         return this;
     }
     
+    public GrpcGatewayRouteAction(@JsonProperty("target") GatewayRouteTarget target) {
+        this.target = target;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyTrafficMirrorFilterNetworkServicesRequest {
     
     public ModifyTrafficMirrorFilterNetworkServicesRequestAddNetworkServicesEnum[] addNetworkServices;
+
     public ModifyTrafficMirrorFilterNetworkServicesRequest withAddNetworkServices(ModifyTrafficMirrorFilterNetworkServicesRequestAddNetworkServicesEnum[] addNetworkServices) {
         this.addNetworkServices = addNetworkServices;
         return this;
@@ -16,6 +17,7 @@ public class ModifyTrafficMirrorFilterNetworkServicesRequest {
     
     
     public Boolean dryRun;
+
     public ModifyTrafficMirrorFilterNetworkServicesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class ModifyTrafficMirrorFilterNetworkServicesRequest {
     
     
     public ModifyTrafficMirrorFilterNetworkServicesRequestRemoveNetworkServicesEnum[] removeNetworkServices;
+
     public ModifyTrafficMirrorFilterNetworkServicesRequest withRemoveNetworkServices(ModifyTrafficMirrorFilterNetworkServicesRequestRemoveNetworkServicesEnum[] removeNetworkServices) {
         this.removeNetworkServices = removeNetworkServices;
         return this;
@@ -30,9 +33,13 @@ public class ModifyTrafficMirrorFilterNetworkServicesRequest {
     
     
     public String trafficMirrorFilterId;
+
     public ModifyTrafficMirrorFilterNetworkServicesRequest withTrafficMirrorFilterId(String trafficMirrorFilterId) {
         this.trafficMirrorFilterId = trafficMirrorFilterId;
         return this;
     }
     
+    public ModifyTrafficMirrorFilterNetworkServicesRequest(@JsonProperty("TrafficMirrorFilterId") String trafficMirrorFilterId) {
+        this.trafficMirrorFilterId = trafficMirrorFilterId;
+  }
 }

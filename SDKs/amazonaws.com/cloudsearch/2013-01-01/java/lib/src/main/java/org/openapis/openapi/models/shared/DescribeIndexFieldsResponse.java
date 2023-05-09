@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeIndexFieldsResponse - The result of a &lt;code&gt;DescribeIndexFields&lt;/code&gt; request. Contains the index fields configured for the domain specified in the request.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DescribeIndexFieldsResponse {
     
     public IndexFieldStatus[] indexFields;
+
     public DescribeIndexFieldsResponse withIndexFields(IndexFieldStatus[] indexFields) {
         this.indexFields = indexFields;
         return this;
     }
     
+    public DescribeIndexFieldsResponse(@JsonProperty("IndexFields") IndexFieldStatus[] indexFields) {
+        this.indexFields = indexFields;
+  }
 }

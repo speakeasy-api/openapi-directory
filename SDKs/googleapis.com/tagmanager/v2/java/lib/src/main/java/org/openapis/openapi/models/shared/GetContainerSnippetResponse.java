@@ -18,9 +18,11 @@ public class GetContainerSnippetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public String snippet;
+
     public GetContainerSnippetResponse withSnippet(String snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public GetContainerSnippetResponse(){}
 }

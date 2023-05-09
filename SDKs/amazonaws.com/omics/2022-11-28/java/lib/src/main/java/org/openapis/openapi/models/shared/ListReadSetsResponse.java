@@ -15,6 +15,7 @@ public class ListReadSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListReadSetsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListReadSetsResponse {
     
     @JsonProperty("readSets")
     public ReadSetListItem[] readSets;
+
     public ListReadSetsResponse withReadSets(ReadSetListItem[] readSets) {
         this.readSets = readSets;
         return this;
     }
     
+    public ListReadSetsResponse(@JsonProperty("readSets") ReadSetListItem[] readSets) {
+        this.readSets = readSets;
+  }
 }

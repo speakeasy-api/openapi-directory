@@ -12,6 +12,7 @@ public class SequencePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Long position;
+
     public SequencePosition withPosition(Long position) {
         this.position = position;
         return this;
@@ -20,9 +21,11 @@ public class SequencePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public SequencePosition withReference(String reference) {
         this.reference = reference;
         return this;
     }
     
+    public SequencePosition(){}
 }

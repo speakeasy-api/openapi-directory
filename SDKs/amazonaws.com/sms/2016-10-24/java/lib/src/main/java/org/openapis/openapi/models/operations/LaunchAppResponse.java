@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LaunchAppResponse {
     
     public String contentType;
+
     public LaunchAppResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class LaunchAppResponse {
      */
     
     public Object internalError;
+
     public LaunchAppResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -29,6 +32,7 @@ public class LaunchAppResponse {
      */
     
     public Object invalidParameterException;
+
     public LaunchAppResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class LaunchAppResponse {
      */
     
     public java.util.Map<String, Object> launchAppResponse;
+
     public LaunchAppResponse withLaunchAppResponse(java.util.Map<String, Object> launchAppResponse) {
         this.launchAppResponse = launchAppResponse;
         return this;
@@ -49,6 +54,7 @@ public class LaunchAppResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public LaunchAppResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -59,6 +65,7 @@ public class LaunchAppResponse {
      */
     
     public Object operationNotPermittedException;
+
     public LaunchAppResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class LaunchAppResponse {
     
     
     public Integer statusCode;
+
     public LaunchAppResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class LaunchAppResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LaunchAppResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class LaunchAppResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public LaunchAppResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public LaunchAppResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

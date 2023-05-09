@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUnassignIpv6AddressesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUnassignIpv6AddressesActionEnum action;
+
     public GETUnassignIpv6AddressesRequest withAction(GETUnassignIpv6AddressesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUnassignIpv6AddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6Addresses")
     public String[] ipv6Addresses;
+
     public GETUnassignIpv6AddressesRequest withIpv6Addresses(String[] ipv6Addresses) {
         this.ipv6Addresses = ipv6Addresses;
         return this;
@@ -29,6 +32,7 @@ public class GETUnassignIpv6AddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6Prefix")
     public String[] ipv6Prefix;
+
     public GETUnassignIpv6AddressesRequest withIpv6Prefix(String[] ipv6Prefix) {
         this.ipv6Prefix = ipv6Prefix;
         return this;
@@ -39,6 +43,7 @@ public class GETUnassignIpv6AddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceId")
     public String networkInterfaceId;
+
     public GETUnassignIpv6AddressesRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -46,6 +51,7 @@ public class GETUnassignIpv6AddressesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUnassignIpv6AddressesVersionEnum version;
+
     public GETUnassignIpv6AddressesRequest withVersion(GETUnassignIpv6AddressesVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETUnassignIpv6AddressesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUnassignIpv6AddressesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETUnassignIpv6AddressesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUnassignIpv6AddressesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETUnassignIpv6AddressesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUnassignIpv6AddressesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETUnassignIpv6AddressesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUnassignIpv6AddressesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETUnassignIpv6AddressesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUnassignIpv6AddressesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETUnassignIpv6AddressesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUnassignIpv6AddressesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETUnassignIpv6AddressesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUnassignIpv6AddressesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUnassignIpv6AddressesRequest(@JsonProperty("Action") GETUnassignIpv6AddressesActionEnum action, @JsonProperty("NetworkInterfaceId") String networkInterfaceId, @JsonProperty("Version") GETUnassignIpv6AddressesVersionEnum version) {
+        this.action = action;
+        this.networkInterfaceId = networkInterfaceId;
+        this.version = version;
+  }
 }

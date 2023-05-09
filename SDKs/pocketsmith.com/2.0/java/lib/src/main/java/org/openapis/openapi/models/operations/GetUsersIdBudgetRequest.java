@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdBudgetRequest {
@@ -12,6 +13,7 @@ public class GetUsersIdBudgetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetUsersIdBudgetRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class GetUsersIdBudgetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roll_up")
     public Boolean rollUp;
+
     public GetUsersIdBudgetRequest withRollUp(Boolean rollUp) {
         this.rollUp = rollUp;
         return this;
     }
     
+    public GetUsersIdBudgetRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

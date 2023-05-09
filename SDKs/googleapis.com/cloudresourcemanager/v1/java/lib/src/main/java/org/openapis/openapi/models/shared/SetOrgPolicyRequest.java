@@ -18,9 +18,11 @@ public class SetOrgPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public OrgPolicy policy;
+
     public SetOrgPolicyRequest withPolicy(OrgPolicy policy) {
         this.policy = policy;
         return this;
     }
     
+    public SetOrgPolicyRequest(){}
 }

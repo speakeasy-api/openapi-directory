@@ -20,6 +20,7 @@ public class ReviewActionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionId")
     public String actionId;
+
     public ReviewActionDetail withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -28,6 +29,7 @@ public class ReviewActionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionName")
     public String actionName;
+
     public ReviewActionDetail withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -38,6 +40,7 @@ public class ReviewActionDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompleteTime")
     public OffsetDateTime completeTime;
+
     public ReviewActionDetail withCompleteTime(OffsetDateTime completeTime) {
         this.completeTime = completeTime;
         return this;
@@ -46,6 +49,7 @@ public class ReviewActionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public ReviewActionDetail withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -54,6 +58,7 @@ public class ReviewActionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Result")
     public String result;
+
     public ReviewActionDetail withResult(String result) {
         this.result = result;
         return this;
@@ -62,6 +67,7 @@ public class ReviewActionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ReviewActionStatusEnum status;
+
     public ReviewActionDetail withStatus(ReviewActionStatusEnum status) {
         this.status = status;
         return this;
@@ -70,6 +76,7 @@ public class ReviewActionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetId")
     public String targetId;
+
     public ReviewActionDetail withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
@@ -78,9 +85,11 @@ public class ReviewActionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetType")
     public String targetType;
+
     public ReviewActionDetail withTargetType(String targetType) {
         this.targetType = targetType;
         return this;
     }
     
+    public ReviewActionDetail(){}
 }

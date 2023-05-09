@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDataQualityRulesetResponse {
@@ -12,6 +13,7 @@ public class CreateDataQualityRulesetResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateDataQualityRulesetResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -19,6 +21,7 @@ public class CreateDataQualityRulesetResponse {
     
     
     public String contentType;
+
     public CreateDataQualityRulesetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateDataQualityRulesetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDataQualityRulesetResponse createDataQualityRulesetResponse;
+
     public CreateDataQualityRulesetResponse withCreateDataQualityRulesetResponse(org.openapis.openapi.models.shared.CreateDataQualityRulesetResponse createDataQualityRulesetResponse) {
         this.createDataQualityRulesetResponse = createDataQualityRulesetResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateDataQualityRulesetResponse {
      */
     
     public Object internalServiceException;
+
     public CreateDataQualityRulesetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDataQualityRulesetResponse {
      */
     
     public Object invalidInputException;
+
     public CreateDataQualityRulesetResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDataQualityRulesetResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateDataQualityRulesetResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDataQualityRulesetResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateDataQualityRulesetResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateDataQualityRulesetResponse {
     
     
     public Integer statusCode;
+
     public CreateDataQualityRulesetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateDataQualityRulesetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDataQualityRulesetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDataQualityRulesetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

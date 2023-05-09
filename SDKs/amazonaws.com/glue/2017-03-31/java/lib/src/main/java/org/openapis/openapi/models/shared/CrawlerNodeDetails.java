@@ -15,9 +15,11 @@ public class CrawlerNodeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Crawls")
     public Crawl[] crawls;
+
     public CrawlerNodeDetails withCrawls(Crawl[] crawls) {
         this.crawls = crawls;
         return this;
     }
     
+    public CrawlerNodeDetails(){}
 }

@@ -18,6 +18,7 @@ public class GetTerminalRefundResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public GetTerminalRefundResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -26,9 +27,11 @@ public class GetTerminalRefundResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund")
     public TerminalRefund refund;
+
     public GetTerminalRefundResponse withRefund(TerminalRefund refund) {
         this.refund = refund;
         return this;
     }
     
+    public GetTerminalRefundResponse(){}
 }

@@ -18,6 +18,7 @@ public class GetLensReviewOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensReview")
     public LensReview lensReview;
+
     public GetLensReviewOutput withLensReview(LensReview lensReview) {
         this.lensReview = lensReview;
         return this;
@@ -29,6 +30,7 @@ public class GetLensReviewOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MilestoneNumber")
     public Long milestoneNumber;
+
     public GetLensReviewOutput withMilestoneNumber(Long milestoneNumber) {
         this.milestoneNumber = milestoneNumber;
         return this;
@@ -40,9 +42,11 @@ public class GetLensReviewOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadId")
     public String workloadId;
+
     public GetLensReviewOutput withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
     }
     
+    public GetLensReviewOutput(){}
 }

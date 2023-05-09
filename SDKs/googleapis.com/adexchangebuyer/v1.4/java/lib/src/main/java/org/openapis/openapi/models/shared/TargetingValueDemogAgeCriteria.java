@@ -12,9 +12,11 @@ public class TargetingValueDemogAgeCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("demogAgeCriteriaIds")
     public String[] demogAgeCriteriaIds;
+
     public TargetingValueDemogAgeCriteria withDemogAgeCriteriaIds(String[] demogAgeCriteriaIds) {
         this.demogAgeCriteriaIds = demogAgeCriteriaIds;
         return this;
     }
     
+    public TargetingValueDemogAgeCriteria(){}
 }

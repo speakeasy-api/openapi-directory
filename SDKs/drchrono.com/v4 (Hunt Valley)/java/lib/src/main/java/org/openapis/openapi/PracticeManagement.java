@@ -61,11 +61,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InventoryCategoriesListResponse res = new org.openapis.openapi.models.operations.InventoryCategoriesListResponse() {{
+        org.openapis.openapi.models.operations.InventoryCategoriesListResponse res = new org.openapis.openapi.models.operations.InventoryCategoriesListResponse(contentType, httpRes.statusCode()) {{
             inventoryCategoriesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InventoryCategoriesReadResponse res = new org.openapis.openapi.models.operations.InventoryCategoriesReadResponse() {{
+        org.openapis.openapi.models.operations.InventoryCategoriesReadResponse res = new org.openapis.openapi.models.operations.InventoryCategoriesReadResponse(contentType, httpRes.statusCode()) {{
             inventoryCategory = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InventoryVaccinesCreateResponse res = new org.openapis.openapi.models.operations.InventoryVaccinesCreateResponse() {{
+        org.openapis.openapi.models.operations.InventoryVaccinesCreateResponse res = new org.openapis.openapi.models.operations.InventoryVaccinesCreateResponse(contentType, httpRes.statusCode()) {{
             inventoryVaccine = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -205,11 +199,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InventoryVaccinesListResponse res = new org.openapis.openapi.models.operations.InventoryVaccinesListResponse() {{
+        org.openapis.openapi.models.operations.InventoryVaccinesListResponse res = new org.openapis.openapi.models.operations.InventoryVaccinesListResponse(contentType, httpRes.statusCode()) {{
             inventoryVaccinesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,11 +245,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InventoryVaccinesReadResponse res = new org.openapis.openapi.models.operations.InventoryVaccinesReadResponse() {{
+        org.openapis.openapi.models.operations.InventoryVaccinesReadResponse res = new org.openapis.openapi.models.operations.InventoryVaccinesReadResponse(contentType, httpRes.statusCode()) {{
             inventoryVaccine = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -301,11 +291,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MessagesCreateResponse res = new org.openapis.openapi.models.operations.MessagesCreateResponse() {{
+        org.openapis.openapi.models.operations.MessagesCreateResponse res = new org.openapis.openapi.models.operations.MessagesCreateResponse(contentType, httpRes.statusCode()) {{
             doctorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -349,10 +337,8 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MessagesDeleteResponse res = new org.openapis.openapi.models.operations.MessagesDeleteResponse() {{
+        org.openapis.openapi.models.operations.MessagesDeleteResponse res = new org.openapis.openapi.models.operations.MessagesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -389,11 +375,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MessagesListResponse res = new org.openapis.openapi.models.operations.MessagesListResponse() {{
+        org.openapis.openapi.models.operations.MessagesListResponse res = new org.openapis.openapi.models.operations.MessagesListResponse(contentType, httpRes.statusCode()) {{
             messagesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -437,10 +421,8 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MessagesPartialUpdateResponse res = new org.openapis.openapi.models.operations.MessagesPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.MessagesPartialUpdateResponse res = new org.openapis.openapi.models.operations.MessagesPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -477,11 +459,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MessagesReadResponse res = new org.openapis.openapi.models.operations.MessagesReadResponse() {{
+        org.openapis.openapi.models.operations.MessagesReadResponse res = new org.openapis.openapi.models.operations.MessagesReadResponse(contentType, httpRes.statusCode()) {{
             doctorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -525,10 +505,8 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MessagesUpdateResponse res = new org.openapis.openapi.models.operations.MessagesUpdateResponse() {{
+        org.openapis.openapi.models.operations.MessagesUpdateResponse res = new org.openapis.openapi.models.operations.MessagesUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -565,11 +543,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OfficesAddExamRoomResponse res = new org.openapis.openapi.models.operations.OfficesAddExamRoomResponse() {{
+        org.openapis.openapi.models.operations.OfficesAddExamRoomResponse res = new org.openapis.openapi.models.operations.OfficesAddExamRoomResponse(contentType, httpRes.statusCode()) {{
             office = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -613,11 +589,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OfficesListResponse res = new org.openapis.openapi.models.operations.OfficesListResponse() {{
+        org.openapis.openapi.models.operations.OfficesListResponse res = new org.openapis.openapi.models.operations.OfficesListResponse(contentType, httpRes.statusCode()) {{
             officesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -661,10 +635,8 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OfficesPartialUpdateResponse res = new org.openapis.openapi.models.operations.OfficesPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.OfficesPartialUpdateResponse res = new org.openapis.openapi.models.operations.OfficesPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -701,11 +673,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OfficesReadResponse res = new org.openapis.openapi.models.operations.OfficesReadResponse() {{
+        org.openapis.openapi.models.operations.OfficesReadResponse res = new org.openapis.openapi.models.operations.OfficesReadResponse(contentType, httpRes.statusCode()) {{
             office = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -749,10 +719,8 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OfficesUpdateResponse res = new org.openapis.openapi.models.operations.OfficesUpdateResponse() {{
+        org.openapis.openapi.models.operations.OfficesUpdateResponse res = new org.openapis.openapi.models.operations.OfficesUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -789,11 +757,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskCategoriesCreateResponse res = new org.openapis.openapi.models.operations.TaskCategoriesCreateResponse() {{
+        org.openapis.openapi.models.operations.TaskCategoriesCreateResponse res = new org.openapis.openapi.models.operations.TaskCategoriesCreateResponse(contentType, httpRes.statusCode()) {{
             taskCategory = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -837,11 +803,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskCategoriesListResponse res = new org.openapis.openapi.models.operations.TaskCategoriesListResponse() {{
+        org.openapis.openapi.models.operations.TaskCategoriesListResponse res = new org.openapis.openapi.models.operations.TaskCategoriesListResponse(contentType, httpRes.statusCode()) {{
             taskCategoriesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -885,10 +849,8 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskCategoriesPartialUpdateResponse res = new org.openapis.openapi.models.operations.TaskCategoriesPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.TaskCategoriesPartialUpdateResponse res = new org.openapis.openapi.models.operations.TaskCategoriesPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -925,11 +887,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskCategoriesReadResponse res = new org.openapis.openapi.models.operations.TaskCategoriesReadResponse() {{
+        org.openapis.openapi.models.operations.TaskCategoriesReadResponse res = new org.openapis.openapi.models.operations.TaskCategoriesReadResponse(contentType, httpRes.statusCode()) {{
             taskCategory = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -973,10 +933,8 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskCategoriesUpdateResponse res = new org.openapis.openapi.models.operations.TaskCategoriesUpdateResponse() {{
+        org.openapis.openapi.models.operations.TaskCategoriesUpdateResponse res = new org.openapis.openapi.models.operations.TaskCategoriesUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -1013,11 +971,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskNotesCreateResponse res = new org.openapis.openapi.models.operations.TaskNotesCreateResponse() {{
+        org.openapis.openapi.models.operations.TaskNotesCreateResponse res = new org.openapis.openapi.models.operations.TaskNotesCreateResponse(contentType, httpRes.statusCode()) {{
             taskNote = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1061,11 +1017,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskNotesListResponse res = new org.openapis.openapi.models.operations.TaskNotesListResponse() {{
+        org.openapis.openapi.models.operations.TaskNotesListResponse res = new org.openapis.openapi.models.operations.TaskNotesListResponse(contentType, httpRes.statusCode()) {{
             taskNotesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1109,10 +1063,8 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskNotesPartialUpdateResponse res = new org.openapis.openapi.models.operations.TaskNotesPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.TaskNotesPartialUpdateResponse res = new org.openapis.openapi.models.operations.TaskNotesPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -1149,11 +1101,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskNotesReadResponse res = new org.openapis.openapi.models.operations.TaskNotesReadResponse() {{
+        org.openapis.openapi.models.operations.TaskNotesReadResponse res = new org.openapis.openapi.models.operations.TaskNotesReadResponse(contentType, httpRes.statusCode()) {{
             taskNote = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1197,10 +1147,8 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskNotesUpdateResponse res = new org.openapis.openapi.models.operations.TaskNotesUpdateResponse() {{
+        org.openapis.openapi.models.operations.TaskNotesUpdateResponse res = new org.openapis.openapi.models.operations.TaskNotesUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -1237,11 +1185,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskStatusesCreateResponse res = new org.openapis.openapi.models.operations.TaskStatusesCreateResponse() {{
+        org.openapis.openapi.models.operations.TaskStatusesCreateResponse res = new org.openapis.openapi.models.operations.TaskStatusesCreateResponse(contentType, httpRes.statusCode()) {{
             taskStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1285,11 +1231,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskStatusesListResponse res = new org.openapis.openapi.models.operations.TaskStatusesListResponse() {{
+        org.openapis.openapi.models.operations.TaskStatusesListResponse res = new org.openapis.openapi.models.operations.TaskStatusesListResponse(contentType, httpRes.statusCode()) {{
             taskStatusesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1333,10 +1277,8 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskStatusesPartialUpdateResponse res = new org.openapis.openapi.models.operations.TaskStatusesPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.TaskStatusesPartialUpdateResponse res = new org.openapis.openapi.models.operations.TaskStatusesPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -1373,11 +1315,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskStatusesReadResponse res = new org.openapis.openapi.models.operations.TaskStatusesReadResponse() {{
+        org.openapis.openapi.models.operations.TaskStatusesReadResponse res = new org.openapis.openapi.models.operations.TaskStatusesReadResponse(contentType, httpRes.statusCode()) {{
             taskStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1421,10 +1361,8 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskStatusesUpdateResponse res = new org.openapis.openapi.models.operations.TaskStatusesUpdateResponse() {{
+        org.openapis.openapi.models.operations.TaskStatusesUpdateResponse res = new org.openapis.openapi.models.operations.TaskStatusesUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -1461,11 +1399,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskTemplatesCreateResponse res = new org.openapis.openapi.models.operations.TaskTemplatesCreateResponse() {{
+        org.openapis.openapi.models.operations.TaskTemplatesCreateResponse res = new org.openapis.openapi.models.operations.TaskTemplatesCreateResponse(contentType, httpRes.statusCode()) {{
             taskTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1509,11 +1445,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskTemplatesListResponse res = new org.openapis.openapi.models.operations.TaskTemplatesListResponse() {{
+        org.openapis.openapi.models.operations.TaskTemplatesListResponse res = new org.openapis.openapi.models.operations.TaskTemplatesListResponse(contentType, httpRes.statusCode()) {{
             taskTemplatesList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1557,10 +1491,8 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskTemplatesPartialUpdateResponse res = new org.openapis.openapi.models.operations.TaskTemplatesPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.TaskTemplatesPartialUpdateResponse res = new org.openapis.openapi.models.operations.TaskTemplatesPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -1597,11 +1529,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskTemplatesReadResponse res = new org.openapis.openapi.models.operations.TaskTemplatesReadResponse() {{
+        org.openapis.openapi.models.operations.TaskTemplatesReadResponse res = new org.openapis.openapi.models.operations.TaskTemplatesReadResponse(contentType, httpRes.statusCode()) {{
             taskTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1645,10 +1575,8 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaskTemplatesUpdateResponse res = new org.openapis.openapi.models.operations.TaskTemplatesUpdateResponse() {{
+        org.openapis.openapi.models.operations.TaskTemplatesUpdateResponse res = new org.openapis.openapi.models.operations.TaskTemplatesUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -1685,11 +1613,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TasksCreateResponse res = new org.openapis.openapi.models.operations.TasksCreateResponse() {{
+        org.openapis.openapi.models.operations.TasksCreateResponse res = new org.openapis.openapi.models.operations.TasksCreateResponse(contentType, httpRes.statusCode()) {{
             task = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1733,11 +1659,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TasksListResponse res = new org.openapis.openapi.models.operations.TasksListResponse() {{
+        org.openapis.openapi.models.operations.TasksListResponse res = new org.openapis.openapi.models.operations.TasksListResponse(contentType, httpRes.statusCode()) {{
             tasksList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1781,10 +1705,8 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TasksPartialUpdateResponse res = new org.openapis.openapi.models.operations.TasksPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.TasksPartialUpdateResponse res = new org.openapis.openapi.models.operations.TasksPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
@@ -1821,11 +1743,9 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TasksReadResponse res = new org.openapis.openapi.models.operations.TasksReadResponse() {{
+        org.openapis.openapi.models.operations.TasksReadResponse res = new org.openapis.openapi.models.operations.TasksReadResponse(contentType, httpRes.statusCode()) {{
             task = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1869,10 +1789,8 @@ public class PracticeManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TasksUpdateResponse res = new org.openapis.openapi.models.operations.TasksUpdateResponse() {{
+        org.openapis.openapi.models.operations.TasksUpdateResponse res = new org.openapis.openapi.models.operations.TasksUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TypedLinkSpecifier {
     @JsonProperty("IdentityAttributeValues")
     public AttributeNameAndValue[] identityAttributeValues;
+
     public TypedLinkSpecifier withIdentityAttributeValues(AttributeNameAndValue[] identityAttributeValues) {
         this.identityAttributeValues = identityAttributeValues;
         return this;
@@ -19,6 +20,7 @@ public class TypedLinkSpecifier {
     
     @JsonProperty("SourceObjectReference")
     public ObjectReference sourceObjectReference;
+
     public TypedLinkSpecifier withSourceObjectReference(ObjectReference sourceObjectReference) {
         this.sourceObjectReference = sourceObjectReference;
         return this;
@@ -26,6 +28,7 @@ public class TypedLinkSpecifier {
     
     @JsonProperty("TargetObjectReference")
     public ObjectReference targetObjectReference;
+
     public TypedLinkSpecifier withTargetObjectReference(ObjectReference targetObjectReference) {
         this.targetObjectReference = targetObjectReference;
         return this;
@@ -33,9 +36,16 @@ public class TypedLinkSpecifier {
     
     @JsonProperty("TypedLinkFacet")
     public TypedLinkSchemaAndFacetName typedLinkFacet;
+
     public TypedLinkSpecifier withTypedLinkFacet(TypedLinkSchemaAndFacetName typedLinkFacet) {
         this.typedLinkFacet = typedLinkFacet;
         return this;
     }
     
+    public TypedLinkSpecifier(@JsonProperty("IdentityAttributeValues") AttributeNameAndValue[] identityAttributeValues, @JsonProperty("SourceObjectReference") ObjectReference sourceObjectReference, @JsonProperty("TargetObjectReference") ObjectReference targetObjectReference, @JsonProperty("TypedLinkFacet") TypedLinkSchemaAndFacetName typedLinkFacet) {
+        this.identityAttributeValues = identityAttributeValues;
+        this.sourceObjectReference = sourceObjectReference;
+        this.targetObjectReference = targetObjectReference;
+        this.typedLinkFacet = typedLinkFacet;
+  }
 }

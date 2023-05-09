@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class KeywordFilter {
     @JsonProperty("Name")
     public KeywordFilterNameEnum name;
+
     public KeywordFilter withName(KeywordFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class KeywordFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public KeywordFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public KeywordFilter(@JsonProperty("Name") KeywordFilterNameEnum name, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

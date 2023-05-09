@@ -20,6 +20,7 @@ public class ItineraryPriceMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public ItineraryPriceMetric withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -33,6 +34,7 @@ public class ItineraryPriceMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departureDate")
     public String departureDate;
+
     public ItineraryPriceMetric withDepartureDate(String departureDate) {
         this.departureDate = departureDate;
         return this;
@@ -44,6 +46,7 @@ public class ItineraryPriceMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public ItineraryPriceMetricLocation destination;
+
     public ItineraryPriceMetric withDestination(ItineraryPriceMetricLocation destination) {
         this.destination = destination;
         return this;
@@ -56,6 +59,7 @@ public class ItineraryPriceMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneWay")
     public Boolean oneWay;
+
     public ItineraryPriceMetric withOneWay(Boolean oneWay) {
         this.oneWay = oneWay;
         return this;
@@ -67,6 +71,7 @@ public class ItineraryPriceMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public ItineraryPriceMetricLocation origin;
+
     public ItineraryPriceMetric withOrigin(ItineraryPriceMetricLocation origin) {
         this.origin = origin;
         return this;
@@ -75,6 +80,7 @@ public class ItineraryPriceMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceMetrics")
     public ItineraryPriceMetricPriceMetrics[] priceMetrics;
+
     public ItineraryPriceMetric withPriceMetrics(ItineraryPriceMetricPriceMetrics[] priceMetrics) {
         this.priceMetrics = priceMetrics;
         return this;
@@ -86,6 +92,7 @@ public class ItineraryPriceMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transportType")
     public ItineraryPriceMetricTransportTypeEnum transportType;
+
     public ItineraryPriceMetric withTransportType(ItineraryPriceMetricTransportTypeEnum transportType) {
         this.transportType = transportType;
         return this;
@@ -97,9 +104,11 @@ public class ItineraryPriceMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ItineraryPriceMetric withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ItineraryPriceMetric(){}
 }

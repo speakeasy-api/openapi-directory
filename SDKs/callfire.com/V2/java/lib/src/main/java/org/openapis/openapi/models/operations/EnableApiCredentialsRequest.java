@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnableApiCredentialsRequest {
@@ -12,9 +13,13 @@ public class EnableApiCredentialsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public EnableApiCredentialsRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public EnableApiCredentialsRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClinicalNoteFieldValuesUpdateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
     public Long appointment;
+
     public ClinicalNoteFieldValuesUpdateRequest withAppointment(Long appointment) {
         this.appointment = appointment;
         return this;
@@ -16,6 +18,7 @@ public class ClinicalNoteFieldValuesUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clinical_note_field")
     public Long clinicalNoteField;
+
     public ClinicalNoteFieldValuesUpdateRequest withClinicalNoteField(Long clinicalNoteField) {
         this.clinicalNoteField = clinicalNoteField;
         return this;
@@ -23,6 +26,7 @@ public class ClinicalNoteFieldValuesUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clinical_note_template")
     public Long clinicalNoteTemplate;
+
     public ClinicalNoteFieldValuesUpdateRequest withClinicalNoteTemplate(Long clinicalNoteTemplate) {
         this.clinicalNoteTemplate = clinicalNoteTemplate;
         return this;
@@ -30,6 +34,7 @@ public class ClinicalNoteFieldValuesUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public ClinicalNoteFieldValuesUpdateRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -37,6 +42,7 @@ public class ClinicalNoteFieldValuesUpdateRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ClinicalNoteFieldValuesUpdateRequest withId(String id) {
         this.id = id;
         return this;
@@ -44,9 +50,13 @@ public class ClinicalNoteFieldValuesUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public ClinicalNoteFieldValuesUpdateRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public ClinicalNoteFieldValuesUpdateRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -18,6 +18,7 @@ public class FourHundredErrorsLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("col")
     public Double col;
+
     public FourHundredErrorsLocation withCol(Double col) {
         this.col = col;
         return this;
@@ -29,6 +30,7 @@ public class FourHundredErrorsLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public String file;
+
     public FourHundredErrorsLocation withFile(String file) {
         this.file = file;
         return this;
@@ -40,9 +42,11 @@ public class FourHundredErrorsLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("row")
     public Double row;
+
     public FourHundredErrorsLocation withRow(Double row) {
         this.row = row;
         return this;
     }
     
+    public FourHundredErrorsLocation(){}
 }

@@ -15,6 +15,7 @@ public class OrganizationCustomRepositoryRole {
      */
     @JsonProperty("id")
     public Long id;
+
     public OrganizationCustomRepositoryRole withId(Long id) {
         this.id = id;
         return this;
@@ -25,9 +26,14 @@ public class OrganizationCustomRepositoryRole {
      */
     @JsonProperty("name")
     public String name;
+
     public OrganizationCustomRepositoryRole withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OrganizationCustomRepositoryRole(@JsonProperty("id") Long id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

@@ -12,9 +12,13 @@ public class SendUsersMessagesRequestBody {
      */
     @JsonProperty("SendUsersMessageRequest")
     public SendUsersMessagesRequestBodySendUsersMessageRequest sendUsersMessageRequest;
+
     public SendUsersMessagesRequestBody withSendUsersMessageRequest(SendUsersMessagesRequestBodySendUsersMessageRequest sendUsersMessageRequest) {
         this.sendUsersMessageRequest = sendUsersMessageRequest;
         return this;
     }
     
+    public SendUsersMessagesRequestBody(@JsonProperty("SendUsersMessageRequest") SendUsersMessagesRequestBodySendUsersMessageRequest sendUsersMessageRequest) {
+        this.sendUsersMessageRequest = sendUsersMessageRequest;
+  }
 }

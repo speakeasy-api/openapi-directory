@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OrganizationsListAdministered200ApplicationJSON {
     @JsonProperty("organizations")
     public OrganizationsListAdministered200ApplicationJSONOrganizations organizations;
+
     public OrganizationsListAdministered200ApplicationJSON withOrganizations(OrganizationsListAdministered200ApplicationJSONOrganizations organizations) {
         this.organizations = organizations;
         return this;
     }
     
+    public OrganizationsListAdministered200ApplicationJSON(@JsonProperty("organizations") OrganizationsListAdministered200ApplicationJSONOrganizations organizations) {
+        this.organizations = organizations;
+  }
 }

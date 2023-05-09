@@ -15,6 +15,7 @@ public class PushMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageConfig")
     public JourneyPushMessage messageConfig;
+
     public PushMessageActivity withMessageConfig(JourneyPushMessage messageConfig) {
         this.messageConfig = messageConfig;
         return this;
@@ -23,6 +24,7 @@ public class PushMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextActivity")
     public String nextActivity;
+
     public PushMessageActivity withNextActivity(String nextActivity) {
         this.nextActivity = nextActivity;
         return this;
@@ -31,6 +33,7 @@ public class PushMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateName")
     public String templateName;
+
     public PushMessageActivity withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -39,9 +42,11 @@ public class PushMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateVersion")
     public String templateVersion;
+
     public PushMessageActivity withTemplateVersion(String templateVersion) {
         this.templateVersion = templateVersion;
         return this;
     }
     
+    public PushMessageActivity(){}
 }

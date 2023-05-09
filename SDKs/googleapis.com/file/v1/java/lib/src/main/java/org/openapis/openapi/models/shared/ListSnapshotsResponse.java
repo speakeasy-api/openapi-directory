@@ -18,6 +18,7 @@ public class ListSnapshotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSnapshotsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListSnapshotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshots")
     public Snapshot[] snapshots;
+
     public ListSnapshotsResponse withSnapshots(Snapshot[] snapshots) {
         this.snapshots = snapshots;
         return this;
     }
     
+    public ListSnapshotsResponse(){}
 }

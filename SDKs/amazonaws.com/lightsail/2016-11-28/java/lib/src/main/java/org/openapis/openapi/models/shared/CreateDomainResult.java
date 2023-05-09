@@ -15,9 +15,11 @@ public class CreateDomainResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public CreateDomainResult withOperation(Operation operation) {
         this.operation = operation;
         return this;
     }
     
+    public CreateDomainResult(){}
 }

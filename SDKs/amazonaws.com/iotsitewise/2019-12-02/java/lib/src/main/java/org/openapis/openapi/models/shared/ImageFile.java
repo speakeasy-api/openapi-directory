@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImageFile {
     @JsonProperty("data")
     public String data;
+
     public ImageFile withData(String data) {
         this.data = data;
         return this;
@@ -19,9 +20,14 @@ public class ImageFile {
     
     @JsonProperty("type")
     public ImageFileTypeEnum type;
+
     public ImageFile withType(ImageFileTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ImageFile(@JsonProperty("data") String data, @JsonProperty("type") ImageFileTypeEnum type) {
+        this.data = data;
+        this.type = type;
+  }
 }

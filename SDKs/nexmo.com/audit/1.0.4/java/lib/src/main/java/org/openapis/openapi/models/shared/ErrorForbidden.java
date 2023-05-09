@@ -18,6 +18,7 @@ public class ErrorForbidden {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public ErrorForbidden withError(String error) {
         this.error = error;
         return this;
@@ -29,6 +30,7 @@ public class ErrorForbidden {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ErrorForbidden withMessage(String message) {
         this.message = message;
         return this;
@@ -40,9 +42,11 @@ public class ErrorForbidden {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public ErrorForbidden withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public ErrorForbidden(){}
 }

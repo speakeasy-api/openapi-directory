@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProcessIdRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public GetProcessIdRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GetProcessIdRequest(@JsonProperty("projectId") String projectId) {
+        this.projectId = projectId;
+  }
 }

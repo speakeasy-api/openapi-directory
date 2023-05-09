@@ -12,6 +12,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DrivelabelsLabelsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DrivelabelsLabelsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DrivelabelsLabelsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DrivelabelsLabelsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customer")
     public String customer;
+
     public DrivelabelsLabelsListRequest withCustomer(String customer) {
         this.customer = customer;
         return this;
@@ -62,6 +67,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DrivelabelsLabelsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +78,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DrivelabelsLabelsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +89,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=languageCode")
     public String languageCode;
+
     public DrivelabelsLabelsListRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -92,6 +100,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minimumRole")
     public DrivelabelsLabelsListMinimumRoleEnum minimumRole;
+
     public DrivelabelsLabelsListRequest withMinimumRole(DrivelabelsLabelsListMinimumRoleEnum minimumRole) {
         this.minimumRole = minimumRole;
         return this;
@@ -102,6 +111,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DrivelabelsLabelsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +122,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public DrivelabelsLabelsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -122,6 +133,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DrivelabelsLabelsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -132,6 +144,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DrivelabelsLabelsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +155,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publishedOnly")
     public Boolean publishedOnly;
+
     public DrivelabelsLabelsListRequest withPublishedOnly(Boolean publishedOnly) {
         this.publishedOnly = publishedOnly;
         return this;
@@ -152,6 +166,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DrivelabelsLabelsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +177,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DrivelabelsLabelsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,6 +188,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DrivelabelsLabelsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -182,6 +199,7 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useAdminAccess")
     public Boolean useAdminAccess;
+
     public DrivelabelsLabelsListRequest withUseAdminAccess(Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
         return this;
@@ -192,9 +210,11 @@ public class DrivelabelsLabelsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public DrivelabelsLabelsListViewEnum view;
+
     public DrivelabelsLabelsListRequest withView(DrivelabelsLabelsListViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public DrivelabelsLabelsListRequest(){}
 }

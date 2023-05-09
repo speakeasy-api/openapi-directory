@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEventsResponse {
     
     public String contentType;
+
     public GetEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetEventsResponse {
     
     
     public Integer statusCode;
+
     public GetEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.EventRetrieved[] eventRetrieveds;
+
     public GetEventsResponse withEventRetrieveds(org.openapis.openapi.models.shared.EventRetrieved[] eventRetrieveds) {
         this.eventRetrieveds = eventRetrieveds;
         return this;
     }
     
+    public GetEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

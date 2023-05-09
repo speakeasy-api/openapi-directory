@@ -18,6 +18,7 @@ public class CommonInStreamAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionButtonLabel")
     public String actionButtonLabel;
+
     public CommonInStreamAttribute withActionButtonLabel(String actionButtonLabel) {
         this.actionButtonLabel = actionButtonLabel;
         return this;
@@ -29,6 +30,7 @@ public class CommonInStreamAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionHeadline")
     public String actionHeadline;
+
     public CommonInStreamAttribute withActionHeadline(String actionHeadline) {
         this.actionHeadline = actionHeadline;
         return this;
@@ -40,6 +42,7 @@ public class CommonInStreamAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companionBanner")
     public ImageAsset companionBanner;
+
     public CommonInStreamAttribute withCompanionBanner(ImageAsset companionBanner) {
         this.companionBanner = companionBanner;
         return this;
@@ -51,6 +54,7 @@ public class CommonInStreamAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayUrl")
     public String displayUrl;
+
     public CommonInStreamAttribute withDisplayUrl(String displayUrl) {
         this.displayUrl = displayUrl;
         return this;
@@ -62,6 +66,7 @@ public class CommonInStreamAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalUrl")
     public String finalUrl;
+
     public CommonInStreamAttribute withFinalUrl(String finalUrl) {
         this.finalUrl = finalUrl;
         return this;
@@ -73,6 +78,7 @@ public class CommonInStreamAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingUrl")
     public String trackingUrl;
+
     public CommonInStreamAttribute withTrackingUrl(String trackingUrl) {
         this.trackingUrl = trackingUrl;
         return this;
@@ -84,9 +90,11 @@ public class CommonInStreamAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video")
     public YoutubeVideoDetails video;
+
     public CommonInStreamAttribute withVideo(YoutubeVideoDetails video) {
         this.video = video;
         return this;
     }
     
+    public CommonInStreamAttribute(){}
 }

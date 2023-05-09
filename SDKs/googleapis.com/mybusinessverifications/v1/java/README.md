@@ -16,13 +16,12 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsRequest;
 import org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.FetchVerificationOptionsRequest;
-import org.openapis.openapi.models.shared.ServiceBusinessContext;
 import org.openapis.openapi.models.shared.PostalAddress;
+import org.openapis.openapi.models.shared.ServiceBusinessContext;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -31,54 +30,57 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            MybusinessverificationsLocationsFetchVerificationOptionsRequest req = new MybusinessverificationsLocationsFetchVerificationOptionsRequest() {{
-                dollarXgafv = "2";
+            MybusinessverificationsLocationsFetchVerificationOptionsRequest req = new MybusinessverificationsLocationsFetchVerificationOptionsRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 fetchVerificationOptionsRequest = new FetchVerificationOptionsRequest() {{
                     context = new ServiceBusinessContext() {{
                         address = new PostalAddress() {{
                             addressLines = new String[]{{
-                                add("distinctio"),
                                 add("quibusdam"),
                                 add("unde"),
+                                add("nulla"),
                             }};
-                            administrativeArea = "nulla";
-                            languageCode = "corrupti";
-                            locality = "illum";
-                            organization = "vel";
-                            postalCode = "63428-0923";
+                            administrativeArea = "corrupti";
+                            languageCode = "illum";
+                            locality = "vel";
+                            organization = "error";
+                            postalCode = "34280-9234";
                             recipients = new String[]{{
-                                add("minus"),
                                 add("placeat"),
+                                add("voluptatum"),
+                                add("iusto"),
+                                add("excepturi"),
                             }};
-                            regionCode = "voluptatum";
-                            revision = 479977;
-                            sortingCode = "excepturi";
-                            sublocality = "nisi";
-                        }};
-                    }};
-                    languageCode = "recusandae";
-                }};
-                accessToken = "temporibus";
-                alt = "json";
-                callback = "quis";
-                fields = "veritatis";
-                key = "deserunt";
-                location = "perferendis";
-                oauthToken = "ipsam";
+                            regionCode = "nisi";
+                            revision = 925597;
+                            sortingCode = "temporibus";
+                            sublocality = "ab";
+                        }};;
+                    }};;
+                    languageCode = "quis";
+                }};;
+                accessToken = "veritatis";
+                alt = AltEnum.MEDIA;
+                callback = "perferendis";
+                fields = "ipsam";
+                key = "repellendus";
+                oauthToken = "sapiente";
                 prettyPrint = false;
-                quotaUser = "repellendus";
-                uploadType = "sapiente";
-                uploadProtocol = "quo";
-            }}            
+                quotaUser = "quo";
+                uploadType = "odit";
+                uploadProtocol = "at";
+            }};            
 
             MybusinessverificationsLocationsFetchVerificationOptionsResponse res = sdk.locations.mybusinessverificationsLocationsFetchVerificationOptions(req);
 
-            if (res.fetchVerificationOptionsResponse.isPresent()) {
+            if (res.fetchVerificationOptionsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -86,17 +88,17 @@ public class Application {
 ## Available Resources and Operations
 
 
-### locations
+### [locations](docs/locations/README.md)
 
-* `mybusinessverificationsLocationsFetchVerificationOptions` - Reports all eligible verification options for a location in a specific language.
-* `mybusinessverificationsLocationsGetVoiceOfMerchantState` - Gets the VoiceOfMerchant state.
-* `mybusinessverificationsLocationsVerificationsComplete` - Completes a `PENDING` verification. It is only necessary for non `AUTO` verification methods. `AUTO` verification request is instantly `VERIFIED` upon creation.
-* `mybusinessverificationsLocationsVerificationsList` - List verifications of a location, ordered by create time.
-* `mybusinessverificationsLocationsVerify` - Starts the verification process for a location.
+* [mybusinessverificationsLocationsFetchVerificationOptions](docs/locations/README.md#mybusinessverificationslocationsfetchverificationoptions) - Reports all eligible verification options for a location in a specific language.
+* [mybusinessverificationsLocationsGetVoiceOfMerchantState](docs/locations/README.md#mybusinessverificationslocationsgetvoiceofmerchantstate) - Gets the VoiceOfMerchant state.
+* [mybusinessverificationsLocationsVerificationsComplete](docs/locations/README.md#mybusinessverificationslocationsverificationscomplete) - Completes a `PENDING` verification. It is only necessary for non `AUTO` verification methods. `AUTO` verification request is instantly `VERIFIED` upon creation.
+* [mybusinessverificationsLocationsVerificationsList](docs/locations/README.md#mybusinessverificationslocationsverificationslist) - List verifications of a location, ordered by create time.
+* [mybusinessverificationsLocationsVerify](docs/locations/README.md#mybusinessverificationslocationsverify) - Starts the verification process for a location.
 
-### verificationTokens
+### [verificationTokens](docs/verificationtokens/README.md)
 
-* `mybusinessverificationsVerificationTokensGenerate` - Generates a token for the provided location data as a vetted [partner](https://support.google.com/business/answer/7674102). Throws PERMISSION_DENIED if the caller is not a vetted partner account. Throws FAILED_PRECONDITION if the caller's VettedStatus is INVALID.
+* [mybusinessverificationsVerificationTokensGenerate](docs/verificationtokens/README.md#mybusinessverificationsverificationtokensgenerate) - Generates a token for the provided location data as a vetted [partner](https://support.google.com/business/answer/7674102). Throws PERMISSION_DENIED if the caller is not a vetted partner account. Throws FAILED_PRECONDITION if the caller's VettedStatus is INVALID.
 <!-- End SDK Available Operations -->
 
 ### Maturity

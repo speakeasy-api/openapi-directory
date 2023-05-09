@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequest {
@@ -12,6 +13,7 @@ public class DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -22,6 +24,7 @@ public class DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
@@ -32,9 +35,15 @@ public class DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
     public String userEmail;
+
     public DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequest withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequest(@JsonProperty("groupId") String groupId, @JsonProperty("offeringId") String offeringId, @JsonProperty("userEmail") String userEmail) {
+        this.groupId = groupId;
+        this.offeringId = offeringId;
+        this.userEmail = userEmail;
+  }
 }

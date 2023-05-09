@@ -15,6 +15,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonOperator")
     public String comparisonOperator;
+
     public Filter withComparisonOperator(String comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -22,6 +23,7 @@ public class Filter {
     
     @JsonProperty("key")
     public String key;
+
     public Filter withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +31,14 @@ public class Filter {
     
     @JsonProperty("values")
     public String[] values;
+
     public Filter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public Filter(@JsonProperty("key") String key, @JsonProperty("values") String[] values) {
+        this.key = key;
+        this.values = values;
+  }
 }

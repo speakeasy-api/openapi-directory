@@ -14,6 +14,7 @@ public class RatesPerDate {
      */
     @JsonProperty("closed")
     public Boolean closed;
+
     public RatesPerDate withClosed(Boolean closed) {
         this.closed = closed;
         return this;
@@ -25,6 +26,7 @@ public class RatesPerDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closedToArrival")
     public Boolean closedToArrival;
+
     public RatesPerDate withClosedToArrival(Boolean closedToArrival) {
         this.closedToArrival = closedToArrival;
         return this;
@@ -36,6 +38,7 @@ public class RatesPerDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closedToDeparture")
     public Boolean closedToDeparture;
+
     public RatesPerDate withClosedToDeparture(Boolean closedToDeparture) {
         this.closedToDeparture = closedToDeparture;
         return this;
@@ -43,6 +46,7 @@ public class RatesPerDate {
     
     @JsonProperty("date")
     public String date;
+
     public RatesPerDate withDate(String date) {
         this.date = date;
         return this;
@@ -53,6 +57,7 @@ public class RatesPerDate {
      */
     @JsonProperty("rates")
     public RatePlanRate[] rates;
+
     public RatesPerDate withRates(RatePlanRate[] rates) {
         this.rates = rates;
         return this;
@@ -64,9 +69,15 @@ public class RatesPerDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staythrough")
     public RatesPerDateStaythrough staythrough;
+
     public RatesPerDate withStaythrough(RatesPerDateStaythrough staythrough) {
         this.staythrough = staythrough;
         return this;
     }
     
+    public RatesPerDate(@JsonProperty("closed") Boolean closed, @JsonProperty("date") String date, @JsonProperty("rates") RatePlanRate[] rates) {
+        this.closed = closed;
+        this.date = date;
+        this.rates = rates;
+  }
 }

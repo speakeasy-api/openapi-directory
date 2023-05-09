@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AcknowledgeFlow {
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AcknowledgeFlow withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public AcknowledgeFlow(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

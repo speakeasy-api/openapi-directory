@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostTruststorePkcs12RequestBodyTruststoreP12 {
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public PostTruststorePkcs12RequestBodyTruststoreP12 withContent(byte[] content) {
         this.content = content;
         return this;
@@ -16,9 +18,14 @@ public class PostTruststorePkcs12RequestBodyTruststoreP12 {
     
     @SpeakeasyMetadata("multipartForm:name=truststore.p12")
     public String truststoreP12;
+
     public PostTruststorePkcs12RequestBodyTruststoreP12 withTruststoreP12(String truststoreP12) {
         this.truststoreP12 = truststoreP12;
         return this;
     }
     
+    public PostTruststorePkcs12RequestBodyTruststoreP12(@JsonProperty("content") byte[] content, @JsonProperty("truststore.p12") String truststoreP12) {
+        this.content = content;
+        this.truststoreP12 = truststoreP12;
+  }
 }

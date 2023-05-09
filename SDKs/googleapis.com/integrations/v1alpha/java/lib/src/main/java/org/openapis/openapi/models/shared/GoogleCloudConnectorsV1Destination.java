@@ -15,6 +15,7 @@ public class GoogleCloudConnectorsV1Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public GoogleCloudConnectorsV1Destination withHost(String host) {
         this.host = host;
         return this;
@@ -26,6 +27,7 @@ public class GoogleCloudConnectorsV1Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public GoogleCloudConnectorsV1Destination withPort(Integer port) {
         this.port = port;
         return this;
@@ -37,9 +39,11 @@ public class GoogleCloudConnectorsV1Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAttachment")
     public String serviceAttachment;
+
     public GoogleCloudConnectorsV1Destination withServiceAttachment(String serviceAttachment) {
         this.serviceAttachment = serviceAttachment;
         return this;
     }
     
+    public GoogleCloudConnectorsV1Destination(){}
 }

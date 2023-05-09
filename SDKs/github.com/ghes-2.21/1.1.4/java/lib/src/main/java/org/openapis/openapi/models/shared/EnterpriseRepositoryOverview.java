@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnterpriseRepositoryOverview {
     @JsonProperty("fork_repos")
     public Long forkRepos;
+
     public EnterpriseRepositoryOverview withForkRepos(Long forkRepos) {
         this.forkRepos = forkRepos;
         return this;
@@ -19,6 +20,7 @@ public class EnterpriseRepositoryOverview {
     
     @JsonProperty("org_repos")
     public Long orgRepos;
+
     public EnterpriseRepositoryOverview withOrgRepos(Long orgRepos) {
         this.orgRepos = orgRepos;
         return this;
@@ -26,6 +28,7 @@ public class EnterpriseRepositoryOverview {
     
     @JsonProperty("root_repos")
     public Long rootRepos;
+
     public EnterpriseRepositoryOverview withRootRepos(Long rootRepos) {
         this.rootRepos = rootRepos;
         return this;
@@ -33,6 +36,7 @@ public class EnterpriseRepositoryOverview {
     
     @JsonProperty("total_pushes")
     public Long totalPushes;
+
     public EnterpriseRepositoryOverview withTotalPushes(Long totalPushes) {
         this.totalPushes = totalPushes;
         return this;
@@ -40,6 +44,7 @@ public class EnterpriseRepositoryOverview {
     
     @JsonProperty("total_repos")
     public Long totalRepos;
+
     public EnterpriseRepositoryOverview withTotalRepos(Long totalRepos) {
         this.totalRepos = totalRepos;
         return this;
@@ -47,9 +52,18 @@ public class EnterpriseRepositoryOverview {
     
     @JsonProperty("total_wikis")
     public Long totalWikis;
+
     public EnterpriseRepositoryOverview withTotalWikis(Long totalWikis) {
         this.totalWikis = totalWikis;
         return this;
     }
     
+    public EnterpriseRepositoryOverview(@JsonProperty("fork_repos") Long forkRepos, @JsonProperty("org_repos") Long orgRepos, @JsonProperty("root_repos") Long rootRepos, @JsonProperty("total_pushes") Long totalPushes, @JsonProperty("total_repos") Long totalRepos, @JsonProperty("total_wikis") Long totalWikis) {
+        this.forkRepos = forkRepos;
+        this.orgRepos = orgRepos;
+        this.rootRepos = rootRepos;
+        this.totalPushes = totalPushes;
+        this.totalRepos = totalRepos;
+        this.totalWikis = totalWikis;
+  }
 }

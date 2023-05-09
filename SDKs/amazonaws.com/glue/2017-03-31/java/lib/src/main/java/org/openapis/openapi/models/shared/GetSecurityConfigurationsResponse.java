@@ -15,6 +15,7 @@ public class GetSecurityConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetSecurityConfigurationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetSecurityConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfigurations")
     public SecurityConfiguration[] securityConfigurations;
+
     public GetSecurityConfigurationsResponse withSecurityConfigurations(SecurityConfiguration[] securityConfigurations) {
         this.securityConfigurations = securityConfigurations;
         return this;
     }
     
+    public GetSecurityConfigurationsResponse(){}
 }

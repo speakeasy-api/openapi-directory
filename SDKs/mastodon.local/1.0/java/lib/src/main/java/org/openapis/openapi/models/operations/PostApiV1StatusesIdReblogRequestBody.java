@@ -15,9 +15,11 @@ public class PostApiV1StatusesIdReblogRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public String visibility;
+
     public PostApiV1StatusesIdReblogRequestBody withVisibility(String visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public PostApiV1StatusesIdReblogRequestBody(){}
 }

@@ -15,6 +15,7 @@ public class BrowserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedPortalArns")
     public String[] associatedPortalArns;
+
     public BrowserSettings withAssociatedPortalArns(String[] associatedPortalArns) {
         this.associatedPortalArns = associatedPortalArns;
         return this;
@@ -23,6 +24,7 @@ public class BrowserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browserPolicy")
     public String browserPolicy;
+
     public BrowserSettings withBrowserPolicy(String browserPolicy) {
         this.browserPolicy = browserPolicy;
         return this;
@@ -30,9 +32,13 @@ public class BrowserSettings {
     
     @JsonProperty("browserSettingsArn")
     public String browserSettingsArn;
+
     public BrowserSettings withBrowserSettingsArn(String browserSettingsArn) {
         this.browserSettingsArn = browserSettingsArn;
         return this;
     }
     
+    public BrowserSettings(@JsonProperty("browserSettingsArn") String browserSettingsArn) {
+        this.browserSettingsArn = browserSettingsArn;
+  }
 }

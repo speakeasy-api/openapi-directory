@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AlertcenterAlertsFeedbackCreateResponse {
@@ -12,6 +13,7 @@ public class AlertcenterAlertsFeedbackCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.AlertFeedback alertFeedback;
+
     public AlertcenterAlertsFeedbackCreateResponse withAlertFeedback(org.openapis.openapi.models.shared.AlertFeedback alertFeedback) {
         this.alertFeedback = alertFeedback;
         return this;
@@ -19,6 +21,7 @@ public class AlertcenterAlertsFeedbackCreateResponse {
     
     
     public String contentType;
+
     public AlertcenterAlertsFeedbackCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AlertcenterAlertsFeedbackCreateResponse {
     
     
     public Integer statusCode;
+
     public AlertcenterAlertsFeedbackCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AlertcenterAlertsFeedbackCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AlertcenterAlertsFeedbackCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AlertcenterAlertsFeedbackCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

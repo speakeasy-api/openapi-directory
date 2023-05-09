@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateHubRequest {
     @JsonProperty("HubDescription")
     public String hubDescription;
+
     public CreateHubRequest withHubDescription(String hubDescription) {
         this.hubDescription = hubDescription;
         return this;
@@ -19,6 +20,7 @@ public class CreateHubRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubDisplayName")
     public String hubDisplayName;
+
     public CreateHubRequest withHubDisplayName(String hubDisplayName) {
         this.hubDisplayName = hubDisplayName;
         return this;
@@ -26,6 +28,7 @@ public class CreateHubRequest {
     
     @JsonProperty("HubName")
     public String hubName;
+
     public CreateHubRequest withHubName(String hubName) {
         this.hubName = hubName;
         return this;
@@ -34,6 +37,7 @@ public class CreateHubRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubSearchKeywords")
     public String[] hubSearchKeywords;
+
     public CreateHubRequest withHubSearchKeywords(String[] hubSearchKeywords) {
         this.hubSearchKeywords = hubSearchKeywords;
         return this;
@@ -42,6 +46,7 @@ public class CreateHubRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3StorageConfig")
     public HubS3StorageConfig s3StorageConfig;
+
     public CreateHubRequest withS3StorageConfig(HubS3StorageConfig s3StorageConfig) {
         this.s3StorageConfig = s3StorageConfig;
         return this;
@@ -50,9 +55,14 @@ public class CreateHubRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateHubRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateHubRequest(@JsonProperty("HubDescription") String hubDescription, @JsonProperty("HubName") String hubName) {
+        this.hubDescription = hubDescription;
+        this.hubName = hubName;
+  }
 }

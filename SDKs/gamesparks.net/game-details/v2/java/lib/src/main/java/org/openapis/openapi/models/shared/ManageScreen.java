@@ -15,6 +15,7 @@ public class ManageScreen {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public String[] groups;
+
     public ManageScreen withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -23,6 +24,7 @@ public class ManageScreen {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ManageScreen withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class ManageScreen {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortCode")
     public String shortCode;
+
     public ManageScreen withShortCode(String shortCode) {
         this.shortCode = shortCode;
         return this;
@@ -39,9 +42,11 @@ public class ManageScreen {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public ManageScreen withTemplate(String template) {
         this.template = template;
         return this;
     }
     
+    public ManageScreen(){}
 }

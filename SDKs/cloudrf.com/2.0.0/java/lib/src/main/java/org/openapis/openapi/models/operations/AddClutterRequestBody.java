@@ -12,6 +12,7 @@ public class AddClutterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public org.openapis.openapi.models.shared.Feature[] features;
+
     public AddClutterRequestBody withFeatures(org.openapis.openapi.models.shared.Feature[] features) {
         this.features = features;
         return this;
@@ -20,6 +21,7 @@ public class AddClutterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AddClutterRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class AddClutterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AddClutterRequestBody withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AddClutterRequestBody(){}
 }

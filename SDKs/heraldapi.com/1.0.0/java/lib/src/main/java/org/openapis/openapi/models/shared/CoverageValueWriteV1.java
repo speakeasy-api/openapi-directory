@@ -20,6 +20,7 @@ public class CoverageValueWriteV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("child_coverage_values")
     public CoverageValueWriteV1[] childCoverageValues;
+
     public CoverageValueWriteV1 withChildCoverageValues(CoverageValueWriteV1[] childCoverageValues) {
         this.childCoverageValues = childCoverageValues;
         return this;
@@ -30,6 +31,7 @@ public class CoverageValueWriteV1 {
      */
     @JsonProperty("coverage_parameter_id")
     public String coverageParameterId;
+
     public CoverageValueWriteV1 withCoverageParameterId(String coverageParameterId) {
         this.coverageParameterId = coverageParameterId;
         return this;
@@ -40,9 +42,14 @@ public class CoverageValueWriteV1 {
      */
     @JsonProperty("value")
     public Object value;
+
     public CoverageValueWriteV1 withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public CoverageValueWriteV1(@JsonProperty("coverage_parameter_id") String coverageParameterId, @JsonProperty("value") Object value) {
+        this.coverageParameterId = coverageParameterId;
+        this.value = value;
+  }
 }

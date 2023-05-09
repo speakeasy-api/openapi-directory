@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCatalogueAssetRequest {
@@ -12,6 +13,7 @@ public class GetCatalogueAssetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
     public Boolean aliases;
+
     public GetCatalogueAssetRequest withAliases(Boolean aliases) {
         this.aliases = aliases;
         return this;
@@ -22,6 +24,7 @@ public class GetCatalogueAssetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=catalogueId")
     public String catalogueId;
+
     public GetCatalogueAssetRequest withCatalogueId(String catalogueId) {
         this.catalogueId = catalogueId;
         return this;
@@ -32,6 +35,7 @@ public class GetCatalogueAssetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public String end;
+
     public GetCatalogueAssetRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -42,6 +46,7 @@ public class GetCatalogueAssetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Double limit;
+
     public GetCatalogueAssetRequest withLimit(Double limit) {
         this.limit = limit;
         return this;
@@ -52,6 +57,7 @@ public class GetCatalogueAssetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public GetCatalogueAssetRequest withStart(String start) {
         this.start = start;
         return this;
@@ -62,6 +68,7 @@ public class GetCatalogueAssetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
     public String title;
+
     public GetCatalogueAssetRequest withTitle(String title) {
         this.title = title;
         return this;
@@ -72,9 +79,13 @@ public class GetCatalogueAssetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAfter")
     public String updatedAfter;
+
     public GetCatalogueAssetRequest withUpdatedAfter(String updatedAfter) {
         this.updatedAfter = updatedAfter;
         return this;
     }
     
+    public GetCatalogueAssetRequest(@JsonProperty("catalogueId") String catalogueId) {
+        this.catalogueId = catalogueId;
+  }
 }

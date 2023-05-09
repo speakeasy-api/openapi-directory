@@ -18,6 +18,7 @@ public class GetNetworkBluetoothSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisingEnabled")
     public Boolean advertisingEnabled;
+
     public GetNetworkBluetoothSettings200ApplicationJSON withAdvertisingEnabled(Boolean advertisingEnabled) {
         this.advertisingEnabled = advertisingEnabled;
         return this;
@@ -29,6 +30,7 @@ public class GetNetworkBluetoothSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("major")
     public Long major;
+
     public GetNetworkBluetoothSettings200ApplicationJSON withMajor(Long major) {
         this.major = major;
         return this;
@@ -40,6 +42,7 @@ public class GetNetworkBluetoothSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("majorMinorAssignmentMode")
     public String majorMinorAssignmentMode;
+
     public GetNetworkBluetoothSettings200ApplicationJSON withMajorMinorAssignmentMode(String majorMinorAssignmentMode) {
         this.majorMinorAssignmentMode = majorMinorAssignmentMode;
         return this;
@@ -51,6 +54,7 @@ public class GetNetworkBluetoothSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minor")
     public Long minor;
+
     public GetNetworkBluetoothSettings200ApplicationJSON withMinor(Long minor) {
         this.minor = minor;
         return this;
@@ -62,6 +66,7 @@ public class GetNetworkBluetoothSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanningEnabled")
     public Boolean scanningEnabled;
+
     public GetNetworkBluetoothSettings200ApplicationJSON withScanningEnabled(Boolean scanningEnabled) {
         this.scanningEnabled = scanningEnabled;
         return this;
@@ -73,9 +78,11 @@ public class GetNetworkBluetoothSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uuid")
     public String uuid;
+
     public GetNetworkBluetoothSettings200ApplicationJSON withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public GetNetworkBluetoothSettings200ApplicationJSON(){}
 }

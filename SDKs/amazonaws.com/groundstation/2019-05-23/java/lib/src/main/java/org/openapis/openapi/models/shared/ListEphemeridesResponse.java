@@ -15,6 +15,7 @@ public class ListEphemeridesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ephemerides")
     public EphemerisItem[] ephemerides;
+
     public ListEphemeridesResponse withEphemerides(EphemerisItem[] ephemerides) {
         this.ephemerides = ephemerides;
         return this;
@@ -23,9 +24,11 @@ public class ListEphemeridesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEphemeridesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEphemeridesResponse(){}
 }

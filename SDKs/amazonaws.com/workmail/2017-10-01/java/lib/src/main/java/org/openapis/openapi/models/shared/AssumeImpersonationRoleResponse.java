@@ -15,6 +15,7 @@ public class AssumeImpersonationRoleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpiresIn")
     public Long expiresIn;
+
     public AssumeImpersonationRoleResponse withExpiresIn(Long expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -23,9 +24,11 @@ public class AssumeImpersonationRoleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Token")
     public String token;
+
     public AssumeImpersonationRoleResponse withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public AssumeImpersonationRoleResponse(){}
 }

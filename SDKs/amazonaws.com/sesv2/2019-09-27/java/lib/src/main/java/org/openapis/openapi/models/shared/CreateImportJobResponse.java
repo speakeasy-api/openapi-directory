@@ -15,9 +15,11 @@ public class CreateImportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public CreateImportJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public CreateImportJobResponse(){}
 }

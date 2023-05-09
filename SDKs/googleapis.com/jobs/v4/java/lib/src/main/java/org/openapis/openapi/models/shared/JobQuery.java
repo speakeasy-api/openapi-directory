@@ -18,6 +18,7 @@ public class JobQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commuteFilter")
     public CommuteFilter commuteFilter;
+
     public JobQuery withCommuteFilter(CommuteFilter commuteFilter) {
         this.commuteFilter = commuteFilter;
         return this;
@@ -29,6 +30,7 @@ public class JobQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companies")
     public String[] companies;
+
     public JobQuery withCompanies(String[] companies) {
         this.companies = companies;
         return this;
@@ -40,6 +42,7 @@ public class JobQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyDisplayNames")
     public String[] companyDisplayNames;
+
     public JobQuery withCompanyDisplayNames(String[] companyDisplayNames) {
         this.companyDisplayNames = companyDisplayNames;
         return this;
@@ -51,6 +54,7 @@ public class JobQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compensationFilter")
     public CompensationFilter compensationFilter;
+
     public JobQuery withCompensationFilter(CompensationFilter compensationFilter) {
         this.compensationFilter = compensationFilter;
         return this;
@@ -62,6 +66,7 @@ public class JobQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customAttributeFilter")
     public String customAttributeFilter;
+
     public JobQuery withCustomAttributeFilter(String customAttributeFilter) {
         this.customAttributeFilter = customAttributeFilter;
         return this;
@@ -73,6 +78,7 @@ public class JobQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableSpellCheck")
     public Boolean disableSpellCheck;
+
     public JobQuery withDisableSpellCheck(Boolean disableSpellCheck) {
         this.disableSpellCheck = disableSpellCheck;
         return this;
@@ -84,6 +90,7 @@ public class JobQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employmentTypes")
     public JobQueryEmploymentTypesEnum[] employmentTypes;
+
     public JobQuery withEmploymentTypes(JobQueryEmploymentTypesEnum[] employmentTypes) {
         this.employmentTypes = employmentTypes;
         return this;
@@ -95,6 +102,7 @@ public class JobQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedJobs")
     public String[] excludedJobs;
+
     public JobQuery withExcludedJobs(String[] excludedJobs) {
         this.excludedJobs = excludedJobs;
         return this;
@@ -106,6 +114,7 @@ public class JobQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobCategories")
     public JobQueryJobCategoriesEnum[] jobCategories;
+
     public JobQuery withJobCategories(JobQueryJobCategoriesEnum[] jobCategories) {
         this.jobCategories = jobCategories;
         return this;
@@ -117,6 +126,7 @@ public class JobQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCodes")
     public String[] languageCodes;
+
     public JobQuery withLanguageCodes(String[] languageCodes) {
         this.languageCodes = languageCodes;
         return this;
@@ -128,6 +138,7 @@ public class JobQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationFilters")
     public LocationFilter[] locationFilters;
+
     public JobQuery withLocationFilters(LocationFilter[] locationFilters) {
         this.locationFilters = locationFilters;
         return this;
@@ -139,6 +150,7 @@ public class JobQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishTimeRange")
     public TimestampRange publishTimeRange;
+
     public JobQuery withPublishTimeRange(TimestampRange publishTimeRange) {
         this.publishTimeRange = publishTimeRange;
         return this;
@@ -150,6 +162,7 @@ public class JobQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public JobQuery withQuery(String query) {
         this.query = query;
         return this;
@@ -161,9 +174,11 @@ public class JobQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryLanguageCode")
     public String queryLanguageCode;
+
     public JobQuery withQueryLanguageCode(String queryLanguageCode) {
         this.queryLanguageCode = queryLanguageCode;
         return this;
     }
     
+    public JobQuery(){}
 }

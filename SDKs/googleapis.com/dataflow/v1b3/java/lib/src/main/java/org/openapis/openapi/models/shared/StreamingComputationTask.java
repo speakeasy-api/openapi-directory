@@ -18,6 +18,7 @@ public class StreamingComputationTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computationRanges")
     public StreamingComputationRanges[] computationRanges;
+
     public StreamingComputationTask withComputationRanges(StreamingComputationRanges[] computationRanges) {
         this.computationRanges = computationRanges;
         return this;
@@ -29,6 +30,7 @@ public class StreamingComputationTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataDisks")
     public MountedDataDisk[] dataDisks;
+
     public StreamingComputationTask withDataDisks(MountedDataDisk[] dataDisks) {
         this.dataDisks = dataDisks;
         return this;
@@ -40,9 +42,11 @@ public class StreamingComputationTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskType")
     public StreamingComputationTaskTaskTypeEnum taskType;
+
     public StreamingComputationTask withTaskType(StreamingComputationTaskTaskTypeEnum taskType) {
         this.taskType = taskType;
         return this;
     }
     
+    public StreamingComputationTask(){}
 }

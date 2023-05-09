@@ -19,6 +19,7 @@ public class Key {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Key withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -26,6 +27,7 @@ public class Key {
     
     @JsonProperty("id")
     public Long id;
+
     public Key withId(Long id) {
         this.id = id;
         return this;
@@ -33,6 +35,7 @@ public class Key {
     
     @JsonProperty("key")
     public String key;
+
     public Key withKey(String key) {
         this.key = key;
         return this;
@@ -40,6 +43,7 @@ public class Key {
     
     @JsonProperty("read_only")
     public Boolean readOnly;
+
     public Key withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -47,6 +51,7 @@ public class Key {
     
     @JsonProperty("title")
     public String title;
+
     public Key withTitle(String title) {
         this.title = title;
         return this;
@@ -54,6 +59,7 @@ public class Key {
     
     @JsonProperty("url")
     public String url;
+
     public Key withUrl(String url) {
         this.url = url;
         return this;
@@ -61,9 +67,19 @@ public class Key {
     
     @JsonProperty("verified")
     public Boolean verified;
+
     public Key withVerified(Boolean verified) {
         this.verified = verified;
         return this;
     }
     
+    public Key(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("id") Long id, @JsonProperty("key") String key, @JsonProperty("read_only") Boolean readOnly, @JsonProperty("title") String title, @JsonProperty("url") String url, @JsonProperty("verified") Boolean verified) {
+        this.createdAt = createdAt;
+        this.id = id;
+        this.key = key;
+        this.readOnly = readOnly;
+        this.title = title;
+        this.url = url;
+        this.verified = verified;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSaveOntologyTagRequest {
@@ -12,6 +13,7 @@ public class GetSaveOntologyTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth")
     public String auth;
+
     public GetSaveOntologyTagRequest withAuth(String auth) {
         this.auth = auth;
         return this;
@@ -19,6 +21,7 @@ public class GetSaveOntologyTagRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetSaveOntologyTagFormatEnum format;
+
     public GetSaveOntologyTagRequest withFormat(GetSaveOntologyTagFormatEnum format) {
         this.format = format;
         return this;
@@ -29,6 +32,7 @@ public class GetSaveOntologyTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
     public String pwId;
+
     public GetSaveOntologyTagRequest withPwId(String pwId) {
         this.pwId = pwId;
         return this;
@@ -39,6 +43,7 @@ public class GetSaveOntologyTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=term")
     public String term;
+
     public GetSaveOntologyTagRequest withTerm(String term) {
         this.term = term;
         return this;
@@ -49,6 +54,7 @@ public class GetSaveOntologyTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=termId")
     public String termId;
+
     public GetSaveOntologyTagRequest withTermId(String termId) {
         this.termId = termId;
         return this;
@@ -59,9 +65,17 @@ public class GetSaveOntologyTagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
     public String user;
+
     public GetSaveOntologyTagRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public GetSaveOntologyTagRequest(@JsonProperty("auth") String auth, @JsonProperty("pwId") String pwId, @JsonProperty("term") String term, @JsonProperty("termId") String termId, @JsonProperty("user") String user) {
+        this.auth = auth;
+        this.pwId = pwId;
+        this.term = term;
+        this.termId = termId;
+        this.user = user;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteEgressOnlyInternetGatewayResult {
     
     public Boolean returnCode;
+
     public DeleteEgressOnlyInternetGatewayResult withReturnCode(Boolean returnCode) {
         this.returnCode = returnCode;
         return this;
     }
     
+    public DeleteEgressOnlyInternetGatewayResult(){}
 }

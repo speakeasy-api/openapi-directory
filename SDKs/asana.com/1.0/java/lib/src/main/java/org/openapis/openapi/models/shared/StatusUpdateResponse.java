@@ -20,6 +20,7 @@ public class StatusUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public UserCompact author;
+
     public StatusUpdateResponse withAuthor(UserCompact author) {
         this.author = author;
         return this;
@@ -33,6 +34,7 @@ public class StatusUpdateResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public StatusUpdateResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -41,6 +43,7 @@ public class StatusUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public UserCompact createdBy;
+
     public StatusUpdateResponse withCreatedBy(UserCompact createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -52,6 +55,7 @@ public class StatusUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public StatusUpdateResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -63,6 +67,7 @@ public class StatusUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hearted")
     public Boolean hearted;
+
     public StatusUpdateResponse withHearted(Boolean hearted) {
         this.hearted = hearted;
         return this;
@@ -74,6 +79,7 @@ public class StatusUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hearts")
     public Like[] hearts;
+
     public StatusUpdateResponse withHearts(Like[] hearts) {
         this.hearts = hearts;
         return this;
@@ -85,6 +91,7 @@ public class StatusUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_text")
     public String htmlText;
+
     public StatusUpdateResponse withHtmlText(String htmlText) {
         this.htmlText = htmlText;
         return this;
@@ -96,6 +103,7 @@ public class StatusUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liked")
     public Boolean liked;
+
     public StatusUpdateResponse withLiked(Boolean liked) {
         this.liked = liked;
         return this;
@@ -107,6 +115,7 @@ public class StatusUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("likes")
     public Like[] likes;
+
     public StatusUpdateResponse withLikes(Like[] likes) {
         this.likes = likes;
         return this;
@@ -121,6 +130,7 @@ public class StatusUpdateResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modified_at")
     public OffsetDateTime modifiedAt;
+
     public StatusUpdateResponse withModifiedAt(OffsetDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -132,6 +142,7 @@ public class StatusUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_hearts")
     public Long numHearts;
+
     public StatusUpdateResponse withNumHearts(Long numHearts) {
         this.numHearts = numHearts;
         return this;
@@ -143,6 +154,7 @@ public class StatusUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_likes")
     public Long numLikes;
+
     public StatusUpdateResponse withNumLikes(Long numLikes) {
         this.numLikes = numLikes;
         return this;
@@ -151,6 +163,7 @@ public class StatusUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public StatusUpdateResponseParent parent;
+
     public StatusUpdateResponse withParent(StatusUpdateResponseParent parent) {
         this.parent = parent;
         return this;
@@ -163,6 +176,7 @@ public class StatusUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public StatusUpdateResponseResourceSubtypeEnum resourceSubtype;
+
     public StatusUpdateResponse withResourceSubtype(StatusUpdateResponseResourceSubtypeEnum resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -174,6 +188,7 @@ public class StatusUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public StatusUpdateResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -184,6 +199,7 @@ public class StatusUpdateResponse {
      */
     @JsonProperty("status_type")
     public StatusUpdateResponseStatusTypeEnum statusType;
+
     public StatusUpdateResponse withStatusType(StatusUpdateResponseStatusTypeEnum statusType) {
         this.statusType = statusType;
         return this;
@@ -194,6 +210,7 @@ public class StatusUpdateResponse {
      */
     @JsonProperty("text")
     public String text;
+
     public StatusUpdateResponse withText(String text) {
         this.text = text;
         return this;
@@ -205,9 +222,14 @@ public class StatusUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public StatusUpdateResponse withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public StatusUpdateResponse(@JsonProperty("status_type") StatusUpdateResponseStatusTypeEnum statusType, @JsonProperty("text") String text) {
+        this.statusType = statusType;
+        this.text = text;
+  }
 }

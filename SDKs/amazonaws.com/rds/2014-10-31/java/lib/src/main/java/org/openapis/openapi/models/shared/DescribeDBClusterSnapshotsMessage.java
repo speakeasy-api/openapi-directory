@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBClusterSnapshotsMessage {
     
     public String dbClusterIdentifier;
+
     public DescribeDBClusterSnapshotsMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class DescribeDBClusterSnapshotsMessage {
     
     
     public String dbClusterSnapshotIdentifier;
+
     public DescribeDBClusterSnapshotsMessage withDBClusterSnapshotIdentifier(String dbClusterSnapshotIdentifier) {
         this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class DescribeDBClusterSnapshotsMessage {
     
     
     public FilterList[] filters;
+
     public DescribeDBClusterSnapshotsMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -33,6 +36,7 @@ public class DescribeDBClusterSnapshotsMessage {
     
     
     public Boolean includePublic;
+
     public DescribeDBClusterSnapshotsMessage withIncludePublic(Boolean includePublic) {
         this.includePublic = includePublic;
         return this;
@@ -40,6 +44,7 @@ public class DescribeDBClusterSnapshotsMessage {
     
     
     public Boolean includeShared;
+
     public DescribeDBClusterSnapshotsMessage withIncludeShared(Boolean includeShared) {
         this.includeShared = includeShared;
         return this;
@@ -47,6 +52,7 @@ public class DescribeDBClusterSnapshotsMessage {
     
     
     public String marker;
+
     public DescribeDBClusterSnapshotsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -54,6 +60,7 @@ public class DescribeDBClusterSnapshotsMessage {
     
     
     public Long maxRecords;
+
     public DescribeDBClusterSnapshotsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -61,9 +68,11 @@ public class DescribeDBClusterSnapshotsMessage {
     
     
     public String snapshotType;
+
     public DescribeDBClusterSnapshotsMessage withSnapshotType(String snapshotType) {
         this.snapshotType = snapshotType;
         return this;
     }
     
+    public DescribeDBClusterSnapshotsMessage(){}
 }

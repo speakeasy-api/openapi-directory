@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteModelPackageGroupPolicyInput {
     @JsonProperty("ModelPackageGroupName")
     public String modelPackageGroupName;
+
     public DeleteModelPackageGroupPolicyInput withModelPackageGroupName(String modelPackageGroupName) {
         this.modelPackageGroupName = modelPackageGroupName;
         return this;
     }
     
+    public DeleteModelPackageGroupPolicyInput(@JsonProperty("ModelPackageGroupName") String modelPackageGroupName) {
+        this.modelPackageGroupName = modelPackageGroupName;
+  }
 }

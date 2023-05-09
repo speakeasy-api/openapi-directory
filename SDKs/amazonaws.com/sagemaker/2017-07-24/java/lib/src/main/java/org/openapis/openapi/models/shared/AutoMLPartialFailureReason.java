@@ -15,9 +15,11 @@ public class AutoMLPartialFailureReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartialFailureMessage")
     public String partialFailureMessage;
+
     public AutoMLPartialFailureReason withPartialFailureMessage(String partialFailureMessage) {
         this.partialFailureMessage = partialFailureMessage;
         return this;
     }
     
+    public AutoMLPartialFailureReason(){}
 }

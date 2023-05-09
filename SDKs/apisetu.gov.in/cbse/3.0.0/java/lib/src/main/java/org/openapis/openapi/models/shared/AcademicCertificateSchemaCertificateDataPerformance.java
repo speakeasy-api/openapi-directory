@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AcademicCertificateSchemaCertificateDataPerformance {
     
     public AcademicCertificateSchemaCertificateDataPerformanceSubjects[] subjects;
+
     public AcademicCertificateSchemaCertificateDataPerformance withSubjects(AcademicCertificateSchemaCertificateDataPerformanceSubjects[] subjects) {
         this.subjects = subjects;
         return this;
@@ -16,6 +17,7 @@ public class AcademicCertificateSchemaCertificateDataPerformance {
     
     
     public String cgpa;
+
     public AcademicCertificateSchemaCertificateDataPerformance withCgpa(String cgpa) {
         this.cgpa = cgpa;
         return this;
@@ -23,6 +25,7 @@ public class AcademicCertificateSchemaCertificateDataPerformance {
     
     
     public String cgpaMax;
+
     public AcademicCertificateSchemaCertificateDataPerformance withCgpaMax(String cgpaMax) {
         this.cgpaMax = cgpaMax;
         return this;
@@ -30,6 +33,7 @@ public class AcademicCertificateSchemaCertificateDataPerformance {
     
     
     public String grade;
+
     public AcademicCertificateSchemaCertificateDataPerformance withGrade(String grade) {
         this.grade = grade;
         return this;
@@ -37,6 +41,7 @@ public class AcademicCertificateSchemaCertificateDataPerformance {
     
     
     public String marksMax;
+
     public AcademicCertificateSchemaCertificateDataPerformance withMarksMax(String marksMax) {
         this.marksMax = marksMax;
         return this;
@@ -44,6 +49,7 @@ public class AcademicCertificateSchemaCertificateDataPerformance {
     
     
     public String marksTotal;
+
     public AcademicCertificateSchemaCertificateDataPerformance withMarksTotal(String marksTotal) {
         this.marksTotal = marksTotal;
         return this;
@@ -51,6 +57,7 @@ public class AcademicCertificateSchemaCertificateDataPerformance {
     
     
     public String percentage;
+
     public AcademicCertificateSchemaCertificateDataPerformance withPercentage(String percentage) {
         this.percentage = percentage;
         return this;
@@ -58,6 +65,7 @@ public class AcademicCertificateSchemaCertificateDataPerformance {
     
     
     public String result;
+
     public AcademicCertificateSchemaCertificateDataPerformance withResult(String result) {
         this.result = result;
         return this;
@@ -65,6 +73,7 @@ public class AcademicCertificateSchemaCertificateDataPerformance {
     
     
     public String resultDate;
+
     public AcademicCertificateSchemaCertificateDataPerformance withResultDate(String resultDate) {
         this.resultDate = resultDate;
         return this;
@@ -72,9 +81,22 @@ public class AcademicCertificateSchemaCertificateDataPerformance {
     
     
     public String updateDate;
+
     public AcademicCertificateSchemaCertificateDataPerformance withUpdateDate(String updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public AcademicCertificateSchemaCertificateDataPerformance(@JsonProperty("Subjects") AcademicCertificateSchemaCertificateDataPerformanceSubjects[] subjects, @JsonProperty("cgpa") String cgpa, @JsonProperty("cgpaMax") String cgpaMax, @JsonProperty("grade") String grade, @JsonProperty("marksMax") String marksMax, @JsonProperty("marksTotal") String marksTotal, @JsonProperty("percentage") String percentage, @JsonProperty("result") String result, @JsonProperty("resultDate") String resultDate, @JsonProperty("updateDate") String updateDate) {
+        this.subjects = subjects;
+        this.cgpa = cgpa;
+        this.cgpaMax = cgpaMax;
+        this.grade = grade;
+        this.marksMax = marksMax;
+        this.marksTotal = marksTotal;
+        this.percentage = percentage;
+        this.result = result;
+        this.resultDate = resultDate;
+        this.updateDate = updateDate;
+  }
 }

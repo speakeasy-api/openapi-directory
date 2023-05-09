@@ -18,6 +18,7 @@ public class ServiceBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ServiceBindingInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class ServiceBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ServiceBindingInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class ServiceBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServiceBindingInput withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class ServiceBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public ServiceBindingInput withService(String service) {
         this.service = service;
         return this;
     }
     
+    public ServiceBindingInput(){}
 }

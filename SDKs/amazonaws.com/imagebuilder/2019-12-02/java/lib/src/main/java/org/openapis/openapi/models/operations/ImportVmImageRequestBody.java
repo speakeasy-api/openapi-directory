@@ -14,6 +14,7 @@ public class ImportVmImageRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public ImportVmImageRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class ImportVmImageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ImportVmImageRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class ImportVmImageRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public ImportVmImageRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +49,7 @@ public class ImportVmImageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osVersion")
     public String osVersion;
+
     public ImportVmImageRequestBody withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -56,6 +60,7 @@ public class ImportVmImageRequestBody {
      */
     @JsonProperty("platform")
     public ImportVmImageRequestBodyPlatformEnum platform;
+
     public ImportVmImageRequestBody withPlatform(ImportVmImageRequestBodyPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -66,6 +71,7 @@ public class ImportVmImageRequestBody {
      */
     @JsonProperty("semanticVersion")
     public String semanticVersion;
+
     public ImportVmImageRequestBody withSemanticVersion(String semanticVersion) {
         this.semanticVersion = semanticVersion;
         return this;
@@ -77,6 +83,7 @@ public class ImportVmImageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ImportVmImageRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -87,9 +94,17 @@ public class ImportVmImageRequestBody {
      */
     @JsonProperty("vmImportTaskId")
     public String vmImportTaskId;
+
     public ImportVmImageRequestBody withVmImportTaskId(String vmImportTaskId) {
         this.vmImportTaskId = vmImportTaskId;
         return this;
     }
     
+    public ImportVmImageRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("name") String name, @JsonProperty("platform") ImportVmImageRequestBodyPlatformEnum platform, @JsonProperty("semanticVersion") String semanticVersion, @JsonProperty("vmImportTaskId") String vmImportTaskId) {
+        this.clientToken = clientToken;
+        this.name = name;
+        this.platform = platform;
+        this.semanticVersion = semanticVersion;
+        this.vmImportTaskId = vmImportTaskId;
+  }
 }

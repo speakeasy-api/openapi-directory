@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WorkTypeApiDeleteJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.WorkTypeDeleteApiModel workTypeDeleteApiModel;
+
     public WorkTypeApiDeleteJsonRequest withWorkTypeDeleteApiModel(org.openapis.openapi.models.shared.WorkTypeDeleteApiModel workTypeDeleteApiModel) {
         this.workTypeDeleteApiModel = workTypeDeleteApiModel;
         return this;
@@ -16,6 +18,7 @@ public class WorkTypeApiDeleteJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public WorkTypeApiDeleteJsonRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class WorkTypeApiDeleteJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public WorkTypeApiDeleteJsonRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public WorkTypeApiDeleteJsonRequest(@JsonProperty("WorkTypeDeleteApiModel") org.openapis.openapi.models.shared.WorkTypeDeleteApiModel workTypeDeleteApiModel, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.workTypeDeleteApiModel = workTypeDeleteApiModel;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

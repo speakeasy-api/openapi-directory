@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETGETPredictiveScalingForecastResponse {
     
     public byte[] body;
+
     public GETGETPredictiveScalingForecastResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETGETPredictiveScalingForecastResponse {
     
     
     public String contentType;
+
     public GETGETPredictiveScalingForecastResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETGETPredictiveScalingForecastResponse {
     
     
     public Integer statusCode;
+
     public GETGETPredictiveScalingForecastResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETGETPredictiveScalingForecastResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETGETPredictiveScalingForecastResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETGETPredictiveScalingForecastResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

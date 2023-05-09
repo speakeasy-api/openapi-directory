@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesDeleteDistributionTesterRequest {
@@ -12,6 +13,7 @@ public class ReleasesDeleteDistributionTesterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ReleasesDeleteDistributionTesterRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class ReleasesDeleteDistributionTesterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ReleasesDeleteDistributionTesterRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -32,6 +35,7 @@ public class ReleasesDeleteDistributionTesterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public Long releaseId;
+
     public ReleasesDeleteDistributionTesterRequest withReleaseId(Long releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -42,9 +46,16 @@ public class ReleasesDeleteDistributionTesterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tester_id")
     public String testerId;
+
     public ReleasesDeleteDistributionTesterRequest withTesterId(String testerId) {
         this.testerId = testerId;
         return this;
     }
     
+    public ReleasesDeleteDistributionTesterRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("release_id") Long releaseId, @JsonProperty("tester_id") String testerId) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.releaseId = releaseId;
+        this.testerId = testerId;
+  }
 }

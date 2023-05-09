@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RepositoriesListResponse {
     
     public String contentType;
+
     public RepositoriesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RepositoriesListResponse {
     
     
     public Integer statusCode;
+
     public RepositoriesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RepositoriesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RepositoriesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RepositoriesListResponse {
      */
     
     public RepositoriesList200ApplicationJSON[] repositoriesList200ApplicationJSONObjects;
+
     public RepositoriesListResponse withRepositoriesList200ApplicationJSONObjects(RepositoriesList200ApplicationJSON[] repositoriesList200ApplicationJSONObjects) {
         this.repositoriesList200ApplicationJSONObjects = repositoriesList200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class RepositoriesListResponse {
      */
     
     public RepositoriesListDefaultApplicationJSON repositoriesListDefaultApplicationJSONObject;
+
     public RepositoriesListResponse withRepositoriesListDefaultApplicationJSONObject(RepositoriesListDefaultApplicationJSON repositoriesListDefaultApplicationJSONObject) {
         this.repositoriesListDefaultApplicationJSONObject = repositoriesListDefaultApplicationJSONObject;
         return this;
     }
     
+    public RepositoriesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

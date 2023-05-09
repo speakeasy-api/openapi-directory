@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class BatchDescribeTypeConfigurationsInput {
     
     public TypeConfigurationIdentifier[] typeConfigurationIdentifiers;
+
     public BatchDescribeTypeConfigurationsInput withTypeConfigurationIdentifiers(TypeConfigurationIdentifier[] typeConfigurationIdentifiers) {
         this.typeConfigurationIdentifiers = typeConfigurationIdentifiers;
         return this;
     }
     
+    public BatchDescribeTypeConfigurationsInput(@JsonProperty("TypeConfigurationIdentifiers") TypeConfigurationIdentifier[] typeConfigurationIdentifiers) {
+        this.typeConfigurationIdentifiers = typeConfigurationIdentifiers;
+  }
 }

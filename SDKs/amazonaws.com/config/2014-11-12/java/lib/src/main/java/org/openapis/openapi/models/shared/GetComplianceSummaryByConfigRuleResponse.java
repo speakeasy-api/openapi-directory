@@ -15,9 +15,11 @@ public class GetComplianceSummaryByConfigRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceSummary")
     public ComplianceSummary complianceSummary;
+
     public GetComplianceSummaryByConfigRuleResponse withComplianceSummary(ComplianceSummary complianceSummary) {
         this.complianceSummary = complianceSummary;
         return this;
     }
     
+    public GetComplianceSummaryByConfigRuleResponse(){}
 }

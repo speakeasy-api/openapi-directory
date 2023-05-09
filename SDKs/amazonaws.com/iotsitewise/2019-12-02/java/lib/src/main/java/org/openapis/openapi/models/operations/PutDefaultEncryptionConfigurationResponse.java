@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutDefaultEncryptionConfigurationResponse {
@@ -12,6 +13,7 @@ public class PutDefaultEncryptionConfigurationResponse {
      */
     
     public Object conflictingOperationException;
+
     public PutDefaultEncryptionConfigurationResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class PutDefaultEncryptionConfigurationResponse {
     
     
     public String contentType;
+
     public PutDefaultEncryptionConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutDefaultEncryptionConfigurationResponse {
      */
     
     public Object internalFailureException;
+
     public PutDefaultEncryptionConfigurationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class PutDefaultEncryptionConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public PutDefaultEncryptionConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class PutDefaultEncryptionConfigurationResponse {
      */
     
     public Object limitExceededException;
+
     public PutDefaultEncryptionConfigurationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class PutDefaultEncryptionConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.PutDefaultEncryptionConfigurationResponse putDefaultEncryptionConfigurationResponse;
+
     public PutDefaultEncryptionConfigurationResponse withPutDefaultEncryptionConfigurationResponse(org.openapis.openapi.models.shared.PutDefaultEncryptionConfigurationResponse putDefaultEncryptionConfigurationResponse) {
         this.putDefaultEncryptionConfigurationResponse = putDefaultEncryptionConfigurationResponse;
         return this;
@@ -66,6 +73,7 @@ public class PutDefaultEncryptionConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutDefaultEncryptionConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutDefaultEncryptionConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutDefaultEncryptionConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class PutDefaultEncryptionConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public PutDefaultEncryptionConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public PutDefaultEncryptionConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

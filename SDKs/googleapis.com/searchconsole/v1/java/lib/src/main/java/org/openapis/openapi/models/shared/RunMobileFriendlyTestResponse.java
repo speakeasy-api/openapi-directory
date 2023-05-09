@@ -18,6 +18,7 @@ public class RunMobileFriendlyTestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileFriendliness")
     public RunMobileFriendlyTestResponseMobileFriendlinessEnum mobileFriendliness;
+
     public RunMobileFriendlyTestResponse withMobileFriendliness(RunMobileFriendlyTestResponseMobileFriendlinessEnum mobileFriendliness) {
         this.mobileFriendliness = mobileFriendliness;
         return this;
@@ -29,6 +30,7 @@ public class RunMobileFriendlyTestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileFriendlyIssues")
     public MobileFriendlyIssue[] mobileFriendlyIssues;
+
     public RunMobileFriendlyTestResponse withMobileFriendlyIssues(MobileFriendlyIssue[] mobileFriendlyIssues) {
         this.mobileFriendlyIssues = mobileFriendlyIssues;
         return this;
@@ -40,6 +42,7 @@ public class RunMobileFriendlyTestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceIssues")
     public ResourceIssue[] resourceIssues;
+
     public RunMobileFriendlyTestResponse withResourceIssues(ResourceIssue[] resourceIssues) {
         this.resourceIssues = resourceIssues;
         return this;
@@ -51,6 +54,7 @@ public class RunMobileFriendlyTestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenshot")
     public Image screenshot;
+
     public RunMobileFriendlyTestResponse withScreenshot(Image screenshot) {
         this.screenshot = screenshot;
         return this;
@@ -62,9 +66,11 @@ public class RunMobileFriendlyTestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testStatus")
     public TestStatus testStatus;
+
     public RunMobileFriendlyTestResponse withTestStatus(TestStatus testStatus) {
         this.testStatus = testStatus;
         return this;
     }
     
+    public RunMobileFriendlyTestResponse(){}
 }

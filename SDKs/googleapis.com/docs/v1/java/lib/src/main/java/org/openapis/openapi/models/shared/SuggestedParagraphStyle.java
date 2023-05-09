@@ -18,6 +18,7 @@ public class SuggestedParagraphStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paragraphStyle")
     public ParagraphStyle paragraphStyle;
+
     public SuggestedParagraphStyle withParagraphStyle(ParagraphStyle paragraphStyle) {
         this.paragraphStyle = paragraphStyle;
         return this;
@@ -29,9 +30,11 @@ public class SuggestedParagraphStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paragraphStyleSuggestionState")
     public ParagraphStyleSuggestionState paragraphStyleSuggestionState;
+
     public SuggestedParagraphStyle withParagraphStyleSuggestionState(ParagraphStyleSuggestionState paragraphStyleSuggestionState) {
         this.paragraphStyleSuggestionState = paragraphStyleSuggestionState;
         return this;
     }
     
+    public SuggestedParagraphStyle(){}
 }

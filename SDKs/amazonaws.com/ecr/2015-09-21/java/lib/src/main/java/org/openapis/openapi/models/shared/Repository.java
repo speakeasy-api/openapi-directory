@@ -22,6 +22,7 @@ public class Repository {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Repository withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public Repository withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -41,6 +43,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageScanningConfiguration")
     public ImageScanningConfiguration imageScanningConfiguration;
+
     public Repository withImageScanningConfiguration(ImageScanningConfiguration imageScanningConfiguration) {
         this.imageScanningConfiguration = imageScanningConfiguration;
         return this;
@@ -49,6 +52,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTagMutability")
     public ImageTagMutabilityEnum imageTagMutability;
+
     public Repository withImageTagMutability(ImageTagMutabilityEnum imageTagMutability) {
         this.imageTagMutability = imageTagMutability;
         return this;
@@ -57,6 +61,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public Repository withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -65,6 +70,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryArn")
     public String repositoryArn;
+
     public Repository withRepositoryArn(String repositoryArn) {
         this.repositoryArn = repositoryArn;
         return this;
@@ -73,6 +79,7 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public Repository withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -81,9 +88,11 @@ public class Repository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryUri")
     public String repositoryUri;
+
     public Repository withRepositoryUri(String repositoryUri) {
         this.repositoryUri = repositoryUri;
         return this;
     }
     
+    public Repository(){}
 }

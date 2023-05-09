@@ -15,9 +15,11 @@ public class UpdateClusterVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public Update update;
+
     public UpdateClusterVersionResponse withUpdate(Update update) {
         this.update = update;
         return this;
     }
     
+    public UpdateClusterVersionResponse(){}
 }

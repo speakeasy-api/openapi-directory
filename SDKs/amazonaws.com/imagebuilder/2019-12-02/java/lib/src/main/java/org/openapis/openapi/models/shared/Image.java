@@ -15,6 +15,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Image withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildType")
     public BuildTypeEnum buildType;
+
     public Image withBuildType(BuildTypeEnum buildType) {
         this.buildType = buildType;
         return this;
@@ -31,6 +33,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerRecipe")
     public ContainerRecipe containerRecipe;
+
     public Image withContainerRecipe(ContainerRecipe containerRecipe) {
         this.containerRecipe = containerRecipe;
         return this;
@@ -39,6 +42,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateCreated")
     public String dateCreated;
+
     public Image withDateCreated(String dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -47,6 +51,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionConfiguration")
     public DistributionConfiguration distributionConfiguration;
+
     public Image withDistributionConfiguration(DistributionConfiguration distributionConfiguration) {
         this.distributionConfiguration = distributionConfiguration;
         return this;
@@ -55,6 +60,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedImageMetadataEnabled")
     public Boolean enhancedImageMetadataEnabled;
+
     public Image withEnhancedImageMetadataEnabled(Boolean enhancedImageMetadataEnabled) {
         this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
         return this;
@@ -63,14 +69,25 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageRecipe")
     public ImageRecipe imageRecipe;
+
     public Image withImageRecipe(ImageRecipe imageRecipe) {
         this.imageRecipe = imageRecipe;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("imageScanningConfiguration")
+    public ImageScanningConfiguration imageScanningConfiguration;
+
+    public Image withImageScanningConfiguration(ImageScanningConfiguration imageScanningConfiguration) {
+        this.imageScanningConfiguration = imageScanningConfiguration;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageSource")
     public ImageSourceEnum imageSource;
+
     public Image withImageSource(ImageSourceEnum imageSource) {
         this.imageSource = imageSource;
         return this;
@@ -79,6 +96,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTestsConfiguration")
     public ImageTestsConfiguration imageTestsConfiguration;
+
     public Image withImageTestsConfiguration(ImageTestsConfiguration imageTestsConfiguration) {
         this.imageTestsConfiguration = imageTestsConfiguration;
         return this;
@@ -87,6 +105,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infrastructureConfiguration")
     public InfrastructureConfiguration infrastructureConfiguration;
+
     public Image withInfrastructureConfiguration(InfrastructureConfiguration infrastructureConfiguration) {
         this.infrastructureConfiguration = infrastructureConfiguration;
         return this;
@@ -95,6 +114,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Image withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +123,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osVersion")
     public String osVersion;
+
     public Image withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -111,6 +132,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputResources")
     public OutputResources outputResources;
+
     public Image withOutputResources(OutputResources outputResources) {
         this.outputResources = outputResources;
         return this;
@@ -119,14 +141,25 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public PlatformEnum platform;
+
     public Image withPlatform(PlatformEnum platform) {
         this.platform = platform;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("scanState")
+    public ImageScanState scanState;
+
+    public Image withScanState(ImageScanState scanState) {
+        this.scanState = scanState;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourcePipelineArn")
     public String sourcePipelineArn;
+
     public Image withSourcePipelineArn(String sourcePipelineArn) {
         this.sourcePipelineArn = sourcePipelineArn;
         return this;
@@ -135,6 +168,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourcePipelineName")
     public String sourcePipelineName;
+
     public Image withSourcePipelineName(String sourcePipelineName) {
         this.sourcePipelineName = sourcePipelineName;
         return this;
@@ -143,6 +177,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ImageState state;
+
     public Image withState(ImageState state) {
         this.state = state;
         return this;
@@ -151,6 +186,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Image withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -159,6 +195,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ImageTypeEnum type;
+
     public Image withType(ImageTypeEnum type) {
         this.type = type;
         return this;
@@ -167,9 +204,11 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Image withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Image(){}
 }

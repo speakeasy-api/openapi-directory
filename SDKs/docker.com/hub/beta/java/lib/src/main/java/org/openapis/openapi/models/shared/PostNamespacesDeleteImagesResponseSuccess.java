@@ -18,6 +18,7 @@ public class PostNamespacesDeleteImagesResponseSuccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dry_run")
     public Boolean dryRun;
+
     public PostNamespacesDeleteImagesResponseSuccess withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,9 +27,11 @@ public class PostNamespacesDeleteImagesResponseSuccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public PostNamespacesDeleteImagesResponseSuccessMetrics metrics;
+
     public PostNamespacesDeleteImagesResponseSuccess withMetrics(PostNamespacesDeleteImagesResponseSuccessMetrics metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public PostNamespacesDeleteImagesResponseSuccess(){}
 }

@@ -90,12 +90,10 @@ public class Patient {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePatientResponse res = new org.openapis.openapi.models.operations.CreatePatientResponse() {{
+        org.openapis.openapi.models.operations.CreatePatientResponse res = new org.openapis.openapi.models.operations.CreatePatientResponse(contentType, httpRes.statusCode()) {{
             createPatientResponse = null;
             createOrUpdateErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -137,12 +135,10 @@ public class Patient {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchPatientResponse res = new org.openapis.openapi.models.operations.FetchPatientResponse() {{
+        org.openapis.openapi.models.operations.FetchPatientResponse res = new org.openapis.openapi.models.operations.FetchPatientResponse(contentType, httpRes.statusCode()) {{
             fetchPatientResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -184,12 +180,10 @@ public class Patient {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchPatientCoachesResponse res = new org.openapis.openapi.models.operations.FetchPatientCoachesResponse() {{
+        org.openapis.openapi.models.operations.FetchPatientCoachesResponse res = new org.openapis.openapi.models.operations.FetchPatientCoachesResponse(contentType, httpRes.statusCode()) {{
             fetchCoachesResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,12 +225,10 @@ public class Patient {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchPatientGroupsResponse res = new org.openapis.openapi.models.operations.FetchPatientGroupsResponse() {{
+        org.openapis.openapi.models.operations.FetchPatientGroupsResponse res = new org.openapis.openapi.models.operations.FetchPatientGroupsResponse(contentType, httpRes.statusCode()) {{
             fetchGroupsResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -284,12 +276,10 @@ public class Patient {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchPatientsResponse res = new org.openapis.openapi.models.operations.FetchPatientsResponse() {{
+        org.openapis.openapi.models.operations.FetchPatientsResponse res = new org.openapis.openapi.models.operations.FetchPatientsResponse(contentType, httpRes.statusCode()) {{
             fetchPatientsResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -336,12 +326,10 @@ public class Patient {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePatientResponse res = new org.openapis.openapi.models.operations.UpdatePatientResponse() {{
+        org.openapis.openapi.models.operations.UpdatePatientResponse res = new org.openapis.openapi.models.operations.UpdatePatientResponse(contentType, httpRes.statusCode()) {{
             updatePatientResponse = null;
             createOrUpdateErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,12 +376,10 @@ public class Patient {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpsertPatientResponse res = new org.openapis.openapi.models.operations.UpsertPatientResponse() {{
+        org.openapis.openapi.models.operations.UpsertPatientResponse res = new org.openapis.openapi.models.operations.UpsertPatientResponse(contentType, httpRes.statusCode()) {{
             createPatientResponse = null;
             createOrUpdateErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

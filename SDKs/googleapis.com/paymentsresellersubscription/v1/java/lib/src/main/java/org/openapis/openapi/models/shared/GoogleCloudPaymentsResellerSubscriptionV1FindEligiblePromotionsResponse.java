@@ -18,6 +18,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsResp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsResp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotions")
     public GoogleCloudPaymentsResellerSubscriptionV1Promotion[] promotions;
+
     public GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsResponse withPromotions(GoogleCloudPaymentsResellerSubscriptionV1Promotion[] promotions) {
         this.promotions = promotions;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsResponse(){}
 }

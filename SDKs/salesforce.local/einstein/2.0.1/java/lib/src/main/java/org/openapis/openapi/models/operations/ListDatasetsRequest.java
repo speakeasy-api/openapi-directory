@@ -12,6 +12,7 @@ public class ListDatasetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public String count;
+
     public ListDatasetsRequest withCount(String count) {
         this.count = count;
         return this;
@@ -22,6 +23,7 @@ public class ListDatasetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=global")
     public Boolean global;
+
     public ListDatasetsRequest withGlobal(Boolean global) {
         this.global = global;
         return this;
@@ -32,9 +34,11 @@ public class ListDatasetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public ListDatasetsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public ListDatasetsRequest(){}
 }

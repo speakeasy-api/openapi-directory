@@ -54,4 +54,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListRetainedMessagesRespons
 lib/src/main/java/org/openapis/openapi/models/shared/RetainedMessageSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateThingShadowResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

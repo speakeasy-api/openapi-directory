@@ -44,6 +44,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateFirewallPolicyRes
 lib/src/main/java/org/openapis/openapi/models/operations/CreateRuleGroupXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateRuleGroupRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateRuleGroupResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateTLSInspectionConfigurationXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateTLSInspectionConfigurationRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/CreateTLSInspectionConfigurationResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteFirewallXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteFirewallRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteFirewallResponse.java
@@ -56,6 +59,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteResourcePolicyRes
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteRuleGroupXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteRuleGroupRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteRuleGroupResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/DeleteTLSInspectionConfigurationXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/DeleteTLSInspectionConfigurationRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/DeleteTLSInspectionConfigurationResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeFirewallXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeFirewallRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeFirewallResponse.java
@@ -74,6 +80,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/DescribeRuleGroupRespon
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeRuleGroupMetadataXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeRuleGroupMetadataRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeRuleGroupMetadataResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/DescribeTLSInspectionConfigurationXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/DescribeTLSInspectionConfigurationRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/DescribeTLSInspectionConfigurationResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DisassociateSubnetsXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DisassociateSubnetsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DisassociateSubnetsResponse.java
@@ -86,6 +95,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListFirewallsResponse.j
 lib/src/main/java/org/openapis/openapi/models/operations/ListRuleGroupsXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListRuleGroupsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListRuleGroupsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListTLSInspectionConfigurationsXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListTLSInspectionConfigurationsRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListTLSInspectionConfigurationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTagsForResourceXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTagsForResourceRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTagsForResourceResponse.java
@@ -122,6 +134,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateRuleGroupResponse
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateSubnetChangeProtectionXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateSubnetChangeProtectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateSubnetChangeProtectionResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateTLSInspectionConfigurationXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateTLSInspectionConfigurationRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateTLSInspectionConfigurationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AssociateFirewallPolicyResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AssociateFirewallPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/AssociateSubnetsResponse.java
@@ -191,6 +206,14 @@ lib/src/main/java/org/openapis/openapi/models/shared/PortSet.java
 lib/src/main/java/org/openapis/openapi/models/shared/IPSet.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReferenceSets.java
 lib/src/main/java/org/openapis/openapi/models/shared/IPSetReference.java
+lib/src/main/java/org/openapis/openapi/models/shared/CreateTLSInspectionConfigurationResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/TLSInspectionConfigurationResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/TlsCertificateData.java
+lib/src/main/java/org/openapis/openapi/models/shared/CreateTLSInspectionConfigurationRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/TLSInspectionConfiguration.java
+lib/src/main/java/org/openapis/openapi/models/shared/ServerCertificateConfiguration.java
+lib/src/main/java/org/openapis/openapi/models/shared/ServerCertificate.java
+lib/src/main/java/org/openapis/openapi/models/shared/ServerCertificateScope.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeleteFirewallResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeleteFirewallRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeleteFirewallPolicyResponse.java
@@ -198,6 +221,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/DeleteFirewallPolicyRequest
 lib/src/main/java/org/openapis/openapi/models/shared/DeleteResourcePolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeleteRuleGroupResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeleteRuleGroupRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/DeleteTLSInspectionConfigurationResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/DeleteTLSInspectionConfigurationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeFirewallResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeFirewallRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeFirewallPolicyResponse.java
@@ -214,6 +239,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/DescribeRuleGroupResponse.j
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeRuleGroupRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeRuleGroupMetadataResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeRuleGroupMetadataRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/DescribeTLSInspectionConfigurationResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/DescribeTLSInspectionConfigurationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/DisassociateSubnetsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DisassociateSubnetsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListFirewallPoliciesResponse.java
@@ -227,6 +254,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/RuleGroupMetadata.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListRuleGroupsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResourceManagedStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResourceManagedTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/ListTLSInspectionConfigurationsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/TLSInspectionConfigurationMetadata.java
+lib/src/main/java/org/openapis/openapi/models/shared/ListTLSInspectionConfigurationsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForResourceResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForResourceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/PutResourcePolicyRequest.java
@@ -248,5 +278,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateRuleGroupResponse.jav
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateRuleGroupRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSubnetChangeProtectionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSubnetChangeProtectionRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/UpdateTLSInspectionConfigurationResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/UpdateTLSInspectionConfigurationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

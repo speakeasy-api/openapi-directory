@@ -15,9 +15,13 @@ public class PostServersCreateServerResponseServerImageProtection {
      */
     @JsonProperty("delete")
     public Boolean delete;
+
     public PostServersCreateServerResponseServerImageProtection withDelete(Boolean delete) {
         this.delete = delete;
         return this;
     }
     
+    public PostServersCreateServerResponseServerImageProtection(@JsonProperty("delete") Boolean delete) {
+        this.delete = delete;
+  }
 }

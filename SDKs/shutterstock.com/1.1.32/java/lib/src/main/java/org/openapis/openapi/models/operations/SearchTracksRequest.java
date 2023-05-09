@@ -12,6 +12,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=artists")
     public String[] artists;
+
     public SearchTracksRequest withArtists(String[] artists) {
         this.artists = artists;
         return this;
@@ -19,9 +20,13 @@ public class SearchTracksRequest {
     
     /**
      * (Deprecated; use bpm_from and bpm_to instead) Show tracks with the specified beats per minute
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bpm")
+    @Deprecated
     public Long bpm;
+
+    @Deprecated
     public SearchTracksRequest withBpm(Long bpm) {
         this.bpm = bpm;
         return this;
@@ -32,6 +37,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bpm_from")
     public Long bpmFrom;
+
     public SearchTracksRequest withBpmFrom(Long bpmFrom) {
         this.bpmFrom = bpmFrom;
         return this;
@@ -42,6 +48,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bpm_to")
     public Long bpmTo;
+
     public SearchTracksRequest withBpmTo(Long bpmTo) {
         this.bpmTo = bpmTo;
         return this;
@@ -52,6 +59,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration")
     public Long duration;
+
     public SearchTracksRequest withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -62,6 +70,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration_from")
     public Long durationFrom;
+
     public SearchTracksRequest withDurationFrom(Long durationFrom) {
         this.durationFrom = durationFrom;
         return this;
@@ -72,6 +81,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration_to")
     public Long durationTo;
+
     public SearchTracksRequest withDurationTo(Long durationTo) {
         this.durationTo = durationTo;
         return this;
@@ -82,6 +92,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public SearchTracksRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -92,6 +103,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=genre")
     public String[] genre;
+
     public SearchTracksRequest withGenre(String[] genre) {
         this.genre = genre;
         return this;
@@ -102,6 +114,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instruments")
     public String[] instruments;
+
     public SearchTracksRequest withInstruments(String[] instruments) {
         this.instruments = instruments;
         return this;
@@ -112,6 +125,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_instrumental")
     public Boolean isInstrumental;
+
     public SearchTracksRequest withIsInstrumental(Boolean isInstrumental) {
         this.isInstrumental = isInstrumental;
         return this;
@@ -122,6 +136,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public SearchTracksRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -132,6 +147,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=library")
     public SearchTracksLibraryEnum library;
+
     public SearchTracksRequest withLibrary(SearchTracksLibraryEnum library) {
         this.library = library;
         return this;
@@ -142,6 +158,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=moods")
     public String[] moods;
+
     public SearchTracksRequest withMoods(String[] moods) {
         this.moods = moods;
         return this;
@@ -152,6 +169,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SearchTracksRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -162,6 +180,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SearchTracksRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -172,6 +191,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public SearchTracksRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -182,6 +202,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public SearchTracksSortEnum sort;
+
     public SearchTracksRequest withSort(SearchTracksSortEnum sort) {
         this.sort = sort;
         return this;
@@ -192,6 +213,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
     public SearchTracksSortOrderEnum sortOrder;
+
     public SearchTracksRequest withSortOrder(SearchTracksSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -202,6 +224,7 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public SearchTracksViewEnum view;
+
     public SearchTracksRequest withView(SearchTracksViewEnum view) {
         this.view = view;
         return this;
@@ -212,9 +235,11 @@ public class SearchTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vocal_description")
     public String vocalDescription;
+
     public SearchTracksRequest withVocalDescription(String vocalDescription) {
         this.vocalDescription = vocalDescription;
         return this;
     }
     
+    public SearchTracksRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProfileObjectsResponse {
@@ -12,6 +13,7 @@ public class ListProfileObjectsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListProfileObjectsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListProfileObjectsResponse {
      */
     
     public Object badRequestException;
+
     public ListProfileObjectsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class ListProfileObjectsResponse {
     
     
     public String contentType;
+
     public ListProfileObjectsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListProfileObjectsResponse {
      */
     
     public Object internalServerException;
+
     public ListProfileObjectsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListProfileObjectsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProfileObjectsResponse listProfileObjectsResponse;
+
     public ListProfileObjectsResponse withListProfileObjectsResponse(org.openapis.openapi.models.shared.ListProfileObjectsResponse listProfileObjectsResponse) {
         this.listProfileObjectsResponse = listProfileObjectsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListProfileObjectsResponse {
     
     
     public Integer statusCode;
+
     public ListProfileObjectsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListProfileObjectsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProfileObjectsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListProfileObjectsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListProfileObjectsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListProfileObjectsResponse {
      */
     
     public Object throttlingException;
+
     public ListProfileObjectsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListProfileObjectsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

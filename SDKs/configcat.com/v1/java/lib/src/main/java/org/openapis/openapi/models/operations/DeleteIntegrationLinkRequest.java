@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteIntegrationLinkRequest {
@@ -12,6 +13,7 @@ public class DeleteIntegrationLinkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentId")
     public String environmentId;
+
     public DeleteIntegrationLinkRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -22,6 +24,7 @@ public class DeleteIntegrationLinkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=integrationLinkType")
     public org.openapis.openapi.models.shared.IntegrationLinkTypeEnum integrationLinkType;
+
     public DeleteIntegrationLinkRequest withIntegrationLinkType(org.openapis.openapi.models.shared.IntegrationLinkTypeEnum integrationLinkType) {
         this.integrationLinkType = integrationLinkType;
         return this;
@@ -32,6 +35,7 @@ public class DeleteIntegrationLinkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
     public String key;
+
     public DeleteIntegrationLinkRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,9 +46,16 @@ public class DeleteIntegrationLinkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingId")
     public Integer settingId;
+
     public DeleteIntegrationLinkRequest withSettingId(Integer settingId) {
         this.settingId = settingId;
         return this;
     }
     
+    public DeleteIntegrationLinkRequest(@JsonProperty("environmentId") String environmentId, @JsonProperty("integrationLinkType") org.openapis.openapi.models.shared.IntegrationLinkTypeEnum integrationLinkType, @JsonProperty("key") String key, @JsonProperty("settingId") Integer settingId) {
+        this.environmentId = environmentId;
+        this.integrationLinkType = integrationLinkType;
+        this.key = key;
+        this.settingId = settingId;
+  }
 }

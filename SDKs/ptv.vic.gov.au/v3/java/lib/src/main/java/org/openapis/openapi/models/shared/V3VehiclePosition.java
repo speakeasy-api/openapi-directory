@@ -21,6 +21,7 @@ public class V3VehiclePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bearing")
     public Double bearing;
+
     public V3VehiclePosition withBearing(Double bearing) {
         this.bearing = bearing;
         return this;
@@ -34,6 +35,7 @@ public class V3VehiclePosition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("datetime_utc")
     public OffsetDateTime datetimeUtc;
+
     public V3VehiclePosition withDatetimeUtc(OffsetDateTime datetimeUtc) {
         this.datetimeUtc = datetimeUtc;
         return this;
@@ -45,6 +47,7 @@ public class V3VehiclePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public String direction;
+
     public V3VehiclePosition withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -56,6 +59,7 @@ public class V3VehiclePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("easting")
     public Double easting;
+
     public V3VehiclePosition withEasting(Double easting) {
         this.easting = easting;
         return this;
@@ -69,6 +73,7 @@ public class V3VehiclePosition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiry_time")
     public OffsetDateTime expiryTime;
+
     public V3VehiclePosition withExpiryTime(OffsetDateTime expiryTime) {
         this.expiryTime = expiryTime;
         return this;
@@ -81,6 +86,7 @@ public class V3VehiclePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public V3VehiclePosition withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -93,6 +99,7 @@ public class V3VehiclePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public V3VehiclePosition withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -104,6 +111,7 @@ public class V3VehiclePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("northing")
     public Double northing;
+
     public V3VehiclePosition withNorthing(Double northing) {
         this.northing = northing;
         return this;
@@ -115,9 +123,11 @@ public class V3VehiclePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier")
     public String supplier;
+
     public V3VehiclePosition withSupplier(String supplier) {
         this.supplier = supplier;
         return this;
     }
     
+    public V3VehiclePosition(){}
 }

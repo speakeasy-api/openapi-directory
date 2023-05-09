@@ -15,6 +15,7 @@ public class PresetWatermark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HorizontalAlign")
     public String horizontalAlign;
+
     public PresetWatermark withHorizontalAlign(String horizontalAlign) {
         this.horizontalAlign = horizontalAlign;
         return this;
@@ -23,6 +24,7 @@ public class PresetWatermark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HorizontalOffset")
     public String horizontalOffset;
+
     public PresetWatermark withHorizontalOffset(String horizontalOffset) {
         this.horizontalOffset = horizontalOffset;
         return this;
@@ -31,6 +33,7 @@ public class PresetWatermark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public PresetWatermark withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class PresetWatermark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxHeight")
     public String maxHeight;
+
     public PresetWatermark withMaxHeight(String maxHeight) {
         this.maxHeight = maxHeight;
         return this;
@@ -47,6 +51,7 @@ public class PresetWatermark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxWidth")
     public String maxWidth;
+
     public PresetWatermark withMaxWidth(String maxWidth) {
         this.maxWidth = maxWidth;
         return this;
@@ -55,6 +60,7 @@ public class PresetWatermark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Opacity")
     public String opacity;
+
     public PresetWatermark withOpacity(String opacity) {
         this.opacity = opacity;
         return this;
@@ -63,6 +69,7 @@ public class PresetWatermark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizingPolicy")
     public String sizingPolicy;
+
     public PresetWatermark withSizingPolicy(String sizingPolicy) {
         this.sizingPolicy = sizingPolicy;
         return this;
@@ -71,6 +78,7 @@ public class PresetWatermark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public String target;
+
     public PresetWatermark withTarget(String target) {
         this.target = target;
         return this;
@@ -79,6 +87,7 @@ public class PresetWatermark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VerticalAlign")
     public String verticalAlign;
+
     public PresetWatermark withVerticalAlign(String verticalAlign) {
         this.verticalAlign = verticalAlign;
         return this;
@@ -87,9 +96,11 @@ public class PresetWatermark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VerticalOffset")
     public String verticalOffset;
+
     public PresetWatermark withVerticalOffset(String verticalOffset) {
         this.verticalOffset = verticalOffset;
         return this;
     }
     
+    public PresetWatermark(){}
 }

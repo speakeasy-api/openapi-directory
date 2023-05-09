@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectUsernameProjectRequest {
@@ -14,6 +15,7 @@ public class GetProjectUsernameProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public org.openapis.openapi.models.shared.FilterEnum filter;
+
     public GetProjectUsernameProjectRequest withFilter(org.openapis.openapi.models.shared.FilterEnum filter) {
         this.filter = filter;
         return this;
@@ -25,6 +27,7 @@ public class GetProjectUsernameProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetProjectUsernameProjectRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -36,6 +39,7 @@ public class GetProjectUsernameProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetProjectUsernameProjectRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -47,6 +51,7 @@ public class GetProjectUsernameProjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public GetProjectUsernameProjectRequest withProject(String project) {
         this.project = project;
         return this;
@@ -58,9 +63,14 @@ public class GetProjectUsernameProjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetProjectUsernameProjectRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetProjectUsernameProjectRequest(@JsonProperty("project") String project, @JsonProperty("username") String username) {
+        this.project = project;
+        this.username = username;
+  }
 }

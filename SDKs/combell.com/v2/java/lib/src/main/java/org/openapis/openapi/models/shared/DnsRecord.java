@@ -21,6 +21,7 @@ public class DnsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public DnsRecord withContent(String content) {
         this.content = content;
         return this;
@@ -33,6 +34,7 @@ public class DnsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DnsRecord withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +48,7 @@ public class DnsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public DnsRecord withPort(Integer port) {
         this.port = port;
         return this;
@@ -59,6 +62,7 @@ public class DnsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public DnsRecord withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -71,6 +75,7 @@ public class DnsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public String protocol;
+
     public DnsRecord withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -87,6 +92,7 @@ public class DnsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("record_name")
     public String recordName;
+
     public DnsRecord withRecordName(String recordName) {
         this.recordName = recordName;
         return this;
@@ -99,6 +105,7 @@ public class DnsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public DnsRecord withService(String service) {
         this.service = service;
         return this;
@@ -111,6 +118,7 @@ public class DnsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public DnsRecord withTarget(String target) {
         this.target = target;
         return this;
@@ -124,6 +132,7 @@ public class DnsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public Integer ttl;
+
     public DnsRecord withTtl(Integer ttl) {
         this.ttl = ttl;
         return this;
@@ -135,6 +144,7 @@ public class DnsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public DnsRecord withType(String type) {
         this.type = type;
         return this;
@@ -147,9 +157,11 @@ public class DnsRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Integer weight;
+
     public DnsRecord withWeight(Integer weight) {
         this.weight = weight;
         return this;
     }
     
+    public DnsRecord(){}
 }

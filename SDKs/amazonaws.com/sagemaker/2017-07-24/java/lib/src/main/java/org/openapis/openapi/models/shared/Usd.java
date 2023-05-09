@@ -15,6 +15,7 @@ public class Usd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cents")
     public Long cents;
+
     public Usd withCents(Long cents) {
         this.cents = cents;
         return this;
@@ -23,6 +24,7 @@ public class Usd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dollars")
     public Long dollars;
+
     public Usd withDollars(Long dollars) {
         this.dollars = dollars;
         return this;
@@ -31,9 +33,11 @@ public class Usd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TenthFractionsOfACent")
     public Long tenthFractionsOfACent;
+
     public Usd withTenthFractionsOfACent(Long tenthFractionsOfACent) {
         this.tenthFractionsOfACent = tenthFractionsOfACent;
         return this;
     }
     
+    public Usd(){}
 }

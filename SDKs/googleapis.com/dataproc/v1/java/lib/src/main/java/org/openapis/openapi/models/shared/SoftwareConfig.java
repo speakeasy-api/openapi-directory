@@ -18,6 +18,7 @@ public class SoftwareConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageVersion")
     public String imageVersion;
+
     public SoftwareConfig withImageVersion(String imageVersion) {
         this.imageVersion = imageVersion;
         return this;
@@ -29,6 +30,7 @@ public class SoftwareConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optionalComponents")
     public SoftwareConfigOptionalComponentsEnum[] optionalComponents;
+
     public SoftwareConfig withOptionalComponents(SoftwareConfigOptionalComponentsEnum[] optionalComponents) {
         this.optionalComponents = optionalComponents;
         return this;
@@ -40,9 +42,11 @@ public class SoftwareConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public SoftwareConfig withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
     }
     
+    public SoftwareConfig(){}
 }

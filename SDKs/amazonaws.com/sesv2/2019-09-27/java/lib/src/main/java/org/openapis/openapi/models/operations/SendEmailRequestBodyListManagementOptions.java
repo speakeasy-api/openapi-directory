@@ -15,6 +15,7 @@ public class SendEmailRequestBodyListManagementOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactListName")
     public String contactListName;
+
     public SendEmailRequestBodyListManagementOptions withContactListName(String contactListName) {
         this.contactListName = contactListName;
         return this;
@@ -23,9 +24,11 @@ public class SendEmailRequestBodyListManagementOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopicName")
     public String topicName;
+
     public SendEmailRequestBodyListManagementOptions withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public SendEmailRequestBodyListManagementOptions(){}
 }

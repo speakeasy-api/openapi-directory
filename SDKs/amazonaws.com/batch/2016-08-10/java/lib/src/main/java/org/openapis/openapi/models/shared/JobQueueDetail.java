@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JobQueueDetail {
     @JsonProperty("computeEnvironmentOrder")
     public ComputeEnvironmentOrder[] computeEnvironmentOrder;
+
     public JobQueueDetail withComputeEnvironmentOrder(ComputeEnvironmentOrder[] computeEnvironmentOrder) {
         this.computeEnvironmentOrder = computeEnvironmentOrder;
         return this;
@@ -21,6 +22,7 @@ public class JobQueueDetail {
     
     @JsonProperty("jobQueueArn")
     public String jobQueueArn;
+
     public JobQueueDetail withJobQueueArn(String jobQueueArn) {
         this.jobQueueArn = jobQueueArn;
         return this;
@@ -28,6 +30,7 @@ public class JobQueueDetail {
     
     @JsonProperty("jobQueueName")
     public String jobQueueName;
+
     public JobQueueDetail withJobQueueName(String jobQueueName) {
         this.jobQueueName = jobQueueName;
         return this;
@@ -35,6 +38,7 @@ public class JobQueueDetail {
     
     @JsonProperty("priority")
     public Long priority;
+
     public JobQueueDetail withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -43,6 +47,7 @@ public class JobQueueDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingPolicyArn")
     public String schedulingPolicyArn;
+
     public JobQueueDetail withSchedulingPolicyArn(String schedulingPolicyArn) {
         this.schedulingPolicyArn = schedulingPolicyArn;
         return this;
@@ -50,6 +55,7 @@ public class JobQueueDetail {
     
     @JsonProperty("state")
     public JQStateEnum state;
+
     public JobQueueDetail withState(JQStateEnum state) {
         this.state = state;
         return this;
@@ -58,6 +64,7 @@ public class JobQueueDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public JQStatusEnum status;
+
     public JobQueueDetail withStatus(JQStatusEnum status) {
         this.status = status;
         return this;
@@ -66,6 +73,7 @@ public class JobQueueDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public JobQueueDetail withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -74,9 +82,17 @@ public class JobQueueDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public JobQueueDetail withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public JobQueueDetail(@JsonProperty("computeEnvironmentOrder") ComputeEnvironmentOrder[] computeEnvironmentOrder, @JsonProperty("jobQueueArn") String jobQueueArn, @JsonProperty("jobQueueName") String jobQueueName, @JsonProperty("priority") Long priority, @JsonProperty("state") JQStateEnum state) {
+        this.computeEnvironmentOrder = computeEnvironmentOrder;
+        this.jobQueueArn = jobQueueArn;
+        this.jobQueueName = jobQueueName;
+        this.priority = priority;
+        this.state = state;
+  }
 }

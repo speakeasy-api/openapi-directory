@@ -15,6 +15,7 @@ public class OrderLineItemReturnInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daysToReturn")
     public Integer daysToReturn;
+
     public OrderLineItemReturnInfo withDaysToReturn(Integer daysToReturn) {
         this.daysToReturn = daysToReturn;
         return this;
@@ -26,6 +27,7 @@ public class OrderLineItemReturnInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isReturnable")
     public Boolean isReturnable;
+
     public OrderLineItemReturnInfo withIsReturnable(Boolean isReturnable) {
         this.isReturnable = isReturnable;
         return this;
@@ -37,9 +39,11 @@ public class OrderLineItemReturnInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyUrl")
     public String policyUrl;
+
     public OrderLineItemReturnInfo withPolicyUrl(String policyUrl) {
         this.policyUrl = policyUrl;
         return this;
     }
     
+    public OrderLineItemReturnInfo(){}
 }

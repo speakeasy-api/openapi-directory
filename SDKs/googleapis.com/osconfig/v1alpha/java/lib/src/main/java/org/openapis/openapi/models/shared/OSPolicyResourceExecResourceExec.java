@@ -18,6 +18,7 @@ public class OSPolicyResourceExecResourceExec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public String[] args;
+
     public OSPolicyResourceExecResourceExec withArgs(String[] args) {
         this.args = args;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyResourceExecResourceExec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public OSPolicyResourceFile file;
+
     public OSPolicyResourceExecResourceExec withFile(OSPolicyResourceFile file) {
         this.file = file;
         return this;
@@ -40,6 +42,7 @@ public class OSPolicyResourceExecResourceExec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interpreter")
     public OSPolicyResourceExecResourceExecInterpreterEnum interpreter;
+
     public OSPolicyResourceExecResourceExec withInterpreter(OSPolicyResourceExecResourceExecInterpreterEnum interpreter) {
         this.interpreter = interpreter;
         return this;
@@ -51,6 +54,7 @@ public class OSPolicyResourceExecResourceExec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputFilePath")
     public String outputFilePath;
+
     public OSPolicyResourceExecResourceExec withOutputFilePath(String outputFilePath) {
         this.outputFilePath = outputFilePath;
         return this;
@@ -62,9 +66,11 @@ public class OSPolicyResourceExecResourceExec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public OSPolicyResourceExecResourceExec withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public OSPolicyResourceExecResourceExec(){}
 }

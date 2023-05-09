@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCommitResponse {
@@ -12,6 +13,7 @@ public class GetCommitResponse {
      */
     
     public Object commitIdDoesNotExistException;
+
     public GetCommitResponse withCommitIdDoesNotExistException(Object commitIdDoesNotExistException) {
         this.commitIdDoesNotExistException = commitIdDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class GetCommitResponse {
      */
     
     public Object commitIdRequiredException;
+
     public GetCommitResponse withCommitIdRequiredException(Object commitIdRequiredException) {
         this.commitIdRequiredException = commitIdRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class GetCommitResponse {
     
     
     public String contentType;
+
     public GetCommitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetCommitResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public GetCommitResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -49,6 +54,7 @@ public class GetCommitResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public GetCommitResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -59,6 +65,7 @@ public class GetCommitResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public GetCommitResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -69,6 +76,7 @@ public class GetCommitResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public GetCommitResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetCommitResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public GetCommitResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class GetCommitResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCommitOutput getCommitOutput;
+
     public GetCommitResponse withGetCommitOutput(org.openapis.openapi.models.shared.GetCommitOutput getCommitOutput) {
         this.getCommitOutput = getCommitOutput;
         return this;
@@ -99,6 +109,7 @@ public class GetCommitResponse {
      */
     
     public Object invalidCommitIdException;
+
     public GetCommitResponse withInvalidCommitIdException(Object invalidCommitIdException) {
         this.invalidCommitIdException = invalidCommitIdException;
         return this;
@@ -109,6 +120,7 @@ public class GetCommitResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public GetCommitResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -119,6 +131,7 @@ public class GetCommitResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public GetCommitResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -129,6 +142,7 @@ public class GetCommitResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public GetCommitResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -136,6 +150,7 @@ public class GetCommitResponse {
     
     
     public Integer statusCode;
+
     public GetCommitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,9 +158,14 @@ public class GetCommitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCommitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCommitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class PlaceOrder200ApplicationJSONOrdersItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public PlaceOrder200ApplicationJSONOrdersItemMetadataItems[] items;
+
     public PlaceOrder200ApplicationJSONOrdersItemMetadata withItems(PlaceOrder200ApplicationJSONOrdersItemMetadataItems[] items) {
         this.items = items;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersItemMetadata(){}
 }

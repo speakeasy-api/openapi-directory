@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeEndpointConfigInput {
     @JsonProperty("EndpointConfigName")
     public String endpointConfigName;
+
     public DescribeEndpointConfigInput withEndpointConfigName(String endpointConfigName) {
         this.endpointConfigName = endpointConfigName;
         return this;
     }
     
+    public DescribeEndpointConfigInput(@JsonProperty("EndpointConfigName") String endpointConfigName) {
+        this.endpointConfigName = endpointConfigName;
+  }
 }

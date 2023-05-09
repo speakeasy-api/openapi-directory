@@ -15,6 +15,7 @@ public class PostAdminRecordingsStop200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PostAdminRecordingsStop200ApplicationJSONMappings withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class PostAdminRecordingsStop200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public PostAdminRecordingsStop200ApplicationJSONMappings withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -37,6 +39,7 @@ public class PostAdminRecordingsStop200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PostAdminRecordingsStop200ApplicationJSONMappings withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class PostAdminRecordingsStop200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newScenarioState")
     public String newScenarioState;
+
     public PostAdminRecordingsStop200ApplicationJSONMappings withNewScenarioState(String newScenarioState) {
         this.newScenarioState = newScenarioState;
         return this;
@@ -59,6 +63,7 @@ public class PostAdminRecordingsStop200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistent")
     public Boolean persistent;
+
     public PostAdminRecordingsStop200ApplicationJSONMappings withPersistent(Boolean persistent) {
         this.persistent = persistent;
         return this;
@@ -70,6 +75,7 @@ public class PostAdminRecordingsStop200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postServeActions")
     public java.util.Map<String, Object> postServeActions;
+
     public PostAdminRecordingsStop200ApplicationJSONMappings withPostServeActions(java.util.Map<String, Object> postServeActions) {
         this.postServeActions = postServeActions;
         return this;
@@ -81,6 +87,7 @@ public class PostAdminRecordingsStop200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public PostAdminRecordingsStop200ApplicationJSONMappings withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -89,6 +96,7 @@ public class PostAdminRecordingsStop200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public PostAdminRecordingsStop200ApplicationJSONMappingsRequest request;
+
     public PostAdminRecordingsStop200ApplicationJSONMappings withRequest(PostAdminRecordingsStop200ApplicationJSONMappingsRequest request) {
         this.request = request;
         return this;
@@ -100,6 +108,7 @@ public class PostAdminRecordingsStop200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredScenarioState")
     public String requiredScenarioState;
+
     public PostAdminRecordingsStop200ApplicationJSONMappings withRequiredScenarioState(String requiredScenarioState) {
         this.requiredScenarioState = requiredScenarioState;
         return this;
@@ -108,6 +117,7 @@ public class PostAdminRecordingsStop200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public PostAdminRecordingsStop200ApplicationJSONMappingsResponse response;
+
     public PostAdminRecordingsStop200ApplicationJSONMappings withResponse(PostAdminRecordingsStop200ApplicationJSONMappingsResponse response) {
         this.response = response;
         return this;
@@ -119,6 +129,7 @@ public class PostAdminRecordingsStop200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scenarioName")
     public String scenarioName;
+
     public PostAdminRecordingsStop200ApplicationJSONMappings withScenarioName(String scenarioName) {
         this.scenarioName = scenarioName;
         return this;
@@ -130,9 +141,11 @@ public class PostAdminRecordingsStop200ApplicationJSONMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uuid")
     public String uuid;
+
     public PostAdminRecordingsStop200ApplicationJSONMappings withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public PostAdminRecordingsStop200ApplicationJSONMappings(){}
 }

@@ -22,6 +22,7 @@ public class RecordDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public RecordDetail withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -30,6 +31,7 @@ public class RecordDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchRoleArn")
     public String launchRoleArn;
+
     public RecordDetail withLaunchRoleArn(String launchRoleArn) {
         this.launchRoleArn = launchRoleArn;
         return this;
@@ -38,6 +40,7 @@ public class RecordDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PathId")
     public String pathId;
+
     public RecordDetail withPathId(String pathId) {
         this.pathId = pathId;
         return this;
@@ -46,6 +49,7 @@ public class RecordDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductId")
     public String productId;
+
     public RecordDetail withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -54,6 +58,7 @@ public class RecordDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductId")
     public String provisionedProductId;
+
     public RecordDetail withProvisionedProductId(String provisionedProductId) {
         this.provisionedProductId = provisionedProductId;
         return this;
@@ -62,6 +67,7 @@ public class RecordDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductName")
     public String provisionedProductName;
+
     public RecordDetail withProvisionedProductName(String provisionedProductName) {
         this.provisionedProductName = provisionedProductName;
         return this;
@@ -70,6 +76,7 @@ public class RecordDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductType")
     public String provisionedProductType;
+
     public RecordDetail withProvisionedProductType(String provisionedProductType) {
         this.provisionedProductType = provisionedProductType;
         return this;
@@ -78,6 +85,7 @@ public class RecordDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public RecordDetail withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
@@ -86,6 +94,7 @@ public class RecordDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordErrors")
     public RecordError[] recordErrors;
+
     public RecordDetail withRecordErrors(RecordError[] recordErrors) {
         this.recordErrors = recordErrors;
         return this;
@@ -94,6 +103,7 @@ public class RecordDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordId")
     public String recordId;
+
     public RecordDetail withRecordId(String recordId) {
         this.recordId = recordId;
         return this;
@@ -102,6 +112,7 @@ public class RecordDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordTags")
     public RecordTag[] recordTags;
+
     public RecordDetail withRecordTags(RecordTag[] recordTags) {
         this.recordTags = recordTags;
         return this;
@@ -110,6 +121,7 @@ public class RecordDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordType")
     public String recordType;
+
     public RecordDetail withRecordType(String recordType) {
         this.recordType = recordType;
         return this;
@@ -118,6 +130,7 @@ public class RecordDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public RecordStatusEnum status;
+
     public RecordDetail withStatus(RecordStatusEnum status) {
         this.status = status;
         return this;
@@ -128,9 +141,11 @@ public class RecordDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedTime")
     public OffsetDateTime updatedTime;
+
     public RecordDetail withUpdatedTime(OffsetDateTime updatedTime) {
         this.updatedTime = updatedTime;
         return this;
     }
     
+    public RecordDetail(){}
 }

@@ -12,6 +12,7 @@ public class AdexchangebuyerCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountId")
     public Long[] accountId;
+
     public AdexchangebuyerCreativesListRequest withAccountId(Long[] accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +23,7 @@ public class AdexchangebuyerCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdexchangebuyerCreativesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +34,7 @@ public class AdexchangebuyerCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=buyerCreativeId")
     public String[] buyerCreativeId;
+
     public AdexchangebuyerCreativesListRequest withBuyerCreativeId(String[] buyerCreativeId) {
         this.buyerCreativeId = buyerCreativeId;
         return this;
@@ -42,6 +45,7 @@ public class AdexchangebuyerCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dealsStatusFilter")
     public AdexchangebuyerCreativesListDealsStatusFilterEnum dealsStatusFilter;
+
     public AdexchangebuyerCreativesListRequest withDealsStatusFilter(AdexchangebuyerCreativesListDealsStatusFilterEnum dealsStatusFilter) {
         this.dealsStatusFilter = dealsStatusFilter;
         return this;
@@ -52,6 +56,7 @@ public class AdexchangebuyerCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdexchangebuyerCreativesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +67,7 @@ public class AdexchangebuyerCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdexchangebuyerCreativesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +78,7 @@ public class AdexchangebuyerCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public AdexchangebuyerCreativesListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -82,6 +89,7 @@ public class AdexchangebuyerCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdexchangebuyerCreativesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +100,7 @@ public class AdexchangebuyerCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=openAuctionStatusFilter")
     public AdexchangebuyerCreativesListOpenAuctionStatusFilterEnum openAuctionStatusFilter;
+
     public AdexchangebuyerCreativesListRequest withOpenAuctionStatusFilter(AdexchangebuyerCreativesListOpenAuctionStatusFilterEnum openAuctionStatusFilter) {
         this.openAuctionStatusFilter = openAuctionStatusFilter;
         return this;
@@ -102,6 +111,7 @@ public class AdexchangebuyerCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public AdexchangebuyerCreativesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -112,6 +122,7 @@ public class AdexchangebuyerCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdexchangebuyerCreativesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +133,7 @@ public class AdexchangebuyerCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdexchangebuyerCreativesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,9 +144,11 @@ public class AdexchangebuyerCreativesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdexchangebuyerCreativesListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdexchangebuyerCreativesListRequest(){}
 }

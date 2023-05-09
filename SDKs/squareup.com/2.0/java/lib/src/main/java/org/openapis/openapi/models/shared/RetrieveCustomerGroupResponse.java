@@ -21,6 +21,7 @@ public class RetrieveCustomerGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveCustomerGroupResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -35,9 +36,11 @@ public class RetrieveCustomerGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public CustomerGroup group;
+
     public RetrieveCustomerGroupResponse withGroup(CustomerGroup group) {
         this.group = group;
         return this;
     }
     
+    public RetrieveCustomerGroupResponse(){}
 }

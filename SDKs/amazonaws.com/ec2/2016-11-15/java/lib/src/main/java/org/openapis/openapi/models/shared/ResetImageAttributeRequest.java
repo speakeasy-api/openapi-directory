@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ResetImageAttributeRequest - Contains the parameters for ResetImageAttribute.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ResetImageAttributeRequest {
     
     public ResetImageAttributeNameEnum attribute;
+
     public ResetImageAttributeRequest withAttribute(ResetImageAttributeNameEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -19,6 +20,7 @@ public class ResetImageAttributeRequest {
     
     
     public Boolean dryRun;
+
     public ResetImageAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,9 +28,14 @@ public class ResetImageAttributeRequest {
     
     
     public String imageId;
+
     public ResetImageAttributeRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public ResetImageAttributeRequest(@JsonProperty("Attribute") ResetImageAttributeNameEnum attribute, @JsonProperty("ImageId") String imageId) {
+        this.attribute = attribute;
+        this.imageId = imageId;
+  }
 }

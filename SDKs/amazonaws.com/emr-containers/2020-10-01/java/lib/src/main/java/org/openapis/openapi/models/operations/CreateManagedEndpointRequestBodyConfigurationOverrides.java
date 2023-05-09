@@ -15,6 +15,7 @@ public class CreateManagedEndpointRequestBodyConfigurationOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationConfiguration")
     public org.openapis.openapi.models.shared.Configuration[] applicationConfiguration;
+
     public CreateManagedEndpointRequestBodyConfigurationOverrides withApplicationConfiguration(org.openapis.openapi.models.shared.Configuration[] applicationConfiguration) {
         this.applicationConfiguration = applicationConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class CreateManagedEndpointRequestBodyConfigurationOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoringConfiguration")
     public org.openapis.openapi.models.shared.MonitoringConfiguration monitoringConfiguration;
+
     public CreateManagedEndpointRequestBodyConfigurationOverrides withMonitoringConfiguration(org.openapis.openapi.models.shared.MonitoringConfiguration monitoringConfiguration) {
         this.monitoringConfiguration = monitoringConfiguration;
         return this;
     }
     
+    public CreateManagedEndpointRequestBodyConfigurationOverrides(){}
 }

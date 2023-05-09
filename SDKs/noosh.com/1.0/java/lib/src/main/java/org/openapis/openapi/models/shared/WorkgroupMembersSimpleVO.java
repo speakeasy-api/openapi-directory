@@ -15,6 +15,7 @@ public class WorkgroupMembersSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public WorkgroupMembersSimpleVO withEmail(String email) {
         this.email = email;
         return this;
@@ -23,6 +24,7 @@ public class WorkgroupMembersSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public WorkgroupMembersSimpleVO withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -31,6 +33,7 @@ public class WorkgroupMembersSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public WorkgroupMembersSimpleVO withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -39,9 +42,11 @@ public class WorkgroupMembersSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Long userId;
+
     public WorkgroupMembersSimpleVO withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public WorkgroupMembersSimpleVO(){}
 }

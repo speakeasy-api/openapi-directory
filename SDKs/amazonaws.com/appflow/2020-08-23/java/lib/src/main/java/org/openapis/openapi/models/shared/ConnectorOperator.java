@@ -15,6 +15,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Amplitude")
     public AmplitudeConnectorOperatorEnum amplitude;
+
     public ConnectorOperator withAmplitude(AmplitudeConnectorOperatorEnum amplitude) {
         this.amplitude = amplitude;
         return this;
@@ -23,6 +24,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomConnector")
     public OperatorEnum customConnector;
+
     public ConnectorOperator withCustomConnector(OperatorEnum customConnector) {
         this.customConnector = customConnector;
         return this;
@@ -31,6 +33,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Datadog")
     public DatadogConnectorOperatorEnum datadog;
+
     public ConnectorOperator withDatadog(DatadogConnectorOperatorEnum datadog) {
         this.datadog = datadog;
         return this;
@@ -39,6 +42,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dynatrace")
     public DynatraceConnectorOperatorEnum dynatrace;
+
     public ConnectorOperator withDynatrace(DynatraceConnectorOperatorEnum dynatrace) {
         this.dynatrace = dynatrace;
         return this;
@@ -47,6 +51,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoogleAnalytics")
     public GoogleAnalyticsConnectorOperatorEnum googleAnalytics;
+
     public ConnectorOperator withGoogleAnalytics(GoogleAnalyticsConnectorOperatorEnum googleAnalytics) {
         this.googleAnalytics = googleAnalytics;
         return this;
@@ -55,6 +60,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InforNexus")
     public InforNexusConnectorOperatorEnum inforNexus;
+
     public ConnectorOperator withInforNexus(InforNexusConnectorOperatorEnum inforNexus) {
         this.inforNexus = inforNexus;
         return this;
@@ -63,6 +69,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marketo")
     public MarketoConnectorOperatorEnum marketo;
+
     public ConnectorOperator withMarketo(MarketoConnectorOperatorEnum marketo) {
         this.marketo = marketo;
         return this;
@@ -71,6 +78,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pardot")
     public PardotConnectorOperatorEnum pardot;
+
     public ConnectorOperator withPardot(PardotConnectorOperatorEnum pardot) {
         this.pardot = pardot;
         return this;
@@ -79,6 +87,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3")
     public S3ConnectorOperatorEnum s3;
+
     public ConnectorOperator withS3(S3ConnectorOperatorEnum s3) {
         this.s3 = s3;
         return this;
@@ -87,6 +96,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SAPOData")
     public SAPODataConnectorOperatorEnum sapoData;
+
     public ConnectorOperator withSAPOData(SAPODataConnectorOperatorEnum sapoData) {
         this.sapoData = sapoData;
         return this;
@@ -95,6 +105,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Salesforce")
     public SalesforceConnectorOperatorEnum salesforce;
+
     public ConnectorOperator withSalesforce(SalesforceConnectorOperatorEnum salesforce) {
         this.salesforce = salesforce;
         return this;
@@ -103,6 +114,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceNow")
     public ServiceNowConnectorOperatorEnum serviceNow;
+
     public ConnectorOperator withServiceNow(ServiceNowConnectorOperatorEnum serviceNow) {
         this.serviceNow = serviceNow;
         return this;
@@ -111,6 +123,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Singular")
     public SingularConnectorOperatorEnum singular;
+
     public ConnectorOperator withSingular(SingularConnectorOperatorEnum singular) {
         this.singular = singular;
         return this;
@@ -119,6 +132,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Slack")
     public SlackConnectorOperatorEnum slack;
+
     public ConnectorOperator withSlack(SlackConnectorOperatorEnum slack) {
         this.slack = slack;
         return this;
@@ -127,6 +141,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Trendmicro")
     public TrendmicroConnectorOperatorEnum trendmicro;
+
     public ConnectorOperator withTrendmicro(TrendmicroConnectorOperatorEnum trendmicro) {
         this.trendmicro = trendmicro;
         return this;
@@ -135,6 +150,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Veeva")
     public VeevaConnectorOperatorEnum veeva;
+
     public ConnectorOperator withVeeva(VeevaConnectorOperatorEnum veeva) {
         this.veeva = veeva;
         return this;
@@ -143,9 +159,11 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Zendesk")
     public ZendeskConnectorOperatorEnum zendesk;
+
     public ConnectorOperator withZendesk(ZendeskConnectorOperatorEnum zendesk) {
         this.zendesk = zendesk;
         return this;
     }
     
+    public ConnectorOperator(){}
 }

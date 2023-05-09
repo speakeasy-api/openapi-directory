@@ -15,9 +15,11 @@ public class TargetSslProxiesSetBackendServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public TargetSslProxiesSetBackendServiceRequest withService(String service) {
         this.service = service;
         return this;
     }
     
+    public TargetSslProxiesSetBackendServiceRequest(){}
 }

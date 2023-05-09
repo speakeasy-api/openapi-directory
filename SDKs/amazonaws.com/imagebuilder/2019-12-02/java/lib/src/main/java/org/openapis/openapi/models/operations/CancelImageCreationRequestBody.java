@@ -12,19 +12,25 @@ public class CancelImageCreationRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CancelImageCreationRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
     /**
-     * The Amazon Resource Name (ARN) of the image whose creation you want to cancel.
+     * The Amazon Resource Name (ARN) of the image that you want to cancel creation for.
      */
     @JsonProperty("imageBuildVersionArn")
     public String imageBuildVersionArn;
+
     public CancelImageCreationRequestBody withImageBuildVersionArn(String imageBuildVersionArn) {
         this.imageBuildVersionArn = imageBuildVersionArn;
         return this;
     }
     
+    public CancelImageCreationRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("imageBuildVersionArn") String imageBuildVersionArn) {
+        this.clientToken = clientToken;
+        this.imageBuildVersionArn = imageBuildVersionArn;
+  }
 }

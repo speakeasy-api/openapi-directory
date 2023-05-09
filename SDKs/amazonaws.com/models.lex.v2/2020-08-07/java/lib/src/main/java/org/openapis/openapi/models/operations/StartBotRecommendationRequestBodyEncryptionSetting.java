@@ -15,6 +15,7 @@ public class StartBotRecommendationRequestBodyEncryptionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedTranscriptsPassword")
     public String associatedTranscriptsPassword;
+
     public StartBotRecommendationRequestBodyEncryptionSetting withAssociatedTranscriptsPassword(String associatedTranscriptsPassword) {
         this.associatedTranscriptsPassword = associatedTranscriptsPassword;
         return this;
@@ -23,6 +24,7 @@ public class StartBotRecommendationRequestBodyEncryptionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botLocaleExportPassword")
     public String botLocaleExportPassword;
+
     public StartBotRecommendationRequestBodyEncryptionSetting withBotLocaleExportPassword(String botLocaleExportPassword) {
         this.botLocaleExportPassword = botLocaleExportPassword;
         return this;
@@ -31,9 +33,11 @@ public class StartBotRecommendationRequestBodyEncryptionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public StartBotRecommendationRequestBodyEncryptionSetting withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
     }
     
+    public StartBotRecommendationRequestBodyEncryptionSetting(){}
 }

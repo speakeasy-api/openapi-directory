@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNsxvManagerResponse {
     
     public String contentType;
+
     public UpdateNsxvManagerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateNsxvManagerResponse {
      */
     
     public org.openapis.openapi.models.shared.NSXVManagerDataSource nsxvManagerDataSource;
+
     public UpdateNsxvManagerResponse withNSXVManagerDataSource(org.openapis.openapi.models.shared.NSXVManagerDataSource nsxvManagerDataSource) {
         this.nsxvManagerDataSource = nsxvManagerDataSource;
         return this;
@@ -26,6 +29,7 @@ public class UpdateNsxvManagerResponse {
     
     
     public Integer statusCode;
+
     public UpdateNsxvManagerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class UpdateNsxvManagerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNsxvManagerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateNsxvManagerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -50,10 +50,8 @@ public class System {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminResetResponse res = new org.openapis.openapi.models.operations.PostAdminResetResponse() {{
+        org.openapis.openapi.models.operations.PostAdminResetResponse res = new org.openapis.openapi.models.operations.PostAdminResetResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -87,10 +85,8 @@ public class System {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminSettingsResponse res = new org.openapis.openapi.models.operations.PostAdminSettingsResponse() {{
+        org.openapis.openapi.models.operations.PostAdminSettingsResponse res = new org.openapis.openapi.models.operations.PostAdminSettingsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,10 +114,8 @@ public class System {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminShutdownResponse res = new org.openapis.openapi.models.operations.PostAdminShutdownResponse() {{
+        org.openapis.openapi.models.operations.PostAdminShutdownResponse res = new org.openapis.openapi.models.operations.PostAdminShutdownResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

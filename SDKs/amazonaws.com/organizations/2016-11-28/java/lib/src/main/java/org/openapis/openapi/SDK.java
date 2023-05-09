@@ -199,6 +199,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -236,7 +241,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AcceptHandshakeResponse res = new org.openapis.openapi.models.operations.AcceptHandshakeResponse() {{
+        org.openapis.openapi.models.operations.AcceptHandshakeResponse res = new org.openapis.openapi.models.operations.AcceptHandshakeResponse(contentType, httpRes.statusCode()) {{
             acceptHandshakeResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -250,8 +255,6 @@ public class SDK {
             tooManyRequestsException = null;
             accessDeniedForDependencyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -376,7 +379,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AttachPolicyResponse res = new org.openapis.openapi.models.operations.AttachPolicyResponse() {{
+        org.openapis.openapi.models.operations.AttachPolicyResponse res = new org.openapis.openapi.models.operations.AttachPolicyResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
             concurrentModificationException = null;
@@ -391,8 +394,6 @@ public class SDK {
             unsupportedAPIEndpointException = null;
             policyChangesInProgressException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -526,7 +527,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelHandshakeResponse res = new org.openapis.openapi.models.operations.CancelHandshakeResponse() {{
+        org.openapis.openapi.models.operations.CancelHandshakeResponse res = new org.openapis.openapi.models.operations.CancelHandshakeResponse(contentType, httpRes.statusCode()) {{
             cancelHandshakeResponse = null;
             accessDeniedException = null;
             concurrentModificationException = null;
@@ -537,8 +538,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -642,7 +641,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloseAccountResponse res = new org.openapis.openapi.models.operations.CloseAccountResponse() {{
+        org.openapis.openapi.models.operations.CloseAccountResponse res = new org.openapis.openapi.models.operations.CloseAccountResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             accountAlreadyClosedException = null;
             accountNotFoundException = null;
@@ -655,8 +654,6 @@ public class SDK {
             tooManyRequestsException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -776,7 +773,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAccountResponse res = new org.openapis.openapi.models.operations.CreateAccountResponse() {{
+        org.openapis.openapi.models.operations.CreateAccountResponse res = new org.openapis.openapi.models.operations.CreateAccountResponse(contentType, httpRes.statusCode()) {{
             createAccountResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -788,8 +785,6 @@ public class SDK {
             tooManyRequestsException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -900,7 +895,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGovCloudAccountResponse res = new org.openapis.openapi.models.operations.CreateGovCloudAccountResponse() {{
+        org.openapis.openapi.models.operations.CreateGovCloudAccountResponse res = new org.openapis.openapi.models.operations.CreateGovCloudAccountResponse(contentType, httpRes.statusCode()) {{
             createGovCloudAccountResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -912,8 +907,6 @@ public class SDK {
             tooManyRequestsException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1024,7 +1017,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateOrganizationResponse res = new org.openapis.openapi.models.operations.CreateOrganizationResponse() {{
+        org.openapis.openapi.models.operations.CreateOrganizationResponse res = new org.openapis.openapi.models.operations.CreateOrganizationResponse(contentType, httpRes.statusCode()) {{
             createOrganizationResponse = null;
             accessDeniedException = null;
             alreadyInOrganizationException = null;
@@ -1035,8 +1028,6 @@ public class SDK {
             tooManyRequestsException = null;
             accessDeniedForDependencyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1140,7 +1131,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateOrganizationalUnitResponse res = new org.openapis.openapi.models.operations.CreateOrganizationalUnitResponse() {{
+        org.openapis.openapi.models.operations.CreateOrganizationalUnitResponse res = new org.openapis.openapi.models.operations.CreateOrganizationalUnitResponse(contentType, httpRes.statusCode()) {{
             createOrganizationalUnitResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -1152,8 +1143,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1264,7 +1253,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePolicyResponse res = new org.openapis.openapi.models.operations.CreatePolicyResponse() {{
+        org.openapis.openapi.models.operations.CreatePolicyResponse res = new org.openapis.openapi.models.operations.CreatePolicyResponse(contentType, httpRes.statusCode()) {{
             createPolicyResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -1278,8 +1267,6 @@ public class SDK {
             tooManyRequestsException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1404,7 +1391,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeclineHandshakeResponse res = new org.openapis.openapi.models.operations.DeclineHandshakeResponse() {{
+        org.openapis.openapi.models.operations.DeclineHandshakeResponse res = new org.openapis.openapi.models.operations.DeclineHandshakeResponse(contentType, httpRes.statusCode()) {{
             declineHandshakeResponse = null;
             accessDeniedException = null;
             concurrentModificationException = null;
@@ -1415,8 +1402,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1515,7 +1500,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteOrganizationResponse res = new org.openapis.openapi.models.operations.DeleteOrganizationResponse() {{
+        org.openapis.openapi.models.operations.DeleteOrganizationResponse res = new org.openapis.openapi.models.operations.DeleteOrganizationResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
             concurrentModificationException = null;
@@ -1524,8 +1509,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1617,7 +1600,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteOrganizationalUnitResponse res = new org.openapis.openapi.models.operations.DeleteOrganizationalUnitResponse() {{
+        org.openapis.openapi.models.operations.DeleteOrganizationalUnitResponse res = new org.openapis.openapi.models.operations.DeleteOrganizationalUnitResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
             concurrentModificationException = null;
@@ -1627,8 +1610,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1727,7 +1708,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePolicyResponse res = new org.openapis.openapi.models.operations.DeletePolicyResponse() {{
+        org.openapis.openapi.models.operations.DeletePolicyResponse res = new org.openapis.openapi.models.operations.DeletePolicyResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
             concurrentModificationException = null;
@@ -1738,8 +1719,6 @@ public class SDK {
             tooManyRequestsException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1840,7 +1819,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteResourcePolicyResponse res = new org.openapis.openapi.models.operations.DeleteResourcePolicyResponse() {{
+        org.openapis.openapi.models.operations.DeleteResourcePolicyResponse res = new org.openapis.openapi.models.operations.DeleteResourcePolicyResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             serviceException = null;
             unsupportedAPIEndpointException = null;
@@ -1850,8 +1829,6 @@ public class SDK {
             awsOrganizationsNotInUseException = null;
             resourcePolicyNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1950,7 +1927,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeregisterDelegatedAdministratorResponse res = new org.openapis.openapi.models.operations.DeregisterDelegatedAdministratorResponse() {{
+        org.openapis.openapi.models.operations.DeregisterDelegatedAdministratorResponse res = new org.openapis.openapi.models.operations.DeregisterDelegatedAdministratorResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             accountNotFoundException = null;
             accountNotRegisteredException = null;
@@ -1962,8 +1939,6 @@ public class SDK {
             serviceException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2076,7 +2051,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeAccountResponse res = new org.openapis.openapi.models.operations.DescribeAccountResponse() {{
+        org.openapis.openapi.models.operations.DescribeAccountResponse res = new org.openapis.openapi.models.operations.DescribeAccountResponse(contentType, httpRes.statusCode()) {{
             describeAccountResponse = null;
             accessDeniedException = null;
             accountNotFoundException = null;
@@ -2085,8 +2060,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2176,7 +2149,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeCreateAccountStatusResponse res = new org.openapis.openapi.models.operations.DescribeCreateAccountStatusResponse() {{
+        org.openapis.openapi.models.operations.DescribeCreateAccountStatusResponse res = new org.openapis.openapi.models.operations.DescribeCreateAccountStatusResponse(contentType, httpRes.statusCode()) {{
             describeCreateAccountStatusResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -2186,8 +2159,6 @@ public class SDK {
             tooManyRequestsException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2284,7 +2255,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeEffectivePolicyResponse res = new org.openapis.openapi.models.operations.DescribeEffectivePolicyResponse() {{
+        org.openapis.openapi.models.operations.DescribeEffectivePolicyResponse res = new org.openapis.openapi.models.operations.DescribeEffectivePolicyResponse(contentType, httpRes.statusCode()) {{
             describeEffectivePolicyResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -2296,8 +2267,6 @@ public class SDK {
             invalidInputException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2408,7 +2377,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeHandshakeResponse res = new org.openapis.openapi.models.operations.DescribeHandshakeResponse() {{
+        org.openapis.openapi.models.operations.DescribeHandshakeResponse res = new org.openapis.openapi.models.operations.DescribeHandshakeResponse(contentType, httpRes.statusCode()) {{
             describeHandshakeResponse = null;
             accessDeniedException = null;
             concurrentModificationException = null;
@@ -2417,8 +2386,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2503,7 +2470,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeOrganizationResponse res = new org.openapis.openapi.models.operations.DescribeOrganizationResponse() {{
+        org.openapis.openapi.models.operations.DescribeOrganizationResponse res = new org.openapis.openapi.models.operations.DescribeOrganizationResponse(contentType, httpRes.statusCode()) {{
             describeOrganizationResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -2511,8 +2478,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2595,7 +2560,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeOrganizationalUnitResponse res = new org.openapis.openapi.models.operations.DescribeOrganizationalUnitResponse() {{
+        org.openapis.openapi.models.operations.DescribeOrganizationalUnitResponse res = new org.openapis.openapi.models.operations.DescribeOrganizationalUnitResponse(contentType, httpRes.statusCode()) {{
             describeOrganizationalUnitResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -2604,8 +2569,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2695,7 +2658,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribePolicyResponse res = new org.openapis.openapi.models.operations.DescribePolicyResponse() {{
+        org.openapis.openapi.models.operations.DescribePolicyResponse res = new org.openapis.openapi.models.operations.DescribePolicyResponse(contentType, httpRes.statusCode()) {{
             describePolicyResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -2705,8 +2668,6 @@ public class SDK {
             tooManyRequestsException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2798,7 +2759,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeResourcePolicyResponse res = new org.openapis.openapi.models.operations.DescribeResourcePolicyResponse() {{
+        org.openapis.openapi.models.operations.DescribeResourcePolicyResponse res = new org.openapis.openapi.models.operations.DescribeResourcePolicyResponse(contentType, httpRes.statusCode()) {{
             describeResourcePolicyResponse = null;
             accessDeniedException = null;
             serviceException = null;
@@ -2808,8 +2769,6 @@ public class SDK {
             resourcePolicyNotFoundException = null;
             constraintViolationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2906,7 +2865,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DetachPolicyResponse res = new org.openapis.openapi.models.operations.DetachPolicyResponse() {{
+        org.openapis.openapi.models.operations.DetachPolicyResponse res = new org.openapis.openapi.models.operations.DetachPolicyResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
             concurrentModificationException = null;
@@ -2920,8 +2879,6 @@ public class SDK {
             unsupportedAPIEndpointException = null;
             policyChangesInProgressException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3048,7 +3005,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableAWSServiceAccessResponse res = new org.openapis.openapi.models.operations.DisableAWSServiceAccessResponse() {{
+        org.openapis.openapi.models.operations.DisableAWSServiceAccessResponse res = new org.openapis.openapi.models.operations.DisableAWSServiceAccessResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
             concurrentModificationException = null;
@@ -3058,8 +3015,6 @@ public class SDK {
             tooManyRequestsException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3158,7 +3113,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisablePolicyTypeResponse res = new org.openapis.openapi.models.operations.DisablePolicyTypeResponse() {{
+        org.openapis.openapi.models.operations.DisablePolicyTypeResponse res = new org.openapis.openapi.models.operations.DisablePolicyTypeResponse(contentType, httpRes.statusCode()) {{
             disablePolicyTypeResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -3172,8 +3127,6 @@ public class SDK {
             unsupportedAPIEndpointException = null;
             policyChangesInProgressException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3298,7 +3251,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableAWSServiceAccessResponse res = new org.openapis.openapi.models.operations.EnableAWSServiceAccessResponse() {{
+        org.openapis.openapi.models.operations.EnableAWSServiceAccessResponse res = new org.openapis.openapi.models.operations.EnableAWSServiceAccessResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
             concurrentModificationException = null;
@@ -3308,8 +3261,6 @@ public class SDK {
             tooManyRequestsException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3408,7 +3359,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableAllFeaturesResponse res = new org.openapis.openapi.models.operations.EnableAllFeaturesResponse() {{
+        org.openapis.openapi.models.operations.EnableAllFeaturesResponse res = new org.openapis.openapi.models.operations.EnableAllFeaturesResponse(contentType, httpRes.statusCode()) {{
             enableAllFeaturesResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -3418,8 +3369,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3516,7 +3465,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnablePolicyTypeResponse res = new org.openapis.openapi.models.operations.EnablePolicyTypeResponse() {{
+        org.openapis.openapi.models.operations.EnablePolicyTypeResponse res = new org.openapis.openapi.models.operations.EnablePolicyTypeResponse(contentType, httpRes.statusCode()) {{
             enablePolicyTypeResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -3531,8 +3480,6 @@ public class SDK {
             unsupportedAPIEndpointException = null;
             policyChangesInProgressException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3664,7 +3611,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InviteAccountToOrganizationResponse res = new org.openapis.openapi.models.operations.InviteAccountToOrganizationResponse() {{
+        org.openapis.openapi.models.operations.InviteAccountToOrganizationResponse res = new org.openapis.openapi.models.operations.InviteAccountToOrganizationResponse(contentType, httpRes.statusCode()) {{
             inviteAccountToOrganizationResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -3678,8 +3625,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3799,7 +3744,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LeaveOrganizationResponse res = new org.openapis.openapi.models.operations.LeaveOrganizationResponse() {{
+        org.openapis.openapi.models.operations.LeaveOrganizationResponse res = new org.openapis.openapi.models.operations.LeaveOrganizationResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             accountNotFoundException = null;
             awsOrganizationsNotInUseException = null;
@@ -3810,8 +3755,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3923,7 +3866,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAWSServiceAccessForOrganizationResponse res = new org.openapis.openapi.models.operations.ListAWSServiceAccessForOrganizationResponse() {{
+        org.openapis.openapi.models.operations.ListAWSServiceAccessForOrganizationResponse res = new org.openapis.openapi.models.operations.ListAWSServiceAccessForOrganizationResponse(contentType, httpRes.statusCode()) {{
             listAWSServiceAccessForOrganizationResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -3933,8 +3876,6 @@ public class SDK {
             tooManyRequestsException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4037,7 +3978,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAccountsResponse res = new org.openapis.openapi.models.operations.ListAccountsResponse() {{
+        org.openapis.openapi.models.operations.ListAccountsResponse res = new org.openapis.openapi.models.operations.ListAccountsResponse(contentType, httpRes.statusCode()) {{
             listAccountsResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -4045,8 +3986,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4135,7 +4074,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAccountsForParentResponse res = new org.openapis.openapi.models.operations.ListAccountsForParentResponse() {{
+        org.openapis.openapi.models.operations.ListAccountsForParentResponse res = new org.openapis.openapi.models.operations.ListAccountsForParentResponse(contentType, httpRes.statusCode()) {{
             listAccountsForParentResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -4144,8 +4083,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4241,7 +4178,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListChildrenResponse res = new org.openapis.openapi.models.operations.ListChildrenResponse() {{
+        org.openapis.openapi.models.operations.ListChildrenResponse res = new org.openapis.openapi.models.operations.ListChildrenResponse(contentType, httpRes.statusCode()) {{
             listChildrenResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -4250,8 +4187,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4347,7 +4282,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCreateAccountStatusResponse res = new org.openapis.openapi.models.operations.ListCreateAccountStatusResponse() {{
+        org.openapis.openapi.models.operations.ListCreateAccountStatusResponse res = new org.openapis.openapi.models.operations.ListCreateAccountStatusResponse(contentType, httpRes.statusCode()) {{
             listCreateAccountStatusResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -4356,8 +4291,6 @@ public class SDK {
             tooManyRequestsException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4453,7 +4386,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDelegatedAdministratorsResponse res = new org.openapis.openapi.models.operations.ListDelegatedAdministratorsResponse() {{
+        org.openapis.openapi.models.operations.ListDelegatedAdministratorsResponse res = new org.openapis.openapi.models.operations.ListDelegatedAdministratorsResponse(contentType, httpRes.statusCode()) {{
             listDelegatedAdministratorsResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -4463,8 +4396,6 @@ public class SDK {
             serviceException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4567,7 +4498,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDelegatedServicesForAccountResponse res = new org.openapis.openapi.models.operations.ListDelegatedServicesForAccountResponse() {{
+        org.openapis.openapi.models.operations.ListDelegatedServicesForAccountResponse res = new org.openapis.openapi.models.operations.ListDelegatedServicesForAccountResponse(contentType, httpRes.statusCode()) {{
             listDelegatedServicesForAccountResponse = null;
             accessDeniedException = null;
             accountNotFoundException = null;
@@ -4579,8 +4510,6 @@ public class SDK {
             serviceException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4697,7 +4626,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHandshakesForAccountResponse res = new org.openapis.openapi.models.operations.ListHandshakesForAccountResponse() {{
+        org.openapis.openapi.models.operations.ListHandshakesForAccountResponse res = new org.openapis.openapi.models.operations.ListHandshakesForAccountResponse(contentType, httpRes.statusCode()) {{
             listHandshakesForAccountResponse = null;
             accessDeniedException = null;
             concurrentModificationException = null;
@@ -4705,8 +4634,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4795,7 +4722,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHandshakesForOrganizationResponse res = new org.openapis.openapi.models.operations.ListHandshakesForOrganizationResponse() {{
+        org.openapis.openapi.models.operations.ListHandshakesForOrganizationResponse res = new org.openapis.openapi.models.operations.ListHandshakesForOrganizationResponse(contentType, httpRes.statusCode()) {{
             listHandshakesForOrganizationResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -4804,8 +4731,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4901,7 +4826,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListOrganizationalUnitsForParentResponse res = new org.openapis.openapi.models.operations.ListOrganizationalUnitsForParentResponse() {{
+        org.openapis.openapi.models.operations.ListOrganizationalUnitsForParentResponse res = new org.openapis.openapi.models.operations.ListOrganizationalUnitsForParentResponse(contentType, httpRes.statusCode()) {{
             listOrganizationalUnitsForParentResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -4910,8 +4835,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5007,7 +4930,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListParentsResponse res = new org.openapis.openapi.models.operations.ListParentsResponse() {{
+        org.openapis.openapi.models.operations.ListParentsResponse res = new org.openapis.openapi.models.operations.ListParentsResponse(contentType, httpRes.statusCode()) {{
             listParentsResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -5016,8 +4939,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5113,7 +5034,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPoliciesResponse res = new org.openapis.openapi.models.operations.ListPoliciesResponse() {{
+        org.openapis.openapi.models.operations.ListPoliciesResponse res = new org.openapis.openapi.models.operations.ListPoliciesResponse(contentType, httpRes.statusCode()) {{
             listPoliciesResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -5122,8 +5043,6 @@ public class SDK {
             tooManyRequestsException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5219,7 +5138,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPoliciesForTargetResponse res = new org.openapis.openapi.models.operations.ListPoliciesForTargetResponse() {{
+        org.openapis.openapi.models.operations.ListPoliciesForTargetResponse res = new org.openapis.openapi.models.operations.ListPoliciesForTargetResponse(contentType, httpRes.statusCode()) {{
             listPoliciesForTargetResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -5229,8 +5148,6 @@ public class SDK {
             tooManyRequestsException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5333,7 +5250,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRootsResponse res = new org.openapis.openapi.models.operations.ListRootsResponse() {{
+        org.openapis.openapi.models.operations.ListRootsResponse res = new org.openapis.openapi.models.operations.ListRootsResponse(contentType, httpRes.statusCode()) {{
             listRootsResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -5341,8 +5258,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5431,7 +5346,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -5440,8 +5355,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5537,7 +5450,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTargetsForPolicyResponse res = new org.openapis.openapi.models.operations.ListTargetsForPolicyResponse() {{
+        org.openapis.openapi.models.operations.ListTargetsForPolicyResponse res = new org.openapis.openapi.models.operations.ListTargetsForPolicyResponse(contentType, httpRes.statusCode()) {{
             listTargetsForPolicyResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -5547,8 +5460,6 @@ public class SDK {
             tooManyRequestsException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5645,7 +5556,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MoveAccountResponse res = new org.openapis.openapi.models.operations.MoveAccountResponse() {{
+        org.openapis.openapi.models.operations.MoveAccountResponse res = new org.openapis.openapi.models.operations.MoveAccountResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             invalidInputException = null;
             sourceParentNotFoundException = null;
@@ -5657,8 +5568,6 @@ public class SDK {
             awsOrganizationsNotInUseException = null;
             serviceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5771,7 +5680,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutResourcePolicyResponse res = new org.openapis.openapi.models.operations.PutResourcePolicyResponse() {{
+        org.openapis.openapi.models.operations.PutResourcePolicyResponse res = new org.openapis.openapi.models.operations.PutResourcePolicyResponse(contentType, httpRes.statusCode()) {{
             putResourcePolicyResponse = null;
             accessDeniedException = null;
             serviceException = null;
@@ -5782,8 +5691,6 @@ public class SDK {
             constraintViolationException = null;
             awsOrganizationsNotInUseException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5887,7 +5794,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterDelegatedAdministratorResponse res = new org.openapis.openapi.models.operations.RegisterDelegatedAdministratorResponse() {{
+        org.openapis.openapi.models.operations.RegisterDelegatedAdministratorResponse res = new org.openapis.openapi.models.operations.RegisterDelegatedAdministratorResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             accountAlreadyRegisteredException = null;
             accountNotFoundException = null;
@@ -5899,8 +5806,6 @@ public class SDK {
             serviceException = null;
             unsupportedAPIEndpointException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6013,7 +5918,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveAccountFromOrganizationResponse res = new org.openapis.openapi.models.operations.RemoveAccountFromOrganizationResponse() {{
+        org.openapis.openapi.models.operations.RemoveAccountFromOrganizationResponse res = new org.openapis.openapi.models.operations.RemoveAccountFromOrganizationResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             accountNotFoundException = null;
             awsOrganizationsNotInUseException = null;
@@ -6024,8 +5929,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6131,7 +6034,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             concurrentModificationException = null;
             awsOrganizationsNotInUseException = null;
@@ -6141,8 +6044,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6241,7 +6142,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             accessDeniedException = null;
             concurrentModificationException = null;
             awsOrganizationsNotInUseException = null;
@@ -6251,8 +6152,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6351,7 +6250,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateOrganizationalUnitResponse res = new org.openapis.openapi.models.operations.UpdateOrganizationalUnitResponse() {{
+        org.openapis.openapi.models.operations.UpdateOrganizationalUnitResponse res = new org.openapis.openapi.models.operations.UpdateOrganizationalUnitResponse(contentType, httpRes.statusCode()) {{
             updateOrganizationalUnitResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -6362,8 +6261,6 @@ public class SDK {
             serviceException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6467,7 +6364,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePolicyResponse res = new org.openapis.openapi.models.operations.UpdatePolicyResponse() {{
+        org.openapis.openapi.models.operations.UpdatePolicyResponse res = new org.openapis.openapi.models.operations.UpdatePolicyResponse(contentType, httpRes.statusCode()) {{
             updatePolicyResponse = null;
             accessDeniedException = null;
             awsOrganizationsNotInUseException = null;
@@ -6482,8 +6379,6 @@ public class SDK {
             unsupportedAPIEndpointException = null;
             policyChangesInProgressException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

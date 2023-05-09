@@ -12,6 +12,7 @@ public class PrivateArticlesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public PrivateArticlesListRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class PrivateArticlesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public PrivateArticlesListRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -32,6 +34,7 @@ public class PrivateArticlesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public PrivateArticlesListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,9 +45,11 @@ public class PrivateArticlesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public PrivateArticlesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public PrivateArticlesListRequest(){}
 }

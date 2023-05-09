@@ -18,6 +18,7 @@ public class ErrorHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public ErrorHandlerErrorCodeEnum errorCode;
+
     public ErrorHandler withErrorCode(ErrorHandlerErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -29,6 +30,7 @@ public class ErrorHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public ErrorHandler withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -40,9 +42,11 @@ public class ErrorHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staticFile")
     public String staticFile;
+
     public ErrorHandler withStaticFile(String staticFile) {
         this.staticFile = staticFile;
         return this;
     }
     
+    public ErrorHandler(){}
 }

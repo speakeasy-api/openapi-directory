@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeJobResponse {
     
     public String contentType;
+
     public DescribeJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeJobResponse {
      */
     
     public org.openapis.openapi.models.shared.GlacierJobDescription glacierJobDescription;
+
     public DescribeJobResponse withGlacierJobDescription(org.openapis.openapi.models.shared.GlacierJobDescription glacierJobDescription) {
         this.glacierJobDescription = glacierJobDescription;
         return this;
@@ -29,6 +32,7 @@ public class DescribeJobResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeJobResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeJobResponse {
      */
     
     public Object missingParameterValueException;
+
     public DescribeJobResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeJobResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeJobResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class UpdateCompanyApiCredentialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public UpdateCompanyApiCredentialRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -26,6 +27,7 @@ public class UpdateCompanyApiCredentialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedOrigins")
     public String[] allowedOrigins;
+
     public UpdateCompanyApiCredentialRequest withAllowedOrigins(String[] allowedOrigins) {
         this.allowedOrigins = allowedOrigins;
         return this;
@@ -37,6 +39,7 @@ public class UpdateCompanyApiCredentialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedMerchantAccounts")
     public String[] associatedMerchantAccounts;
+
     public UpdateCompanyApiCredentialRequest withAssociatedMerchantAccounts(String[] associatedMerchantAccounts) {
         this.associatedMerchantAccounts = associatedMerchantAccounts;
         return this;
@@ -48,6 +51,7 @@ public class UpdateCompanyApiCredentialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateCompanyApiCredentialRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -59,9 +63,11 @@ public class UpdateCompanyApiCredentialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public String[] roles;
+
     public UpdateCompanyApiCredentialRequest withRoles(String[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public UpdateCompanyApiCredentialRequest(){}
 }

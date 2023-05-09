@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateConnectClientAddInRequest {
     @JsonProperty("AddInId")
     public String addInId;
+
     public UpdateConnectClientAddInRequest withAddInId(String addInId) {
         this.addInId = addInId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateConnectClientAddInRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateConnectClientAddInRequest withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class UpdateConnectClientAddInRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public UpdateConnectClientAddInRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -34,9 +37,14 @@ public class UpdateConnectClientAddInRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("URL")
     public String url;
+
     public UpdateConnectClientAddInRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UpdateConnectClientAddInRequest(@JsonProperty("AddInId") String addInId, @JsonProperty("ResourceId") String resourceId) {
+        this.addInId = addInId;
+        this.resourceId = resourceId;
+  }
 }

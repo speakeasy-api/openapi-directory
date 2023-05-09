@@ -15,9 +15,11 @@ public class CreateEnvironmentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public CreateEnvironmentOutput withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public CreateEnvironmentOutput(){}
 }

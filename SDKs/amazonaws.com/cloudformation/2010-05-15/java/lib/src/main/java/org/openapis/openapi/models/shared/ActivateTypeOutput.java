@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ActivateTypeOutput {
     
     public String arn;
+
     public ActivateTypeOutput withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public ActivateTypeOutput(){}
 }

@@ -15,6 +15,7 @@ public class DescribeEndpointTypesMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public DescribeEndpointTypesMessage withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +24,7 @@ public class DescribeEndpointTypesMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeEndpointTypesMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -31,9 +33,11 @@ public class DescribeEndpointTypesMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRecords")
     public Long maxRecords;
+
     public DescribeEndpointTypesMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeEndpointTypesMessage(){}
 }

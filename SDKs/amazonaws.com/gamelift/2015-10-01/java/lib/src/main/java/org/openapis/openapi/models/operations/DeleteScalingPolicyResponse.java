@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteScalingPolicyResponse {
     
     public String contentType;
+
     public DeleteScalingPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteScalingPolicyResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteScalingPolicyResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteScalingPolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteScalingPolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteScalingPolicyResponse {
      */
     
     public Object notFoundException;
+
     public DeleteScalingPolicyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteScalingPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteScalingPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteScalingPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteScalingPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteScalingPolicyResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteScalingPolicyResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteScalingPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CacheEngineVersionList {
     
     public String cacheEngineDescription;
+
     public CacheEngineVersionList withCacheEngineDescription(String cacheEngineDescription) {
         this.cacheEngineDescription = cacheEngineDescription;
         return this;
@@ -19,6 +20,7 @@ public class CacheEngineVersionList {
     
     
     public String cacheEngineVersionDescription;
+
     public CacheEngineVersionList withCacheEngineVersionDescription(String cacheEngineVersionDescription) {
         this.cacheEngineVersionDescription = cacheEngineVersionDescription;
         return this;
@@ -26,6 +28,7 @@ public class CacheEngineVersionList {
     
     
     public String cacheParameterGroupFamily;
+
     public CacheEngineVersionList withCacheParameterGroupFamily(String cacheParameterGroupFamily) {
         this.cacheParameterGroupFamily = cacheParameterGroupFamily;
         return this;
@@ -33,6 +36,7 @@ public class CacheEngineVersionList {
     
     
     public String engine;
+
     public CacheEngineVersionList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -40,9 +44,11 @@ public class CacheEngineVersionList {
     
     
     public String engineVersion;
+
     public CacheEngineVersionList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
     }
     
+    public CacheEngineVersionList(){}
 }

@@ -15,6 +15,7 @@ public class ListResolverRuleAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListResolverRuleAssociationsResponse withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,6 +24,7 @@ public class ListResolverRuleAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResolverRuleAssociationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class ListResolverRuleAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverRuleAssociations")
     public ResolverRuleAssociation[] resolverRuleAssociations;
+
     public ListResolverRuleAssociationsResponse withResolverRuleAssociations(ResolverRuleAssociation[] resolverRuleAssociations) {
         this.resolverRuleAssociations = resolverRuleAssociations;
         return this;
     }
     
+    public ListResolverRuleAssociationsResponse(){}
 }

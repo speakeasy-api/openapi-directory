@@ -15,6 +15,7 @@ public class ReposCreateOrUpdateFileContentsRequestBodyCommitter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public ReposCreateOrUpdateFileContentsRequestBodyCommitter withDate(String date) {
         this.date = date;
         return this;
@@ -25,6 +26,7 @@ public class ReposCreateOrUpdateFileContentsRequestBodyCommitter {
      */
     @JsonProperty("email")
     public String email;
+
     public ReposCreateOrUpdateFileContentsRequestBodyCommitter withEmail(String email) {
         this.email = email;
         return this;
@@ -35,9 +37,14 @@ public class ReposCreateOrUpdateFileContentsRequestBodyCommitter {
      */
     @JsonProperty("name")
     public String name;
+
     public ReposCreateOrUpdateFileContentsRequestBodyCommitter withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ReposCreateOrUpdateFileContentsRequestBodyCommitter(@JsonProperty("email") String email, @JsonProperty("name") String name) {
+        this.email = email;
+        this.name = name;
+  }
 }

@@ -12,6 +12,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryWindows")
     public String deliveryWindows;
+
     public ReservationById200ApplicationJSONSlaRequest withDeliveryWindows(String deliveryWindows) {
         this.deliveryWindows = deliveryWindows;
         return this;
@@ -20,6 +21,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockId")
     public String dockId;
+
     public ReservationById200ApplicationJSONSlaRequest withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -28,6 +30,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockTime")
     public String dockTime;
+
     public ReservationById200ApplicationJSONSlaRequest withDockTime(String dockTime) {
         this.dockTime = dockTime;
         return this;
@@ -36,6 +39,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freightTableId")
     public String freightTableId;
+
     public ReservationById200ApplicationJSONSlaRequest withFreightTableId(String freightTableId) {
         this.freightTableId = freightTableId;
         return this;
@@ -44,6 +48,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freightTableName")
     public String freightTableName;
+
     public ReservationById200ApplicationJSONSlaRequest withFreightTableName(String freightTableName) {
         this.freightTableName = freightTableName;
         return this;
@@ -52,6 +57,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public ReservationById200ApplicationJSONSlaRequestItem1 item;
+
     public ReservationById200ApplicationJSONSlaRequest withItem(ReservationById200ApplicationJSONSlaRequestItem1 item) {
         this.item = item;
         return this;
@@ -60,6 +66,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listPrice")
     public Double listPrice;
+
     public ReservationById200ApplicationJSONSlaRequest withListPrice(Double listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -68,6 +75,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public ReservationById200ApplicationJSONSlaRequestLocation1 location;
+
     public ReservationById200ApplicationJSONSlaRequest withLocation(ReservationById200ApplicationJSONSlaRequestLocation1 location) {
         this.location = location;
         return this;
@@ -76,6 +84,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupStoreInfo")
     public String pickupStoreInfo;
+
     public ReservationById200ApplicationJSONSlaRequest withPickupStoreInfo(String pickupStoreInfo) {
         this.pickupStoreInfo = pickupStoreInfo;
         return this;
@@ -84,6 +93,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionalPrice")
     public Double promotionalPrice;
+
     public ReservationById200ApplicationJSONSlaRequest withPromotionalPrice(Double promotionalPrice) {
         this.promotionalPrice = promotionalPrice;
         return this;
@@ -92,6 +102,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slaType")
     public String slaType;
+
     public ReservationById200ApplicationJSONSlaRequest withSlaType(String slaType) {
         this.slaType = slaType;
         return this;
@@ -100,6 +111,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slaTypeName")
     public String slaTypeName;
+
     public ReservationById200ApplicationJSONSlaRequest withSlaTypeName(String slaTypeName) {
         this.slaTypeName = slaTypeName;
         return this;
@@ -108,6 +120,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeToDockPlusDockTime")
     public String timeToDockPlusDockTime;
+
     public ReservationById200ApplicationJSONSlaRequest withTimeToDockPlusDockTime(String timeToDockPlusDockTime) {
         this.timeToDockPlusDockTime = timeToDockPlusDockTime;
         return this;
@@ -116,6 +129,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalTime")
     public String totalTime;
+
     public ReservationById200ApplicationJSONSlaRequest withTotalTime(String totalTime) {
         this.totalTime = totalTime;
         return this;
@@ -124,6 +138,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitTime")
     public String transitTime;
+
     public ReservationById200ApplicationJSONSlaRequest withTransitTime(String transitTime) {
         this.transitTime = transitTime;
         return this;
@@ -132,6 +147,7 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wareHouseId")
     public String wareHouseId;
+
     public ReservationById200ApplicationJSONSlaRequest withWareHouseId(String wareHouseId) {
         this.wareHouseId = wareHouseId;
         return this;
@@ -140,9 +156,11 @@ public class ReservationById200ApplicationJSONSlaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wmsEndPoint")
     public String wmsEndPoint;
+
     public ReservationById200ApplicationJSONSlaRequest withWmsEndPoint(String wmsEndPoint) {
         this.wmsEndPoint = wmsEndPoint;
         return this;
     }
     
+    public ReservationById200ApplicationJSONSlaRequest(){}
 }

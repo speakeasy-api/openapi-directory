@@ -12,9 +12,13 @@ public class UpdateThingShadowRequestBody {
      */
     @JsonProperty("payload")
     public String payload;
+
     public UpdateThingShadowRequestBody withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public UpdateThingShadowRequestBody(@JsonProperty("payload") String payload) {
+        this.payload = payload;
+  }
 }

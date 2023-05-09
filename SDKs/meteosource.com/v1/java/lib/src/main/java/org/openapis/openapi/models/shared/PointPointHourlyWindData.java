@@ -16,6 +16,7 @@ public class PointPointHourlyWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("angle")
     public Double angle;
+
     public PointPointHourlyWindData withAngle(Double angle) {
         this.angle = angle;
         return this;
@@ -28,6 +29,7 @@ public class PointPointHourlyWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dir")
     public byte[] dir;
+
     public PointPointHourlyWindData withDir(byte[] dir) {
         this.dir = dir;
         return this;
@@ -39,6 +41,7 @@ public class PointPointHourlyWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gusts")
     public Double gusts;
+
     public PointPointHourlyWindData withGusts(Double gusts) {
         this.gusts = gusts;
         return this;
@@ -50,9 +53,11 @@ public class PointPointHourlyWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speed")
     public Double speed;
+
     public PointPointHourlyWindData withSpeed(Double speed) {
         this.speed = speed;
         return this;
     }
     
+    public PointPointHourlyWindData(){}
 }

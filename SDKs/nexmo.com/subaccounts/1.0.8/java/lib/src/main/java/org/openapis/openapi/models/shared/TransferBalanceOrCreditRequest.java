@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransferBalanceOrCreditRequest {
     @JsonProperty("amount")
     public Double amount;
+
     public TransferBalanceOrCreditRequest withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -18,6 +19,7 @@ public class TransferBalanceOrCreditRequest {
     
     @JsonProperty("from")
     public String from;
+
     public TransferBalanceOrCreditRequest withFrom(String from) {
         this.from = from;
         return this;
@@ -26,6 +28,7 @@ public class TransferBalanceOrCreditRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public TransferBalanceOrCreditRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -33,9 +36,15 @@ public class TransferBalanceOrCreditRequest {
     
     @JsonProperty("to")
     public String to;
+
     public TransferBalanceOrCreditRequest withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public TransferBalanceOrCreditRequest(@JsonProperty("amount") Double amount, @JsonProperty("from") String from, @JsonProperty("to") String to) {
+        this.amount = amount;
+        this.from = from;
+        this.to = to;
+  }
 }

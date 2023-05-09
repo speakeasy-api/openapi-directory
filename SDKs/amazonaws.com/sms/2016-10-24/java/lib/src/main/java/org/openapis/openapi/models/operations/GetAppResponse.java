@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAppResponse {
     
     public String contentType;
+
     public GetAppResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAppResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAppResponse getAppResponse;
+
     public GetAppResponse withGetAppResponse(org.openapis.openapi.models.shared.GetAppResponse getAppResponse) {
         this.getAppResponse = getAppResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAppResponse {
      */
     
     public Object internalError;
+
     public GetAppResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -39,6 +43,7 @@ public class GetAppResponse {
      */
     
     public Object invalidParameterException;
+
     public GetAppResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetAppResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public GetAppResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetAppResponse {
      */
     
     public Object operationNotPermittedException;
+
     public GetAppResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class GetAppResponse {
     
     
     public Integer statusCode;
+
     public GetAppResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetAppResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAppResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetAppResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public GetAppResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public GetAppResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

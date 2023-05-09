@@ -15,6 +15,7 @@ public class UpdateEventSourceMappingRequestBodyDestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnFailure")
     public org.openapis.openapi.models.shared.OnFailure onFailure;
+
     public UpdateEventSourceMappingRequestBodyDestinationConfig withOnFailure(org.openapis.openapi.models.shared.OnFailure onFailure) {
         this.onFailure = onFailure;
         return this;
@@ -23,9 +24,11 @@ public class UpdateEventSourceMappingRequestBodyDestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnSuccess")
     public org.openapis.openapi.models.shared.OnSuccess onSuccess;
+
     public UpdateEventSourceMappingRequestBodyDestinationConfig withOnSuccess(org.openapis.openapi.models.shared.OnSuccess onSuccess) {
         this.onSuccess = onSuccess;
         return this;
     }
     
+    public UpdateEventSourceMappingRequestBodyDestinationConfig(){}
 }

@@ -18,6 +18,7 @@ public class MediationReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRange")
     public DateRange dateRange;
+
     public MediationReportSpec withDateRange(DateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -29,6 +30,7 @@ public class MediationReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilters")
     public MediationReportSpecDimensionFilter[] dimensionFilters;
+
     public MediationReportSpec withDimensionFilters(MediationReportSpecDimensionFilter[] dimensionFilters) {
         this.dimensionFilters = dimensionFilters;
         return this;
@@ -40,6 +42,7 @@ public class MediationReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public MediationReportSpecDimensionsEnum[] dimensions;
+
     public MediationReportSpec withDimensions(MediationReportSpecDimensionsEnum[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -51,6 +54,7 @@ public class MediationReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizationSettings")
     public LocalizationSettings localizationSettings;
+
     public MediationReportSpec withLocalizationSettings(LocalizationSettings localizationSettings) {
         this.localizationSettings = localizationSettings;
         return this;
@@ -62,6 +66,7 @@ public class MediationReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxReportRows")
     public Integer maxReportRows;
+
     public MediationReportSpec withMaxReportRows(Integer maxReportRows) {
         this.maxReportRows = maxReportRows;
         return this;
@@ -73,6 +78,7 @@ public class MediationReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public MediationReportSpecMetricsEnum[] metrics;
+
     public MediationReportSpec withMetrics(MediationReportSpecMetricsEnum[] metrics) {
         this.metrics = metrics;
         return this;
@@ -84,6 +90,7 @@ public class MediationReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortConditions")
     public MediationReportSpecSortCondition[] sortConditions;
+
     public MediationReportSpec withSortConditions(MediationReportSpecSortCondition[] sortConditions) {
         this.sortConditions = sortConditions;
         return this;
@@ -95,9 +102,11 @@ public class MediationReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public MediationReportSpec withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public MediationReportSpec(){}
 }

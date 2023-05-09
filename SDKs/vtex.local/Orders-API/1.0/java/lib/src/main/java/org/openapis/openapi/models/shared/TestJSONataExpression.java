@@ -12,6 +12,7 @@ public class TestJSONataExpression {
      */
     @JsonProperty("Document")
     public String document;
+
     public TestJSONataExpression withDocument(String document) {
         this.document = document;
         return this;
@@ -22,9 +23,14 @@ public class TestJSONataExpression {
      */
     @JsonProperty("Expression")
     public String expression;
+
     public TestJSONataExpression withExpression(String expression) {
         this.expression = expression;
         return this;
     }
     
+    public TestJSONataExpression(@JsonProperty("Document") String document, @JsonProperty("Expression") String expression) {
+        this.document = document;
+        this.expression = expression;
+  }
 }

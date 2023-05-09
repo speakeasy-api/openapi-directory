@@ -22,6 +22,7 @@ public class AccessPolicySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public AccessPolicySummary withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -29,6 +30,7 @@ public class AccessPolicySummary {
     
     @JsonProperty("id")
     public String id;
+
     public AccessPolicySummary withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +38,7 @@ public class AccessPolicySummary {
     
     @JsonProperty("identity")
     public Identity identity;
+
     public AccessPolicySummary withIdentity(Identity identity) {
         this.identity = identity;
         return this;
@@ -46,6 +49,7 @@ public class AccessPolicySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateDate")
     public OffsetDateTime lastUpdateDate;
+
     public AccessPolicySummary withLastUpdateDate(OffsetDateTime lastUpdateDate) {
         this.lastUpdateDate = lastUpdateDate;
         return this;
@@ -53,6 +57,7 @@ public class AccessPolicySummary {
     
     @JsonProperty("permission")
     public PermissionEnum permission;
+
     public AccessPolicySummary withPermission(PermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -60,9 +65,16 @@ public class AccessPolicySummary {
     
     @JsonProperty("resource")
     public Resource resource;
+
     public AccessPolicySummary withResource(Resource resource) {
         this.resource = resource;
         return this;
     }
     
+    public AccessPolicySummary(@JsonProperty("id") String id, @JsonProperty("identity") Identity identity, @JsonProperty("permission") PermissionEnum permission, @JsonProperty("resource") Resource resource) {
+        this.id = id;
+        this.identity = identity;
+        this.permission = permission;
+        this.resource = resource;
+  }
 }

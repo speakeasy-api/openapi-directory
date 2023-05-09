@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SocketAddress {
     @JsonProperty("name")
     public String name;
+
     public SocketAddress withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class SocketAddress {
     
     @JsonProperty("port")
     public Long port;
+
     public SocketAddress withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public SocketAddress(@JsonProperty("name") String name, @JsonProperty("port") Long port) {
+        this.name = name;
+        this.port = port;
+  }
 }

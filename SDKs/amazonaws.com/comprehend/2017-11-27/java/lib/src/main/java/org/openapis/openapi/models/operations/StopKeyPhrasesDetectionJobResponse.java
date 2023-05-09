@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopKeyPhrasesDetectionJobResponse {
     
     public String contentType;
+
     public StopKeyPhrasesDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopKeyPhrasesDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public StopKeyPhrasesDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StopKeyPhrasesDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StopKeyPhrasesDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StopKeyPhrasesDetectionJobResponse {
      */
     
     public Object jobNotFoundException;
+
     public StopKeyPhrasesDetectionJobResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopKeyPhrasesDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public StopKeyPhrasesDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopKeyPhrasesDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopKeyPhrasesDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StopKeyPhrasesDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StopKeyPhrasesDetectionJobResponse stopKeyPhrasesDetectionJobResponse;
+
     public StopKeyPhrasesDetectionJobResponse withStopKeyPhrasesDetectionJobResponse(org.openapis.openapi.models.shared.StopKeyPhrasesDetectionJobResponse stopKeyPhrasesDetectionJobResponse) {
         this.stopKeyPhrasesDetectionJobResponse = stopKeyPhrasesDetectionJobResponse;
         return this;
     }
     
+    public StopKeyPhrasesDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

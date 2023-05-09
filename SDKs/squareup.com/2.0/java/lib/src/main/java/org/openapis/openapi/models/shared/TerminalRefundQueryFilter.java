@@ -19,6 +19,7 @@ public class TerminalRefundQueryFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public TimeRange createdAt;
+
     public TerminalRefundQueryFilter withCreatedAt(TimeRange createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +32,7 @@ public class TerminalRefundQueryFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_id")
     public String deviceId;
+
     public TerminalRefundQueryFilter withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -43,9 +45,11 @@ public class TerminalRefundQueryFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TerminalRefundQueryFilter withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public TerminalRefundQueryFilter(){}
 }

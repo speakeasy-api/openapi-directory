@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChangePasswordResponse {
     
     public String contentType;
+
     public ChangePasswordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChangePasswordResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public ChangePasswordResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class ChangePasswordResponse {
      */
     
     public org.openapis.openapi.models.shared.PasswordError passwordError;
+
     public ChangePasswordResponse withPasswordError(org.openapis.openapi.models.shared.PasswordError passwordError) {
         this.passwordError = passwordError;
         return this;
@@ -39,6 +43,7 @@ public class ChangePasswordResponse {
      */
     
     public org.openapis.openapi.models.shared.ShopperId shopperId;
+
     public ChangePasswordResponse withShopperId(org.openapis.openapi.models.shared.ShopperId shopperId) {
         this.shopperId = shopperId;
         return this;
@@ -46,6 +51,7 @@ public class ChangePasswordResponse {
     
     
     public Integer statusCode;
+
     public ChangePasswordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ChangePasswordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChangePasswordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChangePasswordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

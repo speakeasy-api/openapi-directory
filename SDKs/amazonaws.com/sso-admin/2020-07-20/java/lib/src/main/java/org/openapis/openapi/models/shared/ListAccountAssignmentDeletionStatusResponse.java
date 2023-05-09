@@ -15,6 +15,7 @@ public class ListAccountAssignmentDeletionStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountAssignmentsDeletionStatus")
     public AccountAssignmentOperationStatusMetadata[] accountAssignmentsDeletionStatus;
+
     public ListAccountAssignmentDeletionStatusResponse withAccountAssignmentsDeletionStatus(AccountAssignmentOperationStatusMetadata[] accountAssignmentsDeletionStatus) {
         this.accountAssignmentsDeletionStatus = accountAssignmentsDeletionStatus;
         return this;
@@ -23,9 +24,11 @@ public class ListAccountAssignmentDeletionStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAccountAssignmentDeletionStatusResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAccountAssignmentDeletionStatusResponse(){}
 }

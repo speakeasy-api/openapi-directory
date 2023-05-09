@@ -15,9 +15,11 @@ public class FeatureRename {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newName")
     public String newName;
+
     public FeatureRename withNewName(String newName) {
         this.newName = newName;
         return this;
     }
     
+    public FeatureRename(){}
 }

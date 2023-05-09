@@ -15,6 +15,7 @@ public class Image {
      */
     
     public Long height;
+
     public Image withHeight(Long height) {
         this.height = height;
         return this;
@@ -25,6 +26,7 @@ public class Image {
      */
     
     public String imageUrl;
+
     public Image withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -35,9 +37,11 @@ public class Image {
      */
     
     public Long width;
+
     public Image withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public Image(){}
 }

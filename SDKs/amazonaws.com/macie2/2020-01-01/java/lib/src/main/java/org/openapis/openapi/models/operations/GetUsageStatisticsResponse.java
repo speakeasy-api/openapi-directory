@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsageStatisticsResponse {
@@ -12,6 +13,7 @@ public class GetUsageStatisticsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetUsageStatisticsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetUsageStatisticsResponse {
      */
     
     public Object conflictException;
+
     public GetUsageStatisticsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetUsageStatisticsResponse {
     
     
     public String contentType;
+
     public GetUsageStatisticsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetUsageStatisticsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetUsageStatisticsResponse getUsageStatisticsResponse;
+
     public GetUsageStatisticsResponse withGetUsageStatisticsResponse(org.openapis.openapi.models.shared.GetUsageStatisticsResponse getUsageStatisticsResponse) {
         this.getUsageStatisticsResponse = getUsageStatisticsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetUsageStatisticsResponse {
      */
     
     public Object internalServerException;
+
     public GetUsageStatisticsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class GetUsageStatisticsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetUsageStatisticsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetUsageStatisticsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetUsageStatisticsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class GetUsageStatisticsResponse {
     
     
     public Integer statusCode;
+
     public GetUsageStatisticsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetUsageStatisticsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsageStatisticsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetUsageStatisticsResponse {
      */
     
     public Object throttlingException;
+
     public GetUsageStatisticsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetUsageStatisticsResponse {
      */
     
     public Object validationException;
+
     public GetUsageStatisticsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetUsageStatisticsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

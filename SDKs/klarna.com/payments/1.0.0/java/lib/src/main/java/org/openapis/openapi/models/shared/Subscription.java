@@ -12,6 +12,7 @@ public class Subscription {
      */
     @JsonProperty("interval")
     public SubscriptionIntervalEnum interval;
+
     public Subscription withInterval(SubscriptionIntervalEnum interval) {
         this.interval = interval;
         return this;
@@ -22,6 +23,7 @@ public class Subscription {
      */
     @JsonProperty("interval_count")
     public Long intervalCount;
+
     public Subscription withIntervalCount(Long intervalCount) {
         this.intervalCount = intervalCount;
         return this;
@@ -32,9 +34,15 @@ public class Subscription {
      */
     @JsonProperty("name")
     public String name;
+
     public Subscription withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Subscription(@JsonProperty("interval") SubscriptionIntervalEnum interval, @JsonProperty("interval_count") Long intervalCount, @JsonProperty("name") String name) {
+        this.interval = interval;
+        this.intervalCount = intervalCount;
+        this.name = name;
+  }
 }

@@ -15,6 +15,7 @@ public class SnowflakeConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountName")
     public String accountName;
+
     public SnowflakeConnectorProfileProperties withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -22,6 +23,7 @@ public class SnowflakeConnectorProfileProperties {
     
     @JsonProperty("bucketName")
     public String bucketName;
+
     public SnowflakeConnectorProfileProperties withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -30,6 +32,7 @@ public class SnowflakeConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketPrefix")
     public String bucketPrefix;
+
     public SnowflakeConnectorProfileProperties withBucketPrefix(String bucketPrefix) {
         this.bucketPrefix = bucketPrefix;
         return this;
@@ -38,6 +41,7 @@ public class SnowflakeConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateLinkServiceName")
     public String privateLinkServiceName;
+
     public SnowflakeConnectorProfileProperties withPrivateLinkServiceName(String privateLinkServiceName) {
         this.privateLinkServiceName = privateLinkServiceName;
         return this;
@@ -46,6 +50,7 @@ public class SnowflakeConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public SnowflakeConnectorProfileProperties withRegion(String region) {
         this.region = region;
         return this;
@@ -53,6 +58,7 @@ public class SnowflakeConnectorProfileProperties {
     
     @JsonProperty("stage")
     public String stage;
+
     public SnowflakeConnectorProfileProperties withStage(String stage) {
         this.stage = stage;
         return this;
@@ -60,9 +66,15 @@ public class SnowflakeConnectorProfileProperties {
     
     @JsonProperty("warehouse")
     public String warehouse;
+
     public SnowflakeConnectorProfileProperties withWarehouse(String warehouse) {
         this.warehouse = warehouse;
         return this;
     }
     
+    public SnowflakeConnectorProfileProperties(@JsonProperty("bucketName") String bucketName, @JsonProperty("stage") String stage, @JsonProperty("warehouse") String warehouse) {
+        this.bucketName = bucketName;
+        this.stage = stage;
+        this.warehouse = warehouse;
+  }
 }

@@ -12,6 +12,7 @@ public class TopicSearchResultItemRelatedTopicRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TopicSearchResultItemRelatedTopicRelation withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class TopicSearchResultItemRelatedTopicRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TopicSearchResultItemRelatedTopicRelation withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class TopicSearchResultItemRelatedTopicRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relation_type")
     public String relationType;
+
     public TopicSearchResultItemRelatedTopicRelation withRelationType(String relationType) {
         this.relationType = relationType;
         return this;
@@ -36,9 +39,11 @@ public class TopicSearchResultItemRelatedTopicRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic_id")
     public Long topicId;
+
     public TopicSearchResultItemRelatedTopicRelation withTopicId(Long topicId) {
         this.topicId = topicId;
         return this;
     }
     
+    public TopicSearchResultItemRelatedTopicRelation(){}
 }

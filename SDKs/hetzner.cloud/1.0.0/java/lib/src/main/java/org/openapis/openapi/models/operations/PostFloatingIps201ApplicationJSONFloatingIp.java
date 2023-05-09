@@ -12,6 +12,7 @@ public class PostFloatingIps201ApplicationJSONFloatingIp {
      */
     @JsonProperty("blocked")
     public Boolean blocked;
+
     public PostFloatingIps201ApplicationJSONFloatingIp withBlocked(Boolean blocked) {
         this.blocked = blocked;
         return this;
@@ -22,6 +23,7 @@ public class PostFloatingIps201ApplicationJSONFloatingIp {
      */
     @JsonProperty("created")
     public String created;
+
     public PostFloatingIps201ApplicationJSONFloatingIp withCreated(String created) {
         this.created = created;
         return this;
@@ -32,6 +34,7 @@ public class PostFloatingIps201ApplicationJSONFloatingIp {
      */
     @JsonProperty("description")
     public String description;
+
     public PostFloatingIps201ApplicationJSONFloatingIp withDescription(String description) {
         this.description = description;
         return this;
@@ -42,6 +45,7 @@ public class PostFloatingIps201ApplicationJSONFloatingIp {
      */
     @JsonProperty("dns_ptr")
     public PostFloatingIps201ApplicationJSONFloatingIpDnsPtr[] dnsPtr;
+
     public PostFloatingIps201ApplicationJSONFloatingIp withDnsPtr(PostFloatingIps201ApplicationJSONFloatingIpDnsPtr[] dnsPtr) {
         this.dnsPtr = dnsPtr;
         return this;
@@ -52,6 +56,7 @@ public class PostFloatingIps201ApplicationJSONFloatingIp {
      */
     @JsonProperty("home_location")
     public PostFloatingIps201ApplicationJSONFloatingIpHomeLocation homeLocation;
+
     public PostFloatingIps201ApplicationJSONFloatingIp withHomeLocation(PostFloatingIps201ApplicationJSONFloatingIpHomeLocation homeLocation) {
         this.homeLocation = homeLocation;
         return this;
@@ -62,6 +67,7 @@ public class PostFloatingIps201ApplicationJSONFloatingIp {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostFloatingIps201ApplicationJSONFloatingIp withId(Long id) {
         this.id = id;
         return this;
@@ -72,6 +78,7 @@ public class PostFloatingIps201ApplicationJSONFloatingIp {
      */
     @JsonProperty("ip")
     public String ip;
+
     public PostFloatingIps201ApplicationJSONFloatingIp withIp(String ip) {
         this.ip = ip;
         return this;
@@ -82,6 +89,7 @@ public class PostFloatingIps201ApplicationJSONFloatingIp {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PostFloatingIps201ApplicationJSONFloatingIp withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -92,6 +100,7 @@ public class PostFloatingIps201ApplicationJSONFloatingIp {
      */
     @JsonProperty("name")
     public String name;
+
     public PostFloatingIps201ApplicationJSONFloatingIp withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +111,7 @@ public class PostFloatingIps201ApplicationJSONFloatingIp {
      */
     @JsonProperty("protection")
     public PostFloatingIps201ApplicationJSONFloatingIpProtection protection;
+
     public PostFloatingIps201ApplicationJSONFloatingIp withProtection(PostFloatingIps201ApplicationJSONFloatingIpProtection protection) {
         this.protection = protection;
         return this;
@@ -112,6 +122,7 @@ public class PostFloatingIps201ApplicationJSONFloatingIp {
      */
     @JsonProperty("server")
     public Long server;
+
     public PostFloatingIps201ApplicationJSONFloatingIp withServer(Long server) {
         this.server = server;
         return this;
@@ -122,9 +133,24 @@ public class PostFloatingIps201ApplicationJSONFloatingIp {
      */
     @JsonProperty("type")
     public PostFloatingIps201ApplicationJSONFloatingIpTypeEnum type;
+
     public PostFloatingIps201ApplicationJSONFloatingIp withType(PostFloatingIps201ApplicationJSONFloatingIpTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostFloatingIps201ApplicationJSONFloatingIp(@JsonProperty("blocked") Boolean blocked, @JsonProperty("created") String created, @JsonProperty("description") String description, @JsonProperty("dns_ptr") PostFloatingIps201ApplicationJSONFloatingIpDnsPtr[] dnsPtr, @JsonProperty("home_location") PostFloatingIps201ApplicationJSONFloatingIpHomeLocation homeLocation, @JsonProperty("id") Long id, @JsonProperty("ip") String ip, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("name") String name, @JsonProperty("protection") PostFloatingIps201ApplicationJSONFloatingIpProtection protection, @JsonProperty("server") Long server, @JsonProperty("type") PostFloatingIps201ApplicationJSONFloatingIpTypeEnum type) {
+        this.blocked = blocked;
+        this.created = created;
+        this.description = description;
+        this.dnsPtr = dnsPtr;
+        this.homeLocation = homeLocation;
+        this.id = id;
+        this.ip = ip;
+        this.labels = labels;
+        this.name = name;
+        this.protection = protection;
+        this.server = server;
+        this.type = type;
+  }
 }

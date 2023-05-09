@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FitnessUsersDataSourcesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption1 option1;
+
     public FitnessUsersDataSourcesListSecurity withOption1(FitnessUsersDataSourcesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption10 option10;
+
     public FitnessUsersDataSourcesListSecurity withOption10(FitnessUsersDataSourcesListSecurityOption10 option10) {
         this.option10 = option10;
         return this;
@@ -23,6 +25,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption11 option11;
+
     public FitnessUsersDataSourcesListSecurity withOption11(FitnessUsersDataSourcesListSecurityOption11 option11) {
         this.option11 = option11;
         return this;
@@ -30,6 +33,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption12 option12;
+
     public FitnessUsersDataSourcesListSecurity withOption12(FitnessUsersDataSourcesListSecurityOption12 option12) {
         this.option12 = option12;
         return this;
@@ -37,6 +41,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption13 option13;
+
     public FitnessUsersDataSourcesListSecurity withOption13(FitnessUsersDataSourcesListSecurityOption13 option13) {
         this.option13 = option13;
         return this;
@@ -44,6 +49,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption14 option14;
+
     public FitnessUsersDataSourcesListSecurity withOption14(FitnessUsersDataSourcesListSecurityOption14 option14) {
         this.option14 = option14;
         return this;
@@ -51,6 +57,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption15 option15;
+
     public FitnessUsersDataSourcesListSecurity withOption15(FitnessUsersDataSourcesListSecurityOption15 option15) {
         this.option15 = option15;
         return this;
@@ -58,6 +65,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption16 option16;
+
     public FitnessUsersDataSourcesListSecurity withOption16(FitnessUsersDataSourcesListSecurityOption16 option16) {
         this.option16 = option16;
         return this;
@@ -65,6 +73,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption17 option17;
+
     public FitnessUsersDataSourcesListSecurity withOption17(FitnessUsersDataSourcesListSecurityOption17 option17) {
         this.option17 = option17;
         return this;
@@ -72,6 +81,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption18 option18;
+
     public FitnessUsersDataSourcesListSecurity withOption18(FitnessUsersDataSourcesListSecurityOption18 option18) {
         this.option18 = option18;
         return this;
@@ -79,6 +89,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption19 option19;
+
     public FitnessUsersDataSourcesListSecurity withOption19(FitnessUsersDataSourcesListSecurityOption19 option19) {
         this.option19 = option19;
         return this;
@@ -86,6 +97,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption2 option2;
+
     public FitnessUsersDataSourcesListSecurity withOption2(FitnessUsersDataSourcesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -93,6 +105,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption20 option20;
+
     public FitnessUsersDataSourcesListSecurity withOption20(FitnessUsersDataSourcesListSecurityOption20 option20) {
         this.option20 = option20;
         return this;
@@ -100,6 +113,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption21 option21;
+
     public FitnessUsersDataSourcesListSecurity withOption21(FitnessUsersDataSourcesListSecurityOption21 option21) {
         this.option21 = option21;
         return this;
@@ -107,6 +121,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption22 option22;
+
     public FitnessUsersDataSourcesListSecurity withOption22(FitnessUsersDataSourcesListSecurityOption22 option22) {
         this.option22 = option22;
         return this;
@@ -114,6 +129,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption3 option3;
+
     public FitnessUsersDataSourcesListSecurity withOption3(FitnessUsersDataSourcesListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -121,6 +137,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption4 option4;
+
     public FitnessUsersDataSourcesListSecurity withOption4(FitnessUsersDataSourcesListSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -128,6 +145,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption5 option5;
+
     public FitnessUsersDataSourcesListSecurity withOption5(FitnessUsersDataSourcesListSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -135,6 +153,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption6 option6;
+
     public FitnessUsersDataSourcesListSecurity withOption6(FitnessUsersDataSourcesListSecurityOption6 option6) {
         this.option6 = option6;
         return this;
@@ -142,6 +161,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption7 option7;
+
     public FitnessUsersDataSourcesListSecurity withOption7(FitnessUsersDataSourcesListSecurityOption7 option7) {
         this.option7 = option7;
         return this;
@@ -149,6 +169,7 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption8 option8;
+
     public FitnessUsersDataSourcesListSecurity withOption8(FitnessUsersDataSourcesListSecurityOption8 option8) {
         this.option8 = option8;
         return this;
@@ -156,9 +177,11 @@ public class FitnessUsersDataSourcesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesListSecurityOption9 option9;
+
     public FitnessUsersDataSourcesListSecurity withOption9(FitnessUsersDataSourcesListSecurityOption9 option9) {
         this.option9 = option9;
         return this;
     }
     
+    public FitnessUsersDataSourcesListSecurity(){}
 }

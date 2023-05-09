@@ -12,6 +12,7 @@ public class DocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DocumentResponse withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class DocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimetype")
     public String mimetype;
+
     public DocumentResponse withMimetype(String mimetype) {
         this.mimetype = mimetype;
         return this;
@@ -28,6 +30,7 @@ public class DocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public DocumentResponse withSize(Long size) {
         this.size = size;
         return this;
@@ -36,9 +39,11 @@ public class DocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public DocumentResponse withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public DocumentResponse(){}
 }

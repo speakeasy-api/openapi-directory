@@ -15,6 +15,7 @@ public class CardConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activation")
     public String activation;
+
     public CardConfiguration withActivation(String activation) {
         this.activation = activation;
         return this;
@@ -28,6 +29,7 @@ public class CardConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activationUrl")
     public String activationUrl;
+
     public CardConfiguration withActivationUrl(String activationUrl) {
         this.activationUrl = activationUrl;
         return this;
@@ -36,6 +38,7 @@ public class CardConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bulkAddress")
     public BulkAddress bulkAddress;
+
     public CardConfiguration withBulkAddress(BulkAddress bulkAddress) {
         this.bulkAddress = bulkAddress;
         return this;
@@ -47,6 +50,7 @@ public class CardConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardImageId")
     public String cardImageId;
+
     public CardConfiguration withCardImageId(String cardImageId) {
         this.cardImageId = cardImageId;
         return this;
@@ -58,6 +62,7 @@ public class CardConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier")
     public String carrier;
+
     public CardConfiguration withCarrier(String carrier) {
         this.carrier = carrier;
         return this;
@@ -69,6 +74,7 @@ public class CardConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierImageId")
     public String carrierImageId;
+
     public CardConfiguration withCarrierImageId(String carrierImageId) {
         this.carrierImageId = carrierImageId;
         return this;
@@ -79,9 +85,9 @@ public class CardConfiguration {
      * 
      * For example, send the `shipmentMethod` to override the logistics company defined in the card configuration profile.
      */
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationProfileId")
     public String configurationProfileId;
+
     public CardConfiguration withConfigurationProfileId(String configurationProfileId) {
         this.configurationProfileId = configurationProfileId;
         return this;
@@ -93,6 +99,7 @@ public class CardConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public CardConfiguration withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -104,6 +111,7 @@ public class CardConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("envelope")
     public String envelope;
+
     public CardConfiguration withEnvelope(String envelope) {
         this.envelope = envelope;
         return this;
@@ -115,6 +123,7 @@ public class CardConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert")
     public String insert;
+
     public CardConfiguration withInsert(String insert) {
         this.insert = insert;
         return this;
@@ -126,6 +135,7 @@ public class CardConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public CardConfiguration withLanguage(String language) {
         this.language = language;
         return this;
@@ -137,6 +147,7 @@ public class CardConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logoImageId")
     public String logoImageId;
+
     public CardConfiguration withLogoImageId(String logoImageId) {
         this.logoImageId = logoImageId;
         return this;
@@ -148,6 +159,7 @@ public class CardConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pinMailer")
     public String pinMailer;
+
     public CardConfiguration withPinMailer(String pinMailer) {
         this.pinMailer = pinMailer;
         return this;
@@ -159,9 +171,13 @@ public class CardConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipmentMethod")
     public String shipmentMethod;
+
     public CardConfiguration withShipmentMethod(String shipmentMethod) {
         this.shipmentMethod = shipmentMethod;
         return this;
     }
     
+    public CardConfiguration(@JsonProperty("configurationProfileId") String configurationProfileId) {
+        this.configurationProfileId = configurationProfileId;
+  }
 }

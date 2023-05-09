@@ -12,6 +12,7 @@ public class DfsSlateGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Game")
     public Schedule game;
+
     public DfsSlateGame withGame(Schedule game) {
         this.game = game;
         return this;
@@ -20,6 +21,7 @@ public class DfsSlateGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameID")
     public Long gameID;
+
     public DfsSlateGame withGameID(Long gameID) {
         this.gameID = gameID;
         return this;
@@ -28,6 +30,7 @@ public class DfsSlateGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatorGameID")
     public Long operatorGameID;
+
     public DfsSlateGame withOperatorGameID(Long operatorGameID) {
         this.operatorGameID = operatorGameID;
         return this;
@@ -36,6 +39,7 @@ public class DfsSlateGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemovedByOperator")
     public Boolean removedByOperator;
+
     public DfsSlateGame withRemovedByOperator(Boolean removedByOperator) {
         this.removedByOperator = removedByOperator;
         return this;
@@ -44,6 +48,7 @@ public class DfsSlateGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreID")
     public Long scoreID;
+
     public DfsSlateGame withScoreID(Long scoreID) {
         this.scoreID = scoreID;
         return this;
@@ -52,6 +57,7 @@ public class DfsSlateGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlateGameID")
     public Long slateGameID;
+
     public DfsSlateGame withSlateGameID(Long slateGameID) {
         this.slateGameID = slateGameID;
         return this;
@@ -60,9 +66,11 @@ public class DfsSlateGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlateID")
     public Long slateID;
+
     public DfsSlateGame withSlateID(Long slateID) {
         this.slateID = slateID;
         return this;
     }
     
+    public DfsSlateGame(){}
 }

@@ -20,6 +20,7 @@ public class Feedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public Feedback withContent(String content) {
         this.content = content;
         return this;
@@ -33,6 +34,7 @@ public class Feedback {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public Feedback withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -41,6 +43,7 @@ public class Feedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedback_id")
     public String feedbackId;
+
     public Feedback withFeedbackId(String feedbackId) {
         this.feedbackId = feedbackId;
         return this;
@@ -52,6 +55,7 @@ public class Feedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positive")
     public Boolean positive;
+
     public Feedback withPositive(Boolean positive) {
         this.positive = positive;
         return this;
@@ -63,6 +67,7 @@ public class Feedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewer_user_id")
     public String reviewerUserId;
+
     public Feedback withReviewerUserId(String reviewerUserId) {
         this.reviewerUserId = reviewerUserId;
         return this;
@@ -74,9 +79,11 @@ public class Feedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public String userId;
+
     public Feedback withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public Feedback(){}
 }

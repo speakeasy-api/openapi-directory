@@ -15,6 +15,7 @@ public class InstanceFleetStateChangeReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public InstanceFleetStateChangeReasonCodeEnum code;
+
     public InstanceFleetStateChangeReason withCode(InstanceFleetStateChangeReasonCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class InstanceFleetStateChangeReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public InstanceFleetStateChangeReason withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InstanceFleetStateChangeReason(){}
 }

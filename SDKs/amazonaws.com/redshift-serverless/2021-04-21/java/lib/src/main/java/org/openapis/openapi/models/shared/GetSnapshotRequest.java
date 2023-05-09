@@ -12,6 +12,7 @@ public class GetSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerAccount")
     public String ownerAccount;
+
     public GetSnapshotRequest withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -20,6 +21,7 @@ public class GetSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotArn")
     public String snapshotArn;
+
     public GetSnapshotRequest withSnapshotArn(String snapshotArn) {
         this.snapshotArn = snapshotArn;
         return this;
@@ -28,9 +30,11 @@ public class GetSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotName")
     public String snapshotName;
+
     public GetSnapshotRequest withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
     }
     
+    public GetSnapshotRequest(){}
 }

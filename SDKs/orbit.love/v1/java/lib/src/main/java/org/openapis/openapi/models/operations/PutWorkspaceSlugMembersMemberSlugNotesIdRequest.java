@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutWorkspaceSlugMembersMemberSlugNotesIdRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutWorkspaceSlugMembersMemberSlugNotesIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,6 +18,7 @@ public class PutWorkspaceSlugMembersMemberSlugNotesIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=member_slug")
     public String memberSlug;
+
     public PutWorkspaceSlugMembersMemberSlugNotesIdRequest withMemberSlug(String memberSlug) {
         this.memberSlug = memberSlug;
         return this;
@@ -23,6 +26,7 @@ public class PutWorkspaceSlugMembersMemberSlugNotesIdRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Note note;
+
     public PutWorkspaceSlugMembersMemberSlugNotesIdRequest withNote(org.openapis.openapi.models.shared.Note note) {
         this.note = note;
         return this;
@@ -30,9 +34,15 @@ public class PutWorkspaceSlugMembersMemberSlugNotesIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
     public String workspaceSlug;
+
     public PutWorkspaceSlugMembersMemberSlugNotesIdRequest withWorkspaceSlug(String workspaceSlug) {
         this.workspaceSlug = workspaceSlug;
         return this;
     }
     
+    public PutWorkspaceSlugMembersMemberSlugNotesIdRequest(@JsonProperty("id") String id, @JsonProperty("member_slug") String memberSlug, @JsonProperty("workspace_slug") String workspaceSlug) {
+        this.id = id;
+        this.memberSlug = memberSlug;
+        this.workspaceSlug = workspaceSlug;
+  }
 }

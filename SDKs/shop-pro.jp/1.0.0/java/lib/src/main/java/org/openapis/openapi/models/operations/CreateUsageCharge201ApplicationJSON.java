@@ -12,9 +12,11 @@ public class CreateUsageCharge201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage_charge")
     public CreateUsageCharge201ApplicationJSONUsageCharge usageCharge;
+
     public CreateUsageCharge201ApplicationJSON withUsageCharge(CreateUsageCharge201ApplicationJSONUsageCharge usageCharge) {
         this.usageCharge = usageCharge;
         return this;
     }
     
+    public CreateUsageCharge201ApplicationJSON(){}
 }

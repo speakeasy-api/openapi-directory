@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeregisterInstanceTagAttributeRequest {
     
     public Boolean includeAllTagsOfInstance;
+
     public DeregisterInstanceTagAttributeRequest withIncludeAllTagsOfInstance(Boolean includeAllTagsOfInstance) {
         this.includeAllTagsOfInstance = includeAllTagsOfInstance;
         return this;
@@ -19,9 +20,11 @@ public class DeregisterInstanceTagAttributeRequest {
     
     
     public String[] instanceTagKeys;
+
     public DeregisterInstanceTagAttributeRequest withInstanceTagKeys(String[] instanceTagKeys) {
         this.instanceTagKeys = instanceTagKeys;
         return this;
     }
     
+    public DeregisterInstanceTagAttributeRequest(){}
 }

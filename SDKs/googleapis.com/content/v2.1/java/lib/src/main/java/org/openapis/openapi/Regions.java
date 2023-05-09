@@ -61,11 +61,9 @@ public class Regions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentRegionsCreateResponse res = new org.openapis.openapi.models.operations.ContentRegionsCreateResponse() {{
+        org.openapis.openapi.models.operations.ContentRegionsCreateResponse res = new org.openapis.openapi.models.operations.ContentRegionsCreateResponse(contentType, httpRes.statusCode()) {{
             region = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Regions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentRegionsDeleteResponse res = new org.openapis.openapi.models.operations.ContentRegionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ContentRegionsDeleteResponse res = new org.openapis.openapi.models.operations.ContentRegionsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Regions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentRegionsGetResponse res = new org.openapis.openapi.models.operations.ContentRegionsGetResponse() {{
+        org.openapis.openapi.models.operations.ContentRegionsGetResponse res = new org.openapis.openapi.models.operations.ContentRegionsGetResponse(contentType, httpRes.statusCode()) {{
             region = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Regions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentRegionsListResponse res = new org.openapis.openapi.models.operations.ContentRegionsListResponse() {{
+        org.openapis.openapi.models.operations.ContentRegionsListResponse res = new org.openapis.openapi.models.operations.ContentRegionsListResponse(contentType, httpRes.statusCode()) {{
             listRegionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Regions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentRegionsPatchResponse res = new org.openapis.openapi.models.operations.ContentRegionsPatchResponse() {{
+        org.openapis.openapi.models.operations.ContentRegionsPatchResponse res = new org.openapis.openapi.models.operations.ContentRegionsPatchResponse(contentType, httpRes.statusCode()) {{
             region = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeAnalysisSchemesRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;DescribeAnalysisSchemes&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to describe. To limit the response to particular analysis schemes, specify the names of the analysis schemes you want to describe. To show the active configuration and exclude any pending changes, set the &lt;code&gt;Deployed&lt;/code&gt; option to &lt;code&gt;true&lt;/code&gt;. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAnalysisSchemesRequest {
     
     public String[] analysisSchemeNames;
+
     public DescribeAnalysisSchemesRequest withAnalysisSchemeNames(String[] analysisSchemeNames) {
         this.analysisSchemeNames = analysisSchemeNames;
         return this;
@@ -19,6 +20,7 @@ public class DescribeAnalysisSchemesRequest {
     
     
     public Boolean deployed;
+
     public DescribeAnalysisSchemesRequest withDeployed(Boolean deployed) {
         this.deployed = deployed;
         return this;
@@ -26,9 +28,13 @@ public class DescribeAnalysisSchemesRequest {
     
     
     public String domainName;
+
     public DescribeAnalysisSchemesRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public DescribeAnalysisSchemesRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

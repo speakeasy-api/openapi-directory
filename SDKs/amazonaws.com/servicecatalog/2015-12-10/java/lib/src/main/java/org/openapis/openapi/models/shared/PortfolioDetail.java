@@ -20,6 +20,7 @@ public class PortfolioDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public PortfolioDetail withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class PortfolioDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public PortfolioDetail withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -38,6 +40,7 @@ public class PortfolioDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PortfolioDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class PortfolioDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public PortfolioDetail withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -54,6 +58,7 @@ public class PortfolioDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public PortfolioDetail withId(String id) {
         this.id = id;
         return this;
@@ -62,9 +67,11 @@ public class PortfolioDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderName")
     public String providerName;
+
     public PortfolioDetail withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
     }
     
+    public PortfolioDetail(){}
 }

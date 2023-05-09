@@ -16,6 +16,7 @@ public class PersonalData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateOfBirth")
     public String dateOfBirth;
+
     public PersonalData withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -27,6 +28,7 @@ public class PersonalData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idNumber")
     public String idNumber;
+
     public PersonalData withIdNumber(String idNumber) {
         this.idNumber = idNumber;
         return this;
@@ -39,9 +41,11 @@ public class PersonalData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nationality")
     public String nationality;
+
     public PersonalData withNationality(String nationality) {
         this.nationality = nationality;
         return this;
     }
     
+    public PersonalData(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeOrganizationHealthResponse {
     @JsonProperty("MetricsAnalyzed")
     public Long metricsAnalyzed;
+
     public DescribeOrganizationHealthResponse withMetricsAnalyzed(Long metricsAnalyzed) {
         this.metricsAnalyzed = metricsAnalyzed;
         return this;
@@ -19,6 +20,7 @@ public class DescribeOrganizationHealthResponse {
     
     @JsonProperty("OpenProactiveInsights")
     public Long openProactiveInsights;
+
     public DescribeOrganizationHealthResponse withOpenProactiveInsights(Long openProactiveInsights) {
         this.openProactiveInsights = openProactiveInsights;
         return this;
@@ -26,6 +28,7 @@ public class DescribeOrganizationHealthResponse {
     
     @JsonProperty("OpenReactiveInsights")
     public Long openReactiveInsights;
+
     public DescribeOrganizationHealthResponse withOpenReactiveInsights(Long openReactiveInsights) {
         this.openReactiveInsights = openReactiveInsights;
         return this;
@@ -33,9 +36,16 @@ public class DescribeOrganizationHealthResponse {
     
     @JsonProperty("ResourceHours")
     public Long resourceHours;
+
     public DescribeOrganizationHealthResponse withResourceHours(Long resourceHours) {
         this.resourceHours = resourceHours;
         return this;
     }
     
+    public DescribeOrganizationHealthResponse(@JsonProperty("MetricsAnalyzed") Long metricsAnalyzed, @JsonProperty("OpenProactiveInsights") Long openProactiveInsights, @JsonProperty("OpenReactiveInsights") Long openReactiveInsights, @JsonProperty("ResourceHours") Long resourceHours) {
+        this.metricsAnalyzed = metricsAnalyzed;
+        this.openProactiveInsights = openProactiveInsights;
+        this.openReactiveInsights = openReactiveInsights;
+        this.resourceHours = resourceHours;
+  }
 }

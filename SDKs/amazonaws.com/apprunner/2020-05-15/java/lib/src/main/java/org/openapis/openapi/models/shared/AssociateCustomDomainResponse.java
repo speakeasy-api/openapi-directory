@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateCustomDomainResponse {
     @JsonProperty("CustomDomain")
     public CustomDomain customDomain;
+
     public AssociateCustomDomainResponse withCustomDomain(CustomDomain customDomain) {
         this.customDomain = customDomain;
         return this;
@@ -19,6 +20,7 @@ public class AssociateCustomDomainResponse {
     
     @JsonProperty("DNSTarget")
     public String dnsTarget;
+
     public AssociateCustomDomainResponse withDNSTarget(String dnsTarget) {
         this.dnsTarget = dnsTarget;
         return this;
@@ -26,6 +28,7 @@ public class AssociateCustomDomainResponse {
     
     @JsonProperty("ServiceArn")
     public String serviceArn;
+
     public AssociateCustomDomainResponse withServiceArn(String serviceArn) {
         this.serviceArn = serviceArn;
         return this;
@@ -33,9 +36,16 @@ public class AssociateCustomDomainResponse {
     
     @JsonProperty("VpcDNSTargets")
     public VpcDNSTarget[] vpcDNSTargets;
+
     public AssociateCustomDomainResponse withVpcDNSTargets(VpcDNSTarget[] vpcDNSTargets) {
         this.vpcDNSTargets = vpcDNSTargets;
         return this;
     }
     
+    public AssociateCustomDomainResponse(@JsonProperty("CustomDomain") CustomDomain customDomain, @JsonProperty("DNSTarget") String dnsTarget, @JsonProperty("ServiceArn") String serviceArn, @JsonProperty("VpcDNSTargets") VpcDNSTarget[] vpcDNSTargets) {
+        this.customDomain = customDomain;
+        this.dnsTarget = dnsTarget;
+        this.serviceArn = serviceArn;
+        this.vpcDNSTargets = vpcDNSTargets;
+  }
 }

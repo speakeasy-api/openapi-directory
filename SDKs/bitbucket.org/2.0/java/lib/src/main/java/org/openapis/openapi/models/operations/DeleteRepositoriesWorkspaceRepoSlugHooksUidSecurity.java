@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DeleteRepositoriesWorkspaceRepoSlugHooksUidSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
     public String apiKey;
+
     public DeleteRepositoriesWorkspaceRepoSlugHooksUidSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -16,6 +17,7 @@ public class DeleteRepositoriesWorkspaceRepoSlugHooksUidSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
     public org.openapis.openapi.models.shared.SchemeBasic basic;
+
     public DeleteRepositoriesWorkspaceRepoSlugHooksUidSecurity withBasic(org.openapis.openapi.models.shared.SchemeBasic basic) {
         this.basic = basic;
         return this;
@@ -23,9 +25,11 @@ public class DeleteRepositoriesWorkspaceRepoSlugHooksUidSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2;
+
     public DeleteRepositoriesWorkspaceRepoSlugHooksUidSecurity withOauth2(String oauth2) {
         this.oauth2 = oauth2;
         return this;
     }
     
+    public DeleteRepositoriesWorkspaceRepoSlugHooksUidSecurity(){}
 }

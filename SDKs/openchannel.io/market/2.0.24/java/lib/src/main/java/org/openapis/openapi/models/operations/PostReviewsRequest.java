@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostReviewsRequest {
@@ -12,6 +13,7 @@ public class PostReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appId")
     public String appId;
+
     public PostReviewsRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -22,6 +24,7 @@ public class PostReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=autoApprove")
     public Boolean autoApprove;
+
     public PostReviewsRequest withAutoApprove(Boolean autoApprove) {
         this.autoApprove = autoApprove;
         return this;
@@ -32,6 +35,7 @@ public class PostReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
     public String customData;
+
     public PostReviewsRequest withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -42,6 +46,7 @@ public class PostReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public PostReviewsRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -52,6 +57,7 @@ public class PostReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=headline")
     public String headline;
+
     public PostReviewsRequest withHeadline(String headline) {
         this.headline = headline;
         return this;
@@ -62,6 +68,7 @@ public class PostReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mustOwnApp")
     public Boolean mustOwnApp;
+
     public PostReviewsRequest withMustOwnApp(Boolean mustOwnApp) {
         this.mustOwnApp = mustOwnApp;
         return this;
@@ -72,6 +79,7 @@ public class PostReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rating")
     public Long rating;
+
     public PostReviewsRequest withRating(Long rating) {
         this.rating = rating;
         return this;
@@ -82,6 +90,7 @@ public class PostReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public PostReviewsRequest withType(String type) {
         this.type = type;
         return this;
@@ -92,6 +101,7 @@ public class PostReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userAccountId")
     public String userAccountId;
+
     public PostReviewsRequest withUserAccountId(String userAccountId) {
         this.userAccountId = userAccountId;
         return this;
@@ -102,9 +112,17 @@ public class PostReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public String userId;
+
     public PostReviewsRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public PostReviewsRequest(@JsonProperty("appId") String appId, @JsonProperty("description") String description, @JsonProperty("headline") String headline, @JsonProperty("rating") Long rating, @JsonProperty("userId") String userId) {
+        this.appId = appId;
+        this.description = description;
+        this.headline = headline;
+        this.rating = rating;
+        this.userId = userId;
+  }
 }

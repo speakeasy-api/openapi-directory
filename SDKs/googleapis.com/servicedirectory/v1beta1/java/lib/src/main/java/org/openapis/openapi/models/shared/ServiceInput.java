@@ -18,6 +18,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public ServiceInput withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -29,9 +30,11 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServiceInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ServiceInput(){}
 }

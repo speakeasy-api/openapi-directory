@@ -15,6 +15,7 @@ public class ListLFTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LFTags")
     public LFTagPair[] lfTags;
+
     public ListLFTagsResponse withLFTags(LFTagPair[] lfTags) {
         this.lfTags = lfTags;
         return this;
@@ -23,9 +24,11 @@ public class ListLFTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLFTagsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLFTagsResponse(){}
 }

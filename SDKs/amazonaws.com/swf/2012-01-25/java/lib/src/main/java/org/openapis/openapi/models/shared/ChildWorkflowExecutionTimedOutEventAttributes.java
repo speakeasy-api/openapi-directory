@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChildWorkflowExecutionTimedOutEventAttributes {
     @JsonProperty("initiatedEventId")
     public Long initiatedEventId;
+
     public ChildWorkflowExecutionTimedOutEventAttributes withInitiatedEventId(Long initiatedEventId) {
         this.initiatedEventId = initiatedEventId;
         return this;
@@ -19,6 +20,7 @@ public class ChildWorkflowExecutionTimedOutEventAttributes {
     
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public ChildWorkflowExecutionTimedOutEventAttributes withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
@@ -26,6 +28,7 @@ public class ChildWorkflowExecutionTimedOutEventAttributes {
     
     @JsonProperty("timeoutType")
     public WorkflowExecutionTimeoutTypeEnum timeoutType;
+
     public ChildWorkflowExecutionTimedOutEventAttributes withTimeoutType(WorkflowExecutionTimeoutTypeEnum timeoutType) {
         this.timeoutType = timeoutType;
         return this;
@@ -33,6 +36,7 @@ public class ChildWorkflowExecutionTimedOutEventAttributes {
     
     @JsonProperty("workflowExecution")
     public WorkflowExecution workflowExecution;
+
     public ChildWorkflowExecutionTimedOutEventAttributes withWorkflowExecution(WorkflowExecution workflowExecution) {
         this.workflowExecution = workflowExecution;
         return this;
@@ -40,9 +44,17 @@ public class ChildWorkflowExecutionTimedOutEventAttributes {
     
     @JsonProperty("workflowType")
     public WorkflowType workflowType;
+
     public ChildWorkflowExecutionTimedOutEventAttributes withWorkflowType(WorkflowType workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public ChildWorkflowExecutionTimedOutEventAttributes(@JsonProperty("initiatedEventId") Long initiatedEventId, @JsonProperty("startedEventId") Long startedEventId, @JsonProperty("timeoutType") WorkflowExecutionTimeoutTypeEnum timeoutType, @JsonProperty("workflowExecution") WorkflowExecution workflowExecution, @JsonProperty("workflowType") WorkflowType workflowType) {
+        this.initiatedEventId = initiatedEventId;
+        this.startedEventId = startedEventId;
+        this.timeoutType = timeoutType;
+        this.workflowExecution = workflowExecution;
+        this.workflowType = workflowType;
+  }
 }

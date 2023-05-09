@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaListFirebaseLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firebaseLinks")
     public GoogleAnalyticsAdminV1alphaFirebaseLink[] firebaseLinks;
+
     public GoogleAnalyticsAdminV1alphaListFirebaseLinksResponse withFirebaseLinks(GoogleAnalyticsAdminV1alphaFirebaseLink[] firebaseLinks) {
         this.firebaseLinks = firebaseLinks;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaListFirebaseLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAnalyticsAdminV1alphaListFirebaseLinksResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaListFirebaseLinksResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProjectsAddCollaboratorResponse {
     
     public String contentType;
+
     public ProjectsAddCollaboratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProjectsAddCollaboratorResponse {
     
     
     public Integer statusCode;
+
     public ProjectsAddCollaboratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProjectsAddCollaboratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProjectsAddCollaboratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ProjectsAddCollaboratorResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ProjectsAddCollaboratorResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ProjectsAddCollaboratorResponse {
      */
     
     public ProjectsAddCollaborator415ApplicationJSON projectsAddCollaborator415ApplicationJSONObject;
+
     public ProjectsAddCollaboratorResponse withProjectsAddCollaborator415ApplicationJSONObject(ProjectsAddCollaborator415ApplicationJSON projectsAddCollaborator415ApplicationJSONObject) {
         this.projectsAddCollaborator415ApplicationJSONObject = projectsAddCollaborator415ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class ProjectsAddCollaboratorResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ProjectsAddCollaboratorResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ProjectsAddCollaboratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

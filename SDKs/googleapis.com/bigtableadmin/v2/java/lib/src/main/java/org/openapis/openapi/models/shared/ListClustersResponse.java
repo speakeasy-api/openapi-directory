@@ -18,6 +18,7 @@ public class ListClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusters")
     public Cluster[] clusters;
+
     public ListClustersResponse withClusters(Cluster[] clusters) {
         this.clusters = clusters;
         return this;
@@ -29,6 +30,7 @@ public class ListClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedLocations")
     public String[] failedLocations;
+
     public ListClustersResponse withFailedLocations(String[] failedLocations) {
         this.failedLocations = failedLocations;
         return this;
@@ -40,9 +42,11 @@ public class ListClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListClustersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListClustersResponse(){}
 }

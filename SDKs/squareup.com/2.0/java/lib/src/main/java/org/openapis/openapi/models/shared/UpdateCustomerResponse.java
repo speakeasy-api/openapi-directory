@@ -21,6 +21,7 @@ public class UpdateCustomerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public Customer customer;
+
     public UpdateCustomerResponse withCustomer(Customer customer) {
         this.customer = customer;
         return this;
@@ -32,9 +33,11 @@ public class UpdateCustomerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public UpdateCustomerResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public UpdateCustomerResponse(){}
 }

@@ -15,6 +15,7 @@ public class SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public ArchitectureEnum architecture;
+
     public SourceConfig withArchitecture(ArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -23,6 +24,7 @@ public class SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Bucket")
     public String s3Bucket;
+
     public SourceConfig withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -31,9 +33,11 @@ public class SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Key")
     public String s3Key;
+
     public SourceConfig withS3Key(String s3Key) {
         this.s3Key = s3Key;
         return this;
     }
     
+    public SourceConfig(){}
 }

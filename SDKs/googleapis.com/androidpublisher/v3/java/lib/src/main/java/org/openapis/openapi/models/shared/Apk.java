@@ -18,6 +18,7 @@ public class Apk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binary")
     public ApkBinary binary;
+
     public Apk withBinary(ApkBinary binary) {
         this.binary = binary;
         return this;
@@ -29,9 +30,11 @@ public class Apk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionCode")
     public Integer versionCode;
+
     public Apk withVersionCode(Integer versionCode) {
         this.versionCode = versionCode;
         return this;
     }
     
+    public Apk(){}
 }

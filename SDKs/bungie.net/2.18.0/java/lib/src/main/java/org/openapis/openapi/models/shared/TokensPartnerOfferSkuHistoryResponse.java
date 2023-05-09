@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class TokensPartnerOfferSkuHistoryResponse {
     
     public Boolean allOffersApplied;
+
     public TokensPartnerOfferSkuHistoryResponse withAllOffersApplied(Boolean allOffersApplied) {
         this.allOffersApplied = allOffersApplied;
         return this;
@@ -16,6 +17,7 @@ public class TokensPartnerOfferSkuHistoryResponse {
     
     
     public OffsetDateTime claimDate;
+
     public TokensPartnerOfferSkuHistoryResponse withClaimDate(OffsetDateTime claimDate) {
         this.claimDate = claimDate;
         return this;
@@ -23,6 +25,7 @@ public class TokensPartnerOfferSkuHistoryResponse {
     
     
     public String localizedDescription;
+
     public TokensPartnerOfferSkuHistoryResponse withLocalizedDescription(String localizedDescription) {
         this.localizedDescription = localizedDescription;
         return this;
@@ -30,6 +33,7 @@ public class TokensPartnerOfferSkuHistoryResponse {
     
     
     public String localizedName;
+
     public TokensPartnerOfferSkuHistoryResponse withLocalizedName(String localizedName) {
         this.localizedName = localizedName;
         return this;
@@ -37,6 +41,7 @@ public class TokensPartnerOfferSkuHistoryResponse {
     
     
     public String skuIdentifier;
+
     public TokensPartnerOfferSkuHistoryResponse withSkuIdentifier(String skuIdentifier) {
         this.skuIdentifier = skuIdentifier;
         return this;
@@ -44,6 +49,7 @@ public class TokensPartnerOfferSkuHistoryResponse {
     
     
     public TokensPartnerOfferHistoryResponse[] skuOffers;
+
     public TokensPartnerOfferSkuHistoryResponse withSkuOffers(TokensPartnerOfferHistoryResponse[] skuOffers) {
         this.skuOffers = skuOffers;
         return this;
@@ -51,9 +57,11 @@ public class TokensPartnerOfferSkuHistoryResponse {
     
     
     public String transactionId;
+
     public TokensPartnerOfferSkuHistoryResponse withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public TokensPartnerOfferSkuHistoryResponse(){}
 }

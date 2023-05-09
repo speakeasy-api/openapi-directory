@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClaimGameServerResponse {
@@ -12,6 +13,7 @@ public class ClaimGameServerResponse {
      */
     
     public org.openapis.openapi.models.shared.ClaimGameServerOutput claimGameServerOutput;
+
     public ClaimGameServerResponse withClaimGameServerOutput(org.openapis.openapi.models.shared.ClaimGameServerOutput claimGameServerOutput) {
         this.claimGameServerOutput = claimGameServerOutput;
         return this;
@@ -22,6 +24,7 @@ public class ClaimGameServerResponse {
      */
     
     public Object conflictException;
+
     public ClaimGameServerResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ClaimGameServerResponse {
     
     
     public String contentType;
+
     public ClaimGameServerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ClaimGameServerResponse {
      */
     
     public Object internalServiceException;
+
     public ClaimGameServerResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ClaimGameServerResponse {
      */
     
     public Object invalidRequestException;
+
     public ClaimGameServerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class ClaimGameServerResponse {
      */
     
     public Object notFoundException;
+
     public ClaimGameServerResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ClaimGameServerResponse {
      */
     
     public Object outOfCapacityException;
+
     public ClaimGameServerResponse withOutOfCapacityException(Object outOfCapacityException) {
         this.outOfCapacityException = outOfCapacityException;
         return this;
@@ -76,6 +84,7 @@ public class ClaimGameServerResponse {
     
     
     public Integer statusCode;
+
     public ClaimGameServerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ClaimGameServerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClaimGameServerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ClaimGameServerResponse {
      */
     
     public Object unauthorizedException;
+
     public ClaimGameServerResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ClaimGameServerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

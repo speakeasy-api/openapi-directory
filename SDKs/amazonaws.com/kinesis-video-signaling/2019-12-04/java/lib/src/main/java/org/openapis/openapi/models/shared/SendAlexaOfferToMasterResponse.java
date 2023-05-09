@@ -15,9 +15,11 @@ public class SendAlexaOfferToMasterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Answer")
     public String answer;
+
     public SendAlexaOfferToMasterResponse withAnswer(String answer) {
         this.answer = answer;
         return this;
     }
     
+    public SendAlexaOfferToMasterResponse(){}
 }

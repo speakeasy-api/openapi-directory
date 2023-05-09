@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AcceleratorTotalMemoryMiBRequest {
     
     public Long max;
+
     public AcceleratorTotalMemoryMiBRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class AcceleratorTotalMemoryMiBRequest {
     
     
     public Long min;
+
     public AcceleratorTotalMemoryMiBRequest withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public AcceleratorTotalMemoryMiBRequest(){}
 }

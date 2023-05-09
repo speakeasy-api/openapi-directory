@@ -15,9 +15,13 @@ public class ApplicationIDV1 {
      */
     @JsonProperty("id")
     public String id;
+
     public ApplicationIDV1 withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ApplicationIDV1(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

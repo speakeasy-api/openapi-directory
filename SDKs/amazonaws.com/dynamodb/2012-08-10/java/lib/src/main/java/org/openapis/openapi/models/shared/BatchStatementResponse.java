@@ -15,6 +15,7 @@ public class BatchStatementResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public BatchStatementError error;
+
     public BatchStatementResponse withError(BatchStatementError error) {
         this.error = error;
         return this;
@@ -23,6 +24,7 @@ public class BatchStatementResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Item")
     public java.util.Map<String, AttributeValue> item;
+
     public BatchStatementResponse withItem(java.util.Map<String, AttributeValue> item) {
         this.item = item;
         return this;
@@ -31,9 +33,11 @@ public class BatchStatementResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public BatchStatementResponse withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public BatchStatementResponse(){}
 }

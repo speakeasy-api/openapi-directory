@@ -25,9 +25,13 @@ public class AssignTerminalsResponse {
      */
     @JsonProperty("results")
     public java.util.Map<String, String> results;
+
     public AssignTerminalsResponse withResults(java.util.Map<String, String> results) {
         this.results = results;
         return this;
     }
     
+    public AssignTerminalsResponse(@JsonProperty("results") java.util.Map<String, String> results) {
+        this.results = results;
+  }
 }

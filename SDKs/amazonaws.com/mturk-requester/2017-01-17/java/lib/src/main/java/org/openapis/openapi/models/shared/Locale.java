@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Locale {
     @JsonProperty("Country")
     public String country;
+
     public Locale withCountry(String country) {
         this.country = country;
         return this;
@@ -22,9 +23,13 @@ public class Locale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subdivision")
     public String subdivision;
+
     public Locale withSubdivision(String subdivision) {
         this.subdivision = subdivision;
         return this;
     }
     
+    public Locale(@JsonProperty("Country") String country) {
+        this.country = country;
+  }
 }

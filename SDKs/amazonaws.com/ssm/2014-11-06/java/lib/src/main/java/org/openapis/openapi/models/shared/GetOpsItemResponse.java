@@ -15,9 +15,11 @@ public class GetOpsItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItem")
     public OpsItem opsItem;
+
     public GetOpsItemResponse withOpsItem(OpsItem opsItem) {
         this.opsItem = opsItem;
         return this;
     }
     
+    public GetOpsItemResponse(){}
 }

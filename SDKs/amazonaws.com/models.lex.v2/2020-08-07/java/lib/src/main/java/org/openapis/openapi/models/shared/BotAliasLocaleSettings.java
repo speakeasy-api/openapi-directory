@@ -15,6 +15,7 @@ public class BotAliasLocaleSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeHookSpecification")
     public CodeHookSpecification codeHookSpecification;
+
     public BotAliasLocaleSettings withCodeHookSpecification(CodeHookSpecification codeHookSpecification) {
         this.codeHookSpecification = codeHookSpecification;
         return this;
@@ -22,9 +23,13 @@ public class BotAliasLocaleSettings {
     
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public BotAliasLocaleSettings withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public BotAliasLocaleSettings(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

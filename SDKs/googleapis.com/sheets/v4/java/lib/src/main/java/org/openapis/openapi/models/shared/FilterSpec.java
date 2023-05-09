@@ -18,6 +18,7 @@ public class FilterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnIndex")
     public Integer columnIndex;
+
     public FilterSpec withColumnIndex(Integer columnIndex) {
         this.columnIndex = columnIndex;
         return this;
@@ -29,6 +30,7 @@ public class FilterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceColumnReference")
     public DataSourceColumnReference dataSourceColumnReference;
+
     public FilterSpec withDataSourceColumnReference(DataSourceColumnReference dataSourceColumnReference) {
         this.dataSourceColumnReference = dataSourceColumnReference;
         return this;
@@ -40,9 +42,11 @@ public class FilterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterCriteria")
     public FilterCriteria filterCriteria;
+
     public FilterSpec withFilterCriteria(FilterCriteria filterCriteria) {
         this.filterCriteria = filterCriteria;
         return this;
     }
     
+    public FilterSpec(){}
 }

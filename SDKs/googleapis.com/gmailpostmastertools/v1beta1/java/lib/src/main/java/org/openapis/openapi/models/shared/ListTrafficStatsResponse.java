@@ -18,6 +18,7 @@ public class ListTrafficStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTrafficStatsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListTrafficStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trafficStats")
     public TrafficStats[] trafficStats;
+
     public ListTrafficStatsResponse withTrafficStats(TrafficStats[] trafficStats) {
         this.trafficStats = trafficStats;
         return this;
     }
     
+    public ListTrafficStatsResponse(){}
 }

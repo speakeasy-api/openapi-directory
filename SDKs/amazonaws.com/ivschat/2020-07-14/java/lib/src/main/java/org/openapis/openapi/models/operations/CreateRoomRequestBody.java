@@ -15,6 +15,7 @@ public class CreateRoomRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfigurationIdentifiers")
     public String[] loggingConfigurationIdentifiers;
+
     public CreateRoomRequestBody withLoggingConfigurationIdentifiers(String[] loggingConfigurationIdentifiers) {
         this.loggingConfigurationIdentifiers = loggingConfigurationIdentifiers;
         return this;
@@ -26,6 +27,7 @@ public class CreateRoomRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumMessageLength")
     public Long maximumMessageLength;
+
     public CreateRoomRequestBody withMaximumMessageLength(Long maximumMessageLength) {
         this.maximumMessageLength = maximumMessageLength;
         return this;
@@ -37,6 +39,7 @@ public class CreateRoomRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumMessageRatePerSecond")
     public Long maximumMessageRatePerSecond;
+
     public CreateRoomRequestBody withMaximumMessageRatePerSecond(Long maximumMessageRatePerSecond) {
         this.maximumMessageRatePerSecond = maximumMessageRatePerSecond;
         return this;
@@ -48,6 +51,7 @@ public class CreateRoomRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageReviewHandler")
     public CreateRoomRequestBodyMessageReviewHandler messageReviewHandler;
+
     public CreateRoomRequestBody withMessageReviewHandler(CreateRoomRequestBodyMessageReviewHandler messageReviewHandler) {
         this.messageReviewHandler = messageReviewHandler;
         return this;
@@ -59,6 +63,7 @@ public class CreateRoomRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateRoomRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -70,9 +75,11 @@ public class CreateRoomRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateRoomRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRoomRequestBody(){}
 }

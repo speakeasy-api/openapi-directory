@@ -15,6 +15,7 @@ public class GetVpcLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public VpcLink[] items;
+
     public GetVpcLinksResponse withItems(VpcLink[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class GetVpcLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetVpcLinksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetVpcLinksResponse(){}
 }

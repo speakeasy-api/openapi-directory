@@ -15,6 +15,7 @@ public class GetDocumentTextDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blocks")
     public Block[] blocks;
+
     public GetDocumentTextDetectionResponse withBlocks(Block[] blocks) {
         this.blocks = blocks;
         return this;
@@ -23,6 +24,7 @@ public class GetDocumentTextDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetectDocumentTextModelVersion")
     public String detectDocumentTextModelVersion;
+
     public GetDocumentTextDetectionResponse withDetectDocumentTextModelVersion(String detectDocumentTextModelVersion) {
         this.detectDocumentTextModelVersion = detectDocumentTextModelVersion;
         return this;
@@ -31,6 +33,7 @@ public class GetDocumentTextDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentMetadata")
     public DocumentMetadata documentMetadata;
+
     public GetDocumentTextDetectionResponse withDocumentMetadata(DocumentMetadata documentMetadata) {
         this.documentMetadata = documentMetadata;
         return this;
@@ -39,6 +42,7 @@ public class GetDocumentTextDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public GetDocumentTextDetectionResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -47,6 +51,7 @@ public class GetDocumentTextDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetDocumentTextDetectionResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -55,6 +60,7 @@ public class GetDocumentTextDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public GetDocumentTextDetectionResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -63,9 +69,11 @@ public class GetDocumentTextDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Warnings")
     public Warning[] warnings;
+
     public GetDocumentTextDetectionResponse withWarnings(Warning[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public GetDocumentTextDetectionResponse(){}
 }

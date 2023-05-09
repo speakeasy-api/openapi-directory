@@ -15,6 +15,7 @@ public class RelationshipValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetComponentName")
     public String targetComponentName;
+
     public RelationshipValue withTargetComponentName(String targetComponentName) {
         this.targetComponentName = targetComponentName;
         return this;
@@ -23,9 +24,11 @@ public class RelationshipValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetEntityId")
     public String targetEntityId;
+
     public RelationshipValue withTargetEntityId(String targetEntityId) {
         this.targetEntityId = targetEntityId;
         return this;
     }
     
+    public RelationshipValue(){}
 }

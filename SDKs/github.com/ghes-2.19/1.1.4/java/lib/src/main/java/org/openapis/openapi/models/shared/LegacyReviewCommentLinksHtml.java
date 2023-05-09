@@ -12,9 +12,11 @@ public class LegacyReviewCommentLinksHtml {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public LegacyReviewCommentLinksHtml withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public LegacyReviewCommentLinksHtml(){}
 }

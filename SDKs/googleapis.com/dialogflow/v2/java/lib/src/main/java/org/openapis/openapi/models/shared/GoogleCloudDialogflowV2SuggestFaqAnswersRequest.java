@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2SuggestFaqAnswersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assistQueryParams")
     public GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams;
+
     public GoogleCloudDialogflowV2SuggestFaqAnswersRequest withAssistQueryParams(GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams) {
         this.assistQueryParams = assistQueryParams;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2SuggestFaqAnswersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextSize")
     public Integer contextSize;
+
     public GoogleCloudDialogflowV2SuggestFaqAnswersRequest withContextSize(Integer contextSize) {
         this.contextSize = contextSize;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2SuggestFaqAnswersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestMessage")
     public String latestMessage;
+
     public GoogleCloudDialogflowV2SuggestFaqAnswersRequest withLatestMessage(String latestMessage) {
         this.latestMessage = latestMessage;
         return this;
     }
     
+    public GoogleCloudDialogflowV2SuggestFaqAnswersRequest(){}
 }

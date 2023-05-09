@@ -18,6 +18,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemsAdditionalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandId")
     public String brandId;
+
     public PlaceOrder200ApplicationJSONOrdersItemsAdditionalInfo withBrandId(String brandId) {
         this.brandId = brandId;
         return this;
@@ -29,6 +30,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemsAdditionalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandName")
     public String brandName;
+
     public PlaceOrder200ApplicationJSONOrdersItemsAdditionalInfo withBrandName(String brandName) {
         this.brandName = brandName;
         return this;
@@ -40,6 +42,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemsAdditionalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public String dimension;
+
     public PlaceOrder200ApplicationJSONOrdersItemsAdditionalInfo withDimension(String dimension) {
         this.dimension = dimension;
         return this;
@@ -51,6 +54,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemsAdditionalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringInfo")
     public String offeringInfo;
+
     public PlaceOrder200ApplicationJSONOrdersItemsAdditionalInfo withOfferingInfo(String offeringInfo) {
         this.offeringInfo = offeringInfo;
         return this;
@@ -62,6 +66,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemsAdditionalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringType")
     public String offeringType;
+
     public PlaceOrder200ApplicationJSONOrdersItemsAdditionalInfo withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -73,9 +78,11 @@ public class PlaceOrder200ApplicationJSONOrdersItemsAdditionalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringTypeId")
     public String offeringTypeId;
+
     public PlaceOrder200ApplicationJSONOrdersItemsAdditionalInfo withOfferingTypeId(String offeringTypeId) {
         this.offeringTypeId = offeringTypeId;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersItemsAdditionalInfo(){}
 }

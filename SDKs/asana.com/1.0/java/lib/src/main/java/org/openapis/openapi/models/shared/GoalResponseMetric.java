@@ -18,6 +18,7 @@ public class GoalResponseMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("can_manage")
     public Boolean canManage;
+
     public GoalResponseMetric withCanManage(Boolean canManage) {
         this.canManage = canManage;
         return this;
@@ -29,6 +30,7 @@ public class GoalResponseMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_code")
     public String currencyCode;
+
     public GoalResponseMetric withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -40,6 +42,7 @@ public class GoalResponseMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_display_value")
     public String currentDisplayValue;
+
     public GoalResponseMetric withCurrentDisplayValue(String currentDisplayValue) {
         this.currentDisplayValue = currentDisplayValue;
         return this;
@@ -51,6 +54,7 @@ public class GoalResponseMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_number_value")
     public Double currentNumberValue;
+
     public GoalResponseMetric withCurrentNumberValue(Double currentNumberValue) {
         this.currentNumberValue = currentNumberValue;
         return this;
@@ -62,6 +66,7 @@ public class GoalResponseMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public GoalResponseMetric withGid(String gid) {
         this.gid = gid;
         return this;
@@ -73,6 +78,7 @@ public class GoalResponseMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initial_number_value")
     public Double initialNumberValue;
+
     public GoalResponseMetric withInitialNumberValue(Double initialNumberValue) {
         this.initialNumberValue = initialNumberValue;
         return this;
@@ -85,6 +91,7 @@ public class GoalResponseMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Long precision;
+
     public GoalResponseMetric withPrecision(Long precision) {
         this.precision = precision;
         return this;
@@ -96,6 +103,7 @@ public class GoalResponseMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress_source")
     public GoalResponseMetricProgressSourceEnum progressSource;
+
     public GoalResponseMetric withProgressSource(GoalResponseMetricProgressSourceEnum progressSource) {
         this.progressSource = progressSource;
         return this;
@@ -107,6 +115,7 @@ public class GoalResponseMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public GoalResponseMetricResourceSubtypeEnum resourceSubtype;
+
     public GoalResponseMetric withResourceSubtype(GoalResponseMetricResourceSubtypeEnum resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -118,6 +127,7 @@ public class GoalResponseMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public GoalResponseMetric withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -129,6 +139,7 @@ public class GoalResponseMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_number_value")
     public Double targetNumberValue;
+
     public GoalResponseMetric withTargetNumberValue(Double targetNumberValue) {
         this.targetNumberValue = targetNumberValue;
         return this;
@@ -140,9 +151,11 @@ public class GoalResponseMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public GoalResponseMetricUnitEnum unit;
+
     public GoalResponseMetric withUnit(GoalResponseMetricUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public GoalResponseMetric(){}
 }

@@ -64,12 +64,10 @@ public class PaymentMethodsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsResponse(contentType, httpRes.statusCode()) {{
             paymentMethodResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -119,12 +117,10 @@ public class PaymentMethodsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdResponse(contentType, httpRes.statusCode()) {{
             paymentMethod = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,12 +170,10 @@ public class PaymentMethodsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsResponse(contentType, httpRes.statusCode()) {{
             applePayInfo = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,12 +225,10 @@ public class PaymentMethodsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdResponse() {{
+        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdResponse(contentType, httpRes.statusCode()) {{
             paymentMethod = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,12 +280,10 @@ public class PaymentMethodsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsResponse(contentType, httpRes.statusCode()) {{
             paymentMethod = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,11 +335,9 @@ public class PaymentMethodsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsResponse(contentType, httpRes.statusCode()) {{
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

@@ -61,11 +61,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAnnotateResponse res = new org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAnnotateResponse() {{
+        org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAnnotateResponse res = new org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAnnotateResponse(contentType, httpRes.statusCode()) {{
             googleCloudVisionV1p2beta1BatchAnnotateFilesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAsyncBatchAnnotateResponse res = new org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAsyncBatchAnnotateResponse() {{
+        org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAsyncBatchAnnotateResponse res = new org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAsyncBatchAnnotateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAnnotateResponse res = new org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAnnotateResponse() {{
+        org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAnnotateResponse res = new org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAnnotateResponse(contentType, httpRes.statusCode()) {{
             googleCloudVisionV1p2beta1BatchAnnotateImagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,11 +199,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAsyncBatchAnnotateResponse res = new org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAsyncBatchAnnotateResponse() {{
+        org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAsyncBatchAnnotateResponse res = new org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAsyncBatchAnnotateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateReplicationConfigurationTemplateResponse {
@@ -12,6 +13,7 @@ public class UpdateReplicationConfigurationTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateReplicationConfigurationTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateReplicationConfigurationTemplateResponse {
     
     
     public String contentType;
+
     public UpdateReplicationConfigurationTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateReplicationConfigurationTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.ReplicationConfigurationTemplate replicationConfigurationTemplate;
+
     public UpdateReplicationConfigurationTemplateResponse withReplicationConfigurationTemplate(org.openapis.openapi.models.shared.ReplicationConfigurationTemplate replicationConfigurationTemplate) {
         this.replicationConfigurationTemplate = replicationConfigurationTemplate;
         return this;
@@ -39,6 +43,7 @@ public class UpdateReplicationConfigurationTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateReplicationConfigurationTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateReplicationConfigurationTemplateResponse {
     
     
     public Integer statusCode;
+
     public UpdateReplicationConfigurationTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateReplicationConfigurationTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateReplicationConfigurationTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateReplicationConfigurationTemplateResponse {
      */
     
     public Object uninitializedAccountException;
+
     public UpdateReplicationConfigurationTemplateResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateReplicationConfigurationTemplateResponse {
      */
     
     public Object validationException;
+
     public UpdateReplicationConfigurationTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateReplicationConfigurationTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

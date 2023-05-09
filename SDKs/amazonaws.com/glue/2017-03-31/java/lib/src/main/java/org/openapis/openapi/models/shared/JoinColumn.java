@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JoinColumn {
     @JsonProperty("From")
     public String from;
+
     public JoinColumn withFrom(String from) {
         this.from = from;
         return this;
@@ -19,9 +20,14 @@ public class JoinColumn {
     
     @JsonProperty("Keys")
     public String[][] keys;
+
     public JoinColumn withKeys(String[][] keys) {
         this.keys = keys;
         return this;
     }
     
+    public JoinColumn(@JsonProperty("From") String from, @JsonProperty("Keys") String[][] keys) {
+        this.from = from;
+        this.keys = keys;
+  }
 }

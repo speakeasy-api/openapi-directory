@@ -15,6 +15,7 @@ public class ConfigTELNET {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keymap")
     public String keymap;
+
     public ConfigTELNET withKeymap(String keymap) {
         this.keymap = keymap;
         return this;
@@ -23,6 +24,7 @@ public class ConfigTELNET {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paging_prompt")
     public String pagingPrompt;
+
     public ConfigTELNET withPagingPrompt(String pagingPrompt) {
         this.pagingPrompt = pagingPrompt;
         return this;
@@ -31,6 +33,7 @@ public class ConfigTELNET {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public ConfigTELNET withPort(Integer port) {
         this.port = port;
         return this;
@@ -39,6 +42,7 @@ public class ConfigTELNET {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prompt")
     public String prompt;
+
     public ConfigTELNET withPrompt(String prompt) {
         this.prompt = prompt;
         return this;
@@ -47,6 +51,7 @@ public class ConfigTELNET {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public String rule;
+
     public ConfigTELNET withRule(String rule) {
         this.rule = rule;
         return this;
@@ -55,9 +60,11 @@ public class ConfigTELNET {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userdb")
     public String userdb;
+
     public ConfigTELNET withUserdb(String userdb) {
         this.userdb = userdb;
         return this;
     }
     
+    public ConfigTELNET(){}
 }

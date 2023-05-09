@@ -15,6 +15,7 @@ public class InstructionsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forProvider")
     public String forProvider;
+
     public InstructionsDTO withForProvider(String forProvider) {
         this.forProvider = forProvider;
         return this;
@@ -23,6 +24,7 @@ public class InstructionsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromCustomer")
     public String fromCustomer;
+
     public InstructionsDTO withFromCustomer(String fromCustomer) {
         this.fromCustomer = fromCustomer;
         return this;
@@ -31,6 +33,7 @@ public class InstructionsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internal")
     public String internal;
+
     public InstructionsDTO withInternal(String internal) {
         this.internal = internal;
         return this;
@@ -39,6 +42,7 @@ public class InstructionsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public InstructionsDTO withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -47,6 +51,7 @@ public class InstructionsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentNoteForCustomer")
     public String paymentNoteForCustomer;
+
     public InstructionsDTO withPaymentNoteForCustomer(String paymentNoteForCustomer) {
         this.paymentNoteForCustomer = paymentNoteForCustomer;
         return this;
@@ -55,9 +60,11 @@ public class InstructionsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentNoteForVendor")
     public String paymentNoteForVendor;
+
     public InstructionsDTO withPaymentNoteForVendor(String paymentNoteForVendor) {
         this.paymentNoteForVendor = paymentNoteForVendor;
         return this;
     }
     
+    public InstructionsDTO(){}
 }

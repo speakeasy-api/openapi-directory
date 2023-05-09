@@ -12,6 +12,7 @@ public class GetV2ActivityHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_resource")
     public String resource;
+
     public GetV2ActivityHistoriesRequest withResource(String resource) {
         this.resource = resource;
         return this;
@@ -22,6 +23,7 @@ public class GetV2ActivityHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2ActivityHistoriesRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -35,6 +37,7 @@ public class GetV2ActivityHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurred_at")
     public java.util.Map<String, Object> occurredAt;
+
     public GetV2ActivityHistoriesRequest withOccurredAt(java.util.Map<String, Object> occurredAt) {
         this.occurredAt = occurredAt;
         return this;
@@ -45,6 +48,7 @@ public class GetV2ActivityHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2ActivityHistoriesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -55,6 +59,7 @@ public class GetV2ActivityHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2ActivityHistoriesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -65,6 +70,7 @@ public class GetV2ActivityHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pinned")
     public Boolean pinned;
+
     public GetV2ActivityHistoriesRequest withPinned(Boolean pinned) {
         this.pinned = pinned;
         return this;
@@ -75,6 +81,7 @@ public class GetV2ActivityHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=resource_id")
     public String[] resourceId;
+
     public GetV2ActivityHistoriesRequest withResourceId(String[] resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -85,6 +92,7 @@ public class GetV2ActivityHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource_type")
     public String resourceType;
+
     public GetV2ActivityHistoriesRequest withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -95,6 +103,7 @@ public class GetV2ActivityHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2ActivityHistoriesRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -105,6 +114,7 @@ public class GetV2ActivityHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2ActivityHistoriesRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -115,6 +125,7 @@ public class GetV2ActivityHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public GetV2ActivityHistoriesRequest withType(String type) {
         this.type = type;
         return this;
@@ -128,6 +139,7 @@ public class GetV2ActivityHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_at")
     public java.util.Map<String, Object> updatedAt;
+
     public GetV2ActivityHistoriesRequest withUpdatedAt(java.util.Map<String, Object> updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -138,9 +150,11 @@ public class GetV2ActivityHistoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_guid")
     public String userGuid;
+
     public GetV2ActivityHistoriesRequest withUserGuid(String userGuid) {
         this.userGuid = userGuid;
         return this;
     }
     
+    public GetV2ActivityHistoriesRequest(){}
 }

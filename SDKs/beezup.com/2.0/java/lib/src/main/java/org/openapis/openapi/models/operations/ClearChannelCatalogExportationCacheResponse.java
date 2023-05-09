@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClearChannelCatalogExportationCacheResponse {
@@ -12,6 +13,7 @@ public class ClearChannelCatalogExportationCacheResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public ClearChannelCatalogExportationCacheResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class ClearChannelCatalogExportationCacheResponse {
     
     
     public String contentType;
+
     public ClearChannelCatalogExportationCacheResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ClearChannelCatalogExportationCacheResponse {
     
     
     public Integer statusCode;
+
     public ClearChannelCatalogExportationCacheResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ClearChannelCatalogExportationCacheResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClearChannelCatalogExportationCacheResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClearChannelCatalogExportationCacheResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ public class PostNetworksCreateNetworkRequest {
      */
     @JsonProperty("ip_range")
     public String ipRange;
+
     public PostNetworksCreateNetworkRequest withIpRange(String ipRange) {
         this.ipRange = ipRange;
         return this;
@@ -25,6 +26,7 @@ public class PostNetworksCreateNetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public PostNetworksCreateNetworkRequestLabels labels;
+
     public PostNetworksCreateNetworkRequest withLabels(PostNetworksCreateNetworkRequestLabels labels) {
         this.labels = labels;
         return this;
@@ -35,6 +37,7 @@ public class PostNetworksCreateNetworkRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public PostNetworksCreateNetworkRequest withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +49,7 @@ public class PostNetworksCreateNetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routes")
     public PostNetworksCreateNetworkRequestRoutes[] routes;
+
     public PostNetworksCreateNetworkRequest withRoutes(PostNetworksCreateNetworkRequestRoutes[] routes) {
         this.routes = routes;
         return this;
@@ -57,9 +61,14 @@ public class PostNetworksCreateNetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnets")
     public PostNetworksCreateNetworkRequestSubnets[] subnets;
+
     public PostNetworksCreateNetworkRequest withSubnets(PostNetworksCreateNetworkRequestSubnets[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public PostNetworksCreateNetworkRequest(@JsonProperty("ip_range") String ipRange, @JsonProperty("name") String name) {
+        this.ipRange = ipRange;
+        this.name = name;
+  }
 }

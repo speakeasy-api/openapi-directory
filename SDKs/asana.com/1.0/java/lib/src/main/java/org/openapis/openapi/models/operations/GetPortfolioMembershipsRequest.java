@@ -13,6 +13,7 @@ public class GetPortfolioMembershipsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetPortfolioMembershipsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -25,6 +26,7 @@ public class GetPortfolioMembershipsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetPortfolioMembershipsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -37,6 +39,7 @@ public class GetPortfolioMembershipsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetPortfolioMembershipsRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -48,6 +51,7 @@ public class GetPortfolioMembershipsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetPortfolioMembershipsRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -58,6 +62,7 @@ public class GetPortfolioMembershipsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=portfolio")
     public String portfolio;
+
     public GetPortfolioMembershipsRequest withPortfolio(String portfolio) {
         this.portfolio = portfolio;
         return this;
@@ -68,6 +73,7 @@ public class GetPortfolioMembershipsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
     public String user;
+
     public GetPortfolioMembershipsRequest withUser(String user) {
         this.user = user;
         return this;
@@ -78,9 +84,11 @@ public class GetPortfolioMembershipsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
     public String workspace;
+
     public GetPortfolioMembershipsRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetPortfolioMembershipsRequest(){}
 }

@@ -18,6 +18,7 @@ public class Selection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Selection withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class Selection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Selection withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Selection(){}
 }

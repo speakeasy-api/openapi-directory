@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResultData {
     @JsonProperty("document")
     public Document document;
+
     public ResultData withDocument(Document document) {
         this.document = document;
         return this;
@@ -22,6 +23,7 @@ public class ResultData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevanceScore")
     public Double relevanceScore;
+
     public ResultData withRelevanceScore(Double relevanceScore) {
         this.relevanceScore = relevanceScore;
         return this;
@@ -29,9 +31,14 @@ public class ResultData {
     
     @JsonProperty("resultId")
     public String resultId;
+
     public ResultData withResultId(String resultId) {
         this.resultId = resultId;
         return this;
     }
     
+    public ResultData(@JsonProperty("document") Document document, @JsonProperty("resultId") String resultId) {
+        this.document = document;
+        this.resultId = resultId;
+  }
 }

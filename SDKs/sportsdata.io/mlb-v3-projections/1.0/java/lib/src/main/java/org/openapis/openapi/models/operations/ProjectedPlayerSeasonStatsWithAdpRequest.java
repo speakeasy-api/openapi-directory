@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectedPlayerSeasonStatsWithAdpRequest {
@@ -12,6 +13,7 @@ public class ProjectedPlayerSeasonStatsWithAdpRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public ProjectedPlayerSeasonStatsWithAdpFormatEnum format;
+
     public ProjectedPlayerSeasonStatsWithAdpRequest withFormat(ProjectedPlayerSeasonStatsWithAdpFormatEnum format) {
         this.format = format;
         return this;
@@ -23,9 +25,14 @@ public class ProjectedPlayerSeasonStatsWithAdpRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
     public String season;
+
     public ProjectedPlayerSeasonStatsWithAdpRequest withSeason(String season) {
         this.season = season;
         return this;
     }
     
+    public ProjectedPlayerSeasonStatsWithAdpRequest(@JsonProperty("format") ProjectedPlayerSeasonStatsWithAdpFormatEnum format, @JsonProperty("season") String season) {
+        this.format = format;
+        this.season = season;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNextMessagesRequest {
@@ -12,6 +13,7 @@ public class GetNextMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public String count;
+
     public GetNextMessagesRequest withCount(String count) {
         this.count = count;
         return this;
@@ -22,9 +24,13 @@ public class GetNextMessagesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=queueName")
     public String queueName;
+
     public GetNextMessagesRequest withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
     }
     
+    public GetNextMessagesRequest(@JsonProperty("queueName") String queueName) {
+        this.queueName = queueName;
+  }
 }

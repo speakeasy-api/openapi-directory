@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteStackSetInput {
     
     public CallAsEnum callAs;
+
     public DeleteStackSetInput withCallAs(CallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -16,9 +17,13 @@ public class DeleteStackSetInput {
     
     
     public String stackSetName;
+
     public DeleteStackSetInput withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
     }
     
+    public DeleteStackSetInput(@JsonProperty("StackSetName") String stackSetName) {
+        this.stackSetName = stackSetName;
+  }
 }

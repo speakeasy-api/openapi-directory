@@ -12,9 +12,11 @@ public class TestCreateDeviceSetOfOwnerDeviceSetDeviceConfigurationsImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumb")
     public String thumb;
+
     public TestCreateDeviceSetOfOwnerDeviceSetDeviceConfigurationsImage withThumb(String thumb) {
         this.thumb = thumb;
         return this;
     }
     
+    public TestCreateDeviceSetOfOwnerDeviceSetDeviceConfigurationsImage(){}
 }

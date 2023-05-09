@@ -18,6 +18,7 @@ public class PriceMissingCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandwidthDepletedCount")
     public String bandwidthDepletedCount;
+
     public PriceMissingCountDetails withBandwidthDepletedCount(String bandwidthDepletedCount) {
         this.bandwidthDepletedCount = bandwidthDepletedCount;
         return this;
@@ -29,6 +30,7 @@ public class PriceMissingCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheRateMissingCount")
     public String cacheRateMissingCount;
+
     public PriceMissingCountDetails withCacheRateMissingCount(String cacheRateMissingCount) {
         this.cacheRateMissingCount = cacheRateMissingCount;
         return this;
@@ -40,6 +42,7 @@ public class PriceMissingCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itineraryBlockedCount")
     public String itineraryBlockedCount;
+
     public PriceMissingCountDetails withItineraryBlockedCount(String itineraryBlockedCount) {
         this.itineraryBlockedCount = itineraryBlockedCount;
         return this;
@@ -51,6 +54,7 @@ public class PriceMissingCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("livePricingErrorCount")
     public String livePricingErrorCount;
+
     public PriceMissingCountDetails withLivePricingErrorCount(String livePricingErrorCount) {
         this.livePricingErrorCount = livePricingErrorCount;
         return this;
@@ -62,6 +66,7 @@ public class PriceMissingCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("livePricingNotSetupCount")
     public String livePricingNotSetupCount;
+
     public PriceMissingCountDetails withLivePricingNotSetupCount(String livePricingNotSetupCount) {
         this.livePricingNotSetupCount = livePricingNotSetupCount;
         return this;
@@ -73,9 +78,11 @@ public class PriceMissingCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("livePricingTimeoutCount")
     public String livePricingTimeoutCount;
+
     public PriceMissingCountDetails withLivePricingTimeoutCount(String livePricingTimeoutCount) {
         this.livePricingTimeoutCount = livePricingTimeoutCount;
         return this;
     }
     
+    public PriceMissingCountDetails(){}
 }

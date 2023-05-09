@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2EvaluationConfigSmartReplyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowlistDocument")
     public String allowlistDocument;
+
     public GoogleCloudDialogflowV2EvaluationConfigSmartReplyConfig withAllowlistDocument(String allowlistDocument) {
         this.allowlistDocument = allowlistDocument;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2EvaluationConfigSmartReplyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResultCount")
     public Integer maxResultCount;
+
     public GoogleCloudDialogflowV2EvaluationConfigSmartReplyConfig withMaxResultCount(Integer maxResultCount) {
         this.maxResultCount = maxResultCount;
         return this;
     }
     
+    public GoogleCloudDialogflowV2EvaluationConfigSmartReplyConfig(){}
 }

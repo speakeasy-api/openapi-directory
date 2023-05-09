@@ -18,9 +18,11 @@ public class ProvisionNetworkClientsRequestBodyPoliciesBySecurityAppliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devicePolicy")
     public ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum devicePolicy;
+
     public ProvisionNetworkClientsRequestBodyPoliciesBySecurityAppliance withDevicePolicy(ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum devicePolicy) {
         this.devicePolicy = devicePolicy;
         return this;
     }
     
+    public ProvisionNetworkClientsRequestBodyPoliciesBySecurityAppliance(){}
 }

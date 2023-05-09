@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPortfolioAccessRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListPortfolioAccessInput listPortfolioAccessInput;
+
     public ListPortfolioAccessRequest withListPortfolioAccessInput(org.openapis.openapi.models.shared.ListPortfolioAccessInput listPortfolioAccessInput) {
         this.listPortfolioAccessInput = listPortfolioAccessInput;
         return this;
@@ -19,6 +21,7 @@ public class ListPortfolioAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
     public String pageSize;
+
     public ListPortfolioAccessRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -29,6 +32,7 @@ public class ListPortfolioAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
     public String pageToken;
+
     public ListPortfolioAccessRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -36,6 +40,7 @@ public class ListPortfolioAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListPortfolioAccessRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListPortfolioAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListPortfolioAccessRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListPortfolioAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListPortfolioAccessRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListPortfolioAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListPortfolioAccessRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListPortfolioAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListPortfolioAccessRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListPortfolioAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListPortfolioAccessRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class ListPortfolioAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListPortfolioAccessRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class ListPortfolioAccessRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListPortfolioAccessXAmzTargetEnum xAmzTarget;
+
     public ListPortfolioAccessRequest withXAmzTarget(ListPortfolioAccessXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ListPortfolioAccessRequest(@JsonProperty("ListPortfolioAccessInput") org.openapis.openapi.models.shared.ListPortfolioAccessInput listPortfolioAccessInput, @JsonProperty("X-Amz-Target") ListPortfolioAccessXAmzTargetEnum xAmzTarget) {
+        this.listPortfolioAccessInput = listPortfolioAccessInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

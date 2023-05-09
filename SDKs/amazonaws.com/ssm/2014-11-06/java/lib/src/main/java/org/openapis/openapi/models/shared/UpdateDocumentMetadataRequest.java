@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDocumentMetadataRequest {
     @JsonProperty("DocumentReviews")
     public DocumentReviews documentReviews;
+
     public UpdateDocumentMetadataRequest withDocumentReviews(DocumentReviews documentReviews) {
         this.documentReviews = documentReviews;
         return this;
@@ -19,6 +20,7 @@ public class UpdateDocumentMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public UpdateDocumentMetadataRequest withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -26,9 +28,14 @@ public class UpdateDocumentMetadataRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateDocumentMetadataRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateDocumentMetadataRequest(@JsonProperty("DocumentReviews") DocumentReviews documentReviews, @JsonProperty("Name") String name) {
+        this.documentReviews = documentReviews;
+        this.name = name;
+  }
 }

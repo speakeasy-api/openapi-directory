@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InsurancesReadRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public InsurancesReadRequest withId(String id) {
         this.id = id;
         return this;
@@ -19,6 +21,7 @@ public class InsurancesReadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payer_type")
     public String payerType;
+
     public InsurancesReadRequest withPayerType(String payerType) {
         this.payerType = payerType;
         return this;
@@ -29,9 +32,14 @@ public class InsurancesReadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=term")
     public String term;
+
     public InsurancesReadRequest withTerm(String term) {
         this.term = term;
         return this;
     }
     
+    public InsurancesReadRequest(@JsonProperty("id") String id, @JsonProperty("payer_type") String payerType) {
+        this.id = id;
+        this.payerType = payerType;
+  }
 }

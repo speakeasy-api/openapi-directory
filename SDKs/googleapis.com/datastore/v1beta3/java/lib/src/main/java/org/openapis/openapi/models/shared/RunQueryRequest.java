@@ -18,6 +18,7 @@ public class RunQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gqlQuery")
     public GqlQuery gqlQuery;
+
     public RunQueryRequest withGqlQuery(GqlQuery gqlQuery) {
         this.gqlQuery = gqlQuery;
         return this;
@@ -29,6 +30,7 @@ public class RunQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionId")
     public PartitionId partitionId;
+
     public RunQueryRequest withPartitionId(PartitionId partitionId) {
         this.partitionId = partitionId;
         return this;
@@ -40,6 +42,7 @@ public class RunQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public Query query;
+
     public RunQueryRequest withQuery(Query query) {
         this.query = query;
         return this;
@@ -51,9 +54,11 @@ public class RunQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOptions")
     public ReadOptions readOptions;
+
     public RunQueryRequest withReadOptions(ReadOptions readOptions) {
         this.readOptions = readOptions;
         return this;
     }
     
+    public RunQueryRequest(){}
 }

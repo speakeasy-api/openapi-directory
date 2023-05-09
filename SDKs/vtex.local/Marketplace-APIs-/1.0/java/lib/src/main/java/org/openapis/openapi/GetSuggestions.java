@@ -78,10 +78,8 @@ public class GetSuggestions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSuggestionResponse res = new org.openapis.openapi.models.operations.GetSuggestionResponse() {{
+        org.openapis.openapi.models.operations.GetSuggestionResponse res = new org.openapis.openapi.models.operations.GetSuggestionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,10 +136,8 @@ public class GetSuggestions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetsuggestionsResponse res = new org.openapis.openapi.models.operations.GetsuggestionsResponse() {{
+        org.openapis.openapi.models.operations.GetsuggestionsResponse res = new org.openapis.openapi.models.operations.GetsuggestionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

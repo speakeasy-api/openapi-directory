@@ -23,6 +23,7 @@ public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Property withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -34,6 +35,7 @@ public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Property withKey(String key) {
         this.key = key;
         return this;
@@ -45,6 +47,7 @@ public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Property withKind(String kind) {
         this.kind = kind;
         return this;
@@ -56,6 +59,7 @@ public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Property withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -67,6 +71,7 @@ public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Property withValue(String value) {
         this.value = value;
         return this;
@@ -78,9 +83,11 @@ public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public String visibility;
+
     public Property withVisibility(String visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public Property(){}
 }

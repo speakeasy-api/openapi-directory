@@ -12,9 +12,11 @@ public class ConfirmCustomerAgreementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agreementName")
     public String agreementName;
+
     public ConfirmCustomerAgreementRequest withAgreementName(String agreementName) {
         this.agreementName = agreementName;
         return this;
     }
     
+    public ConfirmCustomerAgreementRequest(){}
 }

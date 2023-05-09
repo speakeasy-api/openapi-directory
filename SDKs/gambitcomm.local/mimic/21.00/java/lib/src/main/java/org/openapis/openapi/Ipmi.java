@@ -52,11 +52,9 @@ public class Ipmi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolIpmiGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiGetArgsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolIpmiGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiGetArgsResponse(contentType, httpRes.statusCode()) {{
             protocolIpmiGetArgs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Ipmi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolIpmiGetAttrResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiGetAttrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolIpmiGetAttrResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiGetAttrResponse(contentType, httpRes.statusCode()) {{
             protocolIpmiGetAttr200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class Ipmi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolIpmiGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiGetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolIpmiGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiGetConfigResponse(contentType, httpRes.statusCode()) {{
             configIPMI = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +171,9 @@ public class Ipmi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolIpmiGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiGetStatisticsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolIpmiGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiGetStatisticsResponse(contentType, httpRes.statusCode()) {{
             protocolIpmiGetStatistics200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -218,11 +210,9 @@ public class Ipmi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolIpmiGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiGetStatsHdrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolIpmiGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiGetStatsHdrResponse(contentType, httpRes.statusCode()) {{
             protocolIpmiGetStatsHdr200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -260,11 +250,9 @@ public class Ipmi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolIpmiGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiGetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolIpmiGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiGetTraceResponse(contentType, httpRes.statusCode()) {{
             configIPMI = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +290,9 @@ public class Ipmi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolIpmiSetAttrResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiSetAttrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolIpmiSetAttrResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiSetAttrResponse(contentType, httpRes.statusCode()) {{
             protocolIpmiSetAttr200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +329,9 @@ public class Ipmi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolIpmiSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiSetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolIpmiSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiSetConfigResponse(contentType, httpRes.statusCode()) {{
             protocolIpmiSetConfig200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -384,11 +368,9 @@ public class Ipmi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolIpmiSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiSetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolIpmiSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolIpmiSetTraceResponse(contentType, httpRes.statusCode()) {{
             protocolIpmiSetTrace200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

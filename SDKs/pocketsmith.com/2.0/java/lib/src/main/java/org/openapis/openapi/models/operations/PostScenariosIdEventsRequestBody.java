@@ -14,6 +14,7 @@ public class PostScenariosIdEventsRequestBody {
      */
     @JsonProperty("amount")
     public Double amount;
+
     public PostScenariosIdEventsRequestBody withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -24,6 +25,7 @@ public class PostScenariosIdEventsRequestBody {
      */
     @JsonProperty("category_id")
     public Long categoryId;
+
     public PostScenariosIdEventsRequestBody withCategoryId(Long categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -34,6 +36,7 @@ public class PostScenariosIdEventsRequestBody {
      */
     @JsonProperty("date")
     public String date;
+
     public PostScenariosIdEventsRequestBody withDate(String date) {
         this.date = date;
         return this;
@@ -45,6 +48,7 @@ public class PostScenariosIdEventsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public PostScenariosIdEventsRequestBody withNote(String note) {
         this.note = note;
         return this;
@@ -56,6 +60,7 @@ public class PostScenariosIdEventsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeat_interval")
     public Long repeatInterval;
+
     public PostScenariosIdEventsRequestBody withRepeatInterval(Long repeatInterval) {
         this.repeatInterval = repeatInterval;
         return this;
@@ -66,9 +71,16 @@ public class PostScenariosIdEventsRequestBody {
      */
     @JsonProperty("repeat_type")
     public PostScenariosIdEventsRequestBodyRepeatTypeEnum repeatType;
+
     public PostScenariosIdEventsRequestBody withRepeatType(PostScenariosIdEventsRequestBodyRepeatTypeEnum repeatType) {
         this.repeatType = repeatType;
         return this;
     }
     
+    public PostScenariosIdEventsRequestBody(@JsonProperty("amount") Double amount, @JsonProperty("category_id") Long categoryId, @JsonProperty("date") String date, @JsonProperty("repeat_type") PostScenariosIdEventsRequestBodyRepeatTypeEnum repeatType) {
+        this.amount = amount;
+        this.categoryId = categoryId;
+        this.date = date;
+        this.repeatType = repeatType;
+  }
 }

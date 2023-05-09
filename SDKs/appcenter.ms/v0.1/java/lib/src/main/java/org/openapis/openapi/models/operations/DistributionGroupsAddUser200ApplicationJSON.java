@@ -15,6 +15,7 @@ public class DistributionGroupsAddUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public DistributionGroupsAddUser200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class DistributionGroupsAddUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invite_pending")
     public Boolean invitePending;
+
     public DistributionGroupsAddUser200ApplicationJSON withInvitePending(Boolean invitePending) {
         this.invitePending = invitePending;
         return this;
@@ -37,6 +39,7 @@ public class DistributionGroupsAddUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DistributionGroupsAddUser200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -47,6 +50,7 @@ public class DistributionGroupsAddUser200ApplicationJSON {
      */
     @JsonProperty("status")
     public Long status;
+
     public DistributionGroupsAddUser200ApplicationJSON withStatus(Long status) {
         this.status = status;
         return this;
@@ -58,9 +62,13 @@ public class DistributionGroupsAddUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_email")
     public String userEmail;
+
     public DistributionGroupsAddUser200ApplicationJSON withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public DistributionGroupsAddUser200ApplicationJSON(@JsonProperty("status") Long status) {
+        this.status = status;
+  }
 }

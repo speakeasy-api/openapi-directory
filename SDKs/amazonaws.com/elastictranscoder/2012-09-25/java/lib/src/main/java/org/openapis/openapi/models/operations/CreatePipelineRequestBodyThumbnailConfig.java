@@ -15,6 +15,7 @@ public class CreatePipelineRequestBodyThumbnailConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bucket")
     public String bucket;
+
     public CreatePipelineRequestBodyThumbnailConfig withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,6 +24,7 @@ public class CreatePipelineRequestBodyThumbnailConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permissions")
     public org.openapis.openapi.models.shared.Permission[] permissions;
+
     public CreatePipelineRequestBodyThumbnailConfig withPermissions(org.openapis.openapi.models.shared.Permission[] permissions) {
         this.permissions = permissions;
         return this;
@@ -31,9 +33,11 @@ public class CreatePipelineRequestBodyThumbnailConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageClass")
     public String storageClass;
+
     public CreatePipelineRequestBodyThumbnailConfig withStorageClass(String storageClass) {
         this.storageClass = storageClass;
         return this;
     }
     
+    public CreatePipelineRequestBodyThumbnailConfig(){}
 }

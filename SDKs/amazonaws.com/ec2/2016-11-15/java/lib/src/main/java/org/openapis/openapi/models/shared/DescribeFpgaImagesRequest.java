@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFpgaImagesRequest {
     
     public Boolean dryRun;
+
     public DescribeFpgaImagesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeFpgaImagesRequest {
     
     
     public DescribeFpgaImagesRequestFilters[] filters;
+
     public DescribeFpgaImagesRequest withFilters(DescribeFpgaImagesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeFpgaImagesRequest {
     
     
     public String[] fpgaImageIds;
+
     public DescribeFpgaImagesRequest withFpgaImageIds(String[] fpgaImageIds) {
         this.fpgaImageIds = fpgaImageIds;
         return this;
@@ -30,6 +33,7 @@ public class DescribeFpgaImagesRequest {
     
     
     public Long maxResults;
+
     public DescribeFpgaImagesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +41,7 @@ public class DescribeFpgaImagesRequest {
     
     
     public String nextToken;
+
     public DescribeFpgaImagesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +49,11 @@ public class DescribeFpgaImagesRequest {
     
     
     public String[] owners;
+
     public DescribeFpgaImagesRequest withOwners(String[] owners) {
         this.owners = owners;
         return this;
     }
     
+    public DescribeFpgaImagesRequest(){}
 }

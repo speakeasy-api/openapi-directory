@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteDashboardsInput {
     
     public String[] dashboardNames;
+
     public DeleteDashboardsInput withDashboardNames(String[] dashboardNames) {
         this.dashboardNames = dashboardNames;
         return this;
     }
     
+    public DeleteDashboardsInput(@JsonProperty("DashboardNames") String[] dashboardNames) {
+        this.dashboardNames = dashboardNames;
+  }
 }

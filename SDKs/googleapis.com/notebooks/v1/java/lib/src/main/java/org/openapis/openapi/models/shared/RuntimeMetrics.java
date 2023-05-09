@@ -18,9 +18,11 @@ public class RuntimeMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemMetrics")
     public java.util.Map<String, String> systemMetrics;
+
     public RuntimeMetrics withSystemMetrics(java.util.Map<String, String> systemMetrics) {
         this.systemMetrics = systemMetrics;
         return this;
     }
     
+    public RuntimeMetrics(){}
 }

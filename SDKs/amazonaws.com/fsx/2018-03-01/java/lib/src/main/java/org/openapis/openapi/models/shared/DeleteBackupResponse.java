@@ -15,6 +15,7 @@ public class DeleteBackupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupId")
     public String backupId;
+
     public DeleteBackupResponse withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
@@ -23,9 +24,11 @@ public class DeleteBackupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public BackupLifecycleEnum lifecycle;
+
     public DeleteBackupResponse withLifecycle(BackupLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
     }
     
+    public DeleteBackupResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIndividualsPartyIdLicensesProductIdRequest {
@@ -12,6 +13,7 @@ public class GetIndividualsPartyIdLicensesProductIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public GetIndividualsPartyIdLicensesProductIdRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class GetIndividualsPartyIdLicensesProductIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
     public String partyId;
+
     public GetIndividualsPartyIdLicensesProductIdRequest withPartyId(String partyId) {
         this.partyId = partyId;
         return this;
@@ -32,9 +35,15 @@ public class GetIndividualsPartyIdLicensesProductIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public String productId;
+
     public GetIndividualsPartyIdLicensesProductIdRequest withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public GetIndividualsPartyIdLicensesProductIdRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("partyId") String partyId, @JsonProperty("productId") String productId) {
+        this.apiKey = apiKey;
+        this.partyId = partyId;
+        this.productId = productId;
+  }
 }

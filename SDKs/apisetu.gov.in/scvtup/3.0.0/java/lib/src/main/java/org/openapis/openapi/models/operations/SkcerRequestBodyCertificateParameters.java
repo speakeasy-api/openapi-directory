@@ -12,6 +12,7 @@ public class SkcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public SkcerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class SkcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public SkcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class SkcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RollNumber")
     public String rollNumber;
+
     public SkcerRequestBodyCertificateParameters withRollNumber(String rollNumber) {
         this.rollNumber = rollNumber;
         return this;
@@ -42,9 +45,16 @@ public class SkcerRequestBodyCertificateParameters {
      */
     @JsonProperty("Session")
     public String session;
+
     public SkcerRequestBodyCertificateParameters withSession(String session) {
         this.session = session;
         return this;
     }
     
+    public SkcerRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("RollNumber") String rollNumber, @JsonProperty("Session") String session) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.rollNumber = rollNumber;
+        this.session = session;
+  }
 }

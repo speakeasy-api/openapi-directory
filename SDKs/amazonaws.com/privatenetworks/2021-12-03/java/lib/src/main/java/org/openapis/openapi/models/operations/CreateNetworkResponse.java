@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateNetworkResponse {
     
     public String contentType;
+
     public CreateNetworkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateNetworkResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateNetworkResponse createNetworkResponse;
+
     public CreateNetworkResponse withCreateNetworkResponse(org.openapis.openapi.models.shared.CreateNetworkResponse createNetworkResponse) {
         this.createNetworkResponse = createNetworkResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateNetworkResponse {
      */
     
     public Object internalServerException;
+
     public CreateNetworkResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateNetworkResponse {
      */
     
     public Object limitExceededException;
+
     public CreateNetworkResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class CreateNetworkResponse {
     
     
     public Integer statusCode;
+
     public CreateNetworkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateNetworkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateNetworkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateNetworkResponse {
      */
     
     public Object validationException;
+
     public CreateNetworkResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateNetworkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

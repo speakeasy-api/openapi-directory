@@ -18,6 +18,7 @@ public class GrpcRouteFaultInjectionPolicyDelay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedDelay")
     public String fixedDelay;
+
     public GrpcRouteFaultInjectionPolicyDelay withFixedDelay(String fixedDelay) {
         this.fixedDelay = fixedDelay;
         return this;
@@ -29,9 +30,11 @@ public class GrpcRouteFaultInjectionPolicyDelay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Integer percentage;
+
     public GrpcRouteFaultInjectionPolicyDelay withPercentage(Integer percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public GrpcRouteFaultInjectionPolicyDelay(){}
 }

@@ -15,6 +15,7 @@ public class SearchResourcesCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simpleCriterion")
     public SearchResourcesSimpleCriterion simpleCriterion;
+
     public SearchResourcesCriteria withSimpleCriterion(SearchResourcesSimpleCriterion simpleCriterion) {
         this.simpleCriterion = simpleCriterion;
         return this;
@@ -23,9 +24,11 @@ public class SearchResourcesCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagCriterion")
     public SearchResourcesTagCriterion tagCriterion;
+
     public SearchResourcesCriteria withTagCriterion(SearchResourcesTagCriterion tagCriterion) {
         this.tagCriterion = tagCriterion;
         return this;
     }
     
+    public SearchResourcesCriteria(){}
 }

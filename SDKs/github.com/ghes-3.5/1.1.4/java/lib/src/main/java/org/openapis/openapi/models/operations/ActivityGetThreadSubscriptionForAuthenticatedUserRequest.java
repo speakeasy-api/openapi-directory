@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityGetThreadSubscriptionForAuthenticatedUserRequest {
@@ -12,9 +13,13 @@ public class ActivityGetThreadSubscriptionForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thread_id")
     public Long threadId;
+
     public ActivityGetThreadSubscriptionForAuthenticatedUserRequest withThreadId(Long threadId) {
         this.threadId = threadId;
         return this;
     }
     
+    public ActivityGetThreadSubscriptionForAuthenticatedUserRequest(@JsonProperty("thread_id") Long threadId) {
+        this.threadId = threadId;
+  }
 }

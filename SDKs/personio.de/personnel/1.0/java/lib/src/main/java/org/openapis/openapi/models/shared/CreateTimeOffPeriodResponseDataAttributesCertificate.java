@@ -12,9 +12,11 @@ public class CreateTimeOffPeriodResponseDataAttributesCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CreateTimeOffPeriodResponseDataAttributesCertificate withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public CreateTimeOffPeriodResponseDataAttributesCertificate(){}
 }

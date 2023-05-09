@@ -15,9 +15,11 @@ public class CreateLocationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public LocationModel location;
+
     public CreateLocationOutput withLocation(LocationModel location) {
         this.location = location;
         return this;
     }
     
+    public CreateLocationOutput(){}
 }

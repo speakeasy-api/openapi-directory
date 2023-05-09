@@ -20,6 +20,7 @@ public class GetCustomDataIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public GetCustomDataIdentifierResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class GetCustomDataIdentifierResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public GetCustomDataIdentifierResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class GetCustomDataIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public GetCustomDataIdentifierResponse withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -46,6 +49,7 @@ public class GetCustomDataIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetCustomDataIdentifierResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class GetCustomDataIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetCustomDataIdentifierResponse withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class GetCustomDataIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreWords")
     public String[] ignoreWords;
+
     public GetCustomDataIdentifierResponse withIgnoreWords(String[] ignoreWords) {
         this.ignoreWords = ignoreWords;
         return this;
@@ -70,6 +76,7 @@ public class GetCustomDataIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public GetCustomDataIdentifierResponse withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
@@ -78,6 +85,7 @@ public class GetCustomDataIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumMatchDistance")
     public Long maximumMatchDistance;
+
     public GetCustomDataIdentifierResponse withMaximumMatchDistance(Long maximumMatchDistance) {
         this.maximumMatchDistance = maximumMatchDistance;
         return this;
@@ -86,6 +94,7 @@ public class GetCustomDataIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetCustomDataIdentifierResponse withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +103,7 @@ public class GetCustomDataIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regex")
     public String regex;
+
     public GetCustomDataIdentifierResponse withRegex(String regex) {
         this.regex = regex;
         return this;
@@ -102,6 +112,7 @@ public class GetCustomDataIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityLevels")
     public SeverityLevel[] severityLevels;
+
     public GetCustomDataIdentifierResponse withSeverityLevels(SeverityLevel[] severityLevels) {
         this.severityLevels = severityLevels;
         return this;
@@ -110,9 +121,11 @@ public class GetCustomDataIdentifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetCustomDataIdentifierResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetCustomDataIdentifierResponse(){}
 }

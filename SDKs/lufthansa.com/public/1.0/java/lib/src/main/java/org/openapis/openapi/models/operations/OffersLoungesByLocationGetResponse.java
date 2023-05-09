@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OffersLoungesByLocationGetResponse {
     
     public String contentType;
+
     public OffersLoungesByLocationGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OffersLoungesByLocationGetResponse {
     
     
     public java.util.Map<String, Object> offersLoungesByLocationGet200ApplicationJSONObject;
+
     public OffersLoungesByLocationGetResponse withOffersLoungesByLocationGet200ApplicationJSONObject(java.util.Map<String, Object> offersLoungesByLocationGet200ApplicationJSONObject) {
         this.offersLoungesByLocationGet200ApplicationJSONObject = offersLoungesByLocationGet200ApplicationJSONObject;
         return this;
@@ -23,6 +26,7 @@ public class OffersLoungesByLocationGetResponse {
     
     
     public Integer statusCode;
+
     public OffersLoungesByLocationGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class OffersLoungesByLocationGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OffersLoungesByLocationGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OffersLoungesByLocationGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

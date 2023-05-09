@@ -15,6 +15,7 @@ public class Subsetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public SubsettingPolicyEnum policy;
+
     public Subsetting withPolicy(SubsettingPolicyEnum policy) {
         this.policy = policy;
         return this;
@@ -26,9 +27,11 @@ public class Subsetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetSize")
     public Integer subsetSize;
+
     public Subsetting withSubsetSize(Integer subsetSize) {
         this.subsetSize = subsetSize;
         return this;
     }
     
+    public Subsetting(){}
 }

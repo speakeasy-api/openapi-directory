@@ -17,6 +17,7 @@ public class PeriodicPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day_of_execution")
     public String dayOfExecution;
+
     public PeriodicPayment withDayOfExecution(String dayOfExecution) {
         this.dayOfExecution = dayOfExecution;
         return this;
@@ -26,6 +27,7 @@ public class PeriodicPayment {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("end_date")
     public LocalDate endDate;
+
     public PeriodicPayment withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -33,10 +35,14 @@ public class PeriodicPayment {
     
     /**
      * Behavior when periodic payment dates fall on holiday.
+     * 
+     * * `following` - following
+     * * `preceding` - preceding
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("execution_rule")
     public PeriodicPaymentExecutionRuleEnum executionRule;
+
     public PeriodicPayment withExecutionRule(PeriodicPaymentExecutionRuleEnum executionRule) {
         this.executionRule = executionRule;
         return this;
@@ -45,6 +51,7 @@ public class PeriodicPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public PeriodicPaymentFrequencyEnum frequency;
+
     public PeriodicPayment withFrequency(PeriodicPaymentFrequencyEnum frequency) {
         this.frequency = frequency;
         return this;
@@ -53,9 +60,13 @@ public class PeriodicPayment {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("start_date")
     public LocalDate startDate;
+
     public PeriodicPayment withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public PeriodicPayment(@JsonProperty("start_date") LocalDate startDate) {
+        this.startDate = startDate;
+  }
 }

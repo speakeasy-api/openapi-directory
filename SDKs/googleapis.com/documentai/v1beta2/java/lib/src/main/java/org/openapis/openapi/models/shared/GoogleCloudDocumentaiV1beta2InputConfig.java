@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2InputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String contents;
+
     public GoogleCloudDocumentaiV1beta2InputConfig withContents(String contents) {
         this.contents = contents;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta2InputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GoogleCloudDocumentaiV1beta2GcsSource gcsSource;
+
     public GoogleCloudDocumentaiV1beta2InputConfig withGcsSource(GoogleCloudDocumentaiV1beta2GcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1beta2InputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public GoogleCloudDocumentaiV1beta2InputConfig withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2InputConfig(){}
 }

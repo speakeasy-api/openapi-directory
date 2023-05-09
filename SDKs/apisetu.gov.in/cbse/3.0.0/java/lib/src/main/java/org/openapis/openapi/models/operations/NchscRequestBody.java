@@ -15,6 +15,7 @@ public class NchscRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public NchscRequestBodyCertificateParameters certificateParameters;
+
     public NchscRequestBody withCertificateParameters(NchscRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class NchscRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public NchscRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class NchscRequestBody {
      */
     @JsonProperty("format")
     public NchscRequestBodyFormatEnum format;
+
     public NchscRequestBody withFormat(NchscRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class NchscRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public NchscRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public NchscRequestBody(@JsonProperty("format") NchscRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

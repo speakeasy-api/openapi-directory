@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPlaybackKeyPairResponse {
@@ -12,6 +13,7 @@ public class GetPlaybackKeyPairResponse {
      */
     
     public Object accessDeniedException;
+
     public GetPlaybackKeyPairResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetPlaybackKeyPairResponse {
     
     
     public String contentType;
+
     public GetPlaybackKeyPairResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPlaybackKeyPairResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPlaybackKeyPairResponse getPlaybackKeyPairResponse;
+
     public GetPlaybackKeyPairResponse withGetPlaybackKeyPairResponse(org.openapis.openapi.models.shared.GetPlaybackKeyPairResponse getPlaybackKeyPairResponse) {
         this.getPlaybackKeyPairResponse = getPlaybackKeyPairResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetPlaybackKeyPairResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetPlaybackKeyPairResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetPlaybackKeyPairResponse {
     
     
     public Integer statusCode;
+
     public GetPlaybackKeyPairResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetPlaybackKeyPairResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPlaybackKeyPairResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetPlaybackKeyPairResponse {
      */
     
     public Object validationException;
+
     public GetPlaybackKeyPairResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetPlaybackKeyPairResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

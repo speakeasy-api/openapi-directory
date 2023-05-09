@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UntagResourceResponse {
@@ -12,6 +13,7 @@ public class UntagResourceResponse {
      */
     
     public Object badRequest;
+
     public UntagResourceResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class UntagResourceResponse {
     
     
     public String contentType;
+
     public UntagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UntagResourceResponse {
      */
     
     public Object internalServerError;
+
     public UntagResourceResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class UntagResourceResponse {
      */
     
     public Object notServiceResourceError;
+
     public UntagResourceResponse withNotServiceResourceError(Object notServiceResourceError) {
         this.notServiceResourceError = notServiceResourceError;
         return this;
@@ -49,6 +54,7 @@ public class UntagResourceResponse {
      */
     
     public Object resourceDoesNotSupportTagging;
+
     public UntagResourceResponse withResourceDoesNotSupportTagging(Object resourceDoesNotSupportTagging) {
         this.resourceDoesNotSupportTagging = resourceDoesNotSupportTagging;
         return this;
@@ -59,6 +65,7 @@ public class UntagResourceResponse {
      */
     
     public Object resourceNotFound;
+
     public UntagResourceResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -66,6 +73,7 @@ public class UntagResourceResponse {
     
     
     public Integer statusCode;
+
     public UntagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UntagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UntagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UntagResourceResponse {
      */
     
     public java.util.Map<String, Object> untagResourceResponse;
+
     public UntagResourceResponse withUntagResourceResponse(java.util.Map<String, Object> untagResourceResponse) {
         this.untagResourceResponse = untagResourceResponse;
         return this;
     }
     
+    public UntagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListJobsResponse {
@@ -12,6 +13,7 @@ public class ListJobsResponse {
      */
     
     public Object badRequestException;
+
     public ListJobsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListJobsResponse {
     
     
     public String contentType;
+
     public ListJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListJobsResponse {
      */
     
     public Object internalFailureException;
+
     public ListJobsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ListJobsResponse {
      */
     
     public Object limitExceededException;
+
     public ListJobsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ListJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListJobsResult listJobsResult;
+
     public ListJobsResponse withListJobsResult(org.openapis.openapi.models.shared.ListJobsResult listJobsResult) {
         this.listJobsResult = listJobsResult;
         return this;
@@ -56,6 +62,7 @@ public class ListJobsResponse {
     
     
     public Integer statusCode;
+
     public ListJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListJobsResponse {
      */
     
     public Object unauthorizedException;
+
     public ListJobsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

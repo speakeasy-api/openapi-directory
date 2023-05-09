@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActiveContextTimeToLive {
     @JsonProperty("timeToLiveInSeconds")
     public Long timeToLiveInSeconds;
+
     public ActiveContextTimeToLive withTimeToLiveInSeconds(Long timeToLiveInSeconds) {
         this.timeToLiveInSeconds = timeToLiveInSeconds;
         return this;
@@ -19,9 +20,14 @@ public class ActiveContextTimeToLive {
     
     @JsonProperty("turnsToLive")
     public Long turnsToLive;
+
     public ActiveContextTimeToLive withTurnsToLive(Long turnsToLive) {
         this.turnsToLive = turnsToLive;
         return this;
     }
     
+    public ActiveContextTimeToLive(@JsonProperty("timeToLiveInSeconds") Long timeToLiveInSeconds, @JsonProperty("turnsToLive") Long turnsToLive) {
+        this.timeToLiveInSeconds = timeToLiveInSeconds;
+        this.turnsToLive = turnsToLive;
+  }
 }

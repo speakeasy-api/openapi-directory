@@ -22,6 +22,7 @@ public class SearchOrganizationInsightsRequestBodyStartTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FromTime")
     public OffsetDateTime fromTime;
+
     public SearchOrganizationInsightsRequestBodyStartTimeRange withFromTime(OffsetDateTime fromTime) {
         this.fromTime = fromTime;
         return this;
@@ -32,9 +33,11 @@ public class SearchOrganizationInsightsRequestBodyStartTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ToTime")
     public OffsetDateTime toTime;
+
     public SearchOrganizationInsightsRequestBodyStartTimeRange withToTime(OffsetDateTime toTime) {
         this.toTime = toTime;
         return this;
     }
     
+    public SearchOrganizationInsightsRequestBodyStartTimeRange(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContainsPiiEntitiesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ContainsPiiEntitiesRequest containsPiiEntitiesRequest;
+
     public ContainsPiiEntitiesRequest withContainsPiiEntitiesRequest(org.openapis.openapi.models.shared.ContainsPiiEntitiesRequest containsPiiEntitiesRequest) {
         this.containsPiiEntitiesRequest = containsPiiEntitiesRequest;
         return this;
@@ -16,6 +18,7 @@ public class ContainsPiiEntitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ContainsPiiEntitiesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class ContainsPiiEntitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ContainsPiiEntitiesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class ContainsPiiEntitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ContainsPiiEntitiesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class ContainsPiiEntitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ContainsPiiEntitiesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class ContainsPiiEntitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ContainsPiiEntitiesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class ContainsPiiEntitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ContainsPiiEntitiesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class ContainsPiiEntitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ContainsPiiEntitiesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class ContainsPiiEntitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ContainsPiiEntitiesXAmzTargetEnum xAmzTarget;
+
     public ContainsPiiEntitiesRequest withXAmzTarget(ContainsPiiEntitiesXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ContainsPiiEntitiesRequest(@JsonProperty("ContainsPiiEntitiesRequest") org.openapis.openapi.models.shared.ContainsPiiEntitiesRequest containsPiiEntitiesRequest, @JsonProperty("X-Amz-Target") ContainsPiiEntitiesXAmzTargetEnum xAmzTarget) {
+        this.containsPiiEntitiesRequest = containsPiiEntitiesRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

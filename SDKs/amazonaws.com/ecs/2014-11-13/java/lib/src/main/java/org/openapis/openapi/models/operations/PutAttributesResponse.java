@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAttributesResponse {
@@ -12,6 +13,7 @@ public class PutAttributesResponse {
      */
     
     public Object attributeLimitExceededException;
+
     public PutAttributesResponse withAttributeLimitExceededException(Object attributeLimitExceededException) {
         this.attributeLimitExceededException = attributeLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class PutAttributesResponse {
      */
     
     public Object clusterNotFoundException;
+
     public PutAttributesResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class PutAttributesResponse {
     
     
     public String contentType;
+
     public PutAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutAttributesResponse {
      */
     
     public Object invalidParameterException;
+
     public PutAttributesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class PutAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.PutAttributesResponse putAttributesResponse;
+
     public PutAttributesResponse withPutAttributesResponse(org.openapis.openapi.models.shared.PutAttributesResponse putAttributesResponse) {
         this.putAttributesResponse = putAttributesResponse;
         return this;
@@ -56,6 +62,7 @@ public class PutAttributesResponse {
     
     
     public Integer statusCode;
+
     public PutAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class PutAttributesResponse {
      */
     
     public Object targetNotFoundException;
+
     public PutAttributesResponse withTargetNotFoundException(Object targetNotFoundException) {
         this.targetNotFoundException = targetNotFoundException;
         return this;
     }
     
+    public PutAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

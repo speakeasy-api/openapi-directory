@@ -59,11 +59,9 @@ public class CustomPrices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVCustomPricesSessionSchemaResponse res = new org.openapis.openapi.models.operations.GetVCustomPricesSessionSchemaResponse() {{
+        org.openapis.openapi.models.operations.GetVCustomPricesSessionSchemaResponse res = new org.openapis.openapi.models.operations.GetVCustomPricesSessionSchemaResponse(contentType, httpRes.statusCode()) {{
             requestBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class CustomPrices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostVCustomPricesSessionSchemaResponse res = new org.openapis.openapi.models.operations.PostVCustomPricesSessionSchemaResponse() {{
+        org.openapis.openapi.models.operations.PostVCustomPricesSessionSchemaResponse res = new org.openapis.openapi.models.operations.PostVCustomPricesSessionSchemaResponse(contentType, httpRes.statusCode()) {{
             requestBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

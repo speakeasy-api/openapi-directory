@@ -23,6 +23,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BluemixApp")
     public String bluemixApp;
+
     public ContainerInfo withBluemixApp(String bluemixApp) {
         this.bluemixApp = bluemixApp;
         return this;
@@ -34,6 +35,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BluemixServices")
     public String bluemixServices;
+
     public ContainerInfo withBluemixServices(String bluemixServices) {
         this.bluemixServices = bluemixServices;
         return this;
@@ -42,6 +44,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Config")
     public ContainerConfig config;
+
     public ContainerInfo withConfig(ContainerConfig config) {
         this.config = config;
         return this;
@@ -53,6 +56,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerState")
     public String containerState;
+
     public ContainerInfo withContainerState(String containerState) {
         this.containerState = containerState;
         return this;
@@ -66,6 +70,7 @@ public class ContainerInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public ContainerInfo withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -74,6 +79,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Group")
     public Group group;
+
     public ContainerInfo withGroup(Group group) {
         this.group = group;
         return this;
@@ -82,6 +88,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostConfig")
     public HostConfig hostConfig;
+
     public ContainerInfo withHostConfig(HostConfig hostConfig) {
         this.hostConfig = hostConfig;
         return this;
@@ -93,6 +100,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostId")
     public String hostId;
+
     public ContainerInfo withHostId(String hostId) {
         this.hostId = hostId;
         return this;
@@ -104,6 +112,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Human_Id")
     public String humanId;
+
     public ContainerInfo withHumanId(String humanId) {
         this.humanId = humanId;
         return this;
@@ -115,6 +124,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ContainerInfo withId(String id) {
         this.id = id;
         return this;
@@ -126,6 +136,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Image")
     public String image;
+
     public ContainerInfo withImage(String image) {
         this.image = image;
         return this;
@@ -137,6 +148,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mounts")
     public String[] mounts;
+
     public ContainerInfo withMounts(String[] mounts) {
         this.mounts = mounts;
         return this;
@@ -148,6 +160,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ContainerInfo withName(String name) {
         this.name = name;
         return this;
@@ -156,6 +169,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkSettings")
     public NetworkSetting networkSettings;
+
     public ContainerInfo withNetworkSettings(NetworkSetting networkSettings) {
         this.networkSettings = networkSettings;
         return this;
@@ -167,6 +181,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public ContainerInfo withPath(String path) {
         this.path = path;
         return this;
@@ -178,6 +193,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolveConfPath")
     public String resolveConfPath;
+
     public ContainerInfo withResolveConfPath(String resolveConfPath) {
         this.resolveConfPath = resolveConfPath;
         return this;
@@ -186,6 +202,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ContainerState state;
+
     public ContainerInfo withState(ContainerState state) {
         this.state = state;
         return this;
@@ -194,6 +211,7 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Volumes")
     public Volume volumes;
+
     public ContainerInfo withVolumes(Volume volumes) {
         this.volumes = volumes;
         return this;
@@ -205,9 +223,11 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumesRW")
     public String[] volumesRW;
+
     public ContainerInfo withVolumesRW(String[] volumesRW) {
         this.volumesRW = volumesRW;
         return this;
     }
     
+    public ContainerInfo(){}
 }

@@ -18,6 +18,7 @@ public class GetalistofReviews200ApplicationJSONRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public Double from;
+
     public GetalistofReviews200ApplicationJSONRange withFrom(Double from) {
         this.from = from;
         return this;
@@ -29,6 +30,7 @@ public class GetalistofReviews200ApplicationJSONRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public Double to;
+
     public GetalistofReviews200ApplicationJSONRange withTo(Double to) {
         this.to = to;
         return this;
@@ -40,9 +42,11 @@ public class GetalistofReviews200ApplicationJSONRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetalistofReviews200ApplicationJSONRange withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetalistofReviews200ApplicationJSONRange(){}
 }

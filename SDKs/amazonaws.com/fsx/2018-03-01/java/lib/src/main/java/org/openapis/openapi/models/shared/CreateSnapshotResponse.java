@@ -15,9 +15,11 @@ public class CreateSnapshotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Snapshot")
     public Snapshot snapshot;
+
     public CreateSnapshotResponse withSnapshot(Snapshot snapshot) {
         this.snapshot = snapshot;
         return this;
     }
     
+    public CreateSnapshotResponse(){}
 }

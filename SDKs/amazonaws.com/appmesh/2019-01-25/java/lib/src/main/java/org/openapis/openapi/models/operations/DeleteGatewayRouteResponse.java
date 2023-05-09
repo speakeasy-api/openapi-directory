@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteGatewayRouteResponse {
@@ -12,6 +13,7 @@ public class DeleteGatewayRouteResponse {
      */
     
     public Object badRequestException;
+
     public DeleteGatewayRouteResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteGatewayRouteResponse {
     
     
     public String contentType;
+
     public DeleteGatewayRouteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteGatewayRouteResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteGatewayRouteOutput deleteGatewayRouteOutput;
+
     public DeleteGatewayRouteResponse withDeleteGatewayRouteOutput(org.openapis.openapi.models.shared.DeleteGatewayRouteOutput deleteGatewayRouteOutput) {
         this.deleteGatewayRouteOutput = deleteGatewayRouteOutput;
         return this;
@@ -39,6 +43,7 @@ public class DeleteGatewayRouteResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteGatewayRouteResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteGatewayRouteResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteGatewayRouteResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteGatewayRouteResponse {
      */
     
     public Object notFoundException;
+
     public DeleteGatewayRouteResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteGatewayRouteResponse {
     
     
     public Integer statusCode;
+
     public DeleteGatewayRouteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteGatewayRouteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteGatewayRouteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteGatewayRouteResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteGatewayRouteResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteGatewayRouteResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteGatewayRouteResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteGatewayRouteResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteGatewayRouteResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteGatewayRouteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

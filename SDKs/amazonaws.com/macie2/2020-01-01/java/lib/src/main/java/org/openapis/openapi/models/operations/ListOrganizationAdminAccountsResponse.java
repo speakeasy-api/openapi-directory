@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOrganizationAdminAccountsResponse {
@@ -12,6 +13,7 @@ public class ListOrganizationAdminAccountsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListOrganizationAdminAccountsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListOrganizationAdminAccountsResponse {
      */
     
     public Object conflictException;
+
     public ListOrganizationAdminAccountsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListOrganizationAdminAccountsResponse {
     
     
     public String contentType;
+
     public ListOrganizationAdminAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListOrganizationAdminAccountsResponse {
      */
     
     public Object internalServerException;
+
     public ListOrganizationAdminAccountsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListOrganizationAdminAccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListOrganizationAdminAccountsResponse listOrganizationAdminAccountsResponse;
+
     public ListOrganizationAdminAccountsResponse withListOrganizationAdminAccountsResponse(org.openapis.openapi.models.shared.ListOrganizationAdminAccountsResponse listOrganizationAdminAccountsResponse) {
         this.listOrganizationAdminAccountsResponse = listOrganizationAdminAccountsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListOrganizationAdminAccountsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListOrganizationAdminAccountsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListOrganizationAdminAccountsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListOrganizationAdminAccountsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListOrganizationAdminAccountsResponse {
     
     
     public Integer statusCode;
+
     public ListOrganizationAdminAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListOrganizationAdminAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOrganizationAdminAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListOrganizationAdminAccountsResponse {
      */
     
     public Object throttlingException;
+
     public ListOrganizationAdminAccountsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ListOrganizationAdminAccountsResponse {
      */
     
     public Object validationException;
+
     public ListOrganizationAdminAccountsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListOrganizationAdminAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

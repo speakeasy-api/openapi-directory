@@ -18,6 +18,7 @@ public class PutV2Scim20UsersId401ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public PutV2Scim20UsersId401ApplicationScimPlusJson withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -26,6 +27,7 @@ public class PutV2Scim20UsersId401ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemas")
     public String[] schemas;
+
     public PutV2Scim20UsersId401ApplicationScimPlusJson withSchemas(String[] schemas) {
         this.schemas = schemas;
         return this;
@@ -34,9 +36,11 @@ public class PutV2Scim20UsersId401ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Object status;
+
     public PutV2Scim20UsersId401ApplicationScimPlusJson withStatus(Object status) {
         this.status = status;
         return this;
     }
     
+    public PutV2Scim20UsersId401ApplicationScimPlusJson(){}
 }

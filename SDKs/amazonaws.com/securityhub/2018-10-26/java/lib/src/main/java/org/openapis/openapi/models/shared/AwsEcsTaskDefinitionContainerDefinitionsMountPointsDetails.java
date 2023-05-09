@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsMountPointsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerPath")
     public String containerPath;
+
     public AwsEcsTaskDefinitionContainerDefinitionsMountPointsDetails withContainerPath(String containerPath) {
         this.containerPath = containerPath;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsMountPointsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadOnly")
     public Boolean readOnly;
+
     public AwsEcsTaskDefinitionContainerDefinitionsMountPointsDetails withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -31,9 +33,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsMountPointsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceVolume")
     public String sourceVolume;
+
     public AwsEcsTaskDefinitionContainerDefinitionsMountPointsDetails withSourceVolume(String sourceVolume) {
         this.sourceVolume = sourceVolume;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsMountPointsDetails(){}
 }

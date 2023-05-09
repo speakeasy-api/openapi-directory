@@ -15,6 +15,7 @@ public class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availToSellQty")
     public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesAvailToSellQty availToSellQty;
+
     public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodes withAvailToSellQty(GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesAvailToSellQty availToSellQty) {
         this.availToSellQty = availToSellQty;
         return this;
@@ -26,6 +27,7 @@ public class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputQty")
     public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesInputQty inputQty;
+
     public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodes withInputQty(GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesInputQty inputQty) {
         this.inputQty = inputQty;
         return this;
@@ -37,6 +39,7 @@ public class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedQty")
     public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQty reservedQty;
+
     public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodes withReservedQty(GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQty reservedQty) {
         this.reservedQty = reservedQty;
         return this;
@@ -48,9 +51,11 @@ public class GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipNode")
     public String shipNode;
+
     public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodes withShipNode(String shipNode) {
         this.shipNode = shipNode;
         return this;
     }
     
+    public GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodes(){}
 }

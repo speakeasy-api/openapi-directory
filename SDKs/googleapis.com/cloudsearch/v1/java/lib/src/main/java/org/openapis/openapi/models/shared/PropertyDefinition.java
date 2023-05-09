@@ -18,6 +18,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanPropertyOptions")
     public BooleanPropertyOptions booleanPropertyOptions;
+
     public PropertyDefinition withBooleanPropertyOptions(BooleanPropertyOptions booleanPropertyOptions) {
         this.booleanPropertyOptions = booleanPropertyOptions;
         return this;
@@ -29,6 +30,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datePropertyOptions")
     public DatePropertyOptions datePropertyOptions;
+
     public PropertyDefinition withDatePropertyOptions(DatePropertyOptions datePropertyOptions) {
         this.datePropertyOptions = datePropertyOptions;
         return this;
@@ -40,6 +42,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayOptions")
     public PropertyDisplayOptions displayOptions;
+
     public PropertyDefinition withDisplayOptions(PropertyDisplayOptions displayOptions) {
         this.displayOptions = displayOptions;
         return this;
@@ -51,6 +54,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doublePropertyOptions")
     public DoublePropertyOptions doublePropertyOptions;
+
     public PropertyDefinition withDoublePropertyOptions(DoublePropertyOptions doublePropertyOptions) {
         this.doublePropertyOptions = doublePropertyOptions;
         return this;
@@ -62,6 +66,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enumPropertyOptions")
     public EnumPropertyOptions enumPropertyOptions;
+
     public PropertyDefinition withEnumPropertyOptions(EnumPropertyOptions enumPropertyOptions) {
         this.enumPropertyOptions = enumPropertyOptions;
         return this;
@@ -73,6 +78,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("htmlPropertyOptions")
     public HtmlPropertyOptions htmlPropertyOptions;
+
     public PropertyDefinition withHtmlPropertyOptions(HtmlPropertyOptions htmlPropertyOptions) {
         this.htmlPropertyOptions = htmlPropertyOptions;
         return this;
@@ -84,6 +90,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerPropertyOptions")
     public IntegerPropertyOptions integerPropertyOptions;
+
     public PropertyDefinition withIntegerPropertyOptions(IntegerPropertyOptions integerPropertyOptions) {
         this.integerPropertyOptions = integerPropertyOptions;
         return this;
@@ -95,6 +102,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFacetable")
     public Boolean isFacetable;
+
     public PropertyDefinition withIsFacetable(Boolean isFacetable) {
         this.isFacetable = isFacetable;
         return this;
@@ -106,6 +114,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRepeatable")
     public Boolean isRepeatable;
+
     public PropertyDefinition withIsRepeatable(Boolean isRepeatable) {
         this.isRepeatable = isRepeatable;
         return this;
@@ -117,6 +126,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isReturnable")
     public Boolean isReturnable;
+
     public PropertyDefinition withIsReturnable(Boolean isReturnable) {
         this.isReturnable = isReturnable;
         return this;
@@ -128,6 +138,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSortable")
     public Boolean isSortable;
+
     public PropertyDefinition withIsSortable(Boolean isSortable) {
         this.isSortable = isSortable;
         return this;
@@ -139,6 +150,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSuggestable")
     public Boolean isSuggestable;
+
     public PropertyDefinition withIsSuggestable(Boolean isSuggestable) {
         this.isSuggestable = isSuggestable;
         return this;
@@ -150,6 +162,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isWildcardSearchable")
     public Boolean isWildcardSearchable;
+
     public PropertyDefinition withIsWildcardSearchable(Boolean isWildcardSearchable) {
         this.isWildcardSearchable = isWildcardSearchable;
         return this;
@@ -161,6 +174,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PropertyDefinition withName(String name) {
         this.name = name;
         return this;
@@ -172,6 +186,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectPropertyOptions")
     public ObjectPropertyOptions objectPropertyOptions;
+
     public PropertyDefinition withObjectPropertyOptions(ObjectPropertyOptions objectPropertyOptions) {
         this.objectPropertyOptions = objectPropertyOptions;
         return this;
@@ -183,6 +198,7 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textPropertyOptions")
     public TextPropertyOptions textPropertyOptions;
+
     public PropertyDefinition withTextPropertyOptions(TextPropertyOptions textPropertyOptions) {
         this.textPropertyOptions = textPropertyOptions;
         return this;
@@ -194,9 +210,11 @@ public class PropertyDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestampPropertyOptions")
     public TimestampPropertyOptions timestampPropertyOptions;
+
     public PropertyDefinition withTimestampPropertyOptions(TimestampPropertyOptions timestampPropertyOptions) {
         this.timestampPropertyOptions = timestampPropertyOptions;
         return this;
     }
     
+    public PropertyDefinition(){}
 }

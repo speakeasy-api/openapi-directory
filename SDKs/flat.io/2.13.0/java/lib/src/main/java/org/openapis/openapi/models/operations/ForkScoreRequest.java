@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForkScoreRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ScoreFork scoreFork;
+
     public ForkScoreRequest withScoreFork(org.openapis.openapi.models.shared.ScoreFork scoreFork) {
         this.scoreFork = scoreFork;
         return this;
@@ -20,6 +22,7 @@ public class ForkScoreRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
     public String score;
+
     public ForkScoreRequest withScore(String score) {
         this.score = score;
         return this;
@@ -31,9 +34,14 @@ public class ForkScoreRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
     public String sharingKey;
+
     public ForkScoreRequest withSharingKey(String sharingKey) {
         this.sharingKey = sharingKey;
         return this;
     }
     
+    public ForkScoreRequest(@JsonProperty("ScoreFork") org.openapis.openapi.models.shared.ScoreFork scoreFork, @JsonProperty("score") String score) {
+        this.scoreFork = scoreFork;
+        this.score = score;
+  }
 }

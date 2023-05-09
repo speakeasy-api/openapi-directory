@@ -15,6 +15,7 @@ public class StartSimulationJobBatchRequestBodyBatchPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxConcurrency")
     public Long maxConcurrency;
+
     public StartSimulationJobBatchRequestBodyBatchPolicy withMaxConcurrency(Long maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -23,9 +24,11 @@ public class StartSimulationJobBatchRequestBodyBatchPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutInSeconds")
     public Long timeoutInSeconds;
+
     public StartSimulationJobBatchRequestBodyBatchPolicy withTimeoutInSeconds(Long timeoutInSeconds) {
         this.timeoutInSeconds = timeoutInSeconds;
         return this;
     }
     
+    public StartSimulationJobBatchRequestBodyBatchPolicy(){}
 }

@@ -15,6 +15,7 @@ public class ContainersGroupsPostRequiredAttributesRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public ContainersGroupsPostRequiredAttributesRoute withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -26,9 +27,11 @@ public class ContainersGroupsPostRequiredAttributesRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public ContainersGroupsPostRequiredAttributesRoute withHost(String host) {
         this.host = host;
         return this;
     }
     
+    public ContainersGroupsPostRequiredAttributesRoute(){}
 }

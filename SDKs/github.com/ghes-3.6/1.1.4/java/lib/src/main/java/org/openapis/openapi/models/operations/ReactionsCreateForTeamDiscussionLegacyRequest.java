@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsCreateForTeamDiscussionLegacyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReactionsCreateForTeamDiscussionLegacyRequestBody requestBody;
+
     public ReactionsCreateForTeamDiscussionLegacyRequest withRequestBody(ReactionsCreateForTeamDiscussionLegacyRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ReactionsCreateForTeamDiscussionLegacyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
     public Long discussionNumber;
+
     public ReactionsCreateForTeamDiscussionLegacyRequest withDiscussionNumber(Long discussionNumber) {
         this.discussionNumber = discussionNumber;
         return this;
@@ -29,9 +32,15 @@ public class ReactionsCreateForTeamDiscussionLegacyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public ReactionsCreateForTeamDiscussionLegacyRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public ReactionsCreateForTeamDiscussionLegacyRequest(@JsonProperty("RequestBody") ReactionsCreateForTeamDiscussionLegacyRequestBody requestBody, @JsonProperty("discussion_number") Long discussionNumber, @JsonProperty("team_id") Long teamId) {
+        this.requestBody = requestBody;
+        this.discussionNumber = discussionNumber;
+        this.teamId = teamId;
+  }
 }

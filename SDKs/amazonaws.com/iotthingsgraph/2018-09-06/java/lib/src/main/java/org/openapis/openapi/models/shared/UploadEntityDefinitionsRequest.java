@@ -12,6 +12,7 @@ public class UploadEntityDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecateExistingEntities")
     public Boolean deprecateExistingEntities;
+
     public UploadEntityDefinitionsRequest withDeprecateExistingEntities(Boolean deprecateExistingEntities) {
         this.deprecateExistingEntities = deprecateExistingEntities;
         return this;
@@ -20,6 +21,7 @@ public class UploadEntityDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public DefinitionDocument document;
+
     public UploadEntityDefinitionsRequest withDocument(DefinitionDocument document) {
         this.document = document;
         return this;
@@ -28,9 +30,11 @@ public class UploadEntityDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncWithPublicNamespace")
     public Boolean syncWithPublicNamespace;
+
     public UploadEntityDefinitionsRequest withSyncWithPublicNamespace(Boolean syncWithPublicNamespace) {
         this.syncWithPublicNamespace = syncWithPublicNamespace;
         return this;
     }
     
+    public UploadEntityDefinitionsRequest(){}
 }

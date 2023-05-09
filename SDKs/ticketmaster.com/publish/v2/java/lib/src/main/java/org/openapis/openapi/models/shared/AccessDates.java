@@ -23,6 +23,7 @@ public class AccessDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endApproximate")
     public Boolean endApproximate;
+
     public AccessDates withEndApproximate(Boolean endApproximate) {
         this.endApproximate = endApproximate;
         return this;
@@ -36,6 +37,7 @@ public class AccessDates {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDateTime")
     public OffsetDateTime endDateTime;
+
     public AccessDates withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -47,6 +49,7 @@ public class AccessDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startApproximate")
     public Boolean startApproximate;
+
     public AccessDates withStartApproximate(Boolean startApproximate) {
         this.startApproximate = startApproximate;
         return this;
@@ -60,9 +63,11 @@ public class AccessDates {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public AccessDates withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
     }
     
+    public AccessDates(){}
 }

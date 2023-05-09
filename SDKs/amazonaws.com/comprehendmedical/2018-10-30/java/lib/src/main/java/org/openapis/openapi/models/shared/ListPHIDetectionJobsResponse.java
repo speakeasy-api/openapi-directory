@@ -15,6 +15,7 @@ public class ListPHIDetectionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComprehendMedicalAsyncJobPropertiesList")
     public ComprehendMedicalAsyncJobProperties[] comprehendMedicalAsyncJobPropertiesList;
+
     public ListPHIDetectionJobsResponse withComprehendMedicalAsyncJobPropertiesList(ComprehendMedicalAsyncJobProperties[] comprehendMedicalAsyncJobPropertiesList) {
         this.comprehendMedicalAsyncJobPropertiesList = comprehendMedicalAsyncJobPropertiesList;
         return this;
@@ -23,9 +24,11 @@ public class ListPHIDetectionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPHIDetectionJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListPHIDetectionJobsResponse(){}
 }

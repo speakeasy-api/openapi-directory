@@ -55,11 +55,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestArchiveTestRunResponse res = new org.openapis.openapi.models.operations.TestArchiveTestRunResponse() {{
+        org.openapis.openapi.models.operations.TestArchiveTestRunResponse res = new org.openapis.openapi.models.operations.TestArchiveTestRunResponse(contentType, httpRes.statusCode()) {{
             testRun = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,12 +100,10 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestCreateDeviceSelectionResponse res = new org.openapis.openapi.models.operations.TestCreateDeviceSelectionResponse() {{
+        org.openapis.openapi.models.operations.TestCreateDeviceSelectionResponse res = new org.openapis.openapi.models.operations.TestCreateDeviceSelectionResponse(contentType, httpRes.statusCode()) {{
             deviceSelection = null;
             testCloudErrorDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -155,12 +151,10 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestCreateDeviceSetOfOwnerResponse res = new org.openapis.openapi.models.operations.TestCreateDeviceSetOfOwnerResponse() {{
+        org.openapis.openapi.models.operations.TestCreateDeviceSetOfOwnerResponse res = new org.openapis.openapi.models.operations.TestCreateDeviceSetOfOwnerResponse(contentType, httpRes.statusCode()) {{
             deviceSet = null;
             testCloudErrorDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -208,12 +202,10 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestCreateDeviceSetOfUserResponse res = new org.openapis.openapi.models.operations.TestCreateDeviceSetOfUserResponse() {{
+        org.openapis.openapi.models.operations.TestCreateDeviceSetOfUserResponse res = new org.openapis.openapi.models.operations.TestCreateDeviceSetOfUserResponse(contentType, httpRes.statusCode()) {{
             deviceSet = null;
             testCloudErrorDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -256,11 +248,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestCreateSubscriptionResponse res = new org.openapis.openapi.models.operations.TestCreateSubscriptionResponse() {{
+        org.openapis.openapi.models.operations.TestCreateSubscriptionResponse res = new org.openapis.openapi.models.operations.TestCreateSubscriptionResponse(contentType, httpRes.statusCode()) {{
             subscription = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -296,10 +286,8 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestCreateTestRunResponse res = new org.openapis.openapi.models.operations.TestCreateTestRunResponse() {{
+        org.openapis.openapi.models.operations.TestCreateTestRunResponse res = new org.openapis.openapi.models.operations.TestCreateTestRunResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -337,12 +325,10 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestCreateTestSeriesResponse res = new org.openapis.openapi.models.operations.TestCreateTestSeriesResponse() {{
+        org.openapis.openapi.models.operations.TestCreateTestSeriesResponse res = new org.openapis.openapi.models.operations.TestCreateTestSeriesResponse(contentType, httpRes.statusCode()) {{
             testSeries = null;
             testCloudErrorDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -385,10 +371,8 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestDeleteDeviceSetOfOwnerResponse res = new org.openapis.openapi.models.operations.TestDeleteDeviceSetOfOwnerResponse() {{
+        org.openapis.openapi.models.operations.TestDeleteDeviceSetOfOwnerResponse res = new org.openapis.openapi.models.operations.TestDeleteDeviceSetOfOwnerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -419,10 +403,8 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestDeleteDeviceSetOfUserResponse res = new org.openapis.openapi.models.operations.TestDeleteDeviceSetOfUserResponse() {{
+        org.openapis.openapi.models.operations.TestDeleteDeviceSetOfUserResponse res = new org.openapis.openapi.models.operations.TestDeleteDeviceSetOfUserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -453,10 +435,8 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestDeleteTestSeriesResponse res = new org.openapis.openapi.models.operations.TestDeleteTestSeriesResponse() {{
+        org.openapis.openapi.models.operations.TestDeleteTestSeriesResponse res = new org.openapis.openapi.models.operations.TestDeleteTestSeriesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -467,10 +447,11 @@ public class Test {
 
     /**
      * Lists account data
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGdprExportAccountResponse testGdprExportAccount() throws Exception {
+    public org.openapis.openapi.models.operations.TestGdprExportAccountResponse testGdprExportAccount(org.openapis.openapi.models.operations.TestGdprExportAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/account/test/export/accounts");
         
@@ -479,16 +460,15 @@ public class Test {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGdprExportAccountResponse res = new org.openapis.openapi.models.operations.TestGdprExportAccountResponse() {{
+        org.openapis.openapi.models.operations.TestGdprExportAccountResponse res = new org.openapis.openapi.models.operations.TestGdprExportAccountResponse(contentType, httpRes.statusCode()) {{
             testGdprExportAccount200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -504,10 +484,11 @@ public class Test {
 
     /**
      * Lists all the endpoints available for Test accounts data
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGdprExportAccountsResponse testGdprExportAccounts() throws Exception {
+    public org.openapis.openapi.models.operations.TestGdprExportAccountsResponse testGdprExportAccounts(org.openapis.openapi.models.operations.TestGdprExportAccountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/account/test/export");
         
@@ -516,16 +497,15 @@ public class Test {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGdprExportAccountsResponse res = new org.openapis.openapi.models.operations.TestGdprExportAccountsResponse() {{
+        org.openapis.openapi.models.operations.TestGdprExportAccountsResponse res = new org.openapis.openapi.models.operations.TestGdprExportAccountsResponse(contentType, httpRes.statusCode()) {{
             testGdprExportAccounts200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -561,11 +541,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGdprExportAppResponse res = new org.openapis.openapi.models.operations.TestGdprExportAppResponse() {{
+        org.openapis.openapi.models.operations.TestGdprExportAppResponse res = new org.openapis.openapi.models.operations.TestGdprExportAppResponse(contentType, httpRes.statusCode()) {{
             testGdprExportApp200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -601,11 +579,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGdprExportAppsResponse res = new org.openapis.openapi.models.operations.TestGdprExportAppsResponse() {{
+        org.openapis.openapi.models.operations.TestGdprExportAppsResponse res = new org.openapis.openapi.models.operations.TestGdprExportAppsResponse(contentType, httpRes.statusCode()) {{
             testGdprExportApps200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -621,10 +597,11 @@ public class Test {
 
     /**
      * Lists feature flag data
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGdprExportFeatureFlagResponse testGdprExportFeatureFlag() throws Exception {
+    public org.openapis.openapi.models.operations.TestGdprExportFeatureFlagResponse testGdprExportFeatureFlag(org.openapis.openapi.models.operations.TestGdprExportFeatureFlagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/account/test/export/featureFlags");
         
@@ -633,16 +610,15 @@ public class Test {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGdprExportFeatureFlagResponse res = new org.openapis.openapi.models.operations.TestGdprExportFeatureFlagResponse() {{
+        org.openapis.openapi.models.operations.TestGdprExportFeatureFlagResponse res = new org.openapis.openapi.models.operations.TestGdprExportFeatureFlagResponse(contentType, httpRes.statusCode()) {{
             testGdprExportFeatureFlag200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -678,11 +654,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGdprExportFileSetFileResponse res = new org.openapis.openapi.models.operations.TestGdprExportFileSetFileResponse() {{
+        org.openapis.openapi.models.operations.TestGdprExportFileSetFileResponse res = new org.openapis.openapi.models.operations.TestGdprExportFileSetFileResponse(contentType, httpRes.statusCode()) {{
             testGdprExportFileSetFile200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -718,11 +692,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGdprExportHashFileResponse res = new org.openapis.openapi.models.operations.TestGdprExportHashFileResponse() {{
+        org.openapis.openapi.models.operations.TestGdprExportHashFileResponse res = new org.openapis.openapi.models.operations.TestGdprExportHashFileResponse(contentType, httpRes.statusCode()) {{
             testGdprExportHashFile200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -758,11 +730,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGdprExportPipelineTestResponse res = new org.openapis.openapi.models.operations.TestGdprExportPipelineTestResponse() {{
+        org.openapis.openapi.models.operations.TestGdprExportPipelineTestResponse res = new org.openapis.openapi.models.operations.TestGdprExportPipelineTestResponse(contentType, httpRes.statusCode()) {{
             testGdprExportPipelineTest200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -798,11 +768,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGdprExportTestRunResponse res = new org.openapis.openapi.models.operations.TestGdprExportTestRunResponse() {{
+        org.openapis.openapi.models.operations.TestGdprExportTestRunResponse res = new org.openapis.openapi.models.operations.TestGdprExportTestRunResponse(contentType, httpRes.statusCode()) {{
             testGdprExportTestRun200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -838,11 +806,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGetAllTestRunsForSeriesResponse res = new org.openapis.openapi.models.operations.TestGetAllTestRunsForSeriesResponse() {{
+        org.openapis.openapi.models.operations.TestGetAllTestRunsForSeriesResponse res = new org.openapis.openapi.models.operations.TestGetAllTestRunsForSeriesResponse(contentType, httpRes.statusCode()) {{
             testRuns = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -884,11 +850,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGetAllTestSeriesResponse res = new org.openapis.openapi.models.operations.TestGetAllTestSeriesResponse() {{
+        org.openapis.openapi.models.operations.TestGetAllTestSeriesResponse res = new org.openapis.openapi.models.operations.TestGetAllTestSeriesResponse(contentType, httpRes.statusCode()) {{
             testSeries = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -930,11 +894,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGetDeviceConfigurationsResponse res = new org.openapis.openapi.models.operations.TestGetDeviceConfigurationsResponse() {{
+        org.openapis.openapi.models.operations.TestGetDeviceConfigurationsResponse res = new org.openapis.openapi.models.operations.TestGetDeviceConfigurationsResponse(contentType, httpRes.statusCode()) {{
             testGetDeviceConfigurations200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -970,11 +932,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGetDeviceSetOfOwnerResponse res = new org.openapis.openapi.models.operations.TestGetDeviceSetOfOwnerResponse() {{
+        org.openapis.openapi.models.operations.TestGetDeviceSetOfOwnerResponse res = new org.openapis.openapi.models.operations.TestGetDeviceSetOfOwnerResponse(contentType, httpRes.statusCode()) {{
             deviceSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1012,11 +972,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGetDeviceSetOfUserResponse res = new org.openapis.openapi.models.operations.TestGetDeviceSetOfUserResponse() {{
+        org.openapis.openapi.models.operations.TestGetDeviceSetOfUserResponse res = new org.openapis.openapi.models.operations.TestGetDeviceSetOfUserResponse(contentType, httpRes.statusCode()) {{
             deviceSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1054,11 +1012,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGetSubscriptionsResponse res = new org.openapis.openapi.models.operations.TestGetSubscriptionsResponse() {{
+        org.openapis.openapi.models.operations.TestGetSubscriptionsResponse res = new org.openapis.openapi.models.operations.TestGetSubscriptionsResponse(contentType, httpRes.statusCode()) {{
             subscription = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1094,11 +1050,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGetTestReportResponse res = new org.openapis.openapi.models.operations.TestGetTestReportResponse() {{
+        org.openapis.openapi.models.operations.TestGetTestReportResponse res = new org.openapis.openapi.models.operations.TestGetTestReportResponse(contentType, httpRes.statusCode()) {{
             testGetTestReport200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1134,11 +1088,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGetTestRunResponse res = new org.openapis.openapi.models.operations.TestGetTestRunResponse() {{
+        org.openapis.openapi.models.operations.TestGetTestRunResponse res = new org.openapis.openapi.models.operations.TestGetTestRunResponse(contentType, httpRes.statusCode()) {{
             testRun = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1174,11 +1126,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGetTestRunStateResponse res = new org.openapis.openapi.models.operations.TestGetTestRunStateResponse() {{
+        org.openapis.openapi.models.operations.TestGetTestRunStateResponse res = new org.openapis.openapi.models.operations.TestGetTestRunStateResponse(contentType, httpRes.statusCode()) {{
             testRunState = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1214,11 +1164,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestGetTestRunsResponse res = new org.openapis.openapi.models.operations.TestGetTestRunsResponse() {{
+        org.openapis.openapi.models.operations.TestGetTestRunsResponse res = new org.openapis.openapi.models.operations.TestGetTestRunsResponse(contentType, httpRes.statusCode()) {{
             testRuns = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1254,11 +1202,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestListDeviceSetsOfOwnerResponse res = new org.openapis.openapi.models.operations.TestListDeviceSetsOfOwnerResponse() {{
+        org.openapis.openapi.models.operations.TestListDeviceSetsOfOwnerResponse res = new org.openapis.openapi.models.operations.TestListDeviceSetsOfOwnerResponse(contentType, httpRes.statusCode()) {{
             deviceSets = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1294,11 +1240,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestListDeviceSetsOfUserResponse res = new org.openapis.openapi.models.operations.TestListDeviceSetsOfUserResponse() {{
+        org.openapis.openapi.models.operations.TestListDeviceSetsOfUserResponse res = new org.openapis.openapi.models.operations.TestListDeviceSetsOfUserResponse(contentType, httpRes.statusCode()) {{
             deviceSets = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1339,11 +1283,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestPatchTestSeriesResponse res = new org.openapis.openapi.models.operations.TestPatchTestSeriesResponse() {{
+        org.openapis.openapi.models.operations.TestPatchTestSeriesResponse res = new org.openapis.openapi.models.operations.TestPatchTestSeriesResponse(contentType, httpRes.statusCode()) {{
             testSeries = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1386,11 +1328,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestStartTestRunResponse res = new org.openapis.openapi.models.operations.TestStartTestRunResponse() {{
+        org.openapis.openapi.models.operations.TestStartTestRunResponse res = new org.openapis.openapi.models.operations.TestStartTestRunResponse(contentType, httpRes.statusCode()) {{
             testCloudTestRunStartResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1426,10 +1366,8 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestStartUploadingFileResponse res = new org.openapis.openapi.models.operations.TestStartUploadingFileResponse() {{
+        org.openapis.openapi.models.operations.TestStartUploadingFileResponse res = new org.openapis.openapi.models.operations.TestStartUploadingFileResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1464,11 +1402,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestStopTestRunResponse res = new org.openapis.openapi.models.operations.TestStopTestRunResponse() {{
+        org.openapis.openapi.models.operations.TestStopTestRunResponse res = new org.openapis.openapi.models.operations.TestStopTestRunResponse(contentType, httpRes.statusCode()) {{
             testRun = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1511,12 +1447,10 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestUpdateDeviceSetOfOwnerResponse res = new org.openapis.openapi.models.operations.TestUpdateDeviceSetOfOwnerResponse() {{
+        org.openapis.openapi.models.operations.TestUpdateDeviceSetOfOwnerResponse res = new org.openapis.openapi.models.operations.TestUpdateDeviceSetOfOwnerResponse(contentType, httpRes.statusCode()) {{
             deviceSet = null;
             testCloudErrorDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1566,12 +1500,10 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestUpdateDeviceSetOfUserResponse res = new org.openapis.openapi.models.operations.TestUpdateDeviceSetOfUserResponse() {{
+        org.openapis.openapi.models.operations.TestUpdateDeviceSetOfUserResponse res = new org.openapis.openapi.models.operations.TestUpdateDeviceSetOfUserResponse(contentType, httpRes.statusCode()) {{
             deviceSet = null;
             testCloudErrorDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1621,10 +1553,8 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestUploadHashResponse res = new org.openapis.openapi.models.operations.TestUploadHashResponse() {{
+        org.openapis.openapi.models.operations.TestUploadHashResponse res = new org.openapis.openapi.models.operations.TestUploadHashResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 412) {
@@ -1664,11 +1594,9 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TestUploadHashesBatchResponse res = new org.openapis.openapi.models.operations.TestUploadHashesBatchResponse() {{
+        org.openapis.openapi.models.operations.TestUploadHashesBatchResponse res = new org.openapis.openapi.models.operations.TestUploadHashesBatchResponse(contentType, httpRes.statusCode()) {{
             testCloudFileHashResponses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

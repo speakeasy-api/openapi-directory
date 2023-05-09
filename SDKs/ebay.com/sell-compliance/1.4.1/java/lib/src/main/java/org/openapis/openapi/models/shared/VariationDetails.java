@@ -18,6 +18,7 @@ public class VariationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public VariationDetails withSku(String sku) {
         this.sku = sku;
         return this;
@@ -29,9 +30,11 @@ public class VariationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variationAspects")
     public NameValueList[] variationAspects;
+
     public VariationDetails withVariationAspects(NameValueList[] variationAspects) {
         this.variationAspects = variationAspects;
         return this;
     }
     
+    public VariationDetails(){}
 }

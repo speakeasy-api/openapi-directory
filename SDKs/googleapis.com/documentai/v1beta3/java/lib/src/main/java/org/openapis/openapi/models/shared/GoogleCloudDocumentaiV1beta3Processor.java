@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3Processor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDocumentaiV1beta3Processor withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3Processor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultProcessorVersion")
     public String defaultProcessorVersion;
+
     public GoogleCloudDocumentaiV1beta3Processor withDefaultProcessorVersion(String defaultProcessorVersion) {
         this.defaultProcessorVersion = defaultProcessorVersion;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3Processor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDocumentaiV1beta3Processor withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1beta3Processor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public GoogleCloudDocumentaiV1beta3Processor withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1beta3Processor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDocumentaiV1beta3Processor withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDocumentaiV1beta3Processor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processEndpoint")
     public String processEndpoint;
+
     public GoogleCloudDocumentaiV1beta3Processor withProcessEndpoint(String processEndpoint) {
         this.processEndpoint = processEndpoint;
         return this;
@@ -84,20 +90,23 @@ public class GoogleCloudDocumentaiV1beta3Processor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDocumentaiV1beta3ProcessorStateEnum state;
+
     public GoogleCloudDocumentaiV1beta3Processor withState(GoogleCloudDocumentaiV1beta3ProcessorStateEnum state) {
         this.state = state;
         return this;
     }
     
     /**
-     * The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc. To get a list of processors types, see FetchProcessorTypes.
+     * The processor type, such as: `OCR_PROCESSOR`, `INVOICE_PROCESSOR`. To get a list of processor types, see FetchProcessorTypes.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudDocumentaiV1beta3Processor withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3Processor(){}
 }

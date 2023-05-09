@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountHoldersIdBalanceAccountsRequest {
@@ -12,6 +13,7 @@ public class GetAccountHoldersIdBalanceAccountsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetAccountHoldersIdBalanceAccountsRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetAccountHoldersIdBalanceAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetAccountHoldersIdBalanceAccountsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,9 +35,13 @@ public class GetAccountHoldersIdBalanceAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetAccountHoldersIdBalanceAccountsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetAccountHoldersIdBalanceAccountsRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

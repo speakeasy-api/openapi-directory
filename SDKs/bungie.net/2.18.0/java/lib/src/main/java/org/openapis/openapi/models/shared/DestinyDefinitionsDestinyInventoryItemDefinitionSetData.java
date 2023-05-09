@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSetData {
      */
     
     public DestinyDefinitionsDestinyItemSetBlockEntryDefinition[] itemList;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSetData withItemList(DestinyDefinitionsDestinyItemSetBlockEntryDefinition[] itemList) {
         this.itemList = itemList;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSetData {
      */
     
     public String questLineDescription;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSetData withQuestLineDescription(String questLineDescription) {
         this.questLineDescription = questLineDescription;
         return this;
@@ -35,6 +37,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSetData {
      */
     
     public String questLineName;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSetData withQuestLineName(String questLineName) {
         this.questLineName = questLineName;
         return this;
@@ -45,6 +48,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSetData {
      */
     
     public String questStepSummary;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSetData withQuestStepSummary(String questStepSummary) {
         this.questStepSummary = questStepSummary;
         return this;
@@ -55,6 +59,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSetData {
      */
     
     public Boolean requireOrderedSetItemAdd;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSetData withRequireOrderedSetItemAdd(Boolean requireOrderedSetItemAdd) {
         this.requireOrderedSetItemAdd = requireOrderedSetItemAdd;
         return this;
@@ -65,6 +70,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSetData {
      */
     
     public Boolean setIsFeatured;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSetData withSetIsFeatured(Boolean setIsFeatured) {
         this.setIsFeatured = setIsFeatured;
         return this;
@@ -75,9 +81,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionSetData {
      */
     
     public String setType;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionSetData withSetType(String setType) {
         this.setType = setType;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionSetData(){}
 }

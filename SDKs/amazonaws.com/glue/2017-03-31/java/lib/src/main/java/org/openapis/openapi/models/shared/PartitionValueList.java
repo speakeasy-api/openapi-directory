@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PartitionValueList {
     @JsonProperty("Values")
     public String[] values;
+
     public PartitionValueList withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public PartitionValueList(@JsonProperty("Values") String[] values) {
+        this.values = values;
+  }
 }

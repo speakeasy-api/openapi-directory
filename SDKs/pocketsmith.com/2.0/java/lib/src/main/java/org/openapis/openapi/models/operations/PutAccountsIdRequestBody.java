@@ -15,6 +15,7 @@ public class PutAccountsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_code")
     public String currencyCode;
+
     public PutAccountsIdRequestBody withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -26,6 +27,7 @@ public class PutAccountsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_net_worth")
     public Boolean isNetWorth;
+
     public PutAccountsIdRequestBody withIsNetWorth(Boolean isNetWorth) {
         this.isNetWorth = isNetWorth;
         return this;
@@ -37,6 +39,7 @@ public class PutAccountsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PutAccountsIdRequestBody withTitle(String title) {
         this.title = title;
         return this;
@@ -48,9 +51,11 @@ public class PutAccountsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PutAccountsIdRequestBodyTypeEnum type;
+
     public PutAccountsIdRequestBody withType(PutAccountsIdRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PutAccountsIdRequestBody(){}
 }

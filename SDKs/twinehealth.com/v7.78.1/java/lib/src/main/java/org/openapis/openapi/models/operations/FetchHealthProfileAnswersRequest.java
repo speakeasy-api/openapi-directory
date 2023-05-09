@@ -13,6 +13,7 @@ public class FetchHealthProfileAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[groups]")
     public String filterGroups;
+
     public FetchHealthProfileAnswersRequest withFilterGroups(String filterGroups) {
         this.filterGroups = filterGroups;
         return this;
@@ -24,6 +25,7 @@ public class FetchHealthProfileAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[organization]")
     public String filterOrganization;
+
     public FetchHealthProfileAnswersRequest withFilterOrganization(String filterOrganization) {
         this.filterOrganization = filterOrganization;
         return this;
@@ -35,6 +37,7 @@ public class FetchHealthProfileAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[patient]")
     public String filterPatient;
+
     public FetchHealthProfileAnswersRequest withFilterPatient(String filterPatient) {
         this.filterPatient = filterPatient;
         return this;
@@ -45,6 +48,7 @@ public class FetchHealthProfileAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
     public FetchHealthProfileAnswersIncludeEnum include;
+
     public FetchHealthProfileAnswersRequest withInclude(FetchHealthProfileAnswersIncludeEnum include) {
         this.include = include;
         return this;
@@ -55,6 +59,7 @@ public class FetchHealthProfileAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[cursor]")
     public String pageCursor;
+
     public FetchHealthProfileAnswersRequest withPageCursor(String pageCursor) {
         this.pageCursor = pageCursor;
         return this;
@@ -65,6 +70,7 @@ public class FetchHealthProfileAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[limit]")
     public Long pageLimit;
+
     public FetchHealthProfileAnswersRequest withPageLimit(Long pageLimit) {
         this.pageLimit = pageLimit;
         return this;
@@ -75,6 +81,7 @@ public class FetchHealthProfileAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
     public Long pageNumber;
+
     public FetchHealthProfileAnswersRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -85,9 +92,11 @@ public class FetchHealthProfileAnswersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public FetchHealthProfileAnswersRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public FetchHealthProfileAnswersRequest(){}
 }

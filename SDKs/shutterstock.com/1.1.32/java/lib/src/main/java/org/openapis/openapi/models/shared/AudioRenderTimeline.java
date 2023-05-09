@@ -18,9 +18,11 @@ public class AudioRenderTimeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spans")
     public AudioRenderTimelineSpan[] spans;
+
     public AudioRenderTimeline withSpans(AudioRenderTimelineSpan[] spans) {
         this.spans = spans;
         return this;
     }
     
+    public AudioRenderTimeline(){}
 }

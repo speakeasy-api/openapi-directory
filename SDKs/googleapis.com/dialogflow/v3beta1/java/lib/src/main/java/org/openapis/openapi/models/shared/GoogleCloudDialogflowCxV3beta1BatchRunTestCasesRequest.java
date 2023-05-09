@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1BatchRunTestCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public String environment;
+
     public GoogleCloudDialogflowCxV3beta1BatchRunTestCasesRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1BatchRunTestCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testCases")
     public String[] testCases;
+
     public GoogleCloudDialogflowCxV3beta1BatchRunTestCasesRequest withTestCases(String[] testCases) {
         this.testCases = testCases;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1BatchRunTestCasesRequest(){}
 }

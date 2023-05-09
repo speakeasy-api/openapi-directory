@@ -65,13 +65,11 @@ public class HipFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -133,13 +131,11 @@ public class HipFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -201,12 +197,10 @@ public class HipFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -261,12 +255,10 @@ public class HipFacing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

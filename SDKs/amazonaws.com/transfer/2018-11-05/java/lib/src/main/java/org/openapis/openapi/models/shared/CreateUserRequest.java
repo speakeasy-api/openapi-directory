@@ -12,6 +12,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeDirectory")
     public String homeDirectory;
+
     public CreateUserRequest withHomeDirectory(String homeDirectory) {
         this.homeDirectory = homeDirectory;
         return this;
@@ -20,6 +21,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeDirectoryMappings")
     public HomeDirectoryMapEntry[] homeDirectoryMappings;
+
     public CreateUserRequest withHomeDirectoryMappings(HomeDirectoryMapEntry[] homeDirectoryMappings) {
         this.homeDirectoryMappings = homeDirectoryMappings;
         return this;
@@ -28,6 +30,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeDirectoryType")
     public HomeDirectoryTypeEnum homeDirectoryType;
+
     public CreateUserRequest withHomeDirectoryType(HomeDirectoryTypeEnum homeDirectoryType) {
         this.homeDirectoryType = homeDirectoryType;
         return this;
@@ -36,6 +39,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public CreateUserRequest withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -44,6 +48,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PosixProfile")
     public PosixProfile posixProfile;
+
     public CreateUserRequest withPosixProfile(PosixProfile posixProfile) {
         this.posixProfile = posixProfile;
         return this;
@@ -51,6 +56,7 @@ public class CreateUserRequest {
     
     @JsonProperty("Role")
     public String role;
+
     public CreateUserRequest withRole(String role) {
         this.role = role;
         return this;
@@ -58,6 +64,7 @@ public class CreateUserRequest {
     
     @JsonProperty("ServerId")
     public String serverId;
+
     public CreateUserRequest withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -66,6 +73,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshPublicKeyBody")
     public String sshPublicKeyBody;
+
     public CreateUserRequest withSshPublicKeyBody(String sshPublicKeyBody) {
         this.sshPublicKeyBody = sshPublicKeyBody;
         return this;
@@ -74,6 +82,7 @@ public class CreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateUserRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -81,9 +90,15 @@ public class CreateUserRequest {
     
     @JsonProperty("UserName")
     public String userName;
+
     public CreateUserRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public CreateUserRequest(@JsonProperty("Role") String role, @JsonProperty("ServerId") String serverId, @JsonProperty("UserName") String userName) {
+        this.role = role;
+        this.serverId = serverId;
+        this.userName = userName;
+  }
 }

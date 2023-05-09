@@ -15,6 +15,7 @@ public class ListNotebookMetadataOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListNotebookMetadataOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListNotebookMetadataOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookMetadataList")
     public NotebookMetadata[] notebookMetadataList;
+
     public ListNotebookMetadataOutput withNotebookMetadataList(NotebookMetadata[] notebookMetadataList) {
         this.notebookMetadataList = notebookMetadataList;
         return this;
     }
     
+    public ListNotebookMetadataOutput(){}
 }

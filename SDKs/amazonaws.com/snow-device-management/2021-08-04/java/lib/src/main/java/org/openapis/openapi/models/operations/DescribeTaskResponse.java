@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTaskResponse {
@@ -12,6 +13,7 @@ public class DescribeTaskResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeTaskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTaskResponse {
     
     
     public String contentType;
+
     public DescribeTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTaskOutput describeTaskOutput;
+
     public DescribeTaskResponse withDescribeTaskOutput(org.openapis.openapi.models.shared.DescribeTaskOutput describeTaskOutput) {
         this.describeTaskOutput = describeTaskOutput;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTaskResponse {
      */
     
     public Object internalServerException;
+
     public DescribeTaskResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeTaskResponse {
     
     
     public Integer statusCode;
+
     public DescribeTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeTaskResponse {
      */
     
     public Object throttlingException;
+
     public DescribeTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeTaskResponse {
      */
     
     public Object validationException;
+
     public DescribeTaskResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

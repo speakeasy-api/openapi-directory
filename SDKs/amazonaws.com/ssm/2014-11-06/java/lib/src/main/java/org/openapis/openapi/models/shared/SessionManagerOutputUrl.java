@@ -15,6 +15,7 @@ public class SessionManagerOutputUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchOutputUrl")
     public String cloudWatchOutputUrl;
+
     public SessionManagerOutputUrl withCloudWatchOutputUrl(String cloudWatchOutputUrl) {
         this.cloudWatchOutputUrl = cloudWatchOutputUrl;
         return this;
@@ -23,9 +24,11 @@ public class SessionManagerOutputUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3OutputUrl")
     public String s3OutputUrl;
+
     public SessionManagerOutputUrl withS3OutputUrl(String s3OutputUrl) {
         this.s3OutputUrl = s3OutputUrl;
         return this;
     }
     
+    public SessionManagerOutputUrl(){}
 }

@@ -18,9 +18,11 @@ public class TwoHundredSingleResultResultStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public TwoHundredSingleResultResultStatus withService(String service) {
         this.service = service;
         return this;
     }
     
+    public TwoHundredSingleResultResultStatus(){}
 }

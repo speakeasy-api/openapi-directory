@@ -15,6 +15,7 @@ public class UpdateJobOutput {
      */
     
     public Artifact[] artifactList;
+
     public UpdateJobOutput withArtifactList(Artifact[] artifactList) {
         this.artifactList = artifactList;
         return this;
@@ -25,6 +26,7 @@ public class UpdateJobOutput {
      */
     
     public Boolean success;
+
     public UpdateJobOutput withSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -35,9 +37,11 @@ public class UpdateJobOutput {
      */
     
     public String warningMessage;
+
     public UpdateJobOutput withWarningMessage(String warningMessage) {
         this.warningMessage = warningMessage;
         return this;
     }
     
+    public UpdateJobOutput(){}
 }

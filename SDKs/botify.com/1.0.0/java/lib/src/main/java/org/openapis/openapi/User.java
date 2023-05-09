@@ -58,12 +58,10 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserProjectsResponse res = new org.openapis.openapi.models.operations.GetUserProjectsResponse() {{
+        org.openapis.openapi.models.operations.GetUserProjectsResponse res = new org.openapis.openapi.models.operations.GetUserProjectsResponse(contentType, httpRes.statusCode()) {{
             getUserProjects200ApplicationJSONObject = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

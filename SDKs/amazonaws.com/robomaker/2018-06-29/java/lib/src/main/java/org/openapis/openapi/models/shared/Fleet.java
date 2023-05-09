@@ -20,6 +20,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Fleet withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class Fleet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Fleet withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastDeploymentJob")
     public String lastDeploymentJob;
+
     public Fleet withLastDeploymentJob(String lastDeploymentJob) {
         this.lastDeploymentJob = lastDeploymentJob;
         return this;
@@ -46,6 +49,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastDeploymentStatus")
     public DeploymentStatusEnum lastDeploymentStatus;
+
     public Fleet withLastDeploymentStatus(DeploymentStatusEnum lastDeploymentStatus) {
         this.lastDeploymentStatus = lastDeploymentStatus;
         return this;
@@ -56,6 +60,7 @@ public class Fleet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentTime")
     public OffsetDateTime lastDeploymentTime;
+
     public Fleet withLastDeploymentTime(OffsetDateTime lastDeploymentTime) {
         this.lastDeploymentTime = lastDeploymentTime;
         return this;
@@ -64,9 +69,11 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Fleet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Fleet(){}
 }

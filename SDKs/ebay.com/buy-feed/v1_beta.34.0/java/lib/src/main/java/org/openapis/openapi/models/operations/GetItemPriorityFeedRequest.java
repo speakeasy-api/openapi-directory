@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemPriorityFeedRequest {
@@ -12,6 +13,7 @@ public class GetItemPriorityFeedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetItemPriorityFeedRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetItemPriorityFeedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
     public String range;
+
     public GetItemPriorityFeedRequest withRange(String range) {
         this.range = range;
         return this;
@@ -32,6 +35,7 @@ public class GetItemPriorityFeedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetItemPriorityFeedRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -42,6 +46,7 @@ public class GetItemPriorityFeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_id")
     public String categoryId;
+
     public GetItemPriorityFeedRequest withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -52,9 +57,17 @@ public class GetItemPriorityFeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public GetItemPriorityFeedRequest withDate(String date) {
         this.date = date;
         return this;
     }
     
+    public GetItemPriorityFeedRequest(@JsonProperty("Accept") String accept, @JsonProperty("Range") String range, @JsonProperty("X-EBAY-C-MARKETPLACE-ID") String xEbayCMarketplaceId, @JsonProperty("category_id") String categoryId, @JsonProperty("date") String date) {
+        this.accept = accept;
+        this.range = range;
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+        this.categoryId = categoryId;
+        this.date = date;
+  }
 }

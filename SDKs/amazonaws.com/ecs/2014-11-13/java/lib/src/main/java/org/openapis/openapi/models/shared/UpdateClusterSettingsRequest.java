@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateClusterSettingsRequest {
     @JsonProperty("cluster")
     public String cluster;
+
     public UpdateClusterSettingsRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -16,9 +17,14 @@ public class UpdateClusterSettingsRequest {
     
     @JsonProperty("settings")
     public ClusterSetting[] settings;
+
     public UpdateClusterSettingsRequest withSettings(ClusterSetting[] settings) {
         this.settings = settings;
         return this;
     }
     
+    public UpdateClusterSettingsRequest(@JsonProperty("cluster") String cluster, @JsonProperty("settings") ClusterSetting[] settings) {
+        this.cluster = cluster;
+        this.settings = settings;
+  }
 }

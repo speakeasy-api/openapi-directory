@@ -12,6 +12,7 @@ public class UserEmailViewDefinitionSetting {
      */
     
     public java.util.Map<String, UserEMailSettingLocalization> localization;
+
     public UserEmailViewDefinitionSetting withLocalization(java.util.Map<String, UserEMailSettingLocalization> localization) {
         this.localization = localization;
         return this;
@@ -22,6 +23,7 @@ public class UserEmailViewDefinitionSetting {
      */
     
     public String name;
+
     public UserEmailViewDefinitionSetting withName(String name) {
         this.name = name;
         return this;
@@ -32,6 +34,7 @@ public class UserEmailViewDefinitionSetting {
      */
     
     public Long optInAggregateValue;
+
     public UserEmailViewDefinitionSetting withOptInAggregateValue(Long optInAggregateValue) {
         this.optInAggregateValue = optInAggregateValue;
         return this;
@@ -42,6 +45,7 @@ public class UserEmailViewDefinitionSetting {
      */
     
     public Boolean setByDefault;
+
     public UserEmailViewDefinitionSetting withSetByDefault(Boolean setByDefault) {
         this.setByDefault = setByDefault;
         return this;
@@ -52,9 +56,11 @@ public class UserEmailViewDefinitionSetting {
      */
     
     public UserEmailSubscriptionDefinition[] subscriptions;
+
     public UserEmailViewDefinitionSetting withSubscriptions(UserEmailSubscriptionDefinition[] subscriptions) {
         this.subscriptions = subscriptions;
         return this;
     }
     
+    public UserEmailViewDefinitionSetting(){}
 }

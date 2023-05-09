@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IoTJobAbortConfig {
     @JsonProperty("criteriaList")
     public IoTJobAbortCriteria[] criteriaList;
+
     public IoTJobAbortConfig withCriteriaList(IoTJobAbortCriteria[] criteriaList) {
         this.criteriaList = criteriaList;
         return this;
     }
     
+    public IoTJobAbortConfig(@JsonProperty("criteriaList") IoTJobAbortCriteria[] criteriaList) {
+        this.criteriaList = criteriaList;
+  }
 }

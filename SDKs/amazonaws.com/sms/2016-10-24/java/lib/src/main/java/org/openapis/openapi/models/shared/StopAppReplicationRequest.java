@@ -12,9 +12,11 @@ public class StopAppReplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public StopAppReplicationRequest withAppId(String appId) {
         this.appId = appId;
         return this;
     }
     
+    public StopAppReplicationRequest(){}
 }

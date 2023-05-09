@@ -9,17 +9,18 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudRetailV2ExperimentInfo - Metadata for active A/B testing Experiments.
+ * GoogleCloudRetailV2ExperimentInfo - Metadata for active A/B testing Experiment.
  */
 public class GoogleCloudRetailV2ExperimentInfo {
     /**
      * The fully qualified resource name of the experiment that provides the serving config under test, should an active experiment exist. For example: `projects/* /locations/global/catalogs/default_catalog/experiments/experiment_id`
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("experimentName")
-    public String experimentName;
-    public GoogleCloudRetailV2ExperimentInfo withExperimentName(String experimentName) {
-        this.experimentName = experimentName;
+    @JsonProperty("experiment")
+    public String experiment;
+
+    public GoogleCloudRetailV2ExperimentInfo withExperiment(String experiment) {
+        this.experiment = experiment;
         return this;
     }
     
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2ExperimentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servingConfigExperiment")
     public GoogleCloudRetailV2ExperimentInfoServingConfigExperiment servingConfigExperiment;
+
     public GoogleCloudRetailV2ExperimentInfo withServingConfigExperiment(GoogleCloudRetailV2ExperimentInfoServingConfigExperiment servingConfigExperiment) {
         this.servingConfigExperiment = servingConfigExperiment;
         return this;
     }
     
+    public GoogleCloudRetailV2ExperimentInfo(){}
 }

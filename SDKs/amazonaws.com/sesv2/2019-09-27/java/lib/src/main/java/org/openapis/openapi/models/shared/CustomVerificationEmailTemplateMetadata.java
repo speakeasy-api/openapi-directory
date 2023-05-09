@@ -15,6 +15,7 @@ public class CustomVerificationEmailTemplateMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureRedirectionURL")
     public String failureRedirectionURL;
+
     public CustomVerificationEmailTemplateMetadata withFailureRedirectionURL(String failureRedirectionURL) {
         this.failureRedirectionURL = failureRedirectionURL;
         return this;
@@ -23,6 +24,7 @@ public class CustomVerificationEmailTemplateMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromEmailAddress")
     public String fromEmailAddress;
+
     public CustomVerificationEmailTemplateMetadata withFromEmailAddress(String fromEmailAddress) {
         this.fromEmailAddress = fromEmailAddress;
         return this;
@@ -31,6 +33,7 @@ public class CustomVerificationEmailTemplateMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuccessRedirectionURL")
     public String successRedirectionURL;
+
     public CustomVerificationEmailTemplateMetadata withSuccessRedirectionURL(String successRedirectionURL) {
         this.successRedirectionURL = successRedirectionURL;
         return this;
@@ -39,6 +42,7 @@ public class CustomVerificationEmailTemplateMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateName")
     public String templateName;
+
     public CustomVerificationEmailTemplateMetadata withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -47,9 +51,11 @@ public class CustomVerificationEmailTemplateMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateSubject")
     public String templateSubject;
+
     public CustomVerificationEmailTemplateMetadata withTemplateSubject(String templateSubject) {
         this.templateSubject = templateSubject;
         return this;
     }
     
+    public CustomVerificationEmailTemplateMetadata(){}
 }

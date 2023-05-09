@@ -18,6 +18,7 @@ public class PromotionPromotionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDate")
     public String creationDate;
+
     public PromotionPromotionStatus withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -29,6 +30,7 @@ public class PromotionPromotionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationStatuses")
     public PromotionPromotionStatusDestinationStatus[] destinationStatuses;
+
     public PromotionPromotionStatus withDestinationStatuses(PromotionPromotionStatusDestinationStatus[] destinationStatuses) {
         this.destinationStatuses = destinationStatuses;
         return this;
@@ -40,6 +42,7 @@ public class PromotionPromotionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateDate")
     public String lastUpdateDate;
+
     public PromotionPromotionStatus withLastUpdateDate(String lastUpdateDate) {
         this.lastUpdateDate = lastUpdateDate;
         return this;
@@ -51,9 +54,11 @@ public class PromotionPromotionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionIssue")
     public PromotionPromotionStatusPromotionIssue[] promotionIssue;
+
     public PromotionPromotionStatus withPromotionIssue(PromotionPromotionStatusPromotionIssue[] promotionIssue) {
         this.promotionIssue = promotionIssue;
         return this;
     }
     
+    public PromotionPromotionStatus(){}
 }

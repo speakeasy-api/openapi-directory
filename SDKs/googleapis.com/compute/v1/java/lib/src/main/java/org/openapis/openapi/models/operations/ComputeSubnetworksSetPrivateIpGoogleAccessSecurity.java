@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeSubnetworksSetPrivateIpGoogleAccessSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeSubnetworksSetPrivateIpGoogleAccessSecurityOption1 option1;
+
     public ComputeSubnetworksSetPrivateIpGoogleAccessSecurity withOption1(ComputeSubnetworksSetPrivateIpGoogleAccessSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeSubnetworksSetPrivateIpGoogleAccessSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeSubnetworksSetPrivateIpGoogleAccessSecurityOption2 option2;
+
     public ComputeSubnetworksSetPrivateIpGoogleAccessSecurity withOption2(ComputeSubnetworksSetPrivateIpGoogleAccessSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeSubnetworksSetPrivateIpGoogleAccessSecurity(){}
 }

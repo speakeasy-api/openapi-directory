@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteTagsMessage - Contains the output from the &lt;code&gt;DeleteTags&lt;/code&gt; action. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteTagsMessage {
     
     public String resourceName;
+
     public DeleteTagsMessage withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -19,9 +20,14 @@ public class DeleteTagsMessage {
     
     
     public String[] tagKeys;
+
     public DeleteTagsMessage withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     
+    public DeleteTagsMessage(@JsonProperty("ResourceName") String resourceName, @JsonProperty("TagKeys") String[] tagKeys) {
+        this.resourceName = resourceName;
+        this.tagKeys = tagKeys;
+  }
 }

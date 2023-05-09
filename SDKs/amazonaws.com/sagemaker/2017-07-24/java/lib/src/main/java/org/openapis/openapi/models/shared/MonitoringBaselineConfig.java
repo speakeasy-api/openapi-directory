@@ -15,6 +15,7 @@ public class MonitoringBaselineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseliningJobName")
     public String baseliningJobName;
+
     public MonitoringBaselineConfig withBaseliningJobName(String baseliningJobName) {
         this.baseliningJobName = baseliningJobName;
         return this;
@@ -23,6 +24,7 @@ public class MonitoringBaselineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConstraintsResource")
     public MonitoringConstraintsResource constraintsResource;
+
     public MonitoringBaselineConfig withConstraintsResource(MonitoringConstraintsResource constraintsResource) {
         this.constraintsResource = constraintsResource;
         return this;
@@ -31,9 +33,11 @@ public class MonitoringBaselineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatisticsResource")
     public MonitoringStatisticsResource statisticsResource;
+
     public MonitoringBaselineConfig withStatisticsResource(MonitoringStatisticsResource statisticsResource) {
         this.statisticsResource = statisticsResource;
         return this;
     }
     
+    public MonitoringBaselineConfig(){}
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class SearchedArtifact {
     @JsonProperty("createdBy")
     public String createdBy;
+
     public SearchedArtifact withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -28,6 +29,7 @@ public class SearchedArtifact {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdOn")
     public OffsetDateTime createdOn;
+
     public SearchedArtifact withCreatedOn(OffsetDateTime createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -36,6 +38,7 @@ public class SearchedArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SearchedArtifact withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class SearchedArtifact {
     
     @JsonProperty("id")
     public String id;
+
     public SearchedArtifact withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +55,7 @@ public class SearchedArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public SearchedArtifact withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -59,6 +64,7 @@ public class SearchedArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiedBy")
     public String modifiedBy;
+
     public SearchedArtifact withModifiedBy(String modifiedBy) {
         this.modifiedBy = modifiedBy;
         return this;
@@ -69,6 +75,7 @@ public class SearchedArtifact {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedOn")
     public OffsetDateTime modifiedOn;
+
     public SearchedArtifact withModifiedOn(OffsetDateTime modifiedOn) {
         this.modifiedOn = modifiedOn;
         return this;
@@ -77,6 +84,7 @@ public class SearchedArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SearchedArtifact withName(String name) {
         this.name = name;
         return this;
@@ -93,6 +101,7 @@ public class SearchedArtifact {
      */
     @JsonProperty("state")
     public ArtifactStateEnum state;
+
     public SearchedArtifact withState(ArtifactStateEnum state) {
         this.state = state;
         return this;
@@ -100,9 +109,17 @@ public class SearchedArtifact {
     
     @JsonProperty("type")
     public ArtifactTypeEnum type;
+
     public SearchedArtifact withType(ArtifactTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SearchedArtifact(@JsonProperty("createdBy") String createdBy, @JsonProperty("createdOn") OffsetDateTime createdOn, @JsonProperty("id") String id, @JsonProperty("state") ArtifactStateEnum state, @JsonProperty("type") ArtifactTypeEnum type) {
+        this.createdBy = createdBy;
+        this.createdOn = createdOn;
+        this.id = id;
+        this.state = state;
+        this.type = type;
+  }
 }

@@ -20,6 +20,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArchivalSummary")
     public ArchivalSummary archivalSummary;
+
     public TableDescription withArchivalSummary(ArchivalSummary archivalSummary) {
         this.archivalSummary = archivalSummary;
         return this;
@@ -28,6 +29,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeDefinitions")
     public AttributeDefinition[] attributeDefinitions;
+
     public TableDescription withAttributeDefinitions(AttributeDefinition[] attributeDefinitions) {
         this.attributeDefinitions = attributeDefinitions;
         return this;
@@ -36,6 +38,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingModeSummary")
     public BillingModeSummary billingModeSummary;
+
     public TableDescription withBillingModeSummary(BillingModeSummary billingModeSummary) {
         this.billingModeSummary = billingModeSummary;
         return this;
@@ -46,6 +49,7 @@ public class TableDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public TableDescription withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -54,6 +58,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionProtectionEnabled")
     public Boolean deletionProtectionEnabled;
+
     public TableDescription withDeletionProtectionEnabled(Boolean deletionProtectionEnabled) {
         this.deletionProtectionEnabled = deletionProtectionEnabled;
         return this;
@@ -62,6 +67,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalSecondaryIndexes")
     public GlobalSecondaryIndexDescription[] globalSecondaryIndexes;
+
     public TableDescription withGlobalSecondaryIndexes(GlobalSecondaryIndexDescription[] globalSecondaryIndexes) {
         this.globalSecondaryIndexes = globalSecondaryIndexes;
         return this;
@@ -70,6 +76,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTableVersion")
     public String globalTableVersion;
+
     public TableDescription withGlobalTableVersion(String globalTableVersion) {
         this.globalTableVersion = globalTableVersion;
         return this;
@@ -78,6 +85,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemCount")
     public Long itemCount;
+
     public TableDescription withItemCount(Long itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -86,6 +94,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeySchema")
     public KeySchemaElement[] keySchema;
+
     public TableDescription withKeySchema(KeySchemaElement[] keySchema) {
         this.keySchema = keySchema;
         return this;
@@ -94,6 +103,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestStreamArn")
     public String latestStreamArn;
+
     public TableDescription withLatestStreamArn(String latestStreamArn) {
         this.latestStreamArn = latestStreamArn;
         return this;
@@ -102,6 +112,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestStreamLabel")
     public String latestStreamLabel;
+
     public TableDescription withLatestStreamLabel(String latestStreamLabel) {
         this.latestStreamLabel = latestStreamLabel;
         return this;
@@ -110,6 +121,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalSecondaryIndexes")
     public LocalSecondaryIndexDescription[] localSecondaryIndexes;
+
     public TableDescription withLocalSecondaryIndexes(LocalSecondaryIndexDescription[] localSecondaryIndexes) {
         this.localSecondaryIndexes = localSecondaryIndexes;
         return this;
@@ -118,6 +130,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughput")
     public ProvisionedThroughputDescription provisionedThroughput;
+
     public TableDescription withProvisionedThroughput(ProvisionedThroughputDescription provisionedThroughput) {
         this.provisionedThroughput = provisionedThroughput;
         return this;
@@ -126,6 +139,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Replicas")
     public ReplicaDescription[] replicas;
+
     public TableDescription withReplicas(ReplicaDescription[] replicas) {
         this.replicas = replicas;
         return this;
@@ -134,6 +148,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RestoreSummary")
     public RestoreSummary restoreSummary;
+
     public TableDescription withRestoreSummary(RestoreSummary restoreSummary) {
         this.restoreSummary = restoreSummary;
         return this;
@@ -142,6 +157,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SSEDescription")
     public SSEDescription sseDescription;
+
     public TableDescription withSSEDescription(SSEDescription sseDescription) {
         this.sseDescription = sseDescription;
         return this;
@@ -150,6 +166,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamSpecification")
     public StreamSpecification streamSpecification;
+
     public TableDescription withStreamSpecification(StreamSpecification streamSpecification) {
         this.streamSpecification = streamSpecification;
         return this;
@@ -158,6 +175,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableArn")
     public String tableArn;
+
     public TableDescription withTableArn(String tableArn) {
         this.tableArn = tableArn;
         return this;
@@ -166,6 +184,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableClassSummary")
     public TableClassSummary tableClassSummary;
+
     public TableDescription withTableClassSummary(TableClassSummary tableClassSummary) {
         this.tableClassSummary = tableClassSummary;
         return this;
@@ -174,6 +193,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableId")
     public String tableId;
+
     public TableDescription withTableId(String tableId) {
         this.tableId = tableId;
         return this;
@@ -182,6 +202,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public TableDescription withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -190,6 +211,7 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableSizeBytes")
     public Long tableSizeBytes;
+
     public TableDescription withTableSizeBytes(Long tableSizeBytes) {
         this.tableSizeBytes = tableSizeBytes;
         return this;
@@ -198,9 +220,11 @@ public class TableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableStatus")
     public TableStatusEnum tableStatus;
+
     public TableDescription withTableStatus(TableStatusEnum tableStatus) {
         this.tableStatus = tableStatus;
         return this;
     }
     
+    public TableDescription(){}
 }

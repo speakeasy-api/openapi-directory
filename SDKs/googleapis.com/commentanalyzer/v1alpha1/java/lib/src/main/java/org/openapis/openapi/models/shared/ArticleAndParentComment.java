@@ -18,6 +18,7 @@ public class ArticleAndParentComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("article")
     public TextEntry article;
+
     public ArticleAndParentComment withArticle(TextEntry article) {
         this.article = article;
         return this;
@@ -29,9 +30,11 @@ public class ArticleAndParentComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentComment")
     public TextEntry parentComment;
+
     public ArticleAndParentComment withParentComment(TextEntry parentComment) {
         this.parentComment = parentComment;
         return this;
     }
     
+    public ArticleAndParentComment(){}
 }

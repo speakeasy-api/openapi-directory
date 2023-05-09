@@ -15,9 +15,11 @@ public class UpdateConnectorDefinitionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateConnectorDefinitionRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateConnectorDefinitionRequestBody(){}
 }

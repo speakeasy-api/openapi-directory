@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutV2OrgsNameSettingsRequestBody {
     @JsonProperty("restricted_images")
     public PutV2OrgsNameSettingsRequestBodyRestrictedImages restrictedImages;
+
     public PutV2OrgsNameSettingsRequestBody withRestrictedImages(PutV2OrgsNameSettingsRequestBodyRestrictedImages restrictedImages) {
         this.restrictedImages = restrictedImages;
         return this;
     }
     
+    public PutV2OrgsNameSettingsRequestBody(@JsonProperty("restricted_images") PutV2OrgsNameSettingsRequestBodyRestrictedImages restrictedImages) {
+        this.restrictedImages = restrictedImages;
+  }
 }

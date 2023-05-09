@@ -18,9 +18,11 @@ public class CommitServicePerimetersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public CommitServicePerimetersRequest withEtag(String etag) {
         this.etag = etag;
         return this;
     }
     
+    public CommitServicePerimetersRequest(){}
 }

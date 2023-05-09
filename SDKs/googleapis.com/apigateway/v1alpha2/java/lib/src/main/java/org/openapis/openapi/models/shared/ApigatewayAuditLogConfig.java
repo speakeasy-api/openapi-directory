@@ -18,6 +18,7 @@ public class ApigatewayAuditLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exemptedMembers")
     public String[] exemptedMembers;
+
     public ApigatewayAuditLogConfig withExemptedMembers(String[] exemptedMembers) {
         this.exemptedMembers = exemptedMembers;
         return this;
@@ -29,9 +30,11 @@ public class ApigatewayAuditLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logType")
     public ApigatewayAuditLogConfigLogTypeEnum logType;
+
     public ApigatewayAuditLogConfig withLogType(ApigatewayAuditLogConfigLogTypeEnum logType) {
         this.logType = logType;
         return this;
     }
     
+    public ApigatewayAuditLogConfig(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeLifecycleHooksType {
     
     public String autoScalingGroupName;
+
     public DescribeLifecycleHooksType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,9 +17,13 @@ public class DescribeLifecycleHooksType {
     
     
     public String[] lifecycleHookNames;
+
     public DescribeLifecycleHooksType withLifecycleHookNames(String[] lifecycleHookNames) {
         this.lifecycleHookNames = lifecycleHookNames;
         return this;
     }
     
+    public DescribeLifecycleHooksType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+  }
 }

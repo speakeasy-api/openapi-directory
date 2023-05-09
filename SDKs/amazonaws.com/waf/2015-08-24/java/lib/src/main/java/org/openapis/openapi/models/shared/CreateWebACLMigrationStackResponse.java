@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateWebACLMigrationStackResponse {
     @JsonProperty("S3ObjectUrl")
     public String s3ObjectUrl;
+
     public CreateWebACLMigrationStackResponse withS3ObjectUrl(String s3ObjectUrl) {
         this.s3ObjectUrl = s3ObjectUrl;
         return this;
     }
     
+    public CreateWebACLMigrationStackResponse(@JsonProperty("S3ObjectUrl") String s3ObjectUrl) {
+        this.s3ObjectUrl = s3ObjectUrl;
+  }
 }

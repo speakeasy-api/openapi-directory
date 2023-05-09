@@ -23,6 +23,7 @@ public class AccountReference16CH {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cashAccountType")
     public String cashAccountType;
+
     public AccountReference16CH withCashAccountType(String cashAccountType) {
         this.cashAccountType = cashAccountType;
         return this;
@@ -35,6 +36,7 @@ public class AccountReference16CH {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public AccountReference16CH withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -46,6 +48,7 @@ public class AccountReference16CH {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iban")
     public String iban;
+
     public AccountReference16CH withIban(String iban) {
         this.iban = iban;
         return this;
@@ -59,9 +62,11 @@ public class AccountReference16CH {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otherAccountIdentification")
     public String otherAccountIdentification;
+
     public AccountReference16CH withOtherAccountIdentification(String otherAccountIdentification) {
         this.otherAccountIdentification = otherAccountIdentification;
         return this;
     }
     
+    public AccountReference16CH(){}
 }

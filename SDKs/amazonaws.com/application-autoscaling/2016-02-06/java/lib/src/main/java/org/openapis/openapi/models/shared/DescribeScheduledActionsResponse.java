@@ -15,6 +15,7 @@ public class DescribeScheduledActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeScheduledActionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeScheduledActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduledActions")
     public ScheduledAction[] scheduledActions;
+
     public DescribeScheduledActionsResponse withScheduledActions(ScheduledAction[] scheduledActions) {
         this.scheduledActions = scheduledActions;
         return this;
     }
     
+    public DescribeScheduledActionsResponse(){}
 }

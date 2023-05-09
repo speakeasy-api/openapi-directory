@@ -15,6 +15,7 @@ public class ErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailedErrorCode")
     public String detailedErrorCode;
+
     public ErrorDetail withDetailedErrorCode(String detailedErrorCode) {
         this.detailedErrorCode = detailedErrorCode;
         return this;
@@ -23,9 +24,11 @@ public class ErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailedErrorMessage")
     public String detailedErrorMessage;
+
     public ErrorDetail withDetailedErrorMessage(String detailedErrorMessage) {
         this.detailedErrorMessage = detailedErrorMessage;
         return this;
     }
     
+    public ErrorDetail(){}
 }

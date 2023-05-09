@@ -12,6 +12,7 @@ public class PostFloatingIps201ApplicationJSONAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostFloatingIps201ApplicationJSONAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostFloatingIps201ApplicationJSONAction {
      */
     @JsonProperty("error")
     public PostFloatingIps201ApplicationJSONActionError error;
+
     public PostFloatingIps201ApplicationJSONAction withError(PostFloatingIps201ApplicationJSONActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostFloatingIps201ApplicationJSONAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostFloatingIps201ApplicationJSONAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostFloatingIps201ApplicationJSONAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostFloatingIps201ApplicationJSONAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostFloatingIps201ApplicationJSONAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostFloatingIps201ApplicationJSONAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostFloatingIps201ApplicationJSONAction {
      */
     @JsonProperty("resources")
     public PostFloatingIps201ApplicationJSONActionResources[] resources;
+
     public PostFloatingIps201ApplicationJSONAction withResources(PostFloatingIps201ApplicationJSONActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostFloatingIps201ApplicationJSONAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostFloatingIps201ApplicationJSONAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostFloatingIps201ApplicationJSONAction {
      */
     @JsonProperty("status")
     public PostFloatingIps201ApplicationJSONActionStatusEnum status;
+
     public PostFloatingIps201ApplicationJSONAction withStatus(PostFloatingIps201ApplicationJSONActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostFloatingIps201ApplicationJSONAction(@JsonProperty("command") String command, @JsonProperty("error") PostFloatingIps201ApplicationJSONActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostFloatingIps201ApplicationJSONActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostFloatingIps201ApplicationJSONActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

@@ -15,6 +15,7 @@ public class StartImportRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePassword")
     public String filePassword;
+
     public StartImportRequestBody withFilePassword(String filePassword) {
         this.filePassword = filePassword;
         return this;
@@ -25,6 +26,7 @@ public class StartImportRequestBody {
      */
     @JsonProperty("importId")
     public String importId;
+
     public StartImportRequestBody withImportId(String importId) {
         this.importId = importId;
         return this;
@@ -35,6 +37,7 @@ public class StartImportRequestBody {
      */
     @JsonProperty("mergeStrategy")
     public StartImportRequestBodyMergeStrategyEnum mergeStrategy;
+
     public StartImportRequestBody withMergeStrategy(StartImportRequestBodyMergeStrategyEnum mergeStrategy) {
         this.mergeStrategy = mergeStrategy;
         return this;
@@ -45,9 +48,15 @@ public class StartImportRequestBody {
      */
     @JsonProperty("resourceSpecification")
     public StartImportRequestBodyResourceSpecification resourceSpecification;
+
     public StartImportRequestBody withResourceSpecification(StartImportRequestBodyResourceSpecification resourceSpecification) {
         this.resourceSpecification = resourceSpecification;
         return this;
     }
     
+    public StartImportRequestBody(@JsonProperty("importId") String importId, @JsonProperty("mergeStrategy") StartImportRequestBodyMergeStrategyEnum mergeStrategy, @JsonProperty("resourceSpecification") StartImportRequestBodyResourceSpecification resourceSpecification) {
+        this.importId = importId;
+        this.mergeStrategy = mergeStrategy;
+        this.resourceSpecification = resourceSpecification;
+  }
 }

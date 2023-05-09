@@ -15,6 +15,7 @@ public class Vrwmi500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Vrwmi500ApplicationJSONErrorEnum error;
+
     public Vrwmi500ApplicationJSON withError(Vrwmi500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Vrwmi500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Vrwmi500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Vrwmi500ApplicationJSON withErrorDescription(Vrwmi500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Vrwmi500ApplicationJSON(){}
 }

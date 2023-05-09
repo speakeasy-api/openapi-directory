@@ -18,6 +18,7 @@ public class SpecialHourPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closeTime")
     public TimeOfDay closeTime;
+
     public SpecialHourPeriod withCloseTime(TimeOfDay closeTime) {
         this.closeTime = closeTime;
         return this;
@@ -29,6 +30,7 @@ public class SpecialHourPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed")
     public Boolean closed;
+
     public SpecialHourPeriod withClosed(Boolean closed) {
         this.closed = closed;
         return this;
@@ -40,6 +42,7 @@ public class SpecialHourPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public Date endDate;
+
     public SpecialHourPeriod withEndDate(Date endDate) {
         this.endDate = endDate;
         return this;
@@ -51,6 +54,7 @@ public class SpecialHourPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openTime")
     public TimeOfDay openTime;
+
     public SpecialHourPeriod withOpenTime(TimeOfDay openTime) {
         this.openTime = openTime;
         return this;
@@ -62,9 +66,11 @@ public class SpecialHourPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public Date startDate;
+
     public SpecialHourPeriod withStartDate(Date startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public SpecialHourPeriod(){}
 }

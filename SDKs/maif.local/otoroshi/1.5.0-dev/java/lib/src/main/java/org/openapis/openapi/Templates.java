@@ -35,10 +35,11 @@ public class Templates {
     /**
      * Get a template of an Otoroshi Api Key
      * Get a template of an Otoroshi Api Key. The generated entity is not persisted
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InitiateApiKeyResponse initiateApiKey() throws Exception {
+    public org.openapis.openapi.models.operations.InitiateApiKeyResponse initiateApiKey(org.openapis.openapi.models.operations.InitiateApiKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/new/apikey");
         
@@ -47,16 +48,15 @@ public class Templates {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InitiateApiKeyResponse res = new org.openapis.openapi.models.operations.InitiateApiKeyResponse() {{
+        org.openapis.openapi.models.operations.InitiateApiKeyResponse res = new org.openapis.openapi.models.operations.InitiateApiKeyResponse(contentType, httpRes.statusCode()) {{
             apiKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -75,10 +75,11 @@ public class Templates {
     /**
      * Get a template of an Otoroshi service descriptor
      * Get a template of an Otoroshi service descriptor. The generated entity is not persisted
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InitiateServiceResponse initiateService() throws Exception {
+    public org.openapis.openapi.models.operations.InitiateServiceResponse initiateService(org.openapis.openapi.models.operations.InitiateServiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/new/service");
         
@@ -87,16 +88,15 @@ public class Templates {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InitiateServiceResponse res = new org.openapis.openapi.models.operations.InitiateServiceResponse() {{
+        org.openapis.openapi.models.operations.InitiateServiceResponse res = new org.openapis.openapi.models.operations.InitiateServiceResponse(contentType, httpRes.statusCode()) {{
             service = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,10 +115,11 @@ public class Templates {
     /**
      * Get a template of an Otoroshi service group
      * Get a template of an Otoroshi service group. The generated entity is not persisted
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InitiateServiceGroupResponse initiateServiceGroup() throws Exception {
+    public org.openapis.openapi.models.operations.InitiateServiceGroupResponse initiateServiceGroup(org.openapis.openapi.models.operations.InitiateServiceGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/new/group");
         
@@ -127,16 +128,15 @@ public class Templates {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InitiateServiceGroupResponse res = new org.openapis.openapi.models.operations.InitiateServiceGroupResponse() {{
+        org.openapis.openapi.models.operations.InitiateServiceGroupResponse res = new org.openapis.openapi.models.operations.InitiateServiceGroupResponse(contentType, httpRes.statusCode()) {{
             group = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

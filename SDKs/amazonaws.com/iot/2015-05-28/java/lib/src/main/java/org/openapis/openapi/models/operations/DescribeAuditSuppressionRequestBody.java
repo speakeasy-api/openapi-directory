@@ -12,6 +12,7 @@ public class DescribeAuditSuppressionRequestBody {
      */
     @JsonProperty("checkName")
     public String checkName;
+
     public DescribeAuditSuppressionRequestBody withCheckName(String checkName) {
         this.checkName = checkName;
         return this;
@@ -22,9 +23,14 @@ public class DescribeAuditSuppressionRequestBody {
      */
     @JsonProperty("resourceIdentifier")
     public DescribeAuditSuppressionRequestBodyResourceIdentifier resourceIdentifier;
+
     public DescribeAuditSuppressionRequestBody withResourceIdentifier(DescribeAuditSuppressionRequestBodyResourceIdentifier resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
     }
     
+    public DescribeAuditSuppressionRequestBody(@JsonProperty("checkName") String checkName, @JsonProperty("resourceIdentifier") DescribeAuditSuppressionRequestBodyResourceIdentifier resourceIdentifier) {
+        this.checkName = checkName;
+        this.resourceIdentifier = resourceIdentifier;
+  }
 }

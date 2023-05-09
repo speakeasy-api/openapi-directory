@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertResponse {
     
     public String contentType;
+
     public TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertRespons
      */
     
     public org.openapis.openapi.models.shared.RevertBuiltInVariableResponse revertBuiltInVariableResponse;
+
     public TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertResponse withRevertBuiltInVariableResponse(org.openapis.openapi.models.shared.RevertBuiltInVariableResponse revertBuiltInVariableResponse) {
         this.revertBuiltInVariableResponse = revertBuiltInVariableResponse;
         return this;
@@ -26,6 +29,7 @@ public class TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertRespons
     
     
     public Integer statusCode;
+
     public TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataTransactions withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantName")
     public String merchantName;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataTransactions withMerchantName(String merchantName) {
         this.merchantName = merchantName;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payments")
     public PlaceOrder200ApplicationJSONOrdersPaymentDataTransactionsPayments[] payments;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataTransactions withPayments(PlaceOrder200ApplicationJSONOrdersPaymentDataTransactionsPayments[] payments) {
         this.payments = payments;
         return this;
@@ -48,6 +51,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedTransaction")
     public Boolean sharedTransaction;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataTransactions withSharedTransaction(Boolean sharedTransaction) {
         this.sharedTransaction = sharedTransaction;
         return this;
@@ -59,9 +63,11 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionId")
     public String transactionId;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataTransactions withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersPaymentDataTransactions(){}
 }

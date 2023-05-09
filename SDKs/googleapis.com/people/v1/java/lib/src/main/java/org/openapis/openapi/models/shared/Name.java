@@ -18,6 +18,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Name withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayNameLastFirst")
     public String displayNameLastFirst;
+
     public Name withDisplayNameLastFirst(String displayNameLastFirst) {
         this.displayNameLastFirst = displayNameLastFirst;
         return this;
@@ -40,6 +42,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyName")
     public String familyName;
+
     public Name withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -51,6 +54,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("givenName")
     public String givenName;
+
     public Name withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -62,6 +66,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("honorificPrefix")
     public String honorificPrefix;
+
     public Name withHonorificPrefix(String honorificPrefix) {
         this.honorificPrefix = honorificPrefix;
         return this;
@@ -73,6 +78,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("honorificSuffix")
     public String honorificSuffix;
+
     public Name withHonorificSuffix(String honorificSuffix) {
         this.honorificSuffix = honorificSuffix;
         return this;
@@ -84,6 +90,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadata metadata;
+
     public Name withMetadata(FieldMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -95,6 +102,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middleName")
     public String middleName;
+
     public Name withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -106,6 +114,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneticFamilyName")
     public String phoneticFamilyName;
+
     public Name withPhoneticFamilyName(String phoneticFamilyName) {
         this.phoneticFamilyName = phoneticFamilyName;
         return this;
@@ -117,6 +126,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneticFullName")
     public String phoneticFullName;
+
     public Name withPhoneticFullName(String phoneticFullName) {
         this.phoneticFullName = phoneticFullName;
         return this;
@@ -128,6 +138,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneticGivenName")
     public String phoneticGivenName;
+
     public Name withPhoneticGivenName(String phoneticGivenName) {
         this.phoneticGivenName = phoneticGivenName;
         return this;
@@ -139,6 +150,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneticHonorificPrefix")
     public String phoneticHonorificPrefix;
+
     public Name withPhoneticHonorificPrefix(String phoneticHonorificPrefix) {
         this.phoneticHonorificPrefix = phoneticHonorificPrefix;
         return this;
@@ -150,6 +162,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneticHonorificSuffix")
     public String phoneticHonorificSuffix;
+
     public Name withPhoneticHonorificSuffix(String phoneticHonorificSuffix) {
         this.phoneticHonorificSuffix = phoneticHonorificSuffix;
         return this;
@@ -161,6 +174,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneticMiddleName")
     public String phoneticMiddleName;
+
     public Name withPhoneticMiddleName(String phoneticMiddleName) {
         this.phoneticMiddleName = phoneticMiddleName;
         return this;
@@ -172,9 +186,11 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unstructuredName")
     public String unstructuredName;
+
     public Name withUnstructuredName(String unstructuredName) {
         this.unstructuredName = unstructuredName;
         return this;
     }
     
+    public Name(){}
 }

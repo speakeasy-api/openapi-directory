@@ -18,6 +18,7 @@ public class ProjectCompletionReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admin_user_id")
     public Double adminUserId;
+
     public ProjectCompletionReport withAdminUserId(Double adminUserId) {
         this.adminUserId = adminUserId;
         return this;
@@ -26,6 +27,7 @@ public class ProjectCompletionReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completion_report_data")
     public InvitedVendorsByLanguage[] completionReportData;
+
     public ProjectCompletionReport withCompletionReportData(InvitedVendorsByLanguage[] completionReportData) {
         this.completionReportData = completionReportData;
         return this;
@@ -37,6 +39,7 @@ public class ProjectCompletionReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public ProjectCompletionReport withId(Double id) {
         this.id = id;
         return this;
@@ -48,9 +51,11 @@ public class ProjectCompletionReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_id")
     public Double quoteId;
+
     public ProjectCompletionReport withQuoteId(Double quoteId) {
         this.quoteId = quoteId;
         return this;
     }
     
+    public ProjectCompletionReport(){}
 }

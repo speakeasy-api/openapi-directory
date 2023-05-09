@@ -15,9 +15,13 @@ public class TaskSchedulingPolicy {
      */
     @JsonProperty("nodeFillType")
     public TaskSchedulingPolicyNodeFillTypeEnum nodeFillType;
+
     public TaskSchedulingPolicy withNodeFillType(TaskSchedulingPolicyNodeFillTypeEnum nodeFillType) {
         this.nodeFillType = nodeFillType;
         return this;
     }
     
+    public TaskSchedulingPolicy(@JsonProperty("nodeFillType") TaskSchedulingPolicyNodeFillTypeEnum nodeFillType) {
+        this.nodeFillType = nodeFillType;
+  }
 }

@@ -18,6 +18,7 @@ public class AcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coreCount")
     public String coreCount;
+
     public AcceleratorConfig withCoreCount(String coreCount) {
         this.coreCount = coreCount;
         return this;
@@ -29,9 +30,11 @@ public class AcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AcceleratorConfigTypeEnum type;
+
     public AcceleratorConfig withType(AcceleratorConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AcceleratorConfig(){}
 }

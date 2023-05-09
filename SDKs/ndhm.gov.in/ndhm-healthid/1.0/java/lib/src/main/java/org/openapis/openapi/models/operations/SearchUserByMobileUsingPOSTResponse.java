@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchUserByMobileUsingPOSTResponse {
     
     public byte[] body;
+
     public SearchUserByMobileUsingPOSTResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class SearchUserByMobileUsingPOSTResponse {
     
     
     public String contentType;
+
     public SearchUserByMobileUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class SearchUserByMobileUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public SearchUserByMobileUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class SearchUserByMobileUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchUserByMobileUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchUserByMobileUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

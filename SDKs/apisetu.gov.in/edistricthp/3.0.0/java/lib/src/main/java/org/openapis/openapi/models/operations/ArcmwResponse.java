@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ArcmwResponse {
     
     public String contentType;
+
     public ArcmwResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ArcmwResponse {
     
     
     public Integer statusCode;
+
     public ArcmwResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ArcmwResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ArcmwResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ArcmwResponse {
      */
     
     public Arcmw400ApplicationJSON arcmw400ApplicationJSONObject;
+
     public ArcmwResponse withArcmw400ApplicationJSONObject(Arcmw400ApplicationJSON arcmw400ApplicationJSONObject) {
         this.arcmw400ApplicationJSONObject = arcmw400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ArcmwResponse {
      */
     
     public Arcmw401ApplicationJSON arcmw401ApplicationJSONObject;
+
     public ArcmwResponse withArcmw401ApplicationJSONObject(Arcmw401ApplicationJSON arcmw401ApplicationJSONObject) {
         this.arcmw401ApplicationJSONObject = arcmw401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ArcmwResponse {
      */
     
     public Arcmw404ApplicationJSON arcmw404ApplicationJSONObject;
+
     public ArcmwResponse withArcmw404ApplicationJSONObject(Arcmw404ApplicationJSON arcmw404ApplicationJSONObject) {
         this.arcmw404ApplicationJSONObject = arcmw404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class ArcmwResponse {
      */
     
     public Arcmw500ApplicationJSON arcmw500ApplicationJSONObject;
+
     public ArcmwResponse withArcmw500ApplicationJSONObject(Arcmw500ApplicationJSON arcmw500ApplicationJSONObject) {
         this.arcmw500ApplicationJSONObject = arcmw500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class ArcmwResponse {
      */
     
     public Arcmw502ApplicationJSON arcmw502ApplicationJSONObject;
+
     public ArcmwResponse withArcmw502ApplicationJSONObject(Arcmw502ApplicationJSON arcmw502ApplicationJSONObject) {
         this.arcmw502ApplicationJSONObject = arcmw502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class ArcmwResponse {
      */
     
     public Arcmw503ApplicationJSON arcmw503ApplicationJSONObject;
+
     public ArcmwResponse withArcmw503ApplicationJSONObject(Arcmw503ApplicationJSON arcmw503ApplicationJSONObject) {
         this.arcmw503ApplicationJSONObject = arcmw503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class ArcmwResponse {
      */
     
     public Arcmw504ApplicationJSON arcmw504ApplicationJSONObject;
+
     public ArcmwResponse withArcmw504ApplicationJSONObject(Arcmw504ApplicationJSON arcmw504ApplicationJSONObject) {
         this.arcmw504ApplicationJSONObject = arcmw504ApplicationJSONObject;
         return this;
     }
     
+    public ArcmwResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class UpdateEndpointsBatchRequestBodyEndpointBatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Item")
     public org.openapis.openapi.models.shared.EndpointBatchItem[] item;
+
     public UpdateEndpointsBatchRequestBodyEndpointBatchRequest withItem(org.openapis.openapi.models.shared.EndpointBatchItem[] item) {
         this.item = item;
         return this;
     }
     
+    public UpdateEndpointsBatchRequestBodyEndpointBatchRequest(){}
 }

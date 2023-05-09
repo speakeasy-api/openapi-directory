@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishEventRequest {
@@ -12,6 +13,7 @@ public class PublishEventRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Event event;
+
     public PublishEventRequest withEvent(org.openapis.openapi.models.shared.Event event) {
         this.event = event;
         return this;
@@ -22,9 +24,14 @@ public class PublishEventRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TMPS-Correlation-Id")
     public String tmpsCorrelationId;
+
     public PublishEventRequest withTMPSCorrelationId(String tmpsCorrelationId) {
         this.tmpsCorrelationId = tmpsCorrelationId;
         return this;
     }
     
+    public PublishEventRequest(@JsonProperty("Event") org.openapis.openapi.models.shared.Event event, @JsonProperty("TMPS-Correlation-Id") String tmpsCorrelationId) {
+        this.event = event;
+        this.tmpsCorrelationId = tmpsCorrelationId;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteMessageBatchRequest - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteMessageBatchRequest {
     
     public DeleteMessageBatchRequestEntryList[] entries;
+
     public DeleteMessageBatchRequest withEntries(DeleteMessageBatchRequestEntryList[] entries) {
         this.entries = entries;
         return this;
@@ -19,9 +20,14 @@ public class DeleteMessageBatchRequest {
     
     
     public String queueUrl;
+
     public DeleteMessageBatchRequest withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
     }
     
+    public DeleteMessageBatchRequest(@JsonProperty("Entries") DeleteMessageBatchRequestEntryList[] entries, @JsonProperty("QueueUrl") String queueUrl) {
+        this.entries = entries;
+        this.queueUrl = queueUrl;
+  }
 }

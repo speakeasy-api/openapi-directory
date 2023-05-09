@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ConsentFormsCreateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public ConsentFormsCreateRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
     }
     
+    public ConsentFormsCreateRequest(){}
 }

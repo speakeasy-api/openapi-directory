@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeVpnGatewaysGetStatusRequest {
@@ -12,6 +13,7 @@ public class ComputeVpnGatewaysGetStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeVpnGatewaysGetStatusRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ComputeVpnGatewaysGetStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeVpnGatewaysGetStatusRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ComputeVpnGatewaysGetStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeVpnGatewaysGetStatusRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ComputeVpnGatewaysGetStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeVpnGatewaysGetStatusRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ComputeVpnGatewaysGetStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeVpnGatewaysGetStatusRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ComputeVpnGatewaysGetStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeVpnGatewaysGetStatusRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class ComputeVpnGatewaysGetStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeVpnGatewaysGetStatusRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class ComputeVpnGatewaysGetStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeVpnGatewaysGetStatusRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +101,7 @@ public class ComputeVpnGatewaysGetStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeVpnGatewaysGetStatusRequest withProject(String project) {
         this.project = project;
         return this;
@@ -102,6 +112,7 @@ public class ComputeVpnGatewaysGetStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeVpnGatewaysGetStatusRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class ComputeVpnGatewaysGetStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public ComputeVpnGatewaysGetStatusRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -122,6 +134,7 @@ public class ComputeVpnGatewaysGetStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeVpnGatewaysGetStatusRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,6 +145,7 @@ public class ComputeVpnGatewaysGetStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeVpnGatewaysGetStatusRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -142,6 +156,7 @@ public class ComputeVpnGatewaysGetStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeVpnGatewaysGetStatusRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -152,9 +167,15 @@ public class ComputeVpnGatewaysGetStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vpnGateway")
     public String vpnGateway;
+
     public ComputeVpnGatewaysGetStatusRequest withVpnGateway(String vpnGateway) {
         this.vpnGateway = vpnGateway;
         return this;
     }
     
+    public ComputeVpnGatewaysGetStatusRequest(@JsonProperty("project") String project, @JsonProperty("region") String region, @JsonProperty("vpnGateway") String vpnGateway) {
+        this.project = project;
+        this.region = region;
+        this.vpnGateway = vpnGateway;
+  }
 }

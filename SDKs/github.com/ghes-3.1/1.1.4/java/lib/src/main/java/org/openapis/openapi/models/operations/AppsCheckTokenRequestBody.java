@@ -12,9 +12,13 @@ public class AppsCheckTokenRequestBody {
      */
     @JsonProperty("access_token")
     public String accessToken;
+
     public AppsCheckTokenRequestBody withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
     }
     
+    public AppsCheckTokenRequestBody(@JsonProperty("access_token") String accessToken) {
+        this.accessToken = accessToken;
+  }
 }

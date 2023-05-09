@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ConversationDataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationCount")
     public String conversationCount;
+
     public GoogleCloudDialogflowV2ConversationDataset withConversationCount(String conversationCount) {
         this.conversationCount = conversationCount;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2ConversationDataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationInfo")
     public GoogleCloudDialogflowV2ConversationInfo conversationInfo;
+
     public GoogleCloudDialogflowV2ConversationDataset withConversationInfo(GoogleCloudDialogflowV2ConversationInfo conversationInfo) {
         this.conversationInfo = conversationInfo;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2ConversationDataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDialogflowV2ConversationDataset withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2ConversationDataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowV2ConversationDataset withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2ConversationDataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowV2ConversationDataset withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2ConversationDataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfig")
     public GoogleCloudDialogflowV2InputConfig inputConfig;
+
     public GoogleCloudDialogflowV2ConversationDataset withInputConfig(GoogleCloudDialogflowV2InputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDialogflowV2ConversationDataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2ConversationDataset withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ConversationDataset(){}
 }

@@ -15,6 +15,7 @@ public class ListStagesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListStagesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListStagesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stages")
     public StageSummary[] stages;
+
     public ListStagesResult withStages(StageSummary[] stages) {
         this.stages = stages;
         return this;
     }
     
+    public ListStagesResult(){}
 }

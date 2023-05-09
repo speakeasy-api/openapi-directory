@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBudgetsForResourceResponse {
     
     public String contentType;
+
     public ListBudgetsForResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListBudgetsForResourceResponse {
      */
     
     public Object invalidParametersException;
+
     public ListBudgetsForResourceResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class ListBudgetsForResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBudgetsForResourceOutput listBudgetsForResourceOutput;
+
     public ListBudgetsForResourceResponse withListBudgetsForResourceOutput(org.openapis.openapi.models.shared.ListBudgetsForResourceOutput listBudgetsForResourceOutput) {
         this.listBudgetsForResourceOutput = listBudgetsForResourceOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListBudgetsForResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListBudgetsForResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListBudgetsForResourceResponse {
     
     
     public Integer statusCode;
+
     public ListBudgetsForResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListBudgetsForResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBudgetsForResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListBudgetsForResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

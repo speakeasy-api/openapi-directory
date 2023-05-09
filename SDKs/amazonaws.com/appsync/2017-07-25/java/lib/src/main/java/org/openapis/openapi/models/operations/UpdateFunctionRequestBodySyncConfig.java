@@ -15,6 +15,7 @@ public class UpdateFunctionRequestBodySyncConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictDetection")
     public org.openapis.openapi.models.shared.ConflictDetectionTypeEnum conflictDetection;
+
     public UpdateFunctionRequestBodySyncConfig withConflictDetection(org.openapis.openapi.models.shared.ConflictDetectionTypeEnum conflictDetection) {
         this.conflictDetection = conflictDetection;
         return this;
@@ -23,6 +24,7 @@ public class UpdateFunctionRequestBodySyncConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictHandler")
     public org.openapis.openapi.models.shared.ConflictHandlerTypeEnum conflictHandler;
+
     public UpdateFunctionRequestBodySyncConfig withConflictHandler(org.openapis.openapi.models.shared.ConflictHandlerTypeEnum conflictHandler) {
         this.conflictHandler = conflictHandler;
         return this;
@@ -31,9 +33,11 @@ public class UpdateFunctionRequestBodySyncConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaConflictHandlerConfig")
     public org.openapis.openapi.models.shared.LambdaConflictHandlerConfig lambdaConflictHandlerConfig;
+
     public UpdateFunctionRequestBodySyncConfig withLambdaConflictHandlerConfig(org.openapis.openapi.models.shared.LambdaConflictHandlerConfig lambdaConflictHandlerConfig) {
         this.lambdaConflictHandlerConfig = lambdaConflictHandlerConfig;
         return this;
     }
     
+    public UpdateFunctionRequestBodySyncConfig(){}
 }

@@ -12,6 +12,7 @@ public class GetofferslistGetMatchedOffersResponse {
      */
     @JsonProperty("BrandId")
     public Integer brandId;
+
     public GetofferslistGetMatchedOffersResponse withBrandId(Integer brandId) {
         this.brandId = brandId;
         return this;
@@ -22,6 +23,7 @@ public class GetofferslistGetMatchedOffersResponse {
      */
     @JsonProperty("CategoryId")
     public Integer categoryId;
+
     public GetofferslistGetMatchedOffersResponse withCategoryId(Integer categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -32,6 +34,7 @@ public class GetofferslistGetMatchedOffersResponse {
      */
     @JsonProperty("LastModified")
     public String lastModified;
+
     public GetofferslistGetMatchedOffersResponse withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -42,6 +45,7 @@ public class GetofferslistGetMatchedOffersResponse {
      */
     @JsonProperty("ProductId")
     public String productId;
+
     public GetofferslistGetMatchedOffersResponse withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -52,6 +56,7 @@ public class GetofferslistGetMatchedOffersResponse {
      */
     @JsonProperty("ProductName")
     public String productName;
+
     public GetofferslistGetMatchedOffersResponse withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -62,9 +67,18 @@ public class GetofferslistGetMatchedOffersResponse {
      */
     @JsonProperty("Skus")
     public org.openapis.openapi.models.shared.Sku2[] skus;
+
     public GetofferslistGetMatchedOffersResponse withSkus(org.openapis.openapi.models.shared.Sku2[] skus) {
         this.skus = skus;
         return this;
     }
     
+    public GetofferslistGetMatchedOffersResponse(@JsonProperty("BrandId") Integer brandId, @JsonProperty("CategoryId") Integer categoryId, @JsonProperty("LastModified") String lastModified, @JsonProperty("ProductId") String productId, @JsonProperty("ProductName") String productName, @JsonProperty("Skus") org.openapis.openapi.models.shared.Sku2[] skus) {
+        this.brandId = brandId;
+        this.categoryId = categoryId;
+        this.lastModified = lastModified;
+        this.productId = productId;
+        this.productName = productName;
+        this.skus = skus;
+  }
 }

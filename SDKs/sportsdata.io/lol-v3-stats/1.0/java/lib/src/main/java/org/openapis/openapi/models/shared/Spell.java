@@ -12,6 +12,7 @@ public class Spell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Spell withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class Spell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpellId")
     public Long spellId;
+
     public Spell withSpellId(Long spellId) {
         this.spellId = spellId;
         return this;
     }
     
+    public Spell(){}
 }

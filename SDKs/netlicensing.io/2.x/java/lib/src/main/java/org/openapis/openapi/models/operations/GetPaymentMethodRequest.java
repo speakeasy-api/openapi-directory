@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentMethodRequest {
@@ -12,9 +13,13 @@ public class GetPaymentMethodRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentMethodNumber")
     public String paymentMethodNumber;
+
     public GetPaymentMethodRequest withPaymentMethodNumber(String paymentMethodNumber) {
         this.paymentMethodNumber = paymentMethodNumber;
         return this;
     }
     
+    public GetPaymentMethodRequest(@JsonProperty("paymentMethodNumber") String paymentMethodNumber) {
+        this.paymentMethodNumber = paymentMethodNumber;
+  }
 }

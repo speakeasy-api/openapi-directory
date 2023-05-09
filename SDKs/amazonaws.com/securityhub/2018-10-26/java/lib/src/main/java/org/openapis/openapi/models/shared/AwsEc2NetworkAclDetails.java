@@ -15,6 +15,7 @@ public class AwsEc2NetworkAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Associations")
     public AwsEc2NetworkAclAssociation[] associations;
+
     public AwsEc2NetworkAclDetails withAssociations(AwsEc2NetworkAclAssociation[] associations) {
         this.associations = associations;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2NetworkAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Entries")
     public AwsEc2NetworkAclEntry[] entries;
+
     public AwsEc2NetworkAclDetails withEntries(AwsEc2NetworkAclEntry[] entries) {
         this.entries = entries;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2NetworkAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsDefault")
     public Boolean isDefault;
+
     public AwsEc2NetworkAclDetails withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2NetworkAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkAclId")
     public String networkAclId;
+
     public AwsEc2NetworkAclDetails withNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2NetworkAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public AwsEc2NetworkAclDetails withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -55,9 +60,11 @@ public class AwsEc2NetworkAclDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public AwsEc2NetworkAclDetails withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AwsEc2NetworkAclDetails(){}
 }

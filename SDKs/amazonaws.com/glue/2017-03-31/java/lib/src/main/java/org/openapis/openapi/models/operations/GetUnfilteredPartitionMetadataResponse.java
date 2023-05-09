@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUnfilteredPartitionMetadataResponse {
     
     public String contentType;
+
     public GetUnfilteredPartitionMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,8 +21,31 @@ public class GetUnfilteredPartitionMetadataResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetUnfilteredPartitionMetadataResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
+        return this;
+    }
+    
+    /**
+     * FederationSourceException
+     */
+    
+    public Object federationSourceException;
+
+    public GetUnfilteredPartitionMetadataResponse withFederationSourceException(Object federationSourceException) {
+        this.federationSourceException = federationSourceException;
+        return this;
+    }
+    
+    /**
+     * FederationSourceRetryableException
+     */
+    
+    public Object federationSourceRetryableException;
+
+    public GetUnfilteredPartitionMetadataResponse withFederationSourceRetryableException(Object federationSourceRetryableException) {
+        this.federationSourceRetryableException = federationSourceRetryableException;
         return this;
     }
     
@@ -29,6 +54,7 @@ public class GetUnfilteredPartitionMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetUnfilteredPartitionMetadataResponse getUnfilteredPartitionMetadataResponse;
+
     public GetUnfilteredPartitionMetadataResponse withGetUnfilteredPartitionMetadataResponse(org.openapis.openapi.models.shared.GetUnfilteredPartitionMetadataResponse getUnfilteredPartitionMetadataResponse) {
         this.getUnfilteredPartitionMetadataResponse = getUnfilteredPartitionMetadataResponse;
         return this;
@@ -39,6 +65,7 @@ public class GetUnfilteredPartitionMetadataResponse {
      */
     
     public Object glueEncryptionException;
+
     public GetUnfilteredPartitionMetadataResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +76,7 @@ public class GetUnfilteredPartitionMetadataResponse {
      */
     
     public Object internalServiceException;
+
     public GetUnfilteredPartitionMetadataResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +87,7 @@ public class GetUnfilteredPartitionMetadataResponse {
      */
     
     public Object invalidInputException;
+
     public GetUnfilteredPartitionMetadataResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +98,7 @@ public class GetUnfilteredPartitionMetadataResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetUnfilteredPartitionMetadataResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -79,6 +109,7 @@ public class GetUnfilteredPartitionMetadataResponse {
      */
     
     public Object permissionTypeMismatchException;
+
     public GetUnfilteredPartitionMetadataResponse withPermissionTypeMismatchException(Object permissionTypeMismatchException) {
         this.permissionTypeMismatchException = permissionTypeMismatchException;
         return this;
@@ -86,6 +117,7 @@ public class GetUnfilteredPartitionMetadataResponse {
     
     
     public Integer statusCode;
+
     public GetUnfilteredPartitionMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +125,14 @@ public class GetUnfilteredPartitionMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUnfilteredPartitionMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetUnfilteredPartitionMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

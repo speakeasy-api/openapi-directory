@@ -14,6 +14,7 @@ public class OfferContent {
      */
     @JsonProperty("contractBillingPeriodInfo")
     public ContractBillingPeriodInfo contractBillingPeriodInfo;
+
     public OfferContent withContractBillingPeriodInfo(ContractBillingPeriodInfo contractBillingPeriodInfo) {
         this.contractBillingPeriodInfo = contractBillingPeriodInfo;
         return this;
@@ -24,6 +25,7 @@ public class OfferContent {
      */
     @JsonProperty("contractBonusInfo")
     public ContractBonusInfo contractBonusInfo;
+
     public OfferContent withContractBonusInfo(ContractBonusInfo contractBonusInfo) {
         this.contractBonusInfo = contractBonusInfo;
         return this;
@@ -34,6 +36,7 @@ public class OfferContent {
      */
     @JsonProperty("contractClickInfo")
     public ContractClickInfo contractClickInfo;
+
     public OfferContent withContractClickInfo(ContractClickInfo contractClickInfo) {
         this.contractClickInfo = contractClickInfo;
         return this;
@@ -44,6 +47,7 @@ public class OfferContent {
      */
     @JsonProperty("contractCommitmentInfo")
     public ContractCommitmentInfo contractCommitmentInfo;
+
     public OfferContent withContractCommitmentInfo(ContractCommitmentInfo contractCommitmentInfo) {
         this.contractCommitmentInfo = contractCommitmentInfo;
         return this;
@@ -54,6 +58,7 @@ public class OfferContent {
      */
     @JsonProperty("contractDiscountInfo")
     public ContractDiscountInfo contractDiscountInfo;
+
     public OfferContent withContractDiscountInfo(ContractDiscountInfo contractDiscountInfo) {
         this.contractDiscountInfo = contractDiscountInfo;
         return this;
@@ -64,6 +69,7 @@ public class OfferContent {
      */
     @JsonProperty("contractMoneyInfo")
     public ContractMoneyInfo contractMoneyInfo;
+
     public OfferContent withContractMoneyInfo(ContractMoneyInfo contractMoneyInfo) {
         this.contractMoneyInfo = contractMoneyInfo;
         return this;
@@ -74,6 +80,7 @@ public class OfferContent {
      */
     @JsonProperty("contractStoreInfo")
     public ContractStoreInfo contractStoreInfo;
+
     public OfferContent withContractStoreInfo(ContractStoreInfo contractStoreInfo) {
         this.contractStoreInfo = contractStoreInfo;
         return this;
@@ -85,6 +92,7 @@ public class OfferContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contractTerminationReason")
     public String contractTerminationReason;
+
     public OfferContent withContractTerminationReason(String contractTerminationReason) {
         this.contractTerminationReason = contractTerminationReason;
         return this;
@@ -96,6 +104,7 @@ public class OfferContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contractTerminationReasonType")
     public Integer contractTerminationReasonType;
+
     public OfferContent withContractTerminationReasonType(Integer contractTerminationReasonType) {
         this.contractTerminationReasonType = contractTerminationReasonType;
         return this;
@@ -106,6 +115,7 @@ public class OfferContent {
      */
     @JsonProperty("notifyVatExemption")
     public Boolean notifyVatExemption;
+
     public OfferContent withNotifyVatExemption(Boolean notifyVatExemption) {
         this.notifyVatExemption = notifyVatExemption;
         return this;
@@ -116,9 +126,21 @@ public class OfferContent {
      */
     @JsonProperty("previousFixPeriodInvoiceProrataInfo")
     public PreviousFixPeriodInvoiceProrataInfo previousFixPeriodInvoiceProrataInfo;
+
     public OfferContent withPreviousFixPeriodInvoiceProrataInfo(PreviousFixPeriodInvoiceProrataInfo previousFixPeriodInvoiceProrataInfo) {
         this.previousFixPeriodInvoiceProrataInfo = previousFixPeriodInvoiceProrataInfo;
         return this;
     }
     
+    public OfferContent(@JsonProperty("contractBillingPeriodInfo") ContractBillingPeriodInfo contractBillingPeriodInfo, @JsonProperty("contractBonusInfo") ContractBonusInfo contractBonusInfo, @JsonProperty("contractClickInfo") ContractClickInfo contractClickInfo, @JsonProperty("contractCommitmentInfo") ContractCommitmentInfo contractCommitmentInfo, @JsonProperty("contractDiscountInfo") ContractDiscountInfo contractDiscountInfo, @JsonProperty("contractMoneyInfo") ContractMoneyInfo contractMoneyInfo, @JsonProperty("contractStoreInfo") ContractStoreInfo contractStoreInfo, @JsonProperty("notifyVatExemption") Boolean notifyVatExemption, @JsonProperty("previousFixPeriodInvoiceProrataInfo") PreviousFixPeriodInvoiceProrataInfo previousFixPeriodInvoiceProrataInfo) {
+        this.contractBillingPeriodInfo = contractBillingPeriodInfo;
+        this.contractBonusInfo = contractBonusInfo;
+        this.contractClickInfo = contractClickInfo;
+        this.contractCommitmentInfo = contractCommitmentInfo;
+        this.contractDiscountInfo = contractDiscountInfo;
+        this.contractMoneyInfo = contractMoneyInfo;
+        this.contractStoreInfo = contractStoreInfo;
+        this.notifyVatExemption = notifyVatExemption;
+        this.previousFixPeriodInvoiceProrataInfo = previousFixPeriodInvoiceProrataInfo;
+  }
 }

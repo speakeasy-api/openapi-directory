@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSubscriptionResponse {
     
     public String contentType;
+
     public DeleteSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSubscriptionResponse {
      */
     
     public java.util.Map<String, Object> deleteSubscriptionResponse;
+
     public DeleteSubscriptionResponse withDeleteSubscriptionResponse(java.util.Map<String, Object> deleteSubscriptionResponse) {
         this.deleteSubscriptionResponse = deleteSubscriptionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSubscriptionResponse {
      */
     
     public Object internalErrorException;
+
     public DeleteSubscriptionResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSubscriptionResponse {
      */
     
     public Object lockedSubscriptionException;
+
     public DeleteSubscriptionResponse withLockedSubscriptionException(Object lockedSubscriptionException) {
         this.lockedSubscriptionException = lockedSubscriptionException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public DeleteSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteSubscriptionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSubscriptionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

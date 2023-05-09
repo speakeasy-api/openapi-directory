@@ -12,6 +12,7 @@ public class ListProfilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListProfilesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListProfilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListProfilesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListProfilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfileType")
     public ProfileTypeEnum profileType;
+
     public ListProfilesRequest withProfileType(ProfileTypeEnum profileType) {
         this.profileType = profileType;
         return this;
     }
     
+    public ListProfilesRequest(){}
 }

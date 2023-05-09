@@ -18,6 +18,7 @@ public class GoogleSecuritySafebrowsingV4ThreatHitThreatSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referrer")
     public String referrer;
+
     public GoogleSecuritySafebrowsingV4ThreatHitThreatSource withReferrer(String referrer) {
         this.referrer = referrer;
         return this;
@@ -29,6 +30,7 @@ public class GoogleSecuritySafebrowsingV4ThreatHitThreatSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteIp")
     public String remoteIp;
+
     public GoogleSecuritySafebrowsingV4ThreatHitThreatSource withRemoteIp(String remoteIp) {
         this.remoteIp = remoteIp;
         return this;
@@ -40,6 +42,7 @@ public class GoogleSecuritySafebrowsingV4ThreatHitThreatSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum type;
+
     public GoogleSecuritySafebrowsingV4ThreatHitThreatSource withType(GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum type) {
         this.type = type;
         return this;
@@ -51,9 +54,11 @@ public class GoogleSecuritySafebrowsingV4ThreatHitThreatSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GoogleSecuritySafebrowsingV4ThreatHitThreatSource withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4ThreatHitThreatSource(){}
 }

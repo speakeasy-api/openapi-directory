@@ -15,9 +15,11 @@ public class IndexingFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedShadowNames")
     public String[] namedShadowNames;
+
     public IndexingFilter withNamedShadowNames(String[] namedShadowNames) {
         this.namedShadowNames = namedShadowNames;
         return this;
     }
     
+    public IndexingFilter(){}
 }

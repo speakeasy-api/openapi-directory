@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyActivityStreamRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyActivityStreamActionEnum action;
+
     public GETModifyActivityStreamRequest withAction(GETModifyActivityStreamActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyActivityStreamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AuditPolicyState")
     public GETModifyActivityStreamAuditPolicyStateEnum auditPolicyState;
+
     public GETModifyActivityStreamRequest withAuditPolicyState(GETModifyActivityStreamAuditPolicyStateEnum auditPolicyState) {
         this.auditPolicyState = auditPolicyState;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyActivityStreamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceArn")
     public String resourceArn;
+
     public GETModifyActivityStreamRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -36,6 +40,7 @@ public class GETModifyActivityStreamRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyActivityStreamVersionEnum version;
+
     public GETModifyActivityStreamRequest withVersion(GETModifyActivityStreamVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETModifyActivityStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyActivityStreamRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETModifyActivityStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyActivityStreamRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETModifyActivityStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyActivityStreamRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETModifyActivityStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyActivityStreamRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETModifyActivityStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyActivityStreamRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETModifyActivityStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyActivityStreamRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,14 @@ public class GETModifyActivityStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyActivityStreamRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyActivityStreamRequest(@JsonProperty("Action") GETModifyActivityStreamActionEnum action, @JsonProperty("Version") GETModifyActivityStreamVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

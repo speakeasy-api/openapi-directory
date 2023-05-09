@@ -14,6 +14,7 @@ public class CreateCollaborationRequestBody {
      */
     @JsonProperty("creatorDisplayName")
     public String creatorDisplayName;
+
     public CreateCollaborationRequestBody withCreatorDisplayName(String creatorDisplayName) {
         this.creatorDisplayName = creatorDisplayName;
         return this;
@@ -24,6 +25,7 @@ public class CreateCollaborationRequestBody {
      */
     @JsonProperty("creatorMemberAbilities")
     public org.openapis.openapi.models.shared.MemberAbilityEnum[] creatorMemberAbilities;
+
     public CreateCollaborationRequestBody withCreatorMemberAbilities(org.openapis.openapi.models.shared.MemberAbilityEnum[] creatorMemberAbilities) {
         this.creatorMemberAbilities = creatorMemberAbilities;
         return this;
@@ -35,6 +37,7 @@ public class CreateCollaborationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataEncryptionMetadata")
     public CreateCollaborationRequestBodyDataEncryptionMetadata dataEncryptionMetadata;
+
     public CreateCollaborationRequestBody withDataEncryptionMetadata(CreateCollaborationRequestBodyDataEncryptionMetadata dataEncryptionMetadata) {
         this.dataEncryptionMetadata = dataEncryptionMetadata;
         return this;
@@ -45,6 +48,7 @@ public class CreateCollaborationRequestBody {
      */
     @JsonProperty("description")
     public String description;
+
     public CreateCollaborationRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -55,6 +59,7 @@ public class CreateCollaborationRequestBody {
      */
     @JsonProperty("members")
     public org.openapis.openapi.models.shared.MemberSpecification[] members;
+
     public CreateCollaborationRequestBody withMembers(org.openapis.openapi.models.shared.MemberSpecification[] members) {
         this.members = members;
         return this;
@@ -65,6 +70,7 @@ public class CreateCollaborationRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateCollaborationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +81,7 @@ public class CreateCollaborationRequestBody {
      */
     @JsonProperty("queryLogStatus")
     public CreateCollaborationRequestBodyQueryLogStatusEnum queryLogStatus;
+
     public CreateCollaborationRequestBody withQueryLogStatus(CreateCollaborationRequestBodyQueryLogStatusEnum queryLogStatus) {
         this.queryLogStatus = queryLogStatus;
         return this;
@@ -86,9 +93,18 @@ public class CreateCollaborationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateCollaborationRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCollaborationRequestBody(@JsonProperty("creatorDisplayName") String creatorDisplayName, @JsonProperty("creatorMemberAbilities") org.openapis.openapi.models.shared.MemberAbilityEnum[] creatorMemberAbilities, @JsonProperty("description") String description, @JsonProperty("members") org.openapis.openapi.models.shared.MemberSpecification[] members, @JsonProperty("name") String name, @JsonProperty("queryLogStatus") CreateCollaborationRequestBodyQueryLogStatusEnum queryLogStatus) {
+        this.creatorDisplayName = creatorDisplayName;
+        this.creatorMemberAbilities = creatorMemberAbilities;
+        this.description = description;
+        this.members = members;
+        this.name = name;
+        this.queryLogStatus = queryLogStatus;
+  }
 }

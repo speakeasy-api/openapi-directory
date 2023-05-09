@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SetStackPolicyInput - The input for the &lt;a&gt;SetStackPolicy&lt;/a&gt; action.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SetStackPolicyInput {
     
     public String stackName;
+
     public SetStackPolicyInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -19,6 +20,7 @@ public class SetStackPolicyInput {
     
     
     public String stackPolicyBody;
+
     public SetStackPolicyInput withStackPolicyBody(String stackPolicyBody) {
         this.stackPolicyBody = stackPolicyBody;
         return this;
@@ -26,9 +28,13 @@ public class SetStackPolicyInput {
     
     
     public String stackPolicyURL;
+
     public SetStackPolicyInput withStackPolicyURL(String stackPolicyURL) {
         this.stackPolicyURL = stackPolicyURL;
         return this;
     }
     
+    public SetStackPolicyInput(@JsonProperty("StackName") String stackName) {
+        this.stackName = stackName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMatchmakingConfigurationResponse {
     
     public String contentType;
+
     public DeleteMatchmakingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMatchmakingConfigurationResponse {
      */
     
     public java.util.Map<String, Object> deleteMatchmakingConfigurationOutput;
+
     public DeleteMatchmakingConfigurationResponse withDeleteMatchmakingConfigurationOutput(java.util.Map<String, Object> deleteMatchmakingConfigurationOutput) {
         this.deleteMatchmakingConfigurationOutput = deleteMatchmakingConfigurationOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMatchmakingConfigurationResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteMatchmakingConfigurationResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMatchmakingConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteMatchmakingConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteMatchmakingConfigurationResponse {
      */
     
     public Object notFoundException;
+
     public DeleteMatchmakingConfigurationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteMatchmakingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteMatchmakingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteMatchmakingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMatchmakingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteMatchmakingConfigurationResponse {
      */
     
     public Object taggingFailedException;
+
     public DeleteMatchmakingConfigurationResponse withTaggingFailedException(Object taggingFailedException) {
         this.taggingFailedException = taggingFailedException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteMatchmakingConfigurationResponse {
      */
     
     public Object unsupportedRegionException;
+
     public DeleteMatchmakingConfigurationResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public DeleteMatchmakingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

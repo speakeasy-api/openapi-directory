@@ -18,6 +18,7 @@ public class AchievementSetStepsAtLeastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentSteps")
     public Integer currentSteps;
+
     public AchievementSetStepsAtLeastResponse withCurrentSteps(Integer currentSteps) {
         this.currentSteps = currentSteps;
         return this;
@@ -29,6 +30,7 @@ public class AchievementSetStepsAtLeastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AchievementSetStepsAtLeastResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class AchievementSetStepsAtLeastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newlyUnlocked")
     public Boolean newlyUnlocked;
+
     public AchievementSetStepsAtLeastResponse withNewlyUnlocked(Boolean newlyUnlocked) {
         this.newlyUnlocked = newlyUnlocked;
         return this;
     }
     
+    public AchievementSetStepsAtLeastResponse(){}
 }

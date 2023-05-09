@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestnetSendTokenResponse {
     
     public String contentType;
+
     public TestnetSendTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TestnetSendTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public TestnetSendTokenResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class TestnetSendTokenResponse {
     
     
     public Integer statusCode;
+
     public TestnetSendTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class TestnetSendTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestnetSendTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class TestnetSendTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.SendTokenResponse sendTokenResponse;
+
     public TestnetSendTokenResponse withSendTokenResponse(org.openapis.openapi.models.shared.SendTokenResponse sendTokenResponse) {
         this.sendTokenResponse = sendTokenResponse;
         return this;
     }
     
+    public TestnetSendTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

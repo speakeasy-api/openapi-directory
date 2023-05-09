@@ -18,6 +18,7 @@ public class OSPolicyInventoryFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osShortName")
     public String osShortName;
+
     public OSPolicyInventoryFilter withOsShortName(String osShortName) {
         this.osShortName = osShortName;
         return this;
@@ -29,9 +30,11 @@ public class OSPolicyInventoryFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osVersion")
     public String osVersion;
+
     public OSPolicyInventoryFilter withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
     }
     
+    public OSPolicyInventoryFilter(){}
 }

@@ -61,11 +61,9 @@ public class Metrics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGamePPAResponse res = new org.openapis.openapi.models.operations.GetGamePPAResponse() {{
+        org.openapis.openapi.models.operations.GetGamePPAResponse res = new org.openapis.openapi.models.operations.GetGamePPAResponse(contentType, httpRes.statusCode()) {{
             gamePPAS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Metrics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPlayerGamePPAResponse res = new org.openapis.openapi.models.operations.GetPlayerGamePPAResponse() {{
+        org.openapis.openapi.models.operations.GetPlayerGamePPAResponse res = new org.openapis.openapi.models.operations.GetPlayerGamePPAResponse(contentType, httpRes.statusCode()) {{
             playerGamePPAS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class Metrics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPlayerSeasonPPAResponse res = new org.openapis.openapi.models.operations.GetPlayerSeasonPPAResponse() {{
+        org.openapis.openapi.models.operations.GetPlayerSeasonPPAResponse res = new org.openapis.openapi.models.operations.GetPlayerSeasonPPAResponse(contentType, httpRes.statusCode()) {{
             playerSeasonPPAS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,11 +199,9 @@ public class Metrics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPredictedPointsResponse res = new org.openapis.openapi.models.operations.GetPredictedPointsResponse() {{
+        org.openapis.openapi.models.operations.GetPredictedPointsResponse res = new org.openapis.openapi.models.operations.GetPredictedPointsResponse(contentType, httpRes.statusCode()) {{
             predictedPoints = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,11 +245,9 @@ public class Metrics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPregameWinProbabilitiesResponse res = new org.openapis.openapi.models.operations.GetPregameWinProbabilitiesResponse() {{
+        org.openapis.openapi.models.operations.GetPregameWinProbabilitiesResponse res = new org.openapis.openapi.models.operations.GetPregameWinProbabilitiesResponse(contentType, httpRes.statusCode()) {{
             pregameWPS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -301,11 +291,9 @@ public class Metrics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamPPAResponse res = new org.openapis.openapi.models.operations.GetTeamPPAResponse() {{
+        org.openapis.openapi.models.operations.GetTeamPPAResponse res = new org.openapis.openapi.models.operations.GetTeamPPAResponse(contentType, httpRes.statusCode()) {{
             teamPPAS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -349,11 +337,9 @@ public class Metrics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWinProbabilityDataResponse res = new org.openapis.openapi.models.operations.GetWinProbabilityDataResponse() {{
+        org.openapis.openapi.models.operations.GetWinProbabilityDataResponse res = new org.openapis.openapi.models.operations.GetWinProbabilityDataResponse(contentType, httpRes.statusCode()) {{
             playWPS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class Voice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalLanguageCodes")
     public LanguageCodeEnum[] additionalLanguageCodes;
+
     public Voice withAdditionalLanguageCodes(LanguageCodeEnum[] additionalLanguageCodes) {
         this.additionalLanguageCodes = additionalLanguageCodes;
         return this;
@@ -23,6 +24,7 @@ public class Voice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gender")
     public GenderEnum gender;
+
     public Voice withGender(GenderEnum gender) {
         this.gender = gender;
         return this;
@@ -31,6 +33,7 @@ public class Voice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public VoiceIdEnum id;
+
     public Voice withId(VoiceIdEnum id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class Voice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public Voice withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -47,6 +51,7 @@ public class Voice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageName")
     public String languageName;
+
     public Voice withLanguageName(String languageName) {
         this.languageName = languageName;
         return this;
@@ -55,6 +60,7 @@ public class Voice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Voice withName(String name) {
         this.name = name;
         return this;
@@ -63,9 +69,11 @@ public class Voice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedEngines")
     public EngineEnum[] supportedEngines;
+
     public Voice withSupportedEngines(EngineEnum[] supportedEngines) {
         this.supportedEngines = supportedEngines;
         return this;
     }
     
+    public Voice(){}
 }

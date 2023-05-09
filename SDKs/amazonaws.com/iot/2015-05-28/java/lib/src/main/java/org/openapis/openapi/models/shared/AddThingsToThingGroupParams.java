@@ -15,6 +15,7 @@ public class AddThingsToThingGroupParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideDynamicGroups")
     public Boolean overrideDynamicGroups;
+
     public AddThingsToThingGroupParams withOverrideDynamicGroups(Boolean overrideDynamicGroups) {
         this.overrideDynamicGroups = overrideDynamicGroups;
         return this;
@@ -22,9 +23,13 @@ public class AddThingsToThingGroupParams {
     
     @JsonProperty("thingGroupNames")
     public String[] thingGroupNames;
+
     public AddThingsToThingGroupParams withThingGroupNames(String[] thingGroupNames) {
         this.thingGroupNames = thingGroupNames;
         return this;
     }
     
+    public AddThingsToThingGroupParams(@JsonProperty("thingGroupNames") String[] thingGroupNames) {
+        this.thingGroupNames = thingGroupNames;
+  }
 }

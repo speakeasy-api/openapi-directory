@@ -20,6 +20,7 @@ public class CreateSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public String[] documents;
+
     public CreateSearchRequest withDocuments(String[] documents) {
         this.documents = documents;
         return this;
@@ -34,6 +35,7 @@ public class CreateSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public String file;
+
     public CreateSearchRequest withFile(String file) {
         this.file = file;
         return this;
@@ -48,6 +50,7 @@ public class CreateSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_rerank")
     public Long maxRerank;
+
     public CreateSearchRequest withMaxRerank(Long maxRerank) {
         this.maxRerank = maxRerank;
         return this;
@@ -58,6 +61,7 @@ public class CreateSearchRequest {
      */
     @JsonProperty("query")
     public String query;
+
     public CreateSearchRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -72,6 +76,7 @@ public class CreateSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_metadata")
     public Boolean returnMetadata;
+
     public CreateSearchRequest withReturnMetadata(Boolean returnMetadata) {
         this.returnMetadata = returnMetadata;
         return this;
@@ -84,9 +89,13 @@ public class CreateSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public CreateSearchRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public CreateSearchRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

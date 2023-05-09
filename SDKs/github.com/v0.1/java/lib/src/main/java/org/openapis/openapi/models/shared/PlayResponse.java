@@ -15,6 +15,7 @@ public class PlayResponse {
      */
     @JsonProperty("Message")
     public PlayResponseMessageEnum message;
+
     public PlayResponse withMessage(PlayResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,9 +26,14 @@ public class PlayResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public PlayResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public PlayResponse(@JsonProperty("Message") PlayResponseMessageEnum message, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.success = success;
+  }
 }

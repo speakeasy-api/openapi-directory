@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class CompanyMonitorRegisterRequestBody {
      */
     @SpeakeasyMetadata("form:name=callbackUrl")
     public String callbackUrl;
+
     public CompanyMonitorRegisterRequestBody withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -25,9 +27,14 @@ public class CompanyMonitorRegisterRequestBody {
      */
     @SpeakeasyMetadata("form:name=changeType")
     public String changeType;
+
     public CompanyMonitorRegisterRequestBody withChangeType(String changeType) {
         this.changeType = changeType;
         return this;
     }
     
+    public CompanyMonitorRegisterRequestBody(@JsonProperty("callbackUrl") String callbackUrl, @JsonProperty("changeType") String changeType) {
+        this.callbackUrl = callbackUrl;
+        this.changeType = changeType;
+  }
 }

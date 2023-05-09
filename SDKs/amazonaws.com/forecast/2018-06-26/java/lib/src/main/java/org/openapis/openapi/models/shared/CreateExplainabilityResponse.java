@@ -15,9 +15,11 @@ public class CreateExplainabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainabilityArn")
     public String explainabilityArn;
+
     public CreateExplainabilityResponse withExplainabilityArn(String explainabilityArn) {
         this.explainabilityArn = explainabilityArn;
         return this;
     }
     
+    public CreateExplainabilityResponse(){}
 }

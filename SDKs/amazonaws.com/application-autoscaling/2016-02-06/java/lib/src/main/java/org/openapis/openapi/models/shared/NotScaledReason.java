@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NotScaledReason {
     @JsonProperty("Code")
     public String code;
+
     public NotScaledReason withCode(String code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class NotScaledReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentCapacity")
     public Long currentCapacity;
+
     public NotScaledReason withCurrentCapacity(Long currentCapacity) {
         this.currentCapacity = currentCapacity;
         return this;
@@ -30,6 +32,7 @@ public class NotScaledReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCapacity")
     public Long maxCapacity;
+
     public NotScaledReason withMaxCapacity(Long maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -38,9 +41,13 @@ public class NotScaledReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinCapacity")
     public Long minCapacity;
+
     public NotScaledReason withMinCapacity(Long minCapacity) {
         this.minCapacity = minCapacity;
         return this;
     }
     
+    public NotScaledReason(@JsonProperty("Code") String code) {
+        this.code = code;
+  }
 }

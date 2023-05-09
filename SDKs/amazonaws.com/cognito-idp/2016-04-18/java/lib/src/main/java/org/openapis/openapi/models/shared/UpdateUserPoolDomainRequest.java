@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateUserPoolDomainRequest {
     @JsonProperty("CustomDomainConfig")
     public CustomDomainConfigType customDomainConfig;
+
     public UpdateUserPoolDomainRequest withCustomDomainConfig(CustomDomainConfigType customDomainConfig) {
         this.customDomainConfig = customDomainConfig;
         return this;
@@ -19,6 +20,7 @@ public class UpdateUserPoolDomainRequest {
     
     @JsonProperty("Domain")
     public String domain;
+
     public UpdateUserPoolDomainRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -26,9 +28,15 @@ public class UpdateUserPoolDomainRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public UpdateUserPoolDomainRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public UpdateUserPoolDomainRequest(@JsonProperty("CustomDomainConfig") CustomDomainConfigType customDomainConfig, @JsonProperty("Domain") String domain, @JsonProperty("UserPoolId") String userPoolId) {
+        this.customDomainConfig = customDomainConfig;
+        this.domain = domain;
+        this.userPoolId = userPoolId;
+  }
 }

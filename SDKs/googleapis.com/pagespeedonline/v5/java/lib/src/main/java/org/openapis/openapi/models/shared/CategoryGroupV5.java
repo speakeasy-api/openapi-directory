@@ -18,6 +18,7 @@ public class CategoryGroupV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CategoryGroupV5 withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class CategoryGroupV5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public CategoryGroupV5 withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CategoryGroupV5(){}
 }

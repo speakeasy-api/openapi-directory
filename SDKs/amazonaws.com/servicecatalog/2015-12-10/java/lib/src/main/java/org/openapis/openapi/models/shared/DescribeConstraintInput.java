@@ -12,6 +12,7 @@ public class DescribeConstraintInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DescribeConstraintInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +20,13 @@ public class DescribeConstraintInput {
     
     @JsonProperty("Id")
     public String id;
+
     public DescribeConstraintInput withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DescribeConstraintInput(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

@@ -15,6 +15,7 @@ public class ServiceAttachmentConsumerProjectLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionLimit")
     public Long connectionLimit;
+
     public ServiceAttachmentConsumerProjectLimit withConnectionLimit(Long connectionLimit) {
         this.connectionLimit = connectionLimit;
         return this;
@@ -26,6 +27,7 @@ public class ServiceAttachmentConsumerProjectLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkUrl")
     public String networkUrl;
+
     public ServiceAttachmentConsumerProjectLimit withNetworkUrl(String networkUrl) {
         this.networkUrl = networkUrl;
         return this;
@@ -37,9 +39,11 @@ public class ServiceAttachmentConsumerProjectLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectIdOrNum")
     public String projectIdOrNum;
+
     public ServiceAttachmentConsumerProjectLimit withProjectIdOrNum(String projectIdOrNum) {
         this.projectIdOrNum = projectIdOrNum;
         return this;
     }
     
+    public ServiceAttachmentConsumerProjectLimit(){}
 }

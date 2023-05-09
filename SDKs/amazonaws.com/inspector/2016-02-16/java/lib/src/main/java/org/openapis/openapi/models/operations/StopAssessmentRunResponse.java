@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopAssessmentRunResponse {
@@ -12,6 +13,7 @@ public class StopAssessmentRunResponse {
      */
     
     public Object accessDeniedException;
+
     public StopAssessmentRunResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StopAssessmentRunResponse {
     
     
     public String contentType;
+
     public StopAssessmentRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopAssessmentRunResponse {
      */
     
     public Object internalException;
+
     public StopAssessmentRunResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class StopAssessmentRunResponse {
      */
     
     public Object invalidInputException;
+
     public StopAssessmentRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class StopAssessmentRunResponse {
      */
     
     public Object noSuchEntityException;
+
     public StopAssessmentRunResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -59,6 +65,7 @@ public class StopAssessmentRunResponse {
      */
     
     public Object serviceTemporarilyUnavailableException;
+
     public StopAssessmentRunResponse withServiceTemporarilyUnavailableException(Object serviceTemporarilyUnavailableException) {
         this.serviceTemporarilyUnavailableException = serviceTemporarilyUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class StopAssessmentRunResponse {
     
     
     public Integer statusCode;
+
     public StopAssessmentRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class StopAssessmentRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopAssessmentRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StopAssessmentRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

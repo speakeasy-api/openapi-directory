@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SendMessageBatchRequest - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SendMessageBatchRequest {
     
     public SendMessageBatchRequestEntryList[] entries;
+
     public SendMessageBatchRequest withEntries(SendMessageBatchRequestEntryList[] entries) {
         this.entries = entries;
         return this;
@@ -19,9 +20,14 @@ public class SendMessageBatchRequest {
     
     
     public String queueUrl;
+
     public SendMessageBatchRequest withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
     }
     
+    public SendMessageBatchRequest(@JsonProperty("Entries") SendMessageBatchRequestEntryList[] entries, @JsonProperty("QueueUrl") String queueUrl) {
+        this.entries = entries;
+        this.queueUrl = queueUrl;
+  }
 }

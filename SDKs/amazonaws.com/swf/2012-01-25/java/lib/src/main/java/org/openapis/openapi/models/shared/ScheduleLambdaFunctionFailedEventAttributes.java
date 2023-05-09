@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScheduleLambdaFunctionFailedEventAttributes {
     @JsonProperty("cause")
     public ScheduleLambdaFunctionFailedCauseEnum cause;
+
     public ScheduleLambdaFunctionFailedEventAttributes withCause(ScheduleLambdaFunctionFailedCauseEnum cause) {
         this.cause = cause;
         return this;
@@ -19,6 +20,7 @@ public class ScheduleLambdaFunctionFailedEventAttributes {
     
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public ScheduleLambdaFunctionFailedEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
@@ -26,6 +28,7 @@ public class ScheduleLambdaFunctionFailedEventAttributes {
     
     @JsonProperty("id")
     public String id;
+
     public ScheduleLambdaFunctionFailedEventAttributes withId(String id) {
         this.id = id;
         return this;
@@ -33,9 +36,16 @@ public class ScheduleLambdaFunctionFailedEventAttributes {
     
     @JsonProperty("name")
     public String name;
+
     public ScheduleLambdaFunctionFailedEventAttributes withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ScheduleLambdaFunctionFailedEventAttributes(@JsonProperty("cause") ScheduleLambdaFunctionFailedCauseEnum cause, @JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.cause = cause;
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+        this.id = id;
+        this.name = name;
+  }
 }

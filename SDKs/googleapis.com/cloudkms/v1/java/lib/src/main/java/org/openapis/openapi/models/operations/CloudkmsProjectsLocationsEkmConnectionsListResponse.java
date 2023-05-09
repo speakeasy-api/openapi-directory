@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudkmsProjectsLocationsEkmConnectionsListResponse {
     
     public String contentType;
+
     public CloudkmsProjectsLocationsEkmConnectionsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudkmsProjectsLocationsEkmConnectionsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEkmConnectionsResponse listEkmConnectionsResponse;
+
     public CloudkmsProjectsLocationsEkmConnectionsListResponse withListEkmConnectionsResponse(org.openapis.openapi.models.shared.ListEkmConnectionsResponse listEkmConnectionsResponse) {
         this.listEkmConnectionsResponse = listEkmConnectionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudkmsProjectsLocationsEkmConnectionsListResponse {
     
     
     public Integer statusCode;
+
     public CloudkmsProjectsLocationsEkmConnectionsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudkmsProjectsLocationsEkmConnectionsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudkmsProjectsLocationsEkmConnectionsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudkmsProjectsLocationsEkmConnectionsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

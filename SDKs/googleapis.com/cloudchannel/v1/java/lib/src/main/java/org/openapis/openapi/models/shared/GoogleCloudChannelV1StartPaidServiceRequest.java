@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1StartPaidServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleCloudChannelV1StartPaidServiceRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GoogleCloudChannelV1StartPaidServiceRequest(){}
 }

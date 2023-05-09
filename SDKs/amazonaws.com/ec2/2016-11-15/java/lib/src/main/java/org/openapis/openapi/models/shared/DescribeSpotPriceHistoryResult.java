@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotPriceHistoryResult {
     
     public String nextToken;
+
     public DescribeSpotPriceHistoryResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSpotPriceHistoryResult {
     
     
     public DescribeSpotPriceHistoryResultSpotPriceHistory[] spotPriceHistory;
+
     public DescribeSpotPriceHistoryResult withSpotPriceHistory(DescribeSpotPriceHistoryResultSpotPriceHistory[] spotPriceHistory) {
         this.spotPriceHistory = spotPriceHistory;
         return this;
     }
     
+    public DescribeSpotPriceHistoryResult(){}
 }

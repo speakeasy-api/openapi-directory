@@ -15,6 +15,7 @@ public class ReviewReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReviewActions")
     public ReviewActionDetail[] reviewActions;
+
     public ReviewReport withReviewActions(ReviewActionDetail[] reviewActions) {
         this.reviewActions = reviewActions;
         return this;
@@ -23,9 +24,11 @@ public class ReviewReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReviewResults")
     public ReviewResultDetail[] reviewResults;
+
     public ReviewReport withReviewResults(ReviewResultDetail[] reviewResults) {
         this.reviewResults = reviewResults;
         return this;
     }
     
+    public ReviewReport(){}
 }

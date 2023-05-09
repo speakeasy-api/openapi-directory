@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersUseridLinkSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String clientAccessToken;
+
     public PostUsersUseridLinkSecurity withClientAccessToken(String clientAccessToken) {
         this.clientAccessToken = clientAccessToken;
         return this;
     }
     
+    public PostUsersUseridLinkSecurity(@JsonProperty("ClientAccessToken") String clientAccessToken) {
+        this.clientAccessToken = clientAccessToken;
+  }
 }

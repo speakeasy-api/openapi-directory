@@ -15,6 +15,7 @@ public class GetAccessTokensResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active_count")
     public Double activeCount;
+
     public GetAccessTokensResponse withActiveCount(Double activeCount) {
         this.activeCount = activeCount;
         return this;
@@ -23,6 +24,7 @@ public class GetAccessTokensResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Double count;
+
     public GetAccessTokensResponse withCount(Double count) {
         this.count = count;
         return this;
@@ -31,6 +33,7 @@ public class GetAccessTokensResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public GetAccessTokensResponse withNext(String next) {
         this.next = next;
         return this;
@@ -39,6 +42,7 @@ public class GetAccessTokensResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public GetAccessTokensResponse withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -47,9 +51,11 @@ public class GetAccessTokensResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GetAccessTokensResponseResults[] results;
+
     public GetAccessTokensResponse withResults(GetAccessTokensResponseResults[] results) {
         this.results = results;
         return this;
     }
     
+    public GetAccessTokensResponse(){}
 }

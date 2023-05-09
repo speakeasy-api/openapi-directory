@@ -18,6 +18,7 @@ public class PathRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customErrorResponsePolicy")
     public CustomErrorResponsePolicy customErrorResponsePolicy;
+
     public PathRule withCustomErrorResponsePolicy(CustomErrorResponsePolicy customErrorResponsePolicy) {
         this.customErrorResponsePolicy = customErrorResponsePolicy;
         return this;
@@ -29,6 +30,7 @@ public class PathRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paths")
     public String[] paths;
+
     public PathRule withPaths(String[] paths) {
         this.paths = paths;
         return this;
@@ -37,6 +39,7 @@ public class PathRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeAction")
     public HttpRouteAction routeAction;
+
     public PathRule withRouteAction(HttpRouteAction routeAction) {
         this.routeAction = routeAction;
         return this;
@@ -48,6 +51,7 @@ public class PathRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public PathRule withService(String service) {
         this.service = service;
         return this;
@@ -59,9 +63,11 @@ public class PathRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlRedirect")
     public HttpRedirectAction urlRedirect;
+
     public PathRule withUrlRedirect(HttpRedirectAction urlRedirect) {
         this.urlRedirect = urlRedirect;
         return this;
     }
     
+    public PathRule(){}
 }

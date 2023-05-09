@@ -15,6 +15,7 @@ public class PostCalls202ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Call")
     public String call;
+
     public PostCalls202ApplicationJSON withCall(String call) {
         this.call = call;
         return this;
@@ -23,9 +24,11 @@ public class PostCalls202ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public PostCalls202ApplicationJSON withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public PostCalls202ApplicationJSON(){}
 }

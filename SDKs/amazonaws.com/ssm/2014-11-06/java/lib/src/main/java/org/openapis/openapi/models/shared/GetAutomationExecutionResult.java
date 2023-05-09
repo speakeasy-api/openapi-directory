@@ -15,9 +15,11 @@ public class GetAutomationExecutionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomationExecution")
     public AutomationExecution automationExecution;
+
     public GetAutomationExecutionResult withAutomationExecution(AutomationExecution automationExecution) {
         this.automationExecution = automationExecution;
         return this;
     }
     
+    public GetAutomationExecutionResult(){}
 }

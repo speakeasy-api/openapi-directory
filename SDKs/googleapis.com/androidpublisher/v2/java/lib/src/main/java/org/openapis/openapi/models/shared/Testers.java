@@ -18,9 +18,11 @@ public class Testers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleGroups")
     public String[] googleGroups;
+
     public Testers withGoogleGroups(String[] googleGroups) {
         this.googleGroups = googleGroups;
         return this;
     }
     
+    public Testers(){}
 }

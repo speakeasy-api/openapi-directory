@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDetectMitigationActionsExecutionsResponse {
     
     public String contentType;
+
     public ListDetectMitigationActionsExecutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDetectMitigationActionsExecutionsResponse {
      */
     
     public Object internalFailureException;
+
     public ListDetectMitigationActionsExecutionsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListDetectMitigationActionsExecutionsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDetectMitigationActionsExecutionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListDetectMitigationActionsExecutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDetectMitigationActionsExecutionsResponse listDetectMitigationActionsExecutionsResponse;
+
     public ListDetectMitigationActionsExecutionsResponse withListDetectMitigationActionsExecutionsResponse(org.openapis.openapi.models.shared.ListDetectMitigationActionsExecutionsResponse listDetectMitigationActionsExecutionsResponse) {
         this.listDetectMitigationActionsExecutionsResponse = listDetectMitigationActionsExecutionsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListDetectMitigationActionsExecutionsResponse {
     
     
     public Integer statusCode;
+
     public ListDetectMitigationActionsExecutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListDetectMitigationActionsExecutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDetectMitigationActionsExecutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListDetectMitigationActionsExecutionsResponse {
      */
     
     public Object throttlingException;
+
     public ListDetectMitigationActionsExecutionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListDetectMitigationActionsExecutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetDelayResponse {
     
     public String contentType;
+
     public SetDelayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SetDelayResponse {
     
     
     public Integer statusCode;
+
     public SetDelayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SetDelayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetDelayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class SetDelayResponse {
      */
     
     public Integer setDelay200ApplicationJSONInt32Integer;
+
     public SetDelayResponse withSetDelay200ApplicationJSONInt32Integer(Integer setDelay200ApplicationJSONInt32Integer) {
         this.setDelay200ApplicationJSONInt32Integer = setDelay200ApplicationJSONInt32Integer;
         return this;
     }
     
+    public SetDelayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

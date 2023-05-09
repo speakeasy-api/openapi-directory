@@ -18,9 +18,11 @@ public class UserBlogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public UserBlogs withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public UserBlogs(){}
 }

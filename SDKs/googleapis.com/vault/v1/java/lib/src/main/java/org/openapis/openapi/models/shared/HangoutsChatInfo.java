@@ -18,9 +18,11 @@ public class HangoutsChatInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roomId")
     public String[] roomId;
+
     public HangoutsChatInfo withRoomId(String[] roomId) {
         this.roomId = roomId;
         return this;
     }
     
+    public HangoutsChatInfo(){}
 }

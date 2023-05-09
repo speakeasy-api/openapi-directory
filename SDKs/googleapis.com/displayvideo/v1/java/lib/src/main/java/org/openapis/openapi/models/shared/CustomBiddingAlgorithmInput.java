@@ -18,6 +18,7 @@ public class CustomBiddingAlgorithmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public CustomBiddingAlgorithmInput withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -29,6 +30,7 @@ public class CustomBiddingAlgorithmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customBiddingAlgorithmType")
     public CustomBiddingAlgorithmCustomBiddingAlgorithmTypeEnum customBiddingAlgorithmType;
+
     public CustomBiddingAlgorithmInput withCustomBiddingAlgorithmType(CustomBiddingAlgorithmCustomBiddingAlgorithmTypeEnum customBiddingAlgorithmType) {
         this.customBiddingAlgorithmType = customBiddingAlgorithmType;
         return this;
@@ -40,6 +42,7 @@ public class CustomBiddingAlgorithmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CustomBiddingAlgorithmInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class CustomBiddingAlgorithmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityStatus")
     public CustomBiddingAlgorithmEntityStatusEnum entityStatus;
+
     public CustomBiddingAlgorithmInput withEntityStatus(CustomBiddingAlgorithmEntityStatusEnum entityStatus) {
         this.entityStatus = entityStatus;
         return this;
@@ -62,6 +66,7 @@ public class CustomBiddingAlgorithmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerId")
     public String partnerId;
+
     public CustomBiddingAlgorithmInput withPartnerId(String partnerId) {
         this.partnerId = partnerId;
         return this;
@@ -73,9 +78,11 @@ public class CustomBiddingAlgorithmInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedAdvertiserIds")
     public String[] sharedAdvertiserIds;
+
     public CustomBiddingAlgorithmInput withSharedAdvertiserIds(String[] sharedAdvertiserIds) {
         this.sharedAdvertiserIds = sharedAdvertiserIds;
         return this;
     }
     
+    public CustomBiddingAlgorithmInput(){}
 }

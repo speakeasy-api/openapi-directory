@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetLineageGroupPolicyRequest {
     @JsonProperty("LineageGroupName")
     public String lineageGroupName;
+
     public GetLineageGroupPolicyRequest withLineageGroupName(String lineageGroupName) {
         this.lineageGroupName = lineageGroupName;
         return this;
     }
     
+    public GetLineageGroupPolicyRequest(@JsonProperty("LineageGroupName") String lineageGroupName) {
+        this.lineageGroupName = lineageGroupName;
+  }
 }

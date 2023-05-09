@@ -18,6 +18,7 @@ public class OrderReturn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_amounts")
     public OrderMoneyAmounts returnAmounts;
+
     public OrderReturn withReturnAmounts(OrderMoneyAmounts returnAmounts) {
         this.returnAmounts = returnAmounts;
         return this;
@@ -31,6 +32,7 @@ public class OrderReturn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_discounts")
     public OrderReturnDiscount[] returnDiscounts;
+
     public OrderReturn withReturnDiscounts(OrderReturnDiscount[] returnDiscounts) {
         this.returnDiscounts = returnDiscounts;
         return this;
@@ -42,6 +44,7 @@ public class OrderReturn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_line_items")
     public OrderReturnLineItem[] returnLineItems;
+
     public OrderReturn withReturnLineItems(OrderReturnLineItem[] returnLineItems) {
         this.returnLineItems = returnLineItems;
         return this;
@@ -53,6 +56,7 @@ public class OrderReturn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_service_charges")
     public OrderReturnServiceCharge[] returnServiceCharges;
+
     public OrderReturn withReturnServiceCharges(OrderReturnServiceCharge[] returnServiceCharges) {
         this.returnServiceCharges = returnServiceCharges;
         return this;
@@ -66,6 +70,7 @@ public class OrderReturn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_taxes")
     public OrderReturnTax[] returnTaxes;
+
     public OrderReturn withReturnTaxes(OrderReturnTax[] returnTaxes) {
         this.returnTaxes = returnTaxes;
         return this;
@@ -78,6 +83,7 @@ public class OrderReturn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rounding_adjustment")
     public OrderRoundingAdjustment roundingAdjustment;
+
     public OrderReturn withRoundingAdjustment(OrderRoundingAdjustment roundingAdjustment) {
         this.roundingAdjustment = roundingAdjustment;
         return this;
@@ -90,6 +96,7 @@ public class OrderReturn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_order_id")
     public String sourceOrderId;
+
     public OrderReturn withSourceOrderId(String sourceOrderId) {
         this.sourceOrderId = sourceOrderId;
         return this;
@@ -101,9 +108,11 @@ public class OrderReturn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OrderReturn withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OrderReturn(){}
 }

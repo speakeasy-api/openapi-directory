@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMessengerAccountResponse {
@@ -12,6 +13,7 @@ public class UpdateMessengerAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOneResponse fourHundredAndOneResponse;
+
     public UpdateMessengerAccountResponse withFourHundredAndOneResponse(org.openapis.openapi.models.shared.FourHundredAndOneResponse fourHundredAndOneResponse) {
         this.fourHundredAndOneResponse = fourHundredAndOneResponse;
         return this;
@@ -22,6 +24,7 @@ public class UpdateMessengerAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndThreeResponse fourHundredAndThreeResponse;
+
     public UpdateMessengerAccountResponse withFourHundredAndThreeResponse(org.openapis.openapi.models.shared.FourHundredAndThreeResponse fourHundredAndThreeResponse) {
         this.fourHundredAndThreeResponse = fourHundredAndThreeResponse;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMessengerAccountResponse {
     
     
     public String contentType;
+
     public UpdateMessengerAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class UpdateMessengerAccountResponse {
     
     
     public Integer statusCode;
+
     public UpdateMessengerAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateMessengerAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMessengerAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateMessengerAccountResponse {
      */
     
     public UpdateMessengerAccount200ApplicationJSON updateMessengerAccount200ApplicationJSONObject;
+
     public UpdateMessengerAccountResponse withUpdateMessengerAccount200ApplicationJSONObject(UpdateMessengerAccount200ApplicationJSON updateMessengerAccount200ApplicationJSONObject) {
         this.updateMessengerAccount200ApplicationJSONObject = updateMessengerAccount200ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class UpdateMessengerAccountResponse {
      */
     
     public UpdateMessengerAccount400ApplicationJSON updateMessengerAccount400ApplicationJSONObject;
+
     public UpdateMessengerAccountResponse withUpdateMessengerAccount400ApplicationJSONObject(UpdateMessengerAccount400ApplicationJSON updateMessengerAccount400ApplicationJSONObject) {
         this.updateMessengerAccount400ApplicationJSONObject = updateMessengerAccount400ApplicationJSONObject;
         return this;
     }
     
+    public UpdateMessengerAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

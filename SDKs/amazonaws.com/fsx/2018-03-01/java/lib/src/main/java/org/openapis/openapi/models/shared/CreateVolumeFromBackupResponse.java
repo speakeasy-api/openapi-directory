@@ -15,9 +15,11 @@ public class CreateVolumeFromBackupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Volume")
     public Volume volume;
+
     public CreateVolumeFromBackupResponse withVolume(Volume volume) {
         this.volume = volume;
         return this;
     }
     
+    public CreateVolumeFromBackupResponse(){}
 }

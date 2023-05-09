@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OutlierDetection {
     @JsonProperty("baseEjectionDuration")
     public Duration baseEjectionDuration;
+
     public OutlierDetection withBaseEjectionDuration(Duration baseEjectionDuration) {
         this.baseEjectionDuration = baseEjectionDuration;
         return this;
@@ -19,6 +20,7 @@ public class OutlierDetection {
     
     @JsonProperty("interval")
     public Duration interval;
+
     public OutlierDetection withInterval(Duration interval) {
         this.interval = interval;
         return this;
@@ -26,6 +28,7 @@ public class OutlierDetection {
     
     @JsonProperty("maxEjectionPercent")
     public Long maxEjectionPercent;
+
     public OutlierDetection withMaxEjectionPercent(Long maxEjectionPercent) {
         this.maxEjectionPercent = maxEjectionPercent;
         return this;
@@ -33,9 +36,16 @@ public class OutlierDetection {
     
     @JsonProperty("maxServerErrors")
     public Long maxServerErrors;
+
     public OutlierDetection withMaxServerErrors(Long maxServerErrors) {
         this.maxServerErrors = maxServerErrors;
         return this;
     }
     
+    public OutlierDetection(@JsonProperty("baseEjectionDuration") Duration baseEjectionDuration, @JsonProperty("interval") Duration interval, @JsonProperty("maxEjectionPercent") Long maxEjectionPercent, @JsonProperty("maxServerErrors") Long maxServerErrors) {
+        this.baseEjectionDuration = baseEjectionDuration;
+        this.interval = interval;
+        this.maxEjectionPercent = maxEjectionPercent;
+        this.maxServerErrors = maxServerErrors;
+  }
 }

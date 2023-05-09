@@ -59,10 +59,8 @@ public class EventTags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingEventTagsDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingEventTagsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DfareportingEventTagsDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingEventTagsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class EventTags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingEventTagsGetResponse res = new org.openapis.openapi.models.operations.DfareportingEventTagsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingEventTagsGetResponse res = new org.openapis.openapi.models.operations.DfareportingEventTagsGetResponse(contentType, httpRes.statusCode()) {{
             eventTag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class EventTags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingEventTagsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingEventTagsInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingEventTagsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingEventTagsInsertResponse(contentType, httpRes.statusCode()) {{
             eventTag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class EventTags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingEventTagsListResponse res = new org.openapis.openapi.models.operations.DfareportingEventTagsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingEventTagsListResponse res = new org.openapis.openapi.models.operations.DfareportingEventTagsListResponse(contentType, httpRes.statusCode()) {{
             eventTagsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class EventTags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingEventTagsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingEventTagsPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingEventTagsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingEventTagsPatchResponse(contentType, httpRes.statusCode()) {{
             eventTag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class EventTags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingEventTagsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingEventTagsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingEventTagsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingEventTagsUpdateResponse(contentType, httpRes.statusCode()) {{
             eventTag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

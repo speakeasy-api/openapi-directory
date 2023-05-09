@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HeadKeyPKRequest {
@@ -12,9 +13,13 @@ public class HeadKeyPKRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PK")
     public String pk;
+
     public HeadKeyPKRequest withPk(String pk) {
         this.pk = pk;
         return this;
     }
     
+    public HeadKeyPKRequest(@JsonProperty("PK") String pk) {
+        this.pk = pk;
+  }
 }

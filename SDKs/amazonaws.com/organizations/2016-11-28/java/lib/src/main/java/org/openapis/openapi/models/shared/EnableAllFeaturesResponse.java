@@ -15,9 +15,11 @@ public class EnableAllFeaturesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Handshake")
     public Handshake handshake;
+
     public EnableAllFeaturesResponse withHandshake(Handshake handshake) {
         this.handshake = handshake;
         return this;
     }
     
+    public EnableAllFeaturesResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest {
@@ -12,6 +13,7 @@ public class PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest 
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CustomFieldSelectOptionEdit customFieldSelectOptionEdit;
+
     public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withCustomFieldSelectOptionEdit(org.openapis.openapi.models.shared.CustomFieldSelectOptionEdit customFieldSelectOptionEdit) {
         this.customFieldSelectOptionEdit = customFieldSelectOptionEdit;
         return this;
@@ -22,6 +24,7 @@ public class PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=custom_field_select_option_id")
     public Integer customFieldSelectOptionId;
+
     public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withCustomFieldSelectOptionId(Integer customFieldSelectOptionId) {
         this.customFieldSelectOptionId = customFieldSelectOptionId;
         return this;
@@ -42,6 +46,7 @@ public class PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -52,9 +57,17 @@ public class PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest(@JsonProperty("CustomFieldSelectOptionEdit") org.openapis.openapi.models.shared.CustomFieldSelectOptionEdit customFieldSelectOptionEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("custom_field_select_option_id") Integer customFieldSelectOptionId, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.customFieldSelectOptionEdit = customFieldSelectOptionEdit;
+        this.authtoken = authtoken;
+        this.customFieldSelectOptionId = customFieldSelectOptionId;
+        this.id = id;
+        this.login = login;
+  }
 }

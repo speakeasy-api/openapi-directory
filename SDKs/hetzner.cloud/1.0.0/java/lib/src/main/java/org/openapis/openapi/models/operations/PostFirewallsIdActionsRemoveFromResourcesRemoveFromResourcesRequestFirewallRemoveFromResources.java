@@ -15,6 +15,7 @@ public class PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequest
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_selector")
     public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesLabelSelector labelSelector;
+
     public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResources withLabelSelector(PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesLabelSelector labelSelector) {
         this.labelSelector = labelSelector;
         return this;
@@ -26,6 +27,7 @@ public class PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequest
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesServer server;
+
     public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResources withServer(PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesServer server) {
         this.server = server;
         return this;
@@ -37,9 +39,11 @@ public class PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequest
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesTypeEnum type;
+
     public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResources withType(PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResources(){}
 }

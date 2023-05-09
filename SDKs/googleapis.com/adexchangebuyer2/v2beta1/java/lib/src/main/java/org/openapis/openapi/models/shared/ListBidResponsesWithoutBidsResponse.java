@@ -18,6 +18,7 @@ public class ListBidResponsesWithoutBidsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidResponseWithoutBidsStatusRows")
     public BidResponseWithoutBidsStatusRow[] bidResponseWithoutBidsStatusRows;
+
     public ListBidResponsesWithoutBidsResponse withBidResponseWithoutBidsStatusRows(BidResponseWithoutBidsStatusRow[] bidResponseWithoutBidsStatusRows) {
         this.bidResponseWithoutBidsStatusRows = bidResponseWithoutBidsStatusRows;
         return this;
@@ -29,9 +30,11 @@ public class ListBidResponsesWithoutBidsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListBidResponsesWithoutBidsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListBidResponsesWithoutBidsResponse(){}
 }

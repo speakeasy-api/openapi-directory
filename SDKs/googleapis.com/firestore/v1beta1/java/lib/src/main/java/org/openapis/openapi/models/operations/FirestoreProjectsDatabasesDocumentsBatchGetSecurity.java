@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FirestoreProjectsDatabasesDocumentsBatchGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public FirestoreProjectsDatabasesDocumentsBatchGetSecurityOption1 option1;
+
     public FirestoreProjectsDatabasesDocumentsBatchGetSecurity withOption1(FirestoreProjectsDatabasesDocumentsBatchGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class FirestoreProjectsDatabasesDocumentsBatchGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirestoreProjectsDatabasesDocumentsBatchGetSecurityOption2 option2;
+
     public FirestoreProjectsDatabasesDocumentsBatchGetSecurity withOption2(FirestoreProjectsDatabasesDocumentsBatchGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public FirestoreProjectsDatabasesDocumentsBatchGetSecurity(){}
 }

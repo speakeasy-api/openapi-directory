@@ -22,6 +22,7 @@ public class OrderLineItemPricingBlocklists {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blocked_discounts")
     public OrderLineItemPricingBlocklistsBlockedDiscount[] blockedDiscounts;
+
     public OrderLineItemPricingBlocklists withBlockedDiscounts(OrderLineItemPricingBlocklistsBlockedDiscount[] blockedDiscounts) {
         this.blockedDiscounts = blockedDiscounts;
         return this;
@@ -35,9 +36,11 @@ public class OrderLineItemPricingBlocklists {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blocked_taxes")
     public OrderLineItemPricingBlocklistsBlockedTax[] blockedTaxes;
+
     public OrderLineItemPricingBlocklists withBlockedTaxes(OrderLineItemPricingBlocklistsBlockedTax[] blockedTaxes) {
         this.blockedTaxes = blockedTaxes;
         return this;
     }
     
+    public OrderLineItemPricingBlocklists(){}
 }

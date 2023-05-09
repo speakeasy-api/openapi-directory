@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsRaceEthnicityZip5Security {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-KEY")
     public String apiKey;
+
     public UsRaceEthnicityZip5Security withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public UsRaceEthnicityZip5Security(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

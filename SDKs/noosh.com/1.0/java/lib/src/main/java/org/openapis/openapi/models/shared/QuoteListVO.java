@@ -15,6 +15,7 @@ public class QuoteListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public QuoteSimpleVO[] result;
+
     public QuoteListVO withResult(QuoteSimpleVO[] result) {
         this.result = result;
         return this;
@@ -23,6 +24,7 @@ public class QuoteListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public QuoteListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class QuoteListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public QuoteListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public QuoteListVO(){}
 }

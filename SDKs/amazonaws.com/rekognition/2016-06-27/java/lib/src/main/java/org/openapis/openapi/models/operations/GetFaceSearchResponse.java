@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFaceSearchResponse {
@@ -12,6 +13,7 @@ public class GetFaceSearchResponse {
      */
     
     public Object accessDeniedException;
+
     public GetFaceSearchResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetFaceSearchResponse {
     
     
     public String contentType;
+
     public GetFaceSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetFaceSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFaceSearchResponse getFaceSearchResponse;
+
     public GetFaceSearchResponse withGetFaceSearchResponse(org.openapis.openapi.models.shared.GetFaceSearchResponse getFaceSearchResponse) {
         this.getFaceSearchResponse = getFaceSearchResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetFaceSearchResponse {
      */
     
     public Object internalServerError;
+
     public GetFaceSearchResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetFaceSearchResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public GetFaceSearchResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GetFaceSearchResponse {
      */
     
     public Object invalidParameterException;
+
     public GetFaceSearchResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class GetFaceSearchResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetFaceSearchResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -79,6 +87,7 @@ public class GetFaceSearchResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFaceSearchResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class GetFaceSearchResponse {
     
     
     public Integer statusCode;
+
     public GetFaceSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetFaceSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFaceSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetFaceSearchResponse {
      */
     
     public Object throttlingException;
+
     public GetFaceSearchResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetFaceSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

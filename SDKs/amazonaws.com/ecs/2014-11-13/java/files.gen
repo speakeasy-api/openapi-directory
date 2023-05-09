@@ -454,4 +454,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateTaskProtectionRequest
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateTaskSetResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateTaskSetRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

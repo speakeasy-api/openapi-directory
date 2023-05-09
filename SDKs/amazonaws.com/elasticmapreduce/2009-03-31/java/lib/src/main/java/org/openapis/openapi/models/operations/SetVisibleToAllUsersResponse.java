@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetVisibleToAllUsersResponse {
     
     public String contentType;
+
     public SetVisibleToAllUsersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SetVisibleToAllUsersResponse {
      */
     
     public Object internalServerError;
+
     public SetVisibleToAllUsersResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -26,6 +29,7 @@ public class SetVisibleToAllUsersResponse {
     
     
     public Integer statusCode;
+
     public SetVisibleToAllUsersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SetVisibleToAllUsersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetVisibleToAllUsersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SetVisibleToAllUsersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

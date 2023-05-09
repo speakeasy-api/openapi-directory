@@ -18,6 +18,7 @@ public class LinkApplication409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public LinkApplication409ApplicationJSON withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -26,6 +27,7 @@ public class LinkApplication409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public LinkApplication409ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
@@ -34,9 +36,11 @@ public class LinkApplication409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public LinkApplication409ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public LinkApplication409ApplicationJSON(){}
 }

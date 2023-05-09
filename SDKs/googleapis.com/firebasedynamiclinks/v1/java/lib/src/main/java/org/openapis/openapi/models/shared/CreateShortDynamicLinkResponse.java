@@ -18,6 +18,7 @@ public class CreateShortDynamicLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previewLink")
     public String previewLink;
+
     public CreateShortDynamicLinkResponse withPreviewLink(String previewLink) {
         this.previewLink = previewLink;
         return this;
@@ -29,6 +30,7 @@ public class CreateShortDynamicLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortLink")
     public String shortLink;
+
     public CreateShortDynamicLinkResponse withShortLink(String shortLink) {
         this.shortLink = shortLink;
         return this;
@@ -40,9 +42,11 @@ public class CreateShortDynamicLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public DynamicLinkWarning[] warning;
+
     public CreateShortDynamicLinkResponse withWarning(DynamicLinkWarning[] warning) {
         this.warning = warning;
         return this;
     }
     
+    public CreateShortDynamicLinkResponse(){}
 }

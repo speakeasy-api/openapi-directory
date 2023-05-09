@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetInstanceAccessInput {
     @JsonProperty("FleetId")
     public String fleetId;
+
     public GetInstanceAccessInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -16,9 +17,14 @@ public class GetInstanceAccessInput {
     
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public GetInstanceAccessInput withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public GetInstanceAccessInput(@JsonProperty("FleetId") String fleetId, @JsonProperty("InstanceId") String instanceId) {
+        this.fleetId = fleetId;
+        this.instanceId = instanceId;
+  }
 }

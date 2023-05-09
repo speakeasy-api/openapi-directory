@@ -13,14 +13,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ScopeInput {
     /**
+     * If true, all Memberships in the Fleet bind to this Scope.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("allMemberships")
+    public Boolean allMemberships;
+
+    public ScopeInput withAllMemberships(Boolean allMemberships) {
+        this.allMemberships = allMemberships;
+        return this;
+    }
+    
+    /**
      * The resource name for the scope `projects/{project}/locations/{location}/scopes/{scope}`
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ScopeInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ScopeInput(){}
 }

@@ -3,12 +3,11 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.ChromeuxreportRecordsQueryHistoryRecordRequest;
 import org.openapis.openapi.models.operations.ChromeuxreportRecordsQueryHistoryRecordResponse;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.QueryHistoryRequestFormFactorEnum;
 import org.openapis.openapi.models.shared.QueryHistoryRequest;
+import org.openapis.openapi.models.shared.QueryHistoryRequestFormFactorEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -18,9 +17,9 @@ public class Application {
                 .build();
 
             ChromeuxreportRecordsQueryHistoryRecordRequest req = new ChromeuxreportRecordsQueryHistoryRecordRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 queryHistoryRequest = new QueryHistoryRequest() {{
-                    formFactor = "DESKTOP";
+                    formFactor = QueryHistoryRequestFormFactorEnum.DESKTOP;
                     metrics = new String[]{{
                         add("quibusdam"),
                         add("unde"),
@@ -28,9 +27,9 @@ public class Application {
                     }};
                     origin = "corrupti";
                     url = "illum";
-                }};
+                }};;
                 accessToken = "vel";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 callback = "deserunt";
                 fields = "suscipit";
                 key = "iure";
@@ -39,15 +38,17 @@ public class Application {
                 quotaUser = "debitis";
                 uploadType = "ipsa";
                 uploadProtocol = "delectus";
-            }}            
+            }};            
 
             ChromeuxreportRecordsQueryHistoryRecordResponse res = sdk.records.chromeuxreportRecordsQueryHistoryRecord(req);
 
-            if (res.queryHistoryResponse.isPresent()) {
+            if (res.queryHistoryResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

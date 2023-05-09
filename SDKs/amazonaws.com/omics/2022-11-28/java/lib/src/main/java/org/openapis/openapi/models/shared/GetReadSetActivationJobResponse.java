@@ -22,6 +22,7 @@ public class GetReadSetActivationJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completionTime")
     public OffsetDateTime completionTime;
+
     public GetReadSetActivationJobResponse withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -31,6 +32,7 @@ public class GetReadSetActivationJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetReadSetActivationJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class GetReadSetActivationJobResponse {
     
     @JsonProperty("id")
     public String id;
+
     public GetReadSetActivationJobResponse withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class GetReadSetActivationJobResponse {
     
     @JsonProperty("sequenceStoreId")
     public String sequenceStoreId;
+
     public GetReadSetActivationJobResponse withSequenceStoreId(String sequenceStoreId) {
         this.sequenceStoreId = sequenceStoreId;
         return this;
@@ -53,6 +57,7 @@ public class GetReadSetActivationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public ActivateReadSetSourceItem[] sources;
+
     public GetReadSetActivationJobResponse withSources(ActivateReadSetSourceItem[] sources) {
         this.sources = sources;
         return this;
@@ -60,6 +65,7 @@ public class GetReadSetActivationJobResponse {
     
     @JsonProperty("status")
     public ReadSetActivationJobStatusEnum status;
+
     public GetReadSetActivationJobResponse withStatus(ReadSetActivationJobStatusEnum status) {
         this.status = status;
         return this;
@@ -68,9 +74,16 @@ public class GetReadSetActivationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public GetReadSetActivationJobResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public GetReadSetActivationJobResponse(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id, @JsonProperty("sequenceStoreId") String sequenceStoreId, @JsonProperty("status") ReadSetActivationJobStatusEnum status) {
+        this.creationTime = creationTime;
+        this.id = id;
+        this.sequenceStoreId = sequenceStoreId;
+        this.status = status;
+  }
 }

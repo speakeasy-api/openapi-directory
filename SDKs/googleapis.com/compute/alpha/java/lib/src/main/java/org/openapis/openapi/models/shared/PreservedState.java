@@ -18,6 +18,7 @@ public class PreservedState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public java.util.Map<String, PreservedStatePreservedDisk> disks;
+
     public PreservedState withDisks(java.util.Map<String, PreservedStatePreservedDisk> disks) {
         this.disks = disks;
         return this;
@@ -29,6 +30,7 @@ public class PreservedState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIPs")
     public java.util.Map<String, PreservedStatePreservedNetworkIp> externalIPs;
+
     public PreservedState withExternalIPs(java.util.Map<String, PreservedStatePreservedNetworkIp> externalIPs) {
         this.externalIPs = externalIPs;
         return this;
@@ -40,6 +42,7 @@ public class PreservedState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalIPs")
     public java.util.Map<String, PreservedStatePreservedNetworkIp> internalIPs;
+
     public PreservedState withInternalIPs(java.util.Map<String, PreservedStatePreservedNetworkIp> internalIPs) {
         this.internalIPs = internalIPs;
         return this;
@@ -51,9 +54,11 @@ public class PreservedState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public PreservedState withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public PreservedState(){}
 }

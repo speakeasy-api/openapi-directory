@@ -23,6 +23,7 @@ public class PicoChargingHistoryData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public Integer duration;
+
     public PicoChargingHistoryData withDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -34,6 +35,7 @@ public class PicoChargingHistoryData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnergyUsed")
     public Double energyUsed;
+
     public PicoChargingHistoryData withEnergyUsed(Double energyUsed) {
         this.energyUsed = energyUsed;
         return this;
@@ -47,9 +49,20 @@ public class PicoChargingHistoryData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public PicoChargingHistoryData withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TransactionStopReason")
+    public PicoChargingHistoryDataTransactionStopReasonEnum transactionStopReason;
+
+    public PicoChargingHistoryData withTransactionStopReason(PicoChargingHistoryDataTransactionStopReasonEnum transactionStopReason) {
+        this.transactionStopReason = transactionStopReason;
+        return this;
+    }
+    
+    public PicoChargingHistoryData(){}
 }

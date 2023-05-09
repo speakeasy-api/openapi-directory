@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCustomLineItemVersionsResponse {
@@ -12,6 +13,7 @@ public class ListCustomLineItemVersionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListCustomLineItemVersionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListCustomLineItemVersionsResponse {
     
     
     public String contentType;
+
     public ListCustomLineItemVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCustomLineItemVersionsResponse {
      */
     
     public Object internalServerException;
+
     public ListCustomLineItemVersionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListCustomLineItemVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCustomLineItemVersionsOutput listCustomLineItemVersionsOutput;
+
     public ListCustomLineItemVersionsResponse withListCustomLineItemVersionsOutput(org.openapis.openapi.models.shared.ListCustomLineItemVersionsOutput listCustomLineItemVersionsOutput) {
         this.listCustomLineItemVersionsOutput = listCustomLineItemVersionsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListCustomLineItemVersionsResponse {
     
     
     public Integer statusCode;
+
     public ListCustomLineItemVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListCustomLineItemVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCustomLineItemVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListCustomLineItemVersionsResponse {
      */
     
     public Object throttlingException;
+
     public ListCustomLineItemVersionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListCustomLineItemVersionsResponse {
      */
     
     public Object validationException;
+
     public ListCustomLineItemVersionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListCustomLineItemVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

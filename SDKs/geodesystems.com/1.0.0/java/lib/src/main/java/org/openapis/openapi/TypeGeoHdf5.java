@@ -57,10 +57,8 @@ public class TypeGeoHdf5 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchGeoHdf5Response res = new org.openapis.openapi.models.operations.SearchGeoHdf5Response() {{
+        org.openapis.openapi.models.operations.SearchGeoHdf5Response res = new org.openapis.openapi.models.operations.SearchGeoHdf5Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

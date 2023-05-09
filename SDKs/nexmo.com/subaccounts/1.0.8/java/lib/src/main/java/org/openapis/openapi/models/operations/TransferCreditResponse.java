@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TransferCreditResponse {
     
     public String contentType;
+
     public TransferCreditResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TransferCreditResponse {
     
     
     public Integer statusCode;
+
     public TransferCreditResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TransferCreditResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TransferCreditResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TransferCreditResponse {
      */
     
     public org.openapis.openapi.models.shared.TransferCreditResponse transferCreditResponse;
+
     public TransferCreditResponse withTransferCreditResponse(org.openapis.openapi.models.shared.TransferCreditResponse transferCreditResponse) {
         this.transferCreditResponse = transferCreditResponse;
         return this;
@@ -43,6 +48,7 @@ public class TransferCreditResponse {
      */
     
     public org.openapis.openapi.models.shared.UnprovisionedErrorResponse unprovisionedErrorResponse;
+
     public TransferCreditResponse withUnprovisionedErrorResponse(org.openapis.openapi.models.shared.UnprovisionedErrorResponse unprovisionedErrorResponse) {
         this.unprovisionedErrorResponse = unprovisionedErrorResponse;
         return this;
@@ -53,6 +59,7 @@ public class TransferCreditResponse {
      */
     
     public TransferCredit401ApplicationJSON transferCredit401ApplicationJSONObject;
+
     public TransferCreditResponse withTransferCredit401ApplicationJSONObject(TransferCredit401ApplicationJSON transferCredit401ApplicationJSONObject) {
         this.transferCredit401ApplicationJSONObject = transferCredit401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class TransferCreditResponse {
      */
     
     public TransferCredit404ApplicationJSON transferCredit404ApplicationJSONObject;
+
     public TransferCreditResponse withTransferCredit404ApplicationJSONObject(TransferCredit404ApplicationJSON transferCredit404ApplicationJSONObject) {
         this.transferCredit404ApplicationJSONObject = transferCredit404ApplicationJSONObject;
         return this;
@@ -73,9 +81,14 @@ public class TransferCreditResponse {
      */
     
     public TransferCredit422ApplicationJSON transferCredit422ApplicationJSONObject;
+
     public TransferCreditResponse withTransferCredit422ApplicationJSONObject(TransferCredit422ApplicationJSON transferCredit422ApplicationJSONObject) {
         this.transferCredit422ApplicationJSONObject = transferCredit422ApplicationJSONObject;
         return this;
     }
     
+    public TransferCreditResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

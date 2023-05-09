@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveBlockedDeliveryWindowsResponse {
     
     public String contentType;
+
     public RemoveBlockedDeliveryWindowsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RemoveBlockedDeliveryWindowsResponse {
     
     
     public Integer statusCode;
+
     public RemoveBlockedDeliveryWindowsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class RemoveBlockedDeliveryWindowsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveBlockedDeliveryWindowsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemoveBlockedDeliveryWindowsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

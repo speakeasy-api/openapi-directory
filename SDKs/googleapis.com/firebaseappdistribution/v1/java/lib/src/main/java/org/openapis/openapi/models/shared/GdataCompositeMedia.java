@@ -15,6 +15,7 @@ public class GdataCompositeMedia {
      */
     
     public String blobRef;
+
     public GdataCompositeMedia withBlobRef(String blobRef) {
         this.blobRef = blobRef;
         return this;
@@ -25,6 +26,7 @@ public class GdataCompositeMedia {
      */
     
     public GdataBlobstore2Info blobstore2Info;
+
     public GdataCompositeMedia withBlobstore2Info(GdataBlobstore2Info blobstore2Info) {
         this.blobstore2Info = blobstore2Info;
         return this;
@@ -35,6 +37,7 @@ public class GdataCompositeMedia {
      */
     
     public String cosmoBinaryReference;
+
     public GdataCompositeMedia withCosmoBinaryReference(String cosmoBinaryReference) {
         this.cosmoBinaryReference = cosmoBinaryReference;
         return this;
@@ -45,6 +48,7 @@ public class GdataCompositeMedia {
      */
     
     public Long crc32cHash;
+
     public GdataCompositeMedia withCrc32cHash(Long crc32cHash) {
         this.crc32cHash = crc32cHash;
         return this;
@@ -55,6 +59,7 @@ public class GdataCompositeMedia {
      */
     
     public String inline;
+
     public GdataCompositeMedia withInline(String inline) {
         this.inline = inline;
         return this;
@@ -65,6 +70,7 @@ public class GdataCompositeMedia {
      */
     
     public String length;
+
     public GdataCompositeMedia withLength(String length) {
         this.length = length;
         return this;
@@ -75,6 +81,7 @@ public class GdataCompositeMedia {
      */
     
     public String md5Hash;
+
     public GdataCompositeMedia withMd5Hash(String md5Hash) {
         this.md5Hash = md5Hash;
         return this;
@@ -85,6 +92,7 @@ public class GdataCompositeMedia {
      */
     
     public GdataObjectId objectId;
+
     public GdataCompositeMedia withObjectId(GdataObjectId objectId) {
         this.objectId = objectId;
         return this;
@@ -95,6 +103,7 @@ public class GdataCompositeMedia {
      */
     
     public String path;
+
     public GdataCompositeMedia withPath(String path) {
         this.path = path;
         return this;
@@ -105,6 +114,7 @@ public class GdataCompositeMedia {
      */
     
     public GdataCompositeMediaReferenceTypeEnum referenceType;
+
     public GdataCompositeMedia withReferenceType(GdataCompositeMediaReferenceTypeEnum referenceType) {
         this.referenceType = referenceType;
         return this;
@@ -115,9 +125,11 @@ public class GdataCompositeMedia {
      */
     
     public String sha1Hash;
+
     public GdataCompositeMedia withSha1Hash(String sha1Hash) {
         this.sha1Hash = sha1Hash;
         return this;
     }
     
+    public GdataCompositeMedia(){}
 }

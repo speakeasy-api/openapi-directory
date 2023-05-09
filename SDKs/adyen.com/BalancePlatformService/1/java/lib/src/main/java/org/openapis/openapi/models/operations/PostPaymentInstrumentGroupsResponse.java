@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPaymentInstrumentGroupsResponse {
     
     public String contentType;
+
     public PostPaymentInstrumentGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostPaymentInstrumentGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.PaymentInstrumentGroup paymentInstrumentGroup;
+
     public PostPaymentInstrumentGroupsResponse withPaymentInstrumentGroup(org.openapis.openapi.models.shared.PaymentInstrumentGroup paymentInstrumentGroup) {
         this.paymentInstrumentGroup = paymentInstrumentGroup;
         return this;
@@ -29,6 +32,7 @@ public class PostPaymentInstrumentGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PostPaymentInstrumentGroupsResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class PostPaymentInstrumentGroupsResponse {
     
     
     public Integer statusCode;
+
     public PostPaymentInstrumentGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostPaymentInstrumentGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPaymentInstrumentGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostPaymentInstrumentGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

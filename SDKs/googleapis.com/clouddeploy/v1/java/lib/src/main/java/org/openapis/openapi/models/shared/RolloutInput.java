@@ -18,6 +18,7 @@ public class RolloutInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public RolloutInput withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class RolloutInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RolloutInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class RolloutInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public RolloutInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class RolloutInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public RolloutInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class RolloutInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RolloutInput withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class RolloutInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetId")
     public String targetId;
+
     public RolloutInput withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
     }
     
+    public RolloutInput(){}
 }

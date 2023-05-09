@@ -12,6 +12,7 @@ public class ListFirewallRuleGroupAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallRuleGroupId")
     public String firewallRuleGroupId;
+
     public ListFirewallRuleGroupAssociationsRequest withFirewallRuleGroupId(String firewallRuleGroupId) {
         this.firewallRuleGroupId = firewallRuleGroupId;
         return this;
@@ -20,6 +21,7 @@ public class ListFirewallRuleGroupAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListFirewallRuleGroupAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListFirewallRuleGroupAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFirewallRuleGroupAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListFirewallRuleGroupAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public ListFirewallRuleGroupAssociationsRequest withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -44,6 +48,7 @@ public class ListFirewallRuleGroupAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public FirewallRuleGroupAssociationStatusEnum status;
+
     public ListFirewallRuleGroupAssociationsRequest withStatus(FirewallRuleGroupAssociationStatusEnum status) {
         this.status = status;
         return this;
@@ -52,9 +57,11 @@ public class ListFirewallRuleGroupAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public ListFirewallRuleGroupAssociationsRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public ListFirewallRuleGroupAssociationsRequest(){}
 }

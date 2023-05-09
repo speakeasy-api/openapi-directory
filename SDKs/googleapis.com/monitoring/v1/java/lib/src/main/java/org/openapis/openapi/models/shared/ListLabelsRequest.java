@@ -18,6 +18,7 @@ public class ListLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public String end;
+
     public ListLabelsRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -29,6 +30,7 @@ public class ListLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match")
     public String match;
+
     public ListLabelsRequest withMatch(String match) {
         this.match = match;
         return this;
@@ -40,9 +42,11 @@ public class ListLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public String start;
+
     public ListLabelsRequest withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public ListLabelsRequest(){}
 }

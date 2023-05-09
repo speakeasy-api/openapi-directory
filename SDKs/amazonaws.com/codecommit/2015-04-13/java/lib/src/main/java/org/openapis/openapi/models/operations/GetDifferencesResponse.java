@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDifferencesResponse {
@@ -12,6 +13,7 @@ public class GetDifferencesResponse {
      */
     
     public Object commitDoesNotExistException;
+
     public GetDifferencesResponse withCommitDoesNotExistException(Object commitDoesNotExistException) {
         this.commitDoesNotExistException = commitDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class GetDifferencesResponse {
      */
     
     public Object commitRequiredException;
+
     public GetDifferencesResponse withCommitRequiredException(Object commitRequiredException) {
         this.commitRequiredException = commitRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class GetDifferencesResponse {
     
     
     public String contentType;
+
     public GetDifferencesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetDifferencesResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public GetDifferencesResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -49,6 +54,7 @@ public class GetDifferencesResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public GetDifferencesResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -59,6 +65,7 @@ public class GetDifferencesResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public GetDifferencesResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -69,6 +76,7 @@ public class GetDifferencesResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public GetDifferencesResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetDifferencesResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public GetDifferencesResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class GetDifferencesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDifferencesOutput getDifferencesOutput;
+
     public GetDifferencesResponse withGetDifferencesOutput(org.openapis.openapi.models.shared.GetDifferencesOutput getDifferencesOutput) {
         this.getDifferencesOutput = getDifferencesOutput;
         return this;
@@ -99,6 +109,7 @@ public class GetDifferencesResponse {
      */
     
     public Object invalidCommitException;
+
     public GetDifferencesResponse withInvalidCommitException(Object invalidCommitException) {
         this.invalidCommitException = invalidCommitException;
         return this;
@@ -109,6 +120,7 @@ public class GetDifferencesResponse {
      */
     
     public Object invalidCommitIdException;
+
     public GetDifferencesResponse withInvalidCommitIdException(Object invalidCommitIdException) {
         this.invalidCommitIdException = invalidCommitIdException;
         return this;
@@ -119,6 +131,7 @@ public class GetDifferencesResponse {
      */
     
     public Object invalidContinuationTokenException;
+
     public GetDifferencesResponse withInvalidContinuationTokenException(Object invalidContinuationTokenException) {
         this.invalidContinuationTokenException = invalidContinuationTokenException;
         return this;
@@ -129,6 +142,7 @@ public class GetDifferencesResponse {
      */
     
     public Object invalidMaxResultsException;
+
     public GetDifferencesResponse withInvalidMaxResultsException(Object invalidMaxResultsException) {
         this.invalidMaxResultsException = invalidMaxResultsException;
         return this;
@@ -139,6 +153,7 @@ public class GetDifferencesResponse {
      */
     
     public Object invalidPathException;
+
     public GetDifferencesResponse withInvalidPathException(Object invalidPathException) {
         this.invalidPathException = invalidPathException;
         return this;
@@ -149,6 +164,7 @@ public class GetDifferencesResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public GetDifferencesResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -159,6 +175,7 @@ public class GetDifferencesResponse {
      */
     
     public Object pathDoesNotExistException;
+
     public GetDifferencesResponse withPathDoesNotExistException(Object pathDoesNotExistException) {
         this.pathDoesNotExistException = pathDoesNotExistException;
         return this;
@@ -169,6 +186,7 @@ public class GetDifferencesResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public GetDifferencesResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -179,6 +197,7 @@ public class GetDifferencesResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public GetDifferencesResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -186,6 +205,7 @@ public class GetDifferencesResponse {
     
     
     public Integer statusCode;
+
     public GetDifferencesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -193,9 +213,14 @@ public class GetDifferencesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDifferencesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDifferencesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

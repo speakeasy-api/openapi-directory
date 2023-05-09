@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse {
     
     public String contentType;
+
     public RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1FirewallPolicy googleCloudRecaptchaenterpriseV1FirewallPolicy;
+
     public RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse withGoogleCloudRecaptchaenterpriseV1FirewallPolicy(org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1FirewallPolicy googleCloudRecaptchaenterpriseV1FirewallPolicy) {
         this.googleCloudRecaptchaenterpriseV1FirewallPolicy = googleCloudRecaptchaenterpriseV1FirewallPolicy;
         return this;
@@ -26,6 +29,7 @@ public class RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse {
     
     
     public Integer statusCode;
+
     public RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

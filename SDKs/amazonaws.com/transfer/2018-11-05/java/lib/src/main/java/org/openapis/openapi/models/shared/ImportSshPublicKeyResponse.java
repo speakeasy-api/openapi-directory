@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportSshPublicKeyResponse {
     @JsonProperty("ServerId")
     public String serverId;
+
     public ImportSshPublicKeyResponse withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -19,6 +20,7 @@ public class ImportSshPublicKeyResponse {
     
     @JsonProperty("SshPublicKeyId")
     public String sshPublicKeyId;
+
     public ImportSshPublicKeyResponse withSshPublicKeyId(String sshPublicKeyId) {
         this.sshPublicKeyId = sshPublicKeyId;
         return this;
@@ -26,9 +28,15 @@ public class ImportSshPublicKeyResponse {
     
     @JsonProperty("UserName")
     public String userName;
+
     public ImportSshPublicKeyResponse withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ImportSshPublicKeyResponse(@JsonProperty("ServerId") String serverId, @JsonProperty("SshPublicKeyId") String sshPublicKeyId, @JsonProperty("UserName") String userName) {
+        this.serverId = serverId;
+        this.sshPublicKeyId = sshPublicKeyId;
+        this.userName = userName;
+  }
 }

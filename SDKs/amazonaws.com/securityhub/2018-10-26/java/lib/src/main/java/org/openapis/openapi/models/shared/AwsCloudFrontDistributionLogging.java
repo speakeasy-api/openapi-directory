@@ -15,6 +15,7 @@ public class AwsCloudFrontDistributionLogging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bucket")
     public String bucket;
+
     public AwsCloudFrontDistributionLogging withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,6 +24,7 @@ public class AwsCloudFrontDistributionLogging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public AwsCloudFrontDistributionLogging withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -31,6 +33,7 @@ public class AwsCloudFrontDistributionLogging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeCookies")
     public Boolean includeCookies;
+
     public AwsCloudFrontDistributionLogging withIncludeCookies(Boolean includeCookies) {
         this.includeCookies = includeCookies;
         return this;
@@ -39,9 +42,11 @@ public class AwsCloudFrontDistributionLogging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prefix")
     public String prefix;
+
     public AwsCloudFrontDistributionLogging withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public AwsCloudFrontDistributionLogging(){}
 }

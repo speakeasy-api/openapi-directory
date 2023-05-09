@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GiftCardActivityBlock {
     @JsonProperty("reason")
     public Object reason;
+
     public GiftCardActivityBlock withReason(Object reason) {
         this.reason = reason;
         return this;
     }
     
+    public GiftCardActivityBlock(@JsonProperty("reason") Object reason) {
+        this.reason = reason;
+  }
 }

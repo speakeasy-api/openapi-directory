@@ -15,6 +15,7 @@ public class DataConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isNative")
     public Boolean isNative;
+
     public DataConnector withIsNative(Boolean isNative) {
         this.isNative = isNative;
         return this;
@@ -23,9 +24,11 @@ public class DataConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambda")
     public LambdaFunction lambda;
+
     public DataConnector withLambda(LambdaFunction lambda) {
         this.lambda = lambda;
         return this;
     }
     
+    public DataConnector(){}
 }

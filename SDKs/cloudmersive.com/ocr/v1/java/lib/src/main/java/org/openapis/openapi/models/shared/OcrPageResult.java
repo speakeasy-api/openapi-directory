@@ -15,6 +15,7 @@ public class OcrPageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeanConfidenceLevel")
     public Float meanConfidenceLevel;
+
     public OcrPageResult withMeanConfidenceLevel(Float meanConfidenceLevel) {
         this.meanConfidenceLevel = meanConfidenceLevel;
         return this;
@@ -26,6 +27,7 @@ public class OcrPageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageNumber")
     public Integer pageNumber;
+
     public OcrPageResult withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -37,9 +39,11 @@ public class OcrPageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextResult")
     public String textResult;
+
     public OcrPageResult withTextResult(String textResult) {
         this.textResult = textResult;
         return this;
     }
     
+    public OcrPageResult(){}
 }

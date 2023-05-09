@@ -15,9 +15,11 @@ public class TestGdprExportAccount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TestGdprExportAccount200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
     }
     
+    public TestGdprExportAccount200ApplicationJSON(){}
 }

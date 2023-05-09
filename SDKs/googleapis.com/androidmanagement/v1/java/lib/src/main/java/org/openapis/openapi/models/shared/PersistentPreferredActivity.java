@@ -18,6 +18,7 @@ public class PersistentPreferredActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public String[] actions;
+
     public PersistentPreferredActivity withActions(String[] actions) {
         this.actions = actions;
         return this;
@@ -29,6 +30,7 @@ public class PersistentPreferredActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public String[] categories;
+
     public PersistentPreferredActivity withCategories(String[] categories) {
         this.categories = categories;
         return this;
@@ -40,9 +42,11 @@ public class PersistentPreferredActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiverActivity")
     public String receiverActivity;
+
     public PersistentPreferredActivity withReceiverActivity(String receiverActivity) {
         this.receiverActivity = receiverActivity;
         return this;
     }
     
+    public PersistentPreferredActivity(){}
 }

@@ -15,6 +15,7 @@ public class ListSensitivityInspectionTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSensitivityInspectionTemplatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSensitivityInspectionTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitivityInspectionTemplates")
     public SensitivityInspectionTemplatesEntry[] sensitivityInspectionTemplates;
+
     public ListSensitivityInspectionTemplatesResponse withSensitivityInspectionTemplates(SensitivityInspectionTemplatesEntry[] sensitivityInspectionTemplates) {
         this.sensitivityInspectionTemplates = sensitivityInspectionTemplates;
         return this;
     }
     
+    public ListSensitivityInspectionTemplatesResponse(){}
 }

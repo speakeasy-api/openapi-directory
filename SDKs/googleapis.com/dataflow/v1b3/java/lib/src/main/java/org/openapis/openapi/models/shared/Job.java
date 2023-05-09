@@ -18,6 +18,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestId")
     public String clientRequestId;
+
     public Job withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -29,6 +30,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Job withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdFromSnapshotId")
     public String createdFromSnapshotId;
+
     public Job withCreatedFromSnapshotId(String createdFromSnapshotId) {
         this.createdFromSnapshotId = createdFromSnapshotId;
         return this;
@@ -51,6 +54,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentState")
     public JobCurrentStateEnum currentState;
+
     public Job withCurrentState(JobCurrentStateEnum currentState) {
         this.currentState = currentState;
         return this;
@@ -62,6 +66,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentStateTime")
     public String currentStateTime;
+
     public Job withCurrentStateTime(String currentStateTime) {
         this.currentStateTime = currentStateTime;
         return this;
@@ -73,6 +78,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public Environment environment;
+
     public Job withEnvironment(Environment environment) {
         this.environment = environment;
         return this;
@@ -84,6 +90,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionInfo")
     public JobExecutionInfo executionInfo;
+
     public Job withExecutionInfo(JobExecutionInfo executionInfo) {
         this.executionInfo = executionInfo;
         return this;
@@ -95,6 +102,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Job withId(String id) {
         this.id = id;
         return this;
@@ -106,6 +114,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobMetadata")
     public JobMetadata jobMetadata;
+
     public Job withJobMetadata(JobMetadata jobMetadata) {
         this.jobMetadata = jobMetadata;
         return this;
@@ -117,6 +126,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Job withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -128,6 +138,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Job withLocation(String location) {
         this.location = location;
         return this;
@@ -139,6 +150,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Job withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +162,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineDescription")
     public PipelineDescription pipelineDescription;
+
     public Job withPipelineDescription(PipelineDescription pipelineDescription) {
         this.pipelineDescription = pipelineDescription;
         return this;
@@ -161,6 +174,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public Job withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -172,6 +186,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceJobId")
     public String replaceJobId;
+
     public Job withReplaceJobId(String replaceJobId) {
         this.replaceJobId = replaceJobId;
         return this;
@@ -183,6 +198,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replacedByJobId")
     public String replacedByJobId;
+
     public Job withReplacedByJobId(String replacedByJobId) {
         this.replacedByJobId = replacedByJobId;
         return this;
@@ -194,8 +210,21 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedState")
     public JobRequestedStateEnum requestedState;
+
     public Job withRequestedState(JobRequestedStateEnum requestedState) {
         this.requestedState = requestedState;
+        return this;
+    }
+    
+    /**
+     * Additional job parameters that can only be updated during runtime using the projects.jobs.update method. These fields have no effect when specified during job creation.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("runtimeUpdatableParams")
+    public RuntimeUpdatableParams runtimeUpdatableParams;
+
+    public Job withRuntimeUpdatableParams(RuntimeUpdatableParams runtimeUpdatableParams) {
+        this.runtimeUpdatableParams = runtimeUpdatableParams;
         return this;
     }
     
@@ -205,6 +234,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public Job withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -216,6 +246,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stageStates")
     public ExecutionStageState[] stageStates;
+
     public Job withStageStates(ExecutionStageState[] stageStates) {
         this.stageStates = stageStates;
         return this;
@@ -227,6 +258,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public Job withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -238,6 +270,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public Step[] steps;
+
     public Job withSteps(Step[] steps) {
         this.steps = steps;
         return this;
@@ -249,6 +282,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepsLocation")
     public String stepsLocation;
+
     public Job withStepsLocation(String stepsLocation) {
         this.stepsLocation = stepsLocation;
         return this;
@@ -260,6 +294,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tempFiles")
     public String[] tempFiles;
+
     public Job withTempFiles(String[] tempFiles) {
         this.tempFiles = tempFiles;
         return this;
@@ -271,6 +306,7 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformNameMapping")
     public java.util.Map<String, String> transformNameMapping;
+
     public Job withTransformNameMapping(java.util.Map<String, String> transformNameMapping) {
         this.transformNameMapping = transformNameMapping;
         return this;
@@ -282,9 +318,11 @@ public class Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public JobTypeEnum type;
+
     public Job withType(JobTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Job(){}
 }

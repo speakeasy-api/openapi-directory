@@ -15,6 +15,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public WebhookLinks links;
+
     public Webhook withLinks(WebhookLinks links) {
         this.links = links;
         return this;
@@ -26,6 +27,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptsExpiredCertificate")
     public Boolean acceptsExpiredCertificate;
+
     public Webhook withAcceptsExpiredCertificate(Boolean acceptsExpiredCertificate) {
         this.acceptsExpiredCertificate = acceptsExpiredCertificate;
         return this;
@@ -37,6 +39,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptsSelfSignedCertificate")
     public Boolean acceptsSelfSignedCertificate;
+
     public Webhook withAcceptsSelfSignedCertificate(Boolean acceptsSelfSignedCertificate) {
         this.acceptsSelfSignedCertificate = acceptsSelfSignedCertificate;
         return this;
@@ -48,6 +51,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptsUntrustedRootCertificate")
     public Boolean acceptsUntrustedRootCertificate;
+
     public Webhook withAcceptsUntrustedRootCertificate(Boolean acceptsUntrustedRootCertificate) {
         this.acceptsUntrustedRootCertificate = acceptsUntrustedRootCertificate;
         return this;
@@ -59,6 +63,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountReference")
     public String accountReference;
+
     public Webhook withAccountReference(String accountReference) {
         this.accountReference = accountReference;
         return this;
@@ -69,6 +74,7 @@ public class Webhook {
      */
     @JsonProperty("active")
     public Boolean active;
+
     public Webhook withActive(Boolean active) {
         this.active = active;
         return this;
@@ -77,6 +83,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalSettings")
     public AdditionalSettingsResponse additionalSettings;
+
     public Webhook withAdditionalSettings(AdditionalSettingsResponse additionalSettings) {
         this.additionalSettings = additionalSettings;
         return this;
@@ -88,6 +95,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateAlias")
     public String certificateAlias;
+
     public Webhook withCertificateAlias(String certificateAlias) {
         this.certificateAlias = certificateAlias;
         return this;
@@ -101,6 +109,7 @@ public class Webhook {
      */
     @JsonProperty("communicationFormat")
     public WebhookCommunicationFormatEnum communicationFormat;
+
     public Webhook withCommunicationFormat(WebhookCommunicationFormatEnum communicationFormat) {
         this.communicationFormat = communicationFormat;
         return this;
@@ -112,6 +121,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Webhook withDescription(String description) {
         this.description = description;
         return this;
@@ -126,6 +136,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterMerchantAccountType")
     public WebhookFilterMerchantAccountTypeEnum filterMerchantAccountType;
+
     public Webhook withFilterMerchantAccountType(WebhookFilterMerchantAccountTypeEnum filterMerchantAccountType) {
         this.filterMerchantAccountType = filterMerchantAccountType;
         return this;
@@ -143,6 +154,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterMerchantAccounts")
     public String[] filterMerchantAccounts;
+
     public Webhook withFilterMerchantAccounts(String[] filterMerchantAccounts) {
         this.filterMerchantAccounts = filterMerchantAccounts;
         return this;
@@ -154,6 +166,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasError")
     public Boolean hasError;
+
     public Webhook withHasError(Boolean hasError) {
         this.hasError = hasError;
         return this;
@@ -165,6 +178,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasPassword")
     public Boolean hasPassword;
+
     public Webhook withHasPassword(Boolean hasPassword) {
         this.hasPassword = hasPassword;
         return this;
@@ -176,6 +190,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hmacKeyCheckValue")
     public String hmacKeyCheckValue;
+
     public Webhook withHmacKeyCheckValue(String hmacKeyCheckValue) {
         this.hmacKeyCheckValue = hmacKeyCheckValue;
         return this;
@@ -187,6 +202,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Webhook withId(String id) {
         this.id = id;
         return this;
@@ -198,6 +214,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkType")
     public WebhookNetworkTypeEnum networkType;
+
     public Webhook withNetworkType(WebhookNetworkTypeEnum networkType) {
         this.networkType = networkType;
         return this;
@@ -211,6 +228,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("populateSoapActionHeader")
     public Boolean populateSoapActionHeader;
+
     public Webhook withPopulateSoapActionHeader(Boolean populateSoapActionHeader) {
         this.populateSoapActionHeader = populateSoapActionHeader;
         return this;
@@ -227,6 +245,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslVersion")
     public WebhookSslVersionEnum sslVersion;
+
     public Webhook withSslVersion(WebhookSslVersionEnum sslVersion) {
         this.sslVersion = sslVersion;
         return this;
@@ -250,6 +269,7 @@ public class Webhook {
      */
     @JsonProperty("type")
     public String type;
+
     public Webhook withType(String type) {
         this.type = type;
         return this;
@@ -260,6 +280,7 @@ public class Webhook {
      */
     @JsonProperty("url")
     public String url;
+
     public Webhook withUrl(String url) {
         this.url = url;
         return this;
@@ -271,9 +292,16 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public Webhook withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public Webhook(@JsonProperty("active") Boolean active, @JsonProperty("communicationFormat") WebhookCommunicationFormatEnum communicationFormat, @JsonProperty("type") String type, @JsonProperty("url") String url) {
+        this.active = active;
+        this.communicationFormat = communicationFormat;
+        this.type = type;
+        this.url = url;
+  }
 }

@@ -18,6 +18,7 @@ public class RequestSyncDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentUserId")
     public String agentUserId;
+
     public RequestSyncDevicesRequest withAgentUserId(String agentUserId) {
         this.agentUserId = agentUserId;
         return this;
@@ -29,9 +30,11 @@ public class RequestSyncDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("async")
     public Boolean async;
+
     public RequestSyncDevicesRequest withAsync(Boolean async) {
         this.async = async;
         return this;
     }
     
+    public RequestSyncDevicesRequest(){}
 }

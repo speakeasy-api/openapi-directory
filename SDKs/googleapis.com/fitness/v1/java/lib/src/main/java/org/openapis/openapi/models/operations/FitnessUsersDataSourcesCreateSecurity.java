@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FitnessUsersDataSourcesCreateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesCreateSecurityOption1 option1;
+
     public FitnessUsersDataSourcesCreateSecurity withOption1(FitnessUsersDataSourcesCreateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class FitnessUsersDataSourcesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesCreateSecurityOption10 option10;
+
     public FitnessUsersDataSourcesCreateSecurity withOption10(FitnessUsersDataSourcesCreateSecurityOption10 option10) {
         this.option10 = option10;
         return this;
@@ -23,6 +25,7 @@ public class FitnessUsersDataSourcesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesCreateSecurityOption11 option11;
+
     public FitnessUsersDataSourcesCreateSecurity withOption11(FitnessUsersDataSourcesCreateSecurityOption11 option11) {
         this.option11 = option11;
         return this;
@@ -30,6 +33,7 @@ public class FitnessUsersDataSourcesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesCreateSecurityOption2 option2;
+
     public FitnessUsersDataSourcesCreateSecurity withOption2(FitnessUsersDataSourcesCreateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -37,6 +41,7 @@ public class FitnessUsersDataSourcesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesCreateSecurityOption3 option3;
+
     public FitnessUsersDataSourcesCreateSecurity withOption3(FitnessUsersDataSourcesCreateSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -44,6 +49,7 @@ public class FitnessUsersDataSourcesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesCreateSecurityOption4 option4;
+
     public FitnessUsersDataSourcesCreateSecurity withOption4(FitnessUsersDataSourcesCreateSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -51,6 +57,7 @@ public class FitnessUsersDataSourcesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesCreateSecurityOption5 option5;
+
     public FitnessUsersDataSourcesCreateSecurity withOption5(FitnessUsersDataSourcesCreateSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -58,6 +65,7 @@ public class FitnessUsersDataSourcesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesCreateSecurityOption6 option6;
+
     public FitnessUsersDataSourcesCreateSecurity withOption6(FitnessUsersDataSourcesCreateSecurityOption6 option6) {
         this.option6 = option6;
         return this;
@@ -65,6 +73,7 @@ public class FitnessUsersDataSourcesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesCreateSecurityOption7 option7;
+
     public FitnessUsersDataSourcesCreateSecurity withOption7(FitnessUsersDataSourcesCreateSecurityOption7 option7) {
         this.option7 = option7;
         return this;
@@ -72,6 +81,7 @@ public class FitnessUsersDataSourcesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesCreateSecurityOption8 option8;
+
     public FitnessUsersDataSourcesCreateSecurity withOption8(FitnessUsersDataSourcesCreateSecurityOption8 option8) {
         this.option8 = option8;
         return this;
@@ -79,9 +89,11 @@ public class FitnessUsersDataSourcesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FitnessUsersDataSourcesCreateSecurityOption9 option9;
+
     public FitnessUsersDataSourcesCreateSecurity withOption9(FitnessUsersDataSourcesCreateSecurityOption9 option9) {
         this.option9 = option9;
         return this;
     }
     
+    public FitnessUsersDataSourcesCreateSecurity(){}
 }

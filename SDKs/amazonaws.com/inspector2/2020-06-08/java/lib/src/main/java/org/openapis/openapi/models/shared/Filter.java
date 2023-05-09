@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Filter {
     @JsonProperty("action")
     public FilterActionEnum action;
+
     public Filter withAction(FilterActionEnum action) {
         this.action = action;
         return this;
@@ -26,6 +27,7 @@ public class Filter {
     
     @JsonProperty("arn")
     public String arn;
+
     public Filter withArn(String arn) {
         this.arn = arn;
         return this;
@@ -35,6 +37,7 @@ public class Filter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Filter withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -42,6 +45,7 @@ public class Filter {
     
     @JsonProperty("criteria")
     public FilterCriteria criteria;
+
     public Filter withCriteria(FilterCriteria criteria) {
         this.criteria = criteria;
         return this;
@@ -50,6 +54,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Filter withDescription(String description) {
         this.description = description;
         return this;
@@ -57,6 +62,7 @@ public class Filter {
     
     @JsonProperty("name")
     public String name;
+
     public Filter withName(String name) {
         this.name = name;
         return this;
@@ -64,6 +70,7 @@ public class Filter {
     
     @JsonProperty("ownerId")
     public String ownerId;
+
     public Filter withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -72,6 +79,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public Filter withReason(String reason) {
         this.reason = reason;
         return this;
@@ -80,6 +88,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Filter withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -89,9 +98,19 @@ public class Filter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Filter withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Filter(@JsonProperty("action") FilterActionEnum action, @JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("criteria") FilterCriteria criteria, @JsonProperty("name") String name, @JsonProperty("ownerId") String ownerId, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.action = action;
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.criteria = criteria;
+        this.name = name;
+        this.ownerId = ownerId;
+        this.updatedAt = updatedAt;
+  }
 }

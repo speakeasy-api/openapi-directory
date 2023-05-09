@@ -15,6 +15,7 @@ public class PendingAggregationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequesterAccountId")
     public String requesterAccountId;
+
     public PendingAggregationRequest withRequesterAccountId(String requesterAccountId) {
         this.requesterAccountId = requesterAccountId;
         return this;
@@ -23,9 +24,11 @@ public class PendingAggregationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequesterAwsRegion")
     public String requesterAwsRegion;
+
     public PendingAggregationRequest withRequesterAwsRegion(String requesterAwsRegion) {
         this.requesterAwsRegion = requesterAwsRegion;
         return this;
     }
     
+    public PendingAggregationRequest(){}
 }

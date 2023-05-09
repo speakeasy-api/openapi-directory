@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeGatewayRouteResponse {
@@ -12,6 +13,7 @@ public class DescribeGatewayRouteResponse {
      */
     
     public Object badRequestException;
+
     public DescribeGatewayRouteResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeGatewayRouteResponse {
     
     
     public String contentType;
+
     public DescribeGatewayRouteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeGatewayRouteResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeGatewayRouteOutput describeGatewayRouteOutput;
+
     public DescribeGatewayRouteResponse withDescribeGatewayRouteOutput(org.openapis.openapi.models.shared.DescribeGatewayRouteOutput describeGatewayRouteOutput) {
         this.describeGatewayRouteOutput = describeGatewayRouteOutput;
         return this;
@@ -39,6 +43,7 @@ public class DescribeGatewayRouteResponse {
      */
     
     public Object forbiddenException;
+
     public DescribeGatewayRouteResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeGatewayRouteResponse {
      */
     
     public Object internalServerErrorException;
+
     public DescribeGatewayRouteResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeGatewayRouteResponse {
      */
     
     public Object notFoundException;
+
     public DescribeGatewayRouteResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeGatewayRouteResponse {
     
     
     public Integer statusCode;
+
     public DescribeGatewayRouteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeGatewayRouteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeGatewayRouteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeGatewayRouteResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeGatewayRouteResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeGatewayRouteResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeGatewayRouteResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeGatewayRouteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

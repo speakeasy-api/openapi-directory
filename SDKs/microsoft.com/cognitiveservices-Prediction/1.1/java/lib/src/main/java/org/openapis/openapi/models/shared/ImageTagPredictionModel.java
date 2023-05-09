@@ -12,6 +12,7 @@ public class ImageTagPredictionModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Probability")
     public Float probability;
+
     public ImageTagPredictionModel withProbability(Float probability) {
         this.probability = probability;
         return this;
@@ -20,6 +21,7 @@ public class ImageTagPredictionModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tag")
     public String tag;
+
     public ImageTagPredictionModel withTag(String tag) {
         this.tag = tag;
         return this;
@@ -28,9 +30,11 @@ public class ImageTagPredictionModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagId")
     public String tagId;
+
     public ImageTagPredictionModel withTagId(String tagId) {
         this.tagId = tagId;
         return this;
     }
     
+    public ImageTagPredictionModel(){}
 }

@@ -18,6 +18,7 @@ public class SapValidationValidationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public java.util.Map<String, String> details;
+
     public SapValidationValidationDetail withDetails(java.util.Map<String, String> details) {
         this.details = details;
         return this;
@@ -29,9 +30,11 @@ public class SapValidationValidationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sapValidationType")
     public SapValidationValidationDetailSapValidationTypeEnum sapValidationType;
+
     public SapValidationValidationDetail withSapValidationType(SapValidationValidationDetailSapValidationTypeEnum sapValidationType) {
         this.sapValidationType = sapValidationType;
         return this;
     }
     
+    public SapValidationValidationDetail(){}
 }

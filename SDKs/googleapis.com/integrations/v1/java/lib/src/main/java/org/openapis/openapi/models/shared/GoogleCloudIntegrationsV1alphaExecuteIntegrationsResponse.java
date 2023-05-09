@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventParameters")
     public EnterpriseCrmFrontendsEventbusProtoEventParameters eventParameters;
+
     public GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse withEventParameters(EnterpriseCrmFrontendsEventbusProtoEventParameters eventParameters) {
         this.eventParameters = eventParameters;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionFailed")
     public Boolean executionFailed;
+
     public GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse withExecutionFailed(Boolean executionFailed) {
         this.executionFailed = executionFailed;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionId")
     public String executionId;
+
     public GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputParameters")
     public java.util.Map<String, Object> outputParameters;
+
     public GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse withOutputParameters(java.util.Map<String, Object> outputParameters) {
         this.outputParameters = outputParameters;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterEntries")
     public EnterpriseCrmFrontendsEventbusProtoParameterEntry[] parameterEntries;
+
     public GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse withParameterEntries(EnterpriseCrmFrontendsEventbusProtoParameterEntry[] parameterEntries) {
         this.parameterEntries = parameterEntries;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse(){}
 }

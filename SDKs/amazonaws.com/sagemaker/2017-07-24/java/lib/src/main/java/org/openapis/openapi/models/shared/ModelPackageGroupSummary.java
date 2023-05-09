@@ -21,6 +21,7 @@ public class ModelPackageGroupSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ModelPackageGroupSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class ModelPackageGroupSummary {
     
     @JsonProperty("ModelPackageGroupArn")
     public String modelPackageGroupArn;
+
     public ModelPackageGroupSummary withModelPackageGroupArn(String modelPackageGroupArn) {
         this.modelPackageGroupArn = modelPackageGroupArn;
         return this;
@@ -36,6 +38,7 @@ public class ModelPackageGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageGroupDescription")
     public String modelPackageGroupDescription;
+
     public ModelPackageGroupSummary withModelPackageGroupDescription(String modelPackageGroupDescription) {
         this.modelPackageGroupDescription = modelPackageGroupDescription;
         return this;
@@ -43,6 +46,7 @@ public class ModelPackageGroupSummary {
     
     @JsonProperty("ModelPackageGroupName")
     public String modelPackageGroupName;
+
     public ModelPackageGroupSummary withModelPackageGroupName(String modelPackageGroupName) {
         this.modelPackageGroupName = modelPackageGroupName;
         return this;
@@ -50,9 +54,16 @@ public class ModelPackageGroupSummary {
     
     @JsonProperty("ModelPackageGroupStatus")
     public ModelPackageGroupStatusEnum modelPackageGroupStatus;
+
     public ModelPackageGroupSummary withModelPackageGroupStatus(ModelPackageGroupStatusEnum modelPackageGroupStatus) {
         this.modelPackageGroupStatus = modelPackageGroupStatus;
         return this;
     }
     
+    public ModelPackageGroupSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ModelPackageGroupArn") String modelPackageGroupArn, @JsonProperty("ModelPackageGroupName") String modelPackageGroupName, @JsonProperty("ModelPackageGroupStatus") ModelPackageGroupStatusEnum modelPackageGroupStatus) {
+        this.creationTime = creationTime;
+        this.modelPackageGroupArn = modelPackageGroupArn;
+        this.modelPackageGroupName = modelPackageGroupName;
+        this.modelPackageGroupStatus = modelPackageGroupStatus;
+  }
 }

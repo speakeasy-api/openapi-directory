@@ -18,6 +18,7 @@ public class Hold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accounts")
     public HeldAccount[] accounts;
+
     public Hold withAccounts(HeldAccount[] accounts) {
         this.accounts = accounts;
         return this;
@@ -29,6 +30,7 @@ public class Hold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corpus")
     public HoldCorpusEnum corpus;
+
     public Hold withCorpus(HoldCorpusEnum corpus) {
         this.corpus = corpus;
         return this;
@@ -40,6 +42,7 @@ public class Hold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holdId")
     public String holdId;
+
     public Hold withHoldId(String holdId) {
         this.holdId = holdId;
         return this;
@@ -51,6 +54,7 @@ public class Hold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Hold withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class Hold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnit")
     public HeldOrgUnit orgUnit;
+
     public Hold withOrgUnit(HeldOrgUnit orgUnit) {
         this.orgUnit = orgUnit;
         return this;
@@ -73,6 +78,7 @@ public class Hold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public CorpusQuery query;
+
     public Hold withQuery(CorpusQuery query) {
         this.query = query;
         return this;
@@ -84,9 +90,11 @@ public class Hold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Hold withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Hold(){}
 }

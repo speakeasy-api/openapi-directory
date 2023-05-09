@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOrganisationsPartyIdRequest {
@@ -12,6 +13,7 @@ public class DeleteOrganisationsPartyIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public DeleteOrganisationsPartyIdRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,9 +24,14 @@ public class DeleteOrganisationsPartyIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
     public String partyId;
+
     public DeleteOrganisationsPartyIdRequest withPartyId(String partyId) {
         this.partyId = partyId;
         return this;
     }
     
+    public DeleteOrganisationsPartyIdRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("partyId") String partyId) {
+        this.apiKey = apiKey;
+        this.partyId = partyId;
+  }
 }

@@ -115,6 +115,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -147,10 +152,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateResponse res = new org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateResponse() {{
+        org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateResponse res = new org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,10 +191,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1DonationsCarbonStatsResponse res = new org.openapis.openapi.models.operations.GetApiV1DonationsCarbonStatsResponse() {{
+        org.openapis.openapi.models.operations.GetApiV1DonationsCarbonStatsResponse res = new org.openapis.openapi.models.operations.GetApiV1DonationsCarbonStatsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -229,10 +230,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1DonationsCryptoCalculateResponse res = new org.openapis.openapi.models.operations.GetApiV1DonationsCryptoCalculateResponse() {{
+        org.openapis.openapi.models.operations.GetApiV1DonationsCryptoCalculateResponse res = new org.openapis.openapi.models.operations.GetApiV1DonationsCryptoCalculateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -270,10 +269,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1DonationsIndexResponse res = new org.openapis.openapi.models.operations.GetApiV1DonationsIndexResponse() {{
+        org.openapis.openapi.models.operations.GetApiV1DonationsIndexResponse res = new org.openapis.openapi.models.operations.GetApiV1DonationsIndexResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -311,10 +308,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1DonationsShowResponse res = new org.openapis.openapi.models.operations.GetApiV1DonationsShowResponse() {{
+        org.openapis.openapi.models.operations.GetApiV1DonationsShowResponse res = new org.openapis.openapi.models.operations.GetApiV1DonationsShowResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -352,10 +347,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1NonprofitsListResponse res = new org.openapis.openapi.models.operations.GetApiV1NonprofitsListResponse() {{
+        org.openapis.openapi.models.operations.GetApiV1NonprofitsListResponse res = new org.openapis.openapi.models.operations.GetApiV1NonprofitsListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -393,10 +386,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1NonprofitsShowResponse res = new org.openapis.openapi.models.operations.GetApiV1NonprofitsShowResponse() {{
+        org.openapis.openapi.models.operations.GetApiV1NonprofitsShowResponse res = new org.openapis.openapi.models.operations.GetApiV1NonprofitsShowResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -434,10 +425,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiV1DonationsCreateResponse res = new org.openapis.openapi.models.operations.PostApiV1DonationsCreateResponse() {{
+        org.openapis.openapi.models.operations.PostApiV1DonationsCreateResponse res = new org.openapis.openapi.models.operations.PostApiV1DonationsCreateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {

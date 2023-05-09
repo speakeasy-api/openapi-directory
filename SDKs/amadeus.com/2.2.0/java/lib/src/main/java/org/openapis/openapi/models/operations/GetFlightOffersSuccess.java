@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFlightOffersSuccess {
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.FlightOffer[] data;
+
     public GetFlightOffersSuccess withData(org.openapis.openapi.models.shared.FlightOffer[] data) {
         this.data = data;
         return this;
@@ -22,6 +23,7 @@ public class GetFlightOffersSuccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dictionaries")
     public org.openapis.openapi.models.shared.Dictionaries dictionaries;
+
     public GetFlightOffersSuccess withDictionaries(org.openapis.openapi.models.shared.Dictionaries dictionaries) {
         this.dictionaries = dictionaries;
         return this;
@@ -30,6 +32,7 @@ public class GetFlightOffersSuccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public org.openapis.openapi.models.shared.CollectionMetaLink meta;
+
     public GetFlightOffersSuccess withMeta(org.openapis.openapi.models.shared.CollectionMetaLink meta) {
         this.meta = meta;
         return this;
@@ -38,9 +41,13 @@ public class GetFlightOffersSuccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public org.openapis.openapi.models.shared.Issue[] warnings;
+
     public GetFlightOffersSuccess withWarnings(org.openapis.openapi.models.shared.Issue[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public GetFlightOffersSuccess(@JsonProperty("data") org.openapis.openapi.models.shared.FlightOffer[] data) {
+        this.data = data;
+  }
 }

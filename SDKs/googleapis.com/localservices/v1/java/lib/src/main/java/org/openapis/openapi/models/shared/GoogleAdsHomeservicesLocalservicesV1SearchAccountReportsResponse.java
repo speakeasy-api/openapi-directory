@@ -18,6 +18,7 @@ public class GoogleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountReports")
     public GoogleAdsHomeservicesLocalservicesV1AccountReport[] accountReports;
+
     public GoogleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse withAccountReports(GoogleAdsHomeservicesLocalservicesV1AccountReport[] accountReports) {
         this.accountReports = accountReports;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse(){}
 }

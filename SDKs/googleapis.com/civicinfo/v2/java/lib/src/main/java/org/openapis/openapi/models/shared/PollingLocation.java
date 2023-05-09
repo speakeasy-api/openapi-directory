@@ -18,6 +18,7 @@ public class PollingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public SimpleAddressType address;
+
     public PollingLocation withAddress(SimpleAddressType address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class PollingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public PollingLocation withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -40,6 +42,7 @@ public class PollingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public PollingLocation withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -51,6 +54,7 @@ public class PollingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public PollingLocation withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -62,6 +66,7 @@ public class PollingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PollingLocation withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class PollingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public PollingLocation withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -84,6 +90,7 @@ public class PollingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pollingHours")
     public String pollingHours;
+
     public PollingLocation withPollingHours(String pollingHours) {
         this.pollingHours = pollingHours;
         return this;
@@ -95,6 +102,7 @@ public class PollingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public Source[] sources;
+
     public PollingLocation withSources(Source[] sources) {
         this.sources = sources;
         return this;
@@ -106,6 +114,7 @@ public class PollingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public PollingLocation withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -117,9 +126,11 @@ public class PollingLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voterServices")
     public String voterServices;
+
     public PollingLocation withVoterServices(String voterServices) {
         this.voterServices = voterServices;
         return this;
     }
     
+    public PollingLocation(){}
 }

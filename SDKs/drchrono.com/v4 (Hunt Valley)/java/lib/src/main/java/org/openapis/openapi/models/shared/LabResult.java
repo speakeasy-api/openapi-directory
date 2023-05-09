@@ -35,6 +35,7 @@ public class LabResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abnormal_status")
     public LabResultAbnormalStatusEnum abnormalStatus;
+
     public LabResult withAbnormalStatus(LabResultAbnormalStatusEnum abnormalStatus) {
         this.abnormalStatus = abnormalStatus;
         return this;
@@ -43,6 +44,7 @@ public class LabResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public LabResult withComments(String comments) {
         this.comments = comments;
         return this;
@@ -53,6 +55,7 @@ public class LabResult {
      */
     @JsonProperty("document")
     public Long document;
+
     public LabResult withDocument(Long document) {
         this.document = document;
         return this;
@@ -64,6 +67,7 @@ public class LabResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_code")
     public String groupCode;
+
     public LabResult withGroupCode(String groupCode) {
         this.groupCode = groupCode;
         return this;
@@ -72,6 +76,7 @@ public class LabResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public LabResult withId(Long id) {
         this.id = id;
         return this;
@@ -83,6 +88,7 @@ public class LabResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_abnormal")
     public String isAbnormal;
+
     public LabResult withIsAbnormal(String isAbnormal) {
         this.isAbnormal = isAbnormal;
         return this;
@@ -94,6 +100,7 @@ public class LabResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lab_order")
     public String labOrder;
+
     public LabResult withLabOrder(String labOrder) {
         this.labOrder = labOrder;
         return this;
@@ -104,6 +111,7 @@ public class LabResult {
      */
     @JsonProperty("lab_test")
     public Long labTest;
+
     public LabResult withLabTest(Long labTest) {
         this.labTest = labTest;
         return this;
@@ -115,6 +123,7 @@ public class LabResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normal_range")
     public String normalRange;
+
     public LabResult withNormalRange(String normalRange) {
         this.normalRange = normalRange;
         return this;
@@ -123,6 +132,7 @@ public class LabResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("observation_code")
     public String observationCode;
+
     public LabResult withObservationCode(String observationCode) {
         this.observationCode = observationCode;
         return this;
@@ -134,6 +144,7 @@ public class LabResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("observation_description")
     public String observationDescription;
+
     public LabResult withObservationDescription(String observationDescription) {
         this.observationDescription = observationDescription;
         return this;
@@ -142,6 +153,7 @@ public class LabResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specimen_received")
     public String specimenReceived;
+
     public LabResult withSpecimenReceived(String specimenReceived) {
         this.specimenReceived = specimenReceived;
         return this;
@@ -159,6 +171,7 @@ public class LabResult {
      */
     @JsonProperty("status")
     public LabResultStatusEnum status;
+
     public LabResult withStatus(LabResultStatusEnum status) {
         this.status = status;
         return this;
@@ -166,6 +179,7 @@ public class LabResult {
     
     @JsonProperty("test_performed")
     public String testPerformed;
+
     public LabResult withTestPerformed(String testPerformed) {
         this.testPerformed = testPerformed;
         return this;
@@ -177,6 +191,7 @@ public class LabResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public LabResult withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -184,6 +199,7 @@ public class LabResult {
     
     @JsonProperty("value")
     public String value;
+
     public LabResult withValue(String value) {
         this.value = value;
         return this;
@@ -195,9 +211,17 @@ public class LabResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value_is_numeric")
     public Boolean valueIsNumeric;
+
     public LabResult withValueIsNumeric(Boolean valueIsNumeric) {
         this.valueIsNumeric = valueIsNumeric;
         return this;
     }
     
+    public LabResult(@JsonProperty("document") Long document, @JsonProperty("lab_test") Long labTest, @JsonProperty("status") LabResultStatusEnum status, @JsonProperty("test_performed") String testPerformed, @JsonProperty("value") String value) {
+        this.document = document;
+        this.labTest = labTest;
+        this.status = status;
+        this.testPerformed = testPerformed;
+        this.value = value;
+  }
 }

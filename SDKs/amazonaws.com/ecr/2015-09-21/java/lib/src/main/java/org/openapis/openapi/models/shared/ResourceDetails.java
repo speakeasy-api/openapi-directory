@@ -15,9 +15,11 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsEcrContainerImage")
     public AwsEcrContainerImageDetails awsEcrContainerImage;
+
     public ResourceDetails withAwsEcrContainerImage(AwsEcrContainerImageDetails awsEcrContainerImage) {
         this.awsEcrContainerImage = awsEcrContainerImage;
         return this;
     }
     
+    public ResourceDetails(){}
 }

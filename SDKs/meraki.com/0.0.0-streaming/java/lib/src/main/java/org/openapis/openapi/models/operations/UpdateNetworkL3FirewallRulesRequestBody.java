@@ -15,6 +15,7 @@ public class UpdateNetworkL3FirewallRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public UpdateNetworkL3FirewallRulesRequestBodyRules[] rules;
+
     public UpdateNetworkL3FirewallRulesRequestBody withRules(UpdateNetworkL3FirewallRulesRequestBodyRules[] rules) {
         this.rules = rules;
         return this;
@@ -26,9 +27,11 @@ public class UpdateNetworkL3FirewallRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syslogDefaultRule")
     public Boolean syslogDefaultRule;
+
     public UpdateNetworkL3FirewallRulesRequestBody withSyslogDefaultRule(Boolean syslogDefaultRule) {
         this.syslogDefaultRule = syslogDefaultRule;
         return this;
     }
     
+    public UpdateNetworkL3FirewallRulesRequestBody(){}
 }

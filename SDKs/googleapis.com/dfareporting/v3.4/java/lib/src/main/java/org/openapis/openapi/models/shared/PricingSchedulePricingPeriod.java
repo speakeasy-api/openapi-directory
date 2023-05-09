@@ -18,6 +18,7 @@ public class PricingSchedulePricingPeriod {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public PricingSchedulePricingPeriod withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -29,6 +30,7 @@ public class PricingSchedulePricingPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricingComment")
     public String pricingComment;
+
     public PricingSchedulePricingPeriod withPricingComment(String pricingComment) {
         this.pricingComment = pricingComment;
         return this;
@@ -40,6 +42,7 @@ public class PricingSchedulePricingPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateOrCostNanos")
     public String rateOrCostNanos;
+
     public PricingSchedulePricingPeriod withRateOrCostNanos(String rateOrCostNanos) {
         this.rateOrCostNanos = rateOrCostNanos;
         return this;
@@ -49,6 +52,7 @@ public class PricingSchedulePricingPeriod {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public PricingSchedulePricingPeriod withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -60,9 +64,11 @@ public class PricingSchedulePricingPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("units")
     public String units;
+
     public PricingSchedulePricingPeriod withUnits(String units) {
         this.units = units;
         return this;
     }
     
+    public PricingSchedulePricingPeriod(){}
 }

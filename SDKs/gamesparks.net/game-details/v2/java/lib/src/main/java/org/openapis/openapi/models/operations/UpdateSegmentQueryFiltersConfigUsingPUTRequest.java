@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSegmentQueryFiltersConfigUsingPUTRequest {
@@ -12,6 +13,7 @@ public class UpdateSegmentQueryFiltersConfigUsingPUTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SegmentQueryFilterConfigModel segmentQueryFilterConfigModel;
+
     public UpdateSegmentQueryFiltersConfigUsingPUTRequest withSegmentQueryFilterConfigModel(org.openapis.openapi.models.shared.SegmentQueryFilterConfigModel segmentQueryFilterConfigModel) {
         this.segmentQueryFilterConfigModel = segmentQueryFilterConfigModel;
         return this;
@@ -22,9 +24,14 @@ public class UpdateSegmentQueryFiltersConfigUsingPUTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public UpdateSegmentQueryFiltersConfigUsingPUTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public UpdateSegmentQueryFiltersConfigUsingPUTRequest(@JsonProperty("SegmentQueryFilterConfigModel") org.openapis.openapi.models.shared.SegmentQueryFilterConfigModel segmentQueryFilterConfigModel, @JsonProperty("apiKey") String apiKey) {
+        this.segmentQueryFilterConfigModel = segmentQueryFilterConfigModel;
+        this.apiKey = apiKey;
+  }
 }

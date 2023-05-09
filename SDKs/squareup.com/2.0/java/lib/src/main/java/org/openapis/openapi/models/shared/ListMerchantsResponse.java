@@ -18,6 +18,7 @@ public class ListMerchantsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public Long cursor;
+
     public ListMerchantsResponse withCursor(Long cursor) {
         this.cursor = cursor;
         return this;
@@ -29,6 +30,7 @@ public class ListMerchantsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListMerchantsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -40,9 +42,11 @@ public class ListMerchantsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant")
     public Merchant[] merchant;
+
     public ListMerchantsResponse withMerchant(Merchant[] merchant) {
         this.merchant = merchant;
         return this;
     }
     
+    public ListMerchantsResponse(){}
 }

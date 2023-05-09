@@ -15,9 +15,11 @@ public class CreateAnomalyDetectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public CreateAnomalyDetectorResponse withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
     }
     
+    public CreateAnomalyDetectorResponse(){}
 }

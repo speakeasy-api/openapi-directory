@@ -12,9 +12,13 @@ public class BatchGetSchemaRequestBody {
      */
     @JsonProperty("names")
     public String[] names;
+
     public BatchGetSchemaRequestBody withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public BatchGetSchemaRequestBody(@JsonProperty("names") String[] names) {
+        this.names = names;
+  }
 }

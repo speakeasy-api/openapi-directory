@@ -16,11 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetAccountingSecurity;
 import org.openapis.openapi.models.operations.GetAccountingHydrateEnum;
 import org.openapis.openapi.models.operations.GetAccountingRequest;
 import org.openapis.openapi.models.operations.GetAccountingResponse;
+import org.openapis.openapi.models.operations.GetAccountingSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -28,39 +27,37 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetAccountingRequest req = new GetAccountingRequest() {{
-                fromDate = "corrupti";
-                hydrate = new org.openapis.openapi.models.operations.GetAccountingHydrateEnum[]{{
-                    add("items"),
-                    add("items"),
-                    add("items"),
-                }};
-                limit = 715190;
+            GetAccountingRequest req = new GetAccountingRequest("corrupti",                 new org.openapis.openapi.models.operations.GetAccountingHydrateEnum[]{{
+                                add(GetAccountingHydrateEnum.ITEMS),
+                                add(GetAccountingHydrateEnum.ITEMS),
+                                add(GetAccountingHydrateEnum.ITEMS),
+                            }}, "distinctio") {{
+                limit = 844266L;
                 orderIds = new Long[]{{
-                    add(602763),
-                    add(857946),
-                    add(544883),
-                    add(847252),
+                    add(857946L),
+                    add(544883L),
+                    add(847252L),
                 }};
-                page = 423655;
-                toDate = "error";
+                page = 423655L;
                 warehouseIds = new Long[]{{
-                    add(384382),
-                    add(437587),
-                    add(297534),
+                    add(645894L),
+                    add(384382L),
+                    add(437587L),
                 }};
-            }}            
+            }};            
 
-            GetAccountingResponse res = sdk.accounting.getAccounting(req, new GetAccountingSecurity() {{
+            GetAccountingResponse res = sdk.accounting.getAccounting(req, new GetAccountingSecurity("magnam") {{
                 fdcAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.accountingArrayV2.isPresent()) {
+            if (res.accountingArrayV2 != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -68,42 +65,42 @@ public class Application {
 ## Available Resources and Operations
 
 
-### accounting
+### [accounting](docs/accounting/README.md)
 
-* `getAccounting` - List Order Accounting
+* [getAccounting](docs/accounting/README.md#getaccounting) - List Order Accounting
 
-### auth
+### [auth](docs/auth/README.md)
 
-* `postOauthAccessToken` - Generate an Access Token
+* [postOauthAccessToken](docs/auth/README.md#postoauthaccesstoken) - Generate an Access Token
 
-### inventory
+### [inventory](docs/inventory/README.md)
 
-* `getInventory` - List of Item Inventories
+* [getInventory](docs/inventory/README.md#getinventory) - List of Item Inventories
 
-### orders
+### [orders](docs/orders/README.md)
 
-* `deleteOrdersId` - Cancel an Order
-* `getOrders` - List of Orders
-* `getOrder` - Order Details
-* `postOrders` - New Order
+* [deleteOrdersId](docs/orders/README.md#deleteordersid) - Cancel an Order
+* [getOrders](docs/orders/README.md#getorders) - List of Orders
+* [getOrder](docs/orders/README.md#getorder) - Order Details
+* [postOrders](docs/orders/README.md#postorders) - New Order
 
-### partners
+### [partners](docs/partners/README.md)
 
-* `putOrdersIdShip` - Ship an Order
-* `putOrdersIdStatus` - Update Order Status
+* [putOrdersIdShip](docs/partners/README.md#putordersidship) - Ship an Order
+* [putOrdersIdStatus](docs/partners/README.md#putordersidstatus) - Update Order Status
 
-### returns
+### [returns](docs/returns/README.md)
 
-* `getReturns` - List Returns
-* `putReturns` - Inform us of an RMA
+* [getReturns](docs/returns/README.md#getreturns) - List Returns
+* [putReturns](docs/returns/README.md#putreturns) - Inform us of an RMA
 
-### tracking
+### [tracking](docs/tracking/README.md)
 
-* `getTrack` - Tracking
+* [getTrack](docs/tracking/README.md#gettrack) - Tracking
 
-### users
+### [users](docs/users/README.md)
 
-* `getUsersMe` - About Me
+* [getUsersMe](docs/users/README.md#getusersme) - About Me
 <!-- End SDK Available Operations -->
 
 ### Maturity

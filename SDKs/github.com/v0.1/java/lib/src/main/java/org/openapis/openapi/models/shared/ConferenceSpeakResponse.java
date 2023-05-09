@@ -15,6 +15,7 @@ public class ConferenceSpeakResponse {
      */
     @JsonProperty("Message")
     public ConferenceSpeakResponseMessageEnum message;
+
     public ConferenceSpeakResponse withMessage(ConferenceSpeakResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,9 +26,14 @@ public class ConferenceSpeakResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public ConferenceSpeakResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ConferenceSpeakResponse(@JsonProperty("Message") ConferenceSpeakResponseMessageEnum message, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.success = success;
+  }
 }

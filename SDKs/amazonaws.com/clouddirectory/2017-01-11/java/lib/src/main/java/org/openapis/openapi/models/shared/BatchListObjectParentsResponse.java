@@ -15,6 +15,7 @@ public class BatchListObjectParentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public BatchListObjectParentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class BatchListObjectParentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParentLinks")
     public ObjectIdentifierAndLinkNameTuple[] parentLinks;
+
     public BatchListObjectParentsResponse withParentLinks(ObjectIdentifierAndLinkNameTuple[] parentLinks) {
         this.parentLinks = parentLinks;
         return this;
     }
     
+    public BatchListObjectParentsResponse(){}
 }

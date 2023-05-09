@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAcceleratorAttributesResponse {
@@ -12,6 +13,7 @@ public class DescribeAcceleratorAttributesResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public DescribeAcceleratorAttributesResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAcceleratorAttributesResponse {
     
     
     public String contentType;
+
     public DescribeAcceleratorAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAcceleratorAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAcceleratorAttributesResponse describeAcceleratorAttributesResponse;
+
     public DescribeAcceleratorAttributesResponse withDescribeAcceleratorAttributesResponse(org.openapis.openapi.models.shared.DescribeAcceleratorAttributesResponse describeAcceleratorAttributesResponse) {
         this.describeAcceleratorAttributesResponse = describeAcceleratorAttributesResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAcceleratorAttributesResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DescribeAcceleratorAttributesResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAcceleratorAttributesResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeAcceleratorAttributesResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeAcceleratorAttributesResponse {
     
     
     public Integer statusCode;
+
     public DescribeAcceleratorAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeAcceleratorAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAcceleratorAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAcceleratorAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

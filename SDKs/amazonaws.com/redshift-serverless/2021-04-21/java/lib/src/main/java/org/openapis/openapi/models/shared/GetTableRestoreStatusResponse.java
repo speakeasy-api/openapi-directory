@@ -15,9 +15,11 @@ public class GetTableRestoreStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRestoreStatus")
     public TableRestoreStatus tableRestoreStatus;
+
     public GetTableRestoreStatusResponse withTableRestoreStatus(TableRestoreStatus tableRestoreStatus) {
         this.tableRestoreStatus = tableRestoreStatus;
         return this;
     }
     
+    public GetTableRestoreStatusResponse(){}
 }

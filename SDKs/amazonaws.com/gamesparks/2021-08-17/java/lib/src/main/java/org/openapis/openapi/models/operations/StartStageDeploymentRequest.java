@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartStageDeploymentRequest {
@@ -12,6 +13,7 @@ public class StartStageDeploymentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=GameName")
     public String gameName;
+
     public StartStageDeploymentRequest withGameName(String gameName) {
         this.gameName = gameName;
         return this;
@@ -19,6 +21,7 @@ public class StartStageDeploymentRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public StartStageDeploymentRequestBody requestBody;
+
     public StartStageDeploymentRequest withRequestBody(StartStageDeploymentRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,6 +32,7 @@ public class StartStageDeploymentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=StageName")
     public String stageName;
+
     public StartStageDeploymentRequest withStageName(String stageName) {
         this.stageName = stageName;
         return this;
@@ -36,6 +40,7 @@ public class StartStageDeploymentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public StartStageDeploymentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class StartStageDeploymentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public StartStageDeploymentRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class StartStageDeploymentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public StartStageDeploymentRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class StartStageDeploymentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public StartStageDeploymentRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class StartStageDeploymentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public StartStageDeploymentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class StartStageDeploymentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public StartStageDeploymentRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,9 +88,15 @@ public class StartStageDeploymentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public StartStageDeploymentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public StartStageDeploymentRequest(@JsonProperty("GameName") String gameName, @JsonProperty("RequestBody") StartStageDeploymentRequestBody requestBody, @JsonProperty("StageName") String stageName) {
+        this.gameName = gameName;
+        this.requestBody = requestBody;
+        this.stageName = stageName;
+  }
 }

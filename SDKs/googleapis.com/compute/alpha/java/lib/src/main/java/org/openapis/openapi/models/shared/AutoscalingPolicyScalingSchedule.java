@@ -18,6 +18,7 @@ public class AutoscalingPolicyScalingSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AutoscalingPolicyScalingSchedule withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class AutoscalingPolicyScalingSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public AutoscalingPolicyScalingSchedule withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -40,6 +42,7 @@ public class AutoscalingPolicyScalingSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationSec")
     public Integer durationSec;
+
     public AutoscalingPolicyScalingSchedule withDurationSec(Integer durationSec) {
         this.durationSec = durationSec;
         return this;
@@ -51,6 +54,7 @@ public class AutoscalingPolicyScalingSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minRequiredReplicas")
     public Integer minRequiredReplicas;
+
     public AutoscalingPolicyScalingSchedule withMinRequiredReplicas(Integer minRequiredReplicas) {
         this.minRequiredReplicas = minRequiredReplicas;
         return this;
@@ -62,6 +66,7 @@ public class AutoscalingPolicyScalingSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public String schedule;
+
     public AutoscalingPolicyScalingSchedule withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -73,9 +78,11 @@ public class AutoscalingPolicyScalingSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public AutoscalingPolicyScalingSchedule withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public AutoscalingPolicyScalingSchedule(){}
 }

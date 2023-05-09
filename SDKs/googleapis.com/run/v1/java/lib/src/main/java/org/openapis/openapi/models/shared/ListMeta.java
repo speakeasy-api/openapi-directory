@@ -18,17 +18,19 @@ public class ListMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continue")
     public String continue_;
+
     public ListMeta withContinue(String continue_) {
         this.continue_ = continue_;
         return this;
     }
     
     /**
-     * Opaque string that identifies the server's internal version of this object. It can be used by clients to determine when objects have changed. If the message is passed back to the server, it must be left unmodified. https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+     * Opaque string that identifies the server's internal version of this object. It can be used by clients to determine when objects have changed. If the message is passed back to the server, it must be left unmodified.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceVersion")
     public String resourceVersion;
+
     public ListMeta withResourceVersion(String resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -40,9 +42,11 @@ public class ListMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ListMeta withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public ListMeta(){}
 }

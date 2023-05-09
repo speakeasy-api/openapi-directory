@@ -12,6 +12,7 @@ public class ListAssociatedFleetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAssociatedFleetsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,13 @@ public class ListAssociatedFleetsRequest {
     
     @JsonProperty("StackName")
     public String stackName;
+
     public ListAssociatedFleetsRequest withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public ListAssociatedFleetsRequest(@JsonProperty("StackName") String stackName) {
+        this.stackName = stackName;
+  }
 }

@@ -62,11 +62,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FolderListForPathResponse res = new org.openapis.openapi.models.operations.FolderListForPathResponse() {{
+        org.openapis.openapi.models.operations.FolderListForPathResponse res = new org.openapis.openapi.models.operations.FolderListForPathResponse(contentType, httpRes.statusCode()) {{
             fileEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Folders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFoldersPathResponse res = new org.openapis.openapi.models.operations.PostFoldersPathResponse() {{
+        org.openapis.openapi.models.operations.PostFoldersPathResponse res = new org.openapis.openapi.models.operations.PostFoldersPathResponse(contentType, httpRes.statusCode()) {{
             fileEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

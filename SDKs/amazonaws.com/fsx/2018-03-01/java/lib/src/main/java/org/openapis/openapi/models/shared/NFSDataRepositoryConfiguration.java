@@ -15,6 +15,7 @@ public class NFSDataRepositoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoExportPolicy")
     public AutoExportPolicy autoExportPolicy;
+
     public NFSDataRepositoryConfiguration withAutoExportPolicy(AutoExportPolicy autoExportPolicy) {
         this.autoExportPolicy = autoExportPolicy;
         return this;
@@ -23,6 +24,7 @@ public class NFSDataRepositoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsIps")
     public String[] dnsIps;
+
     public NFSDataRepositoryConfiguration withDnsIps(String[] dnsIps) {
         this.dnsIps = dnsIps;
         return this;
@@ -30,9 +32,13 @@ public class NFSDataRepositoryConfiguration {
     
     @JsonProperty("Version")
     public NfsVersionEnum version;
+
     public NFSDataRepositoryConfiguration withVersion(NfsVersionEnum version) {
         this.version = version;
         return this;
     }
     
+    public NFSDataRepositoryConfiguration(@JsonProperty("Version") NfsVersionEnum version) {
+        this.version = version;
+  }
 }

@@ -15,6 +15,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationCreationDate")
     public Long applicationCreationDate;
+
     public ApplicationSummary withApplicationCreationDate(Long applicationCreationDate) {
         this.applicationCreationDate = applicationCreationDate;
         return this;
@@ -23,6 +24,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationDescription")
     public String applicationDescription;
+
     public ApplicationSummary withApplicationDescription(String applicationDescription) {
         this.applicationDescription = applicationDescription;
         return this;
@@ -30,6 +32,7 @@ public class ApplicationSummary {
     
     @JsonProperty("applicationId")
     public String applicationId;
+
     public ApplicationSummary withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -38,6 +41,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationLastUpdateDate")
     public Long applicationLastUpdateDate;
+
     public ApplicationSummary withApplicationLastUpdateDate(Long applicationLastUpdateDate) {
         this.applicationLastUpdateDate = applicationLastUpdateDate;
         return this;
@@ -45,6 +49,7 @@ public class ApplicationSummary {
     
     @JsonProperty("applicationName")
     public String applicationName;
+
     public ApplicationSummary withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -53,6 +58,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationState")
     public ApplicationStateEnum applicationState;
+
     public ApplicationSummary withApplicationState(ApplicationStateEnum applicationState) {
         this.applicationState = applicationState;
         return this;
@@ -60,9 +66,15 @@ public class ApplicationSummary {
     
     @JsonProperty("applicationUrl")
     public String applicationUrl;
+
     public ApplicationSummary withApplicationUrl(String applicationUrl) {
         this.applicationUrl = applicationUrl;
         return this;
     }
     
+    public ApplicationSummary(@JsonProperty("applicationId") String applicationId, @JsonProperty("applicationName") String applicationName, @JsonProperty("applicationUrl") String applicationUrl) {
+        this.applicationId = applicationId;
+        this.applicationName = applicationName;
+        this.applicationUrl = applicationUrl;
+  }
 }

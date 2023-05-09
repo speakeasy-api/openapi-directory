@@ -12,6 +12,7 @@ public class UpdateDirectoryConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateBasedAuthProperties")
     public CertificateBasedAuthProperties certificateBasedAuthProperties;
+
     public UpdateDirectoryConfigRequest withCertificateBasedAuthProperties(CertificateBasedAuthProperties certificateBasedAuthProperties) {
         this.certificateBasedAuthProperties = certificateBasedAuthProperties;
         return this;
@@ -19,6 +20,7 @@ public class UpdateDirectoryConfigRequest {
     
     @JsonProperty("DirectoryName")
     public String directoryName;
+
     public UpdateDirectoryConfigRequest withDirectoryName(String directoryName) {
         this.directoryName = directoryName;
         return this;
@@ -27,6 +29,7 @@ public class UpdateDirectoryConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnitDistinguishedNames")
     public String[] organizationalUnitDistinguishedNames;
+
     public UpdateDirectoryConfigRequest withOrganizationalUnitDistinguishedNames(String[] organizationalUnitDistinguishedNames) {
         this.organizationalUnitDistinguishedNames = organizationalUnitDistinguishedNames;
         return this;
@@ -35,9 +38,13 @@ public class UpdateDirectoryConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceAccountCredentials")
     public ServiceAccountCredentials serviceAccountCredentials;
+
     public UpdateDirectoryConfigRequest withServiceAccountCredentials(ServiceAccountCredentials serviceAccountCredentials) {
         this.serviceAccountCredentials = serviceAccountCredentials;
         return this;
     }
     
+    public UpdateDirectoryConfigRequest(@JsonProperty("DirectoryName") String directoryName) {
+        this.directoryName = directoryName;
+  }
 }

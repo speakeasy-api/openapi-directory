@@ -53,11 +53,9 @@ public class Notifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNotificationsContributionsIdPreviewResponse res = new org.openapis.openapi.models.operations.GetNotificationsContributionsIdPreviewResponse() {{
+        org.openapis.openapi.models.operations.GetNotificationsContributionsIdPreviewResponse res = new org.openapis.openapi.models.operations.GetNotificationsContributionsIdPreviewResponse(contentType, httpRes.statusCode()) {{
             notificationPreview = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

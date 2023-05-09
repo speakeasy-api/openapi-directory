@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMobileDeviceAccessRulesResponse {
     
     public String contentType;
+
     public ListMobileDeviceAccessRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListMobileDeviceAccessRulesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListMobileDeviceAccessRulesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class ListMobileDeviceAccessRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMobileDeviceAccessRulesResponse listMobileDeviceAccessRulesResponse;
+
     public ListMobileDeviceAccessRulesResponse withListMobileDeviceAccessRulesResponse(org.openapis.openapi.models.shared.ListMobileDeviceAccessRulesResponse listMobileDeviceAccessRulesResponse) {
         this.listMobileDeviceAccessRulesResponse = listMobileDeviceAccessRulesResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListMobileDeviceAccessRulesResponse {
      */
     
     public Object organizationNotFoundException;
+
     public ListMobileDeviceAccessRulesResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ListMobileDeviceAccessRulesResponse {
      */
     
     public Object organizationStateException;
+
     public ListMobileDeviceAccessRulesResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -56,6 +62,7 @@ public class ListMobileDeviceAccessRulesResponse {
     
     
     public Integer statusCode;
+
     public ListMobileDeviceAccessRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListMobileDeviceAccessRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMobileDeviceAccessRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListMobileDeviceAccessRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

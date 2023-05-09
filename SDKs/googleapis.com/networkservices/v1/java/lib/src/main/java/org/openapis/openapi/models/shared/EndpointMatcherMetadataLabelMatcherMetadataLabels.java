@@ -18,6 +18,7 @@ public class EndpointMatcherMetadataLabelMatcherMetadataLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelName")
     public String labelName;
+
     public EndpointMatcherMetadataLabelMatcherMetadataLabels withLabelName(String labelName) {
         this.labelName = labelName;
         return this;
@@ -29,9 +30,11 @@ public class EndpointMatcherMetadataLabelMatcherMetadataLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelValue")
     public String labelValue;
+
     public EndpointMatcherMetadataLabelMatcherMetadataLabels withLabelValue(String labelValue) {
         this.labelValue = labelValue;
         return this;
     }
     
+    public EndpointMatcherMetadataLabelMatcherMetadataLabels(){}
 }

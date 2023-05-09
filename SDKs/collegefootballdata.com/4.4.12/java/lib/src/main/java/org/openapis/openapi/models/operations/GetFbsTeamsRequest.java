@@ -12,9 +12,11 @@ public class GetFbsTeamsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetFbsTeamsRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetFbsTeamsRequest(){}
 }

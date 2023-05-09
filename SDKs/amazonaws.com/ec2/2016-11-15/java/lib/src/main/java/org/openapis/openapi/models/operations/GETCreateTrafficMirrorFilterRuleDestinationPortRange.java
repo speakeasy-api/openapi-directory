@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETCreateTrafficMirrorFilterRuleDestinationPortRange {
     @SpeakeasyMetadata("queryParam:name=FromPort")
     public Long fromPort;
+
     public GETCreateTrafficMirrorFilterRuleDestinationPortRange withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -19,9 +20,11 @@ public class GETCreateTrafficMirrorFilterRuleDestinationPortRange {
     
     @SpeakeasyMetadata("queryParam:name=ToPort")
     public Long toPort;
+
     public GETCreateTrafficMirrorFilterRuleDestinationPortRange withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public GETCreateTrafficMirrorFilterRuleDestinationPortRange(){}
 }

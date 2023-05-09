@@ -15,6 +15,7 @@ public class MonitorErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public MonitorErrorCodeEnum code;
+
     public MonitorErrorDetails withCode(MonitorErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class MonitorErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public MonitorErrorDetails withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public MonitorErrorDetails(){}
 }

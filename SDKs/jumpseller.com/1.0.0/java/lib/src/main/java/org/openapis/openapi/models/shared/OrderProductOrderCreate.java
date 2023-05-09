@@ -15,6 +15,7 @@ public class OrderProductOrderCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount")
     public Float discount;
+
     public OrderProductOrderCreate withDiscount(Float discount) {
         this.discount = discount;
         return this;
@@ -26,6 +27,7 @@ public class OrderProductOrderCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public OrderProductOrderCreate withId(Integer id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class OrderProductOrderCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Float price;
+
     public OrderProductOrderCreate withPrice(Float price) {
         this.price = price;
         return this;
@@ -48,6 +51,7 @@ public class OrderProductOrderCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qty")
     public Integer qty;
+
     public OrderProductOrderCreate withQty(Integer qty) {
         this.qty = qty;
         return this;
@@ -59,9 +63,11 @@ public class OrderProductOrderCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variant_id")
     public Integer variantId;
+
     public OrderProductOrderCreate withVariantId(Integer variantId) {
         this.variantId = variantId;
         return this;
     }
     
+    public OrderProductOrderCreate(){}
 }

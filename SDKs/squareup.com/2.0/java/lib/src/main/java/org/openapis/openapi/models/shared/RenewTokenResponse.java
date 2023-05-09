@@ -21,6 +21,7 @@ public class RenewTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access_token")
     public String accessToken;
+
     public RenewTokenResponse withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +33,7 @@ public class RenewTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     public String expiresAt;
+
     public RenewTokenResponse withExpiresAt(String expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -43,6 +45,7 @@ public class RenewTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_id")
     public String merchantId;
+
     public RenewTokenResponse withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -56,6 +59,7 @@ public class RenewTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan_id")
     public String planId;
+
     public RenewTokenResponse withPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -69,6 +73,7 @@ public class RenewTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription_id")
     public String subscriptionId;
+
     public RenewTokenResponse withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -80,9 +85,11 @@ public class RenewTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token_type")
     public String tokenType;
+
     public RenewTokenResponse withTokenType(String tokenType) {
         this.tokenType = tokenType;
         return this;
     }
     
+    public RenewTokenResponse(){}
 }

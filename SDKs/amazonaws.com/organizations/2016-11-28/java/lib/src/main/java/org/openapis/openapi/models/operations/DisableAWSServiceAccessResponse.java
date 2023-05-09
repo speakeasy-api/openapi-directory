@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableAWSServiceAccessResponse {
@@ -12,6 +13,7 @@ public class DisableAWSServiceAccessResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public DisableAWSServiceAccessResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DisableAWSServiceAccessResponse {
      */
     
     public Object accessDeniedException;
+
     public DisableAWSServiceAccessResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class DisableAWSServiceAccessResponse {
      */
     
     public Object concurrentModificationException;
+
     public DisableAWSServiceAccessResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -42,6 +46,7 @@ public class DisableAWSServiceAccessResponse {
      */
     
     public Object constraintViolationException;
+
     public DisableAWSServiceAccessResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -49,6 +54,7 @@ public class DisableAWSServiceAccessResponse {
     
     
     public String contentType;
+
     public DisableAWSServiceAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class DisableAWSServiceAccessResponse {
      */
     
     public Object invalidInputException;
+
     public DisableAWSServiceAccessResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class DisableAWSServiceAccessResponse {
      */
     
     public Object serviceException;
+
     public DisableAWSServiceAccessResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DisableAWSServiceAccessResponse {
     
     
     public Integer statusCode;
+
     public DisableAWSServiceAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DisableAWSServiceAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableAWSServiceAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DisableAWSServiceAccessResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DisableAWSServiceAccessResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class DisableAWSServiceAccessResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public DisableAWSServiceAccessResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public DisableAWSServiceAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

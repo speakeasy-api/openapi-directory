@@ -892,6 +892,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/DataQualityTargetTable.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateDatabaseRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/DatabaseInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/DatabaseIdentifier.java
+lib/src/main/java/org/openapis/openapi/models/shared/FederatedDatabase.java
 lib/src/main/java/org/openapis/openapi/models/shared/PrincipalPermissions.java
 lib/src/main/java/org/openapis/openapi/models/shared/DataLakePrincipal.java
 lib/src/main/java/org/openapis/openapi/models/shared/PermissionEnum.java
@@ -1157,6 +1158,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/StatementOutputData.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetStatementRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetTableResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Table.java
+lib/src/main/java/org/openapis/openapi/models/shared/FederatedTable.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetTableRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetTableVersionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TableVersion.java
@@ -1349,4 +1351,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateUserDefinedFunctionRe
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorkflowResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorkflowRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

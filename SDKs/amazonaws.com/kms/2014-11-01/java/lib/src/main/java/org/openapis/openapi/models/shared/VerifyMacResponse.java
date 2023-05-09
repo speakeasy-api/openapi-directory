@@ -15,6 +15,7 @@ public class VerifyMacResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public VerifyMacResponse withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -23,6 +24,7 @@ public class VerifyMacResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MacAlgorithm")
     public MacAlgorithmSpecEnum macAlgorithm;
+
     public VerifyMacResponse withMacAlgorithm(MacAlgorithmSpecEnum macAlgorithm) {
         this.macAlgorithm = macAlgorithm;
         return this;
@@ -31,9 +33,11 @@ public class VerifyMacResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MacValid")
     public Boolean macValid;
+
     public VerifyMacResponse withMacValid(Boolean macValid) {
         this.macValid = macValid;
         return this;
     }
     
+    public VerifyMacResponse(){}
 }

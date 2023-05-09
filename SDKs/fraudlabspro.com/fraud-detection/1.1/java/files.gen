@@ -36,4 +36,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostV1OrderFeedbackResp
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1OrderScreenFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1OrderScreenRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1OrderScreenResponse.java
+docs/sdk/README.md
 USAGE.md

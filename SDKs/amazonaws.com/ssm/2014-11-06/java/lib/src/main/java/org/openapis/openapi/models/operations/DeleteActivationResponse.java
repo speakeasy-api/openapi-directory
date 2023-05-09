@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteActivationResponse {
     
     public String contentType;
+
     public DeleteActivationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteActivationResponse {
      */
     
     public java.util.Map<String, Object> deleteActivationResult;
+
     public DeleteActivationResponse withDeleteActivationResult(java.util.Map<String, Object> deleteActivationResult) {
         this.deleteActivationResult = deleteActivationResult;
         return this;
@@ -29,6 +32,7 @@ public class DeleteActivationResponse {
      */
     
     public Object internalServerError;
+
     public DeleteActivationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DeleteActivationResponse {
      */
     
     public Object invalidActivation;
+
     public DeleteActivationResponse withInvalidActivation(Object invalidActivation) {
         this.invalidActivation = invalidActivation;
         return this;
@@ -49,6 +54,7 @@ public class DeleteActivationResponse {
      */
     
     public Object invalidActivationId;
+
     public DeleteActivationResponse withInvalidActivationId(Object invalidActivationId) {
         this.invalidActivationId = invalidActivationId;
         return this;
@@ -56,6 +62,7 @@ public class DeleteActivationResponse {
     
     
     public Integer statusCode;
+
     public DeleteActivationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteActivationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteActivationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteActivationResponse {
      */
     
     public Object tooManyUpdates;
+
     public DeleteActivationResponse withTooManyUpdates(Object tooManyUpdates) {
         this.tooManyUpdates = tooManyUpdates;
         return this;
     }
     
+    public DeleteActivationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

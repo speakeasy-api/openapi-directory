@@ -17,6 +17,7 @@ public class PatientDemographic {
      */
     @JsonProperty("dateOfBirth")
     public String dateOfBirth;
+
     public PatientDemographic withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -24,6 +25,7 @@ public class PatientDemographic {
     
     @JsonProperty("gender")
     public PatientGenderEnum gender;
+
     public PatientDemographic withGender(PatientGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -32,6 +34,7 @@ public class PatientDemographic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public AuthConfirmIdentifier identifier;
+
     public PatientDemographic withIdentifier(AuthConfirmIdentifier identifier) {
         this.identifier = identifier;
         return this;
@@ -39,9 +42,15 @@ public class PatientDemographic {
     
     @JsonProperty("name")
     public String name;
+
     public PatientDemographic withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PatientDemographic(@JsonProperty("dateOfBirth") String dateOfBirth, @JsonProperty("gender") PatientGenderEnum gender, @JsonProperty("name") String name) {
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.name = name;
+  }
 }

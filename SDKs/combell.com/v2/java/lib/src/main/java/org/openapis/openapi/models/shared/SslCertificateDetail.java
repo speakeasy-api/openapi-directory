@@ -23,6 +23,7 @@ public class SslCertificateDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("common_name")
     public String commonName;
+
     public SslCertificateDetail withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -36,6 +37,7 @@ public class SslCertificateDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expires_after")
     public OffsetDateTime expiresAfter;
+
     public SslCertificateDetail withExpiresAfter(OffsetDateTime expiresAfter) {
         this.expiresAfter = expiresAfter;
         return this;
@@ -48,6 +50,7 @@ public class SslCertificateDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha1_fingerprint")
     public String sha1Fingerprint;
+
     public SslCertificateDetail withSha1Fingerprint(String sha1Fingerprint) {
         this.sha1Fingerprint = sha1Fingerprint;
         return this;
@@ -59,6 +62,7 @@ public class SslCertificateDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject_alt_names")
     public SslSubjectAltName[] subjectAltNames;
+
     public SslCertificateDetail withSubjectAltNames(SslSubjectAltName[] subjectAltNames) {
         this.subjectAltNames = subjectAltNames;
         return this;
@@ -71,6 +75,7 @@ public class SslCertificateDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SslCertificateTypeEnum type;
+
     public SslCertificateDetail withType(SslCertificateTypeEnum type) {
         this.type = type;
         return this;
@@ -83,9 +88,11 @@ public class SslCertificateDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validation_level")
     public SslCertificateValidationLevelEnum validationLevel;
+
     public SslCertificateDetail withValidationLevel(SslCertificateValidationLevelEnum validationLevel) {
         this.validationLevel = validationLevel;
         return this;
     }
     
+    public SslCertificateDetail(){}
 }

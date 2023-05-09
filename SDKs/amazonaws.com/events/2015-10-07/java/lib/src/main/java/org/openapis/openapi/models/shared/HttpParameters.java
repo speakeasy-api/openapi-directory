@@ -15,6 +15,7 @@ public class HttpParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeaderParameters")
     public java.util.Map<String, String> headerParameters;
+
     public HttpParameters withHeaderParameters(java.util.Map<String, String> headerParameters) {
         this.headerParameters = headerParameters;
         return this;
@@ -23,6 +24,7 @@ public class HttpParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PathParameterValues")
     public String[] pathParameterValues;
+
     public HttpParameters withPathParameterValues(String[] pathParameterValues) {
         this.pathParameterValues = pathParameterValues;
         return this;
@@ -31,9 +33,11 @@ public class HttpParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryStringParameters")
     public java.util.Map<String, String> queryStringParameters;
+
     public HttpParameters withQueryStringParameters(java.util.Map<String, String> queryStringParameters) {
         this.queryStringParameters = queryStringParameters;
         return this;
     }
     
+    public HttpParameters(){}
 }

@@ -15,6 +15,7 @@ public class MarketSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clk")
     public String clk;
+
     public MarketSubscriptionMessage withClk(String clk) {
         this.clk = clk;
         return this;
@@ -26,6 +27,7 @@ public class MarketSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflateMs")
     public Long conflateMs;
+
     public MarketSubscriptionMessage withConflateMs(Long conflateMs) {
         this.conflateMs = conflateMs;
         return this;
@@ -37,6 +39,7 @@ public class MarketSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heartbeatMs")
     public Long heartbeatMs;
+
     public MarketSubscriptionMessage withHeartbeatMs(Long heartbeatMs) {
         this.heartbeatMs = heartbeatMs;
         return this;
@@ -48,6 +51,7 @@ public class MarketSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public MarketSubscriptionMessage withId(Integer id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class MarketSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialClk")
     public String initialClk;
+
     public MarketSubscriptionMessage withInitialClk(String initialClk) {
         this.initialClk = initialClk;
         return this;
@@ -67,6 +72,7 @@ public class MarketSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketDataFilter")
     public MarketDataFilter marketDataFilter;
+
     public MarketSubscriptionMessage withMarketDataFilter(MarketDataFilter marketDataFilter) {
         this.marketDataFilter = marketDataFilter;
         return this;
@@ -75,6 +81,7 @@ public class MarketSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketFilter")
     public MarketFilter marketFilter;
+
     public MarketSubscriptionMessage withMarketFilter(MarketFilter marketFilter) {
         this.marketFilter = marketFilter;
         return this;
@@ -86,6 +93,7 @@ public class MarketSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public String op;
+
     public MarketSubscriptionMessage withOp(String op) {
         this.op = op;
         return this;
@@ -97,9 +105,11 @@ public class MarketSubscriptionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentationEnabled")
     public Boolean segmentationEnabled;
+
     public MarketSubscriptionMessage withSegmentationEnabled(Boolean segmentationEnabled) {
         this.segmentationEnabled = segmentationEnabled;
         return this;
     }
     
+    public MarketSubscriptionMessage(){}
 }

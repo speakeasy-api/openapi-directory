@@ -43,4 +43,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAMediaItemRespo
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAMediaItemRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAMediaItemResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Media.java
+docs/sdk/README.md
 USAGE.md

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAlarmsInput {
     
     public String actionPrefix;
+
     public DescribeAlarmsInput withActionPrefix(String actionPrefix) {
         this.actionPrefix = actionPrefix;
         return this;
@@ -16,6 +17,7 @@ public class DescribeAlarmsInput {
     
     
     public String alarmNamePrefix;
+
     public DescribeAlarmsInput withAlarmNamePrefix(String alarmNamePrefix) {
         this.alarmNamePrefix = alarmNamePrefix;
         return this;
@@ -23,6 +25,7 @@ public class DescribeAlarmsInput {
     
     
     public String[] alarmNames;
+
     public DescribeAlarmsInput withAlarmNames(String[] alarmNames) {
         this.alarmNames = alarmNames;
         return this;
@@ -30,6 +33,7 @@ public class DescribeAlarmsInput {
     
     
     public AlarmTypeEnum[] alarmTypes;
+
     public DescribeAlarmsInput withAlarmTypes(AlarmTypeEnum[] alarmTypes) {
         this.alarmTypes = alarmTypes;
         return this;
@@ -37,6 +41,7 @@ public class DescribeAlarmsInput {
     
     
     public String childrenOfAlarmName;
+
     public DescribeAlarmsInput withChildrenOfAlarmName(String childrenOfAlarmName) {
         this.childrenOfAlarmName = childrenOfAlarmName;
         return this;
@@ -44,6 +49,7 @@ public class DescribeAlarmsInput {
     
     
     public Long maxRecords;
+
     public DescribeAlarmsInput withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -51,6 +57,7 @@ public class DescribeAlarmsInput {
     
     
     public String nextToken;
+
     public DescribeAlarmsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -58,6 +65,7 @@ public class DescribeAlarmsInput {
     
     
     public String parentsOfAlarmName;
+
     public DescribeAlarmsInput withParentsOfAlarmName(String parentsOfAlarmName) {
         this.parentsOfAlarmName = parentsOfAlarmName;
         return this;
@@ -65,9 +73,11 @@ public class DescribeAlarmsInput {
     
     
     public StateValueEnum stateValue;
+
     public DescribeAlarmsInput withStateValue(StateValueEnum stateValue) {
         this.stateValue = stateValue;
         return this;
     }
     
+    public DescribeAlarmsInput(){}
 }

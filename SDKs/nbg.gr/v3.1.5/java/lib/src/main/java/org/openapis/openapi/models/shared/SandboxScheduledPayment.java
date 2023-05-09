@@ -23,6 +23,7 @@ public class SandboxScheduledPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public SandboxScheduledPayment withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -34,6 +35,7 @@ public class SandboxScheduledPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SandboxScheduledPayment withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +49,7 @@ public class SandboxScheduledPayment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("executionDate")
     public OffsetDateTime executionDate;
+
     public SandboxScheduledPayment withExecutionDate(OffsetDateTime executionDate) {
         this.executionDate = executionDate;
         return this;
@@ -58,9 +61,11 @@ public class SandboxScheduledPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("senderReference")
     public String senderReference;
+
     public SandboxScheduledPayment withSenderReference(String senderReference) {
         this.senderReference = senderReference;
         return this;
     }
     
+    public SandboxScheduledPayment(){}
 }

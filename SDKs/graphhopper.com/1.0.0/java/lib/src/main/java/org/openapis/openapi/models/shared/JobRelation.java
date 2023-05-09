@@ -14,6 +14,7 @@ public class JobRelation {
      */
     @JsonProperty("ids")
     public String[] ids;
+
     public JobRelation withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -103,6 +104,7 @@ public class JobRelation {
      */
     @JsonProperty("type")
     public String type;
+
     public JobRelation withType(String type) {
         this.type = type;
         return this;
@@ -114,9 +116,14 @@ public class JobRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vehicle_id")
     public String vehicleId;
+
     public JobRelation withVehicleId(String vehicleId) {
         this.vehicleId = vehicleId;
         return this;
     }
     
+    public JobRelation(@JsonProperty("ids") String[] ids, @JsonProperty("type") String type) {
+        this.ids = ids;
+        this.type = type;
+  }
 }

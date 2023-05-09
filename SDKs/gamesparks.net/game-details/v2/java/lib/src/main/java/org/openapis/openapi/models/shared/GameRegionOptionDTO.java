@@ -12,6 +12,7 @@ public class GameRegionOptionDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public GameRegionOptionDTO withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -20,6 +21,7 @@ public class GameRegionOptionDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionName")
     public String regionName;
+
     public GameRegionOptionDTO withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -28,9 +30,11 @@ public class GameRegionOptionDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected")
     public Boolean selected;
+
     public GameRegionOptionDTO withSelected(Boolean selected) {
         this.selected = selected;
         return this;
     }
     
+    public GameRegionOptionDTO(){}
 }

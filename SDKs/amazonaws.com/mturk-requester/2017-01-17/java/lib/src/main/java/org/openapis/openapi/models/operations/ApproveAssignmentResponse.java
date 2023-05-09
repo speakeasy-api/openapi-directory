@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ApproveAssignmentResponse {
@@ -12,6 +13,7 @@ public class ApproveAssignmentResponse {
      */
     
     public java.util.Map<String, Object> approveAssignmentResponse;
+
     public ApproveAssignmentResponse withApproveAssignmentResponse(java.util.Map<String, Object> approveAssignmentResponse) {
         this.approveAssignmentResponse = approveAssignmentResponse;
         return this;
@@ -19,6 +21,7 @@ public class ApproveAssignmentResponse {
     
     
     public String contentType;
+
     public ApproveAssignmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ApproveAssignmentResponse {
      */
     
     public Object requestError;
+
     public ApproveAssignmentResponse withRequestError(Object requestError) {
         this.requestError = requestError;
         return this;
@@ -39,6 +43,7 @@ public class ApproveAssignmentResponse {
      */
     
     public Object serviceFault;
+
     public ApproveAssignmentResponse withServiceFault(Object serviceFault) {
         this.serviceFault = serviceFault;
         return this;
@@ -46,6 +51,7 @@ public class ApproveAssignmentResponse {
     
     
     public Integer statusCode;
+
     public ApproveAssignmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ApproveAssignmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ApproveAssignmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ApproveAssignmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

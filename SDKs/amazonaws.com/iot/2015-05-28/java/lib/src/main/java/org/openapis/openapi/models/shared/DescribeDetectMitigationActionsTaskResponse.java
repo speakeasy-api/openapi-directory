@@ -15,9 +15,11 @@ public class DescribeDetectMitigationActionsTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskSummary")
     public DetectMitigationActionsTaskSummary taskSummary;
+
     public DescribeDetectMitigationActionsTaskResponse withTaskSummary(DetectMitigationActionsTaskSummary taskSummary) {
         this.taskSummary = taskSummary;
         return this;
     }
     
+    public DescribeDetectMitigationActionsTaskResponse(){}
 }

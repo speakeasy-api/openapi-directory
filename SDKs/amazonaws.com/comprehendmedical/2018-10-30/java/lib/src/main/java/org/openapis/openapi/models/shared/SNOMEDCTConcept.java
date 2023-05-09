@@ -15,6 +15,7 @@ public class SNOMEDCTConcept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public SNOMEDCTConcept withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class SNOMEDCTConcept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public SNOMEDCTConcept withDescription(String description) {
         this.description = description;
         return this;
@@ -31,9 +33,11 @@ public class SNOMEDCTConcept {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public SNOMEDCTConcept withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public SNOMEDCTConcept(){}
 }

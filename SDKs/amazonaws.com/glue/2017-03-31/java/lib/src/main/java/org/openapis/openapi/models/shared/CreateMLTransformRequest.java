@@ -12,6 +12,7 @@ public class CreateMLTransformRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateMLTransformRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class CreateMLTransformRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlueVersion")
     public String glueVersion;
+
     public CreateMLTransformRequest withGlueVersion(String glueVersion) {
         this.glueVersion = glueVersion;
         return this;
@@ -27,6 +29,7 @@ public class CreateMLTransformRequest {
     
     @JsonProperty("InputRecordTables")
     public GlueTable[] inputRecordTables;
+
     public CreateMLTransformRequest withInputRecordTables(GlueTable[] inputRecordTables) {
         this.inputRecordTables = inputRecordTables;
         return this;
@@ -35,6 +38,7 @@ public class CreateMLTransformRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCapacity")
     public Double maxCapacity;
+
     public CreateMLTransformRequest withMaxCapacity(Double maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -43,6 +47,7 @@ public class CreateMLTransformRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRetries")
     public Long maxRetries;
+
     public CreateMLTransformRequest withMaxRetries(Long maxRetries) {
         this.maxRetries = maxRetries;
         return this;
@@ -50,6 +55,7 @@ public class CreateMLTransformRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateMLTransformRequest withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +64,7 @@ public class CreateMLTransformRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfWorkers")
     public Long numberOfWorkers;
+
     public CreateMLTransformRequest withNumberOfWorkers(Long numberOfWorkers) {
         this.numberOfWorkers = numberOfWorkers;
         return this;
@@ -65,6 +72,7 @@ public class CreateMLTransformRequest {
     
     @JsonProperty("Parameters")
     public TransformParameters parameters;
+
     public CreateMLTransformRequest withParameters(TransformParameters parameters) {
         this.parameters = parameters;
         return this;
@@ -72,6 +80,7 @@ public class CreateMLTransformRequest {
     
     @JsonProperty("Role")
     public String role;
+
     public CreateMLTransformRequest withRole(String role) {
         this.role = role;
         return this;
@@ -80,6 +89,7 @@ public class CreateMLTransformRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateMLTransformRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -88,6 +98,7 @@ public class CreateMLTransformRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeout")
     public Long timeout;
+
     public CreateMLTransformRequest withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
@@ -96,6 +107,7 @@ public class CreateMLTransformRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformEncryption")
     public TransformEncryption transformEncryption;
+
     public CreateMLTransformRequest withTransformEncryption(TransformEncryption transformEncryption) {
         this.transformEncryption = transformEncryption;
         return this;
@@ -104,9 +116,16 @@ public class CreateMLTransformRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerType")
     public WorkerTypeEnum workerType;
+
     public CreateMLTransformRequest withWorkerType(WorkerTypeEnum workerType) {
         this.workerType = workerType;
         return this;
     }
     
+    public CreateMLTransformRequest(@JsonProperty("InputRecordTables") GlueTable[] inputRecordTables, @JsonProperty("Name") String name, @JsonProperty("Parameters") TransformParameters parameters, @JsonProperty("Role") String role) {
+        this.inputRecordTables = inputRecordTables;
+        this.name = name;
+        this.parameters = parameters;
+        this.role = role;
+  }
 }

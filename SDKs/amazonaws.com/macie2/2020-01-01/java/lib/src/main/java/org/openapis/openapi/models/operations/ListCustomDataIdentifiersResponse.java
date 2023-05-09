@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCustomDataIdentifiersResponse {
@@ -12,6 +13,7 @@ public class ListCustomDataIdentifiersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListCustomDataIdentifiersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListCustomDataIdentifiersResponse {
      */
     
     public Object conflictException;
+
     public ListCustomDataIdentifiersResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListCustomDataIdentifiersResponse {
     
     
     public String contentType;
+
     public ListCustomDataIdentifiersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListCustomDataIdentifiersResponse {
      */
     
     public Object internalServerException;
+
     public ListCustomDataIdentifiersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListCustomDataIdentifiersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCustomDataIdentifiersResponse listCustomDataIdentifiersResponse;
+
     public ListCustomDataIdentifiersResponse withListCustomDataIdentifiersResponse(org.openapis.openapi.models.shared.ListCustomDataIdentifiersResponse listCustomDataIdentifiersResponse) {
         this.listCustomDataIdentifiersResponse = listCustomDataIdentifiersResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListCustomDataIdentifiersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListCustomDataIdentifiersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListCustomDataIdentifiersResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListCustomDataIdentifiersResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListCustomDataIdentifiersResponse {
     
     
     public Integer statusCode;
+
     public ListCustomDataIdentifiersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListCustomDataIdentifiersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCustomDataIdentifiersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListCustomDataIdentifiersResponse {
      */
     
     public Object throttlingException;
+
     public ListCustomDataIdentifiersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ListCustomDataIdentifiersResponse {
      */
     
     public Object validationException;
+
     public ListCustomDataIdentifiersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListCustomDataIdentifiersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

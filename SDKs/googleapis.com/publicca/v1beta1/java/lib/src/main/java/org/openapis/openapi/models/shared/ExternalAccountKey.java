@@ -18,6 +18,7 @@ public class ExternalAccountKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("b64MacKey")
     public String b64MacKey;
+
     public ExternalAccountKey withB64MacKey(String b64MacKey) {
         this.b64MacKey = b64MacKey;
         return this;
@@ -29,6 +30,7 @@ public class ExternalAccountKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyId")
     public String keyId;
+
     public ExternalAccountKey withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -40,9 +42,11 @@ public class ExternalAccountKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ExternalAccountKey withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ExternalAccountKey(){}
 }

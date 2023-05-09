@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalculateLoyaltyPointsRequest {
@@ -14,6 +15,7 @@ public class CalculateLoyaltyPointsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CalculateLoyaltyPointsRequest calculateLoyaltyPointsRequest;
+
     public CalculateLoyaltyPointsRequest withCalculateLoyaltyPointsRequest(org.openapis.openapi.models.shared.CalculateLoyaltyPointsRequest calculateLoyaltyPointsRequest) {
         this.calculateLoyaltyPointsRequest = calculateLoyaltyPointsRequest;
         return this;
@@ -24,9 +26,14 @@ public class CalculateLoyaltyPointsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=program_id")
     public String programId;
+
     public CalculateLoyaltyPointsRequest withProgramId(String programId) {
         this.programId = programId;
         return this;
     }
     
+    public CalculateLoyaltyPointsRequest(@JsonProperty("CalculateLoyaltyPointsRequest") org.openapis.openapi.models.shared.CalculateLoyaltyPointsRequest calculateLoyaltyPointsRequest, @JsonProperty("program_id") String programId) {
+        this.calculateLoyaltyPointsRequest = calculateLoyaltyPointsRequest;
+        this.programId = programId;
+  }
 }

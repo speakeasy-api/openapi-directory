@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPipelinesResponse {
@@ -12,6 +13,7 @@ public class ListPipelinesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPipelinesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPipelinesResponse {
     
     
     public String contentType;
+
     public ListPipelinesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPipelinesResponse {
      */
     
     public Object incompatibleVersionException;
+
     public ListPipelinesResponse withIncompatibleVersionException(Object incompatibleVersionException) {
         this.incompatibleVersionException = incompatibleVersionException;
         return this;
@@ -39,6 +43,7 @@ public class ListPipelinesResponse {
      */
     
     public Object internalServiceException;
+
     public ListPipelinesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ListPipelinesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPipelinesResponse listPipelinesResponse;
+
     public ListPipelinesResponse withListPipelinesResponse(org.openapis.openapi.models.shared.ListPipelinesResponse listPipelinesResponse) {
         this.listPipelinesResponse = listPipelinesResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListPipelinesResponse {
     
     
     public Integer statusCode;
+
     public ListPipelinesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListPipelinesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPipelinesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListPipelinesResponse {
      */
     
     public Object validationException;
+
     public ListPipelinesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPipelinesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

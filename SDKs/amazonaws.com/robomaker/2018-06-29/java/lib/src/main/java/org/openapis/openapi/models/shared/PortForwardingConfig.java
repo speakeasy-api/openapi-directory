@@ -15,9 +15,11 @@ public class PortForwardingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portMappings")
     public PortMapping[] portMappings;
+
     public PortForwardingConfig withPortMappings(PortMapping[] portMappings) {
         this.portMappings = portMappings;
         return this;
     }
     
+    public PortForwardingConfig(){}
 }

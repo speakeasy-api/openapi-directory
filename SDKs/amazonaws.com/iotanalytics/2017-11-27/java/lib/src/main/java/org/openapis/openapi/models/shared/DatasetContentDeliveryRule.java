@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DatasetContentDeliveryRule {
     @JsonProperty("destination")
     public DatasetContentDeliveryDestination destination;
+
     public DatasetContentDeliveryRule withDestination(DatasetContentDeliveryDestination destination) {
         this.destination = destination;
         return this;
@@ -22,9 +23,13 @@ public class DatasetContentDeliveryRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryName")
     public String entryName;
+
     public DatasetContentDeliveryRule withEntryName(String entryName) {
         this.entryName = entryName;
         return this;
     }
     
+    public DatasetContentDeliveryRule(@JsonProperty("destination") DatasetContentDeliveryDestination destination) {
+        this.destination = destination;
+  }
 }

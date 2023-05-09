@@ -12,6 +12,7 @@ public class GetV2SavedListViewsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2SavedListViewsJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -22,6 +23,7 @@ public class GetV2SavedListViewsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2SavedListViewsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -32,6 +34,7 @@ public class GetV2SavedListViewsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2SavedListViewsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -42,6 +45,7 @@ public class GetV2SavedListViewsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2SavedListViewsJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -52,6 +56,7 @@ public class GetV2SavedListViewsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2SavedListViewsJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -62,6 +67,7 @@ public class GetV2SavedListViewsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2SavedListViewsJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -72,6 +78,7 @@ public class GetV2SavedListViewsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2SavedListViewsJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -82,9 +89,11 @@ public class GetV2SavedListViewsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public String view;
+
     public GetV2SavedListViewsJsonRequest withView(String view) {
         this.view = view;
         return this;
     }
     
+    public GetV2SavedListViewsJsonRequest(){}
 }

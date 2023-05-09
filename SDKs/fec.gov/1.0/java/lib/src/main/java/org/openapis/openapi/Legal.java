@@ -60,11 +60,9 @@ public class Legal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLegalSearchResponse res = new org.openapis.openapi.models.operations.GetLegalSearchResponse() {{
+        org.openapis.openapi.models.operations.GetLegalSearchResponse res = new org.openapis.openapi.models.operations.GetLegalSearchResponse(contentType, httpRes.statusCode()) {{
             getLegalSearchDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

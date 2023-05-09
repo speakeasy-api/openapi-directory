@@ -15,6 +15,7 @@ public class ServerCertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverCertificateArn")
     public String serverCertificateArn;
+
     public ServerCertificateSummary withServerCertificateArn(String serverCertificateArn) {
         this.serverCertificateArn = serverCertificateArn;
         return this;
@@ -23,6 +24,7 @@ public class ServerCertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverCertificateStatus")
     public ServerCertificateStatusEnum serverCertificateStatus;
+
     public ServerCertificateSummary withServerCertificateStatus(ServerCertificateStatusEnum serverCertificateStatus) {
         this.serverCertificateStatus = serverCertificateStatus;
         return this;
@@ -31,9 +33,11 @@ public class ServerCertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverCertificateStatusDetail")
     public String serverCertificateStatusDetail;
+
     public ServerCertificateSummary withServerCertificateStatusDetail(String serverCertificateStatusDetail) {
         this.serverCertificateStatusDetail = serverCertificateStatusDetail;
         return this;
     }
     
+    public ServerCertificateSummary(){}
 }

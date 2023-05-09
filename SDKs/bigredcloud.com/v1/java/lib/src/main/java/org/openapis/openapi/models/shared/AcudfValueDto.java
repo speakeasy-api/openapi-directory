@@ -12,6 +12,7 @@ public class AcudfValueDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AcudfValueDto withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class AcudfValueDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public AcudfValueDto withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class AcudfValueDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userDefinedFieldId")
     public Long userDefinedFieldId;
+
     public AcudfValueDto withUserDefinedFieldId(Long userDefinedFieldId) {
         this.userDefinedFieldId = userDefinedFieldId;
         return this;
@@ -36,9 +39,11 @@ public class AcudfValueDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public AcudfValueDto withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AcudfValueDto(){}
 }

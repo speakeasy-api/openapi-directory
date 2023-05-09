@@ -15,6 +15,7 @@ public class DescribeChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public Channel channel;
+
     public DescribeChannelResponse withChannel(Channel channel) {
         this.channel = channel;
         return this;
@@ -23,9 +24,11 @@ public class DescribeChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistics")
     public ChannelStatistics statistics;
+
     public DescribeChannelResponse withStatistics(ChannelStatistics statistics) {
         this.statistics = statistics;
         return this;
     }
     
+    public DescribeChannelResponse(){}
 }

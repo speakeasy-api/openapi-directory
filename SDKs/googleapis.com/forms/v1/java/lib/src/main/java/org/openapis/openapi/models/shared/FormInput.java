@@ -18,6 +18,7 @@ public class FormInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public InfoInput info;
+
     public FormInput withInfo(InfoInput info) {
         this.info = info;
         return this;
@@ -29,6 +30,7 @@ public class FormInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ItemInput[] items;
+
     public FormInput withItems(ItemInput[] items) {
         this.items = items;
         return this;
@@ -40,9 +42,11 @@ public class FormInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public FormSettings settings;
+
     public FormInput withSettings(FormSettings settings) {
         this.settings = settings;
         return this;
     }
     
+    public FormInput(){}
 }

@@ -18,9 +18,11 @@ public class ClearAppsDataStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public java.util.Map<String, PerAppResult> results;
+
     public ClearAppsDataStatus withResults(java.util.Map<String, PerAppResult> results) {
         this.results = results;
         return this;
     }
     
+    public ClearAppsDataStatus(){}
 }

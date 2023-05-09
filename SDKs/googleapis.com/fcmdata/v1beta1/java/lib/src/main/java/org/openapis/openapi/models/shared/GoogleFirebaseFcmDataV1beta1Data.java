@@ -18,6 +18,7 @@ public class GoogleFirebaseFcmDataV1beta1Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countMessagesAccepted")
     public String countMessagesAccepted;
+
     public GoogleFirebaseFcmDataV1beta1Data withCountMessagesAccepted(String countMessagesAccepted) {
         this.countMessagesAccepted = countMessagesAccepted;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirebaseFcmDataV1beta1Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryPerformancePercents")
     public GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents deliveryPerformancePercents;
+
     public GoogleFirebaseFcmDataV1beta1Data withDeliveryPerformancePercents(GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents deliveryPerformancePercents) {
         this.deliveryPerformancePercents = deliveryPerformancePercents;
         return this;
@@ -40,6 +42,7 @@ public class GoogleFirebaseFcmDataV1beta1Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageInsightPercents")
     public GoogleFirebaseFcmDataV1beta1MessageInsightPercents messageInsightPercents;
+
     public GoogleFirebaseFcmDataV1beta1Data withMessageInsightPercents(GoogleFirebaseFcmDataV1beta1MessageInsightPercents messageInsightPercents) {
         this.messageInsightPercents = messageInsightPercents;
         return this;
@@ -51,9 +54,11 @@ public class GoogleFirebaseFcmDataV1beta1Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageOutcomePercents")
     public GoogleFirebaseFcmDataV1beta1MessageOutcomePercents messageOutcomePercents;
+
     public GoogleFirebaseFcmDataV1beta1Data withMessageOutcomePercents(GoogleFirebaseFcmDataV1beta1MessageOutcomePercents messageOutcomePercents) {
         this.messageOutcomePercents = messageOutcomePercents;
         return this;
     }
     
+    public GoogleFirebaseFcmDataV1beta1Data(){}
 }

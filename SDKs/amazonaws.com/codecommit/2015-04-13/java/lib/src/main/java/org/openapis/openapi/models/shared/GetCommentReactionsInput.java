@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCommentReactionsInput {
     @JsonProperty("commentId")
     public String commentId;
+
     public GetCommentReactionsInput withCommentId(String commentId) {
         this.commentId = commentId;
         return this;
@@ -19,6 +20,7 @@ public class GetCommentReactionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetCommentReactionsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class GetCommentReactionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetCommentReactionsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class GetCommentReactionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactionUserArn")
     public String reactionUserArn;
+
     public GetCommentReactionsInput withReactionUserArn(String reactionUserArn) {
         this.reactionUserArn = reactionUserArn;
         return this;
     }
     
+    public GetCommentReactionsInput(@JsonProperty("commentId") String commentId) {
+        this.commentId = commentId;
+  }
 }

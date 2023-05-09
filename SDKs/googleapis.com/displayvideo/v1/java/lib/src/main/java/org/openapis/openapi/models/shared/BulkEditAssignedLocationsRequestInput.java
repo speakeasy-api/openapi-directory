@@ -18,6 +18,7 @@ public class BulkEditAssignedLocationsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdAssignedLocations")
     public AssignedLocationInput[] createdAssignedLocations;
+
     public BulkEditAssignedLocationsRequestInput withCreatedAssignedLocations(AssignedLocationInput[] createdAssignedLocations) {
         this.createdAssignedLocations = createdAssignedLocations;
         return this;
@@ -29,9 +30,11 @@ public class BulkEditAssignedLocationsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedAssignedLocations")
     public String[] deletedAssignedLocations;
+
     public BulkEditAssignedLocationsRequestInput withDeletedAssignedLocations(String[] deletedAssignedLocations) {
         this.deletedAssignedLocations = deletedAssignedLocations;
         return this;
     }
     
+    public BulkEditAssignedLocationsRequestInput(){}
 }

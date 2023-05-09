@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class TransferCallParameters {
      */
     @SpeakeasyMetadata("form:name=CallUUID")
     public String callUUID;
+
     public TransferCallParameters withCallUUID(String callUUID) {
         this.callUUID = callUUID;
         return this;
@@ -25,9 +27,14 @@ public class TransferCallParameters {
      */
     @SpeakeasyMetadata("form:name=Url")
     public String url;
+
     public TransferCallParameters withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TransferCallParameters(@JsonProperty("CallUUID") String callUUID, @JsonProperty("Url") String url) {
+        this.callUUID = callUUID;
+        this.url = url;
+  }
 }

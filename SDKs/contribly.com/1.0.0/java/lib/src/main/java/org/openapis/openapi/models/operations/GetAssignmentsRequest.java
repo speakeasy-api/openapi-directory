@@ -12,6 +12,7 @@ public class GetAssignmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alwaysOpen")
     public Boolean alwaysOpen;
+
     public GetAssignmentsRequest withAlwaysOpen(Boolean alwaysOpen) {
         this.alwaysOpen = alwaysOpen;
         return this;
@@ -22,6 +23,7 @@ public class GetAssignmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetAssignmentsRequest withName(String name) {
         this.name = name;
         return this;
@@ -32,6 +34,7 @@ public class GetAssignmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=open")
     public Boolean open;
+
     public GetAssignmentsRequest withOpen(Boolean open) {
         this.open = open;
         return this;
@@ -42,6 +45,7 @@ public class GetAssignmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ownedBy")
     public String ownedBy;
+
     public GetAssignmentsRequest withOwnedBy(String ownedBy) {
         this.ownedBy = ownedBy;
         return this;
@@ -52,6 +56,7 @@ public class GetAssignmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetAssignmentsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -62,6 +67,7 @@ public class GetAssignmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public GetAssignmentsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -72,6 +78,7 @@ public class GetAssignmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetAssignmentsRequest withQ(String q) {
         this.q = q;
         return this;
@@ -82,6 +89,7 @@ public class GetAssignmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
     public String tag;
+
     public GetAssignmentsRequest withTag(String tag) {
         this.tag = tag;
         return this;
@@ -92,9 +100,11 @@ public class GetAssignmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=urlWords")
     public String urlWords;
+
     public GetAssignmentsRequest withUrlWords(String urlWords) {
         this.urlWords = urlWords;
         return this;
     }
     
+    public GetAssignmentsRequest(){}
 }

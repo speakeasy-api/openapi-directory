@@ -15,6 +15,7 @@ public class BatchGetPreparedStatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreparedStatements")
     public PreparedStatement[] preparedStatements;
+
     public BatchGetPreparedStatementOutput withPreparedStatements(PreparedStatement[] preparedStatements) {
         this.preparedStatements = preparedStatements;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetPreparedStatementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedPreparedStatementNames")
     public UnprocessedPreparedStatementName[] unprocessedPreparedStatementNames;
+
     public BatchGetPreparedStatementOutput withUnprocessedPreparedStatementNames(UnprocessedPreparedStatementName[] unprocessedPreparedStatementNames) {
         this.unprocessedPreparedStatementNames = unprocessedPreparedStatementNames;
         return this;
     }
     
+    public BatchGetPreparedStatementOutput(){}
 }

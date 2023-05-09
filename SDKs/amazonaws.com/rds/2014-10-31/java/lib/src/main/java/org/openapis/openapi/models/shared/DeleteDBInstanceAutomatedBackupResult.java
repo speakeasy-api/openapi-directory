@@ -15,9 +15,11 @@ public class DeleteDBInstanceAutomatedBackupResult {
      */
     
     public DBInstanceAutomatedBackup dbInstanceAutomatedBackup;
+
     public DeleteDBInstanceAutomatedBackupResult withDBInstanceAutomatedBackup(DBInstanceAutomatedBackup dbInstanceAutomatedBackup) {
         this.dbInstanceAutomatedBackup = dbInstanceAutomatedBackup;
         return this;
     }
     
+    public DeleteDBInstanceAutomatedBackupResult(){}
 }

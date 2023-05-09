@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAllowListResponse {
@@ -12,6 +13,7 @@ public class DeleteAllowListResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAllowListResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAllowListResponse {
     
     
     public String contentType;
+
     public DeleteAllowListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAllowListResponse {
      */
     
     public java.util.Map<String, Object> deleteAllowListResponse;
+
     public DeleteAllowListResponse withDeleteAllowListResponse(java.util.Map<String, Object> deleteAllowListResponse) {
         this.deleteAllowListResponse = deleteAllowListResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAllowListResponse {
      */
     
     public Object internalServerException;
+
     public DeleteAllowListResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAllowListResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAllowListResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteAllowListResponse {
     
     
     public Integer statusCode;
+
     public DeleteAllowListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteAllowListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAllowListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteAllowListResponse {
      */
     
     public Object throttlingException;
+
     public DeleteAllowListResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteAllowListResponse {
      */
     
     public Object validationException;
+
     public DeleteAllowListResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteAllowListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

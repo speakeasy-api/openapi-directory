@@ -18,6 +18,7 @@ public class VolumeVolumeInfoDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public String height;
+
     public VolumeVolumeInfoDimensions withHeight(String height) {
         this.height = height;
         return this;
@@ -29,6 +30,7 @@ public class VolumeVolumeInfoDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thickness")
     public String thickness;
+
     public VolumeVolumeInfoDimensions withThickness(String thickness) {
         this.thickness = thickness;
         return this;
@@ -40,9 +42,11 @@ public class VolumeVolumeInfoDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public String width;
+
     public VolumeVolumeInfoDimensions withWidth(String width) {
         this.width = width;
         return this;
     }
     
+    public VolumeVolumeInfoDimensions(){}
 }

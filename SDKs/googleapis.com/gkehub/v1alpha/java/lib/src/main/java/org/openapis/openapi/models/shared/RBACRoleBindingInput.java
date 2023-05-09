@@ -18,6 +18,7 @@ public class RBACRoleBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
+
     public RBACRoleBindingInput withGroup(String group) {
         this.group = group;
         return this;
@@ -29,6 +30,7 @@ public class RBACRoleBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RBACRoleBindingInput withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class RBACRoleBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public Role role;
+
     public RBACRoleBindingInput withRole(Role role) {
         this.role = role;
         return this;
@@ -51,9 +54,11 @@ public class RBACRoleBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public RBACRoleBindingInput withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public RBACRoleBindingInput(){}
 }

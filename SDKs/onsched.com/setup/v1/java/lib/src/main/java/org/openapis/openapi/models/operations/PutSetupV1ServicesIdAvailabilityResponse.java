@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSetupV1ServicesIdAvailabilityResponse {
     
     public String contentType;
+
     public PutSetupV1ServicesIdAvailabilityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutSetupV1ServicesIdAvailabilityResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceAvailabilityViewModel serviceAvailabilityViewModel;
+
     public PutSetupV1ServicesIdAvailabilityResponse withServiceAvailabilityViewModel(org.openapis.openapi.models.shared.ServiceAvailabilityViewModel serviceAvailabilityViewModel) {
         this.serviceAvailabilityViewModel = serviceAvailabilityViewModel;
         return this;
@@ -26,6 +29,7 @@ public class PutSetupV1ServicesIdAvailabilityResponse {
     
     
     public Integer statusCode;
+
     public PutSetupV1ServicesIdAvailabilityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PutSetupV1ServicesIdAvailabilityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSetupV1ServicesIdAvailabilityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutSetupV1ServicesIdAvailabilityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

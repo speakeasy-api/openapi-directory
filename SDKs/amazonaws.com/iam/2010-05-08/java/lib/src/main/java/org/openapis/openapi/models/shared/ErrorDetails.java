@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ErrorDetails - &lt;p&gt;Contains information about the reason that the operation failed.&lt;/p&gt; &lt;p&gt;This data type is used as a response element in the &lt;a&gt;GetOrganizationsAccessReport&lt;/a&gt;, &lt;a&gt;GetServiceLastAccessedDetails&lt;/a&gt;, and &lt;a&gt;GetServiceLastAccessedDetailsWithEntities&lt;/a&gt; operations.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ErrorDetails {
     
     public String code;
+
     public ErrorDetails withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,14 @@ public class ErrorDetails {
     
     
     public String message;
+
     public ErrorDetails withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ErrorDetails(@JsonProperty("Code") String code, @JsonProperty("Message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

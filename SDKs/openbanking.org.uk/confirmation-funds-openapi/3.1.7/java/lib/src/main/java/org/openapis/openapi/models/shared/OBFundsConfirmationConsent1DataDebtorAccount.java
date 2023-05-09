@@ -17,6 +17,7 @@ public class OBFundsConfirmationConsent1DataDebtorAccount {
      */
     @JsonProperty("Identification")
     public String identification;
+
     public OBFundsConfirmationConsent1DataDebtorAccount withIdentification(String identification) {
         this.identification = identification;
         return this;
@@ -29,6 +30,7 @@ public class OBFundsConfirmationConsent1DataDebtorAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OBFundsConfirmationConsent1DataDebtorAccount withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +41,7 @@ public class OBFundsConfirmationConsent1DataDebtorAccount {
      */
     @JsonProperty("SchemeName")
     public String schemeName;
+
     public OBFundsConfirmationConsent1DataDebtorAccount withSchemeName(String schemeName) {
         this.schemeName = schemeName;
         return this;
@@ -51,9 +54,14 @@ public class OBFundsConfirmationConsent1DataDebtorAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryIdentification")
     public String secondaryIdentification;
+
     public OBFundsConfirmationConsent1DataDebtorAccount withSecondaryIdentification(String secondaryIdentification) {
         this.secondaryIdentification = secondaryIdentification;
         return this;
     }
     
+    public OBFundsConfirmationConsent1DataDebtorAccount(@JsonProperty("Identification") String identification, @JsonProperty("SchemeName") String schemeName) {
+        this.identification = identification;
+        this.schemeName = schemeName;
+  }
 }

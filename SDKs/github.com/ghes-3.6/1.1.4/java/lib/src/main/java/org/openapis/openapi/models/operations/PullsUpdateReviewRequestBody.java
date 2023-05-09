@@ -12,9 +12,13 @@ public class PullsUpdateReviewRequestBody {
      */
     @JsonProperty("body")
     public String body;
+
     public PullsUpdateReviewRequestBody withBody(String body) {
         this.body = body;
         return this;
     }
     
+    public PullsUpdateReviewRequestBody(@JsonProperty("body") String body) {
+        this.body = body;
+  }
 }

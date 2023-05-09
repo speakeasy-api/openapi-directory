@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFormsRequest {
@@ -12,9 +13,13 @@ public class GetFormsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ownedBy")
     public String ownedBy;
+
     public GetFormsRequest withOwnedBy(String ownedBy) {
         this.ownedBy = ownedBy;
         return this;
     }
     
+    public GetFormsRequest(@JsonProperty("ownedBy") String ownedBy) {
+        this.ownedBy = ownedBy;
+  }
 }

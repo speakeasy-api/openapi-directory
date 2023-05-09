@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetQueueAttributesResult {
     
     public java.util.Map<String, String> attributes;
+
     public GetQueueAttributesResult withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public GetQueueAttributesResult(){}
 }

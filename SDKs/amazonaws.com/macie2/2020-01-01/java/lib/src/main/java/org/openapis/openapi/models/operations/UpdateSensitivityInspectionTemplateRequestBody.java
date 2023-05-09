@@ -15,6 +15,7 @@ public class UpdateSensitivityInspectionTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateSensitivityInspectionTemplateRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateSensitivityInspectionTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludes")
     public UpdateSensitivityInspectionTemplateRequestBodyExcludes excludes;
+
     public UpdateSensitivityInspectionTemplateRequestBody withExcludes(UpdateSensitivityInspectionTemplateRequestBodyExcludes excludes) {
         this.excludes = excludes;
         return this;
@@ -37,9 +39,11 @@ public class UpdateSensitivityInspectionTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includes")
     public UpdateSensitivityInspectionTemplateRequestBodyIncludes includes;
+
     public UpdateSensitivityInspectionTemplateRequestBody withIncludes(UpdateSensitivityInspectionTemplateRequestBodyIncludes includes) {
         this.includes = includes;
         return this;
     }
     
+    public UpdateSensitivityInspectionTemplateRequestBody(){}
 }

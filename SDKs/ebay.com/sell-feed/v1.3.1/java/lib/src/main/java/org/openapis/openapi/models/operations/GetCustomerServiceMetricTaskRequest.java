@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomerServiceMetricTaskRequest {
@@ -12,9 +13,13 @@ public class GetCustomerServiceMetricTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
     public String taskId;
+
     public GetCustomerServiceMetricTaskRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public GetCustomerServiceMetricTaskRequest(@JsonProperty("task_id") String taskId) {
+        this.taskId = taskId;
+  }
 }

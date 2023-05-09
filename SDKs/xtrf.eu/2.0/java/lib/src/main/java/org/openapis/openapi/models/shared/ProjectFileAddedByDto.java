@@ -12,6 +12,7 @@ public class ProjectFileAddedByDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userType")
     public String userType;
+
     public ProjectFileAddedByDto withUserType(String userType) {
         this.userType = userType;
         return this;
@@ -20,9 +21,11 @@ public class ProjectFileAddedByDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorId")
     public Long vendorId;
+
     public ProjectFileAddedByDto withVendorId(Long vendorId) {
         this.vendorId = vendorId;
         return this;
     }
     
+    public ProjectFileAddedByDto(){}
 }

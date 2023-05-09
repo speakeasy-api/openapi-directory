@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DelListeNoireRequest {
@@ -12,6 +13,7 @@ public class DelListeNoireRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=delListeNoire")
     public DelListeNoireDelListeNoireEnum delListeNoire;
+
     public DelListeNoireRequest withDelListeNoire(DelListeNoireDelListeNoireEnum delListeNoire) {
         this.delListeNoire = delListeNoire;
         return this;
@@ -22,6 +24,7 @@ public class DelListeNoireRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyid")
     public String keyid;
+
     public DelListeNoireRequest withKeyid(String keyid) {
         this.keyid = keyid;
         return this;
@@ -32,9 +35,15 @@ public class DelListeNoireRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=num")
     public String num;
+
     public DelListeNoireRequest withNum(String num) {
         this.num = num;
         return this;
     }
     
+    public DelListeNoireRequest(@JsonProperty("delListeNoire") DelListeNoireDelListeNoireEnum delListeNoire, @JsonProperty("keyid") String keyid, @JsonProperty("num") String num) {
+        this.delListeNoire = delListeNoire;
+        this.keyid = keyid;
+        this.num = num;
+  }
 }

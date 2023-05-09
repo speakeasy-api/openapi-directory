@@ -15,9 +15,11 @@ public class TestAuthorizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authResults")
     public AuthResult[] authResults;
+
     public TestAuthorizationResponse withAuthResults(AuthResult[] authResults) {
         this.authResults = authResults;
         return this;
     }
     
+    public TestAuthorizationResponse(){}
 }

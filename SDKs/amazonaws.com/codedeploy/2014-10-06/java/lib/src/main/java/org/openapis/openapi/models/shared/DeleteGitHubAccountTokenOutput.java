@@ -15,9 +15,11 @@ public class DeleteGitHubAccountTokenOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenName")
     public String tokenName;
+
     public DeleteGitHubAccountTokenOutput withTokenName(String tokenName) {
         this.tokenName = tokenName;
         return this;
     }
     
+    public DeleteGitHubAccountTokenOutput(){}
 }

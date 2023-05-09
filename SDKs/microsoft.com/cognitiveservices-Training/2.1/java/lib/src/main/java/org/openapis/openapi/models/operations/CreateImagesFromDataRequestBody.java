@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImagesFromDataRequestBody {
     @SpeakeasyMetadata("multipartForm:file")
     public CreateImagesFromDataRequestBodyImageData imageData;
+
     public CreateImagesFromDataRequestBody withImageData(CreateImagesFromDataRequestBodyImageData imageData) {
         this.imageData = imageData;
         return this;
     }
     
+    public CreateImagesFromDataRequestBody(@JsonProperty("imageData") CreateImagesFromDataRequestBodyImageData imageData) {
+        this.imageData = imageData;
+  }
 }

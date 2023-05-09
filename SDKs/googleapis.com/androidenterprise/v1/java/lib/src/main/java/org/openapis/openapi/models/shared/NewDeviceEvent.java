@@ -18,6 +18,7 @@ public class NewDeviceEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public NewDeviceEvent withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -29,6 +30,7 @@ public class NewDeviceEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dpcPackageName")
     public String dpcPackageName;
+
     public NewDeviceEvent withDpcPackageName(String dpcPackageName) {
         this.dpcPackageName = dpcPackageName;
         return this;
@@ -40,6 +42,7 @@ public class NewDeviceEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managementType")
     public NewDeviceEventManagementTypeEnum managementType;
+
     public NewDeviceEvent withManagementType(NewDeviceEventManagementTypeEnum managementType) {
         this.managementType = managementType;
         return this;
@@ -51,9 +54,11 @@ public class NewDeviceEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public NewDeviceEvent withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public NewDeviceEvent(){}
 }

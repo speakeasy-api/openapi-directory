@@ -24,6 +24,7 @@ public class AuthenticationToken {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expires_at")
     public OffsetDateTime expiresAt;
+
     public AuthenticationToken withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -32,6 +33,7 @@ public class AuthenticationToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public java.util.Map<String, Object> permissions;
+
     public AuthenticationToken withPermissions(java.util.Map<String, Object> permissions) {
         this.permissions = permissions;
         return this;
@@ -43,6 +45,7 @@ public class AuthenticationToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositories")
     public Repository[] repositories;
+
     public AuthenticationToken withRepositories(Repository[] repositories) {
         this.repositories = repositories;
         return this;
@@ -54,6 +57,7 @@ public class AuthenticationToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository_selection")
     public AuthenticationTokenRepositorySelectionEnum repositorySelection;
+
     public AuthenticationToken withRepositorySelection(AuthenticationTokenRepositorySelectionEnum repositorySelection) {
         this.repositorySelection = repositorySelection;
         return this;
@@ -62,6 +66,7 @@ public class AuthenticationToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("single_file")
     public String singleFile;
+
     public AuthenticationToken withSingleFile(String singleFile) {
         this.singleFile = singleFile;
         return this;
@@ -72,9 +77,14 @@ public class AuthenticationToken {
      */
     @JsonProperty("token")
     public String token;
+
     public AuthenticationToken withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public AuthenticationToken(@JsonProperty("expires_at") OffsetDateTime expiresAt, @JsonProperty("token") String token) {
+        this.expiresAt = expiresAt;
+        this.token = token;
+  }
 }

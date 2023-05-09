@@ -12,6 +12,7 @@ public class ActionResourceAttributesAdherence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complete")
     public Long complete;
+
     public ActionResourceAttributesAdherence withComplete(Long complete) {
         this.complete = complete;
         return this;
@@ -20,6 +21,7 @@ public class ActionResourceAttributesAdherence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due")
     public Long due;
+
     public ActionResourceAttributesAdherence withDue(Long due) {
         this.due = due;
         return this;
@@ -28,9 +30,11 @@ public class ActionResourceAttributesAdherence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streak")
     public ActionResourceAttributesAdherenceStreak streak;
+
     public ActionResourceAttributesAdherence withStreak(ActionResourceAttributesAdherenceStreak streak) {
         this.streak = streak;
         return this;
     }
     
+    public ActionResourceAttributesAdherence(){}
 }

@@ -16,105 +16,85 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.SendCommandXAmzTargetEnum;
 import org.openapis.openapi.models.operations.SendCommandRequest;
 import org.openapis.openapi.models.operations.SendCommandResponse;
+import org.openapis.openapi.models.operations.SendCommandXAmzTargetEnum;
+import org.openapis.openapi.models.shared.CommitTransactionRequest;
+import org.openapis.openapi.models.shared.ExecuteStatementRequest;
+import org.openapis.openapi.models.shared.FetchPageRequest;
+import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.shared.SendCommandRequest;
 import org.openapis.openapi.models.shared.StartSessionRequest;
-import org.openapis.openapi.models.shared.FetchPageRequest;
-import org.openapis.openapi.models.shared.ExecuteStatementRequest;
 import org.openapis.openapi.models.shared.ValueHolder;
-import org.openapis.openapi.models.shared.CommitTransactionRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            SendCommandRequest req = new SendCommandRequest() {{
-                sendCommandRequest = new SendCommandRequest() {{
-                    abortTransaction = new java.util.HashMap<String, Object>() {{
-                        put("provident", "distinctio");
-                        put("quibusdam", "unde");
-                        put("nulla", "corrupti");
-                    }};
-                    commitTransaction = new CommitTransactionRequest() {{
-                        commitDigest = "illum";
-                        transactionId = "vel";
-                    }};
-                    endSession = new java.util.HashMap<String, Object>() {{
-                        put("deserunt", "suscipit");
-                        put("iure", "magnam");
-                        put("debitis", "ipsa");
-                    }};
-                    executeStatement = new ExecuteStatementRequest() {{
-                        parameters = new org.openapis.openapi.models.shared.ValueHolder[]{{
-                            add(new ValueHolder() {{
-                                ionBinary = "tempora";
-                                ionText = "suscipit";
-                            }}),
-                            add(new ValueHolder() {{
-                                ionBinary = "molestiae";
-                                ionText = "minus";
-                            }}),
-                            add(new ValueHolder() {{
-                                ionBinary = "placeat";
-                                ionText = "voluptatum";
-                            }}),
-                            add(new ValueHolder() {{
-                                ionBinary = "iusto";
-                                ionText = "excepturi";
-                            }}),
-                        }};
-                        statement = "nisi";
-                        transactionId = "recusandae";
-                    }};
-                    fetchPage = new FetchPageRequest() {{
-                        nextPageToken = "temporibus";
-                        transactionId = "ab";
-                    }};
-                    sessionToken = "quis";
-                    startSession = new StartSessionRequest() {{
-                        ledgerName = "veritatis";
-                    }};
-                    startTransaction = new java.util.HashMap<String, Object>() {{
-                        put("perferendis", "ipsam");
-                        put("repellendus", "sapiente");
-                        put("quo", "odit");
-                    }};
-                }};
-                xAmzAlgorithm = "at";
-                xAmzContentSha256 = "at";
-                xAmzCredential = "maiores";
-                xAmzDate = "molestiae";
-                xAmzSecurityToken = "quod";
-                xAmzSignature = "quod";
-                xAmzSignedHeaders = "esse";
-                xAmzTarget = "QLDBSession.SendCommand";
-            }}            
+            SendCommandRequest req = new SendCommandRequest(                new SendCommandRequest() {{
+                                abortTransaction = new java.util.HashMap<String, Object>() {{
+                                    put("distinctio", "quibusdam");
+                                    put("unde", "nulla");
+                                    put("corrupti", "illum");
+                                }};
+                                commitTransaction = new CommitTransactionRequest("vel", "error");;
+                                endSession = new java.util.HashMap<String, Object>() {{
+                                    put("suscipit", "iure");
+                                    put("magnam", "debitis");
+                                    put("ipsa", "delectus");
+                                }};
+                                executeStatement = new ExecuteStatementRequest("tempora", "suscipit") {{
+                                    parameters = new org.openapis.openapi.models.shared.ValueHolder[]{{
+                                        add(new ValueHolder() {{
+                                            ionBinary = "minus";
+                                            ionText = "placeat";
+                                        }}),
+                                        add(new ValueHolder() {{
+                                            ionBinary = "voluptatum";
+                                            ionText = "iusto";
+                                        }}),
+                                    }};
+                                }};;
+                                fetchPage = new FetchPageRequest("excepturi", "nisi");;
+                                sessionToken = "recusandae";
+                                startSession = new StartSessionRequest("temporibus");;
+                                startTransaction = new java.util.HashMap<String, Object>() {{
+                                    put("quis", "veritatis");
+                                }};
+                            }};, SendCommandXAmzTargetEnum.QLDB_SESSION_SEND_COMMAND) {{
+                xAmzAlgorithm = "deserunt";
+                xAmzContentSha256 = "perferendis";
+                xAmzCredential = "ipsam";
+                xAmzDate = "repellendus";
+                xAmzSecurityToken = "sapiente";
+                xAmzSignature = "quo";
+                xAmzSignedHeaders = "odit";
+            }};            
 
             SendCommandResponse res = sdk.sendCommand(req);
 
-            if (res.sendCommandResult.isPresent()) {
+            if (res.sendCommandResult != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `sendCommand` - <p>Sends a command to an Amazon QLDB ledger.</p> <note> <p>Instead of interacting directly with this API, we recommend using the QLDB driver or the QLDB shell to execute data transactions on a ledger.</p> <ul> <li> <p>If you are working with an AWS SDK, use the QLDB driver. The driver provides a high-level abstraction layer above this <i>QLDB Session</i> data plane and manages <code>SendCommand</code> API calls for you. For information and a list of supported programming languages, see <a href="https://docs.aws.amazon.com/qldb/latest/developerguide/getting-started-driver.html">Getting started with the driver</a> in the <i>Amazon QLDB Developer Guide</i>.</p> </li> <li> <p>If you are working with the AWS Command Line Interface (AWS CLI), use the QLDB shell. The shell is a command line interface that uses the QLDB driver to interact with a ledger. For information, see <a href="https://docs.aws.amazon.com/qldb/latest/developerguide/data-shell.html">Accessing Amazon QLDB using the QLDB shell</a>.</p> </li> </ul> </note>
+* [sendCommand](docs/sdk/README.md#sendcommand) - <p>Sends a command to an Amazon QLDB ledger.</p> <note> <p>Instead of interacting directly with this API, we recommend using the QLDB driver or the QLDB shell to execute data transactions on a ledger.</p> <ul> <li> <p>If you are working with an AWS SDK, use the QLDB driver. The driver provides a high-level abstraction layer above this <i>QLDB Session</i> data plane and manages <code>SendCommand</code> API calls for you. For information and a list of supported programming languages, see <a href="https://docs.aws.amazon.com/qldb/latest/developerguide/getting-started-driver.html">Getting started with the driver</a> in the <i>Amazon QLDB Developer Guide</i>.</p> </li> <li> <p>If you are working with the AWS Command Line Interface (AWS CLI), use the QLDB shell. The shell is a command line interface that uses the QLDB driver to interact with a ledger. For information, see <a href="https://docs.aws.amazon.com/qldb/latest/developerguide/data-shell.html">Accessing Amazon QLDB using the QLDB shell</a>.</p> </li> </ul> </note>
 <!-- End SDK Available Operations -->
 
 ### Maturity

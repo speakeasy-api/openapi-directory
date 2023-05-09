@@ -18,6 +18,7 @@ public class ListTargetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTargetsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListTargetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targets")
     public Target[] targets;
+
     public ListTargetsResponse withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -40,9 +42,11 @@ public class ListTargetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListTargetsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListTargetsResponse(){}
 }

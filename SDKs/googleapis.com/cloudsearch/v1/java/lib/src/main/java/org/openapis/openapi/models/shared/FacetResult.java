@@ -18,6 +18,7 @@ public class FacetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buckets")
     public FacetBucket[] buckets;
+
     public FacetResult withBuckets(FacetBucket[] buckets) {
         this.buckets = buckets;
         return this;
@@ -29,6 +30,7 @@ public class FacetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectType")
     public String objectType;
+
     public FacetResult withObjectType(String objectType) {
         this.objectType = objectType;
         return this;
@@ -40,6 +42,7 @@ public class FacetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorName")
     public String operatorName;
+
     public FacetResult withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
@@ -51,9 +54,11 @@ public class FacetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceName")
     public String sourceName;
+
     public FacetResult withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
     }
     
+    public FacetResult(){}
 }

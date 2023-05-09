@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock {
     
     public DestinyDefinitionsDestinyGearArtArrangementReference[] arrangements;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock withArrangements(DestinyDefinitionsDestinyGearArtArrangementReference[] arrangements) {
         this.arrangements = arrangements;
         return this;
@@ -19,6 +20,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock {
     
     
     public DestinyDyeReference[] customDyes;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock withCustomDyes(DestinyDyeReference[] customDyes) {
         this.customDyes = customDyes;
         return this;
@@ -26,6 +28,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock {
     
     
     public DestinyDyeReference[] defaultDyes;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock withDefaultDyes(DestinyDyeReference[] defaultDyes) {
         this.defaultDyes = defaultDyes;
         return this;
@@ -33,6 +36,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock {
     
     
     public Boolean hasGeometry;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock withHasGeometry(Boolean hasGeometry) {
         this.hasGeometry = hasGeometry;
         return this;
@@ -40,6 +44,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock {
     
     
     public DestinyDyeReference[] lockedDyes;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock withLockedDyes(DestinyDyeReference[] lockedDyes) {
         this.lockedDyes = lockedDyes;
         return this;
@@ -47,6 +52,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock {
     
     
     public Long weaponPatternHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock withWeaponPatternHash(Long weaponPatternHash) {
         this.weaponPatternHash = weaponPatternHash;
         return this;
@@ -54,9 +60,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock {
     
     
     public String weaponPatternIdentifier;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock withWeaponPatternIdentifier(String weaponPatternIdentifier) {
         this.weaponPatternIdentifier = weaponPatternIdentifier;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock(){}
 }

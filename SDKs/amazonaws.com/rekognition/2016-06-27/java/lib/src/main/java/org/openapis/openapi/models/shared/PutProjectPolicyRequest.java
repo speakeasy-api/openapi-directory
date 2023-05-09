@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutProjectPolicyRequest {
     @JsonProperty("PolicyDocument")
     public String policyDocument;
+
     public PutProjectPolicyRequest withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -18,6 +19,7 @@ public class PutProjectPolicyRequest {
     
     @JsonProperty("PolicyName")
     public String policyName;
+
     public PutProjectPolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -26,6 +28,7 @@ public class PutProjectPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyRevisionId")
     public String policyRevisionId;
+
     public PutProjectPolicyRequest withPolicyRevisionId(String policyRevisionId) {
         this.policyRevisionId = policyRevisionId;
         return this;
@@ -33,9 +36,15 @@ public class PutProjectPolicyRequest {
     
     @JsonProperty("ProjectArn")
     public String projectArn;
+
     public PutProjectPolicyRequest withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
     }
     
+    public PutProjectPolicyRequest(@JsonProperty("PolicyDocument") String policyDocument, @JsonProperty("PolicyName") String policyName, @JsonProperty("ProjectArn") String projectArn) {
+        this.policyDocument = policyDocument;
+        this.policyName = policyName;
+        this.projectArn = projectArn;
+  }
 }

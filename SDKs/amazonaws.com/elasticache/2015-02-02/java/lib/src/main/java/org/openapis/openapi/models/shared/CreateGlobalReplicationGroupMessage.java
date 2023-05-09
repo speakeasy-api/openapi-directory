@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateGlobalReplicationGroupMessage {
     
     public String globalReplicationGroupDescription;
+
     public CreateGlobalReplicationGroupMessage withGlobalReplicationGroupDescription(String globalReplicationGroupDescription) {
         this.globalReplicationGroupDescription = globalReplicationGroupDescription;
         return this;
@@ -16,6 +17,7 @@ public class CreateGlobalReplicationGroupMessage {
     
     
     public String globalReplicationGroupIdSuffix;
+
     public CreateGlobalReplicationGroupMessage withGlobalReplicationGroupIdSuffix(String globalReplicationGroupIdSuffix) {
         this.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
         return this;
@@ -23,9 +25,14 @@ public class CreateGlobalReplicationGroupMessage {
     
     
     public String primaryReplicationGroupId;
+
     public CreateGlobalReplicationGroupMessage withPrimaryReplicationGroupId(String primaryReplicationGroupId) {
         this.primaryReplicationGroupId = primaryReplicationGroupId;
         return this;
     }
     
+    public CreateGlobalReplicationGroupMessage(@JsonProperty("GlobalReplicationGroupIdSuffix") String globalReplicationGroupIdSuffix, @JsonProperty("PrimaryReplicationGroupId") String primaryReplicationGroupId) {
+        this.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
+        this.primaryReplicationGroupId = primaryReplicationGroupId;
+  }
 }

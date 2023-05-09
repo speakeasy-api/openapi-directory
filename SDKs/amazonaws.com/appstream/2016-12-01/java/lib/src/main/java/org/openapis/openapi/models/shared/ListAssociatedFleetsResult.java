@@ -15,6 +15,7 @@ public class ListAssociatedFleetsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Names")
     public String[] names;
+
     public ListAssociatedFleetsResult withNames(String[] names) {
         this.names = names;
         return this;
@@ -23,9 +24,11 @@ public class ListAssociatedFleetsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAssociatedFleetsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssociatedFleetsResult(){}
 }

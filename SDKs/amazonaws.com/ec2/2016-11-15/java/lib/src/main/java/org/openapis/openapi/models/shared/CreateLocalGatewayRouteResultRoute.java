@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLocalGatewayRouteResultRoute {
     
     public String coipPoolId;
+
     public CreateLocalGatewayRouteResultRoute withCoipPoolId(String coipPoolId) {
         this.coipPoolId = coipPoolId;
         return this;
@@ -19,6 +20,7 @@ public class CreateLocalGatewayRouteResultRoute {
     
     
     public String destinationCidrBlock;
+
     public CreateLocalGatewayRouteResultRoute withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -26,6 +28,7 @@ public class CreateLocalGatewayRouteResultRoute {
     
     
     public String destinationPrefixListId;
+
     public CreateLocalGatewayRouteResultRoute withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -33,6 +36,7 @@ public class CreateLocalGatewayRouteResultRoute {
     
     
     public String localGatewayRouteTableArn;
+
     public CreateLocalGatewayRouteResultRoute withLocalGatewayRouteTableArn(String localGatewayRouteTableArn) {
         this.localGatewayRouteTableArn = localGatewayRouteTableArn;
         return this;
@@ -40,6 +44,7 @@ public class CreateLocalGatewayRouteResultRoute {
     
     
     public String localGatewayRouteTableId;
+
     public CreateLocalGatewayRouteResultRoute withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -47,6 +52,7 @@ public class CreateLocalGatewayRouteResultRoute {
     
     
     public String localGatewayVirtualInterfaceGroupId;
+
     public CreateLocalGatewayRouteResultRoute withLocalGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
         this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
         return this;
@@ -54,6 +60,7 @@ public class CreateLocalGatewayRouteResultRoute {
     
     
     public String networkInterfaceId;
+
     public CreateLocalGatewayRouteResultRoute withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -61,6 +68,7 @@ public class CreateLocalGatewayRouteResultRoute {
     
     
     public String ownerId;
+
     public CreateLocalGatewayRouteResultRoute withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -68,6 +76,7 @@ public class CreateLocalGatewayRouteResultRoute {
     
     
     public CreateLocalGatewayRouteResultRouteStateEnum state;
+
     public CreateLocalGatewayRouteResultRoute withState(CreateLocalGatewayRouteResultRouteStateEnum state) {
         this.state = state;
         return this;
@@ -75,6 +84,7 @@ public class CreateLocalGatewayRouteResultRoute {
     
     
     public String subnetId;
+
     public CreateLocalGatewayRouteResultRoute withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -82,9 +92,11 @@ public class CreateLocalGatewayRouteResultRoute {
     
     
     public CreateLocalGatewayRouteResultRouteTypeEnum type;
+
     public CreateLocalGatewayRouteResultRoute withType(CreateLocalGatewayRouteResultRouteTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateLocalGatewayRouteResultRoute(){}
 }

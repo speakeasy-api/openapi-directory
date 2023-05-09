@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTGetContextKeysForCustomPolicyResponse {
     
     public byte[] body;
+
     public POSTGetContextKeysForCustomPolicyResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTGetContextKeysForCustomPolicyResponse {
     
     
     public String contentType;
+
     public POSTGetContextKeysForCustomPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTGetContextKeysForCustomPolicyResponse {
     
     
     public Integer statusCode;
+
     public POSTGetContextKeysForCustomPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTGetContextKeysForCustomPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTGetContextKeysForCustomPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTGetContextKeysForCustomPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

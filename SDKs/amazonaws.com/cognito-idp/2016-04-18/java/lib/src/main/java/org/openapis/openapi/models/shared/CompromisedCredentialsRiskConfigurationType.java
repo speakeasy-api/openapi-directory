@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CompromisedCredentialsRiskConfigurationType {
     @JsonProperty("Actions")
     public CompromisedCredentialsActionsType actions;
+
     public CompromisedCredentialsRiskConfigurationType withActions(CompromisedCredentialsActionsType actions) {
         this.actions = actions;
         return this;
@@ -22,9 +23,13 @@ public class CompromisedCredentialsRiskConfigurationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventFilter")
     public EventFilterTypeEnum[] eventFilter;
+
     public CompromisedCredentialsRiskConfigurationType withEventFilter(EventFilterTypeEnum[] eventFilter) {
         this.eventFilter = eventFilter;
         return this;
     }
     
+    public CompromisedCredentialsRiskConfigurationType(@JsonProperty("Actions") CompromisedCredentialsActionsType actions) {
+        this.actions = actions;
+  }
 }

@@ -15,6 +15,7 @@ public class Algorithm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objective")
     public AlgorithmObjectiveEnum objective;
+
     public Algorithm withObjective(AlgorithmObjectiveEnum objective) {
         this.objective = objective;
         return this;
@@ -23,9 +24,11 @@ public class Algorithm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("problem_type")
     public AlgorithmProblemTypeEnum problemType;
+
     public Algorithm withProblemType(AlgorithmProblemTypeEnum problemType) {
         this.problemType = problemType;
         return this;
     }
     
+    public Algorithm(){}
 }

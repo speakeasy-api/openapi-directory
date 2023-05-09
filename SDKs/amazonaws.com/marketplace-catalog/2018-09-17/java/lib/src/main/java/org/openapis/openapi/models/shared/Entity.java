@@ -15,6 +15,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identifier")
     public String identifier;
+
     public Entity withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -22,9 +23,13 @@ public class Entity {
     
     @JsonProperty("Type")
     public String type;
+
     public Entity withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Entity(@JsonProperty("Type") String type) {
+        this.type = type;
+  }
 }

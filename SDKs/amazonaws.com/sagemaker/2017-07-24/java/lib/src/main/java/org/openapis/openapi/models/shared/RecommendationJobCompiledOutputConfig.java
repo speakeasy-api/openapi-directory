@@ -15,9 +15,11 @@ public class RecommendationJobCompiledOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3OutputUri")
     public String s3OutputUri;
+
     public RecommendationJobCompiledOutputConfig withS3OutputUri(String s3OutputUri) {
         this.s3OutputUri = s3OutputUri;
         return this;
     }
     
+    public RecommendationJobCompiledOutputConfig(){}
 }

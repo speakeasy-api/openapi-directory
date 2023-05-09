@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCampaignBatchRequest {
@@ -12,6 +13,7 @@ public class UpdateCampaignBatchRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BatchInput batchInput;
+
     public UpdateCampaignBatchRequest withBatchInput(org.openapis.openapi.models.shared.BatchInput batchInput) {
         this.batchInput = batchInput;
         return this;
@@ -22,9 +24,13 @@ public class UpdateCampaignBatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public UpdateCampaignBatchRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public UpdateCampaignBatchRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

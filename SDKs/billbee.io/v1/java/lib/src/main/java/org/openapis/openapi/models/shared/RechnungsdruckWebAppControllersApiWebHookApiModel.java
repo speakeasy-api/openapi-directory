@@ -17,6 +17,7 @@ public class RechnungsdruckWebAppControllersApiWebHookApiModel {
     @JsonProperty("Description")
     @SpeakeasyMetadata("form:name=Description")
     public String description;
+
     public RechnungsdruckWebAppControllersApiWebHookApiModel withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class RechnungsdruckWebAppControllersApiWebHookApiModel {
     @JsonProperty("Filters")
     @SpeakeasyMetadata("form:name=Filters")
     public String[] filters;
+
     public RechnungsdruckWebAppControllersApiWebHookApiModel withFilters(String[] filters) {
         this.filters = filters;
         return this;
@@ -35,6 +37,7 @@ public class RechnungsdruckWebAppControllersApiWebHookApiModel {
     @JsonProperty("Headers")
     @SpeakeasyMetadata("form:name=Headers,json")
     public java.util.Map<String, String> headers;
+
     public RechnungsdruckWebAppControllersApiWebHookApiModel withHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
@@ -44,6 +47,7 @@ public class RechnungsdruckWebAppControllersApiWebHookApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public String id;
+
     public RechnungsdruckWebAppControllersApiWebHookApiModel withId(String id) {
         this.id = id;
         return this;
@@ -53,6 +57,7 @@ public class RechnungsdruckWebAppControllersApiWebHookApiModel {
     @JsonProperty("IsPaused")
     @SpeakeasyMetadata("form:name=IsPaused")
     public Boolean isPaused;
+
     public RechnungsdruckWebAppControllersApiWebHookApiModel withIsPaused(Boolean isPaused) {
         this.isPaused = isPaused;
         return this;
@@ -62,6 +67,7 @@ public class RechnungsdruckWebAppControllersApiWebHookApiModel {
     @JsonProperty("Properties")
     @SpeakeasyMetadata("form:name=Properties,json")
     public java.util.Map<String, java.util.Map<String, Object>> properties;
+
     public RechnungsdruckWebAppControllersApiWebHookApiModel withProperties(java.util.Map<String, java.util.Map<String, Object>> properties) {
         this.properties = properties;
         return this;
@@ -70,6 +76,7 @@ public class RechnungsdruckWebAppControllersApiWebHookApiModel {
     @JsonProperty("Secret")
     @SpeakeasyMetadata("form:name=Secret")
     public String secret;
+
     public RechnungsdruckWebAppControllersApiWebHookApiModel withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -78,9 +85,14 @@ public class RechnungsdruckWebAppControllersApiWebHookApiModel {
     @JsonProperty("WebHookUri")
     @SpeakeasyMetadata("form:name=WebHookUri")
     public String webHookUri;
+
     public RechnungsdruckWebAppControllersApiWebHookApiModel withWebHookUri(String webHookUri) {
         this.webHookUri = webHookUri;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiWebHookApiModel(@JsonProperty("Secret") String secret, @JsonProperty("WebHookUri") String webHookUri) {
+        this.secret = secret;
+        this.webHookUri = webHookUri;
+  }
 }

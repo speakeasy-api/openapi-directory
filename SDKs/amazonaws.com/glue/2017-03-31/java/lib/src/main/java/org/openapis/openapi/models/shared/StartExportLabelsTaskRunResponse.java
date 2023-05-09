@@ -15,9 +15,11 @@ public class StartExportLabelsTaskRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskRunId")
     public String taskRunId;
+
     public StartExportLabelsTaskRunResponse withTaskRunId(String taskRunId) {
         this.taskRunId = taskRunId;
         return this;
     }
     
+    public StartExportLabelsTaskRunResponse(){}
 }

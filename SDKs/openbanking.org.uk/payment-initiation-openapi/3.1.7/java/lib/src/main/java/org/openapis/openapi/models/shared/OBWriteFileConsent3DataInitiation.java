@@ -23,6 +23,7 @@ public class OBWriteFileConsent3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlSum")
     public Double controlSum;
+
     public OBWriteFileConsent3DataInitiation withControlSum(Double controlSum) {
         this.controlSum = controlSum;
         return this;
@@ -34,6 +35,7 @@ public class OBWriteFileConsent3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebtorAccount")
     public OBWriteFileConsent3DataInitiationDebtorAccount debtorAccount;
+
     public OBWriteFileConsent3DataInitiation withDebtorAccount(OBWriteFileConsent3DataInitiationDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -44,6 +46,7 @@ public class OBWriteFileConsent3DataInitiation {
      */
     @JsonProperty("FileHash")
     public String fileHash;
+
     public OBWriteFileConsent3DataInitiation withFileHash(String fileHash) {
         this.fileHash = fileHash;
         return this;
@@ -55,6 +58,7 @@ public class OBWriteFileConsent3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileReference")
     public String fileReference;
+
     public OBWriteFileConsent3DataInitiation withFileReference(String fileReference) {
         this.fileReference = fileReference;
         return this;
@@ -65,6 +69,7 @@ public class OBWriteFileConsent3DataInitiation {
      */
     @JsonProperty("FileType")
     public String fileType;
+
     public OBWriteFileConsent3DataInitiation withFileType(String fileType) {
         this.fileType = fileType;
         return this;
@@ -77,6 +82,7 @@ public class OBWriteFileConsent3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalInstrument")
     public String localInstrument;
+
     public OBWriteFileConsent3DataInitiation withLocalInstrument(String localInstrument) {
         this.localInstrument = localInstrument;
         return this;
@@ -88,6 +94,7 @@ public class OBWriteFileConsent3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfTransactions")
     public String numberOfTransactions;
+
     public OBWriteFileConsent3DataInitiation withNumberOfTransactions(String numberOfTransactions) {
         this.numberOfTransactions = numberOfTransactions;
         return this;
@@ -99,6 +106,7 @@ public class OBWriteFileConsent3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemittanceInformation")
     public OBWriteFileConsent3DataInitiationRemittanceInformation remittanceInformation;
+
     public OBWriteFileConsent3DataInitiation withRemittanceInformation(OBWriteFileConsent3DataInitiationRemittanceInformation remittanceInformation) {
         this.remittanceInformation = remittanceInformation;
         return this;
@@ -115,6 +123,7 @@ public class OBWriteFileConsent3DataInitiation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RequestedExecutionDateTime")
     public OffsetDateTime requestedExecutionDateTime;
+
     public OBWriteFileConsent3DataInitiation withRequestedExecutionDateTime(OffsetDateTime requestedExecutionDateTime) {
         this.requestedExecutionDateTime = requestedExecutionDateTime;
         return this;
@@ -126,9 +135,14 @@ public class OBWriteFileConsent3DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupplementaryData")
     public java.util.Map<String, Object> supplementaryData;
+
     public OBWriteFileConsent3DataInitiation withSupplementaryData(java.util.Map<String, Object> supplementaryData) {
         this.supplementaryData = supplementaryData;
         return this;
     }
     
+    public OBWriteFileConsent3DataInitiation(@JsonProperty("FileHash") String fileHash, @JsonProperty("FileType") String fileType) {
+        this.fileHash = fileHash;
+        this.fileType = fileType;
+  }
 }

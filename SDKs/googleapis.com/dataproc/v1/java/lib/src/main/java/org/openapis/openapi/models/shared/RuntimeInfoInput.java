@@ -18,6 +18,7 @@ public class RuntimeInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approximateUsage")
     public UsageMetrics approximateUsage;
+
     public RuntimeInfoInput withApproximateUsage(UsageMetrics approximateUsage) {
         this.approximateUsage = approximateUsage;
         return this;
@@ -29,9 +30,11 @@ public class RuntimeInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentUsage")
     public UsageSnapshot currentUsage;
+
     public RuntimeInfoInput withCurrentUsage(UsageSnapshot currentUsage) {
         this.currentUsage = currentUsage;
         return this;
     }
     
+    public RuntimeInfoInput(){}
 }

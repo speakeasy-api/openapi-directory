@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchAssociateAssessmentReportEvidenceResponse {
@@ -12,6 +13,7 @@ public class BatchAssociateAssessmentReportEvidenceResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchAssociateAssessmentReportEvidenceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchAssociateAssessmentReportEvidenceResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchAssociateAssessmentReportEvidenceResponse batchAssociateAssessmentReportEvidenceResponse;
+
     public BatchAssociateAssessmentReportEvidenceResponse withBatchAssociateAssessmentReportEvidenceResponse(org.openapis.openapi.models.shared.BatchAssociateAssessmentReportEvidenceResponse batchAssociateAssessmentReportEvidenceResponse) {
         this.batchAssociateAssessmentReportEvidenceResponse = batchAssociateAssessmentReportEvidenceResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchAssociateAssessmentReportEvidenceResponse {
     
     
     public String contentType;
+
     public BatchAssociateAssessmentReportEvidenceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchAssociateAssessmentReportEvidenceResponse {
      */
     
     public Object internalServerException;
+
     public BatchAssociateAssessmentReportEvidenceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class BatchAssociateAssessmentReportEvidenceResponse {
     
     
     public Integer statusCode;
+
     public BatchAssociateAssessmentReportEvidenceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchAssociateAssessmentReportEvidenceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchAssociateAssessmentReportEvidenceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchAssociateAssessmentReportEvidenceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchAssociateAssessmentReportEvidenceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class BatchAssociateAssessmentReportEvidenceResponse {
      */
     
     public Object validationException;
+
     public BatchAssociateAssessmentReportEvidenceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchAssociateAssessmentReportEvidenceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

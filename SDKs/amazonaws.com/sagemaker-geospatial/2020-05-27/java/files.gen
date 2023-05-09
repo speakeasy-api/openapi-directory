@@ -124,7 +124,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/CustomIndicesInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Operation.java
 lib/src/main/java/org/openapis/openapi/models/shared/InputConfigOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/RasterDataCollectionQueryOutput.java
-lib/src/main/java/org/openapis/openapi/models/shared/TimeRangeFilterInput.java
+lib/src/main/java/org/openapis/openapi/models/shared/TimeRangeFilterOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/PropertyFilters.java
 lib/src/main/java/org/openapis/openapi/models/shared/PropertyFilter.java
 lib/src/main/java/org/openapis/openapi/models/shared/Property.java
@@ -177,8 +177,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/ItemSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/Properties.java
 lib/src/main/java/org/openapis/openapi/models/shared/Geometry.java
 lib/src/main/java/org/openapis/openapi/models/shared/AssetValue.java
+lib/src/main/java/org/openapis/openapi/models/shared/TimeRangeFilterInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartEarthObservationJobOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/RasterDataCollectionQueryInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartVectorEnrichmentJobOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

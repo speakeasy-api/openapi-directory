@@ -40,4 +40,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/PremiumNewsByPlayerRequ
 lib/src/main/java/org/openapis/openapi/models/operations/PremiumNewsByPlayerResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/News.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

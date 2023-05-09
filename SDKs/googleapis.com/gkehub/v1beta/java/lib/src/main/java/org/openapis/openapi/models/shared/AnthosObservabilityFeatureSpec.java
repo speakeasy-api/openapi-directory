@@ -18,9 +18,11 @@ public class AnthosObservabilityFeatureSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultMembershipSpec")
     public AnthosObservabilityMembershipSpec defaultMembershipSpec;
+
     public AnthosObservabilityFeatureSpec withDefaultMembershipSpec(AnthosObservabilityMembershipSpec defaultMembershipSpec) {
         this.defaultMembershipSpec = defaultMembershipSpec;
         return this;
     }
     
+    public AnthosObservabilityFeatureSpec(){}
 }

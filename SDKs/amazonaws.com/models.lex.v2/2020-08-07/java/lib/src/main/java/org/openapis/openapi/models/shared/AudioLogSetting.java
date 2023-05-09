@@ -15,6 +15,7 @@ public class AudioLogSetting {
      */
     @JsonProperty("destination")
     public AudioLogDestination destination;
+
     public AudioLogSetting withDestination(AudioLogDestination destination) {
         this.destination = destination;
         return this;
@@ -22,9 +23,14 @@ public class AudioLogSetting {
     
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AudioLogSetting withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public AudioLogSetting(@JsonProperty("destination") AudioLogDestination destination, @JsonProperty("enabled") Boolean enabled) {
+        this.destination = destination;
+        this.enabled = enabled;
+  }
 }

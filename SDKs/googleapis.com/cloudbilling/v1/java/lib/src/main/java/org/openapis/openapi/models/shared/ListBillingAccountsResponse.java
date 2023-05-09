@@ -18,6 +18,7 @@ public class ListBillingAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingAccounts")
     public BillingAccount[] billingAccounts;
+
     public ListBillingAccountsResponse withBillingAccounts(BillingAccount[] billingAccounts) {
         this.billingAccounts = billingAccounts;
         return this;
@@ -29,9 +30,11 @@ public class ListBillingAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListBillingAccountsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListBillingAccountsResponse(){}
 }

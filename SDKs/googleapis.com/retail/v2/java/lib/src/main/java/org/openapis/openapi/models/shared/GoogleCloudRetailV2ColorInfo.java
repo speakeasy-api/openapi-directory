@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2ColorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorFamilies")
     public String[] colorFamilies;
+
     public GoogleCloudRetailV2ColorInfo withColorFamilies(String[] colorFamilies) {
         this.colorFamilies = colorFamilies;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2ColorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colors")
     public String[] colors;
+
     public GoogleCloudRetailV2ColorInfo withColors(String[] colors) {
         this.colors = colors;
         return this;
     }
     
+    public GoogleCloudRetailV2ColorInfo(){}
 }

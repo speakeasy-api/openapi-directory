@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RestoreTableFromSnapshotResponse {
@@ -12,6 +13,7 @@ public class RestoreTableFromSnapshotResponse {
      */
     
     public Object conflictException;
+
     public RestoreTableFromSnapshotResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class RestoreTableFromSnapshotResponse {
     
     
     public String contentType;
+
     public RestoreTableFromSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RestoreTableFromSnapshotResponse {
      */
     
     public Object internalServerException;
+
     public RestoreTableFromSnapshotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class RestoreTableFromSnapshotResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RestoreTableFromSnapshotResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RestoreTableFromSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.RestoreTableFromSnapshotResponse restoreTableFromSnapshotResponse;
+
     public RestoreTableFromSnapshotResponse withRestoreTableFromSnapshotResponse(org.openapis.openapi.models.shared.RestoreTableFromSnapshotResponse restoreTableFromSnapshotResponse) {
         this.restoreTableFromSnapshotResponse = restoreTableFromSnapshotResponse;
         return this;
@@ -56,6 +62,7 @@ public class RestoreTableFromSnapshotResponse {
     
     
     public Integer statusCode;
+
     public RestoreTableFromSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RestoreTableFromSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RestoreTableFromSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class RestoreTableFromSnapshotResponse {
      */
     
     public Object validationException;
+
     public RestoreTableFromSnapshotResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RestoreTableFromSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

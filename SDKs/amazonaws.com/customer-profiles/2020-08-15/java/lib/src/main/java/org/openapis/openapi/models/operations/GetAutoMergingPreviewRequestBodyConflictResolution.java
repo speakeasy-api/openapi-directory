@@ -15,6 +15,7 @@ public class GetAutoMergingPreviewRequestBodyConflictResolution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConflictResolvingModel")
     public org.openapis.openapi.models.shared.ConflictResolvingModelEnum conflictResolvingModel;
+
     public GetAutoMergingPreviewRequestBodyConflictResolution withConflictResolvingModel(org.openapis.openapi.models.shared.ConflictResolvingModelEnum conflictResolvingModel) {
         this.conflictResolvingModel = conflictResolvingModel;
         return this;
@@ -23,9 +24,11 @@ public class GetAutoMergingPreviewRequestBodyConflictResolution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceName")
     public String sourceName;
+
     public GetAutoMergingPreviewRequestBodyConflictResolution withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
     }
     
+    public GetAutoMergingPreviewRequestBodyConflictResolution(){}
 }

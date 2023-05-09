@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInpu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptedUserCredentialsHash")
     public String encryptedUserCredentialsHash;
+
     public GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput withEncryptedUserCredentialsHash(String encryptedUserCredentialsHash) {
         this.encryptedUserCredentialsHash = encryptedUserCredentialsHash;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInpu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lookupHashPrefix")
     public String lookupHashPrefix;
+
     public GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput withLookupHashPrefix(String lookupHashPrefix) {
         this.lookupHashPrefix = lookupHashPrefix;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput(){}
 }

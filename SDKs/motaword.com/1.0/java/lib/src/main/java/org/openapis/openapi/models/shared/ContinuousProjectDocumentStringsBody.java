@@ -12,9 +12,11 @@ public class ContinuousProjectDocumentStringsBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentName")
     public String documentName;
+
     public ContinuousProjectDocumentStringsBody withDocumentName(String documentName) {
         this.documentName = documentName;
         return this;
     }
     
+    public ContinuousProjectDocumentStringsBody(){}
 }

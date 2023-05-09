@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAliasResponse {
@@ -12,6 +13,7 @@ public class CreateAliasResponse {
      */
     
     public Object clientException;
+
     public CreateAliasResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class CreateAliasResponse {
     
     
     public String contentType;
+
     public CreateAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateAliasResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAliasResult createAliasResult;
+
     public CreateAliasResponse withCreateAliasResult(org.openapis.openapi.models.shared.CreateAliasResult createAliasResult) {
         this.createAliasResult = createAliasResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateAliasResponse {
      */
     
     public Object entityAlreadyExistsException;
+
     public CreateAliasResponse withEntityAlreadyExistsException(Object entityAlreadyExistsException) {
         this.entityAlreadyExistsException = entityAlreadyExistsException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAliasResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public CreateAliasResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAliasResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateAliasResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class CreateAliasResponse {
      */
     
     public Object serviceException;
+
     public CreateAliasResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class CreateAliasResponse {
     
     
     public Integer statusCode;
+
     public CreateAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

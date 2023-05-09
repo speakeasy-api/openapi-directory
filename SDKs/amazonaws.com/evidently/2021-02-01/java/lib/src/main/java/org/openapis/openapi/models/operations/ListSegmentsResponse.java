@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSegmentsResponse {
@@ -12,6 +13,7 @@ public class ListSegmentsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSegmentsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListSegmentsResponse {
     
     
     public String contentType;
+
     public ListSegmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSegmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSegmentsResponse listSegmentsResponse;
+
     public ListSegmentsResponse withListSegmentsResponse(org.openapis.openapi.models.shared.ListSegmentsResponse listSegmentsResponse) {
         this.listSegmentsResponse = listSegmentsResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListSegmentsResponse {
     
     
     public Integer statusCode;
+
     public ListSegmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListSegmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSegmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListSegmentsResponse {
      */
     
     public Object throttlingException;
+
     public ListSegmentsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class ListSegmentsResponse {
      */
     
     public Object validationException;
+
     public ListSegmentsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSegmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

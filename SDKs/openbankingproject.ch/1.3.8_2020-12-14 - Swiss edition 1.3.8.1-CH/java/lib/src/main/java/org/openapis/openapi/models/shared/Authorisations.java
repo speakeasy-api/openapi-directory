@@ -15,9 +15,13 @@ public class Authorisations {
      */
     @JsonProperty("authorisationIds")
     public String[] authorisationIds;
+
     public Authorisations withAuthorisationIds(String[] authorisationIds) {
         this.authorisationIds = authorisationIds;
         return this;
     }
     
+    public Authorisations(@JsonProperty("authorisationIds") String[] authorisationIds) {
+        this.authorisationIds = authorisationIds;
+  }
 }

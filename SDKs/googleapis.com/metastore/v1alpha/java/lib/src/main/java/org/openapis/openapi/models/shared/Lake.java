@@ -18,9 +18,11 @@ public class Lake {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Lake withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Lake(){}
 }

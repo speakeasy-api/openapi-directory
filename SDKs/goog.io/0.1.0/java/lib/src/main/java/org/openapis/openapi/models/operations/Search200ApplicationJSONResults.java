@@ -12,6 +12,7 @@ public class Search200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Search200ApplicationJSONResults withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class Search200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public Search200ApplicationJSONResults withLink(String link) {
         this.link = link;
         return this;
@@ -28,9 +30,11 @@ public class Search200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Search200ApplicationJSONResults withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Search200ApplicationJSONResults(){}
 }

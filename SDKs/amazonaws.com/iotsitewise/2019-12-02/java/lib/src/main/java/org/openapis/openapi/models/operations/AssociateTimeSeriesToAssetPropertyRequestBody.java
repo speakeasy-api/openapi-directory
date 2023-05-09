@@ -15,9 +15,11 @@ public class AssociateTimeSeriesToAssetPropertyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public AssociateTimeSeriesToAssetPropertyRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public AssociateTimeSeriesToAssetPropertyRequestBody(){}
 }

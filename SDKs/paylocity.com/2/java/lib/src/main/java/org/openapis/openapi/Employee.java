@@ -59,12 +59,10 @@ public class Employee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddEmployeeResponse res = new org.openapis.openapi.models.operations.AddEmployeeResponse() {{
+        org.openapis.openapi.models.operations.AddEmployeeResponse res = new org.openapis.openapi.models.operations.AddEmployeeResponse(contentType, httpRes.statusCode()) {{
             employeeIdResponse = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -116,12 +114,10 @@ public class Employee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllEmployeesResponse res = new org.openapis.openapi.models.operations.GetAllEmployeesResponse() {{
+        org.openapis.openapi.models.operations.GetAllEmployeesResponse res = new org.openapis.openapi.models.operations.GetAllEmployeesResponse(contentType, httpRes.statusCode()) {{
             employeeInfos = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -167,12 +163,10 @@ public class Employee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEmployeeResponse res = new org.openapis.openapi.models.operations.GetEmployeeResponse() {{
+        org.openapis.openapi.models.operations.GetEmployeeResponse res = new org.openapis.openapi.models.operations.GetEmployeeResponse(contentType, httpRes.statusCode()) {{
             employee = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -223,11 +217,9 @@ public class Employee {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateEmployeeResponse res = new org.openapis.openapi.models.operations.UpdateEmployeeResponse() {{
+        org.openapis.openapi.models.operations.UpdateEmployeeResponse res = new org.openapis.openapi.models.operations.UpdateEmployeeResponse(contentType, httpRes.statusCode()) {{
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 429) {

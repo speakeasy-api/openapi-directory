@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSshKeysResponse {
     
     public String contentType;
+
     public GetSshKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSshKeysResponse {
     
     
     public Integer statusCode;
+
     public GetSshKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetSshKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSshKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetSshKeysResponse {
      */
     
     public GetSshKeys200ApplicationJSON getSshKeys200ApplicationJSONObject;
+
     public GetSshKeysResponse withGetSshKeys200ApplicationJSONObject(GetSshKeys200ApplicationJSON getSshKeys200ApplicationJSONObject) {
         this.getSshKeys200ApplicationJSONObject = getSshKeys200ApplicationJSONObject;
         return this;
     }
     
+    public GetSshKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

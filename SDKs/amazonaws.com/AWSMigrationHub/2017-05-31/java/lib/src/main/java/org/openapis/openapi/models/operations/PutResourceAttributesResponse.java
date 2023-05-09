@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutResourceAttributesResponse {
@@ -12,6 +13,7 @@ public class PutResourceAttributesResponse {
      */
     
     public Object accessDeniedException;
+
     public PutResourceAttributesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class PutResourceAttributesResponse {
     
     
     public String contentType;
+
     public PutResourceAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutResourceAttributesResponse {
      */
     
     public Object dryRunOperation;
+
     public PutResourceAttributesResponse withDryRunOperation(Object dryRunOperation) {
         this.dryRunOperation = dryRunOperation;
         return this;
@@ -39,6 +43,7 @@ public class PutResourceAttributesResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public PutResourceAttributesResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class PutResourceAttributesResponse {
      */
     
     public Object internalServerError;
+
     public PutResourceAttributesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class PutResourceAttributesResponse {
      */
     
     public Object invalidInputException;
+
     public PutResourceAttributesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class PutResourceAttributesResponse {
      */
     
     public java.util.Map<String, Object> putResourceAttributesResult;
+
     public PutResourceAttributesResponse withPutResourceAttributesResult(java.util.Map<String, Object> putResourceAttributesResult) {
         this.putResourceAttributesResult = putResourceAttributesResult;
         return this;
@@ -76,6 +84,7 @@ public class PutResourceAttributesResponse {
     
     
     public Integer statusCode;
+
     public PutResourceAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class PutResourceAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutResourceAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class PutResourceAttributesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutResourceAttributesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class PutResourceAttributesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public PutResourceAttributesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,6 +125,7 @@ public class PutResourceAttributesResponse {
      */
     
     public Object throttlingException;
+
     public PutResourceAttributesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -123,9 +136,14 @@ public class PutResourceAttributesResponse {
      */
     
     public Object unauthorizedOperation;
+
     public PutResourceAttributesResponse withUnauthorizedOperation(Object unauthorizedOperation) {
         this.unauthorizedOperation = unauthorizedOperation;
         return this;
     }
     
+    public PutResourceAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

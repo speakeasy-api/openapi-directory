@@ -15,6 +15,7 @@ public class UpdateGeofenceCollectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateGeofenceCollectionRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateGeofenceCollectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public UpdateGeofenceCollectionRequestBodyPricingPlanEnum pricingPlan;
+
     public UpdateGeofenceCollectionRequestBody withPricingPlan(UpdateGeofenceCollectionRequestBodyPricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -37,9 +39,11 @@ public class UpdateGeofenceCollectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlanDataSource")
     public String pricingPlanDataSource;
+
     public UpdateGeofenceCollectionRequestBody withPricingPlanDataSource(String pricingPlanDataSource) {
         this.pricingPlanDataSource = pricingPlanDataSource;
         return this;
     }
     
+    public UpdateGeofenceCollectionRequestBody(){}
 }

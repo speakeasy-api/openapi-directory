@@ -15,6 +15,7 @@ public class ImportApplicationUsageRequestBodySourceS3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public ImportApplicationUsageRequestBodySourceS3Location withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,6 +24,7 @@ public class ImportApplicationUsageRequestBodySourceS3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public ImportApplicationUsageRequestBodySourceS3Location withKey(String key) {
         this.key = key;
         return this;
@@ -31,9 +33,11 @@ public class ImportApplicationUsageRequestBodySourceS3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public org.openapis.openapi.models.shared.S3BucketRegionEnum region;
+
     public ImportApplicationUsageRequestBodySourceS3Location withRegion(org.openapis.openapi.models.shared.S3BucketRegionEnum region) {
         this.region = region;
         return this;
     }
     
+    public ImportApplicationUsageRequestBodySourceS3Location(){}
 }

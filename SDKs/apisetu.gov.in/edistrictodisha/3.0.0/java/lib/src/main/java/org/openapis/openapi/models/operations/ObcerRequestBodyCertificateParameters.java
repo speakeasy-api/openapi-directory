@@ -12,6 +12,7 @@ public class ObcerRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public ObcerRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -22,9 +23,14 @@ public class ObcerRequestBodyCertificateParameters {
      */
     @JsonProperty("refno")
     public String refno;
+
     public ObcerRequestBodyCertificateParameters withRefno(String refno) {
         this.refno = refno;
         return this;
     }
     
+    public ObcerRequestBodyCertificateParameters(@JsonProperty("UID") String uid, @JsonProperty("refno") String refno) {
+        this.uid = uid;
+        this.refno = refno;
+  }
 }

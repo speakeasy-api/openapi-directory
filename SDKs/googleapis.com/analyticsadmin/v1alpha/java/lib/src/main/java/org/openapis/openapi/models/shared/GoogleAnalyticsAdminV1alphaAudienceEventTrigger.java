@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceEventTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventName")
     public String eventName;
+
     public GoogleAnalyticsAdminV1alphaAudienceEventTrigger withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaAudienceEventTrigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logCondition")
     public GoogleAnalyticsAdminV1alphaAudienceEventTriggerLogConditionEnum logCondition;
+
     public GoogleAnalyticsAdminV1alphaAudienceEventTrigger withLogCondition(GoogleAnalyticsAdminV1alphaAudienceEventTriggerLogConditionEnum logCondition) {
         this.logCondition = logCondition;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAudienceEventTrigger(){}
 }

@@ -12,6 +12,7 @@ public class ManageItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ManageItemSummary withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class ManageItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortCode")
     public String shortCode;
+
     public ManageItemSummary withShortCode(String shortCode) {
         this.shortCode = shortCode;
         return this;
     }
     
+    public ManageItemSummary(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaCatalogAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicFacetableOption")
     public GoogleCloudRetailV2betaCatalogAttributeDynamicFacetableOptionEnum dynamicFacetableOption;
+
     public GoogleCloudRetailV2betaCatalogAttribute withDynamicFacetableOption(GoogleCloudRetailV2betaCatalogAttributeDynamicFacetableOptionEnum dynamicFacetableOption) {
         this.dynamicFacetableOption = dynamicFacetableOption;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2betaCatalogAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exactSearchableOption")
     public GoogleCloudRetailV2betaCatalogAttributeExactSearchableOptionEnum exactSearchableOption;
+
     public GoogleCloudRetailV2betaCatalogAttribute withExactSearchableOption(GoogleCloudRetailV2betaCatalogAttributeExactSearchableOptionEnum exactSearchableOption) {
         this.exactSearchableOption = exactSearchableOption;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2betaCatalogAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inUse")
     public Boolean inUse;
+
     public GoogleCloudRetailV2betaCatalogAttribute withInUse(Boolean inUse) {
         this.inUse = inUse;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2betaCatalogAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexableOption")
     public GoogleCloudRetailV2betaCatalogAttributeIndexableOptionEnum indexableOption;
+
     public GoogleCloudRetailV2betaCatalogAttribute withIndexableOption(GoogleCloudRetailV2betaCatalogAttributeIndexableOptionEnum indexableOption) {
         this.indexableOption = indexableOption;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRetailV2betaCatalogAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleCloudRetailV2betaCatalogAttribute withKey(String key) {
         this.key = key;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRetailV2betaCatalogAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationsFilteringOption")
     public GoogleCloudRetailV2betaCatalogAttributeRecommendationsFilteringOptionEnum recommendationsFilteringOption;
+
     public GoogleCloudRetailV2betaCatalogAttribute withRecommendationsFilteringOption(GoogleCloudRetailV2betaCatalogAttributeRecommendationsFilteringOptionEnum recommendationsFilteringOption) {
         this.recommendationsFilteringOption = recommendationsFilteringOption;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRetailV2betaCatalogAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retrievableOption")
     public GoogleCloudRetailV2betaCatalogAttributeRetrievableOptionEnum retrievableOption;
+
     public GoogleCloudRetailV2betaCatalogAttribute withRetrievableOption(GoogleCloudRetailV2betaCatalogAttributeRetrievableOptionEnum retrievableOption) {
         this.retrievableOption = retrievableOption;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRetailV2betaCatalogAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchableOption")
     public GoogleCloudRetailV2betaCatalogAttributeSearchableOptionEnum searchableOption;
+
     public GoogleCloudRetailV2betaCatalogAttribute withSearchableOption(GoogleCloudRetailV2betaCatalogAttributeSearchableOptionEnum searchableOption) {
         this.searchableOption = searchableOption;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudRetailV2betaCatalogAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudRetailV2betaCatalogAttributeTypeEnum type;
+
     public GoogleCloudRetailV2betaCatalogAttribute withType(GoogleCloudRetailV2betaCatalogAttributeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudRetailV2betaCatalogAttribute(){}
 }

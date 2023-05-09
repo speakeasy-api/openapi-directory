@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkAclsResultNetworkAclsEntriesIcmpTypeCode {
     
     public Long code;
+
     public DescribeNetworkAclsResultNetworkAclsEntriesIcmpTypeCode withCode(Long code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DescribeNetworkAclsResultNetworkAclsEntriesIcmpTypeCode {
     
     
     public Long type;
+
     public DescribeNetworkAclsResultNetworkAclsEntriesIcmpTypeCode withType(Long type) {
         this.type = type;
         return this;
     }
     
+    public DescribeNetworkAclsResultNetworkAclsEntriesIcmpTypeCode(){}
 }

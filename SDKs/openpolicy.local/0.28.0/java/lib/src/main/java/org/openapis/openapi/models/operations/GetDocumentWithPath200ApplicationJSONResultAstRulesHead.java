@@ -15,6 +15,7 @@ public class GetDocumentWithPath200ApplicationJSONResultAstRulesHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public GetDocumentWithPath200ApplicationJSONResultAstRulesHeadKey key;
+
     public GetDocumentWithPath200ApplicationJSONResultAstRulesHead withKey(GetDocumentWithPath200ApplicationJSONResultAstRulesHeadKey key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class GetDocumentWithPath200ApplicationJSONResultAstRulesHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetDocumentWithPath200ApplicationJSONResultAstRulesHead withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetDocumentWithPath200ApplicationJSONResultAstRulesHead(){}
 }

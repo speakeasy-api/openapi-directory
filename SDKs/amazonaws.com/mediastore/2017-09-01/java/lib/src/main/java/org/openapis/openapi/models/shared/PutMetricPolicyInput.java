@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutMetricPolicyInput {
     @JsonProperty("ContainerName")
     public String containerName;
+
     public PutMetricPolicyInput withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -16,9 +17,14 @@ public class PutMetricPolicyInput {
     
     @JsonProperty("MetricPolicy")
     public MetricPolicy metricPolicy;
+
     public PutMetricPolicyInput withMetricPolicy(MetricPolicy metricPolicy) {
         this.metricPolicy = metricPolicy;
         return this;
     }
     
+    public PutMetricPolicyInput(@JsonProperty("ContainerName") String containerName, @JsonProperty("MetricPolicy") MetricPolicy metricPolicy) {
+        this.containerName = containerName;
+        this.metricPolicy = metricPolicy;
+  }
 }

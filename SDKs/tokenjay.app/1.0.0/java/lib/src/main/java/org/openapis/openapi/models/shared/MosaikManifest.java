@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class MosaikManifest {
     
     public String appDescription;
+
     public MosaikManifest withAppDescription(String appDescription) {
         this.appDescription = appDescription;
         return this;
@@ -16,6 +17,7 @@ public class MosaikManifest {
     
     
     public String appName;
+
     public MosaikManifest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -23,6 +25,7 @@ public class MosaikManifest {
     
     
     public Integer appVersion;
+
     public MosaikManifest withAppVersion(Integer appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -30,6 +33,7 @@ public class MosaikManifest {
     
     
     public Integer cacheLifetime;
+
     public MosaikManifest withCacheLifetime(Integer cacheLifetime) {
         this.cacheLifetime = cacheLifetime;
         return this;
@@ -37,6 +41,7 @@ public class MosaikManifest {
     
     
     public String errorReportUrl;
+
     public MosaikManifest withErrorReportUrl(String errorReportUrl) {
         this.errorReportUrl = errorReportUrl;
         return this;
@@ -44,6 +49,7 @@ public class MosaikManifest {
     
     
     public String iconUrl;
+
     public MosaikManifest withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -51,6 +57,7 @@ public class MosaikManifest {
     
     
     public String notificationCheckUrl;
+
     public MosaikManifest withNotificationCheckUrl(String notificationCheckUrl) {
         this.notificationCheckUrl = notificationCheckUrl;
         return this;
@@ -58,6 +65,7 @@ public class MosaikManifest {
     
     
     public String onAppLoadedAction;
+
     public MosaikManifest withOnAppLoadedAction(String onAppLoadedAction) {
         this.onAppLoadedAction = onAppLoadedAction;
         return this;
@@ -65,6 +73,7 @@ public class MosaikManifest {
     
     
     public String onResizeAction;
+
     public MosaikManifest withOnResizeAction(String onResizeAction) {
         this.onResizeAction = onResizeAction;
         return this;
@@ -72,6 +81,7 @@ public class MosaikManifest {
     
     
     public MosaikManifestTargetCanvasDimensionEnum targetCanvasDimension;
+
     public MosaikManifest withTargetCanvasDimension(MosaikManifestTargetCanvasDimensionEnum targetCanvasDimension) {
         this.targetCanvasDimension = targetCanvasDimension;
         return this;
@@ -79,9 +89,11 @@ public class MosaikManifest {
     
     
     public Integer targetMosaikVersion;
+
     public MosaikManifest withTargetMosaikVersion(Integer targetMosaikVersion) {
         this.targetMosaikVersion = targetMosaikVersion;
         return this;
     }
     
+    public MosaikManifest(){}
 }

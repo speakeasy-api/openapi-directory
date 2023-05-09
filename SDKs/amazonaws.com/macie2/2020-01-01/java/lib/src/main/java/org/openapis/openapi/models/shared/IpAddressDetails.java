@@ -15,6 +15,7 @@ public class IpAddressDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddressV4")
     public String ipAddressV4;
+
     public IpAddressDetails withIpAddressV4(String ipAddressV4) {
         this.ipAddressV4 = ipAddressV4;
         return this;
@@ -23,6 +24,7 @@ public class IpAddressDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCity")
     public IpCity ipCity;
+
     public IpAddressDetails withIpCity(IpCity ipCity) {
         this.ipCity = ipCity;
         return this;
@@ -31,6 +33,7 @@ public class IpAddressDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCountry")
     public IpCountry ipCountry;
+
     public IpAddressDetails withIpCountry(IpCountry ipCountry) {
         this.ipCountry = ipCountry;
         return this;
@@ -39,6 +42,7 @@ public class IpAddressDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipGeoLocation")
     public IpGeoLocation ipGeoLocation;
+
     public IpAddressDetails withIpGeoLocation(IpGeoLocation ipGeoLocation) {
         this.ipGeoLocation = ipGeoLocation;
         return this;
@@ -47,9 +51,11 @@ public class IpAddressDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipOwner")
     public IpOwner ipOwner;
+
     public IpAddressDetails withIpOwner(IpOwner ipOwner) {
         this.ipOwner = ipOwner;
         return this;
     }
     
+    public IpAddressDetails(){}
 }

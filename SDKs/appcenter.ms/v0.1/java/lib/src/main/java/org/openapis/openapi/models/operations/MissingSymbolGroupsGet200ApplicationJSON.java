@@ -15,6 +15,7 @@ public class MissingSymbolGroupsGet200ApplicationJSON {
      */
     @JsonProperty("groups")
     public MissingSymbolGroupsGet200ApplicationJSONGroups[] groups;
+
     public MissingSymbolGroupsGet200ApplicationJSON withGroups(MissingSymbolGroupsGet200ApplicationJSONGroups[] groups) {
         this.groups = groups;
         return this;
@@ -25,9 +26,14 @@ public class MissingSymbolGroupsGet200ApplicationJSON {
      */
     @JsonProperty("total_crash_count")
     public Long totalCrashCount;
+
     public MissingSymbolGroupsGet200ApplicationJSON withTotalCrashCount(Long totalCrashCount) {
         this.totalCrashCount = totalCrashCount;
         return this;
     }
     
+    public MissingSymbolGroupsGet200ApplicationJSON(@JsonProperty("groups") MissingSymbolGroupsGet200ApplicationJSONGroups[] groups, @JsonProperty("total_crash_count") Long totalCrashCount) {
+        this.groups = groups;
+        this.totalCrashCount = totalCrashCount;
+  }
 }

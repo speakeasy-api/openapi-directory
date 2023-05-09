@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CompareStationRequest;
 import org.openapis.openapi.models.operations.CompareStationResponse;
 
@@ -13,9 +12,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CompareStationRequest req = new CompareStationRequest() {{
-                stationName = "corrupti";
-            }}            
+            CompareStationRequest req = new CompareStationRequest("corrupti");            
 
             CompareStationResponse res = sdk.odWeather.compareStation(req);
 
@@ -25,5 +22,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

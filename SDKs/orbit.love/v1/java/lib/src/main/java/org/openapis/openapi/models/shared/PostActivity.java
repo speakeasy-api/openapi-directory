@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostActivity {
     @JsonProperty("activity_type")
     public PostActivityActivityTypeEnum activityType;
+
     public PostActivity withActivityType(PostActivityActivityTypeEnum activityType) {
         this.activityType = activityType;
         return this;
@@ -22,6 +23,7 @@ public class PostActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurred_at")
     public String occurredAt;
+
     public PostActivity withOccurredAt(String occurredAt) {
         this.occurredAt = occurredAt;
         return this;
@@ -32,9 +34,14 @@ public class PostActivity {
      */
     @JsonProperty("url")
     public String url;
+
     public PostActivity withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PostActivity(@JsonProperty("activity_type") PostActivityActivityTypeEnum activityType, @JsonProperty("url") String url) {
+        this.activityType = activityType;
+        this.url = url;
+  }
 }

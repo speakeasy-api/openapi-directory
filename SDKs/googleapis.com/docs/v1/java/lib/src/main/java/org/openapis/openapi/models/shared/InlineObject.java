@@ -18,6 +18,7 @@ public class InlineObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineObjectProperties")
     public InlineObjectProperties inlineObjectProperties;
+
     public InlineObject withInlineObjectProperties(InlineObjectProperties inlineObjectProperties) {
         this.inlineObjectProperties = inlineObjectProperties;
         return this;
@@ -29,6 +30,7 @@ public class InlineObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public InlineObject withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -40,6 +42,7 @@ public class InlineObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedDeletionIds")
     public String[] suggestedDeletionIds;
+
     public InlineObject withSuggestedDeletionIds(String[] suggestedDeletionIds) {
         this.suggestedDeletionIds = suggestedDeletionIds;
         return this;
@@ -51,6 +54,7 @@ public class InlineObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedInlineObjectPropertiesChanges")
     public java.util.Map<String, SuggestedInlineObjectProperties> suggestedInlineObjectPropertiesChanges;
+
     public InlineObject withSuggestedInlineObjectPropertiesChanges(java.util.Map<String, SuggestedInlineObjectProperties> suggestedInlineObjectPropertiesChanges) {
         this.suggestedInlineObjectPropertiesChanges = suggestedInlineObjectPropertiesChanges;
         return this;
@@ -62,9 +66,11 @@ public class InlineObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedInsertionId")
     public String suggestedInsertionId;
+
     public InlineObject withSuggestedInsertionId(String suggestedInsertionId) {
         this.suggestedInsertionId = suggestedInsertionId;
         return this;
     }
     
+    public InlineObject(){}
 }

@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceSequenceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public GoogleAnalyticsAdminV1alphaAudienceSequenceFilterScopeEnum scope;
+
     public GoogleAnalyticsAdminV1alphaAudienceSequenceFilter withScope(GoogleAnalyticsAdminV1alphaAudienceSequenceFilterScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceSequenceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequenceMaximumDuration")
     public String sequenceMaximumDuration;
+
     public GoogleAnalyticsAdminV1alphaAudienceSequenceFilter withSequenceMaximumDuration(String sequenceMaximumDuration) {
         this.sequenceMaximumDuration = sequenceMaximumDuration;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1alphaAudienceSequenceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequenceSteps")
     public GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStep[] sequenceSteps;
+
     public GoogleAnalyticsAdminV1alphaAudienceSequenceFilter withSequenceSteps(GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStep[] sequenceSteps) {
         this.sequenceSteps = sequenceSteps;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAudienceSequenceFilter(){}
 }

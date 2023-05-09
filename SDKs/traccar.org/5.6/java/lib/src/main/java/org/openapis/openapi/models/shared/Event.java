@@ -20,6 +20,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, Object> attributes;
+
     public Event withAttributes(java.util.Map<String, Object> attributes) {
         this.attributes = attributes;
         return this;
@@ -28,6 +29,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public Long deviceId;
+
     public Event withDeviceId(Long deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -41,6 +43,7 @@ public class Event {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("eventTime")
     public OffsetDateTime eventTime;
+
     public Event withEventTime(OffsetDateTime eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -49,6 +52,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geofenceId")
     public Long geofenceId;
+
     public Event withGeofenceId(Long geofenceId) {
         this.geofenceId = geofenceId;
         return this;
@@ -57,6 +61,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Event withId(Long id) {
         this.id = id;
         return this;
@@ -65,6 +70,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenanceId")
     public Long maintenanceId;
+
     public Event withMaintenanceId(Long maintenanceId) {
         this.maintenanceId = maintenanceId;
         return this;
@@ -73,6 +79,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positionId")
     public Long positionId;
+
     public Event withPositionId(Long positionId) {
         this.positionId = positionId;
         return this;
@@ -81,9 +88,11 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Event withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Event(){}
 }

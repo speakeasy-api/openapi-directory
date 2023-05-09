@@ -18,6 +18,7 @@ public class CohortGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cohorts")
     public Cohort[] cohorts;
+
     public CohortGroup withCohorts(Cohort[] cohorts) {
         this.cohorts = cohorts;
         return this;
@@ -29,9 +30,11 @@ public class CohortGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifetimeValue")
     public Boolean lifetimeValue;
+
     public CohortGroup withLifetimeValue(Boolean lifetimeValue) {
         this.lifetimeValue = lifetimeValue;
         return this;
     }
     
+    public CohortGroup(){}
 }

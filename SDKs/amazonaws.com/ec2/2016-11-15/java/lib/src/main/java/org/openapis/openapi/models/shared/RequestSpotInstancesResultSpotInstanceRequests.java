@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class RequestSpotInstancesResultSpotInstanceRequests {
     
     public String actualBlockHourlyPrice;
+
     public RequestSpotInstancesResultSpotInstanceRequests withActualBlockHourlyPrice(String actualBlockHourlyPrice) {
         this.actualBlockHourlyPrice = actualBlockHourlyPrice;
         return this;
@@ -19,6 +20,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public String availabilityZoneGroup;
+
     public RequestSpotInstancesResultSpotInstanceRequests withAvailabilityZoneGroup(String availabilityZoneGroup) {
         this.availabilityZoneGroup = availabilityZoneGroup;
         return this;
@@ -26,6 +28,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public Long blockDurationMinutes;
+
     public RequestSpotInstancesResultSpotInstanceRequests withBlockDurationMinutes(Long blockDurationMinutes) {
         this.blockDurationMinutes = blockDurationMinutes;
         return this;
@@ -33,6 +36,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public OffsetDateTime createTime;
+
     public RequestSpotInstancesResultSpotInstanceRequests withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +44,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsFault fault;
+
     public RequestSpotInstancesResultSpotInstanceRequests withFault(RequestSpotInstancesResultSpotInstanceRequestsFault fault) {
         this.fault = fault;
         return this;
@@ -47,6 +52,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public String instanceId;
+
     public RequestSpotInstancesResultSpotInstanceRequests withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -54,6 +60,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsInstanceInterruptionBehaviorEnum instanceInterruptionBehavior;
+
     public RequestSpotInstancesResultSpotInstanceRequests withInstanceInterruptionBehavior(RequestSpotInstancesResultSpotInstanceRequestsInstanceInterruptionBehaviorEnum instanceInterruptionBehavior) {
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         return this;
@@ -61,6 +68,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public String launchGroup;
+
     public RequestSpotInstancesResultSpotInstanceRequests withLaunchGroup(String launchGroup) {
         this.launchGroup = launchGroup;
         return this;
@@ -68,6 +76,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification launchSpecification;
+
     public RequestSpotInstancesResultSpotInstanceRequests withLaunchSpecification(RequestSpotInstancesResultSpotInstanceRequestsLaunchSpecification launchSpecification) {
         this.launchSpecification = launchSpecification;
         return this;
@@ -75,6 +84,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public String launchedAvailabilityZone;
+
     public RequestSpotInstancesResultSpotInstanceRequests withLaunchedAvailabilityZone(String launchedAvailabilityZone) {
         this.launchedAvailabilityZone = launchedAvailabilityZone;
         return this;
@@ -82,6 +92,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsProductDescriptionEnum productDescription;
+
     public RequestSpotInstancesResultSpotInstanceRequests withProductDescription(RequestSpotInstancesResultSpotInstanceRequestsProductDescriptionEnum productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -89,6 +100,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public String spotInstanceRequestId;
+
     public RequestSpotInstancesResultSpotInstanceRequests withSpotInstanceRequestId(String spotInstanceRequestId) {
         this.spotInstanceRequestId = spotInstanceRequestId;
         return this;
@@ -96,6 +108,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public String spotPrice;
+
     public RequestSpotInstancesResultSpotInstanceRequests withSpotPrice(String spotPrice) {
         this.spotPrice = spotPrice;
         return this;
@@ -103,6 +116,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsStateEnum state;
+
     public RequestSpotInstancesResultSpotInstanceRequests withState(RequestSpotInstancesResultSpotInstanceRequestsStateEnum state) {
         this.state = state;
         return this;
@@ -110,6 +124,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsStatus status;
+
     public RequestSpotInstancesResultSpotInstanceRequests withStatus(RequestSpotInstancesResultSpotInstanceRequestsStatus status) {
         this.status = status;
         return this;
@@ -117,6 +132,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsTags[] tags;
+
     public RequestSpotInstancesResultSpotInstanceRequests withTags(RequestSpotInstancesResultSpotInstanceRequestsTags[] tags) {
         this.tags = tags;
         return this;
@@ -124,6 +140,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public RequestSpotInstancesResultSpotInstanceRequestsTypeEnum type;
+
     public RequestSpotInstancesResultSpotInstanceRequests withType(RequestSpotInstancesResultSpotInstanceRequestsTypeEnum type) {
         this.type = type;
         return this;
@@ -131,6 +148,7 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public OffsetDateTime validFrom;
+
     public RequestSpotInstancesResultSpotInstanceRequests withValidFrom(OffsetDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
@@ -138,9 +156,11 @@ public class RequestSpotInstancesResultSpotInstanceRequests {
     
     
     public OffsetDateTime validUntil;
+
     public RequestSpotInstancesResultSpotInstanceRequests withValidUntil(OffsetDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public RequestSpotInstancesResultSpotInstanceRequests(){}
 }
